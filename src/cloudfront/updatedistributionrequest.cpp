@@ -27,10 +27,9 @@ namespace CloudFront {
 
 /*!
  * \class QtAws::CloudFront::UpdateDistributionRequest
- *
  * \brief The UpdateDistributionRequest class provides an interface for CloudFront UpdateDistribution requests.
  *
- * \ingroup CloudFront
+ * \inmodule QtAwsCloudFront
  *
  *  <fullname>Amazon CloudFront</fullname>
  * 
@@ -42,9 +41,7 @@ namespace CloudFront {
  */
 
 /*!
- * @brief  Constructs a new UpdateDistributionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateDistributionRequest::UpdateDistributionRequest(const UpdateDistributionRequest &other)
     : CloudFrontRequest(new UpdateDistributionRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ UpdateDistributionRequest::UpdateDistributionRequest(const UpdateDistributionReq
 }
 
 /*!
- * @brief  Constructs a new UpdateDistributionRequest object.
+ * Constructs a UpdateDistributionRequest object.
  */
 UpdateDistributionRequest::UpdateDistributionRequest()
     : CloudFrontRequest(new UpdateDistributionRequestPrivate(CloudFrontRequest::UpdateDistributionAction, this))
@@ -71,14 +68,9 @@ bool UpdateDistributionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateDistributionResponse object.
+ * Returns a UpdateDistributionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateDistributionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudFrontClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateDistributionRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * UpdateDistributionRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudFront::UpdateDistributionRequestPrivate
+ * \brief The UpdateDistributionRequestPrivate class provides private implementation for UpdateDistributionRequest.
+ * \internal
  *
- * @class  UpdateDistributionRequestPrivate
- *
- * @brief  Private implementation for UpdateDistributionRequest.
+ * \inmodule QtAwsCloudFront
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateDistributionRequestPrivate object.
- *
- * @param  action  CloudFront action being performed.
- * @param  q       Pointer to this object's public UpdateDistributionRequest instance.
+ * Constructs a UpdateDistributionRequestPrivate object for CloudFront \a action with,
+ * public implementation \a q.
  */
 UpdateDistributionRequestPrivate::UpdateDistributionRequestPrivate(
     const CloudFrontRequest::Action action, UpdateDistributionRequest * const q)
@@ -109,15 +98,10 @@ UpdateDistributionRequestPrivate::UpdateDistributionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateDistributionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateDistributionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateDistributionRequest instance.
  */
 UpdateDistributionRequestPrivate::UpdateDistributionRequestPrivate(
     const UpdateDistributionRequestPrivate &other, UpdateDistributionRequest * const q)

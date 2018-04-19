@@ -27,10 +27,9 @@ namespace CloudDirectory {
 
 /*!
  * \class QtAws::CloudDirectory::RemoveFacetFromObjectRequest
- *
  * \brief The RemoveFacetFromObjectRequest class provides an interface for CloudDirectory RemoveFacetFromObject requests.
  *
- * \ingroup CloudDirectory
+ * \inmodule QtAwsCloudDirectory
  *
  *  <fullname>Amazon Cloud Directory</fullname>
  * 
@@ -44,9 +43,7 @@ namespace CloudDirectory {
  */
 
 /*!
- * @brief  Constructs a new RemoveFacetFromObjectRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 RemoveFacetFromObjectRequest::RemoveFacetFromObjectRequest(const RemoveFacetFromObjectRequest &other)
     : CloudDirectoryRequest(new RemoveFacetFromObjectRequestPrivate(*other.d_func(), this))
@@ -55,7 +52,7 @@ RemoveFacetFromObjectRequest::RemoveFacetFromObjectRequest(const RemoveFacetFrom
 }
 
 /*!
- * @brief  Constructs a new RemoveFacetFromObjectRequest object.
+ * Constructs a RemoveFacetFromObjectRequest object.
  */
 RemoveFacetFromObjectRequest::RemoveFacetFromObjectRequest()
     : CloudDirectoryRequest(new RemoveFacetFromObjectRequestPrivate(CloudDirectoryRequest::RemoveFacetFromObjectAction, this))
@@ -73,14 +70,9 @@ bool RemoveFacetFromObjectRequest::isValid() const
 
 
 /*!
- * @brief  Construct an RemoveFacetFromObjectResponse object.
+ * Returns a RemoveFacetFromObjectResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An RemoveFacetFromObjectResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudDirectoryClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * RemoveFacetFromObjectRequest::response(QNetworkReply * const reply) const
 {
@@ -88,20 +80,17 @@ QtAws::Core::AwsAbstractResponse * RemoveFacetFromObjectRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudDirectory::RemoveFacetFromObjectRequestPrivate
+ * \brief The RemoveFacetFromObjectRequestPrivate class provides private implementation for RemoveFacetFromObjectRequest.
+ * \internal
  *
- * @class  RemoveFacetFromObjectRequestPrivate
- *
- * @brief  Private implementation for RemoveFacetFromObjectRequest.
+ * \inmodule QtAwsCloudDirectory
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new RemoveFacetFromObjectRequestPrivate object.
- *
- * @param  action  CloudDirectory action being performed.
- * @param  q       Pointer to this object's public RemoveFacetFromObjectRequest instance.
+ * Constructs a RemoveFacetFromObjectRequestPrivate object for CloudDirectory \a action with,
+ * public implementation \a q.
  */
 RemoveFacetFromObjectRequestPrivate::RemoveFacetFromObjectRequestPrivate(
     const CloudDirectoryRequest::Action action, RemoveFacetFromObjectRequest * const q)
@@ -111,15 +100,10 @@ RemoveFacetFromObjectRequestPrivate::RemoveFacetFromObjectRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RemoveFacetFromObjectRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the RemoveFacetFromObjectRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public RemoveFacetFromObjectRequest instance.
  */
 RemoveFacetFromObjectRequestPrivate::RemoveFacetFromObjectRequestPrivate(
     const RemoveFacetFromObjectRequestPrivate &other, RemoveFacetFromObjectRequest * const q)

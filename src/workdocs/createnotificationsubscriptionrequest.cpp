@@ -27,10 +27,9 @@ namespace WorkDocs {
 
 /*!
  * \class QtAws::WorkDocs::CreateNotificationSubscriptionRequest
- *
  * \brief The CreateNotificationSubscriptionRequest class provides an interface for WorkDocs CreateNotificationSubscription requests.
  *
- * \ingroup WorkDocs
+ * \inmodule QtAwsWorkDocs
  *
  *  The WorkDocs API is designed for the following use
  * 
@@ -66,9 +65,7 @@ namespace WorkDocs {
  */
 
 /*!
- * @brief  Constructs a new CreateNotificationSubscriptionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateNotificationSubscriptionRequest::CreateNotificationSubscriptionRequest(const CreateNotificationSubscriptionRequest &other)
     : WorkDocsRequest(new CreateNotificationSubscriptionRequestPrivate(*other.d_func(), this))
@@ -77,7 +74,7 @@ CreateNotificationSubscriptionRequest::CreateNotificationSubscriptionRequest(con
 }
 
 /*!
- * @brief  Constructs a new CreateNotificationSubscriptionRequest object.
+ * Constructs a CreateNotificationSubscriptionRequest object.
  */
 CreateNotificationSubscriptionRequest::CreateNotificationSubscriptionRequest()
     : WorkDocsRequest(new CreateNotificationSubscriptionRequestPrivate(WorkDocsRequest::CreateNotificationSubscriptionAction, this))
@@ -95,14 +92,9 @@ bool CreateNotificationSubscriptionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateNotificationSubscriptionResponse object.
+ * Returns a CreateNotificationSubscriptionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateNotificationSubscriptionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WorkDocsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateNotificationSubscriptionRequest::response(QNetworkReply * const reply) const
 {
@@ -110,20 +102,17 @@ QtAws::Core::AwsAbstractResponse * CreateNotificationSubscriptionRequest::respon
 }
 
 /*!
- * @internal
+ * \class QtAws::WorkDocs::CreateNotificationSubscriptionRequestPrivate
+ * \brief The CreateNotificationSubscriptionRequestPrivate class provides private implementation for CreateNotificationSubscriptionRequest.
+ * \internal
  *
- * @class  CreateNotificationSubscriptionRequestPrivate
- *
- * @brief  Private implementation for CreateNotificationSubscriptionRequest.
+ * \inmodule QtAwsWorkDocs
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateNotificationSubscriptionRequestPrivate object.
- *
- * @param  action  WorkDocs action being performed.
- * @param  q       Pointer to this object's public CreateNotificationSubscriptionRequest instance.
+ * Constructs a CreateNotificationSubscriptionRequestPrivate object for WorkDocs \a action with,
+ * public implementation \a q.
  */
 CreateNotificationSubscriptionRequestPrivate::CreateNotificationSubscriptionRequestPrivate(
     const WorkDocsRequest::Action action, CreateNotificationSubscriptionRequest * const q)
@@ -133,15 +122,10 @@ CreateNotificationSubscriptionRequestPrivate::CreateNotificationSubscriptionRequ
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateNotificationSubscriptionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateNotificationSubscriptionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateNotificationSubscriptionRequest instance.
  */
 CreateNotificationSubscriptionRequestPrivate::CreateNotificationSubscriptionRequestPrivate(
     const CreateNotificationSubscriptionRequestPrivate &other, CreateNotificationSubscriptionRequest * const q)

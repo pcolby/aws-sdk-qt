@@ -27,10 +27,9 @@ namespace GameLift {
 
 /*!
  * \class QtAws::GameLift::DescribeVpcPeeringAuthorizationsRequest
- *
  * \brief The DescribeVpcPeeringAuthorizationsRequest class provides an interface for GameLift DescribeVpcPeeringAuthorizations requests.
  *
- * \ingroup GameLift
+ * \inmodule QtAwsGameLift
  *
  *  <fullname>Amazon GameLift Service</fullname>
  * 
@@ -473,9 +472,7 @@ namespace GameLift {
  */
 
 /*!
- * @brief  Constructs a new DescribeVpcPeeringAuthorizationsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeVpcPeeringAuthorizationsRequest::DescribeVpcPeeringAuthorizationsRequest(const DescribeVpcPeeringAuthorizationsRequest &other)
     : GameLiftRequest(new DescribeVpcPeeringAuthorizationsRequestPrivate(*other.d_func(), this))
@@ -484,7 +481,7 @@ DescribeVpcPeeringAuthorizationsRequest::DescribeVpcPeeringAuthorizationsRequest
 }
 
 /*!
- * @brief  Constructs a new DescribeVpcPeeringAuthorizationsRequest object.
+ * Constructs a DescribeVpcPeeringAuthorizationsRequest object.
  */
 DescribeVpcPeeringAuthorizationsRequest::DescribeVpcPeeringAuthorizationsRequest()
     : GameLiftRequest(new DescribeVpcPeeringAuthorizationsRequestPrivate(GameLiftRequest::DescribeVpcPeeringAuthorizationsAction, this))
@@ -502,14 +499,9 @@ bool DescribeVpcPeeringAuthorizationsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeVpcPeeringAuthorizationsResponse object.
+ * Returns a DescribeVpcPeeringAuthorizationsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeVpcPeeringAuthorizationsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GameLiftClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeVpcPeeringAuthorizationsRequest::response(QNetworkReply * const reply) const
 {
@@ -517,20 +509,17 @@ QtAws::Core::AwsAbstractResponse * DescribeVpcPeeringAuthorizationsRequest::resp
 }
 
 /*!
- * @internal
+ * \class QtAws::GameLift::DescribeVpcPeeringAuthorizationsRequestPrivate
+ * \brief The DescribeVpcPeeringAuthorizationsRequestPrivate class provides private implementation for DescribeVpcPeeringAuthorizationsRequest.
+ * \internal
  *
- * @class  DescribeVpcPeeringAuthorizationsRequestPrivate
- *
- * @brief  Private implementation for DescribeVpcPeeringAuthorizationsRequest.
+ * \inmodule QtAwsGameLift
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeVpcPeeringAuthorizationsRequestPrivate object.
- *
- * @param  action  GameLift action being performed.
- * @param  q       Pointer to this object's public DescribeVpcPeeringAuthorizationsRequest instance.
+ * Constructs a DescribeVpcPeeringAuthorizationsRequestPrivate object for GameLift \a action with,
+ * public implementation \a q.
  */
 DescribeVpcPeeringAuthorizationsRequestPrivate::DescribeVpcPeeringAuthorizationsRequestPrivate(
     const GameLiftRequest::Action action, DescribeVpcPeeringAuthorizationsRequest * const q)
@@ -540,15 +529,10 @@ DescribeVpcPeeringAuthorizationsRequestPrivate::DescribeVpcPeeringAuthorizations
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeVpcPeeringAuthorizationsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeVpcPeeringAuthorizationsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeVpcPeeringAuthorizationsRequest instance.
  */
 DescribeVpcPeeringAuthorizationsRequestPrivate::DescribeVpcPeeringAuthorizationsRequestPrivate(
     const DescribeVpcPeeringAuthorizationsRequestPrivate &other, DescribeVpcPeeringAuthorizationsRequest * const q)

@@ -27,10 +27,9 @@ namespace Redshift {
 
 /*!
  * \class QtAws::Redshift::PurchaseReservedNodeOfferingRequest
- *
  * \brief The PurchaseReservedNodeOfferingRequest class provides an interface for Redshift PurchaseReservedNodeOffering requests.
  *
- * \ingroup Redshift
+ * \inmodule QtAwsRedshift
  *
  *  <fullname>Amazon Redshift</fullname>
  * 
@@ -67,9 +66,7 @@ namespace Redshift {
  */
 
 /*!
- * @brief  Constructs a new PurchaseReservedNodeOfferingRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 PurchaseReservedNodeOfferingRequest::PurchaseReservedNodeOfferingRequest(const PurchaseReservedNodeOfferingRequest &other)
     : RedshiftRequest(new PurchaseReservedNodeOfferingRequestPrivate(*other.d_func(), this))
@@ -78,7 +75,7 @@ PurchaseReservedNodeOfferingRequest::PurchaseReservedNodeOfferingRequest(const P
 }
 
 /*!
- * @brief  Constructs a new PurchaseReservedNodeOfferingRequest object.
+ * Constructs a PurchaseReservedNodeOfferingRequest object.
  */
 PurchaseReservedNodeOfferingRequest::PurchaseReservedNodeOfferingRequest()
     : RedshiftRequest(new PurchaseReservedNodeOfferingRequestPrivate(RedshiftRequest::PurchaseReservedNodeOfferingAction, this))
@@ -96,14 +93,9 @@ bool PurchaseReservedNodeOfferingRequest::isValid() const
 
 
 /*!
- * @brief  Construct an PurchaseReservedNodeOfferingResponse object.
+ * Returns a PurchaseReservedNodeOfferingResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An PurchaseReservedNodeOfferingResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RedshiftClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * PurchaseReservedNodeOfferingRequest::response(QNetworkReply * const reply) const
 {
@@ -111,20 +103,17 @@ QtAws::Core::AwsAbstractResponse * PurchaseReservedNodeOfferingRequest::response
 }
 
 /*!
- * @internal
+ * \class QtAws::Redshift::PurchaseReservedNodeOfferingRequestPrivate
+ * \brief The PurchaseReservedNodeOfferingRequestPrivate class provides private implementation for PurchaseReservedNodeOfferingRequest.
+ * \internal
  *
- * @class  PurchaseReservedNodeOfferingRequestPrivate
- *
- * @brief  Private implementation for PurchaseReservedNodeOfferingRequest.
+ * \inmodule QtAwsRedshift
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new PurchaseReservedNodeOfferingRequestPrivate object.
- *
- * @param  action  Redshift action being performed.
- * @param  q       Pointer to this object's public PurchaseReservedNodeOfferingRequest instance.
+ * Constructs a PurchaseReservedNodeOfferingRequestPrivate object for Redshift \a action with,
+ * public implementation \a q.
  */
 PurchaseReservedNodeOfferingRequestPrivate::PurchaseReservedNodeOfferingRequestPrivate(
     const RedshiftRequest::Action action, PurchaseReservedNodeOfferingRequest * const q)
@@ -134,15 +123,10 @@ PurchaseReservedNodeOfferingRequestPrivate::PurchaseReservedNodeOfferingRequestP
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PurchaseReservedNodeOfferingRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the PurchaseReservedNodeOfferingRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public PurchaseReservedNodeOfferingRequest instance.
  */
 PurchaseReservedNodeOfferingRequestPrivate::PurchaseReservedNodeOfferingRequestPrivate(
     const PurchaseReservedNodeOfferingRequestPrivate &other, PurchaseReservedNodeOfferingRequest * const q)

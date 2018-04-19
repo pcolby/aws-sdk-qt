@@ -27,19 +27,16 @@ namespace S3 {
 
 /*!
  * \class QtAws::S3::GetBucketLocationRequest
- *
  * \brief The GetBucketLocationRequest class provides an interface for S3 GetBucketLocation requests.
  *
- * \ingroup S3
+ * \inmodule QtAwsS3
  *
  *
  * \sa S3Client::getBucketLocation
  */
 
 /*!
- * @brief  Constructs a new GetBucketLocationRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetBucketLocationRequest::GetBucketLocationRequest(const GetBucketLocationRequest &other)
     : S3Request(new GetBucketLocationRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ GetBucketLocationRequest::GetBucketLocationRequest(const GetBucketLocationReques
 }
 
 /*!
- * @brief  Constructs a new GetBucketLocationRequest object.
+ * Constructs a GetBucketLocationRequest object.
  */
 GetBucketLocationRequest::GetBucketLocationRequest()
     : S3Request(new GetBucketLocationRequestPrivate(S3Request::GetBucketLocationAction, this))
@@ -66,14 +63,9 @@ bool GetBucketLocationRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetBucketLocationResponse object.
+ * Returns a GetBucketLocationResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetBucketLocationResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  S3Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetBucketLocationRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * GetBucketLocationRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::S3::GetBucketLocationRequestPrivate
+ * \brief The GetBucketLocationRequestPrivate class provides private implementation for GetBucketLocationRequest.
+ * \internal
  *
- * @class  GetBucketLocationRequestPrivate
- *
- * @brief  Private implementation for GetBucketLocationRequest.
+ * \inmodule QtAwsS3
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetBucketLocationRequestPrivate object.
- *
- * @param  action  S3 action being performed.
- * @param  q       Pointer to this object's public GetBucketLocationRequest instance.
+ * Constructs a GetBucketLocationRequestPrivate object for S3 \a action with,
+ * public implementation \a q.
  */
 GetBucketLocationRequestPrivate::GetBucketLocationRequestPrivate(
     const S3Request::Action action, GetBucketLocationRequest * const q)
@@ -104,15 +93,10 @@ GetBucketLocationRequestPrivate::GetBucketLocationRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetBucketLocationRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetBucketLocationRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetBucketLocationRequest instance.
  */
 GetBucketLocationRequestPrivate::GetBucketLocationRequestPrivate(
     const GetBucketLocationRequestPrivate &other, GetBucketLocationRequest * const q)

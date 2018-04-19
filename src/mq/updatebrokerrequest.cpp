@@ -27,10 +27,9 @@ namespace MQ {
 
 /*!
  * \class QtAws::MQ::UpdateBrokerRequest
- *
  * \brief The UpdateBrokerRequest class provides an interface for MQ UpdateBroker requests.
  *
- * \ingroup MQ
+ * \inmodule QtAwsMQ
  *
  *  Amazon MQ is a managed message broker service for Apache ActiveMQ that makes it easy to set up and operate message
  *  brokers in the cloud. A message broker allows software applications and components to communicate using various
@@ -39,9 +38,7 @@ namespace MQ {
  */
 
 /*!
- * @brief  Constructs a new UpdateBrokerRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateBrokerRequest::UpdateBrokerRequest(const UpdateBrokerRequest &other)
     : MQRequest(new UpdateBrokerRequestPrivate(*other.d_func(), this))
@@ -50,7 +47,7 @@ UpdateBrokerRequest::UpdateBrokerRequest(const UpdateBrokerRequest &other)
 }
 
 /*!
- * @brief  Constructs a new UpdateBrokerRequest object.
+ * Constructs a UpdateBrokerRequest object.
  */
 UpdateBrokerRequest::UpdateBrokerRequest()
     : MQRequest(new UpdateBrokerRequestPrivate(MQRequest::UpdateBrokerAction, this))
@@ -68,14 +65,9 @@ bool UpdateBrokerRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateBrokerResponse object.
+ * Returns a UpdateBrokerResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateBrokerResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MQClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateBrokerRequest::response(QNetworkReply * const reply) const
 {
@@ -83,20 +75,17 @@ QtAws::Core::AwsAbstractResponse * UpdateBrokerRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::MQ::UpdateBrokerRequestPrivate
+ * \brief The UpdateBrokerRequestPrivate class provides private implementation for UpdateBrokerRequest.
+ * \internal
  *
- * @class  UpdateBrokerRequestPrivate
- *
- * @brief  Private implementation for UpdateBrokerRequest.
+ * \inmodule QtAwsMQ
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateBrokerRequestPrivate object.
- *
- * @param  action  MQ action being performed.
- * @param  q       Pointer to this object's public UpdateBrokerRequest instance.
+ * Constructs a UpdateBrokerRequestPrivate object for MQ \a action with,
+ * public implementation \a q.
  */
 UpdateBrokerRequestPrivate::UpdateBrokerRequestPrivate(
     const MQRequest::Action action, UpdateBrokerRequest * const q)
@@ -106,15 +95,10 @@ UpdateBrokerRequestPrivate::UpdateBrokerRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateBrokerRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateBrokerRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateBrokerRequest instance.
  */
 UpdateBrokerRequestPrivate::UpdateBrokerRequestPrivate(
     const UpdateBrokerRequestPrivate &other, UpdateBrokerRequest * const q)

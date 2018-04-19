@@ -27,19 +27,16 @@ namespace S3 {
 
 /*!
  * \class QtAws::S3::PutBucketWebsiteRequest
- *
  * \brief The PutBucketWebsiteRequest class provides an interface for S3 PutBucketWebsite requests.
  *
- * \ingroup S3
+ * \inmodule QtAwsS3
  *
  *
  * \sa S3Client::putBucketWebsite
  */
 
 /*!
- * @brief  Constructs a new PutBucketWebsiteRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 PutBucketWebsiteRequest::PutBucketWebsiteRequest(const PutBucketWebsiteRequest &other)
     : S3Request(new PutBucketWebsiteRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ PutBucketWebsiteRequest::PutBucketWebsiteRequest(const PutBucketWebsiteRequest &
 }
 
 /*!
- * @brief  Constructs a new PutBucketWebsiteRequest object.
+ * Constructs a PutBucketWebsiteRequest object.
  */
 PutBucketWebsiteRequest::PutBucketWebsiteRequest()
     : S3Request(new PutBucketWebsiteRequestPrivate(S3Request::PutBucketWebsiteAction, this))
@@ -66,14 +63,9 @@ bool PutBucketWebsiteRequest::isValid() const
 
 
 /*!
- * @brief  Construct an PutBucketWebsiteResponse object.
+ * Returns a PutBucketWebsiteResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An PutBucketWebsiteResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  S3Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * PutBucketWebsiteRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * PutBucketWebsiteRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::S3::PutBucketWebsiteRequestPrivate
+ * \brief The PutBucketWebsiteRequestPrivate class provides private implementation for PutBucketWebsiteRequest.
+ * \internal
  *
- * @class  PutBucketWebsiteRequestPrivate
- *
- * @brief  Private implementation for PutBucketWebsiteRequest.
+ * \inmodule QtAwsS3
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new PutBucketWebsiteRequestPrivate object.
- *
- * @param  action  S3 action being performed.
- * @param  q       Pointer to this object's public PutBucketWebsiteRequest instance.
+ * Constructs a PutBucketWebsiteRequestPrivate object for S3 \a action with,
+ * public implementation \a q.
  */
 PutBucketWebsiteRequestPrivate::PutBucketWebsiteRequestPrivate(
     const S3Request::Action action, PutBucketWebsiteRequest * const q)
@@ -104,15 +93,10 @@ PutBucketWebsiteRequestPrivate::PutBucketWebsiteRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutBucketWebsiteRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the PutBucketWebsiteRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public PutBucketWebsiteRequest instance.
  */
 PutBucketWebsiteRequestPrivate::PutBucketWebsiteRequestPrivate(
     const PutBucketWebsiteRequestPrivate &other, PutBucketWebsiteRequest * const q)

@@ -27,10 +27,9 @@ namespace AutoScaling {
 
 /*!
  * \class QtAws::AutoScaling::TerminateInstanceInAutoScalingGroupRequest
- *
  * \brief The TerminateInstanceInAutoScalingGroupRequest class provides an interface for AutoScaling TerminateInstanceInAutoScalingGroup requests.
  *
- * \ingroup AutoScaling
+ * \inmodule QtAwsAutoScaling
  *
  *  <fullname>Amazon EC2 Auto Scaling</fullname>
  * 
@@ -42,9 +41,7 @@ namespace AutoScaling {
  */
 
 /*!
- * @brief  Constructs a new TerminateInstanceInAutoScalingGroupRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 TerminateInstanceInAutoScalingGroupRequest::TerminateInstanceInAutoScalingGroupRequest(const TerminateInstanceInAutoScalingGroupRequest &other)
     : AutoScalingRequest(new TerminateInstanceInAutoScalingGroupRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ TerminateInstanceInAutoScalingGroupRequest::TerminateInstanceInAutoScalingGroupR
 }
 
 /*!
- * @brief  Constructs a new TerminateInstanceInAutoScalingGroupRequest object.
+ * Constructs a TerminateInstanceInAutoScalingGroupRequest object.
  */
 TerminateInstanceInAutoScalingGroupRequest::TerminateInstanceInAutoScalingGroupRequest()
     : AutoScalingRequest(new TerminateInstanceInAutoScalingGroupRequestPrivate(AutoScalingRequest::TerminateInstanceInAutoScalingGroupAction, this))
@@ -71,14 +68,9 @@ bool TerminateInstanceInAutoScalingGroupRequest::isValid() const
 
 
 /*!
- * @brief  Construct an TerminateInstanceInAutoScalingGroupResponse object.
+ * Returns a TerminateInstanceInAutoScalingGroupResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An TerminateInstanceInAutoScalingGroupResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AutoScalingClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * TerminateInstanceInAutoScalingGroupRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * TerminateInstanceInAutoScalingGroupRequest::r
 }
 
 /*!
- * @internal
+ * \class QtAws::AutoScaling::TerminateInstanceInAutoScalingGroupRequestPrivate
+ * \brief The TerminateInstanceInAutoScalingGroupRequestPrivate class provides private implementation for TerminateInstanceInAutoScalingGroupRequest.
+ * \internal
  *
- * @class  TerminateInstanceInAutoScalingGroupRequestPrivate
- *
- * @brief  Private implementation for TerminateInstanceInAutoScalingGroupRequest.
+ * \inmodule QtAwsAutoScaling
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new TerminateInstanceInAutoScalingGroupRequestPrivate object.
- *
- * @param  action  AutoScaling action being performed.
- * @param  q       Pointer to this object's public TerminateInstanceInAutoScalingGroupRequest instance.
+ * Constructs a TerminateInstanceInAutoScalingGroupRequestPrivate object for AutoScaling \a action with,
+ * public implementation \a q.
  */
 TerminateInstanceInAutoScalingGroupRequestPrivate::TerminateInstanceInAutoScalingGroupRequestPrivate(
     const AutoScalingRequest::Action action, TerminateInstanceInAutoScalingGroupRequest * const q)
@@ -109,15 +98,10 @@ TerminateInstanceInAutoScalingGroupRequestPrivate::TerminateInstanceInAutoScalin
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new TerminateInstanceInAutoScalingGroupRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the TerminateInstanceInAutoScalingGroupRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public TerminateInstanceInAutoScalingGroupRequest instance.
  */
 TerminateInstanceInAutoScalingGroupRequestPrivate::TerminateInstanceInAutoScalingGroupRequestPrivate(
     const TerminateInstanceInAutoScalingGroupRequestPrivate &other, TerminateInstanceInAutoScalingGroupRequest * const q)

@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::ReplaceNetworkAclAssociationRequest
- *
  * \brief The ReplaceNetworkAclAssociationRequest class provides an interface for EC2 ReplaceNetworkAclAssociation requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new ReplaceNetworkAclAssociationRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ReplaceNetworkAclAssociationRequest::ReplaceNetworkAclAssociationRequest(const ReplaceNetworkAclAssociationRequest &other)
     : EC2Request(new ReplaceNetworkAclAssociationRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ ReplaceNetworkAclAssociationRequest::ReplaceNetworkAclAssociationRequest(const R
 }
 
 /*!
- * @brief  Constructs a new ReplaceNetworkAclAssociationRequest object.
+ * Constructs a ReplaceNetworkAclAssociationRequest object.
  */
 ReplaceNetworkAclAssociationRequest::ReplaceNetworkAclAssociationRequest()
     : EC2Request(new ReplaceNetworkAclAssociationRequestPrivate(EC2Request::ReplaceNetworkAclAssociationAction, this))
@@ -70,14 +67,9 @@ bool ReplaceNetworkAclAssociationRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ReplaceNetworkAclAssociationResponse object.
+ * Returns a ReplaceNetworkAclAssociationResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ReplaceNetworkAclAssociationResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ReplaceNetworkAclAssociationRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * ReplaceNetworkAclAssociationRequest::response
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::ReplaceNetworkAclAssociationRequestPrivate
+ * \brief The ReplaceNetworkAclAssociationRequestPrivate class provides private implementation for ReplaceNetworkAclAssociationRequest.
+ * \internal
  *
- * @class  ReplaceNetworkAclAssociationRequestPrivate
- *
- * @brief  Private implementation for ReplaceNetworkAclAssociationRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ReplaceNetworkAclAssociationRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public ReplaceNetworkAclAssociationRequest instance.
+ * Constructs a ReplaceNetworkAclAssociationRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 ReplaceNetworkAclAssociationRequestPrivate::ReplaceNetworkAclAssociationRequestPrivate(
     const EC2Request::Action action, ReplaceNetworkAclAssociationRequest * const q)
@@ -108,15 +97,10 @@ ReplaceNetworkAclAssociationRequestPrivate::ReplaceNetworkAclAssociationRequestP
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ReplaceNetworkAclAssociationRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ReplaceNetworkAclAssociationRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ReplaceNetworkAclAssociationRequest instance.
  */
 ReplaceNetworkAclAssociationRequestPrivate::ReplaceNetworkAclAssociationRequestPrivate(
     const ReplaceNetworkAclAssociationRequestPrivate &other, ReplaceNetworkAclAssociationRequest * const q)

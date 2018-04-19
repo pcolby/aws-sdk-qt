@@ -27,19 +27,16 @@ namespace GuardDuty {
 
 /*!
  * \class QtAws::GuardDuty::CreateMembersRequest
- *
  * \brief The CreateMembersRequest class provides an interface for GuardDuty CreateMembers requests.
  *
- * \ingroup GuardDuty
+ * \inmodule QtAwsGuardDuty
  *
  *
  * \sa GuardDutyClient::createMembers
  */
 
 /*!
- * @brief  Constructs a new CreateMembersRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateMembersRequest::CreateMembersRequest(const CreateMembersRequest &other)
     : GuardDutyRequest(new CreateMembersRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ CreateMembersRequest::CreateMembersRequest(const CreateMembersRequest &other)
 }
 
 /*!
- * @brief  Constructs a new CreateMembersRequest object.
+ * Constructs a CreateMembersRequest object.
  */
 CreateMembersRequest::CreateMembersRequest()
     : GuardDutyRequest(new CreateMembersRequestPrivate(GuardDutyRequest::CreateMembersAction, this))
@@ -66,14 +63,9 @@ bool CreateMembersRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateMembersResponse object.
+ * Returns a CreateMembersResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateMembersResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GuardDutyClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateMembersRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * CreateMembersRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::GuardDuty::CreateMembersRequestPrivate
+ * \brief The CreateMembersRequestPrivate class provides private implementation for CreateMembersRequest.
+ * \internal
  *
- * @class  CreateMembersRequestPrivate
- *
- * @brief  Private implementation for CreateMembersRequest.
+ * \inmodule QtAwsGuardDuty
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateMembersRequestPrivate object.
- *
- * @param  action  GuardDuty action being performed.
- * @param  q       Pointer to this object's public CreateMembersRequest instance.
+ * Constructs a CreateMembersRequestPrivate object for GuardDuty \a action with,
+ * public implementation \a q.
  */
 CreateMembersRequestPrivate::CreateMembersRequestPrivate(
     const GuardDutyRequest::Action action, CreateMembersRequest * const q)
@@ -104,15 +93,10 @@ CreateMembersRequestPrivate::CreateMembersRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateMembersRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateMembersRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateMembersRequest instance.
  */
 CreateMembersRequestPrivate::CreateMembersRequestPrivate(
     const CreateMembersRequestPrivate &other, CreateMembersRequest * const q)

@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DeleteNetworkAclRequest
- *
  * \brief The DeleteNetworkAclRequest class provides an interface for EC2 DeleteNetworkAcl requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DeleteNetworkAclRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteNetworkAclRequest::DeleteNetworkAclRequest(const DeleteNetworkAclRequest &other)
     : EC2Request(new DeleteNetworkAclRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ DeleteNetworkAclRequest::DeleteNetworkAclRequest(const DeleteNetworkAclRequest &
 }
 
 /*!
- * @brief  Constructs a new DeleteNetworkAclRequest object.
+ * Constructs a DeleteNetworkAclRequest object.
  */
 DeleteNetworkAclRequest::DeleteNetworkAclRequest()
     : EC2Request(new DeleteNetworkAclRequestPrivate(EC2Request::DeleteNetworkAclAction, this))
@@ -70,14 +67,9 @@ bool DeleteNetworkAclRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteNetworkAclResponse object.
+ * Returns a DeleteNetworkAclResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteNetworkAclResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteNetworkAclRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * DeleteNetworkAclRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::DeleteNetworkAclRequestPrivate
+ * \brief The DeleteNetworkAclRequestPrivate class provides private implementation for DeleteNetworkAclRequest.
+ * \internal
  *
- * @class  DeleteNetworkAclRequestPrivate
- *
- * @brief  Private implementation for DeleteNetworkAclRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteNetworkAclRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public DeleteNetworkAclRequest instance.
+ * Constructs a DeleteNetworkAclRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 DeleteNetworkAclRequestPrivate::DeleteNetworkAclRequestPrivate(
     const EC2Request::Action action, DeleteNetworkAclRequest * const q)
@@ -108,15 +97,10 @@ DeleteNetworkAclRequestPrivate::DeleteNetworkAclRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteNetworkAclRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteNetworkAclRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteNetworkAclRequest instance.
  */
 DeleteNetworkAclRequestPrivate::DeleteNetworkAclRequestPrivate(
     const DeleteNetworkAclRequestPrivate &other, DeleteNetworkAclRequest * const q)

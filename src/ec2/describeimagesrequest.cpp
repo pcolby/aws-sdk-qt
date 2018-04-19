@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DescribeImagesRequest
- *
  * \brief The DescribeImagesRequest class provides an interface for EC2 DescribeImages requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DescribeImagesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeImagesRequest::DescribeImagesRequest(const DescribeImagesRequest &other)
     : EC2Request(new DescribeImagesRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ DescribeImagesRequest::DescribeImagesRequest(const DescribeImagesRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DescribeImagesRequest object.
+ * Constructs a DescribeImagesRequest object.
  */
 DescribeImagesRequest::DescribeImagesRequest()
     : EC2Request(new DescribeImagesRequestPrivate(EC2Request::DescribeImagesAction, this))
@@ -70,14 +67,9 @@ bool DescribeImagesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeImagesResponse object.
+ * Returns a DescribeImagesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeImagesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeImagesRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * DescribeImagesRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::DescribeImagesRequestPrivate
+ * \brief The DescribeImagesRequestPrivate class provides private implementation for DescribeImagesRequest.
+ * \internal
  *
- * @class  DescribeImagesRequestPrivate
- *
- * @brief  Private implementation for DescribeImagesRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeImagesRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public DescribeImagesRequest instance.
+ * Constructs a DescribeImagesRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 DescribeImagesRequestPrivate::DescribeImagesRequestPrivate(
     const EC2Request::Action action, DescribeImagesRequest * const q)
@@ -108,15 +97,10 @@ DescribeImagesRequestPrivate::DescribeImagesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeImagesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeImagesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeImagesRequest instance.
  */
 DescribeImagesRequestPrivate::DescribeImagesRequestPrivate(
     const DescribeImagesRequestPrivate &other, DescribeImagesRequest * const q)

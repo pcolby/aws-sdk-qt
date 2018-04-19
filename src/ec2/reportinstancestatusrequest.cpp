@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::ReportInstanceStatusRequest
- *
  * \brief The ReportInstanceStatusRequest class provides an interface for EC2 ReportInstanceStatus requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new ReportInstanceStatusRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ReportInstanceStatusRequest::ReportInstanceStatusRequest(const ReportInstanceStatusRequest &other)
     : EC2Request(new ReportInstanceStatusRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ ReportInstanceStatusRequest::ReportInstanceStatusRequest(const ReportInstanceSta
 }
 
 /*!
- * @brief  Constructs a new ReportInstanceStatusRequest object.
+ * Constructs a ReportInstanceStatusRequest object.
  */
 ReportInstanceStatusRequest::ReportInstanceStatusRequest()
     : EC2Request(new ReportInstanceStatusRequestPrivate(EC2Request::ReportInstanceStatusAction, this))
@@ -70,14 +67,9 @@ bool ReportInstanceStatusRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ReportInstanceStatusResponse object.
+ * Returns a ReportInstanceStatusResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ReportInstanceStatusResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ReportInstanceStatusRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * ReportInstanceStatusRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::ReportInstanceStatusRequestPrivate
+ * \brief The ReportInstanceStatusRequestPrivate class provides private implementation for ReportInstanceStatusRequest.
+ * \internal
  *
- * @class  ReportInstanceStatusRequestPrivate
- *
- * @brief  Private implementation for ReportInstanceStatusRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ReportInstanceStatusRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public ReportInstanceStatusRequest instance.
+ * Constructs a ReportInstanceStatusRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 ReportInstanceStatusRequestPrivate::ReportInstanceStatusRequestPrivate(
     const EC2Request::Action action, ReportInstanceStatusRequest * const q)
@@ -108,15 +97,10 @@ ReportInstanceStatusRequestPrivate::ReportInstanceStatusRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ReportInstanceStatusRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ReportInstanceStatusRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ReportInstanceStatusRequest instance.
  */
 ReportInstanceStatusRequestPrivate::ReportInstanceStatusRequestPrivate(
     const ReportInstanceStatusRequestPrivate &other, ReportInstanceStatusRequest * const q)

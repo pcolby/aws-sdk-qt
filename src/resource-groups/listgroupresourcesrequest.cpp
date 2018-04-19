@@ -27,10 +27,9 @@ namespace ResourceGroups {
 
 /*!
  * \class QtAws::ResourceGroups::ListGroupResourcesRequest
- *
  * \brief The ListGroupResourcesRequest class provides an interface for ResourceGroups ListGroupResources requests.
  *
- * \ingroup ResourceGroups
+ * \inmodule QtAwsResourceGroups
  *
  *  <fullname>AWS Resource Groups</fullname>
  * 
@@ -81,9 +80,7 @@ namespace ResourceGroups {
  */
 
 /*!
- * @brief  Constructs a new ListGroupResourcesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListGroupResourcesRequest::ListGroupResourcesRequest(const ListGroupResourcesRequest &other)
     : ResourceGroupsRequest(new ListGroupResourcesRequestPrivate(*other.d_func(), this))
@@ -92,7 +89,7 @@ ListGroupResourcesRequest::ListGroupResourcesRequest(const ListGroupResourcesReq
 }
 
 /*!
- * @brief  Constructs a new ListGroupResourcesRequest object.
+ * Constructs a ListGroupResourcesRequest object.
  */
 ListGroupResourcesRequest::ListGroupResourcesRequest()
     : ResourceGroupsRequest(new ListGroupResourcesRequestPrivate(ResourceGroupsRequest::ListGroupResourcesAction, this))
@@ -110,14 +107,9 @@ bool ListGroupResourcesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListGroupResourcesResponse object.
+ * Returns a ListGroupResourcesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListGroupResourcesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ResourceGroupsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListGroupResourcesRequest::response(QNetworkReply * const reply) const
 {
@@ -125,20 +117,17 @@ QtAws::Core::AwsAbstractResponse * ListGroupResourcesRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::ResourceGroups::ListGroupResourcesRequestPrivate
+ * \brief The ListGroupResourcesRequestPrivate class provides private implementation for ListGroupResourcesRequest.
+ * \internal
  *
- * @class  ListGroupResourcesRequestPrivate
- *
- * @brief  Private implementation for ListGroupResourcesRequest.
+ * \inmodule QtAwsResourceGroups
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListGroupResourcesRequestPrivate object.
- *
- * @param  action  ResourceGroups action being performed.
- * @param  q       Pointer to this object's public ListGroupResourcesRequest instance.
+ * Constructs a ListGroupResourcesRequestPrivate object for ResourceGroups \a action with,
+ * public implementation \a q.
  */
 ListGroupResourcesRequestPrivate::ListGroupResourcesRequestPrivate(
     const ResourceGroupsRequest::Action action, ListGroupResourcesRequest * const q)
@@ -148,15 +137,10 @@ ListGroupResourcesRequestPrivate::ListGroupResourcesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListGroupResourcesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListGroupResourcesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListGroupResourcesRequest instance.
  */
 ListGroupResourcesRequestPrivate::ListGroupResourcesRequestPrivate(
     const ListGroupResourcesRequestPrivate &other, ListGroupResourcesRequest * const q)

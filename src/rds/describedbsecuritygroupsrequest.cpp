@@ -27,10 +27,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::DescribeDBSecurityGroupsRequest
- *
  * \brief The DescribeDBSecurityGroupsRequest class provides an interface for RDS DescribeDBSecurityGroups requests.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -101,9 +100,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new DescribeDBSecurityGroupsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeDBSecurityGroupsRequest::DescribeDBSecurityGroupsRequest(const DescribeDBSecurityGroupsRequest &other)
     : RDSRequest(new DescribeDBSecurityGroupsRequestPrivate(*other.d_func(), this))
@@ -112,7 +109,7 @@ DescribeDBSecurityGroupsRequest::DescribeDBSecurityGroupsRequest(const DescribeD
 }
 
 /*!
- * @brief  Constructs a new DescribeDBSecurityGroupsRequest object.
+ * Constructs a DescribeDBSecurityGroupsRequest object.
  */
 DescribeDBSecurityGroupsRequest::DescribeDBSecurityGroupsRequest()
     : RDSRequest(new DescribeDBSecurityGroupsRequestPrivate(RDSRequest::DescribeDBSecurityGroupsAction, this))
@@ -130,14 +127,9 @@ bool DescribeDBSecurityGroupsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeDBSecurityGroupsResponse object.
+ * Returns a DescribeDBSecurityGroupsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeDBSecurityGroupsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RDSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeDBSecurityGroupsRequest::response(QNetworkReply * const reply) const
 {
@@ -145,20 +137,17 @@ QtAws::Core::AwsAbstractResponse * DescribeDBSecurityGroupsRequest::response(QNe
 }
 
 /*!
- * @internal
+ * \class QtAws::RDS::DescribeDBSecurityGroupsRequestPrivate
+ * \brief The DescribeDBSecurityGroupsRequestPrivate class provides private implementation for DescribeDBSecurityGroupsRequest.
+ * \internal
  *
- * @class  DescribeDBSecurityGroupsRequestPrivate
- *
- * @brief  Private implementation for DescribeDBSecurityGroupsRequest.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeDBSecurityGroupsRequestPrivate object.
- *
- * @param  action  RDS action being performed.
- * @param  q       Pointer to this object's public DescribeDBSecurityGroupsRequest instance.
+ * Constructs a DescribeDBSecurityGroupsRequestPrivate object for RDS \a action with,
+ * public implementation \a q.
  */
 DescribeDBSecurityGroupsRequestPrivate::DescribeDBSecurityGroupsRequestPrivate(
     const RDSRequest::Action action, DescribeDBSecurityGroupsRequest * const q)
@@ -168,15 +157,10 @@ DescribeDBSecurityGroupsRequestPrivate::DescribeDBSecurityGroupsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeDBSecurityGroupsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeDBSecurityGroupsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeDBSecurityGroupsRequest instance.
  */
 DescribeDBSecurityGroupsRequestPrivate::DescribeDBSecurityGroupsRequestPrivate(
     const DescribeDBSecurityGroupsRequestPrivate &other, DescribeDBSecurityGroupsRequest * const q)

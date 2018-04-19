@@ -27,10 +27,9 @@ namespace CloudDirectory {
 
 /*!
  * \class QtAws::CloudDirectory::AttachToIndexRequest
- *
  * \brief The AttachToIndexRequest class provides an interface for CloudDirectory AttachToIndex requests.
  *
- * \ingroup CloudDirectory
+ * \inmodule QtAwsCloudDirectory
  *
  *  <fullname>Amazon Cloud Directory</fullname>
  * 
@@ -44,9 +43,7 @@ namespace CloudDirectory {
  */
 
 /*!
- * @brief  Constructs a new AttachToIndexRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AttachToIndexRequest::AttachToIndexRequest(const AttachToIndexRequest &other)
     : CloudDirectoryRequest(new AttachToIndexRequestPrivate(*other.d_func(), this))
@@ -55,7 +52,7 @@ AttachToIndexRequest::AttachToIndexRequest(const AttachToIndexRequest &other)
 }
 
 /*!
- * @brief  Constructs a new AttachToIndexRequest object.
+ * Constructs a AttachToIndexRequest object.
  */
 AttachToIndexRequest::AttachToIndexRequest()
     : CloudDirectoryRequest(new AttachToIndexRequestPrivate(CloudDirectoryRequest::AttachToIndexAction, this))
@@ -73,14 +70,9 @@ bool AttachToIndexRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AttachToIndexResponse object.
+ * Returns a AttachToIndexResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AttachToIndexResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudDirectoryClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AttachToIndexRequest::response(QNetworkReply * const reply) const
 {
@@ -88,20 +80,17 @@ QtAws::Core::AwsAbstractResponse * AttachToIndexRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudDirectory::AttachToIndexRequestPrivate
+ * \brief The AttachToIndexRequestPrivate class provides private implementation for AttachToIndexRequest.
+ * \internal
  *
- * @class  AttachToIndexRequestPrivate
- *
- * @brief  Private implementation for AttachToIndexRequest.
+ * \inmodule QtAwsCloudDirectory
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AttachToIndexRequestPrivate object.
- *
- * @param  action  CloudDirectory action being performed.
- * @param  q       Pointer to this object's public AttachToIndexRequest instance.
+ * Constructs a AttachToIndexRequestPrivate object for CloudDirectory \a action with,
+ * public implementation \a q.
  */
 AttachToIndexRequestPrivate::AttachToIndexRequestPrivate(
     const CloudDirectoryRequest::Action action, AttachToIndexRequest * const q)
@@ -111,15 +100,10 @@ AttachToIndexRequestPrivate::AttachToIndexRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AttachToIndexRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AttachToIndexRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AttachToIndexRequest instance.
  */
 AttachToIndexRequestPrivate::AttachToIndexRequestPrivate(
     const AttachToIndexRequestPrivate &other, AttachToIndexRequest * const q)

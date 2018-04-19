@@ -27,10 +27,9 @@ namespace DeviceFarm {
 
 /*!
  * \class QtAws::DeviceFarm::InstallToRemoteAccessSessionRequest
- *
  * \brief The InstallToRemoteAccessSessionRequest class provides an interface for DeviceFarm InstallToRemoteAccessSession requests.
  *
- * \ingroup DeviceFarm
+ * \inmodule QtAwsDeviceFarm
  *
  *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
  *  phones, tablets, and other devices in the
@@ -39,9 +38,7 @@ namespace DeviceFarm {
  */
 
 /*!
- * @brief  Constructs a new InstallToRemoteAccessSessionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 InstallToRemoteAccessSessionRequest::InstallToRemoteAccessSessionRequest(const InstallToRemoteAccessSessionRequest &other)
     : DeviceFarmRequest(new InstallToRemoteAccessSessionRequestPrivate(*other.d_func(), this))
@@ -50,7 +47,7 @@ InstallToRemoteAccessSessionRequest::InstallToRemoteAccessSessionRequest(const I
 }
 
 /*!
- * @brief  Constructs a new InstallToRemoteAccessSessionRequest object.
+ * Constructs a InstallToRemoteAccessSessionRequest object.
  */
 InstallToRemoteAccessSessionRequest::InstallToRemoteAccessSessionRequest()
     : DeviceFarmRequest(new InstallToRemoteAccessSessionRequestPrivate(DeviceFarmRequest::InstallToRemoteAccessSessionAction, this))
@@ -68,14 +65,9 @@ bool InstallToRemoteAccessSessionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an InstallToRemoteAccessSessionResponse object.
+ * Returns a InstallToRemoteAccessSessionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An InstallToRemoteAccessSessionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DeviceFarmClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * InstallToRemoteAccessSessionRequest::response(QNetworkReply * const reply) const
 {
@@ -83,20 +75,17 @@ QtAws::Core::AwsAbstractResponse * InstallToRemoteAccessSessionRequest::response
 }
 
 /*!
- * @internal
+ * \class QtAws::DeviceFarm::InstallToRemoteAccessSessionRequestPrivate
+ * \brief The InstallToRemoteAccessSessionRequestPrivate class provides private implementation for InstallToRemoteAccessSessionRequest.
+ * \internal
  *
- * @class  InstallToRemoteAccessSessionRequestPrivate
- *
- * @brief  Private implementation for InstallToRemoteAccessSessionRequest.
+ * \inmodule QtAwsDeviceFarm
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new InstallToRemoteAccessSessionRequestPrivate object.
- *
- * @param  action  DeviceFarm action being performed.
- * @param  q       Pointer to this object's public InstallToRemoteAccessSessionRequest instance.
+ * Constructs a InstallToRemoteAccessSessionRequestPrivate object for DeviceFarm \a action with,
+ * public implementation \a q.
  */
 InstallToRemoteAccessSessionRequestPrivate::InstallToRemoteAccessSessionRequestPrivate(
     const DeviceFarmRequest::Action action, InstallToRemoteAccessSessionRequest * const q)
@@ -106,15 +95,10 @@ InstallToRemoteAccessSessionRequestPrivate::InstallToRemoteAccessSessionRequestP
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new InstallToRemoteAccessSessionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the InstallToRemoteAccessSessionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public InstallToRemoteAccessSessionRequest instance.
  */
 InstallToRemoteAccessSessionRequestPrivate::InstallToRemoteAccessSessionRequestPrivate(
     const InstallToRemoteAccessSessionRequestPrivate &other, InstallToRemoteAccessSessionRequest * const q)

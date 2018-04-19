@@ -27,10 +27,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::CreateStageRequest
- *
  * \brief The CreateStageRequest class provides an interface for APIGateway CreateStage requests.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -42,9 +41,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new CreateStageRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateStageRequest::CreateStageRequest(const CreateStageRequest &other)
     : APIGatewayRequest(new CreateStageRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ CreateStageRequest::CreateStageRequest(const CreateStageRequest &other)
 }
 
 /*!
- * @brief  Constructs a new CreateStageRequest object.
+ * Constructs a CreateStageRequest object.
  */
 CreateStageRequest::CreateStageRequest()
     : APIGatewayRequest(new CreateStageRequestPrivate(APIGatewayRequest::CreateStageAction, this))
@@ -71,14 +68,9 @@ bool CreateStageRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateStageResponse object.
+ * Returns a CreateStageResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateStageResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  APIGatewayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateStageRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * CreateStageRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::APIGateway::CreateStageRequestPrivate
+ * \brief The CreateStageRequestPrivate class provides private implementation for CreateStageRequest.
+ * \internal
  *
- * @class  CreateStageRequestPrivate
- *
- * @brief  Private implementation for CreateStageRequest.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateStageRequestPrivate object.
- *
- * @param  action  APIGateway action being performed.
- * @param  q       Pointer to this object's public CreateStageRequest instance.
+ * Constructs a CreateStageRequestPrivate object for APIGateway \a action with,
+ * public implementation \a q.
  */
 CreateStageRequestPrivate::CreateStageRequestPrivate(
     const APIGatewayRequest::Action action, CreateStageRequest * const q)
@@ -109,15 +98,10 @@ CreateStageRequestPrivate::CreateStageRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateStageRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateStageRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateStageRequest instance.
  */
 CreateStageRequestPrivate::CreateStageRequestPrivate(
     const CreateStageRequestPrivate &other, CreateStageRequest * const q)

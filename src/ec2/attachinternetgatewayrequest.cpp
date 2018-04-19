@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::AttachInternetGatewayRequest
- *
  * \brief The AttachInternetGatewayRequest class provides an interface for EC2 AttachInternetGateway requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new AttachInternetGatewayRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AttachInternetGatewayRequest::AttachInternetGatewayRequest(const AttachInternetGatewayRequest &other)
     : EC2Request(new AttachInternetGatewayRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ AttachInternetGatewayRequest::AttachInternetGatewayRequest(const AttachInternetG
 }
 
 /*!
- * @brief  Constructs a new AttachInternetGatewayRequest object.
+ * Constructs a AttachInternetGatewayRequest object.
  */
 AttachInternetGatewayRequest::AttachInternetGatewayRequest()
     : EC2Request(new AttachInternetGatewayRequestPrivate(EC2Request::AttachInternetGatewayAction, this))
@@ -70,14 +67,9 @@ bool AttachInternetGatewayRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AttachInternetGatewayResponse object.
+ * Returns a AttachInternetGatewayResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AttachInternetGatewayResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AttachInternetGatewayRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * AttachInternetGatewayRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::AttachInternetGatewayRequestPrivate
+ * \brief The AttachInternetGatewayRequestPrivate class provides private implementation for AttachInternetGatewayRequest.
+ * \internal
  *
- * @class  AttachInternetGatewayRequestPrivate
- *
- * @brief  Private implementation for AttachInternetGatewayRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AttachInternetGatewayRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public AttachInternetGatewayRequest instance.
+ * Constructs a AttachInternetGatewayRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 AttachInternetGatewayRequestPrivate::AttachInternetGatewayRequestPrivate(
     const EC2Request::Action action, AttachInternetGatewayRequest * const q)
@@ -108,15 +97,10 @@ AttachInternetGatewayRequestPrivate::AttachInternetGatewayRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AttachInternetGatewayRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AttachInternetGatewayRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AttachInternetGatewayRequest instance.
  */
 AttachInternetGatewayRequestPrivate::AttachInternetGatewayRequestPrivate(
     const AttachInternetGatewayRequestPrivate &other, AttachInternetGatewayRequest * const q)

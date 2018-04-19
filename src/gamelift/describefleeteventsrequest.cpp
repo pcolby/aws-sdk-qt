@@ -27,10 +27,9 @@ namespace GameLift {
 
 /*!
  * \class QtAws::GameLift::DescribeFleetEventsRequest
- *
  * \brief The DescribeFleetEventsRequest class provides an interface for GameLift DescribeFleetEvents requests.
  *
- * \ingroup GameLift
+ * \inmodule QtAwsGameLift
  *
  *  <fullname>Amazon GameLift Service</fullname>
  * 
@@ -473,9 +472,7 @@ namespace GameLift {
  */
 
 /*!
- * @brief  Constructs a new DescribeFleetEventsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeFleetEventsRequest::DescribeFleetEventsRequest(const DescribeFleetEventsRequest &other)
     : GameLiftRequest(new DescribeFleetEventsRequestPrivate(*other.d_func(), this))
@@ -484,7 +481,7 @@ DescribeFleetEventsRequest::DescribeFleetEventsRequest(const DescribeFleetEvents
 }
 
 /*!
- * @brief  Constructs a new DescribeFleetEventsRequest object.
+ * Constructs a DescribeFleetEventsRequest object.
  */
 DescribeFleetEventsRequest::DescribeFleetEventsRequest()
     : GameLiftRequest(new DescribeFleetEventsRequestPrivate(GameLiftRequest::DescribeFleetEventsAction, this))
@@ -502,14 +499,9 @@ bool DescribeFleetEventsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeFleetEventsResponse object.
+ * Returns a DescribeFleetEventsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeFleetEventsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GameLiftClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeFleetEventsRequest::response(QNetworkReply * const reply) const
 {
@@ -517,20 +509,17 @@ QtAws::Core::AwsAbstractResponse * DescribeFleetEventsRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::GameLift::DescribeFleetEventsRequestPrivate
+ * \brief The DescribeFleetEventsRequestPrivate class provides private implementation for DescribeFleetEventsRequest.
+ * \internal
  *
- * @class  DescribeFleetEventsRequestPrivate
- *
- * @brief  Private implementation for DescribeFleetEventsRequest.
+ * \inmodule QtAwsGameLift
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeFleetEventsRequestPrivate object.
- *
- * @param  action  GameLift action being performed.
- * @param  q       Pointer to this object's public DescribeFleetEventsRequest instance.
+ * Constructs a DescribeFleetEventsRequestPrivate object for GameLift \a action with,
+ * public implementation \a q.
  */
 DescribeFleetEventsRequestPrivate::DescribeFleetEventsRequestPrivate(
     const GameLiftRequest::Action action, DescribeFleetEventsRequest * const q)
@@ -540,15 +529,10 @@ DescribeFleetEventsRequestPrivate::DescribeFleetEventsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeFleetEventsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeFleetEventsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeFleetEventsRequest instance.
  */
 DescribeFleetEventsRequestPrivate::DescribeFleetEventsRequestPrivate(
     const DescribeFleetEventsRequestPrivate &other, DescribeFleetEventsRequest * const q)

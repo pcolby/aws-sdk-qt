@@ -27,19 +27,16 @@ namespace Route53 {
 
 /*!
  * \class QtAws::Route53::GetTrafficPolicyRequest
- *
  * \brief The GetTrafficPolicyRequest class provides an interface for Route53 GetTrafficPolicy requests.
  *
- * \ingroup Route53
+ * \inmodule QtAwsRoute53
  *
  *
  * \sa Route53Client::getTrafficPolicy
  */
 
 /*!
- * @brief  Constructs a new GetTrafficPolicyRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetTrafficPolicyRequest::GetTrafficPolicyRequest(const GetTrafficPolicyRequest &other)
     : Route53Request(new GetTrafficPolicyRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ GetTrafficPolicyRequest::GetTrafficPolicyRequest(const GetTrafficPolicyRequest &
 }
 
 /*!
- * @brief  Constructs a new GetTrafficPolicyRequest object.
+ * Constructs a GetTrafficPolicyRequest object.
  */
 GetTrafficPolicyRequest::GetTrafficPolicyRequest()
     : Route53Request(new GetTrafficPolicyRequestPrivate(Route53Request::GetTrafficPolicyAction, this))
@@ -66,14 +63,9 @@ bool GetTrafficPolicyRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetTrafficPolicyResponse object.
+ * Returns a GetTrafficPolicyResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetTrafficPolicyResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  Route53Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetTrafficPolicyRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * GetTrafficPolicyRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::Route53::GetTrafficPolicyRequestPrivate
+ * \brief The GetTrafficPolicyRequestPrivate class provides private implementation for GetTrafficPolicyRequest.
+ * \internal
  *
- * @class  GetTrafficPolicyRequestPrivate
- *
- * @brief  Private implementation for GetTrafficPolicyRequest.
+ * \inmodule QtAwsRoute53
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetTrafficPolicyRequestPrivate object.
- *
- * @param  action  Route53 action being performed.
- * @param  q       Pointer to this object's public GetTrafficPolicyRequest instance.
+ * Constructs a GetTrafficPolicyRequestPrivate object for Route53 \a action with,
+ * public implementation \a q.
  */
 GetTrafficPolicyRequestPrivate::GetTrafficPolicyRequestPrivate(
     const Route53Request::Action action, GetTrafficPolicyRequest * const q)
@@ -104,15 +93,10 @@ GetTrafficPolicyRequestPrivate::GetTrafficPolicyRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetTrafficPolicyRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetTrafficPolicyRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetTrafficPolicyRequest instance.
  */
 GetTrafficPolicyRequestPrivate::GetTrafficPolicyRequestPrivate(
     const GetTrafficPolicyRequestPrivate &other, GetTrafficPolicyRequest * const q)

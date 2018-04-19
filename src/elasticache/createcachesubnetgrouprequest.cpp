@@ -27,10 +27,9 @@ namespace ElastiCache {
 
 /*!
  * \class QtAws::ElastiCache::CreateCacheSubnetGroupRequest
- *
  * \brief The CreateCacheSubnetGroupRequest class provides an interface for ElastiCache CreateCacheSubnetGroup requests.
  *
- * \ingroup ElastiCache
+ * \inmodule QtAwsElastiCache
  *
  *  <fullname>Amazon ElastiCache</fullname>
  * 
@@ -51,9 +50,7 @@ namespace ElastiCache {
  */
 
 /*!
- * @brief  Constructs a new CreateCacheSubnetGroupRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateCacheSubnetGroupRequest::CreateCacheSubnetGroupRequest(const CreateCacheSubnetGroupRequest &other)
     : ElastiCacheRequest(new CreateCacheSubnetGroupRequestPrivate(*other.d_func(), this))
@@ -62,7 +59,7 @@ CreateCacheSubnetGroupRequest::CreateCacheSubnetGroupRequest(const CreateCacheSu
 }
 
 /*!
- * @brief  Constructs a new CreateCacheSubnetGroupRequest object.
+ * Constructs a CreateCacheSubnetGroupRequest object.
  */
 CreateCacheSubnetGroupRequest::CreateCacheSubnetGroupRequest()
     : ElastiCacheRequest(new CreateCacheSubnetGroupRequestPrivate(ElastiCacheRequest::CreateCacheSubnetGroupAction, this))
@@ -80,14 +77,9 @@ bool CreateCacheSubnetGroupRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateCacheSubnetGroupResponse object.
+ * Returns a CreateCacheSubnetGroupResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateCacheSubnetGroupResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ElastiCacheClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateCacheSubnetGroupRequest::response(QNetworkReply * const reply) const
 {
@@ -95,20 +87,17 @@ QtAws::Core::AwsAbstractResponse * CreateCacheSubnetGroupRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::ElastiCache::CreateCacheSubnetGroupRequestPrivate
+ * \brief The CreateCacheSubnetGroupRequestPrivate class provides private implementation for CreateCacheSubnetGroupRequest.
+ * \internal
  *
- * @class  CreateCacheSubnetGroupRequestPrivate
- *
- * @brief  Private implementation for CreateCacheSubnetGroupRequest.
+ * \inmodule QtAwsElastiCache
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateCacheSubnetGroupRequestPrivate object.
- *
- * @param  action  ElastiCache action being performed.
- * @param  q       Pointer to this object's public CreateCacheSubnetGroupRequest instance.
+ * Constructs a CreateCacheSubnetGroupRequestPrivate object for ElastiCache \a action with,
+ * public implementation \a q.
  */
 CreateCacheSubnetGroupRequestPrivate::CreateCacheSubnetGroupRequestPrivate(
     const ElastiCacheRequest::Action action, CreateCacheSubnetGroupRequest * const q)
@@ -118,15 +107,10 @@ CreateCacheSubnetGroupRequestPrivate::CreateCacheSubnetGroupRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateCacheSubnetGroupRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateCacheSubnetGroupRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateCacheSubnetGroupRequest instance.
  */
 CreateCacheSubnetGroupRequestPrivate::CreateCacheSubnetGroupRequestPrivate(
     const CreateCacheSubnetGroupRequestPrivate &other, CreateCacheSubnetGroupRequest * const q)

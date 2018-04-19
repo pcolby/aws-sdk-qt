@@ -27,10 +27,9 @@ namespace ElastiCache {
 
 /*!
  * \class QtAws::ElastiCache::DeleteCacheSubnetGroupRequest
- *
  * \brief The DeleteCacheSubnetGroupRequest class provides an interface for ElastiCache DeleteCacheSubnetGroup requests.
  *
- * \ingroup ElastiCache
+ * \inmodule QtAwsElastiCache
  *
  *  <fullname>Amazon ElastiCache</fullname>
  * 
@@ -51,9 +50,7 @@ namespace ElastiCache {
  */
 
 /*!
- * @brief  Constructs a new DeleteCacheSubnetGroupRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteCacheSubnetGroupRequest::DeleteCacheSubnetGroupRequest(const DeleteCacheSubnetGroupRequest &other)
     : ElastiCacheRequest(new DeleteCacheSubnetGroupRequestPrivate(*other.d_func(), this))
@@ -62,7 +59,7 @@ DeleteCacheSubnetGroupRequest::DeleteCacheSubnetGroupRequest(const DeleteCacheSu
 }
 
 /*!
- * @brief  Constructs a new DeleteCacheSubnetGroupRequest object.
+ * Constructs a DeleteCacheSubnetGroupRequest object.
  */
 DeleteCacheSubnetGroupRequest::DeleteCacheSubnetGroupRequest()
     : ElastiCacheRequest(new DeleteCacheSubnetGroupRequestPrivate(ElastiCacheRequest::DeleteCacheSubnetGroupAction, this))
@@ -80,14 +77,9 @@ bool DeleteCacheSubnetGroupRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteCacheSubnetGroupResponse object.
+ * Returns a DeleteCacheSubnetGroupResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteCacheSubnetGroupResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ElastiCacheClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteCacheSubnetGroupRequest::response(QNetworkReply * const reply) const
 {
@@ -95,20 +87,17 @@ QtAws::Core::AwsAbstractResponse * DeleteCacheSubnetGroupRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::ElastiCache::DeleteCacheSubnetGroupRequestPrivate
+ * \brief The DeleteCacheSubnetGroupRequestPrivate class provides private implementation for DeleteCacheSubnetGroupRequest.
+ * \internal
  *
- * @class  DeleteCacheSubnetGroupRequestPrivate
- *
- * @brief  Private implementation for DeleteCacheSubnetGroupRequest.
+ * \inmodule QtAwsElastiCache
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteCacheSubnetGroupRequestPrivate object.
- *
- * @param  action  ElastiCache action being performed.
- * @param  q       Pointer to this object's public DeleteCacheSubnetGroupRequest instance.
+ * Constructs a DeleteCacheSubnetGroupRequestPrivate object for ElastiCache \a action with,
+ * public implementation \a q.
  */
 DeleteCacheSubnetGroupRequestPrivate::DeleteCacheSubnetGroupRequestPrivate(
     const ElastiCacheRequest::Action action, DeleteCacheSubnetGroupRequest * const q)
@@ -118,15 +107,10 @@ DeleteCacheSubnetGroupRequestPrivate::DeleteCacheSubnetGroupRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteCacheSubnetGroupRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteCacheSubnetGroupRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteCacheSubnetGroupRequest instance.
  */
 DeleteCacheSubnetGroupRequestPrivate::DeleteCacheSubnetGroupRequestPrivate(
     const DeleteCacheSubnetGroupRequestPrivate &other, DeleteCacheSubnetGroupRequest * const q)

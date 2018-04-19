@@ -27,10 +27,9 @@ namespace Kinesis {
 
 /*!
  * \class QtAws::Kinesis::StartStreamEncryptionRequest
- *
  * \brief The StartStreamEncryptionRequest class provides an interface for Kinesis StartStreamEncryption requests.
  *
- * \ingroup Kinesis
+ * \inmodule QtAwsKinesis
  *
  *  <fullname>Amazon Kinesis Data Streams Service API Reference</fullname>
  * 
@@ -40,9 +39,7 @@ namespace Kinesis {
  */
 
 /*!
- * @brief  Constructs a new StartStreamEncryptionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 StartStreamEncryptionRequest::StartStreamEncryptionRequest(const StartStreamEncryptionRequest &other)
     : KinesisRequest(new StartStreamEncryptionRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ StartStreamEncryptionRequest::StartStreamEncryptionRequest(const StartStreamEncr
 }
 
 /*!
- * @brief  Constructs a new StartStreamEncryptionRequest object.
+ * Constructs a StartStreamEncryptionRequest object.
  */
 StartStreamEncryptionRequest::StartStreamEncryptionRequest()
     : KinesisRequest(new StartStreamEncryptionRequestPrivate(KinesisRequest::StartStreamEncryptionAction, this))
@@ -69,14 +66,9 @@ bool StartStreamEncryptionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an StartStreamEncryptionResponse object.
+ * Returns a StartStreamEncryptionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An StartStreamEncryptionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  KinesisClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * StartStreamEncryptionRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * StartStreamEncryptionRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::Kinesis::StartStreamEncryptionRequestPrivate
+ * \brief The StartStreamEncryptionRequestPrivate class provides private implementation for StartStreamEncryptionRequest.
+ * \internal
  *
- * @class  StartStreamEncryptionRequestPrivate
- *
- * @brief  Private implementation for StartStreamEncryptionRequest.
+ * \inmodule QtAwsKinesis
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new StartStreamEncryptionRequestPrivate object.
- *
- * @param  action  Kinesis action being performed.
- * @param  q       Pointer to this object's public StartStreamEncryptionRequest instance.
+ * Constructs a StartStreamEncryptionRequestPrivate object for Kinesis \a action with,
+ * public implementation \a q.
  */
 StartStreamEncryptionRequestPrivate::StartStreamEncryptionRequestPrivate(
     const KinesisRequest::Action action, StartStreamEncryptionRequest * const q)
@@ -107,15 +96,10 @@ StartStreamEncryptionRequestPrivate::StartStreamEncryptionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StartStreamEncryptionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the StartStreamEncryptionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public StartStreamEncryptionRequest instance.
  */
 StartStreamEncryptionRequestPrivate::StartStreamEncryptionRequestPrivate(
     const StartStreamEncryptionRequestPrivate &other, StartStreamEncryptionRequest * const q)

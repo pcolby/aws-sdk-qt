@@ -27,10 +27,9 @@ namespace SES {
 
 /*!
  * \class QtAws::SES::DescribeConfigurationSetRequest
- *
  * \brief The DescribeConfigurationSetRequest class provides an interface for SES DescribeConfigurationSet requests.
  *
- * \ingroup SES
+ * \inmodule QtAwsSES
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -48,9 +47,7 @@ namespace SES {
  */
 
 /*!
- * @brief  Constructs a new DescribeConfigurationSetRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeConfigurationSetRequest::DescribeConfigurationSetRequest(const DescribeConfigurationSetRequest &other)
     : SESRequest(new DescribeConfigurationSetRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ DescribeConfigurationSetRequest::DescribeConfigurationSetRequest(const DescribeC
 }
 
 /*!
- * @brief  Constructs a new DescribeConfigurationSetRequest object.
+ * Constructs a DescribeConfigurationSetRequest object.
  */
 DescribeConfigurationSetRequest::DescribeConfigurationSetRequest()
     : SESRequest(new DescribeConfigurationSetRequestPrivate(SESRequest::DescribeConfigurationSetAction, this))
@@ -77,14 +74,9 @@ bool DescribeConfigurationSetRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeConfigurationSetResponse object.
+ * Returns a DescribeConfigurationSetResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeConfigurationSetResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SESClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeConfigurationSetRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * DescribeConfigurationSetRequest::response(QNe
 }
 
 /*!
- * @internal
+ * \class QtAws::SES::DescribeConfigurationSetRequestPrivate
+ * \brief The DescribeConfigurationSetRequestPrivate class provides private implementation for DescribeConfigurationSetRequest.
+ * \internal
  *
- * @class  DescribeConfigurationSetRequestPrivate
- *
- * @brief  Private implementation for DescribeConfigurationSetRequest.
+ * \inmodule QtAwsSES
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeConfigurationSetRequestPrivate object.
- *
- * @param  action  SES action being performed.
- * @param  q       Pointer to this object's public DescribeConfigurationSetRequest instance.
+ * Constructs a DescribeConfigurationSetRequestPrivate object for SES \a action with,
+ * public implementation \a q.
  */
 DescribeConfigurationSetRequestPrivate::DescribeConfigurationSetRequestPrivate(
     const SESRequest::Action action, DescribeConfigurationSetRequest * const q)
@@ -115,15 +104,10 @@ DescribeConfigurationSetRequestPrivate::DescribeConfigurationSetRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeConfigurationSetRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeConfigurationSetRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeConfigurationSetRequest instance.
  */
 DescribeConfigurationSetRequestPrivate::DescribeConfigurationSetRequestPrivate(
     const DescribeConfigurationSetRequestPrivate &other, DescribeConfigurationSetRequest * const q)

@@ -27,10 +27,9 @@ namespace SNS {
 
 /*!
  * \class QtAws::SNS::DeleteEndpointRequest
- *
  * \brief The DeleteEndpointRequest class provides an interface for SNS DeleteEndpoint requests.
  *
- * \ingroup SNS
+ * \inmodule QtAwsSNS
  *
  *  <fullname>Amazon Simple Notification Service</fullname>
  * 
@@ -51,9 +50,7 @@ namespace SNS {
  */
 
 /*!
- * @brief  Constructs a new DeleteEndpointRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteEndpointRequest::DeleteEndpointRequest(const DeleteEndpointRequest &other)
     : SNSRequest(new DeleteEndpointRequestPrivate(*other.d_func(), this))
@@ -62,7 +59,7 @@ DeleteEndpointRequest::DeleteEndpointRequest(const DeleteEndpointRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DeleteEndpointRequest object.
+ * Constructs a DeleteEndpointRequest object.
  */
 DeleteEndpointRequest::DeleteEndpointRequest()
     : SNSRequest(new DeleteEndpointRequestPrivate(SNSRequest::DeleteEndpointAction, this))
@@ -80,14 +77,9 @@ bool DeleteEndpointRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteEndpointResponse object.
+ * Returns a DeleteEndpointResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteEndpointResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SNSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteEndpointRequest::response(QNetworkReply * const reply) const
 {
@@ -95,20 +87,17 @@ QtAws::Core::AwsAbstractResponse * DeleteEndpointRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::SNS::DeleteEndpointRequestPrivate
+ * \brief The DeleteEndpointRequestPrivate class provides private implementation for DeleteEndpointRequest.
+ * \internal
  *
- * @class  DeleteEndpointRequestPrivate
- *
- * @brief  Private implementation for DeleteEndpointRequest.
+ * \inmodule QtAwsSNS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteEndpointRequestPrivate object.
- *
- * @param  action  SNS action being performed.
- * @param  q       Pointer to this object's public DeleteEndpointRequest instance.
+ * Constructs a DeleteEndpointRequestPrivate object for SNS \a action with,
+ * public implementation \a q.
  */
 DeleteEndpointRequestPrivate::DeleteEndpointRequestPrivate(
     const SNSRequest::Action action, DeleteEndpointRequest * const q)
@@ -118,15 +107,10 @@ DeleteEndpointRequestPrivate::DeleteEndpointRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteEndpointRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteEndpointRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteEndpointRequest instance.
  */
 DeleteEndpointRequestPrivate::DeleteEndpointRequestPrivate(
     const DeleteEndpointRequestPrivate &other, DeleteEndpointRequest * const q)

@@ -27,19 +27,16 @@ namespace Pinpoint {
 
 /*!
  * \class QtAws::Pinpoint::GetAppsRequest
- *
  * \brief The GetAppsRequest class provides an interface for Pinpoint GetApps requests.
  *
- * \ingroup Pinpoint
+ * \inmodule QtAwsPinpoint
  *
  *
  * \sa PinpointClient::getApps
  */
 
 /*!
- * @brief  Constructs a new GetAppsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetAppsRequest::GetAppsRequest(const GetAppsRequest &other)
     : PinpointRequest(new GetAppsRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ GetAppsRequest::GetAppsRequest(const GetAppsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetAppsRequest object.
+ * Constructs a GetAppsRequest object.
  */
 GetAppsRequest::GetAppsRequest()
     : PinpointRequest(new GetAppsRequestPrivate(PinpointRequest::GetAppsAction, this))
@@ -66,14 +63,9 @@ bool GetAppsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetAppsResponse object.
+ * Returns a GetAppsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetAppsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  PinpointClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetAppsRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * GetAppsRequest::response(QNetworkReply * cons
 }
 
 /*!
- * @internal
+ * \class QtAws::Pinpoint::GetAppsRequestPrivate
+ * \brief The GetAppsRequestPrivate class provides private implementation for GetAppsRequest.
+ * \internal
  *
- * @class  GetAppsRequestPrivate
- *
- * @brief  Private implementation for GetAppsRequest.
+ * \inmodule QtAwsPinpoint
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetAppsRequestPrivate object.
- *
- * @param  action  Pinpoint action being performed.
- * @param  q       Pointer to this object's public GetAppsRequest instance.
+ * Constructs a GetAppsRequestPrivate object for Pinpoint \a action with,
+ * public implementation \a q.
  */
 GetAppsRequestPrivate::GetAppsRequestPrivate(
     const PinpointRequest::Action action, GetAppsRequest * const q)
@@ -104,15 +93,10 @@ GetAppsRequestPrivate::GetAppsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetAppsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetAppsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetAppsRequest instance.
  */
 GetAppsRequestPrivate::GetAppsRequestPrivate(
     const GetAppsRequestPrivate &other, GetAppsRequest * const q)

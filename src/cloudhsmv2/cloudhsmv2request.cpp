@@ -25,16 +25,31 @@ namespace CloudHSMV2 {
 
 /*!
  * \class QtAws::CloudHSMV2::CloudHSMV2Request
- *
  * \brief The CloudHSMV2Request class provides an interface for CloudHSMV2 requests.
  *
- * \ingroup CloudHSMV2
+ * \inmodule QtAwsCloudHSMV2
  */
 
 /*!
- * @brief  Constructs a new CloudHSMV2Request object.
+ * \enum CloudHSMV2Request::Action
  *
- * @param  action  The CloudHSMV2 action to request.
+ * This enum describes the actions that can be performed as CloudHSMV2
+ * requests.
+ *
+ * \value CreateClusterAction CloudHSMV2 CreateCluster action.
+ * \value CreateHsmAction CloudHSMV2 CreateHsm action.
+ * \value DeleteClusterAction CloudHSMV2 DeleteCluster action.
+ * \value DeleteHsmAction CloudHSMV2 DeleteHsm action.
+ * \value DescribeBackupsAction CloudHSMV2 DescribeBackups action.
+ * \value DescribeClustersAction CloudHSMV2 DescribeClusters action.
+ * \value InitializeClusterAction CloudHSMV2 InitializeCluster action.
+ * \value ListTagsAction CloudHSMV2 ListTags action.
+ * \value TagResourceAction CloudHSMV2 TagResource action.
+ * \value UntagResourceAction CloudHSMV2 UntagResource action.
+ */
+
+/*!
+ * Constructs a[n] CloudHSMV2Request object for CloudHSMV2 \a action.
  */
 CloudHSMV2Request::CloudHSMV2Request(const Action action)
     : QtAws::Core::AwsAbstractRequest(new CloudHSMV2RequestPrivate(action, this))
@@ -43,9 +58,7 @@ CloudHSMV2Request::CloudHSMV2Request(const Action action)
 }
 
 /*!
- * @brief  Constructs a new CloudHSMV2Request object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CloudHSMV2Request::CloudHSMV2Request(const CloudHSMV2Request &other)
     : QtAws::Core::AwsAbstractRequest(new CloudHSMV2RequestPrivate(*other.d_func(), this))
@@ -54,13 +67,7 @@ CloudHSMV2Request::CloudHSMV2Request(const CloudHSMV2Request &other)
 }
 
 /*!
- * @brief  Assignment operator.
- *
- * Assigns \a other to \c this.
- *
- * @param  other  Instance to copy.
- *
- * @return  A reference to \c this.
+ * Sets the CloudHSMV2Request object to be equal to \a other.
  */
 CloudHSMV2Request& CloudHSMV2Request::operator=(const CloudHSMV2Request &other)
 {
@@ -72,14 +79,10 @@ CloudHSMV2Request& CloudHSMV2Request::operator=(const CloudHSMV2Request &other)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CloudHSMV2Request object.
+ * Constructs aa CloudHSMV2Request object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from CloudHSMV2RequestPrivate.
- *
- * @param  d  Pointer to private data (aka D-Pointer).
  */
 CloudHSMV2Request::CloudHSMV2Request(CloudHSMV2RequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
@@ -87,7 +90,7 @@ CloudHSMV2Request::CloudHSMV2Request(CloudHSMV2RequestPrivate * const d) : QtAws
 }
 
 /*!
- * \brief Returns the CloudHSMV2 action to be performed by this request.
+ * Returns the CloudHSMV2 action to be performed by this request.
  */
 CloudHSMV2Request::Action CloudHSMV2Request::action() const
 {
@@ -96,7 +99,7 @@ CloudHSMV2Request::Action CloudHSMV2Request::action() const
 }
 
 /*!
- * \brief Returns the name of the CloudHSMV2 action to be performed by this request.
+ * Returns the name of the CloudHSMV2 action to be performed by this request.
  */
 QString CloudHSMV2Request::actionString() const
 {
@@ -104,7 +107,7 @@ QString CloudHSMV2Request::actionString() const
 }
 
 /*!
- * \brief Returns the CloudHSMV2 API version implemented by this request.
+ * Returns the CloudHSMV2 API version implemented by this request.
  */
 QString CloudHSMV2Request::apiVersion() const
 {
@@ -113,7 +116,7 @@ QString CloudHSMV2Request::apiVersion() const
 }
 
 /*!
- * @brief Set the CloudHSMV2 action to be performed by this request to \a action.
+ * Sets the CloudHSMV2 action to be performed by this request to \a action.
  */
 void CloudHSMV2Request::setAction(const Action action)
 {
@@ -122,7 +125,7 @@ void CloudHSMV2Request::setAction(const Action action)
 }
 
 /*!
- * Set the CloudHSMV2 API version to include in this request to \a version.
+ * Sets the CloudHSMV2 API version to include in this request to \a version.
  */
 void CloudHSMV2Request::setApiVersion(const QString &version)
 {
@@ -131,7 +134,7 @@ void CloudHSMV2Request::setApiVersion(const QString &version)
 }
 
 /*!
- * \brief Returns \c true if this request is the same as \a other.
+ * Returns \c true if this request is equal to \a other; \c false otherwise.
  *
  * Note, most derived *Request classes do not need to provider their own
  * implementations of this function, since most such request classes rely on
@@ -146,8 +149,8 @@ bool CloudHSMV2Request::operator==(const CloudHSMV2Request &other) const
             (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
-/*!
- * @brief  Check if \a queueName is a valid CloudHSMV2 queue name.
+/*
+ * Returns \c tue if \a queueName is a valid CloudHSMV2 queue name.
  *
  * @par From CloudHSMV2 FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
@@ -166,9 +169,8 @@ bool CloudHSMV2Request::operator==(const CloudHSMV2Request &other) const
 }*/
 
 /*!
- * \brief Removes the a \a name parameter from this request.
- *
- * Returns the count of paramters removed (typically \c 0 or \c 1).
+ * Removes the a \a name parameter from the request, then returns the number of
+ * paramters removed (typically \c 0 or \c 1).
  */
 int CloudHSMV2Request::clearParameter(const QString &name)
 {
@@ -177,7 +179,7 @@ int CloudHSMV2Request::clearParameter(const QString &name)
 }
 
 /*!
- * \brief Removes all parameters from this request.
+ * Removes all parameters from the request.
  */
 void CloudHSMV2Request::clearParameters()
 {
@@ -186,7 +188,7 @@ void CloudHSMV2Request::clearParameters()
 }
 
 /*!
- * \brief Returns the value of the \n name pararemter if set, otherwise \a defaultValue.
+ * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
 QVariant CloudHSMV2Request::parameter(const QString &name, const QVariant &defaultValue) const
 {
@@ -195,7 +197,7 @@ QVariant CloudHSMV2Request::parameter(const QString &name, const QVariant &defau
 }
 
 /*!
- * \brief Returns a map of parameters included in this request.
+ * Returns the parameters included in this request.
  */
 const QVariantMap &CloudHSMV2Request::parameters() const
 {
@@ -204,7 +206,7 @@ const QVariantMap &CloudHSMV2Request::parameters() const
 }
 
 /*!
- * \brief Sets the \a name parameter to \a value.
+ * Sets the \a name parameter to \a value.
  */
 void CloudHSMV2Request::setParameter(const QString &name, const QVariant &value)
 {
@@ -213,9 +215,8 @@ void CloudHSMV2Request::setParameter(const QString &name, const QVariant &value)
 }
 
 /*!
- * \brief Sets the map of paramters for this request to \a parameters.
- *
- * Any request parameters set previously will be discarded.
+ * Sets the paramters for this request to \a parameters. Any request parameters
+ * set previously will be discarded.
  */
 void CloudHSMV2Request::setParameters(const QVariantMap &parameters)
 {
@@ -224,11 +225,12 @@ void CloudHSMV2Request::setParameters(const QVariantMap &parameters)
 }
 
 /*!
- * \brief Returns a network request for this CloudHSMV2 request using the given \a endpoint.
+ * Returns a network request for the CloudHSMV2 request using the given
+ * \a endpoint.
  *
- * This CloudHSMV2 implementation builds request URLs by combining the common query
- * parameters (such as Action and Version), with any that have been added (via
- * setParameter) by child classes.
+ * This CloudHSMV2 implementation builds request URLs by combining the
+ * common query parameters (such as Action and Version), with any that have
+ * been added (via setParameter) by child classes.
  */
 QNetworkRequest CloudHSMV2Request::unsignedRequest(const QUrl &endpoint) const
 {
@@ -239,17 +241,16 @@ QNetworkRequest CloudHSMV2Request::unsignedRequest(const QUrl &endpoint) const
 }
 
 /*!
+ * \class QtAws::CloudHSMV2::CloudHSMV2RequestPrivate
+ * \brief The CloudHSMV2RequestPrivate class provides private implementation for CloudHSMV2Request.
  * \internal
  *
- * \class  CloudHSMV2RequestPrivate
- *
- * \brief  Private implementation for CloudHSMV2Request.
+ * \inmodule QtAwsCloudHSMV2
  */
 
 /*!
- * \internal
- *
- * \brief Constructs a new CloudHSMV2RequestPrivate object.
+ * Constructs a CloudHSMV2RequestPrivate object for CloudHSMV2 \a action with,
+ * public implementation \a q.
  */
 CloudHSMV2RequestPrivate::CloudHSMV2RequestPrivate(const CloudHSMV2Request::Action action, CloudHSMV2Request * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
@@ -258,9 +259,7 @@ CloudHSMV2RequestPrivate::CloudHSMV2RequestPrivate(const CloudHSMV2Request::Acti
 }
 
 /*!
- * \internal
- *
- * \brief Constructs a new CloudHSMV2RequestPrivate object, copying an existing one.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
@@ -276,15 +275,12 @@ CloudHSMV2RequestPrivate::CloudHSMV2RequestPrivate(const CloudHSMV2RequestPrivat
 }
 
 /*!
- * \internal
- *
- * \brief Returns a string representing \a action.
+ * Returns a string represention of \a action, or a null string if \a action is
+ * invalid.
  *
  * This function converts CloudHSMV2Request::Action enumerator values to their respective
  * string representations, appropriate for use with the CloudHSMV2 service's Action
  * query parameters.
- *
- * @return A string representing \a action, or a null string if \a action is invalid.
  */
 QString CloudHSMV2RequestPrivate::toString(const CloudHSMV2Request::Action &action)
 {

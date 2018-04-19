@@ -27,10 +27,9 @@ namespace Budgets {
 
 /*!
  * \class QtAws::Budgets::DeleteSubscriberRequest
- *
  * \brief The DeleteSubscriberRequest class provides an interface for Budgets DeleteSubscriber requests.
  *
- * \ingroup Budgets
+ * \inmodule QtAwsBudgets
  *
  *  Budgets enable you to plan your service usage, service costs, and your RI utilization. You can also track how close your
  *  plan is to your budgeted amount or to the free tier limits. Budgets provide you with a quick way to see your
@@ -75,9 +74,7 @@ namespace Budgets {
  */
 
 /*!
- * @brief  Constructs a new DeleteSubscriberRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteSubscriberRequest::DeleteSubscriberRequest(const DeleteSubscriberRequest &other)
     : BudgetsRequest(new DeleteSubscriberRequestPrivate(*other.d_func(), this))
@@ -86,7 +83,7 @@ DeleteSubscriberRequest::DeleteSubscriberRequest(const DeleteSubscriberRequest &
 }
 
 /*!
- * @brief  Constructs a new DeleteSubscriberRequest object.
+ * Constructs a DeleteSubscriberRequest object.
  */
 DeleteSubscriberRequest::DeleteSubscriberRequest()
     : BudgetsRequest(new DeleteSubscriberRequestPrivate(BudgetsRequest::DeleteSubscriberAction, this))
@@ -104,14 +101,9 @@ bool DeleteSubscriberRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteSubscriberResponse object.
+ * Returns a DeleteSubscriberResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteSubscriberResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  BudgetsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteSubscriberRequest::response(QNetworkReply * const reply) const
 {
@@ -119,20 +111,17 @@ QtAws::Core::AwsAbstractResponse * DeleteSubscriberRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::Budgets::DeleteSubscriberRequestPrivate
+ * \brief The DeleteSubscriberRequestPrivate class provides private implementation for DeleteSubscriberRequest.
+ * \internal
  *
- * @class  DeleteSubscriberRequestPrivate
- *
- * @brief  Private implementation for DeleteSubscriberRequest.
+ * \inmodule QtAwsBudgets
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteSubscriberRequestPrivate object.
- *
- * @param  action  Budgets action being performed.
- * @param  q       Pointer to this object's public DeleteSubscriberRequest instance.
+ * Constructs a DeleteSubscriberRequestPrivate object for Budgets \a action with,
+ * public implementation \a q.
  */
 DeleteSubscriberRequestPrivate::DeleteSubscriberRequestPrivate(
     const BudgetsRequest::Action action, DeleteSubscriberRequest * const q)
@@ -142,15 +131,10 @@ DeleteSubscriberRequestPrivate::DeleteSubscriberRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteSubscriberRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteSubscriberRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteSubscriberRequest instance.
  */
 DeleteSubscriberRequestPrivate::DeleteSubscriberRequestPrivate(
     const DeleteSubscriberRequestPrivate &other, DeleteSubscriberRequest * const q)

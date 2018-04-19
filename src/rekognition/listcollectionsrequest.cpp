@@ -27,10 +27,9 @@ namespace Rekognition {
 
 /*!
  * \class QtAws::Rekognition::ListCollectionsRequest
- *
  * \brief The ListCollectionsRequest class provides an interface for Rekognition ListCollections requests.
  *
- * \ingroup Rekognition
+ * \inmodule QtAwsRekognition
  *
  *  This is the Amazon Rekognition API
  *
@@ -38,9 +37,7 @@ namespace Rekognition {
  */
 
 /*!
- * @brief  Constructs a new ListCollectionsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListCollectionsRequest::ListCollectionsRequest(const ListCollectionsRequest &other)
     : RekognitionRequest(new ListCollectionsRequestPrivate(*other.d_func(), this))
@@ -49,7 +46,7 @@ ListCollectionsRequest::ListCollectionsRequest(const ListCollectionsRequest &oth
 }
 
 /*!
- * @brief  Constructs a new ListCollectionsRequest object.
+ * Constructs a ListCollectionsRequest object.
  */
 ListCollectionsRequest::ListCollectionsRequest()
     : RekognitionRequest(new ListCollectionsRequestPrivate(RekognitionRequest::ListCollectionsAction, this))
@@ -67,14 +64,9 @@ bool ListCollectionsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListCollectionsResponse object.
+ * Returns a ListCollectionsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListCollectionsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RekognitionClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListCollectionsRequest::response(QNetworkReply * const reply) const
 {
@@ -82,20 +74,17 @@ QtAws::Core::AwsAbstractResponse * ListCollectionsRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::Rekognition::ListCollectionsRequestPrivate
+ * \brief The ListCollectionsRequestPrivate class provides private implementation for ListCollectionsRequest.
+ * \internal
  *
- * @class  ListCollectionsRequestPrivate
- *
- * @brief  Private implementation for ListCollectionsRequest.
+ * \inmodule QtAwsRekognition
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListCollectionsRequestPrivate object.
- *
- * @param  action  Rekognition action being performed.
- * @param  q       Pointer to this object's public ListCollectionsRequest instance.
+ * Constructs a ListCollectionsRequestPrivate object for Rekognition \a action with,
+ * public implementation \a q.
  */
 ListCollectionsRequestPrivate::ListCollectionsRequestPrivate(
     const RekognitionRequest::Action action, ListCollectionsRequest * const q)
@@ -105,15 +94,10 @@ ListCollectionsRequestPrivate::ListCollectionsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListCollectionsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListCollectionsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListCollectionsRequest instance.
  */
 ListCollectionsRequestPrivate::ListCollectionsRequestPrivate(
     const ListCollectionsRequestPrivate &other, ListCollectionsRequest * const q)

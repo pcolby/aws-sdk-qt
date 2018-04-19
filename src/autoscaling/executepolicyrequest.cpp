@@ -27,10 +27,9 @@ namespace AutoScaling {
 
 /*!
  * \class QtAws::AutoScaling::ExecutePolicyRequest
- *
  * \brief The ExecutePolicyRequest class provides an interface for AutoScaling ExecutePolicy requests.
  *
- * \ingroup AutoScaling
+ * \inmodule QtAwsAutoScaling
  *
  *  <fullname>Amazon EC2 Auto Scaling</fullname>
  * 
@@ -42,9 +41,7 @@ namespace AutoScaling {
  */
 
 /*!
- * @brief  Constructs a new ExecutePolicyRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ExecutePolicyRequest::ExecutePolicyRequest(const ExecutePolicyRequest &other)
     : AutoScalingRequest(new ExecutePolicyRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ ExecutePolicyRequest::ExecutePolicyRequest(const ExecutePolicyRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ExecutePolicyRequest object.
+ * Constructs a ExecutePolicyRequest object.
  */
 ExecutePolicyRequest::ExecutePolicyRequest()
     : AutoScalingRequest(new ExecutePolicyRequestPrivate(AutoScalingRequest::ExecutePolicyAction, this))
@@ -71,14 +68,9 @@ bool ExecutePolicyRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ExecutePolicyResponse object.
+ * Returns a ExecutePolicyResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ExecutePolicyResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AutoScalingClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ExecutePolicyRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * ExecutePolicyRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::AutoScaling::ExecutePolicyRequestPrivate
+ * \brief The ExecutePolicyRequestPrivate class provides private implementation for ExecutePolicyRequest.
+ * \internal
  *
- * @class  ExecutePolicyRequestPrivate
- *
- * @brief  Private implementation for ExecutePolicyRequest.
+ * \inmodule QtAwsAutoScaling
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ExecutePolicyRequestPrivate object.
- *
- * @param  action  AutoScaling action being performed.
- * @param  q       Pointer to this object's public ExecutePolicyRequest instance.
+ * Constructs a ExecutePolicyRequestPrivate object for AutoScaling \a action with,
+ * public implementation \a q.
  */
 ExecutePolicyRequestPrivate::ExecutePolicyRequestPrivate(
     const AutoScalingRequest::Action action, ExecutePolicyRequest * const q)
@@ -109,15 +98,10 @@ ExecutePolicyRequestPrivate::ExecutePolicyRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ExecutePolicyRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ExecutePolicyRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ExecutePolicyRequest instance.
  */
 ExecutePolicyRequestPrivate::ExecutePolicyRequestPrivate(
     const ExecutePolicyRequestPrivate &other, ExecutePolicyRequest * const q)

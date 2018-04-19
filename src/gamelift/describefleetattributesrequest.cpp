@@ -27,10 +27,9 @@ namespace GameLift {
 
 /*!
  * \class QtAws::GameLift::DescribeFleetAttributesRequest
- *
  * \brief The DescribeFleetAttributesRequest class provides an interface for GameLift DescribeFleetAttributes requests.
  *
- * \ingroup GameLift
+ * \inmodule QtAwsGameLift
  *
  *  <fullname>Amazon GameLift Service</fullname>
  * 
@@ -473,9 +472,7 @@ namespace GameLift {
  */
 
 /*!
- * @brief  Constructs a new DescribeFleetAttributesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeFleetAttributesRequest::DescribeFleetAttributesRequest(const DescribeFleetAttributesRequest &other)
     : GameLiftRequest(new DescribeFleetAttributesRequestPrivate(*other.d_func(), this))
@@ -484,7 +481,7 @@ DescribeFleetAttributesRequest::DescribeFleetAttributesRequest(const DescribeFle
 }
 
 /*!
- * @brief  Constructs a new DescribeFleetAttributesRequest object.
+ * Constructs a DescribeFleetAttributesRequest object.
  */
 DescribeFleetAttributesRequest::DescribeFleetAttributesRequest()
     : GameLiftRequest(new DescribeFleetAttributesRequestPrivate(GameLiftRequest::DescribeFleetAttributesAction, this))
@@ -502,14 +499,9 @@ bool DescribeFleetAttributesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeFleetAttributesResponse object.
+ * Returns a DescribeFleetAttributesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeFleetAttributesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GameLiftClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeFleetAttributesRequest::response(QNetworkReply * const reply) const
 {
@@ -517,20 +509,17 @@ QtAws::Core::AwsAbstractResponse * DescribeFleetAttributesRequest::response(QNet
 }
 
 /*!
- * @internal
+ * \class QtAws::GameLift::DescribeFleetAttributesRequestPrivate
+ * \brief The DescribeFleetAttributesRequestPrivate class provides private implementation for DescribeFleetAttributesRequest.
+ * \internal
  *
- * @class  DescribeFleetAttributesRequestPrivate
- *
- * @brief  Private implementation for DescribeFleetAttributesRequest.
+ * \inmodule QtAwsGameLift
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeFleetAttributesRequestPrivate object.
- *
- * @param  action  GameLift action being performed.
- * @param  q       Pointer to this object's public DescribeFleetAttributesRequest instance.
+ * Constructs a DescribeFleetAttributesRequestPrivate object for GameLift \a action with,
+ * public implementation \a q.
  */
 DescribeFleetAttributesRequestPrivate::DescribeFleetAttributesRequestPrivate(
     const GameLiftRequest::Action action, DescribeFleetAttributesRequest * const q)
@@ -540,15 +529,10 @@ DescribeFleetAttributesRequestPrivate::DescribeFleetAttributesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeFleetAttributesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeFleetAttributesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeFleetAttributesRequest instance.
  */
 DescribeFleetAttributesRequestPrivate::DescribeFleetAttributesRequestPrivate(
     const DescribeFleetAttributesRequestPrivate &other, DescribeFleetAttributesRequest * const q)

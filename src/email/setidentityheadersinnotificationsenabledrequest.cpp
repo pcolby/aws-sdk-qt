@@ -27,10 +27,9 @@ namespace SES {
 
 /*!
  * \class QtAws::SES::SetIdentityHeadersInNotificationsEnabledRequest
- *
  * \brief The SetIdentityHeadersInNotificationsEnabledRequest class provides an interface for SES SetIdentityHeadersInNotificationsEnabled requests.
  *
- * \ingroup SES
+ * \inmodule QtAwsSES
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -48,9 +47,7 @@ namespace SES {
  */
 
 /*!
- * @brief  Constructs a new SetIdentityHeadersInNotificationsEnabledRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 SetIdentityHeadersInNotificationsEnabledRequest::SetIdentityHeadersInNotificationsEnabledRequest(const SetIdentityHeadersInNotificationsEnabledRequest &other)
     : SESRequest(new SetIdentityHeadersInNotificationsEnabledRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ SetIdentityHeadersInNotificationsEnabledRequest::SetIdentityHeadersInNotificatio
 }
 
 /*!
- * @brief  Constructs a new SetIdentityHeadersInNotificationsEnabledRequest object.
+ * Constructs a SetIdentityHeadersInNotificationsEnabledRequest object.
  */
 SetIdentityHeadersInNotificationsEnabledRequest::SetIdentityHeadersInNotificationsEnabledRequest()
     : SESRequest(new SetIdentityHeadersInNotificationsEnabledRequestPrivate(SESRequest::SetIdentityHeadersInNotificationsEnabledAction, this))
@@ -77,14 +74,9 @@ bool SetIdentityHeadersInNotificationsEnabledRequest::isValid() const
 
 
 /*!
- * @brief  Construct an SetIdentityHeadersInNotificationsEnabledResponse object.
+ * Returns a SetIdentityHeadersInNotificationsEnabledResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An SetIdentityHeadersInNotificationsEnabledResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SESClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * SetIdentityHeadersInNotificationsEnabledRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * SetIdentityHeadersInNotificationsEnabledReque
 }
 
 /*!
- * @internal
+ * \class QtAws::SES::SetIdentityHeadersInNotificationsEnabledRequestPrivate
+ * \brief The SetIdentityHeadersInNotificationsEnabledRequestPrivate class provides private implementation for SetIdentityHeadersInNotificationsEnabledRequest.
+ * \internal
  *
- * @class  SetIdentityHeadersInNotificationsEnabledRequestPrivate
- *
- * @brief  Private implementation for SetIdentityHeadersInNotificationsEnabledRequest.
+ * \inmodule QtAwsSES
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new SetIdentityHeadersInNotificationsEnabledRequestPrivate object.
- *
- * @param  action  SES action being performed.
- * @param  q       Pointer to this object's public SetIdentityHeadersInNotificationsEnabledRequest instance.
+ * Constructs a SetIdentityHeadersInNotificationsEnabledRequestPrivate object for SES \a action with,
+ * public implementation \a q.
  */
 SetIdentityHeadersInNotificationsEnabledRequestPrivate::SetIdentityHeadersInNotificationsEnabledRequestPrivate(
     const SESRequest::Action action, SetIdentityHeadersInNotificationsEnabledRequest * const q)
@@ -115,15 +104,10 @@ SetIdentityHeadersInNotificationsEnabledRequestPrivate::SetIdentityHeadersInNoti
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SetIdentityHeadersInNotificationsEnabledRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the SetIdentityHeadersInNotificationsEnabledRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public SetIdentityHeadersInNotificationsEnabledRequest instance.
  */
 SetIdentityHeadersInNotificationsEnabledRequestPrivate::SetIdentityHeadersInNotificationsEnabledRequestPrivate(
     const SetIdentityHeadersInNotificationsEnabledRequestPrivate &other, SetIdentityHeadersInNotificationsEnabledRequest * const q)

@@ -27,10 +27,9 @@ namespace WorkSpaces {
 
 /*!
  * \class QtAws::WorkSpaces::DescribeWorkspaceDirectoriesRequest
- *
  * \brief The DescribeWorkspaceDirectoriesRequest class provides an interface for WorkSpaces DescribeWorkspaceDirectories requests.
  *
- * \ingroup WorkSpaces
+ * \inmodule QtAwsWorkSpaces
  *
  *  <fullname>Amazon WorkSpaces Service</fullname>
  * 
@@ -40,9 +39,7 @@ namespace WorkSpaces {
  */
 
 /*!
- * @brief  Constructs a new DescribeWorkspaceDirectoriesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeWorkspaceDirectoriesRequest::DescribeWorkspaceDirectoriesRequest(const DescribeWorkspaceDirectoriesRequest &other)
     : WorkSpacesRequest(new DescribeWorkspaceDirectoriesRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ DescribeWorkspaceDirectoriesRequest::DescribeWorkspaceDirectoriesRequest(const D
 }
 
 /*!
- * @brief  Constructs a new DescribeWorkspaceDirectoriesRequest object.
+ * Constructs a DescribeWorkspaceDirectoriesRequest object.
  */
 DescribeWorkspaceDirectoriesRequest::DescribeWorkspaceDirectoriesRequest()
     : WorkSpacesRequest(new DescribeWorkspaceDirectoriesRequestPrivate(WorkSpacesRequest::DescribeWorkspaceDirectoriesAction, this))
@@ -69,14 +66,9 @@ bool DescribeWorkspaceDirectoriesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeWorkspaceDirectoriesResponse object.
+ * Returns a DescribeWorkspaceDirectoriesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeWorkspaceDirectoriesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WorkSpacesClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeWorkspaceDirectoriesRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * DescribeWorkspaceDirectoriesRequest::response
 }
 
 /*!
- * @internal
+ * \class QtAws::WorkSpaces::DescribeWorkspaceDirectoriesRequestPrivate
+ * \brief The DescribeWorkspaceDirectoriesRequestPrivate class provides private implementation for DescribeWorkspaceDirectoriesRequest.
+ * \internal
  *
- * @class  DescribeWorkspaceDirectoriesRequestPrivate
- *
- * @brief  Private implementation for DescribeWorkspaceDirectoriesRequest.
+ * \inmodule QtAwsWorkSpaces
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeWorkspaceDirectoriesRequestPrivate object.
- *
- * @param  action  WorkSpaces action being performed.
- * @param  q       Pointer to this object's public DescribeWorkspaceDirectoriesRequest instance.
+ * Constructs a DescribeWorkspaceDirectoriesRequestPrivate object for WorkSpaces \a action with,
+ * public implementation \a q.
  */
 DescribeWorkspaceDirectoriesRequestPrivate::DescribeWorkspaceDirectoriesRequestPrivate(
     const WorkSpacesRequest::Action action, DescribeWorkspaceDirectoriesRequest * const q)
@@ -107,15 +96,10 @@ DescribeWorkspaceDirectoriesRequestPrivate::DescribeWorkspaceDirectoriesRequestP
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeWorkspaceDirectoriesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeWorkspaceDirectoriesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeWorkspaceDirectoriesRequest instance.
  */
 DescribeWorkspaceDirectoriesRequestPrivate::DescribeWorkspaceDirectoriesRequestPrivate(
     const DescribeWorkspaceDirectoriesRequestPrivate &other, DescribeWorkspaceDirectoriesRequest * const q)

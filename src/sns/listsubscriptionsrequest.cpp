@@ -27,10 +27,9 @@ namespace SNS {
 
 /*!
  * \class QtAws::SNS::ListSubscriptionsRequest
- *
  * \brief The ListSubscriptionsRequest class provides an interface for SNS ListSubscriptions requests.
  *
- * \ingroup SNS
+ * \inmodule QtAwsSNS
  *
  *  <fullname>Amazon Simple Notification Service</fullname>
  * 
@@ -51,9 +50,7 @@ namespace SNS {
  */
 
 /*!
- * @brief  Constructs a new ListSubscriptionsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListSubscriptionsRequest::ListSubscriptionsRequest(const ListSubscriptionsRequest &other)
     : SNSRequest(new ListSubscriptionsRequestPrivate(*other.d_func(), this))
@@ -62,7 +59,7 @@ ListSubscriptionsRequest::ListSubscriptionsRequest(const ListSubscriptionsReques
 }
 
 /*!
- * @brief  Constructs a new ListSubscriptionsRequest object.
+ * Constructs a ListSubscriptionsRequest object.
  */
 ListSubscriptionsRequest::ListSubscriptionsRequest()
     : SNSRequest(new ListSubscriptionsRequestPrivate(SNSRequest::ListSubscriptionsAction, this))
@@ -80,14 +77,9 @@ bool ListSubscriptionsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListSubscriptionsResponse object.
+ * Returns a ListSubscriptionsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListSubscriptionsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SNSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListSubscriptionsRequest::response(QNetworkReply * const reply) const
 {
@@ -95,20 +87,17 @@ QtAws::Core::AwsAbstractResponse * ListSubscriptionsRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::SNS::ListSubscriptionsRequestPrivate
+ * \brief The ListSubscriptionsRequestPrivate class provides private implementation for ListSubscriptionsRequest.
+ * \internal
  *
- * @class  ListSubscriptionsRequestPrivate
- *
- * @brief  Private implementation for ListSubscriptionsRequest.
+ * \inmodule QtAwsSNS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListSubscriptionsRequestPrivate object.
- *
- * @param  action  SNS action being performed.
- * @param  q       Pointer to this object's public ListSubscriptionsRequest instance.
+ * Constructs a ListSubscriptionsRequestPrivate object for SNS \a action with,
+ * public implementation \a q.
  */
 ListSubscriptionsRequestPrivate::ListSubscriptionsRequestPrivate(
     const SNSRequest::Action action, ListSubscriptionsRequest * const q)
@@ -118,15 +107,10 @@ ListSubscriptionsRequestPrivate::ListSubscriptionsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListSubscriptionsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListSubscriptionsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListSubscriptionsRequest instance.
  */
 ListSubscriptionsRequestPrivate::ListSubscriptionsRequestPrivate(
     const ListSubscriptionsRequestPrivate &other, ListSubscriptionsRequest * const q)

@@ -27,10 +27,9 @@ namespace DirectoryService {
 
 /*!
  * \class QtAws::DirectoryService::CreateTrustRequest
- *
  * \brief The CreateTrustRequest class provides an interface for DirectoryService CreateTrust requests.
  *
- * \ingroup DirectoryService
+ * \inmodule QtAwsDirectoryService
  *
  *  <fullname>AWS Directory Service</fullname>
  * 
@@ -51,9 +50,7 @@ namespace DirectoryService {
  */
 
 /*!
- * @brief  Constructs a new CreateTrustRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateTrustRequest::CreateTrustRequest(const CreateTrustRequest &other)
     : DirectoryServiceRequest(new CreateTrustRequestPrivate(*other.d_func(), this))
@@ -62,7 +59,7 @@ CreateTrustRequest::CreateTrustRequest(const CreateTrustRequest &other)
 }
 
 /*!
- * @brief  Constructs a new CreateTrustRequest object.
+ * Constructs a CreateTrustRequest object.
  */
 CreateTrustRequest::CreateTrustRequest()
     : DirectoryServiceRequest(new CreateTrustRequestPrivate(DirectoryServiceRequest::CreateTrustAction, this))
@@ -80,14 +77,9 @@ bool CreateTrustRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateTrustResponse object.
+ * Returns a CreateTrustResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateTrustResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DirectoryServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateTrustRequest::response(QNetworkReply * const reply) const
 {
@@ -95,20 +87,17 @@ QtAws::Core::AwsAbstractResponse * CreateTrustRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::DirectoryService::CreateTrustRequestPrivate
+ * \brief The CreateTrustRequestPrivate class provides private implementation for CreateTrustRequest.
+ * \internal
  *
- * @class  CreateTrustRequestPrivate
- *
- * @brief  Private implementation for CreateTrustRequest.
+ * \inmodule QtAwsDirectoryService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateTrustRequestPrivate object.
- *
- * @param  action  DirectoryService action being performed.
- * @param  q       Pointer to this object's public CreateTrustRequest instance.
+ * Constructs a CreateTrustRequestPrivate object for DirectoryService \a action with,
+ * public implementation \a q.
  */
 CreateTrustRequestPrivate::CreateTrustRequestPrivate(
     const DirectoryServiceRequest::Action action, CreateTrustRequest * const q)
@@ -118,15 +107,10 @@ CreateTrustRequestPrivate::CreateTrustRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateTrustRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateTrustRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateTrustRequest instance.
  */
 CreateTrustRequestPrivate::CreateTrustRequestPrivate(
     const CreateTrustRequestPrivate &other, CreateTrustRequest * const q)

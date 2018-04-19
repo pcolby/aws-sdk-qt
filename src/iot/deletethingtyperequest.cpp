@@ -27,10 +27,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::DeleteThingTypeRequest
- *
  * \brief The DeleteThingTypeRequest class provides an interface for IoT DeleteThingType requests.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -48,9 +47,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new DeleteThingTypeRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteThingTypeRequest::DeleteThingTypeRequest(const DeleteThingTypeRequest &other)
     : IoTRequest(new DeleteThingTypeRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ DeleteThingTypeRequest::DeleteThingTypeRequest(const DeleteThingTypeRequest &oth
 }
 
 /*!
- * @brief  Constructs a new DeleteThingTypeRequest object.
+ * Constructs a DeleteThingTypeRequest object.
  */
 DeleteThingTypeRequest::DeleteThingTypeRequest()
     : IoTRequest(new DeleteThingTypeRequestPrivate(IoTRequest::DeleteThingTypeAction, this))
@@ -77,14 +74,9 @@ bool DeleteThingTypeRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteThingTypeResponse object.
+ * Returns a DeleteThingTypeResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteThingTypeResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IoTClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteThingTypeRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * DeleteThingTypeRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::IoT::DeleteThingTypeRequestPrivate
+ * \brief The DeleteThingTypeRequestPrivate class provides private implementation for DeleteThingTypeRequest.
+ * \internal
  *
- * @class  DeleteThingTypeRequestPrivate
- *
- * @brief  Private implementation for DeleteThingTypeRequest.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteThingTypeRequestPrivate object.
- *
- * @param  action  IoT action being performed.
- * @param  q       Pointer to this object's public DeleteThingTypeRequest instance.
+ * Constructs a DeleteThingTypeRequestPrivate object for IoT \a action with,
+ * public implementation \a q.
  */
 DeleteThingTypeRequestPrivate::DeleteThingTypeRequestPrivate(
     const IoTRequest::Action action, DeleteThingTypeRequest * const q)
@@ -115,15 +104,10 @@ DeleteThingTypeRequestPrivate::DeleteThingTypeRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteThingTypeRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteThingTypeRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteThingTypeRequest instance.
  */
 DeleteThingTypeRequestPrivate::DeleteThingTypeRequestPrivate(
     const DeleteThingTypeRequestPrivate &other, DeleteThingTypeRequest * const q)

@@ -27,10 +27,9 @@ namespace DataPipeline {
 
 /*!
  * \class QtAws::DataPipeline::PutPipelineDefinitionRequest
- *
  * \brief The PutPipelineDefinitionRequest class provides an interface for DataPipeline PutPipelineDefinition requests.
  *
- * \ingroup DataPipeline
+ * \inmodule QtAwsDataPipeline
  *
  *  AWS Data Pipeline configures and manages a data-driven workflow called a pipeline. AWS Data Pipeline handles the details
  *  of scheduling and ensuring that data dependencies are met so that your application can focus on processing the
@@ -55,9 +54,7 @@ namespace DataPipeline {
  */
 
 /*!
- * @brief  Constructs a new PutPipelineDefinitionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 PutPipelineDefinitionRequest::PutPipelineDefinitionRequest(const PutPipelineDefinitionRequest &other)
     : DataPipelineRequest(new PutPipelineDefinitionRequestPrivate(*other.d_func(), this))
@@ -66,7 +63,7 @@ PutPipelineDefinitionRequest::PutPipelineDefinitionRequest(const PutPipelineDefi
 }
 
 /*!
- * @brief  Constructs a new PutPipelineDefinitionRequest object.
+ * Constructs a PutPipelineDefinitionRequest object.
  */
 PutPipelineDefinitionRequest::PutPipelineDefinitionRequest()
     : DataPipelineRequest(new PutPipelineDefinitionRequestPrivate(DataPipelineRequest::PutPipelineDefinitionAction, this))
@@ -84,14 +81,9 @@ bool PutPipelineDefinitionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an PutPipelineDefinitionResponse object.
+ * Returns a PutPipelineDefinitionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An PutPipelineDefinitionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DataPipelineClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * PutPipelineDefinitionRequest::response(QNetworkReply * const reply) const
 {
@@ -99,20 +91,17 @@ QtAws::Core::AwsAbstractResponse * PutPipelineDefinitionRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::DataPipeline::PutPipelineDefinitionRequestPrivate
+ * \brief The PutPipelineDefinitionRequestPrivate class provides private implementation for PutPipelineDefinitionRequest.
+ * \internal
  *
- * @class  PutPipelineDefinitionRequestPrivate
- *
- * @brief  Private implementation for PutPipelineDefinitionRequest.
+ * \inmodule QtAwsDataPipeline
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new PutPipelineDefinitionRequestPrivate object.
- *
- * @param  action  DataPipeline action being performed.
- * @param  q       Pointer to this object's public PutPipelineDefinitionRequest instance.
+ * Constructs a PutPipelineDefinitionRequestPrivate object for DataPipeline \a action with,
+ * public implementation \a q.
  */
 PutPipelineDefinitionRequestPrivate::PutPipelineDefinitionRequestPrivate(
     const DataPipelineRequest::Action action, PutPipelineDefinitionRequest * const q)
@@ -122,15 +111,10 @@ PutPipelineDefinitionRequestPrivate::PutPipelineDefinitionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutPipelineDefinitionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the PutPipelineDefinitionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public PutPipelineDefinitionRequest instance.
  */
 PutPipelineDefinitionRequestPrivate::PutPipelineDefinitionRequestPrivate(
     const PutPipelineDefinitionRequestPrivate &other, PutPipelineDefinitionRequest * const q)

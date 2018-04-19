@@ -27,10 +27,9 @@ namespace CognitoIdentityProvider {
 
 /*!
  * \class QtAws::CognitoIdentityProvider::ConfirmSignUpRequest
- *
  * \brief The ConfirmSignUpRequest class provides an interface for CognitoIdentityProvider ConfirmSignUp requests.
  *
- * \ingroup CognitoIdentityProvider
+ * \inmodule QtAwsCognitoIdentityProvider
  *
  *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
  *  authenticate a user to obtain tokens related to user identity and access
@@ -47,9 +46,7 @@ namespace CognitoIdentityProvider {
  */
 
 /*!
- * @brief  Constructs a new ConfirmSignUpRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ConfirmSignUpRequest::ConfirmSignUpRequest(const ConfirmSignUpRequest &other)
     : CognitoIdentityProviderRequest(new ConfirmSignUpRequestPrivate(*other.d_func(), this))
@@ -58,7 +55,7 @@ ConfirmSignUpRequest::ConfirmSignUpRequest(const ConfirmSignUpRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ConfirmSignUpRequest object.
+ * Constructs a ConfirmSignUpRequest object.
  */
 ConfirmSignUpRequest::ConfirmSignUpRequest()
     : CognitoIdentityProviderRequest(new ConfirmSignUpRequestPrivate(CognitoIdentityProviderRequest::ConfirmSignUpAction, this))
@@ -76,14 +73,9 @@ bool ConfirmSignUpRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ConfirmSignUpResponse object.
+ * Returns a ConfirmSignUpResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ConfirmSignUpResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CognitoIdentityProviderClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ConfirmSignUpRequest::response(QNetworkReply * const reply) const
 {
@@ -91,20 +83,17 @@ QtAws::Core::AwsAbstractResponse * ConfirmSignUpRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::CognitoIdentityProvider::ConfirmSignUpRequestPrivate
+ * \brief The ConfirmSignUpRequestPrivate class provides private implementation for ConfirmSignUpRequest.
+ * \internal
  *
- * @class  ConfirmSignUpRequestPrivate
- *
- * @brief  Private implementation for ConfirmSignUpRequest.
+ * \inmodule QtAwsCognitoIdentityProvider
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ConfirmSignUpRequestPrivate object.
- *
- * @param  action  CognitoIdentityProvider action being performed.
- * @param  q       Pointer to this object's public ConfirmSignUpRequest instance.
+ * Constructs a ConfirmSignUpRequestPrivate object for CognitoIdentityProvider \a action with,
+ * public implementation \a q.
  */
 ConfirmSignUpRequestPrivate::ConfirmSignUpRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, ConfirmSignUpRequest * const q)
@@ -114,15 +103,10 @@ ConfirmSignUpRequestPrivate::ConfirmSignUpRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ConfirmSignUpRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ConfirmSignUpRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ConfirmSignUpRequest instance.
  */
 ConfirmSignUpRequestPrivate::ConfirmSignUpRequestPrivate(
     const ConfirmSignUpRequestPrivate &other, ConfirmSignUpRequest * const q)

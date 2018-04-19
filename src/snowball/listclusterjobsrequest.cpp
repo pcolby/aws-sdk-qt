@@ -27,10 +27,9 @@ namespace Snowball {
 
 /*!
  * \class QtAws::Snowball::ListClusterJobsRequest
- *
  * \brief The ListClusterJobsRequest class provides an interface for Snowball ListClusterJobs requests.
  *
- * \ingroup Snowball
+ * \inmodule QtAwsSnowball
  *
  *  AWS Snowball is a petabyte-scale data transport solution that uses secure appliances to transfer large amounts of data
  *  between your on-premises data centers and Amazon Simple Storage Service (Amazon S3). The Snowball commands described
@@ -43,9 +42,7 @@ namespace Snowball {
  */
 
 /*!
- * @brief  Constructs a new ListClusterJobsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListClusterJobsRequest::ListClusterJobsRequest(const ListClusterJobsRequest &other)
     : SnowballRequest(new ListClusterJobsRequestPrivate(*other.d_func(), this))
@@ -54,7 +51,7 @@ ListClusterJobsRequest::ListClusterJobsRequest(const ListClusterJobsRequest &oth
 }
 
 /*!
- * @brief  Constructs a new ListClusterJobsRequest object.
+ * Constructs a ListClusterJobsRequest object.
  */
 ListClusterJobsRequest::ListClusterJobsRequest()
     : SnowballRequest(new ListClusterJobsRequestPrivate(SnowballRequest::ListClusterJobsAction, this))
@@ -72,14 +69,9 @@ bool ListClusterJobsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListClusterJobsResponse object.
+ * Returns a ListClusterJobsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListClusterJobsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SnowballClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListClusterJobsRequest::response(QNetworkReply * const reply) const
 {
@@ -87,20 +79,17 @@ QtAws::Core::AwsAbstractResponse * ListClusterJobsRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::Snowball::ListClusterJobsRequestPrivate
+ * \brief The ListClusterJobsRequestPrivate class provides private implementation for ListClusterJobsRequest.
+ * \internal
  *
- * @class  ListClusterJobsRequestPrivate
- *
- * @brief  Private implementation for ListClusterJobsRequest.
+ * \inmodule QtAwsSnowball
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListClusterJobsRequestPrivate object.
- *
- * @param  action  Snowball action being performed.
- * @param  q       Pointer to this object's public ListClusterJobsRequest instance.
+ * Constructs a ListClusterJobsRequestPrivate object for Snowball \a action with,
+ * public implementation \a q.
  */
 ListClusterJobsRequestPrivate::ListClusterJobsRequestPrivate(
     const SnowballRequest::Action action, ListClusterJobsRequest * const q)
@@ -110,15 +99,10 @@ ListClusterJobsRequestPrivate::ListClusterJobsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListClusterJobsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListClusterJobsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListClusterJobsRequest instance.
  */
 ListClusterJobsRequestPrivate::ListClusterJobsRequestPrivate(
     const ListClusterJobsRequestPrivate &other, ListClusterJobsRequest * const q)

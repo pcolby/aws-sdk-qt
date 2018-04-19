@@ -27,10 +27,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::UpdateIndexingConfigurationRequest
- *
  * \brief The UpdateIndexingConfigurationRequest class provides an interface for IoT UpdateIndexingConfiguration requests.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -48,9 +47,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new UpdateIndexingConfigurationRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateIndexingConfigurationRequest::UpdateIndexingConfigurationRequest(const UpdateIndexingConfigurationRequest &other)
     : IoTRequest(new UpdateIndexingConfigurationRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ UpdateIndexingConfigurationRequest::UpdateIndexingConfigurationRequest(const Upd
 }
 
 /*!
- * @brief  Constructs a new UpdateIndexingConfigurationRequest object.
+ * Constructs a UpdateIndexingConfigurationRequest object.
  */
 UpdateIndexingConfigurationRequest::UpdateIndexingConfigurationRequest()
     : IoTRequest(new UpdateIndexingConfigurationRequestPrivate(IoTRequest::UpdateIndexingConfigurationAction, this))
@@ -77,14 +74,9 @@ bool UpdateIndexingConfigurationRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateIndexingConfigurationResponse object.
+ * Returns a UpdateIndexingConfigurationResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateIndexingConfigurationResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IoTClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateIndexingConfigurationRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * UpdateIndexingConfigurationRequest::response(
 }
 
 /*!
- * @internal
+ * \class QtAws::IoT::UpdateIndexingConfigurationRequestPrivate
+ * \brief The UpdateIndexingConfigurationRequestPrivate class provides private implementation for UpdateIndexingConfigurationRequest.
+ * \internal
  *
- * @class  UpdateIndexingConfigurationRequestPrivate
- *
- * @brief  Private implementation for UpdateIndexingConfigurationRequest.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateIndexingConfigurationRequestPrivate object.
- *
- * @param  action  IoT action being performed.
- * @param  q       Pointer to this object's public UpdateIndexingConfigurationRequest instance.
+ * Constructs a UpdateIndexingConfigurationRequestPrivate object for IoT \a action with,
+ * public implementation \a q.
  */
 UpdateIndexingConfigurationRequestPrivate::UpdateIndexingConfigurationRequestPrivate(
     const IoTRequest::Action action, UpdateIndexingConfigurationRequest * const q)
@@ -115,15 +104,10 @@ UpdateIndexingConfigurationRequestPrivate::UpdateIndexingConfigurationRequestPri
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateIndexingConfigurationRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateIndexingConfigurationRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateIndexingConfigurationRequest instance.
  */
 UpdateIndexingConfigurationRequestPrivate::UpdateIndexingConfigurationRequestPrivate(
     const UpdateIndexingConfigurationRequestPrivate &other, UpdateIndexingConfigurationRequest * const q)

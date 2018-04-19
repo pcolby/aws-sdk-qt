@@ -27,10 +27,9 @@ namespace SWF {
 
 /*!
  * \class QtAws::SWF::ListActivityTypesRequest
- *
  * \brief The ListActivityTypesRequest class provides an interface for SWF ListActivityTypes requests.
  *
- * \ingroup SWF
+ * \inmodule QtAwsSWF
  *
  *  <fullname>Amazon Simple Workflow Service</fullname>
  * 
@@ -53,9 +52,7 @@ namespace SWF {
  */
 
 /*!
- * @brief  Constructs a new ListActivityTypesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListActivityTypesRequest::ListActivityTypesRequest(const ListActivityTypesRequest &other)
     : SWFRequest(new ListActivityTypesRequestPrivate(*other.d_func(), this))
@@ -64,7 +61,7 @@ ListActivityTypesRequest::ListActivityTypesRequest(const ListActivityTypesReques
 }
 
 /*!
- * @brief  Constructs a new ListActivityTypesRequest object.
+ * Constructs a ListActivityTypesRequest object.
  */
 ListActivityTypesRequest::ListActivityTypesRequest()
     : SWFRequest(new ListActivityTypesRequestPrivate(SWFRequest::ListActivityTypesAction, this))
@@ -82,14 +79,9 @@ bool ListActivityTypesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListActivityTypesResponse object.
+ * Returns a ListActivityTypesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListActivityTypesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SWFClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListActivityTypesRequest::response(QNetworkReply * const reply) const
 {
@@ -97,20 +89,17 @@ QtAws::Core::AwsAbstractResponse * ListActivityTypesRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::SWF::ListActivityTypesRequestPrivate
+ * \brief The ListActivityTypesRequestPrivate class provides private implementation for ListActivityTypesRequest.
+ * \internal
  *
- * @class  ListActivityTypesRequestPrivate
- *
- * @brief  Private implementation for ListActivityTypesRequest.
+ * \inmodule QtAwsSWF
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListActivityTypesRequestPrivate object.
- *
- * @param  action  SWF action being performed.
- * @param  q       Pointer to this object's public ListActivityTypesRequest instance.
+ * Constructs a ListActivityTypesRequestPrivate object for SWF \a action with,
+ * public implementation \a q.
  */
 ListActivityTypesRequestPrivate::ListActivityTypesRequestPrivate(
     const SWFRequest::Action action, ListActivityTypesRequest * const q)
@@ -120,15 +109,10 @@ ListActivityTypesRequestPrivate::ListActivityTypesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListActivityTypesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListActivityTypesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListActivityTypesRequest instance.
  */
 ListActivityTypesRequestPrivate::ListActivityTypesRequestPrivate(
     const ListActivityTypesRequestPrivate &other, ListActivityTypesRequest * const q)

@@ -27,19 +27,16 @@ namespace S3 {
 
 /*!
  * \class QtAws::S3::DeleteBucketPolicyRequest
- *
  * \brief The DeleteBucketPolicyRequest class provides an interface for S3 DeleteBucketPolicy requests.
  *
- * \ingroup S3
+ * \inmodule QtAwsS3
  *
  *
  * \sa S3Client::deleteBucketPolicy
  */
 
 /*!
- * @brief  Constructs a new DeleteBucketPolicyRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteBucketPolicyRequest::DeleteBucketPolicyRequest(const DeleteBucketPolicyRequest &other)
     : S3Request(new DeleteBucketPolicyRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ DeleteBucketPolicyRequest::DeleteBucketPolicyRequest(const DeleteBucketPolicyReq
 }
 
 /*!
- * @brief  Constructs a new DeleteBucketPolicyRequest object.
+ * Constructs a DeleteBucketPolicyRequest object.
  */
 DeleteBucketPolicyRequest::DeleteBucketPolicyRequest()
     : S3Request(new DeleteBucketPolicyRequestPrivate(S3Request::DeleteBucketPolicyAction, this))
@@ -66,14 +63,9 @@ bool DeleteBucketPolicyRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteBucketPolicyResponse object.
+ * Returns a DeleteBucketPolicyResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteBucketPolicyResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  S3Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteBucketPolicyRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * DeleteBucketPolicyRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::S3::DeleteBucketPolicyRequestPrivate
+ * \brief The DeleteBucketPolicyRequestPrivate class provides private implementation for DeleteBucketPolicyRequest.
+ * \internal
  *
- * @class  DeleteBucketPolicyRequestPrivate
- *
- * @brief  Private implementation for DeleteBucketPolicyRequest.
+ * \inmodule QtAwsS3
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteBucketPolicyRequestPrivate object.
- *
- * @param  action  S3 action being performed.
- * @param  q       Pointer to this object's public DeleteBucketPolicyRequest instance.
+ * Constructs a DeleteBucketPolicyRequestPrivate object for S3 \a action with,
+ * public implementation \a q.
  */
 DeleteBucketPolicyRequestPrivate::DeleteBucketPolicyRequestPrivate(
     const S3Request::Action action, DeleteBucketPolicyRequest * const q)
@@ -104,15 +93,10 @@ DeleteBucketPolicyRequestPrivate::DeleteBucketPolicyRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteBucketPolicyRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteBucketPolicyRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteBucketPolicyRequest instance.
  */
 DeleteBucketPolicyRequestPrivate::DeleteBucketPolicyRequestPrivate(
     const DeleteBucketPolicyRequestPrivate &other, DeleteBucketPolicyRequest * const q)

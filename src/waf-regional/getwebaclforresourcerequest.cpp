@@ -27,10 +27,9 @@ namespace WAFRegional {
 
 /*!
  * \class QtAws::WAFRegional::GetWebACLForResourceRequest
- *
  * \brief The GetWebACLForResourceRequest class provides an interface for WAFRegional GetWebACLForResource requests.
  *
- * \ingroup WAFRegional
+ * \inmodule QtAwsWAFRegional
  *
  *  This is the <i>AWS WAF Regional API Reference</i> for using AWS WAF with Elastic Load Balancing (ELB) Application Load
  *  Balancers. The AWS WAF actions and data types listed in the reference are available for protecting Application Load
@@ -44,9 +43,7 @@ namespace WAFRegional {
  */
 
 /*!
- * @brief  Constructs a new GetWebACLForResourceRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetWebACLForResourceRequest::GetWebACLForResourceRequest(const GetWebACLForResourceRequest &other)
     : WAFRegionalRequest(new GetWebACLForResourceRequestPrivate(*other.d_func(), this))
@@ -55,7 +52,7 @@ GetWebACLForResourceRequest::GetWebACLForResourceRequest(const GetWebACLForResou
 }
 
 /*!
- * @brief  Constructs a new GetWebACLForResourceRequest object.
+ * Constructs a GetWebACLForResourceRequest object.
  */
 GetWebACLForResourceRequest::GetWebACLForResourceRequest()
     : WAFRegionalRequest(new GetWebACLForResourceRequestPrivate(WAFRegionalRequest::GetWebACLForResourceAction, this))
@@ -73,14 +70,9 @@ bool GetWebACLForResourceRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetWebACLForResourceResponse object.
+ * Returns a GetWebACLForResourceResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetWebACLForResourceResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WAFRegionalClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetWebACLForResourceRequest::response(QNetworkReply * const reply) const
 {
@@ -88,20 +80,17 @@ QtAws::Core::AwsAbstractResponse * GetWebACLForResourceRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::WAFRegional::GetWebACLForResourceRequestPrivate
+ * \brief The GetWebACLForResourceRequestPrivate class provides private implementation for GetWebACLForResourceRequest.
+ * \internal
  *
- * @class  GetWebACLForResourceRequestPrivate
- *
- * @brief  Private implementation for GetWebACLForResourceRequest.
+ * \inmodule QtAwsWAFRegional
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetWebACLForResourceRequestPrivate object.
- *
- * @param  action  WAFRegional action being performed.
- * @param  q       Pointer to this object's public GetWebACLForResourceRequest instance.
+ * Constructs a GetWebACLForResourceRequestPrivate object for WAFRegional \a action with,
+ * public implementation \a q.
  */
 GetWebACLForResourceRequestPrivate::GetWebACLForResourceRequestPrivate(
     const WAFRegionalRequest::Action action, GetWebACLForResourceRequest * const q)
@@ -111,15 +100,10 @@ GetWebACLForResourceRequestPrivate::GetWebACLForResourceRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetWebACLForResourceRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetWebACLForResourceRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetWebACLForResourceRequest instance.
  */
 GetWebACLForResourceRequestPrivate::GetWebACLForResourceRequestPrivate(
     const GetWebACLForResourceRequestPrivate &other, GetWebACLForResourceRequest * const q)

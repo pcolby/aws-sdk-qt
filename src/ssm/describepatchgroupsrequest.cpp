@@ -27,10 +27,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::DescribePatchGroupsRequest
- *
  * \brief The DescribePatchGroupsRequest class provides an interface for SSM DescribePatchGroups requests.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -61,9 +60,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new DescribePatchGroupsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribePatchGroupsRequest::DescribePatchGroupsRequest(const DescribePatchGroupsRequest &other)
     : SSMRequest(new DescribePatchGroupsRequestPrivate(*other.d_func(), this))
@@ -72,7 +69,7 @@ DescribePatchGroupsRequest::DescribePatchGroupsRequest(const DescribePatchGroups
 }
 
 /*!
- * @brief  Constructs a new DescribePatchGroupsRequest object.
+ * Constructs a DescribePatchGroupsRequest object.
  */
 DescribePatchGroupsRequest::DescribePatchGroupsRequest()
     : SSMRequest(new DescribePatchGroupsRequestPrivate(SSMRequest::DescribePatchGroupsAction, this))
@@ -90,14 +87,9 @@ bool DescribePatchGroupsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribePatchGroupsResponse object.
+ * Returns a DescribePatchGroupsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribePatchGroupsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SSMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribePatchGroupsRequest::response(QNetworkReply * const reply) const
 {
@@ -105,20 +97,17 @@ QtAws::Core::AwsAbstractResponse * DescribePatchGroupsRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::SSM::DescribePatchGroupsRequestPrivate
+ * \brief The DescribePatchGroupsRequestPrivate class provides private implementation for DescribePatchGroupsRequest.
+ * \internal
  *
- * @class  DescribePatchGroupsRequestPrivate
- *
- * @brief  Private implementation for DescribePatchGroupsRequest.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribePatchGroupsRequestPrivate object.
- *
- * @param  action  SSM action being performed.
- * @param  q       Pointer to this object's public DescribePatchGroupsRequest instance.
+ * Constructs a DescribePatchGroupsRequestPrivate object for SSM \a action with,
+ * public implementation \a q.
  */
 DescribePatchGroupsRequestPrivate::DescribePatchGroupsRequestPrivate(
     const SSMRequest::Action action, DescribePatchGroupsRequest * const q)
@@ -128,15 +117,10 @@ DescribePatchGroupsRequestPrivate::DescribePatchGroupsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribePatchGroupsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribePatchGroupsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribePatchGroupsRequest instance.
  */
 DescribePatchGroupsRequestPrivate::DescribePatchGroupsRequestPrivate(
     const DescribePatchGroupsRequestPrivate &other, DescribePatchGroupsRequest * const q)

@@ -32,6 +32,9 @@
 /*!
  * \namespace QtAws::Connect
  * \brief The QtAws::Connect contains stuff...
+ *
+ * \inmodule QtAwsConnect
+ *
  * @todo Move this to a separate template file.
  */
 
@@ -84,7 +87,7 @@ ConnectClient::ConnectClient(
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * \a  AwsEndpoint::getEndpoint()
+ * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
 ConnectClient::ConnectClient(
     const QUrl &endpoint,

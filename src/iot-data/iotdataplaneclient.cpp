@@ -36,6 +36,9 @@
 /*!
  * \namespace QtAws::IoTDataPlane
  * \brief The QtAws::IoTDataPlane contains stuff...
+ *
+ * \inmodule QtAwsIoTDataPlane
+ *
  * @todo Move this to a separate template file.
  */
 
@@ -91,7 +94,7 @@ IoTDataPlaneClient::IoTDataPlaneClient(
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * \a  AwsEndpoint::getEndpoint()
+ * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
 IoTDataPlaneClient::IoTDataPlaneClient(
     const QUrl &endpoint,

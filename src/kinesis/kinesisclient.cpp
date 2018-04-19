@@ -74,6 +74,9 @@
 /*!
  * \namespace QtAws::Kinesis
  * \brief The QtAws::Kinesis contains stuff...
+ *
+ * \inmodule QtAwsKinesis
+ *
  * @todo Move this to a separate template file.
  */
 
@@ -126,7 +129,7 @@ KinesisClient::KinesisClient(
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * \a  AwsEndpoint::getEndpoint()
+ * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
 KinesisClient::KinesisClient(
     const QUrl &endpoint,

@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::UnassignIpv6AddressesRequest
- *
  * \brief The UnassignIpv6AddressesRequest class provides an interface for EC2 UnassignIpv6Addresses requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new UnassignIpv6AddressesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UnassignIpv6AddressesRequest::UnassignIpv6AddressesRequest(const UnassignIpv6AddressesRequest &other)
     : EC2Request(new UnassignIpv6AddressesRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ UnassignIpv6AddressesRequest::UnassignIpv6AddressesRequest(const UnassignIpv6Add
 }
 
 /*!
- * @brief  Constructs a new UnassignIpv6AddressesRequest object.
+ * Constructs a UnassignIpv6AddressesRequest object.
  */
 UnassignIpv6AddressesRequest::UnassignIpv6AddressesRequest()
     : EC2Request(new UnassignIpv6AddressesRequestPrivate(EC2Request::UnassignIpv6AddressesAction, this))
@@ -70,14 +67,9 @@ bool UnassignIpv6AddressesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UnassignIpv6AddressesResponse object.
+ * Returns a UnassignIpv6AddressesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UnassignIpv6AddressesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UnassignIpv6AddressesRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * UnassignIpv6AddressesRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::UnassignIpv6AddressesRequestPrivate
+ * \brief The UnassignIpv6AddressesRequestPrivate class provides private implementation for UnassignIpv6AddressesRequest.
+ * \internal
  *
- * @class  UnassignIpv6AddressesRequestPrivate
- *
- * @brief  Private implementation for UnassignIpv6AddressesRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UnassignIpv6AddressesRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public UnassignIpv6AddressesRequest instance.
+ * Constructs a UnassignIpv6AddressesRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 UnassignIpv6AddressesRequestPrivate::UnassignIpv6AddressesRequestPrivate(
     const EC2Request::Action action, UnassignIpv6AddressesRequest * const q)
@@ -108,15 +97,10 @@ UnassignIpv6AddressesRequestPrivate::UnassignIpv6AddressesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UnassignIpv6AddressesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UnassignIpv6AddressesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UnassignIpv6AddressesRequest instance.
  */
 UnassignIpv6AddressesRequestPrivate::UnassignIpv6AddressesRequestPrivate(
     const UnassignIpv6AddressesRequestPrivate &other, UnassignIpv6AddressesRequest * const q)

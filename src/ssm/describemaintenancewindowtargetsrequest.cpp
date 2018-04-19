@@ -27,10 +27,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::DescribeMaintenanceWindowTargetsRequest
- *
  * \brief The DescribeMaintenanceWindowTargetsRequest class provides an interface for SSM DescribeMaintenanceWindowTargets requests.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -61,9 +60,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new DescribeMaintenanceWindowTargetsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeMaintenanceWindowTargetsRequest::DescribeMaintenanceWindowTargetsRequest(const DescribeMaintenanceWindowTargetsRequest &other)
     : SSMRequest(new DescribeMaintenanceWindowTargetsRequestPrivate(*other.d_func(), this))
@@ -72,7 +69,7 @@ DescribeMaintenanceWindowTargetsRequest::DescribeMaintenanceWindowTargetsRequest
 }
 
 /*!
- * @brief  Constructs a new DescribeMaintenanceWindowTargetsRequest object.
+ * Constructs a DescribeMaintenanceWindowTargetsRequest object.
  */
 DescribeMaintenanceWindowTargetsRequest::DescribeMaintenanceWindowTargetsRequest()
     : SSMRequest(new DescribeMaintenanceWindowTargetsRequestPrivate(SSMRequest::DescribeMaintenanceWindowTargetsAction, this))
@@ -90,14 +87,9 @@ bool DescribeMaintenanceWindowTargetsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeMaintenanceWindowTargetsResponse object.
+ * Returns a DescribeMaintenanceWindowTargetsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeMaintenanceWindowTargetsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SSMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeMaintenanceWindowTargetsRequest::response(QNetworkReply * const reply) const
 {
@@ -105,20 +97,17 @@ QtAws::Core::AwsAbstractResponse * DescribeMaintenanceWindowTargetsRequest::resp
 }
 
 /*!
- * @internal
+ * \class QtAws::SSM::DescribeMaintenanceWindowTargetsRequestPrivate
+ * \brief The DescribeMaintenanceWindowTargetsRequestPrivate class provides private implementation for DescribeMaintenanceWindowTargetsRequest.
+ * \internal
  *
- * @class  DescribeMaintenanceWindowTargetsRequestPrivate
- *
- * @brief  Private implementation for DescribeMaintenanceWindowTargetsRequest.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeMaintenanceWindowTargetsRequestPrivate object.
- *
- * @param  action  SSM action being performed.
- * @param  q       Pointer to this object's public DescribeMaintenanceWindowTargetsRequest instance.
+ * Constructs a DescribeMaintenanceWindowTargetsRequestPrivate object for SSM \a action with,
+ * public implementation \a q.
  */
 DescribeMaintenanceWindowTargetsRequestPrivate::DescribeMaintenanceWindowTargetsRequestPrivate(
     const SSMRequest::Action action, DescribeMaintenanceWindowTargetsRequest * const q)
@@ -128,15 +117,10 @@ DescribeMaintenanceWindowTargetsRequestPrivate::DescribeMaintenanceWindowTargets
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeMaintenanceWindowTargetsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeMaintenanceWindowTargetsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeMaintenanceWindowTargetsRequest instance.
  */
 DescribeMaintenanceWindowTargetsRequestPrivate::DescribeMaintenanceWindowTargetsRequestPrivate(
     const DescribeMaintenanceWindowTargetsRequestPrivate &other, DescribeMaintenanceWindowTargetsRequest * const q)

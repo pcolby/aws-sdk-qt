@@ -27,10 +27,9 @@ namespace DeviceFarm {
 
 /*!
  * \class QtAws::DeviceFarm::GetJobRequest
- *
  * \brief The GetJobRequest class provides an interface for DeviceFarm GetJob requests.
  *
- * \ingroup DeviceFarm
+ * \inmodule QtAwsDeviceFarm
  *
  *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
  *  phones, tablets, and other devices in the
@@ -39,9 +38,7 @@ namespace DeviceFarm {
  */
 
 /*!
- * @brief  Constructs a new GetJobRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetJobRequest::GetJobRequest(const GetJobRequest &other)
     : DeviceFarmRequest(new GetJobRequestPrivate(*other.d_func(), this))
@@ -50,7 +47,7 @@ GetJobRequest::GetJobRequest(const GetJobRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetJobRequest object.
+ * Constructs a GetJobRequest object.
  */
 GetJobRequest::GetJobRequest()
     : DeviceFarmRequest(new GetJobRequestPrivate(DeviceFarmRequest::GetJobAction, this))
@@ -68,14 +65,9 @@ bool GetJobRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetJobResponse object.
+ * Returns a GetJobResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetJobResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DeviceFarmClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetJobRequest::response(QNetworkReply * const reply) const
 {
@@ -83,20 +75,17 @@ QtAws::Core::AwsAbstractResponse * GetJobRequest::response(QNetworkReply * const
 }
 
 /*!
- * @internal
+ * \class QtAws::DeviceFarm::GetJobRequestPrivate
+ * \brief The GetJobRequestPrivate class provides private implementation for GetJobRequest.
+ * \internal
  *
- * @class  GetJobRequestPrivate
- *
- * @brief  Private implementation for GetJobRequest.
+ * \inmodule QtAwsDeviceFarm
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetJobRequestPrivate object.
- *
- * @param  action  DeviceFarm action being performed.
- * @param  q       Pointer to this object's public GetJobRequest instance.
+ * Constructs a GetJobRequestPrivate object for DeviceFarm \a action with,
+ * public implementation \a q.
  */
 GetJobRequestPrivate::GetJobRequestPrivate(
     const DeviceFarmRequest::Action action, GetJobRequest * const q)
@@ -106,15 +95,10 @@ GetJobRequestPrivate::GetJobRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetJobRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetJobRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetJobRequest instance.
  */
 GetJobRequestPrivate::GetJobRequestPrivate(
     const GetJobRequestPrivate &other, GetJobRequest * const q)

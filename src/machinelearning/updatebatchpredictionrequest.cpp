@@ -27,19 +27,16 @@ namespace MachineLearning {
 
 /*!
  * \class QtAws::MachineLearning::UpdateBatchPredictionRequest
- *
  * \brief The UpdateBatchPredictionRequest class provides an interface for MachineLearning UpdateBatchPrediction requests.
  *
- * \ingroup MachineLearning
+ * \inmodule QtAwsMachineLearning
  *
  *
  * \sa MachineLearningClient::updateBatchPrediction
  */
 
 /*!
- * @brief  Constructs a new UpdateBatchPredictionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateBatchPredictionRequest::UpdateBatchPredictionRequest(const UpdateBatchPredictionRequest &other)
     : MachineLearningRequest(new UpdateBatchPredictionRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ UpdateBatchPredictionRequest::UpdateBatchPredictionRequest(const UpdateBatchPred
 }
 
 /*!
- * @brief  Constructs a new UpdateBatchPredictionRequest object.
+ * Constructs a UpdateBatchPredictionRequest object.
  */
 UpdateBatchPredictionRequest::UpdateBatchPredictionRequest()
     : MachineLearningRequest(new UpdateBatchPredictionRequestPrivate(MachineLearningRequest::UpdateBatchPredictionAction, this))
@@ -66,14 +63,9 @@ bool UpdateBatchPredictionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateBatchPredictionResponse object.
+ * Returns a UpdateBatchPredictionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateBatchPredictionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MachineLearningClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateBatchPredictionRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * UpdateBatchPredictionRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::MachineLearning::UpdateBatchPredictionRequestPrivate
+ * \brief The UpdateBatchPredictionRequestPrivate class provides private implementation for UpdateBatchPredictionRequest.
+ * \internal
  *
- * @class  UpdateBatchPredictionRequestPrivate
- *
- * @brief  Private implementation for UpdateBatchPredictionRequest.
+ * \inmodule QtAwsMachineLearning
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateBatchPredictionRequestPrivate object.
- *
- * @param  action  MachineLearning action being performed.
- * @param  q       Pointer to this object's public UpdateBatchPredictionRequest instance.
+ * Constructs a UpdateBatchPredictionRequestPrivate object for MachineLearning \a action with,
+ * public implementation \a q.
  */
 UpdateBatchPredictionRequestPrivate::UpdateBatchPredictionRequestPrivate(
     const MachineLearningRequest::Action action, UpdateBatchPredictionRequest * const q)
@@ -104,15 +93,10 @@ UpdateBatchPredictionRequestPrivate::UpdateBatchPredictionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateBatchPredictionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateBatchPredictionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateBatchPredictionRequest instance.
  */
 UpdateBatchPredictionRequestPrivate::UpdateBatchPredictionRequestPrivate(
     const UpdateBatchPredictionRequestPrivate &other, UpdateBatchPredictionRequest * const q)

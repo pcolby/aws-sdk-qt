@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::CancelSpotFleetRequestsRequest
- *
  * \brief The CancelSpotFleetRequestsRequest class provides an interface for EC2 CancelSpotFleetRequests requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new CancelSpotFleetRequestsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CancelSpotFleetRequestsRequest::CancelSpotFleetRequestsRequest(const CancelSpotFleetRequestsRequest &other)
     : EC2Request(new CancelSpotFleetRequestsRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ CancelSpotFleetRequestsRequest::CancelSpotFleetRequestsRequest(const CancelSpotF
 }
 
 /*!
- * @brief  Constructs a new CancelSpotFleetRequestsRequest object.
+ * Constructs a CancelSpotFleetRequestsRequest object.
  */
 CancelSpotFleetRequestsRequest::CancelSpotFleetRequestsRequest()
     : EC2Request(new CancelSpotFleetRequestsRequestPrivate(EC2Request::CancelSpotFleetRequestsAction, this))
@@ -70,14 +67,9 @@ bool CancelSpotFleetRequestsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CancelSpotFleetRequestsResponse object.
+ * Returns a CancelSpotFleetRequestsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CancelSpotFleetRequestsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CancelSpotFleetRequestsRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * CancelSpotFleetRequestsRequest::response(QNet
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::CancelSpotFleetRequestsRequestPrivate
+ * \brief The CancelSpotFleetRequestsRequestPrivate class provides private implementation for CancelSpotFleetRequestsRequest.
+ * \internal
  *
- * @class  CancelSpotFleetRequestsRequestPrivate
- *
- * @brief  Private implementation for CancelSpotFleetRequestsRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CancelSpotFleetRequestsRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public CancelSpotFleetRequestsRequest instance.
+ * Constructs a CancelSpotFleetRequestsRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 CancelSpotFleetRequestsRequestPrivate::CancelSpotFleetRequestsRequestPrivate(
     const EC2Request::Action action, CancelSpotFleetRequestsRequest * const q)
@@ -108,15 +97,10 @@ CancelSpotFleetRequestsRequestPrivate::CancelSpotFleetRequestsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CancelSpotFleetRequestsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CancelSpotFleetRequestsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CancelSpotFleetRequestsRequest instance.
  */
 CancelSpotFleetRequestsRequestPrivate::CancelSpotFleetRequestsRequestPrivate(
     const CancelSpotFleetRequestsRequestPrivate &other, CancelSpotFleetRequestsRequest * const q)

@@ -27,10 +27,9 @@ namespace CloudWatchLogs {
 
 /*!
  * \class QtAws::CloudWatchLogs::PutMetricFilterRequest
- *
  * \brief The PutMetricFilterRequest class provides an interface for CloudWatchLogs PutMetricFilter requests.
  *
- * \ingroup CloudWatchLogs
+ * \inmodule QtAwsCloudWatchLogs
  *
  *  You can use Amazon CloudWatch Logs to monitor, store, and access your log files from Amazon EC2 instances, AWS
  *  CloudTrail, or other sources. You can then retrieve the associated log data from CloudWatch Logs using the CloudWatch
@@ -66,9 +65,7 @@ namespace CloudWatchLogs {
  */
 
 /*!
- * @brief  Constructs a new PutMetricFilterRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 PutMetricFilterRequest::PutMetricFilterRequest(const PutMetricFilterRequest &other)
     : CloudWatchLogsRequest(new PutMetricFilterRequestPrivate(*other.d_func(), this))
@@ -77,7 +74,7 @@ PutMetricFilterRequest::PutMetricFilterRequest(const PutMetricFilterRequest &oth
 }
 
 /*!
- * @brief  Constructs a new PutMetricFilterRequest object.
+ * Constructs a PutMetricFilterRequest object.
  */
 PutMetricFilterRequest::PutMetricFilterRequest()
     : CloudWatchLogsRequest(new PutMetricFilterRequestPrivate(CloudWatchLogsRequest::PutMetricFilterAction, this))
@@ -95,14 +92,9 @@ bool PutMetricFilterRequest::isValid() const
 
 
 /*!
- * @brief  Construct an PutMetricFilterResponse object.
+ * Returns a PutMetricFilterResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An PutMetricFilterResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudWatchLogsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * PutMetricFilterRequest::response(QNetworkReply * const reply) const
 {
@@ -110,20 +102,17 @@ QtAws::Core::AwsAbstractResponse * PutMetricFilterRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudWatchLogs::PutMetricFilterRequestPrivate
+ * \brief The PutMetricFilterRequestPrivate class provides private implementation for PutMetricFilterRequest.
+ * \internal
  *
- * @class  PutMetricFilterRequestPrivate
- *
- * @brief  Private implementation for PutMetricFilterRequest.
+ * \inmodule QtAwsCloudWatchLogs
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new PutMetricFilterRequestPrivate object.
- *
- * @param  action  CloudWatchLogs action being performed.
- * @param  q       Pointer to this object's public PutMetricFilterRequest instance.
+ * Constructs a PutMetricFilterRequestPrivate object for CloudWatchLogs \a action with,
+ * public implementation \a q.
  */
 PutMetricFilterRequestPrivate::PutMetricFilterRequestPrivate(
     const CloudWatchLogsRequest::Action action, PutMetricFilterRequest * const q)
@@ -133,15 +122,10 @@ PutMetricFilterRequestPrivate::PutMetricFilterRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutMetricFilterRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the PutMetricFilterRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public PutMetricFilterRequest instance.
  */
 PutMetricFilterRequestPrivate::PutMetricFilterRequestPrivate(
     const PutMetricFilterRequestPrivate &other, PutMetricFilterRequest * const q)

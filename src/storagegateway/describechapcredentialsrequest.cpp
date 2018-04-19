@@ -27,10 +27,9 @@ namespace StorageGateway {
 
 /*!
  * \class QtAws::StorageGateway::DescribeChapCredentialsRequest
- *
  * \brief The DescribeChapCredentialsRequest class provides an interface for StorageGateway DescribeChapCredentials requests.
  *
- * \ingroup StorageGateway
+ * \inmodule QtAwsStorageGateway
  *
  *  <fullname>AWS Storage Gateway Service</fullname>
  * 
@@ -106,9 +105,7 @@ namespace StorageGateway {
  */
 
 /*!
- * @brief  Constructs a new DescribeChapCredentialsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeChapCredentialsRequest::DescribeChapCredentialsRequest(const DescribeChapCredentialsRequest &other)
     : StorageGatewayRequest(new DescribeChapCredentialsRequestPrivate(*other.d_func(), this))
@@ -117,7 +114,7 @@ DescribeChapCredentialsRequest::DescribeChapCredentialsRequest(const DescribeCha
 }
 
 /*!
- * @brief  Constructs a new DescribeChapCredentialsRequest object.
+ * Constructs a DescribeChapCredentialsRequest object.
  */
 DescribeChapCredentialsRequest::DescribeChapCredentialsRequest()
     : StorageGatewayRequest(new DescribeChapCredentialsRequestPrivate(StorageGatewayRequest::DescribeChapCredentialsAction, this))
@@ -135,14 +132,9 @@ bool DescribeChapCredentialsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeChapCredentialsResponse object.
+ * Returns a DescribeChapCredentialsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeChapCredentialsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  StorageGatewayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeChapCredentialsRequest::response(QNetworkReply * const reply) const
 {
@@ -150,20 +142,17 @@ QtAws::Core::AwsAbstractResponse * DescribeChapCredentialsRequest::response(QNet
 }
 
 /*!
- * @internal
+ * \class QtAws::StorageGateway::DescribeChapCredentialsRequestPrivate
+ * \brief The DescribeChapCredentialsRequestPrivate class provides private implementation for DescribeChapCredentialsRequest.
+ * \internal
  *
- * @class  DescribeChapCredentialsRequestPrivate
- *
- * @brief  Private implementation for DescribeChapCredentialsRequest.
+ * \inmodule QtAwsStorageGateway
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeChapCredentialsRequestPrivate object.
- *
- * @param  action  StorageGateway action being performed.
- * @param  q       Pointer to this object's public DescribeChapCredentialsRequest instance.
+ * Constructs a DescribeChapCredentialsRequestPrivate object for StorageGateway \a action with,
+ * public implementation \a q.
  */
 DescribeChapCredentialsRequestPrivate::DescribeChapCredentialsRequestPrivate(
     const StorageGatewayRequest::Action action, DescribeChapCredentialsRequest * const q)
@@ -173,15 +162,10 @@ DescribeChapCredentialsRequestPrivate::DescribeChapCredentialsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeChapCredentialsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeChapCredentialsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeChapCredentialsRequest instance.
  */
 DescribeChapCredentialsRequestPrivate::DescribeChapCredentialsRequestPrivate(
     const DescribeChapCredentialsRequestPrivate &other, DescribeChapCredentialsRequest * const q)

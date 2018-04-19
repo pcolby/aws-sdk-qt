@@ -27,10 +27,9 @@ namespace CognitoIdentityProvider {
 
 /*!
  * \class QtAws::CognitoIdentityProvider::UpdateAuthEventFeedbackRequest
- *
  * \brief The UpdateAuthEventFeedbackRequest class provides an interface for CognitoIdentityProvider UpdateAuthEventFeedback requests.
  *
- * \ingroup CognitoIdentityProvider
+ * \inmodule QtAwsCognitoIdentityProvider
  *
  *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
  *  authenticate a user to obtain tokens related to user identity and access
@@ -47,9 +46,7 @@ namespace CognitoIdentityProvider {
  */
 
 /*!
- * @brief  Constructs a new UpdateAuthEventFeedbackRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateAuthEventFeedbackRequest::UpdateAuthEventFeedbackRequest(const UpdateAuthEventFeedbackRequest &other)
     : CognitoIdentityProviderRequest(new UpdateAuthEventFeedbackRequestPrivate(*other.d_func(), this))
@@ -58,7 +55,7 @@ UpdateAuthEventFeedbackRequest::UpdateAuthEventFeedbackRequest(const UpdateAuthE
 }
 
 /*!
- * @brief  Constructs a new UpdateAuthEventFeedbackRequest object.
+ * Constructs a UpdateAuthEventFeedbackRequest object.
  */
 UpdateAuthEventFeedbackRequest::UpdateAuthEventFeedbackRequest()
     : CognitoIdentityProviderRequest(new UpdateAuthEventFeedbackRequestPrivate(CognitoIdentityProviderRequest::UpdateAuthEventFeedbackAction, this))
@@ -76,14 +73,9 @@ bool UpdateAuthEventFeedbackRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateAuthEventFeedbackResponse object.
+ * Returns a UpdateAuthEventFeedbackResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateAuthEventFeedbackResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CognitoIdentityProviderClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateAuthEventFeedbackRequest::response(QNetworkReply * const reply) const
 {
@@ -91,20 +83,17 @@ QtAws::Core::AwsAbstractResponse * UpdateAuthEventFeedbackRequest::response(QNet
 }
 
 /*!
- * @internal
+ * \class QtAws::CognitoIdentityProvider::UpdateAuthEventFeedbackRequestPrivate
+ * \brief The UpdateAuthEventFeedbackRequestPrivate class provides private implementation for UpdateAuthEventFeedbackRequest.
+ * \internal
  *
- * @class  UpdateAuthEventFeedbackRequestPrivate
- *
- * @brief  Private implementation for UpdateAuthEventFeedbackRequest.
+ * \inmodule QtAwsCognitoIdentityProvider
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateAuthEventFeedbackRequestPrivate object.
- *
- * @param  action  CognitoIdentityProvider action being performed.
- * @param  q       Pointer to this object's public UpdateAuthEventFeedbackRequest instance.
+ * Constructs a UpdateAuthEventFeedbackRequestPrivate object for CognitoIdentityProvider \a action with,
+ * public implementation \a q.
  */
 UpdateAuthEventFeedbackRequestPrivate::UpdateAuthEventFeedbackRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, UpdateAuthEventFeedbackRequest * const q)
@@ -114,15 +103,10 @@ UpdateAuthEventFeedbackRequestPrivate::UpdateAuthEventFeedbackRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateAuthEventFeedbackRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateAuthEventFeedbackRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateAuthEventFeedbackRequest instance.
  */
 UpdateAuthEventFeedbackRequestPrivate::UpdateAuthEventFeedbackRequestPrivate(
     const UpdateAuthEventFeedbackRequestPrivate &other, UpdateAuthEventFeedbackRequest * const q)

@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::StopInstancesRequest
- *
  * \brief The StopInstancesRequest class provides an interface for EC2 StopInstances requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new StopInstancesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 StopInstancesRequest::StopInstancesRequest(const StopInstancesRequest &other)
     : EC2Request(new StopInstancesRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ StopInstancesRequest::StopInstancesRequest(const StopInstancesRequest &other)
 }
 
 /*!
- * @brief  Constructs a new StopInstancesRequest object.
+ * Constructs a StopInstancesRequest object.
  */
 StopInstancesRequest::StopInstancesRequest()
     : EC2Request(new StopInstancesRequestPrivate(EC2Request::StopInstancesAction, this))
@@ -70,14 +67,9 @@ bool StopInstancesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an StopInstancesResponse object.
+ * Returns a StopInstancesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An StopInstancesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * StopInstancesRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * StopInstancesRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::StopInstancesRequestPrivate
+ * \brief The StopInstancesRequestPrivate class provides private implementation for StopInstancesRequest.
+ * \internal
  *
- * @class  StopInstancesRequestPrivate
- *
- * @brief  Private implementation for StopInstancesRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new StopInstancesRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public StopInstancesRequest instance.
+ * Constructs a StopInstancesRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 StopInstancesRequestPrivate::StopInstancesRequestPrivate(
     const EC2Request::Action action, StopInstancesRequest * const q)
@@ -108,15 +97,10 @@ StopInstancesRequestPrivate::StopInstancesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StopInstancesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the StopInstancesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public StopInstancesRequest instance.
  */
 StopInstancesRequestPrivate::StopInstancesRequestPrivate(
     const StopInstancesRequestPrivate &other, StopInstancesRequest * const q)

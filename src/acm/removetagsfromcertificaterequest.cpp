@@ -27,10 +27,9 @@ namespace ACM {
 
 /*!
  * \class QtAws::ACM::RemoveTagsFromCertificateRequest
- *
  * \brief The RemoveTagsFromCertificateRequest class provides an interface for ACM RemoveTagsFromCertificate requests.
  *
- * \ingroup ACM
+ * \inmodule QtAwsACM
  *
  *  <fullname>AWS Certificate Manager</fullname>
  * 
@@ -46,9 +45,7 @@ namespace ACM {
  */
 
 /*!
- * @brief  Constructs a new RemoveTagsFromCertificateRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 RemoveTagsFromCertificateRequest::RemoveTagsFromCertificateRequest(const RemoveTagsFromCertificateRequest &other)
     : ACMRequest(new RemoveTagsFromCertificateRequestPrivate(*other.d_func(), this))
@@ -57,7 +54,7 @@ RemoveTagsFromCertificateRequest::RemoveTagsFromCertificateRequest(const RemoveT
 }
 
 /*!
- * @brief  Constructs a new RemoveTagsFromCertificateRequest object.
+ * Constructs a RemoveTagsFromCertificateRequest object.
  */
 RemoveTagsFromCertificateRequest::RemoveTagsFromCertificateRequest()
     : ACMRequest(new RemoveTagsFromCertificateRequestPrivate(ACMRequest::RemoveTagsFromCertificateAction, this))
@@ -75,14 +72,9 @@ bool RemoveTagsFromCertificateRequest::isValid() const
 
 
 /*!
- * @brief  Construct an RemoveTagsFromCertificateResponse object.
+ * Returns a RemoveTagsFromCertificateResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An RemoveTagsFromCertificateResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ACMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * RemoveTagsFromCertificateRequest::response(QNetworkReply * const reply) const
 {
@@ -90,20 +82,17 @@ QtAws::Core::AwsAbstractResponse * RemoveTagsFromCertificateRequest::response(QN
 }
 
 /*!
- * @internal
+ * \class QtAws::ACM::RemoveTagsFromCertificateRequestPrivate
+ * \brief The RemoveTagsFromCertificateRequestPrivate class provides private implementation for RemoveTagsFromCertificateRequest.
+ * \internal
  *
- * @class  RemoveTagsFromCertificateRequestPrivate
- *
- * @brief  Private implementation for RemoveTagsFromCertificateRequest.
+ * \inmodule QtAwsACM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new RemoveTagsFromCertificateRequestPrivate object.
- *
- * @param  action  ACM action being performed.
- * @param  q       Pointer to this object's public RemoveTagsFromCertificateRequest instance.
+ * Constructs a RemoveTagsFromCertificateRequestPrivate object for ACM \a action with,
+ * public implementation \a q.
  */
 RemoveTagsFromCertificateRequestPrivate::RemoveTagsFromCertificateRequestPrivate(
     const ACMRequest::Action action, RemoveTagsFromCertificateRequest * const q)
@@ -113,15 +102,10 @@ RemoveTagsFromCertificateRequestPrivate::RemoveTagsFromCertificateRequestPrivate
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RemoveTagsFromCertificateRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the RemoveTagsFromCertificateRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public RemoveTagsFromCertificateRequest instance.
  */
 RemoveTagsFromCertificateRequestPrivate::RemoveTagsFromCertificateRequestPrivate(
     const RemoveTagsFromCertificateRequestPrivate &other, RemoveTagsFromCertificateRequest * const q)

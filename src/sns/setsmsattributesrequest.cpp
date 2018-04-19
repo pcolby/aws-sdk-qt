@@ -27,10 +27,9 @@ namespace SNS {
 
 /*!
  * \class QtAws::SNS::SetSMSAttributesRequest
- *
  * \brief The SetSMSAttributesRequest class provides an interface for SNS SetSMSAttributes requests.
  *
- * \ingroup SNS
+ * \inmodule QtAwsSNS
  *
  *  <fullname>Amazon Simple Notification Service</fullname>
  * 
@@ -51,9 +50,7 @@ namespace SNS {
  */
 
 /*!
- * @brief  Constructs a new SetSMSAttributesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 SetSMSAttributesRequest::SetSMSAttributesRequest(const SetSMSAttributesRequest &other)
     : SNSRequest(new SetSMSAttributesRequestPrivate(*other.d_func(), this))
@@ -62,7 +59,7 @@ SetSMSAttributesRequest::SetSMSAttributesRequest(const SetSMSAttributesRequest &
 }
 
 /*!
- * @brief  Constructs a new SetSMSAttributesRequest object.
+ * Constructs a SetSMSAttributesRequest object.
  */
 SetSMSAttributesRequest::SetSMSAttributesRequest()
     : SNSRequest(new SetSMSAttributesRequestPrivate(SNSRequest::SetSMSAttributesAction, this))
@@ -80,14 +77,9 @@ bool SetSMSAttributesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an SetSMSAttributesResponse object.
+ * Returns a SetSMSAttributesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An SetSMSAttributesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SNSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * SetSMSAttributesRequest::response(QNetworkReply * const reply) const
 {
@@ -95,20 +87,17 @@ QtAws::Core::AwsAbstractResponse * SetSMSAttributesRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::SNS::SetSMSAttributesRequestPrivate
+ * \brief The SetSMSAttributesRequestPrivate class provides private implementation for SetSMSAttributesRequest.
+ * \internal
  *
- * @class  SetSMSAttributesRequestPrivate
- *
- * @brief  Private implementation for SetSMSAttributesRequest.
+ * \inmodule QtAwsSNS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new SetSMSAttributesRequestPrivate object.
- *
- * @param  action  SNS action being performed.
- * @param  q       Pointer to this object's public SetSMSAttributesRequest instance.
+ * Constructs a SetSMSAttributesRequestPrivate object for SNS \a action with,
+ * public implementation \a q.
  */
 SetSMSAttributesRequestPrivate::SetSMSAttributesRequestPrivate(
     const SNSRequest::Action action, SetSMSAttributesRequest * const q)
@@ -118,15 +107,10 @@ SetSMSAttributesRequestPrivate::SetSMSAttributesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SetSMSAttributesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the SetSMSAttributesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public SetSMSAttributesRequest instance.
  */
 SetSMSAttributesRequestPrivate::SetSMSAttributesRequestPrivate(
     const SetSMSAttributesRequestPrivate &other, SetSMSAttributesRequest * const q)

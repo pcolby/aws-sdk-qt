@@ -27,19 +27,16 @@ namespace Route53 {
 
 /*!
  * \class QtAws::Route53::DisassociateVPCFromHostedZoneRequest
- *
  * \brief The DisassociateVPCFromHostedZoneRequest class provides an interface for Route53 DisassociateVPCFromHostedZone requests.
  *
- * \ingroup Route53
+ * \inmodule QtAwsRoute53
  *
  *
  * \sa Route53Client::disassociateVPCFromHostedZone
  */
 
 /*!
- * @brief  Constructs a new DisassociateVPCFromHostedZoneRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DisassociateVPCFromHostedZoneRequest::DisassociateVPCFromHostedZoneRequest(const DisassociateVPCFromHostedZoneRequest &other)
     : Route53Request(new DisassociateVPCFromHostedZoneRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ DisassociateVPCFromHostedZoneRequest::DisassociateVPCFromHostedZoneRequest(const
 }
 
 /*!
- * @brief  Constructs a new DisassociateVPCFromHostedZoneRequest object.
+ * Constructs a DisassociateVPCFromHostedZoneRequest object.
  */
 DisassociateVPCFromHostedZoneRequest::DisassociateVPCFromHostedZoneRequest()
     : Route53Request(new DisassociateVPCFromHostedZoneRequestPrivate(Route53Request::DisassociateVPCFromHostedZoneAction, this))
@@ -66,14 +63,9 @@ bool DisassociateVPCFromHostedZoneRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DisassociateVPCFromHostedZoneResponse object.
+ * Returns a DisassociateVPCFromHostedZoneResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DisassociateVPCFromHostedZoneResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  Route53Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DisassociateVPCFromHostedZoneRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * DisassociateVPCFromHostedZoneRequest::respons
 }
 
 /*!
- * @internal
+ * \class QtAws::Route53::DisassociateVPCFromHostedZoneRequestPrivate
+ * \brief The DisassociateVPCFromHostedZoneRequestPrivate class provides private implementation for DisassociateVPCFromHostedZoneRequest.
+ * \internal
  *
- * @class  DisassociateVPCFromHostedZoneRequestPrivate
- *
- * @brief  Private implementation for DisassociateVPCFromHostedZoneRequest.
+ * \inmodule QtAwsRoute53
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DisassociateVPCFromHostedZoneRequestPrivate object.
- *
- * @param  action  Route53 action being performed.
- * @param  q       Pointer to this object's public DisassociateVPCFromHostedZoneRequest instance.
+ * Constructs a DisassociateVPCFromHostedZoneRequestPrivate object for Route53 \a action with,
+ * public implementation \a q.
  */
 DisassociateVPCFromHostedZoneRequestPrivate::DisassociateVPCFromHostedZoneRequestPrivate(
     const Route53Request::Action action, DisassociateVPCFromHostedZoneRequest * const q)
@@ -104,15 +93,10 @@ DisassociateVPCFromHostedZoneRequestPrivate::DisassociateVPCFromHostedZoneReques
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DisassociateVPCFromHostedZoneRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DisassociateVPCFromHostedZoneRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DisassociateVPCFromHostedZoneRequest instance.
  */
 DisassociateVPCFromHostedZoneRequestPrivate::DisassociateVPCFromHostedZoneRequestPrivate(
     const DisassociateVPCFromHostedZoneRequestPrivate &other, DisassociateVPCFromHostedZoneRequest * const q)

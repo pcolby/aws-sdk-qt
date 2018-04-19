@@ -27,10 +27,9 @@ namespace DeviceFarm {
 
 /*!
  * \class QtAws::DeviceFarm::ListSamplesRequest
- *
  * \brief The ListSamplesRequest class provides an interface for DeviceFarm ListSamples requests.
  *
- * \ingroup DeviceFarm
+ * \inmodule QtAwsDeviceFarm
  *
  *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
  *  phones, tablets, and other devices in the
@@ -39,9 +38,7 @@ namespace DeviceFarm {
  */
 
 /*!
- * @brief  Constructs a new ListSamplesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListSamplesRequest::ListSamplesRequest(const ListSamplesRequest &other)
     : DeviceFarmRequest(new ListSamplesRequestPrivate(*other.d_func(), this))
@@ -50,7 +47,7 @@ ListSamplesRequest::ListSamplesRequest(const ListSamplesRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ListSamplesRequest object.
+ * Constructs a ListSamplesRequest object.
  */
 ListSamplesRequest::ListSamplesRequest()
     : DeviceFarmRequest(new ListSamplesRequestPrivate(DeviceFarmRequest::ListSamplesAction, this))
@@ -68,14 +65,9 @@ bool ListSamplesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListSamplesResponse object.
+ * Returns a ListSamplesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListSamplesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DeviceFarmClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListSamplesRequest::response(QNetworkReply * const reply) const
 {
@@ -83,20 +75,17 @@ QtAws::Core::AwsAbstractResponse * ListSamplesRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::DeviceFarm::ListSamplesRequestPrivate
+ * \brief The ListSamplesRequestPrivate class provides private implementation for ListSamplesRequest.
+ * \internal
  *
- * @class  ListSamplesRequestPrivate
- *
- * @brief  Private implementation for ListSamplesRequest.
+ * \inmodule QtAwsDeviceFarm
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListSamplesRequestPrivate object.
- *
- * @param  action  DeviceFarm action being performed.
- * @param  q       Pointer to this object's public ListSamplesRequest instance.
+ * Constructs a ListSamplesRequestPrivate object for DeviceFarm \a action with,
+ * public implementation \a q.
  */
 ListSamplesRequestPrivate::ListSamplesRequestPrivate(
     const DeviceFarmRequest::Action action, ListSamplesRequest * const q)
@@ -106,15 +95,10 @@ ListSamplesRequestPrivate::ListSamplesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListSamplesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListSamplesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListSamplesRequest instance.
  */
 ListSamplesRequestPrivate::ListSamplesRequestPrivate(
     const ListSamplesRequestPrivate &other, ListSamplesRequest * const q)

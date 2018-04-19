@@ -27,10 +27,9 @@ namespace CodeCommit {
 
 /*!
  * \class QtAws::CodeCommit::UpdateDefaultBranchRequest
- *
  * \brief The UpdateDefaultBranchRequest class provides an interface for CodeCommit UpdateDefaultBranch requests.
  *
- * \ingroup CodeCommit
+ * \inmodule QtAwsCodeCommit
  *
  *  <fullname>AWS CodeCommit</fullname>
  * 
@@ -227,9 +226,7 @@ namespace CodeCommit {
  */
 
 /*!
- * @brief  Constructs a new UpdateDefaultBranchRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateDefaultBranchRequest::UpdateDefaultBranchRequest(const UpdateDefaultBranchRequest &other)
     : CodeCommitRequest(new UpdateDefaultBranchRequestPrivate(*other.d_func(), this))
@@ -238,7 +235,7 @@ UpdateDefaultBranchRequest::UpdateDefaultBranchRequest(const UpdateDefaultBranch
 }
 
 /*!
- * @brief  Constructs a new UpdateDefaultBranchRequest object.
+ * Constructs a UpdateDefaultBranchRequest object.
  */
 UpdateDefaultBranchRequest::UpdateDefaultBranchRequest()
     : CodeCommitRequest(new UpdateDefaultBranchRequestPrivate(CodeCommitRequest::UpdateDefaultBranchAction, this))
@@ -256,14 +253,9 @@ bool UpdateDefaultBranchRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateDefaultBranchResponse object.
+ * Returns a UpdateDefaultBranchResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateDefaultBranchResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CodeCommitClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateDefaultBranchRequest::response(QNetworkReply * const reply) const
 {
@@ -271,20 +263,17 @@ QtAws::Core::AwsAbstractResponse * UpdateDefaultBranchRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::CodeCommit::UpdateDefaultBranchRequestPrivate
+ * \brief The UpdateDefaultBranchRequestPrivate class provides private implementation for UpdateDefaultBranchRequest.
+ * \internal
  *
- * @class  UpdateDefaultBranchRequestPrivate
- *
- * @brief  Private implementation for UpdateDefaultBranchRequest.
+ * \inmodule QtAwsCodeCommit
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateDefaultBranchRequestPrivate object.
- *
- * @param  action  CodeCommit action being performed.
- * @param  q       Pointer to this object's public UpdateDefaultBranchRequest instance.
+ * Constructs a UpdateDefaultBranchRequestPrivate object for CodeCommit \a action with,
+ * public implementation \a q.
  */
 UpdateDefaultBranchRequestPrivate::UpdateDefaultBranchRequestPrivate(
     const CodeCommitRequest::Action action, UpdateDefaultBranchRequest * const q)
@@ -294,15 +283,10 @@ UpdateDefaultBranchRequestPrivate::UpdateDefaultBranchRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateDefaultBranchRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateDefaultBranchRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateDefaultBranchRequest instance.
  */
 UpdateDefaultBranchRequestPrivate::UpdateDefaultBranchRequestPrivate(
     const UpdateDefaultBranchRequestPrivate &other, UpdateDefaultBranchRequest * const q)

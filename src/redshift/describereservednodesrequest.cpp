@@ -27,10 +27,9 @@ namespace Redshift {
 
 /*!
  * \class QtAws::Redshift::DescribeReservedNodesRequest
- *
  * \brief The DescribeReservedNodesRequest class provides an interface for Redshift DescribeReservedNodes requests.
  *
- * \ingroup Redshift
+ * \inmodule QtAwsRedshift
  *
  *  <fullname>Amazon Redshift</fullname>
  * 
@@ -67,9 +66,7 @@ namespace Redshift {
  */
 
 /*!
- * @brief  Constructs a new DescribeReservedNodesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeReservedNodesRequest::DescribeReservedNodesRequest(const DescribeReservedNodesRequest &other)
     : RedshiftRequest(new DescribeReservedNodesRequestPrivate(*other.d_func(), this))
@@ -78,7 +75,7 @@ DescribeReservedNodesRequest::DescribeReservedNodesRequest(const DescribeReserve
 }
 
 /*!
- * @brief  Constructs a new DescribeReservedNodesRequest object.
+ * Constructs a DescribeReservedNodesRequest object.
  */
 DescribeReservedNodesRequest::DescribeReservedNodesRequest()
     : RedshiftRequest(new DescribeReservedNodesRequestPrivate(RedshiftRequest::DescribeReservedNodesAction, this))
@@ -96,14 +93,9 @@ bool DescribeReservedNodesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeReservedNodesResponse object.
+ * Returns a DescribeReservedNodesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeReservedNodesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RedshiftClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeReservedNodesRequest::response(QNetworkReply * const reply) const
 {
@@ -111,20 +103,17 @@ QtAws::Core::AwsAbstractResponse * DescribeReservedNodesRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::Redshift::DescribeReservedNodesRequestPrivate
+ * \brief The DescribeReservedNodesRequestPrivate class provides private implementation for DescribeReservedNodesRequest.
+ * \internal
  *
- * @class  DescribeReservedNodesRequestPrivate
- *
- * @brief  Private implementation for DescribeReservedNodesRequest.
+ * \inmodule QtAwsRedshift
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeReservedNodesRequestPrivate object.
- *
- * @param  action  Redshift action being performed.
- * @param  q       Pointer to this object's public DescribeReservedNodesRequest instance.
+ * Constructs a DescribeReservedNodesRequestPrivate object for Redshift \a action with,
+ * public implementation \a q.
  */
 DescribeReservedNodesRequestPrivate::DescribeReservedNodesRequestPrivate(
     const RedshiftRequest::Action action, DescribeReservedNodesRequest * const q)
@@ -134,15 +123,10 @@ DescribeReservedNodesRequestPrivate::DescribeReservedNodesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeReservedNodesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeReservedNodesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeReservedNodesRequest instance.
  */
 DescribeReservedNodesRequestPrivate::DescribeReservedNodesRequestPrivate(
     const DescribeReservedNodesRequestPrivate &other, DescribeReservedNodesRequest * const q)

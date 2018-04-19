@@ -27,19 +27,16 @@ namespace MediaLive {
 
 /*!
  * \class QtAws::MediaLive::ListInputsRequest
- *
  * \brief The ListInputsRequest class provides an interface for MediaLive ListInputs requests.
  *
- * \ingroup MediaLive
+ * \inmodule QtAwsMediaLive
  *
  *
  * \sa MediaLiveClient::listInputs
  */
 
 /*!
- * @brief  Constructs a new ListInputsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListInputsRequest::ListInputsRequest(const ListInputsRequest &other)
     : MediaLiveRequest(new ListInputsRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ ListInputsRequest::ListInputsRequest(const ListInputsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ListInputsRequest object.
+ * Constructs a ListInputsRequest object.
  */
 ListInputsRequest::ListInputsRequest()
     : MediaLiveRequest(new ListInputsRequestPrivate(MediaLiveRequest::ListInputsAction, this))
@@ -66,14 +63,9 @@ bool ListInputsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListInputsResponse object.
+ * Returns a ListInputsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListInputsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MediaLiveClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListInputsRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * ListInputsRequest::response(QNetworkReply * c
 }
 
 /*!
- * @internal
+ * \class QtAws::MediaLive::ListInputsRequestPrivate
+ * \brief The ListInputsRequestPrivate class provides private implementation for ListInputsRequest.
+ * \internal
  *
- * @class  ListInputsRequestPrivate
- *
- * @brief  Private implementation for ListInputsRequest.
+ * \inmodule QtAwsMediaLive
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListInputsRequestPrivate object.
- *
- * @param  action  MediaLive action being performed.
- * @param  q       Pointer to this object's public ListInputsRequest instance.
+ * Constructs a ListInputsRequestPrivate object for MediaLive \a action with,
+ * public implementation \a q.
  */
 ListInputsRequestPrivate::ListInputsRequestPrivate(
     const MediaLiveRequest::Action action, ListInputsRequest * const q)
@@ -104,15 +93,10 @@ ListInputsRequestPrivate::ListInputsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListInputsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListInputsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListInputsRequest instance.
  */
 ListInputsRequestPrivate::ListInputsRequestPrivate(
     const ListInputsRequestPrivate &other, ListInputsRequest * const q)

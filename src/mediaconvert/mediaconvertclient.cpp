@@ -68,6 +68,9 @@
 /*!
  * \namespace QtAws::MediaConvert
  * \brief The QtAws::MediaConvert contains stuff...
+ *
+ * \inmodule QtAwsMediaConvert
+ *
  * @todo Move this to a separate template file.
  */
 
@@ -117,7 +120,7 @@ MediaConvertClient::MediaConvertClient(
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * \a  AwsEndpoint::getEndpoint()
+ * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
 MediaConvertClient::MediaConvertClient(
     const QUrl &endpoint,

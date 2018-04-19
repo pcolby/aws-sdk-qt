@@ -27,10 +27,9 @@ namespace Redshift {
 
 /*!
  * \class QtAws::Redshift::AuthorizeSnapshotAccessRequest
- *
  * \brief The AuthorizeSnapshotAccessRequest class provides an interface for Redshift AuthorizeSnapshotAccess requests.
  *
- * \ingroup Redshift
+ * \inmodule QtAwsRedshift
  *
  *  <fullname>Amazon Redshift</fullname>
  * 
@@ -67,9 +66,7 @@ namespace Redshift {
  */
 
 /*!
- * @brief  Constructs a new AuthorizeSnapshotAccessRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AuthorizeSnapshotAccessRequest::AuthorizeSnapshotAccessRequest(const AuthorizeSnapshotAccessRequest &other)
     : RedshiftRequest(new AuthorizeSnapshotAccessRequestPrivate(*other.d_func(), this))
@@ -78,7 +75,7 @@ AuthorizeSnapshotAccessRequest::AuthorizeSnapshotAccessRequest(const AuthorizeSn
 }
 
 /*!
- * @brief  Constructs a new AuthorizeSnapshotAccessRequest object.
+ * Constructs a AuthorizeSnapshotAccessRequest object.
  */
 AuthorizeSnapshotAccessRequest::AuthorizeSnapshotAccessRequest()
     : RedshiftRequest(new AuthorizeSnapshotAccessRequestPrivate(RedshiftRequest::AuthorizeSnapshotAccessAction, this))
@@ -96,14 +93,9 @@ bool AuthorizeSnapshotAccessRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AuthorizeSnapshotAccessResponse object.
+ * Returns a AuthorizeSnapshotAccessResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AuthorizeSnapshotAccessResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RedshiftClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AuthorizeSnapshotAccessRequest::response(QNetworkReply * const reply) const
 {
@@ -111,20 +103,17 @@ QtAws::Core::AwsAbstractResponse * AuthorizeSnapshotAccessRequest::response(QNet
 }
 
 /*!
- * @internal
+ * \class QtAws::Redshift::AuthorizeSnapshotAccessRequestPrivate
+ * \brief The AuthorizeSnapshotAccessRequestPrivate class provides private implementation for AuthorizeSnapshotAccessRequest.
+ * \internal
  *
- * @class  AuthorizeSnapshotAccessRequestPrivate
- *
- * @brief  Private implementation for AuthorizeSnapshotAccessRequest.
+ * \inmodule QtAwsRedshift
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AuthorizeSnapshotAccessRequestPrivate object.
- *
- * @param  action  Redshift action being performed.
- * @param  q       Pointer to this object's public AuthorizeSnapshotAccessRequest instance.
+ * Constructs a AuthorizeSnapshotAccessRequestPrivate object for Redshift \a action with,
+ * public implementation \a q.
  */
 AuthorizeSnapshotAccessRequestPrivate::AuthorizeSnapshotAccessRequestPrivate(
     const RedshiftRequest::Action action, AuthorizeSnapshotAccessRequest * const q)
@@ -134,15 +123,10 @@ AuthorizeSnapshotAccessRequestPrivate::AuthorizeSnapshotAccessRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AuthorizeSnapshotAccessRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AuthorizeSnapshotAccessRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AuthorizeSnapshotAccessRequest instance.
  */
 AuthorizeSnapshotAccessRequestPrivate::AuthorizeSnapshotAccessRequestPrivate(
     const AuthorizeSnapshotAccessRequestPrivate &other, AuthorizeSnapshotAccessRequest * const q)

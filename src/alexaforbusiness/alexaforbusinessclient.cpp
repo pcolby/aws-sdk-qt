@@ -124,6 +124,9 @@
 /*!
  * \namespace QtAws::AlexaForBusiness
  * \brief The QtAws::AlexaForBusiness contains stuff...
+ *
+ * \inmodule QtAwsAlexaForBusiness
+ *
  * @todo Move this to a separate template file.
  */
 
@@ -178,7 +181,7 @@ AlexaForBusinessClient::AlexaForBusinessClient(
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * \a  AwsEndpoint::getEndpoint()
+ * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
 AlexaForBusinessClient::AlexaForBusinessClient(
     const QUrl &endpoint,

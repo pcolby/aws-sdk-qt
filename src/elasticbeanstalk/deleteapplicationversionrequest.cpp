@@ -27,10 +27,9 @@ namespace ElasticBeanstalk {
 
 /*!
  * \class QtAws::ElasticBeanstalk::DeleteApplicationVersionRequest
- *
  * \brief The DeleteApplicationVersionRequest class provides an interface for ElasticBeanstalk DeleteApplicationVersion requests.
  *
- * \ingroup ElasticBeanstalk
+ * \inmodule QtAwsElasticBeanstalk
  *
  *  <fullname>AWS Elastic Beanstalk</fullname>
  * 
@@ -59,9 +58,7 @@ namespace ElasticBeanstalk {
  */
 
 /*!
- * @brief  Constructs a new DeleteApplicationVersionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteApplicationVersionRequest::DeleteApplicationVersionRequest(const DeleteApplicationVersionRequest &other)
     : ElasticBeanstalkRequest(new DeleteApplicationVersionRequestPrivate(*other.d_func(), this))
@@ -70,7 +67,7 @@ DeleteApplicationVersionRequest::DeleteApplicationVersionRequest(const DeleteApp
 }
 
 /*!
- * @brief  Constructs a new DeleteApplicationVersionRequest object.
+ * Constructs a DeleteApplicationVersionRequest object.
  */
 DeleteApplicationVersionRequest::DeleteApplicationVersionRequest()
     : ElasticBeanstalkRequest(new DeleteApplicationVersionRequestPrivate(ElasticBeanstalkRequest::DeleteApplicationVersionAction, this))
@@ -88,14 +85,9 @@ bool DeleteApplicationVersionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteApplicationVersionResponse object.
+ * Returns a DeleteApplicationVersionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteApplicationVersionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ElasticBeanstalkClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteApplicationVersionRequest::response(QNetworkReply * const reply) const
 {
@@ -103,20 +95,17 @@ QtAws::Core::AwsAbstractResponse * DeleteApplicationVersionRequest::response(QNe
 }
 
 /*!
- * @internal
+ * \class QtAws::ElasticBeanstalk::DeleteApplicationVersionRequestPrivate
+ * \brief The DeleteApplicationVersionRequestPrivate class provides private implementation for DeleteApplicationVersionRequest.
+ * \internal
  *
- * @class  DeleteApplicationVersionRequestPrivate
- *
- * @brief  Private implementation for DeleteApplicationVersionRequest.
+ * \inmodule QtAwsElasticBeanstalk
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteApplicationVersionRequestPrivate object.
- *
- * @param  action  ElasticBeanstalk action being performed.
- * @param  q       Pointer to this object's public DeleteApplicationVersionRequest instance.
+ * Constructs a DeleteApplicationVersionRequestPrivate object for ElasticBeanstalk \a action with,
+ * public implementation \a q.
  */
 DeleteApplicationVersionRequestPrivate::DeleteApplicationVersionRequestPrivate(
     const ElasticBeanstalkRequest::Action action, DeleteApplicationVersionRequest * const q)
@@ -126,15 +115,10 @@ DeleteApplicationVersionRequestPrivate::DeleteApplicationVersionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteApplicationVersionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteApplicationVersionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteApplicationVersionRequest instance.
  */
 DeleteApplicationVersionRequestPrivate::DeleteApplicationVersionRequestPrivate(
     const DeleteApplicationVersionRequestPrivate &other, DeleteApplicationVersionRequest * const q)

@@ -27,10 +27,9 @@ namespace CloudDirectory {
 
 /*!
  * \class QtAws::CloudDirectory::DetachTypedLinkRequest
- *
  * \brief The DetachTypedLinkRequest class provides an interface for CloudDirectory DetachTypedLink requests.
  *
- * \ingroup CloudDirectory
+ * \inmodule QtAwsCloudDirectory
  *
  *  <fullname>Amazon Cloud Directory</fullname>
  * 
@@ -44,9 +43,7 @@ namespace CloudDirectory {
  */
 
 /*!
- * @brief  Constructs a new DetachTypedLinkRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DetachTypedLinkRequest::DetachTypedLinkRequest(const DetachTypedLinkRequest &other)
     : CloudDirectoryRequest(new DetachTypedLinkRequestPrivate(*other.d_func(), this))
@@ -55,7 +52,7 @@ DetachTypedLinkRequest::DetachTypedLinkRequest(const DetachTypedLinkRequest &oth
 }
 
 /*!
- * @brief  Constructs a new DetachTypedLinkRequest object.
+ * Constructs a DetachTypedLinkRequest object.
  */
 DetachTypedLinkRequest::DetachTypedLinkRequest()
     : CloudDirectoryRequest(new DetachTypedLinkRequestPrivate(CloudDirectoryRequest::DetachTypedLinkAction, this))
@@ -73,14 +70,9 @@ bool DetachTypedLinkRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DetachTypedLinkResponse object.
+ * Returns a DetachTypedLinkResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DetachTypedLinkResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudDirectoryClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DetachTypedLinkRequest::response(QNetworkReply * const reply) const
 {
@@ -88,20 +80,17 @@ QtAws::Core::AwsAbstractResponse * DetachTypedLinkRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudDirectory::DetachTypedLinkRequestPrivate
+ * \brief The DetachTypedLinkRequestPrivate class provides private implementation for DetachTypedLinkRequest.
+ * \internal
  *
- * @class  DetachTypedLinkRequestPrivate
- *
- * @brief  Private implementation for DetachTypedLinkRequest.
+ * \inmodule QtAwsCloudDirectory
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DetachTypedLinkRequestPrivate object.
- *
- * @param  action  CloudDirectory action being performed.
- * @param  q       Pointer to this object's public DetachTypedLinkRequest instance.
+ * Constructs a DetachTypedLinkRequestPrivate object for CloudDirectory \a action with,
+ * public implementation \a q.
  */
 DetachTypedLinkRequestPrivate::DetachTypedLinkRequestPrivate(
     const CloudDirectoryRequest::Action action, DetachTypedLinkRequest * const q)
@@ -111,15 +100,10 @@ DetachTypedLinkRequestPrivate::DetachTypedLinkRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DetachTypedLinkRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DetachTypedLinkRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DetachTypedLinkRequest instance.
  */
 DetachTypedLinkRequestPrivate::DetachTypedLinkRequestPrivate(
     const DetachTypedLinkRequestPrivate &other, DetachTypedLinkRequest * const q)

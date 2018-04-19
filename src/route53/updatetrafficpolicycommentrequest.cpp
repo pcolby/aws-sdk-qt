@@ -27,19 +27,16 @@ namespace Route53 {
 
 /*!
  * \class QtAws::Route53::UpdateTrafficPolicyCommentRequest
- *
  * \brief The UpdateTrafficPolicyCommentRequest class provides an interface for Route53 UpdateTrafficPolicyComment requests.
  *
- * \ingroup Route53
+ * \inmodule QtAwsRoute53
  *
  *
  * \sa Route53Client::updateTrafficPolicyComment
  */
 
 /*!
- * @brief  Constructs a new UpdateTrafficPolicyCommentRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateTrafficPolicyCommentRequest::UpdateTrafficPolicyCommentRequest(const UpdateTrafficPolicyCommentRequest &other)
     : Route53Request(new UpdateTrafficPolicyCommentRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ UpdateTrafficPolicyCommentRequest::UpdateTrafficPolicyCommentRequest(const Updat
 }
 
 /*!
- * @brief  Constructs a new UpdateTrafficPolicyCommentRequest object.
+ * Constructs a UpdateTrafficPolicyCommentRequest object.
  */
 UpdateTrafficPolicyCommentRequest::UpdateTrafficPolicyCommentRequest()
     : Route53Request(new UpdateTrafficPolicyCommentRequestPrivate(Route53Request::UpdateTrafficPolicyCommentAction, this))
@@ -66,14 +63,9 @@ bool UpdateTrafficPolicyCommentRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateTrafficPolicyCommentResponse object.
+ * Returns a UpdateTrafficPolicyCommentResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateTrafficPolicyCommentResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  Route53Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateTrafficPolicyCommentRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * UpdateTrafficPolicyCommentRequest::response(Q
 }
 
 /*!
- * @internal
+ * \class QtAws::Route53::UpdateTrafficPolicyCommentRequestPrivate
+ * \brief The UpdateTrafficPolicyCommentRequestPrivate class provides private implementation for UpdateTrafficPolicyCommentRequest.
+ * \internal
  *
- * @class  UpdateTrafficPolicyCommentRequestPrivate
- *
- * @brief  Private implementation for UpdateTrafficPolicyCommentRequest.
+ * \inmodule QtAwsRoute53
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateTrafficPolicyCommentRequestPrivate object.
- *
- * @param  action  Route53 action being performed.
- * @param  q       Pointer to this object's public UpdateTrafficPolicyCommentRequest instance.
+ * Constructs a UpdateTrafficPolicyCommentRequestPrivate object for Route53 \a action with,
+ * public implementation \a q.
  */
 UpdateTrafficPolicyCommentRequestPrivate::UpdateTrafficPolicyCommentRequestPrivate(
     const Route53Request::Action action, UpdateTrafficPolicyCommentRequest * const q)
@@ -104,15 +93,10 @@ UpdateTrafficPolicyCommentRequestPrivate::UpdateTrafficPolicyCommentRequestPriva
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateTrafficPolicyCommentRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateTrafficPolicyCommentRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateTrafficPolicyCommentRequest instance.
  */
 UpdateTrafficPolicyCommentRequestPrivate::UpdateTrafficPolicyCommentRequestPrivate(
     const UpdateTrafficPolicyCommentRequestPrivate &other, UpdateTrafficPolicyCommentRequest * const q)

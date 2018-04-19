@@ -27,10 +27,9 @@ namespace CloudWatchEvents {
 
 /*!
  * \class QtAws::CloudWatchEvents::ListRuleNamesByTargetRequest
- *
  * \brief The ListRuleNamesByTargetRequest class provides an interface for CloudWatchEvents ListRuleNamesByTarget requests.
  *
- * \ingroup CloudWatchEvents
+ * \inmodule QtAwsCloudWatchEvents
  *
  *  Amazon CloudWatch Events helps you to respond to state changes in your AWS resources. When your resources change state,
  *  they automatically send events into an event stream. You can create rules that match selected events in the stream and
@@ -60,9 +59,7 @@ namespace CloudWatchEvents {
  */
 
 /*!
- * @brief  Constructs a new ListRuleNamesByTargetRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListRuleNamesByTargetRequest::ListRuleNamesByTargetRequest(const ListRuleNamesByTargetRequest &other)
     : CloudWatchEventsRequest(new ListRuleNamesByTargetRequestPrivate(*other.d_func(), this))
@@ -71,7 +68,7 @@ ListRuleNamesByTargetRequest::ListRuleNamesByTargetRequest(const ListRuleNamesBy
 }
 
 /*!
- * @brief  Constructs a new ListRuleNamesByTargetRequest object.
+ * Constructs a ListRuleNamesByTargetRequest object.
  */
 ListRuleNamesByTargetRequest::ListRuleNamesByTargetRequest()
     : CloudWatchEventsRequest(new ListRuleNamesByTargetRequestPrivate(CloudWatchEventsRequest::ListRuleNamesByTargetAction, this))
@@ -89,14 +86,9 @@ bool ListRuleNamesByTargetRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListRuleNamesByTargetResponse object.
+ * Returns a ListRuleNamesByTargetResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListRuleNamesByTargetResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudWatchEventsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListRuleNamesByTargetRequest::response(QNetworkReply * const reply) const
 {
@@ -104,20 +96,17 @@ QtAws::Core::AwsAbstractResponse * ListRuleNamesByTargetRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudWatchEvents::ListRuleNamesByTargetRequestPrivate
+ * \brief The ListRuleNamesByTargetRequestPrivate class provides private implementation for ListRuleNamesByTargetRequest.
+ * \internal
  *
- * @class  ListRuleNamesByTargetRequestPrivate
- *
- * @brief  Private implementation for ListRuleNamesByTargetRequest.
+ * \inmodule QtAwsCloudWatchEvents
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListRuleNamesByTargetRequestPrivate object.
- *
- * @param  action  CloudWatchEvents action being performed.
- * @param  q       Pointer to this object's public ListRuleNamesByTargetRequest instance.
+ * Constructs a ListRuleNamesByTargetRequestPrivate object for CloudWatchEvents \a action with,
+ * public implementation \a q.
  */
 ListRuleNamesByTargetRequestPrivate::ListRuleNamesByTargetRequestPrivate(
     const CloudWatchEventsRequest::Action action, ListRuleNamesByTargetRequest * const q)
@@ -127,15 +116,10 @@ ListRuleNamesByTargetRequestPrivate::ListRuleNamesByTargetRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListRuleNamesByTargetRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListRuleNamesByTargetRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListRuleNamesByTargetRequest instance.
  */
 ListRuleNamesByTargetRequestPrivate::ListRuleNamesByTargetRequestPrivate(
     const ListRuleNamesByTargetRequestPrivate &other, ListRuleNamesByTargetRequest * const q)

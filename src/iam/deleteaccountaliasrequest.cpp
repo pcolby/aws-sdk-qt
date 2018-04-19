@@ -27,10 +27,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::DeleteAccountAliasRequest
- *
  * \brief The DeleteAccountAliasRequest class provides an interface for IAM DeleteAccountAlias requests.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -102,9 +101,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new DeleteAccountAliasRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteAccountAliasRequest::DeleteAccountAliasRequest(const DeleteAccountAliasRequest &other)
     : IAMRequest(new DeleteAccountAliasRequestPrivate(*other.d_func(), this))
@@ -113,7 +110,7 @@ DeleteAccountAliasRequest::DeleteAccountAliasRequest(const DeleteAccountAliasReq
 }
 
 /*!
- * @brief  Constructs a new DeleteAccountAliasRequest object.
+ * Constructs a DeleteAccountAliasRequest object.
  */
 DeleteAccountAliasRequest::DeleteAccountAliasRequest()
     : IAMRequest(new DeleteAccountAliasRequestPrivate(IAMRequest::DeleteAccountAliasAction, this))
@@ -131,14 +128,9 @@ bool DeleteAccountAliasRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteAccountAliasResponse object.
+ * Returns a DeleteAccountAliasResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteAccountAliasResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IAMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteAccountAliasRequest::response(QNetworkReply * const reply) const
 {
@@ -146,20 +138,17 @@ QtAws::Core::AwsAbstractResponse * DeleteAccountAliasRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::IAM::DeleteAccountAliasRequestPrivate
+ * \brief The DeleteAccountAliasRequestPrivate class provides private implementation for DeleteAccountAliasRequest.
+ * \internal
  *
- * @class  DeleteAccountAliasRequestPrivate
- *
- * @brief  Private implementation for DeleteAccountAliasRequest.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteAccountAliasRequestPrivate object.
- *
- * @param  action  IAM action being performed.
- * @param  q       Pointer to this object's public DeleteAccountAliasRequest instance.
+ * Constructs a DeleteAccountAliasRequestPrivate object for IAM \a action with,
+ * public implementation \a q.
  */
 DeleteAccountAliasRequestPrivate::DeleteAccountAliasRequestPrivate(
     const IAMRequest::Action action, DeleteAccountAliasRequest * const q)
@@ -169,15 +158,10 @@ DeleteAccountAliasRequestPrivate::DeleteAccountAliasRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteAccountAliasRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteAccountAliasRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteAccountAliasRequest instance.
  */
 DeleteAccountAliasRequestPrivate::DeleteAccountAliasRequestPrivate(
     const DeleteAccountAliasRequestPrivate &other, DeleteAccountAliasRequest * const q)

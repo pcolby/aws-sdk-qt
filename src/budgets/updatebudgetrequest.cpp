@@ -27,10 +27,9 @@ namespace Budgets {
 
 /*!
  * \class QtAws::Budgets::UpdateBudgetRequest
- *
  * \brief The UpdateBudgetRequest class provides an interface for Budgets UpdateBudget requests.
  *
- * \ingroup Budgets
+ * \inmodule QtAwsBudgets
  *
  *  Budgets enable you to plan your service usage, service costs, and your RI utilization. You can also track how close your
  *  plan is to your budgeted amount or to the free tier limits. Budgets provide you with a quick way to see your
@@ -75,9 +74,7 @@ namespace Budgets {
  */
 
 /*!
- * @brief  Constructs a new UpdateBudgetRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateBudgetRequest::UpdateBudgetRequest(const UpdateBudgetRequest &other)
     : BudgetsRequest(new UpdateBudgetRequestPrivate(*other.d_func(), this))
@@ -86,7 +83,7 @@ UpdateBudgetRequest::UpdateBudgetRequest(const UpdateBudgetRequest &other)
 }
 
 /*!
- * @brief  Constructs a new UpdateBudgetRequest object.
+ * Constructs a UpdateBudgetRequest object.
  */
 UpdateBudgetRequest::UpdateBudgetRequest()
     : BudgetsRequest(new UpdateBudgetRequestPrivate(BudgetsRequest::UpdateBudgetAction, this))
@@ -104,14 +101,9 @@ bool UpdateBudgetRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateBudgetResponse object.
+ * Returns a UpdateBudgetResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateBudgetResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  BudgetsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateBudgetRequest::response(QNetworkReply * const reply) const
 {
@@ -119,20 +111,17 @@ QtAws::Core::AwsAbstractResponse * UpdateBudgetRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::Budgets::UpdateBudgetRequestPrivate
+ * \brief The UpdateBudgetRequestPrivate class provides private implementation for UpdateBudgetRequest.
+ * \internal
  *
- * @class  UpdateBudgetRequestPrivate
- *
- * @brief  Private implementation for UpdateBudgetRequest.
+ * \inmodule QtAwsBudgets
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateBudgetRequestPrivate object.
- *
- * @param  action  Budgets action being performed.
- * @param  q       Pointer to this object's public UpdateBudgetRequest instance.
+ * Constructs a UpdateBudgetRequestPrivate object for Budgets \a action with,
+ * public implementation \a q.
  */
 UpdateBudgetRequestPrivate::UpdateBudgetRequestPrivate(
     const BudgetsRequest::Action action, UpdateBudgetRequest * const q)
@@ -142,15 +131,10 @@ UpdateBudgetRequestPrivate::UpdateBudgetRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateBudgetRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateBudgetRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateBudgetRequest instance.
  */
 UpdateBudgetRequestPrivate::UpdateBudgetRequestPrivate(
     const UpdateBudgetRequestPrivate &other, UpdateBudgetRequest * const q)

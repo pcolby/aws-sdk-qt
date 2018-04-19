@@ -27,10 +27,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::UpdateMaintenanceWindowTaskRequest
- *
  * \brief The UpdateMaintenanceWindowTaskRequest class provides an interface for SSM UpdateMaintenanceWindowTask requests.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -61,9 +60,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new UpdateMaintenanceWindowTaskRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateMaintenanceWindowTaskRequest::UpdateMaintenanceWindowTaskRequest(const UpdateMaintenanceWindowTaskRequest &other)
     : SSMRequest(new UpdateMaintenanceWindowTaskRequestPrivate(*other.d_func(), this))
@@ -72,7 +69,7 @@ UpdateMaintenanceWindowTaskRequest::UpdateMaintenanceWindowTaskRequest(const Upd
 }
 
 /*!
- * @brief  Constructs a new UpdateMaintenanceWindowTaskRequest object.
+ * Constructs a UpdateMaintenanceWindowTaskRequest object.
  */
 UpdateMaintenanceWindowTaskRequest::UpdateMaintenanceWindowTaskRequest()
     : SSMRequest(new UpdateMaintenanceWindowTaskRequestPrivate(SSMRequest::UpdateMaintenanceWindowTaskAction, this))
@@ -90,14 +87,9 @@ bool UpdateMaintenanceWindowTaskRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateMaintenanceWindowTaskResponse object.
+ * Returns a UpdateMaintenanceWindowTaskResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateMaintenanceWindowTaskResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SSMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateMaintenanceWindowTaskRequest::response(QNetworkReply * const reply) const
 {
@@ -105,20 +97,17 @@ QtAws::Core::AwsAbstractResponse * UpdateMaintenanceWindowTaskRequest::response(
 }
 
 /*!
- * @internal
+ * \class QtAws::SSM::UpdateMaintenanceWindowTaskRequestPrivate
+ * \brief The UpdateMaintenanceWindowTaskRequestPrivate class provides private implementation for UpdateMaintenanceWindowTaskRequest.
+ * \internal
  *
- * @class  UpdateMaintenanceWindowTaskRequestPrivate
- *
- * @brief  Private implementation for UpdateMaintenanceWindowTaskRequest.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateMaintenanceWindowTaskRequestPrivate object.
- *
- * @param  action  SSM action being performed.
- * @param  q       Pointer to this object's public UpdateMaintenanceWindowTaskRequest instance.
+ * Constructs a UpdateMaintenanceWindowTaskRequestPrivate object for SSM \a action with,
+ * public implementation \a q.
  */
 UpdateMaintenanceWindowTaskRequestPrivate::UpdateMaintenanceWindowTaskRequestPrivate(
     const SSMRequest::Action action, UpdateMaintenanceWindowTaskRequest * const q)
@@ -128,15 +117,10 @@ UpdateMaintenanceWindowTaskRequestPrivate::UpdateMaintenanceWindowTaskRequestPri
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateMaintenanceWindowTaskRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateMaintenanceWindowTaskRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateMaintenanceWindowTaskRequest instance.
  */
 UpdateMaintenanceWindowTaskRequestPrivate::UpdateMaintenanceWindowTaskRequestPrivate(
     const UpdateMaintenanceWindowTaskRequestPrivate &other, UpdateMaintenanceWindowTaskRequest * const q)

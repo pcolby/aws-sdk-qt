@@ -27,10 +27,9 @@ namespace Redshift {
 
 /*!
  * \class QtAws::Redshift::CreateClusterParameterGroupRequest
- *
  * \brief The CreateClusterParameterGroupRequest class provides an interface for Redshift CreateClusterParameterGroup requests.
  *
- * \ingroup Redshift
+ * \inmodule QtAwsRedshift
  *
  *  <fullname>Amazon Redshift</fullname>
  * 
@@ -67,9 +66,7 @@ namespace Redshift {
  */
 
 /*!
- * @brief  Constructs a new CreateClusterParameterGroupRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateClusterParameterGroupRequest::CreateClusterParameterGroupRequest(const CreateClusterParameterGroupRequest &other)
     : RedshiftRequest(new CreateClusterParameterGroupRequestPrivate(*other.d_func(), this))
@@ -78,7 +75,7 @@ CreateClusterParameterGroupRequest::CreateClusterParameterGroupRequest(const Cre
 }
 
 /*!
- * @brief  Constructs a new CreateClusterParameterGroupRequest object.
+ * Constructs a CreateClusterParameterGroupRequest object.
  */
 CreateClusterParameterGroupRequest::CreateClusterParameterGroupRequest()
     : RedshiftRequest(new CreateClusterParameterGroupRequestPrivate(RedshiftRequest::CreateClusterParameterGroupAction, this))
@@ -96,14 +93,9 @@ bool CreateClusterParameterGroupRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateClusterParameterGroupResponse object.
+ * Returns a CreateClusterParameterGroupResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateClusterParameterGroupResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RedshiftClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateClusterParameterGroupRequest::response(QNetworkReply * const reply) const
 {
@@ -111,20 +103,17 @@ QtAws::Core::AwsAbstractResponse * CreateClusterParameterGroupRequest::response(
 }
 
 /*!
- * @internal
+ * \class QtAws::Redshift::CreateClusterParameterGroupRequestPrivate
+ * \brief The CreateClusterParameterGroupRequestPrivate class provides private implementation for CreateClusterParameterGroupRequest.
+ * \internal
  *
- * @class  CreateClusterParameterGroupRequestPrivate
- *
- * @brief  Private implementation for CreateClusterParameterGroupRequest.
+ * \inmodule QtAwsRedshift
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateClusterParameterGroupRequestPrivate object.
- *
- * @param  action  Redshift action being performed.
- * @param  q       Pointer to this object's public CreateClusterParameterGroupRequest instance.
+ * Constructs a CreateClusterParameterGroupRequestPrivate object for Redshift \a action with,
+ * public implementation \a q.
  */
 CreateClusterParameterGroupRequestPrivate::CreateClusterParameterGroupRequestPrivate(
     const RedshiftRequest::Action action, CreateClusterParameterGroupRequest * const q)
@@ -134,15 +123,10 @@ CreateClusterParameterGroupRequestPrivate::CreateClusterParameterGroupRequestPri
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateClusterParameterGroupRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateClusterParameterGroupRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateClusterParameterGroupRequest instance.
  */
 CreateClusterParameterGroupRequestPrivate::CreateClusterParameterGroupRequestPrivate(
     const CreateClusterParameterGroupRequestPrivate &other, CreateClusterParameterGroupRequest * const q)

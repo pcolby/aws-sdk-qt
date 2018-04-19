@@ -27,10 +27,9 @@ namespace CognitoIdentityProvider {
 
 /*!
  * \class QtAws::CognitoIdentityProvider::AssociateSoftwareTokenRequest
- *
  * \brief The AssociateSoftwareTokenRequest class provides an interface for CognitoIdentityProvider AssociateSoftwareToken requests.
  *
- * \ingroup CognitoIdentityProvider
+ * \inmodule QtAwsCognitoIdentityProvider
  *
  *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
  *  authenticate a user to obtain tokens related to user identity and access
@@ -47,9 +46,7 @@ namespace CognitoIdentityProvider {
  */
 
 /*!
- * @brief  Constructs a new AssociateSoftwareTokenRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AssociateSoftwareTokenRequest::AssociateSoftwareTokenRequest(const AssociateSoftwareTokenRequest &other)
     : CognitoIdentityProviderRequest(new AssociateSoftwareTokenRequestPrivate(*other.d_func(), this))
@@ -58,7 +55,7 @@ AssociateSoftwareTokenRequest::AssociateSoftwareTokenRequest(const AssociateSoft
 }
 
 /*!
- * @brief  Constructs a new AssociateSoftwareTokenRequest object.
+ * Constructs a AssociateSoftwareTokenRequest object.
  */
 AssociateSoftwareTokenRequest::AssociateSoftwareTokenRequest()
     : CognitoIdentityProviderRequest(new AssociateSoftwareTokenRequestPrivate(CognitoIdentityProviderRequest::AssociateSoftwareTokenAction, this))
@@ -76,14 +73,9 @@ bool AssociateSoftwareTokenRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AssociateSoftwareTokenResponse object.
+ * Returns a AssociateSoftwareTokenResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AssociateSoftwareTokenResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CognitoIdentityProviderClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AssociateSoftwareTokenRequest::response(QNetworkReply * const reply) const
 {
@@ -91,20 +83,17 @@ QtAws::Core::AwsAbstractResponse * AssociateSoftwareTokenRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::CognitoIdentityProvider::AssociateSoftwareTokenRequestPrivate
+ * \brief The AssociateSoftwareTokenRequestPrivate class provides private implementation for AssociateSoftwareTokenRequest.
+ * \internal
  *
- * @class  AssociateSoftwareTokenRequestPrivate
- *
- * @brief  Private implementation for AssociateSoftwareTokenRequest.
+ * \inmodule QtAwsCognitoIdentityProvider
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AssociateSoftwareTokenRequestPrivate object.
- *
- * @param  action  CognitoIdentityProvider action being performed.
- * @param  q       Pointer to this object's public AssociateSoftwareTokenRequest instance.
+ * Constructs a AssociateSoftwareTokenRequestPrivate object for CognitoIdentityProvider \a action with,
+ * public implementation \a q.
  */
 AssociateSoftwareTokenRequestPrivate::AssociateSoftwareTokenRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, AssociateSoftwareTokenRequest * const q)
@@ -114,15 +103,10 @@ AssociateSoftwareTokenRequestPrivate::AssociateSoftwareTokenRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AssociateSoftwareTokenRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AssociateSoftwareTokenRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AssociateSoftwareTokenRequest instance.
  */
 AssociateSoftwareTokenRequestPrivate::AssociateSoftwareTokenRequestPrivate(
     const AssociateSoftwareTokenRequestPrivate &other, AssociateSoftwareTokenRequest * const q)

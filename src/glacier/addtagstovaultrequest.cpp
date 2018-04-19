@@ -27,10 +27,9 @@ namespace Glacier {
 
 /*!
  * \class QtAws::Glacier::AddTagsToVaultRequest
- *
  * \brief The AddTagsToVaultRequest class provides an interface for Glacier AddTagsToVault requests.
  *
- * \ingroup Glacier
+ * \inmodule QtAwsGlacier
  *
  *  Amazon Glacier is a storage solution for "cold
  * 
@@ -75,9 +74,7 @@ namespace Glacier {
  */
 
 /*!
- * @brief  Constructs a new AddTagsToVaultRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AddTagsToVaultRequest::AddTagsToVaultRequest(const AddTagsToVaultRequest &other)
     : GlacierRequest(new AddTagsToVaultRequestPrivate(*other.d_func(), this))
@@ -86,7 +83,7 @@ AddTagsToVaultRequest::AddTagsToVaultRequest(const AddTagsToVaultRequest &other)
 }
 
 /*!
- * @brief  Constructs a new AddTagsToVaultRequest object.
+ * Constructs a AddTagsToVaultRequest object.
  */
 AddTagsToVaultRequest::AddTagsToVaultRequest()
     : GlacierRequest(new AddTagsToVaultRequestPrivate(GlacierRequest::AddTagsToVaultAction, this))
@@ -104,14 +101,9 @@ bool AddTagsToVaultRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AddTagsToVaultResponse object.
+ * Returns a AddTagsToVaultResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AddTagsToVaultResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GlacierClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AddTagsToVaultRequest::response(QNetworkReply * const reply) const
 {
@@ -119,20 +111,17 @@ QtAws::Core::AwsAbstractResponse * AddTagsToVaultRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::Glacier::AddTagsToVaultRequestPrivate
+ * \brief The AddTagsToVaultRequestPrivate class provides private implementation for AddTagsToVaultRequest.
+ * \internal
  *
- * @class  AddTagsToVaultRequestPrivate
- *
- * @brief  Private implementation for AddTagsToVaultRequest.
+ * \inmodule QtAwsGlacier
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AddTagsToVaultRequestPrivate object.
- *
- * @param  action  Glacier action being performed.
- * @param  q       Pointer to this object's public AddTagsToVaultRequest instance.
+ * Constructs a AddTagsToVaultRequestPrivate object for Glacier \a action with,
+ * public implementation \a q.
  */
 AddTagsToVaultRequestPrivate::AddTagsToVaultRequestPrivate(
     const GlacierRequest::Action action, AddTagsToVaultRequest * const q)
@@ -142,15 +131,10 @@ AddTagsToVaultRequestPrivate::AddTagsToVaultRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AddTagsToVaultRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AddTagsToVaultRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AddTagsToVaultRequest instance.
  */
 AddTagsToVaultRequestPrivate::AddTagsToVaultRequestPrivate(
     const AddTagsToVaultRequestPrivate &other, AddTagsToVaultRequest * const q)

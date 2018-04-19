@@ -27,10 +27,9 @@ namespace CodePipeline {
 
 /*!
  * \class QtAws::CodePipeline::AcknowledgeJobRequest
- *
  * \brief The AcknowledgeJobRequest class provides an interface for CodePipeline AcknowledgeJob requests.
  *
- * \ingroup CodePipeline
+ * \inmodule QtAwsCodePipeline
  *
  *  <fullname>AWS CodePipeline</fullname>
  * 
@@ -200,9 +199,7 @@ namespace CodePipeline {
  */
 
 /*!
- * @brief  Constructs a new AcknowledgeJobRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AcknowledgeJobRequest::AcknowledgeJobRequest(const AcknowledgeJobRequest &other)
     : CodePipelineRequest(new AcknowledgeJobRequestPrivate(*other.d_func(), this))
@@ -211,7 +208,7 @@ AcknowledgeJobRequest::AcknowledgeJobRequest(const AcknowledgeJobRequest &other)
 }
 
 /*!
- * @brief  Constructs a new AcknowledgeJobRequest object.
+ * Constructs a AcknowledgeJobRequest object.
  */
 AcknowledgeJobRequest::AcknowledgeJobRequest()
     : CodePipelineRequest(new AcknowledgeJobRequestPrivate(CodePipelineRequest::AcknowledgeJobAction, this))
@@ -229,14 +226,9 @@ bool AcknowledgeJobRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AcknowledgeJobResponse object.
+ * Returns a AcknowledgeJobResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AcknowledgeJobResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CodePipelineClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AcknowledgeJobRequest::response(QNetworkReply * const reply) const
 {
@@ -244,20 +236,17 @@ QtAws::Core::AwsAbstractResponse * AcknowledgeJobRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::CodePipeline::AcknowledgeJobRequestPrivate
+ * \brief The AcknowledgeJobRequestPrivate class provides private implementation for AcknowledgeJobRequest.
+ * \internal
  *
- * @class  AcknowledgeJobRequestPrivate
- *
- * @brief  Private implementation for AcknowledgeJobRequest.
+ * \inmodule QtAwsCodePipeline
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AcknowledgeJobRequestPrivate object.
- *
- * @param  action  CodePipeline action being performed.
- * @param  q       Pointer to this object's public AcknowledgeJobRequest instance.
+ * Constructs a AcknowledgeJobRequestPrivate object for CodePipeline \a action with,
+ * public implementation \a q.
  */
 AcknowledgeJobRequestPrivate::AcknowledgeJobRequestPrivate(
     const CodePipelineRequest::Action action, AcknowledgeJobRequest * const q)
@@ -267,15 +256,10 @@ AcknowledgeJobRequestPrivate::AcknowledgeJobRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AcknowledgeJobRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AcknowledgeJobRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AcknowledgeJobRequest instance.
  */
 AcknowledgeJobRequestPrivate::AcknowledgeJobRequestPrivate(
     const AcknowledgeJobRequestPrivate &other, AcknowledgeJobRequest * const q)

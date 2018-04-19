@@ -27,10 +27,9 @@ namespace Redshift {
 
 /*!
  * \class QtAws::Redshift::DescribeClusterSubnetGroupsRequest
- *
  * \brief The DescribeClusterSubnetGroupsRequest class provides an interface for Redshift DescribeClusterSubnetGroups requests.
  *
- * \ingroup Redshift
+ * \inmodule QtAwsRedshift
  *
  *  <fullname>Amazon Redshift</fullname>
  * 
@@ -67,9 +66,7 @@ namespace Redshift {
  */
 
 /*!
- * @brief  Constructs a new DescribeClusterSubnetGroupsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeClusterSubnetGroupsRequest::DescribeClusterSubnetGroupsRequest(const DescribeClusterSubnetGroupsRequest &other)
     : RedshiftRequest(new DescribeClusterSubnetGroupsRequestPrivate(*other.d_func(), this))
@@ -78,7 +75,7 @@ DescribeClusterSubnetGroupsRequest::DescribeClusterSubnetGroupsRequest(const Des
 }
 
 /*!
- * @brief  Constructs a new DescribeClusterSubnetGroupsRequest object.
+ * Constructs a DescribeClusterSubnetGroupsRequest object.
  */
 DescribeClusterSubnetGroupsRequest::DescribeClusterSubnetGroupsRequest()
     : RedshiftRequest(new DescribeClusterSubnetGroupsRequestPrivate(RedshiftRequest::DescribeClusterSubnetGroupsAction, this))
@@ -96,14 +93,9 @@ bool DescribeClusterSubnetGroupsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeClusterSubnetGroupsResponse object.
+ * Returns a DescribeClusterSubnetGroupsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeClusterSubnetGroupsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RedshiftClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeClusterSubnetGroupsRequest::response(QNetworkReply * const reply) const
 {
@@ -111,20 +103,17 @@ QtAws::Core::AwsAbstractResponse * DescribeClusterSubnetGroupsRequest::response(
 }
 
 /*!
- * @internal
+ * \class QtAws::Redshift::DescribeClusterSubnetGroupsRequestPrivate
+ * \brief The DescribeClusterSubnetGroupsRequestPrivate class provides private implementation for DescribeClusterSubnetGroupsRequest.
+ * \internal
  *
- * @class  DescribeClusterSubnetGroupsRequestPrivate
- *
- * @brief  Private implementation for DescribeClusterSubnetGroupsRequest.
+ * \inmodule QtAwsRedshift
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeClusterSubnetGroupsRequestPrivate object.
- *
- * @param  action  Redshift action being performed.
- * @param  q       Pointer to this object's public DescribeClusterSubnetGroupsRequest instance.
+ * Constructs a DescribeClusterSubnetGroupsRequestPrivate object for Redshift \a action with,
+ * public implementation \a q.
  */
 DescribeClusterSubnetGroupsRequestPrivate::DescribeClusterSubnetGroupsRequestPrivate(
     const RedshiftRequest::Action action, DescribeClusterSubnetGroupsRequest * const q)
@@ -134,15 +123,10 @@ DescribeClusterSubnetGroupsRequestPrivate::DescribeClusterSubnetGroupsRequestPri
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeClusterSubnetGroupsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeClusterSubnetGroupsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeClusterSubnetGroupsRequest instance.
  */
 DescribeClusterSubnetGroupsRequestPrivate::DescribeClusterSubnetGroupsRequestPrivate(
     const DescribeClusterSubnetGroupsRequestPrivate &other, DescribeClusterSubnetGroupsRequest * const q)

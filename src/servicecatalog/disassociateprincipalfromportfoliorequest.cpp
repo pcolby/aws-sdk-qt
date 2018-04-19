@@ -27,10 +27,9 @@ namespace ServiceCatalog {
 
 /*!
  * \class QtAws::ServiceCatalog::DisassociatePrincipalFromPortfolioRequest
- *
  * \brief The DisassociatePrincipalFromPortfolioRequest class provides an interface for ServiceCatalog DisassociatePrincipalFromPortfolio requests.
  *
- * \ingroup ServiceCatalog
+ * \inmodule QtAwsServiceCatalog
  *
  *  <fullname>AWS Service Catalog</fullname>
  * 
@@ -43,9 +42,7 @@ namespace ServiceCatalog {
  */
 
 /*!
- * @brief  Constructs a new DisassociatePrincipalFromPortfolioRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DisassociatePrincipalFromPortfolioRequest::DisassociatePrincipalFromPortfolioRequest(const DisassociatePrincipalFromPortfolioRequest &other)
     : ServiceCatalogRequest(new DisassociatePrincipalFromPortfolioRequestPrivate(*other.d_func(), this))
@@ -54,7 +51,7 @@ DisassociatePrincipalFromPortfolioRequest::DisassociatePrincipalFromPortfolioReq
 }
 
 /*!
- * @brief  Constructs a new DisassociatePrincipalFromPortfolioRequest object.
+ * Constructs a DisassociatePrincipalFromPortfolioRequest object.
  */
 DisassociatePrincipalFromPortfolioRequest::DisassociatePrincipalFromPortfolioRequest()
     : ServiceCatalogRequest(new DisassociatePrincipalFromPortfolioRequestPrivate(ServiceCatalogRequest::DisassociatePrincipalFromPortfolioAction, this))
@@ -72,14 +69,9 @@ bool DisassociatePrincipalFromPortfolioRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DisassociatePrincipalFromPortfolioResponse object.
+ * Returns a DisassociatePrincipalFromPortfolioResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DisassociatePrincipalFromPortfolioResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ServiceCatalogClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DisassociatePrincipalFromPortfolioRequest::response(QNetworkReply * const reply) const
 {
@@ -87,20 +79,17 @@ QtAws::Core::AwsAbstractResponse * DisassociatePrincipalFromPortfolioRequest::re
 }
 
 /*!
- * @internal
+ * \class QtAws::ServiceCatalog::DisassociatePrincipalFromPortfolioRequestPrivate
+ * \brief The DisassociatePrincipalFromPortfolioRequestPrivate class provides private implementation for DisassociatePrincipalFromPortfolioRequest.
+ * \internal
  *
- * @class  DisassociatePrincipalFromPortfolioRequestPrivate
- *
- * @brief  Private implementation for DisassociatePrincipalFromPortfolioRequest.
+ * \inmodule QtAwsServiceCatalog
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DisassociatePrincipalFromPortfolioRequestPrivate object.
- *
- * @param  action  ServiceCatalog action being performed.
- * @param  q       Pointer to this object's public DisassociatePrincipalFromPortfolioRequest instance.
+ * Constructs a DisassociatePrincipalFromPortfolioRequestPrivate object for ServiceCatalog \a action with,
+ * public implementation \a q.
  */
 DisassociatePrincipalFromPortfolioRequestPrivate::DisassociatePrincipalFromPortfolioRequestPrivate(
     const ServiceCatalogRequest::Action action, DisassociatePrincipalFromPortfolioRequest * const q)
@@ -110,15 +99,10 @@ DisassociatePrincipalFromPortfolioRequestPrivate::DisassociatePrincipalFromPortf
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DisassociatePrincipalFromPortfolioRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DisassociatePrincipalFromPortfolioRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DisassociatePrincipalFromPortfolioRequest instance.
  */
 DisassociatePrincipalFromPortfolioRequestPrivate::DisassociatePrincipalFromPortfolioRequestPrivate(
     const DisassociatePrincipalFromPortfolioRequestPrivate &other, DisassociatePrincipalFromPortfolioRequest * const q)

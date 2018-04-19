@@ -27,10 +27,9 @@ namespace Redshift {
 
 /*!
  * \class QtAws::Redshift::DescribeResizeRequest
- *
  * \brief The DescribeResizeRequest class provides an interface for Redshift DescribeResize requests.
  *
- * \ingroup Redshift
+ * \inmodule QtAwsRedshift
  *
  *  <fullname>Amazon Redshift</fullname>
  * 
@@ -67,9 +66,7 @@ namespace Redshift {
  */
 
 /*!
- * @brief  Constructs a new DescribeResizeRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeResizeRequest::DescribeResizeRequest(const DescribeResizeRequest &other)
     : RedshiftRequest(new DescribeResizeRequestPrivate(*other.d_func(), this))
@@ -78,7 +75,7 @@ DescribeResizeRequest::DescribeResizeRequest(const DescribeResizeRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DescribeResizeRequest object.
+ * Constructs a DescribeResizeRequest object.
  */
 DescribeResizeRequest::DescribeResizeRequest()
     : RedshiftRequest(new DescribeResizeRequestPrivate(RedshiftRequest::DescribeResizeAction, this))
@@ -96,14 +93,9 @@ bool DescribeResizeRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeResizeResponse object.
+ * Returns a DescribeResizeResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeResizeResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RedshiftClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeResizeRequest::response(QNetworkReply * const reply) const
 {
@@ -111,20 +103,17 @@ QtAws::Core::AwsAbstractResponse * DescribeResizeRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::Redshift::DescribeResizeRequestPrivate
+ * \brief The DescribeResizeRequestPrivate class provides private implementation for DescribeResizeRequest.
+ * \internal
  *
- * @class  DescribeResizeRequestPrivate
- *
- * @brief  Private implementation for DescribeResizeRequest.
+ * \inmodule QtAwsRedshift
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeResizeRequestPrivate object.
- *
- * @param  action  Redshift action being performed.
- * @param  q       Pointer to this object's public DescribeResizeRequest instance.
+ * Constructs a DescribeResizeRequestPrivate object for Redshift \a action with,
+ * public implementation \a q.
  */
 DescribeResizeRequestPrivate::DescribeResizeRequestPrivate(
     const RedshiftRequest::Action action, DescribeResizeRequest * const q)
@@ -134,15 +123,10 @@ DescribeResizeRequestPrivate::DescribeResizeRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeResizeRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeResizeRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeResizeRequest instance.
  */
 DescribeResizeRequestPrivate::DescribeResizeRequestPrivate(
     const DescribeResizeRequestPrivate &other, DescribeResizeRequest * const q)

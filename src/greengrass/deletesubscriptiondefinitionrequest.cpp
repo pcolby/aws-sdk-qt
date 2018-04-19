@@ -27,10 +27,9 @@ namespace Greengrass {
 
 /*!
  * \class QtAws::Greengrass::DeleteSubscriptionDefinitionRequest
- *
  * \brief The DeleteSubscriptionDefinitionRequest class provides an interface for Greengrass DeleteSubscriptionDefinition requests.
  *
- * \ingroup Greengrass
+ * \inmodule QtAwsGreengrass
  *
  *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
  *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
@@ -40,9 +39,7 @@ namespace Greengrass {
  */
 
 /*!
- * @brief  Constructs a new DeleteSubscriptionDefinitionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteSubscriptionDefinitionRequest::DeleteSubscriptionDefinitionRequest(const DeleteSubscriptionDefinitionRequest &other)
     : GreengrassRequest(new DeleteSubscriptionDefinitionRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ DeleteSubscriptionDefinitionRequest::DeleteSubscriptionDefinitionRequest(const D
 }
 
 /*!
- * @brief  Constructs a new DeleteSubscriptionDefinitionRequest object.
+ * Constructs a DeleteSubscriptionDefinitionRequest object.
  */
 DeleteSubscriptionDefinitionRequest::DeleteSubscriptionDefinitionRequest()
     : GreengrassRequest(new DeleteSubscriptionDefinitionRequestPrivate(GreengrassRequest::DeleteSubscriptionDefinitionAction, this))
@@ -69,14 +66,9 @@ bool DeleteSubscriptionDefinitionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteSubscriptionDefinitionResponse object.
+ * Returns a DeleteSubscriptionDefinitionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteSubscriptionDefinitionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GreengrassClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteSubscriptionDefinitionRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * DeleteSubscriptionDefinitionRequest::response
 }
 
 /*!
- * @internal
+ * \class QtAws::Greengrass::DeleteSubscriptionDefinitionRequestPrivate
+ * \brief The DeleteSubscriptionDefinitionRequestPrivate class provides private implementation for DeleteSubscriptionDefinitionRequest.
+ * \internal
  *
- * @class  DeleteSubscriptionDefinitionRequestPrivate
- *
- * @brief  Private implementation for DeleteSubscriptionDefinitionRequest.
+ * \inmodule QtAwsGreengrass
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteSubscriptionDefinitionRequestPrivate object.
- *
- * @param  action  Greengrass action being performed.
- * @param  q       Pointer to this object's public DeleteSubscriptionDefinitionRequest instance.
+ * Constructs a DeleteSubscriptionDefinitionRequestPrivate object for Greengrass \a action with,
+ * public implementation \a q.
  */
 DeleteSubscriptionDefinitionRequestPrivate::DeleteSubscriptionDefinitionRequestPrivate(
     const GreengrassRequest::Action action, DeleteSubscriptionDefinitionRequest * const q)
@@ -107,15 +96,10 @@ DeleteSubscriptionDefinitionRequestPrivate::DeleteSubscriptionDefinitionRequestP
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteSubscriptionDefinitionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteSubscriptionDefinitionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteSubscriptionDefinitionRequest instance.
  */
 DeleteSubscriptionDefinitionRequestPrivate::DeleteSubscriptionDefinitionRequestPrivate(
     const DeleteSubscriptionDefinitionRequestPrivate &other, DeleteSubscriptionDefinitionRequest * const q)

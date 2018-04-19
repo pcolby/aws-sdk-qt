@@ -27,10 +27,9 @@ namespace Lightsail {
 
 /*!
  * \class QtAws::Lightsail::AttachInstancesToLoadBalancerRequest
- *
  * \brief The AttachInstancesToLoadBalancerRequest class provides an interface for Lightsail AttachInstancesToLoadBalancer requests.
  *
- * \ingroup Lightsail
+ * \inmodule QtAwsLightsail
  *
  *  Amazon Lightsail is the easiest way to get started with AWS for developers who just need virtual private servers.
  *  Lightsail includes everything you need to launch your project quickly - a virtual machine, SSD-based storage, data
@@ -53,9 +52,7 @@ namespace Lightsail {
  */
 
 /*!
- * @brief  Constructs a new AttachInstancesToLoadBalancerRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AttachInstancesToLoadBalancerRequest::AttachInstancesToLoadBalancerRequest(const AttachInstancesToLoadBalancerRequest &other)
     : LightsailRequest(new AttachInstancesToLoadBalancerRequestPrivate(*other.d_func(), this))
@@ -64,7 +61,7 @@ AttachInstancesToLoadBalancerRequest::AttachInstancesToLoadBalancerRequest(const
 }
 
 /*!
- * @brief  Constructs a new AttachInstancesToLoadBalancerRequest object.
+ * Constructs a AttachInstancesToLoadBalancerRequest object.
  */
 AttachInstancesToLoadBalancerRequest::AttachInstancesToLoadBalancerRequest()
     : LightsailRequest(new AttachInstancesToLoadBalancerRequestPrivate(LightsailRequest::AttachInstancesToLoadBalancerAction, this))
@@ -82,14 +79,9 @@ bool AttachInstancesToLoadBalancerRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AttachInstancesToLoadBalancerResponse object.
+ * Returns a AttachInstancesToLoadBalancerResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AttachInstancesToLoadBalancerResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  LightsailClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AttachInstancesToLoadBalancerRequest::response(QNetworkReply * const reply) const
 {
@@ -97,20 +89,17 @@ QtAws::Core::AwsAbstractResponse * AttachInstancesToLoadBalancerRequest::respons
 }
 
 /*!
- * @internal
+ * \class QtAws::Lightsail::AttachInstancesToLoadBalancerRequestPrivate
+ * \brief The AttachInstancesToLoadBalancerRequestPrivate class provides private implementation for AttachInstancesToLoadBalancerRequest.
+ * \internal
  *
- * @class  AttachInstancesToLoadBalancerRequestPrivate
- *
- * @brief  Private implementation for AttachInstancesToLoadBalancerRequest.
+ * \inmodule QtAwsLightsail
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AttachInstancesToLoadBalancerRequestPrivate object.
- *
- * @param  action  Lightsail action being performed.
- * @param  q       Pointer to this object's public AttachInstancesToLoadBalancerRequest instance.
+ * Constructs a AttachInstancesToLoadBalancerRequestPrivate object for Lightsail \a action with,
+ * public implementation \a q.
  */
 AttachInstancesToLoadBalancerRequestPrivate::AttachInstancesToLoadBalancerRequestPrivate(
     const LightsailRequest::Action action, AttachInstancesToLoadBalancerRequest * const q)
@@ -120,15 +109,10 @@ AttachInstancesToLoadBalancerRequestPrivate::AttachInstancesToLoadBalancerReques
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AttachInstancesToLoadBalancerRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AttachInstancesToLoadBalancerRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AttachInstancesToLoadBalancerRequest instance.
  */
 AttachInstancesToLoadBalancerRequestPrivate::AttachInstancesToLoadBalancerRequestPrivate(
     const AttachInstancesToLoadBalancerRequestPrivate &other, AttachInstancesToLoadBalancerRequest * const q)

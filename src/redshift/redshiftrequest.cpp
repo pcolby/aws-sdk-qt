@@ -25,16 +25,84 @@ namespace Redshift {
 
 /*!
  * \class QtAws::Redshift::RedshiftRequest
- *
  * \brief The RedshiftRequest class provides an interface for Redshift requests.
  *
- * \ingroup Redshift
+ * \inmodule QtAwsRedshift
  */
 
 /*!
- * @brief  Constructs a new RedshiftRequest object.
+ * \enum RedshiftRequest::Action
  *
- * @param  action  The Redshift action to request.
+ * This enum describes the actions that can be performed as Redshift
+ * requests.
+ *
+ * \value AuthorizeClusterSecurityGroupIngressAction Redshift AuthorizeClusterSecurityGroupIngress action.
+ * \value AuthorizeSnapshotAccessAction Redshift AuthorizeSnapshotAccess action.
+ * \value CopyClusterSnapshotAction Redshift CopyClusterSnapshot action.
+ * \value CreateClusterAction Redshift CreateCluster action.
+ * \value CreateClusterParameterGroupAction Redshift CreateClusterParameterGroup action.
+ * \value CreateClusterSecurityGroupAction Redshift CreateClusterSecurityGroup action.
+ * \value CreateClusterSnapshotAction Redshift CreateClusterSnapshot action.
+ * \value CreateClusterSubnetGroupAction Redshift CreateClusterSubnetGroup action.
+ * \value CreateEventSubscriptionAction Redshift CreateEventSubscription action.
+ * \value CreateHsmClientCertificateAction Redshift CreateHsmClientCertificate action.
+ * \value CreateHsmConfigurationAction Redshift CreateHsmConfiguration action.
+ * \value CreateSnapshotCopyGrantAction Redshift CreateSnapshotCopyGrant action.
+ * \value CreateTagsAction Redshift CreateTags action.
+ * \value DeleteClusterAction Redshift DeleteCluster action.
+ * \value DeleteClusterParameterGroupAction Redshift DeleteClusterParameterGroup action.
+ * \value DeleteClusterSecurityGroupAction Redshift DeleteClusterSecurityGroup action.
+ * \value DeleteClusterSnapshotAction Redshift DeleteClusterSnapshot action.
+ * \value DeleteClusterSubnetGroupAction Redshift DeleteClusterSubnetGroup action.
+ * \value DeleteEventSubscriptionAction Redshift DeleteEventSubscription action.
+ * \value DeleteHsmClientCertificateAction Redshift DeleteHsmClientCertificate action.
+ * \value DeleteHsmConfigurationAction Redshift DeleteHsmConfiguration action.
+ * \value DeleteSnapshotCopyGrantAction Redshift DeleteSnapshotCopyGrant action.
+ * \value DeleteTagsAction Redshift DeleteTags action.
+ * \value DescribeClusterParameterGroupsAction Redshift DescribeClusterParameterGroups action.
+ * \value DescribeClusterParametersAction Redshift DescribeClusterParameters action.
+ * \value DescribeClusterSecurityGroupsAction Redshift DescribeClusterSecurityGroups action.
+ * \value DescribeClusterSnapshotsAction Redshift DescribeClusterSnapshots action.
+ * \value DescribeClusterSubnetGroupsAction Redshift DescribeClusterSubnetGroups action.
+ * \value DescribeClusterVersionsAction Redshift DescribeClusterVersions action.
+ * \value DescribeClustersAction Redshift DescribeClusters action.
+ * \value DescribeDefaultClusterParametersAction Redshift DescribeDefaultClusterParameters action.
+ * \value DescribeEventCategoriesAction Redshift DescribeEventCategories action.
+ * \value DescribeEventSubscriptionsAction Redshift DescribeEventSubscriptions action.
+ * \value DescribeEventsAction Redshift DescribeEvents action.
+ * \value DescribeHsmClientCertificatesAction Redshift DescribeHsmClientCertificates action.
+ * \value DescribeHsmConfigurationsAction Redshift DescribeHsmConfigurations action.
+ * \value DescribeLoggingStatusAction Redshift DescribeLoggingStatus action.
+ * \value DescribeOrderableClusterOptionsAction Redshift DescribeOrderableClusterOptions action.
+ * \value DescribeReservedNodeOfferingsAction Redshift DescribeReservedNodeOfferings action.
+ * \value DescribeReservedNodesAction Redshift DescribeReservedNodes action.
+ * \value DescribeResizeAction Redshift DescribeResize action.
+ * \value DescribeSnapshotCopyGrantsAction Redshift DescribeSnapshotCopyGrants action.
+ * \value DescribeTableRestoreStatusAction Redshift DescribeTableRestoreStatus action.
+ * \value DescribeTagsAction Redshift DescribeTags action.
+ * \value DisableLoggingAction Redshift DisableLogging action.
+ * \value DisableSnapshotCopyAction Redshift DisableSnapshotCopy action.
+ * \value EnableLoggingAction Redshift EnableLogging action.
+ * \value EnableSnapshotCopyAction Redshift EnableSnapshotCopy action.
+ * \value GetClusterCredentialsAction Redshift GetClusterCredentials action.
+ * \value ModifyClusterAction Redshift ModifyCluster action.
+ * \value ModifyClusterIamRolesAction Redshift ModifyClusterIamRoles action.
+ * \value ModifyClusterParameterGroupAction Redshift ModifyClusterParameterGroup action.
+ * \value ModifyClusterSubnetGroupAction Redshift ModifyClusterSubnetGroup action.
+ * \value ModifyEventSubscriptionAction Redshift ModifyEventSubscription action.
+ * \value ModifySnapshotCopyRetentionPeriodAction Redshift ModifySnapshotCopyRetentionPeriod action.
+ * \value PurchaseReservedNodeOfferingAction Redshift PurchaseReservedNodeOffering action.
+ * \value RebootClusterAction Redshift RebootCluster action.
+ * \value ResetClusterParameterGroupAction Redshift ResetClusterParameterGroup action.
+ * \value RestoreFromClusterSnapshotAction Redshift RestoreFromClusterSnapshot action.
+ * \value RestoreTableFromClusterSnapshotAction Redshift RestoreTableFromClusterSnapshot action.
+ * \value RevokeClusterSecurityGroupIngressAction Redshift RevokeClusterSecurityGroupIngress action.
+ * \value RevokeSnapshotAccessAction Redshift RevokeSnapshotAccess action.
+ * \value RotateEncryptionKeyAction Redshift RotateEncryptionKey action.
+ */
+
+/*!
+ * Constructs a[n] RedshiftRequest object for Redshift \a action.
  */
 RedshiftRequest::RedshiftRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new RedshiftRequestPrivate(action, this))
@@ -43,9 +111,7 @@ RedshiftRequest::RedshiftRequest(const Action action)
 }
 
 /*!
- * @brief  Constructs a new RedshiftRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 RedshiftRequest::RedshiftRequest(const RedshiftRequest &other)
     : QtAws::Core::AwsAbstractRequest(new RedshiftRequestPrivate(*other.d_func(), this))
@@ -54,13 +120,7 @@ RedshiftRequest::RedshiftRequest(const RedshiftRequest &other)
 }
 
 /*!
- * @brief  Assignment operator.
- *
- * Assigns \a other to \c this.
- *
- * @param  other  Instance to copy.
- *
- * @return  A reference to \c this.
+ * Sets the RedshiftRequest object to be equal to \a other.
  */
 RedshiftRequest& RedshiftRequest::operator=(const RedshiftRequest &other)
 {
@@ -72,14 +132,10 @@ RedshiftRequest& RedshiftRequest::operator=(const RedshiftRequest &other)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RedshiftRequest object.
+ * Constructs aa RedshiftRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from RedshiftRequestPrivate.
- *
- * @param  d  Pointer to private data (aka D-Pointer).
  */
 RedshiftRequest::RedshiftRequest(RedshiftRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
@@ -87,7 +143,7 @@ RedshiftRequest::RedshiftRequest(RedshiftRequestPrivate * const d) : QtAws::Core
 }
 
 /*!
- * \brief Returns the Redshift action to be performed by this request.
+ * Returns the Redshift action to be performed by this request.
  */
 RedshiftRequest::Action RedshiftRequest::action() const
 {
@@ -96,7 +152,7 @@ RedshiftRequest::Action RedshiftRequest::action() const
 }
 
 /*!
- * \brief Returns the name of the Redshift action to be performed by this request.
+ * Returns the name of the Redshift action to be performed by this request.
  */
 QString RedshiftRequest::actionString() const
 {
@@ -104,7 +160,7 @@ QString RedshiftRequest::actionString() const
 }
 
 /*!
- * \brief Returns the Redshift API version implemented by this request.
+ * Returns the Redshift API version implemented by this request.
  */
 QString RedshiftRequest::apiVersion() const
 {
@@ -113,7 +169,7 @@ QString RedshiftRequest::apiVersion() const
 }
 
 /*!
- * @brief Set the Redshift action to be performed by this request to \a action.
+ * Sets the Redshift action to be performed by this request to \a action.
  */
 void RedshiftRequest::setAction(const Action action)
 {
@@ -122,7 +178,7 @@ void RedshiftRequest::setAction(const Action action)
 }
 
 /*!
- * Set the Redshift API version to include in this request to \a version.
+ * Sets the Redshift API version to include in this request to \a version.
  */
 void RedshiftRequest::setApiVersion(const QString &version)
 {
@@ -131,7 +187,7 @@ void RedshiftRequest::setApiVersion(const QString &version)
 }
 
 /*!
- * \brief Returns \c true if this request is the same as \a other.
+ * Returns \c true if this request is equal to \a other; \c false otherwise.
  *
  * Note, most derived *Request classes do not need to provider their own
  * implementations of this function, since most such request classes rely on
@@ -146,8 +202,8 @@ bool RedshiftRequest::operator==(const RedshiftRequest &other) const
             (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
-/*!
- * @brief  Check if \a queueName is a valid Redshift queue name.
+/*
+ * Returns \c tue if \a queueName is a valid Redshift queue name.
  *
  * @par From Redshift FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
@@ -166,9 +222,8 @@ bool RedshiftRequest::operator==(const RedshiftRequest &other) const
 }*/
 
 /*!
- * \brief Removes the a \a name parameter from this request.
- *
- * Returns the count of paramters removed (typically \c 0 or \c 1).
+ * Removes the a \a name parameter from the request, then returns the number of
+ * paramters removed (typically \c 0 or \c 1).
  */
 int RedshiftRequest::clearParameter(const QString &name)
 {
@@ -177,7 +232,7 @@ int RedshiftRequest::clearParameter(const QString &name)
 }
 
 /*!
- * \brief Removes all parameters from this request.
+ * Removes all parameters from the request.
  */
 void RedshiftRequest::clearParameters()
 {
@@ -186,7 +241,7 @@ void RedshiftRequest::clearParameters()
 }
 
 /*!
- * \brief Returns the value of the \n name pararemter if set, otherwise \a defaultValue.
+ * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
 QVariant RedshiftRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
@@ -195,7 +250,7 @@ QVariant RedshiftRequest::parameter(const QString &name, const QVariant &default
 }
 
 /*!
- * \brief Returns a map of parameters included in this request.
+ * Returns the parameters included in this request.
  */
 const QVariantMap &RedshiftRequest::parameters() const
 {
@@ -204,7 +259,7 @@ const QVariantMap &RedshiftRequest::parameters() const
 }
 
 /*!
- * \brief Sets the \a name parameter to \a value.
+ * Sets the \a name parameter to \a value.
  */
 void RedshiftRequest::setParameter(const QString &name, const QVariant &value)
 {
@@ -213,9 +268,8 @@ void RedshiftRequest::setParameter(const QString &name, const QVariant &value)
 }
 
 /*!
- * \brief Sets the map of paramters for this request to \a parameters.
- *
- * Any request parameters set previously will be discarded.
+ * Sets the paramters for this request to \a parameters. Any request parameters
+ * set previously will be discarded.
  */
 void RedshiftRequest::setParameters(const QVariantMap &parameters)
 {
@@ -224,11 +278,12 @@ void RedshiftRequest::setParameters(const QVariantMap &parameters)
 }
 
 /*!
- * \brief Returns a network request for this Redshift request using the given \a endpoint.
+ * Returns a network request for the Redshift request using the given
+ * \a endpoint.
  *
- * This Redshift implementation builds request URLs by combining the common query
- * parameters (such as Action and Version), with any that have been added (via
- * setParameter) by child classes.
+ * This Redshift implementation builds request URLs by combining the
+ * common query parameters (such as Action and Version), with any that have
+ * been added (via setParameter) by child classes.
  */
 QNetworkRequest RedshiftRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -239,17 +294,16 @@ QNetworkRequest RedshiftRequest::unsignedRequest(const QUrl &endpoint) const
 }
 
 /*!
+ * \class QtAws::Redshift::RedshiftRequestPrivate
+ * \brief The RedshiftRequestPrivate class provides private implementation for RedshiftRequest.
  * \internal
  *
- * \class  RedshiftRequestPrivate
- *
- * \brief  Private implementation for RedshiftRequest.
+ * \inmodule QtAwsRedshift
  */
 
 /*!
- * \internal
- *
- * \brief Constructs a new RedshiftRequestPrivate object.
+ * Constructs a RedshiftRequestPrivate object for Redshift \a action with,
+ * public implementation \a q.
  */
 RedshiftRequestPrivate::RedshiftRequestPrivate(const RedshiftRequest::Action action, RedshiftRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
@@ -258,9 +312,7 @@ RedshiftRequestPrivate::RedshiftRequestPrivate(const RedshiftRequest::Action act
 }
 
 /*!
- * \internal
- *
- * \brief Constructs a new RedshiftRequestPrivate object, copying an existing one.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
@@ -276,15 +328,12 @@ RedshiftRequestPrivate::RedshiftRequestPrivate(const RedshiftRequestPrivate &oth
 }
 
 /*!
- * \internal
- *
- * \brief Returns a string representing \a action.
+ * Returns a string represention of \a action, or a null string if \a action is
+ * invalid.
  *
  * This function converts RedshiftRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the Redshift service's Action
  * query parameters.
- *
- * @return A string representing \a action, or a null string if \a action is invalid.
  */
 QString RedshiftRequestPrivate::toString(const RedshiftRequest::Action &action)
 {

@@ -27,10 +27,9 @@ namespace ElasticBeanstalk {
 
 /*!
  * \class QtAws::ElasticBeanstalk::RetrieveEnvironmentInfoRequest
- *
  * \brief The RetrieveEnvironmentInfoRequest class provides an interface for ElasticBeanstalk RetrieveEnvironmentInfo requests.
  *
- * \ingroup ElasticBeanstalk
+ * \inmodule QtAwsElasticBeanstalk
  *
  *  <fullname>AWS Elastic Beanstalk</fullname>
  * 
@@ -59,9 +58,7 @@ namespace ElasticBeanstalk {
  */
 
 /*!
- * @brief  Constructs a new RetrieveEnvironmentInfoRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 RetrieveEnvironmentInfoRequest::RetrieveEnvironmentInfoRequest(const RetrieveEnvironmentInfoRequest &other)
     : ElasticBeanstalkRequest(new RetrieveEnvironmentInfoRequestPrivate(*other.d_func(), this))
@@ -70,7 +67,7 @@ RetrieveEnvironmentInfoRequest::RetrieveEnvironmentInfoRequest(const RetrieveEnv
 }
 
 /*!
- * @brief  Constructs a new RetrieveEnvironmentInfoRequest object.
+ * Constructs a RetrieveEnvironmentInfoRequest object.
  */
 RetrieveEnvironmentInfoRequest::RetrieveEnvironmentInfoRequest()
     : ElasticBeanstalkRequest(new RetrieveEnvironmentInfoRequestPrivate(ElasticBeanstalkRequest::RetrieveEnvironmentInfoAction, this))
@@ -88,14 +85,9 @@ bool RetrieveEnvironmentInfoRequest::isValid() const
 
 
 /*!
- * @brief  Construct an RetrieveEnvironmentInfoResponse object.
+ * Returns a RetrieveEnvironmentInfoResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An RetrieveEnvironmentInfoResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ElasticBeanstalkClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * RetrieveEnvironmentInfoRequest::response(QNetworkReply * const reply) const
 {
@@ -103,20 +95,17 @@ QtAws::Core::AwsAbstractResponse * RetrieveEnvironmentInfoRequest::response(QNet
 }
 
 /*!
- * @internal
+ * \class QtAws::ElasticBeanstalk::RetrieveEnvironmentInfoRequestPrivate
+ * \brief The RetrieveEnvironmentInfoRequestPrivate class provides private implementation for RetrieveEnvironmentInfoRequest.
+ * \internal
  *
- * @class  RetrieveEnvironmentInfoRequestPrivate
- *
- * @brief  Private implementation for RetrieveEnvironmentInfoRequest.
+ * \inmodule QtAwsElasticBeanstalk
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new RetrieveEnvironmentInfoRequestPrivate object.
- *
- * @param  action  ElasticBeanstalk action being performed.
- * @param  q       Pointer to this object's public RetrieveEnvironmentInfoRequest instance.
+ * Constructs a RetrieveEnvironmentInfoRequestPrivate object for ElasticBeanstalk \a action with,
+ * public implementation \a q.
  */
 RetrieveEnvironmentInfoRequestPrivate::RetrieveEnvironmentInfoRequestPrivate(
     const ElasticBeanstalkRequest::Action action, RetrieveEnvironmentInfoRequest * const q)
@@ -126,15 +115,10 @@ RetrieveEnvironmentInfoRequestPrivate::RetrieveEnvironmentInfoRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RetrieveEnvironmentInfoRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the RetrieveEnvironmentInfoRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public RetrieveEnvironmentInfoRequest instance.
  */
 RetrieveEnvironmentInfoRequestPrivate::RetrieveEnvironmentInfoRequestPrivate(
     const RetrieveEnvironmentInfoRequestPrivate &other, RetrieveEnvironmentInfoRequest * const q)

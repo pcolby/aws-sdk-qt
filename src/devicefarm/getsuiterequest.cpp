@@ -27,10 +27,9 @@ namespace DeviceFarm {
 
 /*!
  * \class QtAws::DeviceFarm::GetSuiteRequest
- *
  * \brief The GetSuiteRequest class provides an interface for DeviceFarm GetSuite requests.
  *
- * \ingroup DeviceFarm
+ * \inmodule QtAwsDeviceFarm
  *
  *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
  *  phones, tablets, and other devices in the
@@ -39,9 +38,7 @@ namespace DeviceFarm {
  */
 
 /*!
- * @brief  Constructs a new GetSuiteRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetSuiteRequest::GetSuiteRequest(const GetSuiteRequest &other)
     : DeviceFarmRequest(new GetSuiteRequestPrivate(*other.d_func(), this))
@@ -50,7 +47,7 @@ GetSuiteRequest::GetSuiteRequest(const GetSuiteRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetSuiteRequest object.
+ * Constructs a GetSuiteRequest object.
  */
 GetSuiteRequest::GetSuiteRequest()
     : DeviceFarmRequest(new GetSuiteRequestPrivate(DeviceFarmRequest::GetSuiteAction, this))
@@ -68,14 +65,9 @@ bool GetSuiteRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetSuiteResponse object.
+ * Returns a GetSuiteResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetSuiteResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DeviceFarmClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetSuiteRequest::response(QNetworkReply * const reply) const
 {
@@ -83,20 +75,17 @@ QtAws::Core::AwsAbstractResponse * GetSuiteRequest::response(QNetworkReply * con
 }
 
 /*!
- * @internal
+ * \class QtAws::DeviceFarm::GetSuiteRequestPrivate
+ * \brief The GetSuiteRequestPrivate class provides private implementation for GetSuiteRequest.
+ * \internal
  *
- * @class  GetSuiteRequestPrivate
- *
- * @brief  Private implementation for GetSuiteRequest.
+ * \inmodule QtAwsDeviceFarm
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetSuiteRequestPrivate object.
- *
- * @param  action  DeviceFarm action being performed.
- * @param  q       Pointer to this object's public GetSuiteRequest instance.
+ * Constructs a GetSuiteRequestPrivate object for DeviceFarm \a action with,
+ * public implementation \a q.
  */
 GetSuiteRequestPrivate::GetSuiteRequestPrivate(
     const DeviceFarmRequest::Action action, GetSuiteRequest * const q)
@@ -106,15 +95,10 @@ GetSuiteRequestPrivate::GetSuiteRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetSuiteRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetSuiteRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetSuiteRequest instance.
  */
 GetSuiteRequestPrivate::GetSuiteRequestPrivate(
     const GetSuiteRequestPrivate &other, GetSuiteRequest * const q)

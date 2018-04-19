@@ -27,19 +27,16 @@ namespace MediaConvert {
 
 /*!
  * \class QtAws::MediaConvert::DeleteJobTemplateRequest
- *
  * \brief The DeleteJobTemplateRequest class provides an interface for MediaConvert DeleteJobTemplate requests.
  *
- * \ingroup MediaConvert
+ * \inmodule QtAwsMediaConvert
  *
  *
  * \sa MediaConvertClient::deleteJobTemplate
  */
 
 /*!
- * @brief  Constructs a new DeleteJobTemplateRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteJobTemplateRequest::DeleteJobTemplateRequest(const DeleteJobTemplateRequest &other)
     : MediaConvertRequest(new DeleteJobTemplateRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ DeleteJobTemplateRequest::DeleteJobTemplateRequest(const DeleteJobTemplateReques
 }
 
 /*!
- * @brief  Constructs a new DeleteJobTemplateRequest object.
+ * Constructs a DeleteJobTemplateRequest object.
  */
 DeleteJobTemplateRequest::DeleteJobTemplateRequest()
     : MediaConvertRequest(new DeleteJobTemplateRequestPrivate(MediaConvertRequest::DeleteJobTemplateAction, this))
@@ -66,14 +63,9 @@ bool DeleteJobTemplateRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteJobTemplateResponse object.
+ * Returns a DeleteJobTemplateResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteJobTemplateResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MediaConvertClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteJobTemplateRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * DeleteJobTemplateRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::MediaConvert::DeleteJobTemplateRequestPrivate
+ * \brief The DeleteJobTemplateRequestPrivate class provides private implementation for DeleteJobTemplateRequest.
+ * \internal
  *
- * @class  DeleteJobTemplateRequestPrivate
- *
- * @brief  Private implementation for DeleteJobTemplateRequest.
+ * \inmodule QtAwsMediaConvert
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteJobTemplateRequestPrivate object.
- *
- * @param  action  MediaConvert action being performed.
- * @param  q       Pointer to this object's public DeleteJobTemplateRequest instance.
+ * Constructs a DeleteJobTemplateRequestPrivate object for MediaConvert \a action with,
+ * public implementation \a q.
  */
 DeleteJobTemplateRequestPrivate::DeleteJobTemplateRequestPrivate(
     const MediaConvertRequest::Action action, DeleteJobTemplateRequest * const q)
@@ -104,15 +93,10 @@ DeleteJobTemplateRequestPrivate::DeleteJobTemplateRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteJobTemplateRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteJobTemplateRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteJobTemplateRequest instance.
  */
 DeleteJobTemplateRequestPrivate::DeleteJobTemplateRequestPrivate(
     const DeleteJobTemplateRequestPrivate &other, DeleteJobTemplateRequest * const q)

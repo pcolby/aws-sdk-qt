@@ -27,10 +27,9 @@ namespace Snowball {
 
 /*!
  * \class QtAws::Snowball::CreateClusterRequest
- *
  * \brief The CreateClusterRequest class provides an interface for Snowball CreateCluster requests.
  *
- * \ingroup Snowball
+ * \inmodule QtAwsSnowball
  *
  *  AWS Snowball is a petabyte-scale data transport solution that uses secure appliances to transfer large amounts of data
  *  between your on-premises data centers and Amazon Simple Storage Service (Amazon S3). The Snowball commands described
@@ -43,9 +42,7 @@ namespace Snowball {
  */
 
 /*!
- * @brief  Constructs a new CreateClusterRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateClusterRequest::CreateClusterRequest(const CreateClusterRequest &other)
     : SnowballRequest(new CreateClusterRequestPrivate(*other.d_func(), this))
@@ -54,7 +51,7 @@ CreateClusterRequest::CreateClusterRequest(const CreateClusterRequest &other)
 }
 
 /*!
- * @brief  Constructs a new CreateClusterRequest object.
+ * Constructs a CreateClusterRequest object.
  */
 CreateClusterRequest::CreateClusterRequest()
     : SnowballRequest(new CreateClusterRequestPrivate(SnowballRequest::CreateClusterAction, this))
@@ -72,14 +69,9 @@ bool CreateClusterRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateClusterResponse object.
+ * Returns a CreateClusterResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateClusterResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SnowballClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateClusterRequest::response(QNetworkReply * const reply) const
 {
@@ -87,20 +79,17 @@ QtAws::Core::AwsAbstractResponse * CreateClusterRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::Snowball::CreateClusterRequestPrivate
+ * \brief The CreateClusterRequestPrivate class provides private implementation for CreateClusterRequest.
+ * \internal
  *
- * @class  CreateClusterRequestPrivate
- *
- * @brief  Private implementation for CreateClusterRequest.
+ * \inmodule QtAwsSnowball
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateClusterRequestPrivate object.
- *
- * @param  action  Snowball action being performed.
- * @param  q       Pointer to this object's public CreateClusterRequest instance.
+ * Constructs a CreateClusterRequestPrivate object for Snowball \a action with,
+ * public implementation \a q.
  */
 CreateClusterRequestPrivate::CreateClusterRequestPrivate(
     const SnowballRequest::Action action, CreateClusterRequest * const q)
@@ -110,15 +99,10 @@ CreateClusterRequestPrivate::CreateClusterRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateClusterRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateClusterRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateClusterRequest instance.
  */
 CreateClusterRequestPrivate::CreateClusterRequestPrivate(
     const CreateClusterRequestPrivate &other, CreateClusterRequest * const q)

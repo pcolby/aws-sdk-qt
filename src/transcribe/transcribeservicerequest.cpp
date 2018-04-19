@@ -25,16 +25,29 @@ namespace TranscribeService {
 
 /*!
  * \class QtAws::TranscribeService::TranscribeServiceRequest
- *
  * \brief The TranscribeServiceRequest class provides an interface for TranscribeService requests.
  *
- * \ingroup TranscribeService
+ * \inmodule QtAwsTranscribeService
  */
 
 /*!
- * @brief  Constructs a new TranscribeServiceRequest object.
+ * \enum TranscribeServiceRequest::Action
  *
- * @param  action  The TranscribeService action to request.
+ * This enum describes the actions that can be performed as TranscribeService
+ * requests.
+ *
+ * \value CreateVocabularyAction TranscribeService CreateVocabulary action.
+ * \value DeleteVocabularyAction TranscribeService DeleteVocabulary action.
+ * \value GetTranscriptionJobAction TranscribeService GetTranscriptionJob action.
+ * \value GetVocabularyAction TranscribeService GetVocabulary action.
+ * \value ListTranscriptionJobsAction TranscribeService ListTranscriptionJobs action.
+ * \value ListVocabulariesAction TranscribeService ListVocabularies action.
+ * \value StartTranscriptionJobAction TranscribeService StartTranscriptionJob action.
+ * \value UpdateVocabularyAction TranscribeService UpdateVocabulary action.
+ */
+
+/*!
+ * Constructs a[n] TranscribeServiceRequest object for TranscribeService \a action.
  */
 TranscribeServiceRequest::TranscribeServiceRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new TranscribeServiceRequestPrivate(action, this))
@@ -43,9 +56,7 @@ TranscribeServiceRequest::TranscribeServiceRequest(const Action action)
 }
 
 /*!
- * @brief  Constructs a new TranscribeServiceRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 TranscribeServiceRequest::TranscribeServiceRequest(const TranscribeServiceRequest &other)
     : QtAws::Core::AwsAbstractRequest(new TranscribeServiceRequestPrivate(*other.d_func(), this))
@@ -54,13 +65,7 @@ TranscribeServiceRequest::TranscribeServiceRequest(const TranscribeServiceReques
 }
 
 /*!
- * @brief  Assignment operator.
- *
- * Assigns \a other to \c this.
- *
- * @param  other  Instance to copy.
- *
- * @return  A reference to \c this.
+ * Sets the TranscribeServiceRequest object to be equal to \a other.
  */
 TranscribeServiceRequest& TranscribeServiceRequest::operator=(const TranscribeServiceRequest &other)
 {
@@ -72,14 +77,10 @@ TranscribeServiceRequest& TranscribeServiceRequest::operator=(const TranscribeSe
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new TranscribeServiceRequest object.
+ * Constructs aa TranscribeServiceRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from TranscribeServiceRequestPrivate.
- *
- * @param  d  Pointer to private data (aka D-Pointer).
  */
 TranscribeServiceRequest::TranscribeServiceRequest(TranscribeServiceRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
@@ -87,7 +88,7 @@ TranscribeServiceRequest::TranscribeServiceRequest(TranscribeServiceRequestPriva
 }
 
 /*!
- * \brief Returns the TranscribeService action to be performed by this request.
+ * Returns the TranscribeService action to be performed by this request.
  */
 TranscribeServiceRequest::Action TranscribeServiceRequest::action() const
 {
@@ -96,7 +97,7 @@ TranscribeServiceRequest::Action TranscribeServiceRequest::action() const
 }
 
 /*!
- * \brief Returns the name of the TranscribeService action to be performed by this request.
+ * Returns the name of the TranscribeService action to be performed by this request.
  */
 QString TranscribeServiceRequest::actionString() const
 {
@@ -104,7 +105,7 @@ QString TranscribeServiceRequest::actionString() const
 }
 
 /*!
- * \brief Returns the TranscribeService API version implemented by this request.
+ * Returns the TranscribeService API version implemented by this request.
  */
 QString TranscribeServiceRequest::apiVersion() const
 {
@@ -113,7 +114,7 @@ QString TranscribeServiceRequest::apiVersion() const
 }
 
 /*!
- * @brief Set the TranscribeService action to be performed by this request to \a action.
+ * Sets the TranscribeService action to be performed by this request to \a action.
  */
 void TranscribeServiceRequest::setAction(const Action action)
 {
@@ -122,7 +123,7 @@ void TranscribeServiceRequest::setAction(const Action action)
 }
 
 /*!
- * Set the TranscribeService API version to include in this request to \a version.
+ * Sets the TranscribeService API version to include in this request to \a version.
  */
 void TranscribeServiceRequest::setApiVersion(const QString &version)
 {
@@ -131,7 +132,7 @@ void TranscribeServiceRequest::setApiVersion(const QString &version)
 }
 
 /*!
- * \brief Returns \c true if this request is the same as \a other.
+ * Returns \c true if this request is equal to \a other; \c false otherwise.
  *
  * Note, most derived *Request classes do not need to provider their own
  * implementations of this function, since most such request classes rely on
@@ -146,8 +147,8 @@ bool TranscribeServiceRequest::operator==(const TranscribeServiceRequest &other)
             (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
-/*!
- * @brief  Check if \a queueName is a valid TranscribeService queue name.
+/*
+ * Returns \c tue if \a queueName is a valid TranscribeService queue name.
  *
  * @par From TranscribeService FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
@@ -166,9 +167,8 @@ bool TranscribeServiceRequest::operator==(const TranscribeServiceRequest &other)
 }*/
 
 /*!
- * \brief Removes the a \a name parameter from this request.
- *
- * Returns the count of paramters removed (typically \c 0 or \c 1).
+ * Removes the a \a name parameter from the request, then returns the number of
+ * paramters removed (typically \c 0 or \c 1).
  */
 int TranscribeServiceRequest::clearParameter(const QString &name)
 {
@@ -177,7 +177,7 @@ int TranscribeServiceRequest::clearParameter(const QString &name)
 }
 
 /*!
- * \brief Removes all parameters from this request.
+ * Removes all parameters from the request.
  */
 void TranscribeServiceRequest::clearParameters()
 {
@@ -186,7 +186,7 @@ void TranscribeServiceRequest::clearParameters()
 }
 
 /*!
- * \brief Returns the value of the \n name pararemter if set, otherwise \a defaultValue.
+ * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
 QVariant TranscribeServiceRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
@@ -195,7 +195,7 @@ QVariant TranscribeServiceRequest::parameter(const QString &name, const QVariant
 }
 
 /*!
- * \brief Returns a map of parameters included in this request.
+ * Returns the parameters included in this request.
  */
 const QVariantMap &TranscribeServiceRequest::parameters() const
 {
@@ -204,7 +204,7 @@ const QVariantMap &TranscribeServiceRequest::parameters() const
 }
 
 /*!
- * \brief Sets the \a name parameter to \a value.
+ * Sets the \a name parameter to \a value.
  */
 void TranscribeServiceRequest::setParameter(const QString &name, const QVariant &value)
 {
@@ -213,9 +213,8 @@ void TranscribeServiceRequest::setParameter(const QString &name, const QVariant 
 }
 
 /*!
- * \brief Sets the map of paramters for this request to \a parameters.
- *
- * Any request parameters set previously will be discarded.
+ * Sets the paramters for this request to \a parameters. Any request parameters
+ * set previously will be discarded.
  */
 void TranscribeServiceRequest::setParameters(const QVariantMap &parameters)
 {
@@ -224,11 +223,12 @@ void TranscribeServiceRequest::setParameters(const QVariantMap &parameters)
 }
 
 /*!
- * \brief Returns a network request for this TranscribeService request using the given \a endpoint.
+ * Returns a network request for the TranscribeService request using the given
+ * \a endpoint.
  *
- * This TranscribeService implementation builds request URLs by combining the common query
- * parameters (such as Action and Version), with any that have been added (via
- * setParameter) by child classes.
+ * This TranscribeService implementation builds request URLs by combining the
+ * common query parameters (such as Action and Version), with any that have
+ * been added (via setParameter) by child classes.
  */
 QNetworkRequest TranscribeServiceRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -239,17 +239,16 @@ QNetworkRequest TranscribeServiceRequest::unsignedRequest(const QUrl &endpoint) 
 }
 
 /*!
+ * \class QtAws::TranscribeService::TranscribeServiceRequestPrivate
+ * \brief The TranscribeServiceRequestPrivate class provides private implementation for TranscribeServiceRequest.
  * \internal
  *
- * \class  TranscribeServiceRequestPrivate
- *
- * \brief  Private implementation for TranscribeServiceRequest.
+ * \inmodule QtAwsTranscribeService
  */
 
 /*!
- * \internal
- *
- * \brief Constructs a new TranscribeServiceRequestPrivate object.
+ * Constructs a TranscribeServiceRequestPrivate object for TranscribeService \a action with,
+ * public implementation \a q.
  */
 TranscribeServiceRequestPrivate::TranscribeServiceRequestPrivate(const TranscribeServiceRequest::Action action, TranscribeServiceRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
@@ -258,9 +257,7 @@ TranscribeServiceRequestPrivate::TranscribeServiceRequestPrivate(const Transcrib
 }
 
 /*!
- * \internal
- *
- * \brief Constructs a new TranscribeServiceRequestPrivate object, copying an existing one.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
@@ -276,15 +273,12 @@ TranscribeServiceRequestPrivate::TranscribeServiceRequestPrivate(const Transcrib
 }
 
 /*!
- * \internal
- *
- * \brief Returns a string representing \a action.
+ * Returns a string represention of \a action, or a null string if \a action is
+ * invalid.
  *
  * This function converts TranscribeServiceRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the TranscribeService service's Action
  * query parameters.
- *
- * @return A string representing \a action, or a null string if \a action is invalid.
  */
 QString TranscribeServiceRequestPrivate::toString(const TranscribeServiceRequest::Action &action)
 {

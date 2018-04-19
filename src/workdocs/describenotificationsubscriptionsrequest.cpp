@@ -27,10 +27,9 @@ namespace WorkDocs {
 
 /*!
  * \class QtAws::WorkDocs::DescribeNotificationSubscriptionsRequest
- *
  * \brief The DescribeNotificationSubscriptionsRequest class provides an interface for WorkDocs DescribeNotificationSubscriptions requests.
  *
- * \ingroup WorkDocs
+ * \inmodule QtAwsWorkDocs
  *
  *  The WorkDocs API is designed for the following use
  * 
@@ -66,9 +65,7 @@ namespace WorkDocs {
  */
 
 /*!
- * @brief  Constructs a new DescribeNotificationSubscriptionsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeNotificationSubscriptionsRequest::DescribeNotificationSubscriptionsRequest(const DescribeNotificationSubscriptionsRequest &other)
     : WorkDocsRequest(new DescribeNotificationSubscriptionsRequestPrivate(*other.d_func(), this))
@@ -77,7 +74,7 @@ DescribeNotificationSubscriptionsRequest::DescribeNotificationSubscriptionsReque
 }
 
 /*!
- * @brief  Constructs a new DescribeNotificationSubscriptionsRequest object.
+ * Constructs a DescribeNotificationSubscriptionsRequest object.
  */
 DescribeNotificationSubscriptionsRequest::DescribeNotificationSubscriptionsRequest()
     : WorkDocsRequest(new DescribeNotificationSubscriptionsRequestPrivate(WorkDocsRequest::DescribeNotificationSubscriptionsAction, this))
@@ -95,14 +92,9 @@ bool DescribeNotificationSubscriptionsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeNotificationSubscriptionsResponse object.
+ * Returns a DescribeNotificationSubscriptionsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeNotificationSubscriptionsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WorkDocsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeNotificationSubscriptionsRequest::response(QNetworkReply * const reply) const
 {
@@ -110,20 +102,17 @@ QtAws::Core::AwsAbstractResponse * DescribeNotificationSubscriptionsRequest::res
 }
 
 /*!
- * @internal
+ * \class QtAws::WorkDocs::DescribeNotificationSubscriptionsRequestPrivate
+ * \brief The DescribeNotificationSubscriptionsRequestPrivate class provides private implementation for DescribeNotificationSubscriptionsRequest.
+ * \internal
  *
- * @class  DescribeNotificationSubscriptionsRequestPrivate
- *
- * @brief  Private implementation for DescribeNotificationSubscriptionsRequest.
+ * \inmodule QtAwsWorkDocs
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeNotificationSubscriptionsRequestPrivate object.
- *
- * @param  action  WorkDocs action being performed.
- * @param  q       Pointer to this object's public DescribeNotificationSubscriptionsRequest instance.
+ * Constructs a DescribeNotificationSubscriptionsRequestPrivate object for WorkDocs \a action with,
+ * public implementation \a q.
  */
 DescribeNotificationSubscriptionsRequestPrivate::DescribeNotificationSubscriptionsRequestPrivate(
     const WorkDocsRequest::Action action, DescribeNotificationSubscriptionsRequest * const q)
@@ -133,15 +122,10 @@ DescribeNotificationSubscriptionsRequestPrivate::DescribeNotificationSubscriptio
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeNotificationSubscriptionsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeNotificationSubscriptionsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeNotificationSubscriptionsRequest instance.
  */
 DescribeNotificationSubscriptionsRequestPrivate::DescribeNotificationSubscriptionsRequestPrivate(
     const DescribeNotificationSubscriptionsRequestPrivate &other, DescribeNotificationSubscriptionsRequest * const q)

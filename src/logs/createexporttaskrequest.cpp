@@ -27,10 +27,9 @@ namespace CloudWatchLogs {
 
 /*!
  * \class QtAws::CloudWatchLogs::CreateExportTaskRequest
- *
  * \brief The CreateExportTaskRequest class provides an interface for CloudWatchLogs CreateExportTask requests.
  *
- * \ingroup CloudWatchLogs
+ * \inmodule QtAwsCloudWatchLogs
  *
  *  You can use Amazon CloudWatch Logs to monitor, store, and access your log files from Amazon EC2 instances, AWS
  *  CloudTrail, or other sources. You can then retrieve the associated log data from CloudWatch Logs using the CloudWatch
@@ -66,9 +65,7 @@ namespace CloudWatchLogs {
  */
 
 /*!
- * @brief  Constructs a new CreateExportTaskRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateExportTaskRequest::CreateExportTaskRequest(const CreateExportTaskRequest &other)
     : CloudWatchLogsRequest(new CreateExportTaskRequestPrivate(*other.d_func(), this))
@@ -77,7 +74,7 @@ CreateExportTaskRequest::CreateExportTaskRequest(const CreateExportTaskRequest &
 }
 
 /*!
- * @brief  Constructs a new CreateExportTaskRequest object.
+ * Constructs a CreateExportTaskRequest object.
  */
 CreateExportTaskRequest::CreateExportTaskRequest()
     : CloudWatchLogsRequest(new CreateExportTaskRequestPrivate(CloudWatchLogsRequest::CreateExportTaskAction, this))
@@ -95,14 +92,9 @@ bool CreateExportTaskRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateExportTaskResponse object.
+ * Returns a CreateExportTaskResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateExportTaskResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudWatchLogsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateExportTaskRequest::response(QNetworkReply * const reply) const
 {
@@ -110,20 +102,17 @@ QtAws::Core::AwsAbstractResponse * CreateExportTaskRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudWatchLogs::CreateExportTaskRequestPrivate
+ * \brief The CreateExportTaskRequestPrivate class provides private implementation for CreateExportTaskRequest.
+ * \internal
  *
- * @class  CreateExportTaskRequestPrivate
- *
- * @brief  Private implementation for CreateExportTaskRequest.
+ * \inmodule QtAwsCloudWatchLogs
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateExportTaskRequestPrivate object.
- *
- * @param  action  CloudWatchLogs action being performed.
- * @param  q       Pointer to this object's public CreateExportTaskRequest instance.
+ * Constructs a CreateExportTaskRequestPrivate object for CloudWatchLogs \a action with,
+ * public implementation \a q.
  */
 CreateExportTaskRequestPrivate::CreateExportTaskRequestPrivate(
     const CloudWatchLogsRequest::Action action, CreateExportTaskRequest * const q)
@@ -133,15 +122,10 @@ CreateExportTaskRequestPrivate::CreateExportTaskRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateExportTaskRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateExportTaskRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateExportTaskRequest instance.
  */
 CreateExportTaskRequestPrivate::CreateExportTaskRequestPrivate(
     const CreateExportTaskRequestPrivate &other, CreateExportTaskRequest * const q)

@@ -88,6 +88,9 @@
 /*!
  * \namespace QtAws::Lambda
  * \brief The QtAws::Lambda contains stuff...
+ *
+ * \inmodule QtAwsLambda
+ *
  * @todo Move this to a separate template file.
  */
 
@@ -148,7 +151,7 @@ LambdaClient::LambdaClient(
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * \a  AwsEndpoint::getEndpoint()
+ * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
 LambdaClient::LambdaClient(
     const QUrl &endpoint,

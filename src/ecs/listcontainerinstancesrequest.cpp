@@ -27,10 +27,9 @@ namespace ECS {
 
 /*!
  * \class QtAws::ECS::ListContainerInstancesRequest
- *
  * \brief The ListContainerInstancesRequest class provides an interface for ECS ListContainerInstances requests.
  *
- * \ingroup ECS
+ * \inmodule QtAwsECS
  *
  *  Amazon Elastic Container Service (Amazon ECS) is a highly scalable, fast, container management service that makes it
  *  easy to run, stop, and manage Docker containers on a cluster. You can host your cluster on a serverless infrastructure
@@ -54,9 +53,7 @@ namespace ECS {
  */
 
 /*!
- * @brief  Constructs a new ListContainerInstancesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListContainerInstancesRequest::ListContainerInstancesRequest(const ListContainerInstancesRequest &other)
     : ECSRequest(new ListContainerInstancesRequestPrivate(*other.d_func(), this))
@@ -65,7 +62,7 @@ ListContainerInstancesRequest::ListContainerInstancesRequest(const ListContainer
 }
 
 /*!
- * @brief  Constructs a new ListContainerInstancesRequest object.
+ * Constructs a ListContainerInstancesRequest object.
  */
 ListContainerInstancesRequest::ListContainerInstancesRequest()
     : ECSRequest(new ListContainerInstancesRequestPrivate(ECSRequest::ListContainerInstancesAction, this))
@@ -83,14 +80,9 @@ bool ListContainerInstancesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListContainerInstancesResponse object.
+ * Returns a ListContainerInstancesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListContainerInstancesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ECSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListContainerInstancesRequest::response(QNetworkReply * const reply) const
 {
@@ -98,20 +90,17 @@ QtAws::Core::AwsAbstractResponse * ListContainerInstancesRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::ECS::ListContainerInstancesRequestPrivate
+ * \brief The ListContainerInstancesRequestPrivate class provides private implementation for ListContainerInstancesRequest.
+ * \internal
  *
- * @class  ListContainerInstancesRequestPrivate
- *
- * @brief  Private implementation for ListContainerInstancesRequest.
+ * \inmodule QtAwsECS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListContainerInstancesRequestPrivate object.
- *
- * @param  action  ECS action being performed.
- * @param  q       Pointer to this object's public ListContainerInstancesRequest instance.
+ * Constructs a ListContainerInstancesRequestPrivate object for ECS \a action with,
+ * public implementation \a q.
  */
 ListContainerInstancesRequestPrivate::ListContainerInstancesRequestPrivate(
     const ECSRequest::Action action, ListContainerInstancesRequest * const q)
@@ -121,15 +110,10 @@ ListContainerInstancesRequestPrivate::ListContainerInstancesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListContainerInstancesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListContainerInstancesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListContainerInstancesRequest instance.
  */
 ListContainerInstancesRequestPrivate::ListContainerInstancesRequestPrivate(
     const ListContainerInstancesRequestPrivate &other, ListContainerInstancesRequest * const q)

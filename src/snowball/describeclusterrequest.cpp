@@ -27,10 +27,9 @@ namespace Snowball {
 
 /*!
  * \class QtAws::Snowball::DescribeClusterRequest
- *
  * \brief The DescribeClusterRequest class provides an interface for Snowball DescribeCluster requests.
  *
- * \ingroup Snowball
+ * \inmodule QtAwsSnowball
  *
  *  AWS Snowball is a petabyte-scale data transport solution that uses secure appliances to transfer large amounts of data
  *  between your on-premises data centers and Amazon Simple Storage Service (Amazon S3). The Snowball commands described
@@ -43,9 +42,7 @@ namespace Snowball {
  */
 
 /*!
- * @brief  Constructs a new DescribeClusterRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeClusterRequest::DescribeClusterRequest(const DescribeClusterRequest &other)
     : SnowballRequest(new DescribeClusterRequestPrivate(*other.d_func(), this))
@@ -54,7 +51,7 @@ DescribeClusterRequest::DescribeClusterRequest(const DescribeClusterRequest &oth
 }
 
 /*!
- * @brief  Constructs a new DescribeClusterRequest object.
+ * Constructs a DescribeClusterRequest object.
  */
 DescribeClusterRequest::DescribeClusterRequest()
     : SnowballRequest(new DescribeClusterRequestPrivate(SnowballRequest::DescribeClusterAction, this))
@@ -72,14 +69,9 @@ bool DescribeClusterRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeClusterResponse object.
+ * Returns a DescribeClusterResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeClusterResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SnowballClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeClusterRequest::response(QNetworkReply * const reply) const
 {
@@ -87,20 +79,17 @@ QtAws::Core::AwsAbstractResponse * DescribeClusterRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::Snowball::DescribeClusterRequestPrivate
+ * \brief The DescribeClusterRequestPrivate class provides private implementation for DescribeClusterRequest.
+ * \internal
  *
- * @class  DescribeClusterRequestPrivate
- *
- * @brief  Private implementation for DescribeClusterRequest.
+ * \inmodule QtAwsSnowball
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeClusterRequestPrivate object.
- *
- * @param  action  Snowball action being performed.
- * @param  q       Pointer to this object's public DescribeClusterRequest instance.
+ * Constructs a DescribeClusterRequestPrivate object for Snowball \a action with,
+ * public implementation \a q.
  */
 DescribeClusterRequestPrivate::DescribeClusterRequestPrivate(
     const SnowballRequest::Action action, DescribeClusterRequest * const q)
@@ -110,15 +99,10 @@ DescribeClusterRequestPrivate::DescribeClusterRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeClusterRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeClusterRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeClusterRequest instance.
  */
 DescribeClusterRequestPrivate::DescribeClusterRequestPrivate(
     const DescribeClusterRequestPrivate &other, DescribeClusterRequest * const q)

@@ -27,10 +27,9 @@ namespace WAF {
 
 /*!
  * \class QtAws::WAF::UpdateRegexMatchSetRequest
- *
  * \brief The UpdateRegexMatchSetRequest class provides an interface for WAF UpdateRegexMatchSet requests.
  *
- * \ingroup WAF
+ * \inmodule QtAwsWAF
  *
  *  This is the <i>AWS WAF API Reference</i> for using AWS WAF with Amazon CloudFront. The AWS WAF actions and data types
  *  listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data
@@ -42,9 +41,7 @@ namespace WAF {
  */
 
 /*!
- * @brief  Constructs a new UpdateRegexMatchSetRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateRegexMatchSetRequest::UpdateRegexMatchSetRequest(const UpdateRegexMatchSetRequest &other)
     : WAFRequest(new UpdateRegexMatchSetRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ UpdateRegexMatchSetRequest::UpdateRegexMatchSetRequest(const UpdateRegexMatchSet
 }
 
 /*!
- * @brief  Constructs a new UpdateRegexMatchSetRequest object.
+ * Constructs a UpdateRegexMatchSetRequest object.
  */
 UpdateRegexMatchSetRequest::UpdateRegexMatchSetRequest()
     : WAFRequest(new UpdateRegexMatchSetRequestPrivate(WAFRequest::UpdateRegexMatchSetAction, this))
@@ -71,14 +68,9 @@ bool UpdateRegexMatchSetRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateRegexMatchSetResponse object.
+ * Returns a UpdateRegexMatchSetResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateRegexMatchSetResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WAFClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateRegexMatchSetRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * UpdateRegexMatchSetRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::WAF::UpdateRegexMatchSetRequestPrivate
+ * \brief The UpdateRegexMatchSetRequestPrivate class provides private implementation for UpdateRegexMatchSetRequest.
+ * \internal
  *
- * @class  UpdateRegexMatchSetRequestPrivate
- *
- * @brief  Private implementation for UpdateRegexMatchSetRequest.
+ * \inmodule QtAwsWAF
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateRegexMatchSetRequestPrivate object.
- *
- * @param  action  WAF action being performed.
- * @param  q       Pointer to this object's public UpdateRegexMatchSetRequest instance.
+ * Constructs a UpdateRegexMatchSetRequestPrivate object for WAF \a action with,
+ * public implementation \a q.
  */
 UpdateRegexMatchSetRequestPrivate::UpdateRegexMatchSetRequestPrivate(
     const WAFRequest::Action action, UpdateRegexMatchSetRequest * const q)
@@ -109,15 +98,10 @@ UpdateRegexMatchSetRequestPrivate::UpdateRegexMatchSetRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateRegexMatchSetRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateRegexMatchSetRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateRegexMatchSetRequest instance.
  */
 UpdateRegexMatchSetRequestPrivate::UpdateRegexMatchSetRequestPrivate(
     const UpdateRegexMatchSetRequestPrivate &other, UpdateRegexMatchSetRequest * const q)

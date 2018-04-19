@@ -27,10 +27,9 @@ namespace AlexaForBusiness {
 
 /*!
  * \class QtAws::AlexaForBusiness::DisassociateDeviceFromRoomRequest
- *
  * \brief The DisassociateDeviceFromRoomRequest class provides an interface for AlexaForBusiness DisassociateDeviceFromRoom requests.
  *
- * \ingroup AlexaForBusiness
+ * \inmodule QtAwsAlexaForBusiness
  *
  *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
  *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
@@ -42,9 +41,7 @@ namespace AlexaForBusiness {
  */
 
 /*!
- * @brief  Constructs a new DisassociateDeviceFromRoomRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DisassociateDeviceFromRoomRequest::DisassociateDeviceFromRoomRequest(const DisassociateDeviceFromRoomRequest &other)
     : AlexaForBusinessRequest(new DisassociateDeviceFromRoomRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ DisassociateDeviceFromRoomRequest::DisassociateDeviceFromRoomRequest(const Disas
 }
 
 /*!
- * @brief  Constructs a new DisassociateDeviceFromRoomRequest object.
+ * Constructs a DisassociateDeviceFromRoomRequest object.
  */
 DisassociateDeviceFromRoomRequest::DisassociateDeviceFromRoomRequest()
     : AlexaForBusinessRequest(new DisassociateDeviceFromRoomRequestPrivate(AlexaForBusinessRequest::DisassociateDeviceFromRoomAction, this))
@@ -71,14 +68,9 @@ bool DisassociateDeviceFromRoomRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DisassociateDeviceFromRoomResponse object.
+ * Returns a DisassociateDeviceFromRoomResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DisassociateDeviceFromRoomResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AlexaForBusinessClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DisassociateDeviceFromRoomRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * DisassociateDeviceFromRoomRequest::response(Q
 }
 
 /*!
- * @internal
+ * \class QtAws::AlexaForBusiness::DisassociateDeviceFromRoomRequestPrivate
+ * \brief The DisassociateDeviceFromRoomRequestPrivate class provides private implementation for DisassociateDeviceFromRoomRequest.
+ * \internal
  *
- * @class  DisassociateDeviceFromRoomRequestPrivate
- *
- * @brief  Private implementation for DisassociateDeviceFromRoomRequest.
+ * \inmodule QtAwsAlexaForBusiness
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DisassociateDeviceFromRoomRequestPrivate object.
- *
- * @param  action  AlexaForBusiness action being performed.
- * @param  q       Pointer to this object's public DisassociateDeviceFromRoomRequest instance.
+ * Constructs a DisassociateDeviceFromRoomRequestPrivate object for AlexaForBusiness \a action with,
+ * public implementation \a q.
  */
 DisassociateDeviceFromRoomRequestPrivate::DisassociateDeviceFromRoomRequestPrivate(
     const AlexaForBusinessRequest::Action action, DisassociateDeviceFromRoomRequest * const q)
@@ -109,15 +98,10 @@ DisassociateDeviceFromRoomRequestPrivate::DisassociateDeviceFromRoomRequestPriva
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DisassociateDeviceFromRoomRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DisassociateDeviceFromRoomRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DisassociateDeviceFromRoomRequest instance.
  */
 DisassociateDeviceFromRoomRequestPrivate::DisassociateDeviceFromRoomRequestPrivate(
     const DisassociateDeviceFromRoomRequestPrivate &other, DisassociateDeviceFromRoomRequest * const q)

@@ -27,10 +27,9 @@ namespace AppSync {
 
 /*!
  * \class QtAws::AppSync::GetGraphqlApiRequest
- *
  * \brief The GetGraphqlApiRequest class provides an interface for AppSync GetGraphqlApi requests.
  *
- * \ingroup AppSync
+ * \inmodule QtAwsAppSync
  *
  *  AWS AppSync provides API actions for creating and interacting with data sources using GraphQL from your
  *
@@ -38,9 +37,7 @@ namespace AppSync {
  */
 
 /*!
- * @brief  Constructs a new GetGraphqlApiRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetGraphqlApiRequest::GetGraphqlApiRequest(const GetGraphqlApiRequest &other)
     : AppSyncRequest(new GetGraphqlApiRequestPrivate(*other.d_func(), this))
@@ -49,7 +46,7 @@ GetGraphqlApiRequest::GetGraphqlApiRequest(const GetGraphqlApiRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetGraphqlApiRequest object.
+ * Constructs a GetGraphqlApiRequest object.
  */
 GetGraphqlApiRequest::GetGraphqlApiRequest()
     : AppSyncRequest(new GetGraphqlApiRequestPrivate(AppSyncRequest::GetGraphqlApiAction, this))
@@ -67,14 +64,9 @@ bool GetGraphqlApiRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetGraphqlApiResponse object.
+ * Returns a GetGraphqlApiResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetGraphqlApiResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AppSyncClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetGraphqlApiRequest::response(QNetworkReply * const reply) const
 {
@@ -82,20 +74,17 @@ QtAws::Core::AwsAbstractResponse * GetGraphqlApiRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::AppSync::GetGraphqlApiRequestPrivate
+ * \brief The GetGraphqlApiRequestPrivate class provides private implementation for GetGraphqlApiRequest.
+ * \internal
  *
- * @class  GetGraphqlApiRequestPrivate
- *
- * @brief  Private implementation for GetGraphqlApiRequest.
+ * \inmodule QtAwsAppSync
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetGraphqlApiRequestPrivate object.
- *
- * @param  action  AppSync action being performed.
- * @param  q       Pointer to this object's public GetGraphqlApiRequest instance.
+ * Constructs a GetGraphqlApiRequestPrivate object for AppSync \a action with,
+ * public implementation \a q.
  */
 GetGraphqlApiRequestPrivate::GetGraphqlApiRequestPrivate(
     const AppSyncRequest::Action action, GetGraphqlApiRequest * const q)
@@ -105,15 +94,10 @@ GetGraphqlApiRequestPrivate::GetGraphqlApiRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetGraphqlApiRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetGraphqlApiRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetGraphqlApiRequest instance.
  */
 GetGraphqlApiRequestPrivate::GetGraphqlApiRequestPrivate(
     const GetGraphqlApiRequestPrivate &other, GetGraphqlApiRequest * const q)

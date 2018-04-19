@@ -27,10 +27,9 @@ namespace WorkMail {
 
 /*!
  * \class QtAws::WorkMail::RegisterToWorkMailRequest
- *
  * \brief The RegisterToWorkMailRequest class provides an interface for WorkMail RegisterToWorkMail requests.
  *
- * \ingroup WorkMail
+ * \inmodule QtAwsWorkMail
  *
  *  Amazon WorkMail is a secure, managed business email and calendaring service with support for existing desktop and mobile
  *  email clients. You can access your email, contacts, and calendars using Microsoft Outlook, your browser, or their native
@@ -70,9 +69,7 @@ namespace WorkMail {
  */
 
 /*!
- * @brief  Constructs a new RegisterToWorkMailRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 RegisterToWorkMailRequest::RegisterToWorkMailRequest(const RegisterToWorkMailRequest &other)
     : WorkMailRequest(new RegisterToWorkMailRequestPrivate(*other.d_func(), this))
@@ -81,7 +78,7 @@ RegisterToWorkMailRequest::RegisterToWorkMailRequest(const RegisterToWorkMailReq
 }
 
 /*!
- * @brief  Constructs a new RegisterToWorkMailRequest object.
+ * Constructs a RegisterToWorkMailRequest object.
  */
 RegisterToWorkMailRequest::RegisterToWorkMailRequest()
     : WorkMailRequest(new RegisterToWorkMailRequestPrivate(WorkMailRequest::RegisterToWorkMailAction, this))
@@ -99,14 +96,9 @@ bool RegisterToWorkMailRequest::isValid() const
 
 
 /*!
- * @brief  Construct an RegisterToWorkMailResponse object.
+ * Returns a RegisterToWorkMailResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An RegisterToWorkMailResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WorkMailClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * RegisterToWorkMailRequest::response(QNetworkReply * const reply) const
 {
@@ -114,20 +106,17 @@ QtAws::Core::AwsAbstractResponse * RegisterToWorkMailRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::WorkMail::RegisterToWorkMailRequestPrivate
+ * \brief The RegisterToWorkMailRequestPrivate class provides private implementation for RegisterToWorkMailRequest.
+ * \internal
  *
- * @class  RegisterToWorkMailRequestPrivate
- *
- * @brief  Private implementation for RegisterToWorkMailRequest.
+ * \inmodule QtAwsWorkMail
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new RegisterToWorkMailRequestPrivate object.
- *
- * @param  action  WorkMail action being performed.
- * @param  q       Pointer to this object's public RegisterToWorkMailRequest instance.
+ * Constructs a RegisterToWorkMailRequestPrivate object for WorkMail \a action with,
+ * public implementation \a q.
  */
 RegisterToWorkMailRequestPrivate::RegisterToWorkMailRequestPrivate(
     const WorkMailRequest::Action action, RegisterToWorkMailRequest * const q)
@@ -137,15 +126,10 @@ RegisterToWorkMailRequestPrivate::RegisterToWorkMailRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RegisterToWorkMailRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the RegisterToWorkMailRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public RegisterToWorkMailRequest instance.
  */
 RegisterToWorkMailRequestPrivate::RegisterToWorkMailRequestPrivate(
     const RegisterToWorkMailRequestPrivate &other, RegisterToWorkMailRequest * const q)

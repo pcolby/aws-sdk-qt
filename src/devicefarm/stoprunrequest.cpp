@@ -27,10 +27,9 @@ namespace DeviceFarm {
 
 /*!
  * \class QtAws::DeviceFarm::StopRunRequest
- *
  * \brief The StopRunRequest class provides an interface for DeviceFarm StopRun requests.
  *
- * \ingroup DeviceFarm
+ * \inmodule QtAwsDeviceFarm
  *
  *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
  *  phones, tablets, and other devices in the
@@ -39,9 +38,7 @@ namespace DeviceFarm {
  */
 
 /*!
- * @brief  Constructs a new StopRunRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 StopRunRequest::StopRunRequest(const StopRunRequest &other)
     : DeviceFarmRequest(new StopRunRequestPrivate(*other.d_func(), this))
@@ -50,7 +47,7 @@ StopRunRequest::StopRunRequest(const StopRunRequest &other)
 }
 
 /*!
- * @brief  Constructs a new StopRunRequest object.
+ * Constructs a StopRunRequest object.
  */
 StopRunRequest::StopRunRequest()
     : DeviceFarmRequest(new StopRunRequestPrivate(DeviceFarmRequest::StopRunAction, this))
@@ -68,14 +65,9 @@ bool StopRunRequest::isValid() const
 
 
 /*!
- * @brief  Construct an StopRunResponse object.
+ * Returns a StopRunResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An StopRunResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DeviceFarmClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * StopRunRequest::response(QNetworkReply * const reply) const
 {
@@ -83,20 +75,17 @@ QtAws::Core::AwsAbstractResponse * StopRunRequest::response(QNetworkReply * cons
 }
 
 /*!
- * @internal
+ * \class QtAws::DeviceFarm::StopRunRequestPrivate
+ * \brief The StopRunRequestPrivate class provides private implementation for StopRunRequest.
+ * \internal
  *
- * @class  StopRunRequestPrivate
- *
- * @brief  Private implementation for StopRunRequest.
+ * \inmodule QtAwsDeviceFarm
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new StopRunRequestPrivate object.
- *
- * @param  action  DeviceFarm action being performed.
- * @param  q       Pointer to this object's public StopRunRequest instance.
+ * Constructs a StopRunRequestPrivate object for DeviceFarm \a action with,
+ * public implementation \a q.
  */
 StopRunRequestPrivate::StopRunRequestPrivate(
     const DeviceFarmRequest::Action action, StopRunRequest * const q)
@@ -106,15 +95,10 @@ StopRunRequestPrivate::StopRunRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StopRunRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the StopRunRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public StopRunRequest instance.
  */
 StopRunRequestPrivate::StopRunRequestPrivate(
     const StopRunRequestPrivate &other, StopRunRequest * const q)

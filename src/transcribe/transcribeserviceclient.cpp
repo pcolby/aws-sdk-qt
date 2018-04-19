@@ -44,6 +44,9 @@
 /*!
  * \namespace QtAws::TranscribeService
  * \brief The QtAws::TranscribeService contains stuff...
+ *
+ * \inmodule QtAwsTranscribeService
+ *
  * @todo Move this to a separate template file.
  */
 
@@ -94,7 +97,7 @@ TranscribeServiceClient::TranscribeServiceClient(
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * \a  AwsEndpoint::getEndpoint()
+ * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
 TranscribeServiceClient::TranscribeServiceClient(
     const QUrl &endpoint,

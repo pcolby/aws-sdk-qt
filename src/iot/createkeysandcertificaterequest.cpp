@@ -27,10 +27,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::CreateKeysAndCertificateRequest
- *
  * \brief The CreateKeysAndCertificateRequest class provides an interface for IoT CreateKeysAndCertificate requests.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -48,9 +47,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new CreateKeysAndCertificateRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateKeysAndCertificateRequest::CreateKeysAndCertificateRequest(const CreateKeysAndCertificateRequest &other)
     : IoTRequest(new CreateKeysAndCertificateRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ CreateKeysAndCertificateRequest::CreateKeysAndCertificateRequest(const CreateKey
 }
 
 /*!
- * @brief  Constructs a new CreateKeysAndCertificateRequest object.
+ * Constructs a CreateKeysAndCertificateRequest object.
  */
 CreateKeysAndCertificateRequest::CreateKeysAndCertificateRequest()
     : IoTRequest(new CreateKeysAndCertificateRequestPrivate(IoTRequest::CreateKeysAndCertificateAction, this))
@@ -77,14 +74,9 @@ bool CreateKeysAndCertificateRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateKeysAndCertificateResponse object.
+ * Returns a CreateKeysAndCertificateResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateKeysAndCertificateResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IoTClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateKeysAndCertificateRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * CreateKeysAndCertificateRequest::response(QNe
 }
 
 /*!
- * @internal
+ * \class QtAws::IoT::CreateKeysAndCertificateRequestPrivate
+ * \brief The CreateKeysAndCertificateRequestPrivate class provides private implementation for CreateKeysAndCertificateRequest.
+ * \internal
  *
- * @class  CreateKeysAndCertificateRequestPrivate
- *
- * @brief  Private implementation for CreateKeysAndCertificateRequest.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateKeysAndCertificateRequestPrivate object.
- *
- * @param  action  IoT action being performed.
- * @param  q       Pointer to this object's public CreateKeysAndCertificateRequest instance.
+ * Constructs a CreateKeysAndCertificateRequestPrivate object for IoT \a action with,
+ * public implementation \a q.
  */
 CreateKeysAndCertificateRequestPrivate::CreateKeysAndCertificateRequestPrivate(
     const IoTRequest::Action action, CreateKeysAndCertificateRequest * const q)
@@ -115,15 +104,10 @@ CreateKeysAndCertificateRequestPrivate::CreateKeysAndCertificateRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateKeysAndCertificateRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateKeysAndCertificateRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateKeysAndCertificateRequest instance.
  */
 CreateKeysAndCertificateRequestPrivate::CreateKeysAndCertificateRequestPrivate(
     const CreateKeysAndCertificateRequestPrivate &other, CreateKeysAndCertificateRequest * const q)

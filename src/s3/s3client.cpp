@@ -183,6 +183,9 @@
 /*!
  * \namespace QtAws::S3
  * \brief The QtAws::S3 contains stuff...
+ *
+ * \inmodule QtAwsS3
+ *
  * @todo Move this to a separate template file.
  */
 
@@ -232,7 +235,7 @@ S3Client::S3Client(
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * \a  AwsEndpoint::getEndpoint()
+ * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
 S3Client::S3Client(
     const QUrl &endpoint,

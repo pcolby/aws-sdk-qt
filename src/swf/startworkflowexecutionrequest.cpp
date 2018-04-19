@@ -27,10 +27,9 @@ namespace SWF {
 
 /*!
  * \class QtAws::SWF::StartWorkflowExecutionRequest
- *
  * \brief The StartWorkflowExecutionRequest class provides an interface for SWF StartWorkflowExecution requests.
  *
- * \ingroup SWF
+ * \inmodule QtAwsSWF
  *
  *  <fullname>Amazon Simple Workflow Service</fullname>
  * 
@@ -53,9 +52,7 @@ namespace SWF {
  */
 
 /*!
- * @brief  Constructs a new StartWorkflowExecutionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 StartWorkflowExecutionRequest::StartWorkflowExecutionRequest(const StartWorkflowExecutionRequest &other)
     : SWFRequest(new StartWorkflowExecutionRequestPrivate(*other.d_func(), this))
@@ -64,7 +61,7 @@ StartWorkflowExecutionRequest::StartWorkflowExecutionRequest(const StartWorkflow
 }
 
 /*!
- * @brief  Constructs a new StartWorkflowExecutionRequest object.
+ * Constructs a StartWorkflowExecutionRequest object.
  */
 StartWorkflowExecutionRequest::StartWorkflowExecutionRequest()
     : SWFRequest(new StartWorkflowExecutionRequestPrivate(SWFRequest::StartWorkflowExecutionAction, this))
@@ -82,14 +79,9 @@ bool StartWorkflowExecutionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an StartWorkflowExecutionResponse object.
+ * Returns a StartWorkflowExecutionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An StartWorkflowExecutionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SWFClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * StartWorkflowExecutionRequest::response(QNetworkReply * const reply) const
 {
@@ -97,20 +89,17 @@ QtAws::Core::AwsAbstractResponse * StartWorkflowExecutionRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::SWF::StartWorkflowExecutionRequestPrivate
+ * \brief The StartWorkflowExecutionRequestPrivate class provides private implementation for StartWorkflowExecutionRequest.
+ * \internal
  *
- * @class  StartWorkflowExecutionRequestPrivate
- *
- * @brief  Private implementation for StartWorkflowExecutionRequest.
+ * \inmodule QtAwsSWF
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new StartWorkflowExecutionRequestPrivate object.
- *
- * @param  action  SWF action being performed.
- * @param  q       Pointer to this object's public StartWorkflowExecutionRequest instance.
+ * Constructs a StartWorkflowExecutionRequestPrivate object for SWF \a action with,
+ * public implementation \a q.
  */
 StartWorkflowExecutionRequestPrivate::StartWorkflowExecutionRequestPrivate(
     const SWFRequest::Action action, StartWorkflowExecutionRequest * const q)
@@ -120,15 +109,10 @@ StartWorkflowExecutionRequestPrivate::StartWorkflowExecutionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StartWorkflowExecutionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the StartWorkflowExecutionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public StartWorkflowExecutionRequest instance.
  */
 StartWorkflowExecutionRequestPrivate::StartWorkflowExecutionRequestPrivate(
     const StartWorkflowExecutionRequestPrivate &other, StartWorkflowExecutionRequest * const q)

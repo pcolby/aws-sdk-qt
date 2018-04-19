@@ -27,19 +27,16 @@ namespace SMS {
 
 /*!
  * \class QtAws::SMS::GetServersRequest
- *
  * \brief The GetServersRequest class provides an interface for SMS GetServers requests.
  *
- * \ingroup SMS
+ * \inmodule QtAwsSMS
  *
  *
  * \sa SMSClient::getServers
  */
 
 /*!
- * @brief  Constructs a new GetServersRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetServersRequest::GetServersRequest(const GetServersRequest &other)
     : SMSRequest(new GetServersRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ GetServersRequest::GetServersRequest(const GetServersRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetServersRequest object.
+ * Constructs a GetServersRequest object.
  */
 GetServersRequest::GetServersRequest()
     : SMSRequest(new GetServersRequestPrivate(SMSRequest::GetServersAction, this))
@@ -66,14 +63,9 @@ bool GetServersRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetServersResponse object.
+ * Returns a GetServersResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetServersResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SMSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetServersRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * GetServersRequest::response(QNetworkReply * c
 }
 
 /*!
- * @internal
+ * \class QtAws::SMS::GetServersRequestPrivate
+ * \brief The GetServersRequestPrivate class provides private implementation for GetServersRequest.
+ * \internal
  *
- * @class  GetServersRequestPrivate
- *
- * @brief  Private implementation for GetServersRequest.
+ * \inmodule QtAwsSMS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetServersRequestPrivate object.
- *
- * @param  action  SMS action being performed.
- * @param  q       Pointer to this object's public GetServersRequest instance.
+ * Constructs a GetServersRequestPrivate object for SMS \a action with,
+ * public implementation \a q.
  */
 GetServersRequestPrivate::GetServersRequestPrivate(
     const SMSRequest::Action action, GetServersRequest * const q)
@@ -104,15 +93,10 @@ GetServersRequestPrivate::GetServersRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetServersRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetServersRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetServersRequest instance.
  */
 GetServersRequestPrivate::GetServersRequestPrivate(
     const GetServersRequestPrivate &other, GetServersRequest * const q)

@@ -27,10 +27,9 @@ namespace Shield {
 
 /*!
  * \class QtAws::Shield::DeleteProtectionRequest
- *
  * \brief The DeleteProtectionRequest class provides an interface for Shield DeleteProtection requests.
  *
- * \ingroup Shield
+ * \inmodule QtAwsShield
  *
  *  <fullname>AWS Shield Advanced</fullname>
  * 
@@ -43,9 +42,7 @@ namespace Shield {
  */
 
 /*!
- * @brief  Constructs a new DeleteProtectionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteProtectionRequest::DeleteProtectionRequest(const DeleteProtectionRequest &other)
     : ShieldRequest(new DeleteProtectionRequestPrivate(*other.d_func(), this))
@@ -54,7 +51,7 @@ DeleteProtectionRequest::DeleteProtectionRequest(const DeleteProtectionRequest &
 }
 
 /*!
- * @brief  Constructs a new DeleteProtectionRequest object.
+ * Constructs a DeleteProtectionRequest object.
  */
 DeleteProtectionRequest::DeleteProtectionRequest()
     : ShieldRequest(new DeleteProtectionRequestPrivate(ShieldRequest::DeleteProtectionAction, this))
@@ -72,14 +69,9 @@ bool DeleteProtectionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteProtectionResponse object.
+ * Returns a DeleteProtectionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteProtectionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ShieldClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteProtectionRequest::response(QNetworkReply * const reply) const
 {
@@ -87,20 +79,17 @@ QtAws::Core::AwsAbstractResponse * DeleteProtectionRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::Shield::DeleteProtectionRequestPrivate
+ * \brief The DeleteProtectionRequestPrivate class provides private implementation for DeleteProtectionRequest.
+ * \internal
  *
- * @class  DeleteProtectionRequestPrivate
- *
- * @brief  Private implementation for DeleteProtectionRequest.
+ * \inmodule QtAwsShield
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteProtectionRequestPrivate object.
- *
- * @param  action  Shield action being performed.
- * @param  q       Pointer to this object's public DeleteProtectionRequest instance.
+ * Constructs a DeleteProtectionRequestPrivate object for Shield \a action with,
+ * public implementation \a q.
  */
 DeleteProtectionRequestPrivate::DeleteProtectionRequestPrivate(
     const ShieldRequest::Action action, DeleteProtectionRequest * const q)
@@ -110,15 +99,10 @@ DeleteProtectionRequestPrivate::DeleteProtectionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteProtectionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteProtectionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteProtectionRequest instance.
  */
 DeleteProtectionRequestPrivate::DeleteProtectionRequestPrivate(
     const DeleteProtectionRequestPrivate &other, DeleteProtectionRequest * const q)

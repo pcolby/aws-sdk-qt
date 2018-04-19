@@ -27,10 +27,9 @@ namespace CloudHSM {
 
 /*!
  * \class QtAws::CloudHSM::ListLunaClientsRequest
- *
  * \brief The ListLunaClientsRequest class provides an interface for CloudHSM ListLunaClients requests.
  *
- * \ingroup CloudHSM
+ * \inmodule QtAwsCloudHSM
  *
  *  <fullname>AWS CloudHSM Service</fullname>
  * 
@@ -49,9 +48,7 @@ namespace CloudHSM {
  */
 
 /*!
- * @brief  Constructs a new ListLunaClientsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListLunaClientsRequest::ListLunaClientsRequest(const ListLunaClientsRequest &other)
     : CloudHSMRequest(new ListLunaClientsRequestPrivate(*other.d_func(), this))
@@ -60,7 +57,7 @@ ListLunaClientsRequest::ListLunaClientsRequest(const ListLunaClientsRequest &oth
 }
 
 /*!
- * @brief  Constructs a new ListLunaClientsRequest object.
+ * Constructs a ListLunaClientsRequest object.
  */
 ListLunaClientsRequest::ListLunaClientsRequest()
     : CloudHSMRequest(new ListLunaClientsRequestPrivate(CloudHSMRequest::ListLunaClientsAction, this))
@@ -78,14 +75,9 @@ bool ListLunaClientsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListLunaClientsResponse object.
+ * Returns a ListLunaClientsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListLunaClientsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudHSMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListLunaClientsRequest::response(QNetworkReply * const reply) const
 {
@@ -93,20 +85,17 @@ QtAws::Core::AwsAbstractResponse * ListLunaClientsRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudHSM::ListLunaClientsRequestPrivate
+ * \brief The ListLunaClientsRequestPrivate class provides private implementation for ListLunaClientsRequest.
+ * \internal
  *
- * @class  ListLunaClientsRequestPrivate
- *
- * @brief  Private implementation for ListLunaClientsRequest.
+ * \inmodule QtAwsCloudHSM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListLunaClientsRequestPrivate object.
- *
- * @param  action  CloudHSM action being performed.
- * @param  q       Pointer to this object's public ListLunaClientsRequest instance.
+ * Constructs a ListLunaClientsRequestPrivate object for CloudHSM \a action with,
+ * public implementation \a q.
  */
 ListLunaClientsRequestPrivate::ListLunaClientsRequestPrivate(
     const CloudHSMRequest::Action action, ListLunaClientsRequest * const q)
@@ -116,15 +105,10 @@ ListLunaClientsRequestPrivate::ListLunaClientsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListLunaClientsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListLunaClientsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListLunaClientsRequest instance.
  */
 ListLunaClientsRequestPrivate::ListLunaClientsRequestPrivate(
     const ListLunaClientsRequestPrivate &other, ListLunaClientsRequest * const q)

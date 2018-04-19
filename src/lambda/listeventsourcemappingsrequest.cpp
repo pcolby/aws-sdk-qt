@@ -27,10 +27,9 @@ namespace Lambda {
 
 /*!
  * \class QtAws::Lambda::ListEventSourceMappingsRequest
- *
  * \brief The ListEventSourceMappingsRequest class provides an interface for Lambda ListEventSourceMappings requests.
  *
- * \ingroup Lambda
+ * \inmodule QtAwsLambda
  *
  *  <fullname>AWS Lambda</fullname>
  * 
@@ -48,9 +47,7 @@ namespace Lambda {
  */
 
 /*!
- * @brief  Constructs a new ListEventSourceMappingsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListEventSourceMappingsRequest::ListEventSourceMappingsRequest(const ListEventSourceMappingsRequest &other)
     : LambdaRequest(new ListEventSourceMappingsRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ ListEventSourceMappingsRequest::ListEventSourceMappingsRequest(const ListEventSo
 }
 
 /*!
- * @brief  Constructs a new ListEventSourceMappingsRequest object.
+ * Constructs a ListEventSourceMappingsRequest object.
  */
 ListEventSourceMappingsRequest::ListEventSourceMappingsRequest()
     : LambdaRequest(new ListEventSourceMappingsRequestPrivate(LambdaRequest::ListEventSourceMappingsAction, this))
@@ -77,14 +74,9 @@ bool ListEventSourceMappingsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListEventSourceMappingsResponse object.
+ * Returns a ListEventSourceMappingsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListEventSourceMappingsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  LambdaClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListEventSourceMappingsRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * ListEventSourceMappingsRequest::response(QNet
 }
 
 /*!
- * @internal
+ * \class QtAws::Lambda::ListEventSourceMappingsRequestPrivate
+ * \brief The ListEventSourceMappingsRequestPrivate class provides private implementation for ListEventSourceMappingsRequest.
+ * \internal
  *
- * @class  ListEventSourceMappingsRequestPrivate
- *
- * @brief  Private implementation for ListEventSourceMappingsRequest.
+ * \inmodule QtAwsLambda
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListEventSourceMappingsRequestPrivate object.
- *
- * @param  action  Lambda action being performed.
- * @param  q       Pointer to this object's public ListEventSourceMappingsRequest instance.
+ * Constructs a ListEventSourceMappingsRequestPrivate object for Lambda \a action with,
+ * public implementation \a q.
  */
 ListEventSourceMappingsRequestPrivate::ListEventSourceMappingsRequestPrivate(
     const LambdaRequest::Action action, ListEventSourceMappingsRequest * const q)
@@ -115,15 +104,10 @@ ListEventSourceMappingsRequestPrivate::ListEventSourceMappingsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListEventSourceMappingsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListEventSourceMappingsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListEventSourceMappingsRequest instance.
  */
 ListEventSourceMappingsRequestPrivate::ListEventSourceMappingsRequestPrivate(
     const ListEventSourceMappingsRequestPrivate &other, ListEventSourceMappingsRequest * const q)

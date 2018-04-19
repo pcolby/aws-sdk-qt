@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DescribeSecurityGroupReferencesRequest
- *
  * \brief The DescribeSecurityGroupReferencesRequest class provides an interface for EC2 DescribeSecurityGroupReferences requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DescribeSecurityGroupReferencesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeSecurityGroupReferencesRequest::DescribeSecurityGroupReferencesRequest(const DescribeSecurityGroupReferencesRequest &other)
     : EC2Request(new DescribeSecurityGroupReferencesRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ DescribeSecurityGroupReferencesRequest::DescribeSecurityGroupReferencesRequest(c
 }
 
 /*!
- * @brief  Constructs a new DescribeSecurityGroupReferencesRequest object.
+ * Constructs a DescribeSecurityGroupReferencesRequest object.
  */
 DescribeSecurityGroupReferencesRequest::DescribeSecurityGroupReferencesRequest()
     : EC2Request(new DescribeSecurityGroupReferencesRequestPrivate(EC2Request::DescribeSecurityGroupReferencesAction, this))
@@ -70,14 +67,9 @@ bool DescribeSecurityGroupReferencesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeSecurityGroupReferencesResponse object.
+ * Returns a DescribeSecurityGroupReferencesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeSecurityGroupReferencesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeSecurityGroupReferencesRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * DescribeSecurityGroupReferencesRequest::respo
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::DescribeSecurityGroupReferencesRequestPrivate
+ * \brief The DescribeSecurityGroupReferencesRequestPrivate class provides private implementation for DescribeSecurityGroupReferencesRequest.
+ * \internal
  *
- * @class  DescribeSecurityGroupReferencesRequestPrivate
- *
- * @brief  Private implementation for DescribeSecurityGroupReferencesRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeSecurityGroupReferencesRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public DescribeSecurityGroupReferencesRequest instance.
+ * Constructs a DescribeSecurityGroupReferencesRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 DescribeSecurityGroupReferencesRequestPrivate::DescribeSecurityGroupReferencesRequestPrivate(
     const EC2Request::Action action, DescribeSecurityGroupReferencesRequest * const q)
@@ -108,15 +97,10 @@ DescribeSecurityGroupReferencesRequestPrivate::DescribeSecurityGroupReferencesRe
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeSecurityGroupReferencesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeSecurityGroupReferencesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeSecurityGroupReferencesRequest instance.
  */
 DescribeSecurityGroupReferencesRequestPrivate::DescribeSecurityGroupReferencesRequestPrivate(
     const DescribeSecurityGroupReferencesRequestPrivate &other, DescribeSecurityGroupReferencesRequest * const q)

@@ -27,10 +27,9 @@ namespace ServiceCatalog {
 
 /*!
  * \class QtAws::ServiceCatalog::ListPortfolioAccessRequest
- *
  * \brief The ListPortfolioAccessRequest class provides an interface for ServiceCatalog ListPortfolioAccess requests.
  *
- * \ingroup ServiceCatalog
+ * \inmodule QtAwsServiceCatalog
  *
  *  <fullname>AWS Service Catalog</fullname>
  * 
@@ -43,9 +42,7 @@ namespace ServiceCatalog {
  */
 
 /*!
- * @brief  Constructs a new ListPortfolioAccessRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListPortfolioAccessRequest::ListPortfolioAccessRequest(const ListPortfolioAccessRequest &other)
     : ServiceCatalogRequest(new ListPortfolioAccessRequestPrivate(*other.d_func(), this))
@@ -54,7 +51,7 @@ ListPortfolioAccessRequest::ListPortfolioAccessRequest(const ListPortfolioAccess
 }
 
 /*!
- * @brief  Constructs a new ListPortfolioAccessRequest object.
+ * Constructs a ListPortfolioAccessRequest object.
  */
 ListPortfolioAccessRequest::ListPortfolioAccessRequest()
     : ServiceCatalogRequest(new ListPortfolioAccessRequestPrivate(ServiceCatalogRequest::ListPortfolioAccessAction, this))
@@ -72,14 +69,9 @@ bool ListPortfolioAccessRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListPortfolioAccessResponse object.
+ * Returns a ListPortfolioAccessResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListPortfolioAccessResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ServiceCatalogClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListPortfolioAccessRequest::response(QNetworkReply * const reply) const
 {
@@ -87,20 +79,17 @@ QtAws::Core::AwsAbstractResponse * ListPortfolioAccessRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::ServiceCatalog::ListPortfolioAccessRequestPrivate
+ * \brief The ListPortfolioAccessRequestPrivate class provides private implementation for ListPortfolioAccessRequest.
+ * \internal
  *
- * @class  ListPortfolioAccessRequestPrivate
- *
- * @brief  Private implementation for ListPortfolioAccessRequest.
+ * \inmodule QtAwsServiceCatalog
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListPortfolioAccessRequestPrivate object.
- *
- * @param  action  ServiceCatalog action being performed.
- * @param  q       Pointer to this object's public ListPortfolioAccessRequest instance.
+ * Constructs a ListPortfolioAccessRequestPrivate object for ServiceCatalog \a action with,
+ * public implementation \a q.
  */
 ListPortfolioAccessRequestPrivate::ListPortfolioAccessRequestPrivate(
     const ServiceCatalogRequest::Action action, ListPortfolioAccessRequest * const q)
@@ -110,15 +99,10 @@ ListPortfolioAccessRequestPrivate::ListPortfolioAccessRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListPortfolioAccessRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListPortfolioAccessRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListPortfolioAccessRequest instance.
  */
 ListPortfolioAccessRequestPrivate::ListPortfolioAccessRequestPrivate(
     const ListPortfolioAccessRequestPrivate &other, ListPortfolioAccessRequest * const q)

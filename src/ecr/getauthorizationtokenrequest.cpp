@@ -27,10 +27,9 @@ namespace ECR {
 
 /*!
  * \class QtAws::ECR::GetAuthorizationTokenRequest
- *
  * \brief The GetAuthorizationTokenRequest class provides an interface for ECR GetAuthorizationToken requests.
  *
- * \ingroup ECR
+ * \inmodule QtAwsECR
  *
  *  Amazon Elastic Container Registry (Amazon ECR) is a managed Docker registry service. Customers can use the familiar
  *  Docker CLI to push, pull, and manage images. Amazon ECR provides a secure, scalable, and reliable registry. Amazon ECR
@@ -41,9 +40,7 @@ namespace ECR {
  */
 
 /*!
- * @brief  Constructs a new GetAuthorizationTokenRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetAuthorizationTokenRequest::GetAuthorizationTokenRequest(const GetAuthorizationTokenRequest &other)
     : ECRRequest(new GetAuthorizationTokenRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ GetAuthorizationTokenRequest::GetAuthorizationTokenRequest(const GetAuthorizatio
 }
 
 /*!
- * @brief  Constructs a new GetAuthorizationTokenRequest object.
+ * Constructs a GetAuthorizationTokenRequest object.
  */
 GetAuthorizationTokenRequest::GetAuthorizationTokenRequest()
     : ECRRequest(new GetAuthorizationTokenRequestPrivate(ECRRequest::GetAuthorizationTokenAction, this))
@@ -70,14 +67,9 @@ bool GetAuthorizationTokenRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetAuthorizationTokenResponse object.
+ * Returns a GetAuthorizationTokenResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetAuthorizationTokenResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ECRClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetAuthorizationTokenRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * GetAuthorizationTokenRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::ECR::GetAuthorizationTokenRequestPrivate
+ * \brief The GetAuthorizationTokenRequestPrivate class provides private implementation for GetAuthorizationTokenRequest.
+ * \internal
  *
- * @class  GetAuthorizationTokenRequestPrivate
- *
- * @brief  Private implementation for GetAuthorizationTokenRequest.
+ * \inmodule QtAwsECR
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetAuthorizationTokenRequestPrivate object.
- *
- * @param  action  ECR action being performed.
- * @param  q       Pointer to this object's public GetAuthorizationTokenRequest instance.
+ * Constructs a GetAuthorizationTokenRequestPrivate object for ECR \a action with,
+ * public implementation \a q.
  */
 GetAuthorizationTokenRequestPrivate::GetAuthorizationTokenRequestPrivate(
     const ECRRequest::Action action, GetAuthorizationTokenRequest * const q)
@@ -108,15 +97,10 @@ GetAuthorizationTokenRequestPrivate::GetAuthorizationTokenRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetAuthorizationTokenRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetAuthorizationTokenRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetAuthorizationTokenRequest instance.
  */
 GetAuthorizationTokenRequestPrivate::GetAuthorizationTokenRequestPrivate(
     const GetAuthorizationTokenRequestPrivate &other, GetAuthorizationTokenRequest * const q)

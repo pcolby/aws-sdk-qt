@@ -27,10 +27,9 @@ namespace CloudFormation {
 
 /*!
  * \class QtAws::CloudFormation::GetTemplateRequest
- *
  * \brief The GetTemplateRequest class provides an interface for CloudFormation GetTemplate requests.
  *
- * \ingroup CloudFormation
+ * \inmodule QtAwsCloudFormation
  *
  *  <fullname>AWS CloudFormation</fullname>
  * 
@@ -59,9 +58,7 @@ namespace CloudFormation {
  */
 
 /*!
- * @brief  Constructs a new GetTemplateRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetTemplateRequest::GetTemplateRequest(const GetTemplateRequest &other)
     : CloudFormationRequest(new GetTemplateRequestPrivate(*other.d_func(), this))
@@ -70,7 +67,7 @@ GetTemplateRequest::GetTemplateRequest(const GetTemplateRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetTemplateRequest object.
+ * Constructs a GetTemplateRequest object.
  */
 GetTemplateRequest::GetTemplateRequest()
     : CloudFormationRequest(new GetTemplateRequestPrivate(CloudFormationRequest::GetTemplateAction, this))
@@ -88,14 +85,9 @@ bool GetTemplateRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetTemplateResponse object.
+ * Returns a GetTemplateResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetTemplateResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudFormationClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetTemplateRequest::response(QNetworkReply * const reply) const
 {
@@ -103,20 +95,17 @@ QtAws::Core::AwsAbstractResponse * GetTemplateRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudFormation::GetTemplateRequestPrivate
+ * \brief The GetTemplateRequestPrivate class provides private implementation for GetTemplateRequest.
+ * \internal
  *
- * @class  GetTemplateRequestPrivate
- *
- * @brief  Private implementation for GetTemplateRequest.
+ * \inmodule QtAwsCloudFormation
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetTemplateRequestPrivate object.
- *
- * @param  action  CloudFormation action being performed.
- * @param  q       Pointer to this object's public GetTemplateRequest instance.
+ * Constructs a GetTemplateRequestPrivate object for CloudFormation \a action with,
+ * public implementation \a q.
  */
 GetTemplateRequestPrivate::GetTemplateRequestPrivate(
     const CloudFormationRequest::Action action, GetTemplateRequest * const q)
@@ -126,15 +115,10 @@ GetTemplateRequestPrivate::GetTemplateRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetTemplateRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetTemplateRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetTemplateRequest instance.
  */
 GetTemplateRequestPrivate::GetTemplateRequestPrivate(
     const GetTemplateRequestPrivate &other, GetTemplateRequest * const q)

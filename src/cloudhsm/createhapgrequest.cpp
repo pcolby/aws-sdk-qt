@@ -27,10 +27,9 @@ namespace CloudHSM {
 
 /*!
  * \class QtAws::CloudHSM::CreateHapgRequest
- *
  * \brief The CreateHapgRequest class provides an interface for CloudHSM CreateHapg requests.
  *
- * \ingroup CloudHSM
+ * \inmodule QtAwsCloudHSM
  *
  *  <fullname>AWS CloudHSM Service</fullname>
  * 
@@ -49,9 +48,7 @@ namespace CloudHSM {
  */
 
 /*!
- * @brief  Constructs a new CreateHapgRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateHapgRequest::CreateHapgRequest(const CreateHapgRequest &other)
     : CloudHSMRequest(new CreateHapgRequestPrivate(*other.d_func(), this))
@@ -60,7 +57,7 @@ CreateHapgRequest::CreateHapgRequest(const CreateHapgRequest &other)
 }
 
 /*!
- * @brief  Constructs a new CreateHapgRequest object.
+ * Constructs a CreateHapgRequest object.
  */
 CreateHapgRequest::CreateHapgRequest()
     : CloudHSMRequest(new CreateHapgRequestPrivate(CloudHSMRequest::CreateHapgAction, this))
@@ -78,14 +75,9 @@ bool CreateHapgRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateHapgResponse object.
+ * Returns a CreateHapgResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateHapgResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudHSMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateHapgRequest::response(QNetworkReply * const reply) const
 {
@@ -93,20 +85,17 @@ QtAws::Core::AwsAbstractResponse * CreateHapgRequest::response(QNetworkReply * c
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudHSM::CreateHapgRequestPrivate
+ * \brief The CreateHapgRequestPrivate class provides private implementation for CreateHapgRequest.
+ * \internal
  *
- * @class  CreateHapgRequestPrivate
- *
- * @brief  Private implementation for CreateHapgRequest.
+ * \inmodule QtAwsCloudHSM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateHapgRequestPrivate object.
- *
- * @param  action  CloudHSM action being performed.
- * @param  q       Pointer to this object's public CreateHapgRequest instance.
+ * Constructs a CreateHapgRequestPrivate object for CloudHSM \a action with,
+ * public implementation \a q.
  */
 CreateHapgRequestPrivate::CreateHapgRequestPrivate(
     const CloudHSMRequest::Action action, CreateHapgRequest * const q)
@@ -116,15 +105,10 @@ CreateHapgRequestPrivate::CreateHapgRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateHapgRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateHapgRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateHapgRequest instance.
  */
 CreateHapgRequestPrivate::CreateHapgRequestPrivate(
     const CreateHapgRequestPrivate &other, CreateHapgRequest * const q)

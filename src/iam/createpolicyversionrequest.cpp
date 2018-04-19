@@ -27,10 +27,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::CreatePolicyVersionRequest
- *
  * \brief The CreatePolicyVersionRequest class provides an interface for IAM CreatePolicyVersion requests.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -102,9 +101,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new CreatePolicyVersionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreatePolicyVersionRequest::CreatePolicyVersionRequest(const CreatePolicyVersionRequest &other)
     : IAMRequest(new CreatePolicyVersionRequestPrivate(*other.d_func(), this))
@@ -113,7 +110,7 @@ CreatePolicyVersionRequest::CreatePolicyVersionRequest(const CreatePolicyVersion
 }
 
 /*!
- * @brief  Constructs a new CreatePolicyVersionRequest object.
+ * Constructs a CreatePolicyVersionRequest object.
  */
 CreatePolicyVersionRequest::CreatePolicyVersionRequest()
     : IAMRequest(new CreatePolicyVersionRequestPrivate(IAMRequest::CreatePolicyVersionAction, this))
@@ -131,14 +128,9 @@ bool CreatePolicyVersionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreatePolicyVersionResponse object.
+ * Returns a CreatePolicyVersionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreatePolicyVersionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IAMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreatePolicyVersionRequest::response(QNetworkReply * const reply) const
 {
@@ -146,20 +138,17 @@ QtAws::Core::AwsAbstractResponse * CreatePolicyVersionRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::IAM::CreatePolicyVersionRequestPrivate
+ * \brief The CreatePolicyVersionRequestPrivate class provides private implementation for CreatePolicyVersionRequest.
+ * \internal
  *
- * @class  CreatePolicyVersionRequestPrivate
- *
- * @brief  Private implementation for CreatePolicyVersionRequest.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreatePolicyVersionRequestPrivate object.
- *
- * @param  action  IAM action being performed.
- * @param  q       Pointer to this object's public CreatePolicyVersionRequest instance.
+ * Constructs a CreatePolicyVersionRequestPrivate object for IAM \a action with,
+ * public implementation \a q.
  */
 CreatePolicyVersionRequestPrivate::CreatePolicyVersionRequestPrivate(
     const IAMRequest::Action action, CreatePolicyVersionRequest * const q)
@@ -169,15 +158,10 @@ CreatePolicyVersionRequestPrivate::CreatePolicyVersionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreatePolicyVersionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreatePolicyVersionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreatePolicyVersionRequest instance.
  */
 CreatePolicyVersionRequestPrivate::CreatePolicyVersionRequestPrivate(
     const CreatePolicyVersionRequestPrivate &other, CreatePolicyVersionRequest * const q)

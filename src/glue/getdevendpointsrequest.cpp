@@ -27,10 +27,9 @@ namespace Glue {
 
 /*!
  * \class QtAws::Glue::GetDevEndpointsRequest
- *
  * \brief The GetDevEndpointsRequest class provides an interface for Glue GetDevEndpoints requests.
  *
- * \ingroup Glue
+ * \inmodule QtAwsGlue
  *
  *  <fullname>AWS Glue</fullname>
  * 
@@ -40,9 +39,7 @@ namespace Glue {
  */
 
 /*!
- * @brief  Constructs a new GetDevEndpointsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetDevEndpointsRequest::GetDevEndpointsRequest(const GetDevEndpointsRequest &other)
     : GlueRequest(new GetDevEndpointsRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ GetDevEndpointsRequest::GetDevEndpointsRequest(const GetDevEndpointsRequest &oth
 }
 
 /*!
- * @brief  Constructs a new GetDevEndpointsRequest object.
+ * Constructs a GetDevEndpointsRequest object.
  */
 GetDevEndpointsRequest::GetDevEndpointsRequest()
     : GlueRequest(new GetDevEndpointsRequestPrivate(GlueRequest::GetDevEndpointsAction, this))
@@ -69,14 +66,9 @@ bool GetDevEndpointsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetDevEndpointsResponse object.
+ * Returns a GetDevEndpointsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetDevEndpointsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GlueClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetDevEndpointsRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * GetDevEndpointsRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::Glue::GetDevEndpointsRequestPrivate
+ * \brief The GetDevEndpointsRequestPrivate class provides private implementation for GetDevEndpointsRequest.
+ * \internal
  *
- * @class  GetDevEndpointsRequestPrivate
- *
- * @brief  Private implementation for GetDevEndpointsRequest.
+ * \inmodule QtAwsGlue
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetDevEndpointsRequestPrivate object.
- *
- * @param  action  Glue action being performed.
- * @param  q       Pointer to this object's public GetDevEndpointsRequest instance.
+ * Constructs a GetDevEndpointsRequestPrivate object for Glue \a action with,
+ * public implementation \a q.
  */
 GetDevEndpointsRequestPrivate::GetDevEndpointsRequestPrivate(
     const GlueRequest::Action action, GetDevEndpointsRequest * const q)
@@ -107,15 +96,10 @@ GetDevEndpointsRequestPrivate::GetDevEndpointsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetDevEndpointsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetDevEndpointsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetDevEndpointsRequest instance.
  */
 GetDevEndpointsRequestPrivate::GetDevEndpointsRequestPrivate(
     const GetDevEndpointsRequestPrivate &other, GetDevEndpointsRequest * const q)

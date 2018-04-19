@@ -27,10 +27,9 @@ namespace GameLift {
 
 /*!
  * \class QtAws::GameLift::ResolveAliasRequest
- *
  * \brief The ResolveAliasRequest class provides an interface for GameLift ResolveAlias requests.
  *
- * \ingroup GameLift
+ * \inmodule QtAwsGameLift
  *
  *  <fullname>Amazon GameLift Service</fullname>
  * 
@@ -473,9 +472,7 @@ namespace GameLift {
  */
 
 /*!
- * @brief  Constructs a new ResolveAliasRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ResolveAliasRequest::ResolveAliasRequest(const ResolveAliasRequest &other)
     : GameLiftRequest(new ResolveAliasRequestPrivate(*other.d_func(), this))
@@ -484,7 +481,7 @@ ResolveAliasRequest::ResolveAliasRequest(const ResolveAliasRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ResolveAliasRequest object.
+ * Constructs a ResolveAliasRequest object.
  */
 ResolveAliasRequest::ResolveAliasRequest()
     : GameLiftRequest(new ResolveAliasRequestPrivate(GameLiftRequest::ResolveAliasAction, this))
@@ -502,14 +499,9 @@ bool ResolveAliasRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ResolveAliasResponse object.
+ * Returns a ResolveAliasResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ResolveAliasResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GameLiftClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ResolveAliasRequest::response(QNetworkReply * const reply) const
 {
@@ -517,20 +509,17 @@ QtAws::Core::AwsAbstractResponse * ResolveAliasRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::GameLift::ResolveAliasRequestPrivate
+ * \brief The ResolveAliasRequestPrivate class provides private implementation for ResolveAliasRequest.
+ * \internal
  *
- * @class  ResolveAliasRequestPrivate
- *
- * @brief  Private implementation for ResolveAliasRequest.
+ * \inmodule QtAwsGameLift
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ResolveAliasRequestPrivate object.
- *
- * @param  action  GameLift action being performed.
- * @param  q       Pointer to this object's public ResolveAliasRequest instance.
+ * Constructs a ResolveAliasRequestPrivate object for GameLift \a action with,
+ * public implementation \a q.
  */
 ResolveAliasRequestPrivate::ResolveAliasRequestPrivate(
     const GameLiftRequest::Action action, ResolveAliasRequest * const q)
@@ -540,15 +529,10 @@ ResolveAliasRequestPrivate::ResolveAliasRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ResolveAliasRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ResolveAliasRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ResolveAliasRequest instance.
  */
 ResolveAliasRequestPrivate::ResolveAliasRequestPrivate(
     const ResolveAliasRequestPrivate &other, ResolveAliasRequest * const q)

@@ -27,10 +27,9 @@ namespace SWF {
 
 /*!
  * \class QtAws::SWF::DescribeWorkflowTypeRequest
- *
  * \brief The DescribeWorkflowTypeRequest class provides an interface for SWF DescribeWorkflowType requests.
  *
- * \ingroup SWF
+ * \inmodule QtAwsSWF
  *
  *  <fullname>Amazon Simple Workflow Service</fullname>
  * 
@@ -53,9 +52,7 @@ namespace SWF {
  */
 
 /*!
- * @brief  Constructs a new DescribeWorkflowTypeRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeWorkflowTypeRequest::DescribeWorkflowTypeRequest(const DescribeWorkflowTypeRequest &other)
     : SWFRequest(new DescribeWorkflowTypeRequestPrivate(*other.d_func(), this))
@@ -64,7 +61,7 @@ DescribeWorkflowTypeRequest::DescribeWorkflowTypeRequest(const DescribeWorkflowT
 }
 
 /*!
- * @brief  Constructs a new DescribeWorkflowTypeRequest object.
+ * Constructs a DescribeWorkflowTypeRequest object.
  */
 DescribeWorkflowTypeRequest::DescribeWorkflowTypeRequest()
     : SWFRequest(new DescribeWorkflowTypeRequestPrivate(SWFRequest::DescribeWorkflowTypeAction, this))
@@ -82,14 +79,9 @@ bool DescribeWorkflowTypeRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeWorkflowTypeResponse object.
+ * Returns a DescribeWorkflowTypeResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeWorkflowTypeResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SWFClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeWorkflowTypeRequest::response(QNetworkReply * const reply) const
 {
@@ -97,20 +89,17 @@ QtAws::Core::AwsAbstractResponse * DescribeWorkflowTypeRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::SWF::DescribeWorkflowTypeRequestPrivate
+ * \brief The DescribeWorkflowTypeRequestPrivate class provides private implementation for DescribeWorkflowTypeRequest.
+ * \internal
  *
- * @class  DescribeWorkflowTypeRequestPrivate
- *
- * @brief  Private implementation for DescribeWorkflowTypeRequest.
+ * \inmodule QtAwsSWF
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeWorkflowTypeRequestPrivate object.
- *
- * @param  action  SWF action being performed.
- * @param  q       Pointer to this object's public DescribeWorkflowTypeRequest instance.
+ * Constructs a DescribeWorkflowTypeRequestPrivate object for SWF \a action with,
+ * public implementation \a q.
  */
 DescribeWorkflowTypeRequestPrivate::DescribeWorkflowTypeRequestPrivate(
     const SWFRequest::Action action, DescribeWorkflowTypeRequest * const q)
@@ -120,15 +109,10 @@ DescribeWorkflowTypeRequestPrivate::DescribeWorkflowTypeRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeWorkflowTypeRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeWorkflowTypeRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeWorkflowTypeRequest instance.
  */
 DescribeWorkflowTypeRequestPrivate::DescribeWorkflowTypeRequestPrivate(
     const DescribeWorkflowTypeRequestPrivate &other, DescribeWorkflowTypeRequest * const q)

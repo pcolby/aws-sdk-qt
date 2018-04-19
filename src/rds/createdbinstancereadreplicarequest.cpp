@@ -27,10 +27,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::CreateDBInstanceReadReplicaRequest
- *
  * \brief The CreateDBInstanceReadReplicaRequest class provides an interface for RDS CreateDBInstanceReadReplica requests.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -101,9 +100,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new CreateDBInstanceReadReplicaRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateDBInstanceReadReplicaRequest::CreateDBInstanceReadReplicaRequest(const CreateDBInstanceReadReplicaRequest &other)
     : RDSRequest(new CreateDBInstanceReadReplicaRequestPrivate(*other.d_func(), this))
@@ -112,7 +109,7 @@ CreateDBInstanceReadReplicaRequest::CreateDBInstanceReadReplicaRequest(const Cre
 }
 
 /*!
- * @brief  Constructs a new CreateDBInstanceReadReplicaRequest object.
+ * Constructs a CreateDBInstanceReadReplicaRequest object.
  */
 CreateDBInstanceReadReplicaRequest::CreateDBInstanceReadReplicaRequest()
     : RDSRequest(new CreateDBInstanceReadReplicaRequestPrivate(RDSRequest::CreateDBInstanceReadReplicaAction, this))
@@ -130,14 +127,9 @@ bool CreateDBInstanceReadReplicaRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateDBInstanceReadReplicaResponse object.
+ * Returns a CreateDBInstanceReadReplicaResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateDBInstanceReadReplicaResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RDSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateDBInstanceReadReplicaRequest::response(QNetworkReply * const reply) const
 {
@@ -145,20 +137,17 @@ QtAws::Core::AwsAbstractResponse * CreateDBInstanceReadReplicaRequest::response(
 }
 
 /*!
- * @internal
+ * \class QtAws::RDS::CreateDBInstanceReadReplicaRequestPrivate
+ * \brief The CreateDBInstanceReadReplicaRequestPrivate class provides private implementation for CreateDBInstanceReadReplicaRequest.
+ * \internal
  *
- * @class  CreateDBInstanceReadReplicaRequestPrivate
- *
- * @brief  Private implementation for CreateDBInstanceReadReplicaRequest.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateDBInstanceReadReplicaRequestPrivate object.
- *
- * @param  action  RDS action being performed.
- * @param  q       Pointer to this object's public CreateDBInstanceReadReplicaRequest instance.
+ * Constructs a CreateDBInstanceReadReplicaRequestPrivate object for RDS \a action with,
+ * public implementation \a q.
  */
 CreateDBInstanceReadReplicaRequestPrivate::CreateDBInstanceReadReplicaRequestPrivate(
     const RDSRequest::Action action, CreateDBInstanceReadReplicaRequest * const q)
@@ -168,15 +157,10 @@ CreateDBInstanceReadReplicaRequestPrivate::CreateDBInstanceReadReplicaRequestPri
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateDBInstanceReadReplicaRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateDBInstanceReadReplicaRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateDBInstanceReadReplicaRequest instance.
  */
 CreateDBInstanceReadReplicaRequestPrivate::CreateDBInstanceReadReplicaRequestPrivate(
     const CreateDBInstanceReadReplicaRequestPrivate &other, CreateDBInstanceReadReplicaRequest * const q)

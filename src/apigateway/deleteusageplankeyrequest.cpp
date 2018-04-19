@@ -27,10 +27,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::DeleteUsagePlanKeyRequest
- *
  * \brief The DeleteUsagePlanKeyRequest class provides an interface for APIGateway DeleteUsagePlanKey requests.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -42,9 +41,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new DeleteUsagePlanKeyRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteUsagePlanKeyRequest::DeleteUsagePlanKeyRequest(const DeleteUsagePlanKeyRequest &other)
     : APIGatewayRequest(new DeleteUsagePlanKeyRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ DeleteUsagePlanKeyRequest::DeleteUsagePlanKeyRequest(const DeleteUsagePlanKeyReq
 }
 
 /*!
- * @brief  Constructs a new DeleteUsagePlanKeyRequest object.
+ * Constructs a DeleteUsagePlanKeyRequest object.
  */
 DeleteUsagePlanKeyRequest::DeleteUsagePlanKeyRequest()
     : APIGatewayRequest(new DeleteUsagePlanKeyRequestPrivate(APIGatewayRequest::DeleteUsagePlanKeyAction, this))
@@ -71,14 +68,9 @@ bool DeleteUsagePlanKeyRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteUsagePlanKeyResponse object.
+ * Returns a DeleteUsagePlanKeyResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteUsagePlanKeyResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  APIGatewayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteUsagePlanKeyRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * DeleteUsagePlanKeyRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::APIGateway::DeleteUsagePlanKeyRequestPrivate
+ * \brief The DeleteUsagePlanKeyRequestPrivate class provides private implementation for DeleteUsagePlanKeyRequest.
+ * \internal
  *
- * @class  DeleteUsagePlanKeyRequestPrivate
- *
- * @brief  Private implementation for DeleteUsagePlanKeyRequest.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteUsagePlanKeyRequestPrivate object.
- *
- * @param  action  APIGateway action being performed.
- * @param  q       Pointer to this object's public DeleteUsagePlanKeyRequest instance.
+ * Constructs a DeleteUsagePlanKeyRequestPrivate object for APIGateway \a action with,
+ * public implementation \a q.
  */
 DeleteUsagePlanKeyRequestPrivate::DeleteUsagePlanKeyRequestPrivate(
     const APIGatewayRequest::Action action, DeleteUsagePlanKeyRequest * const q)
@@ -109,15 +98,10 @@ DeleteUsagePlanKeyRequestPrivate::DeleteUsagePlanKeyRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteUsagePlanKeyRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteUsagePlanKeyRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteUsagePlanKeyRequest instance.
  */
 DeleteUsagePlanKeyRequestPrivate::DeleteUsagePlanKeyRequestPrivate(
     const DeleteUsagePlanKeyRequestPrivate &other, DeleteUsagePlanKeyRequest * const q)

@@ -25,16 +25,144 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::IoTRequest
- *
  * \brief The IoTRequest class provides an interface for IoT requests.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @brief  Constructs a new IoTRequest object.
+ * \enum IoTRequest::Action
  *
- * @param  action  The IoT action to request.
+ * This enum describes the actions that can be performed as IoT
+ * requests.
+ *
+ * \value AcceptCertificateTransferAction IoT AcceptCertificateTransfer action.
+ * \value AddThingToThingGroupAction IoT AddThingToThingGroup action.
+ * \value AssociateTargetsWithJobAction IoT AssociateTargetsWithJob action.
+ * \value AttachPolicyAction IoT AttachPolicy action.
+ * \value AttachPrincipalPolicyAction IoT AttachPrincipalPolicy action.
+ * \value AttachThingPrincipalAction IoT AttachThingPrincipal action.
+ * \value CancelCertificateTransferAction IoT CancelCertificateTransfer action.
+ * \value CancelJobAction IoT CancelJob action.
+ * \value ClearDefaultAuthorizerAction IoT ClearDefaultAuthorizer action.
+ * \value CreateAuthorizerAction IoT CreateAuthorizer action.
+ * \value CreateCertificateFromCsrAction IoT CreateCertificateFromCsr action.
+ * \value CreateJobAction IoT CreateJob action.
+ * \value CreateKeysAndCertificateAction IoT CreateKeysAndCertificate action.
+ * \value CreateOTAUpdateAction IoT CreateOTAUpdate action.
+ * \value CreatePolicyAction IoT CreatePolicy action.
+ * \value CreatePolicyVersionAction IoT CreatePolicyVersion action.
+ * \value CreateRoleAliasAction IoT CreateRoleAlias action.
+ * \value CreateStreamAction IoT CreateStream action.
+ * \value CreateThingAction IoT CreateThing action.
+ * \value CreateThingGroupAction IoT CreateThingGroup action.
+ * \value CreateThingTypeAction IoT CreateThingType action.
+ * \value CreateTopicRuleAction IoT CreateTopicRule action.
+ * \value DeleteAuthorizerAction IoT DeleteAuthorizer action.
+ * \value DeleteCACertificateAction IoT DeleteCACertificate action.
+ * \value DeleteCertificateAction IoT DeleteCertificate action.
+ * \value DeleteOTAUpdateAction IoT DeleteOTAUpdate action.
+ * \value DeletePolicyAction IoT DeletePolicy action.
+ * \value DeletePolicyVersionAction IoT DeletePolicyVersion action.
+ * \value DeleteRegistrationCodeAction IoT DeleteRegistrationCode action.
+ * \value DeleteRoleAliasAction IoT DeleteRoleAlias action.
+ * \value DeleteStreamAction IoT DeleteStream action.
+ * \value DeleteThingAction IoT DeleteThing action.
+ * \value DeleteThingGroupAction IoT DeleteThingGroup action.
+ * \value DeleteThingTypeAction IoT DeleteThingType action.
+ * \value DeleteTopicRuleAction IoT DeleteTopicRule action.
+ * \value DeleteV2LoggingLevelAction IoT DeleteV2LoggingLevel action.
+ * \value DeprecateThingTypeAction IoT DeprecateThingType action.
+ * \value DescribeAuthorizerAction IoT DescribeAuthorizer action.
+ * \value DescribeCACertificateAction IoT DescribeCACertificate action.
+ * \value DescribeCertificateAction IoT DescribeCertificate action.
+ * \value DescribeDefaultAuthorizerAction IoT DescribeDefaultAuthorizer action.
+ * \value DescribeEndpointAction IoT DescribeEndpoint action.
+ * \value DescribeEventConfigurationsAction IoT DescribeEventConfigurations action.
+ * \value DescribeIndexAction IoT DescribeIndex action.
+ * \value DescribeJobAction IoT DescribeJob action.
+ * \value DescribeJobExecutionAction IoT DescribeJobExecution action.
+ * \value DescribeRoleAliasAction IoT DescribeRoleAlias action.
+ * \value DescribeStreamAction IoT DescribeStream action.
+ * \value DescribeThingAction IoT DescribeThing action.
+ * \value DescribeThingGroupAction IoT DescribeThingGroup action.
+ * \value DescribeThingRegistrationTaskAction IoT DescribeThingRegistrationTask action.
+ * \value DescribeThingTypeAction IoT DescribeThingType action.
+ * \value DetachPolicyAction IoT DetachPolicy action.
+ * \value DetachPrincipalPolicyAction IoT DetachPrincipalPolicy action.
+ * \value DetachThingPrincipalAction IoT DetachThingPrincipal action.
+ * \value DisableTopicRuleAction IoT DisableTopicRule action.
+ * \value EnableTopicRuleAction IoT EnableTopicRule action.
+ * \value GetEffectivePoliciesAction IoT GetEffectivePolicies action.
+ * \value GetIndexingConfigurationAction IoT GetIndexingConfiguration action.
+ * \value GetJobDocumentAction IoT GetJobDocument action.
+ * \value GetLoggingOptionsAction IoT GetLoggingOptions action.
+ * \value GetOTAUpdateAction IoT GetOTAUpdate action.
+ * \value GetPolicyAction IoT GetPolicy action.
+ * \value GetPolicyVersionAction IoT GetPolicyVersion action.
+ * \value GetRegistrationCodeAction IoT GetRegistrationCode action.
+ * \value GetTopicRuleAction IoT GetTopicRule action.
+ * \value GetV2LoggingOptionsAction IoT GetV2LoggingOptions action.
+ * \value ListAttachedPoliciesAction IoT ListAttachedPolicies action.
+ * \value ListAuthorizersAction IoT ListAuthorizers action.
+ * \value ListCACertificatesAction IoT ListCACertificates action.
+ * \value ListCertificatesAction IoT ListCertificates action.
+ * \value ListCertificatesByCAAction IoT ListCertificatesByCA action.
+ * \value ListIndicesAction IoT ListIndices action.
+ * \value ListJobExecutionsForJobAction IoT ListJobExecutionsForJob action.
+ * \value ListJobExecutionsForThingAction IoT ListJobExecutionsForThing action.
+ * \value ListJobsAction IoT ListJobs action.
+ * \value ListOTAUpdatesAction IoT ListOTAUpdates action.
+ * \value ListOutgoingCertificatesAction IoT ListOutgoingCertificates action.
+ * \value ListPoliciesAction IoT ListPolicies action.
+ * \value ListPolicyPrincipalsAction IoT ListPolicyPrincipals action.
+ * \value ListPolicyVersionsAction IoT ListPolicyVersions action.
+ * \value ListPrincipalPoliciesAction IoT ListPrincipalPolicies action.
+ * \value ListPrincipalThingsAction IoT ListPrincipalThings action.
+ * \value ListRoleAliasesAction IoT ListRoleAliases action.
+ * \value ListStreamsAction IoT ListStreams action.
+ * \value ListTargetsForPolicyAction IoT ListTargetsForPolicy action.
+ * \value ListThingGroupsAction IoT ListThingGroups action.
+ * \value ListThingGroupsForThingAction IoT ListThingGroupsForThing action.
+ * \value ListThingPrincipalsAction IoT ListThingPrincipals action.
+ * \value ListThingRegistrationTaskReportsAction IoT ListThingRegistrationTaskReports action.
+ * \value ListThingRegistrationTasksAction IoT ListThingRegistrationTasks action.
+ * \value ListThingTypesAction IoT ListThingTypes action.
+ * \value ListThingsAction IoT ListThings action.
+ * \value ListThingsInThingGroupAction IoT ListThingsInThingGroup action.
+ * \value ListTopicRulesAction IoT ListTopicRules action.
+ * \value ListV2LoggingLevelsAction IoT ListV2LoggingLevels action.
+ * \value RegisterCACertificateAction IoT RegisterCACertificate action.
+ * \value RegisterCertificateAction IoT RegisterCertificate action.
+ * \value RegisterThingAction IoT RegisterThing action.
+ * \value RejectCertificateTransferAction IoT RejectCertificateTransfer action.
+ * \value RemoveThingFromThingGroupAction IoT RemoveThingFromThingGroup action.
+ * \value ReplaceTopicRuleAction IoT ReplaceTopicRule action.
+ * \value SearchIndexAction IoT SearchIndex action.
+ * \value SetDefaultAuthorizerAction IoT SetDefaultAuthorizer action.
+ * \value SetDefaultPolicyVersionAction IoT SetDefaultPolicyVersion action.
+ * \value SetLoggingOptionsAction IoT SetLoggingOptions action.
+ * \value SetV2LoggingLevelAction IoT SetV2LoggingLevel action.
+ * \value SetV2LoggingOptionsAction IoT SetV2LoggingOptions action.
+ * \value StartThingRegistrationTaskAction IoT StartThingRegistrationTask action.
+ * \value StopThingRegistrationTaskAction IoT StopThingRegistrationTask action.
+ * \value TestAuthorizationAction IoT TestAuthorization action.
+ * \value TestInvokeAuthorizerAction IoT TestInvokeAuthorizer action.
+ * \value TransferCertificateAction IoT TransferCertificate action.
+ * \value UpdateAuthorizerAction IoT UpdateAuthorizer action.
+ * \value UpdateCACertificateAction IoT UpdateCACertificate action.
+ * \value UpdateCertificateAction IoT UpdateCertificate action.
+ * \value UpdateEventConfigurationsAction IoT UpdateEventConfigurations action.
+ * \value UpdateIndexingConfigurationAction IoT UpdateIndexingConfiguration action.
+ * \value UpdateRoleAliasAction IoT UpdateRoleAlias action.
+ * \value UpdateStreamAction IoT UpdateStream action.
+ * \value UpdateThingAction IoT UpdateThing action.
+ * \value UpdateThingGroupAction IoT UpdateThingGroup action.
+ * \value UpdateThingGroupsForThingAction IoT UpdateThingGroupsForThing action.
+ */
+
+/*!
+ * Constructs a[n] IoTRequest object for IoT \a action.
  */
 IoTRequest::IoTRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new IoTRequestPrivate(action, this))
@@ -43,9 +171,7 @@ IoTRequest::IoTRequest(const Action action)
 }
 
 /*!
- * @brief  Constructs a new IoTRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 IoTRequest::IoTRequest(const IoTRequest &other)
     : QtAws::Core::AwsAbstractRequest(new IoTRequestPrivate(*other.d_func(), this))
@@ -54,13 +180,7 @@ IoTRequest::IoTRequest(const IoTRequest &other)
 }
 
 /*!
- * @brief  Assignment operator.
- *
- * Assigns \a other to \c this.
- *
- * @param  other  Instance to copy.
- *
- * @return  A reference to \c this.
+ * Sets the IoTRequest object to be equal to \a other.
  */
 IoTRequest& IoTRequest::operator=(const IoTRequest &other)
 {
@@ -72,14 +192,10 @@ IoTRequest& IoTRequest::operator=(const IoTRequest &other)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new IoTRequest object.
+ * Constructs aa IoTRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from IoTRequestPrivate.
- *
- * @param  d  Pointer to private data (aka D-Pointer).
  */
 IoTRequest::IoTRequest(IoTRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
@@ -87,7 +203,7 @@ IoTRequest::IoTRequest(IoTRequestPrivate * const d) : QtAws::Core::AwsAbstractRe
 }
 
 /*!
- * \brief Returns the IoT action to be performed by this request.
+ * Returns the IoT action to be performed by this request.
  */
 IoTRequest::Action IoTRequest::action() const
 {
@@ -96,7 +212,7 @@ IoTRequest::Action IoTRequest::action() const
 }
 
 /*!
- * \brief Returns the name of the IoT action to be performed by this request.
+ * Returns the name of the IoT action to be performed by this request.
  */
 QString IoTRequest::actionString() const
 {
@@ -104,7 +220,7 @@ QString IoTRequest::actionString() const
 }
 
 /*!
- * \brief Returns the IoT API version implemented by this request.
+ * Returns the IoT API version implemented by this request.
  */
 QString IoTRequest::apiVersion() const
 {
@@ -113,7 +229,7 @@ QString IoTRequest::apiVersion() const
 }
 
 /*!
- * @brief Set the IoT action to be performed by this request to \a action.
+ * Sets the IoT action to be performed by this request to \a action.
  */
 void IoTRequest::setAction(const Action action)
 {
@@ -122,7 +238,7 @@ void IoTRequest::setAction(const Action action)
 }
 
 /*!
- * Set the IoT API version to include in this request to \a version.
+ * Sets the IoT API version to include in this request to \a version.
  */
 void IoTRequest::setApiVersion(const QString &version)
 {
@@ -131,7 +247,7 @@ void IoTRequest::setApiVersion(const QString &version)
 }
 
 /*!
- * \brief Returns \c true if this request is the same as \a other.
+ * Returns \c true if this request is equal to \a other; \c false otherwise.
  *
  * Note, most derived *Request classes do not need to provider their own
  * implementations of this function, since most such request classes rely on
@@ -146,8 +262,8 @@ bool IoTRequest::operator==(const IoTRequest &other) const
             (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
-/*!
- * @brief  Check if \a queueName is a valid IoT queue name.
+/*
+ * Returns \c tue if \a queueName is a valid IoT queue name.
  *
  * @par From IoT FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
@@ -166,9 +282,8 @@ bool IoTRequest::operator==(const IoTRequest &other) const
 }*/
 
 /*!
- * \brief Removes the a \a name parameter from this request.
- *
- * Returns the count of paramters removed (typically \c 0 or \c 1).
+ * Removes the a \a name parameter from the request, then returns the number of
+ * paramters removed (typically \c 0 or \c 1).
  */
 int IoTRequest::clearParameter(const QString &name)
 {
@@ -177,7 +292,7 @@ int IoTRequest::clearParameter(const QString &name)
 }
 
 /*!
- * \brief Removes all parameters from this request.
+ * Removes all parameters from the request.
  */
 void IoTRequest::clearParameters()
 {
@@ -186,7 +301,7 @@ void IoTRequest::clearParameters()
 }
 
 /*!
- * \brief Returns the value of the \n name pararemter if set, otherwise \a defaultValue.
+ * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
 QVariant IoTRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
@@ -195,7 +310,7 @@ QVariant IoTRequest::parameter(const QString &name, const QVariant &defaultValue
 }
 
 /*!
- * \brief Returns a map of parameters included in this request.
+ * Returns the parameters included in this request.
  */
 const QVariantMap &IoTRequest::parameters() const
 {
@@ -204,7 +319,7 @@ const QVariantMap &IoTRequest::parameters() const
 }
 
 /*!
- * \brief Sets the \a name parameter to \a value.
+ * Sets the \a name parameter to \a value.
  */
 void IoTRequest::setParameter(const QString &name, const QVariant &value)
 {
@@ -213,9 +328,8 @@ void IoTRequest::setParameter(const QString &name, const QVariant &value)
 }
 
 /*!
- * \brief Sets the map of paramters for this request to \a parameters.
- *
- * Any request parameters set previously will be discarded.
+ * Sets the paramters for this request to \a parameters. Any request parameters
+ * set previously will be discarded.
  */
 void IoTRequest::setParameters(const QVariantMap &parameters)
 {
@@ -224,11 +338,12 @@ void IoTRequest::setParameters(const QVariantMap &parameters)
 }
 
 /*!
- * \brief Returns a network request for this IoT request using the given \a endpoint.
+ * Returns a network request for the IoT request using the given
+ * \a endpoint.
  *
- * This IoT implementation builds request URLs by combining the common query
- * parameters (such as Action and Version), with any that have been added (via
- * setParameter) by child classes.
+ * This IoT implementation builds request URLs by combining the
+ * common query parameters (such as Action and Version), with any that have
+ * been added (via setParameter) by child classes.
  */
 QNetworkRequest IoTRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -239,17 +354,16 @@ QNetworkRequest IoTRequest::unsignedRequest(const QUrl &endpoint) const
 }
 
 /*!
+ * \class QtAws::IoT::IoTRequestPrivate
+ * \brief The IoTRequestPrivate class provides private implementation for IoTRequest.
  * \internal
  *
- * \class  IoTRequestPrivate
- *
- * \brief  Private implementation for IoTRequest.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * \internal
- *
- * \brief Constructs a new IoTRequestPrivate object.
+ * Constructs a IoTRequestPrivate object for IoT \a action with,
+ * public implementation \a q.
  */
 IoTRequestPrivate::IoTRequestPrivate(const IoTRequest::Action action, IoTRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
@@ -258,9 +372,7 @@ IoTRequestPrivate::IoTRequestPrivate(const IoTRequest::Action action, IoTRequest
 }
 
 /*!
- * \internal
- *
- * \brief Constructs a new IoTRequestPrivate object, copying an existing one.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
@@ -276,15 +388,12 @@ IoTRequestPrivate::IoTRequestPrivate(const IoTRequestPrivate &other,
 }
 
 /*!
- * \internal
- *
- * \brief Returns a string representing \a action.
+ * Returns a string represention of \a action, or a null string if \a action is
+ * invalid.
  *
  * This function converts IoTRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the IoT service's Action
  * query parameters.
- *
- * @return A string representing \a action, or a null string if \a action is invalid.
  */
 QString IoTRequestPrivate::toString(const IoTRequest::Action &action)
 {

@@ -88,6 +88,9 @@
 /*!
  * \namespace QtAws::SNS
  * \brief The QtAws::SNS contains stuff...
+ *
+ * \inmodule QtAwsSNS
+ *
  * @todo Move this to a separate template file.
  */
 
@@ -151,7 +154,7 @@ SnsClient::SnsClient(
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * \a  AwsEndpoint::getEndpoint()
+ * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
 SnsClient::SnsClient(
     const QUrl &endpoint,

@@ -27,10 +27,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::DeleteThingRequest
- *
  * \brief The DeleteThingRequest class provides an interface for IoT DeleteThing requests.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -48,9 +47,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new DeleteThingRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteThingRequest::DeleteThingRequest(const DeleteThingRequest &other)
     : IoTRequest(new DeleteThingRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ DeleteThingRequest::DeleteThingRequest(const DeleteThingRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DeleteThingRequest object.
+ * Constructs a DeleteThingRequest object.
  */
 DeleteThingRequest::DeleteThingRequest()
     : IoTRequest(new DeleteThingRequestPrivate(IoTRequest::DeleteThingAction, this))
@@ -77,14 +74,9 @@ bool DeleteThingRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteThingResponse object.
+ * Returns a DeleteThingResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteThingResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IoTClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteThingRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * DeleteThingRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::IoT::DeleteThingRequestPrivate
+ * \brief The DeleteThingRequestPrivate class provides private implementation for DeleteThingRequest.
+ * \internal
  *
- * @class  DeleteThingRequestPrivate
- *
- * @brief  Private implementation for DeleteThingRequest.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteThingRequestPrivate object.
- *
- * @param  action  IoT action being performed.
- * @param  q       Pointer to this object's public DeleteThingRequest instance.
+ * Constructs a DeleteThingRequestPrivate object for IoT \a action with,
+ * public implementation \a q.
  */
 DeleteThingRequestPrivate::DeleteThingRequestPrivate(
     const IoTRequest::Action action, DeleteThingRequest * const q)
@@ -115,15 +104,10 @@ DeleteThingRequestPrivate::DeleteThingRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteThingRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteThingRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteThingRequest instance.
  */
 DeleteThingRequestPrivate::DeleteThingRequestPrivate(
     const DeleteThingRequestPrivate &other, DeleteThingRequest * const q)

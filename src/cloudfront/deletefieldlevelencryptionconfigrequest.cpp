@@ -27,10 +27,9 @@ namespace CloudFront {
 
 /*!
  * \class QtAws::CloudFront::DeleteFieldLevelEncryptionConfigRequest
- *
  * \brief The DeleteFieldLevelEncryptionConfigRequest class provides an interface for CloudFront DeleteFieldLevelEncryptionConfig requests.
  *
- * \ingroup CloudFront
+ * \inmodule QtAwsCloudFront
  *
  *  <fullname>Amazon CloudFront</fullname>
  * 
@@ -42,9 +41,7 @@ namespace CloudFront {
  */
 
 /*!
- * @brief  Constructs a new DeleteFieldLevelEncryptionConfigRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteFieldLevelEncryptionConfigRequest::DeleteFieldLevelEncryptionConfigRequest(const DeleteFieldLevelEncryptionConfigRequest &other)
     : CloudFrontRequest(new DeleteFieldLevelEncryptionConfigRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ DeleteFieldLevelEncryptionConfigRequest::DeleteFieldLevelEncryptionConfigRequest
 }
 
 /*!
- * @brief  Constructs a new DeleteFieldLevelEncryptionConfigRequest object.
+ * Constructs a DeleteFieldLevelEncryptionConfigRequest object.
  */
 DeleteFieldLevelEncryptionConfigRequest::DeleteFieldLevelEncryptionConfigRequest()
     : CloudFrontRequest(new DeleteFieldLevelEncryptionConfigRequestPrivate(CloudFrontRequest::DeleteFieldLevelEncryptionConfigAction, this))
@@ -71,14 +68,9 @@ bool DeleteFieldLevelEncryptionConfigRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteFieldLevelEncryptionConfigResponse object.
+ * Returns a DeleteFieldLevelEncryptionConfigResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteFieldLevelEncryptionConfigResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudFrontClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteFieldLevelEncryptionConfigRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * DeleteFieldLevelEncryptionConfigRequest::resp
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudFront::DeleteFieldLevelEncryptionConfigRequestPrivate
+ * \brief The DeleteFieldLevelEncryptionConfigRequestPrivate class provides private implementation for DeleteFieldLevelEncryptionConfigRequest.
+ * \internal
  *
- * @class  DeleteFieldLevelEncryptionConfigRequestPrivate
- *
- * @brief  Private implementation for DeleteFieldLevelEncryptionConfigRequest.
+ * \inmodule QtAwsCloudFront
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteFieldLevelEncryptionConfigRequestPrivate object.
- *
- * @param  action  CloudFront action being performed.
- * @param  q       Pointer to this object's public DeleteFieldLevelEncryptionConfigRequest instance.
+ * Constructs a DeleteFieldLevelEncryptionConfigRequestPrivate object for CloudFront \a action with,
+ * public implementation \a q.
  */
 DeleteFieldLevelEncryptionConfigRequestPrivate::DeleteFieldLevelEncryptionConfigRequestPrivate(
     const CloudFrontRequest::Action action, DeleteFieldLevelEncryptionConfigRequest * const q)
@@ -109,15 +98,10 @@ DeleteFieldLevelEncryptionConfigRequestPrivate::DeleteFieldLevelEncryptionConfig
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteFieldLevelEncryptionConfigRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteFieldLevelEncryptionConfigRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteFieldLevelEncryptionConfigRequest instance.
  */
 DeleteFieldLevelEncryptionConfigRequestPrivate::DeleteFieldLevelEncryptionConfigRequestPrivate(
     const DeleteFieldLevelEncryptionConfigRequestPrivate &other, DeleteFieldLevelEncryptionConfigRequest * const q)

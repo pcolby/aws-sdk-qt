@@ -27,10 +27,9 @@ namespace DatabaseMigrationService {
 
 /*!
  * \class QtAws::DatabaseMigrationService::DescribeOrderableReplicationInstancesRequest
- *
  * \brief The DescribeOrderableReplicationInstancesRequest class provides an interface for DatabaseMigrationService DescribeOrderableReplicationInstances requests.
  *
- * \ingroup DatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigrationService
  *
  *  <fullname>AWS Database Migration Service</fullname>
  * 
@@ -48,9 +47,7 @@ namespace DatabaseMigrationService {
  */
 
 /*!
- * @brief  Constructs a new DescribeOrderableReplicationInstancesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeOrderableReplicationInstancesRequest::DescribeOrderableReplicationInstancesRequest(const DescribeOrderableReplicationInstancesRequest &other)
     : DatabaseMigrationServiceRequest(new DescribeOrderableReplicationInstancesRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ DescribeOrderableReplicationInstancesRequest::DescribeOrderableReplicationInstan
 }
 
 /*!
- * @brief  Constructs a new DescribeOrderableReplicationInstancesRequest object.
+ * Constructs a DescribeOrderableReplicationInstancesRequest object.
  */
 DescribeOrderableReplicationInstancesRequest::DescribeOrderableReplicationInstancesRequest()
     : DatabaseMigrationServiceRequest(new DescribeOrderableReplicationInstancesRequestPrivate(DatabaseMigrationServiceRequest::DescribeOrderableReplicationInstancesAction, this))
@@ -77,14 +74,9 @@ bool DescribeOrderableReplicationInstancesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeOrderableReplicationInstancesResponse object.
+ * Returns a DescribeOrderableReplicationInstancesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeOrderableReplicationInstancesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DatabaseMigrationServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeOrderableReplicationInstancesRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * DescribeOrderableReplicationInstancesRequest:
 }
 
 /*!
- * @internal
+ * \class QtAws::DatabaseMigrationService::DescribeOrderableReplicationInstancesRequestPrivate
+ * \brief The DescribeOrderableReplicationInstancesRequestPrivate class provides private implementation for DescribeOrderableReplicationInstancesRequest.
+ * \internal
  *
- * @class  DescribeOrderableReplicationInstancesRequestPrivate
- *
- * @brief  Private implementation for DescribeOrderableReplicationInstancesRequest.
+ * \inmodule QtAwsDatabaseMigrationService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeOrderableReplicationInstancesRequestPrivate object.
- *
- * @param  action  DatabaseMigrationService action being performed.
- * @param  q       Pointer to this object's public DescribeOrderableReplicationInstancesRequest instance.
+ * Constructs a DescribeOrderableReplicationInstancesRequestPrivate object for DatabaseMigrationService \a action with,
+ * public implementation \a q.
  */
 DescribeOrderableReplicationInstancesRequestPrivate::DescribeOrderableReplicationInstancesRequestPrivate(
     const DatabaseMigrationServiceRequest::Action action, DescribeOrderableReplicationInstancesRequest * const q)
@@ -115,15 +104,10 @@ DescribeOrderableReplicationInstancesRequestPrivate::DescribeOrderableReplicatio
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeOrderableReplicationInstancesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeOrderableReplicationInstancesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeOrderableReplicationInstancesRequest instance.
  */
 DescribeOrderableReplicationInstancesRequestPrivate::DescribeOrderableReplicationInstancesRequestPrivate(
     const DescribeOrderableReplicationInstancesRequestPrivate &other, DescribeOrderableReplicationInstancesRequest * const q)

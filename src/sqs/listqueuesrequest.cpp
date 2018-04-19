@@ -27,10 +27,9 @@ namespace SQS {
 
 /*!
  * \class QtAws::SQS::ListQueuesRequest
- *
  * \brief The ListQueuesRequest class provides an interface for SQS ListQueues requests.
  *
- * \ingroup SQS
+ * \inmodule QtAwsSQS
  *
  *  Welcome to the <i>Amazon Simple Queue Service API
  * 
@@ -103,9 +102,7 @@ namespace SQS {
  */
 
 /*!
- * @brief  Constructs a new ListQueuesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListQueuesRequest::ListQueuesRequest(const ListQueuesRequest &other)
     : SQSRequest(new ListQueuesRequestPrivate(*other.d_func(), this))
@@ -114,7 +111,7 @@ ListQueuesRequest::ListQueuesRequest(const ListQueuesRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ListQueuesRequest object.
+ * Constructs a ListQueuesRequest object.
  */
 ListQueuesRequest::ListQueuesRequest()
     : SQSRequest(new ListQueuesRequestPrivate(SQSRequest::ListQueuesAction, this))
@@ -132,14 +129,9 @@ bool ListQueuesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListQueuesResponse object.
+ * Returns a ListQueuesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListQueuesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SQSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListQueuesRequest::response(QNetworkReply * const reply) const
 {
@@ -147,20 +139,17 @@ QtAws::Core::AwsAbstractResponse * ListQueuesRequest::response(QNetworkReply * c
 }
 
 /*!
- * @internal
+ * \class QtAws::SQS::ListQueuesRequestPrivate
+ * \brief The ListQueuesRequestPrivate class provides private implementation for ListQueuesRequest.
+ * \internal
  *
- * @class  ListQueuesRequestPrivate
- *
- * @brief  Private implementation for ListQueuesRequest.
+ * \inmodule QtAwsSQS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListQueuesRequestPrivate object.
- *
- * @param  action  SQS action being performed.
- * @param  q       Pointer to this object's public ListQueuesRequest instance.
+ * Constructs a ListQueuesRequestPrivate object for SQS \a action with,
+ * public implementation \a q.
  */
 ListQueuesRequestPrivate::ListQueuesRequestPrivate(
     const SQSRequest::Action action, ListQueuesRequest * const q)
@@ -170,15 +159,10 @@ ListQueuesRequestPrivate::ListQueuesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListQueuesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListQueuesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListQueuesRequest instance.
  */
 ListQueuesRequestPrivate::ListQueuesRequestPrivate(
     const ListQueuesRequestPrivate &other, ListQueuesRequest * const q)

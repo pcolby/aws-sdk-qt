@@ -27,10 +27,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::DescribeDBLogFilesRequest
- *
  * \brief The DescribeDBLogFilesRequest class provides an interface for RDS DescribeDBLogFiles requests.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -101,9 +100,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new DescribeDBLogFilesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeDBLogFilesRequest::DescribeDBLogFilesRequest(const DescribeDBLogFilesRequest &other)
     : RDSRequest(new DescribeDBLogFilesRequestPrivate(*other.d_func(), this))
@@ -112,7 +109,7 @@ DescribeDBLogFilesRequest::DescribeDBLogFilesRequest(const DescribeDBLogFilesReq
 }
 
 /*!
- * @brief  Constructs a new DescribeDBLogFilesRequest object.
+ * Constructs a DescribeDBLogFilesRequest object.
  */
 DescribeDBLogFilesRequest::DescribeDBLogFilesRequest()
     : RDSRequest(new DescribeDBLogFilesRequestPrivate(RDSRequest::DescribeDBLogFilesAction, this))
@@ -130,14 +127,9 @@ bool DescribeDBLogFilesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeDBLogFilesResponse object.
+ * Returns a DescribeDBLogFilesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeDBLogFilesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RDSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeDBLogFilesRequest::response(QNetworkReply * const reply) const
 {
@@ -145,20 +137,17 @@ QtAws::Core::AwsAbstractResponse * DescribeDBLogFilesRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::RDS::DescribeDBLogFilesRequestPrivate
+ * \brief The DescribeDBLogFilesRequestPrivate class provides private implementation for DescribeDBLogFilesRequest.
+ * \internal
  *
- * @class  DescribeDBLogFilesRequestPrivate
- *
- * @brief  Private implementation for DescribeDBLogFilesRequest.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeDBLogFilesRequestPrivate object.
- *
- * @param  action  RDS action being performed.
- * @param  q       Pointer to this object's public DescribeDBLogFilesRequest instance.
+ * Constructs a DescribeDBLogFilesRequestPrivate object for RDS \a action with,
+ * public implementation \a q.
  */
 DescribeDBLogFilesRequestPrivate::DescribeDBLogFilesRequestPrivate(
     const RDSRequest::Action action, DescribeDBLogFilesRequest * const q)
@@ -168,15 +157,10 @@ DescribeDBLogFilesRequestPrivate::DescribeDBLogFilesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeDBLogFilesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeDBLogFilesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeDBLogFilesRequest instance.
  */
 DescribeDBLogFilesRequestPrivate::DescribeDBLogFilesRequestPrivate(
     const DescribeDBLogFilesRequestPrivate &other, DescribeDBLogFilesRequest * const q)

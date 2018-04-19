@@ -27,10 +27,9 @@ namespace Budgets {
 
 /*!
  * \class QtAws::Budgets::DescribeSubscribersForNotificationRequest
- *
  * \brief The DescribeSubscribersForNotificationRequest class provides an interface for Budgets DescribeSubscribersForNotification requests.
  *
- * \ingroup Budgets
+ * \inmodule QtAwsBudgets
  *
  *  Budgets enable you to plan your service usage, service costs, and your RI utilization. You can also track how close your
  *  plan is to your budgeted amount or to the free tier limits. Budgets provide you with a quick way to see your
@@ -75,9 +74,7 @@ namespace Budgets {
  */
 
 /*!
- * @brief  Constructs a new DescribeSubscribersForNotificationRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeSubscribersForNotificationRequest::DescribeSubscribersForNotificationRequest(const DescribeSubscribersForNotificationRequest &other)
     : BudgetsRequest(new DescribeSubscribersForNotificationRequestPrivate(*other.d_func(), this))
@@ -86,7 +83,7 @@ DescribeSubscribersForNotificationRequest::DescribeSubscribersForNotificationReq
 }
 
 /*!
- * @brief  Constructs a new DescribeSubscribersForNotificationRequest object.
+ * Constructs a DescribeSubscribersForNotificationRequest object.
  */
 DescribeSubscribersForNotificationRequest::DescribeSubscribersForNotificationRequest()
     : BudgetsRequest(new DescribeSubscribersForNotificationRequestPrivate(BudgetsRequest::DescribeSubscribersForNotificationAction, this))
@@ -104,14 +101,9 @@ bool DescribeSubscribersForNotificationRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeSubscribersForNotificationResponse object.
+ * Returns a DescribeSubscribersForNotificationResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeSubscribersForNotificationResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  BudgetsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeSubscribersForNotificationRequest::response(QNetworkReply * const reply) const
 {
@@ -119,20 +111,17 @@ QtAws::Core::AwsAbstractResponse * DescribeSubscribersForNotificationRequest::re
 }
 
 /*!
- * @internal
+ * \class QtAws::Budgets::DescribeSubscribersForNotificationRequestPrivate
+ * \brief The DescribeSubscribersForNotificationRequestPrivate class provides private implementation for DescribeSubscribersForNotificationRequest.
+ * \internal
  *
- * @class  DescribeSubscribersForNotificationRequestPrivate
- *
- * @brief  Private implementation for DescribeSubscribersForNotificationRequest.
+ * \inmodule QtAwsBudgets
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeSubscribersForNotificationRequestPrivate object.
- *
- * @param  action  Budgets action being performed.
- * @param  q       Pointer to this object's public DescribeSubscribersForNotificationRequest instance.
+ * Constructs a DescribeSubscribersForNotificationRequestPrivate object for Budgets \a action with,
+ * public implementation \a q.
  */
 DescribeSubscribersForNotificationRequestPrivate::DescribeSubscribersForNotificationRequestPrivate(
     const BudgetsRequest::Action action, DescribeSubscribersForNotificationRequest * const q)
@@ -142,15 +131,10 @@ DescribeSubscribersForNotificationRequestPrivate::DescribeSubscribersForNotifica
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeSubscribersForNotificationRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeSubscribersForNotificationRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeSubscribersForNotificationRequest instance.
  */
 DescribeSubscribersForNotificationRequestPrivate::DescribeSubscribersForNotificationRequestPrivate(
     const DescribeSubscribersForNotificationRequestPrivate &other, DescribeSubscribersForNotificationRequest * const q)

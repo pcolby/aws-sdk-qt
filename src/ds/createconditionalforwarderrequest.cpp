@@ -27,10 +27,9 @@ namespace DirectoryService {
 
 /*!
  * \class QtAws::DirectoryService::CreateConditionalForwarderRequest
- *
  * \brief The CreateConditionalForwarderRequest class provides an interface for DirectoryService CreateConditionalForwarder requests.
  *
- * \ingroup DirectoryService
+ * \inmodule QtAwsDirectoryService
  *
  *  <fullname>AWS Directory Service</fullname>
  * 
@@ -51,9 +50,7 @@ namespace DirectoryService {
  */
 
 /*!
- * @brief  Constructs a new CreateConditionalForwarderRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateConditionalForwarderRequest::CreateConditionalForwarderRequest(const CreateConditionalForwarderRequest &other)
     : DirectoryServiceRequest(new CreateConditionalForwarderRequestPrivate(*other.d_func(), this))
@@ -62,7 +59,7 @@ CreateConditionalForwarderRequest::CreateConditionalForwarderRequest(const Creat
 }
 
 /*!
- * @brief  Constructs a new CreateConditionalForwarderRequest object.
+ * Constructs a CreateConditionalForwarderRequest object.
  */
 CreateConditionalForwarderRequest::CreateConditionalForwarderRequest()
     : DirectoryServiceRequest(new CreateConditionalForwarderRequestPrivate(DirectoryServiceRequest::CreateConditionalForwarderAction, this))
@@ -80,14 +77,9 @@ bool CreateConditionalForwarderRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateConditionalForwarderResponse object.
+ * Returns a CreateConditionalForwarderResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateConditionalForwarderResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DirectoryServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateConditionalForwarderRequest::response(QNetworkReply * const reply) const
 {
@@ -95,20 +87,17 @@ QtAws::Core::AwsAbstractResponse * CreateConditionalForwarderRequest::response(Q
 }
 
 /*!
- * @internal
+ * \class QtAws::DirectoryService::CreateConditionalForwarderRequestPrivate
+ * \brief The CreateConditionalForwarderRequestPrivate class provides private implementation for CreateConditionalForwarderRequest.
+ * \internal
  *
- * @class  CreateConditionalForwarderRequestPrivate
- *
- * @brief  Private implementation for CreateConditionalForwarderRequest.
+ * \inmodule QtAwsDirectoryService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateConditionalForwarderRequestPrivate object.
- *
- * @param  action  DirectoryService action being performed.
- * @param  q       Pointer to this object's public CreateConditionalForwarderRequest instance.
+ * Constructs a CreateConditionalForwarderRequestPrivate object for DirectoryService \a action with,
+ * public implementation \a q.
  */
 CreateConditionalForwarderRequestPrivate::CreateConditionalForwarderRequestPrivate(
     const DirectoryServiceRequest::Action action, CreateConditionalForwarderRequest * const q)
@@ -118,15 +107,10 @@ CreateConditionalForwarderRequestPrivate::CreateConditionalForwarderRequestPriva
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateConditionalForwarderRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateConditionalForwarderRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateConditionalForwarderRequest instance.
  */
 CreateConditionalForwarderRequestPrivate::CreateConditionalForwarderRequestPrivate(
     const CreateConditionalForwarderRequestPrivate &other, CreateConditionalForwarderRequest * const q)

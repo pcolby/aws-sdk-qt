@@ -27,10 +27,9 @@ namespace DatabaseMigrationService {
 
 /*!
  * \class QtAws::DatabaseMigrationService::DescribeTableStatisticsRequest
- *
  * \brief The DescribeTableStatisticsRequest class provides an interface for DatabaseMigrationService DescribeTableStatistics requests.
  *
- * \ingroup DatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigrationService
  *
  *  <fullname>AWS Database Migration Service</fullname>
  * 
@@ -48,9 +47,7 @@ namespace DatabaseMigrationService {
  */
 
 /*!
- * @brief  Constructs a new DescribeTableStatisticsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeTableStatisticsRequest::DescribeTableStatisticsRequest(const DescribeTableStatisticsRequest &other)
     : DatabaseMigrationServiceRequest(new DescribeTableStatisticsRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ DescribeTableStatisticsRequest::DescribeTableStatisticsRequest(const DescribeTab
 }
 
 /*!
- * @brief  Constructs a new DescribeTableStatisticsRequest object.
+ * Constructs a DescribeTableStatisticsRequest object.
  */
 DescribeTableStatisticsRequest::DescribeTableStatisticsRequest()
     : DatabaseMigrationServiceRequest(new DescribeTableStatisticsRequestPrivate(DatabaseMigrationServiceRequest::DescribeTableStatisticsAction, this))
@@ -77,14 +74,9 @@ bool DescribeTableStatisticsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeTableStatisticsResponse object.
+ * Returns a DescribeTableStatisticsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeTableStatisticsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DatabaseMigrationServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeTableStatisticsRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * DescribeTableStatisticsRequest::response(QNet
 }
 
 /*!
- * @internal
+ * \class QtAws::DatabaseMigrationService::DescribeTableStatisticsRequestPrivate
+ * \brief The DescribeTableStatisticsRequestPrivate class provides private implementation for DescribeTableStatisticsRequest.
+ * \internal
  *
- * @class  DescribeTableStatisticsRequestPrivate
- *
- * @brief  Private implementation for DescribeTableStatisticsRequest.
+ * \inmodule QtAwsDatabaseMigrationService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeTableStatisticsRequestPrivate object.
- *
- * @param  action  DatabaseMigrationService action being performed.
- * @param  q       Pointer to this object's public DescribeTableStatisticsRequest instance.
+ * Constructs a DescribeTableStatisticsRequestPrivate object for DatabaseMigrationService \a action with,
+ * public implementation \a q.
  */
 DescribeTableStatisticsRequestPrivate::DescribeTableStatisticsRequestPrivate(
     const DatabaseMigrationServiceRequest::Action action, DescribeTableStatisticsRequest * const q)
@@ -115,15 +104,10 @@ DescribeTableStatisticsRequestPrivate::DescribeTableStatisticsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeTableStatisticsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeTableStatisticsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeTableStatisticsRequest instance.
  */
 DescribeTableStatisticsRequestPrivate::DescribeTableStatisticsRequestPrivate(
     const DescribeTableStatisticsRequestPrivate &other, DescribeTableStatisticsRequest * const q)

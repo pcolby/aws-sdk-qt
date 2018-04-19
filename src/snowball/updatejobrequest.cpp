@@ -27,10 +27,9 @@ namespace Snowball {
 
 /*!
  * \class QtAws::Snowball::UpdateJobRequest
- *
  * \brief The UpdateJobRequest class provides an interface for Snowball UpdateJob requests.
  *
- * \ingroup Snowball
+ * \inmodule QtAwsSnowball
  *
  *  AWS Snowball is a petabyte-scale data transport solution that uses secure appliances to transfer large amounts of data
  *  between your on-premises data centers and Amazon Simple Storage Service (Amazon S3). The Snowball commands described
@@ -43,9 +42,7 @@ namespace Snowball {
  */
 
 /*!
- * @brief  Constructs a new UpdateJobRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateJobRequest::UpdateJobRequest(const UpdateJobRequest &other)
     : SnowballRequest(new UpdateJobRequestPrivate(*other.d_func(), this))
@@ -54,7 +51,7 @@ UpdateJobRequest::UpdateJobRequest(const UpdateJobRequest &other)
 }
 
 /*!
- * @brief  Constructs a new UpdateJobRequest object.
+ * Constructs a UpdateJobRequest object.
  */
 UpdateJobRequest::UpdateJobRequest()
     : SnowballRequest(new UpdateJobRequestPrivate(SnowballRequest::UpdateJobAction, this))
@@ -72,14 +69,9 @@ bool UpdateJobRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateJobResponse object.
+ * Returns a UpdateJobResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateJobResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SnowballClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateJobRequest::response(QNetworkReply * const reply) const
 {
@@ -87,20 +79,17 @@ QtAws::Core::AwsAbstractResponse * UpdateJobRequest::response(QNetworkReply * co
 }
 
 /*!
- * @internal
+ * \class QtAws::Snowball::UpdateJobRequestPrivate
+ * \brief The UpdateJobRequestPrivate class provides private implementation for UpdateJobRequest.
+ * \internal
  *
- * @class  UpdateJobRequestPrivate
- *
- * @brief  Private implementation for UpdateJobRequest.
+ * \inmodule QtAwsSnowball
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateJobRequestPrivate object.
- *
- * @param  action  Snowball action being performed.
- * @param  q       Pointer to this object's public UpdateJobRequest instance.
+ * Constructs a UpdateJobRequestPrivate object for Snowball \a action with,
+ * public implementation \a q.
  */
 UpdateJobRequestPrivate::UpdateJobRequestPrivate(
     const SnowballRequest::Action action, UpdateJobRequest * const q)
@@ -110,15 +99,10 @@ UpdateJobRequestPrivate::UpdateJobRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateJobRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateJobRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateJobRequest instance.
  */
 UpdateJobRequestPrivate::UpdateJobRequestPrivate(
     const UpdateJobRequestPrivate &other, UpdateJobRequest * const q)

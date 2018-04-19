@@ -27,10 +27,9 @@ namespace Rekognition {
 
 /*!
  * \class QtAws::Rekognition::StartStreamProcessorRequest
- *
  * \brief The StartStreamProcessorRequest class provides an interface for Rekognition StartStreamProcessor requests.
  *
- * \ingroup Rekognition
+ * \inmodule QtAwsRekognition
  *
  *  This is the Amazon Rekognition API
  *
@@ -38,9 +37,7 @@ namespace Rekognition {
  */
 
 /*!
- * @brief  Constructs a new StartStreamProcessorRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 StartStreamProcessorRequest::StartStreamProcessorRequest(const StartStreamProcessorRequest &other)
     : RekognitionRequest(new StartStreamProcessorRequestPrivate(*other.d_func(), this))
@@ -49,7 +46,7 @@ StartStreamProcessorRequest::StartStreamProcessorRequest(const StartStreamProces
 }
 
 /*!
- * @brief  Constructs a new StartStreamProcessorRequest object.
+ * Constructs a StartStreamProcessorRequest object.
  */
 StartStreamProcessorRequest::StartStreamProcessorRequest()
     : RekognitionRequest(new StartStreamProcessorRequestPrivate(RekognitionRequest::StartStreamProcessorAction, this))
@@ -67,14 +64,9 @@ bool StartStreamProcessorRequest::isValid() const
 
 
 /*!
- * @brief  Construct an StartStreamProcessorResponse object.
+ * Returns a StartStreamProcessorResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An StartStreamProcessorResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RekognitionClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * StartStreamProcessorRequest::response(QNetworkReply * const reply) const
 {
@@ -82,20 +74,17 @@ QtAws::Core::AwsAbstractResponse * StartStreamProcessorRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::Rekognition::StartStreamProcessorRequestPrivate
+ * \brief The StartStreamProcessorRequestPrivate class provides private implementation for StartStreamProcessorRequest.
+ * \internal
  *
- * @class  StartStreamProcessorRequestPrivate
- *
- * @brief  Private implementation for StartStreamProcessorRequest.
+ * \inmodule QtAwsRekognition
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new StartStreamProcessorRequestPrivate object.
- *
- * @param  action  Rekognition action being performed.
- * @param  q       Pointer to this object's public StartStreamProcessorRequest instance.
+ * Constructs a StartStreamProcessorRequestPrivate object for Rekognition \a action with,
+ * public implementation \a q.
  */
 StartStreamProcessorRequestPrivate::StartStreamProcessorRequestPrivate(
     const RekognitionRequest::Action action, StartStreamProcessorRequest * const q)
@@ -105,15 +94,10 @@ StartStreamProcessorRequestPrivate::StartStreamProcessorRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StartStreamProcessorRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the StartStreamProcessorRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public StartStreamProcessorRequest instance.
  */
 StartStreamProcessorRequestPrivate::StartStreamProcessorRequestPrivate(
     const StartStreamProcessorRequestPrivate &other, StartStreamProcessorRequest * const q)

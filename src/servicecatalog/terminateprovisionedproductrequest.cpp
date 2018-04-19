@@ -27,10 +27,9 @@ namespace ServiceCatalog {
 
 /*!
  * \class QtAws::ServiceCatalog::TerminateProvisionedProductRequest
- *
  * \brief The TerminateProvisionedProductRequest class provides an interface for ServiceCatalog TerminateProvisionedProduct requests.
  *
- * \ingroup ServiceCatalog
+ * \inmodule QtAwsServiceCatalog
  *
  *  <fullname>AWS Service Catalog</fullname>
  * 
@@ -43,9 +42,7 @@ namespace ServiceCatalog {
  */
 
 /*!
- * @brief  Constructs a new TerminateProvisionedProductRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 TerminateProvisionedProductRequest::TerminateProvisionedProductRequest(const TerminateProvisionedProductRequest &other)
     : ServiceCatalogRequest(new TerminateProvisionedProductRequestPrivate(*other.d_func(), this))
@@ -54,7 +51,7 @@ TerminateProvisionedProductRequest::TerminateProvisionedProductRequest(const Ter
 }
 
 /*!
- * @brief  Constructs a new TerminateProvisionedProductRequest object.
+ * Constructs a TerminateProvisionedProductRequest object.
  */
 TerminateProvisionedProductRequest::TerminateProvisionedProductRequest()
     : ServiceCatalogRequest(new TerminateProvisionedProductRequestPrivate(ServiceCatalogRequest::TerminateProvisionedProductAction, this))
@@ -72,14 +69,9 @@ bool TerminateProvisionedProductRequest::isValid() const
 
 
 /*!
- * @brief  Construct an TerminateProvisionedProductResponse object.
+ * Returns a TerminateProvisionedProductResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An TerminateProvisionedProductResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ServiceCatalogClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * TerminateProvisionedProductRequest::response(QNetworkReply * const reply) const
 {
@@ -87,20 +79,17 @@ QtAws::Core::AwsAbstractResponse * TerminateProvisionedProductRequest::response(
 }
 
 /*!
- * @internal
+ * \class QtAws::ServiceCatalog::TerminateProvisionedProductRequestPrivate
+ * \brief The TerminateProvisionedProductRequestPrivate class provides private implementation for TerminateProvisionedProductRequest.
+ * \internal
  *
- * @class  TerminateProvisionedProductRequestPrivate
- *
- * @brief  Private implementation for TerminateProvisionedProductRequest.
+ * \inmodule QtAwsServiceCatalog
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new TerminateProvisionedProductRequestPrivate object.
- *
- * @param  action  ServiceCatalog action being performed.
- * @param  q       Pointer to this object's public TerminateProvisionedProductRequest instance.
+ * Constructs a TerminateProvisionedProductRequestPrivate object for ServiceCatalog \a action with,
+ * public implementation \a q.
  */
 TerminateProvisionedProductRequestPrivate::TerminateProvisionedProductRequestPrivate(
     const ServiceCatalogRequest::Action action, TerminateProvisionedProductRequest * const q)
@@ -110,15 +99,10 @@ TerminateProvisionedProductRequestPrivate::TerminateProvisionedProductRequestPri
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new TerminateProvisionedProductRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the TerminateProvisionedProductRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public TerminateProvisionedProductRequest instance.
  */
 TerminateProvisionedProductRequestPrivate::TerminateProvisionedProductRequestPrivate(
     const TerminateProvisionedProductRequestPrivate &other, TerminateProvisionedProductRequest * const q)

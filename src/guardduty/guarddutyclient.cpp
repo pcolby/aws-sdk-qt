@@ -102,6 +102,9 @@
 /*!
  * \namespace QtAws::GuardDuty
  * \brief The QtAws::GuardDuty contains stuff...
+ *
+ * \inmodule QtAwsGuardDuty
+ *
  * @todo Move this to a separate template file.
  */
 
@@ -151,7 +154,7 @@ GuardDutyClient::GuardDutyClient(
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * \a  AwsEndpoint::getEndpoint()
+ * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
 GuardDutyClient::GuardDutyClient(
     const QUrl &endpoint,

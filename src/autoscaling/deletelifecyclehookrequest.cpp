@@ -27,10 +27,9 @@ namespace AutoScaling {
 
 /*!
  * \class QtAws::AutoScaling::DeleteLifecycleHookRequest
- *
  * \brief The DeleteLifecycleHookRequest class provides an interface for AutoScaling DeleteLifecycleHook requests.
  *
- * \ingroup AutoScaling
+ * \inmodule QtAwsAutoScaling
  *
  *  <fullname>Amazon EC2 Auto Scaling</fullname>
  * 
@@ -42,9 +41,7 @@ namespace AutoScaling {
  */
 
 /*!
- * @brief  Constructs a new DeleteLifecycleHookRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteLifecycleHookRequest::DeleteLifecycleHookRequest(const DeleteLifecycleHookRequest &other)
     : AutoScalingRequest(new DeleteLifecycleHookRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ DeleteLifecycleHookRequest::DeleteLifecycleHookRequest(const DeleteLifecycleHook
 }
 
 /*!
- * @brief  Constructs a new DeleteLifecycleHookRequest object.
+ * Constructs a DeleteLifecycleHookRequest object.
  */
 DeleteLifecycleHookRequest::DeleteLifecycleHookRequest()
     : AutoScalingRequest(new DeleteLifecycleHookRequestPrivate(AutoScalingRequest::DeleteLifecycleHookAction, this))
@@ -71,14 +68,9 @@ bool DeleteLifecycleHookRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteLifecycleHookResponse object.
+ * Returns a DeleteLifecycleHookResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteLifecycleHookResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AutoScalingClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteLifecycleHookRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * DeleteLifecycleHookRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::AutoScaling::DeleteLifecycleHookRequestPrivate
+ * \brief The DeleteLifecycleHookRequestPrivate class provides private implementation for DeleteLifecycleHookRequest.
+ * \internal
  *
- * @class  DeleteLifecycleHookRequestPrivate
- *
- * @brief  Private implementation for DeleteLifecycleHookRequest.
+ * \inmodule QtAwsAutoScaling
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteLifecycleHookRequestPrivate object.
- *
- * @param  action  AutoScaling action being performed.
- * @param  q       Pointer to this object's public DeleteLifecycleHookRequest instance.
+ * Constructs a DeleteLifecycleHookRequestPrivate object for AutoScaling \a action with,
+ * public implementation \a q.
  */
 DeleteLifecycleHookRequestPrivate::DeleteLifecycleHookRequestPrivate(
     const AutoScalingRequest::Action action, DeleteLifecycleHookRequest * const q)
@@ -109,15 +98,10 @@ DeleteLifecycleHookRequestPrivate::DeleteLifecycleHookRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteLifecycleHookRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteLifecycleHookRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteLifecycleHookRequest instance.
  */
 DeleteLifecycleHookRequestPrivate::DeleteLifecycleHookRequestPrivate(
     const DeleteLifecycleHookRequestPrivate &other, DeleteLifecycleHookRequest * const q)

@@ -27,10 +27,9 @@ namespace CloudDirectory {
 
 /*!
  * \class QtAws::CloudDirectory::ListIndexRequest
- *
  * \brief The ListIndexRequest class provides an interface for CloudDirectory ListIndex requests.
  *
- * \ingroup CloudDirectory
+ * \inmodule QtAwsCloudDirectory
  *
  *  <fullname>Amazon Cloud Directory</fullname>
  * 
@@ -44,9 +43,7 @@ namespace CloudDirectory {
  */
 
 /*!
- * @brief  Constructs a new ListIndexRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListIndexRequest::ListIndexRequest(const ListIndexRequest &other)
     : CloudDirectoryRequest(new ListIndexRequestPrivate(*other.d_func(), this))
@@ -55,7 +52,7 @@ ListIndexRequest::ListIndexRequest(const ListIndexRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ListIndexRequest object.
+ * Constructs a ListIndexRequest object.
  */
 ListIndexRequest::ListIndexRequest()
     : CloudDirectoryRequest(new ListIndexRequestPrivate(CloudDirectoryRequest::ListIndexAction, this))
@@ -73,14 +70,9 @@ bool ListIndexRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListIndexResponse object.
+ * Returns a ListIndexResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListIndexResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudDirectoryClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListIndexRequest::response(QNetworkReply * const reply) const
 {
@@ -88,20 +80,17 @@ QtAws::Core::AwsAbstractResponse * ListIndexRequest::response(QNetworkReply * co
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudDirectory::ListIndexRequestPrivate
+ * \brief The ListIndexRequestPrivate class provides private implementation for ListIndexRequest.
+ * \internal
  *
- * @class  ListIndexRequestPrivate
- *
- * @brief  Private implementation for ListIndexRequest.
+ * \inmodule QtAwsCloudDirectory
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListIndexRequestPrivate object.
- *
- * @param  action  CloudDirectory action being performed.
- * @param  q       Pointer to this object's public ListIndexRequest instance.
+ * Constructs a ListIndexRequestPrivate object for CloudDirectory \a action with,
+ * public implementation \a q.
  */
 ListIndexRequestPrivate::ListIndexRequestPrivate(
     const CloudDirectoryRequest::Action action, ListIndexRequest * const q)
@@ -111,15 +100,10 @@ ListIndexRequestPrivate::ListIndexRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListIndexRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListIndexRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListIndexRequest instance.
  */
 ListIndexRequestPrivate::ListIndexRequestPrivate(
     const ListIndexRequestPrivate &other, ListIndexRequest * const q)

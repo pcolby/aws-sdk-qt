@@ -27,10 +27,9 @@ namespace AlexaForBusiness {
 
 /*!
  * \class QtAws::AlexaForBusiness::UpdateProfileRequest
- *
  * \brief The UpdateProfileRequest class provides an interface for AlexaForBusiness UpdateProfile requests.
  *
- * \ingroup AlexaForBusiness
+ * \inmodule QtAwsAlexaForBusiness
  *
  *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
  *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
@@ -42,9 +41,7 @@ namespace AlexaForBusiness {
  */
 
 /*!
- * @brief  Constructs a new UpdateProfileRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateProfileRequest::UpdateProfileRequest(const UpdateProfileRequest &other)
     : AlexaForBusinessRequest(new UpdateProfileRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ UpdateProfileRequest::UpdateProfileRequest(const UpdateProfileRequest &other)
 }
 
 /*!
- * @brief  Constructs a new UpdateProfileRequest object.
+ * Constructs a UpdateProfileRequest object.
  */
 UpdateProfileRequest::UpdateProfileRequest()
     : AlexaForBusinessRequest(new UpdateProfileRequestPrivate(AlexaForBusinessRequest::UpdateProfileAction, this))
@@ -71,14 +68,9 @@ bool UpdateProfileRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateProfileResponse object.
+ * Returns a UpdateProfileResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateProfileResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AlexaForBusinessClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateProfileRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * UpdateProfileRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::AlexaForBusiness::UpdateProfileRequestPrivate
+ * \brief The UpdateProfileRequestPrivate class provides private implementation for UpdateProfileRequest.
+ * \internal
  *
- * @class  UpdateProfileRequestPrivate
- *
- * @brief  Private implementation for UpdateProfileRequest.
+ * \inmodule QtAwsAlexaForBusiness
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateProfileRequestPrivate object.
- *
- * @param  action  AlexaForBusiness action being performed.
- * @param  q       Pointer to this object's public UpdateProfileRequest instance.
+ * Constructs a UpdateProfileRequestPrivate object for AlexaForBusiness \a action with,
+ * public implementation \a q.
  */
 UpdateProfileRequestPrivate::UpdateProfileRequestPrivate(
     const AlexaForBusinessRequest::Action action, UpdateProfileRequest * const q)
@@ -109,15 +98,10 @@ UpdateProfileRequestPrivate::UpdateProfileRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateProfileRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateProfileRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateProfileRequest instance.
  */
 UpdateProfileRequestPrivate::UpdateProfileRequestPrivate(
     const UpdateProfileRequestPrivate &other, UpdateProfileRequest * const q)

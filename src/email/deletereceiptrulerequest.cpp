@@ -27,10 +27,9 @@ namespace SES {
 
 /*!
  * \class QtAws::SES::DeleteReceiptRuleRequest
- *
  * \brief The DeleteReceiptRuleRequest class provides an interface for SES DeleteReceiptRule requests.
  *
- * \ingroup SES
+ * \inmodule QtAwsSES
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -48,9 +47,7 @@ namespace SES {
  */
 
 /*!
- * @brief  Constructs a new DeleteReceiptRuleRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteReceiptRuleRequest::DeleteReceiptRuleRequest(const DeleteReceiptRuleRequest &other)
     : SESRequest(new DeleteReceiptRuleRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ DeleteReceiptRuleRequest::DeleteReceiptRuleRequest(const DeleteReceiptRuleReques
 }
 
 /*!
- * @brief  Constructs a new DeleteReceiptRuleRequest object.
+ * Constructs a DeleteReceiptRuleRequest object.
  */
 DeleteReceiptRuleRequest::DeleteReceiptRuleRequest()
     : SESRequest(new DeleteReceiptRuleRequestPrivate(SESRequest::DeleteReceiptRuleAction, this))
@@ -77,14 +74,9 @@ bool DeleteReceiptRuleRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteReceiptRuleResponse object.
+ * Returns a DeleteReceiptRuleResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteReceiptRuleResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SESClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteReceiptRuleRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * DeleteReceiptRuleRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::SES::DeleteReceiptRuleRequestPrivate
+ * \brief The DeleteReceiptRuleRequestPrivate class provides private implementation for DeleteReceiptRuleRequest.
+ * \internal
  *
- * @class  DeleteReceiptRuleRequestPrivate
- *
- * @brief  Private implementation for DeleteReceiptRuleRequest.
+ * \inmodule QtAwsSES
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteReceiptRuleRequestPrivate object.
- *
- * @param  action  SES action being performed.
- * @param  q       Pointer to this object's public DeleteReceiptRuleRequest instance.
+ * Constructs a DeleteReceiptRuleRequestPrivate object for SES \a action with,
+ * public implementation \a q.
  */
 DeleteReceiptRuleRequestPrivate::DeleteReceiptRuleRequestPrivate(
     const SESRequest::Action action, DeleteReceiptRuleRequest * const q)
@@ -115,15 +104,10 @@ DeleteReceiptRuleRequestPrivate::DeleteReceiptRuleRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteReceiptRuleRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteReceiptRuleRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteReceiptRuleRequest instance.
  */
 DeleteReceiptRuleRequestPrivate::DeleteReceiptRuleRequestPrivate(
     const DeleteReceiptRuleRequestPrivate &other, DeleteReceiptRuleRequest * const q)

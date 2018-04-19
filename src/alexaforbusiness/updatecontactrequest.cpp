@@ -27,10 +27,9 @@ namespace AlexaForBusiness {
 
 /*!
  * \class QtAws::AlexaForBusiness::UpdateContactRequest
- *
  * \brief The UpdateContactRequest class provides an interface for AlexaForBusiness UpdateContact requests.
  *
- * \ingroup AlexaForBusiness
+ * \inmodule QtAwsAlexaForBusiness
  *
  *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
  *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
@@ -42,9 +41,7 @@ namespace AlexaForBusiness {
  */
 
 /*!
- * @brief  Constructs a new UpdateContactRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateContactRequest::UpdateContactRequest(const UpdateContactRequest &other)
     : AlexaForBusinessRequest(new UpdateContactRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ UpdateContactRequest::UpdateContactRequest(const UpdateContactRequest &other)
 }
 
 /*!
- * @brief  Constructs a new UpdateContactRequest object.
+ * Constructs a UpdateContactRequest object.
  */
 UpdateContactRequest::UpdateContactRequest()
     : AlexaForBusinessRequest(new UpdateContactRequestPrivate(AlexaForBusinessRequest::UpdateContactAction, this))
@@ -71,14 +68,9 @@ bool UpdateContactRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateContactResponse object.
+ * Returns a UpdateContactResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateContactResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AlexaForBusinessClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateContactRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * UpdateContactRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::AlexaForBusiness::UpdateContactRequestPrivate
+ * \brief The UpdateContactRequestPrivate class provides private implementation for UpdateContactRequest.
+ * \internal
  *
- * @class  UpdateContactRequestPrivate
- *
- * @brief  Private implementation for UpdateContactRequest.
+ * \inmodule QtAwsAlexaForBusiness
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateContactRequestPrivate object.
- *
- * @param  action  AlexaForBusiness action being performed.
- * @param  q       Pointer to this object's public UpdateContactRequest instance.
+ * Constructs a UpdateContactRequestPrivate object for AlexaForBusiness \a action with,
+ * public implementation \a q.
  */
 UpdateContactRequestPrivate::UpdateContactRequestPrivate(
     const AlexaForBusinessRequest::Action action, UpdateContactRequest * const q)
@@ -109,15 +98,10 @@ UpdateContactRequestPrivate::UpdateContactRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateContactRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateContactRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateContactRequest instance.
  */
 UpdateContactRequestPrivate::UpdateContactRequestPrivate(
     const UpdateContactRequestPrivate &other, UpdateContactRequest * const q)

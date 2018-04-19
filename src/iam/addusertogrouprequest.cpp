@@ -27,10 +27,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::AddUserToGroupRequest
- *
  * \brief The AddUserToGroupRequest class provides an interface for IAM AddUserToGroup requests.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -102,9 +101,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new AddUserToGroupRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AddUserToGroupRequest::AddUserToGroupRequest(const AddUserToGroupRequest &other)
     : IAMRequest(new AddUserToGroupRequestPrivate(*other.d_func(), this))
@@ -113,7 +110,7 @@ AddUserToGroupRequest::AddUserToGroupRequest(const AddUserToGroupRequest &other)
 }
 
 /*!
- * @brief  Constructs a new AddUserToGroupRequest object.
+ * Constructs a AddUserToGroupRequest object.
  */
 AddUserToGroupRequest::AddUserToGroupRequest()
     : IAMRequest(new AddUserToGroupRequestPrivate(IAMRequest::AddUserToGroupAction, this))
@@ -131,14 +128,9 @@ bool AddUserToGroupRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AddUserToGroupResponse object.
+ * Returns a AddUserToGroupResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AddUserToGroupResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IAMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AddUserToGroupRequest::response(QNetworkReply * const reply) const
 {
@@ -146,20 +138,17 @@ QtAws::Core::AwsAbstractResponse * AddUserToGroupRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::IAM::AddUserToGroupRequestPrivate
+ * \brief The AddUserToGroupRequestPrivate class provides private implementation for AddUserToGroupRequest.
+ * \internal
  *
- * @class  AddUserToGroupRequestPrivate
- *
- * @brief  Private implementation for AddUserToGroupRequest.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AddUserToGroupRequestPrivate object.
- *
- * @param  action  IAM action being performed.
- * @param  q       Pointer to this object's public AddUserToGroupRequest instance.
+ * Constructs a AddUserToGroupRequestPrivate object for IAM \a action with,
+ * public implementation \a q.
  */
 AddUserToGroupRequestPrivate::AddUserToGroupRequestPrivate(
     const IAMRequest::Action action, AddUserToGroupRequest * const q)
@@ -169,15 +158,10 @@ AddUserToGroupRequestPrivate::AddUserToGroupRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AddUserToGroupRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AddUserToGroupRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AddUserToGroupRequest instance.
  */
 AddUserToGroupRequestPrivate::AddUserToGroupRequestPrivate(
     const AddUserToGroupRequestPrivate &other, AddUserToGroupRequest * const q)

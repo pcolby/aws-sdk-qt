@@ -27,10 +27,9 @@ namespace CodeDeploy {
 
 /*!
  * \class QtAws::CodeDeploy::ListOnPremisesInstancesRequest
- *
  * \brief The ListOnPremisesInstancesRequest class provides an interface for CodeDeploy ListOnPremisesInstances requests.
  *
- * \ingroup CodeDeploy
+ * \inmodule QtAwsCodeDeploy
  *
  *  <fullname>AWS CodeDeploy</fullname>
  * 
@@ -118,9 +117,7 @@ namespace CodeDeploy {
  */
 
 /*!
- * @brief  Constructs a new ListOnPremisesInstancesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListOnPremisesInstancesRequest::ListOnPremisesInstancesRequest(const ListOnPremisesInstancesRequest &other)
     : CodeDeployRequest(new ListOnPremisesInstancesRequestPrivate(*other.d_func(), this))
@@ -129,7 +126,7 @@ ListOnPremisesInstancesRequest::ListOnPremisesInstancesRequest(const ListOnPremi
 }
 
 /*!
- * @brief  Constructs a new ListOnPremisesInstancesRequest object.
+ * Constructs a ListOnPremisesInstancesRequest object.
  */
 ListOnPremisesInstancesRequest::ListOnPremisesInstancesRequest()
     : CodeDeployRequest(new ListOnPremisesInstancesRequestPrivate(CodeDeployRequest::ListOnPremisesInstancesAction, this))
@@ -147,14 +144,9 @@ bool ListOnPremisesInstancesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListOnPremisesInstancesResponse object.
+ * Returns a ListOnPremisesInstancesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListOnPremisesInstancesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CodeDeployClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListOnPremisesInstancesRequest::response(QNetworkReply * const reply) const
 {
@@ -162,20 +154,17 @@ QtAws::Core::AwsAbstractResponse * ListOnPremisesInstancesRequest::response(QNet
 }
 
 /*!
- * @internal
+ * \class QtAws::CodeDeploy::ListOnPremisesInstancesRequestPrivate
+ * \brief The ListOnPremisesInstancesRequestPrivate class provides private implementation for ListOnPremisesInstancesRequest.
+ * \internal
  *
- * @class  ListOnPremisesInstancesRequestPrivate
- *
- * @brief  Private implementation for ListOnPremisesInstancesRequest.
+ * \inmodule QtAwsCodeDeploy
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListOnPremisesInstancesRequestPrivate object.
- *
- * @param  action  CodeDeploy action being performed.
- * @param  q       Pointer to this object's public ListOnPremisesInstancesRequest instance.
+ * Constructs a ListOnPremisesInstancesRequestPrivate object for CodeDeploy \a action with,
+ * public implementation \a q.
  */
 ListOnPremisesInstancesRequestPrivate::ListOnPremisesInstancesRequestPrivate(
     const CodeDeployRequest::Action action, ListOnPremisesInstancesRequest * const q)
@@ -185,15 +174,10 @@ ListOnPremisesInstancesRequestPrivate::ListOnPremisesInstancesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListOnPremisesInstancesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListOnPremisesInstancesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListOnPremisesInstancesRequest instance.
  */
 ListOnPremisesInstancesRequestPrivate::ListOnPremisesInstancesRequestPrivate(
     const ListOnPremisesInstancesRequestPrivate &other, ListOnPremisesInstancesRequest * const q)

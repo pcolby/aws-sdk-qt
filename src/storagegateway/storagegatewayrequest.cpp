@@ -25,16 +25,84 @@ namespace StorageGateway {
 
 /*!
  * \class QtAws::StorageGateway::StorageGatewayRequest
- *
  * \brief The StorageGatewayRequest class provides an interface for StorageGateway requests.
  *
- * \ingroup StorageGateway
+ * \inmodule QtAwsStorageGateway
  */
 
 /*!
- * @brief  Constructs a new StorageGatewayRequest object.
+ * \enum StorageGatewayRequest::Action
  *
- * @param  action  The StorageGateway action to request.
+ * This enum describes the actions that can be performed as StorageGateway
+ * requests.
+ *
+ * \value ActivateGatewayAction StorageGateway ActivateGateway action.
+ * \value AddCacheAction StorageGateway AddCache action.
+ * \value AddTagsToResourceAction StorageGateway AddTagsToResource action.
+ * \value AddUploadBufferAction StorageGateway AddUploadBuffer action.
+ * \value AddWorkingStorageAction StorageGateway AddWorkingStorage action.
+ * \value CancelArchivalAction StorageGateway CancelArchival action.
+ * \value CancelRetrievalAction StorageGateway CancelRetrieval action.
+ * \value CreateCachediSCSIVolumeAction StorageGateway CreateCachediSCSIVolume action.
+ * \value CreateNFSFileShareAction StorageGateway CreateNFSFileShare action.
+ * \value CreateSnapshotAction StorageGateway CreateSnapshot action.
+ * \value CreateSnapshotFromVolumeRecoveryPointAction StorageGateway CreateSnapshotFromVolumeRecoveryPoint action.
+ * \value CreateStorediSCSIVolumeAction StorageGateway CreateStorediSCSIVolume action.
+ * \value CreateTapeWithBarcodeAction StorageGateway CreateTapeWithBarcode action.
+ * \value CreateTapesAction StorageGateway CreateTapes action.
+ * \value DeleteBandwidthRateLimitAction StorageGateway DeleteBandwidthRateLimit action.
+ * \value DeleteChapCredentialsAction StorageGateway DeleteChapCredentials action.
+ * \value DeleteFileShareAction StorageGateway DeleteFileShare action.
+ * \value DeleteGatewayAction StorageGateway DeleteGateway action.
+ * \value DeleteSnapshotScheduleAction StorageGateway DeleteSnapshotSchedule action.
+ * \value DeleteTapeAction StorageGateway DeleteTape action.
+ * \value DeleteTapeArchiveAction StorageGateway DeleteTapeArchive action.
+ * \value DeleteVolumeAction StorageGateway DeleteVolume action.
+ * \value DescribeBandwidthRateLimitAction StorageGateway DescribeBandwidthRateLimit action.
+ * \value DescribeCacheAction StorageGateway DescribeCache action.
+ * \value DescribeCachediSCSIVolumesAction StorageGateway DescribeCachediSCSIVolumes action.
+ * \value DescribeChapCredentialsAction StorageGateway DescribeChapCredentials action.
+ * \value DescribeGatewayInformationAction StorageGateway DescribeGatewayInformation action.
+ * \value DescribeMaintenanceStartTimeAction StorageGateway DescribeMaintenanceStartTime action.
+ * \value DescribeNFSFileSharesAction StorageGateway DescribeNFSFileShares action.
+ * \value DescribeSnapshotScheduleAction StorageGateway DescribeSnapshotSchedule action.
+ * \value DescribeStorediSCSIVolumesAction StorageGateway DescribeStorediSCSIVolumes action.
+ * \value DescribeTapeArchivesAction StorageGateway DescribeTapeArchives action.
+ * \value DescribeTapeRecoveryPointsAction StorageGateway DescribeTapeRecoveryPoints action.
+ * \value DescribeTapesAction StorageGateway DescribeTapes action.
+ * \value DescribeUploadBufferAction StorageGateway DescribeUploadBuffer action.
+ * \value DescribeVTLDevicesAction StorageGateway DescribeVTLDevices action.
+ * \value DescribeWorkingStorageAction StorageGateway DescribeWorkingStorage action.
+ * \value DisableGatewayAction StorageGateway DisableGateway action.
+ * \value ListFileSharesAction StorageGateway ListFileShares action.
+ * \value ListGatewaysAction StorageGateway ListGateways action.
+ * \value ListLocalDisksAction StorageGateway ListLocalDisks action.
+ * \value ListTagsForResourceAction StorageGateway ListTagsForResource action.
+ * \value ListTapesAction StorageGateway ListTapes action.
+ * \value ListVolumeInitiatorsAction StorageGateway ListVolumeInitiators action.
+ * \value ListVolumeRecoveryPointsAction StorageGateway ListVolumeRecoveryPoints action.
+ * \value ListVolumesAction StorageGateway ListVolumes action.
+ * \value NotifyWhenUploadedAction StorageGateway NotifyWhenUploaded action.
+ * \value RefreshCacheAction StorageGateway RefreshCache action.
+ * \value RemoveTagsFromResourceAction StorageGateway RemoveTagsFromResource action.
+ * \value ResetCacheAction StorageGateway ResetCache action.
+ * \value RetrieveTapeArchiveAction StorageGateway RetrieveTapeArchive action.
+ * \value RetrieveTapeRecoveryPointAction StorageGateway RetrieveTapeRecoveryPoint action.
+ * \value SetLocalConsolePasswordAction StorageGateway SetLocalConsolePassword action.
+ * \value ShutdownGatewayAction StorageGateway ShutdownGateway action.
+ * \value StartGatewayAction StorageGateway StartGateway action.
+ * \value UpdateBandwidthRateLimitAction StorageGateway UpdateBandwidthRateLimit action.
+ * \value UpdateChapCredentialsAction StorageGateway UpdateChapCredentials action.
+ * \value UpdateGatewayInformationAction StorageGateway UpdateGatewayInformation action.
+ * \value UpdateGatewaySoftwareNowAction StorageGateway UpdateGatewaySoftwareNow action.
+ * \value UpdateMaintenanceStartTimeAction StorageGateway UpdateMaintenanceStartTime action.
+ * \value UpdateNFSFileShareAction StorageGateway UpdateNFSFileShare action.
+ * \value UpdateSnapshotScheduleAction StorageGateway UpdateSnapshotSchedule action.
+ * \value UpdateVTLDeviceTypeAction StorageGateway UpdateVTLDeviceType action.
+ */
+
+/*!
+ * Constructs a[n] StorageGatewayRequest object for StorageGateway \a action.
  */
 StorageGatewayRequest::StorageGatewayRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new StorageGatewayRequestPrivate(action, this))
@@ -43,9 +111,7 @@ StorageGatewayRequest::StorageGatewayRequest(const Action action)
 }
 
 /*!
- * @brief  Constructs a new StorageGatewayRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 StorageGatewayRequest::StorageGatewayRequest(const StorageGatewayRequest &other)
     : QtAws::Core::AwsAbstractRequest(new StorageGatewayRequestPrivate(*other.d_func(), this))
@@ -54,13 +120,7 @@ StorageGatewayRequest::StorageGatewayRequest(const StorageGatewayRequest &other)
 }
 
 /*!
- * @brief  Assignment operator.
- *
- * Assigns \a other to \c this.
- *
- * @param  other  Instance to copy.
- *
- * @return  A reference to \c this.
+ * Sets the StorageGatewayRequest object to be equal to \a other.
  */
 StorageGatewayRequest& StorageGatewayRequest::operator=(const StorageGatewayRequest &other)
 {
@@ -72,14 +132,10 @@ StorageGatewayRequest& StorageGatewayRequest::operator=(const StorageGatewayRequ
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StorageGatewayRequest object.
+ * Constructs aa StorageGatewayRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from StorageGatewayRequestPrivate.
- *
- * @param  d  Pointer to private data (aka D-Pointer).
  */
 StorageGatewayRequest::StorageGatewayRequest(StorageGatewayRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
@@ -87,7 +143,7 @@ StorageGatewayRequest::StorageGatewayRequest(StorageGatewayRequestPrivate * cons
 }
 
 /*!
- * \brief Returns the StorageGateway action to be performed by this request.
+ * Returns the StorageGateway action to be performed by this request.
  */
 StorageGatewayRequest::Action StorageGatewayRequest::action() const
 {
@@ -96,7 +152,7 @@ StorageGatewayRequest::Action StorageGatewayRequest::action() const
 }
 
 /*!
- * \brief Returns the name of the StorageGateway action to be performed by this request.
+ * Returns the name of the StorageGateway action to be performed by this request.
  */
 QString StorageGatewayRequest::actionString() const
 {
@@ -104,7 +160,7 @@ QString StorageGatewayRequest::actionString() const
 }
 
 /*!
- * \brief Returns the StorageGateway API version implemented by this request.
+ * Returns the StorageGateway API version implemented by this request.
  */
 QString StorageGatewayRequest::apiVersion() const
 {
@@ -113,7 +169,7 @@ QString StorageGatewayRequest::apiVersion() const
 }
 
 /*!
- * @brief Set the StorageGateway action to be performed by this request to \a action.
+ * Sets the StorageGateway action to be performed by this request to \a action.
  */
 void StorageGatewayRequest::setAction(const Action action)
 {
@@ -122,7 +178,7 @@ void StorageGatewayRequest::setAction(const Action action)
 }
 
 /*!
- * Set the StorageGateway API version to include in this request to \a version.
+ * Sets the StorageGateway API version to include in this request to \a version.
  */
 void StorageGatewayRequest::setApiVersion(const QString &version)
 {
@@ -131,7 +187,7 @@ void StorageGatewayRequest::setApiVersion(const QString &version)
 }
 
 /*!
- * \brief Returns \c true if this request is the same as \a other.
+ * Returns \c true if this request is equal to \a other; \c false otherwise.
  *
  * Note, most derived *Request classes do not need to provider their own
  * implementations of this function, since most such request classes rely on
@@ -146,8 +202,8 @@ bool StorageGatewayRequest::operator==(const StorageGatewayRequest &other) const
             (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
-/*!
- * @brief  Check if \a queueName is a valid StorageGateway queue name.
+/*
+ * Returns \c tue if \a queueName is a valid StorageGateway queue name.
  *
  * @par From StorageGateway FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
@@ -166,9 +222,8 @@ bool StorageGatewayRequest::operator==(const StorageGatewayRequest &other) const
 }*/
 
 /*!
- * \brief Removes the a \a name parameter from this request.
- *
- * Returns the count of paramters removed (typically \c 0 or \c 1).
+ * Removes the a \a name parameter from the request, then returns the number of
+ * paramters removed (typically \c 0 or \c 1).
  */
 int StorageGatewayRequest::clearParameter(const QString &name)
 {
@@ -177,7 +232,7 @@ int StorageGatewayRequest::clearParameter(const QString &name)
 }
 
 /*!
- * \brief Removes all parameters from this request.
+ * Removes all parameters from the request.
  */
 void StorageGatewayRequest::clearParameters()
 {
@@ -186,7 +241,7 @@ void StorageGatewayRequest::clearParameters()
 }
 
 /*!
- * \brief Returns the value of the \n name pararemter if set, otherwise \a defaultValue.
+ * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
 QVariant StorageGatewayRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
@@ -195,7 +250,7 @@ QVariant StorageGatewayRequest::parameter(const QString &name, const QVariant &d
 }
 
 /*!
- * \brief Returns a map of parameters included in this request.
+ * Returns the parameters included in this request.
  */
 const QVariantMap &StorageGatewayRequest::parameters() const
 {
@@ -204,7 +259,7 @@ const QVariantMap &StorageGatewayRequest::parameters() const
 }
 
 /*!
- * \brief Sets the \a name parameter to \a value.
+ * Sets the \a name parameter to \a value.
  */
 void StorageGatewayRequest::setParameter(const QString &name, const QVariant &value)
 {
@@ -213,9 +268,8 @@ void StorageGatewayRequest::setParameter(const QString &name, const QVariant &va
 }
 
 /*!
- * \brief Sets the map of paramters for this request to \a parameters.
- *
- * Any request parameters set previously will be discarded.
+ * Sets the paramters for this request to \a parameters. Any request parameters
+ * set previously will be discarded.
  */
 void StorageGatewayRequest::setParameters(const QVariantMap &parameters)
 {
@@ -224,11 +278,12 @@ void StorageGatewayRequest::setParameters(const QVariantMap &parameters)
 }
 
 /*!
- * \brief Returns a network request for this StorageGateway request using the given \a endpoint.
+ * Returns a network request for the StorageGateway request using the given
+ * \a endpoint.
  *
- * This StorageGateway implementation builds request URLs by combining the common query
- * parameters (such as Action and Version), with any that have been added (via
- * setParameter) by child classes.
+ * This StorageGateway implementation builds request URLs by combining the
+ * common query parameters (such as Action and Version), with any that have
+ * been added (via setParameter) by child classes.
  */
 QNetworkRequest StorageGatewayRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -239,17 +294,16 @@ QNetworkRequest StorageGatewayRequest::unsignedRequest(const QUrl &endpoint) con
 }
 
 /*!
+ * \class QtAws::StorageGateway::StorageGatewayRequestPrivate
+ * \brief The StorageGatewayRequestPrivate class provides private implementation for StorageGatewayRequest.
  * \internal
  *
- * \class  StorageGatewayRequestPrivate
- *
- * \brief  Private implementation for StorageGatewayRequest.
+ * \inmodule QtAwsStorageGateway
  */
 
 /*!
- * \internal
- *
- * \brief Constructs a new StorageGatewayRequestPrivate object.
+ * Constructs a StorageGatewayRequestPrivate object for StorageGateway \a action with,
+ * public implementation \a q.
  */
 StorageGatewayRequestPrivate::StorageGatewayRequestPrivate(const StorageGatewayRequest::Action action, StorageGatewayRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
@@ -258,9 +312,7 @@ StorageGatewayRequestPrivate::StorageGatewayRequestPrivate(const StorageGatewayR
 }
 
 /*!
- * \internal
- *
- * \brief Constructs a new StorageGatewayRequestPrivate object, copying an existing one.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
@@ -276,15 +328,12 @@ StorageGatewayRequestPrivate::StorageGatewayRequestPrivate(const StorageGatewayR
 }
 
 /*!
- * \internal
- *
- * \brief Returns a string representing \a action.
+ * Returns a string represention of \a action, or a null string if \a action is
+ * invalid.
  *
  * This function converts StorageGatewayRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the StorageGateway service's Action
  * query parameters.
- *
- * @return A string representing \a action, or a null string if \a action is invalid.
  */
 QString StorageGatewayRequestPrivate::toString(const StorageGatewayRequest::Action &action)
 {

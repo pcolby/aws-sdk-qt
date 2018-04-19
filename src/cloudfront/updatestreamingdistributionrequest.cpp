@@ -27,10 +27,9 @@ namespace CloudFront {
 
 /*!
  * \class QtAws::CloudFront::UpdateStreamingDistributionRequest
- *
  * \brief The UpdateStreamingDistributionRequest class provides an interface for CloudFront UpdateStreamingDistribution requests.
  *
- * \ingroup CloudFront
+ * \inmodule QtAwsCloudFront
  *
  *  <fullname>Amazon CloudFront</fullname>
  * 
@@ -42,9 +41,7 @@ namespace CloudFront {
  */
 
 /*!
- * @brief  Constructs a new UpdateStreamingDistributionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateStreamingDistributionRequest::UpdateStreamingDistributionRequest(const UpdateStreamingDistributionRequest &other)
     : CloudFrontRequest(new UpdateStreamingDistributionRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ UpdateStreamingDistributionRequest::UpdateStreamingDistributionRequest(const Upd
 }
 
 /*!
- * @brief  Constructs a new UpdateStreamingDistributionRequest object.
+ * Constructs a UpdateStreamingDistributionRequest object.
  */
 UpdateStreamingDistributionRequest::UpdateStreamingDistributionRequest()
     : CloudFrontRequest(new UpdateStreamingDistributionRequestPrivate(CloudFrontRequest::UpdateStreamingDistributionAction, this))
@@ -71,14 +68,9 @@ bool UpdateStreamingDistributionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateStreamingDistributionResponse object.
+ * Returns a UpdateStreamingDistributionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateStreamingDistributionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudFrontClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateStreamingDistributionRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * UpdateStreamingDistributionRequest::response(
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudFront::UpdateStreamingDistributionRequestPrivate
+ * \brief The UpdateStreamingDistributionRequestPrivate class provides private implementation for UpdateStreamingDistributionRequest.
+ * \internal
  *
- * @class  UpdateStreamingDistributionRequestPrivate
- *
- * @brief  Private implementation for UpdateStreamingDistributionRequest.
+ * \inmodule QtAwsCloudFront
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateStreamingDistributionRequestPrivate object.
- *
- * @param  action  CloudFront action being performed.
- * @param  q       Pointer to this object's public UpdateStreamingDistributionRequest instance.
+ * Constructs a UpdateStreamingDistributionRequestPrivate object for CloudFront \a action with,
+ * public implementation \a q.
  */
 UpdateStreamingDistributionRequestPrivate::UpdateStreamingDistributionRequestPrivate(
     const CloudFrontRequest::Action action, UpdateStreamingDistributionRequest * const q)
@@ -109,15 +98,10 @@ UpdateStreamingDistributionRequestPrivate::UpdateStreamingDistributionRequestPri
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateStreamingDistributionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateStreamingDistributionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateStreamingDistributionRequest instance.
  */
 UpdateStreamingDistributionRequestPrivate::UpdateStreamingDistributionRequestPrivate(
     const UpdateStreamingDistributionRequestPrivate &other, UpdateStreamingDistributionRequest * const q)

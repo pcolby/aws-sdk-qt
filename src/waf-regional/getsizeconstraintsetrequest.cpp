@@ -27,10 +27,9 @@ namespace WAFRegional {
 
 /*!
  * \class QtAws::WAFRegional::GetSizeConstraintSetRequest
- *
  * \brief The GetSizeConstraintSetRequest class provides an interface for WAFRegional GetSizeConstraintSet requests.
  *
- * \ingroup WAFRegional
+ * \inmodule QtAwsWAFRegional
  *
  *  This is the <i>AWS WAF Regional API Reference</i> for using AWS WAF with Elastic Load Balancing (ELB) Application Load
  *  Balancers. The AWS WAF actions and data types listed in the reference are available for protecting Application Load
@@ -44,9 +43,7 @@ namespace WAFRegional {
  */
 
 /*!
- * @brief  Constructs a new GetSizeConstraintSetRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetSizeConstraintSetRequest::GetSizeConstraintSetRequest(const GetSizeConstraintSetRequest &other)
     : WAFRegionalRequest(new GetSizeConstraintSetRequestPrivate(*other.d_func(), this))
@@ -55,7 +52,7 @@ GetSizeConstraintSetRequest::GetSizeConstraintSetRequest(const GetSizeConstraint
 }
 
 /*!
- * @brief  Constructs a new GetSizeConstraintSetRequest object.
+ * Constructs a GetSizeConstraintSetRequest object.
  */
 GetSizeConstraintSetRequest::GetSizeConstraintSetRequest()
     : WAFRegionalRequest(new GetSizeConstraintSetRequestPrivate(WAFRegionalRequest::GetSizeConstraintSetAction, this))
@@ -73,14 +70,9 @@ bool GetSizeConstraintSetRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetSizeConstraintSetResponse object.
+ * Returns a GetSizeConstraintSetResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetSizeConstraintSetResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WAFRegionalClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetSizeConstraintSetRequest::response(QNetworkReply * const reply) const
 {
@@ -88,20 +80,17 @@ QtAws::Core::AwsAbstractResponse * GetSizeConstraintSetRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::WAFRegional::GetSizeConstraintSetRequestPrivate
+ * \brief The GetSizeConstraintSetRequestPrivate class provides private implementation for GetSizeConstraintSetRequest.
+ * \internal
  *
- * @class  GetSizeConstraintSetRequestPrivate
- *
- * @brief  Private implementation for GetSizeConstraintSetRequest.
+ * \inmodule QtAwsWAFRegional
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetSizeConstraintSetRequestPrivate object.
- *
- * @param  action  WAFRegional action being performed.
- * @param  q       Pointer to this object's public GetSizeConstraintSetRequest instance.
+ * Constructs a GetSizeConstraintSetRequestPrivate object for WAFRegional \a action with,
+ * public implementation \a q.
  */
 GetSizeConstraintSetRequestPrivate::GetSizeConstraintSetRequestPrivate(
     const WAFRegionalRequest::Action action, GetSizeConstraintSetRequest * const q)
@@ -111,15 +100,10 @@ GetSizeConstraintSetRequestPrivate::GetSizeConstraintSetRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetSizeConstraintSetRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetSizeConstraintSetRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetSizeConstraintSetRequest instance.
  */
 GetSizeConstraintSetRequestPrivate::GetSizeConstraintSetRequestPrivate(
     const GetSizeConstraintSetRequestPrivate &other, GetSizeConstraintSetRequest * const q)

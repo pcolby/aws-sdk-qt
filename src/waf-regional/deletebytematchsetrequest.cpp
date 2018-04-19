@@ -27,10 +27,9 @@ namespace WAFRegional {
 
 /*!
  * \class QtAws::WAFRegional::DeleteByteMatchSetRequest
- *
  * \brief The DeleteByteMatchSetRequest class provides an interface for WAFRegional DeleteByteMatchSet requests.
  *
- * \ingroup WAFRegional
+ * \inmodule QtAwsWAFRegional
  *
  *  This is the <i>AWS WAF Regional API Reference</i> for using AWS WAF with Elastic Load Balancing (ELB) Application Load
  *  Balancers. The AWS WAF actions and data types listed in the reference are available for protecting Application Load
@@ -44,9 +43,7 @@ namespace WAFRegional {
  */
 
 /*!
- * @brief  Constructs a new DeleteByteMatchSetRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteByteMatchSetRequest::DeleteByteMatchSetRequest(const DeleteByteMatchSetRequest &other)
     : WAFRegionalRequest(new DeleteByteMatchSetRequestPrivate(*other.d_func(), this))
@@ -55,7 +52,7 @@ DeleteByteMatchSetRequest::DeleteByteMatchSetRequest(const DeleteByteMatchSetReq
 }
 
 /*!
- * @brief  Constructs a new DeleteByteMatchSetRequest object.
+ * Constructs a DeleteByteMatchSetRequest object.
  */
 DeleteByteMatchSetRequest::DeleteByteMatchSetRequest()
     : WAFRegionalRequest(new DeleteByteMatchSetRequestPrivate(WAFRegionalRequest::DeleteByteMatchSetAction, this))
@@ -73,14 +70,9 @@ bool DeleteByteMatchSetRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteByteMatchSetResponse object.
+ * Returns a DeleteByteMatchSetResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteByteMatchSetResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WAFRegionalClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteByteMatchSetRequest::response(QNetworkReply * const reply) const
 {
@@ -88,20 +80,17 @@ QtAws::Core::AwsAbstractResponse * DeleteByteMatchSetRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::WAFRegional::DeleteByteMatchSetRequestPrivate
+ * \brief The DeleteByteMatchSetRequestPrivate class provides private implementation for DeleteByteMatchSetRequest.
+ * \internal
  *
- * @class  DeleteByteMatchSetRequestPrivate
- *
- * @brief  Private implementation for DeleteByteMatchSetRequest.
+ * \inmodule QtAwsWAFRegional
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteByteMatchSetRequestPrivate object.
- *
- * @param  action  WAFRegional action being performed.
- * @param  q       Pointer to this object's public DeleteByteMatchSetRequest instance.
+ * Constructs a DeleteByteMatchSetRequestPrivate object for WAFRegional \a action with,
+ * public implementation \a q.
  */
 DeleteByteMatchSetRequestPrivate::DeleteByteMatchSetRequestPrivate(
     const WAFRegionalRequest::Action action, DeleteByteMatchSetRequest * const q)
@@ -111,15 +100,10 @@ DeleteByteMatchSetRequestPrivate::DeleteByteMatchSetRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteByteMatchSetRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteByteMatchSetRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteByteMatchSetRequest instance.
  */
 DeleteByteMatchSetRequestPrivate::DeleteByteMatchSetRequestPrivate(
     const DeleteByteMatchSetRequestPrivate &other, DeleteByteMatchSetRequest * const q)

@@ -62,6 +62,9 @@
 /*!
  * \namespace QtAws::KinesisAnalytics
  * \brief The QtAws::KinesisAnalytics contains stuff...
+ *
+ * \inmodule QtAwsKinesisAnalytics
+ *
  * @todo Move this to a separate template file.
  */
 
@@ -111,7 +114,7 @@ KinesisAnalyticsClient::KinesisAnalyticsClient(
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * \a  AwsEndpoint::getEndpoint()
+ * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
 KinesisAnalyticsClient::KinesisAnalyticsClient(
     const QUrl &endpoint,

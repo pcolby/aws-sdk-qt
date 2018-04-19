@@ -27,10 +27,9 @@ namespace CognitoIdentityProvider {
 
 /*!
  * \class QtAws::CognitoIdentityProvider::ForgetDeviceRequest
- *
  * \brief The ForgetDeviceRequest class provides an interface for CognitoIdentityProvider ForgetDevice requests.
  *
- * \ingroup CognitoIdentityProvider
+ * \inmodule QtAwsCognitoIdentityProvider
  *
  *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
  *  authenticate a user to obtain tokens related to user identity and access
@@ -47,9 +46,7 @@ namespace CognitoIdentityProvider {
  */
 
 /*!
- * @brief  Constructs a new ForgetDeviceRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ForgetDeviceRequest::ForgetDeviceRequest(const ForgetDeviceRequest &other)
     : CognitoIdentityProviderRequest(new ForgetDeviceRequestPrivate(*other.d_func(), this))
@@ -58,7 +55,7 @@ ForgetDeviceRequest::ForgetDeviceRequest(const ForgetDeviceRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ForgetDeviceRequest object.
+ * Constructs a ForgetDeviceRequest object.
  */
 ForgetDeviceRequest::ForgetDeviceRequest()
     : CognitoIdentityProviderRequest(new ForgetDeviceRequestPrivate(CognitoIdentityProviderRequest::ForgetDeviceAction, this))
@@ -76,14 +73,9 @@ bool ForgetDeviceRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ForgetDeviceResponse object.
+ * Returns a ForgetDeviceResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ForgetDeviceResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CognitoIdentityProviderClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ForgetDeviceRequest::response(QNetworkReply * const reply) const
 {
@@ -91,20 +83,17 @@ QtAws::Core::AwsAbstractResponse * ForgetDeviceRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::CognitoIdentityProvider::ForgetDeviceRequestPrivate
+ * \brief The ForgetDeviceRequestPrivate class provides private implementation for ForgetDeviceRequest.
+ * \internal
  *
- * @class  ForgetDeviceRequestPrivate
- *
- * @brief  Private implementation for ForgetDeviceRequest.
+ * \inmodule QtAwsCognitoIdentityProvider
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ForgetDeviceRequestPrivate object.
- *
- * @param  action  CognitoIdentityProvider action being performed.
- * @param  q       Pointer to this object's public ForgetDeviceRequest instance.
+ * Constructs a ForgetDeviceRequestPrivate object for CognitoIdentityProvider \a action with,
+ * public implementation \a q.
  */
 ForgetDeviceRequestPrivate::ForgetDeviceRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, ForgetDeviceRequest * const q)
@@ -114,15 +103,10 @@ ForgetDeviceRequestPrivate::ForgetDeviceRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ForgetDeviceRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ForgetDeviceRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ForgetDeviceRequest instance.
  */
 ForgetDeviceRequestPrivate::ForgetDeviceRequestPrivate(
     const ForgetDeviceRequestPrivate &other, ForgetDeviceRequest * const q)

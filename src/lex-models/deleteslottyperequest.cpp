@@ -27,10 +27,9 @@ namespace LexModelBuildingService {
 
 /*!
  * \class QtAws::LexModelBuildingService::DeleteSlotTypeRequest
- *
  * \brief The DeleteSlotTypeRequest class provides an interface for LexModelBuildingService DeleteSlotType requests.
  *
- * \ingroup LexModelBuildingService
+ * \inmodule QtAwsLexModelBuildingService
  *
  *  <fullname>Amazon Lex Build-Time Actions</fullname>
  * 
@@ -41,9 +40,7 @@ namespace LexModelBuildingService {
  */
 
 /*!
- * @brief  Constructs a new DeleteSlotTypeRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteSlotTypeRequest::DeleteSlotTypeRequest(const DeleteSlotTypeRequest &other)
     : LexModelBuildingServiceRequest(new DeleteSlotTypeRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ DeleteSlotTypeRequest::DeleteSlotTypeRequest(const DeleteSlotTypeRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DeleteSlotTypeRequest object.
+ * Constructs a DeleteSlotTypeRequest object.
  */
 DeleteSlotTypeRequest::DeleteSlotTypeRequest()
     : LexModelBuildingServiceRequest(new DeleteSlotTypeRequestPrivate(LexModelBuildingServiceRequest::DeleteSlotTypeAction, this))
@@ -70,14 +67,9 @@ bool DeleteSlotTypeRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteSlotTypeResponse object.
+ * Returns a DeleteSlotTypeResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteSlotTypeResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  LexModelBuildingServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteSlotTypeRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * DeleteSlotTypeRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::LexModelBuildingService::DeleteSlotTypeRequestPrivate
+ * \brief The DeleteSlotTypeRequestPrivate class provides private implementation for DeleteSlotTypeRequest.
+ * \internal
  *
- * @class  DeleteSlotTypeRequestPrivate
- *
- * @brief  Private implementation for DeleteSlotTypeRequest.
+ * \inmodule QtAwsLexModelBuildingService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteSlotTypeRequestPrivate object.
- *
- * @param  action  LexModelBuildingService action being performed.
- * @param  q       Pointer to this object's public DeleteSlotTypeRequest instance.
+ * Constructs a DeleteSlotTypeRequestPrivate object for LexModelBuildingService \a action with,
+ * public implementation \a q.
  */
 DeleteSlotTypeRequestPrivate::DeleteSlotTypeRequestPrivate(
     const LexModelBuildingServiceRequest::Action action, DeleteSlotTypeRequest * const q)
@@ -108,15 +97,10 @@ DeleteSlotTypeRequestPrivate::DeleteSlotTypeRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteSlotTypeRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteSlotTypeRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteSlotTypeRequest instance.
  */
 DeleteSlotTypeRequestPrivate::DeleteSlotTypeRequestPrivate(
     const DeleteSlotTypeRequestPrivate &other, DeleteSlotTypeRequest * const q)

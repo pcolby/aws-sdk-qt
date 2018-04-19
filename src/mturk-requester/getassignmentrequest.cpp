@@ -27,19 +27,16 @@ namespace MTurk {
 
 /*!
  * \class QtAws::MTurk::GetAssignmentRequest
- *
  * \brief The GetAssignmentRequest class provides an interface for MTurk GetAssignment requests.
  *
- * \ingroup MTurk
+ * \inmodule QtAwsMTurk
  *
  *
  * \sa MTurkClient::getAssignment
  */
 
 /*!
- * @brief  Constructs a new GetAssignmentRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetAssignmentRequest::GetAssignmentRequest(const GetAssignmentRequest &other)
     : MTurkRequest(new GetAssignmentRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ GetAssignmentRequest::GetAssignmentRequest(const GetAssignmentRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetAssignmentRequest object.
+ * Constructs a GetAssignmentRequest object.
  */
 GetAssignmentRequest::GetAssignmentRequest()
     : MTurkRequest(new GetAssignmentRequestPrivate(MTurkRequest::GetAssignmentAction, this))
@@ -66,14 +63,9 @@ bool GetAssignmentRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetAssignmentResponse object.
+ * Returns a GetAssignmentResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetAssignmentResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MTurkClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetAssignmentRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * GetAssignmentRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::MTurk::GetAssignmentRequestPrivate
+ * \brief The GetAssignmentRequestPrivate class provides private implementation for GetAssignmentRequest.
+ * \internal
  *
- * @class  GetAssignmentRequestPrivate
- *
- * @brief  Private implementation for GetAssignmentRequest.
+ * \inmodule QtAwsMTurk
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetAssignmentRequestPrivate object.
- *
- * @param  action  MTurk action being performed.
- * @param  q       Pointer to this object's public GetAssignmentRequest instance.
+ * Constructs a GetAssignmentRequestPrivate object for MTurk \a action with,
+ * public implementation \a q.
  */
 GetAssignmentRequestPrivate::GetAssignmentRequestPrivate(
     const MTurkRequest::Action action, GetAssignmentRequest * const q)
@@ -104,15 +93,10 @@ GetAssignmentRequestPrivate::GetAssignmentRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetAssignmentRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetAssignmentRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetAssignmentRequest instance.
  */
 GetAssignmentRequestPrivate::GetAssignmentRequestPrivate(
     const GetAssignmentRequestPrivate &other, GetAssignmentRequest * const q)

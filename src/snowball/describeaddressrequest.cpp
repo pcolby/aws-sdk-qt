@@ -27,10 +27,9 @@ namespace Snowball {
 
 /*!
  * \class QtAws::Snowball::DescribeAddressRequest
- *
  * \brief The DescribeAddressRequest class provides an interface for Snowball DescribeAddress requests.
  *
- * \ingroup Snowball
+ * \inmodule QtAwsSnowball
  *
  *  AWS Snowball is a petabyte-scale data transport solution that uses secure appliances to transfer large amounts of data
  *  between your on-premises data centers and Amazon Simple Storage Service (Amazon S3). The Snowball commands described
@@ -43,9 +42,7 @@ namespace Snowball {
  */
 
 /*!
- * @brief  Constructs a new DescribeAddressRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeAddressRequest::DescribeAddressRequest(const DescribeAddressRequest &other)
     : SnowballRequest(new DescribeAddressRequestPrivate(*other.d_func(), this))
@@ -54,7 +51,7 @@ DescribeAddressRequest::DescribeAddressRequest(const DescribeAddressRequest &oth
 }
 
 /*!
- * @brief  Constructs a new DescribeAddressRequest object.
+ * Constructs a DescribeAddressRequest object.
  */
 DescribeAddressRequest::DescribeAddressRequest()
     : SnowballRequest(new DescribeAddressRequestPrivate(SnowballRequest::DescribeAddressAction, this))
@@ -72,14 +69,9 @@ bool DescribeAddressRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeAddressResponse object.
+ * Returns a DescribeAddressResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeAddressResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SnowballClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeAddressRequest::response(QNetworkReply * const reply) const
 {
@@ -87,20 +79,17 @@ QtAws::Core::AwsAbstractResponse * DescribeAddressRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::Snowball::DescribeAddressRequestPrivate
+ * \brief The DescribeAddressRequestPrivate class provides private implementation for DescribeAddressRequest.
+ * \internal
  *
- * @class  DescribeAddressRequestPrivate
- *
- * @brief  Private implementation for DescribeAddressRequest.
+ * \inmodule QtAwsSnowball
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeAddressRequestPrivate object.
- *
- * @param  action  Snowball action being performed.
- * @param  q       Pointer to this object's public DescribeAddressRequest instance.
+ * Constructs a DescribeAddressRequestPrivate object for Snowball \a action with,
+ * public implementation \a q.
  */
 DescribeAddressRequestPrivate::DescribeAddressRequestPrivate(
     const SnowballRequest::Action action, DescribeAddressRequest * const q)
@@ -110,15 +99,10 @@ DescribeAddressRequestPrivate::DescribeAddressRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeAddressRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeAddressRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeAddressRequest instance.
  */
 DescribeAddressRequestPrivate::DescribeAddressRequestPrivate(
     const DescribeAddressRequestPrivate &other, DescribeAddressRequest * const q)

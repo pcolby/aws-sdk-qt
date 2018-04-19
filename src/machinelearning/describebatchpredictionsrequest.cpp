@@ -27,19 +27,16 @@ namespace MachineLearning {
 
 /*!
  * \class QtAws::MachineLearning::DescribeBatchPredictionsRequest
- *
  * \brief The DescribeBatchPredictionsRequest class provides an interface for MachineLearning DescribeBatchPredictions requests.
  *
- * \ingroup MachineLearning
+ * \inmodule QtAwsMachineLearning
  *
  *
  * \sa MachineLearningClient::describeBatchPredictions
  */
 
 /*!
- * @brief  Constructs a new DescribeBatchPredictionsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeBatchPredictionsRequest::DescribeBatchPredictionsRequest(const DescribeBatchPredictionsRequest &other)
     : MachineLearningRequest(new DescribeBatchPredictionsRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ DescribeBatchPredictionsRequest::DescribeBatchPredictionsRequest(const DescribeB
 }
 
 /*!
- * @brief  Constructs a new DescribeBatchPredictionsRequest object.
+ * Constructs a DescribeBatchPredictionsRequest object.
  */
 DescribeBatchPredictionsRequest::DescribeBatchPredictionsRequest()
     : MachineLearningRequest(new DescribeBatchPredictionsRequestPrivate(MachineLearningRequest::DescribeBatchPredictionsAction, this))
@@ -66,14 +63,9 @@ bool DescribeBatchPredictionsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeBatchPredictionsResponse object.
+ * Returns a DescribeBatchPredictionsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeBatchPredictionsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MachineLearningClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeBatchPredictionsRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * DescribeBatchPredictionsRequest::response(QNe
 }
 
 /*!
- * @internal
+ * \class QtAws::MachineLearning::DescribeBatchPredictionsRequestPrivate
+ * \brief The DescribeBatchPredictionsRequestPrivate class provides private implementation for DescribeBatchPredictionsRequest.
+ * \internal
  *
- * @class  DescribeBatchPredictionsRequestPrivate
- *
- * @brief  Private implementation for DescribeBatchPredictionsRequest.
+ * \inmodule QtAwsMachineLearning
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeBatchPredictionsRequestPrivate object.
- *
- * @param  action  MachineLearning action being performed.
- * @param  q       Pointer to this object's public DescribeBatchPredictionsRequest instance.
+ * Constructs a DescribeBatchPredictionsRequestPrivate object for MachineLearning \a action with,
+ * public implementation \a q.
  */
 DescribeBatchPredictionsRequestPrivate::DescribeBatchPredictionsRequestPrivate(
     const MachineLearningRequest::Action action, DescribeBatchPredictionsRequest * const q)
@@ -104,15 +93,10 @@ DescribeBatchPredictionsRequestPrivate::DescribeBatchPredictionsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeBatchPredictionsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeBatchPredictionsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeBatchPredictionsRequest instance.
  */
 DescribeBatchPredictionsRequestPrivate::DescribeBatchPredictionsRequestPrivate(
     const DescribeBatchPredictionsRequestPrivate &other, DescribeBatchPredictionsRequest * const q)

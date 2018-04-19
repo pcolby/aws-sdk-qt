@@ -27,10 +27,9 @@ namespace WAF {
 
 /*!
  * \class QtAws::WAF::UpdateRuleRequest
- *
  * \brief The UpdateRuleRequest class provides an interface for WAF UpdateRule requests.
  *
- * \ingroup WAF
+ * \inmodule QtAwsWAF
  *
  *  This is the <i>AWS WAF API Reference</i> for using AWS WAF with Amazon CloudFront. The AWS WAF actions and data types
  *  listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data
@@ -42,9 +41,7 @@ namespace WAF {
  */
 
 /*!
- * @brief  Constructs a new UpdateRuleRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateRuleRequest::UpdateRuleRequest(const UpdateRuleRequest &other)
     : WAFRequest(new UpdateRuleRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ UpdateRuleRequest::UpdateRuleRequest(const UpdateRuleRequest &other)
 }
 
 /*!
- * @brief  Constructs a new UpdateRuleRequest object.
+ * Constructs a UpdateRuleRequest object.
  */
 UpdateRuleRequest::UpdateRuleRequest()
     : WAFRequest(new UpdateRuleRequestPrivate(WAFRequest::UpdateRuleAction, this))
@@ -71,14 +68,9 @@ bool UpdateRuleRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateRuleResponse object.
+ * Returns a UpdateRuleResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateRuleResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WAFClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateRuleRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * UpdateRuleRequest::response(QNetworkReply * c
 }
 
 /*!
- * @internal
+ * \class QtAws::WAF::UpdateRuleRequestPrivate
+ * \brief The UpdateRuleRequestPrivate class provides private implementation for UpdateRuleRequest.
+ * \internal
  *
- * @class  UpdateRuleRequestPrivate
- *
- * @brief  Private implementation for UpdateRuleRequest.
+ * \inmodule QtAwsWAF
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateRuleRequestPrivate object.
- *
- * @param  action  WAF action being performed.
- * @param  q       Pointer to this object's public UpdateRuleRequest instance.
+ * Constructs a UpdateRuleRequestPrivate object for WAF \a action with,
+ * public implementation \a q.
  */
 UpdateRuleRequestPrivate::UpdateRuleRequestPrivate(
     const WAFRequest::Action action, UpdateRuleRequest * const q)
@@ -109,15 +98,10 @@ UpdateRuleRequestPrivate::UpdateRuleRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateRuleRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateRuleRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateRuleRequest instance.
  */
 UpdateRuleRequestPrivate::UpdateRuleRequestPrivate(
     const UpdateRuleRequestPrivate &other, UpdateRuleRequest * const q)

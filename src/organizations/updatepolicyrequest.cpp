@@ -27,10 +27,9 @@ namespace Organizations {
 
 /*!
  * \class QtAws::Organizations::UpdatePolicyRequest
- *
  * \brief The UpdatePolicyRequest class provides an interface for Organizations UpdatePolicy requests.
  *
- * \ingroup Organizations
+ * \inmodule QtAwsOrganizations
  *
  *  <fullname>AWS Organizations API Reference</fullname>
  * 
@@ -179,9 +178,7 @@ namespace Organizations {
  */
 
 /*!
- * @brief  Constructs a new UpdatePolicyRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdatePolicyRequest::UpdatePolicyRequest(const UpdatePolicyRequest &other)
     : OrganizationsRequest(new UpdatePolicyRequestPrivate(*other.d_func(), this))
@@ -190,7 +187,7 @@ UpdatePolicyRequest::UpdatePolicyRequest(const UpdatePolicyRequest &other)
 }
 
 /*!
- * @brief  Constructs a new UpdatePolicyRequest object.
+ * Constructs a UpdatePolicyRequest object.
  */
 UpdatePolicyRequest::UpdatePolicyRequest()
     : OrganizationsRequest(new UpdatePolicyRequestPrivate(OrganizationsRequest::UpdatePolicyAction, this))
@@ -208,14 +205,9 @@ bool UpdatePolicyRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdatePolicyResponse object.
+ * Returns a UpdatePolicyResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdatePolicyResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  OrganizationsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdatePolicyRequest::response(QNetworkReply * const reply) const
 {
@@ -223,20 +215,17 @@ QtAws::Core::AwsAbstractResponse * UpdatePolicyRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::Organizations::UpdatePolicyRequestPrivate
+ * \brief The UpdatePolicyRequestPrivate class provides private implementation for UpdatePolicyRequest.
+ * \internal
  *
- * @class  UpdatePolicyRequestPrivate
- *
- * @brief  Private implementation for UpdatePolicyRequest.
+ * \inmodule QtAwsOrganizations
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdatePolicyRequestPrivate object.
- *
- * @param  action  Organizations action being performed.
- * @param  q       Pointer to this object's public UpdatePolicyRequest instance.
+ * Constructs a UpdatePolicyRequestPrivate object for Organizations \a action with,
+ * public implementation \a q.
  */
 UpdatePolicyRequestPrivate::UpdatePolicyRequestPrivate(
     const OrganizationsRequest::Action action, UpdatePolicyRequest * const q)
@@ -246,15 +235,10 @@ UpdatePolicyRequestPrivate::UpdatePolicyRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdatePolicyRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdatePolicyRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdatePolicyRequest instance.
  */
 UpdatePolicyRequestPrivate::UpdatePolicyRequestPrivate(
     const UpdatePolicyRequestPrivate &other, UpdatePolicyRequest * const q)

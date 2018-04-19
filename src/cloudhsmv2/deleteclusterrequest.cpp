@@ -27,10 +27,9 @@ namespace CloudHSMV2 {
 
 /*!
  * \class QtAws::CloudHSMV2::DeleteClusterRequest
- *
  * \brief The DeleteClusterRequest class provides an interface for CloudHSMV2 DeleteCluster requests.
  *
- * \ingroup CloudHSMV2
+ * \inmodule QtAwsCloudHSMV2
  *
  *  For more information about AWS CloudHSM, see <a href="http://aws.amazon.com/cloudhsm/">AWS CloudHSM</a> and the <a
  *  href="http://docs.aws.amazon.com/cloudhsm/latest/userguide/">AWS CloudHSM User
@@ -39,9 +38,7 @@ namespace CloudHSMV2 {
  */
 
 /*!
- * @brief  Constructs a new DeleteClusterRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteClusterRequest::DeleteClusterRequest(const DeleteClusterRequest &other)
     : CloudHSMV2Request(new DeleteClusterRequestPrivate(*other.d_func(), this))
@@ -50,7 +47,7 @@ DeleteClusterRequest::DeleteClusterRequest(const DeleteClusterRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DeleteClusterRequest object.
+ * Constructs a DeleteClusterRequest object.
  */
 DeleteClusterRequest::DeleteClusterRequest()
     : CloudHSMV2Request(new DeleteClusterRequestPrivate(CloudHSMV2Request::DeleteClusterAction, this))
@@ -68,14 +65,9 @@ bool DeleteClusterRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteClusterResponse object.
+ * Returns a DeleteClusterResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteClusterResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudHSMV2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteClusterRequest::response(QNetworkReply * const reply) const
 {
@@ -83,20 +75,17 @@ QtAws::Core::AwsAbstractResponse * DeleteClusterRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudHSMV2::DeleteClusterRequestPrivate
+ * \brief The DeleteClusterRequestPrivate class provides private implementation for DeleteClusterRequest.
+ * \internal
  *
- * @class  DeleteClusterRequestPrivate
- *
- * @brief  Private implementation for DeleteClusterRequest.
+ * \inmodule QtAwsCloudHSMV2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteClusterRequestPrivate object.
- *
- * @param  action  CloudHSMV2 action being performed.
- * @param  q       Pointer to this object's public DeleteClusterRequest instance.
+ * Constructs a DeleteClusterRequestPrivate object for CloudHSMV2 \a action with,
+ * public implementation \a q.
  */
 DeleteClusterRequestPrivate::DeleteClusterRequestPrivate(
     const CloudHSMV2Request::Action action, DeleteClusterRequest * const q)
@@ -106,15 +95,10 @@ DeleteClusterRequestPrivate::DeleteClusterRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteClusterRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteClusterRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteClusterRequest instance.
  */
 DeleteClusterRequestPrivate::DeleteClusterRequestPrivate(
     const DeleteClusterRequestPrivate &other, DeleteClusterRequest * const q)

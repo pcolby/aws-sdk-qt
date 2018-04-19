@@ -27,10 +27,9 @@ namespace Batch {
 
 /*!
  * \class QtAws::Batch::SubmitJobRequest
- *
  * \brief The SubmitJobRequest class provides an interface for Batch SubmitJob requests.
  *
- * \ingroup Batch
+ * \inmodule QtAwsBatch
  *
  *  AWS Batch enables you to run batch computing workloads on the AWS Cloud. Batch computing is a common way for developers,
  *  scientists, and engineers to access large amounts of compute resources, and AWS Batch removes the undifferentiated heavy
@@ -51,9 +50,7 @@ namespace Batch {
  */
 
 /*!
- * @brief  Constructs a new SubmitJobRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 SubmitJobRequest::SubmitJobRequest(const SubmitJobRequest &other)
     : BatchRequest(new SubmitJobRequestPrivate(*other.d_func(), this))
@@ -62,7 +59,7 @@ SubmitJobRequest::SubmitJobRequest(const SubmitJobRequest &other)
 }
 
 /*!
- * @brief  Constructs a new SubmitJobRequest object.
+ * Constructs a SubmitJobRequest object.
  */
 SubmitJobRequest::SubmitJobRequest()
     : BatchRequest(new SubmitJobRequestPrivate(BatchRequest::SubmitJobAction, this))
@@ -80,14 +77,9 @@ bool SubmitJobRequest::isValid() const
 
 
 /*!
- * @brief  Construct an SubmitJobResponse object.
+ * Returns a SubmitJobResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An SubmitJobResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  BatchClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * SubmitJobRequest::response(QNetworkReply * const reply) const
 {
@@ -95,20 +87,17 @@ QtAws::Core::AwsAbstractResponse * SubmitJobRequest::response(QNetworkReply * co
 }
 
 /*!
- * @internal
+ * \class QtAws::Batch::SubmitJobRequestPrivate
+ * \brief The SubmitJobRequestPrivate class provides private implementation for SubmitJobRequest.
+ * \internal
  *
- * @class  SubmitJobRequestPrivate
- *
- * @brief  Private implementation for SubmitJobRequest.
+ * \inmodule QtAwsBatch
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new SubmitJobRequestPrivate object.
- *
- * @param  action  Batch action being performed.
- * @param  q       Pointer to this object's public SubmitJobRequest instance.
+ * Constructs a SubmitJobRequestPrivate object for Batch \a action with,
+ * public implementation \a q.
  */
 SubmitJobRequestPrivate::SubmitJobRequestPrivate(
     const BatchRequest::Action action, SubmitJobRequest * const q)
@@ -118,15 +107,10 @@ SubmitJobRequestPrivate::SubmitJobRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SubmitJobRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the SubmitJobRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public SubmitJobRequest instance.
  */
 SubmitJobRequestPrivate::SubmitJobRequestPrivate(
     const SubmitJobRequestPrivate &other, SubmitJobRequest * const q)

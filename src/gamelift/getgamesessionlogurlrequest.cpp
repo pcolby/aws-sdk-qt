@@ -27,10 +27,9 @@ namespace GameLift {
 
 /*!
  * \class QtAws::GameLift::GetGameSessionLogUrlRequest
- *
  * \brief The GetGameSessionLogUrlRequest class provides an interface for GameLift GetGameSessionLogUrl requests.
  *
- * \ingroup GameLift
+ * \inmodule QtAwsGameLift
  *
  *  <fullname>Amazon GameLift Service</fullname>
  * 
@@ -473,9 +472,7 @@ namespace GameLift {
  */
 
 /*!
- * @brief  Constructs a new GetGameSessionLogUrlRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetGameSessionLogUrlRequest::GetGameSessionLogUrlRequest(const GetGameSessionLogUrlRequest &other)
     : GameLiftRequest(new GetGameSessionLogUrlRequestPrivate(*other.d_func(), this))
@@ -484,7 +481,7 @@ GetGameSessionLogUrlRequest::GetGameSessionLogUrlRequest(const GetGameSessionLog
 }
 
 /*!
- * @brief  Constructs a new GetGameSessionLogUrlRequest object.
+ * Constructs a GetGameSessionLogUrlRequest object.
  */
 GetGameSessionLogUrlRequest::GetGameSessionLogUrlRequest()
     : GameLiftRequest(new GetGameSessionLogUrlRequestPrivate(GameLiftRequest::GetGameSessionLogUrlAction, this))
@@ -502,14 +499,9 @@ bool GetGameSessionLogUrlRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetGameSessionLogUrlResponse object.
+ * Returns a GetGameSessionLogUrlResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetGameSessionLogUrlResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GameLiftClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetGameSessionLogUrlRequest::response(QNetworkReply * const reply) const
 {
@@ -517,20 +509,17 @@ QtAws::Core::AwsAbstractResponse * GetGameSessionLogUrlRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::GameLift::GetGameSessionLogUrlRequestPrivate
+ * \brief The GetGameSessionLogUrlRequestPrivate class provides private implementation for GetGameSessionLogUrlRequest.
+ * \internal
  *
- * @class  GetGameSessionLogUrlRequestPrivate
- *
- * @brief  Private implementation for GetGameSessionLogUrlRequest.
+ * \inmodule QtAwsGameLift
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetGameSessionLogUrlRequestPrivate object.
- *
- * @param  action  GameLift action being performed.
- * @param  q       Pointer to this object's public GetGameSessionLogUrlRequest instance.
+ * Constructs a GetGameSessionLogUrlRequestPrivate object for GameLift \a action with,
+ * public implementation \a q.
  */
 GetGameSessionLogUrlRequestPrivate::GetGameSessionLogUrlRequestPrivate(
     const GameLiftRequest::Action action, GetGameSessionLogUrlRequest * const q)
@@ -540,15 +529,10 @@ GetGameSessionLogUrlRequestPrivate::GetGameSessionLogUrlRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetGameSessionLogUrlRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetGameSessionLogUrlRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetGameSessionLogUrlRequest instance.
  */
 GetGameSessionLogUrlRequestPrivate::GetGameSessionLogUrlRequestPrivate(
     const GetGameSessionLogUrlRequestPrivate &other, GetGameSessionLogUrlRequest * const q)

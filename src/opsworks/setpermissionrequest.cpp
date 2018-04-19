@@ -27,10 +27,9 @@ namespace OpsWorks {
 
 /*!
  * \class QtAws::OpsWorks::SetPermissionRequest
- *
  * \brief The SetPermissionRequest class provides an interface for OpsWorks SetPermission requests.
  *
- * \ingroup OpsWorks
+ * \inmodule QtAwsOpsWorks
  *
  *  <fullname>AWS OpsWorks</fullname>
  * 
@@ -143,9 +142,7 @@ namespace OpsWorks {
  */
 
 /*!
- * @brief  Constructs a new SetPermissionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 SetPermissionRequest::SetPermissionRequest(const SetPermissionRequest &other)
     : OpsWorksRequest(new SetPermissionRequestPrivate(*other.d_func(), this))
@@ -154,7 +151,7 @@ SetPermissionRequest::SetPermissionRequest(const SetPermissionRequest &other)
 }
 
 /*!
- * @brief  Constructs a new SetPermissionRequest object.
+ * Constructs a SetPermissionRequest object.
  */
 SetPermissionRequest::SetPermissionRequest()
     : OpsWorksRequest(new SetPermissionRequestPrivate(OpsWorksRequest::SetPermissionAction, this))
@@ -172,14 +169,9 @@ bool SetPermissionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an SetPermissionResponse object.
+ * Returns a SetPermissionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An SetPermissionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  OpsWorksClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * SetPermissionRequest::response(QNetworkReply * const reply) const
 {
@@ -187,20 +179,17 @@ QtAws::Core::AwsAbstractResponse * SetPermissionRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::OpsWorks::SetPermissionRequestPrivate
+ * \brief The SetPermissionRequestPrivate class provides private implementation for SetPermissionRequest.
+ * \internal
  *
- * @class  SetPermissionRequestPrivate
- *
- * @brief  Private implementation for SetPermissionRequest.
+ * \inmodule QtAwsOpsWorks
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new SetPermissionRequestPrivate object.
- *
- * @param  action  OpsWorks action being performed.
- * @param  q       Pointer to this object's public SetPermissionRequest instance.
+ * Constructs a SetPermissionRequestPrivate object for OpsWorks \a action with,
+ * public implementation \a q.
  */
 SetPermissionRequestPrivate::SetPermissionRequestPrivate(
     const OpsWorksRequest::Action action, SetPermissionRequest * const q)
@@ -210,15 +199,10 @@ SetPermissionRequestPrivate::SetPermissionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SetPermissionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the SetPermissionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public SetPermissionRequest instance.
  */
 SetPermissionRequestPrivate::SetPermissionRequestPrivate(
     const SetPermissionRequestPrivate &other, SetPermissionRequest * const q)

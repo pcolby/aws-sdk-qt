@@ -27,10 +27,9 @@ namespace DynamoDB {
 
 /*!
  * \class QtAws::DynamoDB::QueryRequest
- *
  * \brief The QueryRequest class provides an interface for DynamoDB Query requests.
  *
- * \ingroup DynamoDB
+ * \inmodule QtAwsDynamoDB
  *
  *  <fullname>Amazon DynamoDB</fullname>
  * 
@@ -56,9 +55,7 @@ namespace DynamoDB {
  */
 
 /*!
- * @brief  Constructs a new QueryRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 QueryRequest::QueryRequest(const QueryRequest &other)
     : DynamoDBRequest(new QueryRequestPrivate(*other.d_func(), this))
@@ -67,7 +64,7 @@ QueryRequest::QueryRequest(const QueryRequest &other)
 }
 
 /*!
- * @brief  Constructs a new QueryRequest object.
+ * Constructs a QueryRequest object.
  */
 QueryRequest::QueryRequest()
     : DynamoDBRequest(new QueryRequestPrivate(DynamoDBRequest::QueryAction, this))
@@ -85,14 +82,9 @@ bool QueryRequest::isValid() const
 
 
 /*!
- * @brief  Construct an QueryResponse object.
+ * Returns a QueryResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An QueryResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DynamoDBClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * QueryRequest::response(QNetworkReply * const reply) const
 {
@@ -100,20 +92,17 @@ QtAws::Core::AwsAbstractResponse * QueryRequest::response(QNetworkReply * const 
 }
 
 /*!
- * @internal
+ * \class QtAws::DynamoDB::QueryRequestPrivate
+ * \brief The QueryRequestPrivate class provides private implementation for QueryRequest.
+ * \internal
  *
- * @class  QueryRequestPrivate
- *
- * @brief  Private implementation for QueryRequest.
+ * \inmodule QtAwsDynamoDB
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new QueryRequestPrivate object.
- *
- * @param  action  DynamoDB action being performed.
- * @param  q       Pointer to this object's public QueryRequest instance.
+ * Constructs a QueryRequestPrivate object for DynamoDB \a action with,
+ * public implementation \a q.
  */
 QueryRequestPrivate::QueryRequestPrivate(
     const DynamoDBRequest::Action action, QueryRequest * const q)
@@ -123,15 +112,10 @@ QueryRequestPrivate::QueryRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new QueryRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the QueryRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public QueryRequest instance.
  */
 QueryRequestPrivate::QueryRequestPrivate(
     const QueryRequestPrivate &other, QueryRequest * const q)

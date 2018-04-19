@@ -27,19 +27,16 @@ namespace Pinpoint {
 
 /*!
  * \class QtAws::Pinpoint::DeleteAppRequest
- *
  * \brief The DeleteAppRequest class provides an interface for Pinpoint DeleteApp requests.
  *
- * \ingroup Pinpoint
+ * \inmodule QtAwsPinpoint
  *
  *
  * \sa PinpointClient::deleteApp
  */
 
 /*!
- * @brief  Constructs a new DeleteAppRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteAppRequest::DeleteAppRequest(const DeleteAppRequest &other)
     : PinpointRequest(new DeleteAppRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ DeleteAppRequest::DeleteAppRequest(const DeleteAppRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DeleteAppRequest object.
+ * Constructs a DeleteAppRequest object.
  */
 DeleteAppRequest::DeleteAppRequest()
     : PinpointRequest(new DeleteAppRequestPrivate(PinpointRequest::DeleteAppAction, this))
@@ -66,14 +63,9 @@ bool DeleteAppRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteAppResponse object.
+ * Returns a DeleteAppResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteAppResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  PinpointClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteAppRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * DeleteAppRequest::response(QNetworkReply * co
 }
 
 /*!
- * @internal
+ * \class QtAws::Pinpoint::DeleteAppRequestPrivate
+ * \brief The DeleteAppRequestPrivate class provides private implementation for DeleteAppRequest.
+ * \internal
  *
- * @class  DeleteAppRequestPrivate
- *
- * @brief  Private implementation for DeleteAppRequest.
+ * \inmodule QtAwsPinpoint
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteAppRequestPrivate object.
- *
- * @param  action  Pinpoint action being performed.
- * @param  q       Pointer to this object's public DeleteAppRequest instance.
+ * Constructs a DeleteAppRequestPrivate object for Pinpoint \a action with,
+ * public implementation \a q.
  */
 DeleteAppRequestPrivate::DeleteAppRequestPrivate(
     const PinpointRequest::Action action, DeleteAppRequest * const q)
@@ -104,15 +93,10 @@ DeleteAppRequestPrivate::DeleteAppRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteAppRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteAppRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteAppRequest instance.
  */
 DeleteAppRequestPrivate::DeleteAppRequestPrivate(
     const DeleteAppRequestPrivate &other, DeleteAppRequest * const q)

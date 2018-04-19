@@ -27,10 +27,9 @@ namespace AutoScaling {
 
 /*!
  * \class QtAws::AutoScaling::DeleteScheduledActionRequest
- *
  * \brief The DeleteScheduledActionRequest class provides an interface for AutoScaling DeleteScheduledAction requests.
  *
- * \ingroup AutoScaling
+ * \inmodule QtAwsAutoScaling
  *
  *  <fullname>Amazon EC2 Auto Scaling</fullname>
  * 
@@ -42,9 +41,7 @@ namespace AutoScaling {
  */
 
 /*!
- * @brief  Constructs a new DeleteScheduledActionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteScheduledActionRequest::DeleteScheduledActionRequest(const DeleteScheduledActionRequest &other)
     : AutoScalingRequest(new DeleteScheduledActionRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ DeleteScheduledActionRequest::DeleteScheduledActionRequest(const DeleteScheduled
 }
 
 /*!
- * @brief  Constructs a new DeleteScheduledActionRequest object.
+ * Constructs a DeleteScheduledActionRequest object.
  */
 DeleteScheduledActionRequest::DeleteScheduledActionRequest()
     : AutoScalingRequest(new DeleteScheduledActionRequestPrivate(AutoScalingRequest::DeleteScheduledActionAction, this))
@@ -71,14 +68,9 @@ bool DeleteScheduledActionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteScheduledActionResponse object.
+ * Returns a DeleteScheduledActionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteScheduledActionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AutoScalingClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteScheduledActionRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * DeleteScheduledActionRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::AutoScaling::DeleteScheduledActionRequestPrivate
+ * \brief The DeleteScheduledActionRequestPrivate class provides private implementation for DeleteScheduledActionRequest.
+ * \internal
  *
- * @class  DeleteScheduledActionRequestPrivate
- *
- * @brief  Private implementation for DeleteScheduledActionRequest.
+ * \inmodule QtAwsAutoScaling
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteScheduledActionRequestPrivate object.
- *
- * @param  action  AutoScaling action being performed.
- * @param  q       Pointer to this object's public DeleteScheduledActionRequest instance.
+ * Constructs a DeleteScheduledActionRequestPrivate object for AutoScaling \a action with,
+ * public implementation \a q.
  */
 DeleteScheduledActionRequestPrivate::DeleteScheduledActionRequestPrivate(
     const AutoScalingRequest::Action action, DeleteScheduledActionRequest * const q)
@@ -109,15 +98,10 @@ DeleteScheduledActionRequestPrivate::DeleteScheduledActionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteScheduledActionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteScheduledActionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteScheduledActionRequest instance.
  */
 DeleteScheduledActionRequestPrivate::DeleteScheduledActionRequestPrivate(
     const DeleteScheduledActionRequestPrivate &other, DeleteScheduledActionRequest * const q)

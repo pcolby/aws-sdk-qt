@@ -27,10 +27,9 @@ namespace OpsWorks {
 
 /*!
  * \class QtAws::OpsWorks::UpdateLayerRequest
- *
  * \brief The UpdateLayerRequest class provides an interface for OpsWorks UpdateLayer requests.
  *
- * \ingroup OpsWorks
+ * \inmodule QtAwsOpsWorks
  *
  *  <fullname>AWS OpsWorks</fullname>
  * 
@@ -143,9 +142,7 @@ namespace OpsWorks {
  */
 
 /*!
- * @brief  Constructs a new UpdateLayerRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateLayerRequest::UpdateLayerRequest(const UpdateLayerRequest &other)
     : OpsWorksRequest(new UpdateLayerRequestPrivate(*other.d_func(), this))
@@ -154,7 +151,7 @@ UpdateLayerRequest::UpdateLayerRequest(const UpdateLayerRequest &other)
 }
 
 /*!
- * @brief  Constructs a new UpdateLayerRequest object.
+ * Constructs a UpdateLayerRequest object.
  */
 UpdateLayerRequest::UpdateLayerRequest()
     : OpsWorksRequest(new UpdateLayerRequestPrivate(OpsWorksRequest::UpdateLayerAction, this))
@@ -172,14 +169,9 @@ bool UpdateLayerRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateLayerResponse object.
+ * Returns a UpdateLayerResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateLayerResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  OpsWorksClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateLayerRequest::response(QNetworkReply * const reply) const
 {
@@ -187,20 +179,17 @@ QtAws::Core::AwsAbstractResponse * UpdateLayerRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::OpsWorks::UpdateLayerRequestPrivate
+ * \brief The UpdateLayerRequestPrivate class provides private implementation for UpdateLayerRequest.
+ * \internal
  *
- * @class  UpdateLayerRequestPrivate
- *
- * @brief  Private implementation for UpdateLayerRequest.
+ * \inmodule QtAwsOpsWorks
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateLayerRequestPrivate object.
- *
- * @param  action  OpsWorks action being performed.
- * @param  q       Pointer to this object's public UpdateLayerRequest instance.
+ * Constructs a UpdateLayerRequestPrivate object for OpsWorks \a action with,
+ * public implementation \a q.
  */
 UpdateLayerRequestPrivate::UpdateLayerRequestPrivate(
     const OpsWorksRequest::Action action, UpdateLayerRequest * const q)
@@ -210,15 +199,10 @@ UpdateLayerRequestPrivate::UpdateLayerRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateLayerRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateLayerRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateLayerRequest instance.
  */
 UpdateLayerRequestPrivate::UpdateLayerRequestPrivate(
     const UpdateLayerRequestPrivate &other, UpdateLayerRequest * const q)

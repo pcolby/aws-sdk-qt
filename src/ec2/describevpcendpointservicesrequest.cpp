@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DescribeVpcEndpointServicesRequest
- *
  * \brief The DescribeVpcEndpointServicesRequest class provides an interface for EC2 DescribeVpcEndpointServices requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DescribeVpcEndpointServicesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeVpcEndpointServicesRequest::DescribeVpcEndpointServicesRequest(const DescribeVpcEndpointServicesRequest &other)
     : EC2Request(new DescribeVpcEndpointServicesRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ DescribeVpcEndpointServicesRequest::DescribeVpcEndpointServicesRequest(const Des
 }
 
 /*!
- * @brief  Constructs a new DescribeVpcEndpointServicesRequest object.
+ * Constructs a DescribeVpcEndpointServicesRequest object.
  */
 DescribeVpcEndpointServicesRequest::DescribeVpcEndpointServicesRequest()
     : EC2Request(new DescribeVpcEndpointServicesRequestPrivate(EC2Request::DescribeVpcEndpointServicesAction, this))
@@ -70,14 +67,9 @@ bool DescribeVpcEndpointServicesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeVpcEndpointServicesResponse object.
+ * Returns a DescribeVpcEndpointServicesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeVpcEndpointServicesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeVpcEndpointServicesRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * DescribeVpcEndpointServicesRequest::response(
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::DescribeVpcEndpointServicesRequestPrivate
+ * \brief The DescribeVpcEndpointServicesRequestPrivate class provides private implementation for DescribeVpcEndpointServicesRequest.
+ * \internal
  *
- * @class  DescribeVpcEndpointServicesRequestPrivate
- *
- * @brief  Private implementation for DescribeVpcEndpointServicesRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeVpcEndpointServicesRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public DescribeVpcEndpointServicesRequest instance.
+ * Constructs a DescribeVpcEndpointServicesRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 DescribeVpcEndpointServicesRequestPrivate::DescribeVpcEndpointServicesRequestPrivate(
     const EC2Request::Action action, DescribeVpcEndpointServicesRequest * const q)
@@ -108,15 +97,10 @@ DescribeVpcEndpointServicesRequestPrivate::DescribeVpcEndpointServicesRequestPri
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeVpcEndpointServicesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeVpcEndpointServicesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeVpcEndpointServicesRequest instance.
  */
 DescribeVpcEndpointServicesRequestPrivate::DescribeVpcEndpointServicesRequestPrivate(
     const DescribeVpcEndpointServicesRequestPrivate &other, DescribeVpcEndpointServicesRequest * const q)

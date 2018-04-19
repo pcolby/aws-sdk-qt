@@ -25,16 +25,39 @@ namespace CognitoIdentity {
 
 /*!
  * \class QtAws::CognitoIdentity::CognitoIdentityRequest
- *
  * \brief The CognitoIdentityRequest class provides an interface for CognitoIdentity requests.
  *
- * \ingroup CognitoIdentity
+ * \inmodule QtAwsCognitoIdentity
  */
 
 /*!
- * @brief  Constructs a new CognitoIdentityRequest object.
+ * \enum CognitoIdentityRequest::Action
  *
- * @param  action  The CognitoIdentity action to request.
+ * This enum describes the actions that can be performed as CognitoIdentity
+ * requests.
+ *
+ * \value CreateIdentityPoolAction CognitoIdentity CreateIdentityPool action.
+ * \value DeleteIdentitiesAction CognitoIdentity DeleteIdentities action.
+ * \value DeleteIdentityPoolAction CognitoIdentity DeleteIdentityPool action.
+ * \value DescribeIdentityAction CognitoIdentity DescribeIdentity action.
+ * \value DescribeIdentityPoolAction CognitoIdentity DescribeIdentityPool action.
+ * \value GetCredentialsForIdentityAction CognitoIdentity GetCredentialsForIdentity action.
+ * \value GetIdAction CognitoIdentity GetId action.
+ * \value GetIdentityPoolRolesAction CognitoIdentity GetIdentityPoolRoles action.
+ * \value GetOpenIdTokenAction CognitoIdentity GetOpenIdToken action.
+ * \value GetOpenIdTokenForDeveloperIdentityAction CognitoIdentity GetOpenIdTokenForDeveloperIdentity action.
+ * \value ListIdentitiesAction CognitoIdentity ListIdentities action.
+ * \value ListIdentityPoolsAction CognitoIdentity ListIdentityPools action.
+ * \value LookupDeveloperIdentityAction CognitoIdentity LookupDeveloperIdentity action.
+ * \value MergeDeveloperIdentitiesAction CognitoIdentity MergeDeveloperIdentities action.
+ * \value SetIdentityPoolRolesAction CognitoIdentity SetIdentityPoolRoles action.
+ * \value UnlinkDeveloperIdentityAction CognitoIdentity UnlinkDeveloperIdentity action.
+ * \value UnlinkIdentityAction CognitoIdentity UnlinkIdentity action.
+ * \value UpdateIdentityPoolAction CognitoIdentity UpdateIdentityPool action.
+ */
+
+/*!
+ * Constructs a[n] CognitoIdentityRequest object for CognitoIdentity \a action.
  */
 CognitoIdentityRequest::CognitoIdentityRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new CognitoIdentityRequestPrivate(action, this))
@@ -43,9 +66,7 @@ CognitoIdentityRequest::CognitoIdentityRequest(const Action action)
 }
 
 /*!
- * @brief  Constructs a new CognitoIdentityRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CognitoIdentityRequest::CognitoIdentityRequest(const CognitoIdentityRequest &other)
     : QtAws::Core::AwsAbstractRequest(new CognitoIdentityRequestPrivate(*other.d_func(), this))
@@ -54,13 +75,7 @@ CognitoIdentityRequest::CognitoIdentityRequest(const CognitoIdentityRequest &oth
 }
 
 /*!
- * @brief  Assignment operator.
- *
- * Assigns \a other to \c this.
- *
- * @param  other  Instance to copy.
- *
- * @return  A reference to \c this.
+ * Sets the CognitoIdentityRequest object to be equal to \a other.
  */
 CognitoIdentityRequest& CognitoIdentityRequest::operator=(const CognitoIdentityRequest &other)
 {
@@ -72,14 +87,10 @@ CognitoIdentityRequest& CognitoIdentityRequest::operator=(const CognitoIdentityR
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CognitoIdentityRequest object.
+ * Constructs aa CognitoIdentityRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from CognitoIdentityRequestPrivate.
- *
- * @param  d  Pointer to private data (aka D-Pointer).
  */
 CognitoIdentityRequest::CognitoIdentityRequest(CognitoIdentityRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
@@ -87,7 +98,7 @@ CognitoIdentityRequest::CognitoIdentityRequest(CognitoIdentityRequestPrivate * c
 }
 
 /*!
- * \brief Returns the CognitoIdentity action to be performed by this request.
+ * Returns the CognitoIdentity action to be performed by this request.
  */
 CognitoIdentityRequest::Action CognitoIdentityRequest::action() const
 {
@@ -96,7 +107,7 @@ CognitoIdentityRequest::Action CognitoIdentityRequest::action() const
 }
 
 /*!
- * \brief Returns the name of the CognitoIdentity action to be performed by this request.
+ * Returns the name of the CognitoIdentity action to be performed by this request.
  */
 QString CognitoIdentityRequest::actionString() const
 {
@@ -104,7 +115,7 @@ QString CognitoIdentityRequest::actionString() const
 }
 
 /*!
- * \brief Returns the CognitoIdentity API version implemented by this request.
+ * Returns the CognitoIdentity API version implemented by this request.
  */
 QString CognitoIdentityRequest::apiVersion() const
 {
@@ -113,7 +124,7 @@ QString CognitoIdentityRequest::apiVersion() const
 }
 
 /*!
- * @brief Set the CognitoIdentity action to be performed by this request to \a action.
+ * Sets the CognitoIdentity action to be performed by this request to \a action.
  */
 void CognitoIdentityRequest::setAction(const Action action)
 {
@@ -122,7 +133,7 @@ void CognitoIdentityRequest::setAction(const Action action)
 }
 
 /*!
- * Set the CognitoIdentity API version to include in this request to \a version.
+ * Sets the CognitoIdentity API version to include in this request to \a version.
  */
 void CognitoIdentityRequest::setApiVersion(const QString &version)
 {
@@ -131,7 +142,7 @@ void CognitoIdentityRequest::setApiVersion(const QString &version)
 }
 
 /*!
- * \brief Returns \c true if this request is the same as \a other.
+ * Returns \c true if this request is equal to \a other; \c false otherwise.
  *
  * Note, most derived *Request classes do not need to provider their own
  * implementations of this function, since most such request classes rely on
@@ -146,8 +157,8 @@ bool CognitoIdentityRequest::operator==(const CognitoIdentityRequest &other) con
             (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
-/*!
- * @brief  Check if \a queueName is a valid CognitoIdentity queue name.
+/*
+ * Returns \c tue if \a queueName is a valid CognitoIdentity queue name.
  *
  * @par From CognitoIdentity FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
@@ -166,9 +177,8 @@ bool CognitoIdentityRequest::operator==(const CognitoIdentityRequest &other) con
 }*/
 
 /*!
- * \brief Removes the a \a name parameter from this request.
- *
- * Returns the count of paramters removed (typically \c 0 or \c 1).
+ * Removes the a \a name parameter from the request, then returns the number of
+ * paramters removed (typically \c 0 or \c 1).
  */
 int CognitoIdentityRequest::clearParameter(const QString &name)
 {
@@ -177,7 +187,7 @@ int CognitoIdentityRequest::clearParameter(const QString &name)
 }
 
 /*!
- * \brief Removes all parameters from this request.
+ * Removes all parameters from the request.
  */
 void CognitoIdentityRequest::clearParameters()
 {
@@ -186,7 +196,7 @@ void CognitoIdentityRequest::clearParameters()
 }
 
 /*!
- * \brief Returns the value of the \n name pararemter if set, otherwise \a defaultValue.
+ * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
 QVariant CognitoIdentityRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
@@ -195,7 +205,7 @@ QVariant CognitoIdentityRequest::parameter(const QString &name, const QVariant &
 }
 
 /*!
- * \brief Returns a map of parameters included in this request.
+ * Returns the parameters included in this request.
  */
 const QVariantMap &CognitoIdentityRequest::parameters() const
 {
@@ -204,7 +214,7 @@ const QVariantMap &CognitoIdentityRequest::parameters() const
 }
 
 /*!
- * \brief Sets the \a name parameter to \a value.
+ * Sets the \a name parameter to \a value.
  */
 void CognitoIdentityRequest::setParameter(const QString &name, const QVariant &value)
 {
@@ -213,9 +223,8 @@ void CognitoIdentityRequest::setParameter(const QString &name, const QVariant &v
 }
 
 /*!
- * \brief Sets the map of paramters for this request to \a parameters.
- *
- * Any request parameters set previously will be discarded.
+ * Sets the paramters for this request to \a parameters. Any request parameters
+ * set previously will be discarded.
  */
 void CognitoIdentityRequest::setParameters(const QVariantMap &parameters)
 {
@@ -224,11 +233,12 @@ void CognitoIdentityRequest::setParameters(const QVariantMap &parameters)
 }
 
 /*!
- * \brief Returns a network request for this CognitoIdentity request using the given \a endpoint.
+ * Returns a network request for the CognitoIdentity request using the given
+ * \a endpoint.
  *
- * This CognitoIdentity implementation builds request URLs by combining the common query
- * parameters (such as Action and Version), with any that have been added (via
- * setParameter) by child classes.
+ * This CognitoIdentity implementation builds request URLs by combining the
+ * common query parameters (such as Action and Version), with any that have
+ * been added (via setParameter) by child classes.
  */
 QNetworkRequest CognitoIdentityRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -239,17 +249,16 @@ QNetworkRequest CognitoIdentityRequest::unsignedRequest(const QUrl &endpoint) co
 }
 
 /*!
+ * \class QtAws::CognitoIdentity::CognitoIdentityRequestPrivate
+ * \brief The CognitoIdentityRequestPrivate class provides private implementation for CognitoIdentityRequest.
  * \internal
  *
- * \class  CognitoIdentityRequestPrivate
- *
- * \brief  Private implementation for CognitoIdentityRequest.
+ * \inmodule QtAwsCognitoIdentity
  */
 
 /*!
- * \internal
- *
- * \brief Constructs a new CognitoIdentityRequestPrivate object.
+ * Constructs a CognitoIdentityRequestPrivate object for CognitoIdentity \a action with,
+ * public implementation \a q.
  */
 CognitoIdentityRequestPrivate::CognitoIdentityRequestPrivate(const CognitoIdentityRequest::Action action, CognitoIdentityRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
@@ -258,9 +267,7 @@ CognitoIdentityRequestPrivate::CognitoIdentityRequestPrivate(const CognitoIdenti
 }
 
 /*!
- * \internal
- *
- * \brief Constructs a new CognitoIdentityRequestPrivate object, copying an existing one.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
@@ -276,15 +283,12 @@ CognitoIdentityRequestPrivate::CognitoIdentityRequestPrivate(const CognitoIdenti
 }
 
 /*!
- * \internal
- *
- * \brief Returns a string representing \a action.
+ * Returns a string represention of \a action, or a null string if \a action is
+ * invalid.
  *
  * This function converts CognitoIdentityRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the CognitoIdentity service's Action
  * query parameters.
- *
- * @return A string representing \a action, or a null string if \a action is invalid.
  */
 QString CognitoIdentityRequestPrivate::toString(const CognitoIdentityRequest::Action &action)
 {

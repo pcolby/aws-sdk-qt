@@ -27,10 +27,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::DescribeJobRequest
- *
  * \brief The DescribeJobRequest class provides an interface for IoT DescribeJob requests.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -48,9 +47,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new DescribeJobRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeJobRequest::DescribeJobRequest(const DescribeJobRequest &other)
     : IoTRequest(new DescribeJobRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ DescribeJobRequest::DescribeJobRequest(const DescribeJobRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DescribeJobRequest object.
+ * Constructs a DescribeJobRequest object.
  */
 DescribeJobRequest::DescribeJobRequest()
     : IoTRequest(new DescribeJobRequestPrivate(IoTRequest::DescribeJobAction, this))
@@ -77,14 +74,9 @@ bool DescribeJobRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeJobResponse object.
+ * Returns a DescribeJobResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeJobResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IoTClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeJobRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * DescribeJobRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::IoT::DescribeJobRequestPrivate
+ * \brief The DescribeJobRequestPrivate class provides private implementation for DescribeJobRequest.
+ * \internal
  *
- * @class  DescribeJobRequestPrivate
- *
- * @brief  Private implementation for DescribeJobRequest.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeJobRequestPrivate object.
- *
- * @param  action  IoT action being performed.
- * @param  q       Pointer to this object's public DescribeJobRequest instance.
+ * Constructs a DescribeJobRequestPrivate object for IoT \a action with,
+ * public implementation \a q.
  */
 DescribeJobRequestPrivate::DescribeJobRequestPrivate(
     const IoTRequest::Action action, DescribeJobRequest * const q)
@@ -115,15 +104,10 @@ DescribeJobRequestPrivate::DescribeJobRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeJobRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeJobRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeJobRequest instance.
  */
 DescribeJobRequestPrivate::DescribeJobRequestPrivate(
     const DescribeJobRequestPrivate &other, DescribeJobRequest * const q)

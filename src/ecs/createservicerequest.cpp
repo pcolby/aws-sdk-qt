@@ -27,10 +27,9 @@ namespace ECS {
 
 /*!
  * \class QtAws::ECS::CreateServiceRequest
- *
  * \brief The CreateServiceRequest class provides an interface for ECS CreateService requests.
  *
- * \ingroup ECS
+ * \inmodule QtAwsECS
  *
  *  Amazon Elastic Container Service (Amazon ECS) is a highly scalable, fast, container management service that makes it
  *  easy to run, stop, and manage Docker containers on a cluster. You can host your cluster on a serverless infrastructure
@@ -54,9 +53,7 @@ namespace ECS {
  */
 
 /*!
- * @brief  Constructs a new CreateServiceRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateServiceRequest::CreateServiceRequest(const CreateServiceRequest &other)
     : ECSRequest(new CreateServiceRequestPrivate(*other.d_func(), this))
@@ -65,7 +62,7 @@ CreateServiceRequest::CreateServiceRequest(const CreateServiceRequest &other)
 }
 
 /*!
- * @brief  Constructs a new CreateServiceRequest object.
+ * Constructs a CreateServiceRequest object.
  */
 CreateServiceRequest::CreateServiceRequest()
     : ECSRequest(new CreateServiceRequestPrivate(ECSRequest::CreateServiceAction, this))
@@ -83,14 +80,9 @@ bool CreateServiceRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateServiceResponse object.
+ * Returns a CreateServiceResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateServiceResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ECSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateServiceRequest::response(QNetworkReply * const reply) const
 {
@@ -98,20 +90,17 @@ QtAws::Core::AwsAbstractResponse * CreateServiceRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::ECS::CreateServiceRequestPrivate
+ * \brief The CreateServiceRequestPrivate class provides private implementation for CreateServiceRequest.
+ * \internal
  *
- * @class  CreateServiceRequestPrivate
- *
- * @brief  Private implementation for CreateServiceRequest.
+ * \inmodule QtAwsECS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateServiceRequestPrivate object.
- *
- * @param  action  ECS action being performed.
- * @param  q       Pointer to this object's public CreateServiceRequest instance.
+ * Constructs a CreateServiceRequestPrivate object for ECS \a action with,
+ * public implementation \a q.
  */
 CreateServiceRequestPrivate::CreateServiceRequestPrivate(
     const ECSRequest::Action action, CreateServiceRequest * const q)
@@ -121,15 +110,10 @@ CreateServiceRequestPrivate::CreateServiceRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateServiceRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateServiceRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateServiceRequest instance.
  */
 CreateServiceRequestPrivate::CreateServiceRequestPrivate(
     const CreateServiceRequestPrivate &other, CreateServiceRequest * const q)

@@ -27,10 +27,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::UploadSSHPublicKeyRequest
- *
  * \brief The UploadSSHPublicKeyRequest class provides an interface for IAM UploadSSHPublicKey requests.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -102,9 +101,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new UploadSSHPublicKeyRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UploadSSHPublicKeyRequest::UploadSSHPublicKeyRequest(const UploadSSHPublicKeyRequest &other)
     : IAMRequest(new UploadSSHPublicKeyRequestPrivate(*other.d_func(), this))
@@ -113,7 +110,7 @@ UploadSSHPublicKeyRequest::UploadSSHPublicKeyRequest(const UploadSSHPublicKeyReq
 }
 
 /*!
- * @brief  Constructs a new UploadSSHPublicKeyRequest object.
+ * Constructs a UploadSSHPublicKeyRequest object.
  */
 UploadSSHPublicKeyRequest::UploadSSHPublicKeyRequest()
     : IAMRequest(new UploadSSHPublicKeyRequestPrivate(IAMRequest::UploadSSHPublicKeyAction, this))
@@ -131,14 +128,9 @@ bool UploadSSHPublicKeyRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UploadSSHPublicKeyResponse object.
+ * Returns a UploadSSHPublicKeyResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UploadSSHPublicKeyResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IAMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UploadSSHPublicKeyRequest::response(QNetworkReply * const reply) const
 {
@@ -146,20 +138,17 @@ QtAws::Core::AwsAbstractResponse * UploadSSHPublicKeyRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::IAM::UploadSSHPublicKeyRequestPrivate
+ * \brief The UploadSSHPublicKeyRequestPrivate class provides private implementation for UploadSSHPublicKeyRequest.
+ * \internal
  *
- * @class  UploadSSHPublicKeyRequestPrivate
- *
- * @brief  Private implementation for UploadSSHPublicKeyRequest.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UploadSSHPublicKeyRequestPrivate object.
- *
- * @param  action  IAM action being performed.
- * @param  q       Pointer to this object's public UploadSSHPublicKeyRequest instance.
+ * Constructs a UploadSSHPublicKeyRequestPrivate object for IAM \a action with,
+ * public implementation \a q.
  */
 UploadSSHPublicKeyRequestPrivate::UploadSSHPublicKeyRequestPrivate(
     const IAMRequest::Action action, UploadSSHPublicKeyRequest * const q)
@@ -169,15 +158,10 @@ UploadSSHPublicKeyRequestPrivate::UploadSSHPublicKeyRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UploadSSHPublicKeyRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UploadSSHPublicKeyRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UploadSSHPublicKeyRequest instance.
  */
 UploadSSHPublicKeyRequestPrivate::UploadSSHPublicKeyRequestPrivate(
     const UploadSSHPublicKeyRequestPrivate &other, UploadSSHPublicKeyRequest * const q)

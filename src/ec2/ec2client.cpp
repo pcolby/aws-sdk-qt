@@ -564,6 +564,9 @@
 /*!
  * \namespace QtAws::EC2
  * \brief The QtAws::EC2 contains stuff...
+ *
+ * \inmodule QtAwsEC2
+ *
  * @todo Move this to a separate template file.
  */
 
@@ -617,7 +620,7 @@ Ec2Client::Ec2Client(
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * \a  AwsEndpoint::getEndpoint()
+ * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
 Ec2Client::Ec2Client(
     const QUrl &endpoint,

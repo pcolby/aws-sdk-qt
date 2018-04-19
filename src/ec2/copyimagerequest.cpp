@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::CopyImageRequest
- *
  * \brief The CopyImageRequest class provides an interface for EC2 CopyImage requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new CopyImageRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CopyImageRequest::CopyImageRequest(const CopyImageRequest &other)
     : EC2Request(new CopyImageRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ CopyImageRequest::CopyImageRequest(const CopyImageRequest &other)
 }
 
 /*!
- * @brief  Constructs a new CopyImageRequest object.
+ * Constructs a CopyImageRequest object.
  */
 CopyImageRequest::CopyImageRequest()
     : EC2Request(new CopyImageRequestPrivate(EC2Request::CopyImageAction, this))
@@ -70,14 +67,9 @@ bool CopyImageRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CopyImageResponse object.
+ * Returns a CopyImageResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CopyImageResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CopyImageRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * CopyImageRequest::response(QNetworkReply * co
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::CopyImageRequestPrivate
+ * \brief The CopyImageRequestPrivate class provides private implementation for CopyImageRequest.
+ * \internal
  *
- * @class  CopyImageRequestPrivate
- *
- * @brief  Private implementation for CopyImageRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CopyImageRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public CopyImageRequest instance.
+ * Constructs a CopyImageRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 CopyImageRequestPrivate::CopyImageRequestPrivate(
     const EC2Request::Action action, CopyImageRequest * const q)
@@ -108,15 +97,10 @@ CopyImageRequestPrivate::CopyImageRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CopyImageRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CopyImageRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CopyImageRequest instance.
  */
 CopyImageRequestPrivate::CopyImageRequestPrivate(
     const CopyImageRequestPrivate &other, CopyImageRequest * const q)

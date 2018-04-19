@@ -27,10 +27,9 @@ namespace CodeCommit {
 
 /*!
  * \class QtAws::CodeCommit::DeleteRepositoryRequest
- *
  * \brief The DeleteRepositoryRequest class provides an interface for CodeCommit DeleteRepository requests.
  *
- * \ingroup CodeCommit
+ * \inmodule QtAwsCodeCommit
  *
  *  <fullname>AWS CodeCommit</fullname>
  * 
@@ -227,9 +226,7 @@ namespace CodeCommit {
  */
 
 /*!
- * @brief  Constructs a new DeleteRepositoryRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteRepositoryRequest::DeleteRepositoryRequest(const DeleteRepositoryRequest &other)
     : CodeCommitRequest(new DeleteRepositoryRequestPrivate(*other.d_func(), this))
@@ -238,7 +235,7 @@ DeleteRepositoryRequest::DeleteRepositoryRequest(const DeleteRepositoryRequest &
 }
 
 /*!
- * @brief  Constructs a new DeleteRepositoryRequest object.
+ * Constructs a DeleteRepositoryRequest object.
  */
 DeleteRepositoryRequest::DeleteRepositoryRequest()
     : CodeCommitRequest(new DeleteRepositoryRequestPrivate(CodeCommitRequest::DeleteRepositoryAction, this))
@@ -256,14 +253,9 @@ bool DeleteRepositoryRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteRepositoryResponse object.
+ * Returns a DeleteRepositoryResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteRepositoryResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CodeCommitClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteRepositoryRequest::response(QNetworkReply * const reply) const
 {
@@ -271,20 +263,17 @@ QtAws::Core::AwsAbstractResponse * DeleteRepositoryRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::CodeCommit::DeleteRepositoryRequestPrivate
+ * \brief The DeleteRepositoryRequestPrivate class provides private implementation for DeleteRepositoryRequest.
+ * \internal
  *
- * @class  DeleteRepositoryRequestPrivate
- *
- * @brief  Private implementation for DeleteRepositoryRequest.
+ * \inmodule QtAwsCodeCommit
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteRepositoryRequestPrivate object.
- *
- * @param  action  CodeCommit action being performed.
- * @param  q       Pointer to this object's public DeleteRepositoryRequest instance.
+ * Constructs a DeleteRepositoryRequestPrivate object for CodeCommit \a action with,
+ * public implementation \a q.
  */
 DeleteRepositoryRequestPrivate::DeleteRepositoryRequestPrivate(
     const CodeCommitRequest::Action action, DeleteRepositoryRequest * const q)
@@ -294,15 +283,10 @@ DeleteRepositoryRequestPrivate::DeleteRepositoryRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteRepositoryRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteRepositoryRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteRepositoryRequest instance.
  */
 DeleteRepositoryRequestPrivate::DeleteRepositoryRequestPrivate(
     const DeleteRepositoryRequestPrivate &other, DeleteRepositoryRequest * const q)

@@ -27,10 +27,9 @@ namespace CloudFormation {
 
 /*!
  * \class QtAws::CloudFormation::ListStackSetOperationsRequest
- *
  * \brief The ListStackSetOperationsRequest class provides an interface for CloudFormation ListStackSetOperations requests.
  *
- * \ingroup CloudFormation
+ * \inmodule QtAwsCloudFormation
  *
  *  <fullname>AWS CloudFormation</fullname>
  * 
@@ -59,9 +58,7 @@ namespace CloudFormation {
  */
 
 /*!
- * @brief  Constructs a new ListStackSetOperationsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListStackSetOperationsRequest::ListStackSetOperationsRequest(const ListStackSetOperationsRequest &other)
     : CloudFormationRequest(new ListStackSetOperationsRequestPrivate(*other.d_func(), this))
@@ -70,7 +67,7 @@ ListStackSetOperationsRequest::ListStackSetOperationsRequest(const ListStackSetO
 }
 
 /*!
- * @brief  Constructs a new ListStackSetOperationsRequest object.
+ * Constructs a ListStackSetOperationsRequest object.
  */
 ListStackSetOperationsRequest::ListStackSetOperationsRequest()
     : CloudFormationRequest(new ListStackSetOperationsRequestPrivate(CloudFormationRequest::ListStackSetOperationsAction, this))
@@ -88,14 +85,9 @@ bool ListStackSetOperationsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListStackSetOperationsResponse object.
+ * Returns a ListStackSetOperationsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListStackSetOperationsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudFormationClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListStackSetOperationsRequest::response(QNetworkReply * const reply) const
 {
@@ -103,20 +95,17 @@ QtAws::Core::AwsAbstractResponse * ListStackSetOperationsRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudFormation::ListStackSetOperationsRequestPrivate
+ * \brief The ListStackSetOperationsRequestPrivate class provides private implementation for ListStackSetOperationsRequest.
+ * \internal
  *
- * @class  ListStackSetOperationsRequestPrivate
- *
- * @brief  Private implementation for ListStackSetOperationsRequest.
+ * \inmodule QtAwsCloudFormation
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListStackSetOperationsRequestPrivate object.
- *
- * @param  action  CloudFormation action being performed.
- * @param  q       Pointer to this object's public ListStackSetOperationsRequest instance.
+ * Constructs a ListStackSetOperationsRequestPrivate object for CloudFormation \a action with,
+ * public implementation \a q.
  */
 ListStackSetOperationsRequestPrivate::ListStackSetOperationsRequestPrivate(
     const CloudFormationRequest::Action action, ListStackSetOperationsRequest * const q)
@@ -126,15 +115,10 @@ ListStackSetOperationsRequestPrivate::ListStackSetOperationsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListStackSetOperationsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListStackSetOperationsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListStackSetOperationsRequest instance.
  */
 ListStackSetOperationsRequestPrivate::ListStackSetOperationsRequestPrivate(
     const ListStackSetOperationsRequestPrivate &other, ListStackSetOperationsRequest * const q)

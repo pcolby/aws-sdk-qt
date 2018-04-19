@@ -27,10 +27,9 @@ namespace DirectConnect {
 
 /*!
  * \class QtAws::DirectConnect::AllocatePublicVirtualInterfaceRequest
- *
  * \brief The AllocatePublicVirtualInterfaceRequest class provides an interface for DirectConnect AllocatePublicVirtualInterface requests.
  *
- * \ingroup DirectConnect
+ * \inmodule QtAwsDirectConnect
  *
  *  AWS Direct Connect links your internal network to an AWS Direct Connect location over a standard 1 gigabit or 10 gigabit
  *  Ethernet fiber-optic cable. One end of the cable is connected to your router, the other to an AWS Direct Connect router.
@@ -45,9 +44,7 @@ namespace DirectConnect {
  */
 
 /*!
- * @brief  Constructs a new AllocatePublicVirtualInterfaceRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AllocatePublicVirtualInterfaceRequest::AllocatePublicVirtualInterfaceRequest(const AllocatePublicVirtualInterfaceRequest &other)
     : DirectConnectRequest(new AllocatePublicVirtualInterfaceRequestPrivate(*other.d_func(), this))
@@ -56,7 +53,7 @@ AllocatePublicVirtualInterfaceRequest::AllocatePublicVirtualInterfaceRequest(con
 }
 
 /*!
- * @brief  Constructs a new AllocatePublicVirtualInterfaceRequest object.
+ * Constructs a AllocatePublicVirtualInterfaceRequest object.
  */
 AllocatePublicVirtualInterfaceRequest::AllocatePublicVirtualInterfaceRequest()
     : DirectConnectRequest(new AllocatePublicVirtualInterfaceRequestPrivate(DirectConnectRequest::AllocatePublicVirtualInterfaceAction, this))
@@ -74,14 +71,9 @@ bool AllocatePublicVirtualInterfaceRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AllocatePublicVirtualInterfaceResponse object.
+ * Returns a AllocatePublicVirtualInterfaceResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AllocatePublicVirtualInterfaceResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DirectConnectClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AllocatePublicVirtualInterfaceRequest::response(QNetworkReply * const reply) const
 {
@@ -89,20 +81,17 @@ QtAws::Core::AwsAbstractResponse * AllocatePublicVirtualInterfaceRequest::respon
 }
 
 /*!
- * @internal
+ * \class QtAws::DirectConnect::AllocatePublicVirtualInterfaceRequestPrivate
+ * \brief The AllocatePublicVirtualInterfaceRequestPrivate class provides private implementation for AllocatePublicVirtualInterfaceRequest.
+ * \internal
  *
- * @class  AllocatePublicVirtualInterfaceRequestPrivate
- *
- * @brief  Private implementation for AllocatePublicVirtualInterfaceRequest.
+ * \inmodule QtAwsDirectConnect
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AllocatePublicVirtualInterfaceRequestPrivate object.
- *
- * @param  action  DirectConnect action being performed.
- * @param  q       Pointer to this object's public AllocatePublicVirtualInterfaceRequest instance.
+ * Constructs a AllocatePublicVirtualInterfaceRequestPrivate object for DirectConnect \a action with,
+ * public implementation \a q.
  */
 AllocatePublicVirtualInterfaceRequestPrivate::AllocatePublicVirtualInterfaceRequestPrivate(
     const DirectConnectRequest::Action action, AllocatePublicVirtualInterfaceRequest * const q)
@@ -112,15 +101,10 @@ AllocatePublicVirtualInterfaceRequestPrivate::AllocatePublicVirtualInterfaceRequ
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AllocatePublicVirtualInterfaceRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AllocatePublicVirtualInterfaceRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AllocatePublicVirtualInterfaceRequest instance.
  */
 AllocatePublicVirtualInterfaceRequestPrivate::AllocatePublicVirtualInterfaceRequestPrivate(
     const AllocatePublicVirtualInterfaceRequestPrivate &other, AllocatePublicVirtualInterfaceRequest * const q)

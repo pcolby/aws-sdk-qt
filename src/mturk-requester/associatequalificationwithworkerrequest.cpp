@@ -27,19 +27,16 @@ namespace MTurk {
 
 /*!
  * \class QtAws::MTurk::AssociateQualificationWithWorkerRequest
- *
  * \brief The AssociateQualificationWithWorkerRequest class provides an interface for MTurk AssociateQualificationWithWorker requests.
  *
- * \ingroup MTurk
+ * \inmodule QtAwsMTurk
  *
  *
  * \sa MTurkClient::associateQualificationWithWorker
  */
 
 /*!
- * @brief  Constructs a new AssociateQualificationWithWorkerRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AssociateQualificationWithWorkerRequest::AssociateQualificationWithWorkerRequest(const AssociateQualificationWithWorkerRequest &other)
     : MTurkRequest(new AssociateQualificationWithWorkerRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ AssociateQualificationWithWorkerRequest::AssociateQualificationWithWorkerRequest
 }
 
 /*!
- * @brief  Constructs a new AssociateQualificationWithWorkerRequest object.
+ * Constructs a AssociateQualificationWithWorkerRequest object.
  */
 AssociateQualificationWithWorkerRequest::AssociateQualificationWithWorkerRequest()
     : MTurkRequest(new AssociateQualificationWithWorkerRequestPrivate(MTurkRequest::AssociateQualificationWithWorkerAction, this))
@@ -66,14 +63,9 @@ bool AssociateQualificationWithWorkerRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AssociateQualificationWithWorkerResponse object.
+ * Returns a AssociateQualificationWithWorkerResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AssociateQualificationWithWorkerResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MTurkClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AssociateQualificationWithWorkerRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * AssociateQualificationWithWorkerRequest::resp
 }
 
 /*!
- * @internal
+ * \class QtAws::MTurk::AssociateQualificationWithWorkerRequestPrivate
+ * \brief The AssociateQualificationWithWorkerRequestPrivate class provides private implementation for AssociateQualificationWithWorkerRequest.
+ * \internal
  *
- * @class  AssociateQualificationWithWorkerRequestPrivate
- *
- * @brief  Private implementation for AssociateQualificationWithWorkerRequest.
+ * \inmodule QtAwsMTurk
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AssociateQualificationWithWorkerRequestPrivate object.
- *
- * @param  action  MTurk action being performed.
- * @param  q       Pointer to this object's public AssociateQualificationWithWorkerRequest instance.
+ * Constructs a AssociateQualificationWithWorkerRequestPrivate object for MTurk \a action with,
+ * public implementation \a q.
  */
 AssociateQualificationWithWorkerRequestPrivate::AssociateQualificationWithWorkerRequestPrivate(
     const MTurkRequest::Action action, AssociateQualificationWithWorkerRequest * const q)
@@ -104,15 +93,10 @@ AssociateQualificationWithWorkerRequestPrivate::AssociateQualificationWithWorker
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AssociateQualificationWithWorkerRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AssociateQualificationWithWorkerRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AssociateQualificationWithWorkerRequest instance.
  */
 AssociateQualificationWithWorkerRequestPrivate::AssociateQualificationWithWorkerRequestPrivate(
     const AssociateQualificationWithWorkerRequestPrivate &other, AssociateQualificationWithWorkerRequest * const q)

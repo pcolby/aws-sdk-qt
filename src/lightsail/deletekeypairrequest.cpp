@@ -27,10 +27,9 @@ namespace Lightsail {
 
 /*!
  * \class QtAws::Lightsail::DeleteKeyPairRequest
- *
  * \brief The DeleteKeyPairRequest class provides an interface for Lightsail DeleteKeyPair requests.
  *
- * \ingroup Lightsail
+ * \inmodule QtAwsLightsail
  *
  *  Amazon Lightsail is the easiest way to get started with AWS for developers who just need virtual private servers.
  *  Lightsail includes everything you need to launch your project quickly - a virtual machine, SSD-based storage, data
@@ -53,9 +52,7 @@ namespace Lightsail {
  */
 
 /*!
- * @brief  Constructs a new DeleteKeyPairRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteKeyPairRequest::DeleteKeyPairRequest(const DeleteKeyPairRequest &other)
     : LightsailRequest(new DeleteKeyPairRequestPrivate(*other.d_func(), this))
@@ -64,7 +61,7 @@ DeleteKeyPairRequest::DeleteKeyPairRequest(const DeleteKeyPairRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DeleteKeyPairRequest object.
+ * Constructs a DeleteKeyPairRequest object.
  */
 DeleteKeyPairRequest::DeleteKeyPairRequest()
     : LightsailRequest(new DeleteKeyPairRequestPrivate(LightsailRequest::DeleteKeyPairAction, this))
@@ -82,14 +79,9 @@ bool DeleteKeyPairRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteKeyPairResponse object.
+ * Returns a DeleteKeyPairResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteKeyPairResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  LightsailClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteKeyPairRequest::response(QNetworkReply * const reply) const
 {
@@ -97,20 +89,17 @@ QtAws::Core::AwsAbstractResponse * DeleteKeyPairRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::Lightsail::DeleteKeyPairRequestPrivate
+ * \brief The DeleteKeyPairRequestPrivate class provides private implementation for DeleteKeyPairRequest.
+ * \internal
  *
- * @class  DeleteKeyPairRequestPrivate
- *
- * @brief  Private implementation for DeleteKeyPairRequest.
+ * \inmodule QtAwsLightsail
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteKeyPairRequestPrivate object.
- *
- * @param  action  Lightsail action being performed.
- * @param  q       Pointer to this object's public DeleteKeyPairRequest instance.
+ * Constructs a DeleteKeyPairRequestPrivate object for Lightsail \a action with,
+ * public implementation \a q.
  */
 DeleteKeyPairRequestPrivate::DeleteKeyPairRequestPrivate(
     const LightsailRequest::Action action, DeleteKeyPairRequest * const q)
@@ -120,15 +109,10 @@ DeleteKeyPairRequestPrivate::DeleteKeyPairRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteKeyPairRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteKeyPairRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteKeyPairRequest instance.
  */
 DeleteKeyPairRequestPrivate::DeleteKeyPairRequestPrivate(
     const DeleteKeyPairRequestPrivate &other, DeleteKeyPairRequest * const q)

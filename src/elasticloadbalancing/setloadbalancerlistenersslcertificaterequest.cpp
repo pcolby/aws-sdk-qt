@@ -27,10 +27,9 @@ namespace ElasticLoadBalancing {
 
 /*!
  * \class QtAws::ElasticLoadBalancing::SetLoadBalancerListenerSSLCertificateRequest
- *
  * \brief The SetLoadBalancerListenerSSLCertificateRequest class provides an interface for ElasticLoadBalancing SetLoadBalancerListenerSSLCertificate requests.
  *
- * \ingroup ElasticLoadBalancing
+ * \inmodule QtAwsElasticLoadBalancing
  *
  *  <fullname>Elastic Load Balancing</fullname>
  * 
@@ -65,9 +64,7 @@ namespace ElasticLoadBalancing {
  */
 
 /*!
- * @brief  Constructs a new SetLoadBalancerListenerSSLCertificateRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 SetLoadBalancerListenerSSLCertificateRequest::SetLoadBalancerListenerSSLCertificateRequest(const SetLoadBalancerListenerSSLCertificateRequest &other)
     : ElasticLoadBalancingRequest(new SetLoadBalancerListenerSSLCertificateRequestPrivate(*other.d_func(), this))
@@ -76,7 +73,7 @@ SetLoadBalancerListenerSSLCertificateRequest::SetLoadBalancerListenerSSLCertific
 }
 
 /*!
- * @brief  Constructs a new SetLoadBalancerListenerSSLCertificateRequest object.
+ * Constructs a SetLoadBalancerListenerSSLCertificateRequest object.
  */
 SetLoadBalancerListenerSSLCertificateRequest::SetLoadBalancerListenerSSLCertificateRequest()
     : ElasticLoadBalancingRequest(new SetLoadBalancerListenerSSLCertificateRequestPrivate(ElasticLoadBalancingRequest::SetLoadBalancerListenerSSLCertificateAction, this))
@@ -94,14 +91,9 @@ bool SetLoadBalancerListenerSSLCertificateRequest::isValid() const
 
 
 /*!
- * @brief  Construct an SetLoadBalancerListenerSSLCertificateResponse object.
+ * Returns a SetLoadBalancerListenerSSLCertificateResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An SetLoadBalancerListenerSSLCertificateResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ElasticLoadBalancingClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * SetLoadBalancerListenerSSLCertificateRequest::response(QNetworkReply * const reply) const
 {
@@ -109,20 +101,17 @@ QtAws::Core::AwsAbstractResponse * SetLoadBalancerListenerSSLCertificateRequest:
 }
 
 /*!
- * @internal
+ * \class QtAws::ElasticLoadBalancing::SetLoadBalancerListenerSSLCertificateRequestPrivate
+ * \brief The SetLoadBalancerListenerSSLCertificateRequestPrivate class provides private implementation for SetLoadBalancerListenerSSLCertificateRequest.
+ * \internal
  *
- * @class  SetLoadBalancerListenerSSLCertificateRequestPrivate
- *
- * @brief  Private implementation for SetLoadBalancerListenerSSLCertificateRequest.
+ * \inmodule QtAwsElasticLoadBalancing
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new SetLoadBalancerListenerSSLCertificateRequestPrivate object.
- *
- * @param  action  ElasticLoadBalancing action being performed.
- * @param  q       Pointer to this object's public SetLoadBalancerListenerSSLCertificateRequest instance.
+ * Constructs a SetLoadBalancerListenerSSLCertificateRequestPrivate object for ElasticLoadBalancing \a action with,
+ * public implementation \a q.
  */
 SetLoadBalancerListenerSSLCertificateRequestPrivate::SetLoadBalancerListenerSSLCertificateRequestPrivate(
     const ElasticLoadBalancingRequest::Action action, SetLoadBalancerListenerSSLCertificateRequest * const q)
@@ -132,15 +121,10 @@ SetLoadBalancerListenerSSLCertificateRequestPrivate::SetLoadBalancerListenerSSLC
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SetLoadBalancerListenerSSLCertificateRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the SetLoadBalancerListenerSSLCertificateRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public SetLoadBalancerListenerSSLCertificateRequest instance.
  */
 SetLoadBalancerListenerSSLCertificateRequestPrivate::SetLoadBalancerListenerSSLCertificateRequestPrivate(
     const SetLoadBalancerListenerSSLCertificateRequestPrivate &other, SetLoadBalancerListenerSSLCertificateRequest * const q)

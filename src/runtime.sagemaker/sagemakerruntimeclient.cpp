@@ -30,6 +30,9 @@
 /*!
  * \namespace QtAws::SageMakerRuntime
  * \brief The QtAws::SageMakerRuntime contains stuff...
+ *
+ * \inmodule QtAwsSageMakerRuntime
+ *
  * @todo Move this to a separate template file.
  */
 
@@ -80,7 +83,7 @@ SageMakerRuntimeClient::SageMakerRuntimeClient(
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * \a  AwsEndpoint::getEndpoint()
+ * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
 SageMakerRuntimeClient::SageMakerRuntimeClient(
     const QUrl &endpoint,

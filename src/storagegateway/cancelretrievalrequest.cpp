@@ -27,10 +27,9 @@ namespace StorageGateway {
 
 /*!
  * \class QtAws::StorageGateway::CancelRetrievalRequest
- *
  * \brief The CancelRetrievalRequest class provides an interface for StorageGateway CancelRetrieval requests.
  *
- * \ingroup StorageGateway
+ * \inmodule QtAwsStorageGateway
  *
  *  <fullname>AWS Storage Gateway Service</fullname>
  * 
@@ -106,9 +105,7 @@ namespace StorageGateway {
  */
 
 /*!
- * @brief  Constructs a new CancelRetrievalRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CancelRetrievalRequest::CancelRetrievalRequest(const CancelRetrievalRequest &other)
     : StorageGatewayRequest(new CancelRetrievalRequestPrivate(*other.d_func(), this))
@@ -117,7 +114,7 @@ CancelRetrievalRequest::CancelRetrievalRequest(const CancelRetrievalRequest &oth
 }
 
 /*!
- * @brief  Constructs a new CancelRetrievalRequest object.
+ * Constructs a CancelRetrievalRequest object.
  */
 CancelRetrievalRequest::CancelRetrievalRequest()
     : StorageGatewayRequest(new CancelRetrievalRequestPrivate(StorageGatewayRequest::CancelRetrievalAction, this))
@@ -135,14 +132,9 @@ bool CancelRetrievalRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CancelRetrievalResponse object.
+ * Returns a CancelRetrievalResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CancelRetrievalResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  StorageGatewayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CancelRetrievalRequest::response(QNetworkReply * const reply) const
 {
@@ -150,20 +142,17 @@ QtAws::Core::AwsAbstractResponse * CancelRetrievalRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::StorageGateway::CancelRetrievalRequestPrivate
+ * \brief The CancelRetrievalRequestPrivate class provides private implementation for CancelRetrievalRequest.
+ * \internal
  *
- * @class  CancelRetrievalRequestPrivate
- *
- * @brief  Private implementation for CancelRetrievalRequest.
+ * \inmodule QtAwsStorageGateway
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CancelRetrievalRequestPrivate object.
- *
- * @param  action  StorageGateway action being performed.
- * @param  q       Pointer to this object's public CancelRetrievalRequest instance.
+ * Constructs a CancelRetrievalRequestPrivate object for StorageGateway \a action with,
+ * public implementation \a q.
  */
 CancelRetrievalRequestPrivate::CancelRetrievalRequestPrivate(
     const StorageGatewayRequest::Action action, CancelRetrievalRequest * const q)
@@ -173,15 +162,10 @@ CancelRetrievalRequestPrivate::CancelRetrievalRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CancelRetrievalRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CancelRetrievalRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CancelRetrievalRequest instance.
  */
 CancelRetrievalRequestPrivate::CancelRetrievalRequestPrivate(
     const CancelRetrievalRequestPrivate &other, CancelRetrievalRequest * const q)

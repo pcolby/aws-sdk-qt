@@ -27,10 +27,9 @@ namespace WAF {
 
 /*!
  * \class QtAws::WAF::ListSizeConstraintSetsRequest
- *
  * \brief The ListSizeConstraintSetsRequest class provides an interface for WAF ListSizeConstraintSets requests.
  *
- * \ingroup WAF
+ * \inmodule QtAwsWAF
  *
  *  This is the <i>AWS WAF API Reference</i> for using AWS WAF with Amazon CloudFront. The AWS WAF actions and data types
  *  listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data
@@ -42,9 +41,7 @@ namespace WAF {
  */
 
 /*!
- * @brief  Constructs a new ListSizeConstraintSetsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListSizeConstraintSetsRequest::ListSizeConstraintSetsRequest(const ListSizeConstraintSetsRequest &other)
     : WAFRequest(new ListSizeConstraintSetsRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ ListSizeConstraintSetsRequest::ListSizeConstraintSetsRequest(const ListSizeConst
 }
 
 /*!
- * @brief  Constructs a new ListSizeConstraintSetsRequest object.
+ * Constructs a ListSizeConstraintSetsRequest object.
  */
 ListSizeConstraintSetsRequest::ListSizeConstraintSetsRequest()
     : WAFRequest(new ListSizeConstraintSetsRequestPrivate(WAFRequest::ListSizeConstraintSetsAction, this))
@@ -71,14 +68,9 @@ bool ListSizeConstraintSetsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListSizeConstraintSetsResponse object.
+ * Returns a ListSizeConstraintSetsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListSizeConstraintSetsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WAFClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListSizeConstraintSetsRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * ListSizeConstraintSetsRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::WAF::ListSizeConstraintSetsRequestPrivate
+ * \brief The ListSizeConstraintSetsRequestPrivate class provides private implementation for ListSizeConstraintSetsRequest.
+ * \internal
  *
- * @class  ListSizeConstraintSetsRequestPrivate
- *
- * @brief  Private implementation for ListSizeConstraintSetsRequest.
+ * \inmodule QtAwsWAF
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListSizeConstraintSetsRequestPrivate object.
- *
- * @param  action  WAF action being performed.
- * @param  q       Pointer to this object's public ListSizeConstraintSetsRequest instance.
+ * Constructs a ListSizeConstraintSetsRequestPrivate object for WAF \a action with,
+ * public implementation \a q.
  */
 ListSizeConstraintSetsRequestPrivate::ListSizeConstraintSetsRequestPrivate(
     const WAFRequest::Action action, ListSizeConstraintSetsRequest * const q)
@@ -109,15 +98,10 @@ ListSizeConstraintSetsRequestPrivate::ListSizeConstraintSetsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListSizeConstraintSetsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListSizeConstraintSetsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListSizeConstraintSetsRequest instance.
  */
 ListSizeConstraintSetsRequestPrivate::ListSizeConstraintSetsRequestPrivate(
     const ListSizeConstraintSetsRequestPrivate &other, ListSizeConstraintSetsRequest * const q)

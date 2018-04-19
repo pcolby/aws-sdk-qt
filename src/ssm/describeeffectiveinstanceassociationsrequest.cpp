@@ -27,10 +27,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::DescribeEffectiveInstanceAssociationsRequest
- *
  * \brief The DescribeEffectiveInstanceAssociationsRequest class provides an interface for SSM DescribeEffectiveInstanceAssociations requests.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -61,9 +60,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new DescribeEffectiveInstanceAssociationsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeEffectiveInstanceAssociationsRequest::DescribeEffectiveInstanceAssociationsRequest(const DescribeEffectiveInstanceAssociationsRequest &other)
     : SSMRequest(new DescribeEffectiveInstanceAssociationsRequestPrivate(*other.d_func(), this))
@@ -72,7 +69,7 @@ DescribeEffectiveInstanceAssociationsRequest::DescribeEffectiveInstanceAssociati
 }
 
 /*!
- * @brief  Constructs a new DescribeEffectiveInstanceAssociationsRequest object.
+ * Constructs a DescribeEffectiveInstanceAssociationsRequest object.
  */
 DescribeEffectiveInstanceAssociationsRequest::DescribeEffectiveInstanceAssociationsRequest()
     : SSMRequest(new DescribeEffectiveInstanceAssociationsRequestPrivate(SSMRequest::DescribeEffectiveInstanceAssociationsAction, this))
@@ -90,14 +87,9 @@ bool DescribeEffectiveInstanceAssociationsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeEffectiveInstanceAssociationsResponse object.
+ * Returns a DescribeEffectiveInstanceAssociationsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeEffectiveInstanceAssociationsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SSMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeEffectiveInstanceAssociationsRequest::response(QNetworkReply * const reply) const
 {
@@ -105,20 +97,17 @@ QtAws::Core::AwsAbstractResponse * DescribeEffectiveInstanceAssociationsRequest:
 }
 
 /*!
- * @internal
+ * \class QtAws::SSM::DescribeEffectiveInstanceAssociationsRequestPrivate
+ * \brief The DescribeEffectiveInstanceAssociationsRequestPrivate class provides private implementation for DescribeEffectiveInstanceAssociationsRequest.
+ * \internal
  *
- * @class  DescribeEffectiveInstanceAssociationsRequestPrivate
- *
- * @brief  Private implementation for DescribeEffectiveInstanceAssociationsRequest.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeEffectiveInstanceAssociationsRequestPrivate object.
- *
- * @param  action  SSM action being performed.
- * @param  q       Pointer to this object's public DescribeEffectiveInstanceAssociationsRequest instance.
+ * Constructs a DescribeEffectiveInstanceAssociationsRequestPrivate object for SSM \a action with,
+ * public implementation \a q.
  */
 DescribeEffectiveInstanceAssociationsRequestPrivate::DescribeEffectiveInstanceAssociationsRequestPrivate(
     const SSMRequest::Action action, DescribeEffectiveInstanceAssociationsRequest * const q)
@@ -128,15 +117,10 @@ DescribeEffectiveInstanceAssociationsRequestPrivate::DescribeEffectiveInstanceAs
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeEffectiveInstanceAssociationsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeEffectiveInstanceAssociationsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeEffectiveInstanceAssociationsRequest instance.
  */
 DescribeEffectiveInstanceAssociationsRequestPrivate::DescribeEffectiveInstanceAssociationsRequestPrivate(
     const DescribeEffectiveInstanceAssociationsRequestPrivate &other, DescribeEffectiveInstanceAssociationsRequest * const q)

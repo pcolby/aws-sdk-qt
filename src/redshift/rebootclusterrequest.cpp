@@ -27,10 +27,9 @@ namespace Redshift {
 
 /*!
  * \class QtAws::Redshift::RebootClusterRequest
- *
  * \brief The RebootClusterRequest class provides an interface for Redshift RebootCluster requests.
  *
- * \ingroup Redshift
+ * \inmodule QtAwsRedshift
  *
  *  <fullname>Amazon Redshift</fullname>
  * 
@@ -67,9 +66,7 @@ namespace Redshift {
  */
 
 /*!
- * @brief  Constructs a new RebootClusterRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 RebootClusterRequest::RebootClusterRequest(const RebootClusterRequest &other)
     : RedshiftRequest(new RebootClusterRequestPrivate(*other.d_func(), this))
@@ -78,7 +75,7 @@ RebootClusterRequest::RebootClusterRequest(const RebootClusterRequest &other)
 }
 
 /*!
- * @brief  Constructs a new RebootClusterRequest object.
+ * Constructs a RebootClusterRequest object.
  */
 RebootClusterRequest::RebootClusterRequest()
     : RedshiftRequest(new RebootClusterRequestPrivate(RedshiftRequest::RebootClusterAction, this))
@@ -96,14 +93,9 @@ bool RebootClusterRequest::isValid() const
 
 
 /*!
- * @brief  Construct an RebootClusterResponse object.
+ * Returns a RebootClusterResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An RebootClusterResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RedshiftClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * RebootClusterRequest::response(QNetworkReply * const reply) const
 {
@@ -111,20 +103,17 @@ QtAws::Core::AwsAbstractResponse * RebootClusterRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::Redshift::RebootClusterRequestPrivate
+ * \brief The RebootClusterRequestPrivate class provides private implementation for RebootClusterRequest.
+ * \internal
  *
- * @class  RebootClusterRequestPrivate
- *
- * @brief  Private implementation for RebootClusterRequest.
+ * \inmodule QtAwsRedshift
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new RebootClusterRequestPrivate object.
- *
- * @param  action  Redshift action being performed.
- * @param  q       Pointer to this object's public RebootClusterRequest instance.
+ * Constructs a RebootClusterRequestPrivate object for Redshift \a action with,
+ * public implementation \a q.
  */
 RebootClusterRequestPrivate::RebootClusterRequestPrivate(
     const RedshiftRequest::Action action, RebootClusterRequest * const q)
@@ -134,15 +123,10 @@ RebootClusterRequestPrivate::RebootClusterRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RebootClusterRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the RebootClusterRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public RebootClusterRequest instance.
  */
 RebootClusterRequestPrivate::RebootClusterRequestPrivate(
     const RebootClusterRequestPrivate &other, RebootClusterRequest * const q)

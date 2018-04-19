@@ -27,10 +27,9 @@ namespace OpsWorks {
 
 /*!
  * \class QtAws::OpsWorks::DeregisterElasticIpRequest
- *
  * \brief The DeregisterElasticIpRequest class provides an interface for OpsWorks DeregisterElasticIp requests.
  *
- * \ingroup OpsWorks
+ * \inmodule QtAwsOpsWorks
  *
  *  <fullname>AWS OpsWorks</fullname>
  * 
@@ -143,9 +142,7 @@ namespace OpsWorks {
  */
 
 /*!
- * @brief  Constructs a new DeregisterElasticIpRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeregisterElasticIpRequest::DeregisterElasticIpRequest(const DeregisterElasticIpRequest &other)
     : OpsWorksRequest(new DeregisterElasticIpRequestPrivate(*other.d_func(), this))
@@ -154,7 +151,7 @@ DeregisterElasticIpRequest::DeregisterElasticIpRequest(const DeregisterElasticIp
 }
 
 /*!
- * @brief  Constructs a new DeregisterElasticIpRequest object.
+ * Constructs a DeregisterElasticIpRequest object.
  */
 DeregisterElasticIpRequest::DeregisterElasticIpRequest()
     : OpsWorksRequest(new DeregisterElasticIpRequestPrivate(OpsWorksRequest::DeregisterElasticIpAction, this))
@@ -172,14 +169,9 @@ bool DeregisterElasticIpRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeregisterElasticIpResponse object.
+ * Returns a DeregisterElasticIpResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeregisterElasticIpResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  OpsWorksClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeregisterElasticIpRequest::response(QNetworkReply * const reply) const
 {
@@ -187,20 +179,17 @@ QtAws::Core::AwsAbstractResponse * DeregisterElasticIpRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::OpsWorks::DeregisterElasticIpRequestPrivate
+ * \brief The DeregisterElasticIpRequestPrivate class provides private implementation for DeregisterElasticIpRequest.
+ * \internal
  *
- * @class  DeregisterElasticIpRequestPrivate
- *
- * @brief  Private implementation for DeregisterElasticIpRequest.
+ * \inmodule QtAwsOpsWorks
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeregisterElasticIpRequestPrivate object.
- *
- * @param  action  OpsWorks action being performed.
- * @param  q       Pointer to this object's public DeregisterElasticIpRequest instance.
+ * Constructs a DeregisterElasticIpRequestPrivate object for OpsWorks \a action with,
+ * public implementation \a q.
  */
 DeregisterElasticIpRequestPrivate::DeregisterElasticIpRequestPrivate(
     const OpsWorksRequest::Action action, DeregisterElasticIpRequest * const q)
@@ -210,15 +199,10 @@ DeregisterElasticIpRequestPrivate::DeregisterElasticIpRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeregisterElasticIpRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeregisterElasticIpRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeregisterElasticIpRequest instance.
  */
 DeregisterElasticIpRequestPrivate::DeregisterElasticIpRequestPrivate(
     const DeregisterElasticIpRequestPrivate &other, DeregisterElasticIpRequest * const q)

@@ -27,10 +27,9 @@ namespace GameLift {
 
 /*!
  * \class QtAws::GameLift::DescribeAliasRequest
- *
  * \brief The DescribeAliasRequest class provides an interface for GameLift DescribeAlias requests.
  *
- * \ingroup GameLift
+ * \inmodule QtAwsGameLift
  *
  *  <fullname>Amazon GameLift Service</fullname>
  * 
@@ -473,9 +472,7 @@ namespace GameLift {
  */
 
 /*!
- * @brief  Constructs a new DescribeAliasRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeAliasRequest::DescribeAliasRequest(const DescribeAliasRequest &other)
     : GameLiftRequest(new DescribeAliasRequestPrivate(*other.d_func(), this))
@@ -484,7 +481,7 @@ DescribeAliasRequest::DescribeAliasRequest(const DescribeAliasRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DescribeAliasRequest object.
+ * Constructs a DescribeAliasRequest object.
  */
 DescribeAliasRequest::DescribeAliasRequest()
     : GameLiftRequest(new DescribeAliasRequestPrivate(GameLiftRequest::DescribeAliasAction, this))
@@ -502,14 +499,9 @@ bool DescribeAliasRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeAliasResponse object.
+ * Returns a DescribeAliasResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeAliasResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GameLiftClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeAliasRequest::response(QNetworkReply * const reply) const
 {
@@ -517,20 +509,17 @@ QtAws::Core::AwsAbstractResponse * DescribeAliasRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::GameLift::DescribeAliasRequestPrivate
+ * \brief The DescribeAliasRequestPrivate class provides private implementation for DescribeAliasRequest.
+ * \internal
  *
- * @class  DescribeAliasRequestPrivate
- *
- * @brief  Private implementation for DescribeAliasRequest.
+ * \inmodule QtAwsGameLift
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeAliasRequestPrivate object.
- *
- * @param  action  GameLift action being performed.
- * @param  q       Pointer to this object's public DescribeAliasRequest instance.
+ * Constructs a DescribeAliasRequestPrivate object for GameLift \a action with,
+ * public implementation \a q.
  */
 DescribeAliasRequestPrivate::DescribeAliasRequestPrivate(
     const GameLiftRequest::Action action, DescribeAliasRequest * const q)
@@ -540,15 +529,10 @@ DescribeAliasRequestPrivate::DescribeAliasRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeAliasRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeAliasRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeAliasRequest instance.
  */
 DescribeAliasRequestPrivate::DescribeAliasRequestPrivate(
     const DescribeAliasRequestPrivate &other, DescribeAliasRequest * const q)

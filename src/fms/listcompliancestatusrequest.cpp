@@ -27,10 +27,9 @@ namespace FMS {
 
 /*!
  * \class QtAws::FMS::ListComplianceStatusRequest
- *
  * \brief The ListComplianceStatusRequest class provides an interface for FMS ListComplianceStatus requests.
  *
- * \ingroup FMS
+ * \inmodule QtAwsFMS
  *
  *  <fullname>AWS Firewall Manager</fullname>
  * 
@@ -43,9 +42,7 @@ namespace FMS {
  */
 
 /*!
- * @brief  Constructs a new ListComplianceStatusRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListComplianceStatusRequest::ListComplianceStatusRequest(const ListComplianceStatusRequest &other)
     : FMSRequest(new ListComplianceStatusRequestPrivate(*other.d_func(), this))
@@ -54,7 +51,7 @@ ListComplianceStatusRequest::ListComplianceStatusRequest(const ListComplianceSta
 }
 
 /*!
- * @brief  Constructs a new ListComplianceStatusRequest object.
+ * Constructs a ListComplianceStatusRequest object.
  */
 ListComplianceStatusRequest::ListComplianceStatusRequest()
     : FMSRequest(new ListComplianceStatusRequestPrivate(FMSRequest::ListComplianceStatusAction, this))
@@ -72,14 +69,9 @@ bool ListComplianceStatusRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListComplianceStatusResponse object.
+ * Returns a ListComplianceStatusResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListComplianceStatusResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  FMSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListComplianceStatusRequest::response(QNetworkReply * const reply) const
 {
@@ -87,20 +79,17 @@ QtAws::Core::AwsAbstractResponse * ListComplianceStatusRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::FMS::ListComplianceStatusRequestPrivate
+ * \brief The ListComplianceStatusRequestPrivate class provides private implementation for ListComplianceStatusRequest.
+ * \internal
  *
- * @class  ListComplianceStatusRequestPrivate
- *
- * @brief  Private implementation for ListComplianceStatusRequest.
+ * \inmodule QtAwsFMS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListComplianceStatusRequestPrivate object.
- *
- * @param  action  FMS action being performed.
- * @param  q       Pointer to this object's public ListComplianceStatusRequest instance.
+ * Constructs a ListComplianceStatusRequestPrivate object for FMS \a action with,
+ * public implementation \a q.
  */
 ListComplianceStatusRequestPrivate::ListComplianceStatusRequestPrivate(
     const FMSRequest::Action action, ListComplianceStatusRequest * const q)
@@ -110,15 +99,10 @@ ListComplianceStatusRequestPrivate::ListComplianceStatusRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListComplianceStatusRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListComplianceStatusRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListComplianceStatusRequest instance.
  */
 ListComplianceStatusRequestPrivate::ListComplianceStatusRequestPrivate(
     const ListComplianceStatusRequestPrivate &other, ListComplianceStatusRequest * const q)

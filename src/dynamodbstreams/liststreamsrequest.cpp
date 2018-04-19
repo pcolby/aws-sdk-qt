@@ -27,10 +27,9 @@ namespace DynamoDBStreams {
 
 /*!
  * \class QtAws::DynamoDBStreams::ListStreamsRequest
- *
  * \brief The ListStreamsRequest class provides an interface for DynamoDBStreams ListStreams requests.
  *
- * \ingroup DynamoDBStreams
+ * \inmodule QtAwsDynamoDBStreams
  *
  *  <fullname>Amazon DynamoDB Streams</fullname>
  * 
@@ -70,9 +69,7 @@ namespace DynamoDBStreams {
  */
 
 /*!
- * @brief  Constructs a new ListStreamsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListStreamsRequest::ListStreamsRequest(const ListStreamsRequest &other)
     : DynamoDBStreamsRequest(new ListStreamsRequestPrivate(*other.d_func(), this))
@@ -81,7 +78,7 @@ ListStreamsRequest::ListStreamsRequest(const ListStreamsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ListStreamsRequest object.
+ * Constructs a ListStreamsRequest object.
  */
 ListStreamsRequest::ListStreamsRequest()
     : DynamoDBStreamsRequest(new ListStreamsRequestPrivate(DynamoDBStreamsRequest::ListStreamsAction, this))
@@ -99,14 +96,9 @@ bool ListStreamsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListStreamsResponse object.
+ * Returns a ListStreamsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListStreamsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DynamoDBStreamsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListStreamsRequest::response(QNetworkReply * const reply) const
 {
@@ -114,20 +106,17 @@ QtAws::Core::AwsAbstractResponse * ListStreamsRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::DynamoDBStreams::ListStreamsRequestPrivate
+ * \brief The ListStreamsRequestPrivate class provides private implementation for ListStreamsRequest.
+ * \internal
  *
- * @class  ListStreamsRequestPrivate
- *
- * @brief  Private implementation for ListStreamsRequest.
+ * \inmodule QtAwsDynamoDBStreams
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListStreamsRequestPrivate object.
- *
- * @param  action  DynamoDBStreams action being performed.
- * @param  q       Pointer to this object's public ListStreamsRequest instance.
+ * Constructs a ListStreamsRequestPrivate object for DynamoDBStreams \a action with,
+ * public implementation \a q.
  */
 ListStreamsRequestPrivate::ListStreamsRequestPrivate(
     const DynamoDBStreamsRequest::Action action, ListStreamsRequest * const q)
@@ -137,15 +126,10 @@ ListStreamsRequestPrivate::ListStreamsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListStreamsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListStreamsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListStreamsRequest instance.
  */
 ListStreamsRequestPrivate::ListStreamsRequestPrivate(
     const ListStreamsRequestPrivate &other, ListStreamsRequest * const q)

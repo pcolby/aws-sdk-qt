@@ -27,10 +27,9 @@ namespace CodeCommit {
 
 /*!
  * \class QtAws::CodeCommit::GetBlobRequest
- *
  * \brief The GetBlobRequest class provides an interface for CodeCommit GetBlob requests.
  *
- * \ingroup CodeCommit
+ * \inmodule QtAwsCodeCommit
  *
  *  <fullname>AWS CodeCommit</fullname>
  * 
@@ -227,9 +226,7 @@ namespace CodeCommit {
  */
 
 /*!
- * @brief  Constructs a new GetBlobRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetBlobRequest::GetBlobRequest(const GetBlobRequest &other)
     : CodeCommitRequest(new GetBlobRequestPrivate(*other.d_func(), this))
@@ -238,7 +235,7 @@ GetBlobRequest::GetBlobRequest(const GetBlobRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetBlobRequest object.
+ * Constructs a GetBlobRequest object.
  */
 GetBlobRequest::GetBlobRequest()
     : CodeCommitRequest(new GetBlobRequestPrivate(CodeCommitRequest::GetBlobAction, this))
@@ -256,14 +253,9 @@ bool GetBlobRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetBlobResponse object.
+ * Returns a GetBlobResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetBlobResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CodeCommitClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetBlobRequest::response(QNetworkReply * const reply) const
 {
@@ -271,20 +263,17 @@ QtAws::Core::AwsAbstractResponse * GetBlobRequest::response(QNetworkReply * cons
 }
 
 /*!
- * @internal
+ * \class QtAws::CodeCommit::GetBlobRequestPrivate
+ * \brief The GetBlobRequestPrivate class provides private implementation for GetBlobRequest.
+ * \internal
  *
- * @class  GetBlobRequestPrivate
- *
- * @brief  Private implementation for GetBlobRequest.
+ * \inmodule QtAwsCodeCommit
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetBlobRequestPrivate object.
- *
- * @param  action  CodeCommit action being performed.
- * @param  q       Pointer to this object's public GetBlobRequest instance.
+ * Constructs a GetBlobRequestPrivate object for CodeCommit \a action with,
+ * public implementation \a q.
  */
 GetBlobRequestPrivate::GetBlobRequestPrivate(
     const CodeCommitRequest::Action action, GetBlobRequest * const q)
@@ -294,15 +283,10 @@ GetBlobRequestPrivate::GetBlobRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetBlobRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetBlobRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetBlobRequest instance.
  */
 GetBlobRequestPrivate::GetBlobRequestPrivate(
     const GetBlobRequestPrivate &other, GetBlobRequest * const q)

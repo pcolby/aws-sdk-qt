@@ -27,10 +27,9 @@ namespace CloudFormation {
 
 /*!
  * \class QtAws::CloudFormation::GetTemplateSummaryRequest
- *
  * \brief The GetTemplateSummaryRequest class provides an interface for CloudFormation GetTemplateSummary requests.
  *
- * \ingroup CloudFormation
+ * \inmodule QtAwsCloudFormation
  *
  *  <fullname>AWS CloudFormation</fullname>
  * 
@@ -59,9 +58,7 @@ namespace CloudFormation {
  */
 
 /*!
- * @brief  Constructs a new GetTemplateSummaryRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetTemplateSummaryRequest::GetTemplateSummaryRequest(const GetTemplateSummaryRequest &other)
     : CloudFormationRequest(new GetTemplateSummaryRequestPrivate(*other.d_func(), this))
@@ -70,7 +67,7 @@ GetTemplateSummaryRequest::GetTemplateSummaryRequest(const GetTemplateSummaryReq
 }
 
 /*!
- * @brief  Constructs a new GetTemplateSummaryRequest object.
+ * Constructs a GetTemplateSummaryRequest object.
  */
 GetTemplateSummaryRequest::GetTemplateSummaryRequest()
     : CloudFormationRequest(new GetTemplateSummaryRequestPrivate(CloudFormationRequest::GetTemplateSummaryAction, this))
@@ -88,14 +85,9 @@ bool GetTemplateSummaryRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetTemplateSummaryResponse object.
+ * Returns a GetTemplateSummaryResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetTemplateSummaryResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudFormationClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetTemplateSummaryRequest::response(QNetworkReply * const reply) const
 {
@@ -103,20 +95,17 @@ QtAws::Core::AwsAbstractResponse * GetTemplateSummaryRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudFormation::GetTemplateSummaryRequestPrivate
+ * \brief The GetTemplateSummaryRequestPrivate class provides private implementation for GetTemplateSummaryRequest.
+ * \internal
  *
- * @class  GetTemplateSummaryRequestPrivate
- *
- * @brief  Private implementation for GetTemplateSummaryRequest.
+ * \inmodule QtAwsCloudFormation
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetTemplateSummaryRequestPrivate object.
- *
- * @param  action  CloudFormation action being performed.
- * @param  q       Pointer to this object's public GetTemplateSummaryRequest instance.
+ * Constructs a GetTemplateSummaryRequestPrivate object for CloudFormation \a action with,
+ * public implementation \a q.
  */
 GetTemplateSummaryRequestPrivate::GetTemplateSummaryRequestPrivate(
     const CloudFormationRequest::Action action, GetTemplateSummaryRequest * const q)
@@ -126,15 +115,10 @@ GetTemplateSummaryRequestPrivate::GetTemplateSummaryRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetTemplateSummaryRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetTemplateSummaryRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetTemplateSummaryRequest instance.
  */
 GetTemplateSummaryRequestPrivate::GetTemplateSummaryRequestPrivate(
     const GetTemplateSummaryRequestPrivate &other, GetTemplateSummaryRequest * const q)

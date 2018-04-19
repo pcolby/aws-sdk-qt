@@ -27,10 +27,9 @@ namespace SQS {
 
 /*!
  * \class QtAws::SQS::SetQueueAttributesRequest
- *
  * \brief The SetQueueAttributesRequest class provides an interface for SQS SetQueueAttributes requests.
  *
- * \ingroup SQS
+ * \inmodule QtAwsSQS
  *
  *  Welcome to the <i>Amazon Simple Queue Service API
  * 
@@ -103,9 +102,7 @@ namespace SQS {
  */
 
 /*!
- * @brief  Constructs a new SetQueueAttributesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 SetQueueAttributesRequest::SetQueueAttributesRequest(const SetQueueAttributesRequest &other)
     : SQSRequest(new SetQueueAttributesRequestPrivate(*other.d_func(), this))
@@ -114,7 +111,7 @@ SetQueueAttributesRequest::SetQueueAttributesRequest(const SetQueueAttributesReq
 }
 
 /*!
- * @brief  Constructs a new SetQueueAttributesRequest object.
+ * Constructs a SetQueueAttributesRequest object.
  */
 SetQueueAttributesRequest::SetQueueAttributesRequest()
     : SQSRequest(new SetQueueAttributesRequestPrivate(SQSRequest::SetQueueAttributesAction, this))
@@ -132,14 +129,9 @@ bool SetQueueAttributesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an SetQueueAttributesResponse object.
+ * Returns a SetQueueAttributesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An SetQueueAttributesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SQSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * SetQueueAttributesRequest::response(QNetworkReply * const reply) const
 {
@@ -147,20 +139,17 @@ QtAws::Core::AwsAbstractResponse * SetQueueAttributesRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::SQS::SetQueueAttributesRequestPrivate
+ * \brief The SetQueueAttributesRequestPrivate class provides private implementation for SetQueueAttributesRequest.
+ * \internal
  *
- * @class  SetQueueAttributesRequestPrivate
- *
- * @brief  Private implementation for SetQueueAttributesRequest.
+ * \inmodule QtAwsSQS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new SetQueueAttributesRequestPrivate object.
- *
- * @param  action  SQS action being performed.
- * @param  q       Pointer to this object's public SetQueueAttributesRequest instance.
+ * Constructs a SetQueueAttributesRequestPrivate object for SQS \a action with,
+ * public implementation \a q.
  */
 SetQueueAttributesRequestPrivate::SetQueueAttributesRequestPrivate(
     const SQSRequest::Action action, SetQueueAttributesRequest * const q)
@@ -170,15 +159,10 @@ SetQueueAttributesRequestPrivate::SetQueueAttributesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SetQueueAttributesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the SetQueueAttributesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public SetQueueAttributesRequest instance.
  */
 SetQueueAttributesRequestPrivate::SetQueueAttributesRequestPrivate(
     const SetQueueAttributesRequestPrivate &other, SetQueueAttributesRequest * const q)

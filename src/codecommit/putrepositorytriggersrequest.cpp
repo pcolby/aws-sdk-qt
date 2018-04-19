@@ -27,10 +27,9 @@ namespace CodeCommit {
 
 /*!
  * \class QtAws::CodeCommit::PutRepositoryTriggersRequest
- *
  * \brief The PutRepositoryTriggersRequest class provides an interface for CodeCommit PutRepositoryTriggers requests.
  *
- * \ingroup CodeCommit
+ * \inmodule QtAwsCodeCommit
  *
  *  <fullname>AWS CodeCommit</fullname>
  * 
@@ -227,9 +226,7 @@ namespace CodeCommit {
  */
 
 /*!
- * @brief  Constructs a new PutRepositoryTriggersRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 PutRepositoryTriggersRequest::PutRepositoryTriggersRequest(const PutRepositoryTriggersRequest &other)
     : CodeCommitRequest(new PutRepositoryTriggersRequestPrivate(*other.d_func(), this))
@@ -238,7 +235,7 @@ PutRepositoryTriggersRequest::PutRepositoryTriggersRequest(const PutRepositoryTr
 }
 
 /*!
- * @brief  Constructs a new PutRepositoryTriggersRequest object.
+ * Constructs a PutRepositoryTriggersRequest object.
  */
 PutRepositoryTriggersRequest::PutRepositoryTriggersRequest()
     : CodeCommitRequest(new PutRepositoryTriggersRequestPrivate(CodeCommitRequest::PutRepositoryTriggersAction, this))
@@ -256,14 +253,9 @@ bool PutRepositoryTriggersRequest::isValid() const
 
 
 /*!
- * @brief  Construct an PutRepositoryTriggersResponse object.
+ * Returns a PutRepositoryTriggersResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An PutRepositoryTriggersResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CodeCommitClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * PutRepositoryTriggersRequest::response(QNetworkReply * const reply) const
 {
@@ -271,20 +263,17 @@ QtAws::Core::AwsAbstractResponse * PutRepositoryTriggersRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::CodeCommit::PutRepositoryTriggersRequestPrivate
+ * \brief The PutRepositoryTriggersRequestPrivate class provides private implementation for PutRepositoryTriggersRequest.
+ * \internal
  *
- * @class  PutRepositoryTriggersRequestPrivate
- *
- * @brief  Private implementation for PutRepositoryTriggersRequest.
+ * \inmodule QtAwsCodeCommit
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new PutRepositoryTriggersRequestPrivate object.
- *
- * @param  action  CodeCommit action being performed.
- * @param  q       Pointer to this object's public PutRepositoryTriggersRequest instance.
+ * Constructs a PutRepositoryTriggersRequestPrivate object for CodeCommit \a action with,
+ * public implementation \a q.
  */
 PutRepositoryTriggersRequestPrivate::PutRepositoryTriggersRequestPrivate(
     const CodeCommitRequest::Action action, PutRepositoryTriggersRequest * const q)
@@ -294,15 +283,10 @@ PutRepositoryTriggersRequestPrivate::PutRepositoryTriggersRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutRepositoryTriggersRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the PutRepositoryTriggersRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public PutRepositoryTriggersRequest instance.
  */
 PutRepositoryTriggersRequestPrivate::PutRepositoryTriggersRequestPrivate(
     const PutRepositoryTriggersRequestPrivate &other, PutRepositoryTriggersRequest * const q)

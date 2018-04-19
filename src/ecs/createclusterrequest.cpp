@@ -27,10 +27,9 @@ namespace ECS {
 
 /*!
  * \class QtAws::ECS::CreateClusterRequest
- *
  * \brief The CreateClusterRequest class provides an interface for ECS CreateCluster requests.
  *
- * \ingroup ECS
+ * \inmodule QtAwsECS
  *
  *  Amazon Elastic Container Service (Amazon ECS) is a highly scalable, fast, container management service that makes it
  *  easy to run, stop, and manage Docker containers on a cluster. You can host your cluster on a serverless infrastructure
@@ -54,9 +53,7 @@ namespace ECS {
  */
 
 /*!
- * @brief  Constructs a new CreateClusterRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateClusterRequest::CreateClusterRequest(const CreateClusterRequest &other)
     : ECSRequest(new CreateClusterRequestPrivate(*other.d_func(), this))
@@ -65,7 +62,7 @@ CreateClusterRequest::CreateClusterRequest(const CreateClusterRequest &other)
 }
 
 /*!
- * @brief  Constructs a new CreateClusterRequest object.
+ * Constructs a CreateClusterRequest object.
  */
 CreateClusterRequest::CreateClusterRequest()
     : ECSRequest(new CreateClusterRequestPrivate(ECSRequest::CreateClusterAction, this))
@@ -83,14 +80,9 @@ bool CreateClusterRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateClusterResponse object.
+ * Returns a CreateClusterResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateClusterResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ECSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateClusterRequest::response(QNetworkReply * const reply) const
 {
@@ -98,20 +90,17 @@ QtAws::Core::AwsAbstractResponse * CreateClusterRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::ECS::CreateClusterRequestPrivate
+ * \brief The CreateClusterRequestPrivate class provides private implementation for CreateClusterRequest.
+ * \internal
  *
- * @class  CreateClusterRequestPrivate
- *
- * @brief  Private implementation for CreateClusterRequest.
+ * \inmodule QtAwsECS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateClusterRequestPrivate object.
- *
- * @param  action  ECS action being performed.
- * @param  q       Pointer to this object's public CreateClusterRequest instance.
+ * Constructs a CreateClusterRequestPrivate object for ECS \a action with,
+ * public implementation \a q.
  */
 CreateClusterRequestPrivate::CreateClusterRequestPrivate(
     const ECSRequest::Action action, CreateClusterRequest * const q)
@@ -121,15 +110,10 @@ CreateClusterRequestPrivate::CreateClusterRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateClusterRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateClusterRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateClusterRequest instance.
  */
 CreateClusterRequestPrivate::CreateClusterRequestPrivate(
     const CreateClusterRequestPrivate &other, CreateClusterRequest * const q)

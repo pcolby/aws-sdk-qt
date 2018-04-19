@@ -27,19 +27,16 @@ namespace S3 {
 
 /*!
  * \class QtAws::S3::DeleteBucketEncryptionRequest
- *
  * \brief The DeleteBucketEncryptionRequest class provides an interface for S3 DeleteBucketEncryption requests.
  *
- * \ingroup S3
+ * \inmodule QtAwsS3
  *
  *
  * \sa S3Client::deleteBucketEncryption
  */
 
 /*!
- * @brief  Constructs a new DeleteBucketEncryptionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteBucketEncryptionRequest::DeleteBucketEncryptionRequest(const DeleteBucketEncryptionRequest &other)
     : S3Request(new DeleteBucketEncryptionRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ DeleteBucketEncryptionRequest::DeleteBucketEncryptionRequest(const DeleteBucketE
 }
 
 /*!
- * @brief  Constructs a new DeleteBucketEncryptionRequest object.
+ * Constructs a DeleteBucketEncryptionRequest object.
  */
 DeleteBucketEncryptionRequest::DeleteBucketEncryptionRequest()
     : S3Request(new DeleteBucketEncryptionRequestPrivate(S3Request::DeleteBucketEncryptionAction, this))
@@ -66,14 +63,9 @@ bool DeleteBucketEncryptionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteBucketEncryptionResponse object.
+ * Returns a DeleteBucketEncryptionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteBucketEncryptionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  S3Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteBucketEncryptionRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * DeleteBucketEncryptionRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::S3::DeleteBucketEncryptionRequestPrivate
+ * \brief The DeleteBucketEncryptionRequestPrivate class provides private implementation for DeleteBucketEncryptionRequest.
+ * \internal
  *
- * @class  DeleteBucketEncryptionRequestPrivate
- *
- * @brief  Private implementation for DeleteBucketEncryptionRequest.
+ * \inmodule QtAwsS3
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteBucketEncryptionRequestPrivate object.
- *
- * @param  action  S3 action being performed.
- * @param  q       Pointer to this object's public DeleteBucketEncryptionRequest instance.
+ * Constructs a DeleteBucketEncryptionRequestPrivate object for S3 \a action with,
+ * public implementation \a q.
  */
 DeleteBucketEncryptionRequestPrivate::DeleteBucketEncryptionRequestPrivate(
     const S3Request::Action action, DeleteBucketEncryptionRequest * const q)
@@ -104,15 +93,10 @@ DeleteBucketEncryptionRequestPrivate::DeleteBucketEncryptionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteBucketEncryptionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteBucketEncryptionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteBucketEncryptionRequest instance.
  */
 DeleteBucketEncryptionRequestPrivate::DeleteBucketEncryptionRequestPrivate(
     const DeleteBucketEncryptionRequestPrivate &other, DeleteBucketEncryptionRequest * const q)

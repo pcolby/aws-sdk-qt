@@ -27,10 +27,9 @@ namespace Greengrass {
 
 /*!
  * \class QtAws::Greengrass::DeleteLoggerDefinitionRequest
- *
  * \brief The DeleteLoggerDefinitionRequest class provides an interface for Greengrass DeleteLoggerDefinition requests.
  *
- * \ingroup Greengrass
+ * \inmodule QtAwsGreengrass
  *
  *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
  *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
@@ -40,9 +39,7 @@ namespace Greengrass {
  */
 
 /*!
- * @brief  Constructs a new DeleteLoggerDefinitionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteLoggerDefinitionRequest::DeleteLoggerDefinitionRequest(const DeleteLoggerDefinitionRequest &other)
     : GreengrassRequest(new DeleteLoggerDefinitionRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ DeleteLoggerDefinitionRequest::DeleteLoggerDefinitionRequest(const DeleteLoggerD
 }
 
 /*!
- * @brief  Constructs a new DeleteLoggerDefinitionRequest object.
+ * Constructs a DeleteLoggerDefinitionRequest object.
  */
 DeleteLoggerDefinitionRequest::DeleteLoggerDefinitionRequest()
     : GreengrassRequest(new DeleteLoggerDefinitionRequestPrivate(GreengrassRequest::DeleteLoggerDefinitionAction, this))
@@ -69,14 +66,9 @@ bool DeleteLoggerDefinitionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteLoggerDefinitionResponse object.
+ * Returns a DeleteLoggerDefinitionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteLoggerDefinitionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GreengrassClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteLoggerDefinitionRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * DeleteLoggerDefinitionRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::Greengrass::DeleteLoggerDefinitionRequestPrivate
+ * \brief The DeleteLoggerDefinitionRequestPrivate class provides private implementation for DeleteLoggerDefinitionRequest.
+ * \internal
  *
- * @class  DeleteLoggerDefinitionRequestPrivate
- *
- * @brief  Private implementation for DeleteLoggerDefinitionRequest.
+ * \inmodule QtAwsGreengrass
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteLoggerDefinitionRequestPrivate object.
- *
- * @param  action  Greengrass action being performed.
- * @param  q       Pointer to this object's public DeleteLoggerDefinitionRequest instance.
+ * Constructs a DeleteLoggerDefinitionRequestPrivate object for Greengrass \a action with,
+ * public implementation \a q.
  */
 DeleteLoggerDefinitionRequestPrivate::DeleteLoggerDefinitionRequestPrivate(
     const GreengrassRequest::Action action, DeleteLoggerDefinitionRequest * const q)
@@ -107,15 +96,10 @@ DeleteLoggerDefinitionRequestPrivate::DeleteLoggerDefinitionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteLoggerDefinitionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteLoggerDefinitionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteLoggerDefinitionRequest instance.
  */
 DeleteLoggerDefinitionRequestPrivate::DeleteLoggerDefinitionRequestPrivate(
     const DeleteLoggerDefinitionRequestPrivate &other, DeleteLoggerDefinitionRequest * const q)

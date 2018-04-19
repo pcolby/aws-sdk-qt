@@ -27,10 +27,9 @@ namespace SFN {
 
 /*!
  * \class QtAws::SFN::StartExecutionRequest
- *
  * \brief The StartExecutionRequest class provides an interface for SFN StartExecution requests.
  *
- * \ingroup SFN
+ * \inmodule QtAwsSFN
  *
  *  <fullname>AWS Step Functions</fullname>
  * 
@@ -56,9 +55,7 @@ namespace SFN {
  */
 
 /*!
- * @brief  Constructs a new StartExecutionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 StartExecutionRequest::StartExecutionRequest(const StartExecutionRequest &other)
     : SFNRequest(new StartExecutionRequestPrivate(*other.d_func(), this))
@@ -67,7 +64,7 @@ StartExecutionRequest::StartExecutionRequest(const StartExecutionRequest &other)
 }
 
 /*!
- * @brief  Constructs a new StartExecutionRequest object.
+ * Constructs a StartExecutionRequest object.
  */
 StartExecutionRequest::StartExecutionRequest()
     : SFNRequest(new StartExecutionRequestPrivate(SFNRequest::StartExecutionAction, this))
@@ -85,14 +82,9 @@ bool StartExecutionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an StartExecutionResponse object.
+ * Returns a StartExecutionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An StartExecutionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SFNClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * StartExecutionRequest::response(QNetworkReply * const reply) const
 {
@@ -100,20 +92,17 @@ QtAws::Core::AwsAbstractResponse * StartExecutionRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::SFN::StartExecutionRequestPrivate
+ * \brief The StartExecutionRequestPrivate class provides private implementation for StartExecutionRequest.
+ * \internal
  *
- * @class  StartExecutionRequestPrivate
- *
- * @brief  Private implementation for StartExecutionRequest.
+ * \inmodule QtAwsSFN
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new StartExecutionRequestPrivate object.
- *
- * @param  action  SFN action being performed.
- * @param  q       Pointer to this object's public StartExecutionRequest instance.
+ * Constructs a StartExecutionRequestPrivate object for SFN \a action with,
+ * public implementation \a q.
  */
 StartExecutionRequestPrivate::StartExecutionRequestPrivate(
     const SFNRequest::Action action, StartExecutionRequest * const q)
@@ -123,15 +112,10 @@ StartExecutionRequestPrivate::StartExecutionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StartExecutionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the StartExecutionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public StartExecutionRequest instance.
  */
 StartExecutionRequestPrivate::StartExecutionRequestPrivate(
     const StartExecutionRequestPrivate &other, StartExecutionRequest * const q)

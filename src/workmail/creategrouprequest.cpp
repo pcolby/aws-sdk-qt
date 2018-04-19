@@ -27,10 +27,9 @@ namespace WorkMail {
 
 /*!
  * \class QtAws::WorkMail::CreateGroupRequest
- *
  * \brief The CreateGroupRequest class provides an interface for WorkMail CreateGroup requests.
  *
- * \ingroup WorkMail
+ * \inmodule QtAwsWorkMail
  *
  *  Amazon WorkMail is a secure, managed business email and calendaring service with support for existing desktop and mobile
  *  email clients. You can access your email, contacts, and calendars using Microsoft Outlook, your browser, or their native
@@ -70,9 +69,7 @@ namespace WorkMail {
  */
 
 /*!
- * @brief  Constructs a new CreateGroupRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateGroupRequest::CreateGroupRequest(const CreateGroupRequest &other)
     : WorkMailRequest(new CreateGroupRequestPrivate(*other.d_func(), this))
@@ -81,7 +78,7 @@ CreateGroupRequest::CreateGroupRequest(const CreateGroupRequest &other)
 }
 
 /*!
- * @brief  Constructs a new CreateGroupRequest object.
+ * Constructs a CreateGroupRequest object.
  */
 CreateGroupRequest::CreateGroupRequest()
     : WorkMailRequest(new CreateGroupRequestPrivate(WorkMailRequest::CreateGroupAction, this))
@@ -99,14 +96,9 @@ bool CreateGroupRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateGroupResponse object.
+ * Returns a CreateGroupResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateGroupResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WorkMailClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateGroupRequest::response(QNetworkReply * const reply) const
 {
@@ -114,20 +106,17 @@ QtAws::Core::AwsAbstractResponse * CreateGroupRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::WorkMail::CreateGroupRequestPrivate
+ * \brief The CreateGroupRequestPrivate class provides private implementation for CreateGroupRequest.
+ * \internal
  *
- * @class  CreateGroupRequestPrivate
- *
- * @brief  Private implementation for CreateGroupRequest.
+ * \inmodule QtAwsWorkMail
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateGroupRequestPrivate object.
- *
- * @param  action  WorkMail action being performed.
- * @param  q       Pointer to this object's public CreateGroupRequest instance.
+ * Constructs a CreateGroupRequestPrivate object for WorkMail \a action with,
+ * public implementation \a q.
  */
 CreateGroupRequestPrivate::CreateGroupRequestPrivate(
     const WorkMailRequest::Action action, CreateGroupRequest * const q)
@@ -137,15 +126,10 @@ CreateGroupRequestPrivate::CreateGroupRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateGroupRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateGroupRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateGroupRequest instance.
  */
 CreateGroupRequestPrivate::CreateGroupRequestPrivate(
     const CreateGroupRequestPrivate &other, CreateGroupRequest * const q)

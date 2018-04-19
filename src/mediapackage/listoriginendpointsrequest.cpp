@@ -27,19 +27,16 @@ namespace MediaPackage {
 
 /*!
  * \class QtAws::MediaPackage::ListOriginEndpointsRequest
- *
  * \brief The ListOriginEndpointsRequest class provides an interface for MediaPackage ListOriginEndpoints requests.
  *
- * \ingroup MediaPackage
+ * \inmodule QtAwsMediaPackage
  *
  *
  * \sa MediaPackageClient::listOriginEndpoints
  */
 
 /*!
- * @brief  Constructs a new ListOriginEndpointsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListOriginEndpointsRequest::ListOriginEndpointsRequest(const ListOriginEndpointsRequest &other)
     : MediaPackageRequest(new ListOriginEndpointsRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ ListOriginEndpointsRequest::ListOriginEndpointsRequest(const ListOriginEndpoints
 }
 
 /*!
- * @brief  Constructs a new ListOriginEndpointsRequest object.
+ * Constructs a ListOriginEndpointsRequest object.
  */
 ListOriginEndpointsRequest::ListOriginEndpointsRequest()
     : MediaPackageRequest(new ListOriginEndpointsRequestPrivate(MediaPackageRequest::ListOriginEndpointsAction, this))
@@ -66,14 +63,9 @@ bool ListOriginEndpointsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListOriginEndpointsResponse object.
+ * Returns a ListOriginEndpointsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListOriginEndpointsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MediaPackageClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListOriginEndpointsRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * ListOriginEndpointsRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::MediaPackage::ListOriginEndpointsRequestPrivate
+ * \brief The ListOriginEndpointsRequestPrivate class provides private implementation for ListOriginEndpointsRequest.
+ * \internal
  *
- * @class  ListOriginEndpointsRequestPrivate
- *
- * @brief  Private implementation for ListOriginEndpointsRequest.
+ * \inmodule QtAwsMediaPackage
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListOriginEndpointsRequestPrivate object.
- *
- * @param  action  MediaPackage action being performed.
- * @param  q       Pointer to this object's public ListOriginEndpointsRequest instance.
+ * Constructs a ListOriginEndpointsRequestPrivate object for MediaPackage \a action with,
+ * public implementation \a q.
  */
 ListOriginEndpointsRequestPrivate::ListOriginEndpointsRequestPrivate(
     const MediaPackageRequest::Action action, ListOriginEndpointsRequest * const q)
@@ -104,15 +93,10 @@ ListOriginEndpointsRequestPrivate::ListOriginEndpointsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListOriginEndpointsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListOriginEndpointsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListOriginEndpointsRequest instance.
  */
 ListOriginEndpointsRequestPrivate::ListOriginEndpointsRequestPrivate(
     const ListOriginEndpointsRequestPrivate &other, ListOriginEndpointsRequest * const q)

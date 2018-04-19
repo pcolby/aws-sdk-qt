@@ -27,10 +27,9 @@ namespace CognitoIdentity {
 
 /*!
  * \class QtAws::CognitoIdentity::GetIdentityPoolRolesRequest
- *
  * \brief The GetIdentityPoolRolesRequest class provides an interface for CognitoIdentity GetIdentityPoolRoles requests.
  *
- * \ingroup CognitoIdentity
+ * \inmodule QtAwsCognitoIdentity
  *
  *  <fullname>Amazon Cognito</fullname>
  * 
@@ -75,9 +74,7 @@ namespace CognitoIdentity {
  */
 
 /*!
- * @brief  Constructs a new GetIdentityPoolRolesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetIdentityPoolRolesRequest::GetIdentityPoolRolesRequest(const GetIdentityPoolRolesRequest &other)
     : CognitoIdentityRequest(new GetIdentityPoolRolesRequestPrivate(*other.d_func(), this))
@@ -86,7 +83,7 @@ GetIdentityPoolRolesRequest::GetIdentityPoolRolesRequest(const GetIdentityPoolRo
 }
 
 /*!
- * @brief  Constructs a new GetIdentityPoolRolesRequest object.
+ * Constructs a GetIdentityPoolRolesRequest object.
  */
 GetIdentityPoolRolesRequest::GetIdentityPoolRolesRequest()
     : CognitoIdentityRequest(new GetIdentityPoolRolesRequestPrivate(CognitoIdentityRequest::GetIdentityPoolRolesAction, this))
@@ -104,14 +101,9 @@ bool GetIdentityPoolRolesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetIdentityPoolRolesResponse object.
+ * Returns a GetIdentityPoolRolesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetIdentityPoolRolesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CognitoIdentityClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetIdentityPoolRolesRequest::response(QNetworkReply * const reply) const
 {
@@ -119,20 +111,17 @@ QtAws::Core::AwsAbstractResponse * GetIdentityPoolRolesRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::CognitoIdentity::GetIdentityPoolRolesRequestPrivate
+ * \brief The GetIdentityPoolRolesRequestPrivate class provides private implementation for GetIdentityPoolRolesRequest.
+ * \internal
  *
- * @class  GetIdentityPoolRolesRequestPrivate
- *
- * @brief  Private implementation for GetIdentityPoolRolesRequest.
+ * \inmodule QtAwsCognitoIdentity
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetIdentityPoolRolesRequestPrivate object.
- *
- * @param  action  CognitoIdentity action being performed.
- * @param  q       Pointer to this object's public GetIdentityPoolRolesRequest instance.
+ * Constructs a GetIdentityPoolRolesRequestPrivate object for CognitoIdentity \a action with,
+ * public implementation \a q.
  */
 GetIdentityPoolRolesRequestPrivate::GetIdentityPoolRolesRequestPrivate(
     const CognitoIdentityRequest::Action action, GetIdentityPoolRolesRequest * const q)
@@ -142,15 +131,10 @@ GetIdentityPoolRolesRequestPrivate::GetIdentityPoolRolesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetIdentityPoolRolesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetIdentityPoolRolesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetIdentityPoolRolesRequest instance.
  */
 GetIdentityPoolRolesRequestPrivate::GetIdentityPoolRolesRequestPrivate(
     const GetIdentityPoolRolesRequestPrivate &other, GetIdentityPoolRolesRequest * const q)

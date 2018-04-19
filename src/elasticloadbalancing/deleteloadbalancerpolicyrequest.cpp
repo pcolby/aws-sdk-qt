@@ -27,10 +27,9 @@ namespace ElasticLoadBalancing {
 
 /*!
  * \class QtAws::ElasticLoadBalancing::DeleteLoadBalancerPolicyRequest
- *
  * \brief The DeleteLoadBalancerPolicyRequest class provides an interface for ElasticLoadBalancing DeleteLoadBalancerPolicy requests.
  *
- * \ingroup ElasticLoadBalancing
+ * \inmodule QtAwsElasticLoadBalancing
  *
  *  <fullname>Elastic Load Balancing</fullname>
  * 
@@ -65,9 +64,7 @@ namespace ElasticLoadBalancing {
  */
 
 /*!
- * @brief  Constructs a new DeleteLoadBalancerPolicyRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteLoadBalancerPolicyRequest::DeleteLoadBalancerPolicyRequest(const DeleteLoadBalancerPolicyRequest &other)
     : ElasticLoadBalancingRequest(new DeleteLoadBalancerPolicyRequestPrivate(*other.d_func(), this))
@@ -76,7 +73,7 @@ DeleteLoadBalancerPolicyRequest::DeleteLoadBalancerPolicyRequest(const DeleteLoa
 }
 
 /*!
- * @brief  Constructs a new DeleteLoadBalancerPolicyRequest object.
+ * Constructs a DeleteLoadBalancerPolicyRequest object.
  */
 DeleteLoadBalancerPolicyRequest::DeleteLoadBalancerPolicyRequest()
     : ElasticLoadBalancingRequest(new DeleteLoadBalancerPolicyRequestPrivate(ElasticLoadBalancingRequest::DeleteLoadBalancerPolicyAction, this))
@@ -94,14 +91,9 @@ bool DeleteLoadBalancerPolicyRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteLoadBalancerPolicyResponse object.
+ * Returns a DeleteLoadBalancerPolicyResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteLoadBalancerPolicyResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ElasticLoadBalancingClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteLoadBalancerPolicyRequest::response(QNetworkReply * const reply) const
 {
@@ -109,20 +101,17 @@ QtAws::Core::AwsAbstractResponse * DeleteLoadBalancerPolicyRequest::response(QNe
 }
 
 /*!
- * @internal
+ * \class QtAws::ElasticLoadBalancing::DeleteLoadBalancerPolicyRequestPrivate
+ * \brief The DeleteLoadBalancerPolicyRequestPrivate class provides private implementation for DeleteLoadBalancerPolicyRequest.
+ * \internal
  *
- * @class  DeleteLoadBalancerPolicyRequestPrivate
- *
- * @brief  Private implementation for DeleteLoadBalancerPolicyRequest.
+ * \inmodule QtAwsElasticLoadBalancing
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteLoadBalancerPolicyRequestPrivate object.
- *
- * @param  action  ElasticLoadBalancing action being performed.
- * @param  q       Pointer to this object's public DeleteLoadBalancerPolicyRequest instance.
+ * Constructs a DeleteLoadBalancerPolicyRequestPrivate object for ElasticLoadBalancing \a action with,
+ * public implementation \a q.
  */
 DeleteLoadBalancerPolicyRequestPrivate::DeleteLoadBalancerPolicyRequestPrivate(
     const ElasticLoadBalancingRequest::Action action, DeleteLoadBalancerPolicyRequest * const q)
@@ -132,15 +121,10 @@ DeleteLoadBalancerPolicyRequestPrivate::DeleteLoadBalancerPolicyRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteLoadBalancerPolicyRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteLoadBalancerPolicyRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteLoadBalancerPolicyRequest instance.
  */
 DeleteLoadBalancerPolicyRequestPrivate::DeleteLoadBalancerPolicyRequestPrivate(
     const DeleteLoadBalancerPolicyRequestPrivate &other, DeleteLoadBalancerPolicyRequest * const q)

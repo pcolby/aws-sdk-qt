@@ -27,10 +27,9 @@ namespace DatabaseMigrationService {
 
 /*!
  * \class QtAws::DatabaseMigrationService::CreateReplicationTaskRequest
- *
  * \brief The CreateReplicationTaskRequest class provides an interface for DatabaseMigrationService CreateReplicationTask requests.
  *
- * \ingroup DatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigrationService
  *
  *  <fullname>AWS Database Migration Service</fullname>
  * 
@@ -48,9 +47,7 @@ namespace DatabaseMigrationService {
  */
 
 /*!
- * @brief  Constructs a new CreateReplicationTaskRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateReplicationTaskRequest::CreateReplicationTaskRequest(const CreateReplicationTaskRequest &other)
     : DatabaseMigrationServiceRequest(new CreateReplicationTaskRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ CreateReplicationTaskRequest::CreateReplicationTaskRequest(const CreateReplicati
 }
 
 /*!
- * @brief  Constructs a new CreateReplicationTaskRequest object.
+ * Constructs a CreateReplicationTaskRequest object.
  */
 CreateReplicationTaskRequest::CreateReplicationTaskRequest()
     : DatabaseMigrationServiceRequest(new CreateReplicationTaskRequestPrivate(DatabaseMigrationServiceRequest::CreateReplicationTaskAction, this))
@@ -77,14 +74,9 @@ bool CreateReplicationTaskRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateReplicationTaskResponse object.
+ * Returns a CreateReplicationTaskResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateReplicationTaskResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DatabaseMigrationServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateReplicationTaskRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * CreateReplicationTaskRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::DatabaseMigrationService::CreateReplicationTaskRequestPrivate
+ * \brief The CreateReplicationTaskRequestPrivate class provides private implementation for CreateReplicationTaskRequest.
+ * \internal
  *
- * @class  CreateReplicationTaskRequestPrivate
- *
- * @brief  Private implementation for CreateReplicationTaskRequest.
+ * \inmodule QtAwsDatabaseMigrationService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateReplicationTaskRequestPrivate object.
- *
- * @param  action  DatabaseMigrationService action being performed.
- * @param  q       Pointer to this object's public CreateReplicationTaskRequest instance.
+ * Constructs a CreateReplicationTaskRequestPrivate object for DatabaseMigrationService \a action with,
+ * public implementation \a q.
  */
 CreateReplicationTaskRequestPrivate::CreateReplicationTaskRequestPrivate(
     const DatabaseMigrationServiceRequest::Action action, CreateReplicationTaskRequest * const q)
@@ -115,15 +104,10 @@ CreateReplicationTaskRequestPrivate::CreateReplicationTaskRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateReplicationTaskRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateReplicationTaskRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateReplicationTaskRequest instance.
  */
 CreateReplicationTaskRequestPrivate::CreateReplicationTaskRequestPrivate(
     const CreateReplicationTaskRequestPrivate &other, CreateReplicationTaskRequest * const q)

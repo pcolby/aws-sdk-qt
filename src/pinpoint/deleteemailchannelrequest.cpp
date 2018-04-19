@@ -27,19 +27,16 @@ namespace Pinpoint {
 
 /*!
  * \class QtAws::Pinpoint::DeleteEmailChannelRequest
- *
  * \brief The DeleteEmailChannelRequest class provides an interface for Pinpoint DeleteEmailChannel requests.
  *
- * \ingroup Pinpoint
+ * \inmodule QtAwsPinpoint
  *
  *
  * \sa PinpointClient::deleteEmailChannel
  */
 
 /*!
- * @brief  Constructs a new DeleteEmailChannelRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteEmailChannelRequest::DeleteEmailChannelRequest(const DeleteEmailChannelRequest &other)
     : PinpointRequest(new DeleteEmailChannelRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ DeleteEmailChannelRequest::DeleteEmailChannelRequest(const DeleteEmailChannelReq
 }
 
 /*!
- * @brief  Constructs a new DeleteEmailChannelRequest object.
+ * Constructs a DeleteEmailChannelRequest object.
  */
 DeleteEmailChannelRequest::DeleteEmailChannelRequest()
     : PinpointRequest(new DeleteEmailChannelRequestPrivate(PinpointRequest::DeleteEmailChannelAction, this))
@@ -66,14 +63,9 @@ bool DeleteEmailChannelRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteEmailChannelResponse object.
+ * Returns a DeleteEmailChannelResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteEmailChannelResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  PinpointClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteEmailChannelRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * DeleteEmailChannelRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::Pinpoint::DeleteEmailChannelRequestPrivate
+ * \brief The DeleteEmailChannelRequestPrivate class provides private implementation for DeleteEmailChannelRequest.
+ * \internal
  *
- * @class  DeleteEmailChannelRequestPrivate
- *
- * @brief  Private implementation for DeleteEmailChannelRequest.
+ * \inmodule QtAwsPinpoint
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteEmailChannelRequestPrivate object.
- *
- * @param  action  Pinpoint action being performed.
- * @param  q       Pointer to this object's public DeleteEmailChannelRequest instance.
+ * Constructs a DeleteEmailChannelRequestPrivate object for Pinpoint \a action with,
+ * public implementation \a q.
  */
 DeleteEmailChannelRequestPrivate::DeleteEmailChannelRequestPrivate(
     const PinpointRequest::Action action, DeleteEmailChannelRequest * const q)
@@ -104,15 +93,10 @@ DeleteEmailChannelRequestPrivate::DeleteEmailChannelRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteEmailChannelRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteEmailChannelRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteEmailChannelRequest instance.
  */
 DeleteEmailChannelRequestPrivate::DeleteEmailChannelRequestPrivate(
     const DeleteEmailChannelRequestPrivate &other, DeleteEmailChannelRequest * const q)

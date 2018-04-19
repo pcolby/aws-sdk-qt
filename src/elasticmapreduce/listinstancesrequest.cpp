@@ -27,10 +27,9 @@ namespace EMR {
 
 /*!
  * \class QtAws::EMR::ListInstancesRequest
- *
  * \brief The ListInstancesRequest class provides an interface for EMR ListInstances requests.
  *
- * \ingroup EMR
+ * \inmodule QtAwsEMR
  *
  *  Amazon EMR is a web service that makes it easy to process large amounts of data efficiently. Amazon EMR uses Hadoop
  *  processing combined with several AWS products to do tasks such as web indexing, data mining, log file analysis, machine
@@ -40,9 +39,7 @@ namespace EMR {
  */
 
 /*!
- * @brief  Constructs a new ListInstancesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListInstancesRequest::ListInstancesRequest(const ListInstancesRequest &other)
     : EMRRequest(new ListInstancesRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ ListInstancesRequest::ListInstancesRequest(const ListInstancesRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ListInstancesRequest object.
+ * Constructs a ListInstancesRequest object.
  */
 ListInstancesRequest::ListInstancesRequest()
     : EMRRequest(new ListInstancesRequestPrivate(EMRRequest::ListInstancesAction, this))
@@ -69,14 +66,9 @@ bool ListInstancesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListInstancesResponse object.
+ * Returns a ListInstancesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListInstancesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EMRClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListInstancesRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * ListInstancesRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::EMR::ListInstancesRequestPrivate
+ * \brief The ListInstancesRequestPrivate class provides private implementation for ListInstancesRequest.
+ * \internal
  *
- * @class  ListInstancesRequestPrivate
- *
- * @brief  Private implementation for ListInstancesRequest.
+ * \inmodule QtAwsEMR
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListInstancesRequestPrivate object.
- *
- * @param  action  EMR action being performed.
- * @param  q       Pointer to this object's public ListInstancesRequest instance.
+ * Constructs a ListInstancesRequestPrivate object for EMR \a action with,
+ * public implementation \a q.
  */
 ListInstancesRequestPrivate::ListInstancesRequestPrivate(
     const EMRRequest::Action action, ListInstancesRequest * const q)
@@ -107,15 +96,10 @@ ListInstancesRequestPrivate::ListInstancesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListInstancesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListInstancesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListInstancesRequest instance.
  */
 ListInstancesRequestPrivate::ListInstancesRequestPrivate(
     const ListInstancesRequestPrivate &other, ListInstancesRequest * const q)

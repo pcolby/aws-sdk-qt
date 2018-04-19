@@ -27,10 +27,9 @@ namespace OpsWorks {
 
 /*!
  * \class QtAws::OpsWorks::UpdateElasticIpRequest
- *
  * \brief The UpdateElasticIpRequest class provides an interface for OpsWorks UpdateElasticIp requests.
  *
- * \ingroup OpsWorks
+ * \inmodule QtAwsOpsWorks
  *
  *  <fullname>AWS OpsWorks</fullname>
  * 
@@ -143,9 +142,7 @@ namespace OpsWorks {
  */
 
 /*!
- * @brief  Constructs a new UpdateElasticIpRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateElasticIpRequest::UpdateElasticIpRequest(const UpdateElasticIpRequest &other)
     : OpsWorksRequest(new UpdateElasticIpRequestPrivate(*other.d_func(), this))
@@ -154,7 +151,7 @@ UpdateElasticIpRequest::UpdateElasticIpRequest(const UpdateElasticIpRequest &oth
 }
 
 /*!
- * @brief  Constructs a new UpdateElasticIpRequest object.
+ * Constructs a UpdateElasticIpRequest object.
  */
 UpdateElasticIpRequest::UpdateElasticIpRequest()
     : OpsWorksRequest(new UpdateElasticIpRequestPrivate(OpsWorksRequest::UpdateElasticIpAction, this))
@@ -172,14 +169,9 @@ bool UpdateElasticIpRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateElasticIpResponse object.
+ * Returns a UpdateElasticIpResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateElasticIpResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  OpsWorksClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateElasticIpRequest::response(QNetworkReply * const reply) const
 {
@@ -187,20 +179,17 @@ QtAws::Core::AwsAbstractResponse * UpdateElasticIpRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::OpsWorks::UpdateElasticIpRequestPrivate
+ * \brief The UpdateElasticIpRequestPrivate class provides private implementation for UpdateElasticIpRequest.
+ * \internal
  *
- * @class  UpdateElasticIpRequestPrivate
- *
- * @brief  Private implementation for UpdateElasticIpRequest.
+ * \inmodule QtAwsOpsWorks
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateElasticIpRequestPrivate object.
- *
- * @param  action  OpsWorks action being performed.
- * @param  q       Pointer to this object's public UpdateElasticIpRequest instance.
+ * Constructs a UpdateElasticIpRequestPrivate object for OpsWorks \a action with,
+ * public implementation \a q.
  */
 UpdateElasticIpRequestPrivate::UpdateElasticIpRequestPrivate(
     const OpsWorksRequest::Action action, UpdateElasticIpRequest * const q)
@@ -210,15 +199,10 @@ UpdateElasticIpRequestPrivate::UpdateElasticIpRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateElasticIpRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateElasticIpRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateElasticIpRequest instance.
  */
 UpdateElasticIpRequestPrivate::UpdateElasticIpRequestPrivate(
     const UpdateElasticIpRequestPrivate &other, UpdateElasticIpRequest * const q)

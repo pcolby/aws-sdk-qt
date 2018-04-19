@@ -27,10 +27,9 @@ namespace Glue {
 
 /*!
  * \class QtAws::Glue::DeleteConnectionRequest
- *
  * \brief The DeleteConnectionRequest class provides an interface for Glue DeleteConnection requests.
  *
- * \ingroup Glue
+ * \inmodule QtAwsGlue
  *
  *  <fullname>AWS Glue</fullname>
  * 
@@ -40,9 +39,7 @@ namespace Glue {
  */
 
 /*!
- * @brief  Constructs a new DeleteConnectionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteConnectionRequest::DeleteConnectionRequest(const DeleteConnectionRequest &other)
     : GlueRequest(new DeleteConnectionRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ DeleteConnectionRequest::DeleteConnectionRequest(const DeleteConnectionRequest &
 }
 
 /*!
- * @brief  Constructs a new DeleteConnectionRequest object.
+ * Constructs a DeleteConnectionRequest object.
  */
 DeleteConnectionRequest::DeleteConnectionRequest()
     : GlueRequest(new DeleteConnectionRequestPrivate(GlueRequest::DeleteConnectionAction, this))
@@ -69,14 +66,9 @@ bool DeleteConnectionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteConnectionResponse object.
+ * Returns a DeleteConnectionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteConnectionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GlueClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteConnectionRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * DeleteConnectionRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::Glue::DeleteConnectionRequestPrivate
+ * \brief The DeleteConnectionRequestPrivate class provides private implementation for DeleteConnectionRequest.
+ * \internal
  *
- * @class  DeleteConnectionRequestPrivate
- *
- * @brief  Private implementation for DeleteConnectionRequest.
+ * \inmodule QtAwsGlue
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteConnectionRequestPrivate object.
- *
- * @param  action  Glue action being performed.
- * @param  q       Pointer to this object's public DeleteConnectionRequest instance.
+ * Constructs a DeleteConnectionRequestPrivate object for Glue \a action with,
+ * public implementation \a q.
  */
 DeleteConnectionRequestPrivate::DeleteConnectionRequestPrivate(
     const GlueRequest::Action action, DeleteConnectionRequest * const q)
@@ -107,15 +96,10 @@ DeleteConnectionRequestPrivate::DeleteConnectionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteConnectionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteConnectionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteConnectionRequest instance.
  */
 DeleteConnectionRequestPrivate::DeleteConnectionRequestPrivate(
     const DeleteConnectionRequestPrivate &other, DeleteConnectionRequest * const q)

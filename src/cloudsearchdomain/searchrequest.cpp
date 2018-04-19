@@ -27,10 +27,9 @@ namespace CloudSearchDomain {
 
 /*!
  * \class QtAws::CloudSearchDomain::SearchRequest
- *
  * \brief The SearchRequest class provides an interface for CloudSearchDomain Search requests.
  *
- * \ingroup CloudSearchDomain
+ * \inmodule QtAwsCloudSearchDomain
  *
  *  You use the AmazonCloudSearch2013 API to upload documents to a search domain and search those documents.
  * 
@@ -50,9 +49,7 @@ namespace CloudSearchDomain {
  */
 
 /*!
- * @brief  Constructs a new SearchRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 SearchRequest::SearchRequest(const SearchRequest &other)
     : CloudSearchDomainRequest(new SearchRequestPrivate(*other.d_func(), this))
@@ -61,7 +58,7 @@ SearchRequest::SearchRequest(const SearchRequest &other)
 }
 
 /*!
- * @brief  Constructs a new SearchRequest object.
+ * Constructs a SearchRequest object.
  */
 SearchRequest::SearchRequest()
     : CloudSearchDomainRequest(new SearchRequestPrivate(CloudSearchDomainRequest::SearchAction, this))
@@ -79,14 +76,9 @@ bool SearchRequest::isValid() const
 
 
 /*!
- * @brief  Construct an SearchResponse object.
+ * Returns a SearchResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An SearchResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudSearchDomainClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * SearchRequest::response(QNetworkReply * const reply) const
 {
@@ -94,20 +86,17 @@ QtAws::Core::AwsAbstractResponse * SearchRequest::response(QNetworkReply * const
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudSearchDomain::SearchRequestPrivate
+ * \brief The SearchRequestPrivate class provides private implementation for SearchRequest.
+ * \internal
  *
- * @class  SearchRequestPrivate
- *
- * @brief  Private implementation for SearchRequest.
+ * \inmodule QtAwsCloudSearchDomain
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new SearchRequestPrivate object.
- *
- * @param  action  CloudSearchDomain action being performed.
- * @param  q       Pointer to this object's public SearchRequest instance.
+ * Constructs a SearchRequestPrivate object for CloudSearchDomain \a action with,
+ * public implementation \a q.
  */
 SearchRequestPrivate::SearchRequestPrivate(
     const CloudSearchDomainRequest::Action action, SearchRequest * const q)
@@ -117,15 +106,10 @@ SearchRequestPrivate::SearchRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SearchRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the SearchRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public SearchRequest instance.
  */
 SearchRequestPrivate::SearchRequestPrivate(
     const SearchRequestPrivate &other, SearchRequest * const q)

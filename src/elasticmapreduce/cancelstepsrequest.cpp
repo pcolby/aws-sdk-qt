@@ -27,10 +27,9 @@ namespace EMR {
 
 /*!
  * \class QtAws::EMR::CancelStepsRequest
- *
  * \brief The CancelStepsRequest class provides an interface for EMR CancelSteps requests.
  *
- * \ingroup EMR
+ * \inmodule QtAwsEMR
  *
  *  Amazon EMR is a web service that makes it easy to process large amounts of data efficiently. Amazon EMR uses Hadoop
  *  processing combined with several AWS products to do tasks such as web indexing, data mining, log file analysis, machine
@@ -40,9 +39,7 @@ namespace EMR {
  */
 
 /*!
- * @brief  Constructs a new CancelStepsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CancelStepsRequest::CancelStepsRequest(const CancelStepsRequest &other)
     : EMRRequest(new CancelStepsRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ CancelStepsRequest::CancelStepsRequest(const CancelStepsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new CancelStepsRequest object.
+ * Constructs a CancelStepsRequest object.
  */
 CancelStepsRequest::CancelStepsRequest()
     : EMRRequest(new CancelStepsRequestPrivate(EMRRequest::CancelStepsAction, this))
@@ -69,14 +66,9 @@ bool CancelStepsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CancelStepsResponse object.
+ * Returns a CancelStepsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CancelStepsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EMRClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CancelStepsRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * CancelStepsRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::EMR::CancelStepsRequestPrivate
+ * \brief The CancelStepsRequestPrivate class provides private implementation for CancelStepsRequest.
+ * \internal
  *
- * @class  CancelStepsRequestPrivate
- *
- * @brief  Private implementation for CancelStepsRequest.
+ * \inmodule QtAwsEMR
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CancelStepsRequestPrivate object.
- *
- * @param  action  EMR action being performed.
- * @param  q       Pointer to this object's public CancelStepsRequest instance.
+ * Constructs a CancelStepsRequestPrivate object for EMR \a action with,
+ * public implementation \a q.
  */
 CancelStepsRequestPrivate::CancelStepsRequestPrivate(
     const EMRRequest::Action action, CancelStepsRequest * const q)
@@ -107,15 +96,10 @@ CancelStepsRequestPrivate::CancelStepsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CancelStepsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CancelStepsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CancelStepsRequest instance.
  */
 CancelStepsRequestPrivate::CancelStepsRequestPrivate(
     const CancelStepsRequestPrivate &other, CancelStepsRequest * const q)

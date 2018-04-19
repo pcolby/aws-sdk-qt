@@ -27,10 +27,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::UpdateSSHPublicKeyRequest
- *
  * \brief The UpdateSSHPublicKeyRequest class provides an interface for IAM UpdateSSHPublicKey requests.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -102,9 +101,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new UpdateSSHPublicKeyRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateSSHPublicKeyRequest::UpdateSSHPublicKeyRequest(const UpdateSSHPublicKeyRequest &other)
     : IAMRequest(new UpdateSSHPublicKeyRequestPrivate(*other.d_func(), this))
@@ -113,7 +110,7 @@ UpdateSSHPublicKeyRequest::UpdateSSHPublicKeyRequest(const UpdateSSHPublicKeyReq
 }
 
 /*!
- * @brief  Constructs a new UpdateSSHPublicKeyRequest object.
+ * Constructs a UpdateSSHPublicKeyRequest object.
  */
 UpdateSSHPublicKeyRequest::UpdateSSHPublicKeyRequest()
     : IAMRequest(new UpdateSSHPublicKeyRequestPrivate(IAMRequest::UpdateSSHPublicKeyAction, this))
@@ -131,14 +128,9 @@ bool UpdateSSHPublicKeyRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateSSHPublicKeyResponse object.
+ * Returns a UpdateSSHPublicKeyResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateSSHPublicKeyResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IAMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateSSHPublicKeyRequest::response(QNetworkReply * const reply) const
 {
@@ -146,20 +138,17 @@ QtAws::Core::AwsAbstractResponse * UpdateSSHPublicKeyRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::IAM::UpdateSSHPublicKeyRequestPrivate
+ * \brief The UpdateSSHPublicKeyRequestPrivate class provides private implementation for UpdateSSHPublicKeyRequest.
+ * \internal
  *
- * @class  UpdateSSHPublicKeyRequestPrivate
- *
- * @brief  Private implementation for UpdateSSHPublicKeyRequest.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateSSHPublicKeyRequestPrivate object.
- *
- * @param  action  IAM action being performed.
- * @param  q       Pointer to this object's public UpdateSSHPublicKeyRequest instance.
+ * Constructs a UpdateSSHPublicKeyRequestPrivate object for IAM \a action with,
+ * public implementation \a q.
  */
 UpdateSSHPublicKeyRequestPrivate::UpdateSSHPublicKeyRequestPrivate(
     const IAMRequest::Action action, UpdateSSHPublicKeyRequest * const q)
@@ -169,15 +158,10 @@ UpdateSSHPublicKeyRequestPrivate::UpdateSSHPublicKeyRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateSSHPublicKeyRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateSSHPublicKeyRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateSSHPublicKeyRequest instance.
  */
 UpdateSSHPublicKeyRequestPrivate::UpdateSSHPublicKeyRequestPrivate(
     const UpdateSSHPublicKeyRequestPrivate &other, UpdateSSHPublicKeyRequest * const q)

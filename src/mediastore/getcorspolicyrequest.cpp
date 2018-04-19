@@ -27,10 +27,9 @@ namespace MediaStore {
 
 /*!
  * \class QtAws::MediaStore::GetCorsPolicyRequest
- *
  * \brief The GetCorsPolicyRequest class provides an interface for MediaStore GetCorsPolicy requests.
  *
- * \ingroup MediaStore
+ * \inmodule QtAwsMediaStore
  *
  *  An AWS Elemental MediaStore container is a namespace that holds folders and objects. You use a container endpoint to
  *  create, read, and delete objects.
@@ -39,9 +38,7 @@ namespace MediaStore {
  */
 
 /*!
- * @brief  Constructs a new GetCorsPolicyRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetCorsPolicyRequest::GetCorsPolicyRequest(const GetCorsPolicyRequest &other)
     : MediaStoreRequest(new GetCorsPolicyRequestPrivate(*other.d_func(), this))
@@ -50,7 +47,7 @@ GetCorsPolicyRequest::GetCorsPolicyRequest(const GetCorsPolicyRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetCorsPolicyRequest object.
+ * Constructs a GetCorsPolicyRequest object.
  */
 GetCorsPolicyRequest::GetCorsPolicyRequest()
     : MediaStoreRequest(new GetCorsPolicyRequestPrivate(MediaStoreRequest::GetCorsPolicyAction, this))
@@ -68,14 +65,9 @@ bool GetCorsPolicyRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetCorsPolicyResponse object.
+ * Returns a GetCorsPolicyResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetCorsPolicyResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MediaStoreClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetCorsPolicyRequest::response(QNetworkReply * const reply) const
 {
@@ -83,20 +75,17 @@ QtAws::Core::AwsAbstractResponse * GetCorsPolicyRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::MediaStore::GetCorsPolicyRequestPrivate
+ * \brief The GetCorsPolicyRequestPrivate class provides private implementation for GetCorsPolicyRequest.
+ * \internal
  *
- * @class  GetCorsPolicyRequestPrivate
- *
- * @brief  Private implementation for GetCorsPolicyRequest.
+ * \inmodule QtAwsMediaStore
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetCorsPolicyRequestPrivate object.
- *
- * @param  action  MediaStore action being performed.
- * @param  q       Pointer to this object's public GetCorsPolicyRequest instance.
+ * Constructs a GetCorsPolicyRequestPrivate object for MediaStore \a action with,
+ * public implementation \a q.
  */
 GetCorsPolicyRequestPrivate::GetCorsPolicyRequestPrivate(
     const MediaStoreRequest::Action action, GetCorsPolicyRequest * const q)
@@ -106,15 +95,10 @@ GetCorsPolicyRequestPrivate::GetCorsPolicyRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetCorsPolicyRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetCorsPolicyRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetCorsPolicyRequest instance.
  */
 GetCorsPolicyRequestPrivate::GetCorsPolicyRequestPrivate(
     const GetCorsPolicyRequestPrivate &other, GetCorsPolicyRequest * const q)

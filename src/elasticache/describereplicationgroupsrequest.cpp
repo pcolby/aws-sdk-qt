@@ -27,10 +27,9 @@ namespace ElastiCache {
 
 /*!
  * \class QtAws::ElastiCache::DescribeReplicationGroupsRequest
- *
  * \brief The DescribeReplicationGroupsRequest class provides an interface for ElastiCache DescribeReplicationGroups requests.
  *
- * \ingroup ElastiCache
+ * \inmodule QtAwsElastiCache
  *
  *  <fullname>Amazon ElastiCache</fullname>
  * 
@@ -51,9 +50,7 @@ namespace ElastiCache {
  */
 
 /*!
- * @brief  Constructs a new DescribeReplicationGroupsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeReplicationGroupsRequest::DescribeReplicationGroupsRequest(const DescribeReplicationGroupsRequest &other)
     : ElastiCacheRequest(new DescribeReplicationGroupsRequestPrivate(*other.d_func(), this))
@@ -62,7 +59,7 @@ DescribeReplicationGroupsRequest::DescribeReplicationGroupsRequest(const Describ
 }
 
 /*!
- * @brief  Constructs a new DescribeReplicationGroupsRequest object.
+ * Constructs a DescribeReplicationGroupsRequest object.
  */
 DescribeReplicationGroupsRequest::DescribeReplicationGroupsRequest()
     : ElastiCacheRequest(new DescribeReplicationGroupsRequestPrivate(ElastiCacheRequest::DescribeReplicationGroupsAction, this))
@@ -80,14 +77,9 @@ bool DescribeReplicationGroupsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeReplicationGroupsResponse object.
+ * Returns a DescribeReplicationGroupsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeReplicationGroupsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ElastiCacheClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeReplicationGroupsRequest::response(QNetworkReply * const reply) const
 {
@@ -95,20 +87,17 @@ QtAws::Core::AwsAbstractResponse * DescribeReplicationGroupsRequest::response(QN
 }
 
 /*!
- * @internal
+ * \class QtAws::ElastiCache::DescribeReplicationGroupsRequestPrivate
+ * \brief The DescribeReplicationGroupsRequestPrivate class provides private implementation for DescribeReplicationGroupsRequest.
+ * \internal
  *
- * @class  DescribeReplicationGroupsRequestPrivate
- *
- * @brief  Private implementation for DescribeReplicationGroupsRequest.
+ * \inmodule QtAwsElastiCache
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeReplicationGroupsRequestPrivate object.
- *
- * @param  action  ElastiCache action being performed.
- * @param  q       Pointer to this object's public DescribeReplicationGroupsRequest instance.
+ * Constructs a DescribeReplicationGroupsRequestPrivate object for ElastiCache \a action with,
+ * public implementation \a q.
  */
 DescribeReplicationGroupsRequestPrivate::DescribeReplicationGroupsRequestPrivate(
     const ElastiCacheRequest::Action action, DescribeReplicationGroupsRequest * const q)
@@ -118,15 +107,10 @@ DescribeReplicationGroupsRequestPrivate::DescribeReplicationGroupsRequestPrivate
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeReplicationGroupsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeReplicationGroupsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeReplicationGroupsRequest instance.
  */
 DescribeReplicationGroupsRequestPrivate::DescribeReplicationGroupsRequestPrivate(
     const DescribeReplicationGroupsRequestPrivate &other, DescribeReplicationGroupsRequest * const q)

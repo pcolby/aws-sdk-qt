@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DeleteSpotDatafeedSubscriptionRequest
- *
  * \brief The DeleteSpotDatafeedSubscriptionRequest class provides an interface for EC2 DeleteSpotDatafeedSubscription requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DeleteSpotDatafeedSubscriptionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteSpotDatafeedSubscriptionRequest::DeleteSpotDatafeedSubscriptionRequest(const DeleteSpotDatafeedSubscriptionRequest &other)
     : EC2Request(new DeleteSpotDatafeedSubscriptionRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ DeleteSpotDatafeedSubscriptionRequest::DeleteSpotDatafeedSubscriptionRequest(con
 }
 
 /*!
- * @brief  Constructs a new DeleteSpotDatafeedSubscriptionRequest object.
+ * Constructs a DeleteSpotDatafeedSubscriptionRequest object.
  */
 DeleteSpotDatafeedSubscriptionRequest::DeleteSpotDatafeedSubscriptionRequest()
     : EC2Request(new DeleteSpotDatafeedSubscriptionRequestPrivate(EC2Request::DeleteSpotDatafeedSubscriptionAction, this))
@@ -70,14 +67,9 @@ bool DeleteSpotDatafeedSubscriptionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteSpotDatafeedSubscriptionResponse object.
+ * Returns a DeleteSpotDatafeedSubscriptionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteSpotDatafeedSubscriptionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteSpotDatafeedSubscriptionRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * DeleteSpotDatafeedSubscriptionRequest::respon
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::DeleteSpotDatafeedSubscriptionRequestPrivate
+ * \brief The DeleteSpotDatafeedSubscriptionRequestPrivate class provides private implementation for DeleteSpotDatafeedSubscriptionRequest.
+ * \internal
  *
- * @class  DeleteSpotDatafeedSubscriptionRequestPrivate
- *
- * @brief  Private implementation for DeleteSpotDatafeedSubscriptionRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteSpotDatafeedSubscriptionRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public DeleteSpotDatafeedSubscriptionRequest instance.
+ * Constructs a DeleteSpotDatafeedSubscriptionRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 DeleteSpotDatafeedSubscriptionRequestPrivate::DeleteSpotDatafeedSubscriptionRequestPrivate(
     const EC2Request::Action action, DeleteSpotDatafeedSubscriptionRequest * const q)
@@ -108,15 +97,10 @@ DeleteSpotDatafeedSubscriptionRequestPrivate::DeleteSpotDatafeedSubscriptionRequ
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteSpotDatafeedSubscriptionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteSpotDatafeedSubscriptionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteSpotDatafeedSubscriptionRequest instance.
  */
 DeleteSpotDatafeedSubscriptionRequestPrivate::DeleteSpotDatafeedSubscriptionRequestPrivate(
     const DeleteSpotDatafeedSubscriptionRequestPrivate &other, DeleteSpotDatafeedSubscriptionRequest * const q)

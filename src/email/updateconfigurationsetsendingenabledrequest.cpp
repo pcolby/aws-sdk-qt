@@ -27,10 +27,9 @@ namespace SES {
 
 /*!
  * \class QtAws::SES::UpdateConfigurationSetSendingEnabledRequest
- *
  * \brief The UpdateConfigurationSetSendingEnabledRequest class provides an interface for SES UpdateConfigurationSetSendingEnabled requests.
  *
- * \ingroup SES
+ * \inmodule QtAwsSES
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -48,9 +47,7 @@ namespace SES {
  */
 
 /*!
- * @brief  Constructs a new UpdateConfigurationSetSendingEnabledRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateConfigurationSetSendingEnabledRequest::UpdateConfigurationSetSendingEnabledRequest(const UpdateConfigurationSetSendingEnabledRequest &other)
     : SESRequest(new UpdateConfigurationSetSendingEnabledRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ UpdateConfigurationSetSendingEnabledRequest::UpdateConfigurationSetSendingEnable
 }
 
 /*!
- * @brief  Constructs a new UpdateConfigurationSetSendingEnabledRequest object.
+ * Constructs a UpdateConfigurationSetSendingEnabledRequest object.
  */
 UpdateConfigurationSetSendingEnabledRequest::UpdateConfigurationSetSendingEnabledRequest()
     : SESRequest(new UpdateConfigurationSetSendingEnabledRequestPrivate(SESRequest::UpdateConfigurationSetSendingEnabledAction, this))
@@ -77,14 +74,9 @@ bool UpdateConfigurationSetSendingEnabledRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateConfigurationSetSendingEnabledResponse object.
+ * Returns a UpdateConfigurationSetSendingEnabledResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateConfigurationSetSendingEnabledResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SESClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateConfigurationSetSendingEnabledRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * UpdateConfigurationSetSendingEnabledRequest::
 }
 
 /*!
- * @internal
+ * \class QtAws::SES::UpdateConfigurationSetSendingEnabledRequestPrivate
+ * \brief The UpdateConfigurationSetSendingEnabledRequestPrivate class provides private implementation for UpdateConfigurationSetSendingEnabledRequest.
+ * \internal
  *
- * @class  UpdateConfigurationSetSendingEnabledRequestPrivate
- *
- * @brief  Private implementation for UpdateConfigurationSetSendingEnabledRequest.
+ * \inmodule QtAwsSES
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateConfigurationSetSendingEnabledRequestPrivate object.
- *
- * @param  action  SES action being performed.
- * @param  q       Pointer to this object's public UpdateConfigurationSetSendingEnabledRequest instance.
+ * Constructs a UpdateConfigurationSetSendingEnabledRequestPrivate object for SES \a action with,
+ * public implementation \a q.
  */
 UpdateConfigurationSetSendingEnabledRequestPrivate::UpdateConfigurationSetSendingEnabledRequestPrivate(
     const SESRequest::Action action, UpdateConfigurationSetSendingEnabledRequest * const q)
@@ -115,15 +104,10 @@ UpdateConfigurationSetSendingEnabledRequestPrivate::UpdateConfigurationSetSendin
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateConfigurationSetSendingEnabledRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateConfigurationSetSendingEnabledRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateConfigurationSetSendingEnabledRequest instance.
  */
 UpdateConfigurationSetSendingEnabledRequestPrivate::UpdateConfigurationSetSendingEnabledRequestPrivate(
     const UpdateConfigurationSetSendingEnabledRequestPrivate &other, UpdateConfigurationSetSendingEnabledRequest * const q)

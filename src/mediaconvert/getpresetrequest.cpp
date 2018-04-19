@@ -27,19 +27,16 @@ namespace MediaConvert {
 
 /*!
  * \class QtAws::MediaConvert::GetPresetRequest
- *
  * \brief The GetPresetRequest class provides an interface for MediaConvert GetPreset requests.
  *
- * \ingroup MediaConvert
+ * \inmodule QtAwsMediaConvert
  *
  *
  * \sa MediaConvertClient::getPreset
  */
 
 /*!
- * @brief  Constructs a new GetPresetRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetPresetRequest::GetPresetRequest(const GetPresetRequest &other)
     : MediaConvertRequest(new GetPresetRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ GetPresetRequest::GetPresetRequest(const GetPresetRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetPresetRequest object.
+ * Constructs a GetPresetRequest object.
  */
 GetPresetRequest::GetPresetRequest()
     : MediaConvertRequest(new GetPresetRequestPrivate(MediaConvertRequest::GetPresetAction, this))
@@ -66,14 +63,9 @@ bool GetPresetRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetPresetResponse object.
+ * Returns a GetPresetResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetPresetResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MediaConvertClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetPresetRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * GetPresetRequest::response(QNetworkReply * co
 }
 
 /*!
- * @internal
+ * \class QtAws::MediaConvert::GetPresetRequestPrivate
+ * \brief The GetPresetRequestPrivate class provides private implementation for GetPresetRequest.
+ * \internal
  *
- * @class  GetPresetRequestPrivate
- *
- * @brief  Private implementation for GetPresetRequest.
+ * \inmodule QtAwsMediaConvert
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetPresetRequestPrivate object.
- *
- * @param  action  MediaConvert action being performed.
- * @param  q       Pointer to this object's public GetPresetRequest instance.
+ * Constructs a GetPresetRequestPrivate object for MediaConvert \a action with,
+ * public implementation \a q.
  */
 GetPresetRequestPrivate::GetPresetRequestPrivate(
     const MediaConvertRequest::Action action, GetPresetRequest * const q)
@@ -104,15 +93,10 @@ GetPresetRequestPrivate::GetPresetRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetPresetRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetPresetRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetPresetRequest instance.
  */
 GetPresetRequestPrivate::GetPresetRequestPrivate(
     const GetPresetRequestPrivate &other, GetPresetRequest * const q)

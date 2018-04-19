@@ -27,10 +27,9 @@ namespace EMR {
 
 /*!
  * \class QtAws::EMR::ListInstanceFleetsRequest
- *
  * \brief The ListInstanceFleetsRequest class provides an interface for EMR ListInstanceFleets requests.
  *
- * \ingroup EMR
+ * \inmodule QtAwsEMR
  *
  *  Amazon EMR is a web service that makes it easy to process large amounts of data efficiently. Amazon EMR uses Hadoop
  *  processing combined with several AWS products to do tasks such as web indexing, data mining, log file analysis, machine
@@ -40,9 +39,7 @@ namespace EMR {
  */
 
 /*!
- * @brief  Constructs a new ListInstanceFleetsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListInstanceFleetsRequest::ListInstanceFleetsRequest(const ListInstanceFleetsRequest &other)
     : EMRRequest(new ListInstanceFleetsRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ ListInstanceFleetsRequest::ListInstanceFleetsRequest(const ListInstanceFleetsReq
 }
 
 /*!
- * @brief  Constructs a new ListInstanceFleetsRequest object.
+ * Constructs a ListInstanceFleetsRequest object.
  */
 ListInstanceFleetsRequest::ListInstanceFleetsRequest()
     : EMRRequest(new ListInstanceFleetsRequestPrivate(EMRRequest::ListInstanceFleetsAction, this))
@@ -69,14 +66,9 @@ bool ListInstanceFleetsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListInstanceFleetsResponse object.
+ * Returns a ListInstanceFleetsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListInstanceFleetsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EMRClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListInstanceFleetsRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * ListInstanceFleetsRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::EMR::ListInstanceFleetsRequestPrivate
+ * \brief The ListInstanceFleetsRequestPrivate class provides private implementation for ListInstanceFleetsRequest.
+ * \internal
  *
- * @class  ListInstanceFleetsRequestPrivate
- *
- * @brief  Private implementation for ListInstanceFleetsRequest.
+ * \inmodule QtAwsEMR
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListInstanceFleetsRequestPrivate object.
- *
- * @param  action  EMR action being performed.
- * @param  q       Pointer to this object's public ListInstanceFleetsRequest instance.
+ * Constructs a ListInstanceFleetsRequestPrivate object for EMR \a action with,
+ * public implementation \a q.
  */
 ListInstanceFleetsRequestPrivate::ListInstanceFleetsRequestPrivate(
     const EMRRequest::Action action, ListInstanceFleetsRequest * const q)
@@ -107,15 +96,10 @@ ListInstanceFleetsRequestPrivate::ListInstanceFleetsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListInstanceFleetsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListInstanceFleetsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListInstanceFleetsRequest instance.
  */
 ListInstanceFleetsRequestPrivate::ListInstanceFleetsRequestPrivate(
     const ListInstanceFleetsRequestPrivate &other, ListInstanceFleetsRequest * const q)

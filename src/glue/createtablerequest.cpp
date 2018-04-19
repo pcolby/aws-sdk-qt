@@ -27,10 +27,9 @@ namespace Glue {
 
 /*!
  * \class QtAws::Glue::CreateTableRequest
- *
  * \brief The CreateTableRequest class provides an interface for Glue CreateTable requests.
  *
- * \ingroup Glue
+ * \inmodule QtAwsGlue
  *
  *  <fullname>AWS Glue</fullname>
  * 
@@ -40,9 +39,7 @@ namespace Glue {
  */
 
 /*!
- * @brief  Constructs a new CreateTableRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateTableRequest::CreateTableRequest(const CreateTableRequest &other)
     : GlueRequest(new CreateTableRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ CreateTableRequest::CreateTableRequest(const CreateTableRequest &other)
 }
 
 /*!
- * @brief  Constructs a new CreateTableRequest object.
+ * Constructs a CreateTableRequest object.
  */
 CreateTableRequest::CreateTableRequest()
     : GlueRequest(new CreateTableRequestPrivate(GlueRequest::CreateTableAction, this))
@@ -69,14 +66,9 @@ bool CreateTableRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateTableResponse object.
+ * Returns a CreateTableResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateTableResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GlueClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateTableRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * CreateTableRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::Glue::CreateTableRequestPrivate
+ * \brief The CreateTableRequestPrivate class provides private implementation for CreateTableRequest.
+ * \internal
  *
- * @class  CreateTableRequestPrivate
- *
- * @brief  Private implementation for CreateTableRequest.
+ * \inmodule QtAwsGlue
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateTableRequestPrivate object.
- *
- * @param  action  Glue action being performed.
- * @param  q       Pointer to this object's public CreateTableRequest instance.
+ * Constructs a CreateTableRequestPrivate object for Glue \a action with,
+ * public implementation \a q.
  */
 CreateTableRequestPrivate::CreateTableRequestPrivate(
     const GlueRequest::Action action, CreateTableRequest * const q)
@@ -107,15 +96,10 @@ CreateTableRequestPrivate::CreateTableRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateTableRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateTableRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateTableRequest instance.
  */
 CreateTableRequestPrivate::CreateTableRequestPrivate(
     const CreateTableRequestPrivate &other, CreateTableRequest * const q)

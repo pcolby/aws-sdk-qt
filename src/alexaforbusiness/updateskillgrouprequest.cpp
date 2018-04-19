@@ -27,10 +27,9 @@ namespace AlexaForBusiness {
 
 /*!
  * \class QtAws::AlexaForBusiness::UpdateSkillGroupRequest
- *
  * \brief The UpdateSkillGroupRequest class provides an interface for AlexaForBusiness UpdateSkillGroup requests.
  *
- * \ingroup AlexaForBusiness
+ * \inmodule QtAwsAlexaForBusiness
  *
  *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
  *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
@@ -42,9 +41,7 @@ namespace AlexaForBusiness {
  */
 
 /*!
- * @brief  Constructs a new UpdateSkillGroupRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateSkillGroupRequest::UpdateSkillGroupRequest(const UpdateSkillGroupRequest &other)
     : AlexaForBusinessRequest(new UpdateSkillGroupRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ UpdateSkillGroupRequest::UpdateSkillGroupRequest(const UpdateSkillGroupRequest &
 }
 
 /*!
- * @brief  Constructs a new UpdateSkillGroupRequest object.
+ * Constructs a UpdateSkillGroupRequest object.
  */
 UpdateSkillGroupRequest::UpdateSkillGroupRequest()
     : AlexaForBusinessRequest(new UpdateSkillGroupRequestPrivate(AlexaForBusinessRequest::UpdateSkillGroupAction, this))
@@ -71,14 +68,9 @@ bool UpdateSkillGroupRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateSkillGroupResponse object.
+ * Returns a UpdateSkillGroupResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateSkillGroupResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AlexaForBusinessClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateSkillGroupRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * UpdateSkillGroupRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::AlexaForBusiness::UpdateSkillGroupRequestPrivate
+ * \brief The UpdateSkillGroupRequestPrivate class provides private implementation for UpdateSkillGroupRequest.
+ * \internal
  *
- * @class  UpdateSkillGroupRequestPrivate
- *
- * @brief  Private implementation for UpdateSkillGroupRequest.
+ * \inmodule QtAwsAlexaForBusiness
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateSkillGroupRequestPrivate object.
- *
- * @param  action  AlexaForBusiness action being performed.
- * @param  q       Pointer to this object's public UpdateSkillGroupRequest instance.
+ * Constructs a UpdateSkillGroupRequestPrivate object for AlexaForBusiness \a action with,
+ * public implementation \a q.
  */
 UpdateSkillGroupRequestPrivate::UpdateSkillGroupRequestPrivate(
     const AlexaForBusinessRequest::Action action, UpdateSkillGroupRequest * const q)
@@ -109,15 +98,10 @@ UpdateSkillGroupRequestPrivate::UpdateSkillGroupRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateSkillGroupRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateSkillGroupRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateSkillGroupRequest instance.
  */
 UpdateSkillGroupRequestPrivate::UpdateSkillGroupRequestPrivate(
     const UpdateSkillGroupRequestPrivate &other, UpdateSkillGroupRequest * const q)

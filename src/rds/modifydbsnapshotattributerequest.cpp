@@ -27,10 +27,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::ModifyDBSnapshotAttributeRequest
- *
  * \brief The ModifyDBSnapshotAttributeRequest class provides an interface for RDS ModifyDBSnapshotAttribute requests.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -101,9 +100,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new ModifyDBSnapshotAttributeRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ModifyDBSnapshotAttributeRequest::ModifyDBSnapshotAttributeRequest(const ModifyDBSnapshotAttributeRequest &other)
     : RDSRequest(new ModifyDBSnapshotAttributeRequestPrivate(*other.d_func(), this))
@@ -112,7 +109,7 @@ ModifyDBSnapshotAttributeRequest::ModifyDBSnapshotAttributeRequest(const ModifyD
 }
 
 /*!
- * @brief  Constructs a new ModifyDBSnapshotAttributeRequest object.
+ * Constructs a ModifyDBSnapshotAttributeRequest object.
  */
 ModifyDBSnapshotAttributeRequest::ModifyDBSnapshotAttributeRequest()
     : RDSRequest(new ModifyDBSnapshotAttributeRequestPrivate(RDSRequest::ModifyDBSnapshotAttributeAction, this))
@@ -130,14 +127,9 @@ bool ModifyDBSnapshotAttributeRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ModifyDBSnapshotAttributeResponse object.
+ * Returns a ModifyDBSnapshotAttributeResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ModifyDBSnapshotAttributeResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RDSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ModifyDBSnapshotAttributeRequest::response(QNetworkReply * const reply) const
 {
@@ -145,20 +137,17 @@ QtAws::Core::AwsAbstractResponse * ModifyDBSnapshotAttributeRequest::response(QN
 }
 
 /*!
- * @internal
+ * \class QtAws::RDS::ModifyDBSnapshotAttributeRequestPrivate
+ * \brief The ModifyDBSnapshotAttributeRequestPrivate class provides private implementation for ModifyDBSnapshotAttributeRequest.
+ * \internal
  *
- * @class  ModifyDBSnapshotAttributeRequestPrivate
- *
- * @brief  Private implementation for ModifyDBSnapshotAttributeRequest.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ModifyDBSnapshotAttributeRequestPrivate object.
- *
- * @param  action  RDS action being performed.
- * @param  q       Pointer to this object's public ModifyDBSnapshotAttributeRequest instance.
+ * Constructs a ModifyDBSnapshotAttributeRequestPrivate object for RDS \a action with,
+ * public implementation \a q.
  */
 ModifyDBSnapshotAttributeRequestPrivate::ModifyDBSnapshotAttributeRequestPrivate(
     const RDSRequest::Action action, ModifyDBSnapshotAttributeRequest * const q)
@@ -168,15 +157,10 @@ ModifyDBSnapshotAttributeRequestPrivate::ModifyDBSnapshotAttributeRequestPrivate
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ModifyDBSnapshotAttributeRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ModifyDBSnapshotAttributeRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ModifyDBSnapshotAttributeRequest instance.
  */
 ModifyDBSnapshotAttributeRequestPrivate::ModifyDBSnapshotAttributeRequestPrivate(
     const ModifyDBSnapshotAttributeRequestPrivate &other, ModifyDBSnapshotAttributeRequest * const q)

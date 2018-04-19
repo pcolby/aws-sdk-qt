@@ -27,10 +27,9 @@ namespace Glue {
 
 /*!
  * \class QtAws::Glue::CreateScriptRequest
- *
  * \brief The CreateScriptRequest class provides an interface for Glue CreateScript requests.
  *
- * \ingroup Glue
+ * \inmodule QtAwsGlue
  *
  *  <fullname>AWS Glue</fullname>
  * 
@@ -40,9 +39,7 @@ namespace Glue {
  */
 
 /*!
- * @brief  Constructs a new CreateScriptRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateScriptRequest::CreateScriptRequest(const CreateScriptRequest &other)
     : GlueRequest(new CreateScriptRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ CreateScriptRequest::CreateScriptRequest(const CreateScriptRequest &other)
 }
 
 /*!
- * @brief  Constructs a new CreateScriptRequest object.
+ * Constructs a CreateScriptRequest object.
  */
 CreateScriptRequest::CreateScriptRequest()
     : GlueRequest(new CreateScriptRequestPrivate(GlueRequest::CreateScriptAction, this))
@@ -69,14 +66,9 @@ bool CreateScriptRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateScriptResponse object.
+ * Returns a CreateScriptResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateScriptResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GlueClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateScriptRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * CreateScriptRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::Glue::CreateScriptRequestPrivate
+ * \brief The CreateScriptRequestPrivate class provides private implementation for CreateScriptRequest.
+ * \internal
  *
- * @class  CreateScriptRequestPrivate
- *
- * @brief  Private implementation for CreateScriptRequest.
+ * \inmodule QtAwsGlue
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateScriptRequestPrivate object.
- *
- * @param  action  Glue action being performed.
- * @param  q       Pointer to this object's public CreateScriptRequest instance.
+ * Constructs a CreateScriptRequestPrivate object for Glue \a action with,
+ * public implementation \a q.
  */
 CreateScriptRequestPrivate::CreateScriptRequestPrivate(
     const GlueRequest::Action action, CreateScriptRequest * const q)
@@ -107,15 +96,10 @@ CreateScriptRequestPrivate::CreateScriptRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateScriptRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateScriptRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateScriptRequest instance.
  */
 CreateScriptRequestPrivate::CreateScriptRequestPrivate(
     const CreateScriptRequestPrivate &other, CreateScriptRequest * const q)

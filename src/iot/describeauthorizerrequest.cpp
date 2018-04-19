@@ -27,10 +27,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::DescribeAuthorizerRequest
- *
  * \brief The DescribeAuthorizerRequest class provides an interface for IoT DescribeAuthorizer requests.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -48,9 +47,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new DescribeAuthorizerRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeAuthorizerRequest::DescribeAuthorizerRequest(const DescribeAuthorizerRequest &other)
     : IoTRequest(new DescribeAuthorizerRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ DescribeAuthorizerRequest::DescribeAuthorizerRequest(const DescribeAuthorizerReq
 }
 
 /*!
- * @brief  Constructs a new DescribeAuthorizerRequest object.
+ * Constructs a DescribeAuthorizerRequest object.
  */
 DescribeAuthorizerRequest::DescribeAuthorizerRequest()
     : IoTRequest(new DescribeAuthorizerRequestPrivate(IoTRequest::DescribeAuthorizerAction, this))
@@ -77,14 +74,9 @@ bool DescribeAuthorizerRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeAuthorizerResponse object.
+ * Returns a DescribeAuthorizerResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeAuthorizerResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IoTClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeAuthorizerRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * DescribeAuthorizerRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::IoT::DescribeAuthorizerRequestPrivate
+ * \brief The DescribeAuthorizerRequestPrivate class provides private implementation for DescribeAuthorizerRequest.
+ * \internal
  *
- * @class  DescribeAuthorizerRequestPrivate
- *
- * @brief  Private implementation for DescribeAuthorizerRequest.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeAuthorizerRequestPrivate object.
- *
- * @param  action  IoT action being performed.
- * @param  q       Pointer to this object's public DescribeAuthorizerRequest instance.
+ * Constructs a DescribeAuthorizerRequestPrivate object for IoT \a action with,
+ * public implementation \a q.
  */
 DescribeAuthorizerRequestPrivate::DescribeAuthorizerRequestPrivate(
     const IoTRequest::Action action, DescribeAuthorizerRequest * const q)
@@ -115,15 +104,10 @@ DescribeAuthorizerRequestPrivate::DescribeAuthorizerRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeAuthorizerRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeAuthorizerRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeAuthorizerRequest instance.
  */
 DescribeAuthorizerRequestPrivate::DescribeAuthorizerRequestPrivate(
     const DescribeAuthorizerRequestPrivate &other, DescribeAuthorizerRequest * const q)

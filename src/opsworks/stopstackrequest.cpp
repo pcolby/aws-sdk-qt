@@ -27,10 +27,9 @@ namespace OpsWorks {
 
 /*!
  * \class QtAws::OpsWorks::StopStackRequest
- *
  * \brief The StopStackRequest class provides an interface for OpsWorks StopStack requests.
  *
- * \ingroup OpsWorks
+ * \inmodule QtAwsOpsWorks
  *
  *  <fullname>AWS OpsWorks</fullname>
  * 
@@ -143,9 +142,7 @@ namespace OpsWorks {
  */
 
 /*!
- * @brief  Constructs a new StopStackRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 StopStackRequest::StopStackRequest(const StopStackRequest &other)
     : OpsWorksRequest(new StopStackRequestPrivate(*other.d_func(), this))
@@ -154,7 +151,7 @@ StopStackRequest::StopStackRequest(const StopStackRequest &other)
 }
 
 /*!
- * @brief  Constructs a new StopStackRequest object.
+ * Constructs a StopStackRequest object.
  */
 StopStackRequest::StopStackRequest()
     : OpsWorksRequest(new StopStackRequestPrivate(OpsWorksRequest::StopStackAction, this))
@@ -172,14 +169,9 @@ bool StopStackRequest::isValid() const
 
 
 /*!
- * @brief  Construct an StopStackResponse object.
+ * Returns a StopStackResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An StopStackResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  OpsWorksClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * StopStackRequest::response(QNetworkReply * const reply) const
 {
@@ -187,20 +179,17 @@ QtAws::Core::AwsAbstractResponse * StopStackRequest::response(QNetworkReply * co
 }
 
 /*!
- * @internal
+ * \class QtAws::OpsWorks::StopStackRequestPrivate
+ * \brief The StopStackRequestPrivate class provides private implementation for StopStackRequest.
+ * \internal
  *
- * @class  StopStackRequestPrivate
- *
- * @brief  Private implementation for StopStackRequest.
+ * \inmodule QtAwsOpsWorks
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new StopStackRequestPrivate object.
- *
- * @param  action  OpsWorks action being performed.
- * @param  q       Pointer to this object's public StopStackRequest instance.
+ * Constructs a StopStackRequestPrivate object for OpsWorks \a action with,
+ * public implementation \a q.
  */
 StopStackRequestPrivate::StopStackRequestPrivate(
     const OpsWorksRequest::Action action, StopStackRequest * const q)
@@ -210,15 +199,10 @@ StopStackRequestPrivate::StopStackRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StopStackRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the StopStackRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public StopStackRequest instance.
  */
 StopStackRequestPrivate::StopStackRequestPrivate(
     const StopStackRequestPrivate &other, StopStackRequest * const q)

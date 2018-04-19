@@ -27,10 +27,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::ListOpenIDConnectProvidersRequest
- *
  * \brief The ListOpenIDConnectProvidersRequest class provides an interface for IAM ListOpenIDConnectProviders requests.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -102,9 +101,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new ListOpenIDConnectProvidersRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListOpenIDConnectProvidersRequest::ListOpenIDConnectProvidersRequest(const ListOpenIDConnectProvidersRequest &other)
     : IAMRequest(new ListOpenIDConnectProvidersRequestPrivate(*other.d_func(), this))
@@ -113,7 +110,7 @@ ListOpenIDConnectProvidersRequest::ListOpenIDConnectProvidersRequest(const ListO
 }
 
 /*!
- * @brief  Constructs a new ListOpenIDConnectProvidersRequest object.
+ * Constructs a ListOpenIDConnectProvidersRequest object.
  */
 ListOpenIDConnectProvidersRequest::ListOpenIDConnectProvidersRequest()
     : IAMRequest(new ListOpenIDConnectProvidersRequestPrivate(IAMRequest::ListOpenIDConnectProvidersAction, this))
@@ -131,14 +128,9 @@ bool ListOpenIDConnectProvidersRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListOpenIDConnectProvidersResponse object.
+ * Returns a ListOpenIDConnectProvidersResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListOpenIDConnectProvidersResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IAMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListOpenIDConnectProvidersRequest::response(QNetworkReply * const reply) const
 {
@@ -146,20 +138,17 @@ QtAws::Core::AwsAbstractResponse * ListOpenIDConnectProvidersRequest::response(Q
 }
 
 /*!
- * @internal
+ * \class QtAws::IAM::ListOpenIDConnectProvidersRequestPrivate
+ * \brief The ListOpenIDConnectProvidersRequestPrivate class provides private implementation for ListOpenIDConnectProvidersRequest.
+ * \internal
  *
- * @class  ListOpenIDConnectProvidersRequestPrivate
- *
- * @brief  Private implementation for ListOpenIDConnectProvidersRequest.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListOpenIDConnectProvidersRequestPrivate object.
- *
- * @param  action  IAM action being performed.
- * @param  q       Pointer to this object's public ListOpenIDConnectProvidersRequest instance.
+ * Constructs a ListOpenIDConnectProvidersRequestPrivate object for IAM \a action with,
+ * public implementation \a q.
  */
 ListOpenIDConnectProvidersRequestPrivate::ListOpenIDConnectProvidersRequestPrivate(
     const IAMRequest::Action action, ListOpenIDConnectProvidersRequest * const q)
@@ -169,15 +158,10 @@ ListOpenIDConnectProvidersRequestPrivate::ListOpenIDConnectProvidersRequestPriva
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListOpenIDConnectProvidersRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListOpenIDConnectProvidersRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListOpenIDConnectProvidersRequest instance.
  */
 ListOpenIDConnectProvidersRequestPrivate::ListOpenIDConnectProvidersRequestPrivate(
     const ListOpenIDConnectProvidersRequestPrivate &other, ListOpenIDConnectProvidersRequest * const q)

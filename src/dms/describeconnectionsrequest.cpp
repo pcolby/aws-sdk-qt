@@ -27,10 +27,9 @@ namespace DatabaseMigrationService {
 
 /*!
  * \class QtAws::DatabaseMigrationService::DescribeConnectionsRequest
- *
  * \brief The DescribeConnectionsRequest class provides an interface for DatabaseMigrationService DescribeConnections requests.
  *
- * \ingroup DatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigrationService
  *
  *  <fullname>AWS Database Migration Service</fullname>
  * 
@@ -48,9 +47,7 @@ namespace DatabaseMigrationService {
  */
 
 /*!
- * @brief  Constructs a new DescribeConnectionsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeConnectionsRequest::DescribeConnectionsRequest(const DescribeConnectionsRequest &other)
     : DatabaseMigrationServiceRequest(new DescribeConnectionsRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ DescribeConnectionsRequest::DescribeConnectionsRequest(const DescribeConnections
 }
 
 /*!
- * @brief  Constructs a new DescribeConnectionsRequest object.
+ * Constructs a DescribeConnectionsRequest object.
  */
 DescribeConnectionsRequest::DescribeConnectionsRequest()
     : DatabaseMigrationServiceRequest(new DescribeConnectionsRequestPrivate(DatabaseMigrationServiceRequest::DescribeConnectionsAction, this))
@@ -77,14 +74,9 @@ bool DescribeConnectionsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeConnectionsResponse object.
+ * Returns a DescribeConnectionsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeConnectionsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DatabaseMigrationServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeConnectionsRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * DescribeConnectionsRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::DatabaseMigrationService::DescribeConnectionsRequestPrivate
+ * \brief The DescribeConnectionsRequestPrivate class provides private implementation for DescribeConnectionsRequest.
+ * \internal
  *
- * @class  DescribeConnectionsRequestPrivate
- *
- * @brief  Private implementation for DescribeConnectionsRequest.
+ * \inmodule QtAwsDatabaseMigrationService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeConnectionsRequestPrivate object.
- *
- * @param  action  DatabaseMigrationService action being performed.
- * @param  q       Pointer to this object's public DescribeConnectionsRequest instance.
+ * Constructs a DescribeConnectionsRequestPrivate object for DatabaseMigrationService \a action with,
+ * public implementation \a q.
  */
 DescribeConnectionsRequestPrivate::DescribeConnectionsRequestPrivate(
     const DatabaseMigrationServiceRequest::Action action, DescribeConnectionsRequest * const q)
@@ -115,15 +104,10 @@ DescribeConnectionsRequestPrivate::DescribeConnectionsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeConnectionsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeConnectionsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeConnectionsRequest instance.
  */
 DescribeConnectionsRequestPrivate::DescribeConnectionsRequestPrivate(
     const DescribeConnectionsRequestPrivate &other, DescribeConnectionsRequest * const q)

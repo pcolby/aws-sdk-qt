@@ -27,10 +27,9 @@ namespace CodeCommit {
 
 /*!
  * \class QtAws::CodeCommit::PostCommentForComparedCommitRequest
- *
  * \brief The PostCommentForComparedCommitRequest class provides an interface for CodeCommit PostCommentForComparedCommit requests.
  *
- * \ingroup CodeCommit
+ * \inmodule QtAwsCodeCommit
  *
  *  <fullname>AWS CodeCommit</fullname>
  * 
@@ -227,9 +226,7 @@ namespace CodeCommit {
  */
 
 /*!
- * @brief  Constructs a new PostCommentForComparedCommitRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 PostCommentForComparedCommitRequest::PostCommentForComparedCommitRequest(const PostCommentForComparedCommitRequest &other)
     : CodeCommitRequest(new PostCommentForComparedCommitRequestPrivate(*other.d_func(), this))
@@ -238,7 +235,7 @@ PostCommentForComparedCommitRequest::PostCommentForComparedCommitRequest(const P
 }
 
 /*!
- * @brief  Constructs a new PostCommentForComparedCommitRequest object.
+ * Constructs a PostCommentForComparedCommitRequest object.
  */
 PostCommentForComparedCommitRequest::PostCommentForComparedCommitRequest()
     : CodeCommitRequest(new PostCommentForComparedCommitRequestPrivate(CodeCommitRequest::PostCommentForComparedCommitAction, this))
@@ -256,14 +253,9 @@ bool PostCommentForComparedCommitRequest::isValid() const
 
 
 /*!
- * @brief  Construct an PostCommentForComparedCommitResponse object.
+ * Returns a PostCommentForComparedCommitResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An PostCommentForComparedCommitResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CodeCommitClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * PostCommentForComparedCommitRequest::response(QNetworkReply * const reply) const
 {
@@ -271,20 +263,17 @@ QtAws::Core::AwsAbstractResponse * PostCommentForComparedCommitRequest::response
 }
 
 /*!
- * @internal
+ * \class QtAws::CodeCommit::PostCommentForComparedCommitRequestPrivate
+ * \brief The PostCommentForComparedCommitRequestPrivate class provides private implementation for PostCommentForComparedCommitRequest.
+ * \internal
  *
- * @class  PostCommentForComparedCommitRequestPrivate
- *
- * @brief  Private implementation for PostCommentForComparedCommitRequest.
+ * \inmodule QtAwsCodeCommit
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new PostCommentForComparedCommitRequestPrivate object.
- *
- * @param  action  CodeCommit action being performed.
- * @param  q       Pointer to this object's public PostCommentForComparedCommitRequest instance.
+ * Constructs a PostCommentForComparedCommitRequestPrivate object for CodeCommit \a action with,
+ * public implementation \a q.
  */
 PostCommentForComparedCommitRequestPrivate::PostCommentForComparedCommitRequestPrivate(
     const CodeCommitRequest::Action action, PostCommentForComparedCommitRequest * const q)
@@ -294,15 +283,10 @@ PostCommentForComparedCommitRequestPrivate::PostCommentForComparedCommitRequestP
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PostCommentForComparedCommitRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the PostCommentForComparedCommitRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public PostCommentForComparedCommitRequest instance.
  */
 PostCommentForComparedCommitRequestPrivate::PostCommentForComparedCommitRequestPrivate(
     const PostCommentForComparedCommitRequestPrivate &other, PostCommentForComparedCommitRequest * const q)

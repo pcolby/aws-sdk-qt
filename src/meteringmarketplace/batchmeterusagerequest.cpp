@@ -27,10 +27,9 @@ namespace MarketplaceMetering {
 
 /*!
  * \class QtAws::MarketplaceMetering::BatchMeterUsageRequest
- *
  * \brief The BatchMeterUsageRequest class provides an interface for MarketplaceMetering BatchMeterUsage requests.
  *
- * \ingroup MarketplaceMetering
+ * \inmodule QtAwsMarketplaceMetering
  *
  *  <fullname>AWS Marketplace Metering Service</fullname>
  * 
@@ -67,9 +66,7 @@ namespace MarketplaceMetering {
  */
 
 /*!
- * @brief  Constructs a new BatchMeterUsageRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 BatchMeterUsageRequest::BatchMeterUsageRequest(const BatchMeterUsageRequest &other)
     : MarketplaceMeteringRequest(new BatchMeterUsageRequestPrivate(*other.d_func(), this))
@@ -78,7 +75,7 @@ BatchMeterUsageRequest::BatchMeterUsageRequest(const BatchMeterUsageRequest &oth
 }
 
 /*!
- * @brief  Constructs a new BatchMeterUsageRequest object.
+ * Constructs a BatchMeterUsageRequest object.
  */
 BatchMeterUsageRequest::BatchMeterUsageRequest()
     : MarketplaceMeteringRequest(new BatchMeterUsageRequestPrivate(MarketplaceMeteringRequest::BatchMeterUsageAction, this))
@@ -96,14 +93,9 @@ bool BatchMeterUsageRequest::isValid() const
 
 
 /*!
- * @brief  Construct an BatchMeterUsageResponse object.
+ * Returns a BatchMeterUsageResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An BatchMeterUsageResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MarketplaceMeteringClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * BatchMeterUsageRequest::response(QNetworkReply * const reply) const
 {
@@ -111,20 +103,17 @@ QtAws::Core::AwsAbstractResponse * BatchMeterUsageRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::MarketplaceMetering::BatchMeterUsageRequestPrivate
+ * \brief The BatchMeterUsageRequestPrivate class provides private implementation for BatchMeterUsageRequest.
+ * \internal
  *
- * @class  BatchMeterUsageRequestPrivate
- *
- * @brief  Private implementation for BatchMeterUsageRequest.
+ * \inmodule QtAwsMarketplaceMetering
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new BatchMeterUsageRequestPrivate object.
- *
- * @param  action  MarketplaceMetering action being performed.
- * @param  q       Pointer to this object's public BatchMeterUsageRequest instance.
+ * Constructs a BatchMeterUsageRequestPrivate object for MarketplaceMetering \a action with,
+ * public implementation \a q.
  */
 BatchMeterUsageRequestPrivate::BatchMeterUsageRequestPrivate(
     const MarketplaceMeteringRequest::Action action, BatchMeterUsageRequest * const q)
@@ -134,15 +123,10 @@ BatchMeterUsageRequestPrivate::BatchMeterUsageRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new BatchMeterUsageRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the BatchMeterUsageRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public BatchMeterUsageRequest instance.
  */
 BatchMeterUsageRequestPrivate::BatchMeterUsageRequestPrivate(
     const BatchMeterUsageRequestPrivate &other, BatchMeterUsageRequest * const q)

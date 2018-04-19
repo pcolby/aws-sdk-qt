@@ -27,10 +27,9 @@ namespace ACM {
 
 /*!
  * \class QtAws::ACM::ResendValidationEmailRequest
- *
  * \brief The ResendValidationEmailRequest class provides an interface for ACM ResendValidationEmail requests.
  *
- * \ingroup ACM
+ * \inmodule QtAwsACM
  *
  *  <fullname>AWS Certificate Manager</fullname>
  * 
@@ -46,9 +45,7 @@ namespace ACM {
  */
 
 /*!
- * @brief  Constructs a new ResendValidationEmailRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ResendValidationEmailRequest::ResendValidationEmailRequest(const ResendValidationEmailRequest &other)
     : ACMRequest(new ResendValidationEmailRequestPrivate(*other.d_func(), this))
@@ -57,7 +54,7 @@ ResendValidationEmailRequest::ResendValidationEmailRequest(const ResendValidatio
 }
 
 /*!
- * @brief  Constructs a new ResendValidationEmailRequest object.
+ * Constructs a ResendValidationEmailRequest object.
  */
 ResendValidationEmailRequest::ResendValidationEmailRequest()
     : ACMRequest(new ResendValidationEmailRequestPrivate(ACMRequest::ResendValidationEmailAction, this))
@@ -75,14 +72,9 @@ bool ResendValidationEmailRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ResendValidationEmailResponse object.
+ * Returns a ResendValidationEmailResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ResendValidationEmailResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ACMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ResendValidationEmailRequest::response(QNetworkReply * const reply) const
 {
@@ -90,20 +82,17 @@ QtAws::Core::AwsAbstractResponse * ResendValidationEmailRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::ACM::ResendValidationEmailRequestPrivate
+ * \brief The ResendValidationEmailRequestPrivate class provides private implementation for ResendValidationEmailRequest.
+ * \internal
  *
- * @class  ResendValidationEmailRequestPrivate
- *
- * @brief  Private implementation for ResendValidationEmailRequest.
+ * \inmodule QtAwsACM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ResendValidationEmailRequestPrivate object.
- *
- * @param  action  ACM action being performed.
- * @param  q       Pointer to this object's public ResendValidationEmailRequest instance.
+ * Constructs a ResendValidationEmailRequestPrivate object for ACM \a action with,
+ * public implementation \a q.
  */
 ResendValidationEmailRequestPrivate::ResendValidationEmailRequestPrivate(
     const ACMRequest::Action action, ResendValidationEmailRequest * const q)
@@ -113,15 +102,10 @@ ResendValidationEmailRequestPrivate::ResendValidationEmailRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ResendValidationEmailRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ResendValidationEmailRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ResendValidationEmailRequest instance.
  */
 ResendValidationEmailRequestPrivate::ResendValidationEmailRequestPrivate(
     const ResendValidationEmailRequestPrivate &other, ResendValidationEmailRequest * const q)

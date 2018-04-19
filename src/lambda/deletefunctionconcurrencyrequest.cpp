@@ -27,10 +27,9 @@ namespace Lambda {
 
 /*!
  * \class QtAws::Lambda::DeleteFunctionConcurrencyRequest
- *
  * \brief The DeleteFunctionConcurrencyRequest class provides an interface for Lambda DeleteFunctionConcurrency requests.
  *
- * \ingroup Lambda
+ * \inmodule QtAwsLambda
  *
  *  <fullname>AWS Lambda</fullname>
  * 
@@ -48,9 +47,7 @@ namespace Lambda {
  */
 
 /*!
- * @brief  Constructs a new DeleteFunctionConcurrencyRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteFunctionConcurrencyRequest::DeleteFunctionConcurrencyRequest(const DeleteFunctionConcurrencyRequest &other)
     : LambdaRequest(new DeleteFunctionConcurrencyRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ DeleteFunctionConcurrencyRequest::DeleteFunctionConcurrencyRequest(const DeleteF
 }
 
 /*!
- * @brief  Constructs a new DeleteFunctionConcurrencyRequest object.
+ * Constructs a DeleteFunctionConcurrencyRequest object.
  */
 DeleteFunctionConcurrencyRequest::DeleteFunctionConcurrencyRequest()
     : LambdaRequest(new DeleteFunctionConcurrencyRequestPrivate(LambdaRequest::DeleteFunctionConcurrencyAction, this))
@@ -77,14 +74,9 @@ bool DeleteFunctionConcurrencyRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteFunctionConcurrencyResponse object.
+ * Returns a DeleteFunctionConcurrencyResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteFunctionConcurrencyResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  LambdaClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteFunctionConcurrencyRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * DeleteFunctionConcurrencyRequest::response(QN
 }
 
 /*!
- * @internal
+ * \class QtAws::Lambda::DeleteFunctionConcurrencyRequestPrivate
+ * \brief The DeleteFunctionConcurrencyRequestPrivate class provides private implementation for DeleteFunctionConcurrencyRequest.
+ * \internal
  *
- * @class  DeleteFunctionConcurrencyRequestPrivate
- *
- * @brief  Private implementation for DeleteFunctionConcurrencyRequest.
+ * \inmodule QtAwsLambda
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteFunctionConcurrencyRequestPrivate object.
- *
- * @param  action  Lambda action being performed.
- * @param  q       Pointer to this object's public DeleteFunctionConcurrencyRequest instance.
+ * Constructs a DeleteFunctionConcurrencyRequestPrivate object for Lambda \a action with,
+ * public implementation \a q.
  */
 DeleteFunctionConcurrencyRequestPrivate::DeleteFunctionConcurrencyRequestPrivate(
     const LambdaRequest::Action action, DeleteFunctionConcurrencyRequest * const q)
@@ -115,15 +104,10 @@ DeleteFunctionConcurrencyRequestPrivate::DeleteFunctionConcurrencyRequestPrivate
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteFunctionConcurrencyRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteFunctionConcurrencyRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteFunctionConcurrencyRequest instance.
  */
 DeleteFunctionConcurrencyRequestPrivate::DeleteFunctionConcurrencyRequestPrivate(
     const DeleteFunctionConcurrencyRequestPrivate &other, DeleteFunctionConcurrencyRequest * const q)

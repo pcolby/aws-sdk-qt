@@ -27,10 +27,9 @@ namespace EMR {
 
 /*!
  * \class QtAws::EMR::DescribeStepRequest
- *
  * \brief The DescribeStepRequest class provides an interface for EMR DescribeStep requests.
  *
- * \ingroup EMR
+ * \inmodule QtAwsEMR
  *
  *  Amazon EMR is a web service that makes it easy to process large amounts of data efficiently. Amazon EMR uses Hadoop
  *  processing combined with several AWS products to do tasks such as web indexing, data mining, log file analysis, machine
@@ -40,9 +39,7 @@ namespace EMR {
  */
 
 /*!
- * @brief  Constructs a new DescribeStepRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeStepRequest::DescribeStepRequest(const DescribeStepRequest &other)
     : EMRRequest(new DescribeStepRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ DescribeStepRequest::DescribeStepRequest(const DescribeStepRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DescribeStepRequest object.
+ * Constructs a DescribeStepRequest object.
  */
 DescribeStepRequest::DescribeStepRequest()
     : EMRRequest(new DescribeStepRequestPrivate(EMRRequest::DescribeStepAction, this))
@@ -69,14 +66,9 @@ bool DescribeStepRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeStepResponse object.
+ * Returns a DescribeStepResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeStepResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EMRClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeStepRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * DescribeStepRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::EMR::DescribeStepRequestPrivate
+ * \brief The DescribeStepRequestPrivate class provides private implementation for DescribeStepRequest.
+ * \internal
  *
- * @class  DescribeStepRequestPrivate
- *
- * @brief  Private implementation for DescribeStepRequest.
+ * \inmodule QtAwsEMR
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeStepRequestPrivate object.
- *
- * @param  action  EMR action being performed.
- * @param  q       Pointer to this object's public DescribeStepRequest instance.
+ * Constructs a DescribeStepRequestPrivate object for EMR \a action with,
+ * public implementation \a q.
  */
 DescribeStepRequestPrivate::DescribeStepRequestPrivate(
     const EMRRequest::Action action, DescribeStepRequest * const q)
@@ -107,15 +96,10 @@ DescribeStepRequestPrivate::DescribeStepRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeStepRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeStepRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeStepRequest instance.
  */
 DescribeStepRequestPrivate::DescribeStepRequestPrivate(
     const DescribeStepRequestPrivate &other, DescribeStepRequest * const q)

@@ -27,10 +27,9 @@ namespace Lightsail {
 
 /*!
  * \class QtAws::Lightsail::GetInstanceAccessDetailsRequest
- *
  * \brief The GetInstanceAccessDetailsRequest class provides an interface for Lightsail GetInstanceAccessDetails requests.
  *
- * \ingroup Lightsail
+ * \inmodule QtAwsLightsail
  *
  *  Amazon Lightsail is the easiest way to get started with AWS for developers who just need virtual private servers.
  *  Lightsail includes everything you need to launch your project quickly - a virtual machine, SSD-based storage, data
@@ -53,9 +52,7 @@ namespace Lightsail {
  */
 
 /*!
- * @brief  Constructs a new GetInstanceAccessDetailsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetInstanceAccessDetailsRequest::GetInstanceAccessDetailsRequest(const GetInstanceAccessDetailsRequest &other)
     : LightsailRequest(new GetInstanceAccessDetailsRequestPrivate(*other.d_func(), this))
@@ -64,7 +61,7 @@ GetInstanceAccessDetailsRequest::GetInstanceAccessDetailsRequest(const GetInstan
 }
 
 /*!
- * @brief  Constructs a new GetInstanceAccessDetailsRequest object.
+ * Constructs a GetInstanceAccessDetailsRequest object.
  */
 GetInstanceAccessDetailsRequest::GetInstanceAccessDetailsRequest()
     : LightsailRequest(new GetInstanceAccessDetailsRequestPrivate(LightsailRequest::GetInstanceAccessDetailsAction, this))
@@ -82,14 +79,9 @@ bool GetInstanceAccessDetailsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetInstanceAccessDetailsResponse object.
+ * Returns a GetInstanceAccessDetailsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetInstanceAccessDetailsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  LightsailClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetInstanceAccessDetailsRequest::response(QNetworkReply * const reply) const
 {
@@ -97,20 +89,17 @@ QtAws::Core::AwsAbstractResponse * GetInstanceAccessDetailsRequest::response(QNe
 }
 
 /*!
- * @internal
+ * \class QtAws::Lightsail::GetInstanceAccessDetailsRequestPrivate
+ * \brief The GetInstanceAccessDetailsRequestPrivate class provides private implementation for GetInstanceAccessDetailsRequest.
+ * \internal
  *
- * @class  GetInstanceAccessDetailsRequestPrivate
- *
- * @brief  Private implementation for GetInstanceAccessDetailsRequest.
+ * \inmodule QtAwsLightsail
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetInstanceAccessDetailsRequestPrivate object.
- *
- * @param  action  Lightsail action being performed.
- * @param  q       Pointer to this object's public GetInstanceAccessDetailsRequest instance.
+ * Constructs a GetInstanceAccessDetailsRequestPrivate object for Lightsail \a action with,
+ * public implementation \a q.
  */
 GetInstanceAccessDetailsRequestPrivate::GetInstanceAccessDetailsRequestPrivate(
     const LightsailRequest::Action action, GetInstanceAccessDetailsRequest * const q)
@@ -120,15 +109,10 @@ GetInstanceAccessDetailsRequestPrivate::GetInstanceAccessDetailsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetInstanceAccessDetailsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetInstanceAccessDetailsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetInstanceAccessDetailsRequest instance.
  */
 GetInstanceAccessDetailsRequestPrivate::GetInstanceAccessDetailsRequestPrivate(
     const GetInstanceAccessDetailsRequestPrivate &other, GetInstanceAccessDetailsRequest * const q)

@@ -27,10 +27,9 @@ namespace Glacier {
 
 /*!
  * \class QtAws::Glacier::ListMultipartUploadsRequest
- *
  * \brief The ListMultipartUploadsRequest class provides an interface for Glacier ListMultipartUploads requests.
  *
- * \ingroup Glacier
+ * \inmodule QtAwsGlacier
  *
  *  Amazon Glacier is a storage solution for "cold
  * 
@@ -75,9 +74,7 @@ namespace Glacier {
  */
 
 /*!
- * @brief  Constructs a new ListMultipartUploadsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListMultipartUploadsRequest::ListMultipartUploadsRequest(const ListMultipartUploadsRequest &other)
     : GlacierRequest(new ListMultipartUploadsRequestPrivate(*other.d_func(), this))
@@ -86,7 +83,7 @@ ListMultipartUploadsRequest::ListMultipartUploadsRequest(const ListMultipartUplo
 }
 
 /*!
- * @brief  Constructs a new ListMultipartUploadsRequest object.
+ * Constructs a ListMultipartUploadsRequest object.
  */
 ListMultipartUploadsRequest::ListMultipartUploadsRequest()
     : GlacierRequest(new ListMultipartUploadsRequestPrivate(GlacierRequest::ListMultipartUploadsAction, this))
@@ -104,14 +101,9 @@ bool ListMultipartUploadsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListMultipartUploadsResponse object.
+ * Returns a ListMultipartUploadsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListMultipartUploadsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GlacierClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListMultipartUploadsRequest::response(QNetworkReply * const reply) const
 {
@@ -119,20 +111,17 @@ QtAws::Core::AwsAbstractResponse * ListMultipartUploadsRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::Glacier::ListMultipartUploadsRequestPrivate
+ * \brief The ListMultipartUploadsRequestPrivate class provides private implementation for ListMultipartUploadsRequest.
+ * \internal
  *
- * @class  ListMultipartUploadsRequestPrivate
- *
- * @brief  Private implementation for ListMultipartUploadsRequest.
+ * \inmodule QtAwsGlacier
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListMultipartUploadsRequestPrivate object.
- *
- * @param  action  Glacier action being performed.
- * @param  q       Pointer to this object's public ListMultipartUploadsRequest instance.
+ * Constructs a ListMultipartUploadsRequestPrivate object for Glacier \a action with,
+ * public implementation \a q.
  */
 ListMultipartUploadsRequestPrivate::ListMultipartUploadsRequestPrivate(
     const GlacierRequest::Action action, ListMultipartUploadsRequest * const q)
@@ -142,15 +131,10 @@ ListMultipartUploadsRequestPrivate::ListMultipartUploadsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListMultipartUploadsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListMultipartUploadsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListMultipartUploadsRequest instance.
  */
 ListMultipartUploadsRequestPrivate::ListMultipartUploadsRequestPrivate(
     const ListMultipartUploadsRequestPrivate &other, ListMultipartUploadsRequest * const q)

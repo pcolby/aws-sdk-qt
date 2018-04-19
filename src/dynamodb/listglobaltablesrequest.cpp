@@ -27,10 +27,9 @@ namespace DynamoDB {
 
 /*!
  * \class QtAws::DynamoDB::ListGlobalTablesRequest
- *
  * \brief The ListGlobalTablesRequest class provides an interface for DynamoDB ListGlobalTables requests.
  *
- * \ingroup DynamoDB
+ * \inmodule QtAwsDynamoDB
  *
  *  <fullname>Amazon DynamoDB</fullname>
  * 
@@ -56,9 +55,7 @@ namespace DynamoDB {
  */
 
 /*!
- * @brief  Constructs a new ListGlobalTablesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListGlobalTablesRequest::ListGlobalTablesRequest(const ListGlobalTablesRequest &other)
     : DynamoDBRequest(new ListGlobalTablesRequestPrivate(*other.d_func(), this))
@@ -67,7 +64,7 @@ ListGlobalTablesRequest::ListGlobalTablesRequest(const ListGlobalTablesRequest &
 }
 
 /*!
- * @brief  Constructs a new ListGlobalTablesRequest object.
+ * Constructs a ListGlobalTablesRequest object.
  */
 ListGlobalTablesRequest::ListGlobalTablesRequest()
     : DynamoDBRequest(new ListGlobalTablesRequestPrivate(DynamoDBRequest::ListGlobalTablesAction, this))
@@ -85,14 +82,9 @@ bool ListGlobalTablesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListGlobalTablesResponse object.
+ * Returns a ListGlobalTablesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListGlobalTablesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DynamoDBClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListGlobalTablesRequest::response(QNetworkReply * const reply) const
 {
@@ -100,20 +92,17 @@ QtAws::Core::AwsAbstractResponse * ListGlobalTablesRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::DynamoDB::ListGlobalTablesRequestPrivate
+ * \brief The ListGlobalTablesRequestPrivate class provides private implementation for ListGlobalTablesRequest.
+ * \internal
  *
- * @class  ListGlobalTablesRequestPrivate
- *
- * @brief  Private implementation for ListGlobalTablesRequest.
+ * \inmodule QtAwsDynamoDB
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListGlobalTablesRequestPrivate object.
- *
- * @param  action  DynamoDB action being performed.
- * @param  q       Pointer to this object's public ListGlobalTablesRequest instance.
+ * Constructs a ListGlobalTablesRequestPrivate object for DynamoDB \a action with,
+ * public implementation \a q.
  */
 ListGlobalTablesRequestPrivate::ListGlobalTablesRequestPrivate(
     const DynamoDBRequest::Action action, ListGlobalTablesRequest * const q)
@@ -123,15 +112,10 @@ ListGlobalTablesRequestPrivate::ListGlobalTablesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListGlobalTablesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListGlobalTablesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListGlobalTablesRequest instance.
  */
 ListGlobalTablesRequestPrivate::ListGlobalTablesRequestPrivate(
     const ListGlobalTablesRequestPrivate &other, ListGlobalTablesRequest * const q)

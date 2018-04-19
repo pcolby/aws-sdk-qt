@@ -27,19 +27,16 @@ namespace S3 {
 
 /*!
  * \class QtAws::S3::GetBucketAccelerateConfigurationRequest
- *
  * \brief The GetBucketAccelerateConfigurationRequest class provides an interface for S3 GetBucketAccelerateConfiguration requests.
  *
- * \ingroup S3
+ * \inmodule QtAwsS3
  *
  *
  * \sa S3Client::getBucketAccelerateConfiguration
  */
 
 /*!
- * @brief  Constructs a new GetBucketAccelerateConfigurationRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetBucketAccelerateConfigurationRequest::GetBucketAccelerateConfigurationRequest(const GetBucketAccelerateConfigurationRequest &other)
     : S3Request(new GetBucketAccelerateConfigurationRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ GetBucketAccelerateConfigurationRequest::GetBucketAccelerateConfigurationRequest
 }
 
 /*!
- * @brief  Constructs a new GetBucketAccelerateConfigurationRequest object.
+ * Constructs a GetBucketAccelerateConfigurationRequest object.
  */
 GetBucketAccelerateConfigurationRequest::GetBucketAccelerateConfigurationRequest()
     : S3Request(new GetBucketAccelerateConfigurationRequestPrivate(S3Request::GetBucketAccelerateConfigurationAction, this))
@@ -66,14 +63,9 @@ bool GetBucketAccelerateConfigurationRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetBucketAccelerateConfigurationResponse object.
+ * Returns a GetBucketAccelerateConfigurationResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetBucketAccelerateConfigurationResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  S3Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetBucketAccelerateConfigurationRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * GetBucketAccelerateConfigurationRequest::resp
 }
 
 /*!
- * @internal
+ * \class QtAws::S3::GetBucketAccelerateConfigurationRequestPrivate
+ * \brief The GetBucketAccelerateConfigurationRequestPrivate class provides private implementation for GetBucketAccelerateConfigurationRequest.
+ * \internal
  *
- * @class  GetBucketAccelerateConfigurationRequestPrivate
- *
- * @brief  Private implementation for GetBucketAccelerateConfigurationRequest.
+ * \inmodule QtAwsS3
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetBucketAccelerateConfigurationRequestPrivate object.
- *
- * @param  action  S3 action being performed.
- * @param  q       Pointer to this object's public GetBucketAccelerateConfigurationRequest instance.
+ * Constructs a GetBucketAccelerateConfigurationRequestPrivate object for S3 \a action with,
+ * public implementation \a q.
  */
 GetBucketAccelerateConfigurationRequestPrivate::GetBucketAccelerateConfigurationRequestPrivate(
     const S3Request::Action action, GetBucketAccelerateConfigurationRequest * const q)
@@ -104,15 +93,10 @@ GetBucketAccelerateConfigurationRequestPrivate::GetBucketAccelerateConfiguration
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetBucketAccelerateConfigurationRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetBucketAccelerateConfigurationRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetBucketAccelerateConfigurationRequest instance.
  */
 GetBucketAccelerateConfigurationRequestPrivate::GetBucketAccelerateConfigurationRequestPrivate(
     const GetBucketAccelerateConfigurationRequestPrivate &other, GetBucketAccelerateConfigurationRequest * const q)

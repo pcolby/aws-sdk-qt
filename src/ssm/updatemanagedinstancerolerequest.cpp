@@ -27,10 +27,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::UpdateManagedInstanceRoleRequest
- *
  * \brief The UpdateManagedInstanceRoleRequest class provides an interface for SSM UpdateManagedInstanceRole requests.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -61,9 +60,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new UpdateManagedInstanceRoleRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateManagedInstanceRoleRequest::UpdateManagedInstanceRoleRequest(const UpdateManagedInstanceRoleRequest &other)
     : SSMRequest(new UpdateManagedInstanceRoleRequestPrivate(*other.d_func(), this))
@@ -72,7 +69,7 @@ UpdateManagedInstanceRoleRequest::UpdateManagedInstanceRoleRequest(const UpdateM
 }
 
 /*!
- * @brief  Constructs a new UpdateManagedInstanceRoleRequest object.
+ * Constructs a UpdateManagedInstanceRoleRequest object.
  */
 UpdateManagedInstanceRoleRequest::UpdateManagedInstanceRoleRequest()
     : SSMRequest(new UpdateManagedInstanceRoleRequestPrivate(SSMRequest::UpdateManagedInstanceRoleAction, this))
@@ -90,14 +87,9 @@ bool UpdateManagedInstanceRoleRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateManagedInstanceRoleResponse object.
+ * Returns a UpdateManagedInstanceRoleResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateManagedInstanceRoleResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SSMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateManagedInstanceRoleRequest::response(QNetworkReply * const reply) const
 {
@@ -105,20 +97,17 @@ QtAws::Core::AwsAbstractResponse * UpdateManagedInstanceRoleRequest::response(QN
 }
 
 /*!
- * @internal
+ * \class QtAws::SSM::UpdateManagedInstanceRoleRequestPrivate
+ * \brief The UpdateManagedInstanceRoleRequestPrivate class provides private implementation for UpdateManagedInstanceRoleRequest.
+ * \internal
  *
- * @class  UpdateManagedInstanceRoleRequestPrivate
- *
- * @brief  Private implementation for UpdateManagedInstanceRoleRequest.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateManagedInstanceRoleRequestPrivate object.
- *
- * @param  action  SSM action being performed.
- * @param  q       Pointer to this object's public UpdateManagedInstanceRoleRequest instance.
+ * Constructs a UpdateManagedInstanceRoleRequestPrivate object for SSM \a action with,
+ * public implementation \a q.
  */
 UpdateManagedInstanceRoleRequestPrivate::UpdateManagedInstanceRoleRequestPrivate(
     const SSMRequest::Action action, UpdateManagedInstanceRoleRequest * const q)
@@ -128,15 +117,10 @@ UpdateManagedInstanceRoleRequestPrivate::UpdateManagedInstanceRoleRequestPrivate
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateManagedInstanceRoleRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateManagedInstanceRoleRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateManagedInstanceRoleRequest instance.
  */
 UpdateManagedInstanceRoleRequestPrivate::UpdateManagedInstanceRoleRequestPrivate(
     const UpdateManagedInstanceRoleRequestPrivate &other, UpdateManagedInstanceRoleRequest * const q)

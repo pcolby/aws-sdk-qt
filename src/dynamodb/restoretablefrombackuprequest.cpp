@@ -27,10 +27,9 @@ namespace DynamoDB {
 
 /*!
  * \class QtAws::DynamoDB::RestoreTableFromBackupRequest
- *
  * \brief The RestoreTableFromBackupRequest class provides an interface for DynamoDB RestoreTableFromBackup requests.
  *
- * \ingroup DynamoDB
+ * \inmodule QtAwsDynamoDB
  *
  *  <fullname>Amazon DynamoDB</fullname>
  * 
@@ -56,9 +55,7 @@ namespace DynamoDB {
  */
 
 /*!
- * @brief  Constructs a new RestoreTableFromBackupRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 RestoreTableFromBackupRequest::RestoreTableFromBackupRequest(const RestoreTableFromBackupRequest &other)
     : DynamoDBRequest(new RestoreTableFromBackupRequestPrivate(*other.d_func(), this))
@@ -67,7 +64,7 @@ RestoreTableFromBackupRequest::RestoreTableFromBackupRequest(const RestoreTableF
 }
 
 /*!
- * @brief  Constructs a new RestoreTableFromBackupRequest object.
+ * Constructs a RestoreTableFromBackupRequest object.
  */
 RestoreTableFromBackupRequest::RestoreTableFromBackupRequest()
     : DynamoDBRequest(new RestoreTableFromBackupRequestPrivate(DynamoDBRequest::RestoreTableFromBackupAction, this))
@@ -85,14 +82,9 @@ bool RestoreTableFromBackupRequest::isValid() const
 
 
 /*!
- * @brief  Construct an RestoreTableFromBackupResponse object.
+ * Returns a RestoreTableFromBackupResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An RestoreTableFromBackupResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DynamoDBClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * RestoreTableFromBackupRequest::response(QNetworkReply * const reply) const
 {
@@ -100,20 +92,17 @@ QtAws::Core::AwsAbstractResponse * RestoreTableFromBackupRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::DynamoDB::RestoreTableFromBackupRequestPrivate
+ * \brief The RestoreTableFromBackupRequestPrivate class provides private implementation for RestoreTableFromBackupRequest.
+ * \internal
  *
- * @class  RestoreTableFromBackupRequestPrivate
- *
- * @brief  Private implementation for RestoreTableFromBackupRequest.
+ * \inmodule QtAwsDynamoDB
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new RestoreTableFromBackupRequestPrivate object.
- *
- * @param  action  DynamoDB action being performed.
- * @param  q       Pointer to this object's public RestoreTableFromBackupRequest instance.
+ * Constructs a RestoreTableFromBackupRequestPrivate object for DynamoDB \a action with,
+ * public implementation \a q.
  */
 RestoreTableFromBackupRequestPrivate::RestoreTableFromBackupRequestPrivate(
     const DynamoDBRequest::Action action, RestoreTableFromBackupRequest * const q)
@@ -123,15 +112,10 @@ RestoreTableFromBackupRequestPrivate::RestoreTableFromBackupRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RestoreTableFromBackupRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the RestoreTableFromBackupRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public RestoreTableFromBackupRequest instance.
  */
 RestoreTableFromBackupRequestPrivate::RestoreTableFromBackupRequestPrivate(
     const RestoreTableFromBackupRequestPrivate &other, RestoreTableFromBackupRequest * const q)

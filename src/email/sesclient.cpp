@@ -164,6 +164,9 @@
 /*!
  * \namespace QtAws::SES
  * \brief The QtAws::SES contains stuff...
+ *
+ * \inmodule QtAwsSES
+ *
  * @todo Move this to a separate template file.
  */
 
@@ -224,7 +227,7 @@ SesClient::SesClient(
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * \a  AwsEndpoint::getEndpoint()
+ * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
 SesClient::SesClient(
     const QUrl &endpoint,

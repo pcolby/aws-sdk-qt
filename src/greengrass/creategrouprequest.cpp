@@ -27,10 +27,9 @@ namespace Greengrass {
 
 /*!
  * \class QtAws::Greengrass::CreateGroupRequest
- *
  * \brief The CreateGroupRequest class provides an interface for Greengrass CreateGroup requests.
  *
- * \ingroup Greengrass
+ * \inmodule QtAwsGreengrass
  *
  *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
  *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
@@ -40,9 +39,7 @@ namespace Greengrass {
  */
 
 /*!
- * @brief  Constructs a new CreateGroupRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateGroupRequest::CreateGroupRequest(const CreateGroupRequest &other)
     : GreengrassRequest(new CreateGroupRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ CreateGroupRequest::CreateGroupRequest(const CreateGroupRequest &other)
 }
 
 /*!
- * @brief  Constructs a new CreateGroupRequest object.
+ * Constructs a CreateGroupRequest object.
  */
 CreateGroupRequest::CreateGroupRequest()
     : GreengrassRequest(new CreateGroupRequestPrivate(GreengrassRequest::CreateGroupAction, this))
@@ -69,14 +66,9 @@ bool CreateGroupRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateGroupResponse object.
+ * Returns a CreateGroupResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateGroupResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GreengrassClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateGroupRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * CreateGroupRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::Greengrass::CreateGroupRequestPrivate
+ * \brief The CreateGroupRequestPrivate class provides private implementation for CreateGroupRequest.
+ * \internal
  *
- * @class  CreateGroupRequestPrivate
- *
- * @brief  Private implementation for CreateGroupRequest.
+ * \inmodule QtAwsGreengrass
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateGroupRequestPrivate object.
- *
- * @param  action  Greengrass action being performed.
- * @param  q       Pointer to this object's public CreateGroupRequest instance.
+ * Constructs a CreateGroupRequestPrivate object for Greengrass \a action with,
+ * public implementation \a q.
  */
 CreateGroupRequestPrivate::CreateGroupRequestPrivate(
     const GreengrassRequest::Action action, CreateGroupRequest * const q)
@@ -107,15 +96,10 @@ CreateGroupRequestPrivate::CreateGroupRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateGroupRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateGroupRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateGroupRequest instance.
  */
 CreateGroupRequestPrivate::CreateGroupRequestPrivate(
     const CreateGroupRequestPrivate &other, CreateGroupRequest * const q)

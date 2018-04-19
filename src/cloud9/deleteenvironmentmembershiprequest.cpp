@@ -27,10 +27,9 @@ namespace Cloud9 {
 
 /*!
  * \class QtAws::Cloud9::DeleteEnvironmentMembershipRequest
- *
  * \brief The DeleteEnvironmentMembershipRequest class provides an interface for Cloud9 DeleteEnvironmentMembership requests.
  *
- * \ingroup Cloud9
+ * \inmodule QtAwsCloud9
  *
  *  <fullname>AWS Cloud9</fullname>
  * 
@@ -91,9 +90,7 @@ namespace Cloud9 {
  */
 
 /*!
- * @brief  Constructs a new DeleteEnvironmentMembershipRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteEnvironmentMembershipRequest::DeleteEnvironmentMembershipRequest(const DeleteEnvironmentMembershipRequest &other)
     : Cloud9Request(new DeleteEnvironmentMembershipRequestPrivate(*other.d_func(), this))
@@ -102,7 +99,7 @@ DeleteEnvironmentMembershipRequest::DeleteEnvironmentMembershipRequest(const Del
 }
 
 /*!
- * @brief  Constructs a new DeleteEnvironmentMembershipRequest object.
+ * Constructs a DeleteEnvironmentMembershipRequest object.
  */
 DeleteEnvironmentMembershipRequest::DeleteEnvironmentMembershipRequest()
     : Cloud9Request(new DeleteEnvironmentMembershipRequestPrivate(Cloud9Request::DeleteEnvironmentMembershipAction, this))
@@ -120,14 +117,9 @@ bool DeleteEnvironmentMembershipRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteEnvironmentMembershipResponse object.
+ * Returns a DeleteEnvironmentMembershipResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteEnvironmentMembershipResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  Cloud9Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteEnvironmentMembershipRequest::response(QNetworkReply * const reply) const
 {
@@ -135,20 +127,17 @@ QtAws::Core::AwsAbstractResponse * DeleteEnvironmentMembershipRequest::response(
 }
 
 /*!
- * @internal
+ * \class QtAws::Cloud9::DeleteEnvironmentMembershipRequestPrivate
+ * \brief The DeleteEnvironmentMembershipRequestPrivate class provides private implementation for DeleteEnvironmentMembershipRequest.
+ * \internal
  *
- * @class  DeleteEnvironmentMembershipRequestPrivate
- *
- * @brief  Private implementation for DeleteEnvironmentMembershipRequest.
+ * \inmodule QtAwsCloud9
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteEnvironmentMembershipRequestPrivate object.
- *
- * @param  action  Cloud9 action being performed.
- * @param  q       Pointer to this object's public DeleteEnvironmentMembershipRequest instance.
+ * Constructs a DeleteEnvironmentMembershipRequestPrivate object for Cloud9 \a action with,
+ * public implementation \a q.
  */
 DeleteEnvironmentMembershipRequestPrivate::DeleteEnvironmentMembershipRequestPrivate(
     const Cloud9Request::Action action, DeleteEnvironmentMembershipRequest * const q)
@@ -158,15 +147,10 @@ DeleteEnvironmentMembershipRequestPrivate::DeleteEnvironmentMembershipRequestPri
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteEnvironmentMembershipRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteEnvironmentMembershipRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteEnvironmentMembershipRequest instance.
  */
 DeleteEnvironmentMembershipRequestPrivate::DeleteEnvironmentMembershipRequestPrivate(
     const DeleteEnvironmentMembershipRequestPrivate &other, DeleteEnvironmentMembershipRequest * const q)

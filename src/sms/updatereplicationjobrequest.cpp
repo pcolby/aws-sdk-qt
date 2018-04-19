@@ -27,19 +27,16 @@ namespace SMS {
 
 /*!
  * \class QtAws::SMS::UpdateReplicationJobRequest
- *
  * \brief The UpdateReplicationJobRequest class provides an interface for SMS UpdateReplicationJob requests.
  *
- * \ingroup SMS
+ * \inmodule QtAwsSMS
  *
  *
  * \sa SMSClient::updateReplicationJob
  */
 
 /*!
- * @brief  Constructs a new UpdateReplicationJobRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateReplicationJobRequest::UpdateReplicationJobRequest(const UpdateReplicationJobRequest &other)
     : SMSRequest(new UpdateReplicationJobRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ UpdateReplicationJobRequest::UpdateReplicationJobRequest(const UpdateReplication
 }
 
 /*!
- * @brief  Constructs a new UpdateReplicationJobRequest object.
+ * Constructs a UpdateReplicationJobRequest object.
  */
 UpdateReplicationJobRequest::UpdateReplicationJobRequest()
     : SMSRequest(new UpdateReplicationJobRequestPrivate(SMSRequest::UpdateReplicationJobAction, this))
@@ -66,14 +63,9 @@ bool UpdateReplicationJobRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateReplicationJobResponse object.
+ * Returns a UpdateReplicationJobResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateReplicationJobResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SMSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateReplicationJobRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * UpdateReplicationJobRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::SMS::UpdateReplicationJobRequestPrivate
+ * \brief The UpdateReplicationJobRequestPrivate class provides private implementation for UpdateReplicationJobRequest.
+ * \internal
  *
- * @class  UpdateReplicationJobRequestPrivate
- *
- * @brief  Private implementation for UpdateReplicationJobRequest.
+ * \inmodule QtAwsSMS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateReplicationJobRequestPrivate object.
- *
- * @param  action  SMS action being performed.
- * @param  q       Pointer to this object's public UpdateReplicationJobRequest instance.
+ * Constructs a UpdateReplicationJobRequestPrivate object for SMS \a action with,
+ * public implementation \a q.
  */
 UpdateReplicationJobRequestPrivate::UpdateReplicationJobRequestPrivate(
     const SMSRequest::Action action, UpdateReplicationJobRequest * const q)
@@ -104,15 +93,10 @@ UpdateReplicationJobRequestPrivate::UpdateReplicationJobRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateReplicationJobRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateReplicationJobRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateReplicationJobRequest instance.
  */
 UpdateReplicationJobRequestPrivate::UpdateReplicationJobRequestPrivate(
     const UpdateReplicationJobRequestPrivate &other, UpdateReplicationJobRequest * const q)

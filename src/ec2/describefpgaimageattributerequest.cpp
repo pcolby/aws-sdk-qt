@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DescribeFpgaImageAttributeRequest
- *
  * \brief The DescribeFpgaImageAttributeRequest class provides an interface for EC2 DescribeFpgaImageAttribute requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DescribeFpgaImageAttributeRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeFpgaImageAttributeRequest::DescribeFpgaImageAttributeRequest(const DescribeFpgaImageAttributeRequest &other)
     : EC2Request(new DescribeFpgaImageAttributeRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ DescribeFpgaImageAttributeRequest::DescribeFpgaImageAttributeRequest(const Descr
 }
 
 /*!
- * @brief  Constructs a new DescribeFpgaImageAttributeRequest object.
+ * Constructs a DescribeFpgaImageAttributeRequest object.
  */
 DescribeFpgaImageAttributeRequest::DescribeFpgaImageAttributeRequest()
     : EC2Request(new DescribeFpgaImageAttributeRequestPrivate(EC2Request::DescribeFpgaImageAttributeAction, this))
@@ -70,14 +67,9 @@ bool DescribeFpgaImageAttributeRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeFpgaImageAttributeResponse object.
+ * Returns a DescribeFpgaImageAttributeResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeFpgaImageAttributeResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeFpgaImageAttributeRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * DescribeFpgaImageAttributeRequest::response(Q
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::DescribeFpgaImageAttributeRequestPrivate
+ * \brief The DescribeFpgaImageAttributeRequestPrivate class provides private implementation for DescribeFpgaImageAttributeRequest.
+ * \internal
  *
- * @class  DescribeFpgaImageAttributeRequestPrivate
- *
- * @brief  Private implementation for DescribeFpgaImageAttributeRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeFpgaImageAttributeRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public DescribeFpgaImageAttributeRequest instance.
+ * Constructs a DescribeFpgaImageAttributeRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 DescribeFpgaImageAttributeRequestPrivate::DescribeFpgaImageAttributeRequestPrivate(
     const EC2Request::Action action, DescribeFpgaImageAttributeRequest * const q)
@@ -108,15 +97,10 @@ DescribeFpgaImageAttributeRequestPrivate::DescribeFpgaImageAttributeRequestPriva
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeFpgaImageAttributeRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeFpgaImageAttributeRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeFpgaImageAttributeRequest instance.
  */
 DescribeFpgaImageAttributeRequestPrivate::DescribeFpgaImageAttributeRequestPrivate(
     const DescribeFpgaImageAttributeRequestPrivate &other, DescribeFpgaImageAttributeRequest * const q)

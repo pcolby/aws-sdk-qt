@@ -27,10 +27,9 @@ namespace Cloud9 {
 
 /*!
  * \class QtAws::Cloud9::CreateEnvironmentMembershipRequest
- *
  * \brief The CreateEnvironmentMembershipRequest class provides an interface for Cloud9 CreateEnvironmentMembership requests.
  *
- * \ingroup Cloud9
+ * \inmodule QtAwsCloud9
  *
  *  <fullname>AWS Cloud9</fullname>
  * 
@@ -91,9 +90,7 @@ namespace Cloud9 {
  */
 
 /*!
- * @brief  Constructs a new CreateEnvironmentMembershipRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateEnvironmentMembershipRequest::CreateEnvironmentMembershipRequest(const CreateEnvironmentMembershipRequest &other)
     : Cloud9Request(new CreateEnvironmentMembershipRequestPrivate(*other.d_func(), this))
@@ -102,7 +99,7 @@ CreateEnvironmentMembershipRequest::CreateEnvironmentMembershipRequest(const Cre
 }
 
 /*!
- * @brief  Constructs a new CreateEnvironmentMembershipRequest object.
+ * Constructs a CreateEnvironmentMembershipRequest object.
  */
 CreateEnvironmentMembershipRequest::CreateEnvironmentMembershipRequest()
     : Cloud9Request(new CreateEnvironmentMembershipRequestPrivate(Cloud9Request::CreateEnvironmentMembershipAction, this))
@@ -120,14 +117,9 @@ bool CreateEnvironmentMembershipRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateEnvironmentMembershipResponse object.
+ * Returns a CreateEnvironmentMembershipResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateEnvironmentMembershipResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  Cloud9Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateEnvironmentMembershipRequest::response(QNetworkReply * const reply) const
 {
@@ -135,20 +127,17 @@ QtAws::Core::AwsAbstractResponse * CreateEnvironmentMembershipRequest::response(
 }
 
 /*!
- * @internal
+ * \class QtAws::Cloud9::CreateEnvironmentMembershipRequestPrivate
+ * \brief The CreateEnvironmentMembershipRequestPrivate class provides private implementation for CreateEnvironmentMembershipRequest.
+ * \internal
  *
- * @class  CreateEnvironmentMembershipRequestPrivate
- *
- * @brief  Private implementation for CreateEnvironmentMembershipRequest.
+ * \inmodule QtAwsCloud9
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateEnvironmentMembershipRequestPrivate object.
- *
- * @param  action  Cloud9 action being performed.
- * @param  q       Pointer to this object's public CreateEnvironmentMembershipRequest instance.
+ * Constructs a CreateEnvironmentMembershipRequestPrivate object for Cloud9 \a action with,
+ * public implementation \a q.
  */
 CreateEnvironmentMembershipRequestPrivate::CreateEnvironmentMembershipRequestPrivate(
     const Cloud9Request::Action action, CreateEnvironmentMembershipRequest * const q)
@@ -158,15 +147,10 @@ CreateEnvironmentMembershipRequestPrivate::CreateEnvironmentMembershipRequestPri
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateEnvironmentMembershipRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateEnvironmentMembershipRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateEnvironmentMembershipRequest instance.
  */
 CreateEnvironmentMembershipRequestPrivate::CreateEnvironmentMembershipRequestPrivate(
     const CreateEnvironmentMembershipRequestPrivate &other, CreateEnvironmentMembershipRequest * const q)

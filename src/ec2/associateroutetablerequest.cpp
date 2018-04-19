@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::AssociateRouteTableRequest
- *
  * \brief The AssociateRouteTableRequest class provides an interface for EC2 AssociateRouteTable requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new AssociateRouteTableRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AssociateRouteTableRequest::AssociateRouteTableRequest(const AssociateRouteTableRequest &other)
     : EC2Request(new AssociateRouteTableRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ AssociateRouteTableRequest::AssociateRouteTableRequest(const AssociateRouteTable
 }
 
 /*!
- * @brief  Constructs a new AssociateRouteTableRequest object.
+ * Constructs a AssociateRouteTableRequest object.
  */
 AssociateRouteTableRequest::AssociateRouteTableRequest()
     : EC2Request(new AssociateRouteTableRequestPrivate(EC2Request::AssociateRouteTableAction, this))
@@ -70,14 +67,9 @@ bool AssociateRouteTableRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AssociateRouteTableResponse object.
+ * Returns a AssociateRouteTableResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AssociateRouteTableResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AssociateRouteTableRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * AssociateRouteTableRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::AssociateRouteTableRequestPrivate
+ * \brief The AssociateRouteTableRequestPrivate class provides private implementation for AssociateRouteTableRequest.
+ * \internal
  *
- * @class  AssociateRouteTableRequestPrivate
- *
- * @brief  Private implementation for AssociateRouteTableRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AssociateRouteTableRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public AssociateRouteTableRequest instance.
+ * Constructs a AssociateRouteTableRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 AssociateRouteTableRequestPrivate::AssociateRouteTableRequestPrivate(
     const EC2Request::Action action, AssociateRouteTableRequest * const q)
@@ -108,15 +97,10 @@ AssociateRouteTableRequestPrivate::AssociateRouteTableRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AssociateRouteTableRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AssociateRouteTableRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AssociateRouteTableRequest instance.
  */
 AssociateRouteTableRequestPrivate::AssociateRouteTableRequestPrivate(
     const AssociateRouteTableRequestPrivate &other, AssociateRouteTableRequest * const q)

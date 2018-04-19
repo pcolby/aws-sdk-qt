@@ -27,10 +27,9 @@ namespace AppStream {
 
 /*!
  * \class QtAws::AppStream::DeleteDirectoryConfigRequest
- *
  * \brief The DeleteDirectoryConfigRequest class provides an interface for AppStream DeleteDirectoryConfig requests.
  *
- * \ingroup AppStream
+ * \inmodule QtAwsAppStream
  *
  *  <fullname>Amazon AppStream 2.0</fullname>
  * 
@@ -40,9 +39,7 @@ namespace AppStream {
  */
 
 /*!
- * @brief  Constructs a new DeleteDirectoryConfigRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteDirectoryConfigRequest::DeleteDirectoryConfigRequest(const DeleteDirectoryConfigRequest &other)
     : AppStreamRequest(new DeleteDirectoryConfigRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ DeleteDirectoryConfigRequest::DeleteDirectoryConfigRequest(const DeleteDirectory
 }
 
 /*!
- * @brief  Constructs a new DeleteDirectoryConfigRequest object.
+ * Constructs a DeleteDirectoryConfigRequest object.
  */
 DeleteDirectoryConfigRequest::DeleteDirectoryConfigRequest()
     : AppStreamRequest(new DeleteDirectoryConfigRequestPrivate(AppStreamRequest::DeleteDirectoryConfigAction, this))
@@ -69,14 +66,9 @@ bool DeleteDirectoryConfigRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteDirectoryConfigResponse object.
+ * Returns a DeleteDirectoryConfigResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteDirectoryConfigResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AppStreamClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteDirectoryConfigRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * DeleteDirectoryConfigRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::AppStream::DeleteDirectoryConfigRequestPrivate
+ * \brief The DeleteDirectoryConfigRequestPrivate class provides private implementation for DeleteDirectoryConfigRequest.
+ * \internal
  *
- * @class  DeleteDirectoryConfigRequestPrivate
- *
- * @brief  Private implementation for DeleteDirectoryConfigRequest.
+ * \inmodule QtAwsAppStream
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteDirectoryConfigRequestPrivate object.
- *
- * @param  action  AppStream action being performed.
- * @param  q       Pointer to this object's public DeleteDirectoryConfigRequest instance.
+ * Constructs a DeleteDirectoryConfigRequestPrivate object for AppStream \a action with,
+ * public implementation \a q.
  */
 DeleteDirectoryConfigRequestPrivate::DeleteDirectoryConfigRequestPrivate(
     const AppStreamRequest::Action action, DeleteDirectoryConfigRequest * const q)
@@ -107,15 +96,10 @@ DeleteDirectoryConfigRequestPrivate::DeleteDirectoryConfigRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteDirectoryConfigRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteDirectoryConfigRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteDirectoryConfigRequest instance.
  */
 DeleteDirectoryConfigRequestPrivate::DeleteDirectoryConfigRequestPrivate(
     const DeleteDirectoryConfigRequestPrivate &other, DeleteDirectoryConfigRequest * const q)

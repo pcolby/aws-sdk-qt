@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::CreateVpnGatewayRequest
- *
  * \brief The CreateVpnGatewayRequest class provides an interface for EC2 CreateVpnGateway requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new CreateVpnGatewayRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateVpnGatewayRequest::CreateVpnGatewayRequest(const CreateVpnGatewayRequest &other)
     : EC2Request(new CreateVpnGatewayRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ CreateVpnGatewayRequest::CreateVpnGatewayRequest(const CreateVpnGatewayRequest &
 }
 
 /*!
- * @brief  Constructs a new CreateVpnGatewayRequest object.
+ * Constructs a CreateVpnGatewayRequest object.
  */
 CreateVpnGatewayRequest::CreateVpnGatewayRequest()
     : EC2Request(new CreateVpnGatewayRequestPrivate(EC2Request::CreateVpnGatewayAction, this))
@@ -70,14 +67,9 @@ bool CreateVpnGatewayRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateVpnGatewayResponse object.
+ * Returns a CreateVpnGatewayResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateVpnGatewayResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateVpnGatewayRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * CreateVpnGatewayRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::CreateVpnGatewayRequestPrivate
+ * \brief The CreateVpnGatewayRequestPrivate class provides private implementation for CreateVpnGatewayRequest.
+ * \internal
  *
- * @class  CreateVpnGatewayRequestPrivate
- *
- * @brief  Private implementation for CreateVpnGatewayRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateVpnGatewayRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public CreateVpnGatewayRequest instance.
+ * Constructs a CreateVpnGatewayRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 CreateVpnGatewayRequestPrivate::CreateVpnGatewayRequestPrivate(
     const EC2Request::Action action, CreateVpnGatewayRequest * const q)
@@ -108,15 +97,10 @@ CreateVpnGatewayRequestPrivate::CreateVpnGatewayRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateVpnGatewayRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateVpnGatewayRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateVpnGatewayRequest instance.
  */
 CreateVpnGatewayRequestPrivate::CreateVpnGatewayRequestPrivate(
     const CreateVpnGatewayRequestPrivate &other, CreateVpnGatewayRequest * const q)

@@ -27,19 +27,16 @@ namespace Pinpoint {
 
 /*!
  * \class QtAws::Pinpoint::UpdateApplicationSettingsRequest
- *
  * \brief The UpdateApplicationSettingsRequest class provides an interface for Pinpoint UpdateApplicationSettings requests.
  *
- * \ingroup Pinpoint
+ * \inmodule QtAwsPinpoint
  *
  *
  * \sa PinpointClient::updateApplicationSettings
  */
 
 /*!
- * @brief  Constructs a new UpdateApplicationSettingsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateApplicationSettingsRequest::UpdateApplicationSettingsRequest(const UpdateApplicationSettingsRequest &other)
     : PinpointRequest(new UpdateApplicationSettingsRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ UpdateApplicationSettingsRequest::UpdateApplicationSettingsRequest(const UpdateA
 }
 
 /*!
- * @brief  Constructs a new UpdateApplicationSettingsRequest object.
+ * Constructs a UpdateApplicationSettingsRequest object.
  */
 UpdateApplicationSettingsRequest::UpdateApplicationSettingsRequest()
     : PinpointRequest(new UpdateApplicationSettingsRequestPrivate(PinpointRequest::UpdateApplicationSettingsAction, this))
@@ -66,14 +63,9 @@ bool UpdateApplicationSettingsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateApplicationSettingsResponse object.
+ * Returns a UpdateApplicationSettingsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateApplicationSettingsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  PinpointClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateApplicationSettingsRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * UpdateApplicationSettingsRequest::response(QN
 }
 
 /*!
- * @internal
+ * \class QtAws::Pinpoint::UpdateApplicationSettingsRequestPrivate
+ * \brief The UpdateApplicationSettingsRequestPrivate class provides private implementation for UpdateApplicationSettingsRequest.
+ * \internal
  *
- * @class  UpdateApplicationSettingsRequestPrivate
- *
- * @brief  Private implementation for UpdateApplicationSettingsRequest.
+ * \inmodule QtAwsPinpoint
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateApplicationSettingsRequestPrivate object.
- *
- * @param  action  Pinpoint action being performed.
- * @param  q       Pointer to this object's public UpdateApplicationSettingsRequest instance.
+ * Constructs a UpdateApplicationSettingsRequestPrivate object for Pinpoint \a action with,
+ * public implementation \a q.
  */
 UpdateApplicationSettingsRequestPrivate::UpdateApplicationSettingsRequestPrivate(
     const PinpointRequest::Action action, UpdateApplicationSettingsRequest * const q)
@@ -104,15 +93,10 @@ UpdateApplicationSettingsRequestPrivate::UpdateApplicationSettingsRequestPrivate
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateApplicationSettingsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateApplicationSettingsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateApplicationSettingsRequest instance.
  */
 UpdateApplicationSettingsRequestPrivate::UpdateApplicationSettingsRequestPrivate(
     const UpdateApplicationSettingsRequestPrivate &other, UpdateApplicationSettingsRequest * const q)

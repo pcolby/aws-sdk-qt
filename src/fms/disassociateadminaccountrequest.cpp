@@ -27,10 +27,9 @@ namespace FMS {
 
 /*!
  * \class QtAws::FMS::DisassociateAdminAccountRequest
- *
  * \brief The DisassociateAdminAccountRequest class provides an interface for FMS DisassociateAdminAccount requests.
  *
- * \ingroup FMS
+ * \inmodule QtAwsFMS
  *
  *  <fullname>AWS Firewall Manager</fullname>
  * 
@@ -43,9 +42,7 @@ namespace FMS {
  */
 
 /*!
- * @brief  Constructs a new DisassociateAdminAccountRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DisassociateAdminAccountRequest::DisassociateAdminAccountRequest(const DisassociateAdminAccountRequest &other)
     : FMSRequest(new DisassociateAdminAccountRequestPrivate(*other.d_func(), this))
@@ -54,7 +51,7 @@ DisassociateAdminAccountRequest::DisassociateAdminAccountRequest(const Disassoci
 }
 
 /*!
- * @brief  Constructs a new DisassociateAdminAccountRequest object.
+ * Constructs a DisassociateAdminAccountRequest object.
  */
 DisassociateAdminAccountRequest::DisassociateAdminAccountRequest()
     : FMSRequest(new DisassociateAdminAccountRequestPrivate(FMSRequest::DisassociateAdminAccountAction, this))
@@ -72,14 +69,9 @@ bool DisassociateAdminAccountRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DisassociateAdminAccountResponse object.
+ * Returns a DisassociateAdminAccountResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DisassociateAdminAccountResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  FMSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DisassociateAdminAccountRequest::response(QNetworkReply * const reply) const
 {
@@ -87,20 +79,17 @@ QtAws::Core::AwsAbstractResponse * DisassociateAdminAccountRequest::response(QNe
 }
 
 /*!
- * @internal
+ * \class QtAws::FMS::DisassociateAdminAccountRequestPrivate
+ * \brief The DisassociateAdminAccountRequestPrivate class provides private implementation for DisassociateAdminAccountRequest.
+ * \internal
  *
- * @class  DisassociateAdminAccountRequestPrivate
- *
- * @brief  Private implementation for DisassociateAdminAccountRequest.
+ * \inmodule QtAwsFMS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DisassociateAdminAccountRequestPrivate object.
- *
- * @param  action  FMS action being performed.
- * @param  q       Pointer to this object's public DisassociateAdminAccountRequest instance.
+ * Constructs a DisassociateAdminAccountRequestPrivate object for FMS \a action with,
+ * public implementation \a q.
  */
 DisassociateAdminAccountRequestPrivate::DisassociateAdminAccountRequestPrivate(
     const FMSRequest::Action action, DisassociateAdminAccountRequest * const q)
@@ -110,15 +99,10 @@ DisassociateAdminAccountRequestPrivate::DisassociateAdminAccountRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DisassociateAdminAccountRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DisassociateAdminAccountRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DisassociateAdminAccountRequest instance.
  */
 DisassociateAdminAccountRequestPrivate::DisassociateAdminAccountRequestPrivate(
     const DisassociateAdminAccountRequestPrivate &other, DisassociateAdminAccountRequest * const q)

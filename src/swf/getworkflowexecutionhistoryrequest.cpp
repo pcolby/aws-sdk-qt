@@ -27,10 +27,9 @@ namespace SWF {
 
 /*!
  * \class QtAws::SWF::GetWorkflowExecutionHistoryRequest
- *
  * \brief The GetWorkflowExecutionHistoryRequest class provides an interface for SWF GetWorkflowExecutionHistory requests.
  *
- * \ingroup SWF
+ * \inmodule QtAwsSWF
  *
  *  <fullname>Amazon Simple Workflow Service</fullname>
  * 
@@ -53,9 +52,7 @@ namespace SWF {
  */
 
 /*!
- * @brief  Constructs a new GetWorkflowExecutionHistoryRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetWorkflowExecutionHistoryRequest::GetWorkflowExecutionHistoryRequest(const GetWorkflowExecutionHistoryRequest &other)
     : SWFRequest(new GetWorkflowExecutionHistoryRequestPrivate(*other.d_func(), this))
@@ -64,7 +61,7 @@ GetWorkflowExecutionHistoryRequest::GetWorkflowExecutionHistoryRequest(const Get
 }
 
 /*!
- * @brief  Constructs a new GetWorkflowExecutionHistoryRequest object.
+ * Constructs a GetWorkflowExecutionHistoryRequest object.
  */
 GetWorkflowExecutionHistoryRequest::GetWorkflowExecutionHistoryRequest()
     : SWFRequest(new GetWorkflowExecutionHistoryRequestPrivate(SWFRequest::GetWorkflowExecutionHistoryAction, this))
@@ -82,14 +79,9 @@ bool GetWorkflowExecutionHistoryRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetWorkflowExecutionHistoryResponse object.
+ * Returns a GetWorkflowExecutionHistoryResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetWorkflowExecutionHistoryResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SWFClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetWorkflowExecutionHistoryRequest::response(QNetworkReply * const reply) const
 {
@@ -97,20 +89,17 @@ QtAws::Core::AwsAbstractResponse * GetWorkflowExecutionHistoryRequest::response(
 }
 
 /*!
- * @internal
+ * \class QtAws::SWF::GetWorkflowExecutionHistoryRequestPrivate
+ * \brief The GetWorkflowExecutionHistoryRequestPrivate class provides private implementation for GetWorkflowExecutionHistoryRequest.
+ * \internal
  *
- * @class  GetWorkflowExecutionHistoryRequestPrivate
- *
- * @brief  Private implementation for GetWorkflowExecutionHistoryRequest.
+ * \inmodule QtAwsSWF
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetWorkflowExecutionHistoryRequestPrivate object.
- *
- * @param  action  SWF action being performed.
- * @param  q       Pointer to this object's public GetWorkflowExecutionHistoryRequest instance.
+ * Constructs a GetWorkflowExecutionHistoryRequestPrivate object for SWF \a action with,
+ * public implementation \a q.
  */
 GetWorkflowExecutionHistoryRequestPrivate::GetWorkflowExecutionHistoryRequestPrivate(
     const SWFRequest::Action action, GetWorkflowExecutionHistoryRequest * const q)
@@ -120,15 +109,10 @@ GetWorkflowExecutionHistoryRequestPrivate::GetWorkflowExecutionHistoryRequestPri
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetWorkflowExecutionHistoryRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetWorkflowExecutionHistoryRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetWorkflowExecutionHistoryRequest instance.
  */
 GetWorkflowExecutionHistoryRequestPrivate::GetWorkflowExecutionHistoryRequestPrivate(
     const GetWorkflowExecutionHistoryRequestPrivate &other, GetWorkflowExecutionHistoryRequest * const q)

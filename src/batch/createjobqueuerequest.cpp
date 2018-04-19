@@ -27,10 +27,9 @@ namespace Batch {
 
 /*!
  * \class QtAws::Batch::CreateJobQueueRequest
- *
  * \brief The CreateJobQueueRequest class provides an interface for Batch CreateJobQueue requests.
  *
- * \ingroup Batch
+ * \inmodule QtAwsBatch
  *
  *  AWS Batch enables you to run batch computing workloads on the AWS Cloud. Batch computing is a common way for developers,
  *  scientists, and engineers to access large amounts of compute resources, and AWS Batch removes the undifferentiated heavy
@@ -51,9 +50,7 @@ namespace Batch {
  */
 
 /*!
- * @brief  Constructs a new CreateJobQueueRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateJobQueueRequest::CreateJobQueueRequest(const CreateJobQueueRequest &other)
     : BatchRequest(new CreateJobQueueRequestPrivate(*other.d_func(), this))
@@ -62,7 +59,7 @@ CreateJobQueueRequest::CreateJobQueueRequest(const CreateJobQueueRequest &other)
 }
 
 /*!
- * @brief  Constructs a new CreateJobQueueRequest object.
+ * Constructs a CreateJobQueueRequest object.
  */
 CreateJobQueueRequest::CreateJobQueueRequest()
     : BatchRequest(new CreateJobQueueRequestPrivate(BatchRequest::CreateJobQueueAction, this))
@@ -80,14 +77,9 @@ bool CreateJobQueueRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateJobQueueResponse object.
+ * Returns a CreateJobQueueResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateJobQueueResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  BatchClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateJobQueueRequest::response(QNetworkReply * const reply) const
 {
@@ -95,20 +87,17 @@ QtAws::Core::AwsAbstractResponse * CreateJobQueueRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::Batch::CreateJobQueueRequestPrivate
+ * \brief The CreateJobQueueRequestPrivate class provides private implementation for CreateJobQueueRequest.
+ * \internal
  *
- * @class  CreateJobQueueRequestPrivate
- *
- * @brief  Private implementation for CreateJobQueueRequest.
+ * \inmodule QtAwsBatch
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateJobQueueRequestPrivate object.
- *
- * @param  action  Batch action being performed.
- * @param  q       Pointer to this object's public CreateJobQueueRequest instance.
+ * Constructs a CreateJobQueueRequestPrivate object for Batch \a action with,
+ * public implementation \a q.
  */
 CreateJobQueueRequestPrivate::CreateJobQueueRequestPrivate(
     const BatchRequest::Action action, CreateJobQueueRequest * const q)
@@ -118,15 +107,10 @@ CreateJobQueueRequestPrivate::CreateJobQueueRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateJobQueueRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateJobQueueRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateJobQueueRequest instance.
  */
 CreateJobQueueRequestPrivate::CreateJobQueueRequestPrivate(
     const CreateJobQueueRequestPrivate &other, CreateJobQueueRequest * const q)

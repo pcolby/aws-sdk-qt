@@ -27,10 +27,9 @@ namespace DatabaseMigrationService {
 
 /*!
  * \class QtAws::DatabaseMigrationService::DeleteReplicationSubnetGroupRequest
- *
  * \brief The DeleteReplicationSubnetGroupRequest class provides an interface for DatabaseMigrationService DeleteReplicationSubnetGroup requests.
  *
- * \ingroup DatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigrationService
  *
  *  <fullname>AWS Database Migration Service</fullname>
  * 
@@ -48,9 +47,7 @@ namespace DatabaseMigrationService {
  */
 
 /*!
- * @brief  Constructs a new DeleteReplicationSubnetGroupRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteReplicationSubnetGroupRequest::DeleteReplicationSubnetGroupRequest(const DeleteReplicationSubnetGroupRequest &other)
     : DatabaseMigrationServiceRequest(new DeleteReplicationSubnetGroupRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ DeleteReplicationSubnetGroupRequest::DeleteReplicationSubnetGroupRequest(const D
 }
 
 /*!
- * @brief  Constructs a new DeleteReplicationSubnetGroupRequest object.
+ * Constructs a DeleteReplicationSubnetGroupRequest object.
  */
 DeleteReplicationSubnetGroupRequest::DeleteReplicationSubnetGroupRequest()
     : DatabaseMigrationServiceRequest(new DeleteReplicationSubnetGroupRequestPrivate(DatabaseMigrationServiceRequest::DeleteReplicationSubnetGroupAction, this))
@@ -77,14 +74,9 @@ bool DeleteReplicationSubnetGroupRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteReplicationSubnetGroupResponse object.
+ * Returns a DeleteReplicationSubnetGroupResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteReplicationSubnetGroupResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DatabaseMigrationServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteReplicationSubnetGroupRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * DeleteReplicationSubnetGroupRequest::response
 }
 
 /*!
- * @internal
+ * \class QtAws::DatabaseMigrationService::DeleteReplicationSubnetGroupRequestPrivate
+ * \brief The DeleteReplicationSubnetGroupRequestPrivate class provides private implementation for DeleteReplicationSubnetGroupRequest.
+ * \internal
  *
- * @class  DeleteReplicationSubnetGroupRequestPrivate
- *
- * @brief  Private implementation for DeleteReplicationSubnetGroupRequest.
+ * \inmodule QtAwsDatabaseMigrationService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteReplicationSubnetGroupRequestPrivate object.
- *
- * @param  action  DatabaseMigrationService action being performed.
- * @param  q       Pointer to this object's public DeleteReplicationSubnetGroupRequest instance.
+ * Constructs a DeleteReplicationSubnetGroupRequestPrivate object for DatabaseMigrationService \a action with,
+ * public implementation \a q.
  */
 DeleteReplicationSubnetGroupRequestPrivate::DeleteReplicationSubnetGroupRequestPrivate(
     const DatabaseMigrationServiceRequest::Action action, DeleteReplicationSubnetGroupRequest * const q)
@@ -115,15 +104,10 @@ DeleteReplicationSubnetGroupRequestPrivate::DeleteReplicationSubnetGroupRequestP
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteReplicationSubnetGroupRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteReplicationSubnetGroupRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteReplicationSubnetGroupRequest instance.
  */
 DeleteReplicationSubnetGroupRequestPrivate::DeleteReplicationSubnetGroupRequestPrivate(
     const DeleteReplicationSubnetGroupRequestPrivate &other, DeleteReplicationSubnetGroupRequest * const q)

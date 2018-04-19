@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DeleteDhcpOptionsRequest
- *
  * \brief The DeleteDhcpOptionsRequest class provides an interface for EC2 DeleteDhcpOptions requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DeleteDhcpOptionsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteDhcpOptionsRequest::DeleteDhcpOptionsRequest(const DeleteDhcpOptionsRequest &other)
     : EC2Request(new DeleteDhcpOptionsRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ DeleteDhcpOptionsRequest::DeleteDhcpOptionsRequest(const DeleteDhcpOptionsReques
 }
 
 /*!
- * @brief  Constructs a new DeleteDhcpOptionsRequest object.
+ * Constructs a DeleteDhcpOptionsRequest object.
  */
 DeleteDhcpOptionsRequest::DeleteDhcpOptionsRequest()
     : EC2Request(new DeleteDhcpOptionsRequestPrivate(EC2Request::DeleteDhcpOptionsAction, this))
@@ -70,14 +67,9 @@ bool DeleteDhcpOptionsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteDhcpOptionsResponse object.
+ * Returns a DeleteDhcpOptionsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteDhcpOptionsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteDhcpOptionsRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * DeleteDhcpOptionsRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::DeleteDhcpOptionsRequestPrivate
+ * \brief The DeleteDhcpOptionsRequestPrivate class provides private implementation for DeleteDhcpOptionsRequest.
+ * \internal
  *
- * @class  DeleteDhcpOptionsRequestPrivate
- *
- * @brief  Private implementation for DeleteDhcpOptionsRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteDhcpOptionsRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public DeleteDhcpOptionsRequest instance.
+ * Constructs a DeleteDhcpOptionsRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 DeleteDhcpOptionsRequestPrivate::DeleteDhcpOptionsRequestPrivate(
     const EC2Request::Action action, DeleteDhcpOptionsRequest * const q)
@@ -108,15 +97,10 @@ DeleteDhcpOptionsRequestPrivate::DeleteDhcpOptionsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteDhcpOptionsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteDhcpOptionsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteDhcpOptionsRequest instance.
  */
 DeleteDhcpOptionsRequestPrivate::DeleteDhcpOptionsRequestPrivate(
     const DeleteDhcpOptionsRequestPrivate &other, DeleteDhcpOptionsRequest * const q)

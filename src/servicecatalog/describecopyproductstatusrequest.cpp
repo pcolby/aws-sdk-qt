@@ -27,10 +27,9 @@ namespace ServiceCatalog {
 
 /*!
  * \class QtAws::ServiceCatalog::DescribeCopyProductStatusRequest
- *
  * \brief The DescribeCopyProductStatusRequest class provides an interface for ServiceCatalog DescribeCopyProductStatus requests.
  *
- * \ingroup ServiceCatalog
+ * \inmodule QtAwsServiceCatalog
  *
  *  <fullname>AWS Service Catalog</fullname>
  * 
@@ -43,9 +42,7 @@ namespace ServiceCatalog {
  */
 
 /*!
- * @brief  Constructs a new DescribeCopyProductStatusRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeCopyProductStatusRequest::DescribeCopyProductStatusRequest(const DescribeCopyProductStatusRequest &other)
     : ServiceCatalogRequest(new DescribeCopyProductStatusRequestPrivate(*other.d_func(), this))
@@ -54,7 +51,7 @@ DescribeCopyProductStatusRequest::DescribeCopyProductStatusRequest(const Describ
 }
 
 /*!
- * @brief  Constructs a new DescribeCopyProductStatusRequest object.
+ * Constructs a DescribeCopyProductStatusRequest object.
  */
 DescribeCopyProductStatusRequest::DescribeCopyProductStatusRequest()
     : ServiceCatalogRequest(new DescribeCopyProductStatusRequestPrivate(ServiceCatalogRequest::DescribeCopyProductStatusAction, this))
@@ -72,14 +69,9 @@ bool DescribeCopyProductStatusRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeCopyProductStatusResponse object.
+ * Returns a DescribeCopyProductStatusResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeCopyProductStatusResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ServiceCatalogClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeCopyProductStatusRequest::response(QNetworkReply * const reply) const
 {
@@ -87,20 +79,17 @@ QtAws::Core::AwsAbstractResponse * DescribeCopyProductStatusRequest::response(QN
 }
 
 /*!
- * @internal
+ * \class QtAws::ServiceCatalog::DescribeCopyProductStatusRequestPrivate
+ * \brief The DescribeCopyProductStatusRequestPrivate class provides private implementation for DescribeCopyProductStatusRequest.
+ * \internal
  *
- * @class  DescribeCopyProductStatusRequestPrivate
- *
- * @brief  Private implementation for DescribeCopyProductStatusRequest.
+ * \inmodule QtAwsServiceCatalog
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeCopyProductStatusRequestPrivate object.
- *
- * @param  action  ServiceCatalog action being performed.
- * @param  q       Pointer to this object's public DescribeCopyProductStatusRequest instance.
+ * Constructs a DescribeCopyProductStatusRequestPrivate object for ServiceCatalog \a action with,
+ * public implementation \a q.
  */
 DescribeCopyProductStatusRequestPrivate::DescribeCopyProductStatusRequestPrivate(
     const ServiceCatalogRequest::Action action, DescribeCopyProductStatusRequest * const q)
@@ -110,15 +99,10 @@ DescribeCopyProductStatusRequestPrivate::DescribeCopyProductStatusRequestPrivate
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeCopyProductStatusRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeCopyProductStatusRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeCopyProductStatusRequest instance.
  */
 DescribeCopyProductStatusRequestPrivate::DescribeCopyProductStatusRequestPrivate(
     const DescribeCopyProductStatusRequestPrivate &other, DescribeCopyProductStatusRequest * const q)

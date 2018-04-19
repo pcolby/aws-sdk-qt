@@ -27,10 +27,9 @@ namespace ElastiCache {
 
 /*!
  * \class QtAws::ElastiCache::DescribeReservedCacheNodesRequest
- *
  * \brief The DescribeReservedCacheNodesRequest class provides an interface for ElastiCache DescribeReservedCacheNodes requests.
  *
- * \ingroup ElastiCache
+ * \inmodule QtAwsElastiCache
  *
  *  <fullname>Amazon ElastiCache</fullname>
  * 
@@ -51,9 +50,7 @@ namespace ElastiCache {
  */
 
 /*!
- * @brief  Constructs a new DescribeReservedCacheNodesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeReservedCacheNodesRequest::DescribeReservedCacheNodesRequest(const DescribeReservedCacheNodesRequest &other)
     : ElastiCacheRequest(new DescribeReservedCacheNodesRequestPrivate(*other.d_func(), this))
@@ -62,7 +59,7 @@ DescribeReservedCacheNodesRequest::DescribeReservedCacheNodesRequest(const Descr
 }
 
 /*!
- * @brief  Constructs a new DescribeReservedCacheNodesRequest object.
+ * Constructs a DescribeReservedCacheNodesRequest object.
  */
 DescribeReservedCacheNodesRequest::DescribeReservedCacheNodesRequest()
     : ElastiCacheRequest(new DescribeReservedCacheNodesRequestPrivate(ElastiCacheRequest::DescribeReservedCacheNodesAction, this))
@@ -80,14 +77,9 @@ bool DescribeReservedCacheNodesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeReservedCacheNodesResponse object.
+ * Returns a DescribeReservedCacheNodesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeReservedCacheNodesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ElastiCacheClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeReservedCacheNodesRequest::response(QNetworkReply * const reply) const
 {
@@ -95,20 +87,17 @@ QtAws::Core::AwsAbstractResponse * DescribeReservedCacheNodesRequest::response(Q
 }
 
 /*!
- * @internal
+ * \class QtAws::ElastiCache::DescribeReservedCacheNodesRequestPrivate
+ * \brief The DescribeReservedCacheNodesRequestPrivate class provides private implementation for DescribeReservedCacheNodesRequest.
+ * \internal
  *
- * @class  DescribeReservedCacheNodesRequestPrivate
- *
- * @brief  Private implementation for DescribeReservedCacheNodesRequest.
+ * \inmodule QtAwsElastiCache
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeReservedCacheNodesRequestPrivate object.
- *
- * @param  action  ElastiCache action being performed.
- * @param  q       Pointer to this object's public DescribeReservedCacheNodesRequest instance.
+ * Constructs a DescribeReservedCacheNodesRequestPrivate object for ElastiCache \a action with,
+ * public implementation \a q.
  */
 DescribeReservedCacheNodesRequestPrivate::DescribeReservedCacheNodesRequestPrivate(
     const ElastiCacheRequest::Action action, DescribeReservedCacheNodesRequest * const q)
@@ -118,15 +107,10 @@ DescribeReservedCacheNodesRequestPrivate::DescribeReservedCacheNodesRequestPriva
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeReservedCacheNodesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeReservedCacheNodesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeReservedCacheNodesRequest instance.
  */
 DescribeReservedCacheNodesRequestPrivate::DescribeReservedCacheNodesRequestPrivate(
     const DescribeReservedCacheNodesRequestPrivate &other, DescribeReservedCacheNodesRequest * const q)

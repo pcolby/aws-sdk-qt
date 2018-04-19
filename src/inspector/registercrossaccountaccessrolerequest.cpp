@@ -27,10 +27,9 @@ namespace Inspector {
 
 /*!
  * \class QtAws::Inspector::RegisterCrossAccountAccessRoleRequest
- *
  * \brief The RegisterCrossAccountAccessRoleRequest class provides an interface for Inspector RegisterCrossAccountAccessRole requests.
  *
- * \ingroup Inspector
+ * \inmodule QtAwsInspector
  *
  *  <fullname>Amazon Inspector</fullname>
  * 
@@ -42,9 +41,7 @@ namespace Inspector {
  */
 
 /*!
- * @brief  Constructs a new RegisterCrossAccountAccessRoleRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 RegisterCrossAccountAccessRoleRequest::RegisterCrossAccountAccessRoleRequest(const RegisterCrossAccountAccessRoleRequest &other)
     : InspectorRequest(new RegisterCrossAccountAccessRoleRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ RegisterCrossAccountAccessRoleRequest::RegisterCrossAccountAccessRoleRequest(con
 }
 
 /*!
- * @brief  Constructs a new RegisterCrossAccountAccessRoleRequest object.
+ * Constructs a RegisterCrossAccountAccessRoleRequest object.
  */
 RegisterCrossAccountAccessRoleRequest::RegisterCrossAccountAccessRoleRequest()
     : InspectorRequest(new RegisterCrossAccountAccessRoleRequestPrivate(InspectorRequest::RegisterCrossAccountAccessRoleAction, this))
@@ -71,14 +68,9 @@ bool RegisterCrossAccountAccessRoleRequest::isValid() const
 
 
 /*!
- * @brief  Construct an RegisterCrossAccountAccessRoleResponse object.
+ * Returns a RegisterCrossAccountAccessRoleResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An RegisterCrossAccountAccessRoleResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  InspectorClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * RegisterCrossAccountAccessRoleRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * RegisterCrossAccountAccessRoleRequest::respon
 }
 
 /*!
- * @internal
+ * \class QtAws::Inspector::RegisterCrossAccountAccessRoleRequestPrivate
+ * \brief The RegisterCrossAccountAccessRoleRequestPrivate class provides private implementation for RegisterCrossAccountAccessRoleRequest.
+ * \internal
  *
- * @class  RegisterCrossAccountAccessRoleRequestPrivate
- *
- * @brief  Private implementation for RegisterCrossAccountAccessRoleRequest.
+ * \inmodule QtAwsInspector
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new RegisterCrossAccountAccessRoleRequestPrivate object.
- *
- * @param  action  Inspector action being performed.
- * @param  q       Pointer to this object's public RegisterCrossAccountAccessRoleRequest instance.
+ * Constructs a RegisterCrossAccountAccessRoleRequestPrivate object for Inspector \a action with,
+ * public implementation \a q.
  */
 RegisterCrossAccountAccessRoleRequestPrivate::RegisterCrossAccountAccessRoleRequestPrivate(
     const InspectorRequest::Action action, RegisterCrossAccountAccessRoleRequest * const q)
@@ -109,15 +98,10 @@ RegisterCrossAccountAccessRoleRequestPrivate::RegisterCrossAccountAccessRoleRequ
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RegisterCrossAccountAccessRoleRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the RegisterCrossAccountAccessRoleRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public RegisterCrossAccountAccessRoleRequest instance.
  */
 RegisterCrossAccountAccessRoleRequestPrivate::RegisterCrossAccountAccessRoleRequestPrivate(
     const RegisterCrossAccountAccessRoleRequestPrivate &other, RegisterCrossAccountAccessRoleRequest * const q)

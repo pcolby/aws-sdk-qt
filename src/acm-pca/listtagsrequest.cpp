@@ -27,10 +27,9 @@ namespace ACMPCA {
 
 /*!
  * \class QtAws::ACMPCA::ListTagsRequest
- *
  * \brief The ListTagsRequest class provides an interface for ACMPCA ListTags requests.
  *
- * \ingroup ACMPCA
+ * \inmodule QtAwsACMPCA
  *
  *  You can use the ACM PCA API to create a private certificate authority (CA). You must first call the
  *  <a>CreateCertificateAuthority</a> function. If successful, the function returns an Amazon Resource Name (ARN) for your
@@ -67,9 +66,7 @@ namespace ACMPCA {
  */
 
 /*!
- * @brief  Constructs a new ListTagsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListTagsRequest::ListTagsRequest(const ListTagsRequest &other)
     : ACMPCARequest(new ListTagsRequestPrivate(*other.d_func(), this))
@@ -78,7 +75,7 @@ ListTagsRequest::ListTagsRequest(const ListTagsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ListTagsRequest object.
+ * Constructs a ListTagsRequest object.
  */
 ListTagsRequest::ListTagsRequest()
     : ACMPCARequest(new ListTagsRequestPrivate(ACMPCARequest::ListTagsAction, this))
@@ -96,14 +93,9 @@ bool ListTagsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListTagsResponse object.
+ * Returns a ListTagsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListTagsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ACMPCAClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListTagsRequest::response(QNetworkReply * const reply) const
 {
@@ -111,20 +103,17 @@ QtAws::Core::AwsAbstractResponse * ListTagsRequest::response(QNetworkReply * con
 }
 
 /*!
- * @internal
+ * \class QtAws::ACMPCA::ListTagsRequestPrivate
+ * \brief The ListTagsRequestPrivate class provides private implementation for ListTagsRequest.
+ * \internal
  *
- * @class  ListTagsRequestPrivate
- *
- * @brief  Private implementation for ListTagsRequest.
+ * \inmodule QtAwsACMPCA
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListTagsRequestPrivate object.
- *
- * @param  action  ACMPCA action being performed.
- * @param  q       Pointer to this object's public ListTagsRequest instance.
+ * Constructs a ListTagsRequestPrivate object for ACMPCA \a action with,
+ * public implementation \a q.
  */
 ListTagsRequestPrivate::ListTagsRequestPrivate(
     const ACMPCARequest::Action action, ListTagsRequest * const q)
@@ -134,15 +123,10 @@ ListTagsRequestPrivate::ListTagsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListTagsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListTagsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListTagsRequest instance.
  */
 ListTagsRequestPrivate::ListTagsRequestPrivate(
     const ListTagsRequestPrivate &other, ListTagsRequest * const q)

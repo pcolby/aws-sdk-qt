@@ -27,10 +27,9 @@ namespace GameLift {
 
 /*!
  * \class QtAws::GameLift::DescribeFleetPortSettingsRequest
- *
  * \brief The DescribeFleetPortSettingsRequest class provides an interface for GameLift DescribeFleetPortSettings requests.
  *
- * \ingroup GameLift
+ * \inmodule QtAwsGameLift
  *
  *  <fullname>Amazon GameLift Service</fullname>
  * 
@@ -473,9 +472,7 @@ namespace GameLift {
  */
 
 /*!
- * @brief  Constructs a new DescribeFleetPortSettingsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeFleetPortSettingsRequest::DescribeFleetPortSettingsRequest(const DescribeFleetPortSettingsRequest &other)
     : GameLiftRequest(new DescribeFleetPortSettingsRequestPrivate(*other.d_func(), this))
@@ -484,7 +481,7 @@ DescribeFleetPortSettingsRequest::DescribeFleetPortSettingsRequest(const Describ
 }
 
 /*!
- * @brief  Constructs a new DescribeFleetPortSettingsRequest object.
+ * Constructs a DescribeFleetPortSettingsRequest object.
  */
 DescribeFleetPortSettingsRequest::DescribeFleetPortSettingsRequest()
     : GameLiftRequest(new DescribeFleetPortSettingsRequestPrivate(GameLiftRequest::DescribeFleetPortSettingsAction, this))
@@ -502,14 +499,9 @@ bool DescribeFleetPortSettingsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeFleetPortSettingsResponse object.
+ * Returns a DescribeFleetPortSettingsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeFleetPortSettingsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GameLiftClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeFleetPortSettingsRequest::response(QNetworkReply * const reply) const
 {
@@ -517,20 +509,17 @@ QtAws::Core::AwsAbstractResponse * DescribeFleetPortSettingsRequest::response(QN
 }
 
 /*!
- * @internal
+ * \class QtAws::GameLift::DescribeFleetPortSettingsRequestPrivate
+ * \brief The DescribeFleetPortSettingsRequestPrivate class provides private implementation for DescribeFleetPortSettingsRequest.
+ * \internal
  *
- * @class  DescribeFleetPortSettingsRequestPrivate
- *
- * @brief  Private implementation for DescribeFleetPortSettingsRequest.
+ * \inmodule QtAwsGameLift
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeFleetPortSettingsRequestPrivate object.
- *
- * @param  action  GameLift action being performed.
- * @param  q       Pointer to this object's public DescribeFleetPortSettingsRequest instance.
+ * Constructs a DescribeFleetPortSettingsRequestPrivate object for GameLift \a action with,
+ * public implementation \a q.
  */
 DescribeFleetPortSettingsRequestPrivate::DescribeFleetPortSettingsRequestPrivate(
     const GameLiftRequest::Action action, DescribeFleetPortSettingsRequest * const q)
@@ -540,15 +529,10 @@ DescribeFleetPortSettingsRequestPrivate::DescribeFleetPortSettingsRequestPrivate
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeFleetPortSettingsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeFleetPortSettingsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeFleetPortSettingsRequest instance.
  */
 DescribeFleetPortSettingsRequestPrivate::DescribeFleetPortSettingsRequestPrivate(
     const DescribeFleetPortSettingsRequestPrivate &other, DescribeFleetPortSettingsRequest * const q)

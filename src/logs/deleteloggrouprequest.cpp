@@ -27,10 +27,9 @@ namespace CloudWatchLogs {
 
 /*!
  * \class QtAws::CloudWatchLogs::DeleteLogGroupRequest
- *
  * \brief The DeleteLogGroupRequest class provides an interface for CloudWatchLogs DeleteLogGroup requests.
  *
- * \ingroup CloudWatchLogs
+ * \inmodule QtAwsCloudWatchLogs
  *
  *  You can use Amazon CloudWatch Logs to monitor, store, and access your log files from Amazon EC2 instances, AWS
  *  CloudTrail, or other sources. You can then retrieve the associated log data from CloudWatch Logs using the CloudWatch
@@ -66,9 +65,7 @@ namespace CloudWatchLogs {
  */
 
 /*!
- * @brief  Constructs a new DeleteLogGroupRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteLogGroupRequest::DeleteLogGroupRequest(const DeleteLogGroupRequest &other)
     : CloudWatchLogsRequest(new DeleteLogGroupRequestPrivate(*other.d_func(), this))
@@ -77,7 +74,7 @@ DeleteLogGroupRequest::DeleteLogGroupRequest(const DeleteLogGroupRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DeleteLogGroupRequest object.
+ * Constructs a DeleteLogGroupRequest object.
  */
 DeleteLogGroupRequest::DeleteLogGroupRequest()
     : CloudWatchLogsRequest(new DeleteLogGroupRequestPrivate(CloudWatchLogsRequest::DeleteLogGroupAction, this))
@@ -95,14 +92,9 @@ bool DeleteLogGroupRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteLogGroupResponse object.
+ * Returns a DeleteLogGroupResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteLogGroupResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudWatchLogsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteLogGroupRequest::response(QNetworkReply * const reply) const
 {
@@ -110,20 +102,17 @@ QtAws::Core::AwsAbstractResponse * DeleteLogGroupRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudWatchLogs::DeleteLogGroupRequestPrivate
+ * \brief The DeleteLogGroupRequestPrivate class provides private implementation for DeleteLogGroupRequest.
+ * \internal
  *
- * @class  DeleteLogGroupRequestPrivate
- *
- * @brief  Private implementation for DeleteLogGroupRequest.
+ * \inmodule QtAwsCloudWatchLogs
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteLogGroupRequestPrivate object.
- *
- * @param  action  CloudWatchLogs action being performed.
- * @param  q       Pointer to this object's public DeleteLogGroupRequest instance.
+ * Constructs a DeleteLogGroupRequestPrivate object for CloudWatchLogs \a action with,
+ * public implementation \a q.
  */
 DeleteLogGroupRequestPrivate::DeleteLogGroupRequestPrivate(
     const CloudWatchLogsRequest::Action action, DeleteLogGroupRequest * const q)
@@ -133,15 +122,10 @@ DeleteLogGroupRequestPrivate::DeleteLogGroupRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteLogGroupRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteLogGroupRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteLogGroupRequest instance.
  */
 DeleteLogGroupRequestPrivate::DeleteLogGroupRequestPrivate(
     const DeleteLogGroupRequestPrivate &other, DeleteLogGroupRequest * const q)

@@ -27,10 +27,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::PurchaseReservedDBInstancesOfferingRequest
- *
  * \brief The PurchaseReservedDBInstancesOfferingRequest class provides an interface for RDS PurchaseReservedDBInstancesOffering requests.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -101,9 +100,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new PurchaseReservedDBInstancesOfferingRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 PurchaseReservedDBInstancesOfferingRequest::PurchaseReservedDBInstancesOfferingRequest(const PurchaseReservedDBInstancesOfferingRequest &other)
     : RDSRequest(new PurchaseReservedDBInstancesOfferingRequestPrivate(*other.d_func(), this))
@@ -112,7 +109,7 @@ PurchaseReservedDBInstancesOfferingRequest::PurchaseReservedDBInstancesOfferingR
 }
 
 /*!
- * @brief  Constructs a new PurchaseReservedDBInstancesOfferingRequest object.
+ * Constructs a PurchaseReservedDBInstancesOfferingRequest object.
  */
 PurchaseReservedDBInstancesOfferingRequest::PurchaseReservedDBInstancesOfferingRequest()
     : RDSRequest(new PurchaseReservedDBInstancesOfferingRequestPrivate(RDSRequest::PurchaseReservedDBInstancesOfferingAction, this))
@@ -130,14 +127,9 @@ bool PurchaseReservedDBInstancesOfferingRequest::isValid() const
 
 
 /*!
- * @brief  Construct an PurchaseReservedDBInstancesOfferingResponse object.
+ * Returns a PurchaseReservedDBInstancesOfferingResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An PurchaseReservedDBInstancesOfferingResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RDSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * PurchaseReservedDBInstancesOfferingRequest::response(QNetworkReply * const reply) const
 {
@@ -145,20 +137,17 @@ QtAws::Core::AwsAbstractResponse * PurchaseReservedDBInstancesOfferingRequest::r
 }
 
 /*!
- * @internal
+ * \class QtAws::RDS::PurchaseReservedDBInstancesOfferingRequestPrivate
+ * \brief The PurchaseReservedDBInstancesOfferingRequestPrivate class provides private implementation for PurchaseReservedDBInstancesOfferingRequest.
+ * \internal
  *
- * @class  PurchaseReservedDBInstancesOfferingRequestPrivate
- *
- * @brief  Private implementation for PurchaseReservedDBInstancesOfferingRequest.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new PurchaseReservedDBInstancesOfferingRequestPrivate object.
- *
- * @param  action  RDS action being performed.
- * @param  q       Pointer to this object's public PurchaseReservedDBInstancesOfferingRequest instance.
+ * Constructs a PurchaseReservedDBInstancesOfferingRequestPrivate object for RDS \a action with,
+ * public implementation \a q.
  */
 PurchaseReservedDBInstancesOfferingRequestPrivate::PurchaseReservedDBInstancesOfferingRequestPrivate(
     const RDSRequest::Action action, PurchaseReservedDBInstancesOfferingRequest * const q)
@@ -168,15 +157,10 @@ PurchaseReservedDBInstancesOfferingRequestPrivate::PurchaseReservedDBInstancesOf
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PurchaseReservedDBInstancesOfferingRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the PurchaseReservedDBInstancesOfferingRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public PurchaseReservedDBInstancesOfferingRequest instance.
  */
 PurchaseReservedDBInstancesOfferingRequestPrivate::PurchaseReservedDBInstancesOfferingRequestPrivate(
     const PurchaseReservedDBInstancesOfferingRequestPrivate &other, PurchaseReservedDBInstancesOfferingRequest * const q)

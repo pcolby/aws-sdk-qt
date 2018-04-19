@@ -27,10 +27,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::CreateAssociationRequest
- *
  * \brief The CreateAssociationRequest class provides an interface for SSM CreateAssociation requests.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -61,9 +60,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new CreateAssociationRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateAssociationRequest::CreateAssociationRequest(const CreateAssociationRequest &other)
     : SSMRequest(new CreateAssociationRequestPrivate(*other.d_func(), this))
@@ -72,7 +69,7 @@ CreateAssociationRequest::CreateAssociationRequest(const CreateAssociationReques
 }
 
 /*!
- * @brief  Constructs a new CreateAssociationRequest object.
+ * Constructs a CreateAssociationRequest object.
  */
 CreateAssociationRequest::CreateAssociationRequest()
     : SSMRequest(new CreateAssociationRequestPrivate(SSMRequest::CreateAssociationAction, this))
@@ -90,14 +87,9 @@ bool CreateAssociationRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateAssociationResponse object.
+ * Returns a CreateAssociationResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateAssociationResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SSMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateAssociationRequest::response(QNetworkReply * const reply) const
 {
@@ -105,20 +97,17 @@ QtAws::Core::AwsAbstractResponse * CreateAssociationRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::SSM::CreateAssociationRequestPrivate
+ * \brief The CreateAssociationRequestPrivate class provides private implementation for CreateAssociationRequest.
+ * \internal
  *
- * @class  CreateAssociationRequestPrivate
- *
- * @brief  Private implementation for CreateAssociationRequest.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateAssociationRequestPrivate object.
- *
- * @param  action  SSM action being performed.
- * @param  q       Pointer to this object's public CreateAssociationRequest instance.
+ * Constructs a CreateAssociationRequestPrivate object for SSM \a action with,
+ * public implementation \a q.
  */
 CreateAssociationRequestPrivate::CreateAssociationRequestPrivate(
     const SSMRequest::Action action, CreateAssociationRequest * const q)
@@ -128,15 +117,10 @@ CreateAssociationRequestPrivate::CreateAssociationRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateAssociationRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateAssociationRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateAssociationRequest instance.
  */
 CreateAssociationRequestPrivate::CreateAssociationRequestPrivate(
     const CreateAssociationRequestPrivate &other, CreateAssociationRequest * const q)

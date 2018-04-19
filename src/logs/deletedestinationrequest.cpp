@@ -27,10 +27,9 @@ namespace CloudWatchLogs {
 
 /*!
  * \class QtAws::CloudWatchLogs::DeleteDestinationRequest
- *
  * \brief The DeleteDestinationRequest class provides an interface for CloudWatchLogs DeleteDestination requests.
  *
- * \ingroup CloudWatchLogs
+ * \inmodule QtAwsCloudWatchLogs
  *
  *  You can use Amazon CloudWatch Logs to monitor, store, and access your log files from Amazon EC2 instances, AWS
  *  CloudTrail, or other sources. You can then retrieve the associated log data from CloudWatch Logs using the CloudWatch
@@ -66,9 +65,7 @@ namespace CloudWatchLogs {
  */
 
 /*!
- * @brief  Constructs a new DeleteDestinationRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteDestinationRequest::DeleteDestinationRequest(const DeleteDestinationRequest &other)
     : CloudWatchLogsRequest(new DeleteDestinationRequestPrivate(*other.d_func(), this))
@@ -77,7 +74,7 @@ DeleteDestinationRequest::DeleteDestinationRequest(const DeleteDestinationReques
 }
 
 /*!
- * @brief  Constructs a new DeleteDestinationRequest object.
+ * Constructs a DeleteDestinationRequest object.
  */
 DeleteDestinationRequest::DeleteDestinationRequest()
     : CloudWatchLogsRequest(new DeleteDestinationRequestPrivate(CloudWatchLogsRequest::DeleteDestinationAction, this))
@@ -95,14 +92,9 @@ bool DeleteDestinationRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteDestinationResponse object.
+ * Returns a DeleteDestinationResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteDestinationResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudWatchLogsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteDestinationRequest::response(QNetworkReply * const reply) const
 {
@@ -110,20 +102,17 @@ QtAws::Core::AwsAbstractResponse * DeleteDestinationRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudWatchLogs::DeleteDestinationRequestPrivate
+ * \brief The DeleteDestinationRequestPrivate class provides private implementation for DeleteDestinationRequest.
+ * \internal
  *
- * @class  DeleteDestinationRequestPrivate
- *
- * @brief  Private implementation for DeleteDestinationRequest.
+ * \inmodule QtAwsCloudWatchLogs
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteDestinationRequestPrivate object.
- *
- * @param  action  CloudWatchLogs action being performed.
- * @param  q       Pointer to this object's public DeleteDestinationRequest instance.
+ * Constructs a DeleteDestinationRequestPrivate object for CloudWatchLogs \a action with,
+ * public implementation \a q.
  */
 DeleteDestinationRequestPrivate::DeleteDestinationRequestPrivate(
     const CloudWatchLogsRequest::Action action, DeleteDestinationRequest * const q)
@@ -133,15 +122,10 @@ DeleteDestinationRequestPrivate::DeleteDestinationRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteDestinationRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteDestinationRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteDestinationRequest instance.
  */
 DeleteDestinationRequestPrivate::DeleteDestinationRequestPrivate(
     const DeleteDestinationRequestPrivate &other, DeleteDestinationRequest * const q)

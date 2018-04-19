@@ -27,19 +27,16 @@ namespace Pinpoint {
 
 /*!
  * \class QtAws::Pinpoint::GetSmsChannelRequest
- *
  * \brief The GetSmsChannelRequest class provides an interface for Pinpoint GetSmsChannel requests.
  *
- * \ingroup Pinpoint
+ * \inmodule QtAwsPinpoint
  *
  *
  * \sa PinpointClient::getSmsChannel
  */
 
 /*!
- * @brief  Constructs a new GetSmsChannelRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetSmsChannelRequest::GetSmsChannelRequest(const GetSmsChannelRequest &other)
     : PinpointRequest(new GetSmsChannelRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ GetSmsChannelRequest::GetSmsChannelRequest(const GetSmsChannelRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetSmsChannelRequest object.
+ * Constructs a GetSmsChannelRequest object.
  */
 GetSmsChannelRequest::GetSmsChannelRequest()
     : PinpointRequest(new GetSmsChannelRequestPrivate(PinpointRequest::GetSmsChannelAction, this))
@@ -66,14 +63,9 @@ bool GetSmsChannelRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetSmsChannelResponse object.
+ * Returns a GetSmsChannelResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetSmsChannelResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  PinpointClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetSmsChannelRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * GetSmsChannelRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::Pinpoint::GetSmsChannelRequestPrivate
+ * \brief The GetSmsChannelRequestPrivate class provides private implementation for GetSmsChannelRequest.
+ * \internal
  *
- * @class  GetSmsChannelRequestPrivate
- *
- * @brief  Private implementation for GetSmsChannelRequest.
+ * \inmodule QtAwsPinpoint
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetSmsChannelRequestPrivate object.
- *
- * @param  action  Pinpoint action being performed.
- * @param  q       Pointer to this object's public GetSmsChannelRequest instance.
+ * Constructs a GetSmsChannelRequestPrivate object for Pinpoint \a action with,
+ * public implementation \a q.
  */
 GetSmsChannelRequestPrivate::GetSmsChannelRequestPrivate(
     const PinpointRequest::Action action, GetSmsChannelRequest * const q)
@@ -104,15 +93,10 @@ GetSmsChannelRequestPrivate::GetSmsChannelRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetSmsChannelRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetSmsChannelRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetSmsChannelRequest instance.
  */
 GetSmsChannelRequestPrivate::GetSmsChannelRequestPrivate(
     const GetSmsChannelRequestPrivate &other, GetSmsChannelRequest * const q)

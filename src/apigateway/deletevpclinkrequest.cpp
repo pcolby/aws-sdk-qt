@@ -27,10 +27,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::DeleteVpcLinkRequest
- *
  * \brief The DeleteVpcLinkRequest class provides an interface for APIGateway DeleteVpcLink requests.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -42,9 +41,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new DeleteVpcLinkRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteVpcLinkRequest::DeleteVpcLinkRequest(const DeleteVpcLinkRequest &other)
     : APIGatewayRequest(new DeleteVpcLinkRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ DeleteVpcLinkRequest::DeleteVpcLinkRequest(const DeleteVpcLinkRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DeleteVpcLinkRequest object.
+ * Constructs a DeleteVpcLinkRequest object.
  */
 DeleteVpcLinkRequest::DeleteVpcLinkRequest()
     : APIGatewayRequest(new DeleteVpcLinkRequestPrivate(APIGatewayRequest::DeleteVpcLinkAction, this))
@@ -71,14 +68,9 @@ bool DeleteVpcLinkRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteVpcLinkResponse object.
+ * Returns a DeleteVpcLinkResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteVpcLinkResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  APIGatewayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteVpcLinkRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * DeleteVpcLinkRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::APIGateway::DeleteVpcLinkRequestPrivate
+ * \brief The DeleteVpcLinkRequestPrivate class provides private implementation for DeleteVpcLinkRequest.
+ * \internal
  *
- * @class  DeleteVpcLinkRequestPrivate
- *
- * @brief  Private implementation for DeleteVpcLinkRequest.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteVpcLinkRequestPrivate object.
- *
- * @param  action  APIGateway action being performed.
- * @param  q       Pointer to this object's public DeleteVpcLinkRequest instance.
+ * Constructs a DeleteVpcLinkRequestPrivate object for APIGateway \a action with,
+ * public implementation \a q.
  */
 DeleteVpcLinkRequestPrivate::DeleteVpcLinkRequestPrivate(
     const APIGatewayRequest::Action action, DeleteVpcLinkRequest * const q)
@@ -109,15 +98,10 @@ DeleteVpcLinkRequestPrivate::DeleteVpcLinkRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteVpcLinkRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteVpcLinkRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteVpcLinkRequest instance.
  */
 DeleteVpcLinkRequestPrivate::DeleteVpcLinkRequestPrivate(
     const DeleteVpcLinkRequestPrivate &other, DeleteVpcLinkRequest * const q)

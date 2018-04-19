@@ -27,10 +27,9 @@ namespace SWF {
 
 /*!
  * \class QtAws::SWF::SignalWorkflowExecutionRequest
- *
  * \brief The SignalWorkflowExecutionRequest class provides an interface for SWF SignalWorkflowExecution requests.
  *
- * \ingroup SWF
+ * \inmodule QtAwsSWF
  *
  *  <fullname>Amazon Simple Workflow Service</fullname>
  * 
@@ -53,9 +52,7 @@ namespace SWF {
  */
 
 /*!
- * @brief  Constructs a new SignalWorkflowExecutionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 SignalWorkflowExecutionRequest::SignalWorkflowExecutionRequest(const SignalWorkflowExecutionRequest &other)
     : SWFRequest(new SignalWorkflowExecutionRequestPrivate(*other.d_func(), this))
@@ -64,7 +61,7 @@ SignalWorkflowExecutionRequest::SignalWorkflowExecutionRequest(const SignalWorkf
 }
 
 /*!
- * @brief  Constructs a new SignalWorkflowExecutionRequest object.
+ * Constructs a SignalWorkflowExecutionRequest object.
  */
 SignalWorkflowExecutionRequest::SignalWorkflowExecutionRequest()
     : SWFRequest(new SignalWorkflowExecutionRequestPrivate(SWFRequest::SignalWorkflowExecutionAction, this))
@@ -82,14 +79,9 @@ bool SignalWorkflowExecutionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an SignalWorkflowExecutionResponse object.
+ * Returns a SignalWorkflowExecutionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An SignalWorkflowExecutionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SWFClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * SignalWorkflowExecutionRequest::response(QNetworkReply * const reply) const
 {
@@ -97,20 +89,17 @@ QtAws::Core::AwsAbstractResponse * SignalWorkflowExecutionRequest::response(QNet
 }
 
 /*!
- * @internal
+ * \class QtAws::SWF::SignalWorkflowExecutionRequestPrivate
+ * \brief The SignalWorkflowExecutionRequestPrivate class provides private implementation for SignalWorkflowExecutionRequest.
+ * \internal
  *
- * @class  SignalWorkflowExecutionRequestPrivate
- *
- * @brief  Private implementation for SignalWorkflowExecutionRequest.
+ * \inmodule QtAwsSWF
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new SignalWorkflowExecutionRequestPrivate object.
- *
- * @param  action  SWF action being performed.
- * @param  q       Pointer to this object's public SignalWorkflowExecutionRequest instance.
+ * Constructs a SignalWorkflowExecutionRequestPrivate object for SWF \a action with,
+ * public implementation \a q.
  */
 SignalWorkflowExecutionRequestPrivate::SignalWorkflowExecutionRequestPrivate(
     const SWFRequest::Action action, SignalWorkflowExecutionRequest * const q)
@@ -120,15 +109,10 @@ SignalWorkflowExecutionRequestPrivate::SignalWorkflowExecutionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SignalWorkflowExecutionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the SignalWorkflowExecutionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public SignalWorkflowExecutionRequest instance.
  */
 SignalWorkflowExecutionRequestPrivate::SignalWorkflowExecutionRequestPrivate(
     const SignalWorkflowExecutionRequestPrivate &other, SignalWorkflowExecutionRequest * const q)

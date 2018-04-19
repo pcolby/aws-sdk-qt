@@ -27,10 +27,9 @@ namespace Glacier {
 
 /*!
  * \class QtAws::Glacier::AbortMultipartUploadRequest
- *
  * \brief The AbortMultipartUploadRequest class provides an interface for Glacier AbortMultipartUpload requests.
  *
- * \ingroup Glacier
+ * \inmodule QtAwsGlacier
  *
  *  Amazon Glacier is a storage solution for "cold
  * 
@@ -75,9 +74,7 @@ namespace Glacier {
  */
 
 /*!
- * @brief  Constructs a new AbortMultipartUploadRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AbortMultipartUploadRequest::AbortMultipartUploadRequest(const AbortMultipartUploadRequest &other)
     : GlacierRequest(new AbortMultipartUploadRequestPrivate(*other.d_func(), this))
@@ -86,7 +83,7 @@ AbortMultipartUploadRequest::AbortMultipartUploadRequest(const AbortMultipartUpl
 }
 
 /*!
- * @brief  Constructs a new AbortMultipartUploadRequest object.
+ * Constructs a AbortMultipartUploadRequest object.
  */
 AbortMultipartUploadRequest::AbortMultipartUploadRequest()
     : GlacierRequest(new AbortMultipartUploadRequestPrivate(GlacierRequest::AbortMultipartUploadAction, this))
@@ -104,14 +101,9 @@ bool AbortMultipartUploadRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AbortMultipartUploadResponse object.
+ * Returns a AbortMultipartUploadResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AbortMultipartUploadResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GlacierClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AbortMultipartUploadRequest::response(QNetworkReply * const reply) const
 {
@@ -119,20 +111,17 @@ QtAws::Core::AwsAbstractResponse * AbortMultipartUploadRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::Glacier::AbortMultipartUploadRequestPrivate
+ * \brief The AbortMultipartUploadRequestPrivate class provides private implementation for AbortMultipartUploadRequest.
+ * \internal
  *
- * @class  AbortMultipartUploadRequestPrivate
- *
- * @brief  Private implementation for AbortMultipartUploadRequest.
+ * \inmodule QtAwsGlacier
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AbortMultipartUploadRequestPrivate object.
- *
- * @param  action  Glacier action being performed.
- * @param  q       Pointer to this object's public AbortMultipartUploadRequest instance.
+ * Constructs a AbortMultipartUploadRequestPrivate object for Glacier \a action with,
+ * public implementation \a q.
  */
 AbortMultipartUploadRequestPrivate::AbortMultipartUploadRequestPrivate(
     const GlacierRequest::Action action, AbortMultipartUploadRequest * const q)
@@ -142,15 +131,10 @@ AbortMultipartUploadRequestPrivate::AbortMultipartUploadRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AbortMultipartUploadRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AbortMultipartUploadRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AbortMultipartUploadRequest instance.
  */
 AbortMultipartUploadRequestPrivate::AbortMultipartUploadRequestPrivate(
     const AbortMultipartUploadRequestPrivate &other, AbortMultipartUploadRequest * const q)

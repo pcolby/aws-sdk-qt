@@ -27,10 +27,9 @@ namespace ElastiCache {
 
 /*!
  * \class QtAws::ElastiCache::DescribeEngineDefaultParametersRequest
- *
  * \brief The DescribeEngineDefaultParametersRequest class provides an interface for ElastiCache DescribeEngineDefaultParameters requests.
  *
- * \ingroup ElastiCache
+ * \inmodule QtAwsElastiCache
  *
  *  <fullname>Amazon ElastiCache</fullname>
  * 
@@ -51,9 +50,7 @@ namespace ElastiCache {
  */
 
 /*!
- * @brief  Constructs a new DescribeEngineDefaultParametersRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeEngineDefaultParametersRequest::DescribeEngineDefaultParametersRequest(const DescribeEngineDefaultParametersRequest &other)
     : ElastiCacheRequest(new DescribeEngineDefaultParametersRequestPrivate(*other.d_func(), this))
@@ -62,7 +59,7 @@ DescribeEngineDefaultParametersRequest::DescribeEngineDefaultParametersRequest(c
 }
 
 /*!
- * @brief  Constructs a new DescribeEngineDefaultParametersRequest object.
+ * Constructs a DescribeEngineDefaultParametersRequest object.
  */
 DescribeEngineDefaultParametersRequest::DescribeEngineDefaultParametersRequest()
     : ElastiCacheRequest(new DescribeEngineDefaultParametersRequestPrivate(ElastiCacheRequest::DescribeEngineDefaultParametersAction, this))
@@ -80,14 +77,9 @@ bool DescribeEngineDefaultParametersRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeEngineDefaultParametersResponse object.
+ * Returns a DescribeEngineDefaultParametersResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeEngineDefaultParametersResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ElastiCacheClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeEngineDefaultParametersRequest::response(QNetworkReply * const reply) const
 {
@@ -95,20 +87,17 @@ QtAws::Core::AwsAbstractResponse * DescribeEngineDefaultParametersRequest::respo
 }
 
 /*!
- * @internal
+ * \class QtAws::ElastiCache::DescribeEngineDefaultParametersRequestPrivate
+ * \brief The DescribeEngineDefaultParametersRequestPrivate class provides private implementation for DescribeEngineDefaultParametersRequest.
+ * \internal
  *
- * @class  DescribeEngineDefaultParametersRequestPrivate
- *
- * @brief  Private implementation for DescribeEngineDefaultParametersRequest.
+ * \inmodule QtAwsElastiCache
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeEngineDefaultParametersRequestPrivate object.
- *
- * @param  action  ElastiCache action being performed.
- * @param  q       Pointer to this object's public DescribeEngineDefaultParametersRequest instance.
+ * Constructs a DescribeEngineDefaultParametersRequestPrivate object for ElastiCache \a action with,
+ * public implementation \a q.
  */
 DescribeEngineDefaultParametersRequestPrivate::DescribeEngineDefaultParametersRequestPrivate(
     const ElastiCacheRequest::Action action, DescribeEngineDefaultParametersRequest * const q)
@@ -118,15 +107,10 @@ DescribeEngineDefaultParametersRequestPrivate::DescribeEngineDefaultParametersRe
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeEngineDefaultParametersRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeEngineDefaultParametersRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeEngineDefaultParametersRequest instance.
  */
 DescribeEngineDefaultParametersRequestPrivate::DescribeEngineDefaultParametersRequestPrivate(
     const DescribeEngineDefaultParametersRequestPrivate &other, DescribeEngineDefaultParametersRequest * const q)

@@ -27,10 +27,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::ApplyPendingMaintenanceActionRequest
- *
  * \brief The ApplyPendingMaintenanceActionRequest class provides an interface for RDS ApplyPendingMaintenanceAction requests.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -101,9 +100,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new ApplyPendingMaintenanceActionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ApplyPendingMaintenanceActionRequest::ApplyPendingMaintenanceActionRequest(const ApplyPendingMaintenanceActionRequest &other)
     : RDSRequest(new ApplyPendingMaintenanceActionRequestPrivate(*other.d_func(), this))
@@ -112,7 +109,7 @@ ApplyPendingMaintenanceActionRequest::ApplyPendingMaintenanceActionRequest(const
 }
 
 /*!
- * @brief  Constructs a new ApplyPendingMaintenanceActionRequest object.
+ * Constructs a ApplyPendingMaintenanceActionRequest object.
  */
 ApplyPendingMaintenanceActionRequest::ApplyPendingMaintenanceActionRequest()
     : RDSRequest(new ApplyPendingMaintenanceActionRequestPrivate(RDSRequest::ApplyPendingMaintenanceActionAction, this))
@@ -130,14 +127,9 @@ bool ApplyPendingMaintenanceActionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ApplyPendingMaintenanceActionResponse object.
+ * Returns a ApplyPendingMaintenanceActionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ApplyPendingMaintenanceActionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RDSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ApplyPendingMaintenanceActionRequest::response(QNetworkReply * const reply) const
 {
@@ -145,20 +137,17 @@ QtAws::Core::AwsAbstractResponse * ApplyPendingMaintenanceActionRequest::respons
 }
 
 /*!
- * @internal
+ * \class QtAws::RDS::ApplyPendingMaintenanceActionRequestPrivate
+ * \brief The ApplyPendingMaintenanceActionRequestPrivate class provides private implementation for ApplyPendingMaintenanceActionRequest.
+ * \internal
  *
- * @class  ApplyPendingMaintenanceActionRequestPrivate
- *
- * @brief  Private implementation for ApplyPendingMaintenanceActionRequest.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ApplyPendingMaintenanceActionRequestPrivate object.
- *
- * @param  action  RDS action being performed.
- * @param  q       Pointer to this object's public ApplyPendingMaintenanceActionRequest instance.
+ * Constructs a ApplyPendingMaintenanceActionRequestPrivate object for RDS \a action with,
+ * public implementation \a q.
  */
 ApplyPendingMaintenanceActionRequestPrivate::ApplyPendingMaintenanceActionRequestPrivate(
     const RDSRequest::Action action, ApplyPendingMaintenanceActionRequest * const q)
@@ -168,15 +157,10 @@ ApplyPendingMaintenanceActionRequestPrivate::ApplyPendingMaintenanceActionReques
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ApplyPendingMaintenanceActionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ApplyPendingMaintenanceActionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ApplyPendingMaintenanceActionRequest instance.
  */
 ApplyPendingMaintenanceActionRequestPrivate::ApplyPendingMaintenanceActionRequestPrivate(
     const ApplyPendingMaintenanceActionRequestPrivate &other, ApplyPendingMaintenanceActionRequest * const q)

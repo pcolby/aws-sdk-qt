@@ -27,10 +27,9 @@ namespace GameLift {
 
 /*!
  * \class QtAws::GameLift::DeleteGameSessionQueueRequest
- *
  * \brief The DeleteGameSessionQueueRequest class provides an interface for GameLift DeleteGameSessionQueue requests.
  *
- * \ingroup GameLift
+ * \inmodule QtAwsGameLift
  *
  *  <fullname>Amazon GameLift Service</fullname>
  * 
@@ -473,9 +472,7 @@ namespace GameLift {
  */
 
 /*!
- * @brief  Constructs a new DeleteGameSessionQueueRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteGameSessionQueueRequest::DeleteGameSessionQueueRequest(const DeleteGameSessionQueueRequest &other)
     : GameLiftRequest(new DeleteGameSessionQueueRequestPrivate(*other.d_func(), this))
@@ -484,7 +481,7 @@ DeleteGameSessionQueueRequest::DeleteGameSessionQueueRequest(const DeleteGameSes
 }
 
 /*!
- * @brief  Constructs a new DeleteGameSessionQueueRequest object.
+ * Constructs a DeleteGameSessionQueueRequest object.
  */
 DeleteGameSessionQueueRequest::DeleteGameSessionQueueRequest()
     : GameLiftRequest(new DeleteGameSessionQueueRequestPrivate(GameLiftRequest::DeleteGameSessionQueueAction, this))
@@ -502,14 +499,9 @@ bool DeleteGameSessionQueueRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteGameSessionQueueResponse object.
+ * Returns a DeleteGameSessionQueueResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteGameSessionQueueResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GameLiftClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteGameSessionQueueRequest::response(QNetworkReply * const reply) const
 {
@@ -517,20 +509,17 @@ QtAws::Core::AwsAbstractResponse * DeleteGameSessionQueueRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::GameLift::DeleteGameSessionQueueRequestPrivate
+ * \brief The DeleteGameSessionQueueRequestPrivate class provides private implementation for DeleteGameSessionQueueRequest.
+ * \internal
  *
- * @class  DeleteGameSessionQueueRequestPrivate
- *
- * @brief  Private implementation for DeleteGameSessionQueueRequest.
+ * \inmodule QtAwsGameLift
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteGameSessionQueueRequestPrivate object.
- *
- * @param  action  GameLift action being performed.
- * @param  q       Pointer to this object's public DeleteGameSessionQueueRequest instance.
+ * Constructs a DeleteGameSessionQueueRequestPrivate object for GameLift \a action with,
+ * public implementation \a q.
  */
 DeleteGameSessionQueueRequestPrivate::DeleteGameSessionQueueRequestPrivate(
     const GameLiftRequest::Action action, DeleteGameSessionQueueRequest * const q)
@@ -540,15 +529,10 @@ DeleteGameSessionQueueRequestPrivate::DeleteGameSessionQueueRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteGameSessionQueueRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteGameSessionQueueRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteGameSessionQueueRequest instance.
  */
 DeleteGameSessionQueueRequestPrivate::DeleteGameSessionQueueRequestPrivate(
     const DeleteGameSessionQueueRequestPrivate &other, DeleteGameSessionQueueRequest * const q)

@@ -27,10 +27,9 @@ namespace ElasticLoadBalancingv2 {
 
 /*!
  * \class QtAws::ElasticLoadBalancingv2::DeregisterTargetsRequest
- *
  * \brief The DeregisterTargetsRequest class provides an interface for ElasticLoadBalancingv2 DeregisterTargets requests.
  *
- * \ingroup ElasticLoadBalancingv2
+ * \inmodule QtAwsElasticLoadBalancingv2
  *
  *  <fullname>Elastic Load Balancing</fullname>
  * 
@@ -105,9 +104,7 @@ namespace ElasticLoadBalancingv2 {
  */
 
 /*!
- * @brief  Constructs a new DeregisterTargetsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeregisterTargetsRequest::DeregisterTargetsRequest(const DeregisterTargetsRequest &other)
     : ElasticLoadBalancingv2Request(new DeregisterTargetsRequestPrivate(*other.d_func(), this))
@@ -116,7 +113,7 @@ DeregisterTargetsRequest::DeregisterTargetsRequest(const DeregisterTargetsReques
 }
 
 /*!
- * @brief  Constructs a new DeregisterTargetsRequest object.
+ * Constructs a DeregisterTargetsRequest object.
  */
 DeregisterTargetsRequest::DeregisterTargetsRequest()
     : ElasticLoadBalancingv2Request(new DeregisterTargetsRequestPrivate(ElasticLoadBalancingv2Request::DeregisterTargetsAction, this))
@@ -134,14 +131,9 @@ bool DeregisterTargetsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeregisterTargetsResponse object.
+ * Returns a DeregisterTargetsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeregisterTargetsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ElasticLoadBalancingv2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeregisterTargetsRequest::response(QNetworkReply * const reply) const
 {
@@ -149,20 +141,17 @@ QtAws::Core::AwsAbstractResponse * DeregisterTargetsRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::ElasticLoadBalancingv2::DeregisterTargetsRequestPrivate
+ * \brief The DeregisterTargetsRequestPrivate class provides private implementation for DeregisterTargetsRequest.
+ * \internal
  *
- * @class  DeregisterTargetsRequestPrivate
- *
- * @brief  Private implementation for DeregisterTargetsRequest.
+ * \inmodule QtAwsElasticLoadBalancingv2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeregisterTargetsRequestPrivate object.
- *
- * @param  action  ElasticLoadBalancingv2 action being performed.
- * @param  q       Pointer to this object's public DeregisterTargetsRequest instance.
+ * Constructs a DeregisterTargetsRequestPrivate object for ElasticLoadBalancingv2 \a action with,
+ * public implementation \a q.
  */
 DeregisterTargetsRequestPrivate::DeregisterTargetsRequestPrivate(
     const ElasticLoadBalancingv2Request::Action action, DeregisterTargetsRequest * const q)
@@ -172,15 +161,10 @@ DeregisterTargetsRequestPrivate::DeregisterTargetsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeregisterTargetsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeregisterTargetsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeregisterTargetsRequest instance.
  */
 DeregisterTargetsRequestPrivate::DeregisterTargetsRequestPrivate(
     const DeregisterTargetsRequestPrivate &other, DeregisterTargetsRequest * const q)

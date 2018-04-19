@@ -27,19 +27,16 @@ namespace MediaLive {
 
 /*!
  * \class QtAws::MediaLive::ListInputSecurityGroupsRequest
- *
  * \brief The ListInputSecurityGroupsRequest class provides an interface for MediaLive ListInputSecurityGroups requests.
  *
- * \ingroup MediaLive
+ * \inmodule QtAwsMediaLive
  *
  *
  * \sa MediaLiveClient::listInputSecurityGroups
  */
 
 /*!
- * @brief  Constructs a new ListInputSecurityGroupsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListInputSecurityGroupsRequest::ListInputSecurityGroupsRequest(const ListInputSecurityGroupsRequest &other)
     : MediaLiveRequest(new ListInputSecurityGroupsRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ ListInputSecurityGroupsRequest::ListInputSecurityGroupsRequest(const ListInputSe
 }
 
 /*!
- * @brief  Constructs a new ListInputSecurityGroupsRequest object.
+ * Constructs a ListInputSecurityGroupsRequest object.
  */
 ListInputSecurityGroupsRequest::ListInputSecurityGroupsRequest()
     : MediaLiveRequest(new ListInputSecurityGroupsRequestPrivate(MediaLiveRequest::ListInputSecurityGroupsAction, this))
@@ -66,14 +63,9 @@ bool ListInputSecurityGroupsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListInputSecurityGroupsResponse object.
+ * Returns a ListInputSecurityGroupsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListInputSecurityGroupsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MediaLiveClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListInputSecurityGroupsRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * ListInputSecurityGroupsRequest::response(QNet
 }
 
 /*!
- * @internal
+ * \class QtAws::MediaLive::ListInputSecurityGroupsRequestPrivate
+ * \brief The ListInputSecurityGroupsRequestPrivate class provides private implementation for ListInputSecurityGroupsRequest.
+ * \internal
  *
- * @class  ListInputSecurityGroupsRequestPrivate
- *
- * @brief  Private implementation for ListInputSecurityGroupsRequest.
+ * \inmodule QtAwsMediaLive
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListInputSecurityGroupsRequestPrivate object.
- *
- * @param  action  MediaLive action being performed.
- * @param  q       Pointer to this object's public ListInputSecurityGroupsRequest instance.
+ * Constructs a ListInputSecurityGroupsRequestPrivate object for MediaLive \a action with,
+ * public implementation \a q.
  */
 ListInputSecurityGroupsRequestPrivate::ListInputSecurityGroupsRequestPrivate(
     const MediaLiveRequest::Action action, ListInputSecurityGroupsRequest * const q)
@@ -104,15 +93,10 @@ ListInputSecurityGroupsRequestPrivate::ListInputSecurityGroupsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListInputSecurityGroupsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListInputSecurityGroupsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListInputSecurityGroupsRequest instance.
  */
 ListInputSecurityGroupsRequestPrivate::ListInputSecurityGroupsRequestPrivate(
     const ListInputSecurityGroupsRequestPrivate &other, ListInputSecurityGroupsRequest * const q)

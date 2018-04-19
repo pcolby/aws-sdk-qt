@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DescribePrincipalIdFormatRequest
- *
  * \brief The DescribePrincipalIdFormatRequest class provides an interface for EC2 DescribePrincipalIdFormat requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DescribePrincipalIdFormatRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribePrincipalIdFormatRequest::DescribePrincipalIdFormatRequest(const DescribePrincipalIdFormatRequest &other)
     : EC2Request(new DescribePrincipalIdFormatRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ DescribePrincipalIdFormatRequest::DescribePrincipalIdFormatRequest(const Describ
 }
 
 /*!
- * @brief  Constructs a new DescribePrincipalIdFormatRequest object.
+ * Constructs a DescribePrincipalIdFormatRequest object.
  */
 DescribePrincipalIdFormatRequest::DescribePrincipalIdFormatRequest()
     : EC2Request(new DescribePrincipalIdFormatRequestPrivate(EC2Request::DescribePrincipalIdFormatAction, this))
@@ -70,14 +67,9 @@ bool DescribePrincipalIdFormatRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribePrincipalIdFormatResponse object.
+ * Returns a DescribePrincipalIdFormatResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribePrincipalIdFormatResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribePrincipalIdFormatRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * DescribePrincipalIdFormatRequest::response(QN
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::DescribePrincipalIdFormatRequestPrivate
+ * \brief The DescribePrincipalIdFormatRequestPrivate class provides private implementation for DescribePrincipalIdFormatRequest.
+ * \internal
  *
- * @class  DescribePrincipalIdFormatRequestPrivate
- *
- * @brief  Private implementation for DescribePrincipalIdFormatRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribePrincipalIdFormatRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public DescribePrincipalIdFormatRequest instance.
+ * Constructs a DescribePrincipalIdFormatRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 DescribePrincipalIdFormatRequestPrivate::DescribePrincipalIdFormatRequestPrivate(
     const EC2Request::Action action, DescribePrincipalIdFormatRequest * const q)
@@ -108,15 +97,10 @@ DescribePrincipalIdFormatRequestPrivate::DescribePrincipalIdFormatRequestPrivate
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribePrincipalIdFormatRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribePrincipalIdFormatRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribePrincipalIdFormatRequest instance.
  */
 DescribePrincipalIdFormatRequestPrivate::DescribePrincipalIdFormatRequestPrivate(
     const DescribePrincipalIdFormatRequestPrivate &other, DescribePrincipalIdFormatRequest * const q)

@@ -27,10 +27,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::RestoreDBInstanceFromDBSnapshotRequest
- *
  * \brief The RestoreDBInstanceFromDBSnapshotRequest class provides an interface for RDS RestoreDBInstanceFromDBSnapshot requests.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -101,9 +100,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new RestoreDBInstanceFromDBSnapshotRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 RestoreDBInstanceFromDBSnapshotRequest::RestoreDBInstanceFromDBSnapshotRequest(const RestoreDBInstanceFromDBSnapshotRequest &other)
     : RDSRequest(new RestoreDBInstanceFromDBSnapshotRequestPrivate(*other.d_func(), this))
@@ -112,7 +109,7 @@ RestoreDBInstanceFromDBSnapshotRequest::RestoreDBInstanceFromDBSnapshotRequest(c
 }
 
 /*!
- * @brief  Constructs a new RestoreDBInstanceFromDBSnapshotRequest object.
+ * Constructs a RestoreDBInstanceFromDBSnapshotRequest object.
  */
 RestoreDBInstanceFromDBSnapshotRequest::RestoreDBInstanceFromDBSnapshotRequest()
     : RDSRequest(new RestoreDBInstanceFromDBSnapshotRequestPrivate(RDSRequest::RestoreDBInstanceFromDBSnapshotAction, this))
@@ -130,14 +127,9 @@ bool RestoreDBInstanceFromDBSnapshotRequest::isValid() const
 
 
 /*!
- * @brief  Construct an RestoreDBInstanceFromDBSnapshotResponse object.
+ * Returns a RestoreDBInstanceFromDBSnapshotResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An RestoreDBInstanceFromDBSnapshotResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RDSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * RestoreDBInstanceFromDBSnapshotRequest::response(QNetworkReply * const reply) const
 {
@@ -145,20 +137,17 @@ QtAws::Core::AwsAbstractResponse * RestoreDBInstanceFromDBSnapshotRequest::respo
 }
 
 /*!
- * @internal
+ * \class QtAws::RDS::RestoreDBInstanceFromDBSnapshotRequestPrivate
+ * \brief The RestoreDBInstanceFromDBSnapshotRequestPrivate class provides private implementation for RestoreDBInstanceFromDBSnapshotRequest.
+ * \internal
  *
- * @class  RestoreDBInstanceFromDBSnapshotRequestPrivate
- *
- * @brief  Private implementation for RestoreDBInstanceFromDBSnapshotRequest.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new RestoreDBInstanceFromDBSnapshotRequestPrivate object.
- *
- * @param  action  RDS action being performed.
- * @param  q       Pointer to this object's public RestoreDBInstanceFromDBSnapshotRequest instance.
+ * Constructs a RestoreDBInstanceFromDBSnapshotRequestPrivate object for RDS \a action with,
+ * public implementation \a q.
  */
 RestoreDBInstanceFromDBSnapshotRequestPrivate::RestoreDBInstanceFromDBSnapshotRequestPrivate(
     const RDSRequest::Action action, RestoreDBInstanceFromDBSnapshotRequest * const q)
@@ -168,15 +157,10 @@ RestoreDBInstanceFromDBSnapshotRequestPrivate::RestoreDBInstanceFromDBSnapshotRe
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RestoreDBInstanceFromDBSnapshotRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the RestoreDBInstanceFromDBSnapshotRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public RestoreDBInstanceFromDBSnapshotRequest instance.
  */
 RestoreDBInstanceFromDBSnapshotRequestPrivate::RestoreDBInstanceFromDBSnapshotRequestPrivate(
     const RestoreDBInstanceFromDBSnapshotRequestPrivate &other, RestoreDBInstanceFromDBSnapshotRequest * const q)

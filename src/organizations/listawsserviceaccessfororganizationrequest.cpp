@@ -27,10 +27,9 @@ namespace Organizations {
 
 /*!
  * \class QtAws::Organizations::ListAWSServiceAccessForOrganizationRequest
- *
  * \brief The ListAWSServiceAccessForOrganizationRequest class provides an interface for Organizations ListAWSServiceAccessForOrganization requests.
  *
- * \ingroup Organizations
+ * \inmodule QtAwsOrganizations
  *
  *  <fullname>AWS Organizations API Reference</fullname>
  * 
@@ -179,9 +178,7 @@ namespace Organizations {
  */
 
 /*!
- * @brief  Constructs a new ListAWSServiceAccessForOrganizationRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListAWSServiceAccessForOrganizationRequest::ListAWSServiceAccessForOrganizationRequest(const ListAWSServiceAccessForOrganizationRequest &other)
     : OrganizationsRequest(new ListAWSServiceAccessForOrganizationRequestPrivate(*other.d_func(), this))
@@ -190,7 +187,7 @@ ListAWSServiceAccessForOrganizationRequest::ListAWSServiceAccessForOrganizationR
 }
 
 /*!
- * @brief  Constructs a new ListAWSServiceAccessForOrganizationRequest object.
+ * Constructs a ListAWSServiceAccessForOrganizationRequest object.
  */
 ListAWSServiceAccessForOrganizationRequest::ListAWSServiceAccessForOrganizationRequest()
     : OrganizationsRequest(new ListAWSServiceAccessForOrganizationRequestPrivate(OrganizationsRequest::ListAWSServiceAccessForOrganizationAction, this))
@@ -208,14 +205,9 @@ bool ListAWSServiceAccessForOrganizationRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListAWSServiceAccessForOrganizationResponse object.
+ * Returns a ListAWSServiceAccessForOrganizationResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListAWSServiceAccessForOrganizationResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  OrganizationsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListAWSServiceAccessForOrganizationRequest::response(QNetworkReply * const reply) const
 {
@@ -223,20 +215,17 @@ QtAws::Core::AwsAbstractResponse * ListAWSServiceAccessForOrganizationRequest::r
 }
 
 /*!
- * @internal
+ * \class QtAws::Organizations::ListAWSServiceAccessForOrganizationRequestPrivate
+ * \brief The ListAWSServiceAccessForOrganizationRequestPrivate class provides private implementation for ListAWSServiceAccessForOrganizationRequest.
+ * \internal
  *
- * @class  ListAWSServiceAccessForOrganizationRequestPrivate
- *
- * @brief  Private implementation for ListAWSServiceAccessForOrganizationRequest.
+ * \inmodule QtAwsOrganizations
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListAWSServiceAccessForOrganizationRequestPrivate object.
- *
- * @param  action  Organizations action being performed.
- * @param  q       Pointer to this object's public ListAWSServiceAccessForOrganizationRequest instance.
+ * Constructs a ListAWSServiceAccessForOrganizationRequestPrivate object for Organizations \a action with,
+ * public implementation \a q.
  */
 ListAWSServiceAccessForOrganizationRequestPrivate::ListAWSServiceAccessForOrganizationRequestPrivate(
     const OrganizationsRequest::Action action, ListAWSServiceAccessForOrganizationRequest * const q)
@@ -246,15 +235,10 @@ ListAWSServiceAccessForOrganizationRequestPrivate::ListAWSServiceAccessForOrgani
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListAWSServiceAccessForOrganizationRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListAWSServiceAccessForOrganizationRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListAWSServiceAccessForOrganizationRequest instance.
  */
 ListAWSServiceAccessForOrganizationRequestPrivate::ListAWSServiceAccessForOrganizationRequestPrivate(
     const ListAWSServiceAccessForOrganizationRequestPrivate &other, ListAWSServiceAccessForOrganizationRequest * const q)

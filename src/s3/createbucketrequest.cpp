@@ -27,19 +27,16 @@ namespace S3 {
 
 /*!
  * \class QtAws::S3::CreateBucketRequest
- *
  * \brief The CreateBucketRequest class provides an interface for S3 CreateBucket requests.
  *
- * \ingroup S3
+ * \inmodule QtAwsS3
  *
  *
  * \sa S3Client::createBucket
  */
 
 /*!
- * @brief  Constructs a new CreateBucketRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateBucketRequest::CreateBucketRequest(const CreateBucketRequest &other)
     : S3Request(new CreateBucketRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ CreateBucketRequest::CreateBucketRequest(const CreateBucketRequest &other)
 }
 
 /*!
- * @brief  Constructs a new CreateBucketRequest object.
+ * Constructs a CreateBucketRequest object.
  */
 CreateBucketRequest::CreateBucketRequest()
     : S3Request(new CreateBucketRequestPrivate(S3Request::CreateBucketAction, this))
@@ -66,14 +63,9 @@ bool CreateBucketRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateBucketResponse object.
+ * Returns a CreateBucketResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateBucketResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  S3Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateBucketRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * CreateBucketRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::S3::CreateBucketRequestPrivate
+ * \brief The CreateBucketRequestPrivate class provides private implementation for CreateBucketRequest.
+ * \internal
  *
- * @class  CreateBucketRequestPrivate
- *
- * @brief  Private implementation for CreateBucketRequest.
+ * \inmodule QtAwsS3
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateBucketRequestPrivate object.
- *
- * @param  action  S3 action being performed.
- * @param  q       Pointer to this object's public CreateBucketRequest instance.
+ * Constructs a CreateBucketRequestPrivate object for S3 \a action with,
+ * public implementation \a q.
  */
 CreateBucketRequestPrivate::CreateBucketRequestPrivate(
     const S3Request::Action action, CreateBucketRequest * const q)
@@ -104,15 +93,10 @@ CreateBucketRequestPrivate::CreateBucketRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateBucketRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateBucketRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateBucketRequest instance.
  */
 CreateBucketRequestPrivate::CreateBucketRequestPrivate(
     const CreateBucketRequestPrivate &other, CreateBucketRequest * const q)

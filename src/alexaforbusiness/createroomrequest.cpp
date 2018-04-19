@@ -27,10 +27,9 @@ namespace AlexaForBusiness {
 
 /*!
  * \class QtAws::AlexaForBusiness::CreateRoomRequest
- *
  * \brief The CreateRoomRequest class provides an interface for AlexaForBusiness CreateRoom requests.
  *
- * \ingroup AlexaForBusiness
+ * \inmodule QtAwsAlexaForBusiness
  *
  *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
  *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
@@ -42,9 +41,7 @@ namespace AlexaForBusiness {
  */
 
 /*!
- * @brief  Constructs a new CreateRoomRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateRoomRequest::CreateRoomRequest(const CreateRoomRequest &other)
     : AlexaForBusinessRequest(new CreateRoomRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ CreateRoomRequest::CreateRoomRequest(const CreateRoomRequest &other)
 }
 
 /*!
- * @brief  Constructs a new CreateRoomRequest object.
+ * Constructs a CreateRoomRequest object.
  */
 CreateRoomRequest::CreateRoomRequest()
     : AlexaForBusinessRequest(new CreateRoomRequestPrivate(AlexaForBusinessRequest::CreateRoomAction, this))
@@ -71,14 +68,9 @@ bool CreateRoomRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateRoomResponse object.
+ * Returns a CreateRoomResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateRoomResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AlexaForBusinessClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateRoomRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * CreateRoomRequest::response(QNetworkReply * c
 }
 
 /*!
- * @internal
+ * \class QtAws::AlexaForBusiness::CreateRoomRequestPrivate
+ * \brief The CreateRoomRequestPrivate class provides private implementation for CreateRoomRequest.
+ * \internal
  *
- * @class  CreateRoomRequestPrivate
- *
- * @brief  Private implementation for CreateRoomRequest.
+ * \inmodule QtAwsAlexaForBusiness
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateRoomRequestPrivate object.
- *
- * @param  action  AlexaForBusiness action being performed.
- * @param  q       Pointer to this object's public CreateRoomRequest instance.
+ * Constructs a CreateRoomRequestPrivate object for AlexaForBusiness \a action with,
+ * public implementation \a q.
  */
 CreateRoomRequestPrivate::CreateRoomRequestPrivate(
     const AlexaForBusinessRequest::Action action, CreateRoomRequest * const q)
@@ -109,15 +98,10 @@ CreateRoomRequestPrivate::CreateRoomRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateRoomRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateRoomRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateRoomRequest instance.
  */
 CreateRoomRequestPrivate::CreateRoomRequestPrivate(
     const CreateRoomRequestPrivate &other, CreateRoomRequest * const q)

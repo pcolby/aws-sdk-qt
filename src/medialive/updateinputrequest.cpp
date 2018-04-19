@@ -27,19 +27,16 @@ namespace MediaLive {
 
 /*!
  * \class QtAws::MediaLive::UpdateInputRequest
- *
  * \brief The UpdateInputRequest class provides an interface for MediaLive UpdateInput requests.
  *
- * \ingroup MediaLive
+ * \inmodule QtAwsMediaLive
  *
  *
  * \sa MediaLiveClient::updateInput
  */
 
 /*!
- * @brief  Constructs a new UpdateInputRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateInputRequest::UpdateInputRequest(const UpdateInputRequest &other)
     : MediaLiveRequest(new UpdateInputRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ UpdateInputRequest::UpdateInputRequest(const UpdateInputRequest &other)
 }
 
 /*!
- * @brief  Constructs a new UpdateInputRequest object.
+ * Constructs a UpdateInputRequest object.
  */
 UpdateInputRequest::UpdateInputRequest()
     : MediaLiveRequest(new UpdateInputRequestPrivate(MediaLiveRequest::UpdateInputAction, this))
@@ -66,14 +63,9 @@ bool UpdateInputRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateInputResponse object.
+ * Returns a UpdateInputResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateInputResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MediaLiveClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateInputRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * UpdateInputRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::MediaLive::UpdateInputRequestPrivate
+ * \brief The UpdateInputRequestPrivate class provides private implementation for UpdateInputRequest.
+ * \internal
  *
- * @class  UpdateInputRequestPrivate
- *
- * @brief  Private implementation for UpdateInputRequest.
+ * \inmodule QtAwsMediaLive
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateInputRequestPrivate object.
- *
- * @param  action  MediaLive action being performed.
- * @param  q       Pointer to this object's public UpdateInputRequest instance.
+ * Constructs a UpdateInputRequestPrivate object for MediaLive \a action with,
+ * public implementation \a q.
  */
 UpdateInputRequestPrivate::UpdateInputRequestPrivate(
     const MediaLiveRequest::Action action, UpdateInputRequest * const q)
@@ -104,15 +93,10 @@ UpdateInputRequestPrivate::UpdateInputRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateInputRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateInputRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateInputRequest instance.
  */
 UpdateInputRequestPrivate::UpdateInputRequestPrivate(
     const UpdateInputRequestPrivate &other, UpdateInputRequest * const q)

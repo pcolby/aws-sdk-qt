@@ -25,16 +25,99 @@ namespace S3 {
 
 /*!
  * \class QtAws::S3::S3Request
- *
  * \brief The S3Request class provides an interface for S3 requests.
  *
- * \ingroup S3
+ * \inmodule QtAwsS3
  */
 
 /*!
- * @brief  Constructs a new S3Request object.
+ * \enum S3Request::Action
  *
- * @param  action  The S3 action to request.
+ * This enum describes the actions that can be performed as S3
+ * requests.
+ *
+ * \value AbortMultipartUploadAction S3 AbortMultipartUpload action.
+ * \value CompleteMultipartUploadAction S3 CompleteMultipartUpload action.
+ * \value CopyObjectAction S3 CopyObject action.
+ * \value CreateBucketAction S3 CreateBucket action.
+ * \value CreateMultipartUploadAction S3 CreateMultipartUpload action.
+ * \value DeleteBucketAction S3 DeleteBucket action.
+ * \value DeleteBucketAnalyticsConfigurationAction S3 DeleteBucketAnalyticsConfiguration action.
+ * \value DeleteBucketCorsAction S3 DeleteBucketCors action.
+ * \value DeleteBucketEncryptionAction S3 DeleteBucketEncryption action.
+ * \value DeleteBucketInventoryConfigurationAction S3 DeleteBucketInventoryConfiguration action.
+ * \value DeleteBucketLifecycleAction S3 DeleteBucketLifecycle action.
+ * \value DeleteBucketMetricsConfigurationAction S3 DeleteBucketMetricsConfiguration action.
+ * \value DeleteBucketPolicyAction S3 DeleteBucketPolicy action.
+ * \value DeleteBucketReplicationAction S3 DeleteBucketReplication action.
+ * \value DeleteBucketTaggingAction S3 DeleteBucketTagging action.
+ * \value DeleteBucketWebsiteAction S3 DeleteBucketWebsite action.
+ * \value DeleteObjectAction S3 DeleteObject action.
+ * \value DeleteObjectTaggingAction S3 DeleteObjectTagging action.
+ * \value DeleteObjectsAction S3 DeleteObjects action.
+ * \value GetBucketAccelerateConfigurationAction S3 GetBucketAccelerateConfiguration action.
+ * \value GetBucketAclAction S3 GetBucketAcl action.
+ * \value GetBucketAnalyticsConfigurationAction S3 GetBucketAnalyticsConfiguration action.
+ * \value GetBucketCorsAction S3 GetBucketCors action.
+ * \value GetBucketEncryptionAction S3 GetBucketEncryption action.
+ * \value GetBucketInventoryConfigurationAction S3 GetBucketInventoryConfiguration action.
+ * \value GetBucketLifecycleAction S3 GetBucketLifecycle action.
+ * \value GetBucketLifecycleConfigurationAction S3 GetBucketLifecycleConfiguration action.
+ * \value GetBucketLocationAction S3 GetBucketLocation action.
+ * \value GetBucketLoggingAction S3 GetBucketLogging action.
+ * \value GetBucketMetricsConfigurationAction S3 GetBucketMetricsConfiguration action.
+ * \value GetBucketNotificationAction S3 GetBucketNotification action.
+ * \value GetBucketNotificationConfigurationAction S3 GetBucketNotificationConfiguration action.
+ * \value GetBucketPolicyAction S3 GetBucketPolicy action.
+ * \value GetBucketReplicationAction S3 GetBucketReplication action.
+ * \value GetBucketRequestPaymentAction S3 GetBucketRequestPayment action.
+ * \value GetBucketTaggingAction S3 GetBucketTagging action.
+ * \value GetBucketVersioningAction S3 GetBucketVersioning action.
+ * \value GetBucketWebsiteAction S3 GetBucketWebsite action.
+ * \value GetObjectAction S3 GetObject action.
+ * \value GetObjectAclAction S3 GetObjectAcl action.
+ * \value GetObjectTaggingAction S3 GetObjectTagging action.
+ * \value GetObjectTorrentAction S3 GetObjectTorrent action.
+ * \value HeadBucketAction S3 HeadBucket action.
+ * \value HeadObjectAction S3 HeadObject action.
+ * \value ListBucketAnalyticsConfigurationsAction S3 ListBucketAnalyticsConfigurations action.
+ * \value ListBucketInventoryConfigurationsAction S3 ListBucketInventoryConfigurations action.
+ * \value ListBucketMetricsConfigurationsAction S3 ListBucketMetricsConfigurations action.
+ * \value ListBucketsAction S3 ListBuckets action.
+ * \value ListMultipartUploadsAction S3 ListMultipartUploads action.
+ * \value ListObjectVersionsAction S3 ListObjectVersions action.
+ * \value ListObjectsAction S3 ListObjects action.
+ * \value ListObjectsV2Action S3 ListObjectsV2 action.
+ * \value ListPartsAction S3 ListParts action.
+ * \value PutBucketAccelerateConfigurationAction S3 PutBucketAccelerateConfiguration action.
+ * \value PutBucketAclAction S3 PutBucketAcl action.
+ * \value PutBucketAnalyticsConfigurationAction S3 PutBucketAnalyticsConfiguration action.
+ * \value PutBucketCorsAction S3 PutBucketCors action.
+ * \value PutBucketEncryptionAction S3 PutBucketEncryption action.
+ * \value PutBucketInventoryConfigurationAction S3 PutBucketInventoryConfiguration action.
+ * \value PutBucketLifecycleAction S3 PutBucketLifecycle action.
+ * \value PutBucketLifecycleConfigurationAction S3 PutBucketLifecycleConfiguration action.
+ * \value PutBucketLoggingAction S3 PutBucketLogging action.
+ * \value PutBucketMetricsConfigurationAction S3 PutBucketMetricsConfiguration action.
+ * \value PutBucketNotificationAction S3 PutBucketNotification action.
+ * \value PutBucketNotificationConfigurationAction S3 PutBucketNotificationConfiguration action.
+ * \value PutBucketPolicyAction S3 PutBucketPolicy action.
+ * \value PutBucketReplicationAction S3 PutBucketReplication action.
+ * \value PutBucketRequestPaymentAction S3 PutBucketRequestPayment action.
+ * \value PutBucketTaggingAction S3 PutBucketTagging action.
+ * \value PutBucketVersioningAction S3 PutBucketVersioning action.
+ * \value PutBucketWebsiteAction S3 PutBucketWebsite action.
+ * \value PutObjectAction S3 PutObject action.
+ * \value PutObjectAclAction S3 PutObjectAcl action.
+ * \value PutObjectTaggingAction S3 PutObjectTagging action.
+ * \value RestoreObjectAction S3 RestoreObject action.
+ * \value SelectObjectContentAction S3 SelectObjectContent action.
+ * \value UploadPartAction S3 UploadPart action.
+ * \value UploadPartCopyAction S3 UploadPartCopy action.
+ */
+
+/*!
+ * Constructs a[n] S3Request object for S3 \a action.
  */
 S3Request::S3Request(const Action action)
     : QtAws::Core::AwsAbstractRequest(new S3RequestPrivate(action, this))
@@ -43,9 +126,7 @@ S3Request::S3Request(const Action action)
 }
 
 /*!
- * @brief  Constructs a new S3Request object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 S3Request::S3Request(const S3Request &other)
     : QtAws::Core::AwsAbstractRequest(new S3RequestPrivate(*other.d_func(), this))
@@ -54,13 +135,7 @@ S3Request::S3Request(const S3Request &other)
 }
 
 /*!
- * @brief  Assignment operator.
- *
- * Assigns \a other to \c this.
- *
- * @param  other  Instance to copy.
- *
- * @return  A reference to \c this.
+ * Sets the S3Request object to be equal to \a other.
  */
 S3Request& S3Request::operator=(const S3Request &other)
 {
@@ -72,14 +147,10 @@ S3Request& S3Request::operator=(const S3Request &other)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new S3Request object.
+ * Constructs aa S3Request object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from S3RequestPrivate.
- *
- * @param  d  Pointer to private data (aka D-Pointer).
  */
 S3Request::S3Request(S3RequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
@@ -87,7 +158,7 @@ S3Request::S3Request(S3RequestPrivate * const d) : QtAws::Core::AwsAbstractReque
 }
 
 /*!
- * \brief Returns the S3 action to be performed by this request.
+ * Returns the S3 action to be performed by this request.
  */
 S3Request::Action S3Request::action() const
 {
@@ -96,7 +167,7 @@ S3Request::Action S3Request::action() const
 }
 
 /*!
- * \brief Returns the name of the S3 action to be performed by this request.
+ * Returns the name of the S3 action to be performed by this request.
  */
 QString S3Request::actionString() const
 {
@@ -104,7 +175,7 @@ QString S3Request::actionString() const
 }
 
 /*!
- * \brief Returns the S3 API version implemented by this request.
+ * Returns the S3 API version implemented by this request.
  */
 QString S3Request::apiVersion() const
 {
@@ -113,7 +184,7 @@ QString S3Request::apiVersion() const
 }
 
 /*!
- * @brief Set the S3 action to be performed by this request to \a action.
+ * Sets the S3 action to be performed by this request to \a action.
  */
 void S3Request::setAction(const Action action)
 {
@@ -122,7 +193,7 @@ void S3Request::setAction(const Action action)
 }
 
 /*!
- * Set the S3 API version to include in this request to \a version.
+ * Sets the S3 API version to include in this request to \a version.
  */
 void S3Request::setApiVersion(const QString &version)
 {
@@ -131,7 +202,7 @@ void S3Request::setApiVersion(const QString &version)
 }
 
 /*!
- * \brief Returns \c true if this request is the same as \a other.
+ * Returns \c true if this request is equal to \a other; \c false otherwise.
  *
  * Note, most derived *Request classes do not need to provider their own
  * implementations of this function, since most such request classes rely on
@@ -146,8 +217,8 @@ bool S3Request::operator==(const S3Request &other) const
             (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
-/*!
- * @brief  Check if \a queueName is a valid S3 queue name.
+/*
+ * Returns \c tue if \a queueName is a valid S3 queue name.
  *
  * @par From S3 FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
@@ -166,9 +237,8 @@ bool S3Request::operator==(const S3Request &other) const
 }*/
 
 /*!
- * \brief Removes the a \a name parameter from this request.
- *
- * Returns the count of paramters removed (typically \c 0 or \c 1).
+ * Removes the a \a name parameter from the request, then returns the number of
+ * paramters removed (typically \c 0 or \c 1).
  */
 int S3Request::clearParameter(const QString &name)
 {
@@ -177,7 +247,7 @@ int S3Request::clearParameter(const QString &name)
 }
 
 /*!
- * \brief Removes all parameters from this request.
+ * Removes all parameters from the request.
  */
 void S3Request::clearParameters()
 {
@@ -186,7 +256,7 @@ void S3Request::clearParameters()
 }
 
 /*!
- * \brief Returns the value of the \n name pararemter if set, otherwise \a defaultValue.
+ * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
 QVariant S3Request::parameter(const QString &name, const QVariant &defaultValue) const
 {
@@ -195,7 +265,7 @@ QVariant S3Request::parameter(const QString &name, const QVariant &defaultValue)
 }
 
 /*!
- * \brief Returns a map of parameters included in this request.
+ * Returns the parameters included in this request.
  */
 const QVariantMap &S3Request::parameters() const
 {
@@ -204,7 +274,7 @@ const QVariantMap &S3Request::parameters() const
 }
 
 /*!
- * \brief Sets the \a name parameter to \a value.
+ * Sets the \a name parameter to \a value.
  */
 void S3Request::setParameter(const QString &name, const QVariant &value)
 {
@@ -213,9 +283,8 @@ void S3Request::setParameter(const QString &name, const QVariant &value)
 }
 
 /*!
- * \brief Sets the map of paramters for this request to \a parameters.
- *
- * Any request parameters set previously will be discarded.
+ * Sets the paramters for this request to \a parameters. Any request parameters
+ * set previously will be discarded.
  */
 void S3Request::setParameters(const QVariantMap &parameters)
 {
@@ -224,11 +293,12 @@ void S3Request::setParameters(const QVariantMap &parameters)
 }
 
 /*!
- * \brief Returns a network request for this S3 request using the given \a endpoint.
+ * Returns a network request for the S3 request using the given
+ * \a endpoint.
  *
- * This S3 implementation builds request URLs by combining the common query
- * parameters (such as Action and Version), with any that have been added (via
- * setParameter) by child classes.
+ * This S3 implementation builds request URLs by combining the
+ * common query parameters (such as Action and Version), with any that have
+ * been added (via setParameter) by child classes.
  */
 QNetworkRequest S3Request::unsignedRequest(const QUrl &endpoint) const
 {
@@ -239,17 +309,16 @@ QNetworkRequest S3Request::unsignedRequest(const QUrl &endpoint) const
 }
 
 /*!
+ * \class QtAws::S3::S3RequestPrivate
+ * \brief The S3RequestPrivate class provides private implementation for S3Request.
  * \internal
  *
- * \class  S3RequestPrivate
- *
- * \brief  Private implementation for S3Request.
+ * \inmodule QtAwsS3
  */
 
 /*!
- * \internal
- *
- * \brief Constructs a new S3RequestPrivate object.
+ * Constructs a S3RequestPrivate object for S3 \a action with,
+ * public implementation \a q.
  */
 S3RequestPrivate::S3RequestPrivate(const S3Request::Action action, S3Request * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
@@ -258,9 +327,7 @@ S3RequestPrivate::S3RequestPrivate(const S3Request::Action action, S3Request * c
 }
 
 /*!
- * \internal
- *
- * \brief Constructs a new S3RequestPrivate object, copying an existing one.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
@@ -276,15 +343,12 @@ S3RequestPrivate::S3RequestPrivate(const S3RequestPrivate &other,
 }
 
 /*!
- * \internal
- *
- * \brief Returns a string representing \a action.
+ * Returns a string represention of \a action, or a null string if \a action is
+ * invalid.
  *
  * This function converts S3Request::Action enumerator values to their respective
  * string representations, appropriate for use with the S3 service's Action
  * query parameters.
- *
- * @return A string representing \a action, or a null string if \a action is invalid.
  */
 QString S3RequestPrivate::toString(const S3Request::Action &action)
 {

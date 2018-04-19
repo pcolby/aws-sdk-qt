@@ -27,10 +27,9 @@ namespace WorkMail {
 
 /*!
  * \class QtAws::WorkMail::DescribeOrganizationRequest
- *
  * \brief The DescribeOrganizationRequest class provides an interface for WorkMail DescribeOrganization requests.
  *
- * \ingroup WorkMail
+ * \inmodule QtAwsWorkMail
  *
  *  Amazon WorkMail is a secure, managed business email and calendaring service with support for existing desktop and mobile
  *  email clients. You can access your email, contacts, and calendars using Microsoft Outlook, your browser, or their native
@@ -70,9 +69,7 @@ namespace WorkMail {
  */
 
 /*!
- * @brief  Constructs a new DescribeOrganizationRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeOrganizationRequest::DescribeOrganizationRequest(const DescribeOrganizationRequest &other)
     : WorkMailRequest(new DescribeOrganizationRequestPrivate(*other.d_func(), this))
@@ -81,7 +78,7 @@ DescribeOrganizationRequest::DescribeOrganizationRequest(const DescribeOrganizat
 }
 
 /*!
- * @brief  Constructs a new DescribeOrganizationRequest object.
+ * Constructs a DescribeOrganizationRequest object.
  */
 DescribeOrganizationRequest::DescribeOrganizationRequest()
     : WorkMailRequest(new DescribeOrganizationRequestPrivate(WorkMailRequest::DescribeOrganizationAction, this))
@@ -99,14 +96,9 @@ bool DescribeOrganizationRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeOrganizationResponse object.
+ * Returns a DescribeOrganizationResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeOrganizationResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WorkMailClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeOrganizationRequest::response(QNetworkReply * const reply) const
 {
@@ -114,20 +106,17 @@ QtAws::Core::AwsAbstractResponse * DescribeOrganizationRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::WorkMail::DescribeOrganizationRequestPrivate
+ * \brief The DescribeOrganizationRequestPrivate class provides private implementation for DescribeOrganizationRequest.
+ * \internal
  *
- * @class  DescribeOrganizationRequestPrivate
- *
- * @brief  Private implementation for DescribeOrganizationRequest.
+ * \inmodule QtAwsWorkMail
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeOrganizationRequestPrivate object.
- *
- * @param  action  WorkMail action being performed.
- * @param  q       Pointer to this object's public DescribeOrganizationRequest instance.
+ * Constructs a DescribeOrganizationRequestPrivate object for WorkMail \a action with,
+ * public implementation \a q.
  */
 DescribeOrganizationRequestPrivate::DescribeOrganizationRequestPrivate(
     const WorkMailRequest::Action action, DescribeOrganizationRequest * const q)
@@ -137,15 +126,10 @@ DescribeOrganizationRequestPrivate::DescribeOrganizationRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeOrganizationRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeOrganizationRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeOrganizationRequest instance.
  */
 DescribeOrganizationRequestPrivate::DescribeOrganizationRequestPrivate(
     const DescribeOrganizationRequestPrivate &other, DescribeOrganizationRequest * const q)

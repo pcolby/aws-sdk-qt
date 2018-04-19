@@ -27,10 +27,9 @@ namespace LexModelBuildingService {
 
 /*!
  * \class QtAws::LexModelBuildingService::GetBotAliasRequest
- *
  * \brief The GetBotAliasRequest class provides an interface for LexModelBuildingService GetBotAlias requests.
  *
- * \ingroup LexModelBuildingService
+ * \inmodule QtAwsLexModelBuildingService
  *
  *  <fullname>Amazon Lex Build-Time Actions</fullname>
  * 
@@ -41,9 +40,7 @@ namespace LexModelBuildingService {
  */
 
 /*!
- * @brief  Constructs a new GetBotAliasRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetBotAliasRequest::GetBotAliasRequest(const GetBotAliasRequest &other)
     : LexModelBuildingServiceRequest(new GetBotAliasRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ GetBotAliasRequest::GetBotAliasRequest(const GetBotAliasRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetBotAliasRequest object.
+ * Constructs a GetBotAliasRequest object.
  */
 GetBotAliasRequest::GetBotAliasRequest()
     : LexModelBuildingServiceRequest(new GetBotAliasRequestPrivate(LexModelBuildingServiceRequest::GetBotAliasAction, this))
@@ -70,14 +67,9 @@ bool GetBotAliasRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetBotAliasResponse object.
+ * Returns a GetBotAliasResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetBotAliasResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  LexModelBuildingServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetBotAliasRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * GetBotAliasRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::LexModelBuildingService::GetBotAliasRequestPrivate
+ * \brief The GetBotAliasRequestPrivate class provides private implementation for GetBotAliasRequest.
+ * \internal
  *
- * @class  GetBotAliasRequestPrivate
- *
- * @brief  Private implementation for GetBotAliasRequest.
+ * \inmodule QtAwsLexModelBuildingService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetBotAliasRequestPrivate object.
- *
- * @param  action  LexModelBuildingService action being performed.
- * @param  q       Pointer to this object's public GetBotAliasRequest instance.
+ * Constructs a GetBotAliasRequestPrivate object for LexModelBuildingService \a action with,
+ * public implementation \a q.
  */
 GetBotAliasRequestPrivate::GetBotAliasRequestPrivate(
     const LexModelBuildingServiceRequest::Action action, GetBotAliasRequest * const q)
@@ -108,15 +97,10 @@ GetBotAliasRequestPrivate::GetBotAliasRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetBotAliasRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetBotAliasRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetBotAliasRequest instance.
  */
 GetBotAliasRequestPrivate::GetBotAliasRequestPrivate(
     const GetBotAliasRequestPrivate &other, GetBotAliasRequest * const q)

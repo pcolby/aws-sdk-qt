@@ -27,10 +27,9 @@ namespace ElasticsearchService {
 
 /*!
  * \class QtAws::ElasticsearchService::CreateElasticsearchDomainRequest
- *
  * \brief The CreateElasticsearchDomainRequest class provides an interface for ElasticsearchService CreateElasticsearchDomain requests.
  *
- * \ingroup ElasticsearchService
+ * \inmodule QtAwsElasticsearchService
  *
  *  <fullname>Amazon Elasticsearch Configuration Service</fullname>
  * 
@@ -46,9 +45,7 @@ namespace ElasticsearchService {
  */
 
 /*!
- * @brief  Constructs a new CreateElasticsearchDomainRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateElasticsearchDomainRequest::CreateElasticsearchDomainRequest(const CreateElasticsearchDomainRequest &other)
     : ElasticsearchServiceRequest(new CreateElasticsearchDomainRequestPrivate(*other.d_func(), this))
@@ -57,7 +54,7 @@ CreateElasticsearchDomainRequest::CreateElasticsearchDomainRequest(const CreateE
 }
 
 /*!
- * @brief  Constructs a new CreateElasticsearchDomainRequest object.
+ * Constructs a CreateElasticsearchDomainRequest object.
  */
 CreateElasticsearchDomainRequest::CreateElasticsearchDomainRequest()
     : ElasticsearchServiceRequest(new CreateElasticsearchDomainRequestPrivate(ElasticsearchServiceRequest::CreateElasticsearchDomainAction, this))
@@ -75,14 +72,9 @@ bool CreateElasticsearchDomainRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateElasticsearchDomainResponse object.
+ * Returns a CreateElasticsearchDomainResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateElasticsearchDomainResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ElasticsearchServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateElasticsearchDomainRequest::response(QNetworkReply * const reply) const
 {
@@ -90,20 +82,17 @@ QtAws::Core::AwsAbstractResponse * CreateElasticsearchDomainRequest::response(QN
 }
 
 /*!
- * @internal
+ * \class QtAws::ElasticsearchService::CreateElasticsearchDomainRequestPrivate
+ * \brief The CreateElasticsearchDomainRequestPrivate class provides private implementation for CreateElasticsearchDomainRequest.
+ * \internal
  *
- * @class  CreateElasticsearchDomainRequestPrivate
- *
- * @brief  Private implementation for CreateElasticsearchDomainRequest.
+ * \inmodule QtAwsElasticsearchService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateElasticsearchDomainRequestPrivate object.
- *
- * @param  action  ElasticsearchService action being performed.
- * @param  q       Pointer to this object's public CreateElasticsearchDomainRequest instance.
+ * Constructs a CreateElasticsearchDomainRequestPrivate object for ElasticsearchService \a action with,
+ * public implementation \a q.
  */
 CreateElasticsearchDomainRequestPrivate::CreateElasticsearchDomainRequestPrivate(
     const ElasticsearchServiceRequest::Action action, CreateElasticsearchDomainRequest * const q)
@@ -113,15 +102,10 @@ CreateElasticsearchDomainRequestPrivate::CreateElasticsearchDomainRequestPrivate
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateElasticsearchDomainRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateElasticsearchDomainRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateElasticsearchDomainRequest instance.
  */
 CreateElasticsearchDomainRequestPrivate::CreateElasticsearchDomainRequestPrivate(
     const CreateElasticsearchDomainRequestPrivate &other, CreateElasticsearchDomainRequest * const q)

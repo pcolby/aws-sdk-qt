@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::CreateVpcEndpointRequest
- *
  * \brief The CreateVpcEndpointRequest class provides an interface for EC2 CreateVpcEndpoint requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new CreateVpcEndpointRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateVpcEndpointRequest::CreateVpcEndpointRequest(const CreateVpcEndpointRequest &other)
     : EC2Request(new CreateVpcEndpointRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ CreateVpcEndpointRequest::CreateVpcEndpointRequest(const CreateVpcEndpointReques
 }
 
 /*!
- * @brief  Constructs a new CreateVpcEndpointRequest object.
+ * Constructs a CreateVpcEndpointRequest object.
  */
 CreateVpcEndpointRequest::CreateVpcEndpointRequest()
     : EC2Request(new CreateVpcEndpointRequestPrivate(EC2Request::CreateVpcEndpointAction, this))
@@ -70,14 +67,9 @@ bool CreateVpcEndpointRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateVpcEndpointResponse object.
+ * Returns a CreateVpcEndpointResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateVpcEndpointResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateVpcEndpointRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * CreateVpcEndpointRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::CreateVpcEndpointRequestPrivate
+ * \brief The CreateVpcEndpointRequestPrivate class provides private implementation for CreateVpcEndpointRequest.
+ * \internal
  *
- * @class  CreateVpcEndpointRequestPrivate
- *
- * @brief  Private implementation for CreateVpcEndpointRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateVpcEndpointRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public CreateVpcEndpointRequest instance.
+ * Constructs a CreateVpcEndpointRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 CreateVpcEndpointRequestPrivate::CreateVpcEndpointRequestPrivate(
     const EC2Request::Action action, CreateVpcEndpointRequest * const q)
@@ -108,15 +97,10 @@ CreateVpcEndpointRequestPrivate::CreateVpcEndpointRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateVpcEndpointRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateVpcEndpointRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateVpcEndpointRequest instance.
  */
 CreateVpcEndpointRequestPrivate::CreateVpcEndpointRequestPrivate(
     const CreateVpcEndpointRequestPrivate &other, CreateVpcEndpointRequest * const q)

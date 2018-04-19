@@ -27,10 +27,9 @@ namespace OpsWorks {
 
 /*!
  * \class QtAws::OpsWorks::DescribeRaidArraysRequest
- *
  * \brief The DescribeRaidArraysRequest class provides an interface for OpsWorks DescribeRaidArrays requests.
  *
- * \ingroup OpsWorks
+ * \inmodule QtAwsOpsWorks
  *
  *  <fullname>AWS OpsWorks</fullname>
  * 
@@ -143,9 +142,7 @@ namespace OpsWorks {
  */
 
 /*!
- * @brief  Constructs a new DescribeRaidArraysRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeRaidArraysRequest::DescribeRaidArraysRequest(const DescribeRaidArraysRequest &other)
     : OpsWorksRequest(new DescribeRaidArraysRequestPrivate(*other.d_func(), this))
@@ -154,7 +151,7 @@ DescribeRaidArraysRequest::DescribeRaidArraysRequest(const DescribeRaidArraysReq
 }
 
 /*!
- * @brief  Constructs a new DescribeRaidArraysRequest object.
+ * Constructs a DescribeRaidArraysRequest object.
  */
 DescribeRaidArraysRequest::DescribeRaidArraysRequest()
     : OpsWorksRequest(new DescribeRaidArraysRequestPrivate(OpsWorksRequest::DescribeRaidArraysAction, this))
@@ -172,14 +169,9 @@ bool DescribeRaidArraysRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeRaidArraysResponse object.
+ * Returns a DescribeRaidArraysResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeRaidArraysResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  OpsWorksClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeRaidArraysRequest::response(QNetworkReply * const reply) const
 {
@@ -187,20 +179,17 @@ QtAws::Core::AwsAbstractResponse * DescribeRaidArraysRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::OpsWorks::DescribeRaidArraysRequestPrivate
+ * \brief The DescribeRaidArraysRequestPrivate class provides private implementation for DescribeRaidArraysRequest.
+ * \internal
  *
- * @class  DescribeRaidArraysRequestPrivate
- *
- * @brief  Private implementation for DescribeRaidArraysRequest.
+ * \inmodule QtAwsOpsWorks
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeRaidArraysRequestPrivate object.
- *
- * @param  action  OpsWorks action being performed.
- * @param  q       Pointer to this object's public DescribeRaidArraysRequest instance.
+ * Constructs a DescribeRaidArraysRequestPrivate object for OpsWorks \a action with,
+ * public implementation \a q.
  */
 DescribeRaidArraysRequestPrivate::DescribeRaidArraysRequestPrivate(
     const OpsWorksRequest::Action action, DescribeRaidArraysRequest * const q)
@@ -210,15 +199,10 @@ DescribeRaidArraysRequestPrivate::DescribeRaidArraysRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeRaidArraysRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeRaidArraysRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeRaidArraysRequest instance.
  */
 DescribeRaidArraysRequestPrivate::DescribeRaidArraysRequestPrivate(
     const DescribeRaidArraysRequestPrivate &other, DescribeRaidArraysRequest * const q)

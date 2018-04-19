@@ -38,6 +38,9 @@
 /*!
  * \namespace QtAws::ResourceGroupsTaggingAPI
  * \brief The QtAws::ResourceGroupsTaggingAPI contains stuff...
+ *
+ * \inmodule QtAwsResourceGroupsTaggingAPI
+ *
  * @todo Move this to a separate template file.
  */
 
@@ -142,7 +145,7 @@ ResourceGroupsTaggingAPIClient::ResourceGroupsTaggingAPIClient(
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * \a  AwsEndpoint::getEndpoint()
+ * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
 ResourceGroupsTaggingAPIClient::ResourceGroupsTaggingAPIClient(
     const QUrl &endpoint,

@@ -27,10 +27,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::DeleteServerCertificateRequest
- *
  * \brief The DeleteServerCertificateRequest class provides an interface for IAM DeleteServerCertificate requests.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -102,9 +101,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new DeleteServerCertificateRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteServerCertificateRequest::DeleteServerCertificateRequest(const DeleteServerCertificateRequest &other)
     : IAMRequest(new DeleteServerCertificateRequestPrivate(*other.d_func(), this))
@@ -113,7 +110,7 @@ DeleteServerCertificateRequest::DeleteServerCertificateRequest(const DeleteServe
 }
 
 /*!
- * @brief  Constructs a new DeleteServerCertificateRequest object.
+ * Constructs a DeleteServerCertificateRequest object.
  */
 DeleteServerCertificateRequest::DeleteServerCertificateRequest()
     : IAMRequest(new DeleteServerCertificateRequestPrivate(IAMRequest::DeleteServerCertificateAction, this))
@@ -131,14 +128,9 @@ bool DeleteServerCertificateRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteServerCertificateResponse object.
+ * Returns a DeleteServerCertificateResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteServerCertificateResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IAMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteServerCertificateRequest::response(QNetworkReply * const reply) const
 {
@@ -146,20 +138,17 @@ QtAws::Core::AwsAbstractResponse * DeleteServerCertificateRequest::response(QNet
 }
 
 /*!
- * @internal
+ * \class QtAws::IAM::DeleteServerCertificateRequestPrivate
+ * \brief The DeleteServerCertificateRequestPrivate class provides private implementation for DeleteServerCertificateRequest.
+ * \internal
  *
- * @class  DeleteServerCertificateRequestPrivate
- *
- * @brief  Private implementation for DeleteServerCertificateRequest.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteServerCertificateRequestPrivate object.
- *
- * @param  action  IAM action being performed.
- * @param  q       Pointer to this object's public DeleteServerCertificateRequest instance.
+ * Constructs a DeleteServerCertificateRequestPrivate object for IAM \a action with,
+ * public implementation \a q.
  */
 DeleteServerCertificateRequestPrivate::DeleteServerCertificateRequestPrivate(
     const IAMRequest::Action action, DeleteServerCertificateRequest * const q)
@@ -169,15 +158,10 @@ DeleteServerCertificateRequestPrivate::DeleteServerCertificateRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteServerCertificateRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteServerCertificateRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteServerCertificateRequest instance.
  */
 DeleteServerCertificateRequestPrivate::DeleteServerCertificateRequestPrivate(
     const DeleteServerCertificateRequestPrivate &other, DeleteServerCertificateRequest * const q)

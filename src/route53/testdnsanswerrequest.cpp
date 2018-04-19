@@ -27,19 +27,16 @@ namespace Route53 {
 
 /*!
  * \class QtAws::Route53::TestDNSAnswerRequest
- *
  * \brief The TestDNSAnswerRequest class provides an interface for Route53 TestDNSAnswer requests.
  *
- * \ingroup Route53
+ * \inmodule QtAwsRoute53
  *
  *
  * \sa Route53Client::testDNSAnswer
  */
 
 /*!
- * @brief  Constructs a new TestDNSAnswerRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 TestDNSAnswerRequest::TestDNSAnswerRequest(const TestDNSAnswerRequest &other)
     : Route53Request(new TestDNSAnswerRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ TestDNSAnswerRequest::TestDNSAnswerRequest(const TestDNSAnswerRequest &other)
 }
 
 /*!
- * @brief  Constructs a new TestDNSAnswerRequest object.
+ * Constructs a TestDNSAnswerRequest object.
  */
 TestDNSAnswerRequest::TestDNSAnswerRequest()
     : Route53Request(new TestDNSAnswerRequestPrivate(Route53Request::TestDNSAnswerAction, this))
@@ -66,14 +63,9 @@ bool TestDNSAnswerRequest::isValid() const
 
 
 /*!
- * @brief  Construct an TestDNSAnswerResponse object.
+ * Returns a TestDNSAnswerResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An TestDNSAnswerResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  Route53Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * TestDNSAnswerRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * TestDNSAnswerRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::Route53::TestDNSAnswerRequestPrivate
+ * \brief The TestDNSAnswerRequestPrivate class provides private implementation for TestDNSAnswerRequest.
+ * \internal
  *
- * @class  TestDNSAnswerRequestPrivate
- *
- * @brief  Private implementation for TestDNSAnswerRequest.
+ * \inmodule QtAwsRoute53
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new TestDNSAnswerRequestPrivate object.
- *
- * @param  action  Route53 action being performed.
- * @param  q       Pointer to this object's public TestDNSAnswerRequest instance.
+ * Constructs a TestDNSAnswerRequestPrivate object for Route53 \a action with,
+ * public implementation \a q.
  */
 TestDNSAnswerRequestPrivate::TestDNSAnswerRequestPrivate(
     const Route53Request::Action action, TestDNSAnswerRequest * const q)
@@ -104,15 +93,10 @@ TestDNSAnswerRequestPrivate::TestDNSAnswerRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new TestDNSAnswerRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the TestDNSAnswerRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public TestDNSAnswerRequest instance.
  */
 TestDNSAnswerRequestPrivate::TestDNSAnswerRequestPrivate(
     const TestDNSAnswerRequestPrivate &other, TestDNSAnswerRequest * const q)

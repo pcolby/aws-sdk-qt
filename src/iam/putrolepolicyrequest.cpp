@@ -27,10 +27,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::PutRolePolicyRequest
- *
  * \brief The PutRolePolicyRequest class provides an interface for IAM PutRolePolicy requests.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -102,9 +101,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new PutRolePolicyRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 PutRolePolicyRequest::PutRolePolicyRequest(const PutRolePolicyRequest &other)
     : IAMRequest(new PutRolePolicyRequestPrivate(*other.d_func(), this))
@@ -113,7 +110,7 @@ PutRolePolicyRequest::PutRolePolicyRequest(const PutRolePolicyRequest &other)
 }
 
 /*!
- * @brief  Constructs a new PutRolePolicyRequest object.
+ * Constructs a PutRolePolicyRequest object.
  */
 PutRolePolicyRequest::PutRolePolicyRequest()
     : IAMRequest(new PutRolePolicyRequestPrivate(IAMRequest::PutRolePolicyAction, this))
@@ -131,14 +128,9 @@ bool PutRolePolicyRequest::isValid() const
 
 
 /*!
- * @brief  Construct an PutRolePolicyResponse object.
+ * Returns a PutRolePolicyResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An PutRolePolicyResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IAMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * PutRolePolicyRequest::response(QNetworkReply * const reply) const
 {
@@ -146,20 +138,17 @@ QtAws::Core::AwsAbstractResponse * PutRolePolicyRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::IAM::PutRolePolicyRequestPrivate
+ * \brief The PutRolePolicyRequestPrivate class provides private implementation for PutRolePolicyRequest.
+ * \internal
  *
- * @class  PutRolePolicyRequestPrivate
- *
- * @brief  Private implementation for PutRolePolicyRequest.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new PutRolePolicyRequestPrivate object.
- *
- * @param  action  IAM action being performed.
- * @param  q       Pointer to this object's public PutRolePolicyRequest instance.
+ * Constructs a PutRolePolicyRequestPrivate object for IAM \a action with,
+ * public implementation \a q.
  */
 PutRolePolicyRequestPrivate::PutRolePolicyRequestPrivate(
     const IAMRequest::Action action, PutRolePolicyRequest * const q)
@@ -169,15 +158,10 @@ PutRolePolicyRequestPrivate::PutRolePolicyRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutRolePolicyRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the PutRolePolicyRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public PutRolePolicyRequest instance.
  */
 PutRolePolicyRequestPrivate::PutRolePolicyRequestPrivate(
     const PutRolePolicyRequestPrivate &other, PutRolePolicyRequest * const q)

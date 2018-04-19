@@ -27,10 +27,9 @@ namespace DataPipeline {
 
 /*!
  * \class QtAws::DataPipeline::ReportTaskRunnerHeartbeatRequest
- *
  * \brief The ReportTaskRunnerHeartbeatRequest class provides an interface for DataPipeline ReportTaskRunnerHeartbeat requests.
  *
- * \ingroup DataPipeline
+ * \inmodule QtAwsDataPipeline
  *
  *  AWS Data Pipeline configures and manages a data-driven workflow called a pipeline. AWS Data Pipeline handles the details
  *  of scheduling and ensuring that data dependencies are met so that your application can focus on processing the
@@ -55,9 +54,7 @@ namespace DataPipeline {
  */
 
 /*!
- * @brief  Constructs a new ReportTaskRunnerHeartbeatRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ReportTaskRunnerHeartbeatRequest::ReportTaskRunnerHeartbeatRequest(const ReportTaskRunnerHeartbeatRequest &other)
     : DataPipelineRequest(new ReportTaskRunnerHeartbeatRequestPrivate(*other.d_func(), this))
@@ -66,7 +63,7 @@ ReportTaskRunnerHeartbeatRequest::ReportTaskRunnerHeartbeatRequest(const ReportT
 }
 
 /*!
- * @brief  Constructs a new ReportTaskRunnerHeartbeatRequest object.
+ * Constructs a ReportTaskRunnerHeartbeatRequest object.
  */
 ReportTaskRunnerHeartbeatRequest::ReportTaskRunnerHeartbeatRequest()
     : DataPipelineRequest(new ReportTaskRunnerHeartbeatRequestPrivate(DataPipelineRequest::ReportTaskRunnerHeartbeatAction, this))
@@ -84,14 +81,9 @@ bool ReportTaskRunnerHeartbeatRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ReportTaskRunnerHeartbeatResponse object.
+ * Returns a ReportTaskRunnerHeartbeatResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ReportTaskRunnerHeartbeatResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DataPipelineClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ReportTaskRunnerHeartbeatRequest::response(QNetworkReply * const reply) const
 {
@@ -99,20 +91,17 @@ QtAws::Core::AwsAbstractResponse * ReportTaskRunnerHeartbeatRequest::response(QN
 }
 
 /*!
- * @internal
+ * \class QtAws::DataPipeline::ReportTaskRunnerHeartbeatRequestPrivate
+ * \brief The ReportTaskRunnerHeartbeatRequestPrivate class provides private implementation for ReportTaskRunnerHeartbeatRequest.
+ * \internal
  *
- * @class  ReportTaskRunnerHeartbeatRequestPrivate
- *
- * @brief  Private implementation for ReportTaskRunnerHeartbeatRequest.
+ * \inmodule QtAwsDataPipeline
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ReportTaskRunnerHeartbeatRequestPrivate object.
- *
- * @param  action  DataPipeline action being performed.
- * @param  q       Pointer to this object's public ReportTaskRunnerHeartbeatRequest instance.
+ * Constructs a ReportTaskRunnerHeartbeatRequestPrivate object for DataPipeline \a action with,
+ * public implementation \a q.
  */
 ReportTaskRunnerHeartbeatRequestPrivate::ReportTaskRunnerHeartbeatRequestPrivate(
     const DataPipelineRequest::Action action, ReportTaskRunnerHeartbeatRequest * const q)
@@ -122,15 +111,10 @@ ReportTaskRunnerHeartbeatRequestPrivate::ReportTaskRunnerHeartbeatRequestPrivate
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ReportTaskRunnerHeartbeatRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ReportTaskRunnerHeartbeatRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ReportTaskRunnerHeartbeatRequest instance.
  */
 ReportTaskRunnerHeartbeatRequestPrivate::ReportTaskRunnerHeartbeatRequestPrivate(
     const ReportTaskRunnerHeartbeatRequestPrivate &other, ReportTaskRunnerHeartbeatRequest * const q)

@@ -27,10 +27,9 @@ namespace ServiceCatalog {
 
 /*!
  * \class QtAws::ServiceCatalog::UpdatePortfolioRequest
- *
  * \brief The UpdatePortfolioRequest class provides an interface for ServiceCatalog UpdatePortfolio requests.
  *
- * \ingroup ServiceCatalog
+ * \inmodule QtAwsServiceCatalog
  *
  *  <fullname>AWS Service Catalog</fullname>
  * 
@@ -43,9 +42,7 @@ namespace ServiceCatalog {
  */
 
 /*!
- * @brief  Constructs a new UpdatePortfolioRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdatePortfolioRequest::UpdatePortfolioRequest(const UpdatePortfolioRequest &other)
     : ServiceCatalogRequest(new UpdatePortfolioRequestPrivate(*other.d_func(), this))
@@ -54,7 +51,7 @@ UpdatePortfolioRequest::UpdatePortfolioRequest(const UpdatePortfolioRequest &oth
 }
 
 /*!
- * @brief  Constructs a new UpdatePortfolioRequest object.
+ * Constructs a UpdatePortfolioRequest object.
  */
 UpdatePortfolioRequest::UpdatePortfolioRequest()
     : ServiceCatalogRequest(new UpdatePortfolioRequestPrivate(ServiceCatalogRequest::UpdatePortfolioAction, this))
@@ -72,14 +69,9 @@ bool UpdatePortfolioRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdatePortfolioResponse object.
+ * Returns a UpdatePortfolioResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdatePortfolioResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ServiceCatalogClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdatePortfolioRequest::response(QNetworkReply * const reply) const
 {
@@ -87,20 +79,17 @@ QtAws::Core::AwsAbstractResponse * UpdatePortfolioRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::ServiceCatalog::UpdatePortfolioRequestPrivate
+ * \brief The UpdatePortfolioRequestPrivate class provides private implementation for UpdatePortfolioRequest.
+ * \internal
  *
- * @class  UpdatePortfolioRequestPrivate
- *
- * @brief  Private implementation for UpdatePortfolioRequest.
+ * \inmodule QtAwsServiceCatalog
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdatePortfolioRequestPrivate object.
- *
- * @param  action  ServiceCatalog action being performed.
- * @param  q       Pointer to this object's public UpdatePortfolioRequest instance.
+ * Constructs a UpdatePortfolioRequestPrivate object for ServiceCatalog \a action with,
+ * public implementation \a q.
  */
 UpdatePortfolioRequestPrivate::UpdatePortfolioRequestPrivate(
     const ServiceCatalogRequest::Action action, UpdatePortfolioRequest * const q)
@@ -110,15 +99,10 @@ UpdatePortfolioRequestPrivate::UpdatePortfolioRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdatePortfolioRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdatePortfolioRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdatePortfolioRequest instance.
  */
 UpdatePortfolioRequestPrivate::UpdatePortfolioRequestPrivate(
     const UpdatePortfolioRequestPrivate &other, UpdatePortfolioRequest * const q)

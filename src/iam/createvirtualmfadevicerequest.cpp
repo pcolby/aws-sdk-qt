@@ -27,10 +27,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::CreateVirtualMFADeviceRequest
- *
  * \brief The CreateVirtualMFADeviceRequest class provides an interface for IAM CreateVirtualMFADevice requests.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -102,9 +101,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new CreateVirtualMFADeviceRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateVirtualMFADeviceRequest::CreateVirtualMFADeviceRequest(const CreateVirtualMFADeviceRequest &other)
     : IAMRequest(new CreateVirtualMFADeviceRequestPrivate(*other.d_func(), this))
@@ -113,7 +110,7 @@ CreateVirtualMFADeviceRequest::CreateVirtualMFADeviceRequest(const CreateVirtual
 }
 
 /*!
- * @brief  Constructs a new CreateVirtualMFADeviceRequest object.
+ * Constructs a CreateVirtualMFADeviceRequest object.
  */
 CreateVirtualMFADeviceRequest::CreateVirtualMFADeviceRequest()
     : IAMRequest(new CreateVirtualMFADeviceRequestPrivate(IAMRequest::CreateVirtualMFADeviceAction, this))
@@ -131,14 +128,9 @@ bool CreateVirtualMFADeviceRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateVirtualMFADeviceResponse object.
+ * Returns a CreateVirtualMFADeviceResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateVirtualMFADeviceResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IAMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateVirtualMFADeviceRequest::response(QNetworkReply * const reply) const
 {
@@ -146,20 +138,17 @@ QtAws::Core::AwsAbstractResponse * CreateVirtualMFADeviceRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::IAM::CreateVirtualMFADeviceRequestPrivate
+ * \brief The CreateVirtualMFADeviceRequestPrivate class provides private implementation for CreateVirtualMFADeviceRequest.
+ * \internal
  *
- * @class  CreateVirtualMFADeviceRequestPrivate
- *
- * @brief  Private implementation for CreateVirtualMFADeviceRequest.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateVirtualMFADeviceRequestPrivate object.
- *
- * @param  action  IAM action being performed.
- * @param  q       Pointer to this object's public CreateVirtualMFADeviceRequest instance.
+ * Constructs a CreateVirtualMFADeviceRequestPrivate object for IAM \a action with,
+ * public implementation \a q.
  */
 CreateVirtualMFADeviceRequestPrivate::CreateVirtualMFADeviceRequestPrivate(
     const IAMRequest::Action action, CreateVirtualMFADeviceRequest * const q)
@@ -169,15 +158,10 @@ CreateVirtualMFADeviceRequestPrivate::CreateVirtualMFADeviceRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateVirtualMFADeviceRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateVirtualMFADeviceRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateVirtualMFADeviceRequest instance.
  */
 CreateVirtualMFADeviceRequestPrivate::CreateVirtualMFADeviceRequestPrivate(
     const CreateVirtualMFADeviceRequestPrivate &other, CreateVirtualMFADeviceRequest * const q)

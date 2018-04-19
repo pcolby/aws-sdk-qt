@@ -27,10 +27,9 @@ namespace CloudFormation {
 
 /*!
  * \class QtAws::CloudFormation::UpdateStackRequest
- *
  * \brief The UpdateStackRequest class provides an interface for CloudFormation UpdateStack requests.
  *
- * \ingroup CloudFormation
+ * \inmodule QtAwsCloudFormation
  *
  *  <fullname>AWS CloudFormation</fullname>
  * 
@@ -59,9 +58,7 @@ namespace CloudFormation {
  */
 
 /*!
- * @brief  Constructs a new UpdateStackRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateStackRequest::UpdateStackRequest(const UpdateStackRequest &other)
     : CloudFormationRequest(new UpdateStackRequestPrivate(*other.d_func(), this))
@@ -70,7 +67,7 @@ UpdateStackRequest::UpdateStackRequest(const UpdateStackRequest &other)
 }
 
 /*!
- * @brief  Constructs a new UpdateStackRequest object.
+ * Constructs a UpdateStackRequest object.
  */
 UpdateStackRequest::UpdateStackRequest()
     : CloudFormationRequest(new UpdateStackRequestPrivate(CloudFormationRequest::UpdateStackAction, this))
@@ -88,14 +85,9 @@ bool UpdateStackRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateStackResponse object.
+ * Returns a UpdateStackResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateStackResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudFormationClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateStackRequest::response(QNetworkReply * const reply) const
 {
@@ -103,20 +95,17 @@ QtAws::Core::AwsAbstractResponse * UpdateStackRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudFormation::UpdateStackRequestPrivate
+ * \brief The UpdateStackRequestPrivate class provides private implementation for UpdateStackRequest.
+ * \internal
  *
- * @class  UpdateStackRequestPrivate
- *
- * @brief  Private implementation for UpdateStackRequest.
+ * \inmodule QtAwsCloudFormation
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateStackRequestPrivate object.
- *
- * @param  action  CloudFormation action being performed.
- * @param  q       Pointer to this object's public UpdateStackRequest instance.
+ * Constructs a UpdateStackRequestPrivate object for CloudFormation \a action with,
+ * public implementation \a q.
  */
 UpdateStackRequestPrivate::UpdateStackRequestPrivate(
     const CloudFormationRequest::Action action, UpdateStackRequest * const q)
@@ -126,15 +115,10 @@ UpdateStackRequestPrivate::UpdateStackRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateStackRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateStackRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateStackRequest instance.
  */
 UpdateStackRequestPrivate::UpdateStackRequestPrivate(
     const UpdateStackRequestPrivate &other, UpdateStackRequest * const q)

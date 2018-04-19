@@ -27,19 +27,16 @@ namespace SageMaker {
 
 /*!
  * \class QtAws::SageMaker::CreatePresignedNotebookInstanceUrlRequest
- *
  * \brief The CreatePresignedNotebookInstanceUrlRequest class provides an interface for SageMaker CreatePresignedNotebookInstanceUrl requests.
  *
- * \ingroup SageMaker
+ * \inmodule QtAwsSageMaker
  *
  *
  * \sa SageMakerClient::createPresignedNotebookInstanceUrl
  */
 
 /*!
- * @brief  Constructs a new CreatePresignedNotebookInstanceUrlRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreatePresignedNotebookInstanceUrlRequest::CreatePresignedNotebookInstanceUrlRequest(const CreatePresignedNotebookInstanceUrlRequest &other)
     : SageMakerRequest(new CreatePresignedNotebookInstanceUrlRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ CreatePresignedNotebookInstanceUrlRequest::CreatePresignedNotebookInstanceUrlReq
 }
 
 /*!
- * @brief  Constructs a new CreatePresignedNotebookInstanceUrlRequest object.
+ * Constructs a CreatePresignedNotebookInstanceUrlRequest object.
  */
 CreatePresignedNotebookInstanceUrlRequest::CreatePresignedNotebookInstanceUrlRequest()
     : SageMakerRequest(new CreatePresignedNotebookInstanceUrlRequestPrivate(SageMakerRequest::CreatePresignedNotebookInstanceUrlAction, this))
@@ -66,14 +63,9 @@ bool CreatePresignedNotebookInstanceUrlRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreatePresignedNotebookInstanceUrlResponse object.
+ * Returns a CreatePresignedNotebookInstanceUrlResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreatePresignedNotebookInstanceUrlResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SageMakerClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreatePresignedNotebookInstanceUrlRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * CreatePresignedNotebookInstanceUrlRequest::re
 }
 
 /*!
- * @internal
+ * \class QtAws::SageMaker::CreatePresignedNotebookInstanceUrlRequestPrivate
+ * \brief The CreatePresignedNotebookInstanceUrlRequestPrivate class provides private implementation for CreatePresignedNotebookInstanceUrlRequest.
+ * \internal
  *
- * @class  CreatePresignedNotebookInstanceUrlRequestPrivate
- *
- * @brief  Private implementation for CreatePresignedNotebookInstanceUrlRequest.
+ * \inmodule QtAwsSageMaker
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreatePresignedNotebookInstanceUrlRequestPrivate object.
- *
- * @param  action  SageMaker action being performed.
- * @param  q       Pointer to this object's public CreatePresignedNotebookInstanceUrlRequest instance.
+ * Constructs a CreatePresignedNotebookInstanceUrlRequestPrivate object for SageMaker \a action with,
+ * public implementation \a q.
  */
 CreatePresignedNotebookInstanceUrlRequestPrivate::CreatePresignedNotebookInstanceUrlRequestPrivate(
     const SageMakerRequest::Action action, CreatePresignedNotebookInstanceUrlRequest * const q)
@@ -104,15 +93,10 @@ CreatePresignedNotebookInstanceUrlRequestPrivate::CreatePresignedNotebookInstanc
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreatePresignedNotebookInstanceUrlRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreatePresignedNotebookInstanceUrlRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreatePresignedNotebookInstanceUrlRequest instance.
  */
 CreatePresignedNotebookInstanceUrlRequestPrivate::CreatePresignedNotebookInstanceUrlRequestPrivate(
     const CreatePresignedNotebookInstanceUrlRequestPrivate &other, CreatePresignedNotebookInstanceUrlRequest * const q)

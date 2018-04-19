@@ -27,10 +27,9 @@ namespace Glue {
 
 /*!
  * \class QtAws::Glue::DeleteUserDefinedFunctionRequest
- *
  * \brief The DeleteUserDefinedFunctionRequest class provides an interface for Glue DeleteUserDefinedFunction requests.
  *
- * \ingroup Glue
+ * \inmodule QtAwsGlue
  *
  *  <fullname>AWS Glue</fullname>
  * 
@@ -40,9 +39,7 @@ namespace Glue {
  */
 
 /*!
- * @brief  Constructs a new DeleteUserDefinedFunctionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteUserDefinedFunctionRequest::DeleteUserDefinedFunctionRequest(const DeleteUserDefinedFunctionRequest &other)
     : GlueRequest(new DeleteUserDefinedFunctionRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ DeleteUserDefinedFunctionRequest::DeleteUserDefinedFunctionRequest(const DeleteU
 }
 
 /*!
- * @brief  Constructs a new DeleteUserDefinedFunctionRequest object.
+ * Constructs a DeleteUserDefinedFunctionRequest object.
  */
 DeleteUserDefinedFunctionRequest::DeleteUserDefinedFunctionRequest()
     : GlueRequest(new DeleteUserDefinedFunctionRequestPrivate(GlueRequest::DeleteUserDefinedFunctionAction, this))
@@ -69,14 +66,9 @@ bool DeleteUserDefinedFunctionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteUserDefinedFunctionResponse object.
+ * Returns a DeleteUserDefinedFunctionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteUserDefinedFunctionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GlueClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteUserDefinedFunctionRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * DeleteUserDefinedFunctionRequest::response(QN
 }
 
 /*!
- * @internal
+ * \class QtAws::Glue::DeleteUserDefinedFunctionRequestPrivate
+ * \brief The DeleteUserDefinedFunctionRequestPrivate class provides private implementation for DeleteUserDefinedFunctionRequest.
+ * \internal
  *
- * @class  DeleteUserDefinedFunctionRequestPrivate
- *
- * @brief  Private implementation for DeleteUserDefinedFunctionRequest.
+ * \inmodule QtAwsGlue
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteUserDefinedFunctionRequestPrivate object.
- *
- * @param  action  Glue action being performed.
- * @param  q       Pointer to this object's public DeleteUserDefinedFunctionRequest instance.
+ * Constructs a DeleteUserDefinedFunctionRequestPrivate object for Glue \a action with,
+ * public implementation \a q.
  */
 DeleteUserDefinedFunctionRequestPrivate::DeleteUserDefinedFunctionRequestPrivate(
     const GlueRequest::Action action, DeleteUserDefinedFunctionRequest * const q)
@@ -107,15 +96,10 @@ DeleteUserDefinedFunctionRequestPrivate::DeleteUserDefinedFunctionRequestPrivate
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteUserDefinedFunctionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteUserDefinedFunctionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteUserDefinedFunctionRequest instance.
  */
 DeleteUserDefinedFunctionRequestPrivate::DeleteUserDefinedFunctionRequestPrivate(
     const DeleteUserDefinedFunctionRequestPrivate &other, DeleteUserDefinedFunctionRequest * const q)

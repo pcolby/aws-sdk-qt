@@ -27,19 +27,16 @@ namespace S3 {
 
 /*!
  * \class QtAws::S3::PutBucketPolicyRequest
- *
  * \brief The PutBucketPolicyRequest class provides an interface for S3 PutBucketPolicy requests.
  *
- * \ingroup S3
+ * \inmodule QtAwsS3
  *
  *
  * \sa S3Client::putBucketPolicy
  */
 
 /*!
- * @brief  Constructs a new PutBucketPolicyRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 PutBucketPolicyRequest::PutBucketPolicyRequest(const PutBucketPolicyRequest &other)
     : S3Request(new PutBucketPolicyRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ PutBucketPolicyRequest::PutBucketPolicyRequest(const PutBucketPolicyRequest &oth
 }
 
 /*!
- * @brief  Constructs a new PutBucketPolicyRequest object.
+ * Constructs a PutBucketPolicyRequest object.
  */
 PutBucketPolicyRequest::PutBucketPolicyRequest()
     : S3Request(new PutBucketPolicyRequestPrivate(S3Request::PutBucketPolicyAction, this))
@@ -66,14 +63,9 @@ bool PutBucketPolicyRequest::isValid() const
 
 
 /*!
- * @brief  Construct an PutBucketPolicyResponse object.
+ * Returns a PutBucketPolicyResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An PutBucketPolicyResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  S3Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * PutBucketPolicyRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * PutBucketPolicyRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::S3::PutBucketPolicyRequestPrivate
+ * \brief The PutBucketPolicyRequestPrivate class provides private implementation for PutBucketPolicyRequest.
+ * \internal
  *
- * @class  PutBucketPolicyRequestPrivate
- *
- * @brief  Private implementation for PutBucketPolicyRequest.
+ * \inmodule QtAwsS3
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new PutBucketPolicyRequestPrivate object.
- *
- * @param  action  S3 action being performed.
- * @param  q       Pointer to this object's public PutBucketPolicyRequest instance.
+ * Constructs a PutBucketPolicyRequestPrivate object for S3 \a action with,
+ * public implementation \a q.
  */
 PutBucketPolicyRequestPrivate::PutBucketPolicyRequestPrivate(
     const S3Request::Action action, PutBucketPolicyRequest * const q)
@@ -104,15 +93,10 @@ PutBucketPolicyRequestPrivate::PutBucketPolicyRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutBucketPolicyRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the PutBucketPolicyRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public PutBucketPolicyRequest instance.
  */
 PutBucketPolicyRequestPrivate::PutBucketPolicyRequestPrivate(
     const PutBucketPolicyRequestPrivate &other, PutBucketPolicyRequest * const q)

@@ -27,10 +27,9 @@ namespace ElastiCache {
 
 /*!
  * \class QtAws::ElastiCache::DescribeCacheParameterGroupsRequest
- *
  * \brief The DescribeCacheParameterGroupsRequest class provides an interface for ElastiCache DescribeCacheParameterGroups requests.
  *
- * \ingroup ElastiCache
+ * \inmodule QtAwsElastiCache
  *
  *  <fullname>Amazon ElastiCache</fullname>
  * 
@@ -51,9 +50,7 @@ namespace ElastiCache {
  */
 
 /*!
- * @brief  Constructs a new DescribeCacheParameterGroupsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeCacheParameterGroupsRequest::DescribeCacheParameterGroupsRequest(const DescribeCacheParameterGroupsRequest &other)
     : ElastiCacheRequest(new DescribeCacheParameterGroupsRequestPrivate(*other.d_func(), this))
@@ -62,7 +59,7 @@ DescribeCacheParameterGroupsRequest::DescribeCacheParameterGroupsRequest(const D
 }
 
 /*!
- * @brief  Constructs a new DescribeCacheParameterGroupsRequest object.
+ * Constructs a DescribeCacheParameterGroupsRequest object.
  */
 DescribeCacheParameterGroupsRequest::DescribeCacheParameterGroupsRequest()
     : ElastiCacheRequest(new DescribeCacheParameterGroupsRequestPrivate(ElastiCacheRequest::DescribeCacheParameterGroupsAction, this))
@@ -80,14 +77,9 @@ bool DescribeCacheParameterGroupsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeCacheParameterGroupsResponse object.
+ * Returns a DescribeCacheParameterGroupsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeCacheParameterGroupsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ElastiCacheClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeCacheParameterGroupsRequest::response(QNetworkReply * const reply) const
 {
@@ -95,20 +87,17 @@ QtAws::Core::AwsAbstractResponse * DescribeCacheParameterGroupsRequest::response
 }
 
 /*!
- * @internal
+ * \class QtAws::ElastiCache::DescribeCacheParameterGroupsRequestPrivate
+ * \brief The DescribeCacheParameterGroupsRequestPrivate class provides private implementation for DescribeCacheParameterGroupsRequest.
+ * \internal
  *
- * @class  DescribeCacheParameterGroupsRequestPrivate
- *
- * @brief  Private implementation for DescribeCacheParameterGroupsRequest.
+ * \inmodule QtAwsElastiCache
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeCacheParameterGroupsRequestPrivate object.
- *
- * @param  action  ElastiCache action being performed.
- * @param  q       Pointer to this object's public DescribeCacheParameterGroupsRequest instance.
+ * Constructs a DescribeCacheParameterGroupsRequestPrivate object for ElastiCache \a action with,
+ * public implementation \a q.
  */
 DescribeCacheParameterGroupsRequestPrivate::DescribeCacheParameterGroupsRequestPrivate(
     const ElastiCacheRequest::Action action, DescribeCacheParameterGroupsRequest * const q)
@@ -118,15 +107,10 @@ DescribeCacheParameterGroupsRequestPrivate::DescribeCacheParameterGroupsRequestP
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeCacheParameterGroupsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeCacheParameterGroupsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeCacheParameterGroupsRequest instance.
  */
 DescribeCacheParameterGroupsRequestPrivate::DescribeCacheParameterGroupsRequestPrivate(
     const DescribeCacheParameterGroupsRequestPrivate &other, DescribeCacheParameterGroupsRequest * const q)

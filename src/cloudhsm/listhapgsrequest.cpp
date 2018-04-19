@@ -27,10 +27,9 @@ namespace CloudHSM {
 
 /*!
  * \class QtAws::CloudHSM::ListHapgsRequest
- *
  * \brief The ListHapgsRequest class provides an interface for CloudHSM ListHapgs requests.
  *
- * \ingroup CloudHSM
+ * \inmodule QtAwsCloudHSM
  *
  *  <fullname>AWS CloudHSM Service</fullname>
  * 
@@ -49,9 +48,7 @@ namespace CloudHSM {
  */
 
 /*!
- * @brief  Constructs a new ListHapgsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListHapgsRequest::ListHapgsRequest(const ListHapgsRequest &other)
     : CloudHSMRequest(new ListHapgsRequestPrivate(*other.d_func(), this))
@@ -60,7 +57,7 @@ ListHapgsRequest::ListHapgsRequest(const ListHapgsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ListHapgsRequest object.
+ * Constructs a ListHapgsRequest object.
  */
 ListHapgsRequest::ListHapgsRequest()
     : CloudHSMRequest(new ListHapgsRequestPrivate(CloudHSMRequest::ListHapgsAction, this))
@@ -78,14 +75,9 @@ bool ListHapgsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListHapgsResponse object.
+ * Returns a ListHapgsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListHapgsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudHSMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListHapgsRequest::response(QNetworkReply * const reply) const
 {
@@ -93,20 +85,17 @@ QtAws::Core::AwsAbstractResponse * ListHapgsRequest::response(QNetworkReply * co
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudHSM::ListHapgsRequestPrivate
+ * \brief The ListHapgsRequestPrivate class provides private implementation for ListHapgsRequest.
+ * \internal
  *
- * @class  ListHapgsRequestPrivate
- *
- * @brief  Private implementation for ListHapgsRequest.
+ * \inmodule QtAwsCloudHSM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListHapgsRequestPrivate object.
- *
- * @param  action  CloudHSM action being performed.
- * @param  q       Pointer to this object's public ListHapgsRequest instance.
+ * Constructs a ListHapgsRequestPrivate object for CloudHSM \a action with,
+ * public implementation \a q.
  */
 ListHapgsRequestPrivate::ListHapgsRequestPrivate(
     const CloudHSMRequest::Action action, ListHapgsRequest * const q)
@@ -116,15 +105,10 @@ ListHapgsRequestPrivate::ListHapgsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListHapgsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListHapgsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListHapgsRequest instance.
  */
 ListHapgsRequestPrivate::ListHapgsRequestPrivate(
     const ListHapgsRequestPrivate &other, ListHapgsRequest * const q)

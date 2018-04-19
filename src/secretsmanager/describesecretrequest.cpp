@@ -27,10 +27,9 @@ namespace SecretsManager {
 
 /*!
  * \class QtAws::SecretsManager::DescribeSecretRequest
- *
  * \brief The DescribeSecretRequest class provides an interface for SecretsManager DescribeSecret requests.
  *
- * \ingroup SecretsManager
+ * \inmodule QtAwsSecretsManager
  *
  *  <fullname>AWS Secrets Manager API Reference</fullname>
  * 
@@ -137,9 +136,7 @@ namespace SecretsManager {
  */
 
 /*!
- * @brief  Constructs a new DescribeSecretRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeSecretRequest::DescribeSecretRequest(const DescribeSecretRequest &other)
     : SecretsManagerRequest(new DescribeSecretRequestPrivate(*other.d_func(), this))
@@ -148,7 +145,7 @@ DescribeSecretRequest::DescribeSecretRequest(const DescribeSecretRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DescribeSecretRequest object.
+ * Constructs a DescribeSecretRequest object.
  */
 DescribeSecretRequest::DescribeSecretRequest()
     : SecretsManagerRequest(new DescribeSecretRequestPrivate(SecretsManagerRequest::DescribeSecretAction, this))
@@ -166,14 +163,9 @@ bool DescribeSecretRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeSecretResponse object.
+ * Returns a DescribeSecretResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeSecretResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SecretsManagerClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeSecretRequest::response(QNetworkReply * const reply) const
 {
@@ -181,20 +173,17 @@ QtAws::Core::AwsAbstractResponse * DescribeSecretRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::SecretsManager::DescribeSecretRequestPrivate
+ * \brief The DescribeSecretRequestPrivate class provides private implementation for DescribeSecretRequest.
+ * \internal
  *
- * @class  DescribeSecretRequestPrivate
- *
- * @brief  Private implementation for DescribeSecretRequest.
+ * \inmodule QtAwsSecretsManager
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeSecretRequestPrivate object.
- *
- * @param  action  SecretsManager action being performed.
- * @param  q       Pointer to this object's public DescribeSecretRequest instance.
+ * Constructs a DescribeSecretRequestPrivate object for SecretsManager \a action with,
+ * public implementation \a q.
  */
 DescribeSecretRequestPrivate::DescribeSecretRequestPrivate(
     const SecretsManagerRequest::Action action, DescribeSecretRequest * const q)
@@ -204,15 +193,10 @@ DescribeSecretRequestPrivate::DescribeSecretRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeSecretRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeSecretRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeSecretRequest instance.
  */
 DescribeSecretRequestPrivate::DescribeSecretRequestPrivate(
     const DescribeSecretRequestPrivate &other, DescribeSecretRequest * const q)

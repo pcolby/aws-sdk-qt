@@ -25,16 +25,34 @@ namespace Budgets {
 
 /*!
  * \class QtAws::Budgets::BudgetsRequest
- *
  * \brief The BudgetsRequest class provides an interface for Budgets requests.
  *
- * \ingroup Budgets
+ * \inmodule QtAwsBudgets
  */
 
 /*!
- * @brief  Constructs a new BudgetsRequest object.
+ * \enum BudgetsRequest::Action
  *
- * @param  action  The Budgets action to request.
+ * This enum describes the actions that can be performed as Budgets
+ * requests.
+ *
+ * \value CreateBudgetAction Budgets CreateBudget action.
+ * \value CreateNotificationAction Budgets CreateNotification action.
+ * \value CreateSubscriberAction Budgets CreateSubscriber action.
+ * \value DeleteBudgetAction Budgets DeleteBudget action.
+ * \value DeleteNotificationAction Budgets DeleteNotification action.
+ * \value DeleteSubscriberAction Budgets DeleteSubscriber action.
+ * \value DescribeBudgetAction Budgets DescribeBudget action.
+ * \value DescribeBudgetsAction Budgets DescribeBudgets action.
+ * \value DescribeNotificationsForBudgetAction Budgets DescribeNotificationsForBudget action.
+ * \value DescribeSubscribersForNotificationAction Budgets DescribeSubscribersForNotification action.
+ * \value UpdateBudgetAction Budgets UpdateBudget action.
+ * \value UpdateNotificationAction Budgets UpdateNotification action.
+ * \value UpdateSubscriberAction Budgets UpdateSubscriber action.
+ */
+
+/*!
+ * Constructs a[n] BudgetsRequest object for Budgets \a action.
  */
 BudgetsRequest::BudgetsRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new BudgetsRequestPrivate(action, this))
@@ -43,9 +61,7 @@ BudgetsRequest::BudgetsRequest(const Action action)
 }
 
 /*!
- * @brief  Constructs a new BudgetsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 BudgetsRequest::BudgetsRequest(const BudgetsRequest &other)
     : QtAws::Core::AwsAbstractRequest(new BudgetsRequestPrivate(*other.d_func(), this))
@@ -54,13 +70,7 @@ BudgetsRequest::BudgetsRequest(const BudgetsRequest &other)
 }
 
 /*!
- * @brief  Assignment operator.
- *
- * Assigns \a other to \c this.
- *
- * @param  other  Instance to copy.
- *
- * @return  A reference to \c this.
+ * Sets the BudgetsRequest object to be equal to \a other.
  */
 BudgetsRequest& BudgetsRequest::operator=(const BudgetsRequest &other)
 {
@@ -72,14 +82,10 @@ BudgetsRequest& BudgetsRequest::operator=(const BudgetsRequest &other)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new BudgetsRequest object.
+ * Constructs aa BudgetsRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from BudgetsRequestPrivate.
- *
- * @param  d  Pointer to private data (aka D-Pointer).
  */
 BudgetsRequest::BudgetsRequest(BudgetsRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
@@ -87,7 +93,7 @@ BudgetsRequest::BudgetsRequest(BudgetsRequestPrivate * const d) : QtAws::Core::A
 }
 
 /*!
- * \brief Returns the Budgets action to be performed by this request.
+ * Returns the Budgets action to be performed by this request.
  */
 BudgetsRequest::Action BudgetsRequest::action() const
 {
@@ -96,7 +102,7 @@ BudgetsRequest::Action BudgetsRequest::action() const
 }
 
 /*!
- * \brief Returns the name of the Budgets action to be performed by this request.
+ * Returns the name of the Budgets action to be performed by this request.
  */
 QString BudgetsRequest::actionString() const
 {
@@ -104,7 +110,7 @@ QString BudgetsRequest::actionString() const
 }
 
 /*!
- * \brief Returns the Budgets API version implemented by this request.
+ * Returns the Budgets API version implemented by this request.
  */
 QString BudgetsRequest::apiVersion() const
 {
@@ -113,7 +119,7 @@ QString BudgetsRequest::apiVersion() const
 }
 
 /*!
- * @brief Set the Budgets action to be performed by this request to \a action.
+ * Sets the Budgets action to be performed by this request to \a action.
  */
 void BudgetsRequest::setAction(const Action action)
 {
@@ -122,7 +128,7 @@ void BudgetsRequest::setAction(const Action action)
 }
 
 /*!
- * Set the Budgets API version to include in this request to \a version.
+ * Sets the Budgets API version to include in this request to \a version.
  */
 void BudgetsRequest::setApiVersion(const QString &version)
 {
@@ -131,7 +137,7 @@ void BudgetsRequest::setApiVersion(const QString &version)
 }
 
 /*!
- * \brief Returns \c true if this request is the same as \a other.
+ * Returns \c true if this request is equal to \a other; \c false otherwise.
  *
  * Note, most derived *Request classes do not need to provider their own
  * implementations of this function, since most such request classes rely on
@@ -146,8 +152,8 @@ bool BudgetsRequest::operator==(const BudgetsRequest &other) const
             (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
-/*!
- * @brief  Check if \a queueName is a valid Budgets queue name.
+/*
+ * Returns \c tue if \a queueName is a valid Budgets queue name.
  *
  * @par From Budgets FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
@@ -166,9 +172,8 @@ bool BudgetsRequest::operator==(const BudgetsRequest &other) const
 }*/
 
 /*!
- * \brief Removes the a \a name parameter from this request.
- *
- * Returns the count of paramters removed (typically \c 0 or \c 1).
+ * Removes the a \a name parameter from the request, then returns the number of
+ * paramters removed (typically \c 0 or \c 1).
  */
 int BudgetsRequest::clearParameter(const QString &name)
 {
@@ -177,7 +182,7 @@ int BudgetsRequest::clearParameter(const QString &name)
 }
 
 /*!
- * \brief Removes all parameters from this request.
+ * Removes all parameters from the request.
  */
 void BudgetsRequest::clearParameters()
 {
@@ -186,7 +191,7 @@ void BudgetsRequest::clearParameters()
 }
 
 /*!
- * \brief Returns the value of the \n name pararemter if set, otherwise \a defaultValue.
+ * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
 QVariant BudgetsRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
@@ -195,7 +200,7 @@ QVariant BudgetsRequest::parameter(const QString &name, const QVariant &defaultV
 }
 
 /*!
- * \brief Returns a map of parameters included in this request.
+ * Returns the parameters included in this request.
  */
 const QVariantMap &BudgetsRequest::parameters() const
 {
@@ -204,7 +209,7 @@ const QVariantMap &BudgetsRequest::parameters() const
 }
 
 /*!
- * \brief Sets the \a name parameter to \a value.
+ * Sets the \a name parameter to \a value.
  */
 void BudgetsRequest::setParameter(const QString &name, const QVariant &value)
 {
@@ -213,9 +218,8 @@ void BudgetsRequest::setParameter(const QString &name, const QVariant &value)
 }
 
 /*!
- * \brief Sets the map of paramters for this request to \a parameters.
- *
- * Any request parameters set previously will be discarded.
+ * Sets the paramters for this request to \a parameters. Any request parameters
+ * set previously will be discarded.
  */
 void BudgetsRequest::setParameters(const QVariantMap &parameters)
 {
@@ -224,11 +228,12 @@ void BudgetsRequest::setParameters(const QVariantMap &parameters)
 }
 
 /*!
- * \brief Returns a network request for this Budgets request using the given \a endpoint.
+ * Returns a network request for the Budgets request using the given
+ * \a endpoint.
  *
- * This Budgets implementation builds request URLs by combining the common query
- * parameters (such as Action and Version), with any that have been added (via
- * setParameter) by child classes.
+ * This Budgets implementation builds request URLs by combining the
+ * common query parameters (such as Action and Version), with any that have
+ * been added (via setParameter) by child classes.
  */
 QNetworkRequest BudgetsRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -239,17 +244,16 @@ QNetworkRequest BudgetsRequest::unsignedRequest(const QUrl &endpoint) const
 }
 
 /*!
+ * \class QtAws::Budgets::BudgetsRequestPrivate
+ * \brief The BudgetsRequestPrivate class provides private implementation for BudgetsRequest.
  * \internal
  *
- * \class  BudgetsRequestPrivate
- *
- * \brief  Private implementation for BudgetsRequest.
+ * \inmodule QtAwsBudgets
  */
 
 /*!
- * \internal
- *
- * \brief Constructs a new BudgetsRequestPrivate object.
+ * Constructs a BudgetsRequestPrivate object for Budgets \a action with,
+ * public implementation \a q.
  */
 BudgetsRequestPrivate::BudgetsRequestPrivate(const BudgetsRequest::Action action, BudgetsRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
@@ -258,9 +262,7 @@ BudgetsRequestPrivate::BudgetsRequestPrivate(const BudgetsRequest::Action action
 }
 
 /*!
- * \internal
- *
- * \brief Constructs a new BudgetsRequestPrivate object, copying an existing one.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
@@ -276,15 +278,12 @@ BudgetsRequestPrivate::BudgetsRequestPrivate(const BudgetsRequestPrivate &other,
 }
 
 /*!
- * \internal
- *
- * \brief Returns a string representing \a action.
+ * Returns a string represention of \a action, or a null string if \a action is
+ * invalid.
  *
  * This function converts BudgetsRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the Budgets service's Action
  * query parameters.
- *
- * @return A string representing \a action, or a null string if \a action is invalid.
  */
 QString BudgetsRequestPrivate::toString(const BudgetsRequest::Action &action)
 {

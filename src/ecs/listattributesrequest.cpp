@@ -27,10 +27,9 @@ namespace ECS {
 
 /*!
  * \class QtAws::ECS::ListAttributesRequest
- *
  * \brief The ListAttributesRequest class provides an interface for ECS ListAttributes requests.
  *
- * \ingroup ECS
+ * \inmodule QtAwsECS
  *
  *  Amazon Elastic Container Service (Amazon ECS) is a highly scalable, fast, container management service that makes it
  *  easy to run, stop, and manage Docker containers on a cluster. You can host your cluster on a serverless infrastructure
@@ -54,9 +53,7 @@ namespace ECS {
  */
 
 /*!
- * @brief  Constructs a new ListAttributesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListAttributesRequest::ListAttributesRequest(const ListAttributesRequest &other)
     : ECSRequest(new ListAttributesRequestPrivate(*other.d_func(), this))
@@ -65,7 +62,7 @@ ListAttributesRequest::ListAttributesRequest(const ListAttributesRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ListAttributesRequest object.
+ * Constructs a ListAttributesRequest object.
  */
 ListAttributesRequest::ListAttributesRequest()
     : ECSRequest(new ListAttributesRequestPrivate(ECSRequest::ListAttributesAction, this))
@@ -83,14 +80,9 @@ bool ListAttributesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListAttributesResponse object.
+ * Returns a ListAttributesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListAttributesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ECSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListAttributesRequest::response(QNetworkReply * const reply) const
 {
@@ -98,20 +90,17 @@ QtAws::Core::AwsAbstractResponse * ListAttributesRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::ECS::ListAttributesRequestPrivate
+ * \brief The ListAttributesRequestPrivate class provides private implementation for ListAttributesRequest.
+ * \internal
  *
- * @class  ListAttributesRequestPrivate
- *
- * @brief  Private implementation for ListAttributesRequest.
+ * \inmodule QtAwsECS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListAttributesRequestPrivate object.
- *
- * @param  action  ECS action being performed.
- * @param  q       Pointer to this object's public ListAttributesRequest instance.
+ * Constructs a ListAttributesRequestPrivate object for ECS \a action with,
+ * public implementation \a q.
  */
 ListAttributesRequestPrivate::ListAttributesRequestPrivate(
     const ECSRequest::Action action, ListAttributesRequest * const q)
@@ -121,15 +110,10 @@ ListAttributesRequestPrivate::ListAttributesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListAttributesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListAttributesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListAttributesRequest instance.
  */
 ListAttributesRequestPrivate::ListAttributesRequestPrivate(
     const ListAttributesRequestPrivate &other, ListAttributesRequest * const q)

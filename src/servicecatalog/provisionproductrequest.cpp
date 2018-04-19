@@ -27,10 +27,9 @@ namespace ServiceCatalog {
 
 /*!
  * \class QtAws::ServiceCatalog::ProvisionProductRequest
- *
  * \brief The ProvisionProductRequest class provides an interface for ServiceCatalog ProvisionProduct requests.
  *
- * \ingroup ServiceCatalog
+ * \inmodule QtAwsServiceCatalog
  *
  *  <fullname>AWS Service Catalog</fullname>
  * 
@@ -43,9 +42,7 @@ namespace ServiceCatalog {
  */
 
 /*!
- * @brief  Constructs a new ProvisionProductRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ProvisionProductRequest::ProvisionProductRequest(const ProvisionProductRequest &other)
     : ServiceCatalogRequest(new ProvisionProductRequestPrivate(*other.d_func(), this))
@@ -54,7 +51,7 @@ ProvisionProductRequest::ProvisionProductRequest(const ProvisionProductRequest &
 }
 
 /*!
- * @brief  Constructs a new ProvisionProductRequest object.
+ * Constructs a ProvisionProductRequest object.
  */
 ProvisionProductRequest::ProvisionProductRequest()
     : ServiceCatalogRequest(new ProvisionProductRequestPrivate(ServiceCatalogRequest::ProvisionProductAction, this))
@@ -72,14 +69,9 @@ bool ProvisionProductRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ProvisionProductResponse object.
+ * Returns a ProvisionProductResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ProvisionProductResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ServiceCatalogClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ProvisionProductRequest::response(QNetworkReply * const reply) const
 {
@@ -87,20 +79,17 @@ QtAws::Core::AwsAbstractResponse * ProvisionProductRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::ServiceCatalog::ProvisionProductRequestPrivate
+ * \brief The ProvisionProductRequestPrivate class provides private implementation for ProvisionProductRequest.
+ * \internal
  *
- * @class  ProvisionProductRequestPrivate
- *
- * @brief  Private implementation for ProvisionProductRequest.
+ * \inmodule QtAwsServiceCatalog
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ProvisionProductRequestPrivate object.
- *
- * @param  action  ServiceCatalog action being performed.
- * @param  q       Pointer to this object's public ProvisionProductRequest instance.
+ * Constructs a ProvisionProductRequestPrivate object for ServiceCatalog \a action with,
+ * public implementation \a q.
  */
 ProvisionProductRequestPrivate::ProvisionProductRequestPrivate(
     const ServiceCatalogRequest::Action action, ProvisionProductRequest * const q)
@@ -110,15 +99,10 @@ ProvisionProductRequestPrivate::ProvisionProductRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ProvisionProductRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ProvisionProductRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ProvisionProductRequest instance.
  */
 ProvisionProductRequestPrivate::ProvisionProductRequestPrivate(
     const ProvisionProductRequestPrivate &other, ProvisionProductRequest * const q)

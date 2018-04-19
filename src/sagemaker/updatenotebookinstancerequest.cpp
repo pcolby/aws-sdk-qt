@@ -27,19 +27,16 @@ namespace SageMaker {
 
 /*!
  * \class QtAws::SageMaker::UpdateNotebookInstanceRequest
- *
  * \brief The UpdateNotebookInstanceRequest class provides an interface for SageMaker UpdateNotebookInstance requests.
  *
- * \ingroup SageMaker
+ * \inmodule QtAwsSageMaker
  *
  *
  * \sa SageMakerClient::updateNotebookInstance
  */
 
 /*!
- * @brief  Constructs a new UpdateNotebookInstanceRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateNotebookInstanceRequest::UpdateNotebookInstanceRequest(const UpdateNotebookInstanceRequest &other)
     : SageMakerRequest(new UpdateNotebookInstanceRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ UpdateNotebookInstanceRequest::UpdateNotebookInstanceRequest(const UpdateNoteboo
 }
 
 /*!
- * @brief  Constructs a new UpdateNotebookInstanceRequest object.
+ * Constructs a UpdateNotebookInstanceRequest object.
  */
 UpdateNotebookInstanceRequest::UpdateNotebookInstanceRequest()
     : SageMakerRequest(new UpdateNotebookInstanceRequestPrivate(SageMakerRequest::UpdateNotebookInstanceAction, this))
@@ -66,14 +63,9 @@ bool UpdateNotebookInstanceRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateNotebookInstanceResponse object.
+ * Returns a UpdateNotebookInstanceResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateNotebookInstanceResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SageMakerClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateNotebookInstanceRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * UpdateNotebookInstanceRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::SageMaker::UpdateNotebookInstanceRequestPrivate
+ * \brief The UpdateNotebookInstanceRequestPrivate class provides private implementation for UpdateNotebookInstanceRequest.
+ * \internal
  *
- * @class  UpdateNotebookInstanceRequestPrivate
- *
- * @brief  Private implementation for UpdateNotebookInstanceRequest.
+ * \inmodule QtAwsSageMaker
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateNotebookInstanceRequestPrivate object.
- *
- * @param  action  SageMaker action being performed.
- * @param  q       Pointer to this object's public UpdateNotebookInstanceRequest instance.
+ * Constructs a UpdateNotebookInstanceRequestPrivate object for SageMaker \a action with,
+ * public implementation \a q.
  */
 UpdateNotebookInstanceRequestPrivate::UpdateNotebookInstanceRequestPrivate(
     const SageMakerRequest::Action action, UpdateNotebookInstanceRequest * const q)
@@ -104,15 +93,10 @@ UpdateNotebookInstanceRequestPrivate::UpdateNotebookInstanceRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateNotebookInstanceRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateNotebookInstanceRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateNotebookInstanceRequest instance.
  */
 UpdateNotebookInstanceRequestPrivate::UpdateNotebookInstanceRequestPrivate(
     const UpdateNotebookInstanceRequestPrivate &other, UpdateNotebookInstanceRequest * const q)

@@ -25,16 +25,25 @@ namespace DynamoDBStreams {
 
 /*!
  * \class QtAws::DynamoDBStreams::DynamoDBStreamsRequest
- *
  * \brief The DynamoDBStreamsRequest class provides an interface for DynamoDBStreams requests.
  *
- * \ingroup DynamoDBStreams
+ * \inmodule QtAwsDynamoDBStreams
  */
 
 /*!
- * @brief  Constructs a new DynamoDBStreamsRequest object.
+ * \enum DynamoDBStreamsRequest::Action
  *
- * @param  action  The DynamoDBStreams action to request.
+ * This enum describes the actions that can be performed as DynamoDBStreams
+ * requests.
+ *
+ * \value DescribeStreamAction DynamoDBStreams DescribeStream action.
+ * \value GetRecordsAction DynamoDBStreams GetRecords action.
+ * \value GetShardIteratorAction DynamoDBStreams GetShardIterator action.
+ * \value ListStreamsAction DynamoDBStreams ListStreams action.
+ */
+
+/*!
+ * Constructs a[n] DynamoDBStreamsRequest object for DynamoDBStreams \a action.
  */
 DynamoDBStreamsRequest::DynamoDBStreamsRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new DynamoDBStreamsRequestPrivate(action, this))
@@ -43,9 +52,7 @@ DynamoDBStreamsRequest::DynamoDBStreamsRequest(const Action action)
 }
 
 /*!
- * @brief  Constructs a new DynamoDBStreamsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DynamoDBStreamsRequest::DynamoDBStreamsRequest(const DynamoDBStreamsRequest &other)
     : QtAws::Core::AwsAbstractRequest(new DynamoDBStreamsRequestPrivate(*other.d_func(), this))
@@ -54,13 +61,7 @@ DynamoDBStreamsRequest::DynamoDBStreamsRequest(const DynamoDBStreamsRequest &oth
 }
 
 /*!
- * @brief  Assignment operator.
- *
- * Assigns \a other to \c this.
- *
- * @param  other  Instance to copy.
- *
- * @return  A reference to \c this.
+ * Sets the DynamoDBStreamsRequest object to be equal to \a other.
  */
 DynamoDBStreamsRequest& DynamoDBStreamsRequest::operator=(const DynamoDBStreamsRequest &other)
 {
@@ -72,14 +73,10 @@ DynamoDBStreamsRequest& DynamoDBStreamsRequest::operator=(const DynamoDBStreamsR
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DynamoDBStreamsRequest object.
+ * Constructs aa DynamoDBStreamsRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from DynamoDBStreamsRequestPrivate.
- *
- * @param  d  Pointer to private data (aka D-Pointer).
  */
 DynamoDBStreamsRequest::DynamoDBStreamsRequest(DynamoDBStreamsRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
@@ -87,7 +84,7 @@ DynamoDBStreamsRequest::DynamoDBStreamsRequest(DynamoDBStreamsRequestPrivate * c
 }
 
 /*!
- * \brief Returns the DynamoDBStreams action to be performed by this request.
+ * Returns the DynamoDBStreams action to be performed by this request.
  */
 DynamoDBStreamsRequest::Action DynamoDBStreamsRequest::action() const
 {
@@ -96,7 +93,7 @@ DynamoDBStreamsRequest::Action DynamoDBStreamsRequest::action() const
 }
 
 /*!
- * \brief Returns the name of the DynamoDBStreams action to be performed by this request.
+ * Returns the name of the DynamoDBStreams action to be performed by this request.
  */
 QString DynamoDBStreamsRequest::actionString() const
 {
@@ -104,7 +101,7 @@ QString DynamoDBStreamsRequest::actionString() const
 }
 
 /*!
- * \brief Returns the DynamoDBStreams API version implemented by this request.
+ * Returns the DynamoDBStreams API version implemented by this request.
  */
 QString DynamoDBStreamsRequest::apiVersion() const
 {
@@ -113,7 +110,7 @@ QString DynamoDBStreamsRequest::apiVersion() const
 }
 
 /*!
- * @brief Set the DynamoDBStreams action to be performed by this request to \a action.
+ * Sets the DynamoDBStreams action to be performed by this request to \a action.
  */
 void DynamoDBStreamsRequest::setAction(const Action action)
 {
@@ -122,7 +119,7 @@ void DynamoDBStreamsRequest::setAction(const Action action)
 }
 
 /*!
- * Set the DynamoDBStreams API version to include in this request to \a version.
+ * Sets the DynamoDBStreams API version to include in this request to \a version.
  */
 void DynamoDBStreamsRequest::setApiVersion(const QString &version)
 {
@@ -131,7 +128,7 @@ void DynamoDBStreamsRequest::setApiVersion(const QString &version)
 }
 
 /*!
- * \brief Returns \c true if this request is the same as \a other.
+ * Returns \c true if this request is equal to \a other; \c false otherwise.
  *
  * Note, most derived *Request classes do not need to provider their own
  * implementations of this function, since most such request classes rely on
@@ -146,8 +143,8 @@ bool DynamoDBStreamsRequest::operator==(const DynamoDBStreamsRequest &other) con
             (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
-/*!
- * @brief  Check if \a queueName is a valid DynamoDBStreams queue name.
+/*
+ * Returns \c tue if \a queueName is a valid DynamoDBStreams queue name.
  *
  * @par From DynamoDBStreams FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
@@ -166,9 +163,8 @@ bool DynamoDBStreamsRequest::operator==(const DynamoDBStreamsRequest &other) con
 }*/
 
 /*!
- * \brief Removes the a \a name parameter from this request.
- *
- * Returns the count of paramters removed (typically \c 0 or \c 1).
+ * Removes the a \a name parameter from the request, then returns the number of
+ * paramters removed (typically \c 0 or \c 1).
  */
 int DynamoDBStreamsRequest::clearParameter(const QString &name)
 {
@@ -177,7 +173,7 @@ int DynamoDBStreamsRequest::clearParameter(const QString &name)
 }
 
 /*!
- * \brief Removes all parameters from this request.
+ * Removes all parameters from the request.
  */
 void DynamoDBStreamsRequest::clearParameters()
 {
@@ -186,7 +182,7 @@ void DynamoDBStreamsRequest::clearParameters()
 }
 
 /*!
- * \brief Returns the value of the \n name pararemter if set, otherwise \a defaultValue.
+ * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
 QVariant DynamoDBStreamsRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
@@ -195,7 +191,7 @@ QVariant DynamoDBStreamsRequest::parameter(const QString &name, const QVariant &
 }
 
 /*!
- * \brief Returns a map of parameters included in this request.
+ * Returns the parameters included in this request.
  */
 const QVariantMap &DynamoDBStreamsRequest::parameters() const
 {
@@ -204,7 +200,7 @@ const QVariantMap &DynamoDBStreamsRequest::parameters() const
 }
 
 /*!
- * \brief Sets the \a name parameter to \a value.
+ * Sets the \a name parameter to \a value.
  */
 void DynamoDBStreamsRequest::setParameter(const QString &name, const QVariant &value)
 {
@@ -213,9 +209,8 @@ void DynamoDBStreamsRequest::setParameter(const QString &name, const QVariant &v
 }
 
 /*!
- * \brief Sets the map of paramters for this request to \a parameters.
- *
- * Any request parameters set previously will be discarded.
+ * Sets the paramters for this request to \a parameters. Any request parameters
+ * set previously will be discarded.
  */
 void DynamoDBStreamsRequest::setParameters(const QVariantMap &parameters)
 {
@@ -224,11 +219,12 @@ void DynamoDBStreamsRequest::setParameters(const QVariantMap &parameters)
 }
 
 /*!
- * \brief Returns a network request for this DynamoDBStreams request using the given \a endpoint.
+ * Returns a network request for the DynamoDBStreams request using the given
+ * \a endpoint.
  *
- * This DynamoDBStreams implementation builds request URLs by combining the common query
- * parameters (such as Action and Version), with any that have been added (via
- * setParameter) by child classes.
+ * This DynamoDBStreams implementation builds request URLs by combining the
+ * common query parameters (such as Action and Version), with any that have
+ * been added (via setParameter) by child classes.
  */
 QNetworkRequest DynamoDBStreamsRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -239,17 +235,16 @@ QNetworkRequest DynamoDBStreamsRequest::unsignedRequest(const QUrl &endpoint) co
 }
 
 /*!
+ * \class QtAws::DynamoDBStreams::DynamoDBStreamsRequestPrivate
+ * \brief The DynamoDBStreamsRequestPrivate class provides private implementation for DynamoDBStreamsRequest.
  * \internal
  *
- * \class  DynamoDBStreamsRequestPrivate
- *
- * \brief  Private implementation for DynamoDBStreamsRequest.
+ * \inmodule QtAwsDynamoDBStreams
  */
 
 /*!
- * \internal
- *
- * \brief Constructs a new DynamoDBStreamsRequestPrivate object.
+ * Constructs a DynamoDBStreamsRequestPrivate object for DynamoDBStreams \a action with,
+ * public implementation \a q.
  */
 DynamoDBStreamsRequestPrivate::DynamoDBStreamsRequestPrivate(const DynamoDBStreamsRequest::Action action, DynamoDBStreamsRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
@@ -258,9 +253,7 @@ DynamoDBStreamsRequestPrivate::DynamoDBStreamsRequestPrivate(const DynamoDBStrea
 }
 
 /*!
- * \internal
- *
- * \brief Constructs a new DynamoDBStreamsRequestPrivate object, copying an existing one.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
@@ -276,15 +269,12 @@ DynamoDBStreamsRequestPrivate::DynamoDBStreamsRequestPrivate(const DynamoDBStrea
 }
 
 /*!
- * \internal
- *
- * \brief Returns a string representing \a action.
+ * Returns a string represention of \a action, or a null string if \a action is
+ * invalid.
  *
  * This function converts DynamoDBStreamsRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the DynamoDBStreams service's Action
  * query parameters.
- *
- * @return A string representing \a action, or a null string if \a action is invalid.
  */
 QString DynamoDBStreamsRequestPrivate::toString(const DynamoDBStreamsRequest::Action &action)
 {

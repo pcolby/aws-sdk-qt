@@ -27,10 +27,9 @@ namespace SecretsManager {
 
 /*!
  * \class QtAws::SecretsManager::DeleteSecretRequest
- *
  * \brief The DeleteSecretRequest class provides an interface for SecretsManager DeleteSecret requests.
  *
- * \ingroup SecretsManager
+ * \inmodule QtAwsSecretsManager
  *
  *  <fullname>AWS Secrets Manager API Reference</fullname>
  * 
@@ -137,9 +136,7 @@ namespace SecretsManager {
  */
 
 /*!
- * @brief  Constructs a new DeleteSecretRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteSecretRequest::DeleteSecretRequest(const DeleteSecretRequest &other)
     : SecretsManagerRequest(new DeleteSecretRequestPrivate(*other.d_func(), this))
@@ -148,7 +145,7 @@ DeleteSecretRequest::DeleteSecretRequest(const DeleteSecretRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DeleteSecretRequest object.
+ * Constructs a DeleteSecretRequest object.
  */
 DeleteSecretRequest::DeleteSecretRequest()
     : SecretsManagerRequest(new DeleteSecretRequestPrivate(SecretsManagerRequest::DeleteSecretAction, this))
@@ -166,14 +163,9 @@ bool DeleteSecretRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteSecretResponse object.
+ * Returns a DeleteSecretResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteSecretResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SecretsManagerClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteSecretRequest::response(QNetworkReply * const reply) const
 {
@@ -181,20 +173,17 @@ QtAws::Core::AwsAbstractResponse * DeleteSecretRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::SecretsManager::DeleteSecretRequestPrivate
+ * \brief The DeleteSecretRequestPrivate class provides private implementation for DeleteSecretRequest.
+ * \internal
  *
- * @class  DeleteSecretRequestPrivate
- *
- * @brief  Private implementation for DeleteSecretRequest.
+ * \inmodule QtAwsSecretsManager
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteSecretRequestPrivate object.
- *
- * @param  action  SecretsManager action being performed.
- * @param  q       Pointer to this object's public DeleteSecretRequest instance.
+ * Constructs a DeleteSecretRequestPrivate object for SecretsManager \a action with,
+ * public implementation \a q.
  */
 DeleteSecretRequestPrivate::DeleteSecretRequestPrivate(
     const SecretsManagerRequest::Action action, DeleteSecretRequest * const q)
@@ -204,15 +193,10 @@ DeleteSecretRequestPrivate::DeleteSecretRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteSecretRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteSecretRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteSecretRequest instance.
  */
 DeleteSecretRequestPrivate::DeleteSecretRequestPrivate(
     const DeleteSecretRequestPrivate &other, DeleteSecretRequest * const q)

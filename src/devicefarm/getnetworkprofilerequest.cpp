@@ -27,10 +27,9 @@ namespace DeviceFarm {
 
 /*!
  * \class QtAws::DeviceFarm::GetNetworkProfileRequest
- *
  * \brief The GetNetworkProfileRequest class provides an interface for DeviceFarm GetNetworkProfile requests.
  *
- * \ingroup DeviceFarm
+ * \inmodule QtAwsDeviceFarm
  *
  *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
  *  phones, tablets, and other devices in the
@@ -39,9 +38,7 @@ namespace DeviceFarm {
  */
 
 /*!
- * @brief  Constructs a new GetNetworkProfileRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetNetworkProfileRequest::GetNetworkProfileRequest(const GetNetworkProfileRequest &other)
     : DeviceFarmRequest(new GetNetworkProfileRequestPrivate(*other.d_func(), this))
@@ -50,7 +47,7 @@ GetNetworkProfileRequest::GetNetworkProfileRequest(const GetNetworkProfileReques
 }
 
 /*!
- * @brief  Constructs a new GetNetworkProfileRequest object.
+ * Constructs a GetNetworkProfileRequest object.
  */
 GetNetworkProfileRequest::GetNetworkProfileRequest()
     : DeviceFarmRequest(new GetNetworkProfileRequestPrivate(DeviceFarmRequest::GetNetworkProfileAction, this))
@@ -68,14 +65,9 @@ bool GetNetworkProfileRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetNetworkProfileResponse object.
+ * Returns a GetNetworkProfileResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetNetworkProfileResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DeviceFarmClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetNetworkProfileRequest::response(QNetworkReply * const reply) const
 {
@@ -83,20 +75,17 @@ QtAws::Core::AwsAbstractResponse * GetNetworkProfileRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::DeviceFarm::GetNetworkProfileRequestPrivate
+ * \brief The GetNetworkProfileRequestPrivate class provides private implementation for GetNetworkProfileRequest.
+ * \internal
  *
- * @class  GetNetworkProfileRequestPrivate
- *
- * @brief  Private implementation for GetNetworkProfileRequest.
+ * \inmodule QtAwsDeviceFarm
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetNetworkProfileRequestPrivate object.
- *
- * @param  action  DeviceFarm action being performed.
- * @param  q       Pointer to this object's public GetNetworkProfileRequest instance.
+ * Constructs a GetNetworkProfileRequestPrivate object for DeviceFarm \a action with,
+ * public implementation \a q.
  */
 GetNetworkProfileRequestPrivate::GetNetworkProfileRequestPrivate(
     const DeviceFarmRequest::Action action, GetNetworkProfileRequest * const q)
@@ -106,15 +95,10 @@ GetNetworkProfileRequestPrivate::GetNetworkProfileRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetNetworkProfileRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetNetworkProfileRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetNetworkProfileRequest instance.
  */
 GetNetworkProfileRequestPrivate::GetNetworkProfileRequestPrivate(
     const GetNetworkProfileRequestPrivate &other, GetNetworkProfileRequest * const q)

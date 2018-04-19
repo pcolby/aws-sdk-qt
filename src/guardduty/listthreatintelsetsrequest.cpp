@@ -27,19 +27,16 @@ namespace GuardDuty {
 
 /*!
  * \class QtAws::GuardDuty::ListThreatIntelSetsRequest
- *
  * \brief The ListThreatIntelSetsRequest class provides an interface for GuardDuty ListThreatIntelSets requests.
  *
- * \ingroup GuardDuty
+ * \inmodule QtAwsGuardDuty
  *
  *
  * \sa GuardDutyClient::listThreatIntelSets
  */
 
 /*!
- * @brief  Constructs a new ListThreatIntelSetsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListThreatIntelSetsRequest::ListThreatIntelSetsRequest(const ListThreatIntelSetsRequest &other)
     : GuardDutyRequest(new ListThreatIntelSetsRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ ListThreatIntelSetsRequest::ListThreatIntelSetsRequest(const ListThreatIntelSets
 }
 
 /*!
- * @brief  Constructs a new ListThreatIntelSetsRequest object.
+ * Constructs a ListThreatIntelSetsRequest object.
  */
 ListThreatIntelSetsRequest::ListThreatIntelSetsRequest()
     : GuardDutyRequest(new ListThreatIntelSetsRequestPrivate(GuardDutyRequest::ListThreatIntelSetsAction, this))
@@ -66,14 +63,9 @@ bool ListThreatIntelSetsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListThreatIntelSetsResponse object.
+ * Returns a ListThreatIntelSetsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListThreatIntelSetsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GuardDutyClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListThreatIntelSetsRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * ListThreatIntelSetsRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::GuardDuty::ListThreatIntelSetsRequestPrivate
+ * \brief The ListThreatIntelSetsRequestPrivate class provides private implementation for ListThreatIntelSetsRequest.
+ * \internal
  *
- * @class  ListThreatIntelSetsRequestPrivate
- *
- * @brief  Private implementation for ListThreatIntelSetsRequest.
+ * \inmodule QtAwsGuardDuty
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListThreatIntelSetsRequestPrivate object.
- *
- * @param  action  GuardDuty action being performed.
- * @param  q       Pointer to this object's public ListThreatIntelSetsRequest instance.
+ * Constructs a ListThreatIntelSetsRequestPrivate object for GuardDuty \a action with,
+ * public implementation \a q.
  */
 ListThreatIntelSetsRequestPrivate::ListThreatIntelSetsRequestPrivate(
     const GuardDutyRequest::Action action, ListThreatIntelSetsRequest * const q)
@@ -104,15 +93,10 @@ ListThreatIntelSetsRequestPrivate::ListThreatIntelSetsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListThreatIntelSetsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListThreatIntelSetsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListThreatIntelSetsRequest instance.
  */
 ListThreatIntelSetsRequestPrivate::ListThreatIntelSetsRequestPrivate(
     const ListThreatIntelSetsRequestPrivate &other, ListThreatIntelSetsRequest * const q)

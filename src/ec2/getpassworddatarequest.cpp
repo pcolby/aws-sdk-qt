@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::GetPasswordDataRequest
- *
  * \brief The GetPasswordDataRequest class provides an interface for EC2 GetPasswordData requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new GetPasswordDataRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetPasswordDataRequest::GetPasswordDataRequest(const GetPasswordDataRequest &other)
     : EC2Request(new GetPasswordDataRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ GetPasswordDataRequest::GetPasswordDataRequest(const GetPasswordDataRequest &oth
 }
 
 /*!
- * @brief  Constructs a new GetPasswordDataRequest object.
+ * Constructs a GetPasswordDataRequest object.
  */
 GetPasswordDataRequest::GetPasswordDataRequest()
     : EC2Request(new GetPasswordDataRequestPrivate(EC2Request::GetPasswordDataAction, this))
@@ -70,14 +67,9 @@ bool GetPasswordDataRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetPasswordDataResponse object.
+ * Returns a GetPasswordDataResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetPasswordDataResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetPasswordDataRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * GetPasswordDataRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::GetPasswordDataRequestPrivate
+ * \brief The GetPasswordDataRequestPrivate class provides private implementation for GetPasswordDataRequest.
+ * \internal
  *
- * @class  GetPasswordDataRequestPrivate
- *
- * @brief  Private implementation for GetPasswordDataRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetPasswordDataRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public GetPasswordDataRequest instance.
+ * Constructs a GetPasswordDataRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 GetPasswordDataRequestPrivate::GetPasswordDataRequestPrivate(
     const EC2Request::Action action, GetPasswordDataRequest * const q)
@@ -108,15 +97,10 @@ GetPasswordDataRequestPrivate::GetPasswordDataRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetPasswordDataRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetPasswordDataRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetPasswordDataRequest instance.
  */
 GetPasswordDataRequestPrivate::GetPasswordDataRequestPrivate(
     const GetPasswordDataRequestPrivate &other, GetPasswordDataRequest * const q)

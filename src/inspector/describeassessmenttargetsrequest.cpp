@@ -27,10 +27,9 @@ namespace Inspector {
 
 /*!
  * \class QtAws::Inspector::DescribeAssessmentTargetsRequest
- *
  * \brief The DescribeAssessmentTargetsRequest class provides an interface for Inspector DescribeAssessmentTargets requests.
  *
- * \ingroup Inspector
+ * \inmodule QtAwsInspector
  *
  *  <fullname>Amazon Inspector</fullname>
  * 
@@ -42,9 +41,7 @@ namespace Inspector {
  */
 
 /*!
- * @brief  Constructs a new DescribeAssessmentTargetsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeAssessmentTargetsRequest::DescribeAssessmentTargetsRequest(const DescribeAssessmentTargetsRequest &other)
     : InspectorRequest(new DescribeAssessmentTargetsRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ DescribeAssessmentTargetsRequest::DescribeAssessmentTargetsRequest(const Describ
 }
 
 /*!
- * @brief  Constructs a new DescribeAssessmentTargetsRequest object.
+ * Constructs a DescribeAssessmentTargetsRequest object.
  */
 DescribeAssessmentTargetsRequest::DescribeAssessmentTargetsRequest()
     : InspectorRequest(new DescribeAssessmentTargetsRequestPrivate(InspectorRequest::DescribeAssessmentTargetsAction, this))
@@ -71,14 +68,9 @@ bool DescribeAssessmentTargetsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeAssessmentTargetsResponse object.
+ * Returns a DescribeAssessmentTargetsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeAssessmentTargetsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  InspectorClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeAssessmentTargetsRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * DescribeAssessmentTargetsRequest::response(QN
 }
 
 /*!
- * @internal
+ * \class QtAws::Inspector::DescribeAssessmentTargetsRequestPrivate
+ * \brief The DescribeAssessmentTargetsRequestPrivate class provides private implementation for DescribeAssessmentTargetsRequest.
+ * \internal
  *
- * @class  DescribeAssessmentTargetsRequestPrivate
- *
- * @brief  Private implementation for DescribeAssessmentTargetsRequest.
+ * \inmodule QtAwsInspector
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeAssessmentTargetsRequestPrivate object.
- *
- * @param  action  Inspector action being performed.
- * @param  q       Pointer to this object's public DescribeAssessmentTargetsRequest instance.
+ * Constructs a DescribeAssessmentTargetsRequestPrivate object for Inspector \a action with,
+ * public implementation \a q.
  */
 DescribeAssessmentTargetsRequestPrivate::DescribeAssessmentTargetsRequestPrivate(
     const InspectorRequest::Action action, DescribeAssessmentTargetsRequest * const q)
@@ -109,15 +98,10 @@ DescribeAssessmentTargetsRequestPrivate::DescribeAssessmentTargetsRequestPrivate
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeAssessmentTargetsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeAssessmentTargetsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeAssessmentTargetsRequest instance.
  */
 DescribeAssessmentTargetsRequestPrivate::DescribeAssessmentTargetsRequestPrivate(
     const DescribeAssessmentTargetsRequestPrivate &other, DescribeAssessmentTargetsRequest * const q)

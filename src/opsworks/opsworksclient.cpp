@@ -174,6 +174,9 @@
 /*!
  * \namespace QtAws::OpsWorks
  * \brief The QtAws::OpsWorks contains stuff...
+ *
+ * \inmodule QtAwsOpsWorks
+ *
  * @todo Move this to a separate template file.
  */
 
@@ -329,7 +332,7 @@ OpsWorksClient::OpsWorksClient(
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * \a  AwsEndpoint::getEndpoint()
+ * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
 OpsWorksClient::OpsWorksClient(
     const QUrl &endpoint,

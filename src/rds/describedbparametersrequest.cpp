@@ -27,10 +27,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::DescribeDBParametersRequest
- *
  * \brief The DescribeDBParametersRequest class provides an interface for RDS DescribeDBParameters requests.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -101,9 +100,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new DescribeDBParametersRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeDBParametersRequest::DescribeDBParametersRequest(const DescribeDBParametersRequest &other)
     : RDSRequest(new DescribeDBParametersRequestPrivate(*other.d_func(), this))
@@ -112,7 +109,7 @@ DescribeDBParametersRequest::DescribeDBParametersRequest(const DescribeDBParamet
 }
 
 /*!
- * @brief  Constructs a new DescribeDBParametersRequest object.
+ * Constructs a DescribeDBParametersRequest object.
  */
 DescribeDBParametersRequest::DescribeDBParametersRequest()
     : RDSRequest(new DescribeDBParametersRequestPrivate(RDSRequest::DescribeDBParametersAction, this))
@@ -130,14 +127,9 @@ bool DescribeDBParametersRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeDBParametersResponse object.
+ * Returns a DescribeDBParametersResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeDBParametersResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RDSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeDBParametersRequest::response(QNetworkReply * const reply) const
 {
@@ -145,20 +137,17 @@ QtAws::Core::AwsAbstractResponse * DescribeDBParametersRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::RDS::DescribeDBParametersRequestPrivate
+ * \brief The DescribeDBParametersRequestPrivate class provides private implementation for DescribeDBParametersRequest.
+ * \internal
  *
- * @class  DescribeDBParametersRequestPrivate
- *
- * @brief  Private implementation for DescribeDBParametersRequest.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeDBParametersRequestPrivate object.
- *
- * @param  action  RDS action being performed.
- * @param  q       Pointer to this object's public DescribeDBParametersRequest instance.
+ * Constructs a DescribeDBParametersRequestPrivate object for RDS \a action with,
+ * public implementation \a q.
  */
 DescribeDBParametersRequestPrivate::DescribeDBParametersRequestPrivate(
     const RDSRequest::Action action, DescribeDBParametersRequest * const q)
@@ -168,15 +157,10 @@ DescribeDBParametersRequestPrivate::DescribeDBParametersRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeDBParametersRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeDBParametersRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeDBParametersRequest instance.
  */
 DescribeDBParametersRequestPrivate::DescribeDBParametersRequestPrivate(
     const DescribeDBParametersRequestPrivate &other, DescribeDBParametersRequest * const q)

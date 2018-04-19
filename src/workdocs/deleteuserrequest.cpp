@@ -27,10 +27,9 @@ namespace WorkDocs {
 
 /*!
  * \class QtAws::WorkDocs::DeleteUserRequest
- *
  * \brief The DeleteUserRequest class provides an interface for WorkDocs DeleteUser requests.
  *
- * \ingroup WorkDocs
+ * \inmodule QtAwsWorkDocs
  *
  *  The WorkDocs API is designed for the following use
  * 
@@ -66,9 +65,7 @@ namespace WorkDocs {
  */
 
 /*!
- * @brief  Constructs a new DeleteUserRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteUserRequest::DeleteUserRequest(const DeleteUserRequest &other)
     : WorkDocsRequest(new DeleteUserRequestPrivate(*other.d_func(), this))
@@ -77,7 +74,7 @@ DeleteUserRequest::DeleteUserRequest(const DeleteUserRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DeleteUserRequest object.
+ * Constructs a DeleteUserRequest object.
  */
 DeleteUserRequest::DeleteUserRequest()
     : WorkDocsRequest(new DeleteUserRequestPrivate(WorkDocsRequest::DeleteUserAction, this))
@@ -95,14 +92,9 @@ bool DeleteUserRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteUserResponse object.
+ * Returns a DeleteUserResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteUserResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WorkDocsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteUserRequest::response(QNetworkReply * const reply) const
 {
@@ -110,20 +102,17 @@ QtAws::Core::AwsAbstractResponse * DeleteUserRequest::response(QNetworkReply * c
 }
 
 /*!
- * @internal
+ * \class QtAws::WorkDocs::DeleteUserRequestPrivate
+ * \brief The DeleteUserRequestPrivate class provides private implementation for DeleteUserRequest.
+ * \internal
  *
- * @class  DeleteUserRequestPrivate
- *
- * @brief  Private implementation for DeleteUserRequest.
+ * \inmodule QtAwsWorkDocs
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteUserRequestPrivate object.
- *
- * @param  action  WorkDocs action being performed.
- * @param  q       Pointer to this object's public DeleteUserRequest instance.
+ * Constructs a DeleteUserRequestPrivate object for WorkDocs \a action with,
+ * public implementation \a q.
  */
 DeleteUserRequestPrivate::DeleteUserRequestPrivate(
     const WorkDocsRequest::Action action, DeleteUserRequest * const q)
@@ -133,15 +122,10 @@ DeleteUserRequestPrivate::DeleteUserRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteUserRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteUserRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteUserRequest instance.
  */
 DeleteUserRequestPrivate::DeleteUserRequestPrivate(
     const DeleteUserRequestPrivate &other, DeleteUserRequest * const q)

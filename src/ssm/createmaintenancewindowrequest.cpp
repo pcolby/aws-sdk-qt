@@ -27,10 +27,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::CreateMaintenanceWindowRequest
- *
  * \brief The CreateMaintenanceWindowRequest class provides an interface for SSM CreateMaintenanceWindow requests.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -61,9 +60,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new CreateMaintenanceWindowRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateMaintenanceWindowRequest::CreateMaintenanceWindowRequest(const CreateMaintenanceWindowRequest &other)
     : SSMRequest(new CreateMaintenanceWindowRequestPrivate(*other.d_func(), this))
@@ -72,7 +69,7 @@ CreateMaintenanceWindowRequest::CreateMaintenanceWindowRequest(const CreateMaint
 }
 
 /*!
- * @brief  Constructs a new CreateMaintenanceWindowRequest object.
+ * Constructs a CreateMaintenanceWindowRequest object.
  */
 CreateMaintenanceWindowRequest::CreateMaintenanceWindowRequest()
     : SSMRequest(new CreateMaintenanceWindowRequestPrivate(SSMRequest::CreateMaintenanceWindowAction, this))
@@ -90,14 +87,9 @@ bool CreateMaintenanceWindowRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateMaintenanceWindowResponse object.
+ * Returns a CreateMaintenanceWindowResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateMaintenanceWindowResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SSMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateMaintenanceWindowRequest::response(QNetworkReply * const reply) const
 {
@@ -105,20 +97,17 @@ QtAws::Core::AwsAbstractResponse * CreateMaintenanceWindowRequest::response(QNet
 }
 
 /*!
- * @internal
+ * \class QtAws::SSM::CreateMaintenanceWindowRequestPrivate
+ * \brief The CreateMaintenanceWindowRequestPrivate class provides private implementation for CreateMaintenanceWindowRequest.
+ * \internal
  *
- * @class  CreateMaintenanceWindowRequestPrivate
- *
- * @brief  Private implementation for CreateMaintenanceWindowRequest.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateMaintenanceWindowRequestPrivate object.
- *
- * @param  action  SSM action being performed.
- * @param  q       Pointer to this object's public CreateMaintenanceWindowRequest instance.
+ * Constructs a CreateMaintenanceWindowRequestPrivate object for SSM \a action with,
+ * public implementation \a q.
  */
 CreateMaintenanceWindowRequestPrivate::CreateMaintenanceWindowRequestPrivate(
     const SSMRequest::Action action, CreateMaintenanceWindowRequest * const q)
@@ -128,15 +117,10 @@ CreateMaintenanceWindowRequestPrivate::CreateMaintenanceWindowRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateMaintenanceWindowRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateMaintenanceWindowRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateMaintenanceWindowRequest instance.
  */
 CreateMaintenanceWindowRequestPrivate::CreateMaintenanceWindowRequestPrivate(
     const CreateMaintenanceWindowRequestPrivate &other, CreateMaintenanceWindowRequest * const q)

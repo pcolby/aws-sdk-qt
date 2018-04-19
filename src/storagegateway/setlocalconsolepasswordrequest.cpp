@@ -27,10 +27,9 @@ namespace StorageGateway {
 
 /*!
  * \class QtAws::StorageGateway::SetLocalConsolePasswordRequest
- *
  * \brief The SetLocalConsolePasswordRequest class provides an interface for StorageGateway SetLocalConsolePassword requests.
  *
- * \ingroup StorageGateway
+ * \inmodule QtAwsStorageGateway
  *
  *  <fullname>AWS Storage Gateway Service</fullname>
  * 
@@ -106,9 +105,7 @@ namespace StorageGateway {
  */
 
 /*!
- * @brief  Constructs a new SetLocalConsolePasswordRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 SetLocalConsolePasswordRequest::SetLocalConsolePasswordRequest(const SetLocalConsolePasswordRequest &other)
     : StorageGatewayRequest(new SetLocalConsolePasswordRequestPrivate(*other.d_func(), this))
@@ -117,7 +114,7 @@ SetLocalConsolePasswordRequest::SetLocalConsolePasswordRequest(const SetLocalCon
 }
 
 /*!
- * @brief  Constructs a new SetLocalConsolePasswordRequest object.
+ * Constructs a SetLocalConsolePasswordRequest object.
  */
 SetLocalConsolePasswordRequest::SetLocalConsolePasswordRequest()
     : StorageGatewayRequest(new SetLocalConsolePasswordRequestPrivate(StorageGatewayRequest::SetLocalConsolePasswordAction, this))
@@ -135,14 +132,9 @@ bool SetLocalConsolePasswordRequest::isValid() const
 
 
 /*!
- * @brief  Construct an SetLocalConsolePasswordResponse object.
+ * Returns a SetLocalConsolePasswordResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An SetLocalConsolePasswordResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  StorageGatewayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * SetLocalConsolePasswordRequest::response(QNetworkReply * const reply) const
 {
@@ -150,20 +142,17 @@ QtAws::Core::AwsAbstractResponse * SetLocalConsolePasswordRequest::response(QNet
 }
 
 /*!
- * @internal
+ * \class QtAws::StorageGateway::SetLocalConsolePasswordRequestPrivate
+ * \brief The SetLocalConsolePasswordRequestPrivate class provides private implementation for SetLocalConsolePasswordRequest.
+ * \internal
  *
- * @class  SetLocalConsolePasswordRequestPrivate
- *
- * @brief  Private implementation for SetLocalConsolePasswordRequest.
+ * \inmodule QtAwsStorageGateway
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new SetLocalConsolePasswordRequestPrivate object.
- *
- * @param  action  StorageGateway action being performed.
- * @param  q       Pointer to this object's public SetLocalConsolePasswordRequest instance.
+ * Constructs a SetLocalConsolePasswordRequestPrivate object for StorageGateway \a action with,
+ * public implementation \a q.
  */
 SetLocalConsolePasswordRequestPrivate::SetLocalConsolePasswordRequestPrivate(
     const StorageGatewayRequest::Action action, SetLocalConsolePasswordRequest * const q)
@@ -173,15 +162,10 @@ SetLocalConsolePasswordRequestPrivate::SetLocalConsolePasswordRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SetLocalConsolePasswordRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the SetLocalConsolePasswordRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public SetLocalConsolePasswordRequest instance.
  */
 SetLocalConsolePasswordRequestPrivate::SetLocalConsolePasswordRequestPrivate(
     const SetLocalConsolePasswordRequestPrivate &other, SetLocalConsolePasswordRequest * const q)

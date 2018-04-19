@@ -27,10 +27,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::CreateDocumentationPartRequest
- *
  * \brief The CreateDocumentationPartRequest class provides an interface for APIGateway CreateDocumentationPart requests.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -42,9 +41,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new CreateDocumentationPartRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateDocumentationPartRequest::CreateDocumentationPartRequest(const CreateDocumentationPartRequest &other)
     : APIGatewayRequest(new CreateDocumentationPartRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ CreateDocumentationPartRequest::CreateDocumentationPartRequest(const CreateDocum
 }
 
 /*!
- * @brief  Constructs a new CreateDocumentationPartRequest object.
+ * Constructs a CreateDocumentationPartRequest object.
  */
 CreateDocumentationPartRequest::CreateDocumentationPartRequest()
     : APIGatewayRequest(new CreateDocumentationPartRequestPrivate(APIGatewayRequest::CreateDocumentationPartAction, this))
@@ -71,14 +68,9 @@ bool CreateDocumentationPartRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateDocumentationPartResponse object.
+ * Returns a CreateDocumentationPartResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateDocumentationPartResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  APIGatewayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateDocumentationPartRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * CreateDocumentationPartRequest::response(QNet
 }
 
 /*!
- * @internal
+ * \class QtAws::APIGateway::CreateDocumentationPartRequestPrivate
+ * \brief The CreateDocumentationPartRequestPrivate class provides private implementation for CreateDocumentationPartRequest.
+ * \internal
  *
- * @class  CreateDocumentationPartRequestPrivate
- *
- * @brief  Private implementation for CreateDocumentationPartRequest.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateDocumentationPartRequestPrivate object.
- *
- * @param  action  APIGateway action being performed.
- * @param  q       Pointer to this object's public CreateDocumentationPartRequest instance.
+ * Constructs a CreateDocumentationPartRequestPrivate object for APIGateway \a action with,
+ * public implementation \a q.
  */
 CreateDocumentationPartRequestPrivate::CreateDocumentationPartRequestPrivate(
     const APIGatewayRequest::Action action, CreateDocumentationPartRequest * const q)
@@ -109,15 +98,10 @@ CreateDocumentationPartRequestPrivate::CreateDocumentationPartRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateDocumentationPartRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateDocumentationPartRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateDocumentationPartRequest instance.
  */
 CreateDocumentationPartRequestPrivate::CreateDocumentationPartRequestPrivate(
     const CreateDocumentationPartRequestPrivate &other, CreateDocumentationPartRequest * const q)

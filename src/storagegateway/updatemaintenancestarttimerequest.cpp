@@ -27,10 +27,9 @@ namespace StorageGateway {
 
 /*!
  * \class QtAws::StorageGateway::UpdateMaintenanceStartTimeRequest
- *
  * \brief The UpdateMaintenanceStartTimeRequest class provides an interface for StorageGateway UpdateMaintenanceStartTime requests.
  *
- * \ingroup StorageGateway
+ * \inmodule QtAwsStorageGateway
  *
  *  <fullname>AWS Storage Gateway Service</fullname>
  * 
@@ -106,9 +105,7 @@ namespace StorageGateway {
  */
 
 /*!
- * @brief  Constructs a new UpdateMaintenanceStartTimeRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateMaintenanceStartTimeRequest::UpdateMaintenanceStartTimeRequest(const UpdateMaintenanceStartTimeRequest &other)
     : StorageGatewayRequest(new UpdateMaintenanceStartTimeRequestPrivate(*other.d_func(), this))
@@ -117,7 +114,7 @@ UpdateMaintenanceStartTimeRequest::UpdateMaintenanceStartTimeRequest(const Updat
 }
 
 /*!
- * @brief  Constructs a new UpdateMaintenanceStartTimeRequest object.
+ * Constructs a UpdateMaintenanceStartTimeRequest object.
  */
 UpdateMaintenanceStartTimeRequest::UpdateMaintenanceStartTimeRequest()
     : StorageGatewayRequest(new UpdateMaintenanceStartTimeRequestPrivate(StorageGatewayRequest::UpdateMaintenanceStartTimeAction, this))
@@ -135,14 +132,9 @@ bool UpdateMaintenanceStartTimeRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateMaintenanceStartTimeResponse object.
+ * Returns a UpdateMaintenanceStartTimeResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateMaintenanceStartTimeResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  StorageGatewayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateMaintenanceStartTimeRequest::response(QNetworkReply * const reply) const
 {
@@ -150,20 +142,17 @@ QtAws::Core::AwsAbstractResponse * UpdateMaintenanceStartTimeRequest::response(Q
 }
 
 /*!
- * @internal
+ * \class QtAws::StorageGateway::UpdateMaintenanceStartTimeRequestPrivate
+ * \brief The UpdateMaintenanceStartTimeRequestPrivate class provides private implementation for UpdateMaintenanceStartTimeRequest.
+ * \internal
  *
- * @class  UpdateMaintenanceStartTimeRequestPrivate
- *
- * @brief  Private implementation for UpdateMaintenanceStartTimeRequest.
+ * \inmodule QtAwsStorageGateway
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateMaintenanceStartTimeRequestPrivate object.
- *
- * @param  action  StorageGateway action being performed.
- * @param  q       Pointer to this object's public UpdateMaintenanceStartTimeRequest instance.
+ * Constructs a UpdateMaintenanceStartTimeRequestPrivate object for StorageGateway \a action with,
+ * public implementation \a q.
  */
 UpdateMaintenanceStartTimeRequestPrivate::UpdateMaintenanceStartTimeRequestPrivate(
     const StorageGatewayRequest::Action action, UpdateMaintenanceStartTimeRequest * const q)
@@ -173,15 +162,10 @@ UpdateMaintenanceStartTimeRequestPrivate::UpdateMaintenanceStartTimeRequestPriva
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateMaintenanceStartTimeRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateMaintenanceStartTimeRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateMaintenanceStartTimeRequest instance.
  */
 UpdateMaintenanceStartTimeRequestPrivate::UpdateMaintenanceStartTimeRequestPrivate(
     const UpdateMaintenanceStartTimeRequestPrivate &other, UpdateMaintenanceStartTimeRequest * const q)

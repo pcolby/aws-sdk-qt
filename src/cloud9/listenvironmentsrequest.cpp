@@ -27,10 +27,9 @@ namespace Cloud9 {
 
 /*!
  * \class QtAws::Cloud9::ListEnvironmentsRequest
- *
  * \brief The ListEnvironmentsRequest class provides an interface for Cloud9 ListEnvironments requests.
  *
- * \ingroup Cloud9
+ * \inmodule QtAwsCloud9
  *
  *  <fullname>AWS Cloud9</fullname>
  * 
@@ -91,9 +90,7 @@ namespace Cloud9 {
  */
 
 /*!
- * @brief  Constructs a new ListEnvironmentsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListEnvironmentsRequest::ListEnvironmentsRequest(const ListEnvironmentsRequest &other)
     : Cloud9Request(new ListEnvironmentsRequestPrivate(*other.d_func(), this))
@@ -102,7 +99,7 @@ ListEnvironmentsRequest::ListEnvironmentsRequest(const ListEnvironmentsRequest &
 }
 
 /*!
- * @brief  Constructs a new ListEnvironmentsRequest object.
+ * Constructs a ListEnvironmentsRequest object.
  */
 ListEnvironmentsRequest::ListEnvironmentsRequest()
     : Cloud9Request(new ListEnvironmentsRequestPrivate(Cloud9Request::ListEnvironmentsAction, this))
@@ -120,14 +117,9 @@ bool ListEnvironmentsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListEnvironmentsResponse object.
+ * Returns a ListEnvironmentsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListEnvironmentsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  Cloud9Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListEnvironmentsRequest::response(QNetworkReply * const reply) const
 {
@@ -135,20 +127,17 @@ QtAws::Core::AwsAbstractResponse * ListEnvironmentsRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::Cloud9::ListEnvironmentsRequestPrivate
+ * \brief The ListEnvironmentsRequestPrivate class provides private implementation for ListEnvironmentsRequest.
+ * \internal
  *
- * @class  ListEnvironmentsRequestPrivate
- *
- * @brief  Private implementation for ListEnvironmentsRequest.
+ * \inmodule QtAwsCloud9
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListEnvironmentsRequestPrivate object.
- *
- * @param  action  Cloud9 action being performed.
- * @param  q       Pointer to this object's public ListEnvironmentsRequest instance.
+ * Constructs a ListEnvironmentsRequestPrivate object for Cloud9 \a action with,
+ * public implementation \a q.
  */
 ListEnvironmentsRequestPrivate::ListEnvironmentsRequestPrivate(
     const Cloud9Request::Action action, ListEnvironmentsRequest * const q)
@@ -158,15 +147,10 @@ ListEnvironmentsRequestPrivate::ListEnvironmentsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListEnvironmentsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListEnvironmentsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListEnvironmentsRequest instance.
  */
 ListEnvironmentsRequestPrivate::ListEnvironmentsRequestPrivate(
     const ListEnvironmentsRequestPrivate &other, ListEnvironmentsRequest * const q)

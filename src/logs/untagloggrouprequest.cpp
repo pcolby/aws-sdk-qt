@@ -27,10 +27,9 @@ namespace CloudWatchLogs {
 
 /*!
  * \class QtAws::CloudWatchLogs::UntagLogGroupRequest
- *
  * \brief The UntagLogGroupRequest class provides an interface for CloudWatchLogs UntagLogGroup requests.
  *
- * \ingroup CloudWatchLogs
+ * \inmodule QtAwsCloudWatchLogs
  *
  *  You can use Amazon CloudWatch Logs to monitor, store, and access your log files from Amazon EC2 instances, AWS
  *  CloudTrail, or other sources. You can then retrieve the associated log data from CloudWatch Logs using the CloudWatch
@@ -66,9 +65,7 @@ namespace CloudWatchLogs {
  */
 
 /*!
- * @brief  Constructs a new UntagLogGroupRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UntagLogGroupRequest::UntagLogGroupRequest(const UntagLogGroupRequest &other)
     : CloudWatchLogsRequest(new UntagLogGroupRequestPrivate(*other.d_func(), this))
@@ -77,7 +74,7 @@ UntagLogGroupRequest::UntagLogGroupRequest(const UntagLogGroupRequest &other)
 }
 
 /*!
- * @brief  Constructs a new UntagLogGroupRequest object.
+ * Constructs a UntagLogGroupRequest object.
  */
 UntagLogGroupRequest::UntagLogGroupRequest()
     : CloudWatchLogsRequest(new UntagLogGroupRequestPrivate(CloudWatchLogsRequest::UntagLogGroupAction, this))
@@ -95,14 +92,9 @@ bool UntagLogGroupRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UntagLogGroupResponse object.
+ * Returns a UntagLogGroupResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UntagLogGroupResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudWatchLogsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UntagLogGroupRequest::response(QNetworkReply * const reply) const
 {
@@ -110,20 +102,17 @@ QtAws::Core::AwsAbstractResponse * UntagLogGroupRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudWatchLogs::UntagLogGroupRequestPrivate
+ * \brief The UntagLogGroupRequestPrivate class provides private implementation for UntagLogGroupRequest.
+ * \internal
  *
- * @class  UntagLogGroupRequestPrivate
- *
- * @brief  Private implementation for UntagLogGroupRequest.
+ * \inmodule QtAwsCloudWatchLogs
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UntagLogGroupRequestPrivate object.
- *
- * @param  action  CloudWatchLogs action being performed.
- * @param  q       Pointer to this object's public UntagLogGroupRequest instance.
+ * Constructs a UntagLogGroupRequestPrivate object for CloudWatchLogs \a action with,
+ * public implementation \a q.
  */
 UntagLogGroupRequestPrivate::UntagLogGroupRequestPrivate(
     const CloudWatchLogsRequest::Action action, UntagLogGroupRequest * const q)
@@ -133,15 +122,10 @@ UntagLogGroupRequestPrivate::UntagLogGroupRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UntagLogGroupRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UntagLogGroupRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UntagLogGroupRequest instance.
  */
 UntagLogGroupRequestPrivate::UntagLogGroupRequestPrivate(
     const UntagLogGroupRequestPrivate &other, UntagLogGroupRequest * const q)

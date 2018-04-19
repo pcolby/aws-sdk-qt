@@ -27,10 +27,9 @@ namespace Organizations {
 
 /*!
  * \class QtAws::Organizations::AcceptHandshakeRequest
- *
  * \brief The AcceptHandshakeRequest class provides an interface for Organizations AcceptHandshake requests.
  *
- * \ingroup Organizations
+ * \inmodule QtAwsOrganizations
  *
  *  <fullname>AWS Organizations API Reference</fullname>
  * 
@@ -179,9 +178,7 @@ namespace Organizations {
  */
 
 /*!
- * @brief  Constructs a new AcceptHandshakeRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AcceptHandshakeRequest::AcceptHandshakeRequest(const AcceptHandshakeRequest &other)
     : OrganizationsRequest(new AcceptHandshakeRequestPrivate(*other.d_func(), this))
@@ -190,7 +187,7 @@ AcceptHandshakeRequest::AcceptHandshakeRequest(const AcceptHandshakeRequest &oth
 }
 
 /*!
- * @brief  Constructs a new AcceptHandshakeRequest object.
+ * Constructs a AcceptHandshakeRequest object.
  */
 AcceptHandshakeRequest::AcceptHandshakeRequest()
     : OrganizationsRequest(new AcceptHandshakeRequestPrivate(OrganizationsRequest::AcceptHandshakeAction, this))
@@ -208,14 +205,9 @@ bool AcceptHandshakeRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AcceptHandshakeResponse object.
+ * Returns a AcceptHandshakeResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AcceptHandshakeResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  OrganizationsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AcceptHandshakeRequest::response(QNetworkReply * const reply) const
 {
@@ -223,20 +215,17 @@ QtAws::Core::AwsAbstractResponse * AcceptHandshakeRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::Organizations::AcceptHandshakeRequestPrivate
+ * \brief The AcceptHandshakeRequestPrivate class provides private implementation for AcceptHandshakeRequest.
+ * \internal
  *
- * @class  AcceptHandshakeRequestPrivate
- *
- * @brief  Private implementation for AcceptHandshakeRequest.
+ * \inmodule QtAwsOrganizations
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AcceptHandshakeRequestPrivate object.
- *
- * @param  action  Organizations action being performed.
- * @param  q       Pointer to this object's public AcceptHandshakeRequest instance.
+ * Constructs a AcceptHandshakeRequestPrivate object for Organizations \a action with,
+ * public implementation \a q.
  */
 AcceptHandshakeRequestPrivate::AcceptHandshakeRequestPrivate(
     const OrganizationsRequest::Action action, AcceptHandshakeRequest * const q)
@@ -246,15 +235,10 @@ AcceptHandshakeRequestPrivate::AcceptHandshakeRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AcceptHandshakeRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AcceptHandshakeRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AcceptHandshakeRequest instance.
  */
 AcceptHandshakeRequestPrivate::AcceptHandshakeRequestPrivate(
     const AcceptHandshakeRequestPrivate &other, AcceptHandshakeRequest * const q)

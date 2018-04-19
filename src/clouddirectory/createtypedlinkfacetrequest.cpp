@@ -27,10 +27,9 @@ namespace CloudDirectory {
 
 /*!
  * \class QtAws::CloudDirectory::CreateTypedLinkFacetRequest
- *
  * \brief The CreateTypedLinkFacetRequest class provides an interface for CloudDirectory CreateTypedLinkFacet requests.
  *
- * \ingroup CloudDirectory
+ * \inmodule QtAwsCloudDirectory
  *
  *  <fullname>Amazon Cloud Directory</fullname>
  * 
@@ -44,9 +43,7 @@ namespace CloudDirectory {
  */
 
 /*!
- * @brief  Constructs a new CreateTypedLinkFacetRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateTypedLinkFacetRequest::CreateTypedLinkFacetRequest(const CreateTypedLinkFacetRequest &other)
     : CloudDirectoryRequest(new CreateTypedLinkFacetRequestPrivate(*other.d_func(), this))
@@ -55,7 +52,7 @@ CreateTypedLinkFacetRequest::CreateTypedLinkFacetRequest(const CreateTypedLinkFa
 }
 
 /*!
- * @brief  Constructs a new CreateTypedLinkFacetRequest object.
+ * Constructs a CreateTypedLinkFacetRequest object.
  */
 CreateTypedLinkFacetRequest::CreateTypedLinkFacetRequest()
     : CloudDirectoryRequest(new CreateTypedLinkFacetRequestPrivate(CloudDirectoryRequest::CreateTypedLinkFacetAction, this))
@@ -73,14 +70,9 @@ bool CreateTypedLinkFacetRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateTypedLinkFacetResponse object.
+ * Returns a CreateTypedLinkFacetResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateTypedLinkFacetResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudDirectoryClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateTypedLinkFacetRequest::response(QNetworkReply * const reply) const
 {
@@ -88,20 +80,17 @@ QtAws::Core::AwsAbstractResponse * CreateTypedLinkFacetRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudDirectory::CreateTypedLinkFacetRequestPrivate
+ * \brief The CreateTypedLinkFacetRequestPrivate class provides private implementation for CreateTypedLinkFacetRequest.
+ * \internal
  *
- * @class  CreateTypedLinkFacetRequestPrivate
- *
- * @brief  Private implementation for CreateTypedLinkFacetRequest.
+ * \inmodule QtAwsCloudDirectory
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateTypedLinkFacetRequestPrivate object.
- *
- * @param  action  CloudDirectory action being performed.
- * @param  q       Pointer to this object's public CreateTypedLinkFacetRequest instance.
+ * Constructs a CreateTypedLinkFacetRequestPrivate object for CloudDirectory \a action with,
+ * public implementation \a q.
  */
 CreateTypedLinkFacetRequestPrivate::CreateTypedLinkFacetRequestPrivate(
     const CloudDirectoryRequest::Action action, CreateTypedLinkFacetRequest * const q)
@@ -111,15 +100,10 @@ CreateTypedLinkFacetRequestPrivate::CreateTypedLinkFacetRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateTypedLinkFacetRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateTypedLinkFacetRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateTypedLinkFacetRequest instance.
  */
 CreateTypedLinkFacetRequestPrivate::CreateTypedLinkFacetRequestPrivate(
     const CreateTypedLinkFacetRequestPrivate &other, CreateTypedLinkFacetRequest * const q)

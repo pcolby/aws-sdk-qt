@@ -27,10 +27,9 @@ namespace AlexaForBusiness {
 
 /*!
  * \class QtAws::AlexaForBusiness::RevokeInvitationRequest
- *
  * \brief The RevokeInvitationRequest class provides an interface for AlexaForBusiness RevokeInvitation requests.
  *
- * \ingroup AlexaForBusiness
+ * \inmodule QtAwsAlexaForBusiness
  *
  *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
  *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
@@ -42,9 +41,7 @@ namespace AlexaForBusiness {
  */
 
 /*!
- * @brief  Constructs a new RevokeInvitationRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 RevokeInvitationRequest::RevokeInvitationRequest(const RevokeInvitationRequest &other)
     : AlexaForBusinessRequest(new RevokeInvitationRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ RevokeInvitationRequest::RevokeInvitationRequest(const RevokeInvitationRequest &
 }
 
 /*!
- * @brief  Constructs a new RevokeInvitationRequest object.
+ * Constructs a RevokeInvitationRequest object.
  */
 RevokeInvitationRequest::RevokeInvitationRequest()
     : AlexaForBusinessRequest(new RevokeInvitationRequestPrivate(AlexaForBusinessRequest::RevokeInvitationAction, this))
@@ -71,14 +68,9 @@ bool RevokeInvitationRequest::isValid() const
 
 
 /*!
- * @brief  Construct an RevokeInvitationResponse object.
+ * Returns a RevokeInvitationResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An RevokeInvitationResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AlexaForBusinessClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * RevokeInvitationRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * RevokeInvitationRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::AlexaForBusiness::RevokeInvitationRequestPrivate
+ * \brief The RevokeInvitationRequestPrivate class provides private implementation for RevokeInvitationRequest.
+ * \internal
  *
- * @class  RevokeInvitationRequestPrivate
- *
- * @brief  Private implementation for RevokeInvitationRequest.
+ * \inmodule QtAwsAlexaForBusiness
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new RevokeInvitationRequestPrivate object.
- *
- * @param  action  AlexaForBusiness action being performed.
- * @param  q       Pointer to this object's public RevokeInvitationRequest instance.
+ * Constructs a RevokeInvitationRequestPrivate object for AlexaForBusiness \a action with,
+ * public implementation \a q.
  */
 RevokeInvitationRequestPrivate::RevokeInvitationRequestPrivate(
     const AlexaForBusinessRequest::Action action, RevokeInvitationRequest * const q)
@@ -109,15 +98,10 @@ RevokeInvitationRequestPrivate::RevokeInvitationRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RevokeInvitationRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the RevokeInvitationRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public RevokeInvitationRequest instance.
  */
 RevokeInvitationRequestPrivate::RevokeInvitationRequestPrivate(
     const RevokeInvitationRequestPrivate &other, RevokeInvitationRequest * const q)

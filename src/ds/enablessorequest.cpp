@@ -27,10 +27,9 @@ namespace DirectoryService {
 
 /*!
  * \class QtAws::DirectoryService::EnableSsoRequest
- *
  * \brief The EnableSsoRequest class provides an interface for DirectoryService EnableSso requests.
  *
- * \ingroup DirectoryService
+ * \inmodule QtAwsDirectoryService
  *
  *  <fullname>AWS Directory Service</fullname>
  * 
@@ -51,9 +50,7 @@ namespace DirectoryService {
  */
 
 /*!
- * @brief  Constructs a new EnableSsoRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 EnableSsoRequest::EnableSsoRequest(const EnableSsoRequest &other)
     : DirectoryServiceRequest(new EnableSsoRequestPrivate(*other.d_func(), this))
@@ -62,7 +59,7 @@ EnableSsoRequest::EnableSsoRequest(const EnableSsoRequest &other)
 }
 
 /*!
- * @brief  Constructs a new EnableSsoRequest object.
+ * Constructs a EnableSsoRequest object.
  */
 EnableSsoRequest::EnableSsoRequest()
     : DirectoryServiceRequest(new EnableSsoRequestPrivate(DirectoryServiceRequest::EnableSsoAction, this))
@@ -80,14 +77,9 @@ bool EnableSsoRequest::isValid() const
 
 
 /*!
- * @brief  Construct an EnableSsoResponse object.
+ * Returns a EnableSsoResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An EnableSsoResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DirectoryServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * EnableSsoRequest::response(QNetworkReply * const reply) const
 {
@@ -95,20 +87,17 @@ QtAws::Core::AwsAbstractResponse * EnableSsoRequest::response(QNetworkReply * co
 }
 
 /*!
- * @internal
+ * \class QtAws::DirectoryService::EnableSsoRequestPrivate
+ * \brief The EnableSsoRequestPrivate class provides private implementation for EnableSsoRequest.
+ * \internal
  *
- * @class  EnableSsoRequestPrivate
- *
- * @brief  Private implementation for EnableSsoRequest.
+ * \inmodule QtAwsDirectoryService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new EnableSsoRequestPrivate object.
- *
- * @param  action  DirectoryService action being performed.
- * @param  q       Pointer to this object's public EnableSsoRequest instance.
+ * Constructs a EnableSsoRequestPrivate object for DirectoryService \a action with,
+ * public implementation \a q.
  */
 EnableSsoRequestPrivate::EnableSsoRequestPrivate(
     const DirectoryServiceRequest::Action action, EnableSsoRequest * const q)
@@ -118,15 +107,10 @@ EnableSsoRequestPrivate::EnableSsoRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new EnableSsoRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the EnableSsoRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public EnableSsoRequest instance.
  */
 EnableSsoRequestPrivate::EnableSsoRequestPrivate(
     const EnableSsoRequestPrivate &other, EnableSsoRequest * const q)

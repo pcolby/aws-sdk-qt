@@ -27,19 +27,16 @@ namespace MediaLive {
 
 /*!
  * \class QtAws::MediaLive::StopChannelRequest
- *
  * \brief The StopChannelRequest class provides an interface for MediaLive StopChannel requests.
  *
- * \ingroup MediaLive
+ * \inmodule QtAwsMediaLive
  *
  *
  * \sa MediaLiveClient::stopChannel
  */
 
 /*!
- * @brief  Constructs a new StopChannelRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 StopChannelRequest::StopChannelRequest(const StopChannelRequest &other)
     : MediaLiveRequest(new StopChannelRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ StopChannelRequest::StopChannelRequest(const StopChannelRequest &other)
 }
 
 /*!
- * @brief  Constructs a new StopChannelRequest object.
+ * Constructs a StopChannelRequest object.
  */
 StopChannelRequest::StopChannelRequest()
     : MediaLiveRequest(new StopChannelRequestPrivate(MediaLiveRequest::StopChannelAction, this))
@@ -66,14 +63,9 @@ bool StopChannelRequest::isValid() const
 
 
 /*!
- * @brief  Construct an StopChannelResponse object.
+ * Returns a StopChannelResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An StopChannelResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MediaLiveClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * StopChannelRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * StopChannelRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::MediaLive::StopChannelRequestPrivate
+ * \brief The StopChannelRequestPrivate class provides private implementation for StopChannelRequest.
+ * \internal
  *
- * @class  StopChannelRequestPrivate
- *
- * @brief  Private implementation for StopChannelRequest.
+ * \inmodule QtAwsMediaLive
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new StopChannelRequestPrivate object.
- *
- * @param  action  MediaLive action being performed.
- * @param  q       Pointer to this object's public StopChannelRequest instance.
+ * Constructs a StopChannelRequestPrivate object for MediaLive \a action with,
+ * public implementation \a q.
  */
 StopChannelRequestPrivate::StopChannelRequestPrivate(
     const MediaLiveRequest::Action action, StopChannelRequest * const q)
@@ -104,15 +93,10 @@ StopChannelRequestPrivate::StopChannelRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StopChannelRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the StopChannelRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public StopChannelRequest instance.
  */
 StopChannelRequestPrivate::StopChannelRequestPrivate(
     const StopChannelRequestPrivate &other, StopChannelRequest * const q)

@@ -27,10 +27,9 @@ namespace Glacier {
 
 /*!
  * \class QtAws::Glacier::CompleteVaultLockRequest
- *
  * \brief The CompleteVaultLockRequest class provides an interface for Glacier CompleteVaultLock requests.
  *
- * \ingroup Glacier
+ * \inmodule QtAwsGlacier
  *
  *  Amazon Glacier is a storage solution for "cold
  * 
@@ -75,9 +74,7 @@ namespace Glacier {
  */
 
 /*!
- * @brief  Constructs a new CompleteVaultLockRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CompleteVaultLockRequest::CompleteVaultLockRequest(const CompleteVaultLockRequest &other)
     : GlacierRequest(new CompleteVaultLockRequestPrivate(*other.d_func(), this))
@@ -86,7 +83,7 @@ CompleteVaultLockRequest::CompleteVaultLockRequest(const CompleteVaultLockReques
 }
 
 /*!
- * @brief  Constructs a new CompleteVaultLockRequest object.
+ * Constructs a CompleteVaultLockRequest object.
  */
 CompleteVaultLockRequest::CompleteVaultLockRequest()
     : GlacierRequest(new CompleteVaultLockRequestPrivate(GlacierRequest::CompleteVaultLockAction, this))
@@ -104,14 +101,9 @@ bool CompleteVaultLockRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CompleteVaultLockResponse object.
+ * Returns a CompleteVaultLockResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CompleteVaultLockResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GlacierClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CompleteVaultLockRequest::response(QNetworkReply * const reply) const
 {
@@ -119,20 +111,17 @@ QtAws::Core::AwsAbstractResponse * CompleteVaultLockRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::Glacier::CompleteVaultLockRequestPrivate
+ * \brief The CompleteVaultLockRequestPrivate class provides private implementation for CompleteVaultLockRequest.
+ * \internal
  *
- * @class  CompleteVaultLockRequestPrivate
- *
- * @brief  Private implementation for CompleteVaultLockRequest.
+ * \inmodule QtAwsGlacier
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CompleteVaultLockRequestPrivate object.
- *
- * @param  action  Glacier action being performed.
- * @param  q       Pointer to this object's public CompleteVaultLockRequest instance.
+ * Constructs a CompleteVaultLockRequestPrivate object for Glacier \a action with,
+ * public implementation \a q.
  */
 CompleteVaultLockRequestPrivate::CompleteVaultLockRequestPrivate(
     const GlacierRequest::Action action, CompleteVaultLockRequest * const q)
@@ -142,15 +131,10 @@ CompleteVaultLockRequestPrivate::CompleteVaultLockRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CompleteVaultLockRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CompleteVaultLockRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CompleteVaultLockRequest instance.
  */
 CompleteVaultLockRequestPrivate::CompleteVaultLockRequestPrivate(
     const CompleteVaultLockRequestPrivate &other, CompleteVaultLockRequest * const q)

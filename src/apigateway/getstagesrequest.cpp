@@ -27,10 +27,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::GetStagesRequest
- *
  * \brief The GetStagesRequest class provides an interface for APIGateway GetStages requests.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -42,9 +41,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new GetStagesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetStagesRequest::GetStagesRequest(const GetStagesRequest &other)
     : APIGatewayRequest(new GetStagesRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ GetStagesRequest::GetStagesRequest(const GetStagesRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetStagesRequest object.
+ * Constructs a GetStagesRequest object.
  */
 GetStagesRequest::GetStagesRequest()
     : APIGatewayRequest(new GetStagesRequestPrivate(APIGatewayRequest::GetStagesAction, this))
@@ -71,14 +68,9 @@ bool GetStagesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetStagesResponse object.
+ * Returns a GetStagesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetStagesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  APIGatewayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetStagesRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * GetStagesRequest::response(QNetworkReply * co
 }
 
 /*!
- * @internal
+ * \class QtAws::APIGateway::GetStagesRequestPrivate
+ * \brief The GetStagesRequestPrivate class provides private implementation for GetStagesRequest.
+ * \internal
  *
- * @class  GetStagesRequestPrivate
- *
- * @brief  Private implementation for GetStagesRequest.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetStagesRequestPrivate object.
- *
- * @param  action  APIGateway action being performed.
- * @param  q       Pointer to this object's public GetStagesRequest instance.
+ * Constructs a GetStagesRequestPrivate object for APIGateway \a action with,
+ * public implementation \a q.
  */
 GetStagesRequestPrivate::GetStagesRequestPrivate(
     const APIGatewayRequest::Action action, GetStagesRequest * const q)
@@ -109,15 +98,10 @@ GetStagesRequestPrivate::GetStagesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetStagesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetStagesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetStagesRequest instance.
  */
 GetStagesRequestPrivate::GetStagesRequestPrivate(
     const GetStagesRequestPrivate &other, GetStagesRequest * const q)

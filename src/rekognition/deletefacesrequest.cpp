@@ -27,10 +27,9 @@ namespace Rekognition {
 
 /*!
  * \class QtAws::Rekognition::DeleteFacesRequest
- *
  * \brief The DeleteFacesRequest class provides an interface for Rekognition DeleteFaces requests.
  *
- * \ingroup Rekognition
+ * \inmodule QtAwsRekognition
  *
  *  This is the Amazon Rekognition API
  *
@@ -38,9 +37,7 @@ namespace Rekognition {
  */
 
 /*!
- * @brief  Constructs a new DeleteFacesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteFacesRequest::DeleteFacesRequest(const DeleteFacesRequest &other)
     : RekognitionRequest(new DeleteFacesRequestPrivate(*other.d_func(), this))
@@ -49,7 +46,7 @@ DeleteFacesRequest::DeleteFacesRequest(const DeleteFacesRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DeleteFacesRequest object.
+ * Constructs a DeleteFacesRequest object.
  */
 DeleteFacesRequest::DeleteFacesRequest()
     : RekognitionRequest(new DeleteFacesRequestPrivate(RekognitionRequest::DeleteFacesAction, this))
@@ -67,14 +64,9 @@ bool DeleteFacesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteFacesResponse object.
+ * Returns a DeleteFacesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteFacesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RekognitionClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteFacesRequest::response(QNetworkReply * const reply) const
 {
@@ -82,20 +74,17 @@ QtAws::Core::AwsAbstractResponse * DeleteFacesRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::Rekognition::DeleteFacesRequestPrivate
+ * \brief The DeleteFacesRequestPrivate class provides private implementation for DeleteFacesRequest.
+ * \internal
  *
- * @class  DeleteFacesRequestPrivate
- *
- * @brief  Private implementation for DeleteFacesRequest.
+ * \inmodule QtAwsRekognition
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteFacesRequestPrivate object.
- *
- * @param  action  Rekognition action being performed.
- * @param  q       Pointer to this object's public DeleteFacesRequest instance.
+ * Constructs a DeleteFacesRequestPrivate object for Rekognition \a action with,
+ * public implementation \a q.
  */
 DeleteFacesRequestPrivate::DeleteFacesRequestPrivate(
     const RekognitionRequest::Action action, DeleteFacesRequest * const q)
@@ -105,15 +94,10 @@ DeleteFacesRequestPrivate::DeleteFacesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteFacesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteFacesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteFacesRequest instance.
  */
 DeleteFacesRequestPrivate::DeleteFacesRequestPrivate(
     const DeleteFacesRequestPrivate &other, DeleteFacesRequest * const q)

@@ -27,10 +27,9 @@ namespace EMR {
 
 /*!
  * \class QtAws::EMR::DescribeClusterRequest
- *
  * \brief The DescribeClusterRequest class provides an interface for EMR DescribeCluster requests.
  *
- * \ingroup EMR
+ * \inmodule QtAwsEMR
  *
  *  Amazon EMR is a web service that makes it easy to process large amounts of data efficiently. Amazon EMR uses Hadoop
  *  processing combined with several AWS products to do tasks such as web indexing, data mining, log file analysis, machine
@@ -40,9 +39,7 @@ namespace EMR {
  */
 
 /*!
- * @brief  Constructs a new DescribeClusterRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeClusterRequest::DescribeClusterRequest(const DescribeClusterRequest &other)
     : EMRRequest(new DescribeClusterRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ DescribeClusterRequest::DescribeClusterRequest(const DescribeClusterRequest &oth
 }
 
 /*!
- * @brief  Constructs a new DescribeClusterRequest object.
+ * Constructs a DescribeClusterRequest object.
  */
 DescribeClusterRequest::DescribeClusterRequest()
     : EMRRequest(new DescribeClusterRequestPrivate(EMRRequest::DescribeClusterAction, this))
@@ -69,14 +66,9 @@ bool DescribeClusterRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeClusterResponse object.
+ * Returns a DescribeClusterResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeClusterResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EMRClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeClusterRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * DescribeClusterRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::EMR::DescribeClusterRequestPrivate
+ * \brief The DescribeClusterRequestPrivate class provides private implementation for DescribeClusterRequest.
+ * \internal
  *
- * @class  DescribeClusterRequestPrivate
- *
- * @brief  Private implementation for DescribeClusterRequest.
+ * \inmodule QtAwsEMR
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeClusterRequestPrivate object.
- *
- * @param  action  EMR action being performed.
- * @param  q       Pointer to this object's public DescribeClusterRequest instance.
+ * Constructs a DescribeClusterRequestPrivate object for EMR \a action with,
+ * public implementation \a q.
  */
 DescribeClusterRequestPrivate::DescribeClusterRequestPrivate(
     const EMRRequest::Action action, DescribeClusterRequest * const q)
@@ -107,15 +96,10 @@ DescribeClusterRequestPrivate::DescribeClusterRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeClusterRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeClusterRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeClusterRequest instance.
  */
 DescribeClusterRequestPrivate::DescribeClusterRequestPrivate(
     const DescribeClusterRequestPrivate &other, DescribeClusterRequest * const q)

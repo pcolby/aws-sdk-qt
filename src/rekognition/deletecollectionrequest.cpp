@@ -27,10 +27,9 @@ namespace Rekognition {
 
 /*!
  * \class QtAws::Rekognition::DeleteCollectionRequest
- *
  * \brief The DeleteCollectionRequest class provides an interface for Rekognition DeleteCollection requests.
  *
- * \ingroup Rekognition
+ * \inmodule QtAwsRekognition
  *
  *  This is the Amazon Rekognition API
  *
@@ -38,9 +37,7 @@ namespace Rekognition {
  */
 
 /*!
- * @brief  Constructs a new DeleteCollectionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteCollectionRequest::DeleteCollectionRequest(const DeleteCollectionRequest &other)
     : RekognitionRequest(new DeleteCollectionRequestPrivate(*other.d_func(), this))
@@ -49,7 +46,7 @@ DeleteCollectionRequest::DeleteCollectionRequest(const DeleteCollectionRequest &
 }
 
 /*!
- * @brief  Constructs a new DeleteCollectionRequest object.
+ * Constructs a DeleteCollectionRequest object.
  */
 DeleteCollectionRequest::DeleteCollectionRequest()
     : RekognitionRequest(new DeleteCollectionRequestPrivate(RekognitionRequest::DeleteCollectionAction, this))
@@ -67,14 +64,9 @@ bool DeleteCollectionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteCollectionResponse object.
+ * Returns a DeleteCollectionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteCollectionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RekognitionClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteCollectionRequest::response(QNetworkReply * const reply) const
 {
@@ -82,20 +74,17 @@ QtAws::Core::AwsAbstractResponse * DeleteCollectionRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::Rekognition::DeleteCollectionRequestPrivate
+ * \brief The DeleteCollectionRequestPrivate class provides private implementation for DeleteCollectionRequest.
+ * \internal
  *
- * @class  DeleteCollectionRequestPrivate
- *
- * @brief  Private implementation for DeleteCollectionRequest.
+ * \inmodule QtAwsRekognition
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteCollectionRequestPrivate object.
- *
- * @param  action  Rekognition action being performed.
- * @param  q       Pointer to this object's public DeleteCollectionRequest instance.
+ * Constructs a DeleteCollectionRequestPrivate object for Rekognition \a action with,
+ * public implementation \a q.
  */
 DeleteCollectionRequestPrivate::DeleteCollectionRequestPrivate(
     const RekognitionRequest::Action action, DeleteCollectionRequest * const q)
@@ -105,15 +94,10 @@ DeleteCollectionRequestPrivate::DeleteCollectionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteCollectionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteCollectionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteCollectionRequest instance.
  */
 DeleteCollectionRequestPrivate::DeleteCollectionRequestPrivate(
     const DeleteCollectionRequestPrivate &other, DeleteCollectionRequest * const q)

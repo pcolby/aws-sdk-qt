@@ -27,10 +27,9 @@ namespace Organizations {
 
 /*!
  * \class QtAws::Organizations::DisablePolicyTypeRequest
- *
  * \brief The DisablePolicyTypeRequest class provides an interface for Organizations DisablePolicyType requests.
  *
- * \ingroup Organizations
+ * \inmodule QtAwsOrganizations
  *
  *  <fullname>AWS Organizations API Reference</fullname>
  * 
@@ -179,9 +178,7 @@ namespace Organizations {
  */
 
 /*!
- * @brief  Constructs a new DisablePolicyTypeRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DisablePolicyTypeRequest::DisablePolicyTypeRequest(const DisablePolicyTypeRequest &other)
     : OrganizationsRequest(new DisablePolicyTypeRequestPrivate(*other.d_func(), this))
@@ -190,7 +187,7 @@ DisablePolicyTypeRequest::DisablePolicyTypeRequest(const DisablePolicyTypeReques
 }
 
 /*!
- * @brief  Constructs a new DisablePolicyTypeRequest object.
+ * Constructs a DisablePolicyTypeRequest object.
  */
 DisablePolicyTypeRequest::DisablePolicyTypeRequest()
     : OrganizationsRequest(new DisablePolicyTypeRequestPrivate(OrganizationsRequest::DisablePolicyTypeAction, this))
@@ -208,14 +205,9 @@ bool DisablePolicyTypeRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DisablePolicyTypeResponse object.
+ * Returns a DisablePolicyTypeResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DisablePolicyTypeResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  OrganizationsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DisablePolicyTypeRequest::response(QNetworkReply * const reply) const
 {
@@ -223,20 +215,17 @@ QtAws::Core::AwsAbstractResponse * DisablePolicyTypeRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::Organizations::DisablePolicyTypeRequestPrivate
+ * \brief The DisablePolicyTypeRequestPrivate class provides private implementation for DisablePolicyTypeRequest.
+ * \internal
  *
- * @class  DisablePolicyTypeRequestPrivate
- *
- * @brief  Private implementation for DisablePolicyTypeRequest.
+ * \inmodule QtAwsOrganizations
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DisablePolicyTypeRequestPrivate object.
- *
- * @param  action  Organizations action being performed.
- * @param  q       Pointer to this object's public DisablePolicyTypeRequest instance.
+ * Constructs a DisablePolicyTypeRequestPrivate object for Organizations \a action with,
+ * public implementation \a q.
  */
 DisablePolicyTypeRequestPrivate::DisablePolicyTypeRequestPrivate(
     const OrganizationsRequest::Action action, DisablePolicyTypeRequest * const q)
@@ -246,15 +235,10 @@ DisablePolicyTypeRequestPrivate::DisablePolicyTypeRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DisablePolicyTypeRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DisablePolicyTypeRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DisablePolicyTypeRequest instance.
  */
 DisablePolicyTypeRequestPrivate::DisablePolicyTypeRequestPrivate(
     const DisablePolicyTypeRequestPrivate &other, DisablePolicyTypeRequest * const q)

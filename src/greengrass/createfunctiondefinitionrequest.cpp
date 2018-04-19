@@ -27,10 +27,9 @@ namespace Greengrass {
 
 /*!
  * \class QtAws::Greengrass::CreateFunctionDefinitionRequest
- *
  * \brief The CreateFunctionDefinitionRequest class provides an interface for Greengrass CreateFunctionDefinition requests.
  *
- * \ingroup Greengrass
+ * \inmodule QtAwsGreengrass
  *
  *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
  *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
@@ -40,9 +39,7 @@ namespace Greengrass {
  */
 
 /*!
- * @brief  Constructs a new CreateFunctionDefinitionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateFunctionDefinitionRequest::CreateFunctionDefinitionRequest(const CreateFunctionDefinitionRequest &other)
     : GreengrassRequest(new CreateFunctionDefinitionRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ CreateFunctionDefinitionRequest::CreateFunctionDefinitionRequest(const CreateFun
 }
 
 /*!
- * @brief  Constructs a new CreateFunctionDefinitionRequest object.
+ * Constructs a CreateFunctionDefinitionRequest object.
  */
 CreateFunctionDefinitionRequest::CreateFunctionDefinitionRequest()
     : GreengrassRequest(new CreateFunctionDefinitionRequestPrivate(GreengrassRequest::CreateFunctionDefinitionAction, this))
@@ -69,14 +66,9 @@ bool CreateFunctionDefinitionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateFunctionDefinitionResponse object.
+ * Returns a CreateFunctionDefinitionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateFunctionDefinitionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GreengrassClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateFunctionDefinitionRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * CreateFunctionDefinitionRequest::response(QNe
 }
 
 /*!
- * @internal
+ * \class QtAws::Greengrass::CreateFunctionDefinitionRequestPrivate
+ * \brief The CreateFunctionDefinitionRequestPrivate class provides private implementation for CreateFunctionDefinitionRequest.
+ * \internal
  *
- * @class  CreateFunctionDefinitionRequestPrivate
- *
- * @brief  Private implementation for CreateFunctionDefinitionRequest.
+ * \inmodule QtAwsGreengrass
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateFunctionDefinitionRequestPrivate object.
- *
- * @param  action  Greengrass action being performed.
- * @param  q       Pointer to this object's public CreateFunctionDefinitionRequest instance.
+ * Constructs a CreateFunctionDefinitionRequestPrivate object for Greengrass \a action with,
+ * public implementation \a q.
  */
 CreateFunctionDefinitionRequestPrivate::CreateFunctionDefinitionRequestPrivate(
     const GreengrassRequest::Action action, CreateFunctionDefinitionRequest * const q)
@@ -107,15 +96,10 @@ CreateFunctionDefinitionRequestPrivate::CreateFunctionDefinitionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateFunctionDefinitionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateFunctionDefinitionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateFunctionDefinitionRequest instance.
  */
 CreateFunctionDefinitionRequestPrivate::CreateFunctionDefinitionRequestPrivate(
     const CreateFunctionDefinitionRequestPrivate &other, CreateFunctionDefinitionRequest * const q)

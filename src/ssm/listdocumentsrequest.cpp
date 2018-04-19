@@ -27,10 +27,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::ListDocumentsRequest
- *
  * \brief The ListDocumentsRequest class provides an interface for SSM ListDocuments requests.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -61,9 +60,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new ListDocumentsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListDocumentsRequest::ListDocumentsRequest(const ListDocumentsRequest &other)
     : SSMRequest(new ListDocumentsRequestPrivate(*other.d_func(), this))
@@ -72,7 +69,7 @@ ListDocumentsRequest::ListDocumentsRequest(const ListDocumentsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ListDocumentsRequest object.
+ * Constructs a ListDocumentsRequest object.
  */
 ListDocumentsRequest::ListDocumentsRequest()
     : SSMRequest(new ListDocumentsRequestPrivate(SSMRequest::ListDocumentsAction, this))
@@ -90,14 +87,9 @@ bool ListDocumentsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListDocumentsResponse object.
+ * Returns a ListDocumentsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListDocumentsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SSMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListDocumentsRequest::response(QNetworkReply * const reply) const
 {
@@ -105,20 +97,17 @@ QtAws::Core::AwsAbstractResponse * ListDocumentsRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::SSM::ListDocumentsRequestPrivate
+ * \brief The ListDocumentsRequestPrivate class provides private implementation for ListDocumentsRequest.
+ * \internal
  *
- * @class  ListDocumentsRequestPrivate
- *
- * @brief  Private implementation for ListDocumentsRequest.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListDocumentsRequestPrivate object.
- *
- * @param  action  SSM action being performed.
- * @param  q       Pointer to this object's public ListDocumentsRequest instance.
+ * Constructs a ListDocumentsRequestPrivate object for SSM \a action with,
+ * public implementation \a q.
  */
 ListDocumentsRequestPrivate::ListDocumentsRequestPrivate(
     const SSMRequest::Action action, ListDocumentsRequest * const q)
@@ -128,15 +117,10 @@ ListDocumentsRequestPrivate::ListDocumentsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListDocumentsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListDocumentsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListDocumentsRequest instance.
  */
 ListDocumentsRequestPrivate::ListDocumentsRequestPrivate(
     const ListDocumentsRequestPrivate &other, ListDocumentsRequest * const q)

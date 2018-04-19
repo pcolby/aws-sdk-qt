@@ -27,10 +27,9 @@ namespace ElasticBeanstalk {
 
 /*!
  * \class QtAws::ElasticBeanstalk::RebuildEnvironmentRequest
- *
  * \brief The RebuildEnvironmentRequest class provides an interface for ElasticBeanstalk RebuildEnvironment requests.
  *
- * \ingroup ElasticBeanstalk
+ * \inmodule QtAwsElasticBeanstalk
  *
  *  <fullname>AWS Elastic Beanstalk</fullname>
  * 
@@ -59,9 +58,7 @@ namespace ElasticBeanstalk {
  */
 
 /*!
- * @brief  Constructs a new RebuildEnvironmentRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 RebuildEnvironmentRequest::RebuildEnvironmentRequest(const RebuildEnvironmentRequest &other)
     : ElasticBeanstalkRequest(new RebuildEnvironmentRequestPrivate(*other.d_func(), this))
@@ -70,7 +67,7 @@ RebuildEnvironmentRequest::RebuildEnvironmentRequest(const RebuildEnvironmentReq
 }
 
 /*!
- * @brief  Constructs a new RebuildEnvironmentRequest object.
+ * Constructs a RebuildEnvironmentRequest object.
  */
 RebuildEnvironmentRequest::RebuildEnvironmentRequest()
     : ElasticBeanstalkRequest(new RebuildEnvironmentRequestPrivate(ElasticBeanstalkRequest::RebuildEnvironmentAction, this))
@@ -88,14 +85,9 @@ bool RebuildEnvironmentRequest::isValid() const
 
 
 /*!
- * @brief  Construct an RebuildEnvironmentResponse object.
+ * Returns a RebuildEnvironmentResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An RebuildEnvironmentResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ElasticBeanstalkClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * RebuildEnvironmentRequest::response(QNetworkReply * const reply) const
 {
@@ -103,20 +95,17 @@ QtAws::Core::AwsAbstractResponse * RebuildEnvironmentRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::ElasticBeanstalk::RebuildEnvironmentRequestPrivate
+ * \brief The RebuildEnvironmentRequestPrivate class provides private implementation for RebuildEnvironmentRequest.
+ * \internal
  *
- * @class  RebuildEnvironmentRequestPrivate
- *
- * @brief  Private implementation for RebuildEnvironmentRequest.
+ * \inmodule QtAwsElasticBeanstalk
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new RebuildEnvironmentRequestPrivate object.
- *
- * @param  action  ElasticBeanstalk action being performed.
- * @param  q       Pointer to this object's public RebuildEnvironmentRequest instance.
+ * Constructs a RebuildEnvironmentRequestPrivate object for ElasticBeanstalk \a action with,
+ * public implementation \a q.
  */
 RebuildEnvironmentRequestPrivate::RebuildEnvironmentRequestPrivate(
     const ElasticBeanstalkRequest::Action action, RebuildEnvironmentRequest * const q)
@@ -126,15 +115,10 @@ RebuildEnvironmentRequestPrivate::RebuildEnvironmentRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RebuildEnvironmentRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the RebuildEnvironmentRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public RebuildEnvironmentRequest instance.
  */
 RebuildEnvironmentRequestPrivate::RebuildEnvironmentRequestPrivate(
     const RebuildEnvironmentRequestPrivate &other, RebuildEnvironmentRequest * const q)

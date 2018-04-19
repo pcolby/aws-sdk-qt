@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::AuthorizeSecurityGroupIngressRequest
- *
  * \brief The AuthorizeSecurityGroupIngressRequest class provides an interface for EC2 AuthorizeSecurityGroupIngress requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new AuthorizeSecurityGroupIngressRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AuthorizeSecurityGroupIngressRequest::AuthorizeSecurityGroupIngressRequest(const AuthorizeSecurityGroupIngressRequest &other)
     : EC2Request(new AuthorizeSecurityGroupIngressRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ AuthorizeSecurityGroupIngressRequest::AuthorizeSecurityGroupIngressRequest(const
 }
 
 /*!
- * @brief  Constructs a new AuthorizeSecurityGroupIngressRequest object.
+ * Constructs a AuthorizeSecurityGroupIngressRequest object.
  */
 AuthorizeSecurityGroupIngressRequest::AuthorizeSecurityGroupIngressRequest()
     : EC2Request(new AuthorizeSecurityGroupIngressRequestPrivate(EC2Request::AuthorizeSecurityGroupIngressAction, this))
@@ -70,14 +67,9 @@ bool AuthorizeSecurityGroupIngressRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AuthorizeSecurityGroupIngressResponse object.
+ * Returns a AuthorizeSecurityGroupIngressResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AuthorizeSecurityGroupIngressResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AuthorizeSecurityGroupIngressRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * AuthorizeSecurityGroupIngressRequest::respons
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::AuthorizeSecurityGroupIngressRequestPrivate
+ * \brief The AuthorizeSecurityGroupIngressRequestPrivate class provides private implementation for AuthorizeSecurityGroupIngressRequest.
+ * \internal
  *
- * @class  AuthorizeSecurityGroupIngressRequestPrivate
- *
- * @brief  Private implementation for AuthorizeSecurityGroupIngressRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AuthorizeSecurityGroupIngressRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public AuthorizeSecurityGroupIngressRequest instance.
+ * Constructs a AuthorizeSecurityGroupIngressRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 AuthorizeSecurityGroupIngressRequestPrivate::AuthorizeSecurityGroupIngressRequestPrivate(
     const EC2Request::Action action, AuthorizeSecurityGroupIngressRequest * const q)
@@ -108,15 +97,10 @@ AuthorizeSecurityGroupIngressRequestPrivate::AuthorizeSecurityGroupIngressReques
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AuthorizeSecurityGroupIngressRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AuthorizeSecurityGroupIngressRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AuthorizeSecurityGroupIngressRequest instance.
  */
 AuthorizeSecurityGroupIngressRequestPrivate::AuthorizeSecurityGroupIngressRequestPrivate(
     const AuthorizeSecurityGroupIngressRequestPrivate &other, AuthorizeSecurityGroupIngressRequest * const q)

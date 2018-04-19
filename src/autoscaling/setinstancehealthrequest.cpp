@@ -27,10 +27,9 @@ namespace AutoScaling {
 
 /*!
  * \class QtAws::AutoScaling::SetInstanceHealthRequest
- *
  * \brief The SetInstanceHealthRequest class provides an interface for AutoScaling SetInstanceHealth requests.
  *
- * \ingroup AutoScaling
+ * \inmodule QtAwsAutoScaling
  *
  *  <fullname>Amazon EC2 Auto Scaling</fullname>
  * 
@@ -42,9 +41,7 @@ namespace AutoScaling {
  */
 
 /*!
- * @brief  Constructs a new SetInstanceHealthRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 SetInstanceHealthRequest::SetInstanceHealthRequest(const SetInstanceHealthRequest &other)
     : AutoScalingRequest(new SetInstanceHealthRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ SetInstanceHealthRequest::SetInstanceHealthRequest(const SetInstanceHealthReques
 }
 
 /*!
- * @brief  Constructs a new SetInstanceHealthRequest object.
+ * Constructs a SetInstanceHealthRequest object.
  */
 SetInstanceHealthRequest::SetInstanceHealthRequest()
     : AutoScalingRequest(new SetInstanceHealthRequestPrivate(AutoScalingRequest::SetInstanceHealthAction, this))
@@ -71,14 +68,9 @@ bool SetInstanceHealthRequest::isValid() const
 
 
 /*!
- * @brief  Construct an SetInstanceHealthResponse object.
+ * Returns a SetInstanceHealthResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An SetInstanceHealthResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AutoScalingClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * SetInstanceHealthRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * SetInstanceHealthRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::AutoScaling::SetInstanceHealthRequestPrivate
+ * \brief The SetInstanceHealthRequestPrivate class provides private implementation for SetInstanceHealthRequest.
+ * \internal
  *
- * @class  SetInstanceHealthRequestPrivate
- *
- * @brief  Private implementation for SetInstanceHealthRequest.
+ * \inmodule QtAwsAutoScaling
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new SetInstanceHealthRequestPrivate object.
- *
- * @param  action  AutoScaling action being performed.
- * @param  q       Pointer to this object's public SetInstanceHealthRequest instance.
+ * Constructs a SetInstanceHealthRequestPrivate object for AutoScaling \a action with,
+ * public implementation \a q.
  */
 SetInstanceHealthRequestPrivate::SetInstanceHealthRequestPrivate(
     const AutoScalingRequest::Action action, SetInstanceHealthRequest * const q)
@@ -109,15 +98,10 @@ SetInstanceHealthRequestPrivate::SetInstanceHealthRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SetInstanceHealthRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the SetInstanceHealthRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public SetInstanceHealthRequest instance.
  */
 SetInstanceHealthRequestPrivate::SetInstanceHealthRequestPrivate(
     const SetInstanceHealthRequestPrivate &other, SetInstanceHealthRequest * const q)

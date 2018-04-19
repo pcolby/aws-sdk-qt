@@ -27,10 +27,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::ListVirtualMFADevicesRequest
- *
  * \brief The ListVirtualMFADevicesRequest class provides an interface for IAM ListVirtualMFADevices requests.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -102,9 +101,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new ListVirtualMFADevicesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListVirtualMFADevicesRequest::ListVirtualMFADevicesRequest(const ListVirtualMFADevicesRequest &other)
     : IAMRequest(new ListVirtualMFADevicesRequestPrivate(*other.d_func(), this))
@@ -113,7 +110,7 @@ ListVirtualMFADevicesRequest::ListVirtualMFADevicesRequest(const ListVirtualMFAD
 }
 
 /*!
- * @brief  Constructs a new ListVirtualMFADevicesRequest object.
+ * Constructs a ListVirtualMFADevicesRequest object.
  */
 ListVirtualMFADevicesRequest::ListVirtualMFADevicesRequest()
     : IAMRequest(new ListVirtualMFADevicesRequestPrivate(IAMRequest::ListVirtualMFADevicesAction, this))
@@ -131,14 +128,9 @@ bool ListVirtualMFADevicesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListVirtualMFADevicesResponse object.
+ * Returns a ListVirtualMFADevicesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListVirtualMFADevicesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IAMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListVirtualMFADevicesRequest::response(QNetworkReply * const reply) const
 {
@@ -146,20 +138,17 @@ QtAws::Core::AwsAbstractResponse * ListVirtualMFADevicesRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::IAM::ListVirtualMFADevicesRequestPrivate
+ * \brief The ListVirtualMFADevicesRequestPrivate class provides private implementation for ListVirtualMFADevicesRequest.
+ * \internal
  *
- * @class  ListVirtualMFADevicesRequestPrivate
- *
- * @brief  Private implementation for ListVirtualMFADevicesRequest.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListVirtualMFADevicesRequestPrivate object.
- *
- * @param  action  IAM action being performed.
- * @param  q       Pointer to this object's public ListVirtualMFADevicesRequest instance.
+ * Constructs a ListVirtualMFADevicesRequestPrivate object for IAM \a action with,
+ * public implementation \a q.
  */
 ListVirtualMFADevicesRequestPrivate::ListVirtualMFADevicesRequestPrivate(
     const IAMRequest::Action action, ListVirtualMFADevicesRequest * const q)
@@ -169,15 +158,10 @@ ListVirtualMFADevicesRequestPrivate::ListVirtualMFADevicesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListVirtualMFADevicesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListVirtualMFADevicesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListVirtualMFADevicesRequest instance.
  */
 ListVirtualMFADevicesRequestPrivate::ListVirtualMFADevicesRequestPrivate(
     const ListVirtualMFADevicesRequestPrivate &other, ListVirtualMFADevicesRequest * const q)

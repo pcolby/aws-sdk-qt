@@ -27,19 +27,16 @@ namespace MediaConvert {
 
 /*!
  * \class QtAws::MediaConvert::CreateJobTemplateRequest
- *
  * \brief The CreateJobTemplateRequest class provides an interface for MediaConvert CreateJobTemplate requests.
  *
- * \ingroup MediaConvert
+ * \inmodule QtAwsMediaConvert
  *
  *
  * \sa MediaConvertClient::createJobTemplate
  */
 
 /*!
- * @brief  Constructs a new CreateJobTemplateRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateJobTemplateRequest::CreateJobTemplateRequest(const CreateJobTemplateRequest &other)
     : MediaConvertRequest(new CreateJobTemplateRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ CreateJobTemplateRequest::CreateJobTemplateRequest(const CreateJobTemplateReques
 }
 
 /*!
- * @brief  Constructs a new CreateJobTemplateRequest object.
+ * Constructs a CreateJobTemplateRequest object.
  */
 CreateJobTemplateRequest::CreateJobTemplateRequest()
     : MediaConvertRequest(new CreateJobTemplateRequestPrivate(MediaConvertRequest::CreateJobTemplateAction, this))
@@ -66,14 +63,9 @@ bool CreateJobTemplateRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateJobTemplateResponse object.
+ * Returns a CreateJobTemplateResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateJobTemplateResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MediaConvertClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateJobTemplateRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * CreateJobTemplateRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::MediaConvert::CreateJobTemplateRequestPrivate
+ * \brief The CreateJobTemplateRequestPrivate class provides private implementation for CreateJobTemplateRequest.
+ * \internal
  *
- * @class  CreateJobTemplateRequestPrivate
- *
- * @brief  Private implementation for CreateJobTemplateRequest.
+ * \inmodule QtAwsMediaConvert
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateJobTemplateRequestPrivate object.
- *
- * @param  action  MediaConvert action being performed.
- * @param  q       Pointer to this object's public CreateJobTemplateRequest instance.
+ * Constructs a CreateJobTemplateRequestPrivate object for MediaConvert \a action with,
+ * public implementation \a q.
  */
 CreateJobTemplateRequestPrivate::CreateJobTemplateRequestPrivate(
     const MediaConvertRequest::Action action, CreateJobTemplateRequest * const q)
@@ -104,15 +93,10 @@ CreateJobTemplateRequestPrivate::CreateJobTemplateRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateJobTemplateRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateJobTemplateRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateJobTemplateRequest instance.
  */
 CreateJobTemplateRequestPrivate::CreateJobTemplateRequestPrivate(
     const CreateJobTemplateRequestPrivate &other, CreateJobTemplateRequest * const q)

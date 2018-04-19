@@ -27,10 +27,9 @@ namespace Batch {
 
 /*!
  * \class QtAws::Batch::TerminateJobRequest
- *
  * \brief The TerminateJobRequest class provides an interface for Batch TerminateJob requests.
  *
- * \ingroup Batch
+ * \inmodule QtAwsBatch
  *
  *  AWS Batch enables you to run batch computing workloads on the AWS Cloud. Batch computing is a common way for developers,
  *  scientists, and engineers to access large amounts of compute resources, and AWS Batch removes the undifferentiated heavy
@@ -51,9 +50,7 @@ namespace Batch {
  */
 
 /*!
- * @brief  Constructs a new TerminateJobRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 TerminateJobRequest::TerminateJobRequest(const TerminateJobRequest &other)
     : BatchRequest(new TerminateJobRequestPrivate(*other.d_func(), this))
@@ -62,7 +59,7 @@ TerminateJobRequest::TerminateJobRequest(const TerminateJobRequest &other)
 }
 
 /*!
- * @brief  Constructs a new TerminateJobRequest object.
+ * Constructs a TerminateJobRequest object.
  */
 TerminateJobRequest::TerminateJobRequest()
     : BatchRequest(new TerminateJobRequestPrivate(BatchRequest::TerminateJobAction, this))
@@ -80,14 +77,9 @@ bool TerminateJobRequest::isValid() const
 
 
 /*!
- * @brief  Construct an TerminateJobResponse object.
+ * Returns a TerminateJobResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An TerminateJobResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  BatchClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * TerminateJobRequest::response(QNetworkReply * const reply) const
 {
@@ -95,20 +87,17 @@ QtAws::Core::AwsAbstractResponse * TerminateJobRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::Batch::TerminateJobRequestPrivate
+ * \brief The TerminateJobRequestPrivate class provides private implementation for TerminateJobRequest.
+ * \internal
  *
- * @class  TerminateJobRequestPrivate
- *
- * @brief  Private implementation for TerminateJobRequest.
+ * \inmodule QtAwsBatch
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new TerminateJobRequestPrivate object.
- *
- * @param  action  Batch action being performed.
- * @param  q       Pointer to this object's public TerminateJobRequest instance.
+ * Constructs a TerminateJobRequestPrivate object for Batch \a action with,
+ * public implementation \a q.
  */
 TerminateJobRequestPrivate::TerminateJobRequestPrivate(
     const BatchRequest::Action action, TerminateJobRequest * const q)
@@ -118,15 +107,10 @@ TerminateJobRequestPrivate::TerminateJobRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new TerminateJobRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the TerminateJobRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public TerminateJobRequest instance.
  */
 TerminateJobRequestPrivate::TerminateJobRequestPrivate(
     const TerminateJobRequestPrivate &other, TerminateJobRequest * const q)

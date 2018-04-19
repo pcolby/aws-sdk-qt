@@ -27,10 +27,9 @@ namespace ElastiCache {
 
 /*!
  * \class QtAws::ElastiCache::DescribeEventsRequest
- *
  * \brief The DescribeEventsRequest class provides an interface for ElastiCache DescribeEvents requests.
  *
- * \ingroup ElastiCache
+ * \inmodule QtAwsElastiCache
  *
  *  <fullname>Amazon ElastiCache</fullname>
  * 
@@ -51,9 +50,7 @@ namespace ElastiCache {
  */
 
 /*!
- * @brief  Constructs a new DescribeEventsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeEventsRequest::DescribeEventsRequest(const DescribeEventsRequest &other)
     : ElastiCacheRequest(new DescribeEventsRequestPrivate(*other.d_func(), this))
@@ -62,7 +59,7 @@ DescribeEventsRequest::DescribeEventsRequest(const DescribeEventsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DescribeEventsRequest object.
+ * Constructs a DescribeEventsRequest object.
  */
 DescribeEventsRequest::DescribeEventsRequest()
     : ElastiCacheRequest(new DescribeEventsRequestPrivate(ElastiCacheRequest::DescribeEventsAction, this))
@@ -80,14 +77,9 @@ bool DescribeEventsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeEventsResponse object.
+ * Returns a DescribeEventsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeEventsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ElastiCacheClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeEventsRequest::response(QNetworkReply * const reply) const
 {
@@ -95,20 +87,17 @@ QtAws::Core::AwsAbstractResponse * DescribeEventsRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::ElastiCache::DescribeEventsRequestPrivate
+ * \brief The DescribeEventsRequestPrivate class provides private implementation for DescribeEventsRequest.
+ * \internal
  *
- * @class  DescribeEventsRequestPrivate
- *
- * @brief  Private implementation for DescribeEventsRequest.
+ * \inmodule QtAwsElastiCache
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeEventsRequestPrivate object.
- *
- * @param  action  ElastiCache action being performed.
- * @param  q       Pointer to this object's public DescribeEventsRequest instance.
+ * Constructs a DescribeEventsRequestPrivate object for ElastiCache \a action with,
+ * public implementation \a q.
  */
 DescribeEventsRequestPrivate::DescribeEventsRequestPrivate(
     const ElastiCacheRequest::Action action, DescribeEventsRequest * const q)
@@ -118,15 +107,10 @@ DescribeEventsRequestPrivate::DescribeEventsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeEventsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeEventsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeEventsRequest instance.
  */
 DescribeEventsRequestPrivate::DescribeEventsRequestPrivate(
     const DescribeEventsRequestPrivate &other, DescribeEventsRequest * const q)

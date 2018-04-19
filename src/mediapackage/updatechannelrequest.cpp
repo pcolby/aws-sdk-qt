@@ -27,19 +27,16 @@ namespace MediaPackage {
 
 /*!
  * \class QtAws::MediaPackage::UpdateChannelRequest
- *
  * \brief The UpdateChannelRequest class provides an interface for MediaPackage UpdateChannel requests.
  *
- * \ingroup MediaPackage
+ * \inmodule QtAwsMediaPackage
  *
  *
  * \sa MediaPackageClient::updateChannel
  */
 
 /*!
- * @brief  Constructs a new UpdateChannelRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateChannelRequest::UpdateChannelRequest(const UpdateChannelRequest &other)
     : MediaPackageRequest(new UpdateChannelRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ UpdateChannelRequest::UpdateChannelRequest(const UpdateChannelRequest &other)
 }
 
 /*!
- * @brief  Constructs a new UpdateChannelRequest object.
+ * Constructs a UpdateChannelRequest object.
  */
 UpdateChannelRequest::UpdateChannelRequest()
     : MediaPackageRequest(new UpdateChannelRequestPrivate(MediaPackageRequest::UpdateChannelAction, this))
@@ -66,14 +63,9 @@ bool UpdateChannelRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateChannelResponse object.
+ * Returns a UpdateChannelResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateChannelResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MediaPackageClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateChannelRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * UpdateChannelRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::MediaPackage::UpdateChannelRequestPrivate
+ * \brief The UpdateChannelRequestPrivate class provides private implementation for UpdateChannelRequest.
+ * \internal
  *
- * @class  UpdateChannelRequestPrivate
- *
- * @brief  Private implementation for UpdateChannelRequest.
+ * \inmodule QtAwsMediaPackage
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateChannelRequestPrivate object.
- *
- * @param  action  MediaPackage action being performed.
- * @param  q       Pointer to this object's public UpdateChannelRequest instance.
+ * Constructs a UpdateChannelRequestPrivate object for MediaPackage \a action with,
+ * public implementation \a q.
  */
 UpdateChannelRequestPrivate::UpdateChannelRequestPrivate(
     const MediaPackageRequest::Action action, UpdateChannelRequest * const q)
@@ -104,15 +93,10 @@ UpdateChannelRequestPrivate::UpdateChannelRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateChannelRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateChannelRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateChannelRequest instance.
  */
 UpdateChannelRequestPrivate::UpdateChannelRequestPrivate(
     const UpdateChannelRequestPrivate &other, UpdateChannelRequest * const q)

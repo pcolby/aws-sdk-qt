@@ -27,10 +27,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::SearchIndexRequest
- *
  * \brief The SearchIndexRequest class provides an interface for IoT SearchIndex requests.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -48,9 +47,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new SearchIndexRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 SearchIndexRequest::SearchIndexRequest(const SearchIndexRequest &other)
     : IoTRequest(new SearchIndexRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ SearchIndexRequest::SearchIndexRequest(const SearchIndexRequest &other)
 }
 
 /*!
- * @brief  Constructs a new SearchIndexRequest object.
+ * Constructs a SearchIndexRequest object.
  */
 SearchIndexRequest::SearchIndexRequest()
     : IoTRequest(new SearchIndexRequestPrivate(IoTRequest::SearchIndexAction, this))
@@ -77,14 +74,9 @@ bool SearchIndexRequest::isValid() const
 
 
 /*!
- * @brief  Construct an SearchIndexResponse object.
+ * Returns a SearchIndexResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An SearchIndexResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IoTClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * SearchIndexRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * SearchIndexRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::IoT::SearchIndexRequestPrivate
+ * \brief The SearchIndexRequestPrivate class provides private implementation for SearchIndexRequest.
+ * \internal
  *
- * @class  SearchIndexRequestPrivate
- *
- * @brief  Private implementation for SearchIndexRequest.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new SearchIndexRequestPrivate object.
- *
- * @param  action  IoT action being performed.
- * @param  q       Pointer to this object's public SearchIndexRequest instance.
+ * Constructs a SearchIndexRequestPrivate object for IoT \a action with,
+ * public implementation \a q.
  */
 SearchIndexRequestPrivate::SearchIndexRequestPrivate(
     const IoTRequest::Action action, SearchIndexRequest * const q)
@@ -115,15 +104,10 @@ SearchIndexRequestPrivate::SearchIndexRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SearchIndexRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the SearchIndexRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public SearchIndexRequest instance.
  */
 SearchIndexRequestPrivate::SearchIndexRequestPrivate(
     const SearchIndexRequestPrivate &other, SearchIndexRequest * const q)

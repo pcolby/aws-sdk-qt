@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::CreateCustomerGatewayRequest
- *
  * \brief The CreateCustomerGatewayRequest class provides an interface for EC2 CreateCustomerGateway requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new CreateCustomerGatewayRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateCustomerGatewayRequest::CreateCustomerGatewayRequest(const CreateCustomerGatewayRequest &other)
     : EC2Request(new CreateCustomerGatewayRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ CreateCustomerGatewayRequest::CreateCustomerGatewayRequest(const CreateCustomerG
 }
 
 /*!
- * @brief  Constructs a new CreateCustomerGatewayRequest object.
+ * Constructs a CreateCustomerGatewayRequest object.
  */
 CreateCustomerGatewayRequest::CreateCustomerGatewayRequest()
     : EC2Request(new CreateCustomerGatewayRequestPrivate(EC2Request::CreateCustomerGatewayAction, this))
@@ -70,14 +67,9 @@ bool CreateCustomerGatewayRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateCustomerGatewayResponse object.
+ * Returns a CreateCustomerGatewayResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateCustomerGatewayResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateCustomerGatewayRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * CreateCustomerGatewayRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::CreateCustomerGatewayRequestPrivate
+ * \brief The CreateCustomerGatewayRequestPrivate class provides private implementation for CreateCustomerGatewayRequest.
+ * \internal
  *
- * @class  CreateCustomerGatewayRequestPrivate
- *
- * @brief  Private implementation for CreateCustomerGatewayRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateCustomerGatewayRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public CreateCustomerGatewayRequest instance.
+ * Constructs a CreateCustomerGatewayRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 CreateCustomerGatewayRequestPrivate::CreateCustomerGatewayRequestPrivate(
     const EC2Request::Action action, CreateCustomerGatewayRequest * const q)
@@ -108,15 +97,10 @@ CreateCustomerGatewayRequestPrivate::CreateCustomerGatewayRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateCustomerGatewayRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateCustomerGatewayRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateCustomerGatewayRequest instance.
  */
 CreateCustomerGatewayRequestPrivate::CreateCustomerGatewayRequestPrivate(
     const CreateCustomerGatewayRequestPrivate &other, CreateCustomerGatewayRequest * const q)

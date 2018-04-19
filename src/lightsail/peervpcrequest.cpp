@@ -27,10 +27,9 @@ namespace Lightsail {
 
 /*!
  * \class QtAws::Lightsail::PeerVpcRequest
- *
  * \brief The PeerVpcRequest class provides an interface for Lightsail PeerVpc requests.
  *
- * \ingroup Lightsail
+ * \inmodule QtAwsLightsail
  *
  *  Amazon Lightsail is the easiest way to get started with AWS for developers who just need virtual private servers.
  *  Lightsail includes everything you need to launch your project quickly - a virtual machine, SSD-based storage, data
@@ -53,9 +52,7 @@ namespace Lightsail {
  */
 
 /*!
- * @brief  Constructs a new PeerVpcRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 PeerVpcRequest::PeerVpcRequest(const PeerVpcRequest &other)
     : LightsailRequest(new PeerVpcRequestPrivate(*other.d_func(), this))
@@ -64,7 +61,7 @@ PeerVpcRequest::PeerVpcRequest(const PeerVpcRequest &other)
 }
 
 /*!
- * @brief  Constructs a new PeerVpcRequest object.
+ * Constructs a PeerVpcRequest object.
  */
 PeerVpcRequest::PeerVpcRequest()
     : LightsailRequest(new PeerVpcRequestPrivate(LightsailRequest::PeerVpcAction, this))
@@ -82,14 +79,9 @@ bool PeerVpcRequest::isValid() const
 
 
 /*!
- * @brief  Construct an PeerVpcResponse object.
+ * Returns a PeerVpcResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An PeerVpcResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  LightsailClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * PeerVpcRequest::response(QNetworkReply * const reply) const
 {
@@ -97,20 +89,17 @@ QtAws::Core::AwsAbstractResponse * PeerVpcRequest::response(QNetworkReply * cons
 }
 
 /*!
- * @internal
+ * \class QtAws::Lightsail::PeerVpcRequestPrivate
+ * \brief The PeerVpcRequestPrivate class provides private implementation for PeerVpcRequest.
+ * \internal
  *
- * @class  PeerVpcRequestPrivate
- *
- * @brief  Private implementation for PeerVpcRequest.
+ * \inmodule QtAwsLightsail
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new PeerVpcRequestPrivate object.
- *
- * @param  action  Lightsail action being performed.
- * @param  q       Pointer to this object's public PeerVpcRequest instance.
+ * Constructs a PeerVpcRequestPrivate object for Lightsail \a action with,
+ * public implementation \a q.
  */
 PeerVpcRequestPrivate::PeerVpcRequestPrivate(
     const LightsailRequest::Action action, PeerVpcRequest * const q)
@@ -120,15 +109,10 @@ PeerVpcRequestPrivate::PeerVpcRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PeerVpcRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the PeerVpcRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public PeerVpcRequest instance.
  */
 PeerVpcRequestPrivate::PeerVpcRequestPrivate(
     const PeerVpcRequestPrivate &other, PeerVpcRequest * const q)

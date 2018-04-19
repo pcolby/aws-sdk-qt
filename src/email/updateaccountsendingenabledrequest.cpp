@@ -27,10 +27,9 @@ namespace SES {
 
 /*!
  * \class QtAws::SES::UpdateAccountSendingEnabledRequest
- *
  * \brief The UpdateAccountSendingEnabledRequest class provides an interface for SES UpdateAccountSendingEnabled requests.
  *
- * \ingroup SES
+ * \inmodule QtAwsSES
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -48,9 +47,7 @@ namespace SES {
  */
 
 /*!
- * @brief  Constructs a new UpdateAccountSendingEnabledRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateAccountSendingEnabledRequest::UpdateAccountSendingEnabledRequest(const UpdateAccountSendingEnabledRequest &other)
     : SESRequest(new UpdateAccountSendingEnabledRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ UpdateAccountSendingEnabledRequest::UpdateAccountSendingEnabledRequest(const Upd
 }
 
 /*!
- * @brief  Constructs a new UpdateAccountSendingEnabledRequest object.
+ * Constructs a UpdateAccountSendingEnabledRequest object.
  */
 UpdateAccountSendingEnabledRequest::UpdateAccountSendingEnabledRequest()
     : SESRequest(new UpdateAccountSendingEnabledRequestPrivate(SESRequest::UpdateAccountSendingEnabledAction, this))
@@ -77,14 +74,9 @@ bool UpdateAccountSendingEnabledRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateAccountSendingEnabledResponse object.
+ * Returns a UpdateAccountSendingEnabledResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateAccountSendingEnabledResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SESClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateAccountSendingEnabledRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * UpdateAccountSendingEnabledRequest::response(
 }
 
 /*!
- * @internal
+ * \class QtAws::SES::UpdateAccountSendingEnabledRequestPrivate
+ * \brief The UpdateAccountSendingEnabledRequestPrivate class provides private implementation for UpdateAccountSendingEnabledRequest.
+ * \internal
  *
- * @class  UpdateAccountSendingEnabledRequestPrivate
- *
- * @brief  Private implementation for UpdateAccountSendingEnabledRequest.
+ * \inmodule QtAwsSES
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateAccountSendingEnabledRequestPrivate object.
- *
- * @param  action  SES action being performed.
- * @param  q       Pointer to this object's public UpdateAccountSendingEnabledRequest instance.
+ * Constructs a UpdateAccountSendingEnabledRequestPrivate object for SES \a action with,
+ * public implementation \a q.
  */
 UpdateAccountSendingEnabledRequestPrivate::UpdateAccountSendingEnabledRequestPrivate(
     const SESRequest::Action action, UpdateAccountSendingEnabledRequest * const q)
@@ -115,15 +104,10 @@ UpdateAccountSendingEnabledRequestPrivate::UpdateAccountSendingEnabledRequestPri
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateAccountSendingEnabledRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateAccountSendingEnabledRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateAccountSendingEnabledRequest instance.
  */
 UpdateAccountSendingEnabledRequestPrivate::UpdateAccountSendingEnabledRequestPrivate(
     const UpdateAccountSendingEnabledRequestPrivate &other, UpdateAccountSendingEnabledRequest * const q)

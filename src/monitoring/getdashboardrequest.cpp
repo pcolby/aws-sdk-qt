@@ -27,10 +27,9 @@ namespace CloudWatch {
 
 /*!
  * \class QtAws::CloudWatch::GetDashboardRequest
- *
  * \brief The GetDashboardRequest class provides an interface for CloudWatch GetDashboard requests.
  *
- * \ingroup CloudWatch
+ * \inmodule QtAwsCloudWatch
  *
  *  Amazon CloudWatch monitors your Amazon Web Services (AWS) resources and the applications you run on AWS in real time.
  *  You can use CloudWatch to collect and track metrics, which are the variables you want to measure for your resources and
@@ -51,9 +50,7 @@ namespace CloudWatch {
  */
 
 /*!
- * @brief  Constructs a new GetDashboardRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetDashboardRequest::GetDashboardRequest(const GetDashboardRequest &other)
     : CloudWatchRequest(new GetDashboardRequestPrivate(*other.d_func(), this))
@@ -62,7 +59,7 @@ GetDashboardRequest::GetDashboardRequest(const GetDashboardRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetDashboardRequest object.
+ * Constructs a GetDashboardRequest object.
  */
 GetDashboardRequest::GetDashboardRequest()
     : CloudWatchRequest(new GetDashboardRequestPrivate(CloudWatchRequest::GetDashboardAction, this))
@@ -80,14 +77,9 @@ bool GetDashboardRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetDashboardResponse object.
+ * Returns a GetDashboardResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetDashboardResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudWatchClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetDashboardRequest::response(QNetworkReply * const reply) const
 {
@@ -95,20 +87,17 @@ QtAws::Core::AwsAbstractResponse * GetDashboardRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudWatch::GetDashboardRequestPrivate
+ * \brief The GetDashboardRequestPrivate class provides private implementation for GetDashboardRequest.
+ * \internal
  *
- * @class  GetDashboardRequestPrivate
- *
- * @brief  Private implementation for GetDashboardRequest.
+ * \inmodule QtAwsCloudWatch
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetDashboardRequestPrivate object.
- *
- * @param  action  CloudWatch action being performed.
- * @param  q       Pointer to this object's public GetDashboardRequest instance.
+ * Constructs a GetDashboardRequestPrivate object for CloudWatch \a action with,
+ * public implementation \a q.
  */
 GetDashboardRequestPrivate::GetDashboardRequestPrivate(
     const CloudWatchRequest::Action action, GetDashboardRequest * const q)
@@ -118,15 +107,10 @@ GetDashboardRequestPrivate::GetDashboardRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetDashboardRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetDashboardRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetDashboardRequest instance.
  */
 GetDashboardRequestPrivate::GetDashboardRequestPrivate(
     const GetDashboardRequestPrivate &other, GetDashboardRequest * const q)

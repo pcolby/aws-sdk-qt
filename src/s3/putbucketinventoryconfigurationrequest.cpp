@@ -27,19 +27,16 @@ namespace S3 {
 
 /*!
  * \class QtAws::S3::PutBucketInventoryConfigurationRequest
- *
  * \brief The PutBucketInventoryConfigurationRequest class provides an interface for S3 PutBucketInventoryConfiguration requests.
  *
- * \ingroup S3
+ * \inmodule QtAwsS3
  *
  *
  * \sa S3Client::putBucketInventoryConfiguration
  */
 
 /*!
- * @brief  Constructs a new PutBucketInventoryConfigurationRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 PutBucketInventoryConfigurationRequest::PutBucketInventoryConfigurationRequest(const PutBucketInventoryConfigurationRequest &other)
     : S3Request(new PutBucketInventoryConfigurationRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ PutBucketInventoryConfigurationRequest::PutBucketInventoryConfigurationRequest(c
 }
 
 /*!
- * @brief  Constructs a new PutBucketInventoryConfigurationRequest object.
+ * Constructs a PutBucketInventoryConfigurationRequest object.
  */
 PutBucketInventoryConfigurationRequest::PutBucketInventoryConfigurationRequest()
     : S3Request(new PutBucketInventoryConfigurationRequestPrivate(S3Request::PutBucketInventoryConfigurationAction, this))
@@ -66,14 +63,9 @@ bool PutBucketInventoryConfigurationRequest::isValid() const
 
 
 /*!
- * @brief  Construct an PutBucketInventoryConfigurationResponse object.
+ * Returns a PutBucketInventoryConfigurationResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An PutBucketInventoryConfigurationResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  S3Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * PutBucketInventoryConfigurationRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * PutBucketInventoryConfigurationRequest::respo
 }
 
 /*!
- * @internal
+ * \class QtAws::S3::PutBucketInventoryConfigurationRequestPrivate
+ * \brief The PutBucketInventoryConfigurationRequestPrivate class provides private implementation for PutBucketInventoryConfigurationRequest.
+ * \internal
  *
- * @class  PutBucketInventoryConfigurationRequestPrivate
- *
- * @brief  Private implementation for PutBucketInventoryConfigurationRequest.
+ * \inmodule QtAwsS3
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new PutBucketInventoryConfigurationRequestPrivate object.
- *
- * @param  action  S3 action being performed.
- * @param  q       Pointer to this object's public PutBucketInventoryConfigurationRequest instance.
+ * Constructs a PutBucketInventoryConfigurationRequestPrivate object for S3 \a action with,
+ * public implementation \a q.
  */
 PutBucketInventoryConfigurationRequestPrivate::PutBucketInventoryConfigurationRequestPrivate(
     const S3Request::Action action, PutBucketInventoryConfigurationRequest * const q)
@@ -104,15 +93,10 @@ PutBucketInventoryConfigurationRequestPrivate::PutBucketInventoryConfigurationRe
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutBucketInventoryConfigurationRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the PutBucketInventoryConfigurationRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public PutBucketInventoryConfigurationRequest instance.
  */
 PutBucketInventoryConfigurationRequestPrivate::PutBucketInventoryConfigurationRequestPrivate(
     const PutBucketInventoryConfigurationRequestPrivate &other, PutBucketInventoryConfigurationRequest * const q)

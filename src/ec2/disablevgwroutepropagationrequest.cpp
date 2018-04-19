@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DisableVgwRoutePropagationRequest
- *
  * \brief The DisableVgwRoutePropagationRequest class provides an interface for EC2 DisableVgwRoutePropagation requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DisableVgwRoutePropagationRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DisableVgwRoutePropagationRequest::DisableVgwRoutePropagationRequest(const DisableVgwRoutePropagationRequest &other)
     : EC2Request(new DisableVgwRoutePropagationRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ DisableVgwRoutePropagationRequest::DisableVgwRoutePropagationRequest(const Disab
 }
 
 /*!
- * @brief  Constructs a new DisableVgwRoutePropagationRequest object.
+ * Constructs a DisableVgwRoutePropagationRequest object.
  */
 DisableVgwRoutePropagationRequest::DisableVgwRoutePropagationRequest()
     : EC2Request(new DisableVgwRoutePropagationRequestPrivate(EC2Request::DisableVgwRoutePropagationAction, this))
@@ -70,14 +67,9 @@ bool DisableVgwRoutePropagationRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DisableVgwRoutePropagationResponse object.
+ * Returns a DisableVgwRoutePropagationResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DisableVgwRoutePropagationResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DisableVgwRoutePropagationRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * DisableVgwRoutePropagationRequest::response(Q
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::DisableVgwRoutePropagationRequestPrivate
+ * \brief The DisableVgwRoutePropagationRequestPrivate class provides private implementation for DisableVgwRoutePropagationRequest.
+ * \internal
  *
- * @class  DisableVgwRoutePropagationRequestPrivate
- *
- * @brief  Private implementation for DisableVgwRoutePropagationRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DisableVgwRoutePropagationRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public DisableVgwRoutePropagationRequest instance.
+ * Constructs a DisableVgwRoutePropagationRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 DisableVgwRoutePropagationRequestPrivate::DisableVgwRoutePropagationRequestPrivate(
     const EC2Request::Action action, DisableVgwRoutePropagationRequest * const q)
@@ -108,15 +97,10 @@ DisableVgwRoutePropagationRequestPrivate::DisableVgwRoutePropagationRequestPriva
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DisableVgwRoutePropagationRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DisableVgwRoutePropagationRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DisableVgwRoutePropagationRequest instance.
  */
 DisableVgwRoutePropagationRequestPrivate::DisableVgwRoutePropagationRequestPrivate(
     const DisableVgwRoutePropagationRequestPrivate &other, DisableVgwRoutePropagationRequest * const q)

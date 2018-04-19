@@ -27,10 +27,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::DeleteDocumentationVersionRequest
- *
  * \brief The DeleteDocumentationVersionRequest class provides an interface for APIGateway DeleteDocumentationVersion requests.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -42,9 +41,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new DeleteDocumentationVersionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteDocumentationVersionRequest::DeleteDocumentationVersionRequest(const DeleteDocumentationVersionRequest &other)
     : APIGatewayRequest(new DeleteDocumentationVersionRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ DeleteDocumentationVersionRequest::DeleteDocumentationVersionRequest(const Delet
 }
 
 /*!
- * @brief  Constructs a new DeleteDocumentationVersionRequest object.
+ * Constructs a DeleteDocumentationVersionRequest object.
  */
 DeleteDocumentationVersionRequest::DeleteDocumentationVersionRequest()
     : APIGatewayRequest(new DeleteDocumentationVersionRequestPrivate(APIGatewayRequest::DeleteDocumentationVersionAction, this))
@@ -71,14 +68,9 @@ bool DeleteDocumentationVersionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteDocumentationVersionResponse object.
+ * Returns a DeleteDocumentationVersionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteDocumentationVersionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  APIGatewayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteDocumentationVersionRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * DeleteDocumentationVersionRequest::response(Q
 }
 
 /*!
- * @internal
+ * \class QtAws::APIGateway::DeleteDocumentationVersionRequestPrivate
+ * \brief The DeleteDocumentationVersionRequestPrivate class provides private implementation for DeleteDocumentationVersionRequest.
+ * \internal
  *
- * @class  DeleteDocumentationVersionRequestPrivate
- *
- * @brief  Private implementation for DeleteDocumentationVersionRequest.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteDocumentationVersionRequestPrivate object.
- *
- * @param  action  APIGateway action being performed.
- * @param  q       Pointer to this object's public DeleteDocumentationVersionRequest instance.
+ * Constructs a DeleteDocumentationVersionRequestPrivate object for APIGateway \a action with,
+ * public implementation \a q.
  */
 DeleteDocumentationVersionRequestPrivate::DeleteDocumentationVersionRequestPrivate(
     const APIGatewayRequest::Action action, DeleteDocumentationVersionRequest * const q)
@@ -109,15 +98,10 @@ DeleteDocumentationVersionRequestPrivate::DeleteDocumentationVersionRequestPriva
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteDocumentationVersionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteDocumentationVersionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteDocumentationVersionRequest instance.
  */
 DeleteDocumentationVersionRequestPrivate::DeleteDocumentationVersionRequestPrivate(
     const DeleteDocumentationVersionRequestPrivate &other, DeleteDocumentationVersionRequest * const q)

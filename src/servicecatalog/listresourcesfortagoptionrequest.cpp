@@ -27,10 +27,9 @@ namespace ServiceCatalog {
 
 /*!
  * \class QtAws::ServiceCatalog::ListResourcesForTagOptionRequest
- *
  * \brief The ListResourcesForTagOptionRequest class provides an interface for ServiceCatalog ListResourcesForTagOption requests.
  *
- * \ingroup ServiceCatalog
+ * \inmodule QtAwsServiceCatalog
  *
  *  <fullname>AWS Service Catalog</fullname>
  * 
@@ -43,9 +42,7 @@ namespace ServiceCatalog {
  */
 
 /*!
- * @brief  Constructs a new ListResourcesForTagOptionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListResourcesForTagOptionRequest::ListResourcesForTagOptionRequest(const ListResourcesForTagOptionRequest &other)
     : ServiceCatalogRequest(new ListResourcesForTagOptionRequestPrivate(*other.d_func(), this))
@@ -54,7 +51,7 @@ ListResourcesForTagOptionRequest::ListResourcesForTagOptionRequest(const ListRes
 }
 
 /*!
- * @brief  Constructs a new ListResourcesForTagOptionRequest object.
+ * Constructs a ListResourcesForTagOptionRequest object.
  */
 ListResourcesForTagOptionRequest::ListResourcesForTagOptionRequest()
     : ServiceCatalogRequest(new ListResourcesForTagOptionRequestPrivate(ServiceCatalogRequest::ListResourcesForTagOptionAction, this))
@@ -72,14 +69,9 @@ bool ListResourcesForTagOptionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListResourcesForTagOptionResponse object.
+ * Returns a ListResourcesForTagOptionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListResourcesForTagOptionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ServiceCatalogClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListResourcesForTagOptionRequest::response(QNetworkReply * const reply) const
 {
@@ -87,20 +79,17 @@ QtAws::Core::AwsAbstractResponse * ListResourcesForTagOptionRequest::response(QN
 }
 
 /*!
- * @internal
+ * \class QtAws::ServiceCatalog::ListResourcesForTagOptionRequestPrivate
+ * \brief The ListResourcesForTagOptionRequestPrivate class provides private implementation for ListResourcesForTagOptionRequest.
+ * \internal
  *
- * @class  ListResourcesForTagOptionRequestPrivate
- *
- * @brief  Private implementation for ListResourcesForTagOptionRequest.
+ * \inmodule QtAwsServiceCatalog
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListResourcesForTagOptionRequestPrivate object.
- *
- * @param  action  ServiceCatalog action being performed.
- * @param  q       Pointer to this object's public ListResourcesForTagOptionRequest instance.
+ * Constructs a ListResourcesForTagOptionRequestPrivate object for ServiceCatalog \a action with,
+ * public implementation \a q.
  */
 ListResourcesForTagOptionRequestPrivate::ListResourcesForTagOptionRequestPrivate(
     const ServiceCatalogRequest::Action action, ListResourcesForTagOptionRequest * const q)
@@ -110,15 +99,10 @@ ListResourcesForTagOptionRequestPrivate::ListResourcesForTagOptionRequestPrivate
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListResourcesForTagOptionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListResourcesForTagOptionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListResourcesForTagOptionRequest instance.
  */
 ListResourcesForTagOptionRequestPrivate::ListResourcesForTagOptionRequestPrivate(
     const ListResourcesForTagOptionRequestPrivate &other, ListResourcesForTagOptionRequest * const q)

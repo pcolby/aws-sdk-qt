@@ -27,19 +27,16 @@ namespace CostandUsageReportService {
 
 /*!
  * \class QtAws::CostandUsageReportService::DeleteReportDefinitionRequest
- *
  * \brief The DeleteReportDefinitionRequest class provides an interface for CostandUsageReportService DeleteReportDefinition requests.
  *
- * \ingroup CostandUsageReportService
+ * \inmodule QtAwsCostandUsageReportService
  *
  *
  * \sa CostandUsageReportServiceClient::deleteReportDefinition
  */
 
 /*!
- * @brief  Constructs a new DeleteReportDefinitionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteReportDefinitionRequest::DeleteReportDefinitionRequest(const DeleteReportDefinitionRequest &other)
     : CostandUsageReportServiceRequest(new DeleteReportDefinitionRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ DeleteReportDefinitionRequest::DeleteReportDefinitionRequest(const DeleteReportD
 }
 
 /*!
- * @brief  Constructs a new DeleteReportDefinitionRequest object.
+ * Constructs a DeleteReportDefinitionRequest object.
  */
 DeleteReportDefinitionRequest::DeleteReportDefinitionRequest()
     : CostandUsageReportServiceRequest(new DeleteReportDefinitionRequestPrivate(CostandUsageReportServiceRequest::DeleteReportDefinitionAction, this))
@@ -66,14 +63,9 @@ bool DeleteReportDefinitionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteReportDefinitionResponse object.
+ * Returns a DeleteReportDefinitionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteReportDefinitionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CostandUsageReportServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteReportDefinitionRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * DeleteReportDefinitionRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::CostandUsageReportService::DeleteReportDefinitionRequestPrivate
+ * \brief The DeleteReportDefinitionRequestPrivate class provides private implementation for DeleteReportDefinitionRequest.
+ * \internal
  *
- * @class  DeleteReportDefinitionRequestPrivate
- *
- * @brief  Private implementation for DeleteReportDefinitionRequest.
+ * \inmodule QtAwsCostandUsageReportService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteReportDefinitionRequestPrivate object.
- *
- * @param  action  CostandUsageReportService action being performed.
- * @param  q       Pointer to this object's public DeleteReportDefinitionRequest instance.
+ * Constructs a DeleteReportDefinitionRequestPrivate object for CostandUsageReportService \a action with,
+ * public implementation \a q.
  */
 DeleteReportDefinitionRequestPrivate::DeleteReportDefinitionRequestPrivate(
     const CostandUsageReportServiceRequest::Action action, DeleteReportDefinitionRequest * const q)
@@ -104,15 +93,10 @@ DeleteReportDefinitionRequestPrivate::DeleteReportDefinitionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteReportDefinitionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteReportDefinitionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteReportDefinitionRequest instance.
  */
 DeleteReportDefinitionRequestPrivate::DeleteReportDefinitionRequestPrivate(
     const DeleteReportDefinitionRequestPrivate &other, DeleteReportDefinitionRequest * const q)

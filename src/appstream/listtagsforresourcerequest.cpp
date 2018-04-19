@@ -27,10 +27,9 @@ namespace AppStream {
 
 /*!
  * \class QtAws::AppStream::ListTagsForResourceRequest
- *
  * \brief The ListTagsForResourceRequest class provides an interface for AppStream ListTagsForResource requests.
  *
- * \ingroup AppStream
+ * \inmodule QtAwsAppStream
  *
  *  <fullname>Amazon AppStream 2.0</fullname>
  * 
@@ -40,9 +39,7 @@ namespace AppStream {
  */
 
 /*!
- * @brief  Constructs a new ListTagsForResourceRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListTagsForResourceRequest::ListTagsForResourceRequest(const ListTagsForResourceRequest &other)
     : AppStreamRequest(new ListTagsForResourceRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ ListTagsForResourceRequest::ListTagsForResourceRequest(const ListTagsForResource
 }
 
 /*!
- * @brief  Constructs a new ListTagsForResourceRequest object.
+ * Constructs a ListTagsForResourceRequest object.
  */
 ListTagsForResourceRequest::ListTagsForResourceRequest()
     : AppStreamRequest(new ListTagsForResourceRequestPrivate(AppStreamRequest::ListTagsForResourceAction, this))
@@ -69,14 +66,9 @@ bool ListTagsForResourceRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListTagsForResourceResponse object.
+ * Returns a ListTagsForResourceResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListTagsForResourceResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AppStreamClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListTagsForResourceRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * ListTagsForResourceRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::AppStream::ListTagsForResourceRequestPrivate
+ * \brief The ListTagsForResourceRequestPrivate class provides private implementation for ListTagsForResourceRequest.
+ * \internal
  *
- * @class  ListTagsForResourceRequestPrivate
- *
- * @brief  Private implementation for ListTagsForResourceRequest.
+ * \inmodule QtAwsAppStream
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListTagsForResourceRequestPrivate object.
- *
- * @param  action  AppStream action being performed.
- * @param  q       Pointer to this object's public ListTagsForResourceRequest instance.
+ * Constructs a ListTagsForResourceRequestPrivate object for AppStream \a action with,
+ * public implementation \a q.
  */
 ListTagsForResourceRequestPrivate::ListTagsForResourceRequestPrivate(
     const AppStreamRequest::Action action, ListTagsForResourceRequest * const q)
@@ -107,15 +96,10 @@ ListTagsForResourceRequestPrivate::ListTagsForResourceRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListTagsForResourceRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListTagsForResourceRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListTagsForResourceRequest instance.
  */
 ListTagsForResourceRequestPrivate::ListTagsForResourceRequestPrivate(
     const ListTagsForResourceRequestPrivate &other, ListTagsForResourceRequest * const q)

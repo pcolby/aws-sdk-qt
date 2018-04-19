@@ -27,10 +27,9 @@ namespace AppSync {
 
 /*!
  * \class QtAws::AppSync::CreateApiKeyRequest
- *
  * \brief The CreateApiKeyRequest class provides an interface for AppSync CreateApiKey requests.
  *
- * \ingroup AppSync
+ * \inmodule QtAwsAppSync
  *
  *  AWS AppSync provides API actions for creating and interacting with data sources using GraphQL from your
  *
@@ -38,9 +37,7 @@ namespace AppSync {
  */
 
 /*!
- * @brief  Constructs a new CreateApiKeyRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateApiKeyRequest::CreateApiKeyRequest(const CreateApiKeyRequest &other)
     : AppSyncRequest(new CreateApiKeyRequestPrivate(*other.d_func(), this))
@@ -49,7 +46,7 @@ CreateApiKeyRequest::CreateApiKeyRequest(const CreateApiKeyRequest &other)
 }
 
 /*!
- * @brief  Constructs a new CreateApiKeyRequest object.
+ * Constructs a CreateApiKeyRequest object.
  */
 CreateApiKeyRequest::CreateApiKeyRequest()
     : AppSyncRequest(new CreateApiKeyRequestPrivate(AppSyncRequest::CreateApiKeyAction, this))
@@ -67,14 +64,9 @@ bool CreateApiKeyRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateApiKeyResponse object.
+ * Returns a CreateApiKeyResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateApiKeyResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AppSyncClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateApiKeyRequest::response(QNetworkReply * const reply) const
 {
@@ -82,20 +74,17 @@ QtAws::Core::AwsAbstractResponse * CreateApiKeyRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::AppSync::CreateApiKeyRequestPrivate
+ * \brief The CreateApiKeyRequestPrivate class provides private implementation for CreateApiKeyRequest.
+ * \internal
  *
- * @class  CreateApiKeyRequestPrivate
- *
- * @brief  Private implementation for CreateApiKeyRequest.
+ * \inmodule QtAwsAppSync
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateApiKeyRequestPrivate object.
- *
- * @param  action  AppSync action being performed.
- * @param  q       Pointer to this object's public CreateApiKeyRequest instance.
+ * Constructs a CreateApiKeyRequestPrivate object for AppSync \a action with,
+ * public implementation \a q.
  */
 CreateApiKeyRequestPrivate::CreateApiKeyRequestPrivate(
     const AppSyncRequest::Action action, CreateApiKeyRequest * const q)
@@ -105,15 +94,10 @@ CreateApiKeyRequestPrivate::CreateApiKeyRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateApiKeyRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateApiKeyRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateApiKeyRequest instance.
  */
 CreateApiKeyRequestPrivate::CreateApiKeyRequestPrivate(
     const CreateApiKeyRequestPrivate &other, CreateApiKeyRequest * const q)

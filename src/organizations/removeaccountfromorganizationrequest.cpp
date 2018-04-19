@@ -27,10 +27,9 @@ namespace Organizations {
 
 /*!
  * \class QtAws::Organizations::RemoveAccountFromOrganizationRequest
- *
  * \brief The RemoveAccountFromOrganizationRequest class provides an interface for Organizations RemoveAccountFromOrganization requests.
  *
- * \ingroup Organizations
+ * \inmodule QtAwsOrganizations
  *
  *  <fullname>AWS Organizations API Reference</fullname>
  * 
@@ -179,9 +178,7 @@ namespace Organizations {
  */
 
 /*!
- * @brief  Constructs a new RemoveAccountFromOrganizationRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 RemoveAccountFromOrganizationRequest::RemoveAccountFromOrganizationRequest(const RemoveAccountFromOrganizationRequest &other)
     : OrganizationsRequest(new RemoveAccountFromOrganizationRequestPrivate(*other.d_func(), this))
@@ -190,7 +187,7 @@ RemoveAccountFromOrganizationRequest::RemoveAccountFromOrganizationRequest(const
 }
 
 /*!
- * @brief  Constructs a new RemoveAccountFromOrganizationRequest object.
+ * Constructs a RemoveAccountFromOrganizationRequest object.
  */
 RemoveAccountFromOrganizationRequest::RemoveAccountFromOrganizationRequest()
     : OrganizationsRequest(new RemoveAccountFromOrganizationRequestPrivate(OrganizationsRequest::RemoveAccountFromOrganizationAction, this))
@@ -208,14 +205,9 @@ bool RemoveAccountFromOrganizationRequest::isValid() const
 
 
 /*!
- * @brief  Construct an RemoveAccountFromOrganizationResponse object.
+ * Returns a RemoveAccountFromOrganizationResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An RemoveAccountFromOrganizationResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  OrganizationsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * RemoveAccountFromOrganizationRequest::response(QNetworkReply * const reply) const
 {
@@ -223,20 +215,17 @@ QtAws::Core::AwsAbstractResponse * RemoveAccountFromOrganizationRequest::respons
 }
 
 /*!
- * @internal
+ * \class QtAws::Organizations::RemoveAccountFromOrganizationRequestPrivate
+ * \brief The RemoveAccountFromOrganizationRequestPrivate class provides private implementation for RemoveAccountFromOrganizationRequest.
+ * \internal
  *
- * @class  RemoveAccountFromOrganizationRequestPrivate
- *
- * @brief  Private implementation for RemoveAccountFromOrganizationRequest.
+ * \inmodule QtAwsOrganizations
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new RemoveAccountFromOrganizationRequestPrivate object.
- *
- * @param  action  Organizations action being performed.
- * @param  q       Pointer to this object's public RemoveAccountFromOrganizationRequest instance.
+ * Constructs a RemoveAccountFromOrganizationRequestPrivate object for Organizations \a action with,
+ * public implementation \a q.
  */
 RemoveAccountFromOrganizationRequestPrivate::RemoveAccountFromOrganizationRequestPrivate(
     const OrganizationsRequest::Action action, RemoveAccountFromOrganizationRequest * const q)
@@ -246,15 +235,10 @@ RemoveAccountFromOrganizationRequestPrivate::RemoveAccountFromOrganizationReques
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RemoveAccountFromOrganizationRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the RemoveAccountFromOrganizationRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public RemoveAccountFromOrganizationRequest instance.
  */
 RemoveAccountFromOrganizationRequestPrivate::RemoveAccountFromOrganizationRequestPrivate(
     const RemoveAccountFromOrganizationRequestPrivate &other, RemoveAccountFromOrganizationRequest * const q)

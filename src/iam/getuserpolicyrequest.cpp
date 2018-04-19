@@ -27,10 +27,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::GetUserPolicyRequest
- *
  * \brief The GetUserPolicyRequest class provides an interface for IAM GetUserPolicy requests.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -102,9 +101,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new GetUserPolicyRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetUserPolicyRequest::GetUserPolicyRequest(const GetUserPolicyRequest &other)
     : IAMRequest(new GetUserPolicyRequestPrivate(*other.d_func(), this))
@@ -113,7 +110,7 @@ GetUserPolicyRequest::GetUserPolicyRequest(const GetUserPolicyRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetUserPolicyRequest object.
+ * Constructs a GetUserPolicyRequest object.
  */
 GetUserPolicyRequest::GetUserPolicyRequest()
     : IAMRequest(new GetUserPolicyRequestPrivate(IAMRequest::GetUserPolicyAction, this))
@@ -131,14 +128,9 @@ bool GetUserPolicyRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetUserPolicyResponse object.
+ * Returns a GetUserPolicyResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetUserPolicyResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IAMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetUserPolicyRequest::response(QNetworkReply * const reply) const
 {
@@ -146,20 +138,17 @@ QtAws::Core::AwsAbstractResponse * GetUserPolicyRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::IAM::GetUserPolicyRequestPrivate
+ * \brief The GetUserPolicyRequestPrivate class provides private implementation for GetUserPolicyRequest.
+ * \internal
  *
- * @class  GetUserPolicyRequestPrivate
- *
- * @brief  Private implementation for GetUserPolicyRequest.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetUserPolicyRequestPrivate object.
- *
- * @param  action  IAM action being performed.
- * @param  q       Pointer to this object's public GetUserPolicyRequest instance.
+ * Constructs a GetUserPolicyRequestPrivate object for IAM \a action with,
+ * public implementation \a q.
  */
 GetUserPolicyRequestPrivate::GetUserPolicyRequestPrivate(
     const IAMRequest::Action action, GetUserPolicyRequest * const q)
@@ -169,15 +158,10 @@ GetUserPolicyRequestPrivate::GetUserPolicyRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetUserPolicyRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetUserPolicyRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetUserPolicyRequest instance.
  */
 GetUserPolicyRequestPrivate::GetUserPolicyRequestPrivate(
     const GetUserPolicyRequestPrivate &other, GetUserPolicyRequest * const q)

@@ -27,10 +27,9 @@ namespace CodePipeline {
 
 /*!
  * \class QtAws::CodePipeline::GetPipelineStateRequest
- *
  * \brief The GetPipelineStateRequest class provides an interface for CodePipeline GetPipelineState requests.
  *
- * \ingroup CodePipeline
+ * \inmodule QtAwsCodePipeline
  *
  *  <fullname>AWS CodePipeline</fullname>
  * 
@@ -200,9 +199,7 @@ namespace CodePipeline {
  */
 
 /*!
- * @brief  Constructs a new GetPipelineStateRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetPipelineStateRequest::GetPipelineStateRequest(const GetPipelineStateRequest &other)
     : CodePipelineRequest(new GetPipelineStateRequestPrivate(*other.d_func(), this))
@@ -211,7 +208,7 @@ GetPipelineStateRequest::GetPipelineStateRequest(const GetPipelineStateRequest &
 }
 
 /*!
- * @brief  Constructs a new GetPipelineStateRequest object.
+ * Constructs a GetPipelineStateRequest object.
  */
 GetPipelineStateRequest::GetPipelineStateRequest()
     : CodePipelineRequest(new GetPipelineStateRequestPrivate(CodePipelineRequest::GetPipelineStateAction, this))
@@ -229,14 +226,9 @@ bool GetPipelineStateRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetPipelineStateResponse object.
+ * Returns a GetPipelineStateResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetPipelineStateResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CodePipelineClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetPipelineStateRequest::response(QNetworkReply * const reply) const
 {
@@ -244,20 +236,17 @@ QtAws::Core::AwsAbstractResponse * GetPipelineStateRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::CodePipeline::GetPipelineStateRequestPrivate
+ * \brief The GetPipelineStateRequestPrivate class provides private implementation for GetPipelineStateRequest.
+ * \internal
  *
- * @class  GetPipelineStateRequestPrivate
- *
- * @brief  Private implementation for GetPipelineStateRequest.
+ * \inmodule QtAwsCodePipeline
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetPipelineStateRequestPrivate object.
- *
- * @param  action  CodePipeline action being performed.
- * @param  q       Pointer to this object's public GetPipelineStateRequest instance.
+ * Constructs a GetPipelineStateRequestPrivate object for CodePipeline \a action with,
+ * public implementation \a q.
  */
 GetPipelineStateRequestPrivate::GetPipelineStateRequestPrivate(
     const CodePipelineRequest::Action action, GetPipelineStateRequest * const q)
@@ -267,15 +256,10 @@ GetPipelineStateRequestPrivate::GetPipelineStateRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetPipelineStateRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetPipelineStateRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetPipelineStateRequest instance.
  */
 GetPipelineStateRequestPrivate::GetPipelineStateRequestPrivate(
     const GetPipelineStateRequestPrivate &other, GetPipelineStateRequest * const q)

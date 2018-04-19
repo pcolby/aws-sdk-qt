@@ -27,10 +27,9 @@ namespace KMS {
 
 /*!
  * \class QtAws::KMS::CreateKeyRequest
- *
  * \brief The CreateKeyRequest class provides an interface for KMS CreateKey requests.
  *
- * \ingroup KMS
+ * \inmodule QtAwsKMS
  *
  *  <fullname>AWS Key Management Service</fullname>
  * 
@@ -136,9 +135,7 @@ namespace KMS {
  */
 
 /*!
- * @brief  Constructs a new CreateKeyRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateKeyRequest::CreateKeyRequest(const CreateKeyRequest &other)
     : KMSRequest(new CreateKeyRequestPrivate(*other.d_func(), this))
@@ -147,7 +144,7 @@ CreateKeyRequest::CreateKeyRequest(const CreateKeyRequest &other)
 }
 
 /*!
- * @brief  Constructs a new CreateKeyRequest object.
+ * Constructs a CreateKeyRequest object.
  */
 CreateKeyRequest::CreateKeyRequest()
     : KMSRequest(new CreateKeyRequestPrivate(KMSRequest::CreateKeyAction, this))
@@ -165,14 +162,9 @@ bool CreateKeyRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateKeyResponse object.
+ * Returns a CreateKeyResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateKeyResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  KMSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateKeyRequest::response(QNetworkReply * const reply) const
 {
@@ -180,20 +172,17 @@ QtAws::Core::AwsAbstractResponse * CreateKeyRequest::response(QNetworkReply * co
 }
 
 /*!
- * @internal
+ * \class QtAws::KMS::CreateKeyRequestPrivate
+ * \brief The CreateKeyRequestPrivate class provides private implementation for CreateKeyRequest.
+ * \internal
  *
- * @class  CreateKeyRequestPrivate
- *
- * @brief  Private implementation for CreateKeyRequest.
+ * \inmodule QtAwsKMS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateKeyRequestPrivate object.
- *
- * @param  action  KMS action being performed.
- * @param  q       Pointer to this object's public CreateKeyRequest instance.
+ * Constructs a CreateKeyRequestPrivate object for KMS \a action with,
+ * public implementation \a q.
  */
 CreateKeyRequestPrivate::CreateKeyRequestPrivate(
     const KMSRequest::Action action, CreateKeyRequest * const q)
@@ -203,15 +192,10 @@ CreateKeyRequestPrivate::CreateKeyRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateKeyRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateKeyRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateKeyRequest instance.
  */
 CreateKeyRequestPrivate::CreateKeyRequestPrivate(
     const CreateKeyRequestPrivate &other, CreateKeyRequest * const q)

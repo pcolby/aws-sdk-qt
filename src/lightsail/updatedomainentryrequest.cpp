@@ -27,10 +27,9 @@ namespace Lightsail {
 
 /*!
  * \class QtAws::Lightsail::UpdateDomainEntryRequest
- *
  * \brief The UpdateDomainEntryRequest class provides an interface for Lightsail UpdateDomainEntry requests.
  *
- * \ingroup Lightsail
+ * \inmodule QtAwsLightsail
  *
  *  Amazon Lightsail is the easiest way to get started with AWS for developers who just need virtual private servers.
  *  Lightsail includes everything you need to launch your project quickly - a virtual machine, SSD-based storage, data
@@ -53,9 +52,7 @@ namespace Lightsail {
  */
 
 /*!
- * @brief  Constructs a new UpdateDomainEntryRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateDomainEntryRequest::UpdateDomainEntryRequest(const UpdateDomainEntryRequest &other)
     : LightsailRequest(new UpdateDomainEntryRequestPrivate(*other.d_func(), this))
@@ -64,7 +61,7 @@ UpdateDomainEntryRequest::UpdateDomainEntryRequest(const UpdateDomainEntryReques
 }
 
 /*!
- * @brief  Constructs a new UpdateDomainEntryRequest object.
+ * Constructs a UpdateDomainEntryRequest object.
  */
 UpdateDomainEntryRequest::UpdateDomainEntryRequest()
     : LightsailRequest(new UpdateDomainEntryRequestPrivate(LightsailRequest::UpdateDomainEntryAction, this))
@@ -82,14 +79,9 @@ bool UpdateDomainEntryRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateDomainEntryResponse object.
+ * Returns a UpdateDomainEntryResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateDomainEntryResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  LightsailClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateDomainEntryRequest::response(QNetworkReply * const reply) const
 {
@@ -97,20 +89,17 @@ QtAws::Core::AwsAbstractResponse * UpdateDomainEntryRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::Lightsail::UpdateDomainEntryRequestPrivate
+ * \brief The UpdateDomainEntryRequestPrivate class provides private implementation for UpdateDomainEntryRequest.
+ * \internal
  *
- * @class  UpdateDomainEntryRequestPrivate
- *
- * @brief  Private implementation for UpdateDomainEntryRequest.
+ * \inmodule QtAwsLightsail
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateDomainEntryRequestPrivate object.
- *
- * @param  action  Lightsail action being performed.
- * @param  q       Pointer to this object's public UpdateDomainEntryRequest instance.
+ * Constructs a UpdateDomainEntryRequestPrivate object for Lightsail \a action with,
+ * public implementation \a q.
  */
 UpdateDomainEntryRequestPrivate::UpdateDomainEntryRequestPrivate(
     const LightsailRequest::Action action, UpdateDomainEntryRequest * const q)
@@ -120,15 +109,10 @@ UpdateDomainEntryRequestPrivate::UpdateDomainEntryRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateDomainEntryRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateDomainEntryRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateDomainEntryRequest instance.
  */
 UpdateDomainEntryRequestPrivate::UpdateDomainEntryRequestPrivate(
     const UpdateDomainEntryRequestPrivate &other, UpdateDomainEntryRequest * const q)

@@ -27,10 +27,9 @@ namespace Organizations {
 
 /*!
  * \class QtAws::Organizations::CreateOrganizationalUnitRequest
- *
  * \brief The CreateOrganizationalUnitRequest class provides an interface for Organizations CreateOrganizationalUnit requests.
  *
- * \ingroup Organizations
+ * \inmodule QtAwsOrganizations
  *
  *  <fullname>AWS Organizations API Reference</fullname>
  * 
@@ -179,9 +178,7 @@ namespace Organizations {
  */
 
 /*!
- * @brief  Constructs a new CreateOrganizationalUnitRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateOrganizationalUnitRequest::CreateOrganizationalUnitRequest(const CreateOrganizationalUnitRequest &other)
     : OrganizationsRequest(new CreateOrganizationalUnitRequestPrivate(*other.d_func(), this))
@@ -190,7 +187,7 @@ CreateOrganizationalUnitRequest::CreateOrganizationalUnitRequest(const CreateOrg
 }
 
 /*!
- * @brief  Constructs a new CreateOrganizationalUnitRequest object.
+ * Constructs a CreateOrganizationalUnitRequest object.
  */
 CreateOrganizationalUnitRequest::CreateOrganizationalUnitRequest()
     : OrganizationsRequest(new CreateOrganizationalUnitRequestPrivate(OrganizationsRequest::CreateOrganizationalUnitAction, this))
@@ -208,14 +205,9 @@ bool CreateOrganizationalUnitRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateOrganizationalUnitResponse object.
+ * Returns a CreateOrganizationalUnitResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateOrganizationalUnitResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  OrganizationsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateOrganizationalUnitRequest::response(QNetworkReply * const reply) const
 {
@@ -223,20 +215,17 @@ QtAws::Core::AwsAbstractResponse * CreateOrganizationalUnitRequest::response(QNe
 }
 
 /*!
- * @internal
+ * \class QtAws::Organizations::CreateOrganizationalUnitRequestPrivate
+ * \brief The CreateOrganizationalUnitRequestPrivate class provides private implementation for CreateOrganizationalUnitRequest.
+ * \internal
  *
- * @class  CreateOrganizationalUnitRequestPrivate
- *
- * @brief  Private implementation for CreateOrganizationalUnitRequest.
+ * \inmodule QtAwsOrganizations
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateOrganizationalUnitRequestPrivate object.
- *
- * @param  action  Organizations action being performed.
- * @param  q       Pointer to this object's public CreateOrganizationalUnitRequest instance.
+ * Constructs a CreateOrganizationalUnitRequestPrivate object for Organizations \a action with,
+ * public implementation \a q.
  */
 CreateOrganizationalUnitRequestPrivate::CreateOrganizationalUnitRequestPrivate(
     const OrganizationsRequest::Action action, CreateOrganizationalUnitRequest * const q)
@@ -246,15 +235,10 @@ CreateOrganizationalUnitRequestPrivate::CreateOrganizationalUnitRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateOrganizationalUnitRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateOrganizationalUnitRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateOrganizationalUnitRequest instance.
  */
 CreateOrganizationalUnitRequestPrivate::CreateOrganizationalUnitRequestPrivate(
     const CreateOrganizationalUnitRequestPrivate &other, CreateOrganizationalUnitRequest * const q)

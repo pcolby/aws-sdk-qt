@@ -27,10 +27,9 @@ namespace CloudDirectory {
 
 /*!
  * \class QtAws::CloudDirectory::AttachTypedLinkRequest
- *
  * \brief The AttachTypedLinkRequest class provides an interface for CloudDirectory AttachTypedLink requests.
  *
- * \ingroup CloudDirectory
+ * \inmodule QtAwsCloudDirectory
  *
  *  <fullname>Amazon Cloud Directory</fullname>
  * 
@@ -44,9 +43,7 @@ namespace CloudDirectory {
  */
 
 /*!
- * @brief  Constructs a new AttachTypedLinkRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AttachTypedLinkRequest::AttachTypedLinkRequest(const AttachTypedLinkRequest &other)
     : CloudDirectoryRequest(new AttachTypedLinkRequestPrivate(*other.d_func(), this))
@@ -55,7 +52,7 @@ AttachTypedLinkRequest::AttachTypedLinkRequest(const AttachTypedLinkRequest &oth
 }
 
 /*!
- * @brief  Constructs a new AttachTypedLinkRequest object.
+ * Constructs a AttachTypedLinkRequest object.
  */
 AttachTypedLinkRequest::AttachTypedLinkRequest()
     : CloudDirectoryRequest(new AttachTypedLinkRequestPrivate(CloudDirectoryRequest::AttachTypedLinkAction, this))
@@ -73,14 +70,9 @@ bool AttachTypedLinkRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AttachTypedLinkResponse object.
+ * Returns a AttachTypedLinkResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AttachTypedLinkResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudDirectoryClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AttachTypedLinkRequest::response(QNetworkReply * const reply) const
 {
@@ -88,20 +80,17 @@ QtAws::Core::AwsAbstractResponse * AttachTypedLinkRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudDirectory::AttachTypedLinkRequestPrivate
+ * \brief The AttachTypedLinkRequestPrivate class provides private implementation for AttachTypedLinkRequest.
+ * \internal
  *
- * @class  AttachTypedLinkRequestPrivate
- *
- * @brief  Private implementation for AttachTypedLinkRequest.
+ * \inmodule QtAwsCloudDirectory
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AttachTypedLinkRequestPrivate object.
- *
- * @param  action  CloudDirectory action being performed.
- * @param  q       Pointer to this object's public AttachTypedLinkRequest instance.
+ * Constructs a AttachTypedLinkRequestPrivate object for CloudDirectory \a action with,
+ * public implementation \a q.
  */
 AttachTypedLinkRequestPrivate::AttachTypedLinkRequestPrivate(
     const CloudDirectoryRequest::Action action, AttachTypedLinkRequest * const q)
@@ -111,15 +100,10 @@ AttachTypedLinkRequestPrivate::AttachTypedLinkRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AttachTypedLinkRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AttachTypedLinkRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AttachTypedLinkRequest instance.
  */
 AttachTypedLinkRequestPrivate::AttachTypedLinkRequestPrivate(
     const AttachTypedLinkRequestPrivate &other, AttachTypedLinkRequest * const q)

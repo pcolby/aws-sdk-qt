@@ -27,10 +27,9 @@ namespace Glacier {
 
 /*!
  * \class QtAws::Glacier::InitiateVaultLockRequest
- *
  * \brief The InitiateVaultLockRequest class provides an interface for Glacier InitiateVaultLock requests.
  *
- * \ingroup Glacier
+ * \inmodule QtAwsGlacier
  *
  *  Amazon Glacier is a storage solution for "cold
  * 
@@ -75,9 +74,7 @@ namespace Glacier {
  */
 
 /*!
- * @brief  Constructs a new InitiateVaultLockRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 InitiateVaultLockRequest::InitiateVaultLockRequest(const InitiateVaultLockRequest &other)
     : GlacierRequest(new InitiateVaultLockRequestPrivate(*other.d_func(), this))
@@ -86,7 +83,7 @@ InitiateVaultLockRequest::InitiateVaultLockRequest(const InitiateVaultLockReques
 }
 
 /*!
- * @brief  Constructs a new InitiateVaultLockRequest object.
+ * Constructs a InitiateVaultLockRequest object.
  */
 InitiateVaultLockRequest::InitiateVaultLockRequest()
     : GlacierRequest(new InitiateVaultLockRequestPrivate(GlacierRequest::InitiateVaultLockAction, this))
@@ -104,14 +101,9 @@ bool InitiateVaultLockRequest::isValid() const
 
 
 /*!
- * @brief  Construct an InitiateVaultLockResponse object.
+ * Returns a InitiateVaultLockResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An InitiateVaultLockResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GlacierClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * InitiateVaultLockRequest::response(QNetworkReply * const reply) const
 {
@@ -119,20 +111,17 @@ QtAws::Core::AwsAbstractResponse * InitiateVaultLockRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::Glacier::InitiateVaultLockRequestPrivate
+ * \brief The InitiateVaultLockRequestPrivate class provides private implementation for InitiateVaultLockRequest.
+ * \internal
  *
- * @class  InitiateVaultLockRequestPrivate
- *
- * @brief  Private implementation for InitiateVaultLockRequest.
+ * \inmodule QtAwsGlacier
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new InitiateVaultLockRequestPrivate object.
- *
- * @param  action  Glacier action being performed.
- * @param  q       Pointer to this object's public InitiateVaultLockRequest instance.
+ * Constructs a InitiateVaultLockRequestPrivate object for Glacier \a action with,
+ * public implementation \a q.
  */
 InitiateVaultLockRequestPrivate::InitiateVaultLockRequestPrivate(
     const GlacierRequest::Action action, InitiateVaultLockRequest * const q)
@@ -142,15 +131,10 @@ InitiateVaultLockRequestPrivate::InitiateVaultLockRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new InitiateVaultLockRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the InitiateVaultLockRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public InitiateVaultLockRequest instance.
  */
 InitiateVaultLockRequestPrivate::InitiateVaultLockRequestPrivate(
     const InitiateVaultLockRequestPrivate &other, InitiateVaultLockRequest * const q)

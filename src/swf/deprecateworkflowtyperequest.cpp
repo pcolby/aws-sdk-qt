@@ -27,10 +27,9 @@ namespace SWF {
 
 /*!
  * \class QtAws::SWF::DeprecateWorkflowTypeRequest
- *
  * \brief The DeprecateWorkflowTypeRequest class provides an interface for SWF DeprecateWorkflowType requests.
  *
- * \ingroup SWF
+ * \inmodule QtAwsSWF
  *
  *  <fullname>Amazon Simple Workflow Service</fullname>
  * 
@@ -53,9 +52,7 @@ namespace SWF {
  */
 
 /*!
- * @brief  Constructs a new DeprecateWorkflowTypeRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeprecateWorkflowTypeRequest::DeprecateWorkflowTypeRequest(const DeprecateWorkflowTypeRequest &other)
     : SWFRequest(new DeprecateWorkflowTypeRequestPrivate(*other.d_func(), this))
@@ -64,7 +61,7 @@ DeprecateWorkflowTypeRequest::DeprecateWorkflowTypeRequest(const DeprecateWorkfl
 }
 
 /*!
- * @brief  Constructs a new DeprecateWorkflowTypeRequest object.
+ * Constructs a DeprecateWorkflowTypeRequest object.
  */
 DeprecateWorkflowTypeRequest::DeprecateWorkflowTypeRequest()
     : SWFRequest(new DeprecateWorkflowTypeRequestPrivate(SWFRequest::DeprecateWorkflowTypeAction, this))
@@ -82,14 +79,9 @@ bool DeprecateWorkflowTypeRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeprecateWorkflowTypeResponse object.
+ * Returns a DeprecateWorkflowTypeResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeprecateWorkflowTypeResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SWFClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeprecateWorkflowTypeRequest::response(QNetworkReply * const reply) const
 {
@@ -97,20 +89,17 @@ QtAws::Core::AwsAbstractResponse * DeprecateWorkflowTypeRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::SWF::DeprecateWorkflowTypeRequestPrivate
+ * \brief The DeprecateWorkflowTypeRequestPrivate class provides private implementation for DeprecateWorkflowTypeRequest.
+ * \internal
  *
- * @class  DeprecateWorkflowTypeRequestPrivate
- *
- * @brief  Private implementation for DeprecateWorkflowTypeRequest.
+ * \inmodule QtAwsSWF
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeprecateWorkflowTypeRequestPrivate object.
- *
- * @param  action  SWF action being performed.
- * @param  q       Pointer to this object's public DeprecateWorkflowTypeRequest instance.
+ * Constructs a DeprecateWorkflowTypeRequestPrivate object for SWF \a action with,
+ * public implementation \a q.
  */
 DeprecateWorkflowTypeRequestPrivate::DeprecateWorkflowTypeRequestPrivate(
     const SWFRequest::Action action, DeprecateWorkflowTypeRequest * const q)
@@ -120,15 +109,10 @@ DeprecateWorkflowTypeRequestPrivate::DeprecateWorkflowTypeRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeprecateWorkflowTypeRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeprecateWorkflowTypeRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeprecateWorkflowTypeRequest instance.
  */
 DeprecateWorkflowTypeRequestPrivate::DeprecateWorkflowTypeRequestPrivate(
     const DeprecateWorkflowTypeRequestPrivate &other, DeprecateWorkflowTypeRequest * const q)

@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DisassociateIamInstanceProfileRequest
- *
  * \brief The DisassociateIamInstanceProfileRequest class provides an interface for EC2 DisassociateIamInstanceProfile requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DisassociateIamInstanceProfileRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DisassociateIamInstanceProfileRequest::DisassociateIamInstanceProfileRequest(const DisassociateIamInstanceProfileRequest &other)
     : EC2Request(new DisassociateIamInstanceProfileRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ DisassociateIamInstanceProfileRequest::DisassociateIamInstanceProfileRequest(con
 }
 
 /*!
- * @brief  Constructs a new DisassociateIamInstanceProfileRequest object.
+ * Constructs a DisassociateIamInstanceProfileRequest object.
  */
 DisassociateIamInstanceProfileRequest::DisassociateIamInstanceProfileRequest()
     : EC2Request(new DisassociateIamInstanceProfileRequestPrivate(EC2Request::DisassociateIamInstanceProfileAction, this))
@@ -70,14 +67,9 @@ bool DisassociateIamInstanceProfileRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DisassociateIamInstanceProfileResponse object.
+ * Returns a DisassociateIamInstanceProfileResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DisassociateIamInstanceProfileResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DisassociateIamInstanceProfileRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * DisassociateIamInstanceProfileRequest::respon
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::DisassociateIamInstanceProfileRequestPrivate
+ * \brief The DisassociateIamInstanceProfileRequestPrivate class provides private implementation for DisassociateIamInstanceProfileRequest.
+ * \internal
  *
- * @class  DisassociateIamInstanceProfileRequestPrivate
- *
- * @brief  Private implementation for DisassociateIamInstanceProfileRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DisassociateIamInstanceProfileRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public DisassociateIamInstanceProfileRequest instance.
+ * Constructs a DisassociateIamInstanceProfileRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 DisassociateIamInstanceProfileRequestPrivate::DisassociateIamInstanceProfileRequestPrivate(
     const EC2Request::Action action, DisassociateIamInstanceProfileRequest * const q)
@@ -108,15 +97,10 @@ DisassociateIamInstanceProfileRequestPrivate::DisassociateIamInstanceProfileRequ
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DisassociateIamInstanceProfileRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DisassociateIamInstanceProfileRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DisassociateIamInstanceProfileRequest instance.
  */
 DisassociateIamInstanceProfileRequestPrivate::DisassociateIamInstanceProfileRequestPrivate(
     const DisassociateIamInstanceProfileRequestPrivate &other, DisassociateIamInstanceProfileRequest * const q)

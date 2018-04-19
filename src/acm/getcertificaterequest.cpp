@@ -27,10 +27,9 @@ namespace ACM {
 
 /*!
  * \class QtAws::ACM::GetCertificateRequest
- *
  * \brief The GetCertificateRequest class provides an interface for ACM GetCertificate requests.
  *
- * \ingroup ACM
+ * \inmodule QtAwsACM
  *
  *  <fullname>AWS Certificate Manager</fullname>
  * 
@@ -46,9 +45,7 @@ namespace ACM {
  */
 
 /*!
- * @brief  Constructs a new GetCertificateRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetCertificateRequest::GetCertificateRequest(const GetCertificateRequest &other)
     : ACMRequest(new GetCertificateRequestPrivate(*other.d_func(), this))
@@ -57,7 +54,7 @@ GetCertificateRequest::GetCertificateRequest(const GetCertificateRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetCertificateRequest object.
+ * Constructs a GetCertificateRequest object.
  */
 GetCertificateRequest::GetCertificateRequest()
     : ACMRequest(new GetCertificateRequestPrivate(ACMRequest::GetCertificateAction, this))
@@ -75,14 +72,9 @@ bool GetCertificateRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetCertificateResponse object.
+ * Returns a GetCertificateResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetCertificateResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ACMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetCertificateRequest::response(QNetworkReply * const reply) const
 {
@@ -90,20 +82,17 @@ QtAws::Core::AwsAbstractResponse * GetCertificateRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::ACM::GetCertificateRequestPrivate
+ * \brief The GetCertificateRequestPrivate class provides private implementation for GetCertificateRequest.
+ * \internal
  *
- * @class  GetCertificateRequestPrivate
- *
- * @brief  Private implementation for GetCertificateRequest.
+ * \inmodule QtAwsACM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetCertificateRequestPrivate object.
- *
- * @param  action  ACM action being performed.
- * @param  q       Pointer to this object's public GetCertificateRequest instance.
+ * Constructs a GetCertificateRequestPrivate object for ACM \a action with,
+ * public implementation \a q.
  */
 GetCertificateRequestPrivate::GetCertificateRequestPrivate(
     const ACMRequest::Action action, GetCertificateRequest * const q)
@@ -113,15 +102,10 @@ GetCertificateRequestPrivate::GetCertificateRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetCertificateRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetCertificateRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetCertificateRequest instance.
  */
 GetCertificateRequestPrivate::GetCertificateRequestPrivate(
     const GetCertificateRequestPrivate &other, GetCertificateRequest * const q)

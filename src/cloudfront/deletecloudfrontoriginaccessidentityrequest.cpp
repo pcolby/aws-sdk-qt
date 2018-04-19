@@ -27,10 +27,9 @@ namespace CloudFront {
 
 /*!
  * \class QtAws::CloudFront::DeleteCloudFrontOriginAccessIdentityRequest
- *
  * \brief The DeleteCloudFrontOriginAccessIdentityRequest class provides an interface for CloudFront DeleteCloudFrontOriginAccessIdentity requests.
  *
- * \ingroup CloudFront
+ * \inmodule QtAwsCloudFront
  *
  *  <fullname>Amazon CloudFront</fullname>
  * 
@@ -42,9 +41,7 @@ namespace CloudFront {
  */
 
 /*!
- * @brief  Constructs a new DeleteCloudFrontOriginAccessIdentityRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteCloudFrontOriginAccessIdentityRequest::DeleteCloudFrontOriginAccessIdentityRequest(const DeleteCloudFrontOriginAccessIdentityRequest &other)
     : CloudFrontRequest(new DeleteCloudFrontOriginAccessIdentityRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ DeleteCloudFrontOriginAccessIdentityRequest::DeleteCloudFrontOriginAccessIdentit
 }
 
 /*!
- * @brief  Constructs a new DeleteCloudFrontOriginAccessIdentityRequest object.
+ * Constructs a DeleteCloudFrontOriginAccessIdentityRequest object.
  */
 DeleteCloudFrontOriginAccessIdentityRequest::DeleteCloudFrontOriginAccessIdentityRequest()
     : CloudFrontRequest(new DeleteCloudFrontOriginAccessIdentityRequestPrivate(CloudFrontRequest::DeleteCloudFrontOriginAccessIdentityAction, this))
@@ -71,14 +68,9 @@ bool DeleteCloudFrontOriginAccessIdentityRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteCloudFrontOriginAccessIdentityResponse object.
+ * Returns a DeleteCloudFrontOriginAccessIdentityResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteCloudFrontOriginAccessIdentityResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudFrontClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteCloudFrontOriginAccessIdentityRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * DeleteCloudFrontOriginAccessIdentityRequest::
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudFront::DeleteCloudFrontOriginAccessIdentityRequestPrivate
+ * \brief The DeleteCloudFrontOriginAccessIdentityRequestPrivate class provides private implementation for DeleteCloudFrontOriginAccessIdentityRequest.
+ * \internal
  *
- * @class  DeleteCloudFrontOriginAccessIdentityRequestPrivate
- *
- * @brief  Private implementation for DeleteCloudFrontOriginAccessIdentityRequest.
+ * \inmodule QtAwsCloudFront
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteCloudFrontOriginAccessIdentityRequestPrivate object.
- *
- * @param  action  CloudFront action being performed.
- * @param  q       Pointer to this object's public DeleteCloudFrontOriginAccessIdentityRequest instance.
+ * Constructs a DeleteCloudFrontOriginAccessIdentityRequestPrivate object for CloudFront \a action with,
+ * public implementation \a q.
  */
 DeleteCloudFrontOriginAccessIdentityRequestPrivate::DeleteCloudFrontOriginAccessIdentityRequestPrivate(
     const CloudFrontRequest::Action action, DeleteCloudFrontOriginAccessIdentityRequest * const q)
@@ -109,15 +98,10 @@ DeleteCloudFrontOriginAccessIdentityRequestPrivate::DeleteCloudFrontOriginAccess
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteCloudFrontOriginAccessIdentityRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteCloudFrontOriginAccessIdentityRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteCloudFrontOriginAccessIdentityRequest instance.
  */
 DeleteCloudFrontOriginAccessIdentityRequestPrivate::DeleteCloudFrontOriginAccessIdentityRequestPrivate(
     const DeleteCloudFrontOriginAccessIdentityRequestPrivate &other, DeleteCloudFrontOriginAccessIdentityRequest * const q)

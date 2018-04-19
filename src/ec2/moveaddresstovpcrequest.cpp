@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::MoveAddressToVpcRequest
- *
  * \brief The MoveAddressToVpcRequest class provides an interface for EC2 MoveAddressToVpc requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new MoveAddressToVpcRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 MoveAddressToVpcRequest::MoveAddressToVpcRequest(const MoveAddressToVpcRequest &other)
     : EC2Request(new MoveAddressToVpcRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ MoveAddressToVpcRequest::MoveAddressToVpcRequest(const MoveAddressToVpcRequest &
 }
 
 /*!
- * @brief  Constructs a new MoveAddressToVpcRequest object.
+ * Constructs a MoveAddressToVpcRequest object.
  */
 MoveAddressToVpcRequest::MoveAddressToVpcRequest()
     : EC2Request(new MoveAddressToVpcRequestPrivate(EC2Request::MoveAddressToVpcAction, this))
@@ -70,14 +67,9 @@ bool MoveAddressToVpcRequest::isValid() const
 
 
 /*!
- * @brief  Construct an MoveAddressToVpcResponse object.
+ * Returns a MoveAddressToVpcResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An MoveAddressToVpcResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * MoveAddressToVpcRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * MoveAddressToVpcRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::MoveAddressToVpcRequestPrivate
+ * \brief The MoveAddressToVpcRequestPrivate class provides private implementation for MoveAddressToVpcRequest.
+ * \internal
  *
- * @class  MoveAddressToVpcRequestPrivate
- *
- * @brief  Private implementation for MoveAddressToVpcRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new MoveAddressToVpcRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public MoveAddressToVpcRequest instance.
+ * Constructs a MoveAddressToVpcRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 MoveAddressToVpcRequestPrivate::MoveAddressToVpcRequestPrivate(
     const EC2Request::Action action, MoveAddressToVpcRequest * const q)
@@ -108,15 +97,10 @@ MoveAddressToVpcRequestPrivate::MoveAddressToVpcRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new MoveAddressToVpcRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the MoveAddressToVpcRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public MoveAddressToVpcRequest instance.
  */
 MoveAddressToVpcRequestPrivate::MoveAddressToVpcRequestPrivate(
     const MoveAddressToVpcRequestPrivate &other, MoveAddressToVpcRequest * const q)

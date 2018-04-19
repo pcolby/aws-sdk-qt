@@ -27,10 +27,9 @@ namespace Lightsail {
 
 /*!
  * \class QtAws::Lightsail::GetDomainsRequest
- *
  * \brief The GetDomainsRequest class provides an interface for Lightsail GetDomains requests.
  *
- * \ingroup Lightsail
+ * \inmodule QtAwsLightsail
  *
  *  Amazon Lightsail is the easiest way to get started with AWS for developers who just need virtual private servers.
  *  Lightsail includes everything you need to launch your project quickly - a virtual machine, SSD-based storage, data
@@ -53,9 +52,7 @@ namespace Lightsail {
  */
 
 /*!
- * @brief  Constructs a new GetDomainsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetDomainsRequest::GetDomainsRequest(const GetDomainsRequest &other)
     : LightsailRequest(new GetDomainsRequestPrivate(*other.d_func(), this))
@@ -64,7 +61,7 @@ GetDomainsRequest::GetDomainsRequest(const GetDomainsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetDomainsRequest object.
+ * Constructs a GetDomainsRequest object.
  */
 GetDomainsRequest::GetDomainsRequest()
     : LightsailRequest(new GetDomainsRequestPrivate(LightsailRequest::GetDomainsAction, this))
@@ -82,14 +79,9 @@ bool GetDomainsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetDomainsResponse object.
+ * Returns a GetDomainsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetDomainsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  LightsailClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetDomainsRequest::response(QNetworkReply * const reply) const
 {
@@ -97,20 +89,17 @@ QtAws::Core::AwsAbstractResponse * GetDomainsRequest::response(QNetworkReply * c
 }
 
 /*!
- * @internal
+ * \class QtAws::Lightsail::GetDomainsRequestPrivate
+ * \brief The GetDomainsRequestPrivate class provides private implementation for GetDomainsRequest.
+ * \internal
  *
- * @class  GetDomainsRequestPrivate
- *
- * @brief  Private implementation for GetDomainsRequest.
+ * \inmodule QtAwsLightsail
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetDomainsRequestPrivate object.
- *
- * @param  action  Lightsail action being performed.
- * @param  q       Pointer to this object's public GetDomainsRequest instance.
+ * Constructs a GetDomainsRequestPrivate object for Lightsail \a action with,
+ * public implementation \a q.
  */
 GetDomainsRequestPrivate::GetDomainsRequestPrivate(
     const LightsailRequest::Action action, GetDomainsRequest * const q)
@@ -120,15 +109,10 @@ GetDomainsRequestPrivate::GetDomainsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetDomainsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetDomainsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetDomainsRequest instance.
  */
 GetDomainsRequestPrivate::GetDomainsRequestPrivate(
     const GetDomainsRequestPrivate &other, GetDomainsRequest * const q)

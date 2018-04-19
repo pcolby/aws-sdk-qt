@@ -27,10 +27,9 @@ namespace CognitoIdentityProvider {
 
 /*!
  * \class QtAws::CognitoIdentityProvider::DescribeUserPoolRequest
- *
  * \brief The DescribeUserPoolRequest class provides an interface for CognitoIdentityProvider DescribeUserPool requests.
  *
- * \ingroup CognitoIdentityProvider
+ * \inmodule QtAwsCognitoIdentityProvider
  *
  *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
  *  authenticate a user to obtain tokens related to user identity and access
@@ -47,9 +46,7 @@ namespace CognitoIdentityProvider {
  */
 
 /*!
- * @brief  Constructs a new DescribeUserPoolRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeUserPoolRequest::DescribeUserPoolRequest(const DescribeUserPoolRequest &other)
     : CognitoIdentityProviderRequest(new DescribeUserPoolRequestPrivate(*other.d_func(), this))
@@ -58,7 +55,7 @@ DescribeUserPoolRequest::DescribeUserPoolRequest(const DescribeUserPoolRequest &
 }
 
 /*!
- * @brief  Constructs a new DescribeUserPoolRequest object.
+ * Constructs a DescribeUserPoolRequest object.
  */
 DescribeUserPoolRequest::DescribeUserPoolRequest()
     : CognitoIdentityProviderRequest(new DescribeUserPoolRequestPrivate(CognitoIdentityProviderRequest::DescribeUserPoolAction, this))
@@ -76,14 +73,9 @@ bool DescribeUserPoolRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeUserPoolResponse object.
+ * Returns a DescribeUserPoolResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeUserPoolResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CognitoIdentityProviderClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeUserPoolRequest::response(QNetworkReply * const reply) const
 {
@@ -91,20 +83,17 @@ QtAws::Core::AwsAbstractResponse * DescribeUserPoolRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::CognitoIdentityProvider::DescribeUserPoolRequestPrivate
+ * \brief The DescribeUserPoolRequestPrivate class provides private implementation for DescribeUserPoolRequest.
+ * \internal
  *
- * @class  DescribeUserPoolRequestPrivate
- *
- * @brief  Private implementation for DescribeUserPoolRequest.
+ * \inmodule QtAwsCognitoIdentityProvider
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeUserPoolRequestPrivate object.
- *
- * @param  action  CognitoIdentityProvider action being performed.
- * @param  q       Pointer to this object's public DescribeUserPoolRequest instance.
+ * Constructs a DescribeUserPoolRequestPrivate object for CognitoIdentityProvider \a action with,
+ * public implementation \a q.
  */
 DescribeUserPoolRequestPrivate::DescribeUserPoolRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, DescribeUserPoolRequest * const q)
@@ -114,15 +103,10 @@ DescribeUserPoolRequestPrivate::DescribeUserPoolRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeUserPoolRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeUserPoolRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeUserPoolRequest instance.
  */
 DescribeUserPoolRequestPrivate::DescribeUserPoolRequestPrivate(
     const DescribeUserPoolRequestPrivate &other, DescribeUserPoolRequest * const q)

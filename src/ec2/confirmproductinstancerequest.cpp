@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::ConfirmProductInstanceRequest
- *
  * \brief The ConfirmProductInstanceRequest class provides an interface for EC2 ConfirmProductInstance requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new ConfirmProductInstanceRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ConfirmProductInstanceRequest::ConfirmProductInstanceRequest(const ConfirmProductInstanceRequest &other)
     : EC2Request(new ConfirmProductInstanceRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ ConfirmProductInstanceRequest::ConfirmProductInstanceRequest(const ConfirmProduc
 }
 
 /*!
- * @brief  Constructs a new ConfirmProductInstanceRequest object.
+ * Constructs a ConfirmProductInstanceRequest object.
  */
 ConfirmProductInstanceRequest::ConfirmProductInstanceRequest()
     : EC2Request(new ConfirmProductInstanceRequestPrivate(EC2Request::ConfirmProductInstanceAction, this))
@@ -70,14 +67,9 @@ bool ConfirmProductInstanceRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ConfirmProductInstanceResponse object.
+ * Returns a ConfirmProductInstanceResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ConfirmProductInstanceResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ConfirmProductInstanceRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * ConfirmProductInstanceRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::ConfirmProductInstanceRequestPrivate
+ * \brief The ConfirmProductInstanceRequestPrivate class provides private implementation for ConfirmProductInstanceRequest.
+ * \internal
  *
- * @class  ConfirmProductInstanceRequestPrivate
- *
- * @brief  Private implementation for ConfirmProductInstanceRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ConfirmProductInstanceRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public ConfirmProductInstanceRequest instance.
+ * Constructs a ConfirmProductInstanceRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 ConfirmProductInstanceRequestPrivate::ConfirmProductInstanceRequestPrivate(
     const EC2Request::Action action, ConfirmProductInstanceRequest * const q)
@@ -108,15 +97,10 @@ ConfirmProductInstanceRequestPrivate::ConfirmProductInstanceRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ConfirmProductInstanceRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ConfirmProductInstanceRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ConfirmProductInstanceRequest instance.
  */
 ConfirmProductInstanceRequestPrivate::ConfirmProductInstanceRequestPrivate(
     const ConfirmProductInstanceRequestPrivate &other, ConfirmProductInstanceRequest * const q)

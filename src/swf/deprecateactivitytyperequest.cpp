@@ -27,10 +27,9 @@ namespace SWF {
 
 /*!
  * \class QtAws::SWF::DeprecateActivityTypeRequest
- *
  * \brief The DeprecateActivityTypeRequest class provides an interface for SWF DeprecateActivityType requests.
  *
- * \ingroup SWF
+ * \inmodule QtAwsSWF
  *
  *  <fullname>Amazon Simple Workflow Service</fullname>
  * 
@@ -53,9 +52,7 @@ namespace SWF {
  */
 
 /*!
- * @brief  Constructs a new DeprecateActivityTypeRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeprecateActivityTypeRequest::DeprecateActivityTypeRequest(const DeprecateActivityTypeRequest &other)
     : SWFRequest(new DeprecateActivityTypeRequestPrivate(*other.d_func(), this))
@@ -64,7 +61,7 @@ DeprecateActivityTypeRequest::DeprecateActivityTypeRequest(const DeprecateActivi
 }
 
 /*!
- * @brief  Constructs a new DeprecateActivityTypeRequest object.
+ * Constructs a DeprecateActivityTypeRequest object.
  */
 DeprecateActivityTypeRequest::DeprecateActivityTypeRequest()
     : SWFRequest(new DeprecateActivityTypeRequestPrivate(SWFRequest::DeprecateActivityTypeAction, this))
@@ -82,14 +79,9 @@ bool DeprecateActivityTypeRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeprecateActivityTypeResponse object.
+ * Returns a DeprecateActivityTypeResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeprecateActivityTypeResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SWFClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeprecateActivityTypeRequest::response(QNetworkReply * const reply) const
 {
@@ -97,20 +89,17 @@ QtAws::Core::AwsAbstractResponse * DeprecateActivityTypeRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::SWF::DeprecateActivityTypeRequestPrivate
+ * \brief The DeprecateActivityTypeRequestPrivate class provides private implementation for DeprecateActivityTypeRequest.
+ * \internal
  *
- * @class  DeprecateActivityTypeRequestPrivate
- *
- * @brief  Private implementation for DeprecateActivityTypeRequest.
+ * \inmodule QtAwsSWF
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeprecateActivityTypeRequestPrivate object.
- *
- * @param  action  SWF action being performed.
- * @param  q       Pointer to this object's public DeprecateActivityTypeRequest instance.
+ * Constructs a DeprecateActivityTypeRequestPrivate object for SWF \a action with,
+ * public implementation \a q.
  */
 DeprecateActivityTypeRequestPrivate::DeprecateActivityTypeRequestPrivate(
     const SWFRequest::Action action, DeprecateActivityTypeRequest * const q)
@@ -120,15 +109,10 @@ DeprecateActivityTypeRequestPrivate::DeprecateActivityTypeRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeprecateActivityTypeRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeprecateActivityTypeRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeprecateActivityTypeRequest instance.
  */
 DeprecateActivityTypeRequestPrivate::DeprecateActivityTypeRequestPrivate(
     const DeprecateActivityTypeRequestPrivate &other, DeprecateActivityTypeRequest * const q)

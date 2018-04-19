@@ -27,10 +27,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::RegisterCertificateRequest
- *
  * \brief The RegisterCertificateRequest class provides an interface for IoT RegisterCertificate requests.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -48,9 +47,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new RegisterCertificateRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 RegisterCertificateRequest::RegisterCertificateRequest(const RegisterCertificateRequest &other)
     : IoTRequest(new RegisterCertificateRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ RegisterCertificateRequest::RegisterCertificateRequest(const RegisterCertificate
 }
 
 /*!
- * @brief  Constructs a new RegisterCertificateRequest object.
+ * Constructs a RegisterCertificateRequest object.
  */
 RegisterCertificateRequest::RegisterCertificateRequest()
     : IoTRequest(new RegisterCertificateRequestPrivate(IoTRequest::RegisterCertificateAction, this))
@@ -77,14 +74,9 @@ bool RegisterCertificateRequest::isValid() const
 
 
 /*!
- * @brief  Construct an RegisterCertificateResponse object.
+ * Returns a RegisterCertificateResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An RegisterCertificateResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IoTClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * RegisterCertificateRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * RegisterCertificateRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::IoT::RegisterCertificateRequestPrivate
+ * \brief The RegisterCertificateRequestPrivate class provides private implementation for RegisterCertificateRequest.
+ * \internal
  *
- * @class  RegisterCertificateRequestPrivate
- *
- * @brief  Private implementation for RegisterCertificateRequest.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new RegisterCertificateRequestPrivate object.
- *
- * @param  action  IoT action being performed.
- * @param  q       Pointer to this object's public RegisterCertificateRequest instance.
+ * Constructs a RegisterCertificateRequestPrivate object for IoT \a action with,
+ * public implementation \a q.
  */
 RegisterCertificateRequestPrivate::RegisterCertificateRequestPrivate(
     const IoTRequest::Action action, RegisterCertificateRequest * const q)
@@ -115,15 +104,10 @@ RegisterCertificateRequestPrivate::RegisterCertificateRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RegisterCertificateRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the RegisterCertificateRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public RegisterCertificateRequest instance.
  */
 RegisterCertificateRequestPrivate::RegisterCertificateRequestPrivate(
     const RegisterCertificateRequestPrivate &other, RegisterCertificateRequest * const q)

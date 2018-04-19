@@ -27,10 +27,9 @@ namespace WorkDocs {
 
 /*!
  * \class QtAws::WorkDocs::UpdateDocumentRequest
- *
  * \brief The UpdateDocumentRequest class provides an interface for WorkDocs UpdateDocument requests.
  *
- * \ingroup WorkDocs
+ * \inmodule QtAwsWorkDocs
  *
  *  The WorkDocs API is designed for the following use
  * 
@@ -66,9 +65,7 @@ namespace WorkDocs {
  */
 
 /*!
- * @brief  Constructs a new UpdateDocumentRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateDocumentRequest::UpdateDocumentRequest(const UpdateDocumentRequest &other)
     : WorkDocsRequest(new UpdateDocumentRequestPrivate(*other.d_func(), this))
@@ -77,7 +74,7 @@ UpdateDocumentRequest::UpdateDocumentRequest(const UpdateDocumentRequest &other)
 }
 
 /*!
- * @brief  Constructs a new UpdateDocumentRequest object.
+ * Constructs a UpdateDocumentRequest object.
  */
 UpdateDocumentRequest::UpdateDocumentRequest()
     : WorkDocsRequest(new UpdateDocumentRequestPrivate(WorkDocsRequest::UpdateDocumentAction, this))
@@ -95,14 +92,9 @@ bool UpdateDocumentRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateDocumentResponse object.
+ * Returns a UpdateDocumentResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateDocumentResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WorkDocsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateDocumentRequest::response(QNetworkReply * const reply) const
 {
@@ -110,20 +102,17 @@ QtAws::Core::AwsAbstractResponse * UpdateDocumentRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::WorkDocs::UpdateDocumentRequestPrivate
+ * \brief The UpdateDocumentRequestPrivate class provides private implementation for UpdateDocumentRequest.
+ * \internal
  *
- * @class  UpdateDocumentRequestPrivate
- *
- * @brief  Private implementation for UpdateDocumentRequest.
+ * \inmodule QtAwsWorkDocs
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateDocumentRequestPrivate object.
- *
- * @param  action  WorkDocs action being performed.
- * @param  q       Pointer to this object's public UpdateDocumentRequest instance.
+ * Constructs a UpdateDocumentRequestPrivate object for WorkDocs \a action with,
+ * public implementation \a q.
  */
 UpdateDocumentRequestPrivate::UpdateDocumentRequestPrivate(
     const WorkDocsRequest::Action action, UpdateDocumentRequest * const q)
@@ -133,15 +122,10 @@ UpdateDocumentRequestPrivate::UpdateDocumentRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateDocumentRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateDocumentRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateDocumentRequest instance.
  */
 UpdateDocumentRequestPrivate::UpdateDocumentRequestPrivate(
     const UpdateDocumentRequestPrivate &other, UpdateDocumentRequest * const q)

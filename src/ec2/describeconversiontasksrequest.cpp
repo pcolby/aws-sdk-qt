@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DescribeConversionTasksRequest
- *
  * \brief The DescribeConversionTasksRequest class provides an interface for EC2 DescribeConversionTasks requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DescribeConversionTasksRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeConversionTasksRequest::DescribeConversionTasksRequest(const DescribeConversionTasksRequest &other)
     : EC2Request(new DescribeConversionTasksRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ DescribeConversionTasksRequest::DescribeConversionTasksRequest(const DescribeCon
 }
 
 /*!
- * @brief  Constructs a new DescribeConversionTasksRequest object.
+ * Constructs a DescribeConversionTasksRequest object.
  */
 DescribeConversionTasksRequest::DescribeConversionTasksRequest()
     : EC2Request(new DescribeConversionTasksRequestPrivate(EC2Request::DescribeConversionTasksAction, this))
@@ -70,14 +67,9 @@ bool DescribeConversionTasksRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeConversionTasksResponse object.
+ * Returns a DescribeConversionTasksResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeConversionTasksResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeConversionTasksRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * DescribeConversionTasksRequest::response(QNet
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::DescribeConversionTasksRequestPrivate
+ * \brief The DescribeConversionTasksRequestPrivate class provides private implementation for DescribeConversionTasksRequest.
+ * \internal
  *
- * @class  DescribeConversionTasksRequestPrivate
- *
- * @brief  Private implementation for DescribeConversionTasksRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeConversionTasksRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public DescribeConversionTasksRequest instance.
+ * Constructs a DescribeConversionTasksRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 DescribeConversionTasksRequestPrivate::DescribeConversionTasksRequestPrivate(
     const EC2Request::Action action, DescribeConversionTasksRequest * const q)
@@ -108,15 +97,10 @@ DescribeConversionTasksRequestPrivate::DescribeConversionTasksRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeConversionTasksRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeConversionTasksRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeConversionTasksRequest instance.
  */
 DescribeConversionTasksRequestPrivate::DescribeConversionTasksRequestPrivate(
     const DescribeConversionTasksRequestPrivate &other, DescribeConversionTasksRequest * const q)

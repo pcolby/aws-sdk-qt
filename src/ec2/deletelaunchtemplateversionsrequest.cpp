@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DeleteLaunchTemplateVersionsRequest
- *
  * \brief The DeleteLaunchTemplateVersionsRequest class provides an interface for EC2 DeleteLaunchTemplateVersions requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DeleteLaunchTemplateVersionsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteLaunchTemplateVersionsRequest::DeleteLaunchTemplateVersionsRequest(const DeleteLaunchTemplateVersionsRequest &other)
     : EC2Request(new DeleteLaunchTemplateVersionsRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ DeleteLaunchTemplateVersionsRequest::DeleteLaunchTemplateVersionsRequest(const D
 }
 
 /*!
- * @brief  Constructs a new DeleteLaunchTemplateVersionsRequest object.
+ * Constructs a DeleteLaunchTemplateVersionsRequest object.
  */
 DeleteLaunchTemplateVersionsRequest::DeleteLaunchTemplateVersionsRequest()
     : EC2Request(new DeleteLaunchTemplateVersionsRequestPrivate(EC2Request::DeleteLaunchTemplateVersionsAction, this))
@@ -70,14 +67,9 @@ bool DeleteLaunchTemplateVersionsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteLaunchTemplateVersionsResponse object.
+ * Returns a DeleteLaunchTemplateVersionsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteLaunchTemplateVersionsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteLaunchTemplateVersionsRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * DeleteLaunchTemplateVersionsRequest::response
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::DeleteLaunchTemplateVersionsRequestPrivate
+ * \brief The DeleteLaunchTemplateVersionsRequestPrivate class provides private implementation for DeleteLaunchTemplateVersionsRequest.
+ * \internal
  *
- * @class  DeleteLaunchTemplateVersionsRequestPrivate
- *
- * @brief  Private implementation for DeleteLaunchTemplateVersionsRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteLaunchTemplateVersionsRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public DeleteLaunchTemplateVersionsRequest instance.
+ * Constructs a DeleteLaunchTemplateVersionsRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 DeleteLaunchTemplateVersionsRequestPrivate::DeleteLaunchTemplateVersionsRequestPrivate(
     const EC2Request::Action action, DeleteLaunchTemplateVersionsRequest * const q)
@@ -108,15 +97,10 @@ DeleteLaunchTemplateVersionsRequestPrivate::DeleteLaunchTemplateVersionsRequestP
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteLaunchTemplateVersionsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteLaunchTemplateVersionsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteLaunchTemplateVersionsRequest instance.
  */
 DeleteLaunchTemplateVersionsRequestPrivate::DeleteLaunchTemplateVersionsRequestPrivate(
     const DeleteLaunchTemplateVersionsRequestPrivate &other, DeleteLaunchTemplateVersionsRequest * const q)

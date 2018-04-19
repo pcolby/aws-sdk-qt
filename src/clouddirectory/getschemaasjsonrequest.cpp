@@ -27,10 +27,9 @@ namespace CloudDirectory {
 
 /*!
  * \class QtAws::CloudDirectory::GetSchemaAsJsonRequest
- *
  * \brief The GetSchemaAsJsonRequest class provides an interface for CloudDirectory GetSchemaAsJson requests.
  *
- * \ingroup CloudDirectory
+ * \inmodule QtAwsCloudDirectory
  *
  *  <fullname>Amazon Cloud Directory</fullname>
  * 
@@ -44,9 +43,7 @@ namespace CloudDirectory {
  */
 
 /*!
- * @brief  Constructs a new GetSchemaAsJsonRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetSchemaAsJsonRequest::GetSchemaAsJsonRequest(const GetSchemaAsJsonRequest &other)
     : CloudDirectoryRequest(new GetSchemaAsJsonRequestPrivate(*other.d_func(), this))
@@ -55,7 +52,7 @@ GetSchemaAsJsonRequest::GetSchemaAsJsonRequest(const GetSchemaAsJsonRequest &oth
 }
 
 /*!
- * @brief  Constructs a new GetSchemaAsJsonRequest object.
+ * Constructs a GetSchemaAsJsonRequest object.
  */
 GetSchemaAsJsonRequest::GetSchemaAsJsonRequest()
     : CloudDirectoryRequest(new GetSchemaAsJsonRequestPrivate(CloudDirectoryRequest::GetSchemaAsJsonAction, this))
@@ -73,14 +70,9 @@ bool GetSchemaAsJsonRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetSchemaAsJsonResponse object.
+ * Returns a GetSchemaAsJsonResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetSchemaAsJsonResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudDirectoryClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetSchemaAsJsonRequest::response(QNetworkReply * const reply) const
 {
@@ -88,20 +80,17 @@ QtAws::Core::AwsAbstractResponse * GetSchemaAsJsonRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudDirectory::GetSchemaAsJsonRequestPrivate
+ * \brief The GetSchemaAsJsonRequestPrivate class provides private implementation for GetSchemaAsJsonRequest.
+ * \internal
  *
- * @class  GetSchemaAsJsonRequestPrivate
- *
- * @brief  Private implementation for GetSchemaAsJsonRequest.
+ * \inmodule QtAwsCloudDirectory
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetSchemaAsJsonRequestPrivate object.
- *
- * @param  action  CloudDirectory action being performed.
- * @param  q       Pointer to this object's public GetSchemaAsJsonRequest instance.
+ * Constructs a GetSchemaAsJsonRequestPrivate object for CloudDirectory \a action with,
+ * public implementation \a q.
  */
 GetSchemaAsJsonRequestPrivate::GetSchemaAsJsonRequestPrivate(
     const CloudDirectoryRequest::Action action, GetSchemaAsJsonRequest * const q)
@@ -111,15 +100,10 @@ GetSchemaAsJsonRequestPrivate::GetSchemaAsJsonRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetSchemaAsJsonRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetSchemaAsJsonRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetSchemaAsJsonRequest instance.
  */
 GetSchemaAsJsonRequestPrivate::GetSchemaAsJsonRequestPrivate(
     const GetSchemaAsJsonRequestPrivate &other, GetSchemaAsJsonRequest * const q)

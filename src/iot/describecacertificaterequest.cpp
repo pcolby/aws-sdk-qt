@@ -27,10 +27,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::DescribeCACertificateRequest
- *
  * \brief The DescribeCACertificateRequest class provides an interface for IoT DescribeCACertificate requests.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -48,9 +47,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new DescribeCACertificateRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeCACertificateRequest::DescribeCACertificateRequest(const DescribeCACertificateRequest &other)
     : IoTRequest(new DescribeCACertificateRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ DescribeCACertificateRequest::DescribeCACertificateRequest(const DescribeCACerti
 }
 
 /*!
- * @brief  Constructs a new DescribeCACertificateRequest object.
+ * Constructs a DescribeCACertificateRequest object.
  */
 DescribeCACertificateRequest::DescribeCACertificateRequest()
     : IoTRequest(new DescribeCACertificateRequestPrivate(IoTRequest::DescribeCACertificateAction, this))
@@ -77,14 +74,9 @@ bool DescribeCACertificateRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeCACertificateResponse object.
+ * Returns a DescribeCACertificateResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeCACertificateResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IoTClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeCACertificateRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * DescribeCACertificateRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::IoT::DescribeCACertificateRequestPrivate
+ * \brief The DescribeCACertificateRequestPrivate class provides private implementation for DescribeCACertificateRequest.
+ * \internal
  *
- * @class  DescribeCACertificateRequestPrivate
- *
- * @brief  Private implementation for DescribeCACertificateRequest.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeCACertificateRequestPrivate object.
- *
- * @param  action  IoT action being performed.
- * @param  q       Pointer to this object's public DescribeCACertificateRequest instance.
+ * Constructs a DescribeCACertificateRequestPrivate object for IoT \a action with,
+ * public implementation \a q.
  */
 DescribeCACertificateRequestPrivate::DescribeCACertificateRequestPrivate(
     const IoTRequest::Action action, DescribeCACertificateRequest * const q)
@@ -115,15 +104,10 @@ DescribeCACertificateRequestPrivate::DescribeCACertificateRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeCACertificateRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeCACertificateRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeCACertificateRequest instance.
  */
 DescribeCACertificateRequestPrivate::DescribeCACertificateRequestPrivate(
     const DescribeCACertificateRequestPrivate &other, DescribeCACertificateRequest * const q)

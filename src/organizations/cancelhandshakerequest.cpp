@@ -27,10 +27,9 @@ namespace Organizations {
 
 /*!
  * \class QtAws::Organizations::CancelHandshakeRequest
- *
  * \brief The CancelHandshakeRequest class provides an interface for Organizations CancelHandshake requests.
  *
- * \ingroup Organizations
+ * \inmodule QtAwsOrganizations
  *
  *  <fullname>AWS Organizations API Reference</fullname>
  * 
@@ -179,9 +178,7 @@ namespace Organizations {
  */
 
 /*!
- * @brief  Constructs a new CancelHandshakeRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CancelHandshakeRequest::CancelHandshakeRequest(const CancelHandshakeRequest &other)
     : OrganizationsRequest(new CancelHandshakeRequestPrivate(*other.d_func(), this))
@@ -190,7 +187,7 @@ CancelHandshakeRequest::CancelHandshakeRequest(const CancelHandshakeRequest &oth
 }
 
 /*!
- * @brief  Constructs a new CancelHandshakeRequest object.
+ * Constructs a CancelHandshakeRequest object.
  */
 CancelHandshakeRequest::CancelHandshakeRequest()
     : OrganizationsRequest(new CancelHandshakeRequestPrivate(OrganizationsRequest::CancelHandshakeAction, this))
@@ -208,14 +205,9 @@ bool CancelHandshakeRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CancelHandshakeResponse object.
+ * Returns a CancelHandshakeResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CancelHandshakeResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  OrganizationsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CancelHandshakeRequest::response(QNetworkReply * const reply) const
 {
@@ -223,20 +215,17 @@ QtAws::Core::AwsAbstractResponse * CancelHandshakeRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::Organizations::CancelHandshakeRequestPrivate
+ * \brief The CancelHandshakeRequestPrivate class provides private implementation for CancelHandshakeRequest.
+ * \internal
  *
- * @class  CancelHandshakeRequestPrivate
- *
- * @brief  Private implementation for CancelHandshakeRequest.
+ * \inmodule QtAwsOrganizations
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CancelHandshakeRequestPrivate object.
- *
- * @param  action  Organizations action being performed.
- * @param  q       Pointer to this object's public CancelHandshakeRequest instance.
+ * Constructs a CancelHandshakeRequestPrivate object for Organizations \a action with,
+ * public implementation \a q.
  */
 CancelHandshakeRequestPrivate::CancelHandshakeRequestPrivate(
     const OrganizationsRequest::Action action, CancelHandshakeRequest * const q)
@@ -246,15 +235,10 @@ CancelHandshakeRequestPrivate::CancelHandshakeRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CancelHandshakeRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CancelHandshakeRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CancelHandshakeRequest instance.
  */
 CancelHandshakeRequestPrivate::CancelHandshakeRequestPrivate(
     const CancelHandshakeRequestPrivate &other, CancelHandshakeRequest * const q)

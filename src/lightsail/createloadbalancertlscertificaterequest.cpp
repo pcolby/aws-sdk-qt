@@ -27,10 +27,9 @@ namespace Lightsail {
 
 /*!
  * \class QtAws::Lightsail::CreateLoadBalancerTlsCertificateRequest
- *
  * \brief The CreateLoadBalancerTlsCertificateRequest class provides an interface for Lightsail CreateLoadBalancerTlsCertificate requests.
  *
- * \ingroup Lightsail
+ * \inmodule QtAwsLightsail
  *
  *  Amazon Lightsail is the easiest way to get started with AWS for developers who just need virtual private servers.
  *  Lightsail includes everything you need to launch your project quickly - a virtual machine, SSD-based storage, data
@@ -53,9 +52,7 @@ namespace Lightsail {
  */
 
 /*!
- * @brief  Constructs a new CreateLoadBalancerTlsCertificateRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateLoadBalancerTlsCertificateRequest::CreateLoadBalancerTlsCertificateRequest(const CreateLoadBalancerTlsCertificateRequest &other)
     : LightsailRequest(new CreateLoadBalancerTlsCertificateRequestPrivate(*other.d_func(), this))
@@ -64,7 +61,7 @@ CreateLoadBalancerTlsCertificateRequest::CreateLoadBalancerTlsCertificateRequest
 }
 
 /*!
- * @brief  Constructs a new CreateLoadBalancerTlsCertificateRequest object.
+ * Constructs a CreateLoadBalancerTlsCertificateRequest object.
  */
 CreateLoadBalancerTlsCertificateRequest::CreateLoadBalancerTlsCertificateRequest()
     : LightsailRequest(new CreateLoadBalancerTlsCertificateRequestPrivate(LightsailRequest::CreateLoadBalancerTlsCertificateAction, this))
@@ -82,14 +79,9 @@ bool CreateLoadBalancerTlsCertificateRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateLoadBalancerTlsCertificateResponse object.
+ * Returns a CreateLoadBalancerTlsCertificateResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateLoadBalancerTlsCertificateResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  LightsailClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateLoadBalancerTlsCertificateRequest::response(QNetworkReply * const reply) const
 {
@@ -97,20 +89,17 @@ QtAws::Core::AwsAbstractResponse * CreateLoadBalancerTlsCertificateRequest::resp
 }
 
 /*!
- * @internal
+ * \class QtAws::Lightsail::CreateLoadBalancerTlsCertificateRequestPrivate
+ * \brief The CreateLoadBalancerTlsCertificateRequestPrivate class provides private implementation for CreateLoadBalancerTlsCertificateRequest.
+ * \internal
  *
- * @class  CreateLoadBalancerTlsCertificateRequestPrivate
- *
- * @brief  Private implementation for CreateLoadBalancerTlsCertificateRequest.
+ * \inmodule QtAwsLightsail
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateLoadBalancerTlsCertificateRequestPrivate object.
- *
- * @param  action  Lightsail action being performed.
- * @param  q       Pointer to this object's public CreateLoadBalancerTlsCertificateRequest instance.
+ * Constructs a CreateLoadBalancerTlsCertificateRequestPrivate object for Lightsail \a action with,
+ * public implementation \a q.
  */
 CreateLoadBalancerTlsCertificateRequestPrivate::CreateLoadBalancerTlsCertificateRequestPrivate(
     const LightsailRequest::Action action, CreateLoadBalancerTlsCertificateRequest * const q)
@@ -120,15 +109,10 @@ CreateLoadBalancerTlsCertificateRequestPrivate::CreateLoadBalancerTlsCertificate
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateLoadBalancerTlsCertificateRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateLoadBalancerTlsCertificateRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateLoadBalancerTlsCertificateRequest instance.
  */
 CreateLoadBalancerTlsCertificateRequestPrivate::CreateLoadBalancerTlsCertificateRequestPrivate(
     const CreateLoadBalancerTlsCertificateRequestPrivate &other, CreateLoadBalancerTlsCertificateRequest * const q)

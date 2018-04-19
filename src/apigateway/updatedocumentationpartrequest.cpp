@@ -27,10 +27,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::UpdateDocumentationPartRequest
- *
  * \brief The UpdateDocumentationPartRequest class provides an interface for APIGateway UpdateDocumentationPart requests.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -42,9 +41,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new UpdateDocumentationPartRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateDocumentationPartRequest::UpdateDocumentationPartRequest(const UpdateDocumentationPartRequest &other)
     : APIGatewayRequest(new UpdateDocumentationPartRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ UpdateDocumentationPartRequest::UpdateDocumentationPartRequest(const UpdateDocum
 }
 
 /*!
- * @brief  Constructs a new UpdateDocumentationPartRequest object.
+ * Constructs a UpdateDocumentationPartRequest object.
  */
 UpdateDocumentationPartRequest::UpdateDocumentationPartRequest()
     : APIGatewayRequest(new UpdateDocumentationPartRequestPrivate(APIGatewayRequest::UpdateDocumentationPartAction, this))
@@ -71,14 +68,9 @@ bool UpdateDocumentationPartRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateDocumentationPartResponse object.
+ * Returns a UpdateDocumentationPartResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateDocumentationPartResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  APIGatewayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateDocumentationPartRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * UpdateDocumentationPartRequest::response(QNet
 }
 
 /*!
- * @internal
+ * \class QtAws::APIGateway::UpdateDocumentationPartRequestPrivate
+ * \brief The UpdateDocumentationPartRequestPrivate class provides private implementation for UpdateDocumentationPartRequest.
+ * \internal
  *
- * @class  UpdateDocumentationPartRequestPrivate
- *
- * @brief  Private implementation for UpdateDocumentationPartRequest.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateDocumentationPartRequestPrivate object.
- *
- * @param  action  APIGateway action being performed.
- * @param  q       Pointer to this object's public UpdateDocumentationPartRequest instance.
+ * Constructs a UpdateDocumentationPartRequestPrivate object for APIGateway \a action with,
+ * public implementation \a q.
  */
 UpdateDocumentationPartRequestPrivate::UpdateDocumentationPartRequestPrivate(
     const APIGatewayRequest::Action action, UpdateDocumentationPartRequest * const q)
@@ -109,15 +98,10 @@ UpdateDocumentationPartRequestPrivate::UpdateDocumentationPartRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateDocumentationPartRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateDocumentationPartRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateDocumentationPartRequest instance.
  */
 UpdateDocumentationPartRequestPrivate::UpdateDocumentationPartRequestPrivate(
     const UpdateDocumentationPartRequestPrivate &other, UpdateDocumentationPartRequest * const q)

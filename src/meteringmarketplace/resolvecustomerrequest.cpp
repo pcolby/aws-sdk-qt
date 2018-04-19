@@ -27,10 +27,9 @@ namespace MarketplaceMetering {
 
 /*!
  * \class QtAws::MarketplaceMetering::ResolveCustomerRequest
- *
  * \brief The ResolveCustomerRequest class provides an interface for MarketplaceMetering ResolveCustomer requests.
  *
- * \ingroup MarketplaceMetering
+ * \inmodule QtAwsMarketplaceMetering
  *
  *  <fullname>AWS Marketplace Metering Service</fullname>
  * 
@@ -67,9 +66,7 @@ namespace MarketplaceMetering {
  */
 
 /*!
- * @brief  Constructs a new ResolveCustomerRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ResolveCustomerRequest::ResolveCustomerRequest(const ResolveCustomerRequest &other)
     : MarketplaceMeteringRequest(new ResolveCustomerRequestPrivate(*other.d_func(), this))
@@ -78,7 +75,7 @@ ResolveCustomerRequest::ResolveCustomerRequest(const ResolveCustomerRequest &oth
 }
 
 /*!
- * @brief  Constructs a new ResolveCustomerRequest object.
+ * Constructs a ResolveCustomerRequest object.
  */
 ResolveCustomerRequest::ResolveCustomerRequest()
     : MarketplaceMeteringRequest(new ResolveCustomerRequestPrivate(MarketplaceMeteringRequest::ResolveCustomerAction, this))
@@ -96,14 +93,9 @@ bool ResolveCustomerRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ResolveCustomerResponse object.
+ * Returns a ResolveCustomerResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ResolveCustomerResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MarketplaceMeteringClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ResolveCustomerRequest::response(QNetworkReply * const reply) const
 {
@@ -111,20 +103,17 @@ QtAws::Core::AwsAbstractResponse * ResolveCustomerRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::MarketplaceMetering::ResolveCustomerRequestPrivate
+ * \brief The ResolveCustomerRequestPrivate class provides private implementation for ResolveCustomerRequest.
+ * \internal
  *
- * @class  ResolveCustomerRequestPrivate
- *
- * @brief  Private implementation for ResolveCustomerRequest.
+ * \inmodule QtAwsMarketplaceMetering
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ResolveCustomerRequestPrivate object.
- *
- * @param  action  MarketplaceMetering action being performed.
- * @param  q       Pointer to this object's public ResolveCustomerRequest instance.
+ * Constructs a ResolveCustomerRequestPrivate object for MarketplaceMetering \a action with,
+ * public implementation \a q.
  */
 ResolveCustomerRequestPrivate::ResolveCustomerRequestPrivate(
     const MarketplaceMeteringRequest::Action action, ResolveCustomerRequest * const q)
@@ -134,15 +123,10 @@ ResolveCustomerRequestPrivate::ResolveCustomerRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ResolveCustomerRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ResolveCustomerRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ResolveCustomerRequest instance.
  */
 ResolveCustomerRequestPrivate::ResolveCustomerRequestPrivate(
     const ResolveCustomerRequestPrivate &other, ResolveCustomerRequest * const q)

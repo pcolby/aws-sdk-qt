@@ -27,10 +27,9 @@ namespace Redshift {
 
 /*!
  * \class QtAws::Redshift::DescribeOrderableClusterOptionsRequest
- *
  * \brief The DescribeOrderableClusterOptionsRequest class provides an interface for Redshift DescribeOrderableClusterOptions requests.
  *
- * \ingroup Redshift
+ * \inmodule QtAwsRedshift
  *
  *  <fullname>Amazon Redshift</fullname>
  * 
@@ -67,9 +66,7 @@ namespace Redshift {
  */
 
 /*!
- * @brief  Constructs a new DescribeOrderableClusterOptionsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeOrderableClusterOptionsRequest::DescribeOrderableClusterOptionsRequest(const DescribeOrderableClusterOptionsRequest &other)
     : RedshiftRequest(new DescribeOrderableClusterOptionsRequestPrivate(*other.d_func(), this))
@@ -78,7 +75,7 @@ DescribeOrderableClusterOptionsRequest::DescribeOrderableClusterOptionsRequest(c
 }
 
 /*!
- * @brief  Constructs a new DescribeOrderableClusterOptionsRequest object.
+ * Constructs a DescribeOrderableClusterOptionsRequest object.
  */
 DescribeOrderableClusterOptionsRequest::DescribeOrderableClusterOptionsRequest()
     : RedshiftRequest(new DescribeOrderableClusterOptionsRequestPrivate(RedshiftRequest::DescribeOrderableClusterOptionsAction, this))
@@ -96,14 +93,9 @@ bool DescribeOrderableClusterOptionsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeOrderableClusterOptionsResponse object.
+ * Returns a DescribeOrderableClusterOptionsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeOrderableClusterOptionsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RedshiftClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeOrderableClusterOptionsRequest::response(QNetworkReply * const reply) const
 {
@@ -111,20 +103,17 @@ QtAws::Core::AwsAbstractResponse * DescribeOrderableClusterOptionsRequest::respo
 }
 
 /*!
- * @internal
+ * \class QtAws::Redshift::DescribeOrderableClusterOptionsRequestPrivate
+ * \brief The DescribeOrderableClusterOptionsRequestPrivate class provides private implementation for DescribeOrderableClusterOptionsRequest.
+ * \internal
  *
- * @class  DescribeOrderableClusterOptionsRequestPrivate
- *
- * @brief  Private implementation for DescribeOrderableClusterOptionsRequest.
+ * \inmodule QtAwsRedshift
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeOrderableClusterOptionsRequestPrivate object.
- *
- * @param  action  Redshift action being performed.
- * @param  q       Pointer to this object's public DescribeOrderableClusterOptionsRequest instance.
+ * Constructs a DescribeOrderableClusterOptionsRequestPrivate object for Redshift \a action with,
+ * public implementation \a q.
  */
 DescribeOrderableClusterOptionsRequestPrivate::DescribeOrderableClusterOptionsRequestPrivate(
     const RedshiftRequest::Action action, DescribeOrderableClusterOptionsRequest * const q)
@@ -134,15 +123,10 @@ DescribeOrderableClusterOptionsRequestPrivate::DescribeOrderableClusterOptionsRe
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeOrderableClusterOptionsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeOrderableClusterOptionsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeOrderableClusterOptionsRequest instance.
  */
 DescribeOrderableClusterOptionsRequestPrivate::DescribeOrderableClusterOptionsRequestPrivate(
     const DescribeOrderableClusterOptionsRequestPrivate &other, DescribeOrderableClusterOptionsRequest * const q)

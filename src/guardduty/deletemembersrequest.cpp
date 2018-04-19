@@ -27,19 +27,16 @@ namespace GuardDuty {
 
 /*!
  * \class QtAws::GuardDuty::DeleteMembersRequest
- *
  * \brief The DeleteMembersRequest class provides an interface for GuardDuty DeleteMembers requests.
  *
- * \ingroup GuardDuty
+ * \inmodule QtAwsGuardDuty
  *
  *
  * \sa GuardDutyClient::deleteMembers
  */
 
 /*!
- * @brief  Constructs a new DeleteMembersRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteMembersRequest::DeleteMembersRequest(const DeleteMembersRequest &other)
     : GuardDutyRequest(new DeleteMembersRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ DeleteMembersRequest::DeleteMembersRequest(const DeleteMembersRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DeleteMembersRequest object.
+ * Constructs a DeleteMembersRequest object.
  */
 DeleteMembersRequest::DeleteMembersRequest()
     : GuardDutyRequest(new DeleteMembersRequestPrivate(GuardDutyRequest::DeleteMembersAction, this))
@@ -66,14 +63,9 @@ bool DeleteMembersRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteMembersResponse object.
+ * Returns a DeleteMembersResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteMembersResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GuardDutyClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteMembersRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * DeleteMembersRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::GuardDuty::DeleteMembersRequestPrivate
+ * \brief The DeleteMembersRequestPrivate class provides private implementation for DeleteMembersRequest.
+ * \internal
  *
- * @class  DeleteMembersRequestPrivate
- *
- * @brief  Private implementation for DeleteMembersRequest.
+ * \inmodule QtAwsGuardDuty
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteMembersRequestPrivate object.
- *
- * @param  action  GuardDuty action being performed.
- * @param  q       Pointer to this object's public DeleteMembersRequest instance.
+ * Constructs a DeleteMembersRequestPrivate object for GuardDuty \a action with,
+ * public implementation \a q.
  */
 DeleteMembersRequestPrivate::DeleteMembersRequestPrivate(
     const GuardDutyRequest::Action action, DeleteMembersRequest * const q)
@@ -104,15 +93,10 @@ DeleteMembersRequestPrivate::DeleteMembersRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteMembersRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteMembersRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteMembersRequest instance.
  */
 DeleteMembersRequestPrivate::DeleteMembersRequestPrivate(
     const DeleteMembersRequestPrivate &other, DeleteMembersRequest * const q)

@@ -25,16 +25,78 @@ namespace DeviceFarm {
 
 /*!
  * \class QtAws::DeviceFarm::DeviceFarmRequest
- *
  * \brief The DeviceFarmRequest class provides an interface for DeviceFarm requests.
  *
- * \ingroup DeviceFarm
+ * \inmodule QtAwsDeviceFarm
  */
 
 /*!
- * @brief  Constructs a new DeviceFarmRequest object.
+ * \enum DeviceFarmRequest::Action
  *
- * @param  action  The DeviceFarm action to request.
+ * This enum describes the actions that can be performed as DeviceFarm
+ * requests.
+ *
+ * \value CreateDevicePoolAction DeviceFarm CreateDevicePool action.
+ * \value CreateInstanceProfileAction DeviceFarm CreateInstanceProfile action.
+ * \value CreateNetworkProfileAction DeviceFarm CreateNetworkProfile action.
+ * \value CreateProjectAction DeviceFarm CreateProject action.
+ * \value CreateRemoteAccessSessionAction DeviceFarm CreateRemoteAccessSession action.
+ * \value CreateUploadAction DeviceFarm CreateUpload action.
+ * \value DeleteDevicePoolAction DeviceFarm DeleteDevicePool action.
+ * \value DeleteInstanceProfileAction DeviceFarm DeleteInstanceProfile action.
+ * \value DeleteNetworkProfileAction DeviceFarm DeleteNetworkProfile action.
+ * \value DeleteProjectAction DeviceFarm DeleteProject action.
+ * \value DeleteRemoteAccessSessionAction DeviceFarm DeleteRemoteAccessSession action.
+ * \value DeleteRunAction DeviceFarm DeleteRun action.
+ * \value DeleteUploadAction DeviceFarm DeleteUpload action.
+ * \value GetAccountSettingsAction DeviceFarm GetAccountSettings action.
+ * \value GetDeviceAction DeviceFarm GetDevice action.
+ * \value GetDeviceInstanceAction DeviceFarm GetDeviceInstance action.
+ * \value GetDevicePoolAction DeviceFarm GetDevicePool action.
+ * \value GetDevicePoolCompatibilityAction DeviceFarm GetDevicePoolCompatibility action.
+ * \value GetInstanceProfileAction DeviceFarm GetInstanceProfile action.
+ * \value GetJobAction DeviceFarm GetJob action.
+ * \value GetNetworkProfileAction DeviceFarm GetNetworkProfile action.
+ * \value GetOfferingStatusAction DeviceFarm GetOfferingStatus action.
+ * \value GetProjectAction DeviceFarm GetProject action.
+ * \value GetRemoteAccessSessionAction DeviceFarm GetRemoteAccessSession action.
+ * \value GetRunAction DeviceFarm GetRun action.
+ * \value GetSuiteAction DeviceFarm GetSuite action.
+ * \value GetTestAction DeviceFarm GetTest action.
+ * \value GetUploadAction DeviceFarm GetUpload action.
+ * \value InstallToRemoteAccessSessionAction DeviceFarm InstallToRemoteAccessSession action.
+ * \value ListArtifactsAction DeviceFarm ListArtifacts action.
+ * \value ListDeviceInstancesAction DeviceFarm ListDeviceInstances action.
+ * \value ListDevicePoolsAction DeviceFarm ListDevicePools action.
+ * \value ListDevicesAction DeviceFarm ListDevices action.
+ * \value ListInstanceProfilesAction DeviceFarm ListInstanceProfiles action.
+ * \value ListJobsAction DeviceFarm ListJobs action.
+ * \value ListNetworkProfilesAction DeviceFarm ListNetworkProfiles action.
+ * \value ListOfferingPromotionsAction DeviceFarm ListOfferingPromotions action.
+ * \value ListOfferingTransactionsAction DeviceFarm ListOfferingTransactions action.
+ * \value ListOfferingsAction DeviceFarm ListOfferings action.
+ * \value ListProjectsAction DeviceFarm ListProjects action.
+ * \value ListRemoteAccessSessionsAction DeviceFarm ListRemoteAccessSessions action.
+ * \value ListRunsAction DeviceFarm ListRuns action.
+ * \value ListSamplesAction DeviceFarm ListSamples action.
+ * \value ListSuitesAction DeviceFarm ListSuites action.
+ * \value ListTestsAction DeviceFarm ListTests action.
+ * \value ListUniqueProblemsAction DeviceFarm ListUniqueProblems action.
+ * \value ListUploadsAction DeviceFarm ListUploads action.
+ * \value PurchaseOfferingAction DeviceFarm PurchaseOffering action.
+ * \value RenewOfferingAction DeviceFarm RenewOffering action.
+ * \value ScheduleRunAction DeviceFarm ScheduleRun action.
+ * \value StopRemoteAccessSessionAction DeviceFarm StopRemoteAccessSession action.
+ * \value StopRunAction DeviceFarm StopRun action.
+ * \value UpdateDeviceInstanceAction DeviceFarm UpdateDeviceInstance action.
+ * \value UpdateDevicePoolAction DeviceFarm UpdateDevicePool action.
+ * \value UpdateInstanceProfileAction DeviceFarm UpdateInstanceProfile action.
+ * \value UpdateNetworkProfileAction DeviceFarm UpdateNetworkProfile action.
+ * \value UpdateProjectAction DeviceFarm UpdateProject action.
+ */
+
+/*!
+ * Constructs a[n] DeviceFarmRequest object for DeviceFarm \a action.
  */
 DeviceFarmRequest::DeviceFarmRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new DeviceFarmRequestPrivate(action, this))
@@ -43,9 +105,7 @@ DeviceFarmRequest::DeviceFarmRequest(const Action action)
 }
 
 /*!
- * @brief  Constructs a new DeviceFarmRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeviceFarmRequest::DeviceFarmRequest(const DeviceFarmRequest &other)
     : QtAws::Core::AwsAbstractRequest(new DeviceFarmRequestPrivate(*other.d_func(), this))
@@ -54,13 +114,7 @@ DeviceFarmRequest::DeviceFarmRequest(const DeviceFarmRequest &other)
 }
 
 /*!
- * @brief  Assignment operator.
- *
- * Assigns \a other to \c this.
- *
- * @param  other  Instance to copy.
- *
- * @return  A reference to \c this.
+ * Sets the DeviceFarmRequest object to be equal to \a other.
  */
 DeviceFarmRequest& DeviceFarmRequest::operator=(const DeviceFarmRequest &other)
 {
@@ -72,14 +126,10 @@ DeviceFarmRequest& DeviceFarmRequest::operator=(const DeviceFarmRequest &other)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeviceFarmRequest object.
+ * Constructs aa DeviceFarmRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from DeviceFarmRequestPrivate.
- *
- * @param  d  Pointer to private data (aka D-Pointer).
  */
 DeviceFarmRequest::DeviceFarmRequest(DeviceFarmRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
@@ -87,7 +137,7 @@ DeviceFarmRequest::DeviceFarmRequest(DeviceFarmRequestPrivate * const d) : QtAws
 }
 
 /*!
- * \brief Returns the DeviceFarm action to be performed by this request.
+ * Returns the DeviceFarm action to be performed by this request.
  */
 DeviceFarmRequest::Action DeviceFarmRequest::action() const
 {
@@ -96,7 +146,7 @@ DeviceFarmRequest::Action DeviceFarmRequest::action() const
 }
 
 /*!
- * \brief Returns the name of the DeviceFarm action to be performed by this request.
+ * Returns the name of the DeviceFarm action to be performed by this request.
  */
 QString DeviceFarmRequest::actionString() const
 {
@@ -104,7 +154,7 @@ QString DeviceFarmRequest::actionString() const
 }
 
 /*!
- * \brief Returns the DeviceFarm API version implemented by this request.
+ * Returns the DeviceFarm API version implemented by this request.
  */
 QString DeviceFarmRequest::apiVersion() const
 {
@@ -113,7 +163,7 @@ QString DeviceFarmRequest::apiVersion() const
 }
 
 /*!
- * @brief Set the DeviceFarm action to be performed by this request to \a action.
+ * Sets the DeviceFarm action to be performed by this request to \a action.
  */
 void DeviceFarmRequest::setAction(const Action action)
 {
@@ -122,7 +172,7 @@ void DeviceFarmRequest::setAction(const Action action)
 }
 
 /*!
- * Set the DeviceFarm API version to include in this request to \a version.
+ * Sets the DeviceFarm API version to include in this request to \a version.
  */
 void DeviceFarmRequest::setApiVersion(const QString &version)
 {
@@ -131,7 +181,7 @@ void DeviceFarmRequest::setApiVersion(const QString &version)
 }
 
 /*!
- * \brief Returns \c true if this request is the same as \a other.
+ * Returns \c true if this request is equal to \a other; \c false otherwise.
  *
  * Note, most derived *Request classes do not need to provider their own
  * implementations of this function, since most such request classes rely on
@@ -146,8 +196,8 @@ bool DeviceFarmRequest::operator==(const DeviceFarmRequest &other) const
             (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
-/*!
- * @brief  Check if \a queueName is a valid DeviceFarm queue name.
+/*
+ * Returns \c tue if \a queueName is a valid DeviceFarm queue name.
  *
  * @par From DeviceFarm FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
@@ -166,9 +216,8 @@ bool DeviceFarmRequest::operator==(const DeviceFarmRequest &other) const
 }*/
 
 /*!
- * \brief Removes the a \a name parameter from this request.
- *
- * Returns the count of paramters removed (typically \c 0 or \c 1).
+ * Removes the a \a name parameter from the request, then returns the number of
+ * paramters removed (typically \c 0 or \c 1).
  */
 int DeviceFarmRequest::clearParameter(const QString &name)
 {
@@ -177,7 +226,7 @@ int DeviceFarmRequest::clearParameter(const QString &name)
 }
 
 /*!
- * \brief Removes all parameters from this request.
+ * Removes all parameters from the request.
  */
 void DeviceFarmRequest::clearParameters()
 {
@@ -186,7 +235,7 @@ void DeviceFarmRequest::clearParameters()
 }
 
 /*!
- * \brief Returns the value of the \n name pararemter if set, otherwise \a defaultValue.
+ * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
 QVariant DeviceFarmRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
@@ -195,7 +244,7 @@ QVariant DeviceFarmRequest::parameter(const QString &name, const QVariant &defau
 }
 
 /*!
- * \brief Returns a map of parameters included in this request.
+ * Returns the parameters included in this request.
  */
 const QVariantMap &DeviceFarmRequest::parameters() const
 {
@@ -204,7 +253,7 @@ const QVariantMap &DeviceFarmRequest::parameters() const
 }
 
 /*!
- * \brief Sets the \a name parameter to \a value.
+ * Sets the \a name parameter to \a value.
  */
 void DeviceFarmRequest::setParameter(const QString &name, const QVariant &value)
 {
@@ -213,9 +262,8 @@ void DeviceFarmRequest::setParameter(const QString &name, const QVariant &value)
 }
 
 /*!
- * \brief Sets the map of paramters for this request to \a parameters.
- *
- * Any request parameters set previously will be discarded.
+ * Sets the paramters for this request to \a parameters. Any request parameters
+ * set previously will be discarded.
  */
 void DeviceFarmRequest::setParameters(const QVariantMap &parameters)
 {
@@ -224,11 +272,12 @@ void DeviceFarmRequest::setParameters(const QVariantMap &parameters)
 }
 
 /*!
- * \brief Returns a network request for this DeviceFarm request using the given \a endpoint.
+ * Returns a network request for the DeviceFarm request using the given
+ * \a endpoint.
  *
- * This DeviceFarm implementation builds request URLs by combining the common query
- * parameters (such as Action and Version), with any that have been added (via
- * setParameter) by child classes.
+ * This DeviceFarm implementation builds request URLs by combining the
+ * common query parameters (such as Action and Version), with any that have
+ * been added (via setParameter) by child classes.
  */
 QNetworkRequest DeviceFarmRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -239,17 +288,16 @@ QNetworkRequest DeviceFarmRequest::unsignedRequest(const QUrl &endpoint) const
 }
 
 /*!
+ * \class QtAws::DeviceFarm::DeviceFarmRequestPrivate
+ * \brief The DeviceFarmRequestPrivate class provides private implementation for DeviceFarmRequest.
  * \internal
  *
- * \class  DeviceFarmRequestPrivate
- *
- * \brief  Private implementation for DeviceFarmRequest.
+ * \inmodule QtAwsDeviceFarm
  */
 
 /*!
- * \internal
- *
- * \brief Constructs a new DeviceFarmRequestPrivate object.
+ * Constructs a DeviceFarmRequestPrivate object for DeviceFarm \a action with,
+ * public implementation \a q.
  */
 DeviceFarmRequestPrivate::DeviceFarmRequestPrivate(const DeviceFarmRequest::Action action, DeviceFarmRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
@@ -258,9 +306,7 @@ DeviceFarmRequestPrivate::DeviceFarmRequestPrivate(const DeviceFarmRequest::Acti
 }
 
 /*!
- * \internal
- *
- * \brief Constructs a new DeviceFarmRequestPrivate object, copying an existing one.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
@@ -276,15 +322,12 @@ DeviceFarmRequestPrivate::DeviceFarmRequestPrivate(const DeviceFarmRequestPrivat
 }
 
 /*!
- * \internal
- *
- * \brief Returns a string representing \a action.
+ * Returns a string represention of \a action, or a null string if \a action is
+ * invalid.
  *
  * This function converts DeviceFarmRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the DeviceFarm service's Action
  * query parameters.
- *
- * @return A string representing \a action, or a null string if \a action is invalid.
  */
 QString DeviceFarmRequestPrivate::toString(const DeviceFarmRequest::Action &action)
 {

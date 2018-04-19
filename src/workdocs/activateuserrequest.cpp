@@ -27,10 +27,9 @@ namespace WorkDocs {
 
 /*!
  * \class QtAws::WorkDocs::ActivateUserRequest
- *
  * \brief The ActivateUserRequest class provides an interface for WorkDocs ActivateUser requests.
  *
- * \ingroup WorkDocs
+ * \inmodule QtAwsWorkDocs
  *
  *  The WorkDocs API is designed for the following use
  * 
@@ -66,9 +65,7 @@ namespace WorkDocs {
  */
 
 /*!
- * @brief  Constructs a new ActivateUserRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ActivateUserRequest::ActivateUserRequest(const ActivateUserRequest &other)
     : WorkDocsRequest(new ActivateUserRequestPrivate(*other.d_func(), this))
@@ -77,7 +74,7 @@ ActivateUserRequest::ActivateUserRequest(const ActivateUserRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ActivateUserRequest object.
+ * Constructs a ActivateUserRequest object.
  */
 ActivateUserRequest::ActivateUserRequest()
     : WorkDocsRequest(new ActivateUserRequestPrivate(WorkDocsRequest::ActivateUserAction, this))
@@ -95,14 +92,9 @@ bool ActivateUserRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ActivateUserResponse object.
+ * Returns a ActivateUserResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ActivateUserResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WorkDocsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ActivateUserRequest::response(QNetworkReply * const reply) const
 {
@@ -110,20 +102,17 @@ QtAws::Core::AwsAbstractResponse * ActivateUserRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::WorkDocs::ActivateUserRequestPrivate
+ * \brief The ActivateUserRequestPrivate class provides private implementation for ActivateUserRequest.
+ * \internal
  *
- * @class  ActivateUserRequestPrivate
- *
- * @brief  Private implementation for ActivateUserRequest.
+ * \inmodule QtAwsWorkDocs
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ActivateUserRequestPrivate object.
- *
- * @param  action  WorkDocs action being performed.
- * @param  q       Pointer to this object's public ActivateUserRequest instance.
+ * Constructs a ActivateUserRequestPrivate object for WorkDocs \a action with,
+ * public implementation \a q.
  */
 ActivateUserRequestPrivate::ActivateUserRequestPrivate(
     const WorkDocsRequest::Action action, ActivateUserRequest * const q)
@@ -133,15 +122,10 @@ ActivateUserRequestPrivate::ActivateUserRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ActivateUserRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ActivateUserRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ActivateUserRequest instance.
  */
 ActivateUserRequestPrivate::ActivateUserRequestPrivate(
     const ActivateUserRequestPrivate &other, ActivateUserRequest * const q)

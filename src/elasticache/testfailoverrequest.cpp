@@ -27,10 +27,9 @@ namespace ElastiCache {
 
 /*!
  * \class QtAws::ElastiCache::TestFailoverRequest
- *
  * \brief The TestFailoverRequest class provides an interface for ElastiCache TestFailover requests.
  *
- * \ingroup ElastiCache
+ * \inmodule QtAwsElastiCache
  *
  *  <fullname>Amazon ElastiCache</fullname>
  * 
@@ -51,9 +50,7 @@ namespace ElastiCache {
  */
 
 /*!
- * @brief  Constructs a new TestFailoverRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 TestFailoverRequest::TestFailoverRequest(const TestFailoverRequest &other)
     : ElastiCacheRequest(new TestFailoverRequestPrivate(*other.d_func(), this))
@@ -62,7 +59,7 @@ TestFailoverRequest::TestFailoverRequest(const TestFailoverRequest &other)
 }
 
 /*!
- * @brief  Constructs a new TestFailoverRequest object.
+ * Constructs a TestFailoverRequest object.
  */
 TestFailoverRequest::TestFailoverRequest()
     : ElastiCacheRequest(new TestFailoverRequestPrivate(ElastiCacheRequest::TestFailoverAction, this))
@@ -80,14 +77,9 @@ bool TestFailoverRequest::isValid() const
 
 
 /*!
- * @brief  Construct an TestFailoverResponse object.
+ * Returns a TestFailoverResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An TestFailoverResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ElastiCacheClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * TestFailoverRequest::response(QNetworkReply * const reply) const
 {
@@ -95,20 +87,17 @@ QtAws::Core::AwsAbstractResponse * TestFailoverRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::ElastiCache::TestFailoverRequestPrivate
+ * \brief The TestFailoverRequestPrivate class provides private implementation for TestFailoverRequest.
+ * \internal
  *
- * @class  TestFailoverRequestPrivate
- *
- * @brief  Private implementation for TestFailoverRequest.
+ * \inmodule QtAwsElastiCache
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new TestFailoverRequestPrivate object.
- *
- * @param  action  ElastiCache action being performed.
- * @param  q       Pointer to this object's public TestFailoverRequest instance.
+ * Constructs a TestFailoverRequestPrivate object for ElastiCache \a action with,
+ * public implementation \a q.
  */
 TestFailoverRequestPrivate::TestFailoverRequestPrivate(
     const ElastiCacheRequest::Action action, TestFailoverRequest * const q)
@@ -118,15 +107,10 @@ TestFailoverRequestPrivate::TestFailoverRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new TestFailoverRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the TestFailoverRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public TestFailoverRequest instance.
  */
 TestFailoverRequestPrivate::TestFailoverRequestPrivate(
     const TestFailoverRequestPrivate &other, TestFailoverRequest * const q)

@@ -27,10 +27,9 @@ namespace ECS {
 
 /*!
  * \class QtAws::ECS::UpdateServiceRequest
- *
  * \brief The UpdateServiceRequest class provides an interface for ECS UpdateService requests.
  *
- * \ingroup ECS
+ * \inmodule QtAwsECS
  *
  *  Amazon Elastic Container Service (Amazon ECS) is a highly scalable, fast, container management service that makes it
  *  easy to run, stop, and manage Docker containers on a cluster. You can host your cluster on a serverless infrastructure
@@ -54,9 +53,7 @@ namespace ECS {
  */
 
 /*!
- * @brief  Constructs a new UpdateServiceRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateServiceRequest::UpdateServiceRequest(const UpdateServiceRequest &other)
     : ECSRequest(new UpdateServiceRequestPrivate(*other.d_func(), this))
@@ -65,7 +62,7 @@ UpdateServiceRequest::UpdateServiceRequest(const UpdateServiceRequest &other)
 }
 
 /*!
- * @brief  Constructs a new UpdateServiceRequest object.
+ * Constructs a UpdateServiceRequest object.
  */
 UpdateServiceRequest::UpdateServiceRequest()
     : ECSRequest(new UpdateServiceRequestPrivate(ECSRequest::UpdateServiceAction, this))
@@ -83,14 +80,9 @@ bool UpdateServiceRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateServiceResponse object.
+ * Returns a UpdateServiceResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateServiceResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ECSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateServiceRequest::response(QNetworkReply * const reply) const
 {
@@ -98,20 +90,17 @@ QtAws::Core::AwsAbstractResponse * UpdateServiceRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::ECS::UpdateServiceRequestPrivate
+ * \brief The UpdateServiceRequestPrivate class provides private implementation for UpdateServiceRequest.
+ * \internal
  *
- * @class  UpdateServiceRequestPrivate
- *
- * @brief  Private implementation for UpdateServiceRequest.
+ * \inmodule QtAwsECS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateServiceRequestPrivate object.
- *
- * @param  action  ECS action being performed.
- * @param  q       Pointer to this object's public UpdateServiceRequest instance.
+ * Constructs a UpdateServiceRequestPrivate object for ECS \a action with,
+ * public implementation \a q.
  */
 UpdateServiceRequestPrivate::UpdateServiceRequestPrivate(
     const ECSRequest::Action action, UpdateServiceRequest * const q)
@@ -121,15 +110,10 @@ UpdateServiceRequestPrivate::UpdateServiceRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateServiceRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateServiceRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateServiceRequest instance.
  */
 UpdateServiceRequestPrivate::UpdateServiceRequestPrivate(
     const UpdateServiceRequestPrivate &other, UpdateServiceRequest * const q)

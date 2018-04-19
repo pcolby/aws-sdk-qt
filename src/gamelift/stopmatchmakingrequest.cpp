@@ -27,10 +27,9 @@ namespace GameLift {
 
 /*!
  * \class QtAws::GameLift::StopMatchmakingRequest
- *
  * \brief The StopMatchmakingRequest class provides an interface for GameLift StopMatchmaking requests.
  *
- * \ingroup GameLift
+ * \inmodule QtAwsGameLift
  *
  *  <fullname>Amazon GameLift Service</fullname>
  * 
@@ -473,9 +472,7 @@ namespace GameLift {
  */
 
 /*!
- * @brief  Constructs a new StopMatchmakingRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 StopMatchmakingRequest::StopMatchmakingRequest(const StopMatchmakingRequest &other)
     : GameLiftRequest(new StopMatchmakingRequestPrivate(*other.d_func(), this))
@@ -484,7 +481,7 @@ StopMatchmakingRequest::StopMatchmakingRequest(const StopMatchmakingRequest &oth
 }
 
 /*!
- * @brief  Constructs a new StopMatchmakingRequest object.
+ * Constructs a StopMatchmakingRequest object.
  */
 StopMatchmakingRequest::StopMatchmakingRequest()
     : GameLiftRequest(new StopMatchmakingRequestPrivate(GameLiftRequest::StopMatchmakingAction, this))
@@ -502,14 +499,9 @@ bool StopMatchmakingRequest::isValid() const
 
 
 /*!
- * @brief  Construct an StopMatchmakingResponse object.
+ * Returns a StopMatchmakingResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An StopMatchmakingResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GameLiftClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * StopMatchmakingRequest::response(QNetworkReply * const reply) const
 {
@@ -517,20 +509,17 @@ QtAws::Core::AwsAbstractResponse * StopMatchmakingRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::GameLift::StopMatchmakingRequestPrivate
+ * \brief The StopMatchmakingRequestPrivate class provides private implementation for StopMatchmakingRequest.
+ * \internal
  *
- * @class  StopMatchmakingRequestPrivate
- *
- * @brief  Private implementation for StopMatchmakingRequest.
+ * \inmodule QtAwsGameLift
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new StopMatchmakingRequestPrivate object.
- *
- * @param  action  GameLift action being performed.
- * @param  q       Pointer to this object's public StopMatchmakingRequest instance.
+ * Constructs a StopMatchmakingRequestPrivate object for GameLift \a action with,
+ * public implementation \a q.
  */
 StopMatchmakingRequestPrivate::StopMatchmakingRequestPrivate(
     const GameLiftRequest::Action action, StopMatchmakingRequest * const q)
@@ -540,15 +529,10 @@ StopMatchmakingRequestPrivate::StopMatchmakingRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StopMatchmakingRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the StopMatchmakingRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public StopMatchmakingRequest instance.
  */
 StopMatchmakingRequestPrivate::StopMatchmakingRequestPrivate(
     const StopMatchmakingRequestPrivate &other, StopMatchmakingRequest * const q)

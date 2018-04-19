@@ -27,19 +27,16 @@ namespace SageMaker {
 
 /*!
  * \class QtAws::SageMaker::UpdateEndpointRequest
- *
  * \brief The UpdateEndpointRequest class provides an interface for SageMaker UpdateEndpoint requests.
  *
- * \ingroup SageMaker
+ * \inmodule QtAwsSageMaker
  *
  *
  * \sa SageMakerClient::updateEndpoint
  */
 
 /*!
- * @brief  Constructs a new UpdateEndpointRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateEndpointRequest::UpdateEndpointRequest(const UpdateEndpointRequest &other)
     : SageMakerRequest(new UpdateEndpointRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ UpdateEndpointRequest::UpdateEndpointRequest(const UpdateEndpointRequest &other)
 }
 
 /*!
- * @brief  Constructs a new UpdateEndpointRequest object.
+ * Constructs a UpdateEndpointRequest object.
  */
 UpdateEndpointRequest::UpdateEndpointRequest()
     : SageMakerRequest(new UpdateEndpointRequestPrivate(SageMakerRequest::UpdateEndpointAction, this))
@@ -66,14 +63,9 @@ bool UpdateEndpointRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateEndpointResponse object.
+ * Returns a UpdateEndpointResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateEndpointResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SageMakerClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateEndpointRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * UpdateEndpointRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::SageMaker::UpdateEndpointRequestPrivate
+ * \brief The UpdateEndpointRequestPrivate class provides private implementation for UpdateEndpointRequest.
+ * \internal
  *
- * @class  UpdateEndpointRequestPrivate
- *
- * @brief  Private implementation for UpdateEndpointRequest.
+ * \inmodule QtAwsSageMaker
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateEndpointRequestPrivate object.
- *
- * @param  action  SageMaker action being performed.
- * @param  q       Pointer to this object's public UpdateEndpointRequest instance.
+ * Constructs a UpdateEndpointRequestPrivate object for SageMaker \a action with,
+ * public implementation \a q.
  */
 UpdateEndpointRequestPrivate::UpdateEndpointRequestPrivate(
     const SageMakerRequest::Action action, UpdateEndpointRequest * const q)
@@ -104,15 +93,10 @@ UpdateEndpointRequestPrivate::UpdateEndpointRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateEndpointRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateEndpointRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateEndpointRequest instance.
  */
 UpdateEndpointRequestPrivate::UpdateEndpointRequestPrivate(
     const UpdateEndpointRequestPrivate &other, UpdateEndpointRequest * const q)

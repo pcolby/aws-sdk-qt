@@ -27,10 +27,9 @@ namespace CodeDeploy {
 
 /*!
  * \class QtAws::CodeDeploy::GetApplicationRequest
- *
  * \brief The GetApplicationRequest class provides an interface for CodeDeploy GetApplication requests.
  *
- * \ingroup CodeDeploy
+ * \inmodule QtAwsCodeDeploy
  *
  *  <fullname>AWS CodeDeploy</fullname>
  * 
@@ -118,9 +117,7 @@ namespace CodeDeploy {
  */
 
 /*!
- * @brief  Constructs a new GetApplicationRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetApplicationRequest::GetApplicationRequest(const GetApplicationRequest &other)
     : CodeDeployRequest(new GetApplicationRequestPrivate(*other.d_func(), this))
@@ -129,7 +126,7 @@ GetApplicationRequest::GetApplicationRequest(const GetApplicationRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetApplicationRequest object.
+ * Constructs a GetApplicationRequest object.
  */
 GetApplicationRequest::GetApplicationRequest()
     : CodeDeployRequest(new GetApplicationRequestPrivate(CodeDeployRequest::GetApplicationAction, this))
@@ -147,14 +144,9 @@ bool GetApplicationRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetApplicationResponse object.
+ * Returns a GetApplicationResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetApplicationResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CodeDeployClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetApplicationRequest::response(QNetworkReply * const reply) const
 {
@@ -162,20 +154,17 @@ QtAws::Core::AwsAbstractResponse * GetApplicationRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::CodeDeploy::GetApplicationRequestPrivate
+ * \brief The GetApplicationRequestPrivate class provides private implementation for GetApplicationRequest.
+ * \internal
  *
- * @class  GetApplicationRequestPrivate
- *
- * @brief  Private implementation for GetApplicationRequest.
+ * \inmodule QtAwsCodeDeploy
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetApplicationRequestPrivate object.
- *
- * @param  action  CodeDeploy action being performed.
- * @param  q       Pointer to this object's public GetApplicationRequest instance.
+ * Constructs a GetApplicationRequestPrivate object for CodeDeploy \a action with,
+ * public implementation \a q.
  */
 GetApplicationRequestPrivate::GetApplicationRequestPrivate(
     const CodeDeployRequest::Action action, GetApplicationRequest * const q)
@@ -185,15 +174,10 @@ GetApplicationRequestPrivate::GetApplicationRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetApplicationRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetApplicationRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetApplicationRequest instance.
  */
 GetApplicationRequestPrivate::GetApplicationRequestPrivate(
     const GetApplicationRequestPrivate &other, GetApplicationRequest * const q)

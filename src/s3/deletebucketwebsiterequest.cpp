@@ -27,19 +27,16 @@ namespace S3 {
 
 /*!
  * \class QtAws::S3::DeleteBucketWebsiteRequest
- *
  * \brief The DeleteBucketWebsiteRequest class provides an interface for S3 DeleteBucketWebsite requests.
  *
- * \ingroup S3
+ * \inmodule QtAwsS3
  *
  *
  * \sa S3Client::deleteBucketWebsite
  */
 
 /*!
- * @brief  Constructs a new DeleteBucketWebsiteRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteBucketWebsiteRequest::DeleteBucketWebsiteRequest(const DeleteBucketWebsiteRequest &other)
     : S3Request(new DeleteBucketWebsiteRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ DeleteBucketWebsiteRequest::DeleteBucketWebsiteRequest(const DeleteBucketWebsite
 }
 
 /*!
- * @brief  Constructs a new DeleteBucketWebsiteRequest object.
+ * Constructs a DeleteBucketWebsiteRequest object.
  */
 DeleteBucketWebsiteRequest::DeleteBucketWebsiteRequest()
     : S3Request(new DeleteBucketWebsiteRequestPrivate(S3Request::DeleteBucketWebsiteAction, this))
@@ -66,14 +63,9 @@ bool DeleteBucketWebsiteRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteBucketWebsiteResponse object.
+ * Returns a DeleteBucketWebsiteResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteBucketWebsiteResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  S3Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteBucketWebsiteRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * DeleteBucketWebsiteRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::S3::DeleteBucketWebsiteRequestPrivate
+ * \brief The DeleteBucketWebsiteRequestPrivate class provides private implementation for DeleteBucketWebsiteRequest.
+ * \internal
  *
- * @class  DeleteBucketWebsiteRequestPrivate
- *
- * @brief  Private implementation for DeleteBucketWebsiteRequest.
+ * \inmodule QtAwsS3
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteBucketWebsiteRequestPrivate object.
- *
- * @param  action  S3 action being performed.
- * @param  q       Pointer to this object's public DeleteBucketWebsiteRequest instance.
+ * Constructs a DeleteBucketWebsiteRequestPrivate object for S3 \a action with,
+ * public implementation \a q.
  */
 DeleteBucketWebsiteRequestPrivate::DeleteBucketWebsiteRequestPrivate(
     const S3Request::Action action, DeleteBucketWebsiteRequest * const q)
@@ -104,15 +93,10 @@ DeleteBucketWebsiteRequestPrivate::DeleteBucketWebsiteRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteBucketWebsiteRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteBucketWebsiteRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteBucketWebsiteRequest instance.
  */
 DeleteBucketWebsiteRequestPrivate::DeleteBucketWebsiteRequestPrivate(
     const DeleteBucketWebsiteRequestPrivate &other, DeleteBucketWebsiteRequest * const q)

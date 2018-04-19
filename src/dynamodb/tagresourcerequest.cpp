@@ -27,10 +27,9 @@ namespace DynamoDB {
 
 /*!
  * \class QtAws::DynamoDB::TagResourceRequest
- *
  * \brief The TagResourceRequest class provides an interface for DynamoDB TagResource requests.
  *
- * \ingroup DynamoDB
+ * \inmodule QtAwsDynamoDB
  *
  *  <fullname>Amazon DynamoDB</fullname>
  * 
@@ -56,9 +55,7 @@ namespace DynamoDB {
  */
 
 /*!
- * @brief  Constructs a new TagResourceRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 TagResourceRequest::TagResourceRequest(const TagResourceRequest &other)
     : DynamoDBRequest(new TagResourceRequestPrivate(*other.d_func(), this))
@@ -67,7 +64,7 @@ TagResourceRequest::TagResourceRequest(const TagResourceRequest &other)
 }
 
 /*!
- * @brief  Constructs a new TagResourceRequest object.
+ * Constructs a TagResourceRequest object.
  */
 TagResourceRequest::TagResourceRequest()
     : DynamoDBRequest(new TagResourceRequestPrivate(DynamoDBRequest::TagResourceAction, this))
@@ -85,14 +82,9 @@ bool TagResourceRequest::isValid() const
 
 
 /*!
- * @brief  Construct an TagResourceResponse object.
+ * Returns a TagResourceResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An TagResourceResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DynamoDBClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * TagResourceRequest::response(QNetworkReply * const reply) const
 {
@@ -100,20 +92,17 @@ QtAws::Core::AwsAbstractResponse * TagResourceRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::DynamoDB::TagResourceRequestPrivate
+ * \brief The TagResourceRequestPrivate class provides private implementation for TagResourceRequest.
+ * \internal
  *
- * @class  TagResourceRequestPrivate
- *
- * @brief  Private implementation for TagResourceRequest.
+ * \inmodule QtAwsDynamoDB
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new TagResourceRequestPrivate object.
- *
- * @param  action  DynamoDB action being performed.
- * @param  q       Pointer to this object's public TagResourceRequest instance.
+ * Constructs a TagResourceRequestPrivate object for DynamoDB \a action with,
+ * public implementation \a q.
  */
 TagResourceRequestPrivate::TagResourceRequestPrivate(
     const DynamoDBRequest::Action action, TagResourceRequest * const q)
@@ -123,15 +112,10 @@ TagResourceRequestPrivate::TagResourceRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new TagResourceRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the TagResourceRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public TagResourceRequest instance.
  */
 TagResourceRequestPrivate::TagResourceRequestPrivate(
     const TagResourceRequestPrivate &other, TagResourceRequest * const q)

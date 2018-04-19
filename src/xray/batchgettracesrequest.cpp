@@ -27,10 +27,9 @@ namespace XRay {
 
 /*!
  * \class QtAws::XRay::BatchGetTracesRequest
- *
  * \brief The BatchGetTracesRequest class provides an interface for XRay BatchGetTraces requests.
  *
- * \ingroup XRay
+ * \inmodule QtAwsXRay
  *
  *  AWS X-Ray provides APIs for managing debug traces and retrieving service maps and other data created by processing those
  *
@@ -38,9 +37,7 @@ namespace XRay {
  */
 
 /*!
- * @brief  Constructs a new BatchGetTracesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 BatchGetTracesRequest::BatchGetTracesRequest(const BatchGetTracesRequest &other)
     : XRayRequest(new BatchGetTracesRequestPrivate(*other.d_func(), this))
@@ -49,7 +46,7 @@ BatchGetTracesRequest::BatchGetTracesRequest(const BatchGetTracesRequest &other)
 }
 
 /*!
- * @brief  Constructs a new BatchGetTracesRequest object.
+ * Constructs a BatchGetTracesRequest object.
  */
 BatchGetTracesRequest::BatchGetTracesRequest()
     : XRayRequest(new BatchGetTracesRequestPrivate(XRayRequest::BatchGetTracesAction, this))
@@ -67,14 +64,9 @@ bool BatchGetTracesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an BatchGetTracesResponse object.
+ * Returns a BatchGetTracesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An BatchGetTracesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  XRayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * BatchGetTracesRequest::response(QNetworkReply * const reply) const
 {
@@ -82,20 +74,17 @@ QtAws::Core::AwsAbstractResponse * BatchGetTracesRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::XRay::BatchGetTracesRequestPrivate
+ * \brief The BatchGetTracesRequestPrivate class provides private implementation for BatchGetTracesRequest.
+ * \internal
  *
- * @class  BatchGetTracesRequestPrivate
- *
- * @brief  Private implementation for BatchGetTracesRequest.
+ * \inmodule QtAwsXRay
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new BatchGetTracesRequestPrivate object.
- *
- * @param  action  XRay action being performed.
- * @param  q       Pointer to this object's public BatchGetTracesRequest instance.
+ * Constructs a BatchGetTracesRequestPrivate object for XRay \a action with,
+ * public implementation \a q.
  */
 BatchGetTracesRequestPrivate::BatchGetTracesRequestPrivate(
     const XRayRequest::Action action, BatchGetTracesRequest * const q)
@@ -105,15 +94,10 @@ BatchGetTracesRequestPrivate::BatchGetTracesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new BatchGetTracesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the BatchGetTracesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public BatchGetTracesRequest instance.
  */
 BatchGetTracesRequestPrivate::BatchGetTracesRequestPrivate(
     const BatchGetTracesRequestPrivate &other, BatchGetTracesRequest * const q)

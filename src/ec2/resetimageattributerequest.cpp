@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::ResetImageAttributeRequest
- *
  * \brief The ResetImageAttributeRequest class provides an interface for EC2 ResetImageAttribute requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new ResetImageAttributeRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ResetImageAttributeRequest::ResetImageAttributeRequest(const ResetImageAttributeRequest &other)
     : EC2Request(new ResetImageAttributeRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ ResetImageAttributeRequest::ResetImageAttributeRequest(const ResetImageAttribute
 }
 
 /*!
- * @brief  Constructs a new ResetImageAttributeRequest object.
+ * Constructs a ResetImageAttributeRequest object.
  */
 ResetImageAttributeRequest::ResetImageAttributeRequest()
     : EC2Request(new ResetImageAttributeRequestPrivate(EC2Request::ResetImageAttributeAction, this))
@@ -70,14 +67,9 @@ bool ResetImageAttributeRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ResetImageAttributeResponse object.
+ * Returns a ResetImageAttributeResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ResetImageAttributeResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ResetImageAttributeRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * ResetImageAttributeRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::ResetImageAttributeRequestPrivate
+ * \brief The ResetImageAttributeRequestPrivate class provides private implementation for ResetImageAttributeRequest.
+ * \internal
  *
- * @class  ResetImageAttributeRequestPrivate
- *
- * @brief  Private implementation for ResetImageAttributeRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ResetImageAttributeRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public ResetImageAttributeRequest instance.
+ * Constructs a ResetImageAttributeRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 ResetImageAttributeRequestPrivate::ResetImageAttributeRequestPrivate(
     const EC2Request::Action action, ResetImageAttributeRequest * const q)
@@ -108,15 +97,10 @@ ResetImageAttributeRequestPrivate::ResetImageAttributeRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ResetImageAttributeRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ResetImageAttributeRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ResetImageAttributeRequest instance.
  */
 ResetImageAttributeRequestPrivate::ResetImageAttributeRequestPrivate(
     const ResetImageAttributeRequestPrivate &other, ResetImageAttributeRequest * const q)

@@ -27,10 +27,9 @@ namespace AppSync {
 
 /*!
  * \class QtAws::AppSync::ListTypesRequest
- *
  * \brief The ListTypesRequest class provides an interface for AppSync ListTypes requests.
  *
- * \ingroup AppSync
+ * \inmodule QtAwsAppSync
  *
  *  AWS AppSync provides API actions for creating and interacting with data sources using GraphQL from your
  *
@@ -38,9 +37,7 @@ namespace AppSync {
  */
 
 /*!
- * @brief  Constructs a new ListTypesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListTypesRequest::ListTypesRequest(const ListTypesRequest &other)
     : AppSyncRequest(new ListTypesRequestPrivate(*other.d_func(), this))
@@ -49,7 +46,7 @@ ListTypesRequest::ListTypesRequest(const ListTypesRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ListTypesRequest object.
+ * Constructs a ListTypesRequest object.
  */
 ListTypesRequest::ListTypesRequest()
     : AppSyncRequest(new ListTypesRequestPrivate(AppSyncRequest::ListTypesAction, this))
@@ -67,14 +64,9 @@ bool ListTypesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListTypesResponse object.
+ * Returns a ListTypesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListTypesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AppSyncClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListTypesRequest::response(QNetworkReply * const reply) const
 {
@@ -82,20 +74,17 @@ QtAws::Core::AwsAbstractResponse * ListTypesRequest::response(QNetworkReply * co
 }
 
 /*!
- * @internal
+ * \class QtAws::AppSync::ListTypesRequestPrivate
+ * \brief The ListTypesRequestPrivate class provides private implementation for ListTypesRequest.
+ * \internal
  *
- * @class  ListTypesRequestPrivate
- *
- * @brief  Private implementation for ListTypesRequest.
+ * \inmodule QtAwsAppSync
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListTypesRequestPrivate object.
- *
- * @param  action  AppSync action being performed.
- * @param  q       Pointer to this object's public ListTypesRequest instance.
+ * Constructs a ListTypesRequestPrivate object for AppSync \a action with,
+ * public implementation \a q.
  */
 ListTypesRequestPrivate::ListTypesRequestPrivate(
     const AppSyncRequest::Action action, ListTypesRequest * const q)
@@ -105,15 +94,10 @@ ListTypesRequestPrivate::ListTypesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListTypesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListTypesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListTypesRequest instance.
  */
 ListTypesRequestPrivate::ListTypesRequestPrivate(
     const ListTypesRequestPrivate &other, ListTypesRequest * const q)

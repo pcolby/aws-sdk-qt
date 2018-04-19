@@ -27,10 +27,9 @@ namespace AlexaForBusiness {
 
 /*!
  * \class QtAws::AlexaForBusiness::GetRoomRequest
- *
  * \brief The GetRoomRequest class provides an interface for AlexaForBusiness GetRoom requests.
  *
- * \ingroup AlexaForBusiness
+ * \inmodule QtAwsAlexaForBusiness
  *
  *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
  *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
@@ -42,9 +41,7 @@ namespace AlexaForBusiness {
  */
 
 /*!
- * @brief  Constructs a new GetRoomRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetRoomRequest::GetRoomRequest(const GetRoomRequest &other)
     : AlexaForBusinessRequest(new GetRoomRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ GetRoomRequest::GetRoomRequest(const GetRoomRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetRoomRequest object.
+ * Constructs a GetRoomRequest object.
  */
 GetRoomRequest::GetRoomRequest()
     : AlexaForBusinessRequest(new GetRoomRequestPrivate(AlexaForBusinessRequest::GetRoomAction, this))
@@ -71,14 +68,9 @@ bool GetRoomRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetRoomResponse object.
+ * Returns a GetRoomResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetRoomResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AlexaForBusinessClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetRoomRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * GetRoomRequest::response(QNetworkReply * cons
 }
 
 /*!
- * @internal
+ * \class QtAws::AlexaForBusiness::GetRoomRequestPrivate
+ * \brief The GetRoomRequestPrivate class provides private implementation for GetRoomRequest.
+ * \internal
  *
- * @class  GetRoomRequestPrivate
- *
- * @brief  Private implementation for GetRoomRequest.
+ * \inmodule QtAwsAlexaForBusiness
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetRoomRequestPrivate object.
- *
- * @param  action  AlexaForBusiness action being performed.
- * @param  q       Pointer to this object's public GetRoomRequest instance.
+ * Constructs a GetRoomRequestPrivate object for AlexaForBusiness \a action with,
+ * public implementation \a q.
  */
 GetRoomRequestPrivate::GetRoomRequestPrivate(
     const AlexaForBusinessRequest::Action action, GetRoomRequest * const q)
@@ -109,15 +98,10 @@ GetRoomRequestPrivate::GetRoomRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetRoomRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetRoomRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetRoomRequest instance.
  */
 GetRoomRequestPrivate::GetRoomRequestPrivate(
     const GetRoomRequestPrivate &other, GetRoomRequest * const q)

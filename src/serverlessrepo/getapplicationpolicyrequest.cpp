@@ -27,10 +27,9 @@ namespace ServerlessApplicationRepository {
 
 /*!
  * \class QtAws::ServerlessApplicationRepository::GetApplicationPolicyRequest
- *
  * \brief The GetApplicationPolicyRequest class provides an interface for ServerlessApplicationRepository GetApplicationPolicy requests.
  *
- * \ingroup ServerlessApplicationRepository
+ * \inmodule QtAwsServerlessApplicationRepository
  *
  *  The AWS Serverless Application Repository makes it easy for developers and enterprises to quickly find and deploy
  *  serverless applications in the AWS Cloud. For more information about serverless applications, see Serverless Computing
@@ -58,9 +57,7 @@ namespace ServerlessApplicationRepository {
  */
 
 /*!
- * @brief  Constructs a new GetApplicationPolicyRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetApplicationPolicyRequest::GetApplicationPolicyRequest(const GetApplicationPolicyRequest &other)
     : ServerlessApplicationRepositoryRequest(new GetApplicationPolicyRequestPrivate(*other.d_func(), this))
@@ -69,7 +66,7 @@ GetApplicationPolicyRequest::GetApplicationPolicyRequest(const GetApplicationPol
 }
 
 /*!
- * @brief  Constructs a new GetApplicationPolicyRequest object.
+ * Constructs a GetApplicationPolicyRequest object.
  */
 GetApplicationPolicyRequest::GetApplicationPolicyRequest()
     : ServerlessApplicationRepositoryRequest(new GetApplicationPolicyRequestPrivate(ServerlessApplicationRepositoryRequest::GetApplicationPolicyAction, this))
@@ -87,14 +84,9 @@ bool GetApplicationPolicyRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetApplicationPolicyResponse object.
+ * Returns a GetApplicationPolicyResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetApplicationPolicyResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ServerlessApplicationRepositoryClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetApplicationPolicyRequest::response(QNetworkReply * const reply) const
 {
@@ -102,20 +94,17 @@ QtAws::Core::AwsAbstractResponse * GetApplicationPolicyRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::ServerlessApplicationRepository::GetApplicationPolicyRequestPrivate
+ * \brief The GetApplicationPolicyRequestPrivate class provides private implementation for GetApplicationPolicyRequest.
+ * \internal
  *
- * @class  GetApplicationPolicyRequestPrivate
- *
- * @brief  Private implementation for GetApplicationPolicyRequest.
+ * \inmodule QtAwsServerlessApplicationRepository
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetApplicationPolicyRequestPrivate object.
- *
- * @param  action  ServerlessApplicationRepository action being performed.
- * @param  q       Pointer to this object's public GetApplicationPolicyRequest instance.
+ * Constructs a GetApplicationPolicyRequestPrivate object for ServerlessApplicationRepository \a action with,
+ * public implementation \a q.
  */
 GetApplicationPolicyRequestPrivate::GetApplicationPolicyRequestPrivate(
     const ServerlessApplicationRepositoryRequest::Action action, GetApplicationPolicyRequest * const q)
@@ -125,15 +114,10 @@ GetApplicationPolicyRequestPrivate::GetApplicationPolicyRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetApplicationPolicyRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetApplicationPolicyRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetApplicationPolicyRequest instance.
  */
 GetApplicationPolicyRequestPrivate::GetApplicationPolicyRequestPrivate(
     const GetApplicationPolicyRequestPrivate &other, GetApplicationPolicyRequest * const q)

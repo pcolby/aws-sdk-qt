@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::AcceptReservedInstancesExchangeQuoteRequest
- *
  * \brief The AcceptReservedInstancesExchangeQuoteRequest class provides an interface for EC2 AcceptReservedInstancesExchangeQuote requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new AcceptReservedInstancesExchangeQuoteRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AcceptReservedInstancesExchangeQuoteRequest::AcceptReservedInstancesExchangeQuoteRequest(const AcceptReservedInstancesExchangeQuoteRequest &other)
     : EC2Request(new AcceptReservedInstancesExchangeQuoteRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ AcceptReservedInstancesExchangeQuoteRequest::AcceptReservedInstancesExchangeQuot
 }
 
 /*!
- * @brief  Constructs a new AcceptReservedInstancesExchangeQuoteRequest object.
+ * Constructs a AcceptReservedInstancesExchangeQuoteRequest object.
  */
 AcceptReservedInstancesExchangeQuoteRequest::AcceptReservedInstancesExchangeQuoteRequest()
     : EC2Request(new AcceptReservedInstancesExchangeQuoteRequestPrivate(EC2Request::AcceptReservedInstancesExchangeQuoteAction, this))
@@ -70,14 +67,9 @@ bool AcceptReservedInstancesExchangeQuoteRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AcceptReservedInstancesExchangeQuoteResponse object.
+ * Returns a AcceptReservedInstancesExchangeQuoteResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AcceptReservedInstancesExchangeQuoteResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AcceptReservedInstancesExchangeQuoteRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * AcceptReservedInstancesExchangeQuoteRequest::
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::AcceptReservedInstancesExchangeQuoteRequestPrivate
+ * \brief The AcceptReservedInstancesExchangeQuoteRequestPrivate class provides private implementation for AcceptReservedInstancesExchangeQuoteRequest.
+ * \internal
  *
- * @class  AcceptReservedInstancesExchangeQuoteRequestPrivate
- *
- * @brief  Private implementation for AcceptReservedInstancesExchangeQuoteRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AcceptReservedInstancesExchangeQuoteRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public AcceptReservedInstancesExchangeQuoteRequest instance.
+ * Constructs a AcceptReservedInstancesExchangeQuoteRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 AcceptReservedInstancesExchangeQuoteRequestPrivate::AcceptReservedInstancesExchangeQuoteRequestPrivate(
     const EC2Request::Action action, AcceptReservedInstancesExchangeQuoteRequest * const q)
@@ -108,15 +97,10 @@ AcceptReservedInstancesExchangeQuoteRequestPrivate::AcceptReservedInstancesExcha
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AcceptReservedInstancesExchangeQuoteRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AcceptReservedInstancesExchangeQuoteRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AcceptReservedInstancesExchangeQuoteRequest instance.
  */
 AcceptReservedInstancesExchangeQuoteRequestPrivate::AcceptReservedInstancesExchangeQuoteRequestPrivate(
     const AcceptReservedInstancesExchangeQuoteRequestPrivate &other, AcceptReservedInstancesExchangeQuoteRequest * const q)

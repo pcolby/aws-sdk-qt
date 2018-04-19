@@ -27,19 +27,16 @@ namespace MTurk {
 
 /*!
  * \class QtAws::MTurk::DeleteWorkerBlockRequest
- *
  * \brief The DeleteWorkerBlockRequest class provides an interface for MTurk DeleteWorkerBlock requests.
  *
- * \ingroup MTurk
+ * \inmodule QtAwsMTurk
  *
  *
  * \sa MTurkClient::deleteWorkerBlock
  */
 
 /*!
- * @brief  Constructs a new DeleteWorkerBlockRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteWorkerBlockRequest::DeleteWorkerBlockRequest(const DeleteWorkerBlockRequest &other)
     : MTurkRequest(new DeleteWorkerBlockRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ DeleteWorkerBlockRequest::DeleteWorkerBlockRequest(const DeleteWorkerBlockReques
 }
 
 /*!
- * @brief  Constructs a new DeleteWorkerBlockRequest object.
+ * Constructs a DeleteWorkerBlockRequest object.
  */
 DeleteWorkerBlockRequest::DeleteWorkerBlockRequest()
     : MTurkRequest(new DeleteWorkerBlockRequestPrivate(MTurkRequest::DeleteWorkerBlockAction, this))
@@ -66,14 +63,9 @@ bool DeleteWorkerBlockRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteWorkerBlockResponse object.
+ * Returns a DeleteWorkerBlockResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteWorkerBlockResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MTurkClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteWorkerBlockRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * DeleteWorkerBlockRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::MTurk::DeleteWorkerBlockRequestPrivate
+ * \brief The DeleteWorkerBlockRequestPrivate class provides private implementation for DeleteWorkerBlockRequest.
+ * \internal
  *
- * @class  DeleteWorkerBlockRequestPrivate
- *
- * @brief  Private implementation for DeleteWorkerBlockRequest.
+ * \inmodule QtAwsMTurk
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteWorkerBlockRequestPrivate object.
- *
- * @param  action  MTurk action being performed.
- * @param  q       Pointer to this object's public DeleteWorkerBlockRequest instance.
+ * Constructs a DeleteWorkerBlockRequestPrivate object for MTurk \a action with,
+ * public implementation \a q.
  */
 DeleteWorkerBlockRequestPrivate::DeleteWorkerBlockRequestPrivate(
     const MTurkRequest::Action action, DeleteWorkerBlockRequest * const q)
@@ -104,15 +93,10 @@ DeleteWorkerBlockRequestPrivate::DeleteWorkerBlockRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteWorkerBlockRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteWorkerBlockRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteWorkerBlockRequest instance.
  */
 DeleteWorkerBlockRequestPrivate::DeleteWorkerBlockRequestPrivate(
     const DeleteWorkerBlockRequestPrivate &other, DeleteWorkerBlockRequest * const q)

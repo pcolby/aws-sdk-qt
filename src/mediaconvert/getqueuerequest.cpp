@@ -27,19 +27,16 @@ namespace MediaConvert {
 
 /*!
  * \class QtAws::MediaConvert::GetQueueRequest
- *
  * \brief The GetQueueRequest class provides an interface for MediaConvert GetQueue requests.
  *
- * \ingroup MediaConvert
+ * \inmodule QtAwsMediaConvert
  *
  *
  * \sa MediaConvertClient::getQueue
  */
 
 /*!
- * @brief  Constructs a new GetQueueRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetQueueRequest::GetQueueRequest(const GetQueueRequest &other)
     : MediaConvertRequest(new GetQueueRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ GetQueueRequest::GetQueueRequest(const GetQueueRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetQueueRequest object.
+ * Constructs a GetQueueRequest object.
  */
 GetQueueRequest::GetQueueRequest()
     : MediaConvertRequest(new GetQueueRequestPrivate(MediaConvertRequest::GetQueueAction, this))
@@ -66,14 +63,9 @@ bool GetQueueRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetQueueResponse object.
+ * Returns a GetQueueResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetQueueResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MediaConvertClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetQueueRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * GetQueueRequest::response(QNetworkReply * con
 }
 
 /*!
- * @internal
+ * \class QtAws::MediaConvert::GetQueueRequestPrivate
+ * \brief The GetQueueRequestPrivate class provides private implementation for GetQueueRequest.
+ * \internal
  *
- * @class  GetQueueRequestPrivate
- *
- * @brief  Private implementation for GetQueueRequest.
+ * \inmodule QtAwsMediaConvert
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetQueueRequestPrivate object.
- *
- * @param  action  MediaConvert action being performed.
- * @param  q       Pointer to this object's public GetQueueRequest instance.
+ * Constructs a GetQueueRequestPrivate object for MediaConvert \a action with,
+ * public implementation \a q.
  */
 GetQueueRequestPrivate::GetQueueRequestPrivate(
     const MediaConvertRequest::Action action, GetQueueRequest * const q)
@@ -104,15 +93,10 @@ GetQueueRequestPrivate::GetQueueRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetQueueRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetQueueRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetQueueRequest instance.
  */
 GetQueueRequestPrivate::GetQueueRequestPrivate(
     const GetQueueRequestPrivate &other, GetQueueRequest * const q)

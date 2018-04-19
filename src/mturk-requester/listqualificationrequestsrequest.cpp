@@ -27,19 +27,16 @@ namespace MTurk {
 
 /*!
  * \class QtAws::MTurk::ListQualificationRequestsRequest
- *
  * \brief The ListQualificationRequestsRequest class provides an interface for MTurk ListQualificationRequests requests.
  *
- * \ingroup MTurk
+ * \inmodule QtAwsMTurk
  *
  *
  * \sa MTurkClient::listQualificationRequests
  */
 
 /*!
- * @brief  Constructs a new ListQualificationRequestsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListQualificationRequestsRequest::ListQualificationRequestsRequest(const ListQualificationRequestsRequest &other)
     : MTurkRequest(new ListQualificationRequestsRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ ListQualificationRequestsRequest::ListQualificationRequestsRequest(const ListQua
 }
 
 /*!
- * @brief  Constructs a new ListQualificationRequestsRequest object.
+ * Constructs a ListQualificationRequestsRequest object.
  */
 ListQualificationRequestsRequest::ListQualificationRequestsRequest()
     : MTurkRequest(new ListQualificationRequestsRequestPrivate(MTurkRequest::ListQualificationRequestsAction, this))
@@ -66,14 +63,9 @@ bool ListQualificationRequestsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListQualificationRequestsResponse object.
+ * Returns a ListQualificationRequestsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListQualificationRequestsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MTurkClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListQualificationRequestsRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * ListQualificationRequestsRequest::response(QN
 }
 
 /*!
- * @internal
+ * \class QtAws::MTurk::ListQualificationRequestsRequestPrivate
+ * \brief The ListQualificationRequestsRequestPrivate class provides private implementation for ListQualificationRequestsRequest.
+ * \internal
  *
- * @class  ListQualificationRequestsRequestPrivate
- *
- * @brief  Private implementation for ListQualificationRequestsRequest.
+ * \inmodule QtAwsMTurk
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListQualificationRequestsRequestPrivate object.
- *
- * @param  action  MTurk action being performed.
- * @param  q       Pointer to this object's public ListQualificationRequestsRequest instance.
+ * Constructs a ListQualificationRequestsRequestPrivate object for MTurk \a action with,
+ * public implementation \a q.
  */
 ListQualificationRequestsRequestPrivate::ListQualificationRequestsRequestPrivate(
     const MTurkRequest::Action action, ListQualificationRequestsRequest * const q)
@@ -104,15 +93,10 @@ ListQualificationRequestsRequestPrivate::ListQualificationRequestsRequestPrivate
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListQualificationRequestsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListQualificationRequestsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListQualificationRequestsRequest instance.
  */
 ListQualificationRequestsRequestPrivate::ListQualificationRequestsRequestPrivate(
     const ListQualificationRequestsRequestPrivate &other, ListQualificationRequestsRequest * const q)

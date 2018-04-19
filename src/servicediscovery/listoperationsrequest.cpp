@@ -27,10 +27,9 @@ namespace ServiceDiscovery {
 
 /*!
  * \class QtAws::ServiceDiscovery::ListOperationsRequest
- *
  * \brief The ListOperationsRequest class provides an interface for ServiceDiscovery ListOperations requests.
  *
- * \ingroup ServiceDiscovery
+ * \inmodule QtAwsServiceDiscovery
  *
  *  Amazon Route 53 auto naming lets you configure public or private namespaces that your microservice applications run in.
  *  When instances of the service become available, you can call the auto naming API to register the instance, and Route 53
@@ -41,9 +40,7 @@ namespace ServiceDiscovery {
  */
 
 /*!
- * @brief  Constructs a new ListOperationsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListOperationsRequest::ListOperationsRequest(const ListOperationsRequest &other)
     : ServiceDiscoveryRequest(new ListOperationsRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ ListOperationsRequest::ListOperationsRequest(const ListOperationsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ListOperationsRequest object.
+ * Constructs a ListOperationsRequest object.
  */
 ListOperationsRequest::ListOperationsRequest()
     : ServiceDiscoveryRequest(new ListOperationsRequestPrivate(ServiceDiscoveryRequest::ListOperationsAction, this))
@@ -70,14 +67,9 @@ bool ListOperationsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListOperationsResponse object.
+ * Returns a ListOperationsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListOperationsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ServiceDiscoveryClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListOperationsRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * ListOperationsRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::ServiceDiscovery::ListOperationsRequestPrivate
+ * \brief The ListOperationsRequestPrivate class provides private implementation for ListOperationsRequest.
+ * \internal
  *
- * @class  ListOperationsRequestPrivate
- *
- * @brief  Private implementation for ListOperationsRequest.
+ * \inmodule QtAwsServiceDiscovery
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListOperationsRequestPrivate object.
- *
- * @param  action  ServiceDiscovery action being performed.
- * @param  q       Pointer to this object's public ListOperationsRequest instance.
+ * Constructs a ListOperationsRequestPrivate object for ServiceDiscovery \a action with,
+ * public implementation \a q.
  */
 ListOperationsRequestPrivate::ListOperationsRequestPrivate(
     const ServiceDiscoveryRequest::Action action, ListOperationsRequest * const q)
@@ -108,15 +97,10 @@ ListOperationsRequestPrivate::ListOperationsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListOperationsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListOperationsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListOperationsRequest instance.
  */
 ListOperationsRequestPrivate::ListOperationsRequestPrivate(
     const ListOperationsRequestPrivate &other, ListOperationsRequest * const q)

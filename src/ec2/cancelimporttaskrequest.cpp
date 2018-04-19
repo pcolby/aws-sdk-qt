@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::CancelImportTaskRequest
- *
  * \brief The CancelImportTaskRequest class provides an interface for EC2 CancelImportTask requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new CancelImportTaskRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CancelImportTaskRequest::CancelImportTaskRequest(const CancelImportTaskRequest &other)
     : EC2Request(new CancelImportTaskRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ CancelImportTaskRequest::CancelImportTaskRequest(const CancelImportTaskRequest &
 }
 
 /*!
- * @brief  Constructs a new CancelImportTaskRequest object.
+ * Constructs a CancelImportTaskRequest object.
  */
 CancelImportTaskRequest::CancelImportTaskRequest()
     : EC2Request(new CancelImportTaskRequestPrivate(EC2Request::CancelImportTaskAction, this))
@@ -70,14 +67,9 @@ bool CancelImportTaskRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CancelImportTaskResponse object.
+ * Returns a CancelImportTaskResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CancelImportTaskResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CancelImportTaskRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * CancelImportTaskRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::CancelImportTaskRequestPrivate
+ * \brief The CancelImportTaskRequestPrivate class provides private implementation for CancelImportTaskRequest.
+ * \internal
  *
- * @class  CancelImportTaskRequestPrivate
- *
- * @brief  Private implementation for CancelImportTaskRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CancelImportTaskRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public CancelImportTaskRequest instance.
+ * Constructs a CancelImportTaskRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 CancelImportTaskRequestPrivate::CancelImportTaskRequestPrivate(
     const EC2Request::Action action, CancelImportTaskRequest * const q)
@@ -108,15 +97,10 @@ CancelImportTaskRequestPrivate::CancelImportTaskRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CancelImportTaskRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CancelImportTaskRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CancelImportTaskRequest instance.
  */
 CancelImportTaskRequestPrivate::CancelImportTaskRequestPrivate(
     const CancelImportTaskRequestPrivate &other, CancelImportTaskRequest * const q)

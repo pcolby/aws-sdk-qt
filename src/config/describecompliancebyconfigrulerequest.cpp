@@ -27,10 +27,9 @@ namespace ConfigService {
 
 /*!
  * \class QtAws::ConfigService::DescribeComplianceByConfigRuleRequest
- *
  * \brief The DescribeComplianceByConfigRuleRequest class provides an interface for ConfigService DescribeComplianceByConfigRule requests.
  *
- * \ingroup ConfigService
+ * \inmodule QtAwsConfigService
  *
  *  <fullname>AWS Config</fullname>
  * 
@@ -60,9 +59,7 @@ namespace ConfigService {
  */
 
 /*!
- * @brief  Constructs a new DescribeComplianceByConfigRuleRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeComplianceByConfigRuleRequest::DescribeComplianceByConfigRuleRequest(const DescribeComplianceByConfigRuleRequest &other)
     : ConfigServiceRequest(new DescribeComplianceByConfigRuleRequestPrivate(*other.d_func(), this))
@@ -71,7 +68,7 @@ DescribeComplianceByConfigRuleRequest::DescribeComplianceByConfigRuleRequest(con
 }
 
 /*!
- * @brief  Constructs a new DescribeComplianceByConfigRuleRequest object.
+ * Constructs a DescribeComplianceByConfigRuleRequest object.
  */
 DescribeComplianceByConfigRuleRequest::DescribeComplianceByConfigRuleRequest()
     : ConfigServiceRequest(new DescribeComplianceByConfigRuleRequestPrivate(ConfigServiceRequest::DescribeComplianceByConfigRuleAction, this))
@@ -89,14 +86,9 @@ bool DescribeComplianceByConfigRuleRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeComplianceByConfigRuleResponse object.
+ * Returns a DescribeComplianceByConfigRuleResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeComplianceByConfigRuleResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ConfigServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeComplianceByConfigRuleRequest::response(QNetworkReply * const reply) const
 {
@@ -104,20 +96,17 @@ QtAws::Core::AwsAbstractResponse * DescribeComplianceByConfigRuleRequest::respon
 }
 
 /*!
- * @internal
+ * \class QtAws::ConfigService::DescribeComplianceByConfigRuleRequestPrivate
+ * \brief The DescribeComplianceByConfigRuleRequestPrivate class provides private implementation for DescribeComplianceByConfigRuleRequest.
+ * \internal
  *
- * @class  DescribeComplianceByConfigRuleRequestPrivate
- *
- * @brief  Private implementation for DescribeComplianceByConfigRuleRequest.
+ * \inmodule QtAwsConfigService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeComplianceByConfigRuleRequestPrivate object.
- *
- * @param  action  ConfigService action being performed.
- * @param  q       Pointer to this object's public DescribeComplianceByConfigRuleRequest instance.
+ * Constructs a DescribeComplianceByConfigRuleRequestPrivate object for ConfigService \a action with,
+ * public implementation \a q.
  */
 DescribeComplianceByConfigRuleRequestPrivate::DescribeComplianceByConfigRuleRequestPrivate(
     const ConfigServiceRequest::Action action, DescribeComplianceByConfigRuleRequest * const q)
@@ -127,15 +116,10 @@ DescribeComplianceByConfigRuleRequestPrivate::DescribeComplianceByConfigRuleRequ
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeComplianceByConfigRuleRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeComplianceByConfigRuleRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeComplianceByConfigRuleRequest instance.
  */
 DescribeComplianceByConfigRuleRequestPrivate::DescribeComplianceByConfigRuleRequestPrivate(
     const DescribeComplianceByConfigRuleRequestPrivate &other, DescribeComplianceByConfigRuleRequest * const q)

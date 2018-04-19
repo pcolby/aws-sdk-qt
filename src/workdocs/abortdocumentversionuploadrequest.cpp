@@ -27,10 +27,9 @@ namespace WorkDocs {
 
 /*!
  * \class QtAws::WorkDocs::AbortDocumentVersionUploadRequest
- *
  * \brief The AbortDocumentVersionUploadRequest class provides an interface for WorkDocs AbortDocumentVersionUpload requests.
  *
- * \ingroup WorkDocs
+ * \inmodule QtAwsWorkDocs
  *
  *  The WorkDocs API is designed for the following use
  * 
@@ -66,9 +65,7 @@ namespace WorkDocs {
  */
 
 /*!
- * @brief  Constructs a new AbortDocumentVersionUploadRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AbortDocumentVersionUploadRequest::AbortDocumentVersionUploadRequest(const AbortDocumentVersionUploadRequest &other)
     : WorkDocsRequest(new AbortDocumentVersionUploadRequestPrivate(*other.d_func(), this))
@@ -77,7 +74,7 @@ AbortDocumentVersionUploadRequest::AbortDocumentVersionUploadRequest(const Abort
 }
 
 /*!
- * @brief  Constructs a new AbortDocumentVersionUploadRequest object.
+ * Constructs a AbortDocumentVersionUploadRequest object.
  */
 AbortDocumentVersionUploadRequest::AbortDocumentVersionUploadRequest()
     : WorkDocsRequest(new AbortDocumentVersionUploadRequestPrivate(WorkDocsRequest::AbortDocumentVersionUploadAction, this))
@@ -95,14 +92,9 @@ bool AbortDocumentVersionUploadRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AbortDocumentVersionUploadResponse object.
+ * Returns a AbortDocumentVersionUploadResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AbortDocumentVersionUploadResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WorkDocsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AbortDocumentVersionUploadRequest::response(QNetworkReply * const reply) const
 {
@@ -110,20 +102,17 @@ QtAws::Core::AwsAbstractResponse * AbortDocumentVersionUploadRequest::response(Q
 }
 
 /*!
- * @internal
+ * \class QtAws::WorkDocs::AbortDocumentVersionUploadRequestPrivate
+ * \brief The AbortDocumentVersionUploadRequestPrivate class provides private implementation for AbortDocumentVersionUploadRequest.
+ * \internal
  *
- * @class  AbortDocumentVersionUploadRequestPrivate
- *
- * @brief  Private implementation for AbortDocumentVersionUploadRequest.
+ * \inmodule QtAwsWorkDocs
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AbortDocumentVersionUploadRequestPrivate object.
- *
- * @param  action  WorkDocs action being performed.
- * @param  q       Pointer to this object's public AbortDocumentVersionUploadRequest instance.
+ * Constructs a AbortDocumentVersionUploadRequestPrivate object for WorkDocs \a action with,
+ * public implementation \a q.
  */
 AbortDocumentVersionUploadRequestPrivate::AbortDocumentVersionUploadRequestPrivate(
     const WorkDocsRequest::Action action, AbortDocumentVersionUploadRequest * const q)
@@ -133,15 +122,10 @@ AbortDocumentVersionUploadRequestPrivate::AbortDocumentVersionUploadRequestPriva
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AbortDocumentVersionUploadRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AbortDocumentVersionUploadRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AbortDocumentVersionUploadRequest instance.
  */
 AbortDocumentVersionUploadRequestPrivate::AbortDocumentVersionUploadRequestPrivate(
     const AbortDocumentVersionUploadRequestPrivate &other, AbortDocumentVersionUploadRequest * const q)

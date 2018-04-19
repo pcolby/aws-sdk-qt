@@ -27,10 +27,9 @@ namespace IoTJobsDataPlane {
 
 /*!
  * \class QtAws::IoTJobsDataPlane::DescribeJobExecutionRequest
- *
  * \brief The DescribeJobExecutionRequest class provides an interface for IoTJobsDataPlane DescribeJobExecution requests.
  *
- * \ingroup IoTJobsDataPlane
+ * \inmodule QtAwsIoTJobsDataPlane
  *
  *  AWS IoT Jobs is a service that allows you to define a set of jobs — remote operations that are sent to and executed on
  *  one or more devices connected to AWS IoT. For example, you can define a job that instructs a set of devices to download
@@ -51,9 +50,7 @@ namespace IoTJobsDataPlane {
  */
 
 /*!
- * @brief  Constructs a new DescribeJobExecutionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeJobExecutionRequest::DescribeJobExecutionRequest(const DescribeJobExecutionRequest &other)
     : IoTJobsDataPlaneRequest(new DescribeJobExecutionRequestPrivate(*other.d_func(), this))
@@ -62,7 +59,7 @@ DescribeJobExecutionRequest::DescribeJobExecutionRequest(const DescribeJobExecut
 }
 
 /*!
- * @brief  Constructs a new DescribeJobExecutionRequest object.
+ * Constructs a DescribeJobExecutionRequest object.
  */
 DescribeJobExecutionRequest::DescribeJobExecutionRequest()
     : IoTJobsDataPlaneRequest(new DescribeJobExecutionRequestPrivate(IoTJobsDataPlaneRequest::DescribeJobExecutionAction, this))
@@ -80,14 +77,9 @@ bool DescribeJobExecutionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeJobExecutionResponse object.
+ * Returns a DescribeJobExecutionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeJobExecutionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IoTJobsDataPlaneClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeJobExecutionRequest::response(QNetworkReply * const reply) const
 {
@@ -95,20 +87,17 @@ QtAws::Core::AwsAbstractResponse * DescribeJobExecutionRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::IoTJobsDataPlane::DescribeJobExecutionRequestPrivate
+ * \brief The DescribeJobExecutionRequestPrivate class provides private implementation for DescribeJobExecutionRequest.
+ * \internal
  *
- * @class  DescribeJobExecutionRequestPrivate
- *
- * @brief  Private implementation for DescribeJobExecutionRequest.
+ * \inmodule QtAwsIoTJobsDataPlane
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeJobExecutionRequestPrivate object.
- *
- * @param  action  IoTJobsDataPlane action being performed.
- * @param  q       Pointer to this object's public DescribeJobExecutionRequest instance.
+ * Constructs a DescribeJobExecutionRequestPrivate object for IoTJobsDataPlane \a action with,
+ * public implementation \a q.
  */
 DescribeJobExecutionRequestPrivate::DescribeJobExecutionRequestPrivate(
     const IoTJobsDataPlaneRequest::Action action, DescribeJobExecutionRequest * const q)
@@ -118,15 +107,10 @@ DescribeJobExecutionRequestPrivate::DescribeJobExecutionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeJobExecutionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeJobExecutionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeJobExecutionRequest instance.
  */
 DescribeJobExecutionRequestPrivate::DescribeJobExecutionRequestPrivate(
     const DescribeJobExecutionRequestPrivate &other, DescribeJobExecutionRequest * const q)

@@ -27,10 +27,9 @@ namespace WorkDocs {
 
 /*!
  * \class QtAws::WorkDocs::DeleteCustomMetadataRequest
- *
  * \brief The DeleteCustomMetadataRequest class provides an interface for WorkDocs DeleteCustomMetadata requests.
  *
- * \ingroup WorkDocs
+ * \inmodule QtAwsWorkDocs
  *
  *  The WorkDocs API is designed for the following use
  * 
@@ -66,9 +65,7 @@ namespace WorkDocs {
  */
 
 /*!
- * @brief  Constructs a new DeleteCustomMetadataRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteCustomMetadataRequest::DeleteCustomMetadataRequest(const DeleteCustomMetadataRequest &other)
     : WorkDocsRequest(new DeleteCustomMetadataRequestPrivate(*other.d_func(), this))
@@ -77,7 +74,7 @@ DeleteCustomMetadataRequest::DeleteCustomMetadataRequest(const DeleteCustomMetad
 }
 
 /*!
- * @brief  Constructs a new DeleteCustomMetadataRequest object.
+ * Constructs a DeleteCustomMetadataRequest object.
  */
 DeleteCustomMetadataRequest::DeleteCustomMetadataRequest()
     : WorkDocsRequest(new DeleteCustomMetadataRequestPrivate(WorkDocsRequest::DeleteCustomMetadataAction, this))
@@ -95,14 +92,9 @@ bool DeleteCustomMetadataRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteCustomMetadataResponse object.
+ * Returns a DeleteCustomMetadataResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteCustomMetadataResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WorkDocsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteCustomMetadataRequest::response(QNetworkReply * const reply) const
 {
@@ -110,20 +102,17 @@ QtAws::Core::AwsAbstractResponse * DeleteCustomMetadataRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::WorkDocs::DeleteCustomMetadataRequestPrivate
+ * \brief The DeleteCustomMetadataRequestPrivate class provides private implementation for DeleteCustomMetadataRequest.
+ * \internal
  *
- * @class  DeleteCustomMetadataRequestPrivate
- *
- * @brief  Private implementation for DeleteCustomMetadataRequest.
+ * \inmodule QtAwsWorkDocs
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteCustomMetadataRequestPrivate object.
- *
- * @param  action  WorkDocs action being performed.
- * @param  q       Pointer to this object's public DeleteCustomMetadataRequest instance.
+ * Constructs a DeleteCustomMetadataRequestPrivate object for WorkDocs \a action with,
+ * public implementation \a q.
  */
 DeleteCustomMetadataRequestPrivate::DeleteCustomMetadataRequestPrivate(
     const WorkDocsRequest::Action action, DeleteCustomMetadataRequest * const q)
@@ -133,15 +122,10 @@ DeleteCustomMetadataRequestPrivate::DeleteCustomMetadataRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteCustomMetadataRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteCustomMetadataRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteCustomMetadataRequest instance.
  */
 DeleteCustomMetadataRequestPrivate::DeleteCustomMetadataRequestPrivate(
     const DeleteCustomMetadataRequestPrivate &other, DeleteCustomMetadataRequest * const q)

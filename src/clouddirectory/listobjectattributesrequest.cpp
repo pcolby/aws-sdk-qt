@@ -27,10 +27,9 @@ namespace CloudDirectory {
 
 /*!
  * \class QtAws::CloudDirectory::ListObjectAttributesRequest
- *
  * \brief The ListObjectAttributesRequest class provides an interface for CloudDirectory ListObjectAttributes requests.
  *
- * \ingroup CloudDirectory
+ * \inmodule QtAwsCloudDirectory
  *
  *  <fullname>Amazon Cloud Directory</fullname>
  * 
@@ -44,9 +43,7 @@ namespace CloudDirectory {
  */
 
 /*!
- * @brief  Constructs a new ListObjectAttributesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListObjectAttributesRequest::ListObjectAttributesRequest(const ListObjectAttributesRequest &other)
     : CloudDirectoryRequest(new ListObjectAttributesRequestPrivate(*other.d_func(), this))
@@ -55,7 +52,7 @@ ListObjectAttributesRequest::ListObjectAttributesRequest(const ListObjectAttribu
 }
 
 /*!
- * @brief  Constructs a new ListObjectAttributesRequest object.
+ * Constructs a ListObjectAttributesRequest object.
  */
 ListObjectAttributesRequest::ListObjectAttributesRequest()
     : CloudDirectoryRequest(new ListObjectAttributesRequestPrivate(CloudDirectoryRequest::ListObjectAttributesAction, this))
@@ -73,14 +70,9 @@ bool ListObjectAttributesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListObjectAttributesResponse object.
+ * Returns a ListObjectAttributesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListObjectAttributesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudDirectoryClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListObjectAttributesRequest::response(QNetworkReply * const reply) const
 {
@@ -88,20 +80,17 @@ QtAws::Core::AwsAbstractResponse * ListObjectAttributesRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudDirectory::ListObjectAttributesRequestPrivate
+ * \brief The ListObjectAttributesRequestPrivate class provides private implementation for ListObjectAttributesRequest.
+ * \internal
  *
- * @class  ListObjectAttributesRequestPrivate
- *
- * @brief  Private implementation for ListObjectAttributesRequest.
+ * \inmodule QtAwsCloudDirectory
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListObjectAttributesRequestPrivate object.
- *
- * @param  action  CloudDirectory action being performed.
- * @param  q       Pointer to this object's public ListObjectAttributesRequest instance.
+ * Constructs a ListObjectAttributesRequestPrivate object for CloudDirectory \a action with,
+ * public implementation \a q.
  */
 ListObjectAttributesRequestPrivate::ListObjectAttributesRequestPrivate(
     const CloudDirectoryRequest::Action action, ListObjectAttributesRequest * const q)
@@ -111,15 +100,10 @@ ListObjectAttributesRequestPrivate::ListObjectAttributesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListObjectAttributesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListObjectAttributesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListObjectAttributesRequest instance.
  */
 ListObjectAttributesRequestPrivate::ListObjectAttributesRequestPrivate(
     const ListObjectAttributesRequestPrivate &other, ListObjectAttributesRequest * const q)

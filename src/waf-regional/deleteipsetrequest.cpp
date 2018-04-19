@@ -27,10 +27,9 @@ namespace WAFRegional {
 
 /*!
  * \class QtAws::WAFRegional::DeleteIPSetRequest
- *
  * \brief The DeleteIPSetRequest class provides an interface for WAFRegional DeleteIPSet requests.
  *
- * \ingroup WAFRegional
+ * \inmodule QtAwsWAFRegional
  *
  *  This is the <i>AWS WAF Regional API Reference</i> for using AWS WAF with Elastic Load Balancing (ELB) Application Load
  *  Balancers. The AWS WAF actions and data types listed in the reference are available for protecting Application Load
@@ -44,9 +43,7 @@ namespace WAFRegional {
  */
 
 /*!
- * @brief  Constructs a new DeleteIPSetRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteIPSetRequest::DeleteIPSetRequest(const DeleteIPSetRequest &other)
     : WAFRegionalRequest(new DeleteIPSetRequestPrivate(*other.d_func(), this))
@@ -55,7 +52,7 @@ DeleteIPSetRequest::DeleteIPSetRequest(const DeleteIPSetRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DeleteIPSetRequest object.
+ * Constructs a DeleteIPSetRequest object.
  */
 DeleteIPSetRequest::DeleteIPSetRequest()
     : WAFRegionalRequest(new DeleteIPSetRequestPrivate(WAFRegionalRequest::DeleteIPSetAction, this))
@@ -73,14 +70,9 @@ bool DeleteIPSetRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteIPSetResponse object.
+ * Returns a DeleteIPSetResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteIPSetResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WAFRegionalClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteIPSetRequest::response(QNetworkReply * const reply) const
 {
@@ -88,20 +80,17 @@ QtAws::Core::AwsAbstractResponse * DeleteIPSetRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::WAFRegional::DeleteIPSetRequestPrivate
+ * \brief The DeleteIPSetRequestPrivate class provides private implementation for DeleteIPSetRequest.
+ * \internal
  *
- * @class  DeleteIPSetRequestPrivate
- *
- * @brief  Private implementation for DeleteIPSetRequest.
+ * \inmodule QtAwsWAFRegional
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteIPSetRequestPrivate object.
- *
- * @param  action  WAFRegional action being performed.
- * @param  q       Pointer to this object's public DeleteIPSetRequest instance.
+ * Constructs a DeleteIPSetRequestPrivate object for WAFRegional \a action with,
+ * public implementation \a q.
  */
 DeleteIPSetRequestPrivate::DeleteIPSetRequestPrivate(
     const WAFRegionalRequest::Action action, DeleteIPSetRequest * const q)
@@ -111,15 +100,10 @@ DeleteIPSetRequestPrivate::DeleteIPSetRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteIPSetRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteIPSetRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteIPSetRequest instance.
  */
 DeleteIPSetRequestPrivate::DeleteIPSetRequestPrivate(
     const DeleteIPSetRequestPrivate &other, DeleteIPSetRequest * const q)

@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DescribeSpotFleetInstancesRequest
- *
  * \brief The DescribeSpotFleetInstancesRequest class provides an interface for EC2 DescribeSpotFleetInstances requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DescribeSpotFleetInstancesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeSpotFleetInstancesRequest::DescribeSpotFleetInstancesRequest(const DescribeSpotFleetInstancesRequest &other)
     : EC2Request(new DescribeSpotFleetInstancesRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ DescribeSpotFleetInstancesRequest::DescribeSpotFleetInstancesRequest(const Descr
 }
 
 /*!
- * @brief  Constructs a new DescribeSpotFleetInstancesRequest object.
+ * Constructs a DescribeSpotFleetInstancesRequest object.
  */
 DescribeSpotFleetInstancesRequest::DescribeSpotFleetInstancesRequest()
     : EC2Request(new DescribeSpotFleetInstancesRequestPrivate(EC2Request::DescribeSpotFleetInstancesAction, this))
@@ -70,14 +67,9 @@ bool DescribeSpotFleetInstancesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeSpotFleetInstancesResponse object.
+ * Returns a DescribeSpotFleetInstancesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeSpotFleetInstancesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeSpotFleetInstancesRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * DescribeSpotFleetInstancesRequest::response(Q
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::DescribeSpotFleetInstancesRequestPrivate
+ * \brief The DescribeSpotFleetInstancesRequestPrivate class provides private implementation for DescribeSpotFleetInstancesRequest.
+ * \internal
  *
- * @class  DescribeSpotFleetInstancesRequestPrivate
- *
- * @brief  Private implementation for DescribeSpotFleetInstancesRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeSpotFleetInstancesRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public DescribeSpotFleetInstancesRequest instance.
+ * Constructs a DescribeSpotFleetInstancesRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 DescribeSpotFleetInstancesRequestPrivate::DescribeSpotFleetInstancesRequestPrivate(
     const EC2Request::Action action, DescribeSpotFleetInstancesRequest * const q)
@@ -108,15 +97,10 @@ DescribeSpotFleetInstancesRequestPrivate::DescribeSpotFleetInstancesRequestPriva
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeSpotFleetInstancesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeSpotFleetInstancesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeSpotFleetInstancesRequest instance.
  */
 DescribeSpotFleetInstancesRequestPrivate::DescribeSpotFleetInstancesRequestPrivate(
     const DescribeSpotFleetInstancesRequestPrivate &other, DescribeSpotFleetInstancesRequest * const q)

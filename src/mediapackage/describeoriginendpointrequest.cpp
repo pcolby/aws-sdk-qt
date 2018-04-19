@@ -27,19 +27,16 @@ namespace MediaPackage {
 
 /*!
  * \class QtAws::MediaPackage::DescribeOriginEndpointRequest
- *
  * \brief The DescribeOriginEndpointRequest class provides an interface for MediaPackage DescribeOriginEndpoint requests.
  *
- * \ingroup MediaPackage
+ * \inmodule QtAwsMediaPackage
  *
  *
  * \sa MediaPackageClient::describeOriginEndpoint
  */
 
 /*!
- * @brief  Constructs a new DescribeOriginEndpointRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeOriginEndpointRequest::DescribeOriginEndpointRequest(const DescribeOriginEndpointRequest &other)
     : MediaPackageRequest(new DescribeOriginEndpointRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ DescribeOriginEndpointRequest::DescribeOriginEndpointRequest(const DescribeOrigi
 }
 
 /*!
- * @brief  Constructs a new DescribeOriginEndpointRequest object.
+ * Constructs a DescribeOriginEndpointRequest object.
  */
 DescribeOriginEndpointRequest::DescribeOriginEndpointRequest()
     : MediaPackageRequest(new DescribeOriginEndpointRequestPrivate(MediaPackageRequest::DescribeOriginEndpointAction, this))
@@ -66,14 +63,9 @@ bool DescribeOriginEndpointRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeOriginEndpointResponse object.
+ * Returns a DescribeOriginEndpointResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeOriginEndpointResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MediaPackageClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeOriginEndpointRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * DescribeOriginEndpointRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::MediaPackage::DescribeOriginEndpointRequestPrivate
+ * \brief The DescribeOriginEndpointRequestPrivate class provides private implementation for DescribeOriginEndpointRequest.
+ * \internal
  *
- * @class  DescribeOriginEndpointRequestPrivate
- *
- * @brief  Private implementation for DescribeOriginEndpointRequest.
+ * \inmodule QtAwsMediaPackage
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeOriginEndpointRequestPrivate object.
- *
- * @param  action  MediaPackage action being performed.
- * @param  q       Pointer to this object's public DescribeOriginEndpointRequest instance.
+ * Constructs a DescribeOriginEndpointRequestPrivate object for MediaPackage \a action with,
+ * public implementation \a q.
  */
 DescribeOriginEndpointRequestPrivate::DescribeOriginEndpointRequestPrivate(
     const MediaPackageRequest::Action action, DescribeOriginEndpointRequest * const q)
@@ -104,15 +93,10 @@ DescribeOriginEndpointRequestPrivate::DescribeOriginEndpointRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeOriginEndpointRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeOriginEndpointRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeOriginEndpointRequest instance.
  */
 DescribeOriginEndpointRequestPrivate::DescribeOriginEndpointRequestPrivate(
     const DescribeOriginEndpointRequestPrivate &other, DescribeOriginEndpointRequest * const q)

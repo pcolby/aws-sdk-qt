@@ -27,10 +27,9 @@ namespace OpsWorks {
 
 /*!
  * \class QtAws::OpsWorks::CreateAppRequest
- *
  * \brief The CreateAppRequest class provides an interface for OpsWorks CreateApp requests.
  *
- * \ingroup OpsWorks
+ * \inmodule QtAwsOpsWorks
  *
  *  <fullname>AWS OpsWorks</fullname>
  * 
@@ -143,9 +142,7 @@ namespace OpsWorks {
  */
 
 /*!
- * @brief  Constructs a new CreateAppRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateAppRequest::CreateAppRequest(const CreateAppRequest &other)
     : OpsWorksRequest(new CreateAppRequestPrivate(*other.d_func(), this))
@@ -154,7 +151,7 @@ CreateAppRequest::CreateAppRequest(const CreateAppRequest &other)
 }
 
 /*!
- * @brief  Constructs a new CreateAppRequest object.
+ * Constructs a CreateAppRequest object.
  */
 CreateAppRequest::CreateAppRequest()
     : OpsWorksRequest(new CreateAppRequestPrivate(OpsWorksRequest::CreateAppAction, this))
@@ -172,14 +169,9 @@ bool CreateAppRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateAppResponse object.
+ * Returns a CreateAppResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateAppResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  OpsWorksClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateAppRequest::response(QNetworkReply * const reply) const
 {
@@ -187,20 +179,17 @@ QtAws::Core::AwsAbstractResponse * CreateAppRequest::response(QNetworkReply * co
 }
 
 /*!
- * @internal
+ * \class QtAws::OpsWorks::CreateAppRequestPrivate
+ * \brief The CreateAppRequestPrivate class provides private implementation for CreateAppRequest.
+ * \internal
  *
- * @class  CreateAppRequestPrivate
- *
- * @brief  Private implementation for CreateAppRequest.
+ * \inmodule QtAwsOpsWorks
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateAppRequestPrivate object.
- *
- * @param  action  OpsWorks action being performed.
- * @param  q       Pointer to this object's public CreateAppRequest instance.
+ * Constructs a CreateAppRequestPrivate object for OpsWorks \a action with,
+ * public implementation \a q.
  */
 CreateAppRequestPrivate::CreateAppRequestPrivate(
     const OpsWorksRequest::Action action, CreateAppRequest * const q)
@@ -210,15 +199,10 @@ CreateAppRequestPrivate::CreateAppRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateAppRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateAppRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateAppRequest instance.
  */
 CreateAppRequestPrivate::CreateAppRequestPrivate(
     const CreateAppRequestPrivate &other, CreateAppRequest * const q)

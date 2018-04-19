@@ -27,10 +27,9 @@ namespace Redshift {
 
 /*!
  * \class QtAws::Redshift::ResetClusterParameterGroupRequest
- *
  * \brief The ResetClusterParameterGroupRequest class provides an interface for Redshift ResetClusterParameterGroup requests.
  *
- * \ingroup Redshift
+ * \inmodule QtAwsRedshift
  *
  *  <fullname>Amazon Redshift</fullname>
  * 
@@ -67,9 +66,7 @@ namespace Redshift {
  */
 
 /*!
- * @brief  Constructs a new ResetClusterParameterGroupRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ResetClusterParameterGroupRequest::ResetClusterParameterGroupRequest(const ResetClusterParameterGroupRequest &other)
     : RedshiftRequest(new ResetClusterParameterGroupRequestPrivate(*other.d_func(), this))
@@ -78,7 +75,7 @@ ResetClusterParameterGroupRequest::ResetClusterParameterGroupRequest(const Reset
 }
 
 /*!
- * @brief  Constructs a new ResetClusterParameterGroupRequest object.
+ * Constructs a ResetClusterParameterGroupRequest object.
  */
 ResetClusterParameterGroupRequest::ResetClusterParameterGroupRequest()
     : RedshiftRequest(new ResetClusterParameterGroupRequestPrivate(RedshiftRequest::ResetClusterParameterGroupAction, this))
@@ -96,14 +93,9 @@ bool ResetClusterParameterGroupRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ResetClusterParameterGroupResponse object.
+ * Returns a ResetClusterParameterGroupResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ResetClusterParameterGroupResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RedshiftClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ResetClusterParameterGroupRequest::response(QNetworkReply * const reply) const
 {
@@ -111,20 +103,17 @@ QtAws::Core::AwsAbstractResponse * ResetClusterParameterGroupRequest::response(Q
 }
 
 /*!
- * @internal
+ * \class QtAws::Redshift::ResetClusterParameterGroupRequestPrivate
+ * \brief The ResetClusterParameterGroupRequestPrivate class provides private implementation for ResetClusterParameterGroupRequest.
+ * \internal
  *
- * @class  ResetClusterParameterGroupRequestPrivate
- *
- * @brief  Private implementation for ResetClusterParameterGroupRequest.
+ * \inmodule QtAwsRedshift
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ResetClusterParameterGroupRequestPrivate object.
- *
- * @param  action  Redshift action being performed.
- * @param  q       Pointer to this object's public ResetClusterParameterGroupRequest instance.
+ * Constructs a ResetClusterParameterGroupRequestPrivate object for Redshift \a action with,
+ * public implementation \a q.
  */
 ResetClusterParameterGroupRequestPrivate::ResetClusterParameterGroupRequestPrivate(
     const RedshiftRequest::Action action, ResetClusterParameterGroupRequest * const q)
@@ -134,15 +123,10 @@ ResetClusterParameterGroupRequestPrivate::ResetClusterParameterGroupRequestPriva
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ResetClusterParameterGroupRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ResetClusterParameterGroupRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ResetClusterParameterGroupRequest instance.
  */
 ResetClusterParameterGroupRequestPrivate::ResetClusterParameterGroupRequestPrivate(
     const ResetClusterParameterGroupRequestPrivate &other, ResetClusterParameterGroupRequest * const q)

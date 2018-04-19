@@ -27,10 +27,9 @@ namespace Organizations {
 
 /*!
  * \class QtAws::Organizations::ListHandshakesForOrganizationRequest
- *
  * \brief The ListHandshakesForOrganizationRequest class provides an interface for Organizations ListHandshakesForOrganization requests.
  *
- * \ingroup Organizations
+ * \inmodule QtAwsOrganizations
  *
  *  <fullname>AWS Organizations API Reference</fullname>
  * 
@@ -179,9 +178,7 @@ namespace Organizations {
  */
 
 /*!
- * @brief  Constructs a new ListHandshakesForOrganizationRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListHandshakesForOrganizationRequest::ListHandshakesForOrganizationRequest(const ListHandshakesForOrganizationRequest &other)
     : OrganizationsRequest(new ListHandshakesForOrganizationRequestPrivate(*other.d_func(), this))
@@ -190,7 +187,7 @@ ListHandshakesForOrganizationRequest::ListHandshakesForOrganizationRequest(const
 }
 
 /*!
- * @brief  Constructs a new ListHandshakesForOrganizationRequest object.
+ * Constructs a ListHandshakesForOrganizationRequest object.
  */
 ListHandshakesForOrganizationRequest::ListHandshakesForOrganizationRequest()
     : OrganizationsRequest(new ListHandshakesForOrganizationRequestPrivate(OrganizationsRequest::ListHandshakesForOrganizationAction, this))
@@ -208,14 +205,9 @@ bool ListHandshakesForOrganizationRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListHandshakesForOrganizationResponse object.
+ * Returns a ListHandshakesForOrganizationResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListHandshakesForOrganizationResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  OrganizationsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListHandshakesForOrganizationRequest::response(QNetworkReply * const reply) const
 {
@@ -223,20 +215,17 @@ QtAws::Core::AwsAbstractResponse * ListHandshakesForOrganizationRequest::respons
 }
 
 /*!
- * @internal
+ * \class QtAws::Organizations::ListHandshakesForOrganizationRequestPrivate
+ * \brief The ListHandshakesForOrganizationRequestPrivate class provides private implementation for ListHandshakesForOrganizationRequest.
+ * \internal
  *
- * @class  ListHandshakesForOrganizationRequestPrivate
- *
- * @brief  Private implementation for ListHandshakesForOrganizationRequest.
+ * \inmodule QtAwsOrganizations
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListHandshakesForOrganizationRequestPrivate object.
- *
- * @param  action  Organizations action being performed.
- * @param  q       Pointer to this object's public ListHandshakesForOrganizationRequest instance.
+ * Constructs a ListHandshakesForOrganizationRequestPrivate object for Organizations \a action with,
+ * public implementation \a q.
  */
 ListHandshakesForOrganizationRequestPrivate::ListHandshakesForOrganizationRequestPrivate(
     const OrganizationsRequest::Action action, ListHandshakesForOrganizationRequest * const q)
@@ -246,15 +235,10 @@ ListHandshakesForOrganizationRequestPrivate::ListHandshakesForOrganizationReques
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListHandshakesForOrganizationRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListHandshakesForOrganizationRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListHandshakesForOrganizationRequest instance.
  */
 ListHandshakesForOrganizationRequestPrivate::ListHandshakesForOrganizationRequestPrivate(
     const ListHandshakesForOrganizationRequestPrivate &other, ListHandshakesForOrganizationRequest * const q)

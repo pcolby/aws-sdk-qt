@@ -27,10 +27,9 @@ namespace CloudSearch {
 
 /*!
  * \class QtAws::CloudSearch::CreateDomainRequest
- *
  * \brief The CreateDomainRequest class provides an interface for CloudSearch CreateDomain requests.
  *
- * \ingroup CloudSearch
+ * \inmodule QtAwsCloudSearch
  *
  *  <fullname>Amazon CloudSearch Configuration Service</fullname>
  * 
@@ -48,9 +47,7 @@ namespace CloudSearch {
  */
 
 /*!
- * @brief  Constructs a new CreateDomainRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateDomainRequest::CreateDomainRequest(const CreateDomainRequest &other)
     : CloudSearchRequest(new CreateDomainRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ CreateDomainRequest::CreateDomainRequest(const CreateDomainRequest &other)
 }
 
 /*!
- * @brief  Constructs a new CreateDomainRequest object.
+ * Constructs a CreateDomainRequest object.
  */
 CreateDomainRequest::CreateDomainRequest()
     : CloudSearchRequest(new CreateDomainRequestPrivate(CloudSearchRequest::CreateDomainAction, this))
@@ -77,14 +74,9 @@ bool CreateDomainRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateDomainResponse object.
+ * Returns a CreateDomainResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateDomainResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudSearchClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateDomainRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * CreateDomainRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudSearch::CreateDomainRequestPrivate
+ * \brief The CreateDomainRequestPrivate class provides private implementation for CreateDomainRequest.
+ * \internal
  *
- * @class  CreateDomainRequestPrivate
- *
- * @brief  Private implementation for CreateDomainRequest.
+ * \inmodule QtAwsCloudSearch
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateDomainRequestPrivate object.
- *
- * @param  action  CloudSearch action being performed.
- * @param  q       Pointer to this object's public CreateDomainRequest instance.
+ * Constructs a CreateDomainRequestPrivate object for CloudSearch \a action with,
+ * public implementation \a q.
  */
 CreateDomainRequestPrivate::CreateDomainRequestPrivate(
     const CloudSearchRequest::Action action, CreateDomainRequest * const q)
@@ -115,15 +104,10 @@ CreateDomainRequestPrivate::CreateDomainRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateDomainRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateDomainRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateDomainRequest instance.
  */
 CreateDomainRequestPrivate::CreateDomainRequestPrivate(
     const CreateDomainRequestPrivate &other, CreateDomainRequest * const q)

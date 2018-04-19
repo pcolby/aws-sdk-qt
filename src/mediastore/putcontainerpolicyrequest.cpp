@@ -27,10 +27,9 @@ namespace MediaStore {
 
 /*!
  * \class QtAws::MediaStore::PutContainerPolicyRequest
- *
  * \brief The PutContainerPolicyRequest class provides an interface for MediaStore PutContainerPolicy requests.
  *
- * \ingroup MediaStore
+ * \inmodule QtAwsMediaStore
  *
  *  An AWS Elemental MediaStore container is a namespace that holds folders and objects. You use a container endpoint to
  *  create, read, and delete objects.
@@ -39,9 +38,7 @@ namespace MediaStore {
  */
 
 /*!
- * @brief  Constructs a new PutContainerPolicyRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 PutContainerPolicyRequest::PutContainerPolicyRequest(const PutContainerPolicyRequest &other)
     : MediaStoreRequest(new PutContainerPolicyRequestPrivate(*other.d_func(), this))
@@ -50,7 +47,7 @@ PutContainerPolicyRequest::PutContainerPolicyRequest(const PutContainerPolicyReq
 }
 
 /*!
- * @brief  Constructs a new PutContainerPolicyRequest object.
+ * Constructs a PutContainerPolicyRequest object.
  */
 PutContainerPolicyRequest::PutContainerPolicyRequest()
     : MediaStoreRequest(new PutContainerPolicyRequestPrivate(MediaStoreRequest::PutContainerPolicyAction, this))
@@ -68,14 +65,9 @@ bool PutContainerPolicyRequest::isValid() const
 
 
 /*!
- * @brief  Construct an PutContainerPolicyResponse object.
+ * Returns a PutContainerPolicyResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An PutContainerPolicyResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MediaStoreClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * PutContainerPolicyRequest::response(QNetworkReply * const reply) const
 {
@@ -83,20 +75,17 @@ QtAws::Core::AwsAbstractResponse * PutContainerPolicyRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::MediaStore::PutContainerPolicyRequestPrivate
+ * \brief The PutContainerPolicyRequestPrivate class provides private implementation for PutContainerPolicyRequest.
+ * \internal
  *
- * @class  PutContainerPolicyRequestPrivate
- *
- * @brief  Private implementation for PutContainerPolicyRequest.
+ * \inmodule QtAwsMediaStore
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new PutContainerPolicyRequestPrivate object.
- *
- * @param  action  MediaStore action being performed.
- * @param  q       Pointer to this object's public PutContainerPolicyRequest instance.
+ * Constructs a PutContainerPolicyRequestPrivate object for MediaStore \a action with,
+ * public implementation \a q.
  */
 PutContainerPolicyRequestPrivate::PutContainerPolicyRequestPrivate(
     const MediaStoreRequest::Action action, PutContainerPolicyRequest * const q)
@@ -106,15 +95,10 @@ PutContainerPolicyRequestPrivate::PutContainerPolicyRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutContainerPolicyRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the PutContainerPolicyRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public PutContainerPolicyRequest instance.
  */
 PutContainerPolicyRequestPrivate::PutContainerPolicyRequestPrivate(
     const PutContainerPolicyRequestPrivate &other, PutContainerPolicyRequest * const q)

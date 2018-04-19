@@ -27,10 +27,9 @@ namespace Lightsail {
 
 /*!
  * \class QtAws::Lightsail::CreateInstancesRequest
- *
  * \brief The CreateInstancesRequest class provides an interface for Lightsail CreateInstances requests.
  *
- * \ingroup Lightsail
+ * \inmodule QtAwsLightsail
  *
  *  Amazon Lightsail is the easiest way to get started with AWS for developers who just need virtual private servers.
  *  Lightsail includes everything you need to launch your project quickly - a virtual machine, SSD-based storage, data
@@ -53,9 +52,7 @@ namespace Lightsail {
  */
 
 /*!
- * @brief  Constructs a new CreateInstancesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateInstancesRequest::CreateInstancesRequest(const CreateInstancesRequest &other)
     : LightsailRequest(new CreateInstancesRequestPrivate(*other.d_func(), this))
@@ -64,7 +61,7 @@ CreateInstancesRequest::CreateInstancesRequest(const CreateInstancesRequest &oth
 }
 
 /*!
- * @brief  Constructs a new CreateInstancesRequest object.
+ * Constructs a CreateInstancesRequest object.
  */
 CreateInstancesRequest::CreateInstancesRequest()
     : LightsailRequest(new CreateInstancesRequestPrivate(LightsailRequest::CreateInstancesAction, this))
@@ -82,14 +79,9 @@ bool CreateInstancesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateInstancesResponse object.
+ * Returns a CreateInstancesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateInstancesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  LightsailClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateInstancesRequest::response(QNetworkReply * const reply) const
 {
@@ -97,20 +89,17 @@ QtAws::Core::AwsAbstractResponse * CreateInstancesRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::Lightsail::CreateInstancesRequestPrivate
+ * \brief The CreateInstancesRequestPrivate class provides private implementation for CreateInstancesRequest.
+ * \internal
  *
- * @class  CreateInstancesRequestPrivate
- *
- * @brief  Private implementation for CreateInstancesRequest.
+ * \inmodule QtAwsLightsail
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateInstancesRequestPrivate object.
- *
- * @param  action  Lightsail action being performed.
- * @param  q       Pointer to this object's public CreateInstancesRequest instance.
+ * Constructs a CreateInstancesRequestPrivate object for Lightsail \a action with,
+ * public implementation \a q.
  */
 CreateInstancesRequestPrivate::CreateInstancesRequestPrivate(
     const LightsailRequest::Action action, CreateInstancesRequest * const q)
@@ -120,15 +109,10 @@ CreateInstancesRequestPrivate::CreateInstancesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateInstancesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateInstancesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateInstancesRequest instance.
  */
 CreateInstancesRequestPrivate::CreateInstancesRequestPrivate(
     const CreateInstancesRequestPrivate &other, CreateInstancesRequest * const q)

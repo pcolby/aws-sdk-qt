@@ -25,16 +25,27 @@ namespace Polly {
 
 /*!
  * \class QtAws::Polly::PollyRequest
- *
  * \brief The PollyRequest class provides an interface for Polly requests.
  *
- * \ingroup Polly
+ * \inmodule QtAwsPolly
  */
 
 /*!
- * @brief  Constructs a new PollyRequest object.
+ * \enum PollyRequest::Action
  *
- * @param  action  The Polly action to request.
+ * This enum describes the actions that can be performed as Polly
+ * requests.
+ *
+ * \value DeleteLexiconAction Polly DeleteLexicon action.
+ * \value DescribeVoicesAction Polly DescribeVoices action.
+ * \value GetLexiconAction Polly GetLexicon action.
+ * \value ListLexiconsAction Polly ListLexicons action.
+ * \value PutLexiconAction Polly PutLexicon action.
+ * \value SynthesizeSpeechAction Polly SynthesizeSpeech action.
+ */
+
+/*!
+ * Constructs a[n] PollyRequest object for Polly \a action.
  */
 PollyRequest::PollyRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new PollyRequestPrivate(action, this))
@@ -43,9 +54,7 @@ PollyRequest::PollyRequest(const Action action)
 }
 
 /*!
- * @brief  Constructs a new PollyRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 PollyRequest::PollyRequest(const PollyRequest &other)
     : QtAws::Core::AwsAbstractRequest(new PollyRequestPrivate(*other.d_func(), this))
@@ -54,13 +63,7 @@ PollyRequest::PollyRequest(const PollyRequest &other)
 }
 
 /*!
- * @brief  Assignment operator.
- *
- * Assigns \a other to \c this.
- *
- * @param  other  Instance to copy.
- *
- * @return  A reference to \c this.
+ * Sets the PollyRequest object to be equal to \a other.
  */
 PollyRequest& PollyRequest::operator=(const PollyRequest &other)
 {
@@ -72,14 +75,10 @@ PollyRequest& PollyRequest::operator=(const PollyRequest &other)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PollyRequest object.
+ * Constructs aa PollyRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from PollyRequestPrivate.
- *
- * @param  d  Pointer to private data (aka D-Pointer).
  */
 PollyRequest::PollyRequest(PollyRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
@@ -87,7 +86,7 @@ PollyRequest::PollyRequest(PollyRequestPrivate * const d) : QtAws::Core::AwsAbst
 }
 
 /*!
- * \brief Returns the Polly action to be performed by this request.
+ * Returns the Polly action to be performed by this request.
  */
 PollyRequest::Action PollyRequest::action() const
 {
@@ -96,7 +95,7 @@ PollyRequest::Action PollyRequest::action() const
 }
 
 /*!
- * \brief Returns the name of the Polly action to be performed by this request.
+ * Returns the name of the Polly action to be performed by this request.
  */
 QString PollyRequest::actionString() const
 {
@@ -104,7 +103,7 @@ QString PollyRequest::actionString() const
 }
 
 /*!
- * \brief Returns the Polly API version implemented by this request.
+ * Returns the Polly API version implemented by this request.
  */
 QString PollyRequest::apiVersion() const
 {
@@ -113,7 +112,7 @@ QString PollyRequest::apiVersion() const
 }
 
 /*!
- * @brief Set the Polly action to be performed by this request to \a action.
+ * Sets the Polly action to be performed by this request to \a action.
  */
 void PollyRequest::setAction(const Action action)
 {
@@ -122,7 +121,7 @@ void PollyRequest::setAction(const Action action)
 }
 
 /*!
- * Set the Polly API version to include in this request to \a version.
+ * Sets the Polly API version to include in this request to \a version.
  */
 void PollyRequest::setApiVersion(const QString &version)
 {
@@ -131,7 +130,7 @@ void PollyRequest::setApiVersion(const QString &version)
 }
 
 /*!
- * \brief Returns \c true if this request is the same as \a other.
+ * Returns \c true if this request is equal to \a other; \c false otherwise.
  *
  * Note, most derived *Request classes do not need to provider their own
  * implementations of this function, since most such request classes rely on
@@ -146,8 +145,8 @@ bool PollyRequest::operator==(const PollyRequest &other) const
             (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
-/*!
- * @brief  Check if \a queueName is a valid Polly queue name.
+/*
+ * Returns \c tue if \a queueName is a valid Polly queue name.
  *
  * @par From Polly FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
@@ -166,9 +165,8 @@ bool PollyRequest::operator==(const PollyRequest &other) const
 }*/
 
 /*!
- * \brief Removes the a \a name parameter from this request.
- *
- * Returns the count of paramters removed (typically \c 0 or \c 1).
+ * Removes the a \a name parameter from the request, then returns the number of
+ * paramters removed (typically \c 0 or \c 1).
  */
 int PollyRequest::clearParameter(const QString &name)
 {
@@ -177,7 +175,7 @@ int PollyRequest::clearParameter(const QString &name)
 }
 
 /*!
- * \brief Removes all parameters from this request.
+ * Removes all parameters from the request.
  */
 void PollyRequest::clearParameters()
 {
@@ -186,7 +184,7 @@ void PollyRequest::clearParameters()
 }
 
 /*!
- * \brief Returns the value of the \n name pararemter if set, otherwise \a defaultValue.
+ * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
 QVariant PollyRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
@@ -195,7 +193,7 @@ QVariant PollyRequest::parameter(const QString &name, const QVariant &defaultVal
 }
 
 /*!
- * \brief Returns a map of parameters included in this request.
+ * Returns the parameters included in this request.
  */
 const QVariantMap &PollyRequest::parameters() const
 {
@@ -204,7 +202,7 @@ const QVariantMap &PollyRequest::parameters() const
 }
 
 /*!
- * \brief Sets the \a name parameter to \a value.
+ * Sets the \a name parameter to \a value.
  */
 void PollyRequest::setParameter(const QString &name, const QVariant &value)
 {
@@ -213,9 +211,8 @@ void PollyRequest::setParameter(const QString &name, const QVariant &value)
 }
 
 /*!
- * \brief Sets the map of paramters for this request to \a parameters.
- *
- * Any request parameters set previously will be discarded.
+ * Sets the paramters for this request to \a parameters. Any request parameters
+ * set previously will be discarded.
  */
 void PollyRequest::setParameters(const QVariantMap &parameters)
 {
@@ -224,11 +221,12 @@ void PollyRequest::setParameters(const QVariantMap &parameters)
 }
 
 /*!
- * \brief Returns a network request for this Polly request using the given \a endpoint.
+ * Returns a network request for the Polly request using the given
+ * \a endpoint.
  *
- * This Polly implementation builds request URLs by combining the common query
- * parameters (such as Action and Version), with any that have been added (via
- * setParameter) by child classes.
+ * This Polly implementation builds request URLs by combining the
+ * common query parameters (such as Action and Version), with any that have
+ * been added (via setParameter) by child classes.
  */
 QNetworkRequest PollyRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -239,17 +237,16 @@ QNetworkRequest PollyRequest::unsignedRequest(const QUrl &endpoint) const
 }
 
 /*!
+ * \class QtAws::Polly::PollyRequestPrivate
+ * \brief The PollyRequestPrivate class provides private implementation for PollyRequest.
  * \internal
  *
- * \class  PollyRequestPrivate
- *
- * \brief  Private implementation for PollyRequest.
+ * \inmodule QtAwsPolly
  */
 
 /*!
- * \internal
- *
- * \brief Constructs a new PollyRequestPrivate object.
+ * Constructs a PollyRequestPrivate object for Polly \a action with,
+ * public implementation \a q.
  */
 PollyRequestPrivate::PollyRequestPrivate(const PollyRequest::Action action, PollyRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
@@ -258,9 +255,7 @@ PollyRequestPrivate::PollyRequestPrivate(const PollyRequest::Action action, Poll
 }
 
 /*!
- * \internal
- *
- * \brief Constructs a new PollyRequestPrivate object, copying an existing one.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
@@ -276,15 +271,12 @@ PollyRequestPrivate::PollyRequestPrivate(const PollyRequestPrivate &other,
 }
 
 /*!
- * \internal
- *
- * \brief Returns a string representing \a action.
+ * Returns a string represention of \a action, or a null string if \a action is
+ * invalid.
  *
  * This function converts PollyRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the Polly service's Action
  * query parameters.
- *
- * @return A string representing \a action, or a null string if \a action is invalid.
  */
 QString PollyRequestPrivate::toString(const PollyRequest::Action &action)
 {

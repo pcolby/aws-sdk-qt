@@ -154,6 +154,9 @@
 /*!
  * \namespace QtAws::Redshift
  * \brief The QtAws::Redshift contains stuff...
+ *
+ * \inmodule QtAwsRedshift
+ *
  * @todo Move this to a separate template file.
  */
 
@@ -233,7 +236,7 @@ RedshiftClient::RedshiftClient(
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * \a  AwsEndpoint::getEndpoint()
+ * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
 RedshiftClient::RedshiftClient(
     const QUrl &endpoint,

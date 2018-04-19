@@ -25,16 +25,116 @@ namespace CognitoIdentityProvider {
 
 /*!
  * \class QtAws::CognitoIdentityProvider::CognitoIdentityProviderRequest
- *
  * \brief The CognitoIdentityProviderRequest class provides an interface for CognitoIdentityProvider requests.
  *
- * \ingroup CognitoIdentityProvider
+ * \inmodule QtAwsCognitoIdentityProvider
  */
 
 /*!
- * @brief  Constructs a new CognitoIdentityProviderRequest object.
+ * \enum CognitoIdentityProviderRequest::Action
  *
- * @param  action  The CognitoIdentityProvider action to request.
+ * This enum describes the actions that can be performed as CognitoIdentityProvider
+ * requests.
+ *
+ * \value AddCustomAttributesAction CognitoIdentityProvider AddCustomAttributes action.
+ * \value AdminAddUserToGroupAction CognitoIdentityProvider AdminAddUserToGroup action.
+ * \value AdminConfirmSignUpAction CognitoIdentityProvider AdminConfirmSignUp action.
+ * \value AdminCreateUserAction CognitoIdentityProvider AdminCreateUser action.
+ * \value AdminDeleteUserAction CognitoIdentityProvider AdminDeleteUser action.
+ * \value AdminDeleteUserAttributesAction CognitoIdentityProvider AdminDeleteUserAttributes action.
+ * \value AdminDisableProviderForUserAction CognitoIdentityProvider AdminDisableProviderForUser action.
+ * \value AdminDisableUserAction CognitoIdentityProvider AdminDisableUser action.
+ * \value AdminEnableUserAction CognitoIdentityProvider AdminEnableUser action.
+ * \value AdminForgetDeviceAction CognitoIdentityProvider AdminForgetDevice action.
+ * \value AdminGetDeviceAction CognitoIdentityProvider AdminGetDevice action.
+ * \value AdminGetUserAction CognitoIdentityProvider AdminGetUser action.
+ * \value AdminInitiateAuthAction CognitoIdentityProvider AdminInitiateAuth action.
+ * \value AdminLinkProviderForUserAction CognitoIdentityProvider AdminLinkProviderForUser action.
+ * \value AdminListDevicesAction CognitoIdentityProvider AdminListDevices action.
+ * \value AdminListGroupsForUserAction CognitoIdentityProvider AdminListGroupsForUser action.
+ * \value AdminListUserAuthEventsAction CognitoIdentityProvider AdminListUserAuthEvents action.
+ * \value AdminRemoveUserFromGroupAction CognitoIdentityProvider AdminRemoveUserFromGroup action.
+ * \value AdminResetUserPasswordAction CognitoIdentityProvider AdminResetUserPassword action.
+ * \value AdminRespondToAuthChallengeAction CognitoIdentityProvider AdminRespondToAuthChallenge action.
+ * \value AdminSetUserMFAPreferenceAction CognitoIdentityProvider AdminSetUserMFAPreference action.
+ * \value AdminSetUserSettingsAction CognitoIdentityProvider AdminSetUserSettings action.
+ * \value AdminUpdateAuthEventFeedbackAction CognitoIdentityProvider AdminUpdateAuthEventFeedback action.
+ * \value AdminUpdateDeviceStatusAction CognitoIdentityProvider AdminUpdateDeviceStatus action.
+ * \value AdminUpdateUserAttributesAction CognitoIdentityProvider AdminUpdateUserAttributes action.
+ * \value AdminUserGlobalSignOutAction CognitoIdentityProvider AdminUserGlobalSignOut action.
+ * \value AssociateSoftwareTokenAction CognitoIdentityProvider AssociateSoftwareToken action.
+ * \value ChangePasswordAction CognitoIdentityProvider ChangePassword action.
+ * \value ConfirmDeviceAction CognitoIdentityProvider ConfirmDevice action.
+ * \value ConfirmForgotPasswordAction CognitoIdentityProvider ConfirmForgotPassword action.
+ * \value ConfirmSignUpAction CognitoIdentityProvider ConfirmSignUp action.
+ * \value CreateGroupAction CognitoIdentityProvider CreateGroup action.
+ * \value CreateIdentityProviderAction CognitoIdentityProvider CreateIdentityProvider action.
+ * \value CreateResourceServerAction CognitoIdentityProvider CreateResourceServer action.
+ * \value CreateUserImportJobAction CognitoIdentityProvider CreateUserImportJob action.
+ * \value CreateUserPoolAction CognitoIdentityProvider CreateUserPool action.
+ * \value CreateUserPoolClientAction CognitoIdentityProvider CreateUserPoolClient action.
+ * \value CreateUserPoolDomainAction CognitoIdentityProvider CreateUserPoolDomain action.
+ * \value DeleteGroupAction CognitoIdentityProvider DeleteGroup action.
+ * \value DeleteIdentityProviderAction CognitoIdentityProvider DeleteIdentityProvider action.
+ * \value DeleteResourceServerAction CognitoIdentityProvider DeleteResourceServer action.
+ * \value DeleteUserAction CognitoIdentityProvider DeleteUser action.
+ * \value DeleteUserAttributesAction CognitoIdentityProvider DeleteUserAttributes action.
+ * \value DeleteUserPoolAction CognitoIdentityProvider DeleteUserPool action.
+ * \value DeleteUserPoolClientAction CognitoIdentityProvider DeleteUserPoolClient action.
+ * \value DeleteUserPoolDomainAction CognitoIdentityProvider DeleteUserPoolDomain action.
+ * \value DescribeIdentityProviderAction CognitoIdentityProvider DescribeIdentityProvider action.
+ * \value DescribeResourceServerAction CognitoIdentityProvider DescribeResourceServer action.
+ * \value DescribeRiskConfigurationAction CognitoIdentityProvider DescribeRiskConfiguration action.
+ * \value DescribeUserImportJobAction CognitoIdentityProvider DescribeUserImportJob action.
+ * \value DescribeUserPoolAction CognitoIdentityProvider DescribeUserPool action.
+ * \value DescribeUserPoolClientAction CognitoIdentityProvider DescribeUserPoolClient action.
+ * \value DescribeUserPoolDomainAction CognitoIdentityProvider DescribeUserPoolDomain action.
+ * \value ForgetDeviceAction CognitoIdentityProvider ForgetDevice action.
+ * \value ForgotPasswordAction CognitoIdentityProvider ForgotPassword action.
+ * \value GetCSVHeaderAction CognitoIdentityProvider GetCSVHeader action.
+ * \value GetDeviceAction CognitoIdentityProvider GetDevice action.
+ * \value GetGroupAction CognitoIdentityProvider GetGroup action.
+ * \value GetIdentityProviderByIdentifierAction CognitoIdentityProvider GetIdentityProviderByIdentifier action.
+ * \value GetSigningCertificateAction CognitoIdentityProvider GetSigningCertificate action.
+ * \value GetUICustomizationAction CognitoIdentityProvider GetUICustomization action.
+ * \value GetUserAction CognitoIdentityProvider GetUser action.
+ * \value GetUserAttributeVerificationCodeAction CognitoIdentityProvider GetUserAttributeVerificationCode action.
+ * \value GetUserPoolMfaConfigAction CognitoIdentityProvider GetUserPoolMfaConfig action.
+ * \value GlobalSignOutAction CognitoIdentityProvider GlobalSignOut action.
+ * \value InitiateAuthAction CognitoIdentityProvider InitiateAuth action.
+ * \value ListDevicesAction CognitoIdentityProvider ListDevices action.
+ * \value ListGroupsAction CognitoIdentityProvider ListGroups action.
+ * \value ListIdentityProvidersAction CognitoIdentityProvider ListIdentityProviders action.
+ * \value ListResourceServersAction CognitoIdentityProvider ListResourceServers action.
+ * \value ListUserImportJobsAction CognitoIdentityProvider ListUserImportJobs action.
+ * \value ListUserPoolClientsAction CognitoIdentityProvider ListUserPoolClients action.
+ * \value ListUserPoolsAction CognitoIdentityProvider ListUserPools action.
+ * \value ListUsersAction CognitoIdentityProvider ListUsers action.
+ * \value ListUsersInGroupAction CognitoIdentityProvider ListUsersInGroup action.
+ * \value ResendConfirmationCodeAction CognitoIdentityProvider ResendConfirmationCode action.
+ * \value RespondToAuthChallengeAction CognitoIdentityProvider RespondToAuthChallenge action.
+ * \value SetRiskConfigurationAction CognitoIdentityProvider SetRiskConfiguration action.
+ * \value SetUICustomizationAction CognitoIdentityProvider SetUICustomization action.
+ * \value SetUserMFAPreferenceAction CognitoIdentityProvider SetUserMFAPreference action.
+ * \value SetUserPoolMfaConfigAction CognitoIdentityProvider SetUserPoolMfaConfig action.
+ * \value SetUserSettingsAction CognitoIdentityProvider SetUserSettings action.
+ * \value SignUpAction CognitoIdentityProvider SignUp action.
+ * \value StartUserImportJobAction CognitoIdentityProvider StartUserImportJob action.
+ * \value StopUserImportJobAction CognitoIdentityProvider StopUserImportJob action.
+ * \value UpdateAuthEventFeedbackAction CognitoIdentityProvider UpdateAuthEventFeedback action.
+ * \value UpdateDeviceStatusAction CognitoIdentityProvider UpdateDeviceStatus action.
+ * \value UpdateGroupAction CognitoIdentityProvider UpdateGroup action.
+ * \value UpdateIdentityProviderAction CognitoIdentityProvider UpdateIdentityProvider action.
+ * \value UpdateResourceServerAction CognitoIdentityProvider UpdateResourceServer action.
+ * \value UpdateUserAttributesAction CognitoIdentityProvider UpdateUserAttributes action.
+ * \value UpdateUserPoolAction CognitoIdentityProvider UpdateUserPool action.
+ * \value UpdateUserPoolClientAction CognitoIdentityProvider UpdateUserPoolClient action.
+ * \value VerifySoftwareTokenAction CognitoIdentityProvider VerifySoftwareToken action.
+ * \value VerifyUserAttributeAction CognitoIdentityProvider VerifyUserAttribute action.
+ */
+
+/*!
+ * Constructs a[n] CognitoIdentityProviderRequest object for CognitoIdentityProvider \a action.
  */
 CognitoIdentityProviderRequest::CognitoIdentityProviderRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new CognitoIdentityProviderRequestPrivate(action, this))
@@ -43,9 +143,7 @@ CognitoIdentityProviderRequest::CognitoIdentityProviderRequest(const Action acti
 }
 
 /*!
- * @brief  Constructs a new CognitoIdentityProviderRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CognitoIdentityProviderRequest::CognitoIdentityProviderRequest(const CognitoIdentityProviderRequest &other)
     : QtAws::Core::AwsAbstractRequest(new CognitoIdentityProviderRequestPrivate(*other.d_func(), this))
@@ -54,13 +152,7 @@ CognitoIdentityProviderRequest::CognitoIdentityProviderRequest(const CognitoIden
 }
 
 /*!
- * @brief  Assignment operator.
- *
- * Assigns \a other to \c this.
- *
- * @param  other  Instance to copy.
- *
- * @return  A reference to \c this.
+ * Sets the CognitoIdentityProviderRequest object to be equal to \a other.
  */
 CognitoIdentityProviderRequest& CognitoIdentityProviderRequest::operator=(const CognitoIdentityProviderRequest &other)
 {
@@ -72,14 +164,10 @@ CognitoIdentityProviderRequest& CognitoIdentityProviderRequest::operator=(const 
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CognitoIdentityProviderRequest object.
+ * Constructs aa CognitoIdentityProviderRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from CognitoIdentityProviderRequestPrivate.
- *
- * @param  d  Pointer to private data (aka D-Pointer).
  */
 CognitoIdentityProviderRequest::CognitoIdentityProviderRequest(CognitoIdentityProviderRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
@@ -87,7 +175,7 @@ CognitoIdentityProviderRequest::CognitoIdentityProviderRequest(CognitoIdentityPr
 }
 
 /*!
- * \brief Returns the CognitoIdentityProvider action to be performed by this request.
+ * Returns the CognitoIdentityProvider action to be performed by this request.
  */
 CognitoIdentityProviderRequest::Action CognitoIdentityProviderRequest::action() const
 {
@@ -96,7 +184,7 @@ CognitoIdentityProviderRequest::Action CognitoIdentityProviderRequest::action() 
 }
 
 /*!
- * \brief Returns the name of the CognitoIdentityProvider action to be performed by this request.
+ * Returns the name of the CognitoIdentityProvider action to be performed by this request.
  */
 QString CognitoIdentityProviderRequest::actionString() const
 {
@@ -104,7 +192,7 @@ QString CognitoIdentityProviderRequest::actionString() const
 }
 
 /*!
- * \brief Returns the CognitoIdentityProvider API version implemented by this request.
+ * Returns the CognitoIdentityProvider API version implemented by this request.
  */
 QString CognitoIdentityProviderRequest::apiVersion() const
 {
@@ -113,7 +201,7 @@ QString CognitoIdentityProviderRequest::apiVersion() const
 }
 
 /*!
- * @brief Set the CognitoIdentityProvider action to be performed by this request to \a action.
+ * Sets the CognitoIdentityProvider action to be performed by this request to \a action.
  */
 void CognitoIdentityProviderRequest::setAction(const Action action)
 {
@@ -122,7 +210,7 @@ void CognitoIdentityProviderRequest::setAction(const Action action)
 }
 
 /*!
- * Set the CognitoIdentityProvider API version to include in this request to \a version.
+ * Sets the CognitoIdentityProvider API version to include in this request to \a version.
  */
 void CognitoIdentityProviderRequest::setApiVersion(const QString &version)
 {
@@ -131,7 +219,7 @@ void CognitoIdentityProviderRequest::setApiVersion(const QString &version)
 }
 
 /*!
- * \brief Returns \c true if this request is the same as \a other.
+ * Returns \c true if this request is equal to \a other; \c false otherwise.
  *
  * Note, most derived *Request classes do not need to provider their own
  * implementations of this function, since most such request classes rely on
@@ -146,8 +234,8 @@ bool CognitoIdentityProviderRequest::operator==(const CognitoIdentityProviderReq
             (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
-/*!
- * @brief  Check if \a queueName is a valid CognitoIdentityProvider queue name.
+/*
+ * Returns \c tue if \a queueName is a valid CognitoIdentityProvider queue name.
  *
  * @par From CognitoIdentityProvider FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
@@ -166,9 +254,8 @@ bool CognitoIdentityProviderRequest::operator==(const CognitoIdentityProviderReq
 }*/
 
 /*!
- * \brief Removes the a \a name parameter from this request.
- *
- * Returns the count of paramters removed (typically \c 0 or \c 1).
+ * Removes the a \a name parameter from the request, then returns the number of
+ * paramters removed (typically \c 0 or \c 1).
  */
 int CognitoIdentityProviderRequest::clearParameter(const QString &name)
 {
@@ -177,7 +264,7 @@ int CognitoIdentityProviderRequest::clearParameter(const QString &name)
 }
 
 /*!
- * \brief Removes all parameters from this request.
+ * Removes all parameters from the request.
  */
 void CognitoIdentityProviderRequest::clearParameters()
 {
@@ -186,7 +273,7 @@ void CognitoIdentityProviderRequest::clearParameters()
 }
 
 /*!
- * \brief Returns the value of the \n name pararemter if set, otherwise \a defaultValue.
+ * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
 QVariant CognitoIdentityProviderRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
@@ -195,7 +282,7 @@ QVariant CognitoIdentityProviderRequest::parameter(const QString &name, const QV
 }
 
 /*!
- * \brief Returns a map of parameters included in this request.
+ * Returns the parameters included in this request.
  */
 const QVariantMap &CognitoIdentityProviderRequest::parameters() const
 {
@@ -204,7 +291,7 @@ const QVariantMap &CognitoIdentityProviderRequest::parameters() const
 }
 
 /*!
- * \brief Sets the \a name parameter to \a value.
+ * Sets the \a name parameter to \a value.
  */
 void CognitoIdentityProviderRequest::setParameter(const QString &name, const QVariant &value)
 {
@@ -213,9 +300,8 @@ void CognitoIdentityProviderRequest::setParameter(const QString &name, const QVa
 }
 
 /*!
- * \brief Sets the map of paramters for this request to \a parameters.
- *
- * Any request parameters set previously will be discarded.
+ * Sets the paramters for this request to \a parameters. Any request parameters
+ * set previously will be discarded.
  */
 void CognitoIdentityProviderRequest::setParameters(const QVariantMap &parameters)
 {
@@ -224,11 +310,12 @@ void CognitoIdentityProviderRequest::setParameters(const QVariantMap &parameters
 }
 
 /*!
- * \brief Returns a network request for this CognitoIdentityProvider request using the given \a endpoint.
+ * Returns a network request for the CognitoIdentityProvider request using the given
+ * \a endpoint.
  *
- * This CognitoIdentityProvider implementation builds request URLs by combining the common query
- * parameters (such as Action and Version), with any that have been added (via
- * setParameter) by child classes.
+ * This CognitoIdentityProvider implementation builds request URLs by combining the
+ * common query parameters (such as Action and Version), with any that have
+ * been added (via setParameter) by child classes.
  */
 QNetworkRequest CognitoIdentityProviderRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -239,17 +326,16 @@ QNetworkRequest CognitoIdentityProviderRequest::unsignedRequest(const QUrl &endp
 }
 
 /*!
+ * \class QtAws::CognitoIdentityProvider::CognitoIdentityProviderRequestPrivate
+ * \brief The CognitoIdentityProviderRequestPrivate class provides private implementation for CognitoIdentityProviderRequest.
  * \internal
  *
- * \class  CognitoIdentityProviderRequestPrivate
- *
- * \brief  Private implementation for CognitoIdentityProviderRequest.
+ * \inmodule QtAwsCognitoIdentityProvider
  */
 
 /*!
- * \internal
- *
- * \brief Constructs a new CognitoIdentityProviderRequestPrivate object.
+ * Constructs a CognitoIdentityProviderRequestPrivate object for CognitoIdentityProvider \a action with,
+ * public implementation \a q.
  */
 CognitoIdentityProviderRequestPrivate::CognitoIdentityProviderRequestPrivate(const CognitoIdentityProviderRequest::Action action, CognitoIdentityProviderRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
@@ -258,9 +344,7 @@ CognitoIdentityProviderRequestPrivate::CognitoIdentityProviderRequestPrivate(con
 }
 
 /*!
- * \internal
- *
- * \brief Constructs a new CognitoIdentityProviderRequestPrivate object, copying an existing one.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
@@ -276,15 +360,12 @@ CognitoIdentityProviderRequestPrivate::CognitoIdentityProviderRequestPrivate(con
 }
 
 /*!
- * \internal
- *
- * \brief Returns a string representing \a action.
+ * Returns a string represention of \a action, or a null string if \a action is
+ * invalid.
  *
  * This function converts CognitoIdentityProviderRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the CognitoIdentityProvider service's Action
  * query parameters.
- *
- * @return A string representing \a action, or a null string if \a action is invalid.
  */
 QString CognitoIdentityProviderRequestPrivate::toString(const CognitoIdentityProviderRequest::Action &action)
 {

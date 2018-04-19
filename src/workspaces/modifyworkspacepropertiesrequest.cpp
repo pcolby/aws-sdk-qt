@@ -27,10 +27,9 @@ namespace WorkSpaces {
 
 /*!
  * \class QtAws::WorkSpaces::ModifyWorkspacePropertiesRequest
- *
  * \brief The ModifyWorkspacePropertiesRequest class provides an interface for WorkSpaces ModifyWorkspaceProperties requests.
  *
- * \ingroup WorkSpaces
+ * \inmodule QtAwsWorkSpaces
  *
  *  <fullname>Amazon WorkSpaces Service</fullname>
  * 
@@ -40,9 +39,7 @@ namespace WorkSpaces {
  */
 
 /*!
- * @brief  Constructs a new ModifyWorkspacePropertiesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ModifyWorkspacePropertiesRequest::ModifyWorkspacePropertiesRequest(const ModifyWorkspacePropertiesRequest &other)
     : WorkSpacesRequest(new ModifyWorkspacePropertiesRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ ModifyWorkspacePropertiesRequest::ModifyWorkspacePropertiesRequest(const ModifyW
 }
 
 /*!
- * @brief  Constructs a new ModifyWorkspacePropertiesRequest object.
+ * Constructs a ModifyWorkspacePropertiesRequest object.
  */
 ModifyWorkspacePropertiesRequest::ModifyWorkspacePropertiesRequest()
     : WorkSpacesRequest(new ModifyWorkspacePropertiesRequestPrivate(WorkSpacesRequest::ModifyWorkspacePropertiesAction, this))
@@ -69,14 +66,9 @@ bool ModifyWorkspacePropertiesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ModifyWorkspacePropertiesResponse object.
+ * Returns a ModifyWorkspacePropertiesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ModifyWorkspacePropertiesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WorkSpacesClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ModifyWorkspacePropertiesRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * ModifyWorkspacePropertiesRequest::response(QN
 }
 
 /*!
- * @internal
+ * \class QtAws::WorkSpaces::ModifyWorkspacePropertiesRequestPrivate
+ * \brief The ModifyWorkspacePropertiesRequestPrivate class provides private implementation for ModifyWorkspacePropertiesRequest.
+ * \internal
  *
- * @class  ModifyWorkspacePropertiesRequestPrivate
- *
- * @brief  Private implementation for ModifyWorkspacePropertiesRequest.
+ * \inmodule QtAwsWorkSpaces
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ModifyWorkspacePropertiesRequestPrivate object.
- *
- * @param  action  WorkSpaces action being performed.
- * @param  q       Pointer to this object's public ModifyWorkspacePropertiesRequest instance.
+ * Constructs a ModifyWorkspacePropertiesRequestPrivate object for WorkSpaces \a action with,
+ * public implementation \a q.
  */
 ModifyWorkspacePropertiesRequestPrivate::ModifyWorkspacePropertiesRequestPrivate(
     const WorkSpacesRequest::Action action, ModifyWorkspacePropertiesRequest * const q)
@@ -107,15 +96,10 @@ ModifyWorkspacePropertiesRequestPrivate::ModifyWorkspacePropertiesRequestPrivate
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ModifyWorkspacePropertiesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ModifyWorkspacePropertiesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ModifyWorkspacePropertiesRequest instance.
  */
 ModifyWorkspacePropertiesRequestPrivate::ModifyWorkspacePropertiesRequestPrivate(
     const ModifyWorkspacePropertiesRequestPrivate &other, ModifyWorkspacePropertiesRequest * const q)

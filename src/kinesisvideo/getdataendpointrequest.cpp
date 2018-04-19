@@ -27,19 +27,16 @@ namespace KinesisVideo {
 
 /*!
  * \class QtAws::KinesisVideo::GetDataEndpointRequest
- *
  * \brief The GetDataEndpointRequest class provides an interface for KinesisVideo GetDataEndpoint requests.
  *
- * \ingroup KinesisVideo
+ * \inmodule QtAwsKinesisVideo
  *
  *
  * \sa KinesisVideoClient::getDataEndpoint
  */
 
 /*!
- * @brief  Constructs a new GetDataEndpointRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetDataEndpointRequest::GetDataEndpointRequest(const GetDataEndpointRequest &other)
     : KinesisVideoRequest(new GetDataEndpointRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ GetDataEndpointRequest::GetDataEndpointRequest(const GetDataEndpointRequest &oth
 }
 
 /*!
- * @brief  Constructs a new GetDataEndpointRequest object.
+ * Constructs a GetDataEndpointRequest object.
  */
 GetDataEndpointRequest::GetDataEndpointRequest()
     : KinesisVideoRequest(new GetDataEndpointRequestPrivate(KinesisVideoRequest::GetDataEndpointAction, this))
@@ -66,14 +63,9 @@ bool GetDataEndpointRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetDataEndpointResponse object.
+ * Returns a GetDataEndpointResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetDataEndpointResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  KinesisVideoClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetDataEndpointRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * GetDataEndpointRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::KinesisVideo::GetDataEndpointRequestPrivate
+ * \brief The GetDataEndpointRequestPrivate class provides private implementation for GetDataEndpointRequest.
+ * \internal
  *
- * @class  GetDataEndpointRequestPrivate
- *
- * @brief  Private implementation for GetDataEndpointRequest.
+ * \inmodule QtAwsKinesisVideo
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetDataEndpointRequestPrivate object.
- *
- * @param  action  KinesisVideo action being performed.
- * @param  q       Pointer to this object's public GetDataEndpointRequest instance.
+ * Constructs a GetDataEndpointRequestPrivate object for KinesisVideo \a action with,
+ * public implementation \a q.
  */
 GetDataEndpointRequestPrivate::GetDataEndpointRequestPrivate(
     const KinesisVideoRequest::Action action, GetDataEndpointRequest * const q)
@@ -104,15 +93,10 @@ GetDataEndpointRequestPrivate::GetDataEndpointRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetDataEndpointRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetDataEndpointRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetDataEndpointRequest instance.
  */
 GetDataEndpointRequestPrivate::GetDataEndpointRequestPrivate(
     const GetDataEndpointRequestPrivate &other, GetDataEndpointRequest * const q)

@@ -82,6 +82,9 @@
 /*!
  * \namespace QtAws::EMR
  * \brief The QtAws::EMR contains stuff...
+ *
+ * \inmodule QtAwsEMR
+ *
  * @todo Move this to a separate template file.
  */
 
@@ -134,7 +137,7 @@ EmrClient::EmrClient(
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * \a  AwsEndpoint::getEndpoint()
+ * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
 EmrClient::EmrClient(
     const QUrl &endpoint,

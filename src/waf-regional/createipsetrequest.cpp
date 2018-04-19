@@ -27,10 +27,9 @@ namespace WAFRegional {
 
 /*!
  * \class QtAws::WAFRegional::CreateIPSetRequest
- *
  * \brief The CreateIPSetRequest class provides an interface for WAFRegional CreateIPSet requests.
  *
- * \ingroup WAFRegional
+ * \inmodule QtAwsWAFRegional
  *
  *  This is the <i>AWS WAF Regional API Reference</i> for using AWS WAF with Elastic Load Balancing (ELB) Application Load
  *  Balancers. The AWS WAF actions and data types listed in the reference are available for protecting Application Load
@@ -44,9 +43,7 @@ namespace WAFRegional {
  */
 
 /*!
- * @brief  Constructs a new CreateIPSetRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateIPSetRequest::CreateIPSetRequest(const CreateIPSetRequest &other)
     : WAFRegionalRequest(new CreateIPSetRequestPrivate(*other.d_func(), this))
@@ -55,7 +52,7 @@ CreateIPSetRequest::CreateIPSetRequest(const CreateIPSetRequest &other)
 }
 
 /*!
- * @brief  Constructs a new CreateIPSetRequest object.
+ * Constructs a CreateIPSetRequest object.
  */
 CreateIPSetRequest::CreateIPSetRequest()
     : WAFRegionalRequest(new CreateIPSetRequestPrivate(WAFRegionalRequest::CreateIPSetAction, this))
@@ -73,14 +70,9 @@ bool CreateIPSetRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateIPSetResponse object.
+ * Returns a CreateIPSetResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateIPSetResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WAFRegionalClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateIPSetRequest::response(QNetworkReply * const reply) const
 {
@@ -88,20 +80,17 @@ QtAws::Core::AwsAbstractResponse * CreateIPSetRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::WAFRegional::CreateIPSetRequestPrivate
+ * \brief The CreateIPSetRequestPrivate class provides private implementation for CreateIPSetRequest.
+ * \internal
  *
- * @class  CreateIPSetRequestPrivate
- *
- * @brief  Private implementation for CreateIPSetRequest.
+ * \inmodule QtAwsWAFRegional
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateIPSetRequestPrivate object.
- *
- * @param  action  WAFRegional action being performed.
- * @param  q       Pointer to this object's public CreateIPSetRequest instance.
+ * Constructs a CreateIPSetRequestPrivate object for WAFRegional \a action with,
+ * public implementation \a q.
  */
 CreateIPSetRequestPrivate::CreateIPSetRequestPrivate(
     const WAFRegionalRequest::Action action, CreateIPSetRequest * const q)
@@ -111,15 +100,10 @@ CreateIPSetRequestPrivate::CreateIPSetRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateIPSetRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateIPSetRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateIPSetRequest instance.
  */
 CreateIPSetRequestPrivate::CreateIPSetRequestPrivate(
     const CreateIPSetRequestPrivate &other, CreateIPSetRequest * const q)

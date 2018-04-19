@@ -27,10 +27,9 @@ namespace KMS {
 
 /*!
  * \class QtAws::KMS::DisableKeyRequest
- *
  * \brief The DisableKeyRequest class provides an interface for KMS DisableKey requests.
  *
- * \ingroup KMS
+ * \inmodule QtAwsKMS
  *
  *  <fullname>AWS Key Management Service</fullname>
  * 
@@ -136,9 +135,7 @@ namespace KMS {
  */
 
 /*!
- * @brief  Constructs a new DisableKeyRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DisableKeyRequest::DisableKeyRequest(const DisableKeyRequest &other)
     : KMSRequest(new DisableKeyRequestPrivate(*other.d_func(), this))
@@ -147,7 +144,7 @@ DisableKeyRequest::DisableKeyRequest(const DisableKeyRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DisableKeyRequest object.
+ * Constructs a DisableKeyRequest object.
  */
 DisableKeyRequest::DisableKeyRequest()
     : KMSRequest(new DisableKeyRequestPrivate(KMSRequest::DisableKeyAction, this))
@@ -165,14 +162,9 @@ bool DisableKeyRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DisableKeyResponse object.
+ * Returns a DisableKeyResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DisableKeyResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  KMSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DisableKeyRequest::response(QNetworkReply * const reply) const
 {
@@ -180,20 +172,17 @@ QtAws::Core::AwsAbstractResponse * DisableKeyRequest::response(QNetworkReply * c
 }
 
 /*!
- * @internal
+ * \class QtAws::KMS::DisableKeyRequestPrivate
+ * \brief The DisableKeyRequestPrivate class provides private implementation for DisableKeyRequest.
+ * \internal
  *
- * @class  DisableKeyRequestPrivate
- *
- * @brief  Private implementation for DisableKeyRequest.
+ * \inmodule QtAwsKMS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DisableKeyRequestPrivate object.
- *
- * @param  action  KMS action being performed.
- * @param  q       Pointer to this object's public DisableKeyRequest instance.
+ * Constructs a DisableKeyRequestPrivate object for KMS \a action with,
+ * public implementation \a q.
  */
 DisableKeyRequestPrivate::DisableKeyRequestPrivate(
     const KMSRequest::Action action, DisableKeyRequest * const q)
@@ -203,15 +192,10 @@ DisableKeyRequestPrivate::DisableKeyRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DisableKeyRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DisableKeyRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DisableKeyRequest instance.
  */
 DisableKeyRequestPrivate::DisableKeyRequestPrivate(
     const DisableKeyRequestPrivate &other, DisableKeyRequest * const q)

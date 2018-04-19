@@ -27,10 +27,9 @@ namespace Redshift {
 
 /*!
  * \class QtAws::Redshift::DescribeLoggingStatusRequest
- *
  * \brief The DescribeLoggingStatusRequest class provides an interface for Redshift DescribeLoggingStatus requests.
  *
- * \ingroup Redshift
+ * \inmodule QtAwsRedshift
  *
  *  <fullname>Amazon Redshift</fullname>
  * 
@@ -67,9 +66,7 @@ namespace Redshift {
  */
 
 /*!
- * @brief  Constructs a new DescribeLoggingStatusRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeLoggingStatusRequest::DescribeLoggingStatusRequest(const DescribeLoggingStatusRequest &other)
     : RedshiftRequest(new DescribeLoggingStatusRequestPrivate(*other.d_func(), this))
@@ -78,7 +75,7 @@ DescribeLoggingStatusRequest::DescribeLoggingStatusRequest(const DescribeLogging
 }
 
 /*!
- * @brief  Constructs a new DescribeLoggingStatusRequest object.
+ * Constructs a DescribeLoggingStatusRequest object.
  */
 DescribeLoggingStatusRequest::DescribeLoggingStatusRequest()
     : RedshiftRequest(new DescribeLoggingStatusRequestPrivate(RedshiftRequest::DescribeLoggingStatusAction, this))
@@ -96,14 +93,9 @@ bool DescribeLoggingStatusRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeLoggingStatusResponse object.
+ * Returns a DescribeLoggingStatusResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeLoggingStatusResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RedshiftClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeLoggingStatusRequest::response(QNetworkReply * const reply) const
 {
@@ -111,20 +103,17 @@ QtAws::Core::AwsAbstractResponse * DescribeLoggingStatusRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::Redshift::DescribeLoggingStatusRequestPrivate
+ * \brief The DescribeLoggingStatusRequestPrivate class provides private implementation for DescribeLoggingStatusRequest.
+ * \internal
  *
- * @class  DescribeLoggingStatusRequestPrivate
- *
- * @brief  Private implementation for DescribeLoggingStatusRequest.
+ * \inmodule QtAwsRedshift
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeLoggingStatusRequestPrivate object.
- *
- * @param  action  Redshift action being performed.
- * @param  q       Pointer to this object's public DescribeLoggingStatusRequest instance.
+ * Constructs a DescribeLoggingStatusRequestPrivate object for Redshift \a action with,
+ * public implementation \a q.
  */
 DescribeLoggingStatusRequestPrivate::DescribeLoggingStatusRequestPrivate(
     const RedshiftRequest::Action action, DescribeLoggingStatusRequest * const q)
@@ -134,15 +123,10 @@ DescribeLoggingStatusRequestPrivate::DescribeLoggingStatusRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeLoggingStatusRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeLoggingStatusRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeLoggingStatusRequest instance.
  */
 DescribeLoggingStatusRequestPrivate::DescribeLoggingStatusRequestPrivate(
     const DescribeLoggingStatusRequestPrivate &other, DescribeLoggingStatusRequest * const q)

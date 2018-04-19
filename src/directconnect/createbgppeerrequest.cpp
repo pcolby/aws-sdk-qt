@@ -27,10 +27,9 @@ namespace DirectConnect {
 
 /*!
  * \class QtAws::DirectConnect::CreateBGPPeerRequest
- *
  * \brief The CreateBGPPeerRequest class provides an interface for DirectConnect CreateBGPPeer requests.
  *
- * \ingroup DirectConnect
+ * \inmodule QtAwsDirectConnect
  *
  *  AWS Direct Connect links your internal network to an AWS Direct Connect location over a standard 1 gigabit or 10 gigabit
  *  Ethernet fiber-optic cable. One end of the cable is connected to your router, the other to an AWS Direct Connect router.
@@ -45,9 +44,7 @@ namespace DirectConnect {
  */
 
 /*!
- * @brief  Constructs a new CreateBGPPeerRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateBGPPeerRequest::CreateBGPPeerRequest(const CreateBGPPeerRequest &other)
     : DirectConnectRequest(new CreateBGPPeerRequestPrivate(*other.d_func(), this))
@@ -56,7 +53,7 @@ CreateBGPPeerRequest::CreateBGPPeerRequest(const CreateBGPPeerRequest &other)
 }
 
 /*!
- * @brief  Constructs a new CreateBGPPeerRequest object.
+ * Constructs a CreateBGPPeerRequest object.
  */
 CreateBGPPeerRequest::CreateBGPPeerRequest()
     : DirectConnectRequest(new CreateBGPPeerRequestPrivate(DirectConnectRequest::CreateBGPPeerAction, this))
@@ -74,14 +71,9 @@ bool CreateBGPPeerRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateBGPPeerResponse object.
+ * Returns a CreateBGPPeerResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateBGPPeerResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DirectConnectClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateBGPPeerRequest::response(QNetworkReply * const reply) const
 {
@@ -89,20 +81,17 @@ QtAws::Core::AwsAbstractResponse * CreateBGPPeerRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::DirectConnect::CreateBGPPeerRequestPrivate
+ * \brief The CreateBGPPeerRequestPrivate class provides private implementation for CreateBGPPeerRequest.
+ * \internal
  *
- * @class  CreateBGPPeerRequestPrivate
- *
- * @brief  Private implementation for CreateBGPPeerRequest.
+ * \inmodule QtAwsDirectConnect
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateBGPPeerRequestPrivate object.
- *
- * @param  action  DirectConnect action being performed.
- * @param  q       Pointer to this object's public CreateBGPPeerRequest instance.
+ * Constructs a CreateBGPPeerRequestPrivate object for DirectConnect \a action with,
+ * public implementation \a q.
  */
 CreateBGPPeerRequestPrivate::CreateBGPPeerRequestPrivate(
     const DirectConnectRequest::Action action, CreateBGPPeerRequest * const q)
@@ -112,15 +101,10 @@ CreateBGPPeerRequestPrivate::CreateBGPPeerRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateBGPPeerRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateBGPPeerRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateBGPPeerRequest instance.
  */
 CreateBGPPeerRequestPrivate::CreateBGPPeerRequestPrivate(
     const CreateBGPPeerRequestPrivate &other, CreateBGPPeerRequest * const q)

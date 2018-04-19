@@ -27,10 +27,9 @@ namespace MigrationHub {
 
 /*!
  * \class QtAws::MigrationHub::DescribeMigrationTaskRequest
- *
  * \brief The DescribeMigrationTaskRequest class provides an interface for MigrationHub DescribeMigrationTask requests.
  *
- * \ingroup MigrationHub
+ * \inmodule QtAwsMigrationHub
  *
  *  The AWS Migration Hub API methods help to obtain server and application migration status and integrate your
  *  resource-specific migration tool by providing a programmatic interface to Migration Hub.
@@ -39,9 +38,7 @@ namespace MigrationHub {
  */
 
 /*!
- * @brief  Constructs a new DescribeMigrationTaskRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeMigrationTaskRequest::DescribeMigrationTaskRequest(const DescribeMigrationTaskRequest &other)
     : MigrationHubRequest(new DescribeMigrationTaskRequestPrivate(*other.d_func(), this))
@@ -50,7 +47,7 @@ DescribeMigrationTaskRequest::DescribeMigrationTaskRequest(const DescribeMigrati
 }
 
 /*!
- * @brief  Constructs a new DescribeMigrationTaskRequest object.
+ * Constructs a DescribeMigrationTaskRequest object.
  */
 DescribeMigrationTaskRequest::DescribeMigrationTaskRequest()
     : MigrationHubRequest(new DescribeMigrationTaskRequestPrivate(MigrationHubRequest::DescribeMigrationTaskAction, this))
@@ -68,14 +65,9 @@ bool DescribeMigrationTaskRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeMigrationTaskResponse object.
+ * Returns a DescribeMigrationTaskResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeMigrationTaskResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MigrationHubClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeMigrationTaskRequest::response(QNetworkReply * const reply) const
 {
@@ -83,20 +75,17 @@ QtAws::Core::AwsAbstractResponse * DescribeMigrationTaskRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::MigrationHub::DescribeMigrationTaskRequestPrivate
+ * \brief The DescribeMigrationTaskRequestPrivate class provides private implementation for DescribeMigrationTaskRequest.
+ * \internal
  *
- * @class  DescribeMigrationTaskRequestPrivate
- *
- * @brief  Private implementation for DescribeMigrationTaskRequest.
+ * \inmodule QtAwsMigrationHub
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeMigrationTaskRequestPrivate object.
- *
- * @param  action  MigrationHub action being performed.
- * @param  q       Pointer to this object's public DescribeMigrationTaskRequest instance.
+ * Constructs a DescribeMigrationTaskRequestPrivate object for MigrationHub \a action with,
+ * public implementation \a q.
  */
 DescribeMigrationTaskRequestPrivate::DescribeMigrationTaskRequestPrivate(
     const MigrationHubRequest::Action action, DescribeMigrationTaskRequest * const q)
@@ -106,15 +95,10 @@ DescribeMigrationTaskRequestPrivate::DescribeMigrationTaskRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeMigrationTaskRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeMigrationTaskRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeMigrationTaskRequest instance.
  */
 DescribeMigrationTaskRequestPrivate::DescribeMigrationTaskRequestPrivate(
     const DescribeMigrationTaskRequestPrivate &other, DescribeMigrationTaskRequest * const q)

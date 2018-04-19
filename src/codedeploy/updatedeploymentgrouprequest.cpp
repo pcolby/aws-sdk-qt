@@ -27,10 +27,9 @@ namespace CodeDeploy {
 
 /*!
  * \class QtAws::CodeDeploy::UpdateDeploymentGroupRequest
- *
  * \brief The UpdateDeploymentGroupRequest class provides an interface for CodeDeploy UpdateDeploymentGroup requests.
  *
- * \ingroup CodeDeploy
+ * \inmodule QtAwsCodeDeploy
  *
  *  <fullname>AWS CodeDeploy</fullname>
  * 
@@ -118,9 +117,7 @@ namespace CodeDeploy {
  */
 
 /*!
- * @brief  Constructs a new UpdateDeploymentGroupRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateDeploymentGroupRequest::UpdateDeploymentGroupRequest(const UpdateDeploymentGroupRequest &other)
     : CodeDeployRequest(new UpdateDeploymentGroupRequestPrivate(*other.d_func(), this))
@@ -129,7 +126,7 @@ UpdateDeploymentGroupRequest::UpdateDeploymentGroupRequest(const UpdateDeploymen
 }
 
 /*!
- * @brief  Constructs a new UpdateDeploymentGroupRequest object.
+ * Constructs a UpdateDeploymentGroupRequest object.
  */
 UpdateDeploymentGroupRequest::UpdateDeploymentGroupRequest()
     : CodeDeployRequest(new UpdateDeploymentGroupRequestPrivate(CodeDeployRequest::UpdateDeploymentGroupAction, this))
@@ -147,14 +144,9 @@ bool UpdateDeploymentGroupRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateDeploymentGroupResponse object.
+ * Returns a UpdateDeploymentGroupResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateDeploymentGroupResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CodeDeployClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateDeploymentGroupRequest::response(QNetworkReply * const reply) const
 {
@@ -162,20 +154,17 @@ QtAws::Core::AwsAbstractResponse * UpdateDeploymentGroupRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::CodeDeploy::UpdateDeploymentGroupRequestPrivate
+ * \brief The UpdateDeploymentGroupRequestPrivate class provides private implementation for UpdateDeploymentGroupRequest.
+ * \internal
  *
- * @class  UpdateDeploymentGroupRequestPrivate
- *
- * @brief  Private implementation for UpdateDeploymentGroupRequest.
+ * \inmodule QtAwsCodeDeploy
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateDeploymentGroupRequestPrivate object.
- *
- * @param  action  CodeDeploy action being performed.
- * @param  q       Pointer to this object's public UpdateDeploymentGroupRequest instance.
+ * Constructs a UpdateDeploymentGroupRequestPrivate object for CodeDeploy \a action with,
+ * public implementation \a q.
  */
 UpdateDeploymentGroupRequestPrivate::UpdateDeploymentGroupRequestPrivate(
     const CodeDeployRequest::Action action, UpdateDeploymentGroupRequest * const q)
@@ -185,15 +174,10 @@ UpdateDeploymentGroupRequestPrivate::UpdateDeploymentGroupRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateDeploymentGroupRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateDeploymentGroupRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateDeploymentGroupRequest instance.
  */
 UpdateDeploymentGroupRequestPrivate::UpdateDeploymentGroupRequestPrivate(
     const UpdateDeploymentGroupRequestPrivate &other, UpdateDeploymentGroupRequest * const q)

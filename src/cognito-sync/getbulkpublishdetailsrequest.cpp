@@ -27,10 +27,9 @@ namespace CognitoSync {
 
 /*!
  * \class QtAws::CognitoSync::GetBulkPublishDetailsRequest
- *
  * \brief The GetBulkPublishDetailsRequest class provides an interface for CognitoSync GetBulkPublishDetails requests.
  *
- * \ingroup CognitoSync
+ * \inmodule QtAwsCognitoSync
  *
  *  <fullname>Amazon Cognito Sync</fullname>
  * 
@@ -57,9 +56,7 @@ namespace CognitoSync {
  */
 
 /*!
- * @brief  Constructs a new GetBulkPublishDetailsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetBulkPublishDetailsRequest::GetBulkPublishDetailsRequest(const GetBulkPublishDetailsRequest &other)
     : CognitoSyncRequest(new GetBulkPublishDetailsRequestPrivate(*other.d_func(), this))
@@ -68,7 +65,7 @@ GetBulkPublishDetailsRequest::GetBulkPublishDetailsRequest(const GetBulkPublishD
 }
 
 /*!
- * @brief  Constructs a new GetBulkPublishDetailsRequest object.
+ * Constructs a GetBulkPublishDetailsRequest object.
  */
 GetBulkPublishDetailsRequest::GetBulkPublishDetailsRequest()
     : CognitoSyncRequest(new GetBulkPublishDetailsRequestPrivate(CognitoSyncRequest::GetBulkPublishDetailsAction, this))
@@ -86,14 +83,9 @@ bool GetBulkPublishDetailsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetBulkPublishDetailsResponse object.
+ * Returns a GetBulkPublishDetailsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetBulkPublishDetailsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CognitoSyncClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetBulkPublishDetailsRequest::response(QNetworkReply * const reply) const
 {
@@ -101,20 +93,17 @@ QtAws::Core::AwsAbstractResponse * GetBulkPublishDetailsRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::CognitoSync::GetBulkPublishDetailsRequestPrivate
+ * \brief The GetBulkPublishDetailsRequestPrivate class provides private implementation for GetBulkPublishDetailsRequest.
+ * \internal
  *
- * @class  GetBulkPublishDetailsRequestPrivate
- *
- * @brief  Private implementation for GetBulkPublishDetailsRequest.
+ * \inmodule QtAwsCognitoSync
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetBulkPublishDetailsRequestPrivate object.
- *
- * @param  action  CognitoSync action being performed.
- * @param  q       Pointer to this object's public GetBulkPublishDetailsRequest instance.
+ * Constructs a GetBulkPublishDetailsRequestPrivate object for CognitoSync \a action with,
+ * public implementation \a q.
  */
 GetBulkPublishDetailsRequestPrivate::GetBulkPublishDetailsRequestPrivate(
     const CognitoSyncRequest::Action action, GetBulkPublishDetailsRequest * const q)
@@ -124,15 +113,10 @@ GetBulkPublishDetailsRequestPrivate::GetBulkPublishDetailsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetBulkPublishDetailsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetBulkPublishDetailsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetBulkPublishDetailsRequest instance.
  */
 GetBulkPublishDetailsRequestPrivate::GetBulkPublishDetailsRequestPrivate(
     const GetBulkPublishDetailsRequestPrivate &other, GetBulkPublishDetailsRequest * const q)

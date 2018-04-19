@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::CopySnapshotRequest
- *
  * \brief The CopySnapshotRequest class provides an interface for EC2 CopySnapshot requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new CopySnapshotRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CopySnapshotRequest::CopySnapshotRequest(const CopySnapshotRequest &other)
     : EC2Request(new CopySnapshotRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ CopySnapshotRequest::CopySnapshotRequest(const CopySnapshotRequest &other)
 }
 
 /*!
- * @brief  Constructs a new CopySnapshotRequest object.
+ * Constructs a CopySnapshotRequest object.
  */
 CopySnapshotRequest::CopySnapshotRequest()
     : EC2Request(new CopySnapshotRequestPrivate(EC2Request::CopySnapshotAction, this))
@@ -70,14 +67,9 @@ bool CopySnapshotRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CopySnapshotResponse object.
+ * Returns a CopySnapshotResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CopySnapshotResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CopySnapshotRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * CopySnapshotRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::CopySnapshotRequestPrivate
+ * \brief The CopySnapshotRequestPrivate class provides private implementation for CopySnapshotRequest.
+ * \internal
  *
- * @class  CopySnapshotRequestPrivate
- *
- * @brief  Private implementation for CopySnapshotRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CopySnapshotRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public CopySnapshotRequest instance.
+ * Constructs a CopySnapshotRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 CopySnapshotRequestPrivate::CopySnapshotRequestPrivate(
     const EC2Request::Action action, CopySnapshotRequest * const q)
@@ -108,15 +97,10 @@ CopySnapshotRequestPrivate::CopySnapshotRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CopySnapshotRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CopySnapshotRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CopySnapshotRequest instance.
  */
 CopySnapshotRequestPrivate::CopySnapshotRequestPrivate(
     const CopySnapshotRequestPrivate &other, CopySnapshotRequest * const q)

@@ -27,10 +27,9 @@ namespace DeviceFarm {
 
 /*!
  * \class QtAws::DeviceFarm::ListArtifactsRequest
- *
  * \brief The ListArtifactsRequest class provides an interface for DeviceFarm ListArtifacts requests.
  *
- * \ingroup DeviceFarm
+ * \inmodule QtAwsDeviceFarm
  *
  *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
  *  phones, tablets, and other devices in the
@@ -39,9 +38,7 @@ namespace DeviceFarm {
  */
 
 /*!
- * @brief  Constructs a new ListArtifactsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListArtifactsRequest::ListArtifactsRequest(const ListArtifactsRequest &other)
     : DeviceFarmRequest(new ListArtifactsRequestPrivate(*other.d_func(), this))
@@ -50,7 +47,7 @@ ListArtifactsRequest::ListArtifactsRequest(const ListArtifactsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ListArtifactsRequest object.
+ * Constructs a ListArtifactsRequest object.
  */
 ListArtifactsRequest::ListArtifactsRequest()
     : DeviceFarmRequest(new ListArtifactsRequestPrivate(DeviceFarmRequest::ListArtifactsAction, this))
@@ -68,14 +65,9 @@ bool ListArtifactsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListArtifactsResponse object.
+ * Returns a ListArtifactsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListArtifactsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DeviceFarmClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListArtifactsRequest::response(QNetworkReply * const reply) const
 {
@@ -83,20 +75,17 @@ QtAws::Core::AwsAbstractResponse * ListArtifactsRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::DeviceFarm::ListArtifactsRequestPrivate
+ * \brief The ListArtifactsRequestPrivate class provides private implementation for ListArtifactsRequest.
+ * \internal
  *
- * @class  ListArtifactsRequestPrivate
- *
- * @brief  Private implementation for ListArtifactsRequest.
+ * \inmodule QtAwsDeviceFarm
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListArtifactsRequestPrivate object.
- *
- * @param  action  DeviceFarm action being performed.
- * @param  q       Pointer to this object's public ListArtifactsRequest instance.
+ * Constructs a ListArtifactsRequestPrivate object for DeviceFarm \a action with,
+ * public implementation \a q.
  */
 ListArtifactsRequestPrivate::ListArtifactsRequestPrivate(
     const DeviceFarmRequest::Action action, ListArtifactsRequest * const q)
@@ -106,15 +95,10 @@ ListArtifactsRequestPrivate::ListArtifactsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListArtifactsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListArtifactsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListArtifactsRequest instance.
  */
 ListArtifactsRequestPrivate::ListArtifactsRequestPrivate(
     const ListArtifactsRequestPrivate &other, ListArtifactsRequest * const q)

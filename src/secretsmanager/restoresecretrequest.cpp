@@ -27,10 +27,9 @@ namespace SecretsManager {
 
 /*!
  * \class QtAws::SecretsManager::RestoreSecretRequest
- *
  * \brief The RestoreSecretRequest class provides an interface for SecretsManager RestoreSecret requests.
  *
- * \ingroup SecretsManager
+ * \inmodule QtAwsSecretsManager
  *
  *  <fullname>AWS Secrets Manager API Reference</fullname>
  * 
@@ -137,9 +136,7 @@ namespace SecretsManager {
  */
 
 /*!
- * @brief  Constructs a new RestoreSecretRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 RestoreSecretRequest::RestoreSecretRequest(const RestoreSecretRequest &other)
     : SecretsManagerRequest(new RestoreSecretRequestPrivate(*other.d_func(), this))
@@ -148,7 +145,7 @@ RestoreSecretRequest::RestoreSecretRequest(const RestoreSecretRequest &other)
 }
 
 /*!
- * @brief  Constructs a new RestoreSecretRequest object.
+ * Constructs a RestoreSecretRequest object.
  */
 RestoreSecretRequest::RestoreSecretRequest()
     : SecretsManagerRequest(new RestoreSecretRequestPrivate(SecretsManagerRequest::RestoreSecretAction, this))
@@ -166,14 +163,9 @@ bool RestoreSecretRequest::isValid() const
 
 
 /*!
- * @brief  Construct an RestoreSecretResponse object.
+ * Returns a RestoreSecretResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An RestoreSecretResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SecretsManagerClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * RestoreSecretRequest::response(QNetworkReply * const reply) const
 {
@@ -181,20 +173,17 @@ QtAws::Core::AwsAbstractResponse * RestoreSecretRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::SecretsManager::RestoreSecretRequestPrivate
+ * \brief The RestoreSecretRequestPrivate class provides private implementation for RestoreSecretRequest.
+ * \internal
  *
- * @class  RestoreSecretRequestPrivate
- *
- * @brief  Private implementation for RestoreSecretRequest.
+ * \inmodule QtAwsSecretsManager
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new RestoreSecretRequestPrivate object.
- *
- * @param  action  SecretsManager action being performed.
- * @param  q       Pointer to this object's public RestoreSecretRequest instance.
+ * Constructs a RestoreSecretRequestPrivate object for SecretsManager \a action with,
+ * public implementation \a q.
  */
 RestoreSecretRequestPrivate::RestoreSecretRequestPrivate(
     const SecretsManagerRequest::Action action, RestoreSecretRequest * const q)
@@ -204,15 +193,10 @@ RestoreSecretRequestPrivate::RestoreSecretRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RestoreSecretRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the RestoreSecretRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public RestoreSecretRequest instance.
  */
 RestoreSecretRequestPrivate::RestoreSecretRequestPrivate(
     const RestoreSecretRequestPrivate &other, RestoreSecretRequest * const q)

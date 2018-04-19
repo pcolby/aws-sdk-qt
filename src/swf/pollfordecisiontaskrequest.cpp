@@ -27,10 +27,9 @@ namespace SWF {
 
 /*!
  * \class QtAws::SWF::PollForDecisionTaskRequest
- *
  * \brief The PollForDecisionTaskRequest class provides an interface for SWF PollForDecisionTask requests.
  *
- * \ingroup SWF
+ * \inmodule QtAwsSWF
  *
  *  <fullname>Amazon Simple Workflow Service</fullname>
  * 
@@ -53,9 +52,7 @@ namespace SWF {
  */
 
 /*!
- * @brief  Constructs a new PollForDecisionTaskRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 PollForDecisionTaskRequest::PollForDecisionTaskRequest(const PollForDecisionTaskRequest &other)
     : SWFRequest(new PollForDecisionTaskRequestPrivate(*other.d_func(), this))
@@ -64,7 +61,7 @@ PollForDecisionTaskRequest::PollForDecisionTaskRequest(const PollForDecisionTask
 }
 
 /*!
- * @brief  Constructs a new PollForDecisionTaskRequest object.
+ * Constructs a PollForDecisionTaskRequest object.
  */
 PollForDecisionTaskRequest::PollForDecisionTaskRequest()
     : SWFRequest(new PollForDecisionTaskRequestPrivate(SWFRequest::PollForDecisionTaskAction, this))
@@ -82,14 +79,9 @@ bool PollForDecisionTaskRequest::isValid() const
 
 
 /*!
- * @brief  Construct an PollForDecisionTaskResponse object.
+ * Returns a PollForDecisionTaskResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An PollForDecisionTaskResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SWFClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * PollForDecisionTaskRequest::response(QNetworkReply * const reply) const
 {
@@ -97,20 +89,17 @@ QtAws::Core::AwsAbstractResponse * PollForDecisionTaskRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::SWF::PollForDecisionTaskRequestPrivate
+ * \brief The PollForDecisionTaskRequestPrivate class provides private implementation for PollForDecisionTaskRequest.
+ * \internal
  *
- * @class  PollForDecisionTaskRequestPrivate
- *
- * @brief  Private implementation for PollForDecisionTaskRequest.
+ * \inmodule QtAwsSWF
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new PollForDecisionTaskRequestPrivate object.
- *
- * @param  action  SWF action being performed.
- * @param  q       Pointer to this object's public PollForDecisionTaskRequest instance.
+ * Constructs a PollForDecisionTaskRequestPrivate object for SWF \a action with,
+ * public implementation \a q.
  */
 PollForDecisionTaskRequestPrivate::PollForDecisionTaskRequestPrivate(
     const SWFRequest::Action action, PollForDecisionTaskRequest * const q)
@@ -120,15 +109,10 @@ PollForDecisionTaskRequestPrivate::PollForDecisionTaskRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PollForDecisionTaskRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the PollForDecisionTaskRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public PollForDecisionTaskRequest instance.
  */
 PollForDecisionTaskRequestPrivate::PollForDecisionTaskRequestPrivate(
     const PollForDecisionTaskRequestPrivate &other, PollForDecisionTaskRequest * const q)

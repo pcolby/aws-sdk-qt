@@ -27,10 +27,9 @@ namespace DeviceFarm {
 
 /*!
  * \class QtAws::DeviceFarm::ListRemoteAccessSessionsRequest
- *
  * \brief The ListRemoteAccessSessionsRequest class provides an interface for DeviceFarm ListRemoteAccessSessions requests.
  *
- * \ingroup DeviceFarm
+ * \inmodule QtAwsDeviceFarm
  *
  *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
  *  phones, tablets, and other devices in the
@@ -39,9 +38,7 @@ namespace DeviceFarm {
  */
 
 /*!
- * @brief  Constructs a new ListRemoteAccessSessionsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListRemoteAccessSessionsRequest::ListRemoteAccessSessionsRequest(const ListRemoteAccessSessionsRequest &other)
     : DeviceFarmRequest(new ListRemoteAccessSessionsRequestPrivate(*other.d_func(), this))
@@ -50,7 +47,7 @@ ListRemoteAccessSessionsRequest::ListRemoteAccessSessionsRequest(const ListRemot
 }
 
 /*!
- * @brief  Constructs a new ListRemoteAccessSessionsRequest object.
+ * Constructs a ListRemoteAccessSessionsRequest object.
  */
 ListRemoteAccessSessionsRequest::ListRemoteAccessSessionsRequest()
     : DeviceFarmRequest(new ListRemoteAccessSessionsRequestPrivate(DeviceFarmRequest::ListRemoteAccessSessionsAction, this))
@@ -68,14 +65,9 @@ bool ListRemoteAccessSessionsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListRemoteAccessSessionsResponse object.
+ * Returns a ListRemoteAccessSessionsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListRemoteAccessSessionsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DeviceFarmClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListRemoteAccessSessionsRequest::response(QNetworkReply * const reply) const
 {
@@ -83,20 +75,17 @@ QtAws::Core::AwsAbstractResponse * ListRemoteAccessSessionsRequest::response(QNe
 }
 
 /*!
- * @internal
+ * \class QtAws::DeviceFarm::ListRemoteAccessSessionsRequestPrivate
+ * \brief The ListRemoteAccessSessionsRequestPrivate class provides private implementation for ListRemoteAccessSessionsRequest.
+ * \internal
  *
- * @class  ListRemoteAccessSessionsRequestPrivate
- *
- * @brief  Private implementation for ListRemoteAccessSessionsRequest.
+ * \inmodule QtAwsDeviceFarm
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListRemoteAccessSessionsRequestPrivate object.
- *
- * @param  action  DeviceFarm action being performed.
- * @param  q       Pointer to this object's public ListRemoteAccessSessionsRequest instance.
+ * Constructs a ListRemoteAccessSessionsRequestPrivate object for DeviceFarm \a action with,
+ * public implementation \a q.
  */
 ListRemoteAccessSessionsRequestPrivate::ListRemoteAccessSessionsRequestPrivate(
     const DeviceFarmRequest::Action action, ListRemoteAccessSessionsRequest * const q)
@@ -106,15 +95,10 @@ ListRemoteAccessSessionsRequestPrivate::ListRemoteAccessSessionsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListRemoteAccessSessionsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListRemoteAccessSessionsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListRemoteAccessSessionsRequest instance.
  */
 ListRemoteAccessSessionsRequestPrivate::ListRemoteAccessSessionsRequestPrivate(
     const ListRemoteAccessSessionsRequestPrivate &other, ListRemoteAccessSessionsRequest * const q)

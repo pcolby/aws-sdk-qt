@@ -27,10 +27,9 @@ namespace Route53Domains {
 
 /*!
  * \class QtAws::Route53Domains::GetOperationDetailRequest
- *
  * \brief The GetOperationDetailRequest class provides an interface for Route53Domains GetOperationDetail requests.
  *
- * \ingroup Route53Domains
+ * \inmodule QtAwsRoute53Domains
  *
  *  Amazon Route 53 API actions let you register domain names and perform related
  *
@@ -38,9 +37,7 @@ namespace Route53Domains {
  */
 
 /*!
- * @brief  Constructs a new GetOperationDetailRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetOperationDetailRequest::GetOperationDetailRequest(const GetOperationDetailRequest &other)
     : Route53DomainsRequest(new GetOperationDetailRequestPrivate(*other.d_func(), this))
@@ -49,7 +46,7 @@ GetOperationDetailRequest::GetOperationDetailRequest(const GetOperationDetailReq
 }
 
 /*!
- * @brief  Constructs a new GetOperationDetailRequest object.
+ * Constructs a GetOperationDetailRequest object.
  */
 GetOperationDetailRequest::GetOperationDetailRequest()
     : Route53DomainsRequest(new GetOperationDetailRequestPrivate(Route53DomainsRequest::GetOperationDetailAction, this))
@@ -67,14 +64,9 @@ bool GetOperationDetailRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetOperationDetailResponse object.
+ * Returns a GetOperationDetailResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetOperationDetailResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  Route53DomainsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetOperationDetailRequest::response(QNetworkReply * const reply) const
 {
@@ -82,20 +74,17 @@ QtAws::Core::AwsAbstractResponse * GetOperationDetailRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::Route53Domains::GetOperationDetailRequestPrivate
+ * \brief The GetOperationDetailRequestPrivate class provides private implementation for GetOperationDetailRequest.
+ * \internal
  *
- * @class  GetOperationDetailRequestPrivate
- *
- * @brief  Private implementation for GetOperationDetailRequest.
+ * \inmodule QtAwsRoute53Domains
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetOperationDetailRequestPrivate object.
- *
- * @param  action  Route53Domains action being performed.
- * @param  q       Pointer to this object's public GetOperationDetailRequest instance.
+ * Constructs a GetOperationDetailRequestPrivate object for Route53Domains \a action with,
+ * public implementation \a q.
  */
 GetOperationDetailRequestPrivate::GetOperationDetailRequestPrivate(
     const Route53DomainsRequest::Action action, GetOperationDetailRequest * const q)
@@ -105,15 +94,10 @@ GetOperationDetailRequestPrivate::GetOperationDetailRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetOperationDetailRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetOperationDetailRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetOperationDetailRequest instance.
  */
 GetOperationDetailRequestPrivate::GetOperationDetailRequestPrivate(
     const GetOperationDetailRequestPrivate &other, GetOperationDetailRequest * const q)

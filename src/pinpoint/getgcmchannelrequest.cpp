@@ -27,19 +27,16 @@ namespace Pinpoint {
 
 /*!
  * \class QtAws::Pinpoint::GetGcmChannelRequest
- *
  * \brief The GetGcmChannelRequest class provides an interface for Pinpoint GetGcmChannel requests.
  *
- * \ingroup Pinpoint
+ * \inmodule QtAwsPinpoint
  *
  *
  * \sa PinpointClient::getGcmChannel
  */
 
 /*!
- * @brief  Constructs a new GetGcmChannelRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetGcmChannelRequest::GetGcmChannelRequest(const GetGcmChannelRequest &other)
     : PinpointRequest(new GetGcmChannelRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ GetGcmChannelRequest::GetGcmChannelRequest(const GetGcmChannelRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetGcmChannelRequest object.
+ * Constructs a GetGcmChannelRequest object.
  */
 GetGcmChannelRequest::GetGcmChannelRequest()
     : PinpointRequest(new GetGcmChannelRequestPrivate(PinpointRequest::GetGcmChannelAction, this))
@@ -66,14 +63,9 @@ bool GetGcmChannelRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetGcmChannelResponse object.
+ * Returns a GetGcmChannelResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetGcmChannelResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  PinpointClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetGcmChannelRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * GetGcmChannelRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::Pinpoint::GetGcmChannelRequestPrivate
+ * \brief The GetGcmChannelRequestPrivate class provides private implementation for GetGcmChannelRequest.
+ * \internal
  *
- * @class  GetGcmChannelRequestPrivate
- *
- * @brief  Private implementation for GetGcmChannelRequest.
+ * \inmodule QtAwsPinpoint
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetGcmChannelRequestPrivate object.
- *
- * @param  action  Pinpoint action being performed.
- * @param  q       Pointer to this object's public GetGcmChannelRequest instance.
+ * Constructs a GetGcmChannelRequestPrivate object for Pinpoint \a action with,
+ * public implementation \a q.
  */
 GetGcmChannelRequestPrivate::GetGcmChannelRequestPrivate(
     const PinpointRequest::Action action, GetGcmChannelRequest * const q)
@@ -104,15 +93,10 @@ GetGcmChannelRequestPrivate::GetGcmChannelRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetGcmChannelRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetGcmChannelRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetGcmChannelRequest instance.
  */
 GetGcmChannelRequestPrivate::GetGcmChannelRequestPrivate(
     const GetGcmChannelRequestPrivate &other, GetGcmChannelRequest * const q)

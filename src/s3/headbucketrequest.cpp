@@ -27,19 +27,16 @@ namespace S3 {
 
 /*!
  * \class QtAws::S3::HeadBucketRequest
- *
  * \brief The HeadBucketRequest class provides an interface for S3 HeadBucket requests.
  *
- * \ingroup S3
+ * \inmodule QtAwsS3
  *
  *
  * \sa S3Client::headBucket
  */
 
 /*!
- * @brief  Constructs a new HeadBucketRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 HeadBucketRequest::HeadBucketRequest(const HeadBucketRequest &other)
     : S3Request(new HeadBucketRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ HeadBucketRequest::HeadBucketRequest(const HeadBucketRequest &other)
 }
 
 /*!
- * @brief  Constructs a new HeadBucketRequest object.
+ * Constructs a HeadBucketRequest object.
  */
 HeadBucketRequest::HeadBucketRequest()
     : S3Request(new HeadBucketRequestPrivate(S3Request::HeadBucketAction, this))
@@ -66,14 +63,9 @@ bool HeadBucketRequest::isValid() const
 
 
 /*!
- * @brief  Construct an HeadBucketResponse object.
+ * Returns a HeadBucketResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An HeadBucketResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  S3Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * HeadBucketRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * HeadBucketRequest::response(QNetworkReply * c
 }
 
 /*!
- * @internal
+ * \class QtAws::S3::HeadBucketRequestPrivate
+ * \brief The HeadBucketRequestPrivate class provides private implementation for HeadBucketRequest.
+ * \internal
  *
- * @class  HeadBucketRequestPrivate
- *
- * @brief  Private implementation for HeadBucketRequest.
+ * \inmodule QtAwsS3
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new HeadBucketRequestPrivate object.
- *
- * @param  action  S3 action being performed.
- * @param  q       Pointer to this object's public HeadBucketRequest instance.
+ * Constructs a HeadBucketRequestPrivate object for S3 \a action with,
+ * public implementation \a q.
  */
 HeadBucketRequestPrivate::HeadBucketRequestPrivate(
     const S3Request::Action action, HeadBucketRequest * const q)
@@ -104,15 +93,10 @@ HeadBucketRequestPrivate::HeadBucketRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new HeadBucketRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the HeadBucketRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public HeadBucketRequest instance.
  */
 HeadBucketRequestPrivate::HeadBucketRequestPrivate(
     const HeadBucketRequestPrivate &other, HeadBucketRequest * const q)

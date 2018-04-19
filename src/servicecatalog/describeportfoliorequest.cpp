@@ -27,10 +27,9 @@ namespace ServiceCatalog {
 
 /*!
  * \class QtAws::ServiceCatalog::DescribePortfolioRequest
- *
  * \brief The DescribePortfolioRequest class provides an interface for ServiceCatalog DescribePortfolio requests.
  *
- * \ingroup ServiceCatalog
+ * \inmodule QtAwsServiceCatalog
  *
  *  <fullname>AWS Service Catalog</fullname>
  * 
@@ -43,9 +42,7 @@ namespace ServiceCatalog {
  */
 
 /*!
- * @brief  Constructs a new DescribePortfolioRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribePortfolioRequest::DescribePortfolioRequest(const DescribePortfolioRequest &other)
     : ServiceCatalogRequest(new DescribePortfolioRequestPrivate(*other.d_func(), this))
@@ -54,7 +51,7 @@ DescribePortfolioRequest::DescribePortfolioRequest(const DescribePortfolioReques
 }
 
 /*!
- * @brief  Constructs a new DescribePortfolioRequest object.
+ * Constructs a DescribePortfolioRequest object.
  */
 DescribePortfolioRequest::DescribePortfolioRequest()
     : ServiceCatalogRequest(new DescribePortfolioRequestPrivate(ServiceCatalogRequest::DescribePortfolioAction, this))
@@ -72,14 +69,9 @@ bool DescribePortfolioRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribePortfolioResponse object.
+ * Returns a DescribePortfolioResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribePortfolioResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ServiceCatalogClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribePortfolioRequest::response(QNetworkReply * const reply) const
 {
@@ -87,20 +79,17 @@ QtAws::Core::AwsAbstractResponse * DescribePortfolioRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::ServiceCatalog::DescribePortfolioRequestPrivate
+ * \brief The DescribePortfolioRequestPrivate class provides private implementation for DescribePortfolioRequest.
+ * \internal
  *
- * @class  DescribePortfolioRequestPrivate
- *
- * @brief  Private implementation for DescribePortfolioRequest.
+ * \inmodule QtAwsServiceCatalog
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribePortfolioRequestPrivate object.
- *
- * @param  action  ServiceCatalog action being performed.
- * @param  q       Pointer to this object's public DescribePortfolioRequest instance.
+ * Constructs a DescribePortfolioRequestPrivate object for ServiceCatalog \a action with,
+ * public implementation \a q.
  */
 DescribePortfolioRequestPrivate::DescribePortfolioRequestPrivate(
     const ServiceCatalogRequest::Action action, DescribePortfolioRequest * const q)
@@ -110,15 +99,10 @@ DescribePortfolioRequestPrivate::DescribePortfolioRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribePortfolioRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribePortfolioRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribePortfolioRequest instance.
  */
 DescribePortfolioRequestPrivate::DescribePortfolioRequestPrivate(
     const DescribePortfolioRequestPrivate &other, DescribePortfolioRequest * const q)

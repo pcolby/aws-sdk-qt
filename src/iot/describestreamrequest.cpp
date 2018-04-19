@@ -27,10 +27,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::DescribeStreamRequest
- *
  * \brief The DescribeStreamRequest class provides an interface for IoT DescribeStream requests.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -48,9 +47,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new DescribeStreamRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeStreamRequest::DescribeStreamRequest(const DescribeStreamRequest &other)
     : IoTRequest(new DescribeStreamRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ DescribeStreamRequest::DescribeStreamRequest(const DescribeStreamRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DescribeStreamRequest object.
+ * Constructs a DescribeStreamRequest object.
  */
 DescribeStreamRequest::DescribeStreamRequest()
     : IoTRequest(new DescribeStreamRequestPrivate(IoTRequest::DescribeStreamAction, this))
@@ -77,14 +74,9 @@ bool DescribeStreamRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeStreamResponse object.
+ * Returns a DescribeStreamResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeStreamResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IoTClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeStreamRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * DescribeStreamRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::IoT::DescribeStreamRequestPrivate
+ * \brief The DescribeStreamRequestPrivate class provides private implementation for DescribeStreamRequest.
+ * \internal
  *
- * @class  DescribeStreamRequestPrivate
- *
- * @brief  Private implementation for DescribeStreamRequest.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeStreamRequestPrivate object.
- *
- * @param  action  IoT action being performed.
- * @param  q       Pointer to this object's public DescribeStreamRequest instance.
+ * Constructs a DescribeStreamRequestPrivate object for IoT \a action with,
+ * public implementation \a q.
  */
 DescribeStreamRequestPrivate::DescribeStreamRequestPrivate(
     const IoTRequest::Action action, DescribeStreamRequest * const q)
@@ -115,15 +104,10 @@ DescribeStreamRequestPrivate::DescribeStreamRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeStreamRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeStreamRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeStreamRequest instance.
  */
 DescribeStreamRequestPrivate::DescribeStreamRequestPrivate(
     const DescribeStreamRequestPrivate &other, DescribeStreamRequest * const q)

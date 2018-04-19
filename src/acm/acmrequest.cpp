@@ -25,16 +25,33 @@ namespace ACM {
 
 /*!
  * \class QtAws::ACM::ACMRequest
- *
  * \brief The ACMRequest class provides an interface for ACM requests.
  *
- * \ingroup ACM
+ * \inmodule QtAwsACM
  */
 
 /*!
- * @brief  Constructs a new ACMRequest object.
+ * \enum ACMRequest::Action
  *
- * @param  action  The ACM action to request.
+ * This enum describes the actions that can be performed as ACM
+ * requests.
+ *
+ * \value AddTagsToCertificateAction ACM AddTagsToCertificate action.
+ * \value DeleteCertificateAction ACM DeleteCertificate action.
+ * \value DescribeCertificateAction ACM DescribeCertificate action.
+ * \value ExportCertificateAction ACM ExportCertificate action.
+ * \value GetCertificateAction ACM GetCertificate action.
+ * \value ImportCertificateAction ACM ImportCertificate action.
+ * \value ListCertificatesAction ACM ListCertificates action.
+ * \value ListTagsForCertificateAction ACM ListTagsForCertificate action.
+ * \value RemoveTagsFromCertificateAction ACM RemoveTagsFromCertificate action.
+ * \value RequestCertificateAction ACM RequestCertificate action.
+ * \value ResendValidationEmailAction ACM ResendValidationEmail action.
+ * \value UpdateCertificateOptionsAction ACM UpdateCertificateOptions action.
+ */
+
+/*!
+ * Constructs a[n] ACMRequest object for ACM \a action.
  */
 ACMRequest::ACMRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new ACMRequestPrivate(action, this))
@@ -43,9 +60,7 @@ ACMRequest::ACMRequest(const Action action)
 }
 
 /*!
- * @brief  Constructs a new ACMRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ACMRequest::ACMRequest(const ACMRequest &other)
     : QtAws::Core::AwsAbstractRequest(new ACMRequestPrivate(*other.d_func(), this))
@@ -54,13 +69,7 @@ ACMRequest::ACMRequest(const ACMRequest &other)
 }
 
 /*!
- * @brief  Assignment operator.
- *
- * Assigns \a other to \c this.
- *
- * @param  other  Instance to copy.
- *
- * @return  A reference to \c this.
+ * Sets the ACMRequest object to be equal to \a other.
  */
 ACMRequest& ACMRequest::operator=(const ACMRequest &other)
 {
@@ -72,14 +81,10 @@ ACMRequest& ACMRequest::operator=(const ACMRequest &other)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ACMRequest object.
+ * Constructs aa ACMRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from ACMRequestPrivate.
- *
- * @param  d  Pointer to private data (aka D-Pointer).
  */
 ACMRequest::ACMRequest(ACMRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
@@ -87,7 +92,7 @@ ACMRequest::ACMRequest(ACMRequestPrivate * const d) : QtAws::Core::AwsAbstractRe
 }
 
 /*!
- * \brief Returns the ACM action to be performed by this request.
+ * Returns the ACM action to be performed by this request.
  */
 ACMRequest::Action ACMRequest::action() const
 {
@@ -96,7 +101,7 @@ ACMRequest::Action ACMRequest::action() const
 }
 
 /*!
- * \brief Returns the name of the ACM action to be performed by this request.
+ * Returns the name of the ACM action to be performed by this request.
  */
 QString ACMRequest::actionString() const
 {
@@ -104,7 +109,7 @@ QString ACMRequest::actionString() const
 }
 
 /*!
- * \brief Returns the ACM API version implemented by this request.
+ * Returns the ACM API version implemented by this request.
  */
 QString ACMRequest::apiVersion() const
 {
@@ -113,7 +118,7 @@ QString ACMRequest::apiVersion() const
 }
 
 /*!
- * @brief Set the ACM action to be performed by this request to \a action.
+ * Sets the ACM action to be performed by this request to \a action.
  */
 void ACMRequest::setAction(const Action action)
 {
@@ -122,7 +127,7 @@ void ACMRequest::setAction(const Action action)
 }
 
 /*!
- * Set the ACM API version to include in this request to \a version.
+ * Sets the ACM API version to include in this request to \a version.
  */
 void ACMRequest::setApiVersion(const QString &version)
 {
@@ -131,7 +136,7 @@ void ACMRequest::setApiVersion(const QString &version)
 }
 
 /*!
- * \brief Returns \c true if this request is the same as \a other.
+ * Returns \c true if this request is equal to \a other; \c false otherwise.
  *
  * Note, most derived *Request classes do not need to provider their own
  * implementations of this function, since most such request classes rely on
@@ -146,8 +151,8 @@ bool ACMRequest::operator==(const ACMRequest &other) const
             (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
-/*!
- * @brief  Check if \a queueName is a valid ACM queue name.
+/*
+ * Returns \c tue if \a queueName is a valid ACM queue name.
  *
  * @par From ACM FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
@@ -166,9 +171,8 @@ bool ACMRequest::operator==(const ACMRequest &other) const
 }*/
 
 /*!
- * \brief Removes the a \a name parameter from this request.
- *
- * Returns the count of paramters removed (typically \c 0 or \c 1).
+ * Removes the a \a name parameter from the request, then returns the number of
+ * paramters removed (typically \c 0 or \c 1).
  */
 int ACMRequest::clearParameter(const QString &name)
 {
@@ -177,7 +181,7 @@ int ACMRequest::clearParameter(const QString &name)
 }
 
 /*!
- * \brief Removes all parameters from this request.
+ * Removes all parameters from the request.
  */
 void ACMRequest::clearParameters()
 {
@@ -186,7 +190,7 @@ void ACMRequest::clearParameters()
 }
 
 /*!
- * \brief Returns the value of the \n name pararemter if set, otherwise \a defaultValue.
+ * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
 QVariant ACMRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
@@ -195,7 +199,7 @@ QVariant ACMRequest::parameter(const QString &name, const QVariant &defaultValue
 }
 
 /*!
- * \brief Returns a map of parameters included in this request.
+ * Returns the parameters included in this request.
  */
 const QVariantMap &ACMRequest::parameters() const
 {
@@ -204,7 +208,7 @@ const QVariantMap &ACMRequest::parameters() const
 }
 
 /*!
- * \brief Sets the \a name parameter to \a value.
+ * Sets the \a name parameter to \a value.
  */
 void ACMRequest::setParameter(const QString &name, const QVariant &value)
 {
@@ -213,9 +217,8 @@ void ACMRequest::setParameter(const QString &name, const QVariant &value)
 }
 
 /*!
- * \brief Sets the map of paramters for this request to \a parameters.
- *
- * Any request parameters set previously will be discarded.
+ * Sets the paramters for this request to \a parameters. Any request parameters
+ * set previously will be discarded.
  */
 void ACMRequest::setParameters(const QVariantMap &parameters)
 {
@@ -224,11 +227,12 @@ void ACMRequest::setParameters(const QVariantMap &parameters)
 }
 
 /*!
- * \brief Returns a network request for this ACM request using the given \a endpoint.
+ * Returns a network request for the ACM request using the given
+ * \a endpoint.
  *
- * This ACM implementation builds request URLs by combining the common query
- * parameters (such as Action and Version), with any that have been added (via
- * setParameter) by child classes.
+ * This ACM implementation builds request URLs by combining the
+ * common query parameters (such as Action and Version), with any that have
+ * been added (via setParameter) by child classes.
  */
 QNetworkRequest ACMRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -239,17 +243,16 @@ QNetworkRequest ACMRequest::unsignedRequest(const QUrl &endpoint) const
 }
 
 /*!
+ * \class QtAws::ACM::ACMRequestPrivate
+ * \brief The ACMRequestPrivate class provides private implementation for ACMRequest.
  * \internal
  *
- * \class  ACMRequestPrivate
- *
- * \brief  Private implementation for ACMRequest.
+ * \inmodule QtAwsACM
  */
 
 /*!
- * \internal
- *
- * \brief Constructs a new ACMRequestPrivate object.
+ * Constructs a ACMRequestPrivate object for ACM \a action with,
+ * public implementation \a q.
  */
 ACMRequestPrivate::ACMRequestPrivate(const ACMRequest::Action action, ACMRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
@@ -258,9 +261,7 @@ ACMRequestPrivate::ACMRequestPrivate(const ACMRequest::Action action, ACMRequest
 }
 
 /*!
- * \internal
- *
- * \brief Constructs a new ACMRequestPrivate object, copying an existing one.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
@@ -276,15 +277,12 @@ ACMRequestPrivate::ACMRequestPrivate(const ACMRequestPrivate &other,
 }
 
 /*!
- * \internal
- *
- * \brief Returns a string representing \a action.
+ * Returns a string represention of \a action, or a null string if \a action is
+ * invalid.
  *
  * This function converts ACMRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the ACM service's Action
  * query parameters.
- *
- * @return A string representing \a action, or a null string if \a action is invalid.
  */
 QString ACMRequestPrivate::toString(const ACMRequest::Action &action)
 {

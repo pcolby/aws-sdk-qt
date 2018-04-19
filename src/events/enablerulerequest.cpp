@@ -27,10 +27,9 @@ namespace CloudWatchEvents {
 
 /*!
  * \class QtAws::CloudWatchEvents::EnableRuleRequest
- *
  * \brief The EnableRuleRequest class provides an interface for CloudWatchEvents EnableRule requests.
  *
- * \ingroup CloudWatchEvents
+ * \inmodule QtAwsCloudWatchEvents
  *
  *  Amazon CloudWatch Events helps you to respond to state changes in your AWS resources. When your resources change state,
  *  they automatically send events into an event stream. You can create rules that match selected events in the stream and
@@ -60,9 +59,7 @@ namespace CloudWatchEvents {
  */
 
 /*!
- * @brief  Constructs a new EnableRuleRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 EnableRuleRequest::EnableRuleRequest(const EnableRuleRequest &other)
     : CloudWatchEventsRequest(new EnableRuleRequestPrivate(*other.d_func(), this))
@@ -71,7 +68,7 @@ EnableRuleRequest::EnableRuleRequest(const EnableRuleRequest &other)
 }
 
 /*!
- * @brief  Constructs a new EnableRuleRequest object.
+ * Constructs a EnableRuleRequest object.
  */
 EnableRuleRequest::EnableRuleRequest()
     : CloudWatchEventsRequest(new EnableRuleRequestPrivate(CloudWatchEventsRequest::EnableRuleAction, this))
@@ -89,14 +86,9 @@ bool EnableRuleRequest::isValid() const
 
 
 /*!
- * @brief  Construct an EnableRuleResponse object.
+ * Returns a EnableRuleResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An EnableRuleResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudWatchEventsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * EnableRuleRequest::response(QNetworkReply * const reply) const
 {
@@ -104,20 +96,17 @@ QtAws::Core::AwsAbstractResponse * EnableRuleRequest::response(QNetworkReply * c
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudWatchEvents::EnableRuleRequestPrivate
+ * \brief The EnableRuleRequestPrivate class provides private implementation for EnableRuleRequest.
+ * \internal
  *
- * @class  EnableRuleRequestPrivate
- *
- * @brief  Private implementation for EnableRuleRequest.
+ * \inmodule QtAwsCloudWatchEvents
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new EnableRuleRequestPrivate object.
- *
- * @param  action  CloudWatchEvents action being performed.
- * @param  q       Pointer to this object's public EnableRuleRequest instance.
+ * Constructs a EnableRuleRequestPrivate object for CloudWatchEvents \a action with,
+ * public implementation \a q.
  */
 EnableRuleRequestPrivate::EnableRuleRequestPrivate(
     const CloudWatchEventsRequest::Action action, EnableRuleRequest * const q)
@@ -127,15 +116,10 @@ EnableRuleRequestPrivate::EnableRuleRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new EnableRuleRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the EnableRuleRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public EnableRuleRequest instance.
  */
 EnableRuleRequestPrivate::EnableRuleRequestPrivate(
     const EnableRuleRequestPrivate &other, EnableRuleRequest * const q)

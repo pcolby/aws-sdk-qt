@@ -27,10 +27,9 @@ namespace WorkMail {
 
 /*!
  * \class QtAws::WorkMail::AssociateMemberToGroupRequest
- *
  * \brief The AssociateMemberToGroupRequest class provides an interface for WorkMail AssociateMemberToGroup requests.
  *
- * \ingroup WorkMail
+ * \inmodule QtAwsWorkMail
  *
  *  Amazon WorkMail is a secure, managed business email and calendaring service with support for existing desktop and mobile
  *  email clients. You can access your email, contacts, and calendars using Microsoft Outlook, your browser, or their native
@@ -70,9 +69,7 @@ namespace WorkMail {
  */
 
 /*!
- * @brief  Constructs a new AssociateMemberToGroupRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AssociateMemberToGroupRequest::AssociateMemberToGroupRequest(const AssociateMemberToGroupRequest &other)
     : WorkMailRequest(new AssociateMemberToGroupRequestPrivate(*other.d_func(), this))
@@ -81,7 +78,7 @@ AssociateMemberToGroupRequest::AssociateMemberToGroupRequest(const AssociateMemb
 }
 
 /*!
- * @brief  Constructs a new AssociateMemberToGroupRequest object.
+ * Constructs a AssociateMemberToGroupRequest object.
  */
 AssociateMemberToGroupRequest::AssociateMemberToGroupRequest()
     : WorkMailRequest(new AssociateMemberToGroupRequestPrivate(WorkMailRequest::AssociateMemberToGroupAction, this))
@@ -99,14 +96,9 @@ bool AssociateMemberToGroupRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AssociateMemberToGroupResponse object.
+ * Returns a AssociateMemberToGroupResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AssociateMemberToGroupResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WorkMailClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AssociateMemberToGroupRequest::response(QNetworkReply * const reply) const
 {
@@ -114,20 +106,17 @@ QtAws::Core::AwsAbstractResponse * AssociateMemberToGroupRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::WorkMail::AssociateMemberToGroupRequestPrivate
+ * \brief The AssociateMemberToGroupRequestPrivate class provides private implementation for AssociateMemberToGroupRequest.
+ * \internal
  *
- * @class  AssociateMemberToGroupRequestPrivate
- *
- * @brief  Private implementation for AssociateMemberToGroupRequest.
+ * \inmodule QtAwsWorkMail
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AssociateMemberToGroupRequestPrivate object.
- *
- * @param  action  WorkMail action being performed.
- * @param  q       Pointer to this object's public AssociateMemberToGroupRequest instance.
+ * Constructs a AssociateMemberToGroupRequestPrivate object for WorkMail \a action with,
+ * public implementation \a q.
  */
 AssociateMemberToGroupRequestPrivate::AssociateMemberToGroupRequestPrivate(
     const WorkMailRequest::Action action, AssociateMemberToGroupRequest * const q)
@@ -137,15 +126,10 @@ AssociateMemberToGroupRequestPrivate::AssociateMemberToGroupRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AssociateMemberToGroupRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AssociateMemberToGroupRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AssociateMemberToGroupRequest instance.
  */
 AssociateMemberToGroupRequestPrivate::AssociateMemberToGroupRequestPrivate(
     const AssociateMemberToGroupRequestPrivate &other, AssociateMemberToGroupRequest * const q)

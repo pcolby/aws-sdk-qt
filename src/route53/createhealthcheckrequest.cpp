@@ -27,19 +27,16 @@ namespace Route53 {
 
 /*!
  * \class QtAws::Route53::CreateHealthCheckRequest
- *
  * \brief The CreateHealthCheckRequest class provides an interface for Route53 CreateHealthCheck requests.
  *
- * \ingroup Route53
+ * \inmodule QtAwsRoute53
  *
  *
  * \sa Route53Client::createHealthCheck
  */
 
 /*!
- * @brief  Constructs a new CreateHealthCheckRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateHealthCheckRequest::CreateHealthCheckRequest(const CreateHealthCheckRequest &other)
     : Route53Request(new CreateHealthCheckRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ CreateHealthCheckRequest::CreateHealthCheckRequest(const CreateHealthCheckReques
 }
 
 /*!
- * @brief  Constructs a new CreateHealthCheckRequest object.
+ * Constructs a CreateHealthCheckRequest object.
  */
 CreateHealthCheckRequest::CreateHealthCheckRequest()
     : Route53Request(new CreateHealthCheckRequestPrivate(Route53Request::CreateHealthCheckAction, this))
@@ -66,14 +63,9 @@ bool CreateHealthCheckRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateHealthCheckResponse object.
+ * Returns a CreateHealthCheckResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateHealthCheckResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  Route53Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateHealthCheckRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * CreateHealthCheckRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::Route53::CreateHealthCheckRequestPrivate
+ * \brief The CreateHealthCheckRequestPrivate class provides private implementation for CreateHealthCheckRequest.
+ * \internal
  *
- * @class  CreateHealthCheckRequestPrivate
- *
- * @brief  Private implementation for CreateHealthCheckRequest.
+ * \inmodule QtAwsRoute53
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateHealthCheckRequestPrivate object.
- *
- * @param  action  Route53 action being performed.
- * @param  q       Pointer to this object's public CreateHealthCheckRequest instance.
+ * Constructs a CreateHealthCheckRequestPrivate object for Route53 \a action with,
+ * public implementation \a q.
  */
 CreateHealthCheckRequestPrivate::CreateHealthCheckRequestPrivate(
     const Route53Request::Action action, CreateHealthCheckRequest * const q)
@@ -104,15 +93,10 @@ CreateHealthCheckRequestPrivate::CreateHealthCheckRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateHealthCheckRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateHealthCheckRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateHealthCheckRequest instance.
  */
 CreateHealthCheckRequestPrivate::CreateHealthCheckRequestPrivate(
     const CreateHealthCheckRequestPrivate &other, CreateHealthCheckRequest * const q)

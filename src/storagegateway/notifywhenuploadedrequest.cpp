@@ -27,10 +27,9 @@ namespace StorageGateway {
 
 /*!
  * \class QtAws::StorageGateway::NotifyWhenUploadedRequest
- *
  * \brief The NotifyWhenUploadedRequest class provides an interface for StorageGateway NotifyWhenUploaded requests.
  *
- * \ingroup StorageGateway
+ * \inmodule QtAwsStorageGateway
  *
  *  <fullname>AWS Storage Gateway Service</fullname>
  * 
@@ -106,9 +105,7 @@ namespace StorageGateway {
  */
 
 /*!
- * @brief  Constructs a new NotifyWhenUploadedRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 NotifyWhenUploadedRequest::NotifyWhenUploadedRequest(const NotifyWhenUploadedRequest &other)
     : StorageGatewayRequest(new NotifyWhenUploadedRequestPrivate(*other.d_func(), this))
@@ -117,7 +114,7 @@ NotifyWhenUploadedRequest::NotifyWhenUploadedRequest(const NotifyWhenUploadedReq
 }
 
 /*!
- * @brief  Constructs a new NotifyWhenUploadedRequest object.
+ * Constructs a NotifyWhenUploadedRequest object.
  */
 NotifyWhenUploadedRequest::NotifyWhenUploadedRequest()
     : StorageGatewayRequest(new NotifyWhenUploadedRequestPrivate(StorageGatewayRequest::NotifyWhenUploadedAction, this))
@@ -135,14 +132,9 @@ bool NotifyWhenUploadedRequest::isValid() const
 
 
 /*!
- * @brief  Construct an NotifyWhenUploadedResponse object.
+ * Returns a NotifyWhenUploadedResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An NotifyWhenUploadedResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  StorageGatewayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * NotifyWhenUploadedRequest::response(QNetworkReply * const reply) const
 {
@@ -150,20 +142,17 @@ QtAws::Core::AwsAbstractResponse * NotifyWhenUploadedRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::StorageGateway::NotifyWhenUploadedRequestPrivate
+ * \brief The NotifyWhenUploadedRequestPrivate class provides private implementation for NotifyWhenUploadedRequest.
+ * \internal
  *
- * @class  NotifyWhenUploadedRequestPrivate
- *
- * @brief  Private implementation for NotifyWhenUploadedRequest.
+ * \inmodule QtAwsStorageGateway
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new NotifyWhenUploadedRequestPrivate object.
- *
- * @param  action  StorageGateway action being performed.
- * @param  q       Pointer to this object's public NotifyWhenUploadedRequest instance.
+ * Constructs a NotifyWhenUploadedRequestPrivate object for StorageGateway \a action with,
+ * public implementation \a q.
  */
 NotifyWhenUploadedRequestPrivate::NotifyWhenUploadedRequestPrivate(
     const StorageGatewayRequest::Action action, NotifyWhenUploadedRequest * const q)
@@ -173,15 +162,10 @@ NotifyWhenUploadedRequestPrivate::NotifyWhenUploadedRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new NotifyWhenUploadedRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the NotifyWhenUploadedRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public NotifyWhenUploadedRequest instance.
  */
 NotifyWhenUploadedRequestPrivate::NotifyWhenUploadedRequestPrivate(
     const NotifyWhenUploadedRequestPrivate &other, NotifyWhenUploadedRequest * const q)

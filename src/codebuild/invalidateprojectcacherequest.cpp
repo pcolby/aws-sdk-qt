@@ -27,10 +27,9 @@ namespace CodeBuild {
 
 /*!
  * \class QtAws::CodeBuild::InvalidateProjectCacheRequest
- *
  * \brief The InvalidateProjectCacheRequest class provides an interface for CodeBuild InvalidateProjectCache requests.
  *
- * \ingroup CodeBuild
+ * \inmodule QtAwsCodeBuild
  *
  *  <fullname>AWS CodeBuild</fullname>
  * 
@@ -117,9 +116,7 @@ namespace CodeBuild {
  */
 
 /*!
- * @brief  Constructs a new InvalidateProjectCacheRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 InvalidateProjectCacheRequest::InvalidateProjectCacheRequest(const InvalidateProjectCacheRequest &other)
     : CodeBuildRequest(new InvalidateProjectCacheRequestPrivate(*other.d_func(), this))
@@ -128,7 +125,7 @@ InvalidateProjectCacheRequest::InvalidateProjectCacheRequest(const InvalidatePro
 }
 
 /*!
- * @brief  Constructs a new InvalidateProjectCacheRequest object.
+ * Constructs a InvalidateProjectCacheRequest object.
  */
 InvalidateProjectCacheRequest::InvalidateProjectCacheRequest()
     : CodeBuildRequest(new InvalidateProjectCacheRequestPrivate(CodeBuildRequest::InvalidateProjectCacheAction, this))
@@ -146,14 +143,9 @@ bool InvalidateProjectCacheRequest::isValid() const
 
 
 /*!
- * @brief  Construct an InvalidateProjectCacheResponse object.
+ * Returns a InvalidateProjectCacheResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An InvalidateProjectCacheResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CodeBuildClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * InvalidateProjectCacheRequest::response(QNetworkReply * const reply) const
 {
@@ -161,20 +153,17 @@ QtAws::Core::AwsAbstractResponse * InvalidateProjectCacheRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::CodeBuild::InvalidateProjectCacheRequestPrivate
+ * \brief The InvalidateProjectCacheRequestPrivate class provides private implementation for InvalidateProjectCacheRequest.
+ * \internal
  *
- * @class  InvalidateProjectCacheRequestPrivate
- *
- * @brief  Private implementation for InvalidateProjectCacheRequest.
+ * \inmodule QtAwsCodeBuild
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new InvalidateProjectCacheRequestPrivate object.
- *
- * @param  action  CodeBuild action being performed.
- * @param  q       Pointer to this object's public InvalidateProjectCacheRequest instance.
+ * Constructs a InvalidateProjectCacheRequestPrivate object for CodeBuild \a action with,
+ * public implementation \a q.
  */
 InvalidateProjectCacheRequestPrivate::InvalidateProjectCacheRequestPrivate(
     const CodeBuildRequest::Action action, InvalidateProjectCacheRequest * const q)
@@ -184,15 +173,10 @@ InvalidateProjectCacheRequestPrivate::InvalidateProjectCacheRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new InvalidateProjectCacheRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the InvalidateProjectCacheRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public InvalidateProjectCacheRequest instance.
  */
 InvalidateProjectCacheRequestPrivate::InvalidateProjectCacheRequestPrivate(
     const InvalidateProjectCacheRequestPrivate &other, InvalidateProjectCacheRequest * const q)

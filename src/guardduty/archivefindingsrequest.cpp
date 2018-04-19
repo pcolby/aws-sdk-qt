@@ -27,19 +27,16 @@ namespace GuardDuty {
 
 /*!
  * \class QtAws::GuardDuty::ArchiveFindingsRequest
- *
  * \brief The ArchiveFindingsRequest class provides an interface for GuardDuty ArchiveFindings requests.
  *
- * \ingroup GuardDuty
+ * \inmodule QtAwsGuardDuty
  *
  *
  * \sa GuardDutyClient::archiveFindings
  */
 
 /*!
- * @brief  Constructs a new ArchiveFindingsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ArchiveFindingsRequest::ArchiveFindingsRequest(const ArchiveFindingsRequest &other)
     : GuardDutyRequest(new ArchiveFindingsRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ ArchiveFindingsRequest::ArchiveFindingsRequest(const ArchiveFindingsRequest &oth
 }
 
 /*!
- * @brief  Constructs a new ArchiveFindingsRequest object.
+ * Constructs a ArchiveFindingsRequest object.
  */
 ArchiveFindingsRequest::ArchiveFindingsRequest()
     : GuardDutyRequest(new ArchiveFindingsRequestPrivate(GuardDutyRequest::ArchiveFindingsAction, this))
@@ -66,14 +63,9 @@ bool ArchiveFindingsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ArchiveFindingsResponse object.
+ * Returns a ArchiveFindingsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ArchiveFindingsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GuardDutyClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ArchiveFindingsRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * ArchiveFindingsRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::GuardDuty::ArchiveFindingsRequestPrivate
+ * \brief The ArchiveFindingsRequestPrivate class provides private implementation for ArchiveFindingsRequest.
+ * \internal
  *
- * @class  ArchiveFindingsRequestPrivate
- *
- * @brief  Private implementation for ArchiveFindingsRequest.
+ * \inmodule QtAwsGuardDuty
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ArchiveFindingsRequestPrivate object.
- *
- * @param  action  GuardDuty action being performed.
- * @param  q       Pointer to this object's public ArchiveFindingsRequest instance.
+ * Constructs a ArchiveFindingsRequestPrivate object for GuardDuty \a action with,
+ * public implementation \a q.
  */
 ArchiveFindingsRequestPrivate::ArchiveFindingsRequestPrivate(
     const GuardDutyRequest::Action action, ArchiveFindingsRequest * const q)
@@ -104,15 +93,10 @@ ArchiveFindingsRequestPrivate::ArchiveFindingsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ArchiveFindingsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ArchiveFindingsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ArchiveFindingsRequest instance.
  */
 ArchiveFindingsRequestPrivate::ArchiveFindingsRequestPrivate(
     const ArchiveFindingsRequestPrivate &other, ArchiveFindingsRequest * const q)

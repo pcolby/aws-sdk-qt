@@ -27,10 +27,9 @@ namespace DatabaseMigrationService {
 
 /*!
  * \class QtAws::DatabaseMigrationService::DescribeEventCategoriesRequest
- *
  * \brief The DescribeEventCategoriesRequest class provides an interface for DatabaseMigrationService DescribeEventCategories requests.
  *
- * \ingroup DatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigrationService
  *
  *  <fullname>AWS Database Migration Service</fullname>
  * 
@@ -48,9 +47,7 @@ namespace DatabaseMigrationService {
  */
 
 /*!
- * @brief  Constructs a new DescribeEventCategoriesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeEventCategoriesRequest::DescribeEventCategoriesRequest(const DescribeEventCategoriesRequest &other)
     : DatabaseMigrationServiceRequest(new DescribeEventCategoriesRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ DescribeEventCategoriesRequest::DescribeEventCategoriesRequest(const DescribeEve
 }
 
 /*!
- * @brief  Constructs a new DescribeEventCategoriesRequest object.
+ * Constructs a DescribeEventCategoriesRequest object.
  */
 DescribeEventCategoriesRequest::DescribeEventCategoriesRequest()
     : DatabaseMigrationServiceRequest(new DescribeEventCategoriesRequestPrivate(DatabaseMigrationServiceRequest::DescribeEventCategoriesAction, this))
@@ -77,14 +74,9 @@ bool DescribeEventCategoriesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeEventCategoriesResponse object.
+ * Returns a DescribeEventCategoriesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeEventCategoriesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DatabaseMigrationServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeEventCategoriesRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * DescribeEventCategoriesRequest::response(QNet
 }
 
 /*!
- * @internal
+ * \class QtAws::DatabaseMigrationService::DescribeEventCategoriesRequestPrivate
+ * \brief The DescribeEventCategoriesRequestPrivate class provides private implementation for DescribeEventCategoriesRequest.
+ * \internal
  *
- * @class  DescribeEventCategoriesRequestPrivate
- *
- * @brief  Private implementation for DescribeEventCategoriesRequest.
+ * \inmodule QtAwsDatabaseMigrationService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeEventCategoriesRequestPrivate object.
- *
- * @param  action  DatabaseMigrationService action being performed.
- * @param  q       Pointer to this object's public DescribeEventCategoriesRequest instance.
+ * Constructs a DescribeEventCategoriesRequestPrivate object for DatabaseMigrationService \a action with,
+ * public implementation \a q.
  */
 DescribeEventCategoriesRequestPrivate::DescribeEventCategoriesRequestPrivate(
     const DatabaseMigrationServiceRequest::Action action, DescribeEventCategoriesRequest * const q)
@@ -115,15 +104,10 @@ DescribeEventCategoriesRequestPrivate::DescribeEventCategoriesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeEventCategoriesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeEventCategoriesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeEventCategoriesRequest instance.
  */
 DescribeEventCategoriesRequestPrivate::DescribeEventCategoriesRequestPrivate(
     const DescribeEventCategoriesRequestPrivate &other, DescribeEventCategoriesRequest * const q)

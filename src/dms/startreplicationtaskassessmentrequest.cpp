@@ -27,10 +27,9 @@ namespace DatabaseMigrationService {
 
 /*!
  * \class QtAws::DatabaseMigrationService::StartReplicationTaskAssessmentRequest
- *
  * \brief The StartReplicationTaskAssessmentRequest class provides an interface for DatabaseMigrationService StartReplicationTaskAssessment requests.
  *
- * \ingroup DatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigrationService
  *
  *  <fullname>AWS Database Migration Service</fullname>
  * 
@@ -48,9 +47,7 @@ namespace DatabaseMigrationService {
  */
 
 /*!
- * @brief  Constructs a new StartReplicationTaskAssessmentRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 StartReplicationTaskAssessmentRequest::StartReplicationTaskAssessmentRequest(const StartReplicationTaskAssessmentRequest &other)
     : DatabaseMigrationServiceRequest(new StartReplicationTaskAssessmentRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ StartReplicationTaskAssessmentRequest::StartReplicationTaskAssessmentRequest(con
 }
 
 /*!
- * @brief  Constructs a new StartReplicationTaskAssessmentRequest object.
+ * Constructs a StartReplicationTaskAssessmentRequest object.
  */
 StartReplicationTaskAssessmentRequest::StartReplicationTaskAssessmentRequest()
     : DatabaseMigrationServiceRequest(new StartReplicationTaskAssessmentRequestPrivate(DatabaseMigrationServiceRequest::StartReplicationTaskAssessmentAction, this))
@@ -77,14 +74,9 @@ bool StartReplicationTaskAssessmentRequest::isValid() const
 
 
 /*!
- * @brief  Construct an StartReplicationTaskAssessmentResponse object.
+ * Returns a StartReplicationTaskAssessmentResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An StartReplicationTaskAssessmentResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DatabaseMigrationServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * StartReplicationTaskAssessmentRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * StartReplicationTaskAssessmentRequest::respon
 }
 
 /*!
- * @internal
+ * \class QtAws::DatabaseMigrationService::StartReplicationTaskAssessmentRequestPrivate
+ * \brief The StartReplicationTaskAssessmentRequestPrivate class provides private implementation for StartReplicationTaskAssessmentRequest.
+ * \internal
  *
- * @class  StartReplicationTaskAssessmentRequestPrivate
- *
- * @brief  Private implementation for StartReplicationTaskAssessmentRequest.
+ * \inmodule QtAwsDatabaseMigrationService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new StartReplicationTaskAssessmentRequestPrivate object.
- *
- * @param  action  DatabaseMigrationService action being performed.
- * @param  q       Pointer to this object's public StartReplicationTaskAssessmentRequest instance.
+ * Constructs a StartReplicationTaskAssessmentRequestPrivate object for DatabaseMigrationService \a action with,
+ * public implementation \a q.
  */
 StartReplicationTaskAssessmentRequestPrivate::StartReplicationTaskAssessmentRequestPrivate(
     const DatabaseMigrationServiceRequest::Action action, StartReplicationTaskAssessmentRequest * const q)
@@ -115,15 +104,10 @@ StartReplicationTaskAssessmentRequestPrivate::StartReplicationTaskAssessmentRequ
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StartReplicationTaskAssessmentRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the StartReplicationTaskAssessmentRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public StartReplicationTaskAssessmentRequest instance.
  */
 StartReplicationTaskAssessmentRequestPrivate::StartReplicationTaskAssessmentRequestPrivate(
     const StartReplicationTaskAssessmentRequestPrivate &other, StartReplicationTaskAssessmentRequest * const q)

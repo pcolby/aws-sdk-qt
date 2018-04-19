@@ -27,10 +27,9 @@ namespace CognitoIdentityProvider {
 
 /*!
  * \class QtAws::CognitoIdentityProvider::UpdateUserPoolClientRequest
- *
  * \brief The UpdateUserPoolClientRequest class provides an interface for CognitoIdentityProvider UpdateUserPoolClient requests.
  *
- * \ingroup CognitoIdentityProvider
+ * \inmodule QtAwsCognitoIdentityProvider
  *
  *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
  *  authenticate a user to obtain tokens related to user identity and access
@@ -47,9 +46,7 @@ namespace CognitoIdentityProvider {
  */
 
 /*!
- * @brief  Constructs a new UpdateUserPoolClientRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateUserPoolClientRequest::UpdateUserPoolClientRequest(const UpdateUserPoolClientRequest &other)
     : CognitoIdentityProviderRequest(new UpdateUserPoolClientRequestPrivate(*other.d_func(), this))
@@ -58,7 +55,7 @@ UpdateUserPoolClientRequest::UpdateUserPoolClientRequest(const UpdateUserPoolCli
 }
 
 /*!
- * @brief  Constructs a new UpdateUserPoolClientRequest object.
+ * Constructs a UpdateUserPoolClientRequest object.
  */
 UpdateUserPoolClientRequest::UpdateUserPoolClientRequest()
     : CognitoIdentityProviderRequest(new UpdateUserPoolClientRequestPrivate(CognitoIdentityProviderRequest::UpdateUserPoolClientAction, this))
@@ -76,14 +73,9 @@ bool UpdateUserPoolClientRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateUserPoolClientResponse object.
+ * Returns a UpdateUserPoolClientResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateUserPoolClientResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CognitoIdentityProviderClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateUserPoolClientRequest::response(QNetworkReply * const reply) const
 {
@@ -91,20 +83,17 @@ QtAws::Core::AwsAbstractResponse * UpdateUserPoolClientRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::CognitoIdentityProvider::UpdateUserPoolClientRequestPrivate
+ * \brief The UpdateUserPoolClientRequestPrivate class provides private implementation for UpdateUserPoolClientRequest.
+ * \internal
  *
- * @class  UpdateUserPoolClientRequestPrivate
- *
- * @brief  Private implementation for UpdateUserPoolClientRequest.
+ * \inmodule QtAwsCognitoIdentityProvider
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateUserPoolClientRequestPrivate object.
- *
- * @param  action  CognitoIdentityProvider action being performed.
- * @param  q       Pointer to this object's public UpdateUserPoolClientRequest instance.
+ * Constructs a UpdateUserPoolClientRequestPrivate object for CognitoIdentityProvider \a action with,
+ * public implementation \a q.
  */
 UpdateUserPoolClientRequestPrivate::UpdateUserPoolClientRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, UpdateUserPoolClientRequest * const q)
@@ -114,15 +103,10 @@ UpdateUserPoolClientRequestPrivate::UpdateUserPoolClientRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateUserPoolClientRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateUserPoolClientRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateUserPoolClientRequest instance.
  */
 UpdateUserPoolClientRequestPrivate::UpdateUserPoolClientRequestPrivate(
     const UpdateUserPoolClientRequestPrivate &other, UpdateUserPoolClientRequest * const q)

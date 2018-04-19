@@ -27,10 +27,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::CancelCommandRequest
- *
  * \brief The CancelCommandRequest class provides an interface for SSM CancelCommand requests.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -61,9 +60,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new CancelCommandRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CancelCommandRequest::CancelCommandRequest(const CancelCommandRequest &other)
     : SSMRequest(new CancelCommandRequestPrivate(*other.d_func(), this))
@@ -72,7 +69,7 @@ CancelCommandRequest::CancelCommandRequest(const CancelCommandRequest &other)
 }
 
 /*!
- * @brief  Constructs a new CancelCommandRequest object.
+ * Constructs a CancelCommandRequest object.
  */
 CancelCommandRequest::CancelCommandRequest()
     : SSMRequest(new CancelCommandRequestPrivate(SSMRequest::CancelCommandAction, this))
@@ -90,14 +87,9 @@ bool CancelCommandRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CancelCommandResponse object.
+ * Returns a CancelCommandResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CancelCommandResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SSMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CancelCommandRequest::response(QNetworkReply * const reply) const
 {
@@ -105,20 +97,17 @@ QtAws::Core::AwsAbstractResponse * CancelCommandRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::SSM::CancelCommandRequestPrivate
+ * \brief The CancelCommandRequestPrivate class provides private implementation for CancelCommandRequest.
+ * \internal
  *
- * @class  CancelCommandRequestPrivate
- *
- * @brief  Private implementation for CancelCommandRequest.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CancelCommandRequestPrivate object.
- *
- * @param  action  SSM action being performed.
- * @param  q       Pointer to this object's public CancelCommandRequest instance.
+ * Constructs a CancelCommandRequestPrivate object for SSM \a action with,
+ * public implementation \a q.
  */
 CancelCommandRequestPrivate::CancelCommandRequestPrivate(
     const SSMRequest::Action action, CancelCommandRequest * const q)
@@ -128,15 +117,10 @@ CancelCommandRequestPrivate::CancelCommandRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CancelCommandRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CancelCommandRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CancelCommandRequest instance.
  */
 CancelCommandRequestPrivate::CancelCommandRequestPrivate(
     const CancelCommandRequestPrivate &other, CancelCommandRequest * const q)

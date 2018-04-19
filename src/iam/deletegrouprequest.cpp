@@ -27,10 +27,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::DeleteGroupRequest
- *
  * \brief The DeleteGroupRequest class provides an interface for IAM DeleteGroup requests.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -102,9 +101,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new DeleteGroupRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteGroupRequest::DeleteGroupRequest(const DeleteGroupRequest &other)
     : IAMRequest(new DeleteGroupRequestPrivate(*other.d_func(), this))
@@ -113,7 +110,7 @@ DeleteGroupRequest::DeleteGroupRequest(const DeleteGroupRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DeleteGroupRequest object.
+ * Constructs a DeleteGroupRequest object.
  */
 DeleteGroupRequest::DeleteGroupRequest()
     : IAMRequest(new DeleteGroupRequestPrivate(IAMRequest::DeleteGroupAction, this))
@@ -131,14 +128,9 @@ bool DeleteGroupRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteGroupResponse object.
+ * Returns a DeleteGroupResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteGroupResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IAMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteGroupRequest::response(QNetworkReply * const reply) const
 {
@@ -146,20 +138,17 @@ QtAws::Core::AwsAbstractResponse * DeleteGroupRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::IAM::DeleteGroupRequestPrivate
+ * \brief The DeleteGroupRequestPrivate class provides private implementation for DeleteGroupRequest.
+ * \internal
  *
- * @class  DeleteGroupRequestPrivate
- *
- * @brief  Private implementation for DeleteGroupRequest.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteGroupRequestPrivate object.
- *
- * @param  action  IAM action being performed.
- * @param  q       Pointer to this object's public DeleteGroupRequest instance.
+ * Constructs a DeleteGroupRequestPrivate object for IAM \a action with,
+ * public implementation \a q.
  */
 DeleteGroupRequestPrivate::DeleteGroupRequestPrivate(
     const IAMRequest::Action action, DeleteGroupRequest * const q)
@@ -169,15 +158,10 @@ DeleteGroupRequestPrivate::DeleteGroupRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteGroupRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteGroupRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteGroupRequest instance.
  */
 DeleteGroupRequestPrivate::DeleteGroupRequestPrivate(
     const DeleteGroupRequestPrivate &other, DeleteGroupRequest * const q)

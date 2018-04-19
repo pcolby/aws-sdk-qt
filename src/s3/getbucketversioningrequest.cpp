@@ -27,19 +27,16 @@ namespace S3 {
 
 /*!
  * \class QtAws::S3::GetBucketVersioningRequest
- *
  * \brief The GetBucketVersioningRequest class provides an interface for S3 GetBucketVersioning requests.
  *
- * \ingroup S3
+ * \inmodule QtAwsS3
  *
  *
  * \sa S3Client::getBucketVersioning
  */
 
 /*!
- * @brief  Constructs a new GetBucketVersioningRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetBucketVersioningRequest::GetBucketVersioningRequest(const GetBucketVersioningRequest &other)
     : S3Request(new GetBucketVersioningRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ GetBucketVersioningRequest::GetBucketVersioningRequest(const GetBucketVersioning
 }
 
 /*!
- * @brief  Constructs a new GetBucketVersioningRequest object.
+ * Constructs a GetBucketVersioningRequest object.
  */
 GetBucketVersioningRequest::GetBucketVersioningRequest()
     : S3Request(new GetBucketVersioningRequestPrivate(S3Request::GetBucketVersioningAction, this))
@@ -66,14 +63,9 @@ bool GetBucketVersioningRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetBucketVersioningResponse object.
+ * Returns a GetBucketVersioningResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetBucketVersioningResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  S3Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetBucketVersioningRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * GetBucketVersioningRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::S3::GetBucketVersioningRequestPrivate
+ * \brief The GetBucketVersioningRequestPrivate class provides private implementation for GetBucketVersioningRequest.
+ * \internal
  *
- * @class  GetBucketVersioningRequestPrivate
- *
- * @brief  Private implementation for GetBucketVersioningRequest.
+ * \inmodule QtAwsS3
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetBucketVersioningRequestPrivate object.
- *
- * @param  action  S3 action being performed.
- * @param  q       Pointer to this object's public GetBucketVersioningRequest instance.
+ * Constructs a GetBucketVersioningRequestPrivate object for S3 \a action with,
+ * public implementation \a q.
  */
 GetBucketVersioningRequestPrivate::GetBucketVersioningRequestPrivate(
     const S3Request::Action action, GetBucketVersioningRequest * const q)
@@ -104,15 +93,10 @@ GetBucketVersioningRequestPrivate::GetBucketVersioningRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetBucketVersioningRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetBucketVersioningRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetBucketVersioningRequest instance.
  */
 GetBucketVersioningRequestPrivate::GetBucketVersioningRequestPrivate(
     const GetBucketVersioningRequestPrivate &other, GetBucketVersioningRequest * const q)

@@ -27,10 +27,9 @@ namespace KMS {
 
 /*!
  * \class QtAws::KMS::GenerateDataKeyRequest
- *
  * \brief The GenerateDataKeyRequest class provides an interface for KMS GenerateDataKey requests.
  *
- * \ingroup KMS
+ * \inmodule QtAwsKMS
  *
  *  <fullname>AWS Key Management Service</fullname>
  * 
@@ -136,9 +135,7 @@ namespace KMS {
  */
 
 /*!
- * @brief  Constructs a new GenerateDataKeyRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GenerateDataKeyRequest::GenerateDataKeyRequest(const GenerateDataKeyRequest &other)
     : KMSRequest(new GenerateDataKeyRequestPrivate(*other.d_func(), this))
@@ -147,7 +144,7 @@ GenerateDataKeyRequest::GenerateDataKeyRequest(const GenerateDataKeyRequest &oth
 }
 
 /*!
- * @brief  Constructs a new GenerateDataKeyRequest object.
+ * Constructs a GenerateDataKeyRequest object.
  */
 GenerateDataKeyRequest::GenerateDataKeyRequest()
     : KMSRequest(new GenerateDataKeyRequestPrivate(KMSRequest::GenerateDataKeyAction, this))
@@ -165,14 +162,9 @@ bool GenerateDataKeyRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GenerateDataKeyResponse object.
+ * Returns a GenerateDataKeyResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GenerateDataKeyResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  KMSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GenerateDataKeyRequest::response(QNetworkReply * const reply) const
 {
@@ -180,20 +172,17 @@ QtAws::Core::AwsAbstractResponse * GenerateDataKeyRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::KMS::GenerateDataKeyRequestPrivate
+ * \brief The GenerateDataKeyRequestPrivate class provides private implementation for GenerateDataKeyRequest.
+ * \internal
  *
- * @class  GenerateDataKeyRequestPrivate
- *
- * @brief  Private implementation for GenerateDataKeyRequest.
+ * \inmodule QtAwsKMS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GenerateDataKeyRequestPrivate object.
- *
- * @param  action  KMS action being performed.
- * @param  q       Pointer to this object's public GenerateDataKeyRequest instance.
+ * Constructs a GenerateDataKeyRequestPrivate object for KMS \a action with,
+ * public implementation \a q.
  */
 GenerateDataKeyRequestPrivate::GenerateDataKeyRequestPrivate(
     const KMSRequest::Action action, GenerateDataKeyRequest * const q)
@@ -203,15 +192,10 @@ GenerateDataKeyRequestPrivate::GenerateDataKeyRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GenerateDataKeyRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GenerateDataKeyRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GenerateDataKeyRequest instance.
  */
 GenerateDataKeyRequestPrivate::GenerateDataKeyRequestPrivate(
     const GenerateDataKeyRequestPrivate &other, GenerateDataKeyRequest * const q)

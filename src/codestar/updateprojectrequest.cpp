@@ -27,10 +27,9 @@ namespace CodeStar {
 
 /*!
  * \class QtAws::CodeStar::UpdateProjectRequest
- *
  * \brief The UpdateProjectRequest class provides an interface for CodeStar UpdateProject requests.
  *
- * \ingroup CodeStar
+ * \inmodule QtAwsCodeStar
  *
  *  <fullname>AWS CodeStar</fullname>
  * 
@@ -125,9 +124,7 @@ namespace CodeStar {
  */
 
 /*!
- * @brief  Constructs a new UpdateProjectRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateProjectRequest::UpdateProjectRequest(const UpdateProjectRequest &other)
     : CodeStarRequest(new UpdateProjectRequestPrivate(*other.d_func(), this))
@@ -136,7 +133,7 @@ UpdateProjectRequest::UpdateProjectRequest(const UpdateProjectRequest &other)
 }
 
 /*!
- * @brief  Constructs a new UpdateProjectRequest object.
+ * Constructs a UpdateProjectRequest object.
  */
 UpdateProjectRequest::UpdateProjectRequest()
     : CodeStarRequest(new UpdateProjectRequestPrivate(CodeStarRequest::UpdateProjectAction, this))
@@ -154,14 +151,9 @@ bool UpdateProjectRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateProjectResponse object.
+ * Returns a UpdateProjectResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateProjectResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CodeStarClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateProjectRequest::response(QNetworkReply * const reply) const
 {
@@ -169,20 +161,17 @@ QtAws::Core::AwsAbstractResponse * UpdateProjectRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::CodeStar::UpdateProjectRequestPrivate
+ * \brief The UpdateProjectRequestPrivate class provides private implementation for UpdateProjectRequest.
+ * \internal
  *
- * @class  UpdateProjectRequestPrivate
- *
- * @brief  Private implementation for UpdateProjectRequest.
+ * \inmodule QtAwsCodeStar
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateProjectRequestPrivate object.
- *
- * @param  action  CodeStar action being performed.
- * @param  q       Pointer to this object's public UpdateProjectRequest instance.
+ * Constructs a UpdateProjectRequestPrivate object for CodeStar \a action with,
+ * public implementation \a q.
  */
 UpdateProjectRequestPrivate::UpdateProjectRequestPrivate(
     const CodeStarRequest::Action action, UpdateProjectRequest * const q)
@@ -192,15 +181,10 @@ UpdateProjectRequestPrivate::UpdateProjectRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateProjectRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateProjectRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateProjectRequest instance.
  */
 UpdateProjectRequestPrivate::UpdateProjectRequestPrivate(
     const UpdateProjectRequestPrivate &other, UpdateProjectRequest * const q)

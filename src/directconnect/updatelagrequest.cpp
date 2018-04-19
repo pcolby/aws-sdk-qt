@@ -27,10 +27,9 @@ namespace DirectConnect {
 
 /*!
  * \class QtAws::DirectConnect::UpdateLagRequest
- *
  * \brief The UpdateLagRequest class provides an interface for DirectConnect UpdateLag requests.
  *
- * \ingroup DirectConnect
+ * \inmodule QtAwsDirectConnect
  *
  *  AWS Direct Connect links your internal network to an AWS Direct Connect location over a standard 1 gigabit or 10 gigabit
  *  Ethernet fiber-optic cable. One end of the cable is connected to your router, the other to an AWS Direct Connect router.
@@ -45,9 +44,7 @@ namespace DirectConnect {
  */
 
 /*!
- * @brief  Constructs a new UpdateLagRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateLagRequest::UpdateLagRequest(const UpdateLagRequest &other)
     : DirectConnectRequest(new UpdateLagRequestPrivate(*other.d_func(), this))
@@ -56,7 +53,7 @@ UpdateLagRequest::UpdateLagRequest(const UpdateLagRequest &other)
 }
 
 /*!
- * @brief  Constructs a new UpdateLagRequest object.
+ * Constructs a UpdateLagRequest object.
  */
 UpdateLagRequest::UpdateLagRequest()
     : DirectConnectRequest(new UpdateLagRequestPrivate(DirectConnectRequest::UpdateLagAction, this))
@@ -74,14 +71,9 @@ bool UpdateLagRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateLagResponse object.
+ * Returns a UpdateLagResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateLagResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DirectConnectClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateLagRequest::response(QNetworkReply * const reply) const
 {
@@ -89,20 +81,17 @@ QtAws::Core::AwsAbstractResponse * UpdateLagRequest::response(QNetworkReply * co
 }
 
 /*!
- * @internal
+ * \class QtAws::DirectConnect::UpdateLagRequestPrivate
+ * \brief The UpdateLagRequestPrivate class provides private implementation for UpdateLagRequest.
+ * \internal
  *
- * @class  UpdateLagRequestPrivate
- *
- * @brief  Private implementation for UpdateLagRequest.
+ * \inmodule QtAwsDirectConnect
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateLagRequestPrivate object.
- *
- * @param  action  DirectConnect action being performed.
- * @param  q       Pointer to this object's public UpdateLagRequest instance.
+ * Constructs a UpdateLagRequestPrivate object for DirectConnect \a action with,
+ * public implementation \a q.
  */
 UpdateLagRequestPrivate::UpdateLagRequestPrivate(
     const DirectConnectRequest::Action action, UpdateLagRequest * const q)
@@ -112,15 +101,10 @@ UpdateLagRequestPrivate::UpdateLagRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateLagRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateLagRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateLagRequest instance.
  */
 UpdateLagRequestPrivate::UpdateLagRequestPrivate(
     const UpdateLagRequestPrivate &other, UpdateLagRequest * const q)

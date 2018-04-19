@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::AssignPrivateIpAddressesRequest
- *
  * \brief The AssignPrivateIpAddressesRequest class provides an interface for EC2 AssignPrivateIpAddresses requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new AssignPrivateIpAddressesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AssignPrivateIpAddressesRequest::AssignPrivateIpAddressesRequest(const AssignPrivateIpAddressesRequest &other)
     : EC2Request(new AssignPrivateIpAddressesRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ AssignPrivateIpAddressesRequest::AssignPrivateIpAddressesRequest(const AssignPri
 }
 
 /*!
- * @brief  Constructs a new AssignPrivateIpAddressesRequest object.
+ * Constructs a AssignPrivateIpAddressesRequest object.
  */
 AssignPrivateIpAddressesRequest::AssignPrivateIpAddressesRequest()
     : EC2Request(new AssignPrivateIpAddressesRequestPrivate(EC2Request::AssignPrivateIpAddressesAction, this))
@@ -70,14 +67,9 @@ bool AssignPrivateIpAddressesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AssignPrivateIpAddressesResponse object.
+ * Returns a AssignPrivateIpAddressesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AssignPrivateIpAddressesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AssignPrivateIpAddressesRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * AssignPrivateIpAddressesRequest::response(QNe
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::AssignPrivateIpAddressesRequestPrivate
+ * \brief The AssignPrivateIpAddressesRequestPrivate class provides private implementation for AssignPrivateIpAddressesRequest.
+ * \internal
  *
- * @class  AssignPrivateIpAddressesRequestPrivate
- *
- * @brief  Private implementation for AssignPrivateIpAddressesRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AssignPrivateIpAddressesRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public AssignPrivateIpAddressesRequest instance.
+ * Constructs a AssignPrivateIpAddressesRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 AssignPrivateIpAddressesRequestPrivate::AssignPrivateIpAddressesRequestPrivate(
     const EC2Request::Action action, AssignPrivateIpAddressesRequest * const q)
@@ -108,15 +97,10 @@ AssignPrivateIpAddressesRequestPrivate::AssignPrivateIpAddressesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AssignPrivateIpAddressesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AssignPrivateIpAddressesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AssignPrivateIpAddressesRequest instance.
  */
 AssignPrivateIpAddressesRequestPrivate::AssignPrivateIpAddressesRequestPrivate(
     const AssignPrivateIpAddressesRequestPrivate &other, AssignPrivateIpAddressesRequest * const q)

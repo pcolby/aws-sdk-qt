@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DescribeVolumesModificationsRequest
- *
  * \brief The DescribeVolumesModificationsRequest class provides an interface for EC2 DescribeVolumesModifications requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DescribeVolumesModificationsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeVolumesModificationsRequest::DescribeVolumesModificationsRequest(const DescribeVolumesModificationsRequest &other)
     : EC2Request(new DescribeVolumesModificationsRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ DescribeVolumesModificationsRequest::DescribeVolumesModificationsRequest(const D
 }
 
 /*!
- * @brief  Constructs a new DescribeVolumesModificationsRequest object.
+ * Constructs a DescribeVolumesModificationsRequest object.
  */
 DescribeVolumesModificationsRequest::DescribeVolumesModificationsRequest()
     : EC2Request(new DescribeVolumesModificationsRequestPrivate(EC2Request::DescribeVolumesModificationsAction, this))
@@ -70,14 +67,9 @@ bool DescribeVolumesModificationsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeVolumesModificationsResponse object.
+ * Returns a DescribeVolumesModificationsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeVolumesModificationsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeVolumesModificationsRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * DescribeVolumesModificationsRequest::response
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::DescribeVolumesModificationsRequestPrivate
+ * \brief The DescribeVolumesModificationsRequestPrivate class provides private implementation for DescribeVolumesModificationsRequest.
+ * \internal
  *
- * @class  DescribeVolumesModificationsRequestPrivate
- *
- * @brief  Private implementation for DescribeVolumesModificationsRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeVolumesModificationsRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public DescribeVolumesModificationsRequest instance.
+ * Constructs a DescribeVolumesModificationsRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 DescribeVolumesModificationsRequestPrivate::DescribeVolumesModificationsRequestPrivate(
     const EC2Request::Action action, DescribeVolumesModificationsRequest * const q)
@@ -108,15 +97,10 @@ DescribeVolumesModificationsRequestPrivate::DescribeVolumesModificationsRequestP
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeVolumesModificationsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeVolumesModificationsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeVolumesModificationsRequest instance.
  */
 DescribeVolumesModificationsRequestPrivate::DescribeVolumesModificationsRequestPrivate(
     const DescribeVolumesModificationsRequestPrivate &other, DescribeVolumesModificationsRequest * const q)

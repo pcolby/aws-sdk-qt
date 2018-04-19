@@ -27,10 +27,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::CopyOptionGroupRequest
- *
  * \brief The CopyOptionGroupRequest class provides an interface for RDS CopyOptionGroup requests.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -101,9 +100,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new CopyOptionGroupRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CopyOptionGroupRequest::CopyOptionGroupRequest(const CopyOptionGroupRequest &other)
     : RDSRequest(new CopyOptionGroupRequestPrivate(*other.d_func(), this))
@@ -112,7 +109,7 @@ CopyOptionGroupRequest::CopyOptionGroupRequest(const CopyOptionGroupRequest &oth
 }
 
 /*!
- * @brief  Constructs a new CopyOptionGroupRequest object.
+ * Constructs a CopyOptionGroupRequest object.
  */
 CopyOptionGroupRequest::CopyOptionGroupRequest()
     : RDSRequest(new CopyOptionGroupRequestPrivate(RDSRequest::CopyOptionGroupAction, this))
@@ -130,14 +127,9 @@ bool CopyOptionGroupRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CopyOptionGroupResponse object.
+ * Returns a CopyOptionGroupResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CopyOptionGroupResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RDSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CopyOptionGroupRequest::response(QNetworkReply * const reply) const
 {
@@ -145,20 +137,17 @@ QtAws::Core::AwsAbstractResponse * CopyOptionGroupRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::RDS::CopyOptionGroupRequestPrivate
+ * \brief The CopyOptionGroupRequestPrivate class provides private implementation for CopyOptionGroupRequest.
+ * \internal
  *
- * @class  CopyOptionGroupRequestPrivate
- *
- * @brief  Private implementation for CopyOptionGroupRequest.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CopyOptionGroupRequestPrivate object.
- *
- * @param  action  RDS action being performed.
- * @param  q       Pointer to this object's public CopyOptionGroupRequest instance.
+ * Constructs a CopyOptionGroupRequestPrivate object for RDS \a action with,
+ * public implementation \a q.
  */
 CopyOptionGroupRequestPrivate::CopyOptionGroupRequestPrivate(
     const RDSRequest::Action action, CopyOptionGroupRequest * const q)
@@ -168,15 +157,10 @@ CopyOptionGroupRequestPrivate::CopyOptionGroupRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CopyOptionGroupRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CopyOptionGroupRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CopyOptionGroupRequest instance.
  */
 CopyOptionGroupRequestPrivate::CopyOptionGroupRequestPrivate(
     const CopyOptionGroupRequestPrivate &other, CopyOptionGroupRequest * const q)

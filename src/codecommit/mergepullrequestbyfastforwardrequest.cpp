@@ -27,10 +27,9 @@ namespace CodeCommit {
 
 /*!
  * \class QtAws::CodeCommit::MergePullRequestByFastForwardRequest
- *
  * \brief The MergePullRequestByFastForwardRequest class provides an interface for CodeCommit MergePullRequestByFastForward requests.
  *
- * \ingroup CodeCommit
+ * \inmodule QtAwsCodeCommit
  *
  *  <fullname>AWS CodeCommit</fullname>
  * 
@@ -227,9 +226,7 @@ namespace CodeCommit {
  */
 
 /*!
- * @brief  Constructs a new MergePullRequestByFastForwardRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 MergePullRequestByFastForwardRequest::MergePullRequestByFastForwardRequest(const MergePullRequestByFastForwardRequest &other)
     : CodeCommitRequest(new MergePullRequestByFastForwardRequestPrivate(*other.d_func(), this))
@@ -238,7 +235,7 @@ MergePullRequestByFastForwardRequest::MergePullRequestByFastForwardRequest(const
 }
 
 /*!
- * @brief  Constructs a new MergePullRequestByFastForwardRequest object.
+ * Constructs a MergePullRequestByFastForwardRequest object.
  */
 MergePullRequestByFastForwardRequest::MergePullRequestByFastForwardRequest()
     : CodeCommitRequest(new MergePullRequestByFastForwardRequestPrivate(CodeCommitRequest::MergePullRequestByFastForwardAction, this))
@@ -256,14 +253,9 @@ bool MergePullRequestByFastForwardRequest::isValid() const
 
 
 /*!
- * @brief  Construct an MergePullRequestByFastForwardResponse object.
+ * Returns a MergePullRequestByFastForwardResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An MergePullRequestByFastForwardResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CodeCommitClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * MergePullRequestByFastForwardRequest::response(QNetworkReply * const reply) const
 {
@@ -271,20 +263,17 @@ QtAws::Core::AwsAbstractResponse * MergePullRequestByFastForwardRequest::respons
 }
 
 /*!
- * @internal
+ * \class QtAws::CodeCommit::MergePullRequestByFastForwardRequestPrivate
+ * \brief The MergePullRequestByFastForwardRequestPrivate class provides private implementation for MergePullRequestByFastForwardRequest.
+ * \internal
  *
- * @class  MergePullRequestByFastForwardRequestPrivate
- *
- * @brief  Private implementation for MergePullRequestByFastForwardRequest.
+ * \inmodule QtAwsCodeCommit
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new MergePullRequestByFastForwardRequestPrivate object.
- *
- * @param  action  CodeCommit action being performed.
- * @param  q       Pointer to this object's public MergePullRequestByFastForwardRequest instance.
+ * Constructs a MergePullRequestByFastForwardRequestPrivate object for CodeCommit \a action with,
+ * public implementation \a q.
  */
 MergePullRequestByFastForwardRequestPrivate::MergePullRequestByFastForwardRequestPrivate(
     const CodeCommitRequest::Action action, MergePullRequestByFastForwardRequest * const q)
@@ -294,15 +283,10 @@ MergePullRequestByFastForwardRequestPrivate::MergePullRequestByFastForwardReques
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new MergePullRequestByFastForwardRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the MergePullRequestByFastForwardRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public MergePullRequestByFastForwardRequest instance.
  */
 MergePullRequestByFastForwardRequestPrivate::MergePullRequestByFastForwardRequestPrivate(
     const MergePullRequestByFastForwardRequestPrivate &other, MergePullRequestByFastForwardRequest * const q)

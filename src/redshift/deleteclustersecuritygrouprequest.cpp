@@ -27,10 +27,9 @@ namespace Redshift {
 
 /*!
  * \class QtAws::Redshift::DeleteClusterSecurityGroupRequest
- *
  * \brief The DeleteClusterSecurityGroupRequest class provides an interface for Redshift DeleteClusterSecurityGroup requests.
  *
- * \ingroup Redshift
+ * \inmodule QtAwsRedshift
  *
  *  <fullname>Amazon Redshift</fullname>
  * 
@@ -67,9 +66,7 @@ namespace Redshift {
  */
 
 /*!
- * @brief  Constructs a new DeleteClusterSecurityGroupRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteClusterSecurityGroupRequest::DeleteClusterSecurityGroupRequest(const DeleteClusterSecurityGroupRequest &other)
     : RedshiftRequest(new DeleteClusterSecurityGroupRequestPrivate(*other.d_func(), this))
@@ -78,7 +75,7 @@ DeleteClusterSecurityGroupRequest::DeleteClusterSecurityGroupRequest(const Delet
 }
 
 /*!
- * @brief  Constructs a new DeleteClusterSecurityGroupRequest object.
+ * Constructs a DeleteClusterSecurityGroupRequest object.
  */
 DeleteClusterSecurityGroupRequest::DeleteClusterSecurityGroupRequest()
     : RedshiftRequest(new DeleteClusterSecurityGroupRequestPrivate(RedshiftRequest::DeleteClusterSecurityGroupAction, this))
@@ -96,14 +93,9 @@ bool DeleteClusterSecurityGroupRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteClusterSecurityGroupResponse object.
+ * Returns a DeleteClusterSecurityGroupResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteClusterSecurityGroupResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RedshiftClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteClusterSecurityGroupRequest::response(QNetworkReply * const reply) const
 {
@@ -111,20 +103,17 @@ QtAws::Core::AwsAbstractResponse * DeleteClusterSecurityGroupRequest::response(Q
 }
 
 /*!
- * @internal
+ * \class QtAws::Redshift::DeleteClusterSecurityGroupRequestPrivate
+ * \brief The DeleteClusterSecurityGroupRequestPrivate class provides private implementation for DeleteClusterSecurityGroupRequest.
+ * \internal
  *
- * @class  DeleteClusterSecurityGroupRequestPrivate
- *
- * @brief  Private implementation for DeleteClusterSecurityGroupRequest.
+ * \inmodule QtAwsRedshift
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteClusterSecurityGroupRequestPrivate object.
- *
- * @param  action  Redshift action being performed.
- * @param  q       Pointer to this object's public DeleteClusterSecurityGroupRequest instance.
+ * Constructs a DeleteClusterSecurityGroupRequestPrivate object for Redshift \a action with,
+ * public implementation \a q.
  */
 DeleteClusterSecurityGroupRequestPrivate::DeleteClusterSecurityGroupRequestPrivate(
     const RedshiftRequest::Action action, DeleteClusterSecurityGroupRequest * const q)
@@ -134,15 +123,10 @@ DeleteClusterSecurityGroupRequestPrivate::DeleteClusterSecurityGroupRequestPriva
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteClusterSecurityGroupRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteClusterSecurityGroupRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteClusterSecurityGroupRequest instance.
  */
 DeleteClusterSecurityGroupRequestPrivate::DeleteClusterSecurityGroupRequestPrivate(
     const DeleteClusterSecurityGroupRequestPrivate &other, DeleteClusterSecurityGroupRequest * const q)

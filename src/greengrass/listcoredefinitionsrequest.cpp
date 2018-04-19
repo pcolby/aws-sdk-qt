@@ -27,10 +27,9 @@ namespace Greengrass {
 
 /*!
  * \class QtAws::Greengrass::ListCoreDefinitionsRequest
- *
  * \brief The ListCoreDefinitionsRequest class provides an interface for Greengrass ListCoreDefinitions requests.
  *
- * \ingroup Greengrass
+ * \inmodule QtAwsGreengrass
  *
  *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
  *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
@@ -40,9 +39,7 @@ namespace Greengrass {
  */
 
 /*!
- * @brief  Constructs a new ListCoreDefinitionsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListCoreDefinitionsRequest::ListCoreDefinitionsRequest(const ListCoreDefinitionsRequest &other)
     : GreengrassRequest(new ListCoreDefinitionsRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ ListCoreDefinitionsRequest::ListCoreDefinitionsRequest(const ListCoreDefinitions
 }
 
 /*!
- * @brief  Constructs a new ListCoreDefinitionsRequest object.
+ * Constructs a ListCoreDefinitionsRequest object.
  */
 ListCoreDefinitionsRequest::ListCoreDefinitionsRequest()
     : GreengrassRequest(new ListCoreDefinitionsRequestPrivate(GreengrassRequest::ListCoreDefinitionsAction, this))
@@ -69,14 +66,9 @@ bool ListCoreDefinitionsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListCoreDefinitionsResponse object.
+ * Returns a ListCoreDefinitionsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListCoreDefinitionsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GreengrassClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListCoreDefinitionsRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * ListCoreDefinitionsRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::Greengrass::ListCoreDefinitionsRequestPrivate
+ * \brief The ListCoreDefinitionsRequestPrivate class provides private implementation for ListCoreDefinitionsRequest.
+ * \internal
  *
- * @class  ListCoreDefinitionsRequestPrivate
- *
- * @brief  Private implementation for ListCoreDefinitionsRequest.
+ * \inmodule QtAwsGreengrass
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListCoreDefinitionsRequestPrivate object.
- *
- * @param  action  Greengrass action being performed.
- * @param  q       Pointer to this object's public ListCoreDefinitionsRequest instance.
+ * Constructs a ListCoreDefinitionsRequestPrivate object for Greengrass \a action with,
+ * public implementation \a q.
  */
 ListCoreDefinitionsRequestPrivate::ListCoreDefinitionsRequestPrivate(
     const GreengrassRequest::Action action, ListCoreDefinitionsRequest * const q)
@@ -107,15 +96,10 @@ ListCoreDefinitionsRequestPrivate::ListCoreDefinitionsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListCoreDefinitionsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListCoreDefinitionsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListCoreDefinitionsRequest instance.
  */
 ListCoreDefinitionsRequestPrivate::ListCoreDefinitionsRequestPrivate(
     const ListCoreDefinitionsRequestPrivate &other, ListCoreDefinitionsRequest * const q)

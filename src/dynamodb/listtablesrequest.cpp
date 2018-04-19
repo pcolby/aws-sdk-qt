@@ -27,10 +27,9 @@ namespace DynamoDB {
 
 /*!
  * \class QtAws::DynamoDB::ListTablesRequest
- *
  * \brief The ListTablesRequest class provides an interface for DynamoDB ListTables requests.
  *
- * \ingroup DynamoDB
+ * \inmodule QtAwsDynamoDB
  *
  *  <fullname>Amazon DynamoDB</fullname>
  * 
@@ -56,9 +55,7 @@ namespace DynamoDB {
  */
 
 /*!
- * @brief  Constructs a new ListTablesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListTablesRequest::ListTablesRequest(const ListTablesRequest &other)
     : DynamoDBRequest(new ListTablesRequestPrivate(*other.d_func(), this))
@@ -67,7 +64,7 @@ ListTablesRequest::ListTablesRequest(const ListTablesRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ListTablesRequest object.
+ * Constructs a ListTablesRequest object.
  */
 ListTablesRequest::ListTablesRequest()
     : DynamoDBRequest(new ListTablesRequestPrivate(DynamoDBRequest::ListTablesAction, this))
@@ -85,14 +82,9 @@ bool ListTablesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListTablesResponse object.
+ * Returns a ListTablesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListTablesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DynamoDBClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListTablesRequest::response(QNetworkReply * const reply) const
 {
@@ -100,20 +92,17 @@ QtAws::Core::AwsAbstractResponse * ListTablesRequest::response(QNetworkReply * c
 }
 
 /*!
- * @internal
+ * \class QtAws::DynamoDB::ListTablesRequestPrivate
+ * \brief The ListTablesRequestPrivate class provides private implementation for ListTablesRequest.
+ * \internal
  *
- * @class  ListTablesRequestPrivate
- *
- * @brief  Private implementation for ListTablesRequest.
+ * \inmodule QtAwsDynamoDB
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListTablesRequestPrivate object.
- *
- * @param  action  DynamoDB action being performed.
- * @param  q       Pointer to this object's public ListTablesRequest instance.
+ * Constructs a ListTablesRequestPrivate object for DynamoDB \a action with,
+ * public implementation \a q.
  */
 ListTablesRequestPrivate::ListTablesRequestPrivate(
     const DynamoDBRequest::Action action, ListTablesRequest * const q)
@@ -123,15 +112,10 @@ ListTablesRequestPrivate::ListTablesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListTablesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListTablesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListTablesRequest instance.
  */
 ListTablesRequestPrivate::ListTablesRequestPrivate(
     const ListTablesRequestPrivate &other, ListTablesRequest * const q)

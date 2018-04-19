@@ -27,10 +27,9 @@ namespace Rekognition {
 
 /*!
  * \class QtAws::Rekognition::GetPersonTrackingRequest
- *
  * \brief The GetPersonTrackingRequest class provides an interface for Rekognition GetPersonTracking requests.
  *
- * \ingroup Rekognition
+ * \inmodule QtAwsRekognition
  *
  *  This is the Amazon Rekognition API
  *
@@ -38,9 +37,7 @@ namespace Rekognition {
  */
 
 /*!
- * @brief  Constructs a new GetPersonTrackingRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetPersonTrackingRequest::GetPersonTrackingRequest(const GetPersonTrackingRequest &other)
     : RekognitionRequest(new GetPersonTrackingRequestPrivate(*other.d_func(), this))
@@ -49,7 +46,7 @@ GetPersonTrackingRequest::GetPersonTrackingRequest(const GetPersonTrackingReques
 }
 
 /*!
- * @brief  Constructs a new GetPersonTrackingRequest object.
+ * Constructs a GetPersonTrackingRequest object.
  */
 GetPersonTrackingRequest::GetPersonTrackingRequest()
     : RekognitionRequest(new GetPersonTrackingRequestPrivate(RekognitionRequest::GetPersonTrackingAction, this))
@@ -67,14 +64,9 @@ bool GetPersonTrackingRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetPersonTrackingResponse object.
+ * Returns a GetPersonTrackingResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetPersonTrackingResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RekognitionClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetPersonTrackingRequest::response(QNetworkReply * const reply) const
 {
@@ -82,20 +74,17 @@ QtAws::Core::AwsAbstractResponse * GetPersonTrackingRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::Rekognition::GetPersonTrackingRequestPrivate
+ * \brief The GetPersonTrackingRequestPrivate class provides private implementation for GetPersonTrackingRequest.
+ * \internal
  *
- * @class  GetPersonTrackingRequestPrivate
- *
- * @brief  Private implementation for GetPersonTrackingRequest.
+ * \inmodule QtAwsRekognition
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetPersonTrackingRequestPrivate object.
- *
- * @param  action  Rekognition action being performed.
- * @param  q       Pointer to this object's public GetPersonTrackingRequest instance.
+ * Constructs a GetPersonTrackingRequestPrivate object for Rekognition \a action with,
+ * public implementation \a q.
  */
 GetPersonTrackingRequestPrivate::GetPersonTrackingRequestPrivate(
     const RekognitionRequest::Action action, GetPersonTrackingRequest * const q)
@@ -105,15 +94,10 @@ GetPersonTrackingRequestPrivate::GetPersonTrackingRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetPersonTrackingRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetPersonTrackingRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetPersonTrackingRequest instance.
  */
 GetPersonTrackingRequestPrivate::GetPersonTrackingRequestPrivate(
     const GetPersonTrackingRequestPrivate &other, GetPersonTrackingRequest * const q)

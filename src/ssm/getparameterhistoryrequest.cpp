@@ -27,10 +27,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::GetParameterHistoryRequest
- *
  * \brief The GetParameterHistoryRequest class provides an interface for SSM GetParameterHistory requests.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -61,9 +60,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new GetParameterHistoryRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetParameterHistoryRequest::GetParameterHistoryRequest(const GetParameterHistoryRequest &other)
     : SSMRequest(new GetParameterHistoryRequestPrivate(*other.d_func(), this))
@@ -72,7 +69,7 @@ GetParameterHistoryRequest::GetParameterHistoryRequest(const GetParameterHistory
 }
 
 /*!
- * @brief  Constructs a new GetParameterHistoryRequest object.
+ * Constructs a GetParameterHistoryRequest object.
  */
 GetParameterHistoryRequest::GetParameterHistoryRequest()
     : SSMRequest(new GetParameterHistoryRequestPrivate(SSMRequest::GetParameterHistoryAction, this))
@@ -90,14 +87,9 @@ bool GetParameterHistoryRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetParameterHistoryResponse object.
+ * Returns a GetParameterHistoryResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetParameterHistoryResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SSMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetParameterHistoryRequest::response(QNetworkReply * const reply) const
 {
@@ -105,20 +97,17 @@ QtAws::Core::AwsAbstractResponse * GetParameterHistoryRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::SSM::GetParameterHistoryRequestPrivate
+ * \brief The GetParameterHistoryRequestPrivate class provides private implementation for GetParameterHistoryRequest.
+ * \internal
  *
- * @class  GetParameterHistoryRequestPrivate
- *
- * @brief  Private implementation for GetParameterHistoryRequest.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetParameterHistoryRequestPrivate object.
- *
- * @param  action  SSM action being performed.
- * @param  q       Pointer to this object's public GetParameterHistoryRequest instance.
+ * Constructs a GetParameterHistoryRequestPrivate object for SSM \a action with,
+ * public implementation \a q.
  */
 GetParameterHistoryRequestPrivate::GetParameterHistoryRequestPrivate(
     const SSMRequest::Action action, GetParameterHistoryRequest * const q)
@@ -128,15 +117,10 @@ GetParameterHistoryRequestPrivate::GetParameterHistoryRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetParameterHistoryRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetParameterHistoryRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetParameterHistoryRequest instance.
  */
 GetParameterHistoryRequestPrivate::GetParameterHistoryRequestPrivate(
     const GetParameterHistoryRequestPrivate &other, GetParameterHistoryRequest * const q)

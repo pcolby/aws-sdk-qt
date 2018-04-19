@@ -27,19 +27,16 @@ namespace Pinpoint {
 
 /*!
  * \class QtAws::Pinpoint::UpdateAdmChannelRequest
- *
  * \brief The UpdateAdmChannelRequest class provides an interface for Pinpoint UpdateAdmChannel requests.
  *
- * \ingroup Pinpoint
+ * \inmodule QtAwsPinpoint
  *
  *
  * \sa PinpointClient::updateAdmChannel
  */
 
 /*!
- * @brief  Constructs a new UpdateAdmChannelRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateAdmChannelRequest::UpdateAdmChannelRequest(const UpdateAdmChannelRequest &other)
     : PinpointRequest(new UpdateAdmChannelRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ UpdateAdmChannelRequest::UpdateAdmChannelRequest(const UpdateAdmChannelRequest &
 }
 
 /*!
- * @brief  Constructs a new UpdateAdmChannelRequest object.
+ * Constructs a UpdateAdmChannelRequest object.
  */
 UpdateAdmChannelRequest::UpdateAdmChannelRequest()
     : PinpointRequest(new UpdateAdmChannelRequestPrivate(PinpointRequest::UpdateAdmChannelAction, this))
@@ -66,14 +63,9 @@ bool UpdateAdmChannelRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateAdmChannelResponse object.
+ * Returns a UpdateAdmChannelResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateAdmChannelResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  PinpointClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateAdmChannelRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * UpdateAdmChannelRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::Pinpoint::UpdateAdmChannelRequestPrivate
+ * \brief The UpdateAdmChannelRequestPrivate class provides private implementation for UpdateAdmChannelRequest.
+ * \internal
  *
- * @class  UpdateAdmChannelRequestPrivate
- *
- * @brief  Private implementation for UpdateAdmChannelRequest.
+ * \inmodule QtAwsPinpoint
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateAdmChannelRequestPrivate object.
- *
- * @param  action  Pinpoint action being performed.
- * @param  q       Pointer to this object's public UpdateAdmChannelRequest instance.
+ * Constructs a UpdateAdmChannelRequestPrivate object for Pinpoint \a action with,
+ * public implementation \a q.
  */
 UpdateAdmChannelRequestPrivate::UpdateAdmChannelRequestPrivate(
     const PinpointRequest::Action action, UpdateAdmChannelRequest * const q)
@@ -104,15 +93,10 @@ UpdateAdmChannelRequestPrivate::UpdateAdmChannelRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateAdmChannelRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateAdmChannelRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateAdmChannelRequest instance.
  */
 UpdateAdmChannelRequestPrivate::UpdateAdmChannelRequestPrivate(
     const UpdateAdmChannelRequestPrivate &other, UpdateAdmChannelRequest * const q)

@@ -27,10 +27,9 @@ namespace SES {
 
 /*!
  * \class QtAws::SES::VerifyEmailAddressRequest
- *
  * \brief The VerifyEmailAddressRequest class provides an interface for SES VerifyEmailAddress requests.
  *
- * \ingroup SES
+ * \inmodule QtAwsSES
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -48,9 +47,7 @@ namespace SES {
  */
 
 /*!
- * @brief  Constructs a new VerifyEmailAddressRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 VerifyEmailAddressRequest::VerifyEmailAddressRequest(const VerifyEmailAddressRequest &other)
     : SESRequest(new VerifyEmailAddressRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ VerifyEmailAddressRequest::VerifyEmailAddressRequest(const VerifyEmailAddressReq
 }
 
 /*!
- * @brief  Constructs a new VerifyEmailAddressRequest object.
+ * Constructs a VerifyEmailAddressRequest object.
  */
 VerifyEmailAddressRequest::VerifyEmailAddressRequest()
     : SESRequest(new VerifyEmailAddressRequestPrivate(SESRequest::VerifyEmailAddressAction, this))
@@ -77,14 +74,9 @@ bool VerifyEmailAddressRequest::isValid() const
 
 
 /*!
- * @brief  Construct an VerifyEmailAddressResponse object.
+ * Returns a VerifyEmailAddressResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An VerifyEmailAddressResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SESClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * VerifyEmailAddressRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * VerifyEmailAddressRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::SES::VerifyEmailAddressRequestPrivate
+ * \brief The VerifyEmailAddressRequestPrivate class provides private implementation for VerifyEmailAddressRequest.
+ * \internal
  *
- * @class  VerifyEmailAddressRequestPrivate
- *
- * @brief  Private implementation for VerifyEmailAddressRequest.
+ * \inmodule QtAwsSES
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new VerifyEmailAddressRequestPrivate object.
- *
- * @param  action  SES action being performed.
- * @param  q       Pointer to this object's public VerifyEmailAddressRequest instance.
+ * Constructs a VerifyEmailAddressRequestPrivate object for SES \a action with,
+ * public implementation \a q.
  */
 VerifyEmailAddressRequestPrivate::VerifyEmailAddressRequestPrivate(
     const SESRequest::Action action, VerifyEmailAddressRequest * const q)
@@ -115,15 +104,10 @@ VerifyEmailAddressRequestPrivate::VerifyEmailAddressRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new VerifyEmailAddressRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the VerifyEmailAddressRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public VerifyEmailAddressRequest instance.
  */
 VerifyEmailAddressRequestPrivate::VerifyEmailAddressRequestPrivate(
     const VerifyEmailAddressRequestPrivate &other, VerifyEmailAddressRequest * const q)

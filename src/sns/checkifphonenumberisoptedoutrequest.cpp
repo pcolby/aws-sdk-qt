@@ -27,10 +27,9 @@ namespace SNS {
 
 /*!
  * \class QtAws::SNS::CheckIfPhoneNumberIsOptedOutRequest
- *
  * \brief The CheckIfPhoneNumberIsOptedOutRequest class provides an interface for SNS CheckIfPhoneNumberIsOptedOut requests.
  *
- * \ingroup SNS
+ * \inmodule QtAwsSNS
  *
  *  <fullname>Amazon Simple Notification Service</fullname>
  * 
@@ -51,9 +50,7 @@ namespace SNS {
  */
 
 /*!
- * @brief  Constructs a new CheckIfPhoneNumberIsOptedOutRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CheckIfPhoneNumberIsOptedOutRequest::CheckIfPhoneNumberIsOptedOutRequest(const CheckIfPhoneNumberIsOptedOutRequest &other)
     : SNSRequest(new CheckIfPhoneNumberIsOptedOutRequestPrivate(*other.d_func(), this))
@@ -62,7 +59,7 @@ CheckIfPhoneNumberIsOptedOutRequest::CheckIfPhoneNumberIsOptedOutRequest(const C
 }
 
 /*!
- * @brief  Constructs a new CheckIfPhoneNumberIsOptedOutRequest object.
+ * Constructs a CheckIfPhoneNumberIsOptedOutRequest object.
  */
 CheckIfPhoneNumberIsOptedOutRequest::CheckIfPhoneNumberIsOptedOutRequest()
     : SNSRequest(new CheckIfPhoneNumberIsOptedOutRequestPrivate(SNSRequest::CheckIfPhoneNumberIsOptedOutAction, this))
@@ -80,14 +77,9 @@ bool CheckIfPhoneNumberIsOptedOutRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CheckIfPhoneNumberIsOptedOutResponse object.
+ * Returns a CheckIfPhoneNumberIsOptedOutResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CheckIfPhoneNumberIsOptedOutResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SNSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CheckIfPhoneNumberIsOptedOutRequest::response(QNetworkReply * const reply) const
 {
@@ -95,20 +87,17 @@ QtAws::Core::AwsAbstractResponse * CheckIfPhoneNumberIsOptedOutRequest::response
 }
 
 /*!
- * @internal
+ * \class QtAws::SNS::CheckIfPhoneNumberIsOptedOutRequestPrivate
+ * \brief The CheckIfPhoneNumberIsOptedOutRequestPrivate class provides private implementation for CheckIfPhoneNumberIsOptedOutRequest.
+ * \internal
  *
- * @class  CheckIfPhoneNumberIsOptedOutRequestPrivate
- *
- * @brief  Private implementation for CheckIfPhoneNumberIsOptedOutRequest.
+ * \inmodule QtAwsSNS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CheckIfPhoneNumberIsOptedOutRequestPrivate object.
- *
- * @param  action  SNS action being performed.
- * @param  q       Pointer to this object's public CheckIfPhoneNumberIsOptedOutRequest instance.
+ * Constructs a CheckIfPhoneNumberIsOptedOutRequestPrivate object for SNS \a action with,
+ * public implementation \a q.
  */
 CheckIfPhoneNumberIsOptedOutRequestPrivate::CheckIfPhoneNumberIsOptedOutRequestPrivate(
     const SNSRequest::Action action, CheckIfPhoneNumberIsOptedOutRequest * const q)
@@ -118,15 +107,10 @@ CheckIfPhoneNumberIsOptedOutRequestPrivate::CheckIfPhoneNumberIsOptedOutRequestP
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CheckIfPhoneNumberIsOptedOutRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CheckIfPhoneNumberIsOptedOutRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CheckIfPhoneNumberIsOptedOutRequest instance.
  */
 CheckIfPhoneNumberIsOptedOutRequestPrivate::CheckIfPhoneNumberIsOptedOutRequestPrivate(
     const CheckIfPhoneNumberIsOptedOutRequestPrivate &other, CheckIfPhoneNumberIsOptedOutRequest * const q)

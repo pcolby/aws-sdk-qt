@@ -27,10 +27,9 @@ namespace WAF {
 
 /*!
  * \class QtAws::WAF::GetByteMatchSetRequest
- *
  * \brief The GetByteMatchSetRequest class provides an interface for WAF GetByteMatchSet requests.
  *
- * \ingroup WAF
+ * \inmodule QtAwsWAF
  *
  *  This is the <i>AWS WAF API Reference</i> for using AWS WAF with Amazon CloudFront. The AWS WAF actions and data types
  *  listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data
@@ -42,9 +41,7 @@ namespace WAF {
  */
 
 /*!
- * @brief  Constructs a new GetByteMatchSetRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetByteMatchSetRequest::GetByteMatchSetRequest(const GetByteMatchSetRequest &other)
     : WAFRequest(new GetByteMatchSetRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ GetByteMatchSetRequest::GetByteMatchSetRequest(const GetByteMatchSetRequest &oth
 }
 
 /*!
- * @brief  Constructs a new GetByteMatchSetRequest object.
+ * Constructs a GetByteMatchSetRequest object.
  */
 GetByteMatchSetRequest::GetByteMatchSetRequest()
     : WAFRequest(new GetByteMatchSetRequestPrivate(WAFRequest::GetByteMatchSetAction, this))
@@ -71,14 +68,9 @@ bool GetByteMatchSetRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetByteMatchSetResponse object.
+ * Returns a GetByteMatchSetResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetByteMatchSetResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WAFClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetByteMatchSetRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * GetByteMatchSetRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::WAF::GetByteMatchSetRequestPrivate
+ * \brief The GetByteMatchSetRequestPrivate class provides private implementation for GetByteMatchSetRequest.
+ * \internal
  *
- * @class  GetByteMatchSetRequestPrivate
- *
- * @brief  Private implementation for GetByteMatchSetRequest.
+ * \inmodule QtAwsWAF
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetByteMatchSetRequestPrivate object.
- *
- * @param  action  WAF action being performed.
- * @param  q       Pointer to this object's public GetByteMatchSetRequest instance.
+ * Constructs a GetByteMatchSetRequestPrivate object for WAF \a action with,
+ * public implementation \a q.
  */
 GetByteMatchSetRequestPrivate::GetByteMatchSetRequestPrivate(
     const WAFRequest::Action action, GetByteMatchSetRequest * const q)
@@ -109,15 +98,10 @@ GetByteMatchSetRequestPrivate::GetByteMatchSetRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetByteMatchSetRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetByteMatchSetRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetByteMatchSetRequest instance.
  */
 GetByteMatchSetRequestPrivate::GetByteMatchSetRequestPrivate(
     const GetByteMatchSetRequestPrivate &other, GetByteMatchSetRequest * const q)

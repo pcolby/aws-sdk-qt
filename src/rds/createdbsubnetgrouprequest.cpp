@@ -27,10 +27,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::CreateDBSubnetGroupRequest
- *
  * \brief The CreateDBSubnetGroupRequest class provides an interface for RDS CreateDBSubnetGroup requests.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -101,9 +100,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new CreateDBSubnetGroupRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateDBSubnetGroupRequest::CreateDBSubnetGroupRequest(const CreateDBSubnetGroupRequest &other)
     : RDSRequest(new CreateDBSubnetGroupRequestPrivate(*other.d_func(), this))
@@ -112,7 +109,7 @@ CreateDBSubnetGroupRequest::CreateDBSubnetGroupRequest(const CreateDBSubnetGroup
 }
 
 /*!
- * @brief  Constructs a new CreateDBSubnetGroupRequest object.
+ * Constructs a CreateDBSubnetGroupRequest object.
  */
 CreateDBSubnetGroupRequest::CreateDBSubnetGroupRequest()
     : RDSRequest(new CreateDBSubnetGroupRequestPrivate(RDSRequest::CreateDBSubnetGroupAction, this))
@@ -130,14 +127,9 @@ bool CreateDBSubnetGroupRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateDBSubnetGroupResponse object.
+ * Returns a CreateDBSubnetGroupResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateDBSubnetGroupResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RDSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateDBSubnetGroupRequest::response(QNetworkReply * const reply) const
 {
@@ -145,20 +137,17 @@ QtAws::Core::AwsAbstractResponse * CreateDBSubnetGroupRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::RDS::CreateDBSubnetGroupRequestPrivate
+ * \brief The CreateDBSubnetGroupRequestPrivate class provides private implementation for CreateDBSubnetGroupRequest.
+ * \internal
  *
- * @class  CreateDBSubnetGroupRequestPrivate
- *
- * @brief  Private implementation for CreateDBSubnetGroupRequest.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateDBSubnetGroupRequestPrivate object.
- *
- * @param  action  RDS action being performed.
- * @param  q       Pointer to this object's public CreateDBSubnetGroupRequest instance.
+ * Constructs a CreateDBSubnetGroupRequestPrivate object for RDS \a action with,
+ * public implementation \a q.
  */
 CreateDBSubnetGroupRequestPrivate::CreateDBSubnetGroupRequestPrivate(
     const RDSRequest::Action action, CreateDBSubnetGroupRequest * const q)
@@ -168,15 +157,10 @@ CreateDBSubnetGroupRequestPrivate::CreateDBSubnetGroupRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateDBSubnetGroupRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateDBSubnetGroupRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateDBSubnetGroupRequest instance.
  */
 CreateDBSubnetGroupRequestPrivate::CreateDBSubnetGroupRequestPrivate(
     const CreateDBSubnetGroupRequestPrivate &other, CreateDBSubnetGroupRequest * const q)

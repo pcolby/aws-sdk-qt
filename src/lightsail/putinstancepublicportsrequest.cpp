@@ -27,10 +27,9 @@ namespace Lightsail {
 
 /*!
  * \class QtAws::Lightsail::PutInstancePublicPortsRequest
- *
  * \brief The PutInstancePublicPortsRequest class provides an interface for Lightsail PutInstancePublicPorts requests.
  *
- * \ingroup Lightsail
+ * \inmodule QtAwsLightsail
  *
  *  Amazon Lightsail is the easiest way to get started with AWS for developers who just need virtual private servers.
  *  Lightsail includes everything you need to launch your project quickly - a virtual machine, SSD-based storage, data
@@ -53,9 +52,7 @@ namespace Lightsail {
  */
 
 /*!
- * @brief  Constructs a new PutInstancePublicPortsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 PutInstancePublicPortsRequest::PutInstancePublicPortsRequest(const PutInstancePublicPortsRequest &other)
     : LightsailRequest(new PutInstancePublicPortsRequestPrivate(*other.d_func(), this))
@@ -64,7 +61,7 @@ PutInstancePublicPortsRequest::PutInstancePublicPortsRequest(const PutInstancePu
 }
 
 /*!
- * @brief  Constructs a new PutInstancePublicPortsRequest object.
+ * Constructs a PutInstancePublicPortsRequest object.
  */
 PutInstancePublicPortsRequest::PutInstancePublicPortsRequest()
     : LightsailRequest(new PutInstancePublicPortsRequestPrivate(LightsailRequest::PutInstancePublicPortsAction, this))
@@ -82,14 +79,9 @@ bool PutInstancePublicPortsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an PutInstancePublicPortsResponse object.
+ * Returns a PutInstancePublicPortsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An PutInstancePublicPortsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  LightsailClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * PutInstancePublicPortsRequest::response(QNetworkReply * const reply) const
 {
@@ -97,20 +89,17 @@ QtAws::Core::AwsAbstractResponse * PutInstancePublicPortsRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::Lightsail::PutInstancePublicPortsRequestPrivate
+ * \brief The PutInstancePublicPortsRequestPrivate class provides private implementation for PutInstancePublicPortsRequest.
+ * \internal
  *
- * @class  PutInstancePublicPortsRequestPrivate
- *
- * @brief  Private implementation for PutInstancePublicPortsRequest.
+ * \inmodule QtAwsLightsail
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new PutInstancePublicPortsRequestPrivate object.
- *
- * @param  action  Lightsail action being performed.
- * @param  q       Pointer to this object's public PutInstancePublicPortsRequest instance.
+ * Constructs a PutInstancePublicPortsRequestPrivate object for Lightsail \a action with,
+ * public implementation \a q.
  */
 PutInstancePublicPortsRequestPrivate::PutInstancePublicPortsRequestPrivate(
     const LightsailRequest::Action action, PutInstancePublicPortsRequest * const q)
@@ -120,15 +109,10 @@ PutInstancePublicPortsRequestPrivate::PutInstancePublicPortsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutInstancePublicPortsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the PutInstancePublicPortsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public PutInstancePublicPortsRequest instance.
  */
 PutInstancePublicPortsRequestPrivate::PutInstancePublicPortsRequestPrivate(
     const PutInstancePublicPortsRequestPrivate &other, PutInstancePublicPortsRequest * const q)

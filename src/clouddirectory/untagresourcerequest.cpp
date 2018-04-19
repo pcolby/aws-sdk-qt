@@ -27,10 +27,9 @@ namespace CloudDirectory {
 
 /*!
  * \class QtAws::CloudDirectory::UntagResourceRequest
- *
  * \brief The UntagResourceRequest class provides an interface for CloudDirectory UntagResource requests.
  *
- * \ingroup CloudDirectory
+ * \inmodule QtAwsCloudDirectory
  *
  *  <fullname>Amazon Cloud Directory</fullname>
  * 
@@ -44,9 +43,7 @@ namespace CloudDirectory {
  */
 
 /*!
- * @brief  Constructs a new UntagResourceRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UntagResourceRequest::UntagResourceRequest(const UntagResourceRequest &other)
     : CloudDirectoryRequest(new UntagResourceRequestPrivate(*other.d_func(), this))
@@ -55,7 +52,7 @@ UntagResourceRequest::UntagResourceRequest(const UntagResourceRequest &other)
 }
 
 /*!
- * @brief  Constructs a new UntagResourceRequest object.
+ * Constructs a UntagResourceRequest object.
  */
 UntagResourceRequest::UntagResourceRequest()
     : CloudDirectoryRequest(new UntagResourceRequestPrivate(CloudDirectoryRequest::UntagResourceAction, this))
@@ -73,14 +70,9 @@ bool UntagResourceRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UntagResourceResponse object.
+ * Returns a UntagResourceResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UntagResourceResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudDirectoryClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UntagResourceRequest::response(QNetworkReply * const reply) const
 {
@@ -88,20 +80,17 @@ QtAws::Core::AwsAbstractResponse * UntagResourceRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudDirectory::UntagResourceRequestPrivate
+ * \brief The UntagResourceRequestPrivate class provides private implementation for UntagResourceRequest.
+ * \internal
  *
- * @class  UntagResourceRequestPrivate
- *
- * @brief  Private implementation for UntagResourceRequest.
+ * \inmodule QtAwsCloudDirectory
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UntagResourceRequestPrivate object.
- *
- * @param  action  CloudDirectory action being performed.
- * @param  q       Pointer to this object's public UntagResourceRequest instance.
+ * Constructs a UntagResourceRequestPrivate object for CloudDirectory \a action with,
+ * public implementation \a q.
  */
 UntagResourceRequestPrivate::UntagResourceRequestPrivate(
     const CloudDirectoryRequest::Action action, UntagResourceRequest * const q)
@@ -111,15 +100,10 @@ UntagResourceRequestPrivate::UntagResourceRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UntagResourceRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UntagResourceRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UntagResourceRequest instance.
  */
 UntagResourceRequestPrivate::UntagResourceRequestPrivate(
     const UntagResourceRequestPrivate &other, UntagResourceRequest * const q)

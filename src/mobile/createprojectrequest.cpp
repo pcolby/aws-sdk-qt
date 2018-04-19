@@ -27,10 +27,9 @@ namespace Mobile {
 
 /*!
  * \class QtAws::Mobile::CreateProjectRequest
- *
  * \brief The CreateProjectRequest class provides an interface for Mobile CreateProject requests.
  *
- * \ingroup Mobile
+ * \inmodule QtAwsMobile
  *
  *  AWS Mobile Service provides mobile app and website developers with capabilities required to configure AWS resources and
  *  bootstrap their developer desktop projects with the necessary SDKs, constants, tools and samples to make use of those
@@ -40,9 +39,7 @@ namespace Mobile {
  */
 
 /*!
- * @brief  Constructs a new CreateProjectRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateProjectRequest::CreateProjectRequest(const CreateProjectRequest &other)
     : MobileRequest(new CreateProjectRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ CreateProjectRequest::CreateProjectRequest(const CreateProjectRequest &other)
 }
 
 /*!
- * @brief  Constructs a new CreateProjectRequest object.
+ * Constructs a CreateProjectRequest object.
  */
 CreateProjectRequest::CreateProjectRequest()
     : MobileRequest(new CreateProjectRequestPrivate(MobileRequest::CreateProjectAction, this))
@@ -69,14 +66,9 @@ bool CreateProjectRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateProjectResponse object.
+ * Returns a CreateProjectResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateProjectResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MobileClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateProjectRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * CreateProjectRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::Mobile::CreateProjectRequestPrivate
+ * \brief The CreateProjectRequestPrivate class provides private implementation for CreateProjectRequest.
+ * \internal
  *
- * @class  CreateProjectRequestPrivate
- *
- * @brief  Private implementation for CreateProjectRequest.
+ * \inmodule QtAwsMobile
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateProjectRequestPrivate object.
- *
- * @param  action  Mobile action being performed.
- * @param  q       Pointer to this object's public CreateProjectRequest instance.
+ * Constructs a CreateProjectRequestPrivate object for Mobile \a action with,
+ * public implementation \a q.
  */
 CreateProjectRequestPrivate::CreateProjectRequestPrivate(
     const MobileRequest::Action action, CreateProjectRequest * const q)
@@ -107,15 +96,10 @@ CreateProjectRequestPrivate::CreateProjectRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateProjectRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateProjectRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateProjectRequest instance.
  */
 CreateProjectRequestPrivate::CreateProjectRequestPrivate(
     const CreateProjectRequestPrivate &other, CreateProjectRequest * const q)

@@ -27,10 +27,9 @@ namespace CodeCommit {
 
 /*!
  * \class QtAws::CodeCommit::PostCommentReplyRequest
- *
  * \brief The PostCommentReplyRequest class provides an interface for CodeCommit PostCommentReply requests.
  *
- * \ingroup CodeCommit
+ * \inmodule QtAwsCodeCommit
  *
  *  <fullname>AWS CodeCommit</fullname>
  * 
@@ -227,9 +226,7 @@ namespace CodeCommit {
  */
 
 /*!
- * @brief  Constructs a new PostCommentReplyRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 PostCommentReplyRequest::PostCommentReplyRequest(const PostCommentReplyRequest &other)
     : CodeCommitRequest(new PostCommentReplyRequestPrivate(*other.d_func(), this))
@@ -238,7 +235,7 @@ PostCommentReplyRequest::PostCommentReplyRequest(const PostCommentReplyRequest &
 }
 
 /*!
- * @brief  Constructs a new PostCommentReplyRequest object.
+ * Constructs a PostCommentReplyRequest object.
  */
 PostCommentReplyRequest::PostCommentReplyRequest()
     : CodeCommitRequest(new PostCommentReplyRequestPrivate(CodeCommitRequest::PostCommentReplyAction, this))
@@ -256,14 +253,9 @@ bool PostCommentReplyRequest::isValid() const
 
 
 /*!
- * @brief  Construct an PostCommentReplyResponse object.
+ * Returns a PostCommentReplyResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An PostCommentReplyResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CodeCommitClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * PostCommentReplyRequest::response(QNetworkReply * const reply) const
 {
@@ -271,20 +263,17 @@ QtAws::Core::AwsAbstractResponse * PostCommentReplyRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::CodeCommit::PostCommentReplyRequestPrivate
+ * \brief The PostCommentReplyRequestPrivate class provides private implementation for PostCommentReplyRequest.
+ * \internal
  *
- * @class  PostCommentReplyRequestPrivate
- *
- * @brief  Private implementation for PostCommentReplyRequest.
+ * \inmodule QtAwsCodeCommit
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new PostCommentReplyRequestPrivate object.
- *
- * @param  action  CodeCommit action being performed.
- * @param  q       Pointer to this object's public PostCommentReplyRequest instance.
+ * Constructs a PostCommentReplyRequestPrivate object for CodeCommit \a action with,
+ * public implementation \a q.
  */
 PostCommentReplyRequestPrivate::PostCommentReplyRequestPrivate(
     const CodeCommitRequest::Action action, PostCommentReplyRequest * const q)
@@ -294,15 +283,10 @@ PostCommentReplyRequestPrivate::PostCommentReplyRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PostCommentReplyRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the PostCommentReplyRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public PostCommentReplyRequest instance.
  */
 PostCommentReplyRequestPrivate::PostCommentReplyRequestPrivate(
     const PostCommentReplyRequestPrivate &other, PostCommentReplyRequest * const q)

@@ -27,10 +27,9 @@ namespace Redshift {
 
 /*!
  * \class QtAws::Redshift::ModifyClusterSubnetGroupRequest
- *
  * \brief The ModifyClusterSubnetGroupRequest class provides an interface for Redshift ModifyClusterSubnetGroup requests.
  *
- * \ingroup Redshift
+ * \inmodule QtAwsRedshift
  *
  *  <fullname>Amazon Redshift</fullname>
  * 
@@ -67,9 +66,7 @@ namespace Redshift {
  */
 
 /*!
- * @brief  Constructs a new ModifyClusterSubnetGroupRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ModifyClusterSubnetGroupRequest::ModifyClusterSubnetGroupRequest(const ModifyClusterSubnetGroupRequest &other)
     : RedshiftRequest(new ModifyClusterSubnetGroupRequestPrivate(*other.d_func(), this))
@@ -78,7 +75,7 @@ ModifyClusterSubnetGroupRequest::ModifyClusterSubnetGroupRequest(const ModifyClu
 }
 
 /*!
- * @brief  Constructs a new ModifyClusterSubnetGroupRequest object.
+ * Constructs a ModifyClusterSubnetGroupRequest object.
  */
 ModifyClusterSubnetGroupRequest::ModifyClusterSubnetGroupRequest()
     : RedshiftRequest(new ModifyClusterSubnetGroupRequestPrivate(RedshiftRequest::ModifyClusterSubnetGroupAction, this))
@@ -96,14 +93,9 @@ bool ModifyClusterSubnetGroupRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ModifyClusterSubnetGroupResponse object.
+ * Returns a ModifyClusterSubnetGroupResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ModifyClusterSubnetGroupResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RedshiftClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ModifyClusterSubnetGroupRequest::response(QNetworkReply * const reply) const
 {
@@ -111,20 +103,17 @@ QtAws::Core::AwsAbstractResponse * ModifyClusterSubnetGroupRequest::response(QNe
 }
 
 /*!
- * @internal
+ * \class QtAws::Redshift::ModifyClusterSubnetGroupRequestPrivate
+ * \brief The ModifyClusterSubnetGroupRequestPrivate class provides private implementation for ModifyClusterSubnetGroupRequest.
+ * \internal
  *
- * @class  ModifyClusterSubnetGroupRequestPrivate
- *
- * @brief  Private implementation for ModifyClusterSubnetGroupRequest.
+ * \inmodule QtAwsRedshift
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ModifyClusterSubnetGroupRequestPrivate object.
- *
- * @param  action  Redshift action being performed.
- * @param  q       Pointer to this object's public ModifyClusterSubnetGroupRequest instance.
+ * Constructs a ModifyClusterSubnetGroupRequestPrivate object for Redshift \a action with,
+ * public implementation \a q.
  */
 ModifyClusterSubnetGroupRequestPrivate::ModifyClusterSubnetGroupRequestPrivate(
     const RedshiftRequest::Action action, ModifyClusterSubnetGroupRequest * const q)
@@ -134,15 +123,10 @@ ModifyClusterSubnetGroupRequestPrivate::ModifyClusterSubnetGroupRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ModifyClusterSubnetGroupRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ModifyClusterSubnetGroupRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ModifyClusterSubnetGroupRequest instance.
  */
 ModifyClusterSubnetGroupRequestPrivate::ModifyClusterSubnetGroupRequestPrivate(
     const ModifyClusterSubnetGroupRequestPrivate &other, ModifyClusterSubnetGroupRequest * const q)

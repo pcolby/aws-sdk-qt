@@ -27,10 +27,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::UpdateStreamRequest
- *
  * \brief The UpdateStreamRequest class provides an interface for IoT UpdateStream requests.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -48,9 +47,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new UpdateStreamRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateStreamRequest::UpdateStreamRequest(const UpdateStreamRequest &other)
     : IoTRequest(new UpdateStreamRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ UpdateStreamRequest::UpdateStreamRequest(const UpdateStreamRequest &other)
 }
 
 /*!
- * @brief  Constructs a new UpdateStreamRequest object.
+ * Constructs a UpdateStreamRequest object.
  */
 UpdateStreamRequest::UpdateStreamRequest()
     : IoTRequest(new UpdateStreamRequestPrivate(IoTRequest::UpdateStreamAction, this))
@@ -77,14 +74,9 @@ bool UpdateStreamRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateStreamResponse object.
+ * Returns a UpdateStreamResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateStreamResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IoTClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateStreamRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * UpdateStreamRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::IoT::UpdateStreamRequestPrivate
+ * \brief The UpdateStreamRequestPrivate class provides private implementation for UpdateStreamRequest.
+ * \internal
  *
- * @class  UpdateStreamRequestPrivate
- *
- * @brief  Private implementation for UpdateStreamRequest.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateStreamRequestPrivate object.
- *
- * @param  action  IoT action being performed.
- * @param  q       Pointer to this object's public UpdateStreamRequest instance.
+ * Constructs a UpdateStreamRequestPrivate object for IoT \a action with,
+ * public implementation \a q.
  */
 UpdateStreamRequestPrivate::UpdateStreamRequestPrivate(
     const IoTRequest::Action action, UpdateStreamRequest * const q)
@@ -115,15 +104,10 @@ UpdateStreamRequestPrivate::UpdateStreamRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateStreamRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateStreamRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateStreamRequest instance.
  */
 UpdateStreamRequestPrivate::UpdateStreamRequestPrivate(
     const UpdateStreamRequestPrivate &other, UpdateStreamRequest * const q)

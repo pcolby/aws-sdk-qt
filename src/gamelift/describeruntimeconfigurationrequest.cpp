@@ -27,10 +27,9 @@ namespace GameLift {
 
 /*!
  * \class QtAws::GameLift::DescribeRuntimeConfigurationRequest
- *
  * \brief The DescribeRuntimeConfigurationRequest class provides an interface for GameLift DescribeRuntimeConfiguration requests.
  *
- * \ingroup GameLift
+ * \inmodule QtAwsGameLift
  *
  *  <fullname>Amazon GameLift Service</fullname>
  * 
@@ -473,9 +472,7 @@ namespace GameLift {
  */
 
 /*!
- * @brief  Constructs a new DescribeRuntimeConfigurationRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeRuntimeConfigurationRequest::DescribeRuntimeConfigurationRequest(const DescribeRuntimeConfigurationRequest &other)
     : GameLiftRequest(new DescribeRuntimeConfigurationRequestPrivate(*other.d_func(), this))
@@ -484,7 +481,7 @@ DescribeRuntimeConfigurationRequest::DescribeRuntimeConfigurationRequest(const D
 }
 
 /*!
- * @brief  Constructs a new DescribeRuntimeConfigurationRequest object.
+ * Constructs a DescribeRuntimeConfigurationRequest object.
  */
 DescribeRuntimeConfigurationRequest::DescribeRuntimeConfigurationRequest()
     : GameLiftRequest(new DescribeRuntimeConfigurationRequestPrivate(GameLiftRequest::DescribeRuntimeConfigurationAction, this))
@@ -502,14 +499,9 @@ bool DescribeRuntimeConfigurationRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeRuntimeConfigurationResponse object.
+ * Returns a DescribeRuntimeConfigurationResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeRuntimeConfigurationResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GameLiftClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeRuntimeConfigurationRequest::response(QNetworkReply * const reply) const
 {
@@ -517,20 +509,17 @@ QtAws::Core::AwsAbstractResponse * DescribeRuntimeConfigurationRequest::response
 }
 
 /*!
- * @internal
+ * \class QtAws::GameLift::DescribeRuntimeConfigurationRequestPrivate
+ * \brief The DescribeRuntimeConfigurationRequestPrivate class provides private implementation for DescribeRuntimeConfigurationRequest.
+ * \internal
  *
- * @class  DescribeRuntimeConfigurationRequestPrivate
- *
- * @brief  Private implementation for DescribeRuntimeConfigurationRequest.
+ * \inmodule QtAwsGameLift
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeRuntimeConfigurationRequestPrivate object.
- *
- * @param  action  GameLift action being performed.
- * @param  q       Pointer to this object's public DescribeRuntimeConfigurationRequest instance.
+ * Constructs a DescribeRuntimeConfigurationRequestPrivate object for GameLift \a action with,
+ * public implementation \a q.
  */
 DescribeRuntimeConfigurationRequestPrivate::DescribeRuntimeConfigurationRequestPrivate(
     const GameLiftRequest::Action action, DescribeRuntimeConfigurationRequest * const q)
@@ -540,15 +529,10 @@ DescribeRuntimeConfigurationRequestPrivate::DescribeRuntimeConfigurationRequestP
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeRuntimeConfigurationRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeRuntimeConfigurationRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeRuntimeConfigurationRequest instance.
  */
 DescribeRuntimeConfigurationRequestPrivate::DescribeRuntimeConfigurationRequestPrivate(
     const DescribeRuntimeConfigurationRequestPrivate &other, DescribeRuntimeConfigurationRequest * const q)

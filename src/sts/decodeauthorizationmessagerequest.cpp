@@ -27,10 +27,9 @@ namespace STS {
 
 /*!
  * \class QtAws::STS::DecodeAuthorizationMessageRequest
- *
  * \brief The DecodeAuthorizationMessageRequest class provides an interface for STS DecodeAuthorizationMessage requests.
  *
- * \ingroup STS
+ * \inmodule QtAwsSTS
  *
  *  <fullname>AWS Security Token Service</fullname>
  * 
@@ -95,9 +94,7 @@ namespace STS {
  */
 
 /*!
- * @brief  Constructs a new DecodeAuthorizationMessageRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DecodeAuthorizationMessageRequest::DecodeAuthorizationMessageRequest(const DecodeAuthorizationMessageRequest &other)
     : STSRequest(new DecodeAuthorizationMessageRequestPrivate(*other.d_func(), this))
@@ -106,7 +103,7 @@ DecodeAuthorizationMessageRequest::DecodeAuthorizationMessageRequest(const Decod
 }
 
 /*!
- * @brief  Constructs a new DecodeAuthorizationMessageRequest object.
+ * Constructs a DecodeAuthorizationMessageRequest object.
  */
 DecodeAuthorizationMessageRequest::DecodeAuthorizationMessageRequest()
     : STSRequest(new DecodeAuthorizationMessageRequestPrivate(STSRequest::DecodeAuthorizationMessageAction, this))
@@ -124,14 +121,9 @@ bool DecodeAuthorizationMessageRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DecodeAuthorizationMessageResponse object.
+ * Returns a DecodeAuthorizationMessageResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DecodeAuthorizationMessageResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  STSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DecodeAuthorizationMessageRequest::response(QNetworkReply * const reply) const
 {
@@ -139,20 +131,17 @@ QtAws::Core::AwsAbstractResponse * DecodeAuthorizationMessageRequest::response(Q
 }
 
 /*!
- * @internal
+ * \class QtAws::STS::DecodeAuthorizationMessageRequestPrivate
+ * \brief The DecodeAuthorizationMessageRequestPrivate class provides private implementation for DecodeAuthorizationMessageRequest.
+ * \internal
  *
- * @class  DecodeAuthorizationMessageRequestPrivate
- *
- * @brief  Private implementation for DecodeAuthorizationMessageRequest.
+ * \inmodule QtAwsSTS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DecodeAuthorizationMessageRequestPrivate object.
- *
- * @param  action  STS action being performed.
- * @param  q       Pointer to this object's public DecodeAuthorizationMessageRequest instance.
+ * Constructs a DecodeAuthorizationMessageRequestPrivate object for STS \a action with,
+ * public implementation \a q.
  */
 DecodeAuthorizationMessageRequestPrivate::DecodeAuthorizationMessageRequestPrivate(
     const STSRequest::Action action, DecodeAuthorizationMessageRequest * const q)
@@ -162,15 +151,10 @@ DecodeAuthorizationMessageRequestPrivate::DecodeAuthorizationMessageRequestPriva
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DecodeAuthorizationMessageRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DecodeAuthorizationMessageRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DecodeAuthorizationMessageRequest instance.
  */
 DecodeAuthorizationMessageRequestPrivate::DecodeAuthorizationMessageRequestPrivate(
     const DecodeAuthorizationMessageRequestPrivate &other, DecodeAuthorizationMessageRequest * const q)

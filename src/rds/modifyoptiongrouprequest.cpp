@@ -27,10 +27,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::ModifyOptionGroupRequest
- *
  * \brief The ModifyOptionGroupRequest class provides an interface for RDS ModifyOptionGroup requests.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -101,9 +100,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new ModifyOptionGroupRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ModifyOptionGroupRequest::ModifyOptionGroupRequest(const ModifyOptionGroupRequest &other)
     : RDSRequest(new ModifyOptionGroupRequestPrivate(*other.d_func(), this))
@@ -112,7 +109,7 @@ ModifyOptionGroupRequest::ModifyOptionGroupRequest(const ModifyOptionGroupReques
 }
 
 /*!
- * @brief  Constructs a new ModifyOptionGroupRequest object.
+ * Constructs a ModifyOptionGroupRequest object.
  */
 ModifyOptionGroupRequest::ModifyOptionGroupRequest()
     : RDSRequest(new ModifyOptionGroupRequestPrivate(RDSRequest::ModifyOptionGroupAction, this))
@@ -130,14 +127,9 @@ bool ModifyOptionGroupRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ModifyOptionGroupResponse object.
+ * Returns a ModifyOptionGroupResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ModifyOptionGroupResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RDSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ModifyOptionGroupRequest::response(QNetworkReply * const reply) const
 {
@@ -145,20 +137,17 @@ QtAws::Core::AwsAbstractResponse * ModifyOptionGroupRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::RDS::ModifyOptionGroupRequestPrivate
+ * \brief The ModifyOptionGroupRequestPrivate class provides private implementation for ModifyOptionGroupRequest.
+ * \internal
  *
- * @class  ModifyOptionGroupRequestPrivate
- *
- * @brief  Private implementation for ModifyOptionGroupRequest.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ModifyOptionGroupRequestPrivate object.
- *
- * @param  action  RDS action being performed.
- * @param  q       Pointer to this object's public ModifyOptionGroupRequest instance.
+ * Constructs a ModifyOptionGroupRequestPrivate object for RDS \a action with,
+ * public implementation \a q.
  */
 ModifyOptionGroupRequestPrivate::ModifyOptionGroupRequestPrivate(
     const RDSRequest::Action action, ModifyOptionGroupRequest * const q)
@@ -168,15 +157,10 @@ ModifyOptionGroupRequestPrivate::ModifyOptionGroupRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ModifyOptionGroupRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ModifyOptionGroupRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ModifyOptionGroupRequest instance.
  */
 ModifyOptionGroupRequestPrivate::ModifyOptionGroupRequestPrivate(
     const ModifyOptionGroupRequestPrivate &other, ModifyOptionGroupRequest * const q)

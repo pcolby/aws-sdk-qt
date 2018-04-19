@@ -27,10 +27,9 @@ namespace SWF {
 
 /*!
  * \class QtAws::SWF::DescribeDomainRequest
- *
  * \brief The DescribeDomainRequest class provides an interface for SWF DescribeDomain requests.
  *
- * \ingroup SWF
+ * \inmodule QtAwsSWF
  *
  *  <fullname>Amazon Simple Workflow Service</fullname>
  * 
@@ -53,9 +52,7 @@ namespace SWF {
  */
 
 /*!
- * @brief  Constructs a new DescribeDomainRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeDomainRequest::DescribeDomainRequest(const DescribeDomainRequest &other)
     : SWFRequest(new DescribeDomainRequestPrivate(*other.d_func(), this))
@@ -64,7 +61,7 @@ DescribeDomainRequest::DescribeDomainRequest(const DescribeDomainRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DescribeDomainRequest object.
+ * Constructs a DescribeDomainRequest object.
  */
 DescribeDomainRequest::DescribeDomainRequest()
     : SWFRequest(new DescribeDomainRequestPrivate(SWFRequest::DescribeDomainAction, this))
@@ -82,14 +79,9 @@ bool DescribeDomainRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeDomainResponse object.
+ * Returns a DescribeDomainResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeDomainResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SWFClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeDomainRequest::response(QNetworkReply * const reply) const
 {
@@ -97,20 +89,17 @@ QtAws::Core::AwsAbstractResponse * DescribeDomainRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::SWF::DescribeDomainRequestPrivate
+ * \brief The DescribeDomainRequestPrivate class provides private implementation for DescribeDomainRequest.
+ * \internal
  *
- * @class  DescribeDomainRequestPrivate
- *
- * @brief  Private implementation for DescribeDomainRequest.
+ * \inmodule QtAwsSWF
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeDomainRequestPrivate object.
- *
- * @param  action  SWF action being performed.
- * @param  q       Pointer to this object's public DescribeDomainRequest instance.
+ * Constructs a DescribeDomainRequestPrivate object for SWF \a action with,
+ * public implementation \a q.
  */
 DescribeDomainRequestPrivate::DescribeDomainRequestPrivate(
     const SWFRequest::Action action, DescribeDomainRequest * const q)
@@ -120,15 +109,10 @@ DescribeDomainRequestPrivate::DescribeDomainRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeDomainRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeDomainRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeDomainRequest instance.
  */
 DescribeDomainRequestPrivate::DescribeDomainRequestPrivate(
     const DescribeDomainRequestPrivate &other, DescribeDomainRequest * const q)

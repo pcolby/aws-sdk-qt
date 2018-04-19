@@ -27,10 +27,9 @@ namespace DeviceFarm {
 
 /*!
  * \class QtAws::DeviceFarm::CreateDevicePoolRequest
- *
  * \brief The CreateDevicePoolRequest class provides an interface for DeviceFarm CreateDevicePool requests.
  *
- * \ingroup DeviceFarm
+ * \inmodule QtAwsDeviceFarm
  *
  *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
  *  phones, tablets, and other devices in the
@@ -39,9 +38,7 @@ namespace DeviceFarm {
  */
 
 /*!
- * @brief  Constructs a new CreateDevicePoolRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateDevicePoolRequest::CreateDevicePoolRequest(const CreateDevicePoolRequest &other)
     : DeviceFarmRequest(new CreateDevicePoolRequestPrivate(*other.d_func(), this))
@@ -50,7 +47,7 @@ CreateDevicePoolRequest::CreateDevicePoolRequest(const CreateDevicePoolRequest &
 }
 
 /*!
- * @brief  Constructs a new CreateDevicePoolRequest object.
+ * Constructs a CreateDevicePoolRequest object.
  */
 CreateDevicePoolRequest::CreateDevicePoolRequest()
     : DeviceFarmRequest(new CreateDevicePoolRequestPrivate(DeviceFarmRequest::CreateDevicePoolAction, this))
@@ -68,14 +65,9 @@ bool CreateDevicePoolRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateDevicePoolResponse object.
+ * Returns a CreateDevicePoolResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateDevicePoolResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DeviceFarmClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateDevicePoolRequest::response(QNetworkReply * const reply) const
 {
@@ -83,20 +75,17 @@ QtAws::Core::AwsAbstractResponse * CreateDevicePoolRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::DeviceFarm::CreateDevicePoolRequestPrivate
+ * \brief The CreateDevicePoolRequestPrivate class provides private implementation for CreateDevicePoolRequest.
+ * \internal
  *
- * @class  CreateDevicePoolRequestPrivate
- *
- * @brief  Private implementation for CreateDevicePoolRequest.
+ * \inmodule QtAwsDeviceFarm
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateDevicePoolRequestPrivate object.
- *
- * @param  action  DeviceFarm action being performed.
- * @param  q       Pointer to this object's public CreateDevicePoolRequest instance.
+ * Constructs a CreateDevicePoolRequestPrivate object for DeviceFarm \a action with,
+ * public implementation \a q.
  */
 CreateDevicePoolRequestPrivate::CreateDevicePoolRequestPrivate(
     const DeviceFarmRequest::Action action, CreateDevicePoolRequest * const q)
@@ -106,15 +95,10 @@ CreateDevicePoolRequestPrivate::CreateDevicePoolRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateDevicePoolRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateDevicePoolRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateDevicePoolRequest instance.
  */
 CreateDevicePoolRequestPrivate::CreateDevicePoolRequestPrivate(
     const CreateDevicePoolRequestPrivate &other, CreateDevicePoolRequest * const q)

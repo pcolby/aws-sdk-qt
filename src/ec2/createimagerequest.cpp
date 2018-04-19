@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::CreateImageRequest
- *
  * \brief The CreateImageRequest class provides an interface for EC2 CreateImage requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new CreateImageRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateImageRequest::CreateImageRequest(const CreateImageRequest &other)
     : EC2Request(new CreateImageRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ CreateImageRequest::CreateImageRequest(const CreateImageRequest &other)
 }
 
 /*!
- * @brief  Constructs a new CreateImageRequest object.
+ * Constructs a CreateImageRequest object.
  */
 CreateImageRequest::CreateImageRequest()
     : EC2Request(new CreateImageRequestPrivate(EC2Request::CreateImageAction, this))
@@ -70,14 +67,9 @@ bool CreateImageRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateImageResponse object.
+ * Returns a CreateImageResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateImageResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateImageRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * CreateImageRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::CreateImageRequestPrivate
+ * \brief The CreateImageRequestPrivate class provides private implementation for CreateImageRequest.
+ * \internal
  *
- * @class  CreateImageRequestPrivate
- *
- * @brief  Private implementation for CreateImageRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateImageRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public CreateImageRequest instance.
+ * Constructs a CreateImageRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 CreateImageRequestPrivate::CreateImageRequestPrivate(
     const EC2Request::Action action, CreateImageRequest * const q)
@@ -108,15 +97,10 @@ CreateImageRequestPrivate::CreateImageRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateImageRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateImageRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateImageRequest instance.
  */
 CreateImageRequestPrivate::CreateImageRequestPrivate(
     const CreateImageRequestPrivate &other, CreateImageRequest * const q)

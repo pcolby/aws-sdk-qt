@@ -27,10 +27,9 @@ namespace CloudDirectory {
 
 /*!
  * \class QtAws::CloudDirectory::BatchWriteRequest
- *
  * \brief The BatchWriteRequest class provides an interface for CloudDirectory BatchWrite requests.
  *
- * \ingroup CloudDirectory
+ * \inmodule QtAwsCloudDirectory
  *
  *  <fullname>Amazon Cloud Directory</fullname>
  * 
@@ -44,9 +43,7 @@ namespace CloudDirectory {
  */
 
 /*!
- * @brief  Constructs a new BatchWriteRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 BatchWriteRequest::BatchWriteRequest(const BatchWriteRequest &other)
     : CloudDirectoryRequest(new BatchWriteRequestPrivate(*other.d_func(), this))
@@ -55,7 +52,7 @@ BatchWriteRequest::BatchWriteRequest(const BatchWriteRequest &other)
 }
 
 /*!
- * @brief  Constructs a new BatchWriteRequest object.
+ * Constructs a BatchWriteRequest object.
  */
 BatchWriteRequest::BatchWriteRequest()
     : CloudDirectoryRequest(new BatchWriteRequestPrivate(CloudDirectoryRequest::BatchWriteAction, this))
@@ -73,14 +70,9 @@ bool BatchWriteRequest::isValid() const
 
 
 /*!
- * @brief  Construct an BatchWriteResponse object.
+ * Returns a BatchWriteResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An BatchWriteResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudDirectoryClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * BatchWriteRequest::response(QNetworkReply * const reply) const
 {
@@ -88,20 +80,17 @@ QtAws::Core::AwsAbstractResponse * BatchWriteRequest::response(QNetworkReply * c
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudDirectory::BatchWriteRequestPrivate
+ * \brief The BatchWriteRequestPrivate class provides private implementation for BatchWriteRequest.
+ * \internal
  *
- * @class  BatchWriteRequestPrivate
- *
- * @brief  Private implementation for BatchWriteRequest.
+ * \inmodule QtAwsCloudDirectory
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new BatchWriteRequestPrivate object.
- *
- * @param  action  CloudDirectory action being performed.
- * @param  q       Pointer to this object's public BatchWriteRequest instance.
+ * Constructs a BatchWriteRequestPrivate object for CloudDirectory \a action with,
+ * public implementation \a q.
  */
 BatchWriteRequestPrivate::BatchWriteRequestPrivate(
     const CloudDirectoryRequest::Action action, BatchWriteRequest * const q)
@@ -111,15 +100,10 @@ BatchWriteRequestPrivate::BatchWriteRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new BatchWriteRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the BatchWriteRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public BatchWriteRequest instance.
  */
 BatchWriteRequestPrivate::BatchWriteRequestPrivate(
     const BatchWriteRequestPrivate &other, BatchWriteRequest * const q)

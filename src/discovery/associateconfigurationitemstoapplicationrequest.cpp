@@ -27,10 +27,9 @@ namespace ApplicationDiscoveryService {
 
 /*!
  * \class QtAws::ApplicationDiscoveryService::AssociateConfigurationItemsToApplicationRequest
- *
  * \brief The AssociateConfigurationItemsToApplicationRequest class provides an interface for ApplicationDiscoveryService AssociateConfigurationItemsToApplication requests.
  *
- * \ingroup ApplicationDiscoveryService
+ * \inmodule QtAwsApplicationDiscoveryService
  *
  *  <fullname>AWS Application Discovery Service</fullname>
  * 
@@ -101,9 +100,7 @@ namespace ApplicationDiscoveryService {
  */
 
 /*!
- * @brief  Constructs a new AssociateConfigurationItemsToApplicationRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AssociateConfigurationItemsToApplicationRequest::AssociateConfigurationItemsToApplicationRequest(const AssociateConfigurationItemsToApplicationRequest &other)
     : ApplicationDiscoveryServiceRequest(new AssociateConfigurationItemsToApplicationRequestPrivate(*other.d_func(), this))
@@ -112,7 +109,7 @@ AssociateConfigurationItemsToApplicationRequest::AssociateConfigurationItemsToAp
 }
 
 /*!
- * @brief  Constructs a new AssociateConfigurationItemsToApplicationRequest object.
+ * Constructs a AssociateConfigurationItemsToApplicationRequest object.
  */
 AssociateConfigurationItemsToApplicationRequest::AssociateConfigurationItemsToApplicationRequest()
     : ApplicationDiscoveryServiceRequest(new AssociateConfigurationItemsToApplicationRequestPrivate(ApplicationDiscoveryServiceRequest::AssociateConfigurationItemsToApplicationAction, this))
@@ -130,14 +127,9 @@ bool AssociateConfigurationItemsToApplicationRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AssociateConfigurationItemsToApplicationResponse object.
+ * Returns a AssociateConfigurationItemsToApplicationResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AssociateConfigurationItemsToApplicationResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ApplicationDiscoveryServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AssociateConfigurationItemsToApplicationRequest::response(QNetworkReply * const reply) const
 {
@@ -145,20 +137,17 @@ QtAws::Core::AwsAbstractResponse * AssociateConfigurationItemsToApplicationReque
 }
 
 /*!
- * @internal
+ * \class QtAws::ApplicationDiscoveryService::AssociateConfigurationItemsToApplicationRequestPrivate
+ * \brief The AssociateConfigurationItemsToApplicationRequestPrivate class provides private implementation for AssociateConfigurationItemsToApplicationRequest.
+ * \internal
  *
- * @class  AssociateConfigurationItemsToApplicationRequestPrivate
- *
- * @brief  Private implementation for AssociateConfigurationItemsToApplicationRequest.
+ * \inmodule QtAwsApplicationDiscoveryService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AssociateConfigurationItemsToApplicationRequestPrivate object.
- *
- * @param  action  ApplicationDiscoveryService action being performed.
- * @param  q       Pointer to this object's public AssociateConfigurationItemsToApplicationRequest instance.
+ * Constructs a AssociateConfigurationItemsToApplicationRequestPrivate object for ApplicationDiscoveryService \a action with,
+ * public implementation \a q.
  */
 AssociateConfigurationItemsToApplicationRequestPrivate::AssociateConfigurationItemsToApplicationRequestPrivate(
     const ApplicationDiscoveryServiceRequest::Action action, AssociateConfigurationItemsToApplicationRequest * const q)
@@ -168,15 +157,10 @@ AssociateConfigurationItemsToApplicationRequestPrivate::AssociateConfigurationIt
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AssociateConfigurationItemsToApplicationRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AssociateConfigurationItemsToApplicationRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AssociateConfigurationItemsToApplicationRequest instance.
  */
 AssociateConfigurationItemsToApplicationRequestPrivate::AssociateConfigurationItemsToApplicationRequestPrivate(
     const AssociateConfigurationItemsToApplicationRequestPrivate &other, AssociateConfigurationItemsToApplicationRequest * const q)

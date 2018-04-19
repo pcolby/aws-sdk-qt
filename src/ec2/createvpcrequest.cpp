@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::CreateVpcRequest
- *
  * \brief The CreateVpcRequest class provides an interface for EC2 CreateVpc requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new CreateVpcRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateVpcRequest::CreateVpcRequest(const CreateVpcRequest &other)
     : EC2Request(new CreateVpcRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ CreateVpcRequest::CreateVpcRequest(const CreateVpcRequest &other)
 }
 
 /*!
- * @brief  Constructs a new CreateVpcRequest object.
+ * Constructs a CreateVpcRequest object.
  */
 CreateVpcRequest::CreateVpcRequest()
     : EC2Request(new CreateVpcRequestPrivate(EC2Request::CreateVpcAction, this))
@@ -70,14 +67,9 @@ bool CreateVpcRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateVpcResponse object.
+ * Returns a CreateVpcResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateVpcResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateVpcRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * CreateVpcRequest::response(QNetworkReply * co
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::CreateVpcRequestPrivate
+ * \brief The CreateVpcRequestPrivate class provides private implementation for CreateVpcRequest.
+ * \internal
  *
- * @class  CreateVpcRequestPrivate
- *
- * @brief  Private implementation for CreateVpcRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateVpcRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public CreateVpcRequest instance.
+ * Constructs a CreateVpcRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 CreateVpcRequestPrivate::CreateVpcRequestPrivate(
     const EC2Request::Action action, CreateVpcRequest * const q)
@@ -108,15 +97,10 @@ CreateVpcRequestPrivate::CreateVpcRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateVpcRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateVpcRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateVpcRequest instance.
  */
 CreateVpcRequestPrivate::CreateVpcRequestPrivate(
     const CreateVpcRequestPrivate &other, CreateVpcRequest * const q)

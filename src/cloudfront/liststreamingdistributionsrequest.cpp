@@ -27,10 +27,9 @@ namespace CloudFront {
 
 /*!
  * \class QtAws::CloudFront::ListStreamingDistributionsRequest
- *
  * \brief The ListStreamingDistributionsRequest class provides an interface for CloudFront ListStreamingDistributions requests.
  *
- * \ingroup CloudFront
+ * \inmodule QtAwsCloudFront
  *
  *  <fullname>Amazon CloudFront</fullname>
  * 
@@ -42,9 +41,7 @@ namespace CloudFront {
  */
 
 /*!
- * @brief  Constructs a new ListStreamingDistributionsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListStreamingDistributionsRequest::ListStreamingDistributionsRequest(const ListStreamingDistributionsRequest &other)
     : CloudFrontRequest(new ListStreamingDistributionsRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ ListStreamingDistributionsRequest::ListStreamingDistributionsRequest(const ListS
 }
 
 /*!
- * @brief  Constructs a new ListStreamingDistributionsRequest object.
+ * Constructs a ListStreamingDistributionsRequest object.
  */
 ListStreamingDistributionsRequest::ListStreamingDistributionsRequest()
     : CloudFrontRequest(new ListStreamingDistributionsRequestPrivate(CloudFrontRequest::ListStreamingDistributionsAction, this))
@@ -71,14 +68,9 @@ bool ListStreamingDistributionsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListStreamingDistributionsResponse object.
+ * Returns a ListStreamingDistributionsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListStreamingDistributionsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudFrontClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListStreamingDistributionsRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * ListStreamingDistributionsRequest::response(Q
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudFront::ListStreamingDistributionsRequestPrivate
+ * \brief The ListStreamingDistributionsRequestPrivate class provides private implementation for ListStreamingDistributionsRequest.
+ * \internal
  *
- * @class  ListStreamingDistributionsRequestPrivate
- *
- * @brief  Private implementation for ListStreamingDistributionsRequest.
+ * \inmodule QtAwsCloudFront
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListStreamingDistributionsRequestPrivate object.
- *
- * @param  action  CloudFront action being performed.
- * @param  q       Pointer to this object's public ListStreamingDistributionsRequest instance.
+ * Constructs a ListStreamingDistributionsRequestPrivate object for CloudFront \a action with,
+ * public implementation \a q.
  */
 ListStreamingDistributionsRequestPrivate::ListStreamingDistributionsRequestPrivate(
     const CloudFrontRequest::Action action, ListStreamingDistributionsRequest * const q)
@@ -109,15 +98,10 @@ ListStreamingDistributionsRequestPrivate::ListStreamingDistributionsRequestPriva
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListStreamingDistributionsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListStreamingDistributionsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListStreamingDistributionsRequest instance.
  */
 ListStreamingDistributionsRequestPrivate::ListStreamingDistributionsRequestPrivate(
     const ListStreamingDistributionsRequestPrivate &other, ListStreamingDistributionsRequest * const q)

@@ -27,10 +27,9 @@ namespace Comprehend {
 
 /*!
  * \class QtAws::Comprehend::DetectDominantLanguageRequest
- *
  * \brief The DetectDominantLanguageRequest class provides an interface for Comprehend DetectDominantLanguage requests.
  *
- * \ingroup Comprehend
+ * \inmodule QtAwsComprehend
  *
  *  Amazon Comprehend is an AWS service for gaining insight into the content of documents. Use these actions to determine
  *  the topics contained in your documents, the topics they discuss, the predominant sentiment expressed in them, the
@@ -40,9 +39,7 @@ namespace Comprehend {
  */
 
 /*!
- * @brief  Constructs a new DetectDominantLanguageRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DetectDominantLanguageRequest::DetectDominantLanguageRequest(const DetectDominantLanguageRequest &other)
     : ComprehendRequest(new DetectDominantLanguageRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ DetectDominantLanguageRequest::DetectDominantLanguageRequest(const DetectDominan
 }
 
 /*!
- * @brief  Constructs a new DetectDominantLanguageRequest object.
+ * Constructs a DetectDominantLanguageRequest object.
  */
 DetectDominantLanguageRequest::DetectDominantLanguageRequest()
     : ComprehendRequest(new DetectDominantLanguageRequestPrivate(ComprehendRequest::DetectDominantLanguageAction, this))
@@ -69,14 +66,9 @@ bool DetectDominantLanguageRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DetectDominantLanguageResponse object.
+ * Returns a DetectDominantLanguageResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DetectDominantLanguageResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ComprehendClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DetectDominantLanguageRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * DetectDominantLanguageRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::Comprehend::DetectDominantLanguageRequestPrivate
+ * \brief The DetectDominantLanguageRequestPrivate class provides private implementation for DetectDominantLanguageRequest.
+ * \internal
  *
- * @class  DetectDominantLanguageRequestPrivate
- *
- * @brief  Private implementation for DetectDominantLanguageRequest.
+ * \inmodule QtAwsComprehend
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DetectDominantLanguageRequestPrivate object.
- *
- * @param  action  Comprehend action being performed.
- * @param  q       Pointer to this object's public DetectDominantLanguageRequest instance.
+ * Constructs a DetectDominantLanguageRequestPrivate object for Comprehend \a action with,
+ * public implementation \a q.
  */
 DetectDominantLanguageRequestPrivate::DetectDominantLanguageRequestPrivate(
     const ComprehendRequest::Action action, DetectDominantLanguageRequest * const q)
@@ -107,15 +96,10 @@ DetectDominantLanguageRequestPrivate::DetectDominantLanguageRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DetectDominantLanguageRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DetectDominantLanguageRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DetectDominantLanguageRequest instance.
  */
 DetectDominantLanguageRequestPrivate::DetectDominantLanguageRequestPrivate(
     const DetectDominantLanguageRequestPrivate &other, DetectDominantLanguageRequest * const q)

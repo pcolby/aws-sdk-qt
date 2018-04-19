@@ -27,10 +27,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::RegisterThingRequest
- *
  * \brief The RegisterThingRequest class provides an interface for IoT RegisterThing requests.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -48,9 +47,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new RegisterThingRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 RegisterThingRequest::RegisterThingRequest(const RegisterThingRequest &other)
     : IoTRequest(new RegisterThingRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ RegisterThingRequest::RegisterThingRequest(const RegisterThingRequest &other)
 }
 
 /*!
- * @brief  Constructs a new RegisterThingRequest object.
+ * Constructs a RegisterThingRequest object.
  */
 RegisterThingRequest::RegisterThingRequest()
     : IoTRequest(new RegisterThingRequestPrivate(IoTRequest::RegisterThingAction, this))
@@ -77,14 +74,9 @@ bool RegisterThingRequest::isValid() const
 
 
 /*!
- * @brief  Construct an RegisterThingResponse object.
+ * Returns a RegisterThingResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An RegisterThingResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IoTClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * RegisterThingRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * RegisterThingRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::IoT::RegisterThingRequestPrivate
+ * \brief The RegisterThingRequestPrivate class provides private implementation for RegisterThingRequest.
+ * \internal
  *
- * @class  RegisterThingRequestPrivate
- *
- * @brief  Private implementation for RegisterThingRequest.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new RegisterThingRequestPrivate object.
- *
- * @param  action  IoT action being performed.
- * @param  q       Pointer to this object's public RegisterThingRequest instance.
+ * Constructs a RegisterThingRequestPrivate object for IoT \a action with,
+ * public implementation \a q.
  */
 RegisterThingRequestPrivate::RegisterThingRequestPrivate(
     const IoTRequest::Action action, RegisterThingRequest * const q)
@@ -115,15 +104,10 @@ RegisterThingRequestPrivate::RegisterThingRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RegisterThingRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the RegisterThingRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public RegisterThingRequest instance.
  */
 RegisterThingRequestPrivate::RegisterThingRequestPrivate(
     const RegisterThingRequestPrivate &other, RegisterThingRequest * const q)

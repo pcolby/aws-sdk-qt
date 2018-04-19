@@ -27,10 +27,9 @@ namespace Support {
 
 /*!
  * \class QtAws::Support::DescribeTrustedAdvisorCheckRefreshStatusesRequest
- *
  * \brief The DescribeTrustedAdvisorCheckRefreshStatusesRequest class provides an interface for Support DescribeTrustedAdvisorCheckRefreshStatuses requests.
  *
- * \ingroup Support
+ * \inmodule QtAwsSupport
  *
  *  <fullname>AWS Support</fullname>
  * 
@@ -105,9 +104,7 @@ namespace Support {
  */
 
 /*!
- * @brief  Constructs a new DescribeTrustedAdvisorCheckRefreshStatusesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeTrustedAdvisorCheckRefreshStatusesRequest::DescribeTrustedAdvisorCheckRefreshStatusesRequest(const DescribeTrustedAdvisorCheckRefreshStatusesRequest &other)
     : SupportRequest(new DescribeTrustedAdvisorCheckRefreshStatusesRequestPrivate(*other.d_func(), this))
@@ -116,7 +113,7 @@ DescribeTrustedAdvisorCheckRefreshStatusesRequest::DescribeTrustedAdvisorCheckRe
 }
 
 /*!
- * @brief  Constructs a new DescribeTrustedAdvisorCheckRefreshStatusesRequest object.
+ * Constructs a DescribeTrustedAdvisorCheckRefreshStatusesRequest object.
  */
 DescribeTrustedAdvisorCheckRefreshStatusesRequest::DescribeTrustedAdvisorCheckRefreshStatusesRequest()
     : SupportRequest(new DescribeTrustedAdvisorCheckRefreshStatusesRequestPrivate(SupportRequest::DescribeTrustedAdvisorCheckRefreshStatusesAction, this))
@@ -134,14 +131,9 @@ bool DescribeTrustedAdvisorCheckRefreshStatusesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeTrustedAdvisorCheckRefreshStatusesResponse object.
+ * Returns a DescribeTrustedAdvisorCheckRefreshStatusesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeTrustedAdvisorCheckRefreshStatusesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SupportClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeTrustedAdvisorCheckRefreshStatusesRequest::response(QNetworkReply * const reply) const
 {
@@ -149,20 +141,17 @@ QtAws::Core::AwsAbstractResponse * DescribeTrustedAdvisorCheckRefreshStatusesReq
 }
 
 /*!
- * @internal
+ * \class QtAws::Support::DescribeTrustedAdvisorCheckRefreshStatusesRequestPrivate
+ * \brief The DescribeTrustedAdvisorCheckRefreshStatusesRequestPrivate class provides private implementation for DescribeTrustedAdvisorCheckRefreshStatusesRequest.
+ * \internal
  *
- * @class  DescribeTrustedAdvisorCheckRefreshStatusesRequestPrivate
- *
- * @brief  Private implementation for DescribeTrustedAdvisorCheckRefreshStatusesRequest.
+ * \inmodule QtAwsSupport
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeTrustedAdvisorCheckRefreshStatusesRequestPrivate object.
- *
- * @param  action  Support action being performed.
- * @param  q       Pointer to this object's public DescribeTrustedAdvisorCheckRefreshStatusesRequest instance.
+ * Constructs a DescribeTrustedAdvisorCheckRefreshStatusesRequestPrivate object for Support \a action with,
+ * public implementation \a q.
  */
 DescribeTrustedAdvisorCheckRefreshStatusesRequestPrivate::DescribeTrustedAdvisorCheckRefreshStatusesRequestPrivate(
     const SupportRequest::Action action, DescribeTrustedAdvisorCheckRefreshStatusesRequest * const q)
@@ -172,15 +161,10 @@ DescribeTrustedAdvisorCheckRefreshStatusesRequestPrivate::DescribeTrustedAdvisor
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeTrustedAdvisorCheckRefreshStatusesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeTrustedAdvisorCheckRefreshStatusesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeTrustedAdvisorCheckRefreshStatusesRequest instance.
  */
 DescribeTrustedAdvisorCheckRefreshStatusesRequestPrivate::DescribeTrustedAdvisorCheckRefreshStatusesRequestPrivate(
     const DescribeTrustedAdvisorCheckRefreshStatusesRequestPrivate &other, DescribeTrustedAdvisorCheckRefreshStatusesRequest * const q)

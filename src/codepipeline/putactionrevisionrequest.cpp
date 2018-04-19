@@ -27,10 +27,9 @@ namespace CodePipeline {
 
 /*!
  * \class QtAws::CodePipeline::PutActionRevisionRequest
- *
  * \brief The PutActionRevisionRequest class provides an interface for CodePipeline PutActionRevision requests.
  *
- * \ingroup CodePipeline
+ * \inmodule QtAwsCodePipeline
  *
  *  <fullname>AWS CodePipeline</fullname>
  * 
@@ -200,9 +199,7 @@ namespace CodePipeline {
  */
 
 /*!
- * @brief  Constructs a new PutActionRevisionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 PutActionRevisionRequest::PutActionRevisionRequest(const PutActionRevisionRequest &other)
     : CodePipelineRequest(new PutActionRevisionRequestPrivate(*other.d_func(), this))
@@ -211,7 +208,7 @@ PutActionRevisionRequest::PutActionRevisionRequest(const PutActionRevisionReques
 }
 
 /*!
- * @brief  Constructs a new PutActionRevisionRequest object.
+ * Constructs a PutActionRevisionRequest object.
  */
 PutActionRevisionRequest::PutActionRevisionRequest()
     : CodePipelineRequest(new PutActionRevisionRequestPrivate(CodePipelineRequest::PutActionRevisionAction, this))
@@ -229,14 +226,9 @@ bool PutActionRevisionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an PutActionRevisionResponse object.
+ * Returns a PutActionRevisionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An PutActionRevisionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CodePipelineClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * PutActionRevisionRequest::response(QNetworkReply * const reply) const
 {
@@ -244,20 +236,17 @@ QtAws::Core::AwsAbstractResponse * PutActionRevisionRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::CodePipeline::PutActionRevisionRequestPrivate
+ * \brief The PutActionRevisionRequestPrivate class provides private implementation for PutActionRevisionRequest.
+ * \internal
  *
- * @class  PutActionRevisionRequestPrivate
- *
- * @brief  Private implementation for PutActionRevisionRequest.
+ * \inmodule QtAwsCodePipeline
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new PutActionRevisionRequestPrivate object.
- *
- * @param  action  CodePipeline action being performed.
- * @param  q       Pointer to this object's public PutActionRevisionRequest instance.
+ * Constructs a PutActionRevisionRequestPrivate object for CodePipeline \a action with,
+ * public implementation \a q.
  */
 PutActionRevisionRequestPrivate::PutActionRevisionRequestPrivate(
     const CodePipelineRequest::Action action, PutActionRevisionRequest * const q)
@@ -267,15 +256,10 @@ PutActionRevisionRequestPrivate::PutActionRevisionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutActionRevisionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the PutActionRevisionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public PutActionRevisionRequest instance.
  */
 PutActionRevisionRequestPrivate::PutActionRevisionRequestPrivate(
     const PutActionRevisionRequestPrivate &other, PutActionRevisionRequest * const q)

@@ -27,10 +27,9 @@ namespace OpsWorks {
 
 /*!
  * \class QtAws::OpsWorks::DescribePermissionsRequest
- *
  * \brief The DescribePermissionsRequest class provides an interface for OpsWorks DescribePermissions requests.
  *
- * \ingroup OpsWorks
+ * \inmodule QtAwsOpsWorks
  *
  *  <fullname>AWS OpsWorks</fullname>
  * 
@@ -143,9 +142,7 @@ namespace OpsWorks {
  */
 
 /*!
- * @brief  Constructs a new DescribePermissionsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribePermissionsRequest::DescribePermissionsRequest(const DescribePermissionsRequest &other)
     : OpsWorksRequest(new DescribePermissionsRequestPrivate(*other.d_func(), this))
@@ -154,7 +151,7 @@ DescribePermissionsRequest::DescribePermissionsRequest(const DescribePermissions
 }
 
 /*!
- * @brief  Constructs a new DescribePermissionsRequest object.
+ * Constructs a DescribePermissionsRequest object.
  */
 DescribePermissionsRequest::DescribePermissionsRequest()
     : OpsWorksRequest(new DescribePermissionsRequestPrivate(OpsWorksRequest::DescribePermissionsAction, this))
@@ -172,14 +169,9 @@ bool DescribePermissionsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribePermissionsResponse object.
+ * Returns a DescribePermissionsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribePermissionsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  OpsWorksClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribePermissionsRequest::response(QNetworkReply * const reply) const
 {
@@ -187,20 +179,17 @@ QtAws::Core::AwsAbstractResponse * DescribePermissionsRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::OpsWorks::DescribePermissionsRequestPrivate
+ * \brief The DescribePermissionsRequestPrivate class provides private implementation for DescribePermissionsRequest.
+ * \internal
  *
- * @class  DescribePermissionsRequestPrivate
- *
- * @brief  Private implementation for DescribePermissionsRequest.
+ * \inmodule QtAwsOpsWorks
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribePermissionsRequestPrivate object.
- *
- * @param  action  OpsWorks action being performed.
- * @param  q       Pointer to this object's public DescribePermissionsRequest instance.
+ * Constructs a DescribePermissionsRequestPrivate object for OpsWorks \a action with,
+ * public implementation \a q.
  */
 DescribePermissionsRequestPrivate::DescribePermissionsRequestPrivate(
     const OpsWorksRequest::Action action, DescribePermissionsRequest * const q)
@@ -210,15 +199,10 @@ DescribePermissionsRequestPrivate::DescribePermissionsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribePermissionsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribePermissionsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribePermissionsRequest instance.
  */
 DescribePermissionsRequestPrivate::DescribePermissionsRequestPrivate(
     const DescribePermissionsRequestPrivate &other, DescribePermissionsRequest * const q)

@@ -27,10 +27,9 @@ namespace WorkMail {
 
 /*!
  * \class QtAws::WorkMail::DeleteResourceRequest
- *
  * \brief The DeleteResourceRequest class provides an interface for WorkMail DeleteResource requests.
  *
- * \ingroup WorkMail
+ * \inmodule QtAwsWorkMail
  *
  *  Amazon WorkMail is a secure, managed business email and calendaring service with support for existing desktop and mobile
  *  email clients. You can access your email, contacts, and calendars using Microsoft Outlook, your browser, or their native
@@ -70,9 +69,7 @@ namespace WorkMail {
  */
 
 /*!
- * @brief  Constructs a new DeleteResourceRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteResourceRequest::DeleteResourceRequest(const DeleteResourceRequest &other)
     : WorkMailRequest(new DeleteResourceRequestPrivate(*other.d_func(), this))
@@ -81,7 +78,7 @@ DeleteResourceRequest::DeleteResourceRequest(const DeleteResourceRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DeleteResourceRequest object.
+ * Constructs a DeleteResourceRequest object.
  */
 DeleteResourceRequest::DeleteResourceRequest()
     : WorkMailRequest(new DeleteResourceRequestPrivate(WorkMailRequest::DeleteResourceAction, this))
@@ -99,14 +96,9 @@ bool DeleteResourceRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteResourceResponse object.
+ * Returns a DeleteResourceResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteResourceResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WorkMailClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteResourceRequest::response(QNetworkReply * const reply) const
 {
@@ -114,20 +106,17 @@ QtAws::Core::AwsAbstractResponse * DeleteResourceRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::WorkMail::DeleteResourceRequestPrivate
+ * \brief The DeleteResourceRequestPrivate class provides private implementation for DeleteResourceRequest.
+ * \internal
  *
- * @class  DeleteResourceRequestPrivate
- *
- * @brief  Private implementation for DeleteResourceRequest.
+ * \inmodule QtAwsWorkMail
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteResourceRequestPrivate object.
- *
- * @param  action  WorkMail action being performed.
- * @param  q       Pointer to this object's public DeleteResourceRequest instance.
+ * Constructs a DeleteResourceRequestPrivate object for WorkMail \a action with,
+ * public implementation \a q.
  */
 DeleteResourceRequestPrivate::DeleteResourceRequestPrivate(
     const WorkMailRequest::Action action, DeleteResourceRequest * const q)
@@ -137,15 +126,10 @@ DeleteResourceRequestPrivate::DeleteResourceRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteResourceRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteResourceRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteResourceRequest instance.
  */
 DeleteResourceRequestPrivate::DeleteResourceRequestPrivate(
     const DeleteResourceRequestPrivate &other, DeleteResourceRequest * const q)

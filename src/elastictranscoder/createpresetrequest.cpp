@@ -27,10 +27,9 @@ namespace ElasticTranscoder {
 
 /*!
  * \class QtAws::ElasticTranscoder::CreatePresetRequest
- *
  * \brief The CreatePresetRequest class provides an interface for ElasticTranscoder CreatePreset requests.
  *
- * \ingroup ElasticTranscoder
+ * \inmodule QtAwsElasticTranscoder
  *
  *  <fullname>AWS Elastic Transcoder Service</fullname>
  * 
@@ -40,9 +39,7 @@ namespace ElasticTranscoder {
  */
 
 /*!
- * @brief  Constructs a new CreatePresetRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreatePresetRequest::CreatePresetRequest(const CreatePresetRequest &other)
     : ElasticTranscoderRequest(new CreatePresetRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ CreatePresetRequest::CreatePresetRequest(const CreatePresetRequest &other)
 }
 
 /*!
- * @brief  Constructs a new CreatePresetRequest object.
+ * Constructs a CreatePresetRequest object.
  */
 CreatePresetRequest::CreatePresetRequest()
     : ElasticTranscoderRequest(new CreatePresetRequestPrivate(ElasticTranscoderRequest::CreatePresetAction, this))
@@ -69,14 +66,9 @@ bool CreatePresetRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreatePresetResponse object.
+ * Returns a CreatePresetResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreatePresetResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ElasticTranscoderClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreatePresetRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * CreatePresetRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::ElasticTranscoder::CreatePresetRequestPrivate
+ * \brief The CreatePresetRequestPrivate class provides private implementation for CreatePresetRequest.
+ * \internal
  *
- * @class  CreatePresetRequestPrivate
- *
- * @brief  Private implementation for CreatePresetRequest.
+ * \inmodule QtAwsElasticTranscoder
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreatePresetRequestPrivate object.
- *
- * @param  action  ElasticTranscoder action being performed.
- * @param  q       Pointer to this object's public CreatePresetRequest instance.
+ * Constructs a CreatePresetRequestPrivate object for ElasticTranscoder \a action with,
+ * public implementation \a q.
  */
 CreatePresetRequestPrivate::CreatePresetRequestPrivate(
     const ElasticTranscoderRequest::Action action, CreatePresetRequest * const q)
@@ -107,15 +96,10 @@ CreatePresetRequestPrivate::CreatePresetRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreatePresetRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreatePresetRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreatePresetRequest instance.
  */
 CreatePresetRequestPrivate::CreatePresetRequestPrivate(
     const CreatePresetRequestPrivate &other, CreatePresetRequest * const q)

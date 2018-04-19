@@ -27,10 +27,9 @@ namespace CodePipeline {
 
 /*!
  * \class QtAws::CodePipeline::GetJobDetailsRequest
- *
  * \brief The GetJobDetailsRequest class provides an interface for CodePipeline GetJobDetails requests.
  *
- * \ingroup CodePipeline
+ * \inmodule QtAwsCodePipeline
  *
  *  <fullname>AWS CodePipeline</fullname>
  * 
@@ -200,9 +199,7 @@ namespace CodePipeline {
  */
 
 /*!
- * @brief  Constructs a new GetJobDetailsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetJobDetailsRequest::GetJobDetailsRequest(const GetJobDetailsRequest &other)
     : CodePipelineRequest(new GetJobDetailsRequestPrivate(*other.d_func(), this))
@@ -211,7 +208,7 @@ GetJobDetailsRequest::GetJobDetailsRequest(const GetJobDetailsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetJobDetailsRequest object.
+ * Constructs a GetJobDetailsRequest object.
  */
 GetJobDetailsRequest::GetJobDetailsRequest()
     : CodePipelineRequest(new GetJobDetailsRequestPrivate(CodePipelineRequest::GetJobDetailsAction, this))
@@ -229,14 +226,9 @@ bool GetJobDetailsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetJobDetailsResponse object.
+ * Returns a GetJobDetailsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetJobDetailsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CodePipelineClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetJobDetailsRequest::response(QNetworkReply * const reply) const
 {
@@ -244,20 +236,17 @@ QtAws::Core::AwsAbstractResponse * GetJobDetailsRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::CodePipeline::GetJobDetailsRequestPrivate
+ * \brief The GetJobDetailsRequestPrivate class provides private implementation for GetJobDetailsRequest.
+ * \internal
  *
- * @class  GetJobDetailsRequestPrivate
- *
- * @brief  Private implementation for GetJobDetailsRequest.
+ * \inmodule QtAwsCodePipeline
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetJobDetailsRequestPrivate object.
- *
- * @param  action  CodePipeline action being performed.
- * @param  q       Pointer to this object's public GetJobDetailsRequest instance.
+ * Constructs a GetJobDetailsRequestPrivate object for CodePipeline \a action with,
+ * public implementation \a q.
  */
 GetJobDetailsRequestPrivate::GetJobDetailsRequestPrivate(
     const CodePipelineRequest::Action action, GetJobDetailsRequest * const q)
@@ -267,15 +256,10 @@ GetJobDetailsRequestPrivate::GetJobDetailsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetJobDetailsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetJobDetailsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetJobDetailsRequest instance.
  */
 GetJobDetailsRequestPrivate::GetJobDetailsRequestPrivate(
     const GetJobDetailsRequestPrivate &other, GetJobDetailsRequest * const q)

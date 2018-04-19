@@ -27,19 +27,16 @@ namespace Route53 {
 
 /*!
  * \class QtAws::Route53::DeleteTrafficPolicyRequest
- *
  * \brief The DeleteTrafficPolicyRequest class provides an interface for Route53 DeleteTrafficPolicy requests.
  *
- * \ingroup Route53
+ * \inmodule QtAwsRoute53
  *
  *
  * \sa Route53Client::deleteTrafficPolicy
  */
 
 /*!
- * @brief  Constructs a new DeleteTrafficPolicyRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteTrafficPolicyRequest::DeleteTrafficPolicyRequest(const DeleteTrafficPolicyRequest &other)
     : Route53Request(new DeleteTrafficPolicyRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ DeleteTrafficPolicyRequest::DeleteTrafficPolicyRequest(const DeleteTrafficPolicy
 }
 
 /*!
- * @brief  Constructs a new DeleteTrafficPolicyRequest object.
+ * Constructs a DeleteTrafficPolicyRequest object.
  */
 DeleteTrafficPolicyRequest::DeleteTrafficPolicyRequest()
     : Route53Request(new DeleteTrafficPolicyRequestPrivate(Route53Request::DeleteTrafficPolicyAction, this))
@@ -66,14 +63,9 @@ bool DeleteTrafficPolicyRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteTrafficPolicyResponse object.
+ * Returns a DeleteTrafficPolicyResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteTrafficPolicyResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  Route53Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteTrafficPolicyRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * DeleteTrafficPolicyRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::Route53::DeleteTrafficPolicyRequestPrivate
+ * \brief The DeleteTrafficPolicyRequestPrivate class provides private implementation for DeleteTrafficPolicyRequest.
+ * \internal
  *
- * @class  DeleteTrafficPolicyRequestPrivate
- *
- * @brief  Private implementation for DeleteTrafficPolicyRequest.
+ * \inmodule QtAwsRoute53
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteTrafficPolicyRequestPrivate object.
- *
- * @param  action  Route53 action being performed.
- * @param  q       Pointer to this object's public DeleteTrafficPolicyRequest instance.
+ * Constructs a DeleteTrafficPolicyRequestPrivate object for Route53 \a action with,
+ * public implementation \a q.
  */
 DeleteTrafficPolicyRequestPrivate::DeleteTrafficPolicyRequestPrivate(
     const Route53Request::Action action, DeleteTrafficPolicyRequest * const q)
@@ -104,15 +93,10 @@ DeleteTrafficPolicyRequestPrivate::DeleteTrafficPolicyRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteTrafficPolicyRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteTrafficPolicyRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteTrafficPolicyRequest instance.
  */
 DeleteTrafficPolicyRequestPrivate::DeleteTrafficPolicyRequestPrivate(
     const DeleteTrafficPolicyRequestPrivate &other, DeleteTrafficPolicyRequest * const q)

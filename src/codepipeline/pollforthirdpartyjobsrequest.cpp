@@ -27,10 +27,9 @@ namespace CodePipeline {
 
 /*!
  * \class QtAws::CodePipeline::PollForThirdPartyJobsRequest
- *
  * \brief The PollForThirdPartyJobsRequest class provides an interface for CodePipeline PollForThirdPartyJobs requests.
  *
- * \ingroup CodePipeline
+ * \inmodule QtAwsCodePipeline
  *
  *  <fullname>AWS CodePipeline</fullname>
  * 
@@ -200,9 +199,7 @@ namespace CodePipeline {
  */
 
 /*!
- * @brief  Constructs a new PollForThirdPartyJobsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 PollForThirdPartyJobsRequest::PollForThirdPartyJobsRequest(const PollForThirdPartyJobsRequest &other)
     : CodePipelineRequest(new PollForThirdPartyJobsRequestPrivate(*other.d_func(), this))
@@ -211,7 +208,7 @@ PollForThirdPartyJobsRequest::PollForThirdPartyJobsRequest(const PollForThirdPar
 }
 
 /*!
- * @brief  Constructs a new PollForThirdPartyJobsRequest object.
+ * Constructs a PollForThirdPartyJobsRequest object.
  */
 PollForThirdPartyJobsRequest::PollForThirdPartyJobsRequest()
     : CodePipelineRequest(new PollForThirdPartyJobsRequestPrivate(CodePipelineRequest::PollForThirdPartyJobsAction, this))
@@ -229,14 +226,9 @@ bool PollForThirdPartyJobsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an PollForThirdPartyJobsResponse object.
+ * Returns a PollForThirdPartyJobsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An PollForThirdPartyJobsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CodePipelineClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * PollForThirdPartyJobsRequest::response(QNetworkReply * const reply) const
 {
@@ -244,20 +236,17 @@ QtAws::Core::AwsAbstractResponse * PollForThirdPartyJobsRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::CodePipeline::PollForThirdPartyJobsRequestPrivate
+ * \brief The PollForThirdPartyJobsRequestPrivate class provides private implementation for PollForThirdPartyJobsRequest.
+ * \internal
  *
- * @class  PollForThirdPartyJobsRequestPrivate
- *
- * @brief  Private implementation for PollForThirdPartyJobsRequest.
+ * \inmodule QtAwsCodePipeline
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new PollForThirdPartyJobsRequestPrivate object.
- *
- * @param  action  CodePipeline action being performed.
- * @param  q       Pointer to this object's public PollForThirdPartyJobsRequest instance.
+ * Constructs a PollForThirdPartyJobsRequestPrivate object for CodePipeline \a action with,
+ * public implementation \a q.
  */
 PollForThirdPartyJobsRequestPrivate::PollForThirdPartyJobsRequestPrivate(
     const CodePipelineRequest::Action action, PollForThirdPartyJobsRequest * const q)
@@ -267,15 +256,10 @@ PollForThirdPartyJobsRequestPrivate::PollForThirdPartyJobsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PollForThirdPartyJobsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the PollForThirdPartyJobsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public PollForThirdPartyJobsRequest instance.
  */
 PollForThirdPartyJobsRequestPrivate::PollForThirdPartyJobsRequestPrivate(
     const PollForThirdPartyJobsRequestPrivate &other, PollForThirdPartyJobsRequest * const q)

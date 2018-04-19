@@ -27,10 +27,9 @@ namespace DataPipeline {
 
 /*!
  * \class QtAws::DataPipeline::GetPipelineDefinitionRequest
- *
  * \brief The GetPipelineDefinitionRequest class provides an interface for DataPipeline GetPipelineDefinition requests.
  *
- * \ingroup DataPipeline
+ * \inmodule QtAwsDataPipeline
  *
  *  AWS Data Pipeline configures and manages a data-driven workflow called a pipeline. AWS Data Pipeline handles the details
  *  of scheduling and ensuring that data dependencies are met so that your application can focus on processing the
@@ -55,9 +54,7 @@ namespace DataPipeline {
  */
 
 /*!
- * @brief  Constructs a new GetPipelineDefinitionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetPipelineDefinitionRequest::GetPipelineDefinitionRequest(const GetPipelineDefinitionRequest &other)
     : DataPipelineRequest(new GetPipelineDefinitionRequestPrivate(*other.d_func(), this))
@@ -66,7 +63,7 @@ GetPipelineDefinitionRequest::GetPipelineDefinitionRequest(const GetPipelineDefi
 }
 
 /*!
- * @brief  Constructs a new GetPipelineDefinitionRequest object.
+ * Constructs a GetPipelineDefinitionRequest object.
  */
 GetPipelineDefinitionRequest::GetPipelineDefinitionRequest()
     : DataPipelineRequest(new GetPipelineDefinitionRequestPrivate(DataPipelineRequest::GetPipelineDefinitionAction, this))
@@ -84,14 +81,9 @@ bool GetPipelineDefinitionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetPipelineDefinitionResponse object.
+ * Returns a GetPipelineDefinitionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetPipelineDefinitionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DataPipelineClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetPipelineDefinitionRequest::response(QNetworkReply * const reply) const
 {
@@ -99,20 +91,17 @@ QtAws::Core::AwsAbstractResponse * GetPipelineDefinitionRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::DataPipeline::GetPipelineDefinitionRequestPrivate
+ * \brief The GetPipelineDefinitionRequestPrivate class provides private implementation for GetPipelineDefinitionRequest.
+ * \internal
  *
- * @class  GetPipelineDefinitionRequestPrivate
- *
- * @brief  Private implementation for GetPipelineDefinitionRequest.
+ * \inmodule QtAwsDataPipeline
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetPipelineDefinitionRequestPrivate object.
- *
- * @param  action  DataPipeline action being performed.
- * @param  q       Pointer to this object's public GetPipelineDefinitionRequest instance.
+ * Constructs a GetPipelineDefinitionRequestPrivate object for DataPipeline \a action with,
+ * public implementation \a q.
  */
 GetPipelineDefinitionRequestPrivate::GetPipelineDefinitionRequestPrivate(
     const DataPipelineRequest::Action action, GetPipelineDefinitionRequest * const q)
@@ -122,15 +111,10 @@ GetPipelineDefinitionRequestPrivate::GetPipelineDefinitionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetPipelineDefinitionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetPipelineDefinitionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetPipelineDefinitionRequest instance.
  */
 GetPipelineDefinitionRequestPrivate::GetPipelineDefinitionRequestPrivate(
     const GetPipelineDefinitionRequestPrivate &other, GetPipelineDefinitionRequest * const q)

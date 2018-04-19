@@ -27,10 +27,9 @@ namespace DataPipeline {
 
 /*!
  * \class QtAws::DataPipeline::SetStatusRequest
- *
  * \brief The SetStatusRequest class provides an interface for DataPipeline SetStatus requests.
  *
- * \ingroup DataPipeline
+ * \inmodule QtAwsDataPipeline
  *
  *  AWS Data Pipeline configures and manages a data-driven workflow called a pipeline. AWS Data Pipeline handles the details
  *  of scheduling and ensuring that data dependencies are met so that your application can focus on processing the
@@ -55,9 +54,7 @@ namespace DataPipeline {
  */
 
 /*!
- * @brief  Constructs a new SetStatusRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 SetStatusRequest::SetStatusRequest(const SetStatusRequest &other)
     : DataPipelineRequest(new SetStatusRequestPrivate(*other.d_func(), this))
@@ -66,7 +63,7 @@ SetStatusRequest::SetStatusRequest(const SetStatusRequest &other)
 }
 
 /*!
- * @brief  Constructs a new SetStatusRequest object.
+ * Constructs a SetStatusRequest object.
  */
 SetStatusRequest::SetStatusRequest()
     : DataPipelineRequest(new SetStatusRequestPrivate(DataPipelineRequest::SetStatusAction, this))
@@ -84,14 +81,9 @@ bool SetStatusRequest::isValid() const
 
 
 /*!
- * @brief  Construct an SetStatusResponse object.
+ * Returns a SetStatusResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An SetStatusResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DataPipelineClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * SetStatusRequest::response(QNetworkReply * const reply) const
 {
@@ -99,20 +91,17 @@ QtAws::Core::AwsAbstractResponse * SetStatusRequest::response(QNetworkReply * co
 }
 
 /*!
- * @internal
+ * \class QtAws::DataPipeline::SetStatusRequestPrivate
+ * \brief The SetStatusRequestPrivate class provides private implementation for SetStatusRequest.
+ * \internal
  *
- * @class  SetStatusRequestPrivate
- *
- * @brief  Private implementation for SetStatusRequest.
+ * \inmodule QtAwsDataPipeline
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new SetStatusRequestPrivate object.
- *
- * @param  action  DataPipeline action being performed.
- * @param  q       Pointer to this object's public SetStatusRequest instance.
+ * Constructs a SetStatusRequestPrivate object for DataPipeline \a action with,
+ * public implementation \a q.
  */
 SetStatusRequestPrivate::SetStatusRequestPrivate(
     const DataPipelineRequest::Action action, SetStatusRequest * const q)
@@ -122,15 +111,10 @@ SetStatusRequestPrivate::SetStatusRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SetStatusRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the SetStatusRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public SetStatusRequest instance.
  */
 SetStatusRequestPrivate::SetStatusRequestPrivate(
     const SetStatusRequestPrivate &other, SetStatusRequest * const q)

@@ -27,10 +27,9 @@ namespace GameLift {
 
 /*!
  * \class QtAws::GameLift::UpdateFleetAttributesRequest
- *
  * \brief The UpdateFleetAttributesRequest class provides an interface for GameLift UpdateFleetAttributes requests.
  *
- * \ingroup GameLift
+ * \inmodule QtAwsGameLift
  *
  *  <fullname>Amazon GameLift Service</fullname>
  * 
@@ -473,9 +472,7 @@ namespace GameLift {
  */
 
 /*!
- * @brief  Constructs a new UpdateFleetAttributesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateFleetAttributesRequest::UpdateFleetAttributesRequest(const UpdateFleetAttributesRequest &other)
     : GameLiftRequest(new UpdateFleetAttributesRequestPrivate(*other.d_func(), this))
@@ -484,7 +481,7 @@ UpdateFleetAttributesRequest::UpdateFleetAttributesRequest(const UpdateFleetAttr
 }
 
 /*!
- * @brief  Constructs a new UpdateFleetAttributesRequest object.
+ * Constructs a UpdateFleetAttributesRequest object.
  */
 UpdateFleetAttributesRequest::UpdateFleetAttributesRequest()
     : GameLiftRequest(new UpdateFleetAttributesRequestPrivate(GameLiftRequest::UpdateFleetAttributesAction, this))
@@ -502,14 +499,9 @@ bool UpdateFleetAttributesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateFleetAttributesResponse object.
+ * Returns a UpdateFleetAttributesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateFleetAttributesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GameLiftClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateFleetAttributesRequest::response(QNetworkReply * const reply) const
 {
@@ -517,20 +509,17 @@ QtAws::Core::AwsAbstractResponse * UpdateFleetAttributesRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::GameLift::UpdateFleetAttributesRequestPrivate
+ * \brief The UpdateFleetAttributesRequestPrivate class provides private implementation for UpdateFleetAttributesRequest.
+ * \internal
  *
- * @class  UpdateFleetAttributesRequestPrivate
- *
- * @brief  Private implementation for UpdateFleetAttributesRequest.
+ * \inmodule QtAwsGameLift
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateFleetAttributesRequestPrivate object.
- *
- * @param  action  GameLift action being performed.
- * @param  q       Pointer to this object's public UpdateFleetAttributesRequest instance.
+ * Constructs a UpdateFleetAttributesRequestPrivate object for GameLift \a action with,
+ * public implementation \a q.
  */
 UpdateFleetAttributesRequestPrivate::UpdateFleetAttributesRequestPrivate(
     const GameLiftRequest::Action action, UpdateFleetAttributesRequest * const q)
@@ -540,15 +529,10 @@ UpdateFleetAttributesRequestPrivate::UpdateFleetAttributesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateFleetAttributesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateFleetAttributesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateFleetAttributesRequest instance.
  */
 UpdateFleetAttributesRequestPrivate::UpdateFleetAttributesRequestPrivate(
     const UpdateFleetAttributesRequestPrivate &other, UpdateFleetAttributesRequest * const q)

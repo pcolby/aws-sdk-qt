@@ -27,19 +27,16 @@ namespace SMS {
 
 /*!
  * \class QtAws::SMS::DeleteReplicationJobRequest
- *
  * \brief The DeleteReplicationJobRequest class provides an interface for SMS DeleteReplicationJob requests.
  *
- * \ingroup SMS
+ * \inmodule QtAwsSMS
  *
  *
  * \sa SMSClient::deleteReplicationJob
  */
 
 /*!
- * @brief  Constructs a new DeleteReplicationJobRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteReplicationJobRequest::DeleteReplicationJobRequest(const DeleteReplicationJobRequest &other)
     : SMSRequest(new DeleteReplicationJobRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ DeleteReplicationJobRequest::DeleteReplicationJobRequest(const DeleteReplication
 }
 
 /*!
- * @brief  Constructs a new DeleteReplicationJobRequest object.
+ * Constructs a DeleteReplicationJobRequest object.
  */
 DeleteReplicationJobRequest::DeleteReplicationJobRequest()
     : SMSRequest(new DeleteReplicationJobRequestPrivate(SMSRequest::DeleteReplicationJobAction, this))
@@ -66,14 +63,9 @@ bool DeleteReplicationJobRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteReplicationJobResponse object.
+ * Returns a DeleteReplicationJobResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteReplicationJobResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SMSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteReplicationJobRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * DeleteReplicationJobRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::SMS::DeleteReplicationJobRequestPrivate
+ * \brief The DeleteReplicationJobRequestPrivate class provides private implementation for DeleteReplicationJobRequest.
+ * \internal
  *
- * @class  DeleteReplicationJobRequestPrivate
- *
- * @brief  Private implementation for DeleteReplicationJobRequest.
+ * \inmodule QtAwsSMS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteReplicationJobRequestPrivate object.
- *
- * @param  action  SMS action being performed.
- * @param  q       Pointer to this object's public DeleteReplicationJobRequest instance.
+ * Constructs a DeleteReplicationJobRequestPrivate object for SMS \a action with,
+ * public implementation \a q.
  */
 DeleteReplicationJobRequestPrivate::DeleteReplicationJobRequestPrivate(
     const SMSRequest::Action action, DeleteReplicationJobRequest * const q)
@@ -104,15 +93,10 @@ DeleteReplicationJobRequestPrivate::DeleteReplicationJobRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteReplicationJobRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteReplicationJobRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteReplicationJobRequest instance.
  */
 DeleteReplicationJobRequestPrivate::DeleteReplicationJobRequestPrivate(
     const DeleteReplicationJobRequestPrivate &other, DeleteReplicationJobRequest * const q)

@@ -66,6 +66,9 @@
 /*!
  * \namespace QtAws::DataPipeline
  * \brief The QtAws::DataPipeline contains stuff...
+ *
+ * \inmodule QtAwsDataPipeline
+ *
  * @todo Move this to a separate template file.
  */
 
@@ -133,7 +136,7 @@ DataPipelineClient::DataPipelineClient(
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * \a  AwsEndpoint::getEndpoint()
+ * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
 DataPipelineClient::DataPipelineClient(
     const QUrl &endpoint,

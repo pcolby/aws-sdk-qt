@@ -27,10 +27,9 @@ namespace KMS {
 
 /*!
  * \class QtAws::KMS::ListAliasesRequest
- *
  * \brief The ListAliasesRequest class provides an interface for KMS ListAliases requests.
  *
- * \ingroup KMS
+ * \inmodule QtAwsKMS
  *
  *  <fullname>AWS Key Management Service</fullname>
  * 
@@ -136,9 +135,7 @@ namespace KMS {
  */
 
 /*!
- * @brief  Constructs a new ListAliasesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListAliasesRequest::ListAliasesRequest(const ListAliasesRequest &other)
     : KMSRequest(new ListAliasesRequestPrivate(*other.d_func(), this))
@@ -147,7 +144,7 @@ ListAliasesRequest::ListAliasesRequest(const ListAliasesRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ListAliasesRequest object.
+ * Constructs a ListAliasesRequest object.
  */
 ListAliasesRequest::ListAliasesRequest()
     : KMSRequest(new ListAliasesRequestPrivate(KMSRequest::ListAliasesAction, this))
@@ -165,14 +162,9 @@ bool ListAliasesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListAliasesResponse object.
+ * Returns a ListAliasesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListAliasesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  KMSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListAliasesRequest::response(QNetworkReply * const reply) const
 {
@@ -180,20 +172,17 @@ QtAws::Core::AwsAbstractResponse * ListAliasesRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::KMS::ListAliasesRequestPrivate
+ * \brief The ListAliasesRequestPrivate class provides private implementation for ListAliasesRequest.
+ * \internal
  *
- * @class  ListAliasesRequestPrivate
- *
- * @brief  Private implementation for ListAliasesRequest.
+ * \inmodule QtAwsKMS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListAliasesRequestPrivate object.
- *
- * @param  action  KMS action being performed.
- * @param  q       Pointer to this object's public ListAliasesRequest instance.
+ * Constructs a ListAliasesRequestPrivate object for KMS \a action with,
+ * public implementation \a q.
  */
 ListAliasesRequestPrivate::ListAliasesRequestPrivate(
     const KMSRequest::Action action, ListAliasesRequest * const q)
@@ -203,15 +192,10 @@ ListAliasesRequestPrivate::ListAliasesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListAliasesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListAliasesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListAliasesRequest instance.
  */
 ListAliasesRequestPrivate::ListAliasesRequestPrivate(
     const ListAliasesRequestPrivate &other, ListAliasesRequest * const q)

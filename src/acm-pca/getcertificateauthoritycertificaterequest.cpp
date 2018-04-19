@@ -27,10 +27,9 @@ namespace ACMPCA {
 
 /*!
  * \class QtAws::ACMPCA::GetCertificateAuthorityCertificateRequest
- *
  * \brief The GetCertificateAuthorityCertificateRequest class provides an interface for ACMPCA GetCertificateAuthorityCertificate requests.
  *
- * \ingroup ACMPCA
+ * \inmodule QtAwsACMPCA
  *
  *  You can use the ACM PCA API to create a private certificate authority (CA). You must first call the
  *  <a>CreateCertificateAuthority</a> function. If successful, the function returns an Amazon Resource Name (ARN) for your
@@ -67,9 +66,7 @@ namespace ACMPCA {
  */
 
 /*!
- * @brief  Constructs a new GetCertificateAuthorityCertificateRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetCertificateAuthorityCertificateRequest::GetCertificateAuthorityCertificateRequest(const GetCertificateAuthorityCertificateRequest &other)
     : ACMPCARequest(new GetCertificateAuthorityCertificateRequestPrivate(*other.d_func(), this))
@@ -78,7 +75,7 @@ GetCertificateAuthorityCertificateRequest::GetCertificateAuthorityCertificateReq
 }
 
 /*!
- * @brief  Constructs a new GetCertificateAuthorityCertificateRequest object.
+ * Constructs a GetCertificateAuthorityCertificateRequest object.
  */
 GetCertificateAuthorityCertificateRequest::GetCertificateAuthorityCertificateRequest()
     : ACMPCARequest(new GetCertificateAuthorityCertificateRequestPrivate(ACMPCARequest::GetCertificateAuthorityCertificateAction, this))
@@ -96,14 +93,9 @@ bool GetCertificateAuthorityCertificateRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetCertificateAuthorityCertificateResponse object.
+ * Returns a GetCertificateAuthorityCertificateResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetCertificateAuthorityCertificateResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ACMPCAClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetCertificateAuthorityCertificateRequest::response(QNetworkReply * const reply) const
 {
@@ -111,20 +103,17 @@ QtAws::Core::AwsAbstractResponse * GetCertificateAuthorityCertificateRequest::re
 }
 
 /*!
- * @internal
+ * \class QtAws::ACMPCA::GetCertificateAuthorityCertificateRequestPrivate
+ * \brief The GetCertificateAuthorityCertificateRequestPrivate class provides private implementation for GetCertificateAuthorityCertificateRequest.
+ * \internal
  *
- * @class  GetCertificateAuthorityCertificateRequestPrivate
- *
- * @brief  Private implementation for GetCertificateAuthorityCertificateRequest.
+ * \inmodule QtAwsACMPCA
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetCertificateAuthorityCertificateRequestPrivate object.
- *
- * @param  action  ACMPCA action being performed.
- * @param  q       Pointer to this object's public GetCertificateAuthorityCertificateRequest instance.
+ * Constructs a GetCertificateAuthorityCertificateRequestPrivate object for ACMPCA \a action with,
+ * public implementation \a q.
  */
 GetCertificateAuthorityCertificateRequestPrivate::GetCertificateAuthorityCertificateRequestPrivate(
     const ACMPCARequest::Action action, GetCertificateAuthorityCertificateRequest * const q)
@@ -134,15 +123,10 @@ GetCertificateAuthorityCertificateRequestPrivate::GetCertificateAuthorityCertifi
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetCertificateAuthorityCertificateRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetCertificateAuthorityCertificateRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetCertificateAuthorityCertificateRequest instance.
  */
 GetCertificateAuthorityCertificateRequestPrivate::GetCertificateAuthorityCertificateRequestPrivate(
     const GetCertificateAuthorityCertificateRequestPrivate &other, GetCertificateAuthorityCertificateRequest * const q)

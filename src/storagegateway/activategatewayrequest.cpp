@@ -27,10 +27,9 @@ namespace StorageGateway {
 
 /*!
  * \class QtAws::StorageGateway::ActivateGatewayRequest
- *
  * \brief The ActivateGatewayRequest class provides an interface for StorageGateway ActivateGateway requests.
  *
- * \ingroup StorageGateway
+ * \inmodule QtAwsStorageGateway
  *
  *  <fullname>AWS Storage Gateway Service</fullname>
  * 
@@ -106,9 +105,7 @@ namespace StorageGateway {
  */
 
 /*!
- * @brief  Constructs a new ActivateGatewayRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ActivateGatewayRequest::ActivateGatewayRequest(const ActivateGatewayRequest &other)
     : StorageGatewayRequest(new ActivateGatewayRequestPrivate(*other.d_func(), this))
@@ -117,7 +114,7 @@ ActivateGatewayRequest::ActivateGatewayRequest(const ActivateGatewayRequest &oth
 }
 
 /*!
- * @brief  Constructs a new ActivateGatewayRequest object.
+ * Constructs a ActivateGatewayRequest object.
  */
 ActivateGatewayRequest::ActivateGatewayRequest()
     : StorageGatewayRequest(new ActivateGatewayRequestPrivate(StorageGatewayRequest::ActivateGatewayAction, this))
@@ -135,14 +132,9 @@ bool ActivateGatewayRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ActivateGatewayResponse object.
+ * Returns a ActivateGatewayResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ActivateGatewayResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  StorageGatewayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ActivateGatewayRequest::response(QNetworkReply * const reply) const
 {
@@ -150,20 +142,17 @@ QtAws::Core::AwsAbstractResponse * ActivateGatewayRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::StorageGateway::ActivateGatewayRequestPrivate
+ * \brief The ActivateGatewayRequestPrivate class provides private implementation for ActivateGatewayRequest.
+ * \internal
  *
- * @class  ActivateGatewayRequestPrivate
- *
- * @brief  Private implementation for ActivateGatewayRequest.
+ * \inmodule QtAwsStorageGateway
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ActivateGatewayRequestPrivate object.
- *
- * @param  action  StorageGateway action being performed.
- * @param  q       Pointer to this object's public ActivateGatewayRequest instance.
+ * Constructs a ActivateGatewayRequestPrivate object for StorageGateway \a action with,
+ * public implementation \a q.
  */
 ActivateGatewayRequestPrivate::ActivateGatewayRequestPrivate(
     const StorageGatewayRequest::Action action, ActivateGatewayRequest * const q)
@@ -173,15 +162,10 @@ ActivateGatewayRequestPrivate::ActivateGatewayRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ActivateGatewayRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ActivateGatewayRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ActivateGatewayRequest instance.
  */
 ActivateGatewayRequestPrivate::ActivateGatewayRequestPrivate(
     const ActivateGatewayRequestPrivate &other, ActivateGatewayRequest * const q)

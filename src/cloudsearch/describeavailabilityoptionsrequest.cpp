@@ -27,10 +27,9 @@ namespace CloudSearch {
 
 /*!
  * \class QtAws::CloudSearch::DescribeAvailabilityOptionsRequest
- *
  * \brief The DescribeAvailabilityOptionsRequest class provides an interface for CloudSearch DescribeAvailabilityOptions requests.
  *
- * \ingroup CloudSearch
+ * \inmodule QtAwsCloudSearch
  *
  *  <fullname>Amazon CloudSearch Configuration Service</fullname>
  * 
@@ -48,9 +47,7 @@ namespace CloudSearch {
  */
 
 /*!
- * @brief  Constructs a new DescribeAvailabilityOptionsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeAvailabilityOptionsRequest::DescribeAvailabilityOptionsRequest(const DescribeAvailabilityOptionsRequest &other)
     : CloudSearchRequest(new DescribeAvailabilityOptionsRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ DescribeAvailabilityOptionsRequest::DescribeAvailabilityOptionsRequest(const Des
 }
 
 /*!
- * @brief  Constructs a new DescribeAvailabilityOptionsRequest object.
+ * Constructs a DescribeAvailabilityOptionsRequest object.
  */
 DescribeAvailabilityOptionsRequest::DescribeAvailabilityOptionsRequest()
     : CloudSearchRequest(new DescribeAvailabilityOptionsRequestPrivate(CloudSearchRequest::DescribeAvailabilityOptionsAction, this))
@@ -77,14 +74,9 @@ bool DescribeAvailabilityOptionsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeAvailabilityOptionsResponse object.
+ * Returns a DescribeAvailabilityOptionsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeAvailabilityOptionsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudSearchClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeAvailabilityOptionsRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * DescribeAvailabilityOptionsRequest::response(
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudSearch::DescribeAvailabilityOptionsRequestPrivate
+ * \brief The DescribeAvailabilityOptionsRequestPrivate class provides private implementation for DescribeAvailabilityOptionsRequest.
+ * \internal
  *
- * @class  DescribeAvailabilityOptionsRequestPrivate
- *
- * @brief  Private implementation for DescribeAvailabilityOptionsRequest.
+ * \inmodule QtAwsCloudSearch
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeAvailabilityOptionsRequestPrivate object.
- *
- * @param  action  CloudSearch action being performed.
- * @param  q       Pointer to this object's public DescribeAvailabilityOptionsRequest instance.
+ * Constructs a DescribeAvailabilityOptionsRequestPrivate object for CloudSearch \a action with,
+ * public implementation \a q.
  */
 DescribeAvailabilityOptionsRequestPrivate::DescribeAvailabilityOptionsRequestPrivate(
     const CloudSearchRequest::Action action, DescribeAvailabilityOptionsRequest * const q)
@@ -115,15 +104,10 @@ DescribeAvailabilityOptionsRequestPrivate::DescribeAvailabilityOptionsRequestPri
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeAvailabilityOptionsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeAvailabilityOptionsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeAvailabilityOptionsRequest instance.
  */
 DescribeAvailabilityOptionsRequestPrivate::DescribeAvailabilityOptionsRequestPrivate(
     const DescribeAvailabilityOptionsRequestPrivate &other, DescribeAvailabilityOptionsRequest * const q)

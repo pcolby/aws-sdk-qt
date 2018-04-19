@@ -27,10 +27,9 @@ namespace Glacier {
 
 /*!
  * \class QtAws::Glacier::ListPartsRequest
- *
  * \brief The ListPartsRequest class provides an interface for Glacier ListParts requests.
  *
- * \ingroup Glacier
+ * \inmodule QtAwsGlacier
  *
  *  Amazon Glacier is a storage solution for "cold
  * 
@@ -75,9 +74,7 @@ namespace Glacier {
  */
 
 /*!
- * @brief  Constructs a new ListPartsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListPartsRequest::ListPartsRequest(const ListPartsRequest &other)
     : GlacierRequest(new ListPartsRequestPrivate(*other.d_func(), this))
@@ -86,7 +83,7 @@ ListPartsRequest::ListPartsRequest(const ListPartsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ListPartsRequest object.
+ * Constructs a ListPartsRequest object.
  */
 ListPartsRequest::ListPartsRequest()
     : GlacierRequest(new ListPartsRequestPrivate(GlacierRequest::ListPartsAction, this))
@@ -104,14 +101,9 @@ bool ListPartsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListPartsResponse object.
+ * Returns a ListPartsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListPartsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GlacierClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListPartsRequest::response(QNetworkReply * const reply) const
 {
@@ -119,20 +111,17 @@ QtAws::Core::AwsAbstractResponse * ListPartsRequest::response(QNetworkReply * co
 }
 
 /*!
- * @internal
+ * \class QtAws::Glacier::ListPartsRequestPrivate
+ * \brief The ListPartsRequestPrivate class provides private implementation for ListPartsRequest.
+ * \internal
  *
- * @class  ListPartsRequestPrivate
- *
- * @brief  Private implementation for ListPartsRequest.
+ * \inmodule QtAwsGlacier
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListPartsRequestPrivate object.
- *
- * @param  action  Glacier action being performed.
- * @param  q       Pointer to this object's public ListPartsRequest instance.
+ * Constructs a ListPartsRequestPrivate object for Glacier \a action with,
+ * public implementation \a q.
  */
 ListPartsRequestPrivate::ListPartsRequestPrivate(
     const GlacierRequest::Action action, ListPartsRequest * const q)
@@ -142,15 +131,10 @@ ListPartsRequestPrivate::ListPartsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListPartsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListPartsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListPartsRequest instance.
  */
 ListPartsRequestPrivate::ListPartsRequestPrivate(
     const ListPartsRequestPrivate &other, ListPartsRequest * const q)

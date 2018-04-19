@@ -25,16 +25,35 @@ namespace WorkSpaces {
 
 /*!
  * \class QtAws::WorkSpaces::WorkSpacesRequest
- *
  * \brief The WorkSpacesRequest class provides an interface for WorkSpaces requests.
  *
- * \ingroup WorkSpaces
+ * \inmodule QtAwsWorkSpaces
  */
 
 /*!
- * @brief  Constructs a new WorkSpacesRequest object.
+ * \enum WorkSpacesRequest::Action
  *
- * @param  action  The WorkSpaces action to request.
+ * This enum describes the actions that can be performed as WorkSpaces
+ * requests.
+ *
+ * \value CreateTagsAction WorkSpaces CreateTags action.
+ * \value CreateWorkspacesAction WorkSpaces CreateWorkspaces action.
+ * \value DeleteTagsAction WorkSpaces DeleteTags action.
+ * \value DescribeTagsAction WorkSpaces DescribeTags action.
+ * \value DescribeWorkspaceBundlesAction WorkSpaces DescribeWorkspaceBundles action.
+ * \value DescribeWorkspaceDirectoriesAction WorkSpaces DescribeWorkspaceDirectories action.
+ * \value DescribeWorkspacesAction WorkSpaces DescribeWorkspaces action.
+ * \value DescribeWorkspacesConnectionStatusAction WorkSpaces DescribeWorkspacesConnectionStatus action.
+ * \value ModifyWorkspacePropertiesAction WorkSpaces ModifyWorkspaceProperties action.
+ * \value RebootWorkspacesAction WorkSpaces RebootWorkspaces action.
+ * \value RebuildWorkspacesAction WorkSpaces RebuildWorkspaces action.
+ * \value StartWorkspacesAction WorkSpaces StartWorkspaces action.
+ * \value StopWorkspacesAction WorkSpaces StopWorkspaces action.
+ * \value TerminateWorkspacesAction WorkSpaces TerminateWorkspaces action.
+ */
+
+/*!
+ * Constructs a[n] WorkSpacesRequest object for WorkSpaces \a action.
  */
 WorkSpacesRequest::WorkSpacesRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new WorkSpacesRequestPrivate(action, this))
@@ -43,9 +62,7 @@ WorkSpacesRequest::WorkSpacesRequest(const Action action)
 }
 
 /*!
- * @brief  Constructs a new WorkSpacesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 WorkSpacesRequest::WorkSpacesRequest(const WorkSpacesRequest &other)
     : QtAws::Core::AwsAbstractRequest(new WorkSpacesRequestPrivate(*other.d_func(), this))
@@ -54,13 +71,7 @@ WorkSpacesRequest::WorkSpacesRequest(const WorkSpacesRequest &other)
 }
 
 /*!
- * @brief  Assignment operator.
- *
- * Assigns \a other to \c this.
- *
- * @param  other  Instance to copy.
- *
- * @return  A reference to \c this.
+ * Sets the WorkSpacesRequest object to be equal to \a other.
  */
 WorkSpacesRequest& WorkSpacesRequest::operator=(const WorkSpacesRequest &other)
 {
@@ -72,14 +83,10 @@ WorkSpacesRequest& WorkSpacesRequest::operator=(const WorkSpacesRequest &other)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new WorkSpacesRequest object.
+ * Constructs aa WorkSpacesRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from WorkSpacesRequestPrivate.
- *
- * @param  d  Pointer to private data (aka D-Pointer).
  */
 WorkSpacesRequest::WorkSpacesRequest(WorkSpacesRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
@@ -87,7 +94,7 @@ WorkSpacesRequest::WorkSpacesRequest(WorkSpacesRequestPrivate * const d) : QtAws
 }
 
 /*!
- * \brief Returns the WorkSpaces action to be performed by this request.
+ * Returns the WorkSpaces action to be performed by this request.
  */
 WorkSpacesRequest::Action WorkSpacesRequest::action() const
 {
@@ -96,7 +103,7 @@ WorkSpacesRequest::Action WorkSpacesRequest::action() const
 }
 
 /*!
- * \brief Returns the name of the WorkSpaces action to be performed by this request.
+ * Returns the name of the WorkSpaces action to be performed by this request.
  */
 QString WorkSpacesRequest::actionString() const
 {
@@ -104,7 +111,7 @@ QString WorkSpacesRequest::actionString() const
 }
 
 /*!
- * \brief Returns the WorkSpaces API version implemented by this request.
+ * Returns the WorkSpaces API version implemented by this request.
  */
 QString WorkSpacesRequest::apiVersion() const
 {
@@ -113,7 +120,7 @@ QString WorkSpacesRequest::apiVersion() const
 }
 
 /*!
- * @brief Set the WorkSpaces action to be performed by this request to \a action.
+ * Sets the WorkSpaces action to be performed by this request to \a action.
  */
 void WorkSpacesRequest::setAction(const Action action)
 {
@@ -122,7 +129,7 @@ void WorkSpacesRequest::setAction(const Action action)
 }
 
 /*!
- * Set the WorkSpaces API version to include in this request to \a version.
+ * Sets the WorkSpaces API version to include in this request to \a version.
  */
 void WorkSpacesRequest::setApiVersion(const QString &version)
 {
@@ -131,7 +138,7 @@ void WorkSpacesRequest::setApiVersion(const QString &version)
 }
 
 /*!
- * \brief Returns \c true if this request is the same as \a other.
+ * Returns \c true if this request is equal to \a other; \c false otherwise.
  *
  * Note, most derived *Request classes do not need to provider their own
  * implementations of this function, since most such request classes rely on
@@ -146,8 +153,8 @@ bool WorkSpacesRequest::operator==(const WorkSpacesRequest &other) const
             (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
-/*!
- * @brief  Check if \a queueName is a valid WorkSpaces queue name.
+/*
+ * Returns \c tue if \a queueName is a valid WorkSpaces queue name.
  *
  * @par From WorkSpaces FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
@@ -166,9 +173,8 @@ bool WorkSpacesRequest::operator==(const WorkSpacesRequest &other) const
 }*/
 
 /*!
- * \brief Removes the a \a name parameter from this request.
- *
- * Returns the count of paramters removed (typically \c 0 or \c 1).
+ * Removes the a \a name parameter from the request, then returns the number of
+ * paramters removed (typically \c 0 or \c 1).
  */
 int WorkSpacesRequest::clearParameter(const QString &name)
 {
@@ -177,7 +183,7 @@ int WorkSpacesRequest::clearParameter(const QString &name)
 }
 
 /*!
- * \brief Removes all parameters from this request.
+ * Removes all parameters from the request.
  */
 void WorkSpacesRequest::clearParameters()
 {
@@ -186,7 +192,7 @@ void WorkSpacesRequest::clearParameters()
 }
 
 /*!
- * \brief Returns the value of the \n name pararemter if set, otherwise \a defaultValue.
+ * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
 QVariant WorkSpacesRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
@@ -195,7 +201,7 @@ QVariant WorkSpacesRequest::parameter(const QString &name, const QVariant &defau
 }
 
 /*!
- * \brief Returns a map of parameters included in this request.
+ * Returns the parameters included in this request.
  */
 const QVariantMap &WorkSpacesRequest::parameters() const
 {
@@ -204,7 +210,7 @@ const QVariantMap &WorkSpacesRequest::parameters() const
 }
 
 /*!
- * \brief Sets the \a name parameter to \a value.
+ * Sets the \a name parameter to \a value.
  */
 void WorkSpacesRequest::setParameter(const QString &name, const QVariant &value)
 {
@@ -213,9 +219,8 @@ void WorkSpacesRequest::setParameter(const QString &name, const QVariant &value)
 }
 
 /*!
- * \brief Sets the map of paramters for this request to \a parameters.
- *
- * Any request parameters set previously will be discarded.
+ * Sets the paramters for this request to \a parameters. Any request parameters
+ * set previously will be discarded.
  */
 void WorkSpacesRequest::setParameters(const QVariantMap &parameters)
 {
@@ -224,11 +229,12 @@ void WorkSpacesRequest::setParameters(const QVariantMap &parameters)
 }
 
 /*!
- * \brief Returns a network request for this WorkSpaces request using the given \a endpoint.
+ * Returns a network request for the WorkSpaces request using the given
+ * \a endpoint.
  *
- * This WorkSpaces implementation builds request URLs by combining the common query
- * parameters (such as Action and Version), with any that have been added (via
- * setParameter) by child classes.
+ * This WorkSpaces implementation builds request URLs by combining the
+ * common query parameters (such as Action and Version), with any that have
+ * been added (via setParameter) by child classes.
  */
 QNetworkRequest WorkSpacesRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -239,17 +245,16 @@ QNetworkRequest WorkSpacesRequest::unsignedRequest(const QUrl &endpoint) const
 }
 
 /*!
+ * \class QtAws::WorkSpaces::WorkSpacesRequestPrivate
+ * \brief The WorkSpacesRequestPrivate class provides private implementation for WorkSpacesRequest.
  * \internal
  *
- * \class  WorkSpacesRequestPrivate
- *
- * \brief  Private implementation for WorkSpacesRequest.
+ * \inmodule QtAwsWorkSpaces
  */
 
 /*!
- * \internal
- *
- * \brief Constructs a new WorkSpacesRequestPrivate object.
+ * Constructs a WorkSpacesRequestPrivate object for WorkSpaces \a action with,
+ * public implementation \a q.
  */
 WorkSpacesRequestPrivate::WorkSpacesRequestPrivate(const WorkSpacesRequest::Action action, WorkSpacesRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
@@ -258,9 +263,7 @@ WorkSpacesRequestPrivate::WorkSpacesRequestPrivate(const WorkSpacesRequest::Acti
 }
 
 /*!
- * \internal
- *
- * \brief Constructs a new WorkSpacesRequestPrivate object, copying an existing one.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
@@ -276,15 +279,12 @@ WorkSpacesRequestPrivate::WorkSpacesRequestPrivate(const WorkSpacesRequestPrivat
 }
 
 /*!
- * \internal
- *
- * \brief Returns a string representing \a action.
+ * Returns a string represention of \a action, or a null string if \a action is
+ * invalid.
  *
  * This function converts WorkSpacesRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the WorkSpaces service's Action
  * query parameters.
- *
- * @return A string representing \a action, or a null string if \a action is invalid.
  */
 QString WorkSpacesRequestPrivate::toString(const WorkSpacesRequest::Action &action)
 {

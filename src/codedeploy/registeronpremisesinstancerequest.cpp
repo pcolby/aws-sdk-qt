@@ -27,10 +27,9 @@ namespace CodeDeploy {
 
 /*!
  * \class QtAws::CodeDeploy::RegisterOnPremisesInstanceRequest
- *
  * \brief The RegisterOnPremisesInstanceRequest class provides an interface for CodeDeploy RegisterOnPremisesInstance requests.
  *
- * \ingroup CodeDeploy
+ * \inmodule QtAwsCodeDeploy
  *
  *  <fullname>AWS CodeDeploy</fullname>
  * 
@@ -118,9 +117,7 @@ namespace CodeDeploy {
  */
 
 /*!
- * @brief  Constructs a new RegisterOnPremisesInstanceRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 RegisterOnPremisesInstanceRequest::RegisterOnPremisesInstanceRequest(const RegisterOnPremisesInstanceRequest &other)
     : CodeDeployRequest(new RegisterOnPremisesInstanceRequestPrivate(*other.d_func(), this))
@@ -129,7 +126,7 @@ RegisterOnPremisesInstanceRequest::RegisterOnPremisesInstanceRequest(const Regis
 }
 
 /*!
- * @brief  Constructs a new RegisterOnPremisesInstanceRequest object.
+ * Constructs a RegisterOnPremisesInstanceRequest object.
  */
 RegisterOnPremisesInstanceRequest::RegisterOnPremisesInstanceRequest()
     : CodeDeployRequest(new RegisterOnPremisesInstanceRequestPrivate(CodeDeployRequest::RegisterOnPremisesInstanceAction, this))
@@ -147,14 +144,9 @@ bool RegisterOnPremisesInstanceRequest::isValid() const
 
 
 /*!
- * @brief  Construct an RegisterOnPremisesInstanceResponse object.
+ * Returns a RegisterOnPremisesInstanceResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An RegisterOnPremisesInstanceResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CodeDeployClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * RegisterOnPremisesInstanceRequest::response(QNetworkReply * const reply) const
 {
@@ -162,20 +154,17 @@ QtAws::Core::AwsAbstractResponse * RegisterOnPremisesInstanceRequest::response(Q
 }
 
 /*!
- * @internal
+ * \class QtAws::CodeDeploy::RegisterOnPremisesInstanceRequestPrivate
+ * \brief The RegisterOnPremisesInstanceRequestPrivate class provides private implementation for RegisterOnPremisesInstanceRequest.
+ * \internal
  *
- * @class  RegisterOnPremisesInstanceRequestPrivate
- *
- * @brief  Private implementation for RegisterOnPremisesInstanceRequest.
+ * \inmodule QtAwsCodeDeploy
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new RegisterOnPremisesInstanceRequestPrivate object.
- *
- * @param  action  CodeDeploy action being performed.
- * @param  q       Pointer to this object's public RegisterOnPremisesInstanceRequest instance.
+ * Constructs a RegisterOnPremisesInstanceRequestPrivate object for CodeDeploy \a action with,
+ * public implementation \a q.
  */
 RegisterOnPremisesInstanceRequestPrivate::RegisterOnPremisesInstanceRequestPrivate(
     const CodeDeployRequest::Action action, RegisterOnPremisesInstanceRequest * const q)
@@ -185,15 +174,10 @@ RegisterOnPremisesInstanceRequestPrivate::RegisterOnPremisesInstanceRequestPriva
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RegisterOnPremisesInstanceRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the RegisterOnPremisesInstanceRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public RegisterOnPremisesInstanceRequest instance.
  */
 RegisterOnPremisesInstanceRequestPrivate::RegisterOnPremisesInstanceRequestPrivate(
     const RegisterOnPremisesInstanceRequestPrivate &other, RegisterOnPremisesInstanceRequest * const q)

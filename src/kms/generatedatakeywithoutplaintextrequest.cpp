@@ -27,10 +27,9 @@ namespace KMS {
 
 /*!
  * \class QtAws::KMS::GenerateDataKeyWithoutPlaintextRequest
- *
  * \brief The GenerateDataKeyWithoutPlaintextRequest class provides an interface for KMS GenerateDataKeyWithoutPlaintext requests.
  *
- * \ingroup KMS
+ * \inmodule QtAwsKMS
  *
  *  <fullname>AWS Key Management Service</fullname>
  * 
@@ -136,9 +135,7 @@ namespace KMS {
  */
 
 /*!
- * @brief  Constructs a new GenerateDataKeyWithoutPlaintextRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GenerateDataKeyWithoutPlaintextRequest::GenerateDataKeyWithoutPlaintextRequest(const GenerateDataKeyWithoutPlaintextRequest &other)
     : KMSRequest(new GenerateDataKeyWithoutPlaintextRequestPrivate(*other.d_func(), this))
@@ -147,7 +144,7 @@ GenerateDataKeyWithoutPlaintextRequest::GenerateDataKeyWithoutPlaintextRequest(c
 }
 
 /*!
- * @brief  Constructs a new GenerateDataKeyWithoutPlaintextRequest object.
+ * Constructs a GenerateDataKeyWithoutPlaintextRequest object.
  */
 GenerateDataKeyWithoutPlaintextRequest::GenerateDataKeyWithoutPlaintextRequest()
     : KMSRequest(new GenerateDataKeyWithoutPlaintextRequestPrivate(KMSRequest::GenerateDataKeyWithoutPlaintextAction, this))
@@ -165,14 +162,9 @@ bool GenerateDataKeyWithoutPlaintextRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GenerateDataKeyWithoutPlaintextResponse object.
+ * Returns a GenerateDataKeyWithoutPlaintextResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GenerateDataKeyWithoutPlaintextResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  KMSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GenerateDataKeyWithoutPlaintextRequest::response(QNetworkReply * const reply) const
 {
@@ -180,20 +172,17 @@ QtAws::Core::AwsAbstractResponse * GenerateDataKeyWithoutPlaintextRequest::respo
 }
 
 /*!
- * @internal
+ * \class QtAws::KMS::GenerateDataKeyWithoutPlaintextRequestPrivate
+ * \brief The GenerateDataKeyWithoutPlaintextRequestPrivate class provides private implementation for GenerateDataKeyWithoutPlaintextRequest.
+ * \internal
  *
- * @class  GenerateDataKeyWithoutPlaintextRequestPrivate
- *
- * @brief  Private implementation for GenerateDataKeyWithoutPlaintextRequest.
+ * \inmodule QtAwsKMS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GenerateDataKeyWithoutPlaintextRequestPrivate object.
- *
- * @param  action  KMS action being performed.
- * @param  q       Pointer to this object's public GenerateDataKeyWithoutPlaintextRequest instance.
+ * Constructs a GenerateDataKeyWithoutPlaintextRequestPrivate object for KMS \a action with,
+ * public implementation \a q.
  */
 GenerateDataKeyWithoutPlaintextRequestPrivate::GenerateDataKeyWithoutPlaintextRequestPrivate(
     const KMSRequest::Action action, GenerateDataKeyWithoutPlaintextRequest * const q)
@@ -203,15 +192,10 @@ GenerateDataKeyWithoutPlaintextRequestPrivate::GenerateDataKeyWithoutPlaintextRe
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GenerateDataKeyWithoutPlaintextRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GenerateDataKeyWithoutPlaintextRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GenerateDataKeyWithoutPlaintextRequest instance.
  */
 GenerateDataKeyWithoutPlaintextRequestPrivate::GenerateDataKeyWithoutPlaintextRequestPrivate(
     const GenerateDataKeyWithoutPlaintextRequestPrivate &other, GenerateDataKeyWithoutPlaintextRequest * const q)

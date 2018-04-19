@@ -27,10 +27,9 @@ namespace Greengrass {
 
 /*!
  * \class QtAws::Greengrass::GetGroupCertificateConfigurationRequest
- *
  * \brief The GetGroupCertificateConfigurationRequest class provides an interface for Greengrass GetGroupCertificateConfiguration requests.
  *
- * \ingroup Greengrass
+ * \inmodule QtAwsGreengrass
  *
  *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
  *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
@@ -40,9 +39,7 @@ namespace Greengrass {
  */
 
 /*!
- * @brief  Constructs a new GetGroupCertificateConfigurationRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetGroupCertificateConfigurationRequest::GetGroupCertificateConfigurationRequest(const GetGroupCertificateConfigurationRequest &other)
     : GreengrassRequest(new GetGroupCertificateConfigurationRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ GetGroupCertificateConfigurationRequest::GetGroupCertificateConfigurationRequest
 }
 
 /*!
- * @brief  Constructs a new GetGroupCertificateConfigurationRequest object.
+ * Constructs a GetGroupCertificateConfigurationRequest object.
  */
 GetGroupCertificateConfigurationRequest::GetGroupCertificateConfigurationRequest()
     : GreengrassRequest(new GetGroupCertificateConfigurationRequestPrivate(GreengrassRequest::GetGroupCertificateConfigurationAction, this))
@@ -69,14 +66,9 @@ bool GetGroupCertificateConfigurationRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetGroupCertificateConfigurationResponse object.
+ * Returns a GetGroupCertificateConfigurationResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetGroupCertificateConfigurationResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GreengrassClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetGroupCertificateConfigurationRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * GetGroupCertificateConfigurationRequest::resp
 }
 
 /*!
- * @internal
+ * \class QtAws::Greengrass::GetGroupCertificateConfigurationRequestPrivate
+ * \brief The GetGroupCertificateConfigurationRequestPrivate class provides private implementation for GetGroupCertificateConfigurationRequest.
+ * \internal
  *
- * @class  GetGroupCertificateConfigurationRequestPrivate
- *
- * @brief  Private implementation for GetGroupCertificateConfigurationRequest.
+ * \inmodule QtAwsGreengrass
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetGroupCertificateConfigurationRequestPrivate object.
- *
- * @param  action  Greengrass action being performed.
- * @param  q       Pointer to this object's public GetGroupCertificateConfigurationRequest instance.
+ * Constructs a GetGroupCertificateConfigurationRequestPrivate object for Greengrass \a action with,
+ * public implementation \a q.
  */
 GetGroupCertificateConfigurationRequestPrivate::GetGroupCertificateConfigurationRequestPrivate(
     const GreengrassRequest::Action action, GetGroupCertificateConfigurationRequest * const q)
@@ -107,15 +96,10 @@ GetGroupCertificateConfigurationRequestPrivate::GetGroupCertificateConfiguration
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetGroupCertificateConfigurationRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetGroupCertificateConfigurationRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetGroupCertificateConfigurationRequest instance.
  */
 GetGroupCertificateConfigurationRequestPrivate::GetGroupCertificateConfigurationRequestPrivate(
     const GetGroupCertificateConfigurationRequestPrivate &other, GetGroupCertificateConfigurationRequest * const q)

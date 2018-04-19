@@ -27,10 +27,9 @@ namespace AutoScaling {
 
 /*!
  * \class QtAws::AutoScaling::ExitStandbyRequest
- *
  * \brief The ExitStandbyRequest class provides an interface for AutoScaling ExitStandby requests.
  *
- * \ingroup AutoScaling
+ * \inmodule QtAwsAutoScaling
  *
  *  <fullname>Amazon EC2 Auto Scaling</fullname>
  * 
@@ -42,9 +41,7 @@ namespace AutoScaling {
  */
 
 /*!
- * @brief  Constructs a new ExitStandbyRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ExitStandbyRequest::ExitStandbyRequest(const ExitStandbyRequest &other)
     : AutoScalingRequest(new ExitStandbyRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ ExitStandbyRequest::ExitStandbyRequest(const ExitStandbyRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ExitStandbyRequest object.
+ * Constructs a ExitStandbyRequest object.
  */
 ExitStandbyRequest::ExitStandbyRequest()
     : AutoScalingRequest(new ExitStandbyRequestPrivate(AutoScalingRequest::ExitStandbyAction, this))
@@ -71,14 +68,9 @@ bool ExitStandbyRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ExitStandbyResponse object.
+ * Returns a ExitStandbyResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ExitStandbyResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AutoScalingClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ExitStandbyRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * ExitStandbyRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::AutoScaling::ExitStandbyRequestPrivate
+ * \brief The ExitStandbyRequestPrivate class provides private implementation for ExitStandbyRequest.
+ * \internal
  *
- * @class  ExitStandbyRequestPrivate
- *
- * @brief  Private implementation for ExitStandbyRequest.
+ * \inmodule QtAwsAutoScaling
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ExitStandbyRequestPrivate object.
- *
- * @param  action  AutoScaling action being performed.
- * @param  q       Pointer to this object's public ExitStandbyRequest instance.
+ * Constructs a ExitStandbyRequestPrivate object for AutoScaling \a action with,
+ * public implementation \a q.
  */
 ExitStandbyRequestPrivate::ExitStandbyRequestPrivate(
     const AutoScalingRequest::Action action, ExitStandbyRequest * const q)
@@ -109,15 +98,10 @@ ExitStandbyRequestPrivate::ExitStandbyRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ExitStandbyRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ExitStandbyRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ExitStandbyRequest instance.
  */
 ExitStandbyRequestPrivate::ExitStandbyRequestPrivate(
     const ExitStandbyRequestPrivate &other, ExitStandbyRequest * const q)

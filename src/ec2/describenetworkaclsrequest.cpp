@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DescribeNetworkAclsRequest
- *
  * \brief The DescribeNetworkAclsRequest class provides an interface for EC2 DescribeNetworkAcls requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DescribeNetworkAclsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeNetworkAclsRequest::DescribeNetworkAclsRequest(const DescribeNetworkAclsRequest &other)
     : EC2Request(new DescribeNetworkAclsRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ DescribeNetworkAclsRequest::DescribeNetworkAclsRequest(const DescribeNetworkAcls
 }
 
 /*!
- * @brief  Constructs a new DescribeNetworkAclsRequest object.
+ * Constructs a DescribeNetworkAclsRequest object.
  */
 DescribeNetworkAclsRequest::DescribeNetworkAclsRequest()
     : EC2Request(new DescribeNetworkAclsRequestPrivate(EC2Request::DescribeNetworkAclsAction, this))
@@ -70,14 +67,9 @@ bool DescribeNetworkAclsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeNetworkAclsResponse object.
+ * Returns a DescribeNetworkAclsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeNetworkAclsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeNetworkAclsRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * DescribeNetworkAclsRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::DescribeNetworkAclsRequestPrivate
+ * \brief The DescribeNetworkAclsRequestPrivate class provides private implementation for DescribeNetworkAclsRequest.
+ * \internal
  *
- * @class  DescribeNetworkAclsRequestPrivate
- *
- * @brief  Private implementation for DescribeNetworkAclsRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeNetworkAclsRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public DescribeNetworkAclsRequest instance.
+ * Constructs a DescribeNetworkAclsRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 DescribeNetworkAclsRequestPrivate::DescribeNetworkAclsRequestPrivate(
     const EC2Request::Action action, DescribeNetworkAclsRequest * const q)
@@ -108,15 +97,10 @@ DescribeNetworkAclsRequestPrivate::DescribeNetworkAclsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeNetworkAclsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeNetworkAclsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeNetworkAclsRequest instance.
  */
 DescribeNetworkAclsRequestPrivate::DescribeNetworkAclsRequestPrivate(
     const DescribeNetworkAclsRequestPrivate &other, DescribeNetworkAclsRequest * const q)

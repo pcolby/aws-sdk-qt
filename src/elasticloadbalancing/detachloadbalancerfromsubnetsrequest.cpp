@@ -27,10 +27,9 @@ namespace ElasticLoadBalancing {
 
 /*!
  * \class QtAws::ElasticLoadBalancing::DetachLoadBalancerFromSubnetsRequest
- *
  * \brief The DetachLoadBalancerFromSubnetsRequest class provides an interface for ElasticLoadBalancing DetachLoadBalancerFromSubnets requests.
  *
- * \ingroup ElasticLoadBalancing
+ * \inmodule QtAwsElasticLoadBalancing
  *
  *  <fullname>Elastic Load Balancing</fullname>
  * 
@@ -65,9 +64,7 @@ namespace ElasticLoadBalancing {
  */
 
 /*!
- * @brief  Constructs a new DetachLoadBalancerFromSubnetsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DetachLoadBalancerFromSubnetsRequest::DetachLoadBalancerFromSubnetsRequest(const DetachLoadBalancerFromSubnetsRequest &other)
     : ElasticLoadBalancingRequest(new DetachLoadBalancerFromSubnetsRequestPrivate(*other.d_func(), this))
@@ -76,7 +73,7 @@ DetachLoadBalancerFromSubnetsRequest::DetachLoadBalancerFromSubnetsRequest(const
 }
 
 /*!
- * @brief  Constructs a new DetachLoadBalancerFromSubnetsRequest object.
+ * Constructs a DetachLoadBalancerFromSubnetsRequest object.
  */
 DetachLoadBalancerFromSubnetsRequest::DetachLoadBalancerFromSubnetsRequest()
     : ElasticLoadBalancingRequest(new DetachLoadBalancerFromSubnetsRequestPrivate(ElasticLoadBalancingRequest::DetachLoadBalancerFromSubnetsAction, this))
@@ -94,14 +91,9 @@ bool DetachLoadBalancerFromSubnetsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DetachLoadBalancerFromSubnetsResponse object.
+ * Returns a DetachLoadBalancerFromSubnetsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DetachLoadBalancerFromSubnetsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ElasticLoadBalancingClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DetachLoadBalancerFromSubnetsRequest::response(QNetworkReply * const reply) const
 {
@@ -109,20 +101,17 @@ QtAws::Core::AwsAbstractResponse * DetachLoadBalancerFromSubnetsRequest::respons
 }
 
 /*!
- * @internal
+ * \class QtAws::ElasticLoadBalancing::DetachLoadBalancerFromSubnetsRequestPrivate
+ * \brief The DetachLoadBalancerFromSubnetsRequestPrivate class provides private implementation for DetachLoadBalancerFromSubnetsRequest.
+ * \internal
  *
- * @class  DetachLoadBalancerFromSubnetsRequestPrivate
- *
- * @brief  Private implementation for DetachLoadBalancerFromSubnetsRequest.
+ * \inmodule QtAwsElasticLoadBalancing
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DetachLoadBalancerFromSubnetsRequestPrivate object.
- *
- * @param  action  ElasticLoadBalancing action being performed.
- * @param  q       Pointer to this object's public DetachLoadBalancerFromSubnetsRequest instance.
+ * Constructs a DetachLoadBalancerFromSubnetsRequestPrivate object for ElasticLoadBalancing \a action with,
+ * public implementation \a q.
  */
 DetachLoadBalancerFromSubnetsRequestPrivate::DetachLoadBalancerFromSubnetsRequestPrivate(
     const ElasticLoadBalancingRequest::Action action, DetachLoadBalancerFromSubnetsRequest * const q)
@@ -132,15 +121,10 @@ DetachLoadBalancerFromSubnetsRequestPrivate::DetachLoadBalancerFromSubnetsReques
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DetachLoadBalancerFromSubnetsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DetachLoadBalancerFromSubnetsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DetachLoadBalancerFromSubnetsRequest instance.
  */
 DetachLoadBalancerFromSubnetsRequestPrivate::DetachLoadBalancerFromSubnetsRequestPrivate(
     const DetachLoadBalancerFromSubnetsRequestPrivate &other, DetachLoadBalancerFromSubnetsRequest * const q)

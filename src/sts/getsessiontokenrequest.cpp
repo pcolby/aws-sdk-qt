@@ -27,10 +27,9 @@ namespace STS {
 
 /*!
  * \class QtAws::STS::GetSessionTokenRequest
- *
  * \brief The GetSessionTokenRequest class provides an interface for STS GetSessionToken requests.
  *
- * \ingroup STS
+ * \inmodule QtAwsSTS
  *
  *  <fullname>AWS Security Token Service</fullname>
  * 
@@ -95,9 +94,7 @@ namespace STS {
  */
 
 /*!
- * @brief  Constructs a new GetSessionTokenRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetSessionTokenRequest::GetSessionTokenRequest(const GetSessionTokenRequest &other)
     : STSRequest(new GetSessionTokenRequestPrivate(*other.d_func(), this))
@@ -106,7 +103,7 @@ GetSessionTokenRequest::GetSessionTokenRequest(const GetSessionTokenRequest &oth
 }
 
 /*!
- * @brief  Constructs a new GetSessionTokenRequest object.
+ * Constructs a GetSessionTokenRequest object.
  */
 GetSessionTokenRequest::GetSessionTokenRequest()
     : STSRequest(new GetSessionTokenRequestPrivate(STSRequest::GetSessionTokenAction, this))
@@ -124,14 +121,9 @@ bool GetSessionTokenRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetSessionTokenResponse object.
+ * Returns a GetSessionTokenResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetSessionTokenResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  STSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetSessionTokenRequest::response(QNetworkReply * const reply) const
 {
@@ -139,20 +131,17 @@ QtAws::Core::AwsAbstractResponse * GetSessionTokenRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::STS::GetSessionTokenRequestPrivate
+ * \brief The GetSessionTokenRequestPrivate class provides private implementation for GetSessionTokenRequest.
+ * \internal
  *
- * @class  GetSessionTokenRequestPrivate
- *
- * @brief  Private implementation for GetSessionTokenRequest.
+ * \inmodule QtAwsSTS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetSessionTokenRequestPrivate object.
- *
- * @param  action  STS action being performed.
- * @param  q       Pointer to this object's public GetSessionTokenRequest instance.
+ * Constructs a GetSessionTokenRequestPrivate object for STS \a action with,
+ * public implementation \a q.
  */
 GetSessionTokenRequestPrivate::GetSessionTokenRequestPrivate(
     const STSRequest::Action action, GetSessionTokenRequest * const q)
@@ -162,15 +151,10 @@ GetSessionTokenRequestPrivate::GetSessionTokenRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetSessionTokenRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetSessionTokenRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetSessionTokenRequest instance.
  */
 GetSessionTokenRequestPrivate::GetSessionTokenRequestPrivate(
     const GetSessionTokenRequestPrivate &other, GetSessionTokenRequest * const q)

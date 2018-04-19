@@ -27,10 +27,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::ListThingRegistrationTaskReportsRequest
- *
  * \brief The ListThingRegistrationTaskReportsRequest class provides an interface for IoT ListThingRegistrationTaskReports requests.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -48,9 +47,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new ListThingRegistrationTaskReportsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListThingRegistrationTaskReportsRequest::ListThingRegistrationTaskReportsRequest(const ListThingRegistrationTaskReportsRequest &other)
     : IoTRequest(new ListThingRegistrationTaskReportsRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ ListThingRegistrationTaskReportsRequest::ListThingRegistrationTaskReportsRequest
 }
 
 /*!
- * @brief  Constructs a new ListThingRegistrationTaskReportsRequest object.
+ * Constructs a ListThingRegistrationTaskReportsRequest object.
  */
 ListThingRegistrationTaskReportsRequest::ListThingRegistrationTaskReportsRequest()
     : IoTRequest(new ListThingRegistrationTaskReportsRequestPrivate(IoTRequest::ListThingRegistrationTaskReportsAction, this))
@@ -77,14 +74,9 @@ bool ListThingRegistrationTaskReportsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListThingRegistrationTaskReportsResponse object.
+ * Returns a ListThingRegistrationTaskReportsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListThingRegistrationTaskReportsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IoTClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListThingRegistrationTaskReportsRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * ListThingRegistrationTaskReportsRequest::resp
 }
 
 /*!
- * @internal
+ * \class QtAws::IoT::ListThingRegistrationTaskReportsRequestPrivate
+ * \brief The ListThingRegistrationTaskReportsRequestPrivate class provides private implementation for ListThingRegistrationTaskReportsRequest.
+ * \internal
  *
- * @class  ListThingRegistrationTaskReportsRequestPrivate
- *
- * @brief  Private implementation for ListThingRegistrationTaskReportsRequest.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListThingRegistrationTaskReportsRequestPrivate object.
- *
- * @param  action  IoT action being performed.
- * @param  q       Pointer to this object's public ListThingRegistrationTaskReportsRequest instance.
+ * Constructs a ListThingRegistrationTaskReportsRequestPrivate object for IoT \a action with,
+ * public implementation \a q.
  */
 ListThingRegistrationTaskReportsRequestPrivate::ListThingRegistrationTaskReportsRequestPrivate(
     const IoTRequest::Action action, ListThingRegistrationTaskReportsRequest * const q)
@@ -115,15 +104,10 @@ ListThingRegistrationTaskReportsRequestPrivate::ListThingRegistrationTaskReports
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListThingRegistrationTaskReportsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListThingRegistrationTaskReportsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListThingRegistrationTaskReportsRequest instance.
  */
 ListThingRegistrationTaskReportsRequestPrivate::ListThingRegistrationTaskReportsRequestPrivate(
     const ListThingRegistrationTaskReportsRequestPrivate &other, ListThingRegistrationTaskReportsRequest * const q)

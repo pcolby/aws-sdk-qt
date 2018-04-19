@@ -27,10 +27,9 @@ namespace StorageGateway {
 
 /*!
  * \class QtAws::StorageGateway::DescribeSnapshotScheduleRequest
- *
  * \brief The DescribeSnapshotScheduleRequest class provides an interface for StorageGateway DescribeSnapshotSchedule requests.
  *
- * \ingroup StorageGateway
+ * \inmodule QtAwsStorageGateway
  *
  *  <fullname>AWS Storage Gateway Service</fullname>
  * 
@@ -106,9 +105,7 @@ namespace StorageGateway {
  */
 
 /*!
- * @brief  Constructs a new DescribeSnapshotScheduleRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeSnapshotScheduleRequest::DescribeSnapshotScheduleRequest(const DescribeSnapshotScheduleRequest &other)
     : StorageGatewayRequest(new DescribeSnapshotScheduleRequestPrivate(*other.d_func(), this))
@@ -117,7 +114,7 @@ DescribeSnapshotScheduleRequest::DescribeSnapshotScheduleRequest(const DescribeS
 }
 
 /*!
- * @brief  Constructs a new DescribeSnapshotScheduleRequest object.
+ * Constructs a DescribeSnapshotScheduleRequest object.
  */
 DescribeSnapshotScheduleRequest::DescribeSnapshotScheduleRequest()
     : StorageGatewayRequest(new DescribeSnapshotScheduleRequestPrivate(StorageGatewayRequest::DescribeSnapshotScheduleAction, this))
@@ -135,14 +132,9 @@ bool DescribeSnapshotScheduleRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeSnapshotScheduleResponse object.
+ * Returns a DescribeSnapshotScheduleResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeSnapshotScheduleResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  StorageGatewayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeSnapshotScheduleRequest::response(QNetworkReply * const reply) const
 {
@@ -150,20 +142,17 @@ QtAws::Core::AwsAbstractResponse * DescribeSnapshotScheduleRequest::response(QNe
 }
 
 /*!
- * @internal
+ * \class QtAws::StorageGateway::DescribeSnapshotScheduleRequestPrivate
+ * \brief The DescribeSnapshotScheduleRequestPrivate class provides private implementation for DescribeSnapshotScheduleRequest.
+ * \internal
  *
- * @class  DescribeSnapshotScheduleRequestPrivate
- *
- * @brief  Private implementation for DescribeSnapshotScheduleRequest.
+ * \inmodule QtAwsStorageGateway
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeSnapshotScheduleRequestPrivate object.
- *
- * @param  action  StorageGateway action being performed.
- * @param  q       Pointer to this object's public DescribeSnapshotScheduleRequest instance.
+ * Constructs a DescribeSnapshotScheduleRequestPrivate object for StorageGateway \a action with,
+ * public implementation \a q.
  */
 DescribeSnapshotScheduleRequestPrivate::DescribeSnapshotScheduleRequestPrivate(
     const StorageGatewayRequest::Action action, DescribeSnapshotScheduleRequest * const q)
@@ -173,15 +162,10 @@ DescribeSnapshotScheduleRequestPrivate::DescribeSnapshotScheduleRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeSnapshotScheduleRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeSnapshotScheduleRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeSnapshotScheduleRequest instance.
  */
 DescribeSnapshotScheduleRequestPrivate::DescribeSnapshotScheduleRequestPrivate(
     const DescribeSnapshotScheduleRequestPrivate &other, DescribeSnapshotScheduleRequest * const q)

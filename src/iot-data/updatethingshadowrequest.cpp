@@ -27,10 +27,9 @@ namespace IoTDataPlane {
 
 /*!
  * \class QtAws::IoTDataPlane::UpdateThingShadowRequest
- *
  * \brief The UpdateThingShadowRequest class provides an interface for IoTDataPlane UpdateThingShadow requests.
  *
- * \ingroup IoTDataPlane
+ * \inmodule QtAwsIoTDataPlane
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -43,9 +42,7 @@ namespace IoTDataPlane {
  */
 
 /*!
- * @brief  Constructs a new UpdateThingShadowRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateThingShadowRequest::UpdateThingShadowRequest(const UpdateThingShadowRequest &other)
     : IoTDataPlaneRequest(new UpdateThingShadowRequestPrivate(*other.d_func(), this))
@@ -54,7 +51,7 @@ UpdateThingShadowRequest::UpdateThingShadowRequest(const UpdateThingShadowReques
 }
 
 /*!
- * @brief  Constructs a new UpdateThingShadowRequest object.
+ * Constructs a UpdateThingShadowRequest object.
  */
 UpdateThingShadowRequest::UpdateThingShadowRequest()
     : IoTDataPlaneRequest(new UpdateThingShadowRequestPrivate(IoTDataPlaneRequest::UpdateThingShadowAction, this))
@@ -72,14 +69,9 @@ bool UpdateThingShadowRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateThingShadowResponse object.
+ * Returns a UpdateThingShadowResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateThingShadowResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IoTDataPlaneClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateThingShadowRequest::response(QNetworkReply * const reply) const
 {
@@ -87,20 +79,17 @@ QtAws::Core::AwsAbstractResponse * UpdateThingShadowRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::IoTDataPlane::UpdateThingShadowRequestPrivate
+ * \brief The UpdateThingShadowRequestPrivate class provides private implementation for UpdateThingShadowRequest.
+ * \internal
  *
- * @class  UpdateThingShadowRequestPrivate
- *
- * @brief  Private implementation for UpdateThingShadowRequest.
+ * \inmodule QtAwsIoTDataPlane
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateThingShadowRequestPrivate object.
- *
- * @param  action  IoTDataPlane action being performed.
- * @param  q       Pointer to this object's public UpdateThingShadowRequest instance.
+ * Constructs a UpdateThingShadowRequestPrivate object for IoTDataPlane \a action with,
+ * public implementation \a q.
  */
 UpdateThingShadowRequestPrivate::UpdateThingShadowRequestPrivate(
     const IoTDataPlaneRequest::Action action, UpdateThingShadowRequest * const q)
@@ -110,15 +99,10 @@ UpdateThingShadowRequestPrivate::UpdateThingShadowRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateThingShadowRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateThingShadowRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateThingShadowRequest instance.
  */
 UpdateThingShadowRequestPrivate::UpdateThingShadowRequestPrivate(
     const UpdateThingShadowRequestPrivate &other, UpdateThingShadowRequest * const q)

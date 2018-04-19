@@ -27,10 +27,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::GetIntegrationRequest
- *
  * \brief The GetIntegrationRequest class provides an interface for APIGateway GetIntegration requests.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -42,9 +41,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new GetIntegrationRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetIntegrationRequest::GetIntegrationRequest(const GetIntegrationRequest &other)
     : APIGatewayRequest(new GetIntegrationRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ GetIntegrationRequest::GetIntegrationRequest(const GetIntegrationRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetIntegrationRequest object.
+ * Constructs a GetIntegrationRequest object.
  */
 GetIntegrationRequest::GetIntegrationRequest()
     : APIGatewayRequest(new GetIntegrationRequestPrivate(APIGatewayRequest::GetIntegrationAction, this))
@@ -71,14 +68,9 @@ bool GetIntegrationRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetIntegrationResponse object.
+ * Returns a GetIntegrationResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetIntegrationResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  APIGatewayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetIntegrationRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * GetIntegrationRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::APIGateway::GetIntegrationRequestPrivate
+ * \brief The GetIntegrationRequestPrivate class provides private implementation for GetIntegrationRequest.
+ * \internal
  *
- * @class  GetIntegrationRequestPrivate
- *
- * @brief  Private implementation for GetIntegrationRequest.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetIntegrationRequestPrivate object.
- *
- * @param  action  APIGateway action being performed.
- * @param  q       Pointer to this object's public GetIntegrationRequest instance.
+ * Constructs a GetIntegrationRequestPrivate object for APIGateway \a action with,
+ * public implementation \a q.
  */
 GetIntegrationRequestPrivate::GetIntegrationRequestPrivate(
     const APIGatewayRequest::Action action, GetIntegrationRequest * const q)
@@ -109,15 +98,10 @@ GetIntegrationRequestPrivate::GetIntegrationRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetIntegrationRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetIntegrationRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetIntegrationRequest instance.
  */
 GetIntegrationRequestPrivate::GetIntegrationRequestPrivate(
     const GetIntegrationRequestPrivate &other, GetIntegrationRequest * const q)

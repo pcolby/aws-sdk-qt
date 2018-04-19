@@ -27,10 +27,9 @@ namespace CognitoSync {
 
 /*!
  * \class QtAws::CognitoSync::ListDatasetsRequest
- *
  * \brief The ListDatasetsRequest class provides an interface for CognitoSync ListDatasets requests.
  *
- * \ingroup CognitoSync
+ * \inmodule QtAwsCognitoSync
  *
  *  <fullname>Amazon Cognito Sync</fullname>
  * 
@@ -57,9 +56,7 @@ namespace CognitoSync {
  */
 
 /*!
- * @brief  Constructs a new ListDatasetsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListDatasetsRequest::ListDatasetsRequest(const ListDatasetsRequest &other)
     : CognitoSyncRequest(new ListDatasetsRequestPrivate(*other.d_func(), this))
@@ -68,7 +65,7 @@ ListDatasetsRequest::ListDatasetsRequest(const ListDatasetsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ListDatasetsRequest object.
+ * Constructs a ListDatasetsRequest object.
  */
 ListDatasetsRequest::ListDatasetsRequest()
     : CognitoSyncRequest(new ListDatasetsRequestPrivate(CognitoSyncRequest::ListDatasetsAction, this))
@@ -86,14 +83,9 @@ bool ListDatasetsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListDatasetsResponse object.
+ * Returns a ListDatasetsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListDatasetsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CognitoSyncClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListDatasetsRequest::response(QNetworkReply * const reply) const
 {
@@ -101,20 +93,17 @@ QtAws::Core::AwsAbstractResponse * ListDatasetsRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::CognitoSync::ListDatasetsRequestPrivate
+ * \brief The ListDatasetsRequestPrivate class provides private implementation for ListDatasetsRequest.
+ * \internal
  *
- * @class  ListDatasetsRequestPrivate
- *
- * @brief  Private implementation for ListDatasetsRequest.
+ * \inmodule QtAwsCognitoSync
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListDatasetsRequestPrivate object.
- *
- * @param  action  CognitoSync action being performed.
- * @param  q       Pointer to this object's public ListDatasetsRequest instance.
+ * Constructs a ListDatasetsRequestPrivate object for CognitoSync \a action with,
+ * public implementation \a q.
  */
 ListDatasetsRequestPrivate::ListDatasetsRequestPrivate(
     const CognitoSyncRequest::Action action, ListDatasetsRequest * const q)
@@ -124,15 +113,10 @@ ListDatasetsRequestPrivate::ListDatasetsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListDatasetsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListDatasetsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListDatasetsRequest instance.
  */
 ListDatasetsRequestPrivate::ListDatasetsRequestPrivate(
     const ListDatasetsRequestPrivate &other, ListDatasetsRequest * const q)

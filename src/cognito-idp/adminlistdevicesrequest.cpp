@@ -27,10 +27,9 @@ namespace CognitoIdentityProvider {
 
 /*!
  * \class QtAws::CognitoIdentityProvider::AdminListDevicesRequest
- *
  * \brief The AdminListDevicesRequest class provides an interface for CognitoIdentityProvider AdminListDevices requests.
  *
- * \ingroup CognitoIdentityProvider
+ * \inmodule QtAwsCognitoIdentityProvider
  *
  *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
  *  authenticate a user to obtain tokens related to user identity and access
@@ -47,9 +46,7 @@ namespace CognitoIdentityProvider {
  */
 
 /*!
- * @brief  Constructs a new AdminListDevicesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AdminListDevicesRequest::AdminListDevicesRequest(const AdminListDevicesRequest &other)
     : CognitoIdentityProviderRequest(new AdminListDevicesRequestPrivate(*other.d_func(), this))
@@ -58,7 +55,7 @@ AdminListDevicesRequest::AdminListDevicesRequest(const AdminListDevicesRequest &
 }
 
 /*!
- * @brief  Constructs a new AdminListDevicesRequest object.
+ * Constructs a AdminListDevicesRequest object.
  */
 AdminListDevicesRequest::AdminListDevicesRequest()
     : CognitoIdentityProviderRequest(new AdminListDevicesRequestPrivate(CognitoIdentityProviderRequest::AdminListDevicesAction, this))
@@ -76,14 +73,9 @@ bool AdminListDevicesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AdminListDevicesResponse object.
+ * Returns a AdminListDevicesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AdminListDevicesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CognitoIdentityProviderClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AdminListDevicesRequest::response(QNetworkReply * const reply) const
 {
@@ -91,20 +83,17 @@ QtAws::Core::AwsAbstractResponse * AdminListDevicesRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::CognitoIdentityProvider::AdminListDevicesRequestPrivate
+ * \brief The AdminListDevicesRequestPrivate class provides private implementation for AdminListDevicesRequest.
+ * \internal
  *
- * @class  AdminListDevicesRequestPrivate
- *
- * @brief  Private implementation for AdminListDevicesRequest.
+ * \inmodule QtAwsCognitoIdentityProvider
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AdminListDevicesRequestPrivate object.
- *
- * @param  action  CognitoIdentityProvider action being performed.
- * @param  q       Pointer to this object's public AdminListDevicesRequest instance.
+ * Constructs a AdminListDevicesRequestPrivate object for CognitoIdentityProvider \a action with,
+ * public implementation \a q.
  */
 AdminListDevicesRequestPrivate::AdminListDevicesRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, AdminListDevicesRequest * const q)
@@ -114,15 +103,10 @@ AdminListDevicesRequestPrivate::AdminListDevicesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AdminListDevicesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AdminListDevicesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AdminListDevicesRequest instance.
  */
 AdminListDevicesRequestPrivate::AdminListDevicesRequestPrivate(
     const AdminListDevicesRequestPrivate &other, AdminListDevicesRequest * const q)

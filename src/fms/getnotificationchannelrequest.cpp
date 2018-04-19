@@ -27,10 +27,9 @@ namespace FMS {
 
 /*!
  * \class QtAws::FMS::GetNotificationChannelRequest
- *
  * \brief The GetNotificationChannelRequest class provides an interface for FMS GetNotificationChannel requests.
  *
- * \ingroup FMS
+ * \inmodule QtAwsFMS
  *
  *  <fullname>AWS Firewall Manager</fullname>
  * 
@@ -43,9 +42,7 @@ namespace FMS {
  */
 
 /*!
- * @brief  Constructs a new GetNotificationChannelRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetNotificationChannelRequest::GetNotificationChannelRequest(const GetNotificationChannelRequest &other)
     : FMSRequest(new GetNotificationChannelRequestPrivate(*other.d_func(), this))
@@ -54,7 +51,7 @@ GetNotificationChannelRequest::GetNotificationChannelRequest(const GetNotificati
 }
 
 /*!
- * @brief  Constructs a new GetNotificationChannelRequest object.
+ * Constructs a GetNotificationChannelRequest object.
  */
 GetNotificationChannelRequest::GetNotificationChannelRequest()
     : FMSRequest(new GetNotificationChannelRequestPrivate(FMSRequest::GetNotificationChannelAction, this))
@@ -72,14 +69,9 @@ bool GetNotificationChannelRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetNotificationChannelResponse object.
+ * Returns a GetNotificationChannelResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetNotificationChannelResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  FMSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetNotificationChannelRequest::response(QNetworkReply * const reply) const
 {
@@ -87,20 +79,17 @@ QtAws::Core::AwsAbstractResponse * GetNotificationChannelRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::FMS::GetNotificationChannelRequestPrivate
+ * \brief The GetNotificationChannelRequestPrivate class provides private implementation for GetNotificationChannelRequest.
+ * \internal
  *
- * @class  GetNotificationChannelRequestPrivate
- *
- * @brief  Private implementation for GetNotificationChannelRequest.
+ * \inmodule QtAwsFMS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetNotificationChannelRequestPrivate object.
- *
- * @param  action  FMS action being performed.
- * @param  q       Pointer to this object's public GetNotificationChannelRequest instance.
+ * Constructs a GetNotificationChannelRequestPrivate object for FMS \a action with,
+ * public implementation \a q.
  */
 GetNotificationChannelRequestPrivate::GetNotificationChannelRequestPrivate(
     const FMSRequest::Action action, GetNotificationChannelRequest * const q)
@@ -110,15 +99,10 @@ GetNotificationChannelRequestPrivate::GetNotificationChannelRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetNotificationChannelRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetNotificationChannelRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetNotificationChannelRequest instance.
  */
 GetNotificationChannelRequestPrivate::GetNotificationChannelRequestPrivate(
     const GetNotificationChannelRequestPrivate &other, GetNotificationChannelRequest * const q)

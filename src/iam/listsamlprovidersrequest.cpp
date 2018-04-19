@@ -27,10 +27,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::ListSAMLProvidersRequest
- *
  * \brief The ListSAMLProvidersRequest class provides an interface for IAM ListSAMLProviders requests.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -102,9 +101,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new ListSAMLProvidersRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListSAMLProvidersRequest::ListSAMLProvidersRequest(const ListSAMLProvidersRequest &other)
     : IAMRequest(new ListSAMLProvidersRequestPrivate(*other.d_func(), this))
@@ -113,7 +110,7 @@ ListSAMLProvidersRequest::ListSAMLProvidersRequest(const ListSAMLProvidersReques
 }
 
 /*!
- * @brief  Constructs a new ListSAMLProvidersRequest object.
+ * Constructs a ListSAMLProvidersRequest object.
  */
 ListSAMLProvidersRequest::ListSAMLProvidersRequest()
     : IAMRequest(new ListSAMLProvidersRequestPrivate(IAMRequest::ListSAMLProvidersAction, this))
@@ -131,14 +128,9 @@ bool ListSAMLProvidersRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListSAMLProvidersResponse object.
+ * Returns a ListSAMLProvidersResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListSAMLProvidersResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IAMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListSAMLProvidersRequest::response(QNetworkReply * const reply) const
 {
@@ -146,20 +138,17 @@ QtAws::Core::AwsAbstractResponse * ListSAMLProvidersRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::IAM::ListSAMLProvidersRequestPrivate
+ * \brief The ListSAMLProvidersRequestPrivate class provides private implementation for ListSAMLProvidersRequest.
+ * \internal
  *
- * @class  ListSAMLProvidersRequestPrivate
- *
- * @brief  Private implementation for ListSAMLProvidersRequest.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListSAMLProvidersRequestPrivate object.
- *
- * @param  action  IAM action being performed.
- * @param  q       Pointer to this object's public ListSAMLProvidersRequest instance.
+ * Constructs a ListSAMLProvidersRequestPrivate object for IAM \a action with,
+ * public implementation \a q.
  */
 ListSAMLProvidersRequestPrivate::ListSAMLProvidersRequestPrivate(
     const IAMRequest::Action action, ListSAMLProvidersRequest * const q)
@@ -169,15 +158,10 @@ ListSAMLProvidersRequestPrivate::ListSAMLProvidersRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListSAMLProvidersRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListSAMLProvidersRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListSAMLProvidersRequest instance.
  */
 ListSAMLProvidersRequestPrivate::ListSAMLProvidersRequestPrivate(
     const ListSAMLProvidersRequestPrivate &other, ListSAMLProvidersRequest * const q)

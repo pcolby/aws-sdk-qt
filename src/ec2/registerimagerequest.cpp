@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::RegisterImageRequest
- *
  * \brief The RegisterImageRequest class provides an interface for EC2 RegisterImage requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new RegisterImageRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 RegisterImageRequest::RegisterImageRequest(const RegisterImageRequest &other)
     : EC2Request(new RegisterImageRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ RegisterImageRequest::RegisterImageRequest(const RegisterImageRequest &other)
 }
 
 /*!
- * @brief  Constructs a new RegisterImageRequest object.
+ * Constructs a RegisterImageRequest object.
  */
 RegisterImageRequest::RegisterImageRequest()
     : EC2Request(new RegisterImageRequestPrivate(EC2Request::RegisterImageAction, this))
@@ -70,14 +67,9 @@ bool RegisterImageRequest::isValid() const
 
 
 /*!
- * @brief  Construct an RegisterImageResponse object.
+ * Returns a RegisterImageResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An RegisterImageResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * RegisterImageRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * RegisterImageRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::RegisterImageRequestPrivate
+ * \brief The RegisterImageRequestPrivate class provides private implementation for RegisterImageRequest.
+ * \internal
  *
- * @class  RegisterImageRequestPrivate
- *
- * @brief  Private implementation for RegisterImageRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new RegisterImageRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public RegisterImageRequest instance.
+ * Constructs a RegisterImageRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 RegisterImageRequestPrivate::RegisterImageRequestPrivate(
     const EC2Request::Action action, RegisterImageRequest * const q)
@@ -108,15 +97,10 @@ RegisterImageRequestPrivate::RegisterImageRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RegisterImageRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the RegisterImageRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public RegisterImageRequest instance.
  */
 RegisterImageRequestPrivate::RegisterImageRequestPrivate(
     const RegisterImageRequestPrivate &other, RegisterImageRequest * const q)

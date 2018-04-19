@@ -27,10 +27,9 @@ namespace ApplicationDiscoveryService {
 
 /*!
  * \class QtAws::ApplicationDiscoveryService::CreateApplicationRequest
- *
  * \brief The CreateApplicationRequest class provides an interface for ApplicationDiscoveryService CreateApplication requests.
  *
- * \ingroup ApplicationDiscoveryService
+ * \inmodule QtAwsApplicationDiscoveryService
  *
  *  <fullname>AWS Application Discovery Service</fullname>
  * 
@@ -101,9 +100,7 @@ namespace ApplicationDiscoveryService {
  */
 
 /*!
- * @brief  Constructs a new CreateApplicationRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateApplicationRequest::CreateApplicationRequest(const CreateApplicationRequest &other)
     : ApplicationDiscoveryServiceRequest(new CreateApplicationRequestPrivate(*other.d_func(), this))
@@ -112,7 +109,7 @@ CreateApplicationRequest::CreateApplicationRequest(const CreateApplicationReques
 }
 
 /*!
- * @brief  Constructs a new CreateApplicationRequest object.
+ * Constructs a CreateApplicationRequest object.
  */
 CreateApplicationRequest::CreateApplicationRequest()
     : ApplicationDiscoveryServiceRequest(new CreateApplicationRequestPrivate(ApplicationDiscoveryServiceRequest::CreateApplicationAction, this))
@@ -130,14 +127,9 @@ bool CreateApplicationRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateApplicationResponse object.
+ * Returns a CreateApplicationResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateApplicationResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ApplicationDiscoveryServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateApplicationRequest::response(QNetworkReply * const reply) const
 {
@@ -145,20 +137,17 @@ QtAws::Core::AwsAbstractResponse * CreateApplicationRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::ApplicationDiscoveryService::CreateApplicationRequestPrivate
+ * \brief The CreateApplicationRequestPrivate class provides private implementation for CreateApplicationRequest.
+ * \internal
  *
- * @class  CreateApplicationRequestPrivate
- *
- * @brief  Private implementation for CreateApplicationRequest.
+ * \inmodule QtAwsApplicationDiscoveryService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateApplicationRequestPrivate object.
- *
- * @param  action  ApplicationDiscoveryService action being performed.
- * @param  q       Pointer to this object's public CreateApplicationRequest instance.
+ * Constructs a CreateApplicationRequestPrivate object for ApplicationDiscoveryService \a action with,
+ * public implementation \a q.
  */
 CreateApplicationRequestPrivate::CreateApplicationRequestPrivate(
     const ApplicationDiscoveryServiceRequest::Action action, CreateApplicationRequest * const q)
@@ -168,15 +157,10 @@ CreateApplicationRequestPrivate::CreateApplicationRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateApplicationRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateApplicationRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateApplicationRequest instance.
  */
 CreateApplicationRequestPrivate::CreateApplicationRequestPrivate(
     const CreateApplicationRequestPrivate &other, CreateApplicationRequest * const q)

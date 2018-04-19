@@ -27,10 +27,9 @@ namespace StorageGateway {
 
 /*!
  * \class QtAws::StorageGateway::DescribeTapeRecoveryPointsRequest
- *
  * \brief The DescribeTapeRecoveryPointsRequest class provides an interface for StorageGateway DescribeTapeRecoveryPoints requests.
  *
- * \ingroup StorageGateway
+ * \inmodule QtAwsStorageGateway
  *
  *  <fullname>AWS Storage Gateway Service</fullname>
  * 
@@ -106,9 +105,7 @@ namespace StorageGateway {
  */
 
 /*!
- * @brief  Constructs a new DescribeTapeRecoveryPointsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeTapeRecoveryPointsRequest::DescribeTapeRecoveryPointsRequest(const DescribeTapeRecoveryPointsRequest &other)
     : StorageGatewayRequest(new DescribeTapeRecoveryPointsRequestPrivate(*other.d_func(), this))
@@ -117,7 +114,7 @@ DescribeTapeRecoveryPointsRequest::DescribeTapeRecoveryPointsRequest(const Descr
 }
 
 /*!
- * @brief  Constructs a new DescribeTapeRecoveryPointsRequest object.
+ * Constructs a DescribeTapeRecoveryPointsRequest object.
  */
 DescribeTapeRecoveryPointsRequest::DescribeTapeRecoveryPointsRequest()
     : StorageGatewayRequest(new DescribeTapeRecoveryPointsRequestPrivate(StorageGatewayRequest::DescribeTapeRecoveryPointsAction, this))
@@ -135,14 +132,9 @@ bool DescribeTapeRecoveryPointsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeTapeRecoveryPointsResponse object.
+ * Returns a DescribeTapeRecoveryPointsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeTapeRecoveryPointsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  StorageGatewayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeTapeRecoveryPointsRequest::response(QNetworkReply * const reply) const
 {
@@ -150,20 +142,17 @@ QtAws::Core::AwsAbstractResponse * DescribeTapeRecoveryPointsRequest::response(Q
 }
 
 /*!
- * @internal
+ * \class QtAws::StorageGateway::DescribeTapeRecoveryPointsRequestPrivate
+ * \brief The DescribeTapeRecoveryPointsRequestPrivate class provides private implementation for DescribeTapeRecoveryPointsRequest.
+ * \internal
  *
- * @class  DescribeTapeRecoveryPointsRequestPrivate
- *
- * @brief  Private implementation for DescribeTapeRecoveryPointsRequest.
+ * \inmodule QtAwsStorageGateway
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeTapeRecoveryPointsRequestPrivate object.
- *
- * @param  action  StorageGateway action being performed.
- * @param  q       Pointer to this object's public DescribeTapeRecoveryPointsRequest instance.
+ * Constructs a DescribeTapeRecoveryPointsRequestPrivate object for StorageGateway \a action with,
+ * public implementation \a q.
  */
 DescribeTapeRecoveryPointsRequestPrivate::DescribeTapeRecoveryPointsRequestPrivate(
     const StorageGatewayRequest::Action action, DescribeTapeRecoveryPointsRequest * const q)
@@ -173,15 +162,10 @@ DescribeTapeRecoveryPointsRequestPrivate::DescribeTapeRecoveryPointsRequestPriva
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeTapeRecoveryPointsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeTapeRecoveryPointsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeTapeRecoveryPointsRequest instance.
  */
 DescribeTapeRecoveryPointsRequestPrivate::DescribeTapeRecoveryPointsRequestPrivate(
     const DescribeTapeRecoveryPointsRequestPrivate &other, DescribeTapeRecoveryPointsRequest * const q)

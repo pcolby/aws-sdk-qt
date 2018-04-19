@@ -25,16 +25,40 @@ namespace SFN {
 
 /*!
  * \class QtAws::SFN::SFNRequest
- *
  * \brief The SFNRequest class provides an interface for SFN requests.
  *
- * \ingroup SFN
+ * \inmodule QtAwsSFN
  */
 
 /*!
- * @brief  Constructs a new SFNRequest object.
+ * \enum SFNRequest::Action
  *
- * @param  action  The SFN action to request.
+ * This enum describes the actions that can be performed as SFN
+ * requests.
+ *
+ * \value CreateActivityAction SFN CreateActivity action.
+ * \value CreateStateMachineAction SFN CreateStateMachine action.
+ * \value DeleteActivityAction SFN DeleteActivity action.
+ * \value DeleteStateMachineAction SFN DeleteStateMachine action.
+ * \value DescribeActivityAction SFN DescribeActivity action.
+ * \value DescribeExecutionAction SFN DescribeExecution action.
+ * \value DescribeStateMachineAction SFN DescribeStateMachine action.
+ * \value DescribeStateMachineForExecutionAction SFN DescribeStateMachineForExecution action.
+ * \value GetActivityTaskAction SFN GetActivityTask action.
+ * \value GetExecutionHistoryAction SFN GetExecutionHistory action.
+ * \value ListActivitiesAction SFN ListActivities action.
+ * \value ListExecutionsAction SFN ListExecutions action.
+ * \value ListStateMachinesAction SFN ListStateMachines action.
+ * \value SendTaskFailureAction SFN SendTaskFailure action.
+ * \value SendTaskHeartbeatAction SFN SendTaskHeartbeat action.
+ * \value SendTaskSuccessAction SFN SendTaskSuccess action.
+ * \value StartExecutionAction SFN StartExecution action.
+ * \value StopExecutionAction SFN StopExecution action.
+ * \value UpdateStateMachineAction SFN UpdateStateMachine action.
+ */
+
+/*!
+ * Constructs a[n] SFNRequest object for SFN \a action.
  */
 SFNRequest::SFNRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new SFNRequestPrivate(action, this))
@@ -43,9 +67,7 @@ SFNRequest::SFNRequest(const Action action)
 }
 
 /*!
- * @brief  Constructs a new SFNRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 SFNRequest::SFNRequest(const SFNRequest &other)
     : QtAws::Core::AwsAbstractRequest(new SFNRequestPrivate(*other.d_func(), this))
@@ -54,13 +76,7 @@ SFNRequest::SFNRequest(const SFNRequest &other)
 }
 
 /*!
- * @brief  Assignment operator.
- *
- * Assigns \a other to \c this.
- *
- * @param  other  Instance to copy.
- *
- * @return  A reference to \c this.
+ * Sets the SFNRequest object to be equal to \a other.
  */
 SFNRequest& SFNRequest::operator=(const SFNRequest &other)
 {
@@ -72,14 +88,10 @@ SFNRequest& SFNRequest::operator=(const SFNRequest &other)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SFNRequest object.
+ * Constructs aa SFNRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from SFNRequestPrivate.
- *
- * @param  d  Pointer to private data (aka D-Pointer).
  */
 SFNRequest::SFNRequest(SFNRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
@@ -87,7 +99,7 @@ SFNRequest::SFNRequest(SFNRequestPrivate * const d) : QtAws::Core::AwsAbstractRe
 }
 
 /*!
- * \brief Returns the SFN action to be performed by this request.
+ * Returns the SFN action to be performed by this request.
  */
 SFNRequest::Action SFNRequest::action() const
 {
@@ -96,7 +108,7 @@ SFNRequest::Action SFNRequest::action() const
 }
 
 /*!
- * \brief Returns the name of the SFN action to be performed by this request.
+ * Returns the name of the SFN action to be performed by this request.
  */
 QString SFNRequest::actionString() const
 {
@@ -104,7 +116,7 @@ QString SFNRequest::actionString() const
 }
 
 /*!
- * \brief Returns the SFN API version implemented by this request.
+ * Returns the SFN API version implemented by this request.
  */
 QString SFNRequest::apiVersion() const
 {
@@ -113,7 +125,7 @@ QString SFNRequest::apiVersion() const
 }
 
 /*!
- * @brief Set the SFN action to be performed by this request to \a action.
+ * Sets the SFN action to be performed by this request to \a action.
  */
 void SFNRequest::setAction(const Action action)
 {
@@ -122,7 +134,7 @@ void SFNRequest::setAction(const Action action)
 }
 
 /*!
- * Set the SFN API version to include in this request to \a version.
+ * Sets the SFN API version to include in this request to \a version.
  */
 void SFNRequest::setApiVersion(const QString &version)
 {
@@ -131,7 +143,7 @@ void SFNRequest::setApiVersion(const QString &version)
 }
 
 /*!
- * \brief Returns \c true if this request is the same as \a other.
+ * Returns \c true if this request is equal to \a other; \c false otherwise.
  *
  * Note, most derived *Request classes do not need to provider their own
  * implementations of this function, since most such request classes rely on
@@ -146,8 +158,8 @@ bool SFNRequest::operator==(const SFNRequest &other) const
             (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
-/*!
- * @brief  Check if \a queueName is a valid SFN queue name.
+/*
+ * Returns \c tue if \a queueName is a valid SFN queue name.
  *
  * @par From SFN FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
@@ -166,9 +178,8 @@ bool SFNRequest::operator==(const SFNRequest &other) const
 }*/
 
 /*!
- * \brief Removes the a \a name parameter from this request.
- *
- * Returns the count of paramters removed (typically \c 0 or \c 1).
+ * Removes the a \a name parameter from the request, then returns the number of
+ * paramters removed (typically \c 0 or \c 1).
  */
 int SFNRequest::clearParameter(const QString &name)
 {
@@ -177,7 +188,7 @@ int SFNRequest::clearParameter(const QString &name)
 }
 
 /*!
- * \brief Removes all parameters from this request.
+ * Removes all parameters from the request.
  */
 void SFNRequest::clearParameters()
 {
@@ -186,7 +197,7 @@ void SFNRequest::clearParameters()
 }
 
 /*!
- * \brief Returns the value of the \n name pararemter if set, otherwise \a defaultValue.
+ * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
 QVariant SFNRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
@@ -195,7 +206,7 @@ QVariant SFNRequest::parameter(const QString &name, const QVariant &defaultValue
 }
 
 /*!
- * \brief Returns a map of parameters included in this request.
+ * Returns the parameters included in this request.
  */
 const QVariantMap &SFNRequest::parameters() const
 {
@@ -204,7 +215,7 @@ const QVariantMap &SFNRequest::parameters() const
 }
 
 /*!
- * \brief Sets the \a name parameter to \a value.
+ * Sets the \a name parameter to \a value.
  */
 void SFNRequest::setParameter(const QString &name, const QVariant &value)
 {
@@ -213,9 +224,8 @@ void SFNRequest::setParameter(const QString &name, const QVariant &value)
 }
 
 /*!
- * \brief Sets the map of paramters for this request to \a parameters.
- *
- * Any request parameters set previously will be discarded.
+ * Sets the paramters for this request to \a parameters. Any request parameters
+ * set previously will be discarded.
  */
 void SFNRequest::setParameters(const QVariantMap &parameters)
 {
@@ -224,11 +234,12 @@ void SFNRequest::setParameters(const QVariantMap &parameters)
 }
 
 /*!
- * \brief Returns a network request for this SFN request using the given \a endpoint.
+ * Returns a network request for the SFN request using the given
+ * \a endpoint.
  *
- * This SFN implementation builds request URLs by combining the common query
- * parameters (such as Action and Version), with any that have been added (via
- * setParameter) by child classes.
+ * This SFN implementation builds request URLs by combining the
+ * common query parameters (such as Action and Version), with any that have
+ * been added (via setParameter) by child classes.
  */
 QNetworkRequest SFNRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -239,17 +250,16 @@ QNetworkRequest SFNRequest::unsignedRequest(const QUrl &endpoint) const
 }
 
 /*!
+ * \class QtAws::SFN::SFNRequestPrivate
+ * \brief The SFNRequestPrivate class provides private implementation for SFNRequest.
  * \internal
  *
- * \class  SFNRequestPrivate
- *
- * \brief  Private implementation for SFNRequest.
+ * \inmodule QtAwsSFN
  */
 
 /*!
- * \internal
- *
- * \brief Constructs a new SFNRequestPrivate object.
+ * Constructs a SFNRequestPrivate object for SFN \a action with,
+ * public implementation \a q.
  */
 SFNRequestPrivate::SFNRequestPrivate(const SFNRequest::Action action, SFNRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
@@ -258,9 +268,7 @@ SFNRequestPrivate::SFNRequestPrivate(const SFNRequest::Action action, SFNRequest
 }
 
 /*!
- * \internal
- *
- * \brief Constructs a new SFNRequestPrivate object, copying an existing one.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
@@ -276,15 +284,12 @@ SFNRequestPrivate::SFNRequestPrivate(const SFNRequestPrivate &other,
 }
 
 /*!
- * \internal
- *
- * \brief Returns a string representing \a action.
+ * Returns a string represention of \a action, or a null string if \a action is
+ * invalid.
  *
  * This function converts SFNRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the SFN service's Action
  * query parameters.
- *
- * @return A string representing \a action, or a null string if \a action is invalid.
  */
 QString SFNRequestPrivate::toString(const SFNRequest::Action &action)
 {

@@ -27,10 +27,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::ListCommandsRequest
- *
  * \brief The ListCommandsRequest class provides an interface for SSM ListCommands requests.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -61,9 +60,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new ListCommandsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListCommandsRequest::ListCommandsRequest(const ListCommandsRequest &other)
     : SSMRequest(new ListCommandsRequestPrivate(*other.d_func(), this))
@@ -72,7 +69,7 @@ ListCommandsRequest::ListCommandsRequest(const ListCommandsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ListCommandsRequest object.
+ * Constructs a ListCommandsRequest object.
  */
 ListCommandsRequest::ListCommandsRequest()
     : SSMRequest(new ListCommandsRequestPrivate(SSMRequest::ListCommandsAction, this))
@@ -90,14 +87,9 @@ bool ListCommandsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListCommandsResponse object.
+ * Returns a ListCommandsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListCommandsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SSMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListCommandsRequest::response(QNetworkReply * const reply) const
 {
@@ -105,20 +97,17 @@ QtAws::Core::AwsAbstractResponse * ListCommandsRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::SSM::ListCommandsRequestPrivate
+ * \brief The ListCommandsRequestPrivate class provides private implementation for ListCommandsRequest.
+ * \internal
  *
- * @class  ListCommandsRequestPrivate
- *
- * @brief  Private implementation for ListCommandsRequest.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListCommandsRequestPrivate object.
- *
- * @param  action  SSM action being performed.
- * @param  q       Pointer to this object's public ListCommandsRequest instance.
+ * Constructs a ListCommandsRequestPrivate object for SSM \a action with,
+ * public implementation \a q.
  */
 ListCommandsRequestPrivate::ListCommandsRequestPrivate(
     const SSMRequest::Action action, ListCommandsRequest * const q)
@@ -128,15 +117,10 @@ ListCommandsRequestPrivate::ListCommandsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListCommandsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListCommandsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListCommandsRequest instance.
  */
 ListCommandsRequestPrivate::ListCommandsRequestPrivate(
     const ListCommandsRequestPrivate &other, ListCommandsRequest * const q)

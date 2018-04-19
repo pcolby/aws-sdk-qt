@@ -27,10 +27,9 @@ namespace ConfigService {
 
 /*!
  * \class QtAws::ConfigService::DeleteAggregationAuthorizationRequest
- *
  * \brief The DeleteAggregationAuthorizationRequest class provides an interface for ConfigService DeleteAggregationAuthorization requests.
  *
- * \ingroup ConfigService
+ * \inmodule QtAwsConfigService
  *
  *  <fullname>AWS Config</fullname>
  * 
@@ -60,9 +59,7 @@ namespace ConfigService {
  */
 
 /*!
- * @brief  Constructs a new DeleteAggregationAuthorizationRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteAggregationAuthorizationRequest::DeleteAggregationAuthorizationRequest(const DeleteAggregationAuthorizationRequest &other)
     : ConfigServiceRequest(new DeleteAggregationAuthorizationRequestPrivate(*other.d_func(), this))
@@ -71,7 +68,7 @@ DeleteAggregationAuthorizationRequest::DeleteAggregationAuthorizationRequest(con
 }
 
 /*!
- * @brief  Constructs a new DeleteAggregationAuthorizationRequest object.
+ * Constructs a DeleteAggregationAuthorizationRequest object.
  */
 DeleteAggregationAuthorizationRequest::DeleteAggregationAuthorizationRequest()
     : ConfigServiceRequest(new DeleteAggregationAuthorizationRequestPrivate(ConfigServiceRequest::DeleteAggregationAuthorizationAction, this))
@@ -89,14 +86,9 @@ bool DeleteAggregationAuthorizationRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteAggregationAuthorizationResponse object.
+ * Returns a DeleteAggregationAuthorizationResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteAggregationAuthorizationResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ConfigServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteAggregationAuthorizationRequest::response(QNetworkReply * const reply) const
 {
@@ -104,20 +96,17 @@ QtAws::Core::AwsAbstractResponse * DeleteAggregationAuthorizationRequest::respon
 }
 
 /*!
- * @internal
+ * \class QtAws::ConfigService::DeleteAggregationAuthorizationRequestPrivate
+ * \brief The DeleteAggregationAuthorizationRequestPrivate class provides private implementation for DeleteAggregationAuthorizationRequest.
+ * \internal
  *
- * @class  DeleteAggregationAuthorizationRequestPrivate
- *
- * @brief  Private implementation for DeleteAggregationAuthorizationRequest.
+ * \inmodule QtAwsConfigService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteAggregationAuthorizationRequestPrivate object.
- *
- * @param  action  ConfigService action being performed.
- * @param  q       Pointer to this object's public DeleteAggregationAuthorizationRequest instance.
+ * Constructs a DeleteAggregationAuthorizationRequestPrivate object for ConfigService \a action with,
+ * public implementation \a q.
  */
 DeleteAggregationAuthorizationRequestPrivate::DeleteAggregationAuthorizationRequestPrivate(
     const ConfigServiceRequest::Action action, DeleteAggregationAuthorizationRequest * const q)
@@ -127,15 +116,10 @@ DeleteAggregationAuthorizationRequestPrivate::DeleteAggregationAuthorizationRequ
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteAggregationAuthorizationRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteAggregationAuthorizationRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteAggregationAuthorizationRequest instance.
  */
 DeleteAggregationAuthorizationRequestPrivate::DeleteAggregationAuthorizationRequestPrivate(
     const DeleteAggregationAuthorizationRequestPrivate &other, DeleteAggregationAuthorizationRequest * const q)

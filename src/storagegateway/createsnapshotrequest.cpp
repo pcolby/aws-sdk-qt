@@ -27,10 +27,9 @@ namespace StorageGateway {
 
 /*!
  * \class QtAws::StorageGateway::CreateSnapshotRequest
- *
  * \brief The CreateSnapshotRequest class provides an interface for StorageGateway CreateSnapshot requests.
  *
- * \ingroup StorageGateway
+ * \inmodule QtAwsStorageGateway
  *
  *  <fullname>AWS Storage Gateway Service</fullname>
  * 
@@ -106,9 +105,7 @@ namespace StorageGateway {
  */
 
 /*!
- * @brief  Constructs a new CreateSnapshotRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateSnapshotRequest::CreateSnapshotRequest(const CreateSnapshotRequest &other)
     : StorageGatewayRequest(new CreateSnapshotRequestPrivate(*other.d_func(), this))
@@ -117,7 +114,7 @@ CreateSnapshotRequest::CreateSnapshotRequest(const CreateSnapshotRequest &other)
 }
 
 /*!
- * @brief  Constructs a new CreateSnapshotRequest object.
+ * Constructs a CreateSnapshotRequest object.
  */
 CreateSnapshotRequest::CreateSnapshotRequest()
     : StorageGatewayRequest(new CreateSnapshotRequestPrivate(StorageGatewayRequest::CreateSnapshotAction, this))
@@ -135,14 +132,9 @@ bool CreateSnapshotRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateSnapshotResponse object.
+ * Returns a CreateSnapshotResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateSnapshotResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  StorageGatewayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateSnapshotRequest::response(QNetworkReply * const reply) const
 {
@@ -150,20 +142,17 @@ QtAws::Core::AwsAbstractResponse * CreateSnapshotRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::StorageGateway::CreateSnapshotRequestPrivate
+ * \brief The CreateSnapshotRequestPrivate class provides private implementation for CreateSnapshotRequest.
+ * \internal
  *
- * @class  CreateSnapshotRequestPrivate
- *
- * @brief  Private implementation for CreateSnapshotRequest.
+ * \inmodule QtAwsStorageGateway
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateSnapshotRequestPrivate object.
- *
- * @param  action  StorageGateway action being performed.
- * @param  q       Pointer to this object's public CreateSnapshotRequest instance.
+ * Constructs a CreateSnapshotRequestPrivate object for StorageGateway \a action with,
+ * public implementation \a q.
  */
 CreateSnapshotRequestPrivate::CreateSnapshotRequestPrivate(
     const StorageGatewayRequest::Action action, CreateSnapshotRequest * const q)
@@ -173,15 +162,10 @@ CreateSnapshotRequestPrivate::CreateSnapshotRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateSnapshotRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateSnapshotRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateSnapshotRequest instance.
  */
 CreateSnapshotRequestPrivate::CreateSnapshotRequestPrivate(
     const CreateSnapshotRequestPrivate &other, CreateSnapshotRequest * const q)

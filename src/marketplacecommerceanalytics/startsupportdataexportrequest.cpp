@@ -27,19 +27,16 @@ namespace MarketplaceCommerceAnalytics {
 
 /*!
  * \class QtAws::MarketplaceCommerceAnalytics::StartSupportDataExportRequest
- *
  * \brief The StartSupportDataExportRequest class provides an interface for MarketplaceCommerceAnalytics StartSupportDataExport requests.
  *
- * \ingroup MarketplaceCommerceAnalytics
+ * \inmodule QtAwsMarketplaceCommerceAnalytics
  *
  *
  * \sa MarketplaceCommerceAnalyticsClient::startSupportDataExport
  */
 
 /*!
- * @brief  Constructs a new StartSupportDataExportRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 StartSupportDataExportRequest::StartSupportDataExportRequest(const StartSupportDataExportRequest &other)
     : MarketplaceCommerceAnalyticsRequest(new StartSupportDataExportRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ StartSupportDataExportRequest::StartSupportDataExportRequest(const StartSupportD
 }
 
 /*!
- * @brief  Constructs a new StartSupportDataExportRequest object.
+ * Constructs a StartSupportDataExportRequest object.
  */
 StartSupportDataExportRequest::StartSupportDataExportRequest()
     : MarketplaceCommerceAnalyticsRequest(new StartSupportDataExportRequestPrivate(MarketplaceCommerceAnalyticsRequest::StartSupportDataExportAction, this))
@@ -66,14 +63,9 @@ bool StartSupportDataExportRequest::isValid() const
 
 
 /*!
- * @brief  Construct an StartSupportDataExportResponse object.
+ * Returns a StartSupportDataExportResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An StartSupportDataExportResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MarketplaceCommerceAnalyticsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * StartSupportDataExportRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * StartSupportDataExportRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::MarketplaceCommerceAnalytics::StartSupportDataExportRequestPrivate
+ * \brief The StartSupportDataExportRequestPrivate class provides private implementation for StartSupportDataExportRequest.
+ * \internal
  *
- * @class  StartSupportDataExportRequestPrivate
- *
- * @brief  Private implementation for StartSupportDataExportRequest.
+ * \inmodule QtAwsMarketplaceCommerceAnalytics
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new StartSupportDataExportRequestPrivate object.
- *
- * @param  action  MarketplaceCommerceAnalytics action being performed.
- * @param  q       Pointer to this object's public StartSupportDataExportRequest instance.
+ * Constructs a StartSupportDataExportRequestPrivate object for MarketplaceCommerceAnalytics \a action with,
+ * public implementation \a q.
  */
 StartSupportDataExportRequestPrivate::StartSupportDataExportRequestPrivate(
     const MarketplaceCommerceAnalyticsRequest::Action action, StartSupportDataExportRequest * const q)
@@ -104,15 +93,10 @@ StartSupportDataExportRequestPrivate::StartSupportDataExportRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StartSupportDataExportRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the StartSupportDataExportRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public StartSupportDataExportRequest instance.
  */
 StartSupportDataExportRequestPrivate::StartSupportDataExportRequestPrivate(
     const StartSupportDataExportRequestPrivate &other, StartSupportDataExportRequest * const q)

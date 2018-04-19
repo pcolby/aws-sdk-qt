@@ -27,10 +27,9 @@ namespace ServiceCatalog {
 
 /*!
  * \class QtAws::ServiceCatalog::DescribeTagOptionRequest
- *
  * \brief The DescribeTagOptionRequest class provides an interface for ServiceCatalog DescribeTagOption requests.
  *
- * \ingroup ServiceCatalog
+ * \inmodule QtAwsServiceCatalog
  *
  *  <fullname>AWS Service Catalog</fullname>
  * 
@@ -43,9 +42,7 @@ namespace ServiceCatalog {
  */
 
 /*!
- * @brief  Constructs a new DescribeTagOptionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeTagOptionRequest::DescribeTagOptionRequest(const DescribeTagOptionRequest &other)
     : ServiceCatalogRequest(new DescribeTagOptionRequestPrivate(*other.d_func(), this))
@@ -54,7 +51,7 @@ DescribeTagOptionRequest::DescribeTagOptionRequest(const DescribeTagOptionReques
 }
 
 /*!
- * @brief  Constructs a new DescribeTagOptionRequest object.
+ * Constructs a DescribeTagOptionRequest object.
  */
 DescribeTagOptionRequest::DescribeTagOptionRequest()
     : ServiceCatalogRequest(new DescribeTagOptionRequestPrivate(ServiceCatalogRequest::DescribeTagOptionAction, this))
@@ -72,14 +69,9 @@ bool DescribeTagOptionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeTagOptionResponse object.
+ * Returns a DescribeTagOptionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeTagOptionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ServiceCatalogClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeTagOptionRequest::response(QNetworkReply * const reply) const
 {
@@ -87,20 +79,17 @@ QtAws::Core::AwsAbstractResponse * DescribeTagOptionRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::ServiceCatalog::DescribeTagOptionRequestPrivate
+ * \brief The DescribeTagOptionRequestPrivate class provides private implementation for DescribeTagOptionRequest.
+ * \internal
  *
- * @class  DescribeTagOptionRequestPrivate
- *
- * @brief  Private implementation for DescribeTagOptionRequest.
+ * \inmodule QtAwsServiceCatalog
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeTagOptionRequestPrivate object.
- *
- * @param  action  ServiceCatalog action being performed.
- * @param  q       Pointer to this object's public DescribeTagOptionRequest instance.
+ * Constructs a DescribeTagOptionRequestPrivate object for ServiceCatalog \a action with,
+ * public implementation \a q.
  */
 DescribeTagOptionRequestPrivate::DescribeTagOptionRequestPrivate(
     const ServiceCatalogRequest::Action action, DescribeTagOptionRequest * const q)
@@ -110,15 +99,10 @@ DescribeTagOptionRequestPrivate::DescribeTagOptionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeTagOptionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeTagOptionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeTagOptionRequest instance.
  */
 DescribeTagOptionRequestPrivate::DescribeTagOptionRequestPrivate(
     const DescribeTagOptionRequestPrivate &other, DescribeTagOptionRequest * const q)

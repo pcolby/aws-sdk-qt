@@ -27,10 +27,9 @@ namespace Rekognition {
 
 /*!
  * \class QtAws::Rekognition::CompareFacesRequest
- *
  * \brief The CompareFacesRequest class provides an interface for Rekognition CompareFaces requests.
  *
- * \ingroup Rekognition
+ * \inmodule QtAwsRekognition
  *
  *  This is the Amazon Rekognition API
  *
@@ -38,9 +37,7 @@ namespace Rekognition {
  */
 
 /*!
- * @brief  Constructs a new CompareFacesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CompareFacesRequest::CompareFacesRequest(const CompareFacesRequest &other)
     : RekognitionRequest(new CompareFacesRequestPrivate(*other.d_func(), this))
@@ -49,7 +46,7 @@ CompareFacesRequest::CompareFacesRequest(const CompareFacesRequest &other)
 }
 
 /*!
- * @brief  Constructs a new CompareFacesRequest object.
+ * Constructs a CompareFacesRequest object.
  */
 CompareFacesRequest::CompareFacesRequest()
     : RekognitionRequest(new CompareFacesRequestPrivate(RekognitionRequest::CompareFacesAction, this))
@@ -67,14 +64,9 @@ bool CompareFacesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CompareFacesResponse object.
+ * Returns a CompareFacesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CompareFacesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RekognitionClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CompareFacesRequest::response(QNetworkReply * const reply) const
 {
@@ -82,20 +74,17 @@ QtAws::Core::AwsAbstractResponse * CompareFacesRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::Rekognition::CompareFacesRequestPrivate
+ * \brief The CompareFacesRequestPrivate class provides private implementation for CompareFacesRequest.
+ * \internal
  *
- * @class  CompareFacesRequestPrivate
- *
- * @brief  Private implementation for CompareFacesRequest.
+ * \inmodule QtAwsRekognition
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CompareFacesRequestPrivate object.
- *
- * @param  action  Rekognition action being performed.
- * @param  q       Pointer to this object's public CompareFacesRequest instance.
+ * Constructs a CompareFacesRequestPrivate object for Rekognition \a action with,
+ * public implementation \a q.
  */
 CompareFacesRequestPrivate::CompareFacesRequestPrivate(
     const RekognitionRequest::Action action, CompareFacesRequest * const q)
@@ -105,15 +94,10 @@ CompareFacesRequestPrivate::CompareFacesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CompareFacesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CompareFacesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CompareFacesRequest instance.
  */
 CompareFacesRequestPrivate::CompareFacesRequestPrivate(
     const CompareFacesRequestPrivate &other, CompareFacesRequest * const q)

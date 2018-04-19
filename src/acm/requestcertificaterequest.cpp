@@ -27,10 +27,9 @@ namespace ACM {
 
 /*!
  * \class QtAws::ACM::RequestCertificateRequest
- *
  * \brief The RequestCertificateRequest class provides an interface for ACM RequestCertificate requests.
  *
- * \ingroup ACM
+ * \inmodule QtAwsACM
  *
  *  <fullname>AWS Certificate Manager</fullname>
  * 
@@ -46,9 +45,7 @@ namespace ACM {
  */
 
 /*!
- * @brief  Constructs a new RequestCertificateRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 RequestCertificateRequest::RequestCertificateRequest(const RequestCertificateRequest &other)
     : ACMRequest(new RequestCertificateRequestPrivate(*other.d_func(), this))
@@ -57,7 +54,7 @@ RequestCertificateRequest::RequestCertificateRequest(const RequestCertificateReq
 }
 
 /*!
- * @brief  Constructs a new RequestCertificateRequest object.
+ * Constructs a RequestCertificateRequest object.
  */
 RequestCertificateRequest::RequestCertificateRequest()
     : ACMRequest(new RequestCertificateRequestPrivate(ACMRequest::RequestCertificateAction, this))
@@ -75,14 +72,9 @@ bool RequestCertificateRequest::isValid() const
 
 
 /*!
- * @brief  Construct an RequestCertificateResponse object.
+ * Returns a RequestCertificateResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An RequestCertificateResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ACMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * RequestCertificateRequest::response(QNetworkReply * const reply) const
 {
@@ -90,20 +82,17 @@ QtAws::Core::AwsAbstractResponse * RequestCertificateRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::ACM::RequestCertificateRequestPrivate
+ * \brief The RequestCertificateRequestPrivate class provides private implementation for RequestCertificateRequest.
+ * \internal
  *
- * @class  RequestCertificateRequestPrivate
- *
- * @brief  Private implementation for RequestCertificateRequest.
+ * \inmodule QtAwsACM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new RequestCertificateRequestPrivate object.
- *
- * @param  action  ACM action being performed.
- * @param  q       Pointer to this object's public RequestCertificateRequest instance.
+ * Constructs a RequestCertificateRequestPrivate object for ACM \a action with,
+ * public implementation \a q.
  */
 RequestCertificateRequestPrivate::RequestCertificateRequestPrivate(
     const ACMRequest::Action action, RequestCertificateRequest * const q)
@@ -113,15 +102,10 @@ RequestCertificateRequestPrivate::RequestCertificateRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RequestCertificateRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the RequestCertificateRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public RequestCertificateRequest instance.
  */
 RequestCertificateRequestPrivate::RequestCertificateRequestPrivate(
     const RequestCertificateRequestPrivate &other, RequestCertificateRequest * const q)

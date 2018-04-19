@@ -27,10 +27,9 @@ namespace DirectConnect {
 
 /*!
  * \class QtAws::DirectConnect::AllocatePrivateVirtualInterfaceRequest
- *
  * \brief The AllocatePrivateVirtualInterfaceRequest class provides an interface for DirectConnect AllocatePrivateVirtualInterface requests.
  *
- * \ingroup DirectConnect
+ * \inmodule QtAwsDirectConnect
  *
  *  AWS Direct Connect links your internal network to an AWS Direct Connect location over a standard 1 gigabit or 10 gigabit
  *  Ethernet fiber-optic cable. One end of the cable is connected to your router, the other to an AWS Direct Connect router.
@@ -45,9 +44,7 @@ namespace DirectConnect {
  */
 
 /*!
- * @brief  Constructs a new AllocatePrivateVirtualInterfaceRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AllocatePrivateVirtualInterfaceRequest::AllocatePrivateVirtualInterfaceRequest(const AllocatePrivateVirtualInterfaceRequest &other)
     : DirectConnectRequest(new AllocatePrivateVirtualInterfaceRequestPrivate(*other.d_func(), this))
@@ -56,7 +53,7 @@ AllocatePrivateVirtualInterfaceRequest::AllocatePrivateVirtualInterfaceRequest(c
 }
 
 /*!
- * @brief  Constructs a new AllocatePrivateVirtualInterfaceRequest object.
+ * Constructs a AllocatePrivateVirtualInterfaceRequest object.
  */
 AllocatePrivateVirtualInterfaceRequest::AllocatePrivateVirtualInterfaceRequest()
     : DirectConnectRequest(new AllocatePrivateVirtualInterfaceRequestPrivate(DirectConnectRequest::AllocatePrivateVirtualInterfaceAction, this))
@@ -74,14 +71,9 @@ bool AllocatePrivateVirtualInterfaceRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AllocatePrivateVirtualInterfaceResponse object.
+ * Returns a AllocatePrivateVirtualInterfaceResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AllocatePrivateVirtualInterfaceResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DirectConnectClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AllocatePrivateVirtualInterfaceRequest::response(QNetworkReply * const reply) const
 {
@@ -89,20 +81,17 @@ QtAws::Core::AwsAbstractResponse * AllocatePrivateVirtualInterfaceRequest::respo
 }
 
 /*!
- * @internal
+ * \class QtAws::DirectConnect::AllocatePrivateVirtualInterfaceRequestPrivate
+ * \brief The AllocatePrivateVirtualInterfaceRequestPrivate class provides private implementation for AllocatePrivateVirtualInterfaceRequest.
+ * \internal
  *
- * @class  AllocatePrivateVirtualInterfaceRequestPrivate
- *
- * @brief  Private implementation for AllocatePrivateVirtualInterfaceRequest.
+ * \inmodule QtAwsDirectConnect
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AllocatePrivateVirtualInterfaceRequestPrivate object.
- *
- * @param  action  DirectConnect action being performed.
- * @param  q       Pointer to this object's public AllocatePrivateVirtualInterfaceRequest instance.
+ * Constructs a AllocatePrivateVirtualInterfaceRequestPrivate object for DirectConnect \a action with,
+ * public implementation \a q.
  */
 AllocatePrivateVirtualInterfaceRequestPrivate::AllocatePrivateVirtualInterfaceRequestPrivate(
     const DirectConnectRequest::Action action, AllocatePrivateVirtualInterfaceRequest * const q)
@@ -112,15 +101,10 @@ AllocatePrivateVirtualInterfaceRequestPrivate::AllocatePrivateVirtualInterfaceRe
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AllocatePrivateVirtualInterfaceRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AllocatePrivateVirtualInterfaceRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AllocatePrivateVirtualInterfaceRequest instance.
  */
 AllocatePrivateVirtualInterfaceRequestPrivate::AllocatePrivateVirtualInterfaceRequestPrivate(
     const AllocatePrivateVirtualInterfaceRequestPrivate &other, AllocatePrivateVirtualInterfaceRequest * const q)

@@ -27,10 +27,9 @@ namespace CognitoIdentity {
 
 /*!
  * \class QtAws::CognitoIdentity::GetIdRequest
- *
  * \brief The GetIdRequest class provides an interface for CognitoIdentity GetId requests.
  *
- * \ingroup CognitoIdentity
+ * \inmodule QtAwsCognitoIdentity
  *
  *  <fullname>Amazon Cognito</fullname>
  * 
@@ -75,9 +74,7 @@ namespace CognitoIdentity {
  */
 
 /*!
- * @brief  Constructs a new GetIdRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetIdRequest::GetIdRequest(const GetIdRequest &other)
     : CognitoIdentityRequest(new GetIdRequestPrivate(*other.d_func(), this))
@@ -86,7 +83,7 @@ GetIdRequest::GetIdRequest(const GetIdRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetIdRequest object.
+ * Constructs a GetIdRequest object.
  */
 GetIdRequest::GetIdRequest()
     : CognitoIdentityRequest(new GetIdRequestPrivate(CognitoIdentityRequest::GetIdAction, this))
@@ -104,14 +101,9 @@ bool GetIdRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetIdResponse object.
+ * Returns a GetIdResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetIdResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CognitoIdentityClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetIdRequest::response(QNetworkReply * const reply) const
 {
@@ -119,20 +111,17 @@ QtAws::Core::AwsAbstractResponse * GetIdRequest::response(QNetworkReply * const 
 }
 
 /*!
- * @internal
+ * \class QtAws::CognitoIdentity::GetIdRequestPrivate
+ * \brief The GetIdRequestPrivate class provides private implementation for GetIdRequest.
+ * \internal
  *
- * @class  GetIdRequestPrivate
- *
- * @brief  Private implementation for GetIdRequest.
+ * \inmodule QtAwsCognitoIdentity
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetIdRequestPrivate object.
- *
- * @param  action  CognitoIdentity action being performed.
- * @param  q       Pointer to this object's public GetIdRequest instance.
+ * Constructs a GetIdRequestPrivate object for CognitoIdentity \a action with,
+ * public implementation \a q.
  */
 GetIdRequestPrivate::GetIdRequestPrivate(
     const CognitoIdentityRequest::Action action, GetIdRequest * const q)
@@ -142,15 +131,10 @@ GetIdRequestPrivate::GetIdRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetIdRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetIdRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetIdRequest instance.
  */
 GetIdRequestPrivate::GetIdRequestPrivate(
     const GetIdRequestPrivate &other, GetIdRequest * const q)

@@ -27,10 +27,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::DescribeDBEngineVersionsRequest
- *
  * \brief The DescribeDBEngineVersionsRequest class provides an interface for RDS DescribeDBEngineVersions requests.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -101,9 +100,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new DescribeDBEngineVersionsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeDBEngineVersionsRequest::DescribeDBEngineVersionsRequest(const DescribeDBEngineVersionsRequest &other)
     : RDSRequest(new DescribeDBEngineVersionsRequestPrivate(*other.d_func(), this))
@@ -112,7 +109,7 @@ DescribeDBEngineVersionsRequest::DescribeDBEngineVersionsRequest(const DescribeD
 }
 
 /*!
- * @brief  Constructs a new DescribeDBEngineVersionsRequest object.
+ * Constructs a DescribeDBEngineVersionsRequest object.
  */
 DescribeDBEngineVersionsRequest::DescribeDBEngineVersionsRequest()
     : RDSRequest(new DescribeDBEngineVersionsRequestPrivate(RDSRequest::DescribeDBEngineVersionsAction, this))
@@ -130,14 +127,9 @@ bool DescribeDBEngineVersionsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeDBEngineVersionsResponse object.
+ * Returns a DescribeDBEngineVersionsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeDBEngineVersionsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RDSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeDBEngineVersionsRequest::response(QNetworkReply * const reply) const
 {
@@ -145,20 +137,17 @@ QtAws::Core::AwsAbstractResponse * DescribeDBEngineVersionsRequest::response(QNe
 }
 
 /*!
- * @internal
+ * \class QtAws::RDS::DescribeDBEngineVersionsRequestPrivate
+ * \brief The DescribeDBEngineVersionsRequestPrivate class provides private implementation for DescribeDBEngineVersionsRequest.
+ * \internal
  *
- * @class  DescribeDBEngineVersionsRequestPrivate
- *
- * @brief  Private implementation for DescribeDBEngineVersionsRequest.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeDBEngineVersionsRequestPrivate object.
- *
- * @param  action  RDS action being performed.
- * @param  q       Pointer to this object's public DescribeDBEngineVersionsRequest instance.
+ * Constructs a DescribeDBEngineVersionsRequestPrivate object for RDS \a action with,
+ * public implementation \a q.
  */
 DescribeDBEngineVersionsRequestPrivate::DescribeDBEngineVersionsRequestPrivate(
     const RDSRequest::Action action, DescribeDBEngineVersionsRequest * const q)
@@ -168,15 +157,10 @@ DescribeDBEngineVersionsRequestPrivate::DescribeDBEngineVersionsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeDBEngineVersionsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeDBEngineVersionsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeDBEngineVersionsRequest instance.
  */
 DescribeDBEngineVersionsRequestPrivate::DescribeDBEngineVersionsRequestPrivate(
     const DescribeDBEngineVersionsRequestPrivate &other, DescribeDBEngineVersionsRequest * const q)

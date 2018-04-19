@@ -27,10 +27,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::UpdateDocumentRequest
- *
  * \brief The UpdateDocumentRequest class provides an interface for SSM UpdateDocument requests.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -61,9 +60,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new UpdateDocumentRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateDocumentRequest::UpdateDocumentRequest(const UpdateDocumentRequest &other)
     : SSMRequest(new UpdateDocumentRequestPrivate(*other.d_func(), this))
@@ -72,7 +69,7 @@ UpdateDocumentRequest::UpdateDocumentRequest(const UpdateDocumentRequest &other)
 }
 
 /*!
- * @brief  Constructs a new UpdateDocumentRequest object.
+ * Constructs a UpdateDocumentRequest object.
  */
 UpdateDocumentRequest::UpdateDocumentRequest()
     : SSMRequest(new UpdateDocumentRequestPrivate(SSMRequest::UpdateDocumentAction, this))
@@ -90,14 +87,9 @@ bool UpdateDocumentRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateDocumentResponse object.
+ * Returns a UpdateDocumentResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateDocumentResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SSMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateDocumentRequest::response(QNetworkReply * const reply) const
 {
@@ -105,20 +97,17 @@ QtAws::Core::AwsAbstractResponse * UpdateDocumentRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::SSM::UpdateDocumentRequestPrivate
+ * \brief The UpdateDocumentRequestPrivate class provides private implementation for UpdateDocumentRequest.
+ * \internal
  *
- * @class  UpdateDocumentRequestPrivate
- *
- * @brief  Private implementation for UpdateDocumentRequest.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateDocumentRequestPrivate object.
- *
- * @param  action  SSM action being performed.
- * @param  q       Pointer to this object's public UpdateDocumentRequest instance.
+ * Constructs a UpdateDocumentRequestPrivate object for SSM \a action with,
+ * public implementation \a q.
  */
 UpdateDocumentRequestPrivate::UpdateDocumentRequestPrivate(
     const SSMRequest::Action action, UpdateDocumentRequest * const q)
@@ -128,15 +117,10 @@ UpdateDocumentRequestPrivate::UpdateDocumentRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateDocumentRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateDocumentRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateDocumentRequest instance.
  */
 UpdateDocumentRequestPrivate::UpdateDocumentRequestPrivate(
     const UpdateDocumentRequestPrivate &other, UpdateDocumentRequest * const q)

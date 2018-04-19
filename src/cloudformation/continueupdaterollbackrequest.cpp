@@ -27,10 +27,9 @@ namespace CloudFormation {
 
 /*!
  * \class QtAws::CloudFormation::ContinueUpdateRollbackRequest
- *
  * \brief The ContinueUpdateRollbackRequest class provides an interface for CloudFormation ContinueUpdateRollback requests.
  *
- * \ingroup CloudFormation
+ * \inmodule QtAwsCloudFormation
  *
  *  <fullname>AWS CloudFormation</fullname>
  * 
@@ -59,9 +58,7 @@ namespace CloudFormation {
  */
 
 /*!
- * @brief  Constructs a new ContinueUpdateRollbackRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ContinueUpdateRollbackRequest::ContinueUpdateRollbackRequest(const ContinueUpdateRollbackRequest &other)
     : CloudFormationRequest(new ContinueUpdateRollbackRequestPrivate(*other.d_func(), this))
@@ -70,7 +67,7 @@ ContinueUpdateRollbackRequest::ContinueUpdateRollbackRequest(const ContinueUpdat
 }
 
 /*!
- * @brief  Constructs a new ContinueUpdateRollbackRequest object.
+ * Constructs a ContinueUpdateRollbackRequest object.
  */
 ContinueUpdateRollbackRequest::ContinueUpdateRollbackRequest()
     : CloudFormationRequest(new ContinueUpdateRollbackRequestPrivate(CloudFormationRequest::ContinueUpdateRollbackAction, this))
@@ -88,14 +85,9 @@ bool ContinueUpdateRollbackRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ContinueUpdateRollbackResponse object.
+ * Returns a ContinueUpdateRollbackResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ContinueUpdateRollbackResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudFormationClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ContinueUpdateRollbackRequest::response(QNetworkReply * const reply) const
 {
@@ -103,20 +95,17 @@ QtAws::Core::AwsAbstractResponse * ContinueUpdateRollbackRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudFormation::ContinueUpdateRollbackRequestPrivate
+ * \brief The ContinueUpdateRollbackRequestPrivate class provides private implementation for ContinueUpdateRollbackRequest.
+ * \internal
  *
- * @class  ContinueUpdateRollbackRequestPrivate
- *
- * @brief  Private implementation for ContinueUpdateRollbackRequest.
+ * \inmodule QtAwsCloudFormation
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ContinueUpdateRollbackRequestPrivate object.
- *
- * @param  action  CloudFormation action being performed.
- * @param  q       Pointer to this object's public ContinueUpdateRollbackRequest instance.
+ * Constructs a ContinueUpdateRollbackRequestPrivate object for CloudFormation \a action with,
+ * public implementation \a q.
  */
 ContinueUpdateRollbackRequestPrivate::ContinueUpdateRollbackRequestPrivate(
     const CloudFormationRequest::Action action, ContinueUpdateRollbackRequest * const q)
@@ -126,15 +115,10 @@ ContinueUpdateRollbackRequestPrivate::ContinueUpdateRollbackRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ContinueUpdateRollbackRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ContinueUpdateRollbackRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ContinueUpdateRollbackRequest instance.
  */
 ContinueUpdateRollbackRequestPrivate::ContinueUpdateRollbackRequestPrivate(
     const ContinueUpdateRollbackRequestPrivate &other, ContinueUpdateRollbackRequest * const q)

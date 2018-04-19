@@ -27,10 +27,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::StartThingRegistrationTaskRequest
- *
  * \brief The StartThingRegistrationTaskRequest class provides an interface for IoT StartThingRegistrationTask requests.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -48,9 +47,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new StartThingRegistrationTaskRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 StartThingRegistrationTaskRequest::StartThingRegistrationTaskRequest(const StartThingRegistrationTaskRequest &other)
     : IoTRequest(new StartThingRegistrationTaskRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ StartThingRegistrationTaskRequest::StartThingRegistrationTaskRequest(const Start
 }
 
 /*!
- * @brief  Constructs a new StartThingRegistrationTaskRequest object.
+ * Constructs a StartThingRegistrationTaskRequest object.
  */
 StartThingRegistrationTaskRequest::StartThingRegistrationTaskRequest()
     : IoTRequest(new StartThingRegistrationTaskRequestPrivate(IoTRequest::StartThingRegistrationTaskAction, this))
@@ -77,14 +74,9 @@ bool StartThingRegistrationTaskRequest::isValid() const
 
 
 /*!
- * @brief  Construct an StartThingRegistrationTaskResponse object.
+ * Returns a StartThingRegistrationTaskResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An StartThingRegistrationTaskResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IoTClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * StartThingRegistrationTaskRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * StartThingRegistrationTaskRequest::response(Q
 }
 
 /*!
- * @internal
+ * \class QtAws::IoT::StartThingRegistrationTaskRequestPrivate
+ * \brief The StartThingRegistrationTaskRequestPrivate class provides private implementation for StartThingRegistrationTaskRequest.
+ * \internal
  *
- * @class  StartThingRegistrationTaskRequestPrivate
- *
- * @brief  Private implementation for StartThingRegistrationTaskRequest.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new StartThingRegistrationTaskRequestPrivate object.
- *
- * @param  action  IoT action being performed.
- * @param  q       Pointer to this object's public StartThingRegistrationTaskRequest instance.
+ * Constructs a StartThingRegistrationTaskRequestPrivate object for IoT \a action with,
+ * public implementation \a q.
  */
 StartThingRegistrationTaskRequestPrivate::StartThingRegistrationTaskRequestPrivate(
     const IoTRequest::Action action, StartThingRegistrationTaskRequest * const q)
@@ -115,15 +104,10 @@ StartThingRegistrationTaskRequestPrivate::StartThingRegistrationTaskRequestPriva
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StartThingRegistrationTaskRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the StartThingRegistrationTaskRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public StartThingRegistrationTaskRequest instance.
  */
 StartThingRegistrationTaskRequestPrivate::StartThingRegistrationTaskRequestPrivate(
     const StartThingRegistrationTaskRequestPrivate &other, StartThingRegistrationTaskRequest * const q)

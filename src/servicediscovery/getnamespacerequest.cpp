@@ -27,10 +27,9 @@ namespace ServiceDiscovery {
 
 /*!
  * \class QtAws::ServiceDiscovery::GetNamespaceRequest
- *
  * \brief The GetNamespaceRequest class provides an interface for ServiceDiscovery GetNamespace requests.
  *
- * \ingroup ServiceDiscovery
+ * \inmodule QtAwsServiceDiscovery
  *
  *  Amazon Route 53 auto naming lets you configure public or private namespaces that your microservice applications run in.
  *  When instances of the service become available, you can call the auto naming API to register the instance, and Route 53
@@ -41,9 +40,7 @@ namespace ServiceDiscovery {
  */
 
 /*!
- * @brief  Constructs a new GetNamespaceRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetNamespaceRequest::GetNamespaceRequest(const GetNamespaceRequest &other)
     : ServiceDiscoveryRequest(new GetNamespaceRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ GetNamespaceRequest::GetNamespaceRequest(const GetNamespaceRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetNamespaceRequest object.
+ * Constructs a GetNamespaceRequest object.
  */
 GetNamespaceRequest::GetNamespaceRequest()
     : ServiceDiscoveryRequest(new GetNamespaceRequestPrivate(ServiceDiscoveryRequest::GetNamespaceAction, this))
@@ -70,14 +67,9 @@ bool GetNamespaceRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetNamespaceResponse object.
+ * Returns a GetNamespaceResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetNamespaceResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ServiceDiscoveryClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetNamespaceRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * GetNamespaceRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::ServiceDiscovery::GetNamespaceRequestPrivate
+ * \brief The GetNamespaceRequestPrivate class provides private implementation for GetNamespaceRequest.
+ * \internal
  *
- * @class  GetNamespaceRequestPrivate
- *
- * @brief  Private implementation for GetNamespaceRequest.
+ * \inmodule QtAwsServiceDiscovery
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetNamespaceRequestPrivate object.
- *
- * @param  action  ServiceDiscovery action being performed.
- * @param  q       Pointer to this object's public GetNamespaceRequest instance.
+ * Constructs a GetNamespaceRequestPrivate object for ServiceDiscovery \a action with,
+ * public implementation \a q.
  */
 GetNamespaceRequestPrivate::GetNamespaceRequestPrivate(
     const ServiceDiscoveryRequest::Action action, GetNamespaceRequest * const q)
@@ -108,15 +97,10 @@ GetNamespaceRequestPrivate::GetNamespaceRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetNamespaceRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetNamespaceRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetNamespaceRequest instance.
  */
 GetNamespaceRequestPrivate::GetNamespaceRequestPrivate(
     const GetNamespaceRequestPrivate &other, GetNamespaceRequest * const q)

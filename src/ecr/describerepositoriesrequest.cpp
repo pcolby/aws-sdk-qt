@@ -27,10 +27,9 @@ namespace ECR {
 
 /*!
  * \class QtAws::ECR::DescribeRepositoriesRequest
- *
  * \brief The DescribeRepositoriesRequest class provides an interface for ECR DescribeRepositories requests.
  *
- * \ingroup ECR
+ * \inmodule QtAwsECR
  *
  *  Amazon Elastic Container Registry (Amazon ECR) is a managed Docker registry service. Customers can use the familiar
  *  Docker CLI to push, pull, and manage images. Amazon ECR provides a secure, scalable, and reliable registry. Amazon ECR
@@ -41,9 +40,7 @@ namespace ECR {
  */
 
 /*!
- * @brief  Constructs a new DescribeRepositoriesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeRepositoriesRequest::DescribeRepositoriesRequest(const DescribeRepositoriesRequest &other)
     : ECRRequest(new DescribeRepositoriesRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ DescribeRepositoriesRequest::DescribeRepositoriesRequest(const DescribeRepositor
 }
 
 /*!
- * @brief  Constructs a new DescribeRepositoriesRequest object.
+ * Constructs a DescribeRepositoriesRequest object.
  */
 DescribeRepositoriesRequest::DescribeRepositoriesRequest()
     : ECRRequest(new DescribeRepositoriesRequestPrivate(ECRRequest::DescribeRepositoriesAction, this))
@@ -70,14 +67,9 @@ bool DescribeRepositoriesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeRepositoriesResponse object.
+ * Returns a DescribeRepositoriesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeRepositoriesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ECRClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeRepositoriesRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * DescribeRepositoriesRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::ECR::DescribeRepositoriesRequestPrivate
+ * \brief The DescribeRepositoriesRequestPrivate class provides private implementation for DescribeRepositoriesRequest.
+ * \internal
  *
- * @class  DescribeRepositoriesRequestPrivate
- *
- * @brief  Private implementation for DescribeRepositoriesRequest.
+ * \inmodule QtAwsECR
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeRepositoriesRequestPrivate object.
- *
- * @param  action  ECR action being performed.
- * @param  q       Pointer to this object's public DescribeRepositoriesRequest instance.
+ * Constructs a DescribeRepositoriesRequestPrivate object for ECR \a action with,
+ * public implementation \a q.
  */
 DescribeRepositoriesRequestPrivate::DescribeRepositoriesRequestPrivate(
     const ECRRequest::Action action, DescribeRepositoriesRequest * const q)
@@ -108,15 +97,10 @@ DescribeRepositoriesRequestPrivate::DescribeRepositoriesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeRepositoriesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeRepositoriesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeRepositoriesRequest instance.
  */
 DescribeRepositoriesRequestPrivate::DescribeRepositoriesRequestPrivate(
     const DescribeRepositoriesRequestPrivate &other, DescribeRepositoriesRequest * const q)

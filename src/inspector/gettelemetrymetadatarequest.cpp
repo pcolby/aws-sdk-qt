@@ -27,10 +27,9 @@ namespace Inspector {
 
 /*!
  * \class QtAws::Inspector::GetTelemetryMetadataRequest
- *
  * \brief The GetTelemetryMetadataRequest class provides an interface for Inspector GetTelemetryMetadata requests.
  *
- * \ingroup Inspector
+ * \inmodule QtAwsInspector
  *
  *  <fullname>Amazon Inspector</fullname>
  * 
@@ -42,9 +41,7 @@ namespace Inspector {
  */
 
 /*!
- * @brief  Constructs a new GetTelemetryMetadataRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetTelemetryMetadataRequest::GetTelemetryMetadataRequest(const GetTelemetryMetadataRequest &other)
     : InspectorRequest(new GetTelemetryMetadataRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ GetTelemetryMetadataRequest::GetTelemetryMetadataRequest(const GetTelemetryMetad
 }
 
 /*!
- * @brief  Constructs a new GetTelemetryMetadataRequest object.
+ * Constructs a GetTelemetryMetadataRequest object.
  */
 GetTelemetryMetadataRequest::GetTelemetryMetadataRequest()
     : InspectorRequest(new GetTelemetryMetadataRequestPrivate(InspectorRequest::GetTelemetryMetadataAction, this))
@@ -71,14 +68,9 @@ bool GetTelemetryMetadataRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetTelemetryMetadataResponse object.
+ * Returns a GetTelemetryMetadataResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetTelemetryMetadataResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  InspectorClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetTelemetryMetadataRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * GetTelemetryMetadataRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::Inspector::GetTelemetryMetadataRequestPrivate
+ * \brief The GetTelemetryMetadataRequestPrivate class provides private implementation for GetTelemetryMetadataRequest.
+ * \internal
  *
- * @class  GetTelemetryMetadataRequestPrivate
- *
- * @brief  Private implementation for GetTelemetryMetadataRequest.
+ * \inmodule QtAwsInspector
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetTelemetryMetadataRequestPrivate object.
- *
- * @param  action  Inspector action being performed.
- * @param  q       Pointer to this object's public GetTelemetryMetadataRequest instance.
+ * Constructs a GetTelemetryMetadataRequestPrivate object for Inspector \a action with,
+ * public implementation \a q.
  */
 GetTelemetryMetadataRequestPrivate::GetTelemetryMetadataRequestPrivate(
     const InspectorRequest::Action action, GetTelemetryMetadataRequest * const q)
@@ -109,15 +98,10 @@ GetTelemetryMetadataRequestPrivate::GetTelemetryMetadataRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetTelemetryMetadataRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetTelemetryMetadataRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetTelemetryMetadataRequest instance.
  */
 GetTelemetryMetadataRequestPrivate::GetTelemetryMetadataRequestPrivate(
     const GetTelemetryMetadataRequestPrivate &other, GetTelemetryMetadataRequest * const q)

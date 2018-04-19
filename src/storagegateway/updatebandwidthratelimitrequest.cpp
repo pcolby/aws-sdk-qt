@@ -27,10 +27,9 @@ namespace StorageGateway {
 
 /*!
  * \class QtAws::StorageGateway::UpdateBandwidthRateLimitRequest
- *
  * \brief The UpdateBandwidthRateLimitRequest class provides an interface for StorageGateway UpdateBandwidthRateLimit requests.
  *
- * \ingroup StorageGateway
+ * \inmodule QtAwsStorageGateway
  *
  *  <fullname>AWS Storage Gateway Service</fullname>
  * 
@@ -106,9 +105,7 @@ namespace StorageGateway {
  */
 
 /*!
- * @brief  Constructs a new UpdateBandwidthRateLimitRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateBandwidthRateLimitRequest::UpdateBandwidthRateLimitRequest(const UpdateBandwidthRateLimitRequest &other)
     : StorageGatewayRequest(new UpdateBandwidthRateLimitRequestPrivate(*other.d_func(), this))
@@ -117,7 +114,7 @@ UpdateBandwidthRateLimitRequest::UpdateBandwidthRateLimitRequest(const UpdateBan
 }
 
 /*!
- * @brief  Constructs a new UpdateBandwidthRateLimitRequest object.
+ * Constructs a UpdateBandwidthRateLimitRequest object.
  */
 UpdateBandwidthRateLimitRequest::UpdateBandwidthRateLimitRequest()
     : StorageGatewayRequest(new UpdateBandwidthRateLimitRequestPrivate(StorageGatewayRequest::UpdateBandwidthRateLimitAction, this))
@@ -135,14 +132,9 @@ bool UpdateBandwidthRateLimitRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateBandwidthRateLimitResponse object.
+ * Returns a UpdateBandwidthRateLimitResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateBandwidthRateLimitResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  StorageGatewayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateBandwidthRateLimitRequest::response(QNetworkReply * const reply) const
 {
@@ -150,20 +142,17 @@ QtAws::Core::AwsAbstractResponse * UpdateBandwidthRateLimitRequest::response(QNe
 }
 
 /*!
- * @internal
+ * \class QtAws::StorageGateway::UpdateBandwidthRateLimitRequestPrivate
+ * \brief The UpdateBandwidthRateLimitRequestPrivate class provides private implementation for UpdateBandwidthRateLimitRequest.
+ * \internal
  *
- * @class  UpdateBandwidthRateLimitRequestPrivate
- *
- * @brief  Private implementation for UpdateBandwidthRateLimitRequest.
+ * \inmodule QtAwsStorageGateway
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateBandwidthRateLimitRequestPrivate object.
- *
- * @param  action  StorageGateway action being performed.
- * @param  q       Pointer to this object's public UpdateBandwidthRateLimitRequest instance.
+ * Constructs a UpdateBandwidthRateLimitRequestPrivate object for StorageGateway \a action with,
+ * public implementation \a q.
  */
 UpdateBandwidthRateLimitRequestPrivate::UpdateBandwidthRateLimitRequestPrivate(
     const StorageGatewayRequest::Action action, UpdateBandwidthRateLimitRequest * const q)
@@ -173,15 +162,10 @@ UpdateBandwidthRateLimitRequestPrivate::UpdateBandwidthRateLimitRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateBandwidthRateLimitRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateBandwidthRateLimitRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateBandwidthRateLimitRequest instance.
  */
 UpdateBandwidthRateLimitRequestPrivate::UpdateBandwidthRateLimitRequestPrivate(
     const UpdateBandwidthRateLimitRequestPrivate &other, UpdateBandwidthRateLimitRequest * const q)

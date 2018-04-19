@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DeleteVpcEndpointConnectionNotificationsRequest
- *
  * \brief The DeleteVpcEndpointConnectionNotificationsRequest class provides an interface for EC2 DeleteVpcEndpointConnectionNotifications requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DeleteVpcEndpointConnectionNotificationsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteVpcEndpointConnectionNotificationsRequest::DeleteVpcEndpointConnectionNotificationsRequest(const DeleteVpcEndpointConnectionNotificationsRequest &other)
     : EC2Request(new DeleteVpcEndpointConnectionNotificationsRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ DeleteVpcEndpointConnectionNotificationsRequest::DeleteVpcEndpointConnectionNoti
 }
 
 /*!
- * @brief  Constructs a new DeleteVpcEndpointConnectionNotificationsRequest object.
+ * Constructs a DeleteVpcEndpointConnectionNotificationsRequest object.
  */
 DeleteVpcEndpointConnectionNotificationsRequest::DeleteVpcEndpointConnectionNotificationsRequest()
     : EC2Request(new DeleteVpcEndpointConnectionNotificationsRequestPrivate(EC2Request::DeleteVpcEndpointConnectionNotificationsAction, this))
@@ -70,14 +67,9 @@ bool DeleteVpcEndpointConnectionNotificationsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteVpcEndpointConnectionNotificationsResponse object.
+ * Returns a DeleteVpcEndpointConnectionNotificationsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteVpcEndpointConnectionNotificationsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteVpcEndpointConnectionNotificationsRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * DeleteVpcEndpointConnectionNotificationsReque
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::DeleteVpcEndpointConnectionNotificationsRequestPrivate
+ * \brief The DeleteVpcEndpointConnectionNotificationsRequestPrivate class provides private implementation for DeleteVpcEndpointConnectionNotificationsRequest.
+ * \internal
  *
- * @class  DeleteVpcEndpointConnectionNotificationsRequestPrivate
- *
- * @brief  Private implementation for DeleteVpcEndpointConnectionNotificationsRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteVpcEndpointConnectionNotificationsRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public DeleteVpcEndpointConnectionNotificationsRequest instance.
+ * Constructs a DeleteVpcEndpointConnectionNotificationsRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 DeleteVpcEndpointConnectionNotificationsRequestPrivate::DeleteVpcEndpointConnectionNotificationsRequestPrivate(
     const EC2Request::Action action, DeleteVpcEndpointConnectionNotificationsRequest * const q)
@@ -108,15 +97,10 @@ DeleteVpcEndpointConnectionNotificationsRequestPrivate::DeleteVpcEndpointConnect
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteVpcEndpointConnectionNotificationsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteVpcEndpointConnectionNotificationsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteVpcEndpointConnectionNotificationsRequest instance.
  */
 DeleteVpcEndpointConnectionNotificationsRequestPrivate::DeleteVpcEndpointConnectionNotificationsRequestPrivate(
     const DeleteVpcEndpointConnectionNotificationsRequestPrivate &other, DeleteVpcEndpointConnectionNotificationsRequest * const q)

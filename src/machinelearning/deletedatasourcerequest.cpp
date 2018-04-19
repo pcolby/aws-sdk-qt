@@ -27,19 +27,16 @@ namespace MachineLearning {
 
 /*!
  * \class QtAws::MachineLearning::DeleteDataSourceRequest
- *
  * \brief The DeleteDataSourceRequest class provides an interface for MachineLearning DeleteDataSource requests.
  *
- * \ingroup MachineLearning
+ * \inmodule QtAwsMachineLearning
  *
  *
  * \sa MachineLearningClient::deleteDataSource
  */
 
 /*!
- * @brief  Constructs a new DeleteDataSourceRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteDataSourceRequest::DeleteDataSourceRequest(const DeleteDataSourceRequest &other)
     : MachineLearningRequest(new DeleteDataSourceRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ DeleteDataSourceRequest::DeleteDataSourceRequest(const DeleteDataSourceRequest &
 }
 
 /*!
- * @brief  Constructs a new DeleteDataSourceRequest object.
+ * Constructs a DeleteDataSourceRequest object.
  */
 DeleteDataSourceRequest::DeleteDataSourceRequest()
     : MachineLearningRequest(new DeleteDataSourceRequestPrivate(MachineLearningRequest::DeleteDataSourceAction, this))
@@ -66,14 +63,9 @@ bool DeleteDataSourceRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteDataSourceResponse object.
+ * Returns a DeleteDataSourceResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteDataSourceResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MachineLearningClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteDataSourceRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * DeleteDataSourceRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::MachineLearning::DeleteDataSourceRequestPrivate
+ * \brief The DeleteDataSourceRequestPrivate class provides private implementation for DeleteDataSourceRequest.
+ * \internal
  *
- * @class  DeleteDataSourceRequestPrivate
- *
- * @brief  Private implementation for DeleteDataSourceRequest.
+ * \inmodule QtAwsMachineLearning
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteDataSourceRequestPrivate object.
- *
- * @param  action  MachineLearning action being performed.
- * @param  q       Pointer to this object's public DeleteDataSourceRequest instance.
+ * Constructs a DeleteDataSourceRequestPrivate object for MachineLearning \a action with,
+ * public implementation \a q.
  */
 DeleteDataSourceRequestPrivate::DeleteDataSourceRequestPrivate(
     const MachineLearningRequest::Action action, DeleteDataSourceRequest * const q)
@@ -104,15 +93,10 @@ DeleteDataSourceRequestPrivate::DeleteDataSourceRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteDataSourceRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteDataSourceRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteDataSourceRequest instance.
  */
 DeleteDataSourceRequestPrivate::DeleteDataSourceRequestPrivate(
     const DeleteDataSourceRequestPrivate &other, DeleteDataSourceRequest * const q)

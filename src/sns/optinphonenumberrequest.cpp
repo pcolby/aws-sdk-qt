@@ -27,10 +27,9 @@ namespace SNS {
 
 /*!
  * \class QtAws::SNS::OptInPhoneNumberRequest
- *
  * \brief The OptInPhoneNumberRequest class provides an interface for SNS OptInPhoneNumber requests.
  *
- * \ingroup SNS
+ * \inmodule QtAwsSNS
  *
  *  <fullname>Amazon Simple Notification Service</fullname>
  * 
@@ -51,9 +50,7 @@ namespace SNS {
  */
 
 /*!
- * @brief  Constructs a new OptInPhoneNumberRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 OptInPhoneNumberRequest::OptInPhoneNumberRequest(const OptInPhoneNumberRequest &other)
     : SNSRequest(new OptInPhoneNumberRequestPrivate(*other.d_func(), this))
@@ -62,7 +59,7 @@ OptInPhoneNumberRequest::OptInPhoneNumberRequest(const OptInPhoneNumberRequest &
 }
 
 /*!
- * @brief  Constructs a new OptInPhoneNumberRequest object.
+ * Constructs a OptInPhoneNumberRequest object.
  */
 OptInPhoneNumberRequest::OptInPhoneNumberRequest()
     : SNSRequest(new OptInPhoneNumberRequestPrivate(SNSRequest::OptInPhoneNumberAction, this))
@@ -80,14 +77,9 @@ bool OptInPhoneNumberRequest::isValid() const
 
 
 /*!
- * @brief  Construct an OptInPhoneNumberResponse object.
+ * Returns a OptInPhoneNumberResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An OptInPhoneNumberResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SNSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * OptInPhoneNumberRequest::response(QNetworkReply * const reply) const
 {
@@ -95,20 +87,17 @@ QtAws::Core::AwsAbstractResponse * OptInPhoneNumberRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::SNS::OptInPhoneNumberRequestPrivate
+ * \brief The OptInPhoneNumberRequestPrivate class provides private implementation for OptInPhoneNumberRequest.
+ * \internal
  *
- * @class  OptInPhoneNumberRequestPrivate
- *
- * @brief  Private implementation for OptInPhoneNumberRequest.
+ * \inmodule QtAwsSNS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new OptInPhoneNumberRequestPrivate object.
- *
- * @param  action  SNS action being performed.
- * @param  q       Pointer to this object's public OptInPhoneNumberRequest instance.
+ * Constructs a OptInPhoneNumberRequestPrivate object for SNS \a action with,
+ * public implementation \a q.
  */
 OptInPhoneNumberRequestPrivate::OptInPhoneNumberRequestPrivate(
     const SNSRequest::Action action, OptInPhoneNumberRequest * const q)
@@ -118,15 +107,10 @@ OptInPhoneNumberRequestPrivate::OptInPhoneNumberRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new OptInPhoneNumberRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the OptInPhoneNumberRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public OptInPhoneNumberRequest instance.
  */
 OptInPhoneNumberRequestPrivate::OptInPhoneNumberRequestPrivate(
     const OptInPhoneNumberRequestPrivate &other, OptInPhoneNumberRequest * const q)

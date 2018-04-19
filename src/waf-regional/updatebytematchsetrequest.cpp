@@ -27,10 +27,9 @@ namespace WAFRegional {
 
 /*!
  * \class QtAws::WAFRegional::UpdateByteMatchSetRequest
- *
  * \brief The UpdateByteMatchSetRequest class provides an interface for WAFRegional UpdateByteMatchSet requests.
  *
- * \ingroup WAFRegional
+ * \inmodule QtAwsWAFRegional
  *
  *  This is the <i>AWS WAF Regional API Reference</i> for using AWS WAF with Elastic Load Balancing (ELB) Application Load
  *  Balancers. The AWS WAF actions and data types listed in the reference are available for protecting Application Load
@@ -44,9 +43,7 @@ namespace WAFRegional {
  */
 
 /*!
- * @brief  Constructs a new UpdateByteMatchSetRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateByteMatchSetRequest::UpdateByteMatchSetRequest(const UpdateByteMatchSetRequest &other)
     : WAFRegionalRequest(new UpdateByteMatchSetRequestPrivate(*other.d_func(), this))
@@ -55,7 +52,7 @@ UpdateByteMatchSetRequest::UpdateByteMatchSetRequest(const UpdateByteMatchSetReq
 }
 
 /*!
- * @brief  Constructs a new UpdateByteMatchSetRequest object.
+ * Constructs a UpdateByteMatchSetRequest object.
  */
 UpdateByteMatchSetRequest::UpdateByteMatchSetRequest()
     : WAFRegionalRequest(new UpdateByteMatchSetRequestPrivate(WAFRegionalRequest::UpdateByteMatchSetAction, this))
@@ -73,14 +70,9 @@ bool UpdateByteMatchSetRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateByteMatchSetResponse object.
+ * Returns a UpdateByteMatchSetResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateByteMatchSetResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WAFRegionalClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateByteMatchSetRequest::response(QNetworkReply * const reply) const
 {
@@ -88,20 +80,17 @@ QtAws::Core::AwsAbstractResponse * UpdateByteMatchSetRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::WAFRegional::UpdateByteMatchSetRequestPrivate
+ * \brief The UpdateByteMatchSetRequestPrivate class provides private implementation for UpdateByteMatchSetRequest.
+ * \internal
  *
- * @class  UpdateByteMatchSetRequestPrivate
- *
- * @brief  Private implementation for UpdateByteMatchSetRequest.
+ * \inmodule QtAwsWAFRegional
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateByteMatchSetRequestPrivate object.
- *
- * @param  action  WAFRegional action being performed.
- * @param  q       Pointer to this object's public UpdateByteMatchSetRequest instance.
+ * Constructs a UpdateByteMatchSetRequestPrivate object for WAFRegional \a action with,
+ * public implementation \a q.
  */
 UpdateByteMatchSetRequestPrivate::UpdateByteMatchSetRequestPrivate(
     const WAFRegionalRequest::Action action, UpdateByteMatchSetRequest * const q)
@@ -111,15 +100,10 @@ UpdateByteMatchSetRequestPrivate::UpdateByteMatchSetRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateByteMatchSetRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateByteMatchSetRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateByteMatchSetRequest instance.
  */
 UpdateByteMatchSetRequestPrivate::UpdateByteMatchSetRequestPrivate(
     const UpdateByteMatchSetRequestPrivate &other, UpdateByteMatchSetRequest * const q)

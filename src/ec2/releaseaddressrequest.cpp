@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::ReleaseAddressRequest
- *
  * \brief The ReleaseAddressRequest class provides an interface for EC2 ReleaseAddress requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new ReleaseAddressRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ReleaseAddressRequest::ReleaseAddressRequest(const ReleaseAddressRequest &other)
     : EC2Request(new ReleaseAddressRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ ReleaseAddressRequest::ReleaseAddressRequest(const ReleaseAddressRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ReleaseAddressRequest object.
+ * Constructs a ReleaseAddressRequest object.
  */
 ReleaseAddressRequest::ReleaseAddressRequest()
     : EC2Request(new ReleaseAddressRequestPrivate(EC2Request::ReleaseAddressAction, this))
@@ -70,14 +67,9 @@ bool ReleaseAddressRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ReleaseAddressResponse object.
+ * Returns a ReleaseAddressResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ReleaseAddressResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ReleaseAddressRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * ReleaseAddressRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::ReleaseAddressRequestPrivate
+ * \brief The ReleaseAddressRequestPrivate class provides private implementation for ReleaseAddressRequest.
+ * \internal
  *
- * @class  ReleaseAddressRequestPrivate
- *
- * @brief  Private implementation for ReleaseAddressRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ReleaseAddressRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public ReleaseAddressRequest instance.
+ * Constructs a ReleaseAddressRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 ReleaseAddressRequestPrivate::ReleaseAddressRequestPrivate(
     const EC2Request::Action action, ReleaseAddressRequest * const q)
@@ -108,15 +97,10 @@ ReleaseAddressRequestPrivate::ReleaseAddressRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ReleaseAddressRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ReleaseAddressRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ReleaseAddressRequest instance.
  */
 ReleaseAddressRequestPrivate::ReleaseAddressRequestPrivate(
     const ReleaseAddressRequestPrivate &other, ReleaseAddressRequest * const q)

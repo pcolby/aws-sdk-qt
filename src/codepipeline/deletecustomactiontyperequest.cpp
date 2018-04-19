@@ -27,10 +27,9 @@ namespace CodePipeline {
 
 /*!
  * \class QtAws::CodePipeline::DeleteCustomActionTypeRequest
- *
  * \brief The DeleteCustomActionTypeRequest class provides an interface for CodePipeline DeleteCustomActionType requests.
  *
- * \ingroup CodePipeline
+ * \inmodule QtAwsCodePipeline
  *
  *  <fullname>AWS CodePipeline</fullname>
  * 
@@ -200,9 +199,7 @@ namespace CodePipeline {
  */
 
 /*!
- * @brief  Constructs a new DeleteCustomActionTypeRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteCustomActionTypeRequest::DeleteCustomActionTypeRequest(const DeleteCustomActionTypeRequest &other)
     : CodePipelineRequest(new DeleteCustomActionTypeRequestPrivate(*other.d_func(), this))
@@ -211,7 +208,7 @@ DeleteCustomActionTypeRequest::DeleteCustomActionTypeRequest(const DeleteCustomA
 }
 
 /*!
- * @brief  Constructs a new DeleteCustomActionTypeRequest object.
+ * Constructs a DeleteCustomActionTypeRequest object.
  */
 DeleteCustomActionTypeRequest::DeleteCustomActionTypeRequest()
     : CodePipelineRequest(new DeleteCustomActionTypeRequestPrivate(CodePipelineRequest::DeleteCustomActionTypeAction, this))
@@ -229,14 +226,9 @@ bool DeleteCustomActionTypeRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteCustomActionTypeResponse object.
+ * Returns a DeleteCustomActionTypeResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteCustomActionTypeResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CodePipelineClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteCustomActionTypeRequest::response(QNetworkReply * const reply) const
 {
@@ -244,20 +236,17 @@ QtAws::Core::AwsAbstractResponse * DeleteCustomActionTypeRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::CodePipeline::DeleteCustomActionTypeRequestPrivate
+ * \brief The DeleteCustomActionTypeRequestPrivate class provides private implementation for DeleteCustomActionTypeRequest.
+ * \internal
  *
- * @class  DeleteCustomActionTypeRequestPrivate
- *
- * @brief  Private implementation for DeleteCustomActionTypeRequest.
+ * \inmodule QtAwsCodePipeline
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteCustomActionTypeRequestPrivate object.
- *
- * @param  action  CodePipeline action being performed.
- * @param  q       Pointer to this object's public DeleteCustomActionTypeRequest instance.
+ * Constructs a DeleteCustomActionTypeRequestPrivate object for CodePipeline \a action with,
+ * public implementation \a q.
  */
 DeleteCustomActionTypeRequestPrivate::DeleteCustomActionTypeRequestPrivate(
     const CodePipelineRequest::Action action, DeleteCustomActionTypeRequest * const q)
@@ -267,15 +256,10 @@ DeleteCustomActionTypeRequestPrivate::DeleteCustomActionTypeRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteCustomActionTypeRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteCustomActionTypeRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteCustomActionTypeRequest instance.
  */
 DeleteCustomActionTypeRequestPrivate::DeleteCustomActionTypeRequestPrivate(
     const DeleteCustomActionTypeRequestPrivate &other, DeleteCustomActionTypeRequest * const q)

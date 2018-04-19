@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::ReplaceRouteTableAssociationRequest
- *
  * \brief The ReplaceRouteTableAssociationRequest class provides an interface for EC2 ReplaceRouteTableAssociation requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new ReplaceRouteTableAssociationRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ReplaceRouteTableAssociationRequest::ReplaceRouteTableAssociationRequest(const ReplaceRouteTableAssociationRequest &other)
     : EC2Request(new ReplaceRouteTableAssociationRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ ReplaceRouteTableAssociationRequest::ReplaceRouteTableAssociationRequest(const R
 }
 
 /*!
- * @brief  Constructs a new ReplaceRouteTableAssociationRequest object.
+ * Constructs a ReplaceRouteTableAssociationRequest object.
  */
 ReplaceRouteTableAssociationRequest::ReplaceRouteTableAssociationRequest()
     : EC2Request(new ReplaceRouteTableAssociationRequestPrivate(EC2Request::ReplaceRouteTableAssociationAction, this))
@@ -70,14 +67,9 @@ bool ReplaceRouteTableAssociationRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ReplaceRouteTableAssociationResponse object.
+ * Returns a ReplaceRouteTableAssociationResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ReplaceRouteTableAssociationResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ReplaceRouteTableAssociationRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * ReplaceRouteTableAssociationRequest::response
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::ReplaceRouteTableAssociationRequestPrivate
+ * \brief The ReplaceRouteTableAssociationRequestPrivate class provides private implementation for ReplaceRouteTableAssociationRequest.
+ * \internal
  *
- * @class  ReplaceRouteTableAssociationRequestPrivate
- *
- * @brief  Private implementation for ReplaceRouteTableAssociationRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ReplaceRouteTableAssociationRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public ReplaceRouteTableAssociationRequest instance.
+ * Constructs a ReplaceRouteTableAssociationRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 ReplaceRouteTableAssociationRequestPrivate::ReplaceRouteTableAssociationRequestPrivate(
     const EC2Request::Action action, ReplaceRouteTableAssociationRequest * const q)
@@ -108,15 +97,10 @@ ReplaceRouteTableAssociationRequestPrivate::ReplaceRouteTableAssociationRequestP
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ReplaceRouteTableAssociationRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ReplaceRouteTableAssociationRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ReplaceRouteTableAssociationRequest instance.
  */
 ReplaceRouteTableAssociationRequestPrivate::ReplaceRouteTableAssociationRequestPrivate(
     const ReplaceRouteTableAssociationRequestPrivate &other, ReplaceRouteTableAssociationRequest * const q)

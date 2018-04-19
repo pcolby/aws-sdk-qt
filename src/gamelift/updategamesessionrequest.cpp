@@ -27,10 +27,9 @@ namespace GameLift {
 
 /*!
  * \class QtAws::GameLift::UpdateGameSessionRequest
- *
  * \brief The UpdateGameSessionRequest class provides an interface for GameLift UpdateGameSession requests.
  *
- * \ingroup GameLift
+ * \inmodule QtAwsGameLift
  *
  *  <fullname>Amazon GameLift Service</fullname>
  * 
@@ -473,9 +472,7 @@ namespace GameLift {
  */
 
 /*!
- * @brief  Constructs a new UpdateGameSessionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateGameSessionRequest::UpdateGameSessionRequest(const UpdateGameSessionRequest &other)
     : GameLiftRequest(new UpdateGameSessionRequestPrivate(*other.d_func(), this))
@@ -484,7 +481,7 @@ UpdateGameSessionRequest::UpdateGameSessionRequest(const UpdateGameSessionReques
 }
 
 /*!
- * @brief  Constructs a new UpdateGameSessionRequest object.
+ * Constructs a UpdateGameSessionRequest object.
  */
 UpdateGameSessionRequest::UpdateGameSessionRequest()
     : GameLiftRequest(new UpdateGameSessionRequestPrivate(GameLiftRequest::UpdateGameSessionAction, this))
@@ -502,14 +499,9 @@ bool UpdateGameSessionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateGameSessionResponse object.
+ * Returns a UpdateGameSessionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateGameSessionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GameLiftClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateGameSessionRequest::response(QNetworkReply * const reply) const
 {
@@ -517,20 +509,17 @@ QtAws::Core::AwsAbstractResponse * UpdateGameSessionRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::GameLift::UpdateGameSessionRequestPrivate
+ * \brief The UpdateGameSessionRequestPrivate class provides private implementation for UpdateGameSessionRequest.
+ * \internal
  *
- * @class  UpdateGameSessionRequestPrivate
- *
- * @brief  Private implementation for UpdateGameSessionRequest.
+ * \inmodule QtAwsGameLift
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateGameSessionRequestPrivate object.
- *
- * @param  action  GameLift action being performed.
- * @param  q       Pointer to this object's public UpdateGameSessionRequest instance.
+ * Constructs a UpdateGameSessionRequestPrivate object for GameLift \a action with,
+ * public implementation \a q.
  */
 UpdateGameSessionRequestPrivate::UpdateGameSessionRequestPrivate(
     const GameLiftRequest::Action action, UpdateGameSessionRequest * const q)
@@ -540,15 +529,10 @@ UpdateGameSessionRequestPrivate::UpdateGameSessionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateGameSessionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateGameSessionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateGameSessionRequest instance.
  */
 UpdateGameSessionRequestPrivate::UpdateGameSessionRequestPrivate(
     const UpdateGameSessionRequestPrivate &other, UpdateGameSessionRequest * const q)

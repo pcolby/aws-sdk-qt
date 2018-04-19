@@ -27,10 +27,9 @@ namespace GameLift {
 
 /*!
  * \class QtAws::GameLift::DescribeInstancesRequest
- *
  * \brief The DescribeInstancesRequest class provides an interface for GameLift DescribeInstances requests.
  *
- * \ingroup GameLift
+ * \inmodule QtAwsGameLift
  *
  *  <fullname>Amazon GameLift Service</fullname>
  * 
@@ -473,9 +472,7 @@ namespace GameLift {
  */
 
 /*!
- * @brief  Constructs a new DescribeInstancesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeInstancesRequest::DescribeInstancesRequest(const DescribeInstancesRequest &other)
     : GameLiftRequest(new DescribeInstancesRequestPrivate(*other.d_func(), this))
@@ -484,7 +481,7 @@ DescribeInstancesRequest::DescribeInstancesRequest(const DescribeInstancesReques
 }
 
 /*!
- * @brief  Constructs a new DescribeInstancesRequest object.
+ * Constructs a DescribeInstancesRequest object.
  */
 DescribeInstancesRequest::DescribeInstancesRequest()
     : GameLiftRequest(new DescribeInstancesRequestPrivate(GameLiftRequest::DescribeInstancesAction, this))
@@ -502,14 +499,9 @@ bool DescribeInstancesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeInstancesResponse object.
+ * Returns a DescribeInstancesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeInstancesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GameLiftClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeInstancesRequest::response(QNetworkReply * const reply) const
 {
@@ -517,20 +509,17 @@ QtAws::Core::AwsAbstractResponse * DescribeInstancesRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::GameLift::DescribeInstancesRequestPrivate
+ * \brief The DescribeInstancesRequestPrivate class provides private implementation for DescribeInstancesRequest.
+ * \internal
  *
- * @class  DescribeInstancesRequestPrivate
- *
- * @brief  Private implementation for DescribeInstancesRequest.
+ * \inmodule QtAwsGameLift
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeInstancesRequestPrivate object.
- *
- * @param  action  GameLift action being performed.
- * @param  q       Pointer to this object's public DescribeInstancesRequest instance.
+ * Constructs a DescribeInstancesRequestPrivate object for GameLift \a action with,
+ * public implementation \a q.
  */
 DescribeInstancesRequestPrivate::DescribeInstancesRequestPrivate(
     const GameLiftRequest::Action action, DescribeInstancesRequest * const q)
@@ -540,15 +529,10 @@ DescribeInstancesRequestPrivate::DescribeInstancesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeInstancesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeInstancesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeInstancesRequest instance.
  */
 DescribeInstancesRequestPrivate::DescribeInstancesRequestPrivate(
     const DescribeInstancesRequestPrivate &other, DescribeInstancesRequest * const q)

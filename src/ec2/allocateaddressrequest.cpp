@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::AllocateAddressRequest
- *
  * \brief The AllocateAddressRequest class provides an interface for EC2 AllocateAddress requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new AllocateAddressRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AllocateAddressRequest::AllocateAddressRequest(const AllocateAddressRequest &other)
     : EC2Request(new AllocateAddressRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ AllocateAddressRequest::AllocateAddressRequest(const AllocateAddressRequest &oth
 }
 
 /*!
- * @brief  Constructs a new AllocateAddressRequest object.
+ * Constructs a AllocateAddressRequest object.
  */
 AllocateAddressRequest::AllocateAddressRequest()
     : EC2Request(new AllocateAddressRequestPrivate(EC2Request::AllocateAddressAction, this))
@@ -70,14 +67,9 @@ bool AllocateAddressRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AllocateAddressResponse object.
+ * Returns a AllocateAddressResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AllocateAddressResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AllocateAddressRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * AllocateAddressRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::AllocateAddressRequestPrivate
+ * \brief The AllocateAddressRequestPrivate class provides private implementation for AllocateAddressRequest.
+ * \internal
  *
- * @class  AllocateAddressRequestPrivate
- *
- * @brief  Private implementation for AllocateAddressRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AllocateAddressRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public AllocateAddressRequest instance.
+ * Constructs a AllocateAddressRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 AllocateAddressRequestPrivate::AllocateAddressRequestPrivate(
     const EC2Request::Action action, AllocateAddressRequest * const q)
@@ -108,15 +97,10 @@ AllocateAddressRequestPrivate::AllocateAddressRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AllocateAddressRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AllocateAddressRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AllocateAddressRequest instance.
  */
 AllocateAddressRequestPrivate::AllocateAddressRequestPrivate(
     const AllocateAddressRequestPrivate &other, AllocateAddressRequest * const q)

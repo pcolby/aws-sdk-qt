@@ -27,19 +27,16 @@ namespace MTurk {
 
 /*!
  * \class QtAws::MTurk::ListAssignmentsForHITRequest
- *
  * \brief The ListAssignmentsForHITRequest class provides an interface for MTurk ListAssignmentsForHIT requests.
  *
- * \ingroup MTurk
+ * \inmodule QtAwsMTurk
  *
  *
  * \sa MTurkClient::listAssignmentsForHIT
  */
 
 /*!
- * @brief  Constructs a new ListAssignmentsForHITRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListAssignmentsForHITRequest::ListAssignmentsForHITRequest(const ListAssignmentsForHITRequest &other)
     : MTurkRequest(new ListAssignmentsForHITRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ ListAssignmentsForHITRequest::ListAssignmentsForHITRequest(const ListAssignments
 }
 
 /*!
- * @brief  Constructs a new ListAssignmentsForHITRequest object.
+ * Constructs a ListAssignmentsForHITRequest object.
  */
 ListAssignmentsForHITRequest::ListAssignmentsForHITRequest()
     : MTurkRequest(new ListAssignmentsForHITRequestPrivate(MTurkRequest::ListAssignmentsForHITAction, this))
@@ -66,14 +63,9 @@ bool ListAssignmentsForHITRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListAssignmentsForHITResponse object.
+ * Returns a ListAssignmentsForHITResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListAssignmentsForHITResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MTurkClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListAssignmentsForHITRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * ListAssignmentsForHITRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::MTurk::ListAssignmentsForHITRequestPrivate
+ * \brief The ListAssignmentsForHITRequestPrivate class provides private implementation for ListAssignmentsForHITRequest.
+ * \internal
  *
- * @class  ListAssignmentsForHITRequestPrivate
- *
- * @brief  Private implementation for ListAssignmentsForHITRequest.
+ * \inmodule QtAwsMTurk
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListAssignmentsForHITRequestPrivate object.
- *
- * @param  action  MTurk action being performed.
- * @param  q       Pointer to this object's public ListAssignmentsForHITRequest instance.
+ * Constructs a ListAssignmentsForHITRequestPrivate object for MTurk \a action with,
+ * public implementation \a q.
  */
 ListAssignmentsForHITRequestPrivate::ListAssignmentsForHITRequestPrivate(
     const MTurkRequest::Action action, ListAssignmentsForHITRequest * const q)
@@ -104,15 +93,10 @@ ListAssignmentsForHITRequestPrivate::ListAssignmentsForHITRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListAssignmentsForHITRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListAssignmentsForHITRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListAssignmentsForHITRequest instance.
  */
 ListAssignmentsForHITRequestPrivate::ListAssignmentsForHITRequestPrivate(
     const ListAssignmentsForHITRequestPrivate &other, ListAssignmentsForHITRequest * const q)

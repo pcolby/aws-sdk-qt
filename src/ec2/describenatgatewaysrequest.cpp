@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DescribeNatGatewaysRequest
- *
  * \brief The DescribeNatGatewaysRequest class provides an interface for EC2 DescribeNatGateways requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DescribeNatGatewaysRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeNatGatewaysRequest::DescribeNatGatewaysRequest(const DescribeNatGatewaysRequest &other)
     : EC2Request(new DescribeNatGatewaysRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ DescribeNatGatewaysRequest::DescribeNatGatewaysRequest(const DescribeNatGateways
 }
 
 /*!
- * @brief  Constructs a new DescribeNatGatewaysRequest object.
+ * Constructs a DescribeNatGatewaysRequest object.
  */
 DescribeNatGatewaysRequest::DescribeNatGatewaysRequest()
     : EC2Request(new DescribeNatGatewaysRequestPrivate(EC2Request::DescribeNatGatewaysAction, this))
@@ -70,14 +67,9 @@ bool DescribeNatGatewaysRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeNatGatewaysResponse object.
+ * Returns a DescribeNatGatewaysResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeNatGatewaysResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeNatGatewaysRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * DescribeNatGatewaysRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::DescribeNatGatewaysRequestPrivate
+ * \brief The DescribeNatGatewaysRequestPrivate class provides private implementation for DescribeNatGatewaysRequest.
+ * \internal
  *
- * @class  DescribeNatGatewaysRequestPrivate
- *
- * @brief  Private implementation for DescribeNatGatewaysRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeNatGatewaysRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public DescribeNatGatewaysRequest instance.
+ * Constructs a DescribeNatGatewaysRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 DescribeNatGatewaysRequestPrivate::DescribeNatGatewaysRequestPrivate(
     const EC2Request::Action action, DescribeNatGatewaysRequest * const q)
@@ -108,15 +97,10 @@ DescribeNatGatewaysRequestPrivate::DescribeNatGatewaysRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeNatGatewaysRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeNatGatewaysRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeNatGatewaysRequest instance.
  */
 DescribeNatGatewaysRequestPrivate::DescribeNatGatewaysRequestPrivate(
     const DescribeNatGatewaysRequestPrivate &other, DescribeNatGatewaysRequest * const q)

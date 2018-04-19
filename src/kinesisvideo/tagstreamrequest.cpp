@@ -27,19 +27,16 @@ namespace KinesisVideo {
 
 /*!
  * \class QtAws::KinesisVideo::TagStreamRequest
- *
  * \brief The TagStreamRequest class provides an interface for KinesisVideo TagStream requests.
  *
- * \ingroup KinesisVideo
+ * \inmodule QtAwsKinesisVideo
  *
  *
  * \sa KinesisVideoClient::tagStream
  */
 
 /*!
- * @brief  Constructs a new TagStreamRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 TagStreamRequest::TagStreamRequest(const TagStreamRequest &other)
     : KinesisVideoRequest(new TagStreamRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ TagStreamRequest::TagStreamRequest(const TagStreamRequest &other)
 }
 
 /*!
- * @brief  Constructs a new TagStreamRequest object.
+ * Constructs a TagStreamRequest object.
  */
 TagStreamRequest::TagStreamRequest()
     : KinesisVideoRequest(new TagStreamRequestPrivate(KinesisVideoRequest::TagStreamAction, this))
@@ -66,14 +63,9 @@ bool TagStreamRequest::isValid() const
 
 
 /*!
- * @brief  Construct an TagStreamResponse object.
+ * Returns a TagStreamResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An TagStreamResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  KinesisVideoClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * TagStreamRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * TagStreamRequest::response(QNetworkReply * co
 }
 
 /*!
- * @internal
+ * \class QtAws::KinesisVideo::TagStreamRequestPrivate
+ * \brief The TagStreamRequestPrivate class provides private implementation for TagStreamRequest.
+ * \internal
  *
- * @class  TagStreamRequestPrivate
- *
- * @brief  Private implementation for TagStreamRequest.
+ * \inmodule QtAwsKinesisVideo
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new TagStreamRequestPrivate object.
- *
- * @param  action  KinesisVideo action being performed.
- * @param  q       Pointer to this object's public TagStreamRequest instance.
+ * Constructs a TagStreamRequestPrivate object for KinesisVideo \a action with,
+ * public implementation \a q.
  */
 TagStreamRequestPrivate::TagStreamRequestPrivate(
     const KinesisVideoRequest::Action action, TagStreamRequest * const q)
@@ -104,15 +93,10 @@ TagStreamRequestPrivate::TagStreamRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new TagStreamRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the TagStreamRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public TagStreamRequest instance.
  */
 TagStreamRequestPrivate::TagStreamRequestPrivate(
     const TagStreamRequestPrivate &other, TagStreamRequest * const q)

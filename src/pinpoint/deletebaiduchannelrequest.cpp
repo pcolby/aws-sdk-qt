@@ -27,19 +27,16 @@ namespace Pinpoint {
 
 /*!
  * \class QtAws::Pinpoint::DeleteBaiduChannelRequest
- *
  * \brief The DeleteBaiduChannelRequest class provides an interface for Pinpoint DeleteBaiduChannel requests.
  *
- * \ingroup Pinpoint
+ * \inmodule QtAwsPinpoint
  *
  *
  * \sa PinpointClient::deleteBaiduChannel
  */
 
 /*!
- * @brief  Constructs a new DeleteBaiduChannelRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteBaiduChannelRequest::DeleteBaiduChannelRequest(const DeleteBaiduChannelRequest &other)
     : PinpointRequest(new DeleteBaiduChannelRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ DeleteBaiduChannelRequest::DeleteBaiduChannelRequest(const DeleteBaiduChannelReq
 }
 
 /*!
- * @brief  Constructs a new DeleteBaiduChannelRequest object.
+ * Constructs a DeleteBaiduChannelRequest object.
  */
 DeleteBaiduChannelRequest::DeleteBaiduChannelRequest()
     : PinpointRequest(new DeleteBaiduChannelRequestPrivate(PinpointRequest::DeleteBaiduChannelAction, this))
@@ -66,14 +63,9 @@ bool DeleteBaiduChannelRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteBaiduChannelResponse object.
+ * Returns a DeleteBaiduChannelResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteBaiduChannelResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  PinpointClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteBaiduChannelRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * DeleteBaiduChannelRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::Pinpoint::DeleteBaiduChannelRequestPrivate
+ * \brief The DeleteBaiduChannelRequestPrivate class provides private implementation for DeleteBaiduChannelRequest.
+ * \internal
  *
- * @class  DeleteBaiduChannelRequestPrivate
- *
- * @brief  Private implementation for DeleteBaiduChannelRequest.
+ * \inmodule QtAwsPinpoint
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteBaiduChannelRequestPrivate object.
- *
- * @param  action  Pinpoint action being performed.
- * @param  q       Pointer to this object's public DeleteBaiduChannelRequest instance.
+ * Constructs a DeleteBaiduChannelRequestPrivate object for Pinpoint \a action with,
+ * public implementation \a q.
  */
 DeleteBaiduChannelRequestPrivate::DeleteBaiduChannelRequestPrivate(
     const PinpointRequest::Action action, DeleteBaiduChannelRequest * const q)
@@ -104,15 +93,10 @@ DeleteBaiduChannelRequestPrivate::DeleteBaiduChannelRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteBaiduChannelRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteBaiduChannelRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteBaiduChannelRequest instance.
  */
 DeleteBaiduChannelRequestPrivate::DeleteBaiduChannelRequestPrivate(
     const DeleteBaiduChannelRequestPrivate &other, DeleteBaiduChannelRequest * const q)

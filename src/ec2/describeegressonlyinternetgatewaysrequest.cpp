@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DescribeEgressOnlyInternetGatewaysRequest
- *
  * \brief The DescribeEgressOnlyInternetGatewaysRequest class provides an interface for EC2 DescribeEgressOnlyInternetGateways requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DescribeEgressOnlyInternetGatewaysRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeEgressOnlyInternetGatewaysRequest::DescribeEgressOnlyInternetGatewaysRequest(const DescribeEgressOnlyInternetGatewaysRequest &other)
     : EC2Request(new DescribeEgressOnlyInternetGatewaysRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ DescribeEgressOnlyInternetGatewaysRequest::DescribeEgressOnlyInternetGatewaysReq
 }
 
 /*!
- * @brief  Constructs a new DescribeEgressOnlyInternetGatewaysRequest object.
+ * Constructs a DescribeEgressOnlyInternetGatewaysRequest object.
  */
 DescribeEgressOnlyInternetGatewaysRequest::DescribeEgressOnlyInternetGatewaysRequest()
     : EC2Request(new DescribeEgressOnlyInternetGatewaysRequestPrivate(EC2Request::DescribeEgressOnlyInternetGatewaysAction, this))
@@ -70,14 +67,9 @@ bool DescribeEgressOnlyInternetGatewaysRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeEgressOnlyInternetGatewaysResponse object.
+ * Returns a DescribeEgressOnlyInternetGatewaysResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeEgressOnlyInternetGatewaysResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeEgressOnlyInternetGatewaysRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * DescribeEgressOnlyInternetGatewaysRequest::re
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::DescribeEgressOnlyInternetGatewaysRequestPrivate
+ * \brief The DescribeEgressOnlyInternetGatewaysRequestPrivate class provides private implementation for DescribeEgressOnlyInternetGatewaysRequest.
+ * \internal
  *
- * @class  DescribeEgressOnlyInternetGatewaysRequestPrivate
- *
- * @brief  Private implementation for DescribeEgressOnlyInternetGatewaysRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeEgressOnlyInternetGatewaysRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public DescribeEgressOnlyInternetGatewaysRequest instance.
+ * Constructs a DescribeEgressOnlyInternetGatewaysRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 DescribeEgressOnlyInternetGatewaysRequestPrivate::DescribeEgressOnlyInternetGatewaysRequestPrivate(
     const EC2Request::Action action, DescribeEgressOnlyInternetGatewaysRequest * const q)
@@ -108,15 +97,10 @@ DescribeEgressOnlyInternetGatewaysRequestPrivate::DescribeEgressOnlyInternetGate
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeEgressOnlyInternetGatewaysRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeEgressOnlyInternetGatewaysRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeEgressOnlyInternetGatewaysRequest instance.
  */
 DescribeEgressOnlyInternetGatewaysRequestPrivate::DescribeEgressOnlyInternetGatewaysRequestPrivate(
     const DescribeEgressOnlyInternetGatewaysRequestPrivate &other, DescribeEgressOnlyInternetGatewaysRequest * const q)

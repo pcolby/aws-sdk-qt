@@ -27,10 +27,9 @@ namespace AutoScaling {
 
 /*!
  * \class QtAws::AutoScaling::DescribeScalingActivitiesRequest
- *
  * \brief The DescribeScalingActivitiesRequest class provides an interface for AutoScaling DescribeScalingActivities requests.
  *
- * \ingroup AutoScaling
+ * \inmodule QtAwsAutoScaling
  *
  *  <fullname>Amazon EC2 Auto Scaling</fullname>
  * 
@@ -42,9 +41,7 @@ namespace AutoScaling {
  */
 
 /*!
- * @brief  Constructs a new DescribeScalingActivitiesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeScalingActivitiesRequest::DescribeScalingActivitiesRequest(const DescribeScalingActivitiesRequest &other)
     : AutoScalingRequest(new DescribeScalingActivitiesRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ DescribeScalingActivitiesRequest::DescribeScalingActivitiesRequest(const Describ
 }
 
 /*!
- * @brief  Constructs a new DescribeScalingActivitiesRequest object.
+ * Constructs a DescribeScalingActivitiesRequest object.
  */
 DescribeScalingActivitiesRequest::DescribeScalingActivitiesRequest()
     : AutoScalingRequest(new DescribeScalingActivitiesRequestPrivate(AutoScalingRequest::DescribeScalingActivitiesAction, this))
@@ -71,14 +68,9 @@ bool DescribeScalingActivitiesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeScalingActivitiesResponse object.
+ * Returns a DescribeScalingActivitiesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeScalingActivitiesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AutoScalingClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeScalingActivitiesRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * DescribeScalingActivitiesRequest::response(QN
 }
 
 /*!
- * @internal
+ * \class QtAws::AutoScaling::DescribeScalingActivitiesRequestPrivate
+ * \brief The DescribeScalingActivitiesRequestPrivate class provides private implementation for DescribeScalingActivitiesRequest.
+ * \internal
  *
- * @class  DescribeScalingActivitiesRequestPrivate
- *
- * @brief  Private implementation for DescribeScalingActivitiesRequest.
+ * \inmodule QtAwsAutoScaling
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeScalingActivitiesRequestPrivate object.
- *
- * @param  action  AutoScaling action being performed.
- * @param  q       Pointer to this object's public DescribeScalingActivitiesRequest instance.
+ * Constructs a DescribeScalingActivitiesRequestPrivate object for AutoScaling \a action with,
+ * public implementation \a q.
  */
 DescribeScalingActivitiesRequestPrivate::DescribeScalingActivitiesRequestPrivate(
     const AutoScalingRequest::Action action, DescribeScalingActivitiesRequest * const q)
@@ -109,15 +98,10 @@ DescribeScalingActivitiesRequestPrivate::DescribeScalingActivitiesRequestPrivate
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeScalingActivitiesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeScalingActivitiesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeScalingActivitiesRequest instance.
  */
 DescribeScalingActivitiesRequestPrivate::DescribeScalingActivitiesRequestPrivate(
     const DescribeScalingActivitiesRequestPrivate &other, DescribeScalingActivitiesRequest * const q)

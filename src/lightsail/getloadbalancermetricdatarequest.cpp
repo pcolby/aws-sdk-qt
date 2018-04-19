@@ -27,10 +27,9 @@ namespace Lightsail {
 
 /*!
  * \class QtAws::Lightsail::GetLoadBalancerMetricDataRequest
- *
  * \brief The GetLoadBalancerMetricDataRequest class provides an interface for Lightsail GetLoadBalancerMetricData requests.
  *
- * \ingroup Lightsail
+ * \inmodule QtAwsLightsail
  *
  *  Amazon Lightsail is the easiest way to get started with AWS for developers who just need virtual private servers.
  *  Lightsail includes everything you need to launch your project quickly - a virtual machine, SSD-based storage, data
@@ -53,9 +52,7 @@ namespace Lightsail {
  */
 
 /*!
- * @brief  Constructs a new GetLoadBalancerMetricDataRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetLoadBalancerMetricDataRequest::GetLoadBalancerMetricDataRequest(const GetLoadBalancerMetricDataRequest &other)
     : LightsailRequest(new GetLoadBalancerMetricDataRequestPrivate(*other.d_func(), this))
@@ -64,7 +61,7 @@ GetLoadBalancerMetricDataRequest::GetLoadBalancerMetricDataRequest(const GetLoad
 }
 
 /*!
- * @brief  Constructs a new GetLoadBalancerMetricDataRequest object.
+ * Constructs a GetLoadBalancerMetricDataRequest object.
  */
 GetLoadBalancerMetricDataRequest::GetLoadBalancerMetricDataRequest()
     : LightsailRequest(new GetLoadBalancerMetricDataRequestPrivate(LightsailRequest::GetLoadBalancerMetricDataAction, this))
@@ -82,14 +79,9 @@ bool GetLoadBalancerMetricDataRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetLoadBalancerMetricDataResponse object.
+ * Returns a GetLoadBalancerMetricDataResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetLoadBalancerMetricDataResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  LightsailClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetLoadBalancerMetricDataRequest::response(QNetworkReply * const reply) const
 {
@@ -97,20 +89,17 @@ QtAws::Core::AwsAbstractResponse * GetLoadBalancerMetricDataRequest::response(QN
 }
 
 /*!
- * @internal
+ * \class QtAws::Lightsail::GetLoadBalancerMetricDataRequestPrivate
+ * \brief The GetLoadBalancerMetricDataRequestPrivate class provides private implementation for GetLoadBalancerMetricDataRequest.
+ * \internal
  *
- * @class  GetLoadBalancerMetricDataRequestPrivate
- *
- * @brief  Private implementation for GetLoadBalancerMetricDataRequest.
+ * \inmodule QtAwsLightsail
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetLoadBalancerMetricDataRequestPrivate object.
- *
- * @param  action  Lightsail action being performed.
- * @param  q       Pointer to this object's public GetLoadBalancerMetricDataRequest instance.
+ * Constructs a GetLoadBalancerMetricDataRequestPrivate object for Lightsail \a action with,
+ * public implementation \a q.
  */
 GetLoadBalancerMetricDataRequestPrivate::GetLoadBalancerMetricDataRequestPrivate(
     const LightsailRequest::Action action, GetLoadBalancerMetricDataRequest * const q)
@@ -120,15 +109,10 @@ GetLoadBalancerMetricDataRequestPrivate::GetLoadBalancerMetricDataRequestPrivate
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetLoadBalancerMetricDataRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetLoadBalancerMetricDataRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetLoadBalancerMetricDataRequest instance.
  */
 GetLoadBalancerMetricDataRequestPrivate::GetLoadBalancerMetricDataRequestPrivate(
     const GetLoadBalancerMetricDataRequestPrivate &other, GetLoadBalancerMetricDataRequest * const q)

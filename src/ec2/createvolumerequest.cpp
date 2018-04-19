@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::CreateVolumeRequest
- *
  * \brief The CreateVolumeRequest class provides an interface for EC2 CreateVolume requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new CreateVolumeRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateVolumeRequest::CreateVolumeRequest(const CreateVolumeRequest &other)
     : EC2Request(new CreateVolumeRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ CreateVolumeRequest::CreateVolumeRequest(const CreateVolumeRequest &other)
 }
 
 /*!
- * @brief  Constructs a new CreateVolumeRequest object.
+ * Constructs a CreateVolumeRequest object.
  */
 CreateVolumeRequest::CreateVolumeRequest()
     : EC2Request(new CreateVolumeRequestPrivate(EC2Request::CreateVolumeAction, this))
@@ -70,14 +67,9 @@ bool CreateVolumeRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateVolumeResponse object.
+ * Returns a CreateVolumeResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateVolumeResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateVolumeRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * CreateVolumeRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::CreateVolumeRequestPrivate
+ * \brief The CreateVolumeRequestPrivate class provides private implementation for CreateVolumeRequest.
+ * \internal
  *
- * @class  CreateVolumeRequestPrivate
- *
- * @brief  Private implementation for CreateVolumeRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateVolumeRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public CreateVolumeRequest instance.
+ * Constructs a CreateVolumeRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 CreateVolumeRequestPrivate::CreateVolumeRequestPrivate(
     const EC2Request::Action action, CreateVolumeRequest * const q)
@@ -108,15 +97,10 @@ CreateVolumeRequestPrivate::CreateVolumeRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateVolumeRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateVolumeRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateVolumeRequest instance.
  */
 CreateVolumeRequestPrivate::CreateVolumeRequestPrivate(
     const CreateVolumeRequestPrivate &other, CreateVolumeRequest * const q)

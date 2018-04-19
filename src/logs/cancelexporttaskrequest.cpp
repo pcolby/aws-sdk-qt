@@ -27,10 +27,9 @@ namespace CloudWatchLogs {
 
 /*!
  * \class QtAws::CloudWatchLogs::CancelExportTaskRequest
- *
  * \brief The CancelExportTaskRequest class provides an interface for CloudWatchLogs CancelExportTask requests.
  *
- * \ingroup CloudWatchLogs
+ * \inmodule QtAwsCloudWatchLogs
  *
  *  You can use Amazon CloudWatch Logs to monitor, store, and access your log files from Amazon EC2 instances, AWS
  *  CloudTrail, or other sources. You can then retrieve the associated log data from CloudWatch Logs using the CloudWatch
@@ -66,9 +65,7 @@ namespace CloudWatchLogs {
  */
 
 /*!
- * @brief  Constructs a new CancelExportTaskRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CancelExportTaskRequest::CancelExportTaskRequest(const CancelExportTaskRequest &other)
     : CloudWatchLogsRequest(new CancelExportTaskRequestPrivate(*other.d_func(), this))
@@ -77,7 +74,7 @@ CancelExportTaskRequest::CancelExportTaskRequest(const CancelExportTaskRequest &
 }
 
 /*!
- * @brief  Constructs a new CancelExportTaskRequest object.
+ * Constructs a CancelExportTaskRequest object.
  */
 CancelExportTaskRequest::CancelExportTaskRequest()
     : CloudWatchLogsRequest(new CancelExportTaskRequestPrivate(CloudWatchLogsRequest::CancelExportTaskAction, this))
@@ -95,14 +92,9 @@ bool CancelExportTaskRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CancelExportTaskResponse object.
+ * Returns a CancelExportTaskResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CancelExportTaskResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudWatchLogsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CancelExportTaskRequest::response(QNetworkReply * const reply) const
 {
@@ -110,20 +102,17 @@ QtAws::Core::AwsAbstractResponse * CancelExportTaskRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudWatchLogs::CancelExportTaskRequestPrivate
+ * \brief The CancelExportTaskRequestPrivate class provides private implementation for CancelExportTaskRequest.
+ * \internal
  *
- * @class  CancelExportTaskRequestPrivate
- *
- * @brief  Private implementation for CancelExportTaskRequest.
+ * \inmodule QtAwsCloudWatchLogs
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CancelExportTaskRequestPrivate object.
- *
- * @param  action  CloudWatchLogs action being performed.
- * @param  q       Pointer to this object's public CancelExportTaskRequest instance.
+ * Constructs a CancelExportTaskRequestPrivate object for CloudWatchLogs \a action with,
+ * public implementation \a q.
  */
 CancelExportTaskRequestPrivate::CancelExportTaskRequestPrivate(
     const CloudWatchLogsRequest::Action action, CancelExportTaskRequest * const q)
@@ -133,15 +122,10 @@ CancelExportTaskRequestPrivate::CancelExportTaskRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CancelExportTaskRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CancelExportTaskRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CancelExportTaskRequest instance.
  */
 CancelExportTaskRequestPrivate::CancelExportTaskRequestPrivate(
     const CancelExportTaskRequestPrivate &other, CancelExportTaskRequest * const q)

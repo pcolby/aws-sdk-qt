@@ -27,10 +27,9 @@ namespace MQ {
 
 /*!
  * \class QtAws::MQ::UpdateUserRequest
- *
  * \brief The UpdateUserRequest class provides an interface for MQ UpdateUser requests.
  *
- * \ingroup MQ
+ * \inmodule QtAwsMQ
  *
  *  Amazon MQ is a managed message broker service for Apache ActiveMQ that makes it easy to set up and operate message
  *  brokers in the cloud. A message broker allows software applications and components to communicate using various
@@ -39,9 +38,7 @@ namespace MQ {
  */
 
 /*!
- * @brief  Constructs a new UpdateUserRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateUserRequest::UpdateUserRequest(const UpdateUserRequest &other)
     : MQRequest(new UpdateUserRequestPrivate(*other.d_func(), this))
@@ -50,7 +47,7 @@ UpdateUserRequest::UpdateUserRequest(const UpdateUserRequest &other)
 }
 
 /*!
- * @brief  Constructs a new UpdateUserRequest object.
+ * Constructs a UpdateUserRequest object.
  */
 UpdateUserRequest::UpdateUserRequest()
     : MQRequest(new UpdateUserRequestPrivate(MQRequest::UpdateUserAction, this))
@@ -68,14 +65,9 @@ bool UpdateUserRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateUserResponse object.
+ * Returns a UpdateUserResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateUserResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MQClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateUserRequest::response(QNetworkReply * const reply) const
 {
@@ -83,20 +75,17 @@ QtAws::Core::AwsAbstractResponse * UpdateUserRequest::response(QNetworkReply * c
 }
 
 /*!
- * @internal
+ * \class QtAws::MQ::UpdateUserRequestPrivate
+ * \brief The UpdateUserRequestPrivate class provides private implementation for UpdateUserRequest.
+ * \internal
  *
- * @class  UpdateUserRequestPrivate
- *
- * @brief  Private implementation for UpdateUserRequest.
+ * \inmodule QtAwsMQ
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateUserRequestPrivate object.
- *
- * @param  action  MQ action being performed.
- * @param  q       Pointer to this object's public UpdateUserRequest instance.
+ * Constructs a UpdateUserRequestPrivate object for MQ \a action with,
+ * public implementation \a q.
  */
 UpdateUserRequestPrivate::UpdateUserRequestPrivate(
     const MQRequest::Action action, UpdateUserRequest * const q)
@@ -106,15 +95,10 @@ UpdateUserRequestPrivate::UpdateUserRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateUserRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateUserRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateUserRequest instance.
  */
 UpdateUserRequestPrivate::UpdateUserRequestPrivate(
     const UpdateUserRequestPrivate &other, UpdateUserRequest * const q)

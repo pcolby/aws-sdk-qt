@@ -27,10 +27,9 @@ namespace CodeBuild {
 
 /*!
  * \class QtAws::CodeBuild::UpdateWebhookRequest
- *
  * \brief The UpdateWebhookRequest class provides an interface for CodeBuild UpdateWebhook requests.
  *
- * \ingroup CodeBuild
+ * \inmodule QtAwsCodeBuild
  *
  *  <fullname>AWS CodeBuild</fullname>
  * 
@@ -117,9 +116,7 @@ namespace CodeBuild {
  */
 
 /*!
- * @brief  Constructs a new UpdateWebhookRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateWebhookRequest::UpdateWebhookRequest(const UpdateWebhookRequest &other)
     : CodeBuildRequest(new UpdateWebhookRequestPrivate(*other.d_func(), this))
@@ -128,7 +125,7 @@ UpdateWebhookRequest::UpdateWebhookRequest(const UpdateWebhookRequest &other)
 }
 
 /*!
- * @brief  Constructs a new UpdateWebhookRequest object.
+ * Constructs a UpdateWebhookRequest object.
  */
 UpdateWebhookRequest::UpdateWebhookRequest()
     : CodeBuildRequest(new UpdateWebhookRequestPrivate(CodeBuildRequest::UpdateWebhookAction, this))
@@ -146,14 +143,9 @@ bool UpdateWebhookRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateWebhookResponse object.
+ * Returns a UpdateWebhookResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateWebhookResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CodeBuildClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateWebhookRequest::response(QNetworkReply * const reply) const
 {
@@ -161,20 +153,17 @@ QtAws::Core::AwsAbstractResponse * UpdateWebhookRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::CodeBuild::UpdateWebhookRequestPrivate
+ * \brief The UpdateWebhookRequestPrivate class provides private implementation for UpdateWebhookRequest.
+ * \internal
  *
- * @class  UpdateWebhookRequestPrivate
- *
- * @brief  Private implementation for UpdateWebhookRequest.
+ * \inmodule QtAwsCodeBuild
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateWebhookRequestPrivate object.
- *
- * @param  action  CodeBuild action being performed.
- * @param  q       Pointer to this object's public UpdateWebhookRequest instance.
+ * Constructs a UpdateWebhookRequestPrivate object for CodeBuild \a action with,
+ * public implementation \a q.
  */
 UpdateWebhookRequestPrivate::UpdateWebhookRequestPrivate(
     const CodeBuildRequest::Action action, UpdateWebhookRequest * const q)
@@ -184,15 +173,10 @@ UpdateWebhookRequestPrivate::UpdateWebhookRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateWebhookRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateWebhookRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateWebhookRequest instance.
  */
 UpdateWebhookRequestPrivate::UpdateWebhookRequestPrivate(
     const UpdateWebhookRequestPrivate &other, UpdateWebhookRequest * const q)

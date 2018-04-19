@@ -27,10 +27,9 @@ namespace CognitoIdentityProvider {
 
 /*!
  * \class QtAws::CognitoIdentityProvider::UpdateResourceServerRequest
- *
  * \brief The UpdateResourceServerRequest class provides an interface for CognitoIdentityProvider UpdateResourceServer requests.
  *
- * \ingroup CognitoIdentityProvider
+ * \inmodule QtAwsCognitoIdentityProvider
  *
  *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
  *  authenticate a user to obtain tokens related to user identity and access
@@ -47,9 +46,7 @@ namespace CognitoIdentityProvider {
  */
 
 /*!
- * @brief  Constructs a new UpdateResourceServerRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateResourceServerRequest::UpdateResourceServerRequest(const UpdateResourceServerRequest &other)
     : CognitoIdentityProviderRequest(new UpdateResourceServerRequestPrivate(*other.d_func(), this))
@@ -58,7 +55,7 @@ UpdateResourceServerRequest::UpdateResourceServerRequest(const UpdateResourceSer
 }
 
 /*!
- * @brief  Constructs a new UpdateResourceServerRequest object.
+ * Constructs a UpdateResourceServerRequest object.
  */
 UpdateResourceServerRequest::UpdateResourceServerRequest()
     : CognitoIdentityProviderRequest(new UpdateResourceServerRequestPrivate(CognitoIdentityProviderRequest::UpdateResourceServerAction, this))
@@ -76,14 +73,9 @@ bool UpdateResourceServerRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateResourceServerResponse object.
+ * Returns a UpdateResourceServerResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateResourceServerResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CognitoIdentityProviderClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateResourceServerRequest::response(QNetworkReply * const reply) const
 {
@@ -91,20 +83,17 @@ QtAws::Core::AwsAbstractResponse * UpdateResourceServerRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::CognitoIdentityProvider::UpdateResourceServerRequestPrivate
+ * \brief The UpdateResourceServerRequestPrivate class provides private implementation for UpdateResourceServerRequest.
+ * \internal
  *
- * @class  UpdateResourceServerRequestPrivate
- *
- * @brief  Private implementation for UpdateResourceServerRequest.
+ * \inmodule QtAwsCognitoIdentityProvider
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateResourceServerRequestPrivate object.
- *
- * @param  action  CognitoIdentityProvider action being performed.
- * @param  q       Pointer to this object's public UpdateResourceServerRequest instance.
+ * Constructs a UpdateResourceServerRequestPrivate object for CognitoIdentityProvider \a action with,
+ * public implementation \a q.
  */
 UpdateResourceServerRequestPrivate::UpdateResourceServerRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, UpdateResourceServerRequest * const q)
@@ -114,15 +103,10 @@ UpdateResourceServerRequestPrivate::UpdateResourceServerRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateResourceServerRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateResourceServerRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateResourceServerRequest instance.
  */
 UpdateResourceServerRequestPrivate::UpdateResourceServerRequestPrivate(
     const UpdateResourceServerRequestPrivate &other, UpdateResourceServerRequest * const q)

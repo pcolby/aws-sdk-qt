@@ -27,10 +27,9 @@ namespace ServiceDiscovery {
 
 /*!
  * \class QtAws::ServiceDiscovery::UpdateInstanceCustomHealthStatusRequest
- *
  * \brief The UpdateInstanceCustomHealthStatusRequest class provides an interface for ServiceDiscovery UpdateInstanceCustomHealthStatus requests.
  *
- * \ingroup ServiceDiscovery
+ * \inmodule QtAwsServiceDiscovery
  *
  *  Amazon Route 53 auto naming lets you configure public or private namespaces that your microservice applications run in.
  *  When instances of the service become available, you can call the auto naming API to register the instance, and Route 53
@@ -41,9 +40,7 @@ namespace ServiceDiscovery {
  */
 
 /*!
- * @brief  Constructs a new UpdateInstanceCustomHealthStatusRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateInstanceCustomHealthStatusRequest::UpdateInstanceCustomHealthStatusRequest(const UpdateInstanceCustomHealthStatusRequest &other)
     : ServiceDiscoveryRequest(new UpdateInstanceCustomHealthStatusRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ UpdateInstanceCustomHealthStatusRequest::UpdateInstanceCustomHealthStatusRequest
 }
 
 /*!
- * @brief  Constructs a new UpdateInstanceCustomHealthStatusRequest object.
+ * Constructs a UpdateInstanceCustomHealthStatusRequest object.
  */
 UpdateInstanceCustomHealthStatusRequest::UpdateInstanceCustomHealthStatusRequest()
     : ServiceDiscoveryRequest(new UpdateInstanceCustomHealthStatusRequestPrivate(ServiceDiscoveryRequest::UpdateInstanceCustomHealthStatusAction, this))
@@ -70,14 +67,9 @@ bool UpdateInstanceCustomHealthStatusRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateInstanceCustomHealthStatusResponse object.
+ * Returns a UpdateInstanceCustomHealthStatusResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateInstanceCustomHealthStatusResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ServiceDiscoveryClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateInstanceCustomHealthStatusRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * UpdateInstanceCustomHealthStatusRequest::resp
 }
 
 /*!
- * @internal
+ * \class QtAws::ServiceDiscovery::UpdateInstanceCustomHealthStatusRequestPrivate
+ * \brief The UpdateInstanceCustomHealthStatusRequestPrivate class provides private implementation for UpdateInstanceCustomHealthStatusRequest.
+ * \internal
  *
- * @class  UpdateInstanceCustomHealthStatusRequestPrivate
- *
- * @brief  Private implementation for UpdateInstanceCustomHealthStatusRequest.
+ * \inmodule QtAwsServiceDiscovery
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateInstanceCustomHealthStatusRequestPrivate object.
- *
- * @param  action  ServiceDiscovery action being performed.
- * @param  q       Pointer to this object's public UpdateInstanceCustomHealthStatusRequest instance.
+ * Constructs a UpdateInstanceCustomHealthStatusRequestPrivate object for ServiceDiscovery \a action with,
+ * public implementation \a q.
  */
 UpdateInstanceCustomHealthStatusRequestPrivate::UpdateInstanceCustomHealthStatusRequestPrivate(
     const ServiceDiscoveryRequest::Action action, UpdateInstanceCustomHealthStatusRequest * const q)
@@ -108,15 +97,10 @@ UpdateInstanceCustomHealthStatusRequestPrivate::UpdateInstanceCustomHealthStatus
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateInstanceCustomHealthStatusRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateInstanceCustomHealthStatusRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateInstanceCustomHealthStatusRequest instance.
  */
 UpdateInstanceCustomHealthStatusRequestPrivate::UpdateInstanceCustomHealthStatusRequestPrivate(
     const UpdateInstanceCustomHealthStatusRequestPrivate &other, UpdateInstanceCustomHealthStatusRequest * const q)

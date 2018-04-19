@@ -27,10 +27,9 @@ namespace Glue {
 
 /*!
  * \class QtAws::Glue::DeleteTriggerRequest
- *
  * \brief The DeleteTriggerRequest class provides an interface for Glue DeleteTrigger requests.
  *
- * \ingroup Glue
+ * \inmodule QtAwsGlue
  *
  *  <fullname>AWS Glue</fullname>
  * 
@@ -40,9 +39,7 @@ namespace Glue {
  */
 
 /*!
- * @brief  Constructs a new DeleteTriggerRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteTriggerRequest::DeleteTriggerRequest(const DeleteTriggerRequest &other)
     : GlueRequest(new DeleteTriggerRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ DeleteTriggerRequest::DeleteTriggerRequest(const DeleteTriggerRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DeleteTriggerRequest object.
+ * Constructs a DeleteTriggerRequest object.
  */
 DeleteTriggerRequest::DeleteTriggerRequest()
     : GlueRequest(new DeleteTriggerRequestPrivate(GlueRequest::DeleteTriggerAction, this))
@@ -69,14 +66,9 @@ bool DeleteTriggerRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteTriggerResponse object.
+ * Returns a DeleteTriggerResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteTriggerResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GlueClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteTriggerRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * DeleteTriggerRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::Glue::DeleteTriggerRequestPrivate
+ * \brief The DeleteTriggerRequestPrivate class provides private implementation for DeleteTriggerRequest.
+ * \internal
  *
- * @class  DeleteTriggerRequestPrivate
- *
- * @brief  Private implementation for DeleteTriggerRequest.
+ * \inmodule QtAwsGlue
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteTriggerRequestPrivate object.
- *
- * @param  action  Glue action being performed.
- * @param  q       Pointer to this object's public DeleteTriggerRequest instance.
+ * Constructs a DeleteTriggerRequestPrivate object for Glue \a action with,
+ * public implementation \a q.
  */
 DeleteTriggerRequestPrivate::DeleteTriggerRequestPrivate(
     const GlueRequest::Action action, DeleteTriggerRequest * const q)
@@ -107,15 +96,10 @@ DeleteTriggerRequestPrivate::DeleteTriggerRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteTriggerRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteTriggerRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteTriggerRequest instance.
  */
 DeleteTriggerRequestPrivate::DeleteTriggerRequestPrivate(
     const DeleteTriggerRequestPrivate &other, DeleteTriggerRequest * const q)

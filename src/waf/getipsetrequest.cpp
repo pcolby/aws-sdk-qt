@@ -27,10 +27,9 @@ namespace WAF {
 
 /*!
  * \class QtAws::WAF::GetIPSetRequest
- *
  * \brief The GetIPSetRequest class provides an interface for WAF GetIPSet requests.
  *
- * \ingroup WAF
+ * \inmodule QtAwsWAF
  *
  *  This is the <i>AWS WAF API Reference</i> for using AWS WAF with Amazon CloudFront. The AWS WAF actions and data types
  *  listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data
@@ -42,9 +41,7 @@ namespace WAF {
  */
 
 /*!
- * @brief  Constructs a new GetIPSetRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetIPSetRequest::GetIPSetRequest(const GetIPSetRequest &other)
     : WAFRequest(new GetIPSetRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ GetIPSetRequest::GetIPSetRequest(const GetIPSetRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetIPSetRequest object.
+ * Constructs a GetIPSetRequest object.
  */
 GetIPSetRequest::GetIPSetRequest()
     : WAFRequest(new GetIPSetRequestPrivate(WAFRequest::GetIPSetAction, this))
@@ -71,14 +68,9 @@ bool GetIPSetRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetIPSetResponse object.
+ * Returns a GetIPSetResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetIPSetResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WAFClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetIPSetRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * GetIPSetRequest::response(QNetworkReply * con
 }
 
 /*!
- * @internal
+ * \class QtAws::WAF::GetIPSetRequestPrivate
+ * \brief The GetIPSetRequestPrivate class provides private implementation for GetIPSetRequest.
+ * \internal
  *
- * @class  GetIPSetRequestPrivate
- *
- * @brief  Private implementation for GetIPSetRequest.
+ * \inmodule QtAwsWAF
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetIPSetRequestPrivate object.
- *
- * @param  action  WAF action being performed.
- * @param  q       Pointer to this object's public GetIPSetRequest instance.
+ * Constructs a GetIPSetRequestPrivate object for WAF \a action with,
+ * public implementation \a q.
  */
 GetIPSetRequestPrivate::GetIPSetRequestPrivate(
     const WAFRequest::Action action, GetIPSetRequest * const q)
@@ -109,15 +98,10 @@ GetIPSetRequestPrivate::GetIPSetRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetIPSetRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetIPSetRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetIPSetRequest instance.
  */
 GetIPSetRequestPrivate::GetIPSetRequestPrivate(
     const GetIPSetRequestPrivate &other, GetIPSetRequest * const q)

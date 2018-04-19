@@ -27,10 +27,9 @@ namespace AppSync {
 
 /*!
  * \class QtAws::AppSync::UpdateApiKeyRequest
- *
  * \brief The UpdateApiKeyRequest class provides an interface for AppSync UpdateApiKey requests.
  *
- * \ingroup AppSync
+ * \inmodule QtAwsAppSync
  *
  *  AWS AppSync provides API actions for creating and interacting with data sources using GraphQL from your
  *
@@ -38,9 +37,7 @@ namespace AppSync {
  */
 
 /*!
- * @brief  Constructs a new UpdateApiKeyRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateApiKeyRequest::UpdateApiKeyRequest(const UpdateApiKeyRequest &other)
     : AppSyncRequest(new UpdateApiKeyRequestPrivate(*other.d_func(), this))
@@ -49,7 +46,7 @@ UpdateApiKeyRequest::UpdateApiKeyRequest(const UpdateApiKeyRequest &other)
 }
 
 /*!
- * @brief  Constructs a new UpdateApiKeyRequest object.
+ * Constructs a UpdateApiKeyRequest object.
  */
 UpdateApiKeyRequest::UpdateApiKeyRequest()
     : AppSyncRequest(new UpdateApiKeyRequestPrivate(AppSyncRequest::UpdateApiKeyAction, this))
@@ -67,14 +64,9 @@ bool UpdateApiKeyRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateApiKeyResponse object.
+ * Returns a UpdateApiKeyResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateApiKeyResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AppSyncClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateApiKeyRequest::response(QNetworkReply * const reply) const
 {
@@ -82,20 +74,17 @@ QtAws::Core::AwsAbstractResponse * UpdateApiKeyRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::AppSync::UpdateApiKeyRequestPrivate
+ * \brief The UpdateApiKeyRequestPrivate class provides private implementation for UpdateApiKeyRequest.
+ * \internal
  *
- * @class  UpdateApiKeyRequestPrivate
- *
- * @brief  Private implementation for UpdateApiKeyRequest.
+ * \inmodule QtAwsAppSync
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateApiKeyRequestPrivate object.
- *
- * @param  action  AppSync action being performed.
- * @param  q       Pointer to this object's public UpdateApiKeyRequest instance.
+ * Constructs a UpdateApiKeyRequestPrivate object for AppSync \a action with,
+ * public implementation \a q.
  */
 UpdateApiKeyRequestPrivate::UpdateApiKeyRequestPrivate(
     const AppSyncRequest::Action action, UpdateApiKeyRequest * const q)
@@ -105,15 +94,10 @@ UpdateApiKeyRequestPrivate::UpdateApiKeyRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateApiKeyRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateApiKeyRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateApiKeyRequest instance.
  */
 UpdateApiKeyRequestPrivate::UpdateApiKeyRequestPrivate(
     const UpdateApiKeyRequestPrivate &other, UpdateApiKeyRequest * const q)

@@ -27,10 +27,9 @@ namespace CloudDirectory {
 
 /*!
  * \class QtAws::CloudDirectory::DeleteFacetRequest
- *
  * \brief The DeleteFacetRequest class provides an interface for CloudDirectory DeleteFacet requests.
  *
- * \ingroup CloudDirectory
+ * \inmodule QtAwsCloudDirectory
  *
  *  <fullname>Amazon Cloud Directory</fullname>
  * 
@@ -44,9 +43,7 @@ namespace CloudDirectory {
  */
 
 /*!
- * @brief  Constructs a new DeleteFacetRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteFacetRequest::DeleteFacetRequest(const DeleteFacetRequest &other)
     : CloudDirectoryRequest(new DeleteFacetRequestPrivate(*other.d_func(), this))
@@ -55,7 +52,7 @@ DeleteFacetRequest::DeleteFacetRequest(const DeleteFacetRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DeleteFacetRequest object.
+ * Constructs a DeleteFacetRequest object.
  */
 DeleteFacetRequest::DeleteFacetRequest()
     : CloudDirectoryRequest(new DeleteFacetRequestPrivate(CloudDirectoryRequest::DeleteFacetAction, this))
@@ -73,14 +70,9 @@ bool DeleteFacetRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteFacetResponse object.
+ * Returns a DeleteFacetResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteFacetResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudDirectoryClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteFacetRequest::response(QNetworkReply * const reply) const
 {
@@ -88,20 +80,17 @@ QtAws::Core::AwsAbstractResponse * DeleteFacetRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudDirectory::DeleteFacetRequestPrivate
+ * \brief The DeleteFacetRequestPrivate class provides private implementation for DeleteFacetRequest.
+ * \internal
  *
- * @class  DeleteFacetRequestPrivate
- *
- * @brief  Private implementation for DeleteFacetRequest.
+ * \inmodule QtAwsCloudDirectory
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteFacetRequestPrivate object.
- *
- * @param  action  CloudDirectory action being performed.
- * @param  q       Pointer to this object's public DeleteFacetRequest instance.
+ * Constructs a DeleteFacetRequestPrivate object for CloudDirectory \a action with,
+ * public implementation \a q.
  */
 DeleteFacetRequestPrivate::DeleteFacetRequestPrivate(
     const CloudDirectoryRequest::Action action, DeleteFacetRequest * const q)
@@ -111,15 +100,10 @@ DeleteFacetRequestPrivate::DeleteFacetRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteFacetRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteFacetRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteFacetRequest instance.
  */
 DeleteFacetRequestPrivate::DeleteFacetRequestPrivate(
     const DeleteFacetRequestPrivate &other, DeleteFacetRequest * const q)

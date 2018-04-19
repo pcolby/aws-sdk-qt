@@ -27,10 +27,9 @@ namespace ConfigService {
 
 /*!
  * \class QtAws::ConfigService::DeletePendingAggregationRequestRequest
- *
  * \brief The DeletePendingAggregationRequestRequest class provides an interface for ConfigService DeletePendingAggregationRequest requests.
  *
- * \ingroup ConfigService
+ * \inmodule QtAwsConfigService
  *
  *  <fullname>AWS Config</fullname>
  * 
@@ -60,9 +59,7 @@ namespace ConfigService {
  */
 
 /*!
- * @brief  Constructs a new DeletePendingAggregationRequestRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeletePendingAggregationRequestRequest::DeletePendingAggregationRequestRequest(const DeletePendingAggregationRequestRequest &other)
     : ConfigServiceRequest(new DeletePendingAggregationRequestRequestPrivate(*other.d_func(), this))
@@ -71,7 +68,7 @@ DeletePendingAggregationRequestRequest::DeletePendingAggregationRequestRequest(c
 }
 
 /*!
- * @brief  Constructs a new DeletePendingAggregationRequestRequest object.
+ * Constructs a DeletePendingAggregationRequestRequest object.
  */
 DeletePendingAggregationRequestRequest::DeletePendingAggregationRequestRequest()
     : ConfigServiceRequest(new DeletePendingAggregationRequestRequestPrivate(ConfigServiceRequest::DeletePendingAggregationRequestAction, this))
@@ -89,14 +86,9 @@ bool DeletePendingAggregationRequestRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeletePendingAggregationRequestResponse object.
+ * Returns a DeletePendingAggregationRequestResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeletePendingAggregationRequestResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ConfigServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeletePendingAggregationRequestRequest::response(QNetworkReply * const reply) const
 {
@@ -104,20 +96,17 @@ QtAws::Core::AwsAbstractResponse * DeletePendingAggregationRequestRequest::respo
 }
 
 /*!
- * @internal
+ * \class QtAws::ConfigService::DeletePendingAggregationRequestRequestPrivate
+ * \brief The DeletePendingAggregationRequestRequestPrivate class provides private implementation for DeletePendingAggregationRequestRequest.
+ * \internal
  *
- * @class  DeletePendingAggregationRequestRequestPrivate
- *
- * @brief  Private implementation for DeletePendingAggregationRequestRequest.
+ * \inmodule QtAwsConfigService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeletePendingAggregationRequestRequestPrivate object.
- *
- * @param  action  ConfigService action being performed.
- * @param  q       Pointer to this object's public DeletePendingAggregationRequestRequest instance.
+ * Constructs a DeletePendingAggregationRequestRequestPrivate object for ConfigService \a action with,
+ * public implementation \a q.
  */
 DeletePendingAggregationRequestRequestPrivate::DeletePendingAggregationRequestRequestPrivate(
     const ConfigServiceRequest::Action action, DeletePendingAggregationRequestRequest * const q)
@@ -127,15 +116,10 @@ DeletePendingAggregationRequestRequestPrivate::DeletePendingAggregationRequestRe
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeletePendingAggregationRequestRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeletePendingAggregationRequestRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeletePendingAggregationRequestRequest instance.
  */
 DeletePendingAggregationRequestRequestPrivate::DeletePendingAggregationRequestRequestPrivate(
     const DeletePendingAggregationRequestRequestPrivate &other, DeletePendingAggregationRequestRequest * const q)

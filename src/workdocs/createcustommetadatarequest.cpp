@@ -27,10 +27,9 @@ namespace WorkDocs {
 
 /*!
  * \class QtAws::WorkDocs::CreateCustomMetadataRequest
- *
  * \brief The CreateCustomMetadataRequest class provides an interface for WorkDocs CreateCustomMetadata requests.
  *
- * \ingroup WorkDocs
+ * \inmodule QtAwsWorkDocs
  *
  *  The WorkDocs API is designed for the following use
  * 
@@ -66,9 +65,7 @@ namespace WorkDocs {
  */
 
 /*!
- * @brief  Constructs a new CreateCustomMetadataRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateCustomMetadataRequest::CreateCustomMetadataRequest(const CreateCustomMetadataRequest &other)
     : WorkDocsRequest(new CreateCustomMetadataRequestPrivate(*other.d_func(), this))
@@ -77,7 +74,7 @@ CreateCustomMetadataRequest::CreateCustomMetadataRequest(const CreateCustomMetad
 }
 
 /*!
- * @brief  Constructs a new CreateCustomMetadataRequest object.
+ * Constructs a CreateCustomMetadataRequest object.
  */
 CreateCustomMetadataRequest::CreateCustomMetadataRequest()
     : WorkDocsRequest(new CreateCustomMetadataRequestPrivate(WorkDocsRequest::CreateCustomMetadataAction, this))
@@ -95,14 +92,9 @@ bool CreateCustomMetadataRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateCustomMetadataResponse object.
+ * Returns a CreateCustomMetadataResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateCustomMetadataResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WorkDocsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateCustomMetadataRequest::response(QNetworkReply * const reply) const
 {
@@ -110,20 +102,17 @@ QtAws::Core::AwsAbstractResponse * CreateCustomMetadataRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::WorkDocs::CreateCustomMetadataRequestPrivate
+ * \brief The CreateCustomMetadataRequestPrivate class provides private implementation for CreateCustomMetadataRequest.
+ * \internal
  *
- * @class  CreateCustomMetadataRequestPrivate
- *
- * @brief  Private implementation for CreateCustomMetadataRequest.
+ * \inmodule QtAwsWorkDocs
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateCustomMetadataRequestPrivate object.
- *
- * @param  action  WorkDocs action being performed.
- * @param  q       Pointer to this object's public CreateCustomMetadataRequest instance.
+ * Constructs a CreateCustomMetadataRequestPrivate object for WorkDocs \a action with,
+ * public implementation \a q.
  */
 CreateCustomMetadataRequestPrivate::CreateCustomMetadataRequestPrivate(
     const WorkDocsRequest::Action action, CreateCustomMetadataRequest * const q)
@@ -133,15 +122,10 @@ CreateCustomMetadataRequestPrivate::CreateCustomMetadataRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateCustomMetadataRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateCustomMetadataRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateCustomMetadataRequest instance.
  */
 CreateCustomMetadataRequestPrivate::CreateCustomMetadataRequestPrivate(
     const CreateCustomMetadataRequestPrivate &other, CreateCustomMetadataRequest * const q)

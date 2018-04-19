@@ -27,10 +27,9 @@ namespace EFS {
 
 /*!
  * \class QtAws::EFS::DeleteMountTargetRequest
- *
  * \brief The DeleteMountTargetRequest class provides an interface for EFS DeleteMountTarget requests.
  *
- * \ingroup EFS
+ * \inmodule QtAwsEFS
  *
  *  <fullname>Amazon Elastic File System</fullname>
  * 
@@ -43,9 +42,7 @@ namespace EFS {
  */
 
 /*!
- * @brief  Constructs a new DeleteMountTargetRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteMountTargetRequest::DeleteMountTargetRequest(const DeleteMountTargetRequest &other)
     : EFSRequest(new DeleteMountTargetRequestPrivate(*other.d_func(), this))
@@ -54,7 +51,7 @@ DeleteMountTargetRequest::DeleteMountTargetRequest(const DeleteMountTargetReques
 }
 
 /*!
- * @brief  Constructs a new DeleteMountTargetRequest object.
+ * Constructs a DeleteMountTargetRequest object.
  */
 DeleteMountTargetRequest::DeleteMountTargetRequest()
     : EFSRequest(new DeleteMountTargetRequestPrivate(EFSRequest::DeleteMountTargetAction, this))
@@ -72,14 +69,9 @@ bool DeleteMountTargetRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteMountTargetResponse object.
+ * Returns a DeleteMountTargetResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteMountTargetResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EFSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteMountTargetRequest::response(QNetworkReply * const reply) const
 {
@@ -87,20 +79,17 @@ QtAws::Core::AwsAbstractResponse * DeleteMountTargetRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::EFS::DeleteMountTargetRequestPrivate
+ * \brief The DeleteMountTargetRequestPrivate class provides private implementation for DeleteMountTargetRequest.
+ * \internal
  *
- * @class  DeleteMountTargetRequestPrivate
- *
- * @brief  Private implementation for DeleteMountTargetRequest.
+ * \inmodule QtAwsEFS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteMountTargetRequestPrivate object.
- *
- * @param  action  EFS action being performed.
- * @param  q       Pointer to this object's public DeleteMountTargetRequest instance.
+ * Constructs a DeleteMountTargetRequestPrivate object for EFS \a action with,
+ * public implementation \a q.
  */
 DeleteMountTargetRequestPrivate::DeleteMountTargetRequestPrivate(
     const EFSRequest::Action action, DeleteMountTargetRequest * const q)
@@ -110,15 +99,10 @@ DeleteMountTargetRequestPrivate::DeleteMountTargetRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteMountTargetRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteMountTargetRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteMountTargetRequest instance.
  */
 DeleteMountTargetRequestPrivate::DeleteMountTargetRequestPrivate(
     const DeleteMountTargetRequestPrivate &other, DeleteMountTargetRequest * const q)

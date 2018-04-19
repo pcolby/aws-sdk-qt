@@ -27,10 +27,9 @@ namespace AlexaForBusiness {
 
 /*!
  * \class QtAws::AlexaForBusiness::AssociateSkillGroupWithRoomRequest
- *
  * \brief The AssociateSkillGroupWithRoomRequest class provides an interface for AlexaForBusiness AssociateSkillGroupWithRoom requests.
  *
- * \ingroup AlexaForBusiness
+ * \inmodule QtAwsAlexaForBusiness
  *
  *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
  *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
@@ -42,9 +41,7 @@ namespace AlexaForBusiness {
  */
 
 /*!
- * @brief  Constructs a new AssociateSkillGroupWithRoomRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AssociateSkillGroupWithRoomRequest::AssociateSkillGroupWithRoomRequest(const AssociateSkillGroupWithRoomRequest &other)
     : AlexaForBusinessRequest(new AssociateSkillGroupWithRoomRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ AssociateSkillGroupWithRoomRequest::AssociateSkillGroupWithRoomRequest(const Ass
 }
 
 /*!
- * @brief  Constructs a new AssociateSkillGroupWithRoomRequest object.
+ * Constructs a AssociateSkillGroupWithRoomRequest object.
  */
 AssociateSkillGroupWithRoomRequest::AssociateSkillGroupWithRoomRequest()
     : AlexaForBusinessRequest(new AssociateSkillGroupWithRoomRequestPrivate(AlexaForBusinessRequest::AssociateSkillGroupWithRoomAction, this))
@@ -71,14 +68,9 @@ bool AssociateSkillGroupWithRoomRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AssociateSkillGroupWithRoomResponse object.
+ * Returns a AssociateSkillGroupWithRoomResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AssociateSkillGroupWithRoomResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AlexaForBusinessClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AssociateSkillGroupWithRoomRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * AssociateSkillGroupWithRoomRequest::response(
 }
 
 /*!
- * @internal
+ * \class QtAws::AlexaForBusiness::AssociateSkillGroupWithRoomRequestPrivate
+ * \brief The AssociateSkillGroupWithRoomRequestPrivate class provides private implementation for AssociateSkillGroupWithRoomRequest.
+ * \internal
  *
- * @class  AssociateSkillGroupWithRoomRequestPrivate
- *
- * @brief  Private implementation for AssociateSkillGroupWithRoomRequest.
+ * \inmodule QtAwsAlexaForBusiness
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AssociateSkillGroupWithRoomRequestPrivate object.
- *
- * @param  action  AlexaForBusiness action being performed.
- * @param  q       Pointer to this object's public AssociateSkillGroupWithRoomRequest instance.
+ * Constructs a AssociateSkillGroupWithRoomRequestPrivate object for AlexaForBusiness \a action with,
+ * public implementation \a q.
  */
 AssociateSkillGroupWithRoomRequestPrivate::AssociateSkillGroupWithRoomRequestPrivate(
     const AlexaForBusinessRequest::Action action, AssociateSkillGroupWithRoomRequest * const q)
@@ -109,15 +98,10 @@ AssociateSkillGroupWithRoomRequestPrivate::AssociateSkillGroupWithRoomRequestPri
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AssociateSkillGroupWithRoomRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AssociateSkillGroupWithRoomRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AssociateSkillGroupWithRoomRequest instance.
  */
 AssociateSkillGroupWithRoomRequestPrivate::AssociateSkillGroupWithRoomRequestPrivate(
     const AssociateSkillGroupWithRoomRequestPrivate &other, AssociateSkillGroupWithRoomRequest * const q)

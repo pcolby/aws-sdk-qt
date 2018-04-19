@@ -27,10 +27,9 @@ namespace ACMPCA {
 
 /*!
  * \class QtAws::ACMPCA::GetCertificateAuthorityCsrRequest
- *
  * \brief The GetCertificateAuthorityCsrRequest class provides an interface for ACMPCA GetCertificateAuthorityCsr requests.
  *
- * \ingroup ACMPCA
+ * \inmodule QtAwsACMPCA
  *
  *  You can use the ACM PCA API to create a private certificate authority (CA). You must first call the
  *  <a>CreateCertificateAuthority</a> function. If successful, the function returns an Amazon Resource Name (ARN) for your
@@ -67,9 +66,7 @@ namespace ACMPCA {
  */
 
 /*!
- * @brief  Constructs a new GetCertificateAuthorityCsrRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetCertificateAuthorityCsrRequest::GetCertificateAuthorityCsrRequest(const GetCertificateAuthorityCsrRequest &other)
     : ACMPCARequest(new GetCertificateAuthorityCsrRequestPrivate(*other.d_func(), this))
@@ -78,7 +75,7 @@ GetCertificateAuthorityCsrRequest::GetCertificateAuthorityCsrRequest(const GetCe
 }
 
 /*!
- * @brief  Constructs a new GetCertificateAuthorityCsrRequest object.
+ * Constructs a GetCertificateAuthorityCsrRequest object.
  */
 GetCertificateAuthorityCsrRequest::GetCertificateAuthorityCsrRequest()
     : ACMPCARequest(new GetCertificateAuthorityCsrRequestPrivate(ACMPCARequest::GetCertificateAuthorityCsrAction, this))
@@ -96,14 +93,9 @@ bool GetCertificateAuthorityCsrRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetCertificateAuthorityCsrResponse object.
+ * Returns a GetCertificateAuthorityCsrResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetCertificateAuthorityCsrResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ACMPCAClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetCertificateAuthorityCsrRequest::response(QNetworkReply * const reply) const
 {
@@ -111,20 +103,17 @@ QtAws::Core::AwsAbstractResponse * GetCertificateAuthorityCsrRequest::response(Q
 }
 
 /*!
- * @internal
+ * \class QtAws::ACMPCA::GetCertificateAuthorityCsrRequestPrivate
+ * \brief The GetCertificateAuthorityCsrRequestPrivate class provides private implementation for GetCertificateAuthorityCsrRequest.
+ * \internal
  *
- * @class  GetCertificateAuthorityCsrRequestPrivate
- *
- * @brief  Private implementation for GetCertificateAuthorityCsrRequest.
+ * \inmodule QtAwsACMPCA
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetCertificateAuthorityCsrRequestPrivate object.
- *
- * @param  action  ACMPCA action being performed.
- * @param  q       Pointer to this object's public GetCertificateAuthorityCsrRequest instance.
+ * Constructs a GetCertificateAuthorityCsrRequestPrivate object for ACMPCA \a action with,
+ * public implementation \a q.
  */
 GetCertificateAuthorityCsrRequestPrivate::GetCertificateAuthorityCsrRequestPrivate(
     const ACMPCARequest::Action action, GetCertificateAuthorityCsrRequest * const q)
@@ -134,15 +123,10 @@ GetCertificateAuthorityCsrRequestPrivate::GetCertificateAuthorityCsrRequestPriva
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetCertificateAuthorityCsrRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetCertificateAuthorityCsrRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetCertificateAuthorityCsrRequest instance.
  */
 GetCertificateAuthorityCsrRequestPrivate::GetCertificateAuthorityCsrRequestPrivate(
     const GetCertificateAuthorityCsrRequestPrivate &other, GetCertificateAuthorityCsrRequest * const q)

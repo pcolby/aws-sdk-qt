@@ -27,10 +27,9 @@ namespace Shield {
 
 /*!
  * \class QtAws::Shield::CreateSubscriptionRequest
- *
  * \brief The CreateSubscriptionRequest class provides an interface for Shield CreateSubscription requests.
  *
- * \ingroup Shield
+ * \inmodule QtAwsShield
  *
  *  <fullname>AWS Shield Advanced</fullname>
  * 
@@ -43,9 +42,7 @@ namespace Shield {
  */
 
 /*!
- * @brief  Constructs a new CreateSubscriptionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateSubscriptionRequest::CreateSubscriptionRequest(const CreateSubscriptionRequest &other)
     : ShieldRequest(new CreateSubscriptionRequestPrivate(*other.d_func(), this))
@@ -54,7 +51,7 @@ CreateSubscriptionRequest::CreateSubscriptionRequest(const CreateSubscriptionReq
 }
 
 /*!
- * @brief  Constructs a new CreateSubscriptionRequest object.
+ * Constructs a CreateSubscriptionRequest object.
  */
 CreateSubscriptionRequest::CreateSubscriptionRequest()
     : ShieldRequest(new CreateSubscriptionRequestPrivate(ShieldRequest::CreateSubscriptionAction, this))
@@ -72,14 +69,9 @@ bool CreateSubscriptionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateSubscriptionResponse object.
+ * Returns a CreateSubscriptionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateSubscriptionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ShieldClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateSubscriptionRequest::response(QNetworkReply * const reply) const
 {
@@ -87,20 +79,17 @@ QtAws::Core::AwsAbstractResponse * CreateSubscriptionRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::Shield::CreateSubscriptionRequestPrivate
+ * \brief The CreateSubscriptionRequestPrivate class provides private implementation for CreateSubscriptionRequest.
+ * \internal
  *
- * @class  CreateSubscriptionRequestPrivate
- *
- * @brief  Private implementation for CreateSubscriptionRequest.
+ * \inmodule QtAwsShield
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateSubscriptionRequestPrivate object.
- *
- * @param  action  Shield action being performed.
- * @param  q       Pointer to this object's public CreateSubscriptionRequest instance.
+ * Constructs a CreateSubscriptionRequestPrivate object for Shield \a action with,
+ * public implementation \a q.
  */
 CreateSubscriptionRequestPrivate::CreateSubscriptionRequestPrivate(
     const ShieldRequest::Action action, CreateSubscriptionRequest * const q)
@@ -110,15 +99,10 @@ CreateSubscriptionRequestPrivate::CreateSubscriptionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateSubscriptionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateSubscriptionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateSubscriptionRequest instance.
  */
 CreateSubscriptionRequestPrivate::CreateSubscriptionRequestPrivate(
     const CreateSubscriptionRequestPrivate &other, CreateSubscriptionRequest * const q)

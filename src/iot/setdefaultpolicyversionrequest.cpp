@@ -27,10 +27,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::SetDefaultPolicyVersionRequest
- *
  * \brief The SetDefaultPolicyVersionRequest class provides an interface for IoT SetDefaultPolicyVersion requests.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -48,9 +47,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new SetDefaultPolicyVersionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 SetDefaultPolicyVersionRequest::SetDefaultPolicyVersionRequest(const SetDefaultPolicyVersionRequest &other)
     : IoTRequest(new SetDefaultPolicyVersionRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ SetDefaultPolicyVersionRequest::SetDefaultPolicyVersionRequest(const SetDefaultP
 }
 
 /*!
- * @brief  Constructs a new SetDefaultPolicyVersionRequest object.
+ * Constructs a SetDefaultPolicyVersionRequest object.
  */
 SetDefaultPolicyVersionRequest::SetDefaultPolicyVersionRequest()
     : IoTRequest(new SetDefaultPolicyVersionRequestPrivate(IoTRequest::SetDefaultPolicyVersionAction, this))
@@ -77,14 +74,9 @@ bool SetDefaultPolicyVersionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an SetDefaultPolicyVersionResponse object.
+ * Returns a SetDefaultPolicyVersionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An SetDefaultPolicyVersionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IoTClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * SetDefaultPolicyVersionRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * SetDefaultPolicyVersionRequest::response(QNet
 }
 
 /*!
- * @internal
+ * \class QtAws::IoT::SetDefaultPolicyVersionRequestPrivate
+ * \brief The SetDefaultPolicyVersionRequestPrivate class provides private implementation for SetDefaultPolicyVersionRequest.
+ * \internal
  *
- * @class  SetDefaultPolicyVersionRequestPrivate
- *
- * @brief  Private implementation for SetDefaultPolicyVersionRequest.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new SetDefaultPolicyVersionRequestPrivate object.
- *
- * @param  action  IoT action being performed.
- * @param  q       Pointer to this object's public SetDefaultPolicyVersionRequest instance.
+ * Constructs a SetDefaultPolicyVersionRequestPrivate object for IoT \a action with,
+ * public implementation \a q.
  */
 SetDefaultPolicyVersionRequestPrivate::SetDefaultPolicyVersionRequestPrivate(
     const IoTRequest::Action action, SetDefaultPolicyVersionRequest * const q)
@@ -115,15 +104,10 @@ SetDefaultPolicyVersionRequestPrivate::SetDefaultPolicyVersionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SetDefaultPolicyVersionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the SetDefaultPolicyVersionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public SetDefaultPolicyVersionRequest instance.
  */
 SetDefaultPolicyVersionRequestPrivate::SetDefaultPolicyVersionRequestPrivate(
     const SetDefaultPolicyVersionRequestPrivate &other, SetDefaultPolicyVersionRequest * const q)

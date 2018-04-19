@@ -27,10 +27,9 @@ namespace Polly {
 
 /*!
  * \class QtAws::Polly::DescribeVoicesRequest
- *
  * \brief The DescribeVoicesRequest class provides an interface for Polly DescribeVoices requests.
  *
- * \ingroup Polly
+ * \inmodule QtAwsPolly
  *
  *  Amazon Polly is a web service that makes it easy to synthesize speech from
  * 
@@ -44,9 +43,7 @@ namespace Polly {
  */
 
 /*!
- * @brief  Constructs a new DescribeVoicesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeVoicesRequest::DescribeVoicesRequest(const DescribeVoicesRequest &other)
     : PollyRequest(new DescribeVoicesRequestPrivate(*other.d_func(), this))
@@ -55,7 +52,7 @@ DescribeVoicesRequest::DescribeVoicesRequest(const DescribeVoicesRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DescribeVoicesRequest object.
+ * Constructs a DescribeVoicesRequest object.
  */
 DescribeVoicesRequest::DescribeVoicesRequest()
     : PollyRequest(new DescribeVoicesRequestPrivate(PollyRequest::DescribeVoicesAction, this))
@@ -73,14 +70,9 @@ bool DescribeVoicesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeVoicesResponse object.
+ * Returns a DescribeVoicesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeVoicesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  PollyClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeVoicesRequest::response(QNetworkReply * const reply) const
 {
@@ -88,20 +80,17 @@ QtAws::Core::AwsAbstractResponse * DescribeVoicesRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::Polly::DescribeVoicesRequestPrivate
+ * \brief The DescribeVoicesRequestPrivate class provides private implementation for DescribeVoicesRequest.
+ * \internal
  *
- * @class  DescribeVoicesRequestPrivate
- *
- * @brief  Private implementation for DescribeVoicesRequest.
+ * \inmodule QtAwsPolly
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeVoicesRequestPrivate object.
- *
- * @param  action  Polly action being performed.
- * @param  q       Pointer to this object's public DescribeVoicesRequest instance.
+ * Constructs a DescribeVoicesRequestPrivate object for Polly \a action with,
+ * public implementation \a q.
  */
 DescribeVoicesRequestPrivate::DescribeVoicesRequestPrivate(
     const PollyRequest::Action action, DescribeVoicesRequest * const q)
@@ -111,15 +100,10 @@ DescribeVoicesRequestPrivate::DescribeVoicesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeVoicesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeVoicesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeVoicesRequest instance.
  */
 DescribeVoicesRequestPrivate::DescribeVoicesRequestPrivate(
     const DescribeVoicesRequestPrivate &other, DescribeVoicesRequest * const q)

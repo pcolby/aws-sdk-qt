@@ -27,10 +27,9 @@ namespace DataPipeline {
 
 /*!
  * \class QtAws::DataPipeline::EvaluateExpressionRequest
- *
  * \brief The EvaluateExpressionRequest class provides an interface for DataPipeline EvaluateExpression requests.
  *
- * \ingroup DataPipeline
+ * \inmodule QtAwsDataPipeline
  *
  *  AWS Data Pipeline configures and manages a data-driven workflow called a pipeline. AWS Data Pipeline handles the details
  *  of scheduling and ensuring that data dependencies are met so that your application can focus on processing the
@@ -55,9 +54,7 @@ namespace DataPipeline {
  */
 
 /*!
- * @brief  Constructs a new EvaluateExpressionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 EvaluateExpressionRequest::EvaluateExpressionRequest(const EvaluateExpressionRequest &other)
     : DataPipelineRequest(new EvaluateExpressionRequestPrivate(*other.d_func(), this))
@@ -66,7 +63,7 @@ EvaluateExpressionRequest::EvaluateExpressionRequest(const EvaluateExpressionReq
 }
 
 /*!
- * @brief  Constructs a new EvaluateExpressionRequest object.
+ * Constructs a EvaluateExpressionRequest object.
  */
 EvaluateExpressionRequest::EvaluateExpressionRequest()
     : DataPipelineRequest(new EvaluateExpressionRequestPrivate(DataPipelineRequest::EvaluateExpressionAction, this))
@@ -84,14 +81,9 @@ bool EvaluateExpressionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an EvaluateExpressionResponse object.
+ * Returns a EvaluateExpressionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An EvaluateExpressionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DataPipelineClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * EvaluateExpressionRequest::response(QNetworkReply * const reply) const
 {
@@ -99,20 +91,17 @@ QtAws::Core::AwsAbstractResponse * EvaluateExpressionRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::DataPipeline::EvaluateExpressionRequestPrivate
+ * \brief The EvaluateExpressionRequestPrivate class provides private implementation for EvaluateExpressionRequest.
+ * \internal
  *
- * @class  EvaluateExpressionRequestPrivate
- *
- * @brief  Private implementation for EvaluateExpressionRequest.
+ * \inmodule QtAwsDataPipeline
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new EvaluateExpressionRequestPrivate object.
- *
- * @param  action  DataPipeline action being performed.
- * @param  q       Pointer to this object's public EvaluateExpressionRequest instance.
+ * Constructs a EvaluateExpressionRequestPrivate object for DataPipeline \a action with,
+ * public implementation \a q.
  */
 EvaluateExpressionRequestPrivate::EvaluateExpressionRequestPrivate(
     const DataPipelineRequest::Action action, EvaluateExpressionRequest * const q)
@@ -122,15 +111,10 @@ EvaluateExpressionRequestPrivate::EvaluateExpressionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new EvaluateExpressionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the EvaluateExpressionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public EvaluateExpressionRequest instance.
  */
 EvaluateExpressionRequestPrivate::EvaluateExpressionRequestPrivate(
     const EvaluateExpressionRequestPrivate &other, EvaluateExpressionRequest * const q)

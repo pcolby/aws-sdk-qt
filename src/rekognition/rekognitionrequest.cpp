@@ -25,16 +25,54 @@ namespace Rekognition {
 
 /*!
  * \class QtAws::Rekognition::RekognitionRequest
- *
  * \brief The RekognitionRequest class provides an interface for Rekognition requests.
  *
- * \ingroup Rekognition
+ * \inmodule QtAwsRekognition
  */
 
 /*!
- * @brief  Constructs a new RekognitionRequest object.
+ * \enum RekognitionRequest::Action
  *
- * @param  action  The Rekognition action to request.
+ * This enum describes the actions that can be performed as Rekognition
+ * requests.
+ *
+ * \value CompareFacesAction Rekognition CompareFaces action.
+ * \value CreateCollectionAction Rekognition CreateCollection action.
+ * \value CreateStreamProcessorAction Rekognition CreateStreamProcessor action.
+ * \value DeleteCollectionAction Rekognition DeleteCollection action.
+ * \value DeleteFacesAction Rekognition DeleteFaces action.
+ * \value DeleteStreamProcessorAction Rekognition DeleteStreamProcessor action.
+ * \value DescribeStreamProcessorAction Rekognition DescribeStreamProcessor action.
+ * \value DetectFacesAction Rekognition DetectFaces action.
+ * \value DetectLabelsAction Rekognition DetectLabels action.
+ * \value DetectModerationLabelsAction Rekognition DetectModerationLabels action.
+ * \value DetectTextAction Rekognition DetectText action.
+ * \value GetCelebrityInfoAction Rekognition GetCelebrityInfo action.
+ * \value GetCelebrityRecognitionAction Rekognition GetCelebrityRecognition action.
+ * \value GetContentModerationAction Rekognition GetContentModeration action.
+ * \value GetFaceDetectionAction Rekognition GetFaceDetection action.
+ * \value GetFaceSearchAction Rekognition GetFaceSearch action.
+ * \value GetLabelDetectionAction Rekognition GetLabelDetection action.
+ * \value GetPersonTrackingAction Rekognition GetPersonTracking action.
+ * \value IndexFacesAction Rekognition IndexFaces action.
+ * \value ListCollectionsAction Rekognition ListCollections action.
+ * \value ListFacesAction Rekognition ListFaces action.
+ * \value ListStreamProcessorsAction Rekognition ListStreamProcessors action.
+ * \value RecognizeCelebritiesAction Rekognition RecognizeCelebrities action.
+ * \value SearchFacesAction Rekognition SearchFaces action.
+ * \value SearchFacesByImageAction Rekognition SearchFacesByImage action.
+ * \value StartCelebrityRecognitionAction Rekognition StartCelebrityRecognition action.
+ * \value StartContentModerationAction Rekognition StartContentModeration action.
+ * \value StartFaceDetectionAction Rekognition StartFaceDetection action.
+ * \value StartFaceSearchAction Rekognition StartFaceSearch action.
+ * \value StartLabelDetectionAction Rekognition StartLabelDetection action.
+ * \value StartPersonTrackingAction Rekognition StartPersonTracking action.
+ * \value StartStreamProcessorAction Rekognition StartStreamProcessor action.
+ * \value StopStreamProcessorAction Rekognition StopStreamProcessor action.
+ */
+
+/*!
+ * Constructs a[n] RekognitionRequest object for Rekognition \a action.
  */
 RekognitionRequest::RekognitionRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new RekognitionRequestPrivate(action, this))
@@ -43,9 +81,7 @@ RekognitionRequest::RekognitionRequest(const Action action)
 }
 
 /*!
- * @brief  Constructs a new RekognitionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 RekognitionRequest::RekognitionRequest(const RekognitionRequest &other)
     : QtAws::Core::AwsAbstractRequest(new RekognitionRequestPrivate(*other.d_func(), this))
@@ -54,13 +90,7 @@ RekognitionRequest::RekognitionRequest(const RekognitionRequest &other)
 }
 
 /*!
- * @brief  Assignment operator.
- *
- * Assigns \a other to \c this.
- *
- * @param  other  Instance to copy.
- *
- * @return  A reference to \c this.
+ * Sets the RekognitionRequest object to be equal to \a other.
  */
 RekognitionRequest& RekognitionRequest::operator=(const RekognitionRequest &other)
 {
@@ -72,14 +102,10 @@ RekognitionRequest& RekognitionRequest::operator=(const RekognitionRequest &othe
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RekognitionRequest object.
+ * Constructs aa RekognitionRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from RekognitionRequestPrivate.
- *
- * @param  d  Pointer to private data (aka D-Pointer).
  */
 RekognitionRequest::RekognitionRequest(RekognitionRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
@@ -87,7 +113,7 @@ RekognitionRequest::RekognitionRequest(RekognitionRequestPrivate * const d) : Qt
 }
 
 /*!
- * \brief Returns the Rekognition action to be performed by this request.
+ * Returns the Rekognition action to be performed by this request.
  */
 RekognitionRequest::Action RekognitionRequest::action() const
 {
@@ -96,7 +122,7 @@ RekognitionRequest::Action RekognitionRequest::action() const
 }
 
 /*!
- * \brief Returns the name of the Rekognition action to be performed by this request.
+ * Returns the name of the Rekognition action to be performed by this request.
  */
 QString RekognitionRequest::actionString() const
 {
@@ -104,7 +130,7 @@ QString RekognitionRequest::actionString() const
 }
 
 /*!
- * \brief Returns the Rekognition API version implemented by this request.
+ * Returns the Rekognition API version implemented by this request.
  */
 QString RekognitionRequest::apiVersion() const
 {
@@ -113,7 +139,7 @@ QString RekognitionRequest::apiVersion() const
 }
 
 /*!
- * @brief Set the Rekognition action to be performed by this request to \a action.
+ * Sets the Rekognition action to be performed by this request to \a action.
  */
 void RekognitionRequest::setAction(const Action action)
 {
@@ -122,7 +148,7 @@ void RekognitionRequest::setAction(const Action action)
 }
 
 /*!
- * Set the Rekognition API version to include in this request to \a version.
+ * Sets the Rekognition API version to include in this request to \a version.
  */
 void RekognitionRequest::setApiVersion(const QString &version)
 {
@@ -131,7 +157,7 @@ void RekognitionRequest::setApiVersion(const QString &version)
 }
 
 /*!
- * \brief Returns \c true if this request is the same as \a other.
+ * Returns \c true if this request is equal to \a other; \c false otherwise.
  *
  * Note, most derived *Request classes do not need to provider their own
  * implementations of this function, since most such request classes rely on
@@ -146,8 +172,8 @@ bool RekognitionRequest::operator==(const RekognitionRequest &other) const
             (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
-/*!
- * @brief  Check if \a queueName is a valid Rekognition queue name.
+/*
+ * Returns \c tue if \a queueName is a valid Rekognition queue name.
  *
  * @par From Rekognition FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
@@ -166,9 +192,8 @@ bool RekognitionRequest::operator==(const RekognitionRequest &other) const
 }*/
 
 /*!
- * \brief Removes the a \a name parameter from this request.
- *
- * Returns the count of paramters removed (typically \c 0 or \c 1).
+ * Removes the a \a name parameter from the request, then returns the number of
+ * paramters removed (typically \c 0 or \c 1).
  */
 int RekognitionRequest::clearParameter(const QString &name)
 {
@@ -177,7 +202,7 @@ int RekognitionRequest::clearParameter(const QString &name)
 }
 
 /*!
- * \brief Removes all parameters from this request.
+ * Removes all parameters from the request.
  */
 void RekognitionRequest::clearParameters()
 {
@@ -186,7 +211,7 @@ void RekognitionRequest::clearParameters()
 }
 
 /*!
- * \brief Returns the value of the \n name pararemter if set, otherwise \a defaultValue.
+ * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
 QVariant RekognitionRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
@@ -195,7 +220,7 @@ QVariant RekognitionRequest::parameter(const QString &name, const QVariant &defa
 }
 
 /*!
- * \brief Returns a map of parameters included in this request.
+ * Returns the parameters included in this request.
  */
 const QVariantMap &RekognitionRequest::parameters() const
 {
@@ -204,7 +229,7 @@ const QVariantMap &RekognitionRequest::parameters() const
 }
 
 /*!
- * \brief Sets the \a name parameter to \a value.
+ * Sets the \a name parameter to \a value.
  */
 void RekognitionRequest::setParameter(const QString &name, const QVariant &value)
 {
@@ -213,9 +238,8 @@ void RekognitionRequest::setParameter(const QString &name, const QVariant &value
 }
 
 /*!
- * \brief Sets the map of paramters for this request to \a parameters.
- *
- * Any request parameters set previously will be discarded.
+ * Sets the paramters for this request to \a parameters. Any request parameters
+ * set previously will be discarded.
  */
 void RekognitionRequest::setParameters(const QVariantMap &parameters)
 {
@@ -224,11 +248,12 @@ void RekognitionRequest::setParameters(const QVariantMap &parameters)
 }
 
 /*!
- * \brief Returns a network request for this Rekognition request using the given \a endpoint.
+ * Returns a network request for the Rekognition request using the given
+ * \a endpoint.
  *
- * This Rekognition implementation builds request URLs by combining the common query
- * parameters (such as Action and Version), with any that have been added (via
- * setParameter) by child classes.
+ * This Rekognition implementation builds request URLs by combining the
+ * common query parameters (such as Action and Version), with any that have
+ * been added (via setParameter) by child classes.
  */
 QNetworkRequest RekognitionRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -239,17 +264,16 @@ QNetworkRequest RekognitionRequest::unsignedRequest(const QUrl &endpoint) const
 }
 
 /*!
+ * \class QtAws::Rekognition::RekognitionRequestPrivate
+ * \brief The RekognitionRequestPrivate class provides private implementation for RekognitionRequest.
  * \internal
  *
- * \class  RekognitionRequestPrivate
- *
- * \brief  Private implementation for RekognitionRequest.
+ * \inmodule QtAwsRekognition
  */
 
 /*!
- * \internal
- *
- * \brief Constructs a new RekognitionRequestPrivate object.
+ * Constructs a RekognitionRequestPrivate object for Rekognition \a action with,
+ * public implementation \a q.
  */
 RekognitionRequestPrivate::RekognitionRequestPrivate(const RekognitionRequest::Action action, RekognitionRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
@@ -258,9 +282,7 @@ RekognitionRequestPrivate::RekognitionRequestPrivate(const RekognitionRequest::A
 }
 
 /*!
- * \internal
- *
- * \brief Constructs a new RekognitionRequestPrivate object, copying an existing one.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
@@ -276,15 +298,12 @@ RekognitionRequestPrivate::RekognitionRequestPrivate(const RekognitionRequestPri
 }
 
 /*!
- * \internal
- *
- * \brief Returns a string representing \a action.
+ * Returns a string represention of \a action, or a null string if \a action is
+ * invalid.
  *
  * This function converts RekognitionRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the Rekognition service's Action
  * query parameters.
- *
- * @return A string representing \a action, or a null string if \a action is invalid.
  */
 QString RekognitionRequestPrivate::toString(const RekognitionRequest::Action &action)
 {

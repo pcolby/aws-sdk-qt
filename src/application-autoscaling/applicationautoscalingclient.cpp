@@ -48,6 +48,9 @@
 /*!
  * \namespace QtAws::ApplicationAutoScaling
  * \brief The QtAws::ApplicationAutoScaling contains stuff...
+ *
+ * \inmodule QtAwsApplicationAutoScaling
+ *
  * @todo Move this to a separate template file.
  */
 
@@ -170,7 +173,7 @@ ApplicationAutoScalingClient::ApplicationAutoScalingClient(
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * \a  AwsEndpoint::getEndpoint()
+ * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
 ApplicationAutoScalingClient::ApplicationAutoScalingClient(
     const QUrl &endpoint,

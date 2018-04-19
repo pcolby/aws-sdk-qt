@@ -27,10 +27,9 @@ namespace GameLift {
 
 /*!
  * \class QtAws::GameLift::DeleteVpcPeeringConnectionRequest
- *
  * \brief The DeleteVpcPeeringConnectionRequest class provides an interface for GameLift DeleteVpcPeeringConnection requests.
  *
- * \ingroup GameLift
+ * \inmodule QtAwsGameLift
  *
  *  <fullname>Amazon GameLift Service</fullname>
  * 
@@ -473,9 +472,7 @@ namespace GameLift {
  */
 
 /*!
- * @brief  Constructs a new DeleteVpcPeeringConnectionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteVpcPeeringConnectionRequest::DeleteVpcPeeringConnectionRequest(const DeleteVpcPeeringConnectionRequest &other)
     : GameLiftRequest(new DeleteVpcPeeringConnectionRequestPrivate(*other.d_func(), this))
@@ -484,7 +481,7 @@ DeleteVpcPeeringConnectionRequest::DeleteVpcPeeringConnectionRequest(const Delet
 }
 
 /*!
- * @brief  Constructs a new DeleteVpcPeeringConnectionRequest object.
+ * Constructs a DeleteVpcPeeringConnectionRequest object.
  */
 DeleteVpcPeeringConnectionRequest::DeleteVpcPeeringConnectionRequest()
     : GameLiftRequest(new DeleteVpcPeeringConnectionRequestPrivate(GameLiftRequest::DeleteVpcPeeringConnectionAction, this))
@@ -502,14 +499,9 @@ bool DeleteVpcPeeringConnectionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteVpcPeeringConnectionResponse object.
+ * Returns a DeleteVpcPeeringConnectionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteVpcPeeringConnectionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GameLiftClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteVpcPeeringConnectionRequest::response(QNetworkReply * const reply) const
 {
@@ -517,20 +509,17 @@ QtAws::Core::AwsAbstractResponse * DeleteVpcPeeringConnectionRequest::response(Q
 }
 
 /*!
- * @internal
+ * \class QtAws::GameLift::DeleteVpcPeeringConnectionRequestPrivate
+ * \brief The DeleteVpcPeeringConnectionRequestPrivate class provides private implementation for DeleteVpcPeeringConnectionRequest.
+ * \internal
  *
- * @class  DeleteVpcPeeringConnectionRequestPrivate
- *
- * @brief  Private implementation for DeleteVpcPeeringConnectionRequest.
+ * \inmodule QtAwsGameLift
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteVpcPeeringConnectionRequestPrivate object.
- *
- * @param  action  GameLift action being performed.
- * @param  q       Pointer to this object's public DeleteVpcPeeringConnectionRequest instance.
+ * Constructs a DeleteVpcPeeringConnectionRequestPrivate object for GameLift \a action with,
+ * public implementation \a q.
  */
 DeleteVpcPeeringConnectionRequestPrivate::DeleteVpcPeeringConnectionRequestPrivate(
     const GameLiftRequest::Action action, DeleteVpcPeeringConnectionRequest * const q)
@@ -540,15 +529,10 @@ DeleteVpcPeeringConnectionRequestPrivate::DeleteVpcPeeringConnectionRequestPriva
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteVpcPeeringConnectionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteVpcPeeringConnectionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteVpcPeeringConnectionRequest instance.
  */
 DeleteVpcPeeringConnectionRequestPrivate::DeleteVpcPeeringConnectionRequestPrivate(
     const DeleteVpcPeeringConnectionRequestPrivate &other, DeleteVpcPeeringConnectionRequest * const q)

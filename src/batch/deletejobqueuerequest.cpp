@@ -27,10 +27,9 @@ namespace Batch {
 
 /*!
  * \class QtAws::Batch::DeleteJobQueueRequest
- *
  * \brief The DeleteJobQueueRequest class provides an interface for Batch DeleteJobQueue requests.
  *
- * \ingroup Batch
+ * \inmodule QtAwsBatch
  *
  *  AWS Batch enables you to run batch computing workloads on the AWS Cloud. Batch computing is a common way for developers,
  *  scientists, and engineers to access large amounts of compute resources, and AWS Batch removes the undifferentiated heavy
@@ -51,9 +50,7 @@ namespace Batch {
  */
 
 /*!
- * @brief  Constructs a new DeleteJobQueueRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteJobQueueRequest::DeleteJobQueueRequest(const DeleteJobQueueRequest &other)
     : BatchRequest(new DeleteJobQueueRequestPrivate(*other.d_func(), this))
@@ -62,7 +59,7 @@ DeleteJobQueueRequest::DeleteJobQueueRequest(const DeleteJobQueueRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DeleteJobQueueRequest object.
+ * Constructs a DeleteJobQueueRequest object.
  */
 DeleteJobQueueRequest::DeleteJobQueueRequest()
     : BatchRequest(new DeleteJobQueueRequestPrivate(BatchRequest::DeleteJobQueueAction, this))
@@ -80,14 +77,9 @@ bool DeleteJobQueueRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteJobQueueResponse object.
+ * Returns a DeleteJobQueueResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteJobQueueResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  BatchClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteJobQueueRequest::response(QNetworkReply * const reply) const
 {
@@ -95,20 +87,17 @@ QtAws::Core::AwsAbstractResponse * DeleteJobQueueRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::Batch::DeleteJobQueueRequestPrivate
+ * \brief The DeleteJobQueueRequestPrivate class provides private implementation for DeleteJobQueueRequest.
+ * \internal
  *
- * @class  DeleteJobQueueRequestPrivate
- *
- * @brief  Private implementation for DeleteJobQueueRequest.
+ * \inmodule QtAwsBatch
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteJobQueueRequestPrivate object.
- *
- * @param  action  Batch action being performed.
- * @param  q       Pointer to this object's public DeleteJobQueueRequest instance.
+ * Constructs a DeleteJobQueueRequestPrivate object for Batch \a action with,
+ * public implementation \a q.
  */
 DeleteJobQueueRequestPrivate::DeleteJobQueueRequestPrivate(
     const BatchRequest::Action action, DeleteJobQueueRequest * const q)
@@ -118,15 +107,10 @@ DeleteJobQueueRequestPrivate::DeleteJobQueueRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteJobQueueRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteJobQueueRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteJobQueueRequest instance.
  */
 DeleteJobQueueRequestPrivate::DeleteJobQueueRequestPrivate(
     const DeleteJobQueueRequestPrivate &other, DeleteJobQueueRequest * const q)

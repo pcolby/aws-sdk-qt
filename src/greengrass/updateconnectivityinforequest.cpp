@@ -27,10 +27,9 @@ namespace Greengrass {
 
 /*!
  * \class QtAws::Greengrass::UpdateConnectivityInfoRequest
- *
  * \brief The UpdateConnectivityInfoRequest class provides an interface for Greengrass UpdateConnectivityInfo requests.
  *
- * \ingroup Greengrass
+ * \inmodule QtAwsGreengrass
  *
  *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
  *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
@@ -40,9 +39,7 @@ namespace Greengrass {
  */
 
 /*!
- * @brief  Constructs a new UpdateConnectivityInfoRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateConnectivityInfoRequest::UpdateConnectivityInfoRequest(const UpdateConnectivityInfoRequest &other)
     : GreengrassRequest(new UpdateConnectivityInfoRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ UpdateConnectivityInfoRequest::UpdateConnectivityInfoRequest(const UpdateConnect
 }
 
 /*!
- * @brief  Constructs a new UpdateConnectivityInfoRequest object.
+ * Constructs a UpdateConnectivityInfoRequest object.
  */
 UpdateConnectivityInfoRequest::UpdateConnectivityInfoRequest()
     : GreengrassRequest(new UpdateConnectivityInfoRequestPrivate(GreengrassRequest::UpdateConnectivityInfoAction, this))
@@ -69,14 +66,9 @@ bool UpdateConnectivityInfoRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateConnectivityInfoResponse object.
+ * Returns a UpdateConnectivityInfoResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateConnectivityInfoResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GreengrassClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateConnectivityInfoRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * UpdateConnectivityInfoRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::Greengrass::UpdateConnectivityInfoRequestPrivate
+ * \brief The UpdateConnectivityInfoRequestPrivate class provides private implementation for UpdateConnectivityInfoRequest.
+ * \internal
  *
- * @class  UpdateConnectivityInfoRequestPrivate
- *
- * @brief  Private implementation for UpdateConnectivityInfoRequest.
+ * \inmodule QtAwsGreengrass
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateConnectivityInfoRequestPrivate object.
- *
- * @param  action  Greengrass action being performed.
- * @param  q       Pointer to this object's public UpdateConnectivityInfoRequest instance.
+ * Constructs a UpdateConnectivityInfoRequestPrivate object for Greengrass \a action with,
+ * public implementation \a q.
  */
 UpdateConnectivityInfoRequestPrivate::UpdateConnectivityInfoRequestPrivate(
     const GreengrassRequest::Action action, UpdateConnectivityInfoRequest * const q)
@@ -107,15 +96,10 @@ UpdateConnectivityInfoRequestPrivate::UpdateConnectivityInfoRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateConnectivityInfoRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateConnectivityInfoRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateConnectivityInfoRequest instance.
  */
 UpdateConnectivityInfoRequestPrivate::UpdateConnectivityInfoRequestPrivate(
     const UpdateConnectivityInfoRequestPrivate &other, UpdateConnectivityInfoRequest * const q)

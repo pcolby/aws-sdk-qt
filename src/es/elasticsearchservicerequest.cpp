@@ -25,16 +25,35 @@ namespace ElasticsearchService {
 
 /*!
  * \class QtAws::ElasticsearchService::ElasticsearchServiceRequest
- *
  * \brief The ElasticsearchServiceRequest class provides an interface for ElasticsearchService requests.
  *
- * \ingroup ElasticsearchService
+ * \inmodule QtAwsElasticsearchService
  */
 
 /*!
- * @brief  Constructs a new ElasticsearchServiceRequest object.
+ * \enum ElasticsearchServiceRequest::Action
  *
- * @param  action  The ElasticsearchService action to request.
+ * This enum describes the actions that can be performed as ElasticsearchService
+ * requests.
+ *
+ * \value AddTagsAction ElasticsearchService AddTags action.
+ * \value CreateElasticsearchDomainAction ElasticsearchService CreateElasticsearchDomain action.
+ * \value DeleteElasticsearchDomainAction ElasticsearchService DeleteElasticsearchDomain action.
+ * \value DeleteElasticsearchServiceRoleAction ElasticsearchService DeleteElasticsearchServiceRole action.
+ * \value DescribeElasticsearchDomainAction ElasticsearchService DescribeElasticsearchDomain action.
+ * \value DescribeElasticsearchDomainConfigAction ElasticsearchService DescribeElasticsearchDomainConfig action.
+ * \value DescribeElasticsearchDomainsAction ElasticsearchService DescribeElasticsearchDomains action.
+ * \value DescribeElasticsearchInstanceTypeLimitsAction ElasticsearchService DescribeElasticsearchInstanceTypeLimits action.
+ * \value ListDomainNamesAction ElasticsearchService ListDomainNames action.
+ * \value ListElasticsearchInstanceTypesAction ElasticsearchService ListElasticsearchInstanceTypes action.
+ * \value ListElasticsearchVersionsAction ElasticsearchService ListElasticsearchVersions action.
+ * \value ListTagsAction ElasticsearchService ListTags action.
+ * \value RemoveTagsAction ElasticsearchService RemoveTags action.
+ * \value UpdateElasticsearchDomainConfigAction ElasticsearchService UpdateElasticsearchDomainConfig action.
+ */
+
+/*!
+ * Constructs a[n] ElasticsearchServiceRequest object for ElasticsearchService \a action.
  */
 ElasticsearchServiceRequest::ElasticsearchServiceRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new ElasticsearchServiceRequestPrivate(action, this))
@@ -43,9 +62,7 @@ ElasticsearchServiceRequest::ElasticsearchServiceRequest(const Action action)
 }
 
 /*!
- * @brief  Constructs a new ElasticsearchServiceRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ElasticsearchServiceRequest::ElasticsearchServiceRequest(const ElasticsearchServiceRequest &other)
     : QtAws::Core::AwsAbstractRequest(new ElasticsearchServiceRequestPrivate(*other.d_func(), this))
@@ -54,13 +71,7 @@ ElasticsearchServiceRequest::ElasticsearchServiceRequest(const ElasticsearchServ
 }
 
 /*!
- * @brief  Assignment operator.
- *
- * Assigns \a other to \c this.
- *
- * @param  other  Instance to copy.
- *
- * @return  A reference to \c this.
+ * Sets the ElasticsearchServiceRequest object to be equal to \a other.
  */
 ElasticsearchServiceRequest& ElasticsearchServiceRequest::operator=(const ElasticsearchServiceRequest &other)
 {
@@ -72,14 +83,10 @@ ElasticsearchServiceRequest& ElasticsearchServiceRequest::operator=(const Elasti
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ElasticsearchServiceRequest object.
+ * Constructs aa ElasticsearchServiceRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from ElasticsearchServiceRequestPrivate.
- *
- * @param  d  Pointer to private data (aka D-Pointer).
  */
 ElasticsearchServiceRequest::ElasticsearchServiceRequest(ElasticsearchServiceRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
@@ -87,7 +94,7 @@ ElasticsearchServiceRequest::ElasticsearchServiceRequest(ElasticsearchServiceReq
 }
 
 /*!
- * \brief Returns the ElasticsearchService action to be performed by this request.
+ * Returns the ElasticsearchService action to be performed by this request.
  */
 ElasticsearchServiceRequest::Action ElasticsearchServiceRequest::action() const
 {
@@ -96,7 +103,7 @@ ElasticsearchServiceRequest::Action ElasticsearchServiceRequest::action() const
 }
 
 /*!
- * \brief Returns the name of the ElasticsearchService action to be performed by this request.
+ * Returns the name of the ElasticsearchService action to be performed by this request.
  */
 QString ElasticsearchServiceRequest::actionString() const
 {
@@ -104,7 +111,7 @@ QString ElasticsearchServiceRequest::actionString() const
 }
 
 /*!
- * \brief Returns the ElasticsearchService API version implemented by this request.
+ * Returns the ElasticsearchService API version implemented by this request.
  */
 QString ElasticsearchServiceRequest::apiVersion() const
 {
@@ -113,7 +120,7 @@ QString ElasticsearchServiceRequest::apiVersion() const
 }
 
 /*!
- * @brief Set the ElasticsearchService action to be performed by this request to \a action.
+ * Sets the ElasticsearchService action to be performed by this request to \a action.
  */
 void ElasticsearchServiceRequest::setAction(const Action action)
 {
@@ -122,7 +129,7 @@ void ElasticsearchServiceRequest::setAction(const Action action)
 }
 
 /*!
- * Set the ElasticsearchService API version to include in this request to \a version.
+ * Sets the ElasticsearchService API version to include in this request to \a version.
  */
 void ElasticsearchServiceRequest::setApiVersion(const QString &version)
 {
@@ -131,7 +138,7 @@ void ElasticsearchServiceRequest::setApiVersion(const QString &version)
 }
 
 /*!
- * \brief Returns \c true if this request is the same as \a other.
+ * Returns \c true if this request is equal to \a other; \c false otherwise.
  *
  * Note, most derived *Request classes do not need to provider their own
  * implementations of this function, since most such request classes rely on
@@ -146,8 +153,8 @@ bool ElasticsearchServiceRequest::operator==(const ElasticsearchServiceRequest &
             (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
-/*!
- * @brief  Check if \a queueName is a valid ElasticsearchService queue name.
+/*
+ * Returns \c tue if \a queueName is a valid ElasticsearchService queue name.
  *
  * @par From ElasticsearchService FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
@@ -166,9 +173,8 @@ bool ElasticsearchServiceRequest::operator==(const ElasticsearchServiceRequest &
 }*/
 
 /*!
- * \brief Removes the a \a name parameter from this request.
- *
- * Returns the count of paramters removed (typically \c 0 or \c 1).
+ * Removes the a \a name parameter from the request, then returns the number of
+ * paramters removed (typically \c 0 or \c 1).
  */
 int ElasticsearchServiceRequest::clearParameter(const QString &name)
 {
@@ -177,7 +183,7 @@ int ElasticsearchServiceRequest::clearParameter(const QString &name)
 }
 
 /*!
- * \brief Removes all parameters from this request.
+ * Removes all parameters from the request.
  */
 void ElasticsearchServiceRequest::clearParameters()
 {
@@ -186,7 +192,7 @@ void ElasticsearchServiceRequest::clearParameters()
 }
 
 /*!
- * \brief Returns the value of the \n name pararemter if set, otherwise \a defaultValue.
+ * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
 QVariant ElasticsearchServiceRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
@@ -195,7 +201,7 @@ QVariant ElasticsearchServiceRequest::parameter(const QString &name, const QVari
 }
 
 /*!
- * \brief Returns a map of parameters included in this request.
+ * Returns the parameters included in this request.
  */
 const QVariantMap &ElasticsearchServiceRequest::parameters() const
 {
@@ -204,7 +210,7 @@ const QVariantMap &ElasticsearchServiceRequest::parameters() const
 }
 
 /*!
- * \brief Sets the \a name parameter to \a value.
+ * Sets the \a name parameter to \a value.
  */
 void ElasticsearchServiceRequest::setParameter(const QString &name, const QVariant &value)
 {
@@ -213,9 +219,8 @@ void ElasticsearchServiceRequest::setParameter(const QString &name, const QVaria
 }
 
 /*!
- * \brief Sets the map of paramters for this request to \a parameters.
- *
- * Any request parameters set previously will be discarded.
+ * Sets the paramters for this request to \a parameters. Any request parameters
+ * set previously will be discarded.
  */
 void ElasticsearchServiceRequest::setParameters(const QVariantMap &parameters)
 {
@@ -224,11 +229,12 @@ void ElasticsearchServiceRequest::setParameters(const QVariantMap &parameters)
 }
 
 /*!
- * \brief Returns a network request for this ElasticsearchService request using the given \a endpoint.
+ * Returns a network request for the ElasticsearchService request using the given
+ * \a endpoint.
  *
- * This ElasticsearchService implementation builds request URLs by combining the common query
- * parameters (such as Action and Version), with any that have been added (via
- * setParameter) by child classes.
+ * This ElasticsearchService implementation builds request URLs by combining the
+ * common query parameters (such as Action and Version), with any that have
+ * been added (via setParameter) by child classes.
  */
 QNetworkRequest ElasticsearchServiceRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -239,17 +245,16 @@ QNetworkRequest ElasticsearchServiceRequest::unsignedRequest(const QUrl &endpoin
 }
 
 /*!
+ * \class QtAws::ElasticsearchService::ElasticsearchServiceRequestPrivate
+ * \brief The ElasticsearchServiceRequestPrivate class provides private implementation for ElasticsearchServiceRequest.
  * \internal
  *
- * \class  ElasticsearchServiceRequestPrivate
- *
- * \brief  Private implementation for ElasticsearchServiceRequest.
+ * \inmodule QtAwsElasticsearchService
  */
 
 /*!
- * \internal
- *
- * \brief Constructs a new ElasticsearchServiceRequestPrivate object.
+ * Constructs a ElasticsearchServiceRequestPrivate object for ElasticsearchService \a action with,
+ * public implementation \a q.
  */
 ElasticsearchServiceRequestPrivate::ElasticsearchServiceRequestPrivate(const ElasticsearchServiceRequest::Action action, ElasticsearchServiceRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
@@ -258,9 +263,7 @@ ElasticsearchServiceRequestPrivate::ElasticsearchServiceRequestPrivate(const Ela
 }
 
 /*!
- * \internal
- *
- * \brief Constructs a new ElasticsearchServiceRequestPrivate object, copying an existing one.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
@@ -276,15 +279,12 @@ ElasticsearchServiceRequestPrivate::ElasticsearchServiceRequestPrivate(const Ela
 }
 
 /*!
- * \internal
- *
- * \brief Returns a string representing \a action.
+ * Returns a string represention of \a action, or a null string if \a action is
+ * invalid.
  *
  * This function converts ElasticsearchServiceRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the ElasticsearchService service's Action
  * query parameters.
- *
- * @return A string representing \a action, or a null string if \a action is invalid.
  */
 QString ElasticsearchServiceRequestPrivate::toString(const ElasticsearchServiceRequest::Action &action)
 {

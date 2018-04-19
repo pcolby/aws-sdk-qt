@@ -27,10 +27,9 @@ namespace AppStream {
 
 /*!
  * \class QtAws::AppStream::DeleteImageRequest
- *
  * \brief The DeleteImageRequest class provides an interface for AppStream DeleteImage requests.
  *
- * \ingroup AppStream
+ * \inmodule QtAwsAppStream
  *
  *  <fullname>Amazon AppStream 2.0</fullname>
  * 
@@ -40,9 +39,7 @@ namespace AppStream {
  */
 
 /*!
- * @brief  Constructs a new DeleteImageRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteImageRequest::DeleteImageRequest(const DeleteImageRequest &other)
     : AppStreamRequest(new DeleteImageRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ DeleteImageRequest::DeleteImageRequest(const DeleteImageRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DeleteImageRequest object.
+ * Constructs a DeleteImageRequest object.
  */
 DeleteImageRequest::DeleteImageRequest()
     : AppStreamRequest(new DeleteImageRequestPrivate(AppStreamRequest::DeleteImageAction, this))
@@ -69,14 +66,9 @@ bool DeleteImageRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteImageResponse object.
+ * Returns a DeleteImageResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteImageResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AppStreamClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteImageRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * DeleteImageRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::AppStream::DeleteImageRequestPrivate
+ * \brief The DeleteImageRequestPrivate class provides private implementation for DeleteImageRequest.
+ * \internal
  *
- * @class  DeleteImageRequestPrivate
- *
- * @brief  Private implementation for DeleteImageRequest.
+ * \inmodule QtAwsAppStream
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteImageRequestPrivate object.
- *
- * @param  action  AppStream action being performed.
- * @param  q       Pointer to this object's public DeleteImageRequest instance.
+ * Constructs a DeleteImageRequestPrivate object for AppStream \a action with,
+ * public implementation \a q.
  */
 DeleteImageRequestPrivate::DeleteImageRequestPrivate(
     const AppStreamRequest::Action action, DeleteImageRequest * const q)
@@ -107,15 +96,10 @@ DeleteImageRequestPrivate::DeleteImageRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteImageRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteImageRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteImageRequest instance.
  */
 DeleteImageRequestPrivate::DeleteImageRequestPrivate(
     const DeleteImageRequestPrivate &other, DeleteImageRequest * const q)

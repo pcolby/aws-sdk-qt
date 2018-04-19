@@ -27,10 +27,9 @@ namespace Glacier {
 
 /*!
  * \class QtAws::Glacier::UploadArchiveRequest
- *
  * \brief The UploadArchiveRequest class provides an interface for Glacier UploadArchive requests.
  *
- * \ingroup Glacier
+ * \inmodule QtAwsGlacier
  *
  *  Amazon Glacier is a storage solution for "cold
  * 
@@ -75,9 +74,7 @@ namespace Glacier {
  */
 
 /*!
- * @brief  Constructs a new UploadArchiveRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UploadArchiveRequest::UploadArchiveRequest(const UploadArchiveRequest &other)
     : GlacierRequest(new UploadArchiveRequestPrivate(*other.d_func(), this))
@@ -86,7 +83,7 @@ UploadArchiveRequest::UploadArchiveRequest(const UploadArchiveRequest &other)
 }
 
 /*!
- * @brief  Constructs a new UploadArchiveRequest object.
+ * Constructs a UploadArchiveRequest object.
  */
 UploadArchiveRequest::UploadArchiveRequest()
     : GlacierRequest(new UploadArchiveRequestPrivate(GlacierRequest::UploadArchiveAction, this))
@@ -104,14 +101,9 @@ bool UploadArchiveRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UploadArchiveResponse object.
+ * Returns a UploadArchiveResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UploadArchiveResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GlacierClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UploadArchiveRequest::response(QNetworkReply * const reply) const
 {
@@ -119,20 +111,17 @@ QtAws::Core::AwsAbstractResponse * UploadArchiveRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::Glacier::UploadArchiveRequestPrivate
+ * \brief The UploadArchiveRequestPrivate class provides private implementation for UploadArchiveRequest.
+ * \internal
  *
- * @class  UploadArchiveRequestPrivate
- *
- * @brief  Private implementation for UploadArchiveRequest.
+ * \inmodule QtAwsGlacier
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UploadArchiveRequestPrivate object.
- *
- * @param  action  Glacier action being performed.
- * @param  q       Pointer to this object's public UploadArchiveRequest instance.
+ * Constructs a UploadArchiveRequestPrivate object for Glacier \a action with,
+ * public implementation \a q.
  */
 UploadArchiveRequestPrivate::UploadArchiveRequestPrivate(
     const GlacierRequest::Action action, UploadArchiveRequest * const q)
@@ -142,15 +131,10 @@ UploadArchiveRequestPrivate::UploadArchiveRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UploadArchiveRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UploadArchiveRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UploadArchiveRequest instance.
  */
 UploadArchiveRequestPrivate::UploadArchiveRequestPrivate(
     const UploadArchiveRequestPrivate &other, UploadArchiveRequest * const q)

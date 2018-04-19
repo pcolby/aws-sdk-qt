@@ -27,10 +27,9 @@ namespace CloudFront {
 
 /*!
  * \class QtAws::CloudFront::CreateInvalidationRequest
- *
  * \brief The CreateInvalidationRequest class provides an interface for CloudFront CreateInvalidation requests.
  *
- * \ingroup CloudFront
+ * \inmodule QtAwsCloudFront
  *
  *  <fullname>Amazon CloudFront</fullname>
  * 
@@ -42,9 +41,7 @@ namespace CloudFront {
  */
 
 /*!
- * @brief  Constructs a new CreateInvalidationRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateInvalidationRequest::CreateInvalidationRequest(const CreateInvalidationRequest &other)
     : CloudFrontRequest(new CreateInvalidationRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ CreateInvalidationRequest::CreateInvalidationRequest(const CreateInvalidationReq
 }
 
 /*!
- * @brief  Constructs a new CreateInvalidationRequest object.
+ * Constructs a CreateInvalidationRequest object.
  */
 CreateInvalidationRequest::CreateInvalidationRequest()
     : CloudFrontRequest(new CreateInvalidationRequestPrivate(CloudFrontRequest::CreateInvalidationAction, this))
@@ -71,14 +68,9 @@ bool CreateInvalidationRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateInvalidationResponse object.
+ * Returns a CreateInvalidationResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateInvalidationResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudFrontClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateInvalidationRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * CreateInvalidationRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudFront::CreateInvalidationRequestPrivate
+ * \brief The CreateInvalidationRequestPrivate class provides private implementation for CreateInvalidationRequest.
+ * \internal
  *
- * @class  CreateInvalidationRequestPrivate
- *
- * @brief  Private implementation for CreateInvalidationRequest.
+ * \inmodule QtAwsCloudFront
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateInvalidationRequestPrivate object.
- *
- * @param  action  CloudFront action being performed.
- * @param  q       Pointer to this object's public CreateInvalidationRequest instance.
+ * Constructs a CreateInvalidationRequestPrivate object for CloudFront \a action with,
+ * public implementation \a q.
  */
 CreateInvalidationRequestPrivate::CreateInvalidationRequestPrivate(
     const CloudFrontRequest::Action action, CreateInvalidationRequest * const q)
@@ -109,15 +98,10 @@ CreateInvalidationRequestPrivate::CreateInvalidationRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateInvalidationRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateInvalidationRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateInvalidationRequest instance.
  */
 CreateInvalidationRequestPrivate::CreateInvalidationRequestPrivate(
     const CreateInvalidationRequestPrivate &other, CreateInvalidationRequest * const q)

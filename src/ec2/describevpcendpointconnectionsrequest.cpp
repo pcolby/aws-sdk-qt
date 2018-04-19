@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DescribeVpcEndpointConnectionsRequest
- *
  * \brief The DescribeVpcEndpointConnectionsRequest class provides an interface for EC2 DescribeVpcEndpointConnections requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DescribeVpcEndpointConnectionsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeVpcEndpointConnectionsRequest::DescribeVpcEndpointConnectionsRequest(const DescribeVpcEndpointConnectionsRequest &other)
     : EC2Request(new DescribeVpcEndpointConnectionsRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ DescribeVpcEndpointConnectionsRequest::DescribeVpcEndpointConnectionsRequest(con
 }
 
 /*!
- * @brief  Constructs a new DescribeVpcEndpointConnectionsRequest object.
+ * Constructs a DescribeVpcEndpointConnectionsRequest object.
  */
 DescribeVpcEndpointConnectionsRequest::DescribeVpcEndpointConnectionsRequest()
     : EC2Request(new DescribeVpcEndpointConnectionsRequestPrivate(EC2Request::DescribeVpcEndpointConnectionsAction, this))
@@ -70,14 +67,9 @@ bool DescribeVpcEndpointConnectionsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeVpcEndpointConnectionsResponse object.
+ * Returns a DescribeVpcEndpointConnectionsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeVpcEndpointConnectionsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeVpcEndpointConnectionsRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * DescribeVpcEndpointConnectionsRequest::respon
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::DescribeVpcEndpointConnectionsRequestPrivate
+ * \brief The DescribeVpcEndpointConnectionsRequestPrivate class provides private implementation for DescribeVpcEndpointConnectionsRequest.
+ * \internal
  *
- * @class  DescribeVpcEndpointConnectionsRequestPrivate
- *
- * @brief  Private implementation for DescribeVpcEndpointConnectionsRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeVpcEndpointConnectionsRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public DescribeVpcEndpointConnectionsRequest instance.
+ * Constructs a DescribeVpcEndpointConnectionsRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 DescribeVpcEndpointConnectionsRequestPrivate::DescribeVpcEndpointConnectionsRequestPrivate(
     const EC2Request::Action action, DescribeVpcEndpointConnectionsRequest * const q)
@@ -108,15 +97,10 @@ DescribeVpcEndpointConnectionsRequestPrivate::DescribeVpcEndpointConnectionsRequ
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeVpcEndpointConnectionsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeVpcEndpointConnectionsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeVpcEndpointConnectionsRequest instance.
  */
 DescribeVpcEndpointConnectionsRequestPrivate::DescribeVpcEndpointConnectionsRequestPrivate(
     const DescribeVpcEndpointConnectionsRequestPrivate &other, DescribeVpcEndpointConnectionsRequest * const q)

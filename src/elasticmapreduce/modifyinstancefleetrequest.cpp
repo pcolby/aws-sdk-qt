@@ -27,10 +27,9 @@ namespace EMR {
 
 /*!
  * \class QtAws::EMR::ModifyInstanceFleetRequest
- *
  * \brief The ModifyInstanceFleetRequest class provides an interface for EMR ModifyInstanceFleet requests.
  *
- * \ingroup EMR
+ * \inmodule QtAwsEMR
  *
  *  Amazon EMR is a web service that makes it easy to process large amounts of data efficiently. Amazon EMR uses Hadoop
  *  processing combined with several AWS products to do tasks such as web indexing, data mining, log file analysis, machine
@@ -40,9 +39,7 @@ namespace EMR {
  */
 
 /*!
- * @brief  Constructs a new ModifyInstanceFleetRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ModifyInstanceFleetRequest::ModifyInstanceFleetRequest(const ModifyInstanceFleetRequest &other)
     : EMRRequest(new ModifyInstanceFleetRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ ModifyInstanceFleetRequest::ModifyInstanceFleetRequest(const ModifyInstanceFleet
 }
 
 /*!
- * @brief  Constructs a new ModifyInstanceFleetRequest object.
+ * Constructs a ModifyInstanceFleetRequest object.
  */
 ModifyInstanceFleetRequest::ModifyInstanceFleetRequest()
     : EMRRequest(new ModifyInstanceFleetRequestPrivate(EMRRequest::ModifyInstanceFleetAction, this))
@@ -69,14 +66,9 @@ bool ModifyInstanceFleetRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ModifyInstanceFleetResponse object.
+ * Returns a ModifyInstanceFleetResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ModifyInstanceFleetResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EMRClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ModifyInstanceFleetRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * ModifyInstanceFleetRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::EMR::ModifyInstanceFleetRequestPrivate
+ * \brief The ModifyInstanceFleetRequestPrivate class provides private implementation for ModifyInstanceFleetRequest.
+ * \internal
  *
- * @class  ModifyInstanceFleetRequestPrivate
- *
- * @brief  Private implementation for ModifyInstanceFleetRequest.
+ * \inmodule QtAwsEMR
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ModifyInstanceFleetRequestPrivate object.
- *
- * @param  action  EMR action being performed.
- * @param  q       Pointer to this object's public ModifyInstanceFleetRequest instance.
+ * Constructs a ModifyInstanceFleetRequestPrivate object for EMR \a action with,
+ * public implementation \a q.
  */
 ModifyInstanceFleetRequestPrivate::ModifyInstanceFleetRequestPrivate(
     const EMRRequest::Action action, ModifyInstanceFleetRequest * const q)
@@ -107,15 +96,10 @@ ModifyInstanceFleetRequestPrivate::ModifyInstanceFleetRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ModifyInstanceFleetRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ModifyInstanceFleetRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ModifyInstanceFleetRequest instance.
  */
 ModifyInstanceFleetRequestPrivate::ModifyInstanceFleetRequestPrivate(
     const ModifyInstanceFleetRequestPrivate &other, ModifyInstanceFleetRequest * const q)

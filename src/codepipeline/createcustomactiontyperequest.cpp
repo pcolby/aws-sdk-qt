@@ -27,10 +27,9 @@ namespace CodePipeline {
 
 /*!
  * \class QtAws::CodePipeline::CreateCustomActionTypeRequest
- *
  * \brief The CreateCustomActionTypeRequest class provides an interface for CodePipeline CreateCustomActionType requests.
  *
- * \ingroup CodePipeline
+ * \inmodule QtAwsCodePipeline
  *
  *  <fullname>AWS CodePipeline</fullname>
  * 
@@ -200,9 +199,7 @@ namespace CodePipeline {
  */
 
 /*!
- * @brief  Constructs a new CreateCustomActionTypeRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateCustomActionTypeRequest::CreateCustomActionTypeRequest(const CreateCustomActionTypeRequest &other)
     : CodePipelineRequest(new CreateCustomActionTypeRequestPrivate(*other.d_func(), this))
@@ -211,7 +208,7 @@ CreateCustomActionTypeRequest::CreateCustomActionTypeRequest(const CreateCustomA
 }
 
 /*!
- * @brief  Constructs a new CreateCustomActionTypeRequest object.
+ * Constructs a CreateCustomActionTypeRequest object.
  */
 CreateCustomActionTypeRequest::CreateCustomActionTypeRequest()
     : CodePipelineRequest(new CreateCustomActionTypeRequestPrivate(CodePipelineRequest::CreateCustomActionTypeAction, this))
@@ -229,14 +226,9 @@ bool CreateCustomActionTypeRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateCustomActionTypeResponse object.
+ * Returns a CreateCustomActionTypeResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateCustomActionTypeResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CodePipelineClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateCustomActionTypeRequest::response(QNetworkReply * const reply) const
 {
@@ -244,20 +236,17 @@ QtAws::Core::AwsAbstractResponse * CreateCustomActionTypeRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::CodePipeline::CreateCustomActionTypeRequestPrivate
+ * \brief The CreateCustomActionTypeRequestPrivate class provides private implementation for CreateCustomActionTypeRequest.
+ * \internal
  *
- * @class  CreateCustomActionTypeRequestPrivate
- *
- * @brief  Private implementation for CreateCustomActionTypeRequest.
+ * \inmodule QtAwsCodePipeline
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateCustomActionTypeRequestPrivate object.
- *
- * @param  action  CodePipeline action being performed.
- * @param  q       Pointer to this object's public CreateCustomActionTypeRequest instance.
+ * Constructs a CreateCustomActionTypeRequestPrivate object for CodePipeline \a action with,
+ * public implementation \a q.
  */
 CreateCustomActionTypeRequestPrivate::CreateCustomActionTypeRequestPrivate(
     const CodePipelineRequest::Action action, CreateCustomActionTypeRequest * const q)
@@ -267,15 +256,10 @@ CreateCustomActionTypeRequestPrivate::CreateCustomActionTypeRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateCustomActionTypeRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateCustomActionTypeRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateCustomActionTypeRequest instance.
  */
 CreateCustomActionTypeRequestPrivate::CreateCustomActionTypeRequestPrivate(
     const CreateCustomActionTypeRequestPrivate &other, CreateCustomActionTypeRequest * const q)

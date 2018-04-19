@@ -27,10 +27,9 @@ namespace DirectoryService {
 
 /*!
  * \class QtAws::DirectoryService::VerifyTrustRequest
- *
  * \brief The VerifyTrustRequest class provides an interface for DirectoryService VerifyTrust requests.
  *
- * \ingroup DirectoryService
+ * \inmodule QtAwsDirectoryService
  *
  *  <fullname>AWS Directory Service</fullname>
  * 
@@ -51,9 +50,7 @@ namespace DirectoryService {
  */
 
 /*!
- * @brief  Constructs a new VerifyTrustRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 VerifyTrustRequest::VerifyTrustRequest(const VerifyTrustRequest &other)
     : DirectoryServiceRequest(new VerifyTrustRequestPrivate(*other.d_func(), this))
@@ -62,7 +59,7 @@ VerifyTrustRequest::VerifyTrustRequest(const VerifyTrustRequest &other)
 }
 
 /*!
- * @brief  Constructs a new VerifyTrustRequest object.
+ * Constructs a VerifyTrustRequest object.
  */
 VerifyTrustRequest::VerifyTrustRequest()
     : DirectoryServiceRequest(new VerifyTrustRequestPrivate(DirectoryServiceRequest::VerifyTrustAction, this))
@@ -80,14 +77,9 @@ bool VerifyTrustRequest::isValid() const
 
 
 /*!
- * @brief  Construct an VerifyTrustResponse object.
+ * Returns a VerifyTrustResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An VerifyTrustResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DirectoryServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * VerifyTrustRequest::response(QNetworkReply * const reply) const
 {
@@ -95,20 +87,17 @@ QtAws::Core::AwsAbstractResponse * VerifyTrustRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::DirectoryService::VerifyTrustRequestPrivate
+ * \brief The VerifyTrustRequestPrivate class provides private implementation for VerifyTrustRequest.
+ * \internal
  *
- * @class  VerifyTrustRequestPrivate
- *
- * @brief  Private implementation for VerifyTrustRequest.
+ * \inmodule QtAwsDirectoryService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new VerifyTrustRequestPrivate object.
- *
- * @param  action  DirectoryService action being performed.
- * @param  q       Pointer to this object's public VerifyTrustRequest instance.
+ * Constructs a VerifyTrustRequestPrivate object for DirectoryService \a action with,
+ * public implementation \a q.
  */
 VerifyTrustRequestPrivate::VerifyTrustRequestPrivate(
     const DirectoryServiceRequest::Action action, VerifyTrustRequest * const q)
@@ -118,15 +107,10 @@ VerifyTrustRequestPrivate::VerifyTrustRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new VerifyTrustRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the VerifyTrustRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public VerifyTrustRequest instance.
  */
 VerifyTrustRequestPrivate::VerifyTrustRequestPrivate(
     const VerifyTrustRequestPrivate &other, VerifyTrustRequest * const q)

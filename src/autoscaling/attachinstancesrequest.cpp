@@ -27,10 +27,9 @@ namespace AutoScaling {
 
 /*!
  * \class QtAws::AutoScaling::AttachInstancesRequest
- *
  * \brief The AttachInstancesRequest class provides an interface for AutoScaling AttachInstances requests.
  *
- * \ingroup AutoScaling
+ * \inmodule QtAwsAutoScaling
  *
  *  <fullname>Amazon EC2 Auto Scaling</fullname>
  * 
@@ -42,9 +41,7 @@ namespace AutoScaling {
  */
 
 /*!
- * @brief  Constructs a new AttachInstancesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AttachInstancesRequest::AttachInstancesRequest(const AttachInstancesRequest &other)
     : AutoScalingRequest(new AttachInstancesRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ AttachInstancesRequest::AttachInstancesRequest(const AttachInstancesRequest &oth
 }
 
 /*!
- * @brief  Constructs a new AttachInstancesRequest object.
+ * Constructs a AttachInstancesRequest object.
  */
 AttachInstancesRequest::AttachInstancesRequest()
     : AutoScalingRequest(new AttachInstancesRequestPrivate(AutoScalingRequest::AttachInstancesAction, this))
@@ -71,14 +68,9 @@ bool AttachInstancesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AttachInstancesResponse object.
+ * Returns a AttachInstancesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AttachInstancesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AutoScalingClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AttachInstancesRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * AttachInstancesRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::AutoScaling::AttachInstancesRequestPrivate
+ * \brief The AttachInstancesRequestPrivate class provides private implementation for AttachInstancesRequest.
+ * \internal
  *
- * @class  AttachInstancesRequestPrivate
- *
- * @brief  Private implementation for AttachInstancesRequest.
+ * \inmodule QtAwsAutoScaling
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AttachInstancesRequestPrivate object.
- *
- * @param  action  AutoScaling action being performed.
- * @param  q       Pointer to this object's public AttachInstancesRequest instance.
+ * Constructs a AttachInstancesRequestPrivate object for AutoScaling \a action with,
+ * public implementation \a q.
  */
 AttachInstancesRequestPrivate::AttachInstancesRequestPrivate(
     const AutoScalingRequest::Action action, AttachInstancesRequest * const q)
@@ -109,15 +98,10 @@ AttachInstancesRequestPrivate::AttachInstancesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AttachInstancesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AttachInstancesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AttachInstancesRequest instance.
  */
 AttachInstancesRequestPrivate::AttachInstancesRequestPrivate(
     const AttachInstancesRequestPrivate &other, AttachInstancesRequest * const q)

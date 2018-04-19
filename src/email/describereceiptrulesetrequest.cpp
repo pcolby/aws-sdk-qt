@@ -27,10 +27,9 @@ namespace SES {
 
 /*!
  * \class QtAws::SES::DescribeReceiptRuleSetRequest
- *
  * \brief The DescribeReceiptRuleSetRequest class provides an interface for SES DescribeReceiptRuleSet requests.
  *
- * \ingroup SES
+ * \inmodule QtAwsSES
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -48,9 +47,7 @@ namespace SES {
  */
 
 /*!
- * @brief  Constructs a new DescribeReceiptRuleSetRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeReceiptRuleSetRequest::DescribeReceiptRuleSetRequest(const DescribeReceiptRuleSetRequest &other)
     : SESRequest(new DescribeReceiptRuleSetRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ DescribeReceiptRuleSetRequest::DescribeReceiptRuleSetRequest(const DescribeRecei
 }
 
 /*!
- * @brief  Constructs a new DescribeReceiptRuleSetRequest object.
+ * Constructs a DescribeReceiptRuleSetRequest object.
  */
 DescribeReceiptRuleSetRequest::DescribeReceiptRuleSetRequest()
     : SESRequest(new DescribeReceiptRuleSetRequestPrivate(SESRequest::DescribeReceiptRuleSetAction, this))
@@ -77,14 +74,9 @@ bool DescribeReceiptRuleSetRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeReceiptRuleSetResponse object.
+ * Returns a DescribeReceiptRuleSetResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeReceiptRuleSetResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SESClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeReceiptRuleSetRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * DescribeReceiptRuleSetRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::SES::DescribeReceiptRuleSetRequestPrivate
+ * \brief The DescribeReceiptRuleSetRequestPrivate class provides private implementation for DescribeReceiptRuleSetRequest.
+ * \internal
  *
- * @class  DescribeReceiptRuleSetRequestPrivate
- *
- * @brief  Private implementation for DescribeReceiptRuleSetRequest.
+ * \inmodule QtAwsSES
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeReceiptRuleSetRequestPrivate object.
- *
- * @param  action  SES action being performed.
- * @param  q       Pointer to this object's public DescribeReceiptRuleSetRequest instance.
+ * Constructs a DescribeReceiptRuleSetRequestPrivate object for SES \a action with,
+ * public implementation \a q.
  */
 DescribeReceiptRuleSetRequestPrivate::DescribeReceiptRuleSetRequestPrivate(
     const SESRequest::Action action, DescribeReceiptRuleSetRequest * const q)
@@ -115,15 +104,10 @@ DescribeReceiptRuleSetRequestPrivate::DescribeReceiptRuleSetRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeReceiptRuleSetRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeReceiptRuleSetRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeReceiptRuleSetRequest instance.
  */
 DescribeReceiptRuleSetRequestPrivate::DescribeReceiptRuleSetRequestPrivate(
     const DescribeReceiptRuleSetRequestPrivate &other, DescribeReceiptRuleSetRequest * const q)

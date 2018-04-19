@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::AssociateSubnetCidrBlockRequest
- *
  * \brief The AssociateSubnetCidrBlockRequest class provides an interface for EC2 AssociateSubnetCidrBlock requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new AssociateSubnetCidrBlockRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AssociateSubnetCidrBlockRequest::AssociateSubnetCidrBlockRequest(const AssociateSubnetCidrBlockRequest &other)
     : EC2Request(new AssociateSubnetCidrBlockRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ AssociateSubnetCidrBlockRequest::AssociateSubnetCidrBlockRequest(const Associate
 }
 
 /*!
- * @brief  Constructs a new AssociateSubnetCidrBlockRequest object.
+ * Constructs a AssociateSubnetCidrBlockRequest object.
  */
 AssociateSubnetCidrBlockRequest::AssociateSubnetCidrBlockRequest()
     : EC2Request(new AssociateSubnetCidrBlockRequestPrivate(EC2Request::AssociateSubnetCidrBlockAction, this))
@@ -70,14 +67,9 @@ bool AssociateSubnetCidrBlockRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AssociateSubnetCidrBlockResponse object.
+ * Returns a AssociateSubnetCidrBlockResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AssociateSubnetCidrBlockResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AssociateSubnetCidrBlockRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * AssociateSubnetCidrBlockRequest::response(QNe
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::AssociateSubnetCidrBlockRequestPrivate
+ * \brief The AssociateSubnetCidrBlockRequestPrivate class provides private implementation for AssociateSubnetCidrBlockRequest.
+ * \internal
  *
- * @class  AssociateSubnetCidrBlockRequestPrivate
- *
- * @brief  Private implementation for AssociateSubnetCidrBlockRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AssociateSubnetCidrBlockRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public AssociateSubnetCidrBlockRequest instance.
+ * Constructs a AssociateSubnetCidrBlockRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 AssociateSubnetCidrBlockRequestPrivate::AssociateSubnetCidrBlockRequestPrivate(
     const EC2Request::Action action, AssociateSubnetCidrBlockRequest * const q)
@@ -108,15 +97,10 @@ AssociateSubnetCidrBlockRequestPrivate::AssociateSubnetCidrBlockRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AssociateSubnetCidrBlockRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AssociateSubnetCidrBlockRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AssociateSubnetCidrBlockRequest instance.
  */
 AssociateSubnetCidrBlockRequestPrivate::AssociateSubnetCidrBlockRequestPrivate(
     const AssociateSubnetCidrBlockRequestPrivate &other, AssociateSubnetCidrBlockRequest * const q)

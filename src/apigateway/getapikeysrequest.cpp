@@ -27,10 +27,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::GetApiKeysRequest
- *
  * \brief The GetApiKeysRequest class provides an interface for APIGateway GetApiKeys requests.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -42,9 +41,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new GetApiKeysRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetApiKeysRequest::GetApiKeysRequest(const GetApiKeysRequest &other)
     : APIGatewayRequest(new GetApiKeysRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ GetApiKeysRequest::GetApiKeysRequest(const GetApiKeysRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetApiKeysRequest object.
+ * Constructs a GetApiKeysRequest object.
  */
 GetApiKeysRequest::GetApiKeysRequest()
     : APIGatewayRequest(new GetApiKeysRequestPrivate(APIGatewayRequest::GetApiKeysAction, this))
@@ -71,14 +68,9 @@ bool GetApiKeysRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetApiKeysResponse object.
+ * Returns a GetApiKeysResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetApiKeysResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  APIGatewayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetApiKeysRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * GetApiKeysRequest::response(QNetworkReply * c
 }
 
 /*!
- * @internal
+ * \class QtAws::APIGateway::GetApiKeysRequestPrivate
+ * \brief The GetApiKeysRequestPrivate class provides private implementation for GetApiKeysRequest.
+ * \internal
  *
- * @class  GetApiKeysRequestPrivate
- *
- * @brief  Private implementation for GetApiKeysRequest.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetApiKeysRequestPrivate object.
- *
- * @param  action  APIGateway action being performed.
- * @param  q       Pointer to this object's public GetApiKeysRequest instance.
+ * Constructs a GetApiKeysRequestPrivate object for APIGateway \a action with,
+ * public implementation \a q.
  */
 GetApiKeysRequestPrivate::GetApiKeysRequestPrivate(
     const APIGatewayRequest::Action action, GetApiKeysRequest * const q)
@@ -109,15 +98,10 @@ GetApiKeysRequestPrivate::GetApiKeysRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetApiKeysRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetApiKeysRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetApiKeysRequest instance.
  */
 GetApiKeysRequestPrivate::GetApiKeysRequestPrivate(
     const GetApiKeysRequestPrivate &other, GetApiKeysRequest * const q)

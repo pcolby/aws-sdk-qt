@@ -27,10 +27,9 @@ namespace Lambda {
 
 /*!
  * \class QtAws::Lambda::GetAliasRequest
- *
  * \brief The GetAliasRequest class provides an interface for Lambda GetAlias requests.
  *
- * \ingroup Lambda
+ * \inmodule QtAwsLambda
  *
  *  <fullname>AWS Lambda</fullname>
  * 
@@ -48,9 +47,7 @@ namespace Lambda {
  */
 
 /*!
- * @brief  Constructs a new GetAliasRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetAliasRequest::GetAliasRequest(const GetAliasRequest &other)
     : LambdaRequest(new GetAliasRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ GetAliasRequest::GetAliasRequest(const GetAliasRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetAliasRequest object.
+ * Constructs a GetAliasRequest object.
  */
 GetAliasRequest::GetAliasRequest()
     : LambdaRequest(new GetAliasRequestPrivate(LambdaRequest::GetAliasAction, this))
@@ -77,14 +74,9 @@ bool GetAliasRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetAliasResponse object.
+ * Returns a GetAliasResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetAliasResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  LambdaClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetAliasRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * GetAliasRequest::response(QNetworkReply * con
 }
 
 /*!
- * @internal
+ * \class QtAws::Lambda::GetAliasRequestPrivate
+ * \brief The GetAliasRequestPrivate class provides private implementation for GetAliasRequest.
+ * \internal
  *
- * @class  GetAliasRequestPrivate
- *
- * @brief  Private implementation for GetAliasRequest.
+ * \inmodule QtAwsLambda
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetAliasRequestPrivate object.
- *
- * @param  action  Lambda action being performed.
- * @param  q       Pointer to this object's public GetAliasRequest instance.
+ * Constructs a GetAliasRequestPrivate object for Lambda \a action with,
+ * public implementation \a q.
  */
 GetAliasRequestPrivate::GetAliasRequestPrivate(
     const LambdaRequest::Action action, GetAliasRequest * const q)
@@ -115,15 +104,10 @@ GetAliasRequestPrivate::GetAliasRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetAliasRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetAliasRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetAliasRequest instance.
  */
 GetAliasRequestPrivate::GetAliasRequestPrivate(
     const GetAliasRequestPrivate &other, GetAliasRequest * const q)

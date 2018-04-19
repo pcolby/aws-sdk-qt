@@ -27,10 +27,9 @@ namespace ConfigService {
 
 /*!
  * \class QtAws::ConfigService::DescribeConfigurationRecordersRequest
- *
  * \brief The DescribeConfigurationRecordersRequest class provides an interface for ConfigService DescribeConfigurationRecorders requests.
  *
- * \ingroup ConfigService
+ * \inmodule QtAwsConfigService
  *
  *  <fullname>AWS Config</fullname>
  * 
@@ -60,9 +59,7 @@ namespace ConfigService {
  */
 
 /*!
- * @brief  Constructs a new DescribeConfigurationRecordersRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeConfigurationRecordersRequest::DescribeConfigurationRecordersRequest(const DescribeConfigurationRecordersRequest &other)
     : ConfigServiceRequest(new DescribeConfigurationRecordersRequestPrivate(*other.d_func(), this))
@@ -71,7 +68,7 @@ DescribeConfigurationRecordersRequest::DescribeConfigurationRecordersRequest(con
 }
 
 /*!
- * @brief  Constructs a new DescribeConfigurationRecordersRequest object.
+ * Constructs a DescribeConfigurationRecordersRequest object.
  */
 DescribeConfigurationRecordersRequest::DescribeConfigurationRecordersRequest()
     : ConfigServiceRequest(new DescribeConfigurationRecordersRequestPrivate(ConfigServiceRequest::DescribeConfigurationRecordersAction, this))
@@ -89,14 +86,9 @@ bool DescribeConfigurationRecordersRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeConfigurationRecordersResponse object.
+ * Returns a DescribeConfigurationRecordersResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeConfigurationRecordersResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ConfigServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeConfigurationRecordersRequest::response(QNetworkReply * const reply) const
 {
@@ -104,20 +96,17 @@ QtAws::Core::AwsAbstractResponse * DescribeConfigurationRecordersRequest::respon
 }
 
 /*!
- * @internal
+ * \class QtAws::ConfigService::DescribeConfigurationRecordersRequestPrivate
+ * \brief The DescribeConfigurationRecordersRequestPrivate class provides private implementation for DescribeConfigurationRecordersRequest.
+ * \internal
  *
- * @class  DescribeConfigurationRecordersRequestPrivate
- *
- * @brief  Private implementation for DescribeConfigurationRecordersRequest.
+ * \inmodule QtAwsConfigService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeConfigurationRecordersRequestPrivate object.
- *
- * @param  action  ConfigService action being performed.
- * @param  q       Pointer to this object's public DescribeConfigurationRecordersRequest instance.
+ * Constructs a DescribeConfigurationRecordersRequestPrivate object for ConfigService \a action with,
+ * public implementation \a q.
  */
 DescribeConfigurationRecordersRequestPrivate::DescribeConfigurationRecordersRequestPrivate(
     const ConfigServiceRequest::Action action, DescribeConfigurationRecordersRequest * const q)
@@ -127,15 +116,10 @@ DescribeConfigurationRecordersRequestPrivate::DescribeConfigurationRecordersRequ
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeConfigurationRecordersRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeConfigurationRecordersRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeConfigurationRecordersRequest instance.
  */
 DescribeConfigurationRecordersRequestPrivate::DescribeConfigurationRecordersRequestPrivate(
     const DescribeConfigurationRecordersRequestPrivate &other, DescribeConfigurationRecordersRequest * const q)

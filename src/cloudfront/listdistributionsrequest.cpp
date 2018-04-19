@@ -27,10 +27,9 @@ namespace CloudFront {
 
 /*!
  * \class QtAws::CloudFront::ListDistributionsRequest
- *
  * \brief The ListDistributionsRequest class provides an interface for CloudFront ListDistributions requests.
  *
- * \ingroup CloudFront
+ * \inmodule QtAwsCloudFront
  *
  *  <fullname>Amazon CloudFront</fullname>
  * 
@@ -42,9 +41,7 @@ namespace CloudFront {
  */
 
 /*!
- * @brief  Constructs a new ListDistributionsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListDistributionsRequest::ListDistributionsRequest(const ListDistributionsRequest &other)
     : CloudFrontRequest(new ListDistributionsRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ ListDistributionsRequest::ListDistributionsRequest(const ListDistributionsReques
 }
 
 /*!
- * @brief  Constructs a new ListDistributionsRequest object.
+ * Constructs a ListDistributionsRequest object.
  */
 ListDistributionsRequest::ListDistributionsRequest()
     : CloudFrontRequest(new ListDistributionsRequestPrivate(CloudFrontRequest::ListDistributionsAction, this))
@@ -71,14 +68,9 @@ bool ListDistributionsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListDistributionsResponse object.
+ * Returns a ListDistributionsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListDistributionsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudFrontClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListDistributionsRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * ListDistributionsRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudFront::ListDistributionsRequestPrivate
+ * \brief The ListDistributionsRequestPrivate class provides private implementation for ListDistributionsRequest.
+ * \internal
  *
- * @class  ListDistributionsRequestPrivate
- *
- * @brief  Private implementation for ListDistributionsRequest.
+ * \inmodule QtAwsCloudFront
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListDistributionsRequestPrivate object.
- *
- * @param  action  CloudFront action being performed.
- * @param  q       Pointer to this object's public ListDistributionsRequest instance.
+ * Constructs a ListDistributionsRequestPrivate object for CloudFront \a action with,
+ * public implementation \a q.
  */
 ListDistributionsRequestPrivate::ListDistributionsRequestPrivate(
     const CloudFrontRequest::Action action, ListDistributionsRequest * const q)
@@ -109,15 +98,10 @@ ListDistributionsRequestPrivate::ListDistributionsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListDistributionsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListDistributionsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListDistributionsRequest instance.
  */
 ListDistributionsRequestPrivate::ListDistributionsRequestPrivate(
     const ListDistributionsRequestPrivate &other, ListDistributionsRequest * const q)

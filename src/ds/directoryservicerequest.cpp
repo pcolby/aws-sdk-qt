@@ -25,16 +25,61 @@ namespace DirectoryService {
 
 /*!
  * \class QtAws::DirectoryService::DirectoryServiceRequest
- *
  * \brief The DirectoryServiceRequest class provides an interface for DirectoryService requests.
  *
- * \ingroup DirectoryService
+ * \inmodule QtAwsDirectoryService
  */
 
 /*!
- * @brief  Constructs a new DirectoryServiceRequest object.
+ * \enum DirectoryServiceRequest::Action
  *
- * @param  action  The DirectoryService action to request.
+ * This enum describes the actions that can be performed as DirectoryService
+ * requests.
+ *
+ * \value AddIpRoutesAction DirectoryService AddIpRoutes action.
+ * \value AddTagsToResourceAction DirectoryService AddTagsToResource action.
+ * \value CancelSchemaExtensionAction DirectoryService CancelSchemaExtension action.
+ * \value ConnectDirectoryAction DirectoryService ConnectDirectory action.
+ * \value CreateAliasAction DirectoryService CreateAlias action.
+ * \value CreateComputerAction DirectoryService CreateComputer action.
+ * \value CreateConditionalForwarderAction DirectoryService CreateConditionalForwarder action.
+ * \value CreateDirectoryAction DirectoryService CreateDirectory action.
+ * \value CreateMicrosoftADAction DirectoryService CreateMicrosoftAD action.
+ * \value CreateSnapshotAction DirectoryService CreateSnapshot action.
+ * \value CreateTrustAction DirectoryService CreateTrust action.
+ * \value DeleteConditionalForwarderAction DirectoryService DeleteConditionalForwarder action.
+ * \value DeleteDirectoryAction DirectoryService DeleteDirectory action.
+ * \value DeleteSnapshotAction DirectoryService DeleteSnapshot action.
+ * \value DeleteTrustAction DirectoryService DeleteTrust action.
+ * \value DeregisterEventTopicAction DirectoryService DeregisterEventTopic action.
+ * \value DescribeConditionalForwardersAction DirectoryService DescribeConditionalForwarders action.
+ * \value DescribeDirectoriesAction DirectoryService DescribeDirectories action.
+ * \value DescribeDomainControllersAction DirectoryService DescribeDomainControllers action.
+ * \value DescribeEventTopicsAction DirectoryService DescribeEventTopics action.
+ * \value DescribeSnapshotsAction DirectoryService DescribeSnapshots action.
+ * \value DescribeTrustsAction DirectoryService DescribeTrusts action.
+ * \value DisableRadiusAction DirectoryService DisableRadius action.
+ * \value DisableSsoAction DirectoryService DisableSso action.
+ * \value EnableRadiusAction DirectoryService EnableRadius action.
+ * \value EnableSsoAction DirectoryService EnableSso action.
+ * \value GetDirectoryLimitsAction DirectoryService GetDirectoryLimits action.
+ * \value GetSnapshotLimitsAction DirectoryService GetSnapshotLimits action.
+ * \value ListIpRoutesAction DirectoryService ListIpRoutes action.
+ * \value ListSchemaExtensionsAction DirectoryService ListSchemaExtensions action.
+ * \value ListTagsForResourceAction DirectoryService ListTagsForResource action.
+ * \value RegisterEventTopicAction DirectoryService RegisterEventTopic action.
+ * \value RemoveIpRoutesAction DirectoryService RemoveIpRoutes action.
+ * \value RemoveTagsFromResourceAction DirectoryService RemoveTagsFromResource action.
+ * \value RestoreFromSnapshotAction DirectoryService RestoreFromSnapshot action.
+ * \value StartSchemaExtensionAction DirectoryService StartSchemaExtension action.
+ * \value UpdateConditionalForwarderAction DirectoryService UpdateConditionalForwarder action.
+ * \value UpdateNumberOfDomainControllersAction DirectoryService UpdateNumberOfDomainControllers action.
+ * \value UpdateRadiusAction DirectoryService UpdateRadius action.
+ * \value VerifyTrustAction DirectoryService VerifyTrust action.
+ */
+
+/*!
+ * Constructs a[n] DirectoryServiceRequest object for DirectoryService \a action.
  */
 DirectoryServiceRequest::DirectoryServiceRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new DirectoryServiceRequestPrivate(action, this))
@@ -43,9 +88,7 @@ DirectoryServiceRequest::DirectoryServiceRequest(const Action action)
 }
 
 /*!
- * @brief  Constructs a new DirectoryServiceRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DirectoryServiceRequest::DirectoryServiceRequest(const DirectoryServiceRequest &other)
     : QtAws::Core::AwsAbstractRequest(new DirectoryServiceRequestPrivate(*other.d_func(), this))
@@ -54,13 +97,7 @@ DirectoryServiceRequest::DirectoryServiceRequest(const DirectoryServiceRequest &
 }
 
 /*!
- * @brief  Assignment operator.
- *
- * Assigns \a other to \c this.
- *
- * @param  other  Instance to copy.
- *
- * @return  A reference to \c this.
+ * Sets the DirectoryServiceRequest object to be equal to \a other.
  */
 DirectoryServiceRequest& DirectoryServiceRequest::operator=(const DirectoryServiceRequest &other)
 {
@@ -72,14 +109,10 @@ DirectoryServiceRequest& DirectoryServiceRequest::operator=(const DirectoryServi
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DirectoryServiceRequest object.
+ * Constructs aa DirectoryServiceRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from DirectoryServiceRequestPrivate.
- *
- * @param  d  Pointer to private data (aka D-Pointer).
  */
 DirectoryServiceRequest::DirectoryServiceRequest(DirectoryServiceRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
@@ -87,7 +120,7 @@ DirectoryServiceRequest::DirectoryServiceRequest(DirectoryServiceRequestPrivate 
 }
 
 /*!
- * \brief Returns the DirectoryService action to be performed by this request.
+ * Returns the DirectoryService action to be performed by this request.
  */
 DirectoryServiceRequest::Action DirectoryServiceRequest::action() const
 {
@@ -96,7 +129,7 @@ DirectoryServiceRequest::Action DirectoryServiceRequest::action() const
 }
 
 /*!
- * \brief Returns the name of the DirectoryService action to be performed by this request.
+ * Returns the name of the DirectoryService action to be performed by this request.
  */
 QString DirectoryServiceRequest::actionString() const
 {
@@ -104,7 +137,7 @@ QString DirectoryServiceRequest::actionString() const
 }
 
 /*!
- * \brief Returns the DirectoryService API version implemented by this request.
+ * Returns the DirectoryService API version implemented by this request.
  */
 QString DirectoryServiceRequest::apiVersion() const
 {
@@ -113,7 +146,7 @@ QString DirectoryServiceRequest::apiVersion() const
 }
 
 /*!
- * @brief Set the DirectoryService action to be performed by this request to \a action.
+ * Sets the DirectoryService action to be performed by this request to \a action.
  */
 void DirectoryServiceRequest::setAction(const Action action)
 {
@@ -122,7 +155,7 @@ void DirectoryServiceRequest::setAction(const Action action)
 }
 
 /*!
- * Set the DirectoryService API version to include in this request to \a version.
+ * Sets the DirectoryService API version to include in this request to \a version.
  */
 void DirectoryServiceRequest::setApiVersion(const QString &version)
 {
@@ -131,7 +164,7 @@ void DirectoryServiceRequest::setApiVersion(const QString &version)
 }
 
 /*!
- * \brief Returns \c true if this request is the same as \a other.
+ * Returns \c true if this request is equal to \a other; \c false otherwise.
  *
  * Note, most derived *Request classes do not need to provider their own
  * implementations of this function, since most such request classes rely on
@@ -146,8 +179,8 @@ bool DirectoryServiceRequest::operator==(const DirectoryServiceRequest &other) c
             (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
-/*!
- * @brief  Check if \a queueName is a valid DirectoryService queue name.
+/*
+ * Returns \c tue if \a queueName is a valid DirectoryService queue name.
  *
  * @par From DirectoryService FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
@@ -166,9 +199,8 @@ bool DirectoryServiceRequest::operator==(const DirectoryServiceRequest &other) c
 }*/
 
 /*!
- * \brief Removes the a \a name parameter from this request.
- *
- * Returns the count of paramters removed (typically \c 0 or \c 1).
+ * Removes the a \a name parameter from the request, then returns the number of
+ * paramters removed (typically \c 0 or \c 1).
  */
 int DirectoryServiceRequest::clearParameter(const QString &name)
 {
@@ -177,7 +209,7 @@ int DirectoryServiceRequest::clearParameter(const QString &name)
 }
 
 /*!
- * \brief Removes all parameters from this request.
+ * Removes all parameters from the request.
  */
 void DirectoryServiceRequest::clearParameters()
 {
@@ -186,7 +218,7 @@ void DirectoryServiceRequest::clearParameters()
 }
 
 /*!
- * \brief Returns the value of the \n name pararemter if set, otherwise \a defaultValue.
+ * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
 QVariant DirectoryServiceRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
@@ -195,7 +227,7 @@ QVariant DirectoryServiceRequest::parameter(const QString &name, const QVariant 
 }
 
 /*!
- * \brief Returns a map of parameters included in this request.
+ * Returns the parameters included in this request.
  */
 const QVariantMap &DirectoryServiceRequest::parameters() const
 {
@@ -204,7 +236,7 @@ const QVariantMap &DirectoryServiceRequest::parameters() const
 }
 
 /*!
- * \brief Sets the \a name parameter to \a value.
+ * Sets the \a name parameter to \a value.
  */
 void DirectoryServiceRequest::setParameter(const QString &name, const QVariant &value)
 {
@@ -213,9 +245,8 @@ void DirectoryServiceRequest::setParameter(const QString &name, const QVariant &
 }
 
 /*!
- * \brief Sets the map of paramters for this request to \a parameters.
- *
- * Any request parameters set previously will be discarded.
+ * Sets the paramters for this request to \a parameters. Any request parameters
+ * set previously will be discarded.
  */
 void DirectoryServiceRequest::setParameters(const QVariantMap &parameters)
 {
@@ -224,11 +255,12 @@ void DirectoryServiceRequest::setParameters(const QVariantMap &parameters)
 }
 
 /*!
- * \brief Returns a network request for this DirectoryService request using the given \a endpoint.
+ * Returns a network request for the DirectoryService request using the given
+ * \a endpoint.
  *
- * This DirectoryService implementation builds request URLs by combining the common query
- * parameters (such as Action and Version), with any that have been added (via
- * setParameter) by child classes.
+ * This DirectoryService implementation builds request URLs by combining the
+ * common query parameters (such as Action and Version), with any that have
+ * been added (via setParameter) by child classes.
  */
 QNetworkRequest DirectoryServiceRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -239,17 +271,16 @@ QNetworkRequest DirectoryServiceRequest::unsignedRequest(const QUrl &endpoint) c
 }
 
 /*!
+ * \class QtAws::DirectoryService::DirectoryServiceRequestPrivate
+ * \brief The DirectoryServiceRequestPrivate class provides private implementation for DirectoryServiceRequest.
  * \internal
  *
- * \class  DirectoryServiceRequestPrivate
- *
- * \brief  Private implementation for DirectoryServiceRequest.
+ * \inmodule QtAwsDirectoryService
  */
 
 /*!
- * \internal
- *
- * \brief Constructs a new DirectoryServiceRequestPrivate object.
+ * Constructs a DirectoryServiceRequestPrivate object for DirectoryService \a action with,
+ * public implementation \a q.
  */
 DirectoryServiceRequestPrivate::DirectoryServiceRequestPrivate(const DirectoryServiceRequest::Action action, DirectoryServiceRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
@@ -258,9 +289,7 @@ DirectoryServiceRequestPrivate::DirectoryServiceRequestPrivate(const DirectorySe
 }
 
 /*!
- * \internal
- *
- * \brief Constructs a new DirectoryServiceRequestPrivate object, copying an existing one.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
@@ -276,15 +305,12 @@ DirectoryServiceRequestPrivate::DirectoryServiceRequestPrivate(const DirectorySe
 }
 
 /*!
- * \internal
- *
- * \brief Returns a string representing \a action.
+ * Returns a string represention of \a action, or a null string if \a action is
+ * invalid.
  *
  * This function converts DirectoryServiceRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the DirectoryService service's Action
  * query parameters.
- *
- * @return A string representing \a action, or a null string if \a action is invalid.
  */
 QString DirectoryServiceRequestPrivate::toString(const DirectoryServiceRequest::Action &action)
 {

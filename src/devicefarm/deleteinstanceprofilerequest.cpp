@@ -27,10 +27,9 @@ namespace DeviceFarm {
 
 /*!
  * \class QtAws::DeviceFarm::DeleteInstanceProfileRequest
- *
  * \brief The DeleteInstanceProfileRequest class provides an interface for DeviceFarm DeleteInstanceProfile requests.
  *
- * \ingroup DeviceFarm
+ * \inmodule QtAwsDeviceFarm
  *
  *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
  *  phones, tablets, and other devices in the
@@ -39,9 +38,7 @@ namespace DeviceFarm {
  */
 
 /*!
- * @brief  Constructs a new DeleteInstanceProfileRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteInstanceProfileRequest::DeleteInstanceProfileRequest(const DeleteInstanceProfileRequest &other)
     : DeviceFarmRequest(new DeleteInstanceProfileRequestPrivate(*other.d_func(), this))
@@ -50,7 +47,7 @@ DeleteInstanceProfileRequest::DeleteInstanceProfileRequest(const DeleteInstanceP
 }
 
 /*!
- * @brief  Constructs a new DeleteInstanceProfileRequest object.
+ * Constructs a DeleteInstanceProfileRequest object.
  */
 DeleteInstanceProfileRequest::DeleteInstanceProfileRequest()
     : DeviceFarmRequest(new DeleteInstanceProfileRequestPrivate(DeviceFarmRequest::DeleteInstanceProfileAction, this))
@@ -68,14 +65,9 @@ bool DeleteInstanceProfileRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteInstanceProfileResponse object.
+ * Returns a DeleteInstanceProfileResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteInstanceProfileResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DeviceFarmClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteInstanceProfileRequest::response(QNetworkReply * const reply) const
 {
@@ -83,20 +75,17 @@ QtAws::Core::AwsAbstractResponse * DeleteInstanceProfileRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::DeviceFarm::DeleteInstanceProfileRequestPrivate
+ * \brief The DeleteInstanceProfileRequestPrivate class provides private implementation for DeleteInstanceProfileRequest.
+ * \internal
  *
- * @class  DeleteInstanceProfileRequestPrivate
- *
- * @brief  Private implementation for DeleteInstanceProfileRequest.
+ * \inmodule QtAwsDeviceFarm
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteInstanceProfileRequestPrivate object.
- *
- * @param  action  DeviceFarm action being performed.
- * @param  q       Pointer to this object's public DeleteInstanceProfileRequest instance.
+ * Constructs a DeleteInstanceProfileRequestPrivate object for DeviceFarm \a action with,
+ * public implementation \a q.
  */
 DeleteInstanceProfileRequestPrivate::DeleteInstanceProfileRequestPrivate(
     const DeviceFarmRequest::Action action, DeleteInstanceProfileRequest * const q)
@@ -106,15 +95,10 @@ DeleteInstanceProfileRequestPrivate::DeleteInstanceProfileRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteInstanceProfileRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteInstanceProfileRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteInstanceProfileRequest instance.
  */
 DeleteInstanceProfileRequestPrivate::DeleteInstanceProfileRequestPrivate(
     const DeleteInstanceProfileRequestPrivate &other, DeleteInstanceProfileRequest * const q)

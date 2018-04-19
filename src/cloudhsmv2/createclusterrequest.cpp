@@ -27,10 +27,9 @@ namespace CloudHSMV2 {
 
 /*!
  * \class QtAws::CloudHSMV2::CreateClusterRequest
- *
  * \brief The CreateClusterRequest class provides an interface for CloudHSMV2 CreateCluster requests.
  *
- * \ingroup CloudHSMV2
+ * \inmodule QtAwsCloudHSMV2
  *
  *  For more information about AWS CloudHSM, see <a href="http://aws.amazon.com/cloudhsm/">AWS CloudHSM</a> and the <a
  *  href="http://docs.aws.amazon.com/cloudhsm/latest/userguide/">AWS CloudHSM User
@@ -39,9 +38,7 @@ namespace CloudHSMV2 {
  */
 
 /*!
- * @brief  Constructs a new CreateClusterRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateClusterRequest::CreateClusterRequest(const CreateClusterRequest &other)
     : CloudHSMV2Request(new CreateClusterRequestPrivate(*other.d_func(), this))
@@ -50,7 +47,7 @@ CreateClusterRequest::CreateClusterRequest(const CreateClusterRequest &other)
 }
 
 /*!
- * @brief  Constructs a new CreateClusterRequest object.
+ * Constructs a CreateClusterRequest object.
  */
 CreateClusterRequest::CreateClusterRequest()
     : CloudHSMV2Request(new CreateClusterRequestPrivate(CloudHSMV2Request::CreateClusterAction, this))
@@ -68,14 +65,9 @@ bool CreateClusterRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateClusterResponse object.
+ * Returns a CreateClusterResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateClusterResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudHSMV2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateClusterRequest::response(QNetworkReply * const reply) const
 {
@@ -83,20 +75,17 @@ QtAws::Core::AwsAbstractResponse * CreateClusterRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudHSMV2::CreateClusterRequestPrivate
+ * \brief The CreateClusterRequestPrivate class provides private implementation for CreateClusterRequest.
+ * \internal
  *
- * @class  CreateClusterRequestPrivate
- *
- * @brief  Private implementation for CreateClusterRequest.
+ * \inmodule QtAwsCloudHSMV2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateClusterRequestPrivate object.
- *
- * @param  action  CloudHSMV2 action being performed.
- * @param  q       Pointer to this object's public CreateClusterRequest instance.
+ * Constructs a CreateClusterRequestPrivate object for CloudHSMV2 \a action with,
+ * public implementation \a q.
  */
 CreateClusterRequestPrivate::CreateClusterRequestPrivate(
     const CloudHSMV2Request::Action action, CreateClusterRequest * const q)
@@ -106,15 +95,10 @@ CreateClusterRequestPrivate::CreateClusterRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateClusterRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateClusterRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateClusterRequest instance.
  */
 CreateClusterRequestPrivate::CreateClusterRequestPrivate(
     const CreateClusterRequestPrivate &other, CreateClusterRequest * const q)

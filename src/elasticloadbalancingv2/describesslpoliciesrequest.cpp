@@ -27,10 +27,9 @@ namespace ElasticLoadBalancingv2 {
 
 /*!
  * \class QtAws::ElasticLoadBalancingv2::DescribeSSLPoliciesRequest
- *
  * \brief The DescribeSSLPoliciesRequest class provides an interface for ElasticLoadBalancingv2 DescribeSSLPolicies requests.
  *
- * \ingroup ElasticLoadBalancingv2
+ * \inmodule QtAwsElasticLoadBalancingv2
  *
  *  <fullname>Elastic Load Balancing</fullname>
  * 
@@ -105,9 +104,7 @@ namespace ElasticLoadBalancingv2 {
  */
 
 /*!
- * @brief  Constructs a new DescribeSSLPoliciesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeSSLPoliciesRequest::DescribeSSLPoliciesRequest(const DescribeSSLPoliciesRequest &other)
     : ElasticLoadBalancingv2Request(new DescribeSSLPoliciesRequestPrivate(*other.d_func(), this))
@@ -116,7 +113,7 @@ DescribeSSLPoliciesRequest::DescribeSSLPoliciesRequest(const DescribeSSLPolicies
 }
 
 /*!
- * @brief  Constructs a new DescribeSSLPoliciesRequest object.
+ * Constructs a DescribeSSLPoliciesRequest object.
  */
 DescribeSSLPoliciesRequest::DescribeSSLPoliciesRequest()
     : ElasticLoadBalancingv2Request(new DescribeSSLPoliciesRequestPrivate(ElasticLoadBalancingv2Request::DescribeSSLPoliciesAction, this))
@@ -134,14 +131,9 @@ bool DescribeSSLPoliciesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeSSLPoliciesResponse object.
+ * Returns a DescribeSSLPoliciesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeSSLPoliciesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ElasticLoadBalancingv2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeSSLPoliciesRequest::response(QNetworkReply * const reply) const
 {
@@ -149,20 +141,17 @@ QtAws::Core::AwsAbstractResponse * DescribeSSLPoliciesRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::ElasticLoadBalancingv2::DescribeSSLPoliciesRequestPrivate
+ * \brief The DescribeSSLPoliciesRequestPrivate class provides private implementation for DescribeSSLPoliciesRequest.
+ * \internal
  *
- * @class  DescribeSSLPoliciesRequestPrivate
- *
- * @brief  Private implementation for DescribeSSLPoliciesRequest.
+ * \inmodule QtAwsElasticLoadBalancingv2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeSSLPoliciesRequestPrivate object.
- *
- * @param  action  ElasticLoadBalancingv2 action being performed.
- * @param  q       Pointer to this object's public DescribeSSLPoliciesRequest instance.
+ * Constructs a DescribeSSLPoliciesRequestPrivate object for ElasticLoadBalancingv2 \a action with,
+ * public implementation \a q.
  */
 DescribeSSLPoliciesRequestPrivate::DescribeSSLPoliciesRequestPrivate(
     const ElasticLoadBalancingv2Request::Action action, DescribeSSLPoliciesRequest * const q)
@@ -172,15 +161,10 @@ DescribeSSLPoliciesRequestPrivate::DescribeSSLPoliciesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeSSLPoliciesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeSSLPoliciesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeSSLPoliciesRequest instance.
  */
 DescribeSSLPoliciesRequestPrivate::DescribeSSLPoliciesRequestPrivate(
     const DescribeSSLPoliciesRequestPrivate &other, DescribeSSLPoliciesRequest * const q)

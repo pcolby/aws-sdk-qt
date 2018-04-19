@@ -27,19 +27,16 @@ namespace GuardDuty {
 
 /*!
  * \class QtAws::GuardDuty::UpdateIPSetRequest
- *
  * \brief The UpdateIPSetRequest class provides an interface for GuardDuty UpdateIPSet requests.
  *
- * \ingroup GuardDuty
+ * \inmodule QtAwsGuardDuty
  *
  *
  * \sa GuardDutyClient::updateIPSet
  */
 
 /*!
- * @brief  Constructs a new UpdateIPSetRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateIPSetRequest::UpdateIPSetRequest(const UpdateIPSetRequest &other)
     : GuardDutyRequest(new UpdateIPSetRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ UpdateIPSetRequest::UpdateIPSetRequest(const UpdateIPSetRequest &other)
 }
 
 /*!
- * @brief  Constructs a new UpdateIPSetRequest object.
+ * Constructs a UpdateIPSetRequest object.
  */
 UpdateIPSetRequest::UpdateIPSetRequest()
     : GuardDutyRequest(new UpdateIPSetRequestPrivate(GuardDutyRequest::UpdateIPSetAction, this))
@@ -66,14 +63,9 @@ bool UpdateIPSetRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateIPSetResponse object.
+ * Returns a UpdateIPSetResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateIPSetResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GuardDutyClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateIPSetRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * UpdateIPSetRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::GuardDuty::UpdateIPSetRequestPrivate
+ * \brief The UpdateIPSetRequestPrivate class provides private implementation for UpdateIPSetRequest.
+ * \internal
  *
- * @class  UpdateIPSetRequestPrivate
- *
- * @brief  Private implementation for UpdateIPSetRequest.
+ * \inmodule QtAwsGuardDuty
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateIPSetRequestPrivate object.
- *
- * @param  action  GuardDuty action being performed.
- * @param  q       Pointer to this object's public UpdateIPSetRequest instance.
+ * Constructs a UpdateIPSetRequestPrivate object for GuardDuty \a action with,
+ * public implementation \a q.
  */
 UpdateIPSetRequestPrivate::UpdateIPSetRequestPrivate(
     const GuardDutyRequest::Action action, UpdateIPSetRequest * const q)
@@ -104,15 +93,10 @@ UpdateIPSetRequestPrivate::UpdateIPSetRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateIPSetRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateIPSetRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateIPSetRequest instance.
  */
 UpdateIPSetRequestPrivate::UpdateIPSetRequestPrivate(
     const UpdateIPSetRequestPrivate &other, UpdateIPSetRequest * const q)

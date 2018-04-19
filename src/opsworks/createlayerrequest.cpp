@@ -27,10 +27,9 @@ namespace OpsWorks {
 
 /*!
  * \class QtAws::OpsWorks::CreateLayerRequest
- *
  * \brief The CreateLayerRequest class provides an interface for OpsWorks CreateLayer requests.
  *
- * \ingroup OpsWorks
+ * \inmodule QtAwsOpsWorks
  *
  *  <fullname>AWS OpsWorks</fullname>
  * 
@@ -143,9 +142,7 @@ namespace OpsWorks {
  */
 
 /*!
- * @brief  Constructs a new CreateLayerRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateLayerRequest::CreateLayerRequest(const CreateLayerRequest &other)
     : OpsWorksRequest(new CreateLayerRequestPrivate(*other.d_func(), this))
@@ -154,7 +151,7 @@ CreateLayerRequest::CreateLayerRequest(const CreateLayerRequest &other)
 }
 
 /*!
- * @brief  Constructs a new CreateLayerRequest object.
+ * Constructs a CreateLayerRequest object.
  */
 CreateLayerRequest::CreateLayerRequest()
     : OpsWorksRequest(new CreateLayerRequestPrivate(OpsWorksRequest::CreateLayerAction, this))
@@ -172,14 +169,9 @@ bool CreateLayerRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateLayerResponse object.
+ * Returns a CreateLayerResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateLayerResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  OpsWorksClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateLayerRequest::response(QNetworkReply * const reply) const
 {
@@ -187,20 +179,17 @@ QtAws::Core::AwsAbstractResponse * CreateLayerRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::OpsWorks::CreateLayerRequestPrivate
+ * \brief The CreateLayerRequestPrivate class provides private implementation for CreateLayerRequest.
+ * \internal
  *
- * @class  CreateLayerRequestPrivate
- *
- * @brief  Private implementation for CreateLayerRequest.
+ * \inmodule QtAwsOpsWorks
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateLayerRequestPrivate object.
- *
- * @param  action  OpsWorks action being performed.
- * @param  q       Pointer to this object's public CreateLayerRequest instance.
+ * Constructs a CreateLayerRequestPrivate object for OpsWorks \a action with,
+ * public implementation \a q.
  */
 CreateLayerRequestPrivate::CreateLayerRequestPrivate(
     const OpsWorksRequest::Action action, CreateLayerRequest * const q)
@@ -210,15 +199,10 @@ CreateLayerRequestPrivate::CreateLayerRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateLayerRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateLayerRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateLayerRequest instance.
  */
 CreateLayerRequestPrivate::CreateLayerRequestPrivate(
     const CreateLayerRequestPrivate &other, CreateLayerRequest * const q)

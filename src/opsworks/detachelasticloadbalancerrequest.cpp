@@ -27,10 +27,9 @@ namespace OpsWorks {
 
 /*!
  * \class QtAws::OpsWorks::DetachElasticLoadBalancerRequest
- *
  * \brief The DetachElasticLoadBalancerRequest class provides an interface for OpsWorks DetachElasticLoadBalancer requests.
  *
- * \ingroup OpsWorks
+ * \inmodule QtAwsOpsWorks
  *
  *  <fullname>AWS OpsWorks</fullname>
  * 
@@ -143,9 +142,7 @@ namespace OpsWorks {
  */
 
 /*!
- * @brief  Constructs a new DetachElasticLoadBalancerRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DetachElasticLoadBalancerRequest::DetachElasticLoadBalancerRequest(const DetachElasticLoadBalancerRequest &other)
     : OpsWorksRequest(new DetachElasticLoadBalancerRequestPrivate(*other.d_func(), this))
@@ -154,7 +151,7 @@ DetachElasticLoadBalancerRequest::DetachElasticLoadBalancerRequest(const DetachE
 }
 
 /*!
- * @brief  Constructs a new DetachElasticLoadBalancerRequest object.
+ * Constructs a DetachElasticLoadBalancerRequest object.
  */
 DetachElasticLoadBalancerRequest::DetachElasticLoadBalancerRequest()
     : OpsWorksRequest(new DetachElasticLoadBalancerRequestPrivate(OpsWorksRequest::DetachElasticLoadBalancerAction, this))
@@ -172,14 +169,9 @@ bool DetachElasticLoadBalancerRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DetachElasticLoadBalancerResponse object.
+ * Returns a DetachElasticLoadBalancerResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DetachElasticLoadBalancerResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  OpsWorksClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DetachElasticLoadBalancerRequest::response(QNetworkReply * const reply) const
 {
@@ -187,20 +179,17 @@ QtAws::Core::AwsAbstractResponse * DetachElasticLoadBalancerRequest::response(QN
 }
 
 /*!
- * @internal
+ * \class QtAws::OpsWorks::DetachElasticLoadBalancerRequestPrivate
+ * \brief The DetachElasticLoadBalancerRequestPrivate class provides private implementation for DetachElasticLoadBalancerRequest.
+ * \internal
  *
- * @class  DetachElasticLoadBalancerRequestPrivate
- *
- * @brief  Private implementation for DetachElasticLoadBalancerRequest.
+ * \inmodule QtAwsOpsWorks
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DetachElasticLoadBalancerRequestPrivate object.
- *
- * @param  action  OpsWorks action being performed.
- * @param  q       Pointer to this object's public DetachElasticLoadBalancerRequest instance.
+ * Constructs a DetachElasticLoadBalancerRequestPrivate object for OpsWorks \a action with,
+ * public implementation \a q.
  */
 DetachElasticLoadBalancerRequestPrivate::DetachElasticLoadBalancerRequestPrivate(
     const OpsWorksRequest::Action action, DetachElasticLoadBalancerRequest * const q)
@@ -210,15 +199,10 @@ DetachElasticLoadBalancerRequestPrivate::DetachElasticLoadBalancerRequestPrivate
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DetachElasticLoadBalancerRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DetachElasticLoadBalancerRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DetachElasticLoadBalancerRequest instance.
  */
 DetachElasticLoadBalancerRequestPrivate::DetachElasticLoadBalancerRequestPrivate(
     const DetachElasticLoadBalancerRequestPrivate &other, DetachElasticLoadBalancerRequest * const q)

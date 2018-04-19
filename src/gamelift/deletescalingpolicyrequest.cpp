@@ -27,10 +27,9 @@ namespace GameLift {
 
 /*!
  * \class QtAws::GameLift::DeleteScalingPolicyRequest
- *
  * \brief The DeleteScalingPolicyRequest class provides an interface for GameLift DeleteScalingPolicy requests.
  *
- * \ingroup GameLift
+ * \inmodule QtAwsGameLift
  *
  *  <fullname>Amazon GameLift Service</fullname>
  * 
@@ -473,9 +472,7 @@ namespace GameLift {
  */
 
 /*!
- * @brief  Constructs a new DeleteScalingPolicyRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteScalingPolicyRequest::DeleteScalingPolicyRequest(const DeleteScalingPolicyRequest &other)
     : GameLiftRequest(new DeleteScalingPolicyRequestPrivate(*other.d_func(), this))
@@ -484,7 +481,7 @@ DeleteScalingPolicyRequest::DeleteScalingPolicyRequest(const DeleteScalingPolicy
 }
 
 /*!
- * @brief  Constructs a new DeleteScalingPolicyRequest object.
+ * Constructs a DeleteScalingPolicyRequest object.
  */
 DeleteScalingPolicyRequest::DeleteScalingPolicyRequest()
     : GameLiftRequest(new DeleteScalingPolicyRequestPrivate(GameLiftRequest::DeleteScalingPolicyAction, this))
@@ -502,14 +499,9 @@ bool DeleteScalingPolicyRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteScalingPolicyResponse object.
+ * Returns a DeleteScalingPolicyResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteScalingPolicyResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GameLiftClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteScalingPolicyRequest::response(QNetworkReply * const reply) const
 {
@@ -517,20 +509,17 @@ QtAws::Core::AwsAbstractResponse * DeleteScalingPolicyRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::GameLift::DeleteScalingPolicyRequestPrivate
+ * \brief The DeleteScalingPolicyRequestPrivate class provides private implementation for DeleteScalingPolicyRequest.
+ * \internal
  *
- * @class  DeleteScalingPolicyRequestPrivate
- *
- * @brief  Private implementation for DeleteScalingPolicyRequest.
+ * \inmodule QtAwsGameLift
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteScalingPolicyRequestPrivate object.
- *
- * @param  action  GameLift action being performed.
- * @param  q       Pointer to this object's public DeleteScalingPolicyRequest instance.
+ * Constructs a DeleteScalingPolicyRequestPrivate object for GameLift \a action with,
+ * public implementation \a q.
  */
 DeleteScalingPolicyRequestPrivate::DeleteScalingPolicyRequestPrivate(
     const GameLiftRequest::Action action, DeleteScalingPolicyRequest * const q)
@@ -540,15 +529,10 @@ DeleteScalingPolicyRequestPrivate::DeleteScalingPolicyRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteScalingPolicyRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteScalingPolicyRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteScalingPolicyRequest instance.
  */
 DeleteScalingPolicyRequestPrivate::DeleteScalingPolicyRequestPrivate(
     const DeleteScalingPolicyRequestPrivate &other, DeleteScalingPolicyRequest * const q)

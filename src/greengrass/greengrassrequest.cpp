@@ -25,16 +25,95 @@ namespace Greengrass {
 
 /*!
  * \class QtAws::Greengrass::GreengrassRequest
- *
  * \brief The GreengrassRequest class provides an interface for Greengrass requests.
  *
- * \ingroup Greengrass
+ * \inmodule QtAwsGreengrass
  */
 
 /*!
- * @brief  Constructs a new GreengrassRequest object.
+ * \enum GreengrassRequest::Action
  *
- * @param  action  The Greengrass action to request.
+ * This enum describes the actions that can be performed as Greengrass
+ * requests.
+ *
+ * \value AssociateRoleToGroupAction Greengrass AssociateRoleToGroup action.
+ * \value AssociateServiceRoleToAccountAction Greengrass AssociateServiceRoleToAccount action.
+ * \value CreateCoreDefinitionAction Greengrass CreateCoreDefinition action.
+ * \value CreateCoreDefinitionVersionAction Greengrass CreateCoreDefinitionVersion action.
+ * \value CreateDeploymentAction Greengrass CreateDeployment action.
+ * \value CreateDeviceDefinitionAction Greengrass CreateDeviceDefinition action.
+ * \value CreateDeviceDefinitionVersionAction Greengrass CreateDeviceDefinitionVersion action.
+ * \value CreateFunctionDefinitionAction Greengrass CreateFunctionDefinition action.
+ * \value CreateFunctionDefinitionVersionAction Greengrass CreateFunctionDefinitionVersion action.
+ * \value CreateGroupAction Greengrass CreateGroup action.
+ * \value CreateGroupCertificateAuthorityAction Greengrass CreateGroupCertificateAuthority action.
+ * \value CreateGroupVersionAction Greengrass CreateGroupVersion action.
+ * \value CreateLoggerDefinitionAction Greengrass CreateLoggerDefinition action.
+ * \value CreateLoggerDefinitionVersionAction Greengrass CreateLoggerDefinitionVersion action.
+ * \value CreateResourceDefinitionAction Greengrass CreateResourceDefinition action.
+ * \value CreateResourceDefinitionVersionAction Greengrass CreateResourceDefinitionVersion action.
+ * \value CreateSoftwareUpdateJobAction Greengrass CreateSoftwareUpdateJob action.
+ * \value CreateSubscriptionDefinitionAction Greengrass CreateSubscriptionDefinition action.
+ * \value CreateSubscriptionDefinitionVersionAction Greengrass CreateSubscriptionDefinitionVersion action.
+ * \value DeleteCoreDefinitionAction Greengrass DeleteCoreDefinition action.
+ * \value DeleteDeviceDefinitionAction Greengrass DeleteDeviceDefinition action.
+ * \value DeleteFunctionDefinitionAction Greengrass DeleteFunctionDefinition action.
+ * \value DeleteGroupAction Greengrass DeleteGroup action.
+ * \value DeleteLoggerDefinitionAction Greengrass DeleteLoggerDefinition action.
+ * \value DeleteResourceDefinitionAction Greengrass DeleteResourceDefinition action.
+ * \value DeleteSubscriptionDefinitionAction Greengrass DeleteSubscriptionDefinition action.
+ * \value DisassociateRoleFromGroupAction Greengrass DisassociateRoleFromGroup action.
+ * \value DisassociateServiceRoleFromAccountAction Greengrass DisassociateServiceRoleFromAccount action.
+ * \value GetAssociatedRoleAction Greengrass GetAssociatedRole action.
+ * \value GetConnectivityInfoAction Greengrass GetConnectivityInfo action.
+ * \value GetCoreDefinitionAction Greengrass GetCoreDefinition action.
+ * \value GetCoreDefinitionVersionAction Greengrass GetCoreDefinitionVersion action.
+ * \value GetDeploymentStatusAction Greengrass GetDeploymentStatus action.
+ * \value GetDeviceDefinitionAction Greengrass GetDeviceDefinition action.
+ * \value GetDeviceDefinitionVersionAction Greengrass GetDeviceDefinitionVersion action.
+ * \value GetFunctionDefinitionAction Greengrass GetFunctionDefinition action.
+ * \value GetFunctionDefinitionVersionAction Greengrass GetFunctionDefinitionVersion action.
+ * \value GetGroupAction Greengrass GetGroup action.
+ * \value GetGroupCertificateAuthorityAction Greengrass GetGroupCertificateAuthority action.
+ * \value GetGroupCertificateConfigurationAction Greengrass GetGroupCertificateConfiguration action.
+ * \value GetGroupVersionAction Greengrass GetGroupVersion action.
+ * \value GetLoggerDefinitionAction Greengrass GetLoggerDefinition action.
+ * \value GetLoggerDefinitionVersionAction Greengrass GetLoggerDefinitionVersion action.
+ * \value GetResourceDefinitionAction Greengrass GetResourceDefinition action.
+ * \value GetResourceDefinitionVersionAction Greengrass GetResourceDefinitionVersion action.
+ * \value GetServiceRoleForAccountAction Greengrass GetServiceRoleForAccount action.
+ * \value GetSubscriptionDefinitionAction Greengrass GetSubscriptionDefinition action.
+ * \value GetSubscriptionDefinitionVersionAction Greengrass GetSubscriptionDefinitionVersion action.
+ * \value ListCoreDefinitionVersionsAction Greengrass ListCoreDefinitionVersions action.
+ * \value ListCoreDefinitionsAction Greengrass ListCoreDefinitions action.
+ * \value ListDeploymentsAction Greengrass ListDeployments action.
+ * \value ListDeviceDefinitionVersionsAction Greengrass ListDeviceDefinitionVersions action.
+ * \value ListDeviceDefinitionsAction Greengrass ListDeviceDefinitions action.
+ * \value ListFunctionDefinitionVersionsAction Greengrass ListFunctionDefinitionVersions action.
+ * \value ListFunctionDefinitionsAction Greengrass ListFunctionDefinitions action.
+ * \value ListGroupCertificateAuthoritiesAction Greengrass ListGroupCertificateAuthorities action.
+ * \value ListGroupVersionsAction Greengrass ListGroupVersions action.
+ * \value ListGroupsAction Greengrass ListGroups action.
+ * \value ListLoggerDefinitionVersionsAction Greengrass ListLoggerDefinitionVersions action.
+ * \value ListLoggerDefinitionsAction Greengrass ListLoggerDefinitions action.
+ * \value ListResourceDefinitionVersionsAction Greengrass ListResourceDefinitionVersions action.
+ * \value ListResourceDefinitionsAction Greengrass ListResourceDefinitions action.
+ * \value ListSubscriptionDefinitionVersionsAction Greengrass ListSubscriptionDefinitionVersions action.
+ * \value ListSubscriptionDefinitionsAction Greengrass ListSubscriptionDefinitions action.
+ * \value ResetDeploymentsAction Greengrass ResetDeployments action.
+ * \value UpdateConnectivityInfoAction Greengrass UpdateConnectivityInfo action.
+ * \value UpdateCoreDefinitionAction Greengrass UpdateCoreDefinition action.
+ * \value UpdateDeviceDefinitionAction Greengrass UpdateDeviceDefinition action.
+ * \value UpdateFunctionDefinitionAction Greengrass UpdateFunctionDefinition action.
+ * \value UpdateGroupAction Greengrass UpdateGroup action.
+ * \value UpdateGroupCertificateConfigurationAction Greengrass UpdateGroupCertificateConfiguration action.
+ * \value UpdateLoggerDefinitionAction Greengrass UpdateLoggerDefinition action.
+ * \value UpdateResourceDefinitionAction Greengrass UpdateResourceDefinition action.
+ * \value UpdateSubscriptionDefinitionAction Greengrass UpdateSubscriptionDefinition action.
+ */
+
+/*!
+ * Constructs a[n] GreengrassRequest object for Greengrass \a action.
  */
 GreengrassRequest::GreengrassRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new GreengrassRequestPrivate(action, this))
@@ -43,9 +122,7 @@ GreengrassRequest::GreengrassRequest(const Action action)
 }
 
 /*!
- * @brief  Constructs a new GreengrassRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GreengrassRequest::GreengrassRequest(const GreengrassRequest &other)
     : QtAws::Core::AwsAbstractRequest(new GreengrassRequestPrivate(*other.d_func(), this))
@@ -54,13 +131,7 @@ GreengrassRequest::GreengrassRequest(const GreengrassRequest &other)
 }
 
 /*!
- * @brief  Assignment operator.
- *
- * Assigns \a other to \c this.
- *
- * @param  other  Instance to copy.
- *
- * @return  A reference to \c this.
+ * Sets the GreengrassRequest object to be equal to \a other.
  */
 GreengrassRequest& GreengrassRequest::operator=(const GreengrassRequest &other)
 {
@@ -72,14 +143,10 @@ GreengrassRequest& GreengrassRequest::operator=(const GreengrassRequest &other)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GreengrassRequest object.
+ * Constructs aa GreengrassRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from GreengrassRequestPrivate.
- *
- * @param  d  Pointer to private data (aka D-Pointer).
  */
 GreengrassRequest::GreengrassRequest(GreengrassRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
@@ -87,7 +154,7 @@ GreengrassRequest::GreengrassRequest(GreengrassRequestPrivate * const d) : QtAws
 }
 
 /*!
- * \brief Returns the Greengrass action to be performed by this request.
+ * Returns the Greengrass action to be performed by this request.
  */
 GreengrassRequest::Action GreengrassRequest::action() const
 {
@@ -96,7 +163,7 @@ GreengrassRequest::Action GreengrassRequest::action() const
 }
 
 /*!
- * \brief Returns the name of the Greengrass action to be performed by this request.
+ * Returns the name of the Greengrass action to be performed by this request.
  */
 QString GreengrassRequest::actionString() const
 {
@@ -104,7 +171,7 @@ QString GreengrassRequest::actionString() const
 }
 
 /*!
- * \brief Returns the Greengrass API version implemented by this request.
+ * Returns the Greengrass API version implemented by this request.
  */
 QString GreengrassRequest::apiVersion() const
 {
@@ -113,7 +180,7 @@ QString GreengrassRequest::apiVersion() const
 }
 
 /*!
- * @brief Set the Greengrass action to be performed by this request to \a action.
+ * Sets the Greengrass action to be performed by this request to \a action.
  */
 void GreengrassRequest::setAction(const Action action)
 {
@@ -122,7 +189,7 @@ void GreengrassRequest::setAction(const Action action)
 }
 
 /*!
- * Set the Greengrass API version to include in this request to \a version.
+ * Sets the Greengrass API version to include in this request to \a version.
  */
 void GreengrassRequest::setApiVersion(const QString &version)
 {
@@ -131,7 +198,7 @@ void GreengrassRequest::setApiVersion(const QString &version)
 }
 
 /*!
- * \brief Returns \c true if this request is the same as \a other.
+ * Returns \c true if this request is equal to \a other; \c false otherwise.
  *
  * Note, most derived *Request classes do not need to provider their own
  * implementations of this function, since most such request classes rely on
@@ -146,8 +213,8 @@ bool GreengrassRequest::operator==(const GreengrassRequest &other) const
             (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
-/*!
- * @brief  Check if \a queueName is a valid Greengrass queue name.
+/*
+ * Returns \c tue if \a queueName is a valid Greengrass queue name.
  *
  * @par From Greengrass FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
@@ -166,9 +233,8 @@ bool GreengrassRequest::operator==(const GreengrassRequest &other) const
 }*/
 
 /*!
- * \brief Removes the a \a name parameter from this request.
- *
- * Returns the count of paramters removed (typically \c 0 or \c 1).
+ * Removes the a \a name parameter from the request, then returns the number of
+ * paramters removed (typically \c 0 or \c 1).
  */
 int GreengrassRequest::clearParameter(const QString &name)
 {
@@ -177,7 +243,7 @@ int GreengrassRequest::clearParameter(const QString &name)
 }
 
 /*!
- * \brief Removes all parameters from this request.
+ * Removes all parameters from the request.
  */
 void GreengrassRequest::clearParameters()
 {
@@ -186,7 +252,7 @@ void GreengrassRequest::clearParameters()
 }
 
 /*!
- * \brief Returns the value of the \n name pararemter if set, otherwise \a defaultValue.
+ * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
 QVariant GreengrassRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
@@ -195,7 +261,7 @@ QVariant GreengrassRequest::parameter(const QString &name, const QVariant &defau
 }
 
 /*!
- * \brief Returns a map of parameters included in this request.
+ * Returns the parameters included in this request.
  */
 const QVariantMap &GreengrassRequest::parameters() const
 {
@@ -204,7 +270,7 @@ const QVariantMap &GreengrassRequest::parameters() const
 }
 
 /*!
- * \brief Sets the \a name parameter to \a value.
+ * Sets the \a name parameter to \a value.
  */
 void GreengrassRequest::setParameter(const QString &name, const QVariant &value)
 {
@@ -213,9 +279,8 @@ void GreengrassRequest::setParameter(const QString &name, const QVariant &value)
 }
 
 /*!
- * \brief Sets the map of paramters for this request to \a parameters.
- *
- * Any request parameters set previously will be discarded.
+ * Sets the paramters for this request to \a parameters. Any request parameters
+ * set previously will be discarded.
  */
 void GreengrassRequest::setParameters(const QVariantMap &parameters)
 {
@@ -224,11 +289,12 @@ void GreengrassRequest::setParameters(const QVariantMap &parameters)
 }
 
 /*!
- * \brief Returns a network request for this Greengrass request using the given \a endpoint.
+ * Returns a network request for the Greengrass request using the given
+ * \a endpoint.
  *
- * This Greengrass implementation builds request URLs by combining the common query
- * parameters (such as Action and Version), with any that have been added (via
- * setParameter) by child classes.
+ * This Greengrass implementation builds request URLs by combining the
+ * common query parameters (such as Action and Version), with any that have
+ * been added (via setParameter) by child classes.
  */
 QNetworkRequest GreengrassRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -239,17 +305,16 @@ QNetworkRequest GreengrassRequest::unsignedRequest(const QUrl &endpoint) const
 }
 
 /*!
+ * \class QtAws::Greengrass::GreengrassRequestPrivate
+ * \brief The GreengrassRequestPrivate class provides private implementation for GreengrassRequest.
  * \internal
  *
- * \class  GreengrassRequestPrivate
- *
- * \brief  Private implementation for GreengrassRequest.
+ * \inmodule QtAwsGreengrass
  */
 
 /*!
- * \internal
- *
- * \brief Constructs a new GreengrassRequestPrivate object.
+ * Constructs a GreengrassRequestPrivate object for Greengrass \a action with,
+ * public implementation \a q.
  */
 GreengrassRequestPrivate::GreengrassRequestPrivate(const GreengrassRequest::Action action, GreengrassRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
@@ -258,9 +323,7 @@ GreengrassRequestPrivate::GreengrassRequestPrivate(const GreengrassRequest::Acti
 }
 
 /*!
- * \internal
- *
- * \brief Constructs a new GreengrassRequestPrivate object, copying an existing one.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
@@ -276,15 +339,12 @@ GreengrassRequestPrivate::GreengrassRequestPrivate(const GreengrassRequestPrivat
 }
 
 /*!
- * \internal
- *
- * \brief Returns a string representing \a action.
+ * Returns a string represention of \a action, or a null string if \a action is
+ * invalid.
  *
  * This function converts GreengrassRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the Greengrass service's Action
  * query parameters.
- *
- * @return A string representing \a action, or a null string if \a action is invalid.
  */
 QString GreengrassRequestPrivate::toString(const GreengrassRequest::Action &action)
 {

@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DescribeVpcClassicLinkRequest
- *
  * \brief The DescribeVpcClassicLinkRequest class provides an interface for EC2 DescribeVpcClassicLink requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DescribeVpcClassicLinkRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeVpcClassicLinkRequest::DescribeVpcClassicLinkRequest(const DescribeVpcClassicLinkRequest &other)
     : EC2Request(new DescribeVpcClassicLinkRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ DescribeVpcClassicLinkRequest::DescribeVpcClassicLinkRequest(const DescribeVpcCl
 }
 
 /*!
- * @brief  Constructs a new DescribeVpcClassicLinkRequest object.
+ * Constructs a DescribeVpcClassicLinkRequest object.
  */
 DescribeVpcClassicLinkRequest::DescribeVpcClassicLinkRequest()
     : EC2Request(new DescribeVpcClassicLinkRequestPrivate(EC2Request::DescribeVpcClassicLinkAction, this))
@@ -70,14 +67,9 @@ bool DescribeVpcClassicLinkRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeVpcClassicLinkResponse object.
+ * Returns a DescribeVpcClassicLinkResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeVpcClassicLinkResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeVpcClassicLinkRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * DescribeVpcClassicLinkRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::DescribeVpcClassicLinkRequestPrivate
+ * \brief The DescribeVpcClassicLinkRequestPrivate class provides private implementation for DescribeVpcClassicLinkRequest.
+ * \internal
  *
- * @class  DescribeVpcClassicLinkRequestPrivate
- *
- * @brief  Private implementation for DescribeVpcClassicLinkRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeVpcClassicLinkRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public DescribeVpcClassicLinkRequest instance.
+ * Constructs a DescribeVpcClassicLinkRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 DescribeVpcClassicLinkRequestPrivate::DescribeVpcClassicLinkRequestPrivate(
     const EC2Request::Action action, DescribeVpcClassicLinkRequest * const q)
@@ -108,15 +97,10 @@ DescribeVpcClassicLinkRequestPrivate::DescribeVpcClassicLinkRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeVpcClassicLinkRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeVpcClassicLinkRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeVpcClassicLinkRequest instance.
  */
 DescribeVpcClassicLinkRequestPrivate::DescribeVpcClassicLinkRequestPrivate(
     const DescribeVpcClassicLinkRequestPrivate &other, DescribeVpcClassicLinkRequest * const q)

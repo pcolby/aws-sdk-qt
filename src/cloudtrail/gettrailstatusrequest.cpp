@@ -27,10 +27,9 @@ namespace CloudTrail {
 
 /*!
  * \class QtAws::CloudTrail::GetTrailStatusRequest
- *
  * \brief The GetTrailStatusRequest class provides an interface for CloudTrail GetTrailStatus requests.
  *
- * \ingroup CloudTrail
+ * \inmodule QtAwsCloudTrail
  *
  *  <fullname>AWS CloudTrail</fullname>
  * 
@@ -60,9 +59,7 @@ namespace CloudTrail {
  */
 
 /*!
- * @brief  Constructs a new GetTrailStatusRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetTrailStatusRequest::GetTrailStatusRequest(const GetTrailStatusRequest &other)
     : CloudTrailRequest(new GetTrailStatusRequestPrivate(*other.d_func(), this))
@@ -71,7 +68,7 @@ GetTrailStatusRequest::GetTrailStatusRequest(const GetTrailStatusRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetTrailStatusRequest object.
+ * Constructs a GetTrailStatusRequest object.
  */
 GetTrailStatusRequest::GetTrailStatusRequest()
     : CloudTrailRequest(new GetTrailStatusRequestPrivate(CloudTrailRequest::GetTrailStatusAction, this))
@@ -89,14 +86,9 @@ bool GetTrailStatusRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetTrailStatusResponse object.
+ * Returns a GetTrailStatusResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetTrailStatusResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudTrailClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetTrailStatusRequest::response(QNetworkReply * const reply) const
 {
@@ -104,20 +96,17 @@ QtAws::Core::AwsAbstractResponse * GetTrailStatusRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudTrail::GetTrailStatusRequestPrivate
+ * \brief The GetTrailStatusRequestPrivate class provides private implementation for GetTrailStatusRequest.
+ * \internal
  *
- * @class  GetTrailStatusRequestPrivate
- *
- * @brief  Private implementation for GetTrailStatusRequest.
+ * \inmodule QtAwsCloudTrail
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetTrailStatusRequestPrivate object.
- *
- * @param  action  CloudTrail action being performed.
- * @param  q       Pointer to this object's public GetTrailStatusRequest instance.
+ * Constructs a GetTrailStatusRequestPrivate object for CloudTrail \a action with,
+ * public implementation \a q.
  */
 GetTrailStatusRequestPrivate::GetTrailStatusRequestPrivate(
     const CloudTrailRequest::Action action, GetTrailStatusRequest * const q)
@@ -127,15 +116,10 @@ GetTrailStatusRequestPrivate::GetTrailStatusRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetTrailStatusRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetTrailStatusRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetTrailStatusRequest instance.
  */
 GetTrailStatusRequestPrivate::GetTrailStatusRequestPrivate(
     const GetTrailStatusRequestPrivate &other, GetTrailStatusRequest * const q)

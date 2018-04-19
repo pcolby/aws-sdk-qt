@@ -27,10 +27,9 @@ namespace CognitoIdentityProvider {
 
 /*!
  * \class QtAws::CognitoIdentityProvider::SetUserPoolMfaConfigRequest
- *
  * \brief The SetUserPoolMfaConfigRequest class provides an interface for CognitoIdentityProvider SetUserPoolMfaConfig requests.
  *
- * \ingroup CognitoIdentityProvider
+ * \inmodule QtAwsCognitoIdentityProvider
  *
  *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
  *  authenticate a user to obtain tokens related to user identity and access
@@ -47,9 +46,7 @@ namespace CognitoIdentityProvider {
  */
 
 /*!
- * @brief  Constructs a new SetUserPoolMfaConfigRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 SetUserPoolMfaConfigRequest::SetUserPoolMfaConfigRequest(const SetUserPoolMfaConfigRequest &other)
     : CognitoIdentityProviderRequest(new SetUserPoolMfaConfigRequestPrivate(*other.d_func(), this))
@@ -58,7 +55,7 @@ SetUserPoolMfaConfigRequest::SetUserPoolMfaConfigRequest(const SetUserPoolMfaCon
 }
 
 /*!
- * @brief  Constructs a new SetUserPoolMfaConfigRequest object.
+ * Constructs a SetUserPoolMfaConfigRequest object.
  */
 SetUserPoolMfaConfigRequest::SetUserPoolMfaConfigRequest()
     : CognitoIdentityProviderRequest(new SetUserPoolMfaConfigRequestPrivate(CognitoIdentityProviderRequest::SetUserPoolMfaConfigAction, this))
@@ -76,14 +73,9 @@ bool SetUserPoolMfaConfigRequest::isValid() const
 
 
 /*!
- * @brief  Construct an SetUserPoolMfaConfigResponse object.
+ * Returns a SetUserPoolMfaConfigResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An SetUserPoolMfaConfigResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CognitoIdentityProviderClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * SetUserPoolMfaConfigRequest::response(QNetworkReply * const reply) const
 {
@@ -91,20 +83,17 @@ QtAws::Core::AwsAbstractResponse * SetUserPoolMfaConfigRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::CognitoIdentityProvider::SetUserPoolMfaConfigRequestPrivate
+ * \brief The SetUserPoolMfaConfigRequestPrivate class provides private implementation for SetUserPoolMfaConfigRequest.
+ * \internal
  *
- * @class  SetUserPoolMfaConfigRequestPrivate
- *
- * @brief  Private implementation for SetUserPoolMfaConfigRequest.
+ * \inmodule QtAwsCognitoIdentityProvider
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new SetUserPoolMfaConfigRequestPrivate object.
- *
- * @param  action  CognitoIdentityProvider action being performed.
- * @param  q       Pointer to this object's public SetUserPoolMfaConfigRequest instance.
+ * Constructs a SetUserPoolMfaConfigRequestPrivate object for CognitoIdentityProvider \a action with,
+ * public implementation \a q.
  */
 SetUserPoolMfaConfigRequestPrivate::SetUserPoolMfaConfigRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, SetUserPoolMfaConfigRequest * const q)
@@ -114,15 +103,10 @@ SetUserPoolMfaConfigRequestPrivate::SetUserPoolMfaConfigRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SetUserPoolMfaConfigRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the SetUserPoolMfaConfigRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public SetUserPoolMfaConfigRequest instance.
  */
 SetUserPoolMfaConfigRequestPrivate::SetUserPoolMfaConfigRequestPrivate(
     const SetUserPoolMfaConfigRequestPrivate &other, SetUserPoolMfaConfigRequest * const q)

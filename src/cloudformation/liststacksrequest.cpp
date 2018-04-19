@@ -27,10 +27,9 @@ namespace CloudFormation {
 
 /*!
  * \class QtAws::CloudFormation::ListStacksRequest
- *
  * \brief The ListStacksRequest class provides an interface for CloudFormation ListStacks requests.
  *
- * \ingroup CloudFormation
+ * \inmodule QtAwsCloudFormation
  *
  *  <fullname>AWS CloudFormation</fullname>
  * 
@@ -59,9 +58,7 @@ namespace CloudFormation {
  */
 
 /*!
- * @brief  Constructs a new ListStacksRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListStacksRequest::ListStacksRequest(const ListStacksRequest &other)
     : CloudFormationRequest(new ListStacksRequestPrivate(*other.d_func(), this))
@@ -70,7 +67,7 @@ ListStacksRequest::ListStacksRequest(const ListStacksRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ListStacksRequest object.
+ * Constructs a ListStacksRequest object.
  */
 ListStacksRequest::ListStacksRequest()
     : CloudFormationRequest(new ListStacksRequestPrivate(CloudFormationRequest::ListStacksAction, this))
@@ -88,14 +85,9 @@ bool ListStacksRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListStacksResponse object.
+ * Returns a ListStacksResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListStacksResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudFormationClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListStacksRequest::response(QNetworkReply * const reply) const
 {
@@ -103,20 +95,17 @@ QtAws::Core::AwsAbstractResponse * ListStacksRequest::response(QNetworkReply * c
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudFormation::ListStacksRequestPrivate
+ * \brief The ListStacksRequestPrivate class provides private implementation for ListStacksRequest.
+ * \internal
  *
- * @class  ListStacksRequestPrivate
- *
- * @brief  Private implementation for ListStacksRequest.
+ * \inmodule QtAwsCloudFormation
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListStacksRequestPrivate object.
- *
- * @param  action  CloudFormation action being performed.
- * @param  q       Pointer to this object's public ListStacksRequest instance.
+ * Constructs a ListStacksRequestPrivate object for CloudFormation \a action with,
+ * public implementation \a q.
  */
 ListStacksRequestPrivate::ListStacksRequestPrivate(
     const CloudFormationRequest::Action action, ListStacksRequest * const q)
@@ -126,15 +115,10 @@ ListStacksRequestPrivate::ListStacksRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListStacksRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListStacksRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListStacksRequest instance.
  */
 ListStacksRequestPrivate::ListStacksRequestPrivate(
     const ListStacksRequestPrivate &other, ListStacksRequest * const q)

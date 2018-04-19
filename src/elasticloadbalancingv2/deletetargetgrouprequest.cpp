@@ -27,10 +27,9 @@ namespace ElasticLoadBalancingv2 {
 
 /*!
  * \class QtAws::ElasticLoadBalancingv2::DeleteTargetGroupRequest
- *
  * \brief The DeleteTargetGroupRequest class provides an interface for ElasticLoadBalancingv2 DeleteTargetGroup requests.
  *
- * \ingroup ElasticLoadBalancingv2
+ * \inmodule QtAwsElasticLoadBalancingv2
  *
  *  <fullname>Elastic Load Balancing</fullname>
  * 
@@ -105,9 +104,7 @@ namespace ElasticLoadBalancingv2 {
  */
 
 /*!
- * @brief  Constructs a new DeleteTargetGroupRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteTargetGroupRequest::DeleteTargetGroupRequest(const DeleteTargetGroupRequest &other)
     : ElasticLoadBalancingv2Request(new DeleteTargetGroupRequestPrivate(*other.d_func(), this))
@@ -116,7 +113,7 @@ DeleteTargetGroupRequest::DeleteTargetGroupRequest(const DeleteTargetGroupReques
 }
 
 /*!
- * @brief  Constructs a new DeleteTargetGroupRequest object.
+ * Constructs a DeleteTargetGroupRequest object.
  */
 DeleteTargetGroupRequest::DeleteTargetGroupRequest()
     : ElasticLoadBalancingv2Request(new DeleteTargetGroupRequestPrivate(ElasticLoadBalancingv2Request::DeleteTargetGroupAction, this))
@@ -134,14 +131,9 @@ bool DeleteTargetGroupRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteTargetGroupResponse object.
+ * Returns a DeleteTargetGroupResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteTargetGroupResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ElasticLoadBalancingv2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteTargetGroupRequest::response(QNetworkReply * const reply) const
 {
@@ -149,20 +141,17 @@ QtAws::Core::AwsAbstractResponse * DeleteTargetGroupRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::ElasticLoadBalancingv2::DeleteTargetGroupRequestPrivate
+ * \brief The DeleteTargetGroupRequestPrivate class provides private implementation for DeleteTargetGroupRequest.
+ * \internal
  *
- * @class  DeleteTargetGroupRequestPrivate
- *
- * @brief  Private implementation for DeleteTargetGroupRequest.
+ * \inmodule QtAwsElasticLoadBalancingv2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteTargetGroupRequestPrivate object.
- *
- * @param  action  ElasticLoadBalancingv2 action being performed.
- * @param  q       Pointer to this object's public DeleteTargetGroupRequest instance.
+ * Constructs a DeleteTargetGroupRequestPrivate object for ElasticLoadBalancingv2 \a action with,
+ * public implementation \a q.
  */
 DeleteTargetGroupRequestPrivate::DeleteTargetGroupRequestPrivate(
     const ElasticLoadBalancingv2Request::Action action, DeleteTargetGroupRequest * const q)
@@ -172,15 +161,10 @@ DeleteTargetGroupRequestPrivate::DeleteTargetGroupRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteTargetGroupRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteTargetGroupRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteTargetGroupRequest instance.
  */
 DeleteTargetGroupRequestPrivate::DeleteTargetGroupRequestPrivate(
     const DeleteTargetGroupRequestPrivate &other, DeleteTargetGroupRequest * const q)

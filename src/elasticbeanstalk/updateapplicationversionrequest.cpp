@@ -27,10 +27,9 @@ namespace ElasticBeanstalk {
 
 /*!
  * \class QtAws::ElasticBeanstalk::UpdateApplicationVersionRequest
- *
  * \brief The UpdateApplicationVersionRequest class provides an interface for ElasticBeanstalk UpdateApplicationVersion requests.
  *
- * \ingroup ElasticBeanstalk
+ * \inmodule QtAwsElasticBeanstalk
  *
  *  <fullname>AWS Elastic Beanstalk</fullname>
  * 
@@ -59,9 +58,7 @@ namespace ElasticBeanstalk {
  */
 
 /*!
- * @brief  Constructs a new UpdateApplicationVersionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateApplicationVersionRequest::UpdateApplicationVersionRequest(const UpdateApplicationVersionRequest &other)
     : ElasticBeanstalkRequest(new UpdateApplicationVersionRequestPrivate(*other.d_func(), this))
@@ -70,7 +67,7 @@ UpdateApplicationVersionRequest::UpdateApplicationVersionRequest(const UpdateApp
 }
 
 /*!
- * @brief  Constructs a new UpdateApplicationVersionRequest object.
+ * Constructs a UpdateApplicationVersionRequest object.
  */
 UpdateApplicationVersionRequest::UpdateApplicationVersionRequest()
     : ElasticBeanstalkRequest(new UpdateApplicationVersionRequestPrivate(ElasticBeanstalkRequest::UpdateApplicationVersionAction, this))
@@ -88,14 +85,9 @@ bool UpdateApplicationVersionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateApplicationVersionResponse object.
+ * Returns a UpdateApplicationVersionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateApplicationVersionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ElasticBeanstalkClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateApplicationVersionRequest::response(QNetworkReply * const reply) const
 {
@@ -103,20 +95,17 @@ QtAws::Core::AwsAbstractResponse * UpdateApplicationVersionRequest::response(QNe
 }
 
 /*!
- * @internal
+ * \class QtAws::ElasticBeanstalk::UpdateApplicationVersionRequestPrivate
+ * \brief The UpdateApplicationVersionRequestPrivate class provides private implementation for UpdateApplicationVersionRequest.
+ * \internal
  *
- * @class  UpdateApplicationVersionRequestPrivate
- *
- * @brief  Private implementation for UpdateApplicationVersionRequest.
+ * \inmodule QtAwsElasticBeanstalk
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateApplicationVersionRequestPrivate object.
- *
- * @param  action  ElasticBeanstalk action being performed.
- * @param  q       Pointer to this object's public UpdateApplicationVersionRequest instance.
+ * Constructs a UpdateApplicationVersionRequestPrivate object for ElasticBeanstalk \a action with,
+ * public implementation \a q.
  */
 UpdateApplicationVersionRequestPrivate::UpdateApplicationVersionRequestPrivate(
     const ElasticBeanstalkRequest::Action action, UpdateApplicationVersionRequest * const q)
@@ -126,15 +115,10 @@ UpdateApplicationVersionRequestPrivate::UpdateApplicationVersionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateApplicationVersionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateApplicationVersionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateApplicationVersionRequest instance.
  */
 UpdateApplicationVersionRequestPrivate::UpdateApplicationVersionRequestPrivate(
     const UpdateApplicationVersionRequestPrivate &other, UpdateApplicationVersionRequest * const q)

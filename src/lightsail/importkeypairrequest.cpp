@@ -27,10 +27,9 @@ namespace Lightsail {
 
 /*!
  * \class QtAws::Lightsail::ImportKeyPairRequest
- *
  * \brief The ImportKeyPairRequest class provides an interface for Lightsail ImportKeyPair requests.
  *
- * \ingroup Lightsail
+ * \inmodule QtAwsLightsail
  *
  *  Amazon Lightsail is the easiest way to get started with AWS for developers who just need virtual private servers.
  *  Lightsail includes everything you need to launch your project quickly - a virtual machine, SSD-based storage, data
@@ -53,9 +52,7 @@ namespace Lightsail {
  */
 
 /*!
- * @brief  Constructs a new ImportKeyPairRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ImportKeyPairRequest::ImportKeyPairRequest(const ImportKeyPairRequest &other)
     : LightsailRequest(new ImportKeyPairRequestPrivate(*other.d_func(), this))
@@ -64,7 +61,7 @@ ImportKeyPairRequest::ImportKeyPairRequest(const ImportKeyPairRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ImportKeyPairRequest object.
+ * Constructs a ImportKeyPairRequest object.
  */
 ImportKeyPairRequest::ImportKeyPairRequest()
     : LightsailRequest(new ImportKeyPairRequestPrivate(LightsailRequest::ImportKeyPairAction, this))
@@ -82,14 +79,9 @@ bool ImportKeyPairRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ImportKeyPairResponse object.
+ * Returns a ImportKeyPairResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ImportKeyPairResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  LightsailClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ImportKeyPairRequest::response(QNetworkReply * const reply) const
 {
@@ -97,20 +89,17 @@ QtAws::Core::AwsAbstractResponse * ImportKeyPairRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::Lightsail::ImportKeyPairRequestPrivate
+ * \brief The ImportKeyPairRequestPrivate class provides private implementation for ImportKeyPairRequest.
+ * \internal
  *
- * @class  ImportKeyPairRequestPrivate
- *
- * @brief  Private implementation for ImportKeyPairRequest.
+ * \inmodule QtAwsLightsail
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ImportKeyPairRequestPrivate object.
- *
- * @param  action  Lightsail action being performed.
- * @param  q       Pointer to this object's public ImportKeyPairRequest instance.
+ * Constructs a ImportKeyPairRequestPrivate object for Lightsail \a action with,
+ * public implementation \a q.
  */
 ImportKeyPairRequestPrivate::ImportKeyPairRequestPrivate(
     const LightsailRequest::Action action, ImportKeyPairRequest * const q)
@@ -120,15 +109,10 @@ ImportKeyPairRequestPrivate::ImportKeyPairRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ImportKeyPairRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ImportKeyPairRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ImportKeyPairRequest instance.
  */
 ImportKeyPairRequestPrivate::ImportKeyPairRequestPrivate(
     const ImportKeyPairRequestPrivate &other, ImportKeyPairRequest * const q)

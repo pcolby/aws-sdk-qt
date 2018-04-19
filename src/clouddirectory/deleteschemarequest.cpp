@@ -27,10 +27,9 @@ namespace CloudDirectory {
 
 /*!
  * \class QtAws::CloudDirectory::DeleteSchemaRequest
- *
  * \brief The DeleteSchemaRequest class provides an interface for CloudDirectory DeleteSchema requests.
  *
- * \ingroup CloudDirectory
+ * \inmodule QtAwsCloudDirectory
  *
  *  <fullname>Amazon Cloud Directory</fullname>
  * 
@@ -44,9 +43,7 @@ namespace CloudDirectory {
  */
 
 /*!
- * @brief  Constructs a new DeleteSchemaRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteSchemaRequest::DeleteSchemaRequest(const DeleteSchemaRequest &other)
     : CloudDirectoryRequest(new DeleteSchemaRequestPrivate(*other.d_func(), this))
@@ -55,7 +52,7 @@ DeleteSchemaRequest::DeleteSchemaRequest(const DeleteSchemaRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DeleteSchemaRequest object.
+ * Constructs a DeleteSchemaRequest object.
  */
 DeleteSchemaRequest::DeleteSchemaRequest()
     : CloudDirectoryRequest(new DeleteSchemaRequestPrivate(CloudDirectoryRequest::DeleteSchemaAction, this))
@@ -73,14 +70,9 @@ bool DeleteSchemaRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteSchemaResponse object.
+ * Returns a DeleteSchemaResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteSchemaResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudDirectoryClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteSchemaRequest::response(QNetworkReply * const reply) const
 {
@@ -88,20 +80,17 @@ QtAws::Core::AwsAbstractResponse * DeleteSchemaRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudDirectory::DeleteSchemaRequestPrivate
+ * \brief The DeleteSchemaRequestPrivate class provides private implementation for DeleteSchemaRequest.
+ * \internal
  *
- * @class  DeleteSchemaRequestPrivate
- *
- * @brief  Private implementation for DeleteSchemaRequest.
+ * \inmodule QtAwsCloudDirectory
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteSchemaRequestPrivate object.
- *
- * @param  action  CloudDirectory action being performed.
- * @param  q       Pointer to this object's public DeleteSchemaRequest instance.
+ * Constructs a DeleteSchemaRequestPrivate object for CloudDirectory \a action with,
+ * public implementation \a q.
  */
 DeleteSchemaRequestPrivate::DeleteSchemaRequestPrivate(
     const CloudDirectoryRequest::Action action, DeleteSchemaRequest * const q)
@@ -111,15 +100,10 @@ DeleteSchemaRequestPrivate::DeleteSchemaRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteSchemaRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteSchemaRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteSchemaRequest instance.
  */
 DeleteSchemaRequestPrivate::DeleteSchemaRequestPrivate(
     const DeleteSchemaRequestPrivate &other, DeleteSchemaRequest * const q)

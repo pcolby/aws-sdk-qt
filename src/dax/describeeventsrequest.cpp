@@ -27,10 +27,9 @@ namespace DAX {
 
 /*!
  * \class QtAws::DAX::DescribeEventsRequest
- *
  * \brief The DescribeEventsRequest class provides an interface for DAX DescribeEvents requests.
  *
- * \ingroup DAX
+ * \inmodule QtAwsDAX
  *
  *  DAX is a managed caching service engineered for Amazon DynamoDB. DAX dramatically speeds up database reads by caching
  *  frequently-accessed data from DynamoDB, so applications can access that data with sub-millisecond latency. You can
@@ -41,9 +40,7 @@ namespace DAX {
  */
 
 /*!
- * @brief  Constructs a new DescribeEventsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeEventsRequest::DescribeEventsRequest(const DescribeEventsRequest &other)
     : DAXRequest(new DescribeEventsRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ DescribeEventsRequest::DescribeEventsRequest(const DescribeEventsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DescribeEventsRequest object.
+ * Constructs a DescribeEventsRequest object.
  */
 DescribeEventsRequest::DescribeEventsRequest()
     : DAXRequest(new DescribeEventsRequestPrivate(DAXRequest::DescribeEventsAction, this))
@@ -70,14 +67,9 @@ bool DescribeEventsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeEventsResponse object.
+ * Returns a DescribeEventsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeEventsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DAXClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeEventsRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * DescribeEventsRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::DAX::DescribeEventsRequestPrivate
+ * \brief The DescribeEventsRequestPrivate class provides private implementation for DescribeEventsRequest.
+ * \internal
  *
- * @class  DescribeEventsRequestPrivate
- *
- * @brief  Private implementation for DescribeEventsRequest.
+ * \inmodule QtAwsDAX
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeEventsRequestPrivate object.
- *
- * @param  action  DAX action being performed.
- * @param  q       Pointer to this object's public DescribeEventsRequest instance.
+ * Constructs a DescribeEventsRequestPrivate object for DAX \a action with,
+ * public implementation \a q.
  */
 DescribeEventsRequestPrivate::DescribeEventsRequestPrivate(
     const DAXRequest::Action action, DescribeEventsRequest * const q)
@@ -108,15 +97,10 @@ DescribeEventsRequestPrivate::DescribeEventsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeEventsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeEventsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeEventsRequest instance.
  */
 DescribeEventsRequestPrivate::DescribeEventsRequestPrivate(
     const DescribeEventsRequestPrivate &other, DescribeEventsRequest * const q)

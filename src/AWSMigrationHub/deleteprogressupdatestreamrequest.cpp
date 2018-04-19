@@ -27,10 +27,9 @@ namespace MigrationHub {
 
 /*!
  * \class QtAws::MigrationHub::DeleteProgressUpdateStreamRequest
- *
  * \brief The DeleteProgressUpdateStreamRequest class provides an interface for MigrationHub DeleteProgressUpdateStream requests.
  *
- * \ingroup MigrationHub
+ * \inmodule QtAwsMigrationHub
  *
  *  The AWS Migration Hub API methods help to obtain server and application migration status and integrate your
  *  resource-specific migration tool by providing a programmatic interface to Migration Hub.
@@ -39,9 +38,7 @@ namespace MigrationHub {
  */
 
 /*!
- * @brief  Constructs a new DeleteProgressUpdateStreamRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteProgressUpdateStreamRequest::DeleteProgressUpdateStreamRequest(const DeleteProgressUpdateStreamRequest &other)
     : MigrationHubRequest(new DeleteProgressUpdateStreamRequestPrivate(*other.d_func(), this))
@@ -50,7 +47,7 @@ DeleteProgressUpdateStreamRequest::DeleteProgressUpdateStreamRequest(const Delet
 }
 
 /*!
- * @brief  Constructs a new DeleteProgressUpdateStreamRequest object.
+ * Constructs a DeleteProgressUpdateStreamRequest object.
  */
 DeleteProgressUpdateStreamRequest::DeleteProgressUpdateStreamRequest()
     : MigrationHubRequest(new DeleteProgressUpdateStreamRequestPrivate(MigrationHubRequest::DeleteProgressUpdateStreamAction, this))
@@ -68,14 +65,9 @@ bool DeleteProgressUpdateStreamRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteProgressUpdateStreamResponse object.
+ * Returns a DeleteProgressUpdateStreamResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteProgressUpdateStreamResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MigrationHubClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteProgressUpdateStreamRequest::response(QNetworkReply * const reply) const
 {
@@ -83,20 +75,17 @@ QtAws::Core::AwsAbstractResponse * DeleteProgressUpdateStreamRequest::response(Q
 }
 
 /*!
- * @internal
+ * \class QtAws::MigrationHub::DeleteProgressUpdateStreamRequestPrivate
+ * \brief The DeleteProgressUpdateStreamRequestPrivate class provides private implementation for DeleteProgressUpdateStreamRequest.
+ * \internal
  *
- * @class  DeleteProgressUpdateStreamRequestPrivate
- *
- * @brief  Private implementation for DeleteProgressUpdateStreamRequest.
+ * \inmodule QtAwsMigrationHub
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteProgressUpdateStreamRequestPrivate object.
- *
- * @param  action  MigrationHub action being performed.
- * @param  q       Pointer to this object's public DeleteProgressUpdateStreamRequest instance.
+ * Constructs a DeleteProgressUpdateStreamRequestPrivate object for MigrationHub \a action with,
+ * public implementation \a q.
  */
 DeleteProgressUpdateStreamRequestPrivate::DeleteProgressUpdateStreamRequestPrivate(
     const MigrationHubRequest::Action action, DeleteProgressUpdateStreamRequest * const q)
@@ -106,15 +95,10 @@ DeleteProgressUpdateStreamRequestPrivate::DeleteProgressUpdateStreamRequestPriva
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteProgressUpdateStreamRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteProgressUpdateStreamRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteProgressUpdateStreamRequest instance.
  */
 DeleteProgressUpdateStreamRequestPrivate::DeleteProgressUpdateStreamRequestPrivate(
     const DeleteProgressUpdateStreamRequestPrivate &other, DeleteProgressUpdateStreamRequest * const q)

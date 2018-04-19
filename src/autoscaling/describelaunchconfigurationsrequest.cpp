@@ -27,10 +27,9 @@ namespace AutoScaling {
 
 /*!
  * \class QtAws::AutoScaling::DescribeLaunchConfigurationsRequest
- *
  * \brief The DescribeLaunchConfigurationsRequest class provides an interface for AutoScaling DescribeLaunchConfigurations requests.
  *
- * \ingroup AutoScaling
+ * \inmodule QtAwsAutoScaling
  *
  *  <fullname>Amazon EC2 Auto Scaling</fullname>
  * 
@@ -42,9 +41,7 @@ namespace AutoScaling {
  */
 
 /*!
- * @brief  Constructs a new DescribeLaunchConfigurationsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeLaunchConfigurationsRequest::DescribeLaunchConfigurationsRequest(const DescribeLaunchConfigurationsRequest &other)
     : AutoScalingRequest(new DescribeLaunchConfigurationsRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ DescribeLaunchConfigurationsRequest::DescribeLaunchConfigurationsRequest(const D
 }
 
 /*!
- * @brief  Constructs a new DescribeLaunchConfigurationsRequest object.
+ * Constructs a DescribeLaunchConfigurationsRequest object.
  */
 DescribeLaunchConfigurationsRequest::DescribeLaunchConfigurationsRequest()
     : AutoScalingRequest(new DescribeLaunchConfigurationsRequestPrivate(AutoScalingRequest::DescribeLaunchConfigurationsAction, this))
@@ -71,14 +68,9 @@ bool DescribeLaunchConfigurationsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeLaunchConfigurationsResponse object.
+ * Returns a DescribeLaunchConfigurationsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeLaunchConfigurationsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AutoScalingClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeLaunchConfigurationsRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * DescribeLaunchConfigurationsRequest::response
 }
 
 /*!
- * @internal
+ * \class QtAws::AutoScaling::DescribeLaunchConfigurationsRequestPrivate
+ * \brief The DescribeLaunchConfigurationsRequestPrivate class provides private implementation for DescribeLaunchConfigurationsRequest.
+ * \internal
  *
- * @class  DescribeLaunchConfigurationsRequestPrivate
- *
- * @brief  Private implementation for DescribeLaunchConfigurationsRequest.
+ * \inmodule QtAwsAutoScaling
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeLaunchConfigurationsRequestPrivate object.
- *
- * @param  action  AutoScaling action being performed.
- * @param  q       Pointer to this object's public DescribeLaunchConfigurationsRequest instance.
+ * Constructs a DescribeLaunchConfigurationsRequestPrivate object for AutoScaling \a action with,
+ * public implementation \a q.
  */
 DescribeLaunchConfigurationsRequestPrivate::DescribeLaunchConfigurationsRequestPrivate(
     const AutoScalingRequest::Action action, DescribeLaunchConfigurationsRequest * const q)
@@ -109,15 +98,10 @@ DescribeLaunchConfigurationsRequestPrivate::DescribeLaunchConfigurationsRequestP
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeLaunchConfigurationsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeLaunchConfigurationsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeLaunchConfigurationsRequest instance.
  */
 DescribeLaunchConfigurationsRequestPrivate::DescribeLaunchConfigurationsRequestPrivate(
     const DescribeLaunchConfigurationsRequestPrivate &other, DescribeLaunchConfigurationsRequest * const q)

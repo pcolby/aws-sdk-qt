@@ -27,10 +27,9 @@ namespace Lambda {
 
 /*!
  * \class QtAws::Lambda::InvokeAsyncRequest
- *
  * \brief The InvokeAsyncRequest class provides an interface for Lambda InvokeAsync requests.
  *
- * \ingroup Lambda
+ * \inmodule QtAwsLambda
  *
  *  <fullname>AWS Lambda</fullname>
  * 
@@ -48,9 +47,7 @@ namespace Lambda {
  */
 
 /*!
- * @brief  Constructs a new InvokeAsyncRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 InvokeAsyncRequest::InvokeAsyncRequest(const InvokeAsyncRequest &other)
     : LambdaRequest(new InvokeAsyncRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ InvokeAsyncRequest::InvokeAsyncRequest(const InvokeAsyncRequest &other)
 }
 
 /*!
- * @brief  Constructs a new InvokeAsyncRequest object.
+ * Constructs a InvokeAsyncRequest object.
  */
 InvokeAsyncRequest::InvokeAsyncRequest()
     : LambdaRequest(new InvokeAsyncRequestPrivate(LambdaRequest::InvokeAsyncAction, this))
@@ -77,14 +74,9 @@ bool InvokeAsyncRequest::isValid() const
 
 
 /*!
- * @brief  Construct an InvokeAsyncResponse object.
+ * Returns a InvokeAsyncResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An InvokeAsyncResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  LambdaClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * InvokeAsyncRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * InvokeAsyncRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::Lambda::InvokeAsyncRequestPrivate
+ * \brief The InvokeAsyncRequestPrivate class provides private implementation for InvokeAsyncRequest.
+ * \internal
  *
- * @class  InvokeAsyncRequestPrivate
- *
- * @brief  Private implementation for InvokeAsyncRequest.
+ * \inmodule QtAwsLambda
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new InvokeAsyncRequestPrivate object.
- *
- * @param  action  Lambda action being performed.
- * @param  q       Pointer to this object's public InvokeAsyncRequest instance.
+ * Constructs a InvokeAsyncRequestPrivate object for Lambda \a action with,
+ * public implementation \a q.
  */
 InvokeAsyncRequestPrivate::InvokeAsyncRequestPrivate(
     const LambdaRequest::Action action, InvokeAsyncRequest * const q)
@@ -115,15 +104,10 @@ InvokeAsyncRequestPrivate::InvokeAsyncRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new InvokeAsyncRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the InvokeAsyncRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public InvokeAsyncRequest instance.
  */
 InvokeAsyncRequestPrivate::InvokeAsyncRequestPrivate(
     const InvokeAsyncRequestPrivate &other, InvokeAsyncRequest * const q)

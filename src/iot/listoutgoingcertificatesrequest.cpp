@@ -27,10 +27,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::ListOutgoingCertificatesRequest
- *
  * \brief The ListOutgoingCertificatesRequest class provides an interface for IoT ListOutgoingCertificates requests.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -48,9 +47,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new ListOutgoingCertificatesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListOutgoingCertificatesRequest::ListOutgoingCertificatesRequest(const ListOutgoingCertificatesRequest &other)
     : IoTRequest(new ListOutgoingCertificatesRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ ListOutgoingCertificatesRequest::ListOutgoingCertificatesRequest(const ListOutgo
 }
 
 /*!
- * @brief  Constructs a new ListOutgoingCertificatesRequest object.
+ * Constructs a ListOutgoingCertificatesRequest object.
  */
 ListOutgoingCertificatesRequest::ListOutgoingCertificatesRequest()
     : IoTRequest(new ListOutgoingCertificatesRequestPrivate(IoTRequest::ListOutgoingCertificatesAction, this))
@@ -77,14 +74,9 @@ bool ListOutgoingCertificatesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListOutgoingCertificatesResponse object.
+ * Returns a ListOutgoingCertificatesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListOutgoingCertificatesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IoTClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListOutgoingCertificatesRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * ListOutgoingCertificatesRequest::response(QNe
 }
 
 /*!
- * @internal
+ * \class QtAws::IoT::ListOutgoingCertificatesRequestPrivate
+ * \brief The ListOutgoingCertificatesRequestPrivate class provides private implementation for ListOutgoingCertificatesRequest.
+ * \internal
  *
- * @class  ListOutgoingCertificatesRequestPrivate
- *
- * @brief  Private implementation for ListOutgoingCertificatesRequest.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListOutgoingCertificatesRequestPrivate object.
- *
- * @param  action  IoT action being performed.
- * @param  q       Pointer to this object's public ListOutgoingCertificatesRequest instance.
+ * Constructs a ListOutgoingCertificatesRequestPrivate object for IoT \a action with,
+ * public implementation \a q.
  */
 ListOutgoingCertificatesRequestPrivate::ListOutgoingCertificatesRequestPrivate(
     const IoTRequest::Action action, ListOutgoingCertificatesRequest * const q)
@@ -115,15 +104,10 @@ ListOutgoingCertificatesRequestPrivate::ListOutgoingCertificatesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListOutgoingCertificatesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListOutgoingCertificatesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListOutgoingCertificatesRequest instance.
  */
 ListOutgoingCertificatesRequestPrivate::ListOutgoingCertificatesRequestPrivate(
     const ListOutgoingCertificatesRequestPrivate &other, ListOutgoingCertificatesRequest * const q)

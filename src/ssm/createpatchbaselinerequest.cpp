@@ -27,10 +27,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::CreatePatchBaselineRequest
- *
  * \brief The CreatePatchBaselineRequest class provides an interface for SSM CreatePatchBaseline requests.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -61,9 +60,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new CreatePatchBaselineRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreatePatchBaselineRequest::CreatePatchBaselineRequest(const CreatePatchBaselineRequest &other)
     : SSMRequest(new CreatePatchBaselineRequestPrivate(*other.d_func(), this))
@@ -72,7 +69,7 @@ CreatePatchBaselineRequest::CreatePatchBaselineRequest(const CreatePatchBaseline
 }
 
 /*!
- * @brief  Constructs a new CreatePatchBaselineRequest object.
+ * Constructs a CreatePatchBaselineRequest object.
  */
 CreatePatchBaselineRequest::CreatePatchBaselineRequest()
     : SSMRequest(new CreatePatchBaselineRequestPrivate(SSMRequest::CreatePatchBaselineAction, this))
@@ -90,14 +87,9 @@ bool CreatePatchBaselineRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreatePatchBaselineResponse object.
+ * Returns a CreatePatchBaselineResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreatePatchBaselineResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SSMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreatePatchBaselineRequest::response(QNetworkReply * const reply) const
 {
@@ -105,20 +97,17 @@ QtAws::Core::AwsAbstractResponse * CreatePatchBaselineRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::SSM::CreatePatchBaselineRequestPrivate
+ * \brief The CreatePatchBaselineRequestPrivate class provides private implementation for CreatePatchBaselineRequest.
+ * \internal
  *
- * @class  CreatePatchBaselineRequestPrivate
- *
- * @brief  Private implementation for CreatePatchBaselineRequest.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreatePatchBaselineRequestPrivate object.
- *
- * @param  action  SSM action being performed.
- * @param  q       Pointer to this object's public CreatePatchBaselineRequest instance.
+ * Constructs a CreatePatchBaselineRequestPrivate object for SSM \a action with,
+ * public implementation \a q.
  */
 CreatePatchBaselineRequestPrivate::CreatePatchBaselineRequestPrivate(
     const SSMRequest::Action action, CreatePatchBaselineRequest * const q)
@@ -128,15 +117,10 @@ CreatePatchBaselineRequestPrivate::CreatePatchBaselineRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreatePatchBaselineRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreatePatchBaselineRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreatePatchBaselineRequest instance.
  */
 CreatePatchBaselineRequestPrivate::CreatePatchBaselineRequestPrivate(
     const CreatePatchBaselineRequestPrivate &other, CreatePatchBaselineRequest * const q)

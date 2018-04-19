@@ -27,10 +27,9 @@ namespace LexModelBuildingService {
 
 /*!
  * \class QtAws::LexModelBuildingService::PutIntentRequest
- *
  * \brief The PutIntentRequest class provides an interface for LexModelBuildingService PutIntent requests.
  *
- * \ingroup LexModelBuildingService
+ * \inmodule QtAwsLexModelBuildingService
  *
  *  <fullname>Amazon Lex Build-Time Actions</fullname>
  * 
@@ -41,9 +40,7 @@ namespace LexModelBuildingService {
  */
 
 /*!
- * @brief  Constructs a new PutIntentRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 PutIntentRequest::PutIntentRequest(const PutIntentRequest &other)
     : LexModelBuildingServiceRequest(new PutIntentRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ PutIntentRequest::PutIntentRequest(const PutIntentRequest &other)
 }
 
 /*!
- * @brief  Constructs a new PutIntentRequest object.
+ * Constructs a PutIntentRequest object.
  */
 PutIntentRequest::PutIntentRequest()
     : LexModelBuildingServiceRequest(new PutIntentRequestPrivate(LexModelBuildingServiceRequest::PutIntentAction, this))
@@ -70,14 +67,9 @@ bool PutIntentRequest::isValid() const
 
 
 /*!
- * @brief  Construct an PutIntentResponse object.
+ * Returns a PutIntentResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An PutIntentResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  LexModelBuildingServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * PutIntentRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * PutIntentRequest::response(QNetworkReply * co
 }
 
 /*!
- * @internal
+ * \class QtAws::LexModelBuildingService::PutIntentRequestPrivate
+ * \brief The PutIntentRequestPrivate class provides private implementation for PutIntentRequest.
+ * \internal
  *
- * @class  PutIntentRequestPrivate
- *
- * @brief  Private implementation for PutIntentRequest.
+ * \inmodule QtAwsLexModelBuildingService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new PutIntentRequestPrivate object.
- *
- * @param  action  LexModelBuildingService action being performed.
- * @param  q       Pointer to this object's public PutIntentRequest instance.
+ * Constructs a PutIntentRequestPrivate object for LexModelBuildingService \a action with,
+ * public implementation \a q.
  */
 PutIntentRequestPrivate::PutIntentRequestPrivate(
     const LexModelBuildingServiceRequest::Action action, PutIntentRequest * const q)
@@ -108,15 +97,10 @@ PutIntentRequestPrivate::PutIntentRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutIntentRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the PutIntentRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public PutIntentRequest instance.
  */
 PutIntentRequestPrivate::PutIntentRequestPrivate(
     const PutIntentRequestPrivate &other, PutIntentRequest * const q)

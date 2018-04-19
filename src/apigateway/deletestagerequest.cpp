@@ -27,10 +27,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::DeleteStageRequest
- *
  * \brief The DeleteStageRequest class provides an interface for APIGateway DeleteStage requests.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -42,9 +41,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new DeleteStageRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteStageRequest::DeleteStageRequest(const DeleteStageRequest &other)
     : APIGatewayRequest(new DeleteStageRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ DeleteStageRequest::DeleteStageRequest(const DeleteStageRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DeleteStageRequest object.
+ * Constructs a DeleteStageRequest object.
  */
 DeleteStageRequest::DeleteStageRequest()
     : APIGatewayRequest(new DeleteStageRequestPrivate(APIGatewayRequest::DeleteStageAction, this))
@@ -71,14 +68,9 @@ bool DeleteStageRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteStageResponse object.
+ * Returns a DeleteStageResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteStageResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  APIGatewayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteStageRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * DeleteStageRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::APIGateway::DeleteStageRequestPrivate
+ * \brief The DeleteStageRequestPrivate class provides private implementation for DeleteStageRequest.
+ * \internal
  *
- * @class  DeleteStageRequestPrivate
- *
- * @brief  Private implementation for DeleteStageRequest.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteStageRequestPrivate object.
- *
- * @param  action  APIGateway action being performed.
- * @param  q       Pointer to this object's public DeleteStageRequest instance.
+ * Constructs a DeleteStageRequestPrivate object for APIGateway \a action with,
+ * public implementation \a q.
  */
 DeleteStageRequestPrivate::DeleteStageRequestPrivate(
     const APIGatewayRequest::Action action, DeleteStageRequest * const q)
@@ -109,15 +98,10 @@ DeleteStageRequestPrivate::DeleteStageRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteStageRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteStageRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteStageRequest instance.
  */
 DeleteStageRequestPrivate::DeleteStageRequestPrivate(
     const DeleteStageRequestPrivate &other, DeleteStageRequest * const q)

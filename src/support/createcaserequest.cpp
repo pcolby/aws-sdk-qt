@@ -27,10 +27,9 @@ namespace Support {
 
 /*!
  * \class QtAws::Support::CreateCaseRequest
- *
  * \brief The CreateCaseRequest class provides an interface for Support CreateCase requests.
  *
- * \ingroup Support
+ * \inmodule QtAwsSupport
  *
  *  <fullname>AWS Support</fullname>
  * 
@@ -105,9 +104,7 @@ namespace Support {
  */
 
 /*!
- * @brief  Constructs a new CreateCaseRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateCaseRequest::CreateCaseRequest(const CreateCaseRequest &other)
     : SupportRequest(new CreateCaseRequestPrivate(*other.d_func(), this))
@@ -116,7 +113,7 @@ CreateCaseRequest::CreateCaseRequest(const CreateCaseRequest &other)
 }
 
 /*!
- * @brief  Constructs a new CreateCaseRequest object.
+ * Constructs a CreateCaseRequest object.
  */
 CreateCaseRequest::CreateCaseRequest()
     : SupportRequest(new CreateCaseRequestPrivate(SupportRequest::CreateCaseAction, this))
@@ -134,14 +131,9 @@ bool CreateCaseRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateCaseResponse object.
+ * Returns a CreateCaseResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateCaseResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SupportClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateCaseRequest::response(QNetworkReply * const reply) const
 {
@@ -149,20 +141,17 @@ QtAws::Core::AwsAbstractResponse * CreateCaseRequest::response(QNetworkReply * c
 }
 
 /*!
- * @internal
+ * \class QtAws::Support::CreateCaseRequestPrivate
+ * \brief The CreateCaseRequestPrivate class provides private implementation for CreateCaseRequest.
+ * \internal
  *
- * @class  CreateCaseRequestPrivate
- *
- * @brief  Private implementation for CreateCaseRequest.
+ * \inmodule QtAwsSupport
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateCaseRequestPrivate object.
- *
- * @param  action  Support action being performed.
- * @param  q       Pointer to this object's public CreateCaseRequest instance.
+ * Constructs a CreateCaseRequestPrivate object for Support \a action with,
+ * public implementation \a q.
  */
 CreateCaseRequestPrivate::CreateCaseRequestPrivate(
     const SupportRequest::Action action, CreateCaseRequest * const q)
@@ -172,15 +161,10 @@ CreateCaseRequestPrivate::CreateCaseRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateCaseRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateCaseRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateCaseRequest instance.
  */
 CreateCaseRequestPrivate::CreateCaseRequestPrivate(
     const CreateCaseRequestPrivate &other, CreateCaseRequest * const q)

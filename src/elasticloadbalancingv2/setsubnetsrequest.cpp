@@ -27,10 +27,9 @@ namespace ElasticLoadBalancingv2 {
 
 /*!
  * \class QtAws::ElasticLoadBalancingv2::SetSubnetsRequest
- *
  * \brief The SetSubnetsRequest class provides an interface for ElasticLoadBalancingv2 SetSubnets requests.
  *
- * \ingroup ElasticLoadBalancingv2
+ * \inmodule QtAwsElasticLoadBalancingv2
  *
  *  <fullname>Elastic Load Balancing</fullname>
  * 
@@ -105,9 +104,7 @@ namespace ElasticLoadBalancingv2 {
  */
 
 /*!
- * @brief  Constructs a new SetSubnetsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 SetSubnetsRequest::SetSubnetsRequest(const SetSubnetsRequest &other)
     : ElasticLoadBalancingv2Request(new SetSubnetsRequestPrivate(*other.d_func(), this))
@@ -116,7 +113,7 @@ SetSubnetsRequest::SetSubnetsRequest(const SetSubnetsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new SetSubnetsRequest object.
+ * Constructs a SetSubnetsRequest object.
  */
 SetSubnetsRequest::SetSubnetsRequest()
     : ElasticLoadBalancingv2Request(new SetSubnetsRequestPrivate(ElasticLoadBalancingv2Request::SetSubnetsAction, this))
@@ -134,14 +131,9 @@ bool SetSubnetsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an SetSubnetsResponse object.
+ * Returns a SetSubnetsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An SetSubnetsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ElasticLoadBalancingv2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * SetSubnetsRequest::response(QNetworkReply * const reply) const
 {
@@ -149,20 +141,17 @@ QtAws::Core::AwsAbstractResponse * SetSubnetsRequest::response(QNetworkReply * c
 }
 
 /*!
- * @internal
+ * \class QtAws::ElasticLoadBalancingv2::SetSubnetsRequestPrivate
+ * \brief The SetSubnetsRequestPrivate class provides private implementation for SetSubnetsRequest.
+ * \internal
  *
- * @class  SetSubnetsRequestPrivate
- *
- * @brief  Private implementation for SetSubnetsRequest.
+ * \inmodule QtAwsElasticLoadBalancingv2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new SetSubnetsRequestPrivate object.
- *
- * @param  action  ElasticLoadBalancingv2 action being performed.
- * @param  q       Pointer to this object's public SetSubnetsRequest instance.
+ * Constructs a SetSubnetsRequestPrivate object for ElasticLoadBalancingv2 \a action with,
+ * public implementation \a q.
  */
 SetSubnetsRequestPrivate::SetSubnetsRequestPrivate(
     const ElasticLoadBalancingv2Request::Action action, SetSubnetsRequest * const q)
@@ -172,15 +161,10 @@ SetSubnetsRequestPrivate::SetSubnetsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SetSubnetsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the SetSubnetsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public SetSubnetsRequest instance.
  */
 SetSubnetsRequestPrivate::SetSubnetsRequestPrivate(
     const SetSubnetsRequestPrivate &other, SetSubnetsRequest * const q)

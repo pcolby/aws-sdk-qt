@@ -27,10 +27,9 @@ namespace Glue {
 
 /*!
  * \class QtAws::Glue::UpdateConnectionRequest
- *
  * \brief The UpdateConnectionRequest class provides an interface for Glue UpdateConnection requests.
  *
- * \ingroup Glue
+ * \inmodule QtAwsGlue
  *
  *  <fullname>AWS Glue</fullname>
  * 
@@ -40,9 +39,7 @@ namespace Glue {
  */
 
 /*!
- * @brief  Constructs a new UpdateConnectionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateConnectionRequest::UpdateConnectionRequest(const UpdateConnectionRequest &other)
     : GlueRequest(new UpdateConnectionRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ UpdateConnectionRequest::UpdateConnectionRequest(const UpdateConnectionRequest &
 }
 
 /*!
- * @brief  Constructs a new UpdateConnectionRequest object.
+ * Constructs a UpdateConnectionRequest object.
  */
 UpdateConnectionRequest::UpdateConnectionRequest()
     : GlueRequest(new UpdateConnectionRequestPrivate(GlueRequest::UpdateConnectionAction, this))
@@ -69,14 +66,9 @@ bool UpdateConnectionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateConnectionResponse object.
+ * Returns a UpdateConnectionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateConnectionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GlueClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateConnectionRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * UpdateConnectionRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::Glue::UpdateConnectionRequestPrivate
+ * \brief The UpdateConnectionRequestPrivate class provides private implementation for UpdateConnectionRequest.
+ * \internal
  *
- * @class  UpdateConnectionRequestPrivate
- *
- * @brief  Private implementation for UpdateConnectionRequest.
+ * \inmodule QtAwsGlue
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateConnectionRequestPrivate object.
- *
- * @param  action  Glue action being performed.
- * @param  q       Pointer to this object's public UpdateConnectionRequest instance.
+ * Constructs a UpdateConnectionRequestPrivate object for Glue \a action with,
+ * public implementation \a q.
  */
 UpdateConnectionRequestPrivate::UpdateConnectionRequestPrivate(
     const GlueRequest::Action action, UpdateConnectionRequest * const q)
@@ -107,15 +96,10 @@ UpdateConnectionRequestPrivate::UpdateConnectionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateConnectionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateConnectionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateConnectionRequest instance.
  */
 UpdateConnectionRequestPrivate::UpdateConnectionRequestPrivate(
     const UpdateConnectionRequestPrivate &other, UpdateConnectionRequest * const q)

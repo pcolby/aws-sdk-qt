@@ -27,10 +27,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::PutMethodRequest
- *
  * \brief The PutMethodRequest class provides an interface for APIGateway PutMethod requests.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -42,9 +41,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new PutMethodRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 PutMethodRequest::PutMethodRequest(const PutMethodRequest &other)
     : APIGatewayRequest(new PutMethodRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ PutMethodRequest::PutMethodRequest(const PutMethodRequest &other)
 }
 
 /*!
- * @brief  Constructs a new PutMethodRequest object.
+ * Constructs a PutMethodRequest object.
  */
 PutMethodRequest::PutMethodRequest()
     : APIGatewayRequest(new PutMethodRequestPrivate(APIGatewayRequest::PutMethodAction, this))
@@ -71,14 +68,9 @@ bool PutMethodRequest::isValid() const
 
 
 /*!
- * @brief  Construct an PutMethodResponse object.
+ * Returns a PutMethodResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An PutMethodResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  APIGatewayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * PutMethodRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * PutMethodRequest::response(QNetworkReply * co
 }
 
 /*!
- * @internal
+ * \class QtAws::APIGateway::PutMethodRequestPrivate
+ * \brief The PutMethodRequestPrivate class provides private implementation for PutMethodRequest.
+ * \internal
  *
- * @class  PutMethodRequestPrivate
- *
- * @brief  Private implementation for PutMethodRequest.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new PutMethodRequestPrivate object.
- *
- * @param  action  APIGateway action being performed.
- * @param  q       Pointer to this object's public PutMethodRequest instance.
+ * Constructs a PutMethodRequestPrivate object for APIGateway \a action with,
+ * public implementation \a q.
  */
 PutMethodRequestPrivate::PutMethodRequestPrivate(
     const APIGatewayRequest::Action action, PutMethodRequest * const q)
@@ -109,15 +98,10 @@ PutMethodRequestPrivate::PutMethodRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutMethodRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the PutMethodRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public PutMethodRequest instance.
  */
 PutMethodRequestPrivate::PutMethodRequestPrivate(
     const PutMethodRequestPrivate &other, PutMethodRequest * const q)

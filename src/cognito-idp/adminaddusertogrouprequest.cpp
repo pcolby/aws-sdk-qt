@@ -27,10 +27,9 @@ namespace CognitoIdentityProvider {
 
 /*!
  * \class QtAws::CognitoIdentityProvider::AdminAddUserToGroupRequest
- *
  * \brief The AdminAddUserToGroupRequest class provides an interface for CognitoIdentityProvider AdminAddUserToGroup requests.
  *
- * \ingroup CognitoIdentityProvider
+ * \inmodule QtAwsCognitoIdentityProvider
  *
  *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
  *  authenticate a user to obtain tokens related to user identity and access
@@ -47,9 +46,7 @@ namespace CognitoIdentityProvider {
  */
 
 /*!
- * @brief  Constructs a new AdminAddUserToGroupRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AdminAddUserToGroupRequest::AdminAddUserToGroupRequest(const AdminAddUserToGroupRequest &other)
     : CognitoIdentityProviderRequest(new AdminAddUserToGroupRequestPrivate(*other.d_func(), this))
@@ -58,7 +55,7 @@ AdminAddUserToGroupRequest::AdminAddUserToGroupRequest(const AdminAddUserToGroup
 }
 
 /*!
- * @brief  Constructs a new AdminAddUserToGroupRequest object.
+ * Constructs a AdminAddUserToGroupRequest object.
  */
 AdminAddUserToGroupRequest::AdminAddUserToGroupRequest()
     : CognitoIdentityProviderRequest(new AdminAddUserToGroupRequestPrivate(CognitoIdentityProviderRequest::AdminAddUserToGroupAction, this))
@@ -76,14 +73,9 @@ bool AdminAddUserToGroupRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AdminAddUserToGroupResponse object.
+ * Returns a AdminAddUserToGroupResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AdminAddUserToGroupResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CognitoIdentityProviderClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AdminAddUserToGroupRequest::response(QNetworkReply * const reply) const
 {
@@ -91,20 +83,17 @@ QtAws::Core::AwsAbstractResponse * AdminAddUserToGroupRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::CognitoIdentityProvider::AdminAddUserToGroupRequestPrivate
+ * \brief The AdminAddUserToGroupRequestPrivate class provides private implementation for AdminAddUserToGroupRequest.
+ * \internal
  *
- * @class  AdminAddUserToGroupRequestPrivate
- *
- * @brief  Private implementation for AdminAddUserToGroupRequest.
+ * \inmodule QtAwsCognitoIdentityProvider
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AdminAddUserToGroupRequestPrivate object.
- *
- * @param  action  CognitoIdentityProvider action being performed.
- * @param  q       Pointer to this object's public AdminAddUserToGroupRequest instance.
+ * Constructs a AdminAddUserToGroupRequestPrivate object for CognitoIdentityProvider \a action with,
+ * public implementation \a q.
  */
 AdminAddUserToGroupRequestPrivate::AdminAddUserToGroupRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, AdminAddUserToGroupRequest * const q)
@@ -114,15 +103,10 @@ AdminAddUserToGroupRequestPrivate::AdminAddUserToGroupRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AdminAddUserToGroupRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AdminAddUserToGroupRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AdminAddUserToGroupRequest instance.
  */
 AdminAddUserToGroupRequestPrivate::AdminAddUserToGroupRequestPrivate(
     const AdminAddUserToGroupRequestPrivate &other, AdminAddUserToGroupRequest * const q)

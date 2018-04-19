@@ -27,10 +27,9 @@ namespace KMS {
 
 /*!
  * \class QtAws::KMS::ReEncryptRequest
- *
  * \brief The ReEncryptRequest class provides an interface for KMS ReEncrypt requests.
  *
- * \ingroup KMS
+ * \inmodule QtAwsKMS
  *
  *  <fullname>AWS Key Management Service</fullname>
  * 
@@ -136,9 +135,7 @@ namespace KMS {
  */
 
 /*!
- * @brief  Constructs a new ReEncryptRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ReEncryptRequest::ReEncryptRequest(const ReEncryptRequest &other)
     : KMSRequest(new ReEncryptRequestPrivate(*other.d_func(), this))
@@ -147,7 +144,7 @@ ReEncryptRequest::ReEncryptRequest(const ReEncryptRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ReEncryptRequest object.
+ * Constructs a ReEncryptRequest object.
  */
 ReEncryptRequest::ReEncryptRequest()
     : KMSRequest(new ReEncryptRequestPrivate(KMSRequest::ReEncryptAction, this))
@@ -165,14 +162,9 @@ bool ReEncryptRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ReEncryptResponse object.
+ * Returns a ReEncryptResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ReEncryptResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  KMSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ReEncryptRequest::response(QNetworkReply * const reply) const
 {
@@ -180,20 +172,17 @@ QtAws::Core::AwsAbstractResponse * ReEncryptRequest::response(QNetworkReply * co
 }
 
 /*!
- * @internal
+ * \class QtAws::KMS::ReEncryptRequestPrivate
+ * \brief The ReEncryptRequestPrivate class provides private implementation for ReEncryptRequest.
+ * \internal
  *
- * @class  ReEncryptRequestPrivate
- *
- * @brief  Private implementation for ReEncryptRequest.
+ * \inmodule QtAwsKMS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ReEncryptRequestPrivate object.
- *
- * @param  action  KMS action being performed.
- * @param  q       Pointer to this object's public ReEncryptRequest instance.
+ * Constructs a ReEncryptRequestPrivate object for KMS \a action with,
+ * public implementation \a q.
  */
 ReEncryptRequestPrivate::ReEncryptRequestPrivate(
     const KMSRequest::Action action, ReEncryptRequest * const q)
@@ -203,15 +192,10 @@ ReEncryptRequestPrivate::ReEncryptRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ReEncryptRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ReEncryptRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ReEncryptRequest instance.
  */
 ReEncryptRequestPrivate::ReEncryptRequestPrivate(
     const ReEncryptRequestPrivate &other, ReEncryptRequest * const q)

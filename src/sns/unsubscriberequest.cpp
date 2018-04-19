@@ -27,10 +27,9 @@ namespace SNS {
 
 /*!
  * \class QtAws::SNS::UnsubscribeRequest
- *
  * \brief The UnsubscribeRequest class provides an interface for SNS Unsubscribe requests.
  *
- * \ingroup SNS
+ * \inmodule QtAwsSNS
  *
  *  <fullname>Amazon Simple Notification Service</fullname>
  * 
@@ -51,9 +50,7 @@ namespace SNS {
  */
 
 /*!
- * @brief  Constructs a new UnsubscribeRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UnsubscribeRequest::UnsubscribeRequest(const UnsubscribeRequest &other)
     : SNSRequest(new UnsubscribeRequestPrivate(*other.d_func(), this))
@@ -62,7 +59,7 @@ UnsubscribeRequest::UnsubscribeRequest(const UnsubscribeRequest &other)
 }
 
 /*!
- * @brief  Constructs a new UnsubscribeRequest object.
+ * Constructs a UnsubscribeRequest object.
  */
 UnsubscribeRequest::UnsubscribeRequest()
     : SNSRequest(new UnsubscribeRequestPrivate(SNSRequest::UnsubscribeAction, this))
@@ -80,14 +77,9 @@ bool UnsubscribeRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UnsubscribeResponse object.
+ * Returns a UnsubscribeResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UnsubscribeResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SNSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UnsubscribeRequest::response(QNetworkReply * const reply) const
 {
@@ -95,20 +87,17 @@ QtAws::Core::AwsAbstractResponse * UnsubscribeRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::SNS::UnsubscribeRequestPrivate
+ * \brief The UnsubscribeRequestPrivate class provides private implementation for UnsubscribeRequest.
+ * \internal
  *
- * @class  UnsubscribeRequestPrivate
- *
- * @brief  Private implementation for UnsubscribeRequest.
+ * \inmodule QtAwsSNS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UnsubscribeRequestPrivate object.
- *
- * @param  action  SNS action being performed.
- * @param  q       Pointer to this object's public UnsubscribeRequest instance.
+ * Constructs a UnsubscribeRequestPrivate object for SNS \a action with,
+ * public implementation \a q.
  */
 UnsubscribeRequestPrivate::UnsubscribeRequestPrivate(
     const SNSRequest::Action action, UnsubscribeRequest * const q)
@@ -118,15 +107,10 @@ UnsubscribeRequestPrivate::UnsubscribeRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UnsubscribeRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UnsubscribeRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UnsubscribeRequest instance.
  */
 UnsubscribeRequestPrivate::UnsubscribeRequestPrivate(
     const UnsubscribeRequestPrivate &other, UnsubscribeRequest * const q)

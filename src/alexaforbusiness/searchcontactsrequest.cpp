@@ -27,10 +27,9 @@ namespace AlexaForBusiness {
 
 /*!
  * \class QtAws::AlexaForBusiness::SearchContactsRequest
- *
  * \brief The SearchContactsRequest class provides an interface for AlexaForBusiness SearchContacts requests.
  *
- * \ingroup AlexaForBusiness
+ * \inmodule QtAwsAlexaForBusiness
  *
  *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
  *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
@@ -42,9 +41,7 @@ namespace AlexaForBusiness {
  */
 
 /*!
- * @brief  Constructs a new SearchContactsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 SearchContactsRequest::SearchContactsRequest(const SearchContactsRequest &other)
     : AlexaForBusinessRequest(new SearchContactsRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ SearchContactsRequest::SearchContactsRequest(const SearchContactsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new SearchContactsRequest object.
+ * Constructs a SearchContactsRequest object.
  */
 SearchContactsRequest::SearchContactsRequest()
     : AlexaForBusinessRequest(new SearchContactsRequestPrivate(AlexaForBusinessRequest::SearchContactsAction, this))
@@ -71,14 +68,9 @@ bool SearchContactsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an SearchContactsResponse object.
+ * Returns a SearchContactsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An SearchContactsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AlexaForBusinessClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * SearchContactsRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * SearchContactsRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::AlexaForBusiness::SearchContactsRequestPrivate
+ * \brief The SearchContactsRequestPrivate class provides private implementation for SearchContactsRequest.
+ * \internal
  *
- * @class  SearchContactsRequestPrivate
- *
- * @brief  Private implementation for SearchContactsRequest.
+ * \inmodule QtAwsAlexaForBusiness
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new SearchContactsRequestPrivate object.
- *
- * @param  action  AlexaForBusiness action being performed.
- * @param  q       Pointer to this object's public SearchContactsRequest instance.
+ * Constructs a SearchContactsRequestPrivate object for AlexaForBusiness \a action with,
+ * public implementation \a q.
  */
 SearchContactsRequestPrivate::SearchContactsRequestPrivate(
     const AlexaForBusinessRequest::Action action, SearchContactsRequest * const q)
@@ -109,15 +98,10 @@ SearchContactsRequestPrivate::SearchContactsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SearchContactsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the SearchContactsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public SearchContactsRequest instance.
  */
 SearchContactsRequestPrivate::SearchContactsRequestPrivate(
     const SearchContactsRequestPrivate &other, SearchContactsRequest * const q)

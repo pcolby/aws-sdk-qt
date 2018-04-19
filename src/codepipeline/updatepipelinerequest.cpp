@@ -27,10 +27,9 @@ namespace CodePipeline {
 
 /*!
  * \class QtAws::CodePipeline::UpdatePipelineRequest
- *
  * \brief The UpdatePipelineRequest class provides an interface for CodePipeline UpdatePipeline requests.
  *
- * \ingroup CodePipeline
+ * \inmodule QtAwsCodePipeline
  *
  *  <fullname>AWS CodePipeline</fullname>
  * 
@@ -200,9 +199,7 @@ namespace CodePipeline {
  */
 
 /*!
- * @brief  Constructs a new UpdatePipelineRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdatePipelineRequest::UpdatePipelineRequest(const UpdatePipelineRequest &other)
     : CodePipelineRequest(new UpdatePipelineRequestPrivate(*other.d_func(), this))
@@ -211,7 +208,7 @@ UpdatePipelineRequest::UpdatePipelineRequest(const UpdatePipelineRequest &other)
 }
 
 /*!
- * @brief  Constructs a new UpdatePipelineRequest object.
+ * Constructs a UpdatePipelineRequest object.
  */
 UpdatePipelineRequest::UpdatePipelineRequest()
     : CodePipelineRequest(new UpdatePipelineRequestPrivate(CodePipelineRequest::UpdatePipelineAction, this))
@@ -229,14 +226,9 @@ bool UpdatePipelineRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdatePipelineResponse object.
+ * Returns a UpdatePipelineResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdatePipelineResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CodePipelineClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdatePipelineRequest::response(QNetworkReply * const reply) const
 {
@@ -244,20 +236,17 @@ QtAws::Core::AwsAbstractResponse * UpdatePipelineRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::CodePipeline::UpdatePipelineRequestPrivate
+ * \brief The UpdatePipelineRequestPrivate class provides private implementation for UpdatePipelineRequest.
+ * \internal
  *
- * @class  UpdatePipelineRequestPrivate
- *
- * @brief  Private implementation for UpdatePipelineRequest.
+ * \inmodule QtAwsCodePipeline
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdatePipelineRequestPrivate object.
- *
- * @param  action  CodePipeline action being performed.
- * @param  q       Pointer to this object's public UpdatePipelineRequest instance.
+ * Constructs a UpdatePipelineRequestPrivate object for CodePipeline \a action with,
+ * public implementation \a q.
  */
 UpdatePipelineRequestPrivate::UpdatePipelineRequestPrivate(
     const CodePipelineRequest::Action action, UpdatePipelineRequest * const q)
@@ -267,15 +256,10 @@ UpdatePipelineRequestPrivate::UpdatePipelineRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdatePipelineRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdatePipelineRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdatePipelineRequest instance.
  */
 UpdatePipelineRequestPrivate::UpdatePipelineRequestPrivate(
     const UpdatePipelineRequestPrivate &other, UpdatePipelineRequest * const q)

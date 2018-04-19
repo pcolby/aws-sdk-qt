@@ -27,10 +27,9 @@ namespace SES {
 
 /*!
  * \class QtAws::SES::CreateConfigurationSetEventDestinationRequest
- *
  * \brief The CreateConfigurationSetEventDestinationRequest class provides an interface for SES CreateConfigurationSetEventDestination requests.
  *
- * \ingroup SES
+ * \inmodule QtAwsSES
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -48,9 +47,7 @@ namespace SES {
  */
 
 /*!
- * @brief  Constructs a new CreateConfigurationSetEventDestinationRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateConfigurationSetEventDestinationRequest::CreateConfigurationSetEventDestinationRequest(const CreateConfigurationSetEventDestinationRequest &other)
     : SESRequest(new CreateConfigurationSetEventDestinationRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ CreateConfigurationSetEventDestinationRequest::CreateConfigurationSetEventDestin
 }
 
 /*!
- * @brief  Constructs a new CreateConfigurationSetEventDestinationRequest object.
+ * Constructs a CreateConfigurationSetEventDestinationRequest object.
  */
 CreateConfigurationSetEventDestinationRequest::CreateConfigurationSetEventDestinationRequest()
     : SESRequest(new CreateConfigurationSetEventDestinationRequestPrivate(SESRequest::CreateConfigurationSetEventDestinationAction, this))
@@ -77,14 +74,9 @@ bool CreateConfigurationSetEventDestinationRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateConfigurationSetEventDestinationResponse object.
+ * Returns a CreateConfigurationSetEventDestinationResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateConfigurationSetEventDestinationResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SESClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateConfigurationSetEventDestinationRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * CreateConfigurationSetEventDestinationRequest
 }
 
 /*!
- * @internal
+ * \class QtAws::SES::CreateConfigurationSetEventDestinationRequestPrivate
+ * \brief The CreateConfigurationSetEventDestinationRequestPrivate class provides private implementation for CreateConfigurationSetEventDestinationRequest.
+ * \internal
  *
- * @class  CreateConfigurationSetEventDestinationRequestPrivate
- *
- * @brief  Private implementation for CreateConfigurationSetEventDestinationRequest.
+ * \inmodule QtAwsSES
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateConfigurationSetEventDestinationRequestPrivate object.
- *
- * @param  action  SES action being performed.
- * @param  q       Pointer to this object's public CreateConfigurationSetEventDestinationRequest instance.
+ * Constructs a CreateConfigurationSetEventDestinationRequestPrivate object for SES \a action with,
+ * public implementation \a q.
  */
 CreateConfigurationSetEventDestinationRequestPrivate::CreateConfigurationSetEventDestinationRequestPrivate(
     const SESRequest::Action action, CreateConfigurationSetEventDestinationRequest * const q)
@@ -115,15 +104,10 @@ CreateConfigurationSetEventDestinationRequestPrivate::CreateConfigurationSetEven
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateConfigurationSetEventDestinationRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateConfigurationSetEventDestinationRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateConfigurationSetEventDestinationRequest instance.
  */
 CreateConfigurationSetEventDestinationRequestPrivate::CreateConfigurationSetEventDestinationRequestPrivate(
     const CreateConfigurationSetEventDestinationRequestPrivate &other, CreateConfigurationSetEventDestinationRequest * const q)

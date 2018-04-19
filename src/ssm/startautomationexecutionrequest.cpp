@@ -27,10 +27,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::StartAutomationExecutionRequest
- *
  * \brief The StartAutomationExecutionRequest class provides an interface for SSM StartAutomationExecution requests.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -61,9 +60,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new StartAutomationExecutionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 StartAutomationExecutionRequest::StartAutomationExecutionRequest(const StartAutomationExecutionRequest &other)
     : SSMRequest(new StartAutomationExecutionRequestPrivate(*other.d_func(), this))
@@ -72,7 +69,7 @@ StartAutomationExecutionRequest::StartAutomationExecutionRequest(const StartAuto
 }
 
 /*!
- * @brief  Constructs a new StartAutomationExecutionRequest object.
+ * Constructs a StartAutomationExecutionRequest object.
  */
 StartAutomationExecutionRequest::StartAutomationExecutionRequest()
     : SSMRequest(new StartAutomationExecutionRequestPrivate(SSMRequest::StartAutomationExecutionAction, this))
@@ -90,14 +87,9 @@ bool StartAutomationExecutionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an StartAutomationExecutionResponse object.
+ * Returns a StartAutomationExecutionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An StartAutomationExecutionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SSMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * StartAutomationExecutionRequest::response(QNetworkReply * const reply) const
 {
@@ -105,20 +97,17 @@ QtAws::Core::AwsAbstractResponse * StartAutomationExecutionRequest::response(QNe
 }
 
 /*!
- * @internal
+ * \class QtAws::SSM::StartAutomationExecutionRequestPrivate
+ * \brief The StartAutomationExecutionRequestPrivate class provides private implementation for StartAutomationExecutionRequest.
+ * \internal
  *
- * @class  StartAutomationExecutionRequestPrivate
- *
- * @brief  Private implementation for StartAutomationExecutionRequest.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new StartAutomationExecutionRequestPrivate object.
- *
- * @param  action  SSM action being performed.
- * @param  q       Pointer to this object's public StartAutomationExecutionRequest instance.
+ * Constructs a StartAutomationExecutionRequestPrivate object for SSM \a action with,
+ * public implementation \a q.
  */
 StartAutomationExecutionRequestPrivate::StartAutomationExecutionRequestPrivate(
     const SSMRequest::Action action, StartAutomationExecutionRequest * const q)
@@ -128,15 +117,10 @@ StartAutomationExecutionRequestPrivate::StartAutomationExecutionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StartAutomationExecutionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the StartAutomationExecutionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public StartAutomationExecutionRequest instance.
  */
 StartAutomationExecutionRequestPrivate::StartAutomationExecutionRequestPrivate(
     const StartAutomationExecutionRequestPrivate &other, StartAutomationExecutionRequest * const q)

@@ -27,10 +27,9 @@ namespace DirectConnect {
 
 /*!
  * \class QtAws::DirectConnect::CreateConnectionRequest
- *
  * \brief The CreateConnectionRequest class provides an interface for DirectConnect CreateConnection requests.
  *
- * \ingroup DirectConnect
+ * \inmodule QtAwsDirectConnect
  *
  *  AWS Direct Connect links your internal network to an AWS Direct Connect location over a standard 1 gigabit or 10 gigabit
  *  Ethernet fiber-optic cable. One end of the cable is connected to your router, the other to an AWS Direct Connect router.
@@ -45,9 +44,7 @@ namespace DirectConnect {
  */
 
 /*!
- * @brief  Constructs a new CreateConnectionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateConnectionRequest::CreateConnectionRequest(const CreateConnectionRequest &other)
     : DirectConnectRequest(new CreateConnectionRequestPrivate(*other.d_func(), this))
@@ -56,7 +53,7 @@ CreateConnectionRequest::CreateConnectionRequest(const CreateConnectionRequest &
 }
 
 /*!
- * @brief  Constructs a new CreateConnectionRequest object.
+ * Constructs a CreateConnectionRequest object.
  */
 CreateConnectionRequest::CreateConnectionRequest()
     : DirectConnectRequest(new CreateConnectionRequestPrivate(DirectConnectRequest::CreateConnectionAction, this))
@@ -74,14 +71,9 @@ bool CreateConnectionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateConnectionResponse object.
+ * Returns a CreateConnectionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateConnectionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DirectConnectClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateConnectionRequest::response(QNetworkReply * const reply) const
 {
@@ -89,20 +81,17 @@ QtAws::Core::AwsAbstractResponse * CreateConnectionRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::DirectConnect::CreateConnectionRequestPrivate
+ * \brief The CreateConnectionRequestPrivate class provides private implementation for CreateConnectionRequest.
+ * \internal
  *
- * @class  CreateConnectionRequestPrivate
- *
- * @brief  Private implementation for CreateConnectionRequest.
+ * \inmodule QtAwsDirectConnect
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateConnectionRequestPrivate object.
- *
- * @param  action  DirectConnect action being performed.
- * @param  q       Pointer to this object's public CreateConnectionRequest instance.
+ * Constructs a CreateConnectionRequestPrivate object for DirectConnect \a action with,
+ * public implementation \a q.
  */
 CreateConnectionRequestPrivate::CreateConnectionRequestPrivate(
     const DirectConnectRequest::Action action, CreateConnectionRequest * const q)
@@ -112,15 +101,10 @@ CreateConnectionRequestPrivate::CreateConnectionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateConnectionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateConnectionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateConnectionRequest instance.
  */
 CreateConnectionRequestPrivate::CreateConnectionRequestPrivate(
     const CreateConnectionRequestPrivate &other, CreateConnectionRequest * const q)

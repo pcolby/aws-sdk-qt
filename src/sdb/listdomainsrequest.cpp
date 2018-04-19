@@ -27,10 +27,9 @@ namespace SimpleDB {
 
 /*!
  * \class QtAws::SimpleDB::ListDomainsRequest
- *
  * \brief The ListDomainsRequest class provides an interface for SimpleDB ListDomains requests.
  *
- * \ingroup SimpleDB
+ * \inmodule QtAwsSimpleDB
  *
  *  Amazon SimpleDB is a web service providing the core database functions of data indexing and querying in the cloud. By
  *  offloading the time and effort associated with building and operating a web-scale database, SimpleDB provides developers
@@ -50,9 +49,7 @@ namespace SimpleDB {
  */
 
 /*!
- * @brief  Constructs a new ListDomainsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListDomainsRequest::ListDomainsRequest(const ListDomainsRequest &other)
     : SimpleDBRequest(new ListDomainsRequestPrivate(*other.d_func(), this))
@@ -61,7 +58,7 @@ ListDomainsRequest::ListDomainsRequest(const ListDomainsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ListDomainsRequest object.
+ * Constructs a ListDomainsRequest object.
  */
 ListDomainsRequest::ListDomainsRequest()
     : SimpleDBRequest(new ListDomainsRequestPrivate(SimpleDBRequest::ListDomainsAction, this))
@@ -79,14 +76,9 @@ bool ListDomainsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListDomainsResponse object.
+ * Returns a ListDomainsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListDomainsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SimpleDBClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListDomainsRequest::response(QNetworkReply * const reply) const
 {
@@ -94,20 +86,17 @@ QtAws::Core::AwsAbstractResponse * ListDomainsRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::SimpleDB::ListDomainsRequestPrivate
+ * \brief The ListDomainsRequestPrivate class provides private implementation for ListDomainsRequest.
+ * \internal
  *
- * @class  ListDomainsRequestPrivate
- *
- * @brief  Private implementation for ListDomainsRequest.
+ * \inmodule QtAwsSimpleDB
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListDomainsRequestPrivate object.
- *
- * @param  action  SimpleDB action being performed.
- * @param  q       Pointer to this object's public ListDomainsRequest instance.
+ * Constructs a ListDomainsRequestPrivate object for SimpleDB \a action with,
+ * public implementation \a q.
  */
 ListDomainsRequestPrivate::ListDomainsRequestPrivate(
     const SimpleDBRequest::Action action, ListDomainsRequest * const q)
@@ -117,15 +106,10 @@ ListDomainsRequestPrivate::ListDomainsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListDomainsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListDomainsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListDomainsRequest instance.
  */
 ListDomainsRequestPrivate::ListDomainsRequestPrivate(
     const ListDomainsRequestPrivate &other, ListDomainsRequest * const q)

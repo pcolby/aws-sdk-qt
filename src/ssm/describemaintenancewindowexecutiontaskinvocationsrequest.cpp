@@ -27,10 +27,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::DescribeMaintenanceWindowExecutionTaskInvocationsRequest
- *
  * \brief The DescribeMaintenanceWindowExecutionTaskInvocationsRequest class provides an interface for SSM DescribeMaintenanceWindowExecutionTaskInvocations requests.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -61,9 +60,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new DescribeMaintenanceWindowExecutionTaskInvocationsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeMaintenanceWindowExecutionTaskInvocationsRequest::DescribeMaintenanceWindowExecutionTaskInvocationsRequest(const DescribeMaintenanceWindowExecutionTaskInvocationsRequest &other)
     : SSMRequest(new DescribeMaintenanceWindowExecutionTaskInvocationsRequestPrivate(*other.d_func(), this))
@@ -72,7 +69,7 @@ DescribeMaintenanceWindowExecutionTaskInvocationsRequest::DescribeMaintenanceWin
 }
 
 /*!
- * @brief  Constructs a new DescribeMaintenanceWindowExecutionTaskInvocationsRequest object.
+ * Constructs a DescribeMaintenanceWindowExecutionTaskInvocationsRequest object.
  */
 DescribeMaintenanceWindowExecutionTaskInvocationsRequest::DescribeMaintenanceWindowExecutionTaskInvocationsRequest()
     : SSMRequest(new DescribeMaintenanceWindowExecutionTaskInvocationsRequestPrivate(SSMRequest::DescribeMaintenanceWindowExecutionTaskInvocationsAction, this))
@@ -90,14 +87,9 @@ bool DescribeMaintenanceWindowExecutionTaskInvocationsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeMaintenanceWindowExecutionTaskInvocationsResponse object.
+ * Returns a DescribeMaintenanceWindowExecutionTaskInvocationsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeMaintenanceWindowExecutionTaskInvocationsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SSMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeMaintenanceWindowExecutionTaskInvocationsRequest::response(QNetworkReply * const reply) const
 {
@@ -105,20 +97,17 @@ QtAws::Core::AwsAbstractResponse * DescribeMaintenanceWindowExecutionTaskInvocat
 }
 
 /*!
- * @internal
+ * \class QtAws::SSM::DescribeMaintenanceWindowExecutionTaskInvocationsRequestPrivate
+ * \brief The DescribeMaintenanceWindowExecutionTaskInvocationsRequestPrivate class provides private implementation for DescribeMaintenanceWindowExecutionTaskInvocationsRequest.
+ * \internal
  *
- * @class  DescribeMaintenanceWindowExecutionTaskInvocationsRequestPrivate
- *
- * @brief  Private implementation for DescribeMaintenanceWindowExecutionTaskInvocationsRequest.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeMaintenanceWindowExecutionTaskInvocationsRequestPrivate object.
- *
- * @param  action  SSM action being performed.
- * @param  q       Pointer to this object's public DescribeMaintenanceWindowExecutionTaskInvocationsRequest instance.
+ * Constructs a DescribeMaintenanceWindowExecutionTaskInvocationsRequestPrivate object for SSM \a action with,
+ * public implementation \a q.
  */
 DescribeMaintenanceWindowExecutionTaskInvocationsRequestPrivate::DescribeMaintenanceWindowExecutionTaskInvocationsRequestPrivate(
     const SSMRequest::Action action, DescribeMaintenanceWindowExecutionTaskInvocationsRequest * const q)
@@ -128,15 +117,10 @@ DescribeMaintenanceWindowExecutionTaskInvocationsRequestPrivate::DescribeMainten
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeMaintenanceWindowExecutionTaskInvocationsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeMaintenanceWindowExecutionTaskInvocationsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeMaintenanceWindowExecutionTaskInvocationsRequest instance.
  */
 DescribeMaintenanceWindowExecutionTaskInvocationsRequestPrivate::DescribeMaintenanceWindowExecutionTaskInvocationsRequestPrivate(
     const DescribeMaintenanceWindowExecutionTaskInvocationsRequestPrivate &other, DescribeMaintenanceWindowExecutionTaskInvocationsRequest * const q)

@@ -27,10 +27,9 @@ namespace DatabaseMigrationService {
 
 /*!
  * \class QtAws::DatabaseMigrationService::DescribeReplicationSubnetGroupsRequest
- *
  * \brief The DescribeReplicationSubnetGroupsRequest class provides an interface for DatabaseMigrationService DescribeReplicationSubnetGroups requests.
  *
- * \ingroup DatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigrationService
  *
  *  <fullname>AWS Database Migration Service</fullname>
  * 
@@ -48,9 +47,7 @@ namespace DatabaseMigrationService {
  */
 
 /*!
- * @brief  Constructs a new DescribeReplicationSubnetGroupsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeReplicationSubnetGroupsRequest::DescribeReplicationSubnetGroupsRequest(const DescribeReplicationSubnetGroupsRequest &other)
     : DatabaseMigrationServiceRequest(new DescribeReplicationSubnetGroupsRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ DescribeReplicationSubnetGroupsRequest::DescribeReplicationSubnetGroupsRequest(c
 }
 
 /*!
- * @brief  Constructs a new DescribeReplicationSubnetGroupsRequest object.
+ * Constructs a DescribeReplicationSubnetGroupsRequest object.
  */
 DescribeReplicationSubnetGroupsRequest::DescribeReplicationSubnetGroupsRequest()
     : DatabaseMigrationServiceRequest(new DescribeReplicationSubnetGroupsRequestPrivate(DatabaseMigrationServiceRequest::DescribeReplicationSubnetGroupsAction, this))
@@ -77,14 +74,9 @@ bool DescribeReplicationSubnetGroupsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeReplicationSubnetGroupsResponse object.
+ * Returns a DescribeReplicationSubnetGroupsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeReplicationSubnetGroupsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DatabaseMigrationServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeReplicationSubnetGroupsRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * DescribeReplicationSubnetGroupsRequest::respo
 }
 
 /*!
- * @internal
+ * \class QtAws::DatabaseMigrationService::DescribeReplicationSubnetGroupsRequestPrivate
+ * \brief The DescribeReplicationSubnetGroupsRequestPrivate class provides private implementation for DescribeReplicationSubnetGroupsRequest.
+ * \internal
  *
- * @class  DescribeReplicationSubnetGroupsRequestPrivate
- *
- * @brief  Private implementation for DescribeReplicationSubnetGroupsRequest.
+ * \inmodule QtAwsDatabaseMigrationService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeReplicationSubnetGroupsRequestPrivate object.
- *
- * @param  action  DatabaseMigrationService action being performed.
- * @param  q       Pointer to this object's public DescribeReplicationSubnetGroupsRequest instance.
+ * Constructs a DescribeReplicationSubnetGroupsRequestPrivate object for DatabaseMigrationService \a action with,
+ * public implementation \a q.
  */
 DescribeReplicationSubnetGroupsRequestPrivate::DescribeReplicationSubnetGroupsRequestPrivate(
     const DatabaseMigrationServiceRequest::Action action, DescribeReplicationSubnetGroupsRequest * const q)
@@ -115,15 +104,10 @@ DescribeReplicationSubnetGroupsRequestPrivate::DescribeReplicationSubnetGroupsRe
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeReplicationSubnetGroupsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeReplicationSubnetGroupsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeReplicationSubnetGroupsRequest instance.
  */
 DescribeReplicationSubnetGroupsRequestPrivate::DescribeReplicationSubnetGroupsRequestPrivate(
     const DescribeReplicationSubnetGroupsRequestPrivate &other, DescribeReplicationSubnetGroupsRequest * const q)

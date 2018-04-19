@@ -27,10 +27,9 @@ namespace Lightsail {
 
 /*!
  * \class QtAws::Lightsail::DetachInstancesFromLoadBalancerRequest
- *
  * \brief The DetachInstancesFromLoadBalancerRequest class provides an interface for Lightsail DetachInstancesFromLoadBalancer requests.
  *
- * \ingroup Lightsail
+ * \inmodule QtAwsLightsail
  *
  *  Amazon Lightsail is the easiest way to get started with AWS for developers who just need virtual private servers.
  *  Lightsail includes everything you need to launch your project quickly - a virtual machine, SSD-based storage, data
@@ -53,9 +52,7 @@ namespace Lightsail {
  */
 
 /*!
- * @brief  Constructs a new DetachInstancesFromLoadBalancerRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DetachInstancesFromLoadBalancerRequest::DetachInstancesFromLoadBalancerRequest(const DetachInstancesFromLoadBalancerRequest &other)
     : LightsailRequest(new DetachInstancesFromLoadBalancerRequestPrivate(*other.d_func(), this))
@@ -64,7 +61,7 @@ DetachInstancesFromLoadBalancerRequest::DetachInstancesFromLoadBalancerRequest(c
 }
 
 /*!
- * @brief  Constructs a new DetachInstancesFromLoadBalancerRequest object.
+ * Constructs a DetachInstancesFromLoadBalancerRequest object.
  */
 DetachInstancesFromLoadBalancerRequest::DetachInstancesFromLoadBalancerRequest()
     : LightsailRequest(new DetachInstancesFromLoadBalancerRequestPrivate(LightsailRequest::DetachInstancesFromLoadBalancerAction, this))
@@ -82,14 +79,9 @@ bool DetachInstancesFromLoadBalancerRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DetachInstancesFromLoadBalancerResponse object.
+ * Returns a DetachInstancesFromLoadBalancerResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DetachInstancesFromLoadBalancerResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  LightsailClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DetachInstancesFromLoadBalancerRequest::response(QNetworkReply * const reply) const
 {
@@ -97,20 +89,17 @@ QtAws::Core::AwsAbstractResponse * DetachInstancesFromLoadBalancerRequest::respo
 }
 
 /*!
- * @internal
+ * \class QtAws::Lightsail::DetachInstancesFromLoadBalancerRequestPrivate
+ * \brief The DetachInstancesFromLoadBalancerRequestPrivate class provides private implementation for DetachInstancesFromLoadBalancerRequest.
+ * \internal
  *
- * @class  DetachInstancesFromLoadBalancerRequestPrivate
- *
- * @brief  Private implementation for DetachInstancesFromLoadBalancerRequest.
+ * \inmodule QtAwsLightsail
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DetachInstancesFromLoadBalancerRequestPrivate object.
- *
- * @param  action  Lightsail action being performed.
- * @param  q       Pointer to this object's public DetachInstancesFromLoadBalancerRequest instance.
+ * Constructs a DetachInstancesFromLoadBalancerRequestPrivate object for Lightsail \a action with,
+ * public implementation \a q.
  */
 DetachInstancesFromLoadBalancerRequestPrivate::DetachInstancesFromLoadBalancerRequestPrivate(
     const LightsailRequest::Action action, DetachInstancesFromLoadBalancerRequest * const q)
@@ -120,15 +109,10 @@ DetachInstancesFromLoadBalancerRequestPrivate::DetachInstancesFromLoadBalancerRe
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DetachInstancesFromLoadBalancerRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DetachInstancesFromLoadBalancerRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DetachInstancesFromLoadBalancerRequest instance.
  */
 DetachInstancesFromLoadBalancerRequestPrivate::DetachInstancesFromLoadBalancerRequestPrivate(
     const DetachInstancesFromLoadBalancerRequestPrivate &other, DetachInstancesFromLoadBalancerRequest * const q)

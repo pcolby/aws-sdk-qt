@@ -27,10 +27,9 @@ namespace EMR {
 
 /*!
  * \class QtAws::EMR::RemoveTagsRequest
- *
  * \brief The RemoveTagsRequest class provides an interface for EMR RemoveTags requests.
  *
- * \ingroup EMR
+ * \inmodule QtAwsEMR
  *
  *  Amazon EMR is a web service that makes it easy to process large amounts of data efficiently. Amazon EMR uses Hadoop
  *  processing combined with several AWS products to do tasks such as web indexing, data mining, log file analysis, machine
@@ -40,9 +39,7 @@ namespace EMR {
  */
 
 /*!
- * @brief  Constructs a new RemoveTagsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 RemoveTagsRequest::RemoveTagsRequest(const RemoveTagsRequest &other)
     : EMRRequest(new RemoveTagsRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ RemoveTagsRequest::RemoveTagsRequest(const RemoveTagsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new RemoveTagsRequest object.
+ * Constructs a RemoveTagsRequest object.
  */
 RemoveTagsRequest::RemoveTagsRequest()
     : EMRRequest(new RemoveTagsRequestPrivate(EMRRequest::RemoveTagsAction, this))
@@ -69,14 +66,9 @@ bool RemoveTagsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an RemoveTagsResponse object.
+ * Returns a RemoveTagsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An RemoveTagsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EMRClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * RemoveTagsRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * RemoveTagsRequest::response(QNetworkReply * c
 }
 
 /*!
- * @internal
+ * \class QtAws::EMR::RemoveTagsRequestPrivate
+ * \brief The RemoveTagsRequestPrivate class provides private implementation for RemoveTagsRequest.
+ * \internal
  *
- * @class  RemoveTagsRequestPrivate
- *
- * @brief  Private implementation for RemoveTagsRequest.
+ * \inmodule QtAwsEMR
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new RemoveTagsRequestPrivate object.
- *
- * @param  action  EMR action being performed.
- * @param  q       Pointer to this object's public RemoveTagsRequest instance.
+ * Constructs a RemoveTagsRequestPrivate object for EMR \a action with,
+ * public implementation \a q.
  */
 RemoveTagsRequestPrivate::RemoveTagsRequestPrivate(
     const EMRRequest::Action action, RemoveTagsRequest * const q)
@@ -107,15 +96,10 @@ RemoveTagsRequestPrivate::RemoveTagsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RemoveTagsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the RemoveTagsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public RemoveTagsRequest instance.
  */
 RemoveTagsRequestPrivate::RemoveTagsRequestPrivate(
     const RemoveTagsRequestPrivate &other, RemoveTagsRequest * const q)

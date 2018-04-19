@@ -27,19 +27,16 @@ namespace Pinpoint {
 
 /*!
  * \class QtAws::Pinpoint::GetSegmentVersionRequest
- *
  * \brief The GetSegmentVersionRequest class provides an interface for Pinpoint GetSegmentVersion requests.
  *
- * \ingroup Pinpoint
+ * \inmodule QtAwsPinpoint
  *
  *
  * \sa PinpointClient::getSegmentVersion
  */
 
 /*!
- * @brief  Constructs a new GetSegmentVersionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetSegmentVersionRequest::GetSegmentVersionRequest(const GetSegmentVersionRequest &other)
     : PinpointRequest(new GetSegmentVersionRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ GetSegmentVersionRequest::GetSegmentVersionRequest(const GetSegmentVersionReques
 }
 
 /*!
- * @brief  Constructs a new GetSegmentVersionRequest object.
+ * Constructs a GetSegmentVersionRequest object.
  */
 GetSegmentVersionRequest::GetSegmentVersionRequest()
     : PinpointRequest(new GetSegmentVersionRequestPrivate(PinpointRequest::GetSegmentVersionAction, this))
@@ -66,14 +63,9 @@ bool GetSegmentVersionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetSegmentVersionResponse object.
+ * Returns a GetSegmentVersionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetSegmentVersionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  PinpointClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetSegmentVersionRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * GetSegmentVersionRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::Pinpoint::GetSegmentVersionRequestPrivate
+ * \brief The GetSegmentVersionRequestPrivate class provides private implementation for GetSegmentVersionRequest.
+ * \internal
  *
- * @class  GetSegmentVersionRequestPrivate
- *
- * @brief  Private implementation for GetSegmentVersionRequest.
+ * \inmodule QtAwsPinpoint
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetSegmentVersionRequestPrivate object.
- *
- * @param  action  Pinpoint action being performed.
- * @param  q       Pointer to this object's public GetSegmentVersionRequest instance.
+ * Constructs a GetSegmentVersionRequestPrivate object for Pinpoint \a action with,
+ * public implementation \a q.
  */
 GetSegmentVersionRequestPrivate::GetSegmentVersionRequestPrivate(
     const PinpointRequest::Action action, GetSegmentVersionRequest * const q)
@@ -104,15 +93,10 @@ GetSegmentVersionRequestPrivate::GetSegmentVersionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetSegmentVersionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetSegmentVersionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetSegmentVersionRequest instance.
  */
 GetSegmentVersionRequestPrivate::GetSegmentVersionRequestPrivate(
     const GetSegmentVersionRequestPrivate &other, GetSegmentVersionRequest * const q)

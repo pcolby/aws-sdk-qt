@@ -27,10 +27,9 @@ namespace SFN {
 
 /*!
  * \class QtAws::SFN::SendTaskSuccessRequest
- *
  * \brief The SendTaskSuccessRequest class provides an interface for SFN SendTaskSuccess requests.
  *
- * \ingroup SFN
+ * \inmodule QtAwsSFN
  *
  *  <fullname>AWS Step Functions</fullname>
  * 
@@ -56,9 +55,7 @@ namespace SFN {
  */
 
 /*!
- * @brief  Constructs a new SendTaskSuccessRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 SendTaskSuccessRequest::SendTaskSuccessRequest(const SendTaskSuccessRequest &other)
     : SFNRequest(new SendTaskSuccessRequestPrivate(*other.d_func(), this))
@@ -67,7 +64,7 @@ SendTaskSuccessRequest::SendTaskSuccessRequest(const SendTaskSuccessRequest &oth
 }
 
 /*!
- * @brief  Constructs a new SendTaskSuccessRequest object.
+ * Constructs a SendTaskSuccessRequest object.
  */
 SendTaskSuccessRequest::SendTaskSuccessRequest()
     : SFNRequest(new SendTaskSuccessRequestPrivate(SFNRequest::SendTaskSuccessAction, this))
@@ -85,14 +82,9 @@ bool SendTaskSuccessRequest::isValid() const
 
 
 /*!
- * @brief  Construct an SendTaskSuccessResponse object.
+ * Returns a SendTaskSuccessResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An SendTaskSuccessResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SFNClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * SendTaskSuccessRequest::response(QNetworkReply * const reply) const
 {
@@ -100,20 +92,17 @@ QtAws::Core::AwsAbstractResponse * SendTaskSuccessRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::SFN::SendTaskSuccessRequestPrivate
+ * \brief The SendTaskSuccessRequestPrivate class provides private implementation for SendTaskSuccessRequest.
+ * \internal
  *
- * @class  SendTaskSuccessRequestPrivate
- *
- * @brief  Private implementation for SendTaskSuccessRequest.
+ * \inmodule QtAwsSFN
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new SendTaskSuccessRequestPrivate object.
- *
- * @param  action  SFN action being performed.
- * @param  q       Pointer to this object's public SendTaskSuccessRequest instance.
+ * Constructs a SendTaskSuccessRequestPrivate object for SFN \a action with,
+ * public implementation \a q.
  */
 SendTaskSuccessRequestPrivate::SendTaskSuccessRequestPrivate(
     const SFNRequest::Action action, SendTaskSuccessRequest * const q)
@@ -123,15 +112,10 @@ SendTaskSuccessRequestPrivate::SendTaskSuccessRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SendTaskSuccessRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the SendTaskSuccessRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public SendTaskSuccessRequest instance.
  */
 SendTaskSuccessRequestPrivate::SendTaskSuccessRequestPrivate(
     const SendTaskSuccessRequestPrivate &other, SendTaskSuccessRequest * const q)

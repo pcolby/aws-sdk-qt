@@ -27,10 +27,9 @@ namespace ElasticLoadBalancing {
 
 /*!
  * \class QtAws::ElasticLoadBalancing::RegisterInstancesWithLoadBalancerRequest
- *
  * \brief The RegisterInstancesWithLoadBalancerRequest class provides an interface for ElasticLoadBalancing RegisterInstancesWithLoadBalancer requests.
  *
- * \ingroup ElasticLoadBalancing
+ * \inmodule QtAwsElasticLoadBalancing
  *
  *  <fullname>Elastic Load Balancing</fullname>
  * 
@@ -65,9 +64,7 @@ namespace ElasticLoadBalancing {
  */
 
 /*!
- * @brief  Constructs a new RegisterInstancesWithLoadBalancerRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 RegisterInstancesWithLoadBalancerRequest::RegisterInstancesWithLoadBalancerRequest(const RegisterInstancesWithLoadBalancerRequest &other)
     : ElasticLoadBalancingRequest(new RegisterInstancesWithLoadBalancerRequestPrivate(*other.d_func(), this))
@@ -76,7 +73,7 @@ RegisterInstancesWithLoadBalancerRequest::RegisterInstancesWithLoadBalancerReque
 }
 
 /*!
- * @brief  Constructs a new RegisterInstancesWithLoadBalancerRequest object.
+ * Constructs a RegisterInstancesWithLoadBalancerRequest object.
  */
 RegisterInstancesWithLoadBalancerRequest::RegisterInstancesWithLoadBalancerRequest()
     : ElasticLoadBalancingRequest(new RegisterInstancesWithLoadBalancerRequestPrivate(ElasticLoadBalancingRequest::RegisterInstancesWithLoadBalancerAction, this))
@@ -94,14 +91,9 @@ bool RegisterInstancesWithLoadBalancerRequest::isValid() const
 
 
 /*!
- * @brief  Construct an RegisterInstancesWithLoadBalancerResponse object.
+ * Returns a RegisterInstancesWithLoadBalancerResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An RegisterInstancesWithLoadBalancerResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ElasticLoadBalancingClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * RegisterInstancesWithLoadBalancerRequest::response(QNetworkReply * const reply) const
 {
@@ -109,20 +101,17 @@ QtAws::Core::AwsAbstractResponse * RegisterInstancesWithLoadBalancerRequest::res
 }
 
 /*!
- * @internal
+ * \class QtAws::ElasticLoadBalancing::RegisterInstancesWithLoadBalancerRequestPrivate
+ * \brief The RegisterInstancesWithLoadBalancerRequestPrivate class provides private implementation for RegisterInstancesWithLoadBalancerRequest.
+ * \internal
  *
- * @class  RegisterInstancesWithLoadBalancerRequestPrivate
- *
- * @brief  Private implementation for RegisterInstancesWithLoadBalancerRequest.
+ * \inmodule QtAwsElasticLoadBalancing
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new RegisterInstancesWithLoadBalancerRequestPrivate object.
- *
- * @param  action  ElasticLoadBalancing action being performed.
- * @param  q       Pointer to this object's public RegisterInstancesWithLoadBalancerRequest instance.
+ * Constructs a RegisterInstancesWithLoadBalancerRequestPrivate object for ElasticLoadBalancing \a action with,
+ * public implementation \a q.
  */
 RegisterInstancesWithLoadBalancerRequestPrivate::RegisterInstancesWithLoadBalancerRequestPrivate(
     const ElasticLoadBalancingRequest::Action action, RegisterInstancesWithLoadBalancerRequest * const q)
@@ -132,15 +121,10 @@ RegisterInstancesWithLoadBalancerRequestPrivate::RegisterInstancesWithLoadBalanc
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RegisterInstancesWithLoadBalancerRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the RegisterInstancesWithLoadBalancerRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public RegisterInstancesWithLoadBalancerRequest instance.
  */
 RegisterInstancesWithLoadBalancerRequestPrivate::RegisterInstancesWithLoadBalancerRequestPrivate(
     const RegisterInstancesWithLoadBalancerRequestPrivate &other, RegisterInstancesWithLoadBalancerRequest * const q)

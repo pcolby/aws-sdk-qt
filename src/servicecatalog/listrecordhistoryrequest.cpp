@@ -27,10 +27,9 @@ namespace ServiceCatalog {
 
 /*!
  * \class QtAws::ServiceCatalog::ListRecordHistoryRequest
- *
  * \brief The ListRecordHistoryRequest class provides an interface for ServiceCatalog ListRecordHistory requests.
  *
- * \ingroup ServiceCatalog
+ * \inmodule QtAwsServiceCatalog
  *
  *  <fullname>AWS Service Catalog</fullname>
  * 
@@ -43,9 +42,7 @@ namespace ServiceCatalog {
  */
 
 /*!
- * @brief  Constructs a new ListRecordHistoryRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListRecordHistoryRequest::ListRecordHistoryRequest(const ListRecordHistoryRequest &other)
     : ServiceCatalogRequest(new ListRecordHistoryRequestPrivate(*other.d_func(), this))
@@ -54,7 +51,7 @@ ListRecordHistoryRequest::ListRecordHistoryRequest(const ListRecordHistoryReques
 }
 
 /*!
- * @brief  Constructs a new ListRecordHistoryRequest object.
+ * Constructs a ListRecordHistoryRequest object.
  */
 ListRecordHistoryRequest::ListRecordHistoryRequest()
     : ServiceCatalogRequest(new ListRecordHistoryRequestPrivate(ServiceCatalogRequest::ListRecordHistoryAction, this))
@@ -72,14 +69,9 @@ bool ListRecordHistoryRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListRecordHistoryResponse object.
+ * Returns a ListRecordHistoryResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListRecordHistoryResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ServiceCatalogClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListRecordHistoryRequest::response(QNetworkReply * const reply) const
 {
@@ -87,20 +79,17 @@ QtAws::Core::AwsAbstractResponse * ListRecordHistoryRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::ServiceCatalog::ListRecordHistoryRequestPrivate
+ * \brief The ListRecordHistoryRequestPrivate class provides private implementation for ListRecordHistoryRequest.
+ * \internal
  *
- * @class  ListRecordHistoryRequestPrivate
- *
- * @brief  Private implementation for ListRecordHistoryRequest.
+ * \inmodule QtAwsServiceCatalog
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListRecordHistoryRequestPrivate object.
- *
- * @param  action  ServiceCatalog action being performed.
- * @param  q       Pointer to this object's public ListRecordHistoryRequest instance.
+ * Constructs a ListRecordHistoryRequestPrivate object for ServiceCatalog \a action with,
+ * public implementation \a q.
  */
 ListRecordHistoryRequestPrivate::ListRecordHistoryRequestPrivate(
     const ServiceCatalogRequest::Action action, ListRecordHistoryRequest * const q)
@@ -110,15 +99,10 @@ ListRecordHistoryRequestPrivate::ListRecordHistoryRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListRecordHistoryRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListRecordHistoryRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListRecordHistoryRequest instance.
  */
 ListRecordHistoryRequestPrivate::ListRecordHistoryRequestPrivate(
     const ListRecordHistoryRequestPrivate &other, ListRecordHistoryRequest * const q)

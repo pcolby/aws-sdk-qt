@@ -27,10 +27,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::ListUsersRequest
- *
  * \brief The ListUsersRequest class provides an interface for IAM ListUsers requests.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -102,9 +101,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new ListUsersRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListUsersRequest::ListUsersRequest(const ListUsersRequest &other)
     : IAMRequest(new ListUsersRequestPrivate(*other.d_func(), this))
@@ -113,7 +110,7 @@ ListUsersRequest::ListUsersRequest(const ListUsersRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ListUsersRequest object.
+ * Constructs a ListUsersRequest object.
  */
 ListUsersRequest::ListUsersRequest()
     : IAMRequest(new ListUsersRequestPrivate(IAMRequest::ListUsersAction, this))
@@ -131,14 +128,9 @@ bool ListUsersRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListUsersResponse object.
+ * Returns a ListUsersResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListUsersResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IAMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListUsersRequest::response(QNetworkReply * const reply) const
 {
@@ -146,20 +138,17 @@ QtAws::Core::AwsAbstractResponse * ListUsersRequest::response(QNetworkReply * co
 }
 
 /*!
- * @internal
+ * \class QtAws::IAM::ListUsersRequestPrivate
+ * \brief The ListUsersRequestPrivate class provides private implementation for ListUsersRequest.
+ * \internal
  *
- * @class  ListUsersRequestPrivate
- *
- * @brief  Private implementation for ListUsersRequest.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListUsersRequestPrivate object.
- *
- * @param  action  IAM action being performed.
- * @param  q       Pointer to this object's public ListUsersRequest instance.
+ * Constructs a ListUsersRequestPrivate object for IAM \a action with,
+ * public implementation \a q.
  */
 ListUsersRequestPrivate::ListUsersRequestPrivate(
     const IAMRequest::Action action, ListUsersRequest * const q)
@@ -169,15 +158,10 @@ ListUsersRequestPrivate::ListUsersRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListUsersRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListUsersRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListUsersRequest instance.
  */
 ListUsersRequestPrivate::ListUsersRequestPrivate(
     const ListUsersRequestPrivate &other, ListUsersRequest * const q)

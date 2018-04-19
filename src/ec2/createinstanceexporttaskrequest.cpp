@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::CreateInstanceExportTaskRequest
- *
  * \brief The CreateInstanceExportTaskRequest class provides an interface for EC2 CreateInstanceExportTask requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new CreateInstanceExportTaskRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateInstanceExportTaskRequest::CreateInstanceExportTaskRequest(const CreateInstanceExportTaskRequest &other)
     : EC2Request(new CreateInstanceExportTaskRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ CreateInstanceExportTaskRequest::CreateInstanceExportTaskRequest(const CreateIns
 }
 
 /*!
- * @brief  Constructs a new CreateInstanceExportTaskRequest object.
+ * Constructs a CreateInstanceExportTaskRequest object.
  */
 CreateInstanceExportTaskRequest::CreateInstanceExportTaskRequest()
     : EC2Request(new CreateInstanceExportTaskRequestPrivate(EC2Request::CreateInstanceExportTaskAction, this))
@@ -70,14 +67,9 @@ bool CreateInstanceExportTaskRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateInstanceExportTaskResponse object.
+ * Returns a CreateInstanceExportTaskResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateInstanceExportTaskResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateInstanceExportTaskRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * CreateInstanceExportTaskRequest::response(QNe
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::CreateInstanceExportTaskRequestPrivate
+ * \brief The CreateInstanceExportTaskRequestPrivate class provides private implementation for CreateInstanceExportTaskRequest.
+ * \internal
  *
- * @class  CreateInstanceExportTaskRequestPrivate
- *
- * @brief  Private implementation for CreateInstanceExportTaskRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateInstanceExportTaskRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public CreateInstanceExportTaskRequest instance.
+ * Constructs a CreateInstanceExportTaskRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 CreateInstanceExportTaskRequestPrivate::CreateInstanceExportTaskRequestPrivate(
     const EC2Request::Action action, CreateInstanceExportTaskRequest * const q)
@@ -108,15 +97,10 @@ CreateInstanceExportTaskRequestPrivate::CreateInstanceExportTaskRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateInstanceExportTaskRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateInstanceExportTaskRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateInstanceExportTaskRequest instance.
  */
 CreateInstanceExportTaskRequestPrivate::CreateInstanceExportTaskRequestPrivate(
     const CreateInstanceExportTaskRequestPrivate &other, CreateInstanceExportTaskRequest * const q)

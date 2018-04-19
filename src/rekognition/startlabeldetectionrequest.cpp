@@ -27,10 +27,9 @@ namespace Rekognition {
 
 /*!
  * \class QtAws::Rekognition::StartLabelDetectionRequest
- *
  * \brief The StartLabelDetectionRequest class provides an interface for Rekognition StartLabelDetection requests.
  *
- * \ingroup Rekognition
+ * \inmodule QtAwsRekognition
  *
  *  This is the Amazon Rekognition API
  *
@@ -38,9 +37,7 @@ namespace Rekognition {
  */
 
 /*!
- * @brief  Constructs a new StartLabelDetectionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 StartLabelDetectionRequest::StartLabelDetectionRequest(const StartLabelDetectionRequest &other)
     : RekognitionRequest(new StartLabelDetectionRequestPrivate(*other.d_func(), this))
@@ -49,7 +46,7 @@ StartLabelDetectionRequest::StartLabelDetectionRequest(const StartLabelDetection
 }
 
 /*!
- * @brief  Constructs a new StartLabelDetectionRequest object.
+ * Constructs a StartLabelDetectionRequest object.
  */
 StartLabelDetectionRequest::StartLabelDetectionRequest()
     : RekognitionRequest(new StartLabelDetectionRequestPrivate(RekognitionRequest::StartLabelDetectionAction, this))
@@ -67,14 +64,9 @@ bool StartLabelDetectionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an StartLabelDetectionResponse object.
+ * Returns a StartLabelDetectionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An StartLabelDetectionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RekognitionClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * StartLabelDetectionRequest::response(QNetworkReply * const reply) const
 {
@@ -82,20 +74,17 @@ QtAws::Core::AwsAbstractResponse * StartLabelDetectionRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::Rekognition::StartLabelDetectionRequestPrivate
+ * \brief The StartLabelDetectionRequestPrivate class provides private implementation for StartLabelDetectionRequest.
+ * \internal
  *
- * @class  StartLabelDetectionRequestPrivate
- *
- * @brief  Private implementation for StartLabelDetectionRequest.
+ * \inmodule QtAwsRekognition
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new StartLabelDetectionRequestPrivate object.
- *
- * @param  action  Rekognition action being performed.
- * @param  q       Pointer to this object's public StartLabelDetectionRequest instance.
+ * Constructs a StartLabelDetectionRequestPrivate object for Rekognition \a action with,
+ * public implementation \a q.
  */
 StartLabelDetectionRequestPrivate::StartLabelDetectionRequestPrivate(
     const RekognitionRequest::Action action, StartLabelDetectionRequest * const q)
@@ -105,15 +94,10 @@ StartLabelDetectionRequestPrivate::StartLabelDetectionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StartLabelDetectionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the StartLabelDetectionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public StartLabelDetectionRequest instance.
  */
 StartLabelDetectionRequestPrivate::StartLabelDetectionRequestPrivate(
     const StartLabelDetectionRequestPrivate &other, StartLabelDetectionRequest * const q)

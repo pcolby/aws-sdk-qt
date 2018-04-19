@@ -27,10 +27,9 @@ namespace ElasticBeanstalk {
 
 /*!
  * \class QtAws::ElasticBeanstalk::DescribeApplicationVersionsRequest
- *
  * \brief The DescribeApplicationVersionsRequest class provides an interface for ElasticBeanstalk DescribeApplicationVersions requests.
  *
- * \ingroup ElasticBeanstalk
+ * \inmodule QtAwsElasticBeanstalk
  *
  *  <fullname>AWS Elastic Beanstalk</fullname>
  * 
@@ -59,9 +58,7 @@ namespace ElasticBeanstalk {
  */
 
 /*!
- * @brief  Constructs a new DescribeApplicationVersionsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeApplicationVersionsRequest::DescribeApplicationVersionsRequest(const DescribeApplicationVersionsRequest &other)
     : ElasticBeanstalkRequest(new DescribeApplicationVersionsRequestPrivate(*other.d_func(), this))
@@ -70,7 +67,7 @@ DescribeApplicationVersionsRequest::DescribeApplicationVersionsRequest(const Des
 }
 
 /*!
- * @brief  Constructs a new DescribeApplicationVersionsRequest object.
+ * Constructs a DescribeApplicationVersionsRequest object.
  */
 DescribeApplicationVersionsRequest::DescribeApplicationVersionsRequest()
     : ElasticBeanstalkRequest(new DescribeApplicationVersionsRequestPrivate(ElasticBeanstalkRequest::DescribeApplicationVersionsAction, this))
@@ -88,14 +85,9 @@ bool DescribeApplicationVersionsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeApplicationVersionsResponse object.
+ * Returns a DescribeApplicationVersionsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeApplicationVersionsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ElasticBeanstalkClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeApplicationVersionsRequest::response(QNetworkReply * const reply) const
 {
@@ -103,20 +95,17 @@ QtAws::Core::AwsAbstractResponse * DescribeApplicationVersionsRequest::response(
 }
 
 /*!
- * @internal
+ * \class QtAws::ElasticBeanstalk::DescribeApplicationVersionsRequestPrivate
+ * \brief The DescribeApplicationVersionsRequestPrivate class provides private implementation for DescribeApplicationVersionsRequest.
+ * \internal
  *
- * @class  DescribeApplicationVersionsRequestPrivate
- *
- * @brief  Private implementation for DescribeApplicationVersionsRequest.
+ * \inmodule QtAwsElasticBeanstalk
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeApplicationVersionsRequestPrivate object.
- *
- * @param  action  ElasticBeanstalk action being performed.
- * @param  q       Pointer to this object's public DescribeApplicationVersionsRequest instance.
+ * Constructs a DescribeApplicationVersionsRequestPrivate object for ElasticBeanstalk \a action with,
+ * public implementation \a q.
  */
 DescribeApplicationVersionsRequestPrivate::DescribeApplicationVersionsRequestPrivate(
     const ElasticBeanstalkRequest::Action action, DescribeApplicationVersionsRequest * const q)
@@ -126,15 +115,10 @@ DescribeApplicationVersionsRequestPrivate::DescribeApplicationVersionsRequestPri
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeApplicationVersionsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeApplicationVersionsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeApplicationVersionsRequest instance.
  */
 DescribeApplicationVersionsRequestPrivate::DescribeApplicationVersionsRequestPrivate(
     const DescribeApplicationVersionsRequestPrivate &other, DescribeApplicationVersionsRequest * const q)

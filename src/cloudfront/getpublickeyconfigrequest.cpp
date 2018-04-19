@@ -27,10 +27,9 @@ namespace CloudFront {
 
 /*!
  * \class QtAws::CloudFront::GetPublicKeyConfigRequest
- *
  * \brief The GetPublicKeyConfigRequest class provides an interface for CloudFront GetPublicKeyConfig requests.
  *
- * \ingroup CloudFront
+ * \inmodule QtAwsCloudFront
  *
  *  <fullname>Amazon CloudFront</fullname>
  * 
@@ -42,9 +41,7 @@ namespace CloudFront {
  */
 
 /*!
- * @brief  Constructs a new GetPublicKeyConfigRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetPublicKeyConfigRequest::GetPublicKeyConfigRequest(const GetPublicKeyConfigRequest &other)
     : CloudFrontRequest(new GetPublicKeyConfigRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ GetPublicKeyConfigRequest::GetPublicKeyConfigRequest(const GetPublicKeyConfigReq
 }
 
 /*!
- * @brief  Constructs a new GetPublicKeyConfigRequest object.
+ * Constructs a GetPublicKeyConfigRequest object.
  */
 GetPublicKeyConfigRequest::GetPublicKeyConfigRequest()
     : CloudFrontRequest(new GetPublicKeyConfigRequestPrivate(CloudFrontRequest::GetPublicKeyConfigAction, this))
@@ -71,14 +68,9 @@ bool GetPublicKeyConfigRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetPublicKeyConfigResponse object.
+ * Returns a GetPublicKeyConfigResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetPublicKeyConfigResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudFrontClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetPublicKeyConfigRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * GetPublicKeyConfigRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudFront::GetPublicKeyConfigRequestPrivate
+ * \brief The GetPublicKeyConfigRequestPrivate class provides private implementation for GetPublicKeyConfigRequest.
+ * \internal
  *
- * @class  GetPublicKeyConfigRequestPrivate
- *
- * @brief  Private implementation for GetPublicKeyConfigRequest.
+ * \inmodule QtAwsCloudFront
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetPublicKeyConfigRequestPrivate object.
- *
- * @param  action  CloudFront action being performed.
- * @param  q       Pointer to this object's public GetPublicKeyConfigRequest instance.
+ * Constructs a GetPublicKeyConfigRequestPrivate object for CloudFront \a action with,
+ * public implementation \a q.
  */
 GetPublicKeyConfigRequestPrivate::GetPublicKeyConfigRequestPrivate(
     const CloudFrontRequest::Action action, GetPublicKeyConfigRequest * const q)
@@ -109,15 +98,10 @@ GetPublicKeyConfigRequestPrivate::GetPublicKeyConfigRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetPublicKeyConfigRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetPublicKeyConfigRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetPublicKeyConfigRequest instance.
  */
 GetPublicKeyConfigRequestPrivate::GetPublicKeyConfigRequestPrivate(
     const GetPublicKeyConfigRequestPrivate &other, GetPublicKeyConfigRequest * const q)

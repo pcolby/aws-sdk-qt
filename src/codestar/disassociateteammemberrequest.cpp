@@ -27,10 +27,9 @@ namespace CodeStar {
 
 /*!
  * \class QtAws::CodeStar::DisassociateTeamMemberRequest
- *
  * \brief The DisassociateTeamMemberRequest class provides an interface for CodeStar DisassociateTeamMember requests.
  *
- * \ingroup CodeStar
+ * \inmodule QtAwsCodeStar
  *
  *  <fullname>AWS CodeStar</fullname>
  * 
@@ -125,9 +124,7 @@ namespace CodeStar {
  */
 
 /*!
- * @brief  Constructs a new DisassociateTeamMemberRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DisassociateTeamMemberRequest::DisassociateTeamMemberRequest(const DisassociateTeamMemberRequest &other)
     : CodeStarRequest(new DisassociateTeamMemberRequestPrivate(*other.d_func(), this))
@@ -136,7 +133,7 @@ DisassociateTeamMemberRequest::DisassociateTeamMemberRequest(const DisassociateT
 }
 
 /*!
- * @brief  Constructs a new DisassociateTeamMemberRequest object.
+ * Constructs a DisassociateTeamMemberRequest object.
  */
 DisassociateTeamMemberRequest::DisassociateTeamMemberRequest()
     : CodeStarRequest(new DisassociateTeamMemberRequestPrivate(CodeStarRequest::DisassociateTeamMemberAction, this))
@@ -154,14 +151,9 @@ bool DisassociateTeamMemberRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DisassociateTeamMemberResponse object.
+ * Returns a DisassociateTeamMemberResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DisassociateTeamMemberResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CodeStarClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DisassociateTeamMemberRequest::response(QNetworkReply * const reply) const
 {
@@ -169,20 +161,17 @@ QtAws::Core::AwsAbstractResponse * DisassociateTeamMemberRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::CodeStar::DisassociateTeamMemberRequestPrivate
+ * \brief The DisassociateTeamMemberRequestPrivate class provides private implementation for DisassociateTeamMemberRequest.
+ * \internal
  *
- * @class  DisassociateTeamMemberRequestPrivate
- *
- * @brief  Private implementation for DisassociateTeamMemberRequest.
+ * \inmodule QtAwsCodeStar
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DisassociateTeamMemberRequestPrivate object.
- *
- * @param  action  CodeStar action being performed.
- * @param  q       Pointer to this object's public DisassociateTeamMemberRequest instance.
+ * Constructs a DisassociateTeamMemberRequestPrivate object for CodeStar \a action with,
+ * public implementation \a q.
  */
 DisassociateTeamMemberRequestPrivate::DisassociateTeamMemberRequestPrivate(
     const CodeStarRequest::Action action, DisassociateTeamMemberRequest * const q)
@@ -192,15 +181,10 @@ DisassociateTeamMemberRequestPrivate::DisassociateTeamMemberRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DisassociateTeamMemberRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DisassociateTeamMemberRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DisassociateTeamMemberRequest instance.
  */
 DisassociateTeamMemberRequestPrivate::DisassociateTeamMemberRequestPrivate(
     const DisassociateTeamMemberRequestPrivate &other, DisassociateTeamMemberRequest * const q)

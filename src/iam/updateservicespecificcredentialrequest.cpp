@@ -27,10 +27,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::UpdateServiceSpecificCredentialRequest
- *
  * \brief The UpdateServiceSpecificCredentialRequest class provides an interface for IAM UpdateServiceSpecificCredential requests.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -102,9 +101,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new UpdateServiceSpecificCredentialRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateServiceSpecificCredentialRequest::UpdateServiceSpecificCredentialRequest(const UpdateServiceSpecificCredentialRequest &other)
     : IAMRequest(new UpdateServiceSpecificCredentialRequestPrivate(*other.d_func(), this))
@@ -113,7 +110,7 @@ UpdateServiceSpecificCredentialRequest::UpdateServiceSpecificCredentialRequest(c
 }
 
 /*!
- * @brief  Constructs a new UpdateServiceSpecificCredentialRequest object.
+ * Constructs a UpdateServiceSpecificCredentialRequest object.
  */
 UpdateServiceSpecificCredentialRequest::UpdateServiceSpecificCredentialRequest()
     : IAMRequest(new UpdateServiceSpecificCredentialRequestPrivate(IAMRequest::UpdateServiceSpecificCredentialAction, this))
@@ -131,14 +128,9 @@ bool UpdateServiceSpecificCredentialRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateServiceSpecificCredentialResponse object.
+ * Returns a UpdateServiceSpecificCredentialResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateServiceSpecificCredentialResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IAMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateServiceSpecificCredentialRequest::response(QNetworkReply * const reply) const
 {
@@ -146,20 +138,17 @@ QtAws::Core::AwsAbstractResponse * UpdateServiceSpecificCredentialRequest::respo
 }
 
 /*!
- * @internal
+ * \class QtAws::IAM::UpdateServiceSpecificCredentialRequestPrivate
+ * \brief The UpdateServiceSpecificCredentialRequestPrivate class provides private implementation for UpdateServiceSpecificCredentialRequest.
+ * \internal
  *
- * @class  UpdateServiceSpecificCredentialRequestPrivate
- *
- * @brief  Private implementation for UpdateServiceSpecificCredentialRequest.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateServiceSpecificCredentialRequestPrivate object.
- *
- * @param  action  IAM action being performed.
- * @param  q       Pointer to this object's public UpdateServiceSpecificCredentialRequest instance.
+ * Constructs a UpdateServiceSpecificCredentialRequestPrivate object for IAM \a action with,
+ * public implementation \a q.
  */
 UpdateServiceSpecificCredentialRequestPrivate::UpdateServiceSpecificCredentialRequestPrivate(
     const IAMRequest::Action action, UpdateServiceSpecificCredentialRequest * const q)
@@ -169,15 +158,10 @@ UpdateServiceSpecificCredentialRequestPrivate::UpdateServiceSpecificCredentialRe
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateServiceSpecificCredentialRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateServiceSpecificCredentialRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateServiceSpecificCredentialRequest instance.
  */
 UpdateServiceSpecificCredentialRequestPrivate::UpdateServiceSpecificCredentialRequestPrivate(
     const UpdateServiceSpecificCredentialRequestPrivate &other, UpdateServiceSpecificCredentialRequest * const q)

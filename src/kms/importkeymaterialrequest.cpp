@@ -27,10 +27,9 @@ namespace KMS {
 
 /*!
  * \class QtAws::KMS::ImportKeyMaterialRequest
- *
  * \brief The ImportKeyMaterialRequest class provides an interface for KMS ImportKeyMaterial requests.
  *
- * \ingroup KMS
+ * \inmodule QtAwsKMS
  *
  *  <fullname>AWS Key Management Service</fullname>
  * 
@@ -136,9 +135,7 @@ namespace KMS {
  */
 
 /*!
- * @brief  Constructs a new ImportKeyMaterialRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ImportKeyMaterialRequest::ImportKeyMaterialRequest(const ImportKeyMaterialRequest &other)
     : KMSRequest(new ImportKeyMaterialRequestPrivate(*other.d_func(), this))
@@ -147,7 +144,7 @@ ImportKeyMaterialRequest::ImportKeyMaterialRequest(const ImportKeyMaterialReques
 }
 
 /*!
- * @brief  Constructs a new ImportKeyMaterialRequest object.
+ * Constructs a ImportKeyMaterialRequest object.
  */
 ImportKeyMaterialRequest::ImportKeyMaterialRequest()
     : KMSRequest(new ImportKeyMaterialRequestPrivate(KMSRequest::ImportKeyMaterialAction, this))
@@ -165,14 +162,9 @@ bool ImportKeyMaterialRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ImportKeyMaterialResponse object.
+ * Returns a ImportKeyMaterialResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ImportKeyMaterialResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  KMSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ImportKeyMaterialRequest::response(QNetworkReply * const reply) const
 {
@@ -180,20 +172,17 @@ QtAws::Core::AwsAbstractResponse * ImportKeyMaterialRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::KMS::ImportKeyMaterialRequestPrivate
+ * \brief The ImportKeyMaterialRequestPrivate class provides private implementation for ImportKeyMaterialRequest.
+ * \internal
  *
- * @class  ImportKeyMaterialRequestPrivate
- *
- * @brief  Private implementation for ImportKeyMaterialRequest.
+ * \inmodule QtAwsKMS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ImportKeyMaterialRequestPrivate object.
- *
- * @param  action  KMS action being performed.
- * @param  q       Pointer to this object's public ImportKeyMaterialRequest instance.
+ * Constructs a ImportKeyMaterialRequestPrivate object for KMS \a action with,
+ * public implementation \a q.
  */
 ImportKeyMaterialRequestPrivate::ImportKeyMaterialRequestPrivate(
     const KMSRequest::Action action, ImportKeyMaterialRequest * const q)
@@ -203,15 +192,10 @@ ImportKeyMaterialRequestPrivate::ImportKeyMaterialRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ImportKeyMaterialRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ImportKeyMaterialRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ImportKeyMaterialRequest instance.
  */
 ImportKeyMaterialRequestPrivate::ImportKeyMaterialRequestPrivate(
     const ImportKeyMaterialRequestPrivate &other, ImportKeyMaterialRequest * const q)

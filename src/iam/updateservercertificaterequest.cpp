@@ -27,10 +27,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::UpdateServerCertificateRequest
- *
  * \brief The UpdateServerCertificateRequest class provides an interface for IAM UpdateServerCertificate requests.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -102,9 +101,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new UpdateServerCertificateRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateServerCertificateRequest::UpdateServerCertificateRequest(const UpdateServerCertificateRequest &other)
     : IAMRequest(new UpdateServerCertificateRequestPrivate(*other.d_func(), this))
@@ -113,7 +110,7 @@ UpdateServerCertificateRequest::UpdateServerCertificateRequest(const UpdateServe
 }
 
 /*!
- * @brief  Constructs a new UpdateServerCertificateRequest object.
+ * Constructs a UpdateServerCertificateRequest object.
  */
 UpdateServerCertificateRequest::UpdateServerCertificateRequest()
     : IAMRequest(new UpdateServerCertificateRequestPrivate(IAMRequest::UpdateServerCertificateAction, this))
@@ -131,14 +128,9 @@ bool UpdateServerCertificateRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateServerCertificateResponse object.
+ * Returns a UpdateServerCertificateResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateServerCertificateResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IAMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateServerCertificateRequest::response(QNetworkReply * const reply) const
 {
@@ -146,20 +138,17 @@ QtAws::Core::AwsAbstractResponse * UpdateServerCertificateRequest::response(QNet
 }
 
 /*!
- * @internal
+ * \class QtAws::IAM::UpdateServerCertificateRequestPrivate
+ * \brief The UpdateServerCertificateRequestPrivate class provides private implementation for UpdateServerCertificateRequest.
+ * \internal
  *
- * @class  UpdateServerCertificateRequestPrivate
- *
- * @brief  Private implementation for UpdateServerCertificateRequest.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateServerCertificateRequestPrivate object.
- *
- * @param  action  IAM action being performed.
- * @param  q       Pointer to this object's public UpdateServerCertificateRequest instance.
+ * Constructs a UpdateServerCertificateRequestPrivate object for IAM \a action with,
+ * public implementation \a q.
  */
 UpdateServerCertificateRequestPrivate::UpdateServerCertificateRequestPrivate(
     const IAMRequest::Action action, UpdateServerCertificateRequest * const q)
@@ -169,15 +158,10 @@ UpdateServerCertificateRequestPrivate::UpdateServerCertificateRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateServerCertificateRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateServerCertificateRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateServerCertificateRequest instance.
  */
 UpdateServerCertificateRequestPrivate::UpdateServerCertificateRequestPrivate(
     const UpdateServerCertificateRequestPrivate &other, UpdateServerCertificateRequest * const q)

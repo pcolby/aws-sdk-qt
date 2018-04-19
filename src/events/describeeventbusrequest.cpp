@@ -27,10 +27,9 @@ namespace CloudWatchEvents {
 
 /*!
  * \class QtAws::CloudWatchEvents::DescribeEventBusRequest
- *
  * \brief The DescribeEventBusRequest class provides an interface for CloudWatchEvents DescribeEventBus requests.
  *
- * \ingroup CloudWatchEvents
+ * \inmodule QtAwsCloudWatchEvents
  *
  *  Amazon CloudWatch Events helps you to respond to state changes in your AWS resources. When your resources change state,
  *  they automatically send events into an event stream. You can create rules that match selected events in the stream and
@@ -60,9 +59,7 @@ namespace CloudWatchEvents {
  */
 
 /*!
- * @brief  Constructs a new DescribeEventBusRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeEventBusRequest::DescribeEventBusRequest(const DescribeEventBusRequest &other)
     : CloudWatchEventsRequest(new DescribeEventBusRequestPrivate(*other.d_func(), this))
@@ -71,7 +68,7 @@ DescribeEventBusRequest::DescribeEventBusRequest(const DescribeEventBusRequest &
 }
 
 /*!
- * @brief  Constructs a new DescribeEventBusRequest object.
+ * Constructs a DescribeEventBusRequest object.
  */
 DescribeEventBusRequest::DescribeEventBusRequest()
     : CloudWatchEventsRequest(new DescribeEventBusRequestPrivate(CloudWatchEventsRequest::DescribeEventBusAction, this))
@@ -89,14 +86,9 @@ bool DescribeEventBusRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeEventBusResponse object.
+ * Returns a DescribeEventBusResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeEventBusResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudWatchEventsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeEventBusRequest::response(QNetworkReply * const reply) const
 {
@@ -104,20 +96,17 @@ QtAws::Core::AwsAbstractResponse * DescribeEventBusRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudWatchEvents::DescribeEventBusRequestPrivate
+ * \brief The DescribeEventBusRequestPrivate class provides private implementation for DescribeEventBusRequest.
+ * \internal
  *
- * @class  DescribeEventBusRequestPrivate
- *
- * @brief  Private implementation for DescribeEventBusRequest.
+ * \inmodule QtAwsCloudWatchEvents
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeEventBusRequestPrivate object.
- *
- * @param  action  CloudWatchEvents action being performed.
- * @param  q       Pointer to this object's public DescribeEventBusRequest instance.
+ * Constructs a DescribeEventBusRequestPrivate object for CloudWatchEvents \a action with,
+ * public implementation \a q.
  */
 DescribeEventBusRequestPrivate::DescribeEventBusRequestPrivate(
     const CloudWatchEventsRequest::Action action, DescribeEventBusRequest * const q)
@@ -127,15 +116,10 @@ DescribeEventBusRequestPrivate::DescribeEventBusRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeEventBusRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeEventBusRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeEventBusRequest instance.
  */
 DescribeEventBusRequestPrivate::DescribeEventBusRequestPrivate(
     const DescribeEventBusRequestPrivate &other, DescribeEventBusRequest * const q)

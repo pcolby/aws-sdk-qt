@@ -27,10 +27,9 @@ namespace StorageGateway {
 
 /*!
  * \class QtAws::StorageGateway::DescribeNFSFileSharesRequest
- *
  * \brief The DescribeNFSFileSharesRequest class provides an interface for StorageGateway DescribeNFSFileShares requests.
  *
- * \ingroup StorageGateway
+ * \inmodule QtAwsStorageGateway
  *
  *  <fullname>AWS Storage Gateway Service</fullname>
  * 
@@ -106,9 +105,7 @@ namespace StorageGateway {
  */
 
 /*!
- * @brief  Constructs a new DescribeNFSFileSharesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeNFSFileSharesRequest::DescribeNFSFileSharesRequest(const DescribeNFSFileSharesRequest &other)
     : StorageGatewayRequest(new DescribeNFSFileSharesRequestPrivate(*other.d_func(), this))
@@ -117,7 +114,7 @@ DescribeNFSFileSharesRequest::DescribeNFSFileSharesRequest(const DescribeNFSFile
 }
 
 /*!
- * @brief  Constructs a new DescribeNFSFileSharesRequest object.
+ * Constructs a DescribeNFSFileSharesRequest object.
  */
 DescribeNFSFileSharesRequest::DescribeNFSFileSharesRequest()
     : StorageGatewayRequest(new DescribeNFSFileSharesRequestPrivate(StorageGatewayRequest::DescribeNFSFileSharesAction, this))
@@ -135,14 +132,9 @@ bool DescribeNFSFileSharesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeNFSFileSharesResponse object.
+ * Returns a DescribeNFSFileSharesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeNFSFileSharesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  StorageGatewayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeNFSFileSharesRequest::response(QNetworkReply * const reply) const
 {
@@ -150,20 +142,17 @@ QtAws::Core::AwsAbstractResponse * DescribeNFSFileSharesRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::StorageGateway::DescribeNFSFileSharesRequestPrivate
+ * \brief The DescribeNFSFileSharesRequestPrivate class provides private implementation for DescribeNFSFileSharesRequest.
+ * \internal
  *
- * @class  DescribeNFSFileSharesRequestPrivate
- *
- * @brief  Private implementation for DescribeNFSFileSharesRequest.
+ * \inmodule QtAwsStorageGateway
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeNFSFileSharesRequestPrivate object.
- *
- * @param  action  StorageGateway action being performed.
- * @param  q       Pointer to this object's public DescribeNFSFileSharesRequest instance.
+ * Constructs a DescribeNFSFileSharesRequestPrivate object for StorageGateway \a action with,
+ * public implementation \a q.
  */
 DescribeNFSFileSharesRequestPrivate::DescribeNFSFileSharesRequestPrivate(
     const StorageGatewayRequest::Action action, DescribeNFSFileSharesRequest * const q)
@@ -173,15 +162,10 @@ DescribeNFSFileSharesRequestPrivate::DescribeNFSFileSharesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeNFSFileSharesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeNFSFileSharesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeNFSFileSharesRequest instance.
  */
 DescribeNFSFileSharesRequestPrivate::DescribeNFSFileSharesRequestPrivate(
     const DescribeNFSFileSharesRequestPrivate &other, DescribeNFSFileSharesRequest * const q)

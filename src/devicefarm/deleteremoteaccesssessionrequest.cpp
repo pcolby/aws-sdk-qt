@@ -27,10 +27,9 @@ namespace DeviceFarm {
 
 /*!
  * \class QtAws::DeviceFarm::DeleteRemoteAccessSessionRequest
- *
  * \brief The DeleteRemoteAccessSessionRequest class provides an interface for DeviceFarm DeleteRemoteAccessSession requests.
  *
- * \ingroup DeviceFarm
+ * \inmodule QtAwsDeviceFarm
  *
  *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
  *  phones, tablets, and other devices in the
@@ -39,9 +38,7 @@ namespace DeviceFarm {
  */
 
 /*!
- * @brief  Constructs a new DeleteRemoteAccessSessionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteRemoteAccessSessionRequest::DeleteRemoteAccessSessionRequest(const DeleteRemoteAccessSessionRequest &other)
     : DeviceFarmRequest(new DeleteRemoteAccessSessionRequestPrivate(*other.d_func(), this))
@@ -50,7 +47,7 @@ DeleteRemoteAccessSessionRequest::DeleteRemoteAccessSessionRequest(const DeleteR
 }
 
 /*!
- * @brief  Constructs a new DeleteRemoteAccessSessionRequest object.
+ * Constructs a DeleteRemoteAccessSessionRequest object.
  */
 DeleteRemoteAccessSessionRequest::DeleteRemoteAccessSessionRequest()
     : DeviceFarmRequest(new DeleteRemoteAccessSessionRequestPrivate(DeviceFarmRequest::DeleteRemoteAccessSessionAction, this))
@@ -68,14 +65,9 @@ bool DeleteRemoteAccessSessionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteRemoteAccessSessionResponse object.
+ * Returns a DeleteRemoteAccessSessionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteRemoteAccessSessionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DeviceFarmClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteRemoteAccessSessionRequest::response(QNetworkReply * const reply) const
 {
@@ -83,20 +75,17 @@ QtAws::Core::AwsAbstractResponse * DeleteRemoteAccessSessionRequest::response(QN
 }
 
 /*!
- * @internal
+ * \class QtAws::DeviceFarm::DeleteRemoteAccessSessionRequestPrivate
+ * \brief The DeleteRemoteAccessSessionRequestPrivate class provides private implementation for DeleteRemoteAccessSessionRequest.
+ * \internal
  *
- * @class  DeleteRemoteAccessSessionRequestPrivate
- *
- * @brief  Private implementation for DeleteRemoteAccessSessionRequest.
+ * \inmodule QtAwsDeviceFarm
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteRemoteAccessSessionRequestPrivate object.
- *
- * @param  action  DeviceFarm action being performed.
- * @param  q       Pointer to this object's public DeleteRemoteAccessSessionRequest instance.
+ * Constructs a DeleteRemoteAccessSessionRequestPrivate object for DeviceFarm \a action with,
+ * public implementation \a q.
  */
 DeleteRemoteAccessSessionRequestPrivate::DeleteRemoteAccessSessionRequestPrivate(
     const DeviceFarmRequest::Action action, DeleteRemoteAccessSessionRequest * const q)
@@ -106,15 +95,10 @@ DeleteRemoteAccessSessionRequestPrivate::DeleteRemoteAccessSessionRequestPrivate
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteRemoteAccessSessionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteRemoteAccessSessionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteRemoteAccessSessionRequest instance.
  */
 DeleteRemoteAccessSessionRequestPrivate::DeleteRemoteAccessSessionRequestPrivate(
     const DeleteRemoteAccessSessionRequestPrivate &other, DeleteRemoteAccessSessionRequest * const q)

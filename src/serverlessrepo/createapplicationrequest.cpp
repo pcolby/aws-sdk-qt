@@ -27,10 +27,9 @@ namespace ServerlessApplicationRepository {
 
 /*!
  * \class QtAws::ServerlessApplicationRepository::CreateApplicationRequest
- *
  * \brief The CreateApplicationRequest class provides an interface for ServerlessApplicationRepository CreateApplication requests.
  *
- * \ingroup ServerlessApplicationRepository
+ * \inmodule QtAwsServerlessApplicationRepository
  *
  *  The AWS Serverless Application Repository makes it easy for developers and enterprises to quickly find and deploy
  *  serverless applications in the AWS Cloud. For more information about serverless applications, see Serverless Computing
@@ -58,9 +57,7 @@ namespace ServerlessApplicationRepository {
  */
 
 /*!
- * @brief  Constructs a new CreateApplicationRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateApplicationRequest::CreateApplicationRequest(const CreateApplicationRequest &other)
     : ServerlessApplicationRepositoryRequest(new CreateApplicationRequestPrivate(*other.d_func(), this))
@@ -69,7 +66,7 @@ CreateApplicationRequest::CreateApplicationRequest(const CreateApplicationReques
 }
 
 /*!
- * @brief  Constructs a new CreateApplicationRequest object.
+ * Constructs a CreateApplicationRequest object.
  */
 CreateApplicationRequest::CreateApplicationRequest()
     : ServerlessApplicationRepositoryRequest(new CreateApplicationRequestPrivate(ServerlessApplicationRepositoryRequest::CreateApplicationAction, this))
@@ -87,14 +84,9 @@ bool CreateApplicationRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateApplicationResponse object.
+ * Returns a CreateApplicationResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateApplicationResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ServerlessApplicationRepositoryClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateApplicationRequest::response(QNetworkReply * const reply) const
 {
@@ -102,20 +94,17 @@ QtAws::Core::AwsAbstractResponse * CreateApplicationRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::ServerlessApplicationRepository::CreateApplicationRequestPrivate
+ * \brief The CreateApplicationRequestPrivate class provides private implementation for CreateApplicationRequest.
+ * \internal
  *
- * @class  CreateApplicationRequestPrivate
- *
- * @brief  Private implementation for CreateApplicationRequest.
+ * \inmodule QtAwsServerlessApplicationRepository
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateApplicationRequestPrivate object.
- *
- * @param  action  ServerlessApplicationRepository action being performed.
- * @param  q       Pointer to this object's public CreateApplicationRequest instance.
+ * Constructs a CreateApplicationRequestPrivate object for ServerlessApplicationRepository \a action with,
+ * public implementation \a q.
  */
 CreateApplicationRequestPrivate::CreateApplicationRequestPrivate(
     const ServerlessApplicationRepositoryRequest::Action action, CreateApplicationRequest * const q)
@@ -125,15 +114,10 @@ CreateApplicationRequestPrivate::CreateApplicationRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateApplicationRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateApplicationRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateApplicationRequest instance.
  */
 CreateApplicationRequestPrivate::CreateApplicationRequestPrivate(
     const CreateApplicationRequestPrivate &other, CreateApplicationRequest * const q)

@@ -27,10 +27,9 @@ namespace DeviceFarm {
 
 /*!
  * \class QtAws::DeviceFarm::GetAccountSettingsRequest
- *
  * \brief The GetAccountSettingsRequest class provides an interface for DeviceFarm GetAccountSettings requests.
  *
- * \ingroup DeviceFarm
+ * \inmodule QtAwsDeviceFarm
  *
  *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
  *  phones, tablets, and other devices in the
@@ -39,9 +38,7 @@ namespace DeviceFarm {
  */
 
 /*!
- * @brief  Constructs a new GetAccountSettingsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetAccountSettingsRequest::GetAccountSettingsRequest(const GetAccountSettingsRequest &other)
     : DeviceFarmRequest(new GetAccountSettingsRequestPrivate(*other.d_func(), this))
@@ -50,7 +47,7 @@ GetAccountSettingsRequest::GetAccountSettingsRequest(const GetAccountSettingsReq
 }
 
 /*!
- * @brief  Constructs a new GetAccountSettingsRequest object.
+ * Constructs a GetAccountSettingsRequest object.
  */
 GetAccountSettingsRequest::GetAccountSettingsRequest()
     : DeviceFarmRequest(new GetAccountSettingsRequestPrivate(DeviceFarmRequest::GetAccountSettingsAction, this))
@@ -68,14 +65,9 @@ bool GetAccountSettingsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetAccountSettingsResponse object.
+ * Returns a GetAccountSettingsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetAccountSettingsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DeviceFarmClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetAccountSettingsRequest::response(QNetworkReply * const reply) const
 {
@@ -83,20 +75,17 @@ QtAws::Core::AwsAbstractResponse * GetAccountSettingsRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::DeviceFarm::GetAccountSettingsRequestPrivate
+ * \brief The GetAccountSettingsRequestPrivate class provides private implementation for GetAccountSettingsRequest.
+ * \internal
  *
- * @class  GetAccountSettingsRequestPrivate
- *
- * @brief  Private implementation for GetAccountSettingsRequest.
+ * \inmodule QtAwsDeviceFarm
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetAccountSettingsRequestPrivate object.
- *
- * @param  action  DeviceFarm action being performed.
- * @param  q       Pointer to this object's public GetAccountSettingsRequest instance.
+ * Constructs a GetAccountSettingsRequestPrivate object for DeviceFarm \a action with,
+ * public implementation \a q.
  */
 GetAccountSettingsRequestPrivate::GetAccountSettingsRequestPrivate(
     const DeviceFarmRequest::Action action, GetAccountSettingsRequest * const q)
@@ -106,15 +95,10 @@ GetAccountSettingsRequestPrivate::GetAccountSettingsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetAccountSettingsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetAccountSettingsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetAccountSettingsRequest instance.
  */
 GetAccountSettingsRequestPrivate::GetAccountSettingsRequestPrivate(
     const GetAccountSettingsRequestPrivate &other, GetAccountSettingsRequest * const q)

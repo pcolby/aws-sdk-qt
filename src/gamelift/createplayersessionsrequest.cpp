@@ -27,10 +27,9 @@ namespace GameLift {
 
 /*!
  * \class QtAws::GameLift::CreatePlayerSessionsRequest
- *
  * \brief The CreatePlayerSessionsRequest class provides an interface for GameLift CreatePlayerSessions requests.
  *
- * \ingroup GameLift
+ * \inmodule QtAwsGameLift
  *
  *  <fullname>Amazon GameLift Service</fullname>
  * 
@@ -473,9 +472,7 @@ namespace GameLift {
  */
 
 /*!
- * @brief  Constructs a new CreatePlayerSessionsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreatePlayerSessionsRequest::CreatePlayerSessionsRequest(const CreatePlayerSessionsRequest &other)
     : GameLiftRequest(new CreatePlayerSessionsRequestPrivate(*other.d_func(), this))
@@ -484,7 +481,7 @@ CreatePlayerSessionsRequest::CreatePlayerSessionsRequest(const CreatePlayerSessi
 }
 
 /*!
- * @brief  Constructs a new CreatePlayerSessionsRequest object.
+ * Constructs a CreatePlayerSessionsRequest object.
  */
 CreatePlayerSessionsRequest::CreatePlayerSessionsRequest()
     : GameLiftRequest(new CreatePlayerSessionsRequestPrivate(GameLiftRequest::CreatePlayerSessionsAction, this))
@@ -502,14 +499,9 @@ bool CreatePlayerSessionsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreatePlayerSessionsResponse object.
+ * Returns a CreatePlayerSessionsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreatePlayerSessionsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GameLiftClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreatePlayerSessionsRequest::response(QNetworkReply * const reply) const
 {
@@ -517,20 +509,17 @@ QtAws::Core::AwsAbstractResponse * CreatePlayerSessionsRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::GameLift::CreatePlayerSessionsRequestPrivate
+ * \brief The CreatePlayerSessionsRequestPrivate class provides private implementation for CreatePlayerSessionsRequest.
+ * \internal
  *
- * @class  CreatePlayerSessionsRequestPrivate
- *
- * @brief  Private implementation for CreatePlayerSessionsRequest.
+ * \inmodule QtAwsGameLift
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreatePlayerSessionsRequestPrivate object.
- *
- * @param  action  GameLift action being performed.
- * @param  q       Pointer to this object's public CreatePlayerSessionsRequest instance.
+ * Constructs a CreatePlayerSessionsRequestPrivate object for GameLift \a action with,
+ * public implementation \a q.
  */
 CreatePlayerSessionsRequestPrivate::CreatePlayerSessionsRequestPrivate(
     const GameLiftRequest::Action action, CreatePlayerSessionsRequest * const q)
@@ -540,15 +529,10 @@ CreatePlayerSessionsRequestPrivate::CreatePlayerSessionsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreatePlayerSessionsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreatePlayerSessionsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreatePlayerSessionsRequest instance.
  */
 CreatePlayerSessionsRequestPrivate::CreatePlayerSessionsRequestPrivate(
     const CreatePlayerSessionsRequestPrivate &other, CreatePlayerSessionsRequest * const q)

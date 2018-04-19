@@ -27,10 +27,9 @@ namespace Glacier {
 
 /*!
  * \class QtAws::Glacier::DeleteVaultNotificationsRequest
- *
  * \brief The DeleteVaultNotificationsRequest class provides an interface for Glacier DeleteVaultNotifications requests.
  *
- * \ingroup Glacier
+ * \inmodule QtAwsGlacier
  *
  *  Amazon Glacier is a storage solution for "cold
  * 
@@ -75,9 +74,7 @@ namespace Glacier {
  */
 
 /*!
- * @brief  Constructs a new DeleteVaultNotificationsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteVaultNotificationsRequest::DeleteVaultNotificationsRequest(const DeleteVaultNotificationsRequest &other)
     : GlacierRequest(new DeleteVaultNotificationsRequestPrivate(*other.d_func(), this))
@@ -86,7 +83,7 @@ DeleteVaultNotificationsRequest::DeleteVaultNotificationsRequest(const DeleteVau
 }
 
 /*!
- * @brief  Constructs a new DeleteVaultNotificationsRequest object.
+ * Constructs a DeleteVaultNotificationsRequest object.
  */
 DeleteVaultNotificationsRequest::DeleteVaultNotificationsRequest()
     : GlacierRequest(new DeleteVaultNotificationsRequestPrivate(GlacierRequest::DeleteVaultNotificationsAction, this))
@@ -104,14 +101,9 @@ bool DeleteVaultNotificationsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteVaultNotificationsResponse object.
+ * Returns a DeleteVaultNotificationsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteVaultNotificationsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GlacierClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteVaultNotificationsRequest::response(QNetworkReply * const reply) const
 {
@@ -119,20 +111,17 @@ QtAws::Core::AwsAbstractResponse * DeleteVaultNotificationsRequest::response(QNe
 }
 
 /*!
- * @internal
+ * \class QtAws::Glacier::DeleteVaultNotificationsRequestPrivate
+ * \brief The DeleteVaultNotificationsRequestPrivate class provides private implementation for DeleteVaultNotificationsRequest.
+ * \internal
  *
- * @class  DeleteVaultNotificationsRequestPrivate
- *
- * @brief  Private implementation for DeleteVaultNotificationsRequest.
+ * \inmodule QtAwsGlacier
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteVaultNotificationsRequestPrivate object.
- *
- * @param  action  Glacier action being performed.
- * @param  q       Pointer to this object's public DeleteVaultNotificationsRequest instance.
+ * Constructs a DeleteVaultNotificationsRequestPrivate object for Glacier \a action with,
+ * public implementation \a q.
  */
 DeleteVaultNotificationsRequestPrivate::DeleteVaultNotificationsRequestPrivate(
     const GlacierRequest::Action action, DeleteVaultNotificationsRequest * const q)
@@ -142,15 +131,10 @@ DeleteVaultNotificationsRequestPrivate::DeleteVaultNotificationsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteVaultNotificationsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteVaultNotificationsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteVaultNotificationsRequest instance.
  */
 DeleteVaultNotificationsRequestPrivate::DeleteVaultNotificationsRequestPrivate(
     const DeleteVaultNotificationsRequestPrivate &other, DeleteVaultNotificationsRequest * const q)

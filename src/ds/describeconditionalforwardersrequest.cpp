@@ -27,10 +27,9 @@ namespace DirectoryService {
 
 /*!
  * \class QtAws::DirectoryService::DescribeConditionalForwardersRequest
- *
  * \brief The DescribeConditionalForwardersRequest class provides an interface for DirectoryService DescribeConditionalForwarders requests.
  *
- * \ingroup DirectoryService
+ * \inmodule QtAwsDirectoryService
  *
  *  <fullname>AWS Directory Service</fullname>
  * 
@@ -51,9 +50,7 @@ namespace DirectoryService {
  */
 
 /*!
- * @brief  Constructs a new DescribeConditionalForwardersRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeConditionalForwardersRequest::DescribeConditionalForwardersRequest(const DescribeConditionalForwardersRequest &other)
     : DirectoryServiceRequest(new DescribeConditionalForwardersRequestPrivate(*other.d_func(), this))
@@ -62,7 +59,7 @@ DescribeConditionalForwardersRequest::DescribeConditionalForwardersRequest(const
 }
 
 /*!
- * @brief  Constructs a new DescribeConditionalForwardersRequest object.
+ * Constructs a DescribeConditionalForwardersRequest object.
  */
 DescribeConditionalForwardersRequest::DescribeConditionalForwardersRequest()
     : DirectoryServiceRequest(new DescribeConditionalForwardersRequestPrivate(DirectoryServiceRequest::DescribeConditionalForwardersAction, this))
@@ -80,14 +77,9 @@ bool DescribeConditionalForwardersRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeConditionalForwardersResponse object.
+ * Returns a DescribeConditionalForwardersResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeConditionalForwardersResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DirectoryServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeConditionalForwardersRequest::response(QNetworkReply * const reply) const
 {
@@ -95,20 +87,17 @@ QtAws::Core::AwsAbstractResponse * DescribeConditionalForwardersRequest::respons
 }
 
 /*!
- * @internal
+ * \class QtAws::DirectoryService::DescribeConditionalForwardersRequestPrivate
+ * \brief The DescribeConditionalForwardersRequestPrivate class provides private implementation for DescribeConditionalForwardersRequest.
+ * \internal
  *
- * @class  DescribeConditionalForwardersRequestPrivate
- *
- * @brief  Private implementation for DescribeConditionalForwardersRequest.
+ * \inmodule QtAwsDirectoryService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeConditionalForwardersRequestPrivate object.
- *
- * @param  action  DirectoryService action being performed.
- * @param  q       Pointer to this object's public DescribeConditionalForwardersRequest instance.
+ * Constructs a DescribeConditionalForwardersRequestPrivate object for DirectoryService \a action with,
+ * public implementation \a q.
  */
 DescribeConditionalForwardersRequestPrivate::DescribeConditionalForwardersRequestPrivate(
     const DirectoryServiceRequest::Action action, DescribeConditionalForwardersRequest * const q)
@@ -118,15 +107,10 @@ DescribeConditionalForwardersRequestPrivate::DescribeConditionalForwardersReques
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeConditionalForwardersRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeConditionalForwardersRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeConditionalForwardersRequest instance.
  */
 DescribeConditionalForwardersRequestPrivate::DescribeConditionalForwardersRequestPrivate(
     const DescribeConditionalForwardersRequestPrivate &other, DescribeConditionalForwardersRequest * const q)

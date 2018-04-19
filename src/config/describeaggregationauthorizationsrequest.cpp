@@ -27,10 +27,9 @@ namespace ConfigService {
 
 /*!
  * \class QtAws::ConfigService::DescribeAggregationAuthorizationsRequest
- *
  * \brief The DescribeAggregationAuthorizationsRequest class provides an interface for ConfigService DescribeAggregationAuthorizations requests.
  *
- * \ingroup ConfigService
+ * \inmodule QtAwsConfigService
  *
  *  <fullname>AWS Config</fullname>
  * 
@@ -60,9 +59,7 @@ namespace ConfigService {
  */
 
 /*!
- * @brief  Constructs a new DescribeAggregationAuthorizationsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeAggregationAuthorizationsRequest::DescribeAggregationAuthorizationsRequest(const DescribeAggregationAuthorizationsRequest &other)
     : ConfigServiceRequest(new DescribeAggregationAuthorizationsRequestPrivate(*other.d_func(), this))
@@ -71,7 +68,7 @@ DescribeAggregationAuthorizationsRequest::DescribeAggregationAuthorizationsReque
 }
 
 /*!
- * @brief  Constructs a new DescribeAggregationAuthorizationsRequest object.
+ * Constructs a DescribeAggregationAuthorizationsRequest object.
  */
 DescribeAggregationAuthorizationsRequest::DescribeAggregationAuthorizationsRequest()
     : ConfigServiceRequest(new DescribeAggregationAuthorizationsRequestPrivate(ConfigServiceRequest::DescribeAggregationAuthorizationsAction, this))
@@ -89,14 +86,9 @@ bool DescribeAggregationAuthorizationsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeAggregationAuthorizationsResponse object.
+ * Returns a DescribeAggregationAuthorizationsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeAggregationAuthorizationsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ConfigServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeAggregationAuthorizationsRequest::response(QNetworkReply * const reply) const
 {
@@ -104,20 +96,17 @@ QtAws::Core::AwsAbstractResponse * DescribeAggregationAuthorizationsRequest::res
 }
 
 /*!
- * @internal
+ * \class QtAws::ConfigService::DescribeAggregationAuthorizationsRequestPrivate
+ * \brief The DescribeAggregationAuthorizationsRequestPrivate class provides private implementation for DescribeAggregationAuthorizationsRequest.
+ * \internal
  *
- * @class  DescribeAggregationAuthorizationsRequestPrivate
- *
- * @brief  Private implementation for DescribeAggregationAuthorizationsRequest.
+ * \inmodule QtAwsConfigService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeAggregationAuthorizationsRequestPrivate object.
- *
- * @param  action  ConfigService action being performed.
- * @param  q       Pointer to this object's public DescribeAggregationAuthorizationsRequest instance.
+ * Constructs a DescribeAggregationAuthorizationsRequestPrivate object for ConfigService \a action with,
+ * public implementation \a q.
  */
 DescribeAggregationAuthorizationsRequestPrivate::DescribeAggregationAuthorizationsRequestPrivate(
     const ConfigServiceRequest::Action action, DescribeAggregationAuthorizationsRequest * const q)
@@ -127,15 +116,10 @@ DescribeAggregationAuthorizationsRequestPrivate::DescribeAggregationAuthorizatio
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeAggregationAuthorizationsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeAggregationAuthorizationsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeAggregationAuthorizationsRequest instance.
  */
 DescribeAggregationAuthorizationsRequestPrivate::DescribeAggregationAuthorizationsRequestPrivate(
     const DescribeAggregationAuthorizationsRequestPrivate &other, DescribeAggregationAuthorizationsRequest * const q)

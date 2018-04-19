@@ -27,10 +27,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::UpdateDeploymentRequest
- *
  * \brief The UpdateDeploymentRequest class provides an interface for APIGateway UpdateDeployment requests.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -42,9 +41,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new UpdateDeploymentRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateDeploymentRequest::UpdateDeploymentRequest(const UpdateDeploymentRequest &other)
     : APIGatewayRequest(new UpdateDeploymentRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ UpdateDeploymentRequest::UpdateDeploymentRequest(const UpdateDeploymentRequest &
 }
 
 /*!
- * @brief  Constructs a new UpdateDeploymentRequest object.
+ * Constructs a UpdateDeploymentRequest object.
  */
 UpdateDeploymentRequest::UpdateDeploymentRequest()
     : APIGatewayRequest(new UpdateDeploymentRequestPrivate(APIGatewayRequest::UpdateDeploymentAction, this))
@@ -71,14 +68,9 @@ bool UpdateDeploymentRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateDeploymentResponse object.
+ * Returns a UpdateDeploymentResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateDeploymentResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  APIGatewayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateDeploymentRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * UpdateDeploymentRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::APIGateway::UpdateDeploymentRequestPrivate
+ * \brief The UpdateDeploymentRequestPrivate class provides private implementation for UpdateDeploymentRequest.
+ * \internal
  *
- * @class  UpdateDeploymentRequestPrivate
- *
- * @brief  Private implementation for UpdateDeploymentRequest.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateDeploymentRequestPrivate object.
- *
- * @param  action  APIGateway action being performed.
- * @param  q       Pointer to this object's public UpdateDeploymentRequest instance.
+ * Constructs a UpdateDeploymentRequestPrivate object for APIGateway \a action with,
+ * public implementation \a q.
  */
 UpdateDeploymentRequestPrivate::UpdateDeploymentRequestPrivate(
     const APIGatewayRequest::Action action, UpdateDeploymentRequest * const q)
@@ -109,15 +98,10 @@ UpdateDeploymentRequestPrivate::UpdateDeploymentRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateDeploymentRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateDeploymentRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateDeploymentRequest instance.
  */
 UpdateDeploymentRequestPrivate::UpdateDeploymentRequestPrivate(
     const UpdateDeploymentRequestPrivate &other, UpdateDeploymentRequest * const q)

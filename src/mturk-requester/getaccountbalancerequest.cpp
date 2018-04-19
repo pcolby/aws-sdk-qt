@@ -27,19 +27,16 @@ namespace MTurk {
 
 /*!
  * \class QtAws::MTurk::GetAccountBalanceRequest
- *
  * \brief The GetAccountBalanceRequest class provides an interface for MTurk GetAccountBalance requests.
  *
- * \ingroup MTurk
+ * \inmodule QtAwsMTurk
  *
  *
  * \sa MTurkClient::getAccountBalance
  */
 
 /*!
- * @brief  Constructs a new GetAccountBalanceRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetAccountBalanceRequest::GetAccountBalanceRequest(const GetAccountBalanceRequest &other)
     : MTurkRequest(new GetAccountBalanceRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ GetAccountBalanceRequest::GetAccountBalanceRequest(const GetAccountBalanceReques
 }
 
 /*!
- * @brief  Constructs a new GetAccountBalanceRequest object.
+ * Constructs a GetAccountBalanceRequest object.
  */
 GetAccountBalanceRequest::GetAccountBalanceRequest()
     : MTurkRequest(new GetAccountBalanceRequestPrivate(MTurkRequest::GetAccountBalanceAction, this))
@@ -66,14 +63,9 @@ bool GetAccountBalanceRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetAccountBalanceResponse object.
+ * Returns a GetAccountBalanceResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetAccountBalanceResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MTurkClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetAccountBalanceRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * GetAccountBalanceRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::MTurk::GetAccountBalanceRequestPrivate
+ * \brief The GetAccountBalanceRequestPrivate class provides private implementation for GetAccountBalanceRequest.
+ * \internal
  *
- * @class  GetAccountBalanceRequestPrivate
- *
- * @brief  Private implementation for GetAccountBalanceRequest.
+ * \inmodule QtAwsMTurk
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetAccountBalanceRequestPrivate object.
- *
- * @param  action  MTurk action being performed.
- * @param  q       Pointer to this object's public GetAccountBalanceRequest instance.
+ * Constructs a GetAccountBalanceRequestPrivate object for MTurk \a action with,
+ * public implementation \a q.
  */
 GetAccountBalanceRequestPrivate::GetAccountBalanceRequestPrivate(
     const MTurkRequest::Action action, GetAccountBalanceRequest * const q)
@@ -104,15 +93,10 @@ GetAccountBalanceRequestPrivate::GetAccountBalanceRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetAccountBalanceRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetAccountBalanceRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetAccountBalanceRequest instance.
  */
 GetAccountBalanceRequestPrivate::GetAccountBalanceRequestPrivate(
     const GetAccountBalanceRequestPrivate &other, GetAccountBalanceRequest * const q)

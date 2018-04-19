@@ -25,16 +25,32 @@ namespace Athena {
 
 /*!
  * \class QtAws::Athena::AthenaRequest
- *
  * \brief The AthenaRequest class provides an interface for Athena requests.
  *
- * \ingroup Athena
+ * \inmodule QtAwsAthena
  */
 
 /*!
- * @brief  Constructs a new AthenaRequest object.
+ * \enum AthenaRequest::Action
  *
- * @param  action  The Athena action to request.
+ * This enum describes the actions that can be performed as Athena
+ * requests.
+ *
+ * \value BatchGetNamedQueryAction Athena BatchGetNamedQuery action.
+ * \value BatchGetQueryExecutionAction Athena BatchGetQueryExecution action.
+ * \value CreateNamedQueryAction Athena CreateNamedQuery action.
+ * \value DeleteNamedQueryAction Athena DeleteNamedQuery action.
+ * \value GetNamedQueryAction Athena GetNamedQuery action.
+ * \value GetQueryExecutionAction Athena GetQueryExecution action.
+ * \value GetQueryResultsAction Athena GetQueryResults action.
+ * \value ListNamedQueriesAction Athena ListNamedQueries action.
+ * \value ListQueryExecutionsAction Athena ListQueryExecutions action.
+ * \value StartQueryExecutionAction Athena StartQueryExecution action.
+ * \value StopQueryExecutionAction Athena StopQueryExecution action.
+ */
+
+/*!
+ * Constructs a[n] AthenaRequest object for Athena \a action.
  */
 AthenaRequest::AthenaRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new AthenaRequestPrivate(action, this))
@@ -43,9 +59,7 @@ AthenaRequest::AthenaRequest(const Action action)
 }
 
 /*!
- * @brief  Constructs a new AthenaRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AthenaRequest::AthenaRequest(const AthenaRequest &other)
     : QtAws::Core::AwsAbstractRequest(new AthenaRequestPrivate(*other.d_func(), this))
@@ -54,13 +68,7 @@ AthenaRequest::AthenaRequest(const AthenaRequest &other)
 }
 
 /*!
- * @brief  Assignment operator.
- *
- * Assigns \a other to \c this.
- *
- * @param  other  Instance to copy.
- *
- * @return  A reference to \c this.
+ * Sets the AthenaRequest object to be equal to \a other.
  */
 AthenaRequest& AthenaRequest::operator=(const AthenaRequest &other)
 {
@@ -72,14 +80,10 @@ AthenaRequest& AthenaRequest::operator=(const AthenaRequest &other)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AthenaRequest object.
+ * Constructs aa AthenaRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from AthenaRequestPrivate.
- *
- * @param  d  Pointer to private data (aka D-Pointer).
  */
 AthenaRequest::AthenaRequest(AthenaRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
@@ -87,7 +91,7 @@ AthenaRequest::AthenaRequest(AthenaRequestPrivate * const d) : QtAws::Core::AwsA
 }
 
 /*!
- * \brief Returns the Athena action to be performed by this request.
+ * Returns the Athena action to be performed by this request.
  */
 AthenaRequest::Action AthenaRequest::action() const
 {
@@ -96,7 +100,7 @@ AthenaRequest::Action AthenaRequest::action() const
 }
 
 /*!
- * \brief Returns the name of the Athena action to be performed by this request.
+ * Returns the name of the Athena action to be performed by this request.
  */
 QString AthenaRequest::actionString() const
 {
@@ -104,7 +108,7 @@ QString AthenaRequest::actionString() const
 }
 
 /*!
- * \brief Returns the Athena API version implemented by this request.
+ * Returns the Athena API version implemented by this request.
  */
 QString AthenaRequest::apiVersion() const
 {
@@ -113,7 +117,7 @@ QString AthenaRequest::apiVersion() const
 }
 
 /*!
- * @brief Set the Athena action to be performed by this request to \a action.
+ * Sets the Athena action to be performed by this request to \a action.
  */
 void AthenaRequest::setAction(const Action action)
 {
@@ -122,7 +126,7 @@ void AthenaRequest::setAction(const Action action)
 }
 
 /*!
- * Set the Athena API version to include in this request to \a version.
+ * Sets the Athena API version to include in this request to \a version.
  */
 void AthenaRequest::setApiVersion(const QString &version)
 {
@@ -131,7 +135,7 @@ void AthenaRequest::setApiVersion(const QString &version)
 }
 
 /*!
- * \brief Returns \c true if this request is the same as \a other.
+ * Returns \c true if this request is equal to \a other; \c false otherwise.
  *
  * Note, most derived *Request classes do not need to provider their own
  * implementations of this function, since most such request classes rely on
@@ -146,8 +150,8 @@ bool AthenaRequest::operator==(const AthenaRequest &other) const
             (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
-/*!
- * @brief  Check if \a queueName is a valid Athena queue name.
+/*
+ * Returns \c tue if \a queueName is a valid Athena queue name.
  *
  * @par From Athena FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
@@ -166,9 +170,8 @@ bool AthenaRequest::operator==(const AthenaRequest &other) const
 }*/
 
 /*!
- * \brief Removes the a \a name parameter from this request.
- *
- * Returns the count of paramters removed (typically \c 0 or \c 1).
+ * Removes the a \a name parameter from the request, then returns the number of
+ * paramters removed (typically \c 0 or \c 1).
  */
 int AthenaRequest::clearParameter(const QString &name)
 {
@@ -177,7 +180,7 @@ int AthenaRequest::clearParameter(const QString &name)
 }
 
 /*!
- * \brief Removes all parameters from this request.
+ * Removes all parameters from the request.
  */
 void AthenaRequest::clearParameters()
 {
@@ -186,7 +189,7 @@ void AthenaRequest::clearParameters()
 }
 
 /*!
- * \brief Returns the value of the \n name pararemter if set, otherwise \a defaultValue.
+ * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
 QVariant AthenaRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
@@ -195,7 +198,7 @@ QVariant AthenaRequest::parameter(const QString &name, const QVariant &defaultVa
 }
 
 /*!
- * \brief Returns a map of parameters included in this request.
+ * Returns the parameters included in this request.
  */
 const QVariantMap &AthenaRequest::parameters() const
 {
@@ -204,7 +207,7 @@ const QVariantMap &AthenaRequest::parameters() const
 }
 
 /*!
- * \brief Sets the \a name parameter to \a value.
+ * Sets the \a name parameter to \a value.
  */
 void AthenaRequest::setParameter(const QString &name, const QVariant &value)
 {
@@ -213,9 +216,8 @@ void AthenaRequest::setParameter(const QString &name, const QVariant &value)
 }
 
 /*!
- * \brief Sets the map of paramters for this request to \a parameters.
- *
- * Any request parameters set previously will be discarded.
+ * Sets the paramters for this request to \a parameters. Any request parameters
+ * set previously will be discarded.
  */
 void AthenaRequest::setParameters(const QVariantMap &parameters)
 {
@@ -224,11 +226,12 @@ void AthenaRequest::setParameters(const QVariantMap &parameters)
 }
 
 /*!
- * \brief Returns a network request for this Athena request using the given \a endpoint.
+ * Returns a network request for the Athena request using the given
+ * \a endpoint.
  *
- * This Athena implementation builds request URLs by combining the common query
- * parameters (such as Action and Version), with any that have been added (via
- * setParameter) by child classes.
+ * This Athena implementation builds request URLs by combining the
+ * common query parameters (such as Action and Version), with any that have
+ * been added (via setParameter) by child classes.
  */
 QNetworkRequest AthenaRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -239,17 +242,16 @@ QNetworkRequest AthenaRequest::unsignedRequest(const QUrl &endpoint) const
 }
 
 /*!
+ * \class QtAws::Athena::AthenaRequestPrivate
+ * \brief The AthenaRequestPrivate class provides private implementation for AthenaRequest.
  * \internal
  *
- * \class  AthenaRequestPrivate
- *
- * \brief  Private implementation for AthenaRequest.
+ * \inmodule QtAwsAthena
  */
 
 /*!
- * \internal
- *
- * \brief Constructs a new AthenaRequestPrivate object.
+ * Constructs a AthenaRequestPrivate object for Athena \a action with,
+ * public implementation \a q.
  */
 AthenaRequestPrivate::AthenaRequestPrivate(const AthenaRequest::Action action, AthenaRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
@@ -258,9 +260,7 @@ AthenaRequestPrivate::AthenaRequestPrivate(const AthenaRequest::Action action, A
 }
 
 /*!
- * \internal
- *
- * \brief Constructs a new AthenaRequestPrivate object, copying an existing one.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
@@ -276,15 +276,12 @@ AthenaRequestPrivate::AthenaRequestPrivate(const AthenaRequestPrivate &other,
 }
 
 /*!
- * \internal
- *
- * \brief Returns a string representing \a action.
+ * Returns a string represention of \a action, or a null string if \a action is
+ * invalid.
  *
  * This function converts AthenaRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the Athena service's Action
  * query parameters.
- *
- * @return A string representing \a action, or a null string if \a action is invalid.
  */
 QString AthenaRequestPrivate::toString(const AthenaRequest::Action &action)
 {

@@ -27,10 +27,9 @@ namespace CloudDirectory {
 
 /*!
  * \class QtAws::CloudDirectory::AttachPolicyRequest
- *
  * \brief The AttachPolicyRequest class provides an interface for CloudDirectory AttachPolicy requests.
  *
- * \ingroup CloudDirectory
+ * \inmodule QtAwsCloudDirectory
  *
  *  <fullname>Amazon Cloud Directory</fullname>
  * 
@@ -44,9 +43,7 @@ namespace CloudDirectory {
  */
 
 /*!
- * @brief  Constructs a new AttachPolicyRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AttachPolicyRequest::AttachPolicyRequest(const AttachPolicyRequest &other)
     : CloudDirectoryRequest(new AttachPolicyRequestPrivate(*other.d_func(), this))
@@ -55,7 +52,7 @@ AttachPolicyRequest::AttachPolicyRequest(const AttachPolicyRequest &other)
 }
 
 /*!
- * @brief  Constructs a new AttachPolicyRequest object.
+ * Constructs a AttachPolicyRequest object.
  */
 AttachPolicyRequest::AttachPolicyRequest()
     : CloudDirectoryRequest(new AttachPolicyRequestPrivate(CloudDirectoryRequest::AttachPolicyAction, this))
@@ -73,14 +70,9 @@ bool AttachPolicyRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AttachPolicyResponse object.
+ * Returns a AttachPolicyResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AttachPolicyResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudDirectoryClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AttachPolicyRequest::response(QNetworkReply * const reply) const
 {
@@ -88,20 +80,17 @@ QtAws::Core::AwsAbstractResponse * AttachPolicyRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudDirectory::AttachPolicyRequestPrivate
+ * \brief The AttachPolicyRequestPrivate class provides private implementation for AttachPolicyRequest.
+ * \internal
  *
- * @class  AttachPolicyRequestPrivate
- *
- * @brief  Private implementation for AttachPolicyRequest.
+ * \inmodule QtAwsCloudDirectory
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AttachPolicyRequestPrivate object.
- *
- * @param  action  CloudDirectory action being performed.
- * @param  q       Pointer to this object's public AttachPolicyRequest instance.
+ * Constructs a AttachPolicyRequestPrivate object for CloudDirectory \a action with,
+ * public implementation \a q.
  */
 AttachPolicyRequestPrivate::AttachPolicyRequestPrivate(
     const CloudDirectoryRequest::Action action, AttachPolicyRequest * const q)
@@ -111,15 +100,10 @@ AttachPolicyRequestPrivate::AttachPolicyRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AttachPolicyRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AttachPolicyRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AttachPolicyRequest instance.
  */
 AttachPolicyRequestPrivate::AttachPolicyRequestPrivate(
     const AttachPolicyRequestPrivate &other, AttachPolicyRequest * const q)

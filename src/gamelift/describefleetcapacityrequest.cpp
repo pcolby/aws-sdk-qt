@@ -27,10 +27,9 @@ namespace GameLift {
 
 /*!
  * \class QtAws::GameLift::DescribeFleetCapacityRequest
- *
  * \brief The DescribeFleetCapacityRequest class provides an interface for GameLift DescribeFleetCapacity requests.
  *
- * \ingroup GameLift
+ * \inmodule QtAwsGameLift
  *
  *  <fullname>Amazon GameLift Service</fullname>
  * 
@@ -473,9 +472,7 @@ namespace GameLift {
  */
 
 /*!
- * @brief  Constructs a new DescribeFleetCapacityRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeFleetCapacityRequest::DescribeFleetCapacityRequest(const DescribeFleetCapacityRequest &other)
     : GameLiftRequest(new DescribeFleetCapacityRequestPrivate(*other.d_func(), this))
@@ -484,7 +481,7 @@ DescribeFleetCapacityRequest::DescribeFleetCapacityRequest(const DescribeFleetCa
 }
 
 /*!
- * @brief  Constructs a new DescribeFleetCapacityRequest object.
+ * Constructs a DescribeFleetCapacityRequest object.
  */
 DescribeFleetCapacityRequest::DescribeFleetCapacityRequest()
     : GameLiftRequest(new DescribeFleetCapacityRequestPrivate(GameLiftRequest::DescribeFleetCapacityAction, this))
@@ -502,14 +499,9 @@ bool DescribeFleetCapacityRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeFleetCapacityResponse object.
+ * Returns a DescribeFleetCapacityResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeFleetCapacityResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GameLiftClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeFleetCapacityRequest::response(QNetworkReply * const reply) const
 {
@@ -517,20 +509,17 @@ QtAws::Core::AwsAbstractResponse * DescribeFleetCapacityRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::GameLift::DescribeFleetCapacityRequestPrivate
+ * \brief The DescribeFleetCapacityRequestPrivate class provides private implementation for DescribeFleetCapacityRequest.
+ * \internal
  *
- * @class  DescribeFleetCapacityRequestPrivate
- *
- * @brief  Private implementation for DescribeFleetCapacityRequest.
+ * \inmodule QtAwsGameLift
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeFleetCapacityRequestPrivate object.
- *
- * @param  action  GameLift action being performed.
- * @param  q       Pointer to this object's public DescribeFleetCapacityRequest instance.
+ * Constructs a DescribeFleetCapacityRequestPrivate object for GameLift \a action with,
+ * public implementation \a q.
  */
 DescribeFleetCapacityRequestPrivate::DescribeFleetCapacityRequestPrivate(
     const GameLiftRequest::Action action, DescribeFleetCapacityRequest * const q)
@@ -540,15 +529,10 @@ DescribeFleetCapacityRequestPrivate::DescribeFleetCapacityRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeFleetCapacityRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeFleetCapacityRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeFleetCapacityRequest instance.
  */
 DescribeFleetCapacityRequestPrivate::DescribeFleetCapacityRequestPrivate(
     const DescribeFleetCapacityRequestPrivate &other, DescribeFleetCapacityRequest * const q)

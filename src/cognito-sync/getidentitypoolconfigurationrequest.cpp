@@ -27,10 +27,9 @@ namespace CognitoSync {
 
 /*!
  * \class QtAws::CognitoSync::GetIdentityPoolConfigurationRequest
- *
  * \brief The GetIdentityPoolConfigurationRequest class provides an interface for CognitoSync GetIdentityPoolConfiguration requests.
  *
- * \ingroup CognitoSync
+ * \inmodule QtAwsCognitoSync
  *
  *  <fullname>Amazon Cognito Sync</fullname>
  * 
@@ -57,9 +56,7 @@ namespace CognitoSync {
  */
 
 /*!
- * @brief  Constructs a new GetIdentityPoolConfigurationRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetIdentityPoolConfigurationRequest::GetIdentityPoolConfigurationRequest(const GetIdentityPoolConfigurationRequest &other)
     : CognitoSyncRequest(new GetIdentityPoolConfigurationRequestPrivate(*other.d_func(), this))
@@ -68,7 +65,7 @@ GetIdentityPoolConfigurationRequest::GetIdentityPoolConfigurationRequest(const G
 }
 
 /*!
- * @brief  Constructs a new GetIdentityPoolConfigurationRequest object.
+ * Constructs a GetIdentityPoolConfigurationRequest object.
  */
 GetIdentityPoolConfigurationRequest::GetIdentityPoolConfigurationRequest()
     : CognitoSyncRequest(new GetIdentityPoolConfigurationRequestPrivate(CognitoSyncRequest::GetIdentityPoolConfigurationAction, this))
@@ -86,14 +83,9 @@ bool GetIdentityPoolConfigurationRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetIdentityPoolConfigurationResponse object.
+ * Returns a GetIdentityPoolConfigurationResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetIdentityPoolConfigurationResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CognitoSyncClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetIdentityPoolConfigurationRequest::response(QNetworkReply * const reply) const
 {
@@ -101,20 +93,17 @@ QtAws::Core::AwsAbstractResponse * GetIdentityPoolConfigurationRequest::response
 }
 
 /*!
- * @internal
+ * \class QtAws::CognitoSync::GetIdentityPoolConfigurationRequestPrivate
+ * \brief The GetIdentityPoolConfigurationRequestPrivate class provides private implementation for GetIdentityPoolConfigurationRequest.
+ * \internal
  *
- * @class  GetIdentityPoolConfigurationRequestPrivate
- *
- * @brief  Private implementation for GetIdentityPoolConfigurationRequest.
+ * \inmodule QtAwsCognitoSync
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetIdentityPoolConfigurationRequestPrivate object.
- *
- * @param  action  CognitoSync action being performed.
- * @param  q       Pointer to this object's public GetIdentityPoolConfigurationRequest instance.
+ * Constructs a GetIdentityPoolConfigurationRequestPrivate object for CognitoSync \a action with,
+ * public implementation \a q.
  */
 GetIdentityPoolConfigurationRequestPrivate::GetIdentityPoolConfigurationRequestPrivate(
     const CognitoSyncRequest::Action action, GetIdentityPoolConfigurationRequest * const q)
@@ -124,15 +113,10 @@ GetIdentityPoolConfigurationRequestPrivate::GetIdentityPoolConfigurationRequestP
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetIdentityPoolConfigurationRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetIdentityPoolConfigurationRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetIdentityPoolConfigurationRequest instance.
  */
 GetIdentityPoolConfigurationRequestPrivate::GetIdentityPoolConfigurationRequestPrivate(
     const GetIdentityPoolConfigurationRequestPrivate &other, GetIdentityPoolConfigurationRequest * const q)

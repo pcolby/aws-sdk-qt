@@ -27,10 +27,9 @@ namespace Inspector {
 
 /*!
  * \class QtAws::Inspector::ListFindingsRequest
- *
  * \brief The ListFindingsRequest class provides an interface for Inspector ListFindings requests.
  *
- * \ingroup Inspector
+ * \inmodule QtAwsInspector
  *
  *  <fullname>Amazon Inspector</fullname>
  * 
@@ -42,9 +41,7 @@ namespace Inspector {
  */
 
 /*!
- * @brief  Constructs a new ListFindingsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListFindingsRequest::ListFindingsRequest(const ListFindingsRequest &other)
     : InspectorRequest(new ListFindingsRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ ListFindingsRequest::ListFindingsRequest(const ListFindingsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ListFindingsRequest object.
+ * Constructs a ListFindingsRequest object.
  */
 ListFindingsRequest::ListFindingsRequest()
     : InspectorRequest(new ListFindingsRequestPrivate(InspectorRequest::ListFindingsAction, this))
@@ -71,14 +68,9 @@ bool ListFindingsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListFindingsResponse object.
+ * Returns a ListFindingsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListFindingsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  InspectorClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListFindingsRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * ListFindingsRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::Inspector::ListFindingsRequestPrivate
+ * \brief The ListFindingsRequestPrivate class provides private implementation for ListFindingsRequest.
+ * \internal
  *
- * @class  ListFindingsRequestPrivate
- *
- * @brief  Private implementation for ListFindingsRequest.
+ * \inmodule QtAwsInspector
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListFindingsRequestPrivate object.
- *
- * @param  action  Inspector action being performed.
- * @param  q       Pointer to this object's public ListFindingsRequest instance.
+ * Constructs a ListFindingsRequestPrivate object for Inspector \a action with,
+ * public implementation \a q.
  */
 ListFindingsRequestPrivate::ListFindingsRequestPrivate(
     const InspectorRequest::Action action, ListFindingsRequest * const q)
@@ -109,15 +98,10 @@ ListFindingsRequestPrivate::ListFindingsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListFindingsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListFindingsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListFindingsRequest instance.
  */
 ListFindingsRequestPrivate::ListFindingsRequestPrivate(
     const ListFindingsRequestPrivate &other, ListFindingsRequest * const q)

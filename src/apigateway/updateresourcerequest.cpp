@@ -27,10 +27,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::UpdateResourceRequest
- *
  * \brief The UpdateResourceRequest class provides an interface for APIGateway UpdateResource requests.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -42,9 +41,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new UpdateResourceRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateResourceRequest::UpdateResourceRequest(const UpdateResourceRequest &other)
     : APIGatewayRequest(new UpdateResourceRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ UpdateResourceRequest::UpdateResourceRequest(const UpdateResourceRequest &other)
 }
 
 /*!
- * @brief  Constructs a new UpdateResourceRequest object.
+ * Constructs a UpdateResourceRequest object.
  */
 UpdateResourceRequest::UpdateResourceRequest()
     : APIGatewayRequest(new UpdateResourceRequestPrivate(APIGatewayRequest::UpdateResourceAction, this))
@@ -71,14 +68,9 @@ bool UpdateResourceRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateResourceResponse object.
+ * Returns a UpdateResourceResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateResourceResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  APIGatewayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateResourceRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * UpdateResourceRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::APIGateway::UpdateResourceRequestPrivate
+ * \brief The UpdateResourceRequestPrivate class provides private implementation for UpdateResourceRequest.
+ * \internal
  *
- * @class  UpdateResourceRequestPrivate
- *
- * @brief  Private implementation for UpdateResourceRequest.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateResourceRequestPrivate object.
- *
- * @param  action  APIGateway action being performed.
- * @param  q       Pointer to this object's public UpdateResourceRequest instance.
+ * Constructs a UpdateResourceRequestPrivate object for APIGateway \a action with,
+ * public implementation \a q.
  */
 UpdateResourceRequestPrivate::UpdateResourceRequestPrivate(
     const APIGatewayRequest::Action action, UpdateResourceRequest * const q)
@@ -109,15 +98,10 @@ UpdateResourceRequestPrivate::UpdateResourceRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateResourceRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateResourceRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateResourceRequest instance.
  */
 UpdateResourceRequestPrivate::UpdateResourceRequestPrivate(
     const UpdateResourceRequestPrivate &other, UpdateResourceRequest * const q)

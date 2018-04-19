@@ -27,10 +27,9 @@ namespace Inspector {
 
 /*!
  * \class QtAws::Inspector::StartAssessmentRunRequest
- *
  * \brief The StartAssessmentRunRequest class provides an interface for Inspector StartAssessmentRun requests.
  *
- * \ingroup Inspector
+ * \inmodule QtAwsInspector
  *
  *  <fullname>Amazon Inspector</fullname>
  * 
@@ -42,9 +41,7 @@ namespace Inspector {
  */
 
 /*!
- * @brief  Constructs a new StartAssessmentRunRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 StartAssessmentRunRequest::StartAssessmentRunRequest(const StartAssessmentRunRequest &other)
     : InspectorRequest(new StartAssessmentRunRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ StartAssessmentRunRequest::StartAssessmentRunRequest(const StartAssessmentRunReq
 }
 
 /*!
- * @brief  Constructs a new StartAssessmentRunRequest object.
+ * Constructs a StartAssessmentRunRequest object.
  */
 StartAssessmentRunRequest::StartAssessmentRunRequest()
     : InspectorRequest(new StartAssessmentRunRequestPrivate(InspectorRequest::StartAssessmentRunAction, this))
@@ -71,14 +68,9 @@ bool StartAssessmentRunRequest::isValid() const
 
 
 /*!
- * @brief  Construct an StartAssessmentRunResponse object.
+ * Returns a StartAssessmentRunResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An StartAssessmentRunResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  InspectorClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * StartAssessmentRunRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * StartAssessmentRunRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::Inspector::StartAssessmentRunRequestPrivate
+ * \brief The StartAssessmentRunRequestPrivate class provides private implementation for StartAssessmentRunRequest.
+ * \internal
  *
- * @class  StartAssessmentRunRequestPrivate
- *
- * @brief  Private implementation for StartAssessmentRunRequest.
+ * \inmodule QtAwsInspector
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new StartAssessmentRunRequestPrivate object.
- *
- * @param  action  Inspector action being performed.
- * @param  q       Pointer to this object's public StartAssessmentRunRequest instance.
+ * Constructs a StartAssessmentRunRequestPrivate object for Inspector \a action with,
+ * public implementation \a q.
  */
 StartAssessmentRunRequestPrivate::StartAssessmentRunRequestPrivate(
     const InspectorRequest::Action action, StartAssessmentRunRequest * const q)
@@ -109,15 +98,10 @@ StartAssessmentRunRequestPrivate::StartAssessmentRunRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StartAssessmentRunRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the StartAssessmentRunRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public StartAssessmentRunRequest instance.
  */
 StartAssessmentRunRequestPrivate::StartAssessmentRunRequestPrivate(
     const StartAssessmentRunRequestPrivate &other, StartAssessmentRunRequest * const q)

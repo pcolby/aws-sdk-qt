@@ -27,10 +27,9 @@ namespace Rekognition {
 
 /*!
  * \class QtAws::Rekognition::StopStreamProcessorRequest
- *
  * \brief The StopStreamProcessorRequest class provides an interface for Rekognition StopStreamProcessor requests.
  *
- * \ingroup Rekognition
+ * \inmodule QtAwsRekognition
  *
  *  This is the Amazon Rekognition API
  *
@@ -38,9 +37,7 @@ namespace Rekognition {
  */
 
 /*!
- * @brief  Constructs a new StopStreamProcessorRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 StopStreamProcessorRequest::StopStreamProcessorRequest(const StopStreamProcessorRequest &other)
     : RekognitionRequest(new StopStreamProcessorRequestPrivate(*other.d_func(), this))
@@ -49,7 +46,7 @@ StopStreamProcessorRequest::StopStreamProcessorRequest(const StopStreamProcessor
 }
 
 /*!
- * @brief  Constructs a new StopStreamProcessorRequest object.
+ * Constructs a StopStreamProcessorRequest object.
  */
 StopStreamProcessorRequest::StopStreamProcessorRequest()
     : RekognitionRequest(new StopStreamProcessorRequestPrivate(RekognitionRequest::StopStreamProcessorAction, this))
@@ -67,14 +64,9 @@ bool StopStreamProcessorRequest::isValid() const
 
 
 /*!
- * @brief  Construct an StopStreamProcessorResponse object.
+ * Returns a StopStreamProcessorResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An StopStreamProcessorResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RekognitionClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * StopStreamProcessorRequest::response(QNetworkReply * const reply) const
 {
@@ -82,20 +74,17 @@ QtAws::Core::AwsAbstractResponse * StopStreamProcessorRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::Rekognition::StopStreamProcessorRequestPrivate
+ * \brief The StopStreamProcessorRequestPrivate class provides private implementation for StopStreamProcessorRequest.
+ * \internal
  *
- * @class  StopStreamProcessorRequestPrivate
- *
- * @brief  Private implementation for StopStreamProcessorRequest.
+ * \inmodule QtAwsRekognition
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new StopStreamProcessorRequestPrivate object.
- *
- * @param  action  Rekognition action being performed.
- * @param  q       Pointer to this object's public StopStreamProcessorRequest instance.
+ * Constructs a StopStreamProcessorRequestPrivate object for Rekognition \a action with,
+ * public implementation \a q.
  */
 StopStreamProcessorRequestPrivate::StopStreamProcessorRequestPrivate(
     const RekognitionRequest::Action action, StopStreamProcessorRequest * const q)
@@ -105,15 +94,10 @@ StopStreamProcessorRequestPrivate::StopStreamProcessorRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StopStreamProcessorRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the StopStreamProcessorRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public StopStreamProcessorRequest instance.
  */
 StopStreamProcessorRequestPrivate::StopStreamProcessorRequestPrivate(
     const StopStreamProcessorRequestPrivate &other, StopStreamProcessorRequest * const q)

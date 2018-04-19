@@ -27,10 +27,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::GetAccessKeyLastUsedRequest
- *
  * \brief The GetAccessKeyLastUsedRequest class provides an interface for IAM GetAccessKeyLastUsed requests.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -102,9 +101,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new GetAccessKeyLastUsedRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetAccessKeyLastUsedRequest::GetAccessKeyLastUsedRequest(const GetAccessKeyLastUsedRequest &other)
     : IAMRequest(new GetAccessKeyLastUsedRequestPrivate(*other.d_func(), this))
@@ -113,7 +110,7 @@ GetAccessKeyLastUsedRequest::GetAccessKeyLastUsedRequest(const GetAccessKeyLastU
 }
 
 /*!
- * @brief  Constructs a new GetAccessKeyLastUsedRequest object.
+ * Constructs a GetAccessKeyLastUsedRequest object.
  */
 GetAccessKeyLastUsedRequest::GetAccessKeyLastUsedRequest()
     : IAMRequest(new GetAccessKeyLastUsedRequestPrivate(IAMRequest::GetAccessKeyLastUsedAction, this))
@@ -131,14 +128,9 @@ bool GetAccessKeyLastUsedRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetAccessKeyLastUsedResponse object.
+ * Returns a GetAccessKeyLastUsedResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetAccessKeyLastUsedResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IAMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetAccessKeyLastUsedRequest::response(QNetworkReply * const reply) const
 {
@@ -146,20 +138,17 @@ QtAws::Core::AwsAbstractResponse * GetAccessKeyLastUsedRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::IAM::GetAccessKeyLastUsedRequestPrivate
+ * \brief The GetAccessKeyLastUsedRequestPrivate class provides private implementation for GetAccessKeyLastUsedRequest.
+ * \internal
  *
- * @class  GetAccessKeyLastUsedRequestPrivate
- *
- * @brief  Private implementation for GetAccessKeyLastUsedRequest.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetAccessKeyLastUsedRequestPrivate object.
- *
- * @param  action  IAM action being performed.
- * @param  q       Pointer to this object's public GetAccessKeyLastUsedRequest instance.
+ * Constructs a GetAccessKeyLastUsedRequestPrivate object for IAM \a action with,
+ * public implementation \a q.
  */
 GetAccessKeyLastUsedRequestPrivate::GetAccessKeyLastUsedRequestPrivate(
     const IAMRequest::Action action, GetAccessKeyLastUsedRequest * const q)
@@ -169,15 +158,10 @@ GetAccessKeyLastUsedRequestPrivate::GetAccessKeyLastUsedRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetAccessKeyLastUsedRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetAccessKeyLastUsedRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetAccessKeyLastUsedRequest instance.
  */
 GetAccessKeyLastUsedRequestPrivate::GetAccessKeyLastUsedRequestPrivate(
     const GetAccessKeyLastUsedRequestPrivate &other, GetAccessKeyLastUsedRequest * const q)

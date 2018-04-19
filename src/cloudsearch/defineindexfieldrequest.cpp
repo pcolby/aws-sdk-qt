@@ -27,10 +27,9 @@ namespace CloudSearch {
 
 /*!
  * \class QtAws::CloudSearch::DefineIndexFieldRequest
- *
  * \brief The DefineIndexFieldRequest class provides an interface for CloudSearch DefineIndexField requests.
  *
- * \ingroup CloudSearch
+ * \inmodule QtAwsCloudSearch
  *
  *  <fullname>Amazon CloudSearch Configuration Service</fullname>
  * 
@@ -48,9 +47,7 @@ namespace CloudSearch {
  */
 
 /*!
- * @brief  Constructs a new DefineIndexFieldRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DefineIndexFieldRequest::DefineIndexFieldRequest(const DefineIndexFieldRequest &other)
     : CloudSearchRequest(new DefineIndexFieldRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ DefineIndexFieldRequest::DefineIndexFieldRequest(const DefineIndexFieldRequest &
 }
 
 /*!
- * @brief  Constructs a new DefineIndexFieldRequest object.
+ * Constructs a DefineIndexFieldRequest object.
  */
 DefineIndexFieldRequest::DefineIndexFieldRequest()
     : CloudSearchRequest(new DefineIndexFieldRequestPrivate(CloudSearchRequest::DefineIndexFieldAction, this))
@@ -77,14 +74,9 @@ bool DefineIndexFieldRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DefineIndexFieldResponse object.
+ * Returns a DefineIndexFieldResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DefineIndexFieldResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudSearchClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DefineIndexFieldRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * DefineIndexFieldRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudSearch::DefineIndexFieldRequestPrivate
+ * \brief The DefineIndexFieldRequestPrivate class provides private implementation for DefineIndexFieldRequest.
+ * \internal
  *
- * @class  DefineIndexFieldRequestPrivate
- *
- * @brief  Private implementation for DefineIndexFieldRequest.
+ * \inmodule QtAwsCloudSearch
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DefineIndexFieldRequestPrivate object.
- *
- * @param  action  CloudSearch action being performed.
- * @param  q       Pointer to this object's public DefineIndexFieldRequest instance.
+ * Constructs a DefineIndexFieldRequestPrivate object for CloudSearch \a action with,
+ * public implementation \a q.
  */
 DefineIndexFieldRequestPrivate::DefineIndexFieldRequestPrivate(
     const CloudSearchRequest::Action action, DefineIndexFieldRequest * const q)
@@ -115,15 +104,10 @@ DefineIndexFieldRequestPrivate::DefineIndexFieldRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DefineIndexFieldRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DefineIndexFieldRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DefineIndexFieldRequest instance.
  */
 DefineIndexFieldRequestPrivate::DefineIndexFieldRequestPrivate(
     const DefineIndexFieldRequestPrivate &other, DefineIndexFieldRequest * const q)

@@ -27,19 +27,16 @@ namespace MachineLearning {
 
 /*!
  * \class QtAws::MachineLearning::CreateMLModelRequest
- *
  * \brief The CreateMLModelRequest class provides an interface for MachineLearning CreateMLModel requests.
  *
- * \ingroup MachineLearning
+ * \inmodule QtAwsMachineLearning
  *
  *
  * \sa MachineLearningClient::createMLModel
  */
 
 /*!
- * @brief  Constructs a new CreateMLModelRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateMLModelRequest::CreateMLModelRequest(const CreateMLModelRequest &other)
     : MachineLearningRequest(new CreateMLModelRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ CreateMLModelRequest::CreateMLModelRequest(const CreateMLModelRequest &other)
 }
 
 /*!
- * @brief  Constructs a new CreateMLModelRequest object.
+ * Constructs a CreateMLModelRequest object.
  */
 CreateMLModelRequest::CreateMLModelRequest()
     : MachineLearningRequest(new CreateMLModelRequestPrivate(MachineLearningRequest::CreateMLModelAction, this))
@@ -66,14 +63,9 @@ bool CreateMLModelRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateMLModelResponse object.
+ * Returns a CreateMLModelResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateMLModelResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MachineLearningClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateMLModelRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * CreateMLModelRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::MachineLearning::CreateMLModelRequestPrivate
+ * \brief The CreateMLModelRequestPrivate class provides private implementation for CreateMLModelRequest.
+ * \internal
  *
- * @class  CreateMLModelRequestPrivate
- *
- * @brief  Private implementation for CreateMLModelRequest.
+ * \inmodule QtAwsMachineLearning
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateMLModelRequestPrivate object.
- *
- * @param  action  MachineLearning action being performed.
- * @param  q       Pointer to this object's public CreateMLModelRequest instance.
+ * Constructs a CreateMLModelRequestPrivate object for MachineLearning \a action with,
+ * public implementation \a q.
  */
 CreateMLModelRequestPrivate::CreateMLModelRequestPrivate(
     const MachineLearningRequest::Action action, CreateMLModelRequest * const q)
@@ -104,15 +93,10 @@ CreateMLModelRequestPrivate::CreateMLModelRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateMLModelRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateMLModelRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateMLModelRequest instance.
  */
 CreateMLModelRequestPrivate::CreateMLModelRequestPrivate(
     const CreateMLModelRequestPrivate &other, CreateMLModelRequest * const q)

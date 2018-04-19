@@ -27,10 +27,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::AttachThingPrincipalRequest
- *
  * \brief The AttachThingPrincipalRequest class provides an interface for IoT AttachThingPrincipal requests.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -48,9 +47,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new AttachThingPrincipalRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AttachThingPrincipalRequest::AttachThingPrincipalRequest(const AttachThingPrincipalRequest &other)
     : IoTRequest(new AttachThingPrincipalRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ AttachThingPrincipalRequest::AttachThingPrincipalRequest(const AttachThingPrinci
 }
 
 /*!
- * @brief  Constructs a new AttachThingPrincipalRequest object.
+ * Constructs a AttachThingPrincipalRequest object.
  */
 AttachThingPrincipalRequest::AttachThingPrincipalRequest()
     : IoTRequest(new AttachThingPrincipalRequestPrivate(IoTRequest::AttachThingPrincipalAction, this))
@@ -77,14 +74,9 @@ bool AttachThingPrincipalRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AttachThingPrincipalResponse object.
+ * Returns a AttachThingPrincipalResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AttachThingPrincipalResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IoTClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AttachThingPrincipalRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * AttachThingPrincipalRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::IoT::AttachThingPrincipalRequestPrivate
+ * \brief The AttachThingPrincipalRequestPrivate class provides private implementation for AttachThingPrincipalRequest.
+ * \internal
  *
- * @class  AttachThingPrincipalRequestPrivate
- *
- * @brief  Private implementation for AttachThingPrincipalRequest.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AttachThingPrincipalRequestPrivate object.
- *
- * @param  action  IoT action being performed.
- * @param  q       Pointer to this object's public AttachThingPrincipalRequest instance.
+ * Constructs a AttachThingPrincipalRequestPrivate object for IoT \a action with,
+ * public implementation \a q.
  */
 AttachThingPrincipalRequestPrivate::AttachThingPrincipalRequestPrivate(
     const IoTRequest::Action action, AttachThingPrincipalRequest * const q)
@@ -115,15 +104,10 @@ AttachThingPrincipalRequestPrivate::AttachThingPrincipalRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AttachThingPrincipalRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AttachThingPrincipalRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AttachThingPrincipalRequest instance.
  */
 AttachThingPrincipalRequestPrivate::AttachThingPrincipalRequestPrivate(
     const AttachThingPrincipalRequestPrivate &other, AttachThingPrincipalRequest * const q)

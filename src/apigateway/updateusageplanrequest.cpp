@@ -27,10 +27,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::UpdateUsagePlanRequest
- *
  * \brief The UpdateUsagePlanRequest class provides an interface for APIGateway UpdateUsagePlan requests.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -42,9 +41,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new UpdateUsagePlanRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateUsagePlanRequest::UpdateUsagePlanRequest(const UpdateUsagePlanRequest &other)
     : APIGatewayRequest(new UpdateUsagePlanRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ UpdateUsagePlanRequest::UpdateUsagePlanRequest(const UpdateUsagePlanRequest &oth
 }
 
 /*!
- * @brief  Constructs a new UpdateUsagePlanRequest object.
+ * Constructs a UpdateUsagePlanRequest object.
  */
 UpdateUsagePlanRequest::UpdateUsagePlanRequest()
     : APIGatewayRequest(new UpdateUsagePlanRequestPrivate(APIGatewayRequest::UpdateUsagePlanAction, this))
@@ -71,14 +68,9 @@ bool UpdateUsagePlanRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateUsagePlanResponse object.
+ * Returns a UpdateUsagePlanResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateUsagePlanResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  APIGatewayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateUsagePlanRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * UpdateUsagePlanRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::APIGateway::UpdateUsagePlanRequestPrivate
+ * \brief The UpdateUsagePlanRequestPrivate class provides private implementation for UpdateUsagePlanRequest.
+ * \internal
  *
- * @class  UpdateUsagePlanRequestPrivate
- *
- * @brief  Private implementation for UpdateUsagePlanRequest.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateUsagePlanRequestPrivate object.
- *
- * @param  action  APIGateway action being performed.
- * @param  q       Pointer to this object's public UpdateUsagePlanRequest instance.
+ * Constructs a UpdateUsagePlanRequestPrivate object for APIGateway \a action with,
+ * public implementation \a q.
  */
 UpdateUsagePlanRequestPrivate::UpdateUsagePlanRequestPrivate(
     const APIGatewayRequest::Action action, UpdateUsagePlanRequest * const q)
@@ -109,15 +98,10 @@ UpdateUsagePlanRequestPrivate::UpdateUsagePlanRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateUsagePlanRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateUsagePlanRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateUsagePlanRequest instance.
  */
 UpdateUsagePlanRequestPrivate::UpdateUsagePlanRequestPrivate(
     const UpdateUsagePlanRequestPrivate &other, UpdateUsagePlanRequest * const q)

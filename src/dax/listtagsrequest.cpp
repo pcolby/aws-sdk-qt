@@ -27,10 +27,9 @@ namespace DAX {
 
 /*!
  * \class QtAws::DAX::ListTagsRequest
- *
  * \brief The ListTagsRequest class provides an interface for DAX ListTags requests.
  *
- * \ingroup DAX
+ * \inmodule QtAwsDAX
  *
  *  DAX is a managed caching service engineered for Amazon DynamoDB. DAX dramatically speeds up database reads by caching
  *  frequently-accessed data from DynamoDB, so applications can access that data with sub-millisecond latency. You can
@@ -41,9 +40,7 @@ namespace DAX {
  */
 
 /*!
- * @brief  Constructs a new ListTagsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListTagsRequest::ListTagsRequest(const ListTagsRequest &other)
     : DAXRequest(new ListTagsRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ ListTagsRequest::ListTagsRequest(const ListTagsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ListTagsRequest object.
+ * Constructs a ListTagsRequest object.
  */
 ListTagsRequest::ListTagsRequest()
     : DAXRequest(new ListTagsRequestPrivate(DAXRequest::ListTagsAction, this))
@@ -70,14 +67,9 @@ bool ListTagsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListTagsResponse object.
+ * Returns a ListTagsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListTagsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DAXClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListTagsRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * ListTagsRequest::response(QNetworkReply * con
 }
 
 /*!
- * @internal
+ * \class QtAws::DAX::ListTagsRequestPrivate
+ * \brief The ListTagsRequestPrivate class provides private implementation for ListTagsRequest.
+ * \internal
  *
- * @class  ListTagsRequestPrivate
- *
- * @brief  Private implementation for ListTagsRequest.
+ * \inmodule QtAwsDAX
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListTagsRequestPrivate object.
- *
- * @param  action  DAX action being performed.
- * @param  q       Pointer to this object's public ListTagsRequest instance.
+ * Constructs a ListTagsRequestPrivate object for DAX \a action with,
+ * public implementation \a q.
  */
 ListTagsRequestPrivate::ListTagsRequestPrivate(
     const DAXRequest::Action action, ListTagsRequest * const q)
@@ -108,15 +97,10 @@ ListTagsRequestPrivate::ListTagsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListTagsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListTagsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListTagsRequest instance.
  */
 ListTagsRequestPrivate::ListTagsRequestPrivate(
     const ListTagsRequestPrivate &other, ListTagsRequest * const q)

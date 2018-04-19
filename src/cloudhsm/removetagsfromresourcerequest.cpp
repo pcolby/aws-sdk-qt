@@ -27,10 +27,9 @@ namespace CloudHSM {
 
 /*!
  * \class QtAws::CloudHSM::RemoveTagsFromResourceRequest
- *
  * \brief The RemoveTagsFromResourceRequest class provides an interface for CloudHSM RemoveTagsFromResource requests.
  *
- * \ingroup CloudHSM
+ * \inmodule QtAwsCloudHSM
  *
  *  <fullname>AWS CloudHSM Service</fullname>
  * 
@@ -49,9 +48,7 @@ namespace CloudHSM {
  */
 
 /*!
- * @brief  Constructs a new RemoveTagsFromResourceRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 RemoveTagsFromResourceRequest::RemoveTagsFromResourceRequest(const RemoveTagsFromResourceRequest &other)
     : CloudHSMRequest(new RemoveTagsFromResourceRequestPrivate(*other.d_func(), this))
@@ -60,7 +57,7 @@ RemoveTagsFromResourceRequest::RemoveTagsFromResourceRequest(const RemoveTagsFro
 }
 
 /*!
- * @brief  Constructs a new RemoveTagsFromResourceRequest object.
+ * Constructs a RemoveTagsFromResourceRequest object.
  */
 RemoveTagsFromResourceRequest::RemoveTagsFromResourceRequest()
     : CloudHSMRequest(new RemoveTagsFromResourceRequestPrivate(CloudHSMRequest::RemoveTagsFromResourceAction, this))
@@ -78,14 +75,9 @@ bool RemoveTagsFromResourceRequest::isValid() const
 
 
 /*!
- * @brief  Construct an RemoveTagsFromResourceResponse object.
+ * Returns a RemoveTagsFromResourceResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An RemoveTagsFromResourceResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudHSMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * RemoveTagsFromResourceRequest::response(QNetworkReply * const reply) const
 {
@@ -93,20 +85,17 @@ QtAws::Core::AwsAbstractResponse * RemoveTagsFromResourceRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudHSM::RemoveTagsFromResourceRequestPrivate
+ * \brief The RemoveTagsFromResourceRequestPrivate class provides private implementation for RemoveTagsFromResourceRequest.
+ * \internal
  *
- * @class  RemoveTagsFromResourceRequestPrivate
- *
- * @brief  Private implementation for RemoveTagsFromResourceRequest.
+ * \inmodule QtAwsCloudHSM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new RemoveTagsFromResourceRequestPrivate object.
- *
- * @param  action  CloudHSM action being performed.
- * @param  q       Pointer to this object's public RemoveTagsFromResourceRequest instance.
+ * Constructs a RemoveTagsFromResourceRequestPrivate object for CloudHSM \a action with,
+ * public implementation \a q.
  */
 RemoveTagsFromResourceRequestPrivate::RemoveTagsFromResourceRequestPrivate(
     const CloudHSMRequest::Action action, RemoveTagsFromResourceRequest * const q)
@@ -116,15 +105,10 @@ RemoveTagsFromResourceRequestPrivate::RemoveTagsFromResourceRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RemoveTagsFromResourceRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the RemoveTagsFromResourceRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public RemoveTagsFromResourceRequest instance.
  */
 RemoveTagsFromResourceRequestPrivate::RemoveTagsFromResourceRequestPrivate(
     const RemoveTagsFromResourceRequestPrivate &other, RemoveTagsFromResourceRequest * const q)

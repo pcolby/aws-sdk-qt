@@ -27,10 +27,9 @@ namespace DeviceFarm {
 
 /*!
  * \class QtAws::DeviceFarm::CreateInstanceProfileRequest
- *
  * \brief The CreateInstanceProfileRequest class provides an interface for DeviceFarm CreateInstanceProfile requests.
  *
- * \ingroup DeviceFarm
+ * \inmodule QtAwsDeviceFarm
  *
  *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
  *  phones, tablets, and other devices in the
@@ -39,9 +38,7 @@ namespace DeviceFarm {
  */
 
 /*!
- * @brief  Constructs a new CreateInstanceProfileRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateInstanceProfileRequest::CreateInstanceProfileRequest(const CreateInstanceProfileRequest &other)
     : DeviceFarmRequest(new CreateInstanceProfileRequestPrivate(*other.d_func(), this))
@@ -50,7 +47,7 @@ CreateInstanceProfileRequest::CreateInstanceProfileRequest(const CreateInstanceP
 }
 
 /*!
- * @brief  Constructs a new CreateInstanceProfileRequest object.
+ * Constructs a CreateInstanceProfileRequest object.
  */
 CreateInstanceProfileRequest::CreateInstanceProfileRequest()
     : DeviceFarmRequest(new CreateInstanceProfileRequestPrivate(DeviceFarmRequest::CreateInstanceProfileAction, this))
@@ -68,14 +65,9 @@ bool CreateInstanceProfileRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateInstanceProfileResponse object.
+ * Returns a CreateInstanceProfileResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateInstanceProfileResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DeviceFarmClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateInstanceProfileRequest::response(QNetworkReply * const reply) const
 {
@@ -83,20 +75,17 @@ QtAws::Core::AwsAbstractResponse * CreateInstanceProfileRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::DeviceFarm::CreateInstanceProfileRequestPrivate
+ * \brief The CreateInstanceProfileRequestPrivate class provides private implementation for CreateInstanceProfileRequest.
+ * \internal
  *
- * @class  CreateInstanceProfileRequestPrivate
- *
- * @brief  Private implementation for CreateInstanceProfileRequest.
+ * \inmodule QtAwsDeviceFarm
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateInstanceProfileRequestPrivate object.
- *
- * @param  action  DeviceFarm action being performed.
- * @param  q       Pointer to this object's public CreateInstanceProfileRequest instance.
+ * Constructs a CreateInstanceProfileRequestPrivate object for DeviceFarm \a action with,
+ * public implementation \a q.
  */
 CreateInstanceProfileRequestPrivate::CreateInstanceProfileRequestPrivate(
     const DeviceFarmRequest::Action action, CreateInstanceProfileRequest * const q)
@@ -106,15 +95,10 @@ CreateInstanceProfileRequestPrivate::CreateInstanceProfileRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateInstanceProfileRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateInstanceProfileRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateInstanceProfileRequest instance.
  */
 CreateInstanceProfileRequestPrivate::CreateInstanceProfileRequestPrivate(
     const CreateInstanceProfileRequestPrivate &other, CreateInstanceProfileRequest * const q)

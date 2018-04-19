@@ -27,10 +27,9 @@ namespace GameLift {
 
 /*!
  * \class QtAws::GameLift::RequestUploadCredentialsRequest
- *
  * \brief The RequestUploadCredentialsRequest class provides an interface for GameLift RequestUploadCredentials requests.
  *
- * \ingroup GameLift
+ * \inmodule QtAwsGameLift
  *
  *  <fullname>Amazon GameLift Service</fullname>
  * 
@@ -473,9 +472,7 @@ namespace GameLift {
  */
 
 /*!
- * @brief  Constructs a new RequestUploadCredentialsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 RequestUploadCredentialsRequest::RequestUploadCredentialsRequest(const RequestUploadCredentialsRequest &other)
     : GameLiftRequest(new RequestUploadCredentialsRequestPrivate(*other.d_func(), this))
@@ -484,7 +481,7 @@ RequestUploadCredentialsRequest::RequestUploadCredentialsRequest(const RequestUp
 }
 
 /*!
- * @brief  Constructs a new RequestUploadCredentialsRequest object.
+ * Constructs a RequestUploadCredentialsRequest object.
  */
 RequestUploadCredentialsRequest::RequestUploadCredentialsRequest()
     : GameLiftRequest(new RequestUploadCredentialsRequestPrivate(GameLiftRequest::RequestUploadCredentialsAction, this))
@@ -502,14 +499,9 @@ bool RequestUploadCredentialsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an RequestUploadCredentialsResponse object.
+ * Returns a RequestUploadCredentialsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An RequestUploadCredentialsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GameLiftClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * RequestUploadCredentialsRequest::response(QNetworkReply * const reply) const
 {
@@ -517,20 +509,17 @@ QtAws::Core::AwsAbstractResponse * RequestUploadCredentialsRequest::response(QNe
 }
 
 /*!
- * @internal
+ * \class QtAws::GameLift::RequestUploadCredentialsRequestPrivate
+ * \brief The RequestUploadCredentialsRequestPrivate class provides private implementation for RequestUploadCredentialsRequest.
+ * \internal
  *
- * @class  RequestUploadCredentialsRequestPrivate
- *
- * @brief  Private implementation for RequestUploadCredentialsRequest.
+ * \inmodule QtAwsGameLift
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new RequestUploadCredentialsRequestPrivate object.
- *
- * @param  action  GameLift action being performed.
- * @param  q       Pointer to this object's public RequestUploadCredentialsRequest instance.
+ * Constructs a RequestUploadCredentialsRequestPrivate object for GameLift \a action with,
+ * public implementation \a q.
  */
 RequestUploadCredentialsRequestPrivate::RequestUploadCredentialsRequestPrivate(
     const GameLiftRequest::Action action, RequestUploadCredentialsRequest * const q)
@@ -540,15 +529,10 @@ RequestUploadCredentialsRequestPrivate::RequestUploadCredentialsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RequestUploadCredentialsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the RequestUploadCredentialsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public RequestUploadCredentialsRequest instance.
  */
 RequestUploadCredentialsRequestPrivate::RequestUploadCredentialsRequestPrivate(
     const RequestUploadCredentialsRequestPrivate &other, RequestUploadCredentialsRequest * const q)

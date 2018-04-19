@@ -27,10 +27,9 @@ namespace AppStream {
 
 /*!
  * \class QtAws::AppStream::StartFleetRequest
- *
  * \brief The StartFleetRequest class provides an interface for AppStream StartFleet requests.
  *
- * \ingroup AppStream
+ * \inmodule QtAwsAppStream
  *
  *  <fullname>Amazon AppStream 2.0</fullname>
  * 
@@ -40,9 +39,7 @@ namespace AppStream {
  */
 
 /*!
- * @brief  Constructs a new StartFleetRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 StartFleetRequest::StartFleetRequest(const StartFleetRequest &other)
     : AppStreamRequest(new StartFleetRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ StartFleetRequest::StartFleetRequest(const StartFleetRequest &other)
 }
 
 /*!
- * @brief  Constructs a new StartFleetRequest object.
+ * Constructs a StartFleetRequest object.
  */
 StartFleetRequest::StartFleetRequest()
     : AppStreamRequest(new StartFleetRequestPrivate(AppStreamRequest::StartFleetAction, this))
@@ -69,14 +66,9 @@ bool StartFleetRequest::isValid() const
 
 
 /*!
- * @brief  Construct an StartFleetResponse object.
+ * Returns a StartFleetResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An StartFleetResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AppStreamClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * StartFleetRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * StartFleetRequest::response(QNetworkReply * c
 }
 
 /*!
- * @internal
+ * \class QtAws::AppStream::StartFleetRequestPrivate
+ * \brief The StartFleetRequestPrivate class provides private implementation for StartFleetRequest.
+ * \internal
  *
- * @class  StartFleetRequestPrivate
- *
- * @brief  Private implementation for StartFleetRequest.
+ * \inmodule QtAwsAppStream
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new StartFleetRequestPrivate object.
- *
- * @param  action  AppStream action being performed.
- * @param  q       Pointer to this object's public StartFleetRequest instance.
+ * Constructs a StartFleetRequestPrivate object for AppStream \a action with,
+ * public implementation \a q.
  */
 StartFleetRequestPrivate::StartFleetRequestPrivate(
     const AppStreamRequest::Action action, StartFleetRequest * const q)
@@ -107,15 +96,10 @@ StartFleetRequestPrivate::StartFleetRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StartFleetRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the StartFleetRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public StartFleetRequest instance.
  */
 StartFleetRequestPrivate::StartFleetRequestPrivate(
     const StartFleetRequestPrivate &other, StartFleetRequest * const q)

@@ -27,19 +27,16 @@ namespace S3 {
 
 /*!
  * \class QtAws::S3::GetBucketWebsiteRequest
- *
  * \brief The GetBucketWebsiteRequest class provides an interface for S3 GetBucketWebsite requests.
  *
- * \ingroup S3
+ * \inmodule QtAwsS3
  *
  *
  * \sa S3Client::getBucketWebsite
  */
 
 /*!
- * @brief  Constructs a new GetBucketWebsiteRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetBucketWebsiteRequest::GetBucketWebsiteRequest(const GetBucketWebsiteRequest &other)
     : S3Request(new GetBucketWebsiteRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ GetBucketWebsiteRequest::GetBucketWebsiteRequest(const GetBucketWebsiteRequest &
 }
 
 /*!
- * @brief  Constructs a new GetBucketWebsiteRequest object.
+ * Constructs a GetBucketWebsiteRequest object.
  */
 GetBucketWebsiteRequest::GetBucketWebsiteRequest()
     : S3Request(new GetBucketWebsiteRequestPrivate(S3Request::GetBucketWebsiteAction, this))
@@ -66,14 +63,9 @@ bool GetBucketWebsiteRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetBucketWebsiteResponse object.
+ * Returns a GetBucketWebsiteResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetBucketWebsiteResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  S3Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetBucketWebsiteRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * GetBucketWebsiteRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::S3::GetBucketWebsiteRequestPrivate
+ * \brief The GetBucketWebsiteRequestPrivate class provides private implementation for GetBucketWebsiteRequest.
+ * \internal
  *
- * @class  GetBucketWebsiteRequestPrivate
- *
- * @brief  Private implementation for GetBucketWebsiteRequest.
+ * \inmodule QtAwsS3
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetBucketWebsiteRequestPrivate object.
- *
- * @param  action  S3 action being performed.
- * @param  q       Pointer to this object's public GetBucketWebsiteRequest instance.
+ * Constructs a GetBucketWebsiteRequestPrivate object for S3 \a action with,
+ * public implementation \a q.
  */
 GetBucketWebsiteRequestPrivate::GetBucketWebsiteRequestPrivate(
     const S3Request::Action action, GetBucketWebsiteRequest * const q)
@@ -104,15 +93,10 @@ GetBucketWebsiteRequestPrivate::GetBucketWebsiteRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetBucketWebsiteRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetBucketWebsiteRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetBucketWebsiteRequest instance.
  */
 GetBucketWebsiteRequestPrivate::GetBucketWebsiteRequestPrivate(
     const GetBucketWebsiteRequestPrivate &other, GetBucketWebsiteRequest * const q)

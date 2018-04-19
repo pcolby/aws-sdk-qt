@@ -27,10 +27,9 @@ namespace CloudWatch {
 
 /*!
  * \class QtAws::CloudWatch::DescribeAlarmsRequest
- *
  * \brief The DescribeAlarmsRequest class provides an interface for CloudWatch DescribeAlarms requests.
  *
- * \ingroup CloudWatch
+ * \inmodule QtAwsCloudWatch
  *
  *  Amazon CloudWatch monitors your Amazon Web Services (AWS) resources and the applications you run on AWS in real time.
  *  You can use CloudWatch to collect and track metrics, which are the variables you want to measure for your resources and
@@ -51,9 +50,7 @@ namespace CloudWatch {
  */
 
 /*!
- * @brief  Constructs a new DescribeAlarmsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeAlarmsRequest::DescribeAlarmsRequest(const DescribeAlarmsRequest &other)
     : CloudWatchRequest(new DescribeAlarmsRequestPrivate(*other.d_func(), this))
@@ -62,7 +59,7 @@ DescribeAlarmsRequest::DescribeAlarmsRequest(const DescribeAlarmsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DescribeAlarmsRequest object.
+ * Constructs a DescribeAlarmsRequest object.
  */
 DescribeAlarmsRequest::DescribeAlarmsRequest()
     : CloudWatchRequest(new DescribeAlarmsRequestPrivate(CloudWatchRequest::DescribeAlarmsAction, this))
@@ -80,14 +77,9 @@ bool DescribeAlarmsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeAlarmsResponse object.
+ * Returns a DescribeAlarmsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeAlarmsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudWatchClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeAlarmsRequest::response(QNetworkReply * const reply) const
 {
@@ -95,20 +87,17 @@ QtAws::Core::AwsAbstractResponse * DescribeAlarmsRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudWatch::DescribeAlarmsRequestPrivate
+ * \brief The DescribeAlarmsRequestPrivate class provides private implementation for DescribeAlarmsRequest.
+ * \internal
  *
- * @class  DescribeAlarmsRequestPrivate
- *
- * @brief  Private implementation for DescribeAlarmsRequest.
+ * \inmodule QtAwsCloudWatch
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeAlarmsRequestPrivate object.
- *
- * @param  action  CloudWatch action being performed.
- * @param  q       Pointer to this object's public DescribeAlarmsRequest instance.
+ * Constructs a DescribeAlarmsRequestPrivate object for CloudWatch \a action with,
+ * public implementation \a q.
  */
 DescribeAlarmsRequestPrivate::DescribeAlarmsRequestPrivate(
     const CloudWatchRequest::Action action, DescribeAlarmsRequest * const q)
@@ -118,15 +107,10 @@ DescribeAlarmsRequestPrivate::DescribeAlarmsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeAlarmsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeAlarmsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeAlarmsRequest instance.
  */
 DescribeAlarmsRequestPrivate::DescribeAlarmsRequestPrivate(
     const DescribeAlarmsRequestPrivate &other, DescribeAlarmsRequest * const q)

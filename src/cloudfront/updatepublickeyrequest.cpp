@@ -27,10 +27,9 @@ namespace CloudFront {
 
 /*!
  * \class QtAws::CloudFront::UpdatePublicKeyRequest
- *
  * \brief The UpdatePublicKeyRequest class provides an interface for CloudFront UpdatePublicKey requests.
  *
- * \ingroup CloudFront
+ * \inmodule QtAwsCloudFront
  *
  *  <fullname>Amazon CloudFront</fullname>
  * 
@@ -42,9 +41,7 @@ namespace CloudFront {
  */
 
 /*!
- * @brief  Constructs a new UpdatePublicKeyRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdatePublicKeyRequest::UpdatePublicKeyRequest(const UpdatePublicKeyRequest &other)
     : CloudFrontRequest(new UpdatePublicKeyRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ UpdatePublicKeyRequest::UpdatePublicKeyRequest(const UpdatePublicKeyRequest &oth
 }
 
 /*!
- * @brief  Constructs a new UpdatePublicKeyRequest object.
+ * Constructs a UpdatePublicKeyRequest object.
  */
 UpdatePublicKeyRequest::UpdatePublicKeyRequest()
     : CloudFrontRequest(new UpdatePublicKeyRequestPrivate(CloudFrontRequest::UpdatePublicKeyAction, this))
@@ -71,14 +68,9 @@ bool UpdatePublicKeyRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdatePublicKeyResponse object.
+ * Returns a UpdatePublicKeyResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdatePublicKeyResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudFrontClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdatePublicKeyRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * UpdatePublicKeyRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudFront::UpdatePublicKeyRequestPrivate
+ * \brief The UpdatePublicKeyRequestPrivate class provides private implementation for UpdatePublicKeyRequest.
+ * \internal
  *
- * @class  UpdatePublicKeyRequestPrivate
- *
- * @brief  Private implementation for UpdatePublicKeyRequest.
+ * \inmodule QtAwsCloudFront
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdatePublicKeyRequestPrivate object.
- *
- * @param  action  CloudFront action being performed.
- * @param  q       Pointer to this object's public UpdatePublicKeyRequest instance.
+ * Constructs a UpdatePublicKeyRequestPrivate object for CloudFront \a action with,
+ * public implementation \a q.
  */
 UpdatePublicKeyRequestPrivate::UpdatePublicKeyRequestPrivate(
     const CloudFrontRequest::Action action, UpdatePublicKeyRequest * const q)
@@ -109,15 +98,10 @@ UpdatePublicKeyRequestPrivate::UpdatePublicKeyRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdatePublicKeyRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdatePublicKeyRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdatePublicKeyRequest instance.
  */
 UpdatePublicKeyRequestPrivate::UpdatePublicKeyRequestPrivate(
     const UpdatePublicKeyRequestPrivate &other, UpdatePublicKeyRequest * const q)

@@ -27,10 +27,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::DeleteClientCertificateRequest
- *
  * \brief The DeleteClientCertificateRequest class provides an interface for APIGateway DeleteClientCertificate requests.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -42,9 +41,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new DeleteClientCertificateRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteClientCertificateRequest::DeleteClientCertificateRequest(const DeleteClientCertificateRequest &other)
     : APIGatewayRequest(new DeleteClientCertificateRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ DeleteClientCertificateRequest::DeleteClientCertificateRequest(const DeleteClien
 }
 
 /*!
- * @brief  Constructs a new DeleteClientCertificateRequest object.
+ * Constructs a DeleteClientCertificateRequest object.
  */
 DeleteClientCertificateRequest::DeleteClientCertificateRequest()
     : APIGatewayRequest(new DeleteClientCertificateRequestPrivate(APIGatewayRequest::DeleteClientCertificateAction, this))
@@ -71,14 +68,9 @@ bool DeleteClientCertificateRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteClientCertificateResponse object.
+ * Returns a DeleteClientCertificateResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteClientCertificateResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  APIGatewayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteClientCertificateRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * DeleteClientCertificateRequest::response(QNet
 }
 
 /*!
- * @internal
+ * \class QtAws::APIGateway::DeleteClientCertificateRequestPrivate
+ * \brief The DeleteClientCertificateRequestPrivate class provides private implementation for DeleteClientCertificateRequest.
+ * \internal
  *
- * @class  DeleteClientCertificateRequestPrivate
- *
- * @brief  Private implementation for DeleteClientCertificateRequest.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteClientCertificateRequestPrivate object.
- *
- * @param  action  APIGateway action being performed.
- * @param  q       Pointer to this object's public DeleteClientCertificateRequest instance.
+ * Constructs a DeleteClientCertificateRequestPrivate object for APIGateway \a action with,
+ * public implementation \a q.
  */
 DeleteClientCertificateRequestPrivate::DeleteClientCertificateRequestPrivate(
     const APIGatewayRequest::Action action, DeleteClientCertificateRequest * const q)
@@ -109,15 +98,10 @@ DeleteClientCertificateRequestPrivate::DeleteClientCertificateRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteClientCertificateRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteClientCertificateRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteClientCertificateRequest instance.
  */
 DeleteClientCertificateRequestPrivate::DeleteClientCertificateRequestPrivate(
     const DeleteClientCertificateRequestPrivate &other, DeleteClientCertificateRequest * const q)

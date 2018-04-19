@@ -27,10 +27,9 @@ namespace STS {
 
 /*!
  * \class QtAws::STS::GetCallerIdentityRequest
- *
  * \brief The GetCallerIdentityRequest class provides an interface for STS GetCallerIdentity requests.
  *
- * \ingroup STS
+ * \inmodule QtAwsSTS
  *
  *  <fullname>AWS Security Token Service</fullname>
  * 
@@ -95,9 +94,7 @@ namespace STS {
  */
 
 /*!
- * @brief  Constructs a new GetCallerIdentityRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetCallerIdentityRequest::GetCallerIdentityRequest(const GetCallerIdentityRequest &other)
     : STSRequest(new GetCallerIdentityRequestPrivate(*other.d_func(), this))
@@ -106,7 +103,7 @@ GetCallerIdentityRequest::GetCallerIdentityRequest(const GetCallerIdentityReques
 }
 
 /*!
- * @brief  Constructs a new GetCallerIdentityRequest object.
+ * Constructs a GetCallerIdentityRequest object.
  */
 GetCallerIdentityRequest::GetCallerIdentityRequest()
     : STSRequest(new GetCallerIdentityRequestPrivate(STSRequest::GetCallerIdentityAction, this))
@@ -124,14 +121,9 @@ bool GetCallerIdentityRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetCallerIdentityResponse object.
+ * Returns a GetCallerIdentityResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetCallerIdentityResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  STSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetCallerIdentityRequest::response(QNetworkReply * const reply) const
 {
@@ -139,20 +131,17 @@ QtAws::Core::AwsAbstractResponse * GetCallerIdentityRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::STS::GetCallerIdentityRequestPrivate
+ * \brief The GetCallerIdentityRequestPrivate class provides private implementation for GetCallerIdentityRequest.
+ * \internal
  *
- * @class  GetCallerIdentityRequestPrivate
- *
- * @brief  Private implementation for GetCallerIdentityRequest.
+ * \inmodule QtAwsSTS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetCallerIdentityRequestPrivate object.
- *
- * @param  action  STS action being performed.
- * @param  q       Pointer to this object's public GetCallerIdentityRequest instance.
+ * Constructs a GetCallerIdentityRequestPrivate object for STS \a action with,
+ * public implementation \a q.
  */
 GetCallerIdentityRequestPrivate::GetCallerIdentityRequestPrivate(
     const STSRequest::Action action, GetCallerIdentityRequest * const q)
@@ -162,15 +151,10 @@ GetCallerIdentityRequestPrivate::GetCallerIdentityRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetCallerIdentityRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetCallerIdentityRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetCallerIdentityRequest instance.
  */
 GetCallerIdentityRequestPrivate::GetCallerIdentityRequestPrivate(
     const GetCallerIdentityRequestPrivate &other, GetCallerIdentityRequest * const q)

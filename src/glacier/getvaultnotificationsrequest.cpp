@@ -27,10 +27,9 @@ namespace Glacier {
 
 /*!
  * \class QtAws::Glacier::GetVaultNotificationsRequest
- *
  * \brief The GetVaultNotificationsRequest class provides an interface for Glacier GetVaultNotifications requests.
  *
- * \ingroup Glacier
+ * \inmodule QtAwsGlacier
  *
  *  Amazon Glacier is a storage solution for "cold
  * 
@@ -75,9 +74,7 @@ namespace Glacier {
  */
 
 /*!
- * @brief  Constructs a new GetVaultNotificationsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetVaultNotificationsRequest::GetVaultNotificationsRequest(const GetVaultNotificationsRequest &other)
     : GlacierRequest(new GetVaultNotificationsRequestPrivate(*other.d_func(), this))
@@ -86,7 +83,7 @@ GetVaultNotificationsRequest::GetVaultNotificationsRequest(const GetVaultNotific
 }
 
 /*!
- * @brief  Constructs a new GetVaultNotificationsRequest object.
+ * Constructs a GetVaultNotificationsRequest object.
  */
 GetVaultNotificationsRequest::GetVaultNotificationsRequest()
     : GlacierRequest(new GetVaultNotificationsRequestPrivate(GlacierRequest::GetVaultNotificationsAction, this))
@@ -104,14 +101,9 @@ bool GetVaultNotificationsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetVaultNotificationsResponse object.
+ * Returns a GetVaultNotificationsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetVaultNotificationsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GlacierClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetVaultNotificationsRequest::response(QNetworkReply * const reply) const
 {
@@ -119,20 +111,17 @@ QtAws::Core::AwsAbstractResponse * GetVaultNotificationsRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::Glacier::GetVaultNotificationsRequestPrivate
+ * \brief The GetVaultNotificationsRequestPrivate class provides private implementation for GetVaultNotificationsRequest.
+ * \internal
  *
- * @class  GetVaultNotificationsRequestPrivate
- *
- * @brief  Private implementation for GetVaultNotificationsRequest.
+ * \inmodule QtAwsGlacier
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetVaultNotificationsRequestPrivate object.
- *
- * @param  action  Glacier action being performed.
- * @param  q       Pointer to this object's public GetVaultNotificationsRequest instance.
+ * Constructs a GetVaultNotificationsRequestPrivate object for Glacier \a action with,
+ * public implementation \a q.
  */
 GetVaultNotificationsRequestPrivate::GetVaultNotificationsRequestPrivate(
     const GlacierRequest::Action action, GetVaultNotificationsRequest * const q)
@@ -142,15 +131,10 @@ GetVaultNotificationsRequestPrivate::GetVaultNotificationsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetVaultNotificationsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetVaultNotificationsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetVaultNotificationsRequest instance.
  */
 GetVaultNotificationsRequestPrivate::GetVaultNotificationsRequestPrivate(
     const GetVaultNotificationsRequestPrivate &other, GetVaultNotificationsRequest * const q)

@@ -27,10 +27,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::UpdateRequestValidatorRequest
- *
  * \brief The UpdateRequestValidatorRequest class provides an interface for APIGateway UpdateRequestValidator requests.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -42,9 +41,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new UpdateRequestValidatorRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateRequestValidatorRequest::UpdateRequestValidatorRequest(const UpdateRequestValidatorRequest &other)
     : APIGatewayRequest(new UpdateRequestValidatorRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ UpdateRequestValidatorRequest::UpdateRequestValidatorRequest(const UpdateRequest
 }
 
 /*!
- * @brief  Constructs a new UpdateRequestValidatorRequest object.
+ * Constructs a UpdateRequestValidatorRequest object.
  */
 UpdateRequestValidatorRequest::UpdateRequestValidatorRequest()
     : APIGatewayRequest(new UpdateRequestValidatorRequestPrivate(APIGatewayRequest::UpdateRequestValidatorAction, this))
@@ -71,14 +68,9 @@ bool UpdateRequestValidatorRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateRequestValidatorResponse object.
+ * Returns a UpdateRequestValidatorResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateRequestValidatorResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  APIGatewayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateRequestValidatorRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * UpdateRequestValidatorRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::APIGateway::UpdateRequestValidatorRequestPrivate
+ * \brief The UpdateRequestValidatorRequestPrivate class provides private implementation for UpdateRequestValidatorRequest.
+ * \internal
  *
- * @class  UpdateRequestValidatorRequestPrivate
- *
- * @brief  Private implementation for UpdateRequestValidatorRequest.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateRequestValidatorRequestPrivate object.
- *
- * @param  action  APIGateway action being performed.
- * @param  q       Pointer to this object's public UpdateRequestValidatorRequest instance.
+ * Constructs a UpdateRequestValidatorRequestPrivate object for APIGateway \a action with,
+ * public implementation \a q.
  */
 UpdateRequestValidatorRequestPrivate::UpdateRequestValidatorRequestPrivate(
     const APIGatewayRequest::Action action, UpdateRequestValidatorRequest * const q)
@@ -109,15 +98,10 @@ UpdateRequestValidatorRequestPrivate::UpdateRequestValidatorRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateRequestValidatorRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateRequestValidatorRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateRequestValidatorRequest instance.
  */
 UpdateRequestValidatorRequestPrivate::UpdateRequestValidatorRequestPrivate(
     const UpdateRequestValidatorRequestPrivate &other, UpdateRequestValidatorRequest * const q)

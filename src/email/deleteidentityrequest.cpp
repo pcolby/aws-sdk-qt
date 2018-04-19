@@ -27,10 +27,9 @@ namespace SES {
 
 /*!
  * \class QtAws::SES::DeleteIdentityRequest
- *
  * \brief The DeleteIdentityRequest class provides an interface for SES DeleteIdentity requests.
  *
- * \ingroup SES
+ * \inmodule QtAwsSES
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -48,9 +47,7 @@ namespace SES {
  */
 
 /*!
- * @brief  Constructs a new DeleteIdentityRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteIdentityRequest::DeleteIdentityRequest(const DeleteIdentityRequest &other)
     : SESRequest(new DeleteIdentityRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ DeleteIdentityRequest::DeleteIdentityRequest(const DeleteIdentityRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DeleteIdentityRequest object.
+ * Constructs a DeleteIdentityRequest object.
  */
 DeleteIdentityRequest::DeleteIdentityRequest()
     : SESRequest(new DeleteIdentityRequestPrivate(SESRequest::DeleteIdentityAction, this))
@@ -77,14 +74,9 @@ bool DeleteIdentityRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteIdentityResponse object.
+ * Returns a DeleteIdentityResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteIdentityResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SESClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteIdentityRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * DeleteIdentityRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::SES::DeleteIdentityRequestPrivate
+ * \brief The DeleteIdentityRequestPrivate class provides private implementation for DeleteIdentityRequest.
+ * \internal
  *
- * @class  DeleteIdentityRequestPrivate
- *
- * @brief  Private implementation for DeleteIdentityRequest.
+ * \inmodule QtAwsSES
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteIdentityRequestPrivate object.
- *
- * @param  action  SES action being performed.
- * @param  q       Pointer to this object's public DeleteIdentityRequest instance.
+ * Constructs a DeleteIdentityRequestPrivate object for SES \a action with,
+ * public implementation \a q.
  */
 DeleteIdentityRequestPrivate::DeleteIdentityRequestPrivate(
     const SESRequest::Action action, DeleteIdentityRequest * const q)
@@ -115,15 +104,10 @@ DeleteIdentityRequestPrivate::DeleteIdentityRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteIdentityRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteIdentityRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteIdentityRequest instance.
  */
 DeleteIdentityRequestPrivate::DeleteIdentityRequestPrivate(
     const DeleteIdentityRequestPrivate &other, DeleteIdentityRequest * const q)

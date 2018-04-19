@@ -27,10 +27,9 @@ namespace IoTJobsDataPlane {
 
 /*!
  * \class QtAws::IoTJobsDataPlane::GetPendingJobExecutionsRequest
- *
  * \brief The GetPendingJobExecutionsRequest class provides an interface for IoTJobsDataPlane GetPendingJobExecutions requests.
  *
- * \ingroup IoTJobsDataPlane
+ * \inmodule QtAwsIoTJobsDataPlane
  *
  *  AWS IoT Jobs is a service that allows you to define a set of jobs — remote operations that are sent to and executed on
  *  one or more devices connected to AWS IoT. For example, you can define a job that instructs a set of devices to download
@@ -51,9 +50,7 @@ namespace IoTJobsDataPlane {
  */
 
 /*!
- * @brief  Constructs a new GetPendingJobExecutionsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetPendingJobExecutionsRequest::GetPendingJobExecutionsRequest(const GetPendingJobExecutionsRequest &other)
     : IoTJobsDataPlaneRequest(new GetPendingJobExecutionsRequestPrivate(*other.d_func(), this))
@@ -62,7 +59,7 @@ GetPendingJobExecutionsRequest::GetPendingJobExecutionsRequest(const GetPendingJ
 }
 
 /*!
- * @brief  Constructs a new GetPendingJobExecutionsRequest object.
+ * Constructs a GetPendingJobExecutionsRequest object.
  */
 GetPendingJobExecutionsRequest::GetPendingJobExecutionsRequest()
     : IoTJobsDataPlaneRequest(new GetPendingJobExecutionsRequestPrivate(IoTJobsDataPlaneRequest::GetPendingJobExecutionsAction, this))
@@ -80,14 +77,9 @@ bool GetPendingJobExecutionsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetPendingJobExecutionsResponse object.
+ * Returns a GetPendingJobExecutionsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetPendingJobExecutionsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IoTJobsDataPlaneClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetPendingJobExecutionsRequest::response(QNetworkReply * const reply) const
 {
@@ -95,20 +87,17 @@ QtAws::Core::AwsAbstractResponse * GetPendingJobExecutionsRequest::response(QNet
 }
 
 /*!
- * @internal
+ * \class QtAws::IoTJobsDataPlane::GetPendingJobExecutionsRequestPrivate
+ * \brief The GetPendingJobExecutionsRequestPrivate class provides private implementation for GetPendingJobExecutionsRequest.
+ * \internal
  *
- * @class  GetPendingJobExecutionsRequestPrivate
- *
- * @brief  Private implementation for GetPendingJobExecutionsRequest.
+ * \inmodule QtAwsIoTJobsDataPlane
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetPendingJobExecutionsRequestPrivate object.
- *
- * @param  action  IoTJobsDataPlane action being performed.
- * @param  q       Pointer to this object's public GetPendingJobExecutionsRequest instance.
+ * Constructs a GetPendingJobExecutionsRequestPrivate object for IoTJobsDataPlane \a action with,
+ * public implementation \a q.
  */
 GetPendingJobExecutionsRequestPrivate::GetPendingJobExecutionsRequestPrivate(
     const IoTJobsDataPlaneRequest::Action action, GetPendingJobExecutionsRequest * const q)
@@ -118,15 +107,10 @@ GetPendingJobExecutionsRequestPrivate::GetPendingJobExecutionsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetPendingJobExecutionsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetPendingJobExecutionsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetPendingJobExecutionsRequest instance.
  */
 GetPendingJobExecutionsRequestPrivate::GetPendingJobExecutionsRequestPrivate(
     const GetPendingJobExecutionsRequestPrivate &other, GetPendingJobExecutionsRequest * const q)

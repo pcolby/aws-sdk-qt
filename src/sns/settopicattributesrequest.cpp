@@ -27,10 +27,9 @@ namespace SNS {
 
 /*!
  * \class QtAws::SNS::SetTopicAttributesRequest
- *
  * \brief The SetTopicAttributesRequest class provides an interface for SNS SetTopicAttributes requests.
  *
- * \ingroup SNS
+ * \inmodule QtAwsSNS
  *
  *  <fullname>Amazon Simple Notification Service</fullname>
  * 
@@ -51,9 +50,7 @@ namespace SNS {
  */
 
 /*!
- * @brief  Constructs a new SetTopicAttributesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 SetTopicAttributesRequest::SetTopicAttributesRequest(const SetTopicAttributesRequest &other)
     : SNSRequest(new SetTopicAttributesRequestPrivate(*other.d_func(), this))
@@ -62,7 +59,7 @@ SetTopicAttributesRequest::SetTopicAttributesRequest(const SetTopicAttributesReq
 }
 
 /*!
- * @brief  Constructs a new SetTopicAttributesRequest object.
+ * Constructs a SetTopicAttributesRequest object.
  */
 SetTopicAttributesRequest::SetTopicAttributesRequest()
     : SNSRequest(new SetTopicAttributesRequestPrivate(SNSRequest::SetTopicAttributesAction, this))
@@ -80,14 +77,9 @@ bool SetTopicAttributesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an SetTopicAttributesResponse object.
+ * Returns a SetTopicAttributesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An SetTopicAttributesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SNSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * SetTopicAttributesRequest::response(QNetworkReply * const reply) const
 {
@@ -95,20 +87,17 @@ QtAws::Core::AwsAbstractResponse * SetTopicAttributesRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::SNS::SetTopicAttributesRequestPrivate
+ * \brief The SetTopicAttributesRequestPrivate class provides private implementation for SetTopicAttributesRequest.
+ * \internal
  *
- * @class  SetTopicAttributesRequestPrivate
- *
- * @brief  Private implementation for SetTopicAttributesRequest.
+ * \inmodule QtAwsSNS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new SetTopicAttributesRequestPrivate object.
- *
- * @param  action  SNS action being performed.
- * @param  q       Pointer to this object's public SetTopicAttributesRequest instance.
+ * Constructs a SetTopicAttributesRequestPrivate object for SNS \a action with,
+ * public implementation \a q.
  */
 SetTopicAttributesRequestPrivate::SetTopicAttributesRequestPrivate(
     const SNSRequest::Action action, SetTopicAttributesRequest * const q)
@@ -118,15 +107,10 @@ SetTopicAttributesRequestPrivate::SetTopicAttributesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SetTopicAttributesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the SetTopicAttributesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public SetTopicAttributesRequest instance.
  */
 SetTopicAttributesRequestPrivate::SetTopicAttributesRequestPrivate(
     const SetTopicAttributesRequestPrivate &other, SetTopicAttributesRequest * const q)

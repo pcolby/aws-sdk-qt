@@ -25,16 +25,40 @@ namespace ApplicationDiscoveryService {
 
 /*!
  * \class QtAws::ApplicationDiscoveryService::ApplicationDiscoveryServiceRequest
- *
  * \brief The ApplicationDiscoveryServiceRequest class provides an interface for ApplicationDiscoveryService requests.
  *
- * \ingroup ApplicationDiscoveryService
+ * \inmodule QtAwsApplicationDiscoveryService
  */
 
 /*!
- * @brief  Constructs a new ApplicationDiscoveryServiceRequest object.
+ * \enum ApplicationDiscoveryServiceRequest::Action
  *
- * @param  action  The ApplicationDiscoveryService action to request.
+ * This enum describes the actions that can be performed as ApplicationDiscoveryService
+ * requests.
+ *
+ * \value AssociateConfigurationItemsToApplicationAction ApplicationDiscoveryService AssociateConfigurationItemsToApplication action.
+ * \value CreateApplicationAction ApplicationDiscoveryService CreateApplication action.
+ * \value CreateTagsAction ApplicationDiscoveryService CreateTags action.
+ * \value DeleteApplicationsAction ApplicationDiscoveryService DeleteApplications action.
+ * \value DeleteTagsAction ApplicationDiscoveryService DeleteTags action.
+ * \value DescribeAgentsAction ApplicationDiscoveryService DescribeAgents action.
+ * \value DescribeConfigurationsAction ApplicationDiscoveryService DescribeConfigurations action.
+ * \value DescribeExportConfigurationsAction ApplicationDiscoveryService DescribeExportConfigurations action.
+ * \value DescribeExportTasksAction ApplicationDiscoveryService DescribeExportTasks action.
+ * \value DescribeTagsAction ApplicationDiscoveryService DescribeTags action.
+ * \value DisassociateConfigurationItemsFromApplicationAction ApplicationDiscoveryService DisassociateConfigurationItemsFromApplication action.
+ * \value ExportConfigurationsAction ApplicationDiscoveryService ExportConfigurations action.
+ * \value GetDiscoverySummaryAction ApplicationDiscoveryService GetDiscoverySummary action.
+ * \value ListConfigurationsAction ApplicationDiscoveryService ListConfigurations action.
+ * \value ListServerNeighborsAction ApplicationDiscoveryService ListServerNeighbors action.
+ * \value StartDataCollectionByAgentIdsAction ApplicationDiscoveryService StartDataCollectionByAgentIds action.
+ * \value StartExportTaskAction ApplicationDiscoveryService StartExportTask action.
+ * \value StopDataCollectionByAgentIdsAction ApplicationDiscoveryService StopDataCollectionByAgentIds action.
+ * \value UpdateApplicationAction ApplicationDiscoveryService UpdateApplication action.
+ */
+
+/*!
+ * Constructs a[n] ApplicationDiscoveryServiceRequest object for ApplicationDiscoveryService \a action.
  */
 ApplicationDiscoveryServiceRequest::ApplicationDiscoveryServiceRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new ApplicationDiscoveryServiceRequestPrivate(action, this))
@@ -43,9 +67,7 @@ ApplicationDiscoveryServiceRequest::ApplicationDiscoveryServiceRequest(const Act
 }
 
 /*!
- * @brief  Constructs a new ApplicationDiscoveryServiceRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ApplicationDiscoveryServiceRequest::ApplicationDiscoveryServiceRequest(const ApplicationDiscoveryServiceRequest &other)
     : QtAws::Core::AwsAbstractRequest(new ApplicationDiscoveryServiceRequestPrivate(*other.d_func(), this))
@@ -54,13 +76,7 @@ ApplicationDiscoveryServiceRequest::ApplicationDiscoveryServiceRequest(const App
 }
 
 /*!
- * @brief  Assignment operator.
- *
- * Assigns \a other to \c this.
- *
- * @param  other  Instance to copy.
- *
- * @return  A reference to \c this.
+ * Sets the ApplicationDiscoveryServiceRequest object to be equal to \a other.
  */
 ApplicationDiscoveryServiceRequest& ApplicationDiscoveryServiceRequest::operator=(const ApplicationDiscoveryServiceRequest &other)
 {
@@ -72,14 +88,10 @@ ApplicationDiscoveryServiceRequest& ApplicationDiscoveryServiceRequest::operator
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ApplicationDiscoveryServiceRequest object.
+ * Constructs aa ApplicationDiscoveryServiceRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from ApplicationDiscoveryServiceRequestPrivate.
- *
- * @param  d  Pointer to private data (aka D-Pointer).
  */
 ApplicationDiscoveryServiceRequest::ApplicationDiscoveryServiceRequest(ApplicationDiscoveryServiceRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
@@ -87,7 +99,7 @@ ApplicationDiscoveryServiceRequest::ApplicationDiscoveryServiceRequest(Applicati
 }
 
 /*!
- * \brief Returns the ApplicationDiscoveryService action to be performed by this request.
+ * Returns the ApplicationDiscoveryService action to be performed by this request.
  */
 ApplicationDiscoveryServiceRequest::Action ApplicationDiscoveryServiceRequest::action() const
 {
@@ -96,7 +108,7 @@ ApplicationDiscoveryServiceRequest::Action ApplicationDiscoveryServiceRequest::a
 }
 
 /*!
- * \brief Returns the name of the ApplicationDiscoveryService action to be performed by this request.
+ * Returns the name of the ApplicationDiscoveryService action to be performed by this request.
  */
 QString ApplicationDiscoveryServiceRequest::actionString() const
 {
@@ -104,7 +116,7 @@ QString ApplicationDiscoveryServiceRequest::actionString() const
 }
 
 /*!
- * \brief Returns the ApplicationDiscoveryService API version implemented by this request.
+ * Returns the ApplicationDiscoveryService API version implemented by this request.
  */
 QString ApplicationDiscoveryServiceRequest::apiVersion() const
 {
@@ -113,7 +125,7 @@ QString ApplicationDiscoveryServiceRequest::apiVersion() const
 }
 
 /*!
- * @brief Set the ApplicationDiscoveryService action to be performed by this request to \a action.
+ * Sets the ApplicationDiscoveryService action to be performed by this request to \a action.
  */
 void ApplicationDiscoveryServiceRequest::setAction(const Action action)
 {
@@ -122,7 +134,7 @@ void ApplicationDiscoveryServiceRequest::setAction(const Action action)
 }
 
 /*!
- * Set the ApplicationDiscoveryService API version to include in this request to \a version.
+ * Sets the ApplicationDiscoveryService API version to include in this request to \a version.
  */
 void ApplicationDiscoveryServiceRequest::setApiVersion(const QString &version)
 {
@@ -131,7 +143,7 @@ void ApplicationDiscoveryServiceRequest::setApiVersion(const QString &version)
 }
 
 /*!
- * \brief Returns \c true if this request is the same as \a other.
+ * Returns \c true if this request is equal to \a other; \c false otherwise.
  *
  * Note, most derived *Request classes do not need to provider their own
  * implementations of this function, since most such request classes rely on
@@ -146,8 +158,8 @@ bool ApplicationDiscoveryServiceRequest::operator==(const ApplicationDiscoverySe
             (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
-/*!
- * @brief  Check if \a queueName is a valid ApplicationDiscoveryService queue name.
+/*
+ * Returns \c tue if \a queueName is a valid ApplicationDiscoveryService queue name.
  *
  * @par From ApplicationDiscoveryService FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
@@ -166,9 +178,8 @@ bool ApplicationDiscoveryServiceRequest::operator==(const ApplicationDiscoverySe
 }*/
 
 /*!
- * \brief Removes the a \a name parameter from this request.
- *
- * Returns the count of paramters removed (typically \c 0 or \c 1).
+ * Removes the a \a name parameter from the request, then returns the number of
+ * paramters removed (typically \c 0 or \c 1).
  */
 int ApplicationDiscoveryServiceRequest::clearParameter(const QString &name)
 {
@@ -177,7 +188,7 @@ int ApplicationDiscoveryServiceRequest::clearParameter(const QString &name)
 }
 
 /*!
- * \brief Removes all parameters from this request.
+ * Removes all parameters from the request.
  */
 void ApplicationDiscoveryServiceRequest::clearParameters()
 {
@@ -186,7 +197,7 @@ void ApplicationDiscoveryServiceRequest::clearParameters()
 }
 
 /*!
- * \brief Returns the value of the \n name pararemter if set, otherwise \a defaultValue.
+ * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
 QVariant ApplicationDiscoveryServiceRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
@@ -195,7 +206,7 @@ QVariant ApplicationDiscoveryServiceRequest::parameter(const QString &name, cons
 }
 
 /*!
- * \brief Returns a map of parameters included in this request.
+ * Returns the parameters included in this request.
  */
 const QVariantMap &ApplicationDiscoveryServiceRequest::parameters() const
 {
@@ -204,7 +215,7 @@ const QVariantMap &ApplicationDiscoveryServiceRequest::parameters() const
 }
 
 /*!
- * \brief Sets the \a name parameter to \a value.
+ * Sets the \a name parameter to \a value.
  */
 void ApplicationDiscoveryServiceRequest::setParameter(const QString &name, const QVariant &value)
 {
@@ -213,9 +224,8 @@ void ApplicationDiscoveryServiceRequest::setParameter(const QString &name, const
 }
 
 /*!
- * \brief Sets the map of paramters for this request to \a parameters.
- *
- * Any request parameters set previously will be discarded.
+ * Sets the paramters for this request to \a parameters. Any request parameters
+ * set previously will be discarded.
  */
 void ApplicationDiscoveryServiceRequest::setParameters(const QVariantMap &parameters)
 {
@@ -224,11 +234,12 @@ void ApplicationDiscoveryServiceRequest::setParameters(const QVariantMap &parame
 }
 
 /*!
- * \brief Returns a network request for this ApplicationDiscoveryService request using the given \a endpoint.
+ * Returns a network request for the ApplicationDiscoveryService request using the given
+ * \a endpoint.
  *
- * This ApplicationDiscoveryService implementation builds request URLs by combining the common query
- * parameters (such as Action and Version), with any that have been added (via
- * setParameter) by child classes.
+ * This ApplicationDiscoveryService implementation builds request URLs by combining the
+ * common query parameters (such as Action and Version), with any that have
+ * been added (via setParameter) by child classes.
  */
 QNetworkRequest ApplicationDiscoveryServiceRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -239,17 +250,16 @@ QNetworkRequest ApplicationDiscoveryServiceRequest::unsignedRequest(const QUrl &
 }
 
 /*!
+ * \class QtAws::ApplicationDiscoveryService::ApplicationDiscoveryServiceRequestPrivate
+ * \brief The ApplicationDiscoveryServiceRequestPrivate class provides private implementation for ApplicationDiscoveryServiceRequest.
  * \internal
  *
- * \class  ApplicationDiscoveryServiceRequestPrivate
- *
- * \brief  Private implementation for ApplicationDiscoveryServiceRequest.
+ * \inmodule QtAwsApplicationDiscoveryService
  */
 
 /*!
- * \internal
- *
- * \brief Constructs a new ApplicationDiscoveryServiceRequestPrivate object.
+ * Constructs a ApplicationDiscoveryServiceRequestPrivate object for ApplicationDiscoveryService \a action with,
+ * public implementation \a q.
  */
 ApplicationDiscoveryServiceRequestPrivate::ApplicationDiscoveryServiceRequestPrivate(const ApplicationDiscoveryServiceRequest::Action action, ApplicationDiscoveryServiceRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
@@ -258,9 +268,7 @@ ApplicationDiscoveryServiceRequestPrivate::ApplicationDiscoveryServiceRequestPri
 }
 
 /*!
- * \internal
- *
- * \brief Constructs a new ApplicationDiscoveryServiceRequestPrivate object, copying an existing one.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
@@ -276,15 +284,12 @@ ApplicationDiscoveryServiceRequestPrivate::ApplicationDiscoveryServiceRequestPri
 }
 
 /*!
- * \internal
- *
- * \brief Returns a string representing \a action.
+ * Returns a string represention of \a action, or a null string if \a action is
+ * invalid.
  *
  * This function converts ApplicationDiscoveryServiceRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the ApplicationDiscoveryService service's Action
  * query parameters.
- *
- * @return A string representing \a action, or a null string if \a action is invalid.
  */
 QString ApplicationDiscoveryServiceRequestPrivate::toString(const ApplicationDiscoveryServiceRequest::Action &action)
 {

@@ -107,6 +107,9 @@
 /*!
  * \namespace QtAws::ConfigService
  * \brief The QtAws::ConfigService contains stuff...
+ *
+ * \inmodule QtAwsConfigService
+ *
  * @todo Move this to a separate template file.
  */
 
@@ -179,7 +182,7 @@ ConfigServiceClient::ConfigServiceClient(
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * \a  AwsEndpoint::getEndpoint()
+ * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
 ConfigServiceClient::ConfigServiceClient(
     const QUrl &endpoint,

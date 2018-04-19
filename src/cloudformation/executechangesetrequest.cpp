@@ -27,10 +27,9 @@ namespace CloudFormation {
 
 /*!
  * \class QtAws::CloudFormation::ExecuteChangeSetRequest
- *
  * \brief The ExecuteChangeSetRequest class provides an interface for CloudFormation ExecuteChangeSet requests.
  *
- * \ingroup CloudFormation
+ * \inmodule QtAwsCloudFormation
  *
  *  <fullname>AWS CloudFormation</fullname>
  * 
@@ -59,9 +58,7 @@ namespace CloudFormation {
  */
 
 /*!
- * @brief  Constructs a new ExecuteChangeSetRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ExecuteChangeSetRequest::ExecuteChangeSetRequest(const ExecuteChangeSetRequest &other)
     : CloudFormationRequest(new ExecuteChangeSetRequestPrivate(*other.d_func(), this))
@@ -70,7 +67,7 @@ ExecuteChangeSetRequest::ExecuteChangeSetRequest(const ExecuteChangeSetRequest &
 }
 
 /*!
- * @brief  Constructs a new ExecuteChangeSetRequest object.
+ * Constructs a ExecuteChangeSetRequest object.
  */
 ExecuteChangeSetRequest::ExecuteChangeSetRequest()
     : CloudFormationRequest(new ExecuteChangeSetRequestPrivate(CloudFormationRequest::ExecuteChangeSetAction, this))
@@ -88,14 +85,9 @@ bool ExecuteChangeSetRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ExecuteChangeSetResponse object.
+ * Returns a ExecuteChangeSetResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ExecuteChangeSetResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudFormationClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ExecuteChangeSetRequest::response(QNetworkReply * const reply) const
 {
@@ -103,20 +95,17 @@ QtAws::Core::AwsAbstractResponse * ExecuteChangeSetRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudFormation::ExecuteChangeSetRequestPrivate
+ * \brief The ExecuteChangeSetRequestPrivate class provides private implementation for ExecuteChangeSetRequest.
+ * \internal
  *
- * @class  ExecuteChangeSetRequestPrivate
- *
- * @brief  Private implementation for ExecuteChangeSetRequest.
+ * \inmodule QtAwsCloudFormation
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ExecuteChangeSetRequestPrivate object.
- *
- * @param  action  CloudFormation action being performed.
- * @param  q       Pointer to this object's public ExecuteChangeSetRequest instance.
+ * Constructs a ExecuteChangeSetRequestPrivate object for CloudFormation \a action with,
+ * public implementation \a q.
  */
 ExecuteChangeSetRequestPrivate::ExecuteChangeSetRequestPrivate(
     const CloudFormationRequest::Action action, ExecuteChangeSetRequest * const q)
@@ -126,15 +115,10 @@ ExecuteChangeSetRequestPrivate::ExecuteChangeSetRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ExecuteChangeSetRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ExecuteChangeSetRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ExecuteChangeSetRequest instance.
  */
 ExecuteChangeSetRequestPrivate::ExecuteChangeSetRequestPrivate(
     const ExecuteChangeSetRequestPrivate &other, ExecuteChangeSetRequest * const q)

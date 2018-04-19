@@ -27,10 +27,9 @@ namespace Batch {
 
 /*!
  * \class QtAws::Batch::UpdateComputeEnvironmentRequest
- *
  * \brief The UpdateComputeEnvironmentRequest class provides an interface for Batch UpdateComputeEnvironment requests.
  *
- * \ingroup Batch
+ * \inmodule QtAwsBatch
  *
  *  AWS Batch enables you to run batch computing workloads on the AWS Cloud. Batch computing is a common way for developers,
  *  scientists, and engineers to access large amounts of compute resources, and AWS Batch removes the undifferentiated heavy
@@ -51,9 +50,7 @@ namespace Batch {
  */
 
 /*!
- * @brief  Constructs a new UpdateComputeEnvironmentRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateComputeEnvironmentRequest::UpdateComputeEnvironmentRequest(const UpdateComputeEnvironmentRequest &other)
     : BatchRequest(new UpdateComputeEnvironmentRequestPrivate(*other.d_func(), this))
@@ -62,7 +59,7 @@ UpdateComputeEnvironmentRequest::UpdateComputeEnvironmentRequest(const UpdateCom
 }
 
 /*!
- * @brief  Constructs a new UpdateComputeEnvironmentRequest object.
+ * Constructs a UpdateComputeEnvironmentRequest object.
  */
 UpdateComputeEnvironmentRequest::UpdateComputeEnvironmentRequest()
     : BatchRequest(new UpdateComputeEnvironmentRequestPrivate(BatchRequest::UpdateComputeEnvironmentAction, this))
@@ -80,14 +77,9 @@ bool UpdateComputeEnvironmentRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateComputeEnvironmentResponse object.
+ * Returns a UpdateComputeEnvironmentResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateComputeEnvironmentResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  BatchClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateComputeEnvironmentRequest::response(QNetworkReply * const reply) const
 {
@@ -95,20 +87,17 @@ QtAws::Core::AwsAbstractResponse * UpdateComputeEnvironmentRequest::response(QNe
 }
 
 /*!
- * @internal
+ * \class QtAws::Batch::UpdateComputeEnvironmentRequestPrivate
+ * \brief The UpdateComputeEnvironmentRequestPrivate class provides private implementation for UpdateComputeEnvironmentRequest.
+ * \internal
  *
- * @class  UpdateComputeEnvironmentRequestPrivate
- *
- * @brief  Private implementation for UpdateComputeEnvironmentRequest.
+ * \inmodule QtAwsBatch
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateComputeEnvironmentRequestPrivate object.
- *
- * @param  action  Batch action being performed.
- * @param  q       Pointer to this object's public UpdateComputeEnvironmentRequest instance.
+ * Constructs a UpdateComputeEnvironmentRequestPrivate object for Batch \a action with,
+ * public implementation \a q.
  */
 UpdateComputeEnvironmentRequestPrivate::UpdateComputeEnvironmentRequestPrivate(
     const BatchRequest::Action action, UpdateComputeEnvironmentRequest * const q)
@@ -118,15 +107,10 @@ UpdateComputeEnvironmentRequestPrivate::UpdateComputeEnvironmentRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateComputeEnvironmentRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateComputeEnvironmentRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateComputeEnvironmentRequest instance.
  */
 UpdateComputeEnvironmentRequestPrivate::UpdateComputeEnvironmentRequestPrivate(
     const UpdateComputeEnvironmentRequestPrivate &other, UpdateComputeEnvironmentRequest * const q)

@@ -27,10 +27,9 @@ namespace SNS {
 
 /*!
  * \class QtAws::SNS::DeletePlatformApplicationRequest
- *
  * \brief The DeletePlatformApplicationRequest class provides an interface for SNS DeletePlatformApplication requests.
  *
- * \ingroup SNS
+ * \inmodule QtAwsSNS
  *
  *  <fullname>Amazon Simple Notification Service</fullname>
  * 
@@ -51,9 +50,7 @@ namespace SNS {
  */
 
 /*!
- * @brief  Constructs a new DeletePlatformApplicationRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeletePlatformApplicationRequest::DeletePlatformApplicationRequest(const DeletePlatformApplicationRequest &other)
     : SNSRequest(new DeletePlatformApplicationRequestPrivate(*other.d_func(), this))
@@ -62,7 +59,7 @@ DeletePlatformApplicationRequest::DeletePlatformApplicationRequest(const DeleteP
 }
 
 /*!
- * @brief  Constructs a new DeletePlatformApplicationRequest object.
+ * Constructs a DeletePlatformApplicationRequest object.
  */
 DeletePlatformApplicationRequest::DeletePlatformApplicationRequest()
     : SNSRequest(new DeletePlatformApplicationRequestPrivate(SNSRequest::DeletePlatformApplicationAction, this))
@@ -80,14 +77,9 @@ bool DeletePlatformApplicationRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeletePlatformApplicationResponse object.
+ * Returns a DeletePlatformApplicationResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeletePlatformApplicationResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SNSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeletePlatformApplicationRequest::response(QNetworkReply * const reply) const
 {
@@ -95,20 +87,17 @@ QtAws::Core::AwsAbstractResponse * DeletePlatformApplicationRequest::response(QN
 }
 
 /*!
- * @internal
+ * \class QtAws::SNS::DeletePlatformApplicationRequestPrivate
+ * \brief The DeletePlatformApplicationRequestPrivate class provides private implementation for DeletePlatformApplicationRequest.
+ * \internal
  *
- * @class  DeletePlatformApplicationRequestPrivate
- *
- * @brief  Private implementation for DeletePlatformApplicationRequest.
+ * \inmodule QtAwsSNS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeletePlatformApplicationRequestPrivate object.
- *
- * @param  action  SNS action being performed.
- * @param  q       Pointer to this object's public DeletePlatformApplicationRequest instance.
+ * Constructs a DeletePlatformApplicationRequestPrivate object for SNS \a action with,
+ * public implementation \a q.
  */
 DeletePlatformApplicationRequestPrivate::DeletePlatformApplicationRequestPrivate(
     const SNSRequest::Action action, DeletePlatformApplicationRequest * const q)
@@ -118,15 +107,10 @@ DeletePlatformApplicationRequestPrivate::DeletePlatformApplicationRequestPrivate
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeletePlatformApplicationRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeletePlatformApplicationRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeletePlatformApplicationRequest instance.
  */
 DeletePlatformApplicationRequestPrivate::DeletePlatformApplicationRequestPrivate(
     const DeletePlatformApplicationRequestPrivate &other, DeletePlatformApplicationRequest * const q)

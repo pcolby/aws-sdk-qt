@@ -27,10 +27,9 @@ namespace CloudWatchEvents {
 
 /*!
  * \class QtAws::CloudWatchEvents::PutTargetsRequest
- *
  * \brief The PutTargetsRequest class provides an interface for CloudWatchEvents PutTargets requests.
  *
- * \ingroup CloudWatchEvents
+ * \inmodule QtAwsCloudWatchEvents
  *
  *  Amazon CloudWatch Events helps you to respond to state changes in your AWS resources. When your resources change state,
  *  they automatically send events into an event stream. You can create rules that match selected events in the stream and
@@ -60,9 +59,7 @@ namespace CloudWatchEvents {
  */
 
 /*!
- * @brief  Constructs a new PutTargetsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 PutTargetsRequest::PutTargetsRequest(const PutTargetsRequest &other)
     : CloudWatchEventsRequest(new PutTargetsRequestPrivate(*other.d_func(), this))
@@ -71,7 +68,7 @@ PutTargetsRequest::PutTargetsRequest(const PutTargetsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new PutTargetsRequest object.
+ * Constructs a PutTargetsRequest object.
  */
 PutTargetsRequest::PutTargetsRequest()
     : CloudWatchEventsRequest(new PutTargetsRequestPrivate(CloudWatchEventsRequest::PutTargetsAction, this))
@@ -89,14 +86,9 @@ bool PutTargetsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an PutTargetsResponse object.
+ * Returns a PutTargetsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An PutTargetsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudWatchEventsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * PutTargetsRequest::response(QNetworkReply * const reply) const
 {
@@ -104,20 +96,17 @@ QtAws::Core::AwsAbstractResponse * PutTargetsRequest::response(QNetworkReply * c
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudWatchEvents::PutTargetsRequestPrivate
+ * \brief The PutTargetsRequestPrivate class provides private implementation for PutTargetsRequest.
+ * \internal
  *
- * @class  PutTargetsRequestPrivate
- *
- * @brief  Private implementation for PutTargetsRequest.
+ * \inmodule QtAwsCloudWatchEvents
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new PutTargetsRequestPrivate object.
- *
- * @param  action  CloudWatchEvents action being performed.
- * @param  q       Pointer to this object's public PutTargetsRequest instance.
+ * Constructs a PutTargetsRequestPrivate object for CloudWatchEvents \a action with,
+ * public implementation \a q.
  */
 PutTargetsRequestPrivate::PutTargetsRequestPrivate(
     const CloudWatchEventsRequest::Action action, PutTargetsRequest * const q)
@@ -127,15 +116,10 @@ PutTargetsRequestPrivate::PutTargetsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutTargetsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the PutTargetsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public PutTargetsRequest instance.
  */
 PutTargetsRequestPrivate::PutTargetsRequestPrivate(
     const PutTargetsRequestPrivate &other, PutTargetsRequest * const q)

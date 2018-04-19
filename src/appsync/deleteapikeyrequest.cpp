@@ -27,10 +27,9 @@ namespace AppSync {
 
 /*!
  * \class QtAws::AppSync::DeleteApiKeyRequest
- *
  * \brief The DeleteApiKeyRequest class provides an interface for AppSync DeleteApiKey requests.
  *
- * \ingroup AppSync
+ * \inmodule QtAwsAppSync
  *
  *  AWS AppSync provides API actions for creating and interacting with data sources using GraphQL from your
  *
@@ -38,9 +37,7 @@ namespace AppSync {
  */
 
 /*!
- * @brief  Constructs a new DeleteApiKeyRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteApiKeyRequest::DeleteApiKeyRequest(const DeleteApiKeyRequest &other)
     : AppSyncRequest(new DeleteApiKeyRequestPrivate(*other.d_func(), this))
@@ -49,7 +46,7 @@ DeleteApiKeyRequest::DeleteApiKeyRequest(const DeleteApiKeyRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DeleteApiKeyRequest object.
+ * Constructs a DeleteApiKeyRequest object.
  */
 DeleteApiKeyRequest::DeleteApiKeyRequest()
     : AppSyncRequest(new DeleteApiKeyRequestPrivate(AppSyncRequest::DeleteApiKeyAction, this))
@@ -67,14 +64,9 @@ bool DeleteApiKeyRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteApiKeyResponse object.
+ * Returns a DeleteApiKeyResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteApiKeyResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AppSyncClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteApiKeyRequest::response(QNetworkReply * const reply) const
 {
@@ -82,20 +74,17 @@ QtAws::Core::AwsAbstractResponse * DeleteApiKeyRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::AppSync::DeleteApiKeyRequestPrivate
+ * \brief The DeleteApiKeyRequestPrivate class provides private implementation for DeleteApiKeyRequest.
+ * \internal
  *
- * @class  DeleteApiKeyRequestPrivate
- *
- * @brief  Private implementation for DeleteApiKeyRequest.
+ * \inmodule QtAwsAppSync
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteApiKeyRequestPrivate object.
- *
- * @param  action  AppSync action being performed.
- * @param  q       Pointer to this object's public DeleteApiKeyRequest instance.
+ * Constructs a DeleteApiKeyRequestPrivate object for AppSync \a action with,
+ * public implementation \a q.
  */
 DeleteApiKeyRequestPrivate::DeleteApiKeyRequestPrivate(
     const AppSyncRequest::Action action, DeleteApiKeyRequest * const q)
@@ -105,15 +94,10 @@ DeleteApiKeyRequestPrivate::DeleteApiKeyRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteApiKeyRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteApiKeyRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteApiKeyRequest instance.
  */
 DeleteApiKeyRequestPrivate::DeleteApiKeyRequestPrivate(
     const DeleteApiKeyRequestPrivate &other, DeleteApiKeyRequest * const q)

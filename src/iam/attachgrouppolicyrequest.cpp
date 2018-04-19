@@ -27,10 +27,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::AttachGroupPolicyRequest
- *
  * \brief The AttachGroupPolicyRequest class provides an interface for IAM AttachGroupPolicy requests.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -102,9 +101,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new AttachGroupPolicyRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AttachGroupPolicyRequest::AttachGroupPolicyRequest(const AttachGroupPolicyRequest &other)
     : IAMRequest(new AttachGroupPolicyRequestPrivate(*other.d_func(), this))
@@ -113,7 +110,7 @@ AttachGroupPolicyRequest::AttachGroupPolicyRequest(const AttachGroupPolicyReques
 }
 
 /*!
- * @brief  Constructs a new AttachGroupPolicyRequest object.
+ * Constructs a AttachGroupPolicyRequest object.
  */
 AttachGroupPolicyRequest::AttachGroupPolicyRequest()
     : IAMRequest(new AttachGroupPolicyRequestPrivate(IAMRequest::AttachGroupPolicyAction, this))
@@ -131,14 +128,9 @@ bool AttachGroupPolicyRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AttachGroupPolicyResponse object.
+ * Returns a AttachGroupPolicyResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AttachGroupPolicyResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IAMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AttachGroupPolicyRequest::response(QNetworkReply * const reply) const
 {
@@ -146,20 +138,17 @@ QtAws::Core::AwsAbstractResponse * AttachGroupPolicyRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::IAM::AttachGroupPolicyRequestPrivate
+ * \brief The AttachGroupPolicyRequestPrivate class provides private implementation for AttachGroupPolicyRequest.
+ * \internal
  *
- * @class  AttachGroupPolicyRequestPrivate
- *
- * @brief  Private implementation for AttachGroupPolicyRequest.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AttachGroupPolicyRequestPrivate object.
- *
- * @param  action  IAM action being performed.
- * @param  q       Pointer to this object's public AttachGroupPolicyRequest instance.
+ * Constructs a AttachGroupPolicyRequestPrivate object for IAM \a action with,
+ * public implementation \a q.
  */
 AttachGroupPolicyRequestPrivate::AttachGroupPolicyRequestPrivate(
     const IAMRequest::Action action, AttachGroupPolicyRequest * const q)
@@ -169,15 +158,10 @@ AttachGroupPolicyRequestPrivate::AttachGroupPolicyRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AttachGroupPolicyRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AttachGroupPolicyRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AttachGroupPolicyRequest instance.
  */
 AttachGroupPolicyRequestPrivate::AttachGroupPolicyRequestPrivate(
     const AttachGroupPolicyRequestPrivate &other, AttachGroupPolicyRequest * const q)

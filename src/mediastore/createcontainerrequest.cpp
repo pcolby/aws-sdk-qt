@@ -27,10 +27,9 @@ namespace MediaStore {
 
 /*!
  * \class QtAws::MediaStore::CreateContainerRequest
- *
  * \brief The CreateContainerRequest class provides an interface for MediaStore CreateContainer requests.
  *
- * \ingroup MediaStore
+ * \inmodule QtAwsMediaStore
  *
  *  An AWS Elemental MediaStore container is a namespace that holds folders and objects. You use a container endpoint to
  *  create, read, and delete objects.
@@ -39,9 +38,7 @@ namespace MediaStore {
  */
 
 /*!
- * @brief  Constructs a new CreateContainerRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateContainerRequest::CreateContainerRequest(const CreateContainerRequest &other)
     : MediaStoreRequest(new CreateContainerRequestPrivate(*other.d_func(), this))
@@ -50,7 +47,7 @@ CreateContainerRequest::CreateContainerRequest(const CreateContainerRequest &oth
 }
 
 /*!
- * @brief  Constructs a new CreateContainerRequest object.
+ * Constructs a CreateContainerRequest object.
  */
 CreateContainerRequest::CreateContainerRequest()
     : MediaStoreRequest(new CreateContainerRequestPrivate(MediaStoreRequest::CreateContainerAction, this))
@@ -68,14 +65,9 @@ bool CreateContainerRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateContainerResponse object.
+ * Returns a CreateContainerResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateContainerResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MediaStoreClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateContainerRequest::response(QNetworkReply * const reply) const
 {
@@ -83,20 +75,17 @@ QtAws::Core::AwsAbstractResponse * CreateContainerRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::MediaStore::CreateContainerRequestPrivate
+ * \brief The CreateContainerRequestPrivate class provides private implementation for CreateContainerRequest.
+ * \internal
  *
- * @class  CreateContainerRequestPrivate
- *
- * @brief  Private implementation for CreateContainerRequest.
+ * \inmodule QtAwsMediaStore
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateContainerRequestPrivate object.
- *
- * @param  action  MediaStore action being performed.
- * @param  q       Pointer to this object's public CreateContainerRequest instance.
+ * Constructs a CreateContainerRequestPrivate object for MediaStore \a action with,
+ * public implementation \a q.
  */
 CreateContainerRequestPrivate::CreateContainerRequestPrivate(
     const MediaStoreRequest::Action action, CreateContainerRequest * const q)
@@ -106,15 +95,10 @@ CreateContainerRequestPrivate::CreateContainerRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateContainerRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateContainerRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateContainerRequest instance.
  */
 CreateContainerRequestPrivate::CreateContainerRequestPrivate(
     const CreateContainerRequestPrivate &other, CreateContainerRequest * const q)

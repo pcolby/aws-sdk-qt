@@ -27,10 +27,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::DescribeDocumentPermissionRequest
- *
  * \brief The DescribeDocumentPermissionRequest class provides an interface for SSM DescribeDocumentPermission requests.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -61,9 +60,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new DescribeDocumentPermissionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeDocumentPermissionRequest::DescribeDocumentPermissionRequest(const DescribeDocumentPermissionRequest &other)
     : SSMRequest(new DescribeDocumentPermissionRequestPrivate(*other.d_func(), this))
@@ -72,7 +69,7 @@ DescribeDocumentPermissionRequest::DescribeDocumentPermissionRequest(const Descr
 }
 
 /*!
- * @brief  Constructs a new DescribeDocumentPermissionRequest object.
+ * Constructs a DescribeDocumentPermissionRequest object.
  */
 DescribeDocumentPermissionRequest::DescribeDocumentPermissionRequest()
     : SSMRequest(new DescribeDocumentPermissionRequestPrivate(SSMRequest::DescribeDocumentPermissionAction, this))
@@ -90,14 +87,9 @@ bool DescribeDocumentPermissionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeDocumentPermissionResponse object.
+ * Returns a DescribeDocumentPermissionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeDocumentPermissionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SSMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeDocumentPermissionRequest::response(QNetworkReply * const reply) const
 {
@@ -105,20 +97,17 @@ QtAws::Core::AwsAbstractResponse * DescribeDocumentPermissionRequest::response(Q
 }
 
 /*!
- * @internal
+ * \class QtAws::SSM::DescribeDocumentPermissionRequestPrivate
+ * \brief The DescribeDocumentPermissionRequestPrivate class provides private implementation for DescribeDocumentPermissionRequest.
+ * \internal
  *
- * @class  DescribeDocumentPermissionRequestPrivate
- *
- * @brief  Private implementation for DescribeDocumentPermissionRequest.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeDocumentPermissionRequestPrivate object.
- *
- * @param  action  SSM action being performed.
- * @param  q       Pointer to this object's public DescribeDocumentPermissionRequest instance.
+ * Constructs a DescribeDocumentPermissionRequestPrivate object for SSM \a action with,
+ * public implementation \a q.
  */
 DescribeDocumentPermissionRequestPrivate::DescribeDocumentPermissionRequestPrivate(
     const SSMRequest::Action action, DescribeDocumentPermissionRequest * const q)
@@ -128,15 +117,10 @@ DescribeDocumentPermissionRequestPrivate::DescribeDocumentPermissionRequestPriva
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeDocumentPermissionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeDocumentPermissionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeDocumentPermissionRequest instance.
  */
 DescribeDocumentPermissionRequestPrivate::DescribeDocumentPermissionRequestPrivate(
     const DescribeDocumentPermissionRequestPrivate &other, DescribeDocumentPermissionRequest * const q)

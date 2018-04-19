@@ -27,10 +27,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::UpdateRoleAliasRequest
- *
  * \brief The UpdateRoleAliasRequest class provides an interface for IoT UpdateRoleAlias requests.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -48,9 +47,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new UpdateRoleAliasRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateRoleAliasRequest::UpdateRoleAliasRequest(const UpdateRoleAliasRequest &other)
     : IoTRequest(new UpdateRoleAliasRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ UpdateRoleAliasRequest::UpdateRoleAliasRequest(const UpdateRoleAliasRequest &oth
 }
 
 /*!
- * @brief  Constructs a new UpdateRoleAliasRequest object.
+ * Constructs a UpdateRoleAliasRequest object.
  */
 UpdateRoleAliasRequest::UpdateRoleAliasRequest()
     : IoTRequest(new UpdateRoleAliasRequestPrivate(IoTRequest::UpdateRoleAliasAction, this))
@@ -77,14 +74,9 @@ bool UpdateRoleAliasRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateRoleAliasResponse object.
+ * Returns a UpdateRoleAliasResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateRoleAliasResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IoTClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateRoleAliasRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * UpdateRoleAliasRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::IoT::UpdateRoleAliasRequestPrivate
+ * \brief The UpdateRoleAliasRequestPrivate class provides private implementation for UpdateRoleAliasRequest.
+ * \internal
  *
- * @class  UpdateRoleAliasRequestPrivate
- *
- * @brief  Private implementation for UpdateRoleAliasRequest.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateRoleAliasRequestPrivate object.
- *
- * @param  action  IoT action being performed.
- * @param  q       Pointer to this object's public UpdateRoleAliasRequest instance.
+ * Constructs a UpdateRoleAliasRequestPrivate object for IoT \a action with,
+ * public implementation \a q.
  */
 UpdateRoleAliasRequestPrivate::UpdateRoleAliasRequestPrivate(
     const IoTRequest::Action action, UpdateRoleAliasRequest * const q)
@@ -115,15 +104,10 @@ UpdateRoleAliasRequestPrivate::UpdateRoleAliasRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateRoleAliasRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateRoleAliasRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateRoleAliasRequest instance.
  */
 UpdateRoleAliasRequestPrivate::UpdateRoleAliasRequestPrivate(
     const UpdateRoleAliasRequestPrivate &other, UpdateRoleAliasRequest * const q)

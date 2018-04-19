@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::ReplaceNetworkAclEntryRequest
- *
  * \brief The ReplaceNetworkAclEntryRequest class provides an interface for EC2 ReplaceNetworkAclEntry requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new ReplaceNetworkAclEntryRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ReplaceNetworkAclEntryRequest::ReplaceNetworkAclEntryRequest(const ReplaceNetworkAclEntryRequest &other)
     : EC2Request(new ReplaceNetworkAclEntryRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ ReplaceNetworkAclEntryRequest::ReplaceNetworkAclEntryRequest(const ReplaceNetwor
 }
 
 /*!
- * @brief  Constructs a new ReplaceNetworkAclEntryRequest object.
+ * Constructs a ReplaceNetworkAclEntryRequest object.
  */
 ReplaceNetworkAclEntryRequest::ReplaceNetworkAclEntryRequest()
     : EC2Request(new ReplaceNetworkAclEntryRequestPrivate(EC2Request::ReplaceNetworkAclEntryAction, this))
@@ -70,14 +67,9 @@ bool ReplaceNetworkAclEntryRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ReplaceNetworkAclEntryResponse object.
+ * Returns a ReplaceNetworkAclEntryResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ReplaceNetworkAclEntryResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ReplaceNetworkAclEntryRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * ReplaceNetworkAclEntryRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::ReplaceNetworkAclEntryRequestPrivate
+ * \brief The ReplaceNetworkAclEntryRequestPrivate class provides private implementation for ReplaceNetworkAclEntryRequest.
+ * \internal
  *
- * @class  ReplaceNetworkAclEntryRequestPrivate
- *
- * @brief  Private implementation for ReplaceNetworkAclEntryRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ReplaceNetworkAclEntryRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public ReplaceNetworkAclEntryRequest instance.
+ * Constructs a ReplaceNetworkAclEntryRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 ReplaceNetworkAclEntryRequestPrivate::ReplaceNetworkAclEntryRequestPrivate(
     const EC2Request::Action action, ReplaceNetworkAclEntryRequest * const q)
@@ -108,15 +97,10 @@ ReplaceNetworkAclEntryRequestPrivate::ReplaceNetworkAclEntryRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ReplaceNetworkAclEntryRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ReplaceNetworkAclEntryRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ReplaceNetworkAclEntryRequest instance.
  */
 ReplaceNetworkAclEntryRequestPrivate::ReplaceNetworkAclEntryRequestPrivate(
     const ReplaceNetworkAclEntryRequestPrivate &other, ReplaceNetworkAclEntryRequest * const q)

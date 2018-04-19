@@ -27,10 +27,9 @@ namespace Greengrass {
 
 /*!
  * \class QtAws::Greengrass::GetDeploymentStatusRequest
- *
  * \brief The GetDeploymentStatusRequest class provides an interface for Greengrass GetDeploymentStatus requests.
  *
- * \ingroup Greengrass
+ * \inmodule QtAwsGreengrass
  *
  *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
  *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
@@ -40,9 +39,7 @@ namespace Greengrass {
  */
 
 /*!
- * @brief  Constructs a new GetDeploymentStatusRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetDeploymentStatusRequest::GetDeploymentStatusRequest(const GetDeploymentStatusRequest &other)
     : GreengrassRequest(new GetDeploymentStatusRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ GetDeploymentStatusRequest::GetDeploymentStatusRequest(const GetDeploymentStatus
 }
 
 /*!
- * @brief  Constructs a new GetDeploymentStatusRequest object.
+ * Constructs a GetDeploymentStatusRequest object.
  */
 GetDeploymentStatusRequest::GetDeploymentStatusRequest()
     : GreengrassRequest(new GetDeploymentStatusRequestPrivate(GreengrassRequest::GetDeploymentStatusAction, this))
@@ -69,14 +66,9 @@ bool GetDeploymentStatusRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetDeploymentStatusResponse object.
+ * Returns a GetDeploymentStatusResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetDeploymentStatusResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GreengrassClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetDeploymentStatusRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * GetDeploymentStatusRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::Greengrass::GetDeploymentStatusRequestPrivate
+ * \brief The GetDeploymentStatusRequestPrivate class provides private implementation for GetDeploymentStatusRequest.
+ * \internal
  *
- * @class  GetDeploymentStatusRequestPrivate
- *
- * @brief  Private implementation for GetDeploymentStatusRequest.
+ * \inmodule QtAwsGreengrass
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetDeploymentStatusRequestPrivate object.
- *
- * @param  action  Greengrass action being performed.
- * @param  q       Pointer to this object's public GetDeploymentStatusRequest instance.
+ * Constructs a GetDeploymentStatusRequestPrivate object for Greengrass \a action with,
+ * public implementation \a q.
  */
 GetDeploymentStatusRequestPrivate::GetDeploymentStatusRequestPrivate(
     const GreengrassRequest::Action action, GetDeploymentStatusRequest * const q)
@@ -107,15 +96,10 @@ GetDeploymentStatusRequestPrivate::GetDeploymentStatusRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetDeploymentStatusRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetDeploymentStatusRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetDeploymentStatusRequest instance.
  */
 GetDeploymentStatusRequestPrivate::GetDeploymentStatusRequestPrivate(
     const GetDeploymentStatusRequestPrivate &other, GetDeploymentStatusRequest * const q)

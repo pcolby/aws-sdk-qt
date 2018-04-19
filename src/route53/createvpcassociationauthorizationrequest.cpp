@@ -27,19 +27,16 @@ namespace Route53 {
 
 /*!
  * \class QtAws::Route53::CreateVPCAssociationAuthorizationRequest
- *
  * \brief The CreateVPCAssociationAuthorizationRequest class provides an interface for Route53 CreateVPCAssociationAuthorization requests.
  *
- * \ingroup Route53
+ * \inmodule QtAwsRoute53
  *
  *
  * \sa Route53Client::createVPCAssociationAuthorization
  */
 
 /*!
- * @brief  Constructs a new CreateVPCAssociationAuthorizationRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateVPCAssociationAuthorizationRequest::CreateVPCAssociationAuthorizationRequest(const CreateVPCAssociationAuthorizationRequest &other)
     : Route53Request(new CreateVPCAssociationAuthorizationRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ CreateVPCAssociationAuthorizationRequest::CreateVPCAssociationAuthorizationReque
 }
 
 /*!
- * @brief  Constructs a new CreateVPCAssociationAuthorizationRequest object.
+ * Constructs a CreateVPCAssociationAuthorizationRequest object.
  */
 CreateVPCAssociationAuthorizationRequest::CreateVPCAssociationAuthorizationRequest()
     : Route53Request(new CreateVPCAssociationAuthorizationRequestPrivate(Route53Request::CreateVPCAssociationAuthorizationAction, this))
@@ -66,14 +63,9 @@ bool CreateVPCAssociationAuthorizationRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateVPCAssociationAuthorizationResponse object.
+ * Returns a CreateVPCAssociationAuthorizationResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateVPCAssociationAuthorizationResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  Route53Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateVPCAssociationAuthorizationRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * CreateVPCAssociationAuthorizationRequest::res
 }
 
 /*!
- * @internal
+ * \class QtAws::Route53::CreateVPCAssociationAuthorizationRequestPrivate
+ * \brief The CreateVPCAssociationAuthorizationRequestPrivate class provides private implementation for CreateVPCAssociationAuthorizationRequest.
+ * \internal
  *
- * @class  CreateVPCAssociationAuthorizationRequestPrivate
- *
- * @brief  Private implementation for CreateVPCAssociationAuthorizationRequest.
+ * \inmodule QtAwsRoute53
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateVPCAssociationAuthorizationRequestPrivate object.
- *
- * @param  action  Route53 action being performed.
- * @param  q       Pointer to this object's public CreateVPCAssociationAuthorizationRequest instance.
+ * Constructs a CreateVPCAssociationAuthorizationRequestPrivate object for Route53 \a action with,
+ * public implementation \a q.
  */
 CreateVPCAssociationAuthorizationRequestPrivate::CreateVPCAssociationAuthorizationRequestPrivate(
     const Route53Request::Action action, CreateVPCAssociationAuthorizationRequest * const q)
@@ -104,15 +93,10 @@ CreateVPCAssociationAuthorizationRequestPrivate::CreateVPCAssociationAuthorizati
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateVPCAssociationAuthorizationRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateVPCAssociationAuthorizationRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateVPCAssociationAuthorizationRequest instance.
  */
 CreateVPCAssociationAuthorizationRequestPrivate::CreateVPCAssociationAuthorizationRequestPrivate(
     const CreateVPCAssociationAuthorizationRequestPrivate &other, CreateVPCAssociationAuthorizationRequest * const q)

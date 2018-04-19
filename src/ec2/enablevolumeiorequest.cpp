@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::EnableVolumeIORequest
- *
  * \brief The EnableVolumeIORequest class provides an interface for EC2 EnableVolumeIO requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new EnableVolumeIORequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 EnableVolumeIORequest::EnableVolumeIORequest(const EnableVolumeIORequest &other)
     : EC2Request(new EnableVolumeIORequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ EnableVolumeIORequest::EnableVolumeIORequest(const EnableVolumeIORequest &other)
 }
 
 /*!
- * @brief  Constructs a new EnableVolumeIORequest object.
+ * Constructs a EnableVolumeIORequest object.
  */
 EnableVolumeIORequest::EnableVolumeIORequest()
     : EC2Request(new EnableVolumeIORequestPrivate(EC2Request::EnableVolumeIOAction, this))
@@ -70,14 +67,9 @@ bool EnableVolumeIORequest::isValid() const
 
 
 /*!
- * @brief  Construct an EnableVolumeIOResponse object.
+ * Returns a EnableVolumeIOResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An EnableVolumeIOResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * EnableVolumeIORequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * EnableVolumeIORequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::EnableVolumeIORequestPrivate
+ * \brief The EnableVolumeIORequestPrivate class provides private implementation for EnableVolumeIORequest.
+ * \internal
  *
- * @class  EnableVolumeIORequestPrivate
- *
- * @brief  Private implementation for EnableVolumeIORequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new EnableVolumeIORequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public EnableVolumeIORequest instance.
+ * Constructs a EnableVolumeIORequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 EnableVolumeIORequestPrivate::EnableVolumeIORequestPrivate(
     const EC2Request::Action action, EnableVolumeIORequest * const q)
@@ -108,15 +97,10 @@ EnableVolumeIORequestPrivate::EnableVolumeIORequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new EnableVolumeIORequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the EnableVolumeIORequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public EnableVolumeIORequest instance.
  */
 EnableVolumeIORequestPrivate::EnableVolumeIORequestPrivate(
     const EnableVolumeIORequestPrivate &other, EnableVolumeIORequest * const q)

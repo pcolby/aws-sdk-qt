@@ -27,10 +27,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::SetV2LoggingLevelRequest
- *
  * \brief The SetV2LoggingLevelRequest class provides an interface for IoT SetV2LoggingLevel requests.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -48,9 +47,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new SetV2LoggingLevelRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 SetV2LoggingLevelRequest::SetV2LoggingLevelRequest(const SetV2LoggingLevelRequest &other)
     : IoTRequest(new SetV2LoggingLevelRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ SetV2LoggingLevelRequest::SetV2LoggingLevelRequest(const SetV2LoggingLevelReques
 }
 
 /*!
- * @brief  Constructs a new SetV2LoggingLevelRequest object.
+ * Constructs a SetV2LoggingLevelRequest object.
  */
 SetV2LoggingLevelRequest::SetV2LoggingLevelRequest()
     : IoTRequest(new SetV2LoggingLevelRequestPrivate(IoTRequest::SetV2LoggingLevelAction, this))
@@ -77,14 +74,9 @@ bool SetV2LoggingLevelRequest::isValid() const
 
 
 /*!
- * @brief  Construct an SetV2LoggingLevelResponse object.
+ * Returns a SetV2LoggingLevelResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An SetV2LoggingLevelResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IoTClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * SetV2LoggingLevelRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * SetV2LoggingLevelRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::IoT::SetV2LoggingLevelRequestPrivate
+ * \brief The SetV2LoggingLevelRequestPrivate class provides private implementation for SetV2LoggingLevelRequest.
+ * \internal
  *
- * @class  SetV2LoggingLevelRequestPrivate
- *
- * @brief  Private implementation for SetV2LoggingLevelRequest.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new SetV2LoggingLevelRequestPrivate object.
- *
- * @param  action  IoT action being performed.
- * @param  q       Pointer to this object's public SetV2LoggingLevelRequest instance.
+ * Constructs a SetV2LoggingLevelRequestPrivate object for IoT \a action with,
+ * public implementation \a q.
  */
 SetV2LoggingLevelRequestPrivate::SetV2LoggingLevelRequestPrivate(
     const IoTRequest::Action action, SetV2LoggingLevelRequest * const q)
@@ -115,15 +104,10 @@ SetV2LoggingLevelRequestPrivate::SetV2LoggingLevelRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SetV2LoggingLevelRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the SetV2LoggingLevelRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public SetV2LoggingLevelRequest instance.
  */
 SetV2LoggingLevelRequestPrivate::SetV2LoggingLevelRequestPrivate(
     const SetV2LoggingLevelRequestPrivate &other, SetV2LoggingLevelRequest * const q)

@@ -27,19 +27,16 @@ namespace MachineLearning {
 
 /*!
  * \class QtAws::MachineLearning::DescribeMLModelsRequest
- *
  * \brief The DescribeMLModelsRequest class provides an interface for MachineLearning DescribeMLModels requests.
  *
- * \ingroup MachineLearning
+ * \inmodule QtAwsMachineLearning
  *
  *
  * \sa MachineLearningClient::describeMLModels
  */
 
 /*!
- * @brief  Constructs a new DescribeMLModelsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeMLModelsRequest::DescribeMLModelsRequest(const DescribeMLModelsRequest &other)
     : MachineLearningRequest(new DescribeMLModelsRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ DescribeMLModelsRequest::DescribeMLModelsRequest(const DescribeMLModelsRequest &
 }
 
 /*!
- * @brief  Constructs a new DescribeMLModelsRequest object.
+ * Constructs a DescribeMLModelsRequest object.
  */
 DescribeMLModelsRequest::DescribeMLModelsRequest()
     : MachineLearningRequest(new DescribeMLModelsRequestPrivate(MachineLearningRequest::DescribeMLModelsAction, this))
@@ -66,14 +63,9 @@ bool DescribeMLModelsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeMLModelsResponse object.
+ * Returns a DescribeMLModelsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeMLModelsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MachineLearningClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeMLModelsRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * DescribeMLModelsRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::MachineLearning::DescribeMLModelsRequestPrivate
+ * \brief The DescribeMLModelsRequestPrivate class provides private implementation for DescribeMLModelsRequest.
+ * \internal
  *
- * @class  DescribeMLModelsRequestPrivate
- *
- * @brief  Private implementation for DescribeMLModelsRequest.
+ * \inmodule QtAwsMachineLearning
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeMLModelsRequestPrivate object.
- *
- * @param  action  MachineLearning action being performed.
- * @param  q       Pointer to this object's public DescribeMLModelsRequest instance.
+ * Constructs a DescribeMLModelsRequestPrivate object for MachineLearning \a action with,
+ * public implementation \a q.
  */
 DescribeMLModelsRequestPrivate::DescribeMLModelsRequestPrivate(
     const MachineLearningRequest::Action action, DescribeMLModelsRequest * const q)
@@ -104,15 +93,10 @@ DescribeMLModelsRequestPrivate::DescribeMLModelsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeMLModelsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeMLModelsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeMLModelsRequest instance.
  */
 DescribeMLModelsRequestPrivate::DescribeMLModelsRequestPrivate(
     const DescribeMLModelsRequestPrivate &other, DescribeMLModelsRequest * const q)

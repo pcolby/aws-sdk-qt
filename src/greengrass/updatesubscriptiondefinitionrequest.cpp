@@ -27,10 +27,9 @@ namespace Greengrass {
 
 /*!
  * \class QtAws::Greengrass::UpdateSubscriptionDefinitionRequest
- *
  * \brief The UpdateSubscriptionDefinitionRequest class provides an interface for Greengrass UpdateSubscriptionDefinition requests.
  *
- * \ingroup Greengrass
+ * \inmodule QtAwsGreengrass
  *
  *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
  *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
@@ -40,9 +39,7 @@ namespace Greengrass {
  */
 
 /*!
- * @brief  Constructs a new UpdateSubscriptionDefinitionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateSubscriptionDefinitionRequest::UpdateSubscriptionDefinitionRequest(const UpdateSubscriptionDefinitionRequest &other)
     : GreengrassRequest(new UpdateSubscriptionDefinitionRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ UpdateSubscriptionDefinitionRequest::UpdateSubscriptionDefinitionRequest(const U
 }
 
 /*!
- * @brief  Constructs a new UpdateSubscriptionDefinitionRequest object.
+ * Constructs a UpdateSubscriptionDefinitionRequest object.
  */
 UpdateSubscriptionDefinitionRequest::UpdateSubscriptionDefinitionRequest()
     : GreengrassRequest(new UpdateSubscriptionDefinitionRequestPrivate(GreengrassRequest::UpdateSubscriptionDefinitionAction, this))
@@ -69,14 +66,9 @@ bool UpdateSubscriptionDefinitionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateSubscriptionDefinitionResponse object.
+ * Returns a UpdateSubscriptionDefinitionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateSubscriptionDefinitionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GreengrassClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateSubscriptionDefinitionRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * UpdateSubscriptionDefinitionRequest::response
 }
 
 /*!
- * @internal
+ * \class QtAws::Greengrass::UpdateSubscriptionDefinitionRequestPrivate
+ * \brief The UpdateSubscriptionDefinitionRequestPrivate class provides private implementation for UpdateSubscriptionDefinitionRequest.
+ * \internal
  *
- * @class  UpdateSubscriptionDefinitionRequestPrivate
- *
- * @brief  Private implementation for UpdateSubscriptionDefinitionRequest.
+ * \inmodule QtAwsGreengrass
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateSubscriptionDefinitionRequestPrivate object.
- *
- * @param  action  Greengrass action being performed.
- * @param  q       Pointer to this object's public UpdateSubscriptionDefinitionRequest instance.
+ * Constructs a UpdateSubscriptionDefinitionRequestPrivate object for Greengrass \a action with,
+ * public implementation \a q.
  */
 UpdateSubscriptionDefinitionRequestPrivate::UpdateSubscriptionDefinitionRequestPrivate(
     const GreengrassRequest::Action action, UpdateSubscriptionDefinitionRequest * const q)
@@ -107,15 +96,10 @@ UpdateSubscriptionDefinitionRequestPrivate::UpdateSubscriptionDefinitionRequestP
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateSubscriptionDefinitionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateSubscriptionDefinitionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateSubscriptionDefinitionRequest instance.
  */
 UpdateSubscriptionDefinitionRequestPrivate::UpdateSubscriptionDefinitionRequestPrivate(
     const UpdateSubscriptionDefinitionRequestPrivate &other, UpdateSubscriptionDefinitionRequest * const q)

@@ -27,10 +27,9 @@ namespace MQ {
 
 /*!
  * \class QtAws::MQ::DescribeConfigurationRequest
- *
  * \brief The DescribeConfigurationRequest class provides an interface for MQ DescribeConfiguration requests.
  *
- * \ingroup MQ
+ * \inmodule QtAwsMQ
  *
  *  Amazon MQ is a managed message broker service for Apache ActiveMQ that makes it easy to set up and operate message
  *  brokers in the cloud. A message broker allows software applications and components to communicate using various
@@ -39,9 +38,7 @@ namespace MQ {
  */
 
 /*!
- * @brief  Constructs a new DescribeConfigurationRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeConfigurationRequest::DescribeConfigurationRequest(const DescribeConfigurationRequest &other)
     : MQRequest(new DescribeConfigurationRequestPrivate(*other.d_func(), this))
@@ -50,7 +47,7 @@ DescribeConfigurationRequest::DescribeConfigurationRequest(const DescribeConfigu
 }
 
 /*!
- * @brief  Constructs a new DescribeConfigurationRequest object.
+ * Constructs a DescribeConfigurationRequest object.
  */
 DescribeConfigurationRequest::DescribeConfigurationRequest()
     : MQRequest(new DescribeConfigurationRequestPrivate(MQRequest::DescribeConfigurationAction, this))
@@ -68,14 +65,9 @@ bool DescribeConfigurationRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeConfigurationResponse object.
+ * Returns a DescribeConfigurationResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeConfigurationResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MQClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeConfigurationRequest::response(QNetworkReply * const reply) const
 {
@@ -83,20 +75,17 @@ QtAws::Core::AwsAbstractResponse * DescribeConfigurationRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::MQ::DescribeConfigurationRequestPrivate
+ * \brief The DescribeConfigurationRequestPrivate class provides private implementation for DescribeConfigurationRequest.
+ * \internal
  *
- * @class  DescribeConfigurationRequestPrivate
- *
- * @brief  Private implementation for DescribeConfigurationRequest.
+ * \inmodule QtAwsMQ
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeConfigurationRequestPrivate object.
- *
- * @param  action  MQ action being performed.
- * @param  q       Pointer to this object's public DescribeConfigurationRequest instance.
+ * Constructs a DescribeConfigurationRequestPrivate object for MQ \a action with,
+ * public implementation \a q.
  */
 DescribeConfigurationRequestPrivate::DescribeConfigurationRequestPrivate(
     const MQRequest::Action action, DescribeConfigurationRequest * const q)
@@ -106,15 +95,10 @@ DescribeConfigurationRequestPrivate::DescribeConfigurationRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeConfigurationRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeConfigurationRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeConfigurationRequest instance.
  */
 DescribeConfigurationRequestPrivate::DescribeConfigurationRequestPrivate(
     const DescribeConfigurationRequestPrivate &other, DescribeConfigurationRequest * const q)

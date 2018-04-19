@@ -27,10 +27,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::SetLoggingOptionsRequest
- *
  * \brief The SetLoggingOptionsRequest class provides an interface for IoT SetLoggingOptions requests.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -48,9 +47,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new SetLoggingOptionsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 SetLoggingOptionsRequest::SetLoggingOptionsRequest(const SetLoggingOptionsRequest &other)
     : IoTRequest(new SetLoggingOptionsRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ SetLoggingOptionsRequest::SetLoggingOptionsRequest(const SetLoggingOptionsReques
 }
 
 /*!
- * @brief  Constructs a new SetLoggingOptionsRequest object.
+ * Constructs a SetLoggingOptionsRequest object.
  */
 SetLoggingOptionsRequest::SetLoggingOptionsRequest()
     : IoTRequest(new SetLoggingOptionsRequestPrivate(IoTRequest::SetLoggingOptionsAction, this))
@@ -77,14 +74,9 @@ bool SetLoggingOptionsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an SetLoggingOptionsResponse object.
+ * Returns a SetLoggingOptionsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An SetLoggingOptionsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IoTClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * SetLoggingOptionsRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * SetLoggingOptionsRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::IoT::SetLoggingOptionsRequestPrivate
+ * \brief The SetLoggingOptionsRequestPrivate class provides private implementation for SetLoggingOptionsRequest.
+ * \internal
  *
- * @class  SetLoggingOptionsRequestPrivate
- *
- * @brief  Private implementation for SetLoggingOptionsRequest.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new SetLoggingOptionsRequestPrivate object.
- *
- * @param  action  IoT action being performed.
- * @param  q       Pointer to this object's public SetLoggingOptionsRequest instance.
+ * Constructs a SetLoggingOptionsRequestPrivate object for IoT \a action with,
+ * public implementation \a q.
  */
 SetLoggingOptionsRequestPrivate::SetLoggingOptionsRequestPrivate(
     const IoTRequest::Action action, SetLoggingOptionsRequest * const q)
@@ -115,15 +104,10 @@ SetLoggingOptionsRequestPrivate::SetLoggingOptionsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SetLoggingOptionsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the SetLoggingOptionsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public SetLoggingOptionsRequest instance.
  */
 SetLoggingOptionsRequestPrivate::SetLoggingOptionsRequestPrivate(
     const SetLoggingOptionsRequestPrivate &other, SetLoggingOptionsRequest * const q)

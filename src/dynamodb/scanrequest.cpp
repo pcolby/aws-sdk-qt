@@ -27,10 +27,9 @@ namespace DynamoDB {
 
 /*!
  * \class QtAws::DynamoDB::ScanRequest
- *
  * \brief The ScanRequest class provides an interface for DynamoDB Scan requests.
  *
- * \ingroup DynamoDB
+ * \inmodule QtAwsDynamoDB
  *
  *  <fullname>Amazon DynamoDB</fullname>
  * 
@@ -56,9 +55,7 @@ namespace DynamoDB {
  */
 
 /*!
- * @brief  Constructs a new ScanRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ScanRequest::ScanRequest(const ScanRequest &other)
     : DynamoDBRequest(new ScanRequestPrivate(*other.d_func(), this))
@@ -67,7 +64,7 @@ ScanRequest::ScanRequest(const ScanRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ScanRequest object.
+ * Constructs a ScanRequest object.
  */
 ScanRequest::ScanRequest()
     : DynamoDBRequest(new ScanRequestPrivate(DynamoDBRequest::ScanAction, this))
@@ -85,14 +82,9 @@ bool ScanRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ScanResponse object.
+ * Returns a ScanResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ScanResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DynamoDBClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ScanRequest::response(QNetworkReply * const reply) const
 {
@@ -100,20 +92,17 @@ QtAws::Core::AwsAbstractResponse * ScanRequest::response(QNetworkReply * const r
 }
 
 /*!
- * @internal
+ * \class QtAws::DynamoDB::ScanRequestPrivate
+ * \brief The ScanRequestPrivate class provides private implementation for ScanRequest.
+ * \internal
  *
- * @class  ScanRequestPrivate
- *
- * @brief  Private implementation for ScanRequest.
+ * \inmodule QtAwsDynamoDB
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ScanRequestPrivate object.
- *
- * @param  action  DynamoDB action being performed.
- * @param  q       Pointer to this object's public ScanRequest instance.
+ * Constructs a ScanRequestPrivate object for DynamoDB \a action with,
+ * public implementation \a q.
  */
 ScanRequestPrivate::ScanRequestPrivate(
     const DynamoDBRequest::Action action, ScanRequest * const q)
@@ -123,15 +112,10 @@ ScanRequestPrivate::ScanRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ScanRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ScanRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ScanRequest instance.
  */
 ScanRequestPrivate::ScanRequestPrivate(
     const ScanRequestPrivate &other, ScanRequest * const q)

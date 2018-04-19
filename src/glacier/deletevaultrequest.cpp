@@ -27,10 +27,9 @@ namespace Glacier {
 
 /*!
  * \class QtAws::Glacier::DeleteVaultRequest
- *
  * \brief The DeleteVaultRequest class provides an interface for Glacier DeleteVault requests.
  *
- * \ingroup Glacier
+ * \inmodule QtAwsGlacier
  *
  *  Amazon Glacier is a storage solution for "cold
  * 
@@ -75,9 +74,7 @@ namespace Glacier {
  */
 
 /*!
- * @brief  Constructs a new DeleteVaultRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteVaultRequest::DeleteVaultRequest(const DeleteVaultRequest &other)
     : GlacierRequest(new DeleteVaultRequestPrivate(*other.d_func(), this))
@@ -86,7 +83,7 @@ DeleteVaultRequest::DeleteVaultRequest(const DeleteVaultRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DeleteVaultRequest object.
+ * Constructs a DeleteVaultRequest object.
  */
 DeleteVaultRequest::DeleteVaultRequest()
     : GlacierRequest(new DeleteVaultRequestPrivate(GlacierRequest::DeleteVaultAction, this))
@@ -104,14 +101,9 @@ bool DeleteVaultRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteVaultResponse object.
+ * Returns a DeleteVaultResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteVaultResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GlacierClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteVaultRequest::response(QNetworkReply * const reply) const
 {
@@ -119,20 +111,17 @@ QtAws::Core::AwsAbstractResponse * DeleteVaultRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::Glacier::DeleteVaultRequestPrivate
+ * \brief The DeleteVaultRequestPrivate class provides private implementation for DeleteVaultRequest.
+ * \internal
  *
- * @class  DeleteVaultRequestPrivate
- *
- * @brief  Private implementation for DeleteVaultRequest.
+ * \inmodule QtAwsGlacier
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteVaultRequestPrivate object.
- *
- * @param  action  Glacier action being performed.
- * @param  q       Pointer to this object's public DeleteVaultRequest instance.
+ * Constructs a DeleteVaultRequestPrivate object for Glacier \a action with,
+ * public implementation \a q.
  */
 DeleteVaultRequestPrivate::DeleteVaultRequestPrivate(
     const GlacierRequest::Action action, DeleteVaultRequest * const q)
@@ -142,15 +131,10 @@ DeleteVaultRequestPrivate::DeleteVaultRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteVaultRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteVaultRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteVaultRequest instance.
  */
 DeleteVaultRequestPrivate::DeleteVaultRequestPrivate(
     const DeleteVaultRequestPrivate &other, DeleteVaultRequest * const q)

@@ -27,10 +27,9 @@ namespace DAX {
 
 /*!
  * \class QtAws::DAX::DescribeDefaultParametersRequest
- *
  * \brief The DescribeDefaultParametersRequest class provides an interface for DAX DescribeDefaultParameters requests.
  *
- * \ingroup DAX
+ * \inmodule QtAwsDAX
  *
  *  DAX is a managed caching service engineered for Amazon DynamoDB. DAX dramatically speeds up database reads by caching
  *  frequently-accessed data from DynamoDB, so applications can access that data with sub-millisecond latency. You can
@@ -41,9 +40,7 @@ namespace DAX {
  */
 
 /*!
- * @brief  Constructs a new DescribeDefaultParametersRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeDefaultParametersRequest::DescribeDefaultParametersRequest(const DescribeDefaultParametersRequest &other)
     : DAXRequest(new DescribeDefaultParametersRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ DescribeDefaultParametersRequest::DescribeDefaultParametersRequest(const Describ
 }
 
 /*!
- * @brief  Constructs a new DescribeDefaultParametersRequest object.
+ * Constructs a DescribeDefaultParametersRequest object.
  */
 DescribeDefaultParametersRequest::DescribeDefaultParametersRequest()
     : DAXRequest(new DescribeDefaultParametersRequestPrivate(DAXRequest::DescribeDefaultParametersAction, this))
@@ -70,14 +67,9 @@ bool DescribeDefaultParametersRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeDefaultParametersResponse object.
+ * Returns a DescribeDefaultParametersResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeDefaultParametersResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DAXClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeDefaultParametersRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * DescribeDefaultParametersRequest::response(QN
 }
 
 /*!
- * @internal
+ * \class QtAws::DAX::DescribeDefaultParametersRequestPrivate
+ * \brief The DescribeDefaultParametersRequestPrivate class provides private implementation for DescribeDefaultParametersRequest.
+ * \internal
  *
- * @class  DescribeDefaultParametersRequestPrivate
- *
- * @brief  Private implementation for DescribeDefaultParametersRequest.
+ * \inmodule QtAwsDAX
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeDefaultParametersRequestPrivate object.
- *
- * @param  action  DAX action being performed.
- * @param  q       Pointer to this object's public DescribeDefaultParametersRequest instance.
+ * Constructs a DescribeDefaultParametersRequestPrivate object for DAX \a action with,
+ * public implementation \a q.
  */
 DescribeDefaultParametersRequestPrivate::DescribeDefaultParametersRequestPrivate(
     const DAXRequest::Action action, DescribeDefaultParametersRequest * const q)
@@ -108,15 +97,10 @@ DescribeDefaultParametersRequestPrivate::DescribeDefaultParametersRequestPrivate
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeDefaultParametersRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeDefaultParametersRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeDefaultParametersRequest instance.
  */
 DescribeDefaultParametersRequestPrivate::DescribeDefaultParametersRequestPrivate(
     const DescribeDefaultParametersRequestPrivate &other, DescribeDefaultParametersRequest * const q)

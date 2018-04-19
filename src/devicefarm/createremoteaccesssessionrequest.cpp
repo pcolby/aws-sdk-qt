@@ -27,10 +27,9 @@ namespace DeviceFarm {
 
 /*!
  * \class QtAws::DeviceFarm::CreateRemoteAccessSessionRequest
- *
  * \brief The CreateRemoteAccessSessionRequest class provides an interface for DeviceFarm CreateRemoteAccessSession requests.
  *
- * \ingroup DeviceFarm
+ * \inmodule QtAwsDeviceFarm
  *
  *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
  *  phones, tablets, and other devices in the
@@ -39,9 +38,7 @@ namespace DeviceFarm {
  */
 
 /*!
- * @brief  Constructs a new CreateRemoteAccessSessionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateRemoteAccessSessionRequest::CreateRemoteAccessSessionRequest(const CreateRemoteAccessSessionRequest &other)
     : DeviceFarmRequest(new CreateRemoteAccessSessionRequestPrivate(*other.d_func(), this))
@@ -50,7 +47,7 @@ CreateRemoteAccessSessionRequest::CreateRemoteAccessSessionRequest(const CreateR
 }
 
 /*!
- * @brief  Constructs a new CreateRemoteAccessSessionRequest object.
+ * Constructs a CreateRemoteAccessSessionRequest object.
  */
 CreateRemoteAccessSessionRequest::CreateRemoteAccessSessionRequest()
     : DeviceFarmRequest(new CreateRemoteAccessSessionRequestPrivate(DeviceFarmRequest::CreateRemoteAccessSessionAction, this))
@@ -68,14 +65,9 @@ bool CreateRemoteAccessSessionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateRemoteAccessSessionResponse object.
+ * Returns a CreateRemoteAccessSessionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateRemoteAccessSessionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DeviceFarmClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateRemoteAccessSessionRequest::response(QNetworkReply * const reply) const
 {
@@ -83,20 +75,17 @@ QtAws::Core::AwsAbstractResponse * CreateRemoteAccessSessionRequest::response(QN
 }
 
 /*!
- * @internal
+ * \class QtAws::DeviceFarm::CreateRemoteAccessSessionRequestPrivate
+ * \brief The CreateRemoteAccessSessionRequestPrivate class provides private implementation for CreateRemoteAccessSessionRequest.
+ * \internal
  *
- * @class  CreateRemoteAccessSessionRequestPrivate
- *
- * @brief  Private implementation for CreateRemoteAccessSessionRequest.
+ * \inmodule QtAwsDeviceFarm
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateRemoteAccessSessionRequestPrivate object.
- *
- * @param  action  DeviceFarm action being performed.
- * @param  q       Pointer to this object's public CreateRemoteAccessSessionRequest instance.
+ * Constructs a CreateRemoteAccessSessionRequestPrivate object for DeviceFarm \a action with,
+ * public implementation \a q.
  */
 CreateRemoteAccessSessionRequestPrivate::CreateRemoteAccessSessionRequestPrivate(
     const DeviceFarmRequest::Action action, CreateRemoteAccessSessionRequest * const q)
@@ -106,15 +95,10 @@ CreateRemoteAccessSessionRequestPrivate::CreateRemoteAccessSessionRequestPrivate
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateRemoteAccessSessionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateRemoteAccessSessionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateRemoteAccessSessionRequest instance.
  */
 CreateRemoteAccessSessionRequestPrivate::CreateRemoteAccessSessionRequestPrivate(
     const CreateRemoteAccessSessionRequestPrivate &other, CreateRemoteAccessSessionRequest * const q)

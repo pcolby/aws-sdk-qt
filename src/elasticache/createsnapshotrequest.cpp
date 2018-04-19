@@ -27,10 +27,9 @@ namespace ElastiCache {
 
 /*!
  * \class QtAws::ElastiCache::CreateSnapshotRequest
- *
  * \brief The CreateSnapshotRequest class provides an interface for ElastiCache CreateSnapshot requests.
  *
- * \ingroup ElastiCache
+ * \inmodule QtAwsElastiCache
  *
  *  <fullname>Amazon ElastiCache</fullname>
  * 
@@ -51,9 +50,7 @@ namespace ElastiCache {
  */
 
 /*!
- * @brief  Constructs a new CreateSnapshotRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateSnapshotRequest::CreateSnapshotRequest(const CreateSnapshotRequest &other)
     : ElastiCacheRequest(new CreateSnapshotRequestPrivate(*other.d_func(), this))
@@ -62,7 +59,7 @@ CreateSnapshotRequest::CreateSnapshotRequest(const CreateSnapshotRequest &other)
 }
 
 /*!
- * @brief  Constructs a new CreateSnapshotRequest object.
+ * Constructs a CreateSnapshotRequest object.
  */
 CreateSnapshotRequest::CreateSnapshotRequest()
     : ElastiCacheRequest(new CreateSnapshotRequestPrivate(ElastiCacheRequest::CreateSnapshotAction, this))
@@ -80,14 +77,9 @@ bool CreateSnapshotRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateSnapshotResponse object.
+ * Returns a CreateSnapshotResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateSnapshotResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ElastiCacheClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateSnapshotRequest::response(QNetworkReply * const reply) const
 {
@@ -95,20 +87,17 @@ QtAws::Core::AwsAbstractResponse * CreateSnapshotRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::ElastiCache::CreateSnapshotRequestPrivate
+ * \brief The CreateSnapshotRequestPrivate class provides private implementation for CreateSnapshotRequest.
+ * \internal
  *
- * @class  CreateSnapshotRequestPrivate
- *
- * @brief  Private implementation for CreateSnapshotRequest.
+ * \inmodule QtAwsElastiCache
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateSnapshotRequestPrivate object.
- *
- * @param  action  ElastiCache action being performed.
- * @param  q       Pointer to this object's public CreateSnapshotRequest instance.
+ * Constructs a CreateSnapshotRequestPrivate object for ElastiCache \a action with,
+ * public implementation \a q.
  */
 CreateSnapshotRequestPrivate::CreateSnapshotRequestPrivate(
     const ElastiCacheRequest::Action action, CreateSnapshotRequest * const q)
@@ -118,15 +107,10 @@ CreateSnapshotRequestPrivate::CreateSnapshotRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateSnapshotRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateSnapshotRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateSnapshotRequest instance.
  */
 CreateSnapshotRequestPrivate::CreateSnapshotRequestPrivate(
     const CreateSnapshotRequestPrivate &other, CreateSnapshotRequest * const q)

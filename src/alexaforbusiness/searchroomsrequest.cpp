@@ -27,10 +27,9 @@ namespace AlexaForBusiness {
 
 /*!
  * \class QtAws::AlexaForBusiness::SearchRoomsRequest
- *
  * \brief The SearchRoomsRequest class provides an interface for AlexaForBusiness SearchRooms requests.
  *
- * \ingroup AlexaForBusiness
+ * \inmodule QtAwsAlexaForBusiness
  *
  *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
  *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
@@ -42,9 +41,7 @@ namespace AlexaForBusiness {
  */
 
 /*!
- * @brief  Constructs a new SearchRoomsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 SearchRoomsRequest::SearchRoomsRequest(const SearchRoomsRequest &other)
     : AlexaForBusinessRequest(new SearchRoomsRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ SearchRoomsRequest::SearchRoomsRequest(const SearchRoomsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new SearchRoomsRequest object.
+ * Constructs a SearchRoomsRequest object.
  */
 SearchRoomsRequest::SearchRoomsRequest()
     : AlexaForBusinessRequest(new SearchRoomsRequestPrivate(AlexaForBusinessRequest::SearchRoomsAction, this))
@@ -71,14 +68,9 @@ bool SearchRoomsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an SearchRoomsResponse object.
+ * Returns a SearchRoomsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An SearchRoomsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AlexaForBusinessClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * SearchRoomsRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * SearchRoomsRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::AlexaForBusiness::SearchRoomsRequestPrivate
+ * \brief The SearchRoomsRequestPrivate class provides private implementation for SearchRoomsRequest.
+ * \internal
  *
- * @class  SearchRoomsRequestPrivate
- *
- * @brief  Private implementation for SearchRoomsRequest.
+ * \inmodule QtAwsAlexaForBusiness
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new SearchRoomsRequestPrivate object.
- *
- * @param  action  AlexaForBusiness action being performed.
- * @param  q       Pointer to this object's public SearchRoomsRequest instance.
+ * Constructs a SearchRoomsRequestPrivate object for AlexaForBusiness \a action with,
+ * public implementation \a q.
  */
 SearchRoomsRequestPrivate::SearchRoomsRequestPrivate(
     const AlexaForBusinessRequest::Action action, SearchRoomsRequest * const q)
@@ -109,15 +98,10 @@ SearchRoomsRequestPrivate::SearchRoomsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SearchRoomsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the SearchRoomsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public SearchRoomsRequest instance.
  */
 SearchRoomsRequestPrivate::SearchRoomsRequestPrivate(
     const SearchRoomsRequestPrivate &other, SearchRoomsRequest * const q)

@@ -27,10 +27,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::UpdateThingGroupRequest
- *
  * \brief The UpdateThingGroupRequest class provides an interface for IoT UpdateThingGroup requests.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -48,9 +47,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new UpdateThingGroupRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateThingGroupRequest::UpdateThingGroupRequest(const UpdateThingGroupRequest &other)
     : IoTRequest(new UpdateThingGroupRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ UpdateThingGroupRequest::UpdateThingGroupRequest(const UpdateThingGroupRequest &
 }
 
 /*!
- * @brief  Constructs a new UpdateThingGroupRequest object.
+ * Constructs a UpdateThingGroupRequest object.
  */
 UpdateThingGroupRequest::UpdateThingGroupRequest()
     : IoTRequest(new UpdateThingGroupRequestPrivate(IoTRequest::UpdateThingGroupAction, this))
@@ -77,14 +74,9 @@ bool UpdateThingGroupRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateThingGroupResponse object.
+ * Returns a UpdateThingGroupResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateThingGroupResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IoTClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateThingGroupRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * UpdateThingGroupRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::IoT::UpdateThingGroupRequestPrivate
+ * \brief The UpdateThingGroupRequestPrivate class provides private implementation for UpdateThingGroupRequest.
+ * \internal
  *
- * @class  UpdateThingGroupRequestPrivate
- *
- * @brief  Private implementation for UpdateThingGroupRequest.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateThingGroupRequestPrivate object.
- *
- * @param  action  IoT action being performed.
- * @param  q       Pointer to this object's public UpdateThingGroupRequest instance.
+ * Constructs a UpdateThingGroupRequestPrivate object for IoT \a action with,
+ * public implementation \a q.
  */
 UpdateThingGroupRequestPrivate::UpdateThingGroupRequestPrivate(
     const IoTRequest::Action action, UpdateThingGroupRequest * const q)
@@ -115,15 +104,10 @@ UpdateThingGroupRequestPrivate::UpdateThingGroupRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateThingGroupRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateThingGroupRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateThingGroupRequest instance.
  */
 UpdateThingGroupRequestPrivate::UpdateThingGroupRequestPrivate(
     const UpdateThingGroupRequestPrivate &other, UpdateThingGroupRequest * const q)

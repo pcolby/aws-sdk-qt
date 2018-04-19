@@ -27,19 +27,16 @@ namespace MTurk {
 
 /*!
  * \class QtAws::MTurk::GetQualificationTypeRequest
- *
  * \brief The GetQualificationTypeRequest class provides an interface for MTurk GetQualificationType requests.
  *
- * \ingroup MTurk
+ * \inmodule QtAwsMTurk
  *
  *
  * \sa MTurkClient::getQualificationType
  */
 
 /*!
- * @brief  Constructs a new GetQualificationTypeRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetQualificationTypeRequest::GetQualificationTypeRequest(const GetQualificationTypeRequest &other)
     : MTurkRequest(new GetQualificationTypeRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ GetQualificationTypeRequest::GetQualificationTypeRequest(const GetQualificationT
 }
 
 /*!
- * @brief  Constructs a new GetQualificationTypeRequest object.
+ * Constructs a GetQualificationTypeRequest object.
  */
 GetQualificationTypeRequest::GetQualificationTypeRequest()
     : MTurkRequest(new GetQualificationTypeRequestPrivate(MTurkRequest::GetQualificationTypeAction, this))
@@ -66,14 +63,9 @@ bool GetQualificationTypeRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetQualificationTypeResponse object.
+ * Returns a GetQualificationTypeResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetQualificationTypeResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MTurkClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetQualificationTypeRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * GetQualificationTypeRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::MTurk::GetQualificationTypeRequestPrivate
+ * \brief The GetQualificationTypeRequestPrivate class provides private implementation for GetQualificationTypeRequest.
+ * \internal
  *
- * @class  GetQualificationTypeRequestPrivate
- *
- * @brief  Private implementation for GetQualificationTypeRequest.
+ * \inmodule QtAwsMTurk
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetQualificationTypeRequestPrivate object.
- *
- * @param  action  MTurk action being performed.
- * @param  q       Pointer to this object's public GetQualificationTypeRequest instance.
+ * Constructs a GetQualificationTypeRequestPrivate object for MTurk \a action with,
+ * public implementation \a q.
  */
 GetQualificationTypeRequestPrivate::GetQualificationTypeRequestPrivate(
     const MTurkRequest::Action action, GetQualificationTypeRequest * const q)
@@ -104,15 +93,10 @@ GetQualificationTypeRequestPrivate::GetQualificationTypeRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetQualificationTypeRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetQualificationTypeRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetQualificationTypeRequest instance.
  */
 GetQualificationTypeRequestPrivate::GetQualificationTypeRequestPrivate(
     const GetQualificationTypeRequestPrivate &other, GetQualificationTypeRequest * const q)

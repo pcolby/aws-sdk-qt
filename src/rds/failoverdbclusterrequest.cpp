@@ -27,10 +27,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::FailoverDBClusterRequest
- *
  * \brief The FailoverDBClusterRequest class provides an interface for RDS FailoverDBCluster requests.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -101,9 +100,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new FailoverDBClusterRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 FailoverDBClusterRequest::FailoverDBClusterRequest(const FailoverDBClusterRequest &other)
     : RDSRequest(new FailoverDBClusterRequestPrivate(*other.d_func(), this))
@@ -112,7 +109,7 @@ FailoverDBClusterRequest::FailoverDBClusterRequest(const FailoverDBClusterReques
 }
 
 /*!
- * @brief  Constructs a new FailoverDBClusterRequest object.
+ * Constructs a FailoverDBClusterRequest object.
  */
 FailoverDBClusterRequest::FailoverDBClusterRequest()
     : RDSRequest(new FailoverDBClusterRequestPrivate(RDSRequest::FailoverDBClusterAction, this))
@@ -130,14 +127,9 @@ bool FailoverDBClusterRequest::isValid() const
 
 
 /*!
- * @brief  Construct an FailoverDBClusterResponse object.
+ * Returns a FailoverDBClusterResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An FailoverDBClusterResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RDSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * FailoverDBClusterRequest::response(QNetworkReply * const reply) const
 {
@@ -145,20 +137,17 @@ QtAws::Core::AwsAbstractResponse * FailoverDBClusterRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::RDS::FailoverDBClusterRequestPrivate
+ * \brief The FailoverDBClusterRequestPrivate class provides private implementation for FailoverDBClusterRequest.
+ * \internal
  *
- * @class  FailoverDBClusterRequestPrivate
- *
- * @brief  Private implementation for FailoverDBClusterRequest.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new FailoverDBClusterRequestPrivate object.
- *
- * @param  action  RDS action being performed.
- * @param  q       Pointer to this object's public FailoverDBClusterRequest instance.
+ * Constructs a FailoverDBClusterRequestPrivate object for RDS \a action with,
+ * public implementation \a q.
  */
 FailoverDBClusterRequestPrivate::FailoverDBClusterRequestPrivate(
     const RDSRequest::Action action, FailoverDBClusterRequest * const q)
@@ -168,15 +157,10 @@ FailoverDBClusterRequestPrivate::FailoverDBClusterRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new FailoverDBClusterRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the FailoverDBClusterRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public FailoverDBClusterRequest instance.
  */
 FailoverDBClusterRequestPrivate::FailoverDBClusterRequestPrivate(
     const FailoverDBClusterRequestPrivate &other, FailoverDBClusterRequest * const q)

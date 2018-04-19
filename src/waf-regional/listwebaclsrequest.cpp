@@ -27,10 +27,9 @@ namespace WAFRegional {
 
 /*!
  * \class QtAws::WAFRegional::ListWebACLsRequest
- *
  * \brief The ListWebACLsRequest class provides an interface for WAFRegional ListWebACLs requests.
  *
- * \ingroup WAFRegional
+ * \inmodule QtAwsWAFRegional
  *
  *  This is the <i>AWS WAF Regional API Reference</i> for using AWS WAF with Elastic Load Balancing (ELB) Application Load
  *  Balancers. The AWS WAF actions and data types listed in the reference are available for protecting Application Load
@@ -44,9 +43,7 @@ namespace WAFRegional {
  */
 
 /*!
- * @brief  Constructs a new ListWebACLsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListWebACLsRequest::ListWebACLsRequest(const ListWebACLsRequest &other)
     : WAFRegionalRequest(new ListWebACLsRequestPrivate(*other.d_func(), this))
@@ -55,7 +52,7 @@ ListWebACLsRequest::ListWebACLsRequest(const ListWebACLsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ListWebACLsRequest object.
+ * Constructs a ListWebACLsRequest object.
  */
 ListWebACLsRequest::ListWebACLsRequest()
     : WAFRegionalRequest(new ListWebACLsRequestPrivate(WAFRegionalRequest::ListWebACLsAction, this))
@@ -73,14 +70,9 @@ bool ListWebACLsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListWebACLsResponse object.
+ * Returns a ListWebACLsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListWebACLsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WAFRegionalClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListWebACLsRequest::response(QNetworkReply * const reply) const
 {
@@ -88,20 +80,17 @@ QtAws::Core::AwsAbstractResponse * ListWebACLsRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::WAFRegional::ListWebACLsRequestPrivate
+ * \brief The ListWebACLsRequestPrivate class provides private implementation for ListWebACLsRequest.
+ * \internal
  *
- * @class  ListWebACLsRequestPrivate
- *
- * @brief  Private implementation for ListWebACLsRequest.
+ * \inmodule QtAwsWAFRegional
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListWebACLsRequestPrivate object.
- *
- * @param  action  WAFRegional action being performed.
- * @param  q       Pointer to this object's public ListWebACLsRequest instance.
+ * Constructs a ListWebACLsRequestPrivate object for WAFRegional \a action with,
+ * public implementation \a q.
  */
 ListWebACLsRequestPrivate::ListWebACLsRequestPrivate(
     const WAFRegionalRequest::Action action, ListWebACLsRequest * const q)
@@ -111,15 +100,10 @@ ListWebACLsRequestPrivate::ListWebACLsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListWebACLsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListWebACLsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListWebACLsRequest instance.
  */
 ListWebACLsRequestPrivate::ListWebACLsRequestPrivate(
     const ListWebACLsRequestPrivate &other, ListWebACLsRequest * const q)

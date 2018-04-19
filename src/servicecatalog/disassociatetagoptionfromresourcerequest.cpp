@@ -27,10 +27,9 @@ namespace ServiceCatalog {
 
 /*!
  * \class QtAws::ServiceCatalog::DisassociateTagOptionFromResourceRequest
- *
  * \brief The DisassociateTagOptionFromResourceRequest class provides an interface for ServiceCatalog DisassociateTagOptionFromResource requests.
  *
- * \ingroup ServiceCatalog
+ * \inmodule QtAwsServiceCatalog
  *
  *  <fullname>AWS Service Catalog</fullname>
  * 
@@ -43,9 +42,7 @@ namespace ServiceCatalog {
  */
 
 /*!
- * @brief  Constructs a new DisassociateTagOptionFromResourceRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DisassociateTagOptionFromResourceRequest::DisassociateTagOptionFromResourceRequest(const DisassociateTagOptionFromResourceRequest &other)
     : ServiceCatalogRequest(new DisassociateTagOptionFromResourceRequestPrivate(*other.d_func(), this))
@@ -54,7 +51,7 @@ DisassociateTagOptionFromResourceRequest::DisassociateTagOptionFromResourceReque
 }
 
 /*!
- * @brief  Constructs a new DisassociateTagOptionFromResourceRequest object.
+ * Constructs a DisassociateTagOptionFromResourceRequest object.
  */
 DisassociateTagOptionFromResourceRequest::DisassociateTagOptionFromResourceRequest()
     : ServiceCatalogRequest(new DisassociateTagOptionFromResourceRequestPrivate(ServiceCatalogRequest::DisassociateTagOptionFromResourceAction, this))
@@ -72,14 +69,9 @@ bool DisassociateTagOptionFromResourceRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DisassociateTagOptionFromResourceResponse object.
+ * Returns a DisassociateTagOptionFromResourceResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DisassociateTagOptionFromResourceResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ServiceCatalogClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DisassociateTagOptionFromResourceRequest::response(QNetworkReply * const reply) const
 {
@@ -87,20 +79,17 @@ QtAws::Core::AwsAbstractResponse * DisassociateTagOptionFromResourceRequest::res
 }
 
 /*!
- * @internal
+ * \class QtAws::ServiceCatalog::DisassociateTagOptionFromResourceRequestPrivate
+ * \brief The DisassociateTagOptionFromResourceRequestPrivate class provides private implementation for DisassociateTagOptionFromResourceRequest.
+ * \internal
  *
- * @class  DisassociateTagOptionFromResourceRequestPrivate
- *
- * @brief  Private implementation for DisassociateTagOptionFromResourceRequest.
+ * \inmodule QtAwsServiceCatalog
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DisassociateTagOptionFromResourceRequestPrivate object.
- *
- * @param  action  ServiceCatalog action being performed.
- * @param  q       Pointer to this object's public DisassociateTagOptionFromResourceRequest instance.
+ * Constructs a DisassociateTagOptionFromResourceRequestPrivate object for ServiceCatalog \a action with,
+ * public implementation \a q.
  */
 DisassociateTagOptionFromResourceRequestPrivate::DisassociateTagOptionFromResourceRequestPrivate(
     const ServiceCatalogRequest::Action action, DisassociateTagOptionFromResourceRequest * const q)
@@ -110,15 +99,10 @@ DisassociateTagOptionFromResourceRequestPrivate::DisassociateTagOptionFromResour
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DisassociateTagOptionFromResourceRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DisassociateTagOptionFromResourceRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DisassociateTagOptionFromResourceRequest instance.
  */
 DisassociateTagOptionFromResourceRequestPrivate::DisassociateTagOptionFromResourceRequestPrivate(
     const DisassociateTagOptionFromResourceRequestPrivate &other, DisassociateTagOptionFromResourceRequest * const q)

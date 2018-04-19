@@ -27,19 +27,16 @@ namespace MediaConvert {
 
 /*!
  * \class QtAws::MediaConvert::ListQueuesRequest
- *
  * \brief The ListQueuesRequest class provides an interface for MediaConvert ListQueues requests.
  *
- * \ingroup MediaConvert
+ * \inmodule QtAwsMediaConvert
  *
  *
  * \sa MediaConvertClient::listQueues
  */
 
 /*!
- * @brief  Constructs a new ListQueuesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListQueuesRequest::ListQueuesRequest(const ListQueuesRequest &other)
     : MediaConvertRequest(new ListQueuesRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ ListQueuesRequest::ListQueuesRequest(const ListQueuesRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ListQueuesRequest object.
+ * Constructs a ListQueuesRequest object.
  */
 ListQueuesRequest::ListQueuesRequest()
     : MediaConvertRequest(new ListQueuesRequestPrivate(MediaConvertRequest::ListQueuesAction, this))
@@ -66,14 +63,9 @@ bool ListQueuesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListQueuesResponse object.
+ * Returns a ListQueuesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListQueuesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MediaConvertClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListQueuesRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * ListQueuesRequest::response(QNetworkReply * c
 }
 
 /*!
- * @internal
+ * \class QtAws::MediaConvert::ListQueuesRequestPrivate
+ * \brief The ListQueuesRequestPrivate class provides private implementation for ListQueuesRequest.
+ * \internal
  *
- * @class  ListQueuesRequestPrivate
- *
- * @brief  Private implementation for ListQueuesRequest.
+ * \inmodule QtAwsMediaConvert
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListQueuesRequestPrivate object.
- *
- * @param  action  MediaConvert action being performed.
- * @param  q       Pointer to this object's public ListQueuesRequest instance.
+ * Constructs a ListQueuesRequestPrivate object for MediaConvert \a action with,
+ * public implementation \a q.
  */
 ListQueuesRequestPrivate::ListQueuesRequestPrivate(
     const MediaConvertRequest::Action action, ListQueuesRequest * const q)
@@ -104,15 +93,10 @@ ListQueuesRequestPrivate::ListQueuesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListQueuesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListQueuesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListQueuesRequest instance.
  */
 ListQueuesRequestPrivate::ListQueuesRequestPrivate(
     const ListQueuesRequestPrivate &other, ListQueuesRequest * const q)

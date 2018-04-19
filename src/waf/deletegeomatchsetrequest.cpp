@@ -27,10 +27,9 @@ namespace WAF {
 
 /*!
  * \class QtAws::WAF::DeleteGeoMatchSetRequest
- *
  * \brief The DeleteGeoMatchSetRequest class provides an interface for WAF DeleteGeoMatchSet requests.
  *
- * \ingroup WAF
+ * \inmodule QtAwsWAF
  *
  *  This is the <i>AWS WAF API Reference</i> for using AWS WAF with Amazon CloudFront. The AWS WAF actions and data types
  *  listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data
@@ -42,9 +41,7 @@ namespace WAF {
  */
 
 /*!
- * @brief  Constructs a new DeleteGeoMatchSetRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteGeoMatchSetRequest::DeleteGeoMatchSetRequest(const DeleteGeoMatchSetRequest &other)
     : WAFRequest(new DeleteGeoMatchSetRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ DeleteGeoMatchSetRequest::DeleteGeoMatchSetRequest(const DeleteGeoMatchSetReques
 }
 
 /*!
- * @brief  Constructs a new DeleteGeoMatchSetRequest object.
+ * Constructs a DeleteGeoMatchSetRequest object.
  */
 DeleteGeoMatchSetRequest::DeleteGeoMatchSetRequest()
     : WAFRequest(new DeleteGeoMatchSetRequestPrivate(WAFRequest::DeleteGeoMatchSetAction, this))
@@ -71,14 +68,9 @@ bool DeleteGeoMatchSetRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteGeoMatchSetResponse object.
+ * Returns a DeleteGeoMatchSetResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteGeoMatchSetResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WAFClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteGeoMatchSetRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * DeleteGeoMatchSetRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::WAF::DeleteGeoMatchSetRequestPrivate
+ * \brief The DeleteGeoMatchSetRequestPrivate class provides private implementation for DeleteGeoMatchSetRequest.
+ * \internal
  *
- * @class  DeleteGeoMatchSetRequestPrivate
- *
- * @brief  Private implementation for DeleteGeoMatchSetRequest.
+ * \inmodule QtAwsWAF
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteGeoMatchSetRequestPrivate object.
- *
- * @param  action  WAF action being performed.
- * @param  q       Pointer to this object's public DeleteGeoMatchSetRequest instance.
+ * Constructs a DeleteGeoMatchSetRequestPrivate object for WAF \a action with,
+ * public implementation \a q.
  */
 DeleteGeoMatchSetRequestPrivate::DeleteGeoMatchSetRequestPrivate(
     const WAFRequest::Action action, DeleteGeoMatchSetRequest * const q)
@@ -109,15 +98,10 @@ DeleteGeoMatchSetRequestPrivate::DeleteGeoMatchSetRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteGeoMatchSetRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteGeoMatchSetRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteGeoMatchSetRequest instance.
  */
 DeleteGeoMatchSetRequestPrivate::DeleteGeoMatchSetRequestPrivate(
     const DeleteGeoMatchSetRequestPrivate &other, DeleteGeoMatchSetRequest * const q)

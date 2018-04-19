@@ -27,10 +27,9 @@ namespace DatabaseMigrationService {
 
 /*!
  * \class QtAws::DatabaseMigrationService::CreateEventSubscriptionRequest
- *
  * \brief The CreateEventSubscriptionRequest class provides an interface for DatabaseMigrationService CreateEventSubscription requests.
  *
- * \ingroup DatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigrationService
  *
  *  <fullname>AWS Database Migration Service</fullname>
  * 
@@ -48,9 +47,7 @@ namespace DatabaseMigrationService {
  */
 
 /*!
- * @brief  Constructs a new CreateEventSubscriptionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateEventSubscriptionRequest::CreateEventSubscriptionRequest(const CreateEventSubscriptionRequest &other)
     : DatabaseMigrationServiceRequest(new CreateEventSubscriptionRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ CreateEventSubscriptionRequest::CreateEventSubscriptionRequest(const CreateEvent
 }
 
 /*!
- * @brief  Constructs a new CreateEventSubscriptionRequest object.
+ * Constructs a CreateEventSubscriptionRequest object.
  */
 CreateEventSubscriptionRequest::CreateEventSubscriptionRequest()
     : DatabaseMigrationServiceRequest(new CreateEventSubscriptionRequestPrivate(DatabaseMigrationServiceRequest::CreateEventSubscriptionAction, this))
@@ -77,14 +74,9 @@ bool CreateEventSubscriptionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateEventSubscriptionResponse object.
+ * Returns a CreateEventSubscriptionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateEventSubscriptionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DatabaseMigrationServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateEventSubscriptionRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * CreateEventSubscriptionRequest::response(QNet
 }
 
 /*!
- * @internal
+ * \class QtAws::DatabaseMigrationService::CreateEventSubscriptionRequestPrivate
+ * \brief The CreateEventSubscriptionRequestPrivate class provides private implementation for CreateEventSubscriptionRequest.
+ * \internal
  *
- * @class  CreateEventSubscriptionRequestPrivate
- *
- * @brief  Private implementation for CreateEventSubscriptionRequest.
+ * \inmodule QtAwsDatabaseMigrationService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateEventSubscriptionRequestPrivate object.
- *
- * @param  action  DatabaseMigrationService action being performed.
- * @param  q       Pointer to this object's public CreateEventSubscriptionRequest instance.
+ * Constructs a CreateEventSubscriptionRequestPrivate object for DatabaseMigrationService \a action with,
+ * public implementation \a q.
  */
 CreateEventSubscriptionRequestPrivate::CreateEventSubscriptionRequestPrivate(
     const DatabaseMigrationServiceRequest::Action action, CreateEventSubscriptionRequest * const q)
@@ -115,15 +104,10 @@ CreateEventSubscriptionRequestPrivate::CreateEventSubscriptionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateEventSubscriptionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateEventSubscriptionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateEventSubscriptionRequest instance.
  */
 CreateEventSubscriptionRequestPrivate::CreateEventSubscriptionRequestPrivate(
     const CreateEventSubscriptionRequestPrivate &other, CreateEventSubscriptionRequest * const q)

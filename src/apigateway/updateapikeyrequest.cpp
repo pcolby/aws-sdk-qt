@@ -27,10 +27,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::UpdateApiKeyRequest
- *
  * \brief The UpdateApiKeyRequest class provides an interface for APIGateway UpdateApiKey requests.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -42,9 +41,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new UpdateApiKeyRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateApiKeyRequest::UpdateApiKeyRequest(const UpdateApiKeyRequest &other)
     : APIGatewayRequest(new UpdateApiKeyRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ UpdateApiKeyRequest::UpdateApiKeyRequest(const UpdateApiKeyRequest &other)
 }
 
 /*!
- * @brief  Constructs a new UpdateApiKeyRequest object.
+ * Constructs a UpdateApiKeyRequest object.
  */
 UpdateApiKeyRequest::UpdateApiKeyRequest()
     : APIGatewayRequest(new UpdateApiKeyRequestPrivate(APIGatewayRequest::UpdateApiKeyAction, this))
@@ -71,14 +68,9 @@ bool UpdateApiKeyRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateApiKeyResponse object.
+ * Returns a UpdateApiKeyResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateApiKeyResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  APIGatewayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateApiKeyRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * UpdateApiKeyRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::APIGateway::UpdateApiKeyRequestPrivate
+ * \brief The UpdateApiKeyRequestPrivate class provides private implementation for UpdateApiKeyRequest.
+ * \internal
  *
- * @class  UpdateApiKeyRequestPrivate
- *
- * @brief  Private implementation for UpdateApiKeyRequest.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateApiKeyRequestPrivate object.
- *
- * @param  action  APIGateway action being performed.
- * @param  q       Pointer to this object's public UpdateApiKeyRequest instance.
+ * Constructs a UpdateApiKeyRequestPrivate object for APIGateway \a action with,
+ * public implementation \a q.
  */
 UpdateApiKeyRequestPrivate::UpdateApiKeyRequestPrivate(
     const APIGatewayRequest::Action action, UpdateApiKeyRequest * const q)
@@ -109,15 +98,10 @@ UpdateApiKeyRequestPrivate::UpdateApiKeyRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateApiKeyRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateApiKeyRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateApiKeyRequest instance.
  */
 UpdateApiKeyRequestPrivate::UpdateApiKeyRequestPrivate(
     const UpdateApiKeyRequestPrivate &other, UpdateApiKeyRequest * const q)

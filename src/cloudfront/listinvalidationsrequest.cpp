@@ -27,10 +27,9 @@ namespace CloudFront {
 
 /*!
  * \class QtAws::CloudFront::ListInvalidationsRequest
- *
  * \brief The ListInvalidationsRequest class provides an interface for CloudFront ListInvalidations requests.
  *
- * \ingroup CloudFront
+ * \inmodule QtAwsCloudFront
  *
  *  <fullname>Amazon CloudFront</fullname>
  * 
@@ -42,9 +41,7 @@ namespace CloudFront {
  */
 
 /*!
- * @brief  Constructs a new ListInvalidationsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListInvalidationsRequest::ListInvalidationsRequest(const ListInvalidationsRequest &other)
     : CloudFrontRequest(new ListInvalidationsRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ ListInvalidationsRequest::ListInvalidationsRequest(const ListInvalidationsReques
 }
 
 /*!
- * @brief  Constructs a new ListInvalidationsRequest object.
+ * Constructs a ListInvalidationsRequest object.
  */
 ListInvalidationsRequest::ListInvalidationsRequest()
     : CloudFrontRequest(new ListInvalidationsRequestPrivate(CloudFrontRequest::ListInvalidationsAction, this))
@@ -71,14 +68,9 @@ bool ListInvalidationsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListInvalidationsResponse object.
+ * Returns a ListInvalidationsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListInvalidationsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudFrontClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListInvalidationsRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * ListInvalidationsRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudFront::ListInvalidationsRequestPrivate
+ * \brief The ListInvalidationsRequestPrivate class provides private implementation for ListInvalidationsRequest.
+ * \internal
  *
- * @class  ListInvalidationsRequestPrivate
- *
- * @brief  Private implementation for ListInvalidationsRequest.
+ * \inmodule QtAwsCloudFront
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListInvalidationsRequestPrivate object.
- *
- * @param  action  CloudFront action being performed.
- * @param  q       Pointer to this object's public ListInvalidationsRequest instance.
+ * Constructs a ListInvalidationsRequestPrivate object for CloudFront \a action with,
+ * public implementation \a q.
  */
 ListInvalidationsRequestPrivate::ListInvalidationsRequestPrivate(
     const CloudFrontRequest::Action action, ListInvalidationsRequest * const q)
@@ -109,15 +98,10 @@ ListInvalidationsRequestPrivate::ListInvalidationsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListInvalidationsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListInvalidationsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListInvalidationsRequest instance.
  */
 ListInvalidationsRequestPrivate::ListInvalidationsRequestPrivate(
     const ListInvalidationsRequestPrivate &other, ListInvalidationsRequest * const q)

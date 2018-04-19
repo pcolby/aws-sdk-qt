@@ -27,10 +27,9 @@ namespace Organizations {
 
 /*!
  * \class QtAws::Organizations::ListCreateAccountStatusRequest
- *
  * \brief The ListCreateAccountStatusRequest class provides an interface for Organizations ListCreateAccountStatus requests.
  *
- * \ingroup Organizations
+ * \inmodule QtAwsOrganizations
  *
  *  <fullname>AWS Organizations API Reference</fullname>
  * 
@@ -179,9 +178,7 @@ namespace Organizations {
  */
 
 /*!
- * @brief  Constructs a new ListCreateAccountStatusRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListCreateAccountStatusRequest::ListCreateAccountStatusRequest(const ListCreateAccountStatusRequest &other)
     : OrganizationsRequest(new ListCreateAccountStatusRequestPrivate(*other.d_func(), this))
@@ -190,7 +187,7 @@ ListCreateAccountStatusRequest::ListCreateAccountStatusRequest(const ListCreateA
 }
 
 /*!
- * @brief  Constructs a new ListCreateAccountStatusRequest object.
+ * Constructs a ListCreateAccountStatusRequest object.
  */
 ListCreateAccountStatusRequest::ListCreateAccountStatusRequest()
     : OrganizationsRequest(new ListCreateAccountStatusRequestPrivate(OrganizationsRequest::ListCreateAccountStatusAction, this))
@@ -208,14 +205,9 @@ bool ListCreateAccountStatusRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListCreateAccountStatusResponse object.
+ * Returns a ListCreateAccountStatusResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListCreateAccountStatusResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  OrganizationsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListCreateAccountStatusRequest::response(QNetworkReply * const reply) const
 {
@@ -223,20 +215,17 @@ QtAws::Core::AwsAbstractResponse * ListCreateAccountStatusRequest::response(QNet
 }
 
 /*!
- * @internal
+ * \class QtAws::Organizations::ListCreateAccountStatusRequestPrivate
+ * \brief The ListCreateAccountStatusRequestPrivate class provides private implementation for ListCreateAccountStatusRequest.
+ * \internal
  *
- * @class  ListCreateAccountStatusRequestPrivate
- *
- * @brief  Private implementation for ListCreateAccountStatusRequest.
+ * \inmodule QtAwsOrganizations
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListCreateAccountStatusRequestPrivate object.
- *
- * @param  action  Organizations action being performed.
- * @param  q       Pointer to this object's public ListCreateAccountStatusRequest instance.
+ * Constructs a ListCreateAccountStatusRequestPrivate object for Organizations \a action with,
+ * public implementation \a q.
  */
 ListCreateAccountStatusRequestPrivate::ListCreateAccountStatusRequestPrivate(
     const OrganizationsRequest::Action action, ListCreateAccountStatusRequest * const q)
@@ -246,15 +235,10 @@ ListCreateAccountStatusRequestPrivate::ListCreateAccountStatusRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListCreateAccountStatusRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListCreateAccountStatusRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListCreateAccountStatusRequest instance.
  */
 ListCreateAccountStatusRequestPrivate::ListCreateAccountStatusRequestPrivate(
     const ListCreateAccountStatusRequestPrivate &other, ListCreateAccountStatusRequest * const q)

@@ -27,10 +27,9 @@ namespace StorageGateway {
 
 /*!
  * \class QtAws::StorageGateway::DescribeUploadBufferRequest
- *
  * \brief The DescribeUploadBufferRequest class provides an interface for StorageGateway DescribeUploadBuffer requests.
  *
- * \ingroup StorageGateway
+ * \inmodule QtAwsStorageGateway
  *
  *  <fullname>AWS Storage Gateway Service</fullname>
  * 
@@ -106,9 +105,7 @@ namespace StorageGateway {
  */
 
 /*!
- * @brief  Constructs a new DescribeUploadBufferRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeUploadBufferRequest::DescribeUploadBufferRequest(const DescribeUploadBufferRequest &other)
     : StorageGatewayRequest(new DescribeUploadBufferRequestPrivate(*other.d_func(), this))
@@ -117,7 +114,7 @@ DescribeUploadBufferRequest::DescribeUploadBufferRequest(const DescribeUploadBuf
 }
 
 /*!
- * @brief  Constructs a new DescribeUploadBufferRequest object.
+ * Constructs a DescribeUploadBufferRequest object.
  */
 DescribeUploadBufferRequest::DescribeUploadBufferRequest()
     : StorageGatewayRequest(new DescribeUploadBufferRequestPrivate(StorageGatewayRequest::DescribeUploadBufferAction, this))
@@ -135,14 +132,9 @@ bool DescribeUploadBufferRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeUploadBufferResponse object.
+ * Returns a DescribeUploadBufferResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeUploadBufferResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  StorageGatewayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeUploadBufferRequest::response(QNetworkReply * const reply) const
 {
@@ -150,20 +142,17 @@ QtAws::Core::AwsAbstractResponse * DescribeUploadBufferRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::StorageGateway::DescribeUploadBufferRequestPrivate
+ * \brief The DescribeUploadBufferRequestPrivate class provides private implementation for DescribeUploadBufferRequest.
+ * \internal
  *
- * @class  DescribeUploadBufferRequestPrivate
- *
- * @brief  Private implementation for DescribeUploadBufferRequest.
+ * \inmodule QtAwsStorageGateway
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeUploadBufferRequestPrivate object.
- *
- * @param  action  StorageGateway action being performed.
- * @param  q       Pointer to this object's public DescribeUploadBufferRequest instance.
+ * Constructs a DescribeUploadBufferRequestPrivate object for StorageGateway \a action with,
+ * public implementation \a q.
  */
 DescribeUploadBufferRequestPrivate::DescribeUploadBufferRequestPrivate(
     const StorageGatewayRequest::Action action, DescribeUploadBufferRequest * const q)
@@ -173,15 +162,10 @@ DescribeUploadBufferRequestPrivate::DescribeUploadBufferRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeUploadBufferRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeUploadBufferRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeUploadBufferRequest instance.
  */
 DescribeUploadBufferRequestPrivate::DescribeUploadBufferRequestPrivate(
     const DescribeUploadBufferRequestPrivate &other, DescribeUploadBufferRequest * const q)

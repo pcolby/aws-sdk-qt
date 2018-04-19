@@ -27,10 +27,9 @@ namespace Route53Domains {
 
 /*!
  * \class QtAws::Route53Domains::EnableDomainAutoRenewRequest
- *
  * \brief The EnableDomainAutoRenewRequest class provides an interface for Route53Domains EnableDomainAutoRenew requests.
  *
- * \ingroup Route53Domains
+ * \inmodule QtAwsRoute53Domains
  *
  *  Amazon Route 53 API actions let you register domain names and perform related
  *
@@ -38,9 +37,7 @@ namespace Route53Domains {
  */
 
 /*!
- * @brief  Constructs a new EnableDomainAutoRenewRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 EnableDomainAutoRenewRequest::EnableDomainAutoRenewRequest(const EnableDomainAutoRenewRequest &other)
     : Route53DomainsRequest(new EnableDomainAutoRenewRequestPrivate(*other.d_func(), this))
@@ -49,7 +46,7 @@ EnableDomainAutoRenewRequest::EnableDomainAutoRenewRequest(const EnableDomainAut
 }
 
 /*!
- * @brief  Constructs a new EnableDomainAutoRenewRequest object.
+ * Constructs a EnableDomainAutoRenewRequest object.
  */
 EnableDomainAutoRenewRequest::EnableDomainAutoRenewRequest()
     : Route53DomainsRequest(new EnableDomainAutoRenewRequestPrivate(Route53DomainsRequest::EnableDomainAutoRenewAction, this))
@@ -67,14 +64,9 @@ bool EnableDomainAutoRenewRequest::isValid() const
 
 
 /*!
- * @brief  Construct an EnableDomainAutoRenewResponse object.
+ * Returns a EnableDomainAutoRenewResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An EnableDomainAutoRenewResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  Route53DomainsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * EnableDomainAutoRenewRequest::response(QNetworkReply * const reply) const
 {
@@ -82,20 +74,17 @@ QtAws::Core::AwsAbstractResponse * EnableDomainAutoRenewRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::Route53Domains::EnableDomainAutoRenewRequestPrivate
+ * \brief The EnableDomainAutoRenewRequestPrivate class provides private implementation for EnableDomainAutoRenewRequest.
+ * \internal
  *
- * @class  EnableDomainAutoRenewRequestPrivate
- *
- * @brief  Private implementation for EnableDomainAutoRenewRequest.
+ * \inmodule QtAwsRoute53Domains
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new EnableDomainAutoRenewRequestPrivate object.
- *
- * @param  action  Route53Domains action being performed.
- * @param  q       Pointer to this object's public EnableDomainAutoRenewRequest instance.
+ * Constructs a EnableDomainAutoRenewRequestPrivate object for Route53Domains \a action with,
+ * public implementation \a q.
  */
 EnableDomainAutoRenewRequestPrivate::EnableDomainAutoRenewRequestPrivate(
     const Route53DomainsRequest::Action action, EnableDomainAutoRenewRequest * const q)
@@ -105,15 +94,10 @@ EnableDomainAutoRenewRequestPrivate::EnableDomainAutoRenewRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new EnableDomainAutoRenewRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the EnableDomainAutoRenewRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public EnableDomainAutoRenewRequest instance.
  */
 EnableDomainAutoRenewRequestPrivate::EnableDomainAutoRenewRequestPrivate(
     const EnableDomainAutoRenewRequestPrivate &other, EnableDomainAutoRenewRequest * const q)

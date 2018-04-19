@@ -27,10 +27,9 @@ namespace Route53Domains {
 
 /*!
  * \class QtAws::Route53Domains::ListDomainsRequest
- *
  * \brief The ListDomainsRequest class provides an interface for Route53Domains ListDomains requests.
  *
- * \ingroup Route53Domains
+ * \inmodule QtAwsRoute53Domains
  *
  *  Amazon Route 53 API actions let you register domain names and perform related
  *
@@ -38,9 +37,7 @@ namespace Route53Domains {
  */
 
 /*!
- * @brief  Constructs a new ListDomainsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListDomainsRequest::ListDomainsRequest(const ListDomainsRequest &other)
     : Route53DomainsRequest(new ListDomainsRequestPrivate(*other.d_func(), this))
@@ -49,7 +46,7 @@ ListDomainsRequest::ListDomainsRequest(const ListDomainsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ListDomainsRequest object.
+ * Constructs a ListDomainsRequest object.
  */
 ListDomainsRequest::ListDomainsRequest()
     : Route53DomainsRequest(new ListDomainsRequestPrivate(Route53DomainsRequest::ListDomainsAction, this))
@@ -67,14 +64,9 @@ bool ListDomainsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListDomainsResponse object.
+ * Returns a ListDomainsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListDomainsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  Route53DomainsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListDomainsRequest::response(QNetworkReply * const reply) const
 {
@@ -82,20 +74,17 @@ QtAws::Core::AwsAbstractResponse * ListDomainsRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::Route53Domains::ListDomainsRequestPrivate
+ * \brief The ListDomainsRequestPrivate class provides private implementation for ListDomainsRequest.
+ * \internal
  *
- * @class  ListDomainsRequestPrivate
- *
- * @brief  Private implementation for ListDomainsRequest.
+ * \inmodule QtAwsRoute53Domains
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListDomainsRequestPrivate object.
- *
- * @param  action  Route53Domains action being performed.
- * @param  q       Pointer to this object's public ListDomainsRequest instance.
+ * Constructs a ListDomainsRequestPrivate object for Route53Domains \a action with,
+ * public implementation \a q.
  */
 ListDomainsRequestPrivate::ListDomainsRequestPrivate(
     const Route53DomainsRequest::Action action, ListDomainsRequest * const q)
@@ -105,15 +94,10 @@ ListDomainsRequestPrivate::ListDomainsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListDomainsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListDomainsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListDomainsRequest instance.
  */
 ListDomainsRequestPrivate::ListDomainsRequestPrivate(
     const ListDomainsRequestPrivate &other, ListDomainsRequest * const q)

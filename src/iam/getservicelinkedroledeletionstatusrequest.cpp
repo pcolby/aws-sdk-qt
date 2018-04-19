@@ -27,10 +27,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::GetServiceLinkedRoleDeletionStatusRequest
- *
  * \brief The GetServiceLinkedRoleDeletionStatusRequest class provides an interface for IAM GetServiceLinkedRoleDeletionStatus requests.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -102,9 +101,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new GetServiceLinkedRoleDeletionStatusRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetServiceLinkedRoleDeletionStatusRequest::GetServiceLinkedRoleDeletionStatusRequest(const GetServiceLinkedRoleDeletionStatusRequest &other)
     : IAMRequest(new GetServiceLinkedRoleDeletionStatusRequestPrivate(*other.d_func(), this))
@@ -113,7 +110,7 @@ GetServiceLinkedRoleDeletionStatusRequest::GetServiceLinkedRoleDeletionStatusReq
 }
 
 /*!
- * @brief  Constructs a new GetServiceLinkedRoleDeletionStatusRequest object.
+ * Constructs a GetServiceLinkedRoleDeletionStatusRequest object.
  */
 GetServiceLinkedRoleDeletionStatusRequest::GetServiceLinkedRoleDeletionStatusRequest()
     : IAMRequest(new GetServiceLinkedRoleDeletionStatusRequestPrivate(IAMRequest::GetServiceLinkedRoleDeletionStatusAction, this))
@@ -131,14 +128,9 @@ bool GetServiceLinkedRoleDeletionStatusRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetServiceLinkedRoleDeletionStatusResponse object.
+ * Returns a GetServiceLinkedRoleDeletionStatusResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetServiceLinkedRoleDeletionStatusResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IAMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetServiceLinkedRoleDeletionStatusRequest::response(QNetworkReply * const reply) const
 {
@@ -146,20 +138,17 @@ QtAws::Core::AwsAbstractResponse * GetServiceLinkedRoleDeletionStatusRequest::re
 }
 
 /*!
- * @internal
+ * \class QtAws::IAM::GetServiceLinkedRoleDeletionStatusRequestPrivate
+ * \brief The GetServiceLinkedRoleDeletionStatusRequestPrivate class provides private implementation for GetServiceLinkedRoleDeletionStatusRequest.
+ * \internal
  *
- * @class  GetServiceLinkedRoleDeletionStatusRequestPrivate
- *
- * @brief  Private implementation for GetServiceLinkedRoleDeletionStatusRequest.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetServiceLinkedRoleDeletionStatusRequestPrivate object.
- *
- * @param  action  IAM action being performed.
- * @param  q       Pointer to this object's public GetServiceLinkedRoleDeletionStatusRequest instance.
+ * Constructs a GetServiceLinkedRoleDeletionStatusRequestPrivate object for IAM \a action with,
+ * public implementation \a q.
  */
 GetServiceLinkedRoleDeletionStatusRequestPrivate::GetServiceLinkedRoleDeletionStatusRequestPrivate(
     const IAMRequest::Action action, GetServiceLinkedRoleDeletionStatusRequest * const q)
@@ -169,15 +158,10 @@ GetServiceLinkedRoleDeletionStatusRequestPrivate::GetServiceLinkedRoleDeletionSt
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetServiceLinkedRoleDeletionStatusRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetServiceLinkedRoleDeletionStatusRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetServiceLinkedRoleDeletionStatusRequest instance.
  */
 GetServiceLinkedRoleDeletionStatusRequestPrivate::GetServiceLinkedRoleDeletionStatusRequestPrivate(
     const GetServiceLinkedRoleDeletionStatusRequestPrivate &other, GetServiceLinkedRoleDeletionStatusRequest * const q)

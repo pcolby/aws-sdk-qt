@@ -27,10 +27,9 @@ namespace Inspector {
 
 /*!
  * \class QtAws::Inspector::UnsubscribeFromEventRequest
- *
  * \brief The UnsubscribeFromEventRequest class provides an interface for Inspector UnsubscribeFromEvent requests.
  *
- * \ingroup Inspector
+ * \inmodule QtAwsInspector
  *
  *  <fullname>Amazon Inspector</fullname>
  * 
@@ -42,9 +41,7 @@ namespace Inspector {
  */
 
 /*!
- * @brief  Constructs a new UnsubscribeFromEventRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UnsubscribeFromEventRequest::UnsubscribeFromEventRequest(const UnsubscribeFromEventRequest &other)
     : InspectorRequest(new UnsubscribeFromEventRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ UnsubscribeFromEventRequest::UnsubscribeFromEventRequest(const UnsubscribeFromEv
 }
 
 /*!
- * @brief  Constructs a new UnsubscribeFromEventRequest object.
+ * Constructs a UnsubscribeFromEventRequest object.
  */
 UnsubscribeFromEventRequest::UnsubscribeFromEventRequest()
     : InspectorRequest(new UnsubscribeFromEventRequestPrivate(InspectorRequest::UnsubscribeFromEventAction, this))
@@ -71,14 +68,9 @@ bool UnsubscribeFromEventRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UnsubscribeFromEventResponse object.
+ * Returns a UnsubscribeFromEventResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UnsubscribeFromEventResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  InspectorClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UnsubscribeFromEventRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * UnsubscribeFromEventRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::Inspector::UnsubscribeFromEventRequestPrivate
+ * \brief The UnsubscribeFromEventRequestPrivate class provides private implementation for UnsubscribeFromEventRequest.
+ * \internal
  *
- * @class  UnsubscribeFromEventRequestPrivate
- *
- * @brief  Private implementation for UnsubscribeFromEventRequest.
+ * \inmodule QtAwsInspector
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UnsubscribeFromEventRequestPrivate object.
- *
- * @param  action  Inspector action being performed.
- * @param  q       Pointer to this object's public UnsubscribeFromEventRequest instance.
+ * Constructs a UnsubscribeFromEventRequestPrivate object for Inspector \a action with,
+ * public implementation \a q.
  */
 UnsubscribeFromEventRequestPrivate::UnsubscribeFromEventRequestPrivate(
     const InspectorRequest::Action action, UnsubscribeFromEventRequest * const q)
@@ -109,15 +98,10 @@ UnsubscribeFromEventRequestPrivate::UnsubscribeFromEventRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UnsubscribeFromEventRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UnsubscribeFromEventRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UnsubscribeFromEventRequest instance.
  */
 UnsubscribeFromEventRequestPrivate::UnsubscribeFromEventRequestPrivate(
     const UnsubscribeFromEventRequestPrivate &other, UnsubscribeFromEventRequest * const q)

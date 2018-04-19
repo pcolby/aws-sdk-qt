@@ -27,10 +27,9 @@ namespace ACMPCA {
 
 /*!
  * \class QtAws::ACMPCA::CreateCertificateAuthorityAuditReportRequest
- *
  * \brief The CreateCertificateAuthorityAuditReportRequest class provides an interface for ACMPCA CreateCertificateAuthorityAuditReport requests.
  *
- * \ingroup ACMPCA
+ * \inmodule QtAwsACMPCA
  *
  *  You can use the ACM PCA API to create a private certificate authority (CA). You must first call the
  *  <a>CreateCertificateAuthority</a> function. If successful, the function returns an Amazon Resource Name (ARN) for your
@@ -67,9 +66,7 @@ namespace ACMPCA {
  */
 
 /*!
- * @brief  Constructs a new CreateCertificateAuthorityAuditReportRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateCertificateAuthorityAuditReportRequest::CreateCertificateAuthorityAuditReportRequest(const CreateCertificateAuthorityAuditReportRequest &other)
     : ACMPCARequest(new CreateCertificateAuthorityAuditReportRequestPrivate(*other.d_func(), this))
@@ -78,7 +75,7 @@ CreateCertificateAuthorityAuditReportRequest::CreateCertificateAuthorityAuditRep
 }
 
 /*!
- * @brief  Constructs a new CreateCertificateAuthorityAuditReportRequest object.
+ * Constructs a CreateCertificateAuthorityAuditReportRequest object.
  */
 CreateCertificateAuthorityAuditReportRequest::CreateCertificateAuthorityAuditReportRequest()
     : ACMPCARequest(new CreateCertificateAuthorityAuditReportRequestPrivate(ACMPCARequest::CreateCertificateAuthorityAuditReportAction, this))
@@ -96,14 +93,9 @@ bool CreateCertificateAuthorityAuditReportRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateCertificateAuthorityAuditReportResponse object.
+ * Returns a CreateCertificateAuthorityAuditReportResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateCertificateAuthorityAuditReportResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ACMPCAClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateCertificateAuthorityAuditReportRequest::response(QNetworkReply * const reply) const
 {
@@ -111,20 +103,17 @@ QtAws::Core::AwsAbstractResponse * CreateCertificateAuthorityAuditReportRequest:
 }
 
 /*!
- * @internal
+ * \class QtAws::ACMPCA::CreateCertificateAuthorityAuditReportRequestPrivate
+ * \brief The CreateCertificateAuthorityAuditReportRequestPrivate class provides private implementation for CreateCertificateAuthorityAuditReportRequest.
+ * \internal
  *
- * @class  CreateCertificateAuthorityAuditReportRequestPrivate
- *
- * @brief  Private implementation for CreateCertificateAuthorityAuditReportRequest.
+ * \inmodule QtAwsACMPCA
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateCertificateAuthorityAuditReportRequestPrivate object.
- *
- * @param  action  ACMPCA action being performed.
- * @param  q       Pointer to this object's public CreateCertificateAuthorityAuditReportRequest instance.
+ * Constructs a CreateCertificateAuthorityAuditReportRequestPrivate object for ACMPCA \a action with,
+ * public implementation \a q.
  */
 CreateCertificateAuthorityAuditReportRequestPrivate::CreateCertificateAuthorityAuditReportRequestPrivate(
     const ACMPCARequest::Action action, CreateCertificateAuthorityAuditReportRequest * const q)
@@ -134,15 +123,10 @@ CreateCertificateAuthorityAuditReportRequestPrivate::CreateCertificateAuthorityA
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateCertificateAuthorityAuditReportRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateCertificateAuthorityAuditReportRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateCertificateAuthorityAuditReportRequest instance.
  */
 CreateCertificateAuthorityAuditReportRequestPrivate::CreateCertificateAuthorityAuditReportRequestPrivate(
     const CreateCertificateAuthorityAuditReportRequestPrivate &other, CreateCertificateAuthorityAuditReportRequest * const q)

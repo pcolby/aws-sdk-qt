@@ -27,10 +27,9 @@ namespace GameLift {
 
 /*!
  * \class QtAws::GameLift::StartMatchmakingRequest
- *
  * \brief The StartMatchmakingRequest class provides an interface for GameLift StartMatchmaking requests.
  *
- * \ingroup GameLift
+ * \inmodule QtAwsGameLift
  *
  *  <fullname>Amazon GameLift Service</fullname>
  * 
@@ -473,9 +472,7 @@ namespace GameLift {
  */
 
 /*!
- * @brief  Constructs a new StartMatchmakingRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 StartMatchmakingRequest::StartMatchmakingRequest(const StartMatchmakingRequest &other)
     : GameLiftRequest(new StartMatchmakingRequestPrivate(*other.d_func(), this))
@@ -484,7 +481,7 @@ StartMatchmakingRequest::StartMatchmakingRequest(const StartMatchmakingRequest &
 }
 
 /*!
- * @brief  Constructs a new StartMatchmakingRequest object.
+ * Constructs a StartMatchmakingRequest object.
  */
 StartMatchmakingRequest::StartMatchmakingRequest()
     : GameLiftRequest(new StartMatchmakingRequestPrivate(GameLiftRequest::StartMatchmakingAction, this))
@@ -502,14 +499,9 @@ bool StartMatchmakingRequest::isValid() const
 
 
 /*!
- * @brief  Construct an StartMatchmakingResponse object.
+ * Returns a StartMatchmakingResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An StartMatchmakingResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GameLiftClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * StartMatchmakingRequest::response(QNetworkReply * const reply) const
 {
@@ -517,20 +509,17 @@ QtAws::Core::AwsAbstractResponse * StartMatchmakingRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::GameLift::StartMatchmakingRequestPrivate
+ * \brief The StartMatchmakingRequestPrivate class provides private implementation for StartMatchmakingRequest.
+ * \internal
  *
- * @class  StartMatchmakingRequestPrivate
- *
- * @brief  Private implementation for StartMatchmakingRequest.
+ * \inmodule QtAwsGameLift
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new StartMatchmakingRequestPrivate object.
- *
- * @param  action  GameLift action being performed.
- * @param  q       Pointer to this object's public StartMatchmakingRequest instance.
+ * Constructs a StartMatchmakingRequestPrivate object for GameLift \a action with,
+ * public implementation \a q.
  */
 StartMatchmakingRequestPrivate::StartMatchmakingRequestPrivate(
     const GameLiftRequest::Action action, StartMatchmakingRequest * const q)
@@ -540,15 +529,10 @@ StartMatchmakingRequestPrivate::StartMatchmakingRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StartMatchmakingRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the StartMatchmakingRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public StartMatchmakingRequest instance.
  */
 StartMatchmakingRequestPrivate::StartMatchmakingRequestPrivate(
     const StartMatchmakingRequestPrivate &other, StartMatchmakingRequest * const q)

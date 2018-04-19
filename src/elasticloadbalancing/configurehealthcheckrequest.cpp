@@ -27,10 +27,9 @@ namespace ElasticLoadBalancing {
 
 /*!
  * \class QtAws::ElasticLoadBalancing::ConfigureHealthCheckRequest
- *
  * \brief The ConfigureHealthCheckRequest class provides an interface for ElasticLoadBalancing ConfigureHealthCheck requests.
  *
- * \ingroup ElasticLoadBalancing
+ * \inmodule QtAwsElasticLoadBalancing
  *
  *  <fullname>Elastic Load Balancing</fullname>
  * 
@@ -65,9 +64,7 @@ namespace ElasticLoadBalancing {
  */
 
 /*!
- * @brief  Constructs a new ConfigureHealthCheckRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ConfigureHealthCheckRequest::ConfigureHealthCheckRequest(const ConfigureHealthCheckRequest &other)
     : ElasticLoadBalancingRequest(new ConfigureHealthCheckRequestPrivate(*other.d_func(), this))
@@ -76,7 +73,7 @@ ConfigureHealthCheckRequest::ConfigureHealthCheckRequest(const ConfigureHealthCh
 }
 
 /*!
- * @brief  Constructs a new ConfigureHealthCheckRequest object.
+ * Constructs a ConfigureHealthCheckRequest object.
  */
 ConfigureHealthCheckRequest::ConfigureHealthCheckRequest()
     : ElasticLoadBalancingRequest(new ConfigureHealthCheckRequestPrivate(ElasticLoadBalancingRequest::ConfigureHealthCheckAction, this))
@@ -94,14 +91,9 @@ bool ConfigureHealthCheckRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ConfigureHealthCheckResponse object.
+ * Returns a ConfigureHealthCheckResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ConfigureHealthCheckResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ElasticLoadBalancingClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ConfigureHealthCheckRequest::response(QNetworkReply * const reply) const
 {
@@ -109,20 +101,17 @@ QtAws::Core::AwsAbstractResponse * ConfigureHealthCheckRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::ElasticLoadBalancing::ConfigureHealthCheckRequestPrivate
+ * \brief The ConfigureHealthCheckRequestPrivate class provides private implementation for ConfigureHealthCheckRequest.
+ * \internal
  *
- * @class  ConfigureHealthCheckRequestPrivate
- *
- * @brief  Private implementation for ConfigureHealthCheckRequest.
+ * \inmodule QtAwsElasticLoadBalancing
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ConfigureHealthCheckRequestPrivate object.
- *
- * @param  action  ElasticLoadBalancing action being performed.
- * @param  q       Pointer to this object's public ConfigureHealthCheckRequest instance.
+ * Constructs a ConfigureHealthCheckRequestPrivate object for ElasticLoadBalancing \a action with,
+ * public implementation \a q.
  */
 ConfigureHealthCheckRequestPrivate::ConfigureHealthCheckRequestPrivate(
     const ElasticLoadBalancingRequest::Action action, ConfigureHealthCheckRequest * const q)
@@ -132,15 +121,10 @@ ConfigureHealthCheckRequestPrivate::ConfigureHealthCheckRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ConfigureHealthCheckRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ConfigureHealthCheckRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ConfigureHealthCheckRequest instance.
  */
 ConfigureHealthCheckRequestPrivate::ConfigureHealthCheckRequestPrivate(
     const ConfigureHealthCheckRequestPrivate &other, ConfigureHealthCheckRequest * const q)

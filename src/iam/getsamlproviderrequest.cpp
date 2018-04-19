@@ -27,10 +27,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::GetSAMLProviderRequest
- *
  * \brief The GetSAMLProviderRequest class provides an interface for IAM GetSAMLProvider requests.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -102,9 +101,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new GetSAMLProviderRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetSAMLProviderRequest::GetSAMLProviderRequest(const GetSAMLProviderRequest &other)
     : IAMRequest(new GetSAMLProviderRequestPrivate(*other.d_func(), this))
@@ -113,7 +110,7 @@ GetSAMLProviderRequest::GetSAMLProviderRequest(const GetSAMLProviderRequest &oth
 }
 
 /*!
- * @brief  Constructs a new GetSAMLProviderRequest object.
+ * Constructs a GetSAMLProviderRequest object.
  */
 GetSAMLProviderRequest::GetSAMLProviderRequest()
     : IAMRequest(new GetSAMLProviderRequestPrivate(IAMRequest::GetSAMLProviderAction, this))
@@ -131,14 +128,9 @@ bool GetSAMLProviderRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetSAMLProviderResponse object.
+ * Returns a GetSAMLProviderResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetSAMLProviderResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IAMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetSAMLProviderRequest::response(QNetworkReply * const reply) const
 {
@@ -146,20 +138,17 @@ QtAws::Core::AwsAbstractResponse * GetSAMLProviderRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::IAM::GetSAMLProviderRequestPrivate
+ * \brief The GetSAMLProviderRequestPrivate class provides private implementation for GetSAMLProviderRequest.
+ * \internal
  *
- * @class  GetSAMLProviderRequestPrivate
- *
- * @brief  Private implementation for GetSAMLProviderRequest.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetSAMLProviderRequestPrivate object.
- *
- * @param  action  IAM action being performed.
- * @param  q       Pointer to this object's public GetSAMLProviderRequest instance.
+ * Constructs a GetSAMLProviderRequestPrivate object for IAM \a action with,
+ * public implementation \a q.
  */
 GetSAMLProviderRequestPrivate::GetSAMLProviderRequestPrivate(
     const IAMRequest::Action action, GetSAMLProviderRequest * const q)
@@ -169,15 +158,10 @@ GetSAMLProviderRequestPrivate::GetSAMLProviderRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetSAMLProviderRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetSAMLProviderRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetSAMLProviderRequest instance.
  */
 GetSAMLProviderRequestPrivate::GetSAMLProviderRequestPrivate(
     const GetSAMLProviderRequestPrivate &other, GetSAMLProviderRequest * const q)

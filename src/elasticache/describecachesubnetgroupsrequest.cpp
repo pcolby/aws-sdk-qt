@@ -27,10 +27,9 @@ namespace ElastiCache {
 
 /*!
  * \class QtAws::ElastiCache::DescribeCacheSubnetGroupsRequest
- *
  * \brief The DescribeCacheSubnetGroupsRequest class provides an interface for ElastiCache DescribeCacheSubnetGroups requests.
  *
- * \ingroup ElastiCache
+ * \inmodule QtAwsElastiCache
  *
  *  <fullname>Amazon ElastiCache</fullname>
  * 
@@ -51,9 +50,7 @@ namespace ElastiCache {
  */
 
 /*!
- * @brief  Constructs a new DescribeCacheSubnetGroupsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeCacheSubnetGroupsRequest::DescribeCacheSubnetGroupsRequest(const DescribeCacheSubnetGroupsRequest &other)
     : ElastiCacheRequest(new DescribeCacheSubnetGroupsRequestPrivate(*other.d_func(), this))
@@ -62,7 +59,7 @@ DescribeCacheSubnetGroupsRequest::DescribeCacheSubnetGroupsRequest(const Describ
 }
 
 /*!
- * @brief  Constructs a new DescribeCacheSubnetGroupsRequest object.
+ * Constructs a DescribeCacheSubnetGroupsRequest object.
  */
 DescribeCacheSubnetGroupsRequest::DescribeCacheSubnetGroupsRequest()
     : ElastiCacheRequest(new DescribeCacheSubnetGroupsRequestPrivate(ElastiCacheRequest::DescribeCacheSubnetGroupsAction, this))
@@ -80,14 +77,9 @@ bool DescribeCacheSubnetGroupsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeCacheSubnetGroupsResponse object.
+ * Returns a DescribeCacheSubnetGroupsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeCacheSubnetGroupsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ElastiCacheClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeCacheSubnetGroupsRequest::response(QNetworkReply * const reply) const
 {
@@ -95,20 +87,17 @@ QtAws::Core::AwsAbstractResponse * DescribeCacheSubnetGroupsRequest::response(QN
 }
 
 /*!
- * @internal
+ * \class QtAws::ElastiCache::DescribeCacheSubnetGroupsRequestPrivate
+ * \brief The DescribeCacheSubnetGroupsRequestPrivate class provides private implementation for DescribeCacheSubnetGroupsRequest.
+ * \internal
  *
- * @class  DescribeCacheSubnetGroupsRequestPrivate
- *
- * @brief  Private implementation for DescribeCacheSubnetGroupsRequest.
+ * \inmodule QtAwsElastiCache
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeCacheSubnetGroupsRequestPrivate object.
- *
- * @param  action  ElastiCache action being performed.
- * @param  q       Pointer to this object's public DescribeCacheSubnetGroupsRequest instance.
+ * Constructs a DescribeCacheSubnetGroupsRequestPrivate object for ElastiCache \a action with,
+ * public implementation \a q.
  */
 DescribeCacheSubnetGroupsRequestPrivate::DescribeCacheSubnetGroupsRequestPrivate(
     const ElastiCacheRequest::Action action, DescribeCacheSubnetGroupsRequest * const q)
@@ -118,15 +107,10 @@ DescribeCacheSubnetGroupsRequestPrivate::DescribeCacheSubnetGroupsRequestPrivate
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeCacheSubnetGroupsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeCacheSubnetGroupsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeCacheSubnetGroupsRequest instance.
  */
 DescribeCacheSubnetGroupsRequestPrivate::DescribeCacheSubnetGroupsRequestPrivate(
     const DescribeCacheSubnetGroupsRequestPrivate &other, DescribeCacheSubnetGroupsRequest * const q)

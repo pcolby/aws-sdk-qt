@@ -27,10 +27,9 @@ namespace Glacier {
 
 /*!
  * \class QtAws::Glacier::InitiateMultipartUploadRequest
- *
  * \brief The InitiateMultipartUploadRequest class provides an interface for Glacier InitiateMultipartUpload requests.
  *
- * \ingroup Glacier
+ * \inmodule QtAwsGlacier
  *
  *  Amazon Glacier is a storage solution for "cold
  * 
@@ -75,9 +74,7 @@ namespace Glacier {
  */
 
 /*!
- * @brief  Constructs a new InitiateMultipartUploadRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 InitiateMultipartUploadRequest::InitiateMultipartUploadRequest(const InitiateMultipartUploadRequest &other)
     : GlacierRequest(new InitiateMultipartUploadRequestPrivate(*other.d_func(), this))
@@ -86,7 +83,7 @@ InitiateMultipartUploadRequest::InitiateMultipartUploadRequest(const InitiateMul
 }
 
 /*!
- * @brief  Constructs a new InitiateMultipartUploadRequest object.
+ * Constructs a InitiateMultipartUploadRequest object.
  */
 InitiateMultipartUploadRequest::InitiateMultipartUploadRequest()
     : GlacierRequest(new InitiateMultipartUploadRequestPrivate(GlacierRequest::InitiateMultipartUploadAction, this))
@@ -104,14 +101,9 @@ bool InitiateMultipartUploadRequest::isValid() const
 
 
 /*!
- * @brief  Construct an InitiateMultipartUploadResponse object.
+ * Returns a InitiateMultipartUploadResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An InitiateMultipartUploadResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GlacierClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * InitiateMultipartUploadRequest::response(QNetworkReply * const reply) const
 {
@@ -119,20 +111,17 @@ QtAws::Core::AwsAbstractResponse * InitiateMultipartUploadRequest::response(QNet
 }
 
 /*!
- * @internal
+ * \class QtAws::Glacier::InitiateMultipartUploadRequestPrivate
+ * \brief The InitiateMultipartUploadRequestPrivate class provides private implementation for InitiateMultipartUploadRequest.
+ * \internal
  *
- * @class  InitiateMultipartUploadRequestPrivate
- *
- * @brief  Private implementation for InitiateMultipartUploadRequest.
+ * \inmodule QtAwsGlacier
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new InitiateMultipartUploadRequestPrivate object.
- *
- * @param  action  Glacier action being performed.
- * @param  q       Pointer to this object's public InitiateMultipartUploadRequest instance.
+ * Constructs a InitiateMultipartUploadRequestPrivate object for Glacier \a action with,
+ * public implementation \a q.
  */
 InitiateMultipartUploadRequestPrivate::InitiateMultipartUploadRequestPrivate(
     const GlacierRequest::Action action, InitiateMultipartUploadRequest * const q)
@@ -142,15 +131,10 @@ InitiateMultipartUploadRequestPrivate::InitiateMultipartUploadRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new InitiateMultipartUploadRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the InitiateMultipartUploadRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public InitiateMultipartUploadRequest instance.
  */
 InitiateMultipartUploadRequestPrivate::InitiateMultipartUploadRequestPrivate(
     const InitiateMultipartUploadRequestPrivate &other, InitiateMultipartUploadRequest * const q)

@@ -27,10 +27,9 @@ namespace SFN {
 
 /*!
  * \class QtAws::SFN::CreateStateMachineRequest
- *
  * \brief The CreateStateMachineRequest class provides an interface for SFN CreateStateMachine requests.
  *
- * \ingroup SFN
+ * \inmodule QtAwsSFN
  *
  *  <fullname>AWS Step Functions</fullname>
  * 
@@ -56,9 +55,7 @@ namespace SFN {
  */
 
 /*!
- * @brief  Constructs a new CreateStateMachineRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateStateMachineRequest::CreateStateMachineRequest(const CreateStateMachineRequest &other)
     : SFNRequest(new CreateStateMachineRequestPrivate(*other.d_func(), this))
@@ -67,7 +64,7 @@ CreateStateMachineRequest::CreateStateMachineRequest(const CreateStateMachineReq
 }
 
 /*!
- * @brief  Constructs a new CreateStateMachineRequest object.
+ * Constructs a CreateStateMachineRequest object.
  */
 CreateStateMachineRequest::CreateStateMachineRequest()
     : SFNRequest(new CreateStateMachineRequestPrivate(SFNRequest::CreateStateMachineAction, this))
@@ -85,14 +82,9 @@ bool CreateStateMachineRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateStateMachineResponse object.
+ * Returns a CreateStateMachineResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateStateMachineResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SFNClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateStateMachineRequest::response(QNetworkReply * const reply) const
 {
@@ -100,20 +92,17 @@ QtAws::Core::AwsAbstractResponse * CreateStateMachineRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::SFN::CreateStateMachineRequestPrivate
+ * \brief The CreateStateMachineRequestPrivate class provides private implementation for CreateStateMachineRequest.
+ * \internal
  *
- * @class  CreateStateMachineRequestPrivate
- *
- * @brief  Private implementation for CreateStateMachineRequest.
+ * \inmodule QtAwsSFN
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateStateMachineRequestPrivate object.
- *
- * @param  action  SFN action being performed.
- * @param  q       Pointer to this object's public CreateStateMachineRequest instance.
+ * Constructs a CreateStateMachineRequestPrivate object for SFN \a action with,
+ * public implementation \a q.
  */
 CreateStateMachineRequestPrivate::CreateStateMachineRequestPrivate(
     const SFNRequest::Action action, CreateStateMachineRequest * const q)
@@ -123,15 +112,10 @@ CreateStateMachineRequestPrivate::CreateStateMachineRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateStateMachineRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateStateMachineRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateStateMachineRequest instance.
  */
 CreateStateMachineRequestPrivate::CreateStateMachineRequestPrivate(
     const CreateStateMachineRequestPrivate &other, CreateStateMachineRequest * const q)

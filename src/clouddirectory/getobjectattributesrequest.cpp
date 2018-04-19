@@ -27,10 +27,9 @@ namespace CloudDirectory {
 
 /*!
  * \class QtAws::CloudDirectory::GetObjectAttributesRequest
- *
  * \brief The GetObjectAttributesRequest class provides an interface for CloudDirectory GetObjectAttributes requests.
  *
- * \ingroup CloudDirectory
+ * \inmodule QtAwsCloudDirectory
  *
  *  <fullname>Amazon Cloud Directory</fullname>
  * 
@@ -44,9 +43,7 @@ namespace CloudDirectory {
  */
 
 /*!
- * @brief  Constructs a new GetObjectAttributesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetObjectAttributesRequest::GetObjectAttributesRequest(const GetObjectAttributesRequest &other)
     : CloudDirectoryRequest(new GetObjectAttributesRequestPrivate(*other.d_func(), this))
@@ -55,7 +52,7 @@ GetObjectAttributesRequest::GetObjectAttributesRequest(const GetObjectAttributes
 }
 
 /*!
- * @brief  Constructs a new GetObjectAttributesRequest object.
+ * Constructs a GetObjectAttributesRequest object.
  */
 GetObjectAttributesRequest::GetObjectAttributesRequest()
     : CloudDirectoryRequest(new GetObjectAttributesRequestPrivate(CloudDirectoryRequest::GetObjectAttributesAction, this))
@@ -73,14 +70,9 @@ bool GetObjectAttributesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetObjectAttributesResponse object.
+ * Returns a GetObjectAttributesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetObjectAttributesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudDirectoryClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetObjectAttributesRequest::response(QNetworkReply * const reply) const
 {
@@ -88,20 +80,17 @@ QtAws::Core::AwsAbstractResponse * GetObjectAttributesRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudDirectory::GetObjectAttributesRequestPrivate
+ * \brief The GetObjectAttributesRequestPrivate class provides private implementation for GetObjectAttributesRequest.
+ * \internal
  *
- * @class  GetObjectAttributesRequestPrivate
- *
- * @brief  Private implementation for GetObjectAttributesRequest.
+ * \inmodule QtAwsCloudDirectory
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetObjectAttributesRequestPrivate object.
- *
- * @param  action  CloudDirectory action being performed.
- * @param  q       Pointer to this object's public GetObjectAttributesRequest instance.
+ * Constructs a GetObjectAttributesRequestPrivate object for CloudDirectory \a action with,
+ * public implementation \a q.
  */
 GetObjectAttributesRequestPrivate::GetObjectAttributesRequestPrivate(
     const CloudDirectoryRequest::Action action, GetObjectAttributesRequest * const q)
@@ -111,15 +100,10 @@ GetObjectAttributesRequestPrivate::GetObjectAttributesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetObjectAttributesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetObjectAttributesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetObjectAttributesRequest instance.
  */
 GetObjectAttributesRequestPrivate::GetObjectAttributesRequestPrivate(
     const GetObjectAttributesRequestPrivate &other, GetObjectAttributesRequest * const q)

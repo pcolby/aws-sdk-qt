@@ -27,10 +27,9 @@ namespace CloudSearch {
 
 /*!
  * \class QtAws::CloudSearch::IndexDocumentsRequest
- *
  * \brief The IndexDocumentsRequest class provides an interface for CloudSearch IndexDocuments requests.
  *
- * \ingroup CloudSearch
+ * \inmodule QtAwsCloudSearch
  *
  *  <fullname>Amazon CloudSearch Configuration Service</fullname>
  * 
@@ -48,9 +47,7 @@ namespace CloudSearch {
  */
 
 /*!
- * @brief  Constructs a new IndexDocumentsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 IndexDocumentsRequest::IndexDocumentsRequest(const IndexDocumentsRequest &other)
     : CloudSearchRequest(new IndexDocumentsRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ IndexDocumentsRequest::IndexDocumentsRequest(const IndexDocumentsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new IndexDocumentsRequest object.
+ * Constructs a IndexDocumentsRequest object.
  */
 IndexDocumentsRequest::IndexDocumentsRequest()
     : CloudSearchRequest(new IndexDocumentsRequestPrivate(CloudSearchRequest::IndexDocumentsAction, this))
@@ -77,14 +74,9 @@ bool IndexDocumentsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an IndexDocumentsResponse object.
+ * Returns a IndexDocumentsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An IndexDocumentsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudSearchClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * IndexDocumentsRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * IndexDocumentsRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudSearch::IndexDocumentsRequestPrivate
+ * \brief The IndexDocumentsRequestPrivate class provides private implementation for IndexDocumentsRequest.
+ * \internal
  *
- * @class  IndexDocumentsRequestPrivate
- *
- * @brief  Private implementation for IndexDocumentsRequest.
+ * \inmodule QtAwsCloudSearch
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new IndexDocumentsRequestPrivate object.
- *
- * @param  action  CloudSearch action being performed.
- * @param  q       Pointer to this object's public IndexDocumentsRequest instance.
+ * Constructs a IndexDocumentsRequestPrivate object for CloudSearch \a action with,
+ * public implementation \a q.
  */
 IndexDocumentsRequestPrivate::IndexDocumentsRequestPrivate(
     const CloudSearchRequest::Action action, IndexDocumentsRequest * const q)
@@ -115,15 +104,10 @@ IndexDocumentsRequestPrivate::IndexDocumentsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new IndexDocumentsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the IndexDocumentsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public IndexDocumentsRequest instance.
  */
 IndexDocumentsRequestPrivate::IndexDocumentsRequestPrivate(
     const IndexDocumentsRequestPrivate &other, IndexDocumentsRequest * const q)

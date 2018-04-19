@@ -27,19 +27,16 @@ namespace Route53 {
 
 /*!
  * \class QtAws::Route53::ChangeTagsForResourceRequest
- *
  * \brief The ChangeTagsForResourceRequest class provides an interface for Route53 ChangeTagsForResource requests.
  *
- * \ingroup Route53
+ * \inmodule QtAwsRoute53
  *
  *
  * \sa Route53Client::changeTagsForResource
  */
 
 /*!
- * @brief  Constructs a new ChangeTagsForResourceRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ChangeTagsForResourceRequest::ChangeTagsForResourceRequest(const ChangeTagsForResourceRequest &other)
     : Route53Request(new ChangeTagsForResourceRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ ChangeTagsForResourceRequest::ChangeTagsForResourceRequest(const ChangeTagsForRe
 }
 
 /*!
- * @brief  Constructs a new ChangeTagsForResourceRequest object.
+ * Constructs a ChangeTagsForResourceRequest object.
  */
 ChangeTagsForResourceRequest::ChangeTagsForResourceRequest()
     : Route53Request(new ChangeTagsForResourceRequestPrivate(Route53Request::ChangeTagsForResourceAction, this))
@@ -66,14 +63,9 @@ bool ChangeTagsForResourceRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ChangeTagsForResourceResponse object.
+ * Returns a ChangeTagsForResourceResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ChangeTagsForResourceResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  Route53Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ChangeTagsForResourceRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * ChangeTagsForResourceRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::Route53::ChangeTagsForResourceRequestPrivate
+ * \brief The ChangeTagsForResourceRequestPrivate class provides private implementation for ChangeTagsForResourceRequest.
+ * \internal
  *
- * @class  ChangeTagsForResourceRequestPrivate
- *
- * @brief  Private implementation for ChangeTagsForResourceRequest.
+ * \inmodule QtAwsRoute53
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ChangeTagsForResourceRequestPrivate object.
- *
- * @param  action  Route53 action being performed.
- * @param  q       Pointer to this object's public ChangeTagsForResourceRequest instance.
+ * Constructs a ChangeTagsForResourceRequestPrivate object for Route53 \a action with,
+ * public implementation \a q.
  */
 ChangeTagsForResourceRequestPrivate::ChangeTagsForResourceRequestPrivate(
     const Route53Request::Action action, ChangeTagsForResourceRequest * const q)
@@ -104,15 +93,10 @@ ChangeTagsForResourceRequestPrivate::ChangeTagsForResourceRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ChangeTagsForResourceRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ChangeTagsForResourceRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ChangeTagsForResourceRequest instance.
  */
 ChangeTagsForResourceRequestPrivate::ChangeTagsForResourceRequestPrivate(
     const ChangeTagsForResourceRequestPrivate &other, ChangeTagsForResourceRequest * const q)

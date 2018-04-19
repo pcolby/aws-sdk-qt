@@ -27,10 +27,9 @@ namespace SFN {
 
 /*!
  * \class QtAws::SFN::CreateActivityRequest
- *
  * \brief The CreateActivityRequest class provides an interface for SFN CreateActivity requests.
  *
- * \ingroup SFN
+ * \inmodule QtAwsSFN
  *
  *  <fullname>AWS Step Functions</fullname>
  * 
@@ -56,9 +55,7 @@ namespace SFN {
  */
 
 /*!
- * @brief  Constructs a new CreateActivityRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateActivityRequest::CreateActivityRequest(const CreateActivityRequest &other)
     : SFNRequest(new CreateActivityRequestPrivate(*other.d_func(), this))
@@ -67,7 +64,7 @@ CreateActivityRequest::CreateActivityRequest(const CreateActivityRequest &other)
 }
 
 /*!
- * @brief  Constructs a new CreateActivityRequest object.
+ * Constructs a CreateActivityRequest object.
  */
 CreateActivityRequest::CreateActivityRequest()
     : SFNRequest(new CreateActivityRequestPrivate(SFNRequest::CreateActivityAction, this))
@@ -85,14 +82,9 @@ bool CreateActivityRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateActivityResponse object.
+ * Returns a CreateActivityResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateActivityResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SFNClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateActivityRequest::response(QNetworkReply * const reply) const
 {
@@ -100,20 +92,17 @@ QtAws::Core::AwsAbstractResponse * CreateActivityRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::SFN::CreateActivityRequestPrivate
+ * \brief The CreateActivityRequestPrivate class provides private implementation for CreateActivityRequest.
+ * \internal
  *
- * @class  CreateActivityRequestPrivate
- *
- * @brief  Private implementation for CreateActivityRequest.
+ * \inmodule QtAwsSFN
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateActivityRequestPrivate object.
- *
- * @param  action  SFN action being performed.
- * @param  q       Pointer to this object's public CreateActivityRequest instance.
+ * Constructs a CreateActivityRequestPrivate object for SFN \a action with,
+ * public implementation \a q.
  */
 CreateActivityRequestPrivate::CreateActivityRequestPrivate(
     const SFNRequest::Action action, CreateActivityRequest * const q)
@@ -123,15 +112,10 @@ CreateActivityRequestPrivate::CreateActivityRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateActivityRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateActivityRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateActivityRequest instance.
  */
 CreateActivityRequestPrivate::CreateActivityRequestPrivate(
     const CreateActivityRequestPrivate &other, CreateActivityRequest * const q)

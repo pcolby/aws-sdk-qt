@@ -27,10 +27,9 @@ namespace DatabaseMigrationService {
 
 /*!
  * \class QtAws::DatabaseMigrationService::DescribeReplicationInstancesRequest
- *
  * \brief The DescribeReplicationInstancesRequest class provides an interface for DatabaseMigrationService DescribeReplicationInstances requests.
  *
- * \ingroup DatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigrationService
  *
  *  <fullname>AWS Database Migration Service</fullname>
  * 
@@ -48,9 +47,7 @@ namespace DatabaseMigrationService {
  */
 
 /*!
- * @brief  Constructs a new DescribeReplicationInstancesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeReplicationInstancesRequest::DescribeReplicationInstancesRequest(const DescribeReplicationInstancesRequest &other)
     : DatabaseMigrationServiceRequest(new DescribeReplicationInstancesRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ DescribeReplicationInstancesRequest::DescribeReplicationInstancesRequest(const D
 }
 
 /*!
- * @brief  Constructs a new DescribeReplicationInstancesRequest object.
+ * Constructs a DescribeReplicationInstancesRequest object.
  */
 DescribeReplicationInstancesRequest::DescribeReplicationInstancesRequest()
     : DatabaseMigrationServiceRequest(new DescribeReplicationInstancesRequestPrivate(DatabaseMigrationServiceRequest::DescribeReplicationInstancesAction, this))
@@ -77,14 +74,9 @@ bool DescribeReplicationInstancesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeReplicationInstancesResponse object.
+ * Returns a DescribeReplicationInstancesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeReplicationInstancesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DatabaseMigrationServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeReplicationInstancesRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * DescribeReplicationInstancesRequest::response
 }
 
 /*!
- * @internal
+ * \class QtAws::DatabaseMigrationService::DescribeReplicationInstancesRequestPrivate
+ * \brief The DescribeReplicationInstancesRequestPrivate class provides private implementation for DescribeReplicationInstancesRequest.
+ * \internal
  *
- * @class  DescribeReplicationInstancesRequestPrivate
- *
- * @brief  Private implementation for DescribeReplicationInstancesRequest.
+ * \inmodule QtAwsDatabaseMigrationService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeReplicationInstancesRequestPrivate object.
- *
- * @param  action  DatabaseMigrationService action being performed.
- * @param  q       Pointer to this object's public DescribeReplicationInstancesRequest instance.
+ * Constructs a DescribeReplicationInstancesRequestPrivate object for DatabaseMigrationService \a action with,
+ * public implementation \a q.
  */
 DescribeReplicationInstancesRequestPrivate::DescribeReplicationInstancesRequestPrivate(
     const DatabaseMigrationServiceRequest::Action action, DescribeReplicationInstancesRequest * const q)
@@ -115,15 +104,10 @@ DescribeReplicationInstancesRequestPrivate::DescribeReplicationInstancesRequestP
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeReplicationInstancesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeReplicationInstancesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeReplicationInstancesRequest instance.
  */
 DescribeReplicationInstancesRequestPrivate::DescribeReplicationInstancesRequestPrivate(
     const DescribeReplicationInstancesRequestPrivate &other, DescribeReplicationInstancesRequest * const q)

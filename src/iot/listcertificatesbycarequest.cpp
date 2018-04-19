@@ -27,10 +27,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::ListCertificatesByCARequest
- *
  * \brief The ListCertificatesByCARequest class provides an interface for IoT ListCertificatesByCA requests.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -48,9 +47,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new ListCertificatesByCARequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListCertificatesByCARequest::ListCertificatesByCARequest(const ListCertificatesByCARequest &other)
     : IoTRequest(new ListCertificatesByCARequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ ListCertificatesByCARequest::ListCertificatesByCARequest(const ListCertificatesB
 }
 
 /*!
- * @brief  Constructs a new ListCertificatesByCARequest object.
+ * Constructs a ListCertificatesByCARequest object.
  */
 ListCertificatesByCARequest::ListCertificatesByCARequest()
     : IoTRequest(new ListCertificatesByCARequestPrivate(IoTRequest::ListCertificatesByCAAction, this))
@@ -77,14 +74,9 @@ bool ListCertificatesByCARequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListCertificatesByCAResponse object.
+ * Returns a ListCertificatesByCAResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListCertificatesByCAResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IoTClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListCertificatesByCARequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * ListCertificatesByCARequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::IoT::ListCertificatesByCARequestPrivate
+ * \brief The ListCertificatesByCARequestPrivate class provides private implementation for ListCertificatesByCARequest.
+ * \internal
  *
- * @class  ListCertificatesByCARequestPrivate
- *
- * @brief  Private implementation for ListCertificatesByCARequest.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListCertificatesByCARequestPrivate object.
- *
- * @param  action  IoT action being performed.
- * @param  q       Pointer to this object's public ListCertificatesByCARequest instance.
+ * Constructs a ListCertificatesByCARequestPrivate object for IoT \a action with,
+ * public implementation \a q.
  */
 ListCertificatesByCARequestPrivate::ListCertificatesByCARequestPrivate(
     const IoTRequest::Action action, ListCertificatesByCARequest * const q)
@@ -115,15 +104,10 @@ ListCertificatesByCARequestPrivate::ListCertificatesByCARequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListCertificatesByCARequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListCertificatesByCARequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListCertificatesByCARequest instance.
  */
 ListCertificatesByCARequestPrivate::ListCertificatesByCARequestPrivate(
     const ListCertificatesByCARequestPrivate &other, ListCertificatesByCARequest * const q)

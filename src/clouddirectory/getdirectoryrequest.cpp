@@ -27,10 +27,9 @@ namespace CloudDirectory {
 
 /*!
  * \class QtAws::CloudDirectory::GetDirectoryRequest
- *
  * \brief The GetDirectoryRequest class provides an interface for CloudDirectory GetDirectory requests.
  *
- * \ingroup CloudDirectory
+ * \inmodule QtAwsCloudDirectory
  *
  *  <fullname>Amazon Cloud Directory</fullname>
  * 
@@ -44,9 +43,7 @@ namespace CloudDirectory {
  */
 
 /*!
- * @brief  Constructs a new GetDirectoryRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetDirectoryRequest::GetDirectoryRequest(const GetDirectoryRequest &other)
     : CloudDirectoryRequest(new GetDirectoryRequestPrivate(*other.d_func(), this))
@@ -55,7 +52,7 @@ GetDirectoryRequest::GetDirectoryRequest(const GetDirectoryRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetDirectoryRequest object.
+ * Constructs a GetDirectoryRequest object.
  */
 GetDirectoryRequest::GetDirectoryRequest()
     : CloudDirectoryRequest(new GetDirectoryRequestPrivate(CloudDirectoryRequest::GetDirectoryAction, this))
@@ -73,14 +70,9 @@ bool GetDirectoryRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetDirectoryResponse object.
+ * Returns a GetDirectoryResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetDirectoryResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudDirectoryClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetDirectoryRequest::response(QNetworkReply * const reply) const
 {
@@ -88,20 +80,17 @@ QtAws::Core::AwsAbstractResponse * GetDirectoryRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudDirectory::GetDirectoryRequestPrivate
+ * \brief The GetDirectoryRequestPrivate class provides private implementation for GetDirectoryRequest.
+ * \internal
  *
- * @class  GetDirectoryRequestPrivate
- *
- * @brief  Private implementation for GetDirectoryRequest.
+ * \inmodule QtAwsCloudDirectory
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetDirectoryRequestPrivate object.
- *
- * @param  action  CloudDirectory action being performed.
- * @param  q       Pointer to this object's public GetDirectoryRequest instance.
+ * Constructs a GetDirectoryRequestPrivate object for CloudDirectory \a action with,
+ * public implementation \a q.
  */
 GetDirectoryRequestPrivate::GetDirectoryRequestPrivate(
     const CloudDirectoryRequest::Action action, GetDirectoryRequest * const q)
@@ -111,15 +100,10 @@ GetDirectoryRequestPrivate::GetDirectoryRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetDirectoryRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetDirectoryRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetDirectoryRequest instance.
  */
 GetDirectoryRequestPrivate::GetDirectoryRequestPrivate(
     const GetDirectoryRequestPrivate &other, GetDirectoryRequest * const q)

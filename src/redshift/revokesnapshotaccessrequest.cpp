@@ -27,10 +27,9 @@ namespace Redshift {
 
 /*!
  * \class QtAws::Redshift::RevokeSnapshotAccessRequest
- *
  * \brief The RevokeSnapshotAccessRequest class provides an interface for Redshift RevokeSnapshotAccess requests.
  *
- * \ingroup Redshift
+ * \inmodule QtAwsRedshift
  *
  *  <fullname>Amazon Redshift</fullname>
  * 
@@ -67,9 +66,7 @@ namespace Redshift {
  */
 
 /*!
- * @brief  Constructs a new RevokeSnapshotAccessRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 RevokeSnapshotAccessRequest::RevokeSnapshotAccessRequest(const RevokeSnapshotAccessRequest &other)
     : RedshiftRequest(new RevokeSnapshotAccessRequestPrivate(*other.d_func(), this))
@@ -78,7 +75,7 @@ RevokeSnapshotAccessRequest::RevokeSnapshotAccessRequest(const RevokeSnapshotAcc
 }
 
 /*!
- * @brief  Constructs a new RevokeSnapshotAccessRequest object.
+ * Constructs a RevokeSnapshotAccessRequest object.
  */
 RevokeSnapshotAccessRequest::RevokeSnapshotAccessRequest()
     : RedshiftRequest(new RevokeSnapshotAccessRequestPrivate(RedshiftRequest::RevokeSnapshotAccessAction, this))
@@ -96,14 +93,9 @@ bool RevokeSnapshotAccessRequest::isValid() const
 
 
 /*!
- * @brief  Construct an RevokeSnapshotAccessResponse object.
+ * Returns a RevokeSnapshotAccessResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An RevokeSnapshotAccessResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RedshiftClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * RevokeSnapshotAccessRequest::response(QNetworkReply * const reply) const
 {
@@ -111,20 +103,17 @@ QtAws::Core::AwsAbstractResponse * RevokeSnapshotAccessRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::Redshift::RevokeSnapshotAccessRequestPrivate
+ * \brief The RevokeSnapshotAccessRequestPrivate class provides private implementation for RevokeSnapshotAccessRequest.
+ * \internal
  *
- * @class  RevokeSnapshotAccessRequestPrivate
- *
- * @brief  Private implementation for RevokeSnapshotAccessRequest.
+ * \inmodule QtAwsRedshift
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new RevokeSnapshotAccessRequestPrivate object.
- *
- * @param  action  Redshift action being performed.
- * @param  q       Pointer to this object's public RevokeSnapshotAccessRequest instance.
+ * Constructs a RevokeSnapshotAccessRequestPrivate object for Redshift \a action with,
+ * public implementation \a q.
  */
 RevokeSnapshotAccessRequestPrivate::RevokeSnapshotAccessRequestPrivate(
     const RedshiftRequest::Action action, RevokeSnapshotAccessRequest * const q)
@@ -134,15 +123,10 @@ RevokeSnapshotAccessRequestPrivate::RevokeSnapshotAccessRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RevokeSnapshotAccessRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the RevokeSnapshotAccessRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public RevokeSnapshotAccessRequest instance.
  */
 RevokeSnapshotAccessRequestPrivate::RevokeSnapshotAccessRequestPrivate(
     const RevokeSnapshotAccessRequestPrivate &other, RevokeSnapshotAccessRequest * const q)

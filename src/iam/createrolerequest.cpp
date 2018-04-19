@@ -27,10 +27,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::CreateRoleRequest
- *
  * \brief The CreateRoleRequest class provides an interface for IAM CreateRole requests.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -102,9 +101,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new CreateRoleRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateRoleRequest::CreateRoleRequest(const CreateRoleRequest &other)
     : IAMRequest(new CreateRoleRequestPrivate(*other.d_func(), this))
@@ -113,7 +110,7 @@ CreateRoleRequest::CreateRoleRequest(const CreateRoleRequest &other)
 }
 
 /*!
- * @brief  Constructs a new CreateRoleRequest object.
+ * Constructs a CreateRoleRequest object.
  */
 CreateRoleRequest::CreateRoleRequest()
     : IAMRequest(new CreateRoleRequestPrivate(IAMRequest::CreateRoleAction, this))
@@ -131,14 +128,9 @@ bool CreateRoleRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateRoleResponse object.
+ * Returns a CreateRoleResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateRoleResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IAMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateRoleRequest::response(QNetworkReply * const reply) const
 {
@@ -146,20 +138,17 @@ QtAws::Core::AwsAbstractResponse * CreateRoleRequest::response(QNetworkReply * c
 }
 
 /*!
- * @internal
+ * \class QtAws::IAM::CreateRoleRequestPrivate
+ * \brief The CreateRoleRequestPrivate class provides private implementation for CreateRoleRequest.
+ * \internal
  *
- * @class  CreateRoleRequestPrivate
- *
- * @brief  Private implementation for CreateRoleRequest.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateRoleRequestPrivate object.
- *
- * @param  action  IAM action being performed.
- * @param  q       Pointer to this object's public CreateRoleRequest instance.
+ * Constructs a CreateRoleRequestPrivate object for IAM \a action with,
+ * public implementation \a q.
  */
 CreateRoleRequestPrivate::CreateRoleRequestPrivate(
     const IAMRequest::Action action, CreateRoleRequest * const q)
@@ -169,15 +158,10 @@ CreateRoleRequestPrivate::CreateRoleRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateRoleRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateRoleRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateRoleRequest instance.
  */
 CreateRoleRequestPrivate::CreateRoleRequestPrivate(
     const CreateRoleRequestPrivate &other, CreateRoleRequest * const q)

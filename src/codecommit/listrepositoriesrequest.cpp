@@ -27,10 +27,9 @@ namespace CodeCommit {
 
 /*!
  * \class QtAws::CodeCommit::ListRepositoriesRequest
- *
  * \brief The ListRepositoriesRequest class provides an interface for CodeCommit ListRepositories requests.
  *
- * \ingroup CodeCommit
+ * \inmodule QtAwsCodeCommit
  *
  *  <fullname>AWS CodeCommit</fullname>
  * 
@@ -227,9 +226,7 @@ namespace CodeCommit {
  */
 
 /*!
- * @brief  Constructs a new ListRepositoriesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListRepositoriesRequest::ListRepositoriesRequest(const ListRepositoriesRequest &other)
     : CodeCommitRequest(new ListRepositoriesRequestPrivate(*other.d_func(), this))
@@ -238,7 +235,7 @@ ListRepositoriesRequest::ListRepositoriesRequest(const ListRepositoriesRequest &
 }
 
 /*!
- * @brief  Constructs a new ListRepositoriesRequest object.
+ * Constructs a ListRepositoriesRequest object.
  */
 ListRepositoriesRequest::ListRepositoriesRequest()
     : CodeCommitRequest(new ListRepositoriesRequestPrivate(CodeCommitRequest::ListRepositoriesAction, this))
@@ -256,14 +253,9 @@ bool ListRepositoriesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListRepositoriesResponse object.
+ * Returns a ListRepositoriesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListRepositoriesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CodeCommitClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListRepositoriesRequest::response(QNetworkReply * const reply) const
 {
@@ -271,20 +263,17 @@ QtAws::Core::AwsAbstractResponse * ListRepositoriesRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::CodeCommit::ListRepositoriesRequestPrivate
+ * \brief The ListRepositoriesRequestPrivate class provides private implementation for ListRepositoriesRequest.
+ * \internal
  *
- * @class  ListRepositoriesRequestPrivate
- *
- * @brief  Private implementation for ListRepositoriesRequest.
+ * \inmodule QtAwsCodeCommit
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListRepositoriesRequestPrivate object.
- *
- * @param  action  CodeCommit action being performed.
- * @param  q       Pointer to this object's public ListRepositoriesRequest instance.
+ * Constructs a ListRepositoriesRequestPrivate object for CodeCommit \a action with,
+ * public implementation \a q.
  */
 ListRepositoriesRequestPrivate::ListRepositoriesRequestPrivate(
     const CodeCommitRequest::Action action, ListRepositoriesRequest * const q)
@@ -294,15 +283,10 @@ ListRepositoriesRequestPrivate::ListRepositoriesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListRepositoriesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListRepositoriesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListRepositoriesRequest instance.
  */
 ListRepositoriesRequestPrivate::ListRepositoriesRequestPrivate(
     const ListRepositoriesRequestPrivate &other, ListRepositoriesRequest * const q)

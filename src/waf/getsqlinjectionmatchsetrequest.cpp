@@ -27,10 +27,9 @@ namespace WAF {
 
 /*!
  * \class QtAws::WAF::GetSqlInjectionMatchSetRequest
- *
  * \brief The GetSqlInjectionMatchSetRequest class provides an interface for WAF GetSqlInjectionMatchSet requests.
  *
- * \ingroup WAF
+ * \inmodule QtAwsWAF
  *
  *  This is the <i>AWS WAF API Reference</i> for using AWS WAF with Amazon CloudFront. The AWS WAF actions and data types
  *  listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data
@@ -42,9 +41,7 @@ namespace WAF {
  */
 
 /*!
- * @brief  Constructs a new GetSqlInjectionMatchSetRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetSqlInjectionMatchSetRequest::GetSqlInjectionMatchSetRequest(const GetSqlInjectionMatchSetRequest &other)
     : WAFRequest(new GetSqlInjectionMatchSetRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ GetSqlInjectionMatchSetRequest::GetSqlInjectionMatchSetRequest(const GetSqlInjec
 }
 
 /*!
- * @brief  Constructs a new GetSqlInjectionMatchSetRequest object.
+ * Constructs a GetSqlInjectionMatchSetRequest object.
  */
 GetSqlInjectionMatchSetRequest::GetSqlInjectionMatchSetRequest()
     : WAFRequest(new GetSqlInjectionMatchSetRequestPrivate(WAFRequest::GetSqlInjectionMatchSetAction, this))
@@ -71,14 +68,9 @@ bool GetSqlInjectionMatchSetRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetSqlInjectionMatchSetResponse object.
+ * Returns a GetSqlInjectionMatchSetResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetSqlInjectionMatchSetResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WAFClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetSqlInjectionMatchSetRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * GetSqlInjectionMatchSetRequest::response(QNet
 }
 
 /*!
- * @internal
+ * \class QtAws::WAF::GetSqlInjectionMatchSetRequestPrivate
+ * \brief The GetSqlInjectionMatchSetRequestPrivate class provides private implementation for GetSqlInjectionMatchSetRequest.
+ * \internal
  *
- * @class  GetSqlInjectionMatchSetRequestPrivate
- *
- * @brief  Private implementation for GetSqlInjectionMatchSetRequest.
+ * \inmodule QtAwsWAF
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetSqlInjectionMatchSetRequestPrivate object.
- *
- * @param  action  WAF action being performed.
- * @param  q       Pointer to this object's public GetSqlInjectionMatchSetRequest instance.
+ * Constructs a GetSqlInjectionMatchSetRequestPrivate object for WAF \a action with,
+ * public implementation \a q.
  */
 GetSqlInjectionMatchSetRequestPrivate::GetSqlInjectionMatchSetRequestPrivate(
     const WAFRequest::Action action, GetSqlInjectionMatchSetRequest * const q)
@@ -109,15 +98,10 @@ GetSqlInjectionMatchSetRequestPrivate::GetSqlInjectionMatchSetRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetSqlInjectionMatchSetRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetSqlInjectionMatchSetRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetSqlInjectionMatchSetRequest instance.
  */
 GetSqlInjectionMatchSetRequestPrivate::GetSqlInjectionMatchSetRequestPrivate(
     const GetSqlInjectionMatchSetRequestPrivate &other, GetSqlInjectionMatchSetRequest * const q)

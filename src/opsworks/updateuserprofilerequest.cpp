@@ -27,10 +27,9 @@ namespace OpsWorks {
 
 /*!
  * \class QtAws::OpsWorks::UpdateUserProfileRequest
- *
  * \brief The UpdateUserProfileRequest class provides an interface for OpsWorks UpdateUserProfile requests.
  *
- * \ingroup OpsWorks
+ * \inmodule QtAwsOpsWorks
  *
  *  <fullname>AWS OpsWorks</fullname>
  * 
@@ -143,9 +142,7 @@ namespace OpsWorks {
  */
 
 /*!
- * @brief  Constructs a new UpdateUserProfileRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateUserProfileRequest::UpdateUserProfileRequest(const UpdateUserProfileRequest &other)
     : OpsWorksRequest(new UpdateUserProfileRequestPrivate(*other.d_func(), this))
@@ -154,7 +151,7 @@ UpdateUserProfileRequest::UpdateUserProfileRequest(const UpdateUserProfileReques
 }
 
 /*!
- * @brief  Constructs a new UpdateUserProfileRequest object.
+ * Constructs a UpdateUserProfileRequest object.
  */
 UpdateUserProfileRequest::UpdateUserProfileRequest()
     : OpsWorksRequest(new UpdateUserProfileRequestPrivate(OpsWorksRequest::UpdateUserProfileAction, this))
@@ -172,14 +169,9 @@ bool UpdateUserProfileRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateUserProfileResponse object.
+ * Returns a UpdateUserProfileResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateUserProfileResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  OpsWorksClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateUserProfileRequest::response(QNetworkReply * const reply) const
 {
@@ -187,20 +179,17 @@ QtAws::Core::AwsAbstractResponse * UpdateUserProfileRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::OpsWorks::UpdateUserProfileRequestPrivate
+ * \brief The UpdateUserProfileRequestPrivate class provides private implementation for UpdateUserProfileRequest.
+ * \internal
  *
- * @class  UpdateUserProfileRequestPrivate
- *
- * @brief  Private implementation for UpdateUserProfileRequest.
+ * \inmodule QtAwsOpsWorks
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateUserProfileRequestPrivate object.
- *
- * @param  action  OpsWorks action being performed.
- * @param  q       Pointer to this object's public UpdateUserProfileRequest instance.
+ * Constructs a UpdateUserProfileRequestPrivate object for OpsWorks \a action with,
+ * public implementation \a q.
  */
 UpdateUserProfileRequestPrivate::UpdateUserProfileRequestPrivate(
     const OpsWorksRequest::Action action, UpdateUserProfileRequest * const q)
@@ -210,15 +199,10 @@ UpdateUserProfileRequestPrivate::UpdateUserProfileRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateUserProfileRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateUserProfileRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateUserProfileRequest instance.
  */
 UpdateUserProfileRequestPrivate::UpdateUserProfileRequestPrivate(
     const UpdateUserProfileRequestPrivate &other, UpdateUserProfileRequest * const q)

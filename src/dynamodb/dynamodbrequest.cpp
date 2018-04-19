@@ -25,16 +25,52 @@ namespace DynamoDB {
 
 /*!
  * \class QtAws::DynamoDB::DynamoDBRequest
- *
  * \brief The DynamoDBRequest class provides an interface for DynamoDB requests.
  *
- * \ingroup DynamoDB
+ * \inmodule QtAwsDynamoDB
  */
 
 /*!
- * @brief  Constructs a new DynamoDBRequest object.
+ * \enum DynamoDBRequest::Action
  *
- * @param  action  The DynamoDB action to request.
+ * This enum describes the actions that can be performed as DynamoDB
+ * requests.
+ *
+ * \value BatchGetItemAction DynamoDB BatchGetItem action.
+ * \value BatchWriteItemAction DynamoDB BatchWriteItem action.
+ * \value CreateBackupAction DynamoDB CreateBackup action.
+ * \value CreateGlobalTableAction DynamoDB CreateGlobalTable action.
+ * \value CreateTableAction DynamoDB CreateTable action.
+ * \value DeleteBackupAction DynamoDB DeleteBackup action.
+ * \value DeleteItemAction DynamoDB DeleteItem action.
+ * \value DeleteTableAction DynamoDB DeleteTable action.
+ * \value DescribeBackupAction DynamoDB DescribeBackup action.
+ * \value DescribeContinuousBackupsAction DynamoDB DescribeContinuousBackups action.
+ * \value DescribeGlobalTableAction DynamoDB DescribeGlobalTable action.
+ * \value DescribeLimitsAction DynamoDB DescribeLimits action.
+ * \value DescribeTableAction DynamoDB DescribeTable action.
+ * \value DescribeTimeToLiveAction DynamoDB DescribeTimeToLive action.
+ * \value GetItemAction DynamoDB GetItem action.
+ * \value ListBackupsAction DynamoDB ListBackups action.
+ * \value ListGlobalTablesAction DynamoDB ListGlobalTables action.
+ * \value ListTablesAction DynamoDB ListTables action.
+ * \value ListTagsOfResourceAction DynamoDB ListTagsOfResource action.
+ * \value PutItemAction DynamoDB PutItem action.
+ * \value QueryAction DynamoDB Query action.
+ * \value RestoreTableFromBackupAction DynamoDB RestoreTableFromBackup action.
+ * \value RestoreTableToPointInTimeAction DynamoDB RestoreTableToPointInTime action.
+ * \value ScanAction DynamoDB Scan action.
+ * \value TagResourceAction DynamoDB TagResource action.
+ * \value UntagResourceAction DynamoDB UntagResource action.
+ * \value UpdateContinuousBackupsAction DynamoDB UpdateContinuousBackups action.
+ * \value UpdateGlobalTableAction DynamoDB UpdateGlobalTable action.
+ * \value UpdateItemAction DynamoDB UpdateItem action.
+ * \value UpdateTableAction DynamoDB UpdateTable action.
+ * \value UpdateTimeToLiveAction DynamoDB UpdateTimeToLive action.
+ */
+
+/*!
+ * Constructs a[n] DynamoDBRequest object for DynamoDB \a action.
  */
 DynamoDBRequest::DynamoDBRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new DynamoDBRequestPrivate(action, this))
@@ -43,9 +79,7 @@ DynamoDBRequest::DynamoDBRequest(const Action action)
 }
 
 /*!
- * @brief  Constructs a new DynamoDBRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DynamoDBRequest::DynamoDBRequest(const DynamoDBRequest &other)
     : QtAws::Core::AwsAbstractRequest(new DynamoDBRequestPrivate(*other.d_func(), this))
@@ -54,13 +88,7 @@ DynamoDBRequest::DynamoDBRequest(const DynamoDBRequest &other)
 }
 
 /*!
- * @brief  Assignment operator.
- *
- * Assigns \a other to \c this.
- *
- * @param  other  Instance to copy.
- *
- * @return  A reference to \c this.
+ * Sets the DynamoDBRequest object to be equal to \a other.
  */
 DynamoDBRequest& DynamoDBRequest::operator=(const DynamoDBRequest &other)
 {
@@ -72,14 +100,10 @@ DynamoDBRequest& DynamoDBRequest::operator=(const DynamoDBRequest &other)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DynamoDBRequest object.
+ * Constructs aa DynamoDBRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from DynamoDBRequestPrivate.
- *
- * @param  d  Pointer to private data (aka D-Pointer).
  */
 DynamoDBRequest::DynamoDBRequest(DynamoDBRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
@@ -87,7 +111,7 @@ DynamoDBRequest::DynamoDBRequest(DynamoDBRequestPrivate * const d) : QtAws::Core
 }
 
 /*!
- * \brief Returns the DynamoDB action to be performed by this request.
+ * Returns the DynamoDB action to be performed by this request.
  */
 DynamoDBRequest::Action DynamoDBRequest::action() const
 {
@@ -96,7 +120,7 @@ DynamoDBRequest::Action DynamoDBRequest::action() const
 }
 
 /*!
- * \brief Returns the name of the DynamoDB action to be performed by this request.
+ * Returns the name of the DynamoDB action to be performed by this request.
  */
 QString DynamoDBRequest::actionString() const
 {
@@ -104,7 +128,7 @@ QString DynamoDBRequest::actionString() const
 }
 
 /*!
- * \brief Returns the DynamoDB API version implemented by this request.
+ * Returns the DynamoDB API version implemented by this request.
  */
 QString DynamoDBRequest::apiVersion() const
 {
@@ -113,7 +137,7 @@ QString DynamoDBRequest::apiVersion() const
 }
 
 /*!
- * @brief Set the DynamoDB action to be performed by this request to \a action.
+ * Sets the DynamoDB action to be performed by this request to \a action.
  */
 void DynamoDBRequest::setAction(const Action action)
 {
@@ -122,7 +146,7 @@ void DynamoDBRequest::setAction(const Action action)
 }
 
 /*!
- * Set the DynamoDB API version to include in this request to \a version.
+ * Sets the DynamoDB API version to include in this request to \a version.
  */
 void DynamoDBRequest::setApiVersion(const QString &version)
 {
@@ -131,7 +155,7 @@ void DynamoDBRequest::setApiVersion(const QString &version)
 }
 
 /*!
- * \brief Returns \c true if this request is the same as \a other.
+ * Returns \c true if this request is equal to \a other; \c false otherwise.
  *
  * Note, most derived *Request classes do not need to provider their own
  * implementations of this function, since most such request classes rely on
@@ -146,8 +170,8 @@ bool DynamoDBRequest::operator==(const DynamoDBRequest &other) const
             (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
-/*!
- * @brief  Check if \a queueName is a valid DynamoDB queue name.
+/*
+ * Returns \c tue if \a queueName is a valid DynamoDB queue name.
  *
  * @par From DynamoDB FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
@@ -166,9 +190,8 @@ bool DynamoDBRequest::operator==(const DynamoDBRequest &other) const
 }*/
 
 /*!
- * \brief Removes the a \a name parameter from this request.
- *
- * Returns the count of paramters removed (typically \c 0 or \c 1).
+ * Removes the a \a name parameter from the request, then returns the number of
+ * paramters removed (typically \c 0 or \c 1).
  */
 int DynamoDBRequest::clearParameter(const QString &name)
 {
@@ -177,7 +200,7 @@ int DynamoDBRequest::clearParameter(const QString &name)
 }
 
 /*!
- * \brief Removes all parameters from this request.
+ * Removes all parameters from the request.
  */
 void DynamoDBRequest::clearParameters()
 {
@@ -186,7 +209,7 @@ void DynamoDBRequest::clearParameters()
 }
 
 /*!
- * \brief Returns the value of the \n name pararemter if set, otherwise \a defaultValue.
+ * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
 QVariant DynamoDBRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
@@ -195,7 +218,7 @@ QVariant DynamoDBRequest::parameter(const QString &name, const QVariant &default
 }
 
 /*!
- * \brief Returns a map of parameters included in this request.
+ * Returns the parameters included in this request.
  */
 const QVariantMap &DynamoDBRequest::parameters() const
 {
@@ -204,7 +227,7 @@ const QVariantMap &DynamoDBRequest::parameters() const
 }
 
 /*!
- * \brief Sets the \a name parameter to \a value.
+ * Sets the \a name parameter to \a value.
  */
 void DynamoDBRequest::setParameter(const QString &name, const QVariant &value)
 {
@@ -213,9 +236,8 @@ void DynamoDBRequest::setParameter(const QString &name, const QVariant &value)
 }
 
 /*!
- * \brief Sets the map of paramters for this request to \a parameters.
- *
- * Any request parameters set previously will be discarded.
+ * Sets the paramters for this request to \a parameters. Any request parameters
+ * set previously will be discarded.
  */
 void DynamoDBRequest::setParameters(const QVariantMap &parameters)
 {
@@ -224,11 +246,12 @@ void DynamoDBRequest::setParameters(const QVariantMap &parameters)
 }
 
 /*!
- * \brief Returns a network request for this DynamoDB request using the given \a endpoint.
+ * Returns a network request for the DynamoDB request using the given
+ * \a endpoint.
  *
- * This DynamoDB implementation builds request URLs by combining the common query
- * parameters (such as Action and Version), with any that have been added (via
- * setParameter) by child classes.
+ * This DynamoDB implementation builds request URLs by combining the
+ * common query parameters (such as Action and Version), with any that have
+ * been added (via setParameter) by child classes.
  */
 QNetworkRequest DynamoDBRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -239,17 +262,16 @@ QNetworkRequest DynamoDBRequest::unsignedRequest(const QUrl &endpoint) const
 }
 
 /*!
+ * \class QtAws::DynamoDB::DynamoDBRequestPrivate
+ * \brief The DynamoDBRequestPrivate class provides private implementation for DynamoDBRequest.
  * \internal
  *
- * \class  DynamoDBRequestPrivate
- *
- * \brief  Private implementation for DynamoDBRequest.
+ * \inmodule QtAwsDynamoDB
  */
 
 /*!
- * \internal
- *
- * \brief Constructs a new DynamoDBRequestPrivate object.
+ * Constructs a DynamoDBRequestPrivate object for DynamoDB \a action with,
+ * public implementation \a q.
  */
 DynamoDBRequestPrivate::DynamoDBRequestPrivate(const DynamoDBRequest::Action action, DynamoDBRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
@@ -258,9 +280,7 @@ DynamoDBRequestPrivate::DynamoDBRequestPrivate(const DynamoDBRequest::Action act
 }
 
 /*!
- * \internal
- *
- * \brief Constructs a new DynamoDBRequestPrivate object, copying an existing one.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
@@ -276,15 +296,12 @@ DynamoDBRequestPrivate::DynamoDBRequestPrivate(const DynamoDBRequestPrivate &oth
 }
 
 /*!
- * \internal
- *
- * \brief Returns a string representing \a action.
+ * Returns a string represention of \a action, or a null string if \a action is
+ * invalid.
  *
  * This function converts DynamoDBRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the DynamoDB service's Action
  * query parameters.
- *
- * @return A string representing \a action, or a null string if \a action is invalid.
  */
 QString DynamoDBRequestPrivate::toString(const DynamoDBRequest::Action &action)
 {

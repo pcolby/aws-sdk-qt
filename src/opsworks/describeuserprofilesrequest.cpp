@@ -27,10 +27,9 @@ namespace OpsWorks {
 
 /*!
  * \class QtAws::OpsWorks::DescribeUserProfilesRequest
- *
  * \brief The DescribeUserProfilesRequest class provides an interface for OpsWorks DescribeUserProfiles requests.
  *
- * \ingroup OpsWorks
+ * \inmodule QtAwsOpsWorks
  *
  *  <fullname>AWS OpsWorks</fullname>
  * 
@@ -143,9 +142,7 @@ namespace OpsWorks {
  */
 
 /*!
- * @brief  Constructs a new DescribeUserProfilesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeUserProfilesRequest::DescribeUserProfilesRequest(const DescribeUserProfilesRequest &other)
     : OpsWorksRequest(new DescribeUserProfilesRequestPrivate(*other.d_func(), this))
@@ -154,7 +151,7 @@ DescribeUserProfilesRequest::DescribeUserProfilesRequest(const DescribeUserProfi
 }
 
 /*!
- * @brief  Constructs a new DescribeUserProfilesRequest object.
+ * Constructs a DescribeUserProfilesRequest object.
  */
 DescribeUserProfilesRequest::DescribeUserProfilesRequest()
     : OpsWorksRequest(new DescribeUserProfilesRequestPrivate(OpsWorksRequest::DescribeUserProfilesAction, this))
@@ -172,14 +169,9 @@ bool DescribeUserProfilesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeUserProfilesResponse object.
+ * Returns a DescribeUserProfilesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeUserProfilesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  OpsWorksClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeUserProfilesRequest::response(QNetworkReply * const reply) const
 {
@@ -187,20 +179,17 @@ QtAws::Core::AwsAbstractResponse * DescribeUserProfilesRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::OpsWorks::DescribeUserProfilesRequestPrivate
+ * \brief The DescribeUserProfilesRequestPrivate class provides private implementation for DescribeUserProfilesRequest.
+ * \internal
  *
- * @class  DescribeUserProfilesRequestPrivate
- *
- * @brief  Private implementation for DescribeUserProfilesRequest.
+ * \inmodule QtAwsOpsWorks
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeUserProfilesRequestPrivate object.
- *
- * @param  action  OpsWorks action being performed.
- * @param  q       Pointer to this object's public DescribeUserProfilesRequest instance.
+ * Constructs a DescribeUserProfilesRequestPrivate object for OpsWorks \a action with,
+ * public implementation \a q.
  */
 DescribeUserProfilesRequestPrivate::DescribeUserProfilesRequestPrivate(
     const OpsWorksRequest::Action action, DescribeUserProfilesRequest * const q)
@@ -210,15 +199,10 @@ DescribeUserProfilesRequestPrivate::DescribeUserProfilesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeUserProfilesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeUserProfilesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeUserProfilesRequest instance.
  */
 DescribeUserProfilesRequestPrivate::DescribeUserProfilesRequestPrivate(
     const DescribeUserProfilesRequestPrivate &other, DescribeUserProfilesRequest * const q)

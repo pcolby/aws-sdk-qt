@@ -27,10 +27,9 @@ namespace MigrationHub {
 
 /*!
  * \class QtAws::MigrationHub::ListDiscoveredResourcesRequest
- *
  * \brief The ListDiscoveredResourcesRequest class provides an interface for MigrationHub ListDiscoveredResources requests.
  *
- * \ingroup MigrationHub
+ * \inmodule QtAwsMigrationHub
  *
  *  The AWS Migration Hub API methods help to obtain server and application migration status and integrate your
  *  resource-specific migration tool by providing a programmatic interface to Migration Hub.
@@ -39,9 +38,7 @@ namespace MigrationHub {
  */
 
 /*!
- * @brief  Constructs a new ListDiscoveredResourcesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListDiscoveredResourcesRequest::ListDiscoveredResourcesRequest(const ListDiscoveredResourcesRequest &other)
     : MigrationHubRequest(new ListDiscoveredResourcesRequestPrivate(*other.d_func(), this))
@@ -50,7 +47,7 @@ ListDiscoveredResourcesRequest::ListDiscoveredResourcesRequest(const ListDiscove
 }
 
 /*!
- * @brief  Constructs a new ListDiscoveredResourcesRequest object.
+ * Constructs a ListDiscoveredResourcesRequest object.
  */
 ListDiscoveredResourcesRequest::ListDiscoveredResourcesRequest()
     : MigrationHubRequest(new ListDiscoveredResourcesRequestPrivate(MigrationHubRequest::ListDiscoveredResourcesAction, this))
@@ -68,14 +65,9 @@ bool ListDiscoveredResourcesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListDiscoveredResourcesResponse object.
+ * Returns a ListDiscoveredResourcesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListDiscoveredResourcesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MigrationHubClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListDiscoveredResourcesRequest::response(QNetworkReply * const reply) const
 {
@@ -83,20 +75,17 @@ QtAws::Core::AwsAbstractResponse * ListDiscoveredResourcesRequest::response(QNet
 }
 
 /*!
- * @internal
+ * \class QtAws::MigrationHub::ListDiscoveredResourcesRequestPrivate
+ * \brief The ListDiscoveredResourcesRequestPrivate class provides private implementation for ListDiscoveredResourcesRequest.
+ * \internal
  *
- * @class  ListDiscoveredResourcesRequestPrivate
- *
- * @brief  Private implementation for ListDiscoveredResourcesRequest.
+ * \inmodule QtAwsMigrationHub
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListDiscoveredResourcesRequestPrivate object.
- *
- * @param  action  MigrationHub action being performed.
- * @param  q       Pointer to this object's public ListDiscoveredResourcesRequest instance.
+ * Constructs a ListDiscoveredResourcesRequestPrivate object for MigrationHub \a action with,
+ * public implementation \a q.
  */
 ListDiscoveredResourcesRequestPrivate::ListDiscoveredResourcesRequestPrivate(
     const MigrationHubRequest::Action action, ListDiscoveredResourcesRequest * const q)
@@ -106,15 +95,10 @@ ListDiscoveredResourcesRequestPrivate::ListDiscoveredResourcesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListDiscoveredResourcesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListDiscoveredResourcesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListDiscoveredResourcesRequest instance.
  */
 ListDiscoveredResourcesRequestPrivate::ListDiscoveredResourcesRequestPrivate(
     const ListDiscoveredResourcesRequestPrivate &other, ListDiscoveredResourcesRequest * const q)

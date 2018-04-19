@@ -27,10 +27,9 @@ namespace ServiceDiscovery {
 
 /*!
  * \class QtAws::ServiceDiscovery::GetServiceRequest
- *
  * \brief The GetServiceRequest class provides an interface for ServiceDiscovery GetService requests.
  *
- * \ingroup ServiceDiscovery
+ * \inmodule QtAwsServiceDiscovery
  *
  *  Amazon Route 53 auto naming lets you configure public or private namespaces that your microservice applications run in.
  *  When instances of the service become available, you can call the auto naming API to register the instance, and Route 53
@@ -41,9 +40,7 @@ namespace ServiceDiscovery {
  */
 
 /*!
- * @brief  Constructs a new GetServiceRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetServiceRequest::GetServiceRequest(const GetServiceRequest &other)
     : ServiceDiscoveryRequest(new GetServiceRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ GetServiceRequest::GetServiceRequest(const GetServiceRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetServiceRequest object.
+ * Constructs a GetServiceRequest object.
  */
 GetServiceRequest::GetServiceRequest()
     : ServiceDiscoveryRequest(new GetServiceRequestPrivate(ServiceDiscoveryRequest::GetServiceAction, this))
@@ -70,14 +67,9 @@ bool GetServiceRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetServiceResponse object.
+ * Returns a GetServiceResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetServiceResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ServiceDiscoveryClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetServiceRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * GetServiceRequest::response(QNetworkReply * c
 }
 
 /*!
- * @internal
+ * \class QtAws::ServiceDiscovery::GetServiceRequestPrivate
+ * \brief The GetServiceRequestPrivate class provides private implementation for GetServiceRequest.
+ * \internal
  *
- * @class  GetServiceRequestPrivate
- *
- * @brief  Private implementation for GetServiceRequest.
+ * \inmodule QtAwsServiceDiscovery
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetServiceRequestPrivate object.
- *
- * @param  action  ServiceDiscovery action being performed.
- * @param  q       Pointer to this object's public GetServiceRequest instance.
+ * Constructs a GetServiceRequestPrivate object for ServiceDiscovery \a action with,
+ * public implementation \a q.
  */
 GetServiceRequestPrivate::GetServiceRequestPrivate(
     const ServiceDiscoveryRequest::Action action, GetServiceRequest * const q)
@@ -108,15 +97,10 @@ GetServiceRequestPrivate::GetServiceRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetServiceRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetServiceRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetServiceRequest instance.
  */
 GetServiceRequestPrivate::GetServiceRequestPrivate(
     const GetServiceRequestPrivate &other, GetServiceRequest * const q)

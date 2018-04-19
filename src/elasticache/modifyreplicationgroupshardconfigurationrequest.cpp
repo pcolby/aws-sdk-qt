@@ -27,10 +27,9 @@ namespace ElastiCache {
 
 /*!
  * \class QtAws::ElastiCache::ModifyReplicationGroupShardConfigurationRequest
- *
  * \brief The ModifyReplicationGroupShardConfigurationRequest class provides an interface for ElastiCache ModifyReplicationGroupShardConfiguration requests.
  *
- * \ingroup ElastiCache
+ * \inmodule QtAwsElastiCache
  *
  *  <fullname>Amazon ElastiCache</fullname>
  * 
@@ -51,9 +50,7 @@ namespace ElastiCache {
  */
 
 /*!
- * @brief  Constructs a new ModifyReplicationGroupShardConfigurationRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ModifyReplicationGroupShardConfigurationRequest::ModifyReplicationGroupShardConfigurationRequest(const ModifyReplicationGroupShardConfigurationRequest &other)
     : ElastiCacheRequest(new ModifyReplicationGroupShardConfigurationRequestPrivate(*other.d_func(), this))
@@ -62,7 +59,7 @@ ModifyReplicationGroupShardConfigurationRequest::ModifyReplicationGroupShardConf
 }
 
 /*!
- * @brief  Constructs a new ModifyReplicationGroupShardConfigurationRequest object.
+ * Constructs a ModifyReplicationGroupShardConfigurationRequest object.
  */
 ModifyReplicationGroupShardConfigurationRequest::ModifyReplicationGroupShardConfigurationRequest()
     : ElastiCacheRequest(new ModifyReplicationGroupShardConfigurationRequestPrivate(ElastiCacheRequest::ModifyReplicationGroupShardConfigurationAction, this))
@@ -80,14 +77,9 @@ bool ModifyReplicationGroupShardConfigurationRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ModifyReplicationGroupShardConfigurationResponse object.
+ * Returns a ModifyReplicationGroupShardConfigurationResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ModifyReplicationGroupShardConfigurationResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ElastiCacheClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ModifyReplicationGroupShardConfigurationRequest::response(QNetworkReply * const reply) const
 {
@@ -95,20 +87,17 @@ QtAws::Core::AwsAbstractResponse * ModifyReplicationGroupShardConfigurationReque
 }
 
 /*!
- * @internal
+ * \class QtAws::ElastiCache::ModifyReplicationGroupShardConfigurationRequestPrivate
+ * \brief The ModifyReplicationGroupShardConfigurationRequestPrivate class provides private implementation for ModifyReplicationGroupShardConfigurationRequest.
+ * \internal
  *
- * @class  ModifyReplicationGroupShardConfigurationRequestPrivate
- *
- * @brief  Private implementation for ModifyReplicationGroupShardConfigurationRequest.
+ * \inmodule QtAwsElastiCache
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ModifyReplicationGroupShardConfigurationRequestPrivate object.
- *
- * @param  action  ElastiCache action being performed.
- * @param  q       Pointer to this object's public ModifyReplicationGroupShardConfigurationRequest instance.
+ * Constructs a ModifyReplicationGroupShardConfigurationRequestPrivate object for ElastiCache \a action with,
+ * public implementation \a q.
  */
 ModifyReplicationGroupShardConfigurationRequestPrivate::ModifyReplicationGroupShardConfigurationRequestPrivate(
     const ElastiCacheRequest::Action action, ModifyReplicationGroupShardConfigurationRequest * const q)
@@ -118,15 +107,10 @@ ModifyReplicationGroupShardConfigurationRequestPrivate::ModifyReplicationGroupSh
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ModifyReplicationGroupShardConfigurationRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ModifyReplicationGroupShardConfigurationRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ModifyReplicationGroupShardConfigurationRequest instance.
  */
 ModifyReplicationGroupShardConfigurationRequestPrivate::ModifyReplicationGroupShardConfigurationRequestPrivate(
     const ModifyReplicationGroupShardConfigurationRequestPrivate &other, ModifyReplicationGroupShardConfigurationRequest * const q)

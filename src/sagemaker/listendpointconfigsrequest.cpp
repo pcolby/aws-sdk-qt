@@ -27,19 +27,16 @@ namespace SageMaker {
 
 /*!
  * \class QtAws::SageMaker::ListEndpointConfigsRequest
- *
  * \brief The ListEndpointConfigsRequest class provides an interface for SageMaker ListEndpointConfigs requests.
  *
- * \ingroup SageMaker
+ * \inmodule QtAwsSageMaker
  *
  *
  * \sa SageMakerClient::listEndpointConfigs
  */
 
 /*!
- * @brief  Constructs a new ListEndpointConfigsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListEndpointConfigsRequest::ListEndpointConfigsRequest(const ListEndpointConfigsRequest &other)
     : SageMakerRequest(new ListEndpointConfigsRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ ListEndpointConfigsRequest::ListEndpointConfigsRequest(const ListEndpointConfigs
 }
 
 /*!
- * @brief  Constructs a new ListEndpointConfigsRequest object.
+ * Constructs a ListEndpointConfigsRequest object.
  */
 ListEndpointConfigsRequest::ListEndpointConfigsRequest()
     : SageMakerRequest(new ListEndpointConfigsRequestPrivate(SageMakerRequest::ListEndpointConfigsAction, this))
@@ -66,14 +63,9 @@ bool ListEndpointConfigsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListEndpointConfigsResponse object.
+ * Returns a ListEndpointConfigsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListEndpointConfigsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SageMakerClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListEndpointConfigsRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * ListEndpointConfigsRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::SageMaker::ListEndpointConfigsRequestPrivate
+ * \brief The ListEndpointConfigsRequestPrivate class provides private implementation for ListEndpointConfigsRequest.
+ * \internal
  *
- * @class  ListEndpointConfigsRequestPrivate
- *
- * @brief  Private implementation for ListEndpointConfigsRequest.
+ * \inmodule QtAwsSageMaker
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListEndpointConfigsRequestPrivate object.
- *
- * @param  action  SageMaker action being performed.
- * @param  q       Pointer to this object's public ListEndpointConfigsRequest instance.
+ * Constructs a ListEndpointConfigsRequestPrivate object for SageMaker \a action with,
+ * public implementation \a q.
  */
 ListEndpointConfigsRequestPrivate::ListEndpointConfigsRequestPrivate(
     const SageMakerRequest::Action action, ListEndpointConfigsRequest * const q)
@@ -104,15 +93,10 @@ ListEndpointConfigsRequestPrivate::ListEndpointConfigsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListEndpointConfigsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListEndpointConfigsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListEndpointConfigsRequest instance.
  */
 ListEndpointConfigsRequestPrivate::ListEndpointConfigsRequestPrivate(
     const ListEndpointConfigsRequestPrivate &other, ListEndpointConfigsRequest * const q)

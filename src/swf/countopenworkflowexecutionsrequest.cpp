@@ -27,10 +27,9 @@ namespace SWF {
 
 /*!
  * \class QtAws::SWF::CountOpenWorkflowExecutionsRequest
- *
  * \brief The CountOpenWorkflowExecutionsRequest class provides an interface for SWF CountOpenWorkflowExecutions requests.
  *
- * \ingroup SWF
+ * \inmodule QtAwsSWF
  *
  *  <fullname>Amazon Simple Workflow Service</fullname>
  * 
@@ -53,9 +52,7 @@ namespace SWF {
  */
 
 /*!
- * @brief  Constructs a new CountOpenWorkflowExecutionsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CountOpenWorkflowExecutionsRequest::CountOpenWorkflowExecutionsRequest(const CountOpenWorkflowExecutionsRequest &other)
     : SWFRequest(new CountOpenWorkflowExecutionsRequestPrivate(*other.d_func(), this))
@@ -64,7 +61,7 @@ CountOpenWorkflowExecutionsRequest::CountOpenWorkflowExecutionsRequest(const Cou
 }
 
 /*!
- * @brief  Constructs a new CountOpenWorkflowExecutionsRequest object.
+ * Constructs a CountOpenWorkflowExecutionsRequest object.
  */
 CountOpenWorkflowExecutionsRequest::CountOpenWorkflowExecutionsRequest()
     : SWFRequest(new CountOpenWorkflowExecutionsRequestPrivate(SWFRequest::CountOpenWorkflowExecutionsAction, this))
@@ -82,14 +79,9 @@ bool CountOpenWorkflowExecutionsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CountOpenWorkflowExecutionsResponse object.
+ * Returns a CountOpenWorkflowExecutionsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CountOpenWorkflowExecutionsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SWFClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CountOpenWorkflowExecutionsRequest::response(QNetworkReply * const reply) const
 {
@@ -97,20 +89,17 @@ QtAws::Core::AwsAbstractResponse * CountOpenWorkflowExecutionsRequest::response(
 }
 
 /*!
- * @internal
+ * \class QtAws::SWF::CountOpenWorkflowExecutionsRequestPrivate
+ * \brief The CountOpenWorkflowExecutionsRequestPrivate class provides private implementation for CountOpenWorkflowExecutionsRequest.
+ * \internal
  *
- * @class  CountOpenWorkflowExecutionsRequestPrivate
- *
- * @brief  Private implementation for CountOpenWorkflowExecutionsRequest.
+ * \inmodule QtAwsSWF
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CountOpenWorkflowExecutionsRequestPrivate object.
- *
- * @param  action  SWF action being performed.
- * @param  q       Pointer to this object's public CountOpenWorkflowExecutionsRequest instance.
+ * Constructs a CountOpenWorkflowExecutionsRequestPrivate object for SWF \a action with,
+ * public implementation \a q.
  */
 CountOpenWorkflowExecutionsRequestPrivate::CountOpenWorkflowExecutionsRequestPrivate(
     const SWFRequest::Action action, CountOpenWorkflowExecutionsRequest * const q)
@@ -120,15 +109,10 @@ CountOpenWorkflowExecutionsRequestPrivate::CountOpenWorkflowExecutionsRequestPri
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CountOpenWorkflowExecutionsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CountOpenWorkflowExecutionsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CountOpenWorkflowExecutionsRequest instance.
  */
 CountOpenWorkflowExecutionsRequestPrivate::CountOpenWorkflowExecutionsRequestPrivate(
     const CountOpenWorkflowExecutionsRequestPrivate &other, CountOpenWorkflowExecutionsRequest * const q)

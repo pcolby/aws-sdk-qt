@@ -27,10 +27,9 @@ namespace ServiceDiscovery {
 
 /*!
  * \class QtAws::ServiceDiscovery::GetOperationRequest
- *
  * \brief The GetOperationRequest class provides an interface for ServiceDiscovery GetOperation requests.
  *
- * \ingroup ServiceDiscovery
+ * \inmodule QtAwsServiceDiscovery
  *
  *  Amazon Route 53 auto naming lets you configure public or private namespaces that your microservice applications run in.
  *  When instances of the service become available, you can call the auto naming API to register the instance, and Route 53
@@ -41,9 +40,7 @@ namespace ServiceDiscovery {
  */
 
 /*!
- * @brief  Constructs a new GetOperationRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetOperationRequest::GetOperationRequest(const GetOperationRequest &other)
     : ServiceDiscoveryRequest(new GetOperationRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ GetOperationRequest::GetOperationRequest(const GetOperationRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetOperationRequest object.
+ * Constructs a GetOperationRequest object.
  */
 GetOperationRequest::GetOperationRequest()
     : ServiceDiscoveryRequest(new GetOperationRequestPrivate(ServiceDiscoveryRequest::GetOperationAction, this))
@@ -70,14 +67,9 @@ bool GetOperationRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetOperationResponse object.
+ * Returns a GetOperationResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetOperationResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ServiceDiscoveryClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetOperationRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * GetOperationRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::ServiceDiscovery::GetOperationRequestPrivate
+ * \brief The GetOperationRequestPrivate class provides private implementation for GetOperationRequest.
+ * \internal
  *
- * @class  GetOperationRequestPrivate
- *
- * @brief  Private implementation for GetOperationRequest.
+ * \inmodule QtAwsServiceDiscovery
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetOperationRequestPrivate object.
- *
- * @param  action  ServiceDiscovery action being performed.
- * @param  q       Pointer to this object's public GetOperationRequest instance.
+ * Constructs a GetOperationRequestPrivate object for ServiceDiscovery \a action with,
+ * public implementation \a q.
  */
 GetOperationRequestPrivate::GetOperationRequestPrivate(
     const ServiceDiscoveryRequest::Action action, GetOperationRequest * const q)
@@ -108,15 +97,10 @@ GetOperationRequestPrivate::GetOperationRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetOperationRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetOperationRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetOperationRequest instance.
  */
 GetOperationRequestPrivate::GetOperationRequestPrivate(
     const GetOperationRequestPrivate &other, GetOperationRequest * const q)

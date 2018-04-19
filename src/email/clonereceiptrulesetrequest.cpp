@@ -27,10 +27,9 @@ namespace SES {
 
 /*!
  * \class QtAws::SES::CloneReceiptRuleSetRequest
- *
  * \brief The CloneReceiptRuleSetRequest class provides an interface for SES CloneReceiptRuleSet requests.
  *
- * \ingroup SES
+ * \inmodule QtAwsSES
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -48,9 +47,7 @@ namespace SES {
  */
 
 /*!
- * @brief  Constructs a new CloneReceiptRuleSetRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CloneReceiptRuleSetRequest::CloneReceiptRuleSetRequest(const CloneReceiptRuleSetRequest &other)
     : SESRequest(new CloneReceiptRuleSetRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ CloneReceiptRuleSetRequest::CloneReceiptRuleSetRequest(const CloneReceiptRuleSet
 }
 
 /*!
- * @brief  Constructs a new CloneReceiptRuleSetRequest object.
+ * Constructs a CloneReceiptRuleSetRequest object.
  */
 CloneReceiptRuleSetRequest::CloneReceiptRuleSetRequest()
     : SESRequest(new CloneReceiptRuleSetRequestPrivate(SESRequest::CloneReceiptRuleSetAction, this))
@@ -77,14 +74,9 @@ bool CloneReceiptRuleSetRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CloneReceiptRuleSetResponse object.
+ * Returns a CloneReceiptRuleSetResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CloneReceiptRuleSetResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SESClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CloneReceiptRuleSetRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * CloneReceiptRuleSetRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::SES::CloneReceiptRuleSetRequestPrivate
+ * \brief The CloneReceiptRuleSetRequestPrivate class provides private implementation for CloneReceiptRuleSetRequest.
+ * \internal
  *
- * @class  CloneReceiptRuleSetRequestPrivate
- *
- * @brief  Private implementation for CloneReceiptRuleSetRequest.
+ * \inmodule QtAwsSES
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CloneReceiptRuleSetRequestPrivate object.
- *
- * @param  action  SES action being performed.
- * @param  q       Pointer to this object's public CloneReceiptRuleSetRequest instance.
+ * Constructs a CloneReceiptRuleSetRequestPrivate object for SES \a action with,
+ * public implementation \a q.
  */
 CloneReceiptRuleSetRequestPrivate::CloneReceiptRuleSetRequestPrivate(
     const SESRequest::Action action, CloneReceiptRuleSetRequest * const q)
@@ -115,15 +104,10 @@ CloneReceiptRuleSetRequestPrivate::CloneReceiptRuleSetRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CloneReceiptRuleSetRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CloneReceiptRuleSetRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CloneReceiptRuleSetRequest instance.
  */
 CloneReceiptRuleSetRequestPrivate::CloneReceiptRuleSetRequestPrivate(
     const CloneReceiptRuleSetRequestPrivate &other, CloneReceiptRuleSetRequest * const q)

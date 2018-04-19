@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::AssociateIamInstanceProfileRequest
- *
  * \brief The AssociateIamInstanceProfileRequest class provides an interface for EC2 AssociateIamInstanceProfile requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new AssociateIamInstanceProfileRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AssociateIamInstanceProfileRequest::AssociateIamInstanceProfileRequest(const AssociateIamInstanceProfileRequest &other)
     : EC2Request(new AssociateIamInstanceProfileRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ AssociateIamInstanceProfileRequest::AssociateIamInstanceProfileRequest(const Ass
 }
 
 /*!
- * @brief  Constructs a new AssociateIamInstanceProfileRequest object.
+ * Constructs a AssociateIamInstanceProfileRequest object.
  */
 AssociateIamInstanceProfileRequest::AssociateIamInstanceProfileRequest()
     : EC2Request(new AssociateIamInstanceProfileRequestPrivate(EC2Request::AssociateIamInstanceProfileAction, this))
@@ -70,14 +67,9 @@ bool AssociateIamInstanceProfileRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AssociateIamInstanceProfileResponse object.
+ * Returns a AssociateIamInstanceProfileResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AssociateIamInstanceProfileResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AssociateIamInstanceProfileRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * AssociateIamInstanceProfileRequest::response(
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::AssociateIamInstanceProfileRequestPrivate
+ * \brief The AssociateIamInstanceProfileRequestPrivate class provides private implementation for AssociateIamInstanceProfileRequest.
+ * \internal
  *
- * @class  AssociateIamInstanceProfileRequestPrivate
- *
- * @brief  Private implementation for AssociateIamInstanceProfileRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AssociateIamInstanceProfileRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public AssociateIamInstanceProfileRequest instance.
+ * Constructs a AssociateIamInstanceProfileRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 AssociateIamInstanceProfileRequestPrivate::AssociateIamInstanceProfileRequestPrivate(
     const EC2Request::Action action, AssociateIamInstanceProfileRequest * const q)
@@ -108,15 +97,10 @@ AssociateIamInstanceProfileRequestPrivate::AssociateIamInstanceProfileRequestPri
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AssociateIamInstanceProfileRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AssociateIamInstanceProfileRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AssociateIamInstanceProfileRequest instance.
  */
 AssociateIamInstanceProfileRequestPrivate::AssociateIamInstanceProfileRequestPrivate(
     const AssociateIamInstanceProfileRequestPrivate &other, AssociateIamInstanceProfileRequest * const q)

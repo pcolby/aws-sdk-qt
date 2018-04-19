@@ -27,10 +27,9 @@ namespace Lambda {
 
 /*!
  * \class QtAws::Lambda::DeleteEventSourceMappingRequest
- *
  * \brief The DeleteEventSourceMappingRequest class provides an interface for Lambda DeleteEventSourceMapping requests.
  *
- * \ingroup Lambda
+ * \inmodule QtAwsLambda
  *
  *  <fullname>AWS Lambda</fullname>
  * 
@@ -48,9 +47,7 @@ namespace Lambda {
  */
 
 /*!
- * @brief  Constructs a new DeleteEventSourceMappingRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteEventSourceMappingRequest::DeleteEventSourceMappingRequest(const DeleteEventSourceMappingRequest &other)
     : LambdaRequest(new DeleteEventSourceMappingRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ DeleteEventSourceMappingRequest::DeleteEventSourceMappingRequest(const DeleteEve
 }
 
 /*!
- * @brief  Constructs a new DeleteEventSourceMappingRequest object.
+ * Constructs a DeleteEventSourceMappingRequest object.
  */
 DeleteEventSourceMappingRequest::DeleteEventSourceMappingRequest()
     : LambdaRequest(new DeleteEventSourceMappingRequestPrivate(LambdaRequest::DeleteEventSourceMappingAction, this))
@@ -77,14 +74,9 @@ bool DeleteEventSourceMappingRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteEventSourceMappingResponse object.
+ * Returns a DeleteEventSourceMappingResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteEventSourceMappingResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  LambdaClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteEventSourceMappingRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * DeleteEventSourceMappingRequest::response(QNe
 }
 
 /*!
- * @internal
+ * \class QtAws::Lambda::DeleteEventSourceMappingRequestPrivate
+ * \brief The DeleteEventSourceMappingRequestPrivate class provides private implementation for DeleteEventSourceMappingRequest.
+ * \internal
  *
- * @class  DeleteEventSourceMappingRequestPrivate
- *
- * @brief  Private implementation for DeleteEventSourceMappingRequest.
+ * \inmodule QtAwsLambda
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteEventSourceMappingRequestPrivate object.
- *
- * @param  action  Lambda action being performed.
- * @param  q       Pointer to this object's public DeleteEventSourceMappingRequest instance.
+ * Constructs a DeleteEventSourceMappingRequestPrivate object for Lambda \a action with,
+ * public implementation \a q.
  */
 DeleteEventSourceMappingRequestPrivate::DeleteEventSourceMappingRequestPrivate(
     const LambdaRequest::Action action, DeleteEventSourceMappingRequest * const q)
@@ -115,15 +104,10 @@ DeleteEventSourceMappingRequestPrivate::DeleteEventSourceMappingRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteEventSourceMappingRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteEventSourceMappingRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteEventSourceMappingRequest instance.
  */
 DeleteEventSourceMappingRequestPrivate::DeleteEventSourceMappingRequestPrivate(
     const DeleteEventSourceMappingRequestPrivate &other, DeleteEventSourceMappingRequest * const q)

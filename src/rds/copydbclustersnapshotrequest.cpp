@@ -27,10 +27,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::CopyDBClusterSnapshotRequest
- *
  * \brief The CopyDBClusterSnapshotRequest class provides an interface for RDS CopyDBClusterSnapshot requests.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -101,9 +100,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new CopyDBClusterSnapshotRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CopyDBClusterSnapshotRequest::CopyDBClusterSnapshotRequest(const CopyDBClusterSnapshotRequest &other)
     : RDSRequest(new CopyDBClusterSnapshotRequestPrivate(*other.d_func(), this))
@@ -112,7 +109,7 @@ CopyDBClusterSnapshotRequest::CopyDBClusterSnapshotRequest(const CopyDBClusterSn
 }
 
 /*!
- * @brief  Constructs a new CopyDBClusterSnapshotRequest object.
+ * Constructs a CopyDBClusterSnapshotRequest object.
  */
 CopyDBClusterSnapshotRequest::CopyDBClusterSnapshotRequest()
     : RDSRequest(new CopyDBClusterSnapshotRequestPrivate(RDSRequest::CopyDBClusterSnapshotAction, this))
@@ -130,14 +127,9 @@ bool CopyDBClusterSnapshotRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CopyDBClusterSnapshotResponse object.
+ * Returns a CopyDBClusterSnapshotResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CopyDBClusterSnapshotResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RDSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CopyDBClusterSnapshotRequest::response(QNetworkReply * const reply) const
 {
@@ -145,20 +137,17 @@ QtAws::Core::AwsAbstractResponse * CopyDBClusterSnapshotRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::RDS::CopyDBClusterSnapshotRequestPrivate
+ * \brief The CopyDBClusterSnapshotRequestPrivate class provides private implementation for CopyDBClusterSnapshotRequest.
+ * \internal
  *
- * @class  CopyDBClusterSnapshotRequestPrivate
- *
- * @brief  Private implementation for CopyDBClusterSnapshotRequest.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CopyDBClusterSnapshotRequestPrivate object.
- *
- * @param  action  RDS action being performed.
- * @param  q       Pointer to this object's public CopyDBClusterSnapshotRequest instance.
+ * Constructs a CopyDBClusterSnapshotRequestPrivate object for RDS \a action with,
+ * public implementation \a q.
  */
 CopyDBClusterSnapshotRequestPrivate::CopyDBClusterSnapshotRequestPrivate(
     const RDSRequest::Action action, CopyDBClusterSnapshotRequest * const q)
@@ -168,15 +157,10 @@ CopyDBClusterSnapshotRequestPrivate::CopyDBClusterSnapshotRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CopyDBClusterSnapshotRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CopyDBClusterSnapshotRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CopyDBClusterSnapshotRequest instance.
  */
 CopyDBClusterSnapshotRequestPrivate::CopyDBClusterSnapshotRequestPrivate(
     const CopyDBClusterSnapshotRequestPrivate &other, CopyDBClusterSnapshotRequest * const q)

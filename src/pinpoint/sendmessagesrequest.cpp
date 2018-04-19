@@ -27,19 +27,16 @@ namespace Pinpoint {
 
 /*!
  * \class QtAws::Pinpoint::SendMessagesRequest
- *
  * \brief The SendMessagesRequest class provides an interface for Pinpoint SendMessages requests.
  *
- * \ingroup Pinpoint
+ * \inmodule QtAwsPinpoint
  *
  *
  * \sa PinpointClient::sendMessages
  */
 
 /*!
- * @brief  Constructs a new SendMessagesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 SendMessagesRequest::SendMessagesRequest(const SendMessagesRequest &other)
     : PinpointRequest(new SendMessagesRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ SendMessagesRequest::SendMessagesRequest(const SendMessagesRequest &other)
 }
 
 /*!
- * @brief  Constructs a new SendMessagesRequest object.
+ * Constructs a SendMessagesRequest object.
  */
 SendMessagesRequest::SendMessagesRequest()
     : PinpointRequest(new SendMessagesRequestPrivate(PinpointRequest::SendMessagesAction, this))
@@ -66,14 +63,9 @@ bool SendMessagesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an SendMessagesResponse object.
+ * Returns a SendMessagesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An SendMessagesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  PinpointClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * SendMessagesRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * SendMessagesRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::Pinpoint::SendMessagesRequestPrivate
+ * \brief The SendMessagesRequestPrivate class provides private implementation for SendMessagesRequest.
+ * \internal
  *
- * @class  SendMessagesRequestPrivate
- *
- * @brief  Private implementation for SendMessagesRequest.
+ * \inmodule QtAwsPinpoint
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new SendMessagesRequestPrivate object.
- *
- * @param  action  Pinpoint action being performed.
- * @param  q       Pointer to this object's public SendMessagesRequest instance.
+ * Constructs a SendMessagesRequestPrivate object for Pinpoint \a action with,
+ * public implementation \a q.
  */
 SendMessagesRequestPrivate::SendMessagesRequestPrivate(
     const PinpointRequest::Action action, SendMessagesRequest * const q)
@@ -104,15 +93,10 @@ SendMessagesRequestPrivate::SendMessagesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SendMessagesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the SendMessagesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public SendMessagesRequest instance.
  */
 SendMessagesRequestPrivate::SendMessagesRequestPrivate(
     const SendMessagesRequestPrivate &other, SendMessagesRequest * const q)

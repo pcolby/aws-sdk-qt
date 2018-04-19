@@ -27,10 +27,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::CreateOpenIDConnectProviderRequest
- *
  * \brief The CreateOpenIDConnectProviderRequest class provides an interface for IAM CreateOpenIDConnectProvider requests.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -102,9 +101,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new CreateOpenIDConnectProviderRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateOpenIDConnectProviderRequest::CreateOpenIDConnectProviderRequest(const CreateOpenIDConnectProviderRequest &other)
     : IAMRequest(new CreateOpenIDConnectProviderRequestPrivate(*other.d_func(), this))
@@ -113,7 +110,7 @@ CreateOpenIDConnectProviderRequest::CreateOpenIDConnectProviderRequest(const Cre
 }
 
 /*!
- * @brief  Constructs a new CreateOpenIDConnectProviderRequest object.
+ * Constructs a CreateOpenIDConnectProviderRequest object.
  */
 CreateOpenIDConnectProviderRequest::CreateOpenIDConnectProviderRequest()
     : IAMRequest(new CreateOpenIDConnectProviderRequestPrivate(IAMRequest::CreateOpenIDConnectProviderAction, this))
@@ -131,14 +128,9 @@ bool CreateOpenIDConnectProviderRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateOpenIDConnectProviderResponse object.
+ * Returns a CreateOpenIDConnectProviderResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateOpenIDConnectProviderResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IAMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateOpenIDConnectProviderRequest::response(QNetworkReply * const reply) const
 {
@@ -146,20 +138,17 @@ QtAws::Core::AwsAbstractResponse * CreateOpenIDConnectProviderRequest::response(
 }
 
 /*!
- * @internal
+ * \class QtAws::IAM::CreateOpenIDConnectProviderRequestPrivate
+ * \brief The CreateOpenIDConnectProviderRequestPrivate class provides private implementation for CreateOpenIDConnectProviderRequest.
+ * \internal
  *
- * @class  CreateOpenIDConnectProviderRequestPrivate
- *
- * @brief  Private implementation for CreateOpenIDConnectProviderRequest.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateOpenIDConnectProviderRequestPrivate object.
- *
- * @param  action  IAM action being performed.
- * @param  q       Pointer to this object's public CreateOpenIDConnectProviderRequest instance.
+ * Constructs a CreateOpenIDConnectProviderRequestPrivate object for IAM \a action with,
+ * public implementation \a q.
  */
 CreateOpenIDConnectProviderRequestPrivate::CreateOpenIDConnectProviderRequestPrivate(
     const IAMRequest::Action action, CreateOpenIDConnectProviderRequest * const q)
@@ -169,15 +158,10 @@ CreateOpenIDConnectProviderRequestPrivate::CreateOpenIDConnectProviderRequestPri
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateOpenIDConnectProviderRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateOpenIDConnectProviderRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateOpenIDConnectProviderRequest instance.
  */
 CreateOpenIDConnectProviderRequestPrivate::CreateOpenIDConnectProviderRequestPrivate(
     const CreateOpenIDConnectProviderRequestPrivate &other, CreateOpenIDConnectProviderRequest * const q)

@@ -27,10 +27,9 @@ namespace OpsWorks {
 
 /*!
  * \class QtAws::OpsWorks::DisassociateElasticIpRequest
- *
  * \brief The DisassociateElasticIpRequest class provides an interface for OpsWorks DisassociateElasticIp requests.
  *
- * \ingroup OpsWorks
+ * \inmodule QtAwsOpsWorks
  *
  *  <fullname>AWS OpsWorks</fullname>
  * 
@@ -143,9 +142,7 @@ namespace OpsWorks {
  */
 
 /*!
- * @brief  Constructs a new DisassociateElasticIpRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DisassociateElasticIpRequest::DisassociateElasticIpRequest(const DisassociateElasticIpRequest &other)
     : OpsWorksRequest(new DisassociateElasticIpRequestPrivate(*other.d_func(), this))
@@ -154,7 +151,7 @@ DisassociateElasticIpRequest::DisassociateElasticIpRequest(const DisassociateEla
 }
 
 /*!
- * @brief  Constructs a new DisassociateElasticIpRequest object.
+ * Constructs a DisassociateElasticIpRequest object.
  */
 DisassociateElasticIpRequest::DisassociateElasticIpRequest()
     : OpsWorksRequest(new DisassociateElasticIpRequestPrivate(OpsWorksRequest::DisassociateElasticIpAction, this))
@@ -172,14 +169,9 @@ bool DisassociateElasticIpRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DisassociateElasticIpResponse object.
+ * Returns a DisassociateElasticIpResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DisassociateElasticIpResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  OpsWorksClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DisassociateElasticIpRequest::response(QNetworkReply * const reply) const
 {
@@ -187,20 +179,17 @@ QtAws::Core::AwsAbstractResponse * DisassociateElasticIpRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::OpsWorks::DisassociateElasticIpRequestPrivate
+ * \brief The DisassociateElasticIpRequestPrivate class provides private implementation for DisassociateElasticIpRequest.
+ * \internal
  *
- * @class  DisassociateElasticIpRequestPrivate
- *
- * @brief  Private implementation for DisassociateElasticIpRequest.
+ * \inmodule QtAwsOpsWorks
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DisassociateElasticIpRequestPrivate object.
- *
- * @param  action  OpsWorks action being performed.
- * @param  q       Pointer to this object's public DisassociateElasticIpRequest instance.
+ * Constructs a DisassociateElasticIpRequestPrivate object for OpsWorks \a action with,
+ * public implementation \a q.
  */
 DisassociateElasticIpRequestPrivate::DisassociateElasticIpRequestPrivate(
     const OpsWorksRequest::Action action, DisassociateElasticIpRequest * const q)
@@ -210,15 +199,10 @@ DisassociateElasticIpRequestPrivate::DisassociateElasticIpRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DisassociateElasticIpRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DisassociateElasticIpRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DisassociateElasticIpRequest instance.
  */
 DisassociateElasticIpRequestPrivate::DisassociateElasticIpRequestPrivate(
     const DisassociateElasticIpRequestPrivate &other, DisassociateElasticIpRequest * const q)

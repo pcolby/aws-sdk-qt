@@ -27,10 +27,9 @@ namespace CodeCommit {
 
 /*!
  * \class QtAws::CodeCommit::ListPullRequestsRequest
- *
  * \brief The ListPullRequestsRequest class provides an interface for CodeCommit ListPullRequests requests.
  *
- * \ingroup CodeCommit
+ * \inmodule QtAwsCodeCommit
  *
  *  <fullname>AWS CodeCommit</fullname>
  * 
@@ -227,9 +226,7 @@ namespace CodeCommit {
  */
 
 /*!
- * @brief  Constructs a new ListPullRequestsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListPullRequestsRequest::ListPullRequestsRequest(const ListPullRequestsRequest &other)
     : CodeCommitRequest(new ListPullRequestsRequestPrivate(*other.d_func(), this))
@@ -238,7 +235,7 @@ ListPullRequestsRequest::ListPullRequestsRequest(const ListPullRequestsRequest &
 }
 
 /*!
- * @brief  Constructs a new ListPullRequestsRequest object.
+ * Constructs a ListPullRequestsRequest object.
  */
 ListPullRequestsRequest::ListPullRequestsRequest()
     : CodeCommitRequest(new ListPullRequestsRequestPrivate(CodeCommitRequest::ListPullRequestsAction, this))
@@ -256,14 +253,9 @@ bool ListPullRequestsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListPullRequestsResponse object.
+ * Returns a ListPullRequestsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListPullRequestsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CodeCommitClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListPullRequestsRequest::response(QNetworkReply * const reply) const
 {
@@ -271,20 +263,17 @@ QtAws::Core::AwsAbstractResponse * ListPullRequestsRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::CodeCommit::ListPullRequestsRequestPrivate
+ * \brief The ListPullRequestsRequestPrivate class provides private implementation for ListPullRequestsRequest.
+ * \internal
  *
- * @class  ListPullRequestsRequestPrivate
- *
- * @brief  Private implementation for ListPullRequestsRequest.
+ * \inmodule QtAwsCodeCommit
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListPullRequestsRequestPrivate object.
- *
- * @param  action  CodeCommit action being performed.
- * @param  q       Pointer to this object's public ListPullRequestsRequest instance.
+ * Constructs a ListPullRequestsRequestPrivate object for CodeCommit \a action with,
+ * public implementation \a q.
  */
 ListPullRequestsRequestPrivate::ListPullRequestsRequestPrivate(
     const CodeCommitRequest::Action action, ListPullRequestsRequest * const q)
@@ -294,15 +283,10 @@ ListPullRequestsRequestPrivate::ListPullRequestsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListPullRequestsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListPullRequestsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListPullRequestsRequest instance.
  */
 ListPullRequestsRequestPrivate::ListPullRequestsRequestPrivate(
     const ListPullRequestsRequestPrivate &other, ListPullRequestsRequest * const q)

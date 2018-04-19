@@ -27,19 +27,16 @@ namespace S3 {
 
 /*!
  * \class QtAws::S3::ListPartsRequest
- *
  * \brief The ListPartsRequest class provides an interface for S3 ListParts requests.
  *
- * \ingroup S3
+ * \inmodule QtAwsS3
  *
  *
  * \sa S3Client::listParts
  */
 
 /*!
- * @brief  Constructs a new ListPartsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListPartsRequest::ListPartsRequest(const ListPartsRequest &other)
     : S3Request(new ListPartsRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ ListPartsRequest::ListPartsRequest(const ListPartsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ListPartsRequest object.
+ * Constructs a ListPartsRequest object.
  */
 ListPartsRequest::ListPartsRequest()
     : S3Request(new ListPartsRequestPrivate(S3Request::ListPartsAction, this))
@@ -66,14 +63,9 @@ bool ListPartsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListPartsResponse object.
+ * Returns a ListPartsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListPartsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  S3Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListPartsRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * ListPartsRequest::response(QNetworkReply * co
 }
 
 /*!
- * @internal
+ * \class QtAws::S3::ListPartsRequestPrivate
+ * \brief The ListPartsRequestPrivate class provides private implementation for ListPartsRequest.
+ * \internal
  *
- * @class  ListPartsRequestPrivate
- *
- * @brief  Private implementation for ListPartsRequest.
+ * \inmodule QtAwsS3
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListPartsRequestPrivate object.
- *
- * @param  action  S3 action being performed.
- * @param  q       Pointer to this object's public ListPartsRequest instance.
+ * Constructs a ListPartsRequestPrivate object for S3 \a action with,
+ * public implementation \a q.
  */
 ListPartsRequestPrivate::ListPartsRequestPrivate(
     const S3Request::Action action, ListPartsRequest * const q)
@@ -104,15 +93,10 @@ ListPartsRequestPrivate::ListPartsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListPartsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListPartsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListPartsRequest instance.
  */
 ListPartsRequestPrivate::ListPartsRequestPrivate(
     const ListPartsRequestPrivate &other, ListPartsRequest * const q)

@@ -27,10 +27,9 @@ namespace CloudFront {
 
 /*!
  * \class QtAws::CloudFront::GetFieldLevelEncryptionProfileConfigRequest
- *
  * \brief The GetFieldLevelEncryptionProfileConfigRequest class provides an interface for CloudFront GetFieldLevelEncryptionProfileConfig requests.
  *
- * \ingroup CloudFront
+ * \inmodule QtAwsCloudFront
  *
  *  <fullname>Amazon CloudFront</fullname>
  * 
@@ -42,9 +41,7 @@ namespace CloudFront {
  */
 
 /*!
- * @brief  Constructs a new GetFieldLevelEncryptionProfileConfigRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetFieldLevelEncryptionProfileConfigRequest::GetFieldLevelEncryptionProfileConfigRequest(const GetFieldLevelEncryptionProfileConfigRequest &other)
     : CloudFrontRequest(new GetFieldLevelEncryptionProfileConfigRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ GetFieldLevelEncryptionProfileConfigRequest::GetFieldLevelEncryptionProfileConfi
 }
 
 /*!
- * @brief  Constructs a new GetFieldLevelEncryptionProfileConfigRequest object.
+ * Constructs a GetFieldLevelEncryptionProfileConfigRequest object.
  */
 GetFieldLevelEncryptionProfileConfigRequest::GetFieldLevelEncryptionProfileConfigRequest()
     : CloudFrontRequest(new GetFieldLevelEncryptionProfileConfigRequestPrivate(CloudFrontRequest::GetFieldLevelEncryptionProfileConfigAction, this))
@@ -71,14 +68,9 @@ bool GetFieldLevelEncryptionProfileConfigRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetFieldLevelEncryptionProfileConfigResponse object.
+ * Returns a GetFieldLevelEncryptionProfileConfigResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetFieldLevelEncryptionProfileConfigResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudFrontClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetFieldLevelEncryptionProfileConfigRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * GetFieldLevelEncryptionProfileConfigRequest::
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudFront::GetFieldLevelEncryptionProfileConfigRequestPrivate
+ * \brief The GetFieldLevelEncryptionProfileConfigRequestPrivate class provides private implementation for GetFieldLevelEncryptionProfileConfigRequest.
+ * \internal
  *
- * @class  GetFieldLevelEncryptionProfileConfigRequestPrivate
- *
- * @brief  Private implementation for GetFieldLevelEncryptionProfileConfigRequest.
+ * \inmodule QtAwsCloudFront
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetFieldLevelEncryptionProfileConfigRequestPrivate object.
- *
- * @param  action  CloudFront action being performed.
- * @param  q       Pointer to this object's public GetFieldLevelEncryptionProfileConfigRequest instance.
+ * Constructs a GetFieldLevelEncryptionProfileConfigRequestPrivate object for CloudFront \a action with,
+ * public implementation \a q.
  */
 GetFieldLevelEncryptionProfileConfigRequestPrivate::GetFieldLevelEncryptionProfileConfigRequestPrivate(
     const CloudFrontRequest::Action action, GetFieldLevelEncryptionProfileConfigRequest * const q)
@@ -109,15 +98,10 @@ GetFieldLevelEncryptionProfileConfigRequestPrivate::GetFieldLevelEncryptionProfi
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetFieldLevelEncryptionProfileConfigRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetFieldLevelEncryptionProfileConfigRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetFieldLevelEncryptionProfileConfigRequest instance.
  */
 GetFieldLevelEncryptionProfileConfigRequestPrivate::GetFieldLevelEncryptionProfileConfigRequestPrivate(
     const GetFieldLevelEncryptionProfileConfigRequestPrivate &other, GetFieldLevelEncryptionProfileConfigRequest * const q)

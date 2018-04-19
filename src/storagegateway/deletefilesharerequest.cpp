@@ -27,10 +27,9 @@ namespace StorageGateway {
 
 /*!
  * \class QtAws::StorageGateway::DeleteFileShareRequest
- *
  * \brief The DeleteFileShareRequest class provides an interface for StorageGateway DeleteFileShare requests.
  *
- * \ingroup StorageGateway
+ * \inmodule QtAwsStorageGateway
  *
  *  <fullname>AWS Storage Gateway Service</fullname>
  * 
@@ -106,9 +105,7 @@ namespace StorageGateway {
  */
 
 /*!
- * @brief  Constructs a new DeleteFileShareRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteFileShareRequest::DeleteFileShareRequest(const DeleteFileShareRequest &other)
     : StorageGatewayRequest(new DeleteFileShareRequestPrivate(*other.d_func(), this))
@@ -117,7 +114,7 @@ DeleteFileShareRequest::DeleteFileShareRequest(const DeleteFileShareRequest &oth
 }
 
 /*!
- * @brief  Constructs a new DeleteFileShareRequest object.
+ * Constructs a DeleteFileShareRequest object.
  */
 DeleteFileShareRequest::DeleteFileShareRequest()
     : StorageGatewayRequest(new DeleteFileShareRequestPrivate(StorageGatewayRequest::DeleteFileShareAction, this))
@@ -135,14 +132,9 @@ bool DeleteFileShareRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteFileShareResponse object.
+ * Returns a DeleteFileShareResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteFileShareResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  StorageGatewayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteFileShareRequest::response(QNetworkReply * const reply) const
 {
@@ -150,20 +142,17 @@ QtAws::Core::AwsAbstractResponse * DeleteFileShareRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::StorageGateway::DeleteFileShareRequestPrivate
+ * \brief The DeleteFileShareRequestPrivate class provides private implementation for DeleteFileShareRequest.
+ * \internal
  *
- * @class  DeleteFileShareRequestPrivate
- *
- * @brief  Private implementation for DeleteFileShareRequest.
+ * \inmodule QtAwsStorageGateway
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteFileShareRequestPrivate object.
- *
- * @param  action  StorageGateway action being performed.
- * @param  q       Pointer to this object's public DeleteFileShareRequest instance.
+ * Constructs a DeleteFileShareRequestPrivate object for StorageGateway \a action with,
+ * public implementation \a q.
  */
 DeleteFileShareRequestPrivate::DeleteFileShareRequestPrivate(
     const StorageGatewayRequest::Action action, DeleteFileShareRequest * const q)
@@ -173,15 +162,10 @@ DeleteFileShareRequestPrivate::DeleteFileShareRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteFileShareRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteFileShareRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteFileShareRequest instance.
  */
 DeleteFileShareRequestPrivate::DeleteFileShareRequestPrivate(
     const DeleteFileShareRequestPrivate &other, DeleteFileShareRequest * const q)

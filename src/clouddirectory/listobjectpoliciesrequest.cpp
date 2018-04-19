@@ -27,10 +27,9 @@ namespace CloudDirectory {
 
 /*!
  * \class QtAws::CloudDirectory::ListObjectPoliciesRequest
- *
  * \brief The ListObjectPoliciesRequest class provides an interface for CloudDirectory ListObjectPolicies requests.
  *
- * \ingroup CloudDirectory
+ * \inmodule QtAwsCloudDirectory
  *
  *  <fullname>Amazon Cloud Directory</fullname>
  * 
@@ -44,9 +43,7 @@ namespace CloudDirectory {
  */
 
 /*!
- * @brief  Constructs a new ListObjectPoliciesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListObjectPoliciesRequest::ListObjectPoliciesRequest(const ListObjectPoliciesRequest &other)
     : CloudDirectoryRequest(new ListObjectPoliciesRequestPrivate(*other.d_func(), this))
@@ -55,7 +52,7 @@ ListObjectPoliciesRequest::ListObjectPoliciesRequest(const ListObjectPoliciesReq
 }
 
 /*!
- * @brief  Constructs a new ListObjectPoliciesRequest object.
+ * Constructs a ListObjectPoliciesRequest object.
  */
 ListObjectPoliciesRequest::ListObjectPoliciesRequest()
     : CloudDirectoryRequest(new ListObjectPoliciesRequestPrivate(CloudDirectoryRequest::ListObjectPoliciesAction, this))
@@ -73,14 +70,9 @@ bool ListObjectPoliciesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListObjectPoliciesResponse object.
+ * Returns a ListObjectPoliciesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListObjectPoliciesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudDirectoryClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListObjectPoliciesRequest::response(QNetworkReply * const reply) const
 {
@@ -88,20 +80,17 @@ QtAws::Core::AwsAbstractResponse * ListObjectPoliciesRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudDirectory::ListObjectPoliciesRequestPrivate
+ * \brief The ListObjectPoliciesRequestPrivate class provides private implementation for ListObjectPoliciesRequest.
+ * \internal
  *
- * @class  ListObjectPoliciesRequestPrivate
- *
- * @brief  Private implementation for ListObjectPoliciesRequest.
+ * \inmodule QtAwsCloudDirectory
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListObjectPoliciesRequestPrivate object.
- *
- * @param  action  CloudDirectory action being performed.
- * @param  q       Pointer to this object's public ListObjectPoliciesRequest instance.
+ * Constructs a ListObjectPoliciesRequestPrivate object for CloudDirectory \a action with,
+ * public implementation \a q.
  */
 ListObjectPoliciesRequestPrivate::ListObjectPoliciesRequestPrivate(
     const CloudDirectoryRequest::Action action, ListObjectPoliciesRequest * const q)
@@ -111,15 +100,10 @@ ListObjectPoliciesRequestPrivate::ListObjectPoliciesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListObjectPoliciesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListObjectPoliciesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListObjectPoliciesRequest instance.
  */
 ListObjectPoliciesRequestPrivate::ListObjectPoliciesRequestPrivate(
     const ListObjectPoliciesRequestPrivate &other, ListObjectPoliciesRequest * const q)

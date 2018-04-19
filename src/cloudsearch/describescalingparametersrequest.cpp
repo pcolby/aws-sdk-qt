@@ -27,10 +27,9 @@ namespace CloudSearch {
 
 /*!
  * \class QtAws::CloudSearch::DescribeScalingParametersRequest
- *
  * \brief The DescribeScalingParametersRequest class provides an interface for CloudSearch DescribeScalingParameters requests.
  *
- * \ingroup CloudSearch
+ * \inmodule QtAwsCloudSearch
  *
  *  <fullname>Amazon CloudSearch Configuration Service</fullname>
  * 
@@ -48,9 +47,7 @@ namespace CloudSearch {
  */
 
 /*!
- * @brief  Constructs a new DescribeScalingParametersRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeScalingParametersRequest::DescribeScalingParametersRequest(const DescribeScalingParametersRequest &other)
     : CloudSearchRequest(new DescribeScalingParametersRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ DescribeScalingParametersRequest::DescribeScalingParametersRequest(const Describ
 }
 
 /*!
- * @brief  Constructs a new DescribeScalingParametersRequest object.
+ * Constructs a DescribeScalingParametersRequest object.
  */
 DescribeScalingParametersRequest::DescribeScalingParametersRequest()
     : CloudSearchRequest(new DescribeScalingParametersRequestPrivate(CloudSearchRequest::DescribeScalingParametersAction, this))
@@ -77,14 +74,9 @@ bool DescribeScalingParametersRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeScalingParametersResponse object.
+ * Returns a DescribeScalingParametersResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeScalingParametersResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudSearchClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeScalingParametersRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * DescribeScalingParametersRequest::response(QN
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudSearch::DescribeScalingParametersRequestPrivate
+ * \brief The DescribeScalingParametersRequestPrivate class provides private implementation for DescribeScalingParametersRequest.
+ * \internal
  *
- * @class  DescribeScalingParametersRequestPrivate
- *
- * @brief  Private implementation for DescribeScalingParametersRequest.
+ * \inmodule QtAwsCloudSearch
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeScalingParametersRequestPrivate object.
- *
- * @param  action  CloudSearch action being performed.
- * @param  q       Pointer to this object's public DescribeScalingParametersRequest instance.
+ * Constructs a DescribeScalingParametersRequestPrivate object for CloudSearch \a action with,
+ * public implementation \a q.
  */
 DescribeScalingParametersRequestPrivate::DescribeScalingParametersRequestPrivate(
     const CloudSearchRequest::Action action, DescribeScalingParametersRequest * const q)
@@ -115,15 +104,10 @@ DescribeScalingParametersRequestPrivate::DescribeScalingParametersRequestPrivate
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeScalingParametersRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeScalingParametersRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeScalingParametersRequest instance.
  */
 DescribeScalingParametersRequestPrivate::DescribeScalingParametersRequestPrivate(
     const DescribeScalingParametersRequestPrivate &other, DescribeScalingParametersRequest * const q)

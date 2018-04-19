@@ -27,10 +27,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::StopThingRegistrationTaskRequest
- *
  * \brief The StopThingRegistrationTaskRequest class provides an interface for IoT StopThingRegistrationTask requests.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -48,9 +47,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new StopThingRegistrationTaskRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 StopThingRegistrationTaskRequest::StopThingRegistrationTaskRequest(const StopThingRegistrationTaskRequest &other)
     : IoTRequest(new StopThingRegistrationTaskRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ StopThingRegistrationTaskRequest::StopThingRegistrationTaskRequest(const StopThi
 }
 
 /*!
- * @brief  Constructs a new StopThingRegistrationTaskRequest object.
+ * Constructs a StopThingRegistrationTaskRequest object.
  */
 StopThingRegistrationTaskRequest::StopThingRegistrationTaskRequest()
     : IoTRequest(new StopThingRegistrationTaskRequestPrivate(IoTRequest::StopThingRegistrationTaskAction, this))
@@ -77,14 +74,9 @@ bool StopThingRegistrationTaskRequest::isValid() const
 
 
 /*!
- * @brief  Construct an StopThingRegistrationTaskResponse object.
+ * Returns a StopThingRegistrationTaskResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An StopThingRegistrationTaskResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IoTClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * StopThingRegistrationTaskRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * StopThingRegistrationTaskRequest::response(QN
 }
 
 /*!
- * @internal
+ * \class QtAws::IoT::StopThingRegistrationTaskRequestPrivate
+ * \brief The StopThingRegistrationTaskRequestPrivate class provides private implementation for StopThingRegistrationTaskRequest.
+ * \internal
  *
- * @class  StopThingRegistrationTaskRequestPrivate
- *
- * @brief  Private implementation for StopThingRegistrationTaskRequest.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new StopThingRegistrationTaskRequestPrivate object.
- *
- * @param  action  IoT action being performed.
- * @param  q       Pointer to this object's public StopThingRegistrationTaskRequest instance.
+ * Constructs a StopThingRegistrationTaskRequestPrivate object for IoT \a action with,
+ * public implementation \a q.
  */
 StopThingRegistrationTaskRequestPrivate::StopThingRegistrationTaskRequestPrivate(
     const IoTRequest::Action action, StopThingRegistrationTaskRequest * const q)
@@ -115,15 +104,10 @@ StopThingRegistrationTaskRequestPrivate::StopThingRegistrationTaskRequestPrivate
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StopThingRegistrationTaskRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the StopThingRegistrationTaskRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public StopThingRegistrationTaskRequest instance.
  */
 StopThingRegistrationTaskRequestPrivate::StopThingRegistrationTaskRequestPrivate(
     const StopThingRegistrationTaskRequestPrivate &other, StopThingRegistrationTaskRequest * const q)

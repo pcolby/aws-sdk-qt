@@ -27,10 +27,9 @@ namespace Glacier {
 
 /*!
  * \class QtAws::Glacier::PurchaseProvisionedCapacityRequest
- *
  * \brief The PurchaseProvisionedCapacityRequest class provides an interface for Glacier PurchaseProvisionedCapacity requests.
  *
- * \ingroup Glacier
+ * \inmodule QtAwsGlacier
  *
  *  Amazon Glacier is a storage solution for "cold
  * 
@@ -75,9 +74,7 @@ namespace Glacier {
  */
 
 /*!
- * @brief  Constructs a new PurchaseProvisionedCapacityRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 PurchaseProvisionedCapacityRequest::PurchaseProvisionedCapacityRequest(const PurchaseProvisionedCapacityRequest &other)
     : GlacierRequest(new PurchaseProvisionedCapacityRequestPrivate(*other.d_func(), this))
@@ -86,7 +83,7 @@ PurchaseProvisionedCapacityRequest::PurchaseProvisionedCapacityRequest(const Pur
 }
 
 /*!
- * @brief  Constructs a new PurchaseProvisionedCapacityRequest object.
+ * Constructs a PurchaseProvisionedCapacityRequest object.
  */
 PurchaseProvisionedCapacityRequest::PurchaseProvisionedCapacityRequest()
     : GlacierRequest(new PurchaseProvisionedCapacityRequestPrivate(GlacierRequest::PurchaseProvisionedCapacityAction, this))
@@ -104,14 +101,9 @@ bool PurchaseProvisionedCapacityRequest::isValid() const
 
 
 /*!
- * @brief  Construct an PurchaseProvisionedCapacityResponse object.
+ * Returns a PurchaseProvisionedCapacityResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An PurchaseProvisionedCapacityResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GlacierClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * PurchaseProvisionedCapacityRequest::response(QNetworkReply * const reply) const
 {
@@ -119,20 +111,17 @@ QtAws::Core::AwsAbstractResponse * PurchaseProvisionedCapacityRequest::response(
 }
 
 /*!
- * @internal
+ * \class QtAws::Glacier::PurchaseProvisionedCapacityRequestPrivate
+ * \brief The PurchaseProvisionedCapacityRequestPrivate class provides private implementation for PurchaseProvisionedCapacityRequest.
+ * \internal
  *
- * @class  PurchaseProvisionedCapacityRequestPrivate
- *
- * @brief  Private implementation for PurchaseProvisionedCapacityRequest.
+ * \inmodule QtAwsGlacier
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new PurchaseProvisionedCapacityRequestPrivate object.
- *
- * @param  action  Glacier action being performed.
- * @param  q       Pointer to this object's public PurchaseProvisionedCapacityRequest instance.
+ * Constructs a PurchaseProvisionedCapacityRequestPrivate object for Glacier \a action with,
+ * public implementation \a q.
  */
 PurchaseProvisionedCapacityRequestPrivate::PurchaseProvisionedCapacityRequestPrivate(
     const GlacierRequest::Action action, PurchaseProvisionedCapacityRequest * const q)
@@ -142,15 +131,10 @@ PurchaseProvisionedCapacityRequestPrivate::PurchaseProvisionedCapacityRequestPri
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PurchaseProvisionedCapacityRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the PurchaseProvisionedCapacityRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public PurchaseProvisionedCapacityRequest instance.
  */
 PurchaseProvisionedCapacityRequestPrivate::PurchaseProvisionedCapacityRequestPrivate(
     const PurchaseProvisionedCapacityRequestPrivate &other, PurchaseProvisionedCapacityRequest * const q)

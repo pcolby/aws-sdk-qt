@@ -27,10 +27,9 @@ namespace Greengrass {
 
 /*!
  * \class QtAws::Greengrass::DisassociateServiceRoleFromAccountRequest
- *
  * \brief The DisassociateServiceRoleFromAccountRequest class provides an interface for Greengrass DisassociateServiceRoleFromAccount requests.
  *
- * \ingroup Greengrass
+ * \inmodule QtAwsGreengrass
  *
  *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
  *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
@@ -40,9 +39,7 @@ namespace Greengrass {
  */
 
 /*!
- * @brief  Constructs a new DisassociateServiceRoleFromAccountRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DisassociateServiceRoleFromAccountRequest::DisassociateServiceRoleFromAccountRequest(const DisassociateServiceRoleFromAccountRequest &other)
     : GreengrassRequest(new DisassociateServiceRoleFromAccountRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ DisassociateServiceRoleFromAccountRequest::DisassociateServiceRoleFromAccountReq
 }
 
 /*!
- * @brief  Constructs a new DisassociateServiceRoleFromAccountRequest object.
+ * Constructs a DisassociateServiceRoleFromAccountRequest object.
  */
 DisassociateServiceRoleFromAccountRequest::DisassociateServiceRoleFromAccountRequest()
     : GreengrassRequest(new DisassociateServiceRoleFromAccountRequestPrivate(GreengrassRequest::DisassociateServiceRoleFromAccountAction, this))
@@ -69,14 +66,9 @@ bool DisassociateServiceRoleFromAccountRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DisassociateServiceRoleFromAccountResponse object.
+ * Returns a DisassociateServiceRoleFromAccountResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DisassociateServiceRoleFromAccountResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GreengrassClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DisassociateServiceRoleFromAccountRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * DisassociateServiceRoleFromAccountRequest::re
 }
 
 /*!
- * @internal
+ * \class QtAws::Greengrass::DisassociateServiceRoleFromAccountRequestPrivate
+ * \brief The DisassociateServiceRoleFromAccountRequestPrivate class provides private implementation for DisassociateServiceRoleFromAccountRequest.
+ * \internal
  *
- * @class  DisassociateServiceRoleFromAccountRequestPrivate
- *
- * @brief  Private implementation for DisassociateServiceRoleFromAccountRequest.
+ * \inmodule QtAwsGreengrass
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DisassociateServiceRoleFromAccountRequestPrivate object.
- *
- * @param  action  Greengrass action being performed.
- * @param  q       Pointer to this object's public DisassociateServiceRoleFromAccountRequest instance.
+ * Constructs a DisassociateServiceRoleFromAccountRequestPrivate object for Greengrass \a action with,
+ * public implementation \a q.
  */
 DisassociateServiceRoleFromAccountRequestPrivate::DisassociateServiceRoleFromAccountRequestPrivate(
     const GreengrassRequest::Action action, DisassociateServiceRoleFromAccountRequest * const q)
@@ -107,15 +96,10 @@ DisassociateServiceRoleFromAccountRequestPrivate::DisassociateServiceRoleFromAcc
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DisassociateServiceRoleFromAccountRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DisassociateServiceRoleFromAccountRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DisassociateServiceRoleFromAccountRequest instance.
  */
 DisassociateServiceRoleFromAccountRequestPrivate::DisassociateServiceRoleFromAccountRequestPrivate(
     const DisassociateServiceRoleFromAccountRequestPrivate &other, DisassociateServiceRoleFromAccountRequest * const q)

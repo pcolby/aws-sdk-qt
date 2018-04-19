@@ -27,10 +27,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::DeleteDeploymentRequest
- *
  * \brief The DeleteDeploymentRequest class provides an interface for APIGateway DeleteDeployment requests.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -42,9 +41,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new DeleteDeploymentRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteDeploymentRequest::DeleteDeploymentRequest(const DeleteDeploymentRequest &other)
     : APIGatewayRequest(new DeleteDeploymentRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ DeleteDeploymentRequest::DeleteDeploymentRequest(const DeleteDeploymentRequest &
 }
 
 /*!
- * @brief  Constructs a new DeleteDeploymentRequest object.
+ * Constructs a DeleteDeploymentRequest object.
  */
 DeleteDeploymentRequest::DeleteDeploymentRequest()
     : APIGatewayRequest(new DeleteDeploymentRequestPrivate(APIGatewayRequest::DeleteDeploymentAction, this))
@@ -71,14 +68,9 @@ bool DeleteDeploymentRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteDeploymentResponse object.
+ * Returns a DeleteDeploymentResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteDeploymentResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  APIGatewayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteDeploymentRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * DeleteDeploymentRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::APIGateway::DeleteDeploymentRequestPrivate
+ * \brief The DeleteDeploymentRequestPrivate class provides private implementation for DeleteDeploymentRequest.
+ * \internal
  *
- * @class  DeleteDeploymentRequestPrivate
- *
- * @brief  Private implementation for DeleteDeploymentRequest.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteDeploymentRequestPrivate object.
- *
- * @param  action  APIGateway action being performed.
- * @param  q       Pointer to this object's public DeleteDeploymentRequest instance.
+ * Constructs a DeleteDeploymentRequestPrivate object for APIGateway \a action with,
+ * public implementation \a q.
  */
 DeleteDeploymentRequestPrivate::DeleteDeploymentRequestPrivate(
     const APIGatewayRequest::Action action, DeleteDeploymentRequest * const q)
@@ -109,15 +98,10 @@ DeleteDeploymentRequestPrivate::DeleteDeploymentRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteDeploymentRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteDeploymentRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteDeploymentRequest instance.
  */
 DeleteDeploymentRequestPrivate::DeleteDeploymentRequestPrivate(
     const DeleteDeploymentRequestPrivate &other, DeleteDeploymentRequest * const q)

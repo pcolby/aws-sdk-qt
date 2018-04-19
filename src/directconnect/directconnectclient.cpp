@@ -114,6 +114,9 @@
 /*!
  * \namespace QtAws::DirectConnect
  * \brief The QtAws::DirectConnect contains stuff...
+ *
+ * \inmodule QtAwsDirectConnect
+ *
  * @todo Move this to a separate template file.
  */
 
@@ -171,7 +174,7 @@ DirectConnectClient::DirectConnectClient(
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * \a  AwsEndpoint::getEndpoint()
+ * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
 DirectConnectClient::DirectConnectClient(
     const QUrl &endpoint,

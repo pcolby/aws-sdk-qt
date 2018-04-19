@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::ModifySnapshotAttributeRequest
- *
  * \brief The ModifySnapshotAttributeRequest class provides an interface for EC2 ModifySnapshotAttribute requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new ModifySnapshotAttributeRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ModifySnapshotAttributeRequest::ModifySnapshotAttributeRequest(const ModifySnapshotAttributeRequest &other)
     : EC2Request(new ModifySnapshotAttributeRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ ModifySnapshotAttributeRequest::ModifySnapshotAttributeRequest(const ModifySnaps
 }
 
 /*!
- * @brief  Constructs a new ModifySnapshotAttributeRequest object.
+ * Constructs a ModifySnapshotAttributeRequest object.
  */
 ModifySnapshotAttributeRequest::ModifySnapshotAttributeRequest()
     : EC2Request(new ModifySnapshotAttributeRequestPrivate(EC2Request::ModifySnapshotAttributeAction, this))
@@ -70,14 +67,9 @@ bool ModifySnapshotAttributeRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ModifySnapshotAttributeResponse object.
+ * Returns a ModifySnapshotAttributeResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ModifySnapshotAttributeResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ModifySnapshotAttributeRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * ModifySnapshotAttributeRequest::response(QNet
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::ModifySnapshotAttributeRequestPrivate
+ * \brief The ModifySnapshotAttributeRequestPrivate class provides private implementation for ModifySnapshotAttributeRequest.
+ * \internal
  *
- * @class  ModifySnapshotAttributeRequestPrivate
- *
- * @brief  Private implementation for ModifySnapshotAttributeRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ModifySnapshotAttributeRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public ModifySnapshotAttributeRequest instance.
+ * Constructs a ModifySnapshotAttributeRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 ModifySnapshotAttributeRequestPrivate::ModifySnapshotAttributeRequestPrivate(
     const EC2Request::Action action, ModifySnapshotAttributeRequest * const q)
@@ -108,15 +97,10 @@ ModifySnapshotAttributeRequestPrivate::ModifySnapshotAttributeRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ModifySnapshotAttributeRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ModifySnapshotAttributeRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ModifySnapshotAttributeRequest instance.
  */
 ModifySnapshotAttributeRequestPrivate::ModifySnapshotAttributeRequestPrivate(
     const ModifySnapshotAttributeRequestPrivate &other, ModifySnapshotAttributeRequest * const q)

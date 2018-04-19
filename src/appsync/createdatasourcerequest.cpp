@@ -27,10 +27,9 @@ namespace AppSync {
 
 /*!
  * \class QtAws::AppSync::CreateDataSourceRequest
- *
  * \brief The CreateDataSourceRequest class provides an interface for AppSync CreateDataSource requests.
  *
- * \ingroup AppSync
+ * \inmodule QtAwsAppSync
  *
  *  AWS AppSync provides API actions for creating and interacting with data sources using GraphQL from your
  *
@@ -38,9 +37,7 @@ namespace AppSync {
  */
 
 /*!
- * @brief  Constructs a new CreateDataSourceRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateDataSourceRequest::CreateDataSourceRequest(const CreateDataSourceRequest &other)
     : AppSyncRequest(new CreateDataSourceRequestPrivate(*other.d_func(), this))
@@ -49,7 +46,7 @@ CreateDataSourceRequest::CreateDataSourceRequest(const CreateDataSourceRequest &
 }
 
 /*!
- * @brief  Constructs a new CreateDataSourceRequest object.
+ * Constructs a CreateDataSourceRequest object.
  */
 CreateDataSourceRequest::CreateDataSourceRequest()
     : AppSyncRequest(new CreateDataSourceRequestPrivate(AppSyncRequest::CreateDataSourceAction, this))
@@ -67,14 +64,9 @@ bool CreateDataSourceRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateDataSourceResponse object.
+ * Returns a CreateDataSourceResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateDataSourceResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AppSyncClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateDataSourceRequest::response(QNetworkReply * const reply) const
 {
@@ -82,20 +74,17 @@ QtAws::Core::AwsAbstractResponse * CreateDataSourceRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::AppSync::CreateDataSourceRequestPrivate
+ * \brief The CreateDataSourceRequestPrivate class provides private implementation for CreateDataSourceRequest.
+ * \internal
  *
- * @class  CreateDataSourceRequestPrivate
- *
- * @brief  Private implementation for CreateDataSourceRequest.
+ * \inmodule QtAwsAppSync
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateDataSourceRequestPrivate object.
- *
- * @param  action  AppSync action being performed.
- * @param  q       Pointer to this object's public CreateDataSourceRequest instance.
+ * Constructs a CreateDataSourceRequestPrivate object for AppSync \a action with,
+ * public implementation \a q.
  */
 CreateDataSourceRequestPrivate::CreateDataSourceRequestPrivate(
     const AppSyncRequest::Action action, CreateDataSourceRequest * const q)
@@ -105,15 +94,10 @@ CreateDataSourceRequestPrivate::CreateDataSourceRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateDataSourceRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateDataSourceRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateDataSourceRequest instance.
  */
 CreateDataSourceRequestPrivate::CreateDataSourceRequestPrivate(
     const CreateDataSourceRequestPrivate &other, CreateDataSourceRequest * const q)

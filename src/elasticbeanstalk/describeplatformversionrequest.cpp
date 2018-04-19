@@ -27,10 +27,9 @@ namespace ElasticBeanstalk {
 
 /*!
  * \class QtAws::ElasticBeanstalk::DescribePlatformVersionRequest
- *
  * \brief The DescribePlatformVersionRequest class provides an interface for ElasticBeanstalk DescribePlatformVersion requests.
  *
- * \ingroup ElasticBeanstalk
+ * \inmodule QtAwsElasticBeanstalk
  *
  *  <fullname>AWS Elastic Beanstalk</fullname>
  * 
@@ -59,9 +58,7 @@ namespace ElasticBeanstalk {
  */
 
 /*!
- * @brief  Constructs a new DescribePlatformVersionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribePlatformVersionRequest::DescribePlatformVersionRequest(const DescribePlatformVersionRequest &other)
     : ElasticBeanstalkRequest(new DescribePlatformVersionRequestPrivate(*other.d_func(), this))
@@ -70,7 +67,7 @@ DescribePlatformVersionRequest::DescribePlatformVersionRequest(const DescribePla
 }
 
 /*!
- * @brief  Constructs a new DescribePlatformVersionRequest object.
+ * Constructs a DescribePlatformVersionRequest object.
  */
 DescribePlatformVersionRequest::DescribePlatformVersionRequest()
     : ElasticBeanstalkRequest(new DescribePlatformVersionRequestPrivate(ElasticBeanstalkRequest::DescribePlatformVersionAction, this))
@@ -88,14 +85,9 @@ bool DescribePlatformVersionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribePlatformVersionResponse object.
+ * Returns a DescribePlatformVersionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribePlatformVersionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ElasticBeanstalkClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribePlatformVersionRequest::response(QNetworkReply * const reply) const
 {
@@ -103,20 +95,17 @@ QtAws::Core::AwsAbstractResponse * DescribePlatformVersionRequest::response(QNet
 }
 
 /*!
- * @internal
+ * \class QtAws::ElasticBeanstalk::DescribePlatformVersionRequestPrivate
+ * \brief The DescribePlatformVersionRequestPrivate class provides private implementation for DescribePlatformVersionRequest.
+ * \internal
  *
- * @class  DescribePlatformVersionRequestPrivate
- *
- * @brief  Private implementation for DescribePlatformVersionRequest.
+ * \inmodule QtAwsElasticBeanstalk
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribePlatformVersionRequestPrivate object.
- *
- * @param  action  ElasticBeanstalk action being performed.
- * @param  q       Pointer to this object's public DescribePlatformVersionRequest instance.
+ * Constructs a DescribePlatformVersionRequestPrivate object for ElasticBeanstalk \a action with,
+ * public implementation \a q.
  */
 DescribePlatformVersionRequestPrivate::DescribePlatformVersionRequestPrivate(
     const ElasticBeanstalkRequest::Action action, DescribePlatformVersionRequest * const q)
@@ -126,15 +115,10 @@ DescribePlatformVersionRequestPrivate::DescribePlatformVersionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribePlatformVersionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribePlatformVersionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribePlatformVersionRequest instance.
  */
 DescribePlatformVersionRequestPrivate::DescribePlatformVersionRequestPrivate(
     const DescribePlatformVersionRequestPrivate &other, DescribePlatformVersionRequest * const q)

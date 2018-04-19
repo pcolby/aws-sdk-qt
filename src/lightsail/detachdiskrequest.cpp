@@ -27,10 +27,9 @@ namespace Lightsail {
 
 /*!
  * \class QtAws::Lightsail::DetachDiskRequest
- *
  * \brief The DetachDiskRequest class provides an interface for Lightsail DetachDisk requests.
  *
- * \ingroup Lightsail
+ * \inmodule QtAwsLightsail
  *
  *  Amazon Lightsail is the easiest way to get started with AWS for developers who just need virtual private servers.
  *  Lightsail includes everything you need to launch your project quickly - a virtual machine, SSD-based storage, data
@@ -53,9 +52,7 @@ namespace Lightsail {
  */
 
 /*!
- * @brief  Constructs a new DetachDiskRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DetachDiskRequest::DetachDiskRequest(const DetachDiskRequest &other)
     : LightsailRequest(new DetachDiskRequestPrivate(*other.d_func(), this))
@@ -64,7 +61,7 @@ DetachDiskRequest::DetachDiskRequest(const DetachDiskRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DetachDiskRequest object.
+ * Constructs a DetachDiskRequest object.
  */
 DetachDiskRequest::DetachDiskRequest()
     : LightsailRequest(new DetachDiskRequestPrivate(LightsailRequest::DetachDiskAction, this))
@@ -82,14 +79,9 @@ bool DetachDiskRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DetachDiskResponse object.
+ * Returns a DetachDiskResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DetachDiskResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  LightsailClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DetachDiskRequest::response(QNetworkReply * const reply) const
 {
@@ -97,20 +89,17 @@ QtAws::Core::AwsAbstractResponse * DetachDiskRequest::response(QNetworkReply * c
 }
 
 /*!
- * @internal
+ * \class QtAws::Lightsail::DetachDiskRequestPrivate
+ * \brief The DetachDiskRequestPrivate class provides private implementation for DetachDiskRequest.
+ * \internal
  *
- * @class  DetachDiskRequestPrivate
- *
- * @brief  Private implementation for DetachDiskRequest.
+ * \inmodule QtAwsLightsail
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DetachDiskRequestPrivate object.
- *
- * @param  action  Lightsail action being performed.
- * @param  q       Pointer to this object's public DetachDiskRequest instance.
+ * Constructs a DetachDiskRequestPrivate object for Lightsail \a action with,
+ * public implementation \a q.
  */
 DetachDiskRequestPrivate::DetachDiskRequestPrivate(
     const LightsailRequest::Action action, DetachDiskRequest * const q)
@@ -120,15 +109,10 @@ DetachDiskRequestPrivate::DetachDiskRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DetachDiskRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DetachDiskRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DetachDiskRequest instance.
  */
 DetachDiskRequestPrivate::DetachDiskRequestPrivate(
     const DetachDiskRequestPrivate &other, DetachDiskRequest * const q)

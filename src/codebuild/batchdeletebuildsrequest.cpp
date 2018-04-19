@@ -27,10 +27,9 @@ namespace CodeBuild {
 
 /*!
  * \class QtAws::CodeBuild::BatchDeleteBuildsRequest
- *
  * \brief The BatchDeleteBuildsRequest class provides an interface for CodeBuild BatchDeleteBuilds requests.
  *
- * \ingroup CodeBuild
+ * \inmodule QtAwsCodeBuild
  *
  *  <fullname>AWS CodeBuild</fullname>
  * 
@@ -117,9 +116,7 @@ namespace CodeBuild {
  */
 
 /*!
- * @brief  Constructs a new BatchDeleteBuildsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 BatchDeleteBuildsRequest::BatchDeleteBuildsRequest(const BatchDeleteBuildsRequest &other)
     : CodeBuildRequest(new BatchDeleteBuildsRequestPrivate(*other.d_func(), this))
@@ -128,7 +125,7 @@ BatchDeleteBuildsRequest::BatchDeleteBuildsRequest(const BatchDeleteBuildsReques
 }
 
 /*!
- * @brief  Constructs a new BatchDeleteBuildsRequest object.
+ * Constructs a BatchDeleteBuildsRequest object.
  */
 BatchDeleteBuildsRequest::BatchDeleteBuildsRequest()
     : CodeBuildRequest(new BatchDeleteBuildsRequestPrivate(CodeBuildRequest::BatchDeleteBuildsAction, this))
@@ -146,14 +143,9 @@ bool BatchDeleteBuildsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an BatchDeleteBuildsResponse object.
+ * Returns a BatchDeleteBuildsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An BatchDeleteBuildsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CodeBuildClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * BatchDeleteBuildsRequest::response(QNetworkReply * const reply) const
 {
@@ -161,20 +153,17 @@ QtAws::Core::AwsAbstractResponse * BatchDeleteBuildsRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::CodeBuild::BatchDeleteBuildsRequestPrivate
+ * \brief The BatchDeleteBuildsRequestPrivate class provides private implementation for BatchDeleteBuildsRequest.
+ * \internal
  *
- * @class  BatchDeleteBuildsRequestPrivate
- *
- * @brief  Private implementation for BatchDeleteBuildsRequest.
+ * \inmodule QtAwsCodeBuild
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new BatchDeleteBuildsRequestPrivate object.
- *
- * @param  action  CodeBuild action being performed.
- * @param  q       Pointer to this object's public BatchDeleteBuildsRequest instance.
+ * Constructs a BatchDeleteBuildsRequestPrivate object for CodeBuild \a action with,
+ * public implementation \a q.
  */
 BatchDeleteBuildsRequestPrivate::BatchDeleteBuildsRequestPrivate(
     const CodeBuildRequest::Action action, BatchDeleteBuildsRequest * const q)
@@ -184,15 +173,10 @@ BatchDeleteBuildsRequestPrivate::BatchDeleteBuildsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new BatchDeleteBuildsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the BatchDeleteBuildsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public BatchDeleteBuildsRequest instance.
  */
 BatchDeleteBuildsRequestPrivate::BatchDeleteBuildsRequestPrivate(
     const BatchDeleteBuildsRequestPrivate &other, BatchDeleteBuildsRequest * const q)

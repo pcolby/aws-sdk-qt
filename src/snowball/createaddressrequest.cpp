@@ -27,10 +27,9 @@ namespace Snowball {
 
 /*!
  * \class QtAws::Snowball::CreateAddressRequest
- *
  * \brief The CreateAddressRequest class provides an interface for Snowball CreateAddress requests.
  *
- * \ingroup Snowball
+ * \inmodule QtAwsSnowball
  *
  *  AWS Snowball is a petabyte-scale data transport solution that uses secure appliances to transfer large amounts of data
  *  between your on-premises data centers and Amazon Simple Storage Service (Amazon S3). The Snowball commands described
@@ -43,9 +42,7 @@ namespace Snowball {
  */
 
 /*!
- * @brief  Constructs a new CreateAddressRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateAddressRequest::CreateAddressRequest(const CreateAddressRequest &other)
     : SnowballRequest(new CreateAddressRequestPrivate(*other.d_func(), this))
@@ -54,7 +51,7 @@ CreateAddressRequest::CreateAddressRequest(const CreateAddressRequest &other)
 }
 
 /*!
- * @brief  Constructs a new CreateAddressRequest object.
+ * Constructs a CreateAddressRequest object.
  */
 CreateAddressRequest::CreateAddressRequest()
     : SnowballRequest(new CreateAddressRequestPrivate(SnowballRequest::CreateAddressAction, this))
@@ -72,14 +69,9 @@ bool CreateAddressRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateAddressResponse object.
+ * Returns a CreateAddressResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateAddressResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SnowballClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateAddressRequest::response(QNetworkReply * const reply) const
 {
@@ -87,20 +79,17 @@ QtAws::Core::AwsAbstractResponse * CreateAddressRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::Snowball::CreateAddressRequestPrivate
+ * \brief The CreateAddressRequestPrivate class provides private implementation for CreateAddressRequest.
+ * \internal
  *
- * @class  CreateAddressRequestPrivate
- *
- * @brief  Private implementation for CreateAddressRequest.
+ * \inmodule QtAwsSnowball
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateAddressRequestPrivate object.
- *
- * @param  action  Snowball action being performed.
- * @param  q       Pointer to this object's public CreateAddressRequest instance.
+ * Constructs a CreateAddressRequestPrivate object for Snowball \a action with,
+ * public implementation \a q.
  */
 CreateAddressRequestPrivate::CreateAddressRequestPrivate(
     const SnowballRequest::Action action, CreateAddressRequest * const q)
@@ -110,15 +99,10 @@ CreateAddressRequestPrivate::CreateAddressRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateAddressRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateAddressRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateAddressRequest instance.
  */
 CreateAddressRequestPrivate::CreateAddressRequestPrivate(
     const CreateAddressRequestPrivate &other, CreateAddressRequest * const q)

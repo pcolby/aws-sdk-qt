@@ -27,10 +27,9 @@ namespace Redshift {
 
 /*!
  * \class QtAws::Redshift::ModifyClusterRequest
- *
  * \brief The ModifyClusterRequest class provides an interface for Redshift ModifyCluster requests.
  *
- * \ingroup Redshift
+ * \inmodule QtAwsRedshift
  *
  *  <fullname>Amazon Redshift</fullname>
  * 
@@ -67,9 +66,7 @@ namespace Redshift {
  */
 
 /*!
- * @brief  Constructs a new ModifyClusterRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ModifyClusterRequest::ModifyClusterRequest(const ModifyClusterRequest &other)
     : RedshiftRequest(new ModifyClusterRequestPrivate(*other.d_func(), this))
@@ -78,7 +75,7 @@ ModifyClusterRequest::ModifyClusterRequest(const ModifyClusterRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ModifyClusterRequest object.
+ * Constructs a ModifyClusterRequest object.
  */
 ModifyClusterRequest::ModifyClusterRequest()
     : RedshiftRequest(new ModifyClusterRequestPrivate(RedshiftRequest::ModifyClusterAction, this))
@@ -96,14 +93,9 @@ bool ModifyClusterRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ModifyClusterResponse object.
+ * Returns a ModifyClusterResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ModifyClusterResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RedshiftClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ModifyClusterRequest::response(QNetworkReply * const reply) const
 {
@@ -111,20 +103,17 @@ QtAws::Core::AwsAbstractResponse * ModifyClusterRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::Redshift::ModifyClusterRequestPrivate
+ * \brief The ModifyClusterRequestPrivate class provides private implementation for ModifyClusterRequest.
+ * \internal
  *
- * @class  ModifyClusterRequestPrivate
- *
- * @brief  Private implementation for ModifyClusterRequest.
+ * \inmodule QtAwsRedshift
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ModifyClusterRequestPrivate object.
- *
- * @param  action  Redshift action being performed.
- * @param  q       Pointer to this object's public ModifyClusterRequest instance.
+ * Constructs a ModifyClusterRequestPrivate object for Redshift \a action with,
+ * public implementation \a q.
  */
 ModifyClusterRequestPrivate::ModifyClusterRequestPrivate(
     const RedshiftRequest::Action action, ModifyClusterRequest * const q)
@@ -134,15 +123,10 @@ ModifyClusterRequestPrivate::ModifyClusterRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ModifyClusterRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ModifyClusterRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ModifyClusterRequest instance.
  */
 ModifyClusterRequestPrivate::ModifyClusterRequestPrivate(
     const ModifyClusterRequestPrivate &other, ModifyClusterRequest * const q)

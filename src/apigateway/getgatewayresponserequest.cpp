@@ -27,10 +27,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::GetGatewayResponseRequest
- *
  * \brief The GetGatewayResponseRequest class provides an interface for APIGateway GetGatewayResponse requests.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -42,9 +41,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new GetGatewayResponseRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetGatewayResponseRequest::GetGatewayResponseRequest(const GetGatewayResponseRequest &other)
     : APIGatewayRequest(new GetGatewayResponseRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ GetGatewayResponseRequest::GetGatewayResponseRequest(const GetGatewayResponseReq
 }
 
 /*!
- * @brief  Constructs a new GetGatewayResponseRequest object.
+ * Constructs a GetGatewayResponseRequest object.
  */
 GetGatewayResponseRequest::GetGatewayResponseRequest()
     : APIGatewayRequest(new GetGatewayResponseRequestPrivate(APIGatewayRequest::GetGatewayResponseAction, this))
@@ -71,14 +68,9 @@ bool GetGatewayResponseRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetGatewayResponseResponse object.
+ * Returns a GetGatewayResponseResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetGatewayResponseResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  APIGatewayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetGatewayResponseRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * GetGatewayResponseRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::APIGateway::GetGatewayResponseRequestPrivate
+ * \brief The GetGatewayResponseRequestPrivate class provides private implementation for GetGatewayResponseRequest.
+ * \internal
  *
- * @class  GetGatewayResponseRequestPrivate
- *
- * @brief  Private implementation for GetGatewayResponseRequest.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetGatewayResponseRequestPrivate object.
- *
- * @param  action  APIGateway action being performed.
- * @param  q       Pointer to this object's public GetGatewayResponseRequest instance.
+ * Constructs a GetGatewayResponseRequestPrivate object for APIGateway \a action with,
+ * public implementation \a q.
  */
 GetGatewayResponseRequestPrivate::GetGatewayResponseRequestPrivate(
     const APIGatewayRequest::Action action, GetGatewayResponseRequest * const q)
@@ -109,15 +98,10 @@ GetGatewayResponseRequestPrivate::GetGatewayResponseRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetGatewayResponseRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetGatewayResponseRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetGatewayResponseRequest instance.
  */
 GetGatewayResponseRequestPrivate::GetGatewayResponseRequestPrivate(
     const GetGatewayResponseRequestPrivate &other, GetGatewayResponseRequest * const q)

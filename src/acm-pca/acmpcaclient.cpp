@@ -60,6 +60,9 @@
 /*!
  * \namespace QtAws::ACMPCA
  * \brief The QtAws::ACMPCA contains stuff...
+ *
+ * \inmodule QtAwsACMPCA
+ *
  * @todo Move this to a separate template file.
  */
 
@@ -139,7 +142,7 @@ AcmpcaClient::AcmpcaClient(
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * \a  AwsEndpoint::getEndpoint()
+ * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
 AcmpcaClient::AcmpcaClient(
     const QUrl &endpoint,

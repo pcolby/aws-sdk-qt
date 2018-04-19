@@ -27,10 +27,9 @@ namespace ServiceCatalog {
 
 /*!
  * \class QtAws::ServiceCatalog::ListTagOptionsRequest
- *
  * \brief The ListTagOptionsRequest class provides an interface for ServiceCatalog ListTagOptions requests.
  *
- * \ingroup ServiceCatalog
+ * \inmodule QtAwsServiceCatalog
  *
  *  <fullname>AWS Service Catalog</fullname>
  * 
@@ -43,9 +42,7 @@ namespace ServiceCatalog {
  */
 
 /*!
- * @brief  Constructs a new ListTagOptionsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListTagOptionsRequest::ListTagOptionsRequest(const ListTagOptionsRequest &other)
     : ServiceCatalogRequest(new ListTagOptionsRequestPrivate(*other.d_func(), this))
@@ -54,7 +51,7 @@ ListTagOptionsRequest::ListTagOptionsRequest(const ListTagOptionsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ListTagOptionsRequest object.
+ * Constructs a ListTagOptionsRequest object.
  */
 ListTagOptionsRequest::ListTagOptionsRequest()
     : ServiceCatalogRequest(new ListTagOptionsRequestPrivate(ServiceCatalogRequest::ListTagOptionsAction, this))
@@ -72,14 +69,9 @@ bool ListTagOptionsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListTagOptionsResponse object.
+ * Returns a ListTagOptionsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListTagOptionsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ServiceCatalogClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListTagOptionsRequest::response(QNetworkReply * const reply) const
 {
@@ -87,20 +79,17 @@ QtAws::Core::AwsAbstractResponse * ListTagOptionsRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::ServiceCatalog::ListTagOptionsRequestPrivate
+ * \brief The ListTagOptionsRequestPrivate class provides private implementation for ListTagOptionsRequest.
+ * \internal
  *
- * @class  ListTagOptionsRequestPrivate
- *
- * @brief  Private implementation for ListTagOptionsRequest.
+ * \inmodule QtAwsServiceCatalog
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListTagOptionsRequestPrivate object.
- *
- * @param  action  ServiceCatalog action being performed.
- * @param  q       Pointer to this object's public ListTagOptionsRequest instance.
+ * Constructs a ListTagOptionsRequestPrivate object for ServiceCatalog \a action with,
+ * public implementation \a q.
  */
 ListTagOptionsRequestPrivate::ListTagOptionsRequestPrivate(
     const ServiceCatalogRequest::Action action, ListTagOptionsRequest * const q)
@@ -110,15 +99,10 @@ ListTagOptionsRequestPrivate::ListTagOptionsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListTagOptionsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListTagOptionsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListTagOptionsRequest instance.
  */
 ListTagOptionsRequestPrivate::ListTagOptionsRequestPrivate(
     const ListTagOptionsRequestPrivate &other, ListTagOptionsRequest * const q)

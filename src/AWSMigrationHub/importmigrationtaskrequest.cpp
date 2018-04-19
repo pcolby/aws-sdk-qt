@@ -27,10 +27,9 @@ namespace MigrationHub {
 
 /*!
  * \class QtAws::MigrationHub::ImportMigrationTaskRequest
- *
  * \brief The ImportMigrationTaskRequest class provides an interface for MigrationHub ImportMigrationTask requests.
  *
- * \ingroup MigrationHub
+ * \inmodule QtAwsMigrationHub
  *
  *  The AWS Migration Hub API methods help to obtain server and application migration status and integrate your
  *  resource-specific migration tool by providing a programmatic interface to Migration Hub.
@@ -39,9 +38,7 @@ namespace MigrationHub {
  */
 
 /*!
- * @brief  Constructs a new ImportMigrationTaskRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ImportMigrationTaskRequest::ImportMigrationTaskRequest(const ImportMigrationTaskRequest &other)
     : MigrationHubRequest(new ImportMigrationTaskRequestPrivate(*other.d_func(), this))
@@ -50,7 +47,7 @@ ImportMigrationTaskRequest::ImportMigrationTaskRequest(const ImportMigrationTask
 }
 
 /*!
- * @brief  Constructs a new ImportMigrationTaskRequest object.
+ * Constructs a ImportMigrationTaskRequest object.
  */
 ImportMigrationTaskRequest::ImportMigrationTaskRequest()
     : MigrationHubRequest(new ImportMigrationTaskRequestPrivate(MigrationHubRequest::ImportMigrationTaskAction, this))
@@ -68,14 +65,9 @@ bool ImportMigrationTaskRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ImportMigrationTaskResponse object.
+ * Returns a ImportMigrationTaskResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ImportMigrationTaskResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MigrationHubClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ImportMigrationTaskRequest::response(QNetworkReply * const reply) const
 {
@@ -83,20 +75,17 @@ QtAws::Core::AwsAbstractResponse * ImportMigrationTaskRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::MigrationHub::ImportMigrationTaskRequestPrivate
+ * \brief The ImportMigrationTaskRequestPrivate class provides private implementation for ImportMigrationTaskRequest.
+ * \internal
  *
- * @class  ImportMigrationTaskRequestPrivate
- *
- * @brief  Private implementation for ImportMigrationTaskRequest.
+ * \inmodule QtAwsMigrationHub
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ImportMigrationTaskRequestPrivate object.
- *
- * @param  action  MigrationHub action being performed.
- * @param  q       Pointer to this object's public ImportMigrationTaskRequest instance.
+ * Constructs a ImportMigrationTaskRequestPrivate object for MigrationHub \a action with,
+ * public implementation \a q.
  */
 ImportMigrationTaskRequestPrivate::ImportMigrationTaskRequestPrivate(
     const MigrationHubRequest::Action action, ImportMigrationTaskRequest * const q)
@@ -106,15 +95,10 @@ ImportMigrationTaskRequestPrivate::ImportMigrationTaskRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ImportMigrationTaskRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ImportMigrationTaskRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ImportMigrationTaskRequest instance.
  */
 ImportMigrationTaskRequestPrivate::ImportMigrationTaskRequestPrivate(
     const ImportMigrationTaskRequestPrivate &other, ImportMigrationTaskRequest * const q)

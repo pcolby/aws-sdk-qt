@@ -27,10 +27,9 @@ namespace Glacier {
 
 /*!
  * \class QtAws::Glacier::GetVaultLockRequest
- *
  * \brief The GetVaultLockRequest class provides an interface for Glacier GetVaultLock requests.
  *
- * \ingroup Glacier
+ * \inmodule QtAwsGlacier
  *
  *  Amazon Glacier is a storage solution for "cold
  * 
@@ -75,9 +74,7 @@ namespace Glacier {
  */
 
 /*!
- * @brief  Constructs a new GetVaultLockRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetVaultLockRequest::GetVaultLockRequest(const GetVaultLockRequest &other)
     : GlacierRequest(new GetVaultLockRequestPrivate(*other.d_func(), this))
@@ -86,7 +83,7 @@ GetVaultLockRequest::GetVaultLockRequest(const GetVaultLockRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetVaultLockRequest object.
+ * Constructs a GetVaultLockRequest object.
  */
 GetVaultLockRequest::GetVaultLockRequest()
     : GlacierRequest(new GetVaultLockRequestPrivate(GlacierRequest::GetVaultLockAction, this))
@@ -104,14 +101,9 @@ bool GetVaultLockRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetVaultLockResponse object.
+ * Returns a GetVaultLockResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetVaultLockResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GlacierClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetVaultLockRequest::response(QNetworkReply * const reply) const
 {
@@ -119,20 +111,17 @@ QtAws::Core::AwsAbstractResponse * GetVaultLockRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::Glacier::GetVaultLockRequestPrivate
+ * \brief The GetVaultLockRequestPrivate class provides private implementation for GetVaultLockRequest.
+ * \internal
  *
- * @class  GetVaultLockRequestPrivate
- *
- * @brief  Private implementation for GetVaultLockRequest.
+ * \inmodule QtAwsGlacier
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetVaultLockRequestPrivate object.
- *
- * @param  action  Glacier action being performed.
- * @param  q       Pointer to this object's public GetVaultLockRequest instance.
+ * Constructs a GetVaultLockRequestPrivate object for Glacier \a action with,
+ * public implementation \a q.
  */
 GetVaultLockRequestPrivate::GetVaultLockRequestPrivate(
     const GlacierRequest::Action action, GetVaultLockRequest * const q)
@@ -142,15 +131,10 @@ GetVaultLockRequestPrivate::GetVaultLockRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetVaultLockRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetVaultLockRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetVaultLockRequest instance.
  */
 GetVaultLockRequestPrivate::GetVaultLockRequestPrivate(
     const GetVaultLockRequestPrivate &other, GetVaultLockRequest * const q)

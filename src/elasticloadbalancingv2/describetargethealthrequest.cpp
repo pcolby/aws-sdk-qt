@@ -27,10 +27,9 @@ namespace ElasticLoadBalancingv2 {
 
 /*!
  * \class QtAws::ElasticLoadBalancingv2::DescribeTargetHealthRequest
- *
  * \brief The DescribeTargetHealthRequest class provides an interface for ElasticLoadBalancingv2 DescribeTargetHealth requests.
  *
- * \ingroup ElasticLoadBalancingv2
+ * \inmodule QtAwsElasticLoadBalancingv2
  *
  *  <fullname>Elastic Load Balancing</fullname>
  * 
@@ -105,9 +104,7 @@ namespace ElasticLoadBalancingv2 {
  */
 
 /*!
- * @brief  Constructs a new DescribeTargetHealthRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeTargetHealthRequest::DescribeTargetHealthRequest(const DescribeTargetHealthRequest &other)
     : ElasticLoadBalancingv2Request(new DescribeTargetHealthRequestPrivate(*other.d_func(), this))
@@ -116,7 +113,7 @@ DescribeTargetHealthRequest::DescribeTargetHealthRequest(const DescribeTargetHea
 }
 
 /*!
- * @brief  Constructs a new DescribeTargetHealthRequest object.
+ * Constructs a DescribeTargetHealthRequest object.
  */
 DescribeTargetHealthRequest::DescribeTargetHealthRequest()
     : ElasticLoadBalancingv2Request(new DescribeTargetHealthRequestPrivate(ElasticLoadBalancingv2Request::DescribeTargetHealthAction, this))
@@ -134,14 +131,9 @@ bool DescribeTargetHealthRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeTargetHealthResponse object.
+ * Returns a DescribeTargetHealthResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeTargetHealthResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ElasticLoadBalancingv2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeTargetHealthRequest::response(QNetworkReply * const reply) const
 {
@@ -149,20 +141,17 @@ QtAws::Core::AwsAbstractResponse * DescribeTargetHealthRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::ElasticLoadBalancingv2::DescribeTargetHealthRequestPrivate
+ * \brief The DescribeTargetHealthRequestPrivate class provides private implementation for DescribeTargetHealthRequest.
+ * \internal
  *
- * @class  DescribeTargetHealthRequestPrivate
- *
- * @brief  Private implementation for DescribeTargetHealthRequest.
+ * \inmodule QtAwsElasticLoadBalancingv2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeTargetHealthRequestPrivate object.
- *
- * @param  action  ElasticLoadBalancingv2 action being performed.
- * @param  q       Pointer to this object's public DescribeTargetHealthRequest instance.
+ * Constructs a DescribeTargetHealthRequestPrivate object for ElasticLoadBalancingv2 \a action with,
+ * public implementation \a q.
  */
 DescribeTargetHealthRequestPrivate::DescribeTargetHealthRequestPrivate(
     const ElasticLoadBalancingv2Request::Action action, DescribeTargetHealthRequest * const q)
@@ -172,15 +161,10 @@ DescribeTargetHealthRequestPrivate::DescribeTargetHealthRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeTargetHealthRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeTargetHealthRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeTargetHealthRequest instance.
  */
 DescribeTargetHealthRequestPrivate::DescribeTargetHealthRequestPrivate(
     const DescribeTargetHealthRequestPrivate &other, DescribeTargetHealthRequest * const q)

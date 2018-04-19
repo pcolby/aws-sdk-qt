@@ -27,19 +27,16 @@ namespace S3 {
 
 /*!
  * \class QtAws::S3::GetBucketTaggingRequest
- *
  * \brief The GetBucketTaggingRequest class provides an interface for S3 GetBucketTagging requests.
  *
- * \ingroup S3
+ * \inmodule QtAwsS3
  *
  *
  * \sa S3Client::getBucketTagging
  */
 
 /*!
- * @brief  Constructs a new GetBucketTaggingRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetBucketTaggingRequest::GetBucketTaggingRequest(const GetBucketTaggingRequest &other)
     : S3Request(new GetBucketTaggingRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ GetBucketTaggingRequest::GetBucketTaggingRequest(const GetBucketTaggingRequest &
 }
 
 /*!
- * @brief  Constructs a new GetBucketTaggingRequest object.
+ * Constructs a GetBucketTaggingRequest object.
  */
 GetBucketTaggingRequest::GetBucketTaggingRequest()
     : S3Request(new GetBucketTaggingRequestPrivate(S3Request::GetBucketTaggingAction, this))
@@ -66,14 +63,9 @@ bool GetBucketTaggingRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetBucketTaggingResponse object.
+ * Returns a GetBucketTaggingResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetBucketTaggingResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  S3Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetBucketTaggingRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * GetBucketTaggingRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::S3::GetBucketTaggingRequestPrivate
+ * \brief The GetBucketTaggingRequestPrivate class provides private implementation for GetBucketTaggingRequest.
+ * \internal
  *
- * @class  GetBucketTaggingRequestPrivate
- *
- * @brief  Private implementation for GetBucketTaggingRequest.
+ * \inmodule QtAwsS3
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetBucketTaggingRequestPrivate object.
- *
- * @param  action  S3 action being performed.
- * @param  q       Pointer to this object's public GetBucketTaggingRequest instance.
+ * Constructs a GetBucketTaggingRequestPrivate object for S3 \a action with,
+ * public implementation \a q.
  */
 GetBucketTaggingRequestPrivate::GetBucketTaggingRequestPrivate(
     const S3Request::Action action, GetBucketTaggingRequest * const q)
@@ -104,15 +93,10 @@ GetBucketTaggingRequestPrivate::GetBucketTaggingRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetBucketTaggingRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetBucketTaggingRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetBucketTaggingRequest instance.
  */
 GetBucketTaggingRequestPrivate::GetBucketTaggingRequestPrivate(
     const GetBucketTaggingRequestPrivate &other, GetBucketTaggingRequest * const q)

@@ -27,10 +27,9 @@ namespace DirectConnect {
 
 /*!
  * \class QtAws::DirectConnect::CreatePrivateVirtualInterfaceRequest
- *
  * \brief The CreatePrivateVirtualInterfaceRequest class provides an interface for DirectConnect CreatePrivateVirtualInterface requests.
  *
- * \ingroup DirectConnect
+ * \inmodule QtAwsDirectConnect
  *
  *  AWS Direct Connect links your internal network to an AWS Direct Connect location over a standard 1 gigabit or 10 gigabit
  *  Ethernet fiber-optic cable. One end of the cable is connected to your router, the other to an AWS Direct Connect router.
@@ -45,9 +44,7 @@ namespace DirectConnect {
  */
 
 /*!
- * @brief  Constructs a new CreatePrivateVirtualInterfaceRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreatePrivateVirtualInterfaceRequest::CreatePrivateVirtualInterfaceRequest(const CreatePrivateVirtualInterfaceRequest &other)
     : DirectConnectRequest(new CreatePrivateVirtualInterfaceRequestPrivate(*other.d_func(), this))
@@ -56,7 +53,7 @@ CreatePrivateVirtualInterfaceRequest::CreatePrivateVirtualInterfaceRequest(const
 }
 
 /*!
- * @brief  Constructs a new CreatePrivateVirtualInterfaceRequest object.
+ * Constructs a CreatePrivateVirtualInterfaceRequest object.
  */
 CreatePrivateVirtualInterfaceRequest::CreatePrivateVirtualInterfaceRequest()
     : DirectConnectRequest(new CreatePrivateVirtualInterfaceRequestPrivate(DirectConnectRequest::CreatePrivateVirtualInterfaceAction, this))
@@ -74,14 +71,9 @@ bool CreatePrivateVirtualInterfaceRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreatePrivateVirtualInterfaceResponse object.
+ * Returns a CreatePrivateVirtualInterfaceResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreatePrivateVirtualInterfaceResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DirectConnectClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreatePrivateVirtualInterfaceRequest::response(QNetworkReply * const reply) const
 {
@@ -89,20 +81,17 @@ QtAws::Core::AwsAbstractResponse * CreatePrivateVirtualInterfaceRequest::respons
 }
 
 /*!
- * @internal
+ * \class QtAws::DirectConnect::CreatePrivateVirtualInterfaceRequestPrivate
+ * \brief The CreatePrivateVirtualInterfaceRequestPrivate class provides private implementation for CreatePrivateVirtualInterfaceRequest.
+ * \internal
  *
- * @class  CreatePrivateVirtualInterfaceRequestPrivate
- *
- * @brief  Private implementation for CreatePrivateVirtualInterfaceRequest.
+ * \inmodule QtAwsDirectConnect
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreatePrivateVirtualInterfaceRequestPrivate object.
- *
- * @param  action  DirectConnect action being performed.
- * @param  q       Pointer to this object's public CreatePrivateVirtualInterfaceRequest instance.
+ * Constructs a CreatePrivateVirtualInterfaceRequestPrivate object for DirectConnect \a action with,
+ * public implementation \a q.
  */
 CreatePrivateVirtualInterfaceRequestPrivate::CreatePrivateVirtualInterfaceRequestPrivate(
     const DirectConnectRequest::Action action, CreatePrivateVirtualInterfaceRequest * const q)
@@ -112,15 +101,10 @@ CreatePrivateVirtualInterfaceRequestPrivate::CreatePrivateVirtualInterfaceReques
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreatePrivateVirtualInterfaceRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreatePrivateVirtualInterfaceRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreatePrivateVirtualInterfaceRequest instance.
  */
 CreatePrivateVirtualInterfaceRequestPrivate::CreatePrivateVirtualInterfaceRequestPrivate(
     const CreatePrivateVirtualInterfaceRequestPrivate &other, CreatePrivateVirtualInterfaceRequest * const q)

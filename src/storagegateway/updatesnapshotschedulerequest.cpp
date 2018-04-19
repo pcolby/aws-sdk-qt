@@ -27,10 +27,9 @@ namespace StorageGateway {
 
 /*!
  * \class QtAws::StorageGateway::UpdateSnapshotScheduleRequest
- *
  * \brief The UpdateSnapshotScheduleRequest class provides an interface for StorageGateway UpdateSnapshotSchedule requests.
  *
- * \ingroup StorageGateway
+ * \inmodule QtAwsStorageGateway
  *
  *  <fullname>AWS Storage Gateway Service</fullname>
  * 
@@ -106,9 +105,7 @@ namespace StorageGateway {
  */
 
 /*!
- * @brief  Constructs a new UpdateSnapshotScheduleRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateSnapshotScheduleRequest::UpdateSnapshotScheduleRequest(const UpdateSnapshotScheduleRequest &other)
     : StorageGatewayRequest(new UpdateSnapshotScheduleRequestPrivate(*other.d_func(), this))
@@ -117,7 +114,7 @@ UpdateSnapshotScheduleRequest::UpdateSnapshotScheduleRequest(const UpdateSnapsho
 }
 
 /*!
- * @brief  Constructs a new UpdateSnapshotScheduleRequest object.
+ * Constructs a UpdateSnapshotScheduleRequest object.
  */
 UpdateSnapshotScheduleRequest::UpdateSnapshotScheduleRequest()
     : StorageGatewayRequest(new UpdateSnapshotScheduleRequestPrivate(StorageGatewayRequest::UpdateSnapshotScheduleAction, this))
@@ -135,14 +132,9 @@ bool UpdateSnapshotScheduleRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateSnapshotScheduleResponse object.
+ * Returns a UpdateSnapshotScheduleResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateSnapshotScheduleResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  StorageGatewayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateSnapshotScheduleRequest::response(QNetworkReply * const reply) const
 {
@@ -150,20 +142,17 @@ QtAws::Core::AwsAbstractResponse * UpdateSnapshotScheduleRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::StorageGateway::UpdateSnapshotScheduleRequestPrivate
+ * \brief The UpdateSnapshotScheduleRequestPrivate class provides private implementation for UpdateSnapshotScheduleRequest.
+ * \internal
  *
- * @class  UpdateSnapshotScheduleRequestPrivate
- *
- * @brief  Private implementation for UpdateSnapshotScheduleRequest.
+ * \inmodule QtAwsStorageGateway
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateSnapshotScheduleRequestPrivate object.
- *
- * @param  action  StorageGateway action being performed.
- * @param  q       Pointer to this object's public UpdateSnapshotScheduleRequest instance.
+ * Constructs a UpdateSnapshotScheduleRequestPrivate object for StorageGateway \a action with,
+ * public implementation \a q.
  */
 UpdateSnapshotScheduleRequestPrivate::UpdateSnapshotScheduleRequestPrivate(
     const StorageGatewayRequest::Action action, UpdateSnapshotScheduleRequest * const q)
@@ -173,15 +162,10 @@ UpdateSnapshotScheduleRequestPrivate::UpdateSnapshotScheduleRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateSnapshotScheduleRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateSnapshotScheduleRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateSnapshotScheduleRequest instance.
  */
 UpdateSnapshotScheduleRequestPrivate::UpdateSnapshotScheduleRequestPrivate(
     const UpdateSnapshotScheduleRequestPrivate &other, UpdateSnapshotScheduleRequest * const q)

@@ -27,10 +27,9 @@ namespace ECS {
 
 /*!
  * \class QtAws::ECS::ListTaskDefinitionFamiliesRequest
- *
  * \brief The ListTaskDefinitionFamiliesRequest class provides an interface for ECS ListTaskDefinitionFamilies requests.
  *
- * \ingroup ECS
+ * \inmodule QtAwsECS
  *
  *  Amazon Elastic Container Service (Amazon ECS) is a highly scalable, fast, container management service that makes it
  *  easy to run, stop, and manage Docker containers on a cluster. You can host your cluster on a serverless infrastructure
@@ -54,9 +53,7 @@ namespace ECS {
  */
 
 /*!
- * @brief  Constructs a new ListTaskDefinitionFamiliesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListTaskDefinitionFamiliesRequest::ListTaskDefinitionFamiliesRequest(const ListTaskDefinitionFamiliesRequest &other)
     : ECSRequest(new ListTaskDefinitionFamiliesRequestPrivate(*other.d_func(), this))
@@ -65,7 +62,7 @@ ListTaskDefinitionFamiliesRequest::ListTaskDefinitionFamiliesRequest(const ListT
 }
 
 /*!
- * @brief  Constructs a new ListTaskDefinitionFamiliesRequest object.
+ * Constructs a ListTaskDefinitionFamiliesRequest object.
  */
 ListTaskDefinitionFamiliesRequest::ListTaskDefinitionFamiliesRequest()
     : ECSRequest(new ListTaskDefinitionFamiliesRequestPrivate(ECSRequest::ListTaskDefinitionFamiliesAction, this))
@@ -83,14 +80,9 @@ bool ListTaskDefinitionFamiliesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListTaskDefinitionFamiliesResponse object.
+ * Returns a ListTaskDefinitionFamiliesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListTaskDefinitionFamiliesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ECSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListTaskDefinitionFamiliesRequest::response(QNetworkReply * const reply) const
 {
@@ -98,20 +90,17 @@ QtAws::Core::AwsAbstractResponse * ListTaskDefinitionFamiliesRequest::response(Q
 }
 
 /*!
- * @internal
+ * \class QtAws::ECS::ListTaskDefinitionFamiliesRequestPrivate
+ * \brief The ListTaskDefinitionFamiliesRequestPrivate class provides private implementation for ListTaskDefinitionFamiliesRequest.
+ * \internal
  *
- * @class  ListTaskDefinitionFamiliesRequestPrivate
- *
- * @brief  Private implementation for ListTaskDefinitionFamiliesRequest.
+ * \inmodule QtAwsECS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListTaskDefinitionFamiliesRequestPrivate object.
- *
- * @param  action  ECS action being performed.
- * @param  q       Pointer to this object's public ListTaskDefinitionFamiliesRequest instance.
+ * Constructs a ListTaskDefinitionFamiliesRequestPrivate object for ECS \a action with,
+ * public implementation \a q.
  */
 ListTaskDefinitionFamiliesRequestPrivate::ListTaskDefinitionFamiliesRequestPrivate(
     const ECSRequest::Action action, ListTaskDefinitionFamiliesRequest * const q)
@@ -121,15 +110,10 @@ ListTaskDefinitionFamiliesRequestPrivate::ListTaskDefinitionFamiliesRequestPriva
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListTaskDefinitionFamiliesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListTaskDefinitionFamiliesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListTaskDefinitionFamiliesRequest instance.
  */
 ListTaskDefinitionFamiliesRequestPrivate::ListTaskDefinitionFamiliesRequestPrivate(
     const ListTaskDefinitionFamiliesRequestPrivate &other, ListTaskDefinitionFamiliesRequest * const q)

@@ -27,19 +27,16 @@ namespace Pinpoint {
 
 /*!
  * \class QtAws::Pinpoint::UpdateCampaignRequest
- *
  * \brief The UpdateCampaignRequest class provides an interface for Pinpoint UpdateCampaign requests.
  *
- * \ingroup Pinpoint
+ * \inmodule QtAwsPinpoint
  *
  *
  * \sa PinpointClient::updateCampaign
  */
 
 /*!
- * @brief  Constructs a new UpdateCampaignRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateCampaignRequest::UpdateCampaignRequest(const UpdateCampaignRequest &other)
     : PinpointRequest(new UpdateCampaignRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ UpdateCampaignRequest::UpdateCampaignRequest(const UpdateCampaignRequest &other)
 }
 
 /*!
- * @brief  Constructs a new UpdateCampaignRequest object.
+ * Constructs a UpdateCampaignRequest object.
  */
 UpdateCampaignRequest::UpdateCampaignRequest()
     : PinpointRequest(new UpdateCampaignRequestPrivate(PinpointRequest::UpdateCampaignAction, this))
@@ -66,14 +63,9 @@ bool UpdateCampaignRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateCampaignResponse object.
+ * Returns a UpdateCampaignResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateCampaignResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  PinpointClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateCampaignRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * UpdateCampaignRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::Pinpoint::UpdateCampaignRequestPrivate
+ * \brief The UpdateCampaignRequestPrivate class provides private implementation for UpdateCampaignRequest.
+ * \internal
  *
- * @class  UpdateCampaignRequestPrivate
- *
- * @brief  Private implementation for UpdateCampaignRequest.
+ * \inmodule QtAwsPinpoint
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateCampaignRequestPrivate object.
- *
- * @param  action  Pinpoint action being performed.
- * @param  q       Pointer to this object's public UpdateCampaignRequest instance.
+ * Constructs a UpdateCampaignRequestPrivate object for Pinpoint \a action with,
+ * public implementation \a q.
  */
 UpdateCampaignRequestPrivate::UpdateCampaignRequestPrivate(
     const PinpointRequest::Action action, UpdateCampaignRequest * const q)
@@ -104,15 +93,10 @@ UpdateCampaignRequestPrivate::UpdateCampaignRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateCampaignRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateCampaignRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateCampaignRequest instance.
  */
 UpdateCampaignRequestPrivate::UpdateCampaignRequestPrivate(
     const UpdateCampaignRequestPrivate &other, UpdateCampaignRequest * const q)

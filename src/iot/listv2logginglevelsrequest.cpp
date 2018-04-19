@@ -27,10 +27,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::ListV2LoggingLevelsRequest
- *
  * \brief The ListV2LoggingLevelsRequest class provides an interface for IoT ListV2LoggingLevels requests.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -48,9 +47,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new ListV2LoggingLevelsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListV2LoggingLevelsRequest::ListV2LoggingLevelsRequest(const ListV2LoggingLevelsRequest &other)
     : IoTRequest(new ListV2LoggingLevelsRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ ListV2LoggingLevelsRequest::ListV2LoggingLevelsRequest(const ListV2LoggingLevels
 }
 
 /*!
- * @brief  Constructs a new ListV2LoggingLevelsRequest object.
+ * Constructs a ListV2LoggingLevelsRequest object.
  */
 ListV2LoggingLevelsRequest::ListV2LoggingLevelsRequest()
     : IoTRequest(new ListV2LoggingLevelsRequestPrivate(IoTRequest::ListV2LoggingLevelsAction, this))
@@ -77,14 +74,9 @@ bool ListV2LoggingLevelsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListV2LoggingLevelsResponse object.
+ * Returns a ListV2LoggingLevelsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListV2LoggingLevelsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IoTClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListV2LoggingLevelsRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * ListV2LoggingLevelsRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::IoT::ListV2LoggingLevelsRequestPrivate
+ * \brief The ListV2LoggingLevelsRequestPrivate class provides private implementation for ListV2LoggingLevelsRequest.
+ * \internal
  *
- * @class  ListV2LoggingLevelsRequestPrivate
- *
- * @brief  Private implementation for ListV2LoggingLevelsRequest.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListV2LoggingLevelsRequestPrivate object.
- *
- * @param  action  IoT action being performed.
- * @param  q       Pointer to this object's public ListV2LoggingLevelsRequest instance.
+ * Constructs a ListV2LoggingLevelsRequestPrivate object for IoT \a action with,
+ * public implementation \a q.
  */
 ListV2LoggingLevelsRequestPrivate::ListV2LoggingLevelsRequestPrivate(
     const IoTRequest::Action action, ListV2LoggingLevelsRequest * const q)
@@ -115,15 +104,10 @@ ListV2LoggingLevelsRequestPrivate::ListV2LoggingLevelsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListV2LoggingLevelsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListV2LoggingLevelsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListV2LoggingLevelsRequest instance.
  */
 ListV2LoggingLevelsRequestPrivate::ListV2LoggingLevelsRequestPrivate(
     const ListV2LoggingLevelsRequestPrivate &other, ListV2LoggingLevelsRequest * const q)

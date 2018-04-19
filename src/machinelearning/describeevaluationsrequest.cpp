@@ -27,19 +27,16 @@ namespace MachineLearning {
 
 /*!
  * \class QtAws::MachineLearning::DescribeEvaluationsRequest
- *
  * \brief The DescribeEvaluationsRequest class provides an interface for MachineLearning DescribeEvaluations requests.
  *
- * \ingroup MachineLearning
+ * \inmodule QtAwsMachineLearning
  *
  *
  * \sa MachineLearningClient::describeEvaluations
  */
 
 /*!
- * @brief  Constructs a new DescribeEvaluationsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeEvaluationsRequest::DescribeEvaluationsRequest(const DescribeEvaluationsRequest &other)
     : MachineLearningRequest(new DescribeEvaluationsRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ DescribeEvaluationsRequest::DescribeEvaluationsRequest(const DescribeEvaluations
 }
 
 /*!
- * @brief  Constructs a new DescribeEvaluationsRequest object.
+ * Constructs a DescribeEvaluationsRequest object.
  */
 DescribeEvaluationsRequest::DescribeEvaluationsRequest()
     : MachineLearningRequest(new DescribeEvaluationsRequestPrivate(MachineLearningRequest::DescribeEvaluationsAction, this))
@@ -66,14 +63,9 @@ bool DescribeEvaluationsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeEvaluationsResponse object.
+ * Returns a DescribeEvaluationsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeEvaluationsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MachineLearningClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeEvaluationsRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * DescribeEvaluationsRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::MachineLearning::DescribeEvaluationsRequestPrivate
+ * \brief The DescribeEvaluationsRequestPrivate class provides private implementation for DescribeEvaluationsRequest.
+ * \internal
  *
- * @class  DescribeEvaluationsRequestPrivate
- *
- * @brief  Private implementation for DescribeEvaluationsRequest.
+ * \inmodule QtAwsMachineLearning
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeEvaluationsRequestPrivate object.
- *
- * @param  action  MachineLearning action being performed.
- * @param  q       Pointer to this object's public DescribeEvaluationsRequest instance.
+ * Constructs a DescribeEvaluationsRequestPrivate object for MachineLearning \a action with,
+ * public implementation \a q.
  */
 DescribeEvaluationsRequestPrivate::DescribeEvaluationsRequestPrivate(
     const MachineLearningRequest::Action action, DescribeEvaluationsRequest * const q)
@@ -104,15 +93,10 @@ DescribeEvaluationsRequestPrivate::DescribeEvaluationsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeEvaluationsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeEvaluationsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeEvaluationsRequest instance.
  */
 DescribeEvaluationsRequestPrivate::DescribeEvaluationsRequestPrivate(
     const DescribeEvaluationsRequestPrivate &other, DescribeEvaluationsRequest * const q)

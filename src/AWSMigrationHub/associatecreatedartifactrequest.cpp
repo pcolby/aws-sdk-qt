@@ -27,10 +27,9 @@ namespace MigrationHub {
 
 /*!
  * \class QtAws::MigrationHub::AssociateCreatedArtifactRequest
- *
  * \brief The AssociateCreatedArtifactRequest class provides an interface for MigrationHub AssociateCreatedArtifact requests.
  *
- * \ingroup MigrationHub
+ * \inmodule QtAwsMigrationHub
  *
  *  The AWS Migration Hub API methods help to obtain server and application migration status and integrate your
  *  resource-specific migration tool by providing a programmatic interface to Migration Hub.
@@ -39,9 +38,7 @@ namespace MigrationHub {
  */
 
 /*!
- * @brief  Constructs a new AssociateCreatedArtifactRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AssociateCreatedArtifactRequest::AssociateCreatedArtifactRequest(const AssociateCreatedArtifactRequest &other)
     : MigrationHubRequest(new AssociateCreatedArtifactRequestPrivate(*other.d_func(), this))
@@ -50,7 +47,7 @@ AssociateCreatedArtifactRequest::AssociateCreatedArtifactRequest(const Associate
 }
 
 /*!
- * @brief  Constructs a new AssociateCreatedArtifactRequest object.
+ * Constructs a AssociateCreatedArtifactRequest object.
  */
 AssociateCreatedArtifactRequest::AssociateCreatedArtifactRequest()
     : MigrationHubRequest(new AssociateCreatedArtifactRequestPrivate(MigrationHubRequest::AssociateCreatedArtifactAction, this))
@@ -68,14 +65,9 @@ bool AssociateCreatedArtifactRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AssociateCreatedArtifactResponse object.
+ * Returns a AssociateCreatedArtifactResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AssociateCreatedArtifactResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MigrationHubClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AssociateCreatedArtifactRequest::response(QNetworkReply * const reply) const
 {
@@ -83,20 +75,17 @@ QtAws::Core::AwsAbstractResponse * AssociateCreatedArtifactRequest::response(QNe
 }
 
 /*!
- * @internal
+ * \class QtAws::MigrationHub::AssociateCreatedArtifactRequestPrivate
+ * \brief The AssociateCreatedArtifactRequestPrivate class provides private implementation for AssociateCreatedArtifactRequest.
+ * \internal
  *
- * @class  AssociateCreatedArtifactRequestPrivate
- *
- * @brief  Private implementation for AssociateCreatedArtifactRequest.
+ * \inmodule QtAwsMigrationHub
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AssociateCreatedArtifactRequestPrivate object.
- *
- * @param  action  MigrationHub action being performed.
- * @param  q       Pointer to this object's public AssociateCreatedArtifactRequest instance.
+ * Constructs a AssociateCreatedArtifactRequestPrivate object for MigrationHub \a action with,
+ * public implementation \a q.
  */
 AssociateCreatedArtifactRequestPrivate::AssociateCreatedArtifactRequestPrivate(
     const MigrationHubRequest::Action action, AssociateCreatedArtifactRequest * const q)
@@ -106,15 +95,10 @@ AssociateCreatedArtifactRequestPrivate::AssociateCreatedArtifactRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AssociateCreatedArtifactRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AssociateCreatedArtifactRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AssociateCreatedArtifactRequest instance.
  */
 AssociateCreatedArtifactRequestPrivate::AssociateCreatedArtifactRequestPrivate(
     const AssociateCreatedArtifactRequestPrivate &other, AssociateCreatedArtifactRequest * const q)

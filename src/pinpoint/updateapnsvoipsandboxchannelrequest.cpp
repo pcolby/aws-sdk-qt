@@ -27,19 +27,16 @@ namespace Pinpoint {
 
 /*!
  * \class QtAws::Pinpoint::UpdateApnsVoipSandboxChannelRequest
- *
  * \brief The UpdateApnsVoipSandboxChannelRequest class provides an interface for Pinpoint UpdateApnsVoipSandboxChannel requests.
  *
- * \ingroup Pinpoint
+ * \inmodule QtAwsPinpoint
  *
  *
  * \sa PinpointClient::updateApnsVoipSandboxChannel
  */
 
 /*!
- * @brief  Constructs a new UpdateApnsVoipSandboxChannelRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateApnsVoipSandboxChannelRequest::UpdateApnsVoipSandboxChannelRequest(const UpdateApnsVoipSandboxChannelRequest &other)
     : PinpointRequest(new UpdateApnsVoipSandboxChannelRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ UpdateApnsVoipSandboxChannelRequest::UpdateApnsVoipSandboxChannelRequest(const U
 }
 
 /*!
- * @brief  Constructs a new UpdateApnsVoipSandboxChannelRequest object.
+ * Constructs a UpdateApnsVoipSandboxChannelRequest object.
  */
 UpdateApnsVoipSandboxChannelRequest::UpdateApnsVoipSandboxChannelRequest()
     : PinpointRequest(new UpdateApnsVoipSandboxChannelRequestPrivate(PinpointRequest::UpdateApnsVoipSandboxChannelAction, this))
@@ -66,14 +63,9 @@ bool UpdateApnsVoipSandboxChannelRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateApnsVoipSandboxChannelResponse object.
+ * Returns a UpdateApnsVoipSandboxChannelResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateApnsVoipSandboxChannelResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  PinpointClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateApnsVoipSandboxChannelRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * UpdateApnsVoipSandboxChannelRequest::response
 }
 
 /*!
- * @internal
+ * \class QtAws::Pinpoint::UpdateApnsVoipSandboxChannelRequestPrivate
+ * \brief The UpdateApnsVoipSandboxChannelRequestPrivate class provides private implementation for UpdateApnsVoipSandboxChannelRequest.
+ * \internal
  *
- * @class  UpdateApnsVoipSandboxChannelRequestPrivate
- *
- * @brief  Private implementation for UpdateApnsVoipSandboxChannelRequest.
+ * \inmodule QtAwsPinpoint
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateApnsVoipSandboxChannelRequestPrivate object.
- *
- * @param  action  Pinpoint action being performed.
- * @param  q       Pointer to this object's public UpdateApnsVoipSandboxChannelRequest instance.
+ * Constructs a UpdateApnsVoipSandboxChannelRequestPrivate object for Pinpoint \a action with,
+ * public implementation \a q.
  */
 UpdateApnsVoipSandboxChannelRequestPrivate::UpdateApnsVoipSandboxChannelRequestPrivate(
     const PinpointRequest::Action action, UpdateApnsVoipSandboxChannelRequest * const q)
@@ -104,15 +93,10 @@ UpdateApnsVoipSandboxChannelRequestPrivate::UpdateApnsVoipSandboxChannelRequestP
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateApnsVoipSandboxChannelRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateApnsVoipSandboxChannelRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateApnsVoipSandboxChannelRequest instance.
  */
 UpdateApnsVoipSandboxChannelRequestPrivate::UpdateApnsVoipSandboxChannelRequestPrivate(
     const UpdateApnsVoipSandboxChannelRequestPrivate &other, UpdateApnsVoipSandboxChannelRequest * const q)

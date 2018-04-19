@@ -27,10 +27,9 @@ namespace MediaStoreData {
 
 /*!
  * \class QtAws::MediaStoreData::ListItemsRequest
- *
  * \brief The ListItemsRequest class provides an interface for MediaStoreData ListItems requests.
  *
- * \ingroup MediaStoreData
+ * \inmodule QtAwsMediaStoreData
  *
  *  An AWS Elemental MediaStore asset is an object, similar to an object in the Amazon S3 service. Objects are the
  *  fundamental entities that are stored in AWS Elemental
@@ -39,9 +38,7 @@ namespace MediaStoreData {
  */
 
 /*!
- * @brief  Constructs a new ListItemsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListItemsRequest::ListItemsRequest(const ListItemsRequest &other)
     : MediaStoreDataRequest(new ListItemsRequestPrivate(*other.d_func(), this))
@@ -50,7 +47,7 @@ ListItemsRequest::ListItemsRequest(const ListItemsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ListItemsRequest object.
+ * Constructs a ListItemsRequest object.
  */
 ListItemsRequest::ListItemsRequest()
     : MediaStoreDataRequest(new ListItemsRequestPrivate(MediaStoreDataRequest::ListItemsAction, this))
@@ -68,14 +65,9 @@ bool ListItemsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListItemsResponse object.
+ * Returns a ListItemsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListItemsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MediaStoreDataClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListItemsRequest::response(QNetworkReply * const reply) const
 {
@@ -83,20 +75,17 @@ QtAws::Core::AwsAbstractResponse * ListItemsRequest::response(QNetworkReply * co
 }
 
 /*!
- * @internal
+ * \class QtAws::MediaStoreData::ListItemsRequestPrivate
+ * \brief The ListItemsRequestPrivate class provides private implementation for ListItemsRequest.
+ * \internal
  *
- * @class  ListItemsRequestPrivate
- *
- * @brief  Private implementation for ListItemsRequest.
+ * \inmodule QtAwsMediaStoreData
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListItemsRequestPrivate object.
- *
- * @param  action  MediaStoreData action being performed.
- * @param  q       Pointer to this object's public ListItemsRequest instance.
+ * Constructs a ListItemsRequestPrivate object for MediaStoreData \a action with,
+ * public implementation \a q.
  */
 ListItemsRequestPrivate::ListItemsRequestPrivate(
     const MediaStoreDataRequest::Action action, ListItemsRequest * const q)
@@ -106,15 +95,10 @@ ListItemsRequestPrivate::ListItemsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListItemsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListItemsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListItemsRequest instance.
  */
 ListItemsRequestPrivate::ListItemsRequestPrivate(
     const ListItemsRequestPrivate &other, ListItemsRequest * const q)

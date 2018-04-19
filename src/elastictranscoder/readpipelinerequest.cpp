@@ -27,10 +27,9 @@ namespace ElasticTranscoder {
 
 /*!
  * \class QtAws::ElasticTranscoder::ReadPipelineRequest
- *
  * \brief The ReadPipelineRequest class provides an interface for ElasticTranscoder ReadPipeline requests.
  *
- * \ingroup ElasticTranscoder
+ * \inmodule QtAwsElasticTranscoder
  *
  *  <fullname>AWS Elastic Transcoder Service</fullname>
  * 
@@ -40,9 +39,7 @@ namespace ElasticTranscoder {
  */
 
 /*!
- * @brief  Constructs a new ReadPipelineRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ReadPipelineRequest::ReadPipelineRequest(const ReadPipelineRequest &other)
     : ElasticTranscoderRequest(new ReadPipelineRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ ReadPipelineRequest::ReadPipelineRequest(const ReadPipelineRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ReadPipelineRequest object.
+ * Constructs a ReadPipelineRequest object.
  */
 ReadPipelineRequest::ReadPipelineRequest()
     : ElasticTranscoderRequest(new ReadPipelineRequestPrivate(ElasticTranscoderRequest::ReadPipelineAction, this))
@@ -69,14 +66,9 @@ bool ReadPipelineRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ReadPipelineResponse object.
+ * Returns a ReadPipelineResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ReadPipelineResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ElasticTranscoderClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ReadPipelineRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * ReadPipelineRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::ElasticTranscoder::ReadPipelineRequestPrivate
+ * \brief The ReadPipelineRequestPrivate class provides private implementation for ReadPipelineRequest.
+ * \internal
  *
- * @class  ReadPipelineRequestPrivate
- *
- * @brief  Private implementation for ReadPipelineRequest.
+ * \inmodule QtAwsElasticTranscoder
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ReadPipelineRequestPrivate object.
- *
- * @param  action  ElasticTranscoder action being performed.
- * @param  q       Pointer to this object's public ReadPipelineRequest instance.
+ * Constructs a ReadPipelineRequestPrivate object for ElasticTranscoder \a action with,
+ * public implementation \a q.
  */
 ReadPipelineRequestPrivate::ReadPipelineRequestPrivate(
     const ElasticTranscoderRequest::Action action, ReadPipelineRequest * const q)
@@ -107,15 +96,10 @@ ReadPipelineRequestPrivate::ReadPipelineRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ReadPipelineRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ReadPipelineRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ReadPipelineRequest instance.
  */
 ReadPipelineRequestPrivate::ReadPipelineRequestPrivate(
     const ReadPipelineRequestPrivate &other, ReadPipelineRequest * const q)

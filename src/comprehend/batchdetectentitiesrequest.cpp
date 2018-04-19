@@ -27,10 +27,9 @@ namespace Comprehend {
 
 /*!
  * \class QtAws::Comprehend::BatchDetectEntitiesRequest
- *
  * \brief The BatchDetectEntitiesRequest class provides an interface for Comprehend BatchDetectEntities requests.
  *
- * \ingroup Comprehend
+ * \inmodule QtAwsComprehend
  *
  *  Amazon Comprehend is an AWS service for gaining insight into the content of documents. Use these actions to determine
  *  the topics contained in your documents, the topics they discuss, the predominant sentiment expressed in them, the
@@ -40,9 +39,7 @@ namespace Comprehend {
  */
 
 /*!
- * @brief  Constructs a new BatchDetectEntitiesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 BatchDetectEntitiesRequest::BatchDetectEntitiesRequest(const BatchDetectEntitiesRequest &other)
     : ComprehendRequest(new BatchDetectEntitiesRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ BatchDetectEntitiesRequest::BatchDetectEntitiesRequest(const BatchDetectEntities
 }
 
 /*!
- * @brief  Constructs a new BatchDetectEntitiesRequest object.
+ * Constructs a BatchDetectEntitiesRequest object.
  */
 BatchDetectEntitiesRequest::BatchDetectEntitiesRequest()
     : ComprehendRequest(new BatchDetectEntitiesRequestPrivate(ComprehendRequest::BatchDetectEntitiesAction, this))
@@ -69,14 +66,9 @@ bool BatchDetectEntitiesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an BatchDetectEntitiesResponse object.
+ * Returns a BatchDetectEntitiesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An BatchDetectEntitiesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ComprehendClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * BatchDetectEntitiesRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * BatchDetectEntitiesRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::Comprehend::BatchDetectEntitiesRequestPrivate
+ * \brief The BatchDetectEntitiesRequestPrivate class provides private implementation for BatchDetectEntitiesRequest.
+ * \internal
  *
- * @class  BatchDetectEntitiesRequestPrivate
- *
- * @brief  Private implementation for BatchDetectEntitiesRequest.
+ * \inmodule QtAwsComprehend
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new BatchDetectEntitiesRequestPrivate object.
- *
- * @param  action  Comprehend action being performed.
- * @param  q       Pointer to this object's public BatchDetectEntitiesRequest instance.
+ * Constructs a BatchDetectEntitiesRequestPrivate object for Comprehend \a action with,
+ * public implementation \a q.
  */
 BatchDetectEntitiesRequestPrivate::BatchDetectEntitiesRequestPrivate(
     const ComprehendRequest::Action action, BatchDetectEntitiesRequest * const q)
@@ -107,15 +96,10 @@ BatchDetectEntitiesRequestPrivate::BatchDetectEntitiesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new BatchDetectEntitiesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the BatchDetectEntitiesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public BatchDetectEntitiesRequest instance.
  */
 BatchDetectEntitiesRequestPrivate::BatchDetectEntitiesRequestPrivate(
     const BatchDetectEntitiesRequestPrivate &other, BatchDetectEntitiesRequest * const q)

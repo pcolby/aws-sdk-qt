@@ -27,10 +27,9 @@ namespace WAF {
 
 /*!
  * \class QtAws::WAF::DeleteWebACLRequest
- *
  * \brief The DeleteWebACLRequest class provides an interface for WAF DeleteWebACL requests.
  *
- * \ingroup WAF
+ * \inmodule QtAwsWAF
  *
  *  This is the <i>AWS WAF API Reference</i> for using AWS WAF with Amazon CloudFront. The AWS WAF actions and data types
  *  listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data
@@ -42,9 +41,7 @@ namespace WAF {
  */
 
 /*!
- * @brief  Constructs a new DeleteWebACLRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteWebACLRequest::DeleteWebACLRequest(const DeleteWebACLRequest &other)
     : WAFRequest(new DeleteWebACLRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ DeleteWebACLRequest::DeleteWebACLRequest(const DeleteWebACLRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DeleteWebACLRequest object.
+ * Constructs a DeleteWebACLRequest object.
  */
 DeleteWebACLRequest::DeleteWebACLRequest()
     : WAFRequest(new DeleteWebACLRequestPrivate(WAFRequest::DeleteWebACLAction, this))
@@ -71,14 +68,9 @@ bool DeleteWebACLRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteWebACLResponse object.
+ * Returns a DeleteWebACLResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteWebACLResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WAFClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteWebACLRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * DeleteWebACLRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::WAF::DeleteWebACLRequestPrivate
+ * \brief The DeleteWebACLRequestPrivate class provides private implementation for DeleteWebACLRequest.
+ * \internal
  *
- * @class  DeleteWebACLRequestPrivate
- *
- * @brief  Private implementation for DeleteWebACLRequest.
+ * \inmodule QtAwsWAF
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteWebACLRequestPrivate object.
- *
- * @param  action  WAF action being performed.
- * @param  q       Pointer to this object's public DeleteWebACLRequest instance.
+ * Constructs a DeleteWebACLRequestPrivate object for WAF \a action with,
+ * public implementation \a q.
  */
 DeleteWebACLRequestPrivate::DeleteWebACLRequestPrivate(
     const WAFRequest::Action action, DeleteWebACLRequest * const q)
@@ -109,15 +98,10 @@ DeleteWebACLRequestPrivate::DeleteWebACLRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteWebACLRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteWebACLRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteWebACLRequest instance.
  */
 DeleteWebACLRequestPrivate::DeleteWebACLRequestPrivate(
     const DeleteWebACLRequestPrivate &other, DeleteWebACLRequest * const q)

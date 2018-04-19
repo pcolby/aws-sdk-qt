@@ -27,19 +27,16 @@ namespace MediaLive {
 
 /*!
  * \class QtAws::MediaLive::DescribeInputSecurityGroupRequest
- *
  * \brief The DescribeInputSecurityGroupRequest class provides an interface for MediaLive DescribeInputSecurityGroup requests.
  *
- * \ingroup MediaLive
+ * \inmodule QtAwsMediaLive
  *
  *
  * \sa MediaLiveClient::describeInputSecurityGroup
  */
 
 /*!
- * @brief  Constructs a new DescribeInputSecurityGroupRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeInputSecurityGroupRequest::DescribeInputSecurityGroupRequest(const DescribeInputSecurityGroupRequest &other)
     : MediaLiveRequest(new DescribeInputSecurityGroupRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ DescribeInputSecurityGroupRequest::DescribeInputSecurityGroupRequest(const Descr
 }
 
 /*!
- * @brief  Constructs a new DescribeInputSecurityGroupRequest object.
+ * Constructs a DescribeInputSecurityGroupRequest object.
  */
 DescribeInputSecurityGroupRequest::DescribeInputSecurityGroupRequest()
     : MediaLiveRequest(new DescribeInputSecurityGroupRequestPrivate(MediaLiveRequest::DescribeInputSecurityGroupAction, this))
@@ -66,14 +63,9 @@ bool DescribeInputSecurityGroupRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeInputSecurityGroupResponse object.
+ * Returns a DescribeInputSecurityGroupResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeInputSecurityGroupResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MediaLiveClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeInputSecurityGroupRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * DescribeInputSecurityGroupRequest::response(Q
 }
 
 /*!
- * @internal
+ * \class QtAws::MediaLive::DescribeInputSecurityGroupRequestPrivate
+ * \brief The DescribeInputSecurityGroupRequestPrivate class provides private implementation for DescribeInputSecurityGroupRequest.
+ * \internal
  *
- * @class  DescribeInputSecurityGroupRequestPrivate
- *
- * @brief  Private implementation for DescribeInputSecurityGroupRequest.
+ * \inmodule QtAwsMediaLive
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeInputSecurityGroupRequestPrivate object.
- *
- * @param  action  MediaLive action being performed.
- * @param  q       Pointer to this object's public DescribeInputSecurityGroupRequest instance.
+ * Constructs a DescribeInputSecurityGroupRequestPrivate object for MediaLive \a action with,
+ * public implementation \a q.
  */
 DescribeInputSecurityGroupRequestPrivate::DescribeInputSecurityGroupRequestPrivate(
     const MediaLiveRequest::Action action, DescribeInputSecurityGroupRequest * const q)
@@ -104,15 +93,10 @@ DescribeInputSecurityGroupRequestPrivate::DescribeInputSecurityGroupRequestPriva
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeInputSecurityGroupRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeInputSecurityGroupRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeInputSecurityGroupRequest instance.
  */
 DescribeInputSecurityGroupRequestPrivate::DescribeInputSecurityGroupRequestPrivate(
     const DescribeInputSecurityGroupRequestPrivate &other, DescribeInputSecurityGroupRequest * const q)

@@ -27,10 +27,9 @@ namespace Rekognition {
 
 /*!
  * \class QtAws::Rekognition::StartFaceDetectionRequest
- *
  * \brief The StartFaceDetectionRequest class provides an interface for Rekognition StartFaceDetection requests.
  *
- * \ingroup Rekognition
+ * \inmodule QtAwsRekognition
  *
  *  This is the Amazon Rekognition API
  *
@@ -38,9 +37,7 @@ namespace Rekognition {
  */
 
 /*!
- * @brief  Constructs a new StartFaceDetectionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 StartFaceDetectionRequest::StartFaceDetectionRequest(const StartFaceDetectionRequest &other)
     : RekognitionRequest(new StartFaceDetectionRequestPrivate(*other.d_func(), this))
@@ -49,7 +46,7 @@ StartFaceDetectionRequest::StartFaceDetectionRequest(const StartFaceDetectionReq
 }
 
 /*!
- * @brief  Constructs a new StartFaceDetectionRequest object.
+ * Constructs a StartFaceDetectionRequest object.
  */
 StartFaceDetectionRequest::StartFaceDetectionRequest()
     : RekognitionRequest(new StartFaceDetectionRequestPrivate(RekognitionRequest::StartFaceDetectionAction, this))
@@ -67,14 +64,9 @@ bool StartFaceDetectionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an StartFaceDetectionResponse object.
+ * Returns a StartFaceDetectionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An StartFaceDetectionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RekognitionClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * StartFaceDetectionRequest::response(QNetworkReply * const reply) const
 {
@@ -82,20 +74,17 @@ QtAws::Core::AwsAbstractResponse * StartFaceDetectionRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::Rekognition::StartFaceDetectionRequestPrivate
+ * \brief The StartFaceDetectionRequestPrivate class provides private implementation for StartFaceDetectionRequest.
+ * \internal
  *
- * @class  StartFaceDetectionRequestPrivate
- *
- * @brief  Private implementation for StartFaceDetectionRequest.
+ * \inmodule QtAwsRekognition
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new StartFaceDetectionRequestPrivate object.
- *
- * @param  action  Rekognition action being performed.
- * @param  q       Pointer to this object's public StartFaceDetectionRequest instance.
+ * Constructs a StartFaceDetectionRequestPrivate object for Rekognition \a action with,
+ * public implementation \a q.
  */
 StartFaceDetectionRequestPrivate::StartFaceDetectionRequestPrivate(
     const RekognitionRequest::Action action, StartFaceDetectionRequest * const q)
@@ -105,15 +94,10 @@ StartFaceDetectionRequestPrivate::StartFaceDetectionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StartFaceDetectionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the StartFaceDetectionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public StartFaceDetectionRequest instance.
  */
 StartFaceDetectionRequestPrivate::StartFaceDetectionRequestPrivate(
     const StartFaceDetectionRequestPrivate &other, StartFaceDetectionRequest * const q)

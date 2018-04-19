@@ -27,10 +27,9 @@ namespace Kinesis {
 
 /*!
  * \class QtAws::Kinesis::MergeShardsRequest
- *
  * \brief The MergeShardsRequest class provides an interface for Kinesis MergeShards requests.
  *
- * \ingroup Kinesis
+ * \inmodule QtAwsKinesis
  *
  *  <fullname>Amazon Kinesis Data Streams Service API Reference</fullname>
  * 
@@ -40,9 +39,7 @@ namespace Kinesis {
  */
 
 /*!
- * @brief  Constructs a new MergeShardsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 MergeShardsRequest::MergeShardsRequest(const MergeShardsRequest &other)
     : KinesisRequest(new MergeShardsRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ MergeShardsRequest::MergeShardsRequest(const MergeShardsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new MergeShardsRequest object.
+ * Constructs a MergeShardsRequest object.
  */
 MergeShardsRequest::MergeShardsRequest()
     : KinesisRequest(new MergeShardsRequestPrivate(KinesisRequest::MergeShardsAction, this))
@@ -69,14 +66,9 @@ bool MergeShardsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an MergeShardsResponse object.
+ * Returns a MergeShardsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An MergeShardsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  KinesisClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * MergeShardsRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * MergeShardsRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::Kinesis::MergeShardsRequestPrivate
+ * \brief The MergeShardsRequestPrivate class provides private implementation for MergeShardsRequest.
+ * \internal
  *
- * @class  MergeShardsRequestPrivate
- *
- * @brief  Private implementation for MergeShardsRequest.
+ * \inmodule QtAwsKinesis
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new MergeShardsRequestPrivate object.
- *
- * @param  action  Kinesis action being performed.
- * @param  q       Pointer to this object's public MergeShardsRequest instance.
+ * Constructs a MergeShardsRequestPrivate object for Kinesis \a action with,
+ * public implementation \a q.
  */
 MergeShardsRequestPrivate::MergeShardsRequestPrivate(
     const KinesisRequest::Action action, MergeShardsRequest * const q)
@@ -107,15 +96,10 @@ MergeShardsRequestPrivate::MergeShardsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new MergeShardsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the MergeShardsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public MergeShardsRequest instance.
  */
 MergeShardsRequestPrivate::MergeShardsRequestPrivate(
     const MergeShardsRequestPrivate &other, MergeShardsRequest * const q)

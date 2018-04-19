@@ -27,10 +27,9 @@ namespace OpsWorks {
 
 /*!
  * \class QtAws::OpsWorks::DeregisterInstanceRequest
- *
  * \brief The DeregisterInstanceRequest class provides an interface for OpsWorks DeregisterInstance requests.
  *
- * \ingroup OpsWorks
+ * \inmodule QtAwsOpsWorks
  *
  *  <fullname>AWS OpsWorks</fullname>
  * 
@@ -143,9 +142,7 @@ namespace OpsWorks {
  */
 
 /*!
- * @brief  Constructs a new DeregisterInstanceRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeregisterInstanceRequest::DeregisterInstanceRequest(const DeregisterInstanceRequest &other)
     : OpsWorksRequest(new DeregisterInstanceRequestPrivate(*other.d_func(), this))
@@ -154,7 +151,7 @@ DeregisterInstanceRequest::DeregisterInstanceRequest(const DeregisterInstanceReq
 }
 
 /*!
- * @brief  Constructs a new DeregisterInstanceRequest object.
+ * Constructs a DeregisterInstanceRequest object.
  */
 DeregisterInstanceRequest::DeregisterInstanceRequest()
     : OpsWorksRequest(new DeregisterInstanceRequestPrivate(OpsWorksRequest::DeregisterInstanceAction, this))
@@ -172,14 +169,9 @@ bool DeregisterInstanceRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeregisterInstanceResponse object.
+ * Returns a DeregisterInstanceResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeregisterInstanceResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  OpsWorksClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeregisterInstanceRequest::response(QNetworkReply * const reply) const
 {
@@ -187,20 +179,17 @@ QtAws::Core::AwsAbstractResponse * DeregisterInstanceRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::OpsWorks::DeregisterInstanceRequestPrivate
+ * \brief The DeregisterInstanceRequestPrivate class provides private implementation for DeregisterInstanceRequest.
+ * \internal
  *
- * @class  DeregisterInstanceRequestPrivate
- *
- * @brief  Private implementation for DeregisterInstanceRequest.
+ * \inmodule QtAwsOpsWorks
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeregisterInstanceRequestPrivate object.
- *
- * @param  action  OpsWorks action being performed.
- * @param  q       Pointer to this object's public DeregisterInstanceRequest instance.
+ * Constructs a DeregisterInstanceRequestPrivate object for OpsWorks \a action with,
+ * public implementation \a q.
  */
 DeregisterInstanceRequestPrivate::DeregisterInstanceRequestPrivate(
     const OpsWorksRequest::Action action, DeregisterInstanceRequest * const q)
@@ -210,15 +199,10 @@ DeregisterInstanceRequestPrivate::DeregisterInstanceRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeregisterInstanceRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeregisterInstanceRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeregisterInstanceRequest instance.
  */
 DeregisterInstanceRequestPrivate::DeregisterInstanceRequestPrivate(
     const DeregisterInstanceRequestPrivate &other, DeregisterInstanceRequest * const q)

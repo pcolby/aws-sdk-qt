@@ -27,10 +27,9 @@ namespace SES {
 
 /*!
  * \class QtAws::SES::CreateConfigurationSetTrackingOptionsRequest
- *
  * \brief The CreateConfigurationSetTrackingOptionsRequest class provides an interface for SES CreateConfigurationSetTrackingOptions requests.
  *
- * \ingroup SES
+ * \inmodule QtAwsSES
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -48,9 +47,7 @@ namespace SES {
  */
 
 /*!
- * @brief  Constructs a new CreateConfigurationSetTrackingOptionsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateConfigurationSetTrackingOptionsRequest::CreateConfigurationSetTrackingOptionsRequest(const CreateConfigurationSetTrackingOptionsRequest &other)
     : SESRequest(new CreateConfigurationSetTrackingOptionsRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ CreateConfigurationSetTrackingOptionsRequest::CreateConfigurationSetTrackingOpti
 }
 
 /*!
- * @brief  Constructs a new CreateConfigurationSetTrackingOptionsRequest object.
+ * Constructs a CreateConfigurationSetTrackingOptionsRequest object.
  */
 CreateConfigurationSetTrackingOptionsRequest::CreateConfigurationSetTrackingOptionsRequest()
     : SESRequest(new CreateConfigurationSetTrackingOptionsRequestPrivate(SESRequest::CreateConfigurationSetTrackingOptionsAction, this))
@@ -77,14 +74,9 @@ bool CreateConfigurationSetTrackingOptionsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateConfigurationSetTrackingOptionsResponse object.
+ * Returns a CreateConfigurationSetTrackingOptionsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateConfigurationSetTrackingOptionsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SESClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateConfigurationSetTrackingOptionsRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * CreateConfigurationSetTrackingOptionsRequest:
 }
 
 /*!
- * @internal
+ * \class QtAws::SES::CreateConfigurationSetTrackingOptionsRequestPrivate
+ * \brief The CreateConfigurationSetTrackingOptionsRequestPrivate class provides private implementation for CreateConfigurationSetTrackingOptionsRequest.
+ * \internal
  *
- * @class  CreateConfigurationSetTrackingOptionsRequestPrivate
- *
- * @brief  Private implementation for CreateConfigurationSetTrackingOptionsRequest.
+ * \inmodule QtAwsSES
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateConfigurationSetTrackingOptionsRequestPrivate object.
- *
- * @param  action  SES action being performed.
- * @param  q       Pointer to this object's public CreateConfigurationSetTrackingOptionsRequest instance.
+ * Constructs a CreateConfigurationSetTrackingOptionsRequestPrivate object for SES \a action with,
+ * public implementation \a q.
  */
 CreateConfigurationSetTrackingOptionsRequestPrivate::CreateConfigurationSetTrackingOptionsRequestPrivate(
     const SESRequest::Action action, CreateConfigurationSetTrackingOptionsRequest * const q)
@@ -115,15 +104,10 @@ CreateConfigurationSetTrackingOptionsRequestPrivate::CreateConfigurationSetTrack
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateConfigurationSetTrackingOptionsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateConfigurationSetTrackingOptionsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateConfigurationSetTrackingOptionsRequest instance.
  */
 CreateConfigurationSetTrackingOptionsRequestPrivate::CreateConfigurationSetTrackingOptionsRequestPrivate(
     const CreateConfigurationSetTrackingOptionsRequestPrivate &other, CreateConfigurationSetTrackingOptionsRequest * const q)

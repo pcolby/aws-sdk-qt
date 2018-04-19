@@ -27,10 +27,9 @@ namespace AlexaForBusiness {
 
 /*!
  * \class QtAws::AlexaForBusiness::DeleteAddressBookRequest
- *
  * \brief The DeleteAddressBookRequest class provides an interface for AlexaForBusiness DeleteAddressBook requests.
  *
- * \ingroup AlexaForBusiness
+ * \inmodule QtAwsAlexaForBusiness
  *
  *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
  *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
@@ -42,9 +41,7 @@ namespace AlexaForBusiness {
  */
 
 /*!
- * @brief  Constructs a new DeleteAddressBookRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteAddressBookRequest::DeleteAddressBookRequest(const DeleteAddressBookRequest &other)
     : AlexaForBusinessRequest(new DeleteAddressBookRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ DeleteAddressBookRequest::DeleteAddressBookRequest(const DeleteAddressBookReques
 }
 
 /*!
- * @brief  Constructs a new DeleteAddressBookRequest object.
+ * Constructs a DeleteAddressBookRequest object.
  */
 DeleteAddressBookRequest::DeleteAddressBookRequest()
     : AlexaForBusinessRequest(new DeleteAddressBookRequestPrivate(AlexaForBusinessRequest::DeleteAddressBookAction, this))
@@ -71,14 +68,9 @@ bool DeleteAddressBookRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteAddressBookResponse object.
+ * Returns a DeleteAddressBookResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteAddressBookResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AlexaForBusinessClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteAddressBookRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * DeleteAddressBookRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::AlexaForBusiness::DeleteAddressBookRequestPrivate
+ * \brief The DeleteAddressBookRequestPrivate class provides private implementation for DeleteAddressBookRequest.
+ * \internal
  *
- * @class  DeleteAddressBookRequestPrivate
- *
- * @brief  Private implementation for DeleteAddressBookRequest.
+ * \inmodule QtAwsAlexaForBusiness
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteAddressBookRequestPrivate object.
- *
- * @param  action  AlexaForBusiness action being performed.
- * @param  q       Pointer to this object's public DeleteAddressBookRequest instance.
+ * Constructs a DeleteAddressBookRequestPrivate object for AlexaForBusiness \a action with,
+ * public implementation \a q.
  */
 DeleteAddressBookRequestPrivate::DeleteAddressBookRequestPrivate(
     const AlexaForBusinessRequest::Action action, DeleteAddressBookRequest * const q)
@@ -109,15 +98,10 @@ DeleteAddressBookRequestPrivate::DeleteAddressBookRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteAddressBookRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteAddressBookRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteAddressBookRequest instance.
  */
 DeleteAddressBookRequestPrivate::DeleteAddressBookRequestPrivate(
     const DeleteAddressBookRequestPrivate &other, DeleteAddressBookRequest * const q)

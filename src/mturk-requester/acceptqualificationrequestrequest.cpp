@@ -27,19 +27,16 @@ namespace MTurk {
 
 /*!
  * \class QtAws::MTurk::AcceptQualificationRequestRequest
- *
  * \brief The AcceptQualificationRequestRequest class provides an interface for MTurk AcceptQualificationRequest requests.
  *
- * \ingroup MTurk
+ * \inmodule QtAwsMTurk
  *
  *
  * \sa MTurkClient::acceptQualificationRequest
  */
 
 /*!
- * @brief  Constructs a new AcceptQualificationRequestRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AcceptQualificationRequestRequest::AcceptQualificationRequestRequest(const AcceptQualificationRequestRequest &other)
     : MTurkRequest(new AcceptQualificationRequestRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ AcceptQualificationRequestRequest::AcceptQualificationRequestRequest(const Accep
 }
 
 /*!
- * @brief  Constructs a new AcceptQualificationRequestRequest object.
+ * Constructs a AcceptQualificationRequestRequest object.
  */
 AcceptQualificationRequestRequest::AcceptQualificationRequestRequest()
     : MTurkRequest(new AcceptQualificationRequestRequestPrivate(MTurkRequest::AcceptQualificationRequestAction, this))
@@ -66,14 +63,9 @@ bool AcceptQualificationRequestRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AcceptQualificationRequestResponse object.
+ * Returns a AcceptQualificationRequestResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AcceptQualificationRequestResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MTurkClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AcceptQualificationRequestRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * AcceptQualificationRequestRequest::response(Q
 }
 
 /*!
- * @internal
+ * \class QtAws::MTurk::AcceptQualificationRequestRequestPrivate
+ * \brief The AcceptQualificationRequestRequestPrivate class provides private implementation for AcceptQualificationRequestRequest.
+ * \internal
  *
- * @class  AcceptQualificationRequestRequestPrivate
- *
- * @brief  Private implementation for AcceptQualificationRequestRequest.
+ * \inmodule QtAwsMTurk
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AcceptQualificationRequestRequestPrivate object.
- *
- * @param  action  MTurk action being performed.
- * @param  q       Pointer to this object's public AcceptQualificationRequestRequest instance.
+ * Constructs a AcceptQualificationRequestRequestPrivate object for MTurk \a action with,
+ * public implementation \a q.
  */
 AcceptQualificationRequestRequestPrivate::AcceptQualificationRequestRequestPrivate(
     const MTurkRequest::Action action, AcceptQualificationRequestRequest * const q)
@@ -104,15 +93,10 @@ AcceptQualificationRequestRequestPrivate::AcceptQualificationRequestRequestPriva
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AcceptQualificationRequestRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AcceptQualificationRequestRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AcceptQualificationRequestRequest instance.
  */
 AcceptQualificationRequestRequestPrivate::AcceptQualificationRequestRequestPrivate(
     const AcceptQualificationRequestRequestPrivate &other, AcceptQualificationRequestRequest * const q)

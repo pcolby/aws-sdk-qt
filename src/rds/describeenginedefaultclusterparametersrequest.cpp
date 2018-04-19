@@ -27,10 +27,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::DescribeEngineDefaultClusterParametersRequest
- *
  * \brief The DescribeEngineDefaultClusterParametersRequest class provides an interface for RDS DescribeEngineDefaultClusterParameters requests.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -101,9 +100,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new DescribeEngineDefaultClusterParametersRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeEngineDefaultClusterParametersRequest::DescribeEngineDefaultClusterParametersRequest(const DescribeEngineDefaultClusterParametersRequest &other)
     : RDSRequest(new DescribeEngineDefaultClusterParametersRequestPrivate(*other.d_func(), this))
@@ -112,7 +109,7 @@ DescribeEngineDefaultClusterParametersRequest::DescribeEngineDefaultClusterParam
 }
 
 /*!
- * @brief  Constructs a new DescribeEngineDefaultClusterParametersRequest object.
+ * Constructs a DescribeEngineDefaultClusterParametersRequest object.
  */
 DescribeEngineDefaultClusterParametersRequest::DescribeEngineDefaultClusterParametersRequest()
     : RDSRequest(new DescribeEngineDefaultClusterParametersRequestPrivate(RDSRequest::DescribeEngineDefaultClusterParametersAction, this))
@@ -130,14 +127,9 @@ bool DescribeEngineDefaultClusterParametersRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeEngineDefaultClusterParametersResponse object.
+ * Returns a DescribeEngineDefaultClusterParametersResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeEngineDefaultClusterParametersResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RDSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeEngineDefaultClusterParametersRequest::response(QNetworkReply * const reply) const
 {
@@ -145,20 +137,17 @@ QtAws::Core::AwsAbstractResponse * DescribeEngineDefaultClusterParametersRequest
 }
 
 /*!
- * @internal
+ * \class QtAws::RDS::DescribeEngineDefaultClusterParametersRequestPrivate
+ * \brief The DescribeEngineDefaultClusterParametersRequestPrivate class provides private implementation for DescribeEngineDefaultClusterParametersRequest.
+ * \internal
  *
- * @class  DescribeEngineDefaultClusterParametersRequestPrivate
- *
- * @brief  Private implementation for DescribeEngineDefaultClusterParametersRequest.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeEngineDefaultClusterParametersRequestPrivate object.
- *
- * @param  action  RDS action being performed.
- * @param  q       Pointer to this object's public DescribeEngineDefaultClusterParametersRequest instance.
+ * Constructs a DescribeEngineDefaultClusterParametersRequestPrivate object for RDS \a action with,
+ * public implementation \a q.
  */
 DescribeEngineDefaultClusterParametersRequestPrivate::DescribeEngineDefaultClusterParametersRequestPrivate(
     const RDSRequest::Action action, DescribeEngineDefaultClusterParametersRequest * const q)
@@ -168,15 +157,10 @@ DescribeEngineDefaultClusterParametersRequestPrivate::DescribeEngineDefaultClust
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeEngineDefaultClusterParametersRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeEngineDefaultClusterParametersRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeEngineDefaultClusterParametersRequest instance.
  */
 DescribeEngineDefaultClusterParametersRequestPrivate::DescribeEngineDefaultClusterParametersRequestPrivate(
     const DescribeEngineDefaultClusterParametersRequestPrivate &other, DescribeEngineDefaultClusterParametersRequest * const q)

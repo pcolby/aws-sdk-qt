@@ -27,19 +27,16 @@ namespace MediaLive {
 
 /*!
  * \class QtAws::MediaLive::UpdateInputSecurityGroupRequest
- *
  * \brief The UpdateInputSecurityGroupRequest class provides an interface for MediaLive UpdateInputSecurityGroup requests.
  *
- * \ingroup MediaLive
+ * \inmodule QtAwsMediaLive
  *
  *
  * \sa MediaLiveClient::updateInputSecurityGroup
  */
 
 /*!
- * @brief  Constructs a new UpdateInputSecurityGroupRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateInputSecurityGroupRequest::UpdateInputSecurityGroupRequest(const UpdateInputSecurityGroupRequest &other)
     : MediaLiveRequest(new UpdateInputSecurityGroupRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ UpdateInputSecurityGroupRequest::UpdateInputSecurityGroupRequest(const UpdateInp
 }
 
 /*!
- * @brief  Constructs a new UpdateInputSecurityGroupRequest object.
+ * Constructs a UpdateInputSecurityGroupRequest object.
  */
 UpdateInputSecurityGroupRequest::UpdateInputSecurityGroupRequest()
     : MediaLiveRequest(new UpdateInputSecurityGroupRequestPrivate(MediaLiveRequest::UpdateInputSecurityGroupAction, this))
@@ -66,14 +63,9 @@ bool UpdateInputSecurityGroupRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateInputSecurityGroupResponse object.
+ * Returns a UpdateInputSecurityGroupResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateInputSecurityGroupResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MediaLiveClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateInputSecurityGroupRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * UpdateInputSecurityGroupRequest::response(QNe
 }
 
 /*!
- * @internal
+ * \class QtAws::MediaLive::UpdateInputSecurityGroupRequestPrivate
+ * \brief The UpdateInputSecurityGroupRequestPrivate class provides private implementation for UpdateInputSecurityGroupRequest.
+ * \internal
  *
- * @class  UpdateInputSecurityGroupRequestPrivate
- *
- * @brief  Private implementation for UpdateInputSecurityGroupRequest.
+ * \inmodule QtAwsMediaLive
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateInputSecurityGroupRequestPrivate object.
- *
- * @param  action  MediaLive action being performed.
- * @param  q       Pointer to this object's public UpdateInputSecurityGroupRequest instance.
+ * Constructs a UpdateInputSecurityGroupRequestPrivate object for MediaLive \a action with,
+ * public implementation \a q.
  */
 UpdateInputSecurityGroupRequestPrivate::UpdateInputSecurityGroupRequestPrivate(
     const MediaLiveRequest::Action action, UpdateInputSecurityGroupRequest * const q)
@@ -104,15 +93,10 @@ UpdateInputSecurityGroupRequestPrivate::UpdateInputSecurityGroupRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateInputSecurityGroupRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateInputSecurityGroupRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateInputSecurityGroupRequest instance.
  */
 UpdateInputSecurityGroupRequestPrivate::UpdateInputSecurityGroupRequestPrivate(
     const UpdateInputSecurityGroupRequestPrivate &other, UpdateInputSecurityGroupRequest * const q)

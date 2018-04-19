@@ -27,10 +27,9 @@ namespace Lightsail {
 
 /*!
  * \class QtAws::Lightsail::GetOperationsRequest
- *
  * \brief The GetOperationsRequest class provides an interface for Lightsail GetOperations requests.
  *
- * \ingroup Lightsail
+ * \inmodule QtAwsLightsail
  *
  *  Amazon Lightsail is the easiest way to get started with AWS for developers who just need virtual private servers.
  *  Lightsail includes everything you need to launch your project quickly - a virtual machine, SSD-based storage, data
@@ -53,9 +52,7 @@ namespace Lightsail {
  */
 
 /*!
- * @brief  Constructs a new GetOperationsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetOperationsRequest::GetOperationsRequest(const GetOperationsRequest &other)
     : LightsailRequest(new GetOperationsRequestPrivate(*other.d_func(), this))
@@ -64,7 +61,7 @@ GetOperationsRequest::GetOperationsRequest(const GetOperationsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetOperationsRequest object.
+ * Constructs a GetOperationsRequest object.
  */
 GetOperationsRequest::GetOperationsRequest()
     : LightsailRequest(new GetOperationsRequestPrivate(LightsailRequest::GetOperationsAction, this))
@@ -82,14 +79,9 @@ bool GetOperationsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetOperationsResponse object.
+ * Returns a GetOperationsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetOperationsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  LightsailClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetOperationsRequest::response(QNetworkReply * const reply) const
 {
@@ -97,20 +89,17 @@ QtAws::Core::AwsAbstractResponse * GetOperationsRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::Lightsail::GetOperationsRequestPrivate
+ * \brief The GetOperationsRequestPrivate class provides private implementation for GetOperationsRequest.
+ * \internal
  *
- * @class  GetOperationsRequestPrivate
- *
- * @brief  Private implementation for GetOperationsRequest.
+ * \inmodule QtAwsLightsail
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetOperationsRequestPrivate object.
- *
- * @param  action  Lightsail action being performed.
- * @param  q       Pointer to this object's public GetOperationsRequest instance.
+ * Constructs a GetOperationsRequestPrivate object for Lightsail \a action with,
+ * public implementation \a q.
  */
 GetOperationsRequestPrivate::GetOperationsRequestPrivate(
     const LightsailRequest::Action action, GetOperationsRequest * const q)
@@ -120,15 +109,10 @@ GetOperationsRequestPrivate::GetOperationsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetOperationsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetOperationsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetOperationsRequest instance.
  */
 GetOperationsRequestPrivate::GetOperationsRequestPrivate(
     const GetOperationsRequestPrivate &other, GetOperationsRequest * const q)

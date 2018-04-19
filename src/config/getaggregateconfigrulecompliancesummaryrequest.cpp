@@ -27,10 +27,9 @@ namespace ConfigService {
 
 /*!
  * \class QtAws::ConfigService::GetAggregateConfigRuleComplianceSummaryRequest
- *
  * \brief The GetAggregateConfigRuleComplianceSummaryRequest class provides an interface for ConfigService GetAggregateConfigRuleComplianceSummary requests.
  *
- * \ingroup ConfigService
+ * \inmodule QtAwsConfigService
  *
  *  <fullname>AWS Config</fullname>
  * 
@@ -60,9 +59,7 @@ namespace ConfigService {
  */
 
 /*!
- * @brief  Constructs a new GetAggregateConfigRuleComplianceSummaryRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetAggregateConfigRuleComplianceSummaryRequest::GetAggregateConfigRuleComplianceSummaryRequest(const GetAggregateConfigRuleComplianceSummaryRequest &other)
     : ConfigServiceRequest(new GetAggregateConfigRuleComplianceSummaryRequestPrivate(*other.d_func(), this))
@@ -71,7 +68,7 @@ GetAggregateConfigRuleComplianceSummaryRequest::GetAggregateConfigRuleCompliance
 }
 
 /*!
- * @brief  Constructs a new GetAggregateConfigRuleComplianceSummaryRequest object.
+ * Constructs a GetAggregateConfigRuleComplianceSummaryRequest object.
  */
 GetAggregateConfigRuleComplianceSummaryRequest::GetAggregateConfigRuleComplianceSummaryRequest()
     : ConfigServiceRequest(new GetAggregateConfigRuleComplianceSummaryRequestPrivate(ConfigServiceRequest::GetAggregateConfigRuleComplianceSummaryAction, this))
@@ -89,14 +86,9 @@ bool GetAggregateConfigRuleComplianceSummaryRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetAggregateConfigRuleComplianceSummaryResponse object.
+ * Returns a GetAggregateConfigRuleComplianceSummaryResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetAggregateConfigRuleComplianceSummaryResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ConfigServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetAggregateConfigRuleComplianceSummaryRequest::response(QNetworkReply * const reply) const
 {
@@ -104,20 +96,17 @@ QtAws::Core::AwsAbstractResponse * GetAggregateConfigRuleComplianceSummaryReques
 }
 
 /*!
- * @internal
+ * \class QtAws::ConfigService::GetAggregateConfigRuleComplianceSummaryRequestPrivate
+ * \brief The GetAggregateConfigRuleComplianceSummaryRequestPrivate class provides private implementation for GetAggregateConfigRuleComplianceSummaryRequest.
+ * \internal
  *
- * @class  GetAggregateConfigRuleComplianceSummaryRequestPrivate
- *
- * @brief  Private implementation for GetAggregateConfigRuleComplianceSummaryRequest.
+ * \inmodule QtAwsConfigService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetAggregateConfigRuleComplianceSummaryRequestPrivate object.
- *
- * @param  action  ConfigService action being performed.
- * @param  q       Pointer to this object's public GetAggregateConfigRuleComplianceSummaryRequest instance.
+ * Constructs a GetAggregateConfigRuleComplianceSummaryRequestPrivate object for ConfigService \a action with,
+ * public implementation \a q.
  */
 GetAggregateConfigRuleComplianceSummaryRequestPrivate::GetAggregateConfigRuleComplianceSummaryRequestPrivate(
     const ConfigServiceRequest::Action action, GetAggregateConfigRuleComplianceSummaryRequest * const q)
@@ -127,15 +116,10 @@ GetAggregateConfigRuleComplianceSummaryRequestPrivate::GetAggregateConfigRuleCom
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetAggregateConfigRuleComplianceSummaryRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetAggregateConfigRuleComplianceSummaryRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetAggregateConfigRuleComplianceSummaryRequest instance.
  */
 GetAggregateConfigRuleComplianceSummaryRequestPrivate::GetAggregateConfigRuleComplianceSummaryRequestPrivate(
     const GetAggregateConfigRuleComplianceSummaryRequestPrivate &other, GetAggregateConfigRuleComplianceSummaryRequest * const q)

@@ -27,10 +27,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::ResyncMFADeviceRequest
- *
  * \brief The ResyncMFADeviceRequest class provides an interface for IAM ResyncMFADevice requests.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -102,9 +101,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new ResyncMFADeviceRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ResyncMFADeviceRequest::ResyncMFADeviceRequest(const ResyncMFADeviceRequest &other)
     : IAMRequest(new ResyncMFADeviceRequestPrivate(*other.d_func(), this))
@@ -113,7 +110,7 @@ ResyncMFADeviceRequest::ResyncMFADeviceRequest(const ResyncMFADeviceRequest &oth
 }
 
 /*!
- * @brief  Constructs a new ResyncMFADeviceRequest object.
+ * Constructs a ResyncMFADeviceRequest object.
  */
 ResyncMFADeviceRequest::ResyncMFADeviceRequest()
     : IAMRequest(new ResyncMFADeviceRequestPrivate(IAMRequest::ResyncMFADeviceAction, this))
@@ -131,14 +128,9 @@ bool ResyncMFADeviceRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ResyncMFADeviceResponse object.
+ * Returns a ResyncMFADeviceResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ResyncMFADeviceResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IAMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ResyncMFADeviceRequest::response(QNetworkReply * const reply) const
 {
@@ -146,20 +138,17 @@ QtAws::Core::AwsAbstractResponse * ResyncMFADeviceRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::IAM::ResyncMFADeviceRequestPrivate
+ * \brief The ResyncMFADeviceRequestPrivate class provides private implementation for ResyncMFADeviceRequest.
+ * \internal
  *
- * @class  ResyncMFADeviceRequestPrivate
- *
- * @brief  Private implementation for ResyncMFADeviceRequest.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ResyncMFADeviceRequestPrivate object.
- *
- * @param  action  IAM action being performed.
- * @param  q       Pointer to this object's public ResyncMFADeviceRequest instance.
+ * Constructs a ResyncMFADeviceRequestPrivate object for IAM \a action with,
+ * public implementation \a q.
  */
 ResyncMFADeviceRequestPrivate::ResyncMFADeviceRequestPrivate(
     const IAMRequest::Action action, ResyncMFADeviceRequest * const q)
@@ -169,15 +158,10 @@ ResyncMFADeviceRequestPrivate::ResyncMFADeviceRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ResyncMFADeviceRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ResyncMFADeviceRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ResyncMFADeviceRequest instance.
  */
 ResyncMFADeviceRequestPrivate::ResyncMFADeviceRequestPrivate(
     const ResyncMFADeviceRequestPrivate &other, ResyncMFADeviceRequest * const q)

@@ -27,10 +27,9 @@ namespace ResourceGroups {
 
 /*!
  * \class QtAws::ResourceGroups::UpdateGroupRequest
- *
  * \brief The UpdateGroupRequest class provides an interface for ResourceGroups UpdateGroup requests.
  *
- * \ingroup ResourceGroups
+ * \inmodule QtAwsResourceGroups
  *
  *  <fullname>AWS Resource Groups</fullname>
  * 
@@ -81,9 +80,7 @@ namespace ResourceGroups {
  */
 
 /*!
- * @brief  Constructs a new UpdateGroupRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateGroupRequest::UpdateGroupRequest(const UpdateGroupRequest &other)
     : ResourceGroupsRequest(new UpdateGroupRequestPrivate(*other.d_func(), this))
@@ -92,7 +89,7 @@ UpdateGroupRequest::UpdateGroupRequest(const UpdateGroupRequest &other)
 }
 
 /*!
- * @brief  Constructs a new UpdateGroupRequest object.
+ * Constructs a UpdateGroupRequest object.
  */
 UpdateGroupRequest::UpdateGroupRequest()
     : ResourceGroupsRequest(new UpdateGroupRequestPrivate(ResourceGroupsRequest::UpdateGroupAction, this))
@@ -110,14 +107,9 @@ bool UpdateGroupRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateGroupResponse object.
+ * Returns a UpdateGroupResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateGroupResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ResourceGroupsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateGroupRequest::response(QNetworkReply * const reply) const
 {
@@ -125,20 +117,17 @@ QtAws::Core::AwsAbstractResponse * UpdateGroupRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::ResourceGroups::UpdateGroupRequestPrivate
+ * \brief The UpdateGroupRequestPrivate class provides private implementation for UpdateGroupRequest.
+ * \internal
  *
- * @class  UpdateGroupRequestPrivate
- *
- * @brief  Private implementation for UpdateGroupRequest.
+ * \inmodule QtAwsResourceGroups
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateGroupRequestPrivate object.
- *
- * @param  action  ResourceGroups action being performed.
- * @param  q       Pointer to this object's public UpdateGroupRequest instance.
+ * Constructs a UpdateGroupRequestPrivate object for ResourceGroups \a action with,
+ * public implementation \a q.
  */
 UpdateGroupRequestPrivate::UpdateGroupRequestPrivate(
     const ResourceGroupsRequest::Action action, UpdateGroupRequest * const q)
@@ -148,15 +137,10 @@ UpdateGroupRequestPrivate::UpdateGroupRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateGroupRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateGroupRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateGroupRequest instance.
  */
 UpdateGroupRequestPrivate::UpdateGroupRequestPrivate(
     const UpdateGroupRequestPrivate &other, UpdateGroupRequest * const q)

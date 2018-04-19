@@ -25,16 +25,52 @@ namespace ECS {
 
 /*!
  * \class QtAws::ECS::ECSRequest
- *
  * \brief The ECSRequest class provides an interface for ECS requests.
  *
- * \ingroup ECS
+ * \inmodule QtAwsECS
  */
 
 /*!
- * @brief  Constructs a new ECSRequest object.
+ * \enum ECSRequest::Action
  *
- * @param  action  The ECS action to request.
+ * This enum describes the actions that can be performed as ECS
+ * requests.
+ *
+ * \value CreateClusterAction ECS CreateCluster action.
+ * \value CreateServiceAction ECS CreateService action.
+ * \value DeleteAttributesAction ECS DeleteAttributes action.
+ * \value DeleteClusterAction ECS DeleteCluster action.
+ * \value DeleteServiceAction ECS DeleteService action.
+ * \value DeregisterContainerInstanceAction ECS DeregisterContainerInstance action.
+ * \value DeregisterTaskDefinitionAction ECS DeregisterTaskDefinition action.
+ * \value DescribeClustersAction ECS DescribeClusters action.
+ * \value DescribeContainerInstancesAction ECS DescribeContainerInstances action.
+ * \value DescribeServicesAction ECS DescribeServices action.
+ * \value DescribeTaskDefinitionAction ECS DescribeTaskDefinition action.
+ * \value DescribeTasksAction ECS DescribeTasks action.
+ * \value DiscoverPollEndpointAction ECS DiscoverPollEndpoint action.
+ * \value ListAttributesAction ECS ListAttributes action.
+ * \value ListClustersAction ECS ListClusters action.
+ * \value ListContainerInstancesAction ECS ListContainerInstances action.
+ * \value ListServicesAction ECS ListServices action.
+ * \value ListTaskDefinitionFamiliesAction ECS ListTaskDefinitionFamilies action.
+ * \value ListTaskDefinitionsAction ECS ListTaskDefinitions action.
+ * \value ListTasksAction ECS ListTasks action.
+ * \value PutAttributesAction ECS PutAttributes action.
+ * \value RegisterContainerInstanceAction ECS RegisterContainerInstance action.
+ * \value RegisterTaskDefinitionAction ECS RegisterTaskDefinition action.
+ * \value RunTaskAction ECS RunTask action.
+ * \value StartTaskAction ECS StartTask action.
+ * \value StopTaskAction ECS StopTask action.
+ * \value SubmitContainerStateChangeAction ECS SubmitContainerStateChange action.
+ * \value SubmitTaskStateChangeAction ECS SubmitTaskStateChange action.
+ * \value UpdateContainerAgentAction ECS UpdateContainerAgent action.
+ * \value UpdateContainerInstancesStateAction ECS UpdateContainerInstancesState action.
+ * \value UpdateServiceAction ECS UpdateService action.
+ */
+
+/*!
+ * Constructs a[n] ECSRequest object for ECS \a action.
  */
 ECSRequest::ECSRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new ECSRequestPrivate(action, this))
@@ -43,9 +79,7 @@ ECSRequest::ECSRequest(const Action action)
 }
 
 /*!
- * @brief  Constructs a new ECSRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ECSRequest::ECSRequest(const ECSRequest &other)
     : QtAws::Core::AwsAbstractRequest(new ECSRequestPrivate(*other.d_func(), this))
@@ -54,13 +88,7 @@ ECSRequest::ECSRequest(const ECSRequest &other)
 }
 
 /*!
- * @brief  Assignment operator.
- *
- * Assigns \a other to \c this.
- *
- * @param  other  Instance to copy.
- *
- * @return  A reference to \c this.
+ * Sets the ECSRequest object to be equal to \a other.
  */
 ECSRequest& ECSRequest::operator=(const ECSRequest &other)
 {
@@ -72,14 +100,10 @@ ECSRequest& ECSRequest::operator=(const ECSRequest &other)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ECSRequest object.
+ * Constructs aa ECSRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from ECSRequestPrivate.
- *
- * @param  d  Pointer to private data (aka D-Pointer).
  */
 ECSRequest::ECSRequest(ECSRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
@@ -87,7 +111,7 @@ ECSRequest::ECSRequest(ECSRequestPrivate * const d) : QtAws::Core::AwsAbstractRe
 }
 
 /*!
- * \brief Returns the ECS action to be performed by this request.
+ * Returns the ECS action to be performed by this request.
  */
 ECSRequest::Action ECSRequest::action() const
 {
@@ -96,7 +120,7 @@ ECSRequest::Action ECSRequest::action() const
 }
 
 /*!
- * \brief Returns the name of the ECS action to be performed by this request.
+ * Returns the name of the ECS action to be performed by this request.
  */
 QString ECSRequest::actionString() const
 {
@@ -104,7 +128,7 @@ QString ECSRequest::actionString() const
 }
 
 /*!
- * \brief Returns the ECS API version implemented by this request.
+ * Returns the ECS API version implemented by this request.
  */
 QString ECSRequest::apiVersion() const
 {
@@ -113,7 +137,7 @@ QString ECSRequest::apiVersion() const
 }
 
 /*!
- * @brief Set the ECS action to be performed by this request to \a action.
+ * Sets the ECS action to be performed by this request to \a action.
  */
 void ECSRequest::setAction(const Action action)
 {
@@ -122,7 +146,7 @@ void ECSRequest::setAction(const Action action)
 }
 
 /*!
- * Set the ECS API version to include in this request to \a version.
+ * Sets the ECS API version to include in this request to \a version.
  */
 void ECSRequest::setApiVersion(const QString &version)
 {
@@ -131,7 +155,7 @@ void ECSRequest::setApiVersion(const QString &version)
 }
 
 /*!
- * \brief Returns \c true if this request is the same as \a other.
+ * Returns \c true if this request is equal to \a other; \c false otherwise.
  *
  * Note, most derived *Request classes do not need to provider their own
  * implementations of this function, since most such request classes rely on
@@ -146,8 +170,8 @@ bool ECSRequest::operator==(const ECSRequest &other) const
             (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
-/*!
- * @brief  Check if \a queueName is a valid ECS queue name.
+/*
+ * Returns \c tue if \a queueName is a valid ECS queue name.
  *
  * @par From ECS FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
@@ -166,9 +190,8 @@ bool ECSRequest::operator==(const ECSRequest &other) const
 }*/
 
 /*!
- * \brief Removes the a \a name parameter from this request.
- *
- * Returns the count of paramters removed (typically \c 0 or \c 1).
+ * Removes the a \a name parameter from the request, then returns the number of
+ * paramters removed (typically \c 0 or \c 1).
  */
 int ECSRequest::clearParameter(const QString &name)
 {
@@ -177,7 +200,7 @@ int ECSRequest::clearParameter(const QString &name)
 }
 
 /*!
- * \brief Removes all parameters from this request.
+ * Removes all parameters from the request.
  */
 void ECSRequest::clearParameters()
 {
@@ -186,7 +209,7 @@ void ECSRequest::clearParameters()
 }
 
 /*!
- * \brief Returns the value of the \n name pararemter if set, otherwise \a defaultValue.
+ * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
 QVariant ECSRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
@@ -195,7 +218,7 @@ QVariant ECSRequest::parameter(const QString &name, const QVariant &defaultValue
 }
 
 /*!
- * \brief Returns a map of parameters included in this request.
+ * Returns the parameters included in this request.
  */
 const QVariantMap &ECSRequest::parameters() const
 {
@@ -204,7 +227,7 @@ const QVariantMap &ECSRequest::parameters() const
 }
 
 /*!
- * \brief Sets the \a name parameter to \a value.
+ * Sets the \a name parameter to \a value.
  */
 void ECSRequest::setParameter(const QString &name, const QVariant &value)
 {
@@ -213,9 +236,8 @@ void ECSRequest::setParameter(const QString &name, const QVariant &value)
 }
 
 /*!
- * \brief Sets the map of paramters for this request to \a parameters.
- *
- * Any request parameters set previously will be discarded.
+ * Sets the paramters for this request to \a parameters. Any request parameters
+ * set previously will be discarded.
  */
 void ECSRequest::setParameters(const QVariantMap &parameters)
 {
@@ -224,11 +246,12 @@ void ECSRequest::setParameters(const QVariantMap &parameters)
 }
 
 /*!
- * \brief Returns a network request for this ECS request using the given \a endpoint.
+ * Returns a network request for the ECS request using the given
+ * \a endpoint.
  *
- * This ECS implementation builds request URLs by combining the common query
- * parameters (such as Action and Version), with any that have been added (via
- * setParameter) by child classes.
+ * This ECS implementation builds request URLs by combining the
+ * common query parameters (such as Action and Version), with any that have
+ * been added (via setParameter) by child classes.
  */
 QNetworkRequest ECSRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -239,17 +262,16 @@ QNetworkRequest ECSRequest::unsignedRequest(const QUrl &endpoint) const
 }
 
 /*!
+ * \class QtAws::ECS::ECSRequestPrivate
+ * \brief The ECSRequestPrivate class provides private implementation for ECSRequest.
  * \internal
  *
- * \class  ECSRequestPrivate
- *
- * \brief  Private implementation for ECSRequest.
+ * \inmodule QtAwsECS
  */
 
 /*!
- * \internal
- *
- * \brief Constructs a new ECSRequestPrivate object.
+ * Constructs a ECSRequestPrivate object for ECS \a action with,
+ * public implementation \a q.
  */
 ECSRequestPrivate::ECSRequestPrivate(const ECSRequest::Action action, ECSRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
@@ -258,9 +280,7 @@ ECSRequestPrivate::ECSRequestPrivate(const ECSRequest::Action action, ECSRequest
 }
 
 /*!
- * \internal
- *
- * \brief Constructs a new ECSRequestPrivate object, copying an existing one.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
@@ -276,15 +296,12 @@ ECSRequestPrivate::ECSRequestPrivate(const ECSRequestPrivate &other,
 }
 
 /*!
- * \internal
- *
- * \brief Returns a string representing \a action.
+ * Returns a string represention of \a action, or a null string if \a action is
+ * invalid.
  *
  * This function converts ECSRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the ECS service's Action
  * query parameters.
- *
- * @return A string representing \a action, or a null string if \a action is invalid.
  */
 QString ECSRequestPrivate::toString(const ECSRequest::Action &action)
 {

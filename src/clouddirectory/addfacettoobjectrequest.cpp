@@ -27,10 +27,9 @@ namespace CloudDirectory {
 
 /*!
  * \class QtAws::CloudDirectory::AddFacetToObjectRequest
- *
  * \brief The AddFacetToObjectRequest class provides an interface for CloudDirectory AddFacetToObject requests.
  *
- * \ingroup CloudDirectory
+ * \inmodule QtAwsCloudDirectory
  *
  *  <fullname>Amazon Cloud Directory</fullname>
  * 
@@ -44,9 +43,7 @@ namespace CloudDirectory {
  */
 
 /*!
- * @brief  Constructs a new AddFacetToObjectRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AddFacetToObjectRequest::AddFacetToObjectRequest(const AddFacetToObjectRequest &other)
     : CloudDirectoryRequest(new AddFacetToObjectRequestPrivate(*other.d_func(), this))
@@ -55,7 +52,7 @@ AddFacetToObjectRequest::AddFacetToObjectRequest(const AddFacetToObjectRequest &
 }
 
 /*!
- * @brief  Constructs a new AddFacetToObjectRequest object.
+ * Constructs a AddFacetToObjectRequest object.
  */
 AddFacetToObjectRequest::AddFacetToObjectRequest()
     : CloudDirectoryRequest(new AddFacetToObjectRequestPrivate(CloudDirectoryRequest::AddFacetToObjectAction, this))
@@ -73,14 +70,9 @@ bool AddFacetToObjectRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AddFacetToObjectResponse object.
+ * Returns a AddFacetToObjectResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AddFacetToObjectResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudDirectoryClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AddFacetToObjectRequest::response(QNetworkReply * const reply) const
 {
@@ -88,20 +80,17 @@ QtAws::Core::AwsAbstractResponse * AddFacetToObjectRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudDirectory::AddFacetToObjectRequestPrivate
+ * \brief The AddFacetToObjectRequestPrivate class provides private implementation for AddFacetToObjectRequest.
+ * \internal
  *
- * @class  AddFacetToObjectRequestPrivate
- *
- * @brief  Private implementation for AddFacetToObjectRequest.
+ * \inmodule QtAwsCloudDirectory
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AddFacetToObjectRequestPrivate object.
- *
- * @param  action  CloudDirectory action being performed.
- * @param  q       Pointer to this object's public AddFacetToObjectRequest instance.
+ * Constructs a AddFacetToObjectRequestPrivate object for CloudDirectory \a action with,
+ * public implementation \a q.
  */
 AddFacetToObjectRequestPrivate::AddFacetToObjectRequestPrivate(
     const CloudDirectoryRequest::Action action, AddFacetToObjectRequest * const q)
@@ -111,15 +100,10 @@ AddFacetToObjectRequestPrivate::AddFacetToObjectRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AddFacetToObjectRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AddFacetToObjectRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AddFacetToObjectRequest instance.
  */
 AddFacetToObjectRequestPrivate::AddFacetToObjectRequestPrivate(
     const AddFacetToObjectRequestPrivate &other, AddFacetToObjectRequest * const q)

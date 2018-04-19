@@ -27,10 +27,9 @@ namespace WorkMail {
 
 /*!
  * \class QtAws::WorkMail::AssociateDelegateToResourceRequest
- *
  * \brief The AssociateDelegateToResourceRequest class provides an interface for WorkMail AssociateDelegateToResource requests.
  *
- * \ingroup WorkMail
+ * \inmodule QtAwsWorkMail
  *
  *  Amazon WorkMail is a secure, managed business email and calendaring service with support for existing desktop and mobile
  *  email clients. You can access your email, contacts, and calendars using Microsoft Outlook, your browser, or their native
@@ -70,9 +69,7 @@ namespace WorkMail {
  */
 
 /*!
- * @brief  Constructs a new AssociateDelegateToResourceRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AssociateDelegateToResourceRequest::AssociateDelegateToResourceRequest(const AssociateDelegateToResourceRequest &other)
     : WorkMailRequest(new AssociateDelegateToResourceRequestPrivate(*other.d_func(), this))
@@ -81,7 +78,7 @@ AssociateDelegateToResourceRequest::AssociateDelegateToResourceRequest(const Ass
 }
 
 /*!
- * @brief  Constructs a new AssociateDelegateToResourceRequest object.
+ * Constructs a AssociateDelegateToResourceRequest object.
  */
 AssociateDelegateToResourceRequest::AssociateDelegateToResourceRequest()
     : WorkMailRequest(new AssociateDelegateToResourceRequestPrivate(WorkMailRequest::AssociateDelegateToResourceAction, this))
@@ -99,14 +96,9 @@ bool AssociateDelegateToResourceRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AssociateDelegateToResourceResponse object.
+ * Returns a AssociateDelegateToResourceResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AssociateDelegateToResourceResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WorkMailClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AssociateDelegateToResourceRequest::response(QNetworkReply * const reply) const
 {
@@ -114,20 +106,17 @@ QtAws::Core::AwsAbstractResponse * AssociateDelegateToResourceRequest::response(
 }
 
 /*!
- * @internal
+ * \class QtAws::WorkMail::AssociateDelegateToResourceRequestPrivate
+ * \brief The AssociateDelegateToResourceRequestPrivate class provides private implementation for AssociateDelegateToResourceRequest.
+ * \internal
  *
- * @class  AssociateDelegateToResourceRequestPrivate
- *
- * @brief  Private implementation for AssociateDelegateToResourceRequest.
+ * \inmodule QtAwsWorkMail
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AssociateDelegateToResourceRequestPrivate object.
- *
- * @param  action  WorkMail action being performed.
- * @param  q       Pointer to this object's public AssociateDelegateToResourceRequest instance.
+ * Constructs a AssociateDelegateToResourceRequestPrivate object for WorkMail \a action with,
+ * public implementation \a q.
  */
 AssociateDelegateToResourceRequestPrivate::AssociateDelegateToResourceRequestPrivate(
     const WorkMailRequest::Action action, AssociateDelegateToResourceRequest * const q)
@@ -137,15 +126,10 @@ AssociateDelegateToResourceRequestPrivate::AssociateDelegateToResourceRequestPri
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AssociateDelegateToResourceRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AssociateDelegateToResourceRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AssociateDelegateToResourceRequest instance.
  */
 AssociateDelegateToResourceRequestPrivate::AssociateDelegateToResourceRequestPrivate(
     const AssociateDelegateToResourceRequestPrivate &other, AssociateDelegateToResourceRequest * const q)

@@ -27,10 +27,9 @@ namespace Greengrass {
 
 /*!
  * \class QtAws::Greengrass::GetAssociatedRoleRequest
- *
  * \brief The GetAssociatedRoleRequest class provides an interface for Greengrass GetAssociatedRole requests.
  *
- * \ingroup Greengrass
+ * \inmodule QtAwsGreengrass
  *
  *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
  *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
@@ -40,9 +39,7 @@ namespace Greengrass {
  */
 
 /*!
- * @brief  Constructs a new GetAssociatedRoleRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetAssociatedRoleRequest::GetAssociatedRoleRequest(const GetAssociatedRoleRequest &other)
     : GreengrassRequest(new GetAssociatedRoleRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ GetAssociatedRoleRequest::GetAssociatedRoleRequest(const GetAssociatedRoleReques
 }
 
 /*!
- * @brief  Constructs a new GetAssociatedRoleRequest object.
+ * Constructs a GetAssociatedRoleRequest object.
  */
 GetAssociatedRoleRequest::GetAssociatedRoleRequest()
     : GreengrassRequest(new GetAssociatedRoleRequestPrivate(GreengrassRequest::GetAssociatedRoleAction, this))
@@ -69,14 +66,9 @@ bool GetAssociatedRoleRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetAssociatedRoleResponse object.
+ * Returns a GetAssociatedRoleResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetAssociatedRoleResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GreengrassClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetAssociatedRoleRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * GetAssociatedRoleRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::Greengrass::GetAssociatedRoleRequestPrivate
+ * \brief The GetAssociatedRoleRequestPrivate class provides private implementation for GetAssociatedRoleRequest.
+ * \internal
  *
- * @class  GetAssociatedRoleRequestPrivate
- *
- * @brief  Private implementation for GetAssociatedRoleRequest.
+ * \inmodule QtAwsGreengrass
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetAssociatedRoleRequestPrivate object.
- *
- * @param  action  Greengrass action being performed.
- * @param  q       Pointer to this object's public GetAssociatedRoleRequest instance.
+ * Constructs a GetAssociatedRoleRequestPrivate object for Greengrass \a action with,
+ * public implementation \a q.
  */
 GetAssociatedRoleRequestPrivate::GetAssociatedRoleRequestPrivate(
     const GreengrassRequest::Action action, GetAssociatedRoleRequest * const q)
@@ -107,15 +96,10 @@ GetAssociatedRoleRequestPrivate::GetAssociatedRoleRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetAssociatedRoleRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetAssociatedRoleRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetAssociatedRoleRequest instance.
  */
 GetAssociatedRoleRequestPrivate::GetAssociatedRoleRequestPrivate(
     const GetAssociatedRoleRequestPrivate &other, GetAssociatedRoleRequest * const q)

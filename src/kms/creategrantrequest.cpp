@@ -27,10 +27,9 @@ namespace KMS {
 
 /*!
  * \class QtAws::KMS::CreateGrantRequest
- *
  * \brief The CreateGrantRequest class provides an interface for KMS CreateGrant requests.
  *
- * \ingroup KMS
+ * \inmodule QtAwsKMS
  *
  *  <fullname>AWS Key Management Service</fullname>
  * 
@@ -136,9 +135,7 @@ namespace KMS {
  */
 
 /*!
- * @brief  Constructs a new CreateGrantRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateGrantRequest::CreateGrantRequest(const CreateGrantRequest &other)
     : KMSRequest(new CreateGrantRequestPrivate(*other.d_func(), this))
@@ -147,7 +144,7 @@ CreateGrantRequest::CreateGrantRequest(const CreateGrantRequest &other)
 }
 
 /*!
- * @brief  Constructs a new CreateGrantRequest object.
+ * Constructs a CreateGrantRequest object.
  */
 CreateGrantRequest::CreateGrantRequest()
     : KMSRequest(new CreateGrantRequestPrivate(KMSRequest::CreateGrantAction, this))
@@ -165,14 +162,9 @@ bool CreateGrantRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateGrantResponse object.
+ * Returns a CreateGrantResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateGrantResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  KMSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateGrantRequest::response(QNetworkReply * const reply) const
 {
@@ -180,20 +172,17 @@ QtAws::Core::AwsAbstractResponse * CreateGrantRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::KMS::CreateGrantRequestPrivate
+ * \brief The CreateGrantRequestPrivate class provides private implementation for CreateGrantRequest.
+ * \internal
  *
- * @class  CreateGrantRequestPrivate
- *
- * @brief  Private implementation for CreateGrantRequest.
+ * \inmodule QtAwsKMS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateGrantRequestPrivate object.
- *
- * @param  action  KMS action being performed.
- * @param  q       Pointer to this object's public CreateGrantRequest instance.
+ * Constructs a CreateGrantRequestPrivate object for KMS \a action with,
+ * public implementation \a q.
  */
 CreateGrantRequestPrivate::CreateGrantRequestPrivate(
     const KMSRequest::Action action, CreateGrantRequest * const q)
@@ -203,15 +192,10 @@ CreateGrantRequestPrivate::CreateGrantRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateGrantRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateGrantRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateGrantRequest instance.
  */
 CreateGrantRequestPrivate::CreateGrantRequestPrivate(
     const CreateGrantRequestPrivate &other, CreateGrantRequest * const q)

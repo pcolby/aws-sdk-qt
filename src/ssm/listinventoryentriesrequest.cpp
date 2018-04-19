@@ -27,10 +27,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::ListInventoryEntriesRequest
- *
  * \brief The ListInventoryEntriesRequest class provides an interface for SSM ListInventoryEntries requests.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -61,9 +60,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new ListInventoryEntriesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListInventoryEntriesRequest::ListInventoryEntriesRequest(const ListInventoryEntriesRequest &other)
     : SSMRequest(new ListInventoryEntriesRequestPrivate(*other.d_func(), this))
@@ -72,7 +69,7 @@ ListInventoryEntriesRequest::ListInventoryEntriesRequest(const ListInventoryEntr
 }
 
 /*!
- * @brief  Constructs a new ListInventoryEntriesRequest object.
+ * Constructs a ListInventoryEntriesRequest object.
  */
 ListInventoryEntriesRequest::ListInventoryEntriesRequest()
     : SSMRequest(new ListInventoryEntriesRequestPrivate(SSMRequest::ListInventoryEntriesAction, this))
@@ -90,14 +87,9 @@ bool ListInventoryEntriesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListInventoryEntriesResponse object.
+ * Returns a ListInventoryEntriesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListInventoryEntriesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SSMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListInventoryEntriesRequest::response(QNetworkReply * const reply) const
 {
@@ -105,20 +97,17 @@ QtAws::Core::AwsAbstractResponse * ListInventoryEntriesRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::SSM::ListInventoryEntriesRequestPrivate
+ * \brief The ListInventoryEntriesRequestPrivate class provides private implementation for ListInventoryEntriesRequest.
+ * \internal
  *
- * @class  ListInventoryEntriesRequestPrivate
- *
- * @brief  Private implementation for ListInventoryEntriesRequest.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListInventoryEntriesRequestPrivate object.
- *
- * @param  action  SSM action being performed.
- * @param  q       Pointer to this object's public ListInventoryEntriesRequest instance.
+ * Constructs a ListInventoryEntriesRequestPrivate object for SSM \a action with,
+ * public implementation \a q.
  */
 ListInventoryEntriesRequestPrivate::ListInventoryEntriesRequestPrivate(
     const SSMRequest::Action action, ListInventoryEntriesRequest * const q)
@@ -128,15 +117,10 @@ ListInventoryEntriesRequestPrivate::ListInventoryEntriesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListInventoryEntriesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListInventoryEntriesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListInventoryEntriesRequest instance.
  */
 ListInventoryEntriesRequestPrivate::ListInventoryEntriesRequestPrivate(
     const ListInventoryEntriesRequestPrivate &other, ListInventoryEntriesRequest * const q)

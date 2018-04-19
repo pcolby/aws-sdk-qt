@@ -27,10 +27,9 @@ namespace ECS {
 
 /*!
  * \class QtAws::ECS::DescribeClustersRequest
- *
  * \brief The DescribeClustersRequest class provides an interface for ECS DescribeClusters requests.
  *
- * \ingroup ECS
+ * \inmodule QtAwsECS
  *
  *  Amazon Elastic Container Service (Amazon ECS) is a highly scalable, fast, container management service that makes it
  *  easy to run, stop, and manage Docker containers on a cluster. You can host your cluster on a serverless infrastructure
@@ -54,9 +53,7 @@ namespace ECS {
  */
 
 /*!
- * @brief  Constructs a new DescribeClustersRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeClustersRequest::DescribeClustersRequest(const DescribeClustersRequest &other)
     : ECSRequest(new DescribeClustersRequestPrivate(*other.d_func(), this))
@@ -65,7 +62,7 @@ DescribeClustersRequest::DescribeClustersRequest(const DescribeClustersRequest &
 }
 
 /*!
- * @brief  Constructs a new DescribeClustersRequest object.
+ * Constructs a DescribeClustersRequest object.
  */
 DescribeClustersRequest::DescribeClustersRequest()
     : ECSRequest(new DescribeClustersRequestPrivate(ECSRequest::DescribeClustersAction, this))
@@ -83,14 +80,9 @@ bool DescribeClustersRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeClustersResponse object.
+ * Returns a DescribeClustersResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeClustersResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ECSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeClustersRequest::response(QNetworkReply * const reply) const
 {
@@ -98,20 +90,17 @@ QtAws::Core::AwsAbstractResponse * DescribeClustersRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::ECS::DescribeClustersRequestPrivate
+ * \brief The DescribeClustersRequestPrivate class provides private implementation for DescribeClustersRequest.
+ * \internal
  *
- * @class  DescribeClustersRequestPrivate
- *
- * @brief  Private implementation for DescribeClustersRequest.
+ * \inmodule QtAwsECS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeClustersRequestPrivate object.
- *
- * @param  action  ECS action being performed.
- * @param  q       Pointer to this object's public DescribeClustersRequest instance.
+ * Constructs a DescribeClustersRequestPrivate object for ECS \a action with,
+ * public implementation \a q.
  */
 DescribeClustersRequestPrivate::DescribeClustersRequestPrivate(
     const ECSRequest::Action action, DescribeClustersRequest * const q)
@@ -121,15 +110,10 @@ DescribeClustersRequestPrivate::DescribeClustersRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeClustersRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeClustersRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeClustersRequest instance.
  */
 DescribeClustersRequestPrivate::DescribeClustersRequestPrivate(
     const DescribeClustersRequestPrivate &other, DescribeClustersRequest * const q)

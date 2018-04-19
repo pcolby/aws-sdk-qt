@@ -27,10 +27,9 @@ namespace Greengrass {
 
 /*!
  * \class QtAws::Greengrass::UpdateDeviceDefinitionRequest
- *
  * \brief The UpdateDeviceDefinitionRequest class provides an interface for Greengrass UpdateDeviceDefinition requests.
  *
- * \ingroup Greengrass
+ * \inmodule QtAwsGreengrass
  *
  *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
  *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
@@ -40,9 +39,7 @@ namespace Greengrass {
  */
 
 /*!
- * @brief  Constructs a new UpdateDeviceDefinitionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateDeviceDefinitionRequest::UpdateDeviceDefinitionRequest(const UpdateDeviceDefinitionRequest &other)
     : GreengrassRequest(new UpdateDeviceDefinitionRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ UpdateDeviceDefinitionRequest::UpdateDeviceDefinitionRequest(const UpdateDeviceD
 }
 
 /*!
- * @brief  Constructs a new UpdateDeviceDefinitionRequest object.
+ * Constructs a UpdateDeviceDefinitionRequest object.
  */
 UpdateDeviceDefinitionRequest::UpdateDeviceDefinitionRequest()
     : GreengrassRequest(new UpdateDeviceDefinitionRequestPrivate(GreengrassRequest::UpdateDeviceDefinitionAction, this))
@@ -69,14 +66,9 @@ bool UpdateDeviceDefinitionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateDeviceDefinitionResponse object.
+ * Returns a UpdateDeviceDefinitionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateDeviceDefinitionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GreengrassClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateDeviceDefinitionRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * UpdateDeviceDefinitionRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::Greengrass::UpdateDeviceDefinitionRequestPrivate
+ * \brief The UpdateDeviceDefinitionRequestPrivate class provides private implementation for UpdateDeviceDefinitionRequest.
+ * \internal
  *
- * @class  UpdateDeviceDefinitionRequestPrivate
- *
- * @brief  Private implementation for UpdateDeviceDefinitionRequest.
+ * \inmodule QtAwsGreengrass
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateDeviceDefinitionRequestPrivate object.
- *
- * @param  action  Greengrass action being performed.
- * @param  q       Pointer to this object's public UpdateDeviceDefinitionRequest instance.
+ * Constructs a UpdateDeviceDefinitionRequestPrivate object for Greengrass \a action with,
+ * public implementation \a q.
  */
 UpdateDeviceDefinitionRequestPrivate::UpdateDeviceDefinitionRequestPrivate(
     const GreengrassRequest::Action action, UpdateDeviceDefinitionRequest * const q)
@@ -107,15 +96,10 @@ UpdateDeviceDefinitionRequestPrivate::UpdateDeviceDefinitionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateDeviceDefinitionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateDeviceDefinitionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateDeviceDefinitionRequest instance.
  */
 UpdateDeviceDefinitionRequestPrivate::UpdateDeviceDefinitionRequestPrivate(
     const UpdateDeviceDefinitionRequestPrivate &other, UpdateDeviceDefinitionRequest * const q)

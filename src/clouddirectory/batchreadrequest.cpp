@@ -27,10 +27,9 @@ namespace CloudDirectory {
 
 /*!
  * \class QtAws::CloudDirectory::BatchReadRequest
- *
  * \brief The BatchReadRequest class provides an interface for CloudDirectory BatchRead requests.
  *
- * \ingroup CloudDirectory
+ * \inmodule QtAwsCloudDirectory
  *
  *  <fullname>Amazon Cloud Directory</fullname>
  * 
@@ -44,9 +43,7 @@ namespace CloudDirectory {
  */
 
 /*!
- * @brief  Constructs a new BatchReadRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 BatchReadRequest::BatchReadRequest(const BatchReadRequest &other)
     : CloudDirectoryRequest(new BatchReadRequestPrivate(*other.d_func(), this))
@@ -55,7 +52,7 @@ BatchReadRequest::BatchReadRequest(const BatchReadRequest &other)
 }
 
 /*!
- * @brief  Constructs a new BatchReadRequest object.
+ * Constructs a BatchReadRequest object.
  */
 BatchReadRequest::BatchReadRequest()
     : CloudDirectoryRequest(new BatchReadRequestPrivate(CloudDirectoryRequest::BatchReadAction, this))
@@ -73,14 +70,9 @@ bool BatchReadRequest::isValid() const
 
 
 /*!
- * @brief  Construct an BatchReadResponse object.
+ * Returns a BatchReadResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An BatchReadResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudDirectoryClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * BatchReadRequest::response(QNetworkReply * const reply) const
 {
@@ -88,20 +80,17 @@ QtAws::Core::AwsAbstractResponse * BatchReadRequest::response(QNetworkReply * co
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudDirectory::BatchReadRequestPrivate
+ * \brief The BatchReadRequestPrivate class provides private implementation for BatchReadRequest.
+ * \internal
  *
- * @class  BatchReadRequestPrivate
- *
- * @brief  Private implementation for BatchReadRequest.
+ * \inmodule QtAwsCloudDirectory
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new BatchReadRequestPrivate object.
- *
- * @param  action  CloudDirectory action being performed.
- * @param  q       Pointer to this object's public BatchReadRequest instance.
+ * Constructs a BatchReadRequestPrivate object for CloudDirectory \a action with,
+ * public implementation \a q.
  */
 BatchReadRequestPrivate::BatchReadRequestPrivate(
     const CloudDirectoryRequest::Action action, BatchReadRequest * const q)
@@ -111,15 +100,10 @@ BatchReadRequestPrivate::BatchReadRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new BatchReadRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the BatchReadRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public BatchReadRequest instance.
  */
 BatchReadRequestPrivate::BatchReadRequestPrivate(
     const BatchReadRequestPrivate &other, BatchReadRequest * const q)

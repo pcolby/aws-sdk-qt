@@ -27,10 +27,9 @@ namespace ElasticBeanstalk {
 
 /*!
  * \class QtAws::ElasticBeanstalk::CreatePlatformVersionRequest
- *
  * \brief The CreatePlatformVersionRequest class provides an interface for ElasticBeanstalk CreatePlatformVersion requests.
  *
- * \ingroup ElasticBeanstalk
+ * \inmodule QtAwsElasticBeanstalk
  *
  *  <fullname>AWS Elastic Beanstalk</fullname>
  * 
@@ -59,9 +58,7 @@ namespace ElasticBeanstalk {
  */
 
 /*!
- * @brief  Constructs a new CreatePlatformVersionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreatePlatformVersionRequest::CreatePlatformVersionRequest(const CreatePlatformVersionRequest &other)
     : ElasticBeanstalkRequest(new CreatePlatformVersionRequestPrivate(*other.d_func(), this))
@@ -70,7 +67,7 @@ CreatePlatformVersionRequest::CreatePlatformVersionRequest(const CreatePlatformV
 }
 
 /*!
- * @brief  Constructs a new CreatePlatformVersionRequest object.
+ * Constructs a CreatePlatformVersionRequest object.
  */
 CreatePlatformVersionRequest::CreatePlatformVersionRequest()
     : ElasticBeanstalkRequest(new CreatePlatformVersionRequestPrivate(ElasticBeanstalkRequest::CreatePlatformVersionAction, this))
@@ -88,14 +85,9 @@ bool CreatePlatformVersionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreatePlatformVersionResponse object.
+ * Returns a CreatePlatformVersionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreatePlatformVersionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ElasticBeanstalkClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreatePlatformVersionRequest::response(QNetworkReply * const reply) const
 {
@@ -103,20 +95,17 @@ QtAws::Core::AwsAbstractResponse * CreatePlatformVersionRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::ElasticBeanstalk::CreatePlatformVersionRequestPrivate
+ * \brief The CreatePlatformVersionRequestPrivate class provides private implementation for CreatePlatformVersionRequest.
+ * \internal
  *
- * @class  CreatePlatformVersionRequestPrivate
- *
- * @brief  Private implementation for CreatePlatformVersionRequest.
+ * \inmodule QtAwsElasticBeanstalk
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreatePlatformVersionRequestPrivate object.
- *
- * @param  action  ElasticBeanstalk action being performed.
- * @param  q       Pointer to this object's public CreatePlatformVersionRequest instance.
+ * Constructs a CreatePlatformVersionRequestPrivate object for ElasticBeanstalk \a action with,
+ * public implementation \a q.
  */
 CreatePlatformVersionRequestPrivate::CreatePlatformVersionRequestPrivate(
     const ElasticBeanstalkRequest::Action action, CreatePlatformVersionRequest * const q)
@@ -126,15 +115,10 @@ CreatePlatformVersionRequestPrivate::CreatePlatformVersionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreatePlatformVersionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreatePlatformVersionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreatePlatformVersionRequest instance.
  */
 CreatePlatformVersionRequestPrivate::CreatePlatformVersionRequestPrivate(
     const CreatePlatformVersionRequestPrivate &other, CreatePlatformVersionRequest * const q)

@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::AttachClassicLinkVpcRequest
- *
  * \brief The AttachClassicLinkVpcRequest class provides an interface for EC2 AttachClassicLinkVpc requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new AttachClassicLinkVpcRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AttachClassicLinkVpcRequest::AttachClassicLinkVpcRequest(const AttachClassicLinkVpcRequest &other)
     : EC2Request(new AttachClassicLinkVpcRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ AttachClassicLinkVpcRequest::AttachClassicLinkVpcRequest(const AttachClassicLink
 }
 
 /*!
- * @brief  Constructs a new AttachClassicLinkVpcRequest object.
+ * Constructs a AttachClassicLinkVpcRequest object.
  */
 AttachClassicLinkVpcRequest::AttachClassicLinkVpcRequest()
     : EC2Request(new AttachClassicLinkVpcRequestPrivate(EC2Request::AttachClassicLinkVpcAction, this))
@@ -70,14 +67,9 @@ bool AttachClassicLinkVpcRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AttachClassicLinkVpcResponse object.
+ * Returns a AttachClassicLinkVpcResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AttachClassicLinkVpcResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AttachClassicLinkVpcRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * AttachClassicLinkVpcRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::AttachClassicLinkVpcRequestPrivate
+ * \brief The AttachClassicLinkVpcRequestPrivate class provides private implementation for AttachClassicLinkVpcRequest.
+ * \internal
  *
- * @class  AttachClassicLinkVpcRequestPrivate
- *
- * @brief  Private implementation for AttachClassicLinkVpcRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AttachClassicLinkVpcRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public AttachClassicLinkVpcRequest instance.
+ * Constructs a AttachClassicLinkVpcRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 AttachClassicLinkVpcRequestPrivate::AttachClassicLinkVpcRequestPrivate(
     const EC2Request::Action action, AttachClassicLinkVpcRequest * const q)
@@ -108,15 +97,10 @@ AttachClassicLinkVpcRequestPrivate::AttachClassicLinkVpcRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AttachClassicLinkVpcRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AttachClassicLinkVpcRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AttachClassicLinkVpcRequest instance.
  */
 AttachClassicLinkVpcRequestPrivate::AttachClassicLinkVpcRequestPrivate(
     const AttachClassicLinkVpcRequestPrivate &other, AttachClassicLinkVpcRequest * const q)

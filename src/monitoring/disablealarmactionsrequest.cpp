@@ -27,10 +27,9 @@ namespace CloudWatch {
 
 /*!
  * \class QtAws::CloudWatch::DisableAlarmActionsRequest
- *
  * \brief The DisableAlarmActionsRequest class provides an interface for CloudWatch DisableAlarmActions requests.
  *
- * \ingroup CloudWatch
+ * \inmodule QtAwsCloudWatch
  *
  *  Amazon CloudWatch monitors your Amazon Web Services (AWS) resources and the applications you run on AWS in real time.
  *  You can use CloudWatch to collect and track metrics, which are the variables you want to measure for your resources and
@@ -51,9 +50,7 @@ namespace CloudWatch {
  */
 
 /*!
- * @brief  Constructs a new DisableAlarmActionsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DisableAlarmActionsRequest::DisableAlarmActionsRequest(const DisableAlarmActionsRequest &other)
     : CloudWatchRequest(new DisableAlarmActionsRequestPrivate(*other.d_func(), this))
@@ -62,7 +59,7 @@ DisableAlarmActionsRequest::DisableAlarmActionsRequest(const DisableAlarmActions
 }
 
 /*!
- * @brief  Constructs a new DisableAlarmActionsRequest object.
+ * Constructs a DisableAlarmActionsRequest object.
  */
 DisableAlarmActionsRequest::DisableAlarmActionsRequest()
     : CloudWatchRequest(new DisableAlarmActionsRequestPrivate(CloudWatchRequest::DisableAlarmActionsAction, this))
@@ -80,14 +77,9 @@ bool DisableAlarmActionsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DisableAlarmActionsResponse object.
+ * Returns a DisableAlarmActionsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DisableAlarmActionsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudWatchClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DisableAlarmActionsRequest::response(QNetworkReply * const reply) const
 {
@@ -95,20 +87,17 @@ QtAws::Core::AwsAbstractResponse * DisableAlarmActionsRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudWatch::DisableAlarmActionsRequestPrivate
+ * \brief The DisableAlarmActionsRequestPrivate class provides private implementation for DisableAlarmActionsRequest.
+ * \internal
  *
- * @class  DisableAlarmActionsRequestPrivate
- *
- * @brief  Private implementation for DisableAlarmActionsRequest.
+ * \inmodule QtAwsCloudWatch
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DisableAlarmActionsRequestPrivate object.
- *
- * @param  action  CloudWatch action being performed.
- * @param  q       Pointer to this object's public DisableAlarmActionsRequest instance.
+ * Constructs a DisableAlarmActionsRequestPrivate object for CloudWatch \a action with,
+ * public implementation \a q.
  */
 DisableAlarmActionsRequestPrivate::DisableAlarmActionsRequestPrivate(
     const CloudWatchRequest::Action action, DisableAlarmActionsRequest * const q)
@@ -118,15 +107,10 @@ DisableAlarmActionsRequestPrivate::DisableAlarmActionsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DisableAlarmActionsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DisableAlarmActionsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DisableAlarmActionsRequest instance.
  */
 DisableAlarmActionsRequestPrivate::DisableAlarmActionsRequestPrivate(
     const DisableAlarmActionsRequestPrivate &other, DisableAlarmActionsRequest * const q)

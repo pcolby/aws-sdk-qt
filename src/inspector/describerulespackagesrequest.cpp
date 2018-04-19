@@ -27,10 +27,9 @@ namespace Inspector {
 
 /*!
  * \class QtAws::Inspector::DescribeRulesPackagesRequest
- *
  * \brief The DescribeRulesPackagesRequest class provides an interface for Inspector DescribeRulesPackages requests.
  *
- * \ingroup Inspector
+ * \inmodule QtAwsInspector
  *
  *  <fullname>Amazon Inspector</fullname>
  * 
@@ -42,9 +41,7 @@ namespace Inspector {
  */
 
 /*!
- * @brief  Constructs a new DescribeRulesPackagesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeRulesPackagesRequest::DescribeRulesPackagesRequest(const DescribeRulesPackagesRequest &other)
     : InspectorRequest(new DescribeRulesPackagesRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ DescribeRulesPackagesRequest::DescribeRulesPackagesRequest(const DescribeRulesPa
 }
 
 /*!
- * @brief  Constructs a new DescribeRulesPackagesRequest object.
+ * Constructs a DescribeRulesPackagesRequest object.
  */
 DescribeRulesPackagesRequest::DescribeRulesPackagesRequest()
     : InspectorRequest(new DescribeRulesPackagesRequestPrivate(InspectorRequest::DescribeRulesPackagesAction, this))
@@ -71,14 +68,9 @@ bool DescribeRulesPackagesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeRulesPackagesResponse object.
+ * Returns a DescribeRulesPackagesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeRulesPackagesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  InspectorClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeRulesPackagesRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * DescribeRulesPackagesRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::Inspector::DescribeRulesPackagesRequestPrivate
+ * \brief The DescribeRulesPackagesRequestPrivate class provides private implementation for DescribeRulesPackagesRequest.
+ * \internal
  *
- * @class  DescribeRulesPackagesRequestPrivate
- *
- * @brief  Private implementation for DescribeRulesPackagesRequest.
+ * \inmodule QtAwsInspector
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeRulesPackagesRequestPrivate object.
- *
- * @param  action  Inspector action being performed.
- * @param  q       Pointer to this object's public DescribeRulesPackagesRequest instance.
+ * Constructs a DescribeRulesPackagesRequestPrivate object for Inspector \a action with,
+ * public implementation \a q.
  */
 DescribeRulesPackagesRequestPrivate::DescribeRulesPackagesRequestPrivate(
     const InspectorRequest::Action action, DescribeRulesPackagesRequest * const q)
@@ -109,15 +98,10 @@ DescribeRulesPackagesRequestPrivate::DescribeRulesPackagesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeRulesPackagesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeRulesPackagesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeRulesPackagesRequest instance.
  */
 DescribeRulesPackagesRequestPrivate::DescribeRulesPackagesRequestPrivate(
     const DescribeRulesPackagesRequestPrivate &other, DescribeRulesPackagesRequest * const q)

@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DescribeVolumesRequest
- *
  * \brief The DescribeVolumesRequest class provides an interface for EC2 DescribeVolumes requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DescribeVolumesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeVolumesRequest::DescribeVolumesRequest(const DescribeVolumesRequest &other)
     : EC2Request(new DescribeVolumesRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ DescribeVolumesRequest::DescribeVolumesRequest(const DescribeVolumesRequest &oth
 }
 
 /*!
- * @brief  Constructs a new DescribeVolumesRequest object.
+ * Constructs a DescribeVolumesRequest object.
  */
 DescribeVolumesRequest::DescribeVolumesRequest()
     : EC2Request(new DescribeVolumesRequestPrivate(EC2Request::DescribeVolumesAction, this))
@@ -70,14 +67,9 @@ bool DescribeVolumesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeVolumesResponse object.
+ * Returns a DescribeVolumesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeVolumesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeVolumesRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * DescribeVolumesRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::DescribeVolumesRequestPrivate
+ * \brief The DescribeVolumesRequestPrivate class provides private implementation for DescribeVolumesRequest.
+ * \internal
  *
- * @class  DescribeVolumesRequestPrivate
- *
- * @brief  Private implementation for DescribeVolumesRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeVolumesRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public DescribeVolumesRequest instance.
+ * Constructs a DescribeVolumesRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 DescribeVolumesRequestPrivate::DescribeVolumesRequestPrivate(
     const EC2Request::Action action, DescribeVolumesRequest * const q)
@@ -108,15 +97,10 @@ DescribeVolumesRequestPrivate::DescribeVolumesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeVolumesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeVolumesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeVolumesRequest instance.
  */
 DescribeVolumesRequestPrivate::DescribeVolumesRequestPrivate(
     const DescribeVolumesRequestPrivate &other, DescribeVolumesRequest * const q)

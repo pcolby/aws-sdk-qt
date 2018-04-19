@@ -27,10 +27,9 @@ namespace EMR {
 
 /*!
  * \class QtAws::EMR::RemoveAutoScalingPolicyRequest
- *
  * \brief The RemoveAutoScalingPolicyRequest class provides an interface for EMR RemoveAutoScalingPolicy requests.
  *
- * \ingroup EMR
+ * \inmodule QtAwsEMR
  *
  *  Amazon EMR is a web service that makes it easy to process large amounts of data efficiently. Amazon EMR uses Hadoop
  *  processing combined with several AWS products to do tasks such as web indexing, data mining, log file analysis, machine
@@ -40,9 +39,7 @@ namespace EMR {
  */
 
 /*!
- * @brief  Constructs a new RemoveAutoScalingPolicyRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 RemoveAutoScalingPolicyRequest::RemoveAutoScalingPolicyRequest(const RemoveAutoScalingPolicyRequest &other)
     : EMRRequest(new RemoveAutoScalingPolicyRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ RemoveAutoScalingPolicyRequest::RemoveAutoScalingPolicyRequest(const RemoveAutoS
 }
 
 /*!
- * @brief  Constructs a new RemoveAutoScalingPolicyRequest object.
+ * Constructs a RemoveAutoScalingPolicyRequest object.
  */
 RemoveAutoScalingPolicyRequest::RemoveAutoScalingPolicyRequest()
     : EMRRequest(new RemoveAutoScalingPolicyRequestPrivate(EMRRequest::RemoveAutoScalingPolicyAction, this))
@@ -69,14 +66,9 @@ bool RemoveAutoScalingPolicyRequest::isValid() const
 
 
 /*!
- * @brief  Construct an RemoveAutoScalingPolicyResponse object.
+ * Returns a RemoveAutoScalingPolicyResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An RemoveAutoScalingPolicyResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EMRClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * RemoveAutoScalingPolicyRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * RemoveAutoScalingPolicyRequest::response(QNet
 }
 
 /*!
- * @internal
+ * \class QtAws::EMR::RemoveAutoScalingPolicyRequestPrivate
+ * \brief The RemoveAutoScalingPolicyRequestPrivate class provides private implementation for RemoveAutoScalingPolicyRequest.
+ * \internal
  *
- * @class  RemoveAutoScalingPolicyRequestPrivate
- *
- * @brief  Private implementation for RemoveAutoScalingPolicyRequest.
+ * \inmodule QtAwsEMR
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new RemoveAutoScalingPolicyRequestPrivate object.
- *
- * @param  action  EMR action being performed.
- * @param  q       Pointer to this object's public RemoveAutoScalingPolicyRequest instance.
+ * Constructs a RemoveAutoScalingPolicyRequestPrivate object for EMR \a action with,
+ * public implementation \a q.
  */
 RemoveAutoScalingPolicyRequestPrivate::RemoveAutoScalingPolicyRequestPrivate(
     const EMRRequest::Action action, RemoveAutoScalingPolicyRequest * const q)
@@ -107,15 +96,10 @@ RemoveAutoScalingPolicyRequestPrivate::RemoveAutoScalingPolicyRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RemoveAutoScalingPolicyRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the RemoveAutoScalingPolicyRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public RemoveAutoScalingPolicyRequest instance.
  */
 RemoveAutoScalingPolicyRequestPrivate::RemoveAutoScalingPolicyRequestPrivate(
     const RemoveAutoScalingPolicyRequestPrivate &other, RemoveAutoScalingPolicyRequest * const q)

@@ -27,10 +27,9 @@ namespace WorkDocs {
 
 /*!
  * \class QtAws::WorkDocs::DescribeDocumentVersionsRequest
- *
  * \brief The DescribeDocumentVersionsRequest class provides an interface for WorkDocs DescribeDocumentVersions requests.
  *
- * \ingroup WorkDocs
+ * \inmodule QtAwsWorkDocs
  *
  *  The WorkDocs API is designed for the following use
  * 
@@ -66,9 +65,7 @@ namespace WorkDocs {
  */
 
 /*!
- * @brief  Constructs a new DescribeDocumentVersionsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeDocumentVersionsRequest::DescribeDocumentVersionsRequest(const DescribeDocumentVersionsRequest &other)
     : WorkDocsRequest(new DescribeDocumentVersionsRequestPrivate(*other.d_func(), this))
@@ -77,7 +74,7 @@ DescribeDocumentVersionsRequest::DescribeDocumentVersionsRequest(const DescribeD
 }
 
 /*!
- * @brief  Constructs a new DescribeDocumentVersionsRequest object.
+ * Constructs a DescribeDocumentVersionsRequest object.
  */
 DescribeDocumentVersionsRequest::DescribeDocumentVersionsRequest()
     : WorkDocsRequest(new DescribeDocumentVersionsRequestPrivate(WorkDocsRequest::DescribeDocumentVersionsAction, this))
@@ -95,14 +92,9 @@ bool DescribeDocumentVersionsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeDocumentVersionsResponse object.
+ * Returns a DescribeDocumentVersionsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeDocumentVersionsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WorkDocsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeDocumentVersionsRequest::response(QNetworkReply * const reply) const
 {
@@ -110,20 +102,17 @@ QtAws::Core::AwsAbstractResponse * DescribeDocumentVersionsRequest::response(QNe
 }
 
 /*!
- * @internal
+ * \class QtAws::WorkDocs::DescribeDocumentVersionsRequestPrivate
+ * \brief The DescribeDocumentVersionsRequestPrivate class provides private implementation for DescribeDocumentVersionsRequest.
+ * \internal
  *
- * @class  DescribeDocumentVersionsRequestPrivate
- *
- * @brief  Private implementation for DescribeDocumentVersionsRequest.
+ * \inmodule QtAwsWorkDocs
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeDocumentVersionsRequestPrivate object.
- *
- * @param  action  WorkDocs action being performed.
- * @param  q       Pointer to this object's public DescribeDocumentVersionsRequest instance.
+ * Constructs a DescribeDocumentVersionsRequestPrivate object for WorkDocs \a action with,
+ * public implementation \a q.
  */
 DescribeDocumentVersionsRequestPrivate::DescribeDocumentVersionsRequestPrivate(
     const WorkDocsRequest::Action action, DescribeDocumentVersionsRequest * const q)
@@ -133,15 +122,10 @@ DescribeDocumentVersionsRequestPrivate::DescribeDocumentVersionsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeDocumentVersionsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeDocumentVersionsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeDocumentVersionsRequest instance.
  */
 DescribeDocumentVersionsRequestPrivate::DescribeDocumentVersionsRequestPrivate(
     const DescribeDocumentVersionsRequestPrivate &other, DescribeDocumentVersionsRequest * const q)

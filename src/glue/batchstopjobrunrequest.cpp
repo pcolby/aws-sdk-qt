@@ -27,10 +27,9 @@ namespace Glue {
 
 /*!
  * \class QtAws::Glue::BatchStopJobRunRequest
- *
  * \brief The BatchStopJobRunRequest class provides an interface for Glue BatchStopJobRun requests.
  *
- * \ingroup Glue
+ * \inmodule QtAwsGlue
  *
  *  <fullname>AWS Glue</fullname>
  * 
@@ -40,9 +39,7 @@ namespace Glue {
  */
 
 /*!
- * @brief  Constructs a new BatchStopJobRunRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 BatchStopJobRunRequest::BatchStopJobRunRequest(const BatchStopJobRunRequest &other)
     : GlueRequest(new BatchStopJobRunRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ BatchStopJobRunRequest::BatchStopJobRunRequest(const BatchStopJobRunRequest &oth
 }
 
 /*!
- * @brief  Constructs a new BatchStopJobRunRequest object.
+ * Constructs a BatchStopJobRunRequest object.
  */
 BatchStopJobRunRequest::BatchStopJobRunRequest()
     : GlueRequest(new BatchStopJobRunRequestPrivate(GlueRequest::BatchStopJobRunAction, this))
@@ -69,14 +66,9 @@ bool BatchStopJobRunRequest::isValid() const
 
 
 /*!
- * @brief  Construct an BatchStopJobRunResponse object.
+ * Returns a BatchStopJobRunResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An BatchStopJobRunResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GlueClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * BatchStopJobRunRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * BatchStopJobRunRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::Glue::BatchStopJobRunRequestPrivate
+ * \brief The BatchStopJobRunRequestPrivate class provides private implementation for BatchStopJobRunRequest.
+ * \internal
  *
- * @class  BatchStopJobRunRequestPrivate
- *
- * @brief  Private implementation for BatchStopJobRunRequest.
+ * \inmodule QtAwsGlue
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new BatchStopJobRunRequestPrivate object.
- *
- * @param  action  Glue action being performed.
- * @param  q       Pointer to this object's public BatchStopJobRunRequest instance.
+ * Constructs a BatchStopJobRunRequestPrivate object for Glue \a action with,
+ * public implementation \a q.
  */
 BatchStopJobRunRequestPrivate::BatchStopJobRunRequestPrivate(
     const GlueRequest::Action action, BatchStopJobRunRequest * const q)
@@ -107,15 +96,10 @@ BatchStopJobRunRequestPrivate::BatchStopJobRunRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new BatchStopJobRunRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the BatchStopJobRunRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public BatchStopJobRunRequest instance.
  */
 BatchStopJobRunRequestPrivate::BatchStopJobRunRequestPrivate(
     const BatchStopJobRunRequestPrivate &other, BatchStopJobRunRequest * const q)

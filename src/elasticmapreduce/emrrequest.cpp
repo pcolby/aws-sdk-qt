@@ -25,16 +25,48 @@ namespace EMR {
 
 /*!
  * \class QtAws::EMR::EMRRequest
- *
  * \brief The EMRRequest class provides an interface for EMR requests.
  *
- * \ingroup EMR
+ * \inmodule QtAwsEMR
  */
 
 /*!
- * @brief  Constructs a new EMRRequest object.
+ * \enum EMRRequest::Action
  *
- * @param  action  The EMR action to request.
+ * This enum describes the actions that can be performed as EMR
+ * requests.
+ *
+ * \value AddInstanceFleetAction EMR AddInstanceFleet action.
+ * \value AddInstanceGroupsAction EMR AddInstanceGroups action.
+ * \value AddJobFlowStepsAction EMR AddJobFlowSteps action.
+ * \value AddTagsAction EMR AddTags action.
+ * \value CancelStepsAction EMR CancelSteps action.
+ * \value CreateSecurityConfigurationAction EMR CreateSecurityConfiguration action.
+ * \value DeleteSecurityConfigurationAction EMR DeleteSecurityConfiguration action.
+ * \value DescribeClusterAction EMR DescribeCluster action.
+ * \value DescribeJobFlowsAction EMR DescribeJobFlows action.
+ * \value DescribeSecurityConfigurationAction EMR DescribeSecurityConfiguration action.
+ * \value DescribeStepAction EMR DescribeStep action.
+ * \value ListBootstrapActionsAction EMR ListBootstrapActions action.
+ * \value ListClustersAction EMR ListClusters action.
+ * \value ListInstanceFleetsAction EMR ListInstanceFleets action.
+ * \value ListInstanceGroupsAction EMR ListInstanceGroups action.
+ * \value ListInstancesAction EMR ListInstances action.
+ * \value ListSecurityConfigurationsAction EMR ListSecurityConfigurations action.
+ * \value ListStepsAction EMR ListSteps action.
+ * \value ModifyInstanceFleetAction EMR ModifyInstanceFleet action.
+ * \value ModifyInstanceGroupsAction EMR ModifyInstanceGroups action.
+ * \value PutAutoScalingPolicyAction EMR PutAutoScalingPolicy action.
+ * \value RemoveAutoScalingPolicyAction EMR RemoveAutoScalingPolicy action.
+ * \value RemoveTagsAction EMR RemoveTags action.
+ * \value RunJobFlowAction EMR RunJobFlow action.
+ * \value SetTerminationProtectionAction EMR SetTerminationProtection action.
+ * \value SetVisibleToAllUsersAction EMR SetVisibleToAllUsers action.
+ * \value TerminateJobFlowsAction EMR TerminateJobFlows action.
+ */
+
+/*!
+ * Constructs a[n] EMRRequest object for EMR \a action.
  */
 EMRRequest::EMRRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new EMRRequestPrivate(action, this))
@@ -43,9 +75,7 @@ EMRRequest::EMRRequest(const Action action)
 }
 
 /*!
- * @brief  Constructs a new EMRRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 EMRRequest::EMRRequest(const EMRRequest &other)
     : QtAws::Core::AwsAbstractRequest(new EMRRequestPrivate(*other.d_func(), this))
@@ -54,13 +84,7 @@ EMRRequest::EMRRequest(const EMRRequest &other)
 }
 
 /*!
- * @brief  Assignment operator.
- *
- * Assigns \a other to \c this.
- *
- * @param  other  Instance to copy.
- *
- * @return  A reference to \c this.
+ * Sets the EMRRequest object to be equal to \a other.
  */
 EMRRequest& EMRRequest::operator=(const EMRRequest &other)
 {
@@ -72,14 +96,10 @@ EMRRequest& EMRRequest::operator=(const EMRRequest &other)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new EMRRequest object.
+ * Constructs aa EMRRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from EMRRequestPrivate.
- *
- * @param  d  Pointer to private data (aka D-Pointer).
  */
 EMRRequest::EMRRequest(EMRRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
@@ -87,7 +107,7 @@ EMRRequest::EMRRequest(EMRRequestPrivate * const d) : QtAws::Core::AwsAbstractRe
 }
 
 /*!
- * \brief Returns the EMR action to be performed by this request.
+ * Returns the EMR action to be performed by this request.
  */
 EMRRequest::Action EMRRequest::action() const
 {
@@ -96,7 +116,7 @@ EMRRequest::Action EMRRequest::action() const
 }
 
 /*!
- * \brief Returns the name of the EMR action to be performed by this request.
+ * Returns the name of the EMR action to be performed by this request.
  */
 QString EMRRequest::actionString() const
 {
@@ -104,7 +124,7 @@ QString EMRRequest::actionString() const
 }
 
 /*!
- * \brief Returns the EMR API version implemented by this request.
+ * Returns the EMR API version implemented by this request.
  */
 QString EMRRequest::apiVersion() const
 {
@@ -113,7 +133,7 @@ QString EMRRequest::apiVersion() const
 }
 
 /*!
- * @brief Set the EMR action to be performed by this request to \a action.
+ * Sets the EMR action to be performed by this request to \a action.
  */
 void EMRRequest::setAction(const Action action)
 {
@@ -122,7 +142,7 @@ void EMRRequest::setAction(const Action action)
 }
 
 /*!
- * Set the EMR API version to include in this request to \a version.
+ * Sets the EMR API version to include in this request to \a version.
  */
 void EMRRequest::setApiVersion(const QString &version)
 {
@@ -131,7 +151,7 @@ void EMRRequest::setApiVersion(const QString &version)
 }
 
 /*!
- * \brief Returns \c true if this request is the same as \a other.
+ * Returns \c true if this request is equal to \a other; \c false otherwise.
  *
  * Note, most derived *Request classes do not need to provider their own
  * implementations of this function, since most such request classes rely on
@@ -146,8 +166,8 @@ bool EMRRequest::operator==(const EMRRequest &other) const
             (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
-/*!
- * @brief  Check if \a queueName is a valid EMR queue name.
+/*
+ * Returns \c tue if \a queueName is a valid EMR queue name.
  *
  * @par From EMR FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
@@ -166,9 +186,8 @@ bool EMRRequest::operator==(const EMRRequest &other) const
 }*/
 
 /*!
- * \brief Removes the a \a name parameter from this request.
- *
- * Returns the count of paramters removed (typically \c 0 or \c 1).
+ * Removes the a \a name parameter from the request, then returns the number of
+ * paramters removed (typically \c 0 or \c 1).
  */
 int EMRRequest::clearParameter(const QString &name)
 {
@@ -177,7 +196,7 @@ int EMRRequest::clearParameter(const QString &name)
 }
 
 /*!
- * \brief Removes all parameters from this request.
+ * Removes all parameters from the request.
  */
 void EMRRequest::clearParameters()
 {
@@ -186,7 +205,7 @@ void EMRRequest::clearParameters()
 }
 
 /*!
- * \brief Returns the value of the \n name pararemter if set, otherwise \a defaultValue.
+ * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
 QVariant EMRRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
@@ -195,7 +214,7 @@ QVariant EMRRequest::parameter(const QString &name, const QVariant &defaultValue
 }
 
 /*!
- * \brief Returns a map of parameters included in this request.
+ * Returns the parameters included in this request.
  */
 const QVariantMap &EMRRequest::parameters() const
 {
@@ -204,7 +223,7 @@ const QVariantMap &EMRRequest::parameters() const
 }
 
 /*!
- * \brief Sets the \a name parameter to \a value.
+ * Sets the \a name parameter to \a value.
  */
 void EMRRequest::setParameter(const QString &name, const QVariant &value)
 {
@@ -213,9 +232,8 @@ void EMRRequest::setParameter(const QString &name, const QVariant &value)
 }
 
 /*!
- * \brief Sets the map of paramters for this request to \a parameters.
- *
- * Any request parameters set previously will be discarded.
+ * Sets the paramters for this request to \a parameters. Any request parameters
+ * set previously will be discarded.
  */
 void EMRRequest::setParameters(const QVariantMap &parameters)
 {
@@ -224,11 +242,12 @@ void EMRRequest::setParameters(const QVariantMap &parameters)
 }
 
 /*!
- * \brief Returns a network request for this EMR request using the given \a endpoint.
+ * Returns a network request for the EMR request using the given
+ * \a endpoint.
  *
- * This EMR implementation builds request URLs by combining the common query
- * parameters (such as Action and Version), with any that have been added (via
- * setParameter) by child classes.
+ * This EMR implementation builds request URLs by combining the
+ * common query parameters (such as Action and Version), with any that have
+ * been added (via setParameter) by child classes.
  */
 QNetworkRequest EMRRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -239,17 +258,16 @@ QNetworkRequest EMRRequest::unsignedRequest(const QUrl &endpoint) const
 }
 
 /*!
+ * \class QtAws::EMR::EMRRequestPrivate
+ * \brief The EMRRequestPrivate class provides private implementation for EMRRequest.
  * \internal
  *
- * \class  EMRRequestPrivate
- *
- * \brief  Private implementation for EMRRequest.
+ * \inmodule QtAwsEMR
  */
 
 /*!
- * \internal
- *
- * \brief Constructs a new EMRRequestPrivate object.
+ * Constructs a EMRRequestPrivate object for EMR \a action with,
+ * public implementation \a q.
  */
 EMRRequestPrivate::EMRRequestPrivate(const EMRRequest::Action action, EMRRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
@@ -258,9 +276,7 @@ EMRRequestPrivate::EMRRequestPrivate(const EMRRequest::Action action, EMRRequest
 }
 
 /*!
- * \internal
- *
- * \brief Constructs a new EMRRequestPrivate object, copying an existing one.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
@@ -276,15 +292,12 @@ EMRRequestPrivate::EMRRequestPrivate(const EMRRequestPrivate &other,
 }
 
 /*!
- * \internal
- *
- * \brief Returns a string representing \a action.
+ * Returns a string represention of \a action, or a null string if \a action is
+ * invalid.
  *
  * This function converts EMRRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the EMR service's Action
  * query parameters.
- *
- * @return A string representing \a action, or a null string if \a action is invalid.
  */
 QString EMRRequestPrivate::toString(const EMRRequest::Action &action)
 {

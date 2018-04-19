@@ -27,10 +27,9 @@ namespace SecretsManager {
 
 /*!
  * \class QtAws::SecretsManager::UpdateSecretVersionStageRequest
- *
  * \brief The UpdateSecretVersionStageRequest class provides an interface for SecretsManager UpdateSecretVersionStage requests.
  *
- * \ingroup SecretsManager
+ * \inmodule QtAwsSecretsManager
  *
  *  <fullname>AWS Secrets Manager API Reference</fullname>
  * 
@@ -137,9 +136,7 @@ namespace SecretsManager {
  */
 
 /*!
- * @brief  Constructs a new UpdateSecretVersionStageRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateSecretVersionStageRequest::UpdateSecretVersionStageRequest(const UpdateSecretVersionStageRequest &other)
     : SecretsManagerRequest(new UpdateSecretVersionStageRequestPrivate(*other.d_func(), this))
@@ -148,7 +145,7 @@ UpdateSecretVersionStageRequest::UpdateSecretVersionStageRequest(const UpdateSec
 }
 
 /*!
- * @brief  Constructs a new UpdateSecretVersionStageRequest object.
+ * Constructs a UpdateSecretVersionStageRequest object.
  */
 UpdateSecretVersionStageRequest::UpdateSecretVersionStageRequest()
     : SecretsManagerRequest(new UpdateSecretVersionStageRequestPrivate(SecretsManagerRequest::UpdateSecretVersionStageAction, this))
@@ -166,14 +163,9 @@ bool UpdateSecretVersionStageRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateSecretVersionStageResponse object.
+ * Returns a UpdateSecretVersionStageResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateSecretVersionStageResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SecretsManagerClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateSecretVersionStageRequest::response(QNetworkReply * const reply) const
 {
@@ -181,20 +173,17 @@ QtAws::Core::AwsAbstractResponse * UpdateSecretVersionStageRequest::response(QNe
 }
 
 /*!
- * @internal
+ * \class QtAws::SecretsManager::UpdateSecretVersionStageRequestPrivate
+ * \brief The UpdateSecretVersionStageRequestPrivate class provides private implementation for UpdateSecretVersionStageRequest.
+ * \internal
  *
- * @class  UpdateSecretVersionStageRequestPrivate
- *
- * @brief  Private implementation for UpdateSecretVersionStageRequest.
+ * \inmodule QtAwsSecretsManager
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateSecretVersionStageRequestPrivate object.
- *
- * @param  action  SecretsManager action being performed.
- * @param  q       Pointer to this object's public UpdateSecretVersionStageRequest instance.
+ * Constructs a UpdateSecretVersionStageRequestPrivate object for SecretsManager \a action with,
+ * public implementation \a q.
  */
 UpdateSecretVersionStageRequestPrivate::UpdateSecretVersionStageRequestPrivate(
     const SecretsManagerRequest::Action action, UpdateSecretVersionStageRequest * const q)
@@ -204,15 +193,10 @@ UpdateSecretVersionStageRequestPrivate::UpdateSecretVersionStageRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateSecretVersionStageRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateSecretVersionStageRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateSecretVersionStageRequest instance.
  */
 UpdateSecretVersionStageRequestPrivate::UpdateSecretVersionStageRequestPrivate(
     const UpdateSecretVersionStageRequestPrivate &other, UpdateSecretVersionStageRequest * const q)

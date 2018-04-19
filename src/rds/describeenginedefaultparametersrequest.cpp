@@ -27,10 +27,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::DescribeEngineDefaultParametersRequest
- *
  * \brief The DescribeEngineDefaultParametersRequest class provides an interface for RDS DescribeEngineDefaultParameters requests.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -101,9 +100,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new DescribeEngineDefaultParametersRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeEngineDefaultParametersRequest::DescribeEngineDefaultParametersRequest(const DescribeEngineDefaultParametersRequest &other)
     : RDSRequest(new DescribeEngineDefaultParametersRequestPrivate(*other.d_func(), this))
@@ -112,7 +109,7 @@ DescribeEngineDefaultParametersRequest::DescribeEngineDefaultParametersRequest(c
 }
 
 /*!
- * @brief  Constructs a new DescribeEngineDefaultParametersRequest object.
+ * Constructs a DescribeEngineDefaultParametersRequest object.
  */
 DescribeEngineDefaultParametersRequest::DescribeEngineDefaultParametersRequest()
     : RDSRequest(new DescribeEngineDefaultParametersRequestPrivate(RDSRequest::DescribeEngineDefaultParametersAction, this))
@@ -130,14 +127,9 @@ bool DescribeEngineDefaultParametersRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeEngineDefaultParametersResponse object.
+ * Returns a DescribeEngineDefaultParametersResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeEngineDefaultParametersResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RDSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeEngineDefaultParametersRequest::response(QNetworkReply * const reply) const
 {
@@ -145,20 +137,17 @@ QtAws::Core::AwsAbstractResponse * DescribeEngineDefaultParametersRequest::respo
 }
 
 /*!
- * @internal
+ * \class QtAws::RDS::DescribeEngineDefaultParametersRequestPrivate
+ * \brief The DescribeEngineDefaultParametersRequestPrivate class provides private implementation for DescribeEngineDefaultParametersRequest.
+ * \internal
  *
- * @class  DescribeEngineDefaultParametersRequestPrivate
- *
- * @brief  Private implementation for DescribeEngineDefaultParametersRequest.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeEngineDefaultParametersRequestPrivate object.
- *
- * @param  action  RDS action being performed.
- * @param  q       Pointer to this object's public DescribeEngineDefaultParametersRequest instance.
+ * Constructs a DescribeEngineDefaultParametersRequestPrivate object for RDS \a action with,
+ * public implementation \a q.
  */
 DescribeEngineDefaultParametersRequestPrivate::DescribeEngineDefaultParametersRequestPrivate(
     const RDSRequest::Action action, DescribeEngineDefaultParametersRequest * const q)
@@ -168,15 +157,10 @@ DescribeEngineDefaultParametersRequestPrivate::DescribeEngineDefaultParametersRe
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeEngineDefaultParametersRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeEngineDefaultParametersRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeEngineDefaultParametersRequest instance.
  */
 DescribeEngineDefaultParametersRequestPrivate::DescribeEngineDefaultParametersRequestPrivate(
     const DescribeEngineDefaultParametersRequestPrivate &other, DescribeEngineDefaultParametersRequest * const q)

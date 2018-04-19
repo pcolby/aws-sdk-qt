@@ -27,10 +27,9 @@ namespace Glue {
 
 /*!
  * \class QtAws::Glue::CreatePartitionRequest
- *
  * \brief The CreatePartitionRequest class provides an interface for Glue CreatePartition requests.
  *
- * \ingroup Glue
+ * \inmodule QtAwsGlue
  *
  *  <fullname>AWS Glue</fullname>
  * 
@@ -40,9 +39,7 @@ namespace Glue {
  */
 
 /*!
- * @brief  Constructs a new CreatePartitionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreatePartitionRequest::CreatePartitionRequest(const CreatePartitionRequest &other)
     : GlueRequest(new CreatePartitionRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ CreatePartitionRequest::CreatePartitionRequest(const CreatePartitionRequest &oth
 }
 
 /*!
- * @brief  Constructs a new CreatePartitionRequest object.
+ * Constructs a CreatePartitionRequest object.
  */
 CreatePartitionRequest::CreatePartitionRequest()
     : GlueRequest(new CreatePartitionRequestPrivate(GlueRequest::CreatePartitionAction, this))
@@ -69,14 +66,9 @@ bool CreatePartitionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreatePartitionResponse object.
+ * Returns a CreatePartitionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreatePartitionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GlueClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreatePartitionRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * CreatePartitionRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::Glue::CreatePartitionRequestPrivate
+ * \brief The CreatePartitionRequestPrivate class provides private implementation for CreatePartitionRequest.
+ * \internal
  *
- * @class  CreatePartitionRequestPrivate
- *
- * @brief  Private implementation for CreatePartitionRequest.
+ * \inmodule QtAwsGlue
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreatePartitionRequestPrivate object.
- *
- * @param  action  Glue action being performed.
- * @param  q       Pointer to this object's public CreatePartitionRequest instance.
+ * Constructs a CreatePartitionRequestPrivate object for Glue \a action with,
+ * public implementation \a q.
  */
 CreatePartitionRequestPrivate::CreatePartitionRequestPrivate(
     const GlueRequest::Action action, CreatePartitionRequest * const q)
@@ -107,15 +96,10 @@ CreatePartitionRequestPrivate::CreatePartitionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreatePartitionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreatePartitionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreatePartitionRequest instance.
  */
 CreatePartitionRequestPrivate::CreatePartitionRequestPrivate(
     const CreatePartitionRequestPrivate &other, CreatePartitionRequest * const q)

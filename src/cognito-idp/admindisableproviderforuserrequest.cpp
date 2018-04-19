@@ -27,10 +27,9 @@ namespace CognitoIdentityProvider {
 
 /*!
  * \class QtAws::CognitoIdentityProvider::AdminDisableProviderForUserRequest
- *
  * \brief The AdminDisableProviderForUserRequest class provides an interface for CognitoIdentityProvider AdminDisableProviderForUser requests.
  *
- * \ingroup CognitoIdentityProvider
+ * \inmodule QtAwsCognitoIdentityProvider
  *
  *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
  *  authenticate a user to obtain tokens related to user identity and access
@@ -47,9 +46,7 @@ namespace CognitoIdentityProvider {
  */
 
 /*!
- * @brief  Constructs a new AdminDisableProviderForUserRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AdminDisableProviderForUserRequest::AdminDisableProviderForUserRequest(const AdminDisableProviderForUserRequest &other)
     : CognitoIdentityProviderRequest(new AdminDisableProviderForUserRequestPrivate(*other.d_func(), this))
@@ -58,7 +55,7 @@ AdminDisableProviderForUserRequest::AdminDisableProviderForUserRequest(const Adm
 }
 
 /*!
- * @brief  Constructs a new AdminDisableProviderForUserRequest object.
+ * Constructs a AdminDisableProviderForUserRequest object.
  */
 AdminDisableProviderForUserRequest::AdminDisableProviderForUserRequest()
     : CognitoIdentityProviderRequest(new AdminDisableProviderForUserRequestPrivate(CognitoIdentityProviderRequest::AdminDisableProviderForUserAction, this))
@@ -76,14 +73,9 @@ bool AdminDisableProviderForUserRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AdminDisableProviderForUserResponse object.
+ * Returns a AdminDisableProviderForUserResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AdminDisableProviderForUserResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CognitoIdentityProviderClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AdminDisableProviderForUserRequest::response(QNetworkReply * const reply) const
 {
@@ -91,20 +83,17 @@ QtAws::Core::AwsAbstractResponse * AdminDisableProviderForUserRequest::response(
 }
 
 /*!
- * @internal
+ * \class QtAws::CognitoIdentityProvider::AdminDisableProviderForUserRequestPrivate
+ * \brief The AdminDisableProviderForUserRequestPrivate class provides private implementation for AdminDisableProviderForUserRequest.
+ * \internal
  *
- * @class  AdminDisableProviderForUserRequestPrivate
- *
- * @brief  Private implementation for AdminDisableProviderForUserRequest.
+ * \inmodule QtAwsCognitoIdentityProvider
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AdminDisableProviderForUserRequestPrivate object.
- *
- * @param  action  CognitoIdentityProvider action being performed.
- * @param  q       Pointer to this object's public AdminDisableProviderForUserRequest instance.
+ * Constructs a AdminDisableProviderForUserRequestPrivate object for CognitoIdentityProvider \a action with,
+ * public implementation \a q.
  */
 AdminDisableProviderForUserRequestPrivate::AdminDisableProviderForUserRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, AdminDisableProviderForUserRequest * const q)
@@ -114,15 +103,10 @@ AdminDisableProviderForUserRequestPrivate::AdminDisableProviderForUserRequestPri
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AdminDisableProviderForUserRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AdminDisableProviderForUserRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AdminDisableProviderForUserRequest instance.
  */
 AdminDisableProviderForUserRequestPrivate::AdminDisableProviderForUserRequestPrivate(
     const AdminDisableProviderForUserRequestPrivate &other, AdminDisableProviderForUserRequest * const q)

@@ -27,10 +27,9 @@ namespace DAX {
 
 /*!
  * \class QtAws::DAX::CreateParameterGroupRequest
- *
  * \brief The CreateParameterGroupRequest class provides an interface for DAX CreateParameterGroup requests.
  *
- * \ingroup DAX
+ * \inmodule QtAwsDAX
  *
  *  DAX is a managed caching service engineered for Amazon DynamoDB. DAX dramatically speeds up database reads by caching
  *  frequently-accessed data from DynamoDB, so applications can access that data with sub-millisecond latency. You can
@@ -41,9 +40,7 @@ namespace DAX {
  */
 
 /*!
- * @brief  Constructs a new CreateParameterGroupRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateParameterGroupRequest::CreateParameterGroupRequest(const CreateParameterGroupRequest &other)
     : DAXRequest(new CreateParameterGroupRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ CreateParameterGroupRequest::CreateParameterGroupRequest(const CreateParameterGr
 }
 
 /*!
- * @brief  Constructs a new CreateParameterGroupRequest object.
+ * Constructs a CreateParameterGroupRequest object.
  */
 CreateParameterGroupRequest::CreateParameterGroupRequest()
     : DAXRequest(new CreateParameterGroupRequestPrivate(DAXRequest::CreateParameterGroupAction, this))
@@ -70,14 +67,9 @@ bool CreateParameterGroupRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateParameterGroupResponse object.
+ * Returns a CreateParameterGroupResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateParameterGroupResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DAXClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateParameterGroupRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * CreateParameterGroupRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::DAX::CreateParameterGroupRequestPrivate
+ * \brief The CreateParameterGroupRequestPrivate class provides private implementation for CreateParameterGroupRequest.
+ * \internal
  *
- * @class  CreateParameterGroupRequestPrivate
- *
- * @brief  Private implementation for CreateParameterGroupRequest.
+ * \inmodule QtAwsDAX
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateParameterGroupRequestPrivate object.
- *
- * @param  action  DAX action being performed.
- * @param  q       Pointer to this object's public CreateParameterGroupRequest instance.
+ * Constructs a CreateParameterGroupRequestPrivate object for DAX \a action with,
+ * public implementation \a q.
  */
 CreateParameterGroupRequestPrivate::CreateParameterGroupRequestPrivate(
     const DAXRequest::Action action, CreateParameterGroupRequest * const q)
@@ -108,15 +97,10 @@ CreateParameterGroupRequestPrivate::CreateParameterGroupRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateParameterGroupRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateParameterGroupRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateParameterGroupRequest instance.
  */
 CreateParameterGroupRequestPrivate::CreateParameterGroupRequestPrivate(
     const CreateParameterGroupRequestPrivate &other, CreateParameterGroupRequest * const q)

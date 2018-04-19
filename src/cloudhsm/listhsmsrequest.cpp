@@ -27,10 +27,9 @@ namespace CloudHSM {
 
 /*!
  * \class QtAws::CloudHSM::ListHsmsRequest
- *
  * \brief The ListHsmsRequest class provides an interface for CloudHSM ListHsms requests.
  *
- * \ingroup CloudHSM
+ * \inmodule QtAwsCloudHSM
  *
  *  <fullname>AWS CloudHSM Service</fullname>
  * 
@@ -49,9 +48,7 @@ namespace CloudHSM {
  */
 
 /*!
- * @brief  Constructs a new ListHsmsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListHsmsRequest::ListHsmsRequest(const ListHsmsRequest &other)
     : CloudHSMRequest(new ListHsmsRequestPrivate(*other.d_func(), this))
@@ -60,7 +57,7 @@ ListHsmsRequest::ListHsmsRequest(const ListHsmsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ListHsmsRequest object.
+ * Constructs a ListHsmsRequest object.
  */
 ListHsmsRequest::ListHsmsRequest()
     : CloudHSMRequest(new ListHsmsRequestPrivate(CloudHSMRequest::ListHsmsAction, this))
@@ -78,14 +75,9 @@ bool ListHsmsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListHsmsResponse object.
+ * Returns a ListHsmsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListHsmsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudHSMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListHsmsRequest::response(QNetworkReply * const reply) const
 {
@@ -93,20 +85,17 @@ QtAws::Core::AwsAbstractResponse * ListHsmsRequest::response(QNetworkReply * con
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudHSM::ListHsmsRequestPrivate
+ * \brief The ListHsmsRequestPrivate class provides private implementation for ListHsmsRequest.
+ * \internal
  *
- * @class  ListHsmsRequestPrivate
- *
- * @brief  Private implementation for ListHsmsRequest.
+ * \inmodule QtAwsCloudHSM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListHsmsRequestPrivate object.
- *
- * @param  action  CloudHSM action being performed.
- * @param  q       Pointer to this object's public ListHsmsRequest instance.
+ * Constructs a ListHsmsRequestPrivate object for CloudHSM \a action with,
+ * public implementation \a q.
  */
 ListHsmsRequestPrivate::ListHsmsRequestPrivate(
     const CloudHSMRequest::Action action, ListHsmsRequest * const q)
@@ -116,15 +105,10 @@ ListHsmsRequestPrivate::ListHsmsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListHsmsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListHsmsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListHsmsRequest instance.
  */
 ListHsmsRequestPrivate::ListHsmsRequestPrivate(
     const ListHsmsRequestPrivate &other, ListHsmsRequest * const q)

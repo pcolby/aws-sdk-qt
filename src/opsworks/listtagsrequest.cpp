@@ -27,10 +27,9 @@ namespace OpsWorks {
 
 /*!
  * \class QtAws::OpsWorks::ListTagsRequest
- *
  * \brief The ListTagsRequest class provides an interface for OpsWorks ListTags requests.
  *
- * \ingroup OpsWorks
+ * \inmodule QtAwsOpsWorks
  *
  *  <fullname>AWS OpsWorks</fullname>
  * 
@@ -143,9 +142,7 @@ namespace OpsWorks {
  */
 
 /*!
- * @brief  Constructs a new ListTagsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListTagsRequest::ListTagsRequest(const ListTagsRequest &other)
     : OpsWorksRequest(new ListTagsRequestPrivate(*other.d_func(), this))
@@ -154,7 +151,7 @@ ListTagsRequest::ListTagsRequest(const ListTagsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ListTagsRequest object.
+ * Constructs a ListTagsRequest object.
  */
 ListTagsRequest::ListTagsRequest()
     : OpsWorksRequest(new ListTagsRequestPrivate(OpsWorksRequest::ListTagsAction, this))
@@ -172,14 +169,9 @@ bool ListTagsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListTagsResponse object.
+ * Returns a ListTagsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListTagsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  OpsWorksClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListTagsRequest::response(QNetworkReply * const reply) const
 {
@@ -187,20 +179,17 @@ QtAws::Core::AwsAbstractResponse * ListTagsRequest::response(QNetworkReply * con
 }
 
 /*!
- * @internal
+ * \class QtAws::OpsWorks::ListTagsRequestPrivate
+ * \brief The ListTagsRequestPrivate class provides private implementation for ListTagsRequest.
+ * \internal
  *
- * @class  ListTagsRequestPrivate
- *
- * @brief  Private implementation for ListTagsRequest.
+ * \inmodule QtAwsOpsWorks
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListTagsRequestPrivate object.
- *
- * @param  action  OpsWorks action being performed.
- * @param  q       Pointer to this object's public ListTagsRequest instance.
+ * Constructs a ListTagsRequestPrivate object for OpsWorks \a action with,
+ * public implementation \a q.
  */
 ListTagsRequestPrivate::ListTagsRequestPrivate(
     const OpsWorksRequest::Action action, ListTagsRequest * const q)
@@ -210,15 +199,10 @@ ListTagsRequestPrivate::ListTagsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListTagsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListTagsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListTagsRequest instance.
  */
 ListTagsRequestPrivate::ListTagsRequestPrivate(
     const ListTagsRequestPrivate &other, ListTagsRequest * const q)

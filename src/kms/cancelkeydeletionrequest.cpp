@@ -27,10 +27,9 @@ namespace KMS {
 
 /*!
  * \class QtAws::KMS::CancelKeyDeletionRequest
- *
  * \brief The CancelKeyDeletionRequest class provides an interface for KMS CancelKeyDeletion requests.
  *
- * \ingroup KMS
+ * \inmodule QtAwsKMS
  *
  *  <fullname>AWS Key Management Service</fullname>
  * 
@@ -136,9 +135,7 @@ namespace KMS {
  */
 
 /*!
- * @brief  Constructs a new CancelKeyDeletionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CancelKeyDeletionRequest::CancelKeyDeletionRequest(const CancelKeyDeletionRequest &other)
     : KMSRequest(new CancelKeyDeletionRequestPrivate(*other.d_func(), this))
@@ -147,7 +144,7 @@ CancelKeyDeletionRequest::CancelKeyDeletionRequest(const CancelKeyDeletionReques
 }
 
 /*!
- * @brief  Constructs a new CancelKeyDeletionRequest object.
+ * Constructs a CancelKeyDeletionRequest object.
  */
 CancelKeyDeletionRequest::CancelKeyDeletionRequest()
     : KMSRequest(new CancelKeyDeletionRequestPrivate(KMSRequest::CancelKeyDeletionAction, this))
@@ -165,14 +162,9 @@ bool CancelKeyDeletionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CancelKeyDeletionResponse object.
+ * Returns a CancelKeyDeletionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CancelKeyDeletionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  KMSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CancelKeyDeletionRequest::response(QNetworkReply * const reply) const
 {
@@ -180,20 +172,17 @@ QtAws::Core::AwsAbstractResponse * CancelKeyDeletionRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::KMS::CancelKeyDeletionRequestPrivate
+ * \brief The CancelKeyDeletionRequestPrivate class provides private implementation for CancelKeyDeletionRequest.
+ * \internal
  *
- * @class  CancelKeyDeletionRequestPrivate
- *
- * @brief  Private implementation for CancelKeyDeletionRequest.
+ * \inmodule QtAwsKMS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CancelKeyDeletionRequestPrivate object.
- *
- * @param  action  KMS action being performed.
- * @param  q       Pointer to this object's public CancelKeyDeletionRequest instance.
+ * Constructs a CancelKeyDeletionRequestPrivate object for KMS \a action with,
+ * public implementation \a q.
  */
 CancelKeyDeletionRequestPrivate::CancelKeyDeletionRequestPrivate(
     const KMSRequest::Action action, CancelKeyDeletionRequest * const q)
@@ -203,15 +192,10 @@ CancelKeyDeletionRequestPrivate::CancelKeyDeletionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CancelKeyDeletionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CancelKeyDeletionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CancelKeyDeletionRequest instance.
  */
 CancelKeyDeletionRequestPrivate::CancelKeyDeletionRequestPrivate(
     const CancelKeyDeletionRequestPrivate &other, CancelKeyDeletionRequest * const q)

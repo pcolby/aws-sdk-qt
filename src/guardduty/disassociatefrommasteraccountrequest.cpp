@@ -27,19 +27,16 @@ namespace GuardDuty {
 
 /*!
  * \class QtAws::GuardDuty::DisassociateFromMasterAccountRequest
- *
  * \brief The DisassociateFromMasterAccountRequest class provides an interface for GuardDuty DisassociateFromMasterAccount requests.
  *
- * \ingroup GuardDuty
+ * \inmodule QtAwsGuardDuty
  *
  *
  * \sa GuardDutyClient::disassociateFromMasterAccount
  */
 
 /*!
- * @brief  Constructs a new DisassociateFromMasterAccountRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DisassociateFromMasterAccountRequest::DisassociateFromMasterAccountRequest(const DisassociateFromMasterAccountRequest &other)
     : GuardDutyRequest(new DisassociateFromMasterAccountRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ DisassociateFromMasterAccountRequest::DisassociateFromMasterAccountRequest(const
 }
 
 /*!
- * @brief  Constructs a new DisassociateFromMasterAccountRequest object.
+ * Constructs a DisassociateFromMasterAccountRequest object.
  */
 DisassociateFromMasterAccountRequest::DisassociateFromMasterAccountRequest()
     : GuardDutyRequest(new DisassociateFromMasterAccountRequestPrivate(GuardDutyRequest::DisassociateFromMasterAccountAction, this))
@@ -66,14 +63,9 @@ bool DisassociateFromMasterAccountRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DisassociateFromMasterAccountResponse object.
+ * Returns a DisassociateFromMasterAccountResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DisassociateFromMasterAccountResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GuardDutyClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DisassociateFromMasterAccountRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * DisassociateFromMasterAccountRequest::respons
 }
 
 /*!
- * @internal
+ * \class QtAws::GuardDuty::DisassociateFromMasterAccountRequestPrivate
+ * \brief The DisassociateFromMasterAccountRequestPrivate class provides private implementation for DisassociateFromMasterAccountRequest.
+ * \internal
  *
- * @class  DisassociateFromMasterAccountRequestPrivate
- *
- * @brief  Private implementation for DisassociateFromMasterAccountRequest.
+ * \inmodule QtAwsGuardDuty
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DisassociateFromMasterAccountRequestPrivate object.
- *
- * @param  action  GuardDuty action being performed.
- * @param  q       Pointer to this object's public DisassociateFromMasterAccountRequest instance.
+ * Constructs a DisassociateFromMasterAccountRequestPrivate object for GuardDuty \a action with,
+ * public implementation \a q.
  */
 DisassociateFromMasterAccountRequestPrivate::DisassociateFromMasterAccountRequestPrivate(
     const GuardDutyRequest::Action action, DisassociateFromMasterAccountRequest * const q)
@@ -104,15 +93,10 @@ DisassociateFromMasterAccountRequestPrivate::DisassociateFromMasterAccountReques
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DisassociateFromMasterAccountRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DisassociateFromMasterAccountRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DisassociateFromMasterAccountRequest instance.
  */
 DisassociateFromMasterAccountRequestPrivate::DisassociateFromMasterAccountRequestPrivate(
     const DisassociateFromMasterAccountRequestPrivate &other, DisassociateFromMasterAccountRequest * const q)

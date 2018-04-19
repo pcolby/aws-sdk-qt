@@ -27,10 +27,9 @@ namespace AlexaForBusiness {
 
 /*!
  * \class QtAws::AlexaForBusiness::GetContactRequest
- *
  * \brief The GetContactRequest class provides an interface for AlexaForBusiness GetContact requests.
  *
- * \ingroup AlexaForBusiness
+ * \inmodule QtAwsAlexaForBusiness
  *
  *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
  *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
@@ -42,9 +41,7 @@ namespace AlexaForBusiness {
  */
 
 /*!
- * @brief  Constructs a new GetContactRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetContactRequest::GetContactRequest(const GetContactRequest &other)
     : AlexaForBusinessRequest(new GetContactRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ GetContactRequest::GetContactRequest(const GetContactRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetContactRequest object.
+ * Constructs a GetContactRequest object.
  */
 GetContactRequest::GetContactRequest()
     : AlexaForBusinessRequest(new GetContactRequestPrivate(AlexaForBusinessRequest::GetContactAction, this))
@@ -71,14 +68,9 @@ bool GetContactRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetContactResponse object.
+ * Returns a GetContactResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetContactResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AlexaForBusinessClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetContactRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * GetContactRequest::response(QNetworkReply * c
 }
 
 /*!
- * @internal
+ * \class QtAws::AlexaForBusiness::GetContactRequestPrivate
+ * \brief The GetContactRequestPrivate class provides private implementation for GetContactRequest.
+ * \internal
  *
- * @class  GetContactRequestPrivate
- *
- * @brief  Private implementation for GetContactRequest.
+ * \inmodule QtAwsAlexaForBusiness
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetContactRequestPrivate object.
- *
- * @param  action  AlexaForBusiness action being performed.
- * @param  q       Pointer to this object's public GetContactRequest instance.
+ * Constructs a GetContactRequestPrivate object for AlexaForBusiness \a action with,
+ * public implementation \a q.
  */
 GetContactRequestPrivate::GetContactRequestPrivate(
     const AlexaForBusinessRequest::Action action, GetContactRequest * const q)
@@ -109,15 +98,10 @@ GetContactRequestPrivate::GetContactRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetContactRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetContactRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetContactRequest instance.
  */
 GetContactRequestPrivate::GetContactRequestPrivate(
     const GetContactRequestPrivate &other, GetContactRequest * const q)

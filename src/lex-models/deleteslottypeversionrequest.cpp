@@ -27,10 +27,9 @@ namespace LexModelBuildingService {
 
 /*!
  * \class QtAws::LexModelBuildingService::DeleteSlotTypeVersionRequest
- *
  * \brief The DeleteSlotTypeVersionRequest class provides an interface for LexModelBuildingService DeleteSlotTypeVersion requests.
  *
- * \ingroup LexModelBuildingService
+ * \inmodule QtAwsLexModelBuildingService
  *
  *  <fullname>Amazon Lex Build-Time Actions</fullname>
  * 
@@ -41,9 +40,7 @@ namespace LexModelBuildingService {
  */
 
 /*!
- * @brief  Constructs a new DeleteSlotTypeVersionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteSlotTypeVersionRequest::DeleteSlotTypeVersionRequest(const DeleteSlotTypeVersionRequest &other)
     : LexModelBuildingServiceRequest(new DeleteSlotTypeVersionRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ DeleteSlotTypeVersionRequest::DeleteSlotTypeVersionRequest(const DeleteSlotTypeV
 }
 
 /*!
- * @brief  Constructs a new DeleteSlotTypeVersionRequest object.
+ * Constructs a DeleteSlotTypeVersionRequest object.
  */
 DeleteSlotTypeVersionRequest::DeleteSlotTypeVersionRequest()
     : LexModelBuildingServiceRequest(new DeleteSlotTypeVersionRequestPrivate(LexModelBuildingServiceRequest::DeleteSlotTypeVersionAction, this))
@@ -70,14 +67,9 @@ bool DeleteSlotTypeVersionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteSlotTypeVersionResponse object.
+ * Returns a DeleteSlotTypeVersionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteSlotTypeVersionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  LexModelBuildingServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteSlotTypeVersionRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * DeleteSlotTypeVersionRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::LexModelBuildingService::DeleteSlotTypeVersionRequestPrivate
+ * \brief The DeleteSlotTypeVersionRequestPrivate class provides private implementation for DeleteSlotTypeVersionRequest.
+ * \internal
  *
- * @class  DeleteSlotTypeVersionRequestPrivate
- *
- * @brief  Private implementation for DeleteSlotTypeVersionRequest.
+ * \inmodule QtAwsLexModelBuildingService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteSlotTypeVersionRequestPrivate object.
- *
- * @param  action  LexModelBuildingService action being performed.
- * @param  q       Pointer to this object's public DeleteSlotTypeVersionRequest instance.
+ * Constructs a DeleteSlotTypeVersionRequestPrivate object for LexModelBuildingService \a action with,
+ * public implementation \a q.
  */
 DeleteSlotTypeVersionRequestPrivate::DeleteSlotTypeVersionRequestPrivate(
     const LexModelBuildingServiceRequest::Action action, DeleteSlotTypeVersionRequest * const q)
@@ -108,15 +97,10 @@ DeleteSlotTypeVersionRequestPrivate::DeleteSlotTypeVersionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteSlotTypeVersionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteSlotTypeVersionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteSlotTypeVersionRequest instance.
  */
 DeleteSlotTypeVersionRequestPrivate::DeleteSlotTypeVersionRequestPrivate(
     const DeleteSlotTypeVersionRequestPrivate &other, DeleteSlotTypeVersionRequest * const q)

@@ -27,10 +27,9 @@ namespace WAFRegional {
 
 /*!
  * \class QtAws::WAFRegional::CreateGeoMatchSetRequest
- *
  * \brief The CreateGeoMatchSetRequest class provides an interface for WAFRegional CreateGeoMatchSet requests.
  *
- * \ingroup WAFRegional
+ * \inmodule QtAwsWAFRegional
  *
  *  This is the <i>AWS WAF Regional API Reference</i> for using AWS WAF with Elastic Load Balancing (ELB) Application Load
  *  Balancers. The AWS WAF actions and data types listed in the reference are available for protecting Application Load
@@ -44,9 +43,7 @@ namespace WAFRegional {
  */
 
 /*!
- * @brief  Constructs a new CreateGeoMatchSetRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateGeoMatchSetRequest::CreateGeoMatchSetRequest(const CreateGeoMatchSetRequest &other)
     : WAFRegionalRequest(new CreateGeoMatchSetRequestPrivate(*other.d_func(), this))
@@ -55,7 +52,7 @@ CreateGeoMatchSetRequest::CreateGeoMatchSetRequest(const CreateGeoMatchSetReques
 }
 
 /*!
- * @brief  Constructs a new CreateGeoMatchSetRequest object.
+ * Constructs a CreateGeoMatchSetRequest object.
  */
 CreateGeoMatchSetRequest::CreateGeoMatchSetRequest()
     : WAFRegionalRequest(new CreateGeoMatchSetRequestPrivate(WAFRegionalRequest::CreateGeoMatchSetAction, this))
@@ -73,14 +70,9 @@ bool CreateGeoMatchSetRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateGeoMatchSetResponse object.
+ * Returns a CreateGeoMatchSetResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateGeoMatchSetResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WAFRegionalClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateGeoMatchSetRequest::response(QNetworkReply * const reply) const
 {
@@ -88,20 +80,17 @@ QtAws::Core::AwsAbstractResponse * CreateGeoMatchSetRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::WAFRegional::CreateGeoMatchSetRequestPrivate
+ * \brief The CreateGeoMatchSetRequestPrivate class provides private implementation for CreateGeoMatchSetRequest.
+ * \internal
  *
- * @class  CreateGeoMatchSetRequestPrivate
- *
- * @brief  Private implementation for CreateGeoMatchSetRequest.
+ * \inmodule QtAwsWAFRegional
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateGeoMatchSetRequestPrivate object.
- *
- * @param  action  WAFRegional action being performed.
- * @param  q       Pointer to this object's public CreateGeoMatchSetRequest instance.
+ * Constructs a CreateGeoMatchSetRequestPrivate object for WAFRegional \a action with,
+ * public implementation \a q.
  */
 CreateGeoMatchSetRequestPrivate::CreateGeoMatchSetRequestPrivate(
     const WAFRegionalRequest::Action action, CreateGeoMatchSetRequest * const q)
@@ -111,15 +100,10 @@ CreateGeoMatchSetRequestPrivate::CreateGeoMatchSetRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateGeoMatchSetRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateGeoMatchSetRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateGeoMatchSetRequest instance.
  */
 CreateGeoMatchSetRequestPrivate::CreateGeoMatchSetRequestPrivate(
     const CreateGeoMatchSetRequestPrivate &other, CreateGeoMatchSetRequest * const q)

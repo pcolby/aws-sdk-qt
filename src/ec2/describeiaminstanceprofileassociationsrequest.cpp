@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DescribeIamInstanceProfileAssociationsRequest
- *
  * \brief The DescribeIamInstanceProfileAssociationsRequest class provides an interface for EC2 DescribeIamInstanceProfileAssociations requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DescribeIamInstanceProfileAssociationsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeIamInstanceProfileAssociationsRequest::DescribeIamInstanceProfileAssociationsRequest(const DescribeIamInstanceProfileAssociationsRequest &other)
     : EC2Request(new DescribeIamInstanceProfileAssociationsRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ DescribeIamInstanceProfileAssociationsRequest::DescribeIamInstanceProfileAssocia
 }
 
 /*!
- * @brief  Constructs a new DescribeIamInstanceProfileAssociationsRequest object.
+ * Constructs a DescribeIamInstanceProfileAssociationsRequest object.
  */
 DescribeIamInstanceProfileAssociationsRequest::DescribeIamInstanceProfileAssociationsRequest()
     : EC2Request(new DescribeIamInstanceProfileAssociationsRequestPrivate(EC2Request::DescribeIamInstanceProfileAssociationsAction, this))
@@ -70,14 +67,9 @@ bool DescribeIamInstanceProfileAssociationsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeIamInstanceProfileAssociationsResponse object.
+ * Returns a DescribeIamInstanceProfileAssociationsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeIamInstanceProfileAssociationsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeIamInstanceProfileAssociationsRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * DescribeIamInstanceProfileAssociationsRequest
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::DescribeIamInstanceProfileAssociationsRequestPrivate
+ * \brief The DescribeIamInstanceProfileAssociationsRequestPrivate class provides private implementation for DescribeIamInstanceProfileAssociationsRequest.
+ * \internal
  *
- * @class  DescribeIamInstanceProfileAssociationsRequestPrivate
- *
- * @brief  Private implementation for DescribeIamInstanceProfileAssociationsRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeIamInstanceProfileAssociationsRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public DescribeIamInstanceProfileAssociationsRequest instance.
+ * Constructs a DescribeIamInstanceProfileAssociationsRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 DescribeIamInstanceProfileAssociationsRequestPrivate::DescribeIamInstanceProfileAssociationsRequestPrivate(
     const EC2Request::Action action, DescribeIamInstanceProfileAssociationsRequest * const q)
@@ -108,15 +97,10 @@ DescribeIamInstanceProfileAssociationsRequestPrivate::DescribeIamInstanceProfile
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeIamInstanceProfileAssociationsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeIamInstanceProfileAssociationsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeIamInstanceProfileAssociationsRequest instance.
  */
 DescribeIamInstanceProfileAssociationsRequestPrivate::DescribeIamInstanceProfileAssociationsRequestPrivate(
     const DescribeIamInstanceProfileAssociationsRequestPrivate &other, DescribeIamInstanceProfileAssociationsRequest * const q)

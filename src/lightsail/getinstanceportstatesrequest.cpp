@@ -27,10 +27,9 @@ namespace Lightsail {
 
 /*!
  * \class QtAws::Lightsail::GetInstancePortStatesRequest
- *
  * \brief The GetInstancePortStatesRequest class provides an interface for Lightsail GetInstancePortStates requests.
  *
- * \ingroup Lightsail
+ * \inmodule QtAwsLightsail
  *
  *  Amazon Lightsail is the easiest way to get started with AWS for developers who just need virtual private servers.
  *  Lightsail includes everything you need to launch your project quickly - a virtual machine, SSD-based storage, data
@@ -53,9 +52,7 @@ namespace Lightsail {
  */
 
 /*!
- * @brief  Constructs a new GetInstancePortStatesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetInstancePortStatesRequest::GetInstancePortStatesRequest(const GetInstancePortStatesRequest &other)
     : LightsailRequest(new GetInstancePortStatesRequestPrivate(*other.d_func(), this))
@@ -64,7 +61,7 @@ GetInstancePortStatesRequest::GetInstancePortStatesRequest(const GetInstancePort
 }
 
 /*!
- * @brief  Constructs a new GetInstancePortStatesRequest object.
+ * Constructs a GetInstancePortStatesRequest object.
  */
 GetInstancePortStatesRequest::GetInstancePortStatesRequest()
     : LightsailRequest(new GetInstancePortStatesRequestPrivate(LightsailRequest::GetInstancePortStatesAction, this))
@@ -82,14 +79,9 @@ bool GetInstancePortStatesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetInstancePortStatesResponse object.
+ * Returns a GetInstancePortStatesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetInstancePortStatesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  LightsailClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetInstancePortStatesRequest::response(QNetworkReply * const reply) const
 {
@@ -97,20 +89,17 @@ QtAws::Core::AwsAbstractResponse * GetInstancePortStatesRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::Lightsail::GetInstancePortStatesRequestPrivate
+ * \brief The GetInstancePortStatesRequestPrivate class provides private implementation for GetInstancePortStatesRequest.
+ * \internal
  *
- * @class  GetInstancePortStatesRequestPrivate
- *
- * @brief  Private implementation for GetInstancePortStatesRequest.
+ * \inmodule QtAwsLightsail
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetInstancePortStatesRequestPrivate object.
- *
- * @param  action  Lightsail action being performed.
- * @param  q       Pointer to this object's public GetInstancePortStatesRequest instance.
+ * Constructs a GetInstancePortStatesRequestPrivate object for Lightsail \a action with,
+ * public implementation \a q.
  */
 GetInstancePortStatesRequestPrivate::GetInstancePortStatesRequestPrivate(
     const LightsailRequest::Action action, GetInstancePortStatesRequest * const q)
@@ -120,15 +109,10 @@ GetInstancePortStatesRequestPrivate::GetInstancePortStatesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetInstancePortStatesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetInstancePortStatesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetInstancePortStatesRequest instance.
  */
 GetInstancePortStatesRequestPrivate::GetInstancePortStatesRequestPrivate(
     const GetInstancePortStatesRequestPrivate &other, GetInstancePortStatesRequest * const q)

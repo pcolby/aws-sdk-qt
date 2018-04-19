@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DeleteTagsRequest
- *
  * \brief The DeleteTagsRequest class provides an interface for EC2 DeleteTags requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DeleteTagsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteTagsRequest::DeleteTagsRequest(const DeleteTagsRequest &other)
     : EC2Request(new DeleteTagsRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ DeleteTagsRequest::DeleteTagsRequest(const DeleteTagsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DeleteTagsRequest object.
+ * Constructs a DeleteTagsRequest object.
  */
 DeleteTagsRequest::DeleteTagsRequest()
     : EC2Request(new DeleteTagsRequestPrivate(EC2Request::DeleteTagsAction, this))
@@ -70,14 +67,9 @@ bool DeleteTagsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteTagsResponse object.
+ * Returns a DeleteTagsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteTagsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteTagsRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * DeleteTagsRequest::response(QNetworkReply * c
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::DeleteTagsRequestPrivate
+ * \brief The DeleteTagsRequestPrivate class provides private implementation for DeleteTagsRequest.
+ * \internal
  *
- * @class  DeleteTagsRequestPrivate
- *
- * @brief  Private implementation for DeleteTagsRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteTagsRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public DeleteTagsRequest instance.
+ * Constructs a DeleteTagsRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 DeleteTagsRequestPrivate::DeleteTagsRequestPrivate(
     const EC2Request::Action action, DeleteTagsRequest * const q)
@@ -108,15 +97,10 @@ DeleteTagsRequestPrivate::DeleteTagsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteTagsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteTagsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteTagsRequest instance.
  */
 DeleteTagsRequestPrivate::DeleteTagsRequestPrivate(
     const DeleteTagsRequestPrivate &other, DeleteTagsRequest * const q)

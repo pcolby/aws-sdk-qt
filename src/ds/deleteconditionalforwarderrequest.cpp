@@ -27,10 +27,9 @@ namespace DirectoryService {
 
 /*!
  * \class QtAws::DirectoryService::DeleteConditionalForwarderRequest
- *
  * \brief The DeleteConditionalForwarderRequest class provides an interface for DirectoryService DeleteConditionalForwarder requests.
  *
- * \ingroup DirectoryService
+ * \inmodule QtAwsDirectoryService
  *
  *  <fullname>AWS Directory Service</fullname>
  * 
@@ -51,9 +50,7 @@ namespace DirectoryService {
  */
 
 /*!
- * @brief  Constructs a new DeleteConditionalForwarderRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteConditionalForwarderRequest::DeleteConditionalForwarderRequest(const DeleteConditionalForwarderRequest &other)
     : DirectoryServiceRequest(new DeleteConditionalForwarderRequestPrivate(*other.d_func(), this))
@@ -62,7 +59,7 @@ DeleteConditionalForwarderRequest::DeleteConditionalForwarderRequest(const Delet
 }
 
 /*!
- * @brief  Constructs a new DeleteConditionalForwarderRequest object.
+ * Constructs a DeleteConditionalForwarderRequest object.
  */
 DeleteConditionalForwarderRequest::DeleteConditionalForwarderRequest()
     : DirectoryServiceRequest(new DeleteConditionalForwarderRequestPrivate(DirectoryServiceRequest::DeleteConditionalForwarderAction, this))
@@ -80,14 +77,9 @@ bool DeleteConditionalForwarderRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteConditionalForwarderResponse object.
+ * Returns a DeleteConditionalForwarderResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteConditionalForwarderResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DirectoryServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteConditionalForwarderRequest::response(QNetworkReply * const reply) const
 {
@@ -95,20 +87,17 @@ QtAws::Core::AwsAbstractResponse * DeleteConditionalForwarderRequest::response(Q
 }
 
 /*!
- * @internal
+ * \class QtAws::DirectoryService::DeleteConditionalForwarderRequestPrivate
+ * \brief The DeleteConditionalForwarderRequestPrivate class provides private implementation for DeleteConditionalForwarderRequest.
+ * \internal
  *
- * @class  DeleteConditionalForwarderRequestPrivate
- *
- * @brief  Private implementation for DeleteConditionalForwarderRequest.
+ * \inmodule QtAwsDirectoryService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteConditionalForwarderRequestPrivate object.
- *
- * @param  action  DirectoryService action being performed.
- * @param  q       Pointer to this object's public DeleteConditionalForwarderRequest instance.
+ * Constructs a DeleteConditionalForwarderRequestPrivate object for DirectoryService \a action with,
+ * public implementation \a q.
  */
 DeleteConditionalForwarderRequestPrivate::DeleteConditionalForwarderRequestPrivate(
     const DirectoryServiceRequest::Action action, DeleteConditionalForwarderRequest * const q)
@@ -118,15 +107,10 @@ DeleteConditionalForwarderRequestPrivate::DeleteConditionalForwarderRequestPriva
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteConditionalForwarderRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteConditionalForwarderRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteConditionalForwarderRequest instance.
  */
 DeleteConditionalForwarderRequestPrivate::DeleteConditionalForwarderRequestPrivate(
     const DeleteConditionalForwarderRequestPrivate &other, DeleteConditionalForwarderRequest * const q)

@@ -27,10 +27,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::ListRolesRequest
- *
  * \brief The ListRolesRequest class provides an interface for IAM ListRoles requests.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -102,9 +101,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new ListRolesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListRolesRequest::ListRolesRequest(const ListRolesRequest &other)
     : IAMRequest(new ListRolesRequestPrivate(*other.d_func(), this))
@@ -113,7 +110,7 @@ ListRolesRequest::ListRolesRequest(const ListRolesRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ListRolesRequest object.
+ * Constructs a ListRolesRequest object.
  */
 ListRolesRequest::ListRolesRequest()
     : IAMRequest(new ListRolesRequestPrivate(IAMRequest::ListRolesAction, this))
@@ -131,14 +128,9 @@ bool ListRolesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListRolesResponse object.
+ * Returns a ListRolesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListRolesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IAMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListRolesRequest::response(QNetworkReply * const reply) const
 {
@@ -146,20 +138,17 @@ QtAws::Core::AwsAbstractResponse * ListRolesRequest::response(QNetworkReply * co
 }
 
 /*!
- * @internal
+ * \class QtAws::IAM::ListRolesRequestPrivate
+ * \brief The ListRolesRequestPrivate class provides private implementation for ListRolesRequest.
+ * \internal
  *
- * @class  ListRolesRequestPrivate
- *
- * @brief  Private implementation for ListRolesRequest.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListRolesRequestPrivate object.
- *
- * @param  action  IAM action being performed.
- * @param  q       Pointer to this object's public ListRolesRequest instance.
+ * Constructs a ListRolesRequestPrivate object for IAM \a action with,
+ * public implementation \a q.
  */
 ListRolesRequestPrivate::ListRolesRequestPrivate(
     const IAMRequest::Action action, ListRolesRequest * const q)
@@ -169,15 +158,10 @@ ListRolesRequestPrivate::ListRolesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListRolesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListRolesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListRolesRequest instance.
  */
 ListRolesRequestPrivate::ListRolesRequestPrivate(
     const ListRolesRequestPrivate &other, ListRolesRequest * const q)

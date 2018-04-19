@@ -27,10 +27,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::RestoreDBInstanceToPointInTimeRequest
- *
  * \brief The RestoreDBInstanceToPointInTimeRequest class provides an interface for RDS RestoreDBInstanceToPointInTime requests.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -101,9 +100,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new RestoreDBInstanceToPointInTimeRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 RestoreDBInstanceToPointInTimeRequest::RestoreDBInstanceToPointInTimeRequest(const RestoreDBInstanceToPointInTimeRequest &other)
     : RDSRequest(new RestoreDBInstanceToPointInTimeRequestPrivate(*other.d_func(), this))
@@ -112,7 +109,7 @@ RestoreDBInstanceToPointInTimeRequest::RestoreDBInstanceToPointInTimeRequest(con
 }
 
 /*!
- * @brief  Constructs a new RestoreDBInstanceToPointInTimeRequest object.
+ * Constructs a RestoreDBInstanceToPointInTimeRequest object.
  */
 RestoreDBInstanceToPointInTimeRequest::RestoreDBInstanceToPointInTimeRequest()
     : RDSRequest(new RestoreDBInstanceToPointInTimeRequestPrivate(RDSRequest::RestoreDBInstanceToPointInTimeAction, this))
@@ -130,14 +127,9 @@ bool RestoreDBInstanceToPointInTimeRequest::isValid() const
 
 
 /*!
- * @brief  Construct an RestoreDBInstanceToPointInTimeResponse object.
+ * Returns a RestoreDBInstanceToPointInTimeResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An RestoreDBInstanceToPointInTimeResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RDSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * RestoreDBInstanceToPointInTimeRequest::response(QNetworkReply * const reply) const
 {
@@ -145,20 +137,17 @@ QtAws::Core::AwsAbstractResponse * RestoreDBInstanceToPointInTimeRequest::respon
 }
 
 /*!
- * @internal
+ * \class QtAws::RDS::RestoreDBInstanceToPointInTimeRequestPrivate
+ * \brief The RestoreDBInstanceToPointInTimeRequestPrivate class provides private implementation for RestoreDBInstanceToPointInTimeRequest.
+ * \internal
  *
- * @class  RestoreDBInstanceToPointInTimeRequestPrivate
- *
- * @brief  Private implementation for RestoreDBInstanceToPointInTimeRequest.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new RestoreDBInstanceToPointInTimeRequestPrivate object.
- *
- * @param  action  RDS action being performed.
- * @param  q       Pointer to this object's public RestoreDBInstanceToPointInTimeRequest instance.
+ * Constructs a RestoreDBInstanceToPointInTimeRequestPrivate object for RDS \a action with,
+ * public implementation \a q.
  */
 RestoreDBInstanceToPointInTimeRequestPrivate::RestoreDBInstanceToPointInTimeRequestPrivate(
     const RDSRequest::Action action, RestoreDBInstanceToPointInTimeRequest * const q)
@@ -168,15 +157,10 @@ RestoreDBInstanceToPointInTimeRequestPrivate::RestoreDBInstanceToPointInTimeRequ
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RestoreDBInstanceToPointInTimeRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the RestoreDBInstanceToPointInTimeRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public RestoreDBInstanceToPointInTimeRequest instance.
  */
 RestoreDBInstanceToPointInTimeRequestPrivate::RestoreDBInstanceToPointInTimeRequestPrivate(
     const RestoreDBInstanceToPointInTimeRequestPrivate &other, RestoreDBInstanceToPointInTimeRequest * const q)

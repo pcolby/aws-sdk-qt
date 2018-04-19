@@ -27,10 +27,9 @@ namespace CognitoIdentityProvider {
 
 /*!
  * \class QtAws::CognitoIdentityProvider::DescribeResourceServerRequest
- *
  * \brief The DescribeResourceServerRequest class provides an interface for CognitoIdentityProvider DescribeResourceServer requests.
  *
- * \ingroup CognitoIdentityProvider
+ * \inmodule QtAwsCognitoIdentityProvider
  *
  *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
  *  authenticate a user to obtain tokens related to user identity and access
@@ -47,9 +46,7 @@ namespace CognitoIdentityProvider {
  */
 
 /*!
- * @brief  Constructs a new DescribeResourceServerRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeResourceServerRequest::DescribeResourceServerRequest(const DescribeResourceServerRequest &other)
     : CognitoIdentityProviderRequest(new DescribeResourceServerRequestPrivate(*other.d_func(), this))
@@ -58,7 +55,7 @@ DescribeResourceServerRequest::DescribeResourceServerRequest(const DescribeResou
 }
 
 /*!
- * @brief  Constructs a new DescribeResourceServerRequest object.
+ * Constructs a DescribeResourceServerRequest object.
  */
 DescribeResourceServerRequest::DescribeResourceServerRequest()
     : CognitoIdentityProviderRequest(new DescribeResourceServerRequestPrivate(CognitoIdentityProviderRequest::DescribeResourceServerAction, this))
@@ -76,14 +73,9 @@ bool DescribeResourceServerRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeResourceServerResponse object.
+ * Returns a DescribeResourceServerResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeResourceServerResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CognitoIdentityProviderClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeResourceServerRequest::response(QNetworkReply * const reply) const
 {
@@ -91,20 +83,17 @@ QtAws::Core::AwsAbstractResponse * DescribeResourceServerRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::CognitoIdentityProvider::DescribeResourceServerRequestPrivate
+ * \brief The DescribeResourceServerRequestPrivate class provides private implementation for DescribeResourceServerRequest.
+ * \internal
  *
- * @class  DescribeResourceServerRequestPrivate
- *
- * @brief  Private implementation for DescribeResourceServerRequest.
+ * \inmodule QtAwsCognitoIdentityProvider
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeResourceServerRequestPrivate object.
- *
- * @param  action  CognitoIdentityProvider action being performed.
- * @param  q       Pointer to this object's public DescribeResourceServerRequest instance.
+ * Constructs a DescribeResourceServerRequestPrivate object for CognitoIdentityProvider \a action with,
+ * public implementation \a q.
  */
 DescribeResourceServerRequestPrivate::DescribeResourceServerRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, DescribeResourceServerRequest * const q)
@@ -114,15 +103,10 @@ DescribeResourceServerRequestPrivate::DescribeResourceServerRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeResourceServerRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeResourceServerRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeResourceServerRequest instance.
  */
 DescribeResourceServerRequestPrivate::DescribeResourceServerRequestPrivate(
     const DescribeResourceServerRequestPrivate &other, DescribeResourceServerRequest * const q)

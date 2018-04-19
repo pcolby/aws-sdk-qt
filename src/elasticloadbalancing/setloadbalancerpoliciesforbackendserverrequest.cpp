@@ -27,10 +27,9 @@ namespace ElasticLoadBalancing {
 
 /*!
  * \class QtAws::ElasticLoadBalancing::SetLoadBalancerPoliciesForBackendServerRequest
- *
  * \brief The SetLoadBalancerPoliciesForBackendServerRequest class provides an interface for ElasticLoadBalancing SetLoadBalancerPoliciesForBackendServer requests.
  *
- * \ingroup ElasticLoadBalancing
+ * \inmodule QtAwsElasticLoadBalancing
  *
  *  <fullname>Elastic Load Balancing</fullname>
  * 
@@ -65,9 +64,7 @@ namespace ElasticLoadBalancing {
  */
 
 /*!
- * @brief  Constructs a new SetLoadBalancerPoliciesForBackendServerRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 SetLoadBalancerPoliciesForBackendServerRequest::SetLoadBalancerPoliciesForBackendServerRequest(const SetLoadBalancerPoliciesForBackendServerRequest &other)
     : ElasticLoadBalancingRequest(new SetLoadBalancerPoliciesForBackendServerRequestPrivate(*other.d_func(), this))
@@ -76,7 +73,7 @@ SetLoadBalancerPoliciesForBackendServerRequest::SetLoadBalancerPoliciesForBacken
 }
 
 /*!
- * @brief  Constructs a new SetLoadBalancerPoliciesForBackendServerRequest object.
+ * Constructs a SetLoadBalancerPoliciesForBackendServerRequest object.
  */
 SetLoadBalancerPoliciesForBackendServerRequest::SetLoadBalancerPoliciesForBackendServerRequest()
     : ElasticLoadBalancingRequest(new SetLoadBalancerPoliciesForBackendServerRequestPrivate(ElasticLoadBalancingRequest::SetLoadBalancerPoliciesForBackendServerAction, this))
@@ -94,14 +91,9 @@ bool SetLoadBalancerPoliciesForBackendServerRequest::isValid() const
 
 
 /*!
- * @brief  Construct an SetLoadBalancerPoliciesForBackendServerResponse object.
+ * Returns a SetLoadBalancerPoliciesForBackendServerResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An SetLoadBalancerPoliciesForBackendServerResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ElasticLoadBalancingClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * SetLoadBalancerPoliciesForBackendServerRequest::response(QNetworkReply * const reply) const
 {
@@ -109,20 +101,17 @@ QtAws::Core::AwsAbstractResponse * SetLoadBalancerPoliciesForBackendServerReques
 }
 
 /*!
- * @internal
+ * \class QtAws::ElasticLoadBalancing::SetLoadBalancerPoliciesForBackendServerRequestPrivate
+ * \brief The SetLoadBalancerPoliciesForBackendServerRequestPrivate class provides private implementation for SetLoadBalancerPoliciesForBackendServerRequest.
+ * \internal
  *
- * @class  SetLoadBalancerPoliciesForBackendServerRequestPrivate
- *
- * @brief  Private implementation for SetLoadBalancerPoliciesForBackendServerRequest.
+ * \inmodule QtAwsElasticLoadBalancing
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new SetLoadBalancerPoliciesForBackendServerRequestPrivate object.
- *
- * @param  action  ElasticLoadBalancing action being performed.
- * @param  q       Pointer to this object's public SetLoadBalancerPoliciesForBackendServerRequest instance.
+ * Constructs a SetLoadBalancerPoliciesForBackendServerRequestPrivate object for ElasticLoadBalancing \a action with,
+ * public implementation \a q.
  */
 SetLoadBalancerPoliciesForBackendServerRequestPrivate::SetLoadBalancerPoliciesForBackendServerRequestPrivate(
     const ElasticLoadBalancingRequest::Action action, SetLoadBalancerPoliciesForBackendServerRequest * const q)
@@ -132,15 +121,10 @@ SetLoadBalancerPoliciesForBackendServerRequestPrivate::SetLoadBalancerPoliciesFo
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SetLoadBalancerPoliciesForBackendServerRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the SetLoadBalancerPoliciesForBackendServerRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public SetLoadBalancerPoliciesForBackendServerRequest instance.
  */
 SetLoadBalancerPoliciesForBackendServerRequestPrivate::SetLoadBalancerPoliciesForBackendServerRequestPrivate(
     const SetLoadBalancerPoliciesForBackendServerRequestPrivate &other, SetLoadBalancerPoliciesForBackendServerRequest * const q)

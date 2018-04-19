@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DeleteRouteTableRequest
- *
  * \brief The DeleteRouteTableRequest class provides an interface for EC2 DeleteRouteTable requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DeleteRouteTableRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteRouteTableRequest::DeleteRouteTableRequest(const DeleteRouteTableRequest &other)
     : EC2Request(new DeleteRouteTableRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ DeleteRouteTableRequest::DeleteRouteTableRequest(const DeleteRouteTableRequest &
 }
 
 /*!
- * @brief  Constructs a new DeleteRouteTableRequest object.
+ * Constructs a DeleteRouteTableRequest object.
  */
 DeleteRouteTableRequest::DeleteRouteTableRequest()
     : EC2Request(new DeleteRouteTableRequestPrivate(EC2Request::DeleteRouteTableAction, this))
@@ -70,14 +67,9 @@ bool DeleteRouteTableRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteRouteTableResponse object.
+ * Returns a DeleteRouteTableResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteRouteTableResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteRouteTableRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * DeleteRouteTableRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::DeleteRouteTableRequestPrivate
+ * \brief The DeleteRouteTableRequestPrivate class provides private implementation for DeleteRouteTableRequest.
+ * \internal
  *
- * @class  DeleteRouteTableRequestPrivate
- *
- * @brief  Private implementation for DeleteRouteTableRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteRouteTableRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public DeleteRouteTableRequest instance.
+ * Constructs a DeleteRouteTableRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 DeleteRouteTableRequestPrivate::DeleteRouteTableRequestPrivate(
     const EC2Request::Action action, DeleteRouteTableRequest * const q)
@@ -108,15 +97,10 @@ DeleteRouteTableRequestPrivate::DeleteRouteTableRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteRouteTableRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteRouteTableRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteRouteTableRequest instance.
  */
 DeleteRouteTableRequestPrivate::DeleteRouteTableRequestPrivate(
     const DeleteRouteTableRequestPrivate &other, DeleteRouteTableRequest * const q)

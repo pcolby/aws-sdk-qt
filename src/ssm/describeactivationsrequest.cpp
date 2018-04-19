@@ -27,10 +27,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::DescribeActivationsRequest
- *
  * \brief The DescribeActivationsRequest class provides an interface for SSM DescribeActivations requests.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -61,9 +60,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new DescribeActivationsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeActivationsRequest::DescribeActivationsRequest(const DescribeActivationsRequest &other)
     : SSMRequest(new DescribeActivationsRequestPrivate(*other.d_func(), this))
@@ -72,7 +69,7 @@ DescribeActivationsRequest::DescribeActivationsRequest(const DescribeActivations
 }
 
 /*!
- * @brief  Constructs a new DescribeActivationsRequest object.
+ * Constructs a DescribeActivationsRequest object.
  */
 DescribeActivationsRequest::DescribeActivationsRequest()
     : SSMRequest(new DescribeActivationsRequestPrivate(SSMRequest::DescribeActivationsAction, this))
@@ -90,14 +87,9 @@ bool DescribeActivationsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeActivationsResponse object.
+ * Returns a DescribeActivationsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeActivationsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SSMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeActivationsRequest::response(QNetworkReply * const reply) const
 {
@@ -105,20 +97,17 @@ QtAws::Core::AwsAbstractResponse * DescribeActivationsRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::SSM::DescribeActivationsRequestPrivate
+ * \brief The DescribeActivationsRequestPrivate class provides private implementation for DescribeActivationsRequest.
+ * \internal
  *
- * @class  DescribeActivationsRequestPrivate
- *
- * @brief  Private implementation for DescribeActivationsRequest.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeActivationsRequestPrivate object.
- *
- * @param  action  SSM action being performed.
- * @param  q       Pointer to this object's public DescribeActivationsRequest instance.
+ * Constructs a DescribeActivationsRequestPrivate object for SSM \a action with,
+ * public implementation \a q.
  */
 DescribeActivationsRequestPrivate::DescribeActivationsRequestPrivate(
     const SSMRequest::Action action, DescribeActivationsRequest * const q)
@@ -128,15 +117,10 @@ DescribeActivationsRequestPrivate::DescribeActivationsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeActivationsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeActivationsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeActivationsRequest instance.
  */
 DescribeActivationsRequestPrivate::DescribeActivationsRequestPrivate(
     const DescribeActivationsRequestPrivate &other, DescribeActivationsRequest * const q)

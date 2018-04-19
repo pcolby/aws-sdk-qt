@@ -27,10 +27,9 @@ namespace CloudWatchLogs {
 
 /*!
  * \class QtAws::CloudWatchLogs::PutDestinationRequest
- *
  * \brief The PutDestinationRequest class provides an interface for CloudWatchLogs PutDestination requests.
  *
- * \ingroup CloudWatchLogs
+ * \inmodule QtAwsCloudWatchLogs
  *
  *  You can use Amazon CloudWatch Logs to monitor, store, and access your log files from Amazon EC2 instances, AWS
  *  CloudTrail, or other sources. You can then retrieve the associated log data from CloudWatch Logs using the CloudWatch
@@ -66,9 +65,7 @@ namespace CloudWatchLogs {
  */
 
 /*!
- * @brief  Constructs a new PutDestinationRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 PutDestinationRequest::PutDestinationRequest(const PutDestinationRequest &other)
     : CloudWatchLogsRequest(new PutDestinationRequestPrivate(*other.d_func(), this))
@@ -77,7 +74,7 @@ PutDestinationRequest::PutDestinationRequest(const PutDestinationRequest &other)
 }
 
 /*!
- * @brief  Constructs a new PutDestinationRequest object.
+ * Constructs a PutDestinationRequest object.
  */
 PutDestinationRequest::PutDestinationRequest()
     : CloudWatchLogsRequest(new PutDestinationRequestPrivate(CloudWatchLogsRequest::PutDestinationAction, this))
@@ -95,14 +92,9 @@ bool PutDestinationRequest::isValid() const
 
 
 /*!
- * @brief  Construct an PutDestinationResponse object.
+ * Returns a PutDestinationResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An PutDestinationResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudWatchLogsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * PutDestinationRequest::response(QNetworkReply * const reply) const
 {
@@ -110,20 +102,17 @@ QtAws::Core::AwsAbstractResponse * PutDestinationRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudWatchLogs::PutDestinationRequestPrivate
+ * \brief The PutDestinationRequestPrivate class provides private implementation for PutDestinationRequest.
+ * \internal
  *
- * @class  PutDestinationRequestPrivate
- *
- * @brief  Private implementation for PutDestinationRequest.
+ * \inmodule QtAwsCloudWatchLogs
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new PutDestinationRequestPrivate object.
- *
- * @param  action  CloudWatchLogs action being performed.
- * @param  q       Pointer to this object's public PutDestinationRequest instance.
+ * Constructs a PutDestinationRequestPrivate object for CloudWatchLogs \a action with,
+ * public implementation \a q.
  */
 PutDestinationRequestPrivate::PutDestinationRequestPrivate(
     const CloudWatchLogsRequest::Action action, PutDestinationRequest * const q)
@@ -133,15 +122,10 @@ PutDestinationRequestPrivate::PutDestinationRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutDestinationRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the PutDestinationRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public PutDestinationRequest instance.
  */
 PutDestinationRequestPrivate::PutDestinationRequestPrivate(
     const PutDestinationRequestPrivate &other, PutDestinationRequest * const q)

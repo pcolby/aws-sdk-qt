@@ -166,6 +166,9 @@
 /*!
  * \namespace QtAws::WAF
  * \brief The QtAws::WAF contains stuff...
+ *
+ * \inmodule QtAwsWAF
+ *
  * @todo Move this to a separate template file.
  */
 
@@ -220,7 +223,7 @@ WafClient::WafClient(
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * \a  AwsEndpoint::getEndpoint()
+ * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
 WafClient::WafClient(
     const QUrl &endpoint,

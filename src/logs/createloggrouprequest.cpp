@@ -27,10 +27,9 @@ namespace CloudWatchLogs {
 
 /*!
  * \class QtAws::CloudWatchLogs::CreateLogGroupRequest
- *
  * \brief The CreateLogGroupRequest class provides an interface for CloudWatchLogs CreateLogGroup requests.
  *
- * \ingroup CloudWatchLogs
+ * \inmodule QtAwsCloudWatchLogs
  *
  *  You can use Amazon CloudWatch Logs to monitor, store, and access your log files from Amazon EC2 instances, AWS
  *  CloudTrail, or other sources. You can then retrieve the associated log data from CloudWatch Logs using the CloudWatch
@@ -66,9 +65,7 @@ namespace CloudWatchLogs {
  */
 
 /*!
- * @brief  Constructs a new CreateLogGroupRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateLogGroupRequest::CreateLogGroupRequest(const CreateLogGroupRequest &other)
     : CloudWatchLogsRequest(new CreateLogGroupRequestPrivate(*other.d_func(), this))
@@ -77,7 +74,7 @@ CreateLogGroupRequest::CreateLogGroupRequest(const CreateLogGroupRequest &other)
 }
 
 /*!
- * @brief  Constructs a new CreateLogGroupRequest object.
+ * Constructs a CreateLogGroupRequest object.
  */
 CreateLogGroupRequest::CreateLogGroupRequest()
     : CloudWatchLogsRequest(new CreateLogGroupRequestPrivate(CloudWatchLogsRequest::CreateLogGroupAction, this))
@@ -95,14 +92,9 @@ bool CreateLogGroupRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateLogGroupResponse object.
+ * Returns a CreateLogGroupResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateLogGroupResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudWatchLogsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateLogGroupRequest::response(QNetworkReply * const reply) const
 {
@@ -110,20 +102,17 @@ QtAws::Core::AwsAbstractResponse * CreateLogGroupRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudWatchLogs::CreateLogGroupRequestPrivate
+ * \brief The CreateLogGroupRequestPrivate class provides private implementation for CreateLogGroupRequest.
+ * \internal
  *
- * @class  CreateLogGroupRequestPrivate
- *
- * @brief  Private implementation for CreateLogGroupRequest.
+ * \inmodule QtAwsCloudWatchLogs
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateLogGroupRequestPrivate object.
- *
- * @param  action  CloudWatchLogs action being performed.
- * @param  q       Pointer to this object's public CreateLogGroupRequest instance.
+ * Constructs a CreateLogGroupRequestPrivate object for CloudWatchLogs \a action with,
+ * public implementation \a q.
  */
 CreateLogGroupRequestPrivate::CreateLogGroupRequestPrivate(
     const CloudWatchLogsRequest::Action action, CreateLogGroupRequest * const q)
@@ -133,15 +122,10 @@ CreateLogGroupRequestPrivate::CreateLogGroupRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateLogGroupRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateLogGroupRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateLogGroupRequest instance.
  */
 CreateLogGroupRequestPrivate::CreateLogGroupRequestPrivate(
     const CreateLogGroupRequestPrivate &other, CreateLogGroupRequest * const q)

@@ -27,10 +27,9 @@ namespace CloudFormation {
 
 /*!
  * \class QtAws::CloudFormation::SetStackPolicyRequest
- *
  * \brief The SetStackPolicyRequest class provides an interface for CloudFormation SetStackPolicy requests.
  *
- * \ingroup CloudFormation
+ * \inmodule QtAwsCloudFormation
  *
  *  <fullname>AWS CloudFormation</fullname>
  * 
@@ -59,9 +58,7 @@ namespace CloudFormation {
  */
 
 /*!
- * @brief  Constructs a new SetStackPolicyRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 SetStackPolicyRequest::SetStackPolicyRequest(const SetStackPolicyRequest &other)
     : CloudFormationRequest(new SetStackPolicyRequestPrivate(*other.d_func(), this))
@@ -70,7 +67,7 @@ SetStackPolicyRequest::SetStackPolicyRequest(const SetStackPolicyRequest &other)
 }
 
 /*!
- * @brief  Constructs a new SetStackPolicyRequest object.
+ * Constructs a SetStackPolicyRequest object.
  */
 SetStackPolicyRequest::SetStackPolicyRequest()
     : CloudFormationRequest(new SetStackPolicyRequestPrivate(CloudFormationRequest::SetStackPolicyAction, this))
@@ -88,14 +85,9 @@ bool SetStackPolicyRequest::isValid() const
 
 
 /*!
- * @brief  Construct an SetStackPolicyResponse object.
+ * Returns a SetStackPolicyResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An SetStackPolicyResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudFormationClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * SetStackPolicyRequest::response(QNetworkReply * const reply) const
 {
@@ -103,20 +95,17 @@ QtAws::Core::AwsAbstractResponse * SetStackPolicyRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudFormation::SetStackPolicyRequestPrivate
+ * \brief The SetStackPolicyRequestPrivate class provides private implementation for SetStackPolicyRequest.
+ * \internal
  *
- * @class  SetStackPolicyRequestPrivate
- *
- * @brief  Private implementation for SetStackPolicyRequest.
+ * \inmodule QtAwsCloudFormation
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new SetStackPolicyRequestPrivate object.
- *
- * @param  action  CloudFormation action being performed.
- * @param  q       Pointer to this object's public SetStackPolicyRequest instance.
+ * Constructs a SetStackPolicyRequestPrivate object for CloudFormation \a action with,
+ * public implementation \a q.
  */
 SetStackPolicyRequestPrivate::SetStackPolicyRequestPrivate(
     const CloudFormationRequest::Action action, SetStackPolicyRequest * const q)
@@ -126,15 +115,10 @@ SetStackPolicyRequestPrivate::SetStackPolicyRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SetStackPolicyRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the SetStackPolicyRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public SetStackPolicyRequest instance.
  */
 SetStackPolicyRequestPrivate::SetStackPolicyRequestPrivate(
     const SetStackPolicyRequestPrivate &other, SetStackPolicyRequest * const q)

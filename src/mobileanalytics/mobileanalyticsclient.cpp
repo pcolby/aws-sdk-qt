@@ -30,6 +30,9 @@
 /*!
  * \namespace QtAws::MobileAnalytics
  * \brief The QtAws::MobileAnalytics contains stuff...
+ *
+ * \inmodule QtAwsMobileAnalytics
+ *
  * @todo Move this to a separate template file.
  */
 
@@ -80,7 +83,7 @@ MobileAnalyticsClient::MobileAnalyticsClient(
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * \a  AwsEndpoint::getEndpoint()
+ * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
 MobileAnalyticsClient::MobileAnalyticsClient(
     const QUrl &endpoint,

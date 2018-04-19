@@ -27,10 +27,9 @@ namespace AutoScaling {
 
 /*!
  * \class QtAws::AutoScaling::DeletePolicyRequest
- *
  * \brief The DeletePolicyRequest class provides an interface for AutoScaling DeletePolicy requests.
  *
- * \ingroup AutoScaling
+ * \inmodule QtAwsAutoScaling
  *
  *  <fullname>Amazon EC2 Auto Scaling</fullname>
  * 
@@ -42,9 +41,7 @@ namespace AutoScaling {
  */
 
 /*!
- * @brief  Constructs a new DeletePolicyRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeletePolicyRequest::DeletePolicyRequest(const DeletePolicyRequest &other)
     : AutoScalingRequest(new DeletePolicyRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ DeletePolicyRequest::DeletePolicyRequest(const DeletePolicyRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DeletePolicyRequest object.
+ * Constructs a DeletePolicyRequest object.
  */
 DeletePolicyRequest::DeletePolicyRequest()
     : AutoScalingRequest(new DeletePolicyRequestPrivate(AutoScalingRequest::DeletePolicyAction, this))
@@ -71,14 +68,9 @@ bool DeletePolicyRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeletePolicyResponse object.
+ * Returns a DeletePolicyResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeletePolicyResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AutoScalingClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeletePolicyRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * DeletePolicyRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::AutoScaling::DeletePolicyRequestPrivate
+ * \brief The DeletePolicyRequestPrivate class provides private implementation for DeletePolicyRequest.
+ * \internal
  *
- * @class  DeletePolicyRequestPrivate
- *
- * @brief  Private implementation for DeletePolicyRequest.
+ * \inmodule QtAwsAutoScaling
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeletePolicyRequestPrivate object.
- *
- * @param  action  AutoScaling action being performed.
- * @param  q       Pointer to this object's public DeletePolicyRequest instance.
+ * Constructs a DeletePolicyRequestPrivate object for AutoScaling \a action with,
+ * public implementation \a q.
  */
 DeletePolicyRequestPrivate::DeletePolicyRequestPrivate(
     const AutoScalingRequest::Action action, DeletePolicyRequest * const q)
@@ -109,15 +98,10 @@ DeletePolicyRequestPrivate::DeletePolicyRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeletePolicyRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeletePolicyRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeletePolicyRequest instance.
  */
 DeletePolicyRequestPrivate::DeletePolicyRequestPrivate(
     const DeletePolicyRequestPrivate &other, DeletePolicyRequest * const q)

@@ -25,16 +25,99 @@ namespace Glue {
 
 /*!
  * \class QtAws::Glue::GlueRequest
- *
  * \brief The GlueRequest class provides an interface for Glue requests.
  *
- * \ingroup Glue
+ * \inmodule QtAwsGlue
  */
 
 /*!
- * @brief  Constructs a new GlueRequest object.
+ * \enum GlueRequest::Action
  *
- * @param  action  The Glue action to request.
+ * This enum describes the actions that can be performed as Glue
+ * requests.
+ *
+ * \value BatchCreatePartitionAction Glue BatchCreatePartition action.
+ * \value BatchDeleteConnectionAction Glue BatchDeleteConnection action.
+ * \value BatchDeletePartitionAction Glue BatchDeletePartition action.
+ * \value BatchDeleteTableAction Glue BatchDeleteTable action.
+ * \value BatchDeleteTableVersionAction Glue BatchDeleteTableVersion action.
+ * \value BatchGetPartitionAction Glue BatchGetPartition action.
+ * \value BatchStopJobRunAction Glue BatchStopJobRun action.
+ * \value CreateClassifierAction Glue CreateClassifier action.
+ * \value CreateConnectionAction Glue CreateConnection action.
+ * \value CreateCrawlerAction Glue CreateCrawler action.
+ * \value CreateDatabaseAction Glue CreateDatabase action.
+ * \value CreateDevEndpointAction Glue CreateDevEndpoint action.
+ * \value CreateJobAction Glue CreateJob action.
+ * \value CreatePartitionAction Glue CreatePartition action.
+ * \value CreateScriptAction Glue CreateScript action.
+ * \value CreateTableAction Glue CreateTable action.
+ * \value CreateTriggerAction Glue CreateTrigger action.
+ * \value CreateUserDefinedFunctionAction Glue CreateUserDefinedFunction action.
+ * \value DeleteClassifierAction Glue DeleteClassifier action.
+ * \value DeleteConnectionAction Glue DeleteConnection action.
+ * \value DeleteCrawlerAction Glue DeleteCrawler action.
+ * \value DeleteDatabaseAction Glue DeleteDatabase action.
+ * \value DeleteDevEndpointAction Glue DeleteDevEndpoint action.
+ * \value DeleteJobAction Glue DeleteJob action.
+ * \value DeletePartitionAction Glue DeletePartition action.
+ * \value DeleteTableAction Glue DeleteTable action.
+ * \value DeleteTableVersionAction Glue DeleteTableVersion action.
+ * \value DeleteTriggerAction Glue DeleteTrigger action.
+ * \value DeleteUserDefinedFunctionAction Glue DeleteUserDefinedFunction action.
+ * \value GetCatalogImportStatusAction Glue GetCatalogImportStatus action.
+ * \value GetClassifierAction Glue GetClassifier action.
+ * \value GetClassifiersAction Glue GetClassifiers action.
+ * \value GetConnectionAction Glue GetConnection action.
+ * \value GetConnectionsAction Glue GetConnections action.
+ * \value GetCrawlerAction Glue GetCrawler action.
+ * \value GetCrawlerMetricsAction Glue GetCrawlerMetrics action.
+ * \value GetCrawlersAction Glue GetCrawlers action.
+ * \value GetDatabaseAction Glue GetDatabase action.
+ * \value GetDatabasesAction Glue GetDatabases action.
+ * \value GetDataflowGraphAction Glue GetDataflowGraph action.
+ * \value GetDevEndpointAction Glue GetDevEndpoint action.
+ * \value GetDevEndpointsAction Glue GetDevEndpoints action.
+ * \value GetJobAction Glue GetJob action.
+ * \value GetJobRunAction Glue GetJobRun action.
+ * \value GetJobRunsAction Glue GetJobRuns action.
+ * \value GetJobsAction Glue GetJobs action.
+ * \value GetMappingAction Glue GetMapping action.
+ * \value GetPartitionAction Glue GetPartition action.
+ * \value GetPartitionsAction Glue GetPartitions action.
+ * \value GetPlanAction Glue GetPlan action.
+ * \value GetTableAction Glue GetTable action.
+ * \value GetTableVersionAction Glue GetTableVersion action.
+ * \value GetTableVersionsAction Glue GetTableVersions action.
+ * \value GetTablesAction Glue GetTables action.
+ * \value GetTriggerAction Glue GetTrigger action.
+ * \value GetTriggersAction Glue GetTriggers action.
+ * \value GetUserDefinedFunctionAction Glue GetUserDefinedFunction action.
+ * \value GetUserDefinedFunctionsAction Glue GetUserDefinedFunctions action.
+ * \value ImportCatalogToGlueAction Glue ImportCatalogToGlue action.
+ * \value ResetJobBookmarkAction Glue ResetJobBookmark action.
+ * \value StartCrawlerAction Glue StartCrawler action.
+ * \value StartCrawlerScheduleAction Glue StartCrawlerSchedule action.
+ * \value StartJobRunAction Glue StartJobRun action.
+ * \value StartTriggerAction Glue StartTrigger action.
+ * \value StopCrawlerAction Glue StopCrawler action.
+ * \value StopCrawlerScheduleAction Glue StopCrawlerSchedule action.
+ * \value StopTriggerAction Glue StopTrigger action.
+ * \value UpdateClassifierAction Glue UpdateClassifier action.
+ * \value UpdateConnectionAction Glue UpdateConnection action.
+ * \value UpdateCrawlerAction Glue UpdateCrawler action.
+ * \value UpdateCrawlerScheduleAction Glue UpdateCrawlerSchedule action.
+ * \value UpdateDatabaseAction Glue UpdateDatabase action.
+ * \value UpdateDevEndpointAction Glue UpdateDevEndpoint action.
+ * \value UpdateJobAction Glue UpdateJob action.
+ * \value UpdatePartitionAction Glue UpdatePartition action.
+ * \value UpdateTableAction Glue UpdateTable action.
+ * \value UpdateTriggerAction Glue UpdateTrigger action.
+ * \value UpdateUserDefinedFunctionAction Glue UpdateUserDefinedFunction action.
+ */
+
+/*!
+ * Constructs a[n] GlueRequest object for Glue \a action.
  */
 GlueRequest::GlueRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new GlueRequestPrivate(action, this))
@@ -43,9 +126,7 @@ GlueRequest::GlueRequest(const Action action)
 }
 
 /*!
- * @brief  Constructs a new GlueRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GlueRequest::GlueRequest(const GlueRequest &other)
     : QtAws::Core::AwsAbstractRequest(new GlueRequestPrivate(*other.d_func(), this))
@@ -54,13 +135,7 @@ GlueRequest::GlueRequest(const GlueRequest &other)
 }
 
 /*!
- * @brief  Assignment operator.
- *
- * Assigns \a other to \c this.
- *
- * @param  other  Instance to copy.
- *
- * @return  A reference to \c this.
+ * Sets the GlueRequest object to be equal to \a other.
  */
 GlueRequest& GlueRequest::operator=(const GlueRequest &other)
 {
@@ -72,14 +147,10 @@ GlueRequest& GlueRequest::operator=(const GlueRequest &other)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GlueRequest object.
+ * Constructs aa GlueRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from GlueRequestPrivate.
- *
- * @param  d  Pointer to private data (aka D-Pointer).
  */
 GlueRequest::GlueRequest(GlueRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
@@ -87,7 +158,7 @@ GlueRequest::GlueRequest(GlueRequestPrivate * const d) : QtAws::Core::AwsAbstrac
 }
 
 /*!
- * \brief Returns the Glue action to be performed by this request.
+ * Returns the Glue action to be performed by this request.
  */
 GlueRequest::Action GlueRequest::action() const
 {
@@ -96,7 +167,7 @@ GlueRequest::Action GlueRequest::action() const
 }
 
 /*!
- * \brief Returns the name of the Glue action to be performed by this request.
+ * Returns the name of the Glue action to be performed by this request.
  */
 QString GlueRequest::actionString() const
 {
@@ -104,7 +175,7 @@ QString GlueRequest::actionString() const
 }
 
 /*!
- * \brief Returns the Glue API version implemented by this request.
+ * Returns the Glue API version implemented by this request.
  */
 QString GlueRequest::apiVersion() const
 {
@@ -113,7 +184,7 @@ QString GlueRequest::apiVersion() const
 }
 
 /*!
- * @brief Set the Glue action to be performed by this request to \a action.
+ * Sets the Glue action to be performed by this request to \a action.
  */
 void GlueRequest::setAction(const Action action)
 {
@@ -122,7 +193,7 @@ void GlueRequest::setAction(const Action action)
 }
 
 /*!
- * Set the Glue API version to include in this request to \a version.
+ * Sets the Glue API version to include in this request to \a version.
  */
 void GlueRequest::setApiVersion(const QString &version)
 {
@@ -131,7 +202,7 @@ void GlueRequest::setApiVersion(const QString &version)
 }
 
 /*!
- * \brief Returns \c true if this request is the same as \a other.
+ * Returns \c true if this request is equal to \a other; \c false otherwise.
  *
  * Note, most derived *Request classes do not need to provider their own
  * implementations of this function, since most such request classes rely on
@@ -146,8 +217,8 @@ bool GlueRequest::operator==(const GlueRequest &other) const
             (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
-/*!
- * @brief  Check if \a queueName is a valid Glue queue name.
+/*
+ * Returns \c tue if \a queueName is a valid Glue queue name.
  *
  * @par From Glue FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
@@ -166,9 +237,8 @@ bool GlueRequest::operator==(const GlueRequest &other) const
 }*/
 
 /*!
- * \brief Removes the a \a name parameter from this request.
- *
- * Returns the count of paramters removed (typically \c 0 or \c 1).
+ * Removes the a \a name parameter from the request, then returns the number of
+ * paramters removed (typically \c 0 or \c 1).
  */
 int GlueRequest::clearParameter(const QString &name)
 {
@@ -177,7 +247,7 @@ int GlueRequest::clearParameter(const QString &name)
 }
 
 /*!
- * \brief Removes all parameters from this request.
+ * Removes all parameters from the request.
  */
 void GlueRequest::clearParameters()
 {
@@ -186,7 +256,7 @@ void GlueRequest::clearParameters()
 }
 
 /*!
- * \brief Returns the value of the \n name pararemter if set, otherwise \a defaultValue.
+ * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
 QVariant GlueRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
@@ -195,7 +265,7 @@ QVariant GlueRequest::parameter(const QString &name, const QVariant &defaultValu
 }
 
 /*!
- * \brief Returns a map of parameters included in this request.
+ * Returns the parameters included in this request.
  */
 const QVariantMap &GlueRequest::parameters() const
 {
@@ -204,7 +274,7 @@ const QVariantMap &GlueRequest::parameters() const
 }
 
 /*!
- * \brief Sets the \a name parameter to \a value.
+ * Sets the \a name parameter to \a value.
  */
 void GlueRequest::setParameter(const QString &name, const QVariant &value)
 {
@@ -213,9 +283,8 @@ void GlueRequest::setParameter(const QString &name, const QVariant &value)
 }
 
 /*!
- * \brief Sets the map of paramters for this request to \a parameters.
- *
- * Any request parameters set previously will be discarded.
+ * Sets the paramters for this request to \a parameters. Any request parameters
+ * set previously will be discarded.
  */
 void GlueRequest::setParameters(const QVariantMap &parameters)
 {
@@ -224,11 +293,12 @@ void GlueRequest::setParameters(const QVariantMap &parameters)
 }
 
 /*!
- * \brief Returns a network request for this Glue request using the given \a endpoint.
+ * Returns a network request for the Glue request using the given
+ * \a endpoint.
  *
- * This Glue implementation builds request URLs by combining the common query
- * parameters (such as Action and Version), with any that have been added (via
- * setParameter) by child classes.
+ * This Glue implementation builds request URLs by combining the
+ * common query parameters (such as Action and Version), with any that have
+ * been added (via setParameter) by child classes.
  */
 QNetworkRequest GlueRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -239,17 +309,16 @@ QNetworkRequest GlueRequest::unsignedRequest(const QUrl &endpoint) const
 }
 
 /*!
+ * \class QtAws::Glue::GlueRequestPrivate
+ * \brief The GlueRequestPrivate class provides private implementation for GlueRequest.
  * \internal
  *
- * \class  GlueRequestPrivate
- *
- * \brief  Private implementation for GlueRequest.
+ * \inmodule QtAwsGlue
  */
 
 /*!
- * \internal
- *
- * \brief Constructs a new GlueRequestPrivate object.
+ * Constructs a GlueRequestPrivate object for Glue \a action with,
+ * public implementation \a q.
  */
 GlueRequestPrivate::GlueRequestPrivate(const GlueRequest::Action action, GlueRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
@@ -258,9 +327,7 @@ GlueRequestPrivate::GlueRequestPrivate(const GlueRequest::Action action, GlueReq
 }
 
 /*!
- * \internal
- *
- * \brief Constructs a new GlueRequestPrivate object, copying an existing one.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
@@ -276,15 +343,12 @@ GlueRequestPrivate::GlueRequestPrivate(const GlueRequestPrivate &other,
 }
 
 /*!
- * \internal
- *
- * \brief Returns a string representing \a action.
+ * Returns a string represention of \a action, or a null string if \a action is
+ * invalid.
  *
  * This function converts GlueRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the Glue service's Action
  * query parameters.
- *
- * @return A string representing \a action, or a null string if \a action is invalid.
  */
 QString GlueRequestPrivate::toString(const GlueRequest::Action &action)
 {

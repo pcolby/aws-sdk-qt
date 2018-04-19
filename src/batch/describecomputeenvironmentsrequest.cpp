@@ -27,10 +27,9 @@ namespace Batch {
 
 /*!
  * \class QtAws::Batch::DescribeComputeEnvironmentsRequest
- *
  * \brief The DescribeComputeEnvironmentsRequest class provides an interface for Batch DescribeComputeEnvironments requests.
  *
- * \ingroup Batch
+ * \inmodule QtAwsBatch
  *
  *  AWS Batch enables you to run batch computing workloads on the AWS Cloud. Batch computing is a common way for developers,
  *  scientists, and engineers to access large amounts of compute resources, and AWS Batch removes the undifferentiated heavy
@@ -51,9 +50,7 @@ namespace Batch {
  */
 
 /*!
- * @brief  Constructs a new DescribeComputeEnvironmentsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeComputeEnvironmentsRequest::DescribeComputeEnvironmentsRequest(const DescribeComputeEnvironmentsRequest &other)
     : BatchRequest(new DescribeComputeEnvironmentsRequestPrivate(*other.d_func(), this))
@@ -62,7 +59,7 @@ DescribeComputeEnvironmentsRequest::DescribeComputeEnvironmentsRequest(const Des
 }
 
 /*!
- * @brief  Constructs a new DescribeComputeEnvironmentsRequest object.
+ * Constructs a DescribeComputeEnvironmentsRequest object.
  */
 DescribeComputeEnvironmentsRequest::DescribeComputeEnvironmentsRequest()
     : BatchRequest(new DescribeComputeEnvironmentsRequestPrivate(BatchRequest::DescribeComputeEnvironmentsAction, this))
@@ -80,14 +77,9 @@ bool DescribeComputeEnvironmentsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeComputeEnvironmentsResponse object.
+ * Returns a DescribeComputeEnvironmentsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeComputeEnvironmentsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  BatchClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeComputeEnvironmentsRequest::response(QNetworkReply * const reply) const
 {
@@ -95,20 +87,17 @@ QtAws::Core::AwsAbstractResponse * DescribeComputeEnvironmentsRequest::response(
 }
 
 /*!
- * @internal
+ * \class QtAws::Batch::DescribeComputeEnvironmentsRequestPrivate
+ * \brief The DescribeComputeEnvironmentsRequestPrivate class provides private implementation for DescribeComputeEnvironmentsRequest.
+ * \internal
  *
- * @class  DescribeComputeEnvironmentsRequestPrivate
- *
- * @brief  Private implementation for DescribeComputeEnvironmentsRequest.
+ * \inmodule QtAwsBatch
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeComputeEnvironmentsRequestPrivate object.
- *
- * @param  action  Batch action being performed.
- * @param  q       Pointer to this object's public DescribeComputeEnvironmentsRequest instance.
+ * Constructs a DescribeComputeEnvironmentsRequestPrivate object for Batch \a action with,
+ * public implementation \a q.
  */
 DescribeComputeEnvironmentsRequestPrivate::DescribeComputeEnvironmentsRequestPrivate(
     const BatchRequest::Action action, DescribeComputeEnvironmentsRequest * const q)
@@ -118,15 +107,10 @@ DescribeComputeEnvironmentsRequestPrivate::DescribeComputeEnvironmentsRequestPri
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeComputeEnvironmentsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeComputeEnvironmentsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeComputeEnvironmentsRequest instance.
  */
 DescribeComputeEnvironmentsRequestPrivate::DescribeComputeEnvironmentsRequestPrivate(
     const DescribeComputeEnvironmentsRequestPrivate &other, DescribeComputeEnvironmentsRequest * const q)

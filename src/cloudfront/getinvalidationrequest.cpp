@@ -27,10 +27,9 @@ namespace CloudFront {
 
 /*!
  * \class QtAws::CloudFront::GetInvalidationRequest
- *
  * \brief The GetInvalidationRequest class provides an interface for CloudFront GetInvalidation requests.
  *
- * \ingroup CloudFront
+ * \inmodule QtAwsCloudFront
  *
  *  <fullname>Amazon CloudFront</fullname>
  * 
@@ -42,9 +41,7 @@ namespace CloudFront {
  */
 
 /*!
- * @brief  Constructs a new GetInvalidationRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetInvalidationRequest::GetInvalidationRequest(const GetInvalidationRequest &other)
     : CloudFrontRequest(new GetInvalidationRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ GetInvalidationRequest::GetInvalidationRequest(const GetInvalidationRequest &oth
 }
 
 /*!
- * @brief  Constructs a new GetInvalidationRequest object.
+ * Constructs a GetInvalidationRequest object.
  */
 GetInvalidationRequest::GetInvalidationRequest()
     : CloudFrontRequest(new GetInvalidationRequestPrivate(CloudFrontRequest::GetInvalidationAction, this))
@@ -71,14 +68,9 @@ bool GetInvalidationRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetInvalidationResponse object.
+ * Returns a GetInvalidationResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetInvalidationResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudFrontClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetInvalidationRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * GetInvalidationRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudFront::GetInvalidationRequestPrivate
+ * \brief The GetInvalidationRequestPrivate class provides private implementation for GetInvalidationRequest.
+ * \internal
  *
- * @class  GetInvalidationRequestPrivate
- *
- * @brief  Private implementation for GetInvalidationRequest.
+ * \inmodule QtAwsCloudFront
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetInvalidationRequestPrivate object.
- *
- * @param  action  CloudFront action being performed.
- * @param  q       Pointer to this object's public GetInvalidationRequest instance.
+ * Constructs a GetInvalidationRequestPrivate object for CloudFront \a action with,
+ * public implementation \a q.
  */
 GetInvalidationRequestPrivate::GetInvalidationRequestPrivate(
     const CloudFrontRequest::Action action, GetInvalidationRequest * const q)
@@ -109,15 +98,10 @@ GetInvalidationRequestPrivate::GetInvalidationRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetInvalidationRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetInvalidationRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetInvalidationRequest instance.
  */
 GetInvalidationRequestPrivate::GetInvalidationRequestPrivate(
     const GetInvalidationRequestPrivate &other, GetInvalidationRequest * const q)

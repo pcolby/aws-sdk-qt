@@ -27,10 +27,9 @@ namespace Redshift {
 
 /*!
  * \class QtAws::Redshift::CreateClusterSecurityGroupRequest
- *
  * \brief The CreateClusterSecurityGroupRequest class provides an interface for Redshift CreateClusterSecurityGroup requests.
  *
- * \ingroup Redshift
+ * \inmodule QtAwsRedshift
  *
  *  <fullname>Amazon Redshift</fullname>
  * 
@@ -67,9 +66,7 @@ namespace Redshift {
  */
 
 /*!
- * @brief  Constructs a new CreateClusterSecurityGroupRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateClusterSecurityGroupRequest::CreateClusterSecurityGroupRequest(const CreateClusterSecurityGroupRequest &other)
     : RedshiftRequest(new CreateClusterSecurityGroupRequestPrivate(*other.d_func(), this))
@@ -78,7 +75,7 @@ CreateClusterSecurityGroupRequest::CreateClusterSecurityGroupRequest(const Creat
 }
 
 /*!
- * @brief  Constructs a new CreateClusterSecurityGroupRequest object.
+ * Constructs a CreateClusterSecurityGroupRequest object.
  */
 CreateClusterSecurityGroupRequest::CreateClusterSecurityGroupRequest()
     : RedshiftRequest(new CreateClusterSecurityGroupRequestPrivate(RedshiftRequest::CreateClusterSecurityGroupAction, this))
@@ -96,14 +93,9 @@ bool CreateClusterSecurityGroupRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateClusterSecurityGroupResponse object.
+ * Returns a CreateClusterSecurityGroupResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateClusterSecurityGroupResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RedshiftClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateClusterSecurityGroupRequest::response(QNetworkReply * const reply) const
 {
@@ -111,20 +103,17 @@ QtAws::Core::AwsAbstractResponse * CreateClusterSecurityGroupRequest::response(Q
 }
 
 /*!
- * @internal
+ * \class QtAws::Redshift::CreateClusterSecurityGroupRequestPrivate
+ * \brief The CreateClusterSecurityGroupRequestPrivate class provides private implementation for CreateClusterSecurityGroupRequest.
+ * \internal
  *
- * @class  CreateClusterSecurityGroupRequestPrivate
- *
- * @brief  Private implementation for CreateClusterSecurityGroupRequest.
+ * \inmodule QtAwsRedshift
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateClusterSecurityGroupRequestPrivate object.
- *
- * @param  action  Redshift action being performed.
- * @param  q       Pointer to this object's public CreateClusterSecurityGroupRequest instance.
+ * Constructs a CreateClusterSecurityGroupRequestPrivate object for Redshift \a action with,
+ * public implementation \a q.
  */
 CreateClusterSecurityGroupRequestPrivate::CreateClusterSecurityGroupRequestPrivate(
     const RedshiftRequest::Action action, CreateClusterSecurityGroupRequest * const q)
@@ -134,15 +123,10 @@ CreateClusterSecurityGroupRequestPrivate::CreateClusterSecurityGroupRequestPriva
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateClusterSecurityGroupRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateClusterSecurityGroupRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateClusterSecurityGroupRequest instance.
  */
 CreateClusterSecurityGroupRequestPrivate::CreateClusterSecurityGroupRequestPrivate(
     const CreateClusterSecurityGroupRequestPrivate &other, CreateClusterSecurityGroupRequest * const q)

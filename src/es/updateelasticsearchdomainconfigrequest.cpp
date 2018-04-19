@@ -27,10 +27,9 @@ namespace ElasticsearchService {
 
 /*!
  * \class QtAws::ElasticsearchService::UpdateElasticsearchDomainConfigRequest
- *
  * \brief The UpdateElasticsearchDomainConfigRequest class provides an interface for ElasticsearchService UpdateElasticsearchDomainConfig requests.
  *
- * \ingroup ElasticsearchService
+ * \inmodule QtAwsElasticsearchService
  *
  *  <fullname>Amazon Elasticsearch Configuration Service</fullname>
  * 
@@ -46,9 +45,7 @@ namespace ElasticsearchService {
  */
 
 /*!
- * @brief  Constructs a new UpdateElasticsearchDomainConfigRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateElasticsearchDomainConfigRequest::UpdateElasticsearchDomainConfigRequest(const UpdateElasticsearchDomainConfigRequest &other)
     : ElasticsearchServiceRequest(new UpdateElasticsearchDomainConfigRequestPrivate(*other.d_func(), this))
@@ -57,7 +54,7 @@ UpdateElasticsearchDomainConfigRequest::UpdateElasticsearchDomainConfigRequest(c
 }
 
 /*!
- * @brief  Constructs a new UpdateElasticsearchDomainConfigRequest object.
+ * Constructs a UpdateElasticsearchDomainConfigRequest object.
  */
 UpdateElasticsearchDomainConfigRequest::UpdateElasticsearchDomainConfigRequest()
     : ElasticsearchServiceRequest(new UpdateElasticsearchDomainConfigRequestPrivate(ElasticsearchServiceRequest::UpdateElasticsearchDomainConfigAction, this))
@@ -75,14 +72,9 @@ bool UpdateElasticsearchDomainConfigRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateElasticsearchDomainConfigResponse object.
+ * Returns a UpdateElasticsearchDomainConfigResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateElasticsearchDomainConfigResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ElasticsearchServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateElasticsearchDomainConfigRequest::response(QNetworkReply * const reply) const
 {
@@ -90,20 +82,17 @@ QtAws::Core::AwsAbstractResponse * UpdateElasticsearchDomainConfigRequest::respo
 }
 
 /*!
- * @internal
+ * \class QtAws::ElasticsearchService::UpdateElasticsearchDomainConfigRequestPrivate
+ * \brief The UpdateElasticsearchDomainConfigRequestPrivate class provides private implementation for UpdateElasticsearchDomainConfigRequest.
+ * \internal
  *
- * @class  UpdateElasticsearchDomainConfigRequestPrivate
- *
- * @brief  Private implementation for UpdateElasticsearchDomainConfigRequest.
+ * \inmodule QtAwsElasticsearchService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateElasticsearchDomainConfigRequestPrivate object.
- *
- * @param  action  ElasticsearchService action being performed.
- * @param  q       Pointer to this object's public UpdateElasticsearchDomainConfigRequest instance.
+ * Constructs a UpdateElasticsearchDomainConfigRequestPrivate object for ElasticsearchService \a action with,
+ * public implementation \a q.
  */
 UpdateElasticsearchDomainConfigRequestPrivate::UpdateElasticsearchDomainConfigRequestPrivate(
     const ElasticsearchServiceRequest::Action action, UpdateElasticsearchDomainConfigRequest * const q)
@@ -113,15 +102,10 @@ UpdateElasticsearchDomainConfigRequestPrivate::UpdateElasticsearchDomainConfigRe
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateElasticsearchDomainConfigRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateElasticsearchDomainConfigRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateElasticsearchDomainConfigRequest instance.
  */
 UpdateElasticsearchDomainConfigRequestPrivate::UpdateElasticsearchDomainConfigRequestPrivate(
     const UpdateElasticsearchDomainConfigRequestPrivate &other, UpdateElasticsearchDomainConfigRequest * const q)

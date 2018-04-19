@@ -27,10 +27,9 @@ namespace GameLift {
 
 /*!
  * \class QtAws::GameLift::StartGameSessionPlacementRequest
- *
  * \brief The StartGameSessionPlacementRequest class provides an interface for GameLift StartGameSessionPlacement requests.
  *
- * \ingroup GameLift
+ * \inmodule QtAwsGameLift
  *
  *  <fullname>Amazon GameLift Service</fullname>
  * 
@@ -473,9 +472,7 @@ namespace GameLift {
  */
 
 /*!
- * @brief  Constructs a new StartGameSessionPlacementRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 StartGameSessionPlacementRequest::StartGameSessionPlacementRequest(const StartGameSessionPlacementRequest &other)
     : GameLiftRequest(new StartGameSessionPlacementRequestPrivate(*other.d_func(), this))
@@ -484,7 +481,7 @@ StartGameSessionPlacementRequest::StartGameSessionPlacementRequest(const StartGa
 }
 
 /*!
- * @brief  Constructs a new StartGameSessionPlacementRequest object.
+ * Constructs a StartGameSessionPlacementRequest object.
  */
 StartGameSessionPlacementRequest::StartGameSessionPlacementRequest()
     : GameLiftRequest(new StartGameSessionPlacementRequestPrivate(GameLiftRequest::StartGameSessionPlacementAction, this))
@@ -502,14 +499,9 @@ bool StartGameSessionPlacementRequest::isValid() const
 
 
 /*!
- * @brief  Construct an StartGameSessionPlacementResponse object.
+ * Returns a StartGameSessionPlacementResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An StartGameSessionPlacementResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GameLiftClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * StartGameSessionPlacementRequest::response(QNetworkReply * const reply) const
 {
@@ -517,20 +509,17 @@ QtAws::Core::AwsAbstractResponse * StartGameSessionPlacementRequest::response(QN
 }
 
 /*!
- * @internal
+ * \class QtAws::GameLift::StartGameSessionPlacementRequestPrivate
+ * \brief The StartGameSessionPlacementRequestPrivate class provides private implementation for StartGameSessionPlacementRequest.
+ * \internal
  *
- * @class  StartGameSessionPlacementRequestPrivate
- *
- * @brief  Private implementation for StartGameSessionPlacementRequest.
+ * \inmodule QtAwsGameLift
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new StartGameSessionPlacementRequestPrivate object.
- *
- * @param  action  GameLift action being performed.
- * @param  q       Pointer to this object's public StartGameSessionPlacementRequest instance.
+ * Constructs a StartGameSessionPlacementRequestPrivate object for GameLift \a action with,
+ * public implementation \a q.
  */
 StartGameSessionPlacementRequestPrivate::StartGameSessionPlacementRequestPrivate(
     const GameLiftRequest::Action action, StartGameSessionPlacementRequest * const q)
@@ -540,15 +529,10 @@ StartGameSessionPlacementRequestPrivate::StartGameSessionPlacementRequestPrivate
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StartGameSessionPlacementRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the StartGameSessionPlacementRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public StartGameSessionPlacementRequest instance.
  */
 StartGameSessionPlacementRequestPrivate::StartGameSessionPlacementRequestPrivate(
     const StartGameSessionPlacementRequestPrivate &other, StartGameSessionPlacementRequest * const q)

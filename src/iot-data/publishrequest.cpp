@@ -27,10 +27,9 @@ namespace IoTDataPlane {
 
 /*!
  * \class QtAws::IoTDataPlane::PublishRequest
- *
  * \brief The PublishRequest class provides an interface for IoTDataPlane Publish requests.
  *
- * \ingroup IoTDataPlane
+ * \inmodule QtAwsIoTDataPlane
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -43,9 +42,7 @@ namespace IoTDataPlane {
  */
 
 /*!
- * @brief  Constructs a new PublishRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 PublishRequest::PublishRequest(const PublishRequest &other)
     : IoTDataPlaneRequest(new PublishRequestPrivate(*other.d_func(), this))
@@ -54,7 +51,7 @@ PublishRequest::PublishRequest(const PublishRequest &other)
 }
 
 /*!
- * @brief  Constructs a new PublishRequest object.
+ * Constructs a PublishRequest object.
  */
 PublishRequest::PublishRequest()
     : IoTDataPlaneRequest(new PublishRequestPrivate(IoTDataPlaneRequest::PublishAction, this))
@@ -72,14 +69,9 @@ bool PublishRequest::isValid() const
 
 
 /*!
- * @brief  Construct an PublishResponse object.
+ * Returns a PublishResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An PublishResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IoTDataPlaneClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * PublishRequest::response(QNetworkReply * const reply) const
 {
@@ -87,20 +79,17 @@ QtAws::Core::AwsAbstractResponse * PublishRequest::response(QNetworkReply * cons
 }
 
 /*!
- * @internal
+ * \class QtAws::IoTDataPlane::PublishRequestPrivate
+ * \brief The PublishRequestPrivate class provides private implementation for PublishRequest.
+ * \internal
  *
- * @class  PublishRequestPrivate
- *
- * @brief  Private implementation for PublishRequest.
+ * \inmodule QtAwsIoTDataPlane
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new PublishRequestPrivate object.
- *
- * @param  action  IoTDataPlane action being performed.
- * @param  q       Pointer to this object's public PublishRequest instance.
+ * Constructs a PublishRequestPrivate object for IoTDataPlane \a action with,
+ * public implementation \a q.
  */
 PublishRequestPrivate::PublishRequestPrivate(
     const IoTDataPlaneRequest::Action action, PublishRequest * const q)
@@ -110,15 +99,10 @@ PublishRequestPrivate::PublishRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PublishRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the PublishRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public PublishRequest instance.
  */
 PublishRequestPrivate::PublishRequestPrivate(
     const PublishRequestPrivate &other, PublishRequest * const q)

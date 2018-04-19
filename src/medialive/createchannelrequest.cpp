@@ -27,19 +27,16 @@ namespace MediaLive {
 
 /*!
  * \class QtAws::MediaLive::CreateChannelRequest
- *
  * \brief The CreateChannelRequest class provides an interface for MediaLive CreateChannel requests.
  *
- * \ingroup MediaLive
+ * \inmodule QtAwsMediaLive
  *
  *
  * \sa MediaLiveClient::createChannel
  */
 
 /*!
- * @brief  Constructs a new CreateChannelRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateChannelRequest::CreateChannelRequest(const CreateChannelRequest &other)
     : MediaLiveRequest(new CreateChannelRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ CreateChannelRequest::CreateChannelRequest(const CreateChannelRequest &other)
 }
 
 /*!
- * @brief  Constructs a new CreateChannelRequest object.
+ * Constructs a CreateChannelRequest object.
  */
 CreateChannelRequest::CreateChannelRequest()
     : MediaLiveRequest(new CreateChannelRequestPrivate(MediaLiveRequest::CreateChannelAction, this))
@@ -66,14 +63,9 @@ bool CreateChannelRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateChannelResponse object.
+ * Returns a CreateChannelResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateChannelResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MediaLiveClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateChannelRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * CreateChannelRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::MediaLive::CreateChannelRequestPrivate
+ * \brief The CreateChannelRequestPrivate class provides private implementation for CreateChannelRequest.
+ * \internal
  *
- * @class  CreateChannelRequestPrivate
- *
- * @brief  Private implementation for CreateChannelRequest.
+ * \inmodule QtAwsMediaLive
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateChannelRequestPrivate object.
- *
- * @param  action  MediaLive action being performed.
- * @param  q       Pointer to this object's public CreateChannelRequest instance.
+ * Constructs a CreateChannelRequestPrivate object for MediaLive \a action with,
+ * public implementation \a q.
  */
 CreateChannelRequestPrivate::CreateChannelRequestPrivate(
     const MediaLiveRequest::Action action, CreateChannelRequest * const q)
@@ -104,15 +93,10 @@ CreateChannelRequestPrivate::CreateChannelRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateChannelRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateChannelRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateChannelRequest instance.
  */
 CreateChannelRequestPrivate::CreateChannelRequestPrivate(
     const CreateChannelRequestPrivate &other, CreateChannelRequest * const q)

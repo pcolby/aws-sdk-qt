@@ -27,10 +27,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::GetGroupPolicyRequest
- *
  * \brief The GetGroupPolicyRequest class provides an interface for IAM GetGroupPolicy requests.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -102,9 +101,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new GetGroupPolicyRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetGroupPolicyRequest::GetGroupPolicyRequest(const GetGroupPolicyRequest &other)
     : IAMRequest(new GetGroupPolicyRequestPrivate(*other.d_func(), this))
@@ -113,7 +110,7 @@ GetGroupPolicyRequest::GetGroupPolicyRequest(const GetGroupPolicyRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetGroupPolicyRequest object.
+ * Constructs a GetGroupPolicyRequest object.
  */
 GetGroupPolicyRequest::GetGroupPolicyRequest()
     : IAMRequest(new GetGroupPolicyRequestPrivate(IAMRequest::GetGroupPolicyAction, this))
@@ -131,14 +128,9 @@ bool GetGroupPolicyRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetGroupPolicyResponse object.
+ * Returns a GetGroupPolicyResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetGroupPolicyResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IAMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetGroupPolicyRequest::response(QNetworkReply * const reply) const
 {
@@ -146,20 +138,17 @@ QtAws::Core::AwsAbstractResponse * GetGroupPolicyRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::IAM::GetGroupPolicyRequestPrivate
+ * \brief The GetGroupPolicyRequestPrivate class provides private implementation for GetGroupPolicyRequest.
+ * \internal
  *
- * @class  GetGroupPolicyRequestPrivate
- *
- * @brief  Private implementation for GetGroupPolicyRequest.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetGroupPolicyRequestPrivate object.
- *
- * @param  action  IAM action being performed.
- * @param  q       Pointer to this object's public GetGroupPolicyRequest instance.
+ * Constructs a GetGroupPolicyRequestPrivate object for IAM \a action with,
+ * public implementation \a q.
  */
 GetGroupPolicyRequestPrivate::GetGroupPolicyRequestPrivate(
     const IAMRequest::Action action, GetGroupPolicyRequest * const q)
@@ -169,15 +158,10 @@ GetGroupPolicyRequestPrivate::GetGroupPolicyRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetGroupPolicyRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetGroupPolicyRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetGroupPolicyRequest instance.
  */
 GetGroupPolicyRequestPrivate::GetGroupPolicyRequestPrivate(
     const GetGroupPolicyRequestPrivate &other, GetGroupPolicyRequest * const q)

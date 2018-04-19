@@ -27,10 +27,9 @@ namespace ConfigService {
 
 /*!
  * \class QtAws::ConfigService::DeleteConfigurationAggregatorRequest
- *
  * \brief The DeleteConfigurationAggregatorRequest class provides an interface for ConfigService DeleteConfigurationAggregator requests.
  *
- * \ingroup ConfigService
+ * \inmodule QtAwsConfigService
  *
  *  <fullname>AWS Config</fullname>
  * 
@@ -60,9 +59,7 @@ namespace ConfigService {
  */
 
 /*!
- * @brief  Constructs a new DeleteConfigurationAggregatorRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteConfigurationAggregatorRequest::DeleteConfigurationAggregatorRequest(const DeleteConfigurationAggregatorRequest &other)
     : ConfigServiceRequest(new DeleteConfigurationAggregatorRequestPrivate(*other.d_func(), this))
@@ -71,7 +68,7 @@ DeleteConfigurationAggregatorRequest::DeleteConfigurationAggregatorRequest(const
 }
 
 /*!
- * @brief  Constructs a new DeleteConfigurationAggregatorRequest object.
+ * Constructs a DeleteConfigurationAggregatorRequest object.
  */
 DeleteConfigurationAggregatorRequest::DeleteConfigurationAggregatorRequest()
     : ConfigServiceRequest(new DeleteConfigurationAggregatorRequestPrivate(ConfigServiceRequest::DeleteConfigurationAggregatorAction, this))
@@ -89,14 +86,9 @@ bool DeleteConfigurationAggregatorRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteConfigurationAggregatorResponse object.
+ * Returns a DeleteConfigurationAggregatorResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteConfigurationAggregatorResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ConfigServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteConfigurationAggregatorRequest::response(QNetworkReply * const reply) const
 {
@@ -104,20 +96,17 @@ QtAws::Core::AwsAbstractResponse * DeleteConfigurationAggregatorRequest::respons
 }
 
 /*!
- * @internal
+ * \class QtAws::ConfigService::DeleteConfigurationAggregatorRequestPrivate
+ * \brief The DeleteConfigurationAggregatorRequestPrivate class provides private implementation for DeleteConfigurationAggregatorRequest.
+ * \internal
  *
- * @class  DeleteConfigurationAggregatorRequestPrivate
- *
- * @brief  Private implementation for DeleteConfigurationAggregatorRequest.
+ * \inmodule QtAwsConfigService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteConfigurationAggregatorRequestPrivate object.
- *
- * @param  action  ConfigService action being performed.
- * @param  q       Pointer to this object's public DeleteConfigurationAggregatorRequest instance.
+ * Constructs a DeleteConfigurationAggregatorRequestPrivate object for ConfigService \a action with,
+ * public implementation \a q.
  */
 DeleteConfigurationAggregatorRequestPrivate::DeleteConfigurationAggregatorRequestPrivate(
     const ConfigServiceRequest::Action action, DeleteConfigurationAggregatorRequest * const q)
@@ -127,15 +116,10 @@ DeleteConfigurationAggregatorRequestPrivate::DeleteConfigurationAggregatorReques
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteConfigurationAggregatorRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteConfigurationAggregatorRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteConfigurationAggregatorRequest instance.
  */
 DeleteConfigurationAggregatorRequestPrivate::DeleteConfigurationAggregatorRequestPrivate(
     const DeleteConfigurationAggregatorRequestPrivate &other, DeleteConfigurationAggregatorRequest * const q)

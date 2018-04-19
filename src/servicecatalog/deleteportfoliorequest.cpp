@@ -27,10 +27,9 @@ namespace ServiceCatalog {
 
 /*!
  * \class QtAws::ServiceCatalog::DeletePortfolioRequest
- *
  * \brief The DeletePortfolioRequest class provides an interface for ServiceCatalog DeletePortfolio requests.
  *
- * \ingroup ServiceCatalog
+ * \inmodule QtAwsServiceCatalog
  *
  *  <fullname>AWS Service Catalog</fullname>
  * 
@@ -43,9 +42,7 @@ namespace ServiceCatalog {
  */
 
 /*!
- * @brief  Constructs a new DeletePortfolioRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeletePortfolioRequest::DeletePortfolioRequest(const DeletePortfolioRequest &other)
     : ServiceCatalogRequest(new DeletePortfolioRequestPrivate(*other.d_func(), this))
@@ -54,7 +51,7 @@ DeletePortfolioRequest::DeletePortfolioRequest(const DeletePortfolioRequest &oth
 }
 
 /*!
- * @brief  Constructs a new DeletePortfolioRequest object.
+ * Constructs a DeletePortfolioRequest object.
  */
 DeletePortfolioRequest::DeletePortfolioRequest()
     : ServiceCatalogRequest(new DeletePortfolioRequestPrivate(ServiceCatalogRequest::DeletePortfolioAction, this))
@@ -72,14 +69,9 @@ bool DeletePortfolioRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeletePortfolioResponse object.
+ * Returns a DeletePortfolioResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeletePortfolioResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ServiceCatalogClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeletePortfolioRequest::response(QNetworkReply * const reply) const
 {
@@ -87,20 +79,17 @@ QtAws::Core::AwsAbstractResponse * DeletePortfolioRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::ServiceCatalog::DeletePortfolioRequestPrivate
+ * \brief The DeletePortfolioRequestPrivate class provides private implementation for DeletePortfolioRequest.
+ * \internal
  *
- * @class  DeletePortfolioRequestPrivate
- *
- * @brief  Private implementation for DeletePortfolioRequest.
+ * \inmodule QtAwsServiceCatalog
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeletePortfolioRequestPrivate object.
- *
- * @param  action  ServiceCatalog action being performed.
- * @param  q       Pointer to this object's public DeletePortfolioRequest instance.
+ * Constructs a DeletePortfolioRequestPrivate object for ServiceCatalog \a action with,
+ * public implementation \a q.
  */
 DeletePortfolioRequestPrivate::DeletePortfolioRequestPrivate(
     const ServiceCatalogRequest::Action action, DeletePortfolioRequest * const q)
@@ -110,15 +99,10 @@ DeletePortfolioRequestPrivate::DeletePortfolioRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeletePortfolioRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeletePortfolioRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeletePortfolioRequest instance.
  */
 DeletePortfolioRequestPrivate::DeletePortfolioRequestPrivate(
     const DeletePortfolioRequestPrivate &other, DeletePortfolioRequest * const q)

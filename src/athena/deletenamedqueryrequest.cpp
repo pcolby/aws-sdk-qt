@@ -27,10 +27,9 @@ namespace Athena {
 
 /*!
  * \class QtAws::Athena::DeleteNamedQueryRequest
- *
  * \brief The DeleteNamedQueryRequest class provides an interface for Athena DeleteNamedQuery requests.
  *
- * \ingroup Athena
+ * \inmodule QtAwsAthena
  *
  *  Amazon Athena is an interactive query service that lets you use standard SQL to analyze data directly in Amazon S3. You
  *  can point Athena at your data in Amazon S3 and run ad-hoc queries and get results in seconds. Athena is serverless, so
@@ -49,9 +48,7 @@ namespace Athena {
  */
 
 /*!
- * @brief  Constructs a new DeleteNamedQueryRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteNamedQueryRequest::DeleteNamedQueryRequest(const DeleteNamedQueryRequest &other)
     : AthenaRequest(new DeleteNamedQueryRequestPrivate(*other.d_func(), this))
@@ -60,7 +57,7 @@ DeleteNamedQueryRequest::DeleteNamedQueryRequest(const DeleteNamedQueryRequest &
 }
 
 /*!
- * @brief  Constructs a new DeleteNamedQueryRequest object.
+ * Constructs a DeleteNamedQueryRequest object.
  */
 DeleteNamedQueryRequest::DeleteNamedQueryRequest()
     : AthenaRequest(new DeleteNamedQueryRequestPrivate(AthenaRequest::DeleteNamedQueryAction, this))
@@ -78,14 +75,9 @@ bool DeleteNamedQueryRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteNamedQueryResponse object.
+ * Returns a DeleteNamedQueryResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteNamedQueryResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AthenaClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteNamedQueryRequest::response(QNetworkReply * const reply) const
 {
@@ -93,20 +85,17 @@ QtAws::Core::AwsAbstractResponse * DeleteNamedQueryRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::Athena::DeleteNamedQueryRequestPrivate
+ * \brief The DeleteNamedQueryRequestPrivate class provides private implementation for DeleteNamedQueryRequest.
+ * \internal
  *
- * @class  DeleteNamedQueryRequestPrivate
- *
- * @brief  Private implementation for DeleteNamedQueryRequest.
+ * \inmodule QtAwsAthena
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteNamedQueryRequestPrivate object.
- *
- * @param  action  Athena action being performed.
- * @param  q       Pointer to this object's public DeleteNamedQueryRequest instance.
+ * Constructs a DeleteNamedQueryRequestPrivate object for Athena \a action with,
+ * public implementation \a q.
  */
 DeleteNamedQueryRequestPrivate::DeleteNamedQueryRequestPrivate(
     const AthenaRequest::Action action, DeleteNamedQueryRequest * const q)
@@ -116,15 +105,10 @@ DeleteNamedQueryRequestPrivate::DeleteNamedQueryRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteNamedQueryRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteNamedQueryRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteNamedQueryRequest instance.
  */
 DeleteNamedQueryRequestPrivate::DeleteNamedQueryRequestPrivate(
     const DeleteNamedQueryRequestPrivate &other, DeleteNamedQueryRequest * const q)

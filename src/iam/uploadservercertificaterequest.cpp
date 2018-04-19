@@ -27,10 +27,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::UploadServerCertificateRequest
- *
  * \brief The UploadServerCertificateRequest class provides an interface for IAM UploadServerCertificate requests.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -102,9 +101,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new UploadServerCertificateRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UploadServerCertificateRequest::UploadServerCertificateRequest(const UploadServerCertificateRequest &other)
     : IAMRequest(new UploadServerCertificateRequestPrivate(*other.d_func(), this))
@@ -113,7 +110,7 @@ UploadServerCertificateRequest::UploadServerCertificateRequest(const UploadServe
 }
 
 /*!
- * @brief  Constructs a new UploadServerCertificateRequest object.
+ * Constructs a UploadServerCertificateRequest object.
  */
 UploadServerCertificateRequest::UploadServerCertificateRequest()
     : IAMRequest(new UploadServerCertificateRequestPrivate(IAMRequest::UploadServerCertificateAction, this))
@@ -131,14 +128,9 @@ bool UploadServerCertificateRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UploadServerCertificateResponse object.
+ * Returns a UploadServerCertificateResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UploadServerCertificateResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IAMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UploadServerCertificateRequest::response(QNetworkReply * const reply) const
 {
@@ -146,20 +138,17 @@ QtAws::Core::AwsAbstractResponse * UploadServerCertificateRequest::response(QNet
 }
 
 /*!
- * @internal
+ * \class QtAws::IAM::UploadServerCertificateRequestPrivate
+ * \brief The UploadServerCertificateRequestPrivate class provides private implementation for UploadServerCertificateRequest.
+ * \internal
  *
- * @class  UploadServerCertificateRequestPrivate
- *
- * @brief  Private implementation for UploadServerCertificateRequest.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UploadServerCertificateRequestPrivate object.
- *
- * @param  action  IAM action being performed.
- * @param  q       Pointer to this object's public UploadServerCertificateRequest instance.
+ * Constructs a UploadServerCertificateRequestPrivate object for IAM \a action with,
+ * public implementation \a q.
  */
 UploadServerCertificateRequestPrivate::UploadServerCertificateRequestPrivate(
     const IAMRequest::Action action, UploadServerCertificateRequest * const q)
@@ -169,15 +158,10 @@ UploadServerCertificateRequestPrivate::UploadServerCertificateRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UploadServerCertificateRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UploadServerCertificateRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UploadServerCertificateRequest instance.
  */
 UploadServerCertificateRequestPrivate::UploadServerCertificateRequestPrivate(
     const UploadServerCertificateRequestPrivate &other, UploadServerCertificateRequest * const q)

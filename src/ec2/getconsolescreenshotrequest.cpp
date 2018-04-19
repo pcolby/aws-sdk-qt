@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::GetConsoleScreenshotRequest
- *
  * \brief The GetConsoleScreenshotRequest class provides an interface for EC2 GetConsoleScreenshot requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new GetConsoleScreenshotRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetConsoleScreenshotRequest::GetConsoleScreenshotRequest(const GetConsoleScreenshotRequest &other)
     : EC2Request(new GetConsoleScreenshotRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ GetConsoleScreenshotRequest::GetConsoleScreenshotRequest(const GetConsoleScreens
 }
 
 /*!
- * @brief  Constructs a new GetConsoleScreenshotRequest object.
+ * Constructs a GetConsoleScreenshotRequest object.
  */
 GetConsoleScreenshotRequest::GetConsoleScreenshotRequest()
     : EC2Request(new GetConsoleScreenshotRequestPrivate(EC2Request::GetConsoleScreenshotAction, this))
@@ -70,14 +67,9 @@ bool GetConsoleScreenshotRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetConsoleScreenshotResponse object.
+ * Returns a GetConsoleScreenshotResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetConsoleScreenshotResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetConsoleScreenshotRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * GetConsoleScreenshotRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::GetConsoleScreenshotRequestPrivate
+ * \brief The GetConsoleScreenshotRequestPrivate class provides private implementation for GetConsoleScreenshotRequest.
+ * \internal
  *
- * @class  GetConsoleScreenshotRequestPrivate
- *
- * @brief  Private implementation for GetConsoleScreenshotRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetConsoleScreenshotRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public GetConsoleScreenshotRequest instance.
+ * Constructs a GetConsoleScreenshotRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 GetConsoleScreenshotRequestPrivate::GetConsoleScreenshotRequestPrivate(
     const EC2Request::Action action, GetConsoleScreenshotRequest * const q)
@@ -108,15 +97,10 @@ GetConsoleScreenshotRequestPrivate::GetConsoleScreenshotRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetConsoleScreenshotRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetConsoleScreenshotRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetConsoleScreenshotRequest instance.
  */
 GetConsoleScreenshotRequestPrivate::GetConsoleScreenshotRequestPrivate(
     const GetConsoleScreenshotRequestPrivate &other, GetConsoleScreenshotRequest * const q)

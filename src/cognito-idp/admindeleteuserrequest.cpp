@@ -27,10 +27,9 @@ namespace CognitoIdentityProvider {
 
 /*!
  * \class QtAws::CognitoIdentityProvider::AdminDeleteUserRequest
- *
  * \brief The AdminDeleteUserRequest class provides an interface for CognitoIdentityProvider AdminDeleteUser requests.
  *
- * \ingroup CognitoIdentityProvider
+ * \inmodule QtAwsCognitoIdentityProvider
  *
  *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
  *  authenticate a user to obtain tokens related to user identity and access
@@ -47,9 +46,7 @@ namespace CognitoIdentityProvider {
  */
 
 /*!
- * @brief  Constructs a new AdminDeleteUserRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AdminDeleteUserRequest::AdminDeleteUserRequest(const AdminDeleteUserRequest &other)
     : CognitoIdentityProviderRequest(new AdminDeleteUserRequestPrivate(*other.d_func(), this))
@@ -58,7 +55,7 @@ AdminDeleteUserRequest::AdminDeleteUserRequest(const AdminDeleteUserRequest &oth
 }
 
 /*!
- * @brief  Constructs a new AdminDeleteUserRequest object.
+ * Constructs a AdminDeleteUserRequest object.
  */
 AdminDeleteUserRequest::AdminDeleteUserRequest()
     : CognitoIdentityProviderRequest(new AdminDeleteUserRequestPrivate(CognitoIdentityProviderRequest::AdminDeleteUserAction, this))
@@ -76,14 +73,9 @@ bool AdminDeleteUserRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AdminDeleteUserResponse object.
+ * Returns a AdminDeleteUserResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AdminDeleteUserResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CognitoIdentityProviderClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AdminDeleteUserRequest::response(QNetworkReply * const reply) const
 {
@@ -91,20 +83,17 @@ QtAws::Core::AwsAbstractResponse * AdminDeleteUserRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::CognitoIdentityProvider::AdminDeleteUserRequestPrivate
+ * \brief The AdminDeleteUserRequestPrivate class provides private implementation for AdminDeleteUserRequest.
+ * \internal
  *
- * @class  AdminDeleteUserRequestPrivate
- *
- * @brief  Private implementation for AdminDeleteUserRequest.
+ * \inmodule QtAwsCognitoIdentityProvider
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AdminDeleteUserRequestPrivate object.
- *
- * @param  action  CognitoIdentityProvider action being performed.
- * @param  q       Pointer to this object's public AdminDeleteUserRequest instance.
+ * Constructs a AdminDeleteUserRequestPrivate object for CognitoIdentityProvider \a action with,
+ * public implementation \a q.
  */
 AdminDeleteUserRequestPrivate::AdminDeleteUserRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, AdminDeleteUserRequest * const q)
@@ -114,15 +103,10 @@ AdminDeleteUserRequestPrivate::AdminDeleteUserRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AdminDeleteUserRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AdminDeleteUserRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AdminDeleteUserRequest instance.
  */
 AdminDeleteUserRequestPrivate::AdminDeleteUserRequestPrivate(
     const AdminDeleteUserRequestPrivate &other, AdminDeleteUserRequest * const q)

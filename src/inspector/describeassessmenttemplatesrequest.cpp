@@ -27,10 +27,9 @@ namespace Inspector {
 
 /*!
  * \class QtAws::Inspector::DescribeAssessmentTemplatesRequest
- *
  * \brief The DescribeAssessmentTemplatesRequest class provides an interface for Inspector DescribeAssessmentTemplates requests.
  *
- * \ingroup Inspector
+ * \inmodule QtAwsInspector
  *
  *  <fullname>Amazon Inspector</fullname>
  * 
@@ -42,9 +41,7 @@ namespace Inspector {
  */
 
 /*!
- * @brief  Constructs a new DescribeAssessmentTemplatesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeAssessmentTemplatesRequest::DescribeAssessmentTemplatesRequest(const DescribeAssessmentTemplatesRequest &other)
     : InspectorRequest(new DescribeAssessmentTemplatesRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ DescribeAssessmentTemplatesRequest::DescribeAssessmentTemplatesRequest(const Des
 }
 
 /*!
- * @brief  Constructs a new DescribeAssessmentTemplatesRequest object.
+ * Constructs a DescribeAssessmentTemplatesRequest object.
  */
 DescribeAssessmentTemplatesRequest::DescribeAssessmentTemplatesRequest()
     : InspectorRequest(new DescribeAssessmentTemplatesRequestPrivate(InspectorRequest::DescribeAssessmentTemplatesAction, this))
@@ -71,14 +68,9 @@ bool DescribeAssessmentTemplatesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeAssessmentTemplatesResponse object.
+ * Returns a DescribeAssessmentTemplatesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeAssessmentTemplatesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  InspectorClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeAssessmentTemplatesRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * DescribeAssessmentTemplatesRequest::response(
 }
 
 /*!
- * @internal
+ * \class QtAws::Inspector::DescribeAssessmentTemplatesRequestPrivate
+ * \brief The DescribeAssessmentTemplatesRequestPrivate class provides private implementation for DescribeAssessmentTemplatesRequest.
+ * \internal
  *
- * @class  DescribeAssessmentTemplatesRequestPrivate
- *
- * @brief  Private implementation for DescribeAssessmentTemplatesRequest.
+ * \inmodule QtAwsInspector
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeAssessmentTemplatesRequestPrivate object.
- *
- * @param  action  Inspector action being performed.
- * @param  q       Pointer to this object's public DescribeAssessmentTemplatesRequest instance.
+ * Constructs a DescribeAssessmentTemplatesRequestPrivate object for Inspector \a action with,
+ * public implementation \a q.
  */
 DescribeAssessmentTemplatesRequestPrivate::DescribeAssessmentTemplatesRequestPrivate(
     const InspectorRequest::Action action, DescribeAssessmentTemplatesRequest * const q)
@@ -109,15 +98,10 @@ DescribeAssessmentTemplatesRequestPrivate::DescribeAssessmentTemplatesRequestPri
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeAssessmentTemplatesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeAssessmentTemplatesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeAssessmentTemplatesRequest instance.
  */
 DescribeAssessmentTemplatesRequestPrivate::DescribeAssessmentTemplatesRequestPrivate(
     const DescribeAssessmentTemplatesRequestPrivate &other, DescribeAssessmentTemplatesRequest * const q)

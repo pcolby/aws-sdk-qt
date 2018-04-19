@@ -27,10 +27,9 @@ namespace SimpleDB {
 
 /*!
  * \class QtAws::SimpleDB::PutAttributesRequest
- *
  * \brief The PutAttributesRequest class provides an interface for SimpleDB PutAttributes requests.
  *
- * \ingroup SimpleDB
+ * \inmodule QtAwsSimpleDB
  *
  *  Amazon SimpleDB is a web service providing the core database functions of data indexing and querying in the cloud. By
  *  offloading the time and effort associated with building and operating a web-scale database, SimpleDB provides developers
@@ -50,9 +49,7 @@ namespace SimpleDB {
  */
 
 /*!
- * @brief  Constructs a new PutAttributesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 PutAttributesRequest::PutAttributesRequest(const PutAttributesRequest &other)
     : SimpleDBRequest(new PutAttributesRequestPrivate(*other.d_func(), this))
@@ -61,7 +58,7 @@ PutAttributesRequest::PutAttributesRequest(const PutAttributesRequest &other)
 }
 
 /*!
- * @brief  Constructs a new PutAttributesRequest object.
+ * Constructs a PutAttributesRequest object.
  */
 PutAttributesRequest::PutAttributesRequest()
     : SimpleDBRequest(new PutAttributesRequestPrivate(SimpleDBRequest::PutAttributesAction, this))
@@ -79,14 +76,9 @@ bool PutAttributesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an PutAttributesResponse object.
+ * Returns a PutAttributesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An PutAttributesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SimpleDBClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * PutAttributesRequest::response(QNetworkReply * const reply) const
 {
@@ -94,20 +86,17 @@ QtAws::Core::AwsAbstractResponse * PutAttributesRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::SimpleDB::PutAttributesRequestPrivate
+ * \brief The PutAttributesRequestPrivate class provides private implementation for PutAttributesRequest.
+ * \internal
  *
- * @class  PutAttributesRequestPrivate
- *
- * @brief  Private implementation for PutAttributesRequest.
+ * \inmodule QtAwsSimpleDB
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new PutAttributesRequestPrivate object.
- *
- * @param  action  SimpleDB action being performed.
- * @param  q       Pointer to this object's public PutAttributesRequest instance.
+ * Constructs a PutAttributesRequestPrivate object for SimpleDB \a action with,
+ * public implementation \a q.
  */
 PutAttributesRequestPrivate::PutAttributesRequestPrivate(
     const SimpleDBRequest::Action action, PutAttributesRequest * const q)
@@ -117,15 +106,10 @@ PutAttributesRequestPrivate::PutAttributesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutAttributesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the PutAttributesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public PutAttributesRequest instance.
  */
 PutAttributesRequestPrivate::PutAttributesRequestPrivate(
     const PutAttributesRequestPrivate &other, PutAttributesRequest * const q)

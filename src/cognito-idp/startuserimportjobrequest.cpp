@@ -27,10 +27,9 @@ namespace CognitoIdentityProvider {
 
 /*!
  * \class QtAws::CognitoIdentityProvider::StartUserImportJobRequest
- *
  * \brief The StartUserImportJobRequest class provides an interface for CognitoIdentityProvider StartUserImportJob requests.
  *
- * \ingroup CognitoIdentityProvider
+ * \inmodule QtAwsCognitoIdentityProvider
  *
  *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
  *  authenticate a user to obtain tokens related to user identity and access
@@ -47,9 +46,7 @@ namespace CognitoIdentityProvider {
  */
 
 /*!
- * @brief  Constructs a new StartUserImportJobRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 StartUserImportJobRequest::StartUserImportJobRequest(const StartUserImportJobRequest &other)
     : CognitoIdentityProviderRequest(new StartUserImportJobRequestPrivate(*other.d_func(), this))
@@ -58,7 +55,7 @@ StartUserImportJobRequest::StartUserImportJobRequest(const StartUserImportJobReq
 }
 
 /*!
- * @brief  Constructs a new StartUserImportJobRequest object.
+ * Constructs a StartUserImportJobRequest object.
  */
 StartUserImportJobRequest::StartUserImportJobRequest()
     : CognitoIdentityProviderRequest(new StartUserImportJobRequestPrivate(CognitoIdentityProviderRequest::StartUserImportJobAction, this))
@@ -76,14 +73,9 @@ bool StartUserImportJobRequest::isValid() const
 
 
 /*!
- * @brief  Construct an StartUserImportJobResponse object.
+ * Returns a StartUserImportJobResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An StartUserImportJobResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CognitoIdentityProviderClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * StartUserImportJobRequest::response(QNetworkReply * const reply) const
 {
@@ -91,20 +83,17 @@ QtAws::Core::AwsAbstractResponse * StartUserImportJobRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::CognitoIdentityProvider::StartUserImportJobRequestPrivate
+ * \brief The StartUserImportJobRequestPrivate class provides private implementation for StartUserImportJobRequest.
+ * \internal
  *
- * @class  StartUserImportJobRequestPrivate
- *
- * @brief  Private implementation for StartUserImportJobRequest.
+ * \inmodule QtAwsCognitoIdentityProvider
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new StartUserImportJobRequestPrivate object.
- *
- * @param  action  CognitoIdentityProvider action being performed.
- * @param  q       Pointer to this object's public StartUserImportJobRequest instance.
+ * Constructs a StartUserImportJobRequestPrivate object for CognitoIdentityProvider \a action with,
+ * public implementation \a q.
  */
 StartUserImportJobRequestPrivate::StartUserImportJobRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, StartUserImportJobRequest * const q)
@@ -114,15 +103,10 @@ StartUserImportJobRequestPrivate::StartUserImportJobRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StartUserImportJobRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the StartUserImportJobRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public StartUserImportJobRequest instance.
  */
 StartUserImportJobRequestPrivate::StartUserImportJobRequestPrivate(
     const StartUserImportJobRequestPrivate &other, StartUserImportJobRequest * const q)

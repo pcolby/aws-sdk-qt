@@ -27,10 +27,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::DeleteCertificateRequest
- *
  * \brief The DeleteCertificateRequest class provides an interface for IoT DeleteCertificate requests.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -48,9 +47,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new DeleteCertificateRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteCertificateRequest::DeleteCertificateRequest(const DeleteCertificateRequest &other)
     : IoTRequest(new DeleteCertificateRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ DeleteCertificateRequest::DeleteCertificateRequest(const DeleteCertificateReques
 }
 
 /*!
- * @brief  Constructs a new DeleteCertificateRequest object.
+ * Constructs a DeleteCertificateRequest object.
  */
 DeleteCertificateRequest::DeleteCertificateRequest()
     : IoTRequest(new DeleteCertificateRequestPrivate(IoTRequest::DeleteCertificateAction, this))
@@ -77,14 +74,9 @@ bool DeleteCertificateRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteCertificateResponse object.
+ * Returns a DeleteCertificateResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteCertificateResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IoTClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteCertificateRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * DeleteCertificateRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::IoT::DeleteCertificateRequestPrivate
+ * \brief The DeleteCertificateRequestPrivate class provides private implementation for DeleteCertificateRequest.
+ * \internal
  *
- * @class  DeleteCertificateRequestPrivate
- *
- * @brief  Private implementation for DeleteCertificateRequest.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteCertificateRequestPrivate object.
- *
- * @param  action  IoT action being performed.
- * @param  q       Pointer to this object's public DeleteCertificateRequest instance.
+ * Constructs a DeleteCertificateRequestPrivate object for IoT \a action with,
+ * public implementation \a q.
  */
 DeleteCertificateRequestPrivate::DeleteCertificateRequestPrivate(
     const IoTRequest::Action action, DeleteCertificateRequest * const q)
@@ -115,15 +104,10 @@ DeleteCertificateRequestPrivate::DeleteCertificateRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteCertificateRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteCertificateRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteCertificateRequest instance.
  */
 DeleteCertificateRequestPrivate::DeleteCertificateRequestPrivate(
     const DeleteCertificateRequestPrivate &other, DeleteCertificateRequest * const q)

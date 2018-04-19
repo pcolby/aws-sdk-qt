@@ -27,10 +27,9 @@ namespace DirectoryService {
 
 /*!
  * \class QtAws::DirectoryService::UpdateRadiusRequest
- *
  * \brief The UpdateRadiusRequest class provides an interface for DirectoryService UpdateRadius requests.
  *
- * \ingroup DirectoryService
+ * \inmodule QtAwsDirectoryService
  *
  *  <fullname>AWS Directory Service</fullname>
  * 
@@ -51,9 +50,7 @@ namespace DirectoryService {
  */
 
 /*!
- * @brief  Constructs a new UpdateRadiusRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateRadiusRequest::UpdateRadiusRequest(const UpdateRadiusRequest &other)
     : DirectoryServiceRequest(new UpdateRadiusRequestPrivate(*other.d_func(), this))
@@ -62,7 +59,7 @@ UpdateRadiusRequest::UpdateRadiusRequest(const UpdateRadiusRequest &other)
 }
 
 /*!
- * @brief  Constructs a new UpdateRadiusRequest object.
+ * Constructs a UpdateRadiusRequest object.
  */
 UpdateRadiusRequest::UpdateRadiusRequest()
     : DirectoryServiceRequest(new UpdateRadiusRequestPrivate(DirectoryServiceRequest::UpdateRadiusAction, this))
@@ -80,14 +77,9 @@ bool UpdateRadiusRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateRadiusResponse object.
+ * Returns a UpdateRadiusResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateRadiusResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DirectoryServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateRadiusRequest::response(QNetworkReply * const reply) const
 {
@@ -95,20 +87,17 @@ QtAws::Core::AwsAbstractResponse * UpdateRadiusRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::DirectoryService::UpdateRadiusRequestPrivate
+ * \brief The UpdateRadiusRequestPrivate class provides private implementation for UpdateRadiusRequest.
+ * \internal
  *
- * @class  UpdateRadiusRequestPrivate
- *
- * @brief  Private implementation for UpdateRadiusRequest.
+ * \inmodule QtAwsDirectoryService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateRadiusRequestPrivate object.
- *
- * @param  action  DirectoryService action being performed.
- * @param  q       Pointer to this object's public UpdateRadiusRequest instance.
+ * Constructs a UpdateRadiusRequestPrivate object for DirectoryService \a action with,
+ * public implementation \a q.
  */
 UpdateRadiusRequestPrivate::UpdateRadiusRequestPrivate(
     const DirectoryServiceRequest::Action action, UpdateRadiusRequest * const q)
@@ -118,15 +107,10 @@ UpdateRadiusRequestPrivate::UpdateRadiusRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateRadiusRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateRadiusRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateRadiusRequest instance.
  */
 UpdateRadiusRequestPrivate::UpdateRadiusRequestPrivate(
     const UpdateRadiusRequestPrivate &other, UpdateRadiusRequest * const q)

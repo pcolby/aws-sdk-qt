@@ -27,10 +27,9 @@ namespace Lightsail {
 
 /*!
  * \class QtAws::Lightsail::CreateDiskFromSnapshotRequest
- *
  * \brief The CreateDiskFromSnapshotRequest class provides an interface for Lightsail CreateDiskFromSnapshot requests.
  *
- * \ingroup Lightsail
+ * \inmodule QtAwsLightsail
  *
  *  Amazon Lightsail is the easiest way to get started with AWS for developers who just need virtual private servers.
  *  Lightsail includes everything you need to launch your project quickly - a virtual machine, SSD-based storage, data
@@ -53,9 +52,7 @@ namespace Lightsail {
  */
 
 /*!
- * @brief  Constructs a new CreateDiskFromSnapshotRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateDiskFromSnapshotRequest::CreateDiskFromSnapshotRequest(const CreateDiskFromSnapshotRequest &other)
     : LightsailRequest(new CreateDiskFromSnapshotRequestPrivate(*other.d_func(), this))
@@ -64,7 +61,7 @@ CreateDiskFromSnapshotRequest::CreateDiskFromSnapshotRequest(const CreateDiskFro
 }
 
 /*!
- * @brief  Constructs a new CreateDiskFromSnapshotRequest object.
+ * Constructs a CreateDiskFromSnapshotRequest object.
  */
 CreateDiskFromSnapshotRequest::CreateDiskFromSnapshotRequest()
     : LightsailRequest(new CreateDiskFromSnapshotRequestPrivate(LightsailRequest::CreateDiskFromSnapshotAction, this))
@@ -82,14 +79,9 @@ bool CreateDiskFromSnapshotRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateDiskFromSnapshotResponse object.
+ * Returns a CreateDiskFromSnapshotResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateDiskFromSnapshotResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  LightsailClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateDiskFromSnapshotRequest::response(QNetworkReply * const reply) const
 {
@@ -97,20 +89,17 @@ QtAws::Core::AwsAbstractResponse * CreateDiskFromSnapshotRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::Lightsail::CreateDiskFromSnapshotRequestPrivate
+ * \brief The CreateDiskFromSnapshotRequestPrivate class provides private implementation for CreateDiskFromSnapshotRequest.
+ * \internal
  *
- * @class  CreateDiskFromSnapshotRequestPrivate
- *
- * @brief  Private implementation for CreateDiskFromSnapshotRequest.
+ * \inmodule QtAwsLightsail
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateDiskFromSnapshotRequestPrivate object.
- *
- * @param  action  Lightsail action being performed.
- * @param  q       Pointer to this object's public CreateDiskFromSnapshotRequest instance.
+ * Constructs a CreateDiskFromSnapshotRequestPrivate object for Lightsail \a action with,
+ * public implementation \a q.
  */
 CreateDiskFromSnapshotRequestPrivate::CreateDiskFromSnapshotRequestPrivate(
     const LightsailRequest::Action action, CreateDiskFromSnapshotRequest * const q)
@@ -120,15 +109,10 @@ CreateDiskFromSnapshotRequestPrivate::CreateDiskFromSnapshotRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateDiskFromSnapshotRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateDiskFromSnapshotRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateDiskFromSnapshotRequest instance.
  */
 CreateDiskFromSnapshotRequestPrivate::CreateDiskFromSnapshotRequestPrivate(
     const CreateDiskFromSnapshotRequestPrivate &other, CreateDiskFromSnapshotRequest * const q)

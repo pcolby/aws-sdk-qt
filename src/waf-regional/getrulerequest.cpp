@@ -27,10 +27,9 @@ namespace WAFRegional {
 
 /*!
  * \class QtAws::WAFRegional::GetRuleRequest
- *
  * \brief The GetRuleRequest class provides an interface for WAFRegional GetRule requests.
  *
- * \ingroup WAFRegional
+ * \inmodule QtAwsWAFRegional
  *
  *  This is the <i>AWS WAF Regional API Reference</i> for using AWS WAF with Elastic Load Balancing (ELB) Application Load
  *  Balancers. The AWS WAF actions and data types listed in the reference are available for protecting Application Load
@@ -44,9 +43,7 @@ namespace WAFRegional {
  */
 
 /*!
- * @brief  Constructs a new GetRuleRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetRuleRequest::GetRuleRequest(const GetRuleRequest &other)
     : WAFRegionalRequest(new GetRuleRequestPrivate(*other.d_func(), this))
@@ -55,7 +52,7 @@ GetRuleRequest::GetRuleRequest(const GetRuleRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetRuleRequest object.
+ * Constructs a GetRuleRequest object.
  */
 GetRuleRequest::GetRuleRequest()
     : WAFRegionalRequest(new GetRuleRequestPrivate(WAFRegionalRequest::GetRuleAction, this))
@@ -73,14 +70,9 @@ bool GetRuleRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetRuleResponse object.
+ * Returns a GetRuleResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetRuleResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WAFRegionalClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetRuleRequest::response(QNetworkReply * const reply) const
 {
@@ -88,20 +80,17 @@ QtAws::Core::AwsAbstractResponse * GetRuleRequest::response(QNetworkReply * cons
 }
 
 /*!
- * @internal
+ * \class QtAws::WAFRegional::GetRuleRequestPrivate
+ * \brief The GetRuleRequestPrivate class provides private implementation for GetRuleRequest.
+ * \internal
  *
- * @class  GetRuleRequestPrivate
- *
- * @brief  Private implementation for GetRuleRequest.
+ * \inmodule QtAwsWAFRegional
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetRuleRequestPrivate object.
- *
- * @param  action  WAFRegional action being performed.
- * @param  q       Pointer to this object's public GetRuleRequest instance.
+ * Constructs a GetRuleRequestPrivate object for WAFRegional \a action with,
+ * public implementation \a q.
  */
 GetRuleRequestPrivate::GetRuleRequestPrivate(
     const WAFRegionalRequest::Action action, GetRuleRequest * const q)
@@ -111,15 +100,10 @@ GetRuleRequestPrivate::GetRuleRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetRuleRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetRuleRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetRuleRequest instance.
  */
 GetRuleRequestPrivate::GetRuleRequestPrivate(
     const GetRuleRequestPrivate &other, GetRuleRequest * const q)

@@ -27,10 +27,9 @@ namespace CodePipeline {
 
 /*!
  * \class QtAws::CodePipeline::CreatePipelineRequest
- *
  * \brief The CreatePipelineRequest class provides an interface for CodePipeline CreatePipeline requests.
  *
- * \ingroup CodePipeline
+ * \inmodule QtAwsCodePipeline
  *
  *  <fullname>AWS CodePipeline</fullname>
  * 
@@ -200,9 +199,7 @@ namespace CodePipeline {
  */
 
 /*!
- * @brief  Constructs a new CreatePipelineRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreatePipelineRequest::CreatePipelineRequest(const CreatePipelineRequest &other)
     : CodePipelineRequest(new CreatePipelineRequestPrivate(*other.d_func(), this))
@@ -211,7 +208,7 @@ CreatePipelineRequest::CreatePipelineRequest(const CreatePipelineRequest &other)
 }
 
 /*!
- * @brief  Constructs a new CreatePipelineRequest object.
+ * Constructs a CreatePipelineRequest object.
  */
 CreatePipelineRequest::CreatePipelineRequest()
     : CodePipelineRequest(new CreatePipelineRequestPrivate(CodePipelineRequest::CreatePipelineAction, this))
@@ -229,14 +226,9 @@ bool CreatePipelineRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreatePipelineResponse object.
+ * Returns a CreatePipelineResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreatePipelineResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CodePipelineClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreatePipelineRequest::response(QNetworkReply * const reply) const
 {
@@ -244,20 +236,17 @@ QtAws::Core::AwsAbstractResponse * CreatePipelineRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::CodePipeline::CreatePipelineRequestPrivate
+ * \brief The CreatePipelineRequestPrivate class provides private implementation for CreatePipelineRequest.
+ * \internal
  *
- * @class  CreatePipelineRequestPrivate
- *
- * @brief  Private implementation for CreatePipelineRequest.
+ * \inmodule QtAwsCodePipeline
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreatePipelineRequestPrivate object.
- *
- * @param  action  CodePipeline action being performed.
- * @param  q       Pointer to this object's public CreatePipelineRequest instance.
+ * Constructs a CreatePipelineRequestPrivate object for CodePipeline \a action with,
+ * public implementation \a q.
  */
 CreatePipelineRequestPrivate::CreatePipelineRequestPrivate(
     const CodePipelineRequest::Action action, CreatePipelineRequest * const q)
@@ -267,15 +256,10 @@ CreatePipelineRequestPrivate::CreatePipelineRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreatePipelineRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreatePipelineRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreatePipelineRequest instance.
  */
 CreatePipelineRequestPrivate::CreatePipelineRequestPrivate(
     const CreatePipelineRequestPrivate &other, CreatePipelineRequest * const q)

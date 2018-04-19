@@ -27,10 +27,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::DescribeEndpointRequest
- *
  * \brief The DescribeEndpointRequest class provides an interface for IoT DescribeEndpoint requests.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -48,9 +47,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new DescribeEndpointRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeEndpointRequest::DescribeEndpointRequest(const DescribeEndpointRequest &other)
     : IoTRequest(new DescribeEndpointRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ DescribeEndpointRequest::DescribeEndpointRequest(const DescribeEndpointRequest &
 }
 
 /*!
- * @brief  Constructs a new DescribeEndpointRequest object.
+ * Constructs a DescribeEndpointRequest object.
  */
 DescribeEndpointRequest::DescribeEndpointRequest()
     : IoTRequest(new DescribeEndpointRequestPrivate(IoTRequest::DescribeEndpointAction, this))
@@ -77,14 +74,9 @@ bool DescribeEndpointRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeEndpointResponse object.
+ * Returns a DescribeEndpointResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeEndpointResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IoTClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeEndpointRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * DescribeEndpointRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::IoT::DescribeEndpointRequestPrivate
+ * \brief The DescribeEndpointRequestPrivate class provides private implementation for DescribeEndpointRequest.
+ * \internal
  *
- * @class  DescribeEndpointRequestPrivate
- *
- * @brief  Private implementation for DescribeEndpointRequest.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeEndpointRequestPrivate object.
- *
- * @param  action  IoT action being performed.
- * @param  q       Pointer to this object's public DescribeEndpointRequest instance.
+ * Constructs a DescribeEndpointRequestPrivate object for IoT \a action with,
+ * public implementation \a q.
  */
 DescribeEndpointRequestPrivate::DescribeEndpointRequestPrivate(
     const IoTRequest::Action action, DescribeEndpointRequest * const q)
@@ -115,15 +104,10 @@ DescribeEndpointRequestPrivate::DescribeEndpointRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeEndpointRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeEndpointRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeEndpointRequest instance.
  */
 DescribeEndpointRequestPrivate::DescribeEndpointRequestPrivate(
     const DescribeEndpointRequestPrivate &other, DescribeEndpointRequest * const q)

@@ -27,10 +27,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::ModifyDBSubnetGroupRequest
- *
  * \brief The ModifyDBSubnetGroupRequest class provides an interface for RDS ModifyDBSubnetGroup requests.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -101,9 +100,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new ModifyDBSubnetGroupRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ModifyDBSubnetGroupRequest::ModifyDBSubnetGroupRequest(const ModifyDBSubnetGroupRequest &other)
     : RDSRequest(new ModifyDBSubnetGroupRequestPrivate(*other.d_func(), this))
@@ -112,7 +109,7 @@ ModifyDBSubnetGroupRequest::ModifyDBSubnetGroupRequest(const ModifyDBSubnetGroup
 }
 
 /*!
- * @brief  Constructs a new ModifyDBSubnetGroupRequest object.
+ * Constructs a ModifyDBSubnetGroupRequest object.
  */
 ModifyDBSubnetGroupRequest::ModifyDBSubnetGroupRequest()
     : RDSRequest(new ModifyDBSubnetGroupRequestPrivate(RDSRequest::ModifyDBSubnetGroupAction, this))
@@ -130,14 +127,9 @@ bool ModifyDBSubnetGroupRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ModifyDBSubnetGroupResponse object.
+ * Returns a ModifyDBSubnetGroupResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ModifyDBSubnetGroupResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RDSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ModifyDBSubnetGroupRequest::response(QNetworkReply * const reply) const
 {
@@ -145,20 +137,17 @@ QtAws::Core::AwsAbstractResponse * ModifyDBSubnetGroupRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::RDS::ModifyDBSubnetGroupRequestPrivate
+ * \brief The ModifyDBSubnetGroupRequestPrivate class provides private implementation for ModifyDBSubnetGroupRequest.
+ * \internal
  *
- * @class  ModifyDBSubnetGroupRequestPrivate
- *
- * @brief  Private implementation for ModifyDBSubnetGroupRequest.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ModifyDBSubnetGroupRequestPrivate object.
- *
- * @param  action  RDS action being performed.
- * @param  q       Pointer to this object's public ModifyDBSubnetGroupRequest instance.
+ * Constructs a ModifyDBSubnetGroupRequestPrivate object for RDS \a action with,
+ * public implementation \a q.
  */
 ModifyDBSubnetGroupRequestPrivate::ModifyDBSubnetGroupRequestPrivate(
     const RDSRequest::Action action, ModifyDBSubnetGroupRequest * const q)
@@ -168,15 +157,10 @@ ModifyDBSubnetGroupRequestPrivate::ModifyDBSubnetGroupRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ModifyDBSubnetGroupRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ModifyDBSubnetGroupRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ModifyDBSubnetGroupRequest instance.
  */
 ModifyDBSubnetGroupRequestPrivate::ModifyDBSubnetGroupRequestPrivate(
     const ModifyDBSubnetGroupRequestPrivate &other, ModifyDBSubnetGroupRequest * const q)

@@ -27,10 +27,9 @@ namespace ElasticTranscoder {
 
 /*!
  * \class QtAws::ElasticTranscoder::ListPipelinesRequest
- *
  * \brief The ListPipelinesRequest class provides an interface for ElasticTranscoder ListPipelines requests.
  *
- * \ingroup ElasticTranscoder
+ * \inmodule QtAwsElasticTranscoder
  *
  *  <fullname>AWS Elastic Transcoder Service</fullname>
  * 
@@ -40,9 +39,7 @@ namespace ElasticTranscoder {
  */
 
 /*!
- * @brief  Constructs a new ListPipelinesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListPipelinesRequest::ListPipelinesRequest(const ListPipelinesRequest &other)
     : ElasticTranscoderRequest(new ListPipelinesRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ ListPipelinesRequest::ListPipelinesRequest(const ListPipelinesRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ListPipelinesRequest object.
+ * Constructs a ListPipelinesRequest object.
  */
 ListPipelinesRequest::ListPipelinesRequest()
     : ElasticTranscoderRequest(new ListPipelinesRequestPrivate(ElasticTranscoderRequest::ListPipelinesAction, this))
@@ -69,14 +66,9 @@ bool ListPipelinesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListPipelinesResponse object.
+ * Returns a ListPipelinesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListPipelinesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ElasticTranscoderClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListPipelinesRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * ListPipelinesRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::ElasticTranscoder::ListPipelinesRequestPrivate
+ * \brief The ListPipelinesRequestPrivate class provides private implementation for ListPipelinesRequest.
+ * \internal
  *
- * @class  ListPipelinesRequestPrivate
- *
- * @brief  Private implementation for ListPipelinesRequest.
+ * \inmodule QtAwsElasticTranscoder
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListPipelinesRequestPrivate object.
- *
- * @param  action  ElasticTranscoder action being performed.
- * @param  q       Pointer to this object's public ListPipelinesRequest instance.
+ * Constructs a ListPipelinesRequestPrivate object for ElasticTranscoder \a action with,
+ * public implementation \a q.
  */
 ListPipelinesRequestPrivate::ListPipelinesRequestPrivate(
     const ElasticTranscoderRequest::Action action, ListPipelinesRequest * const q)
@@ -107,15 +96,10 @@ ListPipelinesRequestPrivate::ListPipelinesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListPipelinesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListPipelinesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListPipelinesRequest instance.
  */
 ListPipelinesRequestPrivate::ListPipelinesRequestPrivate(
     const ListPipelinesRequestPrivate &other, ListPipelinesRequest * const q)

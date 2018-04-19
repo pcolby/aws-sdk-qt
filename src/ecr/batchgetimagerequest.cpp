@@ -27,10 +27,9 @@ namespace ECR {
 
 /*!
  * \class QtAws::ECR::BatchGetImageRequest
- *
  * \brief The BatchGetImageRequest class provides an interface for ECR BatchGetImage requests.
  *
- * \ingroup ECR
+ * \inmodule QtAwsECR
  *
  *  Amazon Elastic Container Registry (Amazon ECR) is a managed Docker registry service. Customers can use the familiar
  *  Docker CLI to push, pull, and manage images. Amazon ECR provides a secure, scalable, and reliable registry. Amazon ECR
@@ -41,9 +40,7 @@ namespace ECR {
  */
 
 /*!
- * @brief  Constructs a new BatchGetImageRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 BatchGetImageRequest::BatchGetImageRequest(const BatchGetImageRequest &other)
     : ECRRequest(new BatchGetImageRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ BatchGetImageRequest::BatchGetImageRequest(const BatchGetImageRequest &other)
 }
 
 /*!
- * @brief  Constructs a new BatchGetImageRequest object.
+ * Constructs a BatchGetImageRequest object.
  */
 BatchGetImageRequest::BatchGetImageRequest()
     : ECRRequest(new BatchGetImageRequestPrivate(ECRRequest::BatchGetImageAction, this))
@@ -70,14 +67,9 @@ bool BatchGetImageRequest::isValid() const
 
 
 /*!
- * @brief  Construct an BatchGetImageResponse object.
+ * Returns a BatchGetImageResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An BatchGetImageResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ECRClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * BatchGetImageRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * BatchGetImageRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::ECR::BatchGetImageRequestPrivate
+ * \brief The BatchGetImageRequestPrivate class provides private implementation for BatchGetImageRequest.
+ * \internal
  *
- * @class  BatchGetImageRequestPrivate
- *
- * @brief  Private implementation for BatchGetImageRequest.
+ * \inmodule QtAwsECR
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new BatchGetImageRequestPrivate object.
- *
- * @param  action  ECR action being performed.
- * @param  q       Pointer to this object's public BatchGetImageRequest instance.
+ * Constructs a BatchGetImageRequestPrivate object for ECR \a action with,
+ * public implementation \a q.
  */
 BatchGetImageRequestPrivate::BatchGetImageRequestPrivate(
     const ECRRequest::Action action, BatchGetImageRequest * const q)
@@ -108,15 +97,10 @@ BatchGetImageRequestPrivate::BatchGetImageRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new BatchGetImageRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the BatchGetImageRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public BatchGetImageRequest instance.
  */
 BatchGetImageRequestPrivate::BatchGetImageRequestPrivate(
     const BatchGetImageRequestPrivate &other, BatchGetImageRequest * const q)

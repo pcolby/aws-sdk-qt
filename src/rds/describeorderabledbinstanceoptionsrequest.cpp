@@ -27,10 +27,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::DescribeOrderableDBInstanceOptionsRequest
- *
  * \brief The DescribeOrderableDBInstanceOptionsRequest class provides an interface for RDS DescribeOrderableDBInstanceOptions requests.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -101,9 +100,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new DescribeOrderableDBInstanceOptionsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeOrderableDBInstanceOptionsRequest::DescribeOrderableDBInstanceOptionsRequest(const DescribeOrderableDBInstanceOptionsRequest &other)
     : RDSRequest(new DescribeOrderableDBInstanceOptionsRequestPrivate(*other.d_func(), this))
@@ -112,7 +109,7 @@ DescribeOrderableDBInstanceOptionsRequest::DescribeOrderableDBInstanceOptionsReq
 }
 
 /*!
- * @brief  Constructs a new DescribeOrderableDBInstanceOptionsRequest object.
+ * Constructs a DescribeOrderableDBInstanceOptionsRequest object.
  */
 DescribeOrderableDBInstanceOptionsRequest::DescribeOrderableDBInstanceOptionsRequest()
     : RDSRequest(new DescribeOrderableDBInstanceOptionsRequestPrivate(RDSRequest::DescribeOrderableDBInstanceOptionsAction, this))
@@ -130,14 +127,9 @@ bool DescribeOrderableDBInstanceOptionsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeOrderableDBInstanceOptionsResponse object.
+ * Returns a DescribeOrderableDBInstanceOptionsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeOrderableDBInstanceOptionsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RDSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeOrderableDBInstanceOptionsRequest::response(QNetworkReply * const reply) const
 {
@@ -145,20 +137,17 @@ QtAws::Core::AwsAbstractResponse * DescribeOrderableDBInstanceOptionsRequest::re
 }
 
 /*!
- * @internal
+ * \class QtAws::RDS::DescribeOrderableDBInstanceOptionsRequestPrivate
+ * \brief The DescribeOrderableDBInstanceOptionsRequestPrivate class provides private implementation for DescribeOrderableDBInstanceOptionsRequest.
+ * \internal
  *
- * @class  DescribeOrderableDBInstanceOptionsRequestPrivate
- *
- * @brief  Private implementation for DescribeOrderableDBInstanceOptionsRequest.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeOrderableDBInstanceOptionsRequestPrivate object.
- *
- * @param  action  RDS action being performed.
- * @param  q       Pointer to this object's public DescribeOrderableDBInstanceOptionsRequest instance.
+ * Constructs a DescribeOrderableDBInstanceOptionsRequestPrivate object for RDS \a action with,
+ * public implementation \a q.
  */
 DescribeOrderableDBInstanceOptionsRequestPrivate::DescribeOrderableDBInstanceOptionsRequestPrivate(
     const RDSRequest::Action action, DescribeOrderableDBInstanceOptionsRequest * const q)
@@ -168,15 +157,10 @@ DescribeOrderableDBInstanceOptionsRequestPrivate::DescribeOrderableDBInstanceOpt
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeOrderableDBInstanceOptionsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeOrderableDBInstanceOptionsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeOrderableDBInstanceOptionsRequest instance.
  */
 DescribeOrderableDBInstanceOptionsRequestPrivate::DescribeOrderableDBInstanceOptionsRequestPrivate(
     const DescribeOrderableDBInstanceOptionsRequestPrivate &other, DescribeOrderableDBInstanceOptionsRequest * const q)

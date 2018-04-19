@@ -27,10 +27,9 @@ namespace ElasticLoadBalancingv2 {
 
 /*!
  * \class QtAws::ElasticLoadBalancingv2::DeleteRuleRequest
- *
  * \brief The DeleteRuleRequest class provides an interface for ElasticLoadBalancingv2 DeleteRule requests.
  *
- * \ingroup ElasticLoadBalancingv2
+ * \inmodule QtAwsElasticLoadBalancingv2
  *
  *  <fullname>Elastic Load Balancing</fullname>
  * 
@@ -105,9 +104,7 @@ namespace ElasticLoadBalancingv2 {
  */
 
 /*!
- * @brief  Constructs a new DeleteRuleRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteRuleRequest::DeleteRuleRequest(const DeleteRuleRequest &other)
     : ElasticLoadBalancingv2Request(new DeleteRuleRequestPrivate(*other.d_func(), this))
@@ -116,7 +113,7 @@ DeleteRuleRequest::DeleteRuleRequest(const DeleteRuleRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DeleteRuleRequest object.
+ * Constructs a DeleteRuleRequest object.
  */
 DeleteRuleRequest::DeleteRuleRequest()
     : ElasticLoadBalancingv2Request(new DeleteRuleRequestPrivate(ElasticLoadBalancingv2Request::DeleteRuleAction, this))
@@ -134,14 +131,9 @@ bool DeleteRuleRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteRuleResponse object.
+ * Returns a DeleteRuleResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteRuleResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ElasticLoadBalancingv2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteRuleRequest::response(QNetworkReply * const reply) const
 {
@@ -149,20 +141,17 @@ QtAws::Core::AwsAbstractResponse * DeleteRuleRequest::response(QNetworkReply * c
 }
 
 /*!
- * @internal
+ * \class QtAws::ElasticLoadBalancingv2::DeleteRuleRequestPrivate
+ * \brief The DeleteRuleRequestPrivate class provides private implementation for DeleteRuleRequest.
+ * \internal
  *
- * @class  DeleteRuleRequestPrivate
- *
- * @brief  Private implementation for DeleteRuleRequest.
+ * \inmodule QtAwsElasticLoadBalancingv2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteRuleRequestPrivate object.
- *
- * @param  action  ElasticLoadBalancingv2 action being performed.
- * @param  q       Pointer to this object's public DeleteRuleRequest instance.
+ * Constructs a DeleteRuleRequestPrivate object for ElasticLoadBalancingv2 \a action with,
+ * public implementation \a q.
  */
 DeleteRuleRequestPrivate::DeleteRuleRequestPrivate(
     const ElasticLoadBalancingv2Request::Action action, DeleteRuleRequest * const q)
@@ -172,15 +161,10 @@ DeleteRuleRequestPrivate::DeleteRuleRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteRuleRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteRuleRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteRuleRequest instance.
  */
 DeleteRuleRequestPrivate::DeleteRuleRequestPrivate(
     const DeleteRuleRequestPrivate &other, DeleteRuleRequest * const q)

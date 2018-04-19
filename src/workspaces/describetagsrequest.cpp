@@ -27,10 +27,9 @@ namespace WorkSpaces {
 
 /*!
  * \class QtAws::WorkSpaces::DescribeTagsRequest
- *
  * \brief The DescribeTagsRequest class provides an interface for WorkSpaces DescribeTags requests.
  *
- * \ingroup WorkSpaces
+ * \inmodule QtAwsWorkSpaces
  *
  *  <fullname>Amazon WorkSpaces Service</fullname>
  * 
@@ -40,9 +39,7 @@ namespace WorkSpaces {
  */
 
 /*!
- * @brief  Constructs a new DescribeTagsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeTagsRequest::DescribeTagsRequest(const DescribeTagsRequest &other)
     : WorkSpacesRequest(new DescribeTagsRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ DescribeTagsRequest::DescribeTagsRequest(const DescribeTagsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DescribeTagsRequest object.
+ * Constructs a DescribeTagsRequest object.
  */
 DescribeTagsRequest::DescribeTagsRequest()
     : WorkSpacesRequest(new DescribeTagsRequestPrivate(WorkSpacesRequest::DescribeTagsAction, this))
@@ -69,14 +66,9 @@ bool DescribeTagsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeTagsResponse object.
+ * Returns a DescribeTagsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeTagsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WorkSpacesClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeTagsRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * DescribeTagsRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::WorkSpaces::DescribeTagsRequestPrivate
+ * \brief The DescribeTagsRequestPrivate class provides private implementation for DescribeTagsRequest.
+ * \internal
  *
- * @class  DescribeTagsRequestPrivate
- *
- * @brief  Private implementation for DescribeTagsRequest.
+ * \inmodule QtAwsWorkSpaces
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeTagsRequestPrivate object.
- *
- * @param  action  WorkSpaces action being performed.
- * @param  q       Pointer to this object's public DescribeTagsRequest instance.
+ * Constructs a DescribeTagsRequestPrivate object for WorkSpaces \a action with,
+ * public implementation \a q.
  */
 DescribeTagsRequestPrivate::DescribeTagsRequestPrivate(
     const WorkSpacesRequest::Action action, DescribeTagsRequest * const q)
@@ -107,15 +96,10 @@ DescribeTagsRequestPrivate::DescribeTagsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeTagsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeTagsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeTagsRequest instance.
  */
 DescribeTagsRequestPrivate::DescribeTagsRequestPrivate(
     const DescribeTagsRequestPrivate &other, DescribeTagsRequest * const q)

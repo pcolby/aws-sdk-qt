@@ -27,10 +27,9 @@ namespace Glacier {
 
 /*!
  * \class QtAws::Glacier::DeleteVaultAccessPolicyRequest
- *
  * \brief The DeleteVaultAccessPolicyRequest class provides an interface for Glacier DeleteVaultAccessPolicy requests.
  *
- * \ingroup Glacier
+ * \inmodule QtAwsGlacier
  *
  *  Amazon Glacier is a storage solution for "cold
  * 
@@ -75,9 +74,7 @@ namespace Glacier {
  */
 
 /*!
- * @brief  Constructs a new DeleteVaultAccessPolicyRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteVaultAccessPolicyRequest::DeleteVaultAccessPolicyRequest(const DeleteVaultAccessPolicyRequest &other)
     : GlacierRequest(new DeleteVaultAccessPolicyRequestPrivate(*other.d_func(), this))
@@ -86,7 +83,7 @@ DeleteVaultAccessPolicyRequest::DeleteVaultAccessPolicyRequest(const DeleteVault
 }
 
 /*!
- * @brief  Constructs a new DeleteVaultAccessPolicyRequest object.
+ * Constructs a DeleteVaultAccessPolicyRequest object.
  */
 DeleteVaultAccessPolicyRequest::DeleteVaultAccessPolicyRequest()
     : GlacierRequest(new DeleteVaultAccessPolicyRequestPrivate(GlacierRequest::DeleteVaultAccessPolicyAction, this))
@@ -104,14 +101,9 @@ bool DeleteVaultAccessPolicyRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteVaultAccessPolicyResponse object.
+ * Returns a DeleteVaultAccessPolicyResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteVaultAccessPolicyResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GlacierClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteVaultAccessPolicyRequest::response(QNetworkReply * const reply) const
 {
@@ -119,20 +111,17 @@ QtAws::Core::AwsAbstractResponse * DeleteVaultAccessPolicyRequest::response(QNet
 }
 
 /*!
- * @internal
+ * \class QtAws::Glacier::DeleteVaultAccessPolicyRequestPrivate
+ * \brief The DeleteVaultAccessPolicyRequestPrivate class provides private implementation for DeleteVaultAccessPolicyRequest.
+ * \internal
  *
- * @class  DeleteVaultAccessPolicyRequestPrivate
- *
- * @brief  Private implementation for DeleteVaultAccessPolicyRequest.
+ * \inmodule QtAwsGlacier
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteVaultAccessPolicyRequestPrivate object.
- *
- * @param  action  Glacier action being performed.
- * @param  q       Pointer to this object's public DeleteVaultAccessPolicyRequest instance.
+ * Constructs a DeleteVaultAccessPolicyRequestPrivate object for Glacier \a action with,
+ * public implementation \a q.
  */
 DeleteVaultAccessPolicyRequestPrivate::DeleteVaultAccessPolicyRequestPrivate(
     const GlacierRequest::Action action, DeleteVaultAccessPolicyRequest * const q)
@@ -142,15 +131,10 @@ DeleteVaultAccessPolicyRequestPrivate::DeleteVaultAccessPolicyRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteVaultAccessPolicyRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteVaultAccessPolicyRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteVaultAccessPolicyRequest instance.
  */
 DeleteVaultAccessPolicyRequestPrivate::DeleteVaultAccessPolicyRequestPrivate(
     const DeleteVaultAccessPolicyRequestPrivate &other, DeleteVaultAccessPolicyRequest * const q)

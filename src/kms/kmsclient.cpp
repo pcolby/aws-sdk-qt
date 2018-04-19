@@ -98,6 +98,9 @@
 /*!
  * \namespace QtAws::KMS
  * \brief The QtAws::KMS contains stuff...
+ *
+ * \inmodule QtAwsKMS
+ *
  * @todo Move this to a separate template file.
  */
 
@@ -246,7 +249,7 @@ KmsClient::KmsClient(
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * \a  AwsEndpoint::getEndpoint()
+ * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
 KmsClient::KmsClient(
     const QUrl &endpoint,

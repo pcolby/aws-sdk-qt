@@ -27,10 +27,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::ModifyDBClusterParameterGroupRequest
- *
  * \brief The ModifyDBClusterParameterGroupRequest class provides an interface for RDS ModifyDBClusterParameterGroup requests.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -101,9 +100,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new ModifyDBClusterParameterGroupRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ModifyDBClusterParameterGroupRequest::ModifyDBClusterParameterGroupRequest(const ModifyDBClusterParameterGroupRequest &other)
     : RDSRequest(new ModifyDBClusterParameterGroupRequestPrivate(*other.d_func(), this))
@@ -112,7 +109,7 @@ ModifyDBClusterParameterGroupRequest::ModifyDBClusterParameterGroupRequest(const
 }
 
 /*!
- * @brief  Constructs a new ModifyDBClusterParameterGroupRequest object.
+ * Constructs a ModifyDBClusterParameterGroupRequest object.
  */
 ModifyDBClusterParameterGroupRequest::ModifyDBClusterParameterGroupRequest()
     : RDSRequest(new ModifyDBClusterParameterGroupRequestPrivate(RDSRequest::ModifyDBClusterParameterGroupAction, this))
@@ -130,14 +127,9 @@ bool ModifyDBClusterParameterGroupRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ModifyDBClusterParameterGroupResponse object.
+ * Returns a ModifyDBClusterParameterGroupResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ModifyDBClusterParameterGroupResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RDSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ModifyDBClusterParameterGroupRequest::response(QNetworkReply * const reply) const
 {
@@ -145,20 +137,17 @@ QtAws::Core::AwsAbstractResponse * ModifyDBClusterParameterGroupRequest::respons
 }
 
 /*!
- * @internal
+ * \class QtAws::RDS::ModifyDBClusterParameterGroupRequestPrivate
+ * \brief The ModifyDBClusterParameterGroupRequestPrivate class provides private implementation for ModifyDBClusterParameterGroupRequest.
+ * \internal
  *
- * @class  ModifyDBClusterParameterGroupRequestPrivate
- *
- * @brief  Private implementation for ModifyDBClusterParameterGroupRequest.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ModifyDBClusterParameterGroupRequestPrivate object.
- *
- * @param  action  RDS action being performed.
- * @param  q       Pointer to this object's public ModifyDBClusterParameterGroupRequest instance.
+ * Constructs a ModifyDBClusterParameterGroupRequestPrivate object for RDS \a action with,
+ * public implementation \a q.
  */
 ModifyDBClusterParameterGroupRequestPrivate::ModifyDBClusterParameterGroupRequestPrivate(
     const RDSRequest::Action action, ModifyDBClusterParameterGroupRequest * const q)
@@ -168,15 +157,10 @@ ModifyDBClusterParameterGroupRequestPrivate::ModifyDBClusterParameterGroupReques
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ModifyDBClusterParameterGroupRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ModifyDBClusterParameterGroupRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ModifyDBClusterParameterGroupRequest instance.
  */
 ModifyDBClusterParameterGroupRequestPrivate::ModifyDBClusterParameterGroupRequestPrivate(
     const ModifyDBClusterParameterGroupRequestPrivate &other, ModifyDBClusterParameterGroupRequest * const q)

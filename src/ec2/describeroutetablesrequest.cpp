@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DescribeRouteTablesRequest
- *
  * \brief The DescribeRouteTablesRequest class provides an interface for EC2 DescribeRouteTables requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DescribeRouteTablesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeRouteTablesRequest::DescribeRouteTablesRequest(const DescribeRouteTablesRequest &other)
     : EC2Request(new DescribeRouteTablesRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ DescribeRouteTablesRequest::DescribeRouteTablesRequest(const DescribeRouteTables
 }
 
 /*!
- * @brief  Constructs a new DescribeRouteTablesRequest object.
+ * Constructs a DescribeRouteTablesRequest object.
  */
 DescribeRouteTablesRequest::DescribeRouteTablesRequest()
     : EC2Request(new DescribeRouteTablesRequestPrivate(EC2Request::DescribeRouteTablesAction, this))
@@ -70,14 +67,9 @@ bool DescribeRouteTablesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeRouteTablesResponse object.
+ * Returns a DescribeRouteTablesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeRouteTablesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeRouteTablesRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * DescribeRouteTablesRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::DescribeRouteTablesRequestPrivate
+ * \brief The DescribeRouteTablesRequestPrivate class provides private implementation for DescribeRouteTablesRequest.
+ * \internal
  *
- * @class  DescribeRouteTablesRequestPrivate
- *
- * @brief  Private implementation for DescribeRouteTablesRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeRouteTablesRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public DescribeRouteTablesRequest instance.
+ * Constructs a DescribeRouteTablesRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 DescribeRouteTablesRequestPrivate::DescribeRouteTablesRequestPrivate(
     const EC2Request::Action action, DescribeRouteTablesRequest * const q)
@@ -108,15 +97,10 @@ DescribeRouteTablesRequestPrivate::DescribeRouteTablesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeRouteTablesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeRouteTablesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeRouteTablesRequest instance.
  */
 DescribeRouteTablesRequestPrivate::DescribeRouteTablesRequestPrivate(
     const DescribeRouteTablesRequestPrivate &other, DescribeRouteTablesRequest * const q)

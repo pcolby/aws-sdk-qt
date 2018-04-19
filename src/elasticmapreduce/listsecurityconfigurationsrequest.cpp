@@ -27,10 +27,9 @@ namespace EMR {
 
 /*!
  * \class QtAws::EMR::ListSecurityConfigurationsRequest
- *
  * \brief The ListSecurityConfigurationsRequest class provides an interface for EMR ListSecurityConfigurations requests.
  *
- * \ingroup EMR
+ * \inmodule QtAwsEMR
  *
  *  Amazon EMR is a web service that makes it easy to process large amounts of data efficiently. Amazon EMR uses Hadoop
  *  processing combined with several AWS products to do tasks such as web indexing, data mining, log file analysis, machine
@@ -40,9 +39,7 @@ namespace EMR {
  */
 
 /*!
- * @brief  Constructs a new ListSecurityConfigurationsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListSecurityConfigurationsRequest::ListSecurityConfigurationsRequest(const ListSecurityConfigurationsRequest &other)
     : EMRRequest(new ListSecurityConfigurationsRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ ListSecurityConfigurationsRequest::ListSecurityConfigurationsRequest(const ListS
 }
 
 /*!
- * @brief  Constructs a new ListSecurityConfigurationsRequest object.
+ * Constructs a ListSecurityConfigurationsRequest object.
  */
 ListSecurityConfigurationsRequest::ListSecurityConfigurationsRequest()
     : EMRRequest(new ListSecurityConfigurationsRequestPrivate(EMRRequest::ListSecurityConfigurationsAction, this))
@@ -69,14 +66,9 @@ bool ListSecurityConfigurationsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListSecurityConfigurationsResponse object.
+ * Returns a ListSecurityConfigurationsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListSecurityConfigurationsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EMRClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListSecurityConfigurationsRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * ListSecurityConfigurationsRequest::response(Q
 }
 
 /*!
- * @internal
+ * \class QtAws::EMR::ListSecurityConfigurationsRequestPrivate
+ * \brief The ListSecurityConfigurationsRequestPrivate class provides private implementation for ListSecurityConfigurationsRequest.
+ * \internal
  *
- * @class  ListSecurityConfigurationsRequestPrivate
- *
- * @brief  Private implementation for ListSecurityConfigurationsRequest.
+ * \inmodule QtAwsEMR
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListSecurityConfigurationsRequestPrivate object.
- *
- * @param  action  EMR action being performed.
- * @param  q       Pointer to this object's public ListSecurityConfigurationsRequest instance.
+ * Constructs a ListSecurityConfigurationsRequestPrivate object for EMR \a action with,
+ * public implementation \a q.
  */
 ListSecurityConfigurationsRequestPrivate::ListSecurityConfigurationsRequestPrivate(
     const EMRRequest::Action action, ListSecurityConfigurationsRequest * const q)
@@ -107,15 +96,10 @@ ListSecurityConfigurationsRequestPrivate::ListSecurityConfigurationsRequestPriva
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListSecurityConfigurationsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListSecurityConfigurationsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListSecurityConfigurationsRequest instance.
  */
 ListSecurityConfigurationsRequestPrivate::ListSecurityConfigurationsRequestPrivate(
     const ListSecurityConfigurationsRequestPrivate &other, ListSecurityConfigurationsRequest * const q)

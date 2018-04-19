@@ -27,19 +27,16 @@ namespace Route53 {
 
 /*!
  * \class QtAws::Route53::GetChangeRequest
- *
  * \brief The GetChangeRequest class provides an interface for Route53 GetChange requests.
  *
- * \ingroup Route53
+ * \inmodule QtAwsRoute53
  *
  *
  * \sa Route53Client::getChange
  */
 
 /*!
- * @brief  Constructs a new GetChangeRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetChangeRequest::GetChangeRequest(const GetChangeRequest &other)
     : Route53Request(new GetChangeRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ GetChangeRequest::GetChangeRequest(const GetChangeRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetChangeRequest object.
+ * Constructs a GetChangeRequest object.
  */
 GetChangeRequest::GetChangeRequest()
     : Route53Request(new GetChangeRequestPrivate(Route53Request::GetChangeAction, this))
@@ -66,14 +63,9 @@ bool GetChangeRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetChangeResponse object.
+ * Returns a GetChangeResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetChangeResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  Route53Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetChangeRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * GetChangeRequest::response(QNetworkReply * co
 }
 
 /*!
- * @internal
+ * \class QtAws::Route53::GetChangeRequestPrivate
+ * \brief The GetChangeRequestPrivate class provides private implementation for GetChangeRequest.
+ * \internal
  *
- * @class  GetChangeRequestPrivate
- *
- * @brief  Private implementation for GetChangeRequest.
+ * \inmodule QtAwsRoute53
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetChangeRequestPrivate object.
- *
- * @param  action  Route53 action being performed.
- * @param  q       Pointer to this object's public GetChangeRequest instance.
+ * Constructs a GetChangeRequestPrivate object for Route53 \a action with,
+ * public implementation \a q.
  */
 GetChangeRequestPrivate::GetChangeRequestPrivate(
     const Route53Request::Action action, GetChangeRequest * const q)
@@ -104,15 +93,10 @@ GetChangeRequestPrivate::GetChangeRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetChangeRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetChangeRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetChangeRequest instance.
  */
 GetChangeRequestPrivate::GetChangeRequestPrivate(
     const GetChangeRequestPrivate &other, GetChangeRequest * const q)

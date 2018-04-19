@@ -27,10 +27,9 @@ namespace ElasticLoadBalancingv2 {
 
 /*!
  * \class QtAws::ElasticLoadBalancingv2::DescribeListenersRequest
- *
  * \brief The DescribeListenersRequest class provides an interface for ElasticLoadBalancingv2 DescribeListeners requests.
  *
- * \ingroup ElasticLoadBalancingv2
+ * \inmodule QtAwsElasticLoadBalancingv2
  *
  *  <fullname>Elastic Load Balancing</fullname>
  * 
@@ -105,9 +104,7 @@ namespace ElasticLoadBalancingv2 {
  */
 
 /*!
- * @brief  Constructs a new DescribeListenersRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeListenersRequest::DescribeListenersRequest(const DescribeListenersRequest &other)
     : ElasticLoadBalancingv2Request(new DescribeListenersRequestPrivate(*other.d_func(), this))
@@ -116,7 +113,7 @@ DescribeListenersRequest::DescribeListenersRequest(const DescribeListenersReques
 }
 
 /*!
- * @brief  Constructs a new DescribeListenersRequest object.
+ * Constructs a DescribeListenersRequest object.
  */
 DescribeListenersRequest::DescribeListenersRequest()
     : ElasticLoadBalancingv2Request(new DescribeListenersRequestPrivate(ElasticLoadBalancingv2Request::DescribeListenersAction, this))
@@ -134,14 +131,9 @@ bool DescribeListenersRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeListenersResponse object.
+ * Returns a DescribeListenersResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeListenersResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ElasticLoadBalancingv2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeListenersRequest::response(QNetworkReply * const reply) const
 {
@@ -149,20 +141,17 @@ QtAws::Core::AwsAbstractResponse * DescribeListenersRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::ElasticLoadBalancingv2::DescribeListenersRequestPrivate
+ * \brief The DescribeListenersRequestPrivate class provides private implementation for DescribeListenersRequest.
+ * \internal
  *
- * @class  DescribeListenersRequestPrivate
- *
- * @brief  Private implementation for DescribeListenersRequest.
+ * \inmodule QtAwsElasticLoadBalancingv2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeListenersRequestPrivate object.
- *
- * @param  action  ElasticLoadBalancingv2 action being performed.
- * @param  q       Pointer to this object's public DescribeListenersRequest instance.
+ * Constructs a DescribeListenersRequestPrivate object for ElasticLoadBalancingv2 \a action with,
+ * public implementation \a q.
  */
 DescribeListenersRequestPrivate::DescribeListenersRequestPrivate(
     const ElasticLoadBalancingv2Request::Action action, DescribeListenersRequest * const q)
@@ -172,15 +161,10 @@ DescribeListenersRequestPrivate::DescribeListenersRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeListenersRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeListenersRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeListenersRequest instance.
  */
 DescribeListenersRequestPrivate::DescribeListenersRequestPrivate(
     const DescribeListenersRequestPrivate &other, DescribeListenersRequest * const q)

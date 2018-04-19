@@ -27,10 +27,9 @@ namespace KMS {
 
 /*!
  * \class QtAws::KMS::ListKeyPoliciesRequest
- *
  * \brief The ListKeyPoliciesRequest class provides an interface for KMS ListKeyPolicies requests.
  *
- * \ingroup KMS
+ * \inmodule QtAwsKMS
  *
  *  <fullname>AWS Key Management Service</fullname>
  * 
@@ -136,9 +135,7 @@ namespace KMS {
  */
 
 /*!
- * @brief  Constructs a new ListKeyPoliciesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListKeyPoliciesRequest::ListKeyPoliciesRequest(const ListKeyPoliciesRequest &other)
     : KMSRequest(new ListKeyPoliciesRequestPrivate(*other.d_func(), this))
@@ -147,7 +144,7 @@ ListKeyPoliciesRequest::ListKeyPoliciesRequest(const ListKeyPoliciesRequest &oth
 }
 
 /*!
- * @brief  Constructs a new ListKeyPoliciesRequest object.
+ * Constructs a ListKeyPoliciesRequest object.
  */
 ListKeyPoliciesRequest::ListKeyPoliciesRequest()
     : KMSRequest(new ListKeyPoliciesRequestPrivate(KMSRequest::ListKeyPoliciesAction, this))
@@ -165,14 +162,9 @@ bool ListKeyPoliciesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListKeyPoliciesResponse object.
+ * Returns a ListKeyPoliciesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListKeyPoliciesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  KMSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListKeyPoliciesRequest::response(QNetworkReply * const reply) const
 {
@@ -180,20 +172,17 @@ QtAws::Core::AwsAbstractResponse * ListKeyPoliciesRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::KMS::ListKeyPoliciesRequestPrivate
+ * \brief The ListKeyPoliciesRequestPrivate class provides private implementation for ListKeyPoliciesRequest.
+ * \internal
  *
- * @class  ListKeyPoliciesRequestPrivate
- *
- * @brief  Private implementation for ListKeyPoliciesRequest.
+ * \inmodule QtAwsKMS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListKeyPoliciesRequestPrivate object.
- *
- * @param  action  KMS action being performed.
- * @param  q       Pointer to this object's public ListKeyPoliciesRequest instance.
+ * Constructs a ListKeyPoliciesRequestPrivate object for KMS \a action with,
+ * public implementation \a q.
  */
 ListKeyPoliciesRequestPrivate::ListKeyPoliciesRequestPrivate(
     const KMSRequest::Action action, ListKeyPoliciesRequest * const q)
@@ -203,15 +192,10 @@ ListKeyPoliciesRequestPrivate::ListKeyPoliciesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListKeyPoliciesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListKeyPoliciesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListKeyPoliciesRequest instance.
  */
 ListKeyPoliciesRequestPrivate::ListKeyPoliciesRequestPrivate(
     const ListKeyPoliciesRequestPrivate &other, ListKeyPoliciesRequest * const q)

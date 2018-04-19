@@ -27,10 +27,9 @@ namespace CognitoIdentityProvider {
 
 /*!
  * \class QtAws::CognitoIdentityProvider::CreateUserPoolDomainRequest
- *
  * \brief The CreateUserPoolDomainRequest class provides an interface for CognitoIdentityProvider CreateUserPoolDomain requests.
  *
- * \ingroup CognitoIdentityProvider
+ * \inmodule QtAwsCognitoIdentityProvider
  *
  *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
  *  authenticate a user to obtain tokens related to user identity and access
@@ -47,9 +46,7 @@ namespace CognitoIdentityProvider {
  */
 
 /*!
- * @brief  Constructs a new CreateUserPoolDomainRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateUserPoolDomainRequest::CreateUserPoolDomainRequest(const CreateUserPoolDomainRequest &other)
     : CognitoIdentityProviderRequest(new CreateUserPoolDomainRequestPrivate(*other.d_func(), this))
@@ -58,7 +55,7 @@ CreateUserPoolDomainRequest::CreateUserPoolDomainRequest(const CreateUserPoolDom
 }
 
 /*!
- * @brief  Constructs a new CreateUserPoolDomainRequest object.
+ * Constructs a CreateUserPoolDomainRequest object.
  */
 CreateUserPoolDomainRequest::CreateUserPoolDomainRequest()
     : CognitoIdentityProviderRequest(new CreateUserPoolDomainRequestPrivate(CognitoIdentityProviderRequest::CreateUserPoolDomainAction, this))
@@ -76,14 +73,9 @@ bool CreateUserPoolDomainRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateUserPoolDomainResponse object.
+ * Returns a CreateUserPoolDomainResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateUserPoolDomainResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CognitoIdentityProviderClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateUserPoolDomainRequest::response(QNetworkReply * const reply) const
 {
@@ -91,20 +83,17 @@ QtAws::Core::AwsAbstractResponse * CreateUserPoolDomainRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::CognitoIdentityProvider::CreateUserPoolDomainRequestPrivate
+ * \brief The CreateUserPoolDomainRequestPrivate class provides private implementation for CreateUserPoolDomainRequest.
+ * \internal
  *
- * @class  CreateUserPoolDomainRequestPrivate
- *
- * @brief  Private implementation for CreateUserPoolDomainRequest.
+ * \inmodule QtAwsCognitoIdentityProvider
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateUserPoolDomainRequestPrivate object.
- *
- * @param  action  CognitoIdentityProvider action being performed.
- * @param  q       Pointer to this object's public CreateUserPoolDomainRequest instance.
+ * Constructs a CreateUserPoolDomainRequestPrivate object for CognitoIdentityProvider \a action with,
+ * public implementation \a q.
  */
 CreateUserPoolDomainRequestPrivate::CreateUserPoolDomainRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, CreateUserPoolDomainRequest * const q)
@@ -114,15 +103,10 @@ CreateUserPoolDomainRequestPrivate::CreateUserPoolDomainRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateUserPoolDomainRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateUserPoolDomainRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateUserPoolDomainRequest instance.
  */
 CreateUserPoolDomainRequestPrivate::CreateUserPoolDomainRequestPrivate(
     const CreateUserPoolDomainRequestPrivate &other, CreateUserPoolDomainRequest * const q)

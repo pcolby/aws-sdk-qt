@@ -27,10 +27,9 @@ namespace AppSync {
 
 /*!
  * \class QtAws::AppSync::UpdateTypeRequest
- *
  * \brief The UpdateTypeRequest class provides an interface for AppSync UpdateType requests.
  *
- * \ingroup AppSync
+ * \inmodule QtAwsAppSync
  *
  *  AWS AppSync provides API actions for creating and interacting with data sources using GraphQL from your
  *
@@ -38,9 +37,7 @@ namespace AppSync {
  */
 
 /*!
- * @brief  Constructs a new UpdateTypeRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateTypeRequest::UpdateTypeRequest(const UpdateTypeRequest &other)
     : AppSyncRequest(new UpdateTypeRequestPrivate(*other.d_func(), this))
@@ -49,7 +46,7 @@ UpdateTypeRequest::UpdateTypeRequest(const UpdateTypeRequest &other)
 }
 
 /*!
- * @brief  Constructs a new UpdateTypeRequest object.
+ * Constructs a UpdateTypeRequest object.
  */
 UpdateTypeRequest::UpdateTypeRequest()
     : AppSyncRequest(new UpdateTypeRequestPrivate(AppSyncRequest::UpdateTypeAction, this))
@@ -67,14 +64,9 @@ bool UpdateTypeRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateTypeResponse object.
+ * Returns a UpdateTypeResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateTypeResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AppSyncClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateTypeRequest::response(QNetworkReply * const reply) const
 {
@@ -82,20 +74,17 @@ QtAws::Core::AwsAbstractResponse * UpdateTypeRequest::response(QNetworkReply * c
 }
 
 /*!
- * @internal
+ * \class QtAws::AppSync::UpdateTypeRequestPrivate
+ * \brief The UpdateTypeRequestPrivate class provides private implementation for UpdateTypeRequest.
+ * \internal
  *
- * @class  UpdateTypeRequestPrivate
- *
- * @brief  Private implementation for UpdateTypeRequest.
+ * \inmodule QtAwsAppSync
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateTypeRequestPrivate object.
- *
- * @param  action  AppSync action being performed.
- * @param  q       Pointer to this object's public UpdateTypeRequest instance.
+ * Constructs a UpdateTypeRequestPrivate object for AppSync \a action with,
+ * public implementation \a q.
  */
 UpdateTypeRequestPrivate::UpdateTypeRequestPrivate(
     const AppSyncRequest::Action action, UpdateTypeRequest * const q)
@@ -105,15 +94,10 @@ UpdateTypeRequestPrivate::UpdateTypeRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateTypeRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateTypeRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateTypeRequest instance.
  */
 UpdateTypeRequestPrivate::UpdateTypeRequestPrivate(
     const UpdateTypeRequestPrivate &other, UpdateTypeRequest * const q)

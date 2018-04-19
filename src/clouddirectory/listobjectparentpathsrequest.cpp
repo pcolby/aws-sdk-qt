@@ -27,10 +27,9 @@ namespace CloudDirectory {
 
 /*!
  * \class QtAws::CloudDirectory::ListObjectParentPathsRequest
- *
  * \brief The ListObjectParentPathsRequest class provides an interface for CloudDirectory ListObjectParentPaths requests.
  *
- * \ingroup CloudDirectory
+ * \inmodule QtAwsCloudDirectory
  *
  *  <fullname>Amazon Cloud Directory</fullname>
  * 
@@ -44,9 +43,7 @@ namespace CloudDirectory {
  */
 
 /*!
- * @brief  Constructs a new ListObjectParentPathsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListObjectParentPathsRequest::ListObjectParentPathsRequest(const ListObjectParentPathsRequest &other)
     : CloudDirectoryRequest(new ListObjectParentPathsRequestPrivate(*other.d_func(), this))
@@ -55,7 +52,7 @@ ListObjectParentPathsRequest::ListObjectParentPathsRequest(const ListObjectParen
 }
 
 /*!
- * @brief  Constructs a new ListObjectParentPathsRequest object.
+ * Constructs a ListObjectParentPathsRequest object.
  */
 ListObjectParentPathsRequest::ListObjectParentPathsRequest()
     : CloudDirectoryRequest(new ListObjectParentPathsRequestPrivate(CloudDirectoryRequest::ListObjectParentPathsAction, this))
@@ -73,14 +70,9 @@ bool ListObjectParentPathsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListObjectParentPathsResponse object.
+ * Returns a ListObjectParentPathsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListObjectParentPathsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudDirectoryClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListObjectParentPathsRequest::response(QNetworkReply * const reply) const
 {
@@ -88,20 +80,17 @@ QtAws::Core::AwsAbstractResponse * ListObjectParentPathsRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudDirectory::ListObjectParentPathsRequestPrivate
+ * \brief The ListObjectParentPathsRequestPrivate class provides private implementation for ListObjectParentPathsRequest.
+ * \internal
  *
- * @class  ListObjectParentPathsRequestPrivate
- *
- * @brief  Private implementation for ListObjectParentPathsRequest.
+ * \inmodule QtAwsCloudDirectory
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListObjectParentPathsRequestPrivate object.
- *
- * @param  action  CloudDirectory action being performed.
- * @param  q       Pointer to this object's public ListObjectParentPathsRequest instance.
+ * Constructs a ListObjectParentPathsRequestPrivate object for CloudDirectory \a action with,
+ * public implementation \a q.
  */
 ListObjectParentPathsRequestPrivate::ListObjectParentPathsRequestPrivate(
     const CloudDirectoryRequest::Action action, ListObjectParentPathsRequest * const q)
@@ -111,15 +100,10 @@ ListObjectParentPathsRequestPrivate::ListObjectParentPathsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListObjectParentPathsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListObjectParentPathsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListObjectParentPathsRequest instance.
  */
 ListObjectParentPathsRequestPrivate::ListObjectParentPathsRequestPrivate(
     const ListObjectParentPathsRequestPrivate &other, ListObjectParentPathsRequest * const q)

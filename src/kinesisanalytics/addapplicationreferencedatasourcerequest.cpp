@@ -27,19 +27,16 @@ namespace KinesisAnalytics {
 
 /*!
  * \class QtAws::KinesisAnalytics::AddApplicationReferenceDataSourceRequest
- *
  * \brief The AddApplicationReferenceDataSourceRequest class provides an interface for KinesisAnalytics AddApplicationReferenceDataSource requests.
  *
- * \ingroup KinesisAnalytics
+ * \inmodule QtAwsKinesisAnalytics
  *
  *
  * \sa KinesisAnalyticsClient::addApplicationReferenceDataSource
  */
 
 /*!
- * @brief  Constructs a new AddApplicationReferenceDataSourceRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AddApplicationReferenceDataSourceRequest::AddApplicationReferenceDataSourceRequest(const AddApplicationReferenceDataSourceRequest &other)
     : KinesisAnalyticsRequest(new AddApplicationReferenceDataSourceRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ AddApplicationReferenceDataSourceRequest::AddApplicationReferenceDataSourceReque
 }
 
 /*!
- * @brief  Constructs a new AddApplicationReferenceDataSourceRequest object.
+ * Constructs a AddApplicationReferenceDataSourceRequest object.
  */
 AddApplicationReferenceDataSourceRequest::AddApplicationReferenceDataSourceRequest()
     : KinesisAnalyticsRequest(new AddApplicationReferenceDataSourceRequestPrivate(KinesisAnalyticsRequest::AddApplicationReferenceDataSourceAction, this))
@@ -66,14 +63,9 @@ bool AddApplicationReferenceDataSourceRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AddApplicationReferenceDataSourceResponse object.
+ * Returns a AddApplicationReferenceDataSourceResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AddApplicationReferenceDataSourceResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  KinesisAnalyticsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AddApplicationReferenceDataSourceRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * AddApplicationReferenceDataSourceRequest::res
 }
 
 /*!
- * @internal
+ * \class QtAws::KinesisAnalytics::AddApplicationReferenceDataSourceRequestPrivate
+ * \brief The AddApplicationReferenceDataSourceRequestPrivate class provides private implementation for AddApplicationReferenceDataSourceRequest.
+ * \internal
  *
- * @class  AddApplicationReferenceDataSourceRequestPrivate
- *
- * @brief  Private implementation for AddApplicationReferenceDataSourceRequest.
+ * \inmodule QtAwsKinesisAnalytics
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AddApplicationReferenceDataSourceRequestPrivate object.
- *
- * @param  action  KinesisAnalytics action being performed.
- * @param  q       Pointer to this object's public AddApplicationReferenceDataSourceRequest instance.
+ * Constructs a AddApplicationReferenceDataSourceRequestPrivate object for KinesisAnalytics \a action with,
+ * public implementation \a q.
  */
 AddApplicationReferenceDataSourceRequestPrivate::AddApplicationReferenceDataSourceRequestPrivate(
     const KinesisAnalyticsRequest::Action action, AddApplicationReferenceDataSourceRequest * const q)
@@ -104,15 +93,10 @@ AddApplicationReferenceDataSourceRequestPrivate::AddApplicationReferenceDataSour
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AddApplicationReferenceDataSourceRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AddApplicationReferenceDataSourceRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AddApplicationReferenceDataSourceRequest instance.
  */
 AddApplicationReferenceDataSourceRequestPrivate::AddApplicationReferenceDataSourceRequestPrivate(
     const AddApplicationReferenceDataSourceRequestPrivate &other, AddApplicationReferenceDataSourceRequest * const q)

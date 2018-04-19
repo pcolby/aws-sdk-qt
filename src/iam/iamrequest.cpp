@@ -25,16 +25,144 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::IAMRequest
- *
  * \brief The IAMRequest class provides an interface for IAM requests.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @brief  Constructs a new IAMRequest object.
+ * \enum IAMRequest::Action
  *
- * @param  action  The IAM action to request.
+ * This enum describes the actions that can be performed as IAM
+ * requests.
+ *
+ * \value AddClientIDToOpenIDConnectProviderAction IAM AddClientIDToOpenIDConnectProvider action.
+ * \value AddRoleToInstanceProfileAction IAM AddRoleToInstanceProfile action.
+ * \value AddUserToGroupAction IAM AddUserToGroup action.
+ * \value AttachGroupPolicyAction IAM AttachGroupPolicy action.
+ * \value AttachRolePolicyAction IAM AttachRolePolicy action.
+ * \value AttachUserPolicyAction IAM AttachUserPolicy action.
+ * \value ChangePasswordAction IAM ChangePassword action.
+ * \value CreateAccessKeyAction IAM CreateAccessKey action.
+ * \value CreateAccountAliasAction IAM CreateAccountAlias action.
+ * \value CreateGroupAction IAM CreateGroup action.
+ * \value CreateInstanceProfileAction IAM CreateInstanceProfile action.
+ * \value CreateLoginProfileAction IAM CreateLoginProfile action.
+ * \value CreateOpenIDConnectProviderAction IAM CreateOpenIDConnectProvider action.
+ * \value CreatePolicyAction IAM CreatePolicy action.
+ * \value CreatePolicyVersionAction IAM CreatePolicyVersion action.
+ * \value CreateRoleAction IAM CreateRole action.
+ * \value CreateSAMLProviderAction IAM CreateSAMLProvider action.
+ * \value CreateServiceLinkedRoleAction IAM CreateServiceLinkedRole action.
+ * \value CreateServiceSpecificCredentialAction IAM CreateServiceSpecificCredential action.
+ * \value CreateUserAction IAM CreateUser action.
+ * \value CreateVirtualMFADeviceAction IAM CreateVirtualMFADevice action.
+ * \value DeactivateMFADeviceAction IAM DeactivateMFADevice action.
+ * \value DeleteAccessKeyAction IAM DeleteAccessKey action.
+ * \value DeleteAccountAliasAction IAM DeleteAccountAlias action.
+ * \value DeleteAccountPasswordPolicyAction IAM DeleteAccountPasswordPolicy action.
+ * \value DeleteGroupAction IAM DeleteGroup action.
+ * \value DeleteGroupPolicyAction IAM DeleteGroupPolicy action.
+ * \value DeleteInstanceProfileAction IAM DeleteInstanceProfile action.
+ * \value DeleteLoginProfileAction IAM DeleteLoginProfile action.
+ * \value DeleteOpenIDConnectProviderAction IAM DeleteOpenIDConnectProvider action.
+ * \value DeletePolicyAction IAM DeletePolicy action.
+ * \value DeletePolicyVersionAction IAM DeletePolicyVersion action.
+ * \value DeleteRoleAction IAM DeleteRole action.
+ * \value DeleteRolePolicyAction IAM DeleteRolePolicy action.
+ * \value DeleteSAMLProviderAction IAM DeleteSAMLProvider action.
+ * \value DeleteSSHPublicKeyAction IAM DeleteSSHPublicKey action.
+ * \value DeleteServerCertificateAction IAM DeleteServerCertificate action.
+ * \value DeleteServiceLinkedRoleAction IAM DeleteServiceLinkedRole action.
+ * \value DeleteServiceSpecificCredentialAction IAM DeleteServiceSpecificCredential action.
+ * \value DeleteSigningCertificateAction IAM DeleteSigningCertificate action.
+ * \value DeleteUserAction IAM DeleteUser action.
+ * \value DeleteUserPolicyAction IAM DeleteUserPolicy action.
+ * \value DeleteVirtualMFADeviceAction IAM DeleteVirtualMFADevice action.
+ * \value DetachGroupPolicyAction IAM DetachGroupPolicy action.
+ * \value DetachRolePolicyAction IAM DetachRolePolicy action.
+ * \value DetachUserPolicyAction IAM DetachUserPolicy action.
+ * \value EnableMFADeviceAction IAM EnableMFADevice action.
+ * \value GenerateCredentialReportAction IAM GenerateCredentialReport action.
+ * \value GetAccessKeyLastUsedAction IAM GetAccessKeyLastUsed action.
+ * \value GetAccountAuthorizationDetailsAction IAM GetAccountAuthorizationDetails action.
+ * \value GetAccountPasswordPolicyAction IAM GetAccountPasswordPolicy action.
+ * \value GetAccountSummaryAction IAM GetAccountSummary action.
+ * \value GetContextKeysForCustomPolicyAction IAM GetContextKeysForCustomPolicy action.
+ * \value GetContextKeysForPrincipalPolicyAction IAM GetContextKeysForPrincipalPolicy action.
+ * \value GetCredentialReportAction IAM GetCredentialReport action.
+ * \value GetGroupAction IAM GetGroup action.
+ * \value GetGroupPolicyAction IAM GetGroupPolicy action.
+ * \value GetInstanceProfileAction IAM GetInstanceProfile action.
+ * \value GetLoginProfileAction IAM GetLoginProfile action.
+ * \value GetOpenIDConnectProviderAction IAM GetOpenIDConnectProvider action.
+ * \value GetPolicyAction IAM GetPolicy action.
+ * \value GetPolicyVersionAction IAM GetPolicyVersion action.
+ * \value GetRoleAction IAM GetRole action.
+ * \value GetRolePolicyAction IAM GetRolePolicy action.
+ * \value GetSAMLProviderAction IAM GetSAMLProvider action.
+ * \value GetSSHPublicKeyAction IAM GetSSHPublicKey action.
+ * \value GetServerCertificateAction IAM GetServerCertificate action.
+ * \value GetServiceLinkedRoleDeletionStatusAction IAM GetServiceLinkedRoleDeletionStatus action.
+ * \value GetUserAction IAM GetUser action.
+ * \value GetUserPolicyAction IAM GetUserPolicy action.
+ * \value ListAccessKeysAction IAM ListAccessKeys action.
+ * \value ListAccountAliasesAction IAM ListAccountAliases action.
+ * \value ListAttachedGroupPoliciesAction IAM ListAttachedGroupPolicies action.
+ * \value ListAttachedRolePoliciesAction IAM ListAttachedRolePolicies action.
+ * \value ListAttachedUserPoliciesAction IAM ListAttachedUserPolicies action.
+ * \value ListEntitiesForPolicyAction IAM ListEntitiesForPolicy action.
+ * \value ListGroupPoliciesAction IAM ListGroupPolicies action.
+ * \value ListGroupsAction IAM ListGroups action.
+ * \value ListGroupsForUserAction IAM ListGroupsForUser action.
+ * \value ListInstanceProfilesAction IAM ListInstanceProfiles action.
+ * \value ListInstanceProfilesForRoleAction IAM ListInstanceProfilesForRole action.
+ * \value ListMFADevicesAction IAM ListMFADevices action.
+ * \value ListOpenIDConnectProvidersAction IAM ListOpenIDConnectProviders action.
+ * \value ListPoliciesAction IAM ListPolicies action.
+ * \value ListPolicyVersionsAction IAM ListPolicyVersions action.
+ * \value ListRolePoliciesAction IAM ListRolePolicies action.
+ * \value ListRolesAction IAM ListRoles action.
+ * \value ListSAMLProvidersAction IAM ListSAMLProviders action.
+ * \value ListSSHPublicKeysAction IAM ListSSHPublicKeys action.
+ * \value ListServerCertificatesAction IAM ListServerCertificates action.
+ * \value ListServiceSpecificCredentialsAction IAM ListServiceSpecificCredentials action.
+ * \value ListSigningCertificatesAction IAM ListSigningCertificates action.
+ * \value ListUserPoliciesAction IAM ListUserPolicies action.
+ * \value ListUsersAction IAM ListUsers action.
+ * \value ListVirtualMFADevicesAction IAM ListVirtualMFADevices action.
+ * \value PutGroupPolicyAction IAM PutGroupPolicy action.
+ * \value PutRolePolicyAction IAM PutRolePolicy action.
+ * \value PutUserPolicyAction IAM PutUserPolicy action.
+ * \value RemoveClientIDFromOpenIDConnectProviderAction IAM RemoveClientIDFromOpenIDConnectProvider action.
+ * \value RemoveRoleFromInstanceProfileAction IAM RemoveRoleFromInstanceProfile action.
+ * \value RemoveUserFromGroupAction IAM RemoveUserFromGroup action.
+ * \value ResetServiceSpecificCredentialAction IAM ResetServiceSpecificCredential action.
+ * \value ResyncMFADeviceAction IAM ResyncMFADevice action.
+ * \value SetDefaultPolicyVersionAction IAM SetDefaultPolicyVersion action.
+ * \value SimulateCustomPolicyAction IAM SimulateCustomPolicy action.
+ * \value SimulatePrincipalPolicyAction IAM SimulatePrincipalPolicy action.
+ * \value UpdateAccessKeyAction IAM UpdateAccessKey action.
+ * \value UpdateAccountPasswordPolicyAction IAM UpdateAccountPasswordPolicy action.
+ * \value UpdateAssumeRolePolicyAction IAM UpdateAssumeRolePolicy action.
+ * \value UpdateGroupAction IAM UpdateGroup action.
+ * \value UpdateLoginProfileAction IAM UpdateLoginProfile action.
+ * \value UpdateOpenIDConnectProviderThumbprintAction IAM UpdateOpenIDConnectProviderThumbprint action.
+ * \value UpdateRoleAction IAM UpdateRole action.
+ * \value UpdateRoleDescriptionAction IAM UpdateRoleDescription action.
+ * \value UpdateSAMLProviderAction IAM UpdateSAMLProvider action.
+ * \value UpdateSSHPublicKeyAction IAM UpdateSSHPublicKey action.
+ * \value UpdateServerCertificateAction IAM UpdateServerCertificate action.
+ * \value UpdateServiceSpecificCredentialAction IAM UpdateServiceSpecificCredential action.
+ * \value UpdateSigningCertificateAction IAM UpdateSigningCertificate action.
+ * \value UpdateUserAction IAM UpdateUser action.
+ * \value UploadSSHPublicKeyAction IAM UploadSSHPublicKey action.
+ * \value UploadServerCertificateAction IAM UploadServerCertificate action.
+ * \value UploadSigningCertificateAction IAM UploadSigningCertificate action.
+ */
+
+/*!
+ * Constructs a[n] IAMRequest object for IAM \a action.
  */
 IAMRequest::IAMRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new IAMRequestPrivate(action, this))
@@ -43,9 +171,7 @@ IAMRequest::IAMRequest(const Action action)
 }
 
 /*!
- * @brief  Constructs a new IAMRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 IAMRequest::IAMRequest(const IAMRequest &other)
     : QtAws::Core::AwsAbstractRequest(new IAMRequestPrivate(*other.d_func(), this))
@@ -54,13 +180,7 @@ IAMRequest::IAMRequest(const IAMRequest &other)
 }
 
 /*!
- * @brief  Assignment operator.
- *
- * Assigns \a other to \c this.
- *
- * @param  other  Instance to copy.
- *
- * @return  A reference to \c this.
+ * Sets the IAMRequest object to be equal to \a other.
  */
 IAMRequest& IAMRequest::operator=(const IAMRequest &other)
 {
@@ -72,14 +192,10 @@ IAMRequest& IAMRequest::operator=(const IAMRequest &other)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new IAMRequest object.
+ * Constructs aa IAMRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from IAMRequestPrivate.
- *
- * @param  d  Pointer to private data (aka D-Pointer).
  */
 IAMRequest::IAMRequest(IAMRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
@@ -87,7 +203,7 @@ IAMRequest::IAMRequest(IAMRequestPrivate * const d) : QtAws::Core::AwsAbstractRe
 }
 
 /*!
- * \brief Returns the IAM action to be performed by this request.
+ * Returns the IAM action to be performed by this request.
  */
 IAMRequest::Action IAMRequest::action() const
 {
@@ -96,7 +212,7 @@ IAMRequest::Action IAMRequest::action() const
 }
 
 /*!
- * \brief Returns the name of the IAM action to be performed by this request.
+ * Returns the name of the IAM action to be performed by this request.
  */
 QString IAMRequest::actionString() const
 {
@@ -104,7 +220,7 @@ QString IAMRequest::actionString() const
 }
 
 /*!
- * \brief Returns the IAM API version implemented by this request.
+ * Returns the IAM API version implemented by this request.
  */
 QString IAMRequest::apiVersion() const
 {
@@ -113,7 +229,7 @@ QString IAMRequest::apiVersion() const
 }
 
 /*!
- * @brief Set the IAM action to be performed by this request to \a action.
+ * Sets the IAM action to be performed by this request to \a action.
  */
 void IAMRequest::setAction(const Action action)
 {
@@ -122,7 +238,7 @@ void IAMRequest::setAction(const Action action)
 }
 
 /*!
- * Set the IAM API version to include in this request to \a version.
+ * Sets the IAM API version to include in this request to \a version.
  */
 void IAMRequest::setApiVersion(const QString &version)
 {
@@ -131,7 +247,7 @@ void IAMRequest::setApiVersion(const QString &version)
 }
 
 /*!
- * \brief Returns \c true if this request is the same as \a other.
+ * Returns \c true if this request is equal to \a other; \c false otherwise.
  *
  * Note, most derived *Request classes do not need to provider their own
  * implementations of this function, since most such request classes rely on
@@ -146,8 +262,8 @@ bool IAMRequest::operator==(const IAMRequest &other) const
             (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
-/*!
- * @brief  Check if \a queueName is a valid IAM queue name.
+/*
+ * Returns \c tue if \a queueName is a valid IAM queue name.
  *
  * @par From IAM FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
@@ -166,9 +282,8 @@ bool IAMRequest::operator==(const IAMRequest &other) const
 }*/
 
 /*!
- * \brief Removes the a \a name parameter from this request.
- *
- * Returns the count of paramters removed (typically \c 0 or \c 1).
+ * Removes the a \a name parameter from the request, then returns the number of
+ * paramters removed (typically \c 0 or \c 1).
  */
 int IAMRequest::clearParameter(const QString &name)
 {
@@ -177,7 +292,7 @@ int IAMRequest::clearParameter(const QString &name)
 }
 
 /*!
- * \brief Removes all parameters from this request.
+ * Removes all parameters from the request.
  */
 void IAMRequest::clearParameters()
 {
@@ -186,7 +301,7 @@ void IAMRequest::clearParameters()
 }
 
 /*!
- * \brief Returns the value of the \n name pararemter if set, otherwise \a defaultValue.
+ * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
 QVariant IAMRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
@@ -195,7 +310,7 @@ QVariant IAMRequest::parameter(const QString &name, const QVariant &defaultValue
 }
 
 /*!
- * \brief Returns a map of parameters included in this request.
+ * Returns the parameters included in this request.
  */
 const QVariantMap &IAMRequest::parameters() const
 {
@@ -204,7 +319,7 @@ const QVariantMap &IAMRequest::parameters() const
 }
 
 /*!
- * \brief Sets the \a name parameter to \a value.
+ * Sets the \a name parameter to \a value.
  */
 void IAMRequest::setParameter(const QString &name, const QVariant &value)
 {
@@ -213,9 +328,8 @@ void IAMRequest::setParameter(const QString &name, const QVariant &value)
 }
 
 /*!
- * \brief Sets the map of paramters for this request to \a parameters.
- *
- * Any request parameters set previously will be discarded.
+ * Sets the paramters for this request to \a parameters. Any request parameters
+ * set previously will be discarded.
  */
 void IAMRequest::setParameters(const QVariantMap &parameters)
 {
@@ -224,11 +338,12 @@ void IAMRequest::setParameters(const QVariantMap &parameters)
 }
 
 /*!
- * \brief Returns a network request for this IAM request using the given \a endpoint.
+ * Returns a network request for the IAM request using the given
+ * \a endpoint.
  *
- * This IAM implementation builds request URLs by combining the common query
- * parameters (such as Action and Version), with any that have been added (via
- * setParameter) by child classes.
+ * This IAM implementation builds request URLs by combining the
+ * common query parameters (such as Action and Version), with any that have
+ * been added (via setParameter) by child classes.
  */
 QNetworkRequest IAMRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -239,17 +354,16 @@ QNetworkRequest IAMRequest::unsignedRequest(const QUrl &endpoint) const
 }
 
 /*!
+ * \class QtAws::IAM::IAMRequestPrivate
+ * \brief The IAMRequestPrivate class provides private implementation for IAMRequest.
  * \internal
  *
- * \class  IAMRequestPrivate
- *
- * \brief  Private implementation for IAMRequest.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * \internal
- *
- * \brief Constructs a new IAMRequestPrivate object.
+ * Constructs a IAMRequestPrivate object for IAM \a action with,
+ * public implementation \a q.
  */
 IAMRequestPrivate::IAMRequestPrivate(const IAMRequest::Action action, IAMRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
@@ -258,9 +372,7 @@ IAMRequestPrivate::IAMRequestPrivate(const IAMRequest::Action action, IAMRequest
 }
 
 /*!
- * \internal
- *
- * \brief Constructs a new IAMRequestPrivate object, copying an existing one.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
@@ -276,15 +388,12 @@ IAMRequestPrivate::IAMRequestPrivate(const IAMRequestPrivate &other,
 }
 
 /*!
- * \internal
- *
- * \brief Returns a string representing \a action.
+ * Returns a string represention of \a action, or a null string if \a action is
+ * invalid.
  *
  * This function converts IAMRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the IAM service's Action
  * query parameters.
- *
- * @return A string representing \a action, or a null string if \a action is invalid.
  */
 QString IAMRequestPrivate::toString(const IAMRequest::Action &action)
 {

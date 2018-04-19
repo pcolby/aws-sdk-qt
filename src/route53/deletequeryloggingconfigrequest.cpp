@@ -27,19 +27,16 @@ namespace Route53 {
 
 /*!
  * \class QtAws::Route53::DeleteQueryLoggingConfigRequest
- *
  * \brief The DeleteQueryLoggingConfigRequest class provides an interface for Route53 DeleteQueryLoggingConfig requests.
  *
- * \ingroup Route53
+ * \inmodule QtAwsRoute53
  *
  *
  * \sa Route53Client::deleteQueryLoggingConfig
  */
 
 /*!
- * @brief  Constructs a new DeleteQueryLoggingConfigRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteQueryLoggingConfigRequest::DeleteQueryLoggingConfigRequest(const DeleteQueryLoggingConfigRequest &other)
     : Route53Request(new DeleteQueryLoggingConfigRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ DeleteQueryLoggingConfigRequest::DeleteQueryLoggingConfigRequest(const DeleteQue
 }
 
 /*!
- * @brief  Constructs a new DeleteQueryLoggingConfigRequest object.
+ * Constructs a DeleteQueryLoggingConfigRequest object.
  */
 DeleteQueryLoggingConfigRequest::DeleteQueryLoggingConfigRequest()
     : Route53Request(new DeleteQueryLoggingConfigRequestPrivate(Route53Request::DeleteQueryLoggingConfigAction, this))
@@ -66,14 +63,9 @@ bool DeleteQueryLoggingConfigRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteQueryLoggingConfigResponse object.
+ * Returns a DeleteQueryLoggingConfigResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteQueryLoggingConfigResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  Route53Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteQueryLoggingConfigRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * DeleteQueryLoggingConfigRequest::response(QNe
 }
 
 /*!
- * @internal
+ * \class QtAws::Route53::DeleteQueryLoggingConfigRequestPrivate
+ * \brief The DeleteQueryLoggingConfigRequestPrivate class provides private implementation for DeleteQueryLoggingConfigRequest.
+ * \internal
  *
- * @class  DeleteQueryLoggingConfigRequestPrivate
- *
- * @brief  Private implementation for DeleteQueryLoggingConfigRequest.
+ * \inmodule QtAwsRoute53
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteQueryLoggingConfigRequestPrivate object.
- *
- * @param  action  Route53 action being performed.
- * @param  q       Pointer to this object's public DeleteQueryLoggingConfigRequest instance.
+ * Constructs a DeleteQueryLoggingConfigRequestPrivate object for Route53 \a action with,
+ * public implementation \a q.
  */
 DeleteQueryLoggingConfigRequestPrivate::DeleteQueryLoggingConfigRequestPrivate(
     const Route53Request::Action action, DeleteQueryLoggingConfigRequest * const q)
@@ -104,15 +93,10 @@ DeleteQueryLoggingConfigRequestPrivate::DeleteQueryLoggingConfigRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteQueryLoggingConfigRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteQueryLoggingConfigRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteQueryLoggingConfigRequest instance.
  */
 DeleteQueryLoggingConfigRequestPrivate::DeleteQueryLoggingConfigRequestPrivate(
     const DeleteQueryLoggingConfigRequestPrivate &other, DeleteQueryLoggingConfigRequest * const q)

@@ -27,10 +27,9 @@ namespace Lightsail {
 
 /*!
  * \class QtAws::Lightsail::GetActiveNamesRequest
- *
  * \brief The GetActiveNamesRequest class provides an interface for Lightsail GetActiveNames requests.
  *
- * \ingroup Lightsail
+ * \inmodule QtAwsLightsail
  *
  *  Amazon Lightsail is the easiest way to get started with AWS for developers who just need virtual private servers.
  *  Lightsail includes everything you need to launch your project quickly - a virtual machine, SSD-based storage, data
@@ -53,9 +52,7 @@ namespace Lightsail {
  */
 
 /*!
- * @brief  Constructs a new GetActiveNamesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetActiveNamesRequest::GetActiveNamesRequest(const GetActiveNamesRequest &other)
     : LightsailRequest(new GetActiveNamesRequestPrivate(*other.d_func(), this))
@@ -64,7 +61,7 @@ GetActiveNamesRequest::GetActiveNamesRequest(const GetActiveNamesRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetActiveNamesRequest object.
+ * Constructs a GetActiveNamesRequest object.
  */
 GetActiveNamesRequest::GetActiveNamesRequest()
     : LightsailRequest(new GetActiveNamesRequestPrivate(LightsailRequest::GetActiveNamesAction, this))
@@ -82,14 +79,9 @@ bool GetActiveNamesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetActiveNamesResponse object.
+ * Returns a GetActiveNamesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetActiveNamesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  LightsailClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetActiveNamesRequest::response(QNetworkReply * const reply) const
 {
@@ -97,20 +89,17 @@ QtAws::Core::AwsAbstractResponse * GetActiveNamesRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::Lightsail::GetActiveNamesRequestPrivate
+ * \brief The GetActiveNamesRequestPrivate class provides private implementation for GetActiveNamesRequest.
+ * \internal
  *
- * @class  GetActiveNamesRequestPrivate
- *
- * @brief  Private implementation for GetActiveNamesRequest.
+ * \inmodule QtAwsLightsail
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetActiveNamesRequestPrivate object.
- *
- * @param  action  Lightsail action being performed.
- * @param  q       Pointer to this object's public GetActiveNamesRequest instance.
+ * Constructs a GetActiveNamesRequestPrivate object for Lightsail \a action with,
+ * public implementation \a q.
  */
 GetActiveNamesRequestPrivate::GetActiveNamesRequestPrivate(
     const LightsailRequest::Action action, GetActiveNamesRequest * const q)
@@ -120,15 +109,10 @@ GetActiveNamesRequestPrivate::GetActiveNamesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetActiveNamesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetActiveNamesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetActiveNamesRequest instance.
  */
 GetActiveNamesRequestPrivate::GetActiveNamesRequestPrivate(
     const GetActiveNamesRequestPrivate &other, GetActiveNamesRequest * const q)

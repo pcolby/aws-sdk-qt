@@ -27,10 +27,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::DescribeDocumentRequest
- *
  * \brief The DescribeDocumentRequest class provides an interface for SSM DescribeDocument requests.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -61,9 +60,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new DescribeDocumentRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeDocumentRequest::DescribeDocumentRequest(const DescribeDocumentRequest &other)
     : SSMRequest(new DescribeDocumentRequestPrivate(*other.d_func(), this))
@@ -72,7 +69,7 @@ DescribeDocumentRequest::DescribeDocumentRequest(const DescribeDocumentRequest &
 }
 
 /*!
- * @brief  Constructs a new DescribeDocumentRequest object.
+ * Constructs a DescribeDocumentRequest object.
  */
 DescribeDocumentRequest::DescribeDocumentRequest()
     : SSMRequest(new DescribeDocumentRequestPrivate(SSMRequest::DescribeDocumentAction, this))
@@ -90,14 +87,9 @@ bool DescribeDocumentRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeDocumentResponse object.
+ * Returns a DescribeDocumentResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeDocumentResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SSMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeDocumentRequest::response(QNetworkReply * const reply) const
 {
@@ -105,20 +97,17 @@ QtAws::Core::AwsAbstractResponse * DescribeDocumentRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::SSM::DescribeDocumentRequestPrivate
+ * \brief The DescribeDocumentRequestPrivate class provides private implementation for DescribeDocumentRequest.
+ * \internal
  *
- * @class  DescribeDocumentRequestPrivate
- *
- * @brief  Private implementation for DescribeDocumentRequest.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeDocumentRequestPrivate object.
- *
- * @param  action  SSM action being performed.
- * @param  q       Pointer to this object's public DescribeDocumentRequest instance.
+ * Constructs a DescribeDocumentRequestPrivate object for SSM \a action with,
+ * public implementation \a q.
  */
 DescribeDocumentRequestPrivate::DescribeDocumentRequestPrivate(
     const SSMRequest::Action action, DescribeDocumentRequest * const q)
@@ -128,15 +117,10 @@ DescribeDocumentRequestPrivate::DescribeDocumentRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeDocumentRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeDocumentRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeDocumentRequest instance.
  */
 DescribeDocumentRequestPrivate::DescribeDocumentRequestPrivate(
     const DescribeDocumentRequestPrivate &other, DescribeDocumentRequest * const q)

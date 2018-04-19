@@ -27,10 +27,9 @@ namespace SES {
 
 /*!
  * \class QtAws::SES::CreateTemplateRequest
- *
  * \brief The CreateTemplateRequest class provides an interface for SES CreateTemplate requests.
  *
- * \ingroup SES
+ * \inmodule QtAwsSES
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -48,9 +47,7 @@ namespace SES {
  */
 
 /*!
- * @brief  Constructs a new CreateTemplateRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateTemplateRequest::CreateTemplateRequest(const CreateTemplateRequest &other)
     : SESRequest(new CreateTemplateRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ CreateTemplateRequest::CreateTemplateRequest(const CreateTemplateRequest &other)
 }
 
 /*!
- * @brief  Constructs a new CreateTemplateRequest object.
+ * Constructs a CreateTemplateRequest object.
  */
 CreateTemplateRequest::CreateTemplateRequest()
     : SESRequest(new CreateTemplateRequestPrivate(SESRequest::CreateTemplateAction, this))
@@ -77,14 +74,9 @@ bool CreateTemplateRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateTemplateResponse object.
+ * Returns a CreateTemplateResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateTemplateResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SESClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateTemplateRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * CreateTemplateRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::SES::CreateTemplateRequestPrivate
+ * \brief The CreateTemplateRequestPrivate class provides private implementation for CreateTemplateRequest.
+ * \internal
  *
- * @class  CreateTemplateRequestPrivate
- *
- * @brief  Private implementation for CreateTemplateRequest.
+ * \inmodule QtAwsSES
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateTemplateRequestPrivate object.
- *
- * @param  action  SES action being performed.
- * @param  q       Pointer to this object's public CreateTemplateRequest instance.
+ * Constructs a CreateTemplateRequestPrivate object for SES \a action with,
+ * public implementation \a q.
  */
 CreateTemplateRequestPrivate::CreateTemplateRequestPrivate(
     const SESRequest::Action action, CreateTemplateRequest * const q)
@@ -115,15 +104,10 @@ CreateTemplateRequestPrivate::CreateTemplateRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateTemplateRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateTemplateRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateTemplateRequest instance.
  */
 CreateTemplateRequestPrivate::CreateTemplateRequestPrivate(
     const CreateTemplateRequestPrivate &other, CreateTemplateRequest * const q)

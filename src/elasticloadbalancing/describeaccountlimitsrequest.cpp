@@ -27,10 +27,9 @@ namespace ElasticLoadBalancing {
 
 /*!
  * \class QtAws::ElasticLoadBalancing::DescribeAccountLimitsRequest
- *
  * \brief The DescribeAccountLimitsRequest class provides an interface for ElasticLoadBalancing DescribeAccountLimits requests.
  *
- * \ingroup ElasticLoadBalancing
+ * \inmodule QtAwsElasticLoadBalancing
  *
  *  <fullname>Elastic Load Balancing</fullname>
  * 
@@ -65,9 +64,7 @@ namespace ElasticLoadBalancing {
  */
 
 /*!
- * @brief  Constructs a new DescribeAccountLimitsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeAccountLimitsRequest::DescribeAccountLimitsRequest(const DescribeAccountLimitsRequest &other)
     : ElasticLoadBalancingRequest(new DescribeAccountLimitsRequestPrivate(*other.d_func(), this))
@@ -76,7 +73,7 @@ DescribeAccountLimitsRequest::DescribeAccountLimitsRequest(const DescribeAccount
 }
 
 /*!
- * @brief  Constructs a new DescribeAccountLimitsRequest object.
+ * Constructs a DescribeAccountLimitsRequest object.
  */
 DescribeAccountLimitsRequest::DescribeAccountLimitsRequest()
     : ElasticLoadBalancingRequest(new DescribeAccountLimitsRequestPrivate(ElasticLoadBalancingRequest::DescribeAccountLimitsAction, this))
@@ -94,14 +91,9 @@ bool DescribeAccountLimitsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeAccountLimitsResponse object.
+ * Returns a DescribeAccountLimitsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeAccountLimitsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ElasticLoadBalancingClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeAccountLimitsRequest::response(QNetworkReply * const reply) const
 {
@@ -109,20 +101,17 @@ QtAws::Core::AwsAbstractResponse * DescribeAccountLimitsRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::ElasticLoadBalancing::DescribeAccountLimitsRequestPrivate
+ * \brief The DescribeAccountLimitsRequestPrivate class provides private implementation for DescribeAccountLimitsRequest.
+ * \internal
  *
- * @class  DescribeAccountLimitsRequestPrivate
- *
- * @brief  Private implementation for DescribeAccountLimitsRequest.
+ * \inmodule QtAwsElasticLoadBalancing
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeAccountLimitsRequestPrivate object.
- *
- * @param  action  ElasticLoadBalancing action being performed.
- * @param  q       Pointer to this object's public DescribeAccountLimitsRequest instance.
+ * Constructs a DescribeAccountLimitsRequestPrivate object for ElasticLoadBalancing \a action with,
+ * public implementation \a q.
  */
 DescribeAccountLimitsRequestPrivate::DescribeAccountLimitsRequestPrivate(
     const ElasticLoadBalancingRequest::Action action, DescribeAccountLimitsRequest * const q)
@@ -132,15 +121,10 @@ DescribeAccountLimitsRequestPrivate::DescribeAccountLimitsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeAccountLimitsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeAccountLimitsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeAccountLimitsRequest instance.
  */
 DescribeAccountLimitsRequestPrivate::DescribeAccountLimitsRequestPrivate(
     const DescribeAccountLimitsRequestPrivate &other, DescribeAccountLimitsRequest * const q)

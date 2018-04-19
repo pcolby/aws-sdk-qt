@@ -27,10 +27,9 @@ namespace Redshift {
 
 /*!
  * \class QtAws::Redshift::DescribeHsmClientCertificatesRequest
- *
  * \brief The DescribeHsmClientCertificatesRequest class provides an interface for Redshift DescribeHsmClientCertificates requests.
  *
- * \ingroup Redshift
+ * \inmodule QtAwsRedshift
  *
  *  <fullname>Amazon Redshift</fullname>
  * 
@@ -67,9 +66,7 @@ namespace Redshift {
  */
 
 /*!
- * @brief  Constructs a new DescribeHsmClientCertificatesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeHsmClientCertificatesRequest::DescribeHsmClientCertificatesRequest(const DescribeHsmClientCertificatesRequest &other)
     : RedshiftRequest(new DescribeHsmClientCertificatesRequestPrivate(*other.d_func(), this))
@@ -78,7 +75,7 @@ DescribeHsmClientCertificatesRequest::DescribeHsmClientCertificatesRequest(const
 }
 
 /*!
- * @brief  Constructs a new DescribeHsmClientCertificatesRequest object.
+ * Constructs a DescribeHsmClientCertificatesRequest object.
  */
 DescribeHsmClientCertificatesRequest::DescribeHsmClientCertificatesRequest()
     : RedshiftRequest(new DescribeHsmClientCertificatesRequestPrivate(RedshiftRequest::DescribeHsmClientCertificatesAction, this))
@@ -96,14 +93,9 @@ bool DescribeHsmClientCertificatesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeHsmClientCertificatesResponse object.
+ * Returns a DescribeHsmClientCertificatesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeHsmClientCertificatesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RedshiftClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeHsmClientCertificatesRequest::response(QNetworkReply * const reply) const
 {
@@ -111,20 +103,17 @@ QtAws::Core::AwsAbstractResponse * DescribeHsmClientCertificatesRequest::respons
 }
 
 /*!
- * @internal
+ * \class QtAws::Redshift::DescribeHsmClientCertificatesRequestPrivate
+ * \brief The DescribeHsmClientCertificatesRequestPrivate class provides private implementation for DescribeHsmClientCertificatesRequest.
+ * \internal
  *
- * @class  DescribeHsmClientCertificatesRequestPrivate
- *
- * @brief  Private implementation for DescribeHsmClientCertificatesRequest.
+ * \inmodule QtAwsRedshift
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeHsmClientCertificatesRequestPrivate object.
- *
- * @param  action  Redshift action being performed.
- * @param  q       Pointer to this object's public DescribeHsmClientCertificatesRequest instance.
+ * Constructs a DescribeHsmClientCertificatesRequestPrivate object for Redshift \a action with,
+ * public implementation \a q.
  */
 DescribeHsmClientCertificatesRequestPrivate::DescribeHsmClientCertificatesRequestPrivate(
     const RedshiftRequest::Action action, DescribeHsmClientCertificatesRequest * const q)
@@ -134,15 +123,10 @@ DescribeHsmClientCertificatesRequestPrivate::DescribeHsmClientCertificatesReques
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeHsmClientCertificatesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeHsmClientCertificatesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeHsmClientCertificatesRequest instance.
  */
 DescribeHsmClientCertificatesRequestPrivate::DescribeHsmClientCertificatesRequestPrivate(
     const DescribeHsmClientCertificatesRequestPrivate &other, DescribeHsmClientCertificatesRequest * const q)

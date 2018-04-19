@@ -27,10 +27,9 @@ namespace SES {
 
 /*!
  * \class QtAws::SES::DeleteReceiptFilterRequest
- *
  * \brief The DeleteReceiptFilterRequest class provides an interface for SES DeleteReceiptFilter requests.
  *
- * \ingroup SES
+ * \inmodule QtAwsSES
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -48,9 +47,7 @@ namespace SES {
  */
 
 /*!
- * @brief  Constructs a new DeleteReceiptFilterRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteReceiptFilterRequest::DeleteReceiptFilterRequest(const DeleteReceiptFilterRequest &other)
     : SESRequest(new DeleteReceiptFilterRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ DeleteReceiptFilterRequest::DeleteReceiptFilterRequest(const DeleteReceiptFilter
 }
 
 /*!
- * @brief  Constructs a new DeleteReceiptFilterRequest object.
+ * Constructs a DeleteReceiptFilterRequest object.
  */
 DeleteReceiptFilterRequest::DeleteReceiptFilterRequest()
     : SESRequest(new DeleteReceiptFilterRequestPrivate(SESRequest::DeleteReceiptFilterAction, this))
@@ -77,14 +74,9 @@ bool DeleteReceiptFilterRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteReceiptFilterResponse object.
+ * Returns a DeleteReceiptFilterResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteReceiptFilterResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SESClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteReceiptFilterRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * DeleteReceiptFilterRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::SES::DeleteReceiptFilterRequestPrivate
+ * \brief The DeleteReceiptFilterRequestPrivate class provides private implementation for DeleteReceiptFilterRequest.
+ * \internal
  *
- * @class  DeleteReceiptFilterRequestPrivate
- *
- * @brief  Private implementation for DeleteReceiptFilterRequest.
+ * \inmodule QtAwsSES
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteReceiptFilterRequestPrivate object.
- *
- * @param  action  SES action being performed.
- * @param  q       Pointer to this object's public DeleteReceiptFilterRequest instance.
+ * Constructs a DeleteReceiptFilterRequestPrivate object for SES \a action with,
+ * public implementation \a q.
  */
 DeleteReceiptFilterRequestPrivate::DeleteReceiptFilterRequestPrivate(
     const SESRequest::Action action, DeleteReceiptFilterRequest * const q)
@@ -115,15 +104,10 @@ DeleteReceiptFilterRequestPrivate::DeleteReceiptFilterRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteReceiptFilterRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteReceiptFilterRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteReceiptFilterRequest instance.
  */
 DeleteReceiptFilterRequestPrivate::DeleteReceiptFilterRequestPrivate(
     const DeleteReceiptFilterRequestPrivate &other, DeleteReceiptFilterRequest * const q)

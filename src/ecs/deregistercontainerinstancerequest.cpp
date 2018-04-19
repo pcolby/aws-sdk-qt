@@ -27,10 +27,9 @@ namespace ECS {
 
 /*!
  * \class QtAws::ECS::DeregisterContainerInstanceRequest
- *
  * \brief The DeregisterContainerInstanceRequest class provides an interface for ECS DeregisterContainerInstance requests.
  *
- * \ingroup ECS
+ * \inmodule QtAwsECS
  *
  *  Amazon Elastic Container Service (Amazon ECS) is a highly scalable, fast, container management service that makes it
  *  easy to run, stop, and manage Docker containers on a cluster. You can host your cluster on a serverless infrastructure
@@ -54,9 +53,7 @@ namespace ECS {
  */
 
 /*!
- * @brief  Constructs a new DeregisterContainerInstanceRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeregisterContainerInstanceRequest::DeregisterContainerInstanceRequest(const DeregisterContainerInstanceRequest &other)
     : ECSRequest(new DeregisterContainerInstanceRequestPrivate(*other.d_func(), this))
@@ -65,7 +62,7 @@ DeregisterContainerInstanceRequest::DeregisterContainerInstanceRequest(const Der
 }
 
 /*!
- * @brief  Constructs a new DeregisterContainerInstanceRequest object.
+ * Constructs a DeregisterContainerInstanceRequest object.
  */
 DeregisterContainerInstanceRequest::DeregisterContainerInstanceRequest()
     : ECSRequest(new DeregisterContainerInstanceRequestPrivate(ECSRequest::DeregisterContainerInstanceAction, this))
@@ -83,14 +80,9 @@ bool DeregisterContainerInstanceRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeregisterContainerInstanceResponse object.
+ * Returns a DeregisterContainerInstanceResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeregisterContainerInstanceResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ECSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeregisterContainerInstanceRequest::response(QNetworkReply * const reply) const
 {
@@ -98,20 +90,17 @@ QtAws::Core::AwsAbstractResponse * DeregisterContainerInstanceRequest::response(
 }
 
 /*!
- * @internal
+ * \class QtAws::ECS::DeregisterContainerInstanceRequestPrivate
+ * \brief The DeregisterContainerInstanceRequestPrivate class provides private implementation for DeregisterContainerInstanceRequest.
+ * \internal
  *
- * @class  DeregisterContainerInstanceRequestPrivate
- *
- * @brief  Private implementation for DeregisterContainerInstanceRequest.
+ * \inmodule QtAwsECS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeregisterContainerInstanceRequestPrivate object.
- *
- * @param  action  ECS action being performed.
- * @param  q       Pointer to this object's public DeregisterContainerInstanceRequest instance.
+ * Constructs a DeregisterContainerInstanceRequestPrivate object for ECS \a action with,
+ * public implementation \a q.
  */
 DeregisterContainerInstanceRequestPrivate::DeregisterContainerInstanceRequestPrivate(
     const ECSRequest::Action action, DeregisterContainerInstanceRequest * const q)
@@ -121,15 +110,10 @@ DeregisterContainerInstanceRequestPrivate::DeregisterContainerInstanceRequestPri
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeregisterContainerInstanceRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeregisterContainerInstanceRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeregisterContainerInstanceRequest instance.
  */
 DeregisterContainerInstanceRequestPrivate::DeregisterContainerInstanceRequestPrivate(
     const DeregisterContainerInstanceRequestPrivate &other, DeregisterContainerInstanceRequest * const q)

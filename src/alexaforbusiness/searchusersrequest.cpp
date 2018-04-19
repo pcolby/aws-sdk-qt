@@ -27,10 +27,9 @@ namespace AlexaForBusiness {
 
 /*!
  * \class QtAws::AlexaForBusiness::SearchUsersRequest
- *
  * \brief The SearchUsersRequest class provides an interface for AlexaForBusiness SearchUsers requests.
  *
- * \ingroup AlexaForBusiness
+ * \inmodule QtAwsAlexaForBusiness
  *
  *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
  *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
@@ -42,9 +41,7 @@ namespace AlexaForBusiness {
  */
 
 /*!
- * @brief  Constructs a new SearchUsersRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 SearchUsersRequest::SearchUsersRequest(const SearchUsersRequest &other)
     : AlexaForBusinessRequest(new SearchUsersRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ SearchUsersRequest::SearchUsersRequest(const SearchUsersRequest &other)
 }
 
 /*!
- * @brief  Constructs a new SearchUsersRequest object.
+ * Constructs a SearchUsersRequest object.
  */
 SearchUsersRequest::SearchUsersRequest()
     : AlexaForBusinessRequest(new SearchUsersRequestPrivate(AlexaForBusinessRequest::SearchUsersAction, this))
@@ -71,14 +68,9 @@ bool SearchUsersRequest::isValid() const
 
 
 /*!
- * @brief  Construct an SearchUsersResponse object.
+ * Returns a SearchUsersResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An SearchUsersResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AlexaForBusinessClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * SearchUsersRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * SearchUsersRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::AlexaForBusiness::SearchUsersRequestPrivate
+ * \brief The SearchUsersRequestPrivate class provides private implementation for SearchUsersRequest.
+ * \internal
  *
- * @class  SearchUsersRequestPrivate
- *
- * @brief  Private implementation for SearchUsersRequest.
+ * \inmodule QtAwsAlexaForBusiness
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new SearchUsersRequestPrivate object.
- *
- * @param  action  AlexaForBusiness action being performed.
- * @param  q       Pointer to this object's public SearchUsersRequest instance.
+ * Constructs a SearchUsersRequestPrivate object for AlexaForBusiness \a action with,
+ * public implementation \a q.
  */
 SearchUsersRequestPrivate::SearchUsersRequestPrivate(
     const AlexaForBusinessRequest::Action action, SearchUsersRequest * const q)
@@ -109,15 +98,10 @@ SearchUsersRequestPrivate::SearchUsersRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SearchUsersRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the SearchUsersRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public SearchUsersRequest instance.
  */
 SearchUsersRequestPrivate::SearchUsersRequestPrivate(
     const SearchUsersRequestPrivate &other, SearchUsersRequest * const q)

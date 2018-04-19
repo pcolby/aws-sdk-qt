@@ -27,10 +27,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::GetUsageRequest
- *
  * \brief The GetUsageRequest class provides an interface for APIGateway GetUsage requests.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -42,9 +41,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new GetUsageRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetUsageRequest::GetUsageRequest(const GetUsageRequest &other)
     : APIGatewayRequest(new GetUsageRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ GetUsageRequest::GetUsageRequest(const GetUsageRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetUsageRequest object.
+ * Constructs a GetUsageRequest object.
  */
 GetUsageRequest::GetUsageRequest()
     : APIGatewayRequest(new GetUsageRequestPrivate(APIGatewayRequest::GetUsageAction, this))
@@ -71,14 +68,9 @@ bool GetUsageRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetUsageResponse object.
+ * Returns a GetUsageResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetUsageResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  APIGatewayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetUsageRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * GetUsageRequest::response(QNetworkReply * con
 }
 
 /*!
- * @internal
+ * \class QtAws::APIGateway::GetUsageRequestPrivate
+ * \brief The GetUsageRequestPrivate class provides private implementation for GetUsageRequest.
+ * \internal
  *
- * @class  GetUsageRequestPrivate
- *
- * @brief  Private implementation for GetUsageRequest.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetUsageRequestPrivate object.
- *
- * @param  action  APIGateway action being performed.
- * @param  q       Pointer to this object's public GetUsageRequest instance.
+ * Constructs a GetUsageRequestPrivate object for APIGateway \a action with,
+ * public implementation \a q.
  */
 GetUsageRequestPrivate::GetUsageRequestPrivate(
     const APIGatewayRequest::Action action, GetUsageRequest * const q)
@@ -109,15 +98,10 @@ GetUsageRequestPrivate::GetUsageRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetUsageRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetUsageRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetUsageRequest instance.
  */
 GetUsageRequestPrivate::GetUsageRequestPrivate(
     const GetUsageRequestPrivate &other, GetUsageRequest * const q)

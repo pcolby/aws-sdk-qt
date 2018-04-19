@@ -27,10 +27,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::DeleteAccessKeyRequest
- *
  * \brief The DeleteAccessKeyRequest class provides an interface for IAM DeleteAccessKey requests.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -102,9 +101,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new DeleteAccessKeyRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteAccessKeyRequest::DeleteAccessKeyRequest(const DeleteAccessKeyRequest &other)
     : IAMRequest(new DeleteAccessKeyRequestPrivate(*other.d_func(), this))
@@ -113,7 +110,7 @@ DeleteAccessKeyRequest::DeleteAccessKeyRequest(const DeleteAccessKeyRequest &oth
 }
 
 /*!
- * @brief  Constructs a new DeleteAccessKeyRequest object.
+ * Constructs a DeleteAccessKeyRequest object.
  */
 DeleteAccessKeyRequest::DeleteAccessKeyRequest()
     : IAMRequest(new DeleteAccessKeyRequestPrivate(IAMRequest::DeleteAccessKeyAction, this))
@@ -131,14 +128,9 @@ bool DeleteAccessKeyRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteAccessKeyResponse object.
+ * Returns a DeleteAccessKeyResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteAccessKeyResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IAMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteAccessKeyRequest::response(QNetworkReply * const reply) const
 {
@@ -146,20 +138,17 @@ QtAws::Core::AwsAbstractResponse * DeleteAccessKeyRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::IAM::DeleteAccessKeyRequestPrivate
+ * \brief The DeleteAccessKeyRequestPrivate class provides private implementation for DeleteAccessKeyRequest.
+ * \internal
  *
- * @class  DeleteAccessKeyRequestPrivate
- *
- * @brief  Private implementation for DeleteAccessKeyRequest.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteAccessKeyRequestPrivate object.
- *
- * @param  action  IAM action being performed.
- * @param  q       Pointer to this object's public DeleteAccessKeyRequest instance.
+ * Constructs a DeleteAccessKeyRequestPrivate object for IAM \a action with,
+ * public implementation \a q.
  */
 DeleteAccessKeyRequestPrivate::DeleteAccessKeyRequestPrivate(
     const IAMRequest::Action action, DeleteAccessKeyRequest * const q)
@@ -169,15 +158,10 @@ DeleteAccessKeyRequestPrivate::DeleteAccessKeyRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteAccessKeyRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteAccessKeyRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteAccessKeyRequest instance.
  */
 DeleteAccessKeyRequestPrivate::DeleteAccessKeyRequestPrivate(
     const DeleteAccessKeyRequestPrivate &other, DeleteAccessKeyRequest * const q)

@@ -27,10 +27,9 @@ namespace ServiceDiscovery {
 
 /*!
  * \class QtAws::ServiceDiscovery::DeleteNamespaceRequest
- *
  * \brief The DeleteNamespaceRequest class provides an interface for ServiceDiscovery DeleteNamespace requests.
  *
- * \ingroup ServiceDiscovery
+ * \inmodule QtAwsServiceDiscovery
  *
  *  Amazon Route 53 auto naming lets you configure public or private namespaces that your microservice applications run in.
  *  When instances of the service become available, you can call the auto naming API to register the instance, and Route 53
@@ -41,9 +40,7 @@ namespace ServiceDiscovery {
  */
 
 /*!
- * @brief  Constructs a new DeleteNamespaceRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteNamespaceRequest::DeleteNamespaceRequest(const DeleteNamespaceRequest &other)
     : ServiceDiscoveryRequest(new DeleteNamespaceRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ DeleteNamespaceRequest::DeleteNamespaceRequest(const DeleteNamespaceRequest &oth
 }
 
 /*!
- * @brief  Constructs a new DeleteNamespaceRequest object.
+ * Constructs a DeleteNamespaceRequest object.
  */
 DeleteNamespaceRequest::DeleteNamespaceRequest()
     : ServiceDiscoveryRequest(new DeleteNamespaceRequestPrivate(ServiceDiscoveryRequest::DeleteNamespaceAction, this))
@@ -70,14 +67,9 @@ bool DeleteNamespaceRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteNamespaceResponse object.
+ * Returns a DeleteNamespaceResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteNamespaceResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ServiceDiscoveryClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteNamespaceRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * DeleteNamespaceRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::ServiceDiscovery::DeleteNamespaceRequestPrivate
+ * \brief The DeleteNamespaceRequestPrivate class provides private implementation for DeleteNamespaceRequest.
+ * \internal
  *
- * @class  DeleteNamespaceRequestPrivate
- *
- * @brief  Private implementation for DeleteNamespaceRequest.
+ * \inmodule QtAwsServiceDiscovery
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteNamespaceRequestPrivate object.
- *
- * @param  action  ServiceDiscovery action being performed.
- * @param  q       Pointer to this object's public DeleteNamespaceRequest instance.
+ * Constructs a DeleteNamespaceRequestPrivate object for ServiceDiscovery \a action with,
+ * public implementation \a q.
  */
 DeleteNamespaceRequestPrivate::DeleteNamespaceRequestPrivate(
     const ServiceDiscoveryRequest::Action action, DeleteNamespaceRequest * const q)
@@ -108,15 +97,10 @@ DeleteNamespaceRequestPrivate::DeleteNamespaceRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteNamespaceRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteNamespaceRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteNamespaceRequest instance.
  */
 DeleteNamespaceRequestPrivate::DeleteNamespaceRequestPrivate(
     const DeleteNamespaceRequestPrivate &other, DeleteNamespaceRequest * const q)

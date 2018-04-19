@@ -27,10 +27,9 @@ namespace ECR {
 
 /*!
  * \class QtAws::ECR::PutLifecyclePolicyRequest
- *
  * \brief The PutLifecyclePolicyRequest class provides an interface for ECR PutLifecyclePolicy requests.
  *
- * \ingroup ECR
+ * \inmodule QtAwsECR
  *
  *  Amazon Elastic Container Registry (Amazon ECR) is a managed Docker registry service. Customers can use the familiar
  *  Docker CLI to push, pull, and manage images. Amazon ECR provides a secure, scalable, and reliable registry. Amazon ECR
@@ -41,9 +40,7 @@ namespace ECR {
  */
 
 /*!
- * @brief  Constructs a new PutLifecyclePolicyRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 PutLifecyclePolicyRequest::PutLifecyclePolicyRequest(const PutLifecyclePolicyRequest &other)
     : ECRRequest(new PutLifecyclePolicyRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ PutLifecyclePolicyRequest::PutLifecyclePolicyRequest(const PutLifecyclePolicyReq
 }
 
 /*!
- * @brief  Constructs a new PutLifecyclePolicyRequest object.
+ * Constructs a PutLifecyclePolicyRequest object.
  */
 PutLifecyclePolicyRequest::PutLifecyclePolicyRequest()
     : ECRRequest(new PutLifecyclePolicyRequestPrivate(ECRRequest::PutLifecyclePolicyAction, this))
@@ -70,14 +67,9 @@ bool PutLifecyclePolicyRequest::isValid() const
 
 
 /*!
- * @brief  Construct an PutLifecyclePolicyResponse object.
+ * Returns a PutLifecyclePolicyResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An PutLifecyclePolicyResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ECRClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * PutLifecyclePolicyRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * PutLifecyclePolicyRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::ECR::PutLifecyclePolicyRequestPrivate
+ * \brief The PutLifecyclePolicyRequestPrivate class provides private implementation for PutLifecyclePolicyRequest.
+ * \internal
  *
- * @class  PutLifecyclePolicyRequestPrivate
- *
- * @brief  Private implementation for PutLifecyclePolicyRequest.
+ * \inmodule QtAwsECR
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new PutLifecyclePolicyRequestPrivate object.
- *
- * @param  action  ECR action being performed.
- * @param  q       Pointer to this object's public PutLifecyclePolicyRequest instance.
+ * Constructs a PutLifecyclePolicyRequestPrivate object for ECR \a action with,
+ * public implementation \a q.
  */
 PutLifecyclePolicyRequestPrivate::PutLifecyclePolicyRequestPrivate(
     const ECRRequest::Action action, PutLifecyclePolicyRequest * const q)
@@ -108,15 +97,10 @@ PutLifecyclePolicyRequestPrivate::PutLifecyclePolicyRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutLifecyclePolicyRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the PutLifecyclePolicyRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public PutLifecyclePolicyRequest instance.
  */
 PutLifecyclePolicyRequestPrivate::PutLifecyclePolicyRequestPrivate(
     const PutLifecyclePolicyRequestPrivate &other, PutLifecyclePolicyRequest * const q)

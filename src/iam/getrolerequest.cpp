@@ -27,10 +27,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::GetRoleRequest
- *
  * \brief The GetRoleRequest class provides an interface for IAM GetRole requests.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -102,9 +101,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new GetRoleRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetRoleRequest::GetRoleRequest(const GetRoleRequest &other)
     : IAMRequest(new GetRoleRequestPrivate(*other.d_func(), this))
@@ -113,7 +110,7 @@ GetRoleRequest::GetRoleRequest(const GetRoleRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetRoleRequest object.
+ * Constructs a GetRoleRequest object.
  */
 GetRoleRequest::GetRoleRequest()
     : IAMRequest(new GetRoleRequestPrivate(IAMRequest::GetRoleAction, this))
@@ -131,14 +128,9 @@ bool GetRoleRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetRoleResponse object.
+ * Returns a GetRoleResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetRoleResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IAMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetRoleRequest::response(QNetworkReply * const reply) const
 {
@@ -146,20 +138,17 @@ QtAws::Core::AwsAbstractResponse * GetRoleRequest::response(QNetworkReply * cons
 }
 
 /*!
- * @internal
+ * \class QtAws::IAM::GetRoleRequestPrivate
+ * \brief The GetRoleRequestPrivate class provides private implementation for GetRoleRequest.
+ * \internal
  *
- * @class  GetRoleRequestPrivate
- *
- * @brief  Private implementation for GetRoleRequest.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetRoleRequestPrivate object.
- *
- * @param  action  IAM action being performed.
- * @param  q       Pointer to this object's public GetRoleRequest instance.
+ * Constructs a GetRoleRequestPrivate object for IAM \a action with,
+ * public implementation \a q.
  */
 GetRoleRequestPrivate::GetRoleRequestPrivate(
     const IAMRequest::Action action, GetRoleRequest * const q)
@@ -169,15 +158,10 @@ GetRoleRequestPrivate::GetRoleRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetRoleRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetRoleRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetRoleRequest instance.
  */
 GetRoleRequestPrivate::GetRoleRequestPrivate(
     const GetRoleRequestPrivate &other, GetRoleRequest * const q)

@@ -27,10 +27,9 @@ namespace CloudFormation {
 
 /*!
  * \class QtAws::CloudFormation::DescribeStackResourcesRequest
- *
  * \brief The DescribeStackResourcesRequest class provides an interface for CloudFormation DescribeStackResources requests.
  *
- * \ingroup CloudFormation
+ * \inmodule QtAwsCloudFormation
  *
  *  <fullname>AWS CloudFormation</fullname>
  * 
@@ -59,9 +58,7 @@ namespace CloudFormation {
  */
 
 /*!
- * @brief  Constructs a new DescribeStackResourcesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeStackResourcesRequest::DescribeStackResourcesRequest(const DescribeStackResourcesRequest &other)
     : CloudFormationRequest(new DescribeStackResourcesRequestPrivate(*other.d_func(), this))
@@ -70,7 +67,7 @@ DescribeStackResourcesRequest::DescribeStackResourcesRequest(const DescribeStack
 }
 
 /*!
- * @brief  Constructs a new DescribeStackResourcesRequest object.
+ * Constructs a DescribeStackResourcesRequest object.
  */
 DescribeStackResourcesRequest::DescribeStackResourcesRequest()
     : CloudFormationRequest(new DescribeStackResourcesRequestPrivate(CloudFormationRequest::DescribeStackResourcesAction, this))
@@ -88,14 +85,9 @@ bool DescribeStackResourcesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeStackResourcesResponse object.
+ * Returns a DescribeStackResourcesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeStackResourcesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudFormationClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeStackResourcesRequest::response(QNetworkReply * const reply) const
 {
@@ -103,20 +95,17 @@ QtAws::Core::AwsAbstractResponse * DescribeStackResourcesRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudFormation::DescribeStackResourcesRequestPrivate
+ * \brief The DescribeStackResourcesRequestPrivate class provides private implementation for DescribeStackResourcesRequest.
+ * \internal
  *
- * @class  DescribeStackResourcesRequestPrivate
- *
- * @brief  Private implementation for DescribeStackResourcesRequest.
+ * \inmodule QtAwsCloudFormation
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeStackResourcesRequestPrivate object.
- *
- * @param  action  CloudFormation action being performed.
- * @param  q       Pointer to this object's public DescribeStackResourcesRequest instance.
+ * Constructs a DescribeStackResourcesRequestPrivate object for CloudFormation \a action with,
+ * public implementation \a q.
  */
 DescribeStackResourcesRequestPrivate::DescribeStackResourcesRequestPrivate(
     const CloudFormationRequest::Action action, DescribeStackResourcesRequest * const q)
@@ -126,15 +115,10 @@ DescribeStackResourcesRequestPrivate::DescribeStackResourcesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeStackResourcesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeStackResourcesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeStackResourcesRequest instance.
  */
 DescribeStackResourcesRequestPrivate::DescribeStackResourcesRequestPrivate(
     const DescribeStackResourcesRequestPrivate &other, DescribeStackResourcesRequest * const q)

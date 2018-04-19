@@ -27,10 +27,9 @@ namespace ElasticBeanstalk {
 
 /*!
  * \class QtAws::ElasticBeanstalk::DescribeEnvironmentHealthRequest
- *
  * \brief The DescribeEnvironmentHealthRequest class provides an interface for ElasticBeanstalk DescribeEnvironmentHealth requests.
  *
- * \ingroup ElasticBeanstalk
+ * \inmodule QtAwsElasticBeanstalk
  *
  *  <fullname>AWS Elastic Beanstalk</fullname>
  * 
@@ -59,9 +58,7 @@ namespace ElasticBeanstalk {
  */
 
 /*!
- * @brief  Constructs a new DescribeEnvironmentHealthRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeEnvironmentHealthRequest::DescribeEnvironmentHealthRequest(const DescribeEnvironmentHealthRequest &other)
     : ElasticBeanstalkRequest(new DescribeEnvironmentHealthRequestPrivate(*other.d_func(), this))
@@ -70,7 +67,7 @@ DescribeEnvironmentHealthRequest::DescribeEnvironmentHealthRequest(const Describ
 }
 
 /*!
- * @brief  Constructs a new DescribeEnvironmentHealthRequest object.
+ * Constructs a DescribeEnvironmentHealthRequest object.
  */
 DescribeEnvironmentHealthRequest::DescribeEnvironmentHealthRequest()
     : ElasticBeanstalkRequest(new DescribeEnvironmentHealthRequestPrivate(ElasticBeanstalkRequest::DescribeEnvironmentHealthAction, this))
@@ -88,14 +85,9 @@ bool DescribeEnvironmentHealthRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeEnvironmentHealthResponse object.
+ * Returns a DescribeEnvironmentHealthResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeEnvironmentHealthResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ElasticBeanstalkClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeEnvironmentHealthRequest::response(QNetworkReply * const reply) const
 {
@@ -103,20 +95,17 @@ QtAws::Core::AwsAbstractResponse * DescribeEnvironmentHealthRequest::response(QN
 }
 
 /*!
- * @internal
+ * \class QtAws::ElasticBeanstalk::DescribeEnvironmentHealthRequestPrivate
+ * \brief The DescribeEnvironmentHealthRequestPrivate class provides private implementation for DescribeEnvironmentHealthRequest.
+ * \internal
  *
- * @class  DescribeEnvironmentHealthRequestPrivate
- *
- * @brief  Private implementation for DescribeEnvironmentHealthRequest.
+ * \inmodule QtAwsElasticBeanstalk
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeEnvironmentHealthRequestPrivate object.
- *
- * @param  action  ElasticBeanstalk action being performed.
- * @param  q       Pointer to this object's public DescribeEnvironmentHealthRequest instance.
+ * Constructs a DescribeEnvironmentHealthRequestPrivate object for ElasticBeanstalk \a action with,
+ * public implementation \a q.
  */
 DescribeEnvironmentHealthRequestPrivate::DescribeEnvironmentHealthRequestPrivate(
     const ElasticBeanstalkRequest::Action action, DescribeEnvironmentHealthRequest * const q)
@@ -126,15 +115,10 @@ DescribeEnvironmentHealthRequestPrivate::DescribeEnvironmentHealthRequestPrivate
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeEnvironmentHealthRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeEnvironmentHealthRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeEnvironmentHealthRequest instance.
  */
 DescribeEnvironmentHealthRequestPrivate::DescribeEnvironmentHealthRequestPrivate(
     const DescribeEnvironmentHealthRequestPrivate &other, DescribeEnvironmentHealthRequest * const q)

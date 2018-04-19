@@ -27,10 +27,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::CopyDBSnapshotRequest
- *
  * \brief The CopyDBSnapshotRequest class provides an interface for RDS CopyDBSnapshot requests.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -101,9 +100,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new CopyDBSnapshotRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CopyDBSnapshotRequest::CopyDBSnapshotRequest(const CopyDBSnapshotRequest &other)
     : RDSRequest(new CopyDBSnapshotRequestPrivate(*other.d_func(), this))
@@ -112,7 +109,7 @@ CopyDBSnapshotRequest::CopyDBSnapshotRequest(const CopyDBSnapshotRequest &other)
 }
 
 /*!
- * @brief  Constructs a new CopyDBSnapshotRequest object.
+ * Constructs a CopyDBSnapshotRequest object.
  */
 CopyDBSnapshotRequest::CopyDBSnapshotRequest()
     : RDSRequest(new CopyDBSnapshotRequestPrivate(RDSRequest::CopyDBSnapshotAction, this))
@@ -130,14 +127,9 @@ bool CopyDBSnapshotRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CopyDBSnapshotResponse object.
+ * Returns a CopyDBSnapshotResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CopyDBSnapshotResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RDSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CopyDBSnapshotRequest::response(QNetworkReply * const reply) const
 {
@@ -145,20 +137,17 @@ QtAws::Core::AwsAbstractResponse * CopyDBSnapshotRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::RDS::CopyDBSnapshotRequestPrivate
+ * \brief The CopyDBSnapshotRequestPrivate class provides private implementation for CopyDBSnapshotRequest.
+ * \internal
  *
- * @class  CopyDBSnapshotRequestPrivate
- *
- * @brief  Private implementation for CopyDBSnapshotRequest.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CopyDBSnapshotRequestPrivate object.
- *
- * @param  action  RDS action being performed.
- * @param  q       Pointer to this object's public CopyDBSnapshotRequest instance.
+ * Constructs a CopyDBSnapshotRequestPrivate object for RDS \a action with,
+ * public implementation \a q.
  */
 CopyDBSnapshotRequestPrivate::CopyDBSnapshotRequestPrivate(
     const RDSRequest::Action action, CopyDBSnapshotRequest * const q)
@@ -168,15 +157,10 @@ CopyDBSnapshotRequestPrivate::CopyDBSnapshotRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CopyDBSnapshotRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CopyDBSnapshotRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CopyDBSnapshotRequest instance.
  */
 CopyDBSnapshotRequestPrivate::CopyDBSnapshotRequestPrivate(
     const CopyDBSnapshotRequestPrivate &other, CopyDBSnapshotRequest * const q)

@@ -27,19 +27,16 @@ namespace S3 {
 
 /*!
  * \class QtAws::S3::DeleteBucketTaggingRequest
- *
  * \brief The DeleteBucketTaggingRequest class provides an interface for S3 DeleteBucketTagging requests.
  *
- * \ingroup S3
+ * \inmodule QtAwsS3
  *
  *
  * \sa S3Client::deleteBucketTagging
  */
 
 /*!
- * @brief  Constructs a new DeleteBucketTaggingRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteBucketTaggingRequest::DeleteBucketTaggingRequest(const DeleteBucketTaggingRequest &other)
     : S3Request(new DeleteBucketTaggingRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ DeleteBucketTaggingRequest::DeleteBucketTaggingRequest(const DeleteBucketTagging
 }
 
 /*!
- * @brief  Constructs a new DeleteBucketTaggingRequest object.
+ * Constructs a DeleteBucketTaggingRequest object.
  */
 DeleteBucketTaggingRequest::DeleteBucketTaggingRequest()
     : S3Request(new DeleteBucketTaggingRequestPrivate(S3Request::DeleteBucketTaggingAction, this))
@@ -66,14 +63,9 @@ bool DeleteBucketTaggingRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteBucketTaggingResponse object.
+ * Returns a DeleteBucketTaggingResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteBucketTaggingResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  S3Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteBucketTaggingRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * DeleteBucketTaggingRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::S3::DeleteBucketTaggingRequestPrivate
+ * \brief The DeleteBucketTaggingRequestPrivate class provides private implementation for DeleteBucketTaggingRequest.
+ * \internal
  *
- * @class  DeleteBucketTaggingRequestPrivate
- *
- * @brief  Private implementation for DeleteBucketTaggingRequest.
+ * \inmodule QtAwsS3
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteBucketTaggingRequestPrivate object.
- *
- * @param  action  S3 action being performed.
- * @param  q       Pointer to this object's public DeleteBucketTaggingRequest instance.
+ * Constructs a DeleteBucketTaggingRequestPrivate object for S3 \a action with,
+ * public implementation \a q.
  */
 DeleteBucketTaggingRequestPrivate::DeleteBucketTaggingRequestPrivate(
     const S3Request::Action action, DeleteBucketTaggingRequest * const q)
@@ -104,15 +93,10 @@ DeleteBucketTaggingRequestPrivate::DeleteBucketTaggingRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteBucketTaggingRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteBucketTaggingRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteBucketTaggingRequest instance.
  */
 DeleteBucketTaggingRequestPrivate::DeleteBucketTaggingRequestPrivate(
     const DeleteBucketTaggingRequestPrivate &other, DeleteBucketTaggingRequest * const q)

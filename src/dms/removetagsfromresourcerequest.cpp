@@ -27,10 +27,9 @@ namespace DatabaseMigrationService {
 
 /*!
  * \class QtAws::DatabaseMigrationService::RemoveTagsFromResourceRequest
- *
  * \brief The RemoveTagsFromResourceRequest class provides an interface for DatabaseMigrationService RemoveTagsFromResource requests.
  *
- * \ingroup DatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigrationService
  *
  *  <fullname>AWS Database Migration Service</fullname>
  * 
@@ -48,9 +47,7 @@ namespace DatabaseMigrationService {
  */
 
 /*!
- * @brief  Constructs a new RemoveTagsFromResourceRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 RemoveTagsFromResourceRequest::RemoveTagsFromResourceRequest(const RemoveTagsFromResourceRequest &other)
     : DatabaseMigrationServiceRequest(new RemoveTagsFromResourceRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ RemoveTagsFromResourceRequest::RemoveTagsFromResourceRequest(const RemoveTagsFro
 }
 
 /*!
- * @brief  Constructs a new RemoveTagsFromResourceRequest object.
+ * Constructs a RemoveTagsFromResourceRequest object.
  */
 RemoveTagsFromResourceRequest::RemoveTagsFromResourceRequest()
     : DatabaseMigrationServiceRequest(new RemoveTagsFromResourceRequestPrivate(DatabaseMigrationServiceRequest::RemoveTagsFromResourceAction, this))
@@ -77,14 +74,9 @@ bool RemoveTagsFromResourceRequest::isValid() const
 
 
 /*!
- * @brief  Construct an RemoveTagsFromResourceResponse object.
+ * Returns a RemoveTagsFromResourceResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An RemoveTagsFromResourceResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DatabaseMigrationServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * RemoveTagsFromResourceRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * RemoveTagsFromResourceRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::DatabaseMigrationService::RemoveTagsFromResourceRequestPrivate
+ * \brief The RemoveTagsFromResourceRequestPrivate class provides private implementation for RemoveTagsFromResourceRequest.
+ * \internal
  *
- * @class  RemoveTagsFromResourceRequestPrivate
- *
- * @brief  Private implementation for RemoveTagsFromResourceRequest.
+ * \inmodule QtAwsDatabaseMigrationService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new RemoveTagsFromResourceRequestPrivate object.
- *
- * @param  action  DatabaseMigrationService action being performed.
- * @param  q       Pointer to this object's public RemoveTagsFromResourceRequest instance.
+ * Constructs a RemoveTagsFromResourceRequestPrivate object for DatabaseMigrationService \a action with,
+ * public implementation \a q.
  */
 RemoveTagsFromResourceRequestPrivate::RemoveTagsFromResourceRequestPrivate(
     const DatabaseMigrationServiceRequest::Action action, RemoveTagsFromResourceRequest * const q)
@@ -115,15 +104,10 @@ RemoveTagsFromResourceRequestPrivate::RemoveTagsFromResourceRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RemoveTagsFromResourceRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the RemoveTagsFromResourceRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public RemoveTagsFromResourceRequest instance.
  */
 RemoveTagsFromResourceRequestPrivate::RemoveTagsFromResourceRequestPrivate(
     const RemoveTagsFromResourceRequestPrivate &other, RemoveTagsFromResourceRequest * const q)

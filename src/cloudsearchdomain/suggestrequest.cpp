@@ -27,10 +27,9 @@ namespace CloudSearchDomain {
 
 /*!
  * \class QtAws::CloudSearchDomain::SuggestRequest
- *
  * \brief The SuggestRequest class provides an interface for CloudSearchDomain Suggest requests.
  *
- * \ingroup CloudSearchDomain
+ * \inmodule QtAwsCloudSearchDomain
  *
  *  You use the AmazonCloudSearch2013 API to upload documents to a search domain and search those documents.
  * 
@@ -50,9 +49,7 @@ namespace CloudSearchDomain {
  */
 
 /*!
- * @brief  Constructs a new SuggestRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 SuggestRequest::SuggestRequest(const SuggestRequest &other)
     : CloudSearchDomainRequest(new SuggestRequestPrivate(*other.d_func(), this))
@@ -61,7 +58,7 @@ SuggestRequest::SuggestRequest(const SuggestRequest &other)
 }
 
 /*!
- * @brief  Constructs a new SuggestRequest object.
+ * Constructs a SuggestRequest object.
  */
 SuggestRequest::SuggestRequest()
     : CloudSearchDomainRequest(new SuggestRequestPrivate(CloudSearchDomainRequest::SuggestAction, this))
@@ -79,14 +76,9 @@ bool SuggestRequest::isValid() const
 
 
 /*!
- * @brief  Construct an SuggestResponse object.
+ * Returns a SuggestResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An SuggestResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudSearchDomainClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * SuggestRequest::response(QNetworkReply * const reply) const
 {
@@ -94,20 +86,17 @@ QtAws::Core::AwsAbstractResponse * SuggestRequest::response(QNetworkReply * cons
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudSearchDomain::SuggestRequestPrivate
+ * \brief The SuggestRequestPrivate class provides private implementation for SuggestRequest.
+ * \internal
  *
- * @class  SuggestRequestPrivate
- *
- * @brief  Private implementation for SuggestRequest.
+ * \inmodule QtAwsCloudSearchDomain
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new SuggestRequestPrivate object.
- *
- * @param  action  CloudSearchDomain action being performed.
- * @param  q       Pointer to this object's public SuggestRequest instance.
+ * Constructs a SuggestRequestPrivate object for CloudSearchDomain \a action with,
+ * public implementation \a q.
  */
 SuggestRequestPrivate::SuggestRequestPrivate(
     const CloudSearchDomainRequest::Action action, SuggestRequest * const q)
@@ -117,15 +106,10 @@ SuggestRequestPrivate::SuggestRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SuggestRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the SuggestRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public SuggestRequest instance.
  */
 SuggestRequestPrivate::SuggestRequestPrivate(
     const SuggestRequestPrivate &other, SuggestRequest * const q)

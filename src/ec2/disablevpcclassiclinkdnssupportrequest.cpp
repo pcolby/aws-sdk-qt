@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DisableVpcClassicLinkDnsSupportRequest
- *
  * \brief The DisableVpcClassicLinkDnsSupportRequest class provides an interface for EC2 DisableVpcClassicLinkDnsSupport requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DisableVpcClassicLinkDnsSupportRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DisableVpcClassicLinkDnsSupportRequest::DisableVpcClassicLinkDnsSupportRequest(const DisableVpcClassicLinkDnsSupportRequest &other)
     : EC2Request(new DisableVpcClassicLinkDnsSupportRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ DisableVpcClassicLinkDnsSupportRequest::DisableVpcClassicLinkDnsSupportRequest(c
 }
 
 /*!
- * @brief  Constructs a new DisableVpcClassicLinkDnsSupportRequest object.
+ * Constructs a DisableVpcClassicLinkDnsSupportRequest object.
  */
 DisableVpcClassicLinkDnsSupportRequest::DisableVpcClassicLinkDnsSupportRequest()
     : EC2Request(new DisableVpcClassicLinkDnsSupportRequestPrivate(EC2Request::DisableVpcClassicLinkDnsSupportAction, this))
@@ -70,14 +67,9 @@ bool DisableVpcClassicLinkDnsSupportRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DisableVpcClassicLinkDnsSupportResponse object.
+ * Returns a DisableVpcClassicLinkDnsSupportResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DisableVpcClassicLinkDnsSupportResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DisableVpcClassicLinkDnsSupportRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * DisableVpcClassicLinkDnsSupportRequest::respo
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::DisableVpcClassicLinkDnsSupportRequestPrivate
+ * \brief The DisableVpcClassicLinkDnsSupportRequestPrivate class provides private implementation for DisableVpcClassicLinkDnsSupportRequest.
+ * \internal
  *
- * @class  DisableVpcClassicLinkDnsSupportRequestPrivate
- *
- * @brief  Private implementation for DisableVpcClassicLinkDnsSupportRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DisableVpcClassicLinkDnsSupportRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public DisableVpcClassicLinkDnsSupportRequest instance.
+ * Constructs a DisableVpcClassicLinkDnsSupportRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 DisableVpcClassicLinkDnsSupportRequestPrivate::DisableVpcClassicLinkDnsSupportRequestPrivate(
     const EC2Request::Action action, DisableVpcClassicLinkDnsSupportRequest * const q)
@@ -108,15 +97,10 @@ DisableVpcClassicLinkDnsSupportRequestPrivate::DisableVpcClassicLinkDnsSupportRe
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DisableVpcClassicLinkDnsSupportRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DisableVpcClassicLinkDnsSupportRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DisableVpcClassicLinkDnsSupportRequest instance.
  */
 DisableVpcClassicLinkDnsSupportRequestPrivate::DisableVpcClassicLinkDnsSupportRequestPrivate(
     const DisableVpcClassicLinkDnsSupportRequestPrivate &other, DisableVpcClassicLinkDnsSupportRequest * const q)

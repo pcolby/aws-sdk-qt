@@ -27,10 +27,9 @@ namespace DataPipeline {
 
 /*!
  * \class QtAws::DataPipeline::QueryObjectsRequest
- *
  * \brief The QueryObjectsRequest class provides an interface for DataPipeline QueryObjects requests.
  *
- * \ingroup DataPipeline
+ * \inmodule QtAwsDataPipeline
  *
  *  AWS Data Pipeline configures and manages a data-driven workflow called a pipeline. AWS Data Pipeline handles the details
  *  of scheduling and ensuring that data dependencies are met so that your application can focus on processing the
@@ -55,9 +54,7 @@ namespace DataPipeline {
  */
 
 /*!
- * @brief  Constructs a new QueryObjectsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 QueryObjectsRequest::QueryObjectsRequest(const QueryObjectsRequest &other)
     : DataPipelineRequest(new QueryObjectsRequestPrivate(*other.d_func(), this))
@@ -66,7 +63,7 @@ QueryObjectsRequest::QueryObjectsRequest(const QueryObjectsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new QueryObjectsRequest object.
+ * Constructs a QueryObjectsRequest object.
  */
 QueryObjectsRequest::QueryObjectsRequest()
     : DataPipelineRequest(new QueryObjectsRequestPrivate(DataPipelineRequest::QueryObjectsAction, this))
@@ -84,14 +81,9 @@ bool QueryObjectsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an QueryObjectsResponse object.
+ * Returns a QueryObjectsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An QueryObjectsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DataPipelineClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * QueryObjectsRequest::response(QNetworkReply * const reply) const
 {
@@ -99,20 +91,17 @@ QtAws::Core::AwsAbstractResponse * QueryObjectsRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::DataPipeline::QueryObjectsRequestPrivate
+ * \brief The QueryObjectsRequestPrivate class provides private implementation for QueryObjectsRequest.
+ * \internal
  *
- * @class  QueryObjectsRequestPrivate
- *
- * @brief  Private implementation for QueryObjectsRequest.
+ * \inmodule QtAwsDataPipeline
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new QueryObjectsRequestPrivate object.
- *
- * @param  action  DataPipeline action being performed.
- * @param  q       Pointer to this object's public QueryObjectsRequest instance.
+ * Constructs a QueryObjectsRequestPrivate object for DataPipeline \a action with,
+ * public implementation \a q.
  */
 QueryObjectsRequestPrivate::QueryObjectsRequestPrivate(
     const DataPipelineRequest::Action action, QueryObjectsRequest * const q)
@@ -122,15 +111,10 @@ QueryObjectsRequestPrivate::QueryObjectsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new QueryObjectsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the QueryObjectsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public QueryObjectsRequest instance.
  */
 QueryObjectsRequestPrivate::QueryObjectsRequestPrivate(
     const QueryObjectsRequestPrivate &other, QueryObjectsRequest * const q)

@@ -27,10 +27,9 @@ namespace WorkDocs {
 
 /*!
  * \class QtAws::WorkDocs::DeleteDocumentRequest
- *
  * \brief The DeleteDocumentRequest class provides an interface for WorkDocs DeleteDocument requests.
  *
- * \ingroup WorkDocs
+ * \inmodule QtAwsWorkDocs
  *
  *  The WorkDocs API is designed for the following use
  * 
@@ -66,9 +65,7 @@ namespace WorkDocs {
  */
 
 /*!
- * @brief  Constructs a new DeleteDocumentRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteDocumentRequest::DeleteDocumentRequest(const DeleteDocumentRequest &other)
     : WorkDocsRequest(new DeleteDocumentRequestPrivate(*other.d_func(), this))
@@ -77,7 +74,7 @@ DeleteDocumentRequest::DeleteDocumentRequest(const DeleteDocumentRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DeleteDocumentRequest object.
+ * Constructs a DeleteDocumentRequest object.
  */
 DeleteDocumentRequest::DeleteDocumentRequest()
     : WorkDocsRequest(new DeleteDocumentRequestPrivate(WorkDocsRequest::DeleteDocumentAction, this))
@@ -95,14 +92,9 @@ bool DeleteDocumentRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteDocumentResponse object.
+ * Returns a DeleteDocumentResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteDocumentResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WorkDocsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteDocumentRequest::response(QNetworkReply * const reply) const
 {
@@ -110,20 +102,17 @@ QtAws::Core::AwsAbstractResponse * DeleteDocumentRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::WorkDocs::DeleteDocumentRequestPrivate
+ * \brief The DeleteDocumentRequestPrivate class provides private implementation for DeleteDocumentRequest.
+ * \internal
  *
- * @class  DeleteDocumentRequestPrivate
- *
- * @brief  Private implementation for DeleteDocumentRequest.
+ * \inmodule QtAwsWorkDocs
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteDocumentRequestPrivate object.
- *
- * @param  action  WorkDocs action being performed.
- * @param  q       Pointer to this object's public DeleteDocumentRequest instance.
+ * Constructs a DeleteDocumentRequestPrivate object for WorkDocs \a action with,
+ * public implementation \a q.
  */
 DeleteDocumentRequestPrivate::DeleteDocumentRequestPrivate(
     const WorkDocsRequest::Action action, DeleteDocumentRequest * const q)
@@ -133,15 +122,10 @@ DeleteDocumentRequestPrivate::DeleteDocumentRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteDocumentRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteDocumentRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteDocumentRequest instance.
  */
 DeleteDocumentRequestPrivate::DeleteDocumentRequestPrivate(
     const DeleteDocumentRequestPrivate &other, DeleteDocumentRequest * const q)

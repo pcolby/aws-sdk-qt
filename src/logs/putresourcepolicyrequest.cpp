@@ -27,10 +27,9 @@ namespace CloudWatchLogs {
 
 /*!
  * \class QtAws::CloudWatchLogs::PutResourcePolicyRequest
- *
  * \brief The PutResourcePolicyRequest class provides an interface for CloudWatchLogs PutResourcePolicy requests.
  *
- * \ingroup CloudWatchLogs
+ * \inmodule QtAwsCloudWatchLogs
  *
  *  You can use Amazon CloudWatch Logs to monitor, store, and access your log files from Amazon EC2 instances, AWS
  *  CloudTrail, or other sources. You can then retrieve the associated log data from CloudWatch Logs using the CloudWatch
@@ -66,9 +65,7 @@ namespace CloudWatchLogs {
  */
 
 /*!
- * @brief  Constructs a new PutResourcePolicyRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 PutResourcePolicyRequest::PutResourcePolicyRequest(const PutResourcePolicyRequest &other)
     : CloudWatchLogsRequest(new PutResourcePolicyRequestPrivate(*other.d_func(), this))
@@ -77,7 +74,7 @@ PutResourcePolicyRequest::PutResourcePolicyRequest(const PutResourcePolicyReques
 }
 
 /*!
- * @brief  Constructs a new PutResourcePolicyRequest object.
+ * Constructs a PutResourcePolicyRequest object.
  */
 PutResourcePolicyRequest::PutResourcePolicyRequest()
     : CloudWatchLogsRequest(new PutResourcePolicyRequestPrivate(CloudWatchLogsRequest::PutResourcePolicyAction, this))
@@ -95,14 +92,9 @@ bool PutResourcePolicyRequest::isValid() const
 
 
 /*!
- * @brief  Construct an PutResourcePolicyResponse object.
+ * Returns a PutResourcePolicyResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An PutResourcePolicyResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudWatchLogsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * PutResourcePolicyRequest::response(QNetworkReply * const reply) const
 {
@@ -110,20 +102,17 @@ QtAws::Core::AwsAbstractResponse * PutResourcePolicyRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudWatchLogs::PutResourcePolicyRequestPrivate
+ * \brief The PutResourcePolicyRequestPrivate class provides private implementation for PutResourcePolicyRequest.
+ * \internal
  *
- * @class  PutResourcePolicyRequestPrivate
- *
- * @brief  Private implementation for PutResourcePolicyRequest.
+ * \inmodule QtAwsCloudWatchLogs
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new PutResourcePolicyRequestPrivate object.
- *
- * @param  action  CloudWatchLogs action being performed.
- * @param  q       Pointer to this object's public PutResourcePolicyRequest instance.
+ * Constructs a PutResourcePolicyRequestPrivate object for CloudWatchLogs \a action with,
+ * public implementation \a q.
  */
 PutResourcePolicyRequestPrivate::PutResourcePolicyRequestPrivate(
     const CloudWatchLogsRequest::Action action, PutResourcePolicyRequest * const q)
@@ -133,15 +122,10 @@ PutResourcePolicyRequestPrivate::PutResourcePolicyRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutResourcePolicyRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the PutResourcePolicyRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public PutResourcePolicyRequest instance.
  */
 PutResourcePolicyRequestPrivate::PutResourcePolicyRequestPrivate(
     const PutResourcePolicyRequestPrivate &other, PutResourcePolicyRequest * const q)

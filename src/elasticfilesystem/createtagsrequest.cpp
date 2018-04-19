@@ -27,10 +27,9 @@ namespace EFS {
 
 /*!
  * \class QtAws::EFS::CreateTagsRequest
- *
  * \brief The CreateTagsRequest class provides an interface for EFS CreateTags requests.
  *
- * \ingroup EFS
+ * \inmodule QtAwsEFS
  *
  *  <fullname>Amazon Elastic File System</fullname>
  * 
@@ -43,9 +42,7 @@ namespace EFS {
  */
 
 /*!
- * @brief  Constructs a new CreateTagsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateTagsRequest::CreateTagsRequest(const CreateTagsRequest &other)
     : EFSRequest(new CreateTagsRequestPrivate(*other.d_func(), this))
@@ -54,7 +51,7 @@ CreateTagsRequest::CreateTagsRequest(const CreateTagsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new CreateTagsRequest object.
+ * Constructs a CreateTagsRequest object.
  */
 CreateTagsRequest::CreateTagsRequest()
     : EFSRequest(new CreateTagsRequestPrivate(EFSRequest::CreateTagsAction, this))
@@ -72,14 +69,9 @@ bool CreateTagsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateTagsResponse object.
+ * Returns a CreateTagsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateTagsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EFSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateTagsRequest::response(QNetworkReply * const reply) const
 {
@@ -87,20 +79,17 @@ QtAws::Core::AwsAbstractResponse * CreateTagsRequest::response(QNetworkReply * c
 }
 
 /*!
- * @internal
+ * \class QtAws::EFS::CreateTagsRequestPrivate
+ * \brief The CreateTagsRequestPrivate class provides private implementation for CreateTagsRequest.
+ * \internal
  *
- * @class  CreateTagsRequestPrivate
- *
- * @brief  Private implementation for CreateTagsRequest.
+ * \inmodule QtAwsEFS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateTagsRequestPrivate object.
- *
- * @param  action  EFS action being performed.
- * @param  q       Pointer to this object's public CreateTagsRequest instance.
+ * Constructs a CreateTagsRequestPrivate object for EFS \a action with,
+ * public implementation \a q.
  */
 CreateTagsRequestPrivate::CreateTagsRequestPrivate(
     const EFSRequest::Action action, CreateTagsRequest * const q)
@@ -110,15 +99,10 @@ CreateTagsRequestPrivate::CreateTagsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateTagsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateTagsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateTagsRequest instance.
  */
 CreateTagsRequestPrivate::CreateTagsRequestPrivate(
     const CreateTagsRequestPrivate &other, CreateTagsRequest * const q)

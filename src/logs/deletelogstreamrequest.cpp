@@ -27,10 +27,9 @@ namespace CloudWatchLogs {
 
 /*!
  * \class QtAws::CloudWatchLogs::DeleteLogStreamRequest
- *
  * \brief The DeleteLogStreamRequest class provides an interface for CloudWatchLogs DeleteLogStream requests.
  *
- * \ingroup CloudWatchLogs
+ * \inmodule QtAwsCloudWatchLogs
  *
  *  You can use Amazon CloudWatch Logs to monitor, store, and access your log files from Amazon EC2 instances, AWS
  *  CloudTrail, or other sources. You can then retrieve the associated log data from CloudWatch Logs using the CloudWatch
@@ -66,9 +65,7 @@ namespace CloudWatchLogs {
  */
 
 /*!
- * @brief  Constructs a new DeleteLogStreamRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteLogStreamRequest::DeleteLogStreamRequest(const DeleteLogStreamRequest &other)
     : CloudWatchLogsRequest(new DeleteLogStreamRequestPrivate(*other.d_func(), this))
@@ -77,7 +74,7 @@ DeleteLogStreamRequest::DeleteLogStreamRequest(const DeleteLogStreamRequest &oth
 }
 
 /*!
- * @brief  Constructs a new DeleteLogStreamRequest object.
+ * Constructs a DeleteLogStreamRequest object.
  */
 DeleteLogStreamRequest::DeleteLogStreamRequest()
     : CloudWatchLogsRequest(new DeleteLogStreamRequestPrivate(CloudWatchLogsRequest::DeleteLogStreamAction, this))
@@ -95,14 +92,9 @@ bool DeleteLogStreamRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteLogStreamResponse object.
+ * Returns a DeleteLogStreamResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteLogStreamResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudWatchLogsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteLogStreamRequest::response(QNetworkReply * const reply) const
 {
@@ -110,20 +102,17 @@ QtAws::Core::AwsAbstractResponse * DeleteLogStreamRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudWatchLogs::DeleteLogStreamRequestPrivate
+ * \brief The DeleteLogStreamRequestPrivate class provides private implementation for DeleteLogStreamRequest.
+ * \internal
  *
- * @class  DeleteLogStreamRequestPrivate
- *
- * @brief  Private implementation for DeleteLogStreamRequest.
+ * \inmodule QtAwsCloudWatchLogs
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteLogStreamRequestPrivate object.
- *
- * @param  action  CloudWatchLogs action being performed.
- * @param  q       Pointer to this object's public DeleteLogStreamRequest instance.
+ * Constructs a DeleteLogStreamRequestPrivate object for CloudWatchLogs \a action with,
+ * public implementation \a q.
  */
 DeleteLogStreamRequestPrivate::DeleteLogStreamRequestPrivate(
     const CloudWatchLogsRequest::Action action, DeleteLogStreamRequest * const q)
@@ -133,15 +122,10 @@ DeleteLogStreamRequestPrivate::DeleteLogStreamRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteLogStreamRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteLogStreamRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteLogStreamRequest instance.
  */
 DeleteLogStreamRequestPrivate::DeleteLogStreamRequestPrivate(
     const DeleteLogStreamRequestPrivate &other, DeleteLogStreamRequest * const q)

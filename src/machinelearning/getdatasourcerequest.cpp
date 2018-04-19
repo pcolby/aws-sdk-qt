@@ -27,19 +27,16 @@ namespace MachineLearning {
 
 /*!
  * \class QtAws::MachineLearning::GetDataSourceRequest
- *
  * \brief The GetDataSourceRequest class provides an interface for MachineLearning GetDataSource requests.
  *
- * \ingroup MachineLearning
+ * \inmodule QtAwsMachineLearning
  *
  *
  * \sa MachineLearningClient::getDataSource
  */
 
 /*!
- * @brief  Constructs a new GetDataSourceRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetDataSourceRequest::GetDataSourceRequest(const GetDataSourceRequest &other)
     : MachineLearningRequest(new GetDataSourceRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ GetDataSourceRequest::GetDataSourceRequest(const GetDataSourceRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetDataSourceRequest object.
+ * Constructs a GetDataSourceRequest object.
  */
 GetDataSourceRequest::GetDataSourceRequest()
     : MachineLearningRequest(new GetDataSourceRequestPrivate(MachineLearningRequest::GetDataSourceAction, this))
@@ -66,14 +63,9 @@ bool GetDataSourceRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetDataSourceResponse object.
+ * Returns a GetDataSourceResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetDataSourceResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MachineLearningClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetDataSourceRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * GetDataSourceRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::MachineLearning::GetDataSourceRequestPrivate
+ * \brief The GetDataSourceRequestPrivate class provides private implementation for GetDataSourceRequest.
+ * \internal
  *
- * @class  GetDataSourceRequestPrivate
- *
- * @brief  Private implementation for GetDataSourceRequest.
+ * \inmodule QtAwsMachineLearning
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetDataSourceRequestPrivate object.
- *
- * @param  action  MachineLearning action being performed.
- * @param  q       Pointer to this object's public GetDataSourceRequest instance.
+ * Constructs a GetDataSourceRequestPrivate object for MachineLearning \a action with,
+ * public implementation \a q.
  */
 GetDataSourceRequestPrivate::GetDataSourceRequestPrivate(
     const MachineLearningRequest::Action action, GetDataSourceRequest * const q)
@@ -104,15 +93,10 @@ GetDataSourceRequestPrivate::GetDataSourceRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetDataSourceRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetDataSourceRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetDataSourceRequest instance.
  */
 GetDataSourceRequestPrivate::GetDataSourceRequestPrivate(
     const GetDataSourceRequestPrivate &other, GetDataSourceRequest * const q)

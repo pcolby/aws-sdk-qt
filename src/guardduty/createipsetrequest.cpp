@@ -27,19 +27,16 @@ namespace GuardDuty {
 
 /*!
  * \class QtAws::GuardDuty::CreateIPSetRequest
- *
  * \brief The CreateIPSetRequest class provides an interface for GuardDuty CreateIPSet requests.
  *
- * \ingroup GuardDuty
+ * \inmodule QtAwsGuardDuty
  *
  *
  * \sa GuardDutyClient::createIPSet
  */
 
 /*!
- * @brief  Constructs a new CreateIPSetRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateIPSetRequest::CreateIPSetRequest(const CreateIPSetRequest &other)
     : GuardDutyRequest(new CreateIPSetRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ CreateIPSetRequest::CreateIPSetRequest(const CreateIPSetRequest &other)
 }
 
 /*!
- * @brief  Constructs a new CreateIPSetRequest object.
+ * Constructs a CreateIPSetRequest object.
  */
 CreateIPSetRequest::CreateIPSetRequest()
     : GuardDutyRequest(new CreateIPSetRequestPrivate(GuardDutyRequest::CreateIPSetAction, this))
@@ -66,14 +63,9 @@ bool CreateIPSetRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateIPSetResponse object.
+ * Returns a CreateIPSetResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateIPSetResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GuardDutyClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateIPSetRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * CreateIPSetRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::GuardDuty::CreateIPSetRequestPrivate
+ * \brief The CreateIPSetRequestPrivate class provides private implementation for CreateIPSetRequest.
+ * \internal
  *
- * @class  CreateIPSetRequestPrivate
- *
- * @brief  Private implementation for CreateIPSetRequest.
+ * \inmodule QtAwsGuardDuty
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateIPSetRequestPrivate object.
- *
- * @param  action  GuardDuty action being performed.
- * @param  q       Pointer to this object's public CreateIPSetRequest instance.
+ * Constructs a CreateIPSetRequestPrivate object for GuardDuty \a action with,
+ * public implementation \a q.
  */
 CreateIPSetRequestPrivate::CreateIPSetRequestPrivate(
     const GuardDutyRequest::Action action, CreateIPSetRequest * const q)
@@ -104,15 +93,10 @@ CreateIPSetRequestPrivate::CreateIPSetRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateIPSetRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateIPSetRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateIPSetRequest instance.
  */
 CreateIPSetRequestPrivate::CreateIPSetRequestPrivate(
     const CreateIPSetRequestPrivate &other, CreateIPSetRequest * const q)

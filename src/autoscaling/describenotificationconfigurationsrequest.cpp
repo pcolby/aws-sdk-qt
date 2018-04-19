@@ -27,10 +27,9 @@ namespace AutoScaling {
 
 /*!
  * \class QtAws::AutoScaling::DescribeNotificationConfigurationsRequest
- *
  * \brief The DescribeNotificationConfigurationsRequest class provides an interface for AutoScaling DescribeNotificationConfigurations requests.
  *
- * \ingroup AutoScaling
+ * \inmodule QtAwsAutoScaling
  *
  *  <fullname>Amazon EC2 Auto Scaling</fullname>
  * 
@@ -42,9 +41,7 @@ namespace AutoScaling {
  */
 
 /*!
- * @brief  Constructs a new DescribeNotificationConfigurationsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeNotificationConfigurationsRequest::DescribeNotificationConfigurationsRequest(const DescribeNotificationConfigurationsRequest &other)
     : AutoScalingRequest(new DescribeNotificationConfigurationsRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ DescribeNotificationConfigurationsRequest::DescribeNotificationConfigurationsReq
 }
 
 /*!
- * @brief  Constructs a new DescribeNotificationConfigurationsRequest object.
+ * Constructs a DescribeNotificationConfigurationsRequest object.
  */
 DescribeNotificationConfigurationsRequest::DescribeNotificationConfigurationsRequest()
     : AutoScalingRequest(new DescribeNotificationConfigurationsRequestPrivate(AutoScalingRequest::DescribeNotificationConfigurationsAction, this))
@@ -71,14 +68,9 @@ bool DescribeNotificationConfigurationsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeNotificationConfigurationsResponse object.
+ * Returns a DescribeNotificationConfigurationsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeNotificationConfigurationsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AutoScalingClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeNotificationConfigurationsRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * DescribeNotificationConfigurationsRequest::re
 }
 
 /*!
- * @internal
+ * \class QtAws::AutoScaling::DescribeNotificationConfigurationsRequestPrivate
+ * \brief The DescribeNotificationConfigurationsRequestPrivate class provides private implementation for DescribeNotificationConfigurationsRequest.
+ * \internal
  *
- * @class  DescribeNotificationConfigurationsRequestPrivate
- *
- * @brief  Private implementation for DescribeNotificationConfigurationsRequest.
+ * \inmodule QtAwsAutoScaling
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeNotificationConfigurationsRequestPrivate object.
- *
- * @param  action  AutoScaling action being performed.
- * @param  q       Pointer to this object's public DescribeNotificationConfigurationsRequest instance.
+ * Constructs a DescribeNotificationConfigurationsRequestPrivate object for AutoScaling \a action with,
+ * public implementation \a q.
  */
 DescribeNotificationConfigurationsRequestPrivate::DescribeNotificationConfigurationsRequestPrivate(
     const AutoScalingRequest::Action action, DescribeNotificationConfigurationsRequest * const q)
@@ -109,15 +98,10 @@ DescribeNotificationConfigurationsRequestPrivate::DescribeNotificationConfigurat
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeNotificationConfigurationsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeNotificationConfigurationsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeNotificationConfigurationsRequest instance.
  */
 DescribeNotificationConfigurationsRequestPrivate::DescribeNotificationConfigurationsRequestPrivate(
     const DescribeNotificationConfigurationsRequestPrivate &other, DescribeNotificationConfigurationsRequest * const q)

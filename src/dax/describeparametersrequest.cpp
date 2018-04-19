@@ -27,10 +27,9 @@ namespace DAX {
 
 /*!
  * \class QtAws::DAX::DescribeParametersRequest
- *
  * \brief The DescribeParametersRequest class provides an interface for DAX DescribeParameters requests.
  *
- * \ingroup DAX
+ * \inmodule QtAwsDAX
  *
  *  DAX is a managed caching service engineered for Amazon DynamoDB. DAX dramatically speeds up database reads by caching
  *  frequently-accessed data from DynamoDB, so applications can access that data with sub-millisecond latency. You can
@@ -41,9 +40,7 @@ namespace DAX {
  */
 
 /*!
- * @brief  Constructs a new DescribeParametersRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeParametersRequest::DescribeParametersRequest(const DescribeParametersRequest &other)
     : DAXRequest(new DescribeParametersRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ DescribeParametersRequest::DescribeParametersRequest(const DescribeParametersReq
 }
 
 /*!
- * @brief  Constructs a new DescribeParametersRequest object.
+ * Constructs a DescribeParametersRequest object.
  */
 DescribeParametersRequest::DescribeParametersRequest()
     : DAXRequest(new DescribeParametersRequestPrivate(DAXRequest::DescribeParametersAction, this))
@@ -70,14 +67,9 @@ bool DescribeParametersRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeParametersResponse object.
+ * Returns a DescribeParametersResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeParametersResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DAXClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeParametersRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * DescribeParametersRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::DAX::DescribeParametersRequestPrivate
+ * \brief The DescribeParametersRequestPrivate class provides private implementation for DescribeParametersRequest.
+ * \internal
  *
- * @class  DescribeParametersRequestPrivate
- *
- * @brief  Private implementation for DescribeParametersRequest.
+ * \inmodule QtAwsDAX
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeParametersRequestPrivate object.
- *
- * @param  action  DAX action being performed.
- * @param  q       Pointer to this object's public DescribeParametersRequest instance.
+ * Constructs a DescribeParametersRequestPrivate object for DAX \a action with,
+ * public implementation \a q.
  */
 DescribeParametersRequestPrivate::DescribeParametersRequestPrivate(
     const DAXRequest::Action action, DescribeParametersRequest * const q)
@@ -108,15 +97,10 @@ DescribeParametersRequestPrivate::DescribeParametersRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeParametersRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeParametersRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeParametersRequest instance.
  */
 DescribeParametersRequestPrivate::DescribeParametersRequestPrivate(
     const DescribeParametersRequestPrivate &other, DescribeParametersRequest * const q)

@@ -27,19 +27,16 @@ namespace Route53 {
 
 /*!
  * \class QtAws::Route53::ListHostedZonesByNameRequest
- *
  * \brief The ListHostedZonesByNameRequest class provides an interface for Route53 ListHostedZonesByName requests.
  *
- * \ingroup Route53
+ * \inmodule QtAwsRoute53
  *
  *
  * \sa Route53Client::listHostedZonesByName
  */
 
 /*!
- * @brief  Constructs a new ListHostedZonesByNameRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListHostedZonesByNameRequest::ListHostedZonesByNameRequest(const ListHostedZonesByNameRequest &other)
     : Route53Request(new ListHostedZonesByNameRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ ListHostedZonesByNameRequest::ListHostedZonesByNameRequest(const ListHostedZones
 }
 
 /*!
- * @brief  Constructs a new ListHostedZonesByNameRequest object.
+ * Constructs a ListHostedZonesByNameRequest object.
  */
 ListHostedZonesByNameRequest::ListHostedZonesByNameRequest()
     : Route53Request(new ListHostedZonesByNameRequestPrivate(Route53Request::ListHostedZonesByNameAction, this))
@@ -66,14 +63,9 @@ bool ListHostedZonesByNameRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListHostedZonesByNameResponse object.
+ * Returns a ListHostedZonesByNameResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListHostedZonesByNameResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  Route53Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListHostedZonesByNameRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * ListHostedZonesByNameRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::Route53::ListHostedZonesByNameRequestPrivate
+ * \brief The ListHostedZonesByNameRequestPrivate class provides private implementation for ListHostedZonesByNameRequest.
+ * \internal
  *
- * @class  ListHostedZonesByNameRequestPrivate
- *
- * @brief  Private implementation for ListHostedZonesByNameRequest.
+ * \inmodule QtAwsRoute53
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListHostedZonesByNameRequestPrivate object.
- *
- * @param  action  Route53 action being performed.
- * @param  q       Pointer to this object's public ListHostedZonesByNameRequest instance.
+ * Constructs a ListHostedZonesByNameRequestPrivate object for Route53 \a action with,
+ * public implementation \a q.
  */
 ListHostedZonesByNameRequestPrivate::ListHostedZonesByNameRequestPrivate(
     const Route53Request::Action action, ListHostedZonesByNameRequest * const q)
@@ -104,15 +93,10 @@ ListHostedZonesByNameRequestPrivate::ListHostedZonesByNameRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListHostedZonesByNameRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListHostedZonesByNameRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListHostedZonesByNameRequest instance.
  */
 ListHostedZonesByNameRequestPrivate::ListHostedZonesByNameRequestPrivate(
     const ListHostedZonesByNameRequestPrivate &other, ListHostedZonesByNameRequest * const q)

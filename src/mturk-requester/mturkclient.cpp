@@ -106,6 +106,9 @@
 /*!
  * \namespace QtAws::MTurk
  * \brief The QtAws::MTurk contains stuff...
+ *
+ * \inmodule QtAwsMTurk
+ *
  * @todo Move this to a separate template file.
  */
 
@@ -155,7 +158,7 @@ MTurkClient::MTurkClient(
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * \a  AwsEndpoint::getEndpoint()
+ * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
 MTurkClient::MTurkClient(
     const QUrl &endpoint,

@@ -25,16 +25,65 @@ namespace DirectConnect {
 
 /*!
  * \class QtAws::DirectConnect::DirectConnectRequest
- *
  * \brief The DirectConnectRequest class provides an interface for DirectConnect requests.
  *
- * \ingroup DirectConnect
+ * \inmodule QtAwsDirectConnect
  */
 
 /*!
- * @brief  Constructs a new DirectConnectRequest object.
+ * \enum DirectConnectRequest::Action
  *
- * @param  action  The DirectConnect action to request.
+ * This enum describes the actions that can be performed as DirectConnect
+ * requests.
+ *
+ * \value AllocateConnectionOnInterconnectAction DirectConnect AllocateConnectionOnInterconnect action.
+ * \value AllocateHostedConnectionAction DirectConnect AllocateHostedConnection action.
+ * \value AllocatePrivateVirtualInterfaceAction DirectConnect AllocatePrivateVirtualInterface action.
+ * \value AllocatePublicVirtualInterfaceAction DirectConnect AllocatePublicVirtualInterface action.
+ * \value AssociateConnectionWithLagAction DirectConnect AssociateConnectionWithLag action.
+ * \value AssociateHostedConnectionAction DirectConnect AssociateHostedConnection action.
+ * \value AssociateVirtualInterfaceAction DirectConnect AssociateVirtualInterface action.
+ * \value ConfirmConnectionAction DirectConnect ConfirmConnection action.
+ * \value ConfirmPrivateVirtualInterfaceAction DirectConnect ConfirmPrivateVirtualInterface action.
+ * \value ConfirmPublicVirtualInterfaceAction DirectConnect ConfirmPublicVirtualInterface action.
+ * \value CreateBGPPeerAction DirectConnect CreateBGPPeer action.
+ * \value CreateConnectionAction DirectConnect CreateConnection action.
+ * \value CreateDirectConnectGatewayAction DirectConnect CreateDirectConnectGateway action.
+ * \value CreateDirectConnectGatewayAssociationAction DirectConnect CreateDirectConnectGatewayAssociation action.
+ * \value CreateInterconnectAction DirectConnect CreateInterconnect action.
+ * \value CreateLagAction DirectConnect CreateLag action.
+ * \value CreatePrivateVirtualInterfaceAction DirectConnect CreatePrivateVirtualInterface action.
+ * \value CreatePublicVirtualInterfaceAction DirectConnect CreatePublicVirtualInterface action.
+ * \value DeleteBGPPeerAction DirectConnect DeleteBGPPeer action.
+ * \value DeleteConnectionAction DirectConnect DeleteConnection action.
+ * \value DeleteDirectConnectGatewayAction DirectConnect DeleteDirectConnectGateway action.
+ * \value DeleteDirectConnectGatewayAssociationAction DirectConnect DeleteDirectConnectGatewayAssociation action.
+ * \value DeleteInterconnectAction DirectConnect DeleteInterconnect action.
+ * \value DeleteLagAction DirectConnect DeleteLag action.
+ * \value DeleteVirtualInterfaceAction DirectConnect DeleteVirtualInterface action.
+ * \value DescribeConnectionLoaAction DirectConnect DescribeConnectionLoa action.
+ * \value DescribeConnectionsAction DirectConnect DescribeConnections action.
+ * \value DescribeConnectionsOnInterconnectAction DirectConnect DescribeConnectionsOnInterconnect action.
+ * \value DescribeDirectConnectGatewayAssociationsAction DirectConnect DescribeDirectConnectGatewayAssociations action.
+ * \value DescribeDirectConnectGatewayAttachmentsAction DirectConnect DescribeDirectConnectGatewayAttachments action.
+ * \value DescribeDirectConnectGatewaysAction DirectConnect DescribeDirectConnectGateways action.
+ * \value DescribeHostedConnectionsAction DirectConnect DescribeHostedConnections action.
+ * \value DescribeInterconnectLoaAction DirectConnect DescribeInterconnectLoa action.
+ * \value DescribeInterconnectsAction DirectConnect DescribeInterconnects action.
+ * \value DescribeLagsAction DirectConnect DescribeLags action.
+ * \value DescribeLoaAction DirectConnect DescribeLoa action.
+ * \value DescribeLocationsAction DirectConnect DescribeLocations action.
+ * \value DescribeTagsAction DirectConnect DescribeTags action.
+ * \value DescribeVirtualGatewaysAction DirectConnect DescribeVirtualGateways action.
+ * \value DescribeVirtualInterfacesAction DirectConnect DescribeVirtualInterfaces action.
+ * \value DisassociateConnectionFromLagAction DirectConnect DisassociateConnectionFromLag action.
+ * \value TagResourceAction DirectConnect TagResource action.
+ * \value UntagResourceAction DirectConnect UntagResource action.
+ * \value UpdateLagAction DirectConnect UpdateLag action.
+ */
+
+/*!
+ * Constructs a[n] DirectConnectRequest object for DirectConnect \a action.
  */
 DirectConnectRequest::DirectConnectRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new DirectConnectRequestPrivate(action, this))
@@ -43,9 +92,7 @@ DirectConnectRequest::DirectConnectRequest(const Action action)
 }
 
 /*!
- * @brief  Constructs a new DirectConnectRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DirectConnectRequest::DirectConnectRequest(const DirectConnectRequest &other)
     : QtAws::Core::AwsAbstractRequest(new DirectConnectRequestPrivate(*other.d_func(), this))
@@ -54,13 +101,7 @@ DirectConnectRequest::DirectConnectRequest(const DirectConnectRequest &other)
 }
 
 /*!
- * @brief  Assignment operator.
- *
- * Assigns \a other to \c this.
- *
- * @param  other  Instance to copy.
- *
- * @return  A reference to \c this.
+ * Sets the DirectConnectRequest object to be equal to \a other.
  */
 DirectConnectRequest& DirectConnectRequest::operator=(const DirectConnectRequest &other)
 {
@@ -72,14 +113,10 @@ DirectConnectRequest& DirectConnectRequest::operator=(const DirectConnectRequest
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DirectConnectRequest object.
+ * Constructs aa DirectConnectRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from DirectConnectRequestPrivate.
- *
- * @param  d  Pointer to private data (aka D-Pointer).
  */
 DirectConnectRequest::DirectConnectRequest(DirectConnectRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
@@ -87,7 +124,7 @@ DirectConnectRequest::DirectConnectRequest(DirectConnectRequestPrivate * const d
 }
 
 /*!
- * \brief Returns the DirectConnect action to be performed by this request.
+ * Returns the DirectConnect action to be performed by this request.
  */
 DirectConnectRequest::Action DirectConnectRequest::action() const
 {
@@ -96,7 +133,7 @@ DirectConnectRequest::Action DirectConnectRequest::action() const
 }
 
 /*!
- * \brief Returns the name of the DirectConnect action to be performed by this request.
+ * Returns the name of the DirectConnect action to be performed by this request.
  */
 QString DirectConnectRequest::actionString() const
 {
@@ -104,7 +141,7 @@ QString DirectConnectRequest::actionString() const
 }
 
 /*!
- * \brief Returns the DirectConnect API version implemented by this request.
+ * Returns the DirectConnect API version implemented by this request.
  */
 QString DirectConnectRequest::apiVersion() const
 {
@@ -113,7 +150,7 @@ QString DirectConnectRequest::apiVersion() const
 }
 
 /*!
- * @brief Set the DirectConnect action to be performed by this request to \a action.
+ * Sets the DirectConnect action to be performed by this request to \a action.
  */
 void DirectConnectRequest::setAction(const Action action)
 {
@@ -122,7 +159,7 @@ void DirectConnectRequest::setAction(const Action action)
 }
 
 /*!
- * Set the DirectConnect API version to include in this request to \a version.
+ * Sets the DirectConnect API version to include in this request to \a version.
  */
 void DirectConnectRequest::setApiVersion(const QString &version)
 {
@@ -131,7 +168,7 @@ void DirectConnectRequest::setApiVersion(const QString &version)
 }
 
 /*!
- * \brief Returns \c true if this request is the same as \a other.
+ * Returns \c true if this request is equal to \a other; \c false otherwise.
  *
  * Note, most derived *Request classes do not need to provider their own
  * implementations of this function, since most such request classes rely on
@@ -146,8 +183,8 @@ bool DirectConnectRequest::operator==(const DirectConnectRequest &other) const
             (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
-/*!
- * @brief  Check if \a queueName is a valid DirectConnect queue name.
+/*
+ * Returns \c tue if \a queueName is a valid DirectConnect queue name.
  *
  * @par From DirectConnect FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
@@ -166,9 +203,8 @@ bool DirectConnectRequest::operator==(const DirectConnectRequest &other) const
 }*/
 
 /*!
- * \brief Removes the a \a name parameter from this request.
- *
- * Returns the count of paramters removed (typically \c 0 or \c 1).
+ * Removes the a \a name parameter from the request, then returns the number of
+ * paramters removed (typically \c 0 or \c 1).
  */
 int DirectConnectRequest::clearParameter(const QString &name)
 {
@@ -177,7 +213,7 @@ int DirectConnectRequest::clearParameter(const QString &name)
 }
 
 /*!
- * \brief Removes all parameters from this request.
+ * Removes all parameters from the request.
  */
 void DirectConnectRequest::clearParameters()
 {
@@ -186,7 +222,7 @@ void DirectConnectRequest::clearParameters()
 }
 
 /*!
- * \brief Returns the value of the \n name pararemter if set, otherwise \a defaultValue.
+ * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
 QVariant DirectConnectRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
@@ -195,7 +231,7 @@ QVariant DirectConnectRequest::parameter(const QString &name, const QVariant &de
 }
 
 /*!
- * \brief Returns a map of parameters included in this request.
+ * Returns the parameters included in this request.
  */
 const QVariantMap &DirectConnectRequest::parameters() const
 {
@@ -204,7 +240,7 @@ const QVariantMap &DirectConnectRequest::parameters() const
 }
 
 /*!
- * \brief Sets the \a name parameter to \a value.
+ * Sets the \a name parameter to \a value.
  */
 void DirectConnectRequest::setParameter(const QString &name, const QVariant &value)
 {
@@ -213,9 +249,8 @@ void DirectConnectRequest::setParameter(const QString &name, const QVariant &val
 }
 
 /*!
- * \brief Sets the map of paramters for this request to \a parameters.
- *
- * Any request parameters set previously will be discarded.
+ * Sets the paramters for this request to \a parameters. Any request parameters
+ * set previously will be discarded.
  */
 void DirectConnectRequest::setParameters(const QVariantMap &parameters)
 {
@@ -224,11 +259,12 @@ void DirectConnectRequest::setParameters(const QVariantMap &parameters)
 }
 
 /*!
- * \brief Returns a network request for this DirectConnect request using the given \a endpoint.
+ * Returns a network request for the DirectConnect request using the given
+ * \a endpoint.
  *
- * This DirectConnect implementation builds request URLs by combining the common query
- * parameters (such as Action and Version), with any that have been added (via
- * setParameter) by child classes.
+ * This DirectConnect implementation builds request URLs by combining the
+ * common query parameters (such as Action and Version), with any that have
+ * been added (via setParameter) by child classes.
  */
 QNetworkRequest DirectConnectRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -239,17 +275,16 @@ QNetworkRequest DirectConnectRequest::unsignedRequest(const QUrl &endpoint) cons
 }
 
 /*!
+ * \class QtAws::DirectConnect::DirectConnectRequestPrivate
+ * \brief The DirectConnectRequestPrivate class provides private implementation for DirectConnectRequest.
  * \internal
  *
- * \class  DirectConnectRequestPrivate
- *
- * \brief  Private implementation for DirectConnectRequest.
+ * \inmodule QtAwsDirectConnect
  */
 
 /*!
- * \internal
- *
- * \brief Constructs a new DirectConnectRequestPrivate object.
+ * Constructs a DirectConnectRequestPrivate object for DirectConnect \a action with,
+ * public implementation \a q.
  */
 DirectConnectRequestPrivate::DirectConnectRequestPrivate(const DirectConnectRequest::Action action, DirectConnectRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
@@ -258,9 +293,7 @@ DirectConnectRequestPrivate::DirectConnectRequestPrivate(const DirectConnectRequ
 }
 
 /*!
- * \internal
- *
- * \brief Constructs a new DirectConnectRequestPrivate object, copying an existing one.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
@@ -276,15 +309,12 @@ DirectConnectRequestPrivate::DirectConnectRequestPrivate(const DirectConnectRequ
 }
 
 /*!
- * \internal
- *
- * \brief Returns a string representing \a action.
+ * Returns a string represention of \a action, or a null string if \a action is
+ * invalid.
  *
  * This function converts DirectConnectRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the DirectConnect service's Action
  * query parameters.
- *
- * @return A string representing \a action, or a null string if \a action is invalid.
  */
 QString DirectConnectRequestPrivate::toString(const DirectConnectRequest::Action &action)
 {

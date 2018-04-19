@@ -27,10 +27,9 @@ namespace SES {
 
 /*!
  * \class QtAws::SES::DeleteCustomVerificationEmailTemplateRequest
- *
  * \brief The DeleteCustomVerificationEmailTemplateRequest class provides an interface for SES DeleteCustomVerificationEmailTemplate requests.
  *
- * \ingroup SES
+ * \inmodule QtAwsSES
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -48,9 +47,7 @@ namespace SES {
  */
 
 /*!
- * @brief  Constructs a new DeleteCustomVerificationEmailTemplateRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteCustomVerificationEmailTemplateRequest::DeleteCustomVerificationEmailTemplateRequest(const DeleteCustomVerificationEmailTemplateRequest &other)
     : SESRequest(new DeleteCustomVerificationEmailTemplateRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ DeleteCustomVerificationEmailTemplateRequest::DeleteCustomVerificationEmailTempl
 }
 
 /*!
- * @brief  Constructs a new DeleteCustomVerificationEmailTemplateRequest object.
+ * Constructs a DeleteCustomVerificationEmailTemplateRequest object.
  */
 DeleteCustomVerificationEmailTemplateRequest::DeleteCustomVerificationEmailTemplateRequest()
     : SESRequest(new DeleteCustomVerificationEmailTemplateRequestPrivate(SESRequest::DeleteCustomVerificationEmailTemplateAction, this))
@@ -77,14 +74,9 @@ bool DeleteCustomVerificationEmailTemplateRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteCustomVerificationEmailTemplateResponse object.
+ * Returns a DeleteCustomVerificationEmailTemplateResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteCustomVerificationEmailTemplateResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SESClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteCustomVerificationEmailTemplateRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * DeleteCustomVerificationEmailTemplateRequest:
 }
 
 /*!
- * @internal
+ * \class QtAws::SES::DeleteCustomVerificationEmailTemplateRequestPrivate
+ * \brief The DeleteCustomVerificationEmailTemplateRequestPrivate class provides private implementation for DeleteCustomVerificationEmailTemplateRequest.
+ * \internal
  *
- * @class  DeleteCustomVerificationEmailTemplateRequestPrivate
- *
- * @brief  Private implementation for DeleteCustomVerificationEmailTemplateRequest.
+ * \inmodule QtAwsSES
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteCustomVerificationEmailTemplateRequestPrivate object.
- *
- * @param  action  SES action being performed.
- * @param  q       Pointer to this object's public DeleteCustomVerificationEmailTemplateRequest instance.
+ * Constructs a DeleteCustomVerificationEmailTemplateRequestPrivate object for SES \a action with,
+ * public implementation \a q.
  */
 DeleteCustomVerificationEmailTemplateRequestPrivate::DeleteCustomVerificationEmailTemplateRequestPrivate(
     const SESRequest::Action action, DeleteCustomVerificationEmailTemplateRequest * const q)
@@ -115,15 +104,10 @@ DeleteCustomVerificationEmailTemplateRequestPrivate::DeleteCustomVerificationEma
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteCustomVerificationEmailTemplateRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteCustomVerificationEmailTemplateRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteCustomVerificationEmailTemplateRequest instance.
  */
 DeleteCustomVerificationEmailTemplateRequestPrivate::DeleteCustomVerificationEmailTemplateRequestPrivate(
     const DeleteCustomVerificationEmailTemplateRequestPrivate &other, DeleteCustomVerificationEmailTemplateRequest * const q)

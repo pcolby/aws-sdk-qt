@@ -27,19 +27,16 @@ namespace GuardDuty {
 
 /*!
  * \class QtAws::GuardDuty::GetFindingsRequest
- *
  * \brief The GetFindingsRequest class provides an interface for GuardDuty GetFindings requests.
  *
- * \ingroup GuardDuty
+ * \inmodule QtAwsGuardDuty
  *
  *
  * \sa GuardDutyClient::getFindings
  */
 
 /*!
- * @brief  Constructs a new GetFindingsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetFindingsRequest::GetFindingsRequest(const GetFindingsRequest &other)
     : GuardDutyRequest(new GetFindingsRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ GetFindingsRequest::GetFindingsRequest(const GetFindingsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetFindingsRequest object.
+ * Constructs a GetFindingsRequest object.
  */
 GetFindingsRequest::GetFindingsRequest()
     : GuardDutyRequest(new GetFindingsRequestPrivate(GuardDutyRequest::GetFindingsAction, this))
@@ -66,14 +63,9 @@ bool GetFindingsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetFindingsResponse object.
+ * Returns a GetFindingsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetFindingsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GuardDutyClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetFindingsRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * GetFindingsRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::GuardDuty::GetFindingsRequestPrivate
+ * \brief The GetFindingsRequestPrivate class provides private implementation for GetFindingsRequest.
+ * \internal
  *
- * @class  GetFindingsRequestPrivate
- *
- * @brief  Private implementation for GetFindingsRequest.
+ * \inmodule QtAwsGuardDuty
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetFindingsRequestPrivate object.
- *
- * @param  action  GuardDuty action being performed.
- * @param  q       Pointer to this object's public GetFindingsRequest instance.
+ * Constructs a GetFindingsRequestPrivate object for GuardDuty \a action with,
+ * public implementation \a q.
  */
 GetFindingsRequestPrivate::GetFindingsRequestPrivate(
     const GuardDutyRequest::Action action, GetFindingsRequest * const q)
@@ -104,15 +93,10 @@ GetFindingsRequestPrivate::GetFindingsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetFindingsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetFindingsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetFindingsRequest instance.
  */
 GetFindingsRequestPrivate::GetFindingsRequestPrivate(
     const GetFindingsRequestPrivate &other, GetFindingsRequest * const q)

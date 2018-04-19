@@ -27,10 +27,9 @@ namespace Lambda {
 
 /*!
  * \class QtAws::Lambda::ListVersionsByFunctionRequest
- *
  * \brief The ListVersionsByFunctionRequest class provides an interface for Lambda ListVersionsByFunction requests.
  *
- * \ingroup Lambda
+ * \inmodule QtAwsLambda
  *
  *  <fullname>AWS Lambda</fullname>
  * 
@@ -48,9 +47,7 @@ namespace Lambda {
  */
 
 /*!
- * @brief  Constructs a new ListVersionsByFunctionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListVersionsByFunctionRequest::ListVersionsByFunctionRequest(const ListVersionsByFunctionRequest &other)
     : LambdaRequest(new ListVersionsByFunctionRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ ListVersionsByFunctionRequest::ListVersionsByFunctionRequest(const ListVersionsB
 }
 
 /*!
- * @brief  Constructs a new ListVersionsByFunctionRequest object.
+ * Constructs a ListVersionsByFunctionRequest object.
  */
 ListVersionsByFunctionRequest::ListVersionsByFunctionRequest()
     : LambdaRequest(new ListVersionsByFunctionRequestPrivate(LambdaRequest::ListVersionsByFunctionAction, this))
@@ -77,14 +74,9 @@ bool ListVersionsByFunctionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListVersionsByFunctionResponse object.
+ * Returns a ListVersionsByFunctionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListVersionsByFunctionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  LambdaClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListVersionsByFunctionRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * ListVersionsByFunctionRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::Lambda::ListVersionsByFunctionRequestPrivate
+ * \brief The ListVersionsByFunctionRequestPrivate class provides private implementation for ListVersionsByFunctionRequest.
+ * \internal
  *
- * @class  ListVersionsByFunctionRequestPrivate
- *
- * @brief  Private implementation for ListVersionsByFunctionRequest.
+ * \inmodule QtAwsLambda
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListVersionsByFunctionRequestPrivate object.
- *
- * @param  action  Lambda action being performed.
- * @param  q       Pointer to this object's public ListVersionsByFunctionRequest instance.
+ * Constructs a ListVersionsByFunctionRequestPrivate object for Lambda \a action with,
+ * public implementation \a q.
  */
 ListVersionsByFunctionRequestPrivate::ListVersionsByFunctionRequestPrivate(
     const LambdaRequest::Action action, ListVersionsByFunctionRequest * const q)
@@ -115,15 +104,10 @@ ListVersionsByFunctionRequestPrivate::ListVersionsByFunctionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListVersionsByFunctionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListVersionsByFunctionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListVersionsByFunctionRequest instance.
  */
 ListVersionsByFunctionRequestPrivate::ListVersionsByFunctionRequestPrivate(
     const ListVersionsByFunctionRequestPrivate &other, ListVersionsByFunctionRequest * const q)

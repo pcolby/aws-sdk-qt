@@ -27,10 +27,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::ListSSHPublicKeysRequest
- *
  * \brief The ListSSHPublicKeysRequest class provides an interface for IAM ListSSHPublicKeys requests.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -102,9 +101,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new ListSSHPublicKeysRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListSSHPublicKeysRequest::ListSSHPublicKeysRequest(const ListSSHPublicKeysRequest &other)
     : IAMRequest(new ListSSHPublicKeysRequestPrivate(*other.d_func(), this))
@@ -113,7 +110,7 @@ ListSSHPublicKeysRequest::ListSSHPublicKeysRequest(const ListSSHPublicKeysReques
 }
 
 /*!
- * @brief  Constructs a new ListSSHPublicKeysRequest object.
+ * Constructs a ListSSHPublicKeysRequest object.
  */
 ListSSHPublicKeysRequest::ListSSHPublicKeysRequest()
     : IAMRequest(new ListSSHPublicKeysRequestPrivate(IAMRequest::ListSSHPublicKeysAction, this))
@@ -131,14 +128,9 @@ bool ListSSHPublicKeysRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListSSHPublicKeysResponse object.
+ * Returns a ListSSHPublicKeysResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListSSHPublicKeysResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IAMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListSSHPublicKeysRequest::response(QNetworkReply * const reply) const
 {
@@ -146,20 +138,17 @@ QtAws::Core::AwsAbstractResponse * ListSSHPublicKeysRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::IAM::ListSSHPublicKeysRequestPrivate
+ * \brief The ListSSHPublicKeysRequestPrivate class provides private implementation for ListSSHPublicKeysRequest.
+ * \internal
  *
- * @class  ListSSHPublicKeysRequestPrivate
- *
- * @brief  Private implementation for ListSSHPublicKeysRequest.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListSSHPublicKeysRequestPrivate object.
- *
- * @param  action  IAM action being performed.
- * @param  q       Pointer to this object's public ListSSHPublicKeysRequest instance.
+ * Constructs a ListSSHPublicKeysRequestPrivate object for IAM \a action with,
+ * public implementation \a q.
  */
 ListSSHPublicKeysRequestPrivate::ListSSHPublicKeysRequestPrivate(
     const IAMRequest::Action action, ListSSHPublicKeysRequest * const q)
@@ -169,15 +158,10 @@ ListSSHPublicKeysRequestPrivate::ListSSHPublicKeysRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListSSHPublicKeysRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListSSHPublicKeysRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListSSHPublicKeysRequest instance.
  */
 ListSSHPublicKeysRequestPrivate::ListSSHPublicKeysRequestPrivate(
     const ListSSHPublicKeysRequestPrivate &other, ListSSHPublicKeysRequest * const q)

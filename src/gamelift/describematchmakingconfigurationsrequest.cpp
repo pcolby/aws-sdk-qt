@@ -27,10 +27,9 @@ namespace GameLift {
 
 /*!
  * \class QtAws::GameLift::DescribeMatchmakingConfigurationsRequest
- *
  * \brief The DescribeMatchmakingConfigurationsRequest class provides an interface for GameLift DescribeMatchmakingConfigurations requests.
  *
- * \ingroup GameLift
+ * \inmodule QtAwsGameLift
  *
  *  <fullname>Amazon GameLift Service</fullname>
  * 
@@ -473,9 +472,7 @@ namespace GameLift {
  */
 
 /*!
- * @brief  Constructs a new DescribeMatchmakingConfigurationsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeMatchmakingConfigurationsRequest::DescribeMatchmakingConfigurationsRequest(const DescribeMatchmakingConfigurationsRequest &other)
     : GameLiftRequest(new DescribeMatchmakingConfigurationsRequestPrivate(*other.d_func(), this))
@@ -484,7 +481,7 @@ DescribeMatchmakingConfigurationsRequest::DescribeMatchmakingConfigurationsReque
 }
 
 /*!
- * @brief  Constructs a new DescribeMatchmakingConfigurationsRequest object.
+ * Constructs a DescribeMatchmakingConfigurationsRequest object.
  */
 DescribeMatchmakingConfigurationsRequest::DescribeMatchmakingConfigurationsRequest()
     : GameLiftRequest(new DescribeMatchmakingConfigurationsRequestPrivate(GameLiftRequest::DescribeMatchmakingConfigurationsAction, this))
@@ -502,14 +499,9 @@ bool DescribeMatchmakingConfigurationsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeMatchmakingConfigurationsResponse object.
+ * Returns a DescribeMatchmakingConfigurationsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeMatchmakingConfigurationsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GameLiftClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeMatchmakingConfigurationsRequest::response(QNetworkReply * const reply) const
 {
@@ -517,20 +509,17 @@ QtAws::Core::AwsAbstractResponse * DescribeMatchmakingConfigurationsRequest::res
 }
 
 /*!
- * @internal
+ * \class QtAws::GameLift::DescribeMatchmakingConfigurationsRequestPrivate
+ * \brief The DescribeMatchmakingConfigurationsRequestPrivate class provides private implementation for DescribeMatchmakingConfigurationsRequest.
+ * \internal
  *
- * @class  DescribeMatchmakingConfigurationsRequestPrivate
- *
- * @brief  Private implementation for DescribeMatchmakingConfigurationsRequest.
+ * \inmodule QtAwsGameLift
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeMatchmakingConfigurationsRequestPrivate object.
- *
- * @param  action  GameLift action being performed.
- * @param  q       Pointer to this object's public DescribeMatchmakingConfigurationsRequest instance.
+ * Constructs a DescribeMatchmakingConfigurationsRequestPrivate object for GameLift \a action with,
+ * public implementation \a q.
  */
 DescribeMatchmakingConfigurationsRequestPrivate::DescribeMatchmakingConfigurationsRequestPrivate(
     const GameLiftRequest::Action action, DescribeMatchmakingConfigurationsRequest * const q)
@@ -540,15 +529,10 @@ DescribeMatchmakingConfigurationsRequestPrivate::DescribeMatchmakingConfiguratio
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeMatchmakingConfigurationsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeMatchmakingConfigurationsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeMatchmakingConfigurationsRequest instance.
  */
 DescribeMatchmakingConfigurationsRequestPrivate::DescribeMatchmakingConfigurationsRequestPrivate(
     const DescribeMatchmakingConfigurationsRequestPrivate &other, DescribeMatchmakingConfigurationsRequest * const q)

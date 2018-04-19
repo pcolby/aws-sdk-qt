@@ -27,10 +27,9 @@ namespace CloudWatch {
 
 /*!
  * \class QtAws::CloudWatch::EnableAlarmActionsRequest
- *
  * \brief The EnableAlarmActionsRequest class provides an interface for CloudWatch EnableAlarmActions requests.
  *
- * \ingroup CloudWatch
+ * \inmodule QtAwsCloudWatch
  *
  *  Amazon CloudWatch monitors your Amazon Web Services (AWS) resources and the applications you run on AWS in real time.
  *  You can use CloudWatch to collect and track metrics, which are the variables you want to measure for your resources and
@@ -51,9 +50,7 @@ namespace CloudWatch {
  */
 
 /*!
- * @brief  Constructs a new EnableAlarmActionsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 EnableAlarmActionsRequest::EnableAlarmActionsRequest(const EnableAlarmActionsRequest &other)
     : CloudWatchRequest(new EnableAlarmActionsRequestPrivate(*other.d_func(), this))
@@ -62,7 +59,7 @@ EnableAlarmActionsRequest::EnableAlarmActionsRequest(const EnableAlarmActionsReq
 }
 
 /*!
- * @brief  Constructs a new EnableAlarmActionsRequest object.
+ * Constructs a EnableAlarmActionsRequest object.
  */
 EnableAlarmActionsRequest::EnableAlarmActionsRequest()
     : CloudWatchRequest(new EnableAlarmActionsRequestPrivate(CloudWatchRequest::EnableAlarmActionsAction, this))
@@ -80,14 +77,9 @@ bool EnableAlarmActionsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an EnableAlarmActionsResponse object.
+ * Returns a EnableAlarmActionsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An EnableAlarmActionsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudWatchClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * EnableAlarmActionsRequest::response(QNetworkReply * const reply) const
 {
@@ -95,20 +87,17 @@ QtAws::Core::AwsAbstractResponse * EnableAlarmActionsRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudWatch::EnableAlarmActionsRequestPrivate
+ * \brief The EnableAlarmActionsRequestPrivate class provides private implementation for EnableAlarmActionsRequest.
+ * \internal
  *
- * @class  EnableAlarmActionsRequestPrivate
- *
- * @brief  Private implementation for EnableAlarmActionsRequest.
+ * \inmodule QtAwsCloudWatch
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new EnableAlarmActionsRequestPrivate object.
- *
- * @param  action  CloudWatch action being performed.
- * @param  q       Pointer to this object's public EnableAlarmActionsRequest instance.
+ * Constructs a EnableAlarmActionsRequestPrivate object for CloudWatch \a action with,
+ * public implementation \a q.
  */
 EnableAlarmActionsRequestPrivate::EnableAlarmActionsRequestPrivate(
     const CloudWatchRequest::Action action, EnableAlarmActionsRequest * const q)
@@ -118,15 +107,10 @@ EnableAlarmActionsRequestPrivate::EnableAlarmActionsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new EnableAlarmActionsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the EnableAlarmActionsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public EnableAlarmActionsRequest instance.
  */
 EnableAlarmActionsRequestPrivate::EnableAlarmActionsRequestPrivate(
     const EnableAlarmActionsRequestPrivate &other, EnableAlarmActionsRequest * const q)

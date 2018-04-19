@@ -27,10 +27,9 @@ namespace Lambda {
 
 /*!
  * \class QtAws::Lambda::GetFunctionRequest
- *
  * \brief The GetFunctionRequest class provides an interface for Lambda GetFunction requests.
  *
- * \ingroup Lambda
+ * \inmodule QtAwsLambda
  *
  *  <fullname>AWS Lambda</fullname>
  * 
@@ -48,9 +47,7 @@ namespace Lambda {
  */
 
 /*!
- * @brief  Constructs a new GetFunctionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetFunctionRequest::GetFunctionRequest(const GetFunctionRequest &other)
     : LambdaRequest(new GetFunctionRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ GetFunctionRequest::GetFunctionRequest(const GetFunctionRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetFunctionRequest object.
+ * Constructs a GetFunctionRequest object.
  */
 GetFunctionRequest::GetFunctionRequest()
     : LambdaRequest(new GetFunctionRequestPrivate(LambdaRequest::GetFunctionAction, this))
@@ -77,14 +74,9 @@ bool GetFunctionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetFunctionResponse object.
+ * Returns a GetFunctionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetFunctionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  LambdaClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetFunctionRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * GetFunctionRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::Lambda::GetFunctionRequestPrivate
+ * \brief The GetFunctionRequestPrivate class provides private implementation for GetFunctionRequest.
+ * \internal
  *
- * @class  GetFunctionRequestPrivate
- *
- * @brief  Private implementation for GetFunctionRequest.
+ * \inmodule QtAwsLambda
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetFunctionRequestPrivate object.
- *
- * @param  action  Lambda action being performed.
- * @param  q       Pointer to this object's public GetFunctionRequest instance.
+ * Constructs a GetFunctionRequestPrivate object for Lambda \a action with,
+ * public implementation \a q.
  */
 GetFunctionRequestPrivate::GetFunctionRequestPrivate(
     const LambdaRequest::Action action, GetFunctionRequest * const q)
@@ -115,15 +104,10 @@ GetFunctionRequestPrivate::GetFunctionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetFunctionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetFunctionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetFunctionRequest instance.
  */
 GetFunctionRequestPrivate::GetFunctionRequestPrivate(
     const GetFunctionRequestPrivate &other, GetFunctionRequest * const q)

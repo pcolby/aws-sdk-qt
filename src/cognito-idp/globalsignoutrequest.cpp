@@ -27,10 +27,9 @@ namespace CognitoIdentityProvider {
 
 /*!
  * \class QtAws::CognitoIdentityProvider::GlobalSignOutRequest
- *
  * \brief The GlobalSignOutRequest class provides an interface for CognitoIdentityProvider GlobalSignOut requests.
  *
- * \ingroup CognitoIdentityProvider
+ * \inmodule QtAwsCognitoIdentityProvider
  *
  *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
  *  authenticate a user to obtain tokens related to user identity and access
@@ -47,9 +46,7 @@ namespace CognitoIdentityProvider {
  */
 
 /*!
- * @brief  Constructs a new GlobalSignOutRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GlobalSignOutRequest::GlobalSignOutRequest(const GlobalSignOutRequest &other)
     : CognitoIdentityProviderRequest(new GlobalSignOutRequestPrivate(*other.d_func(), this))
@@ -58,7 +55,7 @@ GlobalSignOutRequest::GlobalSignOutRequest(const GlobalSignOutRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GlobalSignOutRequest object.
+ * Constructs a GlobalSignOutRequest object.
  */
 GlobalSignOutRequest::GlobalSignOutRequest()
     : CognitoIdentityProviderRequest(new GlobalSignOutRequestPrivate(CognitoIdentityProviderRequest::GlobalSignOutAction, this))
@@ -76,14 +73,9 @@ bool GlobalSignOutRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GlobalSignOutResponse object.
+ * Returns a GlobalSignOutResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GlobalSignOutResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CognitoIdentityProviderClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GlobalSignOutRequest::response(QNetworkReply * const reply) const
 {
@@ -91,20 +83,17 @@ QtAws::Core::AwsAbstractResponse * GlobalSignOutRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::CognitoIdentityProvider::GlobalSignOutRequestPrivate
+ * \brief The GlobalSignOutRequestPrivate class provides private implementation for GlobalSignOutRequest.
+ * \internal
  *
- * @class  GlobalSignOutRequestPrivate
- *
- * @brief  Private implementation for GlobalSignOutRequest.
+ * \inmodule QtAwsCognitoIdentityProvider
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GlobalSignOutRequestPrivate object.
- *
- * @param  action  CognitoIdentityProvider action being performed.
- * @param  q       Pointer to this object's public GlobalSignOutRequest instance.
+ * Constructs a GlobalSignOutRequestPrivate object for CognitoIdentityProvider \a action with,
+ * public implementation \a q.
  */
 GlobalSignOutRequestPrivate::GlobalSignOutRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, GlobalSignOutRequest * const q)
@@ -114,15 +103,10 @@ GlobalSignOutRequestPrivate::GlobalSignOutRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GlobalSignOutRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GlobalSignOutRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GlobalSignOutRequest instance.
  */
 GlobalSignOutRequestPrivate::GlobalSignOutRequestPrivate(
     const GlobalSignOutRequestPrivate &other, GlobalSignOutRequest * const q)

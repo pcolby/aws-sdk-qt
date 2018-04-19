@@ -27,10 +27,9 @@ namespace MQ {
 
 /*!
  * \class QtAws::MQ::DescribeConfigurationRevisionRequest
- *
  * \brief The DescribeConfigurationRevisionRequest class provides an interface for MQ DescribeConfigurationRevision requests.
  *
- * \ingroup MQ
+ * \inmodule QtAwsMQ
  *
  *  Amazon MQ is a managed message broker service for Apache ActiveMQ that makes it easy to set up and operate message
  *  brokers in the cloud. A message broker allows software applications and components to communicate using various
@@ -39,9 +38,7 @@ namespace MQ {
  */
 
 /*!
- * @brief  Constructs a new DescribeConfigurationRevisionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeConfigurationRevisionRequest::DescribeConfigurationRevisionRequest(const DescribeConfigurationRevisionRequest &other)
     : MQRequest(new DescribeConfigurationRevisionRequestPrivate(*other.d_func(), this))
@@ -50,7 +47,7 @@ DescribeConfigurationRevisionRequest::DescribeConfigurationRevisionRequest(const
 }
 
 /*!
- * @brief  Constructs a new DescribeConfigurationRevisionRequest object.
+ * Constructs a DescribeConfigurationRevisionRequest object.
  */
 DescribeConfigurationRevisionRequest::DescribeConfigurationRevisionRequest()
     : MQRequest(new DescribeConfigurationRevisionRequestPrivate(MQRequest::DescribeConfigurationRevisionAction, this))
@@ -68,14 +65,9 @@ bool DescribeConfigurationRevisionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeConfigurationRevisionResponse object.
+ * Returns a DescribeConfigurationRevisionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeConfigurationRevisionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MQClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeConfigurationRevisionRequest::response(QNetworkReply * const reply) const
 {
@@ -83,20 +75,17 @@ QtAws::Core::AwsAbstractResponse * DescribeConfigurationRevisionRequest::respons
 }
 
 /*!
- * @internal
+ * \class QtAws::MQ::DescribeConfigurationRevisionRequestPrivate
+ * \brief The DescribeConfigurationRevisionRequestPrivate class provides private implementation for DescribeConfigurationRevisionRequest.
+ * \internal
  *
- * @class  DescribeConfigurationRevisionRequestPrivate
- *
- * @brief  Private implementation for DescribeConfigurationRevisionRequest.
+ * \inmodule QtAwsMQ
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeConfigurationRevisionRequestPrivate object.
- *
- * @param  action  MQ action being performed.
- * @param  q       Pointer to this object's public DescribeConfigurationRevisionRequest instance.
+ * Constructs a DescribeConfigurationRevisionRequestPrivate object for MQ \a action with,
+ * public implementation \a q.
  */
 DescribeConfigurationRevisionRequestPrivate::DescribeConfigurationRevisionRequestPrivate(
     const MQRequest::Action action, DescribeConfigurationRevisionRequest * const q)
@@ -106,15 +95,10 @@ DescribeConfigurationRevisionRequestPrivate::DescribeConfigurationRevisionReques
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeConfigurationRevisionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeConfigurationRevisionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeConfigurationRevisionRequest instance.
  */
 DescribeConfigurationRevisionRequestPrivate::DescribeConfigurationRevisionRequestPrivate(
     const DescribeConfigurationRevisionRequestPrivate &other, DescribeConfigurationRevisionRequest * const q)

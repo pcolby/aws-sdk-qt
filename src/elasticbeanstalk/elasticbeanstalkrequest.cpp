@@ -25,16 +25,65 @@ namespace ElasticBeanstalk {
 
 /*!
  * \class QtAws::ElasticBeanstalk::ElasticBeanstalkRequest
- *
  * \brief The ElasticBeanstalkRequest class provides an interface for ElasticBeanstalk requests.
  *
- * \ingroup ElasticBeanstalk
+ * \inmodule QtAwsElasticBeanstalk
  */
 
 /*!
- * @brief  Constructs a new ElasticBeanstalkRequest object.
+ * \enum ElasticBeanstalkRequest::Action
  *
- * @param  action  The ElasticBeanstalk action to request.
+ * This enum describes the actions that can be performed as ElasticBeanstalk
+ * requests.
+ *
+ * \value AbortEnvironmentUpdateAction ElasticBeanstalk AbortEnvironmentUpdate action.
+ * \value ApplyEnvironmentManagedActionAction ElasticBeanstalk ApplyEnvironmentManagedAction action.
+ * \value CheckDNSAvailabilityAction ElasticBeanstalk CheckDNSAvailability action.
+ * \value ComposeEnvironmentsAction ElasticBeanstalk ComposeEnvironments action.
+ * \value CreateApplicationAction ElasticBeanstalk CreateApplication action.
+ * \value CreateApplicationVersionAction ElasticBeanstalk CreateApplicationVersion action.
+ * \value CreateConfigurationTemplateAction ElasticBeanstalk CreateConfigurationTemplate action.
+ * \value CreateEnvironmentAction ElasticBeanstalk CreateEnvironment action.
+ * \value CreatePlatformVersionAction ElasticBeanstalk CreatePlatformVersion action.
+ * \value CreateStorageLocationAction ElasticBeanstalk CreateStorageLocation action.
+ * \value DeleteApplicationAction ElasticBeanstalk DeleteApplication action.
+ * \value DeleteApplicationVersionAction ElasticBeanstalk DeleteApplicationVersion action.
+ * \value DeleteConfigurationTemplateAction ElasticBeanstalk DeleteConfigurationTemplate action.
+ * \value DeleteEnvironmentConfigurationAction ElasticBeanstalk DeleteEnvironmentConfiguration action.
+ * \value DeletePlatformVersionAction ElasticBeanstalk DeletePlatformVersion action.
+ * \value DescribeAccountAttributesAction ElasticBeanstalk DescribeAccountAttributes action.
+ * \value DescribeApplicationVersionsAction ElasticBeanstalk DescribeApplicationVersions action.
+ * \value DescribeApplicationsAction ElasticBeanstalk DescribeApplications action.
+ * \value DescribeConfigurationOptionsAction ElasticBeanstalk DescribeConfigurationOptions action.
+ * \value DescribeConfigurationSettingsAction ElasticBeanstalk DescribeConfigurationSettings action.
+ * \value DescribeEnvironmentHealthAction ElasticBeanstalk DescribeEnvironmentHealth action.
+ * \value DescribeEnvironmentManagedActionHistoryAction ElasticBeanstalk DescribeEnvironmentManagedActionHistory action.
+ * \value DescribeEnvironmentManagedActionsAction ElasticBeanstalk DescribeEnvironmentManagedActions action.
+ * \value DescribeEnvironmentResourcesAction ElasticBeanstalk DescribeEnvironmentResources action.
+ * \value DescribeEnvironmentsAction ElasticBeanstalk DescribeEnvironments action.
+ * \value DescribeEventsAction ElasticBeanstalk DescribeEvents action.
+ * \value DescribeInstancesHealthAction ElasticBeanstalk DescribeInstancesHealth action.
+ * \value DescribePlatformVersionAction ElasticBeanstalk DescribePlatformVersion action.
+ * \value ListAvailableSolutionStacksAction ElasticBeanstalk ListAvailableSolutionStacks action.
+ * \value ListPlatformVersionsAction ElasticBeanstalk ListPlatformVersions action.
+ * \value ListTagsForResourceAction ElasticBeanstalk ListTagsForResource action.
+ * \value RebuildEnvironmentAction ElasticBeanstalk RebuildEnvironment action.
+ * \value RequestEnvironmentInfoAction ElasticBeanstalk RequestEnvironmentInfo action.
+ * \value RestartAppServerAction ElasticBeanstalk RestartAppServer action.
+ * \value RetrieveEnvironmentInfoAction ElasticBeanstalk RetrieveEnvironmentInfo action.
+ * \value SwapEnvironmentCNAMEsAction ElasticBeanstalk SwapEnvironmentCNAMEs action.
+ * \value TerminateEnvironmentAction ElasticBeanstalk TerminateEnvironment action.
+ * \value UpdateApplicationAction ElasticBeanstalk UpdateApplication action.
+ * \value UpdateApplicationResourceLifecycleAction ElasticBeanstalk UpdateApplicationResourceLifecycle action.
+ * \value UpdateApplicationVersionAction ElasticBeanstalk UpdateApplicationVersion action.
+ * \value UpdateConfigurationTemplateAction ElasticBeanstalk UpdateConfigurationTemplate action.
+ * \value UpdateEnvironmentAction ElasticBeanstalk UpdateEnvironment action.
+ * \value UpdateTagsForResourceAction ElasticBeanstalk UpdateTagsForResource action.
+ * \value ValidateConfigurationSettingsAction ElasticBeanstalk ValidateConfigurationSettings action.
+ */
+
+/*!
+ * Constructs a[n] ElasticBeanstalkRequest object for ElasticBeanstalk \a action.
  */
 ElasticBeanstalkRequest::ElasticBeanstalkRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new ElasticBeanstalkRequestPrivate(action, this))
@@ -43,9 +92,7 @@ ElasticBeanstalkRequest::ElasticBeanstalkRequest(const Action action)
 }
 
 /*!
- * @brief  Constructs a new ElasticBeanstalkRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ElasticBeanstalkRequest::ElasticBeanstalkRequest(const ElasticBeanstalkRequest &other)
     : QtAws::Core::AwsAbstractRequest(new ElasticBeanstalkRequestPrivate(*other.d_func(), this))
@@ -54,13 +101,7 @@ ElasticBeanstalkRequest::ElasticBeanstalkRequest(const ElasticBeanstalkRequest &
 }
 
 /*!
- * @brief  Assignment operator.
- *
- * Assigns \a other to \c this.
- *
- * @param  other  Instance to copy.
- *
- * @return  A reference to \c this.
+ * Sets the ElasticBeanstalkRequest object to be equal to \a other.
  */
 ElasticBeanstalkRequest& ElasticBeanstalkRequest::operator=(const ElasticBeanstalkRequest &other)
 {
@@ -72,14 +113,10 @@ ElasticBeanstalkRequest& ElasticBeanstalkRequest::operator=(const ElasticBeansta
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ElasticBeanstalkRequest object.
+ * Constructs aa ElasticBeanstalkRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from ElasticBeanstalkRequestPrivate.
- *
- * @param  d  Pointer to private data (aka D-Pointer).
  */
 ElasticBeanstalkRequest::ElasticBeanstalkRequest(ElasticBeanstalkRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
@@ -87,7 +124,7 @@ ElasticBeanstalkRequest::ElasticBeanstalkRequest(ElasticBeanstalkRequestPrivate 
 }
 
 /*!
- * \brief Returns the ElasticBeanstalk action to be performed by this request.
+ * Returns the ElasticBeanstalk action to be performed by this request.
  */
 ElasticBeanstalkRequest::Action ElasticBeanstalkRequest::action() const
 {
@@ -96,7 +133,7 @@ ElasticBeanstalkRequest::Action ElasticBeanstalkRequest::action() const
 }
 
 /*!
- * \brief Returns the name of the ElasticBeanstalk action to be performed by this request.
+ * Returns the name of the ElasticBeanstalk action to be performed by this request.
  */
 QString ElasticBeanstalkRequest::actionString() const
 {
@@ -104,7 +141,7 @@ QString ElasticBeanstalkRequest::actionString() const
 }
 
 /*!
- * \brief Returns the ElasticBeanstalk API version implemented by this request.
+ * Returns the ElasticBeanstalk API version implemented by this request.
  */
 QString ElasticBeanstalkRequest::apiVersion() const
 {
@@ -113,7 +150,7 @@ QString ElasticBeanstalkRequest::apiVersion() const
 }
 
 /*!
- * @brief Set the ElasticBeanstalk action to be performed by this request to \a action.
+ * Sets the ElasticBeanstalk action to be performed by this request to \a action.
  */
 void ElasticBeanstalkRequest::setAction(const Action action)
 {
@@ -122,7 +159,7 @@ void ElasticBeanstalkRequest::setAction(const Action action)
 }
 
 /*!
- * Set the ElasticBeanstalk API version to include in this request to \a version.
+ * Sets the ElasticBeanstalk API version to include in this request to \a version.
  */
 void ElasticBeanstalkRequest::setApiVersion(const QString &version)
 {
@@ -131,7 +168,7 @@ void ElasticBeanstalkRequest::setApiVersion(const QString &version)
 }
 
 /*!
- * \brief Returns \c true if this request is the same as \a other.
+ * Returns \c true if this request is equal to \a other; \c false otherwise.
  *
  * Note, most derived *Request classes do not need to provider their own
  * implementations of this function, since most such request classes rely on
@@ -146,8 +183,8 @@ bool ElasticBeanstalkRequest::operator==(const ElasticBeanstalkRequest &other) c
             (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
-/*!
- * @brief  Check if \a queueName is a valid ElasticBeanstalk queue name.
+/*
+ * Returns \c tue if \a queueName is a valid ElasticBeanstalk queue name.
  *
  * @par From ElasticBeanstalk FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
@@ -166,9 +203,8 @@ bool ElasticBeanstalkRequest::operator==(const ElasticBeanstalkRequest &other) c
 }*/
 
 /*!
- * \brief Removes the a \a name parameter from this request.
- *
- * Returns the count of paramters removed (typically \c 0 or \c 1).
+ * Removes the a \a name parameter from the request, then returns the number of
+ * paramters removed (typically \c 0 or \c 1).
  */
 int ElasticBeanstalkRequest::clearParameter(const QString &name)
 {
@@ -177,7 +213,7 @@ int ElasticBeanstalkRequest::clearParameter(const QString &name)
 }
 
 /*!
- * \brief Removes all parameters from this request.
+ * Removes all parameters from the request.
  */
 void ElasticBeanstalkRequest::clearParameters()
 {
@@ -186,7 +222,7 @@ void ElasticBeanstalkRequest::clearParameters()
 }
 
 /*!
- * \brief Returns the value of the \n name pararemter if set, otherwise \a defaultValue.
+ * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
 QVariant ElasticBeanstalkRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
@@ -195,7 +231,7 @@ QVariant ElasticBeanstalkRequest::parameter(const QString &name, const QVariant 
 }
 
 /*!
- * \brief Returns a map of parameters included in this request.
+ * Returns the parameters included in this request.
  */
 const QVariantMap &ElasticBeanstalkRequest::parameters() const
 {
@@ -204,7 +240,7 @@ const QVariantMap &ElasticBeanstalkRequest::parameters() const
 }
 
 /*!
- * \brief Sets the \a name parameter to \a value.
+ * Sets the \a name parameter to \a value.
  */
 void ElasticBeanstalkRequest::setParameter(const QString &name, const QVariant &value)
 {
@@ -213,9 +249,8 @@ void ElasticBeanstalkRequest::setParameter(const QString &name, const QVariant &
 }
 
 /*!
- * \brief Sets the map of paramters for this request to \a parameters.
- *
- * Any request parameters set previously will be discarded.
+ * Sets the paramters for this request to \a parameters. Any request parameters
+ * set previously will be discarded.
  */
 void ElasticBeanstalkRequest::setParameters(const QVariantMap &parameters)
 {
@@ -224,11 +259,12 @@ void ElasticBeanstalkRequest::setParameters(const QVariantMap &parameters)
 }
 
 /*!
- * \brief Returns a network request for this ElasticBeanstalk request using the given \a endpoint.
+ * Returns a network request for the ElasticBeanstalk request using the given
+ * \a endpoint.
  *
- * This ElasticBeanstalk implementation builds request URLs by combining the common query
- * parameters (such as Action and Version), with any that have been added (via
- * setParameter) by child classes.
+ * This ElasticBeanstalk implementation builds request URLs by combining the
+ * common query parameters (such as Action and Version), with any that have
+ * been added (via setParameter) by child classes.
  */
 QNetworkRequest ElasticBeanstalkRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -239,17 +275,16 @@ QNetworkRequest ElasticBeanstalkRequest::unsignedRequest(const QUrl &endpoint) c
 }
 
 /*!
+ * \class QtAws::ElasticBeanstalk::ElasticBeanstalkRequestPrivate
+ * \brief The ElasticBeanstalkRequestPrivate class provides private implementation for ElasticBeanstalkRequest.
  * \internal
  *
- * \class  ElasticBeanstalkRequestPrivate
- *
- * \brief  Private implementation for ElasticBeanstalkRequest.
+ * \inmodule QtAwsElasticBeanstalk
  */
 
 /*!
- * \internal
- *
- * \brief Constructs a new ElasticBeanstalkRequestPrivate object.
+ * Constructs a ElasticBeanstalkRequestPrivate object for ElasticBeanstalk \a action with,
+ * public implementation \a q.
  */
 ElasticBeanstalkRequestPrivate::ElasticBeanstalkRequestPrivate(const ElasticBeanstalkRequest::Action action, ElasticBeanstalkRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
@@ -258,9 +293,7 @@ ElasticBeanstalkRequestPrivate::ElasticBeanstalkRequestPrivate(const ElasticBean
 }
 
 /*!
- * \internal
- *
- * \brief Constructs a new ElasticBeanstalkRequestPrivate object, copying an existing one.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
@@ -276,15 +309,12 @@ ElasticBeanstalkRequestPrivate::ElasticBeanstalkRequestPrivate(const ElasticBean
 }
 
 /*!
- * \internal
- *
- * \brief Returns a string representing \a action.
+ * Returns a string represention of \a action, or a null string if \a action is
+ * invalid.
  *
  * This function converts ElasticBeanstalkRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the ElasticBeanstalk service's Action
  * query parameters.
- *
- * @return A string representing \a action, or a null string if \a action is invalid.
  */
 QString ElasticBeanstalkRequestPrivate::toString(const ElasticBeanstalkRequest::Action &action)
 {

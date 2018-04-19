@@ -25,16 +25,25 @@ namespace AutoScalingPlans {
 
 /*!
  * \class QtAws::AutoScalingPlans::AutoScalingPlansRequest
- *
  * \brief The AutoScalingPlansRequest class provides an interface for AutoScalingPlans requests.
  *
- * \ingroup AutoScalingPlans
+ * \inmodule QtAwsAutoScalingPlans
  */
 
 /*!
- * @brief  Constructs a new AutoScalingPlansRequest object.
+ * \enum AutoScalingPlansRequest::Action
  *
- * @param  action  The AutoScalingPlans action to request.
+ * This enum describes the actions that can be performed as AutoScalingPlans
+ * requests.
+ *
+ * \value CreateScalingPlanAction AutoScalingPlans CreateScalingPlan action.
+ * \value DeleteScalingPlanAction AutoScalingPlans DeleteScalingPlan action.
+ * \value DescribeScalingPlanResourcesAction AutoScalingPlans DescribeScalingPlanResources action.
+ * \value DescribeScalingPlansAction AutoScalingPlans DescribeScalingPlans action.
+ */
+
+/*!
+ * Constructs a[n] AutoScalingPlansRequest object for AutoScalingPlans \a action.
  */
 AutoScalingPlansRequest::AutoScalingPlansRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new AutoScalingPlansRequestPrivate(action, this))
@@ -43,9 +52,7 @@ AutoScalingPlansRequest::AutoScalingPlansRequest(const Action action)
 }
 
 /*!
- * @brief  Constructs a new AutoScalingPlansRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AutoScalingPlansRequest::AutoScalingPlansRequest(const AutoScalingPlansRequest &other)
     : QtAws::Core::AwsAbstractRequest(new AutoScalingPlansRequestPrivate(*other.d_func(), this))
@@ -54,13 +61,7 @@ AutoScalingPlansRequest::AutoScalingPlansRequest(const AutoScalingPlansRequest &
 }
 
 /*!
- * @brief  Assignment operator.
- *
- * Assigns \a other to \c this.
- *
- * @param  other  Instance to copy.
- *
- * @return  A reference to \c this.
+ * Sets the AutoScalingPlansRequest object to be equal to \a other.
  */
 AutoScalingPlansRequest& AutoScalingPlansRequest::operator=(const AutoScalingPlansRequest &other)
 {
@@ -72,14 +73,10 @@ AutoScalingPlansRequest& AutoScalingPlansRequest::operator=(const AutoScalingPla
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AutoScalingPlansRequest object.
+ * Constructs aa AutoScalingPlansRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from AutoScalingPlansRequestPrivate.
- *
- * @param  d  Pointer to private data (aka D-Pointer).
  */
 AutoScalingPlansRequest::AutoScalingPlansRequest(AutoScalingPlansRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
@@ -87,7 +84,7 @@ AutoScalingPlansRequest::AutoScalingPlansRequest(AutoScalingPlansRequestPrivate 
 }
 
 /*!
- * \brief Returns the AutoScalingPlans action to be performed by this request.
+ * Returns the AutoScalingPlans action to be performed by this request.
  */
 AutoScalingPlansRequest::Action AutoScalingPlansRequest::action() const
 {
@@ -96,7 +93,7 @@ AutoScalingPlansRequest::Action AutoScalingPlansRequest::action() const
 }
 
 /*!
- * \brief Returns the name of the AutoScalingPlans action to be performed by this request.
+ * Returns the name of the AutoScalingPlans action to be performed by this request.
  */
 QString AutoScalingPlansRequest::actionString() const
 {
@@ -104,7 +101,7 @@ QString AutoScalingPlansRequest::actionString() const
 }
 
 /*!
- * \brief Returns the AutoScalingPlans API version implemented by this request.
+ * Returns the AutoScalingPlans API version implemented by this request.
  */
 QString AutoScalingPlansRequest::apiVersion() const
 {
@@ -113,7 +110,7 @@ QString AutoScalingPlansRequest::apiVersion() const
 }
 
 /*!
- * @brief Set the AutoScalingPlans action to be performed by this request to \a action.
+ * Sets the AutoScalingPlans action to be performed by this request to \a action.
  */
 void AutoScalingPlansRequest::setAction(const Action action)
 {
@@ -122,7 +119,7 @@ void AutoScalingPlansRequest::setAction(const Action action)
 }
 
 /*!
- * Set the AutoScalingPlans API version to include in this request to \a version.
+ * Sets the AutoScalingPlans API version to include in this request to \a version.
  */
 void AutoScalingPlansRequest::setApiVersion(const QString &version)
 {
@@ -131,7 +128,7 @@ void AutoScalingPlansRequest::setApiVersion(const QString &version)
 }
 
 /*!
- * \brief Returns \c true if this request is the same as \a other.
+ * Returns \c true if this request is equal to \a other; \c false otherwise.
  *
  * Note, most derived *Request classes do not need to provider their own
  * implementations of this function, since most such request classes rely on
@@ -146,8 +143,8 @@ bool AutoScalingPlansRequest::operator==(const AutoScalingPlansRequest &other) c
             (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
-/*!
- * @brief  Check if \a queueName is a valid AutoScalingPlans queue name.
+/*
+ * Returns \c tue if \a queueName is a valid AutoScalingPlans queue name.
  *
  * @par From AutoScalingPlans FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
@@ -166,9 +163,8 @@ bool AutoScalingPlansRequest::operator==(const AutoScalingPlansRequest &other) c
 }*/
 
 /*!
- * \brief Removes the a \a name parameter from this request.
- *
- * Returns the count of paramters removed (typically \c 0 or \c 1).
+ * Removes the a \a name parameter from the request, then returns the number of
+ * paramters removed (typically \c 0 or \c 1).
  */
 int AutoScalingPlansRequest::clearParameter(const QString &name)
 {
@@ -177,7 +173,7 @@ int AutoScalingPlansRequest::clearParameter(const QString &name)
 }
 
 /*!
- * \brief Removes all parameters from this request.
+ * Removes all parameters from the request.
  */
 void AutoScalingPlansRequest::clearParameters()
 {
@@ -186,7 +182,7 @@ void AutoScalingPlansRequest::clearParameters()
 }
 
 /*!
- * \brief Returns the value of the \n name pararemter if set, otherwise \a defaultValue.
+ * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
 QVariant AutoScalingPlansRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
@@ -195,7 +191,7 @@ QVariant AutoScalingPlansRequest::parameter(const QString &name, const QVariant 
 }
 
 /*!
- * \brief Returns a map of parameters included in this request.
+ * Returns the parameters included in this request.
  */
 const QVariantMap &AutoScalingPlansRequest::parameters() const
 {
@@ -204,7 +200,7 @@ const QVariantMap &AutoScalingPlansRequest::parameters() const
 }
 
 /*!
- * \brief Sets the \a name parameter to \a value.
+ * Sets the \a name parameter to \a value.
  */
 void AutoScalingPlansRequest::setParameter(const QString &name, const QVariant &value)
 {
@@ -213,9 +209,8 @@ void AutoScalingPlansRequest::setParameter(const QString &name, const QVariant &
 }
 
 /*!
- * \brief Sets the map of paramters for this request to \a parameters.
- *
- * Any request parameters set previously will be discarded.
+ * Sets the paramters for this request to \a parameters. Any request parameters
+ * set previously will be discarded.
  */
 void AutoScalingPlansRequest::setParameters(const QVariantMap &parameters)
 {
@@ -224,11 +219,12 @@ void AutoScalingPlansRequest::setParameters(const QVariantMap &parameters)
 }
 
 /*!
- * \brief Returns a network request for this AutoScalingPlans request using the given \a endpoint.
+ * Returns a network request for the AutoScalingPlans request using the given
+ * \a endpoint.
  *
- * This AutoScalingPlans implementation builds request URLs by combining the common query
- * parameters (such as Action and Version), with any that have been added (via
- * setParameter) by child classes.
+ * This AutoScalingPlans implementation builds request URLs by combining the
+ * common query parameters (such as Action and Version), with any that have
+ * been added (via setParameter) by child classes.
  */
 QNetworkRequest AutoScalingPlansRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -239,17 +235,16 @@ QNetworkRequest AutoScalingPlansRequest::unsignedRequest(const QUrl &endpoint) c
 }
 
 /*!
+ * \class QtAws::AutoScalingPlans::AutoScalingPlansRequestPrivate
+ * \brief The AutoScalingPlansRequestPrivate class provides private implementation for AutoScalingPlansRequest.
  * \internal
  *
- * \class  AutoScalingPlansRequestPrivate
- *
- * \brief  Private implementation for AutoScalingPlansRequest.
+ * \inmodule QtAwsAutoScalingPlans
  */
 
 /*!
- * \internal
- *
- * \brief Constructs a new AutoScalingPlansRequestPrivate object.
+ * Constructs a AutoScalingPlansRequestPrivate object for AutoScalingPlans \a action with,
+ * public implementation \a q.
  */
 AutoScalingPlansRequestPrivate::AutoScalingPlansRequestPrivate(const AutoScalingPlansRequest::Action action, AutoScalingPlansRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
@@ -258,9 +253,7 @@ AutoScalingPlansRequestPrivate::AutoScalingPlansRequestPrivate(const AutoScaling
 }
 
 /*!
- * \internal
- *
- * \brief Constructs a new AutoScalingPlansRequestPrivate object, copying an existing one.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
@@ -276,15 +269,12 @@ AutoScalingPlansRequestPrivate::AutoScalingPlansRequestPrivate(const AutoScaling
 }
 
 /*!
- * \internal
- *
- * \brief Returns a string representing \a action.
+ * Returns a string represention of \a action, or a null string if \a action is
+ * invalid.
  *
  * This function converts AutoScalingPlansRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the AutoScalingPlans service's Action
  * query parameters.
- *
- * @return A string representing \a action, or a null string if \a action is invalid.
  */
 QString AutoScalingPlansRequestPrivate::toString(const AutoScalingPlansRequest::Action &action)
 {

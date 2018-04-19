@@ -27,10 +27,9 @@ namespace Greengrass {
 
 /*!
  * \class QtAws::Greengrass::GetServiceRoleForAccountRequest
- *
  * \brief The GetServiceRoleForAccountRequest class provides an interface for Greengrass GetServiceRoleForAccount requests.
  *
- * \ingroup Greengrass
+ * \inmodule QtAwsGreengrass
  *
  *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
  *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
@@ -40,9 +39,7 @@ namespace Greengrass {
  */
 
 /*!
- * @brief  Constructs a new GetServiceRoleForAccountRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetServiceRoleForAccountRequest::GetServiceRoleForAccountRequest(const GetServiceRoleForAccountRequest &other)
     : GreengrassRequest(new GetServiceRoleForAccountRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ GetServiceRoleForAccountRequest::GetServiceRoleForAccountRequest(const GetServic
 }
 
 /*!
- * @brief  Constructs a new GetServiceRoleForAccountRequest object.
+ * Constructs a GetServiceRoleForAccountRequest object.
  */
 GetServiceRoleForAccountRequest::GetServiceRoleForAccountRequest()
     : GreengrassRequest(new GetServiceRoleForAccountRequestPrivate(GreengrassRequest::GetServiceRoleForAccountAction, this))
@@ -69,14 +66,9 @@ bool GetServiceRoleForAccountRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetServiceRoleForAccountResponse object.
+ * Returns a GetServiceRoleForAccountResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetServiceRoleForAccountResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GreengrassClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetServiceRoleForAccountRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * GetServiceRoleForAccountRequest::response(QNe
 }
 
 /*!
- * @internal
+ * \class QtAws::Greengrass::GetServiceRoleForAccountRequestPrivate
+ * \brief The GetServiceRoleForAccountRequestPrivate class provides private implementation for GetServiceRoleForAccountRequest.
+ * \internal
  *
- * @class  GetServiceRoleForAccountRequestPrivate
- *
- * @brief  Private implementation for GetServiceRoleForAccountRequest.
+ * \inmodule QtAwsGreengrass
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetServiceRoleForAccountRequestPrivate object.
- *
- * @param  action  Greengrass action being performed.
- * @param  q       Pointer to this object's public GetServiceRoleForAccountRequest instance.
+ * Constructs a GetServiceRoleForAccountRequestPrivate object for Greengrass \a action with,
+ * public implementation \a q.
  */
 GetServiceRoleForAccountRequestPrivate::GetServiceRoleForAccountRequestPrivate(
     const GreengrassRequest::Action action, GetServiceRoleForAccountRequest * const q)
@@ -107,15 +96,10 @@ GetServiceRoleForAccountRequestPrivate::GetServiceRoleForAccountRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetServiceRoleForAccountRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetServiceRoleForAccountRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetServiceRoleForAccountRequest instance.
  */
 GetServiceRoleForAccountRequestPrivate::GetServiceRoleForAccountRequestPrivate(
     const GetServiceRoleForAccountRequestPrivate &other, GetServiceRoleForAccountRequest * const q)

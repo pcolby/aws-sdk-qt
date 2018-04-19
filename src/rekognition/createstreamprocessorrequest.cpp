@@ -27,10 +27,9 @@ namespace Rekognition {
 
 /*!
  * \class QtAws::Rekognition::CreateStreamProcessorRequest
- *
  * \brief The CreateStreamProcessorRequest class provides an interface for Rekognition CreateStreamProcessor requests.
  *
- * \ingroup Rekognition
+ * \inmodule QtAwsRekognition
  *
  *  This is the Amazon Rekognition API
  *
@@ -38,9 +37,7 @@ namespace Rekognition {
  */
 
 /*!
- * @brief  Constructs a new CreateStreamProcessorRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateStreamProcessorRequest::CreateStreamProcessorRequest(const CreateStreamProcessorRequest &other)
     : RekognitionRequest(new CreateStreamProcessorRequestPrivate(*other.d_func(), this))
@@ -49,7 +46,7 @@ CreateStreamProcessorRequest::CreateStreamProcessorRequest(const CreateStreamPro
 }
 
 /*!
- * @brief  Constructs a new CreateStreamProcessorRequest object.
+ * Constructs a CreateStreamProcessorRequest object.
  */
 CreateStreamProcessorRequest::CreateStreamProcessorRequest()
     : RekognitionRequest(new CreateStreamProcessorRequestPrivate(RekognitionRequest::CreateStreamProcessorAction, this))
@@ -67,14 +64,9 @@ bool CreateStreamProcessorRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateStreamProcessorResponse object.
+ * Returns a CreateStreamProcessorResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateStreamProcessorResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RekognitionClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateStreamProcessorRequest::response(QNetworkReply * const reply) const
 {
@@ -82,20 +74,17 @@ QtAws::Core::AwsAbstractResponse * CreateStreamProcessorRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::Rekognition::CreateStreamProcessorRequestPrivate
+ * \brief The CreateStreamProcessorRequestPrivate class provides private implementation for CreateStreamProcessorRequest.
+ * \internal
  *
- * @class  CreateStreamProcessorRequestPrivate
- *
- * @brief  Private implementation for CreateStreamProcessorRequest.
+ * \inmodule QtAwsRekognition
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateStreamProcessorRequestPrivate object.
- *
- * @param  action  Rekognition action being performed.
- * @param  q       Pointer to this object's public CreateStreamProcessorRequest instance.
+ * Constructs a CreateStreamProcessorRequestPrivate object for Rekognition \a action with,
+ * public implementation \a q.
  */
 CreateStreamProcessorRequestPrivate::CreateStreamProcessorRequestPrivate(
     const RekognitionRequest::Action action, CreateStreamProcessorRequest * const q)
@@ -105,15 +94,10 @@ CreateStreamProcessorRequestPrivate::CreateStreamProcessorRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateStreamProcessorRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateStreamProcessorRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateStreamProcessorRequest instance.
  */
 CreateStreamProcessorRequestPrivate::CreateStreamProcessorRequestPrivate(
     const CreateStreamProcessorRequestPrivate &other, CreateStreamProcessorRequest * const q)

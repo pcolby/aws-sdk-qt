@@ -27,10 +27,9 @@ namespace CloudSearch {
 
 /*!
  * \class QtAws::CloudSearch::DescribeExpressionsRequest
- *
  * \brief The DescribeExpressionsRequest class provides an interface for CloudSearch DescribeExpressions requests.
  *
- * \ingroup CloudSearch
+ * \inmodule QtAwsCloudSearch
  *
  *  <fullname>Amazon CloudSearch Configuration Service</fullname>
  * 
@@ -48,9 +47,7 @@ namespace CloudSearch {
  */
 
 /*!
- * @brief  Constructs a new DescribeExpressionsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeExpressionsRequest::DescribeExpressionsRequest(const DescribeExpressionsRequest &other)
     : CloudSearchRequest(new DescribeExpressionsRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ DescribeExpressionsRequest::DescribeExpressionsRequest(const DescribeExpressions
 }
 
 /*!
- * @brief  Constructs a new DescribeExpressionsRequest object.
+ * Constructs a DescribeExpressionsRequest object.
  */
 DescribeExpressionsRequest::DescribeExpressionsRequest()
     : CloudSearchRequest(new DescribeExpressionsRequestPrivate(CloudSearchRequest::DescribeExpressionsAction, this))
@@ -77,14 +74,9 @@ bool DescribeExpressionsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeExpressionsResponse object.
+ * Returns a DescribeExpressionsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeExpressionsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudSearchClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeExpressionsRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * DescribeExpressionsRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudSearch::DescribeExpressionsRequestPrivate
+ * \brief The DescribeExpressionsRequestPrivate class provides private implementation for DescribeExpressionsRequest.
+ * \internal
  *
- * @class  DescribeExpressionsRequestPrivate
- *
- * @brief  Private implementation for DescribeExpressionsRequest.
+ * \inmodule QtAwsCloudSearch
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeExpressionsRequestPrivate object.
- *
- * @param  action  CloudSearch action being performed.
- * @param  q       Pointer to this object's public DescribeExpressionsRequest instance.
+ * Constructs a DescribeExpressionsRequestPrivate object for CloudSearch \a action with,
+ * public implementation \a q.
  */
 DescribeExpressionsRequestPrivate::DescribeExpressionsRequestPrivate(
     const CloudSearchRequest::Action action, DescribeExpressionsRequest * const q)
@@ -115,15 +104,10 @@ DescribeExpressionsRequestPrivate::DescribeExpressionsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeExpressionsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeExpressionsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeExpressionsRequest instance.
  */
 DescribeExpressionsRequestPrivate::DescribeExpressionsRequestPrivate(
     const DescribeExpressionsRequestPrivate &other, DescribeExpressionsRequest * const q)

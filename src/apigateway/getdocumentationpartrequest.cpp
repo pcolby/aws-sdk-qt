@@ -27,10 +27,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::GetDocumentationPartRequest
- *
  * \brief The GetDocumentationPartRequest class provides an interface for APIGateway GetDocumentationPart requests.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -42,9 +41,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new GetDocumentationPartRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetDocumentationPartRequest::GetDocumentationPartRequest(const GetDocumentationPartRequest &other)
     : APIGatewayRequest(new GetDocumentationPartRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ GetDocumentationPartRequest::GetDocumentationPartRequest(const GetDocumentationP
 }
 
 /*!
- * @brief  Constructs a new GetDocumentationPartRequest object.
+ * Constructs a GetDocumentationPartRequest object.
  */
 GetDocumentationPartRequest::GetDocumentationPartRequest()
     : APIGatewayRequest(new GetDocumentationPartRequestPrivate(APIGatewayRequest::GetDocumentationPartAction, this))
@@ -71,14 +68,9 @@ bool GetDocumentationPartRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetDocumentationPartResponse object.
+ * Returns a GetDocumentationPartResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetDocumentationPartResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  APIGatewayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetDocumentationPartRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * GetDocumentationPartRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::APIGateway::GetDocumentationPartRequestPrivate
+ * \brief The GetDocumentationPartRequestPrivate class provides private implementation for GetDocumentationPartRequest.
+ * \internal
  *
- * @class  GetDocumentationPartRequestPrivate
- *
- * @brief  Private implementation for GetDocumentationPartRequest.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetDocumentationPartRequestPrivate object.
- *
- * @param  action  APIGateway action being performed.
- * @param  q       Pointer to this object's public GetDocumentationPartRequest instance.
+ * Constructs a GetDocumentationPartRequestPrivate object for APIGateway \a action with,
+ * public implementation \a q.
  */
 GetDocumentationPartRequestPrivate::GetDocumentationPartRequestPrivate(
     const APIGatewayRequest::Action action, GetDocumentationPartRequest * const q)
@@ -109,15 +98,10 @@ GetDocumentationPartRequestPrivate::GetDocumentationPartRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetDocumentationPartRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetDocumentationPartRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetDocumentationPartRequest instance.
  */
 GetDocumentationPartRequestPrivate::GetDocumentationPartRequestPrivate(
     const GetDocumentationPartRequestPrivate &other, GetDocumentationPartRequest * const q)

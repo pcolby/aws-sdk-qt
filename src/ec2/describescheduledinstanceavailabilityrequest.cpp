@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DescribeScheduledInstanceAvailabilityRequest
- *
  * \brief The DescribeScheduledInstanceAvailabilityRequest class provides an interface for EC2 DescribeScheduledInstanceAvailability requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DescribeScheduledInstanceAvailabilityRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeScheduledInstanceAvailabilityRequest::DescribeScheduledInstanceAvailabilityRequest(const DescribeScheduledInstanceAvailabilityRequest &other)
     : EC2Request(new DescribeScheduledInstanceAvailabilityRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ DescribeScheduledInstanceAvailabilityRequest::DescribeScheduledInstanceAvailabil
 }
 
 /*!
- * @brief  Constructs a new DescribeScheduledInstanceAvailabilityRequest object.
+ * Constructs a DescribeScheduledInstanceAvailabilityRequest object.
  */
 DescribeScheduledInstanceAvailabilityRequest::DescribeScheduledInstanceAvailabilityRequest()
     : EC2Request(new DescribeScheduledInstanceAvailabilityRequestPrivate(EC2Request::DescribeScheduledInstanceAvailabilityAction, this))
@@ -70,14 +67,9 @@ bool DescribeScheduledInstanceAvailabilityRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeScheduledInstanceAvailabilityResponse object.
+ * Returns a DescribeScheduledInstanceAvailabilityResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeScheduledInstanceAvailabilityResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeScheduledInstanceAvailabilityRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * DescribeScheduledInstanceAvailabilityRequest:
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::DescribeScheduledInstanceAvailabilityRequestPrivate
+ * \brief The DescribeScheduledInstanceAvailabilityRequestPrivate class provides private implementation for DescribeScheduledInstanceAvailabilityRequest.
+ * \internal
  *
- * @class  DescribeScheduledInstanceAvailabilityRequestPrivate
- *
- * @brief  Private implementation for DescribeScheduledInstanceAvailabilityRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeScheduledInstanceAvailabilityRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public DescribeScheduledInstanceAvailabilityRequest instance.
+ * Constructs a DescribeScheduledInstanceAvailabilityRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 DescribeScheduledInstanceAvailabilityRequestPrivate::DescribeScheduledInstanceAvailabilityRequestPrivate(
     const EC2Request::Action action, DescribeScheduledInstanceAvailabilityRequest * const q)
@@ -108,15 +97,10 @@ DescribeScheduledInstanceAvailabilityRequestPrivate::DescribeScheduledInstanceAv
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeScheduledInstanceAvailabilityRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeScheduledInstanceAvailabilityRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeScheduledInstanceAvailabilityRequest instance.
  */
 DescribeScheduledInstanceAvailabilityRequestPrivate::DescribeScheduledInstanceAvailabilityRequestPrivate(
     const DescribeScheduledInstanceAvailabilityRequestPrivate &other, DescribeScheduledInstanceAvailabilityRequest * const q)

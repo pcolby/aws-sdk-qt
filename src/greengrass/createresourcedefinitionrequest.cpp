@@ -27,10 +27,9 @@ namespace Greengrass {
 
 /*!
  * \class QtAws::Greengrass::CreateResourceDefinitionRequest
- *
  * \brief The CreateResourceDefinitionRequest class provides an interface for Greengrass CreateResourceDefinition requests.
  *
- * \ingroup Greengrass
+ * \inmodule QtAwsGreengrass
  *
  *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
  *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
@@ -40,9 +39,7 @@ namespace Greengrass {
  */
 
 /*!
- * @brief  Constructs a new CreateResourceDefinitionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateResourceDefinitionRequest::CreateResourceDefinitionRequest(const CreateResourceDefinitionRequest &other)
     : GreengrassRequest(new CreateResourceDefinitionRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ CreateResourceDefinitionRequest::CreateResourceDefinitionRequest(const CreateRes
 }
 
 /*!
- * @brief  Constructs a new CreateResourceDefinitionRequest object.
+ * Constructs a CreateResourceDefinitionRequest object.
  */
 CreateResourceDefinitionRequest::CreateResourceDefinitionRequest()
     : GreengrassRequest(new CreateResourceDefinitionRequestPrivate(GreengrassRequest::CreateResourceDefinitionAction, this))
@@ -69,14 +66,9 @@ bool CreateResourceDefinitionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateResourceDefinitionResponse object.
+ * Returns a CreateResourceDefinitionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateResourceDefinitionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GreengrassClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateResourceDefinitionRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * CreateResourceDefinitionRequest::response(QNe
 }
 
 /*!
- * @internal
+ * \class QtAws::Greengrass::CreateResourceDefinitionRequestPrivate
+ * \brief The CreateResourceDefinitionRequestPrivate class provides private implementation for CreateResourceDefinitionRequest.
+ * \internal
  *
- * @class  CreateResourceDefinitionRequestPrivate
- *
- * @brief  Private implementation for CreateResourceDefinitionRequest.
+ * \inmodule QtAwsGreengrass
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateResourceDefinitionRequestPrivate object.
- *
- * @param  action  Greengrass action being performed.
- * @param  q       Pointer to this object's public CreateResourceDefinitionRequest instance.
+ * Constructs a CreateResourceDefinitionRequestPrivate object for Greengrass \a action with,
+ * public implementation \a q.
  */
 CreateResourceDefinitionRequestPrivate::CreateResourceDefinitionRequestPrivate(
     const GreengrassRequest::Action action, CreateResourceDefinitionRequest * const q)
@@ -107,15 +96,10 @@ CreateResourceDefinitionRequestPrivate::CreateResourceDefinitionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateResourceDefinitionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateResourceDefinitionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateResourceDefinitionRequest instance.
  */
 CreateResourceDefinitionRequestPrivate::CreateResourceDefinitionRequestPrivate(
     const CreateResourceDefinitionRequestPrivate &other, CreateResourceDefinitionRequest * const q)

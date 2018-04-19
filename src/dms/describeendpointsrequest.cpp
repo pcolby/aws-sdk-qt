@@ -27,10 +27,9 @@ namespace DatabaseMigrationService {
 
 /*!
  * \class QtAws::DatabaseMigrationService::DescribeEndpointsRequest
- *
  * \brief The DescribeEndpointsRequest class provides an interface for DatabaseMigrationService DescribeEndpoints requests.
  *
- * \ingroup DatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigrationService
  *
  *  <fullname>AWS Database Migration Service</fullname>
  * 
@@ -48,9 +47,7 @@ namespace DatabaseMigrationService {
  */
 
 /*!
- * @brief  Constructs a new DescribeEndpointsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeEndpointsRequest::DescribeEndpointsRequest(const DescribeEndpointsRequest &other)
     : DatabaseMigrationServiceRequest(new DescribeEndpointsRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ DescribeEndpointsRequest::DescribeEndpointsRequest(const DescribeEndpointsReques
 }
 
 /*!
- * @brief  Constructs a new DescribeEndpointsRequest object.
+ * Constructs a DescribeEndpointsRequest object.
  */
 DescribeEndpointsRequest::DescribeEndpointsRequest()
     : DatabaseMigrationServiceRequest(new DescribeEndpointsRequestPrivate(DatabaseMigrationServiceRequest::DescribeEndpointsAction, this))
@@ -77,14 +74,9 @@ bool DescribeEndpointsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeEndpointsResponse object.
+ * Returns a DescribeEndpointsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeEndpointsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DatabaseMigrationServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeEndpointsRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * DescribeEndpointsRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::DatabaseMigrationService::DescribeEndpointsRequestPrivate
+ * \brief The DescribeEndpointsRequestPrivate class provides private implementation for DescribeEndpointsRequest.
+ * \internal
  *
- * @class  DescribeEndpointsRequestPrivate
- *
- * @brief  Private implementation for DescribeEndpointsRequest.
+ * \inmodule QtAwsDatabaseMigrationService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeEndpointsRequestPrivate object.
- *
- * @param  action  DatabaseMigrationService action being performed.
- * @param  q       Pointer to this object's public DescribeEndpointsRequest instance.
+ * Constructs a DescribeEndpointsRequestPrivate object for DatabaseMigrationService \a action with,
+ * public implementation \a q.
  */
 DescribeEndpointsRequestPrivate::DescribeEndpointsRequestPrivate(
     const DatabaseMigrationServiceRequest::Action action, DescribeEndpointsRequest * const q)
@@ -115,15 +104,10 @@ DescribeEndpointsRequestPrivate::DescribeEndpointsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeEndpointsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeEndpointsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeEndpointsRequest instance.
  */
 DescribeEndpointsRequestPrivate::DescribeEndpointsRequestPrivate(
     const DescribeEndpointsRequestPrivate &other, DescribeEndpointsRequest * const q)

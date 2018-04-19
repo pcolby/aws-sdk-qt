@@ -27,10 +27,9 @@ namespace DatabaseMigrationService {
 
 /*!
  * \class QtAws::DatabaseMigrationService::StartReplicationTaskRequest
- *
  * \brief The StartReplicationTaskRequest class provides an interface for DatabaseMigrationService StartReplicationTask requests.
  *
- * \ingroup DatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigrationService
  *
  *  <fullname>AWS Database Migration Service</fullname>
  * 
@@ -48,9 +47,7 @@ namespace DatabaseMigrationService {
  */
 
 /*!
- * @brief  Constructs a new StartReplicationTaskRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 StartReplicationTaskRequest::StartReplicationTaskRequest(const StartReplicationTaskRequest &other)
     : DatabaseMigrationServiceRequest(new StartReplicationTaskRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ StartReplicationTaskRequest::StartReplicationTaskRequest(const StartReplicationT
 }
 
 /*!
- * @brief  Constructs a new StartReplicationTaskRequest object.
+ * Constructs a StartReplicationTaskRequest object.
  */
 StartReplicationTaskRequest::StartReplicationTaskRequest()
     : DatabaseMigrationServiceRequest(new StartReplicationTaskRequestPrivate(DatabaseMigrationServiceRequest::StartReplicationTaskAction, this))
@@ -77,14 +74,9 @@ bool StartReplicationTaskRequest::isValid() const
 
 
 /*!
- * @brief  Construct an StartReplicationTaskResponse object.
+ * Returns a StartReplicationTaskResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An StartReplicationTaskResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DatabaseMigrationServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * StartReplicationTaskRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * StartReplicationTaskRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::DatabaseMigrationService::StartReplicationTaskRequestPrivate
+ * \brief The StartReplicationTaskRequestPrivate class provides private implementation for StartReplicationTaskRequest.
+ * \internal
  *
- * @class  StartReplicationTaskRequestPrivate
- *
- * @brief  Private implementation for StartReplicationTaskRequest.
+ * \inmodule QtAwsDatabaseMigrationService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new StartReplicationTaskRequestPrivate object.
- *
- * @param  action  DatabaseMigrationService action being performed.
- * @param  q       Pointer to this object's public StartReplicationTaskRequest instance.
+ * Constructs a StartReplicationTaskRequestPrivate object for DatabaseMigrationService \a action with,
+ * public implementation \a q.
  */
 StartReplicationTaskRequestPrivate::StartReplicationTaskRequestPrivate(
     const DatabaseMigrationServiceRequest::Action action, StartReplicationTaskRequest * const q)
@@ -115,15 +104,10 @@ StartReplicationTaskRequestPrivate::StartReplicationTaskRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StartReplicationTaskRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the StartReplicationTaskRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public StartReplicationTaskRequest instance.
  */
 StartReplicationTaskRequestPrivate::StartReplicationTaskRequestPrivate(
     const StartReplicationTaskRequestPrivate &other, StartReplicationTaskRequest * const q)

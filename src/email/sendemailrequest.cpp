@@ -27,10 +27,9 @@ namespace SES {
 
 /*!
  * \class QtAws::SES::SendEmailRequest
- *
  * \brief The SendEmailRequest class provides an interface for SES SendEmail requests.
  *
- * \ingroup SES
+ * \inmodule QtAwsSES
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -48,9 +47,7 @@ namespace SES {
  */
 
 /*!
- * @brief  Constructs a new SendEmailRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 SendEmailRequest::SendEmailRequest(const SendEmailRequest &other)
     : SESRequest(new SendEmailRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ SendEmailRequest::SendEmailRequest(const SendEmailRequest &other)
 }
 
 /*!
- * @brief  Constructs a new SendEmailRequest object.
+ * Constructs a SendEmailRequest object.
  */
 SendEmailRequest::SendEmailRequest()
     : SESRequest(new SendEmailRequestPrivate(SESRequest::SendEmailAction, this))
@@ -77,14 +74,9 @@ bool SendEmailRequest::isValid() const
 
 
 /*!
- * @brief  Construct an SendEmailResponse object.
+ * Returns a SendEmailResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An SendEmailResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SESClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * SendEmailRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * SendEmailRequest::response(QNetworkReply * co
 }
 
 /*!
- * @internal
+ * \class QtAws::SES::SendEmailRequestPrivate
+ * \brief The SendEmailRequestPrivate class provides private implementation for SendEmailRequest.
+ * \internal
  *
- * @class  SendEmailRequestPrivate
- *
- * @brief  Private implementation for SendEmailRequest.
+ * \inmodule QtAwsSES
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new SendEmailRequestPrivate object.
- *
- * @param  action  SES action being performed.
- * @param  q       Pointer to this object's public SendEmailRequest instance.
+ * Constructs a SendEmailRequestPrivate object for SES \a action with,
+ * public implementation \a q.
  */
 SendEmailRequestPrivate::SendEmailRequestPrivate(
     const SESRequest::Action action, SendEmailRequest * const q)
@@ -115,15 +104,10 @@ SendEmailRequestPrivate::SendEmailRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SendEmailRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the SendEmailRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public SendEmailRequest instance.
  */
 SendEmailRequestPrivate::SendEmailRequestPrivate(
     const SendEmailRequestPrivate &other, SendEmailRequest * const q)

@@ -27,10 +27,9 @@ namespace WAF {
 
 /*!
  * \class QtAws::WAF::DeleteRegexPatternSetRequest
- *
  * \brief The DeleteRegexPatternSetRequest class provides an interface for WAF DeleteRegexPatternSet requests.
  *
- * \ingroup WAF
+ * \inmodule QtAwsWAF
  *
  *  This is the <i>AWS WAF API Reference</i> for using AWS WAF with Amazon CloudFront. The AWS WAF actions and data types
  *  listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data
@@ -42,9 +41,7 @@ namespace WAF {
  */
 
 /*!
- * @brief  Constructs a new DeleteRegexPatternSetRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteRegexPatternSetRequest::DeleteRegexPatternSetRequest(const DeleteRegexPatternSetRequest &other)
     : WAFRequest(new DeleteRegexPatternSetRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ DeleteRegexPatternSetRequest::DeleteRegexPatternSetRequest(const DeleteRegexPatt
 }
 
 /*!
- * @brief  Constructs a new DeleteRegexPatternSetRequest object.
+ * Constructs a DeleteRegexPatternSetRequest object.
  */
 DeleteRegexPatternSetRequest::DeleteRegexPatternSetRequest()
     : WAFRequest(new DeleteRegexPatternSetRequestPrivate(WAFRequest::DeleteRegexPatternSetAction, this))
@@ -71,14 +68,9 @@ bool DeleteRegexPatternSetRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteRegexPatternSetResponse object.
+ * Returns a DeleteRegexPatternSetResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteRegexPatternSetResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WAFClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteRegexPatternSetRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * DeleteRegexPatternSetRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::WAF::DeleteRegexPatternSetRequestPrivate
+ * \brief The DeleteRegexPatternSetRequestPrivate class provides private implementation for DeleteRegexPatternSetRequest.
+ * \internal
  *
- * @class  DeleteRegexPatternSetRequestPrivate
- *
- * @brief  Private implementation for DeleteRegexPatternSetRequest.
+ * \inmodule QtAwsWAF
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteRegexPatternSetRequestPrivate object.
- *
- * @param  action  WAF action being performed.
- * @param  q       Pointer to this object's public DeleteRegexPatternSetRequest instance.
+ * Constructs a DeleteRegexPatternSetRequestPrivate object for WAF \a action with,
+ * public implementation \a q.
  */
 DeleteRegexPatternSetRequestPrivate::DeleteRegexPatternSetRequestPrivate(
     const WAFRequest::Action action, DeleteRegexPatternSetRequest * const q)
@@ -109,15 +98,10 @@ DeleteRegexPatternSetRequestPrivate::DeleteRegexPatternSetRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteRegexPatternSetRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteRegexPatternSetRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteRegexPatternSetRequest instance.
  */
 DeleteRegexPatternSetRequestPrivate::DeleteRegexPatternSetRequestPrivate(
     const DeleteRegexPatternSetRequestPrivate &other, DeleteRegexPatternSetRequest * const q)

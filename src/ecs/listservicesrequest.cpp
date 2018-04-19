@@ -27,10 +27,9 @@ namespace ECS {
 
 /*!
  * \class QtAws::ECS::ListServicesRequest
- *
  * \brief The ListServicesRequest class provides an interface for ECS ListServices requests.
  *
- * \ingroup ECS
+ * \inmodule QtAwsECS
  *
  *  Amazon Elastic Container Service (Amazon ECS) is a highly scalable, fast, container management service that makes it
  *  easy to run, stop, and manage Docker containers on a cluster. You can host your cluster on a serverless infrastructure
@@ -54,9 +53,7 @@ namespace ECS {
  */
 
 /*!
- * @brief  Constructs a new ListServicesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListServicesRequest::ListServicesRequest(const ListServicesRequest &other)
     : ECSRequest(new ListServicesRequestPrivate(*other.d_func(), this))
@@ -65,7 +62,7 @@ ListServicesRequest::ListServicesRequest(const ListServicesRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ListServicesRequest object.
+ * Constructs a ListServicesRequest object.
  */
 ListServicesRequest::ListServicesRequest()
     : ECSRequest(new ListServicesRequestPrivate(ECSRequest::ListServicesAction, this))
@@ -83,14 +80,9 @@ bool ListServicesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListServicesResponse object.
+ * Returns a ListServicesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListServicesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ECSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListServicesRequest::response(QNetworkReply * const reply) const
 {
@@ -98,20 +90,17 @@ QtAws::Core::AwsAbstractResponse * ListServicesRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::ECS::ListServicesRequestPrivate
+ * \brief The ListServicesRequestPrivate class provides private implementation for ListServicesRequest.
+ * \internal
  *
- * @class  ListServicesRequestPrivate
- *
- * @brief  Private implementation for ListServicesRequest.
+ * \inmodule QtAwsECS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListServicesRequestPrivate object.
- *
- * @param  action  ECS action being performed.
- * @param  q       Pointer to this object's public ListServicesRequest instance.
+ * Constructs a ListServicesRequestPrivate object for ECS \a action with,
+ * public implementation \a q.
  */
 ListServicesRequestPrivate::ListServicesRequestPrivate(
     const ECSRequest::Action action, ListServicesRequest * const q)
@@ -121,15 +110,10 @@ ListServicesRequestPrivate::ListServicesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListServicesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListServicesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListServicesRequest instance.
  */
 ListServicesRequestPrivate::ListServicesRequestPrivate(
     const ListServicesRequestPrivate &other, ListServicesRequest * const q)

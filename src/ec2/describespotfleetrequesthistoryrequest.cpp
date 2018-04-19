@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DescribeSpotFleetRequestHistoryRequest
- *
  * \brief The DescribeSpotFleetRequestHistoryRequest class provides an interface for EC2 DescribeSpotFleetRequestHistory requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DescribeSpotFleetRequestHistoryRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeSpotFleetRequestHistoryRequest::DescribeSpotFleetRequestHistoryRequest(const DescribeSpotFleetRequestHistoryRequest &other)
     : EC2Request(new DescribeSpotFleetRequestHistoryRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ DescribeSpotFleetRequestHistoryRequest::DescribeSpotFleetRequestHistoryRequest(c
 }
 
 /*!
- * @brief  Constructs a new DescribeSpotFleetRequestHistoryRequest object.
+ * Constructs a DescribeSpotFleetRequestHistoryRequest object.
  */
 DescribeSpotFleetRequestHistoryRequest::DescribeSpotFleetRequestHistoryRequest()
     : EC2Request(new DescribeSpotFleetRequestHistoryRequestPrivate(EC2Request::DescribeSpotFleetRequestHistoryAction, this))
@@ -70,14 +67,9 @@ bool DescribeSpotFleetRequestHistoryRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeSpotFleetRequestHistoryResponse object.
+ * Returns a DescribeSpotFleetRequestHistoryResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeSpotFleetRequestHistoryResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeSpotFleetRequestHistoryRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * DescribeSpotFleetRequestHistoryRequest::respo
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::DescribeSpotFleetRequestHistoryRequestPrivate
+ * \brief The DescribeSpotFleetRequestHistoryRequestPrivate class provides private implementation for DescribeSpotFleetRequestHistoryRequest.
+ * \internal
  *
- * @class  DescribeSpotFleetRequestHistoryRequestPrivate
- *
- * @brief  Private implementation for DescribeSpotFleetRequestHistoryRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeSpotFleetRequestHistoryRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public DescribeSpotFleetRequestHistoryRequest instance.
+ * Constructs a DescribeSpotFleetRequestHistoryRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 DescribeSpotFleetRequestHistoryRequestPrivate::DescribeSpotFleetRequestHistoryRequestPrivate(
     const EC2Request::Action action, DescribeSpotFleetRequestHistoryRequest * const q)
@@ -108,15 +97,10 @@ DescribeSpotFleetRequestHistoryRequestPrivate::DescribeSpotFleetRequestHistoryRe
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeSpotFleetRequestHistoryRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeSpotFleetRequestHistoryRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeSpotFleetRequestHistoryRequest instance.
  */
 DescribeSpotFleetRequestHistoryRequestPrivate::DescribeSpotFleetRequestHistoryRequestPrivate(
     const DescribeSpotFleetRequestHistoryRequestPrivate &other, DescribeSpotFleetRequestHistoryRequest * const q)

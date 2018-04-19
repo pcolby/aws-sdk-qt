@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::CreateSecurityGroupRequest
- *
  * \brief The CreateSecurityGroupRequest class provides an interface for EC2 CreateSecurityGroup requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new CreateSecurityGroupRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateSecurityGroupRequest::CreateSecurityGroupRequest(const CreateSecurityGroupRequest &other)
     : EC2Request(new CreateSecurityGroupRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ CreateSecurityGroupRequest::CreateSecurityGroupRequest(const CreateSecurityGroup
 }
 
 /*!
- * @brief  Constructs a new CreateSecurityGroupRequest object.
+ * Constructs a CreateSecurityGroupRequest object.
  */
 CreateSecurityGroupRequest::CreateSecurityGroupRequest()
     : EC2Request(new CreateSecurityGroupRequestPrivate(EC2Request::CreateSecurityGroupAction, this))
@@ -70,14 +67,9 @@ bool CreateSecurityGroupRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateSecurityGroupResponse object.
+ * Returns a CreateSecurityGroupResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateSecurityGroupResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateSecurityGroupRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * CreateSecurityGroupRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::CreateSecurityGroupRequestPrivate
+ * \brief The CreateSecurityGroupRequestPrivate class provides private implementation for CreateSecurityGroupRequest.
+ * \internal
  *
- * @class  CreateSecurityGroupRequestPrivate
- *
- * @brief  Private implementation for CreateSecurityGroupRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateSecurityGroupRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public CreateSecurityGroupRequest instance.
+ * Constructs a CreateSecurityGroupRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 CreateSecurityGroupRequestPrivate::CreateSecurityGroupRequestPrivate(
     const EC2Request::Action action, CreateSecurityGroupRequest * const q)
@@ -108,15 +97,10 @@ CreateSecurityGroupRequestPrivate::CreateSecurityGroupRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateSecurityGroupRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateSecurityGroupRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateSecurityGroupRequest instance.
  */
 CreateSecurityGroupRequestPrivate::CreateSecurityGroupRequestPrivate(
     const CreateSecurityGroupRequestPrivate &other, CreateSecurityGroupRequest * const q)

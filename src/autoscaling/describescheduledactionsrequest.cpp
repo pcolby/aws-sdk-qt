@@ -27,10 +27,9 @@ namespace AutoScaling {
 
 /*!
  * \class QtAws::AutoScaling::DescribeScheduledActionsRequest
- *
  * \brief The DescribeScheduledActionsRequest class provides an interface for AutoScaling DescribeScheduledActions requests.
  *
- * \ingroup AutoScaling
+ * \inmodule QtAwsAutoScaling
  *
  *  <fullname>Amazon EC2 Auto Scaling</fullname>
  * 
@@ -42,9 +41,7 @@ namespace AutoScaling {
  */
 
 /*!
- * @brief  Constructs a new DescribeScheduledActionsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeScheduledActionsRequest::DescribeScheduledActionsRequest(const DescribeScheduledActionsRequest &other)
     : AutoScalingRequest(new DescribeScheduledActionsRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ DescribeScheduledActionsRequest::DescribeScheduledActionsRequest(const DescribeS
 }
 
 /*!
- * @brief  Constructs a new DescribeScheduledActionsRequest object.
+ * Constructs a DescribeScheduledActionsRequest object.
  */
 DescribeScheduledActionsRequest::DescribeScheduledActionsRequest()
     : AutoScalingRequest(new DescribeScheduledActionsRequestPrivate(AutoScalingRequest::DescribeScheduledActionsAction, this))
@@ -71,14 +68,9 @@ bool DescribeScheduledActionsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeScheduledActionsResponse object.
+ * Returns a DescribeScheduledActionsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeScheduledActionsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AutoScalingClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeScheduledActionsRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * DescribeScheduledActionsRequest::response(QNe
 }
 
 /*!
- * @internal
+ * \class QtAws::AutoScaling::DescribeScheduledActionsRequestPrivate
+ * \brief The DescribeScheduledActionsRequestPrivate class provides private implementation for DescribeScheduledActionsRequest.
+ * \internal
  *
- * @class  DescribeScheduledActionsRequestPrivate
- *
- * @brief  Private implementation for DescribeScheduledActionsRequest.
+ * \inmodule QtAwsAutoScaling
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeScheduledActionsRequestPrivate object.
- *
- * @param  action  AutoScaling action being performed.
- * @param  q       Pointer to this object's public DescribeScheduledActionsRequest instance.
+ * Constructs a DescribeScheduledActionsRequestPrivate object for AutoScaling \a action with,
+ * public implementation \a q.
  */
 DescribeScheduledActionsRequestPrivate::DescribeScheduledActionsRequestPrivate(
     const AutoScalingRequest::Action action, DescribeScheduledActionsRequest * const q)
@@ -109,15 +98,10 @@ DescribeScheduledActionsRequestPrivate::DescribeScheduledActionsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeScheduledActionsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeScheduledActionsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeScheduledActionsRequest instance.
  */
 DescribeScheduledActionsRequestPrivate::DescribeScheduledActionsRequestPrivate(
     const DescribeScheduledActionsRequestPrivate &other, DescribeScheduledActionsRequest * const q)

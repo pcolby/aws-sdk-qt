@@ -27,10 +27,9 @@ namespace CodeBuild {
 
 /*!
  * \class QtAws::CodeBuild::DeleteProjectRequest
- *
  * \brief The DeleteProjectRequest class provides an interface for CodeBuild DeleteProject requests.
  *
- * \ingroup CodeBuild
+ * \inmodule QtAwsCodeBuild
  *
  *  <fullname>AWS CodeBuild</fullname>
  * 
@@ -117,9 +116,7 @@ namespace CodeBuild {
  */
 
 /*!
- * @brief  Constructs a new DeleteProjectRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteProjectRequest::DeleteProjectRequest(const DeleteProjectRequest &other)
     : CodeBuildRequest(new DeleteProjectRequestPrivate(*other.d_func(), this))
@@ -128,7 +125,7 @@ DeleteProjectRequest::DeleteProjectRequest(const DeleteProjectRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DeleteProjectRequest object.
+ * Constructs a DeleteProjectRequest object.
  */
 DeleteProjectRequest::DeleteProjectRequest()
     : CodeBuildRequest(new DeleteProjectRequestPrivate(CodeBuildRequest::DeleteProjectAction, this))
@@ -146,14 +143,9 @@ bool DeleteProjectRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteProjectResponse object.
+ * Returns a DeleteProjectResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteProjectResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CodeBuildClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteProjectRequest::response(QNetworkReply * const reply) const
 {
@@ -161,20 +153,17 @@ QtAws::Core::AwsAbstractResponse * DeleteProjectRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::CodeBuild::DeleteProjectRequestPrivate
+ * \brief The DeleteProjectRequestPrivate class provides private implementation for DeleteProjectRequest.
+ * \internal
  *
- * @class  DeleteProjectRequestPrivate
- *
- * @brief  Private implementation for DeleteProjectRequest.
+ * \inmodule QtAwsCodeBuild
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteProjectRequestPrivate object.
- *
- * @param  action  CodeBuild action being performed.
- * @param  q       Pointer to this object's public DeleteProjectRequest instance.
+ * Constructs a DeleteProjectRequestPrivate object for CodeBuild \a action with,
+ * public implementation \a q.
  */
 DeleteProjectRequestPrivate::DeleteProjectRequestPrivate(
     const CodeBuildRequest::Action action, DeleteProjectRequest * const q)
@@ -184,15 +173,10 @@ DeleteProjectRequestPrivate::DeleteProjectRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteProjectRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteProjectRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteProjectRequest instance.
  */
 DeleteProjectRequestPrivate::DeleteProjectRequestPrivate(
     const DeleteProjectRequestPrivate &other, DeleteProjectRequest * const q)

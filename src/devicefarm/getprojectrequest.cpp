@@ -27,10 +27,9 @@ namespace DeviceFarm {
 
 /*!
  * \class QtAws::DeviceFarm::GetProjectRequest
- *
  * \brief The GetProjectRequest class provides an interface for DeviceFarm GetProject requests.
  *
- * \ingroup DeviceFarm
+ * \inmodule QtAwsDeviceFarm
  *
  *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
  *  phones, tablets, and other devices in the
@@ -39,9 +38,7 @@ namespace DeviceFarm {
  */
 
 /*!
- * @brief  Constructs a new GetProjectRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetProjectRequest::GetProjectRequest(const GetProjectRequest &other)
     : DeviceFarmRequest(new GetProjectRequestPrivate(*other.d_func(), this))
@@ -50,7 +47,7 @@ GetProjectRequest::GetProjectRequest(const GetProjectRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetProjectRequest object.
+ * Constructs a GetProjectRequest object.
  */
 GetProjectRequest::GetProjectRequest()
     : DeviceFarmRequest(new GetProjectRequestPrivate(DeviceFarmRequest::GetProjectAction, this))
@@ -68,14 +65,9 @@ bool GetProjectRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetProjectResponse object.
+ * Returns a GetProjectResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetProjectResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DeviceFarmClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetProjectRequest::response(QNetworkReply * const reply) const
 {
@@ -83,20 +75,17 @@ QtAws::Core::AwsAbstractResponse * GetProjectRequest::response(QNetworkReply * c
 }
 
 /*!
- * @internal
+ * \class QtAws::DeviceFarm::GetProjectRequestPrivate
+ * \brief The GetProjectRequestPrivate class provides private implementation for GetProjectRequest.
+ * \internal
  *
- * @class  GetProjectRequestPrivate
- *
- * @brief  Private implementation for GetProjectRequest.
+ * \inmodule QtAwsDeviceFarm
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetProjectRequestPrivate object.
- *
- * @param  action  DeviceFarm action being performed.
- * @param  q       Pointer to this object's public GetProjectRequest instance.
+ * Constructs a GetProjectRequestPrivate object for DeviceFarm \a action with,
+ * public implementation \a q.
  */
 GetProjectRequestPrivate::GetProjectRequestPrivate(
     const DeviceFarmRequest::Action action, GetProjectRequest * const q)
@@ -106,15 +95,10 @@ GetProjectRequestPrivate::GetProjectRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetProjectRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetProjectRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetProjectRequest instance.
  */
 GetProjectRequestPrivate::GetProjectRequestPrivate(
     const GetProjectRequestPrivate &other, GetProjectRequest * const q)

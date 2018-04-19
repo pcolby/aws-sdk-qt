@@ -27,10 +27,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::GetRegistrationCodeRequest
- *
  * \brief The GetRegistrationCodeRequest class provides an interface for IoT GetRegistrationCode requests.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -48,9 +47,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new GetRegistrationCodeRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetRegistrationCodeRequest::GetRegistrationCodeRequest(const GetRegistrationCodeRequest &other)
     : IoTRequest(new GetRegistrationCodeRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ GetRegistrationCodeRequest::GetRegistrationCodeRequest(const GetRegistrationCode
 }
 
 /*!
- * @brief  Constructs a new GetRegistrationCodeRequest object.
+ * Constructs a GetRegistrationCodeRequest object.
  */
 GetRegistrationCodeRequest::GetRegistrationCodeRequest()
     : IoTRequest(new GetRegistrationCodeRequestPrivate(IoTRequest::GetRegistrationCodeAction, this))
@@ -77,14 +74,9 @@ bool GetRegistrationCodeRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetRegistrationCodeResponse object.
+ * Returns a GetRegistrationCodeResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetRegistrationCodeResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IoTClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetRegistrationCodeRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * GetRegistrationCodeRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::IoT::GetRegistrationCodeRequestPrivate
+ * \brief The GetRegistrationCodeRequestPrivate class provides private implementation for GetRegistrationCodeRequest.
+ * \internal
  *
- * @class  GetRegistrationCodeRequestPrivate
- *
- * @brief  Private implementation for GetRegistrationCodeRequest.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetRegistrationCodeRequestPrivate object.
- *
- * @param  action  IoT action being performed.
- * @param  q       Pointer to this object's public GetRegistrationCodeRequest instance.
+ * Constructs a GetRegistrationCodeRequestPrivate object for IoT \a action with,
+ * public implementation \a q.
  */
 GetRegistrationCodeRequestPrivate::GetRegistrationCodeRequestPrivate(
     const IoTRequest::Action action, GetRegistrationCodeRequest * const q)
@@ -115,15 +104,10 @@ GetRegistrationCodeRequestPrivate::GetRegistrationCodeRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetRegistrationCodeRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetRegistrationCodeRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetRegistrationCodeRequest instance.
  */
 GetRegistrationCodeRequestPrivate::GetRegistrationCodeRequestPrivate(
     const GetRegistrationCodeRequestPrivate &other, GetRegistrationCodeRequest * const q)

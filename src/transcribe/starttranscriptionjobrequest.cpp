@@ -27,10 +27,9 @@ namespace TranscribeService {
 
 /*!
  * \class QtAws::TranscribeService::StartTranscriptionJobRequest
- *
  * \brief The StartTranscriptionJobRequest class provides an interface for TranscribeService StartTranscriptionJob requests.
  *
- * \ingroup TranscribeService
+ * \inmodule QtAwsTranscribeService
  *
  *  Operations and objects for transcribing speech to
  *
@@ -38,9 +37,7 @@ namespace TranscribeService {
  */
 
 /*!
- * @brief  Constructs a new StartTranscriptionJobRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 StartTranscriptionJobRequest::StartTranscriptionJobRequest(const StartTranscriptionJobRequest &other)
     : TranscribeServiceRequest(new StartTranscriptionJobRequestPrivate(*other.d_func(), this))
@@ -49,7 +46,7 @@ StartTranscriptionJobRequest::StartTranscriptionJobRequest(const StartTranscript
 }
 
 /*!
- * @brief  Constructs a new StartTranscriptionJobRequest object.
+ * Constructs a StartTranscriptionJobRequest object.
  */
 StartTranscriptionJobRequest::StartTranscriptionJobRequest()
     : TranscribeServiceRequest(new StartTranscriptionJobRequestPrivate(TranscribeServiceRequest::StartTranscriptionJobAction, this))
@@ -67,14 +64,9 @@ bool StartTranscriptionJobRequest::isValid() const
 
 
 /*!
- * @brief  Construct an StartTranscriptionJobResponse object.
+ * Returns a StartTranscriptionJobResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An StartTranscriptionJobResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  TranscribeServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * StartTranscriptionJobRequest::response(QNetworkReply * const reply) const
 {
@@ -82,20 +74,17 @@ QtAws::Core::AwsAbstractResponse * StartTranscriptionJobRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::TranscribeService::StartTranscriptionJobRequestPrivate
+ * \brief The StartTranscriptionJobRequestPrivate class provides private implementation for StartTranscriptionJobRequest.
+ * \internal
  *
- * @class  StartTranscriptionJobRequestPrivate
- *
- * @brief  Private implementation for StartTranscriptionJobRequest.
+ * \inmodule QtAwsTranscribeService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new StartTranscriptionJobRequestPrivate object.
- *
- * @param  action  TranscribeService action being performed.
- * @param  q       Pointer to this object's public StartTranscriptionJobRequest instance.
+ * Constructs a StartTranscriptionJobRequestPrivate object for TranscribeService \a action with,
+ * public implementation \a q.
  */
 StartTranscriptionJobRequestPrivate::StartTranscriptionJobRequestPrivate(
     const TranscribeServiceRequest::Action action, StartTranscriptionJobRequest * const q)
@@ -105,15 +94,10 @@ StartTranscriptionJobRequestPrivate::StartTranscriptionJobRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StartTranscriptionJobRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the StartTranscriptionJobRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public StartTranscriptionJobRequest instance.
  */
 StartTranscriptionJobRequestPrivate::StartTranscriptionJobRequestPrivate(
     const StartTranscriptionJobRequestPrivate &other, StartTranscriptionJobRequest * const q)

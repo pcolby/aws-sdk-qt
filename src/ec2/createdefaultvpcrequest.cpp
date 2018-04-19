@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::CreateDefaultVpcRequest
- *
  * \brief The CreateDefaultVpcRequest class provides an interface for EC2 CreateDefaultVpc requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new CreateDefaultVpcRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateDefaultVpcRequest::CreateDefaultVpcRequest(const CreateDefaultVpcRequest &other)
     : EC2Request(new CreateDefaultVpcRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ CreateDefaultVpcRequest::CreateDefaultVpcRequest(const CreateDefaultVpcRequest &
 }
 
 /*!
- * @brief  Constructs a new CreateDefaultVpcRequest object.
+ * Constructs a CreateDefaultVpcRequest object.
  */
 CreateDefaultVpcRequest::CreateDefaultVpcRequest()
     : EC2Request(new CreateDefaultVpcRequestPrivate(EC2Request::CreateDefaultVpcAction, this))
@@ -70,14 +67,9 @@ bool CreateDefaultVpcRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateDefaultVpcResponse object.
+ * Returns a CreateDefaultVpcResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateDefaultVpcResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateDefaultVpcRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * CreateDefaultVpcRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::CreateDefaultVpcRequestPrivate
+ * \brief The CreateDefaultVpcRequestPrivate class provides private implementation for CreateDefaultVpcRequest.
+ * \internal
  *
- * @class  CreateDefaultVpcRequestPrivate
- *
- * @brief  Private implementation for CreateDefaultVpcRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateDefaultVpcRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public CreateDefaultVpcRequest instance.
+ * Constructs a CreateDefaultVpcRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 CreateDefaultVpcRequestPrivate::CreateDefaultVpcRequestPrivate(
     const EC2Request::Action action, CreateDefaultVpcRequest * const q)
@@ -108,15 +97,10 @@ CreateDefaultVpcRequestPrivate::CreateDefaultVpcRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateDefaultVpcRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateDefaultVpcRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateDefaultVpcRequest instance.
  */
 CreateDefaultVpcRequestPrivate::CreateDefaultVpcRequestPrivate(
     const CreateDefaultVpcRequestPrivate &other, CreateDefaultVpcRequest * const q)

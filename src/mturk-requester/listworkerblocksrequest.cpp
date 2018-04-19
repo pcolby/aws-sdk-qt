@@ -27,19 +27,16 @@ namespace MTurk {
 
 /*!
  * \class QtAws::MTurk::ListWorkerBlocksRequest
- *
  * \brief The ListWorkerBlocksRequest class provides an interface for MTurk ListWorkerBlocks requests.
  *
- * \ingroup MTurk
+ * \inmodule QtAwsMTurk
  *
  *
  * \sa MTurkClient::listWorkerBlocks
  */
 
 /*!
- * @brief  Constructs a new ListWorkerBlocksRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListWorkerBlocksRequest::ListWorkerBlocksRequest(const ListWorkerBlocksRequest &other)
     : MTurkRequest(new ListWorkerBlocksRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ ListWorkerBlocksRequest::ListWorkerBlocksRequest(const ListWorkerBlocksRequest &
 }
 
 /*!
- * @brief  Constructs a new ListWorkerBlocksRequest object.
+ * Constructs a ListWorkerBlocksRequest object.
  */
 ListWorkerBlocksRequest::ListWorkerBlocksRequest()
     : MTurkRequest(new ListWorkerBlocksRequestPrivate(MTurkRequest::ListWorkerBlocksAction, this))
@@ -66,14 +63,9 @@ bool ListWorkerBlocksRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListWorkerBlocksResponse object.
+ * Returns a ListWorkerBlocksResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListWorkerBlocksResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MTurkClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListWorkerBlocksRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * ListWorkerBlocksRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::MTurk::ListWorkerBlocksRequestPrivate
+ * \brief The ListWorkerBlocksRequestPrivate class provides private implementation for ListWorkerBlocksRequest.
+ * \internal
  *
- * @class  ListWorkerBlocksRequestPrivate
- *
- * @brief  Private implementation for ListWorkerBlocksRequest.
+ * \inmodule QtAwsMTurk
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListWorkerBlocksRequestPrivate object.
- *
- * @param  action  MTurk action being performed.
- * @param  q       Pointer to this object's public ListWorkerBlocksRequest instance.
+ * Constructs a ListWorkerBlocksRequestPrivate object for MTurk \a action with,
+ * public implementation \a q.
  */
 ListWorkerBlocksRequestPrivate::ListWorkerBlocksRequestPrivate(
     const MTurkRequest::Action action, ListWorkerBlocksRequest * const q)
@@ -104,15 +93,10 @@ ListWorkerBlocksRequestPrivate::ListWorkerBlocksRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListWorkerBlocksRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListWorkerBlocksRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListWorkerBlocksRequest instance.
  */
 ListWorkerBlocksRequestPrivate::ListWorkerBlocksRequestPrivate(
     const ListWorkerBlocksRequestPrivate &other, ListWorkerBlocksRequest * const q)

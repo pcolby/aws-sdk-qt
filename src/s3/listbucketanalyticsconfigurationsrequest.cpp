@@ -27,19 +27,16 @@ namespace S3 {
 
 /*!
  * \class QtAws::S3::ListBucketAnalyticsConfigurationsRequest
- *
  * \brief The ListBucketAnalyticsConfigurationsRequest class provides an interface for S3 ListBucketAnalyticsConfigurations requests.
  *
- * \ingroup S3
+ * \inmodule QtAwsS3
  *
  *
  * \sa S3Client::listBucketAnalyticsConfigurations
  */
 
 /*!
- * @brief  Constructs a new ListBucketAnalyticsConfigurationsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListBucketAnalyticsConfigurationsRequest::ListBucketAnalyticsConfigurationsRequest(const ListBucketAnalyticsConfigurationsRequest &other)
     : S3Request(new ListBucketAnalyticsConfigurationsRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ ListBucketAnalyticsConfigurationsRequest::ListBucketAnalyticsConfigurationsReque
 }
 
 /*!
- * @brief  Constructs a new ListBucketAnalyticsConfigurationsRequest object.
+ * Constructs a ListBucketAnalyticsConfigurationsRequest object.
  */
 ListBucketAnalyticsConfigurationsRequest::ListBucketAnalyticsConfigurationsRequest()
     : S3Request(new ListBucketAnalyticsConfigurationsRequestPrivate(S3Request::ListBucketAnalyticsConfigurationsAction, this))
@@ -66,14 +63,9 @@ bool ListBucketAnalyticsConfigurationsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListBucketAnalyticsConfigurationsResponse object.
+ * Returns a ListBucketAnalyticsConfigurationsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListBucketAnalyticsConfigurationsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  S3Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListBucketAnalyticsConfigurationsRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * ListBucketAnalyticsConfigurationsRequest::res
 }
 
 /*!
- * @internal
+ * \class QtAws::S3::ListBucketAnalyticsConfigurationsRequestPrivate
+ * \brief The ListBucketAnalyticsConfigurationsRequestPrivate class provides private implementation for ListBucketAnalyticsConfigurationsRequest.
+ * \internal
  *
- * @class  ListBucketAnalyticsConfigurationsRequestPrivate
- *
- * @brief  Private implementation for ListBucketAnalyticsConfigurationsRequest.
+ * \inmodule QtAwsS3
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListBucketAnalyticsConfigurationsRequestPrivate object.
- *
- * @param  action  S3 action being performed.
- * @param  q       Pointer to this object's public ListBucketAnalyticsConfigurationsRequest instance.
+ * Constructs a ListBucketAnalyticsConfigurationsRequestPrivate object for S3 \a action with,
+ * public implementation \a q.
  */
 ListBucketAnalyticsConfigurationsRequestPrivate::ListBucketAnalyticsConfigurationsRequestPrivate(
     const S3Request::Action action, ListBucketAnalyticsConfigurationsRequest * const q)
@@ -104,15 +93,10 @@ ListBucketAnalyticsConfigurationsRequestPrivate::ListBucketAnalyticsConfiguratio
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListBucketAnalyticsConfigurationsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListBucketAnalyticsConfigurationsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListBucketAnalyticsConfigurationsRequest instance.
  */
 ListBucketAnalyticsConfigurationsRequestPrivate::ListBucketAnalyticsConfigurationsRequestPrivate(
     const ListBucketAnalyticsConfigurationsRequestPrivate &other, ListBucketAnalyticsConfigurationsRequest * const q)

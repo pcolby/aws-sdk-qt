@@ -27,10 +27,9 @@ namespace DynamoDB {
 
 /*!
  * \class QtAws::DynamoDB::GetItemRequest
- *
  * \brief The GetItemRequest class provides an interface for DynamoDB GetItem requests.
  *
- * \ingroup DynamoDB
+ * \inmodule QtAwsDynamoDB
  *
  *  <fullname>Amazon DynamoDB</fullname>
  * 
@@ -56,9 +55,7 @@ namespace DynamoDB {
  */
 
 /*!
- * @brief  Constructs a new GetItemRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetItemRequest::GetItemRequest(const GetItemRequest &other)
     : DynamoDBRequest(new GetItemRequestPrivate(*other.d_func(), this))
@@ -67,7 +64,7 @@ GetItemRequest::GetItemRequest(const GetItemRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetItemRequest object.
+ * Constructs a GetItemRequest object.
  */
 GetItemRequest::GetItemRequest()
     : DynamoDBRequest(new GetItemRequestPrivate(DynamoDBRequest::GetItemAction, this))
@@ -85,14 +82,9 @@ bool GetItemRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetItemResponse object.
+ * Returns a GetItemResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetItemResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DynamoDBClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetItemRequest::response(QNetworkReply * const reply) const
 {
@@ -100,20 +92,17 @@ QtAws::Core::AwsAbstractResponse * GetItemRequest::response(QNetworkReply * cons
 }
 
 /*!
- * @internal
+ * \class QtAws::DynamoDB::GetItemRequestPrivate
+ * \brief The GetItemRequestPrivate class provides private implementation for GetItemRequest.
+ * \internal
  *
- * @class  GetItemRequestPrivate
- *
- * @brief  Private implementation for GetItemRequest.
+ * \inmodule QtAwsDynamoDB
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetItemRequestPrivate object.
- *
- * @param  action  DynamoDB action being performed.
- * @param  q       Pointer to this object's public GetItemRequest instance.
+ * Constructs a GetItemRequestPrivate object for DynamoDB \a action with,
+ * public implementation \a q.
  */
 GetItemRequestPrivate::GetItemRequestPrivate(
     const DynamoDBRequest::Action action, GetItemRequest * const q)
@@ -123,15 +112,10 @@ GetItemRequestPrivate::GetItemRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetItemRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetItemRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetItemRequest instance.
  */
 GetItemRequestPrivate::GetItemRequestPrivate(
     const GetItemRequestPrivate &other, GetItemRequest * const q)

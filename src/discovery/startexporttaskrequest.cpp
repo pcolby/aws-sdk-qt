@@ -27,10 +27,9 @@ namespace ApplicationDiscoveryService {
 
 /*!
  * \class QtAws::ApplicationDiscoveryService::StartExportTaskRequest
- *
  * \brief The StartExportTaskRequest class provides an interface for ApplicationDiscoveryService StartExportTask requests.
  *
- * \ingroup ApplicationDiscoveryService
+ * \inmodule QtAwsApplicationDiscoveryService
  *
  *  <fullname>AWS Application Discovery Service</fullname>
  * 
@@ -101,9 +100,7 @@ namespace ApplicationDiscoveryService {
  */
 
 /*!
- * @brief  Constructs a new StartExportTaskRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 StartExportTaskRequest::StartExportTaskRequest(const StartExportTaskRequest &other)
     : ApplicationDiscoveryServiceRequest(new StartExportTaskRequestPrivate(*other.d_func(), this))
@@ -112,7 +109,7 @@ StartExportTaskRequest::StartExportTaskRequest(const StartExportTaskRequest &oth
 }
 
 /*!
- * @brief  Constructs a new StartExportTaskRequest object.
+ * Constructs a StartExportTaskRequest object.
  */
 StartExportTaskRequest::StartExportTaskRequest()
     : ApplicationDiscoveryServiceRequest(new StartExportTaskRequestPrivate(ApplicationDiscoveryServiceRequest::StartExportTaskAction, this))
@@ -130,14 +127,9 @@ bool StartExportTaskRequest::isValid() const
 
 
 /*!
- * @brief  Construct an StartExportTaskResponse object.
+ * Returns a StartExportTaskResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An StartExportTaskResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ApplicationDiscoveryServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * StartExportTaskRequest::response(QNetworkReply * const reply) const
 {
@@ -145,20 +137,17 @@ QtAws::Core::AwsAbstractResponse * StartExportTaskRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::ApplicationDiscoveryService::StartExportTaskRequestPrivate
+ * \brief The StartExportTaskRequestPrivate class provides private implementation for StartExportTaskRequest.
+ * \internal
  *
- * @class  StartExportTaskRequestPrivate
- *
- * @brief  Private implementation for StartExportTaskRequest.
+ * \inmodule QtAwsApplicationDiscoveryService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new StartExportTaskRequestPrivate object.
- *
- * @param  action  ApplicationDiscoveryService action being performed.
- * @param  q       Pointer to this object's public StartExportTaskRequest instance.
+ * Constructs a StartExportTaskRequestPrivate object for ApplicationDiscoveryService \a action with,
+ * public implementation \a q.
  */
 StartExportTaskRequestPrivate::StartExportTaskRequestPrivate(
     const ApplicationDiscoveryServiceRequest::Action action, StartExportTaskRequest * const q)
@@ -168,15 +157,10 @@ StartExportTaskRequestPrivate::StartExportTaskRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StartExportTaskRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the StartExportTaskRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public StartExportTaskRequest instance.
  */
 StartExportTaskRequestPrivate::StartExportTaskRequestPrivate(
     const StartExportTaskRequestPrivate &other, StartExportTaskRequest * const q)

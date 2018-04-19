@@ -27,10 +27,9 @@ namespace CloudFront {
 
 /*!
  * \class QtAws::CloudFront::ListCloudFrontOriginAccessIdentitiesRequest
- *
  * \brief The ListCloudFrontOriginAccessIdentitiesRequest class provides an interface for CloudFront ListCloudFrontOriginAccessIdentities requests.
  *
- * \ingroup CloudFront
+ * \inmodule QtAwsCloudFront
  *
  *  <fullname>Amazon CloudFront</fullname>
  * 
@@ -42,9 +41,7 @@ namespace CloudFront {
  */
 
 /*!
- * @brief  Constructs a new ListCloudFrontOriginAccessIdentitiesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListCloudFrontOriginAccessIdentitiesRequest::ListCloudFrontOriginAccessIdentitiesRequest(const ListCloudFrontOriginAccessIdentitiesRequest &other)
     : CloudFrontRequest(new ListCloudFrontOriginAccessIdentitiesRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ ListCloudFrontOriginAccessIdentitiesRequest::ListCloudFrontOriginAccessIdentitie
 }
 
 /*!
- * @brief  Constructs a new ListCloudFrontOriginAccessIdentitiesRequest object.
+ * Constructs a ListCloudFrontOriginAccessIdentitiesRequest object.
  */
 ListCloudFrontOriginAccessIdentitiesRequest::ListCloudFrontOriginAccessIdentitiesRequest()
     : CloudFrontRequest(new ListCloudFrontOriginAccessIdentitiesRequestPrivate(CloudFrontRequest::ListCloudFrontOriginAccessIdentitiesAction, this))
@@ -71,14 +68,9 @@ bool ListCloudFrontOriginAccessIdentitiesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListCloudFrontOriginAccessIdentitiesResponse object.
+ * Returns a ListCloudFrontOriginAccessIdentitiesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListCloudFrontOriginAccessIdentitiesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudFrontClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListCloudFrontOriginAccessIdentitiesRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * ListCloudFrontOriginAccessIdentitiesRequest::
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudFront::ListCloudFrontOriginAccessIdentitiesRequestPrivate
+ * \brief The ListCloudFrontOriginAccessIdentitiesRequestPrivate class provides private implementation for ListCloudFrontOriginAccessIdentitiesRequest.
+ * \internal
  *
- * @class  ListCloudFrontOriginAccessIdentitiesRequestPrivate
- *
- * @brief  Private implementation for ListCloudFrontOriginAccessIdentitiesRequest.
+ * \inmodule QtAwsCloudFront
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListCloudFrontOriginAccessIdentitiesRequestPrivate object.
- *
- * @param  action  CloudFront action being performed.
- * @param  q       Pointer to this object's public ListCloudFrontOriginAccessIdentitiesRequest instance.
+ * Constructs a ListCloudFrontOriginAccessIdentitiesRequestPrivate object for CloudFront \a action with,
+ * public implementation \a q.
  */
 ListCloudFrontOriginAccessIdentitiesRequestPrivate::ListCloudFrontOriginAccessIdentitiesRequestPrivate(
     const CloudFrontRequest::Action action, ListCloudFrontOriginAccessIdentitiesRequest * const q)
@@ -109,15 +98,10 @@ ListCloudFrontOriginAccessIdentitiesRequestPrivate::ListCloudFrontOriginAccessId
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListCloudFrontOriginAccessIdentitiesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListCloudFrontOriginAccessIdentitiesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListCloudFrontOriginAccessIdentitiesRequest instance.
  */
 ListCloudFrontOriginAccessIdentitiesRequestPrivate::ListCloudFrontOriginAccessIdentitiesRequestPrivate(
     const ListCloudFrontOriginAccessIdentitiesRequestPrivate &other, ListCloudFrontOriginAccessIdentitiesRequest * const q)

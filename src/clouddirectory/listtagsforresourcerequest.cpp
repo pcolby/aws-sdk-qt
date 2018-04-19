@@ -27,10 +27,9 @@ namespace CloudDirectory {
 
 /*!
  * \class QtAws::CloudDirectory::ListTagsForResourceRequest
- *
  * \brief The ListTagsForResourceRequest class provides an interface for CloudDirectory ListTagsForResource requests.
  *
- * \ingroup CloudDirectory
+ * \inmodule QtAwsCloudDirectory
  *
  *  <fullname>Amazon Cloud Directory</fullname>
  * 
@@ -44,9 +43,7 @@ namespace CloudDirectory {
  */
 
 /*!
- * @brief  Constructs a new ListTagsForResourceRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListTagsForResourceRequest::ListTagsForResourceRequest(const ListTagsForResourceRequest &other)
     : CloudDirectoryRequest(new ListTagsForResourceRequestPrivate(*other.d_func(), this))
@@ -55,7 +52,7 @@ ListTagsForResourceRequest::ListTagsForResourceRequest(const ListTagsForResource
 }
 
 /*!
- * @brief  Constructs a new ListTagsForResourceRequest object.
+ * Constructs a ListTagsForResourceRequest object.
  */
 ListTagsForResourceRequest::ListTagsForResourceRequest()
     : CloudDirectoryRequest(new ListTagsForResourceRequestPrivate(CloudDirectoryRequest::ListTagsForResourceAction, this))
@@ -73,14 +70,9 @@ bool ListTagsForResourceRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListTagsForResourceResponse object.
+ * Returns a ListTagsForResourceResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListTagsForResourceResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudDirectoryClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListTagsForResourceRequest::response(QNetworkReply * const reply) const
 {
@@ -88,20 +80,17 @@ QtAws::Core::AwsAbstractResponse * ListTagsForResourceRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudDirectory::ListTagsForResourceRequestPrivate
+ * \brief The ListTagsForResourceRequestPrivate class provides private implementation for ListTagsForResourceRequest.
+ * \internal
  *
- * @class  ListTagsForResourceRequestPrivate
- *
- * @brief  Private implementation for ListTagsForResourceRequest.
+ * \inmodule QtAwsCloudDirectory
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListTagsForResourceRequestPrivate object.
- *
- * @param  action  CloudDirectory action being performed.
- * @param  q       Pointer to this object's public ListTagsForResourceRequest instance.
+ * Constructs a ListTagsForResourceRequestPrivate object for CloudDirectory \a action with,
+ * public implementation \a q.
  */
 ListTagsForResourceRequestPrivate::ListTagsForResourceRequestPrivate(
     const CloudDirectoryRequest::Action action, ListTagsForResourceRequest * const q)
@@ -111,15 +100,10 @@ ListTagsForResourceRequestPrivate::ListTagsForResourceRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListTagsForResourceRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListTagsForResourceRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListTagsForResourceRequest instance.
  */
 ListTagsForResourceRequestPrivate::ListTagsForResourceRequestPrivate(
     const ListTagsForResourceRequestPrivate &other, ListTagsForResourceRequest * const q)

@@ -27,10 +27,9 @@ namespace Inspector {
 
 /*!
  * \class QtAws::Inspector::SubscribeToEventRequest
- *
  * \brief The SubscribeToEventRequest class provides an interface for Inspector SubscribeToEvent requests.
  *
- * \ingroup Inspector
+ * \inmodule QtAwsInspector
  *
  *  <fullname>Amazon Inspector</fullname>
  * 
@@ -42,9 +41,7 @@ namespace Inspector {
  */
 
 /*!
- * @brief  Constructs a new SubscribeToEventRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 SubscribeToEventRequest::SubscribeToEventRequest(const SubscribeToEventRequest &other)
     : InspectorRequest(new SubscribeToEventRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ SubscribeToEventRequest::SubscribeToEventRequest(const SubscribeToEventRequest &
 }
 
 /*!
- * @brief  Constructs a new SubscribeToEventRequest object.
+ * Constructs a SubscribeToEventRequest object.
  */
 SubscribeToEventRequest::SubscribeToEventRequest()
     : InspectorRequest(new SubscribeToEventRequestPrivate(InspectorRequest::SubscribeToEventAction, this))
@@ -71,14 +68,9 @@ bool SubscribeToEventRequest::isValid() const
 
 
 /*!
- * @brief  Construct an SubscribeToEventResponse object.
+ * Returns a SubscribeToEventResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An SubscribeToEventResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  InspectorClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * SubscribeToEventRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * SubscribeToEventRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::Inspector::SubscribeToEventRequestPrivate
+ * \brief The SubscribeToEventRequestPrivate class provides private implementation for SubscribeToEventRequest.
+ * \internal
  *
- * @class  SubscribeToEventRequestPrivate
- *
- * @brief  Private implementation for SubscribeToEventRequest.
+ * \inmodule QtAwsInspector
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new SubscribeToEventRequestPrivate object.
- *
- * @param  action  Inspector action being performed.
- * @param  q       Pointer to this object's public SubscribeToEventRequest instance.
+ * Constructs a SubscribeToEventRequestPrivate object for Inspector \a action with,
+ * public implementation \a q.
  */
 SubscribeToEventRequestPrivate::SubscribeToEventRequestPrivate(
     const InspectorRequest::Action action, SubscribeToEventRequest * const q)
@@ -109,15 +98,10 @@ SubscribeToEventRequestPrivate::SubscribeToEventRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SubscribeToEventRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the SubscribeToEventRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public SubscribeToEventRequest instance.
  */
 SubscribeToEventRequestPrivate::SubscribeToEventRequestPrivate(
     const SubscribeToEventRequestPrivate &other, SubscribeToEventRequest * const q)

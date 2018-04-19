@@ -27,19 +27,16 @@ namespace S3 {
 
 /*!
  * \class QtAws::S3::PutBucketCorsRequest
- *
  * \brief The PutBucketCorsRequest class provides an interface for S3 PutBucketCors requests.
  *
- * \ingroup S3
+ * \inmodule QtAwsS3
  *
  *
  * \sa S3Client::putBucketCors
  */
 
 /*!
- * @brief  Constructs a new PutBucketCorsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 PutBucketCorsRequest::PutBucketCorsRequest(const PutBucketCorsRequest &other)
     : S3Request(new PutBucketCorsRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ PutBucketCorsRequest::PutBucketCorsRequest(const PutBucketCorsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new PutBucketCorsRequest object.
+ * Constructs a PutBucketCorsRequest object.
  */
 PutBucketCorsRequest::PutBucketCorsRequest()
     : S3Request(new PutBucketCorsRequestPrivate(S3Request::PutBucketCorsAction, this))
@@ -66,14 +63,9 @@ bool PutBucketCorsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an PutBucketCorsResponse object.
+ * Returns a PutBucketCorsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An PutBucketCorsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  S3Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * PutBucketCorsRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * PutBucketCorsRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::S3::PutBucketCorsRequestPrivate
+ * \brief The PutBucketCorsRequestPrivate class provides private implementation for PutBucketCorsRequest.
+ * \internal
  *
- * @class  PutBucketCorsRequestPrivate
- *
- * @brief  Private implementation for PutBucketCorsRequest.
+ * \inmodule QtAwsS3
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new PutBucketCorsRequestPrivate object.
- *
- * @param  action  S3 action being performed.
- * @param  q       Pointer to this object's public PutBucketCorsRequest instance.
+ * Constructs a PutBucketCorsRequestPrivate object for S3 \a action with,
+ * public implementation \a q.
  */
 PutBucketCorsRequestPrivate::PutBucketCorsRequestPrivate(
     const S3Request::Action action, PutBucketCorsRequest * const q)
@@ -104,15 +93,10 @@ PutBucketCorsRequestPrivate::PutBucketCorsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutBucketCorsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the PutBucketCorsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public PutBucketCorsRequest instance.
  */
 PutBucketCorsRequestPrivate::PutBucketCorsRequestPrivate(
     const PutBucketCorsRequestPrivate &other, PutBucketCorsRequest * const q)

@@ -27,10 +27,9 @@ namespace Lightsail {
 
 /*!
  * \class QtAws::Lightsail::GetInstanceSnapshotRequest
- *
  * \brief The GetInstanceSnapshotRequest class provides an interface for Lightsail GetInstanceSnapshot requests.
  *
- * \ingroup Lightsail
+ * \inmodule QtAwsLightsail
  *
  *  Amazon Lightsail is the easiest way to get started with AWS for developers who just need virtual private servers.
  *  Lightsail includes everything you need to launch your project quickly - a virtual machine, SSD-based storage, data
@@ -53,9 +52,7 @@ namespace Lightsail {
  */
 
 /*!
- * @brief  Constructs a new GetInstanceSnapshotRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetInstanceSnapshotRequest::GetInstanceSnapshotRequest(const GetInstanceSnapshotRequest &other)
     : LightsailRequest(new GetInstanceSnapshotRequestPrivate(*other.d_func(), this))
@@ -64,7 +61,7 @@ GetInstanceSnapshotRequest::GetInstanceSnapshotRequest(const GetInstanceSnapshot
 }
 
 /*!
- * @brief  Constructs a new GetInstanceSnapshotRequest object.
+ * Constructs a GetInstanceSnapshotRequest object.
  */
 GetInstanceSnapshotRequest::GetInstanceSnapshotRequest()
     : LightsailRequest(new GetInstanceSnapshotRequestPrivate(LightsailRequest::GetInstanceSnapshotAction, this))
@@ -82,14 +79,9 @@ bool GetInstanceSnapshotRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetInstanceSnapshotResponse object.
+ * Returns a GetInstanceSnapshotResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetInstanceSnapshotResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  LightsailClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetInstanceSnapshotRequest::response(QNetworkReply * const reply) const
 {
@@ -97,20 +89,17 @@ QtAws::Core::AwsAbstractResponse * GetInstanceSnapshotRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::Lightsail::GetInstanceSnapshotRequestPrivate
+ * \brief The GetInstanceSnapshotRequestPrivate class provides private implementation for GetInstanceSnapshotRequest.
+ * \internal
  *
- * @class  GetInstanceSnapshotRequestPrivate
- *
- * @brief  Private implementation for GetInstanceSnapshotRequest.
+ * \inmodule QtAwsLightsail
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetInstanceSnapshotRequestPrivate object.
- *
- * @param  action  Lightsail action being performed.
- * @param  q       Pointer to this object's public GetInstanceSnapshotRequest instance.
+ * Constructs a GetInstanceSnapshotRequestPrivate object for Lightsail \a action with,
+ * public implementation \a q.
  */
 GetInstanceSnapshotRequestPrivate::GetInstanceSnapshotRequestPrivate(
     const LightsailRequest::Action action, GetInstanceSnapshotRequest * const q)
@@ -120,15 +109,10 @@ GetInstanceSnapshotRequestPrivate::GetInstanceSnapshotRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetInstanceSnapshotRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetInstanceSnapshotRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetInstanceSnapshotRequest instance.
  */
 GetInstanceSnapshotRequestPrivate::GetInstanceSnapshotRequestPrivate(
     const GetInstanceSnapshotRequestPrivate &other, GetInstanceSnapshotRequest * const q)

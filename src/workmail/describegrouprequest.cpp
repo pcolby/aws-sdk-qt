@@ -27,10 +27,9 @@ namespace WorkMail {
 
 /*!
  * \class QtAws::WorkMail::DescribeGroupRequest
- *
  * \brief The DescribeGroupRequest class provides an interface for WorkMail DescribeGroup requests.
  *
- * \ingroup WorkMail
+ * \inmodule QtAwsWorkMail
  *
  *  Amazon WorkMail is a secure, managed business email and calendaring service with support for existing desktop and mobile
  *  email clients. You can access your email, contacts, and calendars using Microsoft Outlook, your browser, or their native
@@ -70,9 +69,7 @@ namespace WorkMail {
  */
 
 /*!
- * @brief  Constructs a new DescribeGroupRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeGroupRequest::DescribeGroupRequest(const DescribeGroupRequest &other)
     : WorkMailRequest(new DescribeGroupRequestPrivate(*other.d_func(), this))
@@ -81,7 +78,7 @@ DescribeGroupRequest::DescribeGroupRequest(const DescribeGroupRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DescribeGroupRequest object.
+ * Constructs a DescribeGroupRequest object.
  */
 DescribeGroupRequest::DescribeGroupRequest()
     : WorkMailRequest(new DescribeGroupRequestPrivate(WorkMailRequest::DescribeGroupAction, this))
@@ -99,14 +96,9 @@ bool DescribeGroupRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeGroupResponse object.
+ * Returns a DescribeGroupResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeGroupResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WorkMailClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeGroupRequest::response(QNetworkReply * const reply) const
 {
@@ -114,20 +106,17 @@ QtAws::Core::AwsAbstractResponse * DescribeGroupRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::WorkMail::DescribeGroupRequestPrivate
+ * \brief The DescribeGroupRequestPrivate class provides private implementation for DescribeGroupRequest.
+ * \internal
  *
- * @class  DescribeGroupRequestPrivate
- *
- * @brief  Private implementation for DescribeGroupRequest.
+ * \inmodule QtAwsWorkMail
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeGroupRequestPrivate object.
- *
- * @param  action  WorkMail action being performed.
- * @param  q       Pointer to this object's public DescribeGroupRequest instance.
+ * Constructs a DescribeGroupRequestPrivate object for WorkMail \a action with,
+ * public implementation \a q.
  */
 DescribeGroupRequestPrivate::DescribeGroupRequestPrivate(
     const WorkMailRequest::Action action, DescribeGroupRequest * const q)
@@ -137,15 +126,10 @@ DescribeGroupRequestPrivate::DescribeGroupRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeGroupRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeGroupRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeGroupRequest instance.
  */
 DescribeGroupRequestPrivate::DescribeGroupRequestPrivate(
     const DescribeGroupRequestPrivate &other, DescribeGroupRequest * const q)

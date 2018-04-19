@@ -27,10 +27,9 @@ namespace ServiceCatalog {
 
 /*!
  * \class QtAws::ServiceCatalog::CreateProvisionedProductPlanRequest
- *
  * \brief The CreateProvisionedProductPlanRequest class provides an interface for ServiceCatalog CreateProvisionedProductPlan requests.
  *
- * \ingroup ServiceCatalog
+ * \inmodule QtAwsServiceCatalog
  *
  *  <fullname>AWS Service Catalog</fullname>
  * 
@@ -43,9 +42,7 @@ namespace ServiceCatalog {
  */
 
 /*!
- * @brief  Constructs a new CreateProvisionedProductPlanRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateProvisionedProductPlanRequest::CreateProvisionedProductPlanRequest(const CreateProvisionedProductPlanRequest &other)
     : ServiceCatalogRequest(new CreateProvisionedProductPlanRequestPrivate(*other.d_func(), this))
@@ -54,7 +51,7 @@ CreateProvisionedProductPlanRequest::CreateProvisionedProductPlanRequest(const C
 }
 
 /*!
- * @brief  Constructs a new CreateProvisionedProductPlanRequest object.
+ * Constructs a CreateProvisionedProductPlanRequest object.
  */
 CreateProvisionedProductPlanRequest::CreateProvisionedProductPlanRequest()
     : ServiceCatalogRequest(new CreateProvisionedProductPlanRequestPrivate(ServiceCatalogRequest::CreateProvisionedProductPlanAction, this))
@@ -72,14 +69,9 @@ bool CreateProvisionedProductPlanRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateProvisionedProductPlanResponse object.
+ * Returns a CreateProvisionedProductPlanResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateProvisionedProductPlanResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ServiceCatalogClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateProvisionedProductPlanRequest::response(QNetworkReply * const reply) const
 {
@@ -87,20 +79,17 @@ QtAws::Core::AwsAbstractResponse * CreateProvisionedProductPlanRequest::response
 }
 
 /*!
- * @internal
+ * \class QtAws::ServiceCatalog::CreateProvisionedProductPlanRequestPrivate
+ * \brief The CreateProvisionedProductPlanRequestPrivate class provides private implementation for CreateProvisionedProductPlanRequest.
+ * \internal
  *
- * @class  CreateProvisionedProductPlanRequestPrivate
- *
- * @brief  Private implementation for CreateProvisionedProductPlanRequest.
+ * \inmodule QtAwsServiceCatalog
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateProvisionedProductPlanRequestPrivate object.
- *
- * @param  action  ServiceCatalog action being performed.
- * @param  q       Pointer to this object's public CreateProvisionedProductPlanRequest instance.
+ * Constructs a CreateProvisionedProductPlanRequestPrivate object for ServiceCatalog \a action with,
+ * public implementation \a q.
  */
 CreateProvisionedProductPlanRequestPrivate::CreateProvisionedProductPlanRequestPrivate(
     const ServiceCatalogRequest::Action action, CreateProvisionedProductPlanRequest * const q)
@@ -110,15 +99,10 @@ CreateProvisionedProductPlanRequestPrivate::CreateProvisionedProductPlanRequestP
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateProvisionedProductPlanRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateProvisionedProductPlanRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateProvisionedProductPlanRequest instance.
  */
 CreateProvisionedProductPlanRequestPrivate::CreateProvisionedProductPlanRequestPrivate(
     const CreateProvisionedProductPlanRequestPrivate &other, CreateProvisionedProductPlanRequest * const q)

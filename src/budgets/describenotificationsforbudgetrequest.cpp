@@ -27,10 +27,9 @@ namespace Budgets {
 
 /*!
  * \class QtAws::Budgets::DescribeNotificationsForBudgetRequest
- *
  * \brief The DescribeNotificationsForBudgetRequest class provides an interface for Budgets DescribeNotificationsForBudget requests.
  *
- * \ingroup Budgets
+ * \inmodule QtAwsBudgets
  *
  *  Budgets enable you to plan your service usage, service costs, and your RI utilization. You can also track how close your
  *  plan is to your budgeted amount or to the free tier limits. Budgets provide you with a quick way to see your
@@ -75,9 +74,7 @@ namespace Budgets {
  */
 
 /*!
- * @brief  Constructs a new DescribeNotificationsForBudgetRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeNotificationsForBudgetRequest::DescribeNotificationsForBudgetRequest(const DescribeNotificationsForBudgetRequest &other)
     : BudgetsRequest(new DescribeNotificationsForBudgetRequestPrivate(*other.d_func(), this))
@@ -86,7 +83,7 @@ DescribeNotificationsForBudgetRequest::DescribeNotificationsForBudgetRequest(con
 }
 
 /*!
- * @brief  Constructs a new DescribeNotificationsForBudgetRequest object.
+ * Constructs a DescribeNotificationsForBudgetRequest object.
  */
 DescribeNotificationsForBudgetRequest::DescribeNotificationsForBudgetRequest()
     : BudgetsRequest(new DescribeNotificationsForBudgetRequestPrivate(BudgetsRequest::DescribeNotificationsForBudgetAction, this))
@@ -104,14 +101,9 @@ bool DescribeNotificationsForBudgetRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeNotificationsForBudgetResponse object.
+ * Returns a DescribeNotificationsForBudgetResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeNotificationsForBudgetResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  BudgetsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeNotificationsForBudgetRequest::response(QNetworkReply * const reply) const
 {
@@ -119,20 +111,17 @@ QtAws::Core::AwsAbstractResponse * DescribeNotificationsForBudgetRequest::respon
 }
 
 /*!
- * @internal
+ * \class QtAws::Budgets::DescribeNotificationsForBudgetRequestPrivate
+ * \brief The DescribeNotificationsForBudgetRequestPrivate class provides private implementation for DescribeNotificationsForBudgetRequest.
+ * \internal
  *
- * @class  DescribeNotificationsForBudgetRequestPrivate
- *
- * @brief  Private implementation for DescribeNotificationsForBudgetRequest.
+ * \inmodule QtAwsBudgets
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeNotificationsForBudgetRequestPrivate object.
- *
- * @param  action  Budgets action being performed.
- * @param  q       Pointer to this object's public DescribeNotificationsForBudgetRequest instance.
+ * Constructs a DescribeNotificationsForBudgetRequestPrivate object for Budgets \a action with,
+ * public implementation \a q.
  */
 DescribeNotificationsForBudgetRequestPrivate::DescribeNotificationsForBudgetRequestPrivate(
     const BudgetsRequest::Action action, DescribeNotificationsForBudgetRequest * const q)
@@ -142,15 +131,10 @@ DescribeNotificationsForBudgetRequestPrivate::DescribeNotificationsForBudgetRequ
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeNotificationsForBudgetRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeNotificationsForBudgetRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeNotificationsForBudgetRequest instance.
  */
 DescribeNotificationsForBudgetRequestPrivate::DescribeNotificationsForBudgetRequestPrivate(
     const DescribeNotificationsForBudgetRequestPrivate &other, DescribeNotificationsForBudgetRequest * const q)

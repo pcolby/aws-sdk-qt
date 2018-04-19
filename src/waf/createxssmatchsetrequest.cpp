@@ -27,10 +27,9 @@ namespace WAF {
 
 /*!
  * \class QtAws::WAF::CreateXssMatchSetRequest
- *
  * \brief The CreateXssMatchSetRequest class provides an interface for WAF CreateXssMatchSet requests.
  *
- * \ingroup WAF
+ * \inmodule QtAwsWAF
  *
  *  This is the <i>AWS WAF API Reference</i> for using AWS WAF with Amazon CloudFront. The AWS WAF actions and data types
  *  listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data
@@ -42,9 +41,7 @@ namespace WAF {
  */
 
 /*!
- * @brief  Constructs a new CreateXssMatchSetRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateXssMatchSetRequest::CreateXssMatchSetRequest(const CreateXssMatchSetRequest &other)
     : WAFRequest(new CreateXssMatchSetRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ CreateXssMatchSetRequest::CreateXssMatchSetRequest(const CreateXssMatchSetReques
 }
 
 /*!
- * @brief  Constructs a new CreateXssMatchSetRequest object.
+ * Constructs a CreateXssMatchSetRequest object.
  */
 CreateXssMatchSetRequest::CreateXssMatchSetRequest()
     : WAFRequest(new CreateXssMatchSetRequestPrivate(WAFRequest::CreateXssMatchSetAction, this))
@@ -71,14 +68,9 @@ bool CreateXssMatchSetRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateXssMatchSetResponse object.
+ * Returns a CreateXssMatchSetResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateXssMatchSetResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WAFClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateXssMatchSetRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * CreateXssMatchSetRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::WAF::CreateXssMatchSetRequestPrivate
+ * \brief The CreateXssMatchSetRequestPrivate class provides private implementation for CreateXssMatchSetRequest.
+ * \internal
  *
- * @class  CreateXssMatchSetRequestPrivate
- *
- * @brief  Private implementation for CreateXssMatchSetRequest.
+ * \inmodule QtAwsWAF
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateXssMatchSetRequestPrivate object.
- *
- * @param  action  WAF action being performed.
- * @param  q       Pointer to this object's public CreateXssMatchSetRequest instance.
+ * Constructs a CreateXssMatchSetRequestPrivate object for WAF \a action with,
+ * public implementation \a q.
  */
 CreateXssMatchSetRequestPrivate::CreateXssMatchSetRequestPrivate(
     const WAFRequest::Action action, CreateXssMatchSetRequest * const q)
@@ -109,15 +98,10 @@ CreateXssMatchSetRequestPrivate::CreateXssMatchSetRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateXssMatchSetRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateXssMatchSetRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateXssMatchSetRequest instance.
  */
 CreateXssMatchSetRequestPrivate::CreateXssMatchSetRequestPrivate(
     const CreateXssMatchSetRequestPrivate &other, CreateXssMatchSetRequest * const q)

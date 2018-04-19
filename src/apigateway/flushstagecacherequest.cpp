@@ -27,10 +27,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::FlushStageCacheRequest
- *
  * \brief The FlushStageCacheRequest class provides an interface for APIGateway FlushStageCache requests.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -42,9 +41,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new FlushStageCacheRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 FlushStageCacheRequest::FlushStageCacheRequest(const FlushStageCacheRequest &other)
     : APIGatewayRequest(new FlushStageCacheRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ FlushStageCacheRequest::FlushStageCacheRequest(const FlushStageCacheRequest &oth
 }
 
 /*!
- * @brief  Constructs a new FlushStageCacheRequest object.
+ * Constructs a FlushStageCacheRequest object.
  */
 FlushStageCacheRequest::FlushStageCacheRequest()
     : APIGatewayRequest(new FlushStageCacheRequestPrivate(APIGatewayRequest::FlushStageCacheAction, this))
@@ -71,14 +68,9 @@ bool FlushStageCacheRequest::isValid() const
 
 
 /*!
- * @brief  Construct an FlushStageCacheResponse object.
+ * Returns a FlushStageCacheResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An FlushStageCacheResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  APIGatewayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * FlushStageCacheRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * FlushStageCacheRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::APIGateway::FlushStageCacheRequestPrivate
+ * \brief The FlushStageCacheRequestPrivate class provides private implementation for FlushStageCacheRequest.
+ * \internal
  *
- * @class  FlushStageCacheRequestPrivate
- *
- * @brief  Private implementation for FlushStageCacheRequest.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new FlushStageCacheRequestPrivate object.
- *
- * @param  action  APIGateway action being performed.
- * @param  q       Pointer to this object's public FlushStageCacheRequest instance.
+ * Constructs a FlushStageCacheRequestPrivate object for APIGateway \a action with,
+ * public implementation \a q.
  */
 FlushStageCacheRequestPrivate::FlushStageCacheRequestPrivate(
     const APIGatewayRequest::Action action, FlushStageCacheRequest * const q)
@@ -109,15 +98,10 @@ FlushStageCacheRequestPrivate::FlushStageCacheRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new FlushStageCacheRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the FlushStageCacheRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public FlushStageCacheRequest instance.
  */
 FlushStageCacheRequestPrivate::FlushStageCacheRequestPrivate(
     const FlushStageCacheRequestPrivate &other, FlushStageCacheRequest * const q)

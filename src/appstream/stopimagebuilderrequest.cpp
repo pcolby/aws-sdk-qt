@@ -27,10 +27,9 @@ namespace AppStream {
 
 /*!
  * \class QtAws::AppStream::StopImageBuilderRequest
- *
  * \brief The StopImageBuilderRequest class provides an interface for AppStream StopImageBuilder requests.
  *
- * \ingroup AppStream
+ * \inmodule QtAwsAppStream
  *
  *  <fullname>Amazon AppStream 2.0</fullname>
  * 
@@ -40,9 +39,7 @@ namespace AppStream {
  */
 
 /*!
- * @brief  Constructs a new StopImageBuilderRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 StopImageBuilderRequest::StopImageBuilderRequest(const StopImageBuilderRequest &other)
     : AppStreamRequest(new StopImageBuilderRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ StopImageBuilderRequest::StopImageBuilderRequest(const StopImageBuilderRequest &
 }
 
 /*!
- * @brief  Constructs a new StopImageBuilderRequest object.
+ * Constructs a StopImageBuilderRequest object.
  */
 StopImageBuilderRequest::StopImageBuilderRequest()
     : AppStreamRequest(new StopImageBuilderRequestPrivate(AppStreamRequest::StopImageBuilderAction, this))
@@ -69,14 +66,9 @@ bool StopImageBuilderRequest::isValid() const
 
 
 /*!
- * @brief  Construct an StopImageBuilderResponse object.
+ * Returns a StopImageBuilderResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An StopImageBuilderResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AppStreamClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * StopImageBuilderRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * StopImageBuilderRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::AppStream::StopImageBuilderRequestPrivate
+ * \brief The StopImageBuilderRequestPrivate class provides private implementation for StopImageBuilderRequest.
+ * \internal
  *
- * @class  StopImageBuilderRequestPrivate
- *
- * @brief  Private implementation for StopImageBuilderRequest.
+ * \inmodule QtAwsAppStream
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new StopImageBuilderRequestPrivate object.
- *
- * @param  action  AppStream action being performed.
- * @param  q       Pointer to this object's public StopImageBuilderRequest instance.
+ * Constructs a StopImageBuilderRequestPrivate object for AppStream \a action with,
+ * public implementation \a q.
  */
 StopImageBuilderRequestPrivate::StopImageBuilderRequestPrivate(
     const AppStreamRequest::Action action, StopImageBuilderRequest * const q)
@@ -107,15 +96,10 @@ StopImageBuilderRequestPrivate::StopImageBuilderRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StopImageBuilderRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the StopImageBuilderRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public StopImageBuilderRequest instance.
  */
 StopImageBuilderRequestPrivate::StopImageBuilderRequestPrivate(
     const StopImageBuilderRequestPrivate &other, StopImageBuilderRequest * const q)

@@ -27,10 +27,9 @@ namespace SES {
 
 /*!
  * \class QtAws::SES::GetTemplateRequest
- *
  * \brief The GetTemplateRequest class provides an interface for SES GetTemplate requests.
  *
- * \ingroup SES
+ * \inmodule QtAwsSES
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -48,9 +47,7 @@ namespace SES {
  */
 
 /*!
- * @brief  Constructs a new GetTemplateRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetTemplateRequest::GetTemplateRequest(const GetTemplateRequest &other)
     : SESRequest(new GetTemplateRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ GetTemplateRequest::GetTemplateRequest(const GetTemplateRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetTemplateRequest object.
+ * Constructs a GetTemplateRequest object.
  */
 GetTemplateRequest::GetTemplateRequest()
     : SESRequest(new GetTemplateRequestPrivate(SESRequest::GetTemplateAction, this))
@@ -77,14 +74,9 @@ bool GetTemplateRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetTemplateResponse object.
+ * Returns a GetTemplateResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetTemplateResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SESClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetTemplateRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * GetTemplateRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::SES::GetTemplateRequestPrivate
+ * \brief The GetTemplateRequestPrivate class provides private implementation for GetTemplateRequest.
+ * \internal
  *
- * @class  GetTemplateRequestPrivate
- *
- * @brief  Private implementation for GetTemplateRequest.
+ * \inmodule QtAwsSES
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetTemplateRequestPrivate object.
- *
- * @param  action  SES action being performed.
- * @param  q       Pointer to this object's public GetTemplateRequest instance.
+ * Constructs a GetTemplateRequestPrivate object for SES \a action with,
+ * public implementation \a q.
  */
 GetTemplateRequestPrivate::GetTemplateRequestPrivate(
     const SESRequest::Action action, GetTemplateRequest * const q)
@@ -115,15 +104,10 @@ GetTemplateRequestPrivate::GetTemplateRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetTemplateRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetTemplateRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetTemplateRequest instance.
  */
 GetTemplateRequestPrivate::GetTemplateRequestPrivate(
     const GetTemplateRequestPrivate &other, GetTemplateRequest * const q)

@@ -27,10 +27,9 @@ namespace SNS {
 
 /*!
  * \class QtAws::SNS::CreatePlatformApplicationRequest
- *
  * \brief The CreatePlatformApplicationRequest class provides an interface for SNS CreatePlatformApplication requests.
  *
- * \ingroup SNS
+ * \inmodule QtAwsSNS
  *
  *  <fullname>Amazon Simple Notification Service</fullname>
  * 
@@ -51,9 +50,7 @@ namespace SNS {
  */
 
 /*!
- * @brief  Constructs a new CreatePlatformApplicationRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreatePlatformApplicationRequest::CreatePlatformApplicationRequest(const CreatePlatformApplicationRequest &other)
     : SNSRequest(new CreatePlatformApplicationRequestPrivate(*other.d_func(), this))
@@ -62,7 +59,7 @@ CreatePlatformApplicationRequest::CreatePlatformApplicationRequest(const CreateP
 }
 
 /*!
- * @brief  Constructs a new CreatePlatformApplicationRequest object.
+ * Constructs a CreatePlatformApplicationRequest object.
  */
 CreatePlatformApplicationRequest::CreatePlatformApplicationRequest()
     : SNSRequest(new CreatePlatformApplicationRequestPrivate(SNSRequest::CreatePlatformApplicationAction, this))
@@ -80,14 +77,9 @@ bool CreatePlatformApplicationRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreatePlatformApplicationResponse object.
+ * Returns a CreatePlatformApplicationResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreatePlatformApplicationResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SNSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreatePlatformApplicationRequest::response(QNetworkReply * const reply) const
 {
@@ -95,20 +87,17 @@ QtAws::Core::AwsAbstractResponse * CreatePlatformApplicationRequest::response(QN
 }
 
 /*!
- * @internal
+ * \class QtAws::SNS::CreatePlatformApplicationRequestPrivate
+ * \brief The CreatePlatformApplicationRequestPrivate class provides private implementation for CreatePlatformApplicationRequest.
+ * \internal
  *
- * @class  CreatePlatformApplicationRequestPrivate
- *
- * @brief  Private implementation for CreatePlatformApplicationRequest.
+ * \inmodule QtAwsSNS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreatePlatformApplicationRequestPrivate object.
- *
- * @param  action  SNS action being performed.
- * @param  q       Pointer to this object's public CreatePlatformApplicationRequest instance.
+ * Constructs a CreatePlatformApplicationRequestPrivate object for SNS \a action with,
+ * public implementation \a q.
  */
 CreatePlatformApplicationRequestPrivate::CreatePlatformApplicationRequestPrivate(
     const SNSRequest::Action action, CreatePlatformApplicationRequest * const q)
@@ -118,15 +107,10 @@ CreatePlatformApplicationRequestPrivate::CreatePlatformApplicationRequestPrivate
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreatePlatformApplicationRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreatePlatformApplicationRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreatePlatformApplicationRequest instance.
  */
 CreatePlatformApplicationRequestPrivate::CreatePlatformApplicationRequestPrivate(
     const CreatePlatformApplicationRequestPrivate &other, CreatePlatformApplicationRequest * const q)

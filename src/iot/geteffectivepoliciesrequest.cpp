@@ -27,10 +27,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::GetEffectivePoliciesRequest
- *
  * \brief The GetEffectivePoliciesRequest class provides an interface for IoT GetEffectivePolicies requests.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -48,9 +47,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new GetEffectivePoliciesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetEffectivePoliciesRequest::GetEffectivePoliciesRequest(const GetEffectivePoliciesRequest &other)
     : IoTRequest(new GetEffectivePoliciesRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ GetEffectivePoliciesRequest::GetEffectivePoliciesRequest(const GetEffectivePolic
 }
 
 /*!
- * @brief  Constructs a new GetEffectivePoliciesRequest object.
+ * Constructs a GetEffectivePoliciesRequest object.
  */
 GetEffectivePoliciesRequest::GetEffectivePoliciesRequest()
     : IoTRequest(new GetEffectivePoliciesRequestPrivate(IoTRequest::GetEffectivePoliciesAction, this))
@@ -77,14 +74,9 @@ bool GetEffectivePoliciesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetEffectivePoliciesResponse object.
+ * Returns a GetEffectivePoliciesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetEffectivePoliciesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IoTClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetEffectivePoliciesRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * GetEffectivePoliciesRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::IoT::GetEffectivePoliciesRequestPrivate
+ * \brief The GetEffectivePoliciesRequestPrivate class provides private implementation for GetEffectivePoliciesRequest.
+ * \internal
  *
- * @class  GetEffectivePoliciesRequestPrivate
- *
- * @brief  Private implementation for GetEffectivePoliciesRequest.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetEffectivePoliciesRequestPrivate object.
- *
- * @param  action  IoT action being performed.
- * @param  q       Pointer to this object's public GetEffectivePoliciesRequest instance.
+ * Constructs a GetEffectivePoliciesRequestPrivate object for IoT \a action with,
+ * public implementation \a q.
  */
 GetEffectivePoliciesRequestPrivate::GetEffectivePoliciesRequestPrivate(
     const IoTRequest::Action action, GetEffectivePoliciesRequest * const q)
@@ -115,15 +104,10 @@ GetEffectivePoliciesRequestPrivate::GetEffectivePoliciesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetEffectivePoliciesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetEffectivePoliciesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetEffectivePoliciesRequest instance.
  */
 GetEffectivePoliciesRequestPrivate::GetEffectivePoliciesRequestPrivate(
     const GetEffectivePoliciesRequestPrivate &other, GetEffectivePoliciesRequest * const q)

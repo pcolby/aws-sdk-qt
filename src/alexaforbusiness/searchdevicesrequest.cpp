@@ -27,10 +27,9 @@ namespace AlexaForBusiness {
 
 /*!
  * \class QtAws::AlexaForBusiness::SearchDevicesRequest
- *
  * \brief The SearchDevicesRequest class provides an interface for AlexaForBusiness SearchDevices requests.
  *
- * \ingroup AlexaForBusiness
+ * \inmodule QtAwsAlexaForBusiness
  *
  *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
  *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
@@ -42,9 +41,7 @@ namespace AlexaForBusiness {
  */
 
 /*!
- * @brief  Constructs a new SearchDevicesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 SearchDevicesRequest::SearchDevicesRequest(const SearchDevicesRequest &other)
     : AlexaForBusinessRequest(new SearchDevicesRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ SearchDevicesRequest::SearchDevicesRequest(const SearchDevicesRequest &other)
 }
 
 /*!
- * @brief  Constructs a new SearchDevicesRequest object.
+ * Constructs a SearchDevicesRequest object.
  */
 SearchDevicesRequest::SearchDevicesRequest()
     : AlexaForBusinessRequest(new SearchDevicesRequestPrivate(AlexaForBusinessRequest::SearchDevicesAction, this))
@@ -71,14 +68,9 @@ bool SearchDevicesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an SearchDevicesResponse object.
+ * Returns a SearchDevicesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An SearchDevicesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AlexaForBusinessClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * SearchDevicesRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * SearchDevicesRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::AlexaForBusiness::SearchDevicesRequestPrivate
+ * \brief The SearchDevicesRequestPrivate class provides private implementation for SearchDevicesRequest.
+ * \internal
  *
- * @class  SearchDevicesRequestPrivate
- *
- * @brief  Private implementation for SearchDevicesRequest.
+ * \inmodule QtAwsAlexaForBusiness
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new SearchDevicesRequestPrivate object.
- *
- * @param  action  AlexaForBusiness action being performed.
- * @param  q       Pointer to this object's public SearchDevicesRequest instance.
+ * Constructs a SearchDevicesRequestPrivate object for AlexaForBusiness \a action with,
+ * public implementation \a q.
  */
 SearchDevicesRequestPrivate::SearchDevicesRequestPrivate(
     const AlexaForBusinessRequest::Action action, SearchDevicesRequest * const q)
@@ -109,15 +98,10 @@ SearchDevicesRequestPrivate::SearchDevicesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SearchDevicesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the SearchDevicesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public SearchDevicesRequest instance.
  */
 SearchDevicesRequestPrivate::SearchDevicesRequestPrivate(
     const SearchDevicesRequestPrivate &other, SearchDevicesRequest * const q)

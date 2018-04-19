@@ -27,10 +27,9 @@ namespace CodeStar {
 
 /*!
  * \class QtAws::CodeStar::DescribeUserProfileRequest
- *
  * \brief The DescribeUserProfileRequest class provides an interface for CodeStar DescribeUserProfile requests.
  *
- * \ingroup CodeStar
+ * \inmodule QtAwsCodeStar
  *
  *  <fullname>AWS CodeStar</fullname>
  * 
@@ -125,9 +124,7 @@ namespace CodeStar {
  */
 
 /*!
- * @brief  Constructs a new DescribeUserProfileRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeUserProfileRequest::DescribeUserProfileRequest(const DescribeUserProfileRequest &other)
     : CodeStarRequest(new DescribeUserProfileRequestPrivate(*other.d_func(), this))
@@ -136,7 +133,7 @@ DescribeUserProfileRequest::DescribeUserProfileRequest(const DescribeUserProfile
 }
 
 /*!
- * @brief  Constructs a new DescribeUserProfileRequest object.
+ * Constructs a DescribeUserProfileRequest object.
  */
 DescribeUserProfileRequest::DescribeUserProfileRequest()
     : CodeStarRequest(new DescribeUserProfileRequestPrivate(CodeStarRequest::DescribeUserProfileAction, this))
@@ -154,14 +151,9 @@ bool DescribeUserProfileRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeUserProfileResponse object.
+ * Returns a DescribeUserProfileResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeUserProfileResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CodeStarClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeUserProfileRequest::response(QNetworkReply * const reply) const
 {
@@ -169,20 +161,17 @@ QtAws::Core::AwsAbstractResponse * DescribeUserProfileRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::CodeStar::DescribeUserProfileRequestPrivate
+ * \brief The DescribeUserProfileRequestPrivate class provides private implementation for DescribeUserProfileRequest.
+ * \internal
  *
- * @class  DescribeUserProfileRequestPrivate
- *
- * @brief  Private implementation for DescribeUserProfileRequest.
+ * \inmodule QtAwsCodeStar
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeUserProfileRequestPrivate object.
- *
- * @param  action  CodeStar action being performed.
- * @param  q       Pointer to this object's public DescribeUserProfileRequest instance.
+ * Constructs a DescribeUserProfileRequestPrivate object for CodeStar \a action with,
+ * public implementation \a q.
  */
 DescribeUserProfileRequestPrivate::DescribeUserProfileRequestPrivate(
     const CodeStarRequest::Action action, DescribeUserProfileRequest * const q)
@@ -192,15 +181,10 @@ DescribeUserProfileRequestPrivate::DescribeUserProfileRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeUserProfileRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeUserProfileRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeUserProfileRequest instance.
  */
 DescribeUserProfileRequestPrivate::DescribeUserProfileRequestPrivate(
     const DescribeUserProfileRequestPrivate &other, DescribeUserProfileRequest * const q)

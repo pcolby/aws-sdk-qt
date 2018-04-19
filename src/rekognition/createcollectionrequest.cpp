@@ -27,10 +27,9 @@ namespace Rekognition {
 
 /*!
  * \class QtAws::Rekognition::CreateCollectionRequest
- *
  * \brief The CreateCollectionRequest class provides an interface for Rekognition CreateCollection requests.
  *
- * \ingroup Rekognition
+ * \inmodule QtAwsRekognition
  *
  *  This is the Amazon Rekognition API
  *
@@ -38,9 +37,7 @@ namespace Rekognition {
  */
 
 /*!
- * @brief  Constructs a new CreateCollectionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateCollectionRequest::CreateCollectionRequest(const CreateCollectionRequest &other)
     : RekognitionRequest(new CreateCollectionRequestPrivate(*other.d_func(), this))
@@ -49,7 +46,7 @@ CreateCollectionRequest::CreateCollectionRequest(const CreateCollectionRequest &
 }
 
 /*!
- * @brief  Constructs a new CreateCollectionRequest object.
+ * Constructs a CreateCollectionRequest object.
  */
 CreateCollectionRequest::CreateCollectionRequest()
     : RekognitionRequest(new CreateCollectionRequestPrivate(RekognitionRequest::CreateCollectionAction, this))
@@ -67,14 +64,9 @@ bool CreateCollectionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateCollectionResponse object.
+ * Returns a CreateCollectionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateCollectionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RekognitionClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateCollectionRequest::response(QNetworkReply * const reply) const
 {
@@ -82,20 +74,17 @@ QtAws::Core::AwsAbstractResponse * CreateCollectionRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::Rekognition::CreateCollectionRequestPrivate
+ * \brief The CreateCollectionRequestPrivate class provides private implementation for CreateCollectionRequest.
+ * \internal
  *
- * @class  CreateCollectionRequestPrivate
- *
- * @brief  Private implementation for CreateCollectionRequest.
+ * \inmodule QtAwsRekognition
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateCollectionRequestPrivate object.
- *
- * @param  action  Rekognition action being performed.
- * @param  q       Pointer to this object's public CreateCollectionRequest instance.
+ * Constructs a CreateCollectionRequestPrivate object for Rekognition \a action with,
+ * public implementation \a q.
  */
 CreateCollectionRequestPrivate::CreateCollectionRequestPrivate(
     const RekognitionRequest::Action action, CreateCollectionRequest * const q)
@@ -105,15 +94,10 @@ CreateCollectionRequestPrivate::CreateCollectionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateCollectionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateCollectionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateCollectionRequest instance.
  */
 CreateCollectionRequestPrivate::CreateCollectionRequestPrivate(
     const CreateCollectionRequestPrivate &other, CreateCollectionRequest * const q)

@@ -27,10 +27,9 @@ namespace ElasticBeanstalk {
 
 /*!
  * \class QtAws::ElasticBeanstalk::DescribeEnvironmentManagedActionsRequest
- *
  * \brief The DescribeEnvironmentManagedActionsRequest class provides an interface for ElasticBeanstalk DescribeEnvironmentManagedActions requests.
  *
- * \ingroup ElasticBeanstalk
+ * \inmodule QtAwsElasticBeanstalk
  *
  *  <fullname>AWS Elastic Beanstalk</fullname>
  * 
@@ -59,9 +58,7 @@ namespace ElasticBeanstalk {
  */
 
 /*!
- * @brief  Constructs a new DescribeEnvironmentManagedActionsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeEnvironmentManagedActionsRequest::DescribeEnvironmentManagedActionsRequest(const DescribeEnvironmentManagedActionsRequest &other)
     : ElasticBeanstalkRequest(new DescribeEnvironmentManagedActionsRequestPrivate(*other.d_func(), this))
@@ -70,7 +67,7 @@ DescribeEnvironmentManagedActionsRequest::DescribeEnvironmentManagedActionsReque
 }
 
 /*!
- * @brief  Constructs a new DescribeEnvironmentManagedActionsRequest object.
+ * Constructs a DescribeEnvironmentManagedActionsRequest object.
  */
 DescribeEnvironmentManagedActionsRequest::DescribeEnvironmentManagedActionsRequest()
     : ElasticBeanstalkRequest(new DescribeEnvironmentManagedActionsRequestPrivate(ElasticBeanstalkRequest::DescribeEnvironmentManagedActionsAction, this))
@@ -88,14 +85,9 @@ bool DescribeEnvironmentManagedActionsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeEnvironmentManagedActionsResponse object.
+ * Returns a DescribeEnvironmentManagedActionsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeEnvironmentManagedActionsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ElasticBeanstalkClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeEnvironmentManagedActionsRequest::response(QNetworkReply * const reply) const
 {
@@ -103,20 +95,17 @@ QtAws::Core::AwsAbstractResponse * DescribeEnvironmentManagedActionsRequest::res
 }
 
 /*!
- * @internal
+ * \class QtAws::ElasticBeanstalk::DescribeEnvironmentManagedActionsRequestPrivate
+ * \brief The DescribeEnvironmentManagedActionsRequestPrivate class provides private implementation for DescribeEnvironmentManagedActionsRequest.
+ * \internal
  *
- * @class  DescribeEnvironmentManagedActionsRequestPrivate
- *
- * @brief  Private implementation for DescribeEnvironmentManagedActionsRequest.
+ * \inmodule QtAwsElasticBeanstalk
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeEnvironmentManagedActionsRequestPrivate object.
- *
- * @param  action  ElasticBeanstalk action being performed.
- * @param  q       Pointer to this object's public DescribeEnvironmentManagedActionsRequest instance.
+ * Constructs a DescribeEnvironmentManagedActionsRequestPrivate object for ElasticBeanstalk \a action with,
+ * public implementation \a q.
  */
 DescribeEnvironmentManagedActionsRequestPrivate::DescribeEnvironmentManagedActionsRequestPrivate(
     const ElasticBeanstalkRequest::Action action, DescribeEnvironmentManagedActionsRequest * const q)
@@ -126,15 +115,10 @@ DescribeEnvironmentManagedActionsRequestPrivate::DescribeEnvironmentManagedActio
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeEnvironmentManagedActionsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeEnvironmentManagedActionsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeEnvironmentManagedActionsRequest instance.
  */
 DescribeEnvironmentManagedActionsRequestPrivate::DescribeEnvironmentManagedActionsRequestPrivate(
     const DescribeEnvironmentManagedActionsRequestPrivate &other, DescribeEnvironmentManagedActionsRequest * const q)

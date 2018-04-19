@@ -27,19 +27,16 @@ namespace MachineLearning {
 
 /*!
  * \class QtAws::MachineLearning::CreateDataSourceFromS3Request
- *
  * \brief The CreateDataSourceFromS3Request class provides an interface for MachineLearning CreateDataSourceFromS3 requests.
  *
- * \ingroup MachineLearning
+ * \inmodule QtAwsMachineLearning
  *
  *
  * \sa MachineLearningClient::createDataSourceFromS3
  */
 
 /*!
- * @brief  Constructs a new CreateDataSourceFromS3Request object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateDataSourceFromS3Request::CreateDataSourceFromS3Request(const CreateDataSourceFromS3Request &other)
     : MachineLearningRequest(new CreateDataSourceFromS3RequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ CreateDataSourceFromS3Request::CreateDataSourceFromS3Request(const CreateDataSou
 }
 
 /*!
- * @brief  Constructs a new CreateDataSourceFromS3Request object.
+ * Constructs a CreateDataSourceFromS3Request object.
  */
 CreateDataSourceFromS3Request::CreateDataSourceFromS3Request()
     : MachineLearningRequest(new CreateDataSourceFromS3RequestPrivate(MachineLearningRequest::CreateDataSourceFromS3Action, this))
@@ -66,14 +63,9 @@ bool CreateDataSourceFromS3Request::isValid() const
 
 
 /*!
- * @brief  Construct an CreateDataSourceFromS3Response object.
+ * Returns a CreateDataSourceFromS3Response object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateDataSourceFromS3Response instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MachineLearningClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateDataSourceFromS3Request::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * CreateDataSourceFromS3Request::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::MachineLearning::CreateDataSourceFromS3RequestPrivate
+ * \brief The CreateDataSourceFromS3RequestPrivate class provides private implementation for CreateDataSourceFromS3Request.
+ * \internal
  *
- * @class  CreateDataSourceFromS3RequestPrivate
- *
- * @brief  Private implementation for CreateDataSourceFromS3Request.
+ * \inmodule QtAwsMachineLearning
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateDataSourceFromS3RequestPrivate object.
- *
- * @param  action  MachineLearning action being performed.
- * @param  q       Pointer to this object's public CreateDataSourceFromS3Request instance.
+ * Constructs a CreateDataSourceFromS3RequestPrivate object for MachineLearning \a action with,
+ * public implementation \a q.
  */
 CreateDataSourceFromS3RequestPrivate::CreateDataSourceFromS3RequestPrivate(
     const MachineLearningRequest::Action action, CreateDataSourceFromS3Request * const q)
@@ -104,15 +93,10 @@ CreateDataSourceFromS3RequestPrivate::CreateDataSourceFromS3RequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateDataSourceFromS3RequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateDataSourceFromS3Request
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateDataSourceFromS3Request instance.
  */
 CreateDataSourceFromS3RequestPrivate::CreateDataSourceFromS3RequestPrivate(
     const CreateDataSourceFromS3RequestPrivate &other, CreateDataSourceFromS3Request * const q)

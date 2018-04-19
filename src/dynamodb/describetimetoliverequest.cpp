@@ -27,10 +27,9 @@ namespace DynamoDB {
 
 /*!
  * \class QtAws::DynamoDB::DescribeTimeToLiveRequest
- *
  * \brief The DescribeTimeToLiveRequest class provides an interface for DynamoDB DescribeTimeToLive requests.
  *
- * \ingroup DynamoDB
+ * \inmodule QtAwsDynamoDB
  *
  *  <fullname>Amazon DynamoDB</fullname>
  * 
@@ -56,9 +55,7 @@ namespace DynamoDB {
  */
 
 /*!
- * @brief  Constructs a new DescribeTimeToLiveRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeTimeToLiveRequest::DescribeTimeToLiveRequest(const DescribeTimeToLiveRequest &other)
     : DynamoDBRequest(new DescribeTimeToLiveRequestPrivate(*other.d_func(), this))
@@ -67,7 +64,7 @@ DescribeTimeToLiveRequest::DescribeTimeToLiveRequest(const DescribeTimeToLiveReq
 }
 
 /*!
- * @brief  Constructs a new DescribeTimeToLiveRequest object.
+ * Constructs a DescribeTimeToLiveRequest object.
  */
 DescribeTimeToLiveRequest::DescribeTimeToLiveRequest()
     : DynamoDBRequest(new DescribeTimeToLiveRequestPrivate(DynamoDBRequest::DescribeTimeToLiveAction, this))
@@ -85,14 +82,9 @@ bool DescribeTimeToLiveRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeTimeToLiveResponse object.
+ * Returns a DescribeTimeToLiveResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeTimeToLiveResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DynamoDBClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeTimeToLiveRequest::response(QNetworkReply * const reply) const
 {
@@ -100,20 +92,17 @@ QtAws::Core::AwsAbstractResponse * DescribeTimeToLiveRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::DynamoDB::DescribeTimeToLiveRequestPrivate
+ * \brief The DescribeTimeToLiveRequestPrivate class provides private implementation for DescribeTimeToLiveRequest.
+ * \internal
  *
- * @class  DescribeTimeToLiveRequestPrivate
- *
- * @brief  Private implementation for DescribeTimeToLiveRequest.
+ * \inmodule QtAwsDynamoDB
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeTimeToLiveRequestPrivate object.
- *
- * @param  action  DynamoDB action being performed.
- * @param  q       Pointer to this object's public DescribeTimeToLiveRequest instance.
+ * Constructs a DescribeTimeToLiveRequestPrivate object for DynamoDB \a action with,
+ * public implementation \a q.
  */
 DescribeTimeToLiveRequestPrivate::DescribeTimeToLiveRequestPrivate(
     const DynamoDBRequest::Action action, DescribeTimeToLiveRequest * const q)
@@ -123,15 +112,10 @@ DescribeTimeToLiveRequestPrivate::DescribeTimeToLiveRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeTimeToLiveRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeTimeToLiveRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeTimeToLiveRequest instance.
  */
 DescribeTimeToLiveRequestPrivate::DescribeTimeToLiveRequestPrivate(
     const DescribeTimeToLiveRequestPrivate &other, DescribeTimeToLiveRequest * const q)

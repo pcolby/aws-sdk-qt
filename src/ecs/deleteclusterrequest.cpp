@@ -27,10 +27,9 @@ namespace ECS {
 
 /*!
  * \class QtAws::ECS::DeleteClusterRequest
- *
  * \brief The DeleteClusterRequest class provides an interface for ECS DeleteCluster requests.
  *
- * \ingroup ECS
+ * \inmodule QtAwsECS
  *
  *  Amazon Elastic Container Service (Amazon ECS) is a highly scalable, fast, container management service that makes it
  *  easy to run, stop, and manage Docker containers on a cluster. You can host your cluster on a serverless infrastructure
@@ -54,9 +53,7 @@ namespace ECS {
  */
 
 /*!
- * @brief  Constructs a new DeleteClusterRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteClusterRequest::DeleteClusterRequest(const DeleteClusterRequest &other)
     : ECSRequest(new DeleteClusterRequestPrivate(*other.d_func(), this))
@@ -65,7 +62,7 @@ DeleteClusterRequest::DeleteClusterRequest(const DeleteClusterRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DeleteClusterRequest object.
+ * Constructs a DeleteClusterRequest object.
  */
 DeleteClusterRequest::DeleteClusterRequest()
     : ECSRequest(new DeleteClusterRequestPrivate(ECSRequest::DeleteClusterAction, this))
@@ -83,14 +80,9 @@ bool DeleteClusterRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteClusterResponse object.
+ * Returns a DeleteClusterResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteClusterResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ECSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteClusterRequest::response(QNetworkReply * const reply) const
 {
@@ -98,20 +90,17 @@ QtAws::Core::AwsAbstractResponse * DeleteClusterRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::ECS::DeleteClusterRequestPrivate
+ * \brief The DeleteClusterRequestPrivate class provides private implementation for DeleteClusterRequest.
+ * \internal
  *
- * @class  DeleteClusterRequestPrivate
- *
- * @brief  Private implementation for DeleteClusterRequest.
+ * \inmodule QtAwsECS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteClusterRequestPrivate object.
- *
- * @param  action  ECS action being performed.
- * @param  q       Pointer to this object's public DeleteClusterRequest instance.
+ * Constructs a DeleteClusterRequestPrivate object for ECS \a action with,
+ * public implementation \a q.
  */
 DeleteClusterRequestPrivate::DeleteClusterRequestPrivate(
     const ECSRequest::Action action, DeleteClusterRequest * const q)
@@ -121,15 +110,10 @@ DeleteClusterRequestPrivate::DeleteClusterRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteClusterRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteClusterRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteClusterRequest instance.
  */
 DeleteClusterRequestPrivate::DeleteClusterRequestPrivate(
     const DeleteClusterRequestPrivate &other, DeleteClusterRequest * const q)

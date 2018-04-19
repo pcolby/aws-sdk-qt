@@ -27,19 +27,16 @@ namespace Route53 {
 
 /*!
  * \class QtAws::Route53::DeleteVPCAssociationAuthorizationRequest
- *
  * \brief The DeleteVPCAssociationAuthorizationRequest class provides an interface for Route53 DeleteVPCAssociationAuthorization requests.
  *
- * \ingroup Route53
+ * \inmodule QtAwsRoute53
  *
  *
  * \sa Route53Client::deleteVPCAssociationAuthorization
  */
 
 /*!
- * @brief  Constructs a new DeleteVPCAssociationAuthorizationRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteVPCAssociationAuthorizationRequest::DeleteVPCAssociationAuthorizationRequest(const DeleteVPCAssociationAuthorizationRequest &other)
     : Route53Request(new DeleteVPCAssociationAuthorizationRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ DeleteVPCAssociationAuthorizationRequest::DeleteVPCAssociationAuthorizationReque
 }
 
 /*!
- * @brief  Constructs a new DeleteVPCAssociationAuthorizationRequest object.
+ * Constructs a DeleteVPCAssociationAuthorizationRequest object.
  */
 DeleteVPCAssociationAuthorizationRequest::DeleteVPCAssociationAuthorizationRequest()
     : Route53Request(new DeleteVPCAssociationAuthorizationRequestPrivate(Route53Request::DeleteVPCAssociationAuthorizationAction, this))
@@ -66,14 +63,9 @@ bool DeleteVPCAssociationAuthorizationRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteVPCAssociationAuthorizationResponse object.
+ * Returns a DeleteVPCAssociationAuthorizationResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteVPCAssociationAuthorizationResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  Route53Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteVPCAssociationAuthorizationRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * DeleteVPCAssociationAuthorizationRequest::res
 }
 
 /*!
- * @internal
+ * \class QtAws::Route53::DeleteVPCAssociationAuthorizationRequestPrivate
+ * \brief The DeleteVPCAssociationAuthorizationRequestPrivate class provides private implementation for DeleteVPCAssociationAuthorizationRequest.
+ * \internal
  *
- * @class  DeleteVPCAssociationAuthorizationRequestPrivate
- *
- * @brief  Private implementation for DeleteVPCAssociationAuthorizationRequest.
+ * \inmodule QtAwsRoute53
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteVPCAssociationAuthorizationRequestPrivate object.
- *
- * @param  action  Route53 action being performed.
- * @param  q       Pointer to this object's public DeleteVPCAssociationAuthorizationRequest instance.
+ * Constructs a DeleteVPCAssociationAuthorizationRequestPrivate object for Route53 \a action with,
+ * public implementation \a q.
  */
 DeleteVPCAssociationAuthorizationRequestPrivate::DeleteVPCAssociationAuthorizationRequestPrivate(
     const Route53Request::Action action, DeleteVPCAssociationAuthorizationRequest * const q)
@@ -104,15 +93,10 @@ DeleteVPCAssociationAuthorizationRequestPrivate::DeleteVPCAssociationAuthorizati
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteVPCAssociationAuthorizationRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteVPCAssociationAuthorizationRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteVPCAssociationAuthorizationRequest instance.
  */
 DeleteVPCAssociationAuthorizationRequestPrivate::DeleteVPCAssociationAuthorizationRequestPrivate(
     const DeleteVPCAssociationAuthorizationRequestPrivate &other, DeleteVPCAssociationAuthorizationRequest * const q)

@@ -27,10 +27,9 @@ namespace GameLift {
 
 /*!
  * \class QtAws::GameLift::DescribeVpcPeeringConnectionsRequest
- *
  * \brief The DescribeVpcPeeringConnectionsRequest class provides an interface for GameLift DescribeVpcPeeringConnections requests.
  *
- * \ingroup GameLift
+ * \inmodule QtAwsGameLift
  *
  *  <fullname>Amazon GameLift Service</fullname>
  * 
@@ -473,9 +472,7 @@ namespace GameLift {
  */
 
 /*!
- * @brief  Constructs a new DescribeVpcPeeringConnectionsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeVpcPeeringConnectionsRequest::DescribeVpcPeeringConnectionsRequest(const DescribeVpcPeeringConnectionsRequest &other)
     : GameLiftRequest(new DescribeVpcPeeringConnectionsRequestPrivate(*other.d_func(), this))
@@ -484,7 +481,7 @@ DescribeVpcPeeringConnectionsRequest::DescribeVpcPeeringConnectionsRequest(const
 }
 
 /*!
- * @brief  Constructs a new DescribeVpcPeeringConnectionsRequest object.
+ * Constructs a DescribeVpcPeeringConnectionsRequest object.
  */
 DescribeVpcPeeringConnectionsRequest::DescribeVpcPeeringConnectionsRequest()
     : GameLiftRequest(new DescribeVpcPeeringConnectionsRequestPrivate(GameLiftRequest::DescribeVpcPeeringConnectionsAction, this))
@@ -502,14 +499,9 @@ bool DescribeVpcPeeringConnectionsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeVpcPeeringConnectionsResponse object.
+ * Returns a DescribeVpcPeeringConnectionsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeVpcPeeringConnectionsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GameLiftClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeVpcPeeringConnectionsRequest::response(QNetworkReply * const reply) const
 {
@@ -517,20 +509,17 @@ QtAws::Core::AwsAbstractResponse * DescribeVpcPeeringConnectionsRequest::respons
 }
 
 /*!
- * @internal
+ * \class QtAws::GameLift::DescribeVpcPeeringConnectionsRequestPrivate
+ * \brief The DescribeVpcPeeringConnectionsRequestPrivate class provides private implementation for DescribeVpcPeeringConnectionsRequest.
+ * \internal
  *
- * @class  DescribeVpcPeeringConnectionsRequestPrivate
- *
- * @brief  Private implementation for DescribeVpcPeeringConnectionsRequest.
+ * \inmodule QtAwsGameLift
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeVpcPeeringConnectionsRequestPrivate object.
- *
- * @param  action  GameLift action being performed.
- * @param  q       Pointer to this object's public DescribeVpcPeeringConnectionsRequest instance.
+ * Constructs a DescribeVpcPeeringConnectionsRequestPrivate object for GameLift \a action with,
+ * public implementation \a q.
  */
 DescribeVpcPeeringConnectionsRequestPrivate::DescribeVpcPeeringConnectionsRequestPrivate(
     const GameLiftRequest::Action action, DescribeVpcPeeringConnectionsRequest * const q)
@@ -540,15 +529,10 @@ DescribeVpcPeeringConnectionsRequestPrivate::DescribeVpcPeeringConnectionsReques
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeVpcPeeringConnectionsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeVpcPeeringConnectionsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeVpcPeeringConnectionsRequest instance.
  */
 DescribeVpcPeeringConnectionsRequestPrivate::DescribeVpcPeeringConnectionsRequestPrivate(
     const DescribeVpcPeeringConnectionsRequestPrivate &other, DescribeVpcPeeringConnectionsRequest * const q)

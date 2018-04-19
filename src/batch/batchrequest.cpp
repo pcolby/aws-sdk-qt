@@ -25,16 +25,37 @@ namespace Batch {
 
 /*!
  * \class QtAws::Batch::BatchRequest
- *
  * \brief The BatchRequest class provides an interface for Batch requests.
  *
- * \ingroup Batch
+ * \inmodule QtAwsBatch
  */
 
 /*!
- * @brief  Constructs a new BatchRequest object.
+ * \enum BatchRequest::Action
  *
- * @param  action  The Batch action to request.
+ * This enum describes the actions that can be performed as Batch
+ * requests.
+ *
+ * \value CancelJobAction Batch CancelJob action.
+ * \value CreateComputeEnvironmentAction Batch CreateComputeEnvironment action.
+ * \value CreateJobQueueAction Batch CreateJobQueue action.
+ * \value DeleteComputeEnvironmentAction Batch DeleteComputeEnvironment action.
+ * \value DeleteJobQueueAction Batch DeleteJobQueue action.
+ * \value DeregisterJobDefinitionAction Batch DeregisterJobDefinition action.
+ * \value DescribeComputeEnvironmentsAction Batch DescribeComputeEnvironments action.
+ * \value DescribeJobDefinitionsAction Batch DescribeJobDefinitions action.
+ * \value DescribeJobQueuesAction Batch DescribeJobQueues action.
+ * \value DescribeJobsAction Batch DescribeJobs action.
+ * \value ListJobsAction Batch ListJobs action.
+ * \value RegisterJobDefinitionAction Batch RegisterJobDefinition action.
+ * \value SubmitJobAction Batch SubmitJob action.
+ * \value TerminateJobAction Batch TerminateJob action.
+ * \value UpdateComputeEnvironmentAction Batch UpdateComputeEnvironment action.
+ * \value UpdateJobQueueAction Batch UpdateJobQueue action.
+ */
+
+/*!
+ * Constructs a[n] BatchRequest object for Batch \a action.
  */
 BatchRequest::BatchRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new BatchRequestPrivate(action, this))
@@ -43,9 +64,7 @@ BatchRequest::BatchRequest(const Action action)
 }
 
 /*!
- * @brief  Constructs a new BatchRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 BatchRequest::BatchRequest(const BatchRequest &other)
     : QtAws::Core::AwsAbstractRequest(new BatchRequestPrivate(*other.d_func(), this))
@@ -54,13 +73,7 @@ BatchRequest::BatchRequest(const BatchRequest &other)
 }
 
 /*!
- * @brief  Assignment operator.
- *
- * Assigns \a other to \c this.
- *
- * @param  other  Instance to copy.
- *
- * @return  A reference to \c this.
+ * Sets the BatchRequest object to be equal to \a other.
  */
 BatchRequest& BatchRequest::operator=(const BatchRequest &other)
 {
@@ -72,14 +85,10 @@ BatchRequest& BatchRequest::operator=(const BatchRequest &other)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new BatchRequest object.
+ * Constructs aa BatchRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from BatchRequestPrivate.
- *
- * @param  d  Pointer to private data (aka D-Pointer).
  */
 BatchRequest::BatchRequest(BatchRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
@@ -87,7 +96,7 @@ BatchRequest::BatchRequest(BatchRequestPrivate * const d) : QtAws::Core::AwsAbst
 }
 
 /*!
- * \brief Returns the Batch action to be performed by this request.
+ * Returns the Batch action to be performed by this request.
  */
 BatchRequest::Action BatchRequest::action() const
 {
@@ -96,7 +105,7 @@ BatchRequest::Action BatchRequest::action() const
 }
 
 /*!
- * \brief Returns the name of the Batch action to be performed by this request.
+ * Returns the name of the Batch action to be performed by this request.
  */
 QString BatchRequest::actionString() const
 {
@@ -104,7 +113,7 @@ QString BatchRequest::actionString() const
 }
 
 /*!
- * \brief Returns the Batch API version implemented by this request.
+ * Returns the Batch API version implemented by this request.
  */
 QString BatchRequest::apiVersion() const
 {
@@ -113,7 +122,7 @@ QString BatchRequest::apiVersion() const
 }
 
 /*!
- * @brief Set the Batch action to be performed by this request to \a action.
+ * Sets the Batch action to be performed by this request to \a action.
  */
 void BatchRequest::setAction(const Action action)
 {
@@ -122,7 +131,7 @@ void BatchRequest::setAction(const Action action)
 }
 
 /*!
- * Set the Batch API version to include in this request to \a version.
+ * Sets the Batch API version to include in this request to \a version.
  */
 void BatchRequest::setApiVersion(const QString &version)
 {
@@ -131,7 +140,7 @@ void BatchRequest::setApiVersion(const QString &version)
 }
 
 /*!
- * \brief Returns \c true if this request is the same as \a other.
+ * Returns \c true if this request is equal to \a other; \c false otherwise.
  *
  * Note, most derived *Request classes do not need to provider their own
  * implementations of this function, since most such request classes rely on
@@ -146,8 +155,8 @@ bool BatchRequest::operator==(const BatchRequest &other) const
             (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
-/*!
- * @brief  Check if \a queueName is a valid Batch queue name.
+/*
+ * Returns \c tue if \a queueName is a valid Batch queue name.
  *
  * @par From Batch FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
@@ -166,9 +175,8 @@ bool BatchRequest::operator==(const BatchRequest &other) const
 }*/
 
 /*!
- * \brief Removes the a \a name parameter from this request.
- *
- * Returns the count of paramters removed (typically \c 0 or \c 1).
+ * Removes the a \a name parameter from the request, then returns the number of
+ * paramters removed (typically \c 0 or \c 1).
  */
 int BatchRequest::clearParameter(const QString &name)
 {
@@ -177,7 +185,7 @@ int BatchRequest::clearParameter(const QString &name)
 }
 
 /*!
- * \brief Removes all parameters from this request.
+ * Removes all parameters from the request.
  */
 void BatchRequest::clearParameters()
 {
@@ -186,7 +194,7 @@ void BatchRequest::clearParameters()
 }
 
 /*!
- * \brief Returns the value of the \n name pararemter if set, otherwise \a defaultValue.
+ * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
 QVariant BatchRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
@@ -195,7 +203,7 @@ QVariant BatchRequest::parameter(const QString &name, const QVariant &defaultVal
 }
 
 /*!
- * \brief Returns a map of parameters included in this request.
+ * Returns the parameters included in this request.
  */
 const QVariantMap &BatchRequest::parameters() const
 {
@@ -204,7 +212,7 @@ const QVariantMap &BatchRequest::parameters() const
 }
 
 /*!
- * \brief Sets the \a name parameter to \a value.
+ * Sets the \a name parameter to \a value.
  */
 void BatchRequest::setParameter(const QString &name, const QVariant &value)
 {
@@ -213,9 +221,8 @@ void BatchRequest::setParameter(const QString &name, const QVariant &value)
 }
 
 /*!
- * \brief Sets the map of paramters for this request to \a parameters.
- *
- * Any request parameters set previously will be discarded.
+ * Sets the paramters for this request to \a parameters. Any request parameters
+ * set previously will be discarded.
  */
 void BatchRequest::setParameters(const QVariantMap &parameters)
 {
@@ -224,11 +231,12 @@ void BatchRequest::setParameters(const QVariantMap &parameters)
 }
 
 /*!
- * \brief Returns a network request for this Batch request using the given \a endpoint.
+ * Returns a network request for the Batch request using the given
+ * \a endpoint.
  *
- * This Batch implementation builds request URLs by combining the common query
- * parameters (such as Action and Version), with any that have been added (via
- * setParameter) by child classes.
+ * This Batch implementation builds request URLs by combining the
+ * common query parameters (such as Action and Version), with any that have
+ * been added (via setParameter) by child classes.
  */
 QNetworkRequest BatchRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -239,17 +247,16 @@ QNetworkRequest BatchRequest::unsignedRequest(const QUrl &endpoint) const
 }
 
 /*!
+ * \class QtAws::Batch::BatchRequestPrivate
+ * \brief The BatchRequestPrivate class provides private implementation for BatchRequest.
  * \internal
  *
- * \class  BatchRequestPrivate
- *
- * \brief  Private implementation for BatchRequest.
+ * \inmodule QtAwsBatch
  */
 
 /*!
- * \internal
- *
- * \brief Constructs a new BatchRequestPrivate object.
+ * Constructs a BatchRequestPrivate object for Batch \a action with,
+ * public implementation \a q.
  */
 BatchRequestPrivate::BatchRequestPrivate(const BatchRequest::Action action, BatchRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
@@ -258,9 +265,7 @@ BatchRequestPrivate::BatchRequestPrivate(const BatchRequest::Action action, Batc
 }
 
 /*!
- * \internal
- *
- * \brief Constructs a new BatchRequestPrivate object, copying an existing one.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
@@ -276,15 +281,12 @@ BatchRequestPrivate::BatchRequestPrivate(const BatchRequestPrivate &other,
 }
 
 /*!
- * \internal
- *
- * \brief Returns a string representing \a action.
+ * Returns a string represention of \a action, or a null string if \a action is
+ * invalid.
  *
  * This function converts BatchRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the Batch service's Action
  * query parameters.
- *
- * @return A string representing \a action, or a null string if \a action is invalid.
  */
 QString BatchRequestPrivate::toString(const BatchRequest::Action &action)
 {

@@ -27,10 +27,9 @@ namespace WAF {
 
 /*!
  * \class QtAws::WAF::UpdateWebACLRequest
- *
  * \brief The UpdateWebACLRequest class provides an interface for WAF UpdateWebACL requests.
  *
- * \ingroup WAF
+ * \inmodule QtAwsWAF
  *
  *  This is the <i>AWS WAF API Reference</i> for using AWS WAF with Amazon CloudFront. The AWS WAF actions and data types
  *  listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data
@@ -42,9 +41,7 @@ namespace WAF {
  */
 
 /*!
- * @brief  Constructs a new UpdateWebACLRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateWebACLRequest::UpdateWebACLRequest(const UpdateWebACLRequest &other)
     : WAFRequest(new UpdateWebACLRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ UpdateWebACLRequest::UpdateWebACLRequest(const UpdateWebACLRequest &other)
 }
 
 /*!
- * @brief  Constructs a new UpdateWebACLRequest object.
+ * Constructs a UpdateWebACLRequest object.
  */
 UpdateWebACLRequest::UpdateWebACLRequest()
     : WAFRequest(new UpdateWebACLRequestPrivate(WAFRequest::UpdateWebACLAction, this))
@@ -71,14 +68,9 @@ bool UpdateWebACLRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateWebACLResponse object.
+ * Returns a UpdateWebACLResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateWebACLResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WAFClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateWebACLRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * UpdateWebACLRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::WAF::UpdateWebACLRequestPrivate
+ * \brief The UpdateWebACLRequestPrivate class provides private implementation for UpdateWebACLRequest.
+ * \internal
  *
- * @class  UpdateWebACLRequestPrivate
- *
- * @brief  Private implementation for UpdateWebACLRequest.
+ * \inmodule QtAwsWAF
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateWebACLRequestPrivate object.
- *
- * @param  action  WAF action being performed.
- * @param  q       Pointer to this object's public UpdateWebACLRequest instance.
+ * Constructs a UpdateWebACLRequestPrivate object for WAF \a action with,
+ * public implementation \a q.
  */
 UpdateWebACLRequestPrivate::UpdateWebACLRequestPrivate(
     const WAFRequest::Action action, UpdateWebACLRequest * const q)
@@ -109,15 +98,10 @@ UpdateWebACLRequestPrivate::UpdateWebACLRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateWebACLRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateWebACLRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateWebACLRequest instance.
  */
 UpdateWebACLRequestPrivate::UpdateWebACLRequestPrivate(
     const UpdateWebACLRequestPrivate &other, UpdateWebACLRequest * const q)

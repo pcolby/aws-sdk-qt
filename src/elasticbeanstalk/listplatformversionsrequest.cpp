@@ -27,10 +27,9 @@ namespace ElasticBeanstalk {
 
 /*!
  * \class QtAws::ElasticBeanstalk::ListPlatformVersionsRequest
- *
  * \brief The ListPlatformVersionsRequest class provides an interface for ElasticBeanstalk ListPlatformVersions requests.
  *
- * \ingroup ElasticBeanstalk
+ * \inmodule QtAwsElasticBeanstalk
  *
  *  <fullname>AWS Elastic Beanstalk</fullname>
  * 
@@ -59,9 +58,7 @@ namespace ElasticBeanstalk {
  */
 
 /*!
- * @brief  Constructs a new ListPlatformVersionsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListPlatformVersionsRequest::ListPlatformVersionsRequest(const ListPlatformVersionsRequest &other)
     : ElasticBeanstalkRequest(new ListPlatformVersionsRequestPrivate(*other.d_func(), this))
@@ -70,7 +67,7 @@ ListPlatformVersionsRequest::ListPlatformVersionsRequest(const ListPlatformVersi
 }
 
 /*!
- * @brief  Constructs a new ListPlatformVersionsRequest object.
+ * Constructs a ListPlatformVersionsRequest object.
  */
 ListPlatformVersionsRequest::ListPlatformVersionsRequest()
     : ElasticBeanstalkRequest(new ListPlatformVersionsRequestPrivate(ElasticBeanstalkRequest::ListPlatformVersionsAction, this))
@@ -88,14 +85,9 @@ bool ListPlatformVersionsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListPlatformVersionsResponse object.
+ * Returns a ListPlatformVersionsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListPlatformVersionsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ElasticBeanstalkClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListPlatformVersionsRequest::response(QNetworkReply * const reply) const
 {
@@ -103,20 +95,17 @@ QtAws::Core::AwsAbstractResponse * ListPlatformVersionsRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::ElasticBeanstalk::ListPlatformVersionsRequestPrivate
+ * \brief The ListPlatformVersionsRequestPrivate class provides private implementation for ListPlatformVersionsRequest.
+ * \internal
  *
- * @class  ListPlatformVersionsRequestPrivate
- *
- * @brief  Private implementation for ListPlatformVersionsRequest.
+ * \inmodule QtAwsElasticBeanstalk
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListPlatformVersionsRequestPrivate object.
- *
- * @param  action  ElasticBeanstalk action being performed.
- * @param  q       Pointer to this object's public ListPlatformVersionsRequest instance.
+ * Constructs a ListPlatformVersionsRequestPrivate object for ElasticBeanstalk \a action with,
+ * public implementation \a q.
  */
 ListPlatformVersionsRequestPrivate::ListPlatformVersionsRequestPrivate(
     const ElasticBeanstalkRequest::Action action, ListPlatformVersionsRequest * const q)
@@ -126,15 +115,10 @@ ListPlatformVersionsRequestPrivate::ListPlatformVersionsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListPlatformVersionsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListPlatformVersionsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListPlatformVersionsRequest instance.
  */
 ListPlatformVersionsRequestPrivate::ListPlatformVersionsRequestPrivate(
     const ListPlatformVersionsRequestPrivate &other, ListPlatformVersionsRequest * const q)

@@ -27,10 +27,9 @@ namespace ElasticLoadBalancing {
 
 /*!
  * \class QtAws::ElasticLoadBalancing::DescribeTagsRequest
- *
  * \brief The DescribeTagsRequest class provides an interface for ElasticLoadBalancing DescribeTags requests.
  *
- * \ingroup ElasticLoadBalancing
+ * \inmodule QtAwsElasticLoadBalancing
  *
  *  <fullname>Elastic Load Balancing</fullname>
  * 
@@ -65,9 +64,7 @@ namespace ElasticLoadBalancing {
  */
 
 /*!
- * @brief  Constructs a new DescribeTagsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeTagsRequest::DescribeTagsRequest(const DescribeTagsRequest &other)
     : ElasticLoadBalancingRequest(new DescribeTagsRequestPrivate(*other.d_func(), this))
@@ -76,7 +73,7 @@ DescribeTagsRequest::DescribeTagsRequest(const DescribeTagsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DescribeTagsRequest object.
+ * Constructs a DescribeTagsRequest object.
  */
 DescribeTagsRequest::DescribeTagsRequest()
     : ElasticLoadBalancingRequest(new DescribeTagsRequestPrivate(ElasticLoadBalancingRequest::DescribeTagsAction, this))
@@ -94,14 +91,9 @@ bool DescribeTagsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeTagsResponse object.
+ * Returns a DescribeTagsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeTagsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ElasticLoadBalancingClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeTagsRequest::response(QNetworkReply * const reply) const
 {
@@ -109,20 +101,17 @@ QtAws::Core::AwsAbstractResponse * DescribeTagsRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::ElasticLoadBalancing::DescribeTagsRequestPrivate
+ * \brief The DescribeTagsRequestPrivate class provides private implementation for DescribeTagsRequest.
+ * \internal
  *
- * @class  DescribeTagsRequestPrivate
- *
- * @brief  Private implementation for DescribeTagsRequest.
+ * \inmodule QtAwsElasticLoadBalancing
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeTagsRequestPrivate object.
- *
- * @param  action  ElasticLoadBalancing action being performed.
- * @param  q       Pointer to this object's public DescribeTagsRequest instance.
+ * Constructs a DescribeTagsRequestPrivate object for ElasticLoadBalancing \a action with,
+ * public implementation \a q.
  */
 DescribeTagsRequestPrivate::DescribeTagsRequestPrivate(
     const ElasticLoadBalancingRequest::Action action, DescribeTagsRequest * const q)
@@ -132,15 +121,10 @@ DescribeTagsRequestPrivate::DescribeTagsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeTagsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeTagsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeTagsRequest instance.
  */
 DescribeTagsRequestPrivate::DescribeTagsRequestPrivate(
     const DescribeTagsRequestPrivate &other, DescribeTagsRequest * const q)

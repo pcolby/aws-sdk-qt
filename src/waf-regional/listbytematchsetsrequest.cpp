@@ -27,10 +27,9 @@ namespace WAFRegional {
 
 /*!
  * \class QtAws::WAFRegional::ListByteMatchSetsRequest
- *
  * \brief The ListByteMatchSetsRequest class provides an interface for WAFRegional ListByteMatchSets requests.
  *
- * \ingroup WAFRegional
+ * \inmodule QtAwsWAFRegional
  *
  *  This is the <i>AWS WAF Regional API Reference</i> for using AWS WAF with Elastic Load Balancing (ELB) Application Load
  *  Balancers. The AWS WAF actions and data types listed in the reference are available for protecting Application Load
@@ -44,9 +43,7 @@ namespace WAFRegional {
  */
 
 /*!
- * @brief  Constructs a new ListByteMatchSetsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListByteMatchSetsRequest::ListByteMatchSetsRequest(const ListByteMatchSetsRequest &other)
     : WAFRegionalRequest(new ListByteMatchSetsRequestPrivate(*other.d_func(), this))
@@ -55,7 +52,7 @@ ListByteMatchSetsRequest::ListByteMatchSetsRequest(const ListByteMatchSetsReques
 }
 
 /*!
- * @brief  Constructs a new ListByteMatchSetsRequest object.
+ * Constructs a ListByteMatchSetsRequest object.
  */
 ListByteMatchSetsRequest::ListByteMatchSetsRequest()
     : WAFRegionalRequest(new ListByteMatchSetsRequestPrivate(WAFRegionalRequest::ListByteMatchSetsAction, this))
@@ -73,14 +70,9 @@ bool ListByteMatchSetsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListByteMatchSetsResponse object.
+ * Returns a ListByteMatchSetsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListByteMatchSetsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WAFRegionalClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListByteMatchSetsRequest::response(QNetworkReply * const reply) const
 {
@@ -88,20 +80,17 @@ QtAws::Core::AwsAbstractResponse * ListByteMatchSetsRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::WAFRegional::ListByteMatchSetsRequestPrivate
+ * \brief The ListByteMatchSetsRequestPrivate class provides private implementation for ListByteMatchSetsRequest.
+ * \internal
  *
- * @class  ListByteMatchSetsRequestPrivate
- *
- * @brief  Private implementation for ListByteMatchSetsRequest.
+ * \inmodule QtAwsWAFRegional
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListByteMatchSetsRequestPrivate object.
- *
- * @param  action  WAFRegional action being performed.
- * @param  q       Pointer to this object's public ListByteMatchSetsRequest instance.
+ * Constructs a ListByteMatchSetsRequestPrivate object for WAFRegional \a action with,
+ * public implementation \a q.
  */
 ListByteMatchSetsRequestPrivate::ListByteMatchSetsRequestPrivate(
     const WAFRegionalRequest::Action action, ListByteMatchSetsRequest * const q)
@@ -111,15 +100,10 @@ ListByteMatchSetsRequestPrivate::ListByteMatchSetsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListByteMatchSetsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListByteMatchSetsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListByteMatchSetsRequest instance.
  */
 ListByteMatchSetsRequestPrivate::ListByteMatchSetsRequestPrivate(
     const ListByteMatchSetsRequestPrivate &other, ListByteMatchSetsRequest * const q)

@@ -27,10 +27,9 @@ namespace CodeCommit {
 
 /*!
  * \class QtAws::CodeCommit::GetPullRequestRequest
- *
  * \brief The GetPullRequestRequest class provides an interface for CodeCommit GetPullRequest requests.
  *
- * \ingroup CodeCommit
+ * \inmodule QtAwsCodeCommit
  *
  *  <fullname>AWS CodeCommit</fullname>
  * 
@@ -227,9 +226,7 @@ namespace CodeCommit {
  */
 
 /*!
- * @brief  Constructs a new GetPullRequestRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetPullRequestRequest::GetPullRequestRequest(const GetPullRequestRequest &other)
     : CodeCommitRequest(new GetPullRequestRequestPrivate(*other.d_func(), this))
@@ -238,7 +235,7 @@ GetPullRequestRequest::GetPullRequestRequest(const GetPullRequestRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetPullRequestRequest object.
+ * Constructs a GetPullRequestRequest object.
  */
 GetPullRequestRequest::GetPullRequestRequest()
     : CodeCommitRequest(new GetPullRequestRequestPrivate(CodeCommitRequest::GetPullRequestAction, this))
@@ -256,14 +253,9 @@ bool GetPullRequestRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetPullRequestResponse object.
+ * Returns a GetPullRequestResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetPullRequestResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CodeCommitClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetPullRequestRequest::response(QNetworkReply * const reply) const
 {
@@ -271,20 +263,17 @@ QtAws::Core::AwsAbstractResponse * GetPullRequestRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::CodeCommit::GetPullRequestRequestPrivate
+ * \brief The GetPullRequestRequestPrivate class provides private implementation for GetPullRequestRequest.
+ * \internal
  *
- * @class  GetPullRequestRequestPrivate
- *
- * @brief  Private implementation for GetPullRequestRequest.
+ * \inmodule QtAwsCodeCommit
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetPullRequestRequestPrivate object.
- *
- * @param  action  CodeCommit action being performed.
- * @param  q       Pointer to this object's public GetPullRequestRequest instance.
+ * Constructs a GetPullRequestRequestPrivate object for CodeCommit \a action with,
+ * public implementation \a q.
  */
 GetPullRequestRequestPrivate::GetPullRequestRequestPrivate(
     const CodeCommitRequest::Action action, GetPullRequestRequest * const q)
@@ -294,15 +283,10 @@ GetPullRequestRequestPrivate::GetPullRequestRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetPullRequestRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetPullRequestRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetPullRequestRequest instance.
  */
 GetPullRequestRequestPrivate::GetPullRequestRequestPrivate(
     const GetPullRequestRequestPrivate &other, GetPullRequestRequest * const q)

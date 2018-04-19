@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::RebootInstancesRequest
- *
  * \brief The RebootInstancesRequest class provides an interface for EC2 RebootInstances requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new RebootInstancesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 RebootInstancesRequest::RebootInstancesRequest(const RebootInstancesRequest &other)
     : EC2Request(new RebootInstancesRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ RebootInstancesRequest::RebootInstancesRequest(const RebootInstancesRequest &oth
 }
 
 /*!
- * @brief  Constructs a new RebootInstancesRequest object.
+ * Constructs a RebootInstancesRequest object.
  */
 RebootInstancesRequest::RebootInstancesRequest()
     : EC2Request(new RebootInstancesRequestPrivate(EC2Request::RebootInstancesAction, this))
@@ -70,14 +67,9 @@ bool RebootInstancesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an RebootInstancesResponse object.
+ * Returns a RebootInstancesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An RebootInstancesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * RebootInstancesRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * RebootInstancesRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::RebootInstancesRequestPrivate
+ * \brief The RebootInstancesRequestPrivate class provides private implementation for RebootInstancesRequest.
+ * \internal
  *
- * @class  RebootInstancesRequestPrivate
- *
- * @brief  Private implementation for RebootInstancesRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new RebootInstancesRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public RebootInstancesRequest instance.
+ * Constructs a RebootInstancesRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 RebootInstancesRequestPrivate::RebootInstancesRequestPrivate(
     const EC2Request::Action action, RebootInstancesRequest * const q)
@@ -108,15 +97,10 @@ RebootInstancesRequestPrivate::RebootInstancesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RebootInstancesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the RebootInstancesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public RebootInstancesRequest instance.
  */
 RebootInstancesRequestPrivate::RebootInstancesRequestPrivate(
     const RebootInstancesRequestPrivate &other, RebootInstancesRequest * const q)

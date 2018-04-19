@@ -27,10 +27,9 @@ namespace Batch {
 
 /*!
  * \class QtAws::Batch::CreateComputeEnvironmentRequest
- *
  * \brief The CreateComputeEnvironmentRequest class provides an interface for Batch CreateComputeEnvironment requests.
  *
- * \ingroup Batch
+ * \inmodule QtAwsBatch
  *
  *  AWS Batch enables you to run batch computing workloads on the AWS Cloud. Batch computing is a common way for developers,
  *  scientists, and engineers to access large amounts of compute resources, and AWS Batch removes the undifferentiated heavy
@@ -51,9 +50,7 @@ namespace Batch {
  */
 
 /*!
- * @brief  Constructs a new CreateComputeEnvironmentRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateComputeEnvironmentRequest::CreateComputeEnvironmentRequest(const CreateComputeEnvironmentRequest &other)
     : BatchRequest(new CreateComputeEnvironmentRequestPrivate(*other.d_func(), this))
@@ -62,7 +59,7 @@ CreateComputeEnvironmentRequest::CreateComputeEnvironmentRequest(const CreateCom
 }
 
 /*!
- * @brief  Constructs a new CreateComputeEnvironmentRequest object.
+ * Constructs a CreateComputeEnvironmentRequest object.
  */
 CreateComputeEnvironmentRequest::CreateComputeEnvironmentRequest()
     : BatchRequest(new CreateComputeEnvironmentRequestPrivate(BatchRequest::CreateComputeEnvironmentAction, this))
@@ -80,14 +77,9 @@ bool CreateComputeEnvironmentRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateComputeEnvironmentResponse object.
+ * Returns a CreateComputeEnvironmentResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateComputeEnvironmentResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  BatchClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateComputeEnvironmentRequest::response(QNetworkReply * const reply) const
 {
@@ -95,20 +87,17 @@ QtAws::Core::AwsAbstractResponse * CreateComputeEnvironmentRequest::response(QNe
 }
 
 /*!
- * @internal
+ * \class QtAws::Batch::CreateComputeEnvironmentRequestPrivate
+ * \brief The CreateComputeEnvironmentRequestPrivate class provides private implementation for CreateComputeEnvironmentRequest.
+ * \internal
  *
- * @class  CreateComputeEnvironmentRequestPrivate
- *
- * @brief  Private implementation for CreateComputeEnvironmentRequest.
+ * \inmodule QtAwsBatch
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateComputeEnvironmentRequestPrivate object.
- *
- * @param  action  Batch action being performed.
- * @param  q       Pointer to this object's public CreateComputeEnvironmentRequest instance.
+ * Constructs a CreateComputeEnvironmentRequestPrivate object for Batch \a action with,
+ * public implementation \a q.
  */
 CreateComputeEnvironmentRequestPrivate::CreateComputeEnvironmentRequestPrivate(
     const BatchRequest::Action action, CreateComputeEnvironmentRequest * const q)
@@ -118,15 +107,10 @@ CreateComputeEnvironmentRequestPrivate::CreateComputeEnvironmentRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateComputeEnvironmentRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateComputeEnvironmentRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateComputeEnvironmentRequest instance.
  */
 CreateComputeEnvironmentRequestPrivate::CreateComputeEnvironmentRequestPrivate(
     const CreateComputeEnvironmentRequestPrivate &other, CreateComputeEnvironmentRequest * const q)

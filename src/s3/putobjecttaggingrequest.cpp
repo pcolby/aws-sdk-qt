@@ -27,19 +27,16 @@ namespace S3 {
 
 /*!
  * \class QtAws::S3::PutObjectTaggingRequest
- *
  * \brief The PutObjectTaggingRequest class provides an interface for S3 PutObjectTagging requests.
  *
- * \ingroup S3
+ * \inmodule QtAwsS3
  *
  *
  * \sa S3Client::putObjectTagging
  */
 
 /*!
- * @brief  Constructs a new PutObjectTaggingRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 PutObjectTaggingRequest::PutObjectTaggingRequest(const PutObjectTaggingRequest &other)
     : S3Request(new PutObjectTaggingRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ PutObjectTaggingRequest::PutObjectTaggingRequest(const PutObjectTaggingRequest &
 }
 
 /*!
- * @brief  Constructs a new PutObjectTaggingRequest object.
+ * Constructs a PutObjectTaggingRequest object.
  */
 PutObjectTaggingRequest::PutObjectTaggingRequest()
     : S3Request(new PutObjectTaggingRequestPrivate(S3Request::PutObjectTaggingAction, this))
@@ -66,14 +63,9 @@ bool PutObjectTaggingRequest::isValid() const
 
 
 /*!
- * @brief  Construct an PutObjectTaggingResponse object.
+ * Returns a PutObjectTaggingResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An PutObjectTaggingResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  S3Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * PutObjectTaggingRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * PutObjectTaggingRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::S3::PutObjectTaggingRequestPrivate
+ * \brief The PutObjectTaggingRequestPrivate class provides private implementation for PutObjectTaggingRequest.
+ * \internal
  *
- * @class  PutObjectTaggingRequestPrivate
- *
- * @brief  Private implementation for PutObjectTaggingRequest.
+ * \inmodule QtAwsS3
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new PutObjectTaggingRequestPrivate object.
- *
- * @param  action  S3 action being performed.
- * @param  q       Pointer to this object's public PutObjectTaggingRequest instance.
+ * Constructs a PutObjectTaggingRequestPrivate object for S3 \a action with,
+ * public implementation \a q.
  */
 PutObjectTaggingRequestPrivate::PutObjectTaggingRequestPrivate(
     const S3Request::Action action, PutObjectTaggingRequest * const q)
@@ -104,15 +93,10 @@ PutObjectTaggingRequestPrivate::PutObjectTaggingRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutObjectTaggingRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the PutObjectTaggingRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public PutObjectTaggingRequest instance.
  */
 PutObjectTaggingRequestPrivate::PutObjectTaggingRequestPrivate(
     const PutObjectTaggingRequestPrivate &other, PutObjectTaggingRequest * const q)

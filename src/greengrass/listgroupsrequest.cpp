@@ -27,10 +27,9 @@ namespace Greengrass {
 
 /*!
  * \class QtAws::Greengrass::ListGroupsRequest
- *
  * \brief The ListGroupsRequest class provides an interface for Greengrass ListGroups requests.
  *
- * \ingroup Greengrass
+ * \inmodule QtAwsGreengrass
  *
  *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
  *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
@@ -40,9 +39,7 @@ namespace Greengrass {
  */
 
 /*!
- * @brief  Constructs a new ListGroupsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListGroupsRequest::ListGroupsRequest(const ListGroupsRequest &other)
     : GreengrassRequest(new ListGroupsRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ ListGroupsRequest::ListGroupsRequest(const ListGroupsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ListGroupsRequest object.
+ * Constructs a ListGroupsRequest object.
  */
 ListGroupsRequest::ListGroupsRequest()
     : GreengrassRequest(new ListGroupsRequestPrivate(GreengrassRequest::ListGroupsAction, this))
@@ -69,14 +66,9 @@ bool ListGroupsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListGroupsResponse object.
+ * Returns a ListGroupsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListGroupsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GreengrassClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListGroupsRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * ListGroupsRequest::response(QNetworkReply * c
 }
 
 /*!
- * @internal
+ * \class QtAws::Greengrass::ListGroupsRequestPrivate
+ * \brief The ListGroupsRequestPrivate class provides private implementation for ListGroupsRequest.
+ * \internal
  *
- * @class  ListGroupsRequestPrivate
- *
- * @brief  Private implementation for ListGroupsRequest.
+ * \inmodule QtAwsGreengrass
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListGroupsRequestPrivate object.
- *
- * @param  action  Greengrass action being performed.
- * @param  q       Pointer to this object's public ListGroupsRequest instance.
+ * Constructs a ListGroupsRequestPrivate object for Greengrass \a action with,
+ * public implementation \a q.
  */
 ListGroupsRequestPrivate::ListGroupsRequestPrivate(
     const GreengrassRequest::Action action, ListGroupsRequest * const q)
@@ -107,15 +96,10 @@ ListGroupsRequestPrivate::ListGroupsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListGroupsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListGroupsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListGroupsRequest instance.
  */
 ListGroupsRequestPrivate::ListGroupsRequestPrivate(
     const ListGroupsRequestPrivate &other, ListGroupsRequest * const q)

@@ -27,10 +27,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::DeleteDBSecurityGroupRequest
- *
  * \brief The DeleteDBSecurityGroupRequest class provides an interface for RDS DeleteDBSecurityGroup requests.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -101,9 +100,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new DeleteDBSecurityGroupRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteDBSecurityGroupRequest::DeleteDBSecurityGroupRequest(const DeleteDBSecurityGroupRequest &other)
     : RDSRequest(new DeleteDBSecurityGroupRequestPrivate(*other.d_func(), this))
@@ -112,7 +109,7 @@ DeleteDBSecurityGroupRequest::DeleteDBSecurityGroupRequest(const DeleteDBSecurit
 }
 
 /*!
- * @brief  Constructs a new DeleteDBSecurityGroupRequest object.
+ * Constructs a DeleteDBSecurityGroupRequest object.
  */
 DeleteDBSecurityGroupRequest::DeleteDBSecurityGroupRequest()
     : RDSRequest(new DeleteDBSecurityGroupRequestPrivate(RDSRequest::DeleteDBSecurityGroupAction, this))
@@ -130,14 +127,9 @@ bool DeleteDBSecurityGroupRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteDBSecurityGroupResponse object.
+ * Returns a DeleteDBSecurityGroupResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteDBSecurityGroupResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RDSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteDBSecurityGroupRequest::response(QNetworkReply * const reply) const
 {
@@ -145,20 +137,17 @@ QtAws::Core::AwsAbstractResponse * DeleteDBSecurityGroupRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::RDS::DeleteDBSecurityGroupRequestPrivate
+ * \brief The DeleteDBSecurityGroupRequestPrivate class provides private implementation for DeleteDBSecurityGroupRequest.
+ * \internal
  *
- * @class  DeleteDBSecurityGroupRequestPrivate
- *
- * @brief  Private implementation for DeleteDBSecurityGroupRequest.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteDBSecurityGroupRequestPrivate object.
- *
- * @param  action  RDS action being performed.
- * @param  q       Pointer to this object's public DeleteDBSecurityGroupRequest instance.
+ * Constructs a DeleteDBSecurityGroupRequestPrivate object for RDS \a action with,
+ * public implementation \a q.
  */
 DeleteDBSecurityGroupRequestPrivate::DeleteDBSecurityGroupRequestPrivate(
     const RDSRequest::Action action, DeleteDBSecurityGroupRequest * const q)
@@ -168,15 +157,10 @@ DeleteDBSecurityGroupRequestPrivate::DeleteDBSecurityGroupRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteDBSecurityGroupRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteDBSecurityGroupRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteDBSecurityGroupRequest instance.
  */
 DeleteDBSecurityGroupRequestPrivate::DeleteDBSecurityGroupRequestPrivate(
     const DeleteDBSecurityGroupRequestPrivate &other, DeleteDBSecurityGroupRequest * const q)

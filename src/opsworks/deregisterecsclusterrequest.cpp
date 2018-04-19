@@ -27,10 +27,9 @@ namespace OpsWorks {
 
 /*!
  * \class QtAws::OpsWorks::DeregisterEcsClusterRequest
- *
  * \brief The DeregisterEcsClusterRequest class provides an interface for OpsWorks DeregisterEcsCluster requests.
  *
- * \ingroup OpsWorks
+ * \inmodule QtAwsOpsWorks
  *
  *  <fullname>AWS OpsWorks</fullname>
  * 
@@ -143,9 +142,7 @@ namespace OpsWorks {
  */
 
 /*!
- * @brief  Constructs a new DeregisterEcsClusterRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeregisterEcsClusterRequest::DeregisterEcsClusterRequest(const DeregisterEcsClusterRequest &other)
     : OpsWorksRequest(new DeregisterEcsClusterRequestPrivate(*other.d_func(), this))
@@ -154,7 +151,7 @@ DeregisterEcsClusterRequest::DeregisterEcsClusterRequest(const DeregisterEcsClus
 }
 
 /*!
- * @brief  Constructs a new DeregisterEcsClusterRequest object.
+ * Constructs a DeregisterEcsClusterRequest object.
  */
 DeregisterEcsClusterRequest::DeregisterEcsClusterRequest()
     : OpsWorksRequest(new DeregisterEcsClusterRequestPrivate(OpsWorksRequest::DeregisterEcsClusterAction, this))
@@ -172,14 +169,9 @@ bool DeregisterEcsClusterRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeregisterEcsClusterResponse object.
+ * Returns a DeregisterEcsClusterResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeregisterEcsClusterResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  OpsWorksClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeregisterEcsClusterRequest::response(QNetworkReply * const reply) const
 {
@@ -187,20 +179,17 @@ QtAws::Core::AwsAbstractResponse * DeregisterEcsClusterRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::OpsWorks::DeregisterEcsClusterRequestPrivate
+ * \brief The DeregisterEcsClusterRequestPrivate class provides private implementation for DeregisterEcsClusterRequest.
+ * \internal
  *
- * @class  DeregisterEcsClusterRequestPrivate
- *
- * @brief  Private implementation for DeregisterEcsClusterRequest.
+ * \inmodule QtAwsOpsWorks
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeregisterEcsClusterRequestPrivate object.
- *
- * @param  action  OpsWorks action being performed.
- * @param  q       Pointer to this object's public DeregisterEcsClusterRequest instance.
+ * Constructs a DeregisterEcsClusterRequestPrivate object for OpsWorks \a action with,
+ * public implementation \a q.
  */
 DeregisterEcsClusterRequestPrivate::DeregisterEcsClusterRequestPrivate(
     const OpsWorksRequest::Action action, DeregisterEcsClusterRequest * const q)
@@ -210,15 +199,10 @@ DeregisterEcsClusterRequestPrivate::DeregisterEcsClusterRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeregisterEcsClusterRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeregisterEcsClusterRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeregisterEcsClusterRequest instance.
  */
 DeregisterEcsClusterRequestPrivate::DeregisterEcsClusterRequestPrivate(
     const DeregisterEcsClusterRequestPrivate &other, DeregisterEcsClusterRequest * const q)

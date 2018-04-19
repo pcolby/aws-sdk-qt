@@ -27,10 +27,9 @@ namespace CloudFront {
 
 /*!
  * \class QtAws::CloudFront::DeletePublicKeyRequest
- *
  * \brief The DeletePublicKeyRequest class provides an interface for CloudFront DeletePublicKey requests.
  *
- * \ingroup CloudFront
+ * \inmodule QtAwsCloudFront
  *
  *  <fullname>Amazon CloudFront</fullname>
  * 
@@ -42,9 +41,7 @@ namespace CloudFront {
  */
 
 /*!
- * @brief  Constructs a new DeletePublicKeyRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeletePublicKeyRequest::DeletePublicKeyRequest(const DeletePublicKeyRequest &other)
     : CloudFrontRequest(new DeletePublicKeyRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ DeletePublicKeyRequest::DeletePublicKeyRequest(const DeletePublicKeyRequest &oth
 }
 
 /*!
- * @brief  Constructs a new DeletePublicKeyRequest object.
+ * Constructs a DeletePublicKeyRequest object.
  */
 DeletePublicKeyRequest::DeletePublicKeyRequest()
     : CloudFrontRequest(new DeletePublicKeyRequestPrivate(CloudFrontRequest::DeletePublicKeyAction, this))
@@ -71,14 +68,9 @@ bool DeletePublicKeyRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeletePublicKeyResponse object.
+ * Returns a DeletePublicKeyResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeletePublicKeyResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudFrontClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeletePublicKeyRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * DeletePublicKeyRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudFront::DeletePublicKeyRequestPrivate
+ * \brief The DeletePublicKeyRequestPrivate class provides private implementation for DeletePublicKeyRequest.
+ * \internal
  *
- * @class  DeletePublicKeyRequestPrivate
- *
- * @brief  Private implementation for DeletePublicKeyRequest.
+ * \inmodule QtAwsCloudFront
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeletePublicKeyRequestPrivate object.
- *
- * @param  action  CloudFront action being performed.
- * @param  q       Pointer to this object's public DeletePublicKeyRequest instance.
+ * Constructs a DeletePublicKeyRequestPrivate object for CloudFront \a action with,
+ * public implementation \a q.
  */
 DeletePublicKeyRequestPrivate::DeletePublicKeyRequestPrivate(
     const CloudFrontRequest::Action action, DeletePublicKeyRequest * const q)
@@ -109,15 +98,10 @@ DeletePublicKeyRequestPrivate::DeletePublicKeyRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeletePublicKeyRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeletePublicKeyRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeletePublicKeyRequest instance.
  */
 DeletePublicKeyRequestPrivate::DeletePublicKeyRequestPrivate(
     const DeletePublicKeyRequestPrivate &other, DeletePublicKeyRequest * const q)

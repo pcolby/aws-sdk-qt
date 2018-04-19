@@ -27,10 +27,9 @@ namespace CognitoIdentity {
 
 /*!
  * \class QtAws::CognitoIdentity::GetOpenIdTokenRequest
- *
  * \brief The GetOpenIdTokenRequest class provides an interface for CognitoIdentity GetOpenIdToken requests.
  *
- * \ingroup CognitoIdentity
+ * \inmodule QtAwsCognitoIdentity
  *
  *  <fullname>Amazon Cognito</fullname>
  * 
@@ -75,9 +74,7 @@ namespace CognitoIdentity {
  */
 
 /*!
- * @brief  Constructs a new GetOpenIdTokenRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetOpenIdTokenRequest::GetOpenIdTokenRequest(const GetOpenIdTokenRequest &other)
     : CognitoIdentityRequest(new GetOpenIdTokenRequestPrivate(*other.d_func(), this))
@@ -86,7 +83,7 @@ GetOpenIdTokenRequest::GetOpenIdTokenRequest(const GetOpenIdTokenRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetOpenIdTokenRequest object.
+ * Constructs a GetOpenIdTokenRequest object.
  */
 GetOpenIdTokenRequest::GetOpenIdTokenRequest()
     : CognitoIdentityRequest(new GetOpenIdTokenRequestPrivate(CognitoIdentityRequest::GetOpenIdTokenAction, this))
@@ -104,14 +101,9 @@ bool GetOpenIdTokenRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetOpenIdTokenResponse object.
+ * Returns a GetOpenIdTokenResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetOpenIdTokenResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CognitoIdentityClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetOpenIdTokenRequest::response(QNetworkReply * const reply) const
 {
@@ -119,20 +111,17 @@ QtAws::Core::AwsAbstractResponse * GetOpenIdTokenRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::CognitoIdentity::GetOpenIdTokenRequestPrivate
+ * \brief The GetOpenIdTokenRequestPrivate class provides private implementation for GetOpenIdTokenRequest.
+ * \internal
  *
- * @class  GetOpenIdTokenRequestPrivate
- *
- * @brief  Private implementation for GetOpenIdTokenRequest.
+ * \inmodule QtAwsCognitoIdentity
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetOpenIdTokenRequestPrivate object.
- *
- * @param  action  CognitoIdentity action being performed.
- * @param  q       Pointer to this object's public GetOpenIdTokenRequest instance.
+ * Constructs a GetOpenIdTokenRequestPrivate object for CognitoIdentity \a action with,
+ * public implementation \a q.
  */
 GetOpenIdTokenRequestPrivate::GetOpenIdTokenRequestPrivate(
     const CognitoIdentityRequest::Action action, GetOpenIdTokenRequest * const q)
@@ -142,15 +131,10 @@ GetOpenIdTokenRequestPrivate::GetOpenIdTokenRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetOpenIdTokenRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetOpenIdTokenRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetOpenIdTokenRequest instance.
  */
 GetOpenIdTokenRequestPrivate::GetOpenIdTokenRequestPrivate(
     const GetOpenIdTokenRequestPrivate &other, GetOpenIdTokenRequest * const q)

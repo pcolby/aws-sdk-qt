@@ -27,10 +27,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::RestoreDBInstanceFromS3Request
- *
  * \brief The RestoreDBInstanceFromS3Request class provides an interface for RDS RestoreDBInstanceFromS3 requests.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -101,9 +100,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new RestoreDBInstanceFromS3Request object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 RestoreDBInstanceFromS3Request::RestoreDBInstanceFromS3Request(const RestoreDBInstanceFromS3Request &other)
     : RDSRequest(new RestoreDBInstanceFromS3RequestPrivate(*other.d_func(), this))
@@ -112,7 +109,7 @@ RestoreDBInstanceFromS3Request::RestoreDBInstanceFromS3Request(const RestoreDBIn
 }
 
 /*!
- * @brief  Constructs a new RestoreDBInstanceFromS3Request object.
+ * Constructs a RestoreDBInstanceFromS3Request object.
  */
 RestoreDBInstanceFromS3Request::RestoreDBInstanceFromS3Request()
     : RDSRequest(new RestoreDBInstanceFromS3RequestPrivate(RDSRequest::RestoreDBInstanceFromS3Action, this))
@@ -130,14 +127,9 @@ bool RestoreDBInstanceFromS3Request::isValid() const
 
 
 /*!
- * @brief  Construct an RestoreDBInstanceFromS3Response object.
+ * Returns a RestoreDBInstanceFromS3Response object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An RestoreDBInstanceFromS3Response instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RDSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * RestoreDBInstanceFromS3Request::response(QNetworkReply * const reply) const
 {
@@ -145,20 +137,17 @@ QtAws::Core::AwsAbstractResponse * RestoreDBInstanceFromS3Request::response(QNet
 }
 
 /*!
- * @internal
+ * \class QtAws::RDS::RestoreDBInstanceFromS3RequestPrivate
+ * \brief The RestoreDBInstanceFromS3RequestPrivate class provides private implementation for RestoreDBInstanceFromS3Request.
+ * \internal
  *
- * @class  RestoreDBInstanceFromS3RequestPrivate
- *
- * @brief  Private implementation for RestoreDBInstanceFromS3Request.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new RestoreDBInstanceFromS3RequestPrivate object.
- *
- * @param  action  RDS action being performed.
- * @param  q       Pointer to this object's public RestoreDBInstanceFromS3Request instance.
+ * Constructs a RestoreDBInstanceFromS3RequestPrivate object for RDS \a action with,
+ * public implementation \a q.
  */
 RestoreDBInstanceFromS3RequestPrivate::RestoreDBInstanceFromS3RequestPrivate(
     const RDSRequest::Action action, RestoreDBInstanceFromS3Request * const q)
@@ -168,15 +157,10 @@ RestoreDBInstanceFromS3RequestPrivate::RestoreDBInstanceFromS3RequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RestoreDBInstanceFromS3RequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the RestoreDBInstanceFromS3Request
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public RestoreDBInstanceFromS3Request instance.
  */
 RestoreDBInstanceFromS3RequestPrivate::RestoreDBInstanceFromS3RequestPrivate(
     const RestoreDBInstanceFromS3RequestPrivate &other, RestoreDBInstanceFromS3Request * const q)

@@ -25,16 +25,37 @@ namespace CloudWatch {
 
 /*!
  * \class QtAws::CloudWatch::CloudWatchRequest
- *
  * \brief The CloudWatchRequest class provides an interface for CloudWatch requests.
  *
- * \ingroup CloudWatch
+ * \inmodule QtAwsCloudWatch
  */
 
 /*!
- * @brief  Constructs a new CloudWatchRequest object.
+ * \enum CloudWatchRequest::Action
  *
- * @param  action  The CloudWatch action to request.
+ * This enum describes the actions that can be performed as CloudWatch
+ * requests.
+ *
+ * \value DeleteAlarmsAction CloudWatch DeleteAlarms action.
+ * \value DeleteDashboardsAction CloudWatch DeleteDashboards action.
+ * \value DescribeAlarmHistoryAction CloudWatch DescribeAlarmHistory action.
+ * \value DescribeAlarmsAction CloudWatch DescribeAlarms action.
+ * \value DescribeAlarmsForMetricAction CloudWatch DescribeAlarmsForMetric action.
+ * \value DisableAlarmActionsAction CloudWatch DisableAlarmActions action.
+ * \value EnableAlarmActionsAction CloudWatch EnableAlarmActions action.
+ * \value GetDashboardAction CloudWatch GetDashboard action.
+ * \value GetMetricDataAction CloudWatch GetMetricData action.
+ * \value GetMetricStatisticsAction CloudWatch GetMetricStatistics action.
+ * \value ListDashboardsAction CloudWatch ListDashboards action.
+ * \value ListMetricsAction CloudWatch ListMetrics action.
+ * \value PutDashboardAction CloudWatch PutDashboard action.
+ * \value PutMetricAlarmAction CloudWatch PutMetricAlarm action.
+ * \value PutMetricDataAction CloudWatch PutMetricData action.
+ * \value SetAlarmStateAction CloudWatch SetAlarmState action.
+ */
+
+/*!
+ * Constructs a[n] CloudWatchRequest object for CloudWatch \a action.
  */
 CloudWatchRequest::CloudWatchRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new CloudWatchRequestPrivate(action, this))
@@ -43,9 +64,7 @@ CloudWatchRequest::CloudWatchRequest(const Action action)
 }
 
 /*!
- * @brief  Constructs a new CloudWatchRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CloudWatchRequest::CloudWatchRequest(const CloudWatchRequest &other)
     : QtAws::Core::AwsAbstractRequest(new CloudWatchRequestPrivate(*other.d_func(), this))
@@ -54,13 +73,7 @@ CloudWatchRequest::CloudWatchRequest(const CloudWatchRequest &other)
 }
 
 /*!
- * @brief  Assignment operator.
- *
- * Assigns \a other to \c this.
- *
- * @param  other  Instance to copy.
- *
- * @return  A reference to \c this.
+ * Sets the CloudWatchRequest object to be equal to \a other.
  */
 CloudWatchRequest& CloudWatchRequest::operator=(const CloudWatchRequest &other)
 {
@@ -72,14 +85,10 @@ CloudWatchRequest& CloudWatchRequest::operator=(const CloudWatchRequest &other)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CloudWatchRequest object.
+ * Constructs aa CloudWatchRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from CloudWatchRequestPrivate.
- *
- * @param  d  Pointer to private data (aka D-Pointer).
  */
 CloudWatchRequest::CloudWatchRequest(CloudWatchRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
@@ -87,7 +96,7 @@ CloudWatchRequest::CloudWatchRequest(CloudWatchRequestPrivate * const d) : QtAws
 }
 
 /*!
- * \brief Returns the CloudWatch action to be performed by this request.
+ * Returns the CloudWatch action to be performed by this request.
  */
 CloudWatchRequest::Action CloudWatchRequest::action() const
 {
@@ -96,7 +105,7 @@ CloudWatchRequest::Action CloudWatchRequest::action() const
 }
 
 /*!
- * \brief Returns the name of the CloudWatch action to be performed by this request.
+ * Returns the name of the CloudWatch action to be performed by this request.
  */
 QString CloudWatchRequest::actionString() const
 {
@@ -104,7 +113,7 @@ QString CloudWatchRequest::actionString() const
 }
 
 /*!
- * \brief Returns the CloudWatch API version implemented by this request.
+ * Returns the CloudWatch API version implemented by this request.
  */
 QString CloudWatchRequest::apiVersion() const
 {
@@ -113,7 +122,7 @@ QString CloudWatchRequest::apiVersion() const
 }
 
 /*!
- * @brief Set the CloudWatch action to be performed by this request to \a action.
+ * Sets the CloudWatch action to be performed by this request to \a action.
  */
 void CloudWatchRequest::setAction(const Action action)
 {
@@ -122,7 +131,7 @@ void CloudWatchRequest::setAction(const Action action)
 }
 
 /*!
- * Set the CloudWatch API version to include in this request to \a version.
+ * Sets the CloudWatch API version to include in this request to \a version.
  */
 void CloudWatchRequest::setApiVersion(const QString &version)
 {
@@ -131,7 +140,7 @@ void CloudWatchRequest::setApiVersion(const QString &version)
 }
 
 /*!
- * \brief Returns \c true if this request is the same as \a other.
+ * Returns \c true if this request is equal to \a other; \c false otherwise.
  *
  * Note, most derived *Request classes do not need to provider their own
  * implementations of this function, since most such request classes rely on
@@ -146,8 +155,8 @@ bool CloudWatchRequest::operator==(const CloudWatchRequest &other) const
             (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
-/*!
- * @brief  Check if \a queueName is a valid CloudWatch queue name.
+/*
+ * Returns \c tue if \a queueName is a valid CloudWatch queue name.
  *
  * @par From CloudWatch FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
@@ -166,9 +175,8 @@ bool CloudWatchRequest::operator==(const CloudWatchRequest &other) const
 }*/
 
 /*!
- * \brief Removes the a \a name parameter from this request.
- *
- * Returns the count of paramters removed (typically \c 0 or \c 1).
+ * Removes the a \a name parameter from the request, then returns the number of
+ * paramters removed (typically \c 0 or \c 1).
  */
 int CloudWatchRequest::clearParameter(const QString &name)
 {
@@ -177,7 +185,7 @@ int CloudWatchRequest::clearParameter(const QString &name)
 }
 
 /*!
- * \brief Removes all parameters from this request.
+ * Removes all parameters from the request.
  */
 void CloudWatchRequest::clearParameters()
 {
@@ -186,7 +194,7 @@ void CloudWatchRequest::clearParameters()
 }
 
 /*!
- * \brief Returns the value of the \n name pararemter if set, otherwise \a defaultValue.
+ * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
 QVariant CloudWatchRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
@@ -195,7 +203,7 @@ QVariant CloudWatchRequest::parameter(const QString &name, const QVariant &defau
 }
 
 /*!
- * \brief Returns a map of parameters included in this request.
+ * Returns the parameters included in this request.
  */
 const QVariantMap &CloudWatchRequest::parameters() const
 {
@@ -204,7 +212,7 @@ const QVariantMap &CloudWatchRequest::parameters() const
 }
 
 /*!
- * \brief Sets the \a name parameter to \a value.
+ * Sets the \a name parameter to \a value.
  */
 void CloudWatchRequest::setParameter(const QString &name, const QVariant &value)
 {
@@ -213,9 +221,8 @@ void CloudWatchRequest::setParameter(const QString &name, const QVariant &value)
 }
 
 /*!
- * \brief Sets the map of paramters for this request to \a parameters.
- *
- * Any request parameters set previously will be discarded.
+ * Sets the paramters for this request to \a parameters. Any request parameters
+ * set previously will be discarded.
  */
 void CloudWatchRequest::setParameters(const QVariantMap &parameters)
 {
@@ -224,11 +231,12 @@ void CloudWatchRequest::setParameters(const QVariantMap &parameters)
 }
 
 /*!
- * \brief Returns a network request for this CloudWatch request using the given \a endpoint.
+ * Returns a network request for the CloudWatch request using the given
+ * \a endpoint.
  *
- * This CloudWatch implementation builds request URLs by combining the common query
- * parameters (such as Action and Version), with any that have been added (via
- * setParameter) by child classes.
+ * This CloudWatch implementation builds request URLs by combining the
+ * common query parameters (such as Action and Version), with any that have
+ * been added (via setParameter) by child classes.
  */
 QNetworkRequest CloudWatchRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -239,17 +247,16 @@ QNetworkRequest CloudWatchRequest::unsignedRequest(const QUrl &endpoint) const
 }
 
 /*!
+ * \class QtAws::CloudWatch::CloudWatchRequestPrivate
+ * \brief The CloudWatchRequestPrivate class provides private implementation for CloudWatchRequest.
  * \internal
  *
- * \class  CloudWatchRequestPrivate
- *
- * \brief  Private implementation for CloudWatchRequest.
+ * \inmodule QtAwsCloudWatch
  */
 
 /*!
- * \internal
- *
- * \brief Constructs a new CloudWatchRequestPrivate object.
+ * Constructs a CloudWatchRequestPrivate object for CloudWatch \a action with,
+ * public implementation \a q.
  */
 CloudWatchRequestPrivate::CloudWatchRequestPrivate(const CloudWatchRequest::Action action, CloudWatchRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
@@ -258,9 +265,7 @@ CloudWatchRequestPrivate::CloudWatchRequestPrivate(const CloudWatchRequest::Acti
 }
 
 /*!
- * \internal
- *
- * \brief Constructs a new CloudWatchRequestPrivate object, copying an existing one.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
@@ -276,15 +281,12 @@ CloudWatchRequestPrivate::CloudWatchRequestPrivate(const CloudWatchRequestPrivat
 }
 
 /*!
- * \internal
- *
- * \brief Returns a string representing \a action.
+ * Returns a string represention of \a action, or a null string if \a action is
+ * invalid.
  *
  * This function converts CloudWatchRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the CloudWatch service's Action
  * query parameters.
- *
- * @return A string representing \a action, or a null string if \a action is invalid.
  */
 QString CloudWatchRequestPrivate::toString(const CloudWatchRequest::Action &action)
 {

@@ -27,10 +27,9 @@ namespace Organizations {
 
 /*!
  * \class QtAws::Organizations::ListAccountsForParentRequest
- *
  * \brief The ListAccountsForParentRequest class provides an interface for Organizations ListAccountsForParent requests.
  *
- * \ingroup Organizations
+ * \inmodule QtAwsOrganizations
  *
  *  <fullname>AWS Organizations API Reference</fullname>
  * 
@@ -179,9 +178,7 @@ namespace Organizations {
  */
 
 /*!
- * @brief  Constructs a new ListAccountsForParentRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListAccountsForParentRequest::ListAccountsForParentRequest(const ListAccountsForParentRequest &other)
     : OrganizationsRequest(new ListAccountsForParentRequestPrivate(*other.d_func(), this))
@@ -190,7 +187,7 @@ ListAccountsForParentRequest::ListAccountsForParentRequest(const ListAccountsFor
 }
 
 /*!
- * @brief  Constructs a new ListAccountsForParentRequest object.
+ * Constructs a ListAccountsForParentRequest object.
  */
 ListAccountsForParentRequest::ListAccountsForParentRequest()
     : OrganizationsRequest(new ListAccountsForParentRequestPrivate(OrganizationsRequest::ListAccountsForParentAction, this))
@@ -208,14 +205,9 @@ bool ListAccountsForParentRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListAccountsForParentResponse object.
+ * Returns a ListAccountsForParentResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListAccountsForParentResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  OrganizationsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListAccountsForParentRequest::response(QNetworkReply * const reply) const
 {
@@ -223,20 +215,17 @@ QtAws::Core::AwsAbstractResponse * ListAccountsForParentRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::Organizations::ListAccountsForParentRequestPrivate
+ * \brief The ListAccountsForParentRequestPrivate class provides private implementation for ListAccountsForParentRequest.
+ * \internal
  *
- * @class  ListAccountsForParentRequestPrivate
- *
- * @brief  Private implementation for ListAccountsForParentRequest.
+ * \inmodule QtAwsOrganizations
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListAccountsForParentRequestPrivate object.
- *
- * @param  action  Organizations action being performed.
- * @param  q       Pointer to this object's public ListAccountsForParentRequest instance.
+ * Constructs a ListAccountsForParentRequestPrivate object for Organizations \a action with,
+ * public implementation \a q.
  */
 ListAccountsForParentRequestPrivate::ListAccountsForParentRequestPrivate(
     const OrganizationsRequest::Action action, ListAccountsForParentRequest * const q)
@@ -246,15 +235,10 @@ ListAccountsForParentRequestPrivate::ListAccountsForParentRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListAccountsForParentRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListAccountsForParentRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListAccountsForParentRequest instance.
  */
 ListAccountsForParentRequestPrivate::ListAccountsForParentRequestPrivate(
     const ListAccountsForParentRequestPrivate &other, ListAccountsForParentRequest * const q)

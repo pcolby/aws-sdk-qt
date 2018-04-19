@@ -27,10 +27,9 @@ namespace MobileAnalytics {
 
 /*!
  * \class QtAws::MobileAnalytics::PutEventsRequest
- *
  * \brief The PutEventsRequest class provides an interface for MobileAnalytics PutEvents requests.
  *
- * \ingroup MobileAnalytics
+ * \inmodule QtAwsMobileAnalytics
  *
  *  Amazon Mobile Analytics is a service for collecting, visualizing, and understanding app usage data at
  *
@@ -38,9 +37,7 @@ namespace MobileAnalytics {
  */
 
 /*!
- * @brief  Constructs a new PutEventsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 PutEventsRequest::PutEventsRequest(const PutEventsRequest &other)
     : MobileAnalyticsRequest(new PutEventsRequestPrivate(*other.d_func(), this))
@@ -49,7 +46,7 @@ PutEventsRequest::PutEventsRequest(const PutEventsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new PutEventsRequest object.
+ * Constructs a PutEventsRequest object.
  */
 PutEventsRequest::PutEventsRequest()
     : MobileAnalyticsRequest(new PutEventsRequestPrivate(MobileAnalyticsRequest::PutEventsAction, this))
@@ -67,14 +64,9 @@ bool PutEventsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an PutEventsResponse object.
+ * Returns a PutEventsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An PutEventsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MobileAnalyticsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * PutEventsRequest::response(QNetworkReply * const reply) const
 {
@@ -82,20 +74,17 @@ QtAws::Core::AwsAbstractResponse * PutEventsRequest::response(QNetworkReply * co
 }
 
 /*!
- * @internal
+ * \class QtAws::MobileAnalytics::PutEventsRequestPrivate
+ * \brief The PutEventsRequestPrivate class provides private implementation for PutEventsRequest.
+ * \internal
  *
- * @class  PutEventsRequestPrivate
- *
- * @brief  Private implementation for PutEventsRequest.
+ * \inmodule QtAwsMobileAnalytics
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new PutEventsRequestPrivate object.
- *
- * @param  action  MobileAnalytics action being performed.
- * @param  q       Pointer to this object's public PutEventsRequest instance.
+ * Constructs a PutEventsRequestPrivate object for MobileAnalytics \a action with,
+ * public implementation \a q.
  */
 PutEventsRequestPrivate::PutEventsRequestPrivate(
     const MobileAnalyticsRequest::Action action, PutEventsRequest * const q)
@@ -105,15 +94,10 @@ PutEventsRequestPrivate::PutEventsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutEventsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the PutEventsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public PutEventsRequest instance.
  */
 PutEventsRequestPrivate::PutEventsRequestPrivate(
     const PutEventsRequestPrivate &other, PutEventsRequest * const q)

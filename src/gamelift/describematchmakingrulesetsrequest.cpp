@@ -27,10 +27,9 @@ namespace GameLift {
 
 /*!
  * \class QtAws::GameLift::DescribeMatchmakingRuleSetsRequest
- *
  * \brief The DescribeMatchmakingRuleSetsRequest class provides an interface for GameLift DescribeMatchmakingRuleSets requests.
  *
- * \ingroup GameLift
+ * \inmodule QtAwsGameLift
  *
  *  <fullname>Amazon GameLift Service</fullname>
  * 
@@ -473,9 +472,7 @@ namespace GameLift {
  */
 
 /*!
- * @brief  Constructs a new DescribeMatchmakingRuleSetsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeMatchmakingRuleSetsRequest::DescribeMatchmakingRuleSetsRequest(const DescribeMatchmakingRuleSetsRequest &other)
     : GameLiftRequest(new DescribeMatchmakingRuleSetsRequestPrivate(*other.d_func(), this))
@@ -484,7 +481,7 @@ DescribeMatchmakingRuleSetsRequest::DescribeMatchmakingRuleSetsRequest(const Des
 }
 
 /*!
- * @brief  Constructs a new DescribeMatchmakingRuleSetsRequest object.
+ * Constructs a DescribeMatchmakingRuleSetsRequest object.
  */
 DescribeMatchmakingRuleSetsRequest::DescribeMatchmakingRuleSetsRequest()
     : GameLiftRequest(new DescribeMatchmakingRuleSetsRequestPrivate(GameLiftRequest::DescribeMatchmakingRuleSetsAction, this))
@@ -502,14 +499,9 @@ bool DescribeMatchmakingRuleSetsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeMatchmakingRuleSetsResponse object.
+ * Returns a DescribeMatchmakingRuleSetsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeMatchmakingRuleSetsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GameLiftClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeMatchmakingRuleSetsRequest::response(QNetworkReply * const reply) const
 {
@@ -517,20 +509,17 @@ QtAws::Core::AwsAbstractResponse * DescribeMatchmakingRuleSetsRequest::response(
 }
 
 /*!
- * @internal
+ * \class QtAws::GameLift::DescribeMatchmakingRuleSetsRequestPrivate
+ * \brief The DescribeMatchmakingRuleSetsRequestPrivate class provides private implementation for DescribeMatchmakingRuleSetsRequest.
+ * \internal
  *
- * @class  DescribeMatchmakingRuleSetsRequestPrivate
- *
- * @brief  Private implementation for DescribeMatchmakingRuleSetsRequest.
+ * \inmodule QtAwsGameLift
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeMatchmakingRuleSetsRequestPrivate object.
- *
- * @param  action  GameLift action being performed.
- * @param  q       Pointer to this object's public DescribeMatchmakingRuleSetsRequest instance.
+ * Constructs a DescribeMatchmakingRuleSetsRequestPrivate object for GameLift \a action with,
+ * public implementation \a q.
  */
 DescribeMatchmakingRuleSetsRequestPrivate::DescribeMatchmakingRuleSetsRequestPrivate(
     const GameLiftRequest::Action action, DescribeMatchmakingRuleSetsRequest * const q)
@@ -540,15 +529,10 @@ DescribeMatchmakingRuleSetsRequestPrivate::DescribeMatchmakingRuleSetsRequestPri
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeMatchmakingRuleSetsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeMatchmakingRuleSetsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeMatchmakingRuleSetsRequest instance.
  */
 DescribeMatchmakingRuleSetsRequestPrivate::DescribeMatchmakingRuleSetsRequestPrivate(
     const DescribeMatchmakingRuleSetsRequestPrivate &other, DescribeMatchmakingRuleSetsRequest * const q)

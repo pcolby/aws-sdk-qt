@@ -27,10 +27,9 @@ namespace ImportExport {
 
 /*!
  * \class QtAws::ImportExport::GetShippingLabelRequest
- *
  * \brief The GetShippingLabelRequest class provides an interface for ImportExport GetShippingLabel requests.
  *
- * \ingroup ImportExport
+ * \inmodule QtAwsImportExport
  *
  *  <fullname>AWS Import/Export Service</fullname> AWS Import/Export accelerates transferring large amounts of data between
  *  the AWS cloud and portable storage devices that you mail to us. AWS Import/Export transfers data directly onto and off
@@ -40,9 +39,7 @@ namespace ImportExport {
  */
 
 /*!
- * @brief  Constructs a new GetShippingLabelRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetShippingLabelRequest::GetShippingLabelRequest(const GetShippingLabelRequest &other)
     : ImportExportRequest(new GetShippingLabelRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ GetShippingLabelRequest::GetShippingLabelRequest(const GetShippingLabelRequest &
 }
 
 /*!
- * @brief  Constructs a new GetShippingLabelRequest object.
+ * Constructs a GetShippingLabelRequest object.
  */
 GetShippingLabelRequest::GetShippingLabelRequest()
     : ImportExportRequest(new GetShippingLabelRequestPrivate(ImportExportRequest::GetShippingLabelAction, this))
@@ -69,14 +66,9 @@ bool GetShippingLabelRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetShippingLabelResponse object.
+ * Returns a GetShippingLabelResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetShippingLabelResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ImportExportClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetShippingLabelRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * GetShippingLabelRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::ImportExport::GetShippingLabelRequestPrivate
+ * \brief The GetShippingLabelRequestPrivate class provides private implementation for GetShippingLabelRequest.
+ * \internal
  *
- * @class  GetShippingLabelRequestPrivate
- *
- * @brief  Private implementation for GetShippingLabelRequest.
+ * \inmodule QtAwsImportExport
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetShippingLabelRequestPrivate object.
- *
- * @param  action  ImportExport action being performed.
- * @param  q       Pointer to this object's public GetShippingLabelRequest instance.
+ * Constructs a GetShippingLabelRequestPrivate object for ImportExport \a action with,
+ * public implementation \a q.
  */
 GetShippingLabelRequestPrivate::GetShippingLabelRequestPrivate(
     const ImportExportRequest::Action action, GetShippingLabelRequest * const q)
@@ -107,15 +96,10 @@ GetShippingLabelRequestPrivate::GetShippingLabelRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetShippingLabelRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetShippingLabelRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetShippingLabelRequest instance.
  */
 GetShippingLabelRequestPrivate::GetShippingLabelRequestPrivate(
     const GetShippingLabelRequestPrivate &other, GetShippingLabelRequest * const q)

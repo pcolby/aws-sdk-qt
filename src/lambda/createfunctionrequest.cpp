@@ -27,10 +27,9 @@ namespace Lambda {
 
 /*!
  * \class QtAws::Lambda::CreateFunctionRequest
- *
  * \brief The CreateFunctionRequest class provides an interface for Lambda CreateFunction requests.
  *
- * \ingroup Lambda
+ * \inmodule QtAwsLambda
  *
  *  <fullname>AWS Lambda</fullname>
  * 
@@ -48,9 +47,7 @@ namespace Lambda {
  */
 
 /*!
- * @brief  Constructs a new CreateFunctionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateFunctionRequest::CreateFunctionRequest(const CreateFunctionRequest &other)
     : LambdaRequest(new CreateFunctionRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ CreateFunctionRequest::CreateFunctionRequest(const CreateFunctionRequest &other)
 }
 
 /*!
- * @brief  Constructs a new CreateFunctionRequest object.
+ * Constructs a CreateFunctionRequest object.
  */
 CreateFunctionRequest::CreateFunctionRequest()
     : LambdaRequest(new CreateFunctionRequestPrivate(LambdaRequest::CreateFunctionAction, this))
@@ -77,14 +74,9 @@ bool CreateFunctionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateFunctionResponse object.
+ * Returns a CreateFunctionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateFunctionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  LambdaClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateFunctionRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * CreateFunctionRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::Lambda::CreateFunctionRequestPrivate
+ * \brief The CreateFunctionRequestPrivate class provides private implementation for CreateFunctionRequest.
+ * \internal
  *
- * @class  CreateFunctionRequestPrivate
- *
- * @brief  Private implementation for CreateFunctionRequest.
+ * \inmodule QtAwsLambda
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateFunctionRequestPrivate object.
- *
- * @param  action  Lambda action being performed.
- * @param  q       Pointer to this object's public CreateFunctionRequest instance.
+ * Constructs a CreateFunctionRequestPrivate object for Lambda \a action with,
+ * public implementation \a q.
  */
 CreateFunctionRequestPrivate::CreateFunctionRequestPrivate(
     const LambdaRequest::Action action, CreateFunctionRequest * const q)
@@ -115,15 +104,10 @@ CreateFunctionRequestPrivate::CreateFunctionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateFunctionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateFunctionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateFunctionRequest instance.
  */
 CreateFunctionRequestPrivate::CreateFunctionRequestPrivate(
     const CreateFunctionRequestPrivate &other, CreateFunctionRequest * const q)

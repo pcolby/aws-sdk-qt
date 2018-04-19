@@ -27,10 +27,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::RegisterTaskWithMaintenanceWindowRequest
- *
  * \brief The RegisterTaskWithMaintenanceWindowRequest class provides an interface for SSM RegisterTaskWithMaintenanceWindow requests.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -61,9 +60,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new RegisterTaskWithMaintenanceWindowRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 RegisterTaskWithMaintenanceWindowRequest::RegisterTaskWithMaintenanceWindowRequest(const RegisterTaskWithMaintenanceWindowRequest &other)
     : SSMRequest(new RegisterTaskWithMaintenanceWindowRequestPrivate(*other.d_func(), this))
@@ -72,7 +69,7 @@ RegisterTaskWithMaintenanceWindowRequest::RegisterTaskWithMaintenanceWindowReque
 }
 
 /*!
- * @brief  Constructs a new RegisterTaskWithMaintenanceWindowRequest object.
+ * Constructs a RegisterTaskWithMaintenanceWindowRequest object.
  */
 RegisterTaskWithMaintenanceWindowRequest::RegisterTaskWithMaintenanceWindowRequest()
     : SSMRequest(new RegisterTaskWithMaintenanceWindowRequestPrivate(SSMRequest::RegisterTaskWithMaintenanceWindowAction, this))
@@ -90,14 +87,9 @@ bool RegisterTaskWithMaintenanceWindowRequest::isValid() const
 
 
 /*!
- * @brief  Construct an RegisterTaskWithMaintenanceWindowResponse object.
+ * Returns a RegisterTaskWithMaintenanceWindowResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An RegisterTaskWithMaintenanceWindowResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SSMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * RegisterTaskWithMaintenanceWindowRequest::response(QNetworkReply * const reply) const
 {
@@ -105,20 +97,17 @@ QtAws::Core::AwsAbstractResponse * RegisterTaskWithMaintenanceWindowRequest::res
 }
 
 /*!
- * @internal
+ * \class QtAws::SSM::RegisterTaskWithMaintenanceWindowRequestPrivate
+ * \brief The RegisterTaskWithMaintenanceWindowRequestPrivate class provides private implementation for RegisterTaskWithMaintenanceWindowRequest.
+ * \internal
  *
- * @class  RegisterTaskWithMaintenanceWindowRequestPrivate
- *
- * @brief  Private implementation for RegisterTaskWithMaintenanceWindowRequest.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new RegisterTaskWithMaintenanceWindowRequestPrivate object.
- *
- * @param  action  SSM action being performed.
- * @param  q       Pointer to this object's public RegisterTaskWithMaintenanceWindowRequest instance.
+ * Constructs a RegisterTaskWithMaintenanceWindowRequestPrivate object for SSM \a action with,
+ * public implementation \a q.
  */
 RegisterTaskWithMaintenanceWindowRequestPrivate::RegisterTaskWithMaintenanceWindowRequestPrivate(
     const SSMRequest::Action action, RegisterTaskWithMaintenanceWindowRequest * const q)
@@ -128,15 +117,10 @@ RegisterTaskWithMaintenanceWindowRequestPrivate::RegisterTaskWithMaintenanceWind
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RegisterTaskWithMaintenanceWindowRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the RegisterTaskWithMaintenanceWindowRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public RegisterTaskWithMaintenanceWindowRequest instance.
  */
 RegisterTaskWithMaintenanceWindowRequestPrivate::RegisterTaskWithMaintenanceWindowRequestPrivate(
     const RegisterTaskWithMaintenanceWindowRequestPrivate &other, RegisterTaskWithMaintenanceWindowRequest * const q)

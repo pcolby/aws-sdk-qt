@@ -27,10 +27,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::DescribeIndexRequest
- *
  * \brief The DescribeIndexRequest class provides an interface for IoT DescribeIndex requests.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -48,9 +47,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new DescribeIndexRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeIndexRequest::DescribeIndexRequest(const DescribeIndexRequest &other)
     : IoTRequest(new DescribeIndexRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ DescribeIndexRequest::DescribeIndexRequest(const DescribeIndexRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DescribeIndexRequest object.
+ * Constructs a DescribeIndexRequest object.
  */
 DescribeIndexRequest::DescribeIndexRequest()
     : IoTRequest(new DescribeIndexRequestPrivate(IoTRequest::DescribeIndexAction, this))
@@ -77,14 +74,9 @@ bool DescribeIndexRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeIndexResponse object.
+ * Returns a DescribeIndexResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeIndexResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IoTClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeIndexRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * DescribeIndexRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::IoT::DescribeIndexRequestPrivate
+ * \brief The DescribeIndexRequestPrivate class provides private implementation for DescribeIndexRequest.
+ * \internal
  *
- * @class  DescribeIndexRequestPrivate
- *
- * @brief  Private implementation for DescribeIndexRequest.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeIndexRequestPrivate object.
- *
- * @param  action  IoT action being performed.
- * @param  q       Pointer to this object's public DescribeIndexRequest instance.
+ * Constructs a DescribeIndexRequestPrivate object for IoT \a action with,
+ * public implementation \a q.
  */
 DescribeIndexRequestPrivate::DescribeIndexRequestPrivate(
     const IoTRequest::Action action, DescribeIndexRequest * const q)
@@ -115,15 +104,10 @@ DescribeIndexRequestPrivate::DescribeIndexRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeIndexRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeIndexRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeIndexRequest instance.
  */
 DescribeIndexRequestPrivate::DescribeIndexRequestPrivate(
     const DescribeIndexRequestPrivate &other, DescribeIndexRequest * const q)

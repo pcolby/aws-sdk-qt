@@ -27,10 +27,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::DeleteVirtualMFADeviceRequest
- *
  * \brief The DeleteVirtualMFADeviceRequest class provides an interface for IAM DeleteVirtualMFADevice requests.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -102,9 +101,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new DeleteVirtualMFADeviceRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteVirtualMFADeviceRequest::DeleteVirtualMFADeviceRequest(const DeleteVirtualMFADeviceRequest &other)
     : IAMRequest(new DeleteVirtualMFADeviceRequestPrivate(*other.d_func(), this))
@@ -113,7 +110,7 @@ DeleteVirtualMFADeviceRequest::DeleteVirtualMFADeviceRequest(const DeleteVirtual
 }
 
 /*!
- * @brief  Constructs a new DeleteVirtualMFADeviceRequest object.
+ * Constructs a DeleteVirtualMFADeviceRequest object.
  */
 DeleteVirtualMFADeviceRequest::DeleteVirtualMFADeviceRequest()
     : IAMRequest(new DeleteVirtualMFADeviceRequestPrivate(IAMRequest::DeleteVirtualMFADeviceAction, this))
@@ -131,14 +128,9 @@ bool DeleteVirtualMFADeviceRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteVirtualMFADeviceResponse object.
+ * Returns a DeleteVirtualMFADeviceResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteVirtualMFADeviceResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IAMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteVirtualMFADeviceRequest::response(QNetworkReply * const reply) const
 {
@@ -146,20 +138,17 @@ QtAws::Core::AwsAbstractResponse * DeleteVirtualMFADeviceRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::IAM::DeleteVirtualMFADeviceRequestPrivate
+ * \brief The DeleteVirtualMFADeviceRequestPrivate class provides private implementation for DeleteVirtualMFADeviceRequest.
+ * \internal
  *
- * @class  DeleteVirtualMFADeviceRequestPrivate
- *
- * @brief  Private implementation for DeleteVirtualMFADeviceRequest.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteVirtualMFADeviceRequestPrivate object.
- *
- * @param  action  IAM action being performed.
- * @param  q       Pointer to this object's public DeleteVirtualMFADeviceRequest instance.
+ * Constructs a DeleteVirtualMFADeviceRequestPrivate object for IAM \a action with,
+ * public implementation \a q.
  */
 DeleteVirtualMFADeviceRequestPrivate::DeleteVirtualMFADeviceRequestPrivate(
     const IAMRequest::Action action, DeleteVirtualMFADeviceRequest * const q)
@@ -169,15 +158,10 @@ DeleteVirtualMFADeviceRequestPrivate::DeleteVirtualMFADeviceRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteVirtualMFADeviceRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteVirtualMFADeviceRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteVirtualMFADeviceRequest instance.
  */
 DeleteVirtualMFADeviceRequestPrivate::DeleteVirtualMFADeviceRequestPrivate(
     const DeleteVirtualMFADeviceRequestPrivate &other, DeleteVirtualMFADeviceRequest * const q)

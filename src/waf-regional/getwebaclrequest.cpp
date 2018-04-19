@@ -27,10 +27,9 @@ namespace WAFRegional {
 
 /*!
  * \class QtAws::WAFRegional::GetWebACLRequest
- *
  * \brief The GetWebACLRequest class provides an interface for WAFRegional GetWebACL requests.
  *
- * \ingroup WAFRegional
+ * \inmodule QtAwsWAFRegional
  *
  *  This is the <i>AWS WAF Regional API Reference</i> for using AWS WAF with Elastic Load Balancing (ELB) Application Load
  *  Balancers. The AWS WAF actions and data types listed in the reference are available for protecting Application Load
@@ -44,9 +43,7 @@ namespace WAFRegional {
  */
 
 /*!
- * @brief  Constructs a new GetWebACLRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetWebACLRequest::GetWebACLRequest(const GetWebACLRequest &other)
     : WAFRegionalRequest(new GetWebACLRequestPrivate(*other.d_func(), this))
@@ -55,7 +52,7 @@ GetWebACLRequest::GetWebACLRequest(const GetWebACLRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetWebACLRequest object.
+ * Constructs a GetWebACLRequest object.
  */
 GetWebACLRequest::GetWebACLRequest()
     : WAFRegionalRequest(new GetWebACLRequestPrivate(WAFRegionalRequest::GetWebACLAction, this))
@@ -73,14 +70,9 @@ bool GetWebACLRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetWebACLResponse object.
+ * Returns a GetWebACLResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetWebACLResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WAFRegionalClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetWebACLRequest::response(QNetworkReply * const reply) const
 {
@@ -88,20 +80,17 @@ QtAws::Core::AwsAbstractResponse * GetWebACLRequest::response(QNetworkReply * co
 }
 
 /*!
- * @internal
+ * \class QtAws::WAFRegional::GetWebACLRequestPrivate
+ * \brief The GetWebACLRequestPrivate class provides private implementation for GetWebACLRequest.
+ * \internal
  *
- * @class  GetWebACLRequestPrivate
- *
- * @brief  Private implementation for GetWebACLRequest.
+ * \inmodule QtAwsWAFRegional
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetWebACLRequestPrivate object.
- *
- * @param  action  WAFRegional action being performed.
- * @param  q       Pointer to this object's public GetWebACLRequest instance.
+ * Constructs a GetWebACLRequestPrivate object for WAFRegional \a action with,
+ * public implementation \a q.
  */
 GetWebACLRequestPrivate::GetWebACLRequestPrivate(
     const WAFRegionalRequest::Action action, GetWebACLRequest * const q)
@@ -111,15 +100,10 @@ GetWebACLRequestPrivate::GetWebACLRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetWebACLRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetWebACLRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetWebACLRequest instance.
  */
 GetWebACLRequestPrivate::GetWebACLRequestPrivate(
     const GetWebACLRequestPrivate &other, GetWebACLRequest * const q)

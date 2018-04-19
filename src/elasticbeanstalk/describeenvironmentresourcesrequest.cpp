@@ -27,10 +27,9 @@ namespace ElasticBeanstalk {
 
 /*!
  * \class QtAws::ElasticBeanstalk::DescribeEnvironmentResourcesRequest
- *
  * \brief The DescribeEnvironmentResourcesRequest class provides an interface for ElasticBeanstalk DescribeEnvironmentResources requests.
  *
- * \ingroup ElasticBeanstalk
+ * \inmodule QtAwsElasticBeanstalk
  *
  *  <fullname>AWS Elastic Beanstalk</fullname>
  * 
@@ -59,9 +58,7 @@ namespace ElasticBeanstalk {
  */
 
 /*!
- * @brief  Constructs a new DescribeEnvironmentResourcesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeEnvironmentResourcesRequest::DescribeEnvironmentResourcesRequest(const DescribeEnvironmentResourcesRequest &other)
     : ElasticBeanstalkRequest(new DescribeEnvironmentResourcesRequestPrivate(*other.d_func(), this))
@@ -70,7 +67,7 @@ DescribeEnvironmentResourcesRequest::DescribeEnvironmentResourcesRequest(const D
 }
 
 /*!
- * @brief  Constructs a new DescribeEnvironmentResourcesRequest object.
+ * Constructs a DescribeEnvironmentResourcesRequest object.
  */
 DescribeEnvironmentResourcesRequest::DescribeEnvironmentResourcesRequest()
     : ElasticBeanstalkRequest(new DescribeEnvironmentResourcesRequestPrivate(ElasticBeanstalkRequest::DescribeEnvironmentResourcesAction, this))
@@ -88,14 +85,9 @@ bool DescribeEnvironmentResourcesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeEnvironmentResourcesResponse object.
+ * Returns a DescribeEnvironmentResourcesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeEnvironmentResourcesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ElasticBeanstalkClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeEnvironmentResourcesRequest::response(QNetworkReply * const reply) const
 {
@@ -103,20 +95,17 @@ QtAws::Core::AwsAbstractResponse * DescribeEnvironmentResourcesRequest::response
 }
 
 /*!
- * @internal
+ * \class QtAws::ElasticBeanstalk::DescribeEnvironmentResourcesRequestPrivate
+ * \brief The DescribeEnvironmentResourcesRequestPrivate class provides private implementation for DescribeEnvironmentResourcesRequest.
+ * \internal
  *
- * @class  DescribeEnvironmentResourcesRequestPrivate
- *
- * @brief  Private implementation for DescribeEnvironmentResourcesRequest.
+ * \inmodule QtAwsElasticBeanstalk
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeEnvironmentResourcesRequestPrivate object.
- *
- * @param  action  ElasticBeanstalk action being performed.
- * @param  q       Pointer to this object's public DescribeEnvironmentResourcesRequest instance.
+ * Constructs a DescribeEnvironmentResourcesRequestPrivate object for ElasticBeanstalk \a action with,
+ * public implementation \a q.
  */
 DescribeEnvironmentResourcesRequestPrivate::DescribeEnvironmentResourcesRequestPrivate(
     const ElasticBeanstalkRequest::Action action, DescribeEnvironmentResourcesRequest * const q)
@@ -126,15 +115,10 @@ DescribeEnvironmentResourcesRequestPrivate::DescribeEnvironmentResourcesRequestP
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeEnvironmentResourcesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeEnvironmentResourcesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeEnvironmentResourcesRequest instance.
  */
 DescribeEnvironmentResourcesRequestPrivate::DescribeEnvironmentResourcesRequestPrivate(
     const DescribeEnvironmentResourcesRequestPrivate &other, DescribeEnvironmentResourcesRequest * const q)

@@ -27,10 +27,9 @@ namespace ECR {
 
 /*!
  * \class QtAws::ECR::DeleteRepositoryPolicyRequest
- *
  * \brief The DeleteRepositoryPolicyRequest class provides an interface for ECR DeleteRepositoryPolicy requests.
  *
- * \ingroup ECR
+ * \inmodule QtAwsECR
  *
  *  Amazon Elastic Container Registry (Amazon ECR) is a managed Docker registry service. Customers can use the familiar
  *  Docker CLI to push, pull, and manage images. Amazon ECR provides a secure, scalable, and reliable registry. Amazon ECR
@@ -41,9 +40,7 @@ namespace ECR {
  */
 
 /*!
- * @brief  Constructs a new DeleteRepositoryPolicyRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteRepositoryPolicyRequest::DeleteRepositoryPolicyRequest(const DeleteRepositoryPolicyRequest &other)
     : ECRRequest(new DeleteRepositoryPolicyRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ DeleteRepositoryPolicyRequest::DeleteRepositoryPolicyRequest(const DeleteReposit
 }
 
 /*!
- * @brief  Constructs a new DeleteRepositoryPolicyRequest object.
+ * Constructs a DeleteRepositoryPolicyRequest object.
  */
 DeleteRepositoryPolicyRequest::DeleteRepositoryPolicyRequest()
     : ECRRequest(new DeleteRepositoryPolicyRequestPrivate(ECRRequest::DeleteRepositoryPolicyAction, this))
@@ -70,14 +67,9 @@ bool DeleteRepositoryPolicyRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteRepositoryPolicyResponse object.
+ * Returns a DeleteRepositoryPolicyResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteRepositoryPolicyResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ECRClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteRepositoryPolicyRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * DeleteRepositoryPolicyRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::ECR::DeleteRepositoryPolicyRequestPrivate
+ * \brief The DeleteRepositoryPolicyRequestPrivate class provides private implementation for DeleteRepositoryPolicyRequest.
+ * \internal
  *
- * @class  DeleteRepositoryPolicyRequestPrivate
- *
- * @brief  Private implementation for DeleteRepositoryPolicyRequest.
+ * \inmodule QtAwsECR
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteRepositoryPolicyRequestPrivate object.
- *
- * @param  action  ECR action being performed.
- * @param  q       Pointer to this object's public DeleteRepositoryPolicyRequest instance.
+ * Constructs a DeleteRepositoryPolicyRequestPrivate object for ECR \a action with,
+ * public implementation \a q.
  */
 DeleteRepositoryPolicyRequestPrivate::DeleteRepositoryPolicyRequestPrivate(
     const ECRRequest::Action action, DeleteRepositoryPolicyRequest * const q)
@@ -108,15 +97,10 @@ DeleteRepositoryPolicyRequestPrivate::DeleteRepositoryPolicyRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteRepositoryPolicyRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteRepositoryPolicyRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteRepositoryPolicyRequest instance.
  */
 DeleteRepositoryPolicyRequestPrivate::DeleteRepositoryPolicyRequestPrivate(
     const DeleteRepositoryPolicyRequestPrivate &other, DeleteRepositoryPolicyRequest * const q)

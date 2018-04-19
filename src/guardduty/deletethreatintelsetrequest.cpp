@@ -27,19 +27,16 @@ namespace GuardDuty {
 
 /*!
  * \class QtAws::GuardDuty::DeleteThreatIntelSetRequest
- *
  * \brief The DeleteThreatIntelSetRequest class provides an interface for GuardDuty DeleteThreatIntelSet requests.
  *
- * \ingroup GuardDuty
+ * \inmodule QtAwsGuardDuty
  *
  *
  * \sa GuardDutyClient::deleteThreatIntelSet
  */
 
 /*!
- * @brief  Constructs a new DeleteThreatIntelSetRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteThreatIntelSetRequest::DeleteThreatIntelSetRequest(const DeleteThreatIntelSetRequest &other)
     : GuardDutyRequest(new DeleteThreatIntelSetRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ DeleteThreatIntelSetRequest::DeleteThreatIntelSetRequest(const DeleteThreatIntel
 }
 
 /*!
- * @brief  Constructs a new DeleteThreatIntelSetRequest object.
+ * Constructs a DeleteThreatIntelSetRequest object.
  */
 DeleteThreatIntelSetRequest::DeleteThreatIntelSetRequest()
     : GuardDutyRequest(new DeleteThreatIntelSetRequestPrivate(GuardDutyRequest::DeleteThreatIntelSetAction, this))
@@ -66,14 +63,9 @@ bool DeleteThreatIntelSetRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteThreatIntelSetResponse object.
+ * Returns a DeleteThreatIntelSetResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteThreatIntelSetResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GuardDutyClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteThreatIntelSetRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * DeleteThreatIntelSetRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::GuardDuty::DeleteThreatIntelSetRequestPrivate
+ * \brief The DeleteThreatIntelSetRequestPrivate class provides private implementation for DeleteThreatIntelSetRequest.
+ * \internal
  *
- * @class  DeleteThreatIntelSetRequestPrivate
- *
- * @brief  Private implementation for DeleteThreatIntelSetRequest.
+ * \inmodule QtAwsGuardDuty
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteThreatIntelSetRequestPrivate object.
- *
- * @param  action  GuardDuty action being performed.
- * @param  q       Pointer to this object's public DeleteThreatIntelSetRequest instance.
+ * Constructs a DeleteThreatIntelSetRequestPrivate object for GuardDuty \a action with,
+ * public implementation \a q.
  */
 DeleteThreatIntelSetRequestPrivate::DeleteThreatIntelSetRequestPrivate(
     const GuardDutyRequest::Action action, DeleteThreatIntelSetRequest * const q)
@@ -104,15 +93,10 @@ DeleteThreatIntelSetRequestPrivate::DeleteThreatIntelSetRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteThreatIntelSetRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteThreatIntelSetRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteThreatIntelSetRequest instance.
  */
 DeleteThreatIntelSetRequestPrivate::DeleteThreatIntelSetRequestPrivate(
     const DeleteThreatIntelSetRequestPrivate &other, DeleteThreatIntelSetRequest * const q)

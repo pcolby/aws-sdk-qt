@@ -158,6 +158,9 @@
 /*!
  * \namespace QtAws::GameLift
  * \brief The QtAws::GameLift contains stuff...
+ *
+ * \inmodule QtAwsGameLift
+ *
  * @todo Move this to a separate template file.
  */
 
@@ -643,7 +646,7 @@ GameLiftClient::GameLiftClient(
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * \a  AwsEndpoint::getEndpoint()
+ * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
 GameLiftClient::GameLiftClient(
     const QUrl &endpoint,

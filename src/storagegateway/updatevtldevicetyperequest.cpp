@@ -27,10 +27,9 @@ namespace StorageGateway {
 
 /*!
  * \class QtAws::StorageGateway::UpdateVTLDeviceTypeRequest
- *
  * \brief The UpdateVTLDeviceTypeRequest class provides an interface for StorageGateway UpdateVTLDeviceType requests.
  *
- * \ingroup StorageGateway
+ * \inmodule QtAwsStorageGateway
  *
  *  <fullname>AWS Storage Gateway Service</fullname>
  * 
@@ -106,9 +105,7 @@ namespace StorageGateway {
  */
 
 /*!
- * @brief  Constructs a new UpdateVTLDeviceTypeRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateVTLDeviceTypeRequest::UpdateVTLDeviceTypeRequest(const UpdateVTLDeviceTypeRequest &other)
     : StorageGatewayRequest(new UpdateVTLDeviceTypeRequestPrivate(*other.d_func(), this))
@@ -117,7 +114,7 @@ UpdateVTLDeviceTypeRequest::UpdateVTLDeviceTypeRequest(const UpdateVTLDeviceType
 }
 
 /*!
- * @brief  Constructs a new UpdateVTLDeviceTypeRequest object.
+ * Constructs a UpdateVTLDeviceTypeRequest object.
  */
 UpdateVTLDeviceTypeRequest::UpdateVTLDeviceTypeRequest()
     : StorageGatewayRequest(new UpdateVTLDeviceTypeRequestPrivate(StorageGatewayRequest::UpdateVTLDeviceTypeAction, this))
@@ -135,14 +132,9 @@ bool UpdateVTLDeviceTypeRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateVTLDeviceTypeResponse object.
+ * Returns a UpdateVTLDeviceTypeResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateVTLDeviceTypeResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  StorageGatewayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateVTLDeviceTypeRequest::response(QNetworkReply * const reply) const
 {
@@ -150,20 +142,17 @@ QtAws::Core::AwsAbstractResponse * UpdateVTLDeviceTypeRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::StorageGateway::UpdateVTLDeviceTypeRequestPrivate
+ * \brief The UpdateVTLDeviceTypeRequestPrivate class provides private implementation for UpdateVTLDeviceTypeRequest.
+ * \internal
  *
- * @class  UpdateVTLDeviceTypeRequestPrivate
- *
- * @brief  Private implementation for UpdateVTLDeviceTypeRequest.
+ * \inmodule QtAwsStorageGateway
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateVTLDeviceTypeRequestPrivate object.
- *
- * @param  action  StorageGateway action being performed.
- * @param  q       Pointer to this object's public UpdateVTLDeviceTypeRequest instance.
+ * Constructs a UpdateVTLDeviceTypeRequestPrivate object for StorageGateway \a action with,
+ * public implementation \a q.
  */
 UpdateVTLDeviceTypeRequestPrivate::UpdateVTLDeviceTypeRequestPrivate(
     const StorageGatewayRequest::Action action, UpdateVTLDeviceTypeRequest * const q)
@@ -173,15 +162,10 @@ UpdateVTLDeviceTypeRequestPrivate::UpdateVTLDeviceTypeRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateVTLDeviceTypeRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateVTLDeviceTypeRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateVTLDeviceTypeRequest instance.
  */
 UpdateVTLDeviceTypeRequestPrivate::UpdateVTLDeviceTypeRequestPrivate(
     const UpdateVTLDeviceTypeRequestPrivate &other, UpdateVTLDeviceTypeRequest * const q)

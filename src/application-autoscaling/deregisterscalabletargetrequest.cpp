@@ -27,10 +27,9 @@ namespace ApplicationAutoScaling {
 
 /*!
  * \class QtAws::ApplicationAutoScaling::DeregisterScalableTargetRequest
- *
  * \brief The DeregisterScalableTargetRequest class provides an interface for ApplicationAutoScaling DeregisterScalableTarget requests.
  *
- * \ingroup ApplicationAutoScaling
+ * \inmodule QtAwsApplicationAutoScaling
  *
  *  With Application Auto Scaling, you can configure automatic scaling for your scalable AWS resources. You can use
  *  Application Auto Scaling to accomplish the following
@@ -110,9 +109,7 @@ namespace ApplicationAutoScaling {
  */
 
 /*!
- * @brief  Constructs a new DeregisterScalableTargetRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeregisterScalableTargetRequest::DeregisterScalableTargetRequest(const DeregisterScalableTargetRequest &other)
     : ApplicationAutoScalingRequest(new DeregisterScalableTargetRequestPrivate(*other.d_func(), this))
@@ -121,7 +118,7 @@ DeregisterScalableTargetRequest::DeregisterScalableTargetRequest(const Deregiste
 }
 
 /*!
- * @brief  Constructs a new DeregisterScalableTargetRequest object.
+ * Constructs a DeregisterScalableTargetRequest object.
  */
 DeregisterScalableTargetRequest::DeregisterScalableTargetRequest()
     : ApplicationAutoScalingRequest(new DeregisterScalableTargetRequestPrivate(ApplicationAutoScalingRequest::DeregisterScalableTargetAction, this))
@@ -139,14 +136,9 @@ bool DeregisterScalableTargetRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeregisterScalableTargetResponse object.
+ * Returns a DeregisterScalableTargetResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeregisterScalableTargetResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ApplicationAutoScalingClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeregisterScalableTargetRequest::response(QNetworkReply * const reply) const
 {
@@ -154,20 +146,17 @@ QtAws::Core::AwsAbstractResponse * DeregisterScalableTargetRequest::response(QNe
 }
 
 /*!
- * @internal
+ * \class QtAws::ApplicationAutoScaling::DeregisterScalableTargetRequestPrivate
+ * \brief The DeregisterScalableTargetRequestPrivate class provides private implementation for DeregisterScalableTargetRequest.
+ * \internal
  *
- * @class  DeregisterScalableTargetRequestPrivate
- *
- * @brief  Private implementation for DeregisterScalableTargetRequest.
+ * \inmodule QtAwsApplicationAutoScaling
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeregisterScalableTargetRequestPrivate object.
- *
- * @param  action  ApplicationAutoScaling action being performed.
- * @param  q       Pointer to this object's public DeregisterScalableTargetRequest instance.
+ * Constructs a DeregisterScalableTargetRequestPrivate object for ApplicationAutoScaling \a action with,
+ * public implementation \a q.
  */
 DeregisterScalableTargetRequestPrivate::DeregisterScalableTargetRequestPrivate(
     const ApplicationAutoScalingRequest::Action action, DeregisterScalableTargetRequest * const q)
@@ -177,15 +166,10 @@ DeregisterScalableTargetRequestPrivate::DeregisterScalableTargetRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeregisterScalableTargetRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeregisterScalableTargetRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeregisterScalableTargetRequest instance.
  */
 DeregisterScalableTargetRequestPrivate::DeregisterScalableTargetRequestPrivate(
     const DeregisterScalableTargetRequestPrivate &other, DeregisterScalableTargetRequest * const q)

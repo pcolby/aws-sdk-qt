@@ -27,10 +27,9 @@ namespace Kinesis {
 
 /*!
  * \class QtAws::Kinesis::SplitShardRequest
- *
  * \brief The SplitShardRequest class provides an interface for Kinesis SplitShard requests.
  *
- * \ingroup Kinesis
+ * \inmodule QtAwsKinesis
  *
  *  <fullname>Amazon Kinesis Data Streams Service API Reference</fullname>
  * 
@@ -40,9 +39,7 @@ namespace Kinesis {
  */
 
 /*!
- * @brief  Constructs a new SplitShardRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 SplitShardRequest::SplitShardRequest(const SplitShardRequest &other)
     : KinesisRequest(new SplitShardRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ SplitShardRequest::SplitShardRequest(const SplitShardRequest &other)
 }
 
 /*!
- * @brief  Constructs a new SplitShardRequest object.
+ * Constructs a SplitShardRequest object.
  */
 SplitShardRequest::SplitShardRequest()
     : KinesisRequest(new SplitShardRequestPrivate(KinesisRequest::SplitShardAction, this))
@@ -69,14 +66,9 @@ bool SplitShardRequest::isValid() const
 
 
 /*!
- * @brief  Construct an SplitShardResponse object.
+ * Returns a SplitShardResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An SplitShardResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  KinesisClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * SplitShardRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * SplitShardRequest::response(QNetworkReply * c
 }
 
 /*!
- * @internal
+ * \class QtAws::Kinesis::SplitShardRequestPrivate
+ * \brief The SplitShardRequestPrivate class provides private implementation for SplitShardRequest.
+ * \internal
  *
- * @class  SplitShardRequestPrivate
- *
- * @brief  Private implementation for SplitShardRequest.
+ * \inmodule QtAwsKinesis
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new SplitShardRequestPrivate object.
- *
- * @param  action  Kinesis action being performed.
- * @param  q       Pointer to this object's public SplitShardRequest instance.
+ * Constructs a SplitShardRequestPrivate object for Kinesis \a action with,
+ * public implementation \a q.
  */
 SplitShardRequestPrivate::SplitShardRequestPrivate(
     const KinesisRequest::Action action, SplitShardRequest * const q)
@@ -107,15 +96,10 @@ SplitShardRequestPrivate::SplitShardRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SplitShardRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the SplitShardRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public SplitShardRequest instance.
  */
 SplitShardRequestPrivate::SplitShardRequestPrivate(
     const SplitShardRequestPrivate &other, SplitShardRequest * const q)

@@ -27,10 +27,9 @@ namespace AppSync {
 
 /*!
  * \class QtAws::AppSync::ListResolversRequest
- *
  * \brief The ListResolversRequest class provides an interface for AppSync ListResolvers requests.
  *
- * \ingroup AppSync
+ * \inmodule QtAwsAppSync
  *
  *  AWS AppSync provides API actions for creating and interacting with data sources using GraphQL from your
  *
@@ -38,9 +37,7 @@ namespace AppSync {
  */
 
 /*!
- * @brief  Constructs a new ListResolversRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListResolversRequest::ListResolversRequest(const ListResolversRequest &other)
     : AppSyncRequest(new ListResolversRequestPrivate(*other.d_func(), this))
@@ -49,7 +46,7 @@ ListResolversRequest::ListResolversRequest(const ListResolversRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ListResolversRequest object.
+ * Constructs a ListResolversRequest object.
  */
 ListResolversRequest::ListResolversRequest()
     : AppSyncRequest(new ListResolversRequestPrivate(AppSyncRequest::ListResolversAction, this))
@@ -67,14 +64,9 @@ bool ListResolversRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListResolversResponse object.
+ * Returns a ListResolversResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListResolversResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AppSyncClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListResolversRequest::response(QNetworkReply * const reply) const
 {
@@ -82,20 +74,17 @@ QtAws::Core::AwsAbstractResponse * ListResolversRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::AppSync::ListResolversRequestPrivate
+ * \brief The ListResolversRequestPrivate class provides private implementation for ListResolversRequest.
+ * \internal
  *
- * @class  ListResolversRequestPrivate
- *
- * @brief  Private implementation for ListResolversRequest.
+ * \inmodule QtAwsAppSync
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListResolversRequestPrivate object.
- *
- * @param  action  AppSync action being performed.
- * @param  q       Pointer to this object's public ListResolversRequest instance.
+ * Constructs a ListResolversRequestPrivate object for AppSync \a action with,
+ * public implementation \a q.
  */
 ListResolversRequestPrivate::ListResolversRequestPrivate(
     const AppSyncRequest::Action action, ListResolversRequest * const q)
@@ -105,15 +94,10 @@ ListResolversRequestPrivate::ListResolversRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListResolversRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListResolversRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListResolversRequest instance.
  */
 ListResolversRequestPrivate::ListResolversRequestPrivate(
     const ListResolversRequestPrivate &other, ListResolversRequest * const q)

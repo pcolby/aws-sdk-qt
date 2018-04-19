@@ -27,10 +27,9 @@ namespace StorageGateway {
 
 /*!
  * \class QtAws::StorageGateway::ListTapesRequest
- *
  * \brief The ListTapesRequest class provides an interface for StorageGateway ListTapes requests.
  *
- * \ingroup StorageGateway
+ * \inmodule QtAwsStorageGateway
  *
  *  <fullname>AWS Storage Gateway Service</fullname>
  * 
@@ -106,9 +105,7 @@ namespace StorageGateway {
  */
 
 /*!
- * @brief  Constructs a new ListTapesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListTapesRequest::ListTapesRequest(const ListTapesRequest &other)
     : StorageGatewayRequest(new ListTapesRequestPrivate(*other.d_func(), this))
@@ -117,7 +114,7 @@ ListTapesRequest::ListTapesRequest(const ListTapesRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ListTapesRequest object.
+ * Constructs a ListTapesRequest object.
  */
 ListTapesRequest::ListTapesRequest()
     : StorageGatewayRequest(new ListTapesRequestPrivate(StorageGatewayRequest::ListTapesAction, this))
@@ -135,14 +132,9 @@ bool ListTapesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListTapesResponse object.
+ * Returns a ListTapesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListTapesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  StorageGatewayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListTapesRequest::response(QNetworkReply * const reply) const
 {
@@ -150,20 +142,17 @@ QtAws::Core::AwsAbstractResponse * ListTapesRequest::response(QNetworkReply * co
 }
 
 /*!
- * @internal
+ * \class QtAws::StorageGateway::ListTapesRequestPrivate
+ * \brief The ListTapesRequestPrivate class provides private implementation for ListTapesRequest.
+ * \internal
  *
- * @class  ListTapesRequestPrivate
- *
- * @brief  Private implementation for ListTapesRequest.
+ * \inmodule QtAwsStorageGateway
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListTapesRequestPrivate object.
- *
- * @param  action  StorageGateway action being performed.
- * @param  q       Pointer to this object's public ListTapesRequest instance.
+ * Constructs a ListTapesRequestPrivate object for StorageGateway \a action with,
+ * public implementation \a q.
  */
 ListTapesRequestPrivate::ListTapesRequestPrivate(
     const StorageGatewayRequest::Action action, ListTapesRequest * const q)
@@ -173,15 +162,10 @@ ListTapesRequestPrivate::ListTapesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListTapesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListTapesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListTapesRequest instance.
  */
 ListTapesRequestPrivate::ListTapesRequestPrivate(
     const ListTapesRequestPrivate &other, ListTapesRequest * const q)

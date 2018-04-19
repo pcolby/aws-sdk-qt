@@ -27,10 +27,9 @@ namespace SES {
 
 /*!
  * \class QtAws::SES::GetIdentityMailFromDomainAttributesRequest
- *
  * \brief The GetIdentityMailFromDomainAttributesRequest class provides an interface for SES GetIdentityMailFromDomainAttributes requests.
  *
- * \ingroup SES
+ * \inmodule QtAwsSES
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -48,9 +47,7 @@ namespace SES {
  */
 
 /*!
- * @brief  Constructs a new GetIdentityMailFromDomainAttributesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetIdentityMailFromDomainAttributesRequest::GetIdentityMailFromDomainAttributesRequest(const GetIdentityMailFromDomainAttributesRequest &other)
     : SESRequest(new GetIdentityMailFromDomainAttributesRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ GetIdentityMailFromDomainAttributesRequest::GetIdentityMailFromDomainAttributesR
 }
 
 /*!
- * @brief  Constructs a new GetIdentityMailFromDomainAttributesRequest object.
+ * Constructs a GetIdentityMailFromDomainAttributesRequest object.
  */
 GetIdentityMailFromDomainAttributesRequest::GetIdentityMailFromDomainAttributesRequest()
     : SESRequest(new GetIdentityMailFromDomainAttributesRequestPrivate(SESRequest::GetIdentityMailFromDomainAttributesAction, this))
@@ -77,14 +74,9 @@ bool GetIdentityMailFromDomainAttributesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetIdentityMailFromDomainAttributesResponse object.
+ * Returns a GetIdentityMailFromDomainAttributesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetIdentityMailFromDomainAttributesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SESClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetIdentityMailFromDomainAttributesRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * GetIdentityMailFromDomainAttributesRequest::r
 }
 
 /*!
- * @internal
+ * \class QtAws::SES::GetIdentityMailFromDomainAttributesRequestPrivate
+ * \brief The GetIdentityMailFromDomainAttributesRequestPrivate class provides private implementation for GetIdentityMailFromDomainAttributesRequest.
+ * \internal
  *
- * @class  GetIdentityMailFromDomainAttributesRequestPrivate
- *
- * @brief  Private implementation for GetIdentityMailFromDomainAttributesRequest.
+ * \inmodule QtAwsSES
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetIdentityMailFromDomainAttributesRequestPrivate object.
- *
- * @param  action  SES action being performed.
- * @param  q       Pointer to this object's public GetIdentityMailFromDomainAttributesRequest instance.
+ * Constructs a GetIdentityMailFromDomainAttributesRequestPrivate object for SES \a action with,
+ * public implementation \a q.
  */
 GetIdentityMailFromDomainAttributesRequestPrivate::GetIdentityMailFromDomainAttributesRequestPrivate(
     const SESRequest::Action action, GetIdentityMailFromDomainAttributesRequest * const q)
@@ -115,15 +104,10 @@ GetIdentityMailFromDomainAttributesRequestPrivate::GetIdentityMailFromDomainAttr
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetIdentityMailFromDomainAttributesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetIdentityMailFromDomainAttributesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetIdentityMailFromDomainAttributesRequest instance.
  */
 GetIdentityMailFromDomainAttributesRequestPrivate::GetIdentityMailFromDomainAttributesRequestPrivate(
     const GetIdentityMailFromDomainAttributesRequestPrivate &other, GetIdentityMailFromDomainAttributesRequest * const q)

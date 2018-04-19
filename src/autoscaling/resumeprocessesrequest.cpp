@@ -27,10 +27,9 @@ namespace AutoScaling {
 
 /*!
  * \class QtAws::AutoScaling::ResumeProcessesRequest
- *
  * \brief The ResumeProcessesRequest class provides an interface for AutoScaling ResumeProcesses requests.
  *
- * \ingroup AutoScaling
+ * \inmodule QtAwsAutoScaling
  *
  *  <fullname>Amazon EC2 Auto Scaling</fullname>
  * 
@@ -42,9 +41,7 @@ namespace AutoScaling {
  */
 
 /*!
- * @brief  Constructs a new ResumeProcessesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ResumeProcessesRequest::ResumeProcessesRequest(const ResumeProcessesRequest &other)
     : AutoScalingRequest(new ResumeProcessesRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ ResumeProcessesRequest::ResumeProcessesRequest(const ResumeProcessesRequest &oth
 }
 
 /*!
- * @brief  Constructs a new ResumeProcessesRequest object.
+ * Constructs a ResumeProcessesRequest object.
  */
 ResumeProcessesRequest::ResumeProcessesRequest()
     : AutoScalingRequest(new ResumeProcessesRequestPrivate(AutoScalingRequest::ResumeProcessesAction, this))
@@ -71,14 +68,9 @@ bool ResumeProcessesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ResumeProcessesResponse object.
+ * Returns a ResumeProcessesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ResumeProcessesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AutoScalingClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ResumeProcessesRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * ResumeProcessesRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::AutoScaling::ResumeProcessesRequestPrivate
+ * \brief The ResumeProcessesRequestPrivate class provides private implementation for ResumeProcessesRequest.
+ * \internal
  *
- * @class  ResumeProcessesRequestPrivate
- *
- * @brief  Private implementation for ResumeProcessesRequest.
+ * \inmodule QtAwsAutoScaling
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ResumeProcessesRequestPrivate object.
- *
- * @param  action  AutoScaling action being performed.
- * @param  q       Pointer to this object's public ResumeProcessesRequest instance.
+ * Constructs a ResumeProcessesRequestPrivate object for AutoScaling \a action with,
+ * public implementation \a q.
  */
 ResumeProcessesRequestPrivate::ResumeProcessesRequestPrivate(
     const AutoScalingRequest::Action action, ResumeProcessesRequest * const q)
@@ -109,15 +98,10 @@ ResumeProcessesRequestPrivate::ResumeProcessesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ResumeProcessesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ResumeProcessesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ResumeProcessesRequest instance.
  */
 ResumeProcessesRequestPrivate::ResumeProcessesRequestPrivate(
     const ResumeProcessesRequestPrivate &other, ResumeProcessesRequest * const q)

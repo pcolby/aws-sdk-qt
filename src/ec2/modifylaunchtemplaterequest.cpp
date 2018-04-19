@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::ModifyLaunchTemplateRequest
- *
  * \brief The ModifyLaunchTemplateRequest class provides an interface for EC2 ModifyLaunchTemplate requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new ModifyLaunchTemplateRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ModifyLaunchTemplateRequest::ModifyLaunchTemplateRequest(const ModifyLaunchTemplateRequest &other)
     : EC2Request(new ModifyLaunchTemplateRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ ModifyLaunchTemplateRequest::ModifyLaunchTemplateRequest(const ModifyLaunchTempl
 }
 
 /*!
- * @brief  Constructs a new ModifyLaunchTemplateRequest object.
+ * Constructs a ModifyLaunchTemplateRequest object.
  */
 ModifyLaunchTemplateRequest::ModifyLaunchTemplateRequest()
     : EC2Request(new ModifyLaunchTemplateRequestPrivate(EC2Request::ModifyLaunchTemplateAction, this))
@@ -70,14 +67,9 @@ bool ModifyLaunchTemplateRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ModifyLaunchTemplateResponse object.
+ * Returns a ModifyLaunchTemplateResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ModifyLaunchTemplateResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ModifyLaunchTemplateRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * ModifyLaunchTemplateRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::ModifyLaunchTemplateRequestPrivate
+ * \brief The ModifyLaunchTemplateRequestPrivate class provides private implementation for ModifyLaunchTemplateRequest.
+ * \internal
  *
- * @class  ModifyLaunchTemplateRequestPrivate
- *
- * @brief  Private implementation for ModifyLaunchTemplateRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ModifyLaunchTemplateRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public ModifyLaunchTemplateRequest instance.
+ * Constructs a ModifyLaunchTemplateRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 ModifyLaunchTemplateRequestPrivate::ModifyLaunchTemplateRequestPrivate(
     const EC2Request::Action action, ModifyLaunchTemplateRequest * const q)
@@ -108,15 +97,10 @@ ModifyLaunchTemplateRequestPrivate::ModifyLaunchTemplateRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ModifyLaunchTemplateRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ModifyLaunchTemplateRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ModifyLaunchTemplateRequest instance.
  */
 ModifyLaunchTemplateRequestPrivate::ModifyLaunchTemplateRequestPrivate(
     const ModifyLaunchTemplateRequestPrivate &other, ModifyLaunchTemplateRequest * const q)

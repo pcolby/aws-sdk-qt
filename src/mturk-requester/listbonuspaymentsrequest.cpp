@@ -27,19 +27,16 @@ namespace MTurk {
 
 /*!
  * \class QtAws::MTurk::ListBonusPaymentsRequest
- *
  * \brief The ListBonusPaymentsRequest class provides an interface for MTurk ListBonusPayments requests.
  *
- * \ingroup MTurk
+ * \inmodule QtAwsMTurk
  *
  *
  * \sa MTurkClient::listBonusPayments
  */
 
 /*!
- * @brief  Constructs a new ListBonusPaymentsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListBonusPaymentsRequest::ListBonusPaymentsRequest(const ListBonusPaymentsRequest &other)
     : MTurkRequest(new ListBonusPaymentsRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ ListBonusPaymentsRequest::ListBonusPaymentsRequest(const ListBonusPaymentsReques
 }
 
 /*!
- * @brief  Constructs a new ListBonusPaymentsRequest object.
+ * Constructs a ListBonusPaymentsRequest object.
  */
 ListBonusPaymentsRequest::ListBonusPaymentsRequest()
     : MTurkRequest(new ListBonusPaymentsRequestPrivate(MTurkRequest::ListBonusPaymentsAction, this))
@@ -66,14 +63,9 @@ bool ListBonusPaymentsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListBonusPaymentsResponse object.
+ * Returns a ListBonusPaymentsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListBonusPaymentsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MTurkClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListBonusPaymentsRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * ListBonusPaymentsRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::MTurk::ListBonusPaymentsRequestPrivate
+ * \brief The ListBonusPaymentsRequestPrivate class provides private implementation for ListBonusPaymentsRequest.
+ * \internal
  *
- * @class  ListBonusPaymentsRequestPrivate
- *
- * @brief  Private implementation for ListBonusPaymentsRequest.
+ * \inmodule QtAwsMTurk
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListBonusPaymentsRequestPrivate object.
- *
- * @param  action  MTurk action being performed.
- * @param  q       Pointer to this object's public ListBonusPaymentsRequest instance.
+ * Constructs a ListBonusPaymentsRequestPrivate object for MTurk \a action with,
+ * public implementation \a q.
  */
 ListBonusPaymentsRequestPrivate::ListBonusPaymentsRequestPrivate(
     const MTurkRequest::Action action, ListBonusPaymentsRequest * const q)
@@ -104,15 +93,10 @@ ListBonusPaymentsRequestPrivate::ListBonusPaymentsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListBonusPaymentsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListBonusPaymentsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListBonusPaymentsRequest instance.
  */
 ListBonusPaymentsRequestPrivate::ListBonusPaymentsRequestPrivate(
     const ListBonusPaymentsRequestPrivate &other, ListBonusPaymentsRequest * const q)

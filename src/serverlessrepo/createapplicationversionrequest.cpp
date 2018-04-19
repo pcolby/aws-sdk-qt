@@ -27,10 +27,9 @@ namespace ServerlessApplicationRepository {
 
 /*!
  * \class QtAws::ServerlessApplicationRepository::CreateApplicationVersionRequest
- *
  * \brief The CreateApplicationVersionRequest class provides an interface for ServerlessApplicationRepository CreateApplicationVersion requests.
  *
- * \ingroup ServerlessApplicationRepository
+ * \inmodule QtAwsServerlessApplicationRepository
  *
  *  The AWS Serverless Application Repository makes it easy for developers and enterprises to quickly find and deploy
  *  serverless applications in the AWS Cloud. For more information about serverless applications, see Serverless Computing
@@ -58,9 +57,7 @@ namespace ServerlessApplicationRepository {
  */
 
 /*!
- * @brief  Constructs a new CreateApplicationVersionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateApplicationVersionRequest::CreateApplicationVersionRequest(const CreateApplicationVersionRequest &other)
     : ServerlessApplicationRepositoryRequest(new CreateApplicationVersionRequestPrivate(*other.d_func(), this))
@@ -69,7 +66,7 @@ CreateApplicationVersionRequest::CreateApplicationVersionRequest(const CreateApp
 }
 
 /*!
- * @brief  Constructs a new CreateApplicationVersionRequest object.
+ * Constructs a CreateApplicationVersionRequest object.
  */
 CreateApplicationVersionRequest::CreateApplicationVersionRequest()
     : ServerlessApplicationRepositoryRequest(new CreateApplicationVersionRequestPrivate(ServerlessApplicationRepositoryRequest::CreateApplicationVersionAction, this))
@@ -87,14 +84,9 @@ bool CreateApplicationVersionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateApplicationVersionResponse object.
+ * Returns a CreateApplicationVersionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateApplicationVersionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ServerlessApplicationRepositoryClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateApplicationVersionRequest::response(QNetworkReply * const reply) const
 {
@@ -102,20 +94,17 @@ QtAws::Core::AwsAbstractResponse * CreateApplicationVersionRequest::response(QNe
 }
 
 /*!
- * @internal
+ * \class QtAws::ServerlessApplicationRepository::CreateApplicationVersionRequestPrivate
+ * \brief The CreateApplicationVersionRequestPrivate class provides private implementation for CreateApplicationVersionRequest.
+ * \internal
  *
- * @class  CreateApplicationVersionRequestPrivate
- *
- * @brief  Private implementation for CreateApplicationVersionRequest.
+ * \inmodule QtAwsServerlessApplicationRepository
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateApplicationVersionRequestPrivate object.
- *
- * @param  action  ServerlessApplicationRepository action being performed.
- * @param  q       Pointer to this object's public CreateApplicationVersionRequest instance.
+ * Constructs a CreateApplicationVersionRequestPrivate object for ServerlessApplicationRepository \a action with,
+ * public implementation \a q.
  */
 CreateApplicationVersionRequestPrivate::CreateApplicationVersionRequestPrivate(
     const ServerlessApplicationRepositoryRequest::Action action, CreateApplicationVersionRequest * const q)
@@ -125,15 +114,10 @@ CreateApplicationVersionRequestPrivate::CreateApplicationVersionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateApplicationVersionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateApplicationVersionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateApplicationVersionRequest instance.
  */
 CreateApplicationVersionRequestPrivate::CreateApplicationVersionRequestPrivate(
     const CreateApplicationVersionRequestPrivate &other, CreateApplicationVersionRequest * const q)

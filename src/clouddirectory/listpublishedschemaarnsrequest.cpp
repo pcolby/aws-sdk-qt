@@ -27,10 +27,9 @@ namespace CloudDirectory {
 
 /*!
  * \class QtAws::CloudDirectory::ListPublishedSchemaArnsRequest
- *
  * \brief The ListPublishedSchemaArnsRequest class provides an interface for CloudDirectory ListPublishedSchemaArns requests.
  *
- * \ingroup CloudDirectory
+ * \inmodule QtAwsCloudDirectory
  *
  *  <fullname>Amazon Cloud Directory</fullname>
  * 
@@ -44,9 +43,7 @@ namespace CloudDirectory {
  */
 
 /*!
- * @brief  Constructs a new ListPublishedSchemaArnsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListPublishedSchemaArnsRequest::ListPublishedSchemaArnsRequest(const ListPublishedSchemaArnsRequest &other)
     : CloudDirectoryRequest(new ListPublishedSchemaArnsRequestPrivate(*other.d_func(), this))
@@ -55,7 +52,7 @@ ListPublishedSchemaArnsRequest::ListPublishedSchemaArnsRequest(const ListPublish
 }
 
 /*!
- * @brief  Constructs a new ListPublishedSchemaArnsRequest object.
+ * Constructs a ListPublishedSchemaArnsRequest object.
  */
 ListPublishedSchemaArnsRequest::ListPublishedSchemaArnsRequest()
     : CloudDirectoryRequest(new ListPublishedSchemaArnsRequestPrivate(CloudDirectoryRequest::ListPublishedSchemaArnsAction, this))
@@ -73,14 +70,9 @@ bool ListPublishedSchemaArnsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListPublishedSchemaArnsResponse object.
+ * Returns a ListPublishedSchemaArnsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListPublishedSchemaArnsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudDirectoryClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListPublishedSchemaArnsRequest::response(QNetworkReply * const reply) const
 {
@@ -88,20 +80,17 @@ QtAws::Core::AwsAbstractResponse * ListPublishedSchemaArnsRequest::response(QNet
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudDirectory::ListPublishedSchemaArnsRequestPrivate
+ * \brief The ListPublishedSchemaArnsRequestPrivate class provides private implementation for ListPublishedSchemaArnsRequest.
+ * \internal
  *
- * @class  ListPublishedSchemaArnsRequestPrivate
- *
- * @brief  Private implementation for ListPublishedSchemaArnsRequest.
+ * \inmodule QtAwsCloudDirectory
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListPublishedSchemaArnsRequestPrivate object.
- *
- * @param  action  CloudDirectory action being performed.
- * @param  q       Pointer to this object's public ListPublishedSchemaArnsRequest instance.
+ * Constructs a ListPublishedSchemaArnsRequestPrivate object for CloudDirectory \a action with,
+ * public implementation \a q.
  */
 ListPublishedSchemaArnsRequestPrivate::ListPublishedSchemaArnsRequestPrivate(
     const CloudDirectoryRequest::Action action, ListPublishedSchemaArnsRequest * const q)
@@ -111,15 +100,10 @@ ListPublishedSchemaArnsRequestPrivate::ListPublishedSchemaArnsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListPublishedSchemaArnsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListPublishedSchemaArnsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListPublishedSchemaArnsRequest instance.
  */
 ListPublishedSchemaArnsRequestPrivate::ListPublishedSchemaArnsRequestPrivate(
     const ListPublishedSchemaArnsRequestPrivate &other, ListPublishedSchemaArnsRequest * const q)

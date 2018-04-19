@@ -27,10 +27,9 @@ namespace SWF {
 
 /*!
  * \class QtAws::SWF::RegisterWorkflowTypeRequest
- *
  * \brief The RegisterWorkflowTypeRequest class provides an interface for SWF RegisterWorkflowType requests.
  *
- * \ingroup SWF
+ * \inmodule QtAwsSWF
  *
  *  <fullname>Amazon Simple Workflow Service</fullname>
  * 
@@ -53,9 +52,7 @@ namespace SWF {
  */
 
 /*!
- * @brief  Constructs a new RegisterWorkflowTypeRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 RegisterWorkflowTypeRequest::RegisterWorkflowTypeRequest(const RegisterWorkflowTypeRequest &other)
     : SWFRequest(new RegisterWorkflowTypeRequestPrivate(*other.d_func(), this))
@@ -64,7 +61,7 @@ RegisterWorkflowTypeRequest::RegisterWorkflowTypeRequest(const RegisterWorkflowT
 }
 
 /*!
- * @brief  Constructs a new RegisterWorkflowTypeRequest object.
+ * Constructs a RegisterWorkflowTypeRequest object.
  */
 RegisterWorkflowTypeRequest::RegisterWorkflowTypeRequest()
     : SWFRequest(new RegisterWorkflowTypeRequestPrivate(SWFRequest::RegisterWorkflowTypeAction, this))
@@ -82,14 +79,9 @@ bool RegisterWorkflowTypeRequest::isValid() const
 
 
 /*!
- * @brief  Construct an RegisterWorkflowTypeResponse object.
+ * Returns a RegisterWorkflowTypeResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An RegisterWorkflowTypeResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SWFClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * RegisterWorkflowTypeRequest::response(QNetworkReply * const reply) const
 {
@@ -97,20 +89,17 @@ QtAws::Core::AwsAbstractResponse * RegisterWorkflowTypeRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::SWF::RegisterWorkflowTypeRequestPrivate
+ * \brief The RegisterWorkflowTypeRequestPrivate class provides private implementation for RegisterWorkflowTypeRequest.
+ * \internal
  *
- * @class  RegisterWorkflowTypeRequestPrivate
- *
- * @brief  Private implementation for RegisterWorkflowTypeRequest.
+ * \inmodule QtAwsSWF
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new RegisterWorkflowTypeRequestPrivate object.
- *
- * @param  action  SWF action being performed.
- * @param  q       Pointer to this object's public RegisterWorkflowTypeRequest instance.
+ * Constructs a RegisterWorkflowTypeRequestPrivate object for SWF \a action with,
+ * public implementation \a q.
  */
 RegisterWorkflowTypeRequestPrivate::RegisterWorkflowTypeRequestPrivate(
     const SWFRequest::Action action, RegisterWorkflowTypeRequest * const q)
@@ -120,15 +109,10 @@ RegisterWorkflowTypeRequestPrivate::RegisterWorkflowTypeRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RegisterWorkflowTypeRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the RegisterWorkflowTypeRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public RegisterWorkflowTypeRequest instance.
  */
 RegisterWorkflowTypeRequestPrivate::RegisterWorkflowTypeRequestPrivate(
     const RegisterWorkflowTypeRequestPrivate &other, RegisterWorkflowTypeRequest * const q)

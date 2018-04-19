@@ -27,10 +27,9 @@ namespace CloudSearch {
 
 /*!
  * \class QtAws::CloudSearch::UpdateAvailabilityOptionsRequest
- *
  * \brief The UpdateAvailabilityOptionsRequest class provides an interface for CloudSearch UpdateAvailabilityOptions requests.
  *
- * \ingroup CloudSearch
+ * \inmodule QtAwsCloudSearch
  *
  *  <fullname>Amazon CloudSearch Configuration Service</fullname>
  * 
@@ -48,9 +47,7 @@ namespace CloudSearch {
  */
 
 /*!
- * @brief  Constructs a new UpdateAvailabilityOptionsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateAvailabilityOptionsRequest::UpdateAvailabilityOptionsRequest(const UpdateAvailabilityOptionsRequest &other)
     : CloudSearchRequest(new UpdateAvailabilityOptionsRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ UpdateAvailabilityOptionsRequest::UpdateAvailabilityOptionsRequest(const UpdateA
 }
 
 /*!
- * @brief  Constructs a new UpdateAvailabilityOptionsRequest object.
+ * Constructs a UpdateAvailabilityOptionsRequest object.
  */
 UpdateAvailabilityOptionsRequest::UpdateAvailabilityOptionsRequest()
     : CloudSearchRequest(new UpdateAvailabilityOptionsRequestPrivate(CloudSearchRequest::UpdateAvailabilityOptionsAction, this))
@@ -77,14 +74,9 @@ bool UpdateAvailabilityOptionsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateAvailabilityOptionsResponse object.
+ * Returns a UpdateAvailabilityOptionsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateAvailabilityOptionsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudSearchClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateAvailabilityOptionsRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * UpdateAvailabilityOptionsRequest::response(QN
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudSearch::UpdateAvailabilityOptionsRequestPrivate
+ * \brief The UpdateAvailabilityOptionsRequestPrivate class provides private implementation for UpdateAvailabilityOptionsRequest.
+ * \internal
  *
- * @class  UpdateAvailabilityOptionsRequestPrivate
- *
- * @brief  Private implementation for UpdateAvailabilityOptionsRequest.
+ * \inmodule QtAwsCloudSearch
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateAvailabilityOptionsRequestPrivate object.
- *
- * @param  action  CloudSearch action being performed.
- * @param  q       Pointer to this object's public UpdateAvailabilityOptionsRequest instance.
+ * Constructs a UpdateAvailabilityOptionsRequestPrivate object for CloudSearch \a action with,
+ * public implementation \a q.
  */
 UpdateAvailabilityOptionsRequestPrivate::UpdateAvailabilityOptionsRequestPrivate(
     const CloudSearchRequest::Action action, UpdateAvailabilityOptionsRequest * const q)
@@ -115,15 +104,10 @@ UpdateAvailabilityOptionsRequestPrivate::UpdateAvailabilityOptionsRequestPrivate
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateAvailabilityOptionsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateAvailabilityOptionsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateAvailabilityOptionsRequest instance.
  */
 UpdateAvailabilityOptionsRequestPrivate::UpdateAvailabilityOptionsRequestPrivate(
     const UpdateAvailabilityOptionsRequestPrivate &other, UpdateAvailabilityOptionsRequest * const q)

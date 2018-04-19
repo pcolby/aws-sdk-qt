@@ -27,10 +27,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::DescribeEventConfigurationsRequest
- *
  * \brief The DescribeEventConfigurationsRequest class provides an interface for IoT DescribeEventConfigurations requests.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -48,9 +47,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new DescribeEventConfigurationsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeEventConfigurationsRequest::DescribeEventConfigurationsRequest(const DescribeEventConfigurationsRequest &other)
     : IoTRequest(new DescribeEventConfigurationsRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ DescribeEventConfigurationsRequest::DescribeEventConfigurationsRequest(const Des
 }
 
 /*!
- * @brief  Constructs a new DescribeEventConfigurationsRequest object.
+ * Constructs a DescribeEventConfigurationsRequest object.
  */
 DescribeEventConfigurationsRequest::DescribeEventConfigurationsRequest()
     : IoTRequest(new DescribeEventConfigurationsRequestPrivate(IoTRequest::DescribeEventConfigurationsAction, this))
@@ -77,14 +74,9 @@ bool DescribeEventConfigurationsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeEventConfigurationsResponse object.
+ * Returns a DescribeEventConfigurationsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeEventConfigurationsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IoTClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeEventConfigurationsRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * DescribeEventConfigurationsRequest::response(
 }
 
 /*!
- * @internal
+ * \class QtAws::IoT::DescribeEventConfigurationsRequestPrivate
+ * \brief The DescribeEventConfigurationsRequestPrivate class provides private implementation for DescribeEventConfigurationsRequest.
+ * \internal
  *
- * @class  DescribeEventConfigurationsRequestPrivate
- *
- * @brief  Private implementation for DescribeEventConfigurationsRequest.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeEventConfigurationsRequestPrivate object.
- *
- * @param  action  IoT action being performed.
- * @param  q       Pointer to this object's public DescribeEventConfigurationsRequest instance.
+ * Constructs a DescribeEventConfigurationsRequestPrivate object for IoT \a action with,
+ * public implementation \a q.
  */
 DescribeEventConfigurationsRequestPrivate::DescribeEventConfigurationsRequestPrivate(
     const IoTRequest::Action action, DescribeEventConfigurationsRequest * const q)
@@ -115,15 +104,10 @@ DescribeEventConfigurationsRequestPrivate::DescribeEventConfigurationsRequestPri
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeEventConfigurationsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeEventConfigurationsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeEventConfigurationsRequest instance.
  */
 DescribeEventConfigurationsRequestPrivate::DescribeEventConfigurationsRequestPrivate(
     const DescribeEventConfigurationsRequestPrivate &other, DescribeEventConfigurationsRequest * const q)

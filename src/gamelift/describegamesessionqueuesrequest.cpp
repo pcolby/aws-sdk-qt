@@ -27,10 +27,9 @@ namespace GameLift {
 
 /*!
  * \class QtAws::GameLift::DescribeGameSessionQueuesRequest
- *
  * \brief The DescribeGameSessionQueuesRequest class provides an interface for GameLift DescribeGameSessionQueues requests.
  *
- * \ingroup GameLift
+ * \inmodule QtAwsGameLift
  *
  *  <fullname>Amazon GameLift Service</fullname>
  * 
@@ -473,9 +472,7 @@ namespace GameLift {
  */
 
 /*!
- * @brief  Constructs a new DescribeGameSessionQueuesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeGameSessionQueuesRequest::DescribeGameSessionQueuesRequest(const DescribeGameSessionQueuesRequest &other)
     : GameLiftRequest(new DescribeGameSessionQueuesRequestPrivate(*other.d_func(), this))
@@ -484,7 +481,7 @@ DescribeGameSessionQueuesRequest::DescribeGameSessionQueuesRequest(const Describ
 }
 
 /*!
- * @brief  Constructs a new DescribeGameSessionQueuesRequest object.
+ * Constructs a DescribeGameSessionQueuesRequest object.
  */
 DescribeGameSessionQueuesRequest::DescribeGameSessionQueuesRequest()
     : GameLiftRequest(new DescribeGameSessionQueuesRequestPrivate(GameLiftRequest::DescribeGameSessionQueuesAction, this))
@@ -502,14 +499,9 @@ bool DescribeGameSessionQueuesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeGameSessionQueuesResponse object.
+ * Returns a DescribeGameSessionQueuesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeGameSessionQueuesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GameLiftClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeGameSessionQueuesRequest::response(QNetworkReply * const reply) const
 {
@@ -517,20 +509,17 @@ QtAws::Core::AwsAbstractResponse * DescribeGameSessionQueuesRequest::response(QN
 }
 
 /*!
- * @internal
+ * \class QtAws::GameLift::DescribeGameSessionQueuesRequestPrivate
+ * \brief The DescribeGameSessionQueuesRequestPrivate class provides private implementation for DescribeGameSessionQueuesRequest.
+ * \internal
  *
- * @class  DescribeGameSessionQueuesRequestPrivate
- *
- * @brief  Private implementation for DescribeGameSessionQueuesRequest.
+ * \inmodule QtAwsGameLift
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeGameSessionQueuesRequestPrivate object.
- *
- * @param  action  GameLift action being performed.
- * @param  q       Pointer to this object's public DescribeGameSessionQueuesRequest instance.
+ * Constructs a DescribeGameSessionQueuesRequestPrivate object for GameLift \a action with,
+ * public implementation \a q.
  */
 DescribeGameSessionQueuesRequestPrivate::DescribeGameSessionQueuesRequestPrivate(
     const GameLiftRequest::Action action, DescribeGameSessionQueuesRequest * const q)
@@ -540,15 +529,10 @@ DescribeGameSessionQueuesRequestPrivate::DescribeGameSessionQueuesRequestPrivate
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeGameSessionQueuesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeGameSessionQueuesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeGameSessionQueuesRequest instance.
  */
 DescribeGameSessionQueuesRequestPrivate::DescribeGameSessionQueuesRequestPrivate(
     const DescribeGameSessionQueuesRequestPrivate &other, DescribeGameSessionQueuesRequest * const q)

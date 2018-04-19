@@ -27,10 +27,9 @@ namespace KMS {
 
 /*!
  * \class QtAws::KMS::ListKeysRequest
- *
  * \brief The ListKeysRequest class provides an interface for KMS ListKeys requests.
  *
- * \ingroup KMS
+ * \inmodule QtAwsKMS
  *
  *  <fullname>AWS Key Management Service</fullname>
  * 
@@ -136,9 +135,7 @@ namespace KMS {
  */
 
 /*!
- * @brief  Constructs a new ListKeysRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListKeysRequest::ListKeysRequest(const ListKeysRequest &other)
     : KMSRequest(new ListKeysRequestPrivate(*other.d_func(), this))
@@ -147,7 +144,7 @@ ListKeysRequest::ListKeysRequest(const ListKeysRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ListKeysRequest object.
+ * Constructs a ListKeysRequest object.
  */
 ListKeysRequest::ListKeysRequest()
     : KMSRequest(new ListKeysRequestPrivate(KMSRequest::ListKeysAction, this))
@@ -165,14 +162,9 @@ bool ListKeysRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListKeysResponse object.
+ * Returns a ListKeysResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListKeysResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  KMSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListKeysRequest::response(QNetworkReply * const reply) const
 {
@@ -180,20 +172,17 @@ QtAws::Core::AwsAbstractResponse * ListKeysRequest::response(QNetworkReply * con
 }
 
 /*!
- * @internal
+ * \class QtAws::KMS::ListKeysRequestPrivate
+ * \brief The ListKeysRequestPrivate class provides private implementation for ListKeysRequest.
+ * \internal
  *
- * @class  ListKeysRequestPrivate
- *
- * @brief  Private implementation for ListKeysRequest.
+ * \inmodule QtAwsKMS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListKeysRequestPrivate object.
- *
- * @param  action  KMS action being performed.
- * @param  q       Pointer to this object's public ListKeysRequest instance.
+ * Constructs a ListKeysRequestPrivate object for KMS \a action with,
+ * public implementation \a q.
  */
 ListKeysRequestPrivate::ListKeysRequestPrivate(
     const KMSRequest::Action action, ListKeysRequest * const q)
@@ -203,15 +192,10 @@ ListKeysRequestPrivate::ListKeysRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListKeysRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListKeysRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListKeysRequest instance.
  */
 ListKeysRequestPrivate::ListKeysRequestPrivate(
     const ListKeysRequestPrivate &other, ListKeysRequest * const q)

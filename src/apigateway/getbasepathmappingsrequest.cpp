@@ -27,10 +27,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::GetBasePathMappingsRequest
- *
  * \brief The GetBasePathMappingsRequest class provides an interface for APIGateway GetBasePathMappings requests.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -42,9 +41,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new GetBasePathMappingsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetBasePathMappingsRequest::GetBasePathMappingsRequest(const GetBasePathMappingsRequest &other)
     : APIGatewayRequest(new GetBasePathMappingsRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ GetBasePathMappingsRequest::GetBasePathMappingsRequest(const GetBasePathMappings
 }
 
 /*!
- * @brief  Constructs a new GetBasePathMappingsRequest object.
+ * Constructs a GetBasePathMappingsRequest object.
  */
 GetBasePathMappingsRequest::GetBasePathMappingsRequest()
     : APIGatewayRequest(new GetBasePathMappingsRequestPrivate(APIGatewayRequest::GetBasePathMappingsAction, this))
@@ -71,14 +68,9 @@ bool GetBasePathMappingsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetBasePathMappingsResponse object.
+ * Returns a GetBasePathMappingsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetBasePathMappingsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  APIGatewayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetBasePathMappingsRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * GetBasePathMappingsRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::APIGateway::GetBasePathMappingsRequestPrivate
+ * \brief The GetBasePathMappingsRequestPrivate class provides private implementation for GetBasePathMappingsRequest.
+ * \internal
  *
- * @class  GetBasePathMappingsRequestPrivate
- *
- * @brief  Private implementation for GetBasePathMappingsRequest.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetBasePathMappingsRequestPrivate object.
- *
- * @param  action  APIGateway action being performed.
- * @param  q       Pointer to this object's public GetBasePathMappingsRequest instance.
+ * Constructs a GetBasePathMappingsRequestPrivate object for APIGateway \a action with,
+ * public implementation \a q.
  */
 GetBasePathMappingsRequestPrivate::GetBasePathMappingsRequestPrivate(
     const APIGatewayRequest::Action action, GetBasePathMappingsRequest * const q)
@@ -109,15 +98,10 @@ GetBasePathMappingsRequestPrivate::GetBasePathMappingsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetBasePathMappingsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetBasePathMappingsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetBasePathMappingsRequest instance.
  */
 GetBasePathMappingsRequestPrivate::GetBasePathMappingsRequestPrivate(
     const GetBasePathMappingsRequestPrivate &other, GetBasePathMappingsRequest * const q)

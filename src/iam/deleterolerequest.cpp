@@ -27,10 +27,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::DeleteRoleRequest
- *
  * \brief The DeleteRoleRequest class provides an interface for IAM DeleteRole requests.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -102,9 +101,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new DeleteRoleRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteRoleRequest::DeleteRoleRequest(const DeleteRoleRequest &other)
     : IAMRequest(new DeleteRoleRequestPrivate(*other.d_func(), this))
@@ -113,7 +110,7 @@ DeleteRoleRequest::DeleteRoleRequest(const DeleteRoleRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DeleteRoleRequest object.
+ * Constructs a DeleteRoleRequest object.
  */
 DeleteRoleRequest::DeleteRoleRequest()
     : IAMRequest(new DeleteRoleRequestPrivate(IAMRequest::DeleteRoleAction, this))
@@ -131,14 +128,9 @@ bool DeleteRoleRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteRoleResponse object.
+ * Returns a DeleteRoleResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteRoleResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IAMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteRoleRequest::response(QNetworkReply * const reply) const
 {
@@ -146,20 +138,17 @@ QtAws::Core::AwsAbstractResponse * DeleteRoleRequest::response(QNetworkReply * c
 }
 
 /*!
- * @internal
+ * \class QtAws::IAM::DeleteRoleRequestPrivate
+ * \brief The DeleteRoleRequestPrivate class provides private implementation for DeleteRoleRequest.
+ * \internal
  *
- * @class  DeleteRoleRequestPrivate
- *
- * @brief  Private implementation for DeleteRoleRequest.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteRoleRequestPrivate object.
- *
- * @param  action  IAM action being performed.
- * @param  q       Pointer to this object's public DeleteRoleRequest instance.
+ * Constructs a DeleteRoleRequestPrivate object for IAM \a action with,
+ * public implementation \a q.
  */
 DeleteRoleRequestPrivate::DeleteRoleRequestPrivate(
     const IAMRequest::Action action, DeleteRoleRequest * const q)
@@ -169,15 +158,10 @@ DeleteRoleRequestPrivate::DeleteRoleRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteRoleRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteRoleRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteRoleRequest instance.
  */
 DeleteRoleRequestPrivate::DeleteRoleRequestPrivate(
     const DeleteRoleRequestPrivate &other, DeleteRoleRequest * const q)

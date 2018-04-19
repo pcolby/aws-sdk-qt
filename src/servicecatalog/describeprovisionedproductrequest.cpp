@@ -27,10 +27,9 @@ namespace ServiceCatalog {
 
 /*!
  * \class QtAws::ServiceCatalog::DescribeProvisionedProductRequest
- *
  * \brief The DescribeProvisionedProductRequest class provides an interface for ServiceCatalog DescribeProvisionedProduct requests.
  *
- * \ingroup ServiceCatalog
+ * \inmodule QtAwsServiceCatalog
  *
  *  <fullname>AWS Service Catalog</fullname>
  * 
@@ -43,9 +42,7 @@ namespace ServiceCatalog {
  */
 
 /*!
- * @brief  Constructs a new DescribeProvisionedProductRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeProvisionedProductRequest::DescribeProvisionedProductRequest(const DescribeProvisionedProductRequest &other)
     : ServiceCatalogRequest(new DescribeProvisionedProductRequestPrivate(*other.d_func(), this))
@@ -54,7 +51,7 @@ DescribeProvisionedProductRequest::DescribeProvisionedProductRequest(const Descr
 }
 
 /*!
- * @brief  Constructs a new DescribeProvisionedProductRequest object.
+ * Constructs a DescribeProvisionedProductRequest object.
  */
 DescribeProvisionedProductRequest::DescribeProvisionedProductRequest()
     : ServiceCatalogRequest(new DescribeProvisionedProductRequestPrivate(ServiceCatalogRequest::DescribeProvisionedProductAction, this))
@@ -72,14 +69,9 @@ bool DescribeProvisionedProductRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeProvisionedProductResponse object.
+ * Returns a DescribeProvisionedProductResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeProvisionedProductResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ServiceCatalogClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeProvisionedProductRequest::response(QNetworkReply * const reply) const
 {
@@ -87,20 +79,17 @@ QtAws::Core::AwsAbstractResponse * DescribeProvisionedProductRequest::response(Q
 }
 
 /*!
- * @internal
+ * \class QtAws::ServiceCatalog::DescribeProvisionedProductRequestPrivate
+ * \brief The DescribeProvisionedProductRequestPrivate class provides private implementation for DescribeProvisionedProductRequest.
+ * \internal
  *
- * @class  DescribeProvisionedProductRequestPrivate
- *
- * @brief  Private implementation for DescribeProvisionedProductRequest.
+ * \inmodule QtAwsServiceCatalog
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeProvisionedProductRequestPrivate object.
- *
- * @param  action  ServiceCatalog action being performed.
- * @param  q       Pointer to this object's public DescribeProvisionedProductRequest instance.
+ * Constructs a DescribeProvisionedProductRequestPrivate object for ServiceCatalog \a action with,
+ * public implementation \a q.
  */
 DescribeProvisionedProductRequestPrivate::DescribeProvisionedProductRequestPrivate(
     const ServiceCatalogRequest::Action action, DescribeProvisionedProductRequest * const q)
@@ -110,15 +99,10 @@ DescribeProvisionedProductRequestPrivate::DescribeProvisionedProductRequestPriva
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeProvisionedProductRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeProvisionedProductRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeProvisionedProductRequest instance.
  */
 DescribeProvisionedProductRequestPrivate::DescribeProvisionedProductRequestPrivate(
     const DescribeProvisionedProductRequestPrivate &other, DescribeProvisionedProductRequest * const q)

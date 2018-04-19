@@ -27,10 +27,9 @@ namespace KMS {
 
 /*!
  * \class QtAws::KMS::DescribeKeyRequest
- *
  * \brief The DescribeKeyRequest class provides an interface for KMS DescribeKey requests.
  *
- * \ingroup KMS
+ * \inmodule QtAwsKMS
  *
  *  <fullname>AWS Key Management Service</fullname>
  * 
@@ -136,9 +135,7 @@ namespace KMS {
  */
 
 /*!
- * @brief  Constructs a new DescribeKeyRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeKeyRequest::DescribeKeyRequest(const DescribeKeyRequest &other)
     : KMSRequest(new DescribeKeyRequestPrivate(*other.d_func(), this))
@@ -147,7 +144,7 @@ DescribeKeyRequest::DescribeKeyRequest(const DescribeKeyRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DescribeKeyRequest object.
+ * Constructs a DescribeKeyRequest object.
  */
 DescribeKeyRequest::DescribeKeyRequest()
     : KMSRequest(new DescribeKeyRequestPrivate(KMSRequest::DescribeKeyAction, this))
@@ -165,14 +162,9 @@ bool DescribeKeyRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeKeyResponse object.
+ * Returns a DescribeKeyResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeKeyResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  KMSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeKeyRequest::response(QNetworkReply * const reply) const
 {
@@ -180,20 +172,17 @@ QtAws::Core::AwsAbstractResponse * DescribeKeyRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::KMS::DescribeKeyRequestPrivate
+ * \brief The DescribeKeyRequestPrivate class provides private implementation for DescribeKeyRequest.
+ * \internal
  *
- * @class  DescribeKeyRequestPrivate
- *
- * @brief  Private implementation for DescribeKeyRequest.
+ * \inmodule QtAwsKMS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeKeyRequestPrivate object.
- *
- * @param  action  KMS action being performed.
- * @param  q       Pointer to this object's public DescribeKeyRequest instance.
+ * Constructs a DescribeKeyRequestPrivate object for KMS \a action with,
+ * public implementation \a q.
  */
 DescribeKeyRequestPrivate::DescribeKeyRequestPrivate(
     const KMSRequest::Action action, DescribeKeyRequest * const q)
@@ -203,15 +192,10 @@ DescribeKeyRequestPrivate::DescribeKeyRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeKeyRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeKeyRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeKeyRequest instance.
  */
 DescribeKeyRequestPrivate::DescribeKeyRequestPrivate(
     const DescribeKeyRequestPrivate &other, DescribeKeyRequest * const q)

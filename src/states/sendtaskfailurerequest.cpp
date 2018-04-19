@@ -27,10 +27,9 @@ namespace SFN {
 
 /*!
  * \class QtAws::SFN::SendTaskFailureRequest
- *
  * \brief The SendTaskFailureRequest class provides an interface for SFN SendTaskFailure requests.
  *
- * \ingroup SFN
+ * \inmodule QtAwsSFN
  *
  *  <fullname>AWS Step Functions</fullname>
  * 
@@ -56,9 +55,7 @@ namespace SFN {
  */
 
 /*!
- * @brief  Constructs a new SendTaskFailureRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 SendTaskFailureRequest::SendTaskFailureRequest(const SendTaskFailureRequest &other)
     : SFNRequest(new SendTaskFailureRequestPrivate(*other.d_func(), this))
@@ -67,7 +64,7 @@ SendTaskFailureRequest::SendTaskFailureRequest(const SendTaskFailureRequest &oth
 }
 
 /*!
- * @brief  Constructs a new SendTaskFailureRequest object.
+ * Constructs a SendTaskFailureRequest object.
  */
 SendTaskFailureRequest::SendTaskFailureRequest()
     : SFNRequest(new SendTaskFailureRequestPrivate(SFNRequest::SendTaskFailureAction, this))
@@ -85,14 +82,9 @@ bool SendTaskFailureRequest::isValid() const
 
 
 /*!
- * @brief  Construct an SendTaskFailureResponse object.
+ * Returns a SendTaskFailureResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An SendTaskFailureResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SFNClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * SendTaskFailureRequest::response(QNetworkReply * const reply) const
 {
@@ -100,20 +92,17 @@ QtAws::Core::AwsAbstractResponse * SendTaskFailureRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::SFN::SendTaskFailureRequestPrivate
+ * \brief The SendTaskFailureRequestPrivate class provides private implementation for SendTaskFailureRequest.
+ * \internal
  *
- * @class  SendTaskFailureRequestPrivate
- *
- * @brief  Private implementation for SendTaskFailureRequest.
+ * \inmodule QtAwsSFN
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new SendTaskFailureRequestPrivate object.
- *
- * @param  action  SFN action being performed.
- * @param  q       Pointer to this object's public SendTaskFailureRequest instance.
+ * Constructs a SendTaskFailureRequestPrivate object for SFN \a action with,
+ * public implementation \a q.
  */
 SendTaskFailureRequestPrivate::SendTaskFailureRequestPrivate(
     const SFNRequest::Action action, SendTaskFailureRequest * const q)
@@ -123,15 +112,10 @@ SendTaskFailureRequestPrivate::SendTaskFailureRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SendTaskFailureRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the SendTaskFailureRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public SendTaskFailureRequest instance.
  */
 SendTaskFailureRequestPrivate::SendTaskFailureRequestPrivate(
     const SendTaskFailureRequestPrivate &other, SendTaskFailureRequest * const q)

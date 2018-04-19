@@ -27,19 +27,16 @@ namespace KinesisAnalytics {
 
 /*!
  * \class QtAws::KinesisAnalytics::AddApplicationCloudWatchLoggingOptionRequest
- *
  * \brief The AddApplicationCloudWatchLoggingOptionRequest class provides an interface for KinesisAnalytics AddApplicationCloudWatchLoggingOption requests.
  *
- * \ingroup KinesisAnalytics
+ * \inmodule QtAwsKinesisAnalytics
  *
  *
  * \sa KinesisAnalyticsClient::addApplicationCloudWatchLoggingOption
  */
 
 /*!
- * @brief  Constructs a new AddApplicationCloudWatchLoggingOptionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AddApplicationCloudWatchLoggingOptionRequest::AddApplicationCloudWatchLoggingOptionRequest(const AddApplicationCloudWatchLoggingOptionRequest &other)
     : KinesisAnalyticsRequest(new AddApplicationCloudWatchLoggingOptionRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ AddApplicationCloudWatchLoggingOptionRequest::AddApplicationCloudWatchLoggingOpt
 }
 
 /*!
- * @brief  Constructs a new AddApplicationCloudWatchLoggingOptionRequest object.
+ * Constructs a AddApplicationCloudWatchLoggingOptionRequest object.
  */
 AddApplicationCloudWatchLoggingOptionRequest::AddApplicationCloudWatchLoggingOptionRequest()
     : KinesisAnalyticsRequest(new AddApplicationCloudWatchLoggingOptionRequestPrivate(KinesisAnalyticsRequest::AddApplicationCloudWatchLoggingOptionAction, this))
@@ -66,14 +63,9 @@ bool AddApplicationCloudWatchLoggingOptionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AddApplicationCloudWatchLoggingOptionResponse object.
+ * Returns a AddApplicationCloudWatchLoggingOptionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AddApplicationCloudWatchLoggingOptionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  KinesisAnalyticsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AddApplicationCloudWatchLoggingOptionRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * AddApplicationCloudWatchLoggingOptionRequest:
 }
 
 /*!
- * @internal
+ * \class QtAws::KinesisAnalytics::AddApplicationCloudWatchLoggingOptionRequestPrivate
+ * \brief The AddApplicationCloudWatchLoggingOptionRequestPrivate class provides private implementation for AddApplicationCloudWatchLoggingOptionRequest.
+ * \internal
  *
- * @class  AddApplicationCloudWatchLoggingOptionRequestPrivate
- *
- * @brief  Private implementation for AddApplicationCloudWatchLoggingOptionRequest.
+ * \inmodule QtAwsKinesisAnalytics
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AddApplicationCloudWatchLoggingOptionRequestPrivate object.
- *
- * @param  action  KinesisAnalytics action being performed.
- * @param  q       Pointer to this object's public AddApplicationCloudWatchLoggingOptionRequest instance.
+ * Constructs a AddApplicationCloudWatchLoggingOptionRequestPrivate object for KinesisAnalytics \a action with,
+ * public implementation \a q.
  */
 AddApplicationCloudWatchLoggingOptionRequestPrivate::AddApplicationCloudWatchLoggingOptionRequestPrivate(
     const KinesisAnalyticsRequest::Action action, AddApplicationCloudWatchLoggingOptionRequest * const q)
@@ -104,15 +93,10 @@ AddApplicationCloudWatchLoggingOptionRequestPrivate::AddApplicationCloudWatchLog
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AddApplicationCloudWatchLoggingOptionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AddApplicationCloudWatchLoggingOptionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AddApplicationCloudWatchLoggingOptionRequest instance.
  */
 AddApplicationCloudWatchLoggingOptionRequestPrivate::AddApplicationCloudWatchLoggingOptionRequestPrivate(
     const AddApplicationCloudWatchLoggingOptionRequestPrivate &other, AddApplicationCloudWatchLoggingOptionRequest * const q)

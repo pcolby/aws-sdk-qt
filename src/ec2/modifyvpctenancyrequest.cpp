@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::ModifyVpcTenancyRequest
- *
  * \brief The ModifyVpcTenancyRequest class provides an interface for EC2 ModifyVpcTenancy requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new ModifyVpcTenancyRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ModifyVpcTenancyRequest::ModifyVpcTenancyRequest(const ModifyVpcTenancyRequest &other)
     : EC2Request(new ModifyVpcTenancyRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ ModifyVpcTenancyRequest::ModifyVpcTenancyRequest(const ModifyVpcTenancyRequest &
 }
 
 /*!
- * @brief  Constructs a new ModifyVpcTenancyRequest object.
+ * Constructs a ModifyVpcTenancyRequest object.
  */
 ModifyVpcTenancyRequest::ModifyVpcTenancyRequest()
     : EC2Request(new ModifyVpcTenancyRequestPrivate(EC2Request::ModifyVpcTenancyAction, this))
@@ -70,14 +67,9 @@ bool ModifyVpcTenancyRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ModifyVpcTenancyResponse object.
+ * Returns a ModifyVpcTenancyResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ModifyVpcTenancyResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ModifyVpcTenancyRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * ModifyVpcTenancyRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::ModifyVpcTenancyRequestPrivate
+ * \brief The ModifyVpcTenancyRequestPrivate class provides private implementation for ModifyVpcTenancyRequest.
+ * \internal
  *
- * @class  ModifyVpcTenancyRequestPrivate
- *
- * @brief  Private implementation for ModifyVpcTenancyRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ModifyVpcTenancyRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public ModifyVpcTenancyRequest instance.
+ * Constructs a ModifyVpcTenancyRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 ModifyVpcTenancyRequestPrivate::ModifyVpcTenancyRequestPrivate(
     const EC2Request::Action action, ModifyVpcTenancyRequest * const q)
@@ -108,15 +97,10 @@ ModifyVpcTenancyRequestPrivate::ModifyVpcTenancyRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ModifyVpcTenancyRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ModifyVpcTenancyRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ModifyVpcTenancyRequest instance.
  */
 ModifyVpcTenancyRequestPrivate::ModifyVpcTenancyRequestPrivate(
     const ModifyVpcTenancyRequestPrivate &other, ModifyVpcTenancyRequest * const q)

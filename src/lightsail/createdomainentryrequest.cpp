@@ -27,10 +27,9 @@ namespace Lightsail {
 
 /*!
  * \class QtAws::Lightsail::CreateDomainEntryRequest
- *
  * \brief The CreateDomainEntryRequest class provides an interface for Lightsail CreateDomainEntry requests.
  *
- * \ingroup Lightsail
+ * \inmodule QtAwsLightsail
  *
  *  Amazon Lightsail is the easiest way to get started with AWS for developers who just need virtual private servers.
  *  Lightsail includes everything you need to launch your project quickly - a virtual machine, SSD-based storage, data
@@ -53,9 +52,7 @@ namespace Lightsail {
  */
 
 /*!
- * @brief  Constructs a new CreateDomainEntryRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateDomainEntryRequest::CreateDomainEntryRequest(const CreateDomainEntryRequest &other)
     : LightsailRequest(new CreateDomainEntryRequestPrivate(*other.d_func(), this))
@@ -64,7 +61,7 @@ CreateDomainEntryRequest::CreateDomainEntryRequest(const CreateDomainEntryReques
 }
 
 /*!
- * @brief  Constructs a new CreateDomainEntryRequest object.
+ * Constructs a CreateDomainEntryRequest object.
  */
 CreateDomainEntryRequest::CreateDomainEntryRequest()
     : LightsailRequest(new CreateDomainEntryRequestPrivate(LightsailRequest::CreateDomainEntryAction, this))
@@ -82,14 +79,9 @@ bool CreateDomainEntryRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateDomainEntryResponse object.
+ * Returns a CreateDomainEntryResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateDomainEntryResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  LightsailClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateDomainEntryRequest::response(QNetworkReply * const reply) const
 {
@@ -97,20 +89,17 @@ QtAws::Core::AwsAbstractResponse * CreateDomainEntryRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::Lightsail::CreateDomainEntryRequestPrivate
+ * \brief The CreateDomainEntryRequestPrivate class provides private implementation for CreateDomainEntryRequest.
+ * \internal
  *
- * @class  CreateDomainEntryRequestPrivate
- *
- * @brief  Private implementation for CreateDomainEntryRequest.
+ * \inmodule QtAwsLightsail
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateDomainEntryRequestPrivate object.
- *
- * @param  action  Lightsail action being performed.
- * @param  q       Pointer to this object's public CreateDomainEntryRequest instance.
+ * Constructs a CreateDomainEntryRequestPrivate object for Lightsail \a action with,
+ * public implementation \a q.
  */
 CreateDomainEntryRequestPrivate::CreateDomainEntryRequestPrivate(
     const LightsailRequest::Action action, CreateDomainEntryRequest * const q)
@@ -120,15 +109,10 @@ CreateDomainEntryRequestPrivate::CreateDomainEntryRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateDomainEntryRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateDomainEntryRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateDomainEntryRequest instance.
  */
 CreateDomainEntryRequestPrivate::CreateDomainEntryRequestPrivate(
     const CreateDomainEntryRequestPrivate &other, CreateDomainEntryRequest * const q)

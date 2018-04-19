@@ -27,19 +27,16 @@ namespace KinesisAnalytics {
 
 /*!
  * \class QtAws::KinesisAnalytics::AddApplicationInputRequest
- *
  * \brief The AddApplicationInputRequest class provides an interface for KinesisAnalytics AddApplicationInput requests.
  *
- * \ingroup KinesisAnalytics
+ * \inmodule QtAwsKinesisAnalytics
  *
  *
  * \sa KinesisAnalyticsClient::addApplicationInput
  */
 
 /*!
- * @brief  Constructs a new AddApplicationInputRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AddApplicationInputRequest::AddApplicationInputRequest(const AddApplicationInputRequest &other)
     : KinesisAnalyticsRequest(new AddApplicationInputRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ AddApplicationInputRequest::AddApplicationInputRequest(const AddApplicationInput
 }
 
 /*!
- * @brief  Constructs a new AddApplicationInputRequest object.
+ * Constructs a AddApplicationInputRequest object.
  */
 AddApplicationInputRequest::AddApplicationInputRequest()
     : KinesisAnalyticsRequest(new AddApplicationInputRequestPrivate(KinesisAnalyticsRequest::AddApplicationInputAction, this))
@@ -66,14 +63,9 @@ bool AddApplicationInputRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AddApplicationInputResponse object.
+ * Returns a AddApplicationInputResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AddApplicationInputResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  KinesisAnalyticsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AddApplicationInputRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * AddApplicationInputRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::KinesisAnalytics::AddApplicationInputRequestPrivate
+ * \brief The AddApplicationInputRequestPrivate class provides private implementation for AddApplicationInputRequest.
+ * \internal
  *
- * @class  AddApplicationInputRequestPrivate
- *
- * @brief  Private implementation for AddApplicationInputRequest.
+ * \inmodule QtAwsKinesisAnalytics
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AddApplicationInputRequestPrivate object.
- *
- * @param  action  KinesisAnalytics action being performed.
- * @param  q       Pointer to this object's public AddApplicationInputRequest instance.
+ * Constructs a AddApplicationInputRequestPrivate object for KinesisAnalytics \a action with,
+ * public implementation \a q.
  */
 AddApplicationInputRequestPrivate::AddApplicationInputRequestPrivate(
     const KinesisAnalyticsRequest::Action action, AddApplicationInputRequest * const q)
@@ -104,15 +93,10 @@ AddApplicationInputRequestPrivate::AddApplicationInputRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AddApplicationInputRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AddApplicationInputRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AddApplicationInputRequest instance.
  */
 AddApplicationInputRequestPrivate::AddApplicationInputRequestPrivate(
     const AddApplicationInputRequestPrivate &other, AddApplicationInputRequest * const q)

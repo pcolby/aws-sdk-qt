@@ -27,10 +27,9 @@ namespace EMR {
 
 /*!
  * \class QtAws::EMR::DescribeSecurityConfigurationRequest
- *
  * \brief The DescribeSecurityConfigurationRequest class provides an interface for EMR DescribeSecurityConfiguration requests.
  *
- * \ingroup EMR
+ * \inmodule QtAwsEMR
  *
  *  Amazon EMR is a web service that makes it easy to process large amounts of data efficiently. Amazon EMR uses Hadoop
  *  processing combined with several AWS products to do tasks such as web indexing, data mining, log file analysis, machine
@@ -40,9 +39,7 @@ namespace EMR {
  */
 
 /*!
- * @brief  Constructs a new DescribeSecurityConfigurationRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeSecurityConfigurationRequest::DescribeSecurityConfigurationRequest(const DescribeSecurityConfigurationRequest &other)
     : EMRRequest(new DescribeSecurityConfigurationRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ DescribeSecurityConfigurationRequest::DescribeSecurityConfigurationRequest(const
 }
 
 /*!
- * @brief  Constructs a new DescribeSecurityConfigurationRequest object.
+ * Constructs a DescribeSecurityConfigurationRequest object.
  */
 DescribeSecurityConfigurationRequest::DescribeSecurityConfigurationRequest()
     : EMRRequest(new DescribeSecurityConfigurationRequestPrivate(EMRRequest::DescribeSecurityConfigurationAction, this))
@@ -69,14 +66,9 @@ bool DescribeSecurityConfigurationRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeSecurityConfigurationResponse object.
+ * Returns a DescribeSecurityConfigurationResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeSecurityConfigurationResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EMRClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeSecurityConfigurationRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * DescribeSecurityConfigurationRequest::respons
 }
 
 /*!
- * @internal
+ * \class QtAws::EMR::DescribeSecurityConfigurationRequestPrivate
+ * \brief The DescribeSecurityConfigurationRequestPrivate class provides private implementation for DescribeSecurityConfigurationRequest.
+ * \internal
  *
- * @class  DescribeSecurityConfigurationRequestPrivate
- *
- * @brief  Private implementation for DescribeSecurityConfigurationRequest.
+ * \inmodule QtAwsEMR
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeSecurityConfigurationRequestPrivate object.
- *
- * @param  action  EMR action being performed.
- * @param  q       Pointer to this object's public DescribeSecurityConfigurationRequest instance.
+ * Constructs a DescribeSecurityConfigurationRequestPrivate object for EMR \a action with,
+ * public implementation \a q.
  */
 DescribeSecurityConfigurationRequestPrivate::DescribeSecurityConfigurationRequestPrivate(
     const EMRRequest::Action action, DescribeSecurityConfigurationRequest * const q)
@@ -107,15 +96,10 @@ DescribeSecurityConfigurationRequestPrivate::DescribeSecurityConfigurationReques
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeSecurityConfigurationRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeSecurityConfigurationRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeSecurityConfigurationRequest instance.
  */
 DescribeSecurityConfigurationRequestPrivate::DescribeSecurityConfigurationRequestPrivate(
     const DescribeSecurityConfigurationRequestPrivate &other, DescribeSecurityConfigurationRequest * const q)

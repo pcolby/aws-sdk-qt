@@ -27,10 +27,9 @@ namespace ServiceCatalog {
 
 /*!
  * \class QtAws::ServiceCatalog::UpdateTagOptionRequest
- *
  * \brief The UpdateTagOptionRequest class provides an interface for ServiceCatalog UpdateTagOption requests.
  *
- * \ingroup ServiceCatalog
+ * \inmodule QtAwsServiceCatalog
  *
  *  <fullname>AWS Service Catalog</fullname>
  * 
@@ -43,9 +42,7 @@ namespace ServiceCatalog {
  */
 
 /*!
- * @brief  Constructs a new UpdateTagOptionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateTagOptionRequest::UpdateTagOptionRequest(const UpdateTagOptionRequest &other)
     : ServiceCatalogRequest(new UpdateTagOptionRequestPrivate(*other.d_func(), this))
@@ -54,7 +51,7 @@ UpdateTagOptionRequest::UpdateTagOptionRequest(const UpdateTagOptionRequest &oth
 }
 
 /*!
- * @brief  Constructs a new UpdateTagOptionRequest object.
+ * Constructs a UpdateTagOptionRequest object.
  */
 UpdateTagOptionRequest::UpdateTagOptionRequest()
     : ServiceCatalogRequest(new UpdateTagOptionRequestPrivate(ServiceCatalogRequest::UpdateTagOptionAction, this))
@@ -72,14 +69,9 @@ bool UpdateTagOptionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateTagOptionResponse object.
+ * Returns a UpdateTagOptionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateTagOptionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ServiceCatalogClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateTagOptionRequest::response(QNetworkReply * const reply) const
 {
@@ -87,20 +79,17 @@ QtAws::Core::AwsAbstractResponse * UpdateTagOptionRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::ServiceCatalog::UpdateTagOptionRequestPrivate
+ * \brief The UpdateTagOptionRequestPrivate class provides private implementation for UpdateTagOptionRequest.
+ * \internal
  *
- * @class  UpdateTagOptionRequestPrivate
- *
- * @brief  Private implementation for UpdateTagOptionRequest.
+ * \inmodule QtAwsServiceCatalog
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateTagOptionRequestPrivate object.
- *
- * @param  action  ServiceCatalog action being performed.
- * @param  q       Pointer to this object's public UpdateTagOptionRequest instance.
+ * Constructs a UpdateTagOptionRequestPrivate object for ServiceCatalog \a action with,
+ * public implementation \a q.
  */
 UpdateTagOptionRequestPrivate::UpdateTagOptionRequestPrivate(
     const ServiceCatalogRequest::Action action, UpdateTagOptionRequest * const q)
@@ -110,15 +99,10 @@ UpdateTagOptionRequestPrivate::UpdateTagOptionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateTagOptionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateTagOptionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateTagOptionRequest instance.
  */
 UpdateTagOptionRequestPrivate::UpdateTagOptionRequestPrivate(
     const UpdateTagOptionRequestPrivate &other, UpdateTagOptionRequest * const q)

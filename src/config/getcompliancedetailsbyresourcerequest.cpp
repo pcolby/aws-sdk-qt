@@ -27,10 +27,9 @@ namespace ConfigService {
 
 /*!
  * \class QtAws::ConfigService::GetComplianceDetailsByResourceRequest
- *
  * \brief The GetComplianceDetailsByResourceRequest class provides an interface for ConfigService GetComplianceDetailsByResource requests.
  *
- * \ingroup ConfigService
+ * \inmodule QtAwsConfigService
  *
  *  <fullname>AWS Config</fullname>
  * 
@@ -60,9 +59,7 @@ namespace ConfigService {
  */
 
 /*!
- * @brief  Constructs a new GetComplianceDetailsByResourceRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetComplianceDetailsByResourceRequest::GetComplianceDetailsByResourceRequest(const GetComplianceDetailsByResourceRequest &other)
     : ConfigServiceRequest(new GetComplianceDetailsByResourceRequestPrivate(*other.d_func(), this))
@@ -71,7 +68,7 @@ GetComplianceDetailsByResourceRequest::GetComplianceDetailsByResourceRequest(con
 }
 
 /*!
- * @brief  Constructs a new GetComplianceDetailsByResourceRequest object.
+ * Constructs a GetComplianceDetailsByResourceRequest object.
  */
 GetComplianceDetailsByResourceRequest::GetComplianceDetailsByResourceRequest()
     : ConfigServiceRequest(new GetComplianceDetailsByResourceRequestPrivate(ConfigServiceRequest::GetComplianceDetailsByResourceAction, this))
@@ -89,14 +86,9 @@ bool GetComplianceDetailsByResourceRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetComplianceDetailsByResourceResponse object.
+ * Returns a GetComplianceDetailsByResourceResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetComplianceDetailsByResourceResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ConfigServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetComplianceDetailsByResourceRequest::response(QNetworkReply * const reply) const
 {
@@ -104,20 +96,17 @@ QtAws::Core::AwsAbstractResponse * GetComplianceDetailsByResourceRequest::respon
 }
 
 /*!
- * @internal
+ * \class QtAws::ConfigService::GetComplianceDetailsByResourceRequestPrivate
+ * \brief The GetComplianceDetailsByResourceRequestPrivate class provides private implementation for GetComplianceDetailsByResourceRequest.
+ * \internal
  *
- * @class  GetComplianceDetailsByResourceRequestPrivate
- *
- * @brief  Private implementation for GetComplianceDetailsByResourceRequest.
+ * \inmodule QtAwsConfigService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetComplianceDetailsByResourceRequestPrivate object.
- *
- * @param  action  ConfigService action being performed.
- * @param  q       Pointer to this object's public GetComplianceDetailsByResourceRequest instance.
+ * Constructs a GetComplianceDetailsByResourceRequestPrivate object for ConfigService \a action with,
+ * public implementation \a q.
  */
 GetComplianceDetailsByResourceRequestPrivate::GetComplianceDetailsByResourceRequestPrivate(
     const ConfigServiceRequest::Action action, GetComplianceDetailsByResourceRequest * const q)
@@ -127,15 +116,10 @@ GetComplianceDetailsByResourceRequestPrivate::GetComplianceDetailsByResourceRequ
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetComplianceDetailsByResourceRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetComplianceDetailsByResourceRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetComplianceDetailsByResourceRequest instance.
  */
 GetComplianceDetailsByResourceRequestPrivate::GetComplianceDetailsByResourceRequestPrivate(
     const GetComplianceDetailsByResourceRequestPrivate &other, GetComplianceDetailsByResourceRequest * const q)

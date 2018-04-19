@@ -27,10 +27,9 @@ namespace ECR {
 
 /*!
  * \class QtAws::ECR::BatchDeleteImageRequest
- *
  * \brief The BatchDeleteImageRequest class provides an interface for ECR BatchDeleteImage requests.
  *
- * \ingroup ECR
+ * \inmodule QtAwsECR
  *
  *  Amazon Elastic Container Registry (Amazon ECR) is a managed Docker registry service. Customers can use the familiar
  *  Docker CLI to push, pull, and manage images. Amazon ECR provides a secure, scalable, and reliable registry. Amazon ECR
@@ -41,9 +40,7 @@ namespace ECR {
  */
 
 /*!
- * @brief  Constructs a new BatchDeleteImageRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 BatchDeleteImageRequest::BatchDeleteImageRequest(const BatchDeleteImageRequest &other)
     : ECRRequest(new BatchDeleteImageRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ BatchDeleteImageRequest::BatchDeleteImageRequest(const BatchDeleteImageRequest &
 }
 
 /*!
- * @brief  Constructs a new BatchDeleteImageRequest object.
+ * Constructs a BatchDeleteImageRequest object.
  */
 BatchDeleteImageRequest::BatchDeleteImageRequest()
     : ECRRequest(new BatchDeleteImageRequestPrivate(ECRRequest::BatchDeleteImageAction, this))
@@ -70,14 +67,9 @@ bool BatchDeleteImageRequest::isValid() const
 
 
 /*!
- * @brief  Construct an BatchDeleteImageResponse object.
+ * Returns a BatchDeleteImageResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An BatchDeleteImageResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ECRClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * BatchDeleteImageRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * BatchDeleteImageRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::ECR::BatchDeleteImageRequestPrivate
+ * \brief The BatchDeleteImageRequestPrivate class provides private implementation for BatchDeleteImageRequest.
+ * \internal
  *
- * @class  BatchDeleteImageRequestPrivate
- *
- * @brief  Private implementation for BatchDeleteImageRequest.
+ * \inmodule QtAwsECR
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new BatchDeleteImageRequestPrivate object.
- *
- * @param  action  ECR action being performed.
- * @param  q       Pointer to this object's public BatchDeleteImageRequest instance.
+ * Constructs a BatchDeleteImageRequestPrivate object for ECR \a action with,
+ * public implementation \a q.
  */
 BatchDeleteImageRequestPrivate::BatchDeleteImageRequestPrivate(
     const ECRRequest::Action action, BatchDeleteImageRequest * const q)
@@ -108,15 +97,10 @@ BatchDeleteImageRequestPrivate::BatchDeleteImageRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new BatchDeleteImageRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the BatchDeleteImageRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public BatchDeleteImageRequest instance.
  */
 BatchDeleteImageRequestPrivate::BatchDeleteImageRequestPrivate(
     const BatchDeleteImageRequestPrivate &other, BatchDeleteImageRequest * const q)

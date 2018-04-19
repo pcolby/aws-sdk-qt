@@ -27,10 +27,9 @@ namespace Inspector {
 
 /*!
  * \class QtAws::Inspector::CreateResourceGroupRequest
- *
  * \brief The CreateResourceGroupRequest class provides an interface for Inspector CreateResourceGroup requests.
  *
- * \ingroup Inspector
+ * \inmodule QtAwsInspector
  *
  *  <fullname>Amazon Inspector</fullname>
  * 
@@ -42,9 +41,7 @@ namespace Inspector {
  */
 
 /*!
- * @brief  Constructs a new CreateResourceGroupRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateResourceGroupRequest::CreateResourceGroupRequest(const CreateResourceGroupRequest &other)
     : InspectorRequest(new CreateResourceGroupRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ CreateResourceGroupRequest::CreateResourceGroupRequest(const CreateResourceGroup
 }
 
 /*!
- * @brief  Constructs a new CreateResourceGroupRequest object.
+ * Constructs a CreateResourceGroupRequest object.
  */
 CreateResourceGroupRequest::CreateResourceGroupRequest()
     : InspectorRequest(new CreateResourceGroupRequestPrivate(InspectorRequest::CreateResourceGroupAction, this))
@@ -71,14 +68,9 @@ bool CreateResourceGroupRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateResourceGroupResponse object.
+ * Returns a CreateResourceGroupResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateResourceGroupResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  InspectorClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateResourceGroupRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * CreateResourceGroupRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::Inspector::CreateResourceGroupRequestPrivate
+ * \brief The CreateResourceGroupRequestPrivate class provides private implementation for CreateResourceGroupRequest.
+ * \internal
  *
- * @class  CreateResourceGroupRequestPrivate
- *
- * @brief  Private implementation for CreateResourceGroupRequest.
+ * \inmodule QtAwsInspector
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateResourceGroupRequestPrivate object.
- *
- * @param  action  Inspector action being performed.
- * @param  q       Pointer to this object's public CreateResourceGroupRequest instance.
+ * Constructs a CreateResourceGroupRequestPrivate object for Inspector \a action with,
+ * public implementation \a q.
  */
 CreateResourceGroupRequestPrivate::CreateResourceGroupRequestPrivate(
     const InspectorRequest::Action action, CreateResourceGroupRequest * const q)
@@ -109,15 +98,10 @@ CreateResourceGroupRequestPrivate::CreateResourceGroupRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateResourceGroupRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateResourceGroupRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateResourceGroupRequest instance.
  */
 CreateResourceGroupRequestPrivate::CreateResourceGroupRequestPrivate(
     const CreateResourceGroupRequestPrivate &other, CreateResourceGroupRequest * const q)

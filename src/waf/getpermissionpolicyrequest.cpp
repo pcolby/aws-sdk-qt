@@ -27,10 +27,9 @@ namespace WAF {
 
 /*!
  * \class QtAws::WAF::GetPermissionPolicyRequest
- *
  * \brief The GetPermissionPolicyRequest class provides an interface for WAF GetPermissionPolicy requests.
  *
- * \ingroup WAF
+ * \inmodule QtAwsWAF
  *
  *  This is the <i>AWS WAF API Reference</i> for using AWS WAF with Amazon CloudFront. The AWS WAF actions and data types
  *  listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data
@@ -42,9 +41,7 @@ namespace WAF {
  */
 
 /*!
- * @brief  Constructs a new GetPermissionPolicyRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetPermissionPolicyRequest::GetPermissionPolicyRequest(const GetPermissionPolicyRequest &other)
     : WAFRequest(new GetPermissionPolicyRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ GetPermissionPolicyRequest::GetPermissionPolicyRequest(const GetPermissionPolicy
 }
 
 /*!
- * @brief  Constructs a new GetPermissionPolicyRequest object.
+ * Constructs a GetPermissionPolicyRequest object.
  */
 GetPermissionPolicyRequest::GetPermissionPolicyRequest()
     : WAFRequest(new GetPermissionPolicyRequestPrivate(WAFRequest::GetPermissionPolicyAction, this))
@@ -71,14 +68,9 @@ bool GetPermissionPolicyRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetPermissionPolicyResponse object.
+ * Returns a GetPermissionPolicyResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetPermissionPolicyResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WAFClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetPermissionPolicyRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * GetPermissionPolicyRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::WAF::GetPermissionPolicyRequestPrivate
+ * \brief The GetPermissionPolicyRequestPrivate class provides private implementation for GetPermissionPolicyRequest.
+ * \internal
  *
- * @class  GetPermissionPolicyRequestPrivate
- *
- * @brief  Private implementation for GetPermissionPolicyRequest.
+ * \inmodule QtAwsWAF
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetPermissionPolicyRequestPrivate object.
- *
- * @param  action  WAF action being performed.
- * @param  q       Pointer to this object's public GetPermissionPolicyRequest instance.
+ * Constructs a GetPermissionPolicyRequestPrivate object for WAF \a action with,
+ * public implementation \a q.
  */
 GetPermissionPolicyRequestPrivate::GetPermissionPolicyRequestPrivate(
     const WAFRequest::Action action, GetPermissionPolicyRequest * const q)
@@ -109,15 +98,10 @@ GetPermissionPolicyRequestPrivate::GetPermissionPolicyRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetPermissionPolicyRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetPermissionPolicyRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetPermissionPolicyRequest instance.
  */
 GetPermissionPolicyRequestPrivate::GetPermissionPolicyRequestPrivate(
     const GetPermissionPolicyRequestPrivate &other, GetPermissionPolicyRequest * const q)

@@ -27,10 +27,9 @@ namespace Batch {
 
 /*!
  * \class QtAws::Batch::DeleteComputeEnvironmentRequest
- *
  * \brief The DeleteComputeEnvironmentRequest class provides an interface for Batch DeleteComputeEnvironment requests.
  *
- * \ingroup Batch
+ * \inmodule QtAwsBatch
  *
  *  AWS Batch enables you to run batch computing workloads on the AWS Cloud. Batch computing is a common way for developers,
  *  scientists, and engineers to access large amounts of compute resources, and AWS Batch removes the undifferentiated heavy
@@ -51,9 +50,7 @@ namespace Batch {
  */
 
 /*!
- * @brief  Constructs a new DeleteComputeEnvironmentRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteComputeEnvironmentRequest::DeleteComputeEnvironmentRequest(const DeleteComputeEnvironmentRequest &other)
     : BatchRequest(new DeleteComputeEnvironmentRequestPrivate(*other.d_func(), this))
@@ -62,7 +59,7 @@ DeleteComputeEnvironmentRequest::DeleteComputeEnvironmentRequest(const DeleteCom
 }
 
 /*!
- * @brief  Constructs a new DeleteComputeEnvironmentRequest object.
+ * Constructs a DeleteComputeEnvironmentRequest object.
  */
 DeleteComputeEnvironmentRequest::DeleteComputeEnvironmentRequest()
     : BatchRequest(new DeleteComputeEnvironmentRequestPrivate(BatchRequest::DeleteComputeEnvironmentAction, this))
@@ -80,14 +77,9 @@ bool DeleteComputeEnvironmentRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteComputeEnvironmentResponse object.
+ * Returns a DeleteComputeEnvironmentResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteComputeEnvironmentResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  BatchClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteComputeEnvironmentRequest::response(QNetworkReply * const reply) const
 {
@@ -95,20 +87,17 @@ QtAws::Core::AwsAbstractResponse * DeleteComputeEnvironmentRequest::response(QNe
 }
 
 /*!
- * @internal
+ * \class QtAws::Batch::DeleteComputeEnvironmentRequestPrivate
+ * \brief The DeleteComputeEnvironmentRequestPrivate class provides private implementation for DeleteComputeEnvironmentRequest.
+ * \internal
  *
- * @class  DeleteComputeEnvironmentRequestPrivate
- *
- * @brief  Private implementation for DeleteComputeEnvironmentRequest.
+ * \inmodule QtAwsBatch
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteComputeEnvironmentRequestPrivate object.
- *
- * @param  action  Batch action being performed.
- * @param  q       Pointer to this object's public DeleteComputeEnvironmentRequest instance.
+ * Constructs a DeleteComputeEnvironmentRequestPrivate object for Batch \a action with,
+ * public implementation \a q.
  */
 DeleteComputeEnvironmentRequestPrivate::DeleteComputeEnvironmentRequestPrivate(
     const BatchRequest::Action action, DeleteComputeEnvironmentRequest * const q)
@@ -118,15 +107,10 @@ DeleteComputeEnvironmentRequestPrivate::DeleteComputeEnvironmentRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteComputeEnvironmentRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteComputeEnvironmentRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteComputeEnvironmentRequest instance.
  */
 DeleteComputeEnvironmentRequestPrivate::DeleteComputeEnvironmentRequestPrivate(
     const DeleteComputeEnvironmentRequestPrivate &other, DeleteComputeEnvironmentRequest * const q)

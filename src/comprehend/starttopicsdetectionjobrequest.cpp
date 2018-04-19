@@ -27,10 +27,9 @@ namespace Comprehend {
 
 /*!
  * \class QtAws::Comprehend::StartTopicsDetectionJobRequest
- *
  * \brief The StartTopicsDetectionJobRequest class provides an interface for Comprehend StartTopicsDetectionJob requests.
  *
- * \ingroup Comprehend
+ * \inmodule QtAwsComprehend
  *
  *  Amazon Comprehend is an AWS service for gaining insight into the content of documents. Use these actions to determine
  *  the topics contained in your documents, the topics they discuss, the predominant sentiment expressed in them, the
@@ -40,9 +39,7 @@ namespace Comprehend {
  */
 
 /*!
- * @brief  Constructs a new StartTopicsDetectionJobRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 StartTopicsDetectionJobRequest::StartTopicsDetectionJobRequest(const StartTopicsDetectionJobRequest &other)
     : ComprehendRequest(new StartTopicsDetectionJobRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ StartTopicsDetectionJobRequest::StartTopicsDetectionJobRequest(const StartTopics
 }
 
 /*!
- * @brief  Constructs a new StartTopicsDetectionJobRequest object.
+ * Constructs a StartTopicsDetectionJobRequest object.
  */
 StartTopicsDetectionJobRequest::StartTopicsDetectionJobRequest()
     : ComprehendRequest(new StartTopicsDetectionJobRequestPrivate(ComprehendRequest::StartTopicsDetectionJobAction, this))
@@ -69,14 +66,9 @@ bool StartTopicsDetectionJobRequest::isValid() const
 
 
 /*!
- * @brief  Construct an StartTopicsDetectionJobResponse object.
+ * Returns a StartTopicsDetectionJobResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An StartTopicsDetectionJobResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ComprehendClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * StartTopicsDetectionJobRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * StartTopicsDetectionJobRequest::response(QNet
 }
 
 /*!
- * @internal
+ * \class QtAws::Comprehend::StartTopicsDetectionJobRequestPrivate
+ * \brief The StartTopicsDetectionJobRequestPrivate class provides private implementation for StartTopicsDetectionJobRequest.
+ * \internal
  *
- * @class  StartTopicsDetectionJobRequestPrivate
- *
- * @brief  Private implementation for StartTopicsDetectionJobRequest.
+ * \inmodule QtAwsComprehend
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new StartTopicsDetectionJobRequestPrivate object.
- *
- * @param  action  Comprehend action being performed.
- * @param  q       Pointer to this object's public StartTopicsDetectionJobRequest instance.
+ * Constructs a StartTopicsDetectionJobRequestPrivate object for Comprehend \a action with,
+ * public implementation \a q.
  */
 StartTopicsDetectionJobRequestPrivate::StartTopicsDetectionJobRequestPrivate(
     const ComprehendRequest::Action action, StartTopicsDetectionJobRequest * const q)
@@ -107,15 +96,10 @@ StartTopicsDetectionJobRequestPrivate::StartTopicsDetectionJobRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StartTopicsDetectionJobRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the StartTopicsDetectionJobRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public StartTopicsDetectionJobRequest instance.
  */
 StartTopicsDetectionJobRequestPrivate::StartTopicsDetectionJobRequestPrivate(
     const StartTopicsDetectionJobRequestPrivate &other, StartTopicsDetectionJobRequest * const q)

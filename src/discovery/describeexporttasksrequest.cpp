@@ -27,10 +27,9 @@ namespace ApplicationDiscoveryService {
 
 /*!
  * \class QtAws::ApplicationDiscoveryService::DescribeExportTasksRequest
- *
  * \brief The DescribeExportTasksRequest class provides an interface for ApplicationDiscoveryService DescribeExportTasks requests.
  *
- * \ingroup ApplicationDiscoveryService
+ * \inmodule QtAwsApplicationDiscoveryService
  *
  *  <fullname>AWS Application Discovery Service</fullname>
  * 
@@ -101,9 +100,7 @@ namespace ApplicationDiscoveryService {
  */
 
 /*!
- * @brief  Constructs a new DescribeExportTasksRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeExportTasksRequest::DescribeExportTasksRequest(const DescribeExportTasksRequest &other)
     : ApplicationDiscoveryServiceRequest(new DescribeExportTasksRequestPrivate(*other.d_func(), this))
@@ -112,7 +109,7 @@ DescribeExportTasksRequest::DescribeExportTasksRequest(const DescribeExportTasks
 }
 
 /*!
- * @brief  Constructs a new DescribeExportTasksRequest object.
+ * Constructs a DescribeExportTasksRequest object.
  */
 DescribeExportTasksRequest::DescribeExportTasksRequest()
     : ApplicationDiscoveryServiceRequest(new DescribeExportTasksRequestPrivate(ApplicationDiscoveryServiceRequest::DescribeExportTasksAction, this))
@@ -130,14 +127,9 @@ bool DescribeExportTasksRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeExportTasksResponse object.
+ * Returns a DescribeExportTasksResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeExportTasksResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ApplicationDiscoveryServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeExportTasksRequest::response(QNetworkReply * const reply) const
 {
@@ -145,20 +137,17 @@ QtAws::Core::AwsAbstractResponse * DescribeExportTasksRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::ApplicationDiscoveryService::DescribeExportTasksRequestPrivate
+ * \brief The DescribeExportTasksRequestPrivate class provides private implementation for DescribeExportTasksRequest.
+ * \internal
  *
- * @class  DescribeExportTasksRequestPrivate
- *
- * @brief  Private implementation for DescribeExportTasksRequest.
+ * \inmodule QtAwsApplicationDiscoveryService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeExportTasksRequestPrivate object.
- *
- * @param  action  ApplicationDiscoveryService action being performed.
- * @param  q       Pointer to this object's public DescribeExportTasksRequest instance.
+ * Constructs a DescribeExportTasksRequestPrivate object for ApplicationDiscoveryService \a action with,
+ * public implementation \a q.
  */
 DescribeExportTasksRequestPrivate::DescribeExportTasksRequestPrivate(
     const ApplicationDiscoveryServiceRequest::Action action, DescribeExportTasksRequest * const q)
@@ -168,15 +157,10 @@ DescribeExportTasksRequestPrivate::DescribeExportTasksRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeExportTasksRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeExportTasksRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeExportTasksRequest instance.
  */
 DescribeExportTasksRequestPrivate::DescribeExportTasksRequestPrivate(
     const DescribeExportTasksRequestPrivate &other, DescribeExportTasksRequest * const q)

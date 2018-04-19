@@ -27,10 +27,9 @@ namespace GameLift {
 
 /*!
  * \class QtAws::GameLift::AcceptMatchRequest
- *
  * \brief The AcceptMatchRequest class provides an interface for GameLift AcceptMatch requests.
  *
- * \ingroup GameLift
+ * \inmodule QtAwsGameLift
  *
  *  <fullname>Amazon GameLift Service</fullname>
  * 
@@ -473,9 +472,7 @@ namespace GameLift {
  */
 
 /*!
- * @brief  Constructs a new AcceptMatchRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AcceptMatchRequest::AcceptMatchRequest(const AcceptMatchRequest &other)
     : GameLiftRequest(new AcceptMatchRequestPrivate(*other.d_func(), this))
@@ -484,7 +481,7 @@ AcceptMatchRequest::AcceptMatchRequest(const AcceptMatchRequest &other)
 }
 
 /*!
- * @brief  Constructs a new AcceptMatchRequest object.
+ * Constructs a AcceptMatchRequest object.
  */
 AcceptMatchRequest::AcceptMatchRequest()
     : GameLiftRequest(new AcceptMatchRequestPrivate(GameLiftRequest::AcceptMatchAction, this))
@@ -502,14 +499,9 @@ bool AcceptMatchRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AcceptMatchResponse object.
+ * Returns a AcceptMatchResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AcceptMatchResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GameLiftClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AcceptMatchRequest::response(QNetworkReply * const reply) const
 {
@@ -517,20 +509,17 @@ QtAws::Core::AwsAbstractResponse * AcceptMatchRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::GameLift::AcceptMatchRequestPrivate
+ * \brief The AcceptMatchRequestPrivate class provides private implementation for AcceptMatchRequest.
+ * \internal
  *
- * @class  AcceptMatchRequestPrivate
- *
- * @brief  Private implementation for AcceptMatchRequest.
+ * \inmodule QtAwsGameLift
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AcceptMatchRequestPrivate object.
- *
- * @param  action  GameLift action being performed.
- * @param  q       Pointer to this object's public AcceptMatchRequest instance.
+ * Constructs a AcceptMatchRequestPrivate object for GameLift \a action with,
+ * public implementation \a q.
  */
 AcceptMatchRequestPrivate::AcceptMatchRequestPrivate(
     const GameLiftRequest::Action action, AcceptMatchRequest * const q)
@@ -540,15 +529,10 @@ AcceptMatchRequestPrivate::AcceptMatchRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AcceptMatchRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AcceptMatchRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AcceptMatchRequest instance.
  */
 AcceptMatchRequestPrivate::AcceptMatchRequestPrivate(
     const AcceptMatchRequestPrivate &other, AcceptMatchRequest * const q)

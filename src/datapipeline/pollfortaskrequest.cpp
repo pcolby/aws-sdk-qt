@@ -27,10 +27,9 @@ namespace DataPipeline {
 
 /*!
  * \class QtAws::DataPipeline::PollForTaskRequest
- *
  * \brief The PollForTaskRequest class provides an interface for DataPipeline PollForTask requests.
  *
- * \ingroup DataPipeline
+ * \inmodule QtAwsDataPipeline
  *
  *  AWS Data Pipeline configures and manages a data-driven workflow called a pipeline. AWS Data Pipeline handles the details
  *  of scheduling and ensuring that data dependencies are met so that your application can focus on processing the
@@ -55,9 +54,7 @@ namespace DataPipeline {
  */
 
 /*!
- * @brief  Constructs a new PollForTaskRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 PollForTaskRequest::PollForTaskRequest(const PollForTaskRequest &other)
     : DataPipelineRequest(new PollForTaskRequestPrivate(*other.d_func(), this))
@@ -66,7 +63,7 @@ PollForTaskRequest::PollForTaskRequest(const PollForTaskRequest &other)
 }
 
 /*!
- * @brief  Constructs a new PollForTaskRequest object.
+ * Constructs a PollForTaskRequest object.
  */
 PollForTaskRequest::PollForTaskRequest()
     : DataPipelineRequest(new PollForTaskRequestPrivate(DataPipelineRequest::PollForTaskAction, this))
@@ -84,14 +81,9 @@ bool PollForTaskRequest::isValid() const
 
 
 /*!
- * @brief  Construct an PollForTaskResponse object.
+ * Returns a PollForTaskResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An PollForTaskResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DataPipelineClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * PollForTaskRequest::response(QNetworkReply * const reply) const
 {
@@ -99,20 +91,17 @@ QtAws::Core::AwsAbstractResponse * PollForTaskRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::DataPipeline::PollForTaskRequestPrivate
+ * \brief The PollForTaskRequestPrivate class provides private implementation for PollForTaskRequest.
+ * \internal
  *
- * @class  PollForTaskRequestPrivate
- *
- * @brief  Private implementation for PollForTaskRequest.
+ * \inmodule QtAwsDataPipeline
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new PollForTaskRequestPrivate object.
- *
- * @param  action  DataPipeline action being performed.
- * @param  q       Pointer to this object's public PollForTaskRequest instance.
+ * Constructs a PollForTaskRequestPrivate object for DataPipeline \a action with,
+ * public implementation \a q.
  */
 PollForTaskRequestPrivate::PollForTaskRequestPrivate(
     const DataPipelineRequest::Action action, PollForTaskRequest * const q)
@@ -122,15 +111,10 @@ PollForTaskRequestPrivate::PollForTaskRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PollForTaskRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the PollForTaskRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public PollForTaskRequest instance.
  */
 PollForTaskRequestPrivate::PollForTaskRequestPrivate(
     const PollForTaskRequestPrivate &other, PollForTaskRequest * const q)

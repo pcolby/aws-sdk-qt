@@ -27,10 +27,9 @@ namespace OpsWorks {
 
 /*!
  * \class QtAws::OpsWorks::StartStackRequest
- *
  * \brief The StartStackRequest class provides an interface for OpsWorks StartStack requests.
  *
- * \ingroup OpsWorks
+ * \inmodule QtAwsOpsWorks
  *
  *  <fullname>AWS OpsWorks</fullname>
  * 
@@ -143,9 +142,7 @@ namespace OpsWorks {
  */
 
 /*!
- * @brief  Constructs a new StartStackRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 StartStackRequest::StartStackRequest(const StartStackRequest &other)
     : OpsWorksRequest(new StartStackRequestPrivate(*other.d_func(), this))
@@ -154,7 +151,7 @@ StartStackRequest::StartStackRequest(const StartStackRequest &other)
 }
 
 /*!
- * @brief  Constructs a new StartStackRequest object.
+ * Constructs a StartStackRequest object.
  */
 StartStackRequest::StartStackRequest()
     : OpsWorksRequest(new StartStackRequestPrivate(OpsWorksRequest::StartStackAction, this))
@@ -172,14 +169,9 @@ bool StartStackRequest::isValid() const
 
 
 /*!
- * @brief  Construct an StartStackResponse object.
+ * Returns a StartStackResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An StartStackResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  OpsWorksClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * StartStackRequest::response(QNetworkReply * const reply) const
 {
@@ -187,20 +179,17 @@ QtAws::Core::AwsAbstractResponse * StartStackRequest::response(QNetworkReply * c
 }
 
 /*!
- * @internal
+ * \class QtAws::OpsWorks::StartStackRequestPrivate
+ * \brief The StartStackRequestPrivate class provides private implementation for StartStackRequest.
+ * \internal
  *
- * @class  StartStackRequestPrivate
- *
- * @brief  Private implementation for StartStackRequest.
+ * \inmodule QtAwsOpsWorks
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new StartStackRequestPrivate object.
- *
- * @param  action  OpsWorks action being performed.
- * @param  q       Pointer to this object's public StartStackRequest instance.
+ * Constructs a StartStackRequestPrivate object for OpsWorks \a action with,
+ * public implementation \a q.
  */
 StartStackRequestPrivate::StartStackRequestPrivate(
     const OpsWorksRequest::Action action, StartStackRequest * const q)
@@ -210,15 +199,10 @@ StartStackRequestPrivate::StartStackRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StartStackRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the StartStackRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public StartStackRequest instance.
  */
 StartStackRequestPrivate::StartStackRequestPrivate(
     const StartStackRequestPrivate &other, StartStackRequest * const q)

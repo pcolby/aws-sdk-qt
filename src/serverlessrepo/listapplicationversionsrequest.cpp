@@ -27,10 +27,9 @@ namespace ServerlessApplicationRepository {
 
 /*!
  * \class QtAws::ServerlessApplicationRepository::ListApplicationVersionsRequest
- *
  * \brief The ListApplicationVersionsRequest class provides an interface for ServerlessApplicationRepository ListApplicationVersions requests.
  *
- * \ingroup ServerlessApplicationRepository
+ * \inmodule QtAwsServerlessApplicationRepository
  *
  *  The AWS Serverless Application Repository makes it easy for developers and enterprises to quickly find and deploy
  *  serverless applications in the AWS Cloud. For more information about serverless applications, see Serverless Computing
@@ -58,9 +57,7 @@ namespace ServerlessApplicationRepository {
  */
 
 /*!
- * @brief  Constructs a new ListApplicationVersionsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListApplicationVersionsRequest::ListApplicationVersionsRequest(const ListApplicationVersionsRequest &other)
     : ServerlessApplicationRepositoryRequest(new ListApplicationVersionsRequestPrivate(*other.d_func(), this))
@@ -69,7 +66,7 @@ ListApplicationVersionsRequest::ListApplicationVersionsRequest(const ListApplica
 }
 
 /*!
- * @brief  Constructs a new ListApplicationVersionsRequest object.
+ * Constructs a ListApplicationVersionsRequest object.
  */
 ListApplicationVersionsRequest::ListApplicationVersionsRequest()
     : ServerlessApplicationRepositoryRequest(new ListApplicationVersionsRequestPrivate(ServerlessApplicationRepositoryRequest::ListApplicationVersionsAction, this))
@@ -87,14 +84,9 @@ bool ListApplicationVersionsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListApplicationVersionsResponse object.
+ * Returns a ListApplicationVersionsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListApplicationVersionsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ServerlessApplicationRepositoryClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListApplicationVersionsRequest::response(QNetworkReply * const reply) const
 {
@@ -102,20 +94,17 @@ QtAws::Core::AwsAbstractResponse * ListApplicationVersionsRequest::response(QNet
 }
 
 /*!
- * @internal
+ * \class QtAws::ServerlessApplicationRepository::ListApplicationVersionsRequestPrivate
+ * \brief The ListApplicationVersionsRequestPrivate class provides private implementation for ListApplicationVersionsRequest.
+ * \internal
  *
- * @class  ListApplicationVersionsRequestPrivate
- *
- * @brief  Private implementation for ListApplicationVersionsRequest.
+ * \inmodule QtAwsServerlessApplicationRepository
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListApplicationVersionsRequestPrivate object.
- *
- * @param  action  ServerlessApplicationRepository action being performed.
- * @param  q       Pointer to this object's public ListApplicationVersionsRequest instance.
+ * Constructs a ListApplicationVersionsRequestPrivate object for ServerlessApplicationRepository \a action with,
+ * public implementation \a q.
  */
 ListApplicationVersionsRequestPrivate::ListApplicationVersionsRequestPrivate(
     const ServerlessApplicationRepositoryRequest::Action action, ListApplicationVersionsRequest * const q)
@@ -125,15 +114,10 @@ ListApplicationVersionsRequestPrivate::ListApplicationVersionsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListApplicationVersionsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListApplicationVersionsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListApplicationVersionsRequest instance.
  */
 ListApplicationVersionsRequestPrivate::ListApplicationVersionsRequestPrivate(
     const ListApplicationVersionsRequestPrivate &other, ListApplicationVersionsRequest * const q)

@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DescribeVpcEndpointServiceConfigurationsRequest
- *
  * \brief The DescribeVpcEndpointServiceConfigurationsRequest class provides an interface for EC2 DescribeVpcEndpointServiceConfigurations requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DescribeVpcEndpointServiceConfigurationsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeVpcEndpointServiceConfigurationsRequest::DescribeVpcEndpointServiceConfigurationsRequest(const DescribeVpcEndpointServiceConfigurationsRequest &other)
     : EC2Request(new DescribeVpcEndpointServiceConfigurationsRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ DescribeVpcEndpointServiceConfigurationsRequest::DescribeVpcEndpointServiceConfi
 }
 
 /*!
- * @brief  Constructs a new DescribeVpcEndpointServiceConfigurationsRequest object.
+ * Constructs a DescribeVpcEndpointServiceConfigurationsRequest object.
  */
 DescribeVpcEndpointServiceConfigurationsRequest::DescribeVpcEndpointServiceConfigurationsRequest()
     : EC2Request(new DescribeVpcEndpointServiceConfigurationsRequestPrivate(EC2Request::DescribeVpcEndpointServiceConfigurationsAction, this))
@@ -70,14 +67,9 @@ bool DescribeVpcEndpointServiceConfigurationsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeVpcEndpointServiceConfigurationsResponse object.
+ * Returns a DescribeVpcEndpointServiceConfigurationsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeVpcEndpointServiceConfigurationsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeVpcEndpointServiceConfigurationsRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * DescribeVpcEndpointServiceConfigurationsReque
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::DescribeVpcEndpointServiceConfigurationsRequestPrivate
+ * \brief The DescribeVpcEndpointServiceConfigurationsRequestPrivate class provides private implementation for DescribeVpcEndpointServiceConfigurationsRequest.
+ * \internal
  *
- * @class  DescribeVpcEndpointServiceConfigurationsRequestPrivate
- *
- * @brief  Private implementation for DescribeVpcEndpointServiceConfigurationsRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeVpcEndpointServiceConfigurationsRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public DescribeVpcEndpointServiceConfigurationsRequest instance.
+ * Constructs a DescribeVpcEndpointServiceConfigurationsRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 DescribeVpcEndpointServiceConfigurationsRequestPrivate::DescribeVpcEndpointServiceConfigurationsRequestPrivate(
     const EC2Request::Action action, DescribeVpcEndpointServiceConfigurationsRequest * const q)
@@ -108,15 +97,10 @@ DescribeVpcEndpointServiceConfigurationsRequestPrivate::DescribeVpcEndpointServi
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeVpcEndpointServiceConfigurationsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeVpcEndpointServiceConfigurationsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeVpcEndpointServiceConfigurationsRequest instance.
  */
 DescribeVpcEndpointServiceConfigurationsRequestPrivate::DescribeVpcEndpointServiceConfigurationsRequestPrivate(
     const DescribeVpcEndpointServiceConfigurationsRequestPrivate &other, DescribeVpcEndpointServiceConfigurationsRequest * const q)

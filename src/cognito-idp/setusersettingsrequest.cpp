@@ -27,10 +27,9 @@ namespace CognitoIdentityProvider {
 
 /*!
  * \class QtAws::CognitoIdentityProvider::SetUserSettingsRequest
- *
  * \brief The SetUserSettingsRequest class provides an interface for CognitoIdentityProvider SetUserSettings requests.
  *
- * \ingroup CognitoIdentityProvider
+ * \inmodule QtAwsCognitoIdentityProvider
  *
  *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
  *  authenticate a user to obtain tokens related to user identity and access
@@ -47,9 +46,7 @@ namespace CognitoIdentityProvider {
  */
 
 /*!
- * @brief  Constructs a new SetUserSettingsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 SetUserSettingsRequest::SetUserSettingsRequest(const SetUserSettingsRequest &other)
     : CognitoIdentityProviderRequest(new SetUserSettingsRequestPrivate(*other.d_func(), this))
@@ -58,7 +55,7 @@ SetUserSettingsRequest::SetUserSettingsRequest(const SetUserSettingsRequest &oth
 }
 
 /*!
- * @brief  Constructs a new SetUserSettingsRequest object.
+ * Constructs a SetUserSettingsRequest object.
  */
 SetUserSettingsRequest::SetUserSettingsRequest()
     : CognitoIdentityProviderRequest(new SetUserSettingsRequestPrivate(CognitoIdentityProviderRequest::SetUserSettingsAction, this))
@@ -76,14 +73,9 @@ bool SetUserSettingsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an SetUserSettingsResponse object.
+ * Returns a SetUserSettingsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An SetUserSettingsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CognitoIdentityProviderClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * SetUserSettingsRequest::response(QNetworkReply * const reply) const
 {
@@ -91,20 +83,17 @@ QtAws::Core::AwsAbstractResponse * SetUserSettingsRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::CognitoIdentityProvider::SetUserSettingsRequestPrivate
+ * \brief The SetUserSettingsRequestPrivate class provides private implementation for SetUserSettingsRequest.
+ * \internal
  *
- * @class  SetUserSettingsRequestPrivate
- *
- * @brief  Private implementation for SetUserSettingsRequest.
+ * \inmodule QtAwsCognitoIdentityProvider
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new SetUserSettingsRequestPrivate object.
- *
- * @param  action  CognitoIdentityProvider action being performed.
- * @param  q       Pointer to this object's public SetUserSettingsRequest instance.
+ * Constructs a SetUserSettingsRequestPrivate object for CognitoIdentityProvider \a action with,
+ * public implementation \a q.
  */
 SetUserSettingsRequestPrivate::SetUserSettingsRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, SetUserSettingsRequest * const q)
@@ -114,15 +103,10 @@ SetUserSettingsRequestPrivate::SetUserSettingsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SetUserSettingsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the SetUserSettingsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public SetUserSettingsRequest instance.
  */
 SetUserSettingsRequestPrivate::SetUserSettingsRequestPrivate(
     const SetUserSettingsRequestPrivate &other, SetUserSettingsRequest * const q)

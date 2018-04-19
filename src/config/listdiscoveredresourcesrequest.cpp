@@ -27,10 +27,9 @@ namespace ConfigService {
 
 /*!
  * \class QtAws::ConfigService::ListDiscoveredResourcesRequest
- *
  * \brief The ListDiscoveredResourcesRequest class provides an interface for ConfigService ListDiscoveredResources requests.
  *
- * \ingroup ConfigService
+ * \inmodule QtAwsConfigService
  *
  *  <fullname>AWS Config</fullname>
  * 
@@ -60,9 +59,7 @@ namespace ConfigService {
  */
 
 /*!
- * @brief  Constructs a new ListDiscoveredResourcesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListDiscoveredResourcesRequest::ListDiscoveredResourcesRequest(const ListDiscoveredResourcesRequest &other)
     : ConfigServiceRequest(new ListDiscoveredResourcesRequestPrivate(*other.d_func(), this))
@@ -71,7 +68,7 @@ ListDiscoveredResourcesRequest::ListDiscoveredResourcesRequest(const ListDiscove
 }
 
 /*!
- * @brief  Constructs a new ListDiscoveredResourcesRequest object.
+ * Constructs a ListDiscoveredResourcesRequest object.
  */
 ListDiscoveredResourcesRequest::ListDiscoveredResourcesRequest()
     : ConfigServiceRequest(new ListDiscoveredResourcesRequestPrivate(ConfigServiceRequest::ListDiscoveredResourcesAction, this))
@@ -89,14 +86,9 @@ bool ListDiscoveredResourcesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListDiscoveredResourcesResponse object.
+ * Returns a ListDiscoveredResourcesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListDiscoveredResourcesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ConfigServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListDiscoveredResourcesRequest::response(QNetworkReply * const reply) const
 {
@@ -104,20 +96,17 @@ QtAws::Core::AwsAbstractResponse * ListDiscoveredResourcesRequest::response(QNet
 }
 
 /*!
- * @internal
+ * \class QtAws::ConfigService::ListDiscoveredResourcesRequestPrivate
+ * \brief The ListDiscoveredResourcesRequestPrivate class provides private implementation for ListDiscoveredResourcesRequest.
+ * \internal
  *
- * @class  ListDiscoveredResourcesRequestPrivate
- *
- * @brief  Private implementation for ListDiscoveredResourcesRequest.
+ * \inmodule QtAwsConfigService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListDiscoveredResourcesRequestPrivate object.
- *
- * @param  action  ConfigService action being performed.
- * @param  q       Pointer to this object's public ListDiscoveredResourcesRequest instance.
+ * Constructs a ListDiscoveredResourcesRequestPrivate object for ConfigService \a action with,
+ * public implementation \a q.
  */
 ListDiscoveredResourcesRequestPrivate::ListDiscoveredResourcesRequestPrivate(
     const ConfigServiceRequest::Action action, ListDiscoveredResourcesRequest * const q)
@@ -127,15 +116,10 @@ ListDiscoveredResourcesRequestPrivate::ListDiscoveredResourcesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListDiscoveredResourcesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListDiscoveredResourcesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListDiscoveredResourcesRequest instance.
  */
 ListDiscoveredResourcesRequestPrivate::ListDiscoveredResourcesRequestPrivate(
     const ListDiscoveredResourcesRequestPrivate &other, ListDiscoveredResourcesRequest * const q)

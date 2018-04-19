@@ -27,10 +27,9 @@ namespace AutoScaling {
 
 /*!
  * \class QtAws::AutoScaling::SetDesiredCapacityRequest
- *
  * \brief The SetDesiredCapacityRequest class provides an interface for AutoScaling SetDesiredCapacity requests.
  *
- * \ingroup AutoScaling
+ * \inmodule QtAwsAutoScaling
  *
  *  <fullname>Amazon EC2 Auto Scaling</fullname>
  * 
@@ -42,9 +41,7 @@ namespace AutoScaling {
  */
 
 /*!
- * @brief  Constructs a new SetDesiredCapacityRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 SetDesiredCapacityRequest::SetDesiredCapacityRequest(const SetDesiredCapacityRequest &other)
     : AutoScalingRequest(new SetDesiredCapacityRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ SetDesiredCapacityRequest::SetDesiredCapacityRequest(const SetDesiredCapacityReq
 }
 
 /*!
- * @brief  Constructs a new SetDesiredCapacityRequest object.
+ * Constructs a SetDesiredCapacityRequest object.
  */
 SetDesiredCapacityRequest::SetDesiredCapacityRequest()
     : AutoScalingRequest(new SetDesiredCapacityRequestPrivate(AutoScalingRequest::SetDesiredCapacityAction, this))
@@ -71,14 +68,9 @@ bool SetDesiredCapacityRequest::isValid() const
 
 
 /*!
- * @brief  Construct an SetDesiredCapacityResponse object.
+ * Returns a SetDesiredCapacityResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An SetDesiredCapacityResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AutoScalingClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * SetDesiredCapacityRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * SetDesiredCapacityRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::AutoScaling::SetDesiredCapacityRequestPrivate
+ * \brief The SetDesiredCapacityRequestPrivate class provides private implementation for SetDesiredCapacityRequest.
+ * \internal
  *
- * @class  SetDesiredCapacityRequestPrivate
- *
- * @brief  Private implementation for SetDesiredCapacityRequest.
+ * \inmodule QtAwsAutoScaling
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new SetDesiredCapacityRequestPrivate object.
- *
- * @param  action  AutoScaling action being performed.
- * @param  q       Pointer to this object's public SetDesiredCapacityRequest instance.
+ * Constructs a SetDesiredCapacityRequestPrivate object for AutoScaling \a action with,
+ * public implementation \a q.
  */
 SetDesiredCapacityRequestPrivate::SetDesiredCapacityRequestPrivate(
     const AutoScalingRequest::Action action, SetDesiredCapacityRequest * const q)
@@ -109,15 +98,10 @@ SetDesiredCapacityRequestPrivate::SetDesiredCapacityRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SetDesiredCapacityRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the SetDesiredCapacityRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public SetDesiredCapacityRequest instance.
  */
 SetDesiredCapacityRequestPrivate::SetDesiredCapacityRequestPrivate(
     const SetDesiredCapacityRequestPrivate &other, SetDesiredCapacityRequest * const q)

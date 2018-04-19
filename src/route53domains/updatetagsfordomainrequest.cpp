@@ -27,10 +27,9 @@ namespace Route53Domains {
 
 /*!
  * \class QtAws::Route53Domains::UpdateTagsForDomainRequest
- *
  * \brief The UpdateTagsForDomainRequest class provides an interface for Route53Domains UpdateTagsForDomain requests.
  *
- * \ingroup Route53Domains
+ * \inmodule QtAwsRoute53Domains
  *
  *  Amazon Route 53 API actions let you register domain names and perform related
  *
@@ -38,9 +37,7 @@ namespace Route53Domains {
  */
 
 /*!
- * @brief  Constructs a new UpdateTagsForDomainRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateTagsForDomainRequest::UpdateTagsForDomainRequest(const UpdateTagsForDomainRequest &other)
     : Route53DomainsRequest(new UpdateTagsForDomainRequestPrivate(*other.d_func(), this))
@@ -49,7 +46,7 @@ UpdateTagsForDomainRequest::UpdateTagsForDomainRequest(const UpdateTagsForDomain
 }
 
 /*!
- * @brief  Constructs a new UpdateTagsForDomainRequest object.
+ * Constructs a UpdateTagsForDomainRequest object.
  */
 UpdateTagsForDomainRequest::UpdateTagsForDomainRequest()
     : Route53DomainsRequest(new UpdateTagsForDomainRequestPrivate(Route53DomainsRequest::UpdateTagsForDomainAction, this))
@@ -67,14 +64,9 @@ bool UpdateTagsForDomainRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateTagsForDomainResponse object.
+ * Returns a UpdateTagsForDomainResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateTagsForDomainResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  Route53DomainsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateTagsForDomainRequest::response(QNetworkReply * const reply) const
 {
@@ -82,20 +74,17 @@ QtAws::Core::AwsAbstractResponse * UpdateTagsForDomainRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::Route53Domains::UpdateTagsForDomainRequestPrivate
+ * \brief The UpdateTagsForDomainRequestPrivate class provides private implementation for UpdateTagsForDomainRequest.
+ * \internal
  *
- * @class  UpdateTagsForDomainRequestPrivate
- *
- * @brief  Private implementation for UpdateTagsForDomainRequest.
+ * \inmodule QtAwsRoute53Domains
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateTagsForDomainRequestPrivate object.
- *
- * @param  action  Route53Domains action being performed.
- * @param  q       Pointer to this object's public UpdateTagsForDomainRequest instance.
+ * Constructs a UpdateTagsForDomainRequestPrivate object for Route53Domains \a action with,
+ * public implementation \a q.
  */
 UpdateTagsForDomainRequestPrivate::UpdateTagsForDomainRequestPrivate(
     const Route53DomainsRequest::Action action, UpdateTagsForDomainRequest * const q)
@@ -105,15 +94,10 @@ UpdateTagsForDomainRequestPrivate::UpdateTagsForDomainRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateTagsForDomainRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateTagsForDomainRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateTagsForDomainRequest instance.
  */
 UpdateTagsForDomainRequestPrivate::UpdateTagsForDomainRequestPrivate(
     const UpdateTagsForDomainRequestPrivate &other, UpdateTagsForDomainRequest * const q)

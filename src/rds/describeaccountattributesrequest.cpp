@@ -27,10 +27,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::DescribeAccountAttributesRequest
- *
  * \brief The DescribeAccountAttributesRequest class provides an interface for RDS DescribeAccountAttributes requests.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -101,9 +100,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new DescribeAccountAttributesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeAccountAttributesRequest::DescribeAccountAttributesRequest(const DescribeAccountAttributesRequest &other)
     : RDSRequest(new DescribeAccountAttributesRequestPrivate(*other.d_func(), this))
@@ -112,7 +109,7 @@ DescribeAccountAttributesRequest::DescribeAccountAttributesRequest(const Describ
 }
 
 /*!
- * @brief  Constructs a new DescribeAccountAttributesRequest object.
+ * Constructs a DescribeAccountAttributesRequest object.
  */
 DescribeAccountAttributesRequest::DescribeAccountAttributesRequest()
     : RDSRequest(new DescribeAccountAttributesRequestPrivate(RDSRequest::DescribeAccountAttributesAction, this))
@@ -130,14 +127,9 @@ bool DescribeAccountAttributesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeAccountAttributesResponse object.
+ * Returns a DescribeAccountAttributesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeAccountAttributesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RDSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeAccountAttributesRequest::response(QNetworkReply * const reply) const
 {
@@ -145,20 +137,17 @@ QtAws::Core::AwsAbstractResponse * DescribeAccountAttributesRequest::response(QN
 }
 
 /*!
- * @internal
+ * \class QtAws::RDS::DescribeAccountAttributesRequestPrivate
+ * \brief The DescribeAccountAttributesRequestPrivate class provides private implementation for DescribeAccountAttributesRequest.
+ * \internal
  *
- * @class  DescribeAccountAttributesRequestPrivate
- *
- * @brief  Private implementation for DescribeAccountAttributesRequest.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeAccountAttributesRequestPrivate object.
- *
- * @param  action  RDS action being performed.
- * @param  q       Pointer to this object's public DescribeAccountAttributesRequest instance.
+ * Constructs a DescribeAccountAttributesRequestPrivate object for RDS \a action with,
+ * public implementation \a q.
  */
 DescribeAccountAttributesRequestPrivate::DescribeAccountAttributesRequestPrivate(
     const RDSRequest::Action action, DescribeAccountAttributesRequest * const q)
@@ -168,15 +157,10 @@ DescribeAccountAttributesRequestPrivate::DescribeAccountAttributesRequestPrivate
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeAccountAttributesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeAccountAttributesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeAccountAttributesRequest instance.
  */
 DescribeAccountAttributesRequestPrivate::DescribeAccountAttributesRequestPrivate(
     const DescribeAccountAttributesRequestPrivate &other, DescribeAccountAttributesRequest * const q)

@@ -27,19 +27,16 @@ namespace MediaConvert {
 
 /*!
  * \class QtAws::MediaConvert::ListJobTemplatesRequest
- *
  * \brief The ListJobTemplatesRequest class provides an interface for MediaConvert ListJobTemplates requests.
  *
- * \ingroup MediaConvert
+ * \inmodule QtAwsMediaConvert
  *
  *
  * \sa MediaConvertClient::listJobTemplates
  */
 
 /*!
- * @brief  Constructs a new ListJobTemplatesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListJobTemplatesRequest::ListJobTemplatesRequest(const ListJobTemplatesRequest &other)
     : MediaConvertRequest(new ListJobTemplatesRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ ListJobTemplatesRequest::ListJobTemplatesRequest(const ListJobTemplatesRequest &
 }
 
 /*!
- * @brief  Constructs a new ListJobTemplatesRequest object.
+ * Constructs a ListJobTemplatesRequest object.
  */
 ListJobTemplatesRequest::ListJobTemplatesRequest()
     : MediaConvertRequest(new ListJobTemplatesRequestPrivate(MediaConvertRequest::ListJobTemplatesAction, this))
@@ -66,14 +63,9 @@ bool ListJobTemplatesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListJobTemplatesResponse object.
+ * Returns a ListJobTemplatesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListJobTemplatesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MediaConvertClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListJobTemplatesRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * ListJobTemplatesRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::MediaConvert::ListJobTemplatesRequestPrivate
+ * \brief The ListJobTemplatesRequestPrivate class provides private implementation for ListJobTemplatesRequest.
+ * \internal
  *
- * @class  ListJobTemplatesRequestPrivate
- *
- * @brief  Private implementation for ListJobTemplatesRequest.
+ * \inmodule QtAwsMediaConvert
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListJobTemplatesRequestPrivate object.
- *
- * @param  action  MediaConvert action being performed.
- * @param  q       Pointer to this object's public ListJobTemplatesRequest instance.
+ * Constructs a ListJobTemplatesRequestPrivate object for MediaConvert \a action with,
+ * public implementation \a q.
  */
 ListJobTemplatesRequestPrivate::ListJobTemplatesRequestPrivate(
     const MediaConvertRequest::Action action, ListJobTemplatesRequest * const q)
@@ -104,15 +93,10 @@ ListJobTemplatesRequestPrivate::ListJobTemplatesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListJobTemplatesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListJobTemplatesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListJobTemplatesRequest instance.
  */
 ListJobTemplatesRequestPrivate::ListJobTemplatesRequestPrivate(
     const ListJobTemplatesRequestPrivate &other, ListJobTemplatesRequest * const q)

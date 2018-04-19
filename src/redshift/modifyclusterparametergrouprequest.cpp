@@ -27,10 +27,9 @@ namespace Redshift {
 
 /*!
  * \class QtAws::Redshift::ModifyClusterParameterGroupRequest
- *
  * \brief The ModifyClusterParameterGroupRequest class provides an interface for Redshift ModifyClusterParameterGroup requests.
  *
- * \ingroup Redshift
+ * \inmodule QtAwsRedshift
  *
  *  <fullname>Amazon Redshift</fullname>
  * 
@@ -67,9 +66,7 @@ namespace Redshift {
  */
 
 /*!
- * @brief  Constructs a new ModifyClusterParameterGroupRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ModifyClusterParameterGroupRequest::ModifyClusterParameterGroupRequest(const ModifyClusterParameterGroupRequest &other)
     : RedshiftRequest(new ModifyClusterParameterGroupRequestPrivate(*other.d_func(), this))
@@ -78,7 +75,7 @@ ModifyClusterParameterGroupRequest::ModifyClusterParameterGroupRequest(const Mod
 }
 
 /*!
- * @brief  Constructs a new ModifyClusterParameterGroupRequest object.
+ * Constructs a ModifyClusterParameterGroupRequest object.
  */
 ModifyClusterParameterGroupRequest::ModifyClusterParameterGroupRequest()
     : RedshiftRequest(new ModifyClusterParameterGroupRequestPrivate(RedshiftRequest::ModifyClusterParameterGroupAction, this))
@@ -96,14 +93,9 @@ bool ModifyClusterParameterGroupRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ModifyClusterParameterGroupResponse object.
+ * Returns a ModifyClusterParameterGroupResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ModifyClusterParameterGroupResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RedshiftClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ModifyClusterParameterGroupRequest::response(QNetworkReply * const reply) const
 {
@@ -111,20 +103,17 @@ QtAws::Core::AwsAbstractResponse * ModifyClusterParameterGroupRequest::response(
 }
 
 /*!
- * @internal
+ * \class QtAws::Redshift::ModifyClusterParameterGroupRequestPrivate
+ * \brief The ModifyClusterParameterGroupRequestPrivate class provides private implementation for ModifyClusterParameterGroupRequest.
+ * \internal
  *
- * @class  ModifyClusterParameterGroupRequestPrivate
- *
- * @brief  Private implementation for ModifyClusterParameterGroupRequest.
+ * \inmodule QtAwsRedshift
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ModifyClusterParameterGroupRequestPrivate object.
- *
- * @param  action  Redshift action being performed.
- * @param  q       Pointer to this object's public ModifyClusterParameterGroupRequest instance.
+ * Constructs a ModifyClusterParameterGroupRequestPrivate object for Redshift \a action with,
+ * public implementation \a q.
  */
 ModifyClusterParameterGroupRequestPrivate::ModifyClusterParameterGroupRequestPrivate(
     const RedshiftRequest::Action action, ModifyClusterParameterGroupRequest * const q)
@@ -134,15 +123,10 @@ ModifyClusterParameterGroupRequestPrivate::ModifyClusterParameterGroupRequestPri
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ModifyClusterParameterGroupRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ModifyClusterParameterGroupRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ModifyClusterParameterGroupRequest instance.
  */
 ModifyClusterParameterGroupRequestPrivate::ModifyClusterParameterGroupRequestPrivate(
     const ModifyClusterParameterGroupRequestPrivate &other, ModifyClusterParameterGroupRequest * const q)

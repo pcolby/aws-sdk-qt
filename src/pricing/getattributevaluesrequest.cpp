@@ -27,10 +27,9 @@ namespace Pricing {
 
 /*!
  * \class QtAws::Pricing::GetAttributeValuesRequest
- *
  * \brief The GetAttributeValuesRequest class provides an interface for Pricing GetAttributeValues requests.
  *
- * \ingroup Pricing
+ * \inmodule QtAwsPricing
  *
  *  AWS Price List Service API (AWS Price List Service) is a centralized and convenient way to programmatically query Amazon
  *  Web Services for services, products, and pricing information. The AWS Price List Service uses standardized product
@@ -63,9 +62,7 @@ namespace Pricing {
  */
 
 /*!
- * @brief  Constructs a new GetAttributeValuesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetAttributeValuesRequest::GetAttributeValuesRequest(const GetAttributeValuesRequest &other)
     : PricingRequest(new GetAttributeValuesRequestPrivate(*other.d_func(), this))
@@ -74,7 +71,7 @@ GetAttributeValuesRequest::GetAttributeValuesRequest(const GetAttributeValuesReq
 }
 
 /*!
- * @brief  Constructs a new GetAttributeValuesRequest object.
+ * Constructs a GetAttributeValuesRequest object.
  */
 GetAttributeValuesRequest::GetAttributeValuesRequest()
     : PricingRequest(new GetAttributeValuesRequestPrivate(PricingRequest::GetAttributeValuesAction, this))
@@ -92,14 +89,9 @@ bool GetAttributeValuesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetAttributeValuesResponse object.
+ * Returns a GetAttributeValuesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetAttributeValuesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  PricingClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetAttributeValuesRequest::response(QNetworkReply * const reply) const
 {
@@ -107,20 +99,17 @@ QtAws::Core::AwsAbstractResponse * GetAttributeValuesRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::Pricing::GetAttributeValuesRequestPrivate
+ * \brief The GetAttributeValuesRequestPrivate class provides private implementation for GetAttributeValuesRequest.
+ * \internal
  *
- * @class  GetAttributeValuesRequestPrivate
- *
- * @brief  Private implementation for GetAttributeValuesRequest.
+ * \inmodule QtAwsPricing
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetAttributeValuesRequestPrivate object.
- *
- * @param  action  Pricing action being performed.
- * @param  q       Pointer to this object's public GetAttributeValuesRequest instance.
+ * Constructs a GetAttributeValuesRequestPrivate object for Pricing \a action with,
+ * public implementation \a q.
  */
 GetAttributeValuesRequestPrivate::GetAttributeValuesRequestPrivate(
     const PricingRequest::Action action, GetAttributeValuesRequest * const q)
@@ -130,15 +119,10 @@ GetAttributeValuesRequestPrivate::GetAttributeValuesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetAttributeValuesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetAttributeValuesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetAttributeValuesRequest instance.
  */
 GetAttributeValuesRequestPrivate::GetAttributeValuesRequestPrivate(
     const GetAttributeValuesRequestPrivate &other, GetAttributeValuesRequest * const q)

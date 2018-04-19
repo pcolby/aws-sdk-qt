@@ -27,10 +27,9 @@ namespace Greengrass {
 
 /*!
  * \class QtAws::Greengrass::ListResourceDefinitionsRequest
- *
  * \brief The ListResourceDefinitionsRequest class provides an interface for Greengrass ListResourceDefinitions requests.
  *
- * \ingroup Greengrass
+ * \inmodule QtAwsGreengrass
  *
  *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
  *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
@@ -40,9 +39,7 @@ namespace Greengrass {
  */
 
 /*!
- * @brief  Constructs a new ListResourceDefinitionsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListResourceDefinitionsRequest::ListResourceDefinitionsRequest(const ListResourceDefinitionsRequest &other)
     : GreengrassRequest(new ListResourceDefinitionsRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ ListResourceDefinitionsRequest::ListResourceDefinitionsRequest(const ListResourc
 }
 
 /*!
- * @brief  Constructs a new ListResourceDefinitionsRequest object.
+ * Constructs a ListResourceDefinitionsRequest object.
  */
 ListResourceDefinitionsRequest::ListResourceDefinitionsRequest()
     : GreengrassRequest(new ListResourceDefinitionsRequestPrivate(GreengrassRequest::ListResourceDefinitionsAction, this))
@@ -69,14 +66,9 @@ bool ListResourceDefinitionsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListResourceDefinitionsResponse object.
+ * Returns a ListResourceDefinitionsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListResourceDefinitionsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GreengrassClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListResourceDefinitionsRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * ListResourceDefinitionsRequest::response(QNet
 }
 
 /*!
- * @internal
+ * \class QtAws::Greengrass::ListResourceDefinitionsRequestPrivate
+ * \brief The ListResourceDefinitionsRequestPrivate class provides private implementation for ListResourceDefinitionsRequest.
+ * \internal
  *
- * @class  ListResourceDefinitionsRequestPrivate
- *
- * @brief  Private implementation for ListResourceDefinitionsRequest.
+ * \inmodule QtAwsGreengrass
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListResourceDefinitionsRequestPrivate object.
- *
- * @param  action  Greengrass action being performed.
- * @param  q       Pointer to this object's public ListResourceDefinitionsRequest instance.
+ * Constructs a ListResourceDefinitionsRequestPrivate object for Greengrass \a action with,
+ * public implementation \a q.
  */
 ListResourceDefinitionsRequestPrivate::ListResourceDefinitionsRequestPrivate(
     const GreengrassRequest::Action action, ListResourceDefinitionsRequest * const q)
@@ -107,15 +96,10 @@ ListResourceDefinitionsRequestPrivate::ListResourceDefinitionsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListResourceDefinitionsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListResourceDefinitionsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListResourceDefinitionsRequest instance.
  */
 ListResourceDefinitionsRequestPrivate::ListResourceDefinitionsRequestPrivate(
     const ListResourceDefinitionsRequestPrivate &other, ListResourceDefinitionsRequest * const q)

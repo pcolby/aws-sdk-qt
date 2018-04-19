@@ -86,6 +86,9 @@
 /*!
  * \namespace QtAws::ElasticLoadBalancing
  * \brief The QtAws::ElasticLoadBalancing contains stuff...
+ *
+ * \inmodule QtAwsElasticLoadBalancing
+ *
  * @todo Move this to a separate template file.
  */
 
@@ -163,7 +166,7 @@ ElasticLoadBalancingClient::ElasticLoadBalancingClient(
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * \a  AwsEndpoint::getEndpoint()
+ * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
 ElasticLoadBalancingClient::ElasticLoadBalancingClient(
     const QUrl &endpoint,

@@ -27,10 +27,9 @@ namespace ApplicationAutoScaling {
 
 /*!
  * \class QtAws::ApplicationAutoScaling::PutScalingPolicyRequest
- *
  * \brief The PutScalingPolicyRequest class provides an interface for ApplicationAutoScaling PutScalingPolicy requests.
  *
- * \ingroup ApplicationAutoScaling
+ * \inmodule QtAwsApplicationAutoScaling
  *
  *  With Application Auto Scaling, you can configure automatic scaling for your scalable AWS resources. You can use
  *  Application Auto Scaling to accomplish the following
@@ -110,9 +109,7 @@ namespace ApplicationAutoScaling {
  */
 
 /*!
- * @brief  Constructs a new PutScalingPolicyRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 PutScalingPolicyRequest::PutScalingPolicyRequest(const PutScalingPolicyRequest &other)
     : ApplicationAutoScalingRequest(new PutScalingPolicyRequestPrivate(*other.d_func(), this))
@@ -121,7 +118,7 @@ PutScalingPolicyRequest::PutScalingPolicyRequest(const PutScalingPolicyRequest &
 }
 
 /*!
- * @brief  Constructs a new PutScalingPolicyRequest object.
+ * Constructs a PutScalingPolicyRequest object.
  */
 PutScalingPolicyRequest::PutScalingPolicyRequest()
     : ApplicationAutoScalingRequest(new PutScalingPolicyRequestPrivate(ApplicationAutoScalingRequest::PutScalingPolicyAction, this))
@@ -139,14 +136,9 @@ bool PutScalingPolicyRequest::isValid() const
 
 
 /*!
- * @brief  Construct an PutScalingPolicyResponse object.
+ * Returns a PutScalingPolicyResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An PutScalingPolicyResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ApplicationAutoScalingClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * PutScalingPolicyRequest::response(QNetworkReply * const reply) const
 {
@@ -154,20 +146,17 @@ QtAws::Core::AwsAbstractResponse * PutScalingPolicyRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::ApplicationAutoScaling::PutScalingPolicyRequestPrivate
+ * \brief The PutScalingPolicyRequestPrivate class provides private implementation for PutScalingPolicyRequest.
+ * \internal
  *
- * @class  PutScalingPolicyRequestPrivate
- *
- * @brief  Private implementation for PutScalingPolicyRequest.
+ * \inmodule QtAwsApplicationAutoScaling
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new PutScalingPolicyRequestPrivate object.
- *
- * @param  action  ApplicationAutoScaling action being performed.
- * @param  q       Pointer to this object's public PutScalingPolicyRequest instance.
+ * Constructs a PutScalingPolicyRequestPrivate object for ApplicationAutoScaling \a action with,
+ * public implementation \a q.
  */
 PutScalingPolicyRequestPrivate::PutScalingPolicyRequestPrivate(
     const ApplicationAutoScalingRequest::Action action, PutScalingPolicyRequest * const q)
@@ -177,15 +166,10 @@ PutScalingPolicyRequestPrivate::PutScalingPolicyRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutScalingPolicyRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the PutScalingPolicyRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public PutScalingPolicyRequest instance.
  */
 PutScalingPolicyRequestPrivate::PutScalingPolicyRequestPrivate(
     const PutScalingPolicyRequestPrivate &other, PutScalingPolicyRequest * const q)

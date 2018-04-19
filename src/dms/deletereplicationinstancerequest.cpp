@@ -27,10 +27,9 @@ namespace DatabaseMigrationService {
 
 /*!
  * \class QtAws::DatabaseMigrationService::DeleteReplicationInstanceRequest
- *
  * \brief The DeleteReplicationInstanceRequest class provides an interface for DatabaseMigrationService DeleteReplicationInstance requests.
  *
- * \ingroup DatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigrationService
  *
  *  <fullname>AWS Database Migration Service</fullname>
  * 
@@ -48,9 +47,7 @@ namespace DatabaseMigrationService {
  */
 
 /*!
- * @brief  Constructs a new DeleteReplicationInstanceRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteReplicationInstanceRequest::DeleteReplicationInstanceRequest(const DeleteReplicationInstanceRequest &other)
     : DatabaseMigrationServiceRequest(new DeleteReplicationInstanceRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ DeleteReplicationInstanceRequest::DeleteReplicationInstanceRequest(const DeleteR
 }
 
 /*!
- * @brief  Constructs a new DeleteReplicationInstanceRequest object.
+ * Constructs a DeleteReplicationInstanceRequest object.
  */
 DeleteReplicationInstanceRequest::DeleteReplicationInstanceRequest()
     : DatabaseMigrationServiceRequest(new DeleteReplicationInstanceRequestPrivate(DatabaseMigrationServiceRequest::DeleteReplicationInstanceAction, this))
@@ -77,14 +74,9 @@ bool DeleteReplicationInstanceRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteReplicationInstanceResponse object.
+ * Returns a DeleteReplicationInstanceResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteReplicationInstanceResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DatabaseMigrationServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteReplicationInstanceRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * DeleteReplicationInstanceRequest::response(QN
 }
 
 /*!
- * @internal
+ * \class QtAws::DatabaseMigrationService::DeleteReplicationInstanceRequestPrivate
+ * \brief The DeleteReplicationInstanceRequestPrivate class provides private implementation for DeleteReplicationInstanceRequest.
+ * \internal
  *
- * @class  DeleteReplicationInstanceRequestPrivate
- *
- * @brief  Private implementation for DeleteReplicationInstanceRequest.
+ * \inmodule QtAwsDatabaseMigrationService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteReplicationInstanceRequestPrivate object.
- *
- * @param  action  DatabaseMigrationService action being performed.
- * @param  q       Pointer to this object's public DeleteReplicationInstanceRequest instance.
+ * Constructs a DeleteReplicationInstanceRequestPrivate object for DatabaseMigrationService \a action with,
+ * public implementation \a q.
  */
 DeleteReplicationInstanceRequestPrivate::DeleteReplicationInstanceRequestPrivate(
     const DatabaseMigrationServiceRequest::Action action, DeleteReplicationInstanceRequest * const q)
@@ -115,15 +104,10 @@ DeleteReplicationInstanceRequestPrivate::DeleteReplicationInstanceRequestPrivate
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteReplicationInstanceRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteReplicationInstanceRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteReplicationInstanceRequest instance.
  */
 DeleteReplicationInstanceRequestPrivate::DeleteReplicationInstanceRequestPrivate(
     const DeleteReplicationInstanceRequestPrivate &other, DeleteReplicationInstanceRequest * const q)

@@ -27,19 +27,16 @@ namespace S3 {
 
 /*!
  * \class QtAws::S3::ListBucketInventoryConfigurationsRequest
- *
  * \brief The ListBucketInventoryConfigurationsRequest class provides an interface for S3 ListBucketInventoryConfigurations requests.
  *
- * \ingroup S3
+ * \inmodule QtAwsS3
  *
  *
  * \sa S3Client::listBucketInventoryConfigurations
  */
 
 /*!
- * @brief  Constructs a new ListBucketInventoryConfigurationsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListBucketInventoryConfigurationsRequest::ListBucketInventoryConfigurationsRequest(const ListBucketInventoryConfigurationsRequest &other)
     : S3Request(new ListBucketInventoryConfigurationsRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ ListBucketInventoryConfigurationsRequest::ListBucketInventoryConfigurationsReque
 }
 
 /*!
- * @brief  Constructs a new ListBucketInventoryConfigurationsRequest object.
+ * Constructs a ListBucketInventoryConfigurationsRequest object.
  */
 ListBucketInventoryConfigurationsRequest::ListBucketInventoryConfigurationsRequest()
     : S3Request(new ListBucketInventoryConfigurationsRequestPrivate(S3Request::ListBucketInventoryConfigurationsAction, this))
@@ -66,14 +63,9 @@ bool ListBucketInventoryConfigurationsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListBucketInventoryConfigurationsResponse object.
+ * Returns a ListBucketInventoryConfigurationsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListBucketInventoryConfigurationsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  S3Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListBucketInventoryConfigurationsRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * ListBucketInventoryConfigurationsRequest::res
 }
 
 /*!
- * @internal
+ * \class QtAws::S3::ListBucketInventoryConfigurationsRequestPrivate
+ * \brief The ListBucketInventoryConfigurationsRequestPrivate class provides private implementation for ListBucketInventoryConfigurationsRequest.
+ * \internal
  *
- * @class  ListBucketInventoryConfigurationsRequestPrivate
- *
- * @brief  Private implementation for ListBucketInventoryConfigurationsRequest.
+ * \inmodule QtAwsS3
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListBucketInventoryConfigurationsRequestPrivate object.
- *
- * @param  action  S3 action being performed.
- * @param  q       Pointer to this object's public ListBucketInventoryConfigurationsRequest instance.
+ * Constructs a ListBucketInventoryConfigurationsRequestPrivate object for S3 \a action with,
+ * public implementation \a q.
  */
 ListBucketInventoryConfigurationsRequestPrivate::ListBucketInventoryConfigurationsRequestPrivate(
     const S3Request::Action action, ListBucketInventoryConfigurationsRequest * const q)
@@ -104,15 +93,10 @@ ListBucketInventoryConfigurationsRequestPrivate::ListBucketInventoryConfiguratio
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListBucketInventoryConfigurationsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListBucketInventoryConfigurationsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListBucketInventoryConfigurationsRequest instance.
  */
 ListBucketInventoryConfigurationsRequestPrivate::ListBucketInventoryConfigurationsRequestPrivate(
     const ListBucketInventoryConfigurationsRequestPrivate &other, ListBucketInventoryConfigurationsRequest * const q)

@@ -27,10 +27,9 @@ namespace CloudDirectory {
 
 /*!
  * \class QtAws::CloudDirectory::CreateObjectRequest
- *
  * \brief The CreateObjectRequest class provides an interface for CloudDirectory CreateObject requests.
  *
- * \ingroup CloudDirectory
+ * \inmodule QtAwsCloudDirectory
  *
  *  <fullname>Amazon Cloud Directory</fullname>
  * 
@@ -44,9 +43,7 @@ namespace CloudDirectory {
  */
 
 /*!
- * @brief  Constructs a new CreateObjectRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateObjectRequest::CreateObjectRequest(const CreateObjectRequest &other)
     : CloudDirectoryRequest(new CreateObjectRequestPrivate(*other.d_func(), this))
@@ -55,7 +52,7 @@ CreateObjectRequest::CreateObjectRequest(const CreateObjectRequest &other)
 }
 
 /*!
- * @brief  Constructs a new CreateObjectRequest object.
+ * Constructs a CreateObjectRequest object.
  */
 CreateObjectRequest::CreateObjectRequest()
     : CloudDirectoryRequest(new CreateObjectRequestPrivate(CloudDirectoryRequest::CreateObjectAction, this))
@@ -73,14 +70,9 @@ bool CreateObjectRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateObjectResponse object.
+ * Returns a CreateObjectResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateObjectResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudDirectoryClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateObjectRequest::response(QNetworkReply * const reply) const
 {
@@ -88,20 +80,17 @@ QtAws::Core::AwsAbstractResponse * CreateObjectRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudDirectory::CreateObjectRequestPrivate
+ * \brief The CreateObjectRequestPrivate class provides private implementation for CreateObjectRequest.
+ * \internal
  *
- * @class  CreateObjectRequestPrivate
- *
- * @brief  Private implementation for CreateObjectRequest.
+ * \inmodule QtAwsCloudDirectory
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateObjectRequestPrivate object.
- *
- * @param  action  CloudDirectory action being performed.
- * @param  q       Pointer to this object's public CreateObjectRequest instance.
+ * Constructs a CreateObjectRequestPrivate object for CloudDirectory \a action with,
+ * public implementation \a q.
  */
 CreateObjectRequestPrivate::CreateObjectRequestPrivate(
     const CloudDirectoryRequest::Action action, CreateObjectRequest * const q)
@@ -111,15 +100,10 @@ CreateObjectRequestPrivate::CreateObjectRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateObjectRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateObjectRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateObjectRequest instance.
  */
 CreateObjectRequestPrivate::CreateObjectRequestPrivate(
     const CreateObjectRequestPrivate &other, CreateObjectRequest * const q)

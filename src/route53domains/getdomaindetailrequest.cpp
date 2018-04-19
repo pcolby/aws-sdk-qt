@@ -27,10 +27,9 @@ namespace Route53Domains {
 
 /*!
  * \class QtAws::Route53Domains::GetDomainDetailRequest
- *
  * \brief The GetDomainDetailRequest class provides an interface for Route53Domains GetDomainDetail requests.
  *
- * \ingroup Route53Domains
+ * \inmodule QtAwsRoute53Domains
  *
  *  Amazon Route 53 API actions let you register domain names and perform related
  *
@@ -38,9 +37,7 @@ namespace Route53Domains {
  */
 
 /*!
- * @brief  Constructs a new GetDomainDetailRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetDomainDetailRequest::GetDomainDetailRequest(const GetDomainDetailRequest &other)
     : Route53DomainsRequest(new GetDomainDetailRequestPrivate(*other.d_func(), this))
@@ -49,7 +46,7 @@ GetDomainDetailRequest::GetDomainDetailRequest(const GetDomainDetailRequest &oth
 }
 
 /*!
- * @brief  Constructs a new GetDomainDetailRequest object.
+ * Constructs a GetDomainDetailRequest object.
  */
 GetDomainDetailRequest::GetDomainDetailRequest()
     : Route53DomainsRequest(new GetDomainDetailRequestPrivate(Route53DomainsRequest::GetDomainDetailAction, this))
@@ -67,14 +64,9 @@ bool GetDomainDetailRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetDomainDetailResponse object.
+ * Returns a GetDomainDetailResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetDomainDetailResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  Route53DomainsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetDomainDetailRequest::response(QNetworkReply * const reply) const
 {
@@ -82,20 +74,17 @@ QtAws::Core::AwsAbstractResponse * GetDomainDetailRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::Route53Domains::GetDomainDetailRequestPrivate
+ * \brief The GetDomainDetailRequestPrivate class provides private implementation for GetDomainDetailRequest.
+ * \internal
  *
- * @class  GetDomainDetailRequestPrivate
- *
- * @brief  Private implementation for GetDomainDetailRequest.
+ * \inmodule QtAwsRoute53Domains
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetDomainDetailRequestPrivate object.
- *
- * @param  action  Route53Domains action being performed.
- * @param  q       Pointer to this object's public GetDomainDetailRequest instance.
+ * Constructs a GetDomainDetailRequestPrivate object for Route53Domains \a action with,
+ * public implementation \a q.
  */
 GetDomainDetailRequestPrivate::GetDomainDetailRequestPrivate(
     const Route53DomainsRequest::Action action, GetDomainDetailRequest * const q)
@@ -105,15 +94,10 @@ GetDomainDetailRequestPrivate::GetDomainDetailRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetDomainDetailRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetDomainDetailRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetDomainDetailRequest instance.
  */
 GetDomainDetailRequestPrivate::GetDomainDetailRequestPrivate(
     const GetDomainDetailRequestPrivate &other, GetDomainDetailRequest * const q)

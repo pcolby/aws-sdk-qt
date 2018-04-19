@@ -27,10 +27,9 @@ namespace ElastiCache {
 
 /*!
  * \class QtAws::ElastiCache::CreateReplicationGroupRequest
- *
  * \brief The CreateReplicationGroupRequest class provides an interface for ElastiCache CreateReplicationGroup requests.
  *
- * \ingroup ElastiCache
+ * \inmodule QtAwsElastiCache
  *
  *  <fullname>Amazon ElastiCache</fullname>
  * 
@@ -51,9 +50,7 @@ namespace ElastiCache {
  */
 
 /*!
- * @brief  Constructs a new CreateReplicationGroupRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateReplicationGroupRequest::CreateReplicationGroupRequest(const CreateReplicationGroupRequest &other)
     : ElastiCacheRequest(new CreateReplicationGroupRequestPrivate(*other.d_func(), this))
@@ -62,7 +59,7 @@ CreateReplicationGroupRequest::CreateReplicationGroupRequest(const CreateReplica
 }
 
 /*!
- * @brief  Constructs a new CreateReplicationGroupRequest object.
+ * Constructs a CreateReplicationGroupRequest object.
  */
 CreateReplicationGroupRequest::CreateReplicationGroupRequest()
     : ElastiCacheRequest(new CreateReplicationGroupRequestPrivate(ElastiCacheRequest::CreateReplicationGroupAction, this))
@@ -80,14 +77,9 @@ bool CreateReplicationGroupRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateReplicationGroupResponse object.
+ * Returns a CreateReplicationGroupResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateReplicationGroupResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ElastiCacheClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateReplicationGroupRequest::response(QNetworkReply * const reply) const
 {
@@ -95,20 +87,17 @@ QtAws::Core::AwsAbstractResponse * CreateReplicationGroupRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::ElastiCache::CreateReplicationGroupRequestPrivate
+ * \brief The CreateReplicationGroupRequestPrivate class provides private implementation for CreateReplicationGroupRequest.
+ * \internal
  *
- * @class  CreateReplicationGroupRequestPrivate
- *
- * @brief  Private implementation for CreateReplicationGroupRequest.
+ * \inmodule QtAwsElastiCache
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateReplicationGroupRequestPrivate object.
- *
- * @param  action  ElastiCache action being performed.
- * @param  q       Pointer to this object's public CreateReplicationGroupRequest instance.
+ * Constructs a CreateReplicationGroupRequestPrivate object for ElastiCache \a action with,
+ * public implementation \a q.
  */
 CreateReplicationGroupRequestPrivate::CreateReplicationGroupRequestPrivate(
     const ElastiCacheRequest::Action action, CreateReplicationGroupRequest * const q)
@@ -118,15 +107,10 @@ CreateReplicationGroupRequestPrivate::CreateReplicationGroupRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateReplicationGroupRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateReplicationGroupRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateReplicationGroupRequest instance.
  */
 CreateReplicationGroupRequestPrivate::CreateReplicationGroupRequestPrivate(
     const CreateReplicationGroupRequestPrivate &other, CreateReplicationGroupRequest * const q)

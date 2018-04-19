@@ -27,10 +27,9 @@ namespace OpsWorks {
 
 /*!
  * \class QtAws::OpsWorks::UpdateAppRequest
- *
  * \brief The UpdateAppRequest class provides an interface for OpsWorks UpdateApp requests.
  *
- * \ingroup OpsWorks
+ * \inmodule QtAwsOpsWorks
  *
  *  <fullname>AWS OpsWorks</fullname>
  * 
@@ -143,9 +142,7 @@ namespace OpsWorks {
  */
 
 /*!
- * @brief  Constructs a new UpdateAppRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateAppRequest::UpdateAppRequest(const UpdateAppRequest &other)
     : OpsWorksRequest(new UpdateAppRequestPrivate(*other.d_func(), this))
@@ -154,7 +151,7 @@ UpdateAppRequest::UpdateAppRequest(const UpdateAppRequest &other)
 }
 
 /*!
- * @brief  Constructs a new UpdateAppRequest object.
+ * Constructs a UpdateAppRequest object.
  */
 UpdateAppRequest::UpdateAppRequest()
     : OpsWorksRequest(new UpdateAppRequestPrivate(OpsWorksRequest::UpdateAppAction, this))
@@ -172,14 +169,9 @@ bool UpdateAppRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateAppResponse object.
+ * Returns a UpdateAppResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateAppResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  OpsWorksClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateAppRequest::response(QNetworkReply * const reply) const
 {
@@ -187,20 +179,17 @@ QtAws::Core::AwsAbstractResponse * UpdateAppRequest::response(QNetworkReply * co
 }
 
 /*!
- * @internal
+ * \class QtAws::OpsWorks::UpdateAppRequestPrivate
+ * \brief The UpdateAppRequestPrivate class provides private implementation for UpdateAppRequest.
+ * \internal
  *
- * @class  UpdateAppRequestPrivate
- *
- * @brief  Private implementation for UpdateAppRequest.
+ * \inmodule QtAwsOpsWorks
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateAppRequestPrivate object.
- *
- * @param  action  OpsWorks action being performed.
- * @param  q       Pointer to this object's public UpdateAppRequest instance.
+ * Constructs a UpdateAppRequestPrivate object for OpsWorks \a action with,
+ * public implementation \a q.
  */
 UpdateAppRequestPrivate::UpdateAppRequestPrivate(
     const OpsWorksRequest::Action action, UpdateAppRequest * const q)
@@ -210,15 +199,10 @@ UpdateAppRequestPrivate::UpdateAppRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateAppRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateAppRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateAppRequest instance.
  */
 UpdateAppRequestPrivate::UpdateAppRequestPrivate(
     const UpdateAppRequestPrivate &other, UpdateAppRequest * const q)

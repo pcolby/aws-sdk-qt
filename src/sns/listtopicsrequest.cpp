@@ -27,10 +27,9 @@ namespace SNS {
 
 /*!
  * \class QtAws::SNS::ListTopicsRequest
- *
  * \brief The ListTopicsRequest class provides an interface for SNS ListTopics requests.
  *
- * \ingroup SNS
+ * \inmodule QtAwsSNS
  *
  *  <fullname>Amazon Simple Notification Service</fullname>
  * 
@@ -51,9 +50,7 @@ namespace SNS {
  */
 
 /*!
- * @brief  Constructs a new ListTopicsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListTopicsRequest::ListTopicsRequest(const ListTopicsRequest &other)
     : SNSRequest(new ListTopicsRequestPrivate(*other.d_func(), this))
@@ -62,7 +59,7 @@ ListTopicsRequest::ListTopicsRequest(const ListTopicsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ListTopicsRequest object.
+ * Constructs a ListTopicsRequest object.
  */
 ListTopicsRequest::ListTopicsRequest()
     : SNSRequest(new ListTopicsRequestPrivate(SNSRequest::ListTopicsAction, this))
@@ -80,14 +77,9 @@ bool ListTopicsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListTopicsResponse object.
+ * Returns a ListTopicsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListTopicsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SNSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListTopicsRequest::response(QNetworkReply * const reply) const
 {
@@ -95,20 +87,17 @@ QtAws::Core::AwsAbstractResponse * ListTopicsRequest::response(QNetworkReply * c
 }
 
 /*!
- * @internal
+ * \class QtAws::SNS::ListTopicsRequestPrivate
+ * \brief The ListTopicsRequestPrivate class provides private implementation for ListTopicsRequest.
+ * \internal
  *
- * @class  ListTopicsRequestPrivate
- *
- * @brief  Private implementation for ListTopicsRequest.
+ * \inmodule QtAwsSNS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListTopicsRequestPrivate object.
- *
- * @param  action  SNS action being performed.
- * @param  q       Pointer to this object's public ListTopicsRequest instance.
+ * Constructs a ListTopicsRequestPrivate object for SNS \a action with,
+ * public implementation \a q.
  */
 ListTopicsRequestPrivate::ListTopicsRequestPrivate(
     const SNSRequest::Action action, ListTopicsRequest * const q)
@@ -118,15 +107,10 @@ ListTopicsRequestPrivate::ListTopicsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListTopicsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListTopicsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListTopicsRequest instance.
  */
 ListTopicsRequestPrivate::ListTopicsRequestPrivate(
     const ListTopicsRequestPrivate &other, ListTopicsRequest * const q)

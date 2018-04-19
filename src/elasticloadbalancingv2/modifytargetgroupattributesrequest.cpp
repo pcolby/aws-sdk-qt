@@ -27,10 +27,9 @@ namespace ElasticLoadBalancingv2 {
 
 /*!
  * \class QtAws::ElasticLoadBalancingv2::ModifyTargetGroupAttributesRequest
- *
  * \brief The ModifyTargetGroupAttributesRequest class provides an interface for ElasticLoadBalancingv2 ModifyTargetGroupAttributes requests.
  *
- * \ingroup ElasticLoadBalancingv2
+ * \inmodule QtAwsElasticLoadBalancingv2
  *
  *  <fullname>Elastic Load Balancing</fullname>
  * 
@@ -105,9 +104,7 @@ namespace ElasticLoadBalancingv2 {
  */
 
 /*!
- * @brief  Constructs a new ModifyTargetGroupAttributesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ModifyTargetGroupAttributesRequest::ModifyTargetGroupAttributesRequest(const ModifyTargetGroupAttributesRequest &other)
     : ElasticLoadBalancingv2Request(new ModifyTargetGroupAttributesRequestPrivate(*other.d_func(), this))
@@ -116,7 +113,7 @@ ModifyTargetGroupAttributesRequest::ModifyTargetGroupAttributesRequest(const Mod
 }
 
 /*!
- * @brief  Constructs a new ModifyTargetGroupAttributesRequest object.
+ * Constructs a ModifyTargetGroupAttributesRequest object.
  */
 ModifyTargetGroupAttributesRequest::ModifyTargetGroupAttributesRequest()
     : ElasticLoadBalancingv2Request(new ModifyTargetGroupAttributesRequestPrivate(ElasticLoadBalancingv2Request::ModifyTargetGroupAttributesAction, this))
@@ -134,14 +131,9 @@ bool ModifyTargetGroupAttributesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ModifyTargetGroupAttributesResponse object.
+ * Returns a ModifyTargetGroupAttributesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ModifyTargetGroupAttributesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ElasticLoadBalancingv2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ModifyTargetGroupAttributesRequest::response(QNetworkReply * const reply) const
 {
@@ -149,20 +141,17 @@ QtAws::Core::AwsAbstractResponse * ModifyTargetGroupAttributesRequest::response(
 }
 
 /*!
- * @internal
+ * \class QtAws::ElasticLoadBalancingv2::ModifyTargetGroupAttributesRequestPrivate
+ * \brief The ModifyTargetGroupAttributesRequestPrivate class provides private implementation for ModifyTargetGroupAttributesRequest.
+ * \internal
  *
- * @class  ModifyTargetGroupAttributesRequestPrivate
- *
- * @brief  Private implementation for ModifyTargetGroupAttributesRequest.
+ * \inmodule QtAwsElasticLoadBalancingv2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ModifyTargetGroupAttributesRequestPrivate object.
- *
- * @param  action  ElasticLoadBalancingv2 action being performed.
- * @param  q       Pointer to this object's public ModifyTargetGroupAttributesRequest instance.
+ * Constructs a ModifyTargetGroupAttributesRequestPrivate object for ElasticLoadBalancingv2 \a action with,
+ * public implementation \a q.
  */
 ModifyTargetGroupAttributesRequestPrivate::ModifyTargetGroupAttributesRequestPrivate(
     const ElasticLoadBalancingv2Request::Action action, ModifyTargetGroupAttributesRequest * const q)
@@ -172,15 +161,10 @@ ModifyTargetGroupAttributesRequestPrivate::ModifyTargetGroupAttributesRequestPri
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ModifyTargetGroupAttributesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ModifyTargetGroupAttributesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ModifyTargetGroupAttributesRequest instance.
  */
 ModifyTargetGroupAttributesRequestPrivate::ModifyTargetGroupAttributesRequestPrivate(
     const ModifyTargetGroupAttributesRequestPrivate &other, ModifyTargetGroupAttributesRequest * const q)

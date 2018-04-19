@@ -27,10 +27,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::ListTopicRulesRequest
- *
  * \brief The ListTopicRulesRequest class provides an interface for IoT ListTopicRules requests.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -48,9 +47,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new ListTopicRulesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListTopicRulesRequest::ListTopicRulesRequest(const ListTopicRulesRequest &other)
     : IoTRequest(new ListTopicRulesRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ ListTopicRulesRequest::ListTopicRulesRequest(const ListTopicRulesRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ListTopicRulesRequest object.
+ * Constructs a ListTopicRulesRequest object.
  */
 ListTopicRulesRequest::ListTopicRulesRequest()
     : IoTRequest(new ListTopicRulesRequestPrivate(IoTRequest::ListTopicRulesAction, this))
@@ -77,14 +74,9 @@ bool ListTopicRulesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListTopicRulesResponse object.
+ * Returns a ListTopicRulesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListTopicRulesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IoTClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListTopicRulesRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * ListTopicRulesRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::IoT::ListTopicRulesRequestPrivate
+ * \brief The ListTopicRulesRequestPrivate class provides private implementation for ListTopicRulesRequest.
+ * \internal
  *
- * @class  ListTopicRulesRequestPrivate
- *
- * @brief  Private implementation for ListTopicRulesRequest.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListTopicRulesRequestPrivate object.
- *
- * @param  action  IoT action being performed.
- * @param  q       Pointer to this object's public ListTopicRulesRequest instance.
+ * Constructs a ListTopicRulesRequestPrivate object for IoT \a action with,
+ * public implementation \a q.
  */
 ListTopicRulesRequestPrivate::ListTopicRulesRequestPrivate(
     const IoTRequest::Action action, ListTopicRulesRequest * const q)
@@ -115,15 +104,10 @@ ListTopicRulesRequestPrivate::ListTopicRulesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListTopicRulesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListTopicRulesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListTopicRulesRequest instance.
  */
 ListTopicRulesRequestPrivate::ListTopicRulesRequestPrivate(
     const ListTopicRulesRequestPrivate &other, ListTopicRulesRequest * const q)

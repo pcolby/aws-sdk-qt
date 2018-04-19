@@ -27,10 +27,9 @@ namespace CodeStar {
 
 /*!
  * \class QtAws::CodeStar::UntagProjectRequest
- *
  * \brief The UntagProjectRequest class provides an interface for CodeStar UntagProject requests.
  *
- * \ingroup CodeStar
+ * \inmodule QtAwsCodeStar
  *
  *  <fullname>AWS CodeStar</fullname>
  * 
@@ -125,9 +124,7 @@ namespace CodeStar {
  */
 
 /*!
- * @brief  Constructs a new UntagProjectRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UntagProjectRequest::UntagProjectRequest(const UntagProjectRequest &other)
     : CodeStarRequest(new UntagProjectRequestPrivate(*other.d_func(), this))
@@ -136,7 +133,7 @@ UntagProjectRequest::UntagProjectRequest(const UntagProjectRequest &other)
 }
 
 /*!
- * @brief  Constructs a new UntagProjectRequest object.
+ * Constructs a UntagProjectRequest object.
  */
 UntagProjectRequest::UntagProjectRequest()
     : CodeStarRequest(new UntagProjectRequestPrivate(CodeStarRequest::UntagProjectAction, this))
@@ -154,14 +151,9 @@ bool UntagProjectRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UntagProjectResponse object.
+ * Returns a UntagProjectResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UntagProjectResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CodeStarClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UntagProjectRequest::response(QNetworkReply * const reply) const
 {
@@ -169,20 +161,17 @@ QtAws::Core::AwsAbstractResponse * UntagProjectRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::CodeStar::UntagProjectRequestPrivate
+ * \brief The UntagProjectRequestPrivate class provides private implementation for UntagProjectRequest.
+ * \internal
  *
- * @class  UntagProjectRequestPrivate
- *
- * @brief  Private implementation for UntagProjectRequest.
+ * \inmodule QtAwsCodeStar
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UntagProjectRequestPrivate object.
- *
- * @param  action  CodeStar action being performed.
- * @param  q       Pointer to this object's public UntagProjectRequest instance.
+ * Constructs a UntagProjectRequestPrivate object for CodeStar \a action with,
+ * public implementation \a q.
  */
 UntagProjectRequestPrivate::UntagProjectRequestPrivate(
     const CodeStarRequest::Action action, UntagProjectRequest * const q)
@@ -192,15 +181,10 @@ UntagProjectRequestPrivate::UntagProjectRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UntagProjectRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UntagProjectRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UntagProjectRequest instance.
  */
 UntagProjectRequestPrivate::UntagProjectRequestPrivate(
     const UntagProjectRequestPrivate &other, UntagProjectRequest * const q)

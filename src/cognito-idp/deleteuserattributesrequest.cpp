@@ -27,10 +27,9 @@ namespace CognitoIdentityProvider {
 
 /*!
  * \class QtAws::CognitoIdentityProvider::DeleteUserAttributesRequest
- *
  * \brief The DeleteUserAttributesRequest class provides an interface for CognitoIdentityProvider DeleteUserAttributes requests.
  *
- * \ingroup CognitoIdentityProvider
+ * \inmodule QtAwsCognitoIdentityProvider
  *
  *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
  *  authenticate a user to obtain tokens related to user identity and access
@@ -47,9 +46,7 @@ namespace CognitoIdentityProvider {
  */
 
 /*!
- * @brief  Constructs a new DeleteUserAttributesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteUserAttributesRequest::DeleteUserAttributesRequest(const DeleteUserAttributesRequest &other)
     : CognitoIdentityProviderRequest(new DeleteUserAttributesRequestPrivate(*other.d_func(), this))
@@ -58,7 +55,7 @@ DeleteUserAttributesRequest::DeleteUserAttributesRequest(const DeleteUserAttribu
 }
 
 /*!
- * @brief  Constructs a new DeleteUserAttributesRequest object.
+ * Constructs a DeleteUserAttributesRequest object.
  */
 DeleteUserAttributesRequest::DeleteUserAttributesRequest()
     : CognitoIdentityProviderRequest(new DeleteUserAttributesRequestPrivate(CognitoIdentityProviderRequest::DeleteUserAttributesAction, this))
@@ -76,14 +73,9 @@ bool DeleteUserAttributesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteUserAttributesResponse object.
+ * Returns a DeleteUserAttributesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteUserAttributesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CognitoIdentityProviderClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteUserAttributesRequest::response(QNetworkReply * const reply) const
 {
@@ -91,20 +83,17 @@ QtAws::Core::AwsAbstractResponse * DeleteUserAttributesRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::CognitoIdentityProvider::DeleteUserAttributesRequestPrivate
+ * \brief The DeleteUserAttributesRequestPrivate class provides private implementation for DeleteUserAttributesRequest.
+ * \internal
  *
- * @class  DeleteUserAttributesRequestPrivate
- *
- * @brief  Private implementation for DeleteUserAttributesRequest.
+ * \inmodule QtAwsCognitoIdentityProvider
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteUserAttributesRequestPrivate object.
- *
- * @param  action  CognitoIdentityProvider action being performed.
- * @param  q       Pointer to this object's public DeleteUserAttributesRequest instance.
+ * Constructs a DeleteUserAttributesRequestPrivate object for CognitoIdentityProvider \a action with,
+ * public implementation \a q.
  */
 DeleteUserAttributesRequestPrivate::DeleteUserAttributesRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, DeleteUserAttributesRequest * const q)
@@ -114,15 +103,10 @@ DeleteUserAttributesRequestPrivate::DeleteUserAttributesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteUserAttributesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteUserAttributesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteUserAttributesRequest instance.
  */
 DeleteUserAttributesRequestPrivate::DeleteUserAttributesRequestPrivate(
     const DeleteUserAttributesRequestPrivate &other, DeleteUserAttributesRequest * const q)

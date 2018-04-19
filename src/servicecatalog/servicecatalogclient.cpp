@@ -148,6 +148,9 @@
 /*!
  * \namespace QtAws::ServiceCatalog
  * \brief The QtAws::ServiceCatalog contains stuff...
+ *
+ * \inmodule QtAwsServiceCatalog
+ *
  * @todo Move this to a separate template file.
  */
 
@@ -203,7 +206,7 @@ ServiceCatalogClient::ServiceCatalogClient(
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * \a  AwsEndpoint::getEndpoint()
+ * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
 ServiceCatalogClient::ServiceCatalogClient(
     const QUrl &endpoint,

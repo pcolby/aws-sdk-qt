@@ -25,16 +25,112 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::RDSRequest
- *
  * \brief The RDSRequest class provides an interface for RDS requests.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @brief  Constructs a new RDSRequest object.
+ * \enum RDSRequest::Action
  *
- * @param  action  The RDS action to request.
+ * This enum describes the actions that can be performed as RDS
+ * requests.
+ *
+ * \value AddRoleToDBClusterAction RDS AddRoleToDBCluster action.
+ * \value AddSourceIdentifierToSubscriptionAction RDS AddSourceIdentifierToSubscription action.
+ * \value AddTagsToResourceAction RDS AddTagsToResource action.
+ * \value ApplyPendingMaintenanceActionAction RDS ApplyPendingMaintenanceAction action.
+ * \value AuthorizeDBSecurityGroupIngressAction RDS AuthorizeDBSecurityGroupIngress action.
+ * \value CopyDBClusterParameterGroupAction RDS CopyDBClusterParameterGroup action.
+ * \value CopyDBClusterSnapshotAction RDS CopyDBClusterSnapshot action.
+ * \value CopyDBParameterGroupAction RDS CopyDBParameterGroup action.
+ * \value CopyDBSnapshotAction RDS CopyDBSnapshot action.
+ * \value CopyOptionGroupAction RDS CopyOptionGroup action.
+ * \value CreateDBClusterAction RDS CreateDBCluster action.
+ * \value CreateDBClusterParameterGroupAction RDS CreateDBClusterParameterGroup action.
+ * \value CreateDBClusterSnapshotAction RDS CreateDBClusterSnapshot action.
+ * \value CreateDBInstanceAction RDS CreateDBInstance action.
+ * \value CreateDBInstanceReadReplicaAction RDS CreateDBInstanceReadReplica action.
+ * \value CreateDBParameterGroupAction RDS CreateDBParameterGroup action.
+ * \value CreateDBSecurityGroupAction RDS CreateDBSecurityGroup action.
+ * \value CreateDBSnapshotAction RDS CreateDBSnapshot action.
+ * \value CreateDBSubnetGroupAction RDS CreateDBSubnetGroup action.
+ * \value CreateEventSubscriptionAction RDS CreateEventSubscription action.
+ * \value CreateOptionGroupAction RDS CreateOptionGroup action.
+ * \value DeleteDBClusterAction RDS DeleteDBCluster action.
+ * \value DeleteDBClusterParameterGroupAction RDS DeleteDBClusterParameterGroup action.
+ * \value DeleteDBClusterSnapshotAction RDS DeleteDBClusterSnapshot action.
+ * \value DeleteDBInstanceAction RDS DeleteDBInstance action.
+ * \value DeleteDBParameterGroupAction RDS DeleteDBParameterGroup action.
+ * \value DeleteDBSecurityGroupAction RDS DeleteDBSecurityGroup action.
+ * \value DeleteDBSnapshotAction RDS DeleteDBSnapshot action.
+ * \value DeleteDBSubnetGroupAction RDS DeleteDBSubnetGroup action.
+ * \value DeleteEventSubscriptionAction RDS DeleteEventSubscription action.
+ * \value DeleteOptionGroupAction RDS DeleteOptionGroup action.
+ * \value DescribeAccountAttributesAction RDS DescribeAccountAttributes action.
+ * \value DescribeCertificatesAction RDS DescribeCertificates action.
+ * \value DescribeDBClusterParameterGroupsAction RDS DescribeDBClusterParameterGroups action.
+ * \value DescribeDBClusterParametersAction RDS DescribeDBClusterParameters action.
+ * \value DescribeDBClusterSnapshotAttributesAction RDS DescribeDBClusterSnapshotAttributes action.
+ * \value DescribeDBClusterSnapshotsAction RDS DescribeDBClusterSnapshots action.
+ * \value DescribeDBClustersAction RDS DescribeDBClusters action.
+ * \value DescribeDBEngineVersionsAction RDS DescribeDBEngineVersions action.
+ * \value DescribeDBInstancesAction RDS DescribeDBInstances action.
+ * \value DescribeDBLogFilesAction RDS DescribeDBLogFiles action.
+ * \value DescribeDBParameterGroupsAction RDS DescribeDBParameterGroups action.
+ * \value DescribeDBParametersAction RDS DescribeDBParameters action.
+ * \value DescribeDBSecurityGroupsAction RDS DescribeDBSecurityGroups action.
+ * \value DescribeDBSnapshotAttributesAction RDS DescribeDBSnapshotAttributes action.
+ * \value DescribeDBSnapshotsAction RDS DescribeDBSnapshots action.
+ * \value DescribeDBSubnetGroupsAction RDS DescribeDBSubnetGroups action.
+ * \value DescribeEngineDefaultClusterParametersAction RDS DescribeEngineDefaultClusterParameters action.
+ * \value DescribeEngineDefaultParametersAction RDS DescribeEngineDefaultParameters action.
+ * \value DescribeEventCategoriesAction RDS DescribeEventCategories action.
+ * \value DescribeEventSubscriptionsAction RDS DescribeEventSubscriptions action.
+ * \value DescribeEventsAction RDS DescribeEvents action.
+ * \value DescribeOptionGroupOptionsAction RDS DescribeOptionGroupOptions action.
+ * \value DescribeOptionGroupsAction RDS DescribeOptionGroups action.
+ * \value DescribeOrderableDBInstanceOptionsAction RDS DescribeOrderableDBInstanceOptions action.
+ * \value DescribePendingMaintenanceActionsAction RDS DescribePendingMaintenanceActions action.
+ * \value DescribeReservedDBInstancesAction RDS DescribeReservedDBInstances action.
+ * \value DescribeReservedDBInstancesOfferingsAction RDS DescribeReservedDBInstancesOfferings action.
+ * \value DescribeSourceRegionsAction RDS DescribeSourceRegions action.
+ * \value DescribeValidDBInstanceModificationsAction RDS DescribeValidDBInstanceModifications action.
+ * \value DownloadDBLogFilePortionAction RDS DownloadDBLogFilePortion action.
+ * \value FailoverDBClusterAction RDS FailoverDBCluster action.
+ * \value ListTagsForResourceAction RDS ListTagsForResource action.
+ * \value ModifyDBClusterAction RDS ModifyDBCluster action.
+ * \value ModifyDBClusterParameterGroupAction RDS ModifyDBClusterParameterGroup action.
+ * \value ModifyDBClusterSnapshotAttributeAction RDS ModifyDBClusterSnapshotAttribute action.
+ * \value ModifyDBInstanceAction RDS ModifyDBInstance action.
+ * \value ModifyDBParameterGroupAction RDS ModifyDBParameterGroup action.
+ * \value ModifyDBSnapshotAction RDS ModifyDBSnapshot action.
+ * \value ModifyDBSnapshotAttributeAction RDS ModifyDBSnapshotAttribute action.
+ * \value ModifyDBSubnetGroupAction RDS ModifyDBSubnetGroup action.
+ * \value ModifyEventSubscriptionAction RDS ModifyEventSubscription action.
+ * \value ModifyOptionGroupAction RDS ModifyOptionGroup action.
+ * \value PromoteReadReplicaAction RDS PromoteReadReplica action.
+ * \value PromoteReadReplicaDBClusterAction RDS PromoteReadReplicaDBCluster action.
+ * \value PurchaseReservedDBInstancesOfferingAction RDS PurchaseReservedDBInstancesOffering action.
+ * \value RebootDBInstanceAction RDS RebootDBInstance action.
+ * \value RemoveRoleFromDBClusterAction RDS RemoveRoleFromDBCluster action.
+ * \value RemoveSourceIdentifierFromSubscriptionAction RDS RemoveSourceIdentifierFromSubscription action.
+ * \value RemoveTagsFromResourceAction RDS RemoveTagsFromResource action.
+ * \value ResetDBClusterParameterGroupAction RDS ResetDBClusterParameterGroup action.
+ * \value ResetDBParameterGroupAction RDS ResetDBParameterGroup action.
+ * \value RestoreDBClusterFromS3Action RDS RestoreDBClusterFromS3 action.
+ * \value RestoreDBClusterFromSnapshotAction RDS RestoreDBClusterFromSnapshot action.
+ * \value RestoreDBClusterToPointInTimeAction RDS RestoreDBClusterToPointInTime action.
+ * \value RestoreDBInstanceFromDBSnapshotAction RDS RestoreDBInstanceFromDBSnapshot action.
+ * \value RestoreDBInstanceFromS3Action RDS RestoreDBInstanceFromS3 action.
+ * \value RestoreDBInstanceToPointInTimeAction RDS RestoreDBInstanceToPointInTime action.
+ * \value RevokeDBSecurityGroupIngressAction RDS RevokeDBSecurityGroupIngress action.
+ * \value StartDBInstanceAction RDS StartDBInstance action.
+ * \value StopDBInstanceAction RDS StopDBInstance action.
+ */
+
+/*!
+ * Constructs a[n] RDSRequest object for RDS \a action.
  */
 RDSRequest::RDSRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new RDSRequestPrivate(action, this))
@@ -43,9 +139,7 @@ RDSRequest::RDSRequest(const Action action)
 }
 
 /*!
- * @brief  Constructs a new RDSRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 RDSRequest::RDSRequest(const RDSRequest &other)
     : QtAws::Core::AwsAbstractRequest(new RDSRequestPrivate(*other.d_func(), this))
@@ -54,13 +148,7 @@ RDSRequest::RDSRequest(const RDSRequest &other)
 }
 
 /*!
- * @brief  Assignment operator.
- *
- * Assigns \a other to \c this.
- *
- * @param  other  Instance to copy.
- *
- * @return  A reference to \c this.
+ * Sets the RDSRequest object to be equal to \a other.
  */
 RDSRequest& RDSRequest::operator=(const RDSRequest &other)
 {
@@ -72,14 +160,10 @@ RDSRequest& RDSRequest::operator=(const RDSRequest &other)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RDSRequest object.
+ * Constructs aa RDSRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from RDSRequestPrivate.
- *
- * @param  d  Pointer to private data (aka D-Pointer).
  */
 RDSRequest::RDSRequest(RDSRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
@@ -87,7 +171,7 @@ RDSRequest::RDSRequest(RDSRequestPrivate * const d) : QtAws::Core::AwsAbstractRe
 }
 
 /*!
- * \brief Returns the RDS action to be performed by this request.
+ * Returns the RDS action to be performed by this request.
  */
 RDSRequest::Action RDSRequest::action() const
 {
@@ -96,7 +180,7 @@ RDSRequest::Action RDSRequest::action() const
 }
 
 /*!
- * \brief Returns the name of the RDS action to be performed by this request.
+ * Returns the name of the RDS action to be performed by this request.
  */
 QString RDSRequest::actionString() const
 {
@@ -104,7 +188,7 @@ QString RDSRequest::actionString() const
 }
 
 /*!
- * \brief Returns the RDS API version implemented by this request.
+ * Returns the RDS API version implemented by this request.
  */
 QString RDSRequest::apiVersion() const
 {
@@ -113,7 +197,7 @@ QString RDSRequest::apiVersion() const
 }
 
 /*!
- * @brief Set the RDS action to be performed by this request to \a action.
+ * Sets the RDS action to be performed by this request to \a action.
  */
 void RDSRequest::setAction(const Action action)
 {
@@ -122,7 +206,7 @@ void RDSRequest::setAction(const Action action)
 }
 
 /*!
- * Set the RDS API version to include in this request to \a version.
+ * Sets the RDS API version to include in this request to \a version.
  */
 void RDSRequest::setApiVersion(const QString &version)
 {
@@ -131,7 +215,7 @@ void RDSRequest::setApiVersion(const QString &version)
 }
 
 /*!
- * \brief Returns \c true if this request is the same as \a other.
+ * Returns \c true if this request is equal to \a other; \c false otherwise.
  *
  * Note, most derived *Request classes do not need to provider their own
  * implementations of this function, since most such request classes rely on
@@ -146,8 +230,8 @@ bool RDSRequest::operator==(const RDSRequest &other) const
             (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
-/*!
- * @brief  Check if \a queueName is a valid RDS queue name.
+/*
+ * Returns \c tue if \a queueName is a valid RDS queue name.
  *
  * @par From RDS FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
@@ -166,9 +250,8 @@ bool RDSRequest::operator==(const RDSRequest &other) const
 }*/
 
 /*!
- * \brief Removes the a \a name parameter from this request.
- *
- * Returns the count of paramters removed (typically \c 0 or \c 1).
+ * Removes the a \a name parameter from the request, then returns the number of
+ * paramters removed (typically \c 0 or \c 1).
  */
 int RDSRequest::clearParameter(const QString &name)
 {
@@ -177,7 +260,7 @@ int RDSRequest::clearParameter(const QString &name)
 }
 
 /*!
- * \brief Removes all parameters from this request.
+ * Removes all parameters from the request.
  */
 void RDSRequest::clearParameters()
 {
@@ -186,7 +269,7 @@ void RDSRequest::clearParameters()
 }
 
 /*!
- * \brief Returns the value of the \n name pararemter if set, otherwise \a defaultValue.
+ * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
 QVariant RDSRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
@@ -195,7 +278,7 @@ QVariant RDSRequest::parameter(const QString &name, const QVariant &defaultValue
 }
 
 /*!
- * \brief Returns a map of parameters included in this request.
+ * Returns the parameters included in this request.
  */
 const QVariantMap &RDSRequest::parameters() const
 {
@@ -204,7 +287,7 @@ const QVariantMap &RDSRequest::parameters() const
 }
 
 /*!
- * \brief Sets the \a name parameter to \a value.
+ * Sets the \a name parameter to \a value.
  */
 void RDSRequest::setParameter(const QString &name, const QVariant &value)
 {
@@ -213,9 +296,8 @@ void RDSRequest::setParameter(const QString &name, const QVariant &value)
 }
 
 /*!
- * \brief Sets the map of paramters for this request to \a parameters.
- *
- * Any request parameters set previously will be discarded.
+ * Sets the paramters for this request to \a parameters. Any request parameters
+ * set previously will be discarded.
  */
 void RDSRequest::setParameters(const QVariantMap &parameters)
 {
@@ -224,11 +306,12 @@ void RDSRequest::setParameters(const QVariantMap &parameters)
 }
 
 /*!
- * \brief Returns a network request for this RDS request using the given \a endpoint.
+ * Returns a network request for the RDS request using the given
+ * \a endpoint.
  *
- * This RDS implementation builds request URLs by combining the common query
- * parameters (such as Action and Version), with any that have been added (via
- * setParameter) by child classes.
+ * This RDS implementation builds request URLs by combining the
+ * common query parameters (such as Action and Version), with any that have
+ * been added (via setParameter) by child classes.
  */
 QNetworkRequest RDSRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -239,17 +322,16 @@ QNetworkRequest RDSRequest::unsignedRequest(const QUrl &endpoint) const
 }
 
 /*!
+ * \class QtAws::RDS::RDSRequestPrivate
+ * \brief The RDSRequestPrivate class provides private implementation for RDSRequest.
  * \internal
  *
- * \class  RDSRequestPrivate
- *
- * \brief  Private implementation for RDSRequest.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * \internal
- *
- * \brief Constructs a new RDSRequestPrivate object.
+ * Constructs a RDSRequestPrivate object for RDS \a action with,
+ * public implementation \a q.
  */
 RDSRequestPrivate::RDSRequestPrivate(const RDSRequest::Action action, RDSRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
@@ -258,9 +340,7 @@ RDSRequestPrivate::RDSRequestPrivate(const RDSRequest::Action action, RDSRequest
 }
 
 /*!
- * \internal
- *
- * \brief Constructs a new RDSRequestPrivate object, copying an existing one.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
@@ -276,15 +356,12 @@ RDSRequestPrivate::RDSRequestPrivate(const RDSRequestPrivate &other,
 }
 
 /*!
- * \internal
- *
- * \brief Returns a string representing \a action.
+ * Returns a string represention of \a action, or a null string if \a action is
+ * invalid.
  *
  * This function converts RDSRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the RDS service's Action
  * query parameters.
- *
- * @return A string representing \a action, or a null string if \a action is invalid.
  */
 QString RDSRequestPrivate::toString(const RDSRequest::Action &action)
 {

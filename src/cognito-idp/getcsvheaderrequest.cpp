@@ -27,10 +27,9 @@ namespace CognitoIdentityProvider {
 
 /*!
  * \class QtAws::CognitoIdentityProvider::GetCSVHeaderRequest
- *
  * \brief The GetCSVHeaderRequest class provides an interface for CognitoIdentityProvider GetCSVHeader requests.
  *
- * \ingroup CognitoIdentityProvider
+ * \inmodule QtAwsCognitoIdentityProvider
  *
  *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
  *  authenticate a user to obtain tokens related to user identity and access
@@ -47,9 +46,7 @@ namespace CognitoIdentityProvider {
  */
 
 /*!
- * @brief  Constructs a new GetCSVHeaderRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetCSVHeaderRequest::GetCSVHeaderRequest(const GetCSVHeaderRequest &other)
     : CognitoIdentityProviderRequest(new GetCSVHeaderRequestPrivate(*other.d_func(), this))
@@ -58,7 +55,7 @@ GetCSVHeaderRequest::GetCSVHeaderRequest(const GetCSVHeaderRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetCSVHeaderRequest object.
+ * Constructs a GetCSVHeaderRequest object.
  */
 GetCSVHeaderRequest::GetCSVHeaderRequest()
     : CognitoIdentityProviderRequest(new GetCSVHeaderRequestPrivate(CognitoIdentityProviderRequest::GetCSVHeaderAction, this))
@@ -76,14 +73,9 @@ bool GetCSVHeaderRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetCSVHeaderResponse object.
+ * Returns a GetCSVHeaderResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetCSVHeaderResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CognitoIdentityProviderClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetCSVHeaderRequest::response(QNetworkReply * const reply) const
 {
@@ -91,20 +83,17 @@ QtAws::Core::AwsAbstractResponse * GetCSVHeaderRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::CognitoIdentityProvider::GetCSVHeaderRequestPrivate
+ * \brief The GetCSVHeaderRequestPrivate class provides private implementation for GetCSVHeaderRequest.
+ * \internal
  *
- * @class  GetCSVHeaderRequestPrivate
- *
- * @brief  Private implementation for GetCSVHeaderRequest.
+ * \inmodule QtAwsCognitoIdentityProvider
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetCSVHeaderRequestPrivate object.
- *
- * @param  action  CognitoIdentityProvider action being performed.
- * @param  q       Pointer to this object's public GetCSVHeaderRequest instance.
+ * Constructs a GetCSVHeaderRequestPrivate object for CognitoIdentityProvider \a action with,
+ * public implementation \a q.
  */
 GetCSVHeaderRequestPrivate::GetCSVHeaderRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, GetCSVHeaderRequest * const q)
@@ -114,15 +103,10 @@ GetCSVHeaderRequestPrivate::GetCSVHeaderRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetCSVHeaderRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetCSVHeaderRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetCSVHeaderRequest instance.
  */
 GetCSVHeaderRequestPrivate::GetCSVHeaderRequestPrivate(
     const GetCSVHeaderRequestPrivate &other, GetCSVHeaderRequest * const q)

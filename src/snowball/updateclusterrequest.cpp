@@ -27,10 +27,9 @@ namespace Snowball {
 
 /*!
  * \class QtAws::Snowball::UpdateClusterRequest
- *
  * \brief The UpdateClusterRequest class provides an interface for Snowball UpdateCluster requests.
  *
- * \ingroup Snowball
+ * \inmodule QtAwsSnowball
  *
  *  AWS Snowball is a petabyte-scale data transport solution that uses secure appliances to transfer large amounts of data
  *  between your on-premises data centers and Amazon Simple Storage Service (Amazon S3). The Snowball commands described
@@ -43,9 +42,7 @@ namespace Snowball {
  */
 
 /*!
- * @brief  Constructs a new UpdateClusterRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateClusterRequest::UpdateClusterRequest(const UpdateClusterRequest &other)
     : SnowballRequest(new UpdateClusterRequestPrivate(*other.d_func(), this))
@@ -54,7 +51,7 @@ UpdateClusterRequest::UpdateClusterRequest(const UpdateClusterRequest &other)
 }
 
 /*!
- * @brief  Constructs a new UpdateClusterRequest object.
+ * Constructs a UpdateClusterRequest object.
  */
 UpdateClusterRequest::UpdateClusterRequest()
     : SnowballRequest(new UpdateClusterRequestPrivate(SnowballRequest::UpdateClusterAction, this))
@@ -72,14 +69,9 @@ bool UpdateClusterRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateClusterResponse object.
+ * Returns a UpdateClusterResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateClusterResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SnowballClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateClusterRequest::response(QNetworkReply * const reply) const
 {
@@ -87,20 +79,17 @@ QtAws::Core::AwsAbstractResponse * UpdateClusterRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::Snowball::UpdateClusterRequestPrivate
+ * \brief The UpdateClusterRequestPrivate class provides private implementation for UpdateClusterRequest.
+ * \internal
  *
- * @class  UpdateClusterRequestPrivate
- *
- * @brief  Private implementation for UpdateClusterRequest.
+ * \inmodule QtAwsSnowball
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateClusterRequestPrivate object.
- *
- * @param  action  Snowball action being performed.
- * @param  q       Pointer to this object's public UpdateClusterRequest instance.
+ * Constructs a UpdateClusterRequestPrivate object for Snowball \a action with,
+ * public implementation \a q.
  */
 UpdateClusterRequestPrivate::UpdateClusterRequestPrivate(
     const SnowballRequest::Action action, UpdateClusterRequest * const q)
@@ -110,15 +99,10 @@ UpdateClusterRequestPrivate::UpdateClusterRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateClusterRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateClusterRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateClusterRequest instance.
  */
 UpdateClusterRequestPrivate::UpdateClusterRequestPrivate(
     const UpdateClusterRequestPrivate &other, UpdateClusterRequest * const q)

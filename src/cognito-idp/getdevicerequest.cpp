@@ -27,10 +27,9 @@ namespace CognitoIdentityProvider {
 
 /*!
  * \class QtAws::CognitoIdentityProvider::GetDeviceRequest
- *
  * \brief The GetDeviceRequest class provides an interface for CognitoIdentityProvider GetDevice requests.
  *
- * \ingroup CognitoIdentityProvider
+ * \inmodule QtAwsCognitoIdentityProvider
  *
  *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
  *  authenticate a user to obtain tokens related to user identity and access
@@ -47,9 +46,7 @@ namespace CognitoIdentityProvider {
  */
 
 /*!
- * @brief  Constructs a new GetDeviceRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetDeviceRequest::GetDeviceRequest(const GetDeviceRequest &other)
     : CognitoIdentityProviderRequest(new GetDeviceRequestPrivate(*other.d_func(), this))
@@ -58,7 +55,7 @@ GetDeviceRequest::GetDeviceRequest(const GetDeviceRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetDeviceRequest object.
+ * Constructs a GetDeviceRequest object.
  */
 GetDeviceRequest::GetDeviceRequest()
     : CognitoIdentityProviderRequest(new GetDeviceRequestPrivate(CognitoIdentityProviderRequest::GetDeviceAction, this))
@@ -76,14 +73,9 @@ bool GetDeviceRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetDeviceResponse object.
+ * Returns a GetDeviceResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetDeviceResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CognitoIdentityProviderClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetDeviceRequest::response(QNetworkReply * const reply) const
 {
@@ -91,20 +83,17 @@ QtAws::Core::AwsAbstractResponse * GetDeviceRequest::response(QNetworkReply * co
 }
 
 /*!
- * @internal
+ * \class QtAws::CognitoIdentityProvider::GetDeviceRequestPrivate
+ * \brief The GetDeviceRequestPrivate class provides private implementation for GetDeviceRequest.
+ * \internal
  *
- * @class  GetDeviceRequestPrivate
- *
- * @brief  Private implementation for GetDeviceRequest.
+ * \inmodule QtAwsCognitoIdentityProvider
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetDeviceRequestPrivate object.
- *
- * @param  action  CognitoIdentityProvider action being performed.
- * @param  q       Pointer to this object's public GetDeviceRequest instance.
+ * Constructs a GetDeviceRequestPrivate object for CognitoIdentityProvider \a action with,
+ * public implementation \a q.
  */
 GetDeviceRequestPrivate::GetDeviceRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, GetDeviceRequest * const q)
@@ -114,15 +103,10 @@ GetDeviceRequestPrivate::GetDeviceRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetDeviceRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetDeviceRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetDeviceRequest instance.
  */
 GetDeviceRequestPrivate::GetDeviceRequestPrivate(
     const GetDeviceRequestPrivate &other, GetDeviceRequest * const q)

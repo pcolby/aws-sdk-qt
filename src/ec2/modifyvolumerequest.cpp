@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::ModifyVolumeRequest
- *
  * \brief The ModifyVolumeRequest class provides an interface for EC2 ModifyVolume requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new ModifyVolumeRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ModifyVolumeRequest::ModifyVolumeRequest(const ModifyVolumeRequest &other)
     : EC2Request(new ModifyVolumeRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ ModifyVolumeRequest::ModifyVolumeRequest(const ModifyVolumeRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ModifyVolumeRequest object.
+ * Constructs a ModifyVolumeRequest object.
  */
 ModifyVolumeRequest::ModifyVolumeRequest()
     : EC2Request(new ModifyVolumeRequestPrivate(EC2Request::ModifyVolumeAction, this))
@@ -70,14 +67,9 @@ bool ModifyVolumeRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ModifyVolumeResponse object.
+ * Returns a ModifyVolumeResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ModifyVolumeResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ModifyVolumeRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * ModifyVolumeRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::ModifyVolumeRequestPrivate
+ * \brief The ModifyVolumeRequestPrivate class provides private implementation for ModifyVolumeRequest.
+ * \internal
  *
- * @class  ModifyVolumeRequestPrivate
- *
- * @brief  Private implementation for ModifyVolumeRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ModifyVolumeRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public ModifyVolumeRequest instance.
+ * Constructs a ModifyVolumeRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 ModifyVolumeRequestPrivate::ModifyVolumeRequestPrivate(
     const EC2Request::Action action, ModifyVolumeRequest * const q)
@@ -108,15 +97,10 @@ ModifyVolumeRequestPrivate::ModifyVolumeRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ModifyVolumeRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ModifyVolumeRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ModifyVolumeRequest instance.
  */
 ModifyVolumeRequestPrivate::ModifyVolumeRequestPrivate(
     const ModifyVolumeRequestPrivate &other, ModifyVolumeRequest * const q)

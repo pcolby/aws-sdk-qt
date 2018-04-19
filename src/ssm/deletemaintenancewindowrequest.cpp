@@ -27,10 +27,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::DeleteMaintenanceWindowRequest
- *
  * \brief The DeleteMaintenanceWindowRequest class provides an interface for SSM DeleteMaintenanceWindow requests.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -61,9 +60,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new DeleteMaintenanceWindowRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteMaintenanceWindowRequest::DeleteMaintenanceWindowRequest(const DeleteMaintenanceWindowRequest &other)
     : SSMRequest(new DeleteMaintenanceWindowRequestPrivate(*other.d_func(), this))
@@ -72,7 +69,7 @@ DeleteMaintenanceWindowRequest::DeleteMaintenanceWindowRequest(const DeleteMaint
 }
 
 /*!
- * @brief  Constructs a new DeleteMaintenanceWindowRequest object.
+ * Constructs a DeleteMaintenanceWindowRequest object.
  */
 DeleteMaintenanceWindowRequest::DeleteMaintenanceWindowRequest()
     : SSMRequest(new DeleteMaintenanceWindowRequestPrivate(SSMRequest::DeleteMaintenanceWindowAction, this))
@@ -90,14 +87,9 @@ bool DeleteMaintenanceWindowRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteMaintenanceWindowResponse object.
+ * Returns a DeleteMaintenanceWindowResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteMaintenanceWindowResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SSMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteMaintenanceWindowRequest::response(QNetworkReply * const reply) const
 {
@@ -105,20 +97,17 @@ QtAws::Core::AwsAbstractResponse * DeleteMaintenanceWindowRequest::response(QNet
 }
 
 /*!
- * @internal
+ * \class QtAws::SSM::DeleteMaintenanceWindowRequestPrivate
+ * \brief The DeleteMaintenanceWindowRequestPrivate class provides private implementation for DeleteMaintenanceWindowRequest.
+ * \internal
  *
- * @class  DeleteMaintenanceWindowRequestPrivate
- *
- * @brief  Private implementation for DeleteMaintenanceWindowRequest.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteMaintenanceWindowRequestPrivate object.
- *
- * @param  action  SSM action being performed.
- * @param  q       Pointer to this object's public DeleteMaintenanceWindowRequest instance.
+ * Constructs a DeleteMaintenanceWindowRequestPrivate object for SSM \a action with,
+ * public implementation \a q.
  */
 DeleteMaintenanceWindowRequestPrivate::DeleteMaintenanceWindowRequestPrivate(
     const SSMRequest::Action action, DeleteMaintenanceWindowRequest * const q)
@@ -128,15 +117,10 @@ DeleteMaintenanceWindowRequestPrivate::DeleteMaintenanceWindowRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteMaintenanceWindowRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteMaintenanceWindowRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteMaintenanceWindowRequest instance.
  */
 DeleteMaintenanceWindowRequestPrivate::DeleteMaintenanceWindowRequestPrivate(
     const DeleteMaintenanceWindowRequestPrivate &other, DeleteMaintenanceWindowRequest * const q)

@@ -27,19 +27,16 @@ namespace Pinpoint {
 
 /*!
  * \class QtAws::Pinpoint::GetCampaignVersionRequest
- *
  * \brief The GetCampaignVersionRequest class provides an interface for Pinpoint GetCampaignVersion requests.
  *
- * \ingroup Pinpoint
+ * \inmodule QtAwsPinpoint
  *
  *
  * \sa PinpointClient::getCampaignVersion
  */
 
 /*!
- * @brief  Constructs a new GetCampaignVersionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetCampaignVersionRequest::GetCampaignVersionRequest(const GetCampaignVersionRequest &other)
     : PinpointRequest(new GetCampaignVersionRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ GetCampaignVersionRequest::GetCampaignVersionRequest(const GetCampaignVersionReq
 }
 
 /*!
- * @brief  Constructs a new GetCampaignVersionRequest object.
+ * Constructs a GetCampaignVersionRequest object.
  */
 GetCampaignVersionRequest::GetCampaignVersionRequest()
     : PinpointRequest(new GetCampaignVersionRequestPrivate(PinpointRequest::GetCampaignVersionAction, this))
@@ -66,14 +63,9 @@ bool GetCampaignVersionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetCampaignVersionResponse object.
+ * Returns a GetCampaignVersionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetCampaignVersionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  PinpointClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetCampaignVersionRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * GetCampaignVersionRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::Pinpoint::GetCampaignVersionRequestPrivate
+ * \brief The GetCampaignVersionRequestPrivate class provides private implementation for GetCampaignVersionRequest.
+ * \internal
  *
- * @class  GetCampaignVersionRequestPrivate
- *
- * @brief  Private implementation for GetCampaignVersionRequest.
+ * \inmodule QtAwsPinpoint
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetCampaignVersionRequestPrivate object.
- *
- * @param  action  Pinpoint action being performed.
- * @param  q       Pointer to this object's public GetCampaignVersionRequest instance.
+ * Constructs a GetCampaignVersionRequestPrivate object for Pinpoint \a action with,
+ * public implementation \a q.
  */
 GetCampaignVersionRequestPrivate::GetCampaignVersionRequestPrivate(
     const PinpointRequest::Action action, GetCampaignVersionRequest * const q)
@@ -104,15 +93,10 @@ GetCampaignVersionRequestPrivate::GetCampaignVersionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetCampaignVersionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetCampaignVersionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetCampaignVersionRequest instance.
  */
 GetCampaignVersionRequestPrivate::GetCampaignVersionRequestPrivate(
     const GetCampaignVersionRequestPrivate &other, GetCampaignVersionRequest * const q)

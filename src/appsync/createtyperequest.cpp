@@ -27,10 +27,9 @@ namespace AppSync {
 
 /*!
  * \class QtAws::AppSync::CreateTypeRequest
- *
  * \brief The CreateTypeRequest class provides an interface for AppSync CreateType requests.
  *
- * \ingroup AppSync
+ * \inmodule QtAwsAppSync
  *
  *  AWS AppSync provides API actions for creating and interacting with data sources using GraphQL from your
  *
@@ -38,9 +37,7 @@ namespace AppSync {
  */
 
 /*!
- * @brief  Constructs a new CreateTypeRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateTypeRequest::CreateTypeRequest(const CreateTypeRequest &other)
     : AppSyncRequest(new CreateTypeRequestPrivate(*other.d_func(), this))
@@ -49,7 +46,7 @@ CreateTypeRequest::CreateTypeRequest(const CreateTypeRequest &other)
 }
 
 /*!
- * @brief  Constructs a new CreateTypeRequest object.
+ * Constructs a CreateTypeRequest object.
  */
 CreateTypeRequest::CreateTypeRequest()
     : AppSyncRequest(new CreateTypeRequestPrivate(AppSyncRequest::CreateTypeAction, this))
@@ -67,14 +64,9 @@ bool CreateTypeRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateTypeResponse object.
+ * Returns a CreateTypeResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateTypeResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AppSyncClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateTypeRequest::response(QNetworkReply * const reply) const
 {
@@ -82,20 +74,17 @@ QtAws::Core::AwsAbstractResponse * CreateTypeRequest::response(QNetworkReply * c
 }
 
 /*!
- * @internal
+ * \class QtAws::AppSync::CreateTypeRequestPrivate
+ * \brief The CreateTypeRequestPrivate class provides private implementation for CreateTypeRequest.
+ * \internal
  *
- * @class  CreateTypeRequestPrivate
- *
- * @brief  Private implementation for CreateTypeRequest.
+ * \inmodule QtAwsAppSync
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateTypeRequestPrivate object.
- *
- * @param  action  AppSync action being performed.
- * @param  q       Pointer to this object's public CreateTypeRequest instance.
+ * Constructs a CreateTypeRequestPrivate object for AppSync \a action with,
+ * public implementation \a q.
  */
 CreateTypeRequestPrivate::CreateTypeRequestPrivate(
     const AppSyncRequest::Action action, CreateTypeRequest * const q)
@@ -105,15 +94,10 @@ CreateTypeRequestPrivate::CreateTypeRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateTypeRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateTypeRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateTypeRequest instance.
  */
 CreateTypeRequestPrivate::CreateTypeRequestPrivate(
     const CreateTypeRequestPrivate &other, CreateTypeRequest * const q)

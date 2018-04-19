@@ -27,10 +27,9 @@ namespace MediaStore {
 
 /*!
  * \class QtAws::MediaStore::ListContainersRequest
- *
  * \brief The ListContainersRequest class provides an interface for MediaStore ListContainers requests.
  *
- * \ingroup MediaStore
+ * \inmodule QtAwsMediaStore
  *
  *  An AWS Elemental MediaStore container is a namespace that holds folders and objects. You use a container endpoint to
  *  create, read, and delete objects.
@@ -39,9 +38,7 @@ namespace MediaStore {
  */
 
 /*!
- * @brief  Constructs a new ListContainersRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListContainersRequest::ListContainersRequest(const ListContainersRequest &other)
     : MediaStoreRequest(new ListContainersRequestPrivate(*other.d_func(), this))
@@ -50,7 +47,7 @@ ListContainersRequest::ListContainersRequest(const ListContainersRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ListContainersRequest object.
+ * Constructs a ListContainersRequest object.
  */
 ListContainersRequest::ListContainersRequest()
     : MediaStoreRequest(new ListContainersRequestPrivate(MediaStoreRequest::ListContainersAction, this))
@@ -68,14 +65,9 @@ bool ListContainersRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListContainersResponse object.
+ * Returns a ListContainersResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListContainersResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MediaStoreClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListContainersRequest::response(QNetworkReply * const reply) const
 {
@@ -83,20 +75,17 @@ QtAws::Core::AwsAbstractResponse * ListContainersRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::MediaStore::ListContainersRequestPrivate
+ * \brief The ListContainersRequestPrivate class provides private implementation for ListContainersRequest.
+ * \internal
  *
- * @class  ListContainersRequestPrivate
- *
- * @brief  Private implementation for ListContainersRequest.
+ * \inmodule QtAwsMediaStore
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListContainersRequestPrivate object.
- *
- * @param  action  MediaStore action being performed.
- * @param  q       Pointer to this object's public ListContainersRequest instance.
+ * Constructs a ListContainersRequestPrivate object for MediaStore \a action with,
+ * public implementation \a q.
  */
 ListContainersRequestPrivate::ListContainersRequestPrivate(
     const MediaStoreRequest::Action action, ListContainersRequest * const q)
@@ -106,15 +95,10 @@ ListContainersRequestPrivate::ListContainersRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListContainersRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListContainersRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListContainersRequest instance.
  */
 ListContainersRequestPrivate::ListContainersRequestPrivate(
     const ListContainersRequestPrivate &other, ListContainersRequest * const q)

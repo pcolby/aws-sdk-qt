@@ -27,10 +27,9 @@ namespace Greengrass {
 
 /*!
  * \class QtAws::Greengrass::DisassociateRoleFromGroupRequest
- *
  * \brief The DisassociateRoleFromGroupRequest class provides an interface for Greengrass DisassociateRoleFromGroup requests.
  *
- * \ingroup Greengrass
+ * \inmodule QtAwsGreengrass
  *
  *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
  *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
@@ -40,9 +39,7 @@ namespace Greengrass {
  */
 
 /*!
- * @brief  Constructs a new DisassociateRoleFromGroupRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DisassociateRoleFromGroupRequest::DisassociateRoleFromGroupRequest(const DisassociateRoleFromGroupRequest &other)
     : GreengrassRequest(new DisassociateRoleFromGroupRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ DisassociateRoleFromGroupRequest::DisassociateRoleFromGroupRequest(const Disasso
 }
 
 /*!
- * @brief  Constructs a new DisassociateRoleFromGroupRequest object.
+ * Constructs a DisassociateRoleFromGroupRequest object.
  */
 DisassociateRoleFromGroupRequest::DisassociateRoleFromGroupRequest()
     : GreengrassRequest(new DisassociateRoleFromGroupRequestPrivate(GreengrassRequest::DisassociateRoleFromGroupAction, this))
@@ -69,14 +66,9 @@ bool DisassociateRoleFromGroupRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DisassociateRoleFromGroupResponse object.
+ * Returns a DisassociateRoleFromGroupResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DisassociateRoleFromGroupResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GreengrassClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DisassociateRoleFromGroupRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * DisassociateRoleFromGroupRequest::response(QN
 }
 
 /*!
- * @internal
+ * \class QtAws::Greengrass::DisassociateRoleFromGroupRequestPrivate
+ * \brief The DisassociateRoleFromGroupRequestPrivate class provides private implementation for DisassociateRoleFromGroupRequest.
+ * \internal
  *
- * @class  DisassociateRoleFromGroupRequestPrivate
- *
- * @brief  Private implementation for DisassociateRoleFromGroupRequest.
+ * \inmodule QtAwsGreengrass
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DisassociateRoleFromGroupRequestPrivate object.
- *
- * @param  action  Greengrass action being performed.
- * @param  q       Pointer to this object's public DisassociateRoleFromGroupRequest instance.
+ * Constructs a DisassociateRoleFromGroupRequestPrivate object for Greengrass \a action with,
+ * public implementation \a q.
  */
 DisassociateRoleFromGroupRequestPrivate::DisassociateRoleFromGroupRequestPrivate(
     const GreengrassRequest::Action action, DisassociateRoleFromGroupRequest * const q)
@@ -107,15 +96,10 @@ DisassociateRoleFromGroupRequestPrivate::DisassociateRoleFromGroupRequestPrivate
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DisassociateRoleFromGroupRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DisassociateRoleFromGroupRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DisassociateRoleFromGroupRequest instance.
  */
 DisassociateRoleFromGroupRequestPrivate::DisassociateRoleFromGroupRequestPrivate(
     const DisassociateRoleFromGroupRequestPrivate &other, DisassociateRoleFromGroupRequest * const q)

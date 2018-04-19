@@ -27,19 +27,16 @@ namespace SageMaker {
 
 /*!
  * \class QtAws::SageMaker::DeleteNotebookInstanceLifecycleConfigRequest
- *
  * \brief The DeleteNotebookInstanceLifecycleConfigRequest class provides an interface for SageMaker DeleteNotebookInstanceLifecycleConfig requests.
  *
- * \ingroup SageMaker
+ * \inmodule QtAwsSageMaker
  *
  *
  * \sa SageMakerClient::deleteNotebookInstanceLifecycleConfig
  */
 
 /*!
- * @brief  Constructs a new DeleteNotebookInstanceLifecycleConfigRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteNotebookInstanceLifecycleConfigRequest::DeleteNotebookInstanceLifecycleConfigRequest(const DeleteNotebookInstanceLifecycleConfigRequest &other)
     : SageMakerRequest(new DeleteNotebookInstanceLifecycleConfigRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ DeleteNotebookInstanceLifecycleConfigRequest::DeleteNotebookInstanceLifecycleCon
 }
 
 /*!
- * @brief  Constructs a new DeleteNotebookInstanceLifecycleConfigRequest object.
+ * Constructs a DeleteNotebookInstanceLifecycleConfigRequest object.
  */
 DeleteNotebookInstanceLifecycleConfigRequest::DeleteNotebookInstanceLifecycleConfigRequest()
     : SageMakerRequest(new DeleteNotebookInstanceLifecycleConfigRequestPrivate(SageMakerRequest::DeleteNotebookInstanceLifecycleConfigAction, this))
@@ -66,14 +63,9 @@ bool DeleteNotebookInstanceLifecycleConfigRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteNotebookInstanceLifecycleConfigResponse object.
+ * Returns a DeleteNotebookInstanceLifecycleConfigResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteNotebookInstanceLifecycleConfigResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SageMakerClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteNotebookInstanceLifecycleConfigRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * DeleteNotebookInstanceLifecycleConfigRequest:
 }
 
 /*!
- * @internal
+ * \class QtAws::SageMaker::DeleteNotebookInstanceLifecycleConfigRequestPrivate
+ * \brief The DeleteNotebookInstanceLifecycleConfigRequestPrivate class provides private implementation for DeleteNotebookInstanceLifecycleConfigRequest.
+ * \internal
  *
- * @class  DeleteNotebookInstanceLifecycleConfigRequestPrivate
- *
- * @brief  Private implementation for DeleteNotebookInstanceLifecycleConfigRequest.
+ * \inmodule QtAwsSageMaker
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteNotebookInstanceLifecycleConfigRequestPrivate object.
- *
- * @param  action  SageMaker action being performed.
- * @param  q       Pointer to this object's public DeleteNotebookInstanceLifecycleConfigRequest instance.
+ * Constructs a DeleteNotebookInstanceLifecycleConfigRequestPrivate object for SageMaker \a action with,
+ * public implementation \a q.
  */
 DeleteNotebookInstanceLifecycleConfigRequestPrivate::DeleteNotebookInstanceLifecycleConfigRequestPrivate(
     const SageMakerRequest::Action action, DeleteNotebookInstanceLifecycleConfigRequest * const q)
@@ -104,15 +93,10 @@ DeleteNotebookInstanceLifecycleConfigRequestPrivate::DeleteNotebookInstanceLifec
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteNotebookInstanceLifecycleConfigRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteNotebookInstanceLifecycleConfigRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteNotebookInstanceLifecycleConfigRequest instance.
  */
 DeleteNotebookInstanceLifecycleConfigRequestPrivate::DeleteNotebookInstanceLifecycleConfigRequestPrivate(
     const DeleteNotebookInstanceLifecycleConfigRequestPrivate &other, DeleteNotebookInstanceLifecycleConfigRequest * const q)

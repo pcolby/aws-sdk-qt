@@ -27,10 +27,9 @@ namespace WAFRegional {
 
 /*!
  * \class QtAws::WAFRegional::UpdateSizeConstraintSetRequest
- *
  * \brief The UpdateSizeConstraintSetRequest class provides an interface for WAFRegional UpdateSizeConstraintSet requests.
  *
- * \ingroup WAFRegional
+ * \inmodule QtAwsWAFRegional
  *
  *  This is the <i>AWS WAF Regional API Reference</i> for using AWS WAF with Elastic Load Balancing (ELB) Application Load
  *  Balancers. The AWS WAF actions and data types listed in the reference are available for protecting Application Load
@@ -44,9 +43,7 @@ namespace WAFRegional {
  */
 
 /*!
- * @brief  Constructs a new UpdateSizeConstraintSetRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateSizeConstraintSetRequest::UpdateSizeConstraintSetRequest(const UpdateSizeConstraintSetRequest &other)
     : WAFRegionalRequest(new UpdateSizeConstraintSetRequestPrivate(*other.d_func(), this))
@@ -55,7 +52,7 @@ UpdateSizeConstraintSetRequest::UpdateSizeConstraintSetRequest(const UpdateSizeC
 }
 
 /*!
- * @brief  Constructs a new UpdateSizeConstraintSetRequest object.
+ * Constructs a UpdateSizeConstraintSetRequest object.
  */
 UpdateSizeConstraintSetRequest::UpdateSizeConstraintSetRequest()
     : WAFRegionalRequest(new UpdateSizeConstraintSetRequestPrivate(WAFRegionalRequest::UpdateSizeConstraintSetAction, this))
@@ -73,14 +70,9 @@ bool UpdateSizeConstraintSetRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateSizeConstraintSetResponse object.
+ * Returns a UpdateSizeConstraintSetResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateSizeConstraintSetResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WAFRegionalClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateSizeConstraintSetRequest::response(QNetworkReply * const reply) const
 {
@@ -88,20 +80,17 @@ QtAws::Core::AwsAbstractResponse * UpdateSizeConstraintSetRequest::response(QNet
 }
 
 /*!
- * @internal
+ * \class QtAws::WAFRegional::UpdateSizeConstraintSetRequestPrivate
+ * \brief The UpdateSizeConstraintSetRequestPrivate class provides private implementation for UpdateSizeConstraintSetRequest.
+ * \internal
  *
- * @class  UpdateSizeConstraintSetRequestPrivate
- *
- * @brief  Private implementation for UpdateSizeConstraintSetRequest.
+ * \inmodule QtAwsWAFRegional
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateSizeConstraintSetRequestPrivate object.
- *
- * @param  action  WAFRegional action being performed.
- * @param  q       Pointer to this object's public UpdateSizeConstraintSetRequest instance.
+ * Constructs a UpdateSizeConstraintSetRequestPrivate object for WAFRegional \a action with,
+ * public implementation \a q.
  */
 UpdateSizeConstraintSetRequestPrivate::UpdateSizeConstraintSetRequestPrivate(
     const WAFRegionalRequest::Action action, UpdateSizeConstraintSetRequest * const q)
@@ -111,15 +100,10 @@ UpdateSizeConstraintSetRequestPrivate::UpdateSizeConstraintSetRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateSizeConstraintSetRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateSizeConstraintSetRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateSizeConstraintSetRequest instance.
  */
 UpdateSizeConstraintSetRequestPrivate::UpdateSizeConstraintSetRequestPrivate(
     const UpdateSizeConstraintSetRequestPrivate &other, UpdateSizeConstraintSetRequest * const q)

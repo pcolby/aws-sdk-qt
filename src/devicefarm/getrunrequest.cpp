@@ -27,10 +27,9 @@ namespace DeviceFarm {
 
 /*!
  * \class QtAws::DeviceFarm::GetRunRequest
- *
  * \brief The GetRunRequest class provides an interface for DeviceFarm GetRun requests.
  *
- * \ingroup DeviceFarm
+ * \inmodule QtAwsDeviceFarm
  *
  *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
  *  phones, tablets, and other devices in the
@@ -39,9 +38,7 @@ namespace DeviceFarm {
  */
 
 /*!
- * @brief  Constructs a new GetRunRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetRunRequest::GetRunRequest(const GetRunRequest &other)
     : DeviceFarmRequest(new GetRunRequestPrivate(*other.d_func(), this))
@@ -50,7 +47,7 @@ GetRunRequest::GetRunRequest(const GetRunRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetRunRequest object.
+ * Constructs a GetRunRequest object.
  */
 GetRunRequest::GetRunRequest()
     : DeviceFarmRequest(new GetRunRequestPrivate(DeviceFarmRequest::GetRunAction, this))
@@ -68,14 +65,9 @@ bool GetRunRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetRunResponse object.
+ * Returns a GetRunResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetRunResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DeviceFarmClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetRunRequest::response(QNetworkReply * const reply) const
 {
@@ -83,20 +75,17 @@ QtAws::Core::AwsAbstractResponse * GetRunRequest::response(QNetworkReply * const
 }
 
 /*!
- * @internal
+ * \class QtAws::DeviceFarm::GetRunRequestPrivate
+ * \brief The GetRunRequestPrivate class provides private implementation for GetRunRequest.
+ * \internal
  *
- * @class  GetRunRequestPrivate
- *
- * @brief  Private implementation for GetRunRequest.
+ * \inmodule QtAwsDeviceFarm
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetRunRequestPrivate object.
- *
- * @param  action  DeviceFarm action being performed.
- * @param  q       Pointer to this object's public GetRunRequest instance.
+ * Constructs a GetRunRequestPrivate object for DeviceFarm \a action with,
+ * public implementation \a q.
  */
 GetRunRequestPrivate::GetRunRequestPrivate(
     const DeviceFarmRequest::Action action, GetRunRequest * const q)
@@ -106,15 +95,10 @@ GetRunRequestPrivate::GetRunRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetRunRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetRunRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetRunRequest instance.
  */
 GetRunRequestPrivate::GetRunRequestPrivate(
     const GetRunRequestPrivate &other, GetRunRequest * const q)

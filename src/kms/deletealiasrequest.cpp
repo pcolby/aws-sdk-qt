@@ -27,10 +27,9 @@ namespace KMS {
 
 /*!
  * \class QtAws::KMS::DeleteAliasRequest
- *
  * \brief The DeleteAliasRequest class provides an interface for KMS DeleteAlias requests.
  *
- * \ingroup KMS
+ * \inmodule QtAwsKMS
  *
  *  <fullname>AWS Key Management Service</fullname>
  * 
@@ -136,9 +135,7 @@ namespace KMS {
  */
 
 /*!
- * @brief  Constructs a new DeleteAliasRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteAliasRequest::DeleteAliasRequest(const DeleteAliasRequest &other)
     : KMSRequest(new DeleteAliasRequestPrivate(*other.d_func(), this))
@@ -147,7 +144,7 @@ DeleteAliasRequest::DeleteAliasRequest(const DeleteAliasRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DeleteAliasRequest object.
+ * Constructs a DeleteAliasRequest object.
  */
 DeleteAliasRequest::DeleteAliasRequest()
     : KMSRequest(new DeleteAliasRequestPrivate(KMSRequest::DeleteAliasAction, this))
@@ -165,14 +162,9 @@ bool DeleteAliasRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteAliasResponse object.
+ * Returns a DeleteAliasResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteAliasResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  KMSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteAliasRequest::response(QNetworkReply * const reply) const
 {
@@ -180,20 +172,17 @@ QtAws::Core::AwsAbstractResponse * DeleteAliasRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::KMS::DeleteAliasRequestPrivate
+ * \brief The DeleteAliasRequestPrivate class provides private implementation for DeleteAliasRequest.
+ * \internal
  *
- * @class  DeleteAliasRequestPrivate
- *
- * @brief  Private implementation for DeleteAliasRequest.
+ * \inmodule QtAwsKMS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteAliasRequestPrivate object.
- *
- * @param  action  KMS action being performed.
- * @param  q       Pointer to this object's public DeleteAliasRequest instance.
+ * Constructs a DeleteAliasRequestPrivate object for KMS \a action with,
+ * public implementation \a q.
  */
 DeleteAliasRequestPrivate::DeleteAliasRequestPrivate(
     const KMSRequest::Action action, DeleteAliasRequest * const q)
@@ -203,15 +192,10 @@ DeleteAliasRequestPrivate::DeleteAliasRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteAliasRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteAliasRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteAliasRequest instance.
  */
 DeleteAliasRequestPrivate::DeleteAliasRequestPrivate(
     const DeleteAliasRequestPrivate &other, DeleteAliasRequest * const q)

@@ -27,10 +27,9 @@ namespace AlexaForBusiness {
 
 /*!
  * \class QtAws::AlexaForBusiness::DeleteSkillGroupRequest
- *
  * \brief The DeleteSkillGroupRequest class provides an interface for AlexaForBusiness DeleteSkillGroup requests.
  *
- * \ingroup AlexaForBusiness
+ * \inmodule QtAwsAlexaForBusiness
  *
  *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
  *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
@@ -42,9 +41,7 @@ namespace AlexaForBusiness {
  */
 
 /*!
- * @brief  Constructs a new DeleteSkillGroupRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteSkillGroupRequest::DeleteSkillGroupRequest(const DeleteSkillGroupRequest &other)
     : AlexaForBusinessRequest(new DeleteSkillGroupRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ DeleteSkillGroupRequest::DeleteSkillGroupRequest(const DeleteSkillGroupRequest &
 }
 
 /*!
- * @brief  Constructs a new DeleteSkillGroupRequest object.
+ * Constructs a DeleteSkillGroupRequest object.
  */
 DeleteSkillGroupRequest::DeleteSkillGroupRequest()
     : AlexaForBusinessRequest(new DeleteSkillGroupRequestPrivate(AlexaForBusinessRequest::DeleteSkillGroupAction, this))
@@ -71,14 +68,9 @@ bool DeleteSkillGroupRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteSkillGroupResponse object.
+ * Returns a DeleteSkillGroupResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteSkillGroupResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AlexaForBusinessClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteSkillGroupRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * DeleteSkillGroupRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::AlexaForBusiness::DeleteSkillGroupRequestPrivate
+ * \brief The DeleteSkillGroupRequestPrivate class provides private implementation for DeleteSkillGroupRequest.
+ * \internal
  *
- * @class  DeleteSkillGroupRequestPrivate
- *
- * @brief  Private implementation for DeleteSkillGroupRequest.
+ * \inmodule QtAwsAlexaForBusiness
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteSkillGroupRequestPrivate object.
- *
- * @param  action  AlexaForBusiness action being performed.
- * @param  q       Pointer to this object's public DeleteSkillGroupRequest instance.
+ * Constructs a DeleteSkillGroupRequestPrivate object for AlexaForBusiness \a action with,
+ * public implementation \a q.
  */
 DeleteSkillGroupRequestPrivate::DeleteSkillGroupRequestPrivate(
     const AlexaForBusinessRequest::Action action, DeleteSkillGroupRequest * const q)
@@ -109,15 +98,10 @@ DeleteSkillGroupRequestPrivate::DeleteSkillGroupRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteSkillGroupRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteSkillGroupRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteSkillGroupRequest instance.
  */
 DeleteSkillGroupRequestPrivate::DeleteSkillGroupRequestPrivate(
     const DeleteSkillGroupRequestPrivate &other, DeleteSkillGroupRequest * const q)

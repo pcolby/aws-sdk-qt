@@ -27,19 +27,16 @@ namespace KinesisAnalytics {
 
 /*!
  * \class QtAws::KinesisAnalytics::DeleteApplicationOutputRequest
- *
  * \brief The DeleteApplicationOutputRequest class provides an interface for KinesisAnalytics DeleteApplicationOutput requests.
  *
- * \ingroup KinesisAnalytics
+ * \inmodule QtAwsKinesisAnalytics
  *
  *
  * \sa KinesisAnalyticsClient::deleteApplicationOutput
  */
 
 /*!
- * @brief  Constructs a new DeleteApplicationOutputRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteApplicationOutputRequest::DeleteApplicationOutputRequest(const DeleteApplicationOutputRequest &other)
     : KinesisAnalyticsRequest(new DeleteApplicationOutputRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ DeleteApplicationOutputRequest::DeleteApplicationOutputRequest(const DeleteAppli
 }
 
 /*!
- * @brief  Constructs a new DeleteApplicationOutputRequest object.
+ * Constructs a DeleteApplicationOutputRequest object.
  */
 DeleteApplicationOutputRequest::DeleteApplicationOutputRequest()
     : KinesisAnalyticsRequest(new DeleteApplicationOutputRequestPrivate(KinesisAnalyticsRequest::DeleteApplicationOutputAction, this))
@@ -66,14 +63,9 @@ bool DeleteApplicationOutputRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteApplicationOutputResponse object.
+ * Returns a DeleteApplicationOutputResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteApplicationOutputResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  KinesisAnalyticsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteApplicationOutputRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * DeleteApplicationOutputRequest::response(QNet
 }
 
 /*!
- * @internal
+ * \class QtAws::KinesisAnalytics::DeleteApplicationOutputRequestPrivate
+ * \brief The DeleteApplicationOutputRequestPrivate class provides private implementation for DeleteApplicationOutputRequest.
+ * \internal
  *
- * @class  DeleteApplicationOutputRequestPrivate
- *
- * @brief  Private implementation for DeleteApplicationOutputRequest.
+ * \inmodule QtAwsKinesisAnalytics
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteApplicationOutputRequestPrivate object.
- *
- * @param  action  KinesisAnalytics action being performed.
- * @param  q       Pointer to this object's public DeleteApplicationOutputRequest instance.
+ * Constructs a DeleteApplicationOutputRequestPrivate object for KinesisAnalytics \a action with,
+ * public implementation \a q.
  */
 DeleteApplicationOutputRequestPrivate::DeleteApplicationOutputRequestPrivate(
     const KinesisAnalyticsRequest::Action action, DeleteApplicationOutputRequest * const q)
@@ -104,15 +93,10 @@ DeleteApplicationOutputRequestPrivate::DeleteApplicationOutputRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteApplicationOutputRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteApplicationOutputRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteApplicationOutputRequest instance.
  */
 DeleteApplicationOutputRequestPrivate::DeleteApplicationOutputRequestPrivate(
     const DeleteApplicationOutputRequestPrivate &other, DeleteApplicationOutputRequest * const q)

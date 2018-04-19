@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::RunInstancesRequest
- *
  * \brief The RunInstancesRequest class provides an interface for EC2 RunInstances requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new RunInstancesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 RunInstancesRequest::RunInstancesRequest(const RunInstancesRequest &other)
     : EC2Request(new RunInstancesRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ RunInstancesRequest::RunInstancesRequest(const RunInstancesRequest &other)
 }
 
 /*!
- * @brief  Constructs a new RunInstancesRequest object.
+ * Constructs a RunInstancesRequest object.
  */
 RunInstancesRequest::RunInstancesRequest()
     : EC2Request(new RunInstancesRequestPrivate(EC2Request::RunInstancesAction, this))
@@ -70,14 +67,9 @@ bool RunInstancesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an RunInstancesResponse object.
+ * Returns a RunInstancesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An RunInstancesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * RunInstancesRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * RunInstancesRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::RunInstancesRequestPrivate
+ * \brief The RunInstancesRequestPrivate class provides private implementation for RunInstancesRequest.
+ * \internal
  *
- * @class  RunInstancesRequestPrivate
- *
- * @brief  Private implementation for RunInstancesRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new RunInstancesRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public RunInstancesRequest instance.
+ * Constructs a RunInstancesRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 RunInstancesRequestPrivate::RunInstancesRequestPrivate(
     const EC2Request::Action action, RunInstancesRequest * const q)
@@ -108,15 +97,10 @@ RunInstancesRequestPrivate::RunInstancesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RunInstancesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the RunInstancesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public RunInstancesRequest instance.
  */
 RunInstancesRequestPrivate::RunInstancesRequestPrivate(
     const RunInstancesRequestPrivate &other, RunInstancesRequest * const q)

@@ -27,10 +27,9 @@ namespace ApplicationDiscoveryService {
 
 /*!
  * \class QtAws::ApplicationDiscoveryService::ListServerNeighborsRequest
- *
  * \brief The ListServerNeighborsRequest class provides an interface for ApplicationDiscoveryService ListServerNeighbors requests.
  *
- * \ingroup ApplicationDiscoveryService
+ * \inmodule QtAwsApplicationDiscoveryService
  *
  *  <fullname>AWS Application Discovery Service</fullname>
  * 
@@ -101,9 +100,7 @@ namespace ApplicationDiscoveryService {
  */
 
 /*!
- * @brief  Constructs a new ListServerNeighborsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListServerNeighborsRequest::ListServerNeighborsRequest(const ListServerNeighborsRequest &other)
     : ApplicationDiscoveryServiceRequest(new ListServerNeighborsRequestPrivate(*other.d_func(), this))
@@ -112,7 +109,7 @@ ListServerNeighborsRequest::ListServerNeighborsRequest(const ListServerNeighbors
 }
 
 /*!
- * @brief  Constructs a new ListServerNeighborsRequest object.
+ * Constructs a ListServerNeighborsRequest object.
  */
 ListServerNeighborsRequest::ListServerNeighborsRequest()
     : ApplicationDiscoveryServiceRequest(new ListServerNeighborsRequestPrivate(ApplicationDiscoveryServiceRequest::ListServerNeighborsAction, this))
@@ -130,14 +127,9 @@ bool ListServerNeighborsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListServerNeighborsResponse object.
+ * Returns a ListServerNeighborsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListServerNeighborsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ApplicationDiscoveryServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListServerNeighborsRequest::response(QNetworkReply * const reply) const
 {
@@ -145,20 +137,17 @@ QtAws::Core::AwsAbstractResponse * ListServerNeighborsRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::ApplicationDiscoveryService::ListServerNeighborsRequestPrivate
+ * \brief The ListServerNeighborsRequestPrivate class provides private implementation for ListServerNeighborsRequest.
+ * \internal
  *
- * @class  ListServerNeighborsRequestPrivate
- *
- * @brief  Private implementation for ListServerNeighborsRequest.
+ * \inmodule QtAwsApplicationDiscoveryService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListServerNeighborsRequestPrivate object.
- *
- * @param  action  ApplicationDiscoveryService action being performed.
- * @param  q       Pointer to this object's public ListServerNeighborsRequest instance.
+ * Constructs a ListServerNeighborsRequestPrivate object for ApplicationDiscoveryService \a action with,
+ * public implementation \a q.
  */
 ListServerNeighborsRequestPrivate::ListServerNeighborsRequestPrivate(
     const ApplicationDiscoveryServiceRequest::Action action, ListServerNeighborsRequest * const q)
@@ -168,15 +157,10 @@ ListServerNeighborsRequestPrivate::ListServerNeighborsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListServerNeighborsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListServerNeighborsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListServerNeighborsRequest instance.
  */
 ListServerNeighborsRequestPrivate::ListServerNeighborsRequestPrivate(
     const ListServerNeighborsRequestPrivate &other, ListServerNeighborsRequest * const q)

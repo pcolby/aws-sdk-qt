@@ -27,10 +27,9 @@ namespace EMR {
 
 /*!
  * \class QtAws::EMR::DeleteSecurityConfigurationRequest
- *
  * \brief The DeleteSecurityConfigurationRequest class provides an interface for EMR DeleteSecurityConfiguration requests.
  *
- * \ingroup EMR
+ * \inmodule QtAwsEMR
  *
  *  Amazon EMR is a web service that makes it easy to process large amounts of data efficiently. Amazon EMR uses Hadoop
  *  processing combined with several AWS products to do tasks such as web indexing, data mining, log file analysis, machine
@@ -40,9 +39,7 @@ namespace EMR {
  */
 
 /*!
- * @brief  Constructs a new DeleteSecurityConfigurationRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteSecurityConfigurationRequest::DeleteSecurityConfigurationRequest(const DeleteSecurityConfigurationRequest &other)
     : EMRRequest(new DeleteSecurityConfigurationRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ DeleteSecurityConfigurationRequest::DeleteSecurityConfigurationRequest(const Del
 }
 
 /*!
- * @brief  Constructs a new DeleteSecurityConfigurationRequest object.
+ * Constructs a DeleteSecurityConfigurationRequest object.
  */
 DeleteSecurityConfigurationRequest::DeleteSecurityConfigurationRequest()
     : EMRRequest(new DeleteSecurityConfigurationRequestPrivate(EMRRequest::DeleteSecurityConfigurationAction, this))
@@ -69,14 +66,9 @@ bool DeleteSecurityConfigurationRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteSecurityConfigurationResponse object.
+ * Returns a DeleteSecurityConfigurationResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteSecurityConfigurationResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EMRClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteSecurityConfigurationRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * DeleteSecurityConfigurationRequest::response(
 }
 
 /*!
- * @internal
+ * \class QtAws::EMR::DeleteSecurityConfigurationRequestPrivate
+ * \brief The DeleteSecurityConfigurationRequestPrivate class provides private implementation for DeleteSecurityConfigurationRequest.
+ * \internal
  *
- * @class  DeleteSecurityConfigurationRequestPrivate
- *
- * @brief  Private implementation for DeleteSecurityConfigurationRequest.
+ * \inmodule QtAwsEMR
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteSecurityConfigurationRequestPrivate object.
- *
- * @param  action  EMR action being performed.
- * @param  q       Pointer to this object's public DeleteSecurityConfigurationRequest instance.
+ * Constructs a DeleteSecurityConfigurationRequestPrivate object for EMR \a action with,
+ * public implementation \a q.
  */
 DeleteSecurityConfigurationRequestPrivate::DeleteSecurityConfigurationRequestPrivate(
     const EMRRequest::Action action, DeleteSecurityConfigurationRequest * const q)
@@ -107,15 +96,10 @@ DeleteSecurityConfigurationRequestPrivate::DeleteSecurityConfigurationRequestPri
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteSecurityConfigurationRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteSecurityConfigurationRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteSecurityConfigurationRequest instance.
  */
 DeleteSecurityConfigurationRequestPrivate::DeleteSecurityConfigurationRequestPrivate(
     const DeleteSecurityConfigurationRequestPrivate &other, DeleteSecurityConfigurationRequest * const q)

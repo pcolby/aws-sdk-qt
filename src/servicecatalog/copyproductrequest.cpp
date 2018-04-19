@@ -27,10 +27,9 @@ namespace ServiceCatalog {
 
 /*!
  * \class QtAws::ServiceCatalog::CopyProductRequest
- *
  * \brief The CopyProductRequest class provides an interface for ServiceCatalog CopyProduct requests.
  *
- * \ingroup ServiceCatalog
+ * \inmodule QtAwsServiceCatalog
  *
  *  <fullname>AWS Service Catalog</fullname>
  * 
@@ -43,9 +42,7 @@ namespace ServiceCatalog {
  */
 
 /*!
- * @brief  Constructs a new CopyProductRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CopyProductRequest::CopyProductRequest(const CopyProductRequest &other)
     : ServiceCatalogRequest(new CopyProductRequestPrivate(*other.d_func(), this))
@@ -54,7 +51,7 @@ CopyProductRequest::CopyProductRequest(const CopyProductRequest &other)
 }
 
 /*!
- * @brief  Constructs a new CopyProductRequest object.
+ * Constructs a CopyProductRequest object.
  */
 CopyProductRequest::CopyProductRequest()
     : ServiceCatalogRequest(new CopyProductRequestPrivate(ServiceCatalogRequest::CopyProductAction, this))
@@ -72,14 +69,9 @@ bool CopyProductRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CopyProductResponse object.
+ * Returns a CopyProductResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CopyProductResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ServiceCatalogClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CopyProductRequest::response(QNetworkReply * const reply) const
 {
@@ -87,20 +79,17 @@ QtAws::Core::AwsAbstractResponse * CopyProductRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::ServiceCatalog::CopyProductRequestPrivate
+ * \brief The CopyProductRequestPrivate class provides private implementation for CopyProductRequest.
+ * \internal
  *
- * @class  CopyProductRequestPrivate
- *
- * @brief  Private implementation for CopyProductRequest.
+ * \inmodule QtAwsServiceCatalog
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CopyProductRequestPrivate object.
- *
- * @param  action  ServiceCatalog action being performed.
- * @param  q       Pointer to this object's public CopyProductRequest instance.
+ * Constructs a CopyProductRequestPrivate object for ServiceCatalog \a action with,
+ * public implementation \a q.
  */
 CopyProductRequestPrivate::CopyProductRequestPrivate(
     const ServiceCatalogRequest::Action action, CopyProductRequest * const q)
@@ -110,15 +99,10 @@ CopyProductRequestPrivate::CopyProductRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CopyProductRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CopyProductRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CopyProductRequest instance.
  */
 CopyProductRequestPrivate::CopyProductRequestPrivate(
     const CopyProductRequestPrivate &other, CopyProductRequest * const q)

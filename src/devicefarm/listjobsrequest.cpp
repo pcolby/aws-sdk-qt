@@ -27,10 +27,9 @@ namespace DeviceFarm {
 
 /*!
  * \class QtAws::DeviceFarm::ListJobsRequest
- *
  * \brief The ListJobsRequest class provides an interface for DeviceFarm ListJobs requests.
  *
- * \ingroup DeviceFarm
+ * \inmodule QtAwsDeviceFarm
  *
  *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
  *  phones, tablets, and other devices in the
@@ -39,9 +38,7 @@ namespace DeviceFarm {
  */
 
 /*!
- * @brief  Constructs a new ListJobsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListJobsRequest::ListJobsRequest(const ListJobsRequest &other)
     : DeviceFarmRequest(new ListJobsRequestPrivate(*other.d_func(), this))
@@ -50,7 +47,7 @@ ListJobsRequest::ListJobsRequest(const ListJobsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ListJobsRequest object.
+ * Constructs a ListJobsRequest object.
  */
 ListJobsRequest::ListJobsRequest()
     : DeviceFarmRequest(new ListJobsRequestPrivate(DeviceFarmRequest::ListJobsAction, this))
@@ -68,14 +65,9 @@ bool ListJobsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListJobsResponse object.
+ * Returns a ListJobsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListJobsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DeviceFarmClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListJobsRequest::response(QNetworkReply * const reply) const
 {
@@ -83,20 +75,17 @@ QtAws::Core::AwsAbstractResponse * ListJobsRequest::response(QNetworkReply * con
 }
 
 /*!
- * @internal
+ * \class QtAws::DeviceFarm::ListJobsRequestPrivate
+ * \brief The ListJobsRequestPrivate class provides private implementation for ListJobsRequest.
+ * \internal
  *
- * @class  ListJobsRequestPrivate
- *
- * @brief  Private implementation for ListJobsRequest.
+ * \inmodule QtAwsDeviceFarm
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListJobsRequestPrivate object.
- *
- * @param  action  DeviceFarm action being performed.
- * @param  q       Pointer to this object's public ListJobsRequest instance.
+ * Constructs a ListJobsRequestPrivate object for DeviceFarm \a action with,
+ * public implementation \a q.
  */
 ListJobsRequestPrivate::ListJobsRequestPrivate(
     const DeviceFarmRequest::Action action, ListJobsRequest * const q)
@@ -106,15 +95,10 @@ ListJobsRequestPrivate::ListJobsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListJobsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListJobsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListJobsRequest instance.
  */
 ListJobsRequestPrivate::ListJobsRequestPrivate(
     const ListJobsRequestPrivate &other, ListJobsRequest * const q)

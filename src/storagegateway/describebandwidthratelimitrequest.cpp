@@ -27,10 +27,9 @@ namespace StorageGateway {
 
 /*!
  * \class QtAws::StorageGateway::DescribeBandwidthRateLimitRequest
- *
  * \brief The DescribeBandwidthRateLimitRequest class provides an interface for StorageGateway DescribeBandwidthRateLimit requests.
  *
- * \ingroup StorageGateway
+ * \inmodule QtAwsStorageGateway
  *
  *  <fullname>AWS Storage Gateway Service</fullname>
  * 
@@ -106,9 +105,7 @@ namespace StorageGateway {
  */
 
 /*!
- * @brief  Constructs a new DescribeBandwidthRateLimitRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeBandwidthRateLimitRequest::DescribeBandwidthRateLimitRequest(const DescribeBandwidthRateLimitRequest &other)
     : StorageGatewayRequest(new DescribeBandwidthRateLimitRequestPrivate(*other.d_func(), this))
@@ -117,7 +114,7 @@ DescribeBandwidthRateLimitRequest::DescribeBandwidthRateLimitRequest(const Descr
 }
 
 /*!
- * @brief  Constructs a new DescribeBandwidthRateLimitRequest object.
+ * Constructs a DescribeBandwidthRateLimitRequest object.
  */
 DescribeBandwidthRateLimitRequest::DescribeBandwidthRateLimitRequest()
     : StorageGatewayRequest(new DescribeBandwidthRateLimitRequestPrivate(StorageGatewayRequest::DescribeBandwidthRateLimitAction, this))
@@ -135,14 +132,9 @@ bool DescribeBandwidthRateLimitRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeBandwidthRateLimitResponse object.
+ * Returns a DescribeBandwidthRateLimitResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeBandwidthRateLimitResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  StorageGatewayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeBandwidthRateLimitRequest::response(QNetworkReply * const reply) const
 {
@@ -150,20 +142,17 @@ QtAws::Core::AwsAbstractResponse * DescribeBandwidthRateLimitRequest::response(Q
 }
 
 /*!
- * @internal
+ * \class QtAws::StorageGateway::DescribeBandwidthRateLimitRequestPrivate
+ * \brief The DescribeBandwidthRateLimitRequestPrivate class provides private implementation for DescribeBandwidthRateLimitRequest.
+ * \internal
  *
- * @class  DescribeBandwidthRateLimitRequestPrivate
- *
- * @brief  Private implementation for DescribeBandwidthRateLimitRequest.
+ * \inmodule QtAwsStorageGateway
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeBandwidthRateLimitRequestPrivate object.
- *
- * @param  action  StorageGateway action being performed.
- * @param  q       Pointer to this object's public DescribeBandwidthRateLimitRequest instance.
+ * Constructs a DescribeBandwidthRateLimitRequestPrivate object for StorageGateway \a action with,
+ * public implementation \a q.
  */
 DescribeBandwidthRateLimitRequestPrivate::DescribeBandwidthRateLimitRequestPrivate(
     const StorageGatewayRequest::Action action, DescribeBandwidthRateLimitRequest * const q)
@@ -173,15 +162,10 @@ DescribeBandwidthRateLimitRequestPrivate::DescribeBandwidthRateLimitRequestPriva
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeBandwidthRateLimitRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeBandwidthRateLimitRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeBandwidthRateLimitRequest instance.
  */
 DescribeBandwidthRateLimitRequestPrivate::DescribeBandwidthRateLimitRequestPrivate(
     const DescribeBandwidthRateLimitRequestPrivate &other, DescribeBandwidthRateLimitRequest * const q)

@@ -27,10 +27,9 @@ namespace SWF {
 
 /*!
  * \class QtAws::SWF::RespondDecisionTaskCompletedRequest
- *
  * \brief The RespondDecisionTaskCompletedRequest class provides an interface for SWF RespondDecisionTaskCompleted requests.
  *
- * \ingroup SWF
+ * \inmodule QtAwsSWF
  *
  *  <fullname>Amazon Simple Workflow Service</fullname>
  * 
@@ -53,9 +52,7 @@ namespace SWF {
  */
 
 /*!
- * @brief  Constructs a new RespondDecisionTaskCompletedRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 RespondDecisionTaskCompletedRequest::RespondDecisionTaskCompletedRequest(const RespondDecisionTaskCompletedRequest &other)
     : SWFRequest(new RespondDecisionTaskCompletedRequestPrivate(*other.d_func(), this))
@@ -64,7 +61,7 @@ RespondDecisionTaskCompletedRequest::RespondDecisionTaskCompletedRequest(const R
 }
 
 /*!
- * @brief  Constructs a new RespondDecisionTaskCompletedRequest object.
+ * Constructs a RespondDecisionTaskCompletedRequest object.
  */
 RespondDecisionTaskCompletedRequest::RespondDecisionTaskCompletedRequest()
     : SWFRequest(new RespondDecisionTaskCompletedRequestPrivate(SWFRequest::RespondDecisionTaskCompletedAction, this))
@@ -82,14 +79,9 @@ bool RespondDecisionTaskCompletedRequest::isValid() const
 
 
 /*!
- * @brief  Construct an RespondDecisionTaskCompletedResponse object.
+ * Returns a RespondDecisionTaskCompletedResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An RespondDecisionTaskCompletedResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SWFClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * RespondDecisionTaskCompletedRequest::response(QNetworkReply * const reply) const
 {
@@ -97,20 +89,17 @@ QtAws::Core::AwsAbstractResponse * RespondDecisionTaskCompletedRequest::response
 }
 
 /*!
- * @internal
+ * \class QtAws::SWF::RespondDecisionTaskCompletedRequestPrivate
+ * \brief The RespondDecisionTaskCompletedRequestPrivate class provides private implementation for RespondDecisionTaskCompletedRequest.
+ * \internal
  *
- * @class  RespondDecisionTaskCompletedRequestPrivate
- *
- * @brief  Private implementation for RespondDecisionTaskCompletedRequest.
+ * \inmodule QtAwsSWF
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new RespondDecisionTaskCompletedRequestPrivate object.
- *
- * @param  action  SWF action being performed.
- * @param  q       Pointer to this object's public RespondDecisionTaskCompletedRequest instance.
+ * Constructs a RespondDecisionTaskCompletedRequestPrivate object for SWF \a action with,
+ * public implementation \a q.
  */
 RespondDecisionTaskCompletedRequestPrivate::RespondDecisionTaskCompletedRequestPrivate(
     const SWFRequest::Action action, RespondDecisionTaskCompletedRequest * const q)
@@ -120,15 +109,10 @@ RespondDecisionTaskCompletedRequestPrivate::RespondDecisionTaskCompletedRequestP
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RespondDecisionTaskCompletedRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the RespondDecisionTaskCompletedRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public RespondDecisionTaskCompletedRequest instance.
  */
 RespondDecisionTaskCompletedRequestPrivate::RespondDecisionTaskCompletedRequestPrivate(
     const RespondDecisionTaskCompletedRequestPrivate &other, RespondDecisionTaskCompletedRequest * const q)

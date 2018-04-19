@@ -27,19 +27,16 @@ namespace SageMaker {
 
 /*!
  * \class QtAws::SageMaker::StopTrainingJobRequest
- *
  * \brief The StopTrainingJobRequest class provides an interface for SageMaker StopTrainingJob requests.
  *
- * \ingroup SageMaker
+ * \inmodule QtAwsSageMaker
  *
  *
  * \sa SageMakerClient::stopTrainingJob
  */
 
 /*!
- * @brief  Constructs a new StopTrainingJobRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 StopTrainingJobRequest::StopTrainingJobRequest(const StopTrainingJobRequest &other)
     : SageMakerRequest(new StopTrainingJobRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ StopTrainingJobRequest::StopTrainingJobRequest(const StopTrainingJobRequest &oth
 }
 
 /*!
- * @brief  Constructs a new StopTrainingJobRequest object.
+ * Constructs a StopTrainingJobRequest object.
  */
 StopTrainingJobRequest::StopTrainingJobRequest()
     : SageMakerRequest(new StopTrainingJobRequestPrivate(SageMakerRequest::StopTrainingJobAction, this))
@@ -66,14 +63,9 @@ bool StopTrainingJobRequest::isValid() const
 
 
 /*!
- * @brief  Construct an StopTrainingJobResponse object.
+ * Returns a StopTrainingJobResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An StopTrainingJobResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SageMakerClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * StopTrainingJobRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * StopTrainingJobRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::SageMaker::StopTrainingJobRequestPrivate
+ * \brief The StopTrainingJobRequestPrivate class provides private implementation for StopTrainingJobRequest.
+ * \internal
  *
- * @class  StopTrainingJobRequestPrivate
- *
- * @brief  Private implementation for StopTrainingJobRequest.
+ * \inmodule QtAwsSageMaker
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new StopTrainingJobRequestPrivate object.
- *
- * @param  action  SageMaker action being performed.
- * @param  q       Pointer to this object's public StopTrainingJobRequest instance.
+ * Constructs a StopTrainingJobRequestPrivate object for SageMaker \a action with,
+ * public implementation \a q.
  */
 StopTrainingJobRequestPrivate::StopTrainingJobRequestPrivate(
     const SageMakerRequest::Action action, StopTrainingJobRequest * const q)
@@ -104,15 +93,10 @@ StopTrainingJobRequestPrivate::StopTrainingJobRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StopTrainingJobRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the StopTrainingJobRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public StopTrainingJobRequest instance.
  */
 StopTrainingJobRequestPrivate::StopTrainingJobRequestPrivate(
     const StopTrainingJobRequestPrivate &other, StopTrainingJobRequest * const q)

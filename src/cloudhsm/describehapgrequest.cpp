@@ -27,10 +27,9 @@ namespace CloudHSM {
 
 /*!
  * \class QtAws::CloudHSM::DescribeHapgRequest
- *
  * \brief The DescribeHapgRequest class provides an interface for CloudHSM DescribeHapg requests.
  *
- * \ingroup CloudHSM
+ * \inmodule QtAwsCloudHSM
  *
  *  <fullname>AWS CloudHSM Service</fullname>
  * 
@@ -49,9 +48,7 @@ namespace CloudHSM {
  */
 
 /*!
- * @brief  Constructs a new DescribeHapgRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeHapgRequest::DescribeHapgRequest(const DescribeHapgRequest &other)
     : CloudHSMRequest(new DescribeHapgRequestPrivate(*other.d_func(), this))
@@ -60,7 +57,7 @@ DescribeHapgRequest::DescribeHapgRequest(const DescribeHapgRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DescribeHapgRequest object.
+ * Constructs a DescribeHapgRequest object.
  */
 DescribeHapgRequest::DescribeHapgRequest()
     : CloudHSMRequest(new DescribeHapgRequestPrivate(CloudHSMRequest::DescribeHapgAction, this))
@@ -78,14 +75,9 @@ bool DescribeHapgRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeHapgResponse object.
+ * Returns a DescribeHapgResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeHapgResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudHSMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeHapgRequest::response(QNetworkReply * const reply) const
 {
@@ -93,20 +85,17 @@ QtAws::Core::AwsAbstractResponse * DescribeHapgRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudHSM::DescribeHapgRequestPrivate
+ * \brief The DescribeHapgRequestPrivate class provides private implementation for DescribeHapgRequest.
+ * \internal
  *
- * @class  DescribeHapgRequestPrivate
- *
- * @brief  Private implementation for DescribeHapgRequest.
+ * \inmodule QtAwsCloudHSM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeHapgRequestPrivate object.
- *
- * @param  action  CloudHSM action being performed.
- * @param  q       Pointer to this object's public DescribeHapgRequest instance.
+ * Constructs a DescribeHapgRequestPrivate object for CloudHSM \a action with,
+ * public implementation \a q.
  */
 DescribeHapgRequestPrivate::DescribeHapgRequestPrivate(
     const CloudHSMRequest::Action action, DescribeHapgRequest * const q)
@@ -116,15 +105,10 @@ DescribeHapgRequestPrivate::DescribeHapgRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeHapgRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeHapgRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeHapgRequest instance.
  */
 DescribeHapgRequestPrivate::DescribeHapgRequestPrivate(
     const DescribeHapgRequestPrivate &other, DescribeHapgRequest * const q)

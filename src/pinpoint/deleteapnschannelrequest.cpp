@@ -27,19 +27,16 @@ namespace Pinpoint {
 
 /*!
  * \class QtAws::Pinpoint::DeleteApnsChannelRequest
- *
  * \brief The DeleteApnsChannelRequest class provides an interface for Pinpoint DeleteApnsChannel requests.
  *
- * \ingroup Pinpoint
+ * \inmodule QtAwsPinpoint
  *
  *
  * \sa PinpointClient::deleteApnsChannel
  */
 
 /*!
- * @brief  Constructs a new DeleteApnsChannelRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteApnsChannelRequest::DeleteApnsChannelRequest(const DeleteApnsChannelRequest &other)
     : PinpointRequest(new DeleteApnsChannelRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ DeleteApnsChannelRequest::DeleteApnsChannelRequest(const DeleteApnsChannelReques
 }
 
 /*!
- * @brief  Constructs a new DeleteApnsChannelRequest object.
+ * Constructs a DeleteApnsChannelRequest object.
  */
 DeleteApnsChannelRequest::DeleteApnsChannelRequest()
     : PinpointRequest(new DeleteApnsChannelRequestPrivate(PinpointRequest::DeleteApnsChannelAction, this))
@@ -66,14 +63,9 @@ bool DeleteApnsChannelRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteApnsChannelResponse object.
+ * Returns a DeleteApnsChannelResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteApnsChannelResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  PinpointClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteApnsChannelRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * DeleteApnsChannelRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::Pinpoint::DeleteApnsChannelRequestPrivate
+ * \brief The DeleteApnsChannelRequestPrivate class provides private implementation for DeleteApnsChannelRequest.
+ * \internal
  *
- * @class  DeleteApnsChannelRequestPrivate
- *
- * @brief  Private implementation for DeleteApnsChannelRequest.
+ * \inmodule QtAwsPinpoint
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteApnsChannelRequestPrivate object.
- *
- * @param  action  Pinpoint action being performed.
- * @param  q       Pointer to this object's public DeleteApnsChannelRequest instance.
+ * Constructs a DeleteApnsChannelRequestPrivate object for Pinpoint \a action with,
+ * public implementation \a q.
  */
 DeleteApnsChannelRequestPrivate::DeleteApnsChannelRequestPrivate(
     const PinpointRequest::Action action, DeleteApnsChannelRequest * const q)
@@ -104,15 +93,10 @@ DeleteApnsChannelRequestPrivate::DeleteApnsChannelRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteApnsChannelRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteApnsChannelRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteApnsChannelRequest instance.
  */
 DeleteApnsChannelRequestPrivate::DeleteApnsChannelRequestPrivate(
     const DeleteApnsChannelRequestPrivate &other, DeleteApnsChannelRequest * const q)

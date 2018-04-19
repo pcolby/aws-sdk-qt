@@ -27,10 +27,9 @@ namespace DynamoDB {
 
 /*!
  * \class QtAws::DynamoDB::DeleteItemRequest
- *
  * \brief The DeleteItemRequest class provides an interface for DynamoDB DeleteItem requests.
  *
- * \ingroup DynamoDB
+ * \inmodule QtAwsDynamoDB
  *
  *  <fullname>Amazon DynamoDB</fullname>
  * 
@@ -56,9 +55,7 @@ namespace DynamoDB {
  */
 
 /*!
- * @brief  Constructs a new DeleteItemRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteItemRequest::DeleteItemRequest(const DeleteItemRequest &other)
     : DynamoDBRequest(new DeleteItemRequestPrivate(*other.d_func(), this))
@@ -67,7 +64,7 @@ DeleteItemRequest::DeleteItemRequest(const DeleteItemRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DeleteItemRequest object.
+ * Constructs a DeleteItemRequest object.
  */
 DeleteItemRequest::DeleteItemRequest()
     : DynamoDBRequest(new DeleteItemRequestPrivate(DynamoDBRequest::DeleteItemAction, this))
@@ -85,14 +82,9 @@ bool DeleteItemRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteItemResponse object.
+ * Returns a DeleteItemResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteItemResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DynamoDBClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteItemRequest::response(QNetworkReply * const reply) const
 {
@@ -100,20 +92,17 @@ QtAws::Core::AwsAbstractResponse * DeleteItemRequest::response(QNetworkReply * c
 }
 
 /*!
- * @internal
+ * \class QtAws::DynamoDB::DeleteItemRequestPrivate
+ * \brief The DeleteItemRequestPrivate class provides private implementation for DeleteItemRequest.
+ * \internal
  *
- * @class  DeleteItemRequestPrivate
- *
- * @brief  Private implementation for DeleteItemRequest.
+ * \inmodule QtAwsDynamoDB
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteItemRequestPrivate object.
- *
- * @param  action  DynamoDB action being performed.
- * @param  q       Pointer to this object's public DeleteItemRequest instance.
+ * Constructs a DeleteItemRequestPrivate object for DynamoDB \a action with,
+ * public implementation \a q.
  */
 DeleteItemRequestPrivate::DeleteItemRequestPrivate(
     const DynamoDBRequest::Action action, DeleteItemRequest * const q)
@@ -123,15 +112,10 @@ DeleteItemRequestPrivate::DeleteItemRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteItemRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteItemRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteItemRequest instance.
  */
 DeleteItemRequestPrivate::DeleteItemRequestPrivate(
     const DeleteItemRequestPrivate &other, DeleteItemRequest * const q)

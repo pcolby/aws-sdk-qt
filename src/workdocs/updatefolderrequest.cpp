@@ -27,10 +27,9 @@ namespace WorkDocs {
 
 /*!
  * \class QtAws::WorkDocs::UpdateFolderRequest
- *
  * \brief The UpdateFolderRequest class provides an interface for WorkDocs UpdateFolder requests.
  *
- * \ingroup WorkDocs
+ * \inmodule QtAwsWorkDocs
  *
  *  The WorkDocs API is designed for the following use
  * 
@@ -66,9 +65,7 @@ namespace WorkDocs {
  */
 
 /*!
- * @brief  Constructs a new UpdateFolderRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateFolderRequest::UpdateFolderRequest(const UpdateFolderRequest &other)
     : WorkDocsRequest(new UpdateFolderRequestPrivate(*other.d_func(), this))
@@ -77,7 +74,7 @@ UpdateFolderRequest::UpdateFolderRequest(const UpdateFolderRequest &other)
 }
 
 /*!
- * @brief  Constructs a new UpdateFolderRequest object.
+ * Constructs a UpdateFolderRequest object.
  */
 UpdateFolderRequest::UpdateFolderRequest()
     : WorkDocsRequest(new UpdateFolderRequestPrivate(WorkDocsRequest::UpdateFolderAction, this))
@@ -95,14 +92,9 @@ bool UpdateFolderRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateFolderResponse object.
+ * Returns a UpdateFolderResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateFolderResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WorkDocsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateFolderRequest::response(QNetworkReply * const reply) const
 {
@@ -110,20 +102,17 @@ QtAws::Core::AwsAbstractResponse * UpdateFolderRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::WorkDocs::UpdateFolderRequestPrivate
+ * \brief The UpdateFolderRequestPrivate class provides private implementation for UpdateFolderRequest.
+ * \internal
  *
- * @class  UpdateFolderRequestPrivate
- *
- * @brief  Private implementation for UpdateFolderRequest.
+ * \inmodule QtAwsWorkDocs
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateFolderRequestPrivate object.
- *
- * @param  action  WorkDocs action being performed.
- * @param  q       Pointer to this object's public UpdateFolderRequest instance.
+ * Constructs a UpdateFolderRequestPrivate object for WorkDocs \a action with,
+ * public implementation \a q.
  */
 UpdateFolderRequestPrivate::UpdateFolderRequestPrivate(
     const WorkDocsRequest::Action action, UpdateFolderRequest * const q)
@@ -133,15 +122,10 @@ UpdateFolderRequestPrivate::UpdateFolderRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateFolderRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateFolderRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateFolderRequest instance.
  */
 UpdateFolderRequestPrivate::UpdateFolderRequestPrivate(
     const UpdateFolderRequestPrivate &other, UpdateFolderRequest * const q)

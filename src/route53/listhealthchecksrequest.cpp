@@ -27,19 +27,16 @@ namespace Route53 {
 
 /*!
  * \class QtAws::Route53::ListHealthChecksRequest
- *
  * \brief The ListHealthChecksRequest class provides an interface for Route53 ListHealthChecks requests.
  *
- * \ingroup Route53
+ * \inmodule QtAwsRoute53
  *
  *
  * \sa Route53Client::listHealthChecks
  */
 
 /*!
- * @brief  Constructs a new ListHealthChecksRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListHealthChecksRequest::ListHealthChecksRequest(const ListHealthChecksRequest &other)
     : Route53Request(new ListHealthChecksRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ ListHealthChecksRequest::ListHealthChecksRequest(const ListHealthChecksRequest &
 }
 
 /*!
- * @brief  Constructs a new ListHealthChecksRequest object.
+ * Constructs a ListHealthChecksRequest object.
  */
 ListHealthChecksRequest::ListHealthChecksRequest()
     : Route53Request(new ListHealthChecksRequestPrivate(Route53Request::ListHealthChecksAction, this))
@@ -66,14 +63,9 @@ bool ListHealthChecksRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListHealthChecksResponse object.
+ * Returns a ListHealthChecksResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListHealthChecksResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  Route53Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListHealthChecksRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * ListHealthChecksRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::Route53::ListHealthChecksRequestPrivate
+ * \brief The ListHealthChecksRequestPrivate class provides private implementation for ListHealthChecksRequest.
+ * \internal
  *
- * @class  ListHealthChecksRequestPrivate
- *
- * @brief  Private implementation for ListHealthChecksRequest.
+ * \inmodule QtAwsRoute53
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListHealthChecksRequestPrivate object.
- *
- * @param  action  Route53 action being performed.
- * @param  q       Pointer to this object's public ListHealthChecksRequest instance.
+ * Constructs a ListHealthChecksRequestPrivate object for Route53 \a action with,
+ * public implementation \a q.
  */
 ListHealthChecksRequestPrivate::ListHealthChecksRequestPrivate(
     const Route53Request::Action action, ListHealthChecksRequest * const q)
@@ -104,15 +93,10 @@ ListHealthChecksRequestPrivate::ListHealthChecksRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListHealthChecksRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListHealthChecksRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListHealthChecksRequest instance.
  */
 ListHealthChecksRequestPrivate::ListHealthChecksRequestPrivate(
     const ListHealthChecksRequestPrivate &other, ListHealthChecksRequest * const q)

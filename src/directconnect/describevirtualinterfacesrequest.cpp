@@ -27,10 +27,9 @@ namespace DirectConnect {
 
 /*!
  * \class QtAws::DirectConnect::DescribeVirtualInterfacesRequest
- *
  * \brief The DescribeVirtualInterfacesRequest class provides an interface for DirectConnect DescribeVirtualInterfaces requests.
  *
- * \ingroup DirectConnect
+ * \inmodule QtAwsDirectConnect
  *
  *  AWS Direct Connect links your internal network to an AWS Direct Connect location over a standard 1 gigabit or 10 gigabit
  *  Ethernet fiber-optic cable. One end of the cable is connected to your router, the other to an AWS Direct Connect router.
@@ -45,9 +44,7 @@ namespace DirectConnect {
  */
 
 /*!
- * @brief  Constructs a new DescribeVirtualInterfacesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeVirtualInterfacesRequest::DescribeVirtualInterfacesRequest(const DescribeVirtualInterfacesRequest &other)
     : DirectConnectRequest(new DescribeVirtualInterfacesRequestPrivate(*other.d_func(), this))
@@ -56,7 +53,7 @@ DescribeVirtualInterfacesRequest::DescribeVirtualInterfacesRequest(const Describ
 }
 
 /*!
- * @brief  Constructs a new DescribeVirtualInterfacesRequest object.
+ * Constructs a DescribeVirtualInterfacesRequest object.
  */
 DescribeVirtualInterfacesRequest::DescribeVirtualInterfacesRequest()
     : DirectConnectRequest(new DescribeVirtualInterfacesRequestPrivate(DirectConnectRequest::DescribeVirtualInterfacesAction, this))
@@ -74,14 +71,9 @@ bool DescribeVirtualInterfacesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeVirtualInterfacesResponse object.
+ * Returns a DescribeVirtualInterfacesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeVirtualInterfacesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DirectConnectClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeVirtualInterfacesRequest::response(QNetworkReply * const reply) const
 {
@@ -89,20 +81,17 @@ QtAws::Core::AwsAbstractResponse * DescribeVirtualInterfacesRequest::response(QN
 }
 
 /*!
- * @internal
+ * \class QtAws::DirectConnect::DescribeVirtualInterfacesRequestPrivate
+ * \brief The DescribeVirtualInterfacesRequestPrivate class provides private implementation for DescribeVirtualInterfacesRequest.
+ * \internal
  *
- * @class  DescribeVirtualInterfacesRequestPrivate
- *
- * @brief  Private implementation for DescribeVirtualInterfacesRequest.
+ * \inmodule QtAwsDirectConnect
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeVirtualInterfacesRequestPrivate object.
- *
- * @param  action  DirectConnect action being performed.
- * @param  q       Pointer to this object's public DescribeVirtualInterfacesRequest instance.
+ * Constructs a DescribeVirtualInterfacesRequestPrivate object for DirectConnect \a action with,
+ * public implementation \a q.
  */
 DescribeVirtualInterfacesRequestPrivate::DescribeVirtualInterfacesRequestPrivate(
     const DirectConnectRequest::Action action, DescribeVirtualInterfacesRequest * const q)
@@ -112,15 +101,10 @@ DescribeVirtualInterfacesRequestPrivate::DescribeVirtualInterfacesRequestPrivate
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeVirtualInterfacesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeVirtualInterfacesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeVirtualInterfacesRequest instance.
  */
 DescribeVirtualInterfacesRequestPrivate::DescribeVirtualInterfacesRequestPrivate(
     const DescribeVirtualInterfacesRequestPrivate &other, DescribeVirtualInterfacesRequest * const q)

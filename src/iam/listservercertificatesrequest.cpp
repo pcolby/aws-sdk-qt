@@ -27,10 +27,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::ListServerCertificatesRequest
- *
  * \brief The ListServerCertificatesRequest class provides an interface for IAM ListServerCertificates requests.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -102,9 +101,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new ListServerCertificatesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListServerCertificatesRequest::ListServerCertificatesRequest(const ListServerCertificatesRequest &other)
     : IAMRequest(new ListServerCertificatesRequestPrivate(*other.d_func(), this))
@@ -113,7 +110,7 @@ ListServerCertificatesRequest::ListServerCertificatesRequest(const ListServerCer
 }
 
 /*!
- * @brief  Constructs a new ListServerCertificatesRequest object.
+ * Constructs a ListServerCertificatesRequest object.
  */
 ListServerCertificatesRequest::ListServerCertificatesRequest()
     : IAMRequest(new ListServerCertificatesRequestPrivate(IAMRequest::ListServerCertificatesAction, this))
@@ -131,14 +128,9 @@ bool ListServerCertificatesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListServerCertificatesResponse object.
+ * Returns a ListServerCertificatesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListServerCertificatesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IAMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListServerCertificatesRequest::response(QNetworkReply * const reply) const
 {
@@ -146,20 +138,17 @@ QtAws::Core::AwsAbstractResponse * ListServerCertificatesRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::IAM::ListServerCertificatesRequestPrivate
+ * \brief The ListServerCertificatesRequestPrivate class provides private implementation for ListServerCertificatesRequest.
+ * \internal
  *
- * @class  ListServerCertificatesRequestPrivate
- *
- * @brief  Private implementation for ListServerCertificatesRequest.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListServerCertificatesRequestPrivate object.
- *
- * @param  action  IAM action being performed.
- * @param  q       Pointer to this object's public ListServerCertificatesRequest instance.
+ * Constructs a ListServerCertificatesRequestPrivate object for IAM \a action with,
+ * public implementation \a q.
  */
 ListServerCertificatesRequestPrivate::ListServerCertificatesRequestPrivate(
     const IAMRequest::Action action, ListServerCertificatesRequest * const q)
@@ -169,15 +158,10 @@ ListServerCertificatesRequestPrivate::ListServerCertificatesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListServerCertificatesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListServerCertificatesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListServerCertificatesRequest instance.
  */
 ListServerCertificatesRequestPrivate::ListServerCertificatesRequestPrivate(
     const ListServerCertificatesRequestPrivate &other, ListServerCertificatesRequest * const q)

@@ -27,10 +27,9 @@ namespace AlexaForBusiness {
 
 /*!
  * \class QtAws::AlexaForBusiness::SendInvitationRequest
- *
  * \brief The SendInvitationRequest class provides an interface for AlexaForBusiness SendInvitation requests.
  *
- * \ingroup AlexaForBusiness
+ * \inmodule QtAwsAlexaForBusiness
  *
  *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
  *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
@@ -42,9 +41,7 @@ namespace AlexaForBusiness {
  */
 
 /*!
- * @brief  Constructs a new SendInvitationRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 SendInvitationRequest::SendInvitationRequest(const SendInvitationRequest &other)
     : AlexaForBusinessRequest(new SendInvitationRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ SendInvitationRequest::SendInvitationRequest(const SendInvitationRequest &other)
 }
 
 /*!
- * @brief  Constructs a new SendInvitationRequest object.
+ * Constructs a SendInvitationRequest object.
  */
 SendInvitationRequest::SendInvitationRequest()
     : AlexaForBusinessRequest(new SendInvitationRequestPrivate(AlexaForBusinessRequest::SendInvitationAction, this))
@@ -71,14 +68,9 @@ bool SendInvitationRequest::isValid() const
 
 
 /*!
- * @brief  Construct an SendInvitationResponse object.
+ * Returns a SendInvitationResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An SendInvitationResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AlexaForBusinessClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * SendInvitationRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * SendInvitationRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::AlexaForBusiness::SendInvitationRequestPrivate
+ * \brief The SendInvitationRequestPrivate class provides private implementation for SendInvitationRequest.
+ * \internal
  *
- * @class  SendInvitationRequestPrivate
- *
- * @brief  Private implementation for SendInvitationRequest.
+ * \inmodule QtAwsAlexaForBusiness
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new SendInvitationRequestPrivate object.
- *
- * @param  action  AlexaForBusiness action being performed.
- * @param  q       Pointer to this object's public SendInvitationRequest instance.
+ * Constructs a SendInvitationRequestPrivate object for AlexaForBusiness \a action with,
+ * public implementation \a q.
  */
 SendInvitationRequestPrivate::SendInvitationRequestPrivate(
     const AlexaForBusinessRequest::Action action, SendInvitationRequest * const q)
@@ -109,15 +98,10 @@ SendInvitationRequestPrivate::SendInvitationRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SendInvitationRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the SendInvitationRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public SendInvitationRequest instance.
  */
 SendInvitationRequestPrivate::SendInvitationRequestPrivate(
     const SendInvitationRequestPrivate &other, SendInvitationRequest * const q)

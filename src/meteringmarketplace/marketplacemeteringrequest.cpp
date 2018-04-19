@@ -25,16 +25,24 @@ namespace MarketplaceMetering {
 
 /*!
  * \class QtAws::MarketplaceMetering::MarketplaceMeteringRequest
- *
  * \brief The MarketplaceMeteringRequest class provides an interface for MarketplaceMetering requests.
  *
- * \ingroup MarketplaceMetering
+ * \inmodule QtAwsMarketplaceMetering
  */
 
 /*!
- * @brief  Constructs a new MarketplaceMeteringRequest object.
+ * \enum MarketplaceMeteringRequest::Action
  *
- * @param  action  The MarketplaceMetering action to request.
+ * This enum describes the actions that can be performed as MarketplaceMetering
+ * requests.
+ *
+ * \value BatchMeterUsageAction MarketplaceMetering BatchMeterUsage action.
+ * \value MeterUsageAction MarketplaceMetering MeterUsage action.
+ * \value ResolveCustomerAction MarketplaceMetering ResolveCustomer action.
+ */
+
+/*!
+ * Constructs a[n] MarketplaceMeteringRequest object for MarketplaceMetering \a action.
  */
 MarketplaceMeteringRequest::MarketplaceMeteringRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new MarketplaceMeteringRequestPrivate(action, this))
@@ -43,9 +51,7 @@ MarketplaceMeteringRequest::MarketplaceMeteringRequest(const Action action)
 }
 
 /*!
- * @brief  Constructs a new MarketplaceMeteringRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 MarketplaceMeteringRequest::MarketplaceMeteringRequest(const MarketplaceMeteringRequest &other)
     : QtAws::Core::AwsAbstractRequest(new MarketplaceMeteringRequestPrivate(*other.d_func(), this))
@@ -54,13 +60,7 @@ MarketplaceMeteringRequest::MarketplaceMeteringRequest(const MarketplaceMetering
 }
 
 /*!
- * @brief  Assignment operator.
- *
- * Assigns \a other to \c this.
- *
- * @param  other  Instance to copy.
- *
- * @return  A reference to \c this.
+ * Sets the MarketplaceMeteringRequest object to be equal to \a other.
  */
 MarketplaceMeteringRequest& MarketplaceMeteringRequest::operator=(const MarketplaceMeteringRequest &other)
 {
@@ -72,14 +72,10 @@ MarketplaceMeteringRequest& MarketplaceMeteringRequest::operator=(const Marketpl
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new MarketplaceMeteringRequest object.
+ * Constructs aa MarketplaceMeteringRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from MarketplaceMeteringRequestPrivate.
- *
- * @param  d  Pointer to private data (aka D-Pointer).
  */
 MarketplaceMeteringRequest::MarketplaceMeteringRequest(MarketplaceMeteringRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
@@ -87,7 +83,7 @@ MarketplaceMeteringRequest::MarketplaceMeteringRequest(MarketplaceMeteringReques
 }
 
 /*!
- * \brief Returns the MarketplaceMetering action to be performed by this request.
+ * Returns the MarketplaceMetering action to be performed by this request.
  */
 MarketplaceMeteringRequest::Action MarketplaceMeteringRequest::action() const
 {
@@ -96,7 +92,7 @@ MarketplaceMeteringRequest::Action MarketplaceMeteringRequest::action() const
 }
 
 /*!
- * \brief Returns the name of the MarketplaceMetering action to be performed by this request.
+ * Returns the name of the MarketplaceMetering action to be performed by this request.
  */
 QString MarketplaceMeteringRequest::actionString() const
 {
@@ -104,7 +100,7 @@ QString MarketplaceMeteringRequest::actionString() const
 }
 
 /*!
- * \brief Returns the MarketplaceMetering API version implemented by this request.
+ * Returns the MarketplaceMetering API version implemented by this request.
  */
 QString MarketplaceMeteringRequest::apiVersion() const
 {
@@ -113,7 +109,7 @@ QString MarketplaceMeteringRequest::apiVersion() const
 }
 
 /*!
- * @brief Set the MarketplaceMetering action to be performed by this request to \a action.
+ * Sets the MarketplaceMetering action to be performed by this request to \a action.
  */
 void MarketplaceMeteringRequest::setAction(const Action action)
 {
@@ -122,7 +118,7 @@ void MarketplaceMeteringRequest::setAction(const Action action)
 }
 
 /*!
- * Set the MarketplaceMetering API version to include in this request to \a version.
+ * Sets the MarketplaceMetering API version to include in this request to \a version.
  */
 void MarketplaceMeteringRequest::setApiVersion(const QString &version)
 {
@@ -131,7 +127,7 @@ void MarketplaceMeteringRequest::setApiVersion(const QString &version)
 }
 
 /*!
- * \brief Returns \c true if this request is the same as \a other.
+ * Returns \c true if this request is equal to \a other; \c false otherwise.
  *
  * Note, most derived *Request classes do not need to provider their own
  * implementations of this function, since most such request classes rely on
@@ -146,8 +142,8 @@ bool MarketplaceMeteringRequest::operator==(const MarketplaceMeteringRequest &ot
             (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
-/*!
- * @brief  Check if \a queueName is a valid MarketplaceMetering queue name.
+/*
+ * Returns \c tue if \a queueName is a valid MarketplaceMetering queue name.
  *
  * @par From MarketplaceMetering FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
@@ -166,9 +162,8 @@ bool MarketplaceMeteringRequest::operator==(const MarketplaceMeteringRequest &ot
 }*/
 
 /*!
- * \brief Removes the a \a name parameter from this request.
- *
- * Returns the count of paramters removed (typically \c 0 or \c 1).
+ * Removes the a \a name parameter from the request, then returns the number of
+ * paramters removed (typically \c 0 or \c 1).
  */
 int MarketplaceMeteringRequest::clearParameter(const QString &name)
 {
@@ -177,7 +172,7 @@ int MarketplaceMeteringRequest::clearParameter(const QString &name)
 }
 
 /*!
- * \brief Removes all parameters from this request.
+ * Removes all parameters from the request.
  */
 void MarketplaceMeteringRequest::clearParameters()
 {
@@ -186,7 +181,7 @@ void MarketplaceMeteringRequest::clearParameters()
 }
 
 /*!
- * \brief Returns the value of the \n name pararemter if set, otherwise \a defaultValue.
+ * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
 QVariant MarketplaceMeteringRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
@@ -195,7 +190,7 @@ QVariant MarketplaceMeteringRequest::parameter(const QString &name, const QVaria
 }
 
 /*!
- * \brief Returns a map of parameters included in this request.
+ * Returns the parameters included in this request.
  */
 const QVariantMap &MarketplaceMeteringRequest::parameters() const
 {
@@ -204,7 +199,7 @@ const QVariantMap &MarketplaceMeteringRequest::parameters() const
 }
 
 /*!
- * \brief Sets the \a name parameter to \a value.
+ * Sets the \a name parameter to \a value.
  */
 void MarketplaceMeteringRequest::setParameter(const QString &name, const QVariant &value)
 {
@@ -213,9 +208,8 @@ void MarketplaceMeteringRequest::setParameter(const QString &name, const QVarian
 }
 
 /*!
- * \brief Sets the map of paramters for this request to \a parameters.
- *
- * Any request parameters set previously will be discarded.
+ * Sets the paramters for this request to \a parameters. Any request parameters
+ * set previously will be discarded.
  */
 void MarketplaceMeteringRequest::setParameters(const QVariantMap &parameters)
 {
@@ -224,11 +218,12 @@ void MarketplaceMeteringRequest::setParameters(const QVariantMap &parameters)
 }
 
 /*!
- * \brief Returns a network request for this MarketplaceMetering request using the given \a endpoint.
+ * Returns a network request for the MarketplaceMetering request using the given
+ * \a endpoint.
  *
- * This MarketplaceMetering implementation builds request URLs by combining the common query
- * parameters (such as Action and Version), with any that have been added (via
- * setParameter) by child classes.
+ * This MarketplaceMetering implementation builds request URLs by combining the
+ * common query parameters (such as Action and Version), with any that have
+ * been added (via setParameter) by child classes.
  */
 QNetworkRequest MarketplaceMeteringRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -239,17 +234,16 @@ QNetworkRequest MarketplaceMeteringRequest::unsignedRequest(const QUrl &endpoint
 }
 
 /*!
+ * \class QtAws::MarketplaceMetering::MarketplaceMeteringRequestPrivate
+ * \brief The MarketplaceMeteringRequestPrivate class provides private implementation for MarketplaceMeteringRequest.
  * \internal
  *
- * \class  MarketplaceMeteringRequestPrivate
- *
- * \brief  Private implementation for MarketplaceMeteringRequest.
+ * \inmodule QtAwsMarketplaceMetering
  */
 
 /*!
- * \internal
- *
- * \brief Constructs a new MarketplaceMeteringRequestPrivate object.
+ * Constructs a MarketplaceMeteringRequestPrivate object for MarketplaceMetering \a action with,
+ * public implementation \a q.
  */
 MarketplaceMeteringRequestPrivate::MarketplaceMeteringRequestPrivate(const MarketplaceMeteringRequest::Action action, MarketplaceMeteringRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
@@ -258,9 +252,7 @@ MarketplaceMeteringRequestPrivate::MarketplaceMeteringRequestPrivate(const Marke
 }
 
 /*!
- * \internal
- *
- * \brief Constructs a new MarketplaceMeteringRequestPrivate object, copying an existing one.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
@@ -276,15 +268,12 @@ MarketplaceMeteringRequestPrivate::MarketplaceMeteringRequestPrivate(const Marke
 }
 
 /*!
- * \internal
- *
- * \brief Returns a string representing \a action.
+ * Returns a string represention of \a action, or a null string if \a action is
+ * invalid.
  *
  * This function converts MarketplaceMeteringRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the MarketplaceMetering service's Action
  * query parameters.
- *
- * @return A string representing \a action, or a null string if \a action is invalid.
  */
 QString MarketplaceMeteringRequestPrivate::toString(const MarketplaceMeteringRequest::Action &action)
 {

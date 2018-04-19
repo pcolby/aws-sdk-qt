@@ -27,10 +27,9 @@ namespace GameLift {
 
 /*!
  * \class QtAws::GameLift::ListFleetsRequest
- *
  * \brief The ListFleetsRequest class provides an interface for GameLift ListFleets requests.
  *
- * \ingroup GameLift
+ * \inmodule QtAwsGameLift
  *
  *  <fullname>Amazon GameLift Service</fullname>
  * 
@@ -473,9 +472,7 @@ namespace GameLift {
  */
 
 /*!
- * @brief  Constructs a new ListFleetsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListFleetsRequest::ListFleetsRequest(const ListFleetsRequest &other)
     : GameLiftRequest(new ListFleetsRequestPrivate(*other.d_func(), this))
@@ -484,7 +481,7 @@ ListFleetsRequest::ListFleetsRequest(const ListFleetsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ListFleetsRequest object.
+ * Constructs a ListFleetsRequest object.
  */
 ListFleetsRequest::ListFleetsRequest()
     : GameLiftRequest(new ListFleetsRequestPrivate(GameLiftRequest::ListFleetsAction, this))
@@ -502,14 +499,9 @@ bool ListFleetsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListFleetsResponse object.
+ * Returns a ListFleetsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListFleetsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GameLiftClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListFleetsRequest::response(QNetworkReply * const reply) const
 {
@@ -517,20 +509,17 @@ QtAws::Core::AwsAbstractResponse * ListFleetsRequest::response(QNetworkReply * c
 }
 
 /*!
- * @internal
+ * \class QtAws::GameLift::ListFleetsRequestPrivate
+ * \brief The ListFleetsRequestPrivate class provides private implementation for ListFleetsRequest.
+ * \internal
  *
- * @class  ListFleetsRequestPrivate
- *
- * @brief  Private implementation for ListFleetsRequest.
+ * \inmodule QtAwsGameLift
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListFleetsRequestPrivate object.
- *
- * @param  action  GameLift action being performed.
- * @param  q       Pointer to this object's public ListFleetsRequest instance.
+ * Constructs a ListFleetsRequestPrivate object for GameLift \a action with,
+ * public implementation \a q.
  */
 ListFleetsRequestPrivate::ListFleetsRequestPrivate(
     const GameLiftRequest::Action action, ListFleetsRequest * const q)
@@ -540,15 +529,10 @@ ListFleetsRequestPrivate::ListFleetsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListFleetsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListFleetsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListFleetsRequest instance.
  */
 ListFleetsRequestPrivate::ListFleetsRequestPrivate(
     const ListFleetsRequestPrivate &other, ListFleetsRequest * const q)

@@ -27,10 +27,9 @@ namespace AppStream {
 
 /*!
  * \class QtAws::AppStream::DisassociateFleetRequest
- *
  * \brief The DisassociateFleetRequest class provides an interface for AppStream DisassociateFleet requests.
  *
- * \ingroup AppStream
+ * \inmodule QtAwsAppStream
  *
  *  <fullname>Amazon AppStream 2.0</fullname>
  * 
@@ -40,9 +39,7 @@ namespace AppStream {
  */
 
 /*!
- * @brief  Constructs a new DisassociateFleetRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DisassociateFleetRequest::DisassociateFleetRequest(const DisassociateFleetRequest &other)
     : AppStreamRequest(new DisassociateFleetRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ DisassociateFleetRequest::DisassociateFleetRequest(const DisassociateFleetReques
 }
 
 /*!
- * @brief  Constructs a new DisassociateFleetRequest object.
+ * Constructs a DisassociateFleetRequest object.
  */
 DisassociateFleetRequest::DisassociateFleetRequest()
     : AppStreamRequest(new DisassociateFleetRequestPrivate(AppStreamRequest::DisassociateFleetAction, this))
@@ -69,14 +66,9 @@ bool DisassociateFleetRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DisassociateFleetResponse object.
+ * Returns a DisassociateFleetResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DisassociateFleetResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AppStreamClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DisassociateFleetRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * DisassociateFleetRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::AppStream::DisassociateFleetRequestPrivate
+ * \brief The DisassociateFleetRequestPrivate class provides private implementation for DisassociateFleetRequest.
+ * \internal
  *
- * @class  DisassociateFleetRequestPrivate
- *
- * @brief  Private implementation for DisassociateFleetRequest.
+ * \inmodule QtAwsAppStream
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DisassociateFleetRequestPrivate object.
- *
- * @param  action  AppStream action being performed.
- * @param  q       Pointer to this object's public DisassociateFleetRequest instance.
+ * Constructs a DisassociateFleetRequestPrivate object for AppStream \a action with,
+ * public implementation \a q.
  */
 DisassociateFleetRequestPrivate::DisassociateFleetRequestPrivate(
     const AppStreamRequest::Action action, DisassociateFleetRequest * const q)
@@ -107,15 +96,10 @@ DisassociateFleetRequestPrivate::DisassociateFleetRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DisassociateFleetRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DisassociateFleetRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DisassociateFleetRequest instance.
  */
 DisassociateFleetRequestPrivate::DisassociateFleetRequestPrivate(
     const DisassociateFleetRequestPrivate &other, DisassociateFleetRequest * const q)

@@ -27,10 +27,9 @@ namespace CognitoIdentityProvider {
 
 /*!
  * \class QtAws::CognitoIdentityProvider::CreateResourceServerRequest
- *
  * \brief The CreateResourceServerRequest class provides an interface for CognitoIdentityProvider CreateResourceServer requests.
  *
- * \ingroup CognitoIdentityProvider
+ * \inmodule QtAwsCognitoIdentityProvider
  *
  *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
  *  authenticate a user to obtain tokens related to user identity and access
@@ -47,9 +46,7 @@ namespace CognitoIdentityProvider {
  */
 
 /*!
- * @brief  Constructs a new CreateResourceServerRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateResourceServerRequest::CreateResourceServerRequest(const CreateResourceServerRequest &other)
     : CognitoIdentityProviderRequest(new CreateResourceServerRequestPrivate(*other.d_func(), this))
@@ -58,7 +55,7 @@ CreateResourceServerRequest::CreateResourceServerRequest(const CreateResourceSer
 }
 
 /*!
- * @brief  Constructs a new CreateResourceServerRequest object.
+ * Constructs a CreateResourceServerRequest object.
  */
 CreateResourceServerRequest::CreateResourceServerRequest()
     : CognitoIdentityProviderRequest(new CreateResourceServerRequestPrivate(CognitoIdentityProviderRequest::CreateResourceServerAction, this))
@@ -76,14 +73,9 @@ bool CreateResourceServerRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateResourceServerResponse object.
+ * Returns a CreateResourceServerResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateResourceServerResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CognitoIdentityProviderClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateResourceServerRequest::response(QNetworkReply * const reply) const
 {
@@ -91,20 +83,17 @@ QtAws::Core::AwsAbstractResponse * CreateResourceServerRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::CognitoIdentityProvider::CreateResourceServerRequestPrivate
+ * \brief The CreateResourceServerRequestPrivate class provides private implementation for CreateResourceServerRequest.
+ * \internal
  *
- * @class  CreateResourceServerRequestPrivate
- *
- * @brief  Private implementation for CreateResourceServerRequest.
+ * \inmodule QtAwsCognitoIdentityProvider
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateResourceServerRequestPrivate object.
- *
- * @param  action  CognitoIdentityProvider action being performed.
- * @param  q       Pointer to this object's public CreateResourceServerRequest instance.
+ * Constructs a CreateResourceServerRequestPrivate object for CognitoIdentityProvider \a action with,
+ * public implementation \a q.
  */
 CreateResourceServerRequestPrivate::CreateResourceServerRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, CreateResourceServerRequest * const q)
@@ -114,15 +103,10 @@ CreateResourceServerRequestPrivate::CreateResourceServerRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateResourceServerRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateResourceServerRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateResourceServerRequest instance.
  */
 CreateResourceServerRequestPrivate::CreateResourceServerRequestPrivate(
     const CreateResourceServerRequestPrivate &other, CreateResourceServerRequest * const q)

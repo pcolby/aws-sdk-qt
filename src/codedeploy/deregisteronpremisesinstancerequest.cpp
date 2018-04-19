@@ -27,10 +27,9 @@ namespace CodeDeploy {
 
 /*!
  * \class QtAws::CodeDeploy::DeregisterOnPremisesInstanceRequest
- *
  * \brief The DeregisterOnPremisesInstanceRequest class provides an interface for CodeDeploy DeregisterOnPremisesInstance requests.
  *
- * \ingroup CodeDeploy
+ * \inmodule QtAwsCodeDeploy
  *
  *  <fullname>AWS CodeDeploy</fullname>
  * 
@@ -118,9 +117,7 @@ namespace CodeDeploy {
  */
 
 /*!
- * @brief  Constructs a new DeregisterOnPremisesInstanceRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeregisterOnPremisesInstanceRequest::DeregisterOnPremisesInstanceRequest(const DeregisterOnPremisesInstanceRequest &other)
     : CodeDeployRequest(new DeregisterOnPremisesInstanceRequestPrivate(*other.d_func(), this))
@@ -129,7 +126,7 @@ DeregisterOnPremisesInstanceRequest::DeregisterOnPremisesInstanceRequest(const D
 }
 
 /*!
- * @brief  Constructs a new DeregisterOnPremisesInstanceRequest object.
+ * Constructs a DeregisterOnPremisesInstanceRequest object.
  */
 DeregisterOnPremisesInstanceRequest::DeregisterOnPremisesInstanceRequest()
     : CodeDeployRequest(new DeregisterOnPremisesInstanceRequestPrivate(CodeDeployRequest::DeregisterOnPremisesInstanceAction, this))
@@ -147,14 +144,9 @@ bool DeregisterOnPremisesInstanceRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeregisterOnPremisesInstanceResponse object.
+ * Returns a DeregisterOnPremisesInstanceResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeregisterOnPremisesInstanceResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CodeDeployClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeregisterOnPremisesInstanceRequest::response(QNetworkReply * const reply) const
 {
@@ -162,20 +154,17 @@ QtAws::Core::AwsAbstractResponse * DeregisterOnPremisesInstanceRequest::response
 }
 
 /*!
- * @internal
+ * \class QtAws::CodeDeploy::DeregisterOnPremisesInstanceRequestPrivate
+ * \brief The DeregisterOnPremisesInstanceRequestPrivate class provides private implementation for DeregisterOnPremisesInstanceRequest.
+ * \internal
  *
- * @class  DeregisterOnPremisesInstanceRequestPrivate
- *
- * @brief  Private implementation for DeregisterOnPremisesInstanceRequest.
+ * \inmodule QtAwsCodeDeploy
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeregisterOnPremisesInstanceRequestPrivate object.
- *
- * @param  action  CodeDeploy action being performed.
- * @param  q       Pointer to this object's public DeregisterOnPremisesInstanceRequest instance.
+ * Constructs a DeregisterOnPremisesInstanceRequestPrivate object for CodeDeploy \a action with,
+ * public implementation \a q.
  */
 DeregisterOnPremisesInstanceRequestPrivate::DeregisterOnPremisesInstanceRequestPrivate(
     const CodeDeployRequest::Action action, DeregisterOnPremisesInstanceRequest * const q)
@@ -185,15 +174,10 @@ DeregisterOnPremisesInstanceRequestPrivate::DeregisterOnPremisesInstanceRequestP
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeregisterOnPremisesInstanceRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeregisterOnPremisesInstanceRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeregisterOnPremisesInstanceRequest instance.
  */
 DeregisterOnPremisesInstanceRequestPrivate::DeregisterOnPremisesInstanceRequestPrivate(
     const DeregisterOnPremisesInstanceRequestPrivate &other, DeregisterOnPremisesInstanceRequest * const q)

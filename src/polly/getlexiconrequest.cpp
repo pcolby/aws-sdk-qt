@@ -27,10 +27,9 @@ namespace Polly {
 
 /*!
  * \class QtAws::Polly::GetLexiconRequest
- *
  * \brief The GetLexiconRequest class provides an interface for Polly GetLexicon requests.
  *
- * \ingroup Polly
+ * \inmodule QtAwsPolly
  *
  *  Amazon Polly is a web service that makes it easy to synthesize speech from
  * 
@@ -44,9 +43,7 @@ namespace Polly {
  */
 
 /*!
- * @brief  Constructs a new GetLexiconRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetLexiconRequest::GetLexiconRequest(const GetLexiconRequest &other)
     : PollyRequest(new GetLexiconRequestPrivate(*other.d_func(), this))
@@ -55,7 +52,7 @@ GetLexiconRequest::GetLexiconRequest(const GetLexiconRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetLexiconRequest object.
+ * Constructs a GetLexiconRequest object.
  */
 GetLexiconRequest::GetLexiconRequest()
     : PollyRequest(new GetLexiconRequestPrivate(PollyRequest::GetLexiconAction, this))
@@ -73,14 +70,9 @@ bool GetLexiconRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetLexiconResponse object.
+ * Returns a GetLexiconResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetLexiconResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  PollyClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetLexiconRequest::response(QNetworkReply * const reply) const
 {
@@ -88,20 +80,17 @@ QtAws::Core::AwsAbstractResponse * GetLexiconRequest::response(QNetworkReply * c
 }
 
 /*!
- * @internal
+ * \class QtAws::Polly::GetLexiconRequestPrivate
+ * \brief The GetLexiconRequestPrivate class provides private implementation for GetLexiconRequest.
+ * \internal
  *
- * @class  GetLexiconRequestPrivate
- *
- * @brief  Private implementation for GetLexiconRequest.
+ * \inmodule QtAwsPolly
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetLexiconRequestPrivate object.
- *
- * @param  action  Polly action being performed.
- * @param  q       Pointer to this object's public GetLexiconRequest instance.
+ * Constructs a GetLexiconRequestPrivate object for Polly \a action with,
+ * public implementation \a q.
  */
 GetLexiconRequestPrivate::GetLexiconRequestPrivate(
     const PollyRequest::Action action, GetLexiconRequest * const q)
@@ -111,15 +100,10 @@ GetLexiconRequestPrivate::GetLexiconRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetLexiconRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetLexiconRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetLexiconRequest instance.
  */
 GetLexiconRequestPrivate::GetLexiconRequestPrivate(
     const GetLexiconRequestPrivate &other, GetLexiconRequest * const q)

@@ -27,10 +27,9 @@ namespace GameLift {
 
 /*!
  * \class QtAws::GameLift::CreateVpcPeeringConnectionRequest
- *
  * \brief The CreateVpcPeeringConnectionRequest class provides an interface for GameLift CreateVpcPeeringConnection requests.
  *
- * \ingroup GameLift
+ * \inmodule QtAwsGameLift
  *
  *  <fullname>Amazon GameLift Service</fullname>
  * 
@@ -473,9 +472,7 @@ namespace GameLift {
  */
 
 /*!
- * @brief  Constructs a new CreateVpcPeeringConnectionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateVpcPeeringConnectionRequest::CreateVpcPeeringConnectionRequest(const CreateVpcPeeringConnectionRequest &other)
     : GameLiftRequest(new CreateVpcPeeringConnectionRequestPrivate(*other.d_func(), this))
@@ -484,7 +481,7 @@ CreateVpcPeeringConnectionRequest::CreateVpcPeeringConnectionRequest(const Creat
 }
 
 /*!
- * @brief  Constructs a new CreateVpcPeeringConnectionRequest object.
+ * Constructs a CreateVpcPeeringConnectionRequest object.
  */
 CreateVpcPeeringConnectionRequest::CreateVpcPeeringConnectionRequest()
     : GameLiftRequest(new CreateVpcPeeringConnectionRequestPrivate(GameLiftRequest::CreateVpcPeeringConnectionAction, this))
@@ -502,14 +499,9 @@ bool CreateVpcPeeringConnectionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateVpcPeeringConnectionResponse object.
+ * Returns a CreateVpcPeeringConnectionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateVpcPeeringConnectionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GameLiftClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateVpcPeeringConnectionRequest::response(QNetworkReply * const reply) const
 {
@@ -517,20 +509,17 @@ QtAws::Core::AwsAbstractResponse * CreateVpcPeeringConnectionRequest::response(Q
 }
 
 /*!
- * @internal
+ * \class QtAws::GameLift::CreateVpcPeeringConnectionRequestPrivate
+ * \brief The CreateVpcPeeringConnectionRequestPrivate class provides private implementation for CreateVpcPeeringConnectionRequest.
+ * \internal
  *
- * @class  CreateVpcPeeringConnectionRequestPrivate
- *
- * @brief  Private implementation for CreateVpcPeeringConnectionRequest.
+ * \inmodule QtAwsGameLift
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateVpcPeeringConnectionRequestPrivate object.
- *
- * @param  action  GameLift action being performed.
- * @param  q       Pointer to this object's public CreateVpcPeeringConnectionRequest instance.
+ * Constructs a CreateVpcPeeringConnectionRequestPrivate object for GameLift \a action with,
+ * public implementation \a q.
  */
 CreateVpcPeeringConnectionRequestPrivate::CreateVpcPeeringConnectionRequestPrivate(
     const GameLiftRequest::Action action, CreateVpcPeeringConnectionRequest * const q)
@@ -540,15 +529,10 @@ CreateVpcPeeringConnectionRequestPrivate::CreateVpcPeeringConnectionRequestPriva
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateVpcPeeringConnectionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateVpcPeeringConnectionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateVpcPeeringConnectionRequest instance.
  */
 CreateVpcPeeringConnectionRequestPrivate::CreateVpcPeeringConnectionRequestPrivate(
     const CreateVpcPeeringConnectionRequestPrivate &other, CreateVpcPeeringConnectionRequest * const q)

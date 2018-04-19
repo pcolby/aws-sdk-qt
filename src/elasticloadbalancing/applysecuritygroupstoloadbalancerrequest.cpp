@@ -27,10 +27,9 @@ namespace ElasticLoadBalancing {
 
 /*!
  * \class QtAws::ElasticLoadBalancing::ApplySecurityGroupsToLoadBalancerRequest
- *
  * \brief The ApplySecurityGroupsToLoadBalancerRequest class provides an interface for ElasticLoadBalancing ApplySecurityGroupsToLoadBalancer requests.
  *
- * \ingroup ElasticLoadBalancing
+ * \inmodule QtAwsElasticLoadBalancing
  *
  *  <fullname>Elastic Load Balancing</fullname>
  * 
@@ -65,9 +64,7 @@ namespace ElasticLoadBalancing {
  */
 
 /*!
- * @brief  Constructs a new ApplySecurityGroupsToLoadBalancerRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ApplySecurityGroupsToLoadBalancerRequest::ApplySecurityGroupsToLoadBalancerRequest(const ApplySecurityGroupsToLoadBalancerRequest &other)
     : ElasticLoadBalancingRequest(new ApplySecurityGroupsToLoadBalancerRequestPrivate(*other.d_func(), this))
@@ -76,7 +73,7 @@ ApplySecurityGroupsToLoadBalancerRequest::ApplySecurityGroupsToLoadBalancerReque
 }
 
 /*!
- * @brief  Constructs a new ApplySecurityGroupsToLoadBalancerRequest object.
+ * Constructs a ApplySecurityGroupsToLoadBalancerRequest object.
  */
 ApplySecurityGroupsToLoadBalancerRequest::ApplySecurityGroupsToLoadBalancerRequest()
     : ElasticLoadBalancingRequest(new ApplySecurityGroupsToLoadBalancerRequestPrivate(ElasticLoadBalancingRequest::ApplySecurityGroupsToLoadBalancerAction, this))
@@ -94,14 +91,9 @@ bool ApplySecurityGroupsToLoadBalancerRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ApplySecurityGroupsToLoadBalancerResponse object.
+ * Returns a ApplySecurityGroupsToLoadBalancerResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ApplySecurityGroupsToLoadBalancerResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ElasticLoadBalancingClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ApplySecurityGroupsToLoadBalancerRequest::response(QNetworkReply * const reply) const
 {
@@ -109,20 +101,17 @@ QtAws::Core::AwsAbstractResponse * ApplySecurityGroupsToLoadBalancerRequest::res
 }
 
 /*!
- * @internal
+ * \class QtAws::ElasticLoadBalancing::ApplySecurityGroupsToLoadBalancerRequestPrivate
+ * \brief The ApplySecurityGroupsToLoadBalancerRequestPrivate class provides private implementation for ApplySecurityGroupsToLoadBalancerRequest.
+ * \internal
  *
- * @class  ApplySecurityGroupsToLoadBalancerRequestPrivate
- *
- * @brief  Private implementation for ApplySecurityGroupsToLoadBalancerRequest.
+ * \inmodule QtAwsElasticLoadBalancing
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ApplySecurityGroupsToLoadBalancerRequestPrivate object.
- *
- * @param  action  ElasticLoadBalancing action being performed.
- * @param  q       Pointer to this object's public ApplySecurityGroupsToLoadBalancerRequest instance.
+ * Constructs a ApplySecurityGroupsToLoadBalancerRequestPrivate object for ElasticLoadBalancing \a action with,
+ * public implementation \a q.
  */
 ApplySecurityGroupsToLoadBalancerRequestPrivate::ApplySecurityGroupsToLoadBalancerRequestPrivate(
     const ElasticLoadBalancingRequest::Action action, ApplySecurityGroupsToLoadBalancerRequest * const q)
@@ -132,15 +121,10 @@ ApplySecurityGroupsToLoadBalancerRequestPrivate::ApplySecurityGroupsToLoadBalanc
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ApplySecurityGroupsToLoadBalancerRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ApplySecurityGroupsToLoadBalancerRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ApplySecurityGroupsToLoadBalancerRequest instance.
  */
 ApplySecurityGroupsToLoadBalancerRequestPrivate::ApplySecurityGroupsToLoadBalancerRequestPrivate(
     const ApplySecurityGroupsToLoadBalancerRequestPrivate &other, ApplySecurityGroupsToLoadBalancerRequest * const q)

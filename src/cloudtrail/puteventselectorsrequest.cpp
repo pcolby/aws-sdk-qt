@@ -27,10 +27,9 @@ namespace CloudTrail {
 
 /*!
  * \class QtAws::CloudTrail::PutEventSelectorsRequest
- *
  * \brief The PutEventSelectorsRequest class provides an interface for CloudTrail PutEventSelectors requests.
  *
- * \ingroup CloudTrail
+ * \inmodule QtAwsCloudTrail
  *
  *  <fullname>AWS CloudTrail</fullname>
  * 
@@ -60,9 +59,7 @@ namespace CloudTrail {
  */
 
 /*!
- * @brief  Constructs a new PutEventSelectorsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 PutEventSelectorsRequest::PutEventSelectorsRequest(const PutEventSelectorsRequest &other)
     : CloudTrailRequest(new PutEventSelectorsRequestPrivate(*other.d_func(), this))
@@ -71,7 +68,7 @@ PutEventSelectorsRequest::PutEventSelectorsRequest(const PutEventSelectorsReques
 }
 
 /*!
- * @brief  Constructs a new PutEventSelectorsRequest object.
+ * Constructs a PutEventSelectorsRequest object.
  */
 PutEventSelectorsRequest::PutEventSelectorsRequest()
     : CloudTrailRequest(new PutEventSelectorsRequestPrivate(CloudTrailRequest::PutEventSelectorsAction, this))
@@ -89,14 +86,9 @@ bool PutEventSelectorsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an PutEventSelectorsResponse object.
+ * Returns a PutEventSelectorsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An PutEventSelectorsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudTrailClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * PutEventSelectorsRequest::response(QNetworkReply * const reply) const
 {
@@ -104,20 +96,17 @@ QtAws::Core::AwsAbstractResponse * PutEventSelectorsRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudTrail::PutEventSelectorsRequestPrivate
+ * \brief The PutEventSelectorsRequestPrivate class provides private implementation for PutEventSelectorsRequest.
+ * \internal
  *
- * @class  PutEventSelectorsRequestPrivate
- *
- * @brief  Private implementation for PutEventSelectorsRequest.
+ * \inmodule QtAwsCloudTrail
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new PutEventSelectorsRequestPrivate object.
- *
- * @param  action  CloudTrail action being performed.
- * @param  q       Pointer to this object's public PutEventSelectorsRequest instance.
+ * Constructs a PutEventSelectorsRequestPrivate object for CloudTrail \a action with,
+ * public implementation \a q.
  */
 PutEventSelectorsRequestPrivate::PutEventSelectorsRequestPrivate(
     const CloudTrailRequest::Action action, PutEventSelectorsRequest * const q)
@@ -127,15 +116,10 @@ PutEventSelectorsRequestPrivate::PutEventSelectorsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutEventSelectorsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the PutEventSelectorsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public PutEventSelectorsRequest instance.
  */
 PutEventSelectorsRequestPrivate::PutEventSelectorsRequestPrivate(
     const PutEventSelectorsRequestPrivate &other, PutEventSelectorsRequest * const q)

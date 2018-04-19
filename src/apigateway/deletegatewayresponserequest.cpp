@@ -27,10 +27,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::DeleteGatewayResponseRequest
- *
  * \brief The DeleteGatewayResponseRequest class provides an interface for APIGateway DeleteGatewayResponse requests.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -42,9 +41,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new DeleteGatewayResponseRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteGatewayResponseRequest::DeleteGatewayResponseRequest(const DeleteGatewayResponseRequest &other)
     : APIGatewayRequest(new DeleteGatewayResponseRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ DeleteGatewayResponseRequest::DeleteGatewayResponseRequest(const DeleteGatewayRe
 }
 
 /*!
- * @brief  Constructs a new DeleteGatewayResponseRequest object.
+ * Constructs a DeleteGatewayResponseRequest object.
  */
 DeleteGatewayResponseRequest::DeleteGatewayResponseRequest()
     : APIGatewayRequest(new DeleteGatewayResponseRequestPrivate(APIGatewayRequest::DeleteGatewayResponseAction, this))
@@ -71,14 +68,9 @@ bool DeleteGatewayResponseRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteGatewayResponseResponse object.
+ * Returns a DeleteGatewayResponseResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteGatewayResponseResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  APIGatewayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteGatewayResponseRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * DeleteGatewayResponseRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::APIGateway::DeleteGatewayResponseRequestPrivate
+ * \brief The DeleteGatewayResponseRequestPrivate class provides private implementation for DeleteGatewayResponseRequest.
+ * \internal
  *
- * @class  DeleteGatewayResponseRequestPrivate
- *
- * @brief  Private implementation for DeleteGatewayResponseRequest.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteGatewayResponseRequestPrivate object.
- *
- * @param  action  APIGateway action being performed.
- * @param  q       Pointer to this object's public DeleteGatewayResponseRequest instance.
+ * Constructs a DeleteGatewayResponseRequestPrivate object for APIGateway \a action with,
+ * public implementation \a q.
  */
 DeleteGatewayResponseRequestPrivate::DeleteGatewayResponseRequestPrivate(
     const APIGatewayRequest::Action action, DeleteGatewayResponseRequest * const q)
@@ -109,15 +98,10 @@ DeleteGatewayResponseRequestPrivate::DeleteGatewayResponseRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteGatewayResponseRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteGatewayResponseRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteGatewayResponseRequest instance.
  */
 DeleteGatewayResponseRequestPrivate::DeleteGatewayResponseRequestPrivate(
     const DeleteGatewayResponseRequestPrivate &other, DeleteGatewayResponseRequest * const q)

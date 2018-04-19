@@ -27,10 +27,9 @@ namespace Comprehend {
 
 /*!
  * \class QtAws::Comprehend::DetectKeyPhrasesRequest
- *
  * \brief The DetectKeyPhrasesRequest class provides an interface for Comprehend DetectKeyPhrases requests.
  *
- * \ingroup Comprehend
+ * \inmodule QtAwsComprehend
  *
  *  Amazon Comprehend is an AWS service for gaining insight into the content of documents. Use these actions to determine
  *  the topics contained in your documents, the topics they discuss, the predominant sentiment expressed in them, the
@@ -40,9 +39,7 @@ namespace Comprehend {
  */
 
 /*!
- * @brief  Constructs a new DetectKeyPhrasesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DetectKeyPhrasesRequest::DetectKeyPhrasesRequest(const DetectKeyPhrasesRequest &other)
     : ComprehendRequest(new DetectKeyPhrasesRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ DetectKeyPhrasesRequest::DetectKeyPhrasesRequest(const DetectKeyPhrasesRequest &
 }
 
 /*!
- * @brief  Constructs a new DetectKeyPhrasesRequest object.
+ * Constructs a DetectKeyPhrasesRequest object.
  */
 DetectKeyPhrasesRequest::DetectKeyPhrasesRequest()
     : ComprehendRequest(new DetectKeyPhrasesRequestPrivate(ComprehendRequest::DetectKeyPhrasesAction, this))
@@ -69,14 +66,9 @@ bool DetectKeyPhrasesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DetectKeyPhrasesResponse object.
+ * Returns a DetectKeyPhrasesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DetectKeyPhrasesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ComprehendClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DetectKeyPhrasesRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * DetectKeyPhrasesRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::Comprehend::DetectKeyPhrasesRequestPrivate
+ * \brief The DetectKeyPhrasesRequestPrivate class provides private implementation for DetectKeyPhrasesRequest.
+ * \internal
  *
- * @class  DetectKeyPhrasesRequestPrivate
- *
- * @brief  Private implementation for DetectKeyPhrasesRequest.
+ * \inmodule QtAwsComprehend
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DetectKeyPhrasesRequestPrivate object.
- *
- * @param  action  Comprehend action being performed.
- * @param  q       Pointer to this object's public DetectKeyPhrasesRequest instance.
+ * Constructs a DetectKeyPhrasesRequestPrivate object for Comprehend \a action with,
+ * public implementation \a q.
  */
 DetectKeyPhrasesRequestPrivate::DetectKeyPhrasesRequestPrivate(
     const ComprehendRequest::Action action, DetectKeyPhrasesRequest * const q)
@@ -107,15 +96,10 @@ DetectKeyPhrasesRequestPrivate::DetectKeyPhrasesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DetectKeyPhrasesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DetectKeyPhrasesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DetectKeyPhrasesRequest instance.
  */
 DetectKeyPhrasesRequestPrivate::DetectKeyPhrasesRequestPrivate(
     const DetectKeyPhrasesRequestPrivate &other, DetectKeyPhrasesRequest * const q)

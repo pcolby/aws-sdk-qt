@@ -27,10 +27,9 @@ namespace StorageGateway {
 
 /*!
  * \class QtAws::StorageGateway::DescribeTapeArchivesRequest
- *
  * \brief The DescribeTapeArchivesRequest class provides an interface for StorageGateway DescribeTapeArchives requests.
  *
- * \ingroup StorageGateway
+ * \inmodule QtAwsStorageGateway
  *
  *  <fullname>AWS Storage Gateway Service</fullname>
  * 
@@ -106,9 +105,7 @@ namespace StorageGateway {
  */
 
 /*!
- * @brief  Constructs a new DescribeTapeArchivesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeTapeArchivesRequest::DescribeTapeArchivesRequest(const DescribeTapeArchivesRequest &other)
     : StorageGatewayRequest(new DescribeTapeArchivesRequestPrivate(*other.d_func(), this))
@@ -117,7 +114,7 @@ DescribeTapeArchivesRequest::DescribeTapeArchivesRequest(const DescribeTapeArchi
 }
 
 /*!
- * @brief  Constructs a new DescribeTapeArchivesRequest object.
+ * Constructs a DescribeTapeArchivesRequest object.
  */
 DescribeTapeArchivesRequest::DescribeTapeArchivesRequest()
     : StorageGatewayRequest(new DescribeTapeArchivesRequestPrivate(StorageGatewayRequest::DescribeTapeArchivesAction, this))
@@ -135,14 +132,9 @@ bool DescribeTapeArchivesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeTapeArchivesResponse object.
+ * Returns a DescribeTapeArchivesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeTapeArchivesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  StorageGatewayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeTapeArchivesRequest::response(QNetworkReply * const reply) const
 {
@@ -150,20 +142,17 @@ QtAws::Core::AwsAbstractResponse * DescribeTapeArchivesRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::StorageGateway::DescribeTapeArchivesRequestPrivate
+ * \brief The DescribeTapeArchivesRequestPrivate class provides private implementation for DescribeTapeArchivesRequest.
+ * \internal
  *
- * @class  DescribeTapeArchivesRequestPrivate
- *
- * @brief  Private implementation for DescribeTapeArchivesRequest.
+ * \inmodule QtAwsStorageGateway
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeTapeArchivesRequestPrivate object.
- *
- * @param  action  StorageGateway action being performed.
- * @param  q       Pointer to this object's public DescribeTapeArchivesRequest instance.
+ * Constructs a DescribeTapeArchivesRequestPrivate object for StorageGateway \a action with,
+ * public implementation \a q.
  */
 DescribeTapeArchivesRequestPrivate::DescribeTapeArchivesRequestPrivate(
     const StorageGatewayRequest::Action action, DescribeTapeArchivesRequest * const q)
@@ -173,15 +162,10 @@ DescribeTapeArchivesRequestPrivate::DescribeTapeArchivesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeTapeArchivesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeTapeArchivesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeTapeArchivesRequest instance.
  */
 DescribeTapeArchivesRequestPrivate::DescribeTapeArchivesRequestPrivate(
     const DescribeTapeArchivesRequestPrivate &other, DescribeTapeArchivesRequest * const q)

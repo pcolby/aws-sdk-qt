@@ -27,10 +27,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::CreateResourceRequest
- *
  * \brief The CreateResourceRequest class provides an interface for APIGateway CreateResource requests.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -42,9 +41,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new CreateResourceRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateResourceRequest::CreateResourceRequest(const CreateResourceRequest &other)
     : APIGatewayRequest(new CreateResourceRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ CreateResourceRequest::CreateResourceRequest(const CreateResourceRequest &other)
 }
 
 /*!
- * @brief  Constructs a new CreateResourceRequest object.
+ * Constructs a CreateResourceRequest object.
  */
 CreateResourceRequest::CreateResourceRequest()
     : APIGatewayRequest(new CreateResourceRequestPrivate(APIGatewayRequest::CreateResourceAction, this))
@@ -71,14 +68,9 @@ bool CreateResourceRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateResourceResponse object.
+ * Returns a CreateResourceResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateResourceResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  APIGatewayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateResourceRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * CreateResourceRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::APIGateway::CreateResourceRequestPrivate
+ * \brief The CreateResourceRequestPrivate class provides private implementation for CreateResourceRequest.
+ * \internal
  *
- * @class  CreateResourceRequestPrivate
- *
- * @brief  Private implementation for CreateResourceRequest.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateResourceRequestPrivate object.
- *
- * @param  action  APIGateway action being performed.
- * @param  q       Pointer to this object's public CreateResourceRequest instance.
+ * Constructs a CreateResourceRequestPrivate object for APIGateway \a action with,
+ * public implementation \a q.
  */
 CreateResourceRequestPrivate::CreateResourceRequestPrivate(
     const APIGatewayRequest::Action action, CreateResourceRequest * const q)
@@ -109,15 +98,10 @@ CreateResourceRequestPrivate::CreateResourceRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateResourceRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateResourceRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateResourceRequest instance.
  */
 CreateResourceRequestPrivate::CreateResourceRequestPrivate(
     const CreateResourceRequestPrivate &other, CreateResourceRequest * const q)

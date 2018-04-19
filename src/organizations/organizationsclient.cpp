@@ -109,6 +109,9 @@
 /*!
  * \namespace QtAws::Organizations
  * \brief The QtAws::Organizations contains stuff...
+ *
+ * \inmodule QtAwsOrganizations
+ *
  * @todo Move this to a separate template file.
  */
 
@@ -300,7 +303,7 @@ OrganizationsClient::OrganizationsClient(
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * \a  AwsEndpoint::getEndpoint()
+ * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
 OrganizationsClient::OrganizationsClient(
     const QUrl &endpoint,

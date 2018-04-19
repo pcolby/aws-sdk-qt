@@ -27,10 +27,9 @@ namespace LexModelBuildingService {
 
 /*!
  * \class QtAws::LexModelBuildingService::GetIntentRequest
- *
  * \brief The GetIntentRequest class provides an interface for LexModelBuildingService GetIntent requests.
  *
- * \ingroup LexModelBuildingService
+ * \inmodule QtAwsLexModelBuildingService
  *
  *  <fullname>Amazon Lex Build-Time Actions</fullname>
  * 
@@ -41,9 +40,7 @@ namespace LexModelBuildingService {
  */
 
 /*!
- * @brief  Constructs a new GetIntentRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetIntentRequest::GetIntentRequest(const GetIntentRequest &other)
     : LexModelBuildingServiceRequest(new GetIntentRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ GetIntentRequest::GetIntentRequest(const GetIntentRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetIntentRequest object.
+ * Constructs a GetIntentRequest object.
  */
 GetIntentRequest::GetIntentRequest()
     : LexModelBuildingServiceRequest(new GetIntentRequestPrivate(LexModelBuildingServiceRequest::GetIntentAction, this))
@@ -70,14 +67,9 @@ bool GetIntentRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetIntentResponse object.
+ * Returns a GetIntentResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetIntentResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  LexModelBuildingServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetIntentRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * GetIntentRequest::response(QNetworkReply * co
 }
 
 /*!
- * @internal
+ * \class QtAws::LexModelBuildingService::GetIntentRequestPrivate
+ * \brief The GetIntentRequestPrivate class provides private implementation for GetIntentRequest.
+ * \internal
  *
- * @class  GetIntentRequestPrivate
- *
- * @brief  Private implementation for GetIntentRequest.
+ * \inmodule QtAwsLexModelBuildingService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetIntentRequestPrivate object.
- *
- * @param  action  LexModelBuildingService action being performed.
- * @param  q       Pointer to this object's public GetIntentRequest instance.
+ * Constructs a GetIntentRequestPrivate object for LexModelBuildingService \a action with,
+ * public implementation \a q.
  */
 GetIntentRequestPrivate::GetIntentRequestPrivate(
     const LexModelBuildingServiceRequest::Action action, GetIntentRequest * const q)
@@ -108,15 +97,10 @@ GetIntentRequestPrivate::GetIntentRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetIntentRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetIntentRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetIntentRequest instance.
  */
 GetIntentRequestPrivate::GetIntentRequestPrivate(
     const GetIntentRequestPrivate &other, GetIntentRequest * const q)

@@ -27,10 +27,9 @@ namespace Rekognition {
 
 /*!
  * \class QtAws::Rekognition::RecognizeCelebritiesRequest
- *
  * \brief The RecognizeCelebritiesRequest class provides an interface for Rekognition RecognizeCelebrities requests.
  *
- * \ingroup Rekognition
+ * \inmodule QtAwsRekognition
  *
  *  This is the Amazon Rekognition API
  *
@@ -38,9 +37,7 @@ namespace Rekognition {
  */
 
 /*!
- * @brief  Constructs a new RecognizeCelebritiesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 RecognizeCelebritiesRequest::RecognizeCelebritiesRequest(const RecognizeCelebritiesRequest &other)
     : RekognitionRequest(new RecognizeCelebritiesRequestPrivate(*other.d_func(), this))
@@ -49,7 +46,7 @@ RecognizeCelebritiesRequest::RecognizeCelebritiesRequest(const RecognizeCelebrit
 }
 
 /*!
- * @brief  Constructs a new RecognizeCelebritiesRequest object.
+ * Constructs a RecognizeCelebritiesRequest object.
  */
 RecognizeCelebritiesRequest::RecognizeCelebritiesRequest()
     : RekognitionRequest(new RecognizeCelebritiesRequestPrivate(RekognitionRequest::RecognizeCelebritiesAction, this))
@@ -67,14 +64,9 @@ bool RecognizeCelebritiesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an RecognizeCelebritiesResponse object.
+ * Returns a RecognizeCelebritiesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An RecognizeCelebritiesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RekognitionClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * RecognizeCelebritiesRequest::response(QNetworkReply * const reply) const
 {
@@ -82,20 +74,17 @@ QtAws::Core::AwsAbstractResponse * RecognizeCelebritiesRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::Rekognition::RecognizeCelebritiesRequestPrivate
+ * \brief The RecognizeCelebritiesRequestPrivate class provides private implementation for RecognizeCelebritiesRequest.
+ * \internal
  *
- * @class  RecognizeCelebritiesRequestPrivate
- *
- * @brief  Private implementation for RecognizeCelebritiesRequest.
+ * \inmodule QtAwsRekognition
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new RecognizeCelebritiesRequestPrivate object.
- *
- * @param  action  Rekognition action being performed.
- * @param  q       Pointer to this object's public RecognizeCelebritiesRequest instance.
+ * Constructs a RecognizeCelebritiesRequestPrivate object for Rekognition \a action with,
+ * public implementation \a q.
  */
 RecognizeCelebritiesRequestPrivate::RecognizeCelebritiesRequestPrivate(
     const RekognitionRequest::Action action, RecognizeCelebritiesRequest * const q)
@@ -105,15 +94,10 @@ RecognizeCelebritiesRequestPrivate::RecognizeCelebritiesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RecognizeCelebritiesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the RecognizeCelebritiesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public RecognizeCelebritiesRequest instance.
  */
 RecognizeCelebritiesRequestPrivate::RecognizeCelebritiesRequestPrivate(
     const RecognizeCelebritiesRequestPrivate &other, RecognizeCelebritiesRequest * const q)

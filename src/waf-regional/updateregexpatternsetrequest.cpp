@@ -27,10 +27,9 @@ namespace WAFRegional {
 
 /*!
  * \class QtAws::WAFRegional::UpdateRegexPatternSetRequest
- *
  * \brief The UpdateRegexPatternSetRequest class provides an interface for WAFRegional UpdateRegexPatternSet requests.
  *
- * \ingroup WAFRegional
+ * \inmodule QtAwsWAFRegional
  *
  *  This is the <i>AWS WAF Regional API Reference</i> for using AWS WAF with Elastic Load Balancing (ELB) Application Load
  *  Balancers. The AWS WAF actions and data types listed in the reference are available for protecting Application Load
@@ -44,9 +43,7 @@ namespace WAFRegional {
  */
 
 /*!
- * @brief  Constructs a new UpdateRegexPatternSetRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateRegexPatternSetRequest::UpdateRegexPatternSetRequest(const UpdateRegexPatternSetRequest &other)
     : WAFRegionalRequest(new UpdateRegexPatternSetRequestPrivate(*other.d_func(), this))
@@ -55,7 +52,7 @@ UpdateRegexPatternSetRequest::UpdateRegexPatternSetRequest(const UpdateRegexPatt
 }
 
 /*!
- * @brief  Constructs a new UpdateRegexPatternSetRequest object.
+ * Constructs a UpdateRegexPatternSetRequest object.
  */
 UpdateRegexPatternSetRequest::UpdateRegexPatternSetRequest()
     : WAFRegionalRequest(new UpdateRegexPatternSetRequestPrivate(WAFRegionalRequest::UpdateRegexPatternSetAction, this))
@@ -73,14 +70,9 @@ bool UpdateRegexPatternSetRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateRegexPatternSetResponse object.
+ * Returns a UpdateRegexPatternSetResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateRegexPatternSetResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WAFRegionalClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateRegexPatternSetRequest::response(QNetworkReply * const reply) const
 {
@@ -88,20 +80,17 @@ QtAws::Core::AwsAbstractResponse * UpdateRegexPatternSetRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::WAFRegional::UpdateRegexPatternSetRequestPrivate
+ * \brief The UpdateRegexPatternSetRequestPrivate class provides private implementation for UpdateRegexPatternSetRequest.
+ * \internal
  *
- * @class  UpdateRegexPatternSetRequestPrivate
- *
- * @brief  Private implementation for UpdateRegexPatternSetRequest.
+ * \inmodule QtAwsWAFRegional
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateRegexPatternSetRequestPrivate object.
- *
- * @param  action  WAFRegional action being performed.
- * @param  q       Pointer to this object's public UpdateRegexPatternSetRequest instance.
+ * Constructs a UpdateRegexPatternSetRequestPrivate object for WAFRegional \a action with,
+ * public implementation \a q.
  */
 UpdateRegexPatternSetRequestPrivate::UpdateRegexPatternSetRequestPrivate(
     const WAFRegionalRequest::Action action, UpdateRegexPatternSetRequest * const q)
@@ -111,15 +100,10 @@ UpdateRegexPatternSetRequestPrivate::UpdateRegexPatternSetRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateRegexPatternSetRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateRegexPatternSetRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateRegexPatternSetRequest instance.
  */
 UpdateRegexPatternSetRequestPrivate::UpdateRegexPatternSetRequestPrivate(
     const UpdateRegexPatternSetRequestPrivate &other, UpdateRegexPatternSetRequest * const q)

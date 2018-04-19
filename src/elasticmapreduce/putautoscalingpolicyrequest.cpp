@@ -27,10 +27,9 @@ namespace EMR {
 
 /*!
  * \class QtAws::EMR::PutAutoScalingPolicyRequest
- *
  * \brief The PutAutoScalingPolicyRequest class provides an interface for EMR PutAutoScalingPolicy requests.
  *
- * \ingroup EMR
+ * \inmodule QtAwsEMR
  *
  *  Amazon EMR is a web service that makes it easy to process large amounts of data efficiently. Amazon EMR uses Hadoop
  *  processing combined with several AWS products to do tasks such as web indexing, data mining, log file analysis, machine
@@ -40,9 +39,7 @@ namespace EMR {
  */
 
 /*!
- * @brief  Constructs a new PutAutoScalingPolicyRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 PutAutoScalingPolicyRequest::PutAutoScalingPolicyRequest(const PutAutoScalingPolicyRequest &other)
     : EMRRequest(new PutAutoScalingPolicyRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ PutAutoScalingPolicyRequest::PutAutoScalingPolicyRequest(const PutAutoScalingPol
 }
 
 /*!
- * @brief  Constructs a new PutAutoScalingPolicyRequest object.
+ * Constructs a PutAutoScalingPolicyRequest object.
  */
 PutAutoScalingPolicyRequest::PutAutoScalingPolicyRequest()
     : EMRRequest(new PutAutoScalingPolicyRequestPrivate(EMRRequest::PutAutoScalingPolicyAction, this))
@@ -69,14 +66,9 @@ bool PutAutoScalingPolicyRequest::isValid() const
 
 
 /*!
- * @brief  Construct an PutAutoScalingPolicyResponse object.
+ * Returns a PutAutoScalingPolicyResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An PutAutoScalingPolicyResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EMRClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * PutAutoScalingPolicyRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * PutAutoScalingPolicyRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::EMR::PutAutoScalingPolicyRequestPrivate
+ * \brief The PutAutoScalingPolicyRequestPrivate class provides private implementation for PutAutoScalingPolicyRequest.
+ * \internal
  *
- * @class  PutAutoScalingPolicyRequestPrivate
- *
- * @brief  Private implementation for PutAutoScalingPolicyRequest.
+ * \inmodule QtAwsEMR
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new PutAutoScalingPolicyRequestPrivate object.
- *
- * @param  action  EMR action being performed.
- * @param  q       Pointer to this object's public PutAutoScalingPolicyRequest instance.
+ * Constructs a PutAutoScalingPolicyRequestPrivate object for EMR \a action with,
+ * public implementation \a q.
  */
 PutAutoScalingPolicyRequestPrivate::PutAutoScalingPolicyRequestPrivate(
     const EMRRequest::Action action, PutAutoScalingPolicyRequest * const q)
@@ -107,15 +96,10 @@ PutAutoScalingPolicyRequestPrivate::PutAutoScalingPolicyRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutAutoScalingPolicyRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the PutAutoScalingPolicyRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public PutAutoScalingPolicyRequest instance.
  */
 PutAutoScalingPolicyRequestPrivate::PutAutoScalingPolicyRequestPrivate(
     const PutAutoScalingPolicyRequestPrivate &other, PutAutoScalingPolicyRequest * const q)

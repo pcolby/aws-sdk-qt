@@ -27,10 +27,9 @@ namespace AppSync {
 
 /*!
  * \class QtAws::AppSync::DeleteDataSourceRequest
- *
  * \brief The DeleteDataSourceRequest class provides an interface for AppSync DeleteDataSource requests.
  *
- * \ingroup AppSync
+ * \inmodule QtAwsAppSync
  *
  *  AWS AppSync provides API actions for creating and interacting with data sources using GraphQL from your
  *
@@ -38,9 +37,7 @@ namespace AppSync {
  */
 
 /*!
- * @brief  Constructs a new DeleteDataSourceRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteDataSourceRequest::DeleteDataSourceRequest(const DeleteDataSourceRequest &other)
     : AppSyncRequest(new DeleteDataSourceRequestPrivate(*other.d_func(), this))
@@ -49,7 +46,7 @@ DeleteDataSourceRequest::DeleteDataSourceRequest(const DeleteDataSourceRequest &
 }
 
 /*!
- * @brief  Constructs a new DeleteDataSourceRequest object.
+ * Constructs a DeleteDataSourceRequest object.
  */
 DeleteDataSourceRequest::DeleteDataSourceRequest()
     : AppSyncRequest(new DeleteDataSourceRequestPrivate(AppSyncRequest::DeleteDataSourceAction, this))
@@ -67,14 +64,9 @@ bool DeleteDataSourceRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteDataSourceResponse object.
+ * Returns a DeleteDataSourceResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteDataSourceResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AppSyncClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteDataSourceRequest::response(QNetworkReply * const reply) const
 {
@@ -82,20 +74,17 @@ QtAws::Core::AwsAbstractResponse * DeleteDataSourceRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::AppSync::DeleteDataSourceRequestPrivate
+ * \brief The DeleteDataSourceRequestPrivate class provides private implementation for DeleteDataSourceRequest.
+ * \internal
  *
- * @class  DeleteDataSourceRequestPrivate
- *
- * @brief  Private implementation for DeleteDataSourceRequest.
+ * \inmodule QtAwsAppSync
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteDataSourceRequestPrivate object.
- *
- * @param  action  AppSync action being performed.
- * @param  q       Pointer to this object's public DeleteDataSourceRequest instance.
+ * Constructs a DeleteDataSourceRequestPrivate object for AppSync \a action with,
+ * public implementation \a q.
  */
 DeleteDataSourceRequestPrivate::DeleteDataSourceRequestPrivate(
     const AppSyncRequest::Action action, DeleteDataSourceRequest * const q)
@@ -105,15 +94,10 @@ DeleteDataSourceRequestPrivate::DeleteDataSourceRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteDataSourceRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteDataSourceRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteDataSourceRequest instance.
  */
 DeleteDataSourceRequestPrivate::DeleteDataSourceRequestPrivate(
     const DeleteDataSourceRequestPrivate &other, DeleteDataSourceRequest * const q)

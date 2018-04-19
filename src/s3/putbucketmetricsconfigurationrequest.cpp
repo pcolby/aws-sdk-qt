@@ -27,19 +27,16 @@ namespace S3 {
 
 /*!
  * \class QtAws::S3::PutBucketMetricsConfigurationRequest
- *
  * \brief The PutBucketMetricsConfigurationRequest class provides an interface for S3 PutBucketMetricsConfiguration requests.
  *
- * \ingroup S3
+ * \inmodule QtAwsS3
  *
  *
  * \sa S3Client::putBucketMetricsConfiguration
  */
 
 /*!
- * @brief  Constructs a new PutBucketMetricsConfigurationRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 PutBucketMetricsConfigurationRequest::PutBucketMetricsConfigurationRequest(const PutBucketMetricsConfigurationRequest &other)
     : S3Request(new PutBucketMetricsConfigurationRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ PutBucketMetricsConfigurationRequest::PutBucketMetricsConfigurationRequest(const
 }
 
 /*!
- * @brief  Constructs a new PutBucketMetricsConfigurationRequest object.
+ * Constructs a PutBucketMetricsConfigurationRequest object.
  */
 PutBucketMetricsConfigurationRequest::PutBucketMetricsConfigurationRequest()
     : S3Request(new PutBucketMetricsConfigurationRequestPrivate(S3Request::PutBucketMetricsConfigurationAction, this))
@@ -66,14 +63,9 @@ bool PutBucketMetricsConfigurationRequest::isValid() const
 
 
 /*!
- * @brief  Construct an PutBucketMetricsConfigurationResponse object.
+ * Returns a PutBucketMetricsConfigurationResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An PutBucketMetricsConfigurationResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  S3Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * PutBucketMetricsConfigurationRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * PutBucketMetricsConfigurationRequest::respons
 }
 
 /*!
- * @internal
+ * \class QtAws::S3::PutBucketMetricsConfigurationRequestPrivate
+ * \brief The PutBucketMetricsConfigurationRequestPrivate class provides private implementation for PutBucketMetricsConfigurationRequest.
+ * \internal
  *
- * @class  PutBucketMetricsConfigurationRequestPrivate
- *
- * @brief  Private implementation for PutBucketMetricsConfigurationRequest.
+ * \inmodule QtAwsS3
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new PutBucketMetricsConfigurationRequestPrivate object.
- *
- * @param  action  S3 action being performed.
- * @param  q       Pointer to this object's public PutBucketMetricsConfigurationRequest instance.
+ * Constructs a PutBucketMetricsConfigurationRequestPrivate object for S3 \a action with,
+ * public implementation \a q.
  */
 PutBucketMetricsConfigurationRequestPrivate::PutBucketMetricsConfigurationRequestPrivate(
     const S3Request::Action action, PutBucketMetricsConfigurationRequest * const q)
@@ -104,15 +93,10 @@ PutBucketMetricsConfigurationRequestPrivate::PutBucketMetricsConfigurationReques
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutBucketMetricsConfigurationRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the PutBucketMetricsConfigurationRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public PutBucketMetricsConfigurationRequest instance.
  */
 PutBucketMetricsConfigurationRequestPrivate::PutBucketMetricsConfigurationRequestPrivate(
     const PutBucketMetricsConfigurationRequestPrivate &other, PutBucketMetricsConfigurationRequest * const q)

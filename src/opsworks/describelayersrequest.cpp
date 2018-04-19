@@ -27,10 +27,9 @@ namespace OpsWorks {
 
 /*!
  * \class QtAws::OpsWorks::DescribeLayersRequest
- *
  * \brief The DescribeLayersRequest class provides an interface for OpsWorks DescribeLayers requests.
  *
- * \ingroup OpsWorks
+ * \inmodule QtAwsOpsWorks
  *
  *  <fullname>AWS OpsWorks</fullname>
  * 
@@ -143,9 +142,7 @@ namespace OpsWorks {
  */
 
 /*!
- * @brief  Constructs a new DescribeLayersRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeLayersRequest::DescribeLayersRequest(const DescribeLayersRequest &other)
     : OpsWorksRequest(new DescribeLayersRequestPrivate(*other.d_func(), this))
@@ -154,7 +151,7 @@ DescribeLayersRequest::DescribeLayersRequest(const DescribeLayersRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DescribeLayersRequest object.
+ * Constructs a DescribeLayersRequest object.
  */
 DescribeLayersRequest::DescribeLayersRequest()
     : OpsWorksRequest(new DescribeLayersRequestPrivate(OpsWorksRequest::DescribeLayersAction, this))
@@ -172,14 +169,9 @@ bool DescribeLayersRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeLayersResponse object.
+ * Returns a DescribeLayersResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeLayersResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  OpsWorksClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeLayersRequest::response(QNetworkReply * const reply) const
 {
@@ -187,20 +179,17 @@ QtAws::Core::AwsAbstractResponse * DescribeLayersRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::OpsWorks::DescribeLayersRequestPrivate
+ * \brief The DescribeLayersRequestPrivate class provides private implementation for DescribeLayersRequest.
+ * \internal
  *
- * @class  DescribeLayersRequestPrivate
- *
- * @brief  Private implementation for DescribeLayersRequest.
+ * \inmodule QtAwsOpsWorks
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeLayersRequestPrivate object.
- *
- * @param  action  OpsWorks action being performed.
- * @param  q       Pointer to this object's public DescribeLayersRequest instance.
+ * Constructs a DescribeLayersRequestPrivate object for OpsWorks \a action with,
+ * public implementation \a q.
  */
 DescribeLayersRequestPrivate::DescribeLayersRequestPrivate(
     const OpsWorksRequest::Action action, DescribeLayersRequest * const q)
@@ -210,15 +199,10 @@ DescribeLayersRequestPrivate::DescribeLayersRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeLayersRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeLayersRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeLayersRequest instance.
  */
 DescribeLayersRequestPrivate::DescribeLayersRequestPrivate(
     const DescribeLayersRequestPrivate &other, DescribeLayersRequest * const q)

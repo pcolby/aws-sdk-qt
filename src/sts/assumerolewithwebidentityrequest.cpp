@@ -27,10 +27,9 @@ namespace STS {
 
 /*!
  * \class QtAws::STS::AssumeRoleWithWebIdentityRequest
- *
  * \brief The AssumeRoleWithWebIdentityRequest class provides an interface for STS AssumeRoleWithWebIdentity requests.
  *
- * \ingroup STS
+ * \inmodule QtAwsSTS
  *
  *  <fullname>AWS Security Token Service</fullname>
  * 
@@ -95,9 +94,7 @@ namespace STS {
  */
 
 /*!
- * @brief  Constructs a new AssumeRoleWithWebIdentityRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AssumeRoleWithWebIdentityRequest::AssumeRoleWithWebIdentityRequest(const AssumeRoleWithWebIdentityRequest &other)
     : STSRequest(new AssumeRoleWithWebIdentityRequestPrivate(*other.d_func(), this))
@@ -106,7 +103,7 @@ AssumeRoleWithWebIdentityRequest::AssumeRoleWithWebIdentityRequest(const AssumeR
 }
 
 /*!
- * @brief  Constructs a new AssumeRoleWithWebIdentityRequest object.
+ * Constructs a AssumeRoleWithWebIdentityRequest object.
  */
 AssumeRoleWithWebIdentityRequest::AssumeRoleWithWebIdentityRequest()
     : STSRequest(new AssumeRoleWithWebIdentityRequestPrivate(STSRequest::AssumeRoleWithWebIdentityAction, this))
@@ -124,14 +121,9 @@ bool AssumeRoleWithWebIdentityRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AssumeRoleWithWebIdentityResponse object.
+ * Returns a AssumeRoleWithWebIdentityResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AssumeRoleWithWebIdentityResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  STSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AssumeRoleWithWebIdentityRequest::response(QNetworkReply * const reply) const
 {
@@ -139,20 +131,17 @@ QtAws::Core::AwsAbstractResponse * AssumeRoleWithWebIdentityRequest::response(QN
 }
 
 /*!
- * @internal
+ * \class QtAws::STS::AssumeRoleWithWebIdentityRequestPrivate
+ * \brief The AssumeRoleWithWebIdentityRequestPrivate class provides private implementation for AssumeRoleWithWebIdentityRequest.
+ * \internal
  *
- * @class  AssumeRoleWithWebIdentityRequestPrivate
- *
- * @brief  Private implementation for AssumeRoleWithWebIdentityRequest.
+ * \inmodule QtAwsSTS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AssumeRoleWithWebIdentityRequestPrivate object.
- *
- * @param  action  STS action being performed.
- * @param  q       Pointer to this object's public AssumeRoleWithWebIdentityRequest instance.
+ * Constructs a AssumeRoleWithWebIdentityRequestPrivate object for STS \a action with,
+ * public implementation \a q.
  */
 AssumeRoleWithWebIdentityRequestPrivate::AssumeRoleWithWebIdentityRequestPrivate(
     const STSRequest::Action action, AssumeRoleWithWebIdentityRequest * const q)
@@ -162,15 +151,10 @@ AssumeRoleWithWebIdentityRequestPrivate::AssumeRoleWithWebIdentityRequestPrivate
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AssumeRoleWithWebIdentityRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AssumeRoleWithWebIdentityRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AssumeRoleWithWebIdentityRequest instance.
  */
 AssumeRoleWithWebIdentityRequestPrivate::AssumeRoleWithWebIdentityRequestPrivate(
     const AssumeRoleWithWebIdentityRequestPrivate &other, AssumeRoleWithWebIdentityRequest * const q)

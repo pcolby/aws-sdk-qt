@@ -25,16 +25,27 @@ namespace Health {
 
 /*!
  * \class QtAws::Health::HealthRequest
- *
  * \brief The HealthRequest class provides an interface for Health requests.
  *
- * \ingroup Health
+ * \inmodule QtAwsHealth
  */
 
 /*!
- * @brief  Constructs a new HealthRequest object.
+ * \enum HealthRequest::Action
  *
- * @param  action  The Health action to request.
+ * This enum describes the actions that can be performed as Health
+ * requests.
+ *
+ * \value DescribeAffectedEntitiesAction Health DescribeAffectedEntities action.
+ * \value DescribeEntityAggregatesAction Health DescribeEntityAggregates action.
+ * \value DescribeEventAggregatesAction Health DescribeEventAggregates action.
+ * \value DescribeEventDetailsAction Health DescribeEventDetails action.
+ * \value DescribeEventTypesAction Health DescribeEventTypes action.
+ * \value DescribeEventsAction Health DescribeEvents action.
+ */
+
+/*!
+ * Constructs a[n] HealthRequest object for Health \a action.
  */
 HealthRequest::HealthRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new HealthRequestPrivate(action, this))
@@ -43,9 +54,7 @@ HealthRequest::HealthRequest(const Action action)
 }
 
 /*!
- * @brief  Constructs a new HealthRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 HealthRequest::HealthRequest(const HealthRequest &other)
     : QtAws::Core::AwsAbstractRequest(new HealthRequestPrivate(*other.d_func(), this))
@@ -54,13 +63,7 @@ HealthRequest::HealthRequest(const HealthRequest &other)
 }
 
 /*!
- * @brief  Assignment operator.
- *
- * Assigns \a other to \c this.
- *
- * @param  other  Instance to copy.
- *
- * @return  A reference to \c this.
+ * Sets the HealthRequest object to be equal to \a other.
  */
 HealthRequest& HealthRequest::operator=(const HealthRequest &other)
 {
@@ -72,14 +75,10 @@ HealthRequest& HealthRequest::operator=(const HealthRequest &other)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new HealthRequest object.
+ * Constructs aa HealthRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from HealthRequestPrivate.
- *
- * @param  d  Pointer to private data (aka D-Pointer).
  */
 HealthRequest::HealthRequest(HealthRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
@@ -87,7 +86,7 @@ HealthRequest::HealthRequest(HealthRequestPrivate * const d) : QtAws::Core::AwsA
 }
 
 /*!
- * \brief Returns the Health action to be performed by this request.
+ * Returns the Health action to be performed by this request.
  */
 HealthRequest::Action HealthRequest::action() const
 {
@@ -96,7 +95,7 @@ HealthRequest::Action HealthRequest::action() const
 }
 
 /*!
- * \brief Returns the name of the Health action to be performed by this request.
+ * Returns the name of the Health action to be performed by this request.
  */
 QString HealthRequest::actionString() const
 {
@@ -104,7 +103,7 @@ QString HealthRequest::actionString() const
 }
 
 /*!
- * \brief Returns the Health API version implemented by this request.
+ * Returns the Health API version implemented by this request.
  */
 QString HealthRequest::apiVersion() const
 {
@@ -113,7 +112,7 @@ QString HealthRequest::apiVersion() const
 }
 
 /*!
- * @brief Set the Health action to be performed by this request to \a action.
+ * Sets the Health action to be performed by this request to \a action.
  */
 void HealthRequest::setAction(const Action action)
 {
@@ -122,7 +121,7 @@ void HealthRequest::setAction(const Action action)
 }
 
 /*!
- * Set the Health API version to include in this request to \a version.
+ * Sets the Health API version to include in this request to \a version.
  */
 void HealthRequest::setApiVersion(const QString &version)
 {
@@ -131,7 +130,7 @@ void HealthRequest::setApiVersion(const QString &version)
 }
 
 /*!
- * \brief Returns \c true if this request is the same as \a other.
+ * Returns \c true if this request is equal to \a other; \c false otherwise.
  *
  * Note, most derived *Request classes do not need to provider their own
  * implementations of this function, since most such request classes rely on
@@ -146,8 +145,8 @@ bool HealthRequest::operator==(const HealthRequest &other) const
             (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
-/*!
- * @brief  Check if \a queueName is a valid Health queue name.
+/*
+ * Returns \c tue if \a queueName is a valid Health queue name.
  *
  * @par From Health FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
@@ -166,9 +165,8 @@ bool HealthRequest::operator==(const HealthRequest &other) const
 }*/
 
 /*!
- * \brief Removes the a \a name parameter from this request.
- *
- * Returns the count of paramters removed (typically \c 0 or \c 1).
+ * Removes the a \a name parameter from the request, then returns the number of
+ * paramters removed (typically \c 0 or \c 1).
  */
 int HealthRequest::clearParameter(const QString &name)
 {
@@ -177,7 +175,7 @@ int HealthRequest::clearParameter(const QString &name)
 }
 
 /*!
- * \brief Removes all parameters from this request.
+ * Removes all parameters from the request.
  */
 void HealthRequest::clearParameters()
 {
@@ -186,7 +184,7 @@ void HealthRequest::clearParameters()
 }
 
 /*!
- * \brief Returns the value of the \n name pararemter if set, otherwise \a defaultValue.
+ * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
 QVariant HealthRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
@@ -195,7 +193,7 @@ QVariant HealthRequest::parameter(const QString &name, const QVariant &defaultVa
 }
 
 /*!
- * \brief Returns a map of parameters included in this request.
+ * Returns the parameters included in this request.
  */
 const QVariantMap &HealthRequest::parameters() const
 {
@@ -204,7 +202,7 @@ const QVariantMap &HealthRequest::parameters() const
 }
 
 /*!
- * \brief Sets the \a name parameter to \a value.
+ * Sets the \a name parameter to \a value.
  */
 void HealthRequest::setParameter(const QString &name, const QVariant &value)
 {
@@ -213,9 +211,8 @@ void HealthRequest::setParameter(const QString &name, const QVariant &value)
 }
 
 /*!
- * \brief Sets the map of paramters for this request to \a parameters.
- *
- * Any request parameters set previously will be discarded.
+ * Sets the paramters for this request to \a parameters. Any request parameters
+ * set previously will be discarded.
  */
 void HealthRequest::setParameters(const QVariantMap &parameters)
 {
@@ -224,11 +221,12 @@ void HealthRequest::setParameters(const QVariantMap &parameters)
 }
 
 /*!
- * \brief Returns a network request for this Health request using the given \a endpoint.
+ * Returns a network request for the Health request using the given
+ * \a endpoint.
  *
- * This Health implementation builds request URLs by combining the common query
- * parameters (such as Action and Version), with any that have been added (via
- * setParameter) by child classes.
+ * This Health implementation builds request URLs by combining the
+ * common query parameters (such as Action and Version), with any that have
+ * been added (via setParameter) by child classes.
  */
 QNetworkRequest HealthRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -239,17 +237,16 @@ QNetworkRequest HealthRequest::unsignedRequest(const QUrl &endpoint) const
 }
 
 /*!
+ * \class QtAws::Health::HealthRequestPrivate
+ * \brief The HealthRequestPrivate class provides private implementation for HealthRequest.
  * \internal
  *
- * \class  HealthRequestPrivate
- *
- * \brief  Private implementation for HealthRequest.
+ * \inmodule QtAwsHealth
  */
 
 /*!
- * \internal
- *
- * \brief Constructs a new HealthRequestPrivate object.
+ * Constructs a HealthRequestPrivate object for Health \a action with,
+ * public implementation \a q.
  */
 HealthRequestPrivate::HealthRequestPrivate(const HealthRequest::Action action, HealthRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
@@ -258,9 +255,7 @@ HealthRequestPrivate::HealthRequestPrivate(const HealthRequest::Action action, H
 }
 
 /*!
- * \internal
- *
- * \brief Constructs a new HealthRequestPrivate object, copying an existing one.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
@@ -276,15 +271,12 @@ HealthRequestPrivate::HealthRequestPrivate(const HealthRequestPrivate &other,
 }
 
 /*!
- * \internal
- *
- * \brief Returns a string representing \a action.
+ * Returns a string represention of \a action, or a null string if \a action is
+ * invalid.
  *
  * This function converts HealthRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the Health service's Action
  * query parameters.
- *
- * @return A string representing \a action, or a null string if \a action is invalid.
  */
 QString HealthRequestPrivate::toString(const HealthRequest::Action &action)
 {

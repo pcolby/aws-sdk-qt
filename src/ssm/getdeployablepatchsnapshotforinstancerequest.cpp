@@ -27,10 +27,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::GetDeployablePatchSnapshotForInstanceRequest
- *
  * \brief The GetDeployablePatchSnapshotForInstanceRequest class provides an interface for SSM GetDeployablePatchSnapshotForInstance requests.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -61,9 +60,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new GetDeployablePatchSnapshotForInstanceRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetDeployablePatchSnapshotForInstanceRequest::GetDeployablePatchSnapshotForInstanceRequest(const GetDeployablePatchSnapshotForInstanceRequest &other)
     : SSMRequest(new GetDeployablePatchSnapshotForInstanceRequestPrivate(*other.d_func(), this))
@@ -72,7 +69,7 @@ GetDeployablePatchSnapshotForInstanceRequest::GetDeployablePatchSnapshotForInsta
 }
 
 /*!
- * @brief  Constructs a new GetDeployablePatchSnapshotForInstanceRequest object.
+ * Constructs a GetDeployablePatchSnapshotForInstanceRequest object.
  */
 GetDeployablePatchSnapshotForInstanceRequest::GetDeployablePatchSnapshotForInstanceRequest()
     : SSMRequest(new GetDeployablePatchSnapshotForInstanceRequestPrivate(SSMRequest::GetDeployablePatchSnapshotForInstanceAction, this))
@@ -90,14 +87,9 @@ bool GetDeployablePatchSnapshotForInstanceRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetDeployablePatchSnapshotForInstanceResponse object.
+ * Returns a GetDeployablePatchSnapshotForInstanceResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetDeployablePatchSnapshotForInstanceResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SSMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetDeployablePatchSnapshotForInstanceRequest::response(QNetworkReply * const reply) const
 {
@@ -105,20 +97,17 @@ QtAws::Core::AwsAbstractResponse * GetDeployablePatchSnapshotForInstanceRequest:
 }
 
 /*!
- * @internal
+ * \class QtAws::SSM::GetDeployablePatchSnapshotForInstanceRequestPrivate
+ * \brief The GetDeployablePatchSnapshotForInstanceRequestPrivate class provides private implementation for GetDeployablePatchSnapshotForInstanceRequest.
+ * \internal
  *
- * @class  GetDeployablePatchSnapshotForInstanceRequestPrivate
- *
- * @brief  Private implementation for GetDeployablePatchSnapshotForInstanceRequest.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetDeployablePatchSnapshotForInstanceRequestPrivate object.
- *
- * @param  action  SSM action being performed.
- * @param  q       Pointer to this object's public GetDeployablePatchSnapshotForInstanceRequest instance.
+ * Constructs a GetDeployablePatchSnapshotForInstanceRequestPrivate object for SSM \a action with,
+ * public implementation \a q.
  */
 GetDeployablePatchSnapshotForInstanceRequestPrivate::GetDeployablePatchSnapshotForInstanceRequestPrivate(
     const SSMRequest::Action action, GetDeployablePatchSnapshotForInstanceRequest * const q)
@@ -128,15 +117,10 @@ GetDeployablePatchSnapshotForInstanceRequestPrivate::GetDeployablePatchSnapshotF
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetDeployablePatchSnapshotForInstanceRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetDeployablePatchSnapshotForInstanceRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetDeployablePatchSnapshotForInstanceRequest instance.
  */
 GetDeployablePatchSnapshotForInstanceRequestPrivate::GetDeployablePatchSnapshotForInstanceRequestPrivate(
     const GetDeployablePatchSnapshotForInstanceRequestPrivate &other, GetDeployablePatchSnapshotForInstanceRequest * const q)

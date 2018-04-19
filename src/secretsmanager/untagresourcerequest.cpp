@@ -27,10 +27,9 @@ namespace SecretsManager {
 
 /*!
  * \class QtAws::SecretsManager::UntagResourceRequest
- *
  * \brief The UntagResourceRequest class provides an interface for SecretsManager UntagResource requests.
  *
- * \ingroup SecretsManager
+ * \inmodule QtAwsSecretsManager
  *
  *  <fullname>AWS Secrets Manager API Reference</fullname>
  * 
@@ -137,9 +136,7 @@ namespace SecretsManager {
  */
 
 /*!
- * @brief  Constructs a new UntagResourceRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UntagResourceRequest::UntagResourceRequest(const UntagResourceRequest &other)
     : SecretsManagerRequest(new UntagResourceRequestPrivate(*other.d_func(), this))
@@ -148,7 +145,7 @@ UntagResourceRequest::UntagResourceRequest(const UntagResourceRequest &other)
 }
 
 /*!
- * @brief  Constructs a new UntagResourceRequest object.
+ * Constructs a UntagResourceRequest object.
  */
 UntagResourceRequest::UntagResourceRequest()
     : SecretsManagerRequest(new UntagResourceRequestPrivate(SecretsManagerRequest::UntagResourceAction, this))
@@ -166,14 +163,9 @@ bool UntagResourceRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UntagResourceResponse object.
+ * Returns a UntagResourceResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UntagResourceResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SecretsManagerClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UntagResourceRequest::response(QNetworkReply * const reply) const
 {
@@ -181,20 +173,17 @@ QtAws::Core::AwsAbstractResponse * UntagResourceRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::SecretsManager::UntagResourceRequestPrivate
+ * \brief The UntagResourceRequestPrivate class provides private implementation for UntagResourceRequest.
+ * \internal
  *
- * @class  UntagResourceRequestPrivate
- *
- * @brief  Private implementation for UntagResourceRequest.
+ * \inmodule QtAwsSecretsManager
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UntagResourceRequestPrivate object.
- *
- * @param  action  SecretsManager action being performed.
- * @param  q       Pointer to this object's public UntagResourceRequest instance.
+ * Constructs a UntagResourceRequestPrivate object for SecretsManager \a action with,
+ * public implementation \a q.
  */
 UntagResourceRequestPrivate::UntagResourceRequestPrivate(
     const SecretsManagerRequest::Action action, UntagResourceRequest * const q)
@@ -204,15 +193,10 @@ UntagResourceRequestPrivate::UntagResourceRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UntagResourceRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UntagResourceRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UntagResourceRequest instance.
  */
 UntagResourceRequestPrivate::UntagResourceRequestPrivate(
     const UntagResourceRequestPrivate &other, UntagResourceRequest * const q)

@@ -27,10 +27,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::ListPoliciesRequest
- *
  * \brief The ListPoliciesRequest class provides an interface for IAM ListPolicies requests.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -102,9 +101,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new ListPoliciesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListPoliciesRequest::ListPoliciesRequest(const ListPoliciesRequest &other)
     : IAMRequest(new ListPoliciesRequestPrivate(*other.d_func(), this))
@@ -113,7 +110,7 @@ ListPoliciesRequest::ListPoliciesRequest(const ListPoliciesRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ListPoliciesRequest object.
+ * Constructs a ListPoliciesRequest object.
  */
 ListPoliciesRequest::ListPoliciesRequest()
     : IAMRequest(new ListPoliciesRequestPrivate(IAMRequest::ListPoliciesAction, this))
@@ -131,14 +128,9 @@ bool ListPoliciesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListPoliciesResponse object.
+ * Returns a ListPoliciesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListPoliciesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IAMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListPoliciesRequest::response(QNetworkReply * const reply) const
 {
@@ -146,20 +138,17 @@ QtAws::Core::AwsAbstractResponse * ListPoliciesRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::IAM::ListPoliciesRequestPrivate
+ * \brief The ListPoliciesRequestPrivate class provides private implementation for ListPoliciesRequest.
+ * \internal
  *
- * @class  ListPoliciesRequestPrivate
- *
- * @brief  Private implementation for ListPoliciesRequest.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListPoliciesRequestPrivate object.
- *
- * @param  action  IAM action being performed.
- * @param  q       Pointer to this object's public ListPoliciesRequest instance.
+ * Constructs a ListPoliciesRequestPrivate object for IAM \a action with,
+ * public implementation \a q.
  */
 ListPoliciesRequestPrivate::ListPoliciesRequestPrivate(
     const IAMRequest::Action action, ListPoliciesRequest * const q)
@@ -169,15 +158,10 @@ ListPoliciesRequestPrivate::ListPoliciesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListPoliciesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListPoliciesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListPoliciesRequest instance.
  */
 ListPoliciesRequestPrivate::ListPoliciesRequestPrivate(
     const ListPoliciesRequestPrivate &other, ListPoliciesRequest * const q)

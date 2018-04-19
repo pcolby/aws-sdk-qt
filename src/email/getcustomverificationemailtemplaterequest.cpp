@@ -27,10 +27,9 @@ namespace SES {
 
 /*!
  * \class QtAws::SES::GetCustomVerificationEmailTemplateRequest
- *
  * \brief The GetCustomVerificationEmailTemplateRequest class provides an interface for SES GetCustomVerificationEmailTemplate requests.
  *
- * \ingroup SES
+ * \inmodule QtAwsSES
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -48,9 +47,7 @@ namespace SES {
  */
 
 /*!
- * @brief  Constructs a new GetCustomVerificationEmailTemplateRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetCustomVerificationEmailTemplateRequest::GetCustomVerificationEmailTemplateRequest(const GetCustomVerificationEmailTemplateRequest &other)
     : SESRequest(new GetCustomVerificationEmailTemplateRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ GetCustomVerificationEmailTemplateRequest::GetCustomVerificationEmailTemplateReq
 }
 
 /*!
- * @brief  Constructs a new GetCustomVerificationEmailTemplateRequest object.
+ * Constructs a GetCustomVerificationEmailTemplateRequest object.
  */
 GetCustomVerificationEmailTemplateRequest::GetCustomVerificationEmailTemplateRequest()
     : SESRequest(new GetCustomVerificationEmailTemplateRequestPrivate(SESRequest::GetCustomVerificationEmailTemplateAction, this))
@@ -77,14 +74,9 @@ bool GetCustomVerificationEmailTemplateRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetCustomVerificationEmailTemplateResponse object.
+ * Returns a GetCustomVerificationEmailTemplateResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetCustomVerificationEmailTemplateResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SESClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetCustomVerificationEmailTemplateRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * GetCustomVerificationEmailTemplateRequest::re
 }
 
 /*!
- * @internal
+ * \class QtAws::SES::GetCustomVerificationEmailTemplateRequestPrivate
+ * \brief The GetCustomVerificationEmailTemplateRequestPrivate class provides private implementation for GetCustomVerificationEmailTemplateRequest.
+ * \internal
  *
- * @class  GetCustomVerificationEmailTemplateRequestPrivate
- *
- * @brief  Private implementation for GetCustomVerificationEmailTemplateRequest.
+ * \inmodule QtAwsSES
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetCustomVerificationEmailTemplateRequestPrivate object.
- *
- * @param  action  SES action being performed.
- * @param  q       Pointer to this object's public GetCustomVerificationEmailTemplateRequest instance.
+ * Constructs a GetCustomVerificationEmailTemplateRequestPrivate object for SES \a action with,
+ * public implementation \a q.
  */
 GetCustomVerificationEmailTemplateRequestPrivate::GetCustomVerificationEmailTemplateRequestPrivate(
     const SESRequest::Action action, GetCustomVerificationEmailTemplateRequest * const q)
@@ -115,15 +104,10 @@ GetCustomVerificationEmailTemplateRequestPrivate::GetCustomVerificationEmailTemp
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetCustomVerificationEmailTemplateRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetCustomVerificationEmailTemplateRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetCustomVerificationEmailTemplateRequest instance.
  */
 GetCustomVerificationEmailTemplateRequestPrivate::GetCustomVerificationEmailTemplateRequestPrivate(
     const GetCustomVerificationEmailTemplateRequestPrivate &other, GetCustomVerificationEmailTemplateRequest * const q)

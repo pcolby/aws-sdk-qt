@@ -27,10 +27,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::GetResourceRequest
- *
  * \brief The GetResourceRequest class provides an interface for APIGateway GetResource requests.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -42,9 +41,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new GetResourceRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetResourceRequest::GetResourceRequest(const GetResourceRequest &other)
     : APIGatewayRequest(new GetResourceRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ GetResourceRequest::GetResourceRequest(const GetResourceRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetResourceRequest object.
+ * Constructs a GetResourceRequest object.
  */
 GetResourceRequest::GetResourceRequest()
     : APIGatewayRequest(new GetResourceRequestPrivate(APIGatewayRequest::GetResourceAction, this))
@@ -71,14 +68,9 @@ bool GetResourceRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetResourceResponse object.
+ * Returns a GetResourceResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetResourceResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  APIGatewayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetResourceRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * GetResourceRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::APIGateway::GetResourceRequestPrivate
+ * \brief The GetResourceRequestPrivate class provides private implementation for GetResourceRequest.
+ * \internal
  *
- * @class  GetResourceRequestPrivate
- *
- * @brief  Private implementation for GetResourceRequest.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetResourceRequestPrivate object.
- *
- * @param  action  APIGateway action being performed.
- * @param  q       Pointer to this object's public GetResourceRequest instance.
+ * Constructs a GetResourceRequestPrivate object for APIGateway \a action with,
+ * public implementation \a q.
  */
 GetResourceRequestPrivate::GetResourceRequestPrivate(
     const APIGatewayRequest::Action action, GetResourceRequest * const q)
@@ -109,15 +98,10 @@ GetResourceRequestPrivate::GetResourceRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetResourceRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetResourceRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetResourceRequest instance.
  */
 GetResourceRequestPrivate::GetResourceRequestPrivate(
     const GetResourceRequestPrivate &other, GetResourceRequest * const q)

@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DescribeRegionsRequest
- *
  * \brief The DescribeRegionsRequest class provides an interface for EC2 DescribeRegions requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DescribeRegionsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeRegionsRequest::DescribeRegionsRequest(const DescribeRegionsRequest &other)
     : EC2Request(new DescribeRegionsRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ DescribeRegionsRequest::DescribeRegionsRequest(const DescribeRegionsRequest &oth
 }
 
 /*!
- * @brief  Constructs a new DescribeRegionsRequest object.
+ * Constructs a DescribeRegionsRequest object.
  */
 DescribeRegionsRequest::DescribeRegionsRequest()
     : EC2Request(new DescribeRegionsRequestPrivate(EC2Request::DescribeRegionsAction, this))
@@ -70,14 +67,9 @@ bool DescribeRegionsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeRegionsResponse object.
+ * Returns a DescribeRegionsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeRegionsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeRegionsRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * DescribeRegionsRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::DescribeRegionsRequestPrivate
+ * \brief The DescribeRegionsRequestPrivate class provides private implementation for DescribeRegionsRequest.
+ * \internal
  *
- * @class  DescribeRegionsRequestPrivate
- *
- * @brief  Private implementation for DescribeRegionsRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeRegionsRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public DescribeRegionsRequest instance.
+ * Constructs a DescribeRegionsRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 DescribeRegionsRequestPrivate::DescribeRegionsRequestPrivate(
     const EC2Request::Action action, DescribeRegionsRequest * const q)
@@ -108,15 +97,10 @@ DescribeRegionsRequestPrivate::DescribeRegionsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeRegionsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeRegionsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeRegionsRequest instance.
  */
 DescribeRegionsRequestPrivate::DescribeRegionsRequestPrivate(
     const DescribeRegionsRequestPrivate &other, DescribeRegionsRequest * const q)

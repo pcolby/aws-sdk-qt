@@ -27,10 +27,9 @@ namespace WorkDocs {
 
 /*!
  * \class QtAws::WorkDocs::GetCurrentUserRequest
- *
  * \brief The GetCurrentUserRequest class provides an interface for WorkDocs GetCurrentUser requests.
  *
- * \ingroup WorkDocs
+ * \inmodule QtAwsWorkDocs
  *
  *  The WorkDocs API is designed for the following use
  * 
@@ -66,9 +65,7 @@ namespace WorkDocs {
  */
 
 /*!
- * @brief  Constructs a new GetCurrentUserRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetCurrentUserRequest::GetCurrentUserRequest(const GetCurrentUserRequest &other)
     : WorkDocsRequest(new GetCurrentUserRequestPrivate(*other.d_func(), this))
@@ -77,7 +74,7 @@ GetCurrentUserRequest::GetCurrentUserRequest(const GetCurrentUserRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetCurrentUserRequest object.
+ * Constructs a GetCurrentUserRequest object.
  */
 GetCurrentUserRequest::GetCurrentUserRequest()
     : WorkDocsRequest(new GetCurrentUserRequestPrivate(WorkDocsRequest::GetCurrentUserAction, this))
@@ -95,14 +92,9 @@ bool GetCurrentUserRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetCurrentUserResponse object.
+ * Returns a GetCurrentUserResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetCurrentUserResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WorkDocsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetCurrentUserRequest::response(QNetworkReply * const reply) const
 {
@@ -110,20 +102,17 @@ QtAws::Core::AwsAbstractResponse * GetCurrentUserRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::WorkDocs::GetCurrentUserRequestPrivate
+ * \brief The GetCurrentUserRequestPrivate class provides private implementation for GetCurrentUserRequest.
+ * \internal
  *
- * @class  GetCurrentUserRequestPrivate
- *
- * @brief  Private implementation for GetCurrentUserRequest.
+ * \inmodule QtAwsWorkDocs
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetCurrentUserRequestPrivate object.
- *
- * @param  action  WorkDocs action being performed.
- * @param  q       Pointer to this object's public GetCurrentUserRequest instance.
+ * Constructs a GetCurrentUserRequestPrivate object for WorkDocs \a action with,
+ * public implementation \a q.
  */
 GetCurrentUserRequestPrivate::GetCurrentUserRequestPrivate(
     const WorkDocsRequest::Action action, GetCurrentUserRequest * const q)
@@ -133,15 +122,10 @@ GetCurrentUserRequestPrivate::GetCurrentUserRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetCurrentUserRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetCurrentUserRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetCurrentUserRequest instance.
  */
 GetCurrentUserRequestPrivate::GetCurrentUserRequestPrivate(
     const GetCurrentUserRequestPrivate &other, GetCurrentUserRequest * const q)

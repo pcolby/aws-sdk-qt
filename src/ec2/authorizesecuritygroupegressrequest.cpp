@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::AuthorizeSecurityGroupEgressRequest
- *
  * \brief The AuthorizeSecurityGroupEgressRequest class provides an interface for EC2 AuthorizeSecurityGroupEgress requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new AuthorizeSecurityGroupEgressRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AuthorizeSecurityGroupEgressRequest::AuthorizeSecurityGroupEgressRequest(const AuthorizeSecurityGroupEgressRequest &other)
     : EC2Request(new AuthorizeSecurityGroupEgressRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ AuthorizeSecurityGroupEgressRequest::AuthorizeSecurityGroupEgressRequest(const A
 }
 
 /*!
- * @brief  Constructs a new AuthorizeSecurityGroupEgressRequest object.
+ * Constructs a AuthorizeSecurityGroupEgressRequest object.
  */
 AuthorizeSecurityGroupEgressRequest::AuthorizeSecurityGroupEgressRequest()
     : EC2Request(new AuthorizeSecurityGroupEgressRequestPrivate(EC2Request::AuthorizeSecurityGroupEgressAction, this))
@@ -70,14 +67,9 @@ bool AuthorizeSecurityGroupEgressRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AuthorizeSecurityGroupEgressResponse object.
+ * Returns a AuthorizeSecurityGroupEgressResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AuthorizeSecurityGroupEgressResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AuthorizeSecurityGroupEgressRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * AuthorizeSecurityGroupEgressRequest::response
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::AuthorizeSecurityGroupEgressRequestPrivate
+ * \brief The AuthorizeSecurityGroupEgressRequestPrivate class provides private implementation for AuthorizeSecurityGroupEgressRequest.
+ * \internal
  *
- * @class  AuthorizeSecurityGroupEgressRequestPrivate
- *
- * @brief  Private implementation for AuthorizeSecurityGroupEgressRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AuthorizeSecurityGroupEgressRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public AuthorizeSecurityGroupEgressRequest instance.
+ * Constructs a AuthorizeSecurityGroupEgressRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 AuthorizeSecurityGroupEgressRequestPrivate::AuthorizeSecurityGroupEgressRequestPrivate(
     const EC2Request::Action action, AuthorizeSecurityGroupEgressRequest * const q)
@@ -108,15 +97,10 @@ AuthorizeSecurityGroupEgressRequestPrivate::AuthorizeSecurityGroupEgressRequestP
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AuthorizeSecurityGroupEgressRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AuthorizeSecurityGroupEgressRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AuthorizeSecurityGroupEgressRequest instance.
  */
 AuthorizeSecurityGroupEgressRequestPrivate::AuthorizeSecurityGroupEgressRequestPrivate(
     const AuthorizeSecurityGroupEgressRequestPrivate &other, AuthorizeSecurityGroupEgressRequest * const q)

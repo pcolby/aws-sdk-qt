@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DescribeImportImageTasksRequest
- *
  * \brief The DescribeImportImageTasksRequest class provides an interface for EC2 DescribeImportImageTasks requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DescribeImportImageTasksRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeImportImageTasksRequest::DescribeImportImageTasksRequest(const DescribeImportImageTasksRequest &other)
     : EC2Request(new DescribeImportImageTasksRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ DescribeImportImageTasksRequest::DescribeImportImageTasksRequest(const DescribeI
 }
 
 /*!
- * @brief  Constructs a new DescribeImportImageTasksRequest object.
+ * Constructs a DescribeImportImageTasksRequest object.
  */
 DescribeImportImageTasksRequest::DescribeImportImageTasksRequest()
     : EC2Request(new DescribeImportImageTasksRequestPrivate(EC2Request::DescribeImportImageTasksAction, this))
@@ -70,14 +67,9 @@ bool DescribeImportImageTasksRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeImportImageTasksResponse object.
+ * Returns a DescribeImportImageTasksResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeImportImageTasksResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeImportImageTasksRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * DescribeImportImageTasksRequest::response(QNe
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::DescribeImportImageTasksRequestPrivate
+ * \brief The DescribeImportImageTasksRequestPrivate class provides private implementation for DescribeImportImageTasksRequest.
+ * \internal
  *
- * @class  DescribeImportImageTasksRequestPrivate
- *
- * @brief  Private implementation for DescribeImportImageTasksRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeImportImageTasksRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public DescribeImportImageTasksRequest instance.
+ * Constructs a DescribeImportImageTasksRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 DescribeImportImageTasksRequestPrivate::DescribeImportImageTasksRequestPrivate(
     const EC2Request::Action action, DescribeImportImageTasksRequest * const q)
@@ -108,15 +97,10 @@ DescribeImportImageTasksRequestPrivate::DescribeImportImageTasksRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeImportImageTasksRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeImportImageTasksRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeImportImageTasksRequest instance.
  */
 DescribeImportImageTasksRequestPrivate::DescribeImportImageTasksRequestPrivate(
     const DescribeImportImageTasksRequestPrivate &other, DescribeImportImageTasksRequest * const q)

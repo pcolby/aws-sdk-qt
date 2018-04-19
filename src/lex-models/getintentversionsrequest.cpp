@@ -27,10 +27,9 @@ namespace LexModelBuildingService {
 
 /*!
  * \class QtAws::LexModelBuildingService::GetIntentVersionsRequest
- *
  * \brief The GetIntentVersionsRequest class provides an interface for LexModelBuildingService GetIntentVersions requests.
  *
- * \ingroup LexModelBuildingService
+ * \inmodule QtAwsLexModelBuildingService
  *
  *  <fullname>Amazon Lex Build-Time Actions</fullname>
  * 
@@ -41,9 +40,7 @@ namespace LexModelBuildingService {
  */
 
 /*!
- * @brief  Constructs a new GetIntentVersionsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetIntentVersionsRequest::GetIntentVersionsRequest(const GetIntentVersionsRequest &other)
     : LexModelBuildingServiceRequest(new GetIntentVersionsRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ GetIntentVersionsRequest::GetIntentVersionsRequest(const GetIntentVersionsReques
 }
 
 /*!
- * @brief  Constructs a new GetIntentVersionsRequest object.
+ * Constructs a GetIntentVersionsRequest object.
  */
 GetIntentVersionsRequest::GetIntentVersionsRequest()
     : LexModelBuildingServiceRequest(new GetIntentVersionsRequestPrivate(LexModelBuildingServiceRequest::GetIntentVersionsAction, this))
@@ -70,14 +67,9 @@ bool GetIntentVersionsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetIntentVersionsResponse object.
+ * Returns a GetIntentVersionsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetIntentVersionsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  LexModelBuildingServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetIntentVersionsRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * GetIntentVersionsRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::LexModelBuildingService::GetIntentVersionsRequestPrivate
+ * \brief The GetIntentVersionsRequestPrivate class provides private implementation for GetIntentVersionsRequest.
+ * \internal
  *
- * @class  GetIntentVersionsRequestPrivate
- *
- * @brief  Private implementation for GetIntentVersionsRequest.
+ * \inmodule QtAwsLexModelBuildingService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetIntentVersionsRequestPrivate object.
- *
- * @param  action  LexModelBuildingService action being performed.
- * @param  q       Pointer to this object's public GetIntentVersionsRequest instance.
+ * Constructs a GetIntentVersionsRequestPrivate object for LexModelBuildingService \a action with,
+ * public implementation \a q.
  */
 GetIntentVersionsRequestPrivate::GetIntentVersionsRequestPrivate(
     const LexModelBuildingServiceRequest::Action action, GetIntentVersionsRequest * const q)
@@ -108,15 +97,10 @@ GetIntentVersionsRequestPrivate::GetIntentVersionsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetIntentVersionsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetIntentVersionsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetIntentVersionsRequest instance.
  */
 GetIntentVersionsRequestPrivate::GetIntentVersionsRequestPrivate(
     const GetIntentVersionsRequestPrivate &other, GetIntentVersionsRequest * const q)

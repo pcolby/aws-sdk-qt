@@ -27,10 +27,9 @@ namespace StorageGateway {
 
 /*!
  * \class QtAws::StorageGateway::ListFileSharesRequest
- *
  * \brief The ListFileSharesRequest class provides an interface for StorageGateway ListFileShares requests.
  *
- * \ingroup StorageGateway
+ * \inmodule QtAwsStorageGateway
  *
  *  <fullname>AWS Storage Gateway Service</fullname>
  * 
@@ -106,9 +105,7 @@ namespace StorageGateway {
  */
 
 /*!
- * @brief  Constructs a new ListFileSharesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListFileSharesRequest::ListFileSharesRequest(const ListFileSharesRequest &other)
     : StorageGatewayRequest(new ListFileSharesRequestPrivate(*other.d_func(), this))
@@ -117,7 +114,7 @@ ListFileSharesRequest::ListFileSharesRequest(const ListFileSharesRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ListFileSharesRequest object.
+ * Constructs a ListFileSharesRequest object.
  */
 ListFileSharesRequest::ListFileSharesRequest()
     : StorageGatewayRequest(new ListFileSharesRequestPrivate(StorageGatewayRequest::ListFileSharesAction, this))
@@ -135,14 +132,9 @@ bool ListFileSharesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListFileSharesResponse object.
+ * Returns a ListFileSharesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListFileSharesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  StorageGatewayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListFileSharesRequest::response(QNetworkReply * const reply) const
 {
@@ -150,20 +142,17 @@ QtAws::Core::AwsAbstractResponse * ListFileSharesRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::StorageGateway::ListFileSharesRequestPrivate
+ * \brief The ListFileSharesRequestPrivate class provides private implementation for ListFileSharesRequest.
+ * \internal
  *
- * @class  ListFileSharesRequestPrivate
- *
- * @brief  Private implementation for ListFileSharesRequest.
+ * \inmodule QtAwsStorageGateway
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListFileSharesRequestPrivate object.
- *
- * @param  action  StorageGateway action being performed.
- * @param  q       Pointer to this object's public ListFileSharesRequest instance.
+ * Constructs a ListFileSharesRequestPrivate object for StorageGateway \a action with,
+ * public implementation \a q.
  */
 ListFileSharesRequestPrivate::ListFileSharesRequestPrivate(
     const StorageGatewayRequest::Action action, ListFileSharesRequest * const q)
@@ -173,15 +162,10 @@ ListFileSharesRequestPrivate::ListFileSharesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListFileSharesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListFileSharesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListFileSharesRequest instance.
  */
 ListFileSharesRequestPrivate::ListFileSharesRequestPrivate(
     const ListFileSharesRequestPrivate &other, ListFileSharesRequest * const q)

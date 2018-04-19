@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DeleteVpnGatewayRequest
- *
  * \brief The DeleteVpnGatewayRequest class provides an interface for EC2 DeleteVpnGateway requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DeleteVpnGatewayRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteVpnGatewayRequest::DeleteVpnGatewayRequest(const DeleteVpnGatewayRequest &other)
     : EC2Request(new DeleteVpnGatewayRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ DeleteVpnGatewayRequest::DeleteVpnGatewayRequest(const DeleteVpnGatewayRequest &
 }
 
 /*!
- * @brief  Constructs a new DeleteVpnGatewayRequest object.
+ * Constructs a DeleteVpnGatewayRequest object.
  */
 DeleteVpnGatewayRequest::DeleteVpnGatewayRequest()
     : EC2Request(new DeleteVpnGatewayRequestPrivate(EC2Request::DeleteVpnGatewayAction, this))
@@ -70,14 +67,9 @@ bool DeleteVpnGatewayRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteVpnGatewayResponse object.
+ * Returns a DeleteVpnGatewayResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteVpnGatewayResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteVpnGatewayRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * DeleteVpnGatewayRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::DeleteVpnGatewayRequestPrivate
+ * \brief The DeleteVpnGatewayRequestPrivate class provides private implementation for DeleteVpnGatewayRequest.
+ * \internal
  *
- * @class  DeleteVpnGatewayRequestPrivate
- *
- * @brief  Private implementation for DeleteVpnGatewayRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteVpnGatewayRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public DeleteVpnGatewayRequest instance.
+ * Constructs a DeleteVpnGatewayRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 DeleteVpnGatewayRequestPrivate::DeleteVpnGatewayRequestPrivate(
     const EC2Request::Action action, DeleteVpnGatewayRequest * const q)
@@ -108,15 +97,10 @@ DeleteVpnGatewayRequestPrivate::DeleteVpnGatewayRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteVpnGatewayRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteVpnGatewayRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteVpnGatewayRequest instance.
  */
 DeleteVpnGatewayRequestPrivate::DeleteVpnGatewayRequestPrivate(
     const DeleteVpnGatewayRequestPrivate &other, DeleteVpnGatewayRequest * const q)

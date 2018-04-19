@@ -27,10 +27,9 @@ namespace ApplicationDiscoveryService {
 
 /*!
  * \class QtAws::ApplicationDiscoveryService::StartDataCollectionByAgentIdsRequest
- *
  * \brief The StartDataCollectionByAgentIdsRequest class provides an interface for ApplicationDiscoveryService StartDataCollectionByAgentIds requests.
  *
- * \ingroup ApplicationDiscoveryService
+ * \inmodule QtAwsApplicationDiscoveryService
  *
  *  <fullname>AWS Application Discovery Service</fullname>
  * 
@@ -101,9 +100,7 @@ namespace ApplicationDiscoveryService {
  */
 
 /*!
- * @brief  Constructs a new StartDataCollectionByAgentIdsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 StartDataCollectionByAgentIdsRequest::StartDataCollectionByAgentIdsRequest(const StartDataCollectionByAgentIdsRequest &other)
     : ApplicationDiscoveryServiceRequest(new StartDataCollectionByAgentIdsRequestPrivate(*other.d_func(), this))
@@ -112,7 +109,7 @@ StartDataCollectionByAgentIdsRequest::StartDataCollectionByAgentIdsRequest(const
 }
 
 /*!
- * @brief  Constructs a new StartDataCollectionByAgentIdsRequest object.
+ * Constructs a StartDataCollectionByAgentIdsRequest object.
  */
 StartDataCollectionByAgentIdsRequest::StartDataCollectionByAgentIdsRequest()
     : ApplicationDiscoveryServiceRequest(new StartDataCollectionByAgentIdsRequestPrivate(ApplicationDiscoveryServiceRequest::StartDataCollectionByAgentIdsAction, this))
@@ -130,14 +127,9 @@ bool StartDataCollectionByAgentIdsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an StartDataCollectionByAgentIdsResponse object.
+ * Returns a StartDataCollectionByAgentIdsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An StartDataCollectionByAgentIdsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ApplicationDiscoveryServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * StartDataCollectionByAgentIdsRequest::response(QNetworkReply * const reply) const
 {
@@ -145,20 +137,17 @@ QtAws::Core::AwsAbstractResponse * StartDataCollectionByAgentIdsRequest::respons
 }
 
 /*!
- * @internal
+ * \class QtAws::ApplicationDiscoveryService::StartDataCollectionByAgentIdsRequestPrivate
+ * \brief The StartDataCollectionByAgentIdsRequestPrivate class provides private implementation for StartDataCollectionByAgentIdsRequest.
+ * \internal
  *
- * @class  StartDataCollectionByAgentIdsRequestPrivate
- *
- * @brief  Private implementation for StartDataCollectionByAgentIdsRequest.
+ * \inmodule QtAwsApplicationDiscoveryService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new StartDataCollectionByAgentIdsRequestPrivate object.
- *
- * @param  action  ApplicationDiscoveryService action being performed.
- * @param  q       Pointer to this object's public StartDataCollectionByAgentIdsRequest instance.
+ * Constructs a StartDataCollectionByAgentIdsRequestPrivate object for ApplicationDiscoveryService \a action with,
+ * public implementation \a q.
  */
 StartDataCollectionByAgentIdsRequestPrivate::StartDataCollectionByAgentIdsRequestPrivate(
     const ApplicationDiscoveryServiceRequest::Action action, StartDataCollectionByAgentIdsRequest * const q)
@@ -168,15 +157,10 @@ StartDataCollectionByAgentIdsRequestPrivate::StartDataCollectionByAgentIdsReques
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StartDataCollectionByAgentIdsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the StartDataCollectionByAgentIdsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public StartDataCollectionByAgentIdsRequest instance.
  */
 StartDataCollectionByAgentIdsRequestPrivate::StartDataCollectionByAgentIdsRequestPrivate(
     const StartDataCollectionByAgentIdsRequestPrivate &other, StartDataCollectionByAgentIdsRequest * const q)

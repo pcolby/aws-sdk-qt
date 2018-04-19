@@ -27,10 +27,9 @@ namespace ECS {
 
 /*!
  * \class QtAws::ECS::RegisterContainerInstanceRequest
- *
  * \brief The RegisterContainerInstanceRequest class provides an interface for ECS RegisterContainerInstance requests.
  *
- * \ingroup ECS
+ * \inmodule QtAwsECS
  *
  *  Amazon Elastic Container Service (Amazon ECS) is a highly scalable, fast, container management service that makes it
  *  easy to run, stop, and manage Docker containers on a cluster. You can host your cluster on a serverless infrastructure
@@ -54,9 +53,7 @@ namespace ECS {
  */
 
 /*!
- * @brief  Constructs a new RegisterContainerInstanceRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 RegisterContainerInstanceRequest::RegisterContainerInstanceRequest(const RegisterContainerInstanceRequest &other)
     : ECSRequest(new RegisterContainerInstanceRequestPrivate(*other.d_func(), this))
@@ -65,7 +62,7 @@ RegisterContainerInstanceRequest::RegisterContainerInstanceRequest(const Registe
 }
 
 /*!
- * @brief  Constructs a new RegisterContainerInstanceRequest object.
+ * Constructs a RegisterContainerInstanceRequest object.
  */
 RegisterContainerInstanceRequest::RegisterContainerInstanceRequest()
     : ECSRequest(new RegisterContainerInstanceRequestPrivate(ECSRequest::RegisterContainerInstanceAction, this))
@@ -83,14 +80,9 @@ bool RegisterContainerInstanceRequest::isValid() const
 
 
 /*!
- * @brief  Construct an RegisterContainerInstanceResponse object.
+ * Returns a RegisterContainerInstanceResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An RegisterContainerInstanceResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ECSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * RegisterContainerInstanceRequest::response(QNetworkReply * const reply) const
 {
@@ -98,20 +90,17 @@ QtAws::Core::AwsAbstractResponse * RegisterContainerInstanceRequest::response(QN
 }
 
 /*!
- * @internal
+ * \class QtAws::ECS::RegisterContainerInstanceRequestPrivate
+ * \brief The RegisterContainerInstanceRequestPrivate class provides private implementation for RegisterContainerInstanceRequest.
+ * \internal
  *
- * @class  RegisterContainerInstanceRequestPrivate
- *
- * @brief  Private implementation for RegisterContainerInstanceRequest.
+ * \inmodule QtAwsECS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new RegisterContainerInstanceRequestPrivate object.
- *
- * @param  action  ECS action being performed.
- * @param  q       Pointer to this object's public RegisterContainerInstanceRequest instance.
+ * Constructs a RegisterContainerInstanceRequestPrivate object for ECS \a action with,
+ * public implementation \a q.
  */
 RegisterContainerInstanceRequestPrivate::RegisterContainerInstanceRequestPrivate(
     const ECSRequest::Action action, RegisterContainerInstanceRequest * const q)
@@ -121,15 +110,10 @@ RegisterContainerInstanceRequestPrivate::RegisterContainerInstanceRequestPrivate
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RegisterContainerInstanceRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the RegisterContainerInstanceRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public RegisterContainerInstanceRequest instance.
  */
 RegisterContainerInstanceRequestPrivate::RegisterContainerInstanceRequestPrivate(
     const RegisterContainerInstanceRequestPrivate &other, RegisterContainerInstanceRequest * const q)

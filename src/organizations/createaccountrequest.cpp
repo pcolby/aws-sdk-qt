@@ -27,10 +27,9 @@ namespace Organizations {
 
 /*!
  * \class QtAws::Organizations::CreateAccountRequest
- *
  * \brief The CreateAccountRequest class provides an interface for Organizations CreateAccount requests.
  *
- * \ingroup Organizations
+ * \inmodule QtAwsOrganizations
  *
  *  <fullname>AWS Organizations API Reference</fullname>
  * 
@@ -179,9 +178,7 @@ namespace Organizations {
  */
 
 /*!
- * @brief  Constructs a new CreateAccountRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateAccountRequest::CreateAccountRequest(const CreateAccountRequest &other)
     : OrganizationsRequest(new CreateAccountRequestPrivate(*other.d_func(), this))
@@ -190,7 +187,7 @@ CreateAccountRequest::CreateAccountRequest(const CreateAccountRequest &other)
 }
 
 /*!
- * @brief  Constructs a new CreateAccountRequest object.
+ * Constructs a CreateAccountRequest object.
  */
 CreateAccountRequest::CreateAccountRequest()
     : OrganizationsRequest(new CreateAccountRequestPrivate(OrganizationsRequest::CreateAccountAction, this))
@@ -208,14 +205,9 @@ bool CreateAccountRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateAccountResponse object.
+ * Returns a CreateAccountResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateAccountResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  OrganizationsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateAccountRequest::response(QNetworkReply * const reply) const
 {
@@ -223,20 +215,17 @@ QtAws::Core::AwsAbstractResponse * CreateAccountRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::Organizations::CreateAccountRequestPrivate
+ * \brief The CreateAccountRequestPrivate class provides private implementation for CreateAccountRequest.
+ * \internal
  *
- * @class  CreateAccountRequestPrivate
- *
- * @brief  Private implementation for CreateAccountRequest.
+ * \inmodule QtAwsOrganizations
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateAccountRequestPrivate object.
- *
- * @param  action  Organizations action being performed.
- * @param  q       Pointer to this object's public CreateAccountRequest instance.
+ * Constructs a CreateAccountRequestPrivate object for Organizations \a action with,
+ * public implementation \a q.
  */
 CreateAccountRequestPrivate::CreateAccountRequestPrivate(
     const OrganizationsRequest::Action action, CreateAccountRequest * const q)
@@ -246,15 +235,10 @@ CreateAccountRequestPrivate::CreateAccountRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateAccountRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateAccountRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateAccountRequest instance.
  */
 CreateAccountRequestPrivate::CreateAccountRequestPrivate(
     const CreateAccountRequestPrivate &other, CreateAccountRequest * const q)

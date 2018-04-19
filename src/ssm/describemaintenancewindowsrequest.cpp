@@ -27,10 +27,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::DescribeMaintenanceWindowsRequest
- *
  * \brief The DescribeMaintenanceWindowsRequest class provides an interface for SSM DescribeMaintenanceWindows requests.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -61,9 +60,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new DescribeMaintenanceWindowsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeMaintenanceWindowsRequest::DescribeMaintenanceWindowsRequest(const DescribeMaintenanceWindowsRequest &other)
     : SSMRequest(new DescribeMaintenanceWindowsRequestPrivate(*other.d_func(), this))
@@ -72,7 +69,7 @@ DescribeMaintenanceWindowsRequest::DescribeMaintenanceWindowsRequest(const Descr
 }
 
 /*!
- * @brief  Constructs a new DescribeMaintenanceWindowsRequest object.
+ * Constructs a DescribeMaintenanceWindowsRequest object.
  */
 DescribeMaintenanceWindowsRequest::DescribeMaintenanceWindowsRequest()
     : SSMRequest(new DescribeMaintenanceWindowsRequestPrivate(SSMRequest::DescribeMaintenanceWindowsAction, this))
@@ -90,14 +87,9 @@ bool DescribeMaintenanceWindowsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeMaintenanceWindowsResponse object.
+ * Returns a DescribeMaintenanceWindowsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeMaintenanceWindowsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SSMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeMaintenanceWindowsRequest::response(QNetworkReply * const reply) const
 {
@@ -105,20 +97,17 @@ QtAws::Core::AwsAbstractResponse * DescribeMaintenanceWindowsRequest::response(Q
 }
 
 /*!
- * @internal
+ * \class QtAws::SSM::DescribeMaintenanceWindowsRequestPrivate
+ * \brief The DescribeMaintenanceWindowsRequestPrivate class provides private implementation for DescribeMaintenanceWindowsRequest.
+ * \internal
  *
- * @class  DescribeMaintenanceWindowsRequestPrivate
- *
- * @brief  Private implementation for DescribeMaintenanceWindowsRequest.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeMaintenanceWindowsRequestPrivate object.
- *
- * @param  action  SSM action being performed.
- * @param  q       Pointer to this object's public DescribeMaintenanceWindowsRequest instance.
+ * Constructs a DescribeMaintenanceWindowsRequestPrivate object for SSM \a action with,
+ * public implementation \a q.
  */
 DescribeMaintenanceWindowsRequestPrivate::DescribeMaintenanceWindowsRequestPrivate(
     const SSMRequest::Action action, DescribeMaintenanceWindowsRequest * const q)
@@ -128,15 +117,10 @@ DescribeMaintenanceWindowsRequestPrivate::DescribeMaintenanceWindowsRequestPriva
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeMaintenanceWindowsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeMaintenanceWindowsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeMaintenanceWindowsRequest instance.
  */
 DescribeMaintenanceWindowsRequestPrivate::DescribeMaintenanceWindowsRequestPrivate(
     const DescribeMaintenanceWindowsRequestPrivate &other, DescribeMaintenanceWindowsRequest * const q)

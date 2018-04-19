@@ -27,19 +27,16 @@ namespace S3 {
 
 /*!
  * \class QtAws::S3::PutBucketAnalyticsConfigurationRequest
- *
  * \brief The PutBucketAnalyticsConfigurationRequest class provides an interface for S3 PutBucketAnalyticsConfiguration requests.
  *
- * \ingroup S3
+ * \inmodule QtAwsS3
  *
  *
  * \sa S3Client::putBucketAnalyticsConfiguration
  */
 
 /*!
- * @brief  Constructs a new PutBucketAnalyticsConfigurationRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 PutBucketAnalyticsConfigurationRequest::PutBucketAnalyticsConfigurationRequest(const PutBucketAnalyticsConfigurationRequest &other)
     : S3Request(new PutBucketAnalyticsConfigurationRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ PutBucketAnalyticsConfigurationRequest::PutBucketAnalyticsConfigurationRequest(c
 }
 
 /*!
- * @brief  Constructs a new PutBucketAnalyticsConfigurationRequest object.
+ * Constructs a PutBucketAnalyticsConfigurationRequest object.
  */
 PutBucketAnalyticsConfigurationRequest::PutBucketAnalyticsConfigurationRequest()
     : S3Request(new PutBucketAnalyticsConfigurationRequestPrivate(S3Request::PutBucketAnalyticsConfigurationAction, this))
@@ -66,14 +63,9 @@ bool PutBucketAnalyticsConfigurationRequest::isValid() const
 
 
 /*!
- * @brief  Construct an PutBucketAnalyticsConfigurationResponse object.
+ * Returns a PutBucketAnalyticsConfigurationResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An PutBucketAnalyticsConfigurationResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  S3Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * PutBucketAnalyticsConfigurationRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * PutBucketAnalyticsConfigurationRequest::respo
 }
 
 /*!
- * @internal
+ * \class QtAws::S3::PutBucketAnalyticsConfigurationRequestPrivate
+ * \brief The PutBucketAnalyticsConfigurationRequestPrivate class provides private implementation for PutBucketAnalyticsConfigurationRequest.
+ * \internal
  *
- * @class  PutBucketAnalyticsConfigurationRequestPrivate
- *
- * @brief  Private implementation for PutBucketAnalyticsConfigurationRequest.
+ * \inmodule QtAwsS3
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new PutBucketAnalyticsConfigurationRequestPrivate object.
- *
- * @param  action  S3 action being performed.
- * @param  q       Pointer to this object's public PutBucketAnalyticsConfigurationRequest instance.
+ * Constructs a PutBucketAnalyticsConfigurationRequestPrivate object for S3 \a action with,
+ * public implementation \a q.
  */
 PutBucketAnalyticsConfigurationRequestPrivate::PutBucketAnalyticsConfigurationRequestPrivate(
     const S3Request::Action action, PutBucketAnalyticsConfigurationRequest * const q)
@@ -104,15 +93,10 @@ PutBucketAnalyticsConfigurationRequestPrivate::PutBucketAnalyticsConfigurationRe
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutBucketAnalyticsConfigurationRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the PutBucketAnalyticsConfigurationRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public PutBucketAnalyticsConfigurationRequest instance.
  */
 PutBucketAnalyticsConfigurationRequestPrivate::PutBucketAnalyticsConfigurationRequestPrivate(
     const PutBucketAnalyticsConfigurationRequestPrivate &other, PutBucketAnalyticsConfigurationRequest * const q)

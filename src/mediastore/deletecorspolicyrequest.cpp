@@ -27,10 +27,9 @@ namespace MediaStore {
 
 /*!
  * \class QtAws::MediaStore::DeleteCorsPolicyRequest
- *
  * \brief The DeleteCorsPolicyRequest class provides an interface for MediaStore DeleteCorsPolicy requests.
  *
- * \ingroup MediaStore
+ * \inmodule QtAwsMediaStore
  *
  *  An AWS Elemental MediaStore container is a namespace that holds folders and objects. You use a container endpoint to
  *  create, read, and delete objects.
@@ -39,9 +38,7 @@ namespace MediaStore {
  */
 
 /*!
- * @brief  Constructs a new DeleteCorsPolicyRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteCorsPolicyRequest::DeleteCorsPolicyRequest(const DeleteCorsPolicyRequest &other)
     : MediaStoreRequest(new DeleteCorsPolicyRequestPrivate(*other.d_func(), this))
@@ -50,7 +47,7 @@ DeleteCorsPolicyRequest::DeleteCorsPolicyRequest(const DeleteCorsPolicyRequest &
 }
 
 /*!
- * @brief  Constructs a new DeleteCorsPolicyRequest object.
+ * Constructs a DeleteCorsPolicyRequest object.
  */
 DeleteCorsPolicyRequest::DeleteCorsPolicyRequest()
     : MediaStoreRequest(new DeleteCorsPolicyRequestPrivate(MediaStoreRequest::DeleteCorsPolicyAction, this))
@@ -68,14 +65,9 @@ bool DeleteCorsPolicyRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteCorsPolicyResponse object.
+ * Returns a DeleteCorsPolicyResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteCorsPolicyResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MediaStoreClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteCorsPolicyRequest::response(QNetworkReply * const reply) const
 {
@@ -83,20 +75,17 @@ QtAws::Core::AwsAbstractResponse * DeleteCorsPolicyRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::MediaStore::DeleteCorsPolicyRequestPrivate
+ * \brief The DeleteCorsPolicyRequestPrivate class provides private implementation for DeleteCorsPolicyRequest.
+ * \internal
  *
- * @class  DeleteCorsPolicyRequestPrivate
- *
- * @brief  Private implementation for DeleteCorsPolicyRequest.
+ * \inmodule QtAwsMediaStore
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteCorsPolicyRequestPrivate object.
- *
- * @param  action  MediaStore action being performed.
- * @param  q       Pointer to this object's public DeleteCorsPolicyRequest instance.
+ * Constructs a DeleteCorsPolicyRequestPrivate object for MediaStore \a action with,
+ * public implementation \a q.
  */
 DeleteCorsPolicyRequestPrivate::DeleteCorsPolicyRequestPrivate(
     const MediaStoreRequest::Action action, DeleteCorsPolicyRequest * const q)
@@ -106,15 +95,10 @@ DeleteCorsPolicyRequestPrivate::DeleteCorsPolicyRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteCorsPolicyRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteCorsPolicyRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteCorsPolicyRequest instance.
  */
 DeleteCorsPolicyRequestPrivate::DeleteCorsPolicyRequestPrivate(
     const DeleteCorsPolicyRequestPrivate &other, DeleteCorsPolicyRequest * const q)

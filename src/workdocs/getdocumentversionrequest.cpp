@@ -27,10 +27,9 @@ namespace WorkDocs {
 
 /*!
  * \class QtAws::WorkDocs::GetDocumentVersionRequest
- *
  * \brief The GetDocumentVersionRequest class provides an interface for WorkDocs GetDocumentVersion requests.
  *
- * \ingroup WorkDocs
+ * \inmodule QtAwsWorkDocs
  *
  *  The WorkDocs API is designed for the following use
  * 
@@ -66,9 +65,7 @@ namespace WorkDocs {
  */
 
 /*!
- * @brief  Constructs a new GetDocumentVersionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetDocumentVersionRequest::GetDocumentVersionRequest(const GetDocumentVersionRequest &other)
     : WorkDocsRequest(new GetDocumentVersionRequestPrivate(*other.d_func(), this))
@@ -77,7 +74,7 @@ GetDocumentVersionRequest::GetDocumentVersionRequest(const GetDocumentVersionReq
 }
 
 /*!
- * @brief  Constructs a new GetDocumentVersionRequest object.
+ * Constructs a GetDocumentVersionRequest object.
  */
 GetDocumentVersionRequest::GetDocumentVersionRequest()
     : WorkDocsRequest(new GetDocumentVersionRequestPrivate(WorkDocsRequest::GetDocumentVersionAction, this))
@@ -95,14 +92,9 @@ bool GetDocumentVersionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetDocumentVersionResponse object.
+ * Returns a GetDocumentVersionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetDocumentVersionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WorkDocsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetDocumentVersionRequest::response(QNetworkReply * const reply) const
 {
@@ -110,20 +102,17 @@ QtAws::Core::AwsAbstractResponse * GetDocumentVersionRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::WorkDocs::GetDocumentVersionRequestPrivate
+ * \brief The GetDocumentVersionRequestPrivate class provides private implementation for GetDocumentVersionRequest.
+ * \internal
  *
- * @class  GetDocumentVersionRequestPrivate
- *
- * @brief  Private implementation for GetDocumentVersionRequest.
+ * \inmodule QtAwsWorkDocs
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetDocumentVersionRequestPrivate object.
- *
- * @param  action  WorkDocs action being performed.
- * @param  q       Pointer to this object's public GetDocumentVersionRequest instance.
+ * Constructs a GetDocumentVersionRequestPrivate object for WorkDocs \a action with,
+ * public implementation \a q.
  */
 GetDocumentVersionRequestPrivate::GetDocumentVersionRequestPrivate(
     const WorkDocsRequest::Action action, GetDocumentVersionRequest * const q)
@@ -133,15 +122,10 @@ GetDocumentVersionRequestPrivate::GetDocumentVersionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetDocumentVersionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetDocumentVersionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetDocumentVersionRequest instance.
  */
 GetDocumentVersionRequestPrivate::GetDocumentVersionRequestPrivate(
     const GetDocumentVersionRequestPrivate &other, GetDocumentVersionRequest * const q)

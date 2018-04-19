@@ -27,10 +27,9 @@ namespace Glacier {
 
 /*!
  * \class QtAws::Glacier::RemoveTagsFromVaultRequest
- *
  * \brief The RemoveTagsFromVaultRequest class provides an interface for Glacier RemoveTagsFromVault requests.
  *
- * \ingroup Glacier
+ * \inmodule QtAwsGlacier
  *
  *  Amazon Glacier is a storage solution for "cold
  * 
@@ -75,9 +74,7 @@ namespace Glacier {
  */
 
 /*!
- * @brief  Constructs a new RemoveTagsFromVaultRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 RemoveTagsFromVaultRequest::RemoveTagsFromVaultRequest(const RemoveTagsFromVaultRequest &other)
     : GlacierRequest(new RemoveTagsFromVaultRequestPrivate(*other.d_func(), this))
@@ -86,7 +83,7 @@ RemoveTagsFromVaultRequest::RemoveTagsFromVaultRequest(const RemoveTagsFromVault
 }
 
 /*!
- * @brief  Constructs a new RemoveTagsFromVaultRequest object.
+ * Constructs a RemoveTagsFromVaultRequest object.
  */
 RemoveTagsFromVaultRequest::RemoveTagsFromVaultRequest()
     : GlacierRequest(new RemoveTagsFromVaultRequestPrivate(GlacierRequest::RemoveTagsFromVaultAction, this))
@@ -104,14 +101,9 @@ bool RemoveTagsFromVaultRequest::isValid() const
 
 
 /*!
- * @brief  Construct an RemoveTagsFromVaultResponse object.
+ * Returns a RemoveTagsFromVaultResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An RemoveTagsFromVaultResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GlacierClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * RemoveTagsFromVaultRequest::response(QNetworkReply * const reply) const
 {
@@ -119,20 +111,17 @@ QtAws::Core::AwsAbstractResponse * RemoveTagsFromVaultRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::Glacier::RemoveTagsFromVaultRequestPrivate
+ * \brief The RemoveTagsFromVaultRequestPrivate class provides private implementation for RemoveTagsFromVaultRequest.
+ * \internal
  *
- * @class  RemoveTagsFromVaultRequestPrivate
- *
- * @brief  Private implementation for RemoveTagsFromVaultRequest.
+ * \inmodule QtAwsGlacier
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new RemoveTagsFromVaultRequestPrivate object.
- *
- * @param  action  Glacier action being performed.
- * @param  q       Pointer to this object's public RemoveTagsFromVaultRequest instance.
+ * Constructs a RemoveTagsFromVaultRequestPrivate object for Glacier \a action with,
+ * public implementation \a q.
  */
 RemoveTagsFromVaultRequestPrivate::RemoveTagsFromVaultRequestPrivate(
     const GlacierRequest::Action action, RemoveTagsFromVaultRequest * const q)
@@ -142,15 +131,10 @@ RemoveTagsFromVaultRequestPrivate::RemoveTagsFromVaultRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RemoveTagsFromVaultRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the RemoveTagsFromVaultRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public RemoveTagsFromVaultRequest instance.
  */
 RemoveTagsFromVaultRequestPrivate::RemoveTagsFromVaultRequestPrivate(
     const RemoveTagsFromVaultRequestPrivate &other, RemoveTagsFromVaultRequest * const q)

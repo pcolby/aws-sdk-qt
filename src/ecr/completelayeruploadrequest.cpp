@@ -27,10 +27,9 @@ namespace ECR {
 
 /*!
  * \class QtAws::ECR::CompleteLayerUploadRequest
- *
  * \brief The CompleteLayerUploadRequest class provides an interface for ECR CompleteLayerUpload requests.
  *
- * \ingroup ECR
+ * \inmodule QtAwsECR
  *
  *  Amazon Elastic Container Registry (Amazon ECR) is a managed Docker registry service. Customers can use the familiar
  *  Docker CLI to push, pull, and manage images. Amazon ECR provides a secure, scalable, and reliable registry. Amazon ECR
@@ -41,9 +40,7 @@ namespace ECR {
  */
 
 /*!
- * @brief  Constructs a new CompleteLayerUploadRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CompleteLayerUploadRequest::CompleteLayerUploadRequest(const CompleteLayerUploadRequest &other)
     : ECRRequest(new CompleteLayerUploadRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ CompleteLayerUploadRequest::CompleteLayerUploadRequest(const CompleteLayerUpload
 }
 
 /*!
- * @brief  Constructs a new CompleteLayerUploadRequest object.
+ * Constructs a CompleteLayerUploadRequest object.
  */
 CompleteLayerUploadRequest::CompleteLayerUploadRequest()
     : ECRRequest(new CompleteLayerUploadRequestPrivate(ECRRequest::CompleteLayerUploadAction, this))
@@ -70,14 +67,9 @@ bool CompleteLayerUploadRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CompleteLayerUploadResponse object.
+ * Returns a CompleteLayerUploadResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CompleteLayerUploadResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ECRClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CompleteLayerUploadRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * CompleteLayerUploadRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::ECR::CompleteLayerUploadRequestPrivate
+ * \brief The CompleteLayerUploadRequestPrivate class provides private implementation for CompleteLayerUploadRequest.
+ * \internal
  *
- * @class  CompleteLayerUploadRequestPrivate
- *
- * @brief  Private implementation for CompleteLayerUploadRequest.
+ * \inmodule QtAwsECR
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CompleteLayerUploadRequestPrivate object.
- *
- * @param  action  ECR action being performed.
- * @param  q       Pointer to this object's public CompleteLayerUploadRequest instance.
+ * Constructs a CompleteLayerUploadRequestPrivate object for ECR \a action with,
+ * public implementation \a q.
  */
 CompleteLayerUploadRequestPrivate::CompleteLayerUploadRequestPrivate(
     const ECRRequest::Action action, CompleteLayerUploadRequest * const q)
@@ -108,15 +97,10 @@ CompleteLayerUploadRequestPrivate::CompleteLayerUploadRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CompleteLayerUploadRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CompleteLayerUploadRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CompleteLayerUploadRequest instance.
  */
 CompleteLayerUploadRequestPrivate::CompleteLayerUploadRequestPrivate(
     const CompleteLayerUploadRequestPrivate &other, CompleteLayerUploadRequest * const q)

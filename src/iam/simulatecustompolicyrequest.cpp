@@ -27,10 +27,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::SimulateCustomPolicyRequest
- *
  * \brief The SimulateCustomPolicyRequest class provides an interface for IAM SimulateCustomPolicy requests.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -102,9 +101,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new SimulateCustomPolicyRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 SimulateCustomPolicyRequest::SimulateCustomPolicyRequest(const SimulateCustomPolicyRequest &other)
     : IAMRequest(new SimulateCustomPolicyRequestPrivate(*other.d_func(), this))
@@ -113,7 +110,7 @@ SimulateCustomPolicyRequest::SimulateCustomPolicyRequest(const SimulateCustomPol
 }
 
 /*!
- * @brief  Constructs a new SimulateCustomPolicyRequest object.
+ * Constructs a SimulateCustomPolicyRequest object.
  */
 SimulateCustomPolicyRequest::SimulateCustomPolicyRequest()
     : IAMRequest(new SimulateCustomPolicyRequestPrivate(IAMRequest::SimulateCustomPolicyAction, this))
@@ -131,14 +128,9 @@ bool SimulateCustomPolicyRequest::isValid() const
 
 
 /*!
- * @brief  Construct an SimulateCustomPolicyResponse object.
+ * Returns a SimulateCustomPolicyResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An SimulateCustomPolicyResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IAMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * SimulateCustomPolicyRequest::response(QNetworkReply * const reply) const
 {
@@ -146,20 +138,17 @@ QtAws::Core::AwsAbstractResponse * SimulateCustomPolicyRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::IAM::SimulateCustomPolicyRequestPrivate
+ * \brief The SimulateCustomPolicyRequestPrivate class provides private implementation for SimulateCustomPolicyRequest.
+ * \internal
  *
- * @class  SimulateCustomPolicyRequestPrivate
- *
- * @brief  Private implementation for SimulateCustomPolicyRequest.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new SimulateCustomPolicyRequestPrivate object.
- *
- * @param  action  IAM action being performed.
- * @param  q       Pointer to this object's public SimulateCustomPolicyRequest instance.
+ * Constructs a SimulateCustomPolicyRequestPrivate object for IAM \a action with,
+ * public implementation \a q.
  */
 SimulateCustomPolicyRequestPrivate::SimulateCustomPolicyRequestPrivate(
     const IAMRequest::Action action, SimulateCustomPolicyRequest * const q)
@@ -169,15 +158,10 @@ SimulateCustomPolicyRequestPrivate::SimulateCustomPolicyRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SimulateCustomPolicyRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the SimulateCustomPolicyRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public SimulateCustomPolicyRequest instance.
  */
 SimulateCustomPolicyRequestPrivate::SimulateCustomPolicyRequestPrivate(
     const SimulateCustomPolicyRequestPrivate &other, SimulateCustomPolicyRequest * const q)

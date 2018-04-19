@@ -27,10 +27,9 @@ namespace SWF {
 
 /*!
  * \class QtAws::SWF::RequestCancelWorkflowExecutionRequest
- *
  * \brief The RequestCancelWorkflowExecutionRequest class provides an interface for SWF RequestCancelWorkflowExecution requests.
  *
- * \ingroup SWF
+ * \inmodule QtAwsSWF
  *
  *  <fullname>Amazon Simple Workflow Service</fullname>
  * 
@@ -53,9 +52,7 @@ namespace SWF {
  */
 
 /*!
- * @brief  Constructs a new RequestCancelWorkflowExecutionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 RequestCancelWorkflowExecutionRequest::RequestCancelWorkflowExecutionRequest(const RequestCancelWorkflowExecutionRequest &other)
     : SWFRequest(new RequestCancelWorkflowExecutionRequestPrivate(*other.d_func(), this))
@@ -64,7 +61,7 @@ RequestCancelWorkflowExecutionRequest::RequestCancelWorkflowExecutionRequest(con
 }
 
 /*!
- * @brief  Constructs a new RequestCancelWorkflowExecutionRequest object.
+ * Constructs a RequestCancelWorkflowExecutionRequest object.
  */
 RequestCancelWorkflowExecutionRequest::RequestCancelWorkflowExecutionRequest()
     : SWFRequest(new RequestCancelWorkflowExecutionRequestPrivate(SWFRequest::RequestCancelWorkflowExecutionAction, this))
@@ -82,14 +79,9 @@ bool RequestCancelWorkflowExecutionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an RequestCancelWorkflowExecutionResponse object.
+ * Returns a RequestCancelWorkflowExecutionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An RequestCancelWorkflowExecutionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SWFClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * RequestCancelWorkflowExecutionRequest::response(QNetworkReply * const reply) const
 {
@@ -97,20 +89,17 @@ QtAws::Core::AwsAbstractResponse * RequestCancelWorkflowExecutionRequest::respon
 }
 
 /*!
- * @internal
+ * \class QtAws::SWF::RequestCancelWorkflowExecutionRequestPrivate
+ * \brief The RequestCancelWorkflowExecutionRequestPrivate class provides private implementation for RequestCancelWorkflowExecutionRequest.
+ * \internal
  *
- * @class  RequestCancelWorkflowExecutionRequestPrivate
- *
- * @brief  Private implementation for RequestCancelWorkflowExecutionRequest.
+ * \inmodule QtAwsSWF
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new RequestCancelWorkflowExecutionRequestPrivate object.
- *
- * @param  action  SWF action being performed.
- * @param  q       Pointer to this object's public RequestCancelWorkflowExecutionRequest instance.
+ * Constructs a RequestCancelWorkflowExecutionRequestPrivate object for SWF \a action with,
+ * public implementation \a q.
  */
 RequestCancelWorkflowExecutionRequestPrivate::RequestCancelWorkflowExecutionRequestPrivate(
     const SWFRequest::Action action, RequestCancelWorkflowExecutionRequest * const q)
@@ -120,15 +109,10 @@ RequestCancelWorkflowExecutionRequestPrivate::RequestCancelWorkflowExecutionRequ
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RequestCancelWorkflowExecutionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the RequestCancelWorkflowExecutionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public RequestCancelWorkflowExecutionRequest instance.
  */
 RequestCancelWorkflowExecutionRequestPrivate::RequestCancelWorkflowExecutionRequestPrivate(
     const RequestCancelWorkflowExecutionRequestPrivate &other, RequestCancelWorkflowExecutionRequest * const q)

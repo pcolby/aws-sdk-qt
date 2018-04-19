@@ -27,10 +27,9 @@ namespace EMR {
 
 /*!
  * \class QtAws::EMR::ListStepsRequest
- *
  * \brief The ListStepsRequest class provides an interface for EMR ListSteps requests.
  *
- * \ingroup EMR
+ * \inmodule QtAwsEMR
  *
  *  Amazon EMR is a web service that makes it easy to process large amounts of data efficiently. Amazon EMR uses Hadoop
  *  processing combined with several AWS products to do tasks such as web indexing, data mining, log file analysis, machine
@@ -40,9 +39,7 @@ namespace EMR {
  */
 
 /*!
- * @brief  Constructs a new ListStepsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListStepsRequest::ListStepsRequest(const ListStepsRequest &other)
     : EMRRequest(new ListStepsRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ ListStepsRequest::ListStepsRequest(const ListStepsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ListStepsRequest object.
+ * Constructs a ListStepsRequest object.
  */
 ListStepsRequest::ListStepsRequest()
     : EMRRequest(new ListStepsRequestPrivate(EMRRequest::ListStepsAction, this))
@@ -69,14 +66,9 @@ bool ListStepsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListStepsResponse object.
+ * Returns a ListStepsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListStepsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EMRClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListStepsRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * ListStepsRequest::response(QNetworkReply * co
 }
 
 /*!
- * @internal
+ * \class QtAws::EMR::ListStepsRequestPrivate
+ * \brief The ListStepsRequestPrivate class provides private implementation for ListStepsRequest.
+ * \internal
  *
- * @class  ListStepsRequestPrivate
- *
- * @brief  Private implementation for ListStepsRequest.
+ * \inmodule QtAwsEMR
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListStepsRequestPrivate object.
- *
- * @param  action  EMR action being performed.
- * @param  q       Pointer to this object's public ListStepsRequest instance.
+ * Constructs a ListStepsRequestPrivate object for EMR \a action with,
+ * public implementation \a q.
  */
 ListStepsRequestPrivate::ListStepsRequestPrivate(
     const EMRRequest::Action action, ListStepsRequest * const q)
@@ -107,15 +96,10 @@ ListStepsRequestPrivate::ListStepsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListStepsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListStepsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListStepsRequest instance.
  */
 ListStepsRequestPrivate::ListStepsRequestPrivate(
     const ListStepsRequestPrivate &other, ListStepsRequest * const q)

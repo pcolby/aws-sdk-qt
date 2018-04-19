@@ -27,10 +27,9 @@ namespace ElasticBeanstalk {
 
 /*!
  * \class QtAws::ElasticBeanstalk::DeleteEnvironmentConfigurationRequest
- *
  * \brief The DeleteEnvironmentConfigurationRequest class provides an interface for ElasticBeanstalk DeleteEnvironmentConfiguration requests.
  *
- * \ingroup ElasticBeanstalk
+ * \inmodule QtAwsElasticBeanstalk
  *
  *  <fullname>AWS Elastic Beanstalk</fullname>
  * 
@@ -59,9 +58,7 @@ namespace ElasticBeanstalk {
  */
 
 /*!
- * @brief  Constructs a new DeleteEnvironmentConfigurationRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteEnvironmentConfigurationRequest::DeleteEnvironmentConfigurationRequest(const DeleteEnvironmentConfigurationRequest &other)
     : ElasticBeanstalkRequest(new DeleteEnvironmentConfigurationRequestPrivate(*other.d_func(), this))
@@ -70,7 +67,7 @@ DeleteEnvironmentConfigurationRequest::DeleteEnvironmentConfigurationRequest(con
 }
 
 /*!
- * @brief  Constructs a new DeleteEnvironmentConfigurationRequest object.
+ * Constructs a DeleteEnvironmentConfigurationRequest object.
  */
 DeleteEnvironmentConfigurationRequest::DeleteEnvironmentConfigurationRequest()
     : ElasticBeanstalkRequest(new DeleteEnvironmentConfigurationRequestPrivate(ElasticBeanstalkRequest::DeleteEnvironmentConfigurationAction, this))
@@ -88,14 +85,9 @@ bool DeleteEnvironmentConfigurationRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteEnvironmentConfigurationResponse object.
+ * Returns a DeleteEnvironmentConfigurationResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteEnvironmentConfigurationResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ElasticBeanstalkClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteEnvironmentConfigurationRequest::response(QNetworkReply * const reply) const
 {
@@ -103,20 +95,17 @@ QtAws::Core::AwsAbstractResponse * DeleteEnvironmentConfigurationRequest::respon
 }
 
 /*!
- * @internal
+ * \class QtAws::ElasticBeanstalk::DeleteEnvironmentConfigurationRequestPrivate
+ * \brief The DeleteEnvironmentConfigurationRequestPrivate class provides private implementation for DeleteEnvironmentConfigurationRequest.
+ * \internal
  *
- * @class  DeleteEnvironmentConfigurationRequestPrivate
- *
- * @brief  Private implementation for DeleteEnvironmentConfigurationRequest.
+ * \inmodule QtAwsElasticBeanstalk
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteEnvironmentConfigurationRequestPrivate object.
- *
- * @param  action  ElasticBeanstalk action being performed.
- * @param  q       Pointer to this object's public DeleteEnvironmentConfigurationRequest instance.
+ * Constructs a DeleteEnvironmentConfigurationRequestPrivate object for ElasticBeanstalk \a action with,
+ * public implementation \a q.
  */
 DeleteEnvironmentConfigurationRequestPrivate::DeleteEnvironmentConfigurationRequestPrivate(
     const ElasticBeanstalkRequest::Action action, DeleteEnvironmentConfigurationRequest * const q)
@@ -126,15 +115,10 @@ DeleteEnvironmentConfigurationRequestPrivate::DeleteEnvironmentConfigurationRequ
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteEnvironmentConfigurationRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteEnvironmentConfigurationRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteEnvironmentConfigurationRequest instance.
  */
 DeleteEnvironmentConfigurationRequestPrivate::DeleteEnvironmentConfigurationRequestPrivate(
     const DeleteEnvironmentConfigurationRequestPrivate &other, DeleteEnvironmentConfigurationRequest * const q)

@@ -27,10 +27,9 @@ namespace CognitoIdentityProvider {
 
 /*!
  * \class QtAws::CognitoIdentityProvider::UpdateDeviceStatusRequest
- *
  * \brief The UpdateDeviceStatusRequest class provides an interface for CognitoIdentityProvider UpdateDeviceStatus requests.
  *
- * \ingroup CognitoIdentityProvider
+ * \inmodule QtAwsCognitoIdentityProvider
  *
  *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
  *  authenticate a user to obtain tokens related to user identity and access
@@ -47,9 +46,7 @@ namespace CognitoIdentityProvider {
  */
 
 /*!
- * @brief  Constructs a new UpdateDeviceStatusRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateDeviceStatusRequest::UpdateDeviceStatusRequest(const UpdateDeviceStatusRequest &other)
     : CognitoIdentityProviderRequest(new UpdateDeviceStatusRequestPrivate(*other.d_func(), this))
@@ -58,7 +55,7 @@ UpdateDeviceStatusRequest::UpdateDeviceStatusRequest(const UpdateDeviceStatusReq
 }
 
 /*!
- * @brief  Constructs a new UpdateDeviceStatusRequest object.
+ * Constructs a UpdateDeviceStatusRequest object.
  */
 UpdateDeviceStatusRequest::UpdateDeviceStatusRequest()
     : CognitoIdentityProviderRequest(new UpdateDeviceStatusRequestPrivate(CognitoIdentityProviderRequest::UpdateDeviceStatusAction, this))
@@ -76,14 +73,9 @@ bool UpdateDeviceStatusRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateDeviceStatusResponse object.
+ * Returns a UpdateDeviceStatusResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateDeviceStatusResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CognitoIdentityProviderClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateDeviceStatusRequest::response(QNetworkReply * const reply) const
 {
@@ -91,20 +83,17 @@ QtAws::Core::AwsAbstractResponse * UpdateDeviceStatusRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::CognitoIdentityProvider::UpdateDeviceStatusRequestPrivate
+ * \brief The UpdateDeviceStatusRequestPrivate class provides private implementation for UpdateDeviceStatusRequest.
+ * \internal
  *
- * @class  UpdateDeviceStatusRequestPrivate
- *
- * @brief  Private implementation for UpdateDeviceStatusRequest.
+ * \inmodule QtAwsCognitoIdentityProvider
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateDeviceStatusRequestPrivate object.
- *
- * @param  action  CognitoIdentityProvider action being performed.
- * @param  q       Pointer to this object's public UpdateDeviceStatusRequest instance.
+ * Constructs a UpdateDeviceStatusRequestPrivate object for CognitoIdentityProvider \a action with,
+ * public implementation \a q.
  */
 UpdateDeviceStatusRequestPrivate::UpdateDeviceStatusRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, UpdateDeviceStatusRequest * const q)
@@ -114,15 +103,10 @@ UpdateDeviceStatusRequestPrivate::UpdateDeviceStatusRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateDeviceStatusRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateDeviceStatusRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateDeviceStatusRequest instance.
  */
 UpdateDeviceStatusRequestPrivate::UpdateDeviceStatusRequestPrivate(
     const UpdateDeviceStatusRequestPrivate &other, UpdateDeviceStatusRequest * const q)

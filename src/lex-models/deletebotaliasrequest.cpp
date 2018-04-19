@@ -27,10 +27,9 @@ namespace LexModelBuildingService {
 
 /*!
  * \class QtAws::LexModelBuildingService::DeleteBotAliasRequest
- *
  * \brief The DeleteBotAliasRequest class provides an interface for LexModelBuildingService DeleteBotAlias requests.
  *
- * \ingroup LexModelBuildingService
+ * \inmodule QtAwsLexModelBuildingService
  *
  *  <fullname>Amazon Lex Build-Time Actions</fullname>
  * 
@@ -41,9 +40,7 @@ namespace LexModelBuildingService {
  */
 
 /*!
- * @brief  Constructs a new DeleteBotAliasRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteBotAliasRequest::DeleteBotAliasRequest(const DeleteBotAliasRequest &other)
     : LexModelBuildingServiceRequest(new DeleteBotAliasRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ DeleteBotAliasRequest::DeleteBotAliasRequest(const DeleteBotAliasRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DeleteBotAliasRequest object.
+ * Constructs a DeleteBotAliasRequest object.
  */
 DeleteBotAliasRequest::DeleteBotAliasRequest()
     : LexModelBuildingServiceRequest(new DeleteBotAliasRequestPrivate(LexModelBuildingServiceRequest::DeleteBotAliasAction, this))
@@ -70,14 +67,9 @@ bool DeleteBotAliasRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteBotAliasResponse object.
+ * Returns a DeleteBotAliasResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteBotAliasResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  LexModelBuildingServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteBotAliasRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * DeleteBotAliasRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::LexModelBuildingService::DeleteBotAliasRequestPrivate
+ * \brief The DeleteBotAliasRequestPrivate class provides private implementation for DeleteBotAliasRequest.
+ * \internal
  *
- * @class  DeleteBotAliasRequestPrivate
- *
- * @brief  Private implementation for DeleteBotAliasRequest.
+ * \inmodule QtAwsLexModelBuildingService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteBotAliasRequestPrivate object.
- *
- * @param  action  LexModelBuildingService action being performed.
- * @param  q       Pointer to this object's public DeleteBotAliasRequest instance.
+ * Constructs a DeleteBotAliasRequestPrivate object for LexModelBuildingService \a action with,
+ * public implementation \a q.
  */
 DeleteBotAliasRequestPrivate::DeleteBotAliasRequestPrivate(
     const LexModelBuildingServiceRequest::Action action, DeleteBotAliasRequest * const q)
@@ -108,15 +97,10 @@ DeleteBotAliasRequestPrivate::DeleteBotAliasRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteBotAliasRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteBotAliasRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteBotAliasRequest instance.
  */
 DeleteBotAliasRequestPrivate::DeleteBotAliasRequestPrivate(
     const DeleteBotAliasRequestPrivate &other, DeleteBotAliasRequest * const q)

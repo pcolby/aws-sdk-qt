@@ -27,10 +27,9 @@ namespace ApplicationAutoScaling {
 
 /*!
  * \class QtAws::ApplicationAutoScaling::RegisterScalableTargetRequest
- *
  * \brief The RegisterScalableTargetRequest class provides an interface for ApplicationAutoScaling RegisterScalableTarget requests.
  *
- * \ingroup ApplicationAutoScaling
+ * \inmodule QtAwsApplicationAutoScaling
  *
  *  With Application Auto Scaling, you can configure automatic scaling for your scalable AWS resources. You can use
  *  Application Auto Scaling to accomplish the following
@@ -110,9 +109,7 @@ namespace ApplicationAutoScaling {
  */
 
 /*!
- * @brief  Constructs a new RegisterScalableTargetRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 RegisterScalableTargetRequest::RegisterScalableTargetRequest(const RegisterScalableTargetRequest &other)
     : ApplicationAutoScalingRequest(new RegisterScalableTargetRequestPrivate(*other.d_func(), this))
@@ -121,7 +118,7 @@ RegisterScalableTargetRequest::RegisterScalableTargetRequest(const RegisterScala
 }
 
 /*!
- * @brief  Constructs a new RegisterScalableTargetRequest object.
+ * Constructs a RegisterScalableTargetRequest object.
  */
 RegisterScalableTargetRequest::RegisterScalableTargetRequest()
     : ApplicationAutoScalingRequest(new RegisterScalableTargetRequestPrivate(ApplicationAutoScalingRequest::RegisterScalableTargetAction, this))
@@ -139,14 +136,9 @@ bool RegisterScalableTargetRequest::isValid() const
 
 
 /*!
- * @brief  Construct an RegisterScalableTargetResponse object.
+ * Returns a RegisterScalableTargetResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An RegisterScalableTargetResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ApplicationAutoScalingClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * RegisterScalableTargetRequest::response(QNetworkReply * const reply) const
 {
@@ -154,20 +146,17 @@ QtAws::Core::AwsAbstractResponse * RegisterScalableTargetRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::ApplicationAutoScaling::RegisterScalableTargetRequestPrivate
+ * \brief The RegisterScalableTargetRequestPrivate class provides private implementation for RegisterScalableTargetRequest.
+ * \internal
  *
- * @class  RegisterScalableTargetRequestPrivate
- *
- * @brief  Private implementation for RegisterScalableTargetRequest.
+ * \inmodule QtAwsApplicationAutoScaling
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new RegisterScalableTargetRequestPrivate object.
- *
- * @param  action  ApplicationAutoScaling action being performed.
- * @param  q       Pointer to this object's public RegisterScalableTargetRequest instance.
+ * Constructs a RegisterScalableTargetRequestPrivate object for ApplicationAutoScaling \a action with,
+ * public implementation \a q.
  */
 RegisterScalableTargetRequestPrivate::RegisterScalableTargetRequestPrivate(
     const ApplicationAutoScalingRequest::Action action, RegisterScalableTargetRequest * const q)
@@ -177,15 +166,10 @@ RegisterScalableTargetRequestPrivate::RegisterScalableTargetRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RegisterScalableTargetRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the RegisterScalableTargetRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public RegisterScalableTargetRequest instance.
  */
 RegisterScalableTargetRequestPrivate::RegisterScalableTargetRequestPrivate(
     const RegisterScalableTargetRequestPrivate &other, RegisterScalableTargetRequest * const q)

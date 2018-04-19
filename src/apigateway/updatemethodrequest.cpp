@@ -27,10 +27,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::UpdateMethodRequest
- *
  * \brief The UpdateMethodRequest class provides an interface for APIGateway UpdateMethod requests.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -42,9 +41,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new UpdateMethodRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateMethodRequest::UpdateMethodRequest(const UpdateMethodRequest &other)
     : APIGatewayRequest(new UpdateMethodRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ UpdateMethodRequest::UpdateMethodRequest(const UpdateMethodRequest &other)
 }
 
 /*!
- * @brief  Constructs a new UpdateMethodRequest object.
+ * Constructs a UpdateMethodRequest object.
  */
 UpdateMethodRequest::UpdateMethodRequest()
     : APIGatewayRequest(new UpdateMethodRequestPrivate(APIGatewayRequest::UpdateMethodAction, this))
@@ -71,14 +68,9 @@ bool UpdateMethodRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateMethodResponse object.
+ * Returns a UpdateMethodResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateMethodResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  APIGatewayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateMethodRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * UpdateMethodRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::APIGateway::UpdateMethodRequestPrivate
+ * \brief The UpdateMethodRequestPrivate class provides private implementation for UpdateMethodRequest.
+ * \internal
  *
- * @class  UpdateMethodRequestPrivate
- *
- * @brief  Private implementation for UpdateMethodRequest.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateMethodRequestPrivate object.
- *
- * @param  action  APIGateway action being performed.
- * @param  q       Pointer to this object's public UpdateMethodRequest instance.
+ * Constructs a UpdateMethodRequestPrivate object for APIGateway \a action with,
+ * public implementation \a q.
  */
 UpdateMethodRequestPrivate::UpdateMethodRequestPrivate(
     const APIGatewayRequest::Action action, UpdateMethodRequest * const q)
@@ -109,15 +98,10 @@ UpdateMethodRequestPrivate::UpdateMethodRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateMethodRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateMethodRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateMethodRequest instance.
  */
 UpdateMethodRequestPrivate::UpdateMethodRequestPrivate(
     const UpdateMethodRequestPrivate &other, UpdateMethodRequest * const q)

@@ -27,10 +27,9 @@ namespace DatabaseMigrationService {
 
 /*!
  * \class QtAws::DatabaseMigrationService::DescribeReplicationTaskAssessmentResultsRequest
- *
  * \brief The DescribeReplicationTaskAssessmentResultsRequest class provides an interface for DatabaseMigrationService DescribeReplicationTaskAssessmentResults requests.
  *
- * \ingroup DatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigrationService
  *
  *  <fullname>AWS Database Migration Service</fullname>
  * 
@@ -48,9 +47,7 @@ namespace DatabaseMigrationService {
  */
 
 /*!
- * @brief  Constructs a new DescribeReplicationTaskAssessmentResultsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeReplicationTaskAssessmentResultsRequest::DescribeReplicationTaskAssessmentResultsRequest(const DescribeReplicationTaskAssessmentResultsRequest &other)
     : DatabaseMigrationServiceRequest(new DescribeReplicationTaskAssessmentResultsRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ DescribeReplicationTaskAssessmentResultsRequest::DescribeReplicationTaskAssessme
 }
 
 /*!
- * @brief  Constructs a new DescribeReplicationTaskAssessmentResultsRequest object.
+ * Constructs a DescribeReplicationTaskAssessmentResultsRequest object.
  */
 DescribeReplicationTaskAssessmentResultsRequest::DescribeReplicationTaskAssessmentResultsRequest()
     : DatabaseMigrationServiceRequest(new DescribeReplicationTaskAssessmentResultsRequestPrivate(DatabaseMigrationServiceRequest::DescribeReplicationTaskAssessmentResultsAction, this))
@@ -77,14 +74,9 @@ bool DescribeReplicationTaskAssessmentResultsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeReplicationTaskAssessmentResultsResponse object.
+ * Returns a DescribeReplicationTaskAssessmentResultsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeReplicationTaskAssessmentResultsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DatabaseMigrationServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeReplicationTaskAssessmentResultsRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * DescribeReplicationTaskAssessmentResultsReque
 }
 
 /*!
- * @internal
+ * \class QtAws::DatabaseMigrationService::DescribeReplicationTaskAssessmentResultsRequestPrivate
+ * \brief The DescribeReplicationTaskAssessmentResultsRequestPrivate class provides private implementation for DescribeReplicationTaskAssessmentResultsRequest.
+ * \internal
  *
- * @class  DescribeReplicationTaskAssessmentResultsRequestPrivate
- *
- * @brief  Private implementation for DescribeReplicationTaskAssessmentResultsRequest.
+ * \inmodule QtAwsDatabaseMigrationService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeReplicationTaskAssessmentResultsRequestPrivate object.
- *
- * @param  action  DatabaseMigrationService action being performed.
- * @param  q       Pointer to this object's public DescribeReplicationTaskAssessmentResultsRequest instance.
+ * Constructs a DescribeReplicationTaskAssessmentResultsRequestPrivate object for DatabaseMigrationService \a action with,
+ * public implementation \a q.
  */
 DescribeReplicationTaskAssessmentResultsRequestPrivate::DescribeReplicationTaskAssessmentResultsRequestPrivate(
     const DatabaseMigrationServiceRequest::Action action, DescribeReplicationTaskAssessmentResultsRequest * const q)
@@ -115,15 +104,10 @@ DescribeReplicationTaskAssessmentResultsRequestPrivate::DescribeReplicationTaskA
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeReplicationTaskAssessmentResultsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeReplicationTaskAssessmentResultsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeReplicationTaskAssessmentResultsRequest instance.
  */
 DescribeReplicationTaskAssessmentResultsRequestPrivate::DescribeReplicationTaskAssessmentResultsRequestPrivate(
     const DescribeReplicationTaskAssessmentResultsRequestPrivate &other, DescribeReplicationTaskAssessmentResultsRequest * const q)

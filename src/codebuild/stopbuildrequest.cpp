@@ -27,10 +27,9 @@ namespace CodeBuild {
 
 /*!
  * \class QtAws::CodeBuild::StopBuildRequest
- *
  * \brief The StopBuildRequest class provides an interface for CodeBuild StopBuild requests.
  *
- * \ingroup CodeBuild
+ * \inmodule QtAwsCodeBuild
  *
  *  <fullname>AWS CodeBuild</fullname>
  * 
@@ -117,9 +116,7 @@ namespace CodeBuild {
  */
 
 /*!
- * @brief  Constructs a new StopBuildRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 StopBuildRequest::StopBuildRequest(const StopBuildRequest &other)
     : CodeBuildRequest(new StopBuildRequestPrivate(*other.d_func(), this))
@@ -128,7 +125,7 @@ StopBuildRequest::StopBuildRequest(const StopBuildRequest &other)
 }
 
 /*!
- * @brief  Constructs a new StopBuildRequest object.
+ * Constructs a StopBuildRequest object.
  */
 StopBuildRequest::StopBuildRequest()
     : CodeBuildRequest(new StopBuildRequestPrivate(CodeBuildRequest::StopBuildAction, this))
@@ -146,14 +143,9 @@ bool StopBuildRequest::isValid() const
 
 
 /*!
- * @brief  Construct an StopBuildResponse object.
+ * Returns a StopBuildResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An StopBuildResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CodeBuildClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * StopBuildRequest::response(QNetworkReply * const reply) const
 {
@@ -161,20 +153,17 @@ QtAws::Core::AwsAbstractResponse * StopBuildRequest::response(QNetworkReply * co
 }
 
 /*!
- * @internal
+ * \class QtAws::CodeBuild::StopBuildRequestPrivate
+ * \brief The StopBuildRequestPrivate class provides private implementation for StopBuildRequest.
+ * \internal
  *
- * @class  StopBuildRequestPrivate
- *
- * @brief  Private implementation for StopBuildRequest.
+ * \inmodule QtAwsCodeBuild
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new StopBuildRequestPrivate object.
- *
- * @param  action  CodeBuild action being performed.
- * @param  q       Pointer to this object's public StopBuildRequest instance.
+ * Constructs a StopBuildRequestPrivate object for CodeBuild \a action with,
+ * public implementation \a q.
  */
 StopBuildRequestPrivate::StopBuildRequestPrivate(
     const CodeBuildRequest::Action action, StopBuildRequest * const q)
@@ -184,15 +173,10 @@ StopBuildRequestPrivate::StopBuildRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StopBuildRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the StopBuildRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public StopBuildRequest instance.
  */
 StopBuildRequestPrivate::StopBuildRequestPrivate(
     const StopBuildRequestPrivate &other, StopBuildRequest * const q)

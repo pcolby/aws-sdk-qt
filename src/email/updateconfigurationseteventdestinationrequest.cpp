@@ -27,10 +27,9 @@ namespace SES {
 
 /*!
  * \class QtAws::SES::UpdateConfigurationSetEventDestinationRequest
- *
  * \brief The UpdateConfigurationSetEventDestinationRequest class provides an interface for SES UpdateConfigurationSetEventDestination requests.
  *
- * \ingroup SES
+ * \inmodule QtAwsSES
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -48,9 +47,7 @@ namespace SES {
  */
 
 /*!
- * @brief  Constructs a new UpdateConfigurationSetEventDestinationRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateConfigurationSetEventDestinationRequest::UpdateConfigurationSetEventDestinationRequest(const UpdateConfigurationSetEventDestinationRequest &other)
     : SESRequest(new UpdateConfigurationSetEventDestinationRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ UpdateConfigurationSetEventDestinationRequest::UpdateConfigurationSetEventDestin
 }
 
 /*!
- * @brief  Constructs a new UpdateConfigurationSetEventDestinationRequest object.
+ * Constructs a UpdateConfigurationSetEventDestinationRequest object.
  */
 UpdateConfigurationSetEventDestinationRequest::UpdateConfigurationSetEventDestinationRequest()
     : SESRequest(new UpdateConfigurationSetEventDestinationRequestPrivate(SESRequest::UpdateConfigurationSetEventDestinationAction, this))
@@ -77,14 +74,9 @@ bool UpdateConfigurationSetEventDestinationRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateConfigurationSetEventDestinationResponse object.
+ * Returns a UpdateConfigurationSetEventDestinationResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateConfigurationSetEventDestinationResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SESClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateConfigurationSetEventDestinationRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * UpdateConfigurationSetEventDestinationRequest
 }
 
 /*!
- * @internal
+ * \class QtAws::SES::UpdateConfigurationSetEventDestinationRequestPrivate
+ * \brief The UpdateConfigurationSetEventDestinationRequestPrivate class provides private implementation for UpdateConfigurationSetEventDestinationRequest.
+ * \internal
  *
- * @class  UpdateConfigurationSetEventDestinationRequestPrivate
- *
- * @brief  Private implementation for UpdateConfigurationSetEventDestinationRequest.
+ * \inmodule QtAwsSES
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateConfigurationSetEventDestinationRequestPrivate object.
- *
- * @param  action  SES action being performed.
- * @param  q       Pointer to this object's public UpdateConfigurationSetEventDestinationRequest instance.
+ * Constructs a UpdateConfigurationSetEventDestinationRequestPrivate object for SES \a action with,
+ * public implementation \a q.
  */
 UpdateConfigurationSetEventDestinationRequestPrivate::UpdateConfigurationSetEventDestinationRequestPrivate(
     const SESRequest::Action action, UpdateConfigurationSetEventDestinationRequest * const q)
@@ -115,15 +104,10 @@ UpdateConfigurationSetEventDestinationRequestPrivate::UpdateConfigurationSetEven
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateConfigurationSetEventDestinationRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateConfigurationSetEventDestinationRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateConfigurationSetEventDestinationRequest instance.
  */
 UpdateConfigurationSetEventDestinationRequestPrivate::UpdateConfigurationSetEventDestinationRequestPrivate(
     const UpdateConfigurationSetEventDestinationRequestPrivate &other, UpdateConfigurationSetEventDestinationRequest * const q)

@@ -27,19 +27,16 @@ namespace Route53 {
 
 /*!
  * \class QtAws::Route53::GetHealthCheckLastFailureReasonRequest
- *
  * \brief The GetHealthCheckLastFailureReasonRequest class provides an interface for Route53 GetHealthCheckLastFailureReason requests.
  *
- * \ingroup Route53
+ * \inmodule QtAwsRoute53
  *
  *
  * \sa Route53Client::getHealthCheckLastFailureReason
  */
 
 /*!
- * @brief  Constructs a new GetHealthCheckLastFailureReasonRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetHealthCheckLastFailureReasonRequest::GetHealthCheckLastFailureReasonRequest(const GetHealthCheckLastFailureReasonRequest &other)
     : Route53Request(new GetHealthCheckLastFailureReasonRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ GetHealthCheckLastFailureReasonRequest::GetHealthCheckLastFailureReasonRequest(c
 }
 
 /*!
- * @brief  Constructs a new GetHealthCheckLastFailureReasonRequest object.
+ * Constructs a GetHealthCheckLastFailureReasonRequest object.
  */
 GetHealthCheckLastFailureReasonRequest::GetHealthCheckLastFailureReasonRequest()
     : Route53Request(new GetHealthCheckLastFailureReasonRequestPrivate(Route53Request::GetHealthCheckLastFailureReasonAction, this))
@@ -66,14 +63,9 @@ bool GetHealthCheckLastFailureReasonRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetHealthCheckLastFailureReasonResponse object.
+ * Returns a GetHealthCheckLastFailureReasonResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetHealthCheckLastFailureReasonResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  Route53Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetHealthCheckLastFailureReasonRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * GetHealthCheckLastFailureReasonRequest::respo
 }
 
 /*!
- * @internal
+ * \class QtAws::Route53::GetHealthCheckLastFailureReasonRequestPrivate
+ * \brief The GetHealthCheckLastFailureReasonRequestPrivate class provides private implementation for GetHealthCheckLastFailureReasonRequest.
+ * \internal
  *
- * @class  GetHealthCheckLastFailureReasonRequestPrivate
- *
- * @brief  Private implementation for GetHealthCheckLastFailureReasonRequest.
+ * \inmodule QtAwsRoute53
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetHealthCheckLastFailureReasonRequestPrivate object.
- *
- * @param  action  Route53 action being performed.
- * @param  q       Pointer to this object's public GetHealthCheckLastFailureReasonRequest instance.
+ * Constructs a GetHealthCheckLastFailureReasonRequestPrivate object for Route53 \a action with,
+ * public implementation \a q.
  */
 GetHealthCheckLastFailureReasonRequestPrivate::GetHealthCheckLastFailureReasonRequestPrivate(
     const Route53Request::Action action, GetHealthCheckLastFailureReasonRequest * const q)
@@ -104,15 +93,10 @@ GetHealthCheckLastFailureReasonRequestPrivate::GetHealthCheckLastFailureReasonRe
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetHealthCheckLastFailureReasonRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetHealthCheckLastFailureReasonRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetHealthCheckLastFailureReasonRequest instance.
  */
 GetHealthCheckLastFailureReasonRequestPrivate::GetHealthCheckLastFailureReasonRequestPrivate(
     const GetHealthCheckLastFailureReasonRequestPrivate &other, GetHealthCheckLastFailureReasonRequest * const q)

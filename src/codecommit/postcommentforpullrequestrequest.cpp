@@ -27,10 +27,9 @@ namespace CodeCommit {
 
 /*!
  * \class QtAws::CodeCommit::PostCommentForPullRequestRequest
- *
  * \brief The PostCommentForPullRequestRequest class provides an interface for CodeCommit PostCommentForPullRequest requests.
  *
- * \ingroup CodeCommit
+ * \inmodule QtAwsCodeCommit
  *
  *  <fullname>AWS CodeCommit</fullname>
  * 
@@ -227,9 +226,7 @@ namespace CodeCommit {
  */
 
 /*!
- * @brief  Constructs a new PostCommentForPullRequestRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 PostCommentForPullRequestRequest::PostCommentForPullRequestRequest(const PostCommentForPullRequestRequest &other)
     : CodeCommitRequest(new PostCommentForPullRequestRequestPrivate(*other.d_func(), this))
@@ -238,7 +235,7 @@ PostCommentForPullRequestRequest::PostCommentForPullRequestRequest(const PostCom
 }
 
 /*!
- * @brief  Constructs a new PostCommentForPullRequestRequest object.
+ * Constructs a PostCommentForPullRequestRequest object.
  */
 PostCommentForPullRequestRequest::PostCommentForPullRequestRequest()
     : CodeCommitRequest(new PostCommentForPullRequestRequestPrivate(CodeCommitRequest::PostCommentForPullRequestAction, this))
@@ -256,14 +253,9 @@ bool PostCommentForPullRequestRequest::isValid() const
 
 
 /*!
- * @brief  Construct an PostCommentForPullRequestResponse object.
+ * Returns a PostCommentForPullRequestResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An PostCommentForPullRequestResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CodeCommitClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * PostCommentForPullRequestRequest::response(QNetworkReply * const reply) const
 {
@@ -271,20 +263,17 @@ QtAws::Core::AwsAbstractResponse * PostCommentForPullRequestRequest::response(QN
 }
 
 /*!
- * @internal
+ * \class QtAws::CodeCommit::PostCommentForPullRequestRequestPrivate
+ * \brief The PostCommentForPullRequestRequestPrivate class provides private implementation for PostCommentForPullRequestRequest.
+ * \internal
  *
- * @class  PostCommentForPullRequestRequestPrivate
- *
- * @brief  Private implementation for PostCommentForPullRequestRequest.
+ * \inmodule QtAwsCodeCommit
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new PostCommentForPullRequestRequestPrivate object.
- *
- * @param  action  CodeCommit action being performed.
- * @param  q       Pointer to this object's public PostCommentForPullRequestRequest instance.
+ * Constructs a PostCommentForPullRequestRequestPrivate object for CodeCommit \a action with,
+ * public implementation \a q.
  */
 PostCommentForPullRequestRequestPrivate::PostCommentForPullRequestRequestPrivate(
     const CodeCommitRequest::Action action, PostCommentForPullRequestRequest * const q)
@@ -294,15 +283,10 @@ PostCommentForPullRequestRequestPrivate::PostCommentForPullRequestRequestPrivate
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PostCommentForPullRequestRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the PostCommentForPullRequestRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public PostCommentForPullRequestRequest instance.
  */
 PostCommentForPullRequestRequestPrivate::PostCommentForPullRequestRequestPrivate(
     const PostCommentForPullRequestRequestPrivate &other, PostCommentForPullRequestRequest * const q)

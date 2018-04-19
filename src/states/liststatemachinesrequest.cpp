@@ -27,10 +27,9 @@ namespace SFN {
 
 /*!
  * \class QtAws::SFN::ListStateMachinesRequest
- *
  * \brief The ListStateMachinesRequest class provides an interface for SFN ListStateMachines requests.
  *
- * \ingroup SFN
+ * \inmodule QtAwsSFN
  *
  *  <fullname>AWS Step Functions</fullname>
  * 
@@ -56,9 +55,7 @@ namespace SFN {
  */
 
 /*!
- * @brief  Constructs a new ListStateMachinesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListStateMachinesRequest::ListStateMachinesRequest(const ListStateMachinesRequest &other)
     : SFNRequest(new ListStateMachinesRequestPrivate(*other.d_func(), this))
@@ -67,7 +64,7 @@ ListStateMachinesRequest::ListStateMachinesRequest(const ListStateMachinesReques
 }
 
 /*!
- * @brief  Constructs a new ListStateMachinesRequest object.
+ * Constructs a ListStateMachinesRequest object.
  */
 ListStateMachinesRequest::ListStateMachinesRequest()
     : SFNRequest(new ListStateMachinesRequestPrivate(SFNRequest::ListStateMachinesAction, this))
@@ -85,14 +82,9 @@ bool ListStateMachinesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListStateMachinesResponse object.
+ * Returns a ListStateMachinesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListStateMachinesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SFNClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListStateMachinesRequest::response(QNetworkReply * const reply) const
 {
@@ -100,20 +92,17 @@ QtAws::Core::AwsAbstractResponse * ListStateMachinesRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::SFN::ListStateMachinesRequestPrivate
+ * \brief The ListStateMachinesRequestPrivate class provides private implementation for ListStateMachinesRequest.
+ * \internal
  *
- * @class  ListStateMachinesRequestPrivate
- *
- * @brief  Private implementation for ListStateMachinesRequest.
+ * \inmodule QtAwsSFN
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListStateMachinesRequestPrivate object.
- *
- * @param  action  SFN action being performed.
- * @param  q       Pointer to this object's public ListStateMachinesRequest instance.
+ * Constructs a ListStateMachinesRequestPrivate object for SFN \a action with,
+ * public implementation \a q.
  */
 ListStateMachinesRequestPrivate::ListStateMachinesRequestPrivate(
     const SFNRequest::Action action, ListStateMachinesRequest * const q)
@@ -123,15 +112,10 @@ ListStateMachinesRequestPrivate::ListStateMachinesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListStateMachinesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListStateMachinesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListStateMachinesRequest instance.
  */
 ListStateMachinesRequestPrivate::ListStateMachinesRequestPrivate(
     const ListStateMachinesRequestPrivate &other, ListStateMachinesRequest * const q)

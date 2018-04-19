@@ -27,10 +27,9 @@ namespace SFN {
 
 /*!
  * \class QtAws::SFN::StopExecutionRequest
- *
  * \brief The StopExecutionRequest class provides an interface for SFN StopExecution requests.
  *
- * \ingroup SFN
+ * \inmodule QtAwsSFN
  *
  *  <fullname>AWS Step Functions</fullname>
  * 
@@ -56,9 +55,7 @@ namespace SFN {
  */
 
 /*!
- * @brief  Constructs a new StopExecutionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 StopExecutionRequest::StopExecutionRequest(const StopExecutionRequest &other)
     : SFNRequest(new StopExecutionRequestPrivate(*other.d_func(), this))
@@ -67,7 +64,7 @@ StopExecutionRequest::StopExecutionRequest(const StopExecutionRequest &other)
 }
 
 /*!
- * @brief  Constructs a new StopExecutionRequest object.
+ * Constructs a StopExecutionRequest object.
  */
 StopExecutionRequest::StopExecutionRequest()
     : SFNRequest(new StopExecutionRequestPrivate(SFNRequest::StopExecutionAction, this))
@@ -85,14 +82,9 @@ bool StopExecutionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an StopExecutionResponse object.
+ * Returns a StopExecutionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An StopExecutionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SFNClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * StopExecutionRequest::response(QNetworkReply * const reply) const
 {
@@ -100,20 +92,17 @@ QtAws::Core::AwsAbstractResponse * StopExecutionRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::SFN::StopExecutionRequestPrivate
+ * \brief The StopExecutionRequestPrivate class provides private implementation for StopExecutionRequest.
+ * \internal
  *
- * @class  StopExecutionRequestPrivate
- *
- * @brief  Private implementation for StopExecutionRequest.
+ * \inmodule QtAwsSFN
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new StopExecutionRequestPrivate object.
- *
- * @param  action  SFN action being performed.
- * @param  q       Pointer to this object's public StopExecutionRequest instance.
+ * Constructs a StopExecutionRequestPrivate object for SFN \a action with,
+ * public implementation \a q.
  */
 StopExecutionRequestPrivate::StopExecutionRequestPrivate(
     const SFNRequest::Action action, StopExecutionRequest * const q)
@@ -123,15 +112,10 @@ StopExecutionRequestPrivate::StopExecutionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StopExecutionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the StopExecutionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public StopExecutionRequest instance.
  */
 StopExecutionRequestPrivate::StopExecutionRequestPrivate(
     const StopExecutionRequestPrivate &other, StopExecutionRequest * const q)

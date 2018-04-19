@@ -27,10 +27,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::DownloadDBLogFilePortionRequest
- *
  * \brief The DownloadDBLogFilePortionRequest class provides an interface for RDS DownloadDBLogFilePortion requests.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -101,9 +100,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new DownloadDBLogFilePortionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DownloadDBLogFilePortionRequest::DownloadDBLogFilePortionRequest(const DownloadDBLogFilePortionRequest &other)
     : RDSRequest(new DownloadDBLogFilePortionRequestPrivate(*other.d_func(), this))
@@ -112,7 +109,7 @@ DownloadDBLogFilePortionRequest::DownloadDBLogFilePortionRequest(const DownloadD
 }
 
 /*!
- * @brief  Constructs a new DownloadDBLogFilePortionRequest object.
+ * Constructs a DownloadDBLogFilePortionRequest object.
  */
 DownloadDBLogFilePortionRequest::DownloadDBLogFilePortionRequest()
     : RDSRequest(new DownloadDBLogFilePortionRequestPrivate(RDSRequest::DownloadDBLogFilePortionAction, this))
@@ -130,14 +127,9 @@ bool DownloadDBLogFilePortionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DownloadDBLogFilePortionResponse object.
+ * Returns a DownloadDBLogFilePortionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DownloadDBLogFilePortionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RDSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DownloadDBLogFilePortionRequest::response(QNetworkReply * const reply) const
 {
@@ -145,20 +137,17 @@ QtAws::Core::AwsAbstractResponse * DownloadDBLogFilePortionRequest::response(QNe
 }
 
 /*!
- * @internal
+ * \class QtAws::RDS::DownloadDBLogFilePortionRequestPrivate
+ * \brief The DownloadDBLogFilePortionRequestPrivate class provides private implementation for DownloadDBLogFilePortionRequest.
+ * \internal
  *
- * @class  DownloadDBLogFilePortionRequestPrivate
- *
- * @brief  Private implementation for DownloadDBLogFilePortionRequest.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DownloadDBLogFilePortionRequestPrivate object.
- *
- * @param  action  RDS action being performed.
- * @param  q       Pointer to this object's public DownloadDBLogFilePortionRequest instance.
+ * Constructs a DownloadDBLogFilePortionRequestPrivate object for RDS \a action with,
+ * public implementation \a q.
  */
 DownloadDBLogFilePortionRequestPrivate::DownloadDBLogFilePortionRequestPrivate(
     const RDSRequest::Action action, DownloadDBLogFilePortionRequest * const q)
@@ -168,15 +157,10 @@ DownloadDBLogFilePortionRequestPrivate::DownloadDBLogFilePortionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DownloadDBLogFilePortionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DownloadDBLogFilePortionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DownloadDBLogFilePortionRequest instance.
  */
 DownloadDBLogFilePortionRequestPrivate::DownloadDBLogFilePortionRequestPrivate(
     const DownloadDBLogFilePortionRequestPrivate &other, DownloadDBLogFilePortionRequest * const q)

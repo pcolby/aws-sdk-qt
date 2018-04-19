@@ -27,10 +27,9 @@ namespace Cloud9 {
 
 /*!
  * \class QtAws::Cloud9::DeleteEnvironmentRequest
- *
  * \brief The DeleteEnvironmentRequest class provides an interface for Cloud9 DeleteEnvironment requests.
  *
- * \ingroup Cloud9
+ * \inmodule QtAwsCloud9
  *
  *  <fullname>AWS Cloud9</fullname>
  * 
@@ -91,9 +90,7 @@ namespace Cloud9 {
  */
 
 /*!
- * @brief  Constructs a new DeleteEnvironmentRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteEnvironmentRequest::DeleteEnvironmentRequest(const DeleteEnvironmentRequest &other)
     : Cloud9Request(new DeleteEnvironmentRequestPrivate(*other.d_func(), this))
@@ -102,7 +99,7 @@ DeleteEnvironmentRequest::DeleteEnvironmentRequest(const DeleteEnvironmentReques
 }
 
 /*!
- * @brief  Constructs a new DeleteEnvironmentRequest object.
+ * Constructs a DeleteEnvironmentRequest object.
  */
 DeleteEnvironmentRequest::DeleteEnvironmentRequest()
     : Cloud9Request(new DeleteEnvironmentRequestPrivate(Cloud9Request::DeleteEnvironmentAction, this))
@@ -120,14 +117,9 @@ bool DeleteEnvironmentRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteEnvironmentResponse object.
+ * Returns a DeleteEnvironmentResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteEnvironmentResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  Cloud9Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteEnvironmentRequest::response(QNetworkReply * const reply) const
 {
@@ -135,20 +127,17 @@ QtAws::Core::AwsAbstractResponse * DeleteEnvironmentRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::Cloud9::DeleteEnvironmentRequestPrivate
+ * \brief The DeleteEnvironmentRequestPrivate class provides private implementation for DeleteEnvironmentRequest.
+ * \internal
  *
- * @class  DeleteEnvironmentRequestPrivate
- *
- * @brief  Private implementation for DeleteEnvironmentRequest.
+ * \inmodule QtAwsCloud9
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteEnvironmentRequestPrivate object.
- *
- * @param  action  Cloud9 action being performed.
- * @param  q       Pointer to this object's public DeleteEnvironmentRequest instance.
+ * Constructs a DeleteEnvironmentRequestPrivate object for Cloud9 \a action with,
+ * public implementation \a q.
  */
 DeleteEnvironmentRequestPrivate::DeleteEnvironmentRequestPrivate(
     const Cloud9Request::Action action, DeleteEnvironmentRequest * const q)
@@ -158,15 +147,10 @@ DeleteEnvironmentRequestPrivate::DeleteEnvironmentRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteEnvironmentRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteEnvironmentRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteEnvironmentRequest instance.
  */
 DeleteEnvironmentRequestPrivate::DeleteEnvironmentRequestPrivate(
     const DeleteEnvironmentRequestPrivate &other, DeleteEnvironmentRequest * const q)

@@ -27,10 +27,9 @@ namespace Organizations {
 
 /*!
  * \class QtAws::Organizations::EnableAWSServiceAccessRequest
- *
  * \brief The EnableAWSServiceAccessRequest class provides an interface for Organizations EnableAWSServiceAccess requests.
  *
- * \ingroup Organizations
+ * \inmodule QtAwsOrganizations
  *
  *  <fullname>AWS Organizations API Reference</fullname>
  * 
@@ -179,9 +178,7 @@ namespace Organizations {
  */
 
 /*!
- * @brief  Constructs a new EnableAWSServiceAccessRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 EnableAWSServiceAccessRequest::EnableAWSServiceAccessRequest(const EnableAWSServiceAccessRequest &other)
     : OrganizationsRequest(new EnableAWSServiceAccessRequestPrivate(*other.d_func(), this))
@@ -190,7 +187,7 @@ EnableAWSServiceAccessRequest::EnableAWSServiceAccessRequest(const EnableAWSServ
 }
 
 /*!
- * @brief  Constructs a new EnableAWSServiceAccessRequest object.
+ * Constructs a EnableAWSServiceAccessRequest object.
  */
 EnableAWSServiceAccessRequest::EnableAWSServiceAccessRequest()
     : OrganizationsRequest(new EnableAWSServiceAccessRequestPrivate(OrganizationsRequest::EnableAWSServiceAccessAction, this))
@@ -208,14 +205,9 @@ bool EnableAWSServiceAccessRequest::isValid() const
 
 
 /*!
- * @brief  Construct an EnableAWSServiceAccessResponse object.
+ * Returns a EnableAWSServiceAccessResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An EnableAWSServiceAccessResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  OrganizationsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * EnableAWSServiceAccessRequest::response(QNetworkReply * const reply) const
 {
@@ -223,20 +215,17 @@ QtAws::Core::AwsAbstractResponse * EnableAWSServiceAccessRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::Organizations::EnableAWSServiceAccessRequestPrivate
+ * \brief The EnableAWSServiceAccessRequestPrivate class provides private implementation for EnableAWSServiceAccessRequest.
+ * \internal
  *
- * @class  EnableAWSServiceAccessRequestPrivate
- *
- * @brief  Private implementation for EnableAWSServiceAccessRequest.
+ * \inmodule QtAwsOrganizations
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new EnableAWSServiceAccessRequestPrivate object.
- *
- * @param  action  Organizations action being performed.
- * @param  q       Pointer to this object's public EnableAWSServiceAccessRequest instance.
+ * Constructs a EnableAWSServiceAccessRequestPrivate object for Organizations \a action with,
+ * public implementation \a q.
  */
 EnableAWSServiceAccessRequestPrivate::EnableAWSServiceAccessRequestPrivate(
     const OrganizationsRequest::Action action, EnableAWSServiceAccessRequest * const q)
@@ -246,15 +235,10 @@ EnableAWSServiceAccessRequestPrivate::EnableAWSServiceAccessRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new EnableAWSServiceAccessRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the EnableAWSServiceAccessRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public EnableAWSServiceAccessRequest instance.
  */
 EnableAWSServiceAccessRequestPrivate::EnableAWSServiceAccessRequestPrivate(
     const EnableAWSServiceAccessRequestPrivate &other, EnableAWSServiceAccessRequest * const q)

@@ -27,10 +27,9 @@ namespace DatabaseMigrationService {
 
 /*!
  * \class QtAws::DatabaseMigrationService::DescribeSchemasRequest
- *
  * \brief The DescribeSchemasRequest class provides an interface for DatabaseMigrationService DescribeSchemas requests.
  *
- * \ingroup DatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigrationService
  *
  *  <fullname>AWS Database Migration Service</fullname>
  * 
@@ -48,9 +47,7 @@ namespace DatabaseMigrationService {
  */
 
 /*!
- * @brief  Constructs a new DescribeSchemasRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeSchemasRequest::DescribeSchemasRequest(const DescribeSchemasRequest &other)
     : DatabaseMigrationServiceRequest(new DescribeSchemasRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ DescribeSchemasRequest::DescribeSchemasRequest(const DescribeSchemasRequest &oth
 }
 
 /*!
- * @brief  Constructs a new DescribeSchemasRequest object.
+ * Constructs a DescribeSchemasRequest object.
  */
 DescribeSchemasRequest::DescribeSchemasRequest()
     : DatabaseMigrationServiceRequest(new DescribeSchemasRequestPrivate(DatabaseMigrationServiceRequest::DescribeSchemasAction, this))
@@ -77,14 +74,9 @@ bool DescribeSchemasRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeSchemasResponse object.
+ * Returns a DescribeSchemasResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeSchemasResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DatabaseMigrationServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeSchemasRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * DescribeSchemasRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::DatabaseMigrationService::DescribeSchemasRequestPrivate
+ * \brief The DescribeSchemasRequestPrivate class provides private implementation for DescribeSchemasRequest.
+ * \internal
  *
- * @class  DescribeSchemasRequestPrivate
- *
- * @brief  Private implementation for DescribeSchemasRequest.
+ * \inmodule QtAwsDatabaseMigrationService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeSchemasRequestPrivate object.
- *
- * @param  action  DatabaseMigrationService action being performed.
- * @param  q       Pointer to this object's public DescribeSchemasRequest instance.
+ * Constructs a DescribeSchemasRequestPrivate object for DatabaseMigrationService \a action with,
+ * public implementation \a q.
  */
 DescribeSchemasRequestPrivate::DescribeSchemasRequestPrivate(
     const DatabaseMigrationServiceRequest::Action action, DescribeSchemasRequest * const q)
@@ -115,15 +104,10 @@ DescribeSchemasRequestPrivate::DescribeSchemasRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeSchemasRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeSchemasRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeSchemasRequest instance.
  */
 DescribeSchemasRequestPrivate::DescribeSchemasRequestPrivate(
     const DescribeSchemasRequestPrivate &other, DescribeSchemasRequest * const q)

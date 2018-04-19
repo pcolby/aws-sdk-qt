@@ -27,10 +27,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::DeleteUsagePlanRequest
- *
  * \brief The DeleteUsagePlanRequest class provides an interface for APIGateway DeleteUsagePlan requests.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -42,9 +41,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new DeleteUsagePlanRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteUsagePlanRequest::DeleteUsagePlanRequest(const DeleteUsagePlanRequest &other)
     : APIGatewayRequest(new DeleteUsagePlanRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ DeleteUsagePlanRequest::DeleteUsagePlanRequest(const DeleteUsagePlanRequest &oth
 }
 
 /*!
- * @brief  Constructs a new DeleteUsagePlanRequest object.
+ * Constructs a DeleteUsagePlanRequest object.
  */
 DeleteUsagePlanRequest::DeleteUsagePlanRequest()
     : APIGatewayRequest(new DeleteUsagePlanRequestPrivate(APIGatewayRequest::DeleteUsagePlanAction, this))
@@ -71,14 +68,9 @@ bool DeleteUsagePlanRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteUsagePlanResponse object.
+ * Returns a DeleteUsagePlanResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteUsagePlanResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  APIGatewayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteUsagePlanRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * DeleteUsagePlanRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::APIGateway::DeleteUsagePlanRequestPrivate
+ * \brief The DeleteUsagePlanRequestPrivate class provides private implementation for DeleteUsagePlanRequest.
+ * \internal
  *
- * @class  DeleteUsagePlanRequestPrivate
- *
- * @brief  Private implementation for DeleteUsagePlanRequest.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteUsagePlanRequestPrivate object.
- *
- * @param  action  APIGateway action being performed.
- * @param  q       Pointer to this object's public DeleteUsagePlanRequest instance.
+ * Constructs a DeleteUsagePlanRequestPrivate object for APIGateway \a action with,
+ * public implementation \a q.
  */
 DeleteUsagePlanRequestPrivate::DeleteUsagePlanRequestPrivate(
     const APIGatewayRequest::Action action, DeleteUsagePlanRequest * const q)
@@ -109,15 +98,10 @@ DeleteUsagePlanRequestPrivate::DeleteUsagePlanRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteUsagePlanRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteUsagePlanRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteUsagePlanRequest instance.
  */
 DeleteUsagePlanRequestPrivate::DeleteUsagePlanRequestPrivate(
     const DeleteUsagePlanRequestPrivate &other, DeleteUsagePlanRequest * const q)

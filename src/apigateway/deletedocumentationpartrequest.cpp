@@ -27,10 +27,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::DeleteDocumentationPartRequest
- *
  * \brief The DeleteDocumentationPartRequest class provides an interface for APIGateway DeleteDocumentationPart requests.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -42,9 +41,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new DeleteDocumentationPartRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteDocumentationPartRequest::DeleteDocumentationPartRequest(const DeleteDocumentationPartRequest &other)
     : APIGatewayRequest(new DeleteDocumentationPartRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ DeleteDocumentationPartRequest::DeleteDocumentationPartRequest(const DeleteDocum
 }
 
 /*!
- * @brief  Constructs a new DeleteDocumentationPartRequest object.
+ * Constructs a DeleteDocumentationPartRequest object.
  */
 DeleteDocumentationPartRequest::DeleteDocumentationPartRequest()
     : APIGatewayRequest(new DeleteDocumentationPartRequestPrivate(APIGatewayRequest::DeleteDocumentationPartAction, this))
@@ -71,14 +68,9 @@ bool DeleteDocumentationPartRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteDocumentationPartResponse object.
+ * Returns a DeleteDocumentationPartResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteDocumentationPartResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  APIGatewayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteDocumentationPartRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * DeleteDocumentationPartRequest::response(QNet
 }
 
 /*!
- * @internal
+ * \class QtAws::APIGateway::DeleteDocumentationPartRequestPrivate
+ * \brief The DeleteDocumentationPartRequestPrivate class provides private implementation for DeleteDocumentationPartRequest.
+ * \internal
  *
- * @class  DeleteDocumentationPartRequestPrivate
- *
- * @brief  Private implementation for DeleteDocumentationPartRequest.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteDocumentationPartRequestPrivate object.
- *
- * @param  action  APIGateway action being performed.
- * @param  q       Pointer to this object's public DeleteDocumentationPartRequest instance.
+ * Constructs a DeleteDocumentationPartRequestPrivate object for APIGateway \a action with,
+ * public implementation \a q.
  */
 DeleteDocumentationPartRequestPrivate::DeleteDocumentationPartRequestPrivate(
     const APIGatewayRequest::Action action, DeleteDocumentationPartRequest * const q)
@@ -109,15 +98,10 @@ DeleteDocumentationPartRequestPrivate::DeleteDocumentationPartRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteDocumentationPartRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteDocumentationPartRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteDocumentationPartRequest instance.
  */
 DeleteDocumentationPartRequestPrivate::DeleteDocumentationPartRequestPrivate(
     const DeleteDocumentationPartRequestPrivate &other, DeleteDocumentationPartRequest * const q)

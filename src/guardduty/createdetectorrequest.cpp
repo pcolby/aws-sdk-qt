@@ -27,19 +27,16 @@ namespace GuardDuty {
 
 /*!
  * \class QtAws::GuardDuty::CreateDetectorRequest
- *
  * \brief The CreateDetectorRequest class provides an interface for GuardDuty CreateDetector requests.
  *
- * \ingroup GuardDuty
+ * \inmodule QtAwsGuardDuty
  *
  *
  * \sa GuardDutyClient::createDetector
  */
 
 /*!
- * @brief  Constructs a new CreateDetectorRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateDetectorRequest::CreateDetectorRequest(const CreateDetectorRequest &other)
     : GuardDutyRequest(new CreateDetectorRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ CreateDetectorRequest::CreateDetectorRequest(const CreateDetectorRequest &other)
 }
 
 /*!
- * @brief  Constructs a new CreateDetectorRequest object.
+ * Constructs a CreateDetectorRequest object.
  */
 CreateDetectorRequest::CreateDetectorRequest()
     : GuardDutyRequest(new CreateDetectorRequestPrivate(GuardDutyRequest::CreateDetectorAction, this))
@@ -66,14 +63,9 @@ bool CreateDetectorRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateDetectorResponse object.
+ * Returns a CreateDetectorResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateDetectorResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GuardDutyClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateDetectorRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * CreateDetectorRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::GuardDuty::CreateDetectorRequestPrivate
+ * \brief The CreateDetectorRequestPrivate class provides private implementation for CreateDetectorRequest.
+ * \internal
  *
- * @class  CreateDetectorRequestPrivate
- *
- * @brief  Private implementation for CreateDetectorRequest.
+ * \inmodule QtAwsGuardDuty
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateDetectorRequestPrivate object.
- *
- * @param  action  GuardDuty action being performed.
- * @param  q       Pointer to this object's public CreateDetectorRequest instance.
+ * Constructs a CreateDetectorRequestPrivate object for GuardDuty \a action with,
+ * public implementation \a q.
  */
 CreateDetectorRequestPrivate::CreateDetectorRequestPrivate(
     const GuardDutyRequest::Action action, CreateDetectorRequest * const q)
@@ -104,15 +93,10 @@ CreateDetectorRequestPrivate::CreateDetectorRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateDetectorRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateDetectorRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateDetectorRequest instance.
  */
 CreateDetectorRequestPrivate::CreateDetectorRequestPrivate(
     const CreateDetectorRequestPrivate &other, CreateDetectorRequest * const q)

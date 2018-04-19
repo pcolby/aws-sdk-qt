@@ -27,10 +27,9 @@ namespace ConfigService {
 
 /*!
  * \class QtAws::ConfigService::DeleteDeliveryChannelRequest
- *
  * \brief The DeleteDeliveryChannelRequest class provides an interface for ConfigService DeleteDeliveryChannel requests.
  *
- * \ingroup ConfigService
+ * \inmodule QtAwsConfigService
  *
  *  <fullname>AWS Config</fullname>
  * 
@@ -60,9 +59,7 @@ namespace ConfigService {
  */
 
 /*!
- * @brief  Constructs a new DeleteDeliveryChannelRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteDeliveryChannelRequest::DeleteDeliveryChannelRequest(const DeleteDeliveryChannelRequest &other)
     : ConfigServiceRequest(new DeleteDeliveryChannelRequestPrivate(*other.d_func(), this))
@@ -71,7 +68,7 @@ DeleteDeliveryChannelRequest::DeleteDeliveryChannelRequest(const DeleteDeliveryC
 }
 
 /*!
- * @brief  Constructs a new DeleteDeliveryChannelRequest object.
+ * Constructs a DeleteDeliveryChannelRequest object.
  */
 DeleteDeliveryChannelRequest::DeleteDeliveryChannelRequest()
     : ConfigServiceRequest(new DeleteDeliveryChannelRequestPrivate(ConfigServiceRequest::DeleteDeliveryChannelAction, this))
@@ -89,14 +86,9 @@ bool DeleteDeliveryChannelRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteDeliveryChannelResponse object.
+ * Returns a DeleteDeliveryChannelResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteDeliveryChannelResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ConfigServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteDeliveryChannelRequest::response(QNetworkReply * const reply) const
 {
@@ -104,20 +96,17 @@ QtAws::Core::AwsAbstractResponse * DeleteDeliveryChannelRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::ConfigService::DeleteDeliveryChannelRequestPrivate
+ * \brief The DeleteDeliveryChannelRequestPrivate class provides private implementation for DeleteDeliveryChannelRequest.
+ * \internal
  *
- * @class  DeleteDeliveryChannelRequestPrivate
- *
- * @brief  Private implementation for DeleteDeliveryChannelRequest.
+ * \inmodule QtAwsConfigService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteDeliveryChannelRequestPrivate object.
- *
- * @param  action  ConfigService action being performed.
- * @param  q       Pointer to this object's public DeleteDeliveryChannelRequest instance.
+ * Constructs a DeleteDeliveryChannelRequestPrivate object for ConfigService \a action with,
+ * public implementation \a q.
  */
 DeleteDeliveryChannelRequestPrivate::DeleteDeliveryChannelRequestPrivate(
     const ConfigServiceRequest::Action action, DeleteDeliveryChannelRequest * const q)
@@ -127,15 +116,10 @@ DeleteDeliveryChannelRequestPrivate::DeleteDeliveryChannelRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteDeliveryChannelRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteDeliveryChannelRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteDeliveryChannelRequest instance.
  */
 DeleteDeliveryChannelRequestPrivate::DeleteDeliveryChannelRequestPrivate(
     const DeleteDeliveryChannelRequestPrivate &other, DeleteDeliveryChannelRequest * const q)

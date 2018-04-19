@@ -27,10 +27,9 @@ namespace ECS {
 
 /*!
  * \class QtAws::ECS::UpdateContainerInstancesStateRequest
- *
  * \brief The UpdateContainerInstancesStateRequest class provides an interface for ECS UpdateContainerInstancesState requests.
  *
- * \ingroup ECS
+ * \inmodule QtAwsECS
  *
  *  Amazon Elastic Container Service (Amazon ECS) is a highly scalable, fast, container management service that makes it
  *  easy to run, stop, and manage Docker containers on a cluster. You can host your cluster on a serverless infrastructure
@@ -54,9 +53,7 @@ namespace ECS {
  */
 
 /*!
- * @brief  Constructs a new UpdateContainerInstancesStateRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateContainerInstancesStateRequest::UpdateContainerInstancesStateRequest(const UpdateContainerInstancesStateRequest &other)
     : ECSRequest(new UpdateContainerInstancesStateRequestPrivate(*other.d_func(), this))
@@ -65,7 +62,7 @@ UpdateContainerInstancesStateRequest::UpdateContainerInstancesStateRequest(const
 }
 
 /*!
- * @brief  Constructs a new UpdateContainerInstancesStateRequest object.
+ * Constructs a UpdateContainerInstancesStateRequest object.
  */
 UpdateContainerInstancesStateRequest::UpdateContainerInstancesStateRequest()
     : ECSRequest(new UpdateContainerInstancesStateRequestPrivate(ECSRequest::UpdateContainerInstancesStateAction, this))
@@ -83,14 +80,9 @@ bool UpdateContainerInstancesStateRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateContainerInstancesStateResponse object.
+ * Returns a UpdateContainerInstancesStateResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateContainerInstancesStateResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ECSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateContainerInstancesStateRequest::response(QNetworkReply * const reply) const
 {
@@ -98,20 +90,17 @@ QtAws::Core::AwsAbstractResponse * UpdateContainerInstancesStateRequest::respons
 }
 
 /*!
- * @internal
+ * \class QtAws::ECS::UpdateContainerInstancesStateRequestPrivate
+ * \brief The UpdateContainerInstancesStateRequestPrivate class provides private implementation for UpdateContainerInstancesStateRequest.
+ * \internal
  *
- * @class  UpdateContainerInstancesStateRequestPrivate
- *
- * @brief  Private implementation for UpdateContainerInstancesStateRequest.
+ * \inmodule QtAwsECS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateContainerInstancesStateRequestPrivate object.
- *
- * @param  action  ECS action being performed.
- * @param  q       Pointer to this object's public UpdateContainerInstancesStateRequest instance.
+ * Constructs a UpdateContainerInstancesStateRequestPrivate object for ECS \a action with,
+ * public implementation \a q.
  */
 UpdateContainerInstancesStateRequestPrivate::UpdateContainerInstancesStateRequestPrivate(
     const ECSRequest::Action action, UpdateContainerInstancesStateRequest * const q)
@@ -121,15 +110,10 @@ UpdateContainerInstancesStateRequestPrivate::UpdateContainerInstancesStateReques
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateContainerInstancesStateRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateContainerInstancesStateRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateContainerInstancesStateRequest instance.
  */
 UpdateContainerInstancesStateRequestPrivate::UpdateContainerInstancesStateRequestPrivate(
     const UpdateContainerInstancesStateRequestPrivate &other, UpdateContainerInstancesStateRequest * const q)

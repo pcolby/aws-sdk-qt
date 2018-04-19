@@ -27,10 +27,9 @@ namespace CloudDirectory {
 
 /*!
  * \class QtAws::CloudDirectory::GetTypedLinkFacetInformationRequest
- *
  * \brief The GetTypedLinkFacetInformationRequest class provides an interface for CloudDirectory GetTypedLinkFacetInformation requests.
  *
- * \ingroup CloudDirectory
+ * \inmodule QtAwsCloudDirectory
  *
  *  <fullname>Amazon Cloud Directory</fullname>
  * 
@@ -44,9 +43,7 @@ namespace CloudDirectory {
  */
 
 /*!
- * @brief  Constructs a new GetTypedLinkFacetInformationRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetTypedLinkFacetInformationRequest::GetTypedLinkFacetInformationRequest(const GetTypedLinkFacetInformationRequest &other)
     : CloudDirectoryRequest(new GetTypedLinkFacetInformationRequestPrivate(*other.d_func(), this))
@@ -55,7 +52,7 @@ GetTypedLinkFacetInformationRequest::GetTypedLinkFacetInformationRequest(const G
 }
 
 /*!
- * @brief  Constructs a new GetTypedLinkFacetInformationRequest object.
+ * Constructs a GetTypedLinkFacetInformationRequest object.
  */
 GetTypedLinkFacetInformationRequest::GetTypedLinkFacetInformationRequest()
     : CloudDirectoryRequest(new GetTypedLinkFacetInformationRequestPrivate(CloudDirectoryRequest::GetTypedLinkFacetInformationAction, this))
@@ -73,14 +70,9 @@ bool GetTypedLinkFacetInformationRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetTypedLinkFacetInformationResponse object.
+ * Returns a GetTypedLinkFacetInformationResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetTypedLinkFacetInformationResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudDirectoryClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetTypedLinkFacetInformationRequest::response(QNetworkReply * const reply) const
 {
@@ -88,20 +80,17 @@ QtAws::Core::AwsAbstractResponse * GetTypedLinkFacetInformationRequest::response
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudDirectory::GetTypedLinkFacetInformationRequestPrivate
+ * \brief The GetTypedLinkFacetInformationRequestPrivate class provides private implementation for GetTypedLinkFacetInformationRequest.
+ * \internal
  *
- * @class  GetTypedLinkFacetInformationRequestPrivate
- *
- * @brief  Private implementation for GetTypedLinkFacetInformationRequest.
+ * \inmodule QtAwsCloudDirectory
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetTypedLinkFacetInformationRequestPrivate object.
- *
- * @param  action  CloudDirectory action being performed.
- * @param  q       Pointer to this object's public GetTypedLinkFacetInformationRequest instance.
+ * Constructs a GetTypedLinkFacetInformationRequestPrivate object for CloudDirectory \a action with,
+ * public implementation \a q.
  */
 GetTypedLinkFacetInformationRequestPrivate::GetTypedLinkFacetInformationRequestPrivate(
     const CloudDirectoryRequest::Action action, GetTypedLinkFacetInformationRequest * const q)
@@ -111,15 +100,10 @@ GetTypedLinkFacetInformationRequestPrivate::GetTypedLinkFacetInformationRequestP
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetTypedLinkFacetInformationRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetTypedLinkFacetInformationRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetTypedLinkFacetInformationRequest instance.
  */
 GetTypedLinkFacetInformationRequestPrivate::GetTypedLinkFacetInformationRequestPrivate(
     const GetTypedLinkFacetInformationRequestPrivate &other, GetTypedLinkFacetInformationRequest * const q)

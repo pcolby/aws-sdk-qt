@@ -27,10 +27,9 @@ namespace MigrationHub {
 
 /*!
  * \class QtAws::MigrationHub::AssociateDiscoveredResourceRequest
- *
  * \brief The AssociateDiscoveredResourceRequest class provides an interface for MigrationHub AssociateDiscoveredResource requests.
  *
- * \ingroup MigrationHub
+ * \inmodule QtAwsMigrationHub
  *
  *  The AWS Migration Hub API methods help to obtain server and application migration status and integrate your
  *  resource-specific migration tool by providing a programmatic interface to Migration Hub.
@@ -39,9 +38,7 @@ namespace MigrationHub {
  */
 
 /*!
- * @brief  Constructs a new AssociateDiscoveredResourceRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AssociateDiscoveredResourceRequest::AssociateDiscoveredResourceRequest(const AssociateDiscoveredResourceRequest &other)
     : MigrationHubRequest(new AssociateDiscoveredResourceRequestPrivate(*other.d_func(), this))
@@ -50,7 +47,7 @@ AssociateDiscoveredResourceRequest::AssociateDiscoveredResourceRequest(const Ass
 }
 
 /*!
- * @brief  Constructs a new AssociateDiscoveredResourceRequest object.
+ * Constructs a AssociateDiscoveredResourceRequest object.
  */
 AssociateDiscoveredResourceRequest::AssociateDiscoveredResourceRequest()
     : MigrationHubRequest(new AssociateDiscoveredResourceRequestPrivate(MigrationHubRequest::AssociateDiscoveredResourceAction, this))
@@ -68,14 +65,9 @@ bool AssociateDiscoveredResourceRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AssociateDiscoveredResourceResponse object.
+ * Returns a AssociateDiscoveredResourceResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AssociateDiscoveredResourceResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MigrationHubClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AssociateDiscoveredResourceRequest::response(QNetworkReply * const reply) const
 {
@@ -83,20 +75,17 @@ QtAws::Core::AwsAbstractResponse * AssociateDiscoveredResourceRequest::response(
 }
 
 /*!
- * @internal
+ * \class QtAws::MigrationHub::AssociateDiscoveredResourceRequestPrivate
+ * \brief The AssociateDiscoveredResourceRequestPrivate class provides private implementation for AssociateDiscoveredResourceRequest.
+ * \internal
  *
- * @class  AssociateDiscoveredResourceRequestPrivate
- *
- * @brief  Private implementation for AssociateDiscoveredResourceRequest.
+ * \inmodule QtAwsMigrationHub
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AssociateDiscoveredResourceRequestPrivate object.
- *
- * @param  action  MigrationHub action being performed.
- * @param  q       Pointer to this object's public AssociateDiscoveredResourceRequest instance.
+ * Constructs a AssociateDiscoveredResourceRequestPrivate object for MigrationHub \a action with,
+ * public implementation \a q.
  */
 AssociateDiscoveredResourceRequestPrivate::AssociateDiscoveredResourceRequestPrivate(
     const MigrationHubRequest::Action action, AssociateDiscoveredResourceRequest * const q)
@@ -106,15 +95,10 @@ AssociateDiscoveredResourceRequestPrivate::AssociateDiscoveredResourceRequestPri
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AssociateDiscoveredResourceRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AssociateDiscoveredResourceRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AssociateDiscoveredResourceRequest instance.
  */
 AssociateDiscoveredResourceRequestPrivate::AssociateDiscoveredResourceRequestPrivate(
     const AssociateDiscoveredResourceRequestPrivate &other, AssociateDiscoveredResourceRequest * const q)

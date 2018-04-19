@@ -27,10 +27,9 @@ namespace ConfigService {
 
 /*!
  * \class QtAws::ConfigService::PutDeliveryChannelRequest
- *
  * \brief The PutDeliveryChannelRequest class provides an interface for ConfigService PutDeliveryChannel requests.
  *
- * \ingroup ConfigService
+ * \inmodule QtAwsConfigService
  *
  *  <fullname>AWS Config</fullname>
  * 
@@ -60,9 +59,7 @@ namespace ConfigService {
  */
 
 /*!
- * @brief  Constructs a new PutDeliveryChannelRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 PutDeliveryChannelRequest::PutDeliveryChannelRequest(const PutDeliveryChannelRequest &other)
     : ConfigServiceRequest(new PutDeliveryChannelRequestPrivate(*other.d_func(), this))
@@ -71,7 +68,7 @@ PutDeliveryChannelRequest::PutDeliveryChannelRequest(const PutDeliveryChannelReq
 }
 
 /*!
- * @brief  Constructs a new PutDeliveryChannelRequest object.
+ * Constructs a PutDeliveryChannelRequest object.
  */
 PutDeliveryChannelRequest::PutDeliveryChannelRequest()
     : ConfigServiceRequest(new PutDeliveryChannelRequestPrivate(ConfigServiceRequest::PutDeliveryChannelAction, this))
@@ -89,14 +86,9 @@ bool PutDeliveryChannelRequest::isValid() const
 
 
 /*!
- * @brief  Construct an PutDeliveryChannelResponse object.
+ * Returns a PutDeliveryChannelResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An PutDeliveryChannelResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ConfigServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * PutDeliveryChannelRequest::response(QNetworkReply * const reply) const
 {
@@ -104,20 +96,17 @@ QtAws::Core::AwsAbstractResponse * PutDeliveryChannelRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::ConfigService::PutDeliveryChannelRequestPrivate
+ * \brief The PutDeliveryChannelRequestPrivate class provides private implementation for PutDeliveryChannelRequest.
+ * \internal
  *
- * @class  PutDeliveryChannelRequestPrivate
- *
- * @brief  Private implementation for PutDeliveryChannelRequest.
+ * \inmodule QtAwsConfigService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new PutDeliveryChannelRequestPrivate object.
- *
- * @param  action  ConfigService action being performed.
- * @param  q       Pointer to this object's public PutDeliveryChannelRequest instance.
+ * Constructs a PutDeliveryChannelRequestPrivate object for ConfigService \a action with,
+ * public implementation \a q.
  */
 PutDeliveryChannelRequestPrivate::PutDeliveryChannelRequestPrivate(
     const ConfigServiceRequest::Action action, PutDeliveryChannelRequest * const q)
@@ -127,15 +116,10 @@ PutDeliveryChannelRequestPrivate::PutDeliveryChannelRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutDeliveryChannelRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the PutDeliveryChannelRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public PutDeliveryChannelRequest instance.
  */
 PutDeliveryChannelRequestPrivate::PutDeliveryChannelRequestPrivate(
     const PutDeliveryChannelRequestPrivate &other, PutDeliveryChannelRequest * const q)

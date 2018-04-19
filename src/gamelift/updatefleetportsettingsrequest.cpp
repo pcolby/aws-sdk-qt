@@ -27,10 +27,9 @@ namespace GameLift {
 
 /*!
  * \class QtAws::GameLift::UpdateFleetPortSettingsRequest
- *
  * \brief The UpdateFleetPortSettingsRequest class provides an interface for GameLift UpdateFleetPortSettings requests.
  *
- * \ingroup GameLift
+ * \inmodule QtAwsGameLift
  *
  *  <fullname>Amazon GameLift Service</fullname>
  * 
@@ -473,9 +472,7 @@ namespace GameLift {
  */
 
 /*!
- * @brief  Constructs a new UpdateFleetPortSettingsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateFleetPortSettingsRequest::UpdateFleetPortSettingsRequest(const UpdateFleetPortSettingsRequest &other)
     : GameLiftRequest(new UpdateFleetPortSettingsRequestPrivate(*other.d_func(), this))
@@ -484,7 +481,7 @@ UpdateFleetPortSettingsRequest::UpdateFleetPortSettingsRequest(const UpdateFleet
 }
 
 /*!
- * @brief  Constructs a new UpdateFleetPortSettingsRequest object.
+ * Constructs a UpdateFleetPortSettingsRequest object.
  */
 UpdateFleetPortSettingsRequest::UpdateFleetPortSettingsRequest()
     : GameLiftRequest(new UpdateFleetPortSettingsRequestPrivate(GameLiftRequest::UpdateFleetPortSettingsAction, this))
@@ -502,14 +499,9 @@ bool UpdateFleetPortSettingsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateFleetPortSettingsResponse object.
+ * Returns a UpdateFleetPortSettingsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateFleetPortSettingsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GameLiftClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateFleetPortSettingsRequest::response(QNetworkReply * const reply) const
 {
@@ -517,20 +509,17 @@ QtAws::Core::AwsAbstractResponse * UpdateFleetPortSettingsRequest::response(QNet
 }
 
 /*!
- * @internal
+ * \class QtAws::GameLift::UpdateFleetPortSettingsRequestPrivate
+ * \brief The UpdateFleetPortSettingsRequestPrivate class provides private implementation for UpdateFleetPortSettingsRequest.
+ * \internal
  *
- * @class  UpdateFleetPortSettingsRequestPrivate
- *
- * @brief  Private implementation for UpdateFleetPortSettingsRequest.
+ * \inmodule QtAwsGameLift
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateFleetPortSettingsRequestPrivate object.
- *
- * @param  action  GameLift action being performed.
- * @param  q       Pointer to this object's public UpdateFleetPortSettingsRequest instance.
+ * Constructs a UpdateFleetPortSettingsRequestPrivate object for GameLift \a action with,
+ * public implementation \a q.
  */
 UpdateFleetPortSettingsRequestPrivate::UpdateFleetPortSettingsRequestPrivate(
     const GameLiftRequest::Action action, UpdateFleetPortSettingsRequest * const q)
@@ -540,15 +529,10 @@ UpdateFleetPortSettingsRequestPrivate::UpdateFleetPortSettingsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateFleetPortSettingsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateFleetPortSettingsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateFleetPortSettingsRequest instance.
  */
 UpdateFleetPortSettingsRequestPrivate::UpdateFleetPortSettingsRequestPrivate(
     const UpdateFleetPortSettingsRequestPrivate &other, UpdateFleetPortSettingsRequest * const q)

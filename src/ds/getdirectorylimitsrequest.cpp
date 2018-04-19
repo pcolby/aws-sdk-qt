@@ -27,10 +27,9 @@ namespace DirectoryService {
 
 /*!
  * \class QtAws::DirectoryService::GetDirectoryLimitsRequest
- *
  * \brief The GetDirectoryLimitsRequest class provides an interface for DirectoryService GetDirectoryLimits requests.
  *
- * \ingroup DirectoryService
+ * \inmodule QtAwsDirectoryService
  *
  *  <fullname>AWS Directory Service</fullname>
  * 
@@ -51,9 +50,7 @@ namespace DirectoryService {
  */
 
 /*!
- * @brief  Constructs a new GetDirectoryLimitsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetDirectoryLimitsRequest::GetDirectoryLimitsRequest(const GetDirectoryLimitsRequest &other)
     : DirectoryServiceRequest(new GetDirectoryLimitsRequestPrivate(*other.d_func(), this))
@@ -62,7 +59,7 @@ GetDirectoryLimitsRequest::GetDirectoryLimitsRequest(const GetDirectoryLimitsReq
 }
 
 /*!
- * @brief  Constructs a new GetDirectoryLimitsRequest object.
+ * Constructs a GetDirectoryLimitsRequest object.
  */
 GetDirectoryLimitsRequest::GetDirectoryLimitsRequest()
     : DirectoryServiceRequest(new GetDirectoryLimitsRequestPrivate(DirectoryServiceRequest::GetDirectoryLimitsAction, this))
@@ -80,14 +77,9 @@ bool GetDirectoryLimitsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetDirectoryLimitsResponse object.
+ * Returns a GetDirectoryLimitsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetDirectoryLimitsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DirectoryServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetDirectoryLimitsRequest::response(QNetworkReply * const reply) const
 {
@@ -95,20 +87,17 @@ QtAws::Core::AwsAbstractResponse * GetDirectoryLimitsRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::DirectoryService::GetDirectoryLimitsRequestPrivate
+ * \brief The GetDirectoryLimitsRequestPrivate class provides private implementation for GetDirectoryLimitsRequest.
+ * \internal
  *
- * @class  GetDirectoryLimitsRequestPrivate
- *
- * @brief  Private implementation for GetDirectoryLimitsRequest.
+ * \inmodule QtAwsDirectoryService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetDirectoryLimitsRequestPrivate object.
- *
- * @param  action  DirectoryService action being performed.
- * @param  q       Pointer to this object's public GetDirectoryLimitsRequest instance.
+ * Constructs a GetDirectoryLimitsRequestPrivate object for DirectoryService \a action with,
+ * public implementation \a q.
  */
 GetDirectoryLimitsRequestPrivate::GetDirectoryLimitsRequestPrivate(
     const DirectoryServiceRequest::Action action, GetDirectoryLimitsRequest * const q)
@@ -118,15 +107,10 @@ GetDirectoryLimitsRequestPrivate::GetDirectoryLimitsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetDirectoryLimitsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetDirectoryLimitsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetDirectoryLimitsRequest instance.
  */
 GetDirectoryLimitsRequestPrivate::GetDirectoryLimitsRequestPrivate(
     const GetDirectoryLimitsRequestPrivate &other, GetDirectoryLimitsRequest * const q)

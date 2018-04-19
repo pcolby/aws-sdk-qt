@@ -27,10 +27,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::ListIndicesRequest
- *
  * \brief The ListIndicesRequest class provides an interface for IoT ListIndices requests.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -48,9 +47,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new ListIndicesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListIndicesRequest::ListIndicesRequest(const ListIndicesRequest &other)
     : IoTRequest(new ListIndicesRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ ListIndicesRequest::ListIndicesRequest(const ListIndicesRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ListIndicesRequest object.
+ * Constructs a ListIndicesRequest object.
  */
 ListIndicesRequest::ListIndicesRequest()
     : IoTRequest(new ListIndicesRequestPrivate(IoTRequest::ListIndicesAction, this))
@@ -77,14 +74,9 @@ bool ListIndicesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListIndicesResponse object.
+ * Returns a ListIndicesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListIndicesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IoTClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListIndicesRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * ListIndicesRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::IoT::ListIndicesRequestPrivate
+ * \brief The ListIndicesRequestPrivate class provides private implementation for ListIndicesRequest.
+ * \internal
  *
- * @class  ListIndicesRequestPrivate
- *
- * @brief  Private implementation for ListIndicesRequest.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListIndicesRequestPrivate object.
- *
- * @param  action  IoT action being performed.
- * @param  q       Pointer to this object's public ListIndicesRequest instance.
+ * Constructs a ListIndicesRequestPrivate object for IoT \a action with,
+ * public implementation \a q.
  */
 ListIndicesRequestPrivate::ListIndicesRequestPrivate(
     const IoTRequest::Action action, ListIndicesRequest * const q)
@@ -115,15 +104,10 @@ ListIndicesRequestPrivate::ListIndicesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListIndicesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListIndicesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListIndicesRequest instance.
  */
 ListIndicesRequestPrivate::ListIndicesRequestPrivate(
     const ListIndicesRequestPrivate &other, ListIndicesRequest * const q)

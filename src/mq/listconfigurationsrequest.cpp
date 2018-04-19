@@ -27,10 +27,9 @@ namespace MQ {
 
 /*!
  * \class QtAws::MQ::ListConfigurationsRequest
- *
  * \brief The ListConfigurationsRequest class provides an interface for MQ ListConfigurations requests.
  *
- * \ingroup MQ
+ * \inmodule QtAwsMQ
  *
  *  Amazon MQ is a managed message broker service for Apache ActiveMQ that makes it easy to set up and operate message
  *  brokers in the cloud. A message broker allows software applications and components to communicate using various
@@ -39,9 +38,7 @@ namespace MQ {
  */
 
 /*!
- * @brief  Constructs a new ListConfigurationsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListConfigurationsRequest::ListConfigurationsRequest(const ListConfigurationsRequest &other)
     : MQRequest(new ListConfigurationsRequestPrivate(*other.d_func(), this))
@@ -50,7 +47,7 @@ ListConfigurationsRequest::ListConfigurationsRequest(const ListConfigurationsReq
 }
 
 /*!
- * @brief  Constructs a new ListConfigurationsRequest object.
+ * Constructs a ListConfigurationsRequest object.
  */
 ListConfigurationsRequest::ListConfigurationsRequest()
     : MQRequest(new ListConfigurationsRequestPrivate(MQRequest::ListConfigurationsAction, this))
@@ -68,14 +65,9 @@ bool ListConfigurationsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListConfigurationsResponse object.
+ * Returns a ListConfigurationsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListConfigurationsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MQClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListConfigurationsRequest::response(QNetworkReply * const reply) const
 {
@@ -83,20 +75,17 @@ QtAws::Core::AwsAbstractResponse * ListConfigurationsRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::MQ::ListConfigurationsRequestPrivate
+ * \brief The ListConfigurationsRequestPrivate class provides private implementation for ListConfigurationsRequest.
+ * \internal
  *
- * @class  ListConfigurationsRequestPrivate
- *
- * @brief  Private implementation for ListConfigurationsRequest.
+ * \inmodule QtAwsMQ
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListConfigurationsRequestPrivate object.
- *
- * @param  action  MQ action being performed.
- * @param  q       Pointer to this object's public ListConfigurationsRequest instance.
+ * Constructs a ListConfigurationsRequestPrivate object for MQ \a action with,
+ * public implementation \a q.
  */
 ListConfigurationsRequestPrivate::ListConfigurationsRequestPrivate(
     const MQRequest::Action action, ListConfigurationsRequest * const q)
@@ -106,15 +95,10 @@ ListConfigurationsRequestPrivate::ListConfigurationsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListConfigurationsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListConfigurationsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListConfigurationsRequest instance.
  */
 ListConfigurationsRequestPrivate::ListConfigurationsRequestPrivate(
     const ListConfigurationsRequestPrivate &other, ListConfigurationsRequest * const q)

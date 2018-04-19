@@ -27,10 +27,9 @@ namespace CloudDirectory {
 
 /*!
  * \class QtAws::CloudDirectory::ListAppliedSchemaArnsRequest
- *
  * \brief The ListAppliedSchemaArnsRequest class provides an interface for CloudDirectory ListAppliedSchemaArns requests.
  *
- * \ingroup CloudDirectory
+ * \inmodule QtAwsCloudDirectory
  *
  *  <fullname>Amazon Cloud Directory</fullname>
  * 
@@ -44,9 +43,7 @@ namespace CloudDirectory {
  */
 
 /*!
- * @brief  Constructs a new ListAppliedSchemaArnsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListAppliedSchemaArnsRequest::ListAppliedSchemaArnsRequest(const ListAppliedSchemaArnsRequest &other)
     : CloudDirectoryRequest(new ListAppliedSchemaArnsRequestPrivate(*other.d_func(), this))
@@ -55,7 +52,7 @@ ListAppliedSchemaArnsRequest::ListAppliedSchemaArnsRequest(const ListAppliedSche
 }
 
 /*!
- * @brief  Constructs a new ListAppliedSchemaArnsRequest object.
+ * Constructs a ListAppliedSchemaArnsRequest object.
  */
 ListAppliedSchemaArnsRequest::ListAppliedSchemaArnsRequest()
     : CloudDirectoryRequest(new ListAppliedSchemaArnsRequestPrivate(CloudDirectoryRequest::ListAppliedSchemaArnsAction, this))
@@ -73,14 +70,9 @@ bool ListAppliedSchemaArnsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListAppliedSchemaArnsResponse object.
+ * Returns a ListAppliedSchemaArnsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListAppliedSchemaArnsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudDirectoryClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListAppliedSchemaArnsRequest::response(QNetworkReply * const reply) const
 {
@@ -88,20 +80,17 @@ QtAws::Core::AwsAbstractResponse * ListAppliedSchemaArnsRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudDirectory::ListAppliedSchemaArnsRequestPrivate
+ * \brief The ListAppliedSchemaArnsRequestPrivate class provides private implementation for ListAppliedSchemaArnsRequest.
+ * \internal
  *
- * @class  ListAppliedSchemaArnsRequestPrivate
- *
- * @brief  Private implementation for ListAppliedSchemaArnsRequest.
+ * \inmodule QtAwsCloudDirectory
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListAppliedSchemaArnsRequestPrivate object.
- *
- * @param  action  CloudDirectory action being performed.
- * @param  q       Pointer to this object's public ListAppliedSchemaArnsRequest instance.
+ * Constructs a ListAppliedSchemaArnsRequestPrivate object for CloudDirectory \a action with,
+ * public implementation \a q.
  */
 ListAppliedSchemaArnsRequestPrivate::ListAppliedSchemaArnsRequestPrivate(
     const CloudDirectoryRequest::Action action, ListAppliedSchemaArnsRequest * const q)
@@ -111,15 +100,10 @@ ListAppliedSchemaArnsRequestPrivate::ListAppliedSchemaArnsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListAppliedSchemaArnsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListAppliedSchemaArnsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListAppliedSchemaArnsRequest instance.
  */
 ListAppliedSchemaArnsRequestPrivate::ListAppliedSchemaArnsRequestPrivate(
     const ListAppliedSchemaArnsRequestPrivate &other, ListAppliedSchemaArnsRequest * const q)

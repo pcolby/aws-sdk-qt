@@ -27,10 +27,9 @@ namespace ElasticLoadBalancingv2 {
 
 /*!
  * \class QtAws::ElasticLoadBalancingv2::DescribeTargetGroupsRequest
- *
  * \brief The DescribeTargetGroupsRequest class provides an interface for ElasticLoadBalancingv2 DescribeTargetGroups requests.
  *
- * \ingroup ElasticLoadBalancingv2
+ * \inmodule QtAwsElasticLoadBalancingv2
  *
  *  <fullname>Elastic Load Balancing</fullname>
  * 
@@ -105,9 +104,7 @@ namespace ElasticLoadBalancingv2 {
  */
 
 /*!
- * @brief  Constructs a new DescribeTargetGroupsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeTargetGroupsRequest::DescribeTargetGroupsRequest(const DescribeTargetGroupsRequest &other)
     : ElasticLoadBalancingv2Request(new DescribeTargetGroupsRequestPrivate(*other.d_func(), this))
@@ -116,7 +113,7 @@ DescribeTargetGroupsRequest::DescribeTargetGroupsRequest(const DescribeTargetGro
 }
 
 /*!
- * @brief  Constructs a new DescribeTargetGroupsRequest object.
+ * Constructs a DescribeTargetGroupsRequest object.
  */
 DescribeTargetGroupsRequest::DescribeTargetGroupsRequest()
     : ElasticLoadBalancingv2Request(new DescribeTargetGroupsRequestPrivate(ElasticLoadBalancingv2Request::DescribeTargetGroupsAction, this))
@@ -134,14 +131,9 @@ bool DescribeTargetGroupsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeTargetGroupsResponse object.
+ * Returns a DescribeTargetGroupsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeTargetGroupsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ElasticLoadBalancingv2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeTargetGroupsRequest::response(QNetworkReply * const reply) const
 {
@@ -149,20 +141,17 @@ QtAws::Core::AwsAbstractResponse * DescribeTargetGroupsRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::ElasticLoadBalancingv2::DescribeTargetGroupsRequestPrivate
+ * \brief The DescribeTargetGroupsRequestPrivate class provides private implementation for DescribeTargetGroupsRequest.
+ * \internal
  *
- * @class  DescribeTargetGroupsRequestPrivate
- *
- * @brief  Private implementation for DescribeTargetGroupsRequest.
+ * \inmodule QtAwsElasticLoadBalancingv2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeTargetGroupsRequestPrivate object.
- *
- * @param  action  ElasticLoadBalancingv2 action being performed.
- * @param  q       Pointer to this object's public DescribeTargetGroupsRequest instance.
+ * Constructs a DescribeTargetGroupsRequestPrivate object for ElasticLoadBalancingv2 \a action with,
+ * public implementation \a q.
  */
 DescribeTargetGroupsRequestPrivate::DescribeTargetGroupsRequestPrivate(
     const ElasticLoadBalancingv2Request::Action action, DescribeTargetGroupsRequest * const q)
@@ -172,15 +161,10 @@ DescribeTargetGroupsRequestPrivate::DescribeTargetGroupsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeTargetGroupsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeTargetGroupsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeTargetGroupsRequest instance.
  */
 DescribeTargetGroupsRequestPrivate::DescribeTargetGroupsRequestPrivate(
     const DescribeTargetGroupsRequestPrivate &other, DescribeTargetGroupsRequest * const q)

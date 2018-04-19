@@ -27,10 +27,9 @@ namespace CloudWatch {
 
 /*!
  * \class QtAws::CloudWatch::PutMetricDataRequest
- *
  * \brief The PutMetricDataRequest class provides an interface for CloudWatch PutMetricData requests.
  *
- * \ingroup CloudWatch
+ * \inmodule QtAwsCloudWatch
  *
  *  Amazon CloudWatch monitors your Amazon Web Services (AWS) resources and the applications you run on AWS in real time.
  *  You can use CloudWatch to collect and track metrics, which are the variables you want to measure for your resources and
@@ -51,9 +50,7 @@ namespace CloudWatch {
  */
 
 /*!
- * @brief  Constructs a new PutMetricDataRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 PutMetricDataRequest::PutMetricDataRequest(const PutMetricDataRequest &other)
     : CloudWatchRequest(new PutMetricDataRequestPrivate(*other.d_func(), this))
@@ -62,7 +59,7 @@ PutMetricDataRequest::PutMetricDataRequest(const PutMetricDataRequest &other)
 }
 
 /*!
- * @brief  Constructs a new PutMetricDataRequest object.
+ * Constructs a PutMetricDataRequest object.
  */
 PutMetricDataRequest::PutMetricDataRequest()
     : CloudWatchRequest(new PutMetricDataRequestPrivate(CloudWatchRequest::PutMetricDataAction, this))
@@ -80,14 +77,9 @@ bool PutMetricDataRequest::isValid() const
 
 
 /*!
- * @brief  Construct an PutMetricDataResponse object.
+ * Returns a PutMetricDataResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An PutMetricDataResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudWatchClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * PutMetricDataRequest::response(QNetworkReply * const reply) const
 {
@@ -95,20 +87,17 @@ QtAws::Core::AwsAbstractResponse * PutMetricDataRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudWatch::PutMetricDataRequestPrivate
+ * \brief The PutMetricDataRequestPrivate class provides private implementation for PutMetricDataRequest.
+ * \internal
  *
- * @class  PutMetricDataRequestPrivate
- *
- * @brief  Private implementation for PutMetricDataRequest.
+ * \inmodule QtAwsCloudWatch
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new PutMetricDataRequestPrivate object.
- *
- * @param  action  CloudWatch action being performed.
- * @param  q       Pointer to this object's public PutMetricDataRequest instance.
+ * Constructs a PutMetricDataRequestPrivate object for CloudWatch \a action with,
+ * public implementation \a q.
  */
 PutMetricDataRequestPrivate::PutMetricDataRequestPrivate(
     const CloudWatchRequest::Action action, PutMetricDataRequest * const q)
@@ -118,15 +107,10 @@ PutMetricDataRequestPrivate::PutMetricDataRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutMetricDataRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the PutMetricDataRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public PutMetricDataRequest instance.
  */
 PutMetricDataRequestPrivate::PutMetricDataRequestPrivate(
     const PutMetricDataRequestPrivate &other, PutMetricDataRequest * const q)

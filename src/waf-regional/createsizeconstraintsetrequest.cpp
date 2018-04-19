@@ -27,10 +27,9 @@ namespace WAFRegional {
 
 /*!
  * \class QtAws::WAFRegional::CreateSizeConstraintSetRequest
- *
  * \brief The CreateSizeConstraintSetRequest class provides an interface for WAFRegional CreateSizeConstraintSet requests.
  *
- * \ingroup WAFRegional
+ * \inmodule QtAwsWAFRegional
  *
  *  This is the <i>AWS WAF Regional API Reference</i> for using AWS WAF with Elastic Load Balancing (ELB) Application Load
  *  Balancers. The AWS WAF actions and data types listed in the reference are available for protecting Application Load
@@ -44,9 +43,7 @@ namespace WAFRegional {
  */
 
 /*!
- * @brief  Constructs a new CreateSizeConstraintSetRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateSizeConstraintSetRequest::CreateSizeConstraintSetRequest(const CreateSizeConstraintSetRequest &other)
     : WAFRegionalRequest(new CreateSizeConstraintSetRequestPrivate(*other.d_func(), this))
@@ -55,7 +52,7 @@ CreateSizeConstraintSetRequest::CreateSizeConstraintSetRequest(const CreateSizeC
 }
 
 /*!
- * @brief  Constructs a new CreateSizeConstraintSetRequest object.
+ * Constructs a CreateSizeConstraintSetRequest object.
  */
 CreateSizeConstraintSetRequest::CreateSizeConstraintSetRequest()
     : WAFRegionalRequest(new CreateSizeConstraintSetRequestPrivate(WAFRegionalRequest::CreateSizeConstraintSetAction, this))
@@ -73,14 +70,9 @@ bool CreateSizeConstraintSetRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateSizeConstraintSetResponse object.
+ * Returns a CreateSizeConstraintSetResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateSizeConstraintSetResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WAFRegionalClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateSizeConstraintSetRequest::response(QNetworkReply * const reply) const
 {
@@ -88,20 +80,17 @@ QtAws::Core::AwsAbstractResponse * CreateSizeConstraintSetRequest::response(QNet
 }
 
 /*!
- * @internal
+ * \class QtAws::WAFRegional::CreateSizeConstraintSetRequestPrivate
+ * \brief The CreateSizeConstraintSetRequestPrivate class provides private implementation for CreateSizeConstraintSetRequest.
+ * \internal
  *
- * @class  CreateSizeConstraintSetRequestPrivate
- *
- * @brief  Private implementation for CreateSizeConstraintSetRequest.
+ * \inmodule QtAwsWAFRegional
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateSizeConstraintSetRequestPrivate object.
- *
- * @param  action  WAFRegional action being performed.
- * @param  q       Pointer to this object's public CreateSizeConstraintSetRequest instance.
+ * Constructs a CreateSizeConstraintSetRequestPrivate object for WAFRegional \a action with,
+ * public implementation \a q.
  */
 CreateSizeConstraintSetRequestPrivate::CreateSizeConstraintSetRequestPrivate(
     const WAFRegionalRequest::Action action, CreateSizeConstraintSetRequest * const q)
@@ -111,15 +100,10 @@ CreateSizeConstraintSetRequestPrivate::CreateSizeConstraintSetRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateSizeConstraintSetRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateSizeConstraintSetRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateSizeConstraintSetRequest instance.
  */
 CreateSizeConstraintSetRequestPrivate::CreateSizeConstraintSetRequestPrivate(
     const CreateSizeConstraintSetRequestPrivate &other, CreateSizeConstraintSetRequest * const q)

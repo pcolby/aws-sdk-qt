@@ -27,19 +27,16 @@ namespace Pinpoint {
 
 /*!
  * \class QtAws::Pinpoint::DeleteSegmentRequest
- *
  * \brief The DeleteSegmentRequest class provides an interface for Pinpoint DeleteSegment requests.
  *
- * \ingroup Pinpoint
+ * \inmodule QtAwsPinpoint
  *
  *
  * \sa PinpointClient::deleteSegment
  */
 
 /*!
- * @brief  Constructs a new DeleteSegmentRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteSegmentRequest::DeleteSegmentRequest(const DeleteSegmentRequest &other)
     : PinpointRequest(new DeleteSegmentRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ DeleteSegmentRequest::DeleteSegmentRequest(const DeleteSegmentRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DeleteSegmentRequest object.
+ * Constructs a DeleteSegmentRequest object.
  */
 DeleteSegmentRequest::DeleteSegmentRequest()
     : PinpointRequest(new DeleteSegmentRequestPrivate(PinpointRequest::DeleteSegmentAction, this))
@@ -66,14 +63,9 @@ bool DeleteSegmentRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteSegmentResponse object.
+ * Returns a DeleteSegmentResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteSegmentResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  PinpointClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteSegmentRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * DeleteSegmentRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::Pinpoint::DeleteSegmentRequestPrivate
+ * \brief The DeleteSegmentRequestPrivate class provides private implementation for DeleteSegmentRequest.
+ * \internal
  *
- * @class  DeleteSegmentRequestPrivate
- *
- * @brief  Private implementation for DeleteSegmentRequest.
+ * \inmodule QtAwsPinpoint
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteSegmentRequestPrivate object.
- *
- * @param  action  Pinpoint action being performed.
- * @param  q       Pointer to this object's public DeleteSegmentRequest instance.
+ * Constructs a DeleteSegmentRequestPrivate object for Pinpoint \a action with,
+ * public implementation \a q.
  */
 DeleteSegmentRequestPrivate::DeleteSegmentRequestPrivate(
     const PinpointRequest::Action action, DeleteSegmentRequest * const q)
@@ -104,15 +93,10 @@ DeleteSegmentRequestPrivate::DeleteSegmentRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteSegmentRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteSegmentRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteSegmentRequest instance.
  */
 DeleteSegmentRequestPrivate::DeleteSegmentRequestPrivate(
     const DeleteSegmentRequestPrivate &other, DeleteSegmentRequest * const q)

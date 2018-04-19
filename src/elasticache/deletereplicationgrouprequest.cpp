@@ -27,10 +27,9 @@ namespace ElastiCache {
 
 /*!
  * \class QtAws::ElastiCache::DeleteReplicationGroupRequest
- *
  * \brief The DeleteReplicationGroupRequest class provides an interface for ElastiCache DeleteReplicationGroup requests.
  *
- * \ingroup ElastiCache
+ * \inmodule QtAwsElastiCache
  *
  *  <fullname>Amazon ElastiCache</fullname>
  * 
@@ -51,9 +50,7 @@ namespace ElastiCache {
  */
 
 /*!
- * @brief  Constructs a new DeleteReplicationGroupRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteReplicationGroupRequest::DeleteReplicationGroupRequest(const DeleteReplicationGroupRequest &other)
     : ElastiCacheRequest(new DeleteReplicationGroupRequestPrivate(*other.d_func(), this))
@@ -62,7 +59,7 @@ DeleteReplicationGroupRequest::DeleteReplicationGroupRequest(const DeleteReplica
 }
 
 /*!
- * @brief  Constructs a new DeleteReplicationGroupRequest object.
+ * Constructs a DeleteReplicationGroupRequest object.
  */
 DeleteReplicationGroupRequest::DeleteReplicationGroupRequest()
     : ElastiCacheRequest(new DeleteReplicationGroupRequestPrivate(ElastiCacheRequest::DeleteReplicationGroupAction, this))
@@ -80,14 +77,9 @@ bool DeleteReplicationGroupRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteReplicationGroupResponse object.
+ * Returns a DeleteReplicationGroupResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteReplicationGroupResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ElastiCacheClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteReplicationGroupRequest::response(QNetworkReply * const reply) const
 {
@@ -95,20 +87,17 @@ QtAws::Core::AwsAbstractResponse * DeleteReplicationGroupRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::ElastiCache::DeleteReplicationGroupRequestPrivate
+ * \brief The DeleteReplicationGroupRequestPrivate class provides private implementation for DeleteReplicationGroupRequest.
+ * \internal
  *
- * @class  DeleteReplicationGroupRequestPrivate
- *
- * @brief  Private implementation for DeleteReplicationGroupRequest.
+ * \inmodule QtAwsElastiCache
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteReplicationGroupRequestPrivate object.
- *
- * @param  action  ElastiCache action being performed.
- * @param  q       Pointer to this object's public DeleteReplicationGroupRequest instance.
+ * Constructs a DeleteReplicationGroupRequestPrivate object for ElastiCache \a action with,
+ * public implementation \a q.
  */
 DeleteReplicationGroupRequestPrivate::DeleteReplicationGroupRequestPrivate(
     const ElastiCacheRequest::Action action, DeleteReplicationGroupRequest * const q)
@@ -118,15 +107,10 @@ DeleteReplicationGroupRequestPrivate::DeleteReplicationGroupRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteReplicationGroupRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteReplicationGroupRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteReplicationGroupRequest instance.
  */
 DeleteReplicationGroupRequestPrivate::DeleteReplicationGroupRequestPrivate(
     const DeleteReplicationGroupRequestPrivate &other, DeleteReplicationGroupRequest * const q)

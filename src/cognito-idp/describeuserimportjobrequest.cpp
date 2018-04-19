@@ -27,10 +27,9 @@ namespace CognitoIdentityProvider {
 
 /*!
  * \class QtAws::CognitoIdentityProvider::DescribeUserImportJobRequest
- *
  * \brief The DescribeUserImportJobRequest class provides an interface for CognitoIdentityProvider DescribeUserImportJob requests.
  *
- * \ingroup CognitoIdentityProvider
+ * \inmodule QtAwsCognitoIdentityProvider
  *
  *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
  *  authenticate a user to obtain tokens related to user identity and access
@@ -47,9 +46,7 @@ namespace CognitoIdentityProvider {
  */
 
 /*!
- * @brief  Constructs a new DescribeUserImportJobRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeUserImportJobRequest::DescribeUserImportJobRequest(const DescribeUserImportJobRequest &other)
     : CognitoIdentityProviderRequest(new DescribeUserImportJobRequestPrivate(*other.d_func(), this))
@@ -58,7 +55,7 @@ DescribeUserImportJobRequest::DescribeUserImportJobRequest(const DescribeUserImp
 }
 
 /*!
- * @brief  Constructs a new DescribeUserImportJobRequest object.
+ * Constructs a DescribeUserImportJobRequest object.
  */
 DescribeUserImportJobRequest::DescribeUserImportJobRequest()
     : CognitoIdentityProviderRequest(new DescribeUserImportJobRequestPrivate(CognitoIdentityProviderRequest::DescribeUserImportJobAction, this))
@@ -76,14 +73,9 @@ bool DescribeUserImportJobRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeUserImportJobResponse object.
+ * Returns a DescribeUserImportJobResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeUserImportJobResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CognitoIdentityProviderClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeUserImportJobRequest::response(QNetworkReply * const reply) const
 {
@@ -91,20 +83,17 @@ QtAws::Core::AwsAbstractResponse * DescribeUserImportJobRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::CognitoIdentityProvider::DescribeUserImportJobRequestPrivate
+ * \brief The DescribeUserImportJobRequestPrivate class provides private implementation for DescribeUserImportJobRequest.
+ * \internal
  *
- * @class  DescribeUserImportJobRequestPrivate
- *
- * @brief  Private implementation for DescribeUserImportJobRequest.
+ * \inmodule QtAwsCognitoIdentityProvider
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeUserImportJobRequestPrivate object.
- *
- * @param  action  CognitoIdentityProvider action being performed.
- * @param  q       Pointer to this object's public DescribeUserImportJobRequest instance.
+ * Constructs a DescribeUserImportJobRequestPrivate object for CognitoIdentityProvider \a action with,
+ * public implementation \a q.
  */
 DescribeUserImportJobRequestPrivate::DescribeUserImportJobRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, DescribeUserImportJobRequest * const q)
@@ -114,15 +103,10 @@ DescribeUserImportJobRequestPrivate::DescribeUserImportJobRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeUserImportJobRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeUserImportJobRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeUserImportJobRequest instance.
  */
 DescribeUserImportJobRequestPrivate::DescribeUserImportJobRequestPrivate(
     const DescribeUserImportJobRequestPrivate &other, DescribeUserImportJobRequest * const q)

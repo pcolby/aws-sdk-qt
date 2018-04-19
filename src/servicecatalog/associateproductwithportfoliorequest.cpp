@@ -27,10 +27,9 @@ namespace ServiceCatalog {
 
 /*!
  * \class QtAws::ServiceCatalog::AssociateProductWithPortfolioRequest
- *
  * \brief The AssociateProductWithPortfolioRequest class provides an interface for ServiceCatalog AssociateProductWithPortfolio requests.
  *
- * \ingroup ServiceCatalog
+ * \inmodule QtAwsServiceCatalog
  *
  *  <fullname>AWS Service Catalog</fullname>
  * 
@@ -43,9 +42,7 @@ namespace ServiceCatalog {
  */
 
 /*!
- * @brief  Constructs a new AssociateProductWithPortfolioRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AssociateProductWithPortfolioRequest::AssociateProductWithPortfolioRequest(const AssociateProductWithPortfolioRequest &other)
     : ServiceCatalogRequest(new AssociateProductWithPortfolioRequestPrivate(*other.d_func(), this))
@@ -54,7 +51,7 @@ AssociateProductWithPortfolioRequest::AssociateProductWithPortfolioRequest(const
 }
 
 /*!
- * @brief  Constructs a new AssociateProductWithPortfolioRequest object.
+ * Constructs a AssociateProductWithPortfolioRequest object.
  */
 AssociateProductWithPortfolioRequest::AssociateProductWithPortfolioRequest()
     : ServiceCatalogRequest(new AssociateProductWithPortfolioRequestPrivate(ServiceCatalogRequest::AssociateProductWithPortfolioAction, this))
@@ -72,14 +69,9 @@ bool AssociateProductWithPortfolioRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AssociateProductWithPortfolioResponse object.
+ * Returns a AssociateProductWithPortfolioResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AssociateProductWithPortfolioResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ServiceCatalogClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AssociateProductWithPortfolioRequest::response(QNetworkReply * const reply) const
 {
@@ -87,20 +79,17 @@ QtAws::Core::AwsAbstractResponse * AssociateProductWithPortfolioRequest::respons
 }
 
 /*!
- * @internal
+ * \class QtAws::ServiceCatalog::AssociateProductWithPortfolioRequestPrivate
+ * \brief The AssociateProductWithPortfolioRequestPrivate class provides private implementation for AssociateProductWithPortfolioRequest.
+ * \internal
  *
- * @class  AssociateProductWithPortfolioRequestPrivate
- *
- * @brief  Private implementation for AssociateProductWithPortfolioRequest.
+ * \inmodule QtAwsServiceCatalog
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AssociateProductWithPortfolioRequestPrivate object.
- *
- * @param  action  ServiceCatalog action being performed.
- * @param  q       Pointer to this object's public AssociateProductWithPortfolioRequest instance.
+ * Constructs a AssociateProductWithPortfolioRequestPrivate object for ServiceCatalog \a action with,
+ * public implementation \a q.
  */
 AssociateProductWithPortfolioRequestPrivate::AssociateProductWithPortfolioRequestPrivate(
     const ServiceCatalogRequest::Action action, AssociateProductWithPortfolioRequest * const q)
@@ -110,15 +99,10 @@ AssociateProductWithPortfolioRequestPrivate::AssociateProductWithPortfolioReques
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AssociateProductWithPortfolioRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AssociateProductWithPortfolioRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AssociateProductWithPortfolioRequest instance.
  */
 AssociateProductWithPortfolioRequestPrivate::AssociateProductWithPortfolioRequestPrivate(
     const AssociateProductWithPortfolioRequestPrivate &other, AssociateProductWithPortfolioRequest * const q)

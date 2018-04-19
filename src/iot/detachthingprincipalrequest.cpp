@@ -27,10 +27,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::DetachThingPrincipalRequest
- *
  * \brief The DetachThingPrincipalRequest class provides an interface for IoT DetachThingPrincipal requests.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -48,9 +47,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new DetachThingPrincipalRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DetachThingPrincipalRequest::DetachThingPrincipalRequest(const DetachThingPrincipalRequest &other)
     : IoTRequest(new DetachThingPrincipalRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ DetachThingPrincipalRequest::DetachThingPrincipalRequest(const DetachThingPrinci
 }
 
 /*!
- * @brief  Constructs a new DetachThingPrincipalRequest object.
+ * Constructs a DetachThingPrincipalRequest object.
  */
 DetachThingPrincipalRequest::DetachThingPrincipalRequest()
     : IoTRequest(new DetachThingPrincipalRequestPrivate(IoTRequest::DetachThingPrincipalAction, this))
@@ -77,14 +74,9 @@ bool DetachThingPrincipalRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DetachThingPrincipalResponse object.
+ * Returns a DetachThingPrincipalResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DetachThingPrincipalResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IoTClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DetachThingPrincipalRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * DetachThingPrincipalRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::IoT::DetachThingPrincipalRequestPrivate
+ * \brief The DetachThingPrincipalRequestPrivate class provides private implementation for DetachThingPrincipalRequest.
+ * \internal
  *
- * @class  DetachThingPrincipalRequestPrivate
- *
- * @brief  Private implementation for DetachThingPrincipalRequest.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DetachThingPrincipalRequestPrivate object.
- *
- * @param  action  IoT action being performed.
- * @param  q       Pointer to this object's public DetachThingPrincipalRequest instance.
+ * Constructs a DetachThingPrincipalRequestPrivate object for IoT \a action with,
+ * public implementation \a q.
  */
 DetachThingPrincipalRequestPrivate::DetachThingPrincipalRequestPrivate(
     const IoTRequest::Action action, DetachThingPrincipalRequest * const q)
@@ -115,15 +104,10 @@ DetachThingPrincipalRequestPrivate::DetachThingPrincipalRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DetachThingPrincipalRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DetachThingPrincipalRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DetachThingPrincipalRequest instance.
  */
 DetachThingPrincipalRequestPrivate::DetachThingPrincipalRequestPrivate(
     const DetachThingPrincipalRequestPrivate &other, DetachThingPrincipalRequest * const q)

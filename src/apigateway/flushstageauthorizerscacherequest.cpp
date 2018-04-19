@@ -27,10 +27,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::FlushStageAuthorizersCacheRequest
- *
  * \brief The FlushStageAuthorizersCacheRequest class provides an interface for APIGateway FlushStageAuthorizersCache requests.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -42,9 +41,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new FlushStageAuthorizersCacheRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 FlushStageAuthorizersCacheRequest::FlushStageAuthorizersCacheRequest(const FlushStageAuthorizersCacheRequest &other)
     : APIGatewayRequest(new FlushStageAuthorizersCacheRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ FlushStageAuthorizersCacheRequest::FlushStageAuthorizersCacheRequest(const Flush
 }
 
 /*!
- * @brief  Constructs a new FlushStageAuthorizersCacheRequest object.
+ * Constructs a FlushStageAuthorizersCacheRequest object.
  */
 FlushStageAuthorizersCacheRequest::FlushStageAuthorizersCacheRequest()
     : APIGatewayRequest(new FlushStageAuthorizersCacheRequestPrivate(APIGatewayRequest::FlushStageAuthorizersCacheAction, this))
@@ -71,14 +68,9 @@ bool FlushStageAuthorizersCacheRequest::isValid() const
 
 
 /*!
- * @brief  Construct an FlushStageAuthorizersCacheResponse object.
+ * Returns a FlushStageAuthorizersCacheResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An FlushStageAuthorizersCacheResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  APIGatewayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * FlushStageAuthorizersCacheRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * FlushStageAuthorizersCacheRequest::response(Q
 }
 
 /*!
- * @internal
+ * \class QtAws::APIGateway::FlushStageAuthorizersCacheRequestPrivate
+ * \brief The FlushStageAuthorizersCacheRequestPrivate class provides private implementation for FlushStageAuthorizersCacheRequest.
+ * \internal
  *
- * @class  FlushStageAuthorizersCacheRequestPrivate
- *
- * @brief  Private implementation for FlushStageAuthorizersCacheRequest.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new FlushStageAuthorizersCacheRequestPrivate object.
- *
- * @param  action  APIGateway action being performed.
- * @param  q       Pointer to this object's public FlushStageAuthorizersCacheRequest instance.
+ * Constructs a FlushStageAuthorizersCacheRequestPrivate object for APIGateway \a action with,
+ * public implementation \a q.
  */
 FlushStageAuthorizersCacheRequestPrivate::FlushStageAuthorizersCacheRequestPrivate(
     const APIGatewayRequest::Action action, FlushStageAuthorizersCacheRequest * const q)
@@ -109,15 +98,10 @@ FlushStageAuthorizersCacheRequestPrivate::FlushStageAuthorizersCacheRequestPriva
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new FlushStageAuthorizersCacheRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the FlushStageAuthorizersCacheRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public FlushStageAuthorizersCacheRequest instance.
  */
 FlushStageAuthorizersCacheRequestPrivate::FlushStageAuthorizersCacheRequestPrivate(
     const FlushStageAuthorizersCacheRequestPrivate &other, FlushStageAuthorizersCacheRequest * const q)

@@ -27,10 +27,9 @@ namespace Lightsail {
 
 /*!
  * \class QtAws::Lightsail::GetBlueprintsRequest
- *
  * \brief The GetBlueprintsRequest class provides an interface for Lightsail GetBlueprints requests.
  *
- * \ingroup Lightsail
+ * \inmodule QtAwsLightsail
  *
  *  Amazon Lightsail is the easiest way to get started with AWS for developers who just need virtual private servers.
  *  Lightsail includes everything you need to launch your project quickly - a virtual machine, SSD-based storage, data
@@ -53,9 +52,7 @@ namespace Lightsail {
  */
 
 /*!
- * @brief  Constructs a new GetBlueprintsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetBlueprintsRequest::GetBlueprintsRequest(const GetBlueprintsRequest &other)
     : LightsailRequest(new GetBlueprintsRequestPrivate(*other.d_func(), this))
@@ -64,7 +61,7 @@ GetBlueprintsRequest::GetBlueprintsRequest(const GetBlueprintsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetBlueprintsRequest object.
+ * Constructs a GetBlueprintsRequest object.
  */
 GetBlueprintsRequest::GetBlueprintsRequest()
     : LightsailRequest(new GetBlueprintsRequestPrivate(LightsailRequest::GetBlueprintsAction, this))
@@ -82,14 +79,9 @@ bool GetBlueprintsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetBlueprintsResponse object.
+ * Returns a GetBlueprintsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetBlueprintsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  LightsailClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetBlueprintsRequest::response(QNetworkReply * const reply) const
 {
@@ -97,20 +89,17 @@ QtAws::Core::AwsAbstractResponse * GetBlueprintsRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::Lightsail::GetBlueprintsRequestPrivate
+ * \brief The GetBlueprintsRequestPrivate class provides private implementation for GetBlueprintsRequest.
+ * \internal
  *
- * @class  GetBlueprintsRequestPrivate
- *
- * @brief  Private implementation for GetBlueprintsRequest.
+ * \inmodule QtAwsLightsail
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetBlueprintsRequestPrivate object.
- *
- * @param  action  Lightsail action being performed.
- * @param  q       Pointer to this object's public GetBlueprintsRequest instance.
+ * Constructs a GetBlueprintsRequestPrivate object for Lightsail \a action with,
+ * public implementation \a q.
  */
 GetBlueprintsRequestPrivate::GetBlueprintsRequestPrivate(
     const LightsailRequest::Action action, GetBlueprintsRequest * const q)
@@ -120,15 +109,10 @@ GetBlueprintsRequestPrivate::GetBlueprintsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetBlueprintsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetBlueprintsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetBlueprintsRequest instance.
  */
 GetBlueprintsRequestPrivate::GetBlueprintsRequestPrivate(
     const GetBlueprintsRequestPrivate &other, GetBlueprintsRequest * const q)

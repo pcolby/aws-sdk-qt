@@ -27,10 +27,9 @@ namespace Greengrass {
 
 /*!
  * \class QtAws::Greengrass::UpdateGroupCertificateConfigurationRequest
- *
  * \brief The UpdateGroupCertificateConfigurationRequest class provides an interface for Greengrass UpdateGroupCertificateConfiguration requests.
  *
- * \ingroup Greengrass
+ * \inmodule QtAwsGreengrass
  *
  *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
  *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
@@ -40,9 +39,7 @@ namespace Greengrass {
  */
 
 /*!
- * @brief  Constructs a new UpdateGroupCertificateConfigurationRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateGroupCertificateConfigurationRequest::UpdateGroupCertificateConfigurationRequest(const UpdateGroupCertificateConfigurationRequest &other)
     : GreengrassRequest(new UpdateGroupCertificateConfigurationRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ UpdateGroupCertificateConfigurationRequest::UpdateGroupCertificateConfigurationR
 }
 
 /*!
- * @brief  Constructs a new UpdateGroupCertificateConfigurationRequest object.
+ * Constructs a UpdateGroupCertificateConfigurationRequest object.
  */
 UpdateGroupCertificateConfigurationRequest::UpdateGroupCertificateConfigurationRequest()
     : GreengrassRequest(new UpdateGroupCertificateConfigurationRequestPrivate(GreengrassRequest::UpdateGroupCertificateConfigurationAction, this))
@@ -69,14 +66,9 @@ bool UpdateGroupCertificateConfigurationRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateGroupCertificateConfigurationResponse object.
+ * Returns a UpdateGroupCertificateConfigurationResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateGroupCertificateConfigurationResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GreengrassClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateGroupCertificateConfigurationRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * UpdateGroupCertificateConfigurationRequest::r
 }
 
 /*!
- * @internal
+ * \class QtAws::Greengrass::UpdateGroupCertificateConfigurationRequestPrivate
+ * \brief The UpdateGroupCertificateConfigurationRequestPrivate class provides private implementation for UpdateGroupCertificateConfigurationRequest.
+ * \internal
  *
- * @class  UpdateGroupCertificateConfigurationRequestPrivate
- *
- * @brief  Private implementation for UpdateGroupCertificateConfigurationRequest.
+ * \inmodule QtAwsGreengrass
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateGroupCertificateConfigurationRequestPrivate object.
- *
- * @param  action  Greengrass action being performed.
- * @param  q       Pointer to this object's public UpdateGroupCertificateConfigurationRequest instance.
+ * Constructs a UpdateGroupCertificateConfigurationRequestPrivate object for Greengrass \a action with,
+ * public implementation \a q.
  */
 UpdateGroupCertificateConfigurationRequestPrivate::UpdateGroupCertificateConfigurationRequestPrivate(
     const GreengrassRequest::Action action, UpdateGroupCertificateConfigurationRequest * const q)
@@ -107,15 +96,10 @@ UpdateGroupCertificateConfigurationRequestPrivate::UpdateGroupCertificateConfigu
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateGroupCertificateConfigurationRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateGroupCertificateConfigurationRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateGroupCertificateConfigurationRequest instance.
  */
 UpdateGroupCertificateConfigurationRequestPrivate::UpdateGroupCertificateConfigurationRequestPrivate(
     const UpdateGroupCertificateConfigurationRequestPrivate &other, UpdateGroupCertificateConfigurationRequest * const q)

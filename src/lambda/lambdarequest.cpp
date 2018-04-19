@@ -25,16 +25,51 @@ namespace Lambda {
 
 /*!
  * \class QtAws::Lambda::LambdaRequest
- *
  * \brief The LambdaRequest class provides an interface for Lambda requests.
  *
- * \ingroup Lambda
+ * \inmodule QtAwsLambda
  */
 
 /*!
- * @brief  Constructs a new LambdaRequest object.
+ * \enum LambdaRequest::Action
  *
- * @param  action  The Lambda action to request.
+ * This enum describes the actions that can be performed as Lambda
+ * requests.
+ *
+ * \value AddPermissionAction Lambda AddPermission action.
+ * \value CreateAliasAction Lambda CreateAlias action.
+ * \value CreateEventSourceMappingAction Lambda CreateEventSourceMapping action.
+ * \value CreateFunctionAction Lambda CreateFunction action.
+ * \value DeleteAliasAction Lambda DeleteAlias action.
+ * \value DeleteEventSourceMappingAction Lambda DeleteEventSourceMapping action.
+ * \value DeleteFunctionAction Lambda DeleteFunction action.
+ * \value DeleteFunctionConcurrencyAction Lambda DeleteFunctionConcurrency action.
+ * \value GetAccountSettingsAction Lambda GetAccountSettings action.
+ * \value GetAliasAction Lambda GetAlias action.
+ * \value GetEventSourceMappingAction Lambda GetEventSourceMapping action.
+ * \value GetFunctionAction Lambda GetFunction action.
+ * \value GetFunctionConfigurationAction Lambda GetFunctionConfiguration action.
+ * \value GetPolicyAction Lambda GetPolicy action.
+ * \value InvokeAction Lambda Invoke action.
+ * \value InvokeAsyncAction Lambda InvokeAsync action.
+ * \value ListAliasesAction Lambda ListAliases action.
+ * \value ListEventSourceMappingsAction Lambda ListEventSourceMappings action.
+ * \value ListFunctionsAction Lambda ListFunctions action.
+ * \value ListTagsAction Lambda ListTags action.
+ * \value ListVersionsByFunctionAction Lambda ListVersionsByFunction action.
+ * \value PublishVersionAction Lambda PublishVersion action.
+ * \value PutFunctionConcurrencyAction Lambda PutFunctionConcurrency action.
+ * \value RemovePermissionAction Lambda RemovePermission action.
+ * \value TagResourceAction Lambda TagResource action.
+ * \value UntagResourceAction Lambda UntagResource action.
+ * \value UpdateAliasAction Lambda UpdateAlias action.
+ * \value UpdateEventSourceMappingAction Lambda UpdateEventSourceMapping action.
+ * \value UpdateFunctionCodeAction Lambda UpdateFunctionCode action.
+ * \value UpdateFunctionConfigurationAction Lambda UpdateFunctionConfiguration action.
+ */
+
+/*!
+ * Constructs a[n] LambdaRequest object for Lambda \a action.
  */
 LambdaRequest::LambdaRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new LambdaRequestPrivate(action, this))
@@ -43,9 +78,7 @@ LambdaRequest::LambdaRequest(const Action action)
 }
 
 /*!
- * @brief  Constructs a new LambdaRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 LambdaRequest::LambdaRequest(const LambdaRequest &other)
     : QtAws::Core::AwsAbstractRequest(new LambdaRequestPrivate(*other.d_func(), this))
@@ -54,13 +87,7 @@ LambdaRequest::LambdaRequest(const LambdaRequest &other)
 }
 
 /*!
- * @brief  Assignment operator.
- *
- * Assigns \a other to \c this.
- *
- * @param  other  Instance to copy.
- *
- * @return  A reference to \c this.
+ * Sets the LambdaRequest object to be equal to \a other.
  */
 LambdaRequest& LambdaRequest::operator=(const LambdaRequest &other)
 {
@@ -72,14 +99,10 @@ LambdaRequest& LambdaRequest::operator=(const LambdaRequest &other)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new LambdaRequest object.
+ * Constructs aa LambdaRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from LambdaRequestPrivate.
- *
- * @param  d  Pointer to private data (aka D-Pointer).
  */
 LambdaRequest::LambdaRequest(LambdaRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
@@ -87,7 +110,7 @@ LambdaRequest::LambdaRequest(LambdaRequestPrivate * const d) : QtAws::Core::AwsA
 }
 
 /*!
- * \brief Returns the Lambda action to be performed by this request.
+ * Returns the Lambda action to be performed by this request.
  */
 LambdaRequest::Action LambdaRequest::action() const
 {
@@ -96,7 +119,7 @@ LambdaRequest::Action LambdaRequest::action() const
 }
 
 /*!
- * \brief Returns the name of the Lambda action to be performed by this request.
+ * Returns the name of the Lambda action to be performed by this request.
  */
 QString LambdaRequest::actionString() const
 {
@@ -104,7 +127,7 @@ QString LambdaRequest::actionString() const
 }
 
 /*!
- * \brief Returns the Lambda API version implemented by this request.
+ * Returns the Lambda API version implemented by this request.
  */
 QString LambdaRequest::apiVersion() const
 {
@@ -113,7 +136,7 @@ QString LambdaRequest::apiVersion() const
 }
 
 /*!
- * @brief Set the Lambda action to be performed by this request to \a action.
+ * Sets the Lambda action to be performed by this request to \a action.
  */
 void LambdaRequest::setAction(const Action action)
 {
@@ -122,7 +145,7 @@ void LambdaRequest::setAction(const Action action)
 }
 
 /*!
- * Set the Lambda API version to include in this request to \a version.
+ * Sets the Lambda API version to include in this request to \a version.
  */
 void LambdaRequest::setApiVersion(const QString &version)
 {
@@ -131,7 +154,7 @@ void LambdaRequest::setApiVersion(const QString &version)
 }
 
 /*!
- * \brief Returns \c true if this request is the same as \a other.
+ * Returns \c true if this request is equal to \a other; \c false otherwise.
  *
  * Note, most derived *Request classes do not need to provider their own
  * implementations of this function, since most such request classes rely on
@@ -146,8 +169,8 @@ bool LambdaRequest::operator==(const LambdaRequest &other) const
             (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
-/*!
- * @brief  Check if \a queueName is a valid Lambda queue name.
+/*
+ * Returns \c tue if \a queueName is a valid Lambda queue name.
  *
  * @par From Lambda FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
@@ -166,9 +189,8 @@ bool LambdaRequest::operator==(const LambdaRequest &other) const
 }*/
 
 /*!
- * \brief Removes the a \a name parameter from this request.
- *
- * Returns the count of paramters removed (typically \c 0 or \c 1).
+ * Removes the a \a name parameter from the request, then returns the number of
+ * paramters removed (typically \c 0 or \c 1).
  */
 int LambdaRequest::clearParameter(const QString &name)
 {
@@ -177,7 +199,7 @@ int LambdaRequest::clearParameter(const QString &name)
 }
 
 /*!
- * \brief Removes all parameters from this request.
+ * Removes all parameters from the request.
  */
 void LambdaRequest::clearParameters()
 {
@@ -186,7 +208,7 @@ void LambdaRequest::clearParameters()
 }
 
 /*!
- * \brief Returns the value of the \n name pararemter if set, otherwise \a defaultValue.
+ * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
 QVariant LambdaRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
@@ -195,7 +217,7 @@ QVariant LambdaRequest::parameter(const QString &name, const QVariant &defaultVa
 }
 
 /*!
- * \brief Returns a map of parameters included in this request.
+ * Returns the parameters included in this request.
  */
 const QVariantMap &LambdaRequest::parameters() const
 {
@@ -204,7 +226,7 @@ const QVariantMap &LambdaRequest::parameters() const
 }
 
 /*!
- * \brief Sets the \a name parameter to \a value.
+ * Sets the \a name parameter to \a value.
  */
 void LambdaRequest::setParameter(const QString &name, const QVariant &value)
 {
@@ -213,9 +235,8 @@ void LambdaRequest::setParameter(const QString &name, const QVariant &value)
 }
 
 /*!
- * \brief Sets the map of paramters for this request to \a parameters.
- *
- * Any request parameters set previously will be discarded.
+ * Sets the paramters for this request to \a parameters. Any request parameters
+ * set previously will be discarded.
  */
 void LambdaRequest::setParameters(const QVariantMap &parameters)
 {
@@ -224,11 +245,12 @@ void LambdaRequest::setParameters(const QVariantMap &parameters)
 }
 
 /*!
- * \brief Returns a network request for this Lambda request using the given \a endpoint.
+ * Returns a network request for the Lambda request using the given
+ * \a endpoint.
  *
- * This Lambda implementation builds request URLs by combining the common query
- * parameters (such as Action and Version), with any that have been added (via
- * setParameter) by child classes.
+ * This Lambda implementation builds request URLs by combining the
+ * common query parameters (such as Action and Version), with any that have
+ * been added (via setParameter) by child classes.
  */
 QNetworkRequest LambdaRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -239,17 +261,16 @@ QNetworkRequest LambdaRequest::unsignedRequest(const QUrl &endpoint) const
 }
 
 /*!
+ * \class QtAws::Lambda::LambdaRequestPrivate
+ * \brief The LambdaRequestPrivate class provides private implementation for LambdaRequest.
  * \internal
  *
- * \class  LambdaRequestPrivate
- *
- * \brief  Private implementation for LambdaRequest.
+ * \inmodule QtAwsLambda
  */
 
 /*!
- * \internal
- *
- * \brief Constructs a new LambdaRequestPrivate object.
+ * Constructs a LambdaRequestPrivate object for Lambda \a action with,
+ * public implementation \a q.
  */
 LambdaRequestPrivate::LambdaRequestPrivate(const LambdaRequest::Action action, LambdaRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
@@ -258,9 +279,7 @@ LambdaRequestPrivate::LambdaRequestPrivate(const LambdaRequest::Action action, L
 }
 
 /*!
- * \internal
- *
- * \brief Constructs a new LambdaRequestPrivate object, copying an existing one.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
@@ -276,15 +295,12 @@ LambdaRequestPrivate::LambdaRequestPrivate(const LambdaRequestPrivate &other,
 }
 
 /*!
- * \internal
- *
- * \brief Returns a string representing \a action.
+ * Returns a string represention of \a action, or a null string if \a action is
+ * invalid.
  *
  * This function converts LambdaRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the Lambda service's Action
  * query parameters.
- *
- * @return A string representing \a action, or a null string if \a action is invalid.
  */
 QString LambdaRequestPrivate::toString(const LambdaRequest::Action &action)
 {

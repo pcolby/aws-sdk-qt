@@ -27,10 +27,9 @@ namespace MediaStoreData {
 
 /*!
  * \class QtAws::MediaStoreData::DescribeObjectRequest
- *
  * \brief The DescribeObjectRequest class provides an interface for MediaStoreData DescribeObject requests.
  *
- * \ingroup MediaStoreData
+ * \inmodule QtAwsMediaStoreData
  *
  *  An AWS Elemental MediaStore asset is an object, similar to an object in the Amazon S3 service. Objects are the
  *  fundamental entities that are stored in AWS Elemental
@@ -39,9 +38,7 @@ namespace MediaStoreData {
  */
 
 /*!
- * @brief  Constructs a new DescribeObjectRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeObjectRequest::DescribeObjectRequest(const DescribeObjectRequest &other)
     : MediaStoreDataRequest(new DescribeObjectRequestPrivate(*other.d_func(), this))
@@ -50,7 +47,7 @@ DescribeObjectRequest::DescribeObjectRequest(const DescribeObjectRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DescribeObjectRequest object.
+ * Constructs a DescribeObjectRequest object.
  */
 DescribeObjectRequest::DescribeObjectRequest()
     : MediaStoreDataRequest(new DescribeObjectRequestPrivate(MediaStoreDataRequest::DescribeObjectAction, this))
@@ -68,14 +65,9 @@ bool DescribeObjectRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeObjectResponse object.
+ * Returns a DescribeObjectResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeObjectResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MediaStoreDataClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeObjectRequest::response(QNetworkReply * const reply) const
 {
@@ -83,20 +75,17 @@ QtAws::Core::AwsAbstractResponse * DescribeObjectRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::MediaStoreData::DescribeObjectRequestPrivate
+ * \brief The DescribeObjectRequestPrivate class provides private implementation for DescribeObjectRequest.
+ * \internal
  *
- * @class  DescribeObjectRequestPrivate
- *
- * @brief  Private implementation for DescribeObjectRequest.
+ * \inmodule QtAwsMediaStoreData
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeObjectRequestPrivate object.
- *
- * @param  action  MediaStoreData action being performed.
- * @param  q       Pointer to this object's public DescribeObjectRequest instance.
+ * Constructs a DescribeObjectRequestPrivate object for MediaStoreData \a action with,
+ * public implementation \a q.
  */
 DescribeObjectRequestPrivate::DescribeObjectRequestPrivate(
     const MediaStoreDataRequest::Action action, DescribeObjectRequest * const q)
@@ -106,15 +95,10 @@ DescribeObjectRequestPrivate::DescribeObjectRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeObjectRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeObjectRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeObjectRequest instance.
  */
 DescribeObjectRequestPrivate::DescribeObjectRequestPrivate(
     const DescribeObjectRequestPrivate &other, DescribeObjectRequest * const q)

@@ -27,10 +27,9 @@ namespace CloudDirectory {
 
 /*!
  * \class QtAws::CloudDirectory::ListFacetAttributesRequest
- *
  * \brief The ListFacetAttributesRequest class provides an interface for CloudDirectory ListFacetAttributes requests.
  *
- * \ingroup CloudDirectory
+ * \inmodule QtAwsCloudDirectory
  *
  *  <fullname>Amazon Cloud Directory</fullname>
  * 
@@ -44,9 +43,7 @@ namespace CloudDirectory {
  */
 
 /*!
- * @brief  Constructs a new ListFacetAttributesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListFacetAttributesRequest::ListFacetAttributesRequest(const ListFacetAttributesRequest &other)
     : CloudDirectoryRequest(new ListFacetAttributesRequestPrivate(*other.d_func(), this))
@@ -55,7 +52,7 @@ ListFacetAttributesRequest::ListFacetAttributesRequest(const ListFacetAttributes
 }
 
 /*!
- * @brief  Constructs a new ListFacetAttributesRequest object.
+ * Constructs a ListFacetAttributesRequest object.
  */
 ListFacetAttributesRequest::ListFacetAttributesRequest()
     : CloudDirectoryRequest(new ListFacetAttributesRequestPrivate(CloudDirectoryRequest::ListFacetAttributesAction, this))
@@ -73,14 +70,9 @@ bool ListFacetAttributesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListFacetAttributesResponse object.
+ * Returns a ListFacetAttributesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListFacetAttributesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudDirectoryClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListFacetAttributesRequest::response(QNetworkReply * const reply) const
 {
@@ -88,20 +80,17 @@ QtAws::Core::AwsAbstractResponse * ListFacetAttributesRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudDirectory::ListFacetAttributesRequestPrivate
+ * \brief The ListFacetAttributesRequestPrivate class provides private implementation for ListFacetAttributesRequest.
+ * \internal
  *
- * @class  ListFacetAttributesRequestPrivate
- *
- * @brief  Private implementation for ListFacetAttributesRequest.
+ * \inmodule QtAwsCloudDirectory
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListFacetAttributesRequestPrivate object.
- *
- * @param  action  CloudDirectory action being performed.
- * @param  q       Pointer to this object's public ListFacetAttributesRequest instance.
+ * Constructs a ListFacetAttributesRequestPrivate object for CloudDirectory \a action with,
+ * public implementation \a q.
  */
 ListFacetAttributesRequestPrivate::ListFacetAttributesRequestPrivate(
     const CloudDirectoryRequest::Action action, ListFacetAttributesRequest * const q)
@@ -111,15 +100,10 @@ ListFacetAttributesRequestPrivate::ListFacetAttributesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListFacetAttributesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListFacetAttributesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListFacetAttributesRequest instance.
  */
 ListFacetAttributesRequestPrivate::ListFacetAttributesRequestPrivate(
     const ListFacetAttributesRequestPrivate &other, ListFacetAttributesRequest * const q)

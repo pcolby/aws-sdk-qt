@@ -7,16 +7,24 @@ namespace {{NameSpaceName}} {
 
 /*!
  * \class QtAws::{{NameSpaceName}}::{{ClassName}}
- *
  * \brief The {{ClassName}} class provides an interface for {{ServiceName}} requests.
  *
- * \ingroup {{NameSpaceName}}
+ * \inmodule QtAws{{NameSpaceName}}
  */
 
 /*!
- * @brief  Constructs a new {{ClassName}} object.
+ * \enum {{ClassName}}::Action
  *
- * @param  action  The {{ServiceName}} action to request.
+ * This enum describes the actions that can be performed as {{ServiceName}}
+ * requests.
+ *
+    {% for name in operations.keys %}
+ * \value {{name}}Action {{ServiceName}} {{name}} action.
+    {% endfor %}
+ */
+
+/*!
+ * Constructs a[n] {{ClassName}} object for {{ServiceName}} \a action.
  */
 {{ClassName}}::{{ClassName}}(const Action action)
     : QtAws::Core::AwsAbstractRequest(new {{ClassName}}Private(action, this))
@@ -25,9 +33,7 @@ namespace {{NameSpaceName}} {
 }
 
 /*!
- * @brief  Constructs a new {{ClassName}} object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 {{ClassName}}::{{ClassName}}(const {{ClassName}} &other)
     : QtAws::Core::AwsAbstractRequest(new {{ClassName}}Private(*other.d_func(), this))
@@ -36,13 +42,7 @@ namespace {{NameSpaceName}} {
 }
 
 /*!
- * @brief  Assignment operator.
- *
- * Assigns \a other to \c this.
- *
- * @param  other  Instance to copy.
- *
- * @return  A reference to \c this.
+ * Sets the {{ClassName}} object to be equal to \a other.
  */
 {{ClassName}}& {{ClassName}}::operator=(const {{ClassName}} &other)
 {
@@ -54,14 +54,10 @@ namespace {{NameSpaceName}} {
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new {{ClassName}} object.
+ * Constructs aa {{ClassName}} object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from {{ClassName}}Private.
- *
- * @param  d  Pointer to private data (aka D-Pointer).
  */
 {{ClassName}}::{{ClassName}}({{ClassName}}Private * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
@@ -69,7 +65,7 @@ namespace {{NameSpaceName}} {
 }
 
 /*!
- * \brief Returns the {{ServiceName}} action to be performed by this request.
+ * Returns the {{ServiceName}} action to be performed by this request.
  */
 {{ClassName}}::Action {{ClassName}}::action() const
 {
@@ -78,7 +74,7 @@ namespace {{NameSpaceName}} {
 }
 
 /*!
- * \brief Returns the name of the {{ServiceName}} action to be performed by this request.
+ * Returns the name of the {{ServiceName}} action to be performed by this request.
  */
 QString {{ClassName}}::actionString() const
 {
@@ -86,7 +82,7 @@ QString {{ClassName}}::actionString() const
 }
 
 /*!
- * \brief Returns the {{ServiceName}} API version implemented by this request.
+ * Returns the {{ServiceName}} API version implemented by this request.
  */
 QString {{ClassName}}::apiVersion() const
 {
@@ -95,7 +91,7 @@ QString {{ClassName}}::apiVersion() const
 }
 
 /*!
- * @brief Set the {{ServiceName}} action to be performed by this request to \a action.
+ * Sets the {{ServiceName}} action to be performed by this request to \a action.
  */
 void {{ClassName}}::setAction(const Action action)
 {
@@ -104,7 +100,7 @@ void {{ClassName}}::setAction(const Action action)
 }
 
 /*!
- * Set the {{ServiceName}} API version to include in this request to \a version.
+ * Sets the {{ServiceName}} API version to include in this request to \a version.
  */
 void {{ClassName}}::setApiVersion(const QString &version)
 {
@@ -113,7 +109,7 @@ void {{ClassName}}::setApiVersion(const QString &version)
 }
 
 /*!
- * \brief Returns \c true if this request is the same as \a other.
+ * Returns \c true if this request is equal to \a other; \c false otherwise.
  *
  * Note, most derived *Request classes do not need to provider their own
  * implementations of this function, since most such request classes rely on
@@ -128,8 +124,8 @@ bool {{ClassName}}::operator==(const {{ClassName}} &other) const
             (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
-/*!
- * @brief  Check if \a queueName is a valid {{ServiceName}} queue name.
+/*
+ * Returns \c tue if \a queueName is a valid {{ServiceName}} queue name.
  *
  * @par From {{ServiceName}} FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
@@ -148,9 +144,8 @@ bool {{ClassName}}::operator==(const {{ClassName}} &other) const
 }*/
 
 /*!
- * \brief Removes the a \a name parameter from this request.
- *
- * Returns the count of paramters removed (typically \c 0 or \c 1).
+ * Removes the a \a name parameter from the request, then returns the number of
+ * paramters removed (typically \c 0 or \c 1).
  */
 int {{ClassName}}::clearParameter(const QString &name)
 {
@@ -159,7 +154,7 @@ int {{ClassName}}::clearParameter(const QString &name)
 }
 
 /*!
- * \brief Removes all parameters from this request.
+ * Removes all parameters from the request.
  */
 void {{ClassName}}::clearParameters()
 {
@@ -168,7 +163,7 @@ void {{ClassName}}::clearParameters()
 }
 
 /*!
- * \brief Returns the value of the \n name pararemter if set, otherwise \a defaultValue.
+ * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
 QVariant {{ClassName}}::parameter(const QString &name, const QVariant &defaultValue) const
 {
@@ -177,7 +172,7 @@ QVariant {{ClassName}}::parameter(const QString &name, const QVariant &defaultVa
 }
 
 /*!
- * \brief Returns a map of parameters included in this request.
+ * Returns the parameters included in this request.
  */
 const QVariantMap &{{ClassName}}::parameters() const
 {
@@ -186,7 +181,7 @@ const QVariantMap &{{ClassName}}::parameters() const
 }
 
 /*!
- * \brief Sets the \a name parameter to \a value.
+ * Sets the \a name parameter to \a value.
  */
 void {{ClassName}}::setParameter(const QString &name, const QVariant &value)
 {
@@ -195,9 +190,8 @@ void {{ClassName}}::setParameter(const QString &name, const QVariant &value)
 }
 
 /*!
- * \brief Sets the map of paramters for this request to \a parameters.
- *
- * Any request parameters set previously will be discarded.
+ * Sets the paramters for this request to \a parameters. Any request parameters
+ * set previously will be discarded.
  */
 void {{ClassName}}::setParameters(const QVariantMap &parameters)
 {
@@ -206,11 +200,12 @@ void {{ClassName}}::setParameters(const QVariantMap &parameters)
 }
 
 /*!
- * \brief Returns a network request for this {{ServiceName}} request using the given \a endpoint.
+ * Returns a network request for the {{ServiceName}} request using the given
+ * \a endpoint.
  *
- * This {{ServiceName}} implementation builds request URLs by combining the common query
- * parameters (such as Action and Version), with any that have been added (via
- * setParameter) by child classes.
+ * This {{ServiceName}} implementation builds request URLs by combining the
+ * common query parameters (such as Action and Version), with any that have
+ * been added (via setParameter) by child classes.
  */
 QNetworkRequest {{ClassName}}::unsignedRequest(const QUrl &endpoint) const
 {
@@ -221,17 +216,16 @@ QNetworkRequest {{ClassName}}::unsignedRequest(const QUrl &endpoint) const
 }
 
 /*!
+ * \class QtAws::{{NameSpaceName}}::{{ClassName}}Private
+ * \brief The {{ClassName}}Private class provides private implementation for {{ClassName}}.
  * \internal
  *
- * \class  {{ClassName}}Private
- *
- * \brief  Private implementation for {{ClassName}}.
+ * \inmodule QtAws{{NameSpaceName}}
  */
 
 /*!
- * \internal
- *
- * \brief Constructs a new {{ClassName}}Private object.
+ * Constructs a {{ClassName}}Private object for {{ServiceName}} \a action with,
+ * public implementation \a q.
  */
 {{ClassName}}Private::{{ClassName}}Private(const {{ClassName}}::Action action, {{ClassName}} * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
@@ -240,9 +234,7 @@ QNetworkRequest {{ClassName}}::unsignedRequest(const QUrl &endpoint) const
 }
 
 /*!
- * \internal
- *
- * \brief Constructs a new {{ClassName}}Private object, copying an existing one.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
@@ -258,15 +250,12 @@ QNetworkRequest {{ClassName}}::unsignedRequest(const QUrl &endpoint) const
 }
 
 /*!
- * \internal
- *
- * \brief Returns a string representing \a action.
+ * Returns a string represention of \a action, or a null string if \a action is
+ * invalid.
  *
  * This function converts {{ClassName}}::Action enumerator values to their respective
  * string representations, appropriate for use with the {{ServiceName}} service's Action
  * query parameters.
- *
- * @return A string representing \a action, or a null string if \a action is invalid.
  */
 QString {{ClassName}}Private::toString(const {{ClassName}}::Action &action)
 {

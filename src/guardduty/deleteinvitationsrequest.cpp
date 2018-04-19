@@ -27,19 +27,16 @@ namespace GuardDuty {
 
 /*!
  * \class QtAws::GuardDuty::DeleteInvitationsRequest
- *
  * \brief The DeleteInvitationsRequest class provides an interface for GuardDuty DeleteInvitations requests.
  *
- * \ingroup GuardDuty
+ * \inmodule QtAwsGuardDuty
  *
  *
  * \sa GuardDutyClient::deleteInvitations
  */
 
 /*!
- * @brief  Constructs a new DeleteInvitationsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteInvitationsRequest::DeleteInvitationsRequest(const DeleteInvitationsRequest &other)
     : GuardDutyRequest(new DeleteInvitationsRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ DeleteInvitationsRequest::DeleteInvitationsRequest(const DeleteInvitationsReques
 }
 
 /*!
- * @brief  Constructs a new DeleteInvitationsRequest object.
+ * Constructs a DeleteInvitationsRequest object.
  */
 DeleteInvitationsRequest::DeleteInvitationsRequest()
     : GuardDutyRequest(new DeleteInvitationsRequestPrivate(GuardDutyRequest::DeleteInvitationsAction, this))
@@ -66,14 +63,9 @@ bool DeleteInvitationsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteInvitationsResponse object.
+ * Returns a DeleteInvitationsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteInvitationsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GuardDutyClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteInvitationsRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * DeleteInvitationsRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::GuardDuty::DeleteInvitationsRequestPrivate
+ * \brief The DeleteInvitationsRequestPrivate class provides private implementation for DeleteInvitationsRequest.
+ * \internal
  *
- * @class  DeleteInvitationsRequestPrivate
- *
- * @brief  Private implementation for DeleteInvitationsRequest.
+ * \inmodule QtAwsGuardDuty
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteInvitationsRequestPrivate object.
- *
- * @param  action  GuardDuty action being performed.
- * @param  q       Pointer to this object's public DeleteInvitationsRequest instance.
+ * Constructs a DeleteInvitationsRequestPrivate object for GuardDuty \a action with,
+ * public implementation \a q.
  */
 DeleteInvitationsRequestPrivate::DeleteInvitationsRequestPrivate(
     const GuardDutyRequest::Action action, DeleteInvitationsRequest * const q)
@@ -104,15 +93,10 @@ DeleteInvitationsRequestPrivate::DeleteInvitationsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteInvitationsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteInvitationsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteInvitationsRequest instance.
  */
 DeleteInvitationsRequestPrivate::DeleteInvitationsRequestPrivate(
     const DeleteInvitationsRequestPrivate &other, DeleteInvitationsRequest * const q)

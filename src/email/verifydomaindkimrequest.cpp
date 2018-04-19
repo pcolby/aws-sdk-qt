@@ -27,10 +27,9 @@ namespace SES {
 
 /*!
  * \class QtAws::SES::VerifyDomainDkimRequest
- *
  * \brief The VerifyDomainDkimRequest class provides an interface for SES VerifyDomainDkim requests.
  *
- * \ingroup SES
+ * \inmodule QtAwsSES
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -48,9 +47,7 @@ namespace SES {
  */
 
 /*!
- * @brief  Constructs a new VerifyDomainDkimRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 VerifyDomainDkimRequest::VerifyDomainDkimRequest(const VerifyDomainDkimRequest &other)
     : SESRequest(new VerifyDomainDkimRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ VerifyDomainDkimRequest::VerifyDomainDkimRequest(const VerifyDomainDkimRequest &
 }
 
 /*!
- * @brief  Constructs a new VerifyDomainDkimRequest object.
+ * Constructs a VerifyDomainDkimRequest object.
  */
 VerifyDomainDkimRequest::VerifyDomainDkimRequest()
     : SESRequest(new VerifyDomainDkimRequestPrivate(SESRequest::VerifyDomainDkimAction, this))
@@ -77,14 +74,9 @@ bool VerifyDomainDkimRequest::isValid() const
 
 
 /*!
- * @brief  Construct an VerifyDomainDkimResponse object.
+ * Returns a VerifyDomainDkimResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An VerifyDomainDkimResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SESClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * VerifyDomainDkimRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * VerifyDomainDkimRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::SES::VerifyDomainDkimRequestPrivate
+ * \brief The VerifyDomainDkimRequestPrivate class provides private implementation for VerifyDomainDkimRequest.
+ * \internal
  *
- * @class  VerifyDomainDkimRequestPrivate
- *
- * @brief  Private implementation for VerifyDomainDkimRequest.
+ * \inmodule QtAwsSES
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new VerifyDomainDkimRequestPrivate object.
- *
- * @param  action  SES action being performed.
- * @param  q       Pointer to this object's public VerifyDomainDkimRequest instance.
+ * Constructs a VerifyDomainDkimRequestPrivate object for SES \a action with,
+ * public implementation \a q.
  */
 VerifyDomainDkimRequestPrivate::VerifyDomainDkimRequestPrivate(
     const SESRequest::Action action, VerifyDomainDkimRequest * const q)
@@ -115,15 +104,10 @@ VerifyDomainDkimRequestPrivate::VerifyDomainDkimRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new VerifyDomainDkimRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the VerifyDomainDkimRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public VerifyDomainDkimRequest instance.
  */
 VerifyDomainDkimRequestPrivate::VerifyDomainDkimRequestPrivate(
     const VerifyDomainDkimRequestPrivate &other, VerifyDomainDkimRequest * const q)

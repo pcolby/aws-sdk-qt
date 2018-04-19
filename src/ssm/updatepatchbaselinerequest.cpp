@@ -27,10 +27,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::UpdatePatchBaselineRequest
- *
  * \brief The UpdatePatchBaselineRequest class provides an interface for SSM UpdatePatchBaseline requests.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -61,9 +60,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new UpdatePatchBaselineRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdatePatchBaselineRequest::UpdatePatchBaselineRequest(const UpdatePatchBaselineRequest &other)
     : SSMRequest(new UpdatePatchBaselineRequestPrivate(*other.d_func(), this))
@@ -72,7 +69,7 @@ UpdatePatchBaselineRequest::UpdatePatchBaselineRequest(const UpdatePatchBaseline
 }
 
 /*!
- * @brief  Constructs a new UpdatePatchBaselineRequest object.
+ * Constructs a UpdatePatchBaselineRequest object.
  */
 UpdatePatchBaselineRequest::UpdatePatchBaselineRequest()
     : SSMRequest(new UpdatePatchBaselineRequestPrivate(SSMRequest::UpdatePatchBaselineAction, this))
@@ -90,14 +87,9 @@ bool UpdatePatchBaselineRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdatePatchBaselineResponse object.
+ * Returns a UpdatePatchBaselineResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdatePatchBaselineResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SSMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdatePatchBaselineRequest::response(QNetworkReply * const reply) const
 {
@@ -105,20 +97,17 @@ QtAws::Core::AwsAbstractResponse * UpdatePatchBaselineRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::SSM::UpdatePatchBaselineRequestPrivate
+ * \brief The UpdatePatchBaselineRequestPrivate class provides private implementation for UpdatePatchBaselineRequest.
+ * \internal
  *
- * @class  UpdatePatchBaselineRequestPrivate
- *
- * @brief  Private implementation for UpdatePatchBaselineRequest.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdatePatchBaselineRequestPrivate object.
- *
- * @param  action  SSM action being performed.
- * @param  q       Pointer to this object's public UpdatePatchBaselineRequest instance.
+ * Constructs a UpdatePatchBaselineRequestPrivate object for SSM \a action with,
+ * public implementation \a q.
  */
 UpdatePatchBaselineRequestPrivate::UpdatePatchBaselineRequestPrivate(
     const SSMRequest::Action action, UpdatePatchBaselineRequest * const q)
@@ -128,15 +117,10 @@ UpdatePatchBaselineRequestPrivate::UpdatePatchBaselineRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdatePatchBaselineRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdatePatchBaselineRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdatePatchBaselineRequest instance.
  */
 UpdatePatchBaselineRequestPrivate::UpdatePatchBaselineRequestPrivate(
     const UpdatePatchBaselineRequestPrivate &other, UpdatePatchBaselineRequest * const q)

@@ -27,10 +27,9 @@ namespace CloudWatchLogs {
 
 /*!
  * \class QtAws::CloudWatchLogs::FilterLogEventsRequest
- *
  * \brief The FilterLogEventsRequest class provides an interface for CloudWatchLogs FilterLogEvents requests.
  *
- * \ingroup CloudWatchLogs
+ * \inmodule QtAwsCloudWatchLogs
  *
  *  You can use Amazon CloudWatch Logs to monitor, store, and access your log files from Amazon EC2 instances, AWS
  *  CloudTrail, or other sources. You can then retrieve the associated log data from CloudWatch Logs using the CloudWatch
@@ -66,9 +65,7 @@ namespace CloudWatchLogs {
  */
 
 /*!
- * @brief  Constructs a new FilterLogEventsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 FilterLogEventsRequest::FilterLogEventsRequest(const FilterLogEventsRequest &other)
     : CloudWatchLogsRequest(new FilterLogEventsRequestPrivate(*other.d_func(), this))
@@ -77,7 +74,7 @@ FilterLogEventsRequest::FilterLogEventsRequest(const FilterLogEventsRequest &oth
 }
 
 /*!
- * @brief  Constructs a new FilterLogEventsRequest object.
+ * Constructs a FilterLogEventsRequest object.
  */
 FilterLogEventsRequest::FilterLogEventsRequest()
     : CloudWatchLogsRequest(new FilterLogEventsRequestPrivate(CloudWatchLogsRequest::FilterLogEventsAction, this))
@@ -95,14 +92,9 @@ bool FilterLogEventsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an FilterLogEventsResponse object.
+ * Returns a FilterLogEventsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An FilterLogEventsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudWatchLogsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * FilterLogEventsRequest::response(QNetworkReply * const reply) const
 {
@@ -110,20 +102,17 @@ QtAws::Core::AwsAbstractResponse * FilterLogEventsRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudWatchLogs::FilterLogEventsRequestPrivate
+ * \brief The FilterLogEventsRequestPrivate class provides private implementation for FilterLogEventsRequest.
+ * \internal
  *
- * @class  FilterLogEventsRequestPrivate
- *
- * @brief  Private implementation for FilterLogEventsRequest.
+ * \inmodule QtAwsCloudWatchLogs
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new FilterLogEventsRequestPrivate object.
- *
- * @param  action  CloudWatchLogs action being performed.
- * @param  q       Pointer to this object's public FilterLogEventsRequest instance.
+ * Constructs a FilterLogEventsRequestPrivate object for CloudWatchLogs \a action with,
+ * public implementation \a q.
  */
 FilterLogEventsRequestPrivate::FilterLogEventsRequestPrivate(
     const CloudWatchLogsRequest::Action action, FilterLogEventsRequest * const q)
@@ -133,15 +122,10 @@ FilterLogEventsRequestPrivate::FilterLogEventsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new FilterLogEventsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the FilterLogEventsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public FilterLogEventsRequest instance.
  */
 FilterLogEventsRequestPrivate::FilterLogEventsRequestPrivate(
     const FilterLogEventsRequestPrivate &other, FilterLogEventsRequest * const q)

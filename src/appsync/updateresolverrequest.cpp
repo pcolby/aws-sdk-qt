@@ -27,10 +27,9 @@ namespace AppSync {
 
 /*!
  * \class QtAws::AppSync::UpdateResolverRequest
- *
  * \brief The UpdateResolverRequest class provides an interface for AppSync UpdateResolver requests.
  *
- * \ingroup AppSync
+ * \inmodule QtAwsAppSync
  *
  *  AWS AppSync provides API actions for creating and interacting with data sources using GraphQL from your
  *
@@ -38,9 +37,7 @@ namespace AppSync {
  */
 
 /*!
- * @brief  Constructs a new UpdateResolverRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateResolverRequest::UpdateResolverRequest(const UpdateResolverRequest &other)
     : AppSyncRequest(new UpdateResolverRequestPrivate(*other.d_func(), this))
@@ -49,7 +46,7 @@ UpdateResolverRequest::UpdateResolverRequest(const UpdateResolverRequest &other)
 }
 
 /*!
- * @brief  Constructs a new UpdateResolverRequest object.
+ * Constructs a UpdateResolverRequest object.
  */
 UpdateResolverRequest::UpdateResolverRequest()
     : AppSyncRequest(new UpdateResolverRequestPrivate(AppSyncRequest::UpdateResolverAction, this))
@@ -67,14 +64,9 @@ bool UpdateResolverRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateResolverResponse object.
+ * Returns a UpdateResolverResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateResolverResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AppSyncClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateResolverRequest::response(QNetworkReply * const reply) const
 {
@@ -82,20 +74,17 @@ QtAws::Core::AwsAbstractResponse * UpdateResolverRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::AppSync::UpdateResolverRequestPrivate
+ * \brief The UpdateResolverRequestPrivate class provides private implementation for UpdateResolverRequest.
+ * \internal
  *
- * @class  UpdateResolverRequestPrivate
- *
- * @brief  Private implementation for UpdateResolverRequest.
+ * \inmodule QtAwsAppSync
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateResolverRequestPrivate object.
- *
- * @param  action  AppSync action being performed.
- * @param  q       Pointer to this object's public UpdateResolverRequest instance.
+ * Constructs a UpdateResolverRequestPrivate object for AppSync \a action with,
+ * public implementation \a q.
  */
 UpdateResolverRequestPrivate::UpdateResolverRequestPrivate(
     const AppSyncRequest::Action action, UpdateResolverRequest * const q)
@@ -105,15 +94,10 @@ UpdateResolverRequestPrivate::UpdateResolverRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateResolverRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateResolverRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateResolverRequest instance.
  */
 UpdateResolverRequestPrivate::UpdateResolverRequestPrivate(
     const UpdateResolverRequestPrivate &other, UpdateResolverRequest * const q)

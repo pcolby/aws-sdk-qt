@@ -27,10 +27,9 @@ namespace CloudFront {
 
 /*!
  * \class QtAws::CloudFront::UpdateFieldLevelEncryptionProfileRequest
- *
  * \brief The UpdateFieldLevelEncryptionProfileRequest class provides an interface for CloudFront UpdateFieldLevelEncryptionProfile requests.
  *
- * \ingroup CloudFront
+ * \inmodule QtAwsCloudFront
  *
  *  <fullname>Amazon CloudFront</fullname>
  * 
@@ -42,9 +41,7 @@ namespace CloudFront {
  */
 
 /*!
- * @brief  Constructs a new UpdateFieldLevelEncryptionProfileRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateFieldLevelEncryptionProfileRequest::UpdateFieldLevelEncryptionProfileRequest(const UpdateFieldLevelEncryptionProfileRequest &other)
     : CloudFrontRequest(new UpdateFieldLevelEncryptionProfileRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ UpdateFieldLevelEncryptionProfileRequest::UpdateFieldLevelEncryptionProfileReque
 }
 
 /*!
- * @brief  Constructs a new UpdateFieldLevelEncryptionProfileRequest object.
+ * Constructs a UpdateFieldLevelEncryptionProfileRequest object.
  */
 UpdateFieldLevelEncryptionProfileRequest::UpdateFieldLevelEncryptionProfileRequest()
     : CloudFrontRequest(new UpdateFieldLevelEncryptionProfileRequestPrivate(CloudFrontRequest::UpdateFieldLevelEncryptionProfileAction, this))
@@ -71,14 +68,9 @@ bool UpdateFieldLevelEncryptionProfileRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateFieldLevelEncryptionProfileResponse object.
+ * Returns a UpdateFieldLevelEncryptionProfileResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateFieldLevelEncryptionProfileResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudFrontClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateFieldLevelEncryptionProfileRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * UpdateFieldLevelEncryptionProfileRequest::res
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudFront::UpdateFieldLevelEncryptionProfileRequestPrivate
+ * \brief The UpdateFieldLevelEncryptionProfileRequestPrivate class provides private implementation for UpdateFieldLevelEncryptionProfileRequest.
+ * \internal
  *
- * @class  UpdateFieldLevelEncryptionProfileRequestPrivate
- *
- * @brief  Private implementation for UpdateFieldLevelEncryptionProfileRequest.
+ * \inmodule QtAwsCloudFront
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateFieldLevelEncryptionProfileRequestPrivate object.
- *
- * @param  action  CloudFront action being performed.
- * @param  q       Pointer to this object's public UpdateFieldLevelEncryptionProfileRequest instance.
+ * Constructs a UpdateFieldLevelEncryptionProfileRequestPrivate object for CloudFront \a action with,
+ * public implementation \a q.
  */
 UpdateFieldLevelEncryptionProfileRequestPrivate::UpdateFieldLevelEncryptionProfileRequestPrivate(
     const CloudFrontRequest::Action action, UpdateFieldLevelEncryptionProfileRequest * const q)
@@ -109,15 +98,10 @@ UpdateFieldLevelEncryptionProfileRequestPrivate::UpdateFieldLevelEncryptionProfi
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateFieldLevelEncryptionProfileRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateFieldLevelEncryptionProfileRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateFieldLevelEncryptionProfileRequest instance.
  */
 UpdateFieldLevelEncryptionProfileRequestPrivate::UpdateFieldLevelEncryptionProfileRequestPrivate(
     const UpdateFieldLevelEncryptionProfileRequestPrivate &other, UpdateFieldLevelEncryptionProfileRequest * const q)

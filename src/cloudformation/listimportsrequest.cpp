@@ -27,10 +27,9 @@ namespace CloudFormation {
 
 /*!
  * \class QtAws::CloudFormation::ListImportsRequest
- *
  * \brief The ListImportsRequest class provides an interface for CloudFormation ListImports requests.
  *
- * \ingroup CloudFormation
+ * \inmodule QtAwsCloudFormation
  *
  *  <fullname>AWS CloudFormation</fullname>
  * 
@@ -59,9 +58,7 @@ namespace CloudFormation {
  */
 
 /*!
- * @brief  Constructs a new ListImportsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListImportsRequest::ListImportsRequest(const ListImportsRequest &other)
     : CloudFormationRequest(new ListImportsRequestPrivate(*other.d_func(), this))
@@ -70,7 +67,7 @@ ListImportsRequest::ListImportsRequest(const ListImportsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ListImportsRequest object.
+ * Constructs a ListImportsRequest object.
  */
 ListImportsRequest::ListImportsRequest()
     : CloudFormationRequest(new ListImportsRequestPrivate(CloudFormationRequest::ListImportsAction, this))
@@ -88,14 +85,9 @@ bool ListImportsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListImportsResponse object.
+ * Returns a ListImportsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListImportsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudFormationClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListImportsRequest::response(QNetworkReply * const reply) const
 {
@@ -103,20 +95,17 @@ QtAws::Core::AwsAbstractResponse * ListImportsRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudFormation::ListImportsRequestPrivate
+ * \brief The ListImportsRequestPrivate class provides private implementation for ListImportsRequest.
+ * \internal
  *
- * @class  ListImportsRequestPrivate
- *
- * @brief  Private implementation for ListImportsRequest.
+ * \inmodule QtAwsCloudFormation
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListImportsRequestPrivate object.
- *
- * @param  action  CloudFormation action being performed.
- * @param  q       Pointer to this object's public ListImportsRequest instance.
+ * Constructs a ListImportsRequestPrivate object for CloudFormation \a action with,
+ * public implementation \a q.
  */
 ListImportsRequestPrivate::ListImportsRequestPrivate(
     const CloudFormationRequest::Action action, ListImportsRequest * const q)
@@ -126,15 +115,10 @@ ListImportsRequestPrivate::ListImportsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListImportsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListImportsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListImportsRequest instance.
  */
 ListImportsRequestPrivate::ListImportsRequestPrivate(
     const ListImportsRequestPrivate &other, ListImportsRequest * const q)

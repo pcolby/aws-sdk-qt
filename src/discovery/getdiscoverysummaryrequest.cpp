@@ -27,10 +27,9 @@ namespace ApplicationDiscoveryService {
 
 /*!
  * \class QtAws::ApplicationDiscoveryService::GetDiscoverySummaryRequest
- *
  * \brief The GetDiscoverySummaryRequest class provides an interface for ApplicationDiscoveryService GetDiscoverySummary requests.
  *
- * \ingroup ApplicationDiscoveryService
+ * \inmodule QtAwsApplicationDiscoveryService
  *
  *  <fullname>AWS Application Discovery Service</fullname>
  * 
@@ -101,9 +100,7 @@ namespace ApplicationDiscoveryService {
  */
 
 /*!
- * @brief  Constructs a new GetDiscoverySummaryRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetDiscoverySummaryRequest::GetDiscoverySummaryRequest(const GetDiscoverySummaryRequest &other)
     : ApplicationDiscoveryServiceRequest(new GetDiscoverySummaryRequestPrivate(*other.d_func(), this))
@@ -112,7 +109,7 @@ GetDiscoverySummaryRequest::GetDiscoverySummaryRequest(const GetDiscoverySummary
 }
 
 /*!
- * @brief  Constructs a new GetDiscoverySummaryRequest object.
+ * Constructs a GetDiscoverySummaryRequest object.
  */
 GetDiscoverySummaryRequest::GetDiscoverySummaryRequest()
     : ApplicationDiscoveryServiceRequest(new GetDiscoverySummaryRequestPrivate(ApplicationDiscoveryServiceRequest::GetDiscoverySummaryAction, this))
@@ -130,14 +127,9 @@ bool GetDiscoverySummaryRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetDiscoverySummaryResponse object.
+ * Returns a GetDiscoverySummaryResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetDiscoverySummaryResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ApplicationDiscoveryServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetDiscoverySummaryRequest::response(QNetworkReply * const reply) const
 {
@@ -145,20 +137,17 @@ QtAws::Core::AwsAbstractResponse * GetDiscoverySummaryRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::ApplicationDiscoveryService::GetDiscoverySummaryRequestPrivate
+ * \brief The GetDiscoverySummaryRequestPrivate class provides private implementation for GetDiscoverySummaryRequest.
+ * \internal
  *
- * @class  GetDiscoverySummaryRequestPrivate
- *
- * @brief  Private implementation for GetDiscoverySummaryRequest.
+ * \inmodule QtAwsApplicationDiscoveryService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetDiscoverySummaryRequestPrivate object.
- *
- * @param  action  ApplicationDiscoveryService action being performed.
- * @param  q       Pointer to this object's public GetDiscoverySummaryRequest instance.
+ * Constructs a GetDiscoverySummaryRequestPrivate object for ApplicationDiscoveryService \a action with,
+ * public implementation \a q.
  */
 GetDiscoverySummaryRequestPrivate::GetDiscoverySummaryRequestPrivate(
     const ApplicationDiscoveryServiceRequest::Action action, GetDiscoverySummaryRequest * const q)
@@ -168,15 +157,10 @@ GetDiscoverySummaryRequestPrivate::GetDiscoverySummaryRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetDiscoverySummaryRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetDiscoverySummaryRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetDiscoverySummaryRequest instance.
  */
 GetDiscoverySummaryRequestPrivate::GetDiscoverySummaryRequestPrivate(
     const GetDiscoverySummaryRequestPrivate &other, GetDiscoverySummaryRequest * const q)

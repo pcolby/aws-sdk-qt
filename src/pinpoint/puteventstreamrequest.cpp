@@ -27,19 +27,16 @@ namespace Pinpoint {
 
 /*!
  * \class QtAws::Pinpoint::PutEventStreamRequest
- *
  * \brief The PutEventStreamRequest class provides an interface for Pinpoint PutEventStream requests.
  *
- * \ingroup Pinpoint
+ * \inmodule QtAwsPinpoint
  *
  *
  * \sa PinpointClient::putEventStream
  */
 
 /*!
- * @brief  Constructs a new PutEventStreamRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 PutEventStreamRequest::PutEventStreamRequest(const PutEventStreamRequest &other)
     : PinpointRequest(new PutEventStreamRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ PutEventStreamRequest::PutEventStreamRequest(const PutEventStreamRequest &other)
 }
 
 /*!
- * @brief  Constructs a new PutEventStreamRequest object.
+ * Constructs a PutEventStreamRequest object.
  */
 PutEventStreamRequest::PutEventStreamRequest()
     : PinpointRequest(new PutEventStreamRequestPrivate(PinpointRequest::PutEventStreamAction, this))
@@ -66,14 +63,9 @@ bool PutEventStreamRequest::isValid() const
 
 
 /*!
- * @brief  Construct an PutEventStreamResponse object.
+ * Returns a PutEventStreamResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An PutEventStreamResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  PinpointClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * PutEventStreamRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * PutEventStreamRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::Pinpoint::PutEventStreamRequestPrivate
+ * \brief The PutEventStreamRequestPrivate class provides private implementation for PutEventStreamRequest.
+ * \internal
  *
- * @class  PutEventStreamRequestPrivate
- *
- * @brief  Private implementation for PutEventStreamRequest.
+ * \inmodule QtAwsPinpoint
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new PutEventStreamRequestPrivate object.
- *
- * @param  action  Pinpoint action being performed.
- * @param  q       Pointer to this object's public PutEventStreamRequest instance.
+ * Constructs a PutEventStreamRequestPrivate object for Pinpoint \a action with,
+ * public implementation \a q.
  */
 PutEventStreamRequestPrivate::PutEventStreamRequestPrivate(
     const PinpointRequest::Action action, PutEventStreamRequest * const q)
@@ -104,15 +93,10 @@ PutEventStreamRequestPrivate::PutEventStreamRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutEventStreamRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the PutEventStreamRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public PutEventStreamRequest instance.
  */
 PutEventStreamRequestPrivate::PutEventStreamRequestPrivate(
     const PutEventStreamRequestPrivate &other, PutEventStreamRequest * const q)

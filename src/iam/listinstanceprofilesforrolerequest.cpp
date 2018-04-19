@@ -27,10 +27,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::ListInstanceProfilesForRoleRequest
- *
  * \brief The ListInstanceProfilesForRoleRequest class provides an interface for IAM ListInstanceProfilesForRole requests.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -102,9 +101,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new ListInstanceProfilesForRoleRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListInstanceProfilesForRoleRequest::ListInstanceProfilesForRoleRequest(const ListInstanceProfilesForRoleRequest &other)
     : IAMRequest(new ListInstanceProfilesForRoleRequestPrivate(*other.d_func(), this))
@@ -113,7 +110,7 @@ ListInstanceProfilesForRoleRequest::ListInstanceProfilesForRoleRequest(const Lis
 }
 
 /*!
- * @brief  Constructs a new ListInstanceProfilesForRoleRequest object.
+ * Constructs a ListInstanceProfilesForRoleRequest object.
  */
 ListInstanceProfilesForRoleRequest::ListInstanceProfilesForRoleRequest()
     : IAMRequest(new ListInstanceProfilesForRoleRequestPrivate(IAMRequest::ListInstanceProfilesForRoleAction, this))
@@ -131,14 +128,9 @@ bool ListInstanceProfilesForRoleRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListInstanceProfilesForRoleResponse object.
+ * Returns a ListInstanceProfilesForRoleResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListInstanceProfilesForRoleResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IAMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListInstanceProfilesForRoleRequest::response(QNetworkReply * const reply) const
 {
@@ -146,20 +138,17 @@ QtAws::Core::AwsAbstractResponse * ListInstanceProfilesForRoleRequest::response(
 }
 
 /*!
- * @internal
+ * \class QtAws::IAM::ListInstanceProfilesForRoleRequestPrivate
+ * \brief The ListInstanceProfilesForRoleRequestPrivate class provides private implementation for ListInstanceProfilesForRoleRequest.
+ * \internal
  *
- * @class  ListInstanceProfilesForRoleRequestPrivate
- *
- * @brief  Private implementation for ListInstanceProfilesForRoleRequest.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListInstanceProfilesForRoleRequestPrivate object.
- *
- * @param  action  IAM action being performed.
- * @param  q       Pointer to this object's public ListInstanceProfilesForRoleRequest instance.
+ * Constructs a ListInstanceProfilesForRoleRequestPrivate object for IAM \a action with,
+ * public implementation \a q.
  */
 ListInstanceProfilesForRoleRequestPrivate::ListInstanceProfilesForRoleRequestPrivate(
     const IAMRequest::Action action, ListInstanceProfilesForRoleRequest * const q)
@@ -169,15 +158,10 @@ ListInstanceProfilesForRoleRequestPrivate::ListInstanceProfilesForRoleRequestPri
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListInstanceProfilesForRoleRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListInstanceProfilesForRoleRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListInstanceProfilesForRoleRequest instance.
  */
 ListInstanceProfilesForRoleRequestPrivate::ListInstanceProfilesForRoleRequestPrivate(
     const ListInstanceProfilesForRoleRequestPrivate &other, ListInstanceProfilesForRoleRequest * const q)

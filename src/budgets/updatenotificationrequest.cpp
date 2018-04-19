@@ -27,10 +27,9 @@ namespace Budgets {
 
 /*!
  * \class QtAws::Budgets::UpdateNotificationRequest
- *
  * \brief The UpdateNotificationRequest class provides an interface for Budgets UpdateNotification requests.
  *
- * \ingroup Budgets
+ * \inmodule QtAwsBudgets
  *
  *  Budgets enable you to plan your service usage, service costs, and your RI utilization. You can also track how close your
  *  plan is to your budgeted amount or to the free tier limits. Budgets provide you with a quick way to see your
@@ -75,9 +74,7 @@ namespace Budgets {
  */
 
 /*!
- * @brief  Constructs a new UpdateNotificationRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateNotificationRequest::UpdateNotificationRequest(const UpdateNotificationRequest &other)
     : BudgetsRequest(new UpdateNotificationRequestPrivate(*other.d_func(), this))
@@ -86,7 +83,7 @@ UpdateNotificationRequest::UpdateNotificationRequest(const UpdateNotificationReq
 }
 
 /*!
- * @brief  Constructs a new UpdateNotificationRequest object.
+ * Constructs a UpdateNotificationRequest object.
  */
 UpdateNotificationRequest::UpdateNotificationRequest()
     : BudgetsRequest(new UpdateNotificationRequestPrivate(BudgetsRequest::UpdateNotificationAction, this))
@@ -104,14 +101,9 @@ bool UpdateNotificationRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateNotificationResponse object.
+ * Returns a UpdateNotificationResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateNotificationResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  BudgetsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateNotificationRequest::response(QNetworkReply * const reply) const
 {
@@ -119,20 +111,17 @@ QtAws::Core::AwsAbstractResponse * UpdateNotificationRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::Budgets::UpdateNotificationRequestPrivate
+ * \brief The UpdateNotificationRequestPrivate class provides private implementation for UpdateNotificationRequest.
+ * \internal
  *
- * @class  UpdateNotificationRequestPrivate
- *
- * @brief  Private implementation for UpdateNotificationRequest.
+ * \inmodule QtAwsBudgets
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateNotificationRequestPrivate object.
- *
- * @param  action  Budgets action being performed.
- * @param  q       Pointer to this object's public UpdateNotificationRequest instance.
+ * Constructs a UpdateNotificationRequestPrivate object for Budgets \a action with,
+ * public implementation \a q.
  */
 UpdateNotificationRequestPrivate::UpdateNotificationRequestPrivate(
     const BudgetsRequest::Action action, UpdateNotificationRequest * const q)
@@ -142,15 +131,10 @@ UpdateNotificationRequestPrivate::UpdateNotificationRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateNotificationRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateNotificationRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateNotificationRequest instance.
  */
 UpdateNotificationRequestPrivate::UpdateNotificationRequestPrivate(
     const UpdateNotificationRequestPrivate &other, UpdateNotificationRequest * const q)

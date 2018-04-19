@@ -27,10 +27,9 @@ namespace Rekognition {
 
 /*!
  * \class QtAws::Rekognition::DetectModerationLabelsRequest
- *
  * \brief The DetectModerationLabelsRequest class provides an interface for Rekognition DetectModerationLabels requests.
  *
- * \ingroup Rekognition
+ * \inmodule QtAwsRekognition
  *
  *  This is the Amazon Rekognition API
  *
@@ -38,9 +37,7 @@ namespace Rekognition {
  */
 
 /*!
- * @brief  Constructs a new DetectModerationLabelsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DetectModerationLabelsRequest::DetectModerationLabelsRequest(const DetectModerationLabelsRequest &other)
     : RekognitionRequest(new DetectModerationLabelsRequestPrivate(*other.d_func(), this))
@@ -49,7 +46,7 @@ DetectModerationLabelsRequest::DetectModerationLabelsRequest(const DetectModerat
 }
 
 /*!
- * @brief  Constructs a new DetectModerationLabelsRequest object.
+ * Constructs a DetectModerationLabelsRequest object.
  */
 DetectModerationLabelsRequest::DetectModerationLabelsRequest()
     : RekognitionRequest(new DetectModerationLabelsRequestPrivate(RekognitionRequest::DetectModerationLabelsAction, this))
@@ -67,14 +64,9 @@ bool DetectModerationLabelsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DetectModerationLabelsResponse object.
+ * Returns a DetectModerationLabelsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DetectModerationLabelsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RekognitionClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DetectModerationLabelsRequest::response(QNetworkReply * const reply) const
 {
@@ -82,20 +74,17 @@ QtAws::Core::AwsAbstractResponse * DetectModerationLabelsRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::Rekognition::DetectModerationLabelsRequestPrivate
+ * \brief The DetectModerationLabelsRequestPrivate class provides private implementation for DetectModerationLabelsRequest.
+ * \internal
  *
- * @class  DetectModerationLabelsRequestPrivate
- *
- * @brief  Private implementation for DetectModerationLabelsRequest.
+ * \inmodule QtAwsRekognition
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DetectModerationLabelsRequestPrivate object.
- *
- * @param  action  Rekognition action being performed.
- * @param  q       Pointer to this object's public DetectModerationLabelsRequest instance.
+ * Constructs a DetectModerationLabelsRequestPrivate object for Rekognition \a action with,
+ * public implementation \a q.
  */
 DetectModerationLabelsRequestPrivate::DetectModerationLabelsRequestPrivate(
     const RekognitionRequest::Action action, DetectModerationLabelsRequest * const q)
@@ -105,15 +94,10 @@ DetectModerationLabelsRequestPrivate::DetectModerationLabelsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DetectModerationLabelsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DetectModerationLabelsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DetectModerationLabelsRequest instance.
  */
 DetectModerationLabelsRequestPrivate::DetectModerationLabelsRequestPrivate(
     const DetectModerationLabelsRequestPrivate &other, DetectModerationLabelsRequest * const q)

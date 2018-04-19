@@ -27,10 +27,9 @@ namespace Redshift {
 
 /*!
  * \class QtAws::Redshift::DeleteSnapshotCopyGrantRequest
- *
  * \brief The DeleteSnapshotCopyGrantRequest class provides an interface for Redshift DeleteSnapshotCopyGrant requests.
  *
- * \ingroup Redshift
+ * \inmodule QtAwsRedshift
  *
  *  <fullname>Amazon Redshift</fullname>
  * 
@@ -67,9 +66,7 @@ namespace Redshift {
  */
 
 /*!
- * @brief  Constructs a new DeleteSnapshotCopyGrantRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteSnapshotCopyGrantRequest::DeleteSnapshotCopyGrantRequest(const DeleteSnapshotCopyGrantRequest &other)
     : RedshiftRequest(new DeleteSnapshotCopyGrantRequestPrivate(*other.d_func(), this))
@@ -78,7 +75,7 @@ DeleteSnapshotCopyGrantRequest::DeleteSnapshotCopyGrantRequest(const DeleteSnaps
 }
 
 /*!
- * @brief  Constructs a new DeleteSnapshotCopyGrantRequest object.
+ * Constructs a DeleteSnapshotCopyGrantRequest object.
  */
 DeleteSnapshotCopyGrantRequest::DeleteSnapshotCopyGrantRequest()
     : RedshiftRequest(new DeleteSnapshotCopyGrantRequestPrivate(RedshiftRequest::DeleteSnapshotCopyGrantAction, this))
@@ -96,14 +93,9 @@ bool DeleteSnapshotCopyGrantRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteSnapshotCopyGrantResponse object.
+ * Returns a DeleteSnapshotCopyGrantResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteSnapshotCopyGrantResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RedshiftClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteSnapshotCopyGrantRequest::response(QNetworkReply * const reply) const
 {
@@ -111,20 +103,17 @@ QtAws::Core::AwsAbstractResponse * DeleteSnapshotCopyGrantRequest::response(QNet
 }
 
 /*!
- * @internal
+ * \class QtAws::Redshift::DeleteSnapshotCopyGrantRequestPrivate
+ * \brief The DeleteSnapshotCopyGrantRequestPrivate class provides private implementation for DeleteSnapshotCopyGrantRequest.
+ * \internal
  *
- * @class  DeleteSnapshotCopyGrantRequestPrivate
- *
- * @brief  Private implementation for DeleteSnapshotCopyGrantRequest.
+ * \inmodule QtAwsRedshift
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteSnapshotCopyGrantRequestPrivate object.
- *
- * @param  action  Redshift action being performed.
- * @param  q       Pointer to this object's public DeleteSnapshotCopyGrantRequest instance.
+ * Constructs a DeleteSnapshotCopyGrantRequestPrivate object for Redshift \a action with,
+ * public implementation \a q.
  */
 DeleteSnapshotCopyGrantRequestPrivate::DeleteSnapshotCopyGrantRequestPrivate(
     const RedshiftRequest::Action action, DeleteSnapshotCopyGrantRequest * const q)
@@ -134,15 +123,10 @@ DeleteSnapshotCopyGrantRequestPrivate::DeleteSnapshotCopyGrantRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteSnapshotCopyGrantRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteSnapshotCopyGrantRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteSnapshotCopyGrantRequest instance.
  */
 DeleteSnapshotCopyGrantRequestPrivate::DeleteSnapshotCopyGrantRequestPrivate(
     const DeleteSnapshotCopyGrantRequestPrivate &other, DeleteSnapshotCopyGrantRequest * const q)

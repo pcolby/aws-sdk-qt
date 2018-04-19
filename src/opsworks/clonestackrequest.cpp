@@ -27,10 +27,9 @@ namespace OpsWorks {
 
 /*!
  * \class QtAws::OpsWorks::CloneStackRequest
- *
  * \brief The CloneStackRequest class provides an interface for OpsWorks CloneStack requests.
  *
- * \ingroup OpsWorks
+ * \inmodule QtAwsOpsWorks
  *
  *  <fullname>AWS OpsWorks</fullname>
  * 
@@ -143,9 +142,7 @@ namespace OpsWorks {
  */
 
 /*!
- * @brief  Constructs a new CloneStackRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CloneStackRequest::CloneStackRequest(const CloneStackRequest &other)
     : OpsWorksRequest(new CloneStackRequestPrivate(*other.d_func(), this))
@@ -154,7 +151,7 @@ CloneStackRequest::CloneStackRequest(const CloneStackRequest &other)
 }
 
 /*!
- * @brief  Constructs a new CloneStackRequest object.
+ * Constructs a CloneStackRequest object.
  */
 CloneStackRequest::CloneStackRequest()
     : OpsWorksRequest(new CloneStackRequestPrivate(OpsWorksRequest::CloneStackAction, this))
@@ -172,14 +169,9 @@ bool CloneStackRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CloneStackResponse object.
+ * Returns a CloneStackResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CloneStackResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  OpsWorksClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CloneStackRequest::response(QNetworkReply * const reply) const
 {
@@ -187,20 +179,17 @@ QtAws::Core::AwsAbstractResponse * CloneStackRequest::response(QNetworkReply * c
 }
 
 /*!
- * @internal
+ * \class QtAws::OpsWorks::CloneStackRequestPrivate
+ * \brief The CloneStackRequestPrivate class provides private implementation for CloneStackRequest.
+ * \internal
  *
- * @class  CloneStackRequestPrivate
- *
- * @brief  Private implementation for CloneStackRequest.
+ * \inmodule QtAwsOpsWorks
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CloneStackRequestPrivate object.
- *
- * @param  action  OpsWorks action being performed.
- * @param  q       Pointer to this object's public CloneStackRequest instance.
+ * Constructs a CloneStackRequestPrivate object for OpsWorks \a action with,
+ * public implementation \a q.
  */
 CloneStackRequestPrivate::CloneStackRequestPrivate(
     const OpsWorksRequest::Action action, CloneStackRequest * const q)
@@ -210,15 +199,10 @@ CloneStackRequestPrivate::CloneStackRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CloneStackRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CloneStackRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CloneStackRequest instance.
  */
 CloneStackRequestPrivate::CloneStackRequestPrivate(
     const CloneStackRequestPrivate &other, CloneStackRequest * const q)

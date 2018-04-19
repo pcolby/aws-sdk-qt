@@ -27,10 +27,9 @@ namespace Redshift {
 
 /*!
  * \class QtAws::Redshift::CreateHsmConfigurationRequest
- *
  * \brief The CreateHsmConfigurationRequest class provides an interface for Redshift CreateHsmConfiguration requests.
  *
- * \ingroup Redshift
+ * \inmodule QtAwsRedshift
  *
  *  <fullname>Amazon Redshift</fullname>
  * 
@@ -67,9 +66,7 @@ namespace Redshift {
  */
 
 /*!
- * @brief  Constructs a new CreateHsmConfigurationRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateHsmConfigurationRequest::CreateHsmConfigurationRequest(const CreateHsmConfigurationRequest &other)
     : RedshiftRequest(new CreateHsmConfigurationRequestPrivate(*other.d_func(), this))
@@ -78,7 +75,7 @@ CreateHsmConfigurationRequest::CreateHsmConfigurationRequest(const CreateHsmConf
 }
 
 /*!
- * @brief  Constructs a new CreateHsmConfigurationRequest object.
+ * Constructs a CreateHsmConfigurationRequest object.
  */
 CreateHsmConfigurationRequest::CreateHsmConfigurationRequest()
     : RedshiftRequest(new CreateHsmConfigurationRequestPrivate(RedshiftRequest::CreateHsmConfigurationAction, this))
@@ -96,14 +93,9 @@ bool CreateHsmConfigurationRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateHsmConfigurationResponse object.
+ * Returns a CreateHsmConfigurationResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateHsmConfigurationResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RedshiftClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateHsmConfigurationRequest::response(QNetworkReply * const reply) const
 {
@@ -111,20 +103,17 @@ QtAws::Core::AwsAbstractResponse * CreateHsmConfigurationRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::Redshift::CreateHsmConfigurationRequestPrivate
+ * \brief The CreateHsmConfigurationRequestPrivate class provides private implementation for CreateHsmConfigurationRequest.
+ * \internal
  *
- * @class  CreateHsmConfigurationRequestPrivate
- *
- * @brief  Private implementation for CreateHsmConfigurationRequest.
+ * \inmodule QtAwsRedshift
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateHsmConfigurationRequestPrivate object.
- *
- * @param  action  Redshift action being performed.
- * @param  q       Pointer to this object's public CreateHsmConfigurationRequest instance.
+ * Constructs a CreateHsmConfigurationRequestPrivate object for Redshift \a action with,
+ * public implementation \a q.
  */
 CreateHsmConfigurationRequestPrivate::CreateHsmConfigurationRequestPrivate(
     const RedshiftRequest::Action action, CreateHsmConfigurationRequest * const q)
@@ -134,15 +123,10 @@ CreateHsmConfigurationRequestPrivate::CreateHsmConfigurationRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateHsmConfigurationRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateHsmConfigurationRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateHsmConfigurationRequest instance.
  */
 CreateHsmConfigurationRequestPrivate::CreateHsmConfigurationRequestPrivate(
     const CreateHsmConfigurationRequestPrivate &other, CreateHsmConfigurationRequest * const q)

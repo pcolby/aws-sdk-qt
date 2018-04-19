@@ -27,10 +27,9 @@ namespace Glue {
 
 /*!
  * \class QtAws::Glue::GetConnectionRequest
- *
  * \brief The GetConnectionRequest class provides an interface for Glue GetConnection requests.
  *
- * \ingroup Glue
+ * \inmodule QtAwsGlue
  *
  *  <fullname>AWS Glue</fullname>
  * 
@@ -40,9 +39,7 @@ namespace Glue {
  */
 
 /*!
- * @brief  Constructs a new GetConnectionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetConnectionRequest::GetConnectionRequest(const GetConnectionRequest &other)
     : GlueRequest(new GetConnectionRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ GetConnectionRequest::GetConnectionRequest(const GetConnectionRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetConnectionRequest object.
+ * Constructs a GetConnectionRequest object.
  */
 GetConnectionRequest::GetConnectionRequest()
     : GlueRequest(new GetConnectionRequestPrivate(GlueRequest::GetConnectionAction, this))
@@ -69,14 +66,9 @@ bool GetConnectionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetConnectionResponse object.
+ * Returns a GetConnectionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetConnectionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GlueClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetConnectionRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * GetConnectionRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::Glue::GetConnectionRequestPrivate
+ * \brief The GetConnectionRequestPrivate class provides private implementation for GetConnectionRequest.
+ * \internal
  *
- * @class  GetConnectionRequestPrivate
- *
- * @brief  Private implementation for GetConnectionRequest.
+ * \inmodule QtAwsGlue
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetConnectionRequestPrivate object.
- *
- * @param  action  Glue action being performed.
- * @param  q       Pointer to this object's public GetConnectionRequest instance.
+ * Constructs a GetConnectionRequestPrivate object for Glue \a action with,
+ * public implementation \a q.
  */
 GetConnectionRequestPrivate::GetConnectionRequestPrivate(
     const GlueRequest::Action action, GetConnectionRequest * const q)
@@ -107,15 +96,10 @@ GetConnectionRequestPrivate::GetConnectionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetConnectionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetConnectionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetConnectionRequest instance.
  */
 GetConnectionRequestPrivate::GetConnectionRequestPrivate(
     const GetConnectionRequestPrivate &other, GetConnectionRequest * const q)

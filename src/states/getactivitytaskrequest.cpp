@@ -27,10 +27,9 @@ namespace SFN {
 
 /*!
  * \class QtAws::SFN::GetActivityTaskRequest
- *
  * \brief The GetActivityTaskRequest class provides an interface for SFN GetActivityTask requests.
  *
- * \ingroup SFN
+ * \inmodule QtAwsSFN
  *
  *  <fullname>AWS Step Functions</fullname>
  * 
@@ -56,9 +55,7 @@ namespace SFN {
  */
 
 /*!
- * @brief  Constructs a new GetActivityTaskRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetActivityTaskRequest::GetActivityTaskRequest(const GetActivityTaskRequest &other)
     : SFNRequest(new GetActivityTaskRequestPrivate(*other.d_func(), this))
@@ -67,7 +64,7 @@ GetActivityTaskRequest::GetActivityTaskRequest(const GetActivityTaskRequest &oth
 }
 
 /*!
- * @brief  Constructs a new GetActivityTaskRequest object.
+ * Constructs a GetActivityTaskRequest object.
  */
 GetActivityTaskRequest::GetActivityTaskRequest()
     : SFNRequest(new GetActivityTaskRequestPrivate(SFNRequest::GetActivityTaskAction, this))
@@ -85,14 +82,9 @@ bool GetActivityTaskRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetActivityTaskResponse object.
+ * Returns a GetActivityTaskResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetActivityTaskResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SFNClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetActivityTaskRequest::response(QNetworkReply * const reply) const
 {
@@ -100,20 +92,17 @@ QtAws::Core::AwsAbstractResponse * GetActivityTaskRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::SFN::GetActivityTaskRequestPrivate
+ * \brief The GetActivityTaskRequestPrivate class provides private implementation for GetActivityTaskRequest.
+ * \internal
  *
- * @class  GetActivityTaskRequestPrivate
- *
- * @brief  Private implementation for GetActivityTaskRequest.
+ * \inmodule QtAwsSFN
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetActivityTaskRequestPrivate object.
- *
- * @param  action  SFN action being performed.
- * @param  q       Pointer to this object's public GetActivityTaskRequest instance.
+ * Constructs a GetActivityTaskRequestPrivate object for SFN \a action with,
+ * public implementation \a q.
  */
 GetActivityTaskRequestPrivate::GetActivityTaskRequestPrivate(
     const SFNRequest::Action action, GetActivityTaskRequest * const q)
@@ -123,15 +112,10 @@ GetActivityTaskRequestPrivate::GetActivityTaskRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetActivityTaskRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetActivityTaskRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetActivityTaskRequest instance.
  */
 GetActivityTaskRequestPrivate::GetActivityTaskRequestPrivate(
     const GetActivityTaskRequestPrivate &other, GetActivityTaskRequest * const q)

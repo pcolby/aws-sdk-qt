@@ -27,10 +27,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::UpdateCertificateRequest
- *
  * \brief The UpdateCertificateRequest class provides an interface for IoT UpdateCertificate requests.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -48,9 +47,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new UpdateCertificateRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateCertificateRequest::UpdateCertificateRequest(const UpdateCertificateRequest &other)
     : IoTRequest(new UpdateCertificateRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ UpdateCertificateRequest::UpdateCertificateRequest(const UpdateCertificateReques
 }
 
 /*!
- * @brief  Constructs a new UpdateCertificateRequest object.
+ * Constructs a UpdateCertificateRequest object.
  */
 UpdateCertificateRequest::UpdateCertificateRequest()
     : IoTRequest(new UpdateCertificateRequestPrivate(IoTRequest::UpdateCertificateAction, this))
@@ -77,14 +74,9 @@ bool UpdateCertificateRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateCertificateResponse object.
+ * Returns a UpdateCertificateResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateCertificateResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IoTClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateCertificateRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * UpdateCertificateRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::IoT::UpdateCertificateRequestPrivate
+ * \brief The UpdateCertificateRequestPrivate class provides private implementation for UpdateCertificateRequest.
+ * \internal
  *
- * @class  UpdateCertificateRequestPrivate
- *
- * @brief  Private implementation for UpdateCertificateRequest.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateCertificateRequestPrivate object.
- *
- * @param  action  IoT action being performed.
- * @param  q       Pointer to this object's public UpdateCertificateRequest instance.
+ * Constructs a UpdateCertificateRequestPrivate object for IoT \a action with,
+ * public implementation \a q.
  */
 UpdateCertificateRequestPrivate::UpdateCertificateRequestPrivate(
     const IoTRequest::Action action, UpdateCertificateRequest * const q)
@@ -115,15 +104,10 @@ UpdateCertificateRequestPrivate::UpdateCertificateRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateCertificateRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateCertificateRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateCertificateRequest instance.
  */
 UpdateCertificateRequestPrivate::UpdateCertificateRequestPrivate(
     const UpdateCertificateRequestPrivate &other, UpdateCertificateRequest * const q)

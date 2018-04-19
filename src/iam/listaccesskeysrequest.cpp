@@ -27,10 +27,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::ListAccessKeysRequest
- *
  * \brief The ListAccessKeysRequest class provides an interface for IAM ListAccessKeys requests.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -102,9 +101,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new ListAccessKeysRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListAccessKeysRequest::ListAccessKeysRequest(const ListAccessKeysRequest &other)
     : IAMRequest(new ListAccessKeysRequestPrivate(*other.d_func(), this))
@@ -113,7 +110,7 @@ ListAccessKeysRequest::ListAccessKeysRequest(const ListAccessKeysRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ListAccessKeysRequest object.
+ * Constructs a ListAccessKeysRequest object.
  */
 ListAccessKeysRequest::ListAccessKeysRequest()
     : IAMRequest(new ListAccessKeysRequestPrivate(IAMRequest::ListAccessKeysAction, this))
@@ -131,14 +128,9 @@ bool ListAccessKeysRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListAccessKeysResponse object.
+ * Returns a ListAccessKeysResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListAccessKeysResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IAMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListAccessKeysRequest::response(QNetworkReply * const reply) const
 {
@@ -146,20 +138,17 @@ QtAws::Core::AwsAbstractResponse * ListAccessKeysRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::IAM::ListAccessKeysRequestPrivate
+ * \brief The ListAccessKeysRequestPrivate class provides private implementation for ListAccessKeysRequest.
+ * \internal
  *
- * @class  ListAccessKeysRequestPrivate
- *
- * @brief  Private implementation for ListAccessKeysRequest.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListAccessKeysRequestPrivate object.
- *
- * @param  action  IAM action being performed.
- * @param  q       Pointer to this object's public ListAccessKeysRequest instance.
+ * Constructs a ListAccessKeysRequestPrivate object for IAM \a action with,
+ * public implementation \a q.
  */
 ListAccessKeysRequestPrivate::ListAccessKeysRequestPrivate(
     const IAMRequest::Action action, ListAccessKeysRequest * const q)
@@ -169,15 +158,10 @@ ListAccessKeysRequestPrivate::ListAccessKeysRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListAccessKeysRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListAccessKeysRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListAccessKeysRequest instance.
  */
 ListAccessKeysRequestPrivate::ListAccessKeysRequestPrivate(
     const ListAccessKeysRequestPrivate &other, ListAccessKeysRequest * const q)

@@ -27,10 +27,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::CreateAccountAliasRequest
- *
  * \brief The CreateAccountAliasRequest class provides an interface for IAM CreateAccountAlias requests.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -102,9 +101,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new CreateAccountAliasRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateAccountAliasRequest::CreateAccountAliasRequest(const CreateAccountAliasRequest &other)
     : IAMRequest(new CreateAccountAliasRequestPrivate(*other.d_func(), this))
@@ -113,7 +110,7 @@ CreateAccountAliasRequest::CreateAccountAliasRequest(const CreateAccountAliasReq
 }
 
 /*!
- * @brief  Constructs a new CreateAccountAliasRequest object.
+ * Constructs a CreateAccountAliasRequest object.
  */
 CreateAccountAliasRequest::CreateAccountAliasRequest()
     : IAMRequest(new CreateAccountAliasRequestPrivate(IAMRequest::CreateAccountAliasAction, this))
@@ -131,14 +128,9 @@ bool CreateAccountAliasRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateAccountAliasResponse object.
+ * Returns a CreateAccountAliasResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateAccountAliasResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IAMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateAccountAliasRequest::response(QNetworkReply * const reply) const
 {
@@ -146,20 +138,17 @@ QtAws::Core::AwsAbstractResponse * CreateAccountAliasRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::IAM::CreateAccountAliasRequestPrivate
+ * \brief The CreateAccountAliasRequestPrivate class provides private implementation for CreateAccountAliasRequest.
+ * \internal
  *
- * @class  CreateAccountAliasRequestPrivate
- *
- * @brief  Private implementation for CreateAccountAliasRequest.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateAccountAliasRequestPrivate object.
- *
- * @param  action  IAM action being performed.
- * @param  q       Pointer to this object's public CreateAccountAliasRequest instance.
+ * Constructs a CreateAccountAliasRequestPrivate object for IAM \a action with,
+ * public implementation \a q.
  */
 CreateAccountAliasRequestPrivate::CreateAccountAliasRequestPrivate(
     const IAMRequest::Action action, CreateAccountAliasRequest * const q)
@@ -169,15 +158,10 @@ CreateAccountAliasRequestPrivate::CreateAccountAliasRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateAccountAliasRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateAccountAliasRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateAccountAliasRequest instance.
  */
 CreateAccountAliasRequestPrivate::CreateAccountAliasRequestPrivate(
     const CreateAccountAliasRequestPrivate &other, CreateAccountAliasRequest * const q)

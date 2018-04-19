@@ -27,10 +27,9 @@ namespace AppStream {
 
 /*!
  * \class QtAws::AppStream::CreateStreamingURLRequest
- *
  * \brief The CreateStreamingURLRequest class provides an interface for AppStream CreateStreamingURL requests.
  *
- * \ingroup AppStream
+ * \inmodule QtAwsAppStream
  *
  *  <fullname>Amazon AppStream 2.0</fullname>
  * 
@@ -40,9 +39,7 @@ namespace AppStream {
  */
 
 /*!
- * @brief  Constructs a new CreateStreamingURLRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateStreamingURLRequest::CreateStreamingURLRequest(const CreateStreamingURLRequest &other)
     : AppStreamRequest(new CreateStreamingURLRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ CreateStreamingURLRequest::CreateStreamingURLRequest(const CreateStreamingURLReq
 }
 
 /*!
- * @brief  Constructs a new CreateStreamingURLRequest object.
+ * Constructs a CreateStreamingURLRequest object.
  */
 CreateStreamingURLRequest::CreateStreamingURLRequest()
     : AppStreamRequest(new CreateStreamingURLRequestPrivate(AppStreamRequest::CreateStreamingURLAction, this))
@@ -69,14 +66,9 @@ bool CreateStreamingURLRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateStreamingURLResponse object.
+ * Returns a CreateStreamingURLResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateStreamingURLResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AppStreamClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateStreamingURLRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * CreateStreamingURLRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::AppStream::CreateStreamingURLRequestPrivate
+ * \brief The CreateStreamingURLRequestPrivate class provides private implementation for CreateStreamingURLRequest.
+ * \internal
  *
- * @class  CreateStreamingURLRequestPrivate
- *
- * @brief  Private implementation for CreateStreamingURLRequest.
+ * \inmodule QtAwsAppStream
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateStreamingURLRequestPrivate object.
- *
- * @param  action  AppStream action being performed.
- * @param  q       Pointer to this object's public CreateStreamingURLRequest instance.
+ * Constructs a CreateStreamingURLRequestPrivate object for AppStream \a action with,
+ * public implementation \a q.
  */
 CreateStreamingURLRequestPrivate::CreateStreamingURLRequestPrivate(
     const AppStreamRequest::Action action, CreateStreamingURLRequest * const q)
@@ -107,15 +96,10 @@ CreateStreamingURLRequestPrivate::CreateStreamingURLRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateStreamingURLRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateStreamingURLRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateStreamingURLRequest instance.
  */
 CreateStreamingURLRequestPrivate::CreateStreamingURLRequestPrivate(
     const CreateStreamingURLRequestPrivate &other, CreateStreamingURLRequest * const q)

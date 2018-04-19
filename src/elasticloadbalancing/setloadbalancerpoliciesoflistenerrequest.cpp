@@ -27,10 +27,9 @@ namespace ElasticLoadBalancing {
 
 /*!
  * \class QtAws::ElasticLoadBalancing::SetLoadBalancerPoliciesOfListenerRequest
- *
  * \brief The SetLoadBalancerPoliciesOfListenerRequest class provides an interface for ElasticLoadBalancing SetLoadBalancerPoliciesOfListener requests.
  *
- * \ingroup ElasticLoadBalancing
+ * \inmodule QtAwsElasticLoadBalancing
  *
  *  <fullname>Elastic Load Balancing</fullname>
  * 
@@ -65,9 +64,7 @@ namespace ElasticLoadBalancing {
  */
 
 /*!
- * @brief  Constructs a new SetLoadBalancerPoliciesOfListenerRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 SetLoadBalancerPoliciesOfListenerRequest::SetLoadBalancerPoliciesOfListenerRequest(const SetLoadBalancerPoliciesOfListenerRequest &other)
     : ElasticLoadBalancingRequest(new SetLoadBalancerPoliciesOfListenerRequestPrivate(*other.d_func(), this))
@@ -76,7 +73,7 @@ SetLoadBalancerPoliciesOfListenerRequest::SetLoadBalancerPoliciesOfListenerReque
 }
 
 /*!
- * @brief  Constructs a new SetLoadBalancerPoliciesOfListenerRequest object.
+ * Constructs a SetLoadBalancerPoliciesOfListenerRequest object.
  */
 SetLoadBalancerPoliciesOfListenerRequest::SetLoadBalancerPoliciesOfListenerRequest()
     : ElasticLoadBalancingRequest(new SetLoadBalancerPoliciesOfListenerRequestPrivate(ElasticLoadBalancingRequest::SetLoadBalancerPoliciesOfListenerAction, this))
@@ -94,14 +91,9 @@ bool SetLoadBalancerPoliciesOfListenerRequest::isValid() const
 
 
 /*!
- * @brief  Construct an SetLoadBalancerPoliciesOfListenerResponse object.
+ * Returns a SetLoadBalancerPoliciesOfListenerResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An SetLoadBalancerPoliciesOfListenerResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ElasticLoadBalancingClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * SetLoadBalancerPoliciesOfListenerRequest::response(QNetworkReply * const reply) const
 {
@@ -109,20 +101,17 @@ QtAws::Core::AwsAbstractResponse * SetLoadBalancerPoliciesOfListenerRequest::res
 }
 
 /*!
- * @internal
+ * \class QtAws::ElasticLoadBalancing::SetLoadBalancerPoliciesOfListenerRequestPrivate
+ * \brief The SetLoadBalancerPoliciesOfListenerRequestPrivate class provides private implementation for SetLoadBalancerPoliciesOfListenerRequest.
+ * \internal
  *
- * @class  SetLoadBalancerPoliciesOfListenerRequestPrivate
- *
- * @brief  Private implementation for SetLoadBalancerPoliciesOfListenerRequest.
+ * \inmodule QtAwsElasticLoadBalancing
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new SetLoadBalancerPoliciesOfListenerRequestPrivate object.
- *
- * @param  action  ElasticLoadBalancing action being performed.
- * @param  q       Pointer to this object's public SetLoadBalancerPoliciesOfListenerRequest instance.
+ * Constructs a SetLoadBalancerPoliciesOfListenerRequestPrivate object for ElasticLoadBalancing \a action with,
+ * public implementation \a q.
  */
 SetLoadBalancerPoliciesOfListenerRequestPrivate::SetLoadBalancerPoliciesOfListenerRequestPrivate(
     const ElasticLoadBalancingRequest::Action action, SetLoadBalancerPoliciesOfListenerRequest * const q)
@@ -132,15 +121,10 @@ SetLoadBalancerPoliciesOfListenerRequestPrivate::SetLoadBalancerPoliciesOfListen
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SetLoadBalancerPoliciesOfListenerRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the SetLoadBalancerPoliciesOfListenerRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public SetLoadBalancerPoliciesOfListenerRequest instance.
  */
 SetLoadBalancerPoliciesOfListenerRequestPrivate::SetLoadBalancerPoliciesOfListenerRequestPrivate(
     const SetLoadBalancerPoliciesOfListenerRequestPrivate &other, SetLoadBalancerPoliciesOfListenerRequest * const q)

@@ -27,10 +27,9 @@ namespace ElasticLoadBalancingv2 {
 
 /*!
  * \class QtAws::ElasticLoadBalancingv2::RegisterTargetsRequest
- *
  * \brief The RegisterTargetsRequest class provides an interface for ElasticLoadBalancingv2 RegisterTargets requests.
  *
- * \ingroup ElasticLoadBalancingv2
+ * \inmodule QtAwsElasticLoadBalancingv2
  *
  *  <fullname>Elastic Load Balancing</fullname>
  * 
@@ -105,9 +104,7 @@ namespace ElasticLoadBalancingv2 {
  */
 
 /*!
- * @brief  Constructs a new RegisterTargetsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 RegisterTargetsRequest::RegisterTargetsRequest(const RegisterTargetsRequest &other)
     : ElasticLoadBalancingv2Request(new RegisterTargetsRequestPrivate(*other.d_func(), this))
@@ -116,7 +113,7 @@ RegisterTargetsRequest::RegisterTargetsRequest(const RegisterTargetsRequest &oth
 }
 
 /*!
- * @brief  Constructs a new RegisterTargetsRequest object.
+ * Constructs a RegisterTargetsRequest object.
  */
 RegisterTargetsRequest::RegisterTargetsRequest()
     : ElasticLoadBalancingv2Request(new RegisterTargetsRequestPrivate(ElasticLoadBalancingv2Request::RegisterTargetsAction, this))
@@ -134,14 +131,9 @@ bool RegisterTargetsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an RegisterTargetsResponse object.
+ * Returns a RegisterTargetsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An RegisterTargetsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ElasticLoadBalancingv2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * RegisterTargetsRequest::response(QNetworkReply * const reply) const
 {
@@ -149,20 +141,17 @@ QtAws::Core::AwsAbstractResponse * RegisterTargetsRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::ElasticLoadBalancingv2::RegisterTargetsRequestPrivate
+ * \brief The RegisterTargetsRequestPrivate class provides private implementation for RegisterTargetsRequest.
+ * \internal
  *
- * @class  RegisterTargetsRequestPrivate
- *
- * @brief  Private implementation for RegisterTargetsRequest.
+ * \inmodule QtAwsElasticLoadBalancingv2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new RegisterTargetsRequestPrivate object.
- *
- * @param  action  ElasticLoadBalancingv2 action being performed.
- * @param  q       Pointer to this object's public RegisterTargetsRequest instance.
+ * Constructs a RegisterTargetsRequestPrivate object for ElasticLoadBalancingv2 \a action with,
+ * public implementation \a q.
  */
 RegisterTargetsRequestPrivate::RegisterTargetsRequestPrivate(
     const ElasticLoadBalancingv2Request::Action action, RegisterTargetsRequest * const q)
@@ -172,15 +161,10 @@ RegisterTargetsRequestPrivate::RegisterTargetsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RegisterTargetsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the RegisterTargetsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public RegisterTargetsRequest instance.
  */
 RegisterTargetsRequestPrivate::RegisterTargetsRequestPrivate(
     const RegisterTargetsRequestPrivate &other, RegisterTargetsRequest * const q)

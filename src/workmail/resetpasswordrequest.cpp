@@ -27,10 +27,9 @@ namespace WorkMail {
 
 /*!
  * \class QtAws::WorkMail::ResetPasswordRequest
- *
  * \brief The ResetPasswordRequest class provides an interface for WorkMail ResetPassword requests.
  *
- * \ingroup WorkMail
+ * \inmodule QtAwsWorkMail
  *
  *  Amazon WorkMail is a secure, managed business email and calendaring service with support for existing desktop and mobile
  *  email clients. You can access your email, contacts, and calendars using Microsoft Outlook, your browser, or their native
@@ -70,9 +69,7 @@ namespace WorkMail {
  */
 
 /*!
- * @brief  Constructs a new ResetPasswordRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ResetPasswordRequest::ResetPasswordRequest(const ResetPasswordRequest &other)
     : WorkMailRequest(new ResetPasswordRequestPrivate(*other.d_func(), this))
@@ -81,7 +78,7 @@ ResetPasswordRequest::ResetPasswordRequest(const ResetPasswordRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ResetPasswordRequest object.
+ * Constructs a ResetPasswordRequest object.
  */
 ResetPasswordRequest::ResetPasswordRequest()
     : WorkMailRequest(new ResetPasswordRequestPrivate(WorkMailRequest::ResetPasswordAction, this))
@@ -99,14 +96,9 @@ bool ResetPasswordRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ResetPasswordResponse object.
+ * Returns a ResetPasswordResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ResetPasswordResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WorkMailClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ResetPasswordRequest::response(QNetworkReply * const reply) const
 {
@@ -114,20 +106,17 @@ QtAws::Core::AwsAbstractResponse * ResetPasswordRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::WorkMail::ResetPasswordRequestPrivate
+ * \brief The ResetPasswordRequestPrivate class provides private implementation for ResetPasswordRequest.
+ * \internal
  *
- * @class  ResetPasswordRequestPrivate
- *
- * @brief  Private implementation for ResetPasswordRequest.
+ * \inmodule QtAwsWorkMail
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ResetPasswordRequestPrivate object.
- *
- * @param  action  WorkMail action being performed.
- * @param  q       Pointer to this object's public ResetPasswordRequest instance.
+ * Constructs a ResetPasswordRequestPrivate object for WorkMail \a action with,
+ * public implementation \a q.
  */
 ResetPasswordRequestPrivate::ResetPasswordRequestPrivate(
     const WorkMailRequest::Action action, ResetPasswordRequest * const q)
@@ -137,15 +126,10 @@ ResetPasswordRequestPrivate::ResetPasswordRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ResetPasswordRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ResetPasswordRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ResetPasswordRequest instance.
  */
 ResetPasswordRequestPrivate::ResetPasswordRequestPrivate(
     const ResetPasswordRequestPrivate &other, ResetPasswordRequest * const q)

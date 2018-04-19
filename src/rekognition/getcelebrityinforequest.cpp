@@ -27,10 +27,9 @@ namespace Rekognition {
 
 /*!
  * \class QtAws::Rekognition::GetCelebrityInfoRequest
- *
  * \brief The GetCelebrityInfoRequest class provides an interface for Rekognition GetCelebrityInfo requests.
  *
- * \ingroup Rekognition
+ * \inmodule QtAwsRekognition
  *
  *  This is the Amazon Rekognition API
  *
@@ -38,9 +37,7 @@ namespace Rekognition {
  */
 
 /*!
- * @brief  Constructs a new GetCelebrityInfoRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetCelebrityInfoRequest::GetCelebrityInfoRequest(const GetCelebrityInfoRequest &other)
     : RekognitionRequest(new GetCelebrityInfoRequestPrivate(*other.d_func(), this))
@@ -49,7 +46,7 @@ GetCelebrityInfoRequest::GetCelebrityInfoRequest(const GetCelebrityInfoRequest &
 }
 
 /*!
- * @brief  Constructs a new GetCelebrityInfoRequest object.
+ * Constructs a GetCelebrityInfoRequest object.
  */
 GetCelebrityInfoRequest::GetCelebrityInfoRequest()
     : RekognitionRequest(new GetCelebrityInfoRequestPrivate(RekognitionRequest::GetCelebrityInfoAction, this))
@@ -67,14 +64,9 @@ bool GetCelebrityInfoRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetCelebrityInfoResponse object.
+ * Returns a GetCelebrityInfoResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetCelebrityInfoResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RekognitionClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetCelebrityInfoRequest::response(QNetworkReply * const reply) const
 {
@@ -82,20 +74,17 @@ QtAws::Core::AwsAbstractResponse * GetCelebrityInfoRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::Rekognition::GetCelebrityInfoRequestPrivate
+ * \brief The GetCelebrityInfoRequestPrivate class provides private implementation for GetCelebrityInfoRequest.
+ * \internal
  *
- * @class  GetCelebrityInfoRequestPrivate
- *
- * @brief  Private implementation for GetCelebrityInfoRequest.
+ * \inmodule QtAwsRekognition
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetCelebrityInfoRequestPrivate object.
- *
- * @param  action  Rekognition action being performed.
- * @param  q       Pointer to this object's public GetCelebrityInfoRequest instance.
+ * Constructs a GetCelebrityInfoRequestPrivate object for Rekognition \a action with,
+ * public implementation \a q.
  */
 GetCelebrityInfoRequestPrivate::GetCelebrityInfoRequestPrivate(
     const RekognitionRequest::Action action, GetCelebrityInfoRequest * const q)
@@ -105,15 +94,10 @@ GetCelebrityInfoRequestPrivate::GetCelebrityInfoRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetCelebrityInfoRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetCelebrityInfoRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetCelebrityInfoRequest instance.
  */
 GetCelebrityInfoRequestPrivate::GetCelebrityInfoRequestPrivate(
     const GetCelebrityInfoRequestPrivate &other, GetCelebrityInfoRequest * const q)

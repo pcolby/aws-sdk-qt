@@ -176,6 +176,9 @@
 /*!
  * \namespace QtAws::Greengrass
  * \brief The QtAws::Greengrass contains stuff...
+ *
+ * \inmodule QtAwsGreengrass
+ *
  * @todo Move this to a separate template file.
  */
 
@@ -228,7 +231,7 @@ GreengrassClient::GreengrassClient(
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * \a  AwsEndpoint::getEndpoint()
+ * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
 GreengrassClient::GreengrassClient(
     const QUrl &endpoint,

@@ -27,10 +27,9 @@ namespace Redshift {
 
 /*!
  * \class QtAws::Redshift::GetClusterCredentialsRequest
- *
  * \brief The GetClusterCredentialsRequest class provides an interface for Redshift GetClusterCredentials requests.
  *
- * \ingroup Redshift
+ * \inmodule QtAwsRedshift
  *
  *  <fullname>Amazon Redshift</fullname>
  * 
@@ -67,9 +66,7 @@ namespace Redshift {
  */
 
 /*!
- * @brief  Constructs a new GetClusterCredentialsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetClusterCredentialsRequest::GetClusterCredentialsRequest(const GetClusterCredentialsRequest &other)
     : RedshiftRequest(new GetClusterCredentialsRequestPrivate(*other.d_func(), this))
@@ -78,7 +75,7 @@ GetClusterCredentialsRequest::GetClusterCredentialsRequest(const GetClusterCrede
 }
 
 /*!
- * @brief  Constructs a new GetClusterCredentialsRequest object.
+ * Constructs a GetClusterCredentialsRequest object.
  */
 GetClusterCredentialsRequest::GetClusterCredentialsRequest()
     : RedshiftRequest(new GetClusterCredentialsRequestPrivate(RedshiftRequest::GetClusterCredentialsAction, this))
@@ -96,14 +93,9 @@ bool GetClusterCredentialsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetClusterCredentialsResponse object.
+ * Returns a GetClusterCredentialsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetClusterCredentialsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RedshiftClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetClusterCredentialsRequest::response(QNetworkReply * const reply) const
 {
@@ -111,20 +103,17 @@ QtAws::Core::AwsAbstractResponse * GetClusterCredentialsRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::Redshift::GetClusterCredentialsRequestPrivate
+ * \brief The GetClusterCredentialsRequestPrivate class provides private implementation for GetClusterCredentialsRequest.
+ * \internal
  *
- * @class  GetClusterCredentialsRequestPrivate
- *
- * @brief  Private implementation for GetClusterCredentialsRequest.
+ * \inmodule QtAwsRedshift
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetClusterCredentialsRequestPrivate object.
- *
- * @param  action  Redshift action being performed.
- * @param  q       Pointer to this object's public GetClusterCredentialsRequest instance.
+ * Constructs a GetClusterCredentialsRequestPrivate object for Redshift \a action with,
+ * public implementation \a q.
  */
 GetClusterCredentialsRequestPrivate::GetClusterCredentialsRequestPrivate(
     const RedshiftRequest::Action action, GetClusterCredentialsRequest * const q)
@@ -134,15 +123,10 @@ GetClusterCredentialsRequestPrivate::GetClusterCredentialsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetClusterCredentialsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetClusterCredentialsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetClusterCredentialsRequest instance.
  */
 GetClusterCredentialsRequestPrivate::GetClusterCredentialsRequestPrivate(
     const GetClusterCredentialsRequestPrivate &other, GetClusterCredentialsRequest * const q)

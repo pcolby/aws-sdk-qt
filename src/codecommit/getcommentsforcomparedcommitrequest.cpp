@@ -27,10 +27,9 @@ namespace CodeCommit {
 
 /*!
  * \class QtAws::CodeCommit::GetCommentsForComparedCommitRequest
- *
  * \brief The GetCommentsForComparedCommitRequest class provides an interface for CodeCommit GetCommentsForComparedCommit requests.
  *
- * \ingroup CodeCommit
+ * \inmodule QtAwsCodeCommit
  *
  *  <fullname>AWS CodeCommit</fullname>
  * 
@@ -227,9 +226,7 @@ namespace CodeCommit {
  */
 
 /*!
- * @brief  Constructs a new GetCommentsForComparedCommitRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetCommentsForComparedCommitRequest::GetCommentsForComparedCommitRequest(const GetCommentsForComparedCommitRequest &other)
     : CodeCommitRequest(new GetCommentsForComparedCommitRequestPrivate(*other.d_func(), this))
@@ -238,7 +235,7 @@ GetCommentsForComparedCommitRequest::GetCommentsForComparedCommitRequest(const G
 }
 
 /*!
- * @brief  Constructs a new GetCommentsForComparedCommitRequest object.
+ * Constructs a GetCommentsForComparedCommitRequest object.
  */
 GetCommentsForComparedCommitRequest::GetCommentsForComparedCommitRequest()
     : CodeCommitRequest(new GetCommentsForComparedCommitRequestPrivate(CodeCommitRequest::GetCommentsForComparedCommitAction, this))
@@ -256,14 +253,9 @@ bool GetCommentsForComparedCommitRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetCommentsForComparedCommitResponse object.
+ * Returns a GetCommentsForComparedCommitResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetCommentsForComparedCommitResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CodeCommitClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetCommentsForComparedCommitRequest::response(QNetworkReply * const reply) const
 {
@@ -271,20 +263,17 @@ QtAws::Core::AwsAbstractResponse * GetCommentsForComparedCommitRequest::response
 }
 
 /*!
- * @internal
+ * \class QtAws::CodeCommit::GetCommentsForComparedCommitRequestPrivate
+ * \brief The GetCommentsForComparedCommitRequestPrivate class provides private implementation for GetCommentsForComparedCommitRequest.
+ * \internal
  *
- * @class  GetCommentsForComparedCommitRequestPrivate
- *
- * @brief  Private implementation for GetCommentsForComparedCommitRequest.
+ * \inmodule QtAwsCodeCommit
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetCommentsForComparedCommitRequestPrivate object.
- *
- * @param  action  CodeCommit action being performed.
- * @param  q       Pointer to this object's public GetCommentsForComparedCommitRequest instance.
+ * Constructs a GetCommentsForComparedCommitRequestPrivate object for CodeCommit \a action with,
+ * public implementation \a q.
  */
 GetCommentsForComparedCommitRequestPrivate::GetCommentsForComparedCommitRequestPrivate(
     const CodeCommitRequest::Action action, GetCommentsForComparedCommitRequest * const q)
@@ -294,15 +283,10 @@ GetCommentsForComparedCommitRequestPrivate::GetCommentsForComparedCommitRequestP
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetCommentsForComparedCommitRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetCommentsForComparedCommitRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetCommentsForComparedCommitRequest instance.
  */
 GetCommentsForComparedCommitRequestPrivate::GetCommentsForComparedCommitRequestPrivate(
     const GetCommentsForComparedCommitRequestPrivate &other, GetCommentsForComparedCommitRequest * const q)

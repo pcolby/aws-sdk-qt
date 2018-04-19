@@ -27,10 +27,9 @@ namespace Route53Domains {
 
 /*!
  * \class QtAws::Route53Domains::CheckDomainAvailabilityRequest
- *
  * \brief The CheckDomainAvailabilityRequest class provides an interface for Route53Domains CheckDomainAvailability requests.
  *
- * \ingroup Route53Domains
+ * \inmodule QtAwsRoute53Domains
  *
  *  Amazon Route 53 API actions let you register domain names and perform related
  *
@@ -38,9 +37,7 @@ namespace Route53Domains {
  */
 
 /*!
- * @brief  Constructs a new CheckDomainAvailabilityRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CheckDomainAvailabilityRequest::CheckDomainAvailabilityRequest(const CheckDomainAvailabilityRequest &other)
     : Route53DomainsRequest(new CheckDomainAvailabilityRequestPrivate(*other.d_func(), this))
@@ -49,7 +46,7 @@ CheckDomainAvailabilityRequest::CheckDomainAvailabilityRequest(const CheckDomain
 }
 
 /*!
- * @brief  Constructs a new CheckDomainAvailabilityRequest object.
+ * Constructs a CheckDomainAvailabilityRequest object.
  */
 CheckDomainAvailabilityRequest::CheckDomainAvailabilityRequest()
     : Route53DomainsRequest(new CheckDomainAvailabilityRequestPrivate(Route53DomainsRequest::CheckDomainAvailabilityAction, this))
@@ -67,14 +64,9 @@ bool CheckDomainAvailabilityRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CheckDomainAvailabilityResponse object.
+ * Returns a CheckDomainAvailabilityResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CheckDomainAvailabilityResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  Route53DomainsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CheckDomainAvailabilityRequest::response(QNetworkReply * const reply) const
 {
@@ -82,20 +74,17 @@ QtAws::Core::AwsAbstractResponse * CheckDomainAvailabilityRequest::response(QNet
 }
 
 /*!
- * @internal
+ * \class QtAws::Route53Domains::CheckDomainAvailabilityRequestPrivate
+ * \brief The CheckDomainAvailabilityRequestPrivate class provides private implementation for CheckDomainAvailabilityRequest.
+ * \internal
  *
- * @class  CheckDomainAvailabilityRequestPrivate
- *
- * @brief  Private implementation for CheckDomainAvailabilityRequest.
+ * \inmodule QtAwsRoute53Domains
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CheckDomainAvailabilityRequestPrivate object.
- *
- * @param  action  Route53Domains action being performed.
- * @param  q       Pointer to this object's public CheckDomainAvailabilityRequest instance.
+ * Constructs a CheckDomainAvailabilityRequestPrivate object for Route53Domains \a action with,
+ * public implementation \a q.
  */
 CheckDomainAvailabilityRequestPrivate::CheckDomainAvailabilityRequestPrivate(
     const Route53DomainsRequest::Action action, CheckDomainAvailabilityRequest * const q)
@@ -105,15 +94,10 @@ CheckDomainAvailabilityRequestPrivate::CheckDomainAvailabilityRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CheckDomainAvailabilityRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CheckDomainAvailabilityRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CheckDomainAvailabilityRequest instance.
  */
 CheckDomainAvailabilityRequestPrivate::CheckDomainAvailabilityRequestPrivate(
     const CheckDomainAvailabilityRequestPrivate &other, CheckDomainAvailabilityRequest * const q)

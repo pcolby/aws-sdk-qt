@@ -27,10 +27,9 @@ namespace Route53Domains {
 
 /*!
  * \class QtAws::Route53Domains::ResendContactReachabilityEmailRequest
- *
  * \brief The ResendContactReachabilityEmailRequest class provides an interface for Route53Domains ResendContactReachabilityEmail requests.
  *
- * \ingroup Route53Domains
+ * \inmodule QtAwsRoute53Domains
  *
  *  Amazon Route 53 API actions let you register domain names and perform related
  *
@@ -38,9 +37,7 @@ namespace Route53Domains {
  */
 
 /*!
- * @brief  Constructs a new ResendContactReachabilityEmailRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ResendContactReachabilityEmailRequest::ResendContactReachabilityEmailRequest(const ResendContactReachabilityEmailRequest &other)
     : Route53DomainsRequest(new ResendContactReachabilityEmailRequestPrivate(*other.d_func(), this))
@@ -49,7 +46,7 @@ ResendContactReachabilityEmailRequest::ResendContactReachabilityEmailRequest(con
 }
 
 /*!
- * @brief  Constructs a new ResendContactReachabilityEmailRequest object.
+ * Constructs a ResendContactReachabilityEmailRequest object.
  */
 ResendContactReachabilityEmailRequest::ResendContactReachabilityEmailRequest()
     : Route53DomainsRequest(new ResendContactReachabilityEmailRequestPrivate(Route53DomainsRequest::ResendContactReachabilityEmailAction, this))
@@ -67,14 +64,9 @@ bool ResendContactReachabilityEmailRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ResendContactReachabilityEmailResponse object.
+ * Returns a ResendContactReachabilityEmailResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ResendContactReachabilityEmailResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  Route53DomainsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ResendContactReachabilityEmailRequest::response(QNetworkReply * const reply) const
 {
@@ -82,20 +74,17 @@ QtAws::Core::AwsAbstractResponse * ResendContactReachabilityEmailRequest::respon
 }
 
 /*!
- * @internal
+ * \class QtAws::Route53Domains::ResendContactReachabilityEmailRequestPrivate
+ * \brief The ResendContactReachabilityEmailRequestPrivate class provides private implementation for ResendContactReachabilityEmailRequest.
+ * \internal
  *
- * @class  ResendContactReachabilityEmailRequestPrivate
- *
- * @brief  Private implementation for ResendContactReachabilityEmailRequest.
+ * \inmodule QtAwsRoute53Domains
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ResendContactReachabilityEmailRequestPrivate object.
- *
- * @param  action  Route53Domains action being performed.
- * @param  q       Pointer to this object's public ResendContactReachabilityEmailRequest instance.
+ * Constructs a ResendContactReachabilityEmailRequestPrivate object for Route53Domains \a action with,
+ * public implementation \a q.
  */
 ResendContactReachabilityEmailRequestPrivate::ResendContactReachabilityEmailRequestPrivate(
     const Route53DomainsRequest::Action action, ResendContactReachabilityEmailRequest * const q)
@@ -105,15 +94,10 @@ ResendContactReachabilityEmailRequestPrivate::ResendContactReachabilityEmailRequ
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ResendContactReachabilityEmailRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ResendContactReachabilityEmailRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ResendContactReachabilityEmailRequest instance.
  */
 ResendContactReachabilityEmailRequestPrivate::ResendContactReachabilityEmailRequestPrivate(
     const ResendContactReachabilityEmailRequestPrivate &other, ResendContactReachabilityEmailRequest * const q)

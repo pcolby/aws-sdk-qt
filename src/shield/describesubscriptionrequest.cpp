@@ -27,10 +27,9 @@ namespace Shield {
 
 /*!
  * \class QtAws::Shield::DescribeSubscriptionRequest
- *
  * \brief The DescribeSubscriptionRequest class provides an interface for Shield DescribeSubscription requests.
  *
- * \ingroup Shield
+ * \inmodule QtAwsShield
  *
  *  <fullname>AWS Shield Advanced</fullname>
  * 
@@ -43,9 +42,7 @@ namespace Shield {
  */
 
 /*!
- * @brief  Constructs a new DescribeSubscriptionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeSubscriptionRequest::DescribeSubscriptionRequest(const DescribeSubscriptionRequest &other)
     : ShieldRequest(new DescribeSubscriptionRequestPrivate(*other.d_func(), this))
@@ -54,7 +51,7 @@ DescribeSubscriptionRequest::DescribeSubscriptionRequest(const DescribeSubscript
 }
 
 /*!
- * @brief  Constructs a new DescribeSubscriptionRequest object.
+ * Constructs a DescribeSubscriptionRequest object.
  */
 DescribeSubscriptionRequest::DescribeSubscriptionRequest()
     : ShieldRequest(new DescribeSubscriptionRequestPrivate(ShieldRequest::DescribeSubscriptionAction, this))
@@ -72,14 +69,9 @@ bool DescribeSubscriptionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeSubscriptionResponse object.
+ * Returns a DescribeSubscriptionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeSubscriptionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ShieldClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeSubscriptionRequest::response(QNetworkReply * const reply) const
 {
@@ -87,20 +79,17 @@ QtAws::Core::AwsAbstractResponse * DescribeSubscriptionRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::Shield::DescribeSubscriptionRequestPrivate
+ * \brief The DescribeSubscriptionRequestPrivate class provides private implementation for DescribeSubscriptionRequest.
+ * \internal
  *
- * @class  DescribeSubscriptionRequestPrivate
- *
- * @brief  Private implementation for DescribeSubscriptionRequest.
+ * \inmodule QtAwsShield
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeSubscriptionRequestPrivate object.
- *
- * @param  action  Shield action being performed.
- * @param  q       Pointer to this object's public DescribeSubscriptionRequest instance.
+ * Constructs a DescribeSubscriptionRequestPrivate object for Shield \a action with,
+ * public implementation \a q.
  */
 DescribeSubscriptionRequestPrivate::DescribeSubscriptionRequestPrivate(
     const ShieldRequest::Action action, DescribeSubscriptionRequest * const q)
@@ -110,15 +99,10 @@ DescribeSubscriptionRequestPrivate::DescribeSubscriptionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeSubscriptionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeSubscriptionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeSubscriptionRequest instance.
  */
 DescribeSubscriptionRequestPrivate::DescribeSubscriptionRequestPrivate(
     const DescribeSubscriptionRequestPrivate &other, DescribeSubscriptionRequest * const q)

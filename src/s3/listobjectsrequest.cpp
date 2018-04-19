@@ -27,19 +27,16 @@ namespace S3 {
 
 /*!
  * \class QtAws::S3::ListObjectsRequest
- *
  * \brief The ListObjectsRequest class provides an interface for S3 ListObjects requests.
  *
- * \ingroup S3
+ * \inmodule QtAwsS3
  *
  *
  * \sa S3Client::listObjects
  */
 
 /*!
- * @brief  Constructs a new ListObjectsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListObjectsRequest::ListObjectsRequest(const ListObjectsRequest &other)
     : S3Request(new ListObjectsRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ ListObjectsRequest::ListObjectsRequest(const ListObjectsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ListObjectsRequest object.
+ * Constructs a ListObjectsRequest object.
  */
 ListObjectsRequest::ListObjectsRequest()
     : S3Request(new ListObjectsRequestPrivate(S3Request::ListObjectsAction, this))
@@ -66,14 +63,9 @@ bool ListObjectsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListObjectsResponse object.
+ * Returns a ListObjectsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListObjectsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  S3Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListObjectsRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * ListObjectsRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::S3::ListObjectsRequestPrivate
+ * \brief The ListObjectsRequestPrivate class provides private implementation for ListObjectsRequest.
+ * \internal
  *
- * @class  ListObjectsRequestPrivate
- *
- * @brief  Private implementation for ListObjectsRequest.
+ * \inmodule QtAwsS3
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListObjectsRequestPrivate object.
- *
- * @param  action  S3 action being performed.
- * @param  q       Pointer to this object's public ListObjectsRequest instance.
+ * Constructs a ListObjectsRequestPrivate object for S3 \a action with,
+ * public implementation \a q.
  */
 ListObjectsRequestPrivate::ListObjectsRequestPrivate(
     const S3Request::Action action, ListObjectsRequest * const q)
@@ -104,15 +93,10 @@ ListObjectsRequestPrivate::ListObjectsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListObjectsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListObjectsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListObjectsRequest instance.
  */
 ListObjectsRequestPrivate::ListObjectsRequestPrivate(
     const ListObjectsRequestPrivate &other, ListObjectsRequest * const q)

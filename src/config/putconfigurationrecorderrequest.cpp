@@ -27,10 +27,9 @@ namespace ConfigService {
 
 /*!
  * \class QtAws::ConfigService::PutConfigurationRecorderRequest
- *
  * \brief The PutConfigurationRecorderRequest class provides an interface for ConfigService PutConfigurationRecorder requests.
  *
- * \ingroup ConfigService
+ * \inmodule QtAwsConfigService
  *
  *  <fullname>AWS Config</fullname>
  * 
@@ -60,9 +59,7 @@ namespace ConfigService {
  */
 
 /*!
- * @brief  Constructs a new PutConfigurationRecorderRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 PutConfigurationRecorderRequest::PutConfigurationRecorderRequest(const PutConfigurationRecorderRequest &other)
     : ConfigServiceRequest(new PutConfigurationRecorderRequestPrivate(*other.d_func(), this))
@@ -71,7 +68,7 @@ PutConfigurationRecorderRequest::PutConfigurationRecorderRequest(const PutConfig
 }
 
 /*!
- * @brief  Constructs a new PutConfigurationRecorderRequest object.
+ * Constructs a PutConfigurationRecorderRequest object.
  */
 PutConfigurationRecorderRequest::PutConfigurationRecorderRequest()
     : ConfigServiceRequest(new PutConfigurationRecorderRequestPrivate(ConfigServiceRequest::PutConfigurationRecorderAction, this))
@@ -89,14 +86,9 @@ bool PutConfigurationRecorderRequest::isValid() const
 
 
 /*!
- * @brief  Construct an PutConfigurationRecorderResponse object.
+ * Returns a PutConfigurationRecorderResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An PutConfigurationRecorderResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ConfigServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * PutConfigurationRecorderRequest::response(QNetworkReply * const reply) const
 {
@@ -104,20 +96,17 @@ QtAws::Core::AwsAbstractResponse * PutConfigurationRecorderRequest::response(QNe
 }
 
 /*!
- * @internal
+ * \class QtAws::ConfigService::PutConfigurationRecorderRequestPrivate
+ * \brief The PutConfigurationRecorderRequestPrivate class provides private implementation for PutConfigurationRecorderRequest.
+ * \internal
  *
- * @class  PutConfigurationRecorderRequestPrivate
- *
- * @brief  Private implementation for PutConfigurationRecorderRequest.
+ * \inmodule QtAwsConfigService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new PutConfigurationRecorderRequestPrivate object.
- *
- * @param  action  ConfigService action being performed.
- * @param  q       Pointer to this object's public PutConfigurationRecorderRequest instance.
+ * Constructs a PutConfigurationRecorderRequestPrivate object for ConfigService \a action with,
+ * public implementation \a q.
  */
 PutConfigurationRecorderRequestPrivate::PutConfigurationRecorderRequestPrivate(
     const ConfigServiceRequest::Action action, PutConfigurationRecorderRequest * const q)
@@ -127,15 +116,10 @@ PutConfigurationRecorderRequestPrivate::PutConfigurationRecorderRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutConfigurationRecorderRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the PutConfigurationRecorderRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public PutConfigurationRecorderRequest instance.
  */
 PutConfigurationRecorderRequestPrivate::PutConfigurationRecorderRequestPrivate(
     const PutConfigurationRecorderRequestPrivate &other, PutConfigurationRecorderRequest * const q)

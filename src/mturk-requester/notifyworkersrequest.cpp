@@ -27,19 +27,16 @@ namespace MTurk {
 
 /*!
  * \class QtAws::MTurk::NotifyWorkersRequest
- *
  * \brief The NotifyWorkersRequest class provides an interface for MTurk NotifyWorkers requests.
  *
- * \ingroup MTurk
+ * \inmodule QtAwsMTurk
  *
  *
  * \sa MTurkClient::notifyWorkers
  */
 
 /*!
- * @brief  Constructs a new NotifyWorkersRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 NotifyWorkersRequest::NotifyWorkersRequest(const NotifyWorkersRequest &other)
     : MTurkRequest(new NotifyWorkersRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ NotifyWorkersRequest::NotifyWorkersRequest(const NotifyWorkersRequest &other)
 }
 
 /*!
- * @brief  Constructs a new NotifyWorkersRequest object.
+ * Constructs a NotifyWorkersRequest object.
  */
 NotifyWorkersRequest::NotifyWorkersRequest()
     : MTurkRequest(new NotifyWorkersRequestPrivate(MTurkRequest::NotifyWorkersAction, this))
@@ -66,14 +63,9 @@ bool NotifyWorkersRequest::isValid() const
 
 
 /*!
- * @brief  Construct an NotifyWorkersResponse object.
+ * Returns a NotifyWorkersResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An NotifyWorkersResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MTurkClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * NotifyWorkersRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * NotifyWorkersRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::MTurk::NotifyWorkersRequestPrivate
+ * \brief The NotifyWorkersRequestPrivate class provides private implementation for NotifyWorkersRequest.
+ * \internal
  *
- * @class  NotifyWorkersRequestPrivate
- *
- * @brief  Private implementation for NotifyWorkersRequest.
+ * \inmodule QtAwsMTurk
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new NotifyWorkersRequestPrivate object.
- *
- * @param  action  MTurk action being performed.
- * @param  q       Pointer to this object's public NotifyWorkersRequest instance.
+ * Constructs a NotifyWorkersRequestPrivate object for MTurk \a action with,
+ * public implementation \a q.
  */
 NotifyWorkersRequestPrivate::NotifyWorkersRequestPrivate(
     const MTurkRequest::Action action, NotifyWorkersRequest * const q)
@@ -104,15 +93,10 @@ NotifyWorkersRequestPrivate::NotifyWorkersRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new NotifyWorkersRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the NotifyWorkersRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public NotifyWorkersRequest instance.
  */
 NotifyWorkersRequestPrivate::NotifyWorkersRequestPrivate(
     const NotifyWorkersRequestPrivate &other, NotifyWorkersRequest * const q)

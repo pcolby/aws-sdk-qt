@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::ResetNetworkInterfaceAttributeRequest
- *
  * \brief The ResetNetworkInterfaceAttributeRequest class provides an interface for EC2 ResetNetworkInterfaceAttribute requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new ResetNetworkInterfaceAttributeRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ResetNetworkInterfaceAttributeRequest::ResetNetworkInterfaceAttributeRequest(const ResetNetworkInterfaceAttributeRequest &other)
     : EC2Request(new ResetNetworkInterfaceAttributeRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ ResetNetworkInterfaceAttributeRequest::ResetNetworkInterfaceAttributeRequest(con
 }
 
 /*!
- * @brief  Constructs a new ResetNetworkInterfaceAttributeRequest object.
+ * Constructs a ResetNetworkInterfaceAttributeRequest object.
  */
 ResetNetworkInterfaceAttributeRequest::ResetNetworkInterfaceAttributeRequest()
     : EC2Request(new ResetNetworkInterfaceAttributeRequestPrivate(EC2Request::ResetNetworkInterfaceAttributeAction, this))
@@ -70,14 +67,9 @@ bool ResetNetworkInterfaceAttributeRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ResetNetworkInterfaceAttributeResponse object.
+ * Returns a ResetNetworkInterfaceAttributeResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ResetNetworkInterfaceAttributeResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ResetNetworkInterfaceAttributeRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * ResetNetworkInterfaceAttributeRequest::respon
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::ResetNetworkInterfaceAttributeRequestPrivate
+ * \brief The ResetNetworkInterfaceAttributeRequestPrivate class provides private implementation for ResetNetworkInterfaceAttributeRequest.
+ * \internal
  *
- * @class  ResetNetworkInterfaceAttributeRequestPrivate
- *
- * @brief  Private implementation for ResetNetworkInterfaceAttributeRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ResetNetworkInterfaceAttributeRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public ResetNetworkInterfaceAttributeRequest instance.
+ * Constructs a ResetNetworkInterfaceAttributeRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 ResetNetworkInterfaceAttributeRequestPrivate::ResetNetworkInterfaceAttributeRequestPrivate(
     const EC2Request::Action action, ResetNetworkInterfaceAttributeRequest * const q)
@@ -108,15 +97,10 @@ ResetNetworkInterfaceAttributeRequestPrivate::ResetNetworkInterfaceAttributeRequ
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ResetNetworkInterfaceAttributeRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ResetNetworkInterfaceAttributeRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ResetNetworkInterfaceAttributeRequest instance.
  */
 ResetNetworkInterfaceAttributeRequestPrivate::ResetNetworkInterfaceAttributeRequestPrivate(
     const ResetNetworkInterfaceAttributeRequestPrivate &other, ResetNetworkInterfaceAttributeRequest * const q)

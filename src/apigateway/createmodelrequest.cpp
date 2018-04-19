@@ -27,10 +27,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::CreateModelRequest
- *
  * \brief The CreateModelRequest class provides an interface for APIGateway CreateModel requests.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -42,9 +41,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new CreateModelRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateModelRequest::CreateModelRequest(const CreateModelRequest &other)
     : APIGatewayRequest(new CreateModelRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ CreateModelRequest::CreateModelRequest(const CreateModelRequest &other)
 }
 
 /*!
- * @brief  Constructs a new CreateModelRequest object.
+ * Constructs a CreateModelRequest object.
  */
 CreateModelRequest::CreateModelRequest()
     : APIGatewayRequest(new CreateModelRequestPrivate(APIGatewayRequest::CreateModelAction, this))
@@ -71,14 +68,9 @@ bool CreateModelRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateModelResponse object.
+ * Returns a CreateModelResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateModelResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  APIGatewayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateModelRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * CreateModelRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::APIGateway::CreateModelRequestPrivate
+ * \brief The CreateModelRequestPrivate class provides private implementation for CreateModelRequest.
+ * \internal
  *
- * @class  CreateModelRequestPrivate
- *
- * @brief  Private implementation for CreateModelRequest.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateModelRequestPrivate object.
- *
- * @param  action  APIGateway action being performed.
- * @param  q       Pointer to this object's public CreateModelRequest instance.
+ * Constructs a CreateModelRequestPrivate object for APIGateway \a action with,
+ * public implementation \a q.
  */
 CreateModelRequestPrivate::CreateModelRequestPrivate(
     const APIGatewayRequest::Action action, CreateModelRequest * const q)
@@ -109,15 +98,10 @@ CreateModelRequestPrivate::CreateModelRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateModelRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateModelRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateModelRequest instance.
  */
 CreateModelRequestPrivate::CreateModelRequestPrivate(
     const CreateModelRequestPrivate &other, CreateModelRequest * const q)

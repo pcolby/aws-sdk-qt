@@ -27,10 +27,9 @@ namespace ElasticLoadBalancingv2 {
 
 /*!
  * \class QtAws::ElasticLoadBalancingv2::SetSecurityGroupsRequest
- *
  * \brief The SetSecurityGroupsRequest class provides an interface for ElasticLoadBalancingv2 SetSecurityGroups requests.
  *
- * \ingroup ElasticLoadBalancingv2
+ * \inmodule QtAwsElasticLoadBalancingv2
  *
  *  <fullname>Elastic Load Balancing</fullname>
  * 
@@ -105,9 +104,7 @@ namespace ElasticLoadBalancingv2 {
  */
 
 /*!
- * @brief  Constructs a new SetSecurityGroupsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 SetSecurityGroupsRequest::SetSecurityGroupsRequest(const SetSecurityGroupsRequest &other)
     : ElasticLoadBalancingv2Request(new SetSecurityGroupsRequestPrivate(*other.d_func(), this))
@@ -116,7 +113,7 @@ SetSecurityGroupsRequest::SetSecurityGroupsRequest(const SetSecurityGroupsReques
 }
 
 /*!
- * @brief  Constructs a new SetSecurityGroupsRequest object.
+ * Constructs a SetSecurityGroupsRequest object.
  */
 SetSecurityGroupsRequest::SetSecurityGroupsRequest()
     : ElasticLoadBalancingv2Request(new SetSecurityGroupsRequestPrivate(ElasticLoadBalancingv2Request::SetSecurityGroupsAction, this))
@@ -134,14 +131,9 @@ bool SetSecurityGroupsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an SetSecurityGroupsResponse object.
+ * Returns a SetSecurityGroupsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An SetSecurityGroupsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ElasticLoadBalancingv2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * SetSecurityGroupsRequest::response(QNetworkReply * const reply) const
 {
@@ -149,20 +141,17 @@ QtAws::Core::AwsAbstractResponse * SetSecurityGroupsRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::ElasticLoadBalancingv2::SetSecurityGroupsRequestPrivate
+ * \brief The SetSecurityGroupsRequestPrivate class provides private implementation for SetSecurityGroupsRequest.
+ * \internal
  *
- * @class  SetSecurityGroupsRequestPrivate
- *
- * @brief  Private implementation for SetSecurityGroupsRequest.
+ * \inmodule QtAwsElasticLoadBalancingv2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new SetSecurityGroupsRequestPrivate object.
- *
- * @param  action  ElasticLoadBalancingv2 action being performed.
- * @param  q       Pointer to this object's public SetSecurityGroupsRequest instance.
+ * Constructs a SetSecurityGroupsRequestPrivate object for ElasticLoadBalancingv2 \a action with,
+ * public implementation \a q.
  */
 SetSecurityGroupsRequestPrivate::SetSecurityGroupsRequestPrivate(
     const ElasticLoadBalancingv2Request::Action action, SetSecurityGroupsRequest * const q)
@@ -172,15 +161,10 @@ SetSecurityGroupsRequestPrivate::SetSecurityGroupsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SetSecurityGroupsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the SetSecurityGroupsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public SetSecurityGroupsRequest instance.
  */
 SetSecurityGroupsRequestPrivate::SetSecurityGroupsRequestPrivate(
     const SetSecurityGroupsRequestPrivate &other, SetSecurityGroupsRequest * const q)

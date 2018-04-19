@@ -27,10 +27,9 @@ namespace SWF {
 
 /*!
  * \class QtAws::SWF::CountPendingDecisionTasksRequest
- *
  * \brief The CountPendingDecisionTasksRequest class provides an interface for SWF CountPendingDecisionTasks requests.
  *
- * \ingroup SWF
+ * \inmodule QtAwsSWF
  *
  *  <fullname>Amazon Simple Workflow Service</fullname>
  * 
@@ -53,9 +52,7 @@ namespace SWF {
  */
 
 /*!
- * @brief  Constructs a new CountPendingDecisionTasksRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CountPendingDecisionTasksRequest::CountPendingDecisionTasksRequest(const CountPendingDecisionTasksRequest &other)
     : SWFRequest(new CountPendingDecisionTasksRequestPrivate(*other.d_func(), this))
@@ -64,7 +61,7 @@ CountPendingDecisionTasksRequest::CountPendingDecisionTasksRequest(const CountPe
 }
 
 /*!
- * @brief  Constructs a new CountPendingDecisionTasksRequest object.
+ * Constructs a CountPendingDecisionTasksRequest object.
  */
 CountPendingDecisionTasksRequest::CountPendingDecisionTasksRequest()
     : SWFRequest(new CountPendingDecisionTasksRequestPrivate(SWFRequest::CountPendingDecisionTasksAction, this))
@@ -82,14 +79,9 @@ bool CountPendingDecisionTasksRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CountPendingDecisionTasksResponse object.
+ * Returns a CountPendingDecisionTasksResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CountPendingDecisionTasksResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SWFClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CountPendingDecisionTasksRequest::response(QNetworkReply * const reply) const
 {
@@ -97,20 +89,17 @@ QtAws::Core::AwsAbstractResponse * CountPendingDecisionTasksRequest::response(QN
 }
 
 /*!
- * @internal
+ * \class QtAws::SWF::CountPendingDecisionTasksRequestPrivate
+ * \brief The CountPendingDecisionTasksRequestPrivate class provides private implementation for CountPendingDecisionTasksRequest.
+ * \internal
  *
- * @class  CountPendingDecisionTasksRequestPrivate
- *
- * @brief  Private implementation for CountPendingDecisionTasksRequest.
+ * \inmodule QtAwsSWF
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CountPendingDecisionTasksRequestPrivate object.
- *
- * @param  action  SWF action being performed.
- * @param  q       Pointer to this object's public CountPendingDecisionTasksRequest instance.
+ * Constructs a CountPendingDecisionTasksRequestPrivate object for SWF \a action with,
+ * public implementation \a q.
  */
 CountPendingDecisionTasksRequestPrivate::CountPendingDecisionTasksRequestPrivate(
     const SWFRequest::Action action, CountPendingDecisionTasksRequest * const q)
@@ -120,15 +109,10 @@ CountPendingDecisionTasksRequestPrivate::CountPendingDecisionTasksRequestPrivate
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CountPendingDecisionTasksRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CountPendingDecisionTasksRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CountPendingDecisionTasksRequest instance.
  */
 CountPendingDecisionTasksRequestPrivate::CountPendingDecisionTasksRequestPrivate(
     const CountPendingDecisionTasksRequestPrivate &other, CountPendingDecisionTasksRequest * const q)

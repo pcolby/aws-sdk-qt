@@ -27,10 +27,9 @@ namespace WorkMail {
 
 /*!
  * \class QtAws::WorkMail::CreateAliasRequest
- *
  * \brief The CreateAliasRequest class provides an interface for WorkMail CreateAlias requests.
  *
- * \ingroup WorkMail
+ * \inmodule QtAwsWorkMail
  *
  *  Amazon WorkMail is a secure, managed business email and calendaring service with support for existing desktop and mobile
  *  email clients. You can access your email, contacts, and calendars using Microsoft Outlook, your browser, or their native
@@ -70,9 +69,7 @@ namespace WorkMail {
  */
 
 /*!
- * @brief  Constructs a new CreateAliasRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateAliasRequest::CreateAliasRequest(const CreateAliasRequest &other)
     : WorkMailRequest(new CreateAliasRequestPrivate(*other.d_func(), this))
@@ -81,7 +78,7 @@ CreateAliasRequest::CreateAliasRequest(const CreateAliasRequest &other)
 }
 
 /*!
- * @brief  Constructs a new CreateAliasRequest object.
+ * Constructs a CreateAliasRequest object.
  */
 CreateAliasRequest::CreateAliasRequest()
     : WorkMailRequest(new CreateAliasRequestPrivate(WorkMailRequest::CreateAliasAction, this))
@@ -99,14 +96,9 @@ bool CreateAliasRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateAliasResponse object.
+ * Returns a CreateAliasResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateAliasResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WorkMailClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateAliasRequest::response(QNetworkReply * const reply) const
 {
@@ -114,20 +106,17 @@ QtAws::Core::AwsAbstractResponse * CreateAliasRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::WorkMail::CreateAliasRequestPrivate
+ * \brief The CreateAliasRequestPrivate class provides private implementation for CreateAliasRequest.
+ * \internal
  *
- * @class  CreateAliasRequestPrivate
- *
- * @brief  Private implementation for CreateAliasRequest.
+ * \inmodule QtAwsWorkMail
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateAliasRequestPrivate object.
- *
- * @param  action  WorkMail action being performed.
- * @param  q       Pointer to this object's public CreateAliasRequest instance.
+ * Constructs a CreateAliasRequestPrivate object for WorkMail \a action with,
+ * public implementation \a q.
  */
 CreateAliasRequestPrivate::CreateAliasRequestPrivate(
     const WorkMailRequest::Action action, CreateAliasRequest * const q)
@@ -137,15 +126,10 @@ CreateAliasRequestPrivate::CreateAliasRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateAliasRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateAliasRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateAliasRequest instance.
  */
 CreateAliasRequestPrivate::CreateAliasRequestPrivate(
     const CreateAliasRequestPrivate &other, CreateAliasRequest * const q)

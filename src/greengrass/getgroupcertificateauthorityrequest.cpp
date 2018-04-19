@@ -27,10 +27,9 @@ namespace Greengrass {
 
 /*!
  * \class QtAws::Greengrass::GetGroupCertificateAuthorityRequest
- *
  * \brief The GetGroupCertificateAuthorityRequest class provides an interface for Greengrass GetGroupCertificateAuthority requests.
  *
- * \ingroup Greengrass
+ * \inmodule QtAwsGreengrass
  *
  *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
  *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
@@ -40,9 +39,7 @@ namespace Greengrass {
  */
 
 /*!
- * @brief  Constructs a new GetGroupCertificateAuthorityRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetGroupCertificateAuthorityRequest::GetGroupCertificateAuthorityRequest(const GetGroupCertificateAuthorityRequest &other)
     : GreengrassRequest(new GetGroupCertificateAuthorityRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ GetGroupCertificateAuthorityRequest::GetGroupCertificateAuthorityRequest(const G
 }
 
 /*!
- * @brief  Constructs a new GetGroupCertificateAuthorityRequest object.
+ * Constructs a GetGroupCertificateAuthorityRequest object.
  */
 GetGroupCertificateAuthorityRequest::GetGroupCertificateAuthorityRequest()
     : GreengrassRequest(new GetGroupCertificateAuthorityRequestPrivate(GreengrassRequest::GetGroupCertificateAuthorityAction, this))
@@ -69,14 +66,9 @@ bool GetGroupCertificateAuthorityRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetGroupCertificateAuthorityResponse object.
+ * Returns a GetGroupCertificateAuthorityResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetGroupCertificateAuthorityResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GreengrassClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetGroupCertificateAuthorityRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * GetGroupCertificateAuthorityRequest::response
 }
 
 /*!
- * @internal
+ * \class QtAws::Greengrass::GetGroupCertificateAuthorityRequestPrivate
+ * \brief The GetGroupCertificateAuthorityRequestPrivate class provides private implementation for GetGroupCertificateAuthorityRequest.
+ * \internal
  *
- * @class  GetGroupCertificateAuthorityRequestPrivate
- *
- * @brief  Private implementation for GetGroupCertificateAuthorityRequest.
+ * \inmodule QtAwsGreengrass
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetGroupCertificateAuthorityRequestPrivate object.
- *
- * @param  action  Greengrass action being performed.
- * @param  q       Pointer to this object's public GetGroupCertificateAuthorityRequest instance.
+ * Constructs a GetGroupCertificateAuthorityRequestPrivate object for Greengrass \a action with,
+ * public implementation \a q.
  */
 GetGroupCertificateAuthorityRequestPrivate::GetGroupCertificateAuthorityRequestPrivate(
     const GreengrassRequest::Action action, GetGroupCertificateAuthorityRequest * const q)
@@ -107,15 +96,10 @@ GetGroupCertificateAuthorityRequestPrivate::GetGroupCertificateAuthorityRequestP
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetGroupCertificateAuthorityRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetGroupCertificateAuthorityRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetGroupCertificateAuthorityRequest instance.
  */
 GetGroupCertificateAuthorityRequestPrivate::GetGroupCertificateAuthorityRequestPrivate(
     const GetGroupCertificateAuthorityRequestPrivate &other, GetGroupCertificateAuthorityRequest * const q)

@@ -27,10 +27,9 @@ namespace ElastiCache {
 
 /*!
  * \class QtAws::ElastiCache::CreateCacheClusterRequest
- *
  * \brief The CreateCacheClusterRequest class provides an interface for ElastiCache CreateCacheCluster requests.
  *
- * \ingroup ElastiCache
+ * \inmodule QtAwsElastiCache
  *
  *  <fullname>Amazon ElastiCache</fullname>
  * 
@@ -51,9 +50,7 @@ namespace ElastiCache {
  */
 
 /*!
- * @brief  Constructs a new CreateCacheClusterRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateCacheClusterRequest::CreateCacheClusterRequest(const CreateCacheClusterRequest &other)
     : ElastiCacheRequest(new CreateCacheClusterRequestPrivate(*other.d_func(), this))
@@ -62,7 +59,7 @@ CreateCacheClusterRequest::CreateCacheClusterRequest(const CreateCacheClusterReq
 }
 
 /*!
- * @brief  Constructs a new CreateCacheClusterRequest object.
+ * Constructs a CreateCacheClusterRequest object.
  */
 CreateCacheClusterRequest::CreateCacheClusterRequest()
     : ElastiCacheRequest(new CreateCacheClusterRequestPrivate(ElastiCacheRequest::CreateCacheClusterAction, this))
@@ -80,14 +77,9 @@ bool CreateCacheClusterRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateCacheClusterResponse object.
+ * Returns a CreateCacheClusterResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateCacheClusterResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ElastiCacheClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateCacheClusterRequest::response(QNetworkReply * const reply) const
 {
@@ -95,20 +87,17 @@ QtAws::Core::AwsAbstractResponse * CreateCacheClusterRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::ElastiCache::CreateCacheClusterRequestPrivate
+ * \brief The CreateCacheClusterRequestPrivate class provides private implementation for CreateCacheClusterRequest.
+ * \internal
  *
- * @class  CreateCacheClusterRequestPrivate
- *
- * @brief  Private implementation for CreateCacheClusterRequest.
+ * \inmodule QtAwsElastiCache
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateCacheClusterRequestPrivate object.
- *
- * @param  action  ElastiCache action being performed.
- * @param  q       Pointer to this object's public CreateCacheClusterRequest instance.
+ * Constructs a CreateCacheClusterRequestPrivate object for ElastiCache \a action with,
+ * public implementation \a q.
  */
 CreateCacheClusterRequestPrivate::CreateCacheClusterRequestPrivate(
     const ElastiCacheRequest::Action action, CreateCacheClusterRequest * const q)
@@ -118,15 +107,10 @@ CreateCacheClusterRequestPrivate::CreateCacheClusterRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateCacheClusterRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateCacheClusterRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateCacheClusterRequest instance.
  */
 CreateCacheClusterRequestPrivate::CreateCacheClusterRequestPrivate(
     const CreateCacheClusterRequestPrivate &other, CreateCacheClusterRequest * const q)

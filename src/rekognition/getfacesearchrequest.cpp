@@ -27,10 +27,9 @@ namespace Rekognition {
 
 /*!
  * \class QtAws::Rekognition::GetFaceSearchRequest
- *
  * \brief The GetFaceSearchRequest class provides an interface for Rekognition GetFaceSearch requests.
  *
- * \ingroup Rekognition
+ * \inmodule QtAwsRekognition
  *
  *  This is the Amazon Rekognition API
  *
@@ -38,9 +37,7 @@ namespace Rekognition {
  */
 
 /*!
- * @brief  Constructs a new GetFaceSearchRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetFaceSearchRequest::GetFaceSearchRequest(const GetFaceSearchRequest &other)
     : RekognitionRequest(new GetFaceSearchRequestPrivate(*other.d_func(), this))
@@ -49,7 +46,7 @@ GetFaceSearchRequest::GetFaceSearchRequest(const GetFaceSearchRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetFaceSearchRequest object.
+ * Constructs a GetFaceSearchRequest object.
  */
 GetFaceSearchRequest::GetFaceSearchRequest()
     : RekognitionRequest(new GetFaceSearchRequestPrivate(RekognitionRequest::GetFaceSearchAction, this))
@@ -67,14 +64,9 @@ bool GetFaceSearchRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetFaceSearchResponse object.
+ * Returns a GetFaceSearchResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetFaceSearchResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RekognitionClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetFaceSearchRequest::response(QNetworkReply * const reply) const
 {
@@ -82,20 +74,17 @@ QtAws::Core::AwsAbstractResponse * GetFaceSearchRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::Rekognition::GetFaceSearchRequestPrivate
+ * \brief The GetFaceSearchRequestPrivate class provides private implementation for GetFaceSearchRequest.
+ * \internal
  *
- * @class  GetFaceSearchRequestPrivate
- *
- * @brief  Private implementation for GetFaceSearchRequest.
+ * \inmodule QtAwsRekognition
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetFaceSearchRequestPrivate object.
- *
- * @param  action  Rekognition action being performed.
- * @param  q       Pointer to this object's public GetFaceSearchRequest instance.
+ * Constructs a GetFaceSearchRequestPrivate object for Rekognition \a action with,
+ * public implementation \a q.
  */
 GetFaceSearchRequestPrivate::GetFaceSearchRequestPrivate(
     const RekognitionRequest::Action action, GetFaceSearchRequest * const q)
@@ -105,15 +94,10 @@ GetFaceSearchRequestPrivate::GetFaceSearchRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetFaceSearchRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetFaceSearchRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetFaceSearchRequest instance.
  */
 GetFaceSearchRequestPrivate::GetFaceSearchRequestPrivate(
     const GetFaceSearchRequestPrivate &other, GetFaceSearchRequest * const q)

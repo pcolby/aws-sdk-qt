@@ -27,10 +27,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::RebootDBInstanceRequest
- *
  * \brief The RebootDBInstanceRequest class provides an interface for RDS RebootDBInstance requests.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -101,9 +100,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new RebootDBInstanceRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 RebootDBInstanceRequest::RebootDBInstanceRequest(const RebootDBInstanceRequest &other)
     : RDSRequest(new RebootDBInstanceRequestPrivate(*other.d_func(), this))
@@ -112,7 +109,7 @@ RebootDBInstanceRequest::RebootDBInstanceRequest(const RebootDBInstanceRequest &
 }
 
 /*!
- * @brief  Constructs a new RebootDBInstanceRequest object.
+ * Constructs a RebootDBInstanceRequest object.
  */
 RebootDBInstanceRequest::RebootDBInstanceRequest()
     : RDSRequest(new RebootDBInstanceRequestPrivate(RDSRequest::RebootDBInstanceAction, this))
@@ -130,14 +127,9 @@ bool RebootDBInstanceRequest::isValid() const
 
 
 /*!
- * @brief  Construct an RebootDBInstanceResponse object.
+ * Returns a RebootDBInstanceResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An RebootDBInstanceResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RDSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * RebootDBInstanceRequest::response(QNetworkReply * const reply) const
 {
@@ -145,20 +137,17 @@ QtAws::Core::AwsAbstractResponse * RebootDBInstanceRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::RDS::RebootDBInstanceRequestPrivate
+ * \brief The RebootDBInstanceRequestPrivate class provides private implementation for RebootDBInstanceRequest.
+ * \internal
  *
- * @class  RebootDBInstanceRequestPrivate
- *
- * @brief  Private implementation for RebootDBInstanceRequest.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new RebootDBInstanceRequestPrivate object.
- *
- * @param  action  RDS action being performed.
- * @param  q       Pointer to this object's public RebootDBInstanceRequest instance.
+ * Constructs a RebootDBInstanceRequestPrivate object for RDS \a action with,
+ * public implementation \a q.
  */
 RebootDBInstanceRequestPrivate::RebootDBInstanceRequestPrivate(
     const RDSRequest::Action action, RebootDBInstanceRequest * const q)
@@ -168,15 +157,10 @@ RebootDBInstanceRequestPrivate::RebootDBInstanceRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RebootDBInstanceRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the RebootDBInstanceRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public RebootDBInstanceRequest instance.
  */
 RebootDBInstanceRequestPrivate::RebootDBInstanceRequestPrivate(
     const RebootDBInstanceRequestPrivate &other, RebootDBInstanceRequest * const q)

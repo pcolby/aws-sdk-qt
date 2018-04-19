@@ -27,10 +27,9 @@ namespace SimpleDB {
 
 /*!
  * \class QtAws::SimpleDB::GetAttributesRequest
- *
  * \brief The GetAttributesRequest class provides an interface for SimpleDB GetAttributes requests.
  *
- * \ingroup SimpleDB
+ * \inmodule QtAwsSimpleDB
  *
  *  Amazon SimpleDB is a web service providing the core database functions of data indexing and querying in the cloud. By
  *  offloading the time and effort associated with building and operating a web-scale database, SimpleDB provides developers
@@ -50,9 +49,7 @@ namespace SimpleDB {
  */
 
 /*!
- * @brief  Constructs a new GetAttributesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetAttributesRequest::GetAttributesRequest(const GetAttributesRequest &other)
     : SimpleDBRequest(new GetAttributesRequestPrivate(*other.d_func(), this))
@@ -61,7 +58,7 @@ GetAttributesRequest::GetAttributesRequest(const GetAttributesRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetAttributesRequest object.
+ * Constructs a GetAttributesRequest object.
  */
 GetAttributesRequest::GetAttributesRequest()
     : SimpleDBRequest(new GetAttributesRequestPrivate(SimpleDBRequest::GetAttributesAction, this))
@@ -79,14 +76,9 @@ bool GetAttributesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetAttributesResponse object.
+ * Returns a GetAttributesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetAttributesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SimpleDBClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetAttributesRequest::response(QNetworkReply * const reply) const
 {
@@ -94,20 +86,17 @@ QtAws::Core::AwsAbstractResponse * GetAttributesRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::SimpleDB::GetAttributesRequestPrivate
+ * \brief The GetAttributesRequestPrivate class provides private implementation for GetAttributesRequest.
+ * \internal
  *
- * @class  GetAttributesRequestPrivate
- *
- * @brief  Private implementation for GetAttributesRequest.
+ * \inmodule QtAwsSimpleDB
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetAttributesRequestPrivate object.
- *
- * @param  action  SimpleDB action being performed.
- * @param  q       Pointer to this object's public GetAttributesRequest instance.
+ * Constructs a GetAttributesRequestPrivate object for SimpleDB \a action with,
+ * public implementation \a q.
  */
 GetAttributesRequestPrivate::GetAttributesRequestPrivate(
     const SimpleDBRequest::Action action, GetAttributesRequest * const q)
@@ -117,15 +106,10 @@ GetAttributesRequestPrivate::GetAttributesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetAttributesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetAttributesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetAttributesRequest instance.
  */
 GetAttributesRequestPrivate::GetAttributesRequestPrivate(
     const GetAttributesRequestPrivate &other, GetAttributesRequest * const q)

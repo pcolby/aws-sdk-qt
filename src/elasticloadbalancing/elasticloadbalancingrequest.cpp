@@ -25,16 +25,50 @@ namespace ElasticLoadBalancing {
 
 /*!
  * \class QtAws::ElasticLoadBalancing::ElasticLoadBalancingRequest
- *
  * \brief The ElasticLoadBalancingRequest class provides an interface for ElasticLoadBalancing requests.
  *
- * \ingroup ElasticLoadBalancing
+ * \inmodule QtAwsElasticLoadBalancing
  */
 
 /*!
- * @brief  Constructs a new ElasticLoadBalancingRequest object.
+ * \enum ElasticLoadBalancingRequest::Action
  *
- * @param  action  The ElasticLoadBalancing action to request.
+ * This enum describes the actions that can be performed as ElasticLoadBalancing
+ * requests.
+ *
+ * \value AddTagsAction ElasticLoadBalancing AddTags action.
+ * \value ApplySecurityGroupsToLoadBalancerAction ElasticLoadBalancing ApplySecurityGroupsToLoadBalancer action.
+ * \value AttachLoadBalancerToSubnetsAction ElasticLoadBalancing AttachLoadBalancerToSubnets action.
+ * \value ConfigureHealthCheckAction ElasticLoadBalancing ConfigureHealthCheck action.
+ * \value CreateAppCookieStickinessPolicyAction ElasticLoadBalancing CreateAppCookieStickinessPolicy action.
+ * \value CreateLBCookieStickinessPolicyAction ElasticLoadBalancing CreateLBCookieStickinessPolicy action.
+ * \value CreateLoadBalancerAction ElasticLoadBalancing CreateLoadBalancer action.
+ * \value CreateLoadBalancerListenersAction ElasticLoadBalancing CreateLoadBalancerListeners action.
+ * \value CreateLoadBalancerPolicyAction ElasticLoadBalancing CreateLoadBalancerPolicy action.
+ * \value DeleteLoadBalancerAction ElasticLoadBalancing DeleteLoadBalancer action.
+ * \value DeleteLoadBalancerListenersAction ElasticLoadBalancing DeleteLoadBalancerListeners action.
+ * \value DeleteLoadBalancerPolicyAction ElasticLoadBalancing DeleteLoadBalancerPolicy action.
+ * \value DeregisterInstancesFromLoadBalancerAction ElasticLoadBalancing DeregisterInstancesFromLoadBalancer action.
+ * \value DescribeAccountLimitsAction ElasticLoadBalancing DescribeAccountLimits action.
+ * \value DescribeInstanceHealthAction ElasticLoadBalancing DescribeInstanceHealth action.
+ * \value DescribeLoadBalancerAttributesAction ElasticLoadBalancing DescribeLoadBalancerAttributes action.
+ * \value DescribeLoadBalancerPoliciesAction ElasticLoadBalancing DescribeLoadBalancerPolicies action.
+ * \value DescribeLoadBalancerPolicyTypesAction ElasticLoadBalancing DescribeLoadBalancerPolicyTypes action.
+ * \value DescribeLoadBalancersAction ElasticLoadBalancing DescribeLoadBalancers action.
+ * \value DescribeTagsAction ElasticLoadBalancing DescribeTags action.
+ * \value DetachLoadBalancerFromSubnetsAction ElasticLoadBalancing DetachLoadBalancerFromSubnets action.
+ * \value DisableAvailabilityZonesForLoadBalancerAction ElasticLoadBalancing DisableAvailabilityZonesForLoadBalancer action.
+ * \value EnableAvailabilityZonesForLoadBalancerAction ElasticLoadBalancing EnableAvailabilityZonesForLoadBalancer action.
+ * \value ModifyLoadBalancerAttributesAction ElasticLoadBalancing ModifyLoadBalancerAttributes action.
+ * \value RegisterInstancesWithLoadBalancerAction ElasticLoadBalancing RegisterInstancesWithLoadBalancer action.
+ * \value RemoveTagsAction ElasticLoadBalancing RemoveTags action.
+ * \value SetLoadBalancerListenerSSLCertificateAction ElasticLoadBalancing SetLoadBalancerListenerSSLCertificate action.
+ * \value SetLoadBalancerPoliciesForBackendServerAction ElasticLoadBalancing SetLoadBalancerPoliciesForBackendServer action.
+ * \value SetLoadBalancerPoliciesOfListenerAction ElasticLoadBalancing SetLoadBalancerPoliciesOfListener action.
+ */
+
+/*!
+ * Constructs a[n] ElasticLoadBalancingRequest object for ElasticLoadBalancing \a action.
  */
 ElasticLoadBalancingRequest::ElasticLoadBalancingRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new ElasticLoadBalancingRequestPrivate(action, this))
@@ -43,9 +77,7 @@ ElasticLoadBalancingRequest::ElasticLoadBalancingRequest(const Action action)
 }
 
 /*!
- * @brief  Constructs a new ElasticLoadBalancingRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ElasticLoadBalancingRequest::ElasticLoadBalancingRequest(const ElasticLoadBalancingRequest &other)
     : QtAws::Core::AwsAbstractRequest(new ElasticLoadBalancingRequestPrivate(*other.d_func(), this))
@@ -54,13 +86,7 @@ ElasticLoadBalancingRequest::ElasticLoadBalancingRequest(const ElasticLoadBalanc
 }
 
 /*!
- * @brief  Assignment operator.
- *
- * Assigns \a other to \c this.
- *
- * @param  other  Instance to copy.
- *
- * @return  A reference to \c this.
+ * Sets the ElasticLoadBalancingRequest object to be equal to \a other.
  */
 ElasticLoadBalancingRequest& ElasticLoadBalancingRequest::operator=(const ElasticLoadBalancingRequest &other)
 {
@@ -72,14 +98,10 @@ ElasticLoadBalancingRequest& ElasticLoadBalancingRequest::operator=(const Elasti
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ElasticLoadBalancingRequest object.
+ * Constructs aa ElasticLoadBalancingRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from ElasticLoadBalancingRequestPrivate.
- *
- * @param  d  Pointer to private data (aka D-Pointer).
  */
 ElasticLoadBalancingRequest::ElasticLoadBalancingRequest(ElasticLoadBalancingRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
@@ -87,7 +109,7 @@ ElasticLoadBalancingRequest::ElasticLoadBalancingRequest(ElasticLoadBalancingReq
 }
 
 /*!
- * \brief Returns the ElasticLoadBalancing action to be performed by this request.
+ * Returns the ElasticLoadBalancing action to be performed by this request.
  */
 ElasticLoadBalancingRequest::Action ElasticLoadBalancingRequest::action() const
 {
@@ -96,7 +118,7 @@ ElasticLoadBalancingRequest::Action ElasticLoadBalancingRequest::action() const
 }
 
 /*!
- * \brief Returns the name of the ElasticLoadBalancing action to be performed by this request.
+ * Returns the name of the ElasticLoadBalancing action to be performed by this request.
  */
 QString ElasticLoadBalancingRequest::actionString() const
 {
@@ -104,7 +126,7 @@ QString ElasticLoadBalancingRequest::actionString() const
 }
 
 /*!
- * \brief Returns the ElasticLoadBalancing API version implemented by this request.
+ * Returns the ElasticLoadBalancing API version implemented by this request.
  */
 QString ElasticLoadBalancingRequest::apiVersion() const
 {
@@ -113,7 +135,7 @@ QString ElasticLoadBalancingRequest::apiVersion() const
 }
 
 /*!
- * @brief Set the ElasticLoadBalancing action to be performed by this request to \a action.
+ * Sets the ElasticLoadBalancing action to be performed by this request to \a action.
  */
 void ElasticLoadBalancingRequest::setAction(const Action action)
 {
@@ -122,7 +144,7 @@ void ElasticLoadBalancingRequest::setAction(const Action action)
 }
 
 /*!
- * Set the ElasticLoadBalancing API version to include in this request to \a version.
+ * Sets the ElasticLoadBalancing API version to include in this request to \a version.
  */
 void ElasticLoadBalancingRequest::setApiVersion(const QString &version)
 {
@@ -131,7 +153,7 @@ void ElasticLoadBalancingRequest::setApiVersion(const QString &version)
 }
 
 /*!
- * \brief Returns \c true if this request is the same as \a other.
+ * Returns \c true if this request is equal to \a other; \c false otherwise.
  *
  * Note, most derived *Request classes do not need to provider their own
  * implementations of this function, since most such request classes rely on
@@ -146,8 +168,8 @@ bool ElasticLoadBalancingRequest::operator==(const ElasticLoadBalancingRequest &
             (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
-/*!
- * @brief  Check if \a queueName is a valid ElasticLoadBalancing queue name.
+/*
+ * Returns \c tue if \a queueName is a valid ElasticLoadBalancing queue name.
  *
  * @par From ElasticLoadBalancing FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
@@ -166,9 +188,8 @@ bool ElasticLoadBalancingRequest::operator==(const ElasticLoadBalancingRequest &
 }*/
 
 /*!
- * \brief Removes the a \a name parameter from this request.
- *
- * Returns the count of paramters removed (typically \c 0 or \c 1).
+ * Removes the a \a name parameter from the request, then returns the number of
+ * paramters removed (typically \c 0 or \c 1).
  */
 int ElasticLoadBalancingRequest::clearParameter(const QString &name)
 {
@@ -177,7 +198,7 @@ int ElasticLoadBalancingRequest::clearParameter(const QString &name)
 }
 
 /*!
- * \brief Removes all parameters from this request.
+ * Removes all parameters from the request.
  */
 void ElasticLoadBalancingRequest::clearParameters()
 {
@@ -186,7 +207,7 @@ void ElasticLoadBalancingRequest::clearParameters()
 }
 
 /*!
- * \brief Returns the value of the \n name pararemter if set, otherwise \a defaultValue.
+ * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
 QVariant ElasticLoadBalancingRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
@@ -195,7 +216,7 @@ QVariant ElasticLoadBalancingRequest::parameter(const QString &name, const QVari
 }
 
 /*!
- * \brief Returns a map of parameters included in this request.
+ * Returns the parameters included in this request.
  */
 const QVariantMap &ElasticLoadBalancingRequest::parameters() const
 {
@@ -204,7 +225,7 @@ const QVariantMap &ElasticLoadBalancingRequest::parameters() const
 }
 
 /*!
- * \brief Sets the \a name parameter to \a value.
+ * Sets the \a name parameter to \a value.
  */
 void ElasticLoadBalancingRequest::setParameter(const QString &name, const QVariant &value)
 {
@@ -213,9 +234,8 @@ void ElasticLoadBalancingRequest::setParameter(const QString &name, const QVaria
 }
 
 /*!
- * \brief Sets the map of paramters for this request to \a parameters.
- *
- * Any request parameters set previously will be discarded.
+ * Sets the paramters for this request to \a parameters. Any request parameters
+ * set previously will be discarded.
  */
 void ElasticLoadBalancingRequest::setParameters(const QVariantMap &parameters)
 {
@@ -224,11 +244,12 @@ void ElasticLoadBalancingRequest::setParameters(const QVariantMap &parameters)
 }
 
 /*!
- * \brief Returns a network request for this ElasticLoadBalancing request using the given \a endpoint.
+ * Returns a network request for the ElasticLoadBalancing request using the given
+ * \a endpoint.
  *
- * This ElasticLoadBalancing implementation builds request URLs by combining the common query
- * parameters (such as Action and Version), with any that have been added (via
- * setParameter) by child classes.
+ * This ElasticLoadBalancing implementation builds request URLs by combining the
+ * common query parameters (such as Action and Version), with any that have
+ * been added (via setParameter) by child classes.
  */
 QNetworkRequest ElasticLoadBalancingRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -239,17 +260,16 @@ QNetworkRequest ElasticLoadBalancingRequest::unsignedRequest(const QUrl &endpoin
 }
 
 /*!
+ * \class QtAws::ElasticLoadBalancing::ElasticLoadBalancingRequestPrivate
+ * \brief The ElasticLoadBalancingRequestPrivate class provides private implementation for ElasticLoadBalancingRequest.
  * \internal
  *
- * \class  ElasticLoadBalancingRequestPrivate
- *
- * \brief  Private implementation for ElasticLoadBalancingRequest.
+ * \inmodule QtAwsElasticLoadBalancing
  */
 
 /*!
- * \internal
- *
- * \brief Constructs a new ElasticLoadBalancingRequestPrivate object.
+ * Constructs a ElasticLoadBalancingRequestPrivate object for ElasticLoadBalancing \a action with,
+ * public implementation \a q.
  */
 ElasticLoadBalancingRequestPrivate::ElasticLoadBalancingRequestPrivate(const ElasticLoadBalancingRequest::Action action, ElasticLoadBalancingRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
@@ -258,9 +278,7 @@ ElasticLoadBalancingRequestPrivate::ElasticLoadBalancingRequestPrivate(const Ela
 }
 
 /*!
- * \internal
- *
- * \brief Constructs a new ElasticLoadBalancingRequestPrivate object, copying an existing one.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
@@ -276,15 +294,12 @@ ElasticLoadBalancingRequestPrivate::ElasticLoadBalancingRequestPrivate(const Ela
 }
 
 /*!
- * \internal
- *
- * \brief Returns a string representing \a action.
+ * Returns a string represention of \a action, or a null string if \a action is
+ * invalid.
  *
  * This function converts ElasticLoadBalancingRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the ElasticLoadBalancing service's Action
  * query parameters.
- *
- * @return A string representing \a action, or a null string if \a action is invalid.
  */
 QString ElasticLoadBalancingRequestPrivate::toString(const ElasticLoadBalancingRequest::Action &action)
 {

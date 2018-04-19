@@ -27,10 +27,9 @@ namespace AlexaForBusiness {
 
 /*!
  * \class QtAws::AlexaForBusiness::SearchProfilesRequest
- *
  * \brief The SearchProfilesRequest class provides an interface for AlexaForBusiness SearchProfiles requests.
  *
- * \ingroup AlexaForBusiness
+ * \inmodule QtAwsAlexaForBusiness
  *
  *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
  *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
@@ -42,9 +41,7 @@ namespace AlexaForBusiness {
  */
 
 /*!
- * @brief  Constructs a new SearchProfilesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 SearchProfilesRequest::SearchProfilesRequest(const SearchProfilesRequest &other)
     : AlexaForBusinessRequest(new SearchProfilesRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ SearchProfilesRequest::SearchProfilesRequest(const SearchProfilesRequest &other)
 }
 
 /*!
- * @brief  Constructs a new SearchProfilesRequest object.
+ * Constructs a SearchProfilesRequest object.
  */
 SearchProfilesRequest::SearchProfilesRequest()
     : AlexaForBusinessRequest(new SearchProfilesRequestPrivate(AlexaForBusinessRequest::SearchProfilesAction, this))
@@ -71,14 +68,9 @@ bool SearchProfilesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an SearchProfilesResponse object.
+ * Returns a SearchProfilesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An SearchProfilesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AlexaForBusinessClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * SearchProfilesRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * SearchProfilesRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::AlexaForBusiness::SearchProfilesRequestPrivate
+ * \brief The SearchProfilesRequestPrivate class provides private implementation for SearchProfilesRequest.
+ * \internal
  *
- * @class  SearchProfilesRequestPrivate
- *
- * @brief  Private implementation for SearchProfilesRequest.
+ * \inmodule QtAwsAlexaForBusiness
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new SearchProfilesRequestPrivate object.
- *
- * @param  action  AlexaForBusiness action being performed.
- * @param  q       Pointer to this object's public SearchProfilesRequest instance.
+ * Constructs a SearchProfilesRequestPrivate object for AlexaForBusiness \a action with,
+ * public implementation \a q.
  */
 SearchProfilesRequestPrivate::SearchProfilesRequestPrivate(
     const AlexaForBusinessRequest::Action action, SearchProfilesRequest * const q)
@@ -109,15 +98,10 @@ SearchProfilesRequestPrivate::SearchProfilesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SearchProfilesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the SearchProfilesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public SearchProfilesRequest instance.
  */
 SearchProfilesRequestPrivate::SearchProfilesRequestPrivate(
     const SearchProfilesRequestPrivate &other, SearchProfilesRequest * const q)

@@ -27,10 +27,9 @@ namespace AppSync {
 
 /*!
  * \class QtAws::AppSync::GetResolverRequest
- *
  * \brief The GetResolverRequest class provides an interface for AppSync GetResolver requests.
  *
- * \ingroup AppSync
+ * \inmodule QtAwsAppSync
  *
  *  AWS AppSync provides API actions for creating and interacting with data sources using GraphQL from your
  *
@@ -38,9 +37,7 @@ namespace AppSync {
  */
 
 /*!
- * @brief  Constructs a new GetResolverRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetResolverRequest::GetResolverRequest(const GetResolverRequest &other)
     : AppSyncRequest(new GetResolverRequestPrivate(*other.d_func(), this))
@@ -49,7 +46,7 @@ GetResolverRequest::GetResolverRequest(const GetResolverRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetResolverRequest object.
+ * Constructs a GetResolverRequest object.
  */
 GetResolverRequest::GetResolverRequest()
     : AppSyncRequest(new GetResolverRequestPrivate(AppSyncRequest::GetResolverAction, this))
@@ -67,14 +64,9 @@ bool GetResolverRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetResolverResponse object.
+ * Returns a GetResolverResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetResolverResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AppSyncClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetResolverRequest::response(QNetworkReply * const reply) const
 {
@@ -82,20 +74,17 @@ QtAws::Core::AwsAbstractResponse * GetResolverRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::AppSync::GetResolverRequestPrivate
+ * \brief The GetResolverRequestPrivate class provides private implementation for GetResolverRequest.
+ * \internal
  *
- * @class  GetResolverRequestPrivate
- *
- * @brief  Private implementation for GetResolverRequest.
+ * \inmodule QtAwsAppSync
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetResolverRequestPrivate object.
- *
- * @param  action  AppSync action being performed.
- * @param  q       Pointer to this object's public GetResolverRequest instance.
+ * Constructs a GetResolverRequestPrivate object for AppSync \a action with,
+ * public implementation \a q.
  */
 GetResolverRequestPrivate::GetResolverRequestPrivate(
     const AppSyncRequest::Action action, GetResolverRequest * const q)
@@ -105,15 +94,10 @@ GetResolverRequestPrivate::GetResolverRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetResolverRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetResolverRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetResolverRequest instance.
  */
 GetResolverRequestPrivate::GetResolverRequestPrivate(
     const GetResolverRequestPrivate &other, GetResolverRequest * const q)

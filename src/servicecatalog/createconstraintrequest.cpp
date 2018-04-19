@@ -27,10 +27,9 @@ namespace ServiceCatalog {
 
 /*!
  * \class QtAws::ServiceCatalog::CreateConstraintRequest
- *
  * \brief The CreateConstraintRequest class provides an interface for ServiceCatalog CreateConstraint requests.
  *
- * \ingroup ServiceCatalog
+ * \inmodule QtAwsServiceCatalog
  *
  *  <fullname>AWS Service Catalog</fullname>
  * 
@@ -43,9 +42,7 @@ namespace ServiceCatalog {
  */
 
 /*!
- * @brief  Constructs a new CreateConstraintRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateConstraintRequest::CreateConstraintRequest(const CreateConstraintRequest &other)
     : ServiceCatalogRequest(new CreateConstraintRequestPrivate(*other.d_func(), this))
@@ -54,7 +51,7 @@ CreateConstraintRequest::CreateConstraintRequest(const CreateConstraintRequest &
 }
 
 /*!
- * @brief  Constructs a new CreateConstraintRequest object.
+ * Constructs a CreateConstraintRequest object.
  */
 CreateConstraintRequest::CreateConstraintRequest()
     : ServiceCatalogRequest(new CreateConstraintRequestPrivate(ServiceCatalogRequest::CreateConstraintAction, this))
@@ -72,14 +69,9 @@ bool CreateConstraintRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateConstraintResponse object.
+ * Returns a CreateConstraintResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateConstraintResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ServiceCatalogClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateConstraintRequest::response(QNetworkReply * const reply) const
 {
@@ -87,20 +79,17 @@ QtAws::Core::AwsAbstractResponse * CreateConstraintRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::ServiceCatalog::CreateConstraintRequestPrivate
+ * \brief The CreateConstraintRequestPrivate class provides private implementation for CreateConstraintRequest.
+ * \internal
  *
- * @class  CreateConstraintRequestPrivate
- *
- * @brief  Private implementation for CreateConstraintRequest.
+ * \inmodule QtAwsServiceCatalog
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateConstraintRequestPrivate object.
- *
- * @param  action  ServiceCatalog action being performed.
- * @param  q       Pointer to this object's public CreateConstraintRequest instance.
+ * Constructs a CreateConstraintRequestPrivate object for ServiceCatalog \a action with,
+ * public implementation \a q.
  */
 CreateConstraintRequestPrivate::CreateConstraintRequestPrivate(
     const ServiceCatalogRequest::Action action, CreateConstraintRequest * const q)
@@ -110,15 +99,10 @@ CreateConstraintRequestPrivate::CreateConstraintRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateConstraintRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateConstraintRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateConstraintRequest instance.
  */
 CreateConstraintRequestPrivate::CreateConstraintRequestPrivate(
     const CreateConstraintRequestPrivate &other, CreateConstraintRequest * const q)

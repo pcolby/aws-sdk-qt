@@ -27,10 +27,9 @@ namespace DatabaseMigrationService {
 
 /*!
  * \class QtAws::DatabaseMigrationService::ImportCertificateRequest
- *
  * \brief The ImportCertificateRequest class provides an interface for DatabaseMigrationService ImportCertificate requests.
  *
- * \ingroup DatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigrationService
  *
  *  <fullname>AWS Database Migration Service</fullname>
  * 
@@ -48,9 +47,7 @@ namespace DatabaseMigrationService {
  */
 
 /*!
- * @brief  Constructs a new ImportCertificateRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ImportCertificateRequest::ImportCertificateRequest(const ImportCertificateRequest &other)
     : DatabaseMigrationServiceRequest(new ImportCertificateRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ ImportCertificateRequest::ImportCertificateRequest(const ImportCertificateReques
 }
 
 /*!
- * @brief  Constructs a new ImportCertificateRequest object.
+ * Constructs a ImportCertificateRequest object.
  */
 ImportCertificateRequest::ImportCertificateRequest()
     : DatabaseMigrationServiceRequest(new ImportCertificateRequestPrivate(DatabaseMigrationServiceRequest::ImportCertificateAction, this))
@@ -77,14 +74,9 @@ bool ImportCertificateRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ImportCertificateResponse object.
+ * Returns a ImportCertificateResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ImportCertificateResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DatabaseMigrationServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ImportCertificateRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * ImportCertificateRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::DatabaseMigrationService::ImportCertificateRequestPrivate
+ * \brief The ImportCertificateRequestPrivate class provides private implementation for ImportCertificateRequest.
+ * \internal
  *
- * @class  ImportCertificateRequestPrivate
- *
- * @brief  Private implementation for ImportCertificateRequest.
+ * \inmodule QtAwsDatabaseMigrationService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ImportCertificateRequestPrivate object.
- *
- * @param  action  DatabaseMigrationService action being performed.
- * @param  q       Pointer to this object's public ImportCertificateRequest instance.
+ * Constructs a ImportCertificateRequestPrivate object for DatabaseMigrationService \a action with,
+ * public implementation \a q.
  */
 ImportCertificateRequestPrivate::ImportCertificateRequestPrivate(
     const DatabaseMigrationServiceRequest::Action action, ImportCertificateRequest * const q)
@@ -115,15 +104,10 @@ ImportCertificateRequestPrivate::ImportCertificateRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ImportCertificateRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ImportCertificateRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ImportCertificateRequest instance.
  */
 ImportCertificateRequestPrivate::ImportCertificateRequestPrivate(
     const ImportCertificateRequestPrivate &other, ImportCertificateRequest * const q)

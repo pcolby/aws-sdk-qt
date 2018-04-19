@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::AttachVolumeRequest
- *
  * \brief The AttachVolumeRequest class provides an interface for EC2 AttachVolume requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new AttachVolumeRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AttachVolumeRequest::AttachVolumeRequest(const AttachVolumeRequest &other)
     : EC2Request(new AttachVolumeRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ AttachVolumeRequest::AttachVolumeRequest(const AttachVolumeRequest &other)
 }
 
 /*!
- * @brief  Constructs a new AttachVolumeRequest object.
+ * Constructs a AttachVolumeRequest object.
  */
 AttachVolumeRequest::AttachVolumeRequest()
     : EC2Request(new AttachVolumeRequestPrivate(EC2Request::AttachVolumeAction, this))
@@ -70,14 +67,9 @@ bool AttachVolumeRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AttachVolumeResponse object.
+ * Returns a AttachVolumeResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AttachVolumeResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AttachVolumeRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * AttachVolumeRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::AttachVolumeRequestPrivate
+ * \brief The AttachVolumeRequestPrivate class provides private implementation for AttachVolumeRequest.
+ * \internal
  *
- * @class  AttachVolumeRequestPrivate
- *
- * @brief  Private implementation for AttachVolumeRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AttachVolumeRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public AttachVolumeRequest instance.
+ * Constructs a AttachVolumeRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 AttachVolumeRequestPrivate::AttachVolumeRequestPrivate(
     const EC2Request::Action action, AttachVolumeRequest * const q)
@@ -108,15 +97,10 @@ AttachVolumeRequestPrivate::AttachVolumeRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AttachVolumeRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AttachVolumeRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AttachVolumeRequest instance.
  */
 AttachVolumeRequestPrivate::AttachVolumeRequestPrivate(
     const AttachVolumeRequestPrivate &other, AttachVolumeRequest * const q)

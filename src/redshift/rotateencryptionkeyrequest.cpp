@@ -27,10 +27,9 @@ namespace Redshift {
 
 /*!
  * \class QtAws::Redshift::RotateEncryptionKeyRequest
- *
  * \brief The RotateEncryptionKeyRequest class provides an interface for Redshift RotateEncryptionKey requests.
  *
- * \ingroup Redshift
+ * \inmodule QtAwsRedshift
  *
  *  <fullname>Amazon Redshift</fullname>
  * 
@@ -67,9 +66,7 @@ namespace Redshift {
  */
 
 /*!
- * @brief  Constructs a new RotateEncryptionKeyRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 RotateEncryptionKeyRequest::RotateEncryptionKeyRequest(const RotateEncryptionKeyRequest &other)
     : RedshiftRequest(new RotateEncryptionKeyRequestPrivate(*other.d_func(), this))
@@ -78,7 +75,7 @@ RotateEncryptionKeyRequest::RotateEncryptionKeyRequest(const RotateEncryptionKey
 }
 
 /*!
- * @brief  Constructs a new RotateEncryptionKeyRequest object.
+ * Constructs a RotateEncryptionKeyRequest object.
  */
 RotateEncryptionKeyRequest::RotateEncryptionKeyRequest()
     : RedshiftRequest(new RotateEncryptionKeyRequestPrivate(RedshiftRequest::RotateEncryptionKeyAction, this))
@@ -96,14 +93,9 @@ bool RotateEncryptionKeyRequest::isValid() const
 
 
 /*!
- * @brief  Construct an RotateEncryptionKeyResponse object.
+ * Returns a RotateEncryptionKeyResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An RotateEncryptionKeyResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RedshiftClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * RotateEncryptionKeyRequest::response(QNetworkReply * const reply) const
 {
@@ -111,20 +103,17 @@ QtAws::Core::AwsAbstractResponse * RotateEncryptionKeyRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::Redshift::RotateEncryptionKeyRequestPrivate
+ * \brief The RotateEncryptionKeyRequestPrivate class provides private implementation for RotateEncryptionKeyRequest.
+ * \internal
  *
- * @class  RotateEncryptionKeyRequestPrivate
- *
- * @brief  Private implementation for RotateEncryptionKeyRequest.
+ * \inmodule QtAwsRedshift
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new RotateEncryptionKeyRequestPrivate object.
- *
- * @param  action  Redshift action being performed.
- * @param  q       Pointer to this object's public RotateEncryptionKeyRequest instance.
+ * Constructs a RotateEncryptionKeyRequestPrivate object for Redshift \a action with,
+ * public implementation \a q.
  */
 RotateEncryptionKeyRequestPrivate::RotateEncryptionKeyRequestPrivate(
     const RedshiftRequest::Action action, RotateEncryptionKeyRequest * const q)
@@ -134,15 +123,10 @@ RotateEncryptionKeyRequestPrivate::RotateEncryptionKeyRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RotateEncryptionKeyRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the RotateEncryptionKeyRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public RotateEncryptionKeyRequest instance.
  */
 RotateEncryptionKeyRequestPrivate::RotateEncryptionKeyRequestPrivate(
     const RotateEncryptionKeyRequestPrivate &other, RotateEncryptionKeyRequest * const q)

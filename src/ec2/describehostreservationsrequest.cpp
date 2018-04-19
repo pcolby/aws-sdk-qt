@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DescribeHostReservationsRequest
- *
  * \brief The DescribeHostReservationsRequest class provides an interface for EC2 DescribeHostReservations requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DescribeHostReservationsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeHostReservationsRequest::DescribeHostReservationsRequest(const DescribeHostReservationsRequest &other)
     : EC2Request(new DescribeHostReservationsRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ DescribeHostReservationsRequest::DescribeHostReservationsRequest(const DescribeH
 }
 
 /*!
- * @brief  Constructs a new DescribeHostReservationsRequest object.
+ * Constructs a DescribeHostReservationsRequest object.
  */
 DescribeHostReservationsRequest::DescribeHostReservationsRequest()
     : EC2Request(new DescribeHostReservationsRequestPrivate(EC2Request::DescribeHostReservationsAction, this))
@@ -70,14 +67,9 @@ bool DescribeHostReservationsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeHostReservationsResponse object.
+ * Returns a DescribeHostReservationsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeHostReservationsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeHostReservationsRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * DescribeHostReservationsRequest::response(QNe
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::DescribeHostReservationsRequestPrivate
+ * \brief The DescribeHostReservationsRequestPrivate class provides private implementation for DescribeHostReservationsRequest.
+ * \internal
  *
- * @class  DescribeHostReservationsRequestPrivate
- *
- * @brief  Private implementation for DescribeHostReservationsRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeHostReservationsRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public DescribeHostReservationsRequest instance.
+ * Constructs a DescribeHostReservationsRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 DescribeHostReservationsRequestPrivate::DescribeHostReservationsRequestPrivate(
     const EC2Request::Action action, DescribeHostReservationsRequest * const q)
@@ -108,15 +97,10 @@ DescribeHostReservationsRequestPrivate::DescribeHostReservationsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeHostReservationsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeHostReservationsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeHostReservationsRequest instance.
  */
 DescribeHostReservationsRequestPrivate::DescribeHostReservationsRequestPrivate(
     const DescribeHostReservationsRequestPrivate &other, DescribeHostReservationsRequest * const q)

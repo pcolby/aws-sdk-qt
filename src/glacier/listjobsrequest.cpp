@@ -27,10 +27,9 @@ namespace Glacier {
 
 /*!
  * \class QtAws::Glacier::ListJobsRequest
- *
  * \brief The ListJobsRequest class provides an interface for Glacier ListJobs requests.
  *
- * \ingroup Glacier
+ * \inmodule QtAwsGlacier
  *
  *  Amazon Glacier is a storage solution for "cold
  * 
@@ -75,9 +74,7 @@ namespace Glacier {
  */
 
 /*!
- * @brief  Constructs a new ListJobsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListJobsRequest::ListJobsRequest(const ListJobsRequest &other)
     : GlacierRequest(new ListJobsRequestPrivate(*other.d_func(), this))
@@ -86,7 +83,7 @@ ListJobsRequest::ListJobsRequest(const ListJobsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ListJobsRequest object.
+ * Constructs a ListJobsRequest object.
  */
 ListJobsRequest::ListJobsRequest()
     : GlacierRequest(new ListJobsRequestPrivate(GlacierRequest::ListJobsAction, this))
@@ -104,14 +101,9 @@ bool ListJobsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListJobsResponse object.
+ * Returns a ListJobsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListJobsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GlacierClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListJobsRequest::response(QNetworkReply * const reply) const
 {
@@ -119,20 +111,17 @@ QtAws::Core::AwsAbstractResponse * ListJobsRequest::response(QNetworkReply * con
 }
 
 /*!
- * @internal
+ * \class QtAws::Glacier::ListJobsRequestPrivate
+ * \brief The ListJobsRequestPrivate class provides private implementation for ListJobsRequest.
+ * \internal
  *
- * @class  ListJobsRequestPrivate
- *
- * @brief  Private implementation for ListJobsRequest.
+ * \inmodule QtAwsGlacier
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListJobsRequestPrivate object.
- *
- * @param  action  Glacier action being performed.
- * @param  q       Pointer to this object's public ListJobsRequest instance.
+ * Constructs a ListJobsRequestPrivate object for Glacier \a action with,
+ * public implementation \a q.
  */
 ListJobsRequestPrivate::ListJobsRequestPrivate(
     const GlacierRequest::Action action, ListJobsRequest * const q)
@@ -142,15 +131,10 @@ ListJobsRequestPrivate::ListJobsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListJobsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListJobsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListJobsRequest instance.
  */
 ListJobsRequestPrivate::ListJobsRequestPrivate(
     const ListJobsRequestPrivate &other, ListJobsRequest * const q)

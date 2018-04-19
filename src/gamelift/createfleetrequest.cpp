@@ -27,10 +27,9 @@ namespace GameLift {
 
 /*!
  * \class QtAws::GameLift::CreateFleetRequest
- *
  * \brief The CreateFleetRequest class provides an interface for GameLift CreateFleet requests.
  *
- * \ingroup GameLift
+ * \inmodule QtAwsGameLift
  *
  *  <fullname>Amazon GameLift Service</fullname>
  * 
@@ -473,9 +472,7 @@ namespace GameLift {
  */
 
 /*!
- * @brief  Constructs a new CreateFleetRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateFleetRequest::CreateFleetRequest(const CreateFleetRequest &other)
     : GameLiftRequest(new CreateFleetRequestPrivate(*other.d_func(), this))
@@ -484,7 +481,7 @@ CreateFleetRequest::CreateFleetRequest(const CreateFleetRequest &other)
 }
 
 /*!
- * @brief  Constructs a new CreateFleetRequest object.
+ * Constructs a CreateFleetRequest object.
  */
 CreateFleetRequest::CreateFleetRequest()
     : GameLiftRequest(new CreateFleetRequestPrivate(GameLiftRequest::CreateFleetAction, this))
@@ -502,14 +499,9 @@ bool CreateFleetRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateFleetResponse object.
+ * Returns a CreateFleetResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateFleetResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GameLiftClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateFleetRequest::response(QNetworkReply * const reply) const
 {
@@ -517,20 +509,17 @@ QtAws::Core::AwsAbstractResponse * CreateFleetRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::GameLift::CreateFleetRequestPrivate
+ * \brief The CreateFleetRequestPrivate class provides private implementation for CreateFleetRequest.
+ * \internal
  *
- * @class  CreateFleetRequestPrivate
- *
- * @brief  Private implementation for CreateFleetRequest.
+ * \inmodule QtAwsGameLift
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateFleetRequestPrivate object.
- *
- * @param  action  GameLift action being performed.
- * @param  q       Pointer to this object's public CreateFleetRequest instance.
+ * Constructs a CreateFleetRequestPrivate object for GameLift \a action with,
+ * public implementation \a q.
  */
 CreateFleetRequestPrivate::CreateFleetRequestPrivate(
     const GameLiftRequest::Action action, CreateFleetRequest * const q)
@@ -540,15 +529,10 @@ CreateFleetRequestPrivate::CreateFleetRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateFleetRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateFleetRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateFleetRequest instance.
  */
 CreateFleetRequestPrivate::CreateFleetRequestPrivate(
     const CreateFleetRequestPrivate &other, CreateFleetRequest * const q)

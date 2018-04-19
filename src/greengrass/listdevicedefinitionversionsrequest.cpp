@@ -27,10 +27,9 @@ namespace Greengrass {
 
 /*!
  * \class QtAws::Greengrass::ListDeviceDefinitionVersionsRequest
- *
  * \brief The ListDeviceDefinitionVersionsRequest class provides an interface for Greengrass ListDeviceDefinitionVersions requests.
  *
- * \ingroup Greengrass
+ * \inmodule QtAwsGreengrass
  *
  *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
  *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
@@ -40,9 +39,7 @@ namespace Greengrass {
  */
 
 /*!
- * @brief  Constructs a new ListDeviceDefinitionVersionsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListDeviceDefinitionVersionsRequest::ListDeviceDefinitionVersionsRequest(const ListDeviceDefinitionVersionsRequest &other)
     : GreengrassRequest(new ListDeviceDefinitionVersionsRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ ListDeviceDefinitionVersionsRequest::ListDeviceDefinitionVersionsRequest(const L
 }
 
 /*!
- * @brief  Constructs a new ListDeviceDefinitionVersionsRequest object.
+ * Constructs a ListDeviceDefinitionVersionsRequest object.
  */
 ListDeviceDefinitionVersionsRequest::ListDeviceDefinitionVersionsRequest()
     : GreengrassRequest(new ListDeviceDefinitionVersionsRequestPrivate(GreengrassRequest::ListDeviceDefinitionVersionsAction, this))
@@ -69,14 +66,9 @@ bool ListDeviceDefinitionVersionsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListDeviceDefinitionVersionsResponse object.
+ * Returns a ListDeviceDefinitionVersionsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListDeviceDefinitionVersionsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GreengrassClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListDeviceDefinitionVersionsRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * ListDeviceDefinitionVersionsRequest::response
 }
 
 /*!
- * @internal
+ * \class QtAws::Greengrass::ListDeviceDefinitionVersionsRequestPrivate
+ * \brief The ListDeviceDefinitionVersionsRequestPrivate class provides private implementation for ListDeviceDefinitionVersionsRequest.
+ * \internal
  *
- * @class  ListDeviceDefinitionVersionsRequestPrivate
- *
- * @brief  Private implementation for ListDeviceDefinitionVersionsRequest.
+ * \inmodule QtAwsGreengrass
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListDeviceDefinitionVersionsRequestPrivate object.
- *
- * @param  action  Greengrass action being performed.
- * @param  q       Pointer to this object's public ListDeviceDefinitionVersionsRequest instance.
+ * Constructs a ListDeviceDefinitionVersionsRequestPrivate object for Greengrass \a action with,
+ * public implementation \a q.
  */
 ListDeviceDefinitionVersionsRequestPrivate::ListDeviceDefinitionVersionsRequestPrivate(
     const GreengrassRequest::Action action, ListDeviceDefinitionVersionsRequest * const q)
@@ -107,15 +96,10 @@ ListDeviceDefinitionVersionsRequestPrivate::ListDeviceDefinitionVersionsRequestP
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListDeviceDefinitionVersionsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListDeviceDefinitionVersionsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListDeviceDefinitionVersionsRequest instance.
  */
 ListDeviceDefinitionVersionsRequestPrivate::ListDeviceDefinitionVersionsRequestPrivate(
     const ListDeviceDefinitionVersionsRequestPrivate &other, ListDeviceDefinitionVersionsRequest * const q)

@@ -27,10 +27,9 @@ namespace Redshift {
 
 /*!
  * \class QtAws::Redshift::CreateTagsRequest
- *
  * \brief The CreateTagsRequest class provides an interface for Redshift CreateTags requests.
  *
- * \ingroup Redshift
+ * \inmodule QtAwsRedshift
  *
  *  <fullname>Amazon Redshift</fullname>
  * 
@@ -67,9 +66,7 @@ namespace Redshift {
  */
 
 /*!
- * @brief  Constructs a new CreateTagsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateTagsRequest::CreateTagsRequest(const CreateTagsRequest &other)
     : RedshiftRequest(new CreateTagsRequestPrivate(*other.d_func(), this))
@@ -78,7 +75,7 @@ CreateTagsRequest::CreateTagsRequest(const CreateTagsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new CreateTagsRequest object.
+ * Constructs a CreateTagsRequest object.
  */
 CreateTagsRequest::CreateTagsRequest()
     : RedshiftRequest(new CreateTagsRequestPrivate(RedshiftRequest::CreateTagsAction, this))
@@ -96,14 +93,9 @@ bool CreateTagsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateTagsResponse object.
+ * Returns a CreateTagsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateTagsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RedshiftClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateTagsRequest::response(QNetworkReply * const reply) const
 {
@@ -111,20 +103,17 @@ QtAws::Core::AwsAbstractResponse * CreateTagsRequest::response(QNetworkReply * c
 }
 
 /*!
- * @internal
+ * \class QtAws::Redshift::CreateTagsRequestPrivate
+ * \brief The CreateTagsRequestPrivate class provides private implementation for CreateTagsRequest.
+ * \internal
  *
- * @class  CreateTagsRequestPrivate
- *
- * @brief  Private implementation for CreateTagsRequest.
+ * \inmodule QtAwsRedshift
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateTagsRequestPrivate object.
- *
- * @param  action  Redshift action being performed.
- * @param  q       Pointer to this object's public CreateTagsRequest instance.
+ * Constructs a CreateTagsRequestPrivate object for Redshift \a action with,
+ * public implementation \a q.
  */
 CreateTagsRequestPrivate::CreateTagsRequestPrivate(
     const RedshiftRequest::Action action, CreateTagsRequest * const q)
@@ -134,15 +123,10 @@ CreateTagsRequestPrivate::CreateTagsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateTagsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateTagsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateTagsRequest instance.
  */
 CreateTagsRequestPrivate::CreateTagsRequestPrivate(
     const CreateTagsRequestPrivate &other, CreateTagsRequest * const q)

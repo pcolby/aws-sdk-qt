@@ -27,19 +27,16 @@ namespace SMS {
 
 /*!
  * \class QtAws::SMS::GetReplicationRunsRequest
- *
  * \brief The GetReplicationRunsRequest class provides an interface for SMS GetReplicationRuns requests.
  *
- * \ingroup SMS
+ * \inmodule QtAwsSMS
  *
  *
  * \sa SMSClient::getReplicationRuns
  */
 
 /*!
- * @brief  Constructs a new GetReplicationRunsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetReplicationRunsRequest::GetReplicationRunsRequest(const GetReplicationRunsRequest &other)
     : SMSRequest(new GetReplicationRunsRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ GetReplicationRunsRequest::GetReplicationRunsRequest(const GetReplicationRunsReq
 }
 
 /*!
- * @brief  Constructs a new GetReplicationRunsRequest object.
+ * Constructs a GetReplicationRunsRequest object.
  */
 GetReplicationRunsRequest::GetReplicationRunsRequest()
     : SMSRequest(new GetReplicationRunsRequestPrivate(SMSRequest::GetReplicationRunsAction, this))
@@ -66,14 +63,9 @@ bool GetReplicationRunsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetReplicationRunsResponse object.
+ * Returns a GetReplicationRunsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetReplicationRunsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SMSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetReplicationRunsRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * GetReplicationRunsRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::SMS::GetReplicationRunsRequestPrivate
+ * \brief The GetReplicationRunsRequestPrivate class provides private implementation for GetReplicationRunsRequest.
+ * \internal
  *
- * @class  GetReplicationRunsRequestPrivate
- *
- * @brief  Private implementation for GetReplicationRunsRequest.
+ * \inmodule QtAwsSMS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetReplicationRunsRequestPrivate object.
- *
- * @param  action  SMS action being performed.
- * @param  q       Pointer to this object's public GetReplicationRunsRequest instance.
+ * Constructs a GetReplicationRunsRequestPrivate object for SMS \a action with,
+ * public implementation \a q.
  */
 GetReplicationRunsRequestPrivate::GetReplicationRunsRequestPrivate(
     const SMSRequest::Action action, GetReplicationRunsRequest * const q)
@@ -104,15 +93,10 @@ GetReplicationRunsRequestPrivate::GetReplicationRunsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetReplicationRunsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetReplicationRunsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetReplicationRunsRequest instance.
  */
 GetReplicationRunsRequestPrivate::GetReplicationRunsRequestPrivate(
     const GetReplicationRunsRequestPrivate &other, GetReplicationRunsRequest * const q)

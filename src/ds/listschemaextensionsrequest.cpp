@@ -27,10 +27,9 @@ namespace DirectoryService {
 
 /*!
  * \class QtAws::DirectoryService::ListSchemaExtensionsRequest
- *
  * \brief The ListSchemaExtensionsRequest class provides an interface for DirectoryService ListSchemaExtensions requests.
  *
- * \ingroup DirectoryService
+ * \inmodule QtAwsDirectoryService
  *
  *  <fullname>AWS Directory Service</fullname>
  * 
@@ -51,9 +50,7 @@ namespace DirectoryService {
  */
 
 /*!
- * @brief  Constructs a new ListSchemaExtensionsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListSchemaExtensionsRequest::ListSchemaExtensionsRequest(const ListSchemaExtensionsRequest &other)
     : DirectoryServiceRequest(new ListSchemaExtensionsRequestPrivate(*other.d_func(), this))
@@ -62,7 +59,7 @@ ListSchemaExtensionsRequest::ListSchemaExtensionsRequest(const ListSchemaExtensi
 }
 
 /*!
- * @brief  Constructs a new ListSchemaExtensionsRequest object.
+ * Constructs a ListSchemaExtensionsRequest object.
  */
 ListSchemaExtensionsRequest::ListSchemaExtensionsRequest()
     : DirectoryServiceRequest(new ListSchemaExtensionsRequestPrivate(DirectoryServiceRequest::ListSchemaExtensionsAction, this))
@@ -80,14 +77,9 @@ bool ListSchemaExtensionsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListSchemaExtensionsResponse object.
+ * Returns a ListSchemaExtensionsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListSchemaExtensionsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DirectoryServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListSchemaExtensionsRequest::response(QNetworkReply * const reply) const
 {
@@ -95,20 +87,17 @@ QtAws::Core::AwsAbstractResponse * ListSchemaExtensionsRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::DirectoryService::ListSchemaExtensionsRequestPrivate
+ * \brief The ListSchemaExtensionsRequestPrivate class provides private implementation for ListSchemaExtensionsRequest.
+ * \internal
  *
- * @class  ListSchemaExtensionsRequestPrivate
- *
- * @brief  Private implementation for ListSchemaExtensionsRequest.
+ * \inmodule QtAwsDirectoryService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListSchemaExtensionsRequestPrivate object.
- *
- * @param  action  DirectoryService action being performed.
- * @param  q       Pointer to this object's public ListSchemaExtensionsRequest instance.
+ * Constructs a ListSchemaExtensionsRequestPrivate object for DirectoryService \a action with,
+ * public implementation \a q.
  */
 ListSchemaExtensionsRequestPrivate::ListSchemaExtensionsRequestPrivate(
     const DirectoryServiceRequest::Action action, ListSchemaExtensionsRequest * const q)
@@ -118,15 +107,10 @@ ListSchemaExtensionsRequestPrivate::ListSchemaExtensionsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListSchemaExtensionsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListSchemaExtensionsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListSchemaExtensionsRequest instance.
  */
 ListSchemaExtensionsRequestPrivate::ListSchemaExtensionsRequestPrivate(
     const ListSchemaExtensionsRequestPrivate &other, ListSchemaExtensionsRequest * const q)

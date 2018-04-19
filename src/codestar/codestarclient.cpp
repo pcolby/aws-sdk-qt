@@ -64,6 +64,9 @@
 /*!
  * \namespace QtAws::CodeStar
  * \brief The QtAws::CodeStar contains stuff...
+ *
+ * \inmodule QtAwsCodeStar
+ *
  * @todo Move this to a separate template file.
  */
 
@@ -201,7 +204,7 @@ CodeStarClient::CodeStarClient(
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * \a  AwsEndpoint::getEndpoint()
+ * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
 CodeStarClient::CodeStarClient(
     const QUrl &endpoint,

@@ -27,10 +27,9 @@ namespace CodeDeploy {
 
 /*!
  * \class QtAws::CodeDeploy::GetOnPremisesInstanceRequest
- *
  * \brief The GetOnPremisesInstanceRequest class provides an interface for CodeDeploy GetOnPremisesInstance requests.
  *
- * \ingroup CodeDeploy
+ * \inmodule QtAwsCodeDeploy
  *
  *  <fullname>AWS CodeDeploy</fullname>
  * 
@@ -118,9 +117,7 @@ namespace CodeDeploy {
  */
 
 /*!
- * @brief  Constructs a new GetOnPremisesInstanceRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetOnPremisesInstanceRequest::GetOnPremisesInstanceRequest(const GetOnPremisesInstanceRequest &other)
     : CodeDeployRequest(new GetOnPremisesInstanceRequestPrivate(*other.d_func(), this))
@@ -129,7 +126,7 @@ GetOnPremisesInstanceRequest::GetOnPremisesInstanceRequest(const GetOnPremisesIn
 }
 
 /*!
- * @brief  Constructs a new GetOnPremisesInstanceRequest object.
+ * Constructs a GetOnPremisesInstanceRequest object.
  */
 GetOnPremisesInstanceRequest::GetOnPremisesInstanceRequest()
     : CodeDeployRequest(new GetOnPremisesInstanceRequestPrivate(CodeDeployRequest::GetOnPremisesInstanceAction, this))
@@ -147,14 +144,9 @@ bool GetOnPremisesInstanceRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetOnPremisesInstanceResponse object.
+ * Returns a GetOnPremisesInstanceResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetOnPremisesInstanceResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CodeDeployClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetOnPremisesInstanceRequest::response(QNetworkReply * const reply) const
 {
@@ -162,20 +154,17 @@ QtAws::Core::AwsAbstractResponse * GetOnPremisesInstanceRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::CodeDeploy::GetOnPremisesInstanceRequestPrivate
+ * \brief The GetOnPremisesInstanceRequestPrivate class provides private implementation for GetOnPremisesInstanceRequest.
+ * \internal
  *
- * @class  GetOnPremisesInstanceRequestPrivate
- *
- * @brief  Private implementation for GetOnPremisesInstanceRequest.
+ * \inmodule QtAwsCodeDeploy
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetOnPremisesInstanceRequestPrivate object.
- *
- * @param  action  CodeDeploy action being performed.
- * @param  q       Pointer to this object's public GetOnPremisesInstanceRequest instance.
+ * Constructs a GetOnPremisesInstanceRequestPrivate object for CodeDeploy \a action with,
+ * public implementation \a q.
  */
 GetOnPremisesInstanceRequestPrivate::GetOnPremisesInstanceRequestPrivate(
     const CodeDeployRequest::Action action, GetOnPremisesInstanceRequest * const q)
@@ -185,15 +174,10 @@ GetOnPremisesInstanceRequestPrivate::GetOnPremisesInstanceRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetOnPremisesInstanceRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetOnPremisesInstanceRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetOnPremisesInstanceRequest instance.
  */
 GetOnPremisesInstanceRequestPrivate::GetOnPremisesInstanceRequestPrivate(
     const GetOnPremisesInstanceRequestPrivate &other, GetOnPremisesInstanceRequest * const q)

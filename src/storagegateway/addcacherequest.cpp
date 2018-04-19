@@ -27,10 +27,9 @@ namespace StorageGateway {
 
 /*!
  * \class QtAws::StorageGateway::AddCacheRequest
- *
  * \brief The AddCacheRequest class provides an interface for StorageGateway AddCache requests.
  *
- * \ingroup StorageGateway
+ * \inmodule QtAwsStorageGateway
  *
  *  <fullname>AWS Storage Gateway Service</fullname>
  * 
@@ -106,9 +105,7 @@ namespace StorageGateway {
  */
 
 /*!
- * @brief  Constructs a new AddCacheRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AddCacheRequest::AddCacheRequest(const AddCacheRequest &other)
     : StorageGatewayRequest(new AddCacheRequestPrivate(*other.d_func(), this))
@@ -117,7 +114,7 @@ AddCacheRequest::AddCacheRequest(const AddCacheRequest &other)
 }
 
 /*!
- * @brief  Constructs a new AddCacheRequest object.
+ * Constructs a AddCacheRequest object.
  */
 AddCacheRequest::AddCacheRequest()
     : StorageGatewayRequest(new AddCacheRequestPrivate(StorageGatewayRequest::AddCacheAction, this))
@@ -135,14 +132,9 @@ bool AddCacheRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AddCacheResponse object.
+ * Returns a AddCacheResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AddCacheResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  StorageGatewayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AddCacheRequest::response(QNetworkReply * const reply) const
 {
@@ -150,20 +142,17 @@ QtAws::Core::AwsAbstractResponse * AddCacheRequest::response(QNetworkReply * con
 }
 
 /*!
- * @internal
+ * \class QtAws::StorageGateway::AddCacheRequestPrivate
+ * \brief The AddCacheRequestPrivate class provides private implementation for AddCacheRequest.
+ * \internal
  *
- * @class  AddCacheRequestPrivate
- *
- * @brief  Private implementation for AddCacheRequest.
+ * \inmodule QtAwsStorageGateway
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AddCacheRequestPrivate object.
- *
- * @param  action  StorageGateway action being performed.
- * @param  q       Pointer to this object's public AddCacheRequest instance.
+ * Constructs a AddCacheRequestPrivate object for StorageGateway \a action with,
+ * public implementation \a q.
  */
 AddCacheRequestPrivate::AddCacheRequestPrivate(
     const StorageGatewayRequest::Action action, AddCacheRequest * const q)
@@ -173,15 +162,10 @@ AddCacheRequestPrivate::AddCacheRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AddCacheRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AddCacheRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AddCacheRequest instance.
  */
 AddCacheRequestPrivate::AddCacheRequestPrivate(
     const AddCacheRequestPrivate &other, AddCacheRequest * const q)

@@ -27,19 +27,16 @@ namespace Pinpoint {
 
 /*!
  * \class QtAws::Pinpoint::DeleteApnsVoipSandboxChannelRequest
- *
  * \brief The DeleteApnsVoipSandboxChannelRequest class provides an interface for Pinpoint DeleteApnsVoipSandboxChannel requests.
  *
- * \ingroup Pinpoint
+ * \inmodule QtAwsPinpoint
  *
  *
  * \sa PinpointClient::deleteApnsVoipSandboxChannel
  */
 
 /*!
- * @brief  Constructs a new DeleteApnsVoipSandboxChannelRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteApnsVoipSandboxChannelRequest::DeleteApnsVoipSandboxChannelRequest(const DeleteApnsVoipSandboxChannelRequest &other)
     : PinpointRequest(new DeleteApnsVoipSandboxChannelRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ DeleteApnsVoipSandboxChannelRequest::DeleteApnsVoipSandboxChannelRequest(const D
 }
 
 /*!
- * @brief  Constructs a new DeleteApnsVoipSandboxChannelRequest object.
+ * Constructs a DeleteApnsVoipSandboxChannelRequest object.
  */
 DeleteApnsVoipSandboxChannelRequest::DeleteApnsVoipSandboxChannelRequest()
     : PinpointRequest(new DeleteApnsVoipSandboxChannelRequestPrivate(PinpointRequest::DeleteApnsVoipSandboxChannelAction, this))
@@ -66,14 +63,9 @@ bool DeleteApnsVoipSandboxChannelRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteApnsVoipSandboxChannelResponse object.
+ * Returns a DeleteApnsVoipSandboxChannelResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteApnsVoipSandboxChannelResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  PinpointClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteApnsVoipSandboxChannelRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * DeleteApnsVoipSandboxChannelRequest::response
 }
 
 /*!
- * @internal
+ * \class QtAws::Pinpoint::DeleteApnsVoipSandboxChannelRequestPrivate
+ * \brief The DeleteApnsVoipSandboxChannelRequestPrivate class provides private implementation for DeleteApnsVoipSandboxChannelRequest.
+ * \internal
  *
- * @class  DeleteApnsVoipSandboxChannelRequestPrivate
- *
- * @brief  Private implementation for DeleteApnsVoipSandboxChannelRequest.
+ * \inmodule QtAwsPinpoint
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteApnsVoipSandboxChannelRequestPrivate object.
- *
- * @param  action  Pinpoint action being performed.
- * @param  q       Pointer to this object's public DeleteApnsVoipSandboxChannelRequest instance.
+ * Constructs a DeleteApnsVoipSandboxChannelRequestPrivate object for Pinpoint \a action with,
+ * public implementation \a q.
  */
 DeleteApnsVoipSandboxChannelRequestPrivate::DeleteApnsVoipSandboxChannelRequestPrivate(
     const PinpointRequest::Action action, DeleteApnsVoipSandboxChannelRequest * const q)
@@ -104,15 +93,10 @@ DeleteApnsVoipSandboxChannelRequestPrivate::DeleteApnsVoipSandboxChannelRequestP
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteApnsVoipSandboxChannelRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteApnsVoipSandboxChannelRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteApnsVoipSandboxChannelRequest instance.
  */
 DeleteApnsVoipSandboxChannelRequestPrivate::DeleteApnsVoipSandboxChannelRequestPrivate(
     const DeleteApnsVoipSandboxChannelRequestPrivate &other, DeleteApnsVoipSandboxChannelRequest * const q)

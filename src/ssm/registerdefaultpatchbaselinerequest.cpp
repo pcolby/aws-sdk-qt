@@ -27,10 +27,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::RegisterDefaultPatchBaselineRequest
- *
  * \brief The RegisterDefaultPatchBaselineRequest class provides an interface for SSM RegisterDefaultPatchBaseline requests.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -61,9 +60,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new RegisterDefaultPatchBaselineRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 RegisterDefaultPatchBaselineRequest::RegisterDefaultPatchBaselineRequest(const RegisterDefaultPatchBaselineRequest &other)
     : SSMRequest(new RegisterDefaultPatchBaselineRequestPrivate(*other.d_func(), this))
@@ -72,7 +69,7 @@ RegisterDefaultPatchBaselineRequest::RegisterDefaultPatchBaselineRequest(const R
 }
 
 /*!
- * @brief  Constructs a new RegisterDefaultPatchBaselineRequest object.
+ * Constructs a RegisterDefaultPatchBaselineRequest object.
  */
 RegisterDefaultPatchBaselineRequest::RegisterDefaultPatchBaselineRequest()
     : SSMRequest(new RegisterDefaultPatchBaselineRequestPrivate(SSMRequest::RegisterDefaultPatchBaselineAction, this))
@@ -90,14 +87,9 @@ bool RegisterDefaultPatchBaselineRequest::isValid() const
 
 
 /*!
- * @brief  Construct an RegisterDefaultPatchBaselineResponse object.
+ * Returns a RegisterDefaultPatchBaselineResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An RegisterDefaultPatchBaselineResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SSMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * RegisterDefaultPatchBaselineRequest::response(QNetworkReply * const reply) const
 {
@@ -105,20 +97,17 @@ QtAws::Core::AwsAbstractResponse * RegisterDefaultPatchBaselineRequest::response
 }
 
 /*!
- * @internal
+ * \class QtAws::SSM::RegisterDefaultPatchBaselineRequestPrivate
+ * \brief The RegisterDefaultPatchBaselineRequestPrivate class provides private implementation for RegisterDefaultPatchBaselineRequest.
+ * \internal
  *
- * @class  RegisterDefaultPatchBaselineRequestPrivate
- *
- * @brief  Private implementation for RegisterDefaultPatchBaselineRequest.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new RegisterDefaultPatchBaselineRequestPrivate object.
- *
- * @param  action  SSM action being performed.
- * @param  q       Pointer to this object's public RegisterDefaultPatchBaselineRequest instance.
+ * Constructs a RegisterDefaultPatchBaselineRequestPrivate object for SSM \a action with,
+ * public implementation \a q.
  */
 RegisterDefaultPatchBaselineRequestPrivate::RegisterDefaultPatchBaselineRequestPrivate(
     const SSMRequest::Action action, RegisterDefaultPatchBaselineRequest * const q)
@@ -128,15 +117,10 @@ RegisterDefaultPatchBaselineRequestPrivate::RegisterDefaultPatchBaselineRequestP
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RegisterDefaultPatchBaselineRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the RegisterDefaultPatchBaselineRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public RegisterDefaultPatchBaselineRequest instance.
  */
 RegisterDefaultPatchBaselineRequestPrivate::RegisterDefaultPatchBaselineRequestPrivate(
     const RegisterDefaultPatchBaselineRequestPrivate &other, RegisterDefaultPatchBaselineRequest * const q)

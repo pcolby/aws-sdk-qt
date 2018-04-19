@@ -27,10 +27,9 @@ namespace ResourceGroups {
 
 /*!
  * \class QtAws::ResourceGroups::TagRequest
- *
  * \brief The TagRequest class provides an interface for ResourceGroups Tag requests.
  *
- * \ingroup ResourceGroups
+ * \inmodule QtAwsResourceGroups
  *
  *  <fullname>AWS Resource Groups</fullname>
  * 
@@ -81,9 +80,7 @@ namespace ResourceGroups {
  */
 
 /*!
- * @brief  Constructs a new TagRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 TagRequest::TagRequest(const TagRequest &other)
     : ResourceGroupsRequest(new TagRequestPrivate(*other.d_func(), this))
@@ -92,7 +89,7 @@ TagRequest::TagRequest(const TagRequest &other)
 }
 
 /*!
- * @brief  Constructs a new TagRequest object.
+ * Constructs a TagRequest object.
  */
 TagRequest::TagRequest()
     : ResourceGroupsRequest(new TagRequestPrivate(ResourceGroupsRequest::TagAction, this))
@@ -110,14 +107,9 @@ bool TagRequest::isValid() const
 
 
 /*!
- * @brief  Construct an TagResponse object.
+ * Returns a TagResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An TagResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ResourceGroupsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * TagRequest::response(QNetworkReply * const reply) const
 {
@@ -125,20 +117,17 @@ QtAws::Core::AwsAbstractResponse * TagRequest::response(QNetworkReply * const re
 }
 
 /*!
- * @internal
+ * \class QtAws::ResourceGroups::TagRequestPrivate
+ * \brief The TagRequestPrivate class provides private implementation for TagRequest.
+ * \internal
  *
- * @class  TagRequestPrivate
- *
- * @brief  Private implementation for TagRequest.
+ * \inmodule QtAwsResourceGroups
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new TagRequestPrivate object.
- *
- * @param  action  ResourceGroups action being performed.
- * @param  q       Pointer to this object's public TagRequest instance.
+ * Constructs a TagRequestPrivate object for ResourceGroups \a action with,
+ * public implementation \a q.
  */
 TagRequestPrivate::TagRequestPrivate(
     const ResourceGroupsRequest::Action action, TagRequest * const q)
@@ -148,15 +137,10 @@ TagRequestPrivate::TagRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new TagRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the TagRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public TagRequest instance.
  */
 TagRequestPrivate::TagRequestPrivate(
     const TagRequestPrivate &other, TagRequest * const q)

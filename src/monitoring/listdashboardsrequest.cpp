@@ -27,10 +27,9 @@ namespace CloudWatch {
 
 /*!
  * \class QtAws::CloudWatch::ListDashboardsRequest
- *
  * \brief The ListDashboardsRequest class provides an interface for CloudWatch ListDashboards requests.
  *
- * \ingroup CloudWatch
+ * \inmodule QtAwsCloudWatch
  *
  *  Amazon CloudWatch monitors your Amazon Web Services (AWS) resources and the applications you run on AWS in real time.
  *  You can use CloudWatch to collect and track metrics, which are the variables you want to measure for your resources and
@@ -51,9 +50,7 @@ namespace CloudWatch {
  */
 
 /*!
- * @brief  Constructs a new ListDashboardsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListDashboardsRequest::ListDashboardsRequest(const ListDashboardsRequest &other)
     : CloudWatchRequest(new ListDashboardsRequestPrivate(*other.d_func(), this))
@@ -62,7 +59,7 @@ ListDashboardsRequest::ListDashboardsRequest(const ListDashboardsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ListDashboardsRequest object.
+ * Constructs a ListDashboardsRequest object.
  */
 ListDashboardsRequest::ListDashboardsRequest()
     : CloudWatchRequest(new ListDashboardsRequestPrivate(CloudWatchRequest::ListDashboardsAction, this))
@@ -80,14 +77,9 @@ bool ListDashboardsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListDashboardsResponse object.
+ * Returns a ListDashboardsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListDashboardsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudWatchClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListDashboardsRequest::response(QNetworkReply * const reply) const
 {
@@ -95,20 +87,17 @@ QtAws::Core::AwsAbstractResponse * ListDashboardsRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudWatch::ListDashboardsRequestPrivate
+ * \brief The ListDashboardsRequestPrivate class provides private implementation for ListDashboardsRequest.
+ * \internal
  *
- * @class  ListDashboardsRequestPrivate
- *
- * @brief  Private implementation for ListDashboardsRequest.
+ * \inmodule QtAwsCloudWatch
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListDashboardsRequestPrivate object.
- *
- * @param  action  CloudWatch action being performed.
- * @param  q       Pointer to this object's public ListDashboardsRequest instance.
+ * Constructs a ListDashboardsRequestPrivate object for CloudWatch \a action with,
+ * public implementation \a q.
  */
 ListDashboardsRequestPrivate::ListDashboardsRequestPrivate(
     const CloudWatchRequest::Action action, ListDashboardsRequest * const q)
@@ -118,15 +107,10 @@ ListDashboardsRequestPrivate::ListDashboardsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListDashboardsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListDashboardsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListDashboardsRequest instance.
  */
 ListDashboardsRequestPrivate::ListDashboardsRequestPrivate(
     const ListDashboardsRequestPrivate &other, ListDashboardsRequest * const q)

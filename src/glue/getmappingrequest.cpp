@@ -27,10 +27,9 @@ namespace Glue {
 
 /*!
  * \class QtAws::Glue::GetMappingRequest
- *
  * \brief The GetMappingRequest class provides an interface for Glue GetMapping requests.
  *
- * \ingroup Glue
+ * \inmodule QtAwsGlue
  *
  *  <fullname>AWS Glue</fullname>
  * 
@@ -40,9 +39,7 @@ namespace Glue {
  */
 
 /*!
- * @brief  Constructs a new GetMappingRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetMappingRequest::GetMappingRequest(const GetMappingRequest &other)
     : GlueRequest(new GetMappingRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ GetMappingRequest::GetMappingRequest(const GetMappingRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetMappingRequest object.
+ * Constructs a GetMappingRequest object.
  */
 GetMappingRequest::GetMappingRequest()
     : GlueRequest(new GetMappingRequestPrivate(GlueRequest::GetMappingAction, this))
@@ -69,14 +66,9 @@ bool GetMappingRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetMappingResponse object.
+ * Returns a GetMappingResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetMappingResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GlueClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetMappingRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * GetMappingRequest::response(QNetworkReply * c
 }
 
 /*!
- * @internal
+ * \class QtAws::Glue::GetMappingRequestPrivate
+ * \brief The GetMappingRequestPrivate class provides private implementation for GetMappingRequest.
+ * \internal
  *
- * @class  GetMappingRequestPrivate
- *
- * @brief  Private implementation for GetMappingRequest.
+ * \inmodule QtAwsGlue
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetMappingRequestPrivate object.
- *
- * @param  action  Glue action being performed.
- * @param  q       Pointer to this object's public GetMappingRequest instance.
+ * Constructs a GetMappingRequestPrivate object for Glue \a action with,
+ * public implementation \a q.
  */
 GetMappingRequestPrivate::GetMappingRequestPrivate(
     const GlueRequest::Action action, GetMappingRequest * const q)
@@ -107,15 +96,10 @@ GetMappingRequestPrivate::GetMappingRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetMappingRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetMappingRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetMappingRequest instance.
  */
 GetMappingRequestPrivate::GetMappingRequestPrivate(
     const GetMappingRequestPrivate &other, GetMappingRequest * const q)

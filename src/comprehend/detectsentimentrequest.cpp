@@ -27,10 +27,9 @@ namespace Comprehend {
 
 /*!
  * \class QtAws::Comprehend::DetectSentimentRequest
- *
  * \brief The DetectSentimentRequest class provides an interface for Comprehend DetectSentiment requests.
  *
- * \ingroup Comprehend
+ * \inmodule QtAwsComprehend
  *
  *  Amazon Comprehend is an AWS service for gaining insight into the content of documents. Use these actions to determine
  *  the topics contained in your documents, the topics they discuss, the predominant sentiment expressed in them, the
@@ -40,9 +39,7 @@ namespace Comprehend {
  */
 
 /*!
- * @brief  Constructs a new DetectSentimentRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DetectSentimentRequest::DetectSentimentRequest(const DetectSentimentRequest &other)
     : ComprehendRequest(new DetectSentimentRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ DetectSentimentRequest::DetectSentimentRequest(const DetectSentimentRequest &oth
 }
 
 /*!
- * @brief  Constructs a new DetectSentimentRequest object.
+ * Constructs a DetectSentimentRequest object.
  */
 DetectSentimentRequest::DetectSentimentRequest()
     : ComprehendRequest(new DetectSentimentRequestPrivate(ComprehendRequest::DetectSentimentAction, this))
@@ -69,14 +66,9 @@ bool DetectSentimentRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DetectSentimentResponse object.
+ * Returns a DetectSentimentResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DetectSentimentResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ComprehendClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DetectSentimentRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * DetectSentimentRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::Comprehend::DetectSentimentRequestPrivate
+ * \brief The DetectSentimentRequestPrivate class provides private implementation for DetectSentimentRequest.
+ * \internal
  *
- * @class  DetectSentimentRequestPrivate
- *
- * @brief  Private implementation for DetectSentimentRequest.
+ * \inmodule QtAwsComprehend
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DetectSentimentRequestPrivate object.
- *
- * @param  action  Comprehend action being performed.
- * @param  q       Pointer to this object's public DetectSentimentRequest instance.
+ * Constructs a DetectSentimentRequestPrivate object for Comprehend \a action with,
+ * public implementation \a q.
  */
 DetectSentimentRequestPrivate::DetectSentimentRequestPrivate(
     const ComprehendRequest::Action action, DetectSentimentRequest * const q)
@@ -107,15 +96,10 @@ DetectSentimentRequestPrivate::DetectSentimentRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DetectSentimentRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DetectSentimentRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DetectSentimentRequest instance.
  */
 DetectSentimentRequestPrivate::DetectSentimentRequestPrivate(
     const DetectSentimentRequestPrivate &other, DetectSentimentRequest * const q)

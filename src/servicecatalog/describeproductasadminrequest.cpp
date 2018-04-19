@@ -27,10 +27,9 @@ namespace ServiceCatalog {
 
 /*!
  * \class QtAws::ServiceCatalog::DescribeProductAsAdminRequest
- *
  * \brief The DescribeProductAsAdminRequest class provides an interface for ServiceCatalog DescribeProductAsAdmin requests.
  *
- * \ingroup ServiceCatalog
+ * \inmodule QtAwsServiceCatalog
  *
  *  <fullname>AWS Service Catalog</fullname>
  * 
@@ -43,9 +42,7 @@ namespace ServiceCatalog {
  */
 
 /*!
- * @brief  Constructs a new DescribeProductAsAdminRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeProductAsAdminRequest::DescribeProductAsAdminRequest(const DescribeProductAsAdminRequest &other)
     : ServiceCatalogRequest(new DescribeProductAsAdminRequestPrivate(*other.d_func(), this))
@@ -54,7 +51,7 @@ DescribeProductAsAdminRequest::DescribeProductAsAdminRequest(const DescribeProdu
 }
 
 /*!
- * @brief  Constructs a new DescribeProductAsAdminRequest object.
+ * Constructs a DescribeProductAsAdminRequest object.
  */
 DescribeProductAsAdminRequest::DescribeProductAsAdminRequest()
     : ServiceCatalogRequest(new DescribeProductAsAdminRequestPrivate(ServiceCatalogRequest::DescribeProductAsAdminAction, this))
@@ -72,14 +69,9 @@ bool DescribeProductAsAdminRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeProductAsAdminResponse object.
+ * Returns a DescribeProductAsAdminResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeProductAsAdminResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ServiceCatalogClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeProductAsAdminRequest::response(QNetworkReply * const reply) const
 {
@@ -87,20 +79,17 @@ QtAws::Core::AwsAbstractResponse * DescribeProductAsAdminRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::ServiceCatalog::DescribeProductAsAdminRequestPrivate
+ * \brief The DescribeProductAsAdminRequestPrivate class provides private implementation for DescribeProductAsAdminRequest.
+ * \internal
  *
- * @class  DescribeProductAsAdminRequestPrivate
- *
- * @brief  Private implementation for DescribeProductAsAdminRequest.
+ * \inmodule QtAwsServiceCatalog
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeProductAsAdminRequestPrivate object.
- *
- * @param  action  ServiceCatalog action being performed.
- * @param  q       Pointer to this object's public DescribeProductAsAdminRequest instance.
+ * Constructs a DescribeProductAsAdminRequestPrivate object for ServiceCatalog \a action with,
+ * public implementation \a q.
  */
 DescribeProductAsAdminRequestPrivate::DescribeProductAsAdminRequestPrivate(
     const ServiceCatalogRequest::Action action, DescribeProductAsAdminRequest * const q)
@@ -110,15 +99,10 @@ DescribeProductAsAdminRequestPrivate::DescribeProductAsAdminRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeProductAsAdminRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeProductAsAdminRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeProductAsAdminRequest instance.
  */
 DescribeProductAsAdminRequestPrivate::DescribeProductAsAdminRequestPrivate(
     const DescribeProductAsAdminRequestPrivate &other, DescribeProductAsAdminRequest * const q)

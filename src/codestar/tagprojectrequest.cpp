@@ -27,10 +27,9 @@ namespace CodeStar {
 
 /*!
  * \class QtAws::CodeStar::TagProjectRequest
- *
  * \brief The TagProjectRequest class provides an interface for CodeStar TagProject requests.
  *
- * \ingroup CodeStar
+ * \inmodule QtAwsCodeStar
  *
  *  <fullname>AWS CodeStar</fullname>
  * 
@@ -125,9 +124,7 @@ namespace CodeStar {
  */
 
 /*!
- * @brief  Constructs a new TagProjectRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 TagProjectRequest::TagProjectRequest(const TagProjectRequest &other)
     : CodeStarRequest(new TagProjectRequestPrivate(*other.d_func(), this))
@@ -136,7 +133,7 @@ TagProjectRequest::TagProjectRequest(const TagProjectRequest &other)
 }
 
 /*!
- * @brief  Constructs a new TagProjectRequest object.
+ * Constructs a TagProjectRequest object.
  */
 TagProjectRequest::TagProjectRequest()
     : CodeStarRequest(new TagProjectRequestPrivate(CodeStarRequest::TagProjectAction, this))
@@ -154,14 +151,9 @@ bool TagProjectRequest::isValid() const
 
 
 /*!
- * @brief  Construct an TagProjectResponse object.
+ * Returns a TagProjectResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An TagProjectResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CodeStarClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * TagProjectRequest::response(QNetworkReply * const reply) const
 {
@@ -169,20 +161,17 @@ QtAws::Core::AwsAbstractResponse * TagProjectRequest::response(QNetworkReply * c
 }
 
 /*!
- * @internal
+ * \class QtAws::CodeStar::TagProjectRequestPrivate
+ * \brief The TagProjectRequestPrivate class provides private implementation for TagProjectRequest.
+ * \internal
  *
- * @class  TagProjectRequestPrivate
- *
- * @brief  Private implementation for TagProjectRequest.
+ * \inmodule QtAwsCodeStar
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new TagProjectRequestPrivate object.
- *
- * @param  action  CodeStar action being performed.
- * @param  q       Pointer to this object's public TagProjectRequest instance.
+ * Constructs a TagProjectRequestPrivate object for CodeStar \a action with,
+ * public implementation \a q.
  */
 TagProjectRequestPrivate::TagProjectRequestPrivate(
     const CodeStarRequest::Action action, TagProjectRequest * const q)
@@ -192,15 +181,10 @@ TagProjectRequestPrivate::TagProjectRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new TagProjectRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the TagProjectRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public TagProjectRequest instance.
  */
 TagProjectRequestPrivate::TagProjectRequestPrivate(
     const TagProjectRequestPrivate &other, TagProjectRequest * const q)

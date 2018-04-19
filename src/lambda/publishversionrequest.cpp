@@ -27,10 +27,9 @@ namespace Lambda {
 
 /*!
  * \class QtAws::Lambda::PublishVersionRequest
- *
  * \brief The PublishVersionRequest class provides an interface for Lambda PublishVersion requests.
  *
- * \ingroup Lambda
+ * \inmodule QtAwsLambda
  *
  *  <fullname>AWS Lambda</fullname>
  * 
@@ -48,9 +47,7 @@ namespace Lambda {
  */
 
 /*!
- * @brief  Constructs a new PublishVersionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 PublishVersionRequest::PublishVersionRequest(const PublishVersionRequest &other)
     : LambdaRequest(new PublishVersionRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ PublishVersionRequest::PublishVersionRequest(const PublishVersionRequest &other)
 }
 
 /*!
- * @brief  Constructs a new PublishVersionRequest object.
+ * Constructs a PublishVersionRequest object.
  */
 PublishVersionRequest::PublishVersionRequest()
     : LambdaRequest(new PublishVersionRequestPrivate(LambdaRequest::PublishVersionAction, this))
@@ -77,14 +74,9 @@ bool PublishVersionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an PublishVersionResponse object.
+ * Returns a PublishVersionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An PublishVersionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  LambdaClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * PublishVersionRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * PublishVersionRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::Lambda::PublishVersionRequestPrivate
+ * \brief The PublishVersionRequestPrivate class provides private implementation for PublishVersionRequest.
+ * \internal
  *
- * @class  PublishVersionRequestPrivate
- *
- * @brief  Private implementation for PublishVersionRequest.
+ * \inmodule QtAwsLambda
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new PublishVersionRequestPrivate object.
- *
- * @param  action  Lambda action being performed.
- * @param  q       Pointer to this object's public PublishVersionRequest instance.
+ * Constructs a PublishVersionRequestPrivate object for Lambda \a action with,
+ * public implementation \a q.
  */
 PublishVersionRequestPrivate::PublishVersionRequestPrivate(
     const LambdaRequest::Action action, PublishVersionRequest * const q)
@@ -115,15 +104,10 @@ PublishVersionRequestPrivate::PublishVersionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PublishVersionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the PublishVersionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public PublishVersionRequest instance.
  */
 PublishVersionRequestPrivate::PublishVersionRequestPrivate(
     const PublishVersionRequestPrivate &other, PublishVersionRequest * const q)

@@ -27,10 +27,9 @@ namespace CloudTrail {
 
 /*!
  * \class QtAws::CloudTrail::StartLoggingRequest
- *
  * \brief The StartLoggingRequest class provides an interface for CloudTrail StartLogging requests.
  *
- * \ingroup CloudTrail
+ * \inmodule QtAwsCloudTrail
  *
  *  <fullname>AWS CloudTrail</fullname>
  * 
@@ -60,9 +59,7 @@ namespace CloudTrail {
  */
 
 /*!
- * @brief  Constructs a new StartLoggingRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 StartLoggingRequest::StartLoggingRequest(const StartLoggingRequest &other)
     : CloudTrailRequest(new StartLoggingRequestPrivate(*other.d_func(), this))
@@ -71,7 +68,7 @@ StartLoggingRequest::StartLoggingRequest(const StartLoggingRequest &other)
 }
 
 /*!
- * @brief  Constructs a new StartLoggingRequest object.
+ * Constructs a StartLoggingRequest object.
  */
 StartLoggingRequest::StartLoggingRequest()
     : CloudTrailRequest(new StartLoggingRequestPrivate(CloudTrailRequest::StartLoggingAction, this))
@@ -89,14 +86,9 @@ bool StartLoggingRequest::isValid() const
 
 
 /*!
- * @brief  Construct an StartLoggingResponse object.
+ * Returns a StartLoggingResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An StartLoggingResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudTrailClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * StartLoggingRequest::response(QNetworkReply * const reply) const
 {
@@ -104,20 +96,17 @@ QtAws::Core::AwsAbstractResponse * StartLoggingRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudTrail::StartLoggingRequestPrivate
+ * \brief The StartLoggingRequestPrivate class provides private implementation for StartLoggingRequest.
+ * \internal
  *
- * @class  StartLoggingRequestPrivate
- *
- * @brief  Private implementation for StartLoggingRequest.
+ * \inmodule QtAwsCloudTrail
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new StartLoggingRequestPrivate object.
- *
- * @param  action  CloudTrail action being performed.
- * @param  q       Pointer to this object's public StartLoggingRequest instance.
+ * Constructs a StartLoggingRequestPrivate object for CloudTrail \a action with,
+ * public implementation \a q.
  */
 StartLoggingRequestPrivate::StartLoggingRequestPrivate(
     const CloudTrailRequest::Action action, StartLoggingRequest * const q)
@@ -127,15 +116,10 @@ StartLoggingRequestPrivate::StartLoggingRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StartLoggingRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the StartLoggingRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public StartLoggingRequest instance.
  */
 StartLoggingRequestPrivate::StartLoggingRequestPrivate(
     const StartLoggingRequestPrivate &other, StartLoggingRequest * const q)

@@ -50,6 +50,9 @@
 /*!
  * \namespace QtAws::MediaPackage
  * \brief The QtAws::MediaPackage contains stuff...
+ *
+ * \inmodule QtAwsMediaPackage
+ *
  * @todo Move this to a separate template file.
  */
 
@@ -99,7 +102,7 @@ MediaPackageClient::MediaPackageClient(
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * \a  AwsEndpoint::getEndpoint()
+ * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
 MediaPackageClient::MediaPackageClient(
     const QUrl &endpoint,

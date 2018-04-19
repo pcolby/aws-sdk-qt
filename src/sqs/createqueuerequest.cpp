@@ -27,10 +27,9 @@ namespace SQS {
 
 /*!
  * \class QtAws::SQS::CreateQueueRequest
- *
  * \brief The CreateQueueRequest class provides an interface for SQS CreateQueue requests.
  *
- * \ingroup SQS
+ * \inmodule QtAwsSQS
  *
  *  Welcome to the <i>Amazon Simple Queue Service API
  * 
@@ -103,9 +102,7 @@ namespace SQS {
  */
 
 /*!
- * @brief  Constructs a new CreateQueueRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateQueueRequest::CreateQueueRequest(const CreateQueueRequest &other)
     : SQSRequest(new CreateQueueRequestPrivate(*other.d_func(), this))
@@ -114,7 +111,7 @@ CreateQueueRequest::CreateQueueRequest(const CreateQueueRequest &other)
 }
 
 /*!
- * @brief  Constructs a new CreateQueueRequest object.
+ * Constructs a CreateQueueRequest object.
  */
 CreateQueueRequest::CreateQueueRequest()
     : SQSRequest(new CreateQueueRequestPrivate(SQSRequest::CreateQueueAction, this))
@@ -132,14 +129,9 @@ bool CreateQueueRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateQueueResponse object.
+ * Returns a CreateQueueResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateQueueResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SQSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateQueueRequest::response(QNetworkReply * const reply) const
 {
@@ -147,20 +139,17 @@ QtAws::Core::AwsAbstractResponse * CreateQueueRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::SQS::CreateQueueRequestPrivate
+ * \brief The CreateQueueRequestPrivate class provides private implementation for CreateQueueRequest.
+ * \internal
  *
- * @class  CreateQueueRequestPrivate
- *
- * @brief  Private implementation for CreateQueueRequest.
+ * \inmodule QtAwsSQS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateQueueRequestPrivate object.
- *
- * @param  action  SQS action being performed.
- * @param  q       Pointer to this object's public CreateQueueRequest instance.
+ * Constructs a CreateQueueRequestPrivate object for SQS \a action with,
+ * public implementation \a q.
  */
 CreateQueueRequestPrivate::CreateQueueRequestPrivate(
     const SQSRequest::Action action, CreateQueueRequest * const q)
@@ -170,15 +159,10 @@ CreateQueueRequestPrivate::CreateQueueRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateQueueRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateQueueRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateQueueRequest instance.
  */
 CreateQueueRequestPrivate::CreateQueueRequestPrivate(
     const CreateQueueRequestPrivate &other, CreateQueueRequest * const q)

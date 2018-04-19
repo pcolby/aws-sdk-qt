@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DescribeNetworkInterfacesRequest
- *
  * \brief The DescribeNetworkInterfacesRequest class provides an interface for EC2 DescribeNetworkInterfaces requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DescribeNetworkInterfacesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeNetworkInterfacesRequest::DescribeNetworkInterfacesRequest(const DescribeNetworkInterfacesRequest &other)
     : EC2Request(new DescribeNetworkInterfacesRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ DescribeNetworkInterfacesRequest::DescribeNetworkInterfacesRequest(const Describ
 }
 
 /*!
- * @brief  Constructs a new DescribeNetworkInterfacesRequest object.
+ * Constructs a DescribeNetworkInterfacesRequest object.
  */
 DescribeNetworkInterfacesRequest::DescribeNetworkInterfacesRequest()
     : EC2Request(new DescribeNetworkInterfacesRequestPrivate(EC2Request::DescribeNetworkInterfacesAction, this))
@@ -70,14 +67,9 @@ bool DescribeNetworkInterfacesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeNetworkInterfacesResponse object.
+ * Returns a DescribeNetworkInterfacesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeNetworkInterfacesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeNetworkInterfacesRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * DescribeNetworkInterfacesRequest::response(QN
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::DescribeNetworkInterfacesRequestPrivate
+ * \brief The DescribeNetworkInterfacesRequestPrivate class provides private implementation for DescribeNetworkInterfacesRequest.
+ * \internal
  *
- * @class  DescribeNetworkInterfacesRequestPrivate
- *
- * @brief  Private implementation for DescribeNetworkInterfacesRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeNetworkInterfacesRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public DescribeNetworkInterfacesRequest instance.
+ * Constructs a DescribeNetworkInterfacesRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 DescribeNetworkInterfacesRequestPrivate::DescribeNetworkInterfacesRequestPrivate(
     const EC2Request::Action action, DescribeNetworkInterfacesRequest * const q)
@@ -108,15 +97,10 @@ DescribeNetworkInterfacesRequestPrivate::DescribeNetworkInterfacesRequestPrivate
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeNetworkInterfacesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeNetworkInterfacesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeNetworkInterfacesRequest instance.
  */
 DescribeNetworkInterfacesRequestPrivate::DescribeNetworkInterfacesRequestPrivate(
     const DescribeNetworkInterfacesRequestPrivate &other, DescribeNetworkInterfacesRequest * const q)

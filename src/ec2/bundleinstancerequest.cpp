@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::BundleInstanceRequest
- *
  * \brief The BundleInstanceRequest class provides an interface for EC2 BundleInstance requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new BundleInstanceRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 BundleInstanceRequest::BundleInstanceRequest(const BundleInstanceRequest &other)
     : EC2Request(new BundleInstanceRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ BundleInstanceRequest::BundleInstanceRequest(const BundleInstanceRequest &other)
 }
 
 /*!
- * @brief  Constructs a new BundleInstanceRequest object.
+ * Constructs a BundleInstanceRequest object.
  */
 BundleInstanceRequest::BundleInstanceRequest()
     : EC2Request(new BundleInstanceRequestPrivate(EC2Request::BundleInstanceAction, this))
@@ -70,14 +67,9 @@ bool BundleInstanceRequest::isValid() const
 
 
 /*!
- * @brief  Construct an BundleInstanceResponse object.
+ * Returns a BundleInstanceResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An BundleInstanceResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * BundleInstanceRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * BundleInstanceRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::BundleInstanceRequestPrivate
+ * \brief The BundleInstanceRequestPrivate class provides private implementation for BundleInstanceRequest.
+ * \internal
  *
- * @class  BundleInstanceRequestPrivate
- *
- * @brief  Private implementation for BundleInstanceRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new BundleInstanceRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public BundleInstanceRequest instance.
+ * Constructs a BundleInstanceRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 BundleInstanceRequestPrivate::BundleInstanceRequestPrivate(
     const EC2Request::Action action, BundleInstanceRequest * const q)
@@ -108,15 +97,10 @@ BundleInstanceRequestPrivate::BundleInstanceRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new BundleInstanceRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the BundleInstanceRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public BundleInstanceRequest instance.
  */
 BundleInstanceRequestPrivate::BundleInstanceRequestPrivate(
     const BundleInstanceRequestPrivate &other, BundleInstanceRequest * const q)

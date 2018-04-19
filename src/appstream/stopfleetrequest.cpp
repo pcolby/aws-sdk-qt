@@ -27,10 +27,9 @@ namespace AppStream {
 
 /*!
  * \class QtAws::AppStream::StopFleetRequest
- *
  * \brief The StopFleetRequest class provides an interface for AppStream StopFleet requests.
  *
- * \ingroup AppStream
+ * \inmodule QtAwsAppStream
  *
  *  <fullname>Amazon AppStream 2.0</fullname>
  * 
@@ -40,9 +39,7 @@ namespace AppStream {
  */
 
 /*!
- * @brief  Constructs a new StopFleetRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 StopFleetRequest::StopFleetRequest(const StopFleetRequest &other)
     : AppStreamRequest(new StopFleetRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ StopFleetRequest::StopFleetRequest(const StopFleetRequest &other)
 }
 
 /*!
- * @brief  Constructs a new StopFleetRequest object.
+ * Constructs a StopFleetRequest object.
  */
 StopFleetRequest::StopFleetRequest()
     : AppStreamRequest(new StopFleetRequestPrivate(AppStreamRequest::StopFleetAction, this))
@@ -69,14 +66,9 @@ bool StopFleetRequest::isValid() const
 
 
 /*!
- * @brief  Construct an StopFleetResponse object.
+ * Returns a StopFleetResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An StopFleetResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AppStreamClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * StopFleetRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * StopFleetRequest::response(QNetworkReply * co
 }
 
 /*!
- * @internal
+ * \class QtAws::AppStream::StopFleetRequestPrivate
+ * \brief The StopFleetRequestPrivate class provides private implementation for StopFleetRequest.
+ * \internal
  *
- * @class  StopFleetRequestPrivate
- *
- * @brief  Private implementation for StopFleetRequest.
+ * \inmodule QtAwsAppStream
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new StopFleetRequestPrivate object.
- *
- * @param  action  AppStream action being performed.
- * @param  q       Pointer to this object's public StopFleetRequest instance.
+ * Constructs a StopFleetRequestPrivate object for AppStream \a action with,
+ * public implementation \a q.
  */
 StopFleetRequestPrivate::StopFleetRequestPrivate(
     const AppStreamRequest::Action action, StopFleetRequest * const q)
@@ -107,15 +96,10 @@ StopFleetRequestPrivate::StopFleetRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StopFleetRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the StopFleetRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public StopFleetRequest instance.
  */
 StopFleetRequestPrivate::StopFleetRequestPrivate(
     const StopFleetRequestPrivate &other, StopFleetRequest * const q)

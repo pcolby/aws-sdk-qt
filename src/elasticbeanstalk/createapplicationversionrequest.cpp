@@ -27,10 +27,9 @@ namespace ElasticBeanstalk {
 
 /*!
  * \class QtAws::ElasticBeanstalk::CreateApplicationVersionRequest
- *
  * \brief The CreateApplicationVersionRequest class provides an interface for ElasticBeanstalk CreateApplicationVersion requests.
  *
- * \ingroup ElasticBeanstalk
+ * \inmodule QtAwsElasticBeanstalk
  *
  *  <fullname>AWS Elastic Beanstalk</fullname>
  * 
@@ -59,9 +58,7 @@ namespace ElasticBeanstalk {
  */
 
 /*!
- * @brief  Constructs a new CreateApplicationVersionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateApplicationVersionRequest::CreateApplicationVersionRequest(const CreateApplicationVersionRequest &other)
     : ElasticBeanstalkRequest(new CreateApplicationVersionRequestPrivate(*other.d_func(), this))
@@ -70,7 +67,7 @@ CreateApplicationVersionRequest::CreateApplicationVersionRequest(const CreateApp
 }
 
 /*!
- * @brief  Constructs a new CreateApplicationVersionRequest object.
+ * Constructs a CreateApplicationVersionRequest object.
  */
 CreateApplicationVersionRequest::CreateApplicationVersionRequest()
     : ElasticBeanstalkRequest(new CreateApplicationVersionRequestPrivate(ElasticBeanstalkRequest::CreateApplicationVersionAction, this))
@@ -88,14 +85,9 @@ bool CreateApplicationVersionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateApplicationVersionResponse object.
+ * Returns a CreateApplicationVersionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateApplicationVersionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ElasticBeanstalkClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateApplicationVersionRequest::response(QNetworkReply * const reply) const
 {
@@ -103,20 +95,17 @@ QtAws::Core::AwsAbstractResponse * CreateApplicationVersionRequest::response(QNe
 }
 
 /*!
- * @internal
+ * \class QtAws::ElasticBeanstalk::CreateApplicationVersionRequestPrivate
+ * \brief The CreateApplicationVersionRequestPrivate class provides private implementation for CreateApplicationVersionRequest.
+ * \internal
  *
- * @class  CreateApplicationVersionRequestPrivate
- *
- * @brief  Private implementation for CreateApplicationVersionRequest.
+ * \inmodule QtAwsElasticBeanstalk
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateApplicationVersionRequestPrivate object.
- *
- * @param  action  ElasticBeanstalk action being performed.
- * @param  q       Pointer to this object's public CreateApplicationVersionRequest instance.
+ * Constructs a CreateApplicationVersionRequestPrivate object for ElasticBeanstalk \a action with,
+ * public implementation \a q.
  */
 CreateApplicationVersionRequestPrivate::CreateApplicationVersionRequestPrivate(
     const ElasticBeanstalkRequest::Action action, CreateApplicationVersionRequest * const q)
@@ -126,15 +115,10 @@ CreateApplicationVersionRequestPrivate::CreateApplicationVersionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateApplicationVersionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateApplicationVersionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateApplicationVersionRequest instance.
  */
 CreateApplicationVersionRequestPrivate::CreateApplicationVersionRequestPrivate(
     const CreateApplicationVersionRequestPrivate &other, CreateApplicationVersionRequest * const q)

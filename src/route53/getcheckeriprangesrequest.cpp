@@ -27,19 +27,16 @@ namespace Route53 {
 
 /*!
  * \class QtAws::Route53::GetCheckerIpRangesRequest
- *
  * \brief The GetCheckerIpRangesRequest class provides an interface for Route53 GetCheckerIpRanges requests.
  *
- * \ingroup Route53
+ * \inmodule QtAwsRoute53
  *
  *
  * \sa Route53Client::getCheckerIpRanges
  */
 
 /*!
- * @brief  Constructs a new GetCheckerIpRangesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetCheckerIpRangesRequest::GetCheckerIpRangesRequest(const GetCheckerIpRangesRequest &other)
     : Route53Request(new GetCheckerIpRangesRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ GetCheckerIpRangesRequest::GetCheckerIpRangesRequest(const GetCheckerIpRangesReq
 }
 
 /*!
- * @brief  Constructs a new GetCheckerIpRangesRequest object.
+ * Constructs a GetCheckerIpRangesRequest object.
  */
 GetCheckerIpRangesRequest::GetCheckerIpRangesRequest()
     : Route53Request(new GetCheckerIpRangesRequestPrivate(Route53Request::GetCheckerIpRangesAction, this))
@@ -66,14 +63,9 @@ bool GetCheckerIpRangesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetCheckerIpRangesResponse object.
+ * Returns a GetCheckerIpRangesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetCheckerIpRangesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  Route53Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetCheckerIpRangesRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * GetCheckerIpRangesRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::Route53::GetCheckerIpRangesRequestPrivate
+ * \brief The GetCheckerIpRangesRequestPrivate class provides private implementation for GetCheckerIpRangesRequest.
+ * \internal
  *
- * @class  GetCheckerIpRangesRequestPrivate
- *
- * @brief  Private implementation for GetCheckerIpRangesRequest.
+ * \inmodule QtAwsRoute53
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetCheckerIpRangesRequestPrivate object.
- *
- * @param  action  Route53 action being performed.
- * @param  q       Pointer to this object's public GetCheckerIpRangesRequest instance.
+ * Constructs a GetCheckerIpRangesRequestPrivate object for Route53 \a action with,
+ * public implementation \a q.
  */
 GetCheckerIpRangesRequestPrivate::GetCheckerIpRangesRequestPrivate(
     const Route53Request::Action action, GetCheckerIpRangesRequest * const q)
@@ -104,15 +93,10 @@ GetCheckerIpRangesRequestPrivate::GetCheckerIpRangesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetCheckerIpRangesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetCheckerIpRangesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetCheckerIpRangesRequest instance.
  */
 GetCheckerIpRangesRequestPrivate::GetCheckerIpRangesRequestPrivate(
     const GetCheckerIpRangesRequestPrivate &other, GetCheckerIpRangesRequest * const q)

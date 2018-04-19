@@ -27,10 +27,9 @@ namespace Glue {
 
 /*!
  * \class QtAws::Glue::BatchDeleteTableRequest
- *
  * \brief The BatchDeleteTableRequest class provides an interface for Glue BatchDeleteTable requests.
  *
- * \ingroup Glue
+ * \inmodule QtAwsGlue
  *
  *  <fullname>AWS Glue</fullname>
  * 
@@ -40,9 +39,7 @@ namespace Glue {
  */
 
 /*!
- * @brief  Constructs a new BatchDeleteTableRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 BatchDeleteTableRequest::BatchDeleteTableRequest(const BatchDeleteTableRequest &other)
     : GlueRequest(new BatchDeleteTableRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ BatchDeleteTableRequest::BatchDeleteTableRequest(const BatchDeleteTableRequest &
 }
 
 /*!
- * @brief  Constructs a new BatchDeleteTableRequest object.
+ * Constructs a BatchDeleteTableRequest object.
  */
 BatchDeleteTableRequest::BatchDeleteTableRequest()
     : GlueRequest(new BatchDeleteTableRequestPrivate(GlueRequest::BatchDeleteTableAction, this))
@@ -69,14 +66,9 @@ bool BatchDeleteTableRequest::isValid() const
 
 
 /*!
- * @brief  Construct an BatchDeleteTableResponse object.
+ * Returns a BatchDeleteTableResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An BatchDeleteTableResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GlueClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * BatchDeleteTableRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * BatchDeleteTableRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::Glue::BatchDeleteTableRequestPrivate
+ * \brief The BatchDeleteTableRequestPrivate class provides private implementation for BatchDeleteTableRequest.
+ * \internal
  *
- * @class  BatchDeleteTableRequestPrivate
- *
- * @brief  Private implementation for BatchDeleteTableRequest.
+ * \inmodule QtAwsGlue
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new BatchDeleteTableRequestPrivate object.
- *
- * @param  action  Glue action being performed.
- * @param  q       Pointer to this object's public BatchDeleteTableRequest instance.
+ * Constructs a BatchDeleteTableRequestPrivate object for Glue \a action with,
+ * public implementation \a q.
  */
 BatchDeleteTableRequestPrivate::BatchDeleteTableRequestPrivate(
     const GlueRequest::Action action, BatchDeleteTableRequest * const q)
@@ -107,15 +96,10 @@ BatchDeleteTableRequestPrivate::BatchDeleteTableRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new BatchDeleteTableRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the BatchDeleteTableRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public BatchDeleteTableRequest instance.
  */
 BatchDeleteTableRequestPrivate::BatchDeleteTableRequestPrivate(
     const BatchDeleteTableRequestPrivate &other, BatchDeleteTableRequest * const q)

@@ -27,19 +27,16 @@ namespace KinesisAnalytics {
 
 /*!
  * \class QtAws::KinesisAnalytics::DeleteApplicationCloudWatchLoggingOptionRequest
- *
  * \brief The DeleteApplicationCloudWatchLoggingOptionRequest class provides an interface for KinesisAnalytics DeleteApplicationCloudWatchLoggingOption requests.
  *
- * \ingroup KinesisAnalytics
+ * \inmodule QtAwsKinesisAnalytics
  *
  *
  * \sa KinesisAnalyticsClient::deleteApplicationCloudWatchLoggingOption
  */
 
 /*!
- * @brief  Constructs a new DeleteApplicationCloudWatchLoggingOptionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteApplicationCloudWatchLoggingOptionRequest::DeleteApplicationCloudWatchLoggingOptionRequest(const DeleteApplicationCloudWatchLoggingOptionRequest &other)
     : KinesisAnalyticsRequest(new DeleteApplicationCloudWatchLoggingOptionRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ DeleteApplicationCloudWatchLoggingOptionRequest::DeleteApplicationCloudWatchLogg
 }
 
 /*!
- * @brief  Constructs a new DeleteApplicationCloudWatchLoggingOptionRequest object.
+ * Constructs a DeleteApplicationCloudWatchLoggingOptionRequest object.
  */
 DeleteApplicationCloudWatchLoggingOptionRequest::DeleteApplicationCloudWatchLoggingOptionRequest()
     : KinesisAnalyticsRequest(new DeleteApplicationCloudWatchLoggingOptionRequestPrivate(KinesisAnalyticsRequest::DeleteApplicationCloudWatchLoggingOptionAction, this))
@@ -66,14 +63,9 @@ bool DeleteApplicationCloudWatchLoggingOptionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteApplicationCloudWatchLoggingOptionResponse object.
+ * Returns a DeleteApplicationCloudWatchLoggingOptionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteApplicationCloudWatchLoggingOptionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  KinesisAnalyticsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteApplicationCloudWatchLoggingOptionRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * DeleteApplicationCloudWatchLoggingOptionReque
 }
 
 /*!
- * @internal
+ * \class QtAws::KinesisAnalytics::DeleteApplicationCloudWatchLoggingOptionRequestPrivate
+ * \brief The DeleteApplicationCloudWatchLoggingOptionRequestPrivate class provides private implementation for DeleteApplicationCloudWatchLoggingOptionRequest.
+ * \internal
  *
- * @class  DeleteApplicationCloudWatchLoggingOptionRequestPrivate
- *
- * @brief  Private implementation for DeleteApplicationCloudWatchLoggingOptionRequest.
+ * \inmodule QtAwsKinesisAnalytics
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteApplicationCloudWatchLoggingOptionRequestPrivate object.
- *
- * @param  action  KinesisAnalytics action being performed.
- * @param  q       Pointer to this object's public DeleteApplicationCloudWatchLoggingOptionRequest instance.
+ * Constructs a DeleteApplicationCloudWatchLoggingOptionRequestPrivate object for KinesisAnalytics \a action with,
+ * public implementation \a q.
  */
 DeleteApplicationCloudWatchLoggingOptionRequestPrivate::DeleteApplicationCloudWatchLoggingOptionRequestPrivate(
     const KinesisAnalyticsRequest::Action action, DeleteApplicationCloudWatchLoggingOptionRequest * const q)
@@ -104,15 +93,10 @@ DeleteApplicationCloudWatchLoggingOptionRequestPrivate::DeleteApplicationCloudWa
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteApplicationCloudWatchLoggingOptionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteApplicationCloudWatchLoggingOptionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteApplicationCloudWatchLoggingOptionRequest instance.
  */
 DeleteApplicationCloudWatchLoggingOptionRequestPrivate::DeleteApplicationCloudWatchLoggingOptionRequestPrivate(
     const DeleteApplicationCloudWatchLoggingOptionRequestPrivate &other, DeleteApplicationCloudWatchLoggingOptionRequest * const q)

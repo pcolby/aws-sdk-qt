@@ -27,10 +27,9 @@ namespace CloudDirectory {
 
 /*!
  * \class QtAws::CloudDirectory::UpdateObjectAttributesRequest
- *
  * \brief The UpdateObjectAttributesRequest class provides an interface for CloudDirectory UpdateObjectAttributes requests.
  *
- * \ingroup CloudDirectory
+ * \inmodule QtAwsCloudDirectory
  *
  *  <fullname>Amazon Cloud Directory</fullname>
  * 
@@ -44,9 +43,7 @@ namespace CloudDirectory {
  */
 
 /*!
- * @brief  Constructs a new UpdateObjectAttributesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateObjectAttributesRequest::UpdateObjectAttributesRequest(const UpdateObjectAttributesRequest &other)
     : CloudDirectoryRequest(new UpdateObjectAttributesRequestPrivate(*other.d_func(), this))
@@ -55,7 +52,7 @@ UpdateObjectAttributesRequest::UpdateObjectAttributesRequest(const UpdateObjectA
 }
 
 /*!
- * @brief  Constructs a new UpdateObjectAttributesRequest object.
+ * Constructs a UpdateObjectAttributesRequest object.
  */
 UpdateObjectAttributesRequest::UpdateObjectAttributesRequest()
     : CloudDirectoryRequest(new UpdateObjectAttributesRequestPrivate(CloudDirectoryRequest::UpdateObjectAttributesAction, this))
@@ -73,14 +70,9 @@ bool UpdateObjectAttributesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateObjectAttributesResponse object.
+ * Returns a UpdateObjectAttributesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateObjectAttributesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudDirectoryClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateObjectAttributesRequest::response(QNetworkReply * const reply) const
 {
@@ -88,20 +80,17 @@ QtAws::Core::AwsAbstractResponse * UpdateObjectAttributesRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudDirectory::UpdateObjectAttributesRequestPrivate
+ * \brief The UpdateObjectAttributesRequestPrivate class provides private implementation for UpdateObjectAttributesRequest.
+ * \internal
  *
- * @class  UpdateObjectAttributesRequestPrivate
- *
- * @brief  Private implementation for UpdateObjectAttributesRequest.
+ * \inmodule QtAwsCloudDirectory
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateObjectAttributesRequestPrivate object.
- *
- * @param  action  CloudDirectory action being performed.
- * @param  q       Pointer to this object's public UpdateObjectAttributesRequest instance.
+ * Constructs a UpdateObjectAttributesRequestPrivate object for CloudDirectory \a action with,
+ * public implementation \a q.
  */
 UpdateObjectAttributesRequestPrivate::UpdateObjectAttributesRequestPrivate(
     const CloudDirectoryRequest::Action action, UpdateObjectAttributesRequest * const q)
@@ -111,15 +100,10 @@ UpdateObjectAttributesRequestPrivate::UpdateObjectAttributesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateObjectAttributesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateObjectAttributesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateObjectAttributesRequest instance.
  */
 UpdateObjectAttributesRequestPrivate::UpdateObjectAttributesRequestPrivate(
     const UpdateObjectAttributesRequestPrivate &other, UpdateObjectAttributesRequest * const q)

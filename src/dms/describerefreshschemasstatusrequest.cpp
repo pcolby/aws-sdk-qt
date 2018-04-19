@@ -27,10 +27,9 @@ namespace DatabaseMigrationService {
 
 /*!
  * \class QtAws::DatabaseMigrationService::DescribeRefreshSchemasStatusRequest
- *
  * \brief The DescribeRefreshSchemasStatusRequest class provides an interface for DatabaseMigrationService DescribeRefreshSchemasStatus requests.
  *
- * \ingroup DatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigrationService
  *
  *  <fullname>AWS Database Migration Service</fullname>
  * 
@@ -48,9 +47,7 @@ namespace DatabaseMigrationService {
  */
 
 /*!
- * @brief  Constructs a new DescribeRefreshSchemasStatusRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeRefreshSchemasStatusRequest::DescribeRefreshSchemasStatusRequest(const DescribeRefreshSchemasStatusRequest &other)
     : DatabaseMigrationServiceRequest(new DescribeRefreshSchemasStatusRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ DescribeRefreshSchemasStatusRequest::DescribeRefreshSchemasStatusRequest(const D
 }
 
 /*!
- * @brief  Constructs a new DescribeRefreshSchemasStatusRequest object.
+ * Constructs a DescribeRefreshSchemasStatusRequest object.
  */
 DescribeRefreshSchemasStatusRequest::DescribeRefreshSchemasStatusRequest()
     : DatabaseMigrationServiceRequest(new DescribeRefreshSchemasStatusRequestPrivate(DatabaseMigrationServiceRequest::DescribeRefreshSchemasStatusAction, this))
@@ -77,14 +74,9 @@ bool DescribeRefreshSchemasStatusRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeRefreshSchemasStatusResponse object.
+ * Returns a DescribeRefreshSchemasStatusResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeRefreshSchemasStatusResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DatabaseMigrationServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeRefreshSchemasStatusRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * DescribeRefreshSchemasStatusRequest::response
 }
 
 /*!
- * @internal
+ * \class QtAws::DatabaseMigrationService::DescribeRefreshSchemasStatusRequestPrivate
+ * \brief The DescribeRefreshSchemasStatusRequestPrivate class provides private implementation for DescribeRefreshSchemasStatusRequest.
+ * \internal
  *
- * @class  DescribeRefreshSchemasStatusRequestPrivate
- *
- * @brief  Private implementation for DescribeRefreshSchemasStatusRequest.
+ * \inmodule QtAwsDatabaseMigrationService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeRefreshSchemasStatusRequestPrivate object.
- *
- * @param  action  DatabaseMigrationService action being performed.
- * @param  q       Pointer to this object's public DescribeRefreshSchemasStatusRequest instance.
+ * Constructs a DescribeRefreshSchemasStatusRequestPrivate object for DatabaseMigrationService \a action with,
+ * public implementation \a q.
  */
 DescribeRefreshSchemasStatusRequestPrivate::DescribeRefreshSchemasStatusRequestPrivate(
     const DatabaseMigrationServiceRequest::Action action, DescribeRefreshSchemasStatusRequest * const q)
@@ -115,15 +104,10 @@ DescribeRefreshSchemasStatusRequestPrivate::DescribeRefreshSchemasStatusRequestP
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeRefreshSchemasStatusRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeRefreshSchemasStatusRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeRefreshSchemasStatusRequest instance.
  */
 DescribeRefreshSchemasStatusRequestPrivate::DescribeRefreshSchemasStatusRequestPrivate(
     const DescribeRefreshSchemasStatusRequestPrivate &other, DescribeRefreshSchemasStatusRequest * const q)

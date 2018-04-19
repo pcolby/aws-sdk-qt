@@ -27,10 +27,9 @@ namespace OpsWorksCM {
 
 /*!
  * \class QtAws::OpsWorksCM::DescribeAccountAttributesRequest
- *
  * \brief The DescribeAccountAttributesRequest class provides an interface for OpsWorksCM DescribeAccountAttributes requests.
  *
- * \ingroup OpsWorksCM
+ * \inmodule QtAwsOpsWorksCM
  *
  *  <fullname>AWS OpsWorks CM</fullname>
  * 
@@ -97,9 +96,7 @@ namespace OpsWorksCM {
  */
 
 /*!
- * @brief  Constructs a new DescribeAccountAttributesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeAccountAttributesRequest::DescribeAccountAttributesRequest(const DescribeAccountAttributesRequest &other)
     : OpsWorksCMRequest(new DescribeAccountAttributesRequestPrivate(*other.d_func(), this))
@@ -108,7 +105,7 @@ DescribeAccountAttributesRequest::DescribeAccountAttributesRequest(const Describ
 }
 
 /*!
- * @brief  Constructs a new DescribeAccountAttributesRequest object.
+ * Constructs a DescribeAccountAttributesRequest object.
  */
 DescribeAccountAttributesRequest::DescribeAccountAttributesRequest()
     : OpsWorksCMRequest(new DescribeAccountAttributesRequestPrivate(OpsWorksCMRequest::DescribeAccountAttributesAction, this))
@@ -126,14 +123,9 @@ bool DescribeAccountAttributesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeAccountAttributesResponse object.
+ * Returns a DescribeAccountAttributesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeAccountAttributesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  OpsWorksCMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeAccountAttributesRequest::response(QNetworkReply * const reply) const
 {
@@ -141,20 +133,17 @@ QtAws::Core::AwsAbstractResponse * DescribeAccountAttributesRequest::response(QN
 }
 
 /*!
- * @internal
+ * \class QtAws::OpsWorksCM::DescribeAccountAttributesRequestPrivate
+ * \brief The DescribeAccountAttributesRequestPrivate class provides private implementation for DescribeAccountAttributesRequest.
+ * \internal
  *
- * @class  DescribeAccountAttributesRequestPrivate
- *
- * @brief  Private implementation for DescribeAccountAttributesRequest.
+ * \inmodule QtAwsOpsWorksCM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeAccountAttributesRequestPrivate object.
- *
- * @param  action  OpsWorksCM action being performed.
- * @param  q       Pointer to this object's public DescribeAccountAttributesRequest instance.
+ * Constructs a DescribeAccountAttributesRequestPrivate object for OpsWorksCM \a action with,
+ * public implementation \a q.
  */
 DescribeAccountAttributesRequestPrivate::DescribeAccountAttributesRequestPrivate(
     const OpsWorksCMRequest::Action action, DescribeAccountAttributesRequest * const q)
@@ -164,15 +153,10 @@ DescribeAccountAttributesRequestPrivate::DescribeAccountAttributesRequestPrivate
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeAccountAttributesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeAccountAttributesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeAccountAttributesRequest instance.
  */
 DescribeAccountAttributesRequestPrivate::DescribeAccountAttributesRequestPrivate(
     const DescribeAccountAttributesRequestPrivate &other, DescribeAccountAttributesRequest * const q)

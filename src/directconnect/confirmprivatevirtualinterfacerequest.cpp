@@ -27,10 +27,9 @@ namespace DirectConnect {
 
 /*!
  * \class QtAws::DirectConnect::ConfirmPrivateVirtualInterfaceRequest
- *
  * \brief The ConfirmPrivateVirtualInterfaceRequest class provides an interface for DirectConnect ConfirmPrivateVirtualInterface requests.
  *
- * \ingroup DirectConnect
+ * \inmodule QtAwsDirectConnect
  *
  *  AWS Direct Connect links your internal network to an AWS Direct Connect location over a standard 1 gigabit or 10 gigabit
  *  Ethernet fiber-optic cable. One end of the cable is connected to your router, the other to an AWS Direct Connect router.
@@ -45,9 +44,7 @@ namespace DirectConnect {
  */
 
 /*!
- * @brief  Constructs a new ConfirmPrivateVirtualInterfaceRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ConfirmPrivateVirtualInterfaceRequest::ConfirmPrivateVirtualInterfaceRequest(const ConfirmPrivateVirtualInterfaceRequest &other)
     : DirectConnectRequest(new ConfirmPrivateVirtualInterfaceRequestPrivate(*other.d_func(), this))
@@ -56,7 +53,7 @@ ConfirmPrivateVirtualInterfaceRequest::ConfirmPrivateVirtualInterfaceRequest(con
 }
 
 /*!
- * @brief  Constructs a new ConfirmPrivateVirtualInterfaceRequest object.
+ * Constructs a ConfirmPrivateVirtualInterfaceRequest object.
  */
 ConfirmPrivateVirtualInterfaceRequest::ConfirmPrivateVirtualInterfaceRequest()
     : DirectConnectRequest(new ConfirmPrivateVirtualInterfaceRequestPrivate(DirectConnectRequest::ConfirmPrivateVirtualInterfaceAction, this))
@@ -74,14 +71,9 @@ bool ConfirmPrivateVirtualInterfaceRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ConfirmPrivateVirtualInterfaceResponse object.
+ * Returns a ConfirmPrivateVirtualInterfaceResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ConfirmPrivateVirtualInterfaceResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DirectConnectClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ConfirmPrivateVirtualInterfaceRequest::response(QNetworkReply * const reply) const
 {
@@ -89,20 +81,17 @@ QtAws::Core::AwsAbstractResponse * ConfirmPrivateVirtualInterfaceRequest::respon
 }
 
 /*!
- * @internal
+ * \class QtAws::DirectConnect::ConfirmPrivateVirtualInterfaceRequestPrivate
+ * \brief The ConfirmPrivateVirtualInterfaceRequestPrivate class provides private implementation for ConfirmPrivateVirtualInterfaceRequest.
+ * \internal
  *
- * @class  ConfirmPrivateVirtualInterfaceRequestPrivate
- *
- * @brief  Private implementation for ConfirmPrivateVirtualInterfaceRequest.
+ * \inmodule QtAwsDirectConnect
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ConfirmPrivateVirtualInterfaceRequestPrivate object.
- *
- * @param  action  DirectConnect action being performed.
- * @param  q       Pointer to this object's public ConfirmPrivateVirtualInterfaceRequest instance.
+ * Constructs a ConfirmPrivateVirtualInterfaceRequestPrivate object for DirectConnect \a action with,
+ * public implementation \a q.
  */
 ConfirmPrivateVirtualInterfaceRequestPrivate::ConfirmPrivateVirtualInterfaceRequestPrivate(
     const DirectConnectRequest::Action action, ConfirmPrivateVirtualInterfaceRequest * const q)
@@ -112,15 +101,10 @@ ConfirmPrivateVirtualInterfaceRequestPrivate::ConfirmPrivateVirtualInterfaceRequ
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ConfirmPrivateVirtualInterfaceRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ConfirmPrivateVirtualInterfaceRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ConfirmPrivateVirtualInterfaceRequest instance.
  */
 ConfirmPrivateVirtualInterfaceRequestPrivate::ConfirmPrivateVirtualInterfaceRequestPrivate(
     const ConfirmPrivateVirtualInterfaceRequestPrivate &other, ConfirmPrivateVirtualInterfaceRequest * const q)

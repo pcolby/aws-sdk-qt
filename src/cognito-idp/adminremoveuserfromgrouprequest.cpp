@@ -27,10 +27,9 @@ namespace CognitoIdentityProvider {
 
 /*!
  * \class QtAws::CognitoIdentityProvider::AdminRemoveUserFromGroupRequest
- *
  * \brief The AdminRemoveUserFromGroupRequest class provides an interface for CognitoIdentityProvider AdminRemoveUserFromGroup requests.
  *
- * \ingroup CognitoIdentityProvider
+ * \inmodule QtAwsCognitoIdentityProvider
  *
  *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
  *  authenticate a user to obtain tokens related to user identity and access
@@ -47,9 +46,7 @@ namespace CognitoIdentityProvider {
  */
 
 /*!
- * @brief  Constructs a new AdminRemoveUserFromGroupRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AdminRemoveUserFromGroupRequest::AdminRemoveUserFromGroupRequest(const AdminRemoveUserFromGroupRequest &other)
     : CognitoIdentityProviderRequest(new AdminRemoveUserFromGroupRequestPrivate(*other.d_func(), this))
@@ -58,7 +55,7 @@ AdminRemoveUserFromGroupRequest::AdminRemoveUserFromGroupRequest(const AdminRemo
 }
 
 /*!
- * @brief  Constructs a new AdminRemoveUserFromGroupRequest object.
+ * Constructs a AdminRemoveUserFromGroupRequest object.
  */
 AdminRemoveUserFromGroupRequest::AdminRemoveUserFromGroupRequest()
     : CognitoIdentityProviderRequest(new AdminRemoveUserFromGroupRequestPrivate(CognitoIdentityProviderRequest::AdminRemoveUserFromGroupAction, this))
@@ -76,14 +73,9 @@ bool AdminRemoveUserFromGroupRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AdminRemoveUserFromGroupResponse object.
+ * Returns a AdminRemoveUserFromGroupResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AdminRemoveUserFromGroupResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CognitoIdentityProviderClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AdminRemoveUserFromGroupRequest::response(QNetworkReply * const reply) const
 {
@@ -91,20 +83,17 @@ QtAws::Core::AwsAbstractResponse * AdminRemoveUserFromGroupRequest::response(QNe
 }
 
 /*!
- * @internal
+ * \class QtAws::CognitoIdentityProvider::AdminRemoveUserFromGroupRequestPrivate
+ * \brief The AdminRemoveUserFromGroupRequestPrivate class provides private implementation for AdminRemoveUserFromGroupRequest.
+ * \internal
  *
- * @class  AdminRemoveUserFromGroupRequestPrivate
- *
- * @brief  Private implementation for AdminRemoveUserFromGroupRequest.
+ * \inmodule QtAwsCognitoIdentityProvider
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AdminRemoveUserFromGroupRequestPrivate object.
- *
- * @param  action  CognitoIdentityProvider action being performed.
- * @param  q       Pointer to this object's public AdminRemoveUserFromGroupRequest instance.
+ * Constructs a AdminRemoveUserFromGroupRequestPrivate object for CognitoIdentityProvider \a action with,
+ * public implementation \a q.
  */
 AdminRemoveUserFromGroupRequestPrivate::AdminRemoveUserFromGroupRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, AdminRemoveUserFromGroupRequest * const q)
@@ -114,15 +103,10 @@ AdminRemoveUserFromGroupRequestPrivate::AdminRemoveUserFromGroupRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AdminRemoveUserFromGroupRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AdminRemoveUserFromGroupRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AdminRemoveUserFromGroupRequest instance.
  */
 AdminRemoveUserFromGroupRequestPrivate::AdminRemoveUserFromGroupRequestPrivate(
     const AdminRemoveUserFromGroupRequestPrivate &other, AdminRemoveUserFromGroupRequest * const q)

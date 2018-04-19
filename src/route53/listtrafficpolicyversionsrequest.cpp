@@ -27,19 +27,16 @@ namespace Route53 {
 
 /*!
  * \class QtAws::Route53::ListTrafficPolicyVersionsRequest
- *
  * \brief The ListTrafficPolicyVersionsRequest class provides an interface for Route53 ListTrafficPolicyVersions requests.
  *
- * \ingroup Route53
+ * \inmodule QtAwsRoute53
  *
  *
  * \sa Route53Client::listTrafficPolicyVersions
  */
 
 /*!
- * @brief  Constructs a new ListTrafficPolicyVersionsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListTrafficPolicyVersionsRequest::ListTrafficPolicyVersionsRequest(const ListTrafficPolicyVersionsRequest &other)
     : Route53Request(new ListTrafficPolicyVersionsRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ ListTrafficPolicyVersionsRequest::ListTrafficPolicyVersionsRequest(const ListTra
 }
 
 /*!
- * @brief  Constructs a new ListTrafficPolicyVersionsRequest object.
+ * Constructs a ListTrafficPolicyVersionsRequest object.
  */
 ListTrafficPolicyVersionsRequest::ListTrafficPolicyVersionsRequest()
     : Route53Request(new ListTrafficPolicyVersionsRequestPrivate(Route53Request::ListTrafficPolicyVersionsAction, this))
@@ -66,14 +63,9 @@ bool ListTrafficPolicyVersionsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListTrafficPolicyVersionsResponse object.
+ * Returns a ListTrafficPolicyVersionsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListTrafficPolicyVersionsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  Route53Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListTrafficPolicyVersionsRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * ListTrafficPolicyVersionsRequest::response(QN
 }
 
 /*!
- * @internal
+ * \class QtAws::Route53::ListTrafficPolicyVersionsRequestPrivate
+ * \brief The ListTrafficPolicyVersionsRequestPrivate class provides private implementation for ListTrafficPolicyVersionsRequest.
+ * \internal
  *
- * @class  ListTrafficPolicyVersionsRequestPrivate
- *
- * @brief  Private implementation for ListTrafficPolicyVersionsRequest.
+ * \inmodule QtAwsRoute53
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListTrafficPolicyVersionsRequestPrivate object.
- *
- * @param  action  Route53 action being performed.
- * @param  q       Pointer to this object's public ListTrafficPolicyVersionsRequest instance.
+ * Constructs a ListTrafficPolicyVersionsRequestPrivate object for Route53 \a action with,
+ * public implementation \a q.
  */
 ListTrafficPolicyVersionsRequestPrivate::ListTrafficPolicyVersionsRequestPrivate(
     const Route53Request::Action action, ListTrafficPolicyVersionsRequest * const q)
@@ -104,15 +93,10 @@ ListTrafficPolicyVersionsRequestPrivate::ListTrafficPolicyVersionsRequestPrivate
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListTrafficPolicyVersionsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListTrafficPolicyVersionsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListTrafficPolicyVersionsRequest instance.
  */
 ListTrafficPolicyVersionsRequestPrivate::ListTrafficPolicyVersionsRequestPrivate(
     const ListTrafficPolicyVersionsRequestPrivate &other, ListTrafficPolicyVersionsRequest * const q)

@@ -27,10 +27,9 @@ namespace ElasticTranscoder {
 
 /*!
  * \class QtAws::ElasticTranscoder::TestRoleRequest
- *
  * \brief The TestRoleRequest class provides an interface for ElasticTranscoder TestRole requests.
  *
- * \ingroup ElasticTranscoder
+ * \inmodule QtAwsElasticTranscoder
  *
  *  <fullname>AWS Elastic Transcoder Service</fullname>
  * 
@@ -40,9 +39,7 @@ namespace ElasticTranscoder {
  */
 
 /*!
- * @brief  Constructs a new TestRoleRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 TestRoleRequest::TestRoleRequest(const TestRoleRequest &other)
     : ElasticTranscoderRequest(new TestRoleRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ TestRoleRequest::TestRoleRequest(const TestRoleRequest &other)
 }
 
 /*!
- * @brief  Constructs a new TestRoleRequest object.
+ * Constructs a TestRoleRequest object.
  */
 TestRoleRequest::TestRoleRequest()
     : ElasticTranscoderRequest(new TestRoleRequestPrivate(ElasticTranscoderRequest::TestRoleAction, this))
@@ -69,14 +66,9 @@ bool TestRoleRequest::isValid() const
 
 
 /*!
- * @brief  Construct an TestRoleResponse object.
+ * Returns a TestRoleResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An TestRoleResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ElasticTranscoderClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * TestRoleRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * TestRoleRequest::response(QNetworkReply * con
 }
 
 /*!
- * @internal
+ * \class QtAws::ElasticTranscoder::TestRoleRequestPrivate
+ * \brief The TestRoleRequestPrivate class provides private implementation for TestRoleRequest.
+ * \internal
  *
- * @class  TestRoleRequestPrivate
- *
- * @brief  Private implementation for TestRoleRequest.
+ * \inmodule QtAwsElasticTranscoder
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new TestRoleRequestPrivate object.
- *
- * @param  action  ElasticTranscoder action being performed.
- * @param  q       Pointer to this object's public TestRoleRequest instance.
+ * Constructs a TestRoleRequestPrivate object for ElasticTranscoder \a action with,
+ * public implementation \a q.
  */
 TestRoleRequestPrivate::TestRoleRequestPrivate(
     const ElasticTranscoderRequest::Action action, TestRoleRequest * const q)
@@ -107,15 +96,10 @@ TestRoleRequestPrivate::TestRoleRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new TestRoleRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the TestRoleRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public TestRoleRequest instance.
  */
 TestRoleRequestPrivate::TestRoleRequestPrivate(
     const TestRoleRequestPrivate &other, TestRoleRequest * const q)

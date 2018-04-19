@@ -27,10 +27,9 @@ namespace WAF {
 
 /*!
  * \class QtAws::WAF::ListWebACLsRequest
- *
  * \brief The ListWebACLsRequest class provides an interface for WAF ListWebACLs requests.
  *
- * \ingroup WAF
+ * \inmodule QtAwsWAF
  *
  *  This is the <i>AWS WAF API Reference</i> for using AWS WAF with Amazon CloudFront. The AWS WAF actions and data types
  *  listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data
@@ -42,9 +41,7 @@ namespace WAF {
  */
 
 /*!
- * @brief  Constructs a new ListWebACLsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListWebACLsRequest::ListWebACLsRequest(const ListWebACLsRequest &other)
     : WAFRequest(new ListWebACLsRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ ListWebACLsRequest::ListWebACLsRequest(const ListWebACLsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ListWebACLsRequest object.
+ * Constructs a ListWebACLsRequest object.
  */
 ListWebACLsRequest::ListWebACLsRequest()
     : WAFRequest(new ListWebACLsRequestPrivate(WAFRequest::ListWebACLsAction, this))
@@ -71,14 +68,9 @@ bool ListWebACLsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListWebACLsResponse object.
+ * Returns a ListWebACLsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListWebACLsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WAFClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListWebACLsRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * ListWebACLsRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::WAF::ListWebACLsRequestPrivate
+ * \brief The ListWebACLsRequestPrivate class provides private implementation for ListWebACLsRequest.
+ * \internal
  *
- * @class  ListWebACLsRequestPrivate
- *
- * @brief  Private implementation for ListWebACLsRequest.
+ * \inmodule QtAwsWAF
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListWebACLsRequestPrivate object.
- *
- * @param  action  WAF action being performed.
- * @param  q       Pointer to this object's public ListWebACLsRequest instance.
+ * Constructs a ListWebACLsRequestPrivate object for WAF \a action with,
+ * public implementation \a q.
  */
 ListWebACLsRequestPrivate::ListWebACLsRequestPrivate(
     const WAFRequest::Action action, ListWebACLsRequest * const q)
@@ -109,15 +98,10 @@ ListWebACLsRequestPrivate::ListWebACLsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListWebACLsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListWebACLsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListWebACLsRequest instance.
  */
 ListWebACLsRequestPrivate::ListWebACLsRequestPrivate(
     const ListWebACLsRequestPrivate &other, ListWebACLsRequest * const q)

@@ -27,19 +27,16 @@ namespace MediaLive {
 
 /*!
  * \class QtAws::MediaLive::DeleteInputRequest
- *
  * \brief The DeleteInputRequest class provides an interface for MediaLive DeleteInput requests.
  *
- * \ingroup MediaLive
+ * \inmodule QtAwsMediaLive
  *
  *
  * \sa MediaLiveClient::deleteInput
  */
 
 /*!
- * @brief  Constructs a new DeleteInputRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteInputRequest::DeleteInputRequest(const DeleteInputRequest &other)
     : MediaLiveRequest(new DeleteInputRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ DeleteInputRequest::DeleteInputRequest(const DeleteInputRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DeleteInputRequest object.
+ * Constructs a DeleteInputRequest object.
  */
 DeleteInputRequest::DeleteInputRequest()
     : MediaLiveRequest(new DeleteInputRequestPrivate(MediaLiveRequest::DeleteInputAction, this))
@@ -66,14 +63,9 @@ bool DeleteInputRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteInputResponse object.
+ * Returns a DeleteInputResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteInputResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MediaLiveClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteInputRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * DeleteInputRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::MediaLive::DeleteInputRequestPrivate
+ * \brief The DeleteInputRequestPrivate class provides private implementation for DeleteInputRequest.
+ * \internal
  *
- * @class  DeleteInputRequestPrivate
- *
- * @brief  Private implementation for DeleteInputRequest.
+ * \inmodule QtAwsMediaLive
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteInputRequestPrivate object.
- *
- * @param  action  MediaLive action being performed.
- * @param  q       Pointer to this object's public DeleteInputRequest instance.
+ * Constructs a DeleteInputRequestPrivate object for MediaLive \a action with,
+ * public implementation \a q.
  */
 DeleteInputRequestPrivate::DeleteInputRequestPrivate(
     const MediaLiveRequest::Action action, DeleteInputRequest * const q)
@@ -104,15 +93,10 @@ DeleteInputRequestPrivate::DeleteInputRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteInputRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteInputRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteInputRequest instance.
  */
 DeleteInputRequestPrivate::DeleteInputRequestPrivate(
     const DeleteInputRequestPrivate &other, DeleteInputRequest * const q)

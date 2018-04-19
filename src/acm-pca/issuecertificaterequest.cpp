@@ -27,10 +27,9 @@ namespace ACMPCA {
 
 /*!
  * \class QtAws::ACMPCA::IssueCertificateRequest
- *
  * \brief The IssueCertificateRequest class provides an interface for ACMPCA IssueCertificate requests.
  *
- * \ingroup ACMPCA
+ * \inmodule QtAwsACMPCA
  *
  *  You can use the ACM PCA API to create a private certificate authority (CA). You must first call the
  *  <a>CreateCertificateAuthority</a> function. If successful, the function returns an Amazon Resource Name (ARN) for your
@@ -67,9 +66,7 @@ namespace ACMPCA {
  */
 
 /*!
- * @brief  Constructs a new IssueCertificateRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 IssueCertificateRequest::IssueCertificateRequest(const IssueCertificateRequest &other)
     : ACMPCARequest(new IssueCertificateRequestPrivate(*other.d_func(), this))
@@ -78,7 +75,7 @@ IssueCertificateRequest::IssueCertificateRequest(const IssueCertificateRequest &
 }
 
 /*!
- * @brief  Constructs a new IssueCertificateRequest object.
+ * Constructs a IssueCertificateRequest object.
  */
 IssueCertificateRequest::IssueCertificateRequest()
     : ACMPCARequest(new IssueCertificateRequestPrivate(ACMPCARequest::IssueCertificateAction, this))
@@ -96,14 +93,9 @@ bool IssueCertificateRequest::isValid() const
 
 
 /*!
- * @brief  Construct an IssueCertificateResponse object.
+ * Returns a IssueCertificateResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An IssueCertificateResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ACMPCAClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * IssueCertificateRequest::response(QNetworkReply * const reply) const
 {
@@ -111,20 +103,17 @@ QtAws::Core::AwsAbstractResponse * IssueCertificateRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::ACMPCA::IssueCertificateRequestPrivate
+ * \brief The IssueCertificateRequestPrivate class provides private implementation for IssueCertificateRequest.
+ * \internal
  *
- * @class  IssueCertificateRequestPrivate
- *
- * @brief  Private implementation for IssueCertificateRequest.
+ * \inmodule QtAwsACMPCA
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new IssueCertificateRequestPrivate object.
- *
- * @param  action  ACMPCA action being performed.
- * @param  q       Pointer to this object's public IssueCertificateRequest instance.
+ * Constructs a IssueCertificateRequestPrivate object for ACMPCA \a action with,
+ * public implementation \a q.
  */
 IssueCertificateRequestPrivate::IssueCertificateRequestPrivate(
     const ACMPCARequest::Action action, IssueCertificateRequest * const q)
@@ -134,15 +123,10 @@ IssueCertificateRequestPrivate::IssueCertificateRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new IssueCertificateRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the IssueCertificateRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public IssueCertificateRequest instance.
  */
 IssueCertificateRequestPrivate::IssueCertificateRequestPrivate(
     const IssueCertificateRequestPrivate &other, IssueCertificateRequest * const q)

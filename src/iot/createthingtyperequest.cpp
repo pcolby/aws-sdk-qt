@@ -27,10 +27,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::CreateThingTypeRequest
- *
  * \brief The CreateThingTypeRequest class provides an interface for IoT CreateThingType requests.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -48,9 +47,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new CreateThingTypeRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateThingTypeRequest::CreateThingTypeRequest(const CreateThingTypeRequest &other)
     : IoTRequest(new CreateThingTypeRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ CreateThingTypeRequest::CreateThingTypeRequest(const CreateThingTypeRequest &oth
 }
 
 /*!
- * @brief  Constructs a new CreateThingTypeRequest object.
+ * Constructs a CreateThingTypeRequest object.
  */
 CreateThingTypeRequest::CreateThingTypeRequest()
     : IoTRequest(new CreateThingTypeRequestPrivate(IoTRequest::CreateThingTypeAction, this))
@@ -77,14 +74,9 @@ bool CreateThingTypeRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateThingTypeResponse object.
+ * Returns a CreateThingTypeResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateThingTypeResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IoTClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateThingTypeRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * CreateThingTypeRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::IoT::CreateThingTypeRequestPrivate
+ * \brief The CreateThingTypeRequestPrivate class provides private implementation for CreateThingTypeRequest.
+ * \internal
  *
- * @class  CreateThingTypeRequestPrivate
- *
- * @brief  Private implementation for CreateThingTypeRequest.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateThingTypeRequestPrivate object.
- *
- * @param  action  IoT action being performed.
- * @param  q       Pointer to this object's public CreateThingTypeRequest instance.
+ * Constructs a CreateThingTypeRequestPrivate object for IoT \a action with,
+ * public implementation \a q.
  */
 CreateThingTypeRequestPrivate::CreateThingTypeRequestPrivate(
     const IoTRequest::Action action, CreateThingTypeRequest * const q)
@@ -115,15 +104,10 @@ CreateThingTypeRequestPrivate::CreateThingTypeRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateThingTypeRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateThingTypeRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateThingTypeRequest instance.
  */
 CreateThingTypeRequestPrivate::CreateThingTypeRequestPrivate(
     const CreateThingTypeRequestPrivate &other, CreateThingTypeRequest * const q)

@@ -27,10 +27,9 @@ namespace CognitoIdentity {
 
 /*!
  * \class QtAws::CognitoIdentity::UpdateIdentityPoolRequest
- *
  * \brief The UpdateIdentityPoolRequest class provides an interface for CognitoIdentity UpdateIdentityPool requests.
  *
- * \ingroup CognitoIdentity
+ * \inmodule QtAwsCognitoIdentity
  *
  *  <fullname>Amazon Cognito</fullname>
  * 
@@ -75,9 +74,7 @@ namespace CognitoIdentity {
  */
 
 /*!
- * @brief  Constructs a new UpdateIdentityPoolRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateIdentityPoolRequest::UpdateIdentityPoolRequest(const UpdateIdentityPoolRequest &other)
     : CognitoIdentityRequest(new UpdateIdentityPoolRequestPrivate(*other.d_func(), this))
@@ -86,7 +83,7 @@ UpdateIdentityPoolRequest::UpdateIdentityPoolRequest(const UpdateIdentityPoolReq
 }
 
 /*!
- * @brief  Constructs a new UpdateIdentityPoolRequest object.
+ * Constructs a UpdateIdentityPoolRequest object.
  */
 UpdateIdentityPoolRequest::UpdateIdentityPoolRequest()
     : CognitoIdentityRequest(new UpdateIdentityPoolRequestPrivate(CognitoIdentityRequest::UpdateIdentityPoolAction, this))
@@ -104,14 +101,9 @@ bool UpdateIdentityPoolRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateIdentityPoolResponse object.
+ * Returns a UpdateIdentityPoolResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateIdentityPoolResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CognitoIdentityClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateIdentityPoolRequest::response(QNetworkReply * const reply) const
 {
@@ -119,20 +111,17 @@ QtAws::Core::AwsAbstractResponse * UpdateIdentityPoolRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::CognitoIdentity::UpdateIdentityPoolRequestPrivate
+ * \brief The UpdateIdentityPoolRequestPrivate class provides private implementation for UpdateIdentityPoolRequest.
+ * \internal
  *
- * @class  UpdateIdentityPoolRequestPrivate
- *
- * @brief  Private implementation for UpdateIdentityPoolRequest.
+ * \inmodule QtAwsCognitoIdentity
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateIdentityPoolRequestPrivate object.
- *
- * @param  action  CognitoIdentity action being performed.
- * @param  q       Pointer to this object's public UpdateIdentityPoolRequest instance.
+ * Constructs a UpdateIdentityPoolRequestPrivate object for CognitoIdentity \a action with,
+ * public implementation \a q.
  */
 UpdateIdentityPoolRequestPrivate::UpdateIdentityPoolRequestPrivate(
     const CognitoIdentityRequest::Action action, UpdateIdentityPoolRequest * const q)
@@ -142,15 +131,10 @@ UpdateIdentityPoolRequestPrivate::UpdateIdentityPoolRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateIdentityPoolRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateIdentityPoolRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateIdentityPoolRequest instance.
  */
 UpdateIdentityPoolRequestPrivate::UpdateIdentityPoolRequestPrivate(
     const UpdateIdentityPoolRequestPrivate &other, UpdateIdentityPoolRequest * const q)

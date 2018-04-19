@@ -27,10 +27,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::GetUsagePlanRequest
- *
  * \brief The GetUsagePlanRequest class provides an interface for APIGateway GetUsagePlan requests.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -42,9 +41,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new GetUsagePlanRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetUsagePlanRequest::GetUsagePlanRequest(const GetUsagePlanRequest &other)
     : APIGatewayRequest(new GetUsagePlanRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ GetUsagePlanRequest::GetUsagePlanRequest(const GetUsagePlanRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetUsagePlanRequest object.
+ * Constructs a GetUsagePlanRequest object.
  */
 GetUsagePlanRequest::GetUsagePlanRequest()
     : APIGatewayRequest(new GetUsagePlanRequestPrivate(APIGatewayRequest::GetUsagePlanAction, this))
@@ -71,14 +68,9 @@ bool GetUsagePlanRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetUsagePlanResponse object.
+ * Returns a GetUsagePlanResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetUsagePlanResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  APIGatewayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetUsagePlanRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * GetUsagePlanRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::APIGateway::GetUsagePlanRequestPrivate
+ * \brief The GetUsagePlanRequestPrivate class provides private implementation for GetUsagePlanRequest.
+ * \internal
  *
- * @class  GetUsagePlanRequestPrivate
- *
- * @brief  Private implementation for GetUsagePlanRequest.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetUsagePlanRequestPrivate object.
- *
- * @param  action  APIGateway action being performed.
- * @param  q       Pointer to this object's public GetUsagePlanRequest instance.
+ * Constructs a GetUsagePlanRequestPrivate object for APIGateway \a action with,
+ * public implementation \a q.
  */
 GetUsagePlanRequestPrivate::GetUsagePlanRequestPrivate(
     const APIGatewayRequest::Action action, GetUsagePlanRequest * const q)
@@ -109,15 +98,10 @@ GetUsagePlanRequestPrivate::GetUsagePlanRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetUsagePlanRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetUsagePlanRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetUsagePlanRequest instance.
  */
 GetUsagePlanRequestPrivate::GetUsagePlanRequestPrivate(
     const GetUsagePlanRequestPrivate &other, GetUsagePlanRequest * const q)

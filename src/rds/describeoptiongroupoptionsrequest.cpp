@@ -27,10 +27,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::DescribeOptionGroupOptionsRequest
- *
  * \brief The DescribeOptionGroupOptionsRequest class provides an interface for RDS DescribeOptionGroupOptions requests.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -101,9 +100,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new DescribeOptionGroupOptionsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeOptionGroupOptionsRequest::DescribeOptionGroupOptionsRequest(const DescribeOptionGroupOptionsRequest &other)
     : RDSRequest(new DescribeOptionGroupOptionsRequestPrivate(*other.d_func(), this))
@@ -112,7 +109,7 @@ DescribeOptionGroupOptionsRequest::DescribeOptionGroupOptionsRequest(const Descr
 }
 
 /*!
- * @brief  Constructs a new DescribeOptionGroupOptionsRequest object.
+ * Constructs a DescribeOptionGroupOptionsRequest object.
  */
 DescribeOptionGroupOptionsRequest::DescribeOptionGroupOptionsRequest()
     : RDSRequest(new DescribeOptionGroupOptionsRequestPrivate(RDSRequest::DescribeOptionGroupOptionsAction, this))
@@ -130,14 +127,9 @@ bool DescribeOptionGroupOptionsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeOptionGroupOptionsResponse object.
+ * Returns a DescribeOptionGroupOptionsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeOptionGroupOptionsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RDSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeOptionGroupOptionsRequest::response(QNetworkReply * const reply) const
 {
@@ -145,20 +137,17 @@ QtAws::Core::AwsAbstractResponse * DescribeOptionGroupOptionsRequest::response(Q
 }
 
 /*!
- * @internal
+ * \class QtAws::RDS::DescribeOptionGroupOptionsRequestPrivate
+ * \brief The DescribeOptionGroupOptionsRequestPrivate class provides private implementation for DescribeOptionGroupOptionsRequest.
+ * \internal
  *
- * @class  DescribeOptionGroupOptionsRequestPrivate
- *
- * @brief  Private implementation for DescribeOptionGroupOptionsRequest.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeOptionGroupOptionsRequestPrivate object.
- *
- * @param  action  RDS action being performed.
- * @param  q       Pointer to this object's public DescribeOptionGroupOptionsRequest instance.
+ * Constructs a DescribeOptionGroupOptionsRequestPrivate object for RDS \a action with,
+ * public implementation \a q.
  */
 DescribeOptionGroupOptionsRequestPrivate::DescribeOptionGroupOptionsRequestPrivate(
     const RDSRequest::Action action, DescribeOptionGroupOptionsRequest * const q)
@@ -168,15 +157,10 @@ DescribeOptionGroupOptionsRequestPrivate::DescribeOptionGroupOptionsRequestPriva
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeOptionGroupOptionsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeOptionGroupOptionsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeOptionGroupOptionsRequest instance.
  */
 DescribeOptionGroupOptionsRequestPrivate::DescribeOptionGroupOptionsRequestPrivate(
     const DescribeOptionGroupOptionsRequestPrivate &other, DescribeOptionGroupOptionsRequest * const q)

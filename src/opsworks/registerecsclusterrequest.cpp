@@ -27,10 +27,9 @@ namespace OpsWorks {
 
 /*!
  * \class QtAws::OpsWorks::RegisterEcsClusterRequest
- *
  * \brief The RegisterEcsClusterRequest class provides an interface for OpsWorks RegisterEcsCluster requests.
  *
- * \ingroup OpsWorks
+ * \inmodule QtAwsOpsWorks
  *
  *  <fullname>AWS OpsWorks</fullname>
  * 
@@ -143,9 +142,7 @@ namespace OpsWorks {
  */
 
 /*!
- * @brief  Constructs a new RegisterEcsClusterRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 RegisterEcsClusterRequest::RegisterEcsClusterRequest(const RegisterEcsClusterRequest &other)
     : OpsWorksRequest(new RegisterEcsClusterRequestPrivate(*other.d_func(), this))
@@ -154,7 +151,7 @@ RegisterEcsClusterRequest::RegisterEcsClusterRequest(const RegisterEcsClusterReq
 }
 
 /*!
- * @brief  Constructs a new RegisterEcsClusterRequest object.
+ * Constructs a RegisterEcsClusterRequest object.
  */
 RegisterEcsClusterRequest::RegisterEcsClusterRequest()
     : OpsWorksRequest(new RegisterEcsClusterRequestPrivate(OpsWorksRequest::RegisterEcsClusterAction, this))
@@ -172,14 +169,9 @@ bool RegisterEcsClusterRequest::isValid() const
 
 
 /*!
- * @brief  Construct an RegisterEcsClusterResponse object.
+ * Returns a RegisterEcsClusterResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An RegisterEcsClusterResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  OpsWorksClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * RegisterEcsClusterRequest::response(QNetworkReply * const reply) const
 {
@@ -187,20 +179,17 @@ QtAws::Core::AwsAbstractResponse * RegisterEcsClusterRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::OpsWorks::RegisterEcsClusterRequestPrivate
+ * \brief The RegisterEcsClusterRequestPrivate class provides private implementation for RegisterEcsClusterRequest.
+ * \internal
  *
- * @class  RegisterEcsClusterRequestPrivate
- *
- * @brief  Private implementation for RegisterEcsClusterRequest.
+ * \inmodule QtAwsOpsWorks
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new RegisterEcsClusterRequestPrivate object.
- *
- * @param  action  OpsWorks action being performed.
- * @param  q       Pointer to this object's public RegisterEcsClusterRequest instance.
+ * Constructs a RegisterEcsClusterRequestPrivate object for OpsWorks \a action with,
+ * public implementation \a q.
  */
 RegisterEcsClusterRequestPrivate::RegisterEcsClusterRequestPrivate(
     const OpsWorksRequest::Action action, RegisterEcsClusterRequest * const q)
@@ -210,15 +199,10 @@ RegisterEcsClusterRequestPrivate::RegisterEcsClusterRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RegisterEcsClusterRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the RegisterEcsClusterRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public RegisterEcsClusterRequest instance.
  */
 RegisterEcsClusterRequestPrivate::RegisterEcsClusterRequestPrivate(
     const RegisterEcsClusterRequestPrivate &other, RegisterEcsClusterRequest * const q)

@@ -27,19 +27,16 @@ namespace Route53 {
 
 /*!
  * \class QtAws::Route53::GetQueryLoggingConfigRequest
- *
  * \brief The GetQueryLoggingConfigRequest class provides an interface for Route53 GetQueryLoggingConfig requests.
  *
- * \ingroup Route53
+ * \inmodule QtAwsRoute53
  *
  *
  * \sa Route53Client::getQueryLoggingConfig
  */
 
 /*!
- * @brief  Constructs a new GetQueryLoggingConfigRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetQueryLoggingConfigRequest::GetQueryLoggingConfigRequest(const GetQueryLoggingConfigRequest &other)
     : Route53Request(new GetQueryLoggingConfigRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ GetQueryLoggingConfigRequest::GetQueryLoggingConfigRequest(const GetQueryLogging
 }
 
 /*!
- * @brief  Constructs a new GetQueryLoggingConfigRequest object.
+ * Constructs a GetQueryLoggingConfigRequest object.
  */
 GetQueryLoggingConfigRequest::GetQueryLoggingConfigRequest()
     : Route53Request(new GetQueryLoggingConfigRequestPrivate(Route53Request::GetQueryLoggingConfigAction, this))
@@ -66,14 +63,9 @@ bool GetQueryLoggingConfigRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetQueryLoggingConfigResponse object.
+ * Returns a GetQueryLoggingConfigResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetQueryLoggingConfigResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  Route53Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetQueryLoggingConfigRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * GetQueryLoggingConfigRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::Route53::GetQueryLoggingConfigRequestPrivate
+ * \brief The GetQueryLoggingConfigRequestPrivate class provides private implementation for GetQueryLoggingConfigRequest.
+ * \internal
  *
- * @class  GetQueryLoggingConfigRequestPrivate
- *
- * @brief  Private implementation for GetQueryLoggingConfigRequest.
+ * \inmodule QtAwsRoute53
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetQueryLoggingConfigRequestPrivate object.
- *
- * @param  action  Route53 action being performed.
- * @param  q       Pointer to this object's public GetQueryLoggingConfigRequest instance.
+ * Constructs a GetQueryLoggingConfigRequestPrivate object for Route53 \a action with,
+ * public implementation \a q.
  */
 GetQueryLoggingConfigRequestPrivate::GetQueryLoggingConfigRequestPrivate(
     const Route53Request::Action action, GetQueryLoggingConfigRequest * const q)
@@ -104,15 +93,10 @@ GetQueryLoggingConfigRequestPrivate::GetQueryLoggingConfigRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetQueryLoggingConfigRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetQueryLoggingConfigRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetQueryLoggingConfigRequest instance.
  */
 GetQueryLoggingConfigRequestPrivate::GetQueryLoggingConfigRequestPrivate(
     const GetQueryLoggingConfigRequestPrivate &other, GetQueryLoggingConfigRequest * const q)

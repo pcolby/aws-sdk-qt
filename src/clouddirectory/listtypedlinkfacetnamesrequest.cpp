@@ -27,10 +27,9 @@ namespace CloudDirectory {
 
 /*!
  * \class QtAws::CloudDirectory::ListTypedLinkFacetNamesRequest
- *
  * \brief The ListTypedLinkFacetNamesRequest class provides an interface for CloudDirectory ListTypedLinkFacetNames requests.
  *
- * \ingroup CloudDirectory
+ * \inmodule QtAwsCloudDirectory
  *
  *  <fullname>Amazon Cloud Directory</fullname>
  * 
@@ -44,9 +43,7 @@ namespace CloudDirectory {
  */
 
 /*!
- * @brief  Constructs a new ListTypedLinkFacetNamesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListTypedLinkFacetNamesRequest::ListTypedLinkFacetNamesRequest(const ListTypedLinkFacetNamesRequest &other)
     : CloudDirectoryRequest(new ListTypedLinkFacetNamesRequestPrivate(*other.d_func(), this))
@@ -55,7 +52,7 @@ ListTypedLinkFacetNamesRequest::ListTypedLinkFacetNamesRequest(const ListTypedLi
 }
 
 /*!
- * @brief  Constructs a new ListTypedLinkFacetNamesRequest object.
+ * Constructs a ListTypedLinkFacetNamesRequest object.
  */
 ListTypedLinkFacetNamesRequest::ListTypedLinkFacetNamesRequest()
     : CloudDirectoryRequest(new ListTypedLinkFacetNamesRequestPrivate(CloudDirectoryRequest::ListTypedLinkFacetNamesAction, this))
@@ -73,14 +70,9 @@ bool ListTypedLinkFacetNamesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListTypedLinkFacetNamesResponse object.
+ * Returns a ListTypedLinkFacetNamesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListTypedLinkFacetNamesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudDirectoryClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListTypedLinkFacetNamesRequest::response(QNetworkReply * const reply) const
 {
@@ -88,20 +80,17 @@ QtAws::Core::AwsAbstractResponse * ListTypedLinkFacetNamesRequest::response(QNet
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudDirectory::ListTypedLinkFacetNamesRequestPrivate
+ * \brief The ListTypedLinkFacetNamesRequestPrivate class provides private implementation for ListTypedLinkFacetNamesRequest.
+ * \internal
  *
- * @class  ListTypedLinkFacetNamesRequestPrivate
- *
- * @brief  Private implementation for ListTypedLinkFacetNamesRequest.
+ * \inmodule QtAwsCloudDirectory
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListTypedLinkFacetNamesRequestPrivate object.
- *
- * @param  action  CloudDirectory action being performed.
- * @param  q       Pointer to this object's public ListTypedLinkFacetNamesRequest instance.
+ * Constructs a ListTypedLinkFacetNamesRequestPrivate object for CloudDirectory \a action with,
+ * public implementation \a q.
  */
 ListTypedLinkFacetNamesRequestPrivate::ListTypedLinkFacetNamesRequestPrivate(
     const CloudDirectoryRequest::Action action, ListTypedLinkFacetNamesRequest * const q)
@@ -111,15 +100,10 @@ ListTypedLinkFacetNamesRequestPrivate::ListTypedLinkFacetNamesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListTypedLinkFacetNamesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListTypedLinkFacetNamesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListTypedLinkFacetNamesRequest instance.
  */
 ListTypedLinkFacetNamesRequestPrivate::ListTypedLinkFacetNamesRequestPrivate(
     const ListTypedLinkFacetNamesRequestPrivate &other, ListTypedLinkFacetNamesRequest * const q)

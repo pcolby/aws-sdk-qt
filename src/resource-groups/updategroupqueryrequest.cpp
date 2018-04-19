@@ -27,10 +27,9 @@ namespace ResourceGroups {
 
 /*!
  * \class QtAws::ResourceGroups::UpdateGroupQueryRequest
- *
  * \brief The UpdateGroupQueryRequest class provides an interface for ResourceGroups UpdateGroupQuery requests.
  *
- * \ingroup ResourceGroups
+ * \inmodule QtAwsResourceGroups
  *
  *  <fullname>AWS Resource Groups</fullname>
  * 
@@ -81,9 +80,7 @@ namespace ResourceGroups {
  */
 
 /*!
- * @brief  Constructs a new UpdateGroupQueryRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateGroupQueryRequest::UpdateGroupQueryRequest(const UpdateGroupQueryRequest &other)
     : ResourceGroupsRequest(new UpdateGroupQueryRequestPrivate(*other.d_func(), this))
@@ -92,7 +89,7 @@ UpdateGroupQueryRequest::UpdateGroupQueryRequest(const UpdateGroupQueryRequest &
 }
 
 /*!
- * @brief  Constructs a new UpdateGroupQueryRequest object.
+ * Constructs a UpdateGroupQueryRequest object.
  */
 UpdateGroupQueryRequest::UpdateGroupQueryRequest()
     : ResourceGroupsRequest(new UpdateGroupQueryRequestPrivate(ResourceGroupsRequest::UpdateGroupQueryAction, this))
@@ -110,14 +107,9 @@ bool UpdateGroupQueryRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateGroupQueryResponse object.
+ * Returns a UpdateGroupQueryResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateGroupQueryResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ResourceGroupsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateGroupQueryRequest::response(QNetworkReply * const reply) const
 {
@@ -125,20 +117,17 @@ QtAws::Core::AwsAbstractResponse * UpdateGroupQueryRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::ResourceGroups::UpdateGroupQueryRequestPrivate
+ * \brief The UpdateGroupQueryRequestPrivate class provides private implementation for UpdateGroupQueryRequest.
+ * \internal
  *
- * @class  UpdateGroupQueryRequestPrivate
- *
- * @brief  Private implementation for UpdateGroupQueryRequest.
+ * \inmodule QtAwsResourceGroups
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateGroupQueryRequestPrivate object.
- *
- * @param  action  ResourceGroups action being performed.
- * @param  q       Pointer to this object's public UpdateGroupQueryRequest instance.
+ * Constructs a UpdateGroupQueryRequestPrivate object for ResourceGroups \a action with,
+ * public implementation \a q.
  */
 UpdateGroupQueryRequestPrivate::UpdateGroupQueryRequestPrivate(
     const ResourceGroupsRequest::Action action, UpdateGroupQueryRequest * const q)
@@ -148,15 +137,10 @@ UpdateGroupQueryRequestPrivate::UpdateGroupQueryRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateGroupQueryRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateGroupQueryRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateGroupQueryRequest instance.
  */
 UpdateGroupQueryRequestPrivate::UpdateGroupQueryRequestPrivate(
     const UpdateGroupQueryRequestPrivate &other, UpdateGroupQueryRequest * const q)

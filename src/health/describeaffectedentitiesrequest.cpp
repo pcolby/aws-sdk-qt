@@ -27,10 +27,9 @@ namespace Health {
 
 /*!
  * \class QtAws::Health::DescribeAffectedEntitiesRequest
- *
  * \brief The DescribeAffectedEntitiesRequest class provides an interface for Health DescribeAffectedEntities requests.
  *
- * \ingroup Health
+ * \inmodule QtAwsHealth
  *
  *  <fullname>AWS Health</fullname>
  * 
@@ -98,9 +97,7 @@ namespace Health {
  */
 
 /*!
- * @brief  Constructs a new DescribeAffectedEntitiesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeAffectedEntitiesRequest::DescribeAffectedEntitiesRequest(const DescribeAffectedEntitiesRequest &other)
     : HealthRequest(new DescribeAffectedEntitiesRequestPrivate(*other.d_func(), this))
@@ -109,7 +106,7 @@ DescribeAffectedEntitiesRequest::DescribeAffectedEntitiesRequest(const DescribeA
 }
 
 /*!
- * @brief  Constructs a new DescribeAffectedEntitiesRequest object.
+ * Constructs a DescribeAffectedEntitiesRequest object.
  */
 DescribeAffectedEntitiesRequest::DescribeAffectedEntitiesRequest()
     : HealthRequest(new DescribeAffectedEntitiesRequestPrivate(HealthRequest::DescribeAffectedEntitiesAction, this))
@@ -127,14 +124,9 @@ bool DescribeAffectedEntitiesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeAffectedEntitiesResponse object.
+ * Returns a DescribeAffectedEntitiesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeAffectedEntitiesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  HealthClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeAffectedEntitiesRequest::response(QNetworkReply * const reply) const
 {
@@ -142,20 +134,17 @@ QtAws::Core::AwsAbstractResponse * DescribeAffectedEntitiesRequest::response(QNe
 }
 
 /*!
- * @internal
+ * \class QtAws::Health::DescribeAffectedEntitiesRequestPrivate
+ * \brief The DescribeAffectedEntitiesRequestPrivate class provides private implementation for DescribeAffectedEntitiesRequest.
+ * \internal
  *
- * @class  DescribeAffectedEntitiesRequestPrivate
- *
- * @brief  Private implementation for DescribeAffectedEntitiesRequest.
+ * \inmodule QtAwsHealth
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeAffectedEntitiesRequestPrivate object.
- *
- * @param  action  Health action being performed.
- * @param  q       Pointer to this object's public DescribeAffectedEntitiesRequest instance.
+ * Constructs a DescribeAffectedEntitiesRequestPrivate object for Health \a action with,
+ * public implementation \a q.
  */
 DescribeAffectedEntitiesRequestPrivate::DescribeAffectedEntitiesRequestPrivate(
     const HealthRequest::Action action, DescribeAffectedEntitiesRequest * const q)
@@ -165,15 +154,10 @@ DescribeAffectedEntitiesRequestPrivate::DescribeAffectedEntitiesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeAffectedEntitiesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeAffectedEntitiesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeAffectedEntitiesRequest instance.
  */
 DescribeAffectedEntitiesRequestPrivate::DescribeAffectedEntitiesRequestPrivate(
     const DescribeAffectedEntitiesRequestPrivate &other, DescribeAffectedEntitiesRequest * const q)

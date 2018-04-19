@@ -27,10 +27,9 @@ namespace WorkSpaces {
 
 /*!
  * \class QtAws::WorkSpaces::CreateTagsRequest
- *
  * \brief The CreateTagsRequest class provides an interface for WorkSpaces CreateTags requests.
  *
- * \ingroup WorkSpaces
+ * \inmodule QtAwsWorkSpaces
  *
  *  <fullname>Amazon WorkSpaces Service</fullname>
  * 
@@ -40,9 +39,7 @@ namespace WorkSpaces {
  */
 
 /*!
- * @brief  Constructs a new CreateTagsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateTagsRequest::CreateTagsRequest(const CreateTagsRequest &other)
     : WorkSpacesRequest(new CreateTagsRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ CreateTagsRequest::CreateTagsRequest(const CreateTagsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new CreateTagsRequest object.
+ * Constructs a CreateTagsRequest object.
  */
 CreateTagsRequest::CreateTagsRequest()
     : WorkSpacesRequest(new CreateTagsRequestPrivate(WorkSpacesRequest::CreateTagsAction, this))
@@ -69,14 +66,9 @@ bool CreateTagsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateTagsResponse object.
+ * Returns a CreateTagsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateTagsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WorkSpacesClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateTagsRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * CreateTagsRequest::response(QNetworkReply * c
 }
 
 /*!
- * @internal
+ * \class QtAws::WorkSpaces::CreateTagsRequestPrivate
+ * \brief The CreateTagsRequestPrivate class provides private implementation for CreateTagsRequest.
+ * \internal
  *
- * @class  CreateTagsRequestPrivate
- *
- * @brief  Private implementation for CreateTagsRequest.
+ * \inmodule QtAwsWorkSpaces
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateTagsRequestPrivate object.
- *
- * @param  action  WorkSpaces action being performed.
- * @param  q       Pointer to this object's public CreateTagsRequest instance.
+ * Constructs a CreateTagsRequestPrivate object for WorkSpaces \a action with,
+ * public implementation \a q.
  */
 CreateTagsRequestPrivate::CreateTagsRequestPrivate(
     const WorkSpacesRequest::Action action, CreateTagsRequest * const q)
@@ -107,15 +96,10 @@ CreateTagsRequestPrivate::CreateTagsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateTagsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateTagsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateTagsRequest instance.
  */
 CreateTagsRequestPrivate::CreateTagsRequestPrivate(
     const CreateTagsRequestPrivate &other, CreateTagsRequest * const q)

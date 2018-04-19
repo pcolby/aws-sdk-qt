@@ -27,10 +27,9 @@ namespace ImportExport {
 
 /*!
  * \class QtAws::ImportExport::GetStatusRequest
- *
  * \brief The GetStatusRequest class provides an interface for ImportExport GetStatus requests.
  *
- * \ingroup ImportExport
+ * \inmodule QtAwsImportExport
  *
  *  <fullname>AWS Import/Export Service</fullname> AWS Import/Export accelerates transferring large amounts of data between
  *  the AWS cloud and portable storage devices that you mail to us. AWS Import/Export transfers data directly onto and off
@@ -40,9 +39,7 @@ namespace ImportExport {
  */
 
 /*!
- * @brief  Constructs a new GetStatusRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetStatusRequest::GetStatusRequest(const GetStatusRequest &other)
     : ImportExportRequest(new GetStatusRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ GetStatusRequest::GetStatusRequest(const GetStatusRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetStatusRequest object.
+ * Constructs a GetStatusRequest object.
  */
 GetStatusRequest::GetStatusRequest()
     : ImportExportRequest(new GetStatusRequestPrivate(ImportExportRequest::GetStatusAction, this))
@@ -69,14 +66,9 @@ bool GetStatusRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetStatusResponse object.
+ * Returns a GetStatusResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetStatusResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ImportExportClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetStatusRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * GetStatusRequest::response(QNetworkReply * co
 }
 
 /*!
- * @internal
+ * \class QtAws::ImportExport::GetStatusRequestPrivate
+ * \brief The GetStatusRequestPrivate class provides private implementation for GetStatusRequest.
+ * \internal
  *
- * @class  GetStatusRequestPrivate
- *
- * @brief  Private implementation for GetStatusRequest.
+ * \inmodule QtAwsImportExport
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetStatusRequestPrivate object.
- *
- * @param  action  ImportExport action being performed.
- * @param  q       Pointer to this object's public GetStatusRequest instance.
+ * Constructs a GetStatusRequestPrivate object for ImportExport \a action with,
+ * public implementation \a q.
  */
 GetStatusRequestPrivate::GetStatusRequestPrivate(
     const ImportExportRequest::Action action, GetStatusRequest * const q)
@@ -107,15 +96,10 @@ GetStatusRequestPrivate::GetStatusRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetStatusRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetStatusRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetStatusRequest instance.
  */
 GetStatusRequestPrivate::GetStatusRequestPrivate(
     const GetStatusRequestPrivate &other, GetStatusRequest * const q)

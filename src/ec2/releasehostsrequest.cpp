@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::ReleaseHostsRequest
- *
  * \brief The ReleaseHostsRequest class provides an interface for EC2 ReleaseHosts requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new ReleaseHostsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ReleaseHostsRequest::ReleaseHostsRequest(const ReleaseHostsRequest &other)
     : EC2Request(new ReleaseHostsRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ ReleaseHostsRequest::ReleaseHostsRequest(const ReleaseHostsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ReleaseHostsRequest object.
+ * Constructs a ReleaseHostsRequest object.
  */
 ReleaseHostsRequest::ReleaseHostsRequest()
     : EC2Request(new ReleaseHostsRequestPrivate(EC2Request::ReleaseHostsAction, this))
@@ -70,14 +67,9 @@ bool ReleaseHostsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ReleaseHostsResponse object.
+ * Returns a ReleaseHostsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ReleaseHostsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ReleaseHostsRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * ReleaseHostsRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::ReleaseHostsRequestPrivate
+ * \brief The ReleaseHostsRequestPrivate class provides private implementation for ReleaseHostsRequest.
+ * \internal
  *
- * @class  ReleaseHostsRequestPrivate
- *
- * @brief  Private implementation for ReleaseHostsRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ReleaseHostsRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public ReleaseHostsRequest instance.
+ * Constructs a ReleaseHostsRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 ReleaseHostsRequestPrivate::ReleaseHostsRequestPrivate(
     const EC2Request::Action action, ReleaseHostsRequest * const q)
@@ -108,15 +97,10 @@ ReleaseHostsRequestPrivate::ReleaseHostsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ReleaseHostsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ReleaseHostsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ReleaseHostsRequest instance.
  */
 ReleaseHostsRequestPrivate::ReleaseHostsRequestPrivate(
     const ReleaseHostsRequestPrivate &other, ReleaseHostsRequest * const q)

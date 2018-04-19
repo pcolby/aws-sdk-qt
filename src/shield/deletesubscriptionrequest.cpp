@@ -27,10 +27,9 @@ namespace Shield {
 
 /*!
  * \class QtAws::Shield::DeleteSubscriptionRequest
- *
  * \brief The DeleteSubscriptionRequest class provides an interface for Shield DeleteSubscription requests.
  *
- * \ingroup Shield
+ * \inmodule QtAwsShield
  *
  *  <fullname>AWS Shield Advanced</fullname>
  * 
@@ -43,9 +42,7 @@ namespace Shield {
  */
 
 /*!
- * @brief  Constructs a new DeleteSubscriptionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteSubscriptionRequest::DeleteSubscriptionRequest(const DeleteSubscriptionRequest &other)
     : ShieldRequest(new DeleteSubscriptionRequestPrivate(*other.d_func(), this))
@@ -54,7 +51,7 @@ DeleteSubscriptionRequest::DeleteSubscriptionRequest(const DeleteSubscriptionReq
 }
 
 /*!
- * @brief  Constructs a new DeleteSubscriptionRequest object.
+ * Constructs a DeleteSubscriptionRequest object.
  */
 DeleteSubscriptionRequest::DeleteSubscriptionRequest()
     : ShieldRequest(new DeleteSubscriptionRequestPrivate(ShieldRequest::DeleteSubscriptionAction, this))
@@ -72,14 +69,9 @@ bool DeleteSubscriptionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteSubscriptionResponse object.
+ * Returns a DeleteSubscriptionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteSubscriptionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ShieldClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteSubscriptionRequest::response(QNetworkReply * const reply) const
 {
@@ -87,20 +79,17 @@ QtAws::Core::AwsAbstractResponse * DeleteSubscriptionRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::Shield::DeleteSubscriptionRequestPrivate
+ * \brief The DeleteSubscriptionRequestPrivate class provides private implementation for DeleteSubscriptionRequest.
+ * \internal
  *
- * @class  DeleteSubscriptionRequestPrivate
- *
- * @brief  Private implementation for DeleteSubscriptionRequest.
+ * \inmodule QtAwsShield
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteSubscriptionRequestPrivate object.
- *
- * @param  action  Shield action being performed.
- * @param  q       Pointer to this object's public DeleteSubscriptionRequest instance.
+ * Constructs a DeleteSubscriptionRequestPrivate object for Shield \a action with,
+ * public implementation \a q.
  */
 DeleteSubscriptionRequestPrivate::DeleteSubscriptionRequestPrivate(
     const ShieldRequest::Action action, DeleteSubscriptionRequest * const q)
@@ -110,15 +99,10 @@ DeleteSubscriptionRequestPrivate::DeleteSubscriptionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteSubscriptionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteSubscriptionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteSubscriptionRequest instance.
  */
 DeleteSubscriptionRequestPrivate::DeleteSubscriptionRequestPrivate(
     const DeleteSubscriptionRequestPrivate &other, DeleteSubscriptionRequest * const q)

@@ -27,10 +27,9 @@ namespace Greengrass {
 
 /*!
  * \class QtAws::Greengrass::ListSubscriptionDefinitionsRequest
- *
  * \brief The ListSubscriptionDefinitionsRequest class provides an interface for Greengrass ListSubscriptionDefinitions requests.
  *
- * \ingroup Greengrass
+ * \inmodule QtAwsGreengrass
  *
  *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
  *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
@@ -40,9 +39,7 @@ namespace Greengrass {
  */
 
 /*!
- * @brief  Constructs a new ListSubscriptionDefinitionsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListSubscriptionDefinitionsRequest::ListSubscriptionDefinitionsRequest(const ListSubscriptionDefinitionsRequest &other)
     : GreengrassRequest(new ListSubscriptionDefinitionsRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ ListSubscriptionDefinitionsRequest::ListSubscriptionDefinitionsRequest(const Lis
 }
 
 /*!
- * @brief  Constructs a new ListSubscriptionDefinitionsRequest object.
+ * Constructs a ListSubscriptionDefinitionsRequest object.
  */
 ListSubscriptionDefinitionsRequest::ListSubscriptionDefinitionsRequest()
     : GreengrassRequest(new ListSubscriptionDefinitionsRequestPrivate(GreengrassRequest::ListSubscriptionDefinitionsAction, this))
@@ -69,14 +66,9 @@ bool ListSubscriptionDefinitionsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListSubscriptionDefinitionsResponse object.
+ * Returns a ListSubscriptionDefinitionsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListSubscriptionDefinitionsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GreengrassClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListSubscriptionDefinitionsRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * ListSubscriptionDefinitionsRequest::response(
 }
 
 /*!
- * @internal
+ * \class QtAws::Greengrass::ListSubscriptionDefinitionsRequestPrivate
+ * \brief The ListSubscriptionDefinitionsRequestPrivate class provides private implementation for ListSubscriptionDefinitionsRequest.
+ * \internal
  *
- * @class  ListSubscriptionDefinitionsRequestPrivate
- *
- * @brief  Private implementation for ListSubscriptionDefinitionsRequest.
+ * \inmodule QtAwsGreengrass
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListSubscriptionDefinitionsRequestPrivate object.
- *
- * @param  action  Greengrass action being performed.
- * @param  q       Pointer to this object's public ListSubscriptionDefinitionsRequest instance.
+ * Constructs a ListSubscriptionDefinitionsRequestPrivate object for Greengrass \a action with,
+ * public implementation \a q.
  */
 ListSubscriptionDefinitionsRequestPrivate::ListSubscriptionDefinitionsRequestPrivate(
     const GreengrassRequest::Action action, ListSubscriptionDefinitionsRequest * const q)
@@ -107,15 +96,10 @@ ListSubscriptionDefinitionsRequestPrivate::ListSubscriptionDefinitionsRequestPri
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListSubscriptionDefinitionsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListSubscriptionDefinitionsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListSubscriptionDefinitionsRequest instance.
  */
 ListSubscriptionDefinitionsRequestPrivate::ListSubscriptionDefinitionsRequestPrivate(
     const ListSubscriptionDefinitionsRequestPrivate &other, ListSubscriptionDefinitionsRequest * const q)

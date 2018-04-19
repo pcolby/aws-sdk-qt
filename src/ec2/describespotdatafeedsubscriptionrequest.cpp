@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DescribeSpotDatafeedSubscriptionRequest
- *
  * \brief The DescribeSpotDatafeedSubscriptionRequest class provides an interface for EC2 DescribeSpotDatafeedSubscription requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DescribeSpotDatafeedSubscriptionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeSpotDatafeedSubscriptionRequest::DescribeSpotDatafeedSubscriptionRequest(const DescribeSpotDatafeedSubscriptionRequest &other)
     : EC2Request(new DescribeSpotDatafeedSubscriptionRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ DescribeSpotDatafeedSubscriptionRequest::DescribeSpotDatafeedSubscriptionRequest
 }
 
 /*!
- * @brief  Constructs a new DescribeSpotDatafeedSubscriptionRequest object.
+ * Constructs a DescribeSpotDatafeedSubscriptionRequest object.
  */
 DescribeSpotDatafeedSubscriptionRequest::DescribeSpotDatafeedSubscriptionRequest()
     : EC2Request(new DescribeSpotDatafeedSubscriptionRequestPrivate(EC2Request::DescribeSpotDatafeedSubscriptionAction, this))
@@ -70,14 +67,9 @@ bool DescribeSpotDatafeedSubscriptionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeSpotDatafeedSubscriptionResponse object.
+ * Returns a DescribeSpotDatafeedSubscriptionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeSpotDatafeedSubscriptionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeSpotDatafeedSubscriptionRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * DescribeSpotDatafeedSubscriptionRequest::resp
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::DescribeSpotDatafeedSubscriptionRequestPrivate
+ * \brief The DescribeSpotDatafeedSubscriptionRequestPrivate class provides private implementation for DescribeSpotDatafeedSubscriptionRequest.
+ * \internal
  *
- * @class  DescribeSpotDatafeedSubscriptionRequestPrivate
- *
- * @brief  Private implementation for DescribeSpotDatafeedSubscriptionRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeSpotDatafeedSubscriptionRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public DescribeSpotDatafeedSubscriptionRequest instance.
+ * Constructs a DescribeSpotDatafeedSubscriptionRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 DescribeSpotDatafeedSubscriptionRequestPrivate::DescribeSpotDatafeedSubscriptionRequestPrivate(
     const EC2Request::Action action, DescribeSpotDatafeedSubscriptionRequest * const q)
@@ -108,15 +97,10 @@ DescribeSpotDatafeedSubscriptionRequestPrivate::DescribeSpotDatafeedSubscription
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeSpotDatafeedSubscriptionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeSpotDatafeedSubscriptionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeSpotDatafeedSubscriptionRequest instance.
  */
 DescribeSpotDatafeedSubscriptionRequestPrivate::DescribeSpotDatafeedSubscriptionRequestPrivate(
     const DescribeSpotDatafeedSubscriptionRequestPrivate &other, DescribeSpotDatafeedSubscriptionRequest * const q)

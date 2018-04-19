@@ -27,19 +27,16 @@ namespace GuardDuty {
 
 /*!
  * \class QtAws::GuardDuty::UpdateThreatIntelSetRequest
- *
  * \brief The UpdateThreatIntelSetRequest class provides an interface for GuardDuty UpdateThreatIntelSet requests.
  *
- * \ingroup GuardDuty
+ * \inmodule QtAwsGuardDuty
  *
  *
  * \sa GuardDutyClient::updateThreatIntelSet
  */
 
 /*!
- * @brief  Constructs a new UpdateThreatIntelSetRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateThreatIntelSetRequest::UpdateThreatIntelSetRequest(const UpdateThreatIntelSetRequest &other)
     : GuardDutyRequest(new UpdateThreatIntelSetRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ UpdateThreatIntelSetRequest::UpdateThreatIntelSetRequest(const UpdateThreatIntel
 }
 
 /*!
- * @brief  Constructs a new UpdateThreatIntelSetRequest object.
+ * Constructs a UpdateThreatIntelSetRequest object.
  */
 UpdateThreatIntelSetRequest::UpdateThreatIntelSetRequest()
     : GuardDutyRequest(new UpdateThreatIntelSetRequestPrivate(GuardDutyRequest::UpdateThreatIntelSetAction, this))
@@ -66,14 +63,9 @@ bool UpdateThreatIntelSetRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateThreatIntelSetResponse object.
+ * Returns a UpdateThreatIntelSetResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateThreatIntelSetResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GuardDutyClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateThreatIntelSetRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * UpdateThreatIntelSetRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::GuardDuty::UpdateThreatIntelSetRequestPrivate
+ * \brief The UpdateThreatIntelSetRequestPrivate class provides private implementation for UpdateThreatIntelSetRequest.
+ * \internal
  *
- * @class  UpdateThreatIntelSetRequestPrivate
- *
- * @brief  Private implementation for UpdateThreatIntelSetRequest.
+ * \inmodule QtAwsGuardDuty
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateThreatIntelSetRequestPrivate object.
- *
- * @param  action  GuardDuty action being performed.
- * @param  q       Pointer to this object's public UpdateThreatIntelSetRequest instance.
+ * Constructs a UpdateThreatIntelSetRequestPrivate object for GuardDuty \a action with,
+ * public implementation \a q.
  */
 UpdateThreatIntelSetRequestPrivate::UpdateThreatIntelSetRequestPrivate(
     const GuardDutyRequest::Action action, UpdateThreatIntelSetRequest * const q)
@@ -104,15 +93,10 @@ UpdateThreatIntelSetRequestPrivate::UpdateThreatIntelSetRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateThreatIntelSetRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateThreatIntelSetRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateThreatIntelSetRequest instance.
  */
 UpdateThreatIntelSetRequestPrivate::UpdateThreatIntelSetRequestPrivate(
     const UpdateThreatIntelSetRequestPrivate &other, UpdateThreatIntelSetRequest * const q)

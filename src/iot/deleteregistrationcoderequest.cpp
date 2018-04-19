@@ -27,10 +27,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::DeleteRegistrationCodeRequest
- *
  * \brief The DeleteRegistrationCodeRequest class provides an interface for IoT DeleteRegistrationCode requests.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -48,9 +47,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new DeleteRegistrationCodeRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteRegistrationCodeRequest::DeleteRegistrationCodeRequest(const DeleteRegistrationCodeRequest &other)
     : IoTRequest(new DeleteRegistrationCodeRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ DeleteRegistrationCodeRequest::DeleteRegistrationCodeRequest(const DeleteRegistr
 }
 
 /*!
- * @brief  Constructs a new DeleteRegistrationCodeRequest object.
+ * Constructs a DeleteRegistrationCodeRequest object.
  */
 DeleteRegistrationCodeRequest::DeleteRegistrationCodeRequest()
     : IoTRequest(new DeleteRegistrationCodeRequestPrivate(IoTRequest::DeleteRegistrationCodeAction, this))
@@ -77,14 +74,9 @@ bool DeleteRegistrationCodeRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteRegistrationCodeResponse object.
+ * Returns a DeleteRegistrationCodeResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteRegistrationCodeResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IoTClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteRegistrationCodeRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * DeleteRegistrationCodeRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::IoT::DeleteRegistrationCodeRequestPrivate
+ * \brief The DeleteRegistrationCodeRequestPrivate class provides private implementation for DeleteRegistrationCodeRequest.
+ * \internal
  *
- * @class  DeleteRegistrationCodeRequestPrivate
- *
- * @brief  Private implementation for DeleteRegistrationCodeRequest.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteRegistrationCodeRequestPrivate object.
- *
- * @param  action  IoT action being performed.
- * @param  q       Pointer to this object's public DeleteRegistrationCodeRequest instance.
+ * Constructs a DeleteRegistrationCodeRequestPrivate object for IoT \a action with,
+ * public implementation \a q.
  */
 DeleteRegistrationCodeRequestPrivate::DeleteRegistrationCodeRequestPrivate(
     const IoTRequest::Action action, DeleteRegistrationCodeRequest * const q)
@@ -115,15 +104,10 @@ DeleteRegistrationCodeRequestPrivate::DeleteRegistrationCodeRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteRegistrationCodeRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteRegistrationCodeRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteRegistrationCodeRequest instance.
  */
 DeleteRegistrationCodeRequestPrivate::DeleteRegistrationCodeRequestPrivate(
     const DeleteRegistrationCodeRequestPrivate &other, DeleteRegistrationCodeRequest * const q)

@@ -27,10 +27,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::GetTopicRuleRequest
- *
  * \brief The GetTopicRuleRequest class provides an interface for IoT GetTopicRule requests.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -48,9 +47,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new GetTopicRuleRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetTopicRuleRequest::GetTopicRuleRequest(const GetTopicRuleRequest &other)
     : IoTRequest(new GetTopicRuleRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ GetTopicRuleRequest::GetTopicRuleRequest(const GetTopicRuleRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetTopicRuleRequest object.
+ * Constructs a GetTopicRuleRequest object.
  */
 GetTopicRuleRequest::GetTopicRuleRequest()
     : IoTRequest(new GetTopicRuleRequestPrivate(IoTRequest::GetTopicRuleAction, this))
@@ -77,14 +74,9 @@ bool GetTopicRuleRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetTopicRuleResponse object.
+ * Returns a GetTopicRuleResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetTopicRuleResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IoTClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetTopicRuleRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * GetTopicRuleRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::IoT::GetTopicRuleRequestPrivate
+ * \brief The GetTopicRuleRequestPrivate class provides private implementation for GetTopicRuleRequest.
+ * \internal
  *
- * @class  GetTopicRuleRequestPrivate
- *
- * @brief  Private implementation for GetTopicRuleRequest.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetTopicRuleRequestPrivate object.
- *
- * @param  action  IoT action being performed.
- * @param  q       Pointer to this object's public GetTopicRuleRequest instance.
+ * Constructs a GetTopicRuleRequestPrivate object for IoT \a action with,
+ * public implementation \a q.
  */
 GetTopicRuleRequestPrivate::GetTopicRuleRequestPrivate(
     const IoTRequest::Action action, GetTopicRuleRequest * const q)
@@ -115,15 +104,10 @@ GetTopicRuleRequestPrivate::GetTopicRuleRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetTopicRuleRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetTopicRuleRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetTopicRuleRequest instance.
  */
 GetTopicRuleRequestPrivate::GetTopicRuleRequestPrivate(
     const GetTopicRuleRequestPrivate &other, GetTopicRuleRequest * const q)

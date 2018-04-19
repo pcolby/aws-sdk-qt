@@ -27,10 +27,9 @@ namespace DirectoryService {
 
 /*!
  * \class QtAws::DirectoryService::DescribeTrustsRequest
- *
  * \brief The DescribeTrustsRequest class provides an interface for DirectoryService DescribeTrusts requests.
  *
- * \ingroup DirectoryService
+ * \inmodule QtAwsDirectoryService
  *
  *  <fullname>AWS Directory Service</fullname>
  * 
@@ -51,9 +50,7 @@ namespace DirectoryService {
  */
 
 /*!
- * @brief  Constructs a new DescribeTrustsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeTrustsRequest::DescribeTrustsRequest(const DescribeTrustsRequest &other)
     : DirectoryServiceRequest(new DescribeTrustsRequestPrivate(*other.d_func(), this))
@@ -62,7 +59,7 @@ DescribeTrustsRequest::DescribeTrustsRequest(const DescribeTrustsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DescribeTrustsRequest object.
+ * Constructs a DescribeTrustsRequest object.
  */
 DescribeTrustsRequest::DescribeTrustsRequest()
     : DirectoryServiceRequest(new DescribeTrustsRequestPrivate(DirectoryServiceRequest::DescribeTrustsAction, this))
@@ -80,14 +77,9 @@ bool DescribeTrustsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeTrustsResponse object.
+ * Returns a DescribeTrustsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeTrustsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DirectoryServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeTrustsRequest::response(QNetworkReply * const reply) const
 {
@@ -95,20 +87,17 @@ QtAws::Core::AwsAbstractResponse * DescribeTrustsRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::DirectoryService::DescribeTrustsRequestPrivate
+ * \brief The DescribeTrustsRequestPrivate class provides private implementation for DescribeTrustsRequest.
+ * \internal
  *
- * @class  DescribeTrustsRequestPrivate
- *
- * @brief  Private implementation for DescribeTrustsRequest.
+ * \inmodule QtAwsDirectoryService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeTrustsRequestPrivate object.
- *
- * @param  action  DirectoryService action being performed.
- * @param  q       Pointer to this object's public DescribeTrustsRequest instance.
+ * Constructs a DescribeTrustsRequestPrivate object for DirectoryService \a action with,
+ * public implementation \a q.
  */
 DescribeTrustsRequestPrivate::DescribeTrustsRequestPrivate(
     const DirectoryServiceRequest::Action action, DescribeTrustsRequest * const q)
@@ -118,15 +107,10 @@ DescribeTrustsRequestPrivate::DescribeTrustsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeTrustsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeTrustsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeTrustsRequest instance.
  */
 DescribeTrustsRequestPrivate::DescribeTrustsRequestPrivate(
     const DescribeTrustsRequestPrivate &other, DescribeTrustsRequest * const q)

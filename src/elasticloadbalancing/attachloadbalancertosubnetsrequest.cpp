@@ -27,10 +27,9 @@ namespace ElasticLoadBalancing {
 
 /*!
  * \class QtAws::ElasticLoadBalancing::AttachLoadBalancerToSubnetsRequest
- *
  * \brief The AttachLoadBalancerToSubnetsRequest class provides an interface for ElasticLoadBalancing AttachLoadBalancerToSubnets requests.
  *
- * \ingroup ElasticLoadBalancing
+ * \inmodule QtAwsElasticLoadBalancing
  *
  *  <fullname>Elastic Load Balancing</fullname>
  * 
@@ -65,9 +64,7 @@ namespace ElasticLoadBalancing {
  */
 
 /*!
- * @brief  Constructs a new AttachLoadBalancerToSubnetsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AttachLoadBalancerToSubnetsRequest::AttachLoadBalancerToSubnetsRequest(const AttachLoadBalancerToSubnetsRequest &other)
     : ElasticLoadBalancingRequest(new AttachLoadBalancerToSubnetsRequestPrivate(*other.d_func(), this))
@@ -76,7 +73,7 @@ AttachLoadBalancerToSubnetsRequest::AttachLoadBalancerToSubnetsRequest(const Att
 }
 
 /*!
- * @brief  Constructs a new AttachLoadBalancerToSubnetsRequest object.
+ * Constructs a AttachLoadBalancerToSubnetsRequest object.
  */
 AttachLoadBalancerToSubnetsRequest::AttachLoadBalancerToSubnetsRequest()
     : ElasticLoadBalancingRequest(new AttachLoadBalancerToSubnetsRequestPrivate(ElasticLoadBalancingRequest::AttachLoadBalancerToSubnetsAction, this))
@@ -94,14 +91,9 @@ bool AttachLoadBalancerToSubnetsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AttachLoadBalancerToSubnetsResponse object.
+ * Returns a AttachLoadBalancerToSubnetsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AttachLoadBalancerToSubnetsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ElasticLoadBalancingClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AttachLoadBalancerToSubnetsRequest::response(QNetworkReply * const reply) const
 {
@@ -109,20 +101,17 @@ QtAws::Core::AwsAbstractResponse * AttachLoadBalancerToSubnetsRequest::response(
 }
 
 /*!
- * @internal
+ * \class QtAws::ElasticLoadBalancing::AttachLoadBalancerToSubnetsRequestPrivate
+ * \brief The AttachLoadBalancerToSubnetsRequestPrivate class provides private implementation for AttachLoadBalancerToSubnetsRequest.
+ * \internal
  *
- * @class  AttachLoadBalancerToSubnetsRequestPrivate
- *
- * @brief  Private implementation for AttachLoadBalancerToSubnetsRequest.
+ * \inmodule QtAwsElasticLoadBalancing
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AttachLoadBalancerToSubnetsRequestPrivate object.
- *
- * @param  action  ElasticLoadBalancing action being performed.
- * @param  q       Pointer to this object's public AttachLoadBalancerToSubnetsRequest instance.
+ * Constructs a AttachLoadBalancerToSubnetsRequestPrivate object for ElasticLoadBalancing \a action with,
+ * public implementation \a q.
  */
 AttachLoadBalancerToSubnetsRequestPrivate::AttachLoadBalancerToSubnetsRequestPrivate(
     const ElasticLoadBalancingRequest::Action action, AttachLoadBalancerToSubnetsRequest * const q)
@@ -132,15 +121,10 @@ AttachLoadBalancerToSubnetsRequestPrivate::AttachLoadBalancerToSubnetsRequestPri
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AttachLoadBalancerToSubnetsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AttachLoadBalancerToSubnetsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AttachLoadBalancerToSubnetsRequest instance.
  */
 AttachLoadBalancerToSubnetsRequestPrivate::AttachLoadBalancerToSubnetsRequestPrivate(
     const AttachLoadBalancerToSubnetsRequestPrivate &other, AttachLoadBalancerToSubnetsRequest * const q)

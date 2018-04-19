@@ -27,10 +27,9 @@ namespace Greengrass {
 
 /*!
  * \class QtAws::Greengrass::GetCoreDefinitionVersionRequest
- *
  * \brief The GetCoreDefinitionVersionRequest class provides an interface for Greengrass GetCoreDefinitionVersion requests.
  *
- * \ingroup Greengrass
+ * \inmodule QtAwsGreengrass
  *
  *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
  *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
@@ -40,9 +39,7 @@ namespace Greengrass {
  */
 
 /*!
- * @brief  Constructs a new GetCoreDefinitionVersionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetCoreDefinitionVersionRequest::GetCoreDefinitionVersionRequest(const GetCoreDefinitionVersionRequest &other)
     : GreengrassRequest(new GetCoreDefinitionVersionRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ GetCoreDefinitionVersionRequest::GetCoreDefinitionVersionRequest(const GetCoreDe
 }
 
 /*!
- * @brief  Constructs a new GetCoreDefinitionVersionRequest object.
+ * Constructs a GetCoreDefinitionVersionRequest object.
  */
 GetCoreDefinitionVersionRequest::GetCoreDefinitionVersionRequest()
     : GreengrassRequest(new GetCoreDefinitionVersionRequestPrivate(GreengrassRequest::GetCoreDefinitionVersionAction, this))
@@ -69,14 +66,9 @@ bool GetCoreDefinitionVersionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetCoreDefinitionVersionResponse object.
+ * Returns a GetCoreDefinitionVersionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetCoreDefinitionVersionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GreengrassClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetCoreDefinitionVersionRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * GetCoreDefinitionVersionRequest::response(QNe
 }
 
 /*!
- * @internal
+ * \class QtAws::Greengrass::GetCoreDefinitionVersionRequestPrivate
+ * \brief The GetCoreDefinitionVersionRequestPrivate class provides private implementation for GetCoreDefinitionVersionRequest.
+ * \internal
  *
- * @class  GetCoreDefinitionVersionRequestPrivate
- *
- * @brief  Private implementation for GetCoreDefinitionVersionRequest.
+ * \inmodule QtAwsGreengrass
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetCoreDefinitionVersionRequestPrivate object.
- *
- * @param  action  Greengrass action being performed.
- * @param  q       Pointer to this object's public GetCoreDefinitionVersionRequest instance.
+ * Constructs a GetCoreDefinitionVersionRequestPrivate object for Greengrass \a action with,
+ * public implementation \a q.
  */
 GetCoreDefinitionVersionRequestPrivate::GetCoreDefinitionVersionRequestPrivate(
     const GreengrassRequest::Action action, GetCoreDefinitionVersionRequest * const q)
@@ -107,15 +96,10 @@ GetCoreDefinitionVersionRequestPrivate::GetCoreDefinitionVersionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetCoreDefinitionVersionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetCoreDefinitionVersionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetCoreDefinitionVersionRequest instance.
  */
 GetCoreDefinitionVersionRequestPrivate::GetCoreDefinitionVersionRequestPrivate(
     const GetCoreDefinitionVersionRequestPrivate &other, GetCoreDefinitionVersionRequest * const q)

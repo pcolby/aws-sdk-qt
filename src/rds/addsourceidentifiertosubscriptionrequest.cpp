@@ -27,10 +27,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::AddSourceIdentifierToSubscriptionRequest
- *
  * \brief The AddSourceIdentifierToSubscriptionRequest class provides an interface for RDS AddSourceIdentifierToSubscription requests.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -101,9 +100,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new AddSourceIdentifierToSubscriptionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AddSourceIdentifierToSubscriptionRequest::AddSourceIdentifierToSubscriptionRequest(const AddSourceIdentifierToSubscriptionRequest &other)
     : RDSRequest(new AddSourceIdentifierToSubscriptionRequestPrivate(*other.d_func(), this))
@@ -112,7 +109,7 @@ AddSourceIdentifierToSubscriptionRequest::AddSourceIdentifierToSubscriptionReque
 }
 
 /*!
- * @brief  Constructs a new AddSourceIdentifierToSubscriptionRequest object.
+ * Constructs a AddSourceIdentifierToSubscriptionRequest object.
  */
 AddSourceIdentifierToSubscriptionRequest::AddSourceIdentifierToSubscriptionRequest()
     : RDSRequest(new AddSourceIdentifierToSubscriptionRequestPrivate(RDSRequest::AddSourceIdentifierToSubscriptionAction, this))
@@ -130,14 +127,9 @@ bool AddSourceIdentifierToSubscriptionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AddSourceIdentifierToSubscriptionResponse object.
+ * Returns a AddSourceIdentifierToSubscriptionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AddSourceIdentifierToSubscriptionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RDSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AddSourceIdentifierToSubscriptionRequest::response(QNetworkReply * const reply) const
 {
@@ -145,20 +137,17 @@ QtAws::Core::AwsAbstractResponse * AddSourceIdentifierToSubscriptionRequest::res
 }
 
 /*!
- * @internal
+ * \class QtAws::RDS::AddSourceIdentifierToSubscriptionRequestPrivate
+ * \brief The AddSourceIdentifierToSubscriptionRequestPrivate class provides private implementation for AddSourceIdentifierToSubscriptionRequest.
+ * \internal
  *
- * @class  AddSourceIdentifierToSubscriptionRequestPrivate
- *
- * @brief  Private implementation for AddSourceIdentifierToSubscriptionRequest.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AddSourceIdentifierToSubscriptionRequestPrivate object.
- *
- * @param  action  RDS action being performed.
- * @param  q       Pointer to this object's public AddSourceIdentifierToSubscriptionRequest instance.
+ * Constructs a AddSourceIdentifierToSubscriptionRequestPrivate object for RDS \a action with,
+ * public implementation \a q.
  */
 AddSourceIdentifierToSubscriptionRequestPrivate::AddSourceIdentifierToSubscriptionRequestPrivate(
     const RDSRequest::Action action, AddSourceIdentifierToSubscriptionRequest * const q)
@@ -168,15 +157,10 @@ AddSourceIdentifierToSubscriptionRequestPrivate::AddSourceIdentifierToSubscripti
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AddSourceIdentifierToSubscriptionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AddSourceIdentifierToSubscriptionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AddSourceIdentifierToSubscriptionRequest instance.
  */
 AddSourceIdentifierToSubscriptionRequestPrivate::AddSourceIdentifierToSubscriptionRequestPrivate(
     const AddSourceIdentifierToSubscriptionRequestPrivate &other, AddSourceIdentifierToSubscriptionRequest * const q)

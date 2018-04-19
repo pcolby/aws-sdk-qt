@@ -27,10 +27,9 @@ namespace StorageGateway {
 
 /*!
  * \class QtAws::StorageGateway::DescribeGatewayInformationRequest
- *
  * \brief The DescribeGatewayInformationRequest class provides an interface for StorageGateway DescribeGatewayInformation requests.
  *
- * \ingroup StorageGateway
+ * \inmodule QtAwsStorageGateway
  *
  *  <fullname>AWS Storage Gateway Service</fullname>
  * 
@@ -106,9 +105,7 @@ namespace StorageGateway {
  */
 
 /*!
- * @brief  Constructs a new DescribeGatewayInformationRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeGatewayInformationRequest::DescribeGatewayInformationRequest(const DescribeGatewayInformationRequest &other)
     : StorageGatewayRequest(new DescribeGatewayInformationRequestPrivate(*other.d_func(), this))
@@ -117,7 +114,7 @@ DescribeGatewayInformationRequest::DescribeGatewayInformationRequest(const Descr
 }
 
 /*!
- * @brief  Constructs a new DescribeGatewayInformationRequest object.
+ * Constructs a DescribeGatewayInformationRequest object.
  */
 DescribeGatewayInformationRequest::DescribeGatewayInformationRequest()
     : StorageGatewayRequest(new DescribeGatewayInformationRequestPrivate(StorageGatewayRequest::DescribeGatewayInformationAction, this))
@@ -135,14 +132,9 @@ bool DescribeGatewayInformationRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeGatewayInformationResponse object.
+ * Returns a DescribeGatewayInformationResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeGatewayInformationResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  StorageGatewayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeGatewayInformationRequest::response(QNetworkReply * const reply) const
 {
@@ -150,20 +142,17 @@ QtAws::Core::AwsAbstractResponse * DescribeGatewayInformationRequest::response(Q
 }
 
 /*!
- * @internal
+ * \class QtAws::StorageGateway::DescribeGatewayInformationRequestPrivate
+ * \brief The DescribeGatewayInformationRequestPrivate class provides private implementation for DescribeGatewayInformationRequest.
+ * \internal
  *
- * @class  DescribeGatewayInformationRequestPrivate
- *
- * @brief  Private implementation for DescribeGatewayInformationRequest.
+ * \inmodule QtAwsStorageGateway
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeGatewayInformationRequestPrivate object.
- *
- * @param  action  StorageGateway action being performed.
- * @param  q       Pointer to this object's public DescribeGatewayInformationRequest instance.
+ * Constructs a DescribeGatewayInformationRequestPrivate object for StorageGateway \a action with,
+ * public implementation \a q.
  */
 DescribeGatewayInformationRequestPrivate::DescribeGatewayInformationRequestPrivate(
     const StorageGatewayRequest::Action action, DescribeGatewayInformationRequest * const q)
@@ -173,15 +162,10 @@ DescribeGatewayInformationRequestPrivate::DescribeGatewayInformationRequestPriva
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeGatewayInformationRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeGatewayInformationRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeGatewayInformationRequest instance.
  */
 DescribeGatewayInformationRequestPrivate::DescribeGatewayInformationRequestPrivate(
     const DescribeGatewayInformationRequestPrivate &other, DescribeGatewayInformationRequest * const q)

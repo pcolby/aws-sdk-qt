@@ -27,10 +27,9 @@ namespace WAFRegional {
 
 /*!
  * \class QtAws::WAFRegional::ListRateBasedRulesRequest
- *
  * \brief The ListRateBasedRulesRequest class provides an interface for WAFRegional ListRateBasedRules requests.
  *
- * \ingroup WAFRegional
+ * \inmodule QtAwsWAFRegional
  *
  *  This is the <i>AWS WAF Regional API Reference</i> for using AWS WAF with Elastic Load Balancing (ELB) Application Load
  *  Balancers. The AWS WAF actions and data types listed in the reference are available for protecting Application Load
@@ -44,9 +43,7 @@ namespace WAFRegional {
  */
 
 /*!
- * @brief  Constructs a new ListRateBasedRulesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListRateBasedRulesRequest::ListRateBasedRulesRequest(const ListRateBasedRulesRequest &other)
     : WAFRegionalRequest(new ListRateBasedRulesRequestPrivate(*other.d_func(), this))
@@ -55,7 +52,7 @@ ListRateBasedRulesRequest::ListRateBasedRulesRequest(const ListRateBasedRulesReq
 }
 
 /*!
- * @brief  Constructs a new ListRateBasedRulesRequest object.
+ * Constructs a ListRateBasedRulesRequest object.
  */
 ListRateBasedRulesRequest::ListRateBasedRulesRequest()
     : WAFRegionalRequest(new ListRateBasedRulesRequestPrivate(WAFRegionalRequest::ListRateBasedRulesAction, this))
@@ -73,14 +70,9 @@ bool ListRateBasedRulesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListRateBasedRulesResponse object.
+ * Returns a ListRateBasedRulesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListRateBasedRulesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WAFRegionalClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListRateBasedRulesRequest::response(QNetworkReply * const reply) const
 {
@@ -88,20 +80,17 @@ QtAws::Core::AwsAbstractResponse * ListRateBasedRulesRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::WAFRegional::ListRateBasedRulesRequestPrivate
+ * \brief The ListRateBasedRulesRequestPrivate class provides private implementation for ListRateBasedRulesRequest.
+ * \internal
  *
- * @class  ListRateBasedRulesRequestPrivate
- *
- * @brief  Private implementation for ListRateBasedRulesRequest.
+ * \inmodule QtAwsWAFRegional
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListRateBasedRulesRequestPrivate object.
- *
- * @param  action  WAFRegional action being performed.
- * @param  q       Pointer to this object's public ListRateBasedRulesRequest instance.
+ * Constructs a ListRateBasedRulesRequestPrivate object for WAFRegional \a action with,
+ * public implementation \a q.
  */
 ListRateBasedRulesRequestPrivate::ListRateBasedRulesRequestPrivate(
     const WAFRegionalRequest::Action action, ListRateBasedRulesRequest * const q)
@@ -111,15 +100,10 @@ ListRateBasedRulesRequestPrivate::ListRateBasedRulesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListRateBasedRulesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListRateBasedRulesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListRateBasedRulesRequest instance.
  */
 ListRateBasedRulesRequestPrivate::ListRateBasedRulesRequestPrivate(
     const ListRateBasedRulesRequestPrivate &other, ListRateBasedRulesRequest * const q)

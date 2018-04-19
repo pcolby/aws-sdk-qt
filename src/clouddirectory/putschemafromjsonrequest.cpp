@@ -27,10 +27,9 @@ namespace CloudDirectory {
 
 /*!
  * \class QtAws::CloudDirectory::PutSchemaFromJsonRequest
- *
  * \brief The PutSchemaFromJsonRequest class provides an interface for CloudDirectory PutSchemaFromJson requests.
  *
- * \ingroup CloudDirectory
+ * \inmodule QtAwsCloudDirectory
  *
  *  <fullname>Amazon Cloud Directory</fullname>
  * 
@@ -44,9 +43,7 @@ namespace CloudDirectory {
  */
 
 /*!
- * @brief  Constructs a new PutSchemaFromJsonRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 PutSchemaFromJsonRequest::PutSchemaFromJsonRequest(const PutSchemaFromJsonRequest &other)
     : CloudDirectoryRequest(new PutSchemaFromJsonRequestPrivate(*other.d_func(), this))
@@ -55,7 +52,7 @@ PutSchemaFromJsonRequest::PutSchemaFromJsonRequest(const PutSchemaFromJsonReques
 }
 
 /*!
- * @brief  Constructs a new PutSchemaFromJsonRequest object.
+ * Constructs a PutSchemaFromJsonRequest object.
  */
 PutSchemaFromJsonRequest::PutSchemaFromJsonRequest()
     : CloudDirectoryRequest(new PutSchemaFromJsonRequestPrivate(CloudDirectoryRequest::PutSchemaFromJsonAction, this))
@@ -73,14 +70,9 @@ bool PutSchemaFromJsonRequest::isValid() const
 
 
 /*!
- * @brief  Construct an PutSchemaFromJsonResponse object.
+ * Returns a PutSchemaFromJsonResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An PutSchemaFromJsonResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudDirectoryClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * PutSchemaFromJsonRequest::response(QNetworkReply * const reply) const
 {
@@ -88,20 +80,17 @@ QtAws::Core::AwsAbstractResponse * PutSchemaFromJsonRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudDirectory::PutSchemaFromJsonRequestPrivate
+ * \brief The PutSchemaFromJsonRequestPrivate class provides private implementation for PutSchemaFromJsonRequest.
+ * \internal
  *
- * @class  PutSchemaFromJsonRequestPrivate
- *
- * @brief  Private implementation for PutSchemaFromJsonRequest.
+ * \inmodule QtAwsCloudDirectory
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new PutSchemaFromJsonRequestPrivate object.
- *
- * @param  action  CloudDirectory action being performed.
- * @param  q       Pointer to this object's public PutSchemaFromJsonRequest instance.
+ * Constructs a PutSchemaFromJsonRequestPrivate object for CloudDirectory \a action with,
+ * public implementation \a q.
  */
 PutSchemaFromJsonRequestPrivate::PutSchemaFromJsonRequestPrivate(
     const CloudDirectoryRequest::Action action, PutSchemaFromJsonRequest * const q)
@@ -111,15 +100,10 @@ PutSchemaFromJsonRequestPrivate::PutSchemaFromJsonRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutSchemaFromJsonRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the PutSchemaFromJsonRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public PutSchemaFromJsonRequest instance.
  */
 PutSchemaFromJsonRequestPrivate::PutSchemaFromJsonRequestPrivate(
     const PutSchemaFromJsonRequestPrivate &other, PutSchemaFromJsonRequest * const q)

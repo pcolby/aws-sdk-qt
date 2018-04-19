@@ -27,10 +27,9 @@ namespace StorageGateway {
 
 /*!
  * \class QtAws::StorageGateway::UpdateGatewayInformationRequest
- *
  * \brief The UpdateGatewayInformationRequest class provides an interface for StorageGateway UpdateGatewayInformation requests.
  *
- * \ingroup StorageGateway
+ * \inmodule QtAwsStorageGateway
  *
  *  <fullname>AWS Storage Gateway Service</fullname>
  * 
@@ -106,9 +105,7 @@ namespace StorageGateway {
  */
 
 /*!
- * @brief  Constructs a new UpdateGatewayInformationRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateGatewayInformationRequest::UpdateGatewayInformationRequest(const UpdateGatewayInformationRequest &other)
     : StorageGatewayRequest(new UpdateGatewayInformationRequestPrivate(*other.d_func(), this))
@@ -117,7 +114,7 @@ UpdateGatewayInformationRequest::UpdateGatewayInformationRequest(const UpdateGat
 }
 
 /*!
- * @brief  Constructs a new UpdateGatewayInformationRequest object.
+ * Constructs a UpdateGatewayInformationRequest object.
  */
 UpdateGatewayInformationRequest::UpdateGatewayInformationRequest()
     : StorageGatewayRequest(new UpdateGatewayInformationRequestPrivate(StorageGatewayRequest::UpdateGatewayInformationAction, this))
@@ -135,14 +132,9 @@ bool UpdateGatewayInformationRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateGatewayInformationResponse object.
+ * Returns a UpdateGatewayInformationResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateGatewayInformationResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  StorageGatewayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateGatewayInformationRequest::response(QNetworkReply * const reply) const
 {
@@ -150,20 +142,17 @@ QtAws::Core::AwsAbstractResponse * UpdateGatewayInformationRequest::response(QNe
 }
 
 /*!
- * @internal
+ * \class QtAws::StorageGateway::UpdateGatewayInformationRequestPrivate
+ * \brief The UpdateGatewayInformationRequestPrivate class provides private implementation for UpdateGatewayInformationRequest.
+ * \internal
  *
- * @class  UpdateGatewayInformationRequestPrivate
- *
- * @brief  Private implementation for UpdateGatewayInformationRequest.
+ * \inmodule QtAwsStorageGateway
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateGatewayInformationRequestPrivate object.
- *
- * @param  action  StorageGateway action being performed.
- * @param  q       Pointer to this object's public UpdateGatewayInformationRequest instance.
+ * Constructs a UpdateGatewayInformationRequestPrivate object for StorageGateway \a action with,
+ * public implementation \a q.
  */
 UpdateGatewayInformationRequestPrivate::UpdateGatewayInformationRequestPrivate(
     const StorageGatewayRequest::Action action, UpdateGatewayInformationRequest * const q)
@@ -173,15 +162,10 @@ UpdateGatewayInformationRequestPrivate::UpdateGatewayInformationRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateGatewayInformationRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateGatewayInformationRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateGatewayInformationRequest instance.
  */
 UpdateGatewayInformationRequestPrivate::UpdateGatewayInformationRequestPrivate(
     const UpdateGatewayInformationRequestPrivate &other, UpdateGatewayInformationRequest * const q)

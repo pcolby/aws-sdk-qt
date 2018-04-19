@@ -27,19 +27,16 @@ namespace S3 {
 
 /*!
  * \class QtAws::S3::PutBucketNotificationRequest
- *
  * \brief The PutBucketNotificationRequest class provides an interface for S3 PutBucketNotification requests.
  *
- * \ingroup S3
+ * \inmodule QtAwsS3
  *
  *
  * \sa S3Client::putBucketNotification
  */
 
 /*!
- * @brief  Constructs a new PutBucketNotificationRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 PutBucketNotificationRequest::PutBucketNotificationRequest(const PutBucketNotificationRequest &other)
     : S3Request(new PutBucketNotificationRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ PutBucketNotificationRequest::PutBucketNotificationRequest(const PutBucketNotifi
 }
 
 /*!
- * @brief  Constructs a new PutBucketNotificationRequest object.
+ * Constructs a PutBucketNotificationRequest object.
  */
 PutBucketNotificationRequest::PutBucketNotificationRequest()
     : S3Request(new PutBucketNotificationRequestPrivate(S3Request::PutBucketNotificationAction, this))
@@ -66,14 +63,9 @@ bool PutBucketNotificationRequest::isValid() const
 
 
 /*!
- * @brief  Construct an PutBucketNotificationResponse object.
+ * Returns a PutBucketNotificationResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An PutBucketNotificationResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  S3Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * PutBucketNotificationRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * PutBucketNotificationRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::S3::PutBucketNotificationRequestPrivate
+ * \brief The PutBucketNotificationRequestPrivate class provides private implementation for PutBucketNotificationRequest.
+ * \internal
  *
- * @class  PutBucketNotificationRequestPrivate
- *
- * @brief  Private implementation for PutBucketNotificationRequest.
+ * \inmodule QtAwsS3
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new PutBucketNotificationRequestPrivate object.
- *
- * @param  action  S3 action being performed.
- * @param  q       Pointer to this object's public PutBucketNotificationRequest instance.
+ * Constructs a PutBucketNotificationRequestPrivate object for S3 \a action with,
+ * public implementation \a q.
  */
 PutBucketNotificationRequestPrivate::PutBucketNotificationRequestPrivate(
     const S3Request::Action action, PutBucketNotificationRequest * const q)
@@ -104,15 +93,10 @@ PutBucketNotificationRequestPrivate::PutBucketNotificationRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutBucketNotificationRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the PutBucketNotificationRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public PutBucketNotificationRequest instance.
  */
 PutBucketNotificationRequestPrivate::PutBucketNotificationRequestPrivate(
     const PutBucketNotificationRequestPrivate &other, PutBucketNotificationRequest * const q)

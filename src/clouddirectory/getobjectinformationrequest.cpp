@@ -27,10 +27,9 @@ namespace CloudDirectory {
 
 /*!
  * \class QtAws::CloudDirectory::GetObjectInformationRequest
- *
  * \brief The GetObjectInformationRequest class provides an interface for CloudDirectory GetObjectInformation requests.
  *
- * \ingroup CloudDirectory
+ * \inmodule QtAwsCloudDirectory
  *
  *  <fullname>Amazon Cloud Directory</fullname>
  * 
@@ -44,9 +43,7 @@ namespace CloudDirectory {
  */
 
 /*!
- * @brief  Constructs a new GetObjectInformationRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetObjectInformationRequest::GetObjectInformationRequest(const GetObjectInformationRequest &other)
     : CloudDirectoryRequest(new GetObjectInformationRequestPrivate(*other.d_func(), this))
@@ -55,7 +52,7 @@ GetObjectInformationRequest::GetObjectInformationRequest(const GetObjectInformat
 }
 
 /*!
- * @brief  Constructs a new GetObjectInformationRequest object.
+ * Constructs a GetObjectInformationRequest object.
  */
 GetObjectInformationRequest::GetObjectInformationRequest()
     : CloudDirectoryRequest(new GetObjectInformationRequestPrivate(CloudDirectoryRequest::GetObjectInformationAction, this))
@@ -73,14 +70,9 @@ bool GetObjectInformationRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetObjectInformationResponse object.
+ * Returns a GetObjectInformationResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetObjectInformationResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudDirectoryClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetObjectInformationRequest::response(QNetworkReply * const reply) const
 {
@@ -88,20 +80,17 @@ QtAws::Core::AwsAbstractResponse * GetObjectInformationRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudDirectory::GetObjectInformationRequestPrivate
+ * \brief The GetObjectInformationRequestPrivate class provides private implementation for GetObjectInformationRequest.
+ * \internal
  *
- * @class  GetObjectInformationRequestPrivate
- *
- * @brief  Private implementation for GetObjectInformationRequest.
+ * \inmodule QtAwsCloudDirectory
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetObjectInformationRequestPrivate object.
- *
- * @param  action  CloudDirectory action being performed.
- * @param  q       Pointer to this object's public GetObjectInformationRequest instance.
+ * Constructs a GetObjectInformationRequestPrivate object for CloudDirectory \a action with,
+ * public implementation \a q.
  */
 GetObjectInformationRequestPrivate::GetObjectInformationRequestPrivate(
     const CloudDirectoryRequest::Action action, GetObjectInformationRequest * const q)
@@ -111,15 +100,10 @@ GetObjectInformationRequestPrivate::GetObjectInformationRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetObjectInformationRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetObjectInformationRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetObjectInformationRequest instance.
  */
 GetObjectInformationRequestPrivate::GetObjectInformationRequestPrivate(
     const GetObjectInformationRequestPrivate &other, GetObjectInformationRequest * const q)

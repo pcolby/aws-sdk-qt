@@ -27,19 +27,16 @@ namespace SMS {
 
 /*!
  * \class QtAws::SMS::ImportServerCatalogRequest
- *
  * \brief The ImportServerCatalogRequest class provides an interface for SMS ImportServerCatalog requests.
  *
- * \ingroup SMS
+ * \inmodule QtAwsSMS
  *
  *
  * \sa SMSClient::importServerCatalog
  */
 
 /*!
- * @brief  Constructs a new ImportServerCatalogRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ImportServerCatalogRequest::ImportServerCatalogRequest(const ImportServerCatalogRequest &other)
     : SMSRequest(new ImportServerCatalogRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ ImportServerCatalogRequest::ImportServerCatalogRequest(const ImportServerCatalog
 }
 
 /*!
- * @brief  Constructs a new ImportServerCatalogRequest object.
+ * Constructs a ImportServerCatalogRequest object.
  */
 ImportServerCatalogRequest::ImportServerCatalogRequest()
     : SMSRequest(new ImportServerCatalogRequestPrivate(SMSRequest::ImportServerCatalogAction, this))
@@ -66,14 +63,9 @@ bool ImportServerCatalogRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ImportServerCatalogResponse object.
+ * Returns a ImportServerCatalogResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ImportServerCatalogResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SMSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ImportServerCatalogRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * ImportServerCatalogRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::SMS::ImportServerCatalogRequestPrivate
+ * \brief The ImportServerCatalogRequestPrivate class provides private implementation for ImportServerCatalogRequest.
+ * \internal
  *
- * @class  ImportServerCatalogRequestPrivate
- *
- * @brief  Private implementation for ImportServerCatalogRequest.
+ * \inmodule QtAwsSMS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ImportServerCatalogRequestPrivate object.
- *
- * @param  action  SMS action being performed.
- * @param  q       Pointer to this object's public ImportServerCatalogRequest instance.
+ * Constructs a ImportServerCatalogRequestPrivate object for SMS \a action with,
+ * public implementation \a q.
  */
 ImportServerCatalogRequestPrivate::ImportServerCatalogRequestPrivate(
     const SMSRequest::Action action, ImportServerCatalogRequest * const q)
@@ -104,15 +93,10 @@ ImportServerCatalogRequestPrivate::ImportServerCatalogRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ImportServerCatalogRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ImportServerCatalogRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ImportServerCatalogRequest instance.
  */
 ImportServerCatalogRequestPrivate::ImportServerCatalogRequestPrivate(
     const ImportServerCatalogRequestPrivate &other, ImportServerCatalogRequest * const q)

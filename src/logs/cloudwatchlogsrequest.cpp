@@ -25,16 +25,54 @@ namespace CloudWatchLogs {
 
 /*!
  * \class QtAws::CloudWatchLogs::CloudWatchLogsRequest
- *
  * \brief The CloudWatchLogsRequest class provides an interface for CloudWatchLogs requests.
  *
- * \ingroup CloudWatchLogs
+ * \inmodule QtAwsCloudWatchLogs
  */
 
 /*!
- * @brief  Constructs a new CloudWatchLogsRequest object.
+ * \enum CloudWatchLogsRequest::Action
  *
- * @param  action  The CloudWatchLogs action to request.
+ * This enum describes the actions that can be performed as CloudWatchLogs
+ * requests.
+ *
+ * \value AssociateKmsKeyAction CloudWatchLogs AssociateKmsKey action.
+ * \value CancelExportTaskAction CloudWatchLogs CancelExportTask action.
+ * \value CreateExportTaskAction CloudWatchLogs CreateExportTask action.
+ * \value CreateLogGroupAction CloudWatchLogs CreateLogGroup action.
+ * \value CreateLogStreamAction CloudWatchLogs CreateLogStream action.
+ * \value DeleteDestinationAction CloudWatchLogs DeleteDestination action.
+ * \value DeleteLogGroupAction CloudWatchLogs DeleteLogGroup action.
+ * \value DeleteLogStreamAction CloudWatchLogs DeleteLogStream action.
+ * \value DeleteMetricFilterAction CloudWatchLogs DeleteMetricFilter action.
+ * \value DeleteResourcePolicyAction CloudWatchLogs DeleteResourcePolicy action.
+ * \value DeleteRetentionPolicyAction CloudWatchLogs DeleteRetentionPolicy action.
+ * \value DeleteSubscriptionFilterAction CloudWatchLogs DeleteSubscriptionFilter action.
+ * \value DescribeDestinationsAction CloudWatchLogs DescribeDestinations action.
+ * \value DescribeExportTasksAction CloudWatchLogs DescribeExportTasks action.
+ * \value DescribeLogGroupsAction CloudWatchLogs DescribeLogGroups action.
+ * \value DescribeLogStreamsAction CloudWatchLogs DescribeLogStreams action.
+ * \value DescribeMetricFiltersAction CloudWatchLogs DescribeMetricFilters action.
+ * \value DescribeResourcePoliciesAction CloudWatchLogs DescribeResourcePolicies action.
+ * \value DescribeSubscriptionFiltersAction CloudWatchLogs DescribeSubscriptionFilters action.
+ * \value DisassociateKmsKeyAction CloudWatchLogs DisassociateKmsKey action.
+ * \value FilterLogEventsAction CloudWatchLogs FilterLogEvents action.
+ * \value GetLogEventsAction CloudWatchLogs GetLogEvents action.
+ * \value ListTagsLogGroupAction CloudWatchLogs ListTagsLogGroup action.
+ * \value PutDestinationAction CloudWatchLogs PutDestination action.
+ * \value PutDestinationPolicyAction CloudWatchLogs PutDestinationPolicy action.
+ * \value PutLogEventsAction CloudWatchLogs PutLogEvents action.
+ * \value PutMetricFilterAction CloudWatchLogs PutMetricFilter action.
+ * \value PutResourcePolicyAction CloudWatchLogs PutResourcePolicy action.
+ * \value PutRetentionPolicyAction CloudWatchLogs PutRetentionPolicy action.
+ * \value PutSubscriptionFilterAction CloudWatchLogs PutSubscriptionFilter action.
+ * \value TagLogGroupAction CloudWatchLogs TagLogGroup action.
+ * \value TestMetricFilterAction CloudWatchLogs TestMetricFilter action.
+ * \value UntagLogGroupAction CloudWatchLogs UntagLogGroup action.
+ */
+
+/*!
+ * Constructs a[n] CloudWatchLogsRequest object for CloudWatchLogs \a action.
  */
 CloudWatchLogsRequest::CloudWatchLogsRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new CloudWatchLogsRequestPrivate(action, this))
@@ -43,9 +81,7 @@ CloudWatchLogsRequest::CloudWatchLogsRequest(const Action action)
 }
 
 /*!
- * @brief  Constructs a new CloudWatchLogsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CloudWatchLogsRequest::CloudWatchLogsRequest(const CloudWatchLogsRequest &other)
     : QtAws::Core::AwsAbstractRequest(new CloudWatchLogsRequestPrivate(*other.d_func(), this))
@@ -54,13 +90,7 @@ CloudWatchLogsRequest::CloudWatchLogsRequest(const CloudWatchLogsRequest &other)
 }
 
 /*!
- * @brief  Assignment operator.
- *
- * Assigns \a other to \c this.
- *
- * @param  other  Instance to copy.
- *
- * @return  A reference to \c this.
+ * Sets the CloudWatchLogsRequest object to be equal to \a other.
  */
 CloudWatchLogsRequest& CloudWatchLogsRequest::operator=(const CloudWatchLogsRequest &other)
 {
@@ -72,14 +102,10 @@ CloudWatchLogsRequest& CloudWatchLogsRequest::operator=(const CloudWatchLogsRequ
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CloudWatchLogsRequest object.
+ * Constructs aa CloudWatchLogsRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from CloudWatchLogsRequestPrivate.
- *
- * @param  d  Pointer to private data (aka D-Pointer).
  */
 CloudWatchLogsRequest::CloudWatchLogsRequest(CloudWatchLogsRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
@@ -87,7 +113,7 @@ CloudWatchLogsRequest::CloudWatchLogsRequest(CloudWatchLogsRequestPrivate * cons
 }
 
 /*!
- * \brief Returns the CloudWatchLogs action to be performed by this request.
+ * Returns the CloudWatchLogs action to be performed by this request.
  */
 CloudWatchLogsRequest::Action CloudWatchLogsRequest::action() const
 {
@@ -96,7 +122,7 @@ CloudWatchLogsRequest::Action CloudWatchLogsRequest::action() const
 }
 
 /*!
- * \brief Returns the name of the CloudWatchLogs action to be performed by this request.
+ * Returns the name of the CloudWatchLogs action to be performed by this request.
  */
 QString CloudWatchLogsRequest::actionString() const
 {
@@ -104,7 +130,7 @@ QString CloudWatchLogsRequest::actionString() const
 }
 
 /*!
- * \brief Returns the CloudWatchLogs API version implemented by this request.
+ * Returns the CloudWatchLogs API version implemented by this request.
  */
 QString CloudWatchLogsRequest::apiVersion() const
 {
@@ -113,7 +139,7 @@ QString CloudWatchLogsRequest::apiVersion() const
 }
 
 /*!
- * @brief Set the CloudWatchLogs action to be performed by this request to \a action.
+ * Sets the CloudWatchLogs action to be performed by this request to \a action.
  */
 void CloudWatchLogsRequest::setAction(const Action action)
 {
@@ -122,7 +148,7 @@ void CloudWatchLogsRequest::setAction(const Action action)
 }
 
 /*!
- * Set the CloudWatchLogs API version to include in this request to \a version.
+ * Sets the CloudWatchLogs API version to include in this request to \a version.
  */
 void CloudWatchLogsRequest::setApiVersion(const QString &version)
 {
@@ -131,7 +157,7 @@ void CloudWatchLogsRequest::setApiVersion(const QString &version)
 }
 
 /*!
- * \brief Returns \c true if this request is the same as \a other.
+ * Returns \c true if this request is equal to \a other; \c false otherwise.
  *
  * Note, most derived *Request classes do not need to provider their own
  * implementations of this function, since most such request classes rely on
@@ -146,8 +172,8 @@ bool CloudWatchLogsRequest::operator==(const CloudWatchLogsRequest &other) const
             (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
-/*!
- * @brief  Check if \a queueName is a valid CloudWatchLogs queue name.
+/*
+ * Returns \c tue if \a queueName is a valid CloudWatchLogs queue name.
  *
  * @par From CloudWatchLogs FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
@@ -166,9 +192,8 @@ bool CloudWatchLogsRequest::operator==(const CloudWatchLogsRequest &other) const
 }*/
 
 /*!
- * \brief Removes the a \a name parameter from this request.
- *
- * Returns the count of paramters removed (typically \c 0 or \c 1).
+ * Removes the a \a name parameter from the request, then returns the number of
+ * paramters removed (typically \c 0 or \c 1).
  */
 int CloudWatchLogsRequest::clearParameter(const QString &name)
 {
@@ -177,7 +202,7 @@ int CloudWatchLogsRequest::clearParameter(const QString &name)
 }
 
 /*!
- * \brief Removes all parameters from this request.
+ * Removes all parameters from the request.
  */
 void CloudWatchLogsRequest::clearParameters()
 {
@@ -186,7 +211,7 @@ void CloudWatchLogsRequest::clearParameters()
 }
 
 /*!
- * \brief Returns the value of the \n name pararemter if set, otherwise \a defaultValue.
+ * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
 QVariant CloudWatchLogsRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
@@ -195,7 +220,7 @@ QVariant CloudWatchLogsRequest::parameter(const QString &name, const QVariant &d
 }
 
 /*!
- * \brief Returns a map of parameters included in this request.
+ * Returns the parameters included in this request.
  */
 const QVariantMap &CloudWatchLogsRequest::parameters() const
 {
@@ -204,7 +229,7 @@ const QVariantMap &CloudWatchLogsRequest::parameters() const
 }
 
 /*!
- * \brief Sets the \a name parameter to \a value.
+ * Sets the \a name parameter to \a value.
  */
 void CloudWatchLogsRequest::setParameter(const QString &name, const QVariant &value)
 {
@@ -213,9 +238,8 @@ void CloudWatchLogsRequest::setParameter(const QString &name, const QVariant &va
 }
 
 /*!
- * \brief Sets the map of paramters for this request to \a parameters.
- *
- * Any request parameters set previously will be discarded.
+ * Sets the paramters for this request to \a parameters. Any request parameters
+ * set previously will be discarded.
  */
 void CloudWatchLogsRequest::setParameters(const QVariantMap &parameters)
 {
@@ -224,11 +248,12 @@ void CloudWatchLogsRequest::setParameters(const QVariantMap &parameters)
 }
 
 /*!
- * \brief Returns a network request for this CloudWatchLogs request using the given \a endpoint.
+ * Returns a network request for the CloudWatchLogs request using the given
+ * \a endpoint.
  *
- * This CloudWatchLogs implementation builds request URLs by combining the common query
- * parameters (such as Action and Version), with any that have been added (via
- * setParameter) by child classes.
+ * This CloudWatchLogs implementation builds request URLs by combining the
+ * common query parameters (such as Action and Version), with any that have
+ * been added (via setParameter) by child classes.
  */
 QNetworkRequest CloudWatchLogsRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -239,17 +264,16 @@ QNetworkRequest CloudWatchLogsRequest::unsignedRequest(const QUrl &endpoint) con
 }
 
 /*!
+ * \class QtAws::CloudWatchLogs::CloudWatchLogsRequestPrivate
+ * \brief The CloudWatchLogsRequestPrivate class provides private implementation for CloudWatchLogsRequest.
  * \internal
  *
- * \class  CloudWatchLogsRequestPrivate
- *
- * \brief  Private implementation for CloudWatchLogsRequest.
+ * \inmodule QtAwsCloudWatchLogs
  */
 
 /*!
- * \internal
- *
- * \brief Constructs a new CloudWatchLogsRequestPrivate object.
+ * Constructs a CloudWatchLogsRequestPrivate object for CloudWatchLogs \a action with,
+ * public implementation \a q.
  */
 CloudWatchLogsRequestPrivate::CloudWatchLogsRequestPrivate(const CloudWatchLogsRequest::Action action, CloudWatchLogsRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
@@ -258,9 +282,7 @@ CloudWatchLogsRequestPrivate::CloudWatchLogsRequestPrivate(const CloudWatchLogsR
 }
 
 /*!
- * \internal
- *
- * \brief Constructs a new CloudWatchLogsRequestPrivate object, copying an existing one.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
@@ -276,15 +298,12 @@ CloudWatchLogsRequestPrivate::CloudWatchLogsRequestPrivate(const CloudWatchLogsR
 }
 
 /*!
- * \internal
- *
- * \brief Returns a string representing \a action.
+ * Returns a string represention of \a action, or a null string if \a action is
+ * invalid.
  *
  * This function converts CloudWatchLogsRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the CloudWatchLogs service's Action
  * query parameters.
- *
- * @return A string representing \a action, or a null string if \a action is invalid.
  */
 QString CloudWatchLogsRequestPrivate::toString(const CloudWatchLogsRequest::Action &action)
 {

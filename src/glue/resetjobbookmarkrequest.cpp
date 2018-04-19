@@ -27,10 +27,9 @@ namespace Glue {
 
 /*!
  * \class QtAws::Glue::ResetJobBookmarkRequest
- *
  * \brief The ResetJobBookmarkRequest class provides an interface for Glue ResetJobBookmark requests.
  *
- * \ingroup Glue
+ * \inmodule QtAwsGlue
  *
  *  <fullname>AWS Glue</fullname>
  * 
@@ -40,9 +39,7 @@ namespace Glue {
  */
 
 /*!
- * @brief  Constructs a new ResetJobBookmarkRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ResetJobBookmarkRequest::ResetJobBookmarkRequest(const ResetJobBookmarkRequest &other)
     : GlueRequest(new ResetJobBookmarkRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ ResetJobBookmarkRequest::ResetJobBookmarkRequest(const ResetJobBookmarkRequest &
 }
 
 /*!
- * @brief  Constructs a new ResetJobBookmarkRequest object.
+ * Constructs a ResetJobBookmarkRequest object.
  */
 ResetJobBookmarkRequest::ResetJobBookmarkRequest()
     : GlueRequest(new ResetJobBookmarkRequestPrivate(GlueRequest::ResetJobBookmarkAction, this))
@@ -69,14 +66,9 @@ bool ResetJobBookmarkRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ResetJobBookmarkResponse object.
+ * Returns a ResetJobBookmarkResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ResetJobBookmarkResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GlueClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ResetJobBookmarkRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * ResetJobBookmarkRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::Glue::ResetJobBookmarkRequestPrivate
+ * \brief The ResetJobBookmarkRequestPrivate class provides private implementation for ResetJobBookmarkRequest.
+ * \internal
  *
- * @class  ResetJobBookmarkRequestPrivate
- *
- * @brief  Private implementation for ResetJobBookmarkRequest.
+ * \inmodule QtAwsGlue
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ResetJobBookmarkRequestPrivate object.
- *
- * @param  action  Glue action being performed.
- * @param  q       Pointer to this object's public ResetJobBookmarkRequest instance.
+ * Constructs a ResetJobBookmarkRequestPrivate object for Glue \a action with,
+ * public implementation \a q.
  */
 ResetJobBookmarkRequestPrivate::ResetJobBookmarkRequestPrivate(
     const GlueRequest::Action action, ResetJobBookmarkRequest * const q)
@@ -107,15 +96,10 @@ ResetJobBookmarkRequestPrivate::ResetJobBookmarkRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ResetJobBookmarkRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ResetJobBookmarkRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ResetJobBookmarkRequest instance.
  */
 ResetJobBookmarkRequestPrivate::ResetJobBookmarkRequestPrivate(
     const ResetJobBookmarkRequestPrivate &other, ResetJobBookmarkRequest * const q)

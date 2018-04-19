@@ -27,19 +27,16 @@ namespace SageMaker {
 
 /*!
  * \class QtAws::SageMaker::StopNotebookInstanceRequest
- *
  * \brief The StopNotebookInstanceRequest class provides an interface for SageMaker StopNotebookInstance requests.
  *
- * \ingroup SageMaker
+ * \inmodule QtAwsSageMaker
  *
  *
  * \sa SageMakerClient::stopNotebookInstance
  */
 
 /*!
- * @brief  Constructs a new StopNotebookInstanceRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 StopNotebookInstanceRequest::StopNotebookInstanceRequest(const StopNotebookInstanceRequest &other)
     : SageMakerRequest(new StopNotebookInstanceRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ StopNotebookInstanceRequest::StopNotebookInstanceRequest(const StopNotebookInsta
 }
 
 /*!
- * @brief  Constructs a new StopNotebookInstanceRequest object.
+ * Constructs a StopNotebookInstanceRequest object.
  */
 StopNotebookInstanceRequest::StopNotebookInstanceRequest()
     : SageMakerRequest(new StopNotebookInstanceRequestPrivate(SageMakerRequest::StopNotebookInstanceAction, this))
@@ -66,14 +63,9 @@ bool StopNotebookInstanceRequest::isValid() const
 
 
 /*!
- * @brief  Construct an StopNotebookInstanceResponse object.
+ * Returns a StopNotebookInstanceResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An StopNotebookInstanceResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SageMakerClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * StopNotebookInstanceRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * StopNotebookInstanceRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::SageMaker::StopNotebookInstanceRequestPrivate
+ * \brief The StopNotebookInstanceRequestPrivate class provides private implementation for StopNotebookInstanceRequest.
+ * \internal
  *
- * @class  StopNotebookInstanceRequestPrivate
- *
- * @brief  Private implementation for StopNotebookInstanceRequest.
+ * \inmodule QtAwsSageMaker
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new StopNotebookInstanceRequestPrivate object.
- *
- * @param  action  SageMaker action being performed.
- * @param  q       Pointer to this object's public StopNotebookInstanceRequest instance.
+ * Constructs a StopNotebookInstanceRequestPrivate object for SageMaker \a action with,
+ * public implementation \a q.
  */
 StopNotebookInstanceRequestPrivate::StopNotebookInstanceRequestPrivate(
     const SageMakerRequest::Action action, StopNotebookInstanceRequest * const q)
@@ -104,15 +93,10 @@ StopNotebookInstanceRequestPrivate::StopNotebookInstanceRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StopNotebookInstanceRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the StopNotebookInstanceRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public StopNotebookInstanceRequest instance.
  */
 StopNotebookInstanceRequestPrivate::StopNotebookInstanceRequestPrivate(
     const StopNotebookInstanceRequestPrivate &other, StopNotebookInstanceRequest * const q)

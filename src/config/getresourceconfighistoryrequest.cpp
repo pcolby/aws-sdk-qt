@@ -27,10 +27,9 @@ namespace ConfigService {
 
 /*!
  * \class QtAws::ConfigService::GetResourceConfigHistoryRequest
- *
  * \brief The GetResourceConfigHistoryRequest class provides an interface for ConfigService GetResourceConfigHistory requests.
  *
- * \ingroup ConfigService
+ * \inmodule QtAwsConfigService
  *
  *  <fullname>AWS Config</fullname>
  * 
@@ -60,9 +59,7 @@ namespace ConfigService {
  */
 
 /*!
- * @brief  Constructs a new GetResourceConfigHistoryRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetResourceConfigHistoryRequest::GetResourceConfigHistoryRequest(const GetResourceConfigHistoryRequest &other)
     : ConfigServiceRequest(new GetResourceConfigHistoryRequestPrivate(*other.d_func(), this))
@@ -71,7 +68,7 @@ GetResourceConfigHistoryRequest::GetResourceConfigHistoryRequest(const GetResour
 }
 
 /*!
- * @brief  Constructs a new GetResourceConfigHistoryRequest object.
+ * Constructs a GetResourceConfigHistoryRequest object.
  */
 GetResourceConfigHistoryRequest::GetResourceConfigHistoryRequest()
     : ConfigServiceRequest(new GetResourceConfigHistoryRequestPrivate(ConfigServiceRequest::GetResourceConfigHistoryAction, this))
@@ -89,14 +86,9 @@ bool GetResourceConfigHistoryRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetResourceConfigHistoryResponse object.
+ * Returns a GetResourceConfigHistoryResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetResourceConfigHistoryResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ConfigServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetResourceConfigHistoryRequest::response(QNetworkReply * const reply) const
 {
@@ -104,20 +96,17 @@ QtAws::Core::AwsAbstractResponse * GetResourceConfigHistoryRequest::response(QNe
 }
 
 /*!
- * @internal
+ * \class QtAws::ConfigService::GetResourceConfigHistoryRequestPrivate
+ * \brief The GetResourceConfigHistoryRequestPrivate class provides private implementation for GetResourceConfigHistoryRequest.
+ * \internal
  *
- * @class  GetResourceConfigHistoryRequestPrivate
- *
- * @brief  Private implementation for GetResourceConfigHistoryRequest.
+ * \inmodule QtAwsConfigService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetResourceConfigHistoryRequestPrivate object.
- *
- * @param  action  ConfigService action being performed.
- * @param  q       Pointer to this object's public GetResourceConfigHistoryRequest instance.
+ * Constructs a GetResourceConfigHistoryRequestPrivate object for ConfigService \a action with,
+ * public implementation \a q.
  */
 GetResourceConfigHistoryRequestPrivate::GetResourceConfigHistoryRequestPrivate(
     const ConfigServiceRequest::Action action, GetResourceConfigHistoryRequest * const q)
@@ -127,15 +116,10 @@ GetResourceConfigHistoryRequestPrivate::GetResourceConfigHistoryRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetResourceConfigHistoryRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetResourceConfigHistoryRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetResourceConfigHistoryRequest instance.
  */
 GetResourceConfigHistoryRequestPrivate::GetResourceConfigHistoryRequestPrivate(
     const GetResourceConfigHistoryRequestPrivate &other, GetResourceConfigHistoryRequest * const q)

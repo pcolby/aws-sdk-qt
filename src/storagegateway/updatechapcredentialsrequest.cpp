@@ -27,10 +27,9 @@ namespace StorageGateway {
 
 /*!
  * \class QtAws::StorageGateway::UpdateChapCredentialsRequest
- *
  * \brief The UpdateChapCredentialsRequest class provides an interface for StorageGateway UpdateChapCredentials requests.
  *
- * \ingroup StorageGateway
+ * \inmodule QtAwsStorageGateway
  *
  *  <fullname>AWS Storage Gateway Service</fullname>
  * 
@@ -106,9 +105,7 @@ namespace StorageGateway {
  */
 
 /*!
- * @brief  Constructs a new UpdateChapCredentialsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateChapCredentialsRequest::UpdateChapCredentialsRequest(const UpdateChapCredentialsRequest &other)
     : StorageGatewayRequest(new UpdateChapCredentialsRequestPrivate(*other.d_func(), this))
@@ -117,7 +114,7 @@ UpdateChapCredentialsRequest::UpdateChapCredentialsRequest(const UpdateChapCrede
 }
 
 /*!
- * @brief  Constructs a new UpdateChapCredentialsRequest object.
+ * Constructs a UpdateChapCredentialsRequest object.
  */
 UpdateChapCredentialsRequest::UpdateChapCredentialsRequest()
     : StorageGatewayRequest(new UpdateChapCredentialsRequestPrivate(StorageGatewayRequest::UpdateChapCredentialsAction, this))
@@ -135,14 +132,9 @@ bool UpdateChapCredentialsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateChapCredentialsResponse object.
+ * Returns a UpdateChapCredentialsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateChapCredentialsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  StorageGatewayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateChapCredentialsRequest::response(QNetworkReply * const reply) const
 {
@@ -150,20 +142,17 @@ QtAws::Core::AwsAbstractResponse * UpdateChapCredentialsRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::StorageGateway::UpdateChapCredentialsRequestPrivate
+ * \brief The UpdateChapCredentialsRequestPrivate class provides private implementation for UpdateChapCredentialsRequest.
+ * \internal
  *
- * @class  UpdateChapCredentialsRequestPrivate
- *
- * @brief  Private implementation for UpdateChapCredentialsRequest.
+ * \inmodule QtAwsStorageGateway
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateChapCredentialsRequestPrivate object.
- *
- * @param  action  StorageGateway action being performed.
- * @param  q       Pointer to this object's public UpdateChapCredentialsRequest instance.
+ * Constructs a UpdateChapCredentialsRequestPrivate object for StorageGateway \a action with,
+ * public implementation \a q.
  */
 UpdateChapCredentialsRequestPrivate::UpdateChapCredentialsRequestPrivate(
     const StorageGatewayRequest::Action action, UpdateChapCredentialsRequest * const q)
@@ -173,15 +162,10 @@ UpdateChapCredentialsRequestPrivate::UpdateChapCredentialsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateChapCredentialsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateChapCredentialsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateChapCredentialsRequest instance.
  */
 UpdateChapCredentialsRequestPrivate::UpdateChapCredentialsRequestPrivate(
     const UpdateChapCredentialsRequestPrivate &other, UpdateChapCredentialsRequest * const q)

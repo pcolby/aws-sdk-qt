@@ -27,10 +27,9 @@ namespace ServerlessApplicationRepository {
 
 /*!
  * \class QtAws::ServerlessApplicationRepository::CreateCloudFormationChangeSetRequest
- *
  * \brief The CreateCloudFormationChangeSetRequest class provides an interface for ServerlessApplicationRepository CreateCloudFormationChangeSet requests.
  *
- * \ingroup ServerlessApplicationRepository
+ * \inmodule QtAwsServerlessApplicationRepository
  *
  *  The AWS Serverless Application Repository makes it easy for developers and enterprises to quickly find and deploy
  *  serverless applications in the AWS Cloud. For more information about serverless applications, see Serverless Computing
@@ -58,9 +57,7 @@ namespace ServerlessApplicationRepository {
  */
 
 /*!
- * @brief  Constructs a new CreateCloudFormationChangeSetRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateCloudFormationChangeSetRequest::CreateCloudFormationChangeSetRequest(const CreateCloudFormationChangeSetRequest &other)
     : ServerlessApplicationRepositoryRequest(new CreateCloudFormationChangeSetRequestPrivate(*other.d_func(), this))
@@ -69,7 +66,7 @@ CreateCloudFormationChangeSetRequest::CreateCloudFormationChangeSetRequest(const
 }
 
 /*!
- * @brief  Constructs a new CreateCloudFormationChangeSetRequest object.
+ * Constructs a CreateCloudFormationChangeSetRequest object.
  */
 CreateCloudFormationChangeSetRequest::CreateCloudFormationChangeSetRequest()
     : ServerlessApplicationRepositoryRequest(new CreateCloudFormationChangeSetRequestPrivate(ServerlessApplicationRepositoryRequest::CreateCloudFormationChangeSetAction, this))
@@ -87,14 +84,9 @@ bool CreateCloudFormationChangeSetRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateCloudFormationChangeSetResponse object.
+ * Returns a CreateCloudFormationChangeSetResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateCloudFormationChangeSetResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ServerlessApplicationRepositoryClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateCloudFormationChangeSetRequest::response(QNetworkReply * const reply) const
 {
@@ -102,20 +94,17 @@ QtAws::Core::AwsAbstractResponse * CreateCloudFormationChangeSetRequest::respons
 }
 
 /*!
- * @internal
+ * \class QtAws::ServerlessApplicationRepository::CreateCloudFormationChangeSetRequestPrivate
+ * \brief The CreateCloudFormationChangeSetRequestPrivate class provides private implementation for CreateCloudFormationChangeSetRequest.
+ * \internal
  *
- * @class  CreateCloudFormationChangeSetRequestPrivate
- *
- * @brief  Private implementation for CreateCloudFormationChangeSetRequest.
+ * \inmodule QtAwsServerlessApplicationRepository
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateCloudFormationChangeSetRequestPrivate object.
- *
- * @param  action  ServerlessApplicationRepository action being performed.
- * @param  q       Pointer to this object's public CreateCloudFormationChangeSetRequest instance.
+ * Constructs a CreateCloudFormationChangeSetRequestPrivate object for ServerlessApplicationRepository \a action with,
+ * public implementation \a q.
  */
 CreateCloudFormationChangeSetRequestPrivate::CreateCloudFormationChangeSetRequestPrivate(
     const ServerlessApplicationRepositoryRequest::Action action, CreateCloudFormationChangeSetRequest * const q)
@@ -125,15 +114,10 @@ CreateCloudFormationChangeSetRequestPrivate::CreateCloudFormationChangeSetReques
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateCloudFormationChangeSetRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateCloudFormationChangeSetRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateCloudFormationChangeSetRequest instance.
  */
 CreateCloudFormationChangeSetRequestPrivate::CreateCloudFormationChangeSetRequestPrivate(
     const CreateCloudFormationChangeSetRequestPrivate &other, CreateCloudFormationChangeSetRequest * const q)

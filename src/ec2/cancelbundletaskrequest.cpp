@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::CancelBundleTaskRequest
- *
  * \brief The CancelBundleTaskRequest class provides an interface for EC2 CancelBundleTask requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new CancelBundleTaskRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CancelBundleTaskRequest::CancelBundleTaskRequest(const CancelBundleTaskRequest &other)
     : EC2Request(new CancelBundleTaskRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ CancelBundleTaskRequest::CancelBundleTaskRequest(const CancelBundleTaskRequest &
 }
 
 /*!
- * @brief  Constructs a new CancelBundleTaskRequest object.
+ * Constructs a CancelBundleTaskRequest object.
  */
 CancelBundleTaskRequest::CancelBundleTaskRequest()
     : EC2Request(new CancelBundleTaskRequestPrivate(EC2Request::CancelBundleTaskAction, this))
@@ -70,14 +67,9 @@ bool CancelBundleTaskRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CancelBundleTaskResponse object.
+ * Returns a CancelBundleTaskResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CancelBundleTaskResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CancelBundleTaskRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * CancelBundleTaskRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::CancelBundleTaskRequestPrivate
+ * \brief The CancelBundleTaskRequestPrivate class provides private implementation for CancelBundleTaskRequest.
+ * \internal
  *
- * @class  CancelBundleTaskRequestPrivate
- *
- * @brief  Private implementation for CancelBundleTaskRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CancelBundleTaskRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public CancelBundleTaskRequest instance.
+ * Constructs a CancelBundleTaskRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 CancelBundleTaskRequestPrivate::CancelBundleTaskRequestPrivate(
     const EC2Request::Action action, CancelBundleTaskRequest * const q)
@@ -108,15 +97,10 @@ CancelBundleTaskRequestPrivate::CancelBundleTaskRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CancelBundleTaskRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CancelBundleTaskRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CancelBundleTaskRequest instance.
  */
 CancelBundleTaskRequestPrivate::CancelBundleTaskRequestPrivate(
     const CancelBundleTaskRequestPrivate &other, CancelBundleTaskRequest * const q)

@@ -27,10 +27,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::TestInvokeAuthorizerRequest
- *
  * \brief The TestInvokeAuthorizerRequest class provides an interface for IoT TestInvokeAuthorizer requests.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -48,9 +47,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new TestInvokeAuthorizerRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 TestInvokeAuthorizerRequest::TestInvokeAuthorizerRequest(const TestInvokeAuthorizerRequest &other)
     : IoTRequest(new TestInvokeAuthorizerRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ TestInvokeAuthorizerRequest::TestInvokeAuthorizerRequest(const TestInvokeAuthori
 }
 
 /*!
- * @brief  Constructs a new TestInvokeAuthorizerRequest object.
+ * Constructs a TestInvokeAuthorizerRequest object.
  */
 TestInvokeAuthorizerRequest::TestInvokeAuthorizerRequest()
     : IoTRequest(new TestInvokeAuthorizerRequestPrivate(IoTRequest::TestInvokeAuthorizerAction, this))
@@ -77,14 +74,9 @@ bool TestInvokeAuthorizerRequest::isValid() const
 
 
 /*!
- * @brief  Construct an TestInvokeAuthorizerResponse object.
+ * Returns a TestInvokeAuthorizerResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An TestInvokeAuthorizerResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IoTClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * TestInvokeAuthorizerRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * TestInvokeAuthorizerRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::IoT::TestInvokeAuthorizerRequestPrivate
+ * \brief The TestInvokeAuthorizerRequestPrivate class provides private implementation for TestInvokeAuthorizerRequest.
+ * \internal
  *
- * @class  TestInvokeAuthorizerRequestPrivate
- *
- * @brief  Private implementation for TestInvokeAuthorizerRequest.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new TestInvokeAuthorizerRequestPrivate object.
- *
- * @param  action  IoT action being performed.
- * @param  q       Pointer to this object's public TestInvokeAuthorizerRequest instance.
+ * Constructs a TestInvokeAuthorizerRequestPrivate object for IoT \a action with,
+ * public implementation \a q.
  */
 TestInvokeAuthorizerRequestPrivate::TestInvokeAuthorizerRequestPrivate(
     const IoTRequest::Action action, TestInvokeAuthorizerRequest * const q)
@@ -115,15 +104,10 @@ TestInvokeAuthorizerRequestPrivate::TestInvokeAuthorizerRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new TestInvokeAuthorizerRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the TestInvokeAuthorizerRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public TestInvokeAuthorizerRequest instance.
  */
 TestInvokeAuthorizerRequestPrivate::TestInvokeAuthorizerRequestPrivate(
     const TestInvokeAuthorizerRequestPrivate &other, TestInvokeAuthorizerRequest * const q)

@@ -27,19 +27,16 @@ namespace MTurk {
 
 /*!
  * \class QtAws::MTurk::ApproveAssignmentRequest
- *
  * \brief The ApproveAssignmentRequest class provides an interface for MTurk ApproveAssignment requests.
  *
- * \ingroup MTurk
+ * \inmodule QtAwsMTurk
  *
  *
  * \sa MTurkClient::approveAssignment
  */
 
 /*!
- * @brief  Constructs a new ApproveAssignmentRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ApproveAssignmentRequest::ApproveAssignmentRequest(const ApproveAssignmentRequest &other)
     : MTurkRequest(new ApproveAssignmentRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ ApproveAssignmentRequest::ApproveAssignmentRequest(const ApproveAssignmentReques
 }
 
 /*!
- * @brief  Constructs a new ApproveAssignmentRequest object.
+ * Constructs a ApproveAssignmentRequest object.
  */
 ApproveAssignmentRequest::ApproveAssignmentRequest()
     : MTurkRequest(new ApproveAssignmentRequestPrivate(MTurkRequest::ApproveAssignmentAction, this))
@@ -66,14 +63,9 @@ bool ApproveAssignmentRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ApproveAssignmentResponse object.
+ * Returns a ApproveAssignmentResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ApproveAssignmentResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MTurkClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ApproveAssignmentRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * ApproveAssignmentRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::MTurk::ApproveAssignmentRequestPrivate
+ * \brief The ApproveAssignmentRequestPrivate class provides private implementation for ApproveAssignmentRequest.
+ * \internal
  *
- * @class  ApproveAssignmentRequestPrivate
- *
- * @brief  Private implementation for ApproveAssignmentRequest.
+ * \inmodule QtAwsMTurk
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ApproveAssignmentRequestPrivate object.
- *
- * @param  action  MTurk action being performed.
- * @param  q       Pointer to this object's public ApproveAssignmentRequest instance.
+ * Constructs a ApproveAssignmentRequestPrivate object for MTurk \a action with,
+ * public implementation \a q.
  */
 ApproveAssignmentRequestPrivate::ApproveAssignmentRequestPrivate(
     const MTurkRequest::Action action, ApproveAssignmentRequest * const q)
@@ -104,15 +93,10 @@ ApproveAssignmentRequestPrivate::ApproveAssignmentRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ApproveAssignmentRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ApproveAssignmentRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ApproveAssignmentRequest instance.
  */
 ApproveAssignmentRequestPrivate::ApproveAssignmentRequestPrivate(
     const ApproveAssignmentRequestPrivate &other, ApproveAssignmentRequest * const q)

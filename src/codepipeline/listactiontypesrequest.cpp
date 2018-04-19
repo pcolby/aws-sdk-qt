@@ -27,10 +27,9 @@ namespace CodePipeline {
 
 /*!
  * \class QtAws::CodePipeline::ListActionTypesRequest
- *
  * \brief The ListActionTypesRequest class provides an interface for CodePipeline ListActionTypes requests.
  *
- * \ingroup CodePipeline
+ * \inmodule QtAwsCodePipeline
  *
  *  <fullname>AWS CodePipeline</fullname>
  * 
@@ -200,9 +199,7 @@ namespace CodePipeline {
  */
 
 /*!
- * @brief  Constructs a new ListActionTypesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListActionTypesRequest::ListActionTypesRequest(const ListActionTypesRequest &other)
     : CodePipelineRequest(new ListActionTypesRequestPrivate(*other.d_func(), this))
@@ -211,7 +208,7 @@ ListActionTypesRequest::ListActionTypesRequest(const ListActionTypesRequest &oth
 }
 
 /*!
- * @brief  Constructs a new ListActionTypesRequest object.
+ * Constructs a ListActionTypesRequest object.
  */
 ListActionTypesRequest::ListActionTypesRequest()
     : CodePipelineRequest(new ListActionTypesRequestPrivate(CodePipelineRequest::ListActionTypesAction, this))
@@ -229,14 +226,9 @@ bool ListActionTypesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListActionTypesResponse object.
+ * Returns a ListActionTypesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListActionTypesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CodePipelineClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListActionTypesRequest::response(QNetworkReply * const reply) const
 {
@@ -244,20 +236,17 @@ QtAws::Core::AwsAbstractResponse * ListActionTypesRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::CodePipeline::ListActionTypesRequestPrivate
+ * \brief The ListActionTypesRequestPrivate class provides private implementation for ListActionTypesRequest.
+ * \internal
  *
- * @class  ListActionTypesRequestPrivate
- *
- * @brief  Private implementation for ListActionTypesRequest.
+ * \inmodule QtAwsCodePipeline
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListActionTypesRequestPrivate object.
- *
- * @param  action  CodePipeline action being performed.
- * @param  q       Pointer to this object's public ListActionTypesRequest instance.
+ * Constructs a ListActionTypesRequestPrivate object for CodePipeline \a action with,
+ * public implementation \a q.
  */
 ListActionTypesRequestPrivate::ListActionTypesRequestPrivate(
     const CodePipelineRequest::Action action, ListActionTypesRequest * const q)
@@ -267,15 +256,10 @@ ListActionTypesRequestPrivate::ListActionTypesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListActionTypesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListActionTypesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListActionTypesRequest instance.
  */
 ListActionTypesRequestPrivate::ListActionTypesRequestPrivate(
     const ListActionTypesRequestPrivate &other, ListActionTypesRequest * const q)

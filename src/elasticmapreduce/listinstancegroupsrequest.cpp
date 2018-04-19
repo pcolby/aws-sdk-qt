@@ -27,10 +27,9 @@ namespace EMR {
 
 /*!
  * \class QtAws::EMR::ListInstanceGroupsRequest
- *
  * \brief The ListInstanceGroupsRequest class provides an interface for EMR ListInstanceGroups requests.
  *
- * \ingroup EMR
+ * \inmodule QtAwsEMR
  *
  *  Amazon EMR is a web service that makes it easy to process large amounts of data efficiently. Amazon EMR uses Hadoop
  *  processing combined with several AWS products to do tasks such as web indexing, data mining, log file analysis, machine
@@ -40,9 +39,7 @@ namespace EMR {
  */
 
 /*!
- * @brief  Constructs a new ListInstanceGroupsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListInstanceGroupsRequest::ListInstanceGroupsRequest(const ListInstanceGroupsRequest &other)
     : EMRRequest(new ListInstanceGroupsRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ ListInstanceGroupsRequest::ListInstanceGroupsRequest(const ListInstanceGroupsReq
 }
 
 /*!
- * @brief  Constructs a new ListInstanceGroupsRequest object.
+ * Constructs a ListInstanceGroupsRequest object.
  */
 ListInstanceGroupsRequest::ListInstanceGroupsRequest()
     : EMRRequest(new ListInstanceGroupsRequestPrivate(EMRRequest::ListInstanceGroupsAction, this))
@@ -69,14 +66,9 @@ bool ListInstanceGroupsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListInstanceGroupsResponse object.
+ * Returns a ListInstanceGroupsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListInstanceGroupsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EMRClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListInstanceGroupsRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * ListInstanceGroupsRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::EMR::ListInstanceGroupsRequestPrivate
+ * \brief The ListInstanceGroupsRequestPrivate class provides private implementation for ListInstanceGroupsRequest.
+ * \internal
  *
- * @class  ListInstanceGroupsRequestPrivate
- *
- * @brief  Private implementation for ListInstanceGroupsRequest.
+ * \inmodule QtAwsEMR
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListInstanceGroupsRequestPrivate object.
- *
- * @param  action  EMR action being performed.
- * @param  q       Pointer to this object's public ListInstanceGroupsRequest instance.
+ * Constructs a ListInstanceGroupsRequestPrivate object for EMR \a action with,
+ * public implementation \a q.
  */
 ListInstanceGroupsRequestPrivate::ListInstanceGroupsRequestPrivate(
     const EMRRequest::Action action, ListInstanceGroupsRequest * const q)
@@ -107,15 +96,10 @@ ListInstanceGroupsRequestPrivate::ListInstanceGroupsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListInstanceGroupsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListInstanceGroupsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListInstanceGroupsRequest instance.
  */
 ListInstanceGroupsRequestPrivate::ListInstanceGroupsRequestPrivate(
     const ListInstanceGroupsRequestPrivate &other, ListInstanceGroupsRequest * const q)

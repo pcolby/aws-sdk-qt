@@ -27,10 +27,9 @@ namespace DirectoryService {
 
 /*!
  * \class QtAws::DirectoryService::DisableRadiusRequest
- *
  * \brief The DisableRadiusRequest class provides an interface for DirectoryService DisableRadius requests.
  *
- * \ingroup DirectoryService
+ * \inmodule QtAwsDirectoryService
  *
  *  <fullname>AWS Directory Service</fullname>
  * 
@@ -51,9 +50,7 @@ namespace DirectoryService {
  */
 
 /*!
- * @brief  Constructs a new DisableRadiusRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DisableRadiusRequest::DisableRadiusRequest(const DisableRadiusRequest &other)
     : DirectoryServiceRequest(new DisableRadiusRequestPrivate(*other.d_func(), this))
@@ -62,7 +59,7 @@ DisableRadiusRequest::DisableRadiusRequest(const DisableRadiusRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DisableRadiusRequest object.
+ * Constructs a DisableRadiusRequest object.
  */
 DisableRadiusRequest::DisableRadiusRequest()
     : DirectoryServiceRequest(new DisableRadiusRequestPrivate(DirectoryServiceRequest::DisableRadiusAction, this))
@@ -80,14 +77,9 @@ bool DisableRadiusRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DisableRadiusResponse object.
+ * Returns a DisableRadiusResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DisableRadiusResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DirectoryServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DisableRadiusRequest::response(QNetworkReply * const reply) const
 {
@@ -95,20 +87,17 @@ QtAws::Core::AwsAbstractResponse * DisableRadiusRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::DirectoryService::DisableRadiusRequestPrivate
+ * \brief The DisableRadiusRequestPrivate class provides private implementation for DisableRadiusRequest.
+ * \internal
  *
- * @class  DisableRadiusRequestPrivate
- *
- * @brief  Private implementation for DisableRadiusRequest.
+ * \inmodule QtAwsDirectoryService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DisableRadiusRequestPrivate object.
- *
- * @param  action  DirectoryService action being performed.
- * @param  q       Pointer to this object's public DisableRadiusRequest instance.
+ * Constructs a DisableRadiusRequestPrivate object for DirectoryService \a action with,
+ * public implementation \a q.
  */
 DisableRadiusRequestPrivate::DisableRadiusRequestPrivate(
     const DirectoryServiceRequest::Action action, DisableRadiusRequest * const q)
@@ -118,15 +107,10 @@ DisableRadiusRequestPrivate::DisableRadiusRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DisableRadiusRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DisableRadiusRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DisableRadiusRequest instance.
  */
 DisableRadiusRequestPrivate::DisableRadiusRequestPrivate(
     const DisableRadiusRequestPrivate &other, DisableRadiusRequest * const q)

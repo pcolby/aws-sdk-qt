@@ -25,16 +25,31 @@ namespace ServerlessApplicationRepository {
 
 /*!
  * \class QtAws::ServerlessApplicationRepository::ServerlessApplicationRepositoryRequest
- *
  * \brief The ServerlessApplicationRepositoryRequest class provides an interface for ServerlessApplicationRepository requests.
  *
- * \ingroup ServerlessApplicationRepository
+ * \inmodule QtAwsServerlessApplicationRepository
  */
 
 /*!
- * @brief  Constructs a new ServerlessApplicationRepositoryRequest object.
+ * \enum ServerlessApplicationRepositoryRequest::Action
  *
- * @param  action  The ServerlessApplicationRepository action to request.
+ * This enum describes the actions that can be performed as ServerlessApplicationRepository
+ * requests.
+ *
+ * \value CreateApplicationAction ServerlessApplicationRepository CreateApplication action.
+ * \value CreateApplicationVersionAction ServerlessApplicationRepository CreateApplicationVersion action.
+ * \value CreateCloudFormationChangeSetAction ServerlessApplicationRepository CreateCloudFormationChangeSet action.
+ * \value DeleteApplicationAction ServerlessApplicationRepository DeleteApplication action.
+ * \value GetApplicationAction ServerlessApplicationRepository GetApplication action.
+ * \value GetApplicationPolicyAction ServerlessApplicationRepository GetApplicationPolicy action.
+ * \value ListApplicationVersionsAction ServerlessApplicationRepository ListApplicationVersions action.
+ * \value ListApplicationsAction ServerlessApplicationRepository ListApplications action.
+ * \value PutApplicationPolicyAction ServerlessApplicationRepository PutApplicationPolicy action.
+ * \value UpdateApplicationAction ServerlessApplicationRepository UpdateApplication action.
+ */
+
+/*!
+ * Constructs a[n] ServerlessApplicationRepositoryRequest object for ServerlessApplicationRepository \a action.
  */
 ServerlessApplicationRepositoryRequest::ServerlessApplicationRepositoryRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new ServerlessApplicationRepositoryRequestPrivate(action, this))
@@ -43,9 +58,7 @@ ServerlessApplicationRepositoryRequest::ServerlessApplicationRepositoryRequest(c
 }
 
 /*!
- * @brief  Constructs a new ServerlessApplicationRepositoryRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ServerlessApplicationRepositoryRequest::ServerlessApplicationRepositoryRequest(const ServerlessApplicationRepositoryRequest &other)
     : QtAws::Core::AwsAbstractRequest(new ServerlessApplicationRepositoryRequestPrivate(*other.d_func(), this))
@@ -54,13 +67,7 @@ ServerlessApplicationRepositoryRequest::ServerlessApplicationRepositoryRequest(c
 }
 
 /*!
- * @brief  Assignment operator.
- *
- * Assigns \a other to \c this.
- *
- * @param  other  Instance to copy.
- *
- * @return  A reference to \c this.
+ * Sets the ServerlessApplicationRepositoryRequest object to be equal to \a other.
  */
 ServerlessApplicationRepositoryRequest& ServerlessApplicationRepositoryRequest::operator=(const ServerlessApplicationRepositoryRequest &other)
 {
@@ -72,14 +79,10 @@ ServerlessApplicationRepositoryRequest& ServerlessApplicationRepositoryRequest::
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ServerlessApplicationRepositoryRequest object.
+ * Constructs aa ServerlessApplicationRepositoryRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from ServerlessApplicationRepositoryRequestPrivate.
- *
- * @param  d  Pointer to private data (aka D-Pointer).
  */
 ServerlessApplicationRepositoryRequest::ServerlessApplicationRepositoryRequest(ServerlessApplicationRepositoryRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
@@ -87,7 +90,7 @@ ServerlessApplicationRepositoryRequest::ServerlessApplicationRepositoryRequest(S
 }
 
 /*!
- * \brief Returns the ServerlessApplicationRepository action to be performed by this request.
+ * Returns the ServerlessApplicationRepository action to be performed by this request.
  */
 ServerlessApplicationRepositoryRequest::Action ServerlessApplicationRepositoryRequest::action() const
 {
@@ -96,7 +99,7 @@ ServerlessApplicationRepositoryRequest::Action ServerlessApplicationRepositoryRe
 }
 
 /*!
- * \brief Returns the name of the ServerlessApplicationRepository action to be performed by this request.
+ * Returns the name of the ServerlessApplicationRepository action to be performed by this request.
  */
 QString ServerlessApplicationRepositoryRequest::actionString() const
 {
@@ -104,7 +107,7 @@ QString ServerlessApplicationRepositoryRequest::actionString() const
 }
 
 /*!
- * \brief Returns the ServerlessApplicationRepository API version implemented by this request.
+ * Returns the ServerlessApplicationRepository API version implemented by this request.
  */
 QString ServerlessApplicationRepositoryRequest::apiVersion() const
 {
@@ -113,7 +116,7 @@ QString ServerlessApplicationRepositoryRequest::apiVersion() const
 }
 
 /*!
- * @brief Set the ServerlessApplicationRepository action to be performed by this request to \a action.
+ * Sets the ServerlessApplicationRepository action to be performed by this request to \a action.
  */
 void ServerlessApplicationRepositoryRequest::setAction(const Action action)
 {
@@ -122,7 +125,7 @@ void ServerlessApplicationRepositoryRequest::setAction(const Action action)
 }
 
 /*!
- * Set the ServerlessApplicationRepository API version to include in this request to \a version.
+ * Sets the ServerlessApplicationRepository API version to include in this request to \a version.
  */
 void ServerlessApplicationRepositoryRequest::setApiVersion(const QString &version)
 {
@@ -131,7 +134,7 @@ void ServerlessApplicationRepositoryRequest::setApiVersion(const QString &versio
 }
 
 /*!
- * \brief Returns \c true if this request is the same as \a other.
+ * Returns \c true if this request is equal to \a other; \c false otherwise.
  *
  * Note, most derived *Request classes do not need to provider their own
  * implementations of this function, since most such request classes rely on
@@ -146,8 +149,8 @@ bool ServerlessApplicationRepositoryRequest::operator==(const ServerlessApplicat
             (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
-/*!
- * @brief  Check if \a queueName is a valid ServerlessApplicationRepository queue name.
+/*
+ * Returns \c tue if \a queueName is a valid ServerlessApplicationRepository queue name.
  *
  * @par From ServerlessApplicationRepository FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
@@ -166,9 +169,8 @@ bool ServerlessApplicationRepositoryRequest::operator==(const ServerlessApplicat
 }*/
 
 /*!
- * \brief Removes the a \a name parameter from this request.
- *
- * Returns the count of paramters removed (typically \c 0 or \c 1).
+ * Removes the a \a name parameter from the request, then returns the number of
+ * paramters removed (typically \c 0 or \c 1).
  */
 int ServerlessApplicationRepositoryRequest::clearParameter(const QString &name)
 {
@@ -177,7 +179,7 @@ int ServerlessApplicationRepositoryRequest::clearParameter(const QString &name)
 }
 
 /*!
- * \brief Removes all parameters from this request.
+ * Removes all parameters from the request.
  */
 void ServerlessApplicationRepositoryRequest::clearParameters()
 {
@@ -186,7 +188,7 @@ void ServerlessApplicationRepositoryRequest::clearParameters()
 }
 
 /*!
- * \brief Returns the value of the \n name pararemter if set, otherwise \a defaultValue.
+ * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
 QVariant ServerlessApplicationRepositoryRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
@@ -195,7 +197,7 @@ QVariant ServerlessApplicationRepositoryRequest::parameter(const QString &name, 
 }
 
 /*!
- * \brief Returns a map of parameters included in this request.
+ * Returns the parameters included in this request.
  */
 const QVariantMap &ServerlessApplicationRepositoryRequest::parameters() const
 {
@@ -204,7 +206,7 @@ const QVariantMap &ServerlessApplicationRepositoryRequest::parameters() const
 }
 
 /*!
- * \brief Sets the \a name parameter to \a value.
+ * Sets the \a name parameter to \a value.
  */
 void ServerlessApplicationRepositoryRequest::setParameter(const QString &name, const QVariant &value)
 {
@@ -213,9 +215,8 @@ void ServerlessApplicationRepositoryRequest::setParameter(const QString &name, c
 }
 
 /*!
- * \brief Sets the map of paramters for this request to \a parameters.
- *
- * Any request parameters set previously will be discarded.
+ * Sets the paramters for this request to \a parameters. Any request parameters
+ * set previously will be discarded.
  */
 void ServerlessApplicationRepositoryRequest::setParameters(const QVariantMap &parameters)
 {
@@ -224,11 +225,12 @@ void ServerlessApplicationRepositoryRequest::setParameters(const QVariantMap &pa
 }
 
 /*!
- * \brief Returns a network request for this ServerlessApplicationRepository request using the given \a endpoint.
+ * Returns a network request for the ServerlessApplicationRepository request using the given
+ * \a endpoint.
  *
- * This ServerlessApplicationRepository implementation builds request URLs by combining the common query
- * parameters (such as Action and Version), with any that have been added (via
- * setParameter) by child classes.
+ * This ServerlessApplicationRepository implementation builds request URLs by combining the
+ * common query parameters (such as Action and Version), with any that have
+ * been added (via setParameter) by child classes.
  */
 QNetworkRequest ServerlessApplicationRepositoryRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -239,17 +241,16 @@ QNetworkRequest ServerlessApplicationRepositoryRequest::unsignedRequest(const QU
 }
 
 /*!
+ * \class QtAws::ServerlessApplicationRepository::ServerlessApplicationRepositoryRequestPrivate
+ * \brief The ServerlessApplicationRepositoryRequestPrivate class provides private implementation for ServerlessApplicationRepositoryRequest.
  * \internal
  *
- * \class  ServerlessApplicationRepositoryRequestPrivate
- *
- * \brief  Private implementation for ServerlessApplicationRepositoryRequest.
+ * \inmodule QtAwsServerlessApplicationRepository
  */
 
 /*!
- * \internal
- *
- * \brief Constructs a new ServerlessApplicationRepositoryRequestPrivate object.
+ * Constructs a ServerlessApplicationRepositoryRequestPrivate object for ServerlessApplicationRepository \a action with,
+ * public implementation \a q.
  */
 ServerlessApplicationRepositoryRequestPrivate::ServerlessApplicationRepositoryRequestPrivate(const ServerlessApplicationRepositoryRequest::Action action, ServerlessApplicationRepositoryRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
@@ -258,9 +259,7 @@ ServerlessApplicationRepositoryRequestPrivate::ServerlessApplicationRepositoryRe
 }
 
 /*!
- * \internal
- *
- * \brief Constructs a new ServerlessApplicationRepositoryRequestPrivate object, copying an existing one.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
@@ -276,15 +275,12 @@ ServerlessApplicationRepositoryRequestPrivate::ServerlessApplicationRepositoryRe
 }
 
 /*!
- * \internal
- *
- * \brief Returns a string representing \a action.
+ * Returns a string represention of \a action, or a null string if \a action is
+ * invalid.
  *
  * This function converts ServerlessApplicationRepositoryRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the ServerlessApplicationRepository service's Action
  * query parameters.
- *
- * @return A string representing \a action, or a null string if \a action is invalid.
  */
 QString ServerlessApplicationRepositoryRequestPrivate::toString(const ServerlessApplicationRepositoryRequest::Action &action)
 {

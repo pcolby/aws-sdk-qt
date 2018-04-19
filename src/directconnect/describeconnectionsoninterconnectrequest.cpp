@@ -27,10 +27,9 @@ namespace DirectConnect {
 
 /*!
  * \class QtAws::DirectConnect::DescribeConnectionsOnInterconnectRequest
- *
  * \brief The DescribeConnectionsOnInterconnectRequest class provides an interface for DirectConnect DescribeConnectionsOnInterconnect requests.
  *
- * \ingroup DirectConnect
+ * \inmodule QtAwsDirectConnect
  *
  *  AWS Direct Connect links your internal network to an AWS Direct Connect location over a standard 1 gigabit or 10 gigabit
  *  Ethernet fiber-optic cable. One end of the cable is connected to your router, the other to an AWS Direct Connect router.
@@ -45,9 +44,7 @@ namespace DirectConnect {
  */
 
 /*!
- * @brief  Constructs a new DescribeConnectionsOnInterconnectRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeConnectionsOnInterconnectRequest::DescribeConnectionsOnInterconnectRequest(const DescribeConnectionsOnInterconnectRequest &other)
     : DirectConnectRequest(new DescribeConnectionsOnInterconnectRequestPrivate(*other.d_func(), this))
@@ -56,7 +53,7 @@ DescribeConnectionsOnInterconnectRequest::DescribeConnectionsOnInterconnectReque
 }
 
 /*!
- * @brief  Constructs a new DescribeConnectionsOnInterconnectRequest object.
+ * Constructs a DescribeConnectionsOnInterconnectRequest object.
  */
 DescribeConnectionsOnInterconnectRequest::DescribeConnectionsOnInterconnectRequest()
     : DirectConnectRequest(new DescribeConnectionsOnInterconnectRequestPrivate(DirectConnectRequest::DescribeConnectionsOnInterconnectAction, this))
@@ -74,14 +71,9 @@ bool DescribeConnectionsOnInterconnectRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeConnectionsOnInterconnectResponse object.
+ * Returns a DescribeConnectionsOnInterconnectResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeConnectionsOnInterconnectResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DirectConnectClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeConnectionsOnInterconnectRequest::response(QNetworkReply * const reply) const
 {
@@ -89,20 +81,17 @@ QtAws::Core::AwsAbstractResponse * DescribeConnectionsOnInterconnectRequest::res
 }
 
 /*!
- * @internal
+ * \class QtAws::DirectConnect::DescribeConnectionsOnInterconnectRequestPrivate
+ * \brief The DescribeConnectionsOnInterconnectRequestPrivate class provides private implementation for DescribeConnectionsOnInterconnectRequest.
+ * \internal
  *
- * @class  DescribeConnectionsOnInterconnectRequestPrivate
- *
- * @brief  Private implementation for DescribeConnectionsOnInterconnectRequest.
+ * \inmodule QtAwsDirectConnect
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeConnectionsOnInterconnectRequestPrivate object.
- *
- * @param  action  DirectConnect action being performed.
- * @param  q       Pointer to this object's public DescribeConnectionsOnInterconnectRequest instance.
+ * Constructs a DescribeConnectionsOnInterconnectRequestPrivate object for DirectConnect \a action with,
+ * public implementation \a q.
  */
 DescribeConnectionsOnInterconnectRequestPrivate::DescribeConnectionsOnInterconnectRequestPrivate(
     const DirectConnectRequest::Action action, DescribeConnectionsOnInterconnectRequest * const q)
@@ -112,15 +101,10 @@ DescribeConnectionsOnInterconnectRequestPrivate::DescribeConnectionsOnInterconne
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeConnectionsOnInterconnectRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeConnectionsOnInterconnectRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeConnectionsOnInterconnectRequest instance.
  */
 DescribeConnectionsOnInterconnectRequestPrivate::DescribeConnectionsOnInterconnectRequestPrivate(
     const DescribeConnectionsOnInterconnectRequestPrivate &other, DescribeConnectionsOnInterconnectRequest * const q)

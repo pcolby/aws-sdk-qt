@@ -27,10 +27,9 @@ namespace CognitoIdentityProvider {
 
 /*!
  * \class QtAws::CognitoIdentityProvider::ForgotPasswordRequest
- *
  * \brief The ForgotPasswordRequest class provides an interface for CognitoIdentityProvider ForgotPassword requests.
  *
- * \ingroup CognitoIdentityProvider
+ * \inmodule QtAwsCognitoIdentityProvider
  *
  *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
  *  authenticate a user to obtain tokens related to user identity and access
@@ -47,9 +46,7 @@ namespace CognitoIdentityProvider {
  */
 
 /*!
- * @brief  Constructs a new ForgotPasswordRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ForgotPasswordRequest::ForgotPasswordRequest(const ForgotPasswordRequest &other)
     : CognitoIdentityProviderRequest(new ForgotPasswordRequestPrivate(*other.d_func(), this))
@@ -58,7 +55,7 @@ ForgotPasswordRequest::ForgotPasswordRequest(const ForgotPasswordRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ForgotPasswordRequest object.
+ * Constructs a ForgotPasswordRequest object.
  */
 ForgotPasswordRequest::ForgotPasswordRequest()
     : CognitoIdentityProviderRequest(new ForgotPasswordRequestPrivate(CognitoIdentityProviderRequest::ForgotPasswordAction, this))
@@ -76,14 +73,9 @@ bool ForgotPasswordRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ForgotPasswordResponse object.
+ * Returns a ForgotPasswordResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ForgotPasswordResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CognitoIdentityProviderClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ForgotPasswordRequest::response(QNetworkReply * const reply) const
 {
@@ -91,20 +83,17 @@ QtAws::Core::AwsAbstractResponse * ForgotPasswordRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::CognitoIdentityProvider::ForgotPasswordRequestPrivate
+ * \brief The ForgotPasswordRequestPrivate class provides private implementation for ForgotPasswordRequest.
+ * \internal
  *
- * @class  ForgotPasswordRequestPrivate
- *
- * @brief  Private implementation for ForgotPasswordRequest.
+ * \inmodule QtAwsCognitoIdentityProvider
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ForgotPasswordRequestPrivate object.
- *
- * @param  action  CognitoIdentityProvider action being performed.
- * @param  q       Pointer to this object's public ForgotPasswordRequest instance.
+ * Constructs a ForgotPasswordRequestPrivate object for CognitoIdentityProvider \a action with,
+ * public implementation \a q.
  */
 ForgotPasswordRequestPrivate::ForgotPasswordRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, ForgotPasswordRequest * const q)
@@ -114,15 +103,10 @@ ForgotPasswordRequestPrivate::ForgotPasswordRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ForgotPasswordRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ForgotPasswordRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ForgotPasswordRequest instance.
  */
 ForgotPasswordRequestPrivate::ForgotPasswordRequestPrivate(
     const ForgotPasswordRequestPrivate &other, ForgotPasswordRequest * const q)

@@ -27,10 +27,9 @@ namespace CloudHSMV2 {
 
 /*!
  * \class QtAws::CloudHSMV2::ListTagsRequest
- *
  * \brief The ListTagsRequest class provides an interface for CloudHSMV2 ListTags requests.
  *
- * \ingroup CloudHSMV2
+ * \inmodule QtAwsCloudHSMV2
  *
  *  For more information about AWS CloudHSM, see <a href="http://aws.amazon.com/cloudhsm/">AWS CloudHSM</a> and the <a
  *  href="http://docs.aws.amazon.com/cloudhsm/latest/userguide/">AWS CloudHSM User
@@ -39,9 +38,7 @@ namespace CloudHSMV2 {
  */
 
 /*!
- * @brief  Constructs a new ListTagsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListTagsRequest::ListTagsRequest(const ListTagsRequest &other)
     : CloudHSMV2Request(new ListTagsRequestPrivate(*other.d_func(), this))
@@ -50,7 +47,7 @@ ListTagsRequest::ListTagsRequest(const ListTagsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ListTagsRequest object.
+ * Constructs a ListTagsRequest object.
  */
 ListTagsRequest::ListTagsRequest()
     : CloudHSMV2Request(new ListTagsRequestPrivate(CloudHSMV2Request::ListTagsAction, this))
@@ -68,14 +65,9 @@ bool ListTagsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListTagsResponse object.
+ * Returns a ListTagsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListTagsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudHSMV2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListTagsRequest::response(QNetworkReply * const reply) const
 {
@@ -83,20 +75,17 @@ QtAws::Core::AwsAbstractResponse * ListTagsRequest::response(QNetworkReply * con
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudHSMV2::ListTagsRequestPrivate
+ * \brief The ListTagsRequestPrivate class provides private implementation for ListTagsRequest.
+ * \internal
  *
- * @class  ListTagsRequestPrivate
- *
- * @brief  Private implementation for ListTagsRequest.
+ * \inmodule QtAwsCloudHSMV2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListTagsRequestPrivate object.
- *
- * @param  action  CloudHSMV2 action being performed.
- * @param  q       Pointer to this object's public ListTagsRequest instance.
+ * Constructs a ListTagsRequestPrivate object for CloudHSMV2 \a action with,
+ * public implementation \a q.
  */
 ListTagsRequestPrivate::ListTagsRequestPrivate(
     const CloudHSMV2Request::Action action, ListTagsRequest * const q)
@@ -106,15 +95,10 @@ ListTagsRequestPrivate::ListTagsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListTagsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListTagsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListTagsRequest instance.
  */
 ListTagsRequestPrivate::ListTagsRequestPrivate(
     const ListTagsRequestPrivate &other, ListTagsRequest * const q)

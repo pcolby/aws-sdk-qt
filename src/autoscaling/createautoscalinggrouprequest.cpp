@@ -27,10 +27,9 @@ namespace AutoScaling {
 
 /*!
  * \class QtAws::AutoScaling::CreateAutoScalingGroupRequest
- *
  * \brief The CreateAutoScalingGroupRequest class provides an interface for AutoScaling CreateAutoScalingGroup requests.
  *
- * \ingroup AutoScaling
+ * \inmodule QtAwsAutoScaling
  *
  *  <fullname>Amazon EC2 Auto Scaling</fullname>
  * 
@@ -42,9 +41,7 @@ namespace AutoScaling {
  */
 
 /*!
- * @brief  Constructs a new CreateAutoScalingGroupRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateAutoScalingGroupRequest::CreateAutoScalingGroupRequest(const CreateAutoScalingGroupRequest &other)
     : AutoScalingRequest(new CreateAutoScalingGroupRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ CreateAutoScalingGroupRequest::CreateAutoScalingGroupRequest(const CreateAutoSca
 }
 
 /*!
- * @brief  Constructs a new CreateAutoScalingGroupRequest object.
+ * Constructs a CreateAutoScalingGroupRequest object.
  */
 CreateAutoScalingGroupRequest::CreateAutoScalingGroupRequest()
     : AutoScalingRequest(new CreateAutoScalingGroupRequestPrivate(AutoScalingRequest::CreateAutoScalingGroupAction, this))
@@ -71,14 +68,9 @@ bool CreateAutoScalingGroupRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateAutoScalingGroupResponse object.
+ * Returns a CreateAutoScalingGroupResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateAutoScalingGroupResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AutoScalingClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateAutoScalingGroupRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * CreateAutoScalingGroupRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::AutoScaling::CreateAutoScalingGroupRequestPrivate
+ * \brief The CreateAutoScalingGroupRequestPrivate class provides private implementation for CreateAutoScalingGroupRequest.
+ * \internal
  *
- * @class  CreateAutoScalingGroupRequestPrivate
- *
- * @brief  Private implementation for CreateAutoScalingGroupRequest.
+ * \inmodule QtAwsAutoScaling
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateAutoScalingGroupRequestPrivate object.
- *
- * @param  action  AutoScaling action being performed.
- * @param  q       Pointer to this object's public CreateAutoScalingGroupRequest instance.
+ * Constructs a CreateAutoScalingGroupRequestPrivate object for AutoScaling \a action with,
+ * public implementation \a q.
  */
 CreateAutoScalingGroupRequestPrivate::CreateAutoScalingGroupRequestPrivate(
     const AutoScalingRequest::Action action, CreateAutoScalingGroupRequest * const q)
@@ -109,15 +98,10 @@ CreateAutoScalingGroupRequestPrivate::CreateAutoScalingGroupRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateAutoScalingGroupRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateAutoScalingGroupRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateAutoScalingGroupRequest instance.
  */
 CreateAutoScalingGroupRequestPrivate::CreateAutoScalingGroupRequestPrivate(
     const CreateAutoScalingGroupRequestPrivate &other, CreateAutoScalingGroupRequest * const q)

@@ -27,10 +27,9 @@ namespace Redshift {
 
 /*!
  * \class QtAws::Redshift::DescribeSnapshotCopyGrantsRequest
- *
  * \brief The DescribeSnapshotCopyGrantsRequest class provides an interface for Redshift DescribeSnapshotCopyGrants requests.
  *
- * \ingroup Redshift
+ * \inmodule QtAwsRedshift
  *
  *  <fullname>Amazon Redshift</fullname>
  * 
@@ -67,9 +66,7 @@ namespace Redshift {
  */
 
 /*!
- * @brief  Constructs a new DescribeSnapshotCopyGrantsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeSnapshotCopyGrantsRequest::DescribeSnapshotCopyGrantsRequest(const DescribeSnapshotCopyGrantsRequest &other)
     : RedshiftRequest(new DescribeSnapshotCopyGrantsRequestPrivate(*other.d_func(), this))
@@ -78,7 +75,7 @@ DescribeSnapshotCopyGrantsRequest::DescribeSnapshotCopyGrantsRequest(const Descr
 }
 
 /*!
- * @brief  Constructs a new DescribeSnapshotCopyGrantsRequest object.
+ * Constructs a DescribeSnapshotCopyGrantsRequest object.
  */
 DescribeSnapshotCopyGrantsRequest::DescribeSnapshotCopyGrantsRequest()
     : RedshiftRequest(new DescribeSnapshotCopyGrantsRequestPrivate(RedshiftRequest::DescribeSnapshotCopyGrantsAction, this))
@@ -96,14 +93,9 @@ bool DescribeSnapshotCopyGrantsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeSnapshotCopyGrantsResponse object.
+ * Returns a DescribeSnapshotCopyGrantsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeSnapshotCopyGrantsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RedshiftClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeSnapshotCopyGrantsRequest::response(QNetworkReply * const reply) const
 {
@@ -111,20 +103,17 @@ QtAws::Core::AwsAbstractResponse * DescribeSnapshotCopyGrantsRequest::response(Q
 }
 
 /*!
- * @internal
+ * \class QtAws::Redshift::DescribeSnapshotCopyGrantsRequestPrivate
+ * \brief The DescribeSnapshotCopyGrantsRequestPrivate class provides private implementation for DescribeSnapshotCopyGrantsRequest.
+ * \internal
  *
- * @class  DescribeSnapshotCopyGrantsRequestPrivate
- *
- * @brief  Private implementation for DescribeSnapshotCopyGrantsRequest.
+ * \inmodule QtAwsRedshift
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeSnapshotCopyGrantsRequestPrivate object.
- *
- * @param  action  Redshift action being performed.
- * @param  q       Pointer to this object's public DescribeSnapshotCopyGrantsRequest instance.
+ * Constructs a DescribeSnapshotCopyGrantsRequestPrivate object for Redshift \a action with,
+ * public implementation \a q.
  */
 DescribeSnapshotCopyGrantsRequestPrivate::DescribeSnapshotCopyGrantsRequestPrivate(
     const RedshiftRequest::Action action, DescribeSnapshotCopyGrantsRequest * const q)
@@ -134,15 +123,10 @@ DescribeSnapshotCopyGrantsRequestPrivate::DescribeSnapshotCopyGrantsRequestPriva
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeSnapshotCopyGrantsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeSnapshotCopyGrantsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeSnapshotCopyGrantsRequest instance.
  */
 DescribeSnapshotCopyGrantsRequestPrivate::DescribeSnapshotCopyGrantsRequestPrivate(
     const DescribeSnapshotCopyGrantsRequestPrivate &other, DescribeSnapshotCopyGrantsRequest * const q)

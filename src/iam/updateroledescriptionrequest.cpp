@@ -27,10 +27,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::UpdateRoleDescriptionRequest
- *
  * \brief The UpdateRoleDescriptionRequest class provides an interface for IAM UpdateRoleDescription requests.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -102,9 +101,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new UpdateRoleDescriptionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateRoleDescriptionRequest::UpdateRoleDescriptionRequest(const UpdateRoleDescriptionRequest &other)
     : IAMRequest(new UpdateRoleDescriptionRequestPrivate(*other.d_func(), this))
@@ -113,7 +110,7 @@ UpdateRoleDescriptionRequest::UpdateRoleDescriptionRequest(const UpdateRoleDescr
 }
 
 /*!
- * @brief  Constructs a new UpdateRoleDescriptionRequest object.
+ * Constructs a UpdateRoleDescriptionRequest object.
  */
 UpdateRoleDescriptionRequest::UpdateRoleDescriptionRequest()
     : IAMRequest(new UpdateRoleDescriptionRequestPrivate(IAMRequest::UpdateRoleDescriptionAction, this))
@@ -131,14 +128,9 @@ bool UpdateRoleDescriptionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateRoleDescriptionResponse object.
+ * Returns a UpdateRoleDescriptionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateRoleDescriptionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IAMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateRoleDescriptionRequest::response(QNetworkReply * const reply) const
 {
@@ -146,20 +138,17 @@ QtAws::Core::AwsAbstractResponse * UpdateRoleDescriptionRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::IAM::UpdateRoleDescriptionRequestPrivate
+ * \brief The UpdateRoleDescriptionRequestPrivate class provides private implementation for UpdateRoleDescriptionRequest.
+ * \internal
  *
- * @class  UpdateRoleDescriptionRequestPrivate
- *
- * @brief  Private implementation for UpdateRoleDescriptionRequest.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateRoleDescriptionRequestPrivate object.
- *
- * @param  action  IAM action being performed.
- * @param  q       Pointer to this object's public UpdateRoleDescriptionRequest instance.
+ * Constructs a UpdateRoleDescriptionRequestPrivate object for IAM \a action with,
+ * public implementation \a q.
  */
 UpdateRoleDescriptionRequestPrivate::UpdateRoleDescriptionRequestPrivate(
     const IAMRequest::Action action, UpdateRoleDescriptionRequest * const q)
@@ -169,15 +158,10 @@ UpdateRoleDescriptionRequestPrivate::UpdateRoleDescriptionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateRoleDescriptionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateRoleDescriptionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateRoleDescriptionRequest instance.
  */
 UpdateRoleDescriptionRequestPrivate::UpdateRoleDescriptionRequestPrivate(
     const UpdateRoleDescriptionRequestPrivate &other, UpdateRoleDescriptionRequest * const q)

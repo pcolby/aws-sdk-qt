@@ -27,10 +27,9 @@ namespace DirectoryService {
 
 /*!
  * \class QtAws::DirectoryService::DescribeDomainControllersRequest
- *
  * \brief The DescribeDomainControllersRequest class provides an interface for DirectoryService DescribeDomainControllers requests.
  *
- * \ingroup DirectoryService
+ * \inmodule QtAwsDirectoryService
  *
  *  <fullname>AWS Directory Service</fullname>
  * 
@@ -51,9 +50,7 @@ namespace DirectoryService {
  */
 
 /*!
- * @brief  Constructs a new DescribeDomainControllersRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeDomainControllersRequest::DescribeDomainControllersRequest(const DescribeDomainControllersRequest &other)
     : DirectoryServiceRequest(new DescribeDomainControllersRequestPrivate(*other.d_func(), this))
@@ -62,7 +59,7 @@ DescribeDomainControllersRequest::DescribeDomainControllersRequest(const Describ
 }
 
 /*!
- * @brief  Constructs a new DescribeDomainControllersRequest object.
+ * Constructs a DescribeDomainControllersRequest object.
  */
 DescribeDomainControllersRequest::DescribeDomainControllersRequest()
     : DirectoryServiceRequest(new DescribeDomainControllersRequestPrivate(DirectoryServiceRequest::DescribeDomainControllersAction, this))
@@ -80,14 +77,9 @@ bool DescribeDomainControllersRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeDomainControllersResponse object.
+ * Returns a DescribeDomainControllersResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeDomainControllersResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DirectoryServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeDomainControllersRequest::response(QNetworkReply * const reply) const
 {
@@ -95,20 +87,17 @@ QtAws::Core::AwsAbstractResponse * DescribeDomainControllersRequest::response(QN
 }
 
 /*!
- * @internal
+ * \class QtAws::DirectoryService::DescribeDomainControllersRequestPrivate
+ * \brief The DescribeDomainControllersRequestPrivate class provides private implementation for DescribeDomainControllersRequest.
+ * \internal
  *
- * @class  DescribeDomainControllersRequestPrivate
- *
- * @brief  Private implementation for DescribeDomainControllersRequest.
+ * \inmodule QtAwsDirectoryService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeDomainControllersRequestPrivate object.
- *
- * @param  action  DirectoryService action being performed.
- * @param  q       Pointer to this object's public DescribeDomainControllersRequest instance.
+ * Constructs a DescribeDomainControllersRequestPrivate object for DirectoryService \a action with,
+ * public implementation \a q.
  */
 DescribeDomainControllersRequestPrivate::DescribeDomainControllersRequestPrivate(
     const DirectoryServiceRequest::Action action, DescribeDomainControllersRequest * const q)
@@ -118,15 +107,10 @@ DescribeDomainControllersRequestPrivate::DescribeDomainControllersRequestPrivate
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeDomainControllersRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeDomainControllersRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeDomainControllersRequest instance.
  */
 DescribeDomainControllersRequestPrivate::DescribeDomainControllersRequestPrivate(
     const DescribeDomainControllersRequestPrivate &other, DescribeDomainControllersRequest * const q)

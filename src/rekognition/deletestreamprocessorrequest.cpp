@@ -27,10 +27,9 @@ namespace Rekognition {
 
 /*!
  * \class QtAws::Rekognition::DeleteStreamProcessorRequest
- *
  * \brief The DeleteStreamProcessorRequest class provides an interface for Rekognition DeleteStreamProcessor requests.
  *
- * \ingroup Rekognition
+ * \inmodule QtAwsRekognition
  *
  *  This is the Amazon Rekognition API
  *
@@ -38,9 +37,7 @@ namespace Rekognition {
  */
 
 /*!
- * @brief  Constructs a new DeleteStreamProcessorRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteStreamProcessorRequest::DeleteStreamProcessorRequest(const DeleteStreamProcessorRequest &other)
     : RekognitionRequest(new DeleteStreamProcessorRequestPrivate(*other.d_func(), this))
@@ -49,7 +46,7 @@ DeleteStreamProcessorRequest::DeleteStreamProcessorRequest(const DeleteStreamPro
 }
 
 /*!
- * @brief  Constructs a new DeleteStreamProcessorRequest object.
+ * Constructs a DeleteStreamProcessorRequest object.
  */
 DeleteStreamProcessorRequest::DeleteStreamProcessorRequest()
     : RekognitionRequest(new DeleteStreamProcessorRequestPrivate(RekognitionRequest::DeleteStreamProcessorAction, this))
@@ -67,14 +64,9 @@ bool DeleteStreamProcessorRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteStreamProcessorResponse object.
+ * Returns a DeleteStreamProcessorResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteStreamProcessorResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RekognitionClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteStreamProcessorRequest::response(QNetworkReply * const reply) const
 {
@@ -82,20 +74,17 @@ QtAws::Core::AwsAbstractResponse * DeleteStreamProcessorRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::Rekognition::DeleteStreamProcessorRequestPrivate
+ * \brief The DeleteStreamProcessorRequestPrivate class provides private implementation for DeleteStreamProcessorRequest.
+ * \internal
  *
- * @class  DeleteStreamProcessorRequestPrivate
- *
- * @brief  Private implementation for DeleteStreamProcessorRequest.
+ * \inmodule QtAwsRekognition
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteStreamProcessorRequestPrivate object.
- *
- * @param  action  Rekognition action being performed.
- * @param  q       Pointer to this object's public DeleteStreamProcessorRequest instance.
+ * Constructs a DeleteStreamProcessorRequestPrivate object for Rekognition \a action with,
+ * public implementation \a q.
  */
 DeleteStreamProcessorRequestPrivate::DeleteStreamProcessorRequestPrivate(
     const RekognitionRequest::Action action, DeleteStreamProcessorRequest * const q)
@@ -105,15 +94,10 @@ DeleteStreamProcessorRequestPrivate::DeleteStreamProcessorRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteStreamProcessorRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteStreamProcessorRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteStreamProcessorRequest instance.
  */
 DeleteStreamProcessorRequestPrivate::DeleteStreamProcessorRequestPrivate(
     const DeleteStreamProcessorRequestPrivate &other, DeleteStreamProcessorRequest * const q)

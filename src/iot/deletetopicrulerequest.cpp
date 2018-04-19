@@ -27,10 +27,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::DeleteTopicRuleRequest
- *
  * \brief The DeleteTopicRuleRequest class provides an interface for IoT DeleteTopicRule requests.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -48,9 +47,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new DeleteTopicRuleRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteTopicRuleRequest::DeleteTopicRuleRequest(const DeleteTopicRuleRequest &other)
     : IoTRequest(new DeleteTopicRuleRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ DeleteTopicRuleRequest::DeleteTopicRuleRequest(const DeleteTopicRuleRequest &oth
 }
 
 /*!
- * @brief  Constructs a new DeleteTopicRuleRequest object.
+ * Constructs a DeleteTopicRuleRequest object.
  */
 DeleteTopicRuleRequest::DeleteTopicRuleRequest()
     : IoTRequest(new DeleteTopicRuleRequestPrivate(IoTRequest::DeleteTopicRuleAction, this))
@@ -77,14 +74,9 @@ bool DeleteTopicRuleRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteTopicRuleResponse object.
+ * Returns a DeleteTopicRuleResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteTopicRuleResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IoTClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteTopicRuleRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * DeleteTopicRuleRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::IoT::DeleteTopicRuleRequestPrivate
+ * \brief The DeleteTopicRuleRequestPrivate class provides private implementation for DeleteTopicRuleRequest.
+ * \internal
  *
- * @class  DeleteTopicRuleRequestPrivate
- *
- * @brief  Private implementation for DeleteTopicRuleRequest.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteTopicRuleRequestPrivate object.
- *
- * @param  action  IoT action being performed.
- * @param  q       Pointer to this object's public DeleteTopicRuleRequest instance.
+ * Constructs a DeleteTopicRuleRequestPrivate object for IoT \a action with,
+ * public implementation \a q.
  */
 DeleteTopicRuleRequestPrivate::DeleteTopicRuleRequestPrivate(
     const IoTRequest::Action action, DeleteTopicRuleRequest * const q)
@@ -115,15 +104,10 @@ DeleteTopicRuleRequestPrivate::DeleteTopicRuleRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteTopicRuleRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteTopicRuleRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteTopicRuleRequest instance.
  */
 DeleteTopicRuleRequestPrivate::DeleteTopicRuleRequestPrivate(
     const DeleteTopicRuleRequestPrivate &other, DeleteTopicRuleRequest * const q)

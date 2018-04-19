@@ -27,10 +27,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::CreateRestApiRequest
- *
  * \brief The CreateRestApiRequest class provides an interface for APIGateway CreateRestApi requests.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -42,9 +41,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new CreateRestApiRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateRestApiRequest::CreateRestApiRequest(const CreateRestApiRequest &other)
     : APIGatewayRequest(new CreateRestApiRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ CreateRestApiRequest::CreateRestApiRequest(const CreateRestApiRequest &other)
 }
 
 /*!
- * @brief  Constructs a new CreateRestApiRequest object.
+ * Constructs a CreateRestApiRequest object.
  */
 CreateRestApiRequest::CreateRestApiRequest()
     : APIGatewayRequest(new CreateRestApiRequestPrivate(APIGatewayRequest::CreateRestApiAction, this))
@@ -71,14 +68,9 @@ bool CreateRestApiRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateRestApiResponse object.
+ * Returns a CreateRestApiResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateRestApiResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  APIGatewayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateRestApiRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * CreateRestApiRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::APIGateway::CreateRestApiRequestPrivate
+ * \brief The CreateRestApiRequestPrivate class provides private implementation for CreateRestApiRequest.
+ * \internal
  *
- * @class  CreateRestApiRequestPrivate
- *
- * @brief  Private implementation for CreateRestApiRequest.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateRestApiRequestPrivate object.
- *
- * @param  action  APIGateway action being performed.
- * @param  q       Pointer to this object's public CreateRestApiRequest instance.
+ * Constructs a CreateRestApiRequestPrivate object for APIGateway \a action with,
+ * public implementation \a q.
  */
 CreateRestApiRequestPrivate::CreateRestApiRequestPrivate(
     const APIGatewayRequest::Action action, CreateRestApiRequest * const q)
@@ -109,15 +98,10 @@ CreateRestApiRequestPrivate::CreateRestApiRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateRestApiRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateRestApiRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateRestApiRequest instance.
  */
 CreateRestApiRequestPrivate::CreateRestApiRequestPrivate(
     const CreateRestApiRequestPrivate &other, CreateRestApiRequest * const q)

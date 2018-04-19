@@ -27,10 +27,9 @@ namespace LexModelBuildingService {
 
 /*!
  * \class QtAws::LexModelBuildingService::GetImportRequest
- *
  * \brief The GetImportRequest class provides an interface for LexModelBuildingService GetImport requests.
  *
- * \ingroup LexModelBuildingService
+ * \inmodule QtAwsLexModelBuildingService
  *
  *  <fullname>Amazon Lex Build-Time Actions</fullname>
  * 
@@ -41,9 +40,7 @@ namespace LexModelBuildingService {
  */
 
 /*!
- * @brief  Constructs a new GetImportRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetImportRequest::GetImportRequest(const GetImportRequest &other)
     : LexModelBuildingServiceRequest(new GetImportRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ GetImportRequest::GetImportRequest(const GetImportRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetImportRequest object.
+ * Constructs a GetImportRequest object.
  */
 GetImportRequest::GetImportRequest()
     : LexModelBuildingServiceRequest(new GetImportRequestPrivate(LexModelBuildingServiceRequest::GetImportAction, this))
@@ -70,14 +67,9 @@ bool GetImportRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetImportResponse object.
+ * Returns a GetImportResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetImportResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  LexModelBuildingServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetImportRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * GetImportRequest::response(QNetworkReply * co
 }
 
 /*!
- * @internal
+ * \class QtAws::LexModelBuildingService::GetImportRequestPrivate
+ * \brief The GetImportRequestPrivate class provides private implementation for GetImportRequest.
+ * \internal
  *
- * @class  GetImportRequestPrivate
- *
- * @brief  Private implementation for GetImportRequest.
+ * \inmodule QtAwsLexModelBuildingService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetImportRequestPrivate object.
- *
- * @param  action  LexModelBuildingService action being performed.
- * @param  q       Pointer to this object's public GetImportRequest instance.
+ * Constructs a GetImportRequestPrivate object for LexModelBuildingService \a action with,
+ * public implementation \a q.
  */
 GetImportRequestPrivate::GetImportRequestPrivate(
     const LexModelBuildingServiceRequest::Action action, GetImportRequest * const q)
@@ -108,15 +97,10 @@ GetImportRequestPrivate::GetImportRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetImportRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetImportRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetImportRequest instance.
  */
 GetImportRequestPrivate::GetImportRequestPrivate(
     const GetImportRequestPrivate &other, GetImportRequest * const q)

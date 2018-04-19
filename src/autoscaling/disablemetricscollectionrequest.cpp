@@ -27,10 +27,9 @@ namespace AutoScaling {
 
 /*!
  * \class QtAws::AutoScaling::DisableMetricsCollectionRequest
- *
  * \brief The DisableMetricsCollectionRequest class provides an interface for AutoScaling DisableMetricsCollection requests.
  *
- * \ingroup AutoScaling
+ * \inmodule QtAwsAutoScaling
  *
  *  <fullname>Amazon EC2 Auto Scaling</fullname>
  * 
@@ -42,9 +41,7 @@ namespace AutoScaling {
  */
 
 /*!
- * @brief  Constructs a new DisableMetricsCollectionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DisableMetricsCollectionRequest::DisableMetricsCollectionRequest(const DisableMetricsCollectionRequest &other)
     : AutoScalingRequest(new DisableMetricsCollectionRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ DisableMetricsCollectionRequest::DisableMetricsCollectionRequest(const DisableMe
 }
 
 /*!
- * @brief  Constructs a new DisableMetricsCollectionRequest object.
+ * Constructs a DisableMetricsCollectionRequest object.
  */
 DisableMetricsCollectionRequest::DisableMetricsCollectionRequest()
     : AutoScalingRequest(new DisableMetricsCollectionRequestPrivate(AutoScalingRequest::DisableMetricsCollectionAction, this))
@@ -71,14 +68,9 @@ bool DisableMetricsCollectionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DisableMetricsCollectionResponse object.
+ * Returns a DisableMetricsCollectionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DisableMetricsCollectionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AutoScalingClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DisableMetricsCollectionRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * DisableMetricsCollectionRequest::response(QNe
 }
 
 /*!
- * @internal
+ * \class QtAws::AutoScaling::DisableMetricsCollectionRequestPrivate
+ * \brief The DisableMetricsCollectionRequestPrivate class provides private implementation for DisableMetricsCollectionRequest.
+ * \internal
  *
- * @class  DisableMetricsCollectionRequestPrivate
- *
- * @brief  Private implementation for DisableMetricsCollectionRequest.
+ * \inmodule QtAwsAutoScaling
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DisableMetricsCollectionRequestPrivate object.
- *
- * @param  action  AutoScaling action being performed.
- * @param  q       Pointer to this object's public DisableMetricsCollectionRequest instance.
+ * Constructs a DisableMetricsCollectionRequestPrivate object for AutoScaling \a action with,
+ * public implementation \a q.
  */
 DisableMetricsCollectionRequestPrivate::DisableMetricsCollectionRequestPrivate(
     const AutoScalingRequest::Action action, DisableMetricsCollectionRequest * const q)
@@ -109,15 +98,10 @@ DisableMetricsCollectionRequestPrivate::DisableMetricsCollectionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DisableMetricsCollectionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DisableMetricsCollectionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DisableMetricsCollectionRequest instance.
  */
 DisableMetricsCollectionRequestPrivate::DisableMetricsCollectionRequestPrivate(
     const DisableMetricsCollectionRequestPrivate &other, DisableMetricsCollectionRequest * const q)

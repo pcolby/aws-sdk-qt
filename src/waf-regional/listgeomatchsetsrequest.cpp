@@ -27,10 +27,9 @@ namespace WAFRegional {
 
 /*!
  * \class QtAws::WAFRegional::ListGeoMatchSetsRequest
- *
  * \brief The ListGeoMatchSetsRequest class provides an interface for WAFRegional ListGeoMatchSets requests.
  *
- * \ingroup WAFRegional
+ * \inmodule QtAwsWAFRegional
  *
  *  This is the <i>AWS WAF Regional API Reference</i> for using AWS WAF with Elastic Load Balancing (ELB) Application Load
  *  Balancers. The AWS WAF actions and data types listed in the reference are available for protecting Application Load
@@ -44,9 +43,7 @@ namespace WAFRegional {
  */
 
 /*!
- * @brief  Constructs a new ListGeoMatchSetsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListGeoMatchSetsRequest::ListGeoMatchSetsRequest(const ListGeoMatchSetsRequest &other)
     : WAFRegionalRequest(new ListGeoMatchSetsRequestPrivate(*other.d_func(), this))
@@ -55,7 +52,7 @@ ListGeoMatchSetsRequest::ListGeoMatchSetsRequest(const ListGeoMatchSetsRequest &
 }
 
 /*!
- * @brief  Constructs a new ListGeoMatchSetsRequest object.
+ * Constructs a ListGeoMatchSetsRequest object.
  */
 ListGeoMatchSetsRequest::ListGeoMatchSetsRequest()
     : WAFRegionalRequest(new ListGeoMatchSetsRequestPrivate(WAFRegionalRequest::ListGeoMatchSetsAction, this))
@@ -73,14 +70,9 @@ bool ListGeoMatchSetsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListGeoMatchSetsResponse object.
+ * Returns a ListGeoMatchSetsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListGeoMatchSetsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WAFRegionalClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListGeoMatchSetsRequest::response(QNetworkReply * const reply) const
 {
@@ -88,20 +80,17 @@ QtAws::Core::AwsAbstractResponse * ListGeoMatchSetsRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::WAFRegional::ListGeoMatchSetsRequestPrivate
+ * \brief The ListGeoMatchSetsRequestPrivate class provides private implementation for ListGeoMatchSetsRequest.
+ * \internal
  *
- * @class  ListGeoMatchSetsRequestPrivate
- *
- * @brief  Private implementation for ListGeoMatchSetsRequest.
+ * \inmodule QtAwsWAFRegional
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListGeoMatchSetsRequestPrivate object.
- *
- * @param  action  WAFRegional action being performed.
- * @param  q       Pointer to this object's public ListGeoMatchSetsRequest instance.
+ * Constructs a ListGeoMatchSetsRequestPrivate object for WAFRegional \a action with,
+ * public implementation \a q.
  */
 ListGeoMatchSetsRequestPrivate::ListGeoMatchSetsRequestPrivate(
     const WAFRegionalRequest::Action action, ListGeoMatchSetsRequest * const q)
@@ -111,15 +100,10 @@ ListGeoMatchSetsRequestPrivate::ListGeoMatchSetsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListGeoMatchSetsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListGeoMatchSetsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListGeoMatchSetsRequest instance.
  */
 ListGeoMatchSetsRequestPrivate::ListGeoMatchSetsRequestPrivate(
     const ListGeoMatchSetsRequestPrivate &other, ListGeoMatchSetsRequest * const q)

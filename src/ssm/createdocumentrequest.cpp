@@ -27,10 +27,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::CreateDocumentRequest
- *
  * \brief The CreateDocumentRequest class provides an interface for SSM CreateDocument requests.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -61,9 +60,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new CreateDocumentRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateDocumentRequest::CreateDocumentRequest(const CreateDocumentRequest &other)
     : SSMRequest(new CreateDocumentRequestPrivate(*other.d_func(), this))
@@ -72,7 +69,7 @@ CreateDocumentRequest::CreateDocumentRequest(const CreateDocumentRequest &other)
 }
 
 /*!
- * @brief  Constructs a new CreateDocumentRequest object.
+ * Constructs a CreateDocumentRequest object.
  */
 CreateDocumentRequest::CreateDocumentRequest()
     : SSMRequest(new CreateDocumentRequestPrivate(SSMRequest::CreateDocumentAction, this))
@@ -90,14 +87,9 @@ bool CreateDocumentRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateDocumentResponse object.
+ * Returns a CreateDocumentResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateDocumentResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SSMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateDocumentRequest::response(QNetworkReply * const reply) const
 {
@@ -105,20 +97,17 @@ QtAws::Core::AwsAbstractResponse * CreateDocumentRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::SSM::CreateDocumentRequestPrivate
+ * \brief The CreateDocumentRequestPrivate class provides private implementation for CreateDocumentRequest.
+ * \internal
  *
- * @class  CreateDocumentRequestPrivate
- *
- * @brief  Private implementation for CreateDocumentRequest.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateDocumentRequestPrivate object.
- *
- * @param  action  SSM action being performed.
- * @param  q       Pointer to this object's public CreateDocumentRequest instance.
+ * Constructs a CreateDocumentRequestPrivate object for SSM \a action with,
+ * public implementation \a q.
  */
 CreateDocumentRequestPrivate::CreateDocumentRequestPrivate(
     const SSMRequest::Action action, CreateDocumentRequest * const q)
@@ -128,15 +117,10 @@ CreateDocumentRequestPrivate::CreateDocumentRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateDocumentRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateDocumentRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateDocumentRequest instance.
  */
 CreateDocumentRequestPrivate::CreateDocumentRequestPrivate(
     const CreateDocumentRequestPrivate &other, CreateDocumentRequest * const q)

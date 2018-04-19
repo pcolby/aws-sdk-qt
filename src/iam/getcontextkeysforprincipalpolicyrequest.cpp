@@ -27,10 +27,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::GetContextKeysForPrincipalPolicyRequest
- *
  * \brief The GetContextKeysForPrincipalPolicyRequest class provides an interface for IAM GetContextKeysForPrincipalPolicy requests.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -102,9 +101,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new GetContextKeysForPrincipalPolicyRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetContextKeysForPrincipalPolicyRequest::GetContextKeysForPrincipalPolicyRequest(const GetContextKeysForPrincipalPolicyRequest &other)
     : IAMRequest(new GetContextKeysForPrincipalPolicyRequestPrivate(*other.d_func(), this))
@@ -113,7 +110,7 @@ GetContextKeysForPrincipalPolicyRequest::GetContextKeysForPrincipalPolicyRequest
 }
 
 /*!
- * @brief  Constructs a new GetContextKeysForPrincipalPolicyRequest object.
+ * Constructs a GetContextKeysForPrincipalPolicyRequest object.
  */
 GetContextKeysForPrincipalPolicyRequest::GetContextKeysForPrincipalPolicyRequest()
     : IAMRequest(new GetContextKeysForPrincipalPolicyRequestPrivate(IAMRequest::GetContextKeysForPrincipalPolicyAction, this))
@@ -131,14 +128,9 @@ bool GetContextKeysForPrincipalPolicyRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetContextKeysForPrincipalPolicyResponse object.
+ * Returns a GetContextKeysForPrincipalPolicyResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetContextKeysForPrincipalPolicyResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IAMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetContextKeysForPrincipalPolicyRequest::response(QNetworkReply * const reply) const
 {
@@ -146,20 +138,17 @@ QtAws::Core::AwsAbstractResponse * GetContextKeysForPrincipalPolicyRequest::resp
 }
 
 /*!
- * @internal
+ * \class QtAws::IAM::GetContextKeysForPrincipalPolicyRequestPrivate
+ * \brief The GetContextKeysForPrincipalPolicyRequestPrivate class provides private implementation for GetContextKeysForPrincipalPolicyRequest.
+ * \internal
  *
- * @class  GetContextKeysForPrincipalPolicyRequestPrivate
- *
- * @brief  Private implementation for GetContextKeysForPrincipalPolicyRequest.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetContextKeysForPrincipalPolicyRequestPrivate object.
- *
- * @param  action  IAM action being performed.
- * @param  q       Pointer to this object's public GetContextKeysForPrincipalPolicyRequest instance.
+ * Constructs a GetContextKeysForPrincipalPolicyRequestPrivate object for IAM \a action with,
+ * public implementation \a q.
  */
 GetContextKeysForPrincipalPolicyRequestPrivate::GetContextKeysForPrincipalPolicyRequestPrivate(
     const IAMRequest::Action action, GetContextKeysForPrincipalPolicyRequest * const q)
@@ -169,15 +158,10 @@ GetContextKeysForPrincipalPolicyRequestPrivate::GetContextKeysForPrincipalPolicy
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetContextKeysForPrincipalPolicyRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetContextKeysForPrincipalPolicyRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetContextKeysForPrincipalPolicyRequest instance.
  */
 GetContextKeysForPrincipalPolicyRequestPrivate::GetContextKeysForPrincipalPolicyRequestPrivate(
     const GetContextKeysForPrincipalPolicyRequestPrivate &other, GetContextKeysForPrincipalPolicyRequest * const q)

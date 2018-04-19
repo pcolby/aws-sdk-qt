@@ -27,10 +27,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::DeleteRequestValidatorRequest
- *
  * \brief The DeleteRequestValidatorRequest class provides an interface for APIGateway DeleteRequestValidator requests.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -42,9 +41,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new DeleteRequestValidatorRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteRequestValidatorRequest::DeleteRequestValidatorRequest(const DeleteRequestValidatorRequest &other)
     : APIGatewayRequest(new DeleteRequestValidatorRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ DeleteRequestValidatorRequest::DeleteRequestValidatorRequest(const DeleteRequest
 }
 
 /*!
- * @brief  Constructs a new DeleteRequestValidatorRequest object.
+ * Constructs a DeleteRequestValidatorRequest object.
  */
 DeleteRequestValidatorRequest::DeleteRequestValidatorRequest()
     : APIGatewayRequest(new DeleteRequestValidatorRequestPrivate(APIGatewayRequest::DeleteRequestValidatorAction, this))
@@ -71,14 +68,9 @@ bool DeleteRequestValidatorRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteRequestValidatorResponse object.
+ * Returns a DeleteRequestValidatorResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteRequestValidatorResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  APIGatewayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteRequestValidatorRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * DeleteRequestValidatorRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::APIGateway::DeleteRequestValidatorRequestPrivate
+ * \brief The DeleteRequestValidatorRequestPrivate class provides private implementation for DeleteRequestValidatorRequest.
+ * \internal
  *
- * @class  DeleteRequestValidatorRequestPrivate
- *
- * @brief  Private implementation for DeleteRequestValidatorRequest.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteRequestValidatorRequestPrivate object.
- *
- * @param  action  APIGateway action being performed.
- * @param  q       Pointer to this object's public DeleteRequestValidatorRequest instance.
+ * Constructs a DeleteRequestValidatorRequestPrivate object for APIGateway \a action with,
+ * public implementation \a q.
  */
 DeleteRequestValidatorRequestPrivate::DeleteRequestValidatorRequestPrivate(
     const APIGatewayRequest::Action action, DeleteRequestValidatorRequest * const q)
@@ -109,15 +98,10 @@ DeleteRequestValidatorRequestPrivate::DeleteRequestValidatorRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteRequestValidatorRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteRequestValidatorRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteRequestValidatorRequest instance.
  */
 DeleteRequestValidatorRequestPrivate::DeleteRequestValidatorRequestPrivate(
     const DeleteRequestValidatorRequestPrivate &other, DeleteRequestValidatorRequest * const q)

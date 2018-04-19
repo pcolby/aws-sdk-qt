@@ -27,10 +27,9 @@ namespace DynamoDB {
 
 /*!
  * \class QtAws::DynamoDB::UpdateTableRequest
- *
  * \brief The UpdateTableRequest class provides an interface for DynamoDB UpdateTable requests.
  *
- * \ingroup DynamoDB
+ * \inmodule QtAwsDynamoDB
  *
  *  <fullname>Amazon DynamoDB</fullname>
  * 
@@ -56,9 +55,7 @@ namespace DynamoDB {
  */
 
 /*!
- * @brief  Constructs a new UpdateTableRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateTableRequest::UpdateTableRequest(const UpdateTableRequest &other)
     : DynamoDBRequest(new UpdateTableRequestPrivate(*other.d_func(), this))
@@ -67,7 +64,7 @@ UpdateTableRequest::UpdateTableRequest(const UpdateTableRequest &other)
 }
 
 /*!
- * @brief  Constructs a new UpdateTableRequest object.
+ * Constructs a UpdateTableRequest object.
  */
 UpdateTableRequest::UpdateTableRequest()
     : DynamoDBRequest(new UpdateTableRequestPrivate(DynamoDBRequest::UpdateTableAction, this))
@@ -85,14 +82,9 @@ bool UpdateTableRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateTableResponse object.
+ * Returns a UpdateTableResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateTableResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DynamoDBClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateTableRequest::response(QNetworkReply * const reply) const
 {
@@ -100,20 +92,17 @@ QtAws::Core::AwsAbstractResponse * UpdateTableRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::DynamoDB::UpdateTableRequestPrivate
+ * \brief The UpdateTableRequestPrivate class provides private implementation for UpdateTableRequest.
+ * \internal
  *
- * @class  UpdateTableRequestPrivate
- *
- * @brief  Private implementation for UpdateTableRequest.
+ * \inmodule QtAwsDynamoDB
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateTableRequestPrivate object.
- *
- * @param  action  DynamoDB action being performed.
- * @param  q       Pointer to this object's public UpdateTableRequest instance.
+ * Constructs a UpdateTableRequestPrivate object for DynamoDB \a action with,
+ * public implementation \a q.
  */
 UpdateTableRequestPrivate::UpdateTableRequestPrivate(
     const DynamoDBRequest::Action action, UpdateTableRequest * const q)
@@ -123,15 +112,10 @@ UpdateTableRequestPrivate::UpdateTableRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateTableRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateTableRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateTableRequest instance.
  */
 UpdateTableRequestPrivate::UpdateTableRequestPrivate(
     const UpdateTableRequestPrivate &other, UpdateTableRequest * const q)

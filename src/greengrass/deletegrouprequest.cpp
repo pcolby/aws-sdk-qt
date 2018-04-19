@@ -27,10 +27,9 @@ namespace Greengrass {
 
 /*!
  * \class QtAws::Greengrass::DeleteGroupRequest
- *
  * \brief The DeleteGroupRequest class provides an interface for Greengrass DeleteGroup requests.
  *
- * \ingroup Greengrass
+ * \inmodule QtAwsGreengrass
  *
  *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
  *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
@@ -40,9 +39,7 @@ namespace Greengrass {
  */
 
 /*!
- * @brief  Constructs a new DeleteGroupRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteGroupRequest::DeleteGroupRequest(const DeleteGroupRequest &other)
     : GreengrassRequest(new DeleteGroupRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ DeleteGroupRequest::DeleteGroupRequest(const DeleteGroupRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DeleteGroupRequest object.
+ * Constructs a DeleteGroupRequest object.
  */
 DeleteGroupRequest::DeleteGroupRequest()
     : GreengrassRequest(new DeleteGroupRequestPrivate(GreengrassRequest::DeleteGroupAction, this))
@@ -69,14 +66,9 @@ bool DeleteGroupRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteGroupResponse object.
+ * Returns a DeleteGroupResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteGroupResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GreengrassClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteGroupRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * DeleteGroupRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::Greengrass::DeleteGroupRequestPrivate
+ * \brief The DeleteGroupRequestPrivate class provides private implementation for DeleteGroupRequest.
+ * \internal
  *
- * @class  DeleteGroupRequestPrivate
- *
- * @brief  Private implementation for DeleteGroupRequest.
+ * \inmodule QtAwsGreengrass
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteGroupRequestPrivate object.
- *
- * @param  action  Greengrass action being performed.
- * @param  q       Pointer to this object's public DeleteGroupRequest instance.
+ * Constructs a DeleteGroupRequestPrivate object for Greengrass \a action with,
+ * public implementation \a q.
  */
 DeleteGroupRequestPrivate::DeleteGroupRequestPrivate(
     const GreengrassRequest::Action action, DeleteGroupRequest * const q)
@@ -107,15 +96,10 @@ DeleteGroupRequestPrivate::DeleteGroupRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteGroupRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteGroupRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteGroupRequest instance.
  */
 DeleteGroupRequestPrivate::DeleteGroupRequestPrivate(
     const DeleteGroupRequestPrivate &other, DeleteGroupRequest * const q)

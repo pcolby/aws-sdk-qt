@@ -27,10 +27,9 @@ namespace OpsWorksCM {
 
 /*!
  * \class QtAws::OpsWorksCM::DeleteServerRequest
- *
  * \brief The DeleteServerRequest class provides an interface for OpsWorksCM DeleteServer requests.
  *
- * \ingroup OpsWorksCM
+ * \inmodule QtAwsOpsWorksCM
  *
  *  <fullname>AWS OpsWorks CM</fullname>
  * 
@@ -97,9 +96,7 @@ namespace OpsWorksCM {
  */
 
 /*!
- * @brief  Constructs a new DeleteServerRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteServerRequest::DeleteServerRequest(const DeleteServerRequest &other)
     : OpsWorksCMRequest(new DeleteServerRequestPrivate(*other.d_func(), this))
@@ -108,7 +105,7 @@ DeleteServerRequest::DeleteServerRequest(const DeleteServerRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DeleteServerRequest object.
+ * Constructs a DeleteServerRequest object.
  */
 DeleteServerRequest::DeleteServerRequest()
     : OpsWorksCMRequest(new DeleteServerRequestPrivate(OpsWorksCMRequest::DeleteServerAction, this))
@@ -126,14 +123,9 @@ bool DeleteServerRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteServerResponse object.
+ * Returns a DeleteServerResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteServerResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  OpsWorksCMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteServerRequest::response(QNetworkReply * const reply) const
 {
@@ -141,20 +133,17 @@ QtAws::Core::AwsAbstractResponse * DeleteServerRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::OpsWorksCM::DeleteServerRequestPrivate
+ * \brief The DeleteServerRequestPrivate class provides private implementation for DeleteServerRequest.
+ * \internal
  *
- * @class  DeleteServerRequestPrivate
- *
- * @brief  Private implementation for DeleteServerRequest.
+ * \inmodule QtAwsOpsWorksCM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteServerRequestPrivate object.
- *
- * @param  action  OpsWorksCM action being performed.
- * @param  q       Pointer to this object's public DeleteServerRequest instance.
+ * Constructs a DeleteServerRequestPrivate object for OpsWorksCM \a action with,
+ * public implementation \a q.
  */
 DeleteServerRequestPrivate::DeleteServerRequestPrivate(
     const OpsWorksCMRequest::Action action, DeleteServerRequest * const q)
@@ -164,15 +153,10 @@ DeleteServerRequestPrivate::DeleteServerRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteServerRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteServerRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteServerRequest instance.
  */
 DeleteServerRequestPrivate::DeleteServerRequestPrivate(
     const DeleteServerRequestPrivate &other, DeleteServerRequest * const q)

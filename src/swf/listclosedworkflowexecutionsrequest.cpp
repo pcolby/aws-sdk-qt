@@ -27,10 +27,9 @@ namespace SWF {
 
 /*!
  * \class QtAws::SWF::ListClosedWorkflowExecutionsRequest
- *
  * \brief The ListClosedWorkflowExecutionsRequest class provides an interface for SWF ListClosedWorkflowExecutions requests.
  *
- * \ingroup SWF
+ * \inmodule QtAwsSWF
  *
  *  <fullname>Amazon Simple Workflow Service</fullname>
  * 
@@ -53,9 +52,7 @@ namespace SWF {
  */
 
 /*!
- * @brief  Constructs a new ListClosedWorkflowExecutionsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListClosedWorkflowExecutionsRequest::ListClosedWorkflowExecutionsRequest(const ListClosedWorkflowExecutionsRequest &other)
     : SWFRequest(new ListClosedWorkflowExecutionsRequestPrivate(*other.d_func(), this))
@@ -64,7 +61,7 @@ ListClosedWorkflowExecutionsRequest::ListClosedWorkflowExecutionsRequest(const L
 }
 
 /*!
- * @brief  Constructs a new ListClosedWorkflowExecutionsRequest object.
+ * Constructs a ListClosedWorkflowExecutionsRequest object.
  */
 ListClosedWorkflowExecutionsRequest::ListClosedWorkflowExecutionsRequest()
     : SWFRequest(new ListClosedWorkflowExecutionsRequestPrivate(SWFRequest::ListClosedWorkflowExecutionsAction, this))
@@ -82,14 +79,9 @@ bool ListClosedWorkflowExecutionsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListClosedWorkflowExecutionsResponse object.
+ * Returns a ListClosedWorkflowExecutionsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListClosedWorkflowExecutionsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SWFClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListClosedWorkflowExecutionsRequest::response(QNetworkReply * const reply) const
 {
@@ -97,20 +89,17 @@ QtAws::Core::AwsAbstractResponse * ListClosedWorkflowExecutionsRequest::response
 }
 
 /*!
- * @internal
+ * \class QtAws::SWF::ListClosedWorkflowExecutionsRequestPrivate
+ * \brief The ListClosedWorkflowExecutionsRequestPrivate class provides private implementation for ListClosedWorkflowExecutionsRequest.
+ * \internal
  *
- * @class  ListClosedWorkflowExecutionsRequestPrivate
- *
- * @brief  Private implementation for ListClosedWorkflowExecutionsRequest.
+ * \inmodule QtAwsSWF
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListClosedWorkflowExecutionsRequestPrivate object.
- *
- * @param  action  SWF action being performed.
- * @param  q       Pointer to this object's public ListClosedWorkflowExecutionsRequest instance.
+ * Constructs a ListClosedWorkflowExecutionsRequestPrivate object for SWF \a action with,
+ * public implementation \a q.
  */
 ListClosedWorkflowExecutionsRequestPrivate::ListClosedWorkflowExecutionsRequestPrivate(
     const SWFRequest::Action action, ListClosedWorkflowExecutionsRequest * const q)
@@ -120,15 +109,10 @@ ListClosedWorkflowExecutionsRequestPrivate::ListClosedWorkflowExecutionsRequestP
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListClosedWorkflowExecutionsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListClosedWorkflowExecutionsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListClosedWorkflowExecutionsRequest instance.
  */
 ListClosedWorkflowExecutionsRequestPrivate::ListClosedWorkflowExecutionsRequestPrivate(
     const ListClosedWorkflowExecutionsRequestPrivate &other, ListClosedWorkflowExecutionsRequest * const q)

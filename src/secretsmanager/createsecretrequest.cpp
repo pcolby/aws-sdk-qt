@@ -27,10 +27,9 @@ namespace SecretsManager {
 
 /*!
  * \class QtAws::SecretsManager::CreateSecretRequest
- *
  * \brief The CreateSecretRequest class provides an interface for SecretsManager CreateSecret requests.
  *
- * \ingroup SecretsManager
+ * \inmodule QtAwsSecretsManager
  *
  *  <fullname>AWS Secrets Manager API Reference</fullname>
  * 
@@ -137,9 +136,7 @@ namespace SecretsManager {
  */
 
 /*!
- * @brief  Constructs a new CreateSecretRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateSecretRequest::CreateSecretRequest(const CreateSecretRequest &other)
     : SecretsManagerRequest(new CreateSecretRequestPrivate(*other.d_func(), this))
@@ -148,7 +145,7 @@ CreateSecretRequest::CreateSecretRequest(const CreateSecretRequest &other)
 }
 
 /*!
- * @brief  Constructs a new CreateSecretRequest object.
+ * Constructs a CreateSecretRequest object.
  */
 CreateSecretRequest::CreateSecretRequest()
     : SecretsManagerRequest(new CreateSecretRequestPrivate(SecretsManagerRequest::CreateSecretAction, this))
@@ -166,14 +163,9 @@ bool CreateSecretRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateSecretResponse object.
+ * Returns a CreateSecretResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateSecretResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SecretsManagerClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateSecretRequest::response(QNetworkReply * const reply) const
 {
@@ -181,20 +173,17 @@ QtAws::Core::AwsAbstractResponse * CreateSecretRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::SecretsManager::CreateSecretRequestPrivate
+ * \brief The CreateSecretRequestPrivate class provides private implementation for CreateSecretRequest.
+ * \internal
  *
- * @class  CreateSecretRequestPrivate
- *
- * @brief  Private implementation for CreateSecretRequest.
+ * \inmodule QtAwsSecretsManager
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateSecretRequestPrivate object.
- *
- * @param  action  SecretsManager action being performed.
- * @param  q       Pointer to this object's public CreateSecretRequest instance.
+ * Constructs a CreateSecretRequestPrivate object for SecretsManager \a action with,
+ * public implementation \a q.
  */
 CreateSecretRequestPrivate::CreateSecretRequestPrivate(
     const SecretsManagerRequest::Action action, CreateSecretRequest * const q)
@@ -204,15 +193,10 @@ CreateSecretRequestPrivate::CreateSecretRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateSecretRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateSecretRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateSecretRequest instance.
  */
 CreateSecretRequestPrivate::CreateSecretRequestPrivate(
     const CreateSecretRequestPrivate &other, CreateSecretRequest * const q)

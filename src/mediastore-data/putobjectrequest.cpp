@@ -27,10 +27,9 @@ namespace MediaStoreData {
 
 /*!
  * \class QtAws::MediaStoreData::PutObjectRequest
- *
  * \brief The PutObjectRequest class provides an interface for MediaStoreData PutObject requests.
  *
- * \ingroup MediaStoreData
+ * \inmodule QtAwsMediaStoreData
  *
  *  An AWS Elemental MediaStore asset is an object, similar to an object in the Amazon S3 service. Objects are the
  *  fundamental entities that are stored in AWS Elemental
@@ -39,9 +38,7 @@ namespace MediaStoreData {
  */
 
 /*!
- * @brief  Constructs a new PutObjectRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 PutObjectRequest::PutObjectRequest(const PutObjectRequest &other)
     : MediaStoreDataRequest(new PutObjectRequestPrivate(*other.d_func(), this))
@@ -50,7 +47,7 @@ PutObjectRequest::PutObjectRequest(const PutObjectRequest &other)
 }
 
 /*!
- * @brief  Constructs a new PutObjectRequest object.
+ * Constructs a PutObjectRequest object.
  */
 PutObjectRequest::PutObjectRequest()
     : MediaStoreDataRequest(new PutObjectRequestPrivate(MediaStoreDataRequest::PutObjectAction, this))
@@ -68,14 +65,9 @@ bool PutObjectRequest::isValid() const
 
 
 /*!
- * @brief  Construct an PutObjectResponse object.
+ * Returns a PutObjectResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An PutObjectResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MediaStoreDataClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * PutObjectRequest::response(QNetworkReply * const reply) const
 {
@@ -83,20 +75,17 @@ QtAws::Core::AwsAbstractResponse * PutObjectRequest::response(QNetworkReply * co
 }
 
 /*!
- * @internal
+ * \class QtAws::MediaStoreData::PutObjectRequestPrivate
+ * \brief The PutObjectRequestPrivate class provides private implementation for PutObjectRequest.
+ * \internal
  *
- * @class  PutObjectRequestPrivate
- *
- * @brief  Private implementation for PutObjectRequest.
+ * \inmodule QtAwsMediaStoreData
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new PutObjectRequestPrivate object.
- *
- * @param  action  MediaStoreData action being performed.
- * @param  q       Pointer to this object's public PutObjectRequest instance.
+ * Constructs a PutObjectRequestPrivate object for MediaStoreData \a action with,
+ * public implementation \a q.
  */
 PutObjectRequestPrivate::PutObjectRequestPrivate(
     const MediaStoreDataRequest::Action action, PutObjectRequest * const q)
@@ -106,15 +95,10 @@ PutObjectRequestPrivate::PutObjectRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutObjectRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the PutObjectRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public PutObjectRequest instance.
  */
 PutObjectRequestPrivate::PutObjectRequestPrivate(
     const PutObjectRequestPrivate &other, PutObjectRequest * const q)

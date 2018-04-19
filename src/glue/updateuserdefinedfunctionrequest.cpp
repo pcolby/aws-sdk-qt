@@ -27,10 +27,9 @@ namespace Glue {
 
 /*!
  * \class QtAws::Glue::UpdateUserDefinedFunctionRequest
- *
  * \brief The UpdateUserDefinedFunctionRequest class provides an interface for Glue UpdateUserDefinedFunction requests.
  *
- * \ingroup Glue
+ * \inmodule QtAwsGlue
  *
  *  <fullname>AWS Glue</fullname>
  * 
@@ -40,9 +39,7 @@ namespace Glue {
  */
 
 /*!
- * @brief  Constructs a new UpdateUserDefinedFunctionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateUserDefinedFunctionRequest::UpdateUserDefinedFunctionRequest(const UpdateUserDefinedFunctionRequest &other)
     : GlueRequest(new UpdateUserDefinedFunctionRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ UpdateUserDefinedFunctionRequest::UpdateUserDefinedFunctionRequest(const UpdateU
 }
 
 /*!
- * @brief  Constructs a new UpdateUserDefinedFunctionRequest object.
+ * Constructs a UpdateUserDefinedFunctionRequest object.
  */
 UpdateUserDefinedFunctionRequest::UpdateUserDefinedFunctionRequest()
     : GlueRequest(new UpdateUserDefinedFunctionRequestPrivate(GlueRequest::UpdateUserDefinedFunctionAction, this))
@@ -69,14 +66,9 @@ bool UpdateUserDefinedFunctionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateUserDefinedFunctionResponse object.
+ * Returns a UpdateUserDefinedFunctionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateUserDefinedFunctionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GlueClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateUserDefinedFunctionRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * UpdateUserDefinedFunctionRequest::response(QN
 }
 
 /*!
- * @internal
+ * \class QtAws::Glue::UpdateUserDefinedFunctionRequestPrivate
+ * \brief The UpdateUserDefinedFunctionRequestPrivate class provides private implementation for UpdateUserDefinedFunctionRequest.
+ * \internal
  *
- * @class  UpdateUserDefinedFunctionRequestPrivate
- *
- * @brief  Private implementation for UpdateUserDefinedFunctionRequest.
+ * \inmodule QtAwsGlue
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateUserDefinedFunctionRequestPrivate object.
- *
- * @param  action  Glue action being performed.
- * @param  q       Pointer to this object's public UpdateUserDefinedFunctionRequest instance.
+ * Constructs a UpdateUserDefinedFunctionRequestPrivate object for Glue \a action with,
+ * public implementation \a q.
  */
 UpdateUserDefinedFunctionRequestPrivate::UpdateUserDefinedFunctionRequestPrivate(
     const GlueRequest::Action action, UpdateUserDefinedFunctionRequest * const q)
@@ -107,15 +96,10 @@ UpdateUserDefinedFunctionRequestPrivate::UpdateUserDefinedFunctionRequestPrivate
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateUserDefinedFunctionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateUserDefinedFunctionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateUserDefinedFunctionRequest instance.
  */
 UpdateUserDefinedFunctionRequestPrivate::UpdateUserDefinedFunctionRequestPrivate(
     const UpdateUserDefinedFunctionRequestPrivate &other, UpdateUserDefinedFunctionRequest * const q)

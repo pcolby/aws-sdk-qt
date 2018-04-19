@@ -27,10 +27,9 @@ namespace CodeBuild {
 
 /*!
  * \class QtAws::CodeBuild::CreateWebhookRequest
- *
  * \brief The CreateWebhookRequest class provides an interface for CodeBuild CreateWebhook requests.
  *
- * \ingroup CodeBuild
+ * \inmodule QtAwsCodeBuild
  *
  *  <fullname>AWS CodeBuild</fullname>
  * 
@@ -117,9 +116,7 @@ namespace CodeBuild {
  */
 
 /*!
- * @brief  Constructs a new CreateWebhookRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateWebhookRequest::CreateWebhookRequest(const CreateWebhookRequest &other)
     : CodeBuildRequest(new CreateWebhookRequestPrivate(*other.d_func(), this))
@@ -128,7 +125,7 @@ CreateWebhookRequest::CreateWebhookRequest(const CreateWebhookRequest &other)
 }
 
 /*!
- * @brief  Constructs a new CreateWebhookRequest object.
+ * Constructs a CreateWebhookRequest object.
  */
 CreateWebhookRequest::CreateWebhookRequest()
     : CodeBuildRequest(new CreateWebhookRequestPrivate(CodeBuildRequest::CreateWebhookAction, this))
@@ -146,14 +143,9 @@ bool CreateWebhookRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateWebhookResponse object.
+ * Returns a CreateWebhookResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateWebhookResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CodeBuildClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateWebhookRequest::response(QNetworkReply * const reply) const
 {
@@ -161,20 +153,17 @@ QtAws::Core::AwsAbstractResponse * CreateWebhookRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::CodeBuild::CreateWebhookRequestPrivate
+ * \brief The CreateWebhookRequestPrivate class provides private implementation for CreateWebhookRequest.
+ * \internal
  *
- * @class  CreateWebhookRequestPrivate
- *
- * @brief  Private implementation for CreateWebhookRequest.
+ * \inmodule QtAwsCodeBuild
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateWebhookRequestPrivate object.
- *
- * @param  action  CodeBuild action being performed.
- * @param  q       Pointer to this object's public CreateWebhookRequest instance.
+ * Constructs a CreateWebhookRequestPrivate object for CodeBuild \a action with,
+ * public implementation \a q.
  */
 CreateWebhookRequestPrivate::CreateWebhookRequestPrivate(
     const CodeBuildRequest::Action action, CreateWebhookRequest * const q)
@@ -184,15 +173,10 @@ CreateWebhookRequestPrivate::CreateWebhookRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateWebhookRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateWebhookRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateWebhookRequest instance.
  */
 CreateWebhookRequestPrivate::CreateWebhookRequestPrivate(
     const CreateWebhookRequestPrivate &other, CreateWebhookRequest * const q)

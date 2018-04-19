@@ -25,16 +25,51 @@ namespace SNS {
 
 /*!
  * \class QtAws::SNS::SNSRequest
- *
  * \brief The SNSRequest class provides an interface for SNS requests.
  *
- * \ingroup SNS
+ * \inmodule QtAwsSNS
  */
 
 /*!
- * @brief  Constructs a new SNSRequest object.
+ * \enum SNSRequest::Action
  *
- * @param  action  The SNS action to request.
+ * This enum describes the actions that can be performed as SNS
+ * requests.
+ *
+ * \value AddPermissionAction SNS AddPermission action.
+ * \value CheckIfPhoneNumberIsOptedOutAction SNS CheckIfPhoneNumberIsOptedOut action.
+ * \value ConfirmSubscriptionAction SNS ConfirmSubscription action.
+ * \value CreatePlatformApplicationAction SNS CreatePlatformApplication action.
+ * \value CreatePlatformEndpointAction SNS CreatePlatformEndpoint action.
+ * \value CreateTopicAction SNS CreateTopic action.
+ * \value DeleteEndpointAction SNS DeleteEndpoint action.
+ * \value DeletePlatformApplicationAction SNS DeletePlatformApplication action.
+ * \value DeleteTopicAction SNS DeleteTopic action.
+ * \value GetEndpointAttributesAction SNS GetEndpointAttributes action.
+ * \value GetPlatformApplicationAttributesAction SNS GetPlatformApplicationAttributes action.
+ * \value GetSMSAttributesAction SNS GetSMSAttributes action.
+ * \value GetSubscriptionAttributesAction SNS GetSubscriptionAttributes action.
+ * \value GetTopicAttributesAction SNS GetTopicAttributes action.
+ * \value ListEndpointsByPlatformApplicationAction SNS ListEndpointsByPlatformApplication action.
+ * \value ListPhoneNumbersOptedOutAction SNS ListPhoneNumbersOptedOut action.
+ * \value ListPlatformApplicationsAction SNS ListPlatformApplications action.
+ * \value ListSubscriptionsAction SNS ListSubscriptions action.
+ * \value ListSubscriptionsByTopicAction SNS ListSubscriptionsByTopic action.
+ * \value ListTopicsAction SNS ListTopics action.
+ * \value OptInPhoneNumberAction SNS OptInPhoneNumber action.
+ * \value PublishAction SNS Publish action.
+ * \value RemovePermissionAction SNS RemovePermission action.
+ * \value SetEndpointAttributesAction SNS SetEndpointAttributes action.
+ * \value SetPlatformApplicationAttributesAction SNS SetPlatformApplicationAttributes action.
+ * \value SetSMSAttributesAction SNS SetSMSAttributes action.
+ * \value SetSubscriptionAttributesAction SNS SetSubscriptionAttributes action.
+ * \value SetTopicAttributesAction SNS SetTopicAttributes action.
+ * \value SubscribeAction SNS Subscribe action.
+ * \value UnsubscribeAction SNS Unsubscribe action.
+ */
+
+/*!
+ * Constructs a[n] SNSRequest object for SNS \a action.
  */
 SNSRequest::SNSRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new SNSRequestPrivate(action, this))
@@ -43,9 +78,7 @@ SNSRequest::SNSRequest(const Action action)
 }
 
 /*!
- * @brief  Constructs a new SNSRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 SNSRequest::SNSRequest(const SNSRequest &other)
     : QtAws::Core::AwsAbstractRequest(new SNSRequestPrivate(*other.d_func(), this))
@@ -54,13 +87,7 @@ SNSRequest::SNSRequest(const SNSRequest &other)
 }
 
 /*!
- * @brief  Assignment operator.
- *
- * Assigns \a other to \c this.
- *
- * @param  other  Instance to copy.
- *
- * @return  A reference to \c this.
+ * Sets the SNSRequest object to be equal to \a other.
  */
 SNSRequest& SNSRequest::operator=(const SNSRequest &other)
 {
@@ -72,14 +99,10 @@ SNSRequest& SNSRequest::operator=(const SNSRequest &other)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SNSRequest object.
+ * Constructs aa SNSRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from SNSRequestPrivate.
- *
- * @param  d  Pointer to private data (aka D-Pointer).
  */
 SNSRequest::SNSRequest(SNSRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
@@ -87,7 +110,7 @@ SNSRequest::SNSRequest(SNSRequestPrivate * const d) : QtAws::Core::AwsAbstractRe
 }
 
 /*!
- * \brief Returns the SNS action to be performed by this request.
+ * Returns the SNS action to be performed by this request.
  */
 SNSRequest::Action SNSRequest::action() const
 {
@@ -96,7 +119,7 @@ SNSRequest::Action SNSRequest::action() const
 }
 
 /*!
- * \brief Returns the name of the SNS action to be performed by this request.
+ * Returns the name of the SNS action to be performed by this request.
  */
 QString SNSRequest::actionString() const
 {
@@ -104,7 +127,7 @@ QString SNSRequest::actionString() const
 }
 
 /*!
- * \brief Returns the SNS API version implemented by this request.
+ * Returns the SNS API version implemented by this request.
  */
 QString SNSRequest::apiVersion() const
 {
@@ -113,7 +136,7 @@ QString SNSRequest::apiVersion() const
 }
 
 /*!
- * @brief Set the SNS action to be performed by this request to \a action.
+ * Sets the SNS action to be performed by this request to \a action.
  */
 void SNSRequest::setAction(const Action action)
 {
@@ -122,7 +145,7 @@ void SNSRequest::setAction(const Action action)
 }
 
 /*!
- * Set the SNS API version to include in this request to \a version.
+ * Sets the SNS API version to include in this request to \a version.
  */
 void SNSRequest::setApiVersion(const QString &version)
 {
@@ -131,7 +154,7 @@ void SNSRequest::setApiVersion(const QString &version)
 }
 
 /*!
- * \brief Returns \c true if this request is the same as \a other.
+ * Returns \c true if this request is equal to \a other; \c false otherwise.
  *
  * Note, most derived *Request classes do not need to provider their own
  * implementations of this function, since most such request classes rely on
@@ -146,8 +169,8 @@ bool SNSRequest::operator==(const SNSRequest &other) const
             (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
-/*!
- * @brief  Check if \a queueName is a valid SNS queue name.
+/*
+ * Returns \c tue if \a queueName is a valid SNS queue name.
  *
  * @par From SNS FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
@@ -166,9 +189,8 @@ bool SNSRequest::operator==(const SNSRequest &other) const
 }*/
 
 /*!
- * \brief Removes the a \a name parameter from this request.
- *
- * Returns the count of paramters removed (typically \c 0 or \c 1).
+ * Removes the a \a name parameter from the request, then returns the number of
+ * paramters removed (typically \c 0 or \c 1).
  */
 int SNSRequest::clearParameter(const QString &name)
 {
@@ -177,7 +199,7 @@ int SNSRequest::clearParameter(const QString &name)
 }
 
 /*!
- * \brief Removes all parameters from this request.
+ * Removes all parameters from the request.
  */
 void SNSRequest::clearParameters()
 {
@@ -186,7 +208,7 @@ void SNSRequest::clearParameters()
 }
 
 /*!
- * \brief Returns the value of the \n name pararemter if set, otherwise \a defaultValue.
+ * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
 QVariant SNSRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
@@ -195,7 +217,7 @@ QVariant SNSRequest::parameter(const QString &name, const QVariant &defaultValue
 }
 
 /*!
- * \brief Returns a map of parameters included in this request.
+ * Returns the parameters included in this request.
  */
 const QVariantMap &SNSRequest::parameters() const
 {
@@ -204,7 +226,7 @@ const QVariantMap &SNSRequest::parameters() const
 }
 
 /*!
- * \brief Sets the \a name parameter to \a value.
+ * Sets the \a name parameter to \a value.
  */
 void SNSRequest::setParameter(const QString &name, const QVariant &value)
 {
@@ -213,9 +235,8 @@ void SNSRequest::setParameter(const QString &name, const QVariant &value)
 }
 
 /*!
- * \brief Sets the map of paramters for this request to \a parameters.
- *
- * Any request parameters set previously will be discarded.
+ * Sets the paramters for this request to \a parameters. Any request parameters
+ * set previously will be discarded.
  */
 void SNSRequest::setParameters(const QVariantMap &parameters)
 {
@@ -224,11 +245,12 @@ void SNSRequest::setParameters(const QVariantMap &parameters)
 }
 
 /*!
- * \brief Returns a network request for this SNS request using the given \a endpoint.
+ * Returns a network request for the SNS request using the given
+ * \a endpoint.
  *
- * This SNS implementation builds request URLs by combining the common query
- * parameters (such as Action and Version), with any that have been added (via
- * setParameter) by child classes.
+ * This SNS implementation builds request URLs by combining the
+ * common query parameters (such as Action and Version), with any that have
+ * been added (via setParameter) by child classes.
  */
 QNetworkRequest SNSRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -239,17 +261,16 @@ QNetworkRequest SNSRequest::unsignedRequest(const QUrl &endpoint) const
 }
 
 /*!
+ * \class QtAws::SNS::SNSRequestPrivate
+ * \brief The SNSRequestPrivate class provides private implementation for SNSRequest.
  * \internal
  *
- * \class  SNSRequestPrivate
- *
- * \brief  Private implementation for SNSRequest.
+ * \inmodule QtAwsSNS
  */
 
 /*!
- * \internal
- *
- * \brief Constructs a new SNSRequestPrivate object.
+ * Constructs a SNSRequestPrivate object for SNS \a action with,
+ * public implementation \a q.
  */
 SNSRequestPrivate::SNSRequestPrivate(const SNSRequest::Action action, SNSRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
@@ -258,9 +279,7 @@ SNSRequestPrivate::SNSRequestPrivate(const SNSRequest::Action action, SNSRequest
 }
 
 /*!
- * \internal
- *
- * \brief Constructs a new SNSRequestPrivate object, copying an existing one.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
@@ -276,15 +295,12 @@ SNSRequestPrivate::SNSRequestPrivate(const SNSRequestPrivate &other,
 }
 
 /*!
- * \internal
- *
- * \brief Returns a string representing \a action.
+ * Returns a string represention of \a action, or a null string if \a action is
+ * invalid.
  *
  * This function converts SNSRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the SNS service's Action
  * query parameters.
- *
- * @return A string representing \a action, or a null string if \a action is invalid.
  */
 QString SNSRequestPrivate::toString(const SNSRequest::Action &action)
 {

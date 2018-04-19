@@ -27,10 +27,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::CreateDBInstanceRequest
- *
  * \brief The CreateDBInstanceRequest class provides an interface for RDS CreateDBInstance requests.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -101,9 +100,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new CreateDBInstanceRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateDBInstanceRequest::CreateDBInstanceRequest(const CreateDBInstanceRequest &other)
     : RDSRequest(new CreateDBInstanceRequestPrivate(*other.d_func(), this))
@@ -112,7 +109,7 @@ CreateDBInstanceRequest::CreateDBInstanceRequest(const CreateDBInstanceRequest &
 }
 
 /*!
- * @brief  Constructs a new CreateDBInstanceRequest object.
+ * Constructs a CreateDBInstanceRequest object.
  */
 CreateDBInstanceRequest::CreateDBInstanceRequest()
     : RDSRequest(new CreateDBInstanceRequestPrivate(RDSRequest::CreateDBInstanceAction, this))
@@ -130,14 +127,9 @@ bool CreateDBInstanceRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateDBInstanceResponse object.
+ * Returns a CreateDBInstanceResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateDBInstanceResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RDSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateDBInstanceRequest::response(QNetworkReply * const reply) const
 {
@@ -145,20 +137,17 @@ QtAws::Core::AwsAbstractResponse * CreateDBInstanceRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::RDS::CreateDBInstanceRequestPrivate
+ * \brief The CreateDBInstanceRequestPrivate class provides private implementation for CreateDBInstanceRequest.
+ * \internal
  *
- * @class  CreateDBInstanceRequestPrivate
- *
- * @brief  Private implementation for CreateDBInstanceRequest.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateDBInstanceRequestPrivate object.
- *
- * @param  action  RDS action being performed.
- * @param  q       Pointer to this object's public CreateDBInstanceRequest instance.
+ * Constructs a CreateDBInstanceRequestPrivate object for RDS \a action with,
+ * public implementation \a q.
  */
 CreateDBInstanceRequestPrivate::CreateDBInstanceRequestPrivate(
     const RDSRequest::Action action, CreateDBInstanceRequest * const q)
@@ -168,15 +157,10 @@ CreateDBInstanceRequestPrivate::CreateDBInstanceRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateDBInstanceRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateDBInstanceRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateDBInstanceRequest instance.
  */
 CreateDBInstanceRequestPrivate::CreateDBInstanceRequestPrivate(
     const CreateDBInstanceRequestPrivate &other, CreateDBInstanceRequest * const q)

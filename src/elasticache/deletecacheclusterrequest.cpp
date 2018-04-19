@@ -27,10 +27,9 @@ namespace ElastiCache {
 
 /*!
  * \class QtAws::ElastiCache::DeleteCacheClusterRequest
- *
  * \brief The DeleteCacheClusterRequest class provides an interface for ElastiCache DeleteCacheCluster requests.
  *
- * \ingroup ElastiCache
+ * \inmodule QtAwsElastiCache
  *
  *  <fullname>Amazon ElastiCache</fullname>
  * 
@@ -51,9 +50,7 @@ namespace ElastiCache {
  */
 
 /*!
- * @brief  Constructs a new DeleteCacheClusterRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteCacheClusterRequest::DeleteCacheClusterRequest(const DeleteCacheClusterRequest &other)
     : ElastiCacheRequest(new DeleteCacheClusterRequestPrivate(*other.d_func(), this))
@@ -62,7 +59,7 @@ DeleteCacheClusterRequest::DeleteCacheClusterRequest(const DeleteCacheClusterReq
 }
 
 /*!
- * @brief  Constructs a new DeleteCacheClusterRequest object.
+ * Constructs a DeleteCacheClusterRequest object.
  */
 DeleteCacheClusterRequest::DeleteCacheClusterRequest()
     : ElastiCacheRequest(new DeleteCacheClusterRequestPrivate(ElastiCacheRequest::DeleteCacheClusterAction, this))
@@ -80,14 +77,9 @@ bool DeleteCacheClusterRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteCacheClusterResponse object.
+ * Returns a DeleteCacheClusterResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteCacheClusterResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ElastiCacheClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteCacheClusterRequest::response(QNetworkReply * const reply) const
 {
@@ -95,20 +87,17 @@ QtAws::Core::AwsAbstractResponse * DeleteCacheClusterRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::ElastiCache::DeleteCacheClusterRequestPrivate
+ * \brief The DeleteCacheClusterRequestPrivate class provides private implementation for DeleteCacheClusterRequest.
+ * \internal
  *
- * @class  DeleteCacheClusterRequestPrivate
- *
- * @brief  Private implementation for DeleteCacheClusterRequest.
+ * \inmodule QtAwsElastiCache
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteCacheClusterRequestPrivate object.
- *
- * @param  action  ElastiCache action being performed.
- * @param  q       Pointer to this object's public DeleteCacheClusterRequest instance.
+ * Constructs a DeleteCacheClusterRequestPrivate object for ElastiCache \a action with,
+ * public implementation \a q.
  */
 DeleteCacheClusterRequestPrivate::DeleteCacheClusterRequestPrivate(
     const ElastiCacheRequest::Action action, DeleteCacheClusterRequest * const q)
@@ -118,15 +107,10 @@ DeleteCacheClusterRequestPrivate::DeleteCacheClusterRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteCacheClusterRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteCacheClusterRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteCacheClusterRequest instance.
  */
 DeleteCacheClusterRequestPrivate::DeleteCacheClusterRequestPrivate(
     const DeleteCacheClusterRequestPrivate &other, DeleteCacheClusterRequest * const q)

@@ -27,10 +27,9 @@ namespace Redshift {
 
 /*!
  * \class QtAws::Redshift::RevokeClusterSecurityGroupIngressRequest
- *
  * \brief The RevokeClusterSecurityGroupIngressRequest class provides an interface for Redshift RevokeClusterSecurityGroupIngress requests.
  *
- * \ingroup Redshift
+ * \inmodule QtAwsRedshift
  *
  *  <fullname>Amazon Redshift</fullname>
  * 
@@ -67,9 +66,7 @@ namespace Redshift {
  */
 
 /*!
- * @brief  Constructs a new RevokeClusterSecurityGroupIngressRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 RevokeClusterSecurityGroupIngressRequest::RevokeClusterSecurityGroupIngressRequest(const RevokeClusterSecurityGroupIngressRequest &other)
     : RedshiftRequest(new RevokeClusterSecurityGroupIngressRequestPrivate(*other.d_func(), this))
@@ -78,7 +75,7 @@ RevokeClusterSecurityGroupIngressRequest::RevokeClusterSecurityGroupIngressReque
 }
 
 /*!
- * @brief  Constructs a new RevokeClusterSecurityGroupIngressRequest object.
+ * Constructs a RevokeClusterSecurityGroupIngressRequest object.
  */
 RevokeClusterSecurityGroupIngressRequest::RevokeClusterSecurityGroupIngressRequest()
     : RedshiftRequest(new RevokeClusterSecurityGroupIngressRequestPrivate(RedshiftRequest::RevokeClusterSecurityGroupIngressAction, this))
@@ -96,14 +93,9 @@ bool RevokeClusterSecurityGroupIngressRequest::isValid() const
 
 
 /*!
- * @brief  Construct an RevokeClusterSecurityGroupIngressResponse object.
+ * Returns a RevokeClusterSecurityGroupIngressResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An RevokeClusterSecurityGroupIngressResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RedshiftClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * RevokeClusterSecurityGroupIngressRequest::response(QNetworkReply * const reply) const
 {
@@ -111,20 +103,17 @@ QtAws::Core::AwsAbstractResponse * RevokeClusterSecurityGroupIngressRequest::res
 }
 
 /*!
- * @internal
+ * \class QtAws::Redshift::RevokeClusterSecurityGroupIngressRequestPrivate
+ * \brief The RevokeClusterSecurityGroupIngressRequestPrivate class provides private implementation for RevokeClusterSecurityGroupIngressRequest.
+ * \internal
  *
- * @class  RevokeClusterSecurityGroupIngressRequestPrivate
- *
- * @brief  Private implementation for RevokeClusterSecurityGroupIngressRequest.
+ * \inmodule QtAwsRedshift
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new RevokeClusterSecurityGroupIngressRequestPrivate object.
- *
- * @param  action  Redshift action being performed.
- * @param  q       Pointer to this object's public RevokeClusterSecurityGroupIngressRequest instance.
+ * Constructs a RevokeClusterSecurityGroupIngressRequestPrivate object for Redshift \a action with,
+ * public implementation \a q.
  */
 RevokeClusterSecurityGroupIngressRequestPrivate::RevokeClusterSecurityGroupIngressRequestPrivate(
     const RedshiftRequest::Action action, RevokeClusterSecurityGroupIngressRequest * const q)
@@ -134,15 +123,10 @@ RevokeClusterSecurityGroupIngressRequestPrivate::RevokeClusterSecurityGroupIngre
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RevokeClusterSecurityGroupIngressRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the RevokeClusterSecurityGroupIngressRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public RevokeClusterSecurityGroupIngressRequest instance.
  */
 RevokeClusterSecurityGroupIngressRequestPrivate::RevokeClusterSecurityGroupIngressRequestPrivate(
     const RevokeClusterSecurityGroupIngressRequestPrivate &other, RevokeClusterSecurityGroupIngressRequest * const q)

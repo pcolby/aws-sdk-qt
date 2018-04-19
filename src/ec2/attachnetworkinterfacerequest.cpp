@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::AttachNetworkInterfaceRequest
- *
  * \brief The AttachNetworkInterfaceRequest class provides an interface for EC2 AttachNetworkInterface requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new AttachNetworkInterfaceRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AttachNetworkInterfaceRequest::AttachNetworkInterfaceRequest(const AttachNetworkInterfaceRequest &other)
     : EC2Request(new AttachNetworkInterfaceRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ AttachNetworkInterfaceRequest::AttachNetworkInterfaceRequest(const AttachNetwork
 }
 
 /*!
- * @brief  Constructs a new AttachNetworkInterfaceRequest object.
+ * Constructs a AttachNetworkInterfaceRequest object.
  */
 AttachNetworkInterfaceRequest::AttachNetworkInterfaceRequest()
     : EC2Request(new AttachNetworkInterfaceRequestPrivate(EC2Request::AttachNetworkInterfaceAction, this))
@@ -70,14 +67,9 @@ bool AttachNetworkInterfaceRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AttachNetworkInterfaceResponse object.
+ * Returns a AttachNetworkInterfaceResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AttachNetworkInterfaceResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AttachNetworkInterfaceRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * AttachNetworkInterfaceRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::AttachNetworkInterfaceRequestPrivate
+ * \brief The AttachNetworkInterfaceRequestPrivate class provides private implementation for AttachNetworkInterfaceRequest.
+ * \internal
  *
- * @class  AttachNetworkInterfaceRequestPrivate
- *
- * @brief  Private implementation for AttachNetworkInterfaceRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AttachNetworkInterfaceRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public AttachNetworkInterfaceRequest instance.
+ * Constructs a AttachNetworkInterfaceRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 AttachNetworkInterfaceRequestPrivate::AttachNetworkInterfaceRequestPrivate(
     const EC2Request::Action action, AttachNetworkInterfaceRequest * const q)
@@ -108,15 +97,10 @@ AttachNetworkInterfaceRequestPrivate::AttachNetworkInterfaceRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AttachNetworkInterfaceRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AttachNetworkInterfaceRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AttachNetworkInterfaceRequest instance.
  */
 AttachNetworkInterfaceRequestPrivate::AttachNetworkInterfaceRequestPrivate(
     const AttachNetworkInterfaceRequestPrivate &other, AttachNetworkInterfaceRequest * const q)

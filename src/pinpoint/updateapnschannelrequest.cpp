@@ -27,19 +27,16 @@ namespace Pinpoint {
 
 /*!
  * \class QtAws::Pinpoint::UpdateApnsChannelRequest
- *
  * \brief The UpdateApnsChannelRequest class provides an interface for Pinpoint UpdateApnsChannel requests.
  *
- * \ingroup Pinpoint
+ * \inmodule QtAwsPinpoint
  *
  *
  * \sa PinpointClient::updateApnsChannel
  */
 
 /*!
- * @brief  Constructs a new UpdateApnsChannelRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateApnsChannelRequest::UpdateApnsChannelRequest(const UpdateApnsChannelRequest &other)
     : PinpointRequest(new UpdateApnsChannelRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ UpdateApnsChannelRequest::UpdateApnsChannelRequest(const UpdateApnsChannelReques
 }
 
 /*!
- * @brief  Constructs a new UpdateApnsChannelRequest object.
+ * Constructs a UpdateApnsChannelRequest object.
  */
 UpdateApnsChannelRequest::UpdateApnsChannelRequest()
     : PinpointRequest(new UpdateApnsChannelRequestPrivate(PinpointRequest::UpdateApnsChannelAction, this))
@@ -66,14 +63,9 @@ bool UpdateApnsChannelRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateApnsChannelResponse object.
+ * Returns a UpdateApnsChannelResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateApnsChannelResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  PinpointClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateApnsChannelRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * UpdateApnsChannelRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::Pinpoint::UpdateApnsChannelRequestPrivate
+ * \brief The UpdateApnsChannelRequestPrivate class provides private implementation for UpdateApnsChannelRequest.
+ * \internal
  *
- * @class  UpdateApnsChannelRequestPrivate
- *
- * @brief  Private implementation for UpdateApnsChannelRequest.
+ * \inmodule QtAwsPinpoint
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateApnsChannelRequestPrivate object.
- *
- * @param  action  Pinpoint action being performed.
- * @param  q       Pointer to this object's public UpdateApnsChannelRequest instance.
+ * Constructs a UpdateApnsChannelRequestPrivate object for Pinpoint \a action with,
+ * public implementation \a q.
  */
 UpdateApnsChannelRequestPrivate::UpdateApnsChannelRequestPrivate(
     const PinpointRequest::Action action, UpdateApnsChannelRequest * const q)
@@ -104,15 +93,10 @@ UpdateApnsChannelRequestPrivate::UpdateApnsChannelRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateApnsChannelRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateApnsChannelRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateApnsChannelRequest instance.
  */
 UpdateApnsChannelRequestPrivate::UpdateApnsChannelRequestPrivate(
     const UpdateApnsChannelRequestPrivate &other, UpdateApnsChannelRequest * const q)

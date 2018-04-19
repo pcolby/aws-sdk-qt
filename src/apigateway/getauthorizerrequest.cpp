@@ -27,10 +27,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::GetAuthorizerRequest
- *
  * \brief The GetAuthorizerRequest class provides an interface for APIGateway GetAuthorizer requests.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -42,9 +41,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new GetAuthorizerRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetAuthorizerRequest::GetAuthorizerRequest(const GetAuthorizerRequest &other)
     : APIGatewayRequest(new GetAuthorizerRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ GetAuthorizerRequest::GetAuthorizerRequest(const GetAuthorizerRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetAuthorizerRequest object.
+ * Constructs a GetAuthorizerRequest object.
  */
 GetAuthorizerRequest::GetAuthorizerRequest()
     : APIGatewayRequest(new GetAuthorizerRequestPrivate(APIGatewayRequest::GetAuthorizerAction, this))
@@ -71,14 +68,9 @@ bool GetAuthorizerRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetAuthorizerResponse object.
+ * Returns a GetAuthorizerResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetAuthorizerResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  APIGatewayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetAuthorizerRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * GetAuthorizerRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::APIGateway::GetAuthorizerRequestPrivate
+ * \brief The GetAuthorizerRequestPrivate class provides private implementation for GetAuthorizerRequest.
+ * \internal
  *
- * @class  GetAuthorizerRequestPrivate
- *
- * @brief  Private implementation for GetAuthorizerRequest.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetAuthorizerRequestPrivate object.
- *
- * @param  action  APIGateway action being performed.
- * @param  q       Pointer to this object's public GetAuthorizerRequest instance.
+ * Constructs a GetAuthorizerRequestPrivate object for APIGateway \a action with,
+ * public implementation \a q.
  */
 GetAuthorizerRequestPrivate::GetAuthorizerRequestPrivate(
     const APIGatewayRequest::Action action, GetAuthorizerRequest * const q)
@@ -109,15 +98,10 @@ GetAuthorizerRequestPrivate::GetAuthorizerRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetAuthorizerRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetAuthorizerRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetAuthorizerRequest instance.
  */
 GetAuthorizerRequestPrivate::GetAuthorizerRequestPrivate(
     const GetAuthorizerRequestPrivate &other, GetAuthorizerRequest * const q)

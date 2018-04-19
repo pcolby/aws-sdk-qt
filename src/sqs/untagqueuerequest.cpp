@@ -27,10 +27,9 @@ namespace SQS {
 
 /*!
  * \class QtAws::SQS::UntagQueueRequest
- *
  * \brief The UntagQueueRequest class provides an interface for SQS UntagQueue requests.
  *
- * \ingroup SQS
+ * \inmodule QtAwsSQS
  *
  *  Welcome to the <i>Amazon Simple Queue Service API
  * 
@@ -103,9 +102,7 @@ namespace SQS {
  */
 
 /*!
- * @brief  Constructs a new UntagQueueRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UntagQueueRequest::UntagQueueRequest(const UntagQueueRequest &other)
     : SQSRequest(new UntagQueueRequestPrivate(*other.d_func(), this))
@@ -114,7 +111,7 @@ UntagQueueRequest::UntagQueueRequest(const UntagQueueRequest &other)
 }
 
 /*!
- * @brief  Constructs a new UntagQueueRequest object.
+ * Constructs a UntagQueueRequest object.
  */
 UntagQueueRequest::UntagQueueRequest()
     : SQSRequest(new UntagQueueRequestPrivate(SQSRequest::UntagQueueAction, this))
@@ -132,14 +129,9 @@ bool UntagQueueRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UntagQueueResponse object.
+ * Returns a UntagQueueResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UntagQueueResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SQSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UntagQueueRequest::response(QNetworkReply * const reply) const
 {
@@ -147,20 +139,17 @@ QtAws::Core::AwsAbstractResponse * UntagQueueRequest::response(QNetworkReply * c
 }
 
 /*!
- * @internal
+ * \class QtAws::SQS::UntagQueueRequestPrivate
+ * \brief The UntagQueueRequestPrivate class provides private implementation for UntagQueueRequest.
+ * \internal
  *
- * @class  UntagQueueRequestPrivate
- *
- * @brief  Private implementation for UntagQueueRequest.
+ * \inmodule QtAwsSQS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UntagQueueRequestPrivate object.
- *
- * @param  action  SQS action being performed.
- * @param  q       Pointer to this object's public UntagQueueRequest instance.
+ * Constructs a UntagQueueRequestPrivate object for SQS \a action with,
+ * public implementation \a q.
  */
 UntagQueueRequestPrivate::UntagQueueRequestPrivate(
     const SQSRequest::Action action, UntagQueueRequest * const q)
@@ -170,15 +159,10 @@ UntagQueueRequestPrivate::UntagQueueRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UntagQueueRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UntagQueueRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UntagQueueRequest instance.
  */
 UntagQueueRequestPrivate::UntagQueueRequestPrivate(
     const UntagQueueRequestPrivate &other, UntagQueueRequest * const q)

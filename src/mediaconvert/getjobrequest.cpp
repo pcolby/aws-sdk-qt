@@ -27,19 +27,16 @@ namespace MediaConvert {
 
 /*!
  * \class QtAws::MediaConvert::GetJobRequest
- *
  * \brief The GetJobRequest class provides an interface for MediaConvert GetJob requests.
  *
- * \ingroup MediaConvert
+ * \inmodule QtAwsMediaConvert
  *
  *
  * \sa MediaConvertClient::getJob
  */
 
 /*!
- * @brief  Constructs a new GetJobRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetJobRequest::GetJobRequest(const GetJobRequest &other)
     : MediaConvertRequest(new GetJobRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ GetJobRequest::GetJobRequest(const GetJobRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetJobRequest object.
+ * Constructs a GetJobRequest object.
  */
 GetJobRequest::GetJobRequest()
     : MediaConvertRequest(new GetJobRequestPrivate(MediaConvertRequest::GetJobAction, this))
@@ -66,14 +63,9 @@ bool GetJobRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetJobResponse object.
+ * Returns a GetJobResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetJobResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MediaConvertClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetJobRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * GetJobRequest::response(QNetworkReply * const
 }
 
 /*!
- * @internal
+ * \class QtAws::MediaConvert::GetJobRequestPrivate
+ * \brief The GetJobRequestPrivate class provides private implementation for GetJobRequest.
+ * \internal
  *
- * @class  GetJobRequestPrivate
- *
- * @brief  Private implementation for GetJobRequest.
+ * \inmodule QtAwsMediaConvert
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetJobRequestPrivate object.
- *
- * @param  action  MediaConvert action being performed.
- * @param  q       Pointer to this object's public GetJobRequest instance.
+ * Constructs a GetJobRequestPrivate object for MediaConvert \a action with,
+ * public implementation \a q.
  */
 GetJobRequestPrivate::GetJobRequestPrivate(
     const MediaConvertRequest::Action action, GetJobRequest * const q)
@@ -104,15 +93,10 @@ GetJobRequestPrivate::GetJobRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetJobRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetJobRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetJobRequest instance.
  */
 GetJobRequestPrivate::GetJobRequestPrivate(
     const GetJobRequestPrivate &other, GetJobRequest * const q)

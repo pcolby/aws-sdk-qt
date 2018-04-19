@@ -27,10 +27,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::SimulatePrincipalPolicyRequest
- *
  * \brief The SimulatePrincipalPolicyRequest class provides an interface for IAM SimulatePrincipalPolicy requests.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -102,9 +101,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new SimulatePrincipalPolicyRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 SimulatePrincipalPolicyRequest::SimulatePrincipalPolicyRequest(const SimulatePrincipalPolicyRequest &other)
     : IAMRequest(new SimulatePrincipalPolicyRequestPrivate(*other.d_func(), this))
@@ -113,7 +110,7 @@ SimulatePrincipalPolicyRequest::SimulatePrincipalPolicyRequest(const SimulatePri
 }
 
 /*!
- * @brief  Constructs a new SimulatePrincipalPolicyRequest object.
+ * Constructs a SimulatePrincipalPolicyRequest object.
  */
 SimulatePrincipalPolicyRequest::SimulatePrincipalPolicyRequest()
     : IAMRequest(new SimulatePrincipalPolicyRequestPrivate(IAMRequest::SimulatePrincipalPolicyAction, this))
@@ -131,14 +128,9 @@ bool SimulatePrincipalPolicyRequest::isValid() const
 
 
 /*!
- * @brief  Construct an SimulatePrincipalPolicyResponse object.
+ * Returns a SimulatePrincipalPolicyResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An SimulatePrincipalPolicyResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IAMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * SimulatePrincipalPolicyRequest::response(QNetworkReply * const reply) const
 {
@@ -146,20 +138,17 @@ QtAws::Core::AwsAbstractResponse * SimulatePrincipalPolicyRequest::response(QNet
 }
 
 /*!
- * @internal
+ * \class QtAws::IAM::SimulatePrincipalPolicyRequestPrivate
+ * \brief The SimulatePrincipalPolicyRequestPrivate class provides private implementation for SimulatePrincipalPolicyRequest.
+ * \internal
  *
- * @class  SimulatePrincipalPolicyRequestPrivate
- *
- * @brief  Private implementation for SimulatePrincipalPolicyRequest.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new SimulatePrincipalPolicyRequestPrivate object.
- *
- * @param  action  IAM action being performed.
- * @param  q       Pointer to this object's public SimulatePrincipalPolicyRequest instance.
+ * Constructs a SimulatePrincipalPolicyRequestPrivate object for IAM \a action with,
+ * public implementation \a q.
  */
 SimulatePrincipalPolicyRequestPrivate::SimulatePrincipalPolicyRequestPrivate(
     const IAMRequest::Action action, SimulatePrincipalPolicyRequest * const q)
@@ -169,15 +158,10 @@ SimulatePrincipalPolicyRequestPrivate::SimulatePrincipalPolicyRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SimulatePrincipalPolicyRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the SimulatePrincipalPolicyRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public SimulatePrincipalPolicyRequest instance.
  */
 SimulatePrincipalPolicyRequestPrivate::SimulatePrincipalPolicyRequestPrivate(
     const SimulatePrincipalPolicyRequestPrivate &other, SimulatePrincipalPolicyRequest * const q)

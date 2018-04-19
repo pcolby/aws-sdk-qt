@@ -27,10 +27,9 @@ namespace CodeCommit {
 
 /*!
  * \class QtAws::CodeCommit::GetRepositoryTriggersRequest
- *
  * \brief The GetRepositoryTriggersRequest class provides an interface for CodeCommit GetRepositoryTriggers requests.
  *
- * \ingroup CodeCommit
+ * \inmodule QtAwsCodeCommit
  *
  *  <fullname>AWS CodeCommit</fullname>
  * 
@@ -227,9 +226,7 @@ namespace CodeCommit {
  */
 
 /*!
- * @brief  Constructs a new GetRepositoryTriggersRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetRepositoryTriggersRequest::GetRepositoryTriggersRequest(const GetRepositoryTriggersRequest &other)
     : CodeCommitRequest(new GetRepositoryTriggersRequestPrivate(*other.d_func(), this))
@@ -238,7 +235,7 @@ GetRepositoryTriggersRequest::GetRepositoryTriggersRequest(const GetRepositoryTr
 }
 
 /*!
- * @brief  Constructs a new GetRepositoryTriggersRequest object.
+ * Constructs a GetRepositoryTriggersRequest object.
  */
 GetRepositoryTriggersRequest::GetRepositoryTriggersRequest()
     : CodeCommitRequest(new GetRepositoryTriggersRequestPrivate(CodeCommitRequest::GetRepositoryTriggersAction, this))
@@ -256,14 +253,9 @@ bool GetRepositoryTriggersRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetRepositoryTriggersResponse object.
+ * Returns a GetRepositoryTriggersResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetRepositoryTriggersResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CodeCommitClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetRepositoryTriggersRequest::response(QNetworkReply * const reply) const
 {
@@ -271,20 +263,17 @@ QtAws::Core::AwsAbstractResponse * GetRepositoryTriggersRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::CodeCommit::GetRepositoryTriggersRequestPrivate
+ * \brief The GetRepositoryTriggersRequestPrivate class provides private implementation for GetRepositoryTriggersRequest.
+ * \internal
  *
- * @class  GetRepositoryTriggersRequestPrivate
- *
- * @brief  Private implementation for GetRepositoryTriggersRequest.
+ * \inmodule QtAwsCodeCommit
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetRepositoryTriggersRequestPrivate object.
- *
- * @param  action  CodeCommit action being performed.
- * @param  q       Pointer to this object's public GetRepositoryTriggersRequest instance.
+ * Constructs a GetRepositoryTriggersRequestPrivate object for CodeCommit \a action with,
+ * public implementation \a q.
  */
 GetRepositoryTriggersRequestPrivate::GetRepositoryTriggersRequestPrivate(
     const CodeCommitRequest::Action action, GetRepositoryTriggersRequest * const q)
@@ -294,15 +283,10 @@ GetRepositoryTriggersRequestPrivate::GetRepositoryTriggersRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetRepositoryTriggersRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetRepositoryTriggersRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetRepositoryTriggersRequest instance.
  */
 GetRepositoryTriggersRequestPrivate::GetRepositoryTriggersRequestPrivate(
     const GetRepositoryTriggersRequestPrivate &other, GetRepositoryTriggersRequest * const q)

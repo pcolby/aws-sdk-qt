@@ -27,10 +27,9 @@ namespace ElastiCache {
 
 /*!
  * \class QtAws::ElastiCache::DescribeCacheClustersRequest
- *
  * \brief The DescribeCacheClustersRequest class provides an interface for ElastiCache DescribeCacheClusters requests.
  *
- * \ingroup ElastiCache
+ * \inmodule QtAwsElastiCache
  *
  *  <fullname>Amazon ElastiCache</fullname>
  * 
@@ -51,9 +50,7 @@ namespace ElastiCache {
  */
 
 /*!
- * @brief  Constructs a new DescribeCacheClustersRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeCacheClustersRequest::DescribeCacheClustersRequest(const DescribeCacheClustersRequest &other)
     : ElastiCacheRequest(new DescribeCacheClustersRequestPrivate(*other.d_func(), this))
@@ -62,7 +59,7 @@ DescribeCacheClustersRequest::DescribeCacheClustersRequest(const DescribeCacheCl
 }
 
 /*!
- * @brief  Constructs a new DescribeCacheClustersRequest object.
+ * Constructs a DescribeCacheClustersRequest object.
  */
 DescribeCacheClustersRequest::DescribeCacheClustersRequest()
     : ElastiCacheRequest(new DescribeCacheClustersRequestPrivate(ElastiCacheRequest::DescribeCacheClustersAction, this))
@@ -80,14 +77,9 @@ bool DescribeCacheClustersRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeCacheClustersResponse object.
+ * Returns a DescribeCacheClustersResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeCacheClustersResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ElastiCacheClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeCacheClustersRequest::response(QNetworkReply * const reply) const
 {
@@ -95,20 +87,17 @@ QtAws::Core::AwsAbstractResponse * DescribeCacheClustersRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::ElastiCache::DescribeCacheClustersRequestPrivate
+ * \brief The DescribeCacheClustersRequestPrivate class provides private implementation for DescribeCacheClustersRequest.
+ * \internal
  *
- * @class  DescribeCacheClustersRequestPrivate
- *
- * @brief  Private implementation for DescribeCacheClustersRequest.
+ * \inmodule QtAwsElastiCache
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeCacheClustersRequestPrivate object.
- *
- * @param  action  ElastiCache action being performed.
- * @param  q       Pointer to this object's public DescribeCacheClustersRequest instance.
+ * Constructs a DescribeCacheClustersRequestPrivate object for ElastiCache \a action with,
+ * public implementation \a q.
  */
 DescribeCacheClustersRequestPrivate::DescribeCacheClustersRequestPrivate(
     const ElastiCacheRequest::Action action, DescribeCacheClustersRequest * const q)
@@ -118,15 +107,10 @@ DescribeCacheClustersRequestPrivate::DescribeCacheClustersRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeCacheClustersRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeCacheClustersRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeCacheClustersRequest instance.
  */
 DescribeCacheClustersRequestPrivate::DescribeCacheClustersRequestPrivate(
     const DescribeCacheClustersRequestPrivate &other, DescribeCacheClustersRequest * const q)

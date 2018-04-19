@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DescribePlacementGroupsRequest
- *
  * \brief The DescribePlacementGroupsRequest class provides an interface for EC2 DescribePlacementGroups requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DescribePlacementGroupsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribePlacementGroupsRequest::DescribePlacementGroupsRequest(const DescribePlacementGroupsRequest &other)
     : EC2Request(new DescribePlacementGroupsRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ DescribePlacementGroupsRequest::DescribePlacementGroupsRequest(const DescribePla
 }
 
 /*!
- * @brief  Constructs a new DescribePlacementGroupsRequest object.
+ * Constructs a DescribePlacementGroupsRequest object.
  */
 DescribePlacementGroupsRequest::DescribePlacementGroupsRequest()
     : EC2Request(new DescribePlacementGroupsRequestPrivate(EC2Request::DescribePlacementGroupsAction, this))
@@ -70,14 +67,9 @@ bool DescribePlacementGroupsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribePlacementGroupsResponse object.
+ * Returns a DescribePlacementGroupsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribePlacementGroupsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribePlacementGroupsRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * DescribePlacementGroupsRequest::response(QNet
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::DescribePlacementGroupsRequestPrivate
+ * \brief The DescribePlacementGroupsRequestPrivate class provides private implementation for DescribePlacementGroupsRequest.
+ * \internal
  *
- * @class  DescribePlacementGroupsRequestPrivate
- *
- * @brief  Private implementation for DescribePlacementGroupsRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribePlacementGroupsRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public DescribePlacementGroupsRequest instance.
+ * Constructs a DescribePlacementGroupsRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 DescribePlacementGroupsRequestPrivate::DescribePlacementGroupsRequestPrivate(
     const EC2Request::Action action, DescribePlacementGroupsRequest * const q)
@@ -108,15 +97,10 @@ DescribePlacementGroupsRequestPrivate::DescribePlacementGroupsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribePlacementGroupsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribePlacementGroupsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribePlacementGroupsRequest instance.
  */
 DescribePlacementGroupsRequestPrivate::DescribePlacementGroupsRequestPrivate(
     const DescribePlacementGroupsRequestPrivate &other, DescribePlacementGroupsRequest * const q)

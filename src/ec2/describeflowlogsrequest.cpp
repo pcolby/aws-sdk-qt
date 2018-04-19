@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DescribeFlowLogsRequest
- *
  * \brief The DescribeFlowLogsRequest class provides an interface for EC2 DescribeFlowLogs requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DescribeFlowLogsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeFlowLogsRequest::DescribeFlowLogsRequest(const DescribeFlowLogsRequest &other)
     : EC2Request(new DescribeFlowLogsRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ DescribeFlowLogsRequest::DescribeFlowLogsRequest(const DescribeFlowLogsRequest &
 }
 
 /*!
- * @brief  Constructs a new DescribeFlowLogsRequest object.
+ * Constructs a DescribeFlowLogsRequest object.
  */
 DescribeFlowLogsRequest::DescribeFlowLogsRequest()
     : EC2Request(new DescribeFlowLogsRequestPrivate(EC2Request::DescribeFlowLogsAction, this))
@@ -70,14 +67,9 @@ bool DescribeFlowLogsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeFlowLogsResponse object.
+ * Returns a DescribeFlowLogsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeFlowLogsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeFlowLogsRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * DescribeFlowLogsRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::DescribeFlowLogsRequestPrivate
+ * \brief The DescribeFlowLogsRequestPrivate class provides private implementation for DescribeFlowLogsRequest.
+ * \internal
  *
- * @class  DescribeFlowLogsRequestPrivate
- *
- * @brief  Private implementation for DescribeFlowLogsRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeFlowLogsRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public DescribeFlowLogsRequest instance.
+ * Constructs a DescribeFlowLogsRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 DescribeFlowLogsRequestPrivate::DescribeFlowLogsRequestPrivate(
     const EC2Request::Action action, DescribeFlowLogsRequest * const q)
@@ -108,15 +97,10 @@ DescribeFlowLogsRequestPrivate::DescribeFlowLogsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeFlowLogsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeFlowLogsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeFlowLogsRequest instance.
  */
 DescribeFlowLogsRequestPrivate::DescribeFlowLogsRequestPrivate(
     const DescribeFlowLogsRequestPrivate &other, DescribeFlowLogsRequest * const q)

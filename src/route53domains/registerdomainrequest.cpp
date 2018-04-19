@@ -27,10 +27,9 @@ namespace Route53Domains {
 
 /*!
  * \class QtAws::Route53Domains::RegisterDomainRequest
- *
  * \brief The RegisterDomainRequest class provides an interface for Route53Domains RegisterDomain requests.
  *
- * \ingroup Route53Domains
+ * \inmodule QtAwsRoute53Domains
  *
  *  Amazon Route 53 API actions let you register domain names and perform related
  *
@@ -38,9 +37,7 @@ namespace Route53Domains {
  */
 
 /*!
- * @brief  Constructs a new RegisterDomainRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 RegisterDomainRequest::RegisterDomainRequest(const RegisterDomainRequest &other)
     : Route53DomainsRequest(new RegisterDomainRequestPrivate(*other.d_func(), this))
@@ -49,7 +46,7 @@ RegisterDomainRequest::RegisterDomainRequest(const RegisterDomainRequest &other)
 }
 
 /*!
- * @brief  Constructs a new RegisterDomainRequest object.
+ * Constructs a RegisterDomainRequest object.
  */
 RegisterDomainRequest::RegisterDomainRequest()
     : Route53DomainsRequest(new RegisterDomainRequestPrivate(Route53DomainsRequest::RegisterDomainAction, this))
@@ -67,14 +64,9 @@ bool RegisterDomainRequest::isValid() const
 
 
 /*!
- * @brief  Construct an RegisterDomainResponse object.
+ * Returns a RegisterDomainResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An RegisterDomainResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  Route53DomainsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * RegisterDomainRequest::response(QNetworkReply * const reply) const
 {
@@ -82,20 +74,17 @@ QtAws::Core::AwsAbstractResponse * RegisterDomainRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::Route53Domains::RegisterDomainRequestPrivate
+ * \brief The RegisterDomainRequestPrivate class provides private implementation for RegisterDomainRequest.
+ * \internal
  *
- * @class  RegisterDomainRequestPrivate
- *
- * @brief  Private implementation for RegisterDomainRequest.
+ * \inmodule QtAwsRoute53Domains
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new RegisterDomainRequestPrivate object.
- *
- * @param  action  Route53Domains action being performed.
- * @param  q       Pointer to this object's public RegisterDomainRequest instance.
+ * Constructs a RegisterDomainRequestPrivate object for Route53Domains \a action with,
+ * public implementation \a q.
  */
 RegisterDomainRequestPrivate::RegisterDomainRequestPrivate(
     const Route53DomainsRequest::Action action, RegisterDomainRequest * const q)
@@ -105,15 +94,10 @@ RegisterDomainRequestPrivate::RegisterDomainRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RegisterDomainRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the RegisterDomainRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public RegisterDomainRequest instance.
  */
 RegisterDomainRequestPrivate::RegisterDomainRequestPrivate(
     const RegisterDomainRequestPrivate &other, RegisterDomainRequest * const q)

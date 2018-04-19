@@ -90,6 +90,9 @@
 /*!
  * \namespace QtAws::DynamoDB
  * \brief The QtAws::DynamoDB contains stuff...
+ *
+ * \inmodule QtAwsDynamoDB
+ *
  * @todo Move this to a separate template file.
  */
 
@@ -158,7 +161,7 @@ DynamoDBClient::DynamoDBClient(
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * \a  AwsEndpoint::getEndpoint()
+ * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
 DynamoDBClient::DynamoDBClient(
     const QUrl &endpoint,

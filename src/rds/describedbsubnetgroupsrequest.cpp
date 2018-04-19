@@ -27,10 +27,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::DescribeDBSubnetGroupsRequest
- *
  * \brief The DescribeDBSubnetGroupsRequest class provides an interface for RDS DescribeDBSubnetGroups requests.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -101,9 +100,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new DescribeDBSubnetGroupsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeDBSubnetGroupsRequest::DescribeDBSubnetGroupsRequest(const DescribeDBSubnetGroupsRequest &other)
     : RDSRequest(new DescribeDBSubnetGroupsRequestPrivate(*other.d_func(), this))
@@ -112,7 +109,7 @@ DescribeDBSubnetGroupsRequest::DescribeDBSubnetGroupsRequest(const DescribeDBSub
 }
 
 /*!
- * @brief  Constructs a new DescribeDBSubnetGroupsRequest object.
+ * Constructs a DescribeDBSubnetGroupsRequest object.
  */
 DescribeDBSubnetGroupsRequest::DescribeDBSubnetGroupsRequest()
     : RDSRequest(new DescribeDBSubnetGroupsRequestPrivate(RDSRequest::DescribeDBSubnetGroupsAction, this))
@@ -130,14 +127,9 @@ bool DescribeDBSubnetGroupsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeDBSubnetGroupsResponse object.
+ * Returns a DescribeDBSubnetGroupsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeDBSubnetGroupsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RDSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeDBSubnetGroupsRequest::response(QNetworkReply * const reply) const
 {
@@ -145,20 +137,17 @@ QtAws::Core::AwsAbstractResponse * DescribeDBSubnetGroupsRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::RDS::DescribeDBSubnetGroupsRequestPrivate
+ * \brief The DescribeDBSubnetGroupsRequestPrivate class provides private implementation for DescribeDBSubnetGroupsRequest.
+ * \internal
  *
- * @class  DescribeDBSubnetGroupsRequestPrivate
- *
- * @brief  Private implementation for DescribeDBSubnetGroupsRequest.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeDBSubnetGroupsRequestPrivate object.
- *
- * @param  action  RDS action being performed.
- * @param  q       Pointer to this object's public DescribeDBSubnetGroupsRequest instance.
+ * Constructs a DescribeDBSubnetGroupsRequestPrivate object for RDS \a action with,
+ * public implementation \a q.
  */
 DescribeDBSubnetGroupsRequestPrivate::DescribeDBSubnetGroupsRequestPrivate(
     const RDSRequest::Action action, DescribeDBSubnetGroupsRequest * const q)
@@ -168,15 +157,10 @@ DescribeDBSubnetGroupsRequestPrivate::DescribeDBSubnetGroupsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeDBSubnetGroupsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeDBSubnetGroupsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeDBSubnetGroupsRequest instance.
  */
 DescribeDBSubnetGroupsRequestPrivate::DescribeDBSubnetGroupsRequestPrivate(
     const DescribeDBSubnetGroupsRequestPrivate &other, DescribeDBSubnetGroupsRequest * const q)

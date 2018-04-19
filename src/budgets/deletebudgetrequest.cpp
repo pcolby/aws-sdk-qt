@@ -27,10 +27,9 @@ namespace Budgets {
 
 /*!
  * \class QtAws::Budgets::DeleteBudgetRequest
- *
  * \brief The DeleteBudgetRequest class provides an interface for Budgets DeleteBudget requests.
  *
- * \ingroup Budgets
+ * \inmodule QtAwsBudgets
  *
  *  Budgets enable you to plan your service usage, service costs, and your RI utilization. You can also track how close your
  *  plan is to your budgeted amount or to the free tier limits. Budgets provide you with a quick way to see your
@@ -75,9 +74,7 @@ namespace Budgets {
  */
 
 /*!
- * @brief  Constructs a new DeleteBudgetRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteBudgetRequest::DeleteBudgetRequest(const DeleteBudgetRequest &other)
     : BudgetsRequest(new DeleteBudgetRequestPrivate(*other.d_func(), this))
@@ -86,7 +83,7 @@ DeleteBudgetRequest::DeleteBudgetRequest(const DeleteBudgetRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DeleteBudgetRequest object.
+ * Constructs a DeleteBudgetRequest object.
  */
 DeleteBudgetRequest::DeleteBudgetRequest()
     : BudgetsRequest(new DeleteBudgetRequestPrivate(BudgetsRequest::DeleteBudgetAction, this))
@@ -104,14 +101,9 @@ bool DeleteBudgetRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteBudgetResponse object.
+ * Returns a DeleteBudgetResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteBudgetResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  BudgetsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteBudgetRequest::response(QNetworkReply * const reply) const
 {
@@ -119,20 +111,17 @@ QtAws::Core::AwsAbstractResponse * DeleteBudgetRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::Budgets::DeleteBudgetRequestPrivate
+ * \brief The DeleteBudgetRequestPrivate class provides private implementation for DeleteBudgetRequest.
+ * \internal
  *
- * @class  DeleteBudgetRequestPrivate
- *
- * @brief  Private implementation for DeleteBudgetRequest.
+ * \inmodule QtAwsBudgets
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteBudgetRequestPrivate object.
- *
- * @param  action  Budgets action being performed.
- * @param  q       Pointer to this object's public DeleteBudgetRequest instance.
+ * Constructs a DeleteBudgetRequestPrivate object for Budgets \a action with,
+ * public implementation \a q.
  */
 DeleteBudgetRequestPrivate::DeleteBudgetRequestPrivate(
     const BudgetsRequest::Action action, DeleteBudgetRequest * const q)
@@ -142,15 +131,10 @@ DeleteBudgetRequestPrivate::DeleteBudgetRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteBudgetRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteBudgetRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteBudgetRequest instance.
  */
 DeleteBudgetRequestPrivate::DeleteBudgetRequestPrivate(
     const DeleteBudgetRequestPrivate &other, DeleteBudgetRequest * const q)

@@ -27,10 +27,9 @@ namespace DirectoryService {
 
 /*!
  * \class QtAws::DirectoryService::GetSnapshotLimitsRequest
- *
  * \brief The GetSnapshotLimitsRequest class provides an interface for DirectoryService GetSnapshotLimits requests.
  *
- * \ingroup DirectoryService
+ * \inmodule QtAwsDirectoryService
  *
  *  <fullname>AWS Directory Service</fullname>
  * 
@@ -51,9 +50,7 @@ namespace DirectoryService {
  */
 
 /*!
- * @brief  Constructs a new GetSnapshotLimitsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetSnapshotLimitsRequest::GetSnapshotLimitsRequest(const GetSnapshotLimitsRequest &other)
     : DirectoryServiceRequest(new GetSnapshotLimitsRequestPrivate(*other.d_func(), this))
@@ -62,7 +59,7 @@ GetSnapshotLimitsRequest::GetSnapshotLimitsRequest(const GetSnapshotLimitsReques
 }
 
 /*!
- * @brief  Constructs a new GetSnapshotLimitsRequest object.
+ * Constructs a GetSnapshotLimitsRequest object.
  */
 GetSnapshotLimitsRequest::GetSnapshotLimitsRequest()
     : DirectoryServiceRequest(new GetSnapshotLimitsRequestPrivate(DirectoryServiceRequest::GetSnapshotLimitsAction, this))
@@ -80,14 +77,9 @@ bool GetSnapshotLimitsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetSnapshotLimitsResponse object.
+ * Returns a GetSnapshotLimitsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetSnapshotLimitsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DirectoryServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetSnapshotLimitsRequest::response(QNetworkReply * const reply) const
 {
@@ -95,20 +87,17 @@ QtAws::Core::AwsAbstractResponse * GetSnapshotLimitsRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::DirectoryService::GetSnapshotLimitsRequestPrivate
+ * \brief The GetSnapshotLimitsRequestPrivate class provides private implementation for GetSnapshotLimitsRequest.
+ * \internal
  *
- * @class  GetSnapshotLimitsRequestPrivate
- *
- * @brief  Private implementation for GetSnapshotLimitsRequest.
+ * \inmodule QtAwsDirectoryService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetSnapshotLimitsRequestPrivate object.
- *
- * @param  action  DirectoryService action being performed.
- * @param  q       Pointer to this object's public GetSnapshotLimitsRequest instance.
+ * Constructs a GetSnapshotLimitsRequestPrivate object for DirectoryService \a action with,
+ * public implementation \a q.
  */
 GetSnapshotLimitsRequestPrivate::GetSnapshotLimitsRequestPrivate(
     const DirectoryServiceRequest::Action action, GetSnapshotLimitsRequest * const q)
@@ -118,15 +107,10 @@ GetSnapshotLimitsRequestPrivate::GetSnapshotLimitsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetSnapshotLimitsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetSnapshotLimitsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetSnapshotLimitsRequest instance.
  */
 GetSnapshotLimitsRequestPrivate::GetSnapshotLimitsRequestPrivate(
     const GetSnapshotLimitsRequestPrivate &other, GetSnapshotLimitsRequest * const q)

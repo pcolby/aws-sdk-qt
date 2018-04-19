@@ -27,10 +27,9 @@ namespace TranscribeService {
 
 /*!
  * \class QtAws::TranscribeService::GetVocabularyRequest
- *
  * \brief The GetVocabularyRequest class provides an interface for TranscribeService GetVocabulary requests.
  *
- * \ingroup TranscribeService
+ * \inmodule QtAwsTranscribeService
  *
  *  Operations and objects for transcribing speech to
  *
@@ -38,9 +37,7 @@ namespace TranscribeService {
  */
 
 /*!
- * @brief  Constructs a new GetVocabularyRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetVocabularyRequest::GetVocabularyRequest(const GetVocabularyRequest &other)
     : TranscribeServiceRequest(new GetVocabularyRequestPrivate(*other.d_func(), this))
@@ -49,7 +46,7 @@ GetVocabularyRequest::GetVocabularyRequest(const GetVocabularyRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetVocabularyRequest object.
+ * Constructs a GetVocabularyRequest object.
  */
 GetVocabularyRequest::GetVocabularyRequest()
     : TranscribeServiceRequest(new GetVocabularyRequestPrivate(TranscribeServiceRequest::GetVocabularyAction, this))
@@ -67,14 +64,9 @@ bool GetVocabularyRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetVocabularyResponse object.
+ * Returns a GetVocabularyResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetVocabularyResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  TranscribeServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetVocabularyRequest::response(QNetworkReply * const reply) const
 {
@@ -82,20 +74,17 @@ QtAws::Core::AwsAbstractResponse * GetVocabularyRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::TranscribeService::GetVocabularyRequestPrivate
+ * \brief The GetVocabularyRequestPrivate class provides private implementation for GetVocabularyRequest.
+ * \internal
  *
- * @class  GetVocabularyRequestPrivate
- *
- * @brief  Private implementation for GetVocabularyRequest.
+ * \inmodule QtAwsTranscribeService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetVocabularyRequestPrivate object.
- *
- * @param  action  TranscribeService action being performed.
- * @param  q       Pointer to this object's public GetVocabularyRequest instance.
+ * Constructs a GetVocabularyRequestPrivate object for TranscribeService \a action with,
+ * public implementation \a q.
  */
 GetVocabularyRequestPrivate::GetVocabularyRequestPrivate(
     const TranscribeServiceRequest::Action action, GetVocabularyRequest * const q)
@@ -105,15 +94,10 @@ GetVocabularyRequestPrivate::GetVocabularyRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetVocabularyRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetVocabularyRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetVocabularyRequest instance.
  */
 GetVocabularyRequestPrivate::GetVocabularyRequestPrivate(
     const GetVocabularyRequestPrivate &other, GetVocabularyRequest * const q)

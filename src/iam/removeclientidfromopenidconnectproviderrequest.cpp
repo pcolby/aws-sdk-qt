@@ -27,10 +27,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::RemoveClientIDFromOpenIDConnectProviderRequest
- *
  * \brief The RemoveClientIDFromOpenIDConnectProviderRequest class provides an interface for IAM RemoveClientIDFromOpenIDConnectProvider requests.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -102,9 +101,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new RemoveClientIDFromOpenIDConnectProviderRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 RemoveClientIDFromOpenIDConnectProviderRequest::RemoveClientIDFromOpenIDConnectProviderRequest(const RemoveClientIDFromOpenIDConnectProviderRequest &other)
     : IAMRequest(new RemoveClientIDFromOpenIDConnectProviderRequestPrivate(*other.d_func(), this))
@@ -113,7 +110,7 @@ RemoveClientIDFromOpenIDConnectProviderRequest::RemoveClientIDFromOpenIDConnectP
 }
 
 /*!
- * @brief  Constructs a new RemoveClientIDFromOpenIDConnectProviderRequest object.
+ * Constructs a RemoveClientIDFromOpenIDConnectProviderRequest object.
  */
 RemoveClientIDFromOpenIDConnectProviderRequest::RemoveClientIDFromOpenIDConnectProviderRequest()
     : IAMRequest(new RemoveClientIDFromOpenIDConnectProviderRequestPrivate(IAMRequest::RemoveClientIDFromOpenIDConnectProviderAction, this))
@@ -131,14 +128,9 @@ bool RemoveClientIDFromOpenIDConnectProviderRequest::isValid() const
 
 
 /*!
- * @brief  Construct an RemoveClientIDFromOpenIDConnectProviderResponse object.
+ * Returns a RemoveClientIDFromOpenIDConnectProviderResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An RemoveClientIDFromOpenIDConnectProviderResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IAMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * RemoveClientIDFromOpenIDConnectProviderRequest::response(QNetworkReply * const reply) const
 {
@@ -146,20 +138,17 @@ QtAws::Core::AwsAbstractResponse * RemoveClientIDFromOpenIDConnectProviderReques
 }
 
 /*!
- * @internal
+ * \class QtAws::IAM::RemoveClientIDFromOpenIDConnectProviderRequestPrivate
+ * \brief The RemoveClientIDFromOpenIDConnectProviderRequestPrivate class provides private implementation for RemoveClientIDFromOpenIDConnectProviderRequest.
+ * \internal
  *
- * @class  RemoveClientIDFromOpenIDConnectProviderRequestPrivate
- *
- * @brief  Private implementation for RemoveClientIDFromOpenIDConnectProviderRequest.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new RemoveClientIDFromOpenIDConnectProviderRequestPrivate object.
- *
- * @param  action  IAM action being performed.
- * @param  q       Pointer to this object's public RemoveClientIDFromOpenIDConnectProviderRequest instance.
+ * Constructs a RemoveClientIDFromOpenIDConnectProviderRequestPrivate object for IAM \a action with,
+ * public implementation \a q.
  */
 RemoveClientIDFromOpenIDConnectProviderRequestPrivate::RemoveClientIDFromOpenIDConnectProviderRequestPrivate(
     const IAMRequest::Action action, RemoveClientIDFromOpenIDConnectProviderRequest * const q)
@@ -169,15 +158,10 @@ RemoveClientIDFromOpenIDConnectProviderRequestPrivate::RemoveClientIDFromOpenIDC
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RemoveClientIDFromOpenIDConnectProviderRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the RemoveClientIDFromOpenIDConnectProviderRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public RemoveClientIDFromOpenIDConnectProviderRequest instance.
  */
 RemoveClientIDFromOpenIDConnectProviderRequestPrivate::RemoveClientIDFromOpenIDConnectProviderRequestPrivate(
     const RemoveClientIDFromOpenIDConnectProviderRequestPrivate &other, RemoveClientIDFromOpenIDConnectProviderRequest * const q)

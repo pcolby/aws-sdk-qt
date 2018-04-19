@@ -27,10 +27,9 @@ namespace Inspector {
 
 /*!
  * \class QtAws::Inspector::DeleteAssessmentTargetRequest
- *
  * \brief The DeleteAssessmentTargetRequest class provides an interface for Inspector DeleteAssessmentTarget requests.
  *
- * \ingroup Inspector
+ * \inmodule QtAwsInspector
  *
  *  <fullname>Amazon Inspector</fullname>
  * 
@@ -42,9 +41,7 @@ namespace Inspector {
  */
 
 /*!
- * @brief  Constructs a new DeleteAssessmentTargetRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteAssessmentTargetRequest::DeleteAssessmentTargetRequest(const DeleteAssessmentTargetRequest &other)
     : InspectorRequest(new DeleteAssessmentTargetRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ DeleteAssessmentTargetRequest::DeleteAssessmentTargetRequest(const DeleteAssessm
 }
 
 /*!
- * @brief  Constructs a new DeleteAssessmentTargetRequest object.
+ * Constructs a DeleteAssessmentTargetRequest object.
  */
 DeleteAssessmentTargetRequest::DeleteAssessmentTargetRequest()
     : InspectorRequest(new DeleteAssessmentTargetRequestPrivate(InspectorRequest::DeleteAssessmentTargetAction, this))
@@ -71,14 +68,9 @@ bool DeleteAssessmentTargetRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteAssessmentTargetResponse object.
+ * Returns a DeleteAssessmentTargetResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteAssessmentTargetResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  InspectorClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteAssessmentTargetRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * DeleteAssessmentTargetRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::Inspector::DeleteAssessmentTargetRequestPrivate
+ * \brief The DeleteAssessmentTargetRequestPrivate class provides private implementation for DeleteAssessmentTargetRequest.
+ * \internal
  *
- * @class  DeleteAssessmentTargetRequestPrivate
- *
- * @brief  Private implementation for DeleteAssessmentTargetRequest.
+ * \inmodule QtAwsInspector
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteAssessmentTargetRequestPrivate object.
- *
- * @param  action  Inspector action being performed.
- * @param  q       Pointer to this object's public DeleteAssessmentTargetRequest instance.
+ * Constructs a DeleteAssessmentTargetRequestPrivate object for Inspector \a action with,
+ * public implementation \a q.
  */
 DeleteAssessmentTargetRequestPrivate::DeleteAssessmentTargetRequestPrivate(
     const InspectorRequest::Action action, DeleteAssessmentTargetRequest * const q)
@@ -109,15 +98,10 @@ DeleteAssessmentTargetRequestPrivate::DeleteAssessmentTargetRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteAssessmentTargetRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteAssessmentTargetRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteAssessmentTargetRequest instance.
  */
 DeleteAssessmentTargetRequestPrivate::DeleteAssessmentTargetRequestPrivate(
     const DeleteAssessmentTargetRequestPrivate &other, DeleteAssessmentTargetRequest * const q)

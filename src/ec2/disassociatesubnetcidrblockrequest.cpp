@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DisassociateSubnetCidrBlockRequest
- *
  * \brief The DisassociateSubnetCidrBlockRequest class provides an interface for EC2 DisassociateSubnetCidrBlock requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DisassociateSubnetCidrBlockRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DisassociateSubnetCidrBlockRequest::DisassociateSubnetCidrBlockRequest(const DisassociateSubnetCidrBlockRequest &other)
     : EC2Request(new DisassociateSubnetCidrBlockRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ DisassociateSubnetCidrBlockRequest::DisassociateSubnetCidrBlockRequest(const Dis
 }
 
 /*!
- * @brief  Constructs a new DisassociateSubnetCidrBlockRequest object.
+ * Constructs a DisassociateSubnetCidrBlockRequest object.
  */
 DisassociateSubnetCidrBlockRequest::DisassociateSubnetCidrBlockRequest()
     : EC2Request(new DisassociateSubnetCidrBlockRequestPrivate(EC2Request::DisassociateSubnetCidrBlockAction, this))
@@ -70,14 +67,9 @@ bool DisassociateSubnetCidrBlockRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DisassociateSubnetCidrBlockResponse object.
+ * Returns a DisassociateSubnetCidrBlockResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DisassociateSubnetCidrBlockResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DisassociateSubnetCidrBlockRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * DisassociateSubnetCidrBlockRequest::response(
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::DisassociateSubnetCidrBlockRequestPrivate
+ * \brief The DisassociateSubnetCidrBlockRequestPrivate class provides private implementation for DisassociateSubnetCidrBlockRequest.
+ * \internal
  *
- * @class  DisassociateSubnetCidrBlockRequestPrivate
- *
- * @brief  Private implementation for DisassociateSubnetCidrBlockRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DisassociateSubnetCidrBlockRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public DisassociateSubnetCidrBlockRequest instance.
+ * Constructs a DisassociateSubnetCidrBlockRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 DisassociateSubnetCidrBlockRequestPrivate::DisassociateSubnetCidrBlockRequestPrivate(
     const EC2Request::Action action, DisassociateSubnetCidrBlockRequest * const q)
@@ -108,15 +97,10 @@ DisassociateSubnetCidrBlockRequestPrivate::DisassociateSubnetCidrBlockRequestPri
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DisassociateSubnetCidrBlockRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DisassociateSubnetCidrBlockRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DisassociateSubnetCidrBlockRequest instance.
  */
 DisassociateSubnetCidrBlockRequestPrivate::DisassociateSubnetCidrBlockRequestPrivate(
     const DisassociateSubnetCidrBlockRequestPrivate &other, DisassociateSubnetCidrBlockRequest * const q)

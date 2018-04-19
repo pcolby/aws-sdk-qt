@@ -27,10 +27,9 @@ namespace ElasticTranscoder {
 
 /*!
  * \class QtAws::ElasticTranscoder::UpdatePipelineNotificationsRequest
- *
  * \brief The UpdatePipelineNotificationsRequest class provides an interface for ElasticTranscoder UpdatePipelineNotifications requests.
  *
- * \ingroup ElasticTranscoder
+ * \inmodule QtAwsElasticTranscoder
  *
  *  <fullname>AWS Elastic Transcoder Service</fullname>
  * 
@@ -40,9 +39,7 @@ namespace ElasticTranscoder {
  */
 
 /*!
- * @brief  Constructs a new UpdatePipelineNotificationsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdatePipelineNotificationsRequest::UpdatePipelineNotificationsRequest(const UpdatePipelineNotificationsRequest &other)
     : ElasticTranscoderRequest(new UpdatePipelineNotificationsRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ UpdatePipelineNotificationsRequest::UpdatePipelineNotificationsRequest(const Upd
 }
 
 /*!
- * @brief  Constructs a new UpdatePipelineNotificationsRequest object.
+ * Constructs a UpdatePipelineNotificationsRequest object.
  */
 UpdatePipelineNotificationsRequest::UpdatePipelineNotificationsRequest()
     : ElasticTranscoderRequest(new UpdatePipelineNotificationsRequestPrivate(ElasticTranscoderRequest::UpdatePipelineNotificationsAction, this))
@@ -69,14 +66,9 @@ bool UpdatePipelineNotificationsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdatePipelineNotificationsResponse object.
+ * Returns a UpdatePipelineNotificationsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdatePipelineNotificationsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ElasticTranscoderClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdatePipelineNotificationsRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * UpdatePipelineNotificationsRequest::response(
 }
 
 /*!
- * @internal
+ * \class QtAws::ElasticTranscoder::UpdatePipelineNotificationsRequestPrivate
+ * \brief The UpdatePipelineNotificationsRequestPrivate class provides private implementation for UpdatePipelineNotificationsRequest.
+ * \internal
  *
- * @class  UpdatePipelineNotificationsRequestPrivate
- *
- * @brief  Private implementation for UpdatePipelineNotificationsRequest.
+ * \inmodule QtAwsElasticTranscoder
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdatePipelineNotificationsRequestPrivate object.
- *
- * @param  action  ElasticTranscoder action being performed.
- * @param  q       Pointer to this object's public UpdatePipelineNotificationsRequest instance.
+ * Constructs a UpdatePipelineNotificationsRequestPrivate object for ElasticTranscoder \a action with,
+ * public implementation \a q.
  */
 UpdatePipelineNotificationsRequestPrivate::UpdatePipelineNotificationsRequestPrivate(
     const ElasticTranscoderRequest::Action action, UpdatePipelineNotificationsRequest * const q)
@@ -107,15 +96,10 @@ UpdatePipelineNotificationsRequestPrivate::UpdatePipelineNotificationsRequestPri
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdatePipelineNotificationsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdatePipelineNotificationsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdatePipelineNotificationsRequest instance.
  */
 UpdatePipelineNotificationsRequestPrivate::UpdatePipelineNotificationsRequestPrivate(
     const UpdatePipelineNotificationsRequestPrivate &other, UpdatePipelineNotificationsRequest * const q)

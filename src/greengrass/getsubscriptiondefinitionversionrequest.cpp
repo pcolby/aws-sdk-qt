@@ -27,10 +27,9 @@ namespace Greengrass {
 
 /*!
  * \class QtAws::Greengrass::GetSubscriptionDefinitionVersionRequest
- *
  * \brief The GetSubscriptionDefinitionVersionRequest class provides an interface for Greengrass GetSubscriptionDefinitionVersion requests.
  *
- * \ingroup Greengrass
+ * \inmodule QtAwsGreengrass
  *
  *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
  *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
@@ -40,9 +39,7 @@ namespace Greengrass {
  */
 
 /*!
- * @brief  Constructs a new GetSubscriptionDefinitionVersionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetSubscriptionDefinitionVersionRequest::GetSubscriptionDefinitionVersionRequest(const GetSubscriptionDefinitionVersionRequest &other)
     : GreengrassRequest(new GetSubscriptionDefinitionVersionRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ GetSubscriptionDefinitionVersionRequest::GetSubscriptionDefinitionVersionRequest
 }
 
 /*!
- * @brief  Constructs a new GetSubscriptionDefinitionVersionRequest object.
+ * Constructs a GetSubscriptionDefinitionVersionRequest object.
  */
 GetSubscriptionDefinitionVersionRequest::GetSubscriptionDefinitionVersionRequest()
     : GreengrassRequest(new GetSubscriptionDefinitionVersionRequestPrivate(GreengrassRequest::GetSubscriptionDefinitionVersionAction, this))
@@ -69,14 +66,9 @@ bool GetSubscriptionDefinitionVersionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetSubscriptionDefinitionVersionResponse object.
+ * Returns a GetSubscriptionDefinitionVersionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetSubscriptionDefinitionVersionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GreengrassClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetSubscriptionDefinitionVersionRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * GetSubscriptionDefinitionVersionRequest::resp
 }
 
 /*!
- * @internal
+ * \class QtAws::Greengrass::GetSubscriptionDefinitionVersionRequestPrivate
+ * \brief The GetSubscriptionDefinitionVersionRequestPrivate class provides private implementation for GetSubscriptionDefinitionVersionRequest.
+ * \internal
  *
- * @class  GetSubscriptionDefinitionVersionRequestPrivate
- *
- * @brief  Private implementation for GetSubscriptionDefinitionVersionRequest.
+ * \inmodule QtAwsGreengrass
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetSubscriptionDefinitionVersionRequestPrivate object.
- *
- * @param  action  Greengrass action being performed.
- * @param  q       Pointer to this object's public GetSubscriptionDefinitionVersionRequest instance.
+ * Constructs a GetSubscriptionDefinitionVersionRequestPrivate object for Greengrass \a action with,
+ * public implementation \a q.
  */
 GetSubscriptionDefinitionVersionRequestPrivate::GetSubscriptionDefinitionVersionRequestPrivate(
     const GreengrassRequest::Action action, GetSubscriptionDefinitionVersionRequest * const q)
@@ -107,15 +96,10 @@ GetSubscriptionDefinitionVersionRequestPrivate::GetSubscriptionDefinitionVersion
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetSubscriptionDefinitionVersionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetSubscriptionDefinitionVersionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetSubscriptionDefinitionVersionRequest instance.
  */
 GetSubscriptionDefinitionVersionRequestPrivate::GetSubscriptionDefinitionVersionRequestPrivate(
     const GetSubscriptionDefinitionVersionRequestPrivate &other, GetSubscriptionDefinitionVersionRequest * const q)

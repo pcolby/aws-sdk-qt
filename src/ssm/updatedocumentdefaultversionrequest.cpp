@@ -27,10 +27,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::UpdateDocumentDefaultVersionRequest
- *
  * \brief The UpdateDocumentDefaultVersionRequest class provides an interface for SSM UpdateDocumentDefaultVersion requests.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -61,9 +60,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new UpdateDocumentDefaultVersionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateDocumentDefaultVersionRequest::UpdateDocumentDefaultVersionRequest(const UpdateDocumentDefaultVersionRequest &other)
     : SSMRequest(new UpdateDocumentDefaultVersionRequestPrivate(*other.d_func(), this))
@@ -72,7 +69,7 @@ UpdateDocumentDefaultVersionRequest::UpdateDocumentDefaultVersionRequest(const U
 }
 
 /*!
- * @brief  Constructs a new UpdateDocumentDefaultVersionRequest object.
+ * Constructs a UpdateDocumentDefaultVersionRequest object.
  */
 UpdateDocumentDefaultVersionRequest::UpdateDocumentDefaultVersionRequest()
     : SSMRequest(new UpdateDocumentDefaultVersionRequestPrivate(SSMRequest::UpdateDocumentDefaultVersionAction, this))
@@ -90,14 +87,9 @@ bool UpdateDocumentDefaultVersionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateDocumentDefaultVersionResponse object.
+ * Returns a UpdateDocumentDefaultVersionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateDocumentDefaultVersionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SSMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateDocumentDefaultVersionRequest::response(QNetworkReply * const reply) const
 {
@@ -105,20 +97,17 @@ QtAws::Core::AwsAbstractResponse * UpdateDocumentDefaultVersionRequest::response
 }
 
 /*!
- * @internal
+ * \class QtAws::SSM::UpdateDocumentDefaultVersionRequestPrivate
+ * \brief The UpdateDocumentDefaultVersionRequestPrivate class provides private implementation for UpdateDocumentDefaultVersionRequest.
+ * \internal
  *
- * @class  UpdateDocumentDefaultVersionRequestPrivate
- *
- * @brief  Private implementation for UpdateDocumentDefaultVersionRequest.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateDocumentDefaultVersionRequestPrivate object.
- *
- * @param  action  SSM action being performed.
- * @param  q       Pointer to this object's public UpdateDocumentDefaultVersionRequest instance.
+ * Constructs a UpdateDocumentDefaultVersionRequestPrivate object for SSM \a action with,
+ * public implementation \a q.
  */
 UpdateDocumentDefaultVersionRequestPrivate::UpdateDocumentDefaultVersionRequestPrivate(
     const SSMRequest::Action action, UpdateDocumentDefaultVersionRequest * const q)
@@ -128,15 +117,10 @@ UpdateDocumentDefaultVersionRequestPrivate::UpdateDocumentDefaultVersionRequestP
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateDocumentDefaultVersionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateDocumentDefaultVersionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateDocumentDefaultVersionRequest instance.
  */
 UpdateDocumentDefaultVersionRequestPrivate::UpdateDocumentDefaultVersionRequestPrivate(
     const UpdateDocumentDefaultVersionRequestPrivate &other, UpdateDocumentDefaultVersionRequest * const q)

@@ -27,10 +27,9 @@ namespace CognitoIdentityProvider {
 
 /*!
  * \class QtAws::CognitoIdentityProvider::CreateUserPoolClientRequest
- *
  * \brief The CreateUserPoolClientRequest class provides an interface for CognitoIdentityProvider CreateUserPoolClient requests.
  *
- * \ingroup CognitoIdentityProvider
+ * \inmodule QtAwsCognitoIdentityProvider
  *
  *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
  *  authenticate a user to obtain tokens related to user identity and access
@@ -47,9 +46,7 @@ namespace CognitoIdentityProvider {
  */
 
 /*!
- * @brief  Constructs a new CreateUserPoolClientRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateUserPoolClientRequest::CreateUserPoolClientRequest(const CreateUserPoolClientRequest &other)
     : CognitoIdentityProviderRequest(new CreateUserPoolClientRequestPrivate(*other.d_func(), this))
@@ -58,7 +55,7 @@ CreateUserPoolClientRequest::CreateUserPoolClientRequest(const CreateUserPoolCli
 }
 
 /*!
- * @brief  Constructs a new CreateUserPoolClientRequest object.
+ * Constructs a CreateUserPoolClientRequest object.
  */
 CreateUserPoolClientRequest::CreateUserPoolClientRequest()
     : CognitoIdentityProviderRequest(new CreateUserPoolClientRequestPrivate(CognitoIdentityProviderRequest::CreateUserPoolClientAction, this))
@@ -76,14 +73,9 @@ bool CreateUserPoolClientRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateUserPoolClientResponse object.
+ * Returns a CreateUserPoolClientResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateUserPoolClientResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CognitoIdentityProviderClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateUserPoolClientRequest::response(QNetworkReply * const reply) const
 {
@@ -91,20 +83,17 @@ QtAws::Core::AwsAbstractResponse * CreateUserPoolClientRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::CognitoIdentityProvider::CreateUserPoolClientRequestPrivate
+ * \brief The CreateUserPoolClientRequestPrivate class provides private implementation for CreateUserPoolClientRequest.
+ * \internal
  *
- * @class  CreateUserPoolClientRequestPrivate
- *
- * @brief  Private implementation for CreateUserPoolClientRequest.
+ * \inmodule QtAwsCognitoIdentityProvider
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateUserPoolClientRequestPrivate object.
- *
- * @param  action  CognitoIdentityProvider action being performed.
- * @param  q       Pointer to this object's public CreateUserPoolClientRequest instance.
+ * Constructs a CreateUserPoolClientRequestPrivate object for CognitoIdentityProvider \a action with,
+ * public implementation \a q.
  */
 CreateUserPoolClientRequestPrivate::CreateUserPoolClientRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, CreateUserPoolClientRequest * const q)
@@ -114,15 +103,10 @@ CreateUserPoolClientRequestPrivate::CreateUserPoolClientRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateUserPoolClientRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateUserPoolClientRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateUserPoolClientRequest instance.
  */
 CreateUserPoolClientRequestPrivate::CreateUserPoolClientRequestPrivate(
     const CreateUserPoolClientRequestPrivate &other, CreateUserPoolClientRequest * const q)

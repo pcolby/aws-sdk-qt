@@ -27,10 +27,9 @@ namespace Snowball {
 
 /*!
  * \class QtAws::Snowball::CancelJobRequest
- *
  * \brief The CancelJobRequest class provides an interface for Snowball CancelJob requests.
  *
- * \ingroup Snowball
+ * \inmodule QtAwsSnowball
  *
  *  AWS Snowball is a petabyte-scale data transport solution that uses secure appliances to transfer large amounts of data
  *  between your on-premises data centers and Amazon Simple Storage Service (Amazon S3). The Snowball commands described
@@ -43,9 +42,7 @@ namespace Snowball {
  */
 
 /*!
- * @brief  Constructs a new CancelJobRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CancelJobRequest::CancelJobRequest(const CancelJobRequest &other)
     : SnowballRequest(new CancelJobRequestPrivate(*other.d_func(), this))
@@ -54,7 +51,7 @@ CancelJobRequest::CancelJobRequest(const CancelJobRequest &other)
 }
 
 /*!
- * @brief  Constructs a new CancelJobRequest object.
+ * Constructs a CancelJobRequest object.
  */
 CancelJobRequest::CancelJobRequest()
     : SnowballRequest(new CancelJobRequestPrivate(SnowballRequest::CancelJobAction, this))
@@ -72,14 +69,9 @@ bool CancelJobRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CancelJobResponse object.
+ * Returns a CancelJobResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CancelJobResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SnowballClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CancelJobRequest::response(QNetworkReply * const reply) const
 {
@@ -87,20 +79,17 @@ QtAws::Core::AwsAbstractResponse * CancelJobRequest::response(QNetworkReply * co
 }
 
 /*!
- * @internal
+ * \class QtAws::Snowball::CancelJobRequestPrivate
+ * \brief The CancelJobRequestPrivate class provides private implementation for CancelJobRequest.
+ * \internal
  *
- * @class  CancelJobRequestPrivate
- *
- * @brief  Private implementation for CancelJobRequest.
+ * \inmodule QtAwsSnowball
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CancelJobRequestPrivate object.
- *
- * @param  action  Snowball action being performed.
- * @param  q       Pointer to this object's public CancelJobRequest instance.
+ * Constructs a CancelJobRequestPrivate object for Snowball \a action with,
+ * public implementation \a q.
  */
 CancelJobRequestPrivate::CancelJobRequestPrivate(
     const SnowballRequest::Action action, CancelJobRequest * const q)
@@ -110,15 +99,10 @@ CancelJobRequestPrivate::CancelJobRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CancelJobRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CancelJobRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CancelJobRequest instance.
  */
 CancelJobRequestPrivate::CancelJobRequestPrivate(
     const CancelJobRequestPrivate &other, CancelJobRequest * const q)

@@ -27,10 +27,9 @@ namespace AlexaForBusiness {
 
 /*!
  * \class QtAws::AlexaForBusiness::TagResourceRequest
- *
  * \brief The TagResourceRequest class provides an interface for AlexaForBusiness TagResource requests.
  *
- * \ingroup AlexaForBusiness
+ * \inmodule QtAwsAlexaForBusiness
  *
  *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
  *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
@@ -42,9 +41,7 @@ namespace AlexaForBusiness {
  */
 
 /*!
- * @brief  Constructs a new TagResourceRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 TagResourceRequest::TagResourceRequest(const TagResourceRequest &other)
     : AlexaForBusinessRequest(new TagResourceRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ TagResourceRequest::TagResourceRequest(const TagResourceRequest &other)
 }
 
 /*!
- * @brief  Constructs a new TagResourceRequest object.
+ * Constructs a TagResourceRequest object.
  */
 TagResourceRequest::TagResourceRequest()
     : AlexaForBusinessRequest(new TagResourceRequestPrivate(AlexaForBusinessRequest::TagResourceAction, this))
@@ -71,14 +68,9 @@ bool TagResourceRequest::isValid() const
 
 
 /*!
- * @brief  Construct an TagResourceResponse object.
+ * Returns a TagResourceResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An TagResourceResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AlexaForBusinessClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * TagResourceRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * TagResourceRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::AlexaForBusiness::TagResourceRequestPrivate
+ * \brief The TagResourceRequestPrivate class provides private implementation for TagResourceRequest.
+ * \internal
  *
- * @class  TagResourceRequestPrivate
- *
- * @brief  Private implementation for TagResourceRequest.
+ * \inmodule QtAwsAlexaForBusiness
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new TagResourceRequestPrivate object.
- *
- * @param  action  AlexaForBusiness action being performed.
- * @param  q       Pointer to this object's public TagResourceRequest instance.
+ * Constructs a TagResourceRequestPrivate object for AlexaForBusiness \a action with,
+ * public implementation \a q.
  */
 TagResourceRequestPrivate::TagResourceRequestPrivate(
     const AlexaForBusinessRequest::Action action, TagResourceRequest * const q)
@@ -109,15 +98,10 @@ TagResourceRequestPrivate::TagResourceRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new TagResourceRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the TagResourceRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public TagResourceRequest instance.
  */
 TagResourceRequestPrivate::TagResourceRequestPrivate(
     const TagResourceRequestPrivate &other, TagResourceRequest * const q)

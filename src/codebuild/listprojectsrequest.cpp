@@ -27,10 +27,9 @@ namespace CodeBuild {
 
 /*!
  * \class QtAws::CodeBuild::ListProjectsRequest
- *
  * \brief The ListProjectsRequest class provides an interface for CodeBuild ListProjects requests.
  *
- * \ingroup CodeBuild
+ * \inmodule QtAwsCodeBuild
  *
  *  <fullname>AWS CodeBuild</fullname>
  * 
@@ -117,9 +116,7 @@ namespace CodeBuild {
  */
 
 /*!
- * @brief  Constructs a new ListProjectsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListProjectsRequest::ListProjectsRequest(const ListProjectsRequest &other)
     : CodeBuildRequest(new ListProjectsRequestPrivate(*other.d_func(), this))
@@ -128,7 +125,7 @@ ListProjectsRequest::ListProjectsRequest(const ListProjectsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ListProjectsRequest object.
+ * Constructs a ListProjectsRequest object.
  */
 ListProjectsRequest::ListProjectsRequest()
     : CodeBuildRequest(new ListProjectsRequestPrivate(CodeBuildRequest::ListProjectsAction, this))
@@ -146,14 +143,9 @@ bool ListProjectsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListProjectsResponse object.
+ * Returns a ListProjectsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListProjectsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CodeBuildClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListProjectsRequest::response(QNetworkReply * const reply) const
 {
@@ -161,20 +153,17 @@ QtAws::Core::AwsAbstractResponse * ListProjectsRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::CodeBuild::ListProjectsRequestPrivate
+ * \brief The ListProjectsRequestPrivate class provides private implementation for ListProjectsRequest.
+ * \internal
  *
- * @class  ListProjectsRequestPrivate
- *
- * @brief  Private implementation for ListProjectsRequest.
+ * \inmodule QtAwsCodeBuild
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListProjectsRequestPrivate object.
- *
- * @param  action  CodeBuild action being performed.
- * @param  q       Pointer to this object's public ListProjectsRequest instance.
+ * Constructs a ListProjectsRequestPrivate object for CodeBuild \a action with,
+ * public implementation \a q.
  */
 ListProjectsRequestPrivate::ListProjectsRequestPrivate(
     const CodeBuildRequest::Action action, ListProjectsRequest * const q)
@@ -184,15 +173,10 @@ ListProjectsRequestPrivate::ListProjectsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListProjectsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListProjectsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListProjectsRequest instance.
  */
 ListProjectsRequestPrivate::ListProjectsRequestPrivate(
     const ListProjectsRequestPrivate &other, ListProjectsRequest * const q)

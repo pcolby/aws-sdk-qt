@@ -27,10 +27,9 @@ namespace DirectoryService {
 
 /*!
  * \class QtAws::DirectoryService::AddIpRoutesRequest
- *
  * \brief The AddIpRoutesRequest class provides an interface for DirectoryService AddIpRoutes requests.
  *
- * \ingroup DirectoryService
+ * \inmodule QtAwsDirectoryService
  *
  *  <fullname>AWS Directory Service</fullname>
  * 
@@ -51,9 +50,7 @@ namespace DirectoryService {
  */
 
 /*!
- * @brief  Constructs a new AddIpRoutesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AddIpRoutesRequest::AddIpRoutesRequest(const AddIpRoutesRequest &other)
     : DirectoryServiceRequest(new AddIpRoutesRequestPrivate(*other.d_func(), this))
@@ -62,7 +59,7 @@ AddIpRoutesRequest::AddIpRoutesRequest(const AddIpRoutesRequest &other)
 }
 
 /*!
- * @brief  Constructs a new AddIpRoutesRequest object.
+ * Constructs a AddIpRoutesRequest object.
  */
 AddIpRoutesRequest::AddIpRoutesRequest()
     : DirectoryServiceRequest(new AddIpRoutesRequestPrivate(DirectoryServiceRequest::AddIpRoutesAction, this))
@@ -80,14 +77,9 @@ bool AddIpRoutesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AddIpRoutesResponse object.
+ * Returns a AddIpRoutesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AddIpRoutesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DirectoryServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AddIpRoutesRequest::response(QNetworkReply * const reply) const
 {
@@ -95,20 +87,17 @@ QtAws::Core::AwsAbstractResponse * AddIpRoutesRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::DirectoryService::AddIpRoutesRequestPrivate
+ * \brief The AddIpRoutesRequestPrivate class provides private implementation for AddIpRoutesRequest.
+ * \internal
  *
- * @class  AddIpRoutesRequestPrivate
- *
- * @brief  Private implementation for AddIpRoutesRequest.
+ * \inmodule QtAwsDirectoryService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AddIpRoutesRequestPrivate object.
- *
- * @param  action  DirectoryService action being performed.
- * @param  q       Pointer to this object's public AddIpRoutesRequest instance.
+ * Constructs a AddIpRoutesRequestPrivate object for DirectoryService \a action with,
+ * public implementation \a q.
  */
 AddIpRoutesRequestPrivate::AddIpRoutesRequestPrivate(
     const DirectoryServiceRequest::Action action, AddIpRoutesRequest * const q)
@@ -118,15 +107,10 @@ AddIpRoutesRequestPrivate::AddIpRoutesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AddIpRoutesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AddIpRoutesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AddIpRoutesRequest instance.
  */
 AddIpRoutesRequestPrivate::AddIpRoutesRequestPrivate(
     const AddIpRoutesRequestPrivate &other, AddIpRoutesRequest * const q)

@@ -27,10 +27,9 @@ namespace KMS {
 
 /*!
  * \class QtAws::KMS::GetParametersForImportRequest
- *
  * \brief The GetParametersForImportRequest class provides an interface for KMS GetParametersForImport requests.
  *
- * \ingroup KMS
+ * \inmodule QtAwsKMS
  *
  *  <fullname>AWS Key Management Service</fullname>
  * 
@@ -136,9 +135,7 @@ namespace KMS {
  */
 
 /*!
- * @brief  Constructs a new GetParametersForImportRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetParametersForImportRequest::GetParametersForImportRequest(const GetParametersForImportRequest &other)
     : KMSRequest(new GetParametersForImportRequestPrivate(*other.d_func(), this))
@@ -147,7 +144,7 @@ GetParametersForImportRequest::GetParametersForImportRequest(const GetParameters
 }
 
 /*!
- * @brief  Constructs a new GetParametersForImportRequest object.
+ * Constructs a GetParametersForImportRequest object.
  */
 GetParametersForImportRequest::GetParametersForImportRequest()
     : KMSRequest(new GetParametersForImportRequestPrivate(KMSRequest::GetParametersForImportAction, this))
@@ -165,14 +162,9 @@ bool GetParametersForImportRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetParametersForImportResponse object.
+ * Returns a GetParametersForImportResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetParametersForImportResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  KMSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetParametersForImportRequest::response(QNetworkReply * const reply) const
 {
@@ -180,20 +172,17 @@ QtAws::Core::AwsAbstractResponse * GetParametersForImportRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::KMS::GetParametersForImportRequestPrivate
+ * \brief The GetParametersForImportRequestPrivate class provides private implementation for GetParametersForImportRequest.
+ * \internal
  *
- * @class  GetParametersForImportRequestPrivate
- *
- * @brief  Private implementation for GetParametersForImportRequest.
+ * \inmodule QtAwsKMS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetParametersForImportRequestPrivate object.
- *
- * @param  action  KMS action being performed.
- * @param  q       Pointer to this object's public GetParametersForImportRequest instance.
+ * Constructs a GetParametersForImportRequestPrivate object for KMS \a action with,
+ * public implementation \a q.
  */
 GetParametersForImportRequestPrivate::GetParametersForImportRequestPrivate(
     const KMSRequest::Action action, GetParametersForImportRequest * const q)
@@ -203,15 +192,10 @@ GetParametersForImportRequestPrivate::GetParametersForImportRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetParametersForImportRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetParametersForImportRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetParametersForImportRequest instance.
  */
 GetParametersForImportRequestPrivate::GetParametersForImportRequestPrivate(
     const GetParametersForImportRequestPrivate &other, GetParametersForImportRequest * const q)

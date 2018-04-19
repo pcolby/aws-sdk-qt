@@ -27,10 +27,9 @@ namespace OpsWorks {
 
 /*!
  * \class QtAws::OpsWorks::DeleteAppRequest
- *
  * \brief The DeleteAppRequest class provides an interface for OpsWorks DeleteApp requests.
  *
- * \ingroup OpsWorks
+ * \inmodule QtAwsOpsWorks
  *
  *  <fullname>AWS OpsWorks</fullname>
  * 
@@ -143,9 +142,7 @@ namespace OpsWorks {
  */
 
 /*!
- * @brief  Constructs a new DeleteAppRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteAppRequest::DeleteAppRequest(const DeleteAppRequest &other)
     : OpsWorksRequest(new DeleteAppRequestPrivate(*other.d_func(), this))
@@ -154,7 +151,7 @@ DeleteAppRequest::DeleteAppRequest(const DeleteAppRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DeleteAppRequest object.
+ * Constructs a DeleteAppRequest object.
  */
 DeleteAppRequest::DeleteAppRequest()
     : OpsWorksRequest(new DeleteAppRequestPrivate(OpsWorksRequest::DeleteAppAction, this))
@@ -172,14 +169,9 @@ bool DeleteAppRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteAppResponse object.
+ * Returns a DeleteAppResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteAppResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  OpsWorksClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteAppRequest::response(QNetworkReply * const reply) const
 {
@@ -187,20 +179,17 @@ QtAws::Core::AwsAbstractResponse * DeleteAppRequest::response(QNetworkReply * co
 }
 
 /*!
- * @internal
+ * \class QtAws::OpsWorks::DeleteAppRequestPrivate
+ * \brief The DeleteAppRequestPrivate class provides private implementation for DeleteAppRequest.
+ * \internal
  *
- * @class  DeleteAppRequestPrivate
- *
- * @brief  Private implementation for DeleteAppRequest.
+ * \inmodule QtAwsOpsWorks
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteAppRequestPrivate object.
- *
- * @param  action  OpsWorks action being performed.
- * @param  q       Pointer to this object's public DeleteAppRequest instance.
+ * Constructs a DeleteAppRequestPrivate object for OpsWorks \a action with,
+ * public implementation \a q.
  */
 DeleteAppRequestPrivate::DeleteAppRequestPrivate(
     const OpsWorksRequest::Action action, DeleteAppRequest * const q)
@@ -210,15 +199,10 @@ DeleteAppRequestPrivate::DeleteAppRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteAppRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteAppRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteAppRequest instance.
  */
 DeleteAppRequestPrivate::DeleteAppRequestPrivate(
     const DeleteAppRequestPrivate &other, DeleteAppRequest * const q)

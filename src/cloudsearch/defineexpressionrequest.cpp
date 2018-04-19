@@ -27,10 +27,9 @@ namespace CloudSearch {
 
 /*!
  * \class QtAws::CloudSearch::DefineExpressionRequest
- *
  * \brief The DefineExpressionRequest class provides an interface for CloudSearch DefineExpression requests.
  *
- * \ingroup CloudSearch
+ * \inmodule QtAwsCloudSearch
  *
  *  <fullname>Amazon CloudSearch Configuration Service</fullname>
  * 
@@ -48,9 +47,7 @@ namespace CloudSearch {
  */
 
 /*!
- * @brief  Constructs a new DefineExpressionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DefineExpressionRequest::DefineExpressionRequest(const DefineExpressionRequest &other)
     : CloudSearchRequest(new DefineExpressionRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ DefineExpressionRequest::DefineExpressionRequest(const DefineExpressionRequest &
 }
 
 /*!
- * @brief  Constructs a new DefineExpressionRequest object.
+ * Constructs a DefineExpressionRequest object.
  */
 DefineExpressionRequest::DefineExpressionRequest()
     : CloudSearchRequest(new DefineExpressionRequestPrivate(CloudSearchRequest::DefineExpressionAction, this))
@@ -77,14 +74,9 @@ bool DefineExpressionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DefineExpressionResponse object.
+ * Returns a DefineExpressionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DefineExpressionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudSearchClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DefineExpressionRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * DefineExpressionRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudSearch::DefineExpressionRequestPrivate
+ * \brief The DefineExpressionRequestPrivate class provides private implementation for DefineExpressionRequest.
+ * \internal
  *
- * @class  DefineExpressionRequestPrivate
- *
- * @brief  Private implementation for DefineExpressionRequest.
+ * \inmodule QtAwsCloudSearch
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DefineExpressionRequestPrivate object.
- *
- * @param  action  CloudSearch action being performed.
- * @param  q       Pointer to this object's public DefineExpressionRequest instance.
+ * Constructs a DefineExpressionRequestPrivate object for CloudSearch \a action with,
+ * public implementation \a q.
  */
 DefineExpressionRequestPrivate::DefineExpressionRequestPrivate(
     const CloudSearchRequest::Action action, DefineExpressionRequest * const q)
@@ -115,15 +104,10 @@ DefineExpressionRequestPrivate::DefineExpressionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DefineExpressionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DefineExpressionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DefineExpressionRequest instance.
  */
 DefineExpressionRequestPrivate::DefineExpressionRequestPrivate(
     const DefineExpressionRequestPrivate &other, DefineExpressionRequest * const q)

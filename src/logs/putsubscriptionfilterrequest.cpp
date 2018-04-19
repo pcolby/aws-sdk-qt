@@ -27,10 +27,9 @@ namespace CloudWatchLogs {
 
 /*!
  * \class QtAws::CloudWatchLogs::PutSubscriptionFilterRequest
- *
  * \brief The PutSubscriptionFilterRequest class provides an interface for CloudWatchLogs PutSubscriptionFilter requests.
  *
- * \ingroup CloudWatchLogs
+ * \inmodule QtAwsCloudWatchLogs
  *
  *  You can use Amazon CloudWatch Logs to monitor, store, and access your log files from Amazon EC2 instances, AWS
  *  CloudTrail, or other sources. You can then retrieve the associated log data from CloudWatch Logs using the CloudWatch
@@ -66,9 +65,7 @@ namespace CloudWatchLogs {
  */
 
 /*!
- * @brief  Constructs a new PutSubscriptionFilterRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 PutSubscriptionFilterRequest::PutSubscriptionFilterRequest(const PutSubscriptionFilterRequest &other)
     : CloudWatchLogsRequest(new PutSubscriptionFilterRequestPrivate(*other.d_func(), this))
@@ -77,7 +74,7 @@ PutSubscriptionFilterRequest::PutSubscriptionFilterRequest(const PutSubscription
 }
 
 /*!
- * @brief  Constructs a new PutSubscriptionFilterRequest object.
+ * Constructs a PutSubscriptionFilterRequest object.
  */
 PutSubscriptionFilterRequest::PutSubscriptionFilterRequest()
     : CloudWatchLogsRequest(new PutSubscriptionFilterRequestPrivate(CloudWatchLogsRequest::PutSubscriptionFilterAction, this))
@@ -95,14 +92,9 @@ bool PutSubscriptionFilterRequest::isValid() const
 
 
 /*!
- * @brief  Construct an PutSubscriptionFilterResponse object.
+ * Returns a PutSubscriptionFilterResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An PutSubscriptionFilterResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudWatchLogsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * PutSubscriptionFilterRequest::response(QNetworkReply * const reply) const
 {
@@ -110,20 +102,17 @@ QtAws::Core::AwsAbstractResponse * PutSubscriptionFilterRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudWatchLogs::PutSubscriptionFilterRequestPrivate
+ * \brief The PutSubscriptionFilterRequestPrivate class provides private implementation for PutSubscriptionFilterRequest.
+ * \internal
  *
- * @class  PutSubscriptionFilterRequestPrivate
- *
- * @brief  Private implementation for PutSubscriptionFilterRequest.
+ * \inmodule QtAwsCloudWatchLogs
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new PutSubscriptionFilterRequestPrivate object.
- *
- * @param  action  CloudWatchLogs action being performed.
- * @param  q       Pointer to this object's public PutSubscriptionFilterRequest instance.
+ * Constructs a PutSubscriptionFilterRequestPrivate object for CloudWatchLogs \a action with,
+ * public implementation \a q.
  */
 PutSubscriptionFilterRequestPrivate::PutSubscriptionFilterRequestPrivate(
     const CloudWatchLogsRequest::Action action, PutSubscriptionFilterRequest * const q)
@@ -133,15 +122,10 @@ PutSubscriptionFilterRequestPrivate::PutSubscriptionFilterRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutSubscriptionFilterRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the PutSubscriptionFilterRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public PutSubscriptionFilterRequest instance.
  */
 PutSubscriptionFilterRequestPrivate::PutSubscriptionFilterRequestPrivate(
     const PutSubscriptionFilterRequestPrivate &other, PutSubscriptionFilterRequest * const q)

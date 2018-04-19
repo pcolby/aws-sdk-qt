@@ -27,10 +27,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::PutInventoryRequest
- *
  * \brief The PutInventoryRequest class provides an interface for SSM PutInventory requests.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -61,9 +60,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new PutInventoryRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 PutInventoryRequest::PutInventoryRequest(const PutInventoryRequest &other)
     : SSMRequest(new PutInventoryRequestPrivate(*other.d_func(), this))
@@ -72,7 +69,7 @@ PutInventoryRequest::PutInventoryRequest(const PutInventoryRequest &other)
 }
 
 /*!
- * @brief  Constructs a new PutInventoryRequest object.
+ * Constructs a PutInventoryRequest object.
  */
 PutInventoryRequest::PutInventoryRequest()
     : SSMRequest(new PutInventoryRequestPrivate(SSMRequest::PutInventoryAction, this))
@@ -90,14 +87,9 @@ bool PutInventoryRequest::isValid() const
 
 
 /*!
- * @brief  Construct an PutInventoryResponse object.
+ * Returns a PutInventoryResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An PutInventoryResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SSMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * PutInventoryRequest::response(QNetworkReply * const reply) const
 {
@@ -105,20 +97,17 @@ QtAws::Core::AwsAbstractResponse * PutInventoryRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::SSM::PutInventoryRequestPrivate
+ * \brief The PutInventoryRequestPrivate class provides private implementation for PutInventoryRequest.
+ * \internal
  *
- * @class  PutInventoryRequestPrivate
- *
- * @brief  Private implementation for PutInventoryRequest.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new PutInventoryRequestPrivate object.
- *
- * @param  action  SSM action being performed.
- * @param  q       Pointer to this object's public PutInventoryRequest instance.
+ * Constructs a PutInventoryRequestPrivate object for SSM \a action with,
+ * public implementation \a q.
  */
 PutInventoryRequestPrivate::PutInventoryRequestPrivate(
     const SSMRequest::Action action, PutInventoryRequest * const q)
@@ -128,15 +117,10 @@ PutInventoryRequestPrivate::PutInventoryRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutInventoryRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the PutInventoryRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public PutInventoryRequest instance.
  */
 PutInventoryRequestPrivate::PutInventoryRequestPrivate(
     const PutInventoryRequestPrivate &other, PutInventoryRequest * const q)

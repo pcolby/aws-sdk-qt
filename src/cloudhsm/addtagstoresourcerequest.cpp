@@ -27,10 +27,9 @@ namespace CloudHSM {
 
 /*!
  * \class QtAws::CloudHSM::AddTagsToResourceRequest
- *
  * \brief The AddTagsToResourceRequest class provides an interface for CloudHSM AddTagsToResource requests.
  *
- * \ingroup CloudHSM
+ * \inmodule QtAwsCloudHSM
  *
  *  <fullname>AWS CloudHSM Service</fullname>
  * 
@@ -49,9 +48,7 @@ namespace CloudHSM {
  */
 
 /*!
- * @brief  Constructs a new AddTagsToResourceRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AddTagsToResourceRequest::AddTagsToResourceRequest(const AddTagsToResourceRequest &other)
     : CloudHSMRequest(new AddTagsToResourceRequestPrivate(*other.d_func(), this))
@@ -60,7 +57,7 @@ AddTagsToResourceRequest::AddTagsToResourceRequest(const AddTagsToResourceReques
 }
 
 /*!
- * @brief  Constructs a new AddTagsToResourceRequest object.
+ * Constructs a AddTagsToResourceRequest object.
  */
 AddTagsToResourceRequest::AddTagsToResourceRequest()
     : CloudHSMRequest(new AddTagsToResourceRequestPrivate(CloudHSMRequest::AddTagsToResourceAction, this))
@@ -78,14 +75,9 @@ bool AddTagsToResourceRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AddTagsToResourceResponse object.
+ * Returns a AddTagsToResourceResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AddTagsToResourceResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudHSMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AddTagsToResourceRequest::response(QNetworkReply * const reply) const
 {
@@ -93,20 +85,17 @@ QtAws::Core::AwsAbstractResponse * AddTagsToResourceRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudHSM::AddTagsToResourceRequestPrivate
+ * \brief The AddTagsToResourceRequestPrivate class provides private implementation for AddTagsToResourceRequest.
+ * \internal
  *
- * @class  AddTagsToResourceRequestPrivate
- *
- * @brief  Private implementation for AddTagsToResourceRequest.
+ * \inmodule QtAwsCloudHSM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AddTagsToResourceRequestPrivate object.
- *
- * @param  action  CloudHSM action being performed.
- * @param  q       Pointer to this object's public AddTagsToResourceRequest instance.
+ * Constructs a AddTagsToResourceRequestPrivate object for CloudHSM \a action with,
+ * public implementation \a q.
  */
 AddTagsToResourceRequestPrivate::AddTagsToResourceRequestPrivate(
     const CloudHSMRequest::Action action, AddTagsToResourceRequest * const q)
@@ -116,15 +105,10 @@ AddTagsToResourceRequestPrivate::AddTagsToResourceRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AddTagsToResourceRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AddTagsToResourceRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AddTagsToResourceRequest instance.
  */
 AddTagsToResourceRequestPrivate::AddTagsToResourceRequestPrivate(
     const AddTagsToResourceRequestPrivate &other, AddTagsToResourceRequest * const q)

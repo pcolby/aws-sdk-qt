@@ -27,10 +27,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::StopAutomationExecutionRequest
- *
  * \brief The StopAutomationExecutionRequest class provides an interface for SSM StopAutomationExecution requests.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -61,9 +60,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new StopAutomationExecutionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 StopAutomationExecutionRequest::StopAutomationExecutionRequest(const StopAutomationExecutionRequest &other)
     : SSMRequest(new StopAutomationExecutionRequestPrivate(*other.d_func(), this))
@@ -72,7 +69,7 @@ StopAutomationExecutionRequest::StopAutomationExecutionRequest(const StopAutomat
 }
 
 /*!
- * @brief  Constructs a new StopAutomationExecutionRequest object.
+ * Constructs a StopAutomationExecutionRequest object.
  */
 StopAutomationExecutionRequest::StopAutomationExecutionRequest()
     : SSMRequest(new StopAutomationExecutionRequestPrivate(SSMRequest::StopAutomationExecutionAction, this))
@@ -90,14 +87,9 @@ bool StopAutomationExecutionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an StopAutomationExecutionResponse object.
+ * Returns a StopAutomationExecutionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An StopAutomationExecutionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SSMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * StopAutomationExecutionRequest::response(QNetworkReply * const reply) const
 {
@@ -105,20 +97,17 @@ QtAws::Core::AwsAbstractResponse * StopAutomationExecutionRequest::response(QNet
 }
 
 /*!
- * @internal
+ * \class QtAws::SSM::StopAutomationExecutionRequestPrivate
+ * \brief The StopAutomationExecutionRequestPrivate class provides private implementation for StopAutomationExecutionRequest.
+ * \internal
  *
- * @class  StopAutomationExecutionRequestPrivate
- *
- * @brief  Private implementation for StopAutomationExecutionRequest.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new StopAutomationExecutionRequestPrivate object.
- *
- * @param  action  SSM action being performed.
- * @param  q       Pointer to this object's public StopAutomationExecutionRequest instance.
+ * Constructs a StopAutomationExecutionRequestPrivate object for SSM \a action with,
+ * public implementation \a q.
  */
 StopAutomationExecutionRequestPrivate::StopAutomationExecutionRequestPrivate(
     const SSMRequest::Action action, StopAutomationExecutionRequest * const q)
@@ -128,15 +117,10 @@ StopAutomationExecutionRequestPrivate::StopAutomationExecutionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StopAutomationExecutionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the StopAutomationExecutionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public StopAutomationExecutionRequest instance.
  */
 StopAutomationExecutionRequestPrivate::StopAutomationExecutionRequestPrivate(
     const StopAutomationExecutionRequestPrivate &other, StopAutomationExecutionRequest * const q)

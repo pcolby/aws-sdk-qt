@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DescribeLaunchTemplateVersionsRequest
- *
  * \brief The DescribeLaunchTemplateVersionsRequest class provides an interface for EC2 DescribeLaunchTemplateVersions requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DescribeLaunchTemplateVersionsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeLaunchTemplateVersionsRequest::DescribeLaunchTemplateVersionsRequest(const DescribeLaunchTemplateVersionsRequest &other)
     : EC2Request(new DescribeLaunchTemplateVersionsRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ DescribeLaunchTemplateVersionsRequest::DescribeLaunchTemplateVersionsRequest(con
 }
 
 /*!
- * @brief  Constructs a new DescribeLaunchTemplateVersionsRequest object.
+ * Constructs a DescribeLaunchTemplateVersionsRequest object.
  */
 DescribeLaunchTemplateVersionsRequest::DescribeLaunchTemplateVersionsRequest()
     : EC2Request(new DescribeLaunchTemplateVersionsRequestPrivate(EC2Request::DescribeLaunchTemplateVersionsAction, this))
@@ -70,14 +67,9 @@ bool DescribeLaunchTemplateVersionsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeLaunchTemplateVersionsResponse object.
+ * Returns a DescribeLaunchTemplateVersionsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeLaunchTemplateVersionsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeLaunchTemplateVersionsRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * DescribeLaunchTemplateVersionsRequest::respon
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::DescribeLaunchTemplateVersionsRequestPrivate
+ * \brief The DescribeLaunchTemplateVersionsRequestPrivate class provides private implementation for DescribeLaunchTemplateVersionsRequest.
+ * \internal
  *
- * @class  DescribeLaunchTemplateVersionsRequestPrivate
- *
- * @brief  Private implementation for DescribeLaunchTemplateVersionsRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeLaunchTemplateVersionsRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public DescribeLaunchTemplateVersionsRequest instance.
+ * Constructs a DescribeLaunchTemplateVersionsRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 DescribeLaunchTemplateVersionsRequestPrivate::DescribeLaunchTemplateVersionsRequestPrivate(
     const EC2Request::Action action, DescribeLaunchTemplateVersionsRequest * const q)
@@ -108,15 +97,10 @@ DescribeLaunchTemplateVersionsRequestPrivate::DescribeLaunchTemplateVersionsRequ
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeLaunchTemplateVersionsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeLaunchTemplateVersionsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeLaunchTemplateVersionsRequest instance.
  */
 DescribeLaunchTemplateVersionsRequestPrivate::DescribeLaunchTemplateVersionsRequestPrivate(
     const DescribeLaunchTemplateVersionsRequestPrivate &other, DescribeLaunchTemplateVersionsRequest * const q)

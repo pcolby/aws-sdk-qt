@@ -27,10 +27,9 @@ namespace DynamoDB {
 
 /*!
  * \class QtAws::DynamoDB::DescribeLimitsRequest
- *
  * \brief The DescribeLimitsRequest class provides an interface for DynamoDB DescribeLimits requests.
  *
- * \ingroup DynamoDB
+ * \inmodule QtAwsDynamoDB
  *
  *  <fullname>Amazon DynamoDB</fullname>
  * 
@@ -56,9 +55,7 @@ namespace DynamoDB {
  */
 
 /*!
- * @brief  Constructs a new DescribeLimitsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeLimitsRequest::DescribeLimitsRequest(const DescribeLimitsRequest &other)
     : DynamoDBRequest(new DescribeLimitsRequestPrivate(*other.d_func(), this))
@@ -67,7 +64,7 @@ DescribeLimitsRequest::DescribeLimitsRequest(const DescribeLimitsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DescribeLimitsRequest object.
+ * Constructs a DescribeLimitsRequest object.
  */
 DescribeLimitsRequest::DescribeLimitsRequest()
     : DynamoDBRequest(new DescribeLimitsRequestPrivate(DynamoDBRequest::DescribeLimitsAction, this))
@@ -85,14 +82,9 @@ bool DescribeLimitsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeLimitsResponse object.
+ * Returns a DescribeLimitsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeLimitsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DynamoDBClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeLimitsRequest::response(QNetworkReply * const reply) const
 {
@@ -100,20 +92,17 @@ QtAws::Core::AwsAbstractResponse * DescribeLimitsRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::DynamoDB::DescribeLimitsRequestPrivate
+ * \brief The DescribeLimitsRequestPrivate class provides private implementation for DescribeLimitsRequest.
+ * \internal
  *
- * @class  DescribeLimitsRequestPrivate
- *
- * @brief  Private implementation for DescribeLimitsRequest.
+ * \inmodule QtAwsDynamoDB
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeLimitsRequestPrivate object.
- *
- * @param  action  DynamoDB action being performed.
- * @param  q       Pointer to this object's public DescribeLimitsRequest instance.
+ * Constructs a DescribeLimitsRequestPrivate object for DynamoDB \a action with,
+ * public implementation \a q.
  */
 DescribeLimitsRequestPrivate::DescribeLimitsRequestPrivate(
     const DynamoDBRequest::Action action, DescribeLimitsRequest * const q)
@@ -123,15 +112,10 @@ DescribeLimitsRequestPrivate::DescribeLimitsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeLimitsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeLimitsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeLimitsRequest instance.
  */
 DescribeLimitsRequestPrivate::DescribeLimitsRequestPrivate(
     const DescribeLimitsRequestPrivate &other, DescribeLimitsRequest * const q)

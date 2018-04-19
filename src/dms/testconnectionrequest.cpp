@@ -27,10 +27,9 @@ namespace DatabaseMigrationService {
 
 /*!
  * \class QtAws::DatabaseMigrationService::TestConnectionRequest
- *
  * \brief The TestConnectionRequest class provides an interface for DatabaseMigrationService TestConnection requests.
  *
- * \ingroup DatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigrationService
  *
  *  <fullname>AWS Database Migration Service</fullname>
  * 
@@ -48,9 +47,7 @@ namespace DatabaseMigrationService {
  */
 
 /*!
- * @brief  Constructs a new TestConnectionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 TestConnectionRequest::TestConnectionRequest(const TestConnectionRequest &other)
     : DatabaseMigrationServiceRequest(new TestConnectionRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ TestConnectionRequest::TestConnectionRequest(const TestConnectionRequest &other)
 }
 
 /*!
- * @brief  Constructs a new TestConnectionRequest object.
+ * Constructs a TestConnectionRequest object.
  */
 TestConnectionRequest::TestConnectionRequest()
     : DatabaseMigrationServiceRequest(new TestConnectionRequestPrivate(DatabaseMigrationServiceRequest::TestConnectionAction, this))
@@ -77,14 +74,9 @@ bool TestConnectionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an TestConnectionResponse object.
+ * Returns a TestConnectionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An TestConnectionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DatabaseMigrationServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * TestConnectionRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * TestConnectionRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::DatabaseMigrationService::TestConnectionRequestPrivate
+ * \brief The TestConnectionRequestPrivate class provides private implementation for TestConnectionRequest.
+ * \internal
  *
- * @class  TestConnectionRequestPrivate
- *
- * @brief  Private implementation for TestConnectionRequest.
+ * \inmodule QtAwsDatabaseMigrationService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new TestConnectionRequestPrivate object.
- *
- * @param  action  DatabaseMigrationService action being performed.
- * @param  q       Pointer to this object's public TestConnectionRequest instance.
+ * Constructs a TestConnectionRequestPrivate object for DatabaseMigrationService \a action with,
+ * public implementation \a q.
  */
 TestConnectionRequestPrivate::TestConnectionRequestPrivate(
     const DatabaseMigrationServiceRequest::Action action, TestConnectionRequest * const q)
@@ -115,15 +104,10 @@ TestConnectionRequestPrivate::TestConnectionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new TestConnectionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the TestConnectionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public TestConnectionRequest instance.
  */
 TestConnectionRequestPrivate::TestConnectionRequestPrivate(
     const TestConnectionRequestPrivate &other, TestConnectionRequest * const q)

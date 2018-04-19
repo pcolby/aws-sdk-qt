@@ -27,10 +27,9 @@ namespace ECS {
 
 /*!
  * \class QtAws::ECS::SubmitTaskStateChangeRequest
- *
  * \brief The SubmitTaskStateChangeRequest class provides an interface for ECS SubmitTaskStateChange requests.
  *
- * \ingroup ECS
+ * \inmodule QtAwsECS
  *
  *  Amazon Elastic Container Service (Amazon ECS) is a highly scalable, fast, container management service that makes it
  *  easy to run, stop, and manage Docker containers on a cluster. You can host your cluster on a serverless infrastructure
@@ -54,9 +53,7 @@ namespace ECS {
  */
 
 /*!
- * @brief  Constructs a new SubmitTaskStateChangeRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 SubmitTaskStateChangeRequest::SubmitTaskStateChangeRequest(const SubmitTaskStateChangeRequest &other)
     : ECSRequest(new SubmitTaskStateChangeRequestPrivate(*other.d_func(), this))
@@ -65,7 +62,7 @@ SubmitTaskStateChangeRequest::SubmitTaskStateChangeRequest(const SubmitTaskState
 }
 
 /*!
- * @brief  Constructs a new SubmitTaskStateChangeRequest object.
+ * Constructs a SubmitTaskStateChangeRequest object.
  */
 SubmitTaskStateChangeRequest::SubmitTaskStateChangeRequest()
     : ECSRequest(new SubmitTaskStateChangeRequestPrivate(ECSRequest::SubmitTaskStateChangeAction, this))
@@ -83,14 +80,9 @@ bool SubmitTaskStateChangeRequest::isValid() const
 
 
 /*!
- * @brief  Construct an SubmitTaskStateChangeResponse object.
+ * Returns a SubmitTaskStateChangeResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An SubmitTaskStateChangeResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ECSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * SubmitTaskStateChangeRequest::response(QNetworkReply * const reply) const
 {
@@ -98,20 +90,17 @@ QtAws::Core::AwsAbstractResponse * SubmitTaskStateChangeRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::ECS::SubmitTaskStateChangeRequestPrivate
+ * \brief The SubmitTaskStateChangeRequestPrivate class provides private implementation for SubmitTaskStateChangeRequest.
+ * \internal
  *
- * @class  SubmitTaskStateChangeRequestPrivate
- *
- * @brief  Private implementation for SubmitTaskStateChangeRequest.
+ * \inmodule QtAwsECS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new SubmitTaskStateChangeRequestPrivate object.
- *
- * @param  action  ECS action being performed.
- * @param  q       Pointer to this object's public SubmitTaskStateChangeRequest instance.
+ * Constructs a SubmitTaskStateChangeRequestPrivate object for ECS \a action with,
+ * public implementation \a q.
  */
 SubmitTaskStateChangeRequestPrivate::SubmitTaskStateChangeRequestPrivate(
     const ECSRequest::Action action, SubmitTaskStateChangeRequest * const q)
@@ -121,15 +110,10 @@ SubmitTaskStateChangeRequestPrivate::SubmitTaskStateChangeRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SubmitTaskStateChangeRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the SubmitTaskStateChangeRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public SubmitTaskStateChangeRequest instance.
  */
 SubmitTaskStateChangeRequestPrivate::SubmitTaskStateChangeRequestPrivate(
     const SubmitTaskStateChangeRequestPrivate &other, SubmitTaskStateChangeRequest * const q)

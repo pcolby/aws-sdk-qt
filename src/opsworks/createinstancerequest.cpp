@@ -27,10 +27,9 @@ namespace OpsWorks {
 
 /*!
  * \class QtAws::OpsWorks::CreateInstanceRequest
- *
  * \brief The CreateInstanceRequest class provides an interface for OpsWorks CreateInstance requests.
  *
- * \ingroup OpsWorks
+ * \inmodule QtAwsOpsWorks
  *
  *  <fullname>AWS OpsWorks</fullname>
  * 
@@ -143,9 +142,7 @@ namespace OpsWorks {
  */
 
 /*!
- * @brief  Constructs a new CreateInstanceRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateInstanceRequest::CreateInstanceRequest(const CreateInstanceRequest &other)
     : OpsWorksRequest(new CreateInstanceRequestPrivate(*other.d_func(), this))
@@ -154,7 +151,7 @@ CreateInstanceRequest::CreateInstanceRequest(const CreateInstanceRequest &other)
 }
 
 /*!
- * @brief  Constructs a new CreateInstanceRequest object.
+ * Constructs a CreateInstanceRequest object.
  */
 CreateInstanceRequest::CreateInstanceRequest()
     : OpsWorksRequest(new CreateInstanceRequestPrivate(OpsWorksRequest::CreateInstanceAction, this))
@@ -172,14 +169,9 @@ bool CreateInstanceRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateInstanceResponse object.
+ * Returns a CreateInstanceResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateInstanceResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  OpsWorksClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateInstanceRequest::response(QNetworkReply * const reply) const
 {
@@ -187,20 +179,17 @@ QtAws::Core::AwsAbstractResponse * CreateInstanceRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::OpsWorks::CreateInstanceRequestPrivate
+ * \brief The CreateInstanceRequestPrivate class provides private implementation for CreateInstanceRequest.
+ * \internal
  *
- * @class  CreateInstanceRequestPrivate
- *
- * @brief  Private implementation for CreateInstanceRequest.
+ * \inmodule QtAwsOpsWorks
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateInstanceRequestPrivate object.
- *
- * @param  action  OpsWorks action being performed.
- * @param  q       Pointer to this object's public CreateInstanceRequest instance.
+ * Constructs a CreateInstanceRequestPrivate object for OpsWorks \a action with,
+ * public implementation \a q.
  */
 CreateInstanceRequestPrivate::CreateInstanceRequestPrivate(
     const OpsWorksRequest::Action action, CreateInstanceRequest * const q)
@@ -210,15 +199,10 @@ CreateInstanceRequestPrivate::CreateInstanceRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateInstanceRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateInstanceRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateInstanceRequest instance.
  */
 CreateInstanceRequestPrivate::CreateInstanceRequestPrivate(
     const CreateInstanceRequestPrivate &other, CreateInstanceRequest * const q)

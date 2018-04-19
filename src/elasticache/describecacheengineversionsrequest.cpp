@@ -27,10 +27,9 @@ namespace ElastiCache {
 
 /*!
  * \class QtAws::ElastiCache::DescribeCacheEngineVersionsRequest
- *
  * \brief The DescribeCacheEngineVersionsRequest class provides an interface for ElastiCache DescribeCacheEngineVersions requests.
  *
- * \ingroup ElastiCache
+ * \inmodule QtAwsElastiCache
  *
  *  <fullname>Amazon ElastiCache</fullname>
  * 
@@ -51,9 +50,7 @@ namespace ElastiCache {
  */
 
 /*!
- * @brief  Constructs a new DescribeCacheEngineVersionsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeCacheEngineVersionsRequest::DescribeCacheEngineVersionsRequest(const DescribeCacheEngineVersionsRequest &other)
     : ElastiCacheRequest(new DescribeCacheEngineVersionsRequestPrivate(*other.d_func(), this))
@@ -62,7 +59,7 @@ DescribeCacheEngineVersionsRequest::DescribeCacheEngineVersionsRequest(const Des
 }
 
 /*!
- * @brief  Constructs a new DescribeCacheEngineVersionsRequest object.
+ * Constructs a DescribeCacheEngineVersionsRequest object.
  */
 DescribeCacheEngineVersionsRequest::DescribeCacheEngineVersionsRequest()
     : ElastiCacheRequest(new DescribeCacheEngineVersionsRequestPrivate(ElastiCacheRequest::DescribeCacheEngineVersionsAction, this))
@@ -80,14 +77,9 @@ bool DescribeCacheEngineVersionsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeCacheEngineVersionsResponse object.
+ * Returns a DescribeCacheEngineVersionsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeCacheEngineVersionsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ElastiCacheClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeCacheEngineVersionsRequest::response(QNetworkReply * const reply) const
 {
@@ -95,20 +87,17 @@ QtAws::Core::AwsAbstractResponse * DescribeCacheEngineVersionsRequest::response(
 }
 
 /*!
- * @internal
+ * \class QtAws::ElastiCache::DescribeCacheEngineVersionsRequestPrivate
+ * \brief The DescribeCacheEngineVersionsRequestPrivate class provides private implementation for DescribeCacheEngineVersionsRequest.
+ * \internal
  *
- * @class  DescribeCacheEngineVersionsRequestPrivate
- *
- * @brief  Private implementation for DescribeCacheEngineVersionsRequest.
+ * \inmodule QtAwsElastiCache
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeCacheEngineVersionsRequestPrivate object.
- *
- * @param  action  ElastiCache action being performed.
- * @param  q       Pointer to this object's public DescribeCacheEngineVersionsRequest instance.
+ * Constructs a DescribeCacheEngineVersionsRequestPrivate object for ElastiCache \a action with,
+ * public implementation \a q.
  */
 DescribeCacheEngineVersionsRequestPrivate::DescribeCacheEngineVersionsRequestPrivate(
     const ElastiCacheRequest::Action action, DescribeCacheEngineVersionsRequest * const q)
@@ -118,15 +107,10 @@ DescribeCacheEngineVersionsRequestPrivate::DescribeCacheEngineVersionsRequestPri
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeCacheEngineVersionsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeCacheEngineVersionsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeCacheEngineVersionsRequest instance.
  */
 DescribeCacheEngineVersionsRequestPrivate::DescribeCacheEngineVersionsRequestPrivate(
     const DescribeCacheEngineVersionsRequestPrivate &other, DescribeCacheEngineVersionsRequest * const q)

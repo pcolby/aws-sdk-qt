@@ -27,10 +27,9 @@ namespace Redshift {
 
 /*!
  * \class QtAws::Redshift::CreateHsmClientCertificateRequest
- *
  * \brief The CreateHsmClientCertificateRequest class provides an interface for Redshift CreateHsmClientCertificate requests.
  *
- * \ingroup Redshift
+ * \inmodule QtAwsRedshift
  *
  *  <fullname>Amazon Redshift</fullname>
  * 
@@ -67,9 +66,7 @@ namespace Redshift {
  */
 
 /*!
- * @brief  Constructs a new CreateHsmClientCertificateRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateHsmClientCertificateRequest::CreateHsmClientCertificateRequest(const CreateHsmClientCertificateRequest &other)
     : RedshiftRequest(new CreateHsmClientCertificateRequestPrivate(*other.d_func(), this))
@@ -78,7 +75,7 @@ CreateHsmClientCertificateRequest::CreateHsmClientCertificateRequest(const Creat
 }
 
 /*!
- * @brief  Constructs a new CreateHsmClientCertificateRequest object.
+ * Constructs a CreateHsmClientCertificateRequest object.
  */
 CreateHsmClientCertificateRequest::CreateHsmClientCertificateRequest()
     : RedshiftRequest(new CreateHsmClientCertificateRequestPrivate(RedshiftRequest::CreateHsmClientCertificateAction, this))
@@ -96,14 +93,9 @@ bool CreateHsmClientCertificateRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateHsmClientCertificateResponse object.
+ * Returns a CreateHsmClientCertificateResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateHsmClientCertificateResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RedshiftClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateHsmClientCertificateRequest::response(QNetworkReply * const reply) const
 {
@@ -111,20 +103,17 @@ QtAws::Core::AwsAbstractResponse * CreateHsmClientCertificateRequest::response(Q
 }
 
 /*!
- * @internal
+ * \class QtAws::Redshift::CreateHsmClientCertificateRequestPrivate
+ * \brief The CreateHsmClientCertificateRequestPrivate class provides private implementation for CreateHsmClientCertificateRequest.
+ * \internal
  *
- * @class  CreateHsmClientCertificateRequestPrivate
- *
- * @brief  Private implementation for CreateHsmClientCertificateRequest.
+ * \inmodule QtAwsRedshift
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateHsmClientCertificateRequestPrivate object.
- *
- * @param  action  Redshift action being performed.
- * @param  q       Pointer to this object's public CreateHsmClientCertificateRequest instance.
+ * Constructs a CreateHsmClientCertificateRequestPrivate object for Redshift \a action with,
+ * public implementation \a q.
  */
 CreateHsmClientCertificateRequestPrivate::CreateHsmClientCertificateRequestPrivate(
     const RedshiftRequest::Action action, CreateHsmClientCertificateRequest * const q)
@@ -134,15 +123,10 @@ CreateHsmClientCertificateRequestPrivate::CreateHsmClientCertificateRequestPriva
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateHsmClientCertificateRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateHsmClientCertificateRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateHsmClientCertificateRequest instance.
  */
 CreateHsmClientCertificateRequestPrivate::CreateHsmClientCertificateRequestPrivate(
     const CreateHsmClientCertificateRequestPrivate &other, CreateHsmClientCertificateRequest * const q)

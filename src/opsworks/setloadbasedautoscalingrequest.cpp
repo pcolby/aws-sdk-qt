@@ -27,10 +27,9 @@ namespace OpsWorks {
 
 /*!
  * \class QtAws::OpsWorks::SetLoadBasedAutoScalingRequest
- *
  * \brief The SetLoadBasedAutoScalingRequest class provides an interface for OpsWorks SetLoadBasedAutoScaling requests.
  *
- * \ingroup OpsWorks
+ * \inmodule QtAwsOpsWorks
  *
  *  <fullname>AWS OpsWorks</fullname>
  * 
@@ -143,9 +142,7 @@ namespace OpsWorks {
  */
 
 /*!
- * @brief  Constructs a new SetLoadBasedAutoScalingRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 SetLoadBasedAutoScalingRequest::SetLoadBasedAutoScalingRequest(const SetLoadBasedAutoScalingRequest &other)
     : OpsWorksRequest(new SetLoadBasedAutoScalingRequestPrivate(*other.d_func(), this))
@@ -154,7 +151,7 @@ SetLoadBasedAutoScalingRequest::SetLoadBasedAutoScalingRequest(const SetLoadBase
 }
 
 /*!
- * @brief  Constructs a new SetLoadBasedAutoScalingRequest object.
+ * Constructs a SetLoadBasedAutoScalingRequest object.
  */
 SetLoadBasedAutoScalingRequest::SetLoadBasedAutoScalingRequest()
     : OpsWorksRequest(new SetLoadBasedAutoScalingRequestPrivate(OpsWorksRequest::SetLoadBasedAutoScalingAction, this))
@@ -172,14 +169,9 @@ bool SetLoadBasedAutoScalingRequest::isValid() const
 
 
 /*!
- * @brief  Construct an SetLoadBasedAutoScalingResponse object.
+ * Returns a SetLoadBasedAutoScalingResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An SetLoadBasedAutoScalingResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  OpsWorksClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * SetLoadBasedAutoScalingRequest::response(QNetworkReply * const reply) const
 {
@@ -187,20 +179,17 @@ QtAws::Core::AwsAbstractResponse * SetLoadBasedAutoScalingRequest::response(QNet
 }
 
 /*!
- * @internal
+ * \class QtAws::OpsWorks::SetLoadBasedAutoScalingRequestPrivate
+ * \brief The SetLoadBasedAutoScalingRequestPrivate class provides private implementation for SetLoadBasedAutoScalingRequest.
+ * \internal
  *
- * @class  SetLoadBasedAutoScalingRequestPrivate
- *
- * @brief  Private implementation for SetLoadBasedAutoScalingRequest.
+ * \inmodule QtAwsOpsWorks
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new SetLoadBasedAutoScalingRequestPrivate object.
- *
- * @param  action  OpsWorks action being performed.
- * @param  q       Pointer to this object's public SetLoadBasedAutoScalingRequest instance.
+ * Constructs a SetLoadBasedAutoScalingRequestPrivate object for OpsWorks \a action with,
+ * public implementation \a q.
  */
 SetLoadBasedAutoScalingRequestPrivate::SetLoadBasedAutoScalingRequestPrivate(
     const OpsWorksRequest::Action action, SetLoadBasedAutoScalingRequest * const q)
@@ -210,15 +199,10 @@ SetLoadBasedAutoScalingRequestPrivate::SetLoadBasedAutoScalingRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SetLoadBasedAutoScalingRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the SetLoadBasedAutoScalingRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public SetLoadBasedAutoScalingRequest instance.
  */
 SetLoadBasedAutoScalingRequestPrivate::SetLoadBasedAutoScalingRequestPrivate(
     const SetLoadBasedAutoScalingRequestPrivate &other, SetLoadBasedAutoScalingRequest * const q)

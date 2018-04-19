@@ -27,10 +27,9 @@ namespace Organizations {
 
 /*!
  * \class QtAws::Organizations::DescribePolicyRequest
- *
  * \brief The DescribePolicyRequest class provides an interface for Organizations DescribePolicy requests.
  *
- * \ingroup Organizations
+ * \inmodule QtAwsOrganizations
  *
  *  <fullname>AWS Organizations API Reference</fullname>
  * 
@@ -179,9 +178,7 @@ namespace Organizations {
  */
 
 /*!
- * @brief  Constructs a new DescribePolicyRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribePolicyRequest::DescribePolicyRequest(const DescribePolicyRequest &other)
     : OrganizationsRequest(new DescribePolicyRequestPrivate(*other.d_func(), this))
@@ -190,7 +187,7 @@ DescribePolicyRequest::DescribePolicyRequest(const DescribePolicyRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DescribePolicyRequest object.
+ * Constructs a DescribePolicyRequest object.
  */
 DescribePolicyRequest::DescribePolicyRequest()
     : OrganizationsRequest(new DescribePolicyRequestPrivate(OrganizationsRequest::DescribePolicyAction, this))
@@ -208,14 +205,9 @@ bool DescribePolicyRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribePolicyResponse object.
+ * Returns a DescribePolicyResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribePolicyResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  OrganizationsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribePolicyRequest::response(QNetworkReply * const reply) const
 {
@@ -223,20 +215,17 @@ QtAws::Core::AwsAbstractResponse * DescribePolicyRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::Organizations::DescribePolicyRequestPrivate
+ * \brief The DescribePolicyRequestPrivate class provides private implementation for DescribePolicyRequest.
+ * \internal
  *
- * @class  DescribePolicyRequestPrivate
- *
- * @brief  Private implementation for DescribePolicyRequest.
+ * \inmodule QtAwsOrganizations
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribePolicyRequestPrivate object.
- *
- * @param  action  Organizations action being performed.
- * @param  q       Pointer to this object's public DescribePolicyRequest instance.
+ * Constructs a DescribePolicyRequestPrivate object for Organizations \a action with,
+ * public implementation \a q.
  */
 DescribePolicyRequestPrivate::DescribePolicyRequestPrivate(
     const OrganizationsRequest::Action action, DescribePolicyRequest * const q)
@@ -246,15 +235,10 @@ DescribePolicyRequestPrivate::DescribePolicyRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribePolicyRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribePolicyRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribePolicyRequest instance.
  */
 DescribePolicyRequestPrivate::DescribePolicyRequestPrivate(
     const DescribePolicyRequestPrivate &other, DescribePolicyRequest * const q)

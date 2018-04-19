@@ -27,10 +27,9 @@ namespace ServiceCatalog {
 
 /*!
  * \class QtAws::ServiceCatalog::SearchProvisionedProductsRequest
- *
  * \brief The SearchProvisionedProductsRequest class provides an interface for ServiceCatalog SearchProvisionedProducts requests.
  *
- * \ingroup ServiceCatalog
+ * \inmodule QtAwsServiceCatalog
  *
  *  <fullname>AWS Service Catalog</fullname>
  * 
@@ -43,9 +42,7 @@ namespace ServiceCatalog {
  */
 
 /*!
- * @brief  Constructs a new SearchProvisionedProductsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 SearchProvisionedProductsRequest::SearchProvisionedProductsRequest(const SearchProvisionedProductsRequest &other)
     : ServiceCatalogRequest(new SearchProvisionedProductsRequestPrivate(*other.d_func(), this))
@@ -54,7 +51,7 @@ SearchProvisionedProductsRequest::SearchProvisionedProductsRequest(const SearchP
 }
 
 /*!
- * @brief  Constructs a new SearchProvisionedProductsRequest object.
+ * Constructs a SearchProvisionedProductsRequest object.
  */
 SearchProvisionedProductsRequest::SearchProvisionedProductsRequest()
     : ServiceCatalogRequest(new SearchProvisionedProductsRequestPrivate(ServiceCatalogRequest::SearchProvisionedProductsAction, this))
@@ -72,14 +69,9 @@ bool SearchProvisionedProductsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an SearchProvisionedProductsResponse object.
+ * Returns a SearchProvisionedProductsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An SearchProvisionedProductsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ServiceCatalogClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * SearchProvisionedProductsRequest::response(QNetworkReply * const reply) const
 {
@@ -87,20 +79,17 @@ QtAws::Core::AwsAbstractResponse * SearchProvisionedProductsRequest::response(QN
 }
 
 /*!
- * @internal
+ * \class QtAws::ServiceCatalog::SearchProvisionedProductsRequestPrivate
+ * \brief The SearchProvisionedProductsRequestPrivate class provides private implementation for SearchProvisionedProductsRequest.
+ * \internal
  *
- * @class  SearchProvisionedProductsRequestPrivate
- *
- * @brief  Private implementation for SearchProvisionedProductsRequest.
+ * \inmodule QtAwsServiceCatalog
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new SearchProvisionedProductsRequestPrivate object.
- *
- * @param  action  ServiceCatalog action being performed.
- * @param  q       Pointer to this object's public SearchProvisionedProductsRequest instance.
+ * Constructs a SearchProvisionedProductsRequestPrivate object for ServiceCatalog \a action with,
+ * public implementation \a q.
  */
 SearchProvisionedProductsRequestPrivate::SearchProvisionedProductsRequestPrivate(
     const ServiceCatalogRequest::Action action, SearchProvisionedProductsRequest * const q)
@@ -110,15 +99,10 @@ SearchProvisionedProductsRequestPrivate::SearchProvisionedProductsRequestPrivate
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SearchProvisionedProductsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the SearchProvisionedProductsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public SearchProvisionedProductsRequest instance.
  */
 SearchProvisionedProductsRequestPrivate::SearchProvisionedProductsRequestPrivate(
     const SearchProvisionedProductsRequestPrivate &other, SearchProvisionedProductsRequest * const q)

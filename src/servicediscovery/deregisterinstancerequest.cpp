@@ -27,10 +27,9 @@ namespace ServiceDiscovery {
 
 /*!
  * \class QtAws::ServiceDiscovery::DeregisterInstanceRequest
- *
  * \brief The DeregisterInstanceRequest class provides an interface for ServiceDiscovery DeregisterInstance requests.
  *
- * \ingroup ServiceDiscovery
+ * \inmodule QtAwsServiceDiscovery
  *
  *  Amazon Route 53 auto naming lets you configure public or private namespaces that your microservice applications run in.
  *  When instances of the service become available, you can call the auto naming API to register the instance, and Route 53
@@ -41,9 +40,7 @@ namespace ServiceDiscovery {
  */
 
 /*!
- * @brief  Constructs a new DeregisterInstanceRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeregisterInstanceRequest::DeregisterInstanceRequest(const DeregisterInstanceRequest &other)
     : ServiceDiscoveryRequest(new DeregisterInstanceRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ DeregisterInstanceRequest::DeregisterInstanceRequest(const DeregisterInstanceReq
 }
 
 /*!
- * @brief  Constructs a new DeregisterInstanceRequest object.
+ * Constructs a DeregisterInstanceRequest object.
  */
 DeregisterInstanceRequest::DeregisterInstanceRequest()
     : ServiceDiscoveryRequest(new DeregisterInstanceRequestPrivate(ServiceDiscoveryRequest::DeregisterInstanceAction, this))
@@ -70,14 +67,9 @@ bool DeregisterInstanceRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeregisterInstanceResponse object.
+ * Returns a DeregisterInstanceResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeregisterInstanceResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ServiceDiscoveryClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeregisterInstanceRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * DeregisterInstanceRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::ServiceDiscovery::DeregisterInstanceRequestPrivate
+ * \brief The DeregisterInstanceRequestPrivate class provides private implementation for DeregisterInstanceRequest.
+ * \internal
  *
- * @class  DeregisterInstanceRequestPrivate
- *
- * @brief  Private implementation for DeregisterInstanceRequest.
+ * \inmodule QtAwsServiceDiscovery
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeregisterInstanceRequestPrivate object.
- *
- * @param  action  ServiceDiscovery action being performed.
- * @param  q       Pointer to this object's public DeregisterInstanceRequest instance.
+ * Constructs a DeregisterInstanceRequestPrivate object for ServiceDiscovery \a action with,
+ * public implementation \a q.
  */
 DeregisterInstanceRequestPrivate::DeregisterInstanceRequestPrivate(
     const ServiceDiscoveryRequest::Action action, DeregisterInstanceRequest * const q)
@@ -108,15 +97,10 @@ DeregisterInstanceRequestPrivate::DeregisterInstanceRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeregisterInstanceRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeregisterInstanceRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeregisterInstanceRequest instance.
  */
 DeregisterInstanceRequestPrivate::DeregisterInstanceRequestPrivate(
     const DeregisterInstanceRequestPrivate &other, DeregisterInstanceRequest * const q)

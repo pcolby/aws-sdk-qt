@@ -27,10 +27,9 @@ namespace CodePipeline {
 
 /*!
  * \class QtAws::CodePipeline::PutJobSuccessResultRequest
- *
  * \brief The PutJobSuccessResultRequest class provides an interface for CodePipeline PutJobSuccessResult requests.
  *
- * \ingroup CodePipeline
+ * \inmodule QtAwsCodePipeline
  *
  *  <fullname>AWS CodePipeline</fullname>
  * 
@@ -200,9 +199,7 @@ namespace CodePipeline {
  */
 
 /*!
- * @brief  Constructs a new PutJobSuccessResultRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 PutJobSuccessResultRequest::PutJobSuccessResultRequest(const PutJobSuccessResultRequest &other)
     : CodePipelineRequest(new PutJobSuccessResultRequestPrivate(*other.d_func(), this))
@@ -211,7 +208,7 @@ PutJobSuccessResultRequest::PutJobSuccessResultRequest(const PutJobSuccessResult
 }
 
 /*!
- * @brief  Constructs a new PutJobSuccessResultRequest object.
+ * Constructs a PutJobSuccessResultRequest object.
  */
 PutJobSuccessResultRequest::PutJobSuccessResultRequest()
     : CodePipelineRequest(new PutJobSuccessResultRequestPrivate(CodePipelineRequest::PutJobSuccessResultAction, this))
@@ -229,14 +226,9 @@ bool PutJobSuccessResultRequest::isValid() const
 
 
 /*!
- * @brief  Construct an PutJobSuccessResultResponse object.
+ * Returns a PutJobSuccessResultResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An PutJobSuccessResultResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CodePipelineClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * PutJobSuccessResultRequest::response(QNetworkReply * const reply) const
 {
@@ -244,20 +236,17 @@ QtAws::Core::AwsAbstractResponse * PutJobSuccessResultRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::CodePipeline::PutJobSuccessResultRequestPrivate
+ * \brief The PutJobSuccessResultRequestPrivate class provides private implementation for PutJobSuccessResultRequest.
+ * \internal
  *
- * @class  PutJobSuccessResultRequestPrivate
- *
- * @brief  Private implementation for PutJobSuccessResultRequest.
+ * \inmodule QtAwsCodePipeline
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new PutJobSuccessResultRequestPrivate object.
- *
- * @param  action  CodePipeline action being performed.
- * @param  q       Pointer to this object's public PutJobSuccessResultRequest instance.
+ * Constructs a PutJobSuccessResultRequestPrivate object for CodePipeline \a action with,
+ * public implementation \a q.
  */
 PutJobSuccessResultRequestPrivate::PutJobSuccessResultRequestPrivate(
     const CodePipelineRequest::Action action, PutJobSuccessResultRequest * const q)
@@ -267,15 +256,10 @@ PutJobSuccessResultRequestPrivate::PutJobSuccessResultRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutJobSuccessResultRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the PutJobSuccessResultRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public PutJobSuccessResultRequest instance.
  */
 PutJobSuccessResultRequestPrivate::PutJobSuccessResultRequestPrivate(
     const PutJobSuccessResultRequestPrivate &other, PutJobSuccessResultRequest * const q)

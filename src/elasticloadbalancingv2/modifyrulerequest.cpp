@@ -27,10 +27,9 @@ namespace ElasticLoadBalancingv2 {
 
 /*!
  * \class QtAws::ElasticLoadBalancingv2::ModifyRuleRequest
- *
  * \brief The ModifyRuleRequest class provides an interface for ElasticLoadBalancingv2 ModifyRule requests.
  *
- * \ingroup ElasticLoadBalancingv2
+ * \inmodule QtAwsElasticLoadBalancingv2
  *
  *  <fullname>Elastic Load Balancing</fullname>
  * 
@@ -105,9 +104,7 @@ namespace ElasticLoadBalancingv2 {
  */
 
 /*!
- * @brief  Constructs a new ModifyRuleRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ModifyRuleRequest::ModifyRuleRequest(const ModifyRuleRequest &other)
     : ElasticLoadBalancingv2Request(new ModifyRuleRequestPrivate(*other.d_func(), this))
@@ -116,7 +113,7 @@ ModifyRuleRequest::ModifyRuleRequest(const ModifyRuleRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ModifyRuleRequest object.
+ * Constructs a ModifyRuleRequest object.
  */
 ModifyRuleRequest::ModifyRuleRequest()
     : ElasticLoadBalancingv2Request(new ModifyRuleRequestPrivate(ElasticLoadBalancingv2Request::ModifyRuleAction, this))
@@ -134,14 +131,9 @@ bool ModifyRuleRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ModifyRuleResponse object.
+ * Returns a ModifyRuleResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ModifyRuleResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ElasticLoadBalancingv2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ModifyRuleRequest::response(QNetworkReply * const reply) const
 {
@@ -149,20 +141,17 @@ QtAws::Core::AwsAbstractResponse * ModifyRuleRequest::response(QNetworkReply * c
 }
 
 /*!
- * @internal
+ * \class QtAws::ElasticLoadBalancingv2::ModifyRuleRequestPrivate
+ * \brief The ModifyRuleRequestPrivate class provides private implementation for ModifyRuleRequest.
+ * \internal
  *
- * @class  ModifyRuleRequestPrivate
- *
- * @brief  Private implementation for ModifyRuleRequest.
+ * \inmodule QtAwsElasticLoadBalancingv2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ModifyRuleRequestPrivate object.
- *
- * @param  action  ElasticLoadBalancingv2 action being performed.
- * @param  q       Pointer to this object's public ModifyRuleRequest instance.
+ * Constructs a ModifyRuleRequestPrivate object for ElasticLoadBalancingv2 \a action with,
+ * public implementation \a q.
  */
 ModifyRuleRequestPrivate::ModifyRuleRequestPrivate(
     const ElasticLoadBalancingv2Request::Action action, ModifyRuleRequest * const q)
@@ -172,15 +161,10 @@ ModifyRuleRequestPrivate::ModifyRuleRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ModifyRuleRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ModifyRuleRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ModifyRuleRequest instance.
  */
 ModifyRuleRequestPrivate::ModifyRuleRequestPrivate(
     const ModifyRuleRequestPrivate &other, ModifyRuleRequest * const q)

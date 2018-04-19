@@ -27,10 +27,9 @@ namespace CodeStar {
 
 /*!
  * \class QtAws::CodeStar::CreateUserProfileRequest
- *
  * \brief The CreateUserProfileRequest class provides an interface for CodeStar CreateUserProfile requests.
  *
- * \ingroup CodeStar
+ * \inmodule QtAwsCodeStar
  *
  *  <fullname>AWS CodeStar</fullname>
  * 
@@ -125,9 +124,7 @@ namespace CodeStar {
  */
 
 /*!
- * @brief  Constructs a new CreateUserProfileRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateUserProfileRequest::CreateUserProfileRequest(const CreateUserProfileRequest &other)
     : CodeStarRequest(new CreateUserProfileRequestPrivate(*other.d_func(), this))
@@ -136,7 +133,7 @@ CreateUserProfileRequest::CreateUserProfileRequest(const CreateUserProfileReques
 }
 
 /*!
- * @brief  Constructs a new CreateUserProfileRequest object.
+ * Constructs a CreateUserProfileRequest object.
  */
 CreateUserProfileRequest::CreateUserProfileRequest()
     : CodeStarRequest(new CreateUserProfileRequestPrivate(CodeStarRequest::CreateUserProfileAction, this))
@@ -154,14 +151,9 @@ bool CreateUserProfileRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateUserProfileResponse object.
+ * Returns a CreateUserProfileResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateUserProfileResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CodeStarClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateUserProfileRequest::response(QNetworkReply * const reply) const
 {
@@ -169,20 +161,17 @@ QtAws::Core::AwsAbstractResponse * CreateUserProfileRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::CodeStar::CreateUserProfileRequestPrivate
+ * \brief The CreateUserProfileRequestPrivate class provides private implementation for CreateUserProfileRequest.
+ * \internal
  *
- * @class  CreateUserProfileRequestPrivate
- *
- * @brief  Private implementation for CreateUserProfileRequest.
+ * \inmodule QtAwsCodeStar
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateUserProfileRequestPrivate object.
- *
- * @param  action  CodeStar action being performed.
- * @param  q       Pointer to this object's public CreateUserProfileRequest instance.
+ * Constructs a CreateUserProfileRequestPrivate object for CodeStar \a action with,
+ * public implementation \a q.
  */
 CreateUserProfileRequestPrivate::CreateUserProfileRequestPrivate(
     const CodeStarRequest::Action action, CreateUserProfileRequest * const q)
@@ -192,15 +181,10 @@ CreateUserProfileRequestPrivate::CreateUserProfileRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateUserProfileRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateUserProfileRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateUserProfileRequest instance.
  */
 CreateUserProfileRequestPrivate::CreateUserProfileRequestPrivate(
     const CreateUserProfileRequestPrivate &other, CreateUserProfileRequest * const q)

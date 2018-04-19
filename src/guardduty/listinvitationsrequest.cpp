@@ -27,19 +27,16 @@ namespace GuardDuty {
 
 /*!
  * \class QtAws::GuardDuty::ListInvitationsRequest
- *
  * \brief The ListInvitationsRequest class provides an interface for GuardDuty ListInvitations requests.
  *
- * \ingroup GuardDuty
+ * \inmodule QtAwsGuardDuty
  *
  *
  * \sa GuardDutyClient::listInvitations
  */
 
 /*!
- * @brief  Constructs a new ListInvitationsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListInvitationsRequest::ListInvitationsRequest(const ListInvitationsRequest &other)
     : GuardDutyRequest(new ListInvitationsRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ ListInvitationsRequest::ListInvitationsRequest(const ListInvitationsRequest &oth
 }
 
 /*!
- * @brief  Constructs a new ListInvitationsRequest object.
+ * Constructs a ListInvitationsRequest object.
  */
 ListInvitationsRequest::ListInvitationsRequest()
     : GuardDutyRequest(new ListInvitationsRequestPrivate(GuardDutyRequest::ListInvitationsAction, this))
@@ -66,14 +63,9 @@ bool ListInvitationsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListInvitationsResponse object.
+ * Returns a ListInvitationsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListInvitationsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GuardDutyClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListInvitationsRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * ListInvitationsRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::GuardDuty::ListInvitationsRequestPrivate
+ * \brief The ListInvitationsRequestPrivate class provides private implementation for ListInvitationsRequest.
+ * \internal
  *
- * @class  ListInvitationsRequestPrivate
- *
- * @brief  Private implementation for ListInvitationsRequest.
+ * \inmodule QtAwsGuardDuty
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListInvitationsRequestPrivate object.
- *
- * @param  action  GuardDuty action being performed.
- * @param  q       Pointer to this object's public ListInvitationsRequest instance.
+ * Constructs a ListInvitationsRequestPrivate object for GuardDuty \a action with,
+ * public implementation \a q.
  */
 ListInvitationsRequestPrivate::ListInvitationsRequestPrivate(
     const GuardDutyRequest::Action action, ListInvitationsRequest * const q)
@@ -104,15 +93,10 @@ ListInvitationsRequestPrivate::ListInvitationsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListInvitationsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListInvitationsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListInvitationsRequest instance.
  */
 ListInvitationsRequestPrivate::ListInvitationsRequestPrivate(
     const ListInvitationsRequestPrivate &other, ListInvitationsRequest * const q)

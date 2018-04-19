@@ -27,10 +27,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::GetRolePolicyRequest
- *
  * \brief The GetRolePolicyRequest class provides an interface for IAM GetRolePolicy requests.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -102,9 +101,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new GetRolePolicyRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetRolePolicyRequest::GetRolePolicyRequest(const GetRolePolicyRequest &other)
     : IAMRequest(new GetRolePolicyRequestPrivate(*other.d_func(), this))
@@ -113,7 +110,7 @@ GetRolePolicyRequest::GetRolePolicyRequest(const GetRolePolicyRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetRolePolicyRequest object.
+ * Constructs a GetRolePolicyRequest object.
  */
 GetRolePolicyRequest::GetRolePolicyRequest()
     : IAMRequest(new GetRolePolicyRequestPrivate(IAMRequest::GetRolePolicyAction, this))
@@ -131,14 +128,9 @@ bool GetRolePolicyRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetRolePolicyResponse object.
+ * Returns a GetRolePolicyResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetRolePolicyResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IAMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetRolePolicyRequest::response(QNetworkReply * const reply) const
 {
@@ -146,20 +138,17 @@ QtAws::Core::AwsAbstractResponse * GetRolePolicyRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::IAM::GetRolePolicyRequestPrivate
+ * \brief The GetRolePolicyRequestPrivate class provides private implementation for GetRolePolicyRequest.
+ * \internal
  *
- * @class  GetRolePolicyRequestPrivate
- *
- * @brief  Private implementation for GetRolePolicyRequest.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetRolePolicyRequestPrivate object.
- *
- * @param  action  IAM action being performed.
- * @param  q       Pointer to this object's public GetRolePolicyRequest instance.
+ * Constructs a GetRolePolicyRequestPrivate object for IAM \a action with,
+ * public implementation \a q.
  */
 GetRolePolicyRequestPrivate::GetRolePolicyRequestPrivate(
     const IAMRequest::Action action, GetRolePolicyRequest * const q)
@@ -169,15 +158,10 @@ GetRolePolicyRequestPrivate::GetRolePolicyRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetRolePolicyRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetRolePolicyRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetRolePolicyRequest instance.
  */
 GetRolePolicyRequestPrivate::GetRolePolicyRequestPrivate(
     const GetRolePolicyRequestPrivate &other, GetRolePolicyRequest * const q)

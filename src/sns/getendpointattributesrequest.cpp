@@ -27,10 +27,9 @@ namespace SNS {
 
 /*!
  * \class QtAws::SNS::GetEndpointAttributesRequest
- *
  * \brief The GetEndpointAttributesRequest class provides an interface for SNS GetEndpointAttributes requests.
  *
- * \ingroup SNS
+ * \inmodule QtAwsSNS
  *
  *  <fullname>Amazon Simple Notification Service</fullname>
  * 
@@ -51,9 +50,7 @@ namespace SNS {
  */
 
 /*!
- * @brief  Constructs a new GetEndpointAttributesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetEndpointAttributesRequest::GetEndpointAttributesRequest(const GetEndpointAttributesRequest &other)
     : SNSRequest(new GetEndpointAttributesRequestPrivate(*other.d_func(), this))
@@ -62,7 +59,7 @@ GetEndpointAttributesRequest::GetEndpointAttributesRequest(const GetEndpointAttr
 }
 
 /*!
- * @brief  Constructs a new GetEndpointAttributesRequest object.
+ * Constructs a GetEndpointAttributesRequest object.
  */
 GetEndpointAttributesRequest::GetEndpointAttributesRequest()
     : SNSRequest(new GetEndpointAttributesRequestPrivate(SNSRequest::GetEndpointAttributesAction, this))
@@ -80,14 +77,9 @@ bool GetEndpointAttributesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetEndpointAttributesResponse object.
+ * Returns a GetEndpointAttributesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetEndpointAttributesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SNSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetEndpointAttributesRequest::response(QNetworkReply * const reply) const
 {
@@ -95,20 +87,17 @@ QtAws::Core::AwsAbstractResponse * GetEndpointAttributesRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::SNS::GetEndpointAttributesRequestPrivate
+ * \brief The GetEndpointAttributesRequestPrivate class provides private implementation for GetEndpointAttributesRequest.
+ * \internal
  *
- * @class  GetEndpointAttributesRequestPrivate
- *
- * @brief  Private implementation for GetEndpointAttributesRequest.
+ * \inmodule QtAwsSNS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetEndpointAttributesRequestPrivate object.
- *
- * @param  action  SNS action being performed.
- * @param  q       Pointer to this object's public GetEndpointAttributesRequest instance.
+ * Constructs a GetEndpointAttributesRequestPrivate object for SNS \a action with,
+ * public implementation \a q.
  */
 GetEndpointAttributesRequestPrivate::GetEndpointAttributesRequestPrivate(
     const SNSRequest::Action action, GetEndpointAttributesRequest * const q)
@@ -118,15 +107,10 @@ GetEndpointAttributesRequestPrivate::GetEndpointAttributesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetEndpointAttributesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetEndpointAttributesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetEndpointAttributesRequest instance.
  */
 GetEndpointAttributesRequestPrivate::GetEndpointAttributesRequestPrivate(
     const GetEndpointAttributesRequestPrivate &other, GetEndpointAttributesRequest * const q)

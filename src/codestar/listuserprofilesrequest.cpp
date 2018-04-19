@@ -27,10 +27,9 @@ namespace CodeStar {
 
 /*!
  * \class QtAws::CodeStar::ListUserProfilesRequest
- *
  * \brief The ListUserProfilesRequest class provides an interface for CodeStar ListUserProfiles requests.
  *
- * \ingroup CodeStar
+ * \inmodule QtAwsCodeStar
  *
  *  <fullname>AWS CodeStar</fullname>
  * 
@@ -125,9 +124,7 @@ namespace CodeStar {
  */
 
 /*!
- * @brief  Constructs a new ListUserProfilesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListUserProfilesRequest::ListUserProfilesRequest(const ListUserProfilesRequest &other)
     : CodeStarRequest(new ListUserProfilesRequestPrivate(*other.d_func(), this))
@@ -136,7 +133,7 @@ ListUserProfilesRequest::ListUserProfilesRequest(const ListUserProfilesRequest &
 }
 
 /*!
- * @brief  Constructs a new ListUserProfilesRequest object.
+ * Constructs a ListUserProfilesRequest object.
  */
 ListUserProfilesRequest::ListUserProfilesRequest()
     : CodeStarRequest(new ListUserProfilesRequestPrivate(CodeStarRequest::ListUserProfilesAction, this))
@@ -154,14 +151,9 @@ bool ListUserProfilesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListUserProfilesResponse object.
+ * Returns a ListUserProfilesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListUserProfilesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CodeStarClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListUserProfilesRequest::response(QNetworkReply * const reply) const
 {
@@ -169,20 +161,17 @@ QtAws::Core::AwsAbstractResponse * ListUserProfilesRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::CodeStar::ListUserProfilesRequestPrivate
+ * \brief The ListUserProfilesRequestPrivate class provides private implementation for ListUserProfilesRequest.
+ * \internal
  *
- * @class  ListUserProfilesRequestPrivate
- *
- * @brief  Private implementation for ListUserProfilesRequest.
+ * \inmodule QtAwsCodeStar
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListUserProfilesRequestPrivate object.
- *
- * @param  action  CodeStar action being performed.
- * @param  q       Pointer to this object's public ListUserProfilesRequest instance.
+ * Constructs a ListUserProfilesRequestPrivate object for CodeStar \a action with,
+ * public implementation \a q.
  */
 ListUserProfilesRequestPrivate::ListUserProfilesRequestPrivate(
     const CodeStarRequest::Action action, ListUserProfilesRequest * const q)
@@ -192,15 +181,10 @@ ListUserProfilesRequestPrivate::ListUserProfilesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListUserProfilesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListUserProfilesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListUserProfilesRequest instance.
  */
 ListUserProfilesRequestPrivate::ListUserProfilesRequestPrivate(
     const ListUserProfilesRequestPrivate &other, ListUserProfilesRequest * const q)

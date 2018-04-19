@@ -27,10 +27,9 @@ namespace StorageGateway {
 
 /*!
  * \class QtAws::StorageGateway::RetrieveTapeArchiveRequest
- *
  * \brief The RetrieveTapeArchiveRequest class provides an interface for StorageGateway RetrieveTapeArchive requests.
  *
- * \ingroup StorageGateway
+ * \inmodule QtAwsStorageGateway
  *
  *  <fullname>AWS Storage Gateway Service</fullname>
  * 
@@ -106,9 +105,7 @@ namespace StorageGateway {
  */
 
 /*!
- * @brief  Constructs a new RetrieveTapeArchiveRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 RetrieveTapeArchiveRequest::RetrieveTapeArchiveRequest(const RetrieveTapeArchiveRequest &other)
     : StorageGatewayRequest(new RetrieveTapeArchiveRequestPrivate(*other.d_func(), this))
@@ -117,7 +114,7 @@ RetrieveTapeArchiveRequest::RetrieveTapeArchiveRequest(const RetrieveTapeArchive
 }
 
 /*!
- * @brief  Constructs a new RetrieveTapeArchiveRequest object.
+ * Constructs a RetrieveTapeArchiveRequest object.
  */
 RetrieveTapeArchiveRequest::RetrieveTapeArchiveRequest()
     : StorageGatewayRequest(new RetrieveTapeArchiveRequestPrivate(StorageGatewayRequest::RetrieveTapeArchiveAction, this))
@@ -135,14 +132,9 @@ bool RetrieveTapeArchiveRequest::isValid() const
 
 
 /*!
- * @brief  Construct an RetrieveTapeArchiveResponse object.
+ * Returns a RetrieveTapeArchiveResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An RetrieveTapeArchiveResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  StorageGatewayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * RetrieveTapeArchiveRequest::response(QNetworkReply * const reply) const
 {
@@ -150,20 +142,17 @@ QtAws::Core::AwsAbstractResponse * RetrieveTapeArchiveRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::StorageGateway::RetrieveTapeArchiveRequestPrivate
+ * \brief The RetrieveTapeArchiveRequestPrivate class provides private implementation for RetrieveTapeArchiveRequest.
+ * \internal
  *
- * @class  RetrieveTapeArchiveRequestPrivate
- *
- * @brief  Private implementation for RetrieveTapeArchiveRequest.
+ * \inmodule QtAwsStorageGateway
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new RetrieveTapeArchiveRequestPrivate object.
- *
- * @param  action  StorageGateway action being performed.
- * @param  q       Pointer to this object's public RetrieveTapeArchiveRequest instance.
+ * Constructs a RetrieveTapeArchiveRequestPrivate object for StorageGateway \a action with,
+ * public implementation \a q.
  */
 RetrieveTapeArchiveRequestPrivate::RetrieveTapeArchiveRequestPrivate(
     const StorageGatewayRequest::Action action, RetrieveTapeArchiveRequest * const q)
@@ -173,15 +162,10 @@ RetrieveTapeArchiveRequestPrivate::RetrieveTapeArchiveRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RetrieveTapeArchiveRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the RetrieveTapeArchiveRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public RetrieveTapeArchiveRequest instance.
  */
 RetrieveTapeArchiveRequestPrivate::RetrieveTapeArchiveRequestPrivate(
     const RetrieveTapeArchiveRequestPrivate &other, RetrieveTapeArchiveRequest * const q)

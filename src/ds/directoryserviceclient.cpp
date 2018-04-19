@@ -108,6 +108,9 @@
 /*!
  * \namespace QtAws::DirectoryService
  * \brief The QtAws::DirectoryService contains stuff...
+ *
+ * \inmodule QtAwsDirectoryService
+ *
  * @todo Move this to a separate template file.
  */
 
@@ -171,7 +174,7 @@ DirectoryServiceClient::DirectoryServiceClient(
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * \a  AwsEndpoint::getEndpoint()
+ * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
 DirectoryServiceClient::DirectoryServiceClient(
     const QUrl &endpoint,

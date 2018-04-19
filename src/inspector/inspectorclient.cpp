@@ -93,6 +93,9 @@
 /*!
  * \namespace QtAws::Inspector
  * \brief The QtAws::Inspector contains stuff...
+ *
+ * \inmodule QtAwsInspector
+ *
  * @todo Move this to a separate template file.
  */
 
@@ -147,7 +150,7 @@ InspectorClient::InspectorClient(
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * \a  AwsEndpoint::getEndpoint()
+ * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
 InspectorClient::InspectorClient(
     const QUrl &endpoint,

@@ -27,10 +27,9 @@ namespace Inspector {
 
 /*!
  * \class QtAws::Inspector::ListEventSubscriptionsRequest
- *
  * \brief The ListEventSubscriptionsRequest class provides an interface for Inspector ListEventSubscriptions requests.
  *
- * \ingroup Inspector
+ * \inmodule QtAwsInspector
  *
  *  <fullname>Amazon Inspector</fullname>
  * 
@@ -42,9 +41,7 @@ namespace Inspector {
  */
 
 /*!
- * @brief  Constructs a new ListEventSubscriptionsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListEventSubscriptionsRequest::ListEventSubscriptionsRequest(const ListEventSubscriptionsRequest &other)
     : InspectorRequest(new ListEventSubscriptionsRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ ListEventSubscriptionsRequest::ListEventSubscriptionsRequest(const ListEventSubs
 }
 
 /*!
- * @brief  Constructs a new ListEventSubscriptionsRequest object.
+ * Constructs a ListEventSubscriptionsRequest object.
  */
 ListEventSubscriptionsRequest::ListEventSubscriptionsRequest()
     : InspectorRequest(new ListEventSubscriptionsRequestPrivate(InspectorRequest::ListEventSubscriptionsAction, this))
@@ -71,14 +68,9 @@ bool ListEventSubscriptionsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListEventSubscriptionsResponse object.
+ * Returns a ListEventSubscriptionsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListEventSubscriptionsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  InspectorClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListEventSubscriptionsRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * ListEventSubscriptionsRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::Inspector::ListEventSubscriptionsRequestPrivate
+ * \brief The ListEventSubscriptionsRequestPrivate class provides private implementation for ListEventSubscriptionsRequest.
+ * \internal
  *
- * @class  ListEventSubscriptionsRequestPrivate
- *
- * @brief  Private implementation for ListEventSubscriptionsRequest.
+ * \inmodule QtAwsInspector
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListEventSubscriptionsRequestPrivate object.
- *
- * @param  action  Inspector action being performed.
- * @param  q       Pointer to this object's public ListEventSubscriptionsRequest instance.
+ * Constructs a ListEventSubscriptionsRequestPrivate object for Inspector \a action with,
+ * public implementation \a q.
  */
 ListEventSubscriptionsRequestPrivate::ListEventSubscriptionsRequestPrivate(
     const InspectorRequest::Action action, ListEventSubscriptionsRequest * const q)
@@ -109,15 +98,10 @@ ListEventSubscriptionsRequestPrivate::ListEventSubscriptionsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListEventSubscriptionsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListEventSubscriptionsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListEventSubscriptionsRequest instance.
  */
 ListEventSubscriptionsRequestPrivate::ListEventSubscriptionsRequestPrivate(
     const ListEventSubscriptionsRequestPrivate &other, ListEventSubscriptionsRequest * const q)

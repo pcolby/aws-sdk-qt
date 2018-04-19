@@ -27,10 +27,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::CreateAuthorizerRequest
- *
  * \brief The CreateAuthorizerRequest class provides an interface for IoT CreateAuthorizer requests.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -48,9 +47,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new CreateAuthorizerRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateAuthorizerRequest::CreateAuthorizerRequest(const CreateAuthorizerRequest &other)
     : IoTRequest(new CreateAuthorizerRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ CreateAuthorizerRequest::CreateAuthorizerRequest(const CreateAuthorizerRequest &
 }
 
 /*!
- * @brief  Constructs a new CreateAuthorizerRequest object.
+ * Constructs a CreateAuthorizerRequest object.
  */
 CreateAuthorizerRequest::CreateAuthorizerRequest()
     : IoTRequest(new CreateAuthorizerRequestPrivate(IoTRequest::CreateAuthorizerAction, this))
@@ -77,14 +74,9 @@ bool CreateAuthorizerRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateAuthorizerResponse object.
+ * Returns a CreateAuthorizerResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateAuthorizerResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IoTClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateAuthorizerRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * CreateAuthorizerRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::IoT::CreateAuthorizerRequestPrivate
+ * \brief The CreateAuthorizerRequestPrivate class provides private implementation for CreateAuthorizerRequest.
+ * \internal
  *
- * @class  CreateAuthorizerRequestPrivate
- *
- * @brief  Private implementation for CreateAuthorizerRequest.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateAuthorizerRequestPrivate object.
- *
- * @param  action  IoT action being performed.
- * @param  q       Pointer to this object's public CreateAuthorizerRequest instance.
+ * Constructs a CreateAuthorizerRequestPrivate object for IoT \a action with,
+ * public implementation \a q.
  */
 CreateAuthorizerRequestPrivate::CreateAuthorizerRequestPrivate(
     const IoTRequest::Action action, CreateAuthorizerRequest * const q)
@@ -115,15 +104,10 @@ CreateAuthorizerRequestPrivate::CreateAuthorizerRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateAuthorizerRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateAuthorizerRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateAuthorizerRequest instance.
  */
 CreateAuthorizerRequestPrivate::CreateAuthorizerRequestPrivate(
     const CreateAuthorizerRequestPrivate &other, CreateAuthorizerRequest * const q)

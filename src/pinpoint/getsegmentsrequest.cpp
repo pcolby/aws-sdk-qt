@@ -27,19 +27,16 @@ namespace Pinpoint {
 
 /*!
  * \class QtAws::Pinpoint::GetSegmentsRequest
- *
  * \brief The GetSegmentsRequest class provides an interface for Pinpoint GetSegments requests.
  *
- * \ingroup Pinpoint
+ * \inmodule QtAwsPinpoint
  *
  *
  * \sa PinpointClient::getSegments
  */
 
 /*!
- * @brief  Constructs a new GetSegmentsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetSegmentsRequest::GetSegmentsRequest(const GetSegmentsRequest &other)
     : PinpointRequest(new GetSegmentsRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ GetSegmentsRequest::GetSegmentsRequest(const GetSegmentsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetSegmentsRequest object.
+ * Constructs a GetSegmentsRequest object.
  */
 GetSegmentsRequest::GetSegmentsRequest()
     : PinpointRequest(new GetSegmentsRequestPrivate(PinpointRequest::GetSegmentsAction, this))
@@ -66,14 +63,9 @@ bool GetSegmentsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetSegmentsResponse object.
+ * Returns a GetSegmentsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetSegmentsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  PinpointClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetSegmentsRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * GetSegmentsRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::Pinpoint::GetSegmentsRequestPrivate
+ * \brief The GetSegmentsRequestPrivate class provides private implementation for GetSegmentsRequest.
+ * \internal
  *
- * @class  GetSegmentsRequestPrivate
- *
- * @brief  Private implementation for GetSegmentsRequest.
+ * \inmodule QtAwsPinpoint
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetSegmentsRequestPrivate object.
- *
- * @param  action  Pinpoint action being performed.
- * @param  q       Pointer to this object's public GetSegmentsRequest instance.
+ * Constructs a GetSegmentsRequestPrivate object for Pinpoint \a action with,
+ * public implementation \a q.
  */
 GetSegmentsRequestPrivate::GetSegmentsRequestPrivate(
     const PinpointRequest::Action action, GetSegmentsRequest * const q)
@@ -104,15 +93,10 @@ GetSegmentsRequestPrivate::GetSegmentsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetSegmentsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetSegmentsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetSegmentsRequest instance.
  */
 GetSegmentsRequestPrivate::GetSegmentsRequestPrivate(
     const GetSegmentsRequestPrivate &other, GetSegmentsRequest * const q)

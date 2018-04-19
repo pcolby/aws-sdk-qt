@@ -27,10 +27,9 @@ namespace AppStream {
 
 /*!
  * \class QtAws::AppStream::ListAssociatedFleetsRequest
- *
  * \brief The ListAssociatedFleetsRequest class provides an interface for AppStream ListAssociatedFleets requests.
  *
- * \ingroup AppStream
+ * \inmodule QtAwsAppStream
  *
  *  <fullname>Amazon AppStream 2.0</fullname>
  * 
@@ -40,9 +39,7 @@ namespace AppStream {
  */
 
 /*!
- * @brief  Constructs a new ListAssociatedFleetsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListAssociatedFleetsRequest::ListAssociatedFleetsRequest(const ListAssociatedFleetsRequest &other)
     : AppStreamRequest(new ListAssociatedFleetsRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ ListAssociatedFleetsRequest::ListAssociatedFleetsRequest(const ListAssociatedFle
 }
 
 /*!
- * @brief  Constructs a new ListAssociatedFleetsRequest object.
+ * Constructs a ListAssociatedFleetsRequest object.
  */
 ListAssociatedFleetsRequest::ListAssociatedFleetsRequest()
     : AppStreamRequest(new ListAssociatedFleetsRequestPrivate(AppStreamRequest::ListAssociatedFleetsAction, this))
@@ -69,14 +66,9 @@ bool ListAssociatedFleetsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListAssociatedFleetsResponse object.
+ * Returns a ListAssociatedFleetsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListAssociatedFleetsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AppStreamClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListAssociatedFleetsRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * ListAssociatedFleetsRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::AppStream::ListAssociatedFleetsRequestPrivate
+ * \brief The ListAssociatedFleetsRequestPrivate class provides private implementation for ListAssociatedFleetsRequest.
+ * \internal
  *
- * @class  ListAssociatedFleetsRequestPrivate
- *
- * @brief  Private implementation for ListAssociatedFleetsRequest.
+ * \inmodule QtAwsAppStream
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListAssociatedFleetsRequestPrivate object.
- *
- * @param  action  AppStream action being performed.
- * @param  q       Pointer to this object's public ListAssociatedFleetsRequest instance.
+ * Constructs a ListAssociatedFleetsRequestPrivate object for AppStream \a action with,
+ * public implementation \a q.
  */
 ListAssociatedFleetsRequestPrivate::ListAssociatedFleetsRequestPrivate(
     const AppStreamRequest::Action action, ListAssociatedFleetsRequest * const q)
@@ -107,15 +96,10 @@ ListAssociatedFleetsRequestPrivate::ListAssociatedFleetsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListAssociatedFleetsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListAssociatedFleetsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListAssociatedFleetsRequest instance.
  */
 ListAssociatedFleetsRequestPrivate::ListAssociatedFleetsRequestPrivate(
     const ListAssociatedFleetsRequestPrivate &other, ListAssociatedFleetsRequest * const q)

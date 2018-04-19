@@ -27,10 +27,9 @@ namespace DeviceFarm {
 
 /*!
  * \class QtAws::DeviceFarm::StopRemoteAccessSessionRequest
- *
  * \brief The StopRemoteAccessSessionRequest class provides an interface for DeviceFarm StopRemoteAccessSession requests.
  *
- * \ingroup DeviceFarm
+ * \inmodule QtAwsDeviceFarm
  *
  *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
  *  phones, tablets, and other devices in the
@@ -39,9 +38,7 @@ namespace DeviceFarm {
  */
 
 /*!
- * @brief  Constructs a new StopRemoteAccessSessionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 StopRemoteAccessSessionRequest::StopRemoteAccessSessionRequest(const StopRemoteAccessSessionRequest &other)
     : DeviceFarmRequest(new StopRemoteAccessSessionRequestPrivate(*other.d_func(), this))
@@ -50,7 +47,7 @@ StopRemoteAccessSessionRequest::StopRemoteAccessSessionRequest(const StopRemoteA
 }
 
 /*!
- * @brief  Constructs a new StopRemoteAccessSessionRequest object.
+ * Constructs a StopRemoteAccessSessionRequest object.
  */
 StopRemoteAccessSessionRequest::StopRemoteAccessSessionRequest()
     : DeviceFarmRequest(new StopRemoteAccessSessionRequestPrivate(DeviceFarmRequest::StopRemoteAccessSessionAction, this))
@@ -68,14 +65,9 @@ bool StopRemoteAccessSessionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an StopRemoteAccessSessionResponse object.
+ * Returns a StopRemoteAccessSessionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An StopRemoteAccessSessionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DeviceFarmClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * StopRemoteAccessSessionRequest::response(QNetworkReply * const reply) const
 {
@@ -83,20 +75,17 @@ QtAws::Core::AwsAbstractResponse * StopRemoteAccessSessionRequest::response(QNet
 }
 
 /*!
- * @internal
+ * \class QtAws::DeviceFarm::StopRemoteAccessSessionRequestPrivate
+ * \brief The StopRemoteAccessSessionRequestPrivate class provides private implementation for StopRemoteAccessSessionRequest.
+ * \internal
  *
- * @class  StopRemoteAccessSessionRequestPrivate
- *
- * @brief  Private implementation for StopRemoteAccessSessionRequest.
+ * \inmodule QtAwsDeviceFarm
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new StopRemoteAccessSessionRequestPrivate object.
- *
- * @param  action  DeviceFarm action being performed.
- * @param  q       Pointer to this object's public StopRemoteAccessSessionRequest instance.
+ * Constructs a StopRemoteAccessSessionRequestPrivate object for DeviceFarm \a action with,
+ * public implementation \a q.
  */
 StopRemoteAccessSessionRequestPrivate::StopRemoteAccessSessionRequestPrivate(
     const DeviceFarmRequest::Action action, StopRemoteAccessSessionRequest * const q)
@@ -106,15 +95,10 @@ StopRemoteAccessSessionRequestPrivate::StopRemoteAccessSessionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StopRemoteAccessSessionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the StopRemoteAccessSessionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public StopRemoteAccessSessionRequest instance.
  */
 StopRemoteAccessSessionRequestPrivate::StopRemoteAccessSessionRequestPrivate(
     const StopRemoteAccessSessionRequestPrivate &other, StopRemoteAccessSessionRequest * const q)

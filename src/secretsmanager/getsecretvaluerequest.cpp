@@ -27,10 +27,9 @@ namespace SecretsManager {
 
 /*!
  * \class QtAws::SecretsManager::GetSecretValueRequest
- *
  * \brief The GetSecretValueRequest class provides an interface for SecretsManager GetSecretValue requests.
  *
- * \ingroup SecretsManager
+ * \inmodule QtAwsSecretsManager
  *
  *  <fullname>AWS Secrets Manager API Reference</fullname>
  * 
@@ -137,9 +136,7 @@ namespace SecretsManager {
  */
 
 /*!
- * @brief  Constructs a new GetSecretValueRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetSecretValueRequest::GetSecretValueRequest(const GetSecretValueRequest &other)
     : SecretsManagerRequest(new GetSecretValueRequestPrivate(*other.d_func(), this))
@@ -148,7 +145,7 @@ GetSecretValueRequest::GetSecretValueRequest(const GetSecretValueRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetSecretValueRequest object.
+ * Constructs a GetSecretValueRequest object.
  */
 GetSecretValueRequest::GetSecretValueRequest()
     : SecretsManagerRequest(new GetSecretValueRequestPrivate(SecretsManagerRequest::GetSecretValueAction, this))
@@ -166,14 +163,9 @@ bool GetSecretValueRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetSecretValueResponse object.
+ * Returns a GetSecretValueResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetSecretValueResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SecretsManagerClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetSecretValueRequest::response(QNetworkReply * const reply) const
 {
@@ -181,20 +173,17 @@ QtAws::Core::AwsAbstractResponse * GetSecretValueRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::SecretsManager::GetSecretValueRequestPrivate
+ * \brief The GetSecretValueRequestPrivate class provides private implementation for GetSecretValueRequest.
+ * \internal
  *
- * @class  GetSecretValueRequestPrivate
- *
- * @brief  Private implementation for GetSecretValueRequest.
+ * \inmodule QtAwsSecretsManager
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetSecretValueRequestPrivate object.
- *
- * @param  action  SecretsManager action being performed.
- * @param  q       Pointer to this object's public GetSecretValueRequest instance.
+ * Constructs a GetSecretValueRequestPrivate object for SecretsManager \a action with,
+ * public implementation \a q.
  */
 GetSecretValueRequestPrivate::GetSecretValueRequestPrivate(
     const SecretsManagerRequest::Action action, GetSecretValueRequest * const q)
@@ -204,15 +193,10 @@ GetSecretValueRequestPrivate::GetSecretValueRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetSecretValueRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetSecretValueRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetSecretValueRequest instance.
  */
 GetSecretValueRequestPrivate::GetSecretValueRequestPrivate(
     const GetSecretValueRequestPrivate &other, GetSecretValueRequest * const q)

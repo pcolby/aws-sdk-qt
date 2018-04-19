@@ -27,10 +27,9 @@ namespace Rekognition {
 
 /*!
  * \class QtAws::Rekognition::DetectFacesRequest
- *
  * \brief The DetectFacesRequest class provides an interface for Rekognition DetectFaces requests.
  *
- * \ingroup Rekognition
+ * \inmodule QtAwsRekognition
  *
  *  This is the Amazon Rekognition API
  *
@@ -38,9 +37,7 @@ namespace Rekognition {
  */
 
 /*!
- * @brief  Constructs a new DetectFacesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DetectFacesRequest::DetectFacesRequest(const DetectFacesRequest &other)
     : RekognitionRequest(new DetectFacesRequestPrivate(*other.d_func(), this))
@@ -49,7 +46,7 @@ DetectFacesRequest::DetectFacesRequest(const DetectFacesRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DetectFacesRequest object.
+ * Constructs a DetectFacesRequest object.
  */
 DetectFacesRequest::DetectFacesRequest()
     : RekognitionRequest(new DetectFacesRequestPrivate(RekognitionRequest::DetectFacesAction, this))
@@ -67,14 +64,9 @@ bool DetectFacesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DetectFacesResponse object.
+ * Returns a DetectFacesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DetectFacesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RekognitionClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DetectFacesRequest::response(QNetworkReply * const reply) const
 {
@@ -82,20 +74,17 @@ QtAws::Core::AwsAbstractResponse * DetectFacesRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::Rekognition::DetectFacesRequestPrivate
+ * \brief The DetectFacesRequestPrivate class provides private implementation for DetectFacesRequest.
+ * \internal
  *
- * @class  DetectFacesRequestPrivate
- *
- * @brief  Private implementation for DetectFacesRequest.
+ * \inmodule QtAwsRekognition
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DetectFacesRequestPrivate object.
- *
- * @param  action  Rekognition action being performed.
- * @param  q       Pointer to this object's public DetectFacesRequest instance.
+ * Constructs a DetectFacesRequestPrivate object for Rekognition \a action with,
+ * public implementation \a q.
  */
 DetectFacesRequestPrivate::DetectFacesRequestPrivate(
     const RekognitionRequest::Action action, DetectFacesRequest * const q)
@@ -105,15 +94,10 @@ DetectFacesRequestPrivate::DetectFacesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DetectFacesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DetectFacesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DetectFacesRequest instance.
  */
 DetectFacesRequestPrivate::DetectFacesRequestPrivate(
     const DetectFacesRequestPrivate &other, DetectFacesRequest * const q)

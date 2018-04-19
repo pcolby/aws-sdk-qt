@@ -27,19 +27,16 @@ namespace Pinpoint {
 
 /*!
  * \class QtAws::Pinpoint::GetSegmentImportJobsRequest
- *
  * \brief The GetSegmentImportJobsRequest class provides an interface for Pinpoint GetSegmentImportJobs requests.
  *
- * \ingroup Pinpoint
+ * \inmodule QtAwsPinpoint
  *
  *
  * \sa PinpointClient::getSegmentImportJobs
  */
 
 /*!
- * @brief  Constructs a new GetSegmentImportJobsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetSegmentImportJobsRequest::GetSegmentImportJobsRequest(const GetSegmentImportJobsRequest &other)
     : PinpointRequest(new GetSegmentImportJobsRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ GetSegmentImportJobsRequest::GetSegmentImportJobsRequest(const GetSegmentImportJ
 }
 
 /*!
- * @brief  Constructs a new GetSegmentImportJobsRequest object.
+ * Constructs a GetSegmentImportJobsRequest object.
  */
 GetSegmentImportJobsRequest::GetSegmentImportJobsRequest()
     : PinpointRequest(new GetSegmentImportJobsRequestPrivate(PinpointRequest::GetSegmentImportJobsAction, this))
@@ -66,14 +63,9 @@ bool GetSegmentImportJobsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetSegmentImportJobsResponse object.
+ * Returns a GetSegmentImportJobsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetSegmentImportJobsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  PinpointClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetSegmentImportJobsRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * GetSegmentImportJobsRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::Pinpoint::GetSegmentImportJobsRequestPrivate
+ * \brief The GetSegmentImportJobsRequestPrivate class provides private implementation for GetSegmentImportJobsRequest.
+ * \internal
  *
- * @class  GetSegmentImportJobsRequestPrivate
- *
- * @brief  Private implementation for GetSegmentImportJobsRequest.
+ * \inmodule QtAwsPinpoint
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetSegmentImportJobsRequestPrivate object.
- *
- * @param  action  Pinpoint action being performed.
- * @param  q       Pointer to this object's public GetSegmentImportJobsRequest instance.
+ * Constructs a GetSegmentImportJobsRequestPrivate object for Pinpoint \a action with,
+ * public implementation \a q.
  */
 GetSegmentImportJobsRequestPrivate::GetSegmentImportJobsRequestPrivate(
     const PinpointRequest::Action action, GetSegmentImportJobsRequest * const q)
@@ -104,15 +93,10 @@ GetSegmentImportJobsRequestPrivate::GetSegmentImportJobsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetSegmentImportJobsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetSegmentImportJobsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetSegmentImportJobsRequest instance.
  */
 GetSegmentImportJobsRequestPrivate::GetSegmentImportJobsRequestPrivate(
     const GetSegmentImportJobsRequestPrivate &other, GetSegmentImportJobsRequest * const q)

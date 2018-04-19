@@ -27,10 +27,9 @@ namespace DeviceFarm {
 
 /*!
  * \class QtAws::DeviceFarm::ListInstanceProfilesRequest
- *
  * \brief The ListInstanceProfilesRequest class provides an interface for DeviceFarm ListInstanceProfiles requests.
  *
- * \ingroup DeviceFarm
+ * \inmodule QtAwsDeviceFarm
  *
  *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
  *  phones, tablets, and other devices in the
@@ -39,9 +38,7 @@ namespace DeviceFarm {
  */
 
 /*!
- * @brief  Constructs a new ListInstanceProfilesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListInstanceProfilesRequest::ListInstanceProfilesRequest(const ListInstanceProfilesRequest &other)
     : DeviceFarmRequest(new ListInstanceProfilesRequestPrivate(*other.d_func(), this))
@@ -50,7 +47,7 @@ ListInstanceProfilesRequest::ListInstanceProfilesRequest(const ListInstanceProfi
 }
 
 /*!
- * @brief  Constructs a new ListInstanceProfilesRequest object.
+ * Constructs a ListInstanceProfilesRequest object.
  */
 ListInstanceProfilesRequest::ListInstanceProfilesRequest()
     : DeviceFarmRequest(new ListInstanceProfilesRequestPrivate(DeviceFarmRequest::ListInstanceProfilesAction, this))
@@ -68,14 +65,9 @@ bool ListInstanceProfilesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListInstanceProfilesResponse object.
+ * Returns a ListInstanceProfilesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListInstanceProfilesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DeviceFarmClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListInstanceProfilesRequest::response(QNetworkReply * const reply) const
 {
@@ -83,20 +75,17 @@ QtAws::Core::AwsAbstractResponse * ListInstanceProfilesRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::DeviceFarm::ListInstanceProfilesRequestPrivate
+ * \brief The ListInstanceProfilesRequestPrivate class provides private implementation for ListInstanceProfilesRequest.
+ * \internal
  *
- * @class  ListInstanceProfilesRequestPrivate
- *
- * @brief  Private implementation for ListInstanceProfilesRequest.
+ * \inmodule QtAwsDeviceFarm
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListInstanceProfilesRequestPrivate object.
- *
- * @param  action  DeviceFarm action being performed.
- * @param  q       Pointer to this object's public ListInstanceProfilesRequest instance.
+ * Constructs a ListInstanceProfilesRequestPrivate object for DeviceFarm \a action with,
+ * public implementation \a q.
  */
 ListInstanceProfilesRequestPrivate::ListInstanceProfilesRequestPrivate(
     const DeviceFarmRequest::Action action, ListInstanceProfilesRequest * const q)
@@ -106,15 +95,10 @@ ListInstanceProfilesRequestPrivate::ListInstanceProfilesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListInstanceProfilesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListInstanceProfilesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListInstanceProfilesRequest instance.
  */
 ListInstanceProfilesRequestPrivate::ListInstanceProfilesRequestPrivate(
     const ListInstanceProfilesRequestPrivate &other, ListInstanceProfilesRequest * const q)

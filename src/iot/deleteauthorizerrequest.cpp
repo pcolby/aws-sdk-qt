@@ -27,10 +27,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::DeleteAuthorizerRequest
- *
  * \brief The DeleteAuthorizerRequest class provides an interface for IoT DeleteAuthorizer requests.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -48,9 +47,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new DeleteAuthorizerRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteAuthorizerRequest::DeleteAuthorizerRequest(const DeleteAuthorizerRequest &other)
     : IoTRequest(new DeleteAuthorizerRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ DeleteAuthorizerRequest::DeleteAuthorizerRequest(const DeleteAuthorizerRequest &
 }
 
 /*!
- * @brief  Constructs a new DeleteAuthorizerRequest object.
+ * Constructs a DeleteAuthorizerRequest object.
  */
 DeleteAuthorizerRequest::DeleteAuthorizerRequest()
     : IoTRequest(new DeleteAuthorizerRequestPrivate(IoTRequest::DeleteAuthorizerAction, this))
@@ -77,14 +74,9 @@ bool DeleteAuthorizerRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteAuthorizerResponse object.
+ * Returns a DeleteAuthorizerResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteAuthorizerResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IoTClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteAuthorizerRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * DeleteAuthorizerRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::IoT::DeleteAuthorizerRequestPrivate
+ * \brief The DeleteAuthorizerRequestPrivate class provides private implementation for DeleteAuthorizerRequest.
+ * \internal
  *
- * @class  DeleteAuthorizerRequestPrivate
- *
- * @brief  Private implementation for DeleteAuthorizerRequest.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteAuthorizerRequestPrivate object.
- *
- * @param  action  IoT action being performed.
- * @param  q       Pointer to this object's public DeleteAuthorizerRequest instance.
+ * Constructs a DeleteAuthorizerRequestPrivate object for IoT \a action with,
+ * public implementation \a q.
  */
 DeleteAuthorizerRequestPrivate::DeleteAuthorizerRequestPrivate(
     const IoTRequest::Action action, DeleteAuthorizerRequest * const q)
@@ -115,15 +104,10 @@ DeleteAuthorizerRequestPrivate::DeleteAuthorizerRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteAuthorizerRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteAuthorizerRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteAuthorizerRequest instance.
  */
 DeleteAuthorizerRequestPrivate::DeleteAuthorizerRequestPrivate(
     const DeleteAuthorizerRequestPrivate &other, DeleteAuthorizerRequest * const q)

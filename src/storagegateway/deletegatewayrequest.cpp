@@ -27,10 +27,9 @@ namespace StorageGateway {
 
 /*!
  * \class QtAws::StorageGateway::DeleteGatewayRequest
- *
  * \brief The DeleteGatewayRequest class provides an interface for StorageGateway DeleteGateway requests.
  *
- * \ingroup StorageGateway
+ * \inmodule QtAwsStorageGateway
  *
  *  <fullname>AWS Storage Gateway Service</fullname>
  * 
@@ -106,9 +105,7 @@ namespace StorageGateway {
  */
 
 /*!
- * @brief  Constructs a new DeleteGatewayRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteGatewayRequest::DeleteGatewayRequest(const DeleteGatewayRequest &other)
     : StorageGatewayRequest(new DeleteGatewayRequestPrivate(*other.d_func(), this))
@@ -117,7 +114,7 @@ DeleteGatewayRequest::DeleteGatewayRequest(const DeleteGatewayRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DeleteGatewayRequest object.
+ * Constructs a DeleteGatewayRequest object.
  */
 DeleteGatewayRequest::DeleteGatewayRequest()
     : StorageGatewayRequest(new DeleteGatewayRequestPrivate(StorageGatewayRequest::DeleteGatewayAction, this))
@@ -135,14 +132,9 @@ bool DeleteGatewayRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteGatewayResponse object.
+ * Returns a DeleteGatewayResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteGatewayResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  StorageGatewayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteGatewayRequest::response(QNetworkReply * const reply) const
 {
@@ -150,20 +142,17 @@ QtAws::Core::AwsAbstractResponse * DeleteGatewayRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::StorageGateway::DeleteGatewayRequestPrivate
+ * \brief The DeleteGatewayRequestPrivate class provides private implementation for DeleteGatewayRequest.
+ * \internal
  *
- * @class  DeleteGatewayRequestPrivate
- *
- * @brief  Private implementation for DeleteGatewayRequest.
+ * \inmodule QtAwsStorageGateway
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteGatewayRequestPrivate object.
- *
- * @param  action  StorageGateway action being performed.
- * @param  q       Pointer to this object's public DeleteGatewayRequest instance.
+ * Constructs a DeleteGatewayRequestPrivate object for StorageGateway \a action with,
+ * public implementation \a q.
  */
 DeleteGatewayRequestPrivate::DeleteGatewayRequestPrivate(
     const StorageGatewayRequest::Action action, DeleteGatewayRequest * const q)
@@ -173,15 +162,10 @@ DeleteGatewayRequestPrivate::DeleteGatewayRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteGatewayRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteGatewayRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteGatewayRequest instance.
  */
 DeleteGatewayRequestPrivate::DeleteGatewayRequestPrivate(
     const DeleteGatewayRequestPrivate &other, DeleteGatewayRequest * const q)

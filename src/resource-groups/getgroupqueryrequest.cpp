@@ -27,10 +27,9 @@ namespace ResourceGroups {
 
 /*!
  * \class QtAws::ResourceGroups::GetGroupQueryRequest
- *
  * \brief The GetGroupQueryRequest class provides an interface for ResourceGroups GetGroupQuery requests.
  *
- * \ingroup ResourceGroups
+ * \inmodule QtAwsResourceGroups
  *
  *  <fullname>AWS Resource Groups</fullname>
  * 
@@ -81,9 +80,7 @@ namespace ResourceGroups {
  */
 
 /*!
- * @brief  Constructs a new GetGroupQueryRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetGroupQueryRequest::GetGroupQueryRequest(const GetGroupQueryRequest &other)
     : ResourceGroupsRequest(new GetGroupQueryRequestPrivate(*other.d_func(), this))
@@ -92,7 +89,7 @@ GetGroupQueryRequest::GetGroupQueryRequest(const GetGroupQueryRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetGroupQueryRequest object.
+ * Constructs a GetGroupQueryRequest object.
  */
 GetGroupQueryRequest::GetGroupQueryRequest()
     : ResourceGroupsRequest(new GetGroupQueryRequestPrivate(ResourceGroupsRequest::GetGroupQueryAction, this))
@@ -110,14 +107,9 @@ bool GetGroupQueryRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetGroupQueryResponse object.
+ * Returns a GetGroupQueryResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetGroupQueryResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ResourceGroupsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetGroupQueryRequest::response(QNetworkReply * const reply) const
 {
@@ -125,20 +117,17 @@ QtAws::Core::AwsAbstractResponse * GetGroupQueryRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::ResourceGroups::GetGroupQueryRequestPrivate
+ * \brief The GetGroupQueryRequestPrivate class provides private implementation for GetGroupQueryRequest.
+ * \internal
  *
- * @class  GetGroupQueryRequestPrivate
- *
- * @brief  Private implementation for GetGroupQueryRequest.
+ * \inmodule QtAwsResourceGroups
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetGroupQueryRequestPrivate object.
- *
- * @param  action  ResourceGroups action being performed.
- * @param  q       Pointer to this object's public GetGroupQueryRequest instance.
+ * Constructs a GetGroupQueryRequestPrivate object for ResourceGroups \a action with,
+ * public implementation \a q.
  */
 GetGroupQueryRequestPrivate::GetGroupQueryRequestPrivate(
     const ResourceGroupsRequest::Action action, GetGroupQueryRequest * const q)
@@ -148,15 +137,10 @@ GetGroupQueryRequestPrivate::GetGroupQueryRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetGroupQueryRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetGroupQueryRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetGroupQueryRequest instance.
  */
 GetGroupQueryRequestPrivate::GetGroupQueryRequestPrivate(
     const GetGroupQueryRequestPrivate &other, GetGroupQueryRequest * const q)

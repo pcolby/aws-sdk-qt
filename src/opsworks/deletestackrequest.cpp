@@ -27,10 +27,9 @@ namespace OpsWorks {
 
 /*!
  * \class QtAws::OpsWorks::DeleteStackRequest
- *
  * \brief The DeleteStackRequest class provides an interface for OpsWorks DeleteStack requests.
  *
- * \ingroup OpsWorks
+ * \inmodule QtAwsOpsWorks
  *
  *  <fullname>AWS OpsWorks</fullname>
  * 
@@ -143,9 +142,7 @@ namespace OpsWorks {
  */
 
 /*!
- * @brief  Constructs a new DeleteStackRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteStackRequest::DeleteStackRequest(const DeleteStackRequest &other)
     : OpsWorksRequest(new DeleteStackRequestPrivate(*other.d_func(), this))
@@ -154,7 +151,7 @@ DeleteStackRequest::DeleteStackRequest(const DeleteStackRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DeleteStackRequest object.
+ * Constructs a DeleteStackRequest object.
  */
 DeleteStackRequest::DeleteStackRequest()
     : OpsWorksRequest(new DeleteStackRequestPrivate(OpsWorksRequest::DeleteStackAction, this))
@@ -172,14 +169,9 @@ bool DeleteStackRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteStackResponse object.
+ * Returns a DeleteStackResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteStackResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  OpsWorksClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteStackRequest::response(QNetworkReply * const reply) const
 {
@@ -187,20 +179,17 @@ QtAws::Core::AwsAbstractResponse * DeleteStackRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::OpsWorks::DeleteStackRequestPrivate
+ * \brief The DeleteStackRequestPrivate class provides private implementation for DeleteStackRequest.
+ * \internal
  *
- * @class  DeleteStackRequestPrivate
- *
- * @brief  Private implementation for DeleteStackRequest.
+ * \inmodule QtAwsOpsWorks
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteStackRequestPrivate object.
- *
- * @param  action  OpsWorks action being performed.
- * @param  q       Pointer to this object's public DeleteStackRequest instance.
+ * Constructs a DeleteStackRequestPrivate object for OpsWorks \a action with,
+ * public implementation \a q.
  */
 DeleteStackRequestPrivate::DeleteStackRequestPrivate(
     const OpsWorksRequest::Action action, DeleteStackRequest * const q)
@@ -210,15 +199,10 @@ DeleteStackRequestPrivate::DeleteStackRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteStackRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteStackRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteStackRequest instance.
  */
 DeleteStackRequestPrivate::DeleteStackRequestPrivate(
     const DeleteStackRequestPrivate &other, DeleteStackRequest * const q)

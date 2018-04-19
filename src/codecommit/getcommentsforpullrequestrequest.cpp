@@ -27,10 +27,9 @@ namespace CodeCommit {
 
 /*!
  * \class QtAws::CodeCommit::GetCommentsForPullRequestRequest
- *
  * \brief The GetCommentsForPullRequestRequest class provides an interface for CodeCommit GetCommentsForPullRequest requests.
  *
- * \ingroup CodeCommit
+ * \inmodule QtAwsCodeCommit
  *
  *  <fullname>AWS CodeCommit</fullname>
  * 
@@ -227,9 +226,7 @@ namespace CodeCommit {
  */
 
 /*!
- * @brief  Constructs a new GetCommentsForPullRequestRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetCommentsForPullRequestRequest::GetCommentsForPullRequestRequest(const GetCommentsForPullRequestRequest &other)
     : CodeCommitRequest(new GetCommentsForPullRequestRequestPrivate(*other.d_func(), this))
@@ -238,7 +235,7 @@ GetCommentsForPullRequestRequest::GetCommentsForPullRequestRequest(const GetComm
 }
 
 /*!
- * @brief  Constructs a new GetCommentsForPullRequestRequest object.
+ * Constructs a GetCommentsForPullRequestRequest object.
  */
 GetCommentsForPullRequestRequest::GetCommentsForPullRequestRequest()
     : CodeCommitRequest(new GetCommentsForPullRequestRequestPrivate(CodeCommitRequest::GetCommentsForPullRequestAction, this))
@@ -256,14 +253,9 @@ bool GetCommentsForPullRequestRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetCommentsForPullRequestResponse object.
+ * Returns a GetCommentsForPullRequestResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetCommentsForPullRequestResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CodeCommitClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetCommentsForPullRequestRequest::response(QNetworkReply * const reply) const
 {
@@ -271,20 +263,17 @@ QtAws::Core::AwsAbstractResponse * GetCommentsForPullRequestRequest::response(QN
 }
 
 /*!
- * @internal
+ * \class QtAws::CodeCommit::GetCommentsForPullRequestRequestPrivate
+ * \brief The GetCommentsForPullRequestRequestPrivate class provides private implementation for GetCommentsForPullRequestRequest.
+ * \internal
  *
- * @class  GetCommentsForPullRequestRequestPrivate
- *
- * @brief  Private implementation for GetCommentsForPullRequestRequest.
+ * \inmodule QtAwsCodeCommit
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetCommentsForPullRequestRequestPrivate object.
- *
- * @param  action  CodeCommit action being performed.
- * @param  q       Pointer to this object's public GetCommentsForPullRequestRequest instance.
+ * Constructs a GetCommentsForPullRequestRequestPrivate object for CodeCommit \a action with,
+ * public implementation \a q.
  */
 GetCommentsForPullRequestRequestPrivate::GetCommentsForPullRequestRequestPrivate(
     const CodeCommitRequest::Action action, GetCommentsForPullRequestRequest * const q)
@@ -294,15 +283,10 @@ GetCommentsForPullRequestRequestPrivate::GetCommentsForPullRequestRequestPrivate
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetCommentsForPullRequestRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetCommentsForPullRequestRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetCommentsForPullRequestRequest instance.
  */
 GetCommentsForPullRequestRequestPrivate::GetCommentsForPullRequestRequestPrivate(
     const GetCommentsForPullRequestRequestPrivate &other, GetCommentsForPullRequestRequest * const q)

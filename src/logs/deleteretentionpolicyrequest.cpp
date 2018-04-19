@@ -27,10 +27,9 @@ namespace CloudWatchLogs {
 
 /*!
  * \class QtAws::CloudWatchLogs::DeleteRetentionPolicyRequest
- *
  * \brief The DeleteRetentionPolicyRequest class provides an interface for CloudWatchLogs DeleteRetentionPolicy requests.
  *
- * \ingroup CloudWatchLogs
+ * \inmodule QtAwsCloudWatchLogs
  *
  *  You can use Amazon CloudWatch Logs to monitor, store, and access your log files from Amazon EC2 instances, AWS
  *  CloudTrail, or other sources. You can then retrieve the associated log data from CloudWatch Logs using the CloudWatch
@@ -66,9 +65,7 @@ namespace CloudWatchLogs {
  */
 
 /*!
- * @brief  Constructs a new DeleteRetentionPolicyRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteRetentionPolicyRequest::DeleteRetentionPolicyRequest(const DeleteRetentionPolicyRequest &other)
     : CloudWatchLogsRequest(new DeleteRetentionPolicyRequestPrivate(*other.d_func(), this))
@@ -77,7 +74,7 @@ DeleteRetentionPolicyRequest::DeleteRetentionPolicyRequest(const DeleteRetention
 }
 
 /*!
- * @brief  Constructs a new DeleteRetentionPolicyRequest object.
+ * Constructs a DeleteRetentionPolicyRequest object.
  */
 DeleteRetentionPolicyRequest::DeleteRetentionPolicyRequest()
     : CloudWatchLogsRequest(new DeleteRetentionPolicyRequestPrivate(CloudWatchLogsRequest::DeleteRetentionPolicyAction, this))
@@ -95,14 +92,9 @@ bool DeleteRetentionPolicyRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteRetentionPolicyResponse object.
+ * Returns a DeleteRetentionPolicyResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteRetentionPolicyResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudWatchLogsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteRetentionPolicyRequest::response(QNetworkReply * const reply) const
 {
@@ -110,20 +102,17 @@ QtAws::Core::AwsAbstractResponse * DeleteRetentionPolicyRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudWatchLogs::DeleteRetentionPolicyRequestPrivate
+ * \brief The DeleteRetentionPolicyRequestPrivate class provides private implementation for DeleteRetentionPolicyRequest.
+ * \internal
  *
- * @class  DeleteRetentionPolicyRequestPrivate
- *
- * @brief  Private implementation for DeleteRetentionPolicyRequest.
+ * \inmodule QtAwsCloudWatchLogs
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteRetentionPolicyRequestPrivate object.
- *
- * @param  action  CloudWatchLogs action being performed.
- * @param  q       Pointer to this object's public DeleteRetentionPolicyRequest instance.
+ * Constructs a DeleteRetentionPolicyRequestPrivate object for CloudWatchLogs \a action with,
+ * public implementation \a q.
  */
 DeleteRetentionPolicyRequestPrivate::DeleteRetentionPolicyRequestPrivate(
     const CloudWatchLogsRequest::Action action, DeleteRetentionPolicyRequest * const q)
@@ -133,15 +122,10 @@ DeleteRetentionPolicyRequestPrivate::DeleteRetentionPolicyRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteRetentionPolicyRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteRetentionPolicyRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteRetentionPolicyRequest instance.
  */
 DeleteRetentionPolicyRequestPrivate::DeleteRetentionPolicyRequestPrivate(
     const DeleteRetentionPolicyRequestPrivate &other, DeleteRetentionPolicyRequest * const q)

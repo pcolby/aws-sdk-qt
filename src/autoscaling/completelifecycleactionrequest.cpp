@@ -27,10 +27,9 @@ namespace AutoScaling {
 
 /*!
  * \class QtAws::AutoScaling::CompleteLifecycleActionRequest
- *
  * \brief The CompleteLifecycleActionRequest class provides an interface for AutoScaling CompleteLifecycleAction requests.
  *
- * \ingroup AutoScaling
+ * \inmodule QtAwsAutoScaling
  *
  *  <fullname>Amazon EC2 Auto Scaling</fullname>
  * 
@@ -42,9 +41,7 @@ namespace AutoScaling {
  */
 
 /*!
- * @brief  Constructs a new CompleteLifecycleActionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CompleteLifecycleActionRequest::CompleteLifecycleActionRequest(const CompleteLifecycleActionRequest &other)
     : AutoScalingRequest(new CompleteLifecycleActionRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ CompleteLifecycleActionRequest::CompleteLifecycleActionRequest(const CompleteLif
 }
 
 /*!
- * @brief  Constructs a new CompleteLifecycleActionRequest object.
+ * Constructs a CompleteLifecycleActionRequest object.
  */
 CompleteLifecycleActionRequest::CompleteLifecycleActionRequest()
     : AutoScalingRequest(new CompleteLifecycleActionRequestPrivate(AutoScalingRequest::CompleteLifecycleActionAction, this))
@@ -71,14 +68,9 @@ bool CompleteLifecycleActionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CompleteLifecycleActionResponse object.
+ * Returns a CompleteLifecycleActionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CompleteLifecycleActionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AutoScalingClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CompleteLifecycleActionRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * CompleteLifecycleActionRequest::response(QNet
 }
 
 /*!
- * @internal
+ * \class QtAws::AutoScaling::CompleteLifecycleActionRequestPrivate
+ * \brief The CompleteLifecycleActionRequestPrivate class provides private implementation for CompleteLifecycleActionRequest.
+ * \internal
  *
- * @class  CompleteLifecycleActionRequestPrivate
- *
- * @brief  Private implementation for CompleteLifecycleActionRequest.
+ * \inmodule QtAwsAutoScaling
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CompleteLifecycleActionRequestPrivate object.
- *
- * @param  action  AutoScaling action being performed.
- * @param  q       Pointer to this object's public CompleteLifecycleActionRequest instance.
+ * Constructs a CompleteLifecycleActionRequestPrivate object for AutoScaling \a action with,
+ * public implementation \a q.
  */
 CompleteLifecycleActionRequestPrivate::CompleteLifecycleActionRequestPrivate(
     const AutoScalingRequest::Action action, CompleteLifecycleActionRequest * const q)
@@ -109,15 +98,10 @@ CompleteLifecycleActionRequestPrivate::CompleteLifecycleActionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CompleteLifecycleActionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CompleteLifecycleActionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CompleteLifecycleActionRequest instance.
  */
 CompleteLifecycleActionRequestPrivate::CompleteLifecycleActionRequestPrivate(
     const CompleteLifecycleActionRequestPrivate &other, CompleteLifecycleActionRequest * const q)

@@ -27,10 +27,9 @@ namespace CognitoIdentityProvider {
 
 /*!
  * \class QtAws::CognitoIdentityProvider::AdminListUserAuthEventsRequest
- *
  * \brief The AdminListUserAuthEventsRequest class provides an interface for CognitoIdentityProvider AdminListUserAuthEvents requests.
  *
- * \ingroup CognitoIdentityProvider
+ * \inmodule QtAwsCognitoIdentityProvider
  *
  *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
  *  authenticate a user to obtain tokens related to user identity and access
@@ -47,9 +46,7 @@ namespace CognitoIdentityProvider {
  */
 
 /*!
- * @brief  Constructs a new AdminListUserAuthEventsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AdminListUserAuthEventsRequest::AdminListUserAuthEventsRequest(const AdminListUserAuthEventsRequest &other)
     : CognitoIdentityProviderRequest(new AdminListUserAuthEventsRequestPrivate(*other.d_func(), this))
@@ -58,7 +55,7 @@ AdminListUserAuthEventsRequest::AdminListUserAuthEventsRequest(const AdminListUs
 }
 
 /*!
- * @brief  Constructs a new AdminListUserAuthEventsRequest object.
+ * Constructs a AdminListUserAuthEventsRequest object.
  */
 AdminListUserAuthEventsRequest::AdminListUserAuthEventsRequest()
     : CognitoIdentityProviderRequest(new AdminListUserAuthEventsRequestPrivate(CognitoIdentityProviderRequest::AdminListUserAuthEventsAction, this))
@@ -76,14 +73,9 @@ bool AdminListUserAuthEventsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AdminListUserAuthEventsResponse object.
+ * Returns a AdminListUserAuthEventsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AdminListUserAuthEventsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CognitoIdentityProviderClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AdminListUserAuthEventsRequest::response(QNetworkReply * const reply) const
 {
@@ -91,20 +83,17 @@ QtAws::Core::AwsAbstractResponse * AdminListUserAuthEventsRequest::response(QNet
 }
 
 /*!
- * @internal
+ * \class QtAws::CognitoIdentityProvider::AdminListUserAuthEventsRequestPrivate
+ * \brief The AdminListUserAuthEventsRequestPrivate class provides private implementation for AdminListUserAuthEventsRequest.
+ * \internal
  *
- * @class  AdminListUserAuthEventsRequestPrivate
- *
- * @brief  Private implementation for AdminListUserAuthEventsRequest.
+ * \inmodule QtAwsCognitoIdentityProvider
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AdminListUserAuthEventsRequestPrivate object.
- *
- * @param  action  CognitoIdentityProvider action being performed.
- * @param  q       Pointer to this object's public AdminListUserAuthEventsRequest instance.
+ * Constructs a AdminListUserAuthEventsRequestPrivate object for CognitoIdentityProvider \a action with,
+ * public implementation \a q.
  */
 AdminListUserAuthEventsRequestPrivate::AdminListUserAuthEventsRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, AdminListUserAuthEventsRequest * const q)
@@ -114,15 +103,10 @@ AdminListUserAuthEventsRequestPrivate::AdminListUserAuthEventsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AdminListUserAuthEventsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AdminListUserAuthEventsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AdminListUserAuthEventsRequest instance.
  */
 AdminListUserAuthEventsRequestPrivate::AdminListUserAuthEventsRequestPrivate(
     const AdminListUserAuthEventsRequestPrivate &other, AdminListUserAuthEventsRequest * const q)

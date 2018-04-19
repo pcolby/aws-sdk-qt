@@ -27,10 +27,9 @@ namespace CloudDirectory {
 
 /*!
  * \class QtAws::CloudDirectory::GetFacetRequest
- *
  * \brief The GetFacetRequest class provides an interface for CloudDirectory GetFacet requests.
  *
- * \ingroup CloudDirectory
+ * \inmodule QtAwsCloudDirectory
  *
  *  <fullname>Amazon Cloud Directory</fullname>
  * 
@@ -44,9 +43,7 @@ namespace CloudDirectory {
  */
 
 /*!
- * @brief  Constructs a new GetFacetRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetFacetRequest::GetFacetRequest(const GetFacetRequest &other)
     : CloudDirectoryRequest(new GetFacetRequestPrivate(*other.d_func(), this))
@@ -55,7 +52,7 @@ GetFacetRequest::GetFacetRequest(const GetFacetRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetFacetRequest object.
+ * Constructs a GetFacetRequest object.
  */
 GetFacetRequest::GetFacetRequest()
     : CloudDirectoryRequest(new GetFacetRequestPrivate(CloudDirectoryRequest::GetFacetAction, this))
@@ -73,14 +70,9 @@ bool GetFacetRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetFacetResponse object.
+ * Returns a GetFacetResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetFacetResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudDirectoryClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetFacetRequest::response(QNetworkReply * const reply) const
 {
@@ -88,20 +80,17 @@ QtAws::Core::AwsAbstractResponse * GetFacetRequest::response(QNetworkReply * con
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudDirectory::GetFacetRequestPrivate
+ * \brief The GetFacetRequestPrivate class provides private implementation for GetFacetRequest.
+ * \internal
  *
- * @class  GetFacetRequestPrivate
- *
- * @brief  Private implementation for GetFacetRequest.
+ * \inmodule QtAwsCloudDirectory
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetFacetRequestPrivate object.
- *
- * @param  action  CloudDirectory action being performed.
- * @param  q       Pointer to this object's public GetFacetRequest instance.
+ * Constructs a GetFacetRequestPrivate object for CloudDirectory \a action with,
+ * public implementation \a q.
  */
 GetFacetRequestPrivate::GetFacetRequestPrivate(
     const CloudDirectoryRequest::Action action, GetFacetRequest * const q)
@@ -111,15 +100,10 @@ GetFacetRequestPrivate::GetFacetRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetFacetRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetFacetRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetFacetRequest instance.
  */
 GetFacetRequestPrivate::GetFacetRequestPrivate(
     const GetFacetRequestPrivate &other, GetFacetRequest * const q)

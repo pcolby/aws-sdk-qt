@@ -27,10 +27,9 @@ namespace WorkSpaces {
 
 /*!
  * \class QtAws::WorkSpaces::TerminateWorkspacesRequest
- *
  * \brief The TerminateWorkspacesRequest class provides an interface for WorkSpaces TerminateWorkspaces requests.
  *
- * \ingroup WorkSpaces
+ * \inmodule QtAwsWorkSpaces
  *
  *  <fullname>Amazon WorkSpaces Service</fullname>
  * 
@@ -40,9 +39,7 @@ namespace WorkSpaces {
  */
 
 /*!
- * @brief  Constructs a new TerminateWorkspacesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 TerminateWorkspacesRequest::TerminateWorkspacesRequest(const TerminateWorkspacesRequest &other)
     : WorkSpacesRequest(new TerminateWorkspacesRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ TerminateWorkspacesRequest::TerminateWorkspacesRequest(const TerminateWorkspaces
 }
 
 /*!
- * @brief  Constructs a new TerminateWorkspacesRequest object.
+ * Constructs a TerminateWorkspacesRequest object.
  */
 TerminateWorkspacesRequest::TerminateWorkspacesRequest()
     : WorkSpacesRequest(new TerminateWorkspacesRequestPrivate(WorkSpacesRequest::TerminateWorkspacesAction, this))
@@ -69,14 +66,9 @@ bool TerminateWorkspacesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an TerminateWorkspacesResponse object.
+ * Returns a TerminateWorkspacesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An TerminateWorkspacesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WorkSpacesClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * TerminateWorkspacesRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * TerminateWorkspacesRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::WorkSpaces::TerminateWorkspacesRequestPrivate
+ * \brief The TerminateWorkspacesRequestPrivate class provides private implementation for TerminateWorkspacesRequest.
+ * \internal
  *
- * @class  TerminateWorkspacesRequestPrivate
- *
- * @brief  Private implementation for TerminateWorkspacesRequest.
+ * \inmodule QtAwsWorkSpaces
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new TerminateWorkspacesRequestPrivate object.
- *
- * @param  action  WorkSpaces action being performed.
- * @param  q       Pointer to this object's public TerminateWorkspacesRequest instance.
+ * Constructs a TerminateWorkspacesRequestPrivate object for WorkSpaces \a action with,
+ * public implementation \a q.
  */
 TerminateWorkspacesRequestPrivate::TerminateWorkspacesRequestPrivate(
     const WorkSpacesRequest::Action action, TerminateWorkspacesRequest * const q)
@@ -107,15 +96,10 @@ TerminateWorkspacesRequestPrivate::TerminateWorkspacesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new TerminateWorkspacesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the TerminateWorkspacesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public TerminateWorkspacesRequest instance.
  */
 TerminateWorkspacesRequestPrivate::TerminateWorkspacesRequestPrivate(
     const TerminateWorkspacesRequestPrivate &other, TerminateWorkspacesRequest * const q)

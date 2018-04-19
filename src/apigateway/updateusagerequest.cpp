@@ -27,10 +27,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::UpdateUsageRequest
- *
  * \brief The UpdateUsageRequest class provides an interface for APIGateway UpdateUsage requests.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -42,9 +41,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new UpdateUsageRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateUsageRequest::UpdateUsageRequest(const UpdateUsageRequest &other)
     : APIGatewayRequest(new UpdateUsageRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ UpdateUsageRequest::UpdateUsageRequest(const UpdateUsageRequest &other)
 }
 
 /*!
- * @brief  Constructs a new UpdateUsageRequest object.
+ * Constructs a UpdateUsageRequest object.
  */
 UpdateUsageRequest::UpdateUsageRequest()
     : APIGatewayRequest(new UpdateUsageRequestPrivate(APIGatewayRequest::UpdateUsageAction, this))
@@ -71,14 +68,9 @@ bool UpdateUsageRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateUsageResponse object.
+ * Returns a UpdateUsageResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateUsageResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  APIGatewayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateUsageRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * UpdateUsageRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::APIGateway::UpdateUsageRequestPrivate
+ * \brief The UpdateUsageRequestPrivate class provides private implementation for UpdateUsageRequest.
+ * \internal
  *
- * @class  UpdateUsageRequestPrivate
- *
- * @brief  Private implementation for UpdateUsageRequest.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateUsageRequestPrivate object.
- *
- * @param  action  APIGateway action being performed.
- * @param  q       Pointer to this object's public UpdateUsageRequest instance.
+ * Constructs a UpdateUsageRequestPrivate object for APIGateway \a action with,
+ * public implementation \a q.
  */
 UpdateUsageRequestPrivate::UpdateUsageRequestPrivate(
     const APIGatewayRequest::Action action, UpdateUsageRequest * const q)
@@ -109,15 +98,10 @@ UpdateUsageRequestPrivate::UpdateUsageRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateUsageRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateUsageRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateUsageRequest instance.
  */
 UpdateUsageRequestPrivate::UpdateUsageRequestPrivate(
     const UpdateUsageRequestPrivate &other, UpdateUsageRequest * const q)

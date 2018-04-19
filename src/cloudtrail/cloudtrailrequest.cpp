@@ -25,16 +25,35 @@ namespace CloudTrail {
 
 /*!
  * \class QtAws::CloudTrail::CloudTrailRequest
- *
  * \brief The CloudTrailRequest class provides an interface for CloudTrail requests.
  *
- * \ingroup CloudTrail
+ * \inmodule QtAwsCloudTrail
  */
 
 /*!
- * @brief  Constructs a new CloudTrailRequest object.
+ * \enum CloudTrailRequest::Action
  *
- * @param  action  The CloudTrail action to request.
+ * This enum describes the actions that can be performed as CloudTrail
+ * requests.
+ *
+ * \value AddTagsAction CloudTrail AddTags action.
+ * \value CreateTrailAction CloudTrail CreateTrail action.
+ * \value DeleteTrailAction CloudTrail DeleteTrail action.
+ * \value DescribeTrailsAction CloudTrail DescribeTrails action.
+ * \value GetEventSelectorsAction CloudTrail GetEventSelectors action.
+ * \value GetTrailStatusAction CloudTrail GetTrailStatus action.
+ * \value ListPublicKeysAction CloudTrail ListPublicKeys action.
+ * \value ListTagsAction CloudTrail ListTags action.
+ * \value LookupEventsAction CloudTrail LookupEvents action.
+ * \value PutEventSelectorsAction CloudTrail PutEventSelectors action.
+ * \value RemoveTagsAction CloudTrail RemoveTags action.
+ * \value StartLoggingAction CloudTrail StartLogging action.
+ * \value StopLoggingAction CloudTrail StopLogging action.
+ * \value UpdateTrailAction CloudTrail UpdateTrail action.
+ */
+
+/*!
+ * Constructs a[n] CloudTrailRequest object for CloudTrail \a action.
  */
 CloudTrailRequest::CloudTrailRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new CloudTrailRequestPrivate(action, this))
@@ -43,9 +62,7 @@ CloudTrailRequest::CloudTrailRequest(const Action action)
 }
 
 /*!
- * @brief  Constructs a new CloudTrailRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CloudTrailRequest::CloudTrailRequest(const CloudTrailRequest &other)
     : QtAws::Core::AwsAbstractRequest(new CloudTrailRequestPrivate(*other.d_func(), this))
@@ -54,13 +71,7 @@ CloudTrailRequest::CloudTrailRequest(const CloudTrailRequest &other)
 }
 
 /*!
- * @brief  Assignment operator.
- *
- * Assigns \a other to \c this.
- *
- * @param  other  Instance to copy.
- *
- * @return  A reference to \c this.
+ * Sets the CloudTrailRequest object to be equal to \a other.
  */
 CloudTrailRequest& CloudTrailRequest::operator=(const CloudTrailRequest &other)
 {
@@ -72,14 +83,10 @@ CloudTrailRequest& CloudTrailRequest::operator=(const CloudTrailRequest &other)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CloudTrailRequest object.
+ * Constructs aa CloudTrailRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from CloudTrailRequestPrivate.
- *
- * @param  d  Pointer to private data (aka D-Pointer).
  */
 CloudTrailRequest::CloudTrailRequest(CloudTrailRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
@@ -87,7 +94,7 @@ CloudTrailRequest::CloudTrailRequest(CloudTrailRequestPrivate * const d) : QtAws
 }
 
 /*!
- * \brief Returns the CloudTrail action to be performed by this request.
+ * Returns the CloudTrail action to be performed by this request.
  */
 CloudTrailRequest::Action CloudTrailRequest::action() const
 {
@@ -96,7 +103,7 @@ CloudTrailRequest::Action CloudTrailRequest::action() const
 }
 
 /*!
- * \brief Returns the name of the CloudTrail action to be performed by this request.
+ * Returns the name of the CloudTrail action to be performed by this request.
  */
 QString CloudTrailRequest::actionString() const
 {
@@ -104,7 +111,7 @@ QString CloudTrailRequest::actionString() const
 }
 
 /*!
- * \brief Returns the CloudTrail API version implemented by this request.
+ * Returns the CloudTrail API version implemented by this request.
  */
 QString CloudTrailRequest::apiVersion() const
 {
@@ -113,7 +120,7 @@ QString CloudTrailRequest::apiVersion() const
 }
 
 /*!
- * @brief Set the CloudTrail action to be performed by this request to \a action.
+ * Sets the CloudTrail action to be performed by this request to \a action.
  */
 void CloudTrailRequest::setAction(const Action action)
 {
@@ -122,7 +129,7 @@ void CloudTrailRequest::setAction(const Action action)
 }
 
 /*!
- * Set the CloudTrail API version to include in this request to \a version.
+ * Sets the CloudTrail API version to include in this request to \a version.
  */
 void CloudTrailRequest::setApiVersion(const QString &version)
 {
@@ -131,7 +138,7 @@ void CloudTrailRequest::setApiVersion(const QString &version)
 }
 
 /*!
- * \brief Returns \c true if this request is the same as \a other.
+ * Returns \c true if this request is equal to \a other; \c false otherwise.
  *
  * Note, most derived *Request classes do not need to provider their own
  * implementations of this function, since most such request classes rely on
@@ -146,8 +153,8 @@ bool CloudTrailRequest::operator==(const CloudTrailRequest &other) const
             (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
-/*!
- * @brief  Check if \a queueName is a valid CloudTrail queue name.
+/*
+ * Returns \c tue if \a queueName is a valid CloudTrail queue name.
  *
  * @par From CloudTrail FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
@@ -166,9 +173,8 @@ bool CloudTrailRequest::operator==(const CloudTrailRequest &other) const
 }*/
 
 /*!
- * \brief Removes the a \a name parameter from this request.
- *
- * Returns the count of paramters removed (typically \c 0 or \c 1).
+ * Removes the a \a name parameter from the request, then returns the number of
+ * paramters removed (typically \c 0 or \c 1).
  */
 int CloudTrailRequest::clearParameter(const QString &name)
 {
@@ -177,7 +183,7 @@ int CloudTrailRequest::clearParameter(const QString &name)
 }
 
 /*!
- * \brief Removes all parameters from this request.
+ * Removes all parameters from the request.
  */
 void CloudTrailRequest::clearParameters()
 {
@@ -186,7 +192,7 @@ void CloudTrailRequest::clearParameters()
 }
 
 /*!
- * \brief Returns the value of the \n name pararemter if set, otherwise \a defaultValue.
+ * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
 QVariant CloudTrailRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
@@ -195,7 +201,7 @@ QVariant CloudTrailRequest::parameter(const QString &name, const QVariant &defau
 }
 
 /*!
- * \brief Returns a map of parameters included in this request.
+ * Returns the parameters included in this request.
  */
 const QVariantMap &CloudTrailRequest::parameters() const
 {
@@ -204,7 +210,7 @@ const QVariantMap &CloudTrailRequest::parameters() const
 }
 
 /*!
- * \brief Sets the \a name parameter to \a value.
+ * Sets the \a name parameter to \a value.
  */
 void CloudTrailRequest::setParameter(const QString &name, const QVariant &value)
 {
@@ -213,9 +219,8 @@ void CloudTrailRequest::setParameter(const QString &name, const QVariant &value)
 }
 
 /*!
- * \brief Sets the map of paramters for this request to \a parameters.
- *
- * Any request parameters set previously will be discarded.
+ * Sets the paramters for this request to \a parameters. Any request parameters
+ * set previously will be discarded.
  */
 void CloudTrailRequest::setParameters(const QVariantMap &parameters)
 {
@@ -224,11 +229,12 @@ void CloudTrailRequest::setParameters(const QVariantMap &parameters)
 }
 
 /*!
- * \brief Returns a network request for this CloudTrail request using the given \a endpoint.
+ * Returns a network request for the CloudTrail request using the given
+ * \a endpoint.
  *
- * This CloudTrail implementation builds request URLs by combining the common query
- * parameters (such as Action and Version), with any that have been added (via
- * setParameter) by child classes.
+ * This CloudTrail implementation builds request URLs by combining the
+ * common query parameters (such as Action and Version), with any that have
+ * been added (via setParameter) by child classes.
  */
 QNetworkRequest CloudTrailRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -239,17 +245,16 @@ QNetworkRequest CloudTrailRequest::unsignedRequest(const QUrl &endpoint) const
 }
 
 /*!
+ * \class QtAws::CloudTrail::CloudTrailRequestPrivate
+ * \brief The CloudTrailRequestPrivate class provides private implementation for CloudTrailRequest.
  * \internal
  *
- * \class  CloudTrailRequestPrivate
- *
- * \brief  Private implementation for CloudTrailRequest.
+ * \inmodule QtAwsCloudTrail
  */
 
 /*!
- * \internal
- *
- * \brief Constructs a new CloudTrailRequestPrivate object.
+ * Constructs a CloudTrailRequestPrivate object for CloudTrail \a action with,
+ * public implementation \a q.
  */
 CloudTrailRequestPrivate::CloudTrailRequestPrivate(const CloudTrailRequest::Action action, CloudTrailRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
@@ -258,9 +263,7 @@ CloudTrailRequestPrivate::CloudTrailRequestPrivate(const CloudTrailRequest::Acti
 }
 
 /*!
- * \internal
- *
- * \brief Constructs a new CloudTrailRequestPrivate object, copying an existing one.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
@@ -276,15 +279,12 @@ CloudTrailRequestPrivate::CloudTrailRequestPrivate(const CloudTrailRequestPrivat
 }
 
 /*!
- * \internal
- *
- * \brief Returns a string representing \a action.
+ * Returns a string represention of \a action, or a null string if \a action is
+ * invalid.
  *
  * This function converts CloudTrailRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the CloudTrail service's Action
  * query parameters.
- *
- * @return A string representing \a action, or a null string if \a action is invalid.
  */
 QString CloudTrailRequestPrivate::toString(const CloudTrailRequest::Action &action)
 {

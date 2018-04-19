@@ -27,10 +27,9 @@ namespace Glue {
 
 /*!
  * \class QtAws::Glue::GetPlanRequest
- *
  * \brief The GetPlanRequest class provides an interface for Glue GetPlan requests.
  *
- * \ingroup Glue
+ * \inmodule QtAwsGlue
  *
  *  <fullname>AWS Glue</fullname>
  * 
@@ -40,9 +39,7 @@ namespace Glue {
  */
 
 /*!
- * @brief  Constructs a new GetPlanRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetPlanRequest::GetPlanRequest(const GetPlanRequest &other)
     : GlueRequest(new GetPlanRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ GetPlanRequest::GetPlanRequest(const GetPlanRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetPlanRequest object.
+ * Constructs a GetPlanRequest object.
  */
 GetPlanRequest::GetPlanRequest()
     : GlueRequest(new GetPlanRequestPrivate(GlueRequest::GetPlanAction, this))
@@ -69,14 +66,9 @@ bool GetPlanRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetPlanResponse object.
+ * Returns a GetPlanResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetPlanResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GlueClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetPlanRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * GetPlanRequest::response(QNetworkReply * cons
 }
 
 /*!
- * @internal
+ * \class QtAws::Glue::GetPlanRequestPrivate
+ * \brief The GetPlanRequestPrivate class provides private implementation for GetPlanRequest.
+ * \internal
  *
- * @class  GetPlanRequestPrivate
- *
- * @brief  Private implementation for GetPlanRequest.
+ * \inmodule QtAwsGlue
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetPlanRequestPrivate object.
- *
- * @param  action  Glue action being performed.
- * @param  q       Pointer to this object's public GetPlanRequest instance.
+ * Constructs a GetPlanRequestPrivate object for Glue \a action with,
+ * public implementation \a q.
  */
 GetPlanRequestPrivate::GetPlanRequestPrivate(
     const GlueRequest::Action action, GetPlanRequest * const q)
@@ -107,15 +96,10 @@ GetPlanRequestPrivate::GetPlanRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetPlanRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetPlanRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetPlanRequest instance.
  */
 GetPlanRequestPrivate::GetPlanRequestPrivate(
     const GetPlanRequestPrivate &other, GetPlanRequest * const q)

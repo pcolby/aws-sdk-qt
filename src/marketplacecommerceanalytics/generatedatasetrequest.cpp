@@ -27,19 +27,16 @@ namespace MarketplaceCommerceAnalytics {
 
 /*!
  * \class QtAws::MarketplaceCommerceAnalytics::GenerateDataSetRequest
- *
  * \brief The GenerateDataSetRequest class provides an interface for MarketplaceCommerceAnalytics GenerateDataSet requests.
  *
- * \ingroup MarketplaceCommerceAnalytics
+ * \inmodule QtAwsMarketplaceCommerceAnalytics
  *
  *
  * \sa MarketplaceCommerceAnalyticsClient::generateDataSet
  */
 
 /*!
- * @brief  Constructs a new GenerateDataSetRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GenerateDataSetRequest::GenerateDataSetRequest(const GenerateDataSetRequest &other)
     : MarketplaceCommerceAnalyticsRequest(new GenerateDataSetRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ GenerateDataSetRequest::GenerateDataSetRequest(const GenerateDataSetRequest &oth
 }
 
 /*!
- * @brief  Constructs a new GenerateDataSetRequest object.
+ * Constructs a GenerateDataSetRequest object.
  */
 GenerateDataSetRequest::GenerateDataSetRequest()
     : MarketplaceCommerceAnalyticsRequest(new GenerateDataSetRequestPrivate(MarketplaceCommerceAnalyticsRequest::GenerateDataSetAction, this))
@@ -66,14 +63,9 @@ bool GenerateDataSetRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GenerateDataSetResponse object.
+ * Returns a GenerateDataSetResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GenerateDataSetResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MarketplaceCommerceAnalyticsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GenerateDataSetRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * GenerateDataSetRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::MarketplaceCommerceAnalytics::GenerateDataSetRequestPrivate
+ * \brief The GenerateDataSetRequestPrivate class provides private implementation for GenerateDataSetRequest.
+ * \internal
  *
- * @class  GenerateDataSetRequestPrivate
- *
- * @brief  Private implementation for GenerateDataSetRequest.
+ * \inmodule QtAwsMarketplaceCommerceAnalytics
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GenerateDataSetRequestPrivate object.
- *
- * @param  action  MarketplaceCommerceAnalytics action being performed.
- * @param  q       Pointer to this object's public GenerateDataSetRequest instance.
+ * Constructs a GenerateDataSetRequestPrivate object for MarketplaceCommerceAnalytics \a action with,
+ * public implementation \a q.
  */
 GenerateDataSetRequestPrivate::GenerateDataSetRequestPrivate(
     const MarketplaceCommerceAnalyticsRequest::Action action, GenerateDataSetRequest * const q)
@@ -104,15 +93,10 @@ GenerateDataSetRequestPrivate::GenerateDataSetRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GenerateDataSetRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GenerateDataSetRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GenerateDataSetRequest instance.
  */
 GenerateDataSetRequestPrivate::GenerateDataSetRequestPrivate(
     const GenerateDataSetRequestPrivate &other, GenerateDataSetRequest * const q)

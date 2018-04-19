@@ -27,19 +27,16 @@ namespace SageMaker {
 
 /*!
  * \class QtAws::SageMaker::ListModelsRequest
- *
  * \brief The ListModelsRequest class provides an interface for SageMaker ListModels requests.
  *
- * \ingroup SageMaker
+ * \inmodule QtAwsSageMaker
  *
  *
  * \sa SageMakerClient::listModels
  */
 
 /*!
- * @brief  Constructs a new ListModelsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListModelsRequest::ListModelsRequest(const ListModelsRequest &other)
     : SageMakerRequest(new ListModelsRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ ListModelsRequest::ListModelsRequest(const ListModelsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ListModelsRequest object.
+ * Constructs a ListModelsRequest object.
  */
 ListModelsRequest::ListModelsRequest()
     : SageMakerRequest(new ListModelsRequestPrivate(SageMakerRequest::ListModelsAction, this))
@@ -66,14 +63,9 @@ bool ListModelsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListModelsResponse object.
+ * Returns a ListModelsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListModelsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SageMakerClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListModelsRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * ListModelsRequest::response(QNetworkReply * c
 }
 
 /*!
- * @internal
+ * \class QtAws::SageMaker::ListModelsRequestPrivate
+ * \brief The ListModelsRequestPrivate class provides private implementation for ListModelsRequest.
+ * \internal
  *
- * @class  ListModelsRequestPrivate
- *
- * @brief  Private implementation for ListModelsRequest.
+ * \inmodule QtAwsSageMaker
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListModelsRequestPrivate object.
- *
- * @param  action  SageMaker action being performed.
- * @param  q       Pointer to this object's public ListModelsRequest instance.
+ * Constructs a ListModelsRequestPrivate object for SageMaker \a action with,
+ * public implementation \a q.
  */
 ListModelsRequestPrivate::ListModelsRequestPrivate(
     const SageMakerRequest::Action action, ListModelsRequest * const q)
@@ -104,15 +93,10 @@ ListModelsRequestPrivate::ListModelsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListModelsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListModelsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListModelsRequest instance.
  */
 ListModelsRequestPrivate::ListModelsRequestPrivate(
     const ListModelsRequestPrivate &other, ListModelsRequest * const q)

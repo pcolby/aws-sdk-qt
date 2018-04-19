@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::CreateRouteTableRequest
- *
  * \brief The CreateRouteTableRequest class provides an interface for EC2 CreateRouteTable requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new CreateRouteTableRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateRouteTableRequest::CreateRouteTableRequest(const CreateRouteTableRequest &other)
     : EC2Request(new CreateRouteTableRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ CreateRouteTableRequest::CreateRouteTableRequest(const CreateRouteTableRequest &
 }
 
 /*!
- * @brief  Constructs a new CreateRouteTableRequest object.
+ * Constructs a CreateRouteTableRequest object.
  */
 CreateRouteTableRequest::CreateRouteTableRequest()
     : EC2Request(new CreateRouteTableRequestPrivate(EC2Request::CreateRouteTableAction, this))
@@ -70,14 +67,9 @@ bool CreateRouteTableRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateRouteTableResponse object.
+ * Returns a CreateRouteTableResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateRouteTableResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateRouteTableRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * CreateRouteTableRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::CreateRouteTableRequestPrivate
+ * \brief The CreateRouteTableRequestPrivate class provides private implementation for CreateRouteTableRequest.
+ * \internal
  *
- * @class  CreateRouteTableRequestPrivate
- *
- * @brief  Private implementation for CreateRouteTableRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateRouteTableRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public CreateRouteTableRequest instance.
+ * Constructs a CreateRouteTableRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 CreateRouteTableRequestPrivate::CreateRouteTableRequestPrivate(
     const EC2Request::Action action, CreateRouteTableRequest * const q)
@@ -108,15 +97,10 @@ CreateRouteTableRequestPrivate::CreateRouteTableRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateRouteTableRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateRouteTableRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateRouteTableRequest instance.
  */
 CreateRouteTableRequestPrivate::CreateRouteTableRequestPrivate(
     const CreateRouteTableRequestPrivate &other, CreateRouteTableRequest * const q)

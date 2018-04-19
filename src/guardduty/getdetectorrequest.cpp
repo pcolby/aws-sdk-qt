@@ -27,19 +27,16 @@ namespace GuardDuty {
 
 /*!
  * \class QtAws::GuardDuty::GetDetectorRequest
- *
  * \brief The GetDetectorRequest class provides an interface for GuardDuty GetDetector requests.
  *
- * \ingroup GuardDuty
+ * \inmodule QtAwsGuardDuty
  *
  *
  * \sa GuardDutyClient::getDetector
  */
 
 /*!
- * @brief  Constructs a new GetDetectorRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetDetectorRequest::GetDetectorRequest(const GetDetectorRequest &other)
     : GuardDutyRequest(new GetDetectorRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ GetDetectorRequest::GetDetectorRequest(const GetDetectorRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetDetectorRequest object.
+ * Constructs a GetDetectorRequest object.
  */
 GetDetectorRequest::GetDetectorRequest()
     : GuardDutyRequest(new GetDetectorRequestPrivate(GuardDutyRequest::GetDetectorAction, this))
@@ -66,14 +63,9 @@ bool GetDetectorRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetDetectorResponse object.
+ * Returns a GetDetectorResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetDetectorResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GuardDutyClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetDetectorRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * GetDetectorRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::GuardDuty::GetDetectorRequestPrivate
+ * \brief The GetDetectorRequestPrivate class provides private implementation for GetDetectorRequest.
+ * \internal
  *
- * @class  GetDetectorRequestPrivate
- *
- * @brief  Private implementation for GetDetectorRequest.
+ * \inmodule QtAwsGuardDuty
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetDetectorRequestPrivate object.
- *
- * @param  action  GuardDuty action being performed.
- * @param  q       Pointer to this object's public GetDetectorRequest instance.
+ * Constructs a GetDetectorRequestPrivate object for GuardDuty \a action with,
+ * public implementation \a q.
  */
 GetDetectorRequestPrivate::GetDetectorRequestPrivate(
     const GuardDutyRequest::Action action, GetDetectorRequest * const q)
@@ -104,15 +93,10 @@ GetDetectorRequestPrivate::GetDetectorRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetDetectorRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetDetectorRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetDetectorRequest instance.
  */
 GetDetectorRequestPrivate::GetDetectorRequestPrivate(
     const GetDetectorRequestPrivate &other, GetDetectorRequest * const q)

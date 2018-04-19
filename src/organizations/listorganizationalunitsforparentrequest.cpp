@@ -27,10 +27,9 @@ namespace Organizations {
 
 /*!
  * \class QtAws::Organizations::ListOrganizationalUnitsForParentRequest
- *
  * \brief The ListOrganizationalUnitsForParentRequest class provides an interface for Organizations ListOrganizationalUnitsForParent requests.
  *
- * \ingroup Organizations
+ * \inmodule QtAwsOrganizations
  *
  *  <fullname>AWS Organizations API Reference</fullname>
  * 
@@ -179,9 +178,7 @@ namespace Organizations {
  */
 
 /*!
- * @brief  Constructs a new ListOrganizationalUnitsForParentRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListOrganizationalUnitsForParentRequest::ListOrganizationalUnitsForParentRequest(const ListOrganizationalUnitsForParentRequest &other)
     : OrganizationsRequest(new ListOrganizationalUnitsForParentRequestPrivate(*other.d_func(), this))
@@ -190,7 +187,7 @@ ListOrganizationalUnitsForParentRequest::ListOrganizationalUnitsForParentRequest
 }
 
 /*!
- * @brief  Constructs a new ListOrganizationalUnitsForParentRequest object.
+ * Constructs a ListOrganizationalUnitsForParentRequest object.
  */
 ListOrganizationalUnitsForParentRequest::ListOrganizationalUnitsForParentRequest()
     : OrganizationsRequest(new ListOrganizationalUnitsForParentRequestPrivate(OrganizationsRequest::ListOrganizationalUnitsForParentAction, this))
@@ -208,14 +205,9 @@ bool ListOrganizationalUnitsForParentRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListOrganizationalUnitsForParentResponse object.
+ * Returns a ListOrganizationalUnitsForParentResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListOrganizationalUnitsForParentResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  OrganizationsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListOrganizationalUnitsForParentRequest::response(QNetworkReply * const reply) const
 {
@@ -223,20 +215,17 @@ QtAws::Core::AwsAbstractResponse * ListOrganizationalUnitsForParentRequest::resp
 }
 
 /*!
- * @internal
+ * \class QtAws::Organizations::ListOrganizationalUnitsForParentRequestPrivate
+ * \brief The ListOrganizationalUnitsForParentRequestPrivate class provides private implementation for ListOrganizationalUnitsForParentRequest.
+ * \internal
  *
- * @class  ListOrganizationalUnitsForParentRequestPrivate
- *
- * @brief  Private implementation for ListOrganizationalUnitsForParentRequest.
+ * \inmodule QtAwsOrganizations
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListOrganizationalUnitsForParentRequestPrivate object.
- *
- * @param  action  Organizations action being performed.
- * @param  q       Pointer to this object's public ListOrganizationalUnitsForParentRequest instance.
+ * Constructs a ListOrganizationalUnitsForParentRequestPrivate object for Organizations \a action with,
+ * public implementation \a q.
  */
 ListOrganizationalUnitsForParentRequestPrivate::ListOrganizationalUnitsForParentRequestPrivate(
     const OrganizationsRequest::Action action, ListOrganizationalUnitsForParentRequest * const q)
@@ -246,15 +235,10 @@ ListOrganizationalUnitsForParentRequestPrivate::ListOrganizationalUnitsForParent
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListOrganizationalUnitsForParentRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListOrganizationalUnitsForParentRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListOrganizationalUnitsForParentRequest instance.
  */
 ListOrganizationalUnitsForParentRequestPrivate::ListOrganizationalUnitsForParentRequestPrivate(
     const ListOrganizationalUnitsForParentRequestPrivate &other, ListOrganizationalUnitsForParentRequest * const q)

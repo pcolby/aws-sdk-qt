@@ -25,16 +25,54 @@ namespace Inspector {
 
 /*!
  * \class QtAws::Inspector::InspectorRequest
- *
  * \brief The InspectorRequest class provides an interface for Inspector requests.
  *
- * \ingroup Inspector
+ * \inmodule QtAwsInspector
  */
 
 /*!
- * @brief  Constructs a new InspectorRequest object.
+ * \enum InspectorRequest::Action
  *
- * @param  action  The Inspector action to request.
+ * This enum describes the actions that can be performed as Inspector
+ * requests.
+ *
+ * \value AddAttributesToFindingsAction Inspector AddAttributesToFindings action.
+ * \value CreateAssessmentTargetAction Inspector CreateAssessmentTarget action.
+ * \value CreateAssessmentTemplateAction Inspector CreateAssessmentTemplate action.
+ * \value CreateResourceGroupAction Inspector CreateResourceGroup action.
+ * \value DeleteAssessmentRunAction Inspector DeleteAssessmentRun action.
+ * \value DeleteAssessmentTargetAction Inspector DeleteAssessmentTarget action.
+ * \value DeleteAssessmentTemplateAction Inspector DeleteAssessmentTemplate action.
+ * \value DescribeAssessmentRunsAction Inspector DescribeAssessmentRuns action.
+ * \value DescribeAssessmentTargetsAction Inspector DescribeAssessmentTargets action.
+ * \value DescribeAssessmentTemplatesAction Inspector DescribeAssessmentTemplates action.
+ * \value DescribeCrossAccountAccessRoleAction Inspector DescribeCrossAccountAccessRole action.
+ * \value DescribeFindingsAction Inspector DescribeFindings action.
+ * \value DescribeResourceGroupsAction Inspector DescribeResourceGroups action.
+ * \value DescribeRulesPackagesAction Inspector DescribeRulesPackages action.
+ * \value GetAssessmentReportAction Inspector GetAssessmentReport action.
+ * \value GetTelemetryMetadataAction Inspector GetTelemetryMetadata action.
+ * \value ListAssessmentRunAgentsAction Inspector ListAssessmentRunAgents action.
+ * \value ListAssessmentRunsAction Inspector ListAssessmentRuns action.
+ * \value ListAssessmentTargetsAction Inspector ListAssessmentTargets action.
+ * \value ListAssessmentTemplatesAction Inspector ListAssessmentTemplates action.
+ * \value ListEventSubscriptionsAction Inspector ListEventSubscriptions action.
+ * \value ListFindingsAction Inspector ListFindings action.
+ * \value ListRulesPackagesAction Inspector ListRulesPackages action.
+ * \value ListTagsForResourceAction Inspector ListTagsForResource action.
+ * \value PreviewAgentsAction Inspector PreviewAgents action.
+ * \value RegisterCrossAccountAccessRoleAction Inspector RegisterCrossAccountAccessRole action.
+ * \value RemoveAttributesFromFindingsAction Inspector RemoveAttributesFromFindings action.
+ * \value SetTagsForResourceAction Inspector SetTagsForResource action.
+ * \value StartAssessmentRunAction Inspector StartAssessmentRun action.
+ * \value StopAssessmentRunAction Inspector StopAssessmentRun action.
+ * \value SubscribeToEventAction Inspector SubscribeToEvent action.
+ * \value UnsubscribeFromEventAction Inspector UnsubscribeFromEvent action.
+ * \value UpdateAssessmentTargetAction Inspector UpdateAssessmentTarget action.
+ */
+
+/*!
+ * Constructs a[n] InspectorRequest object for Inspector \a action.
  */
 InspectorRequest::InspectorRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new InspectorRequestPrivate(action, this))
@@ -43,9 +81,7 @@ InspectorRequest::InspectorRequest(const Action action)
 }
 
 /*!
- * @brief  Constructs a new InspectorRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 InspectorRequest::InspectorRequest(const InspectorRequest &other)
     : QtAws::Core::AwsAbstractRequest(new InspectorRequestPrivate(*other.d_func(), this))
@@ -54,13 +90,7 @@ InspectorRequest::InspectorRequest(const InspectorRequest &other)
 }
 
 /*!
- * @brief  Assignment operator.
- *
- * Assigns \a other to \c this.
- *
- * @param  other  Instance to copy.
- *
- * @return  A reference to \c this.
+ * Sets the InspectorRequest object to be equal to \a other.
  */
 InspectorRequest& InspectorRequest::operator=(const InspectorRequest &other)
 {
@@ -72,14 +102,10 @@ InspectorRequest& InspectorRequest::operator=(const InspectorRequest &other)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new InspectorRequest object.
+ * Constructs aa InspectorRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from InspectorRequestPrivate.
- *
- * @param  d  Pointer to private data (aka D-Pointer).
  */
 InspectorRequest::InspectorRequest(InspectorRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
@@ -87,7 +113,7 @@ InspectorRequest::InspectorRequest(InspectorRequestPrivate * const d) : QtAws::C
 }
 
 /*!
- * \brief Returns the Inspector action to be performed by this request.
+ * Returns the Inspector action to be performed by this request.
  */
 InspectorRequest::Action InspectorRequest::action() const
 {
@@ -96,7 +122,7 @@ InspectorRequest::Action InspectorRequest::action() const
 }
 
 /*!
- * \brief Returns the name of the Inspector action to be performed by this request.
+ * Returns the name of the Inspector action to be performed by this request.
  */
 QString InspectorRequest::actionString() const
 {
@@ -104,7 +130,7 @@ QString InspectorRequest::actionString() const
 }
 
 /*!
- * \brief Returns the Inspector API version implemented by this request.
+ * Returns the Inspector API version implemented by this request.
  */
 QString InspectorRequest::apiVersion() const
 {
@@ -113,7 +139,7 @@ QString InspectorRequest::apiVersion() const
 }
 
 /*!
- * @brief Set the Inspector action to be performed by this request to \a action.
+ * Sets the Inspector action to be performed by this request to \a action.
  */
 void InspectorRequest::setAction(const Action action)
 {
@@ -122,7 +148,7 @@ void InspectorRequest::setAction(const Action action)
 }
 
 /*!
- * Set the Inspector API version to include in this request to \a version.
+ * Sets the Inspector API version to include in this request to \a version.
  */
 void InspectorRequest::setApiVersion(const QString &version)
 {
@@ -131,7 +157,7 @@ void InspectorRequest::setApiVersion(const QString &version)
 }
 
 /*!
- * \brief Returns \c true if this request is the same as \a other.
+ * Returns \c true if this request is equal to \a other; \c false otherwise.
  *
  * Note, most derived *Request classes do not need to provider their own
  * implementations of this function, since most such request classes rely on
@@ -146,8 +172,8 @@ bool InspectorRequest::operator==(const InspectorRequest &other) const
             (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
-/*!
- * @brief  Check if \a queueName is a valid Inspector queue name.
+/*
+ * Returns \c tue if \a queueName is a valid Inspector queue name.
  *
  * @par From Inspector FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
@@ -166,9 +192,8 @@ bool InspectorRequest::operator==(const InspectorRequest &other) const
 }*/
 
 /*!
- * \brief Removes the a \a name parameter from this request.
- *
- * Returns the count of paramters removed (typically \c 0 or \c 1).
+ * Removes the a \a name parameter from the request, then returns the number of
+ * paramters removed (typically \c 0 or \c 1).
  */
 int InspectorRequest::clearParameter(const QString &name)
 {
@@ -177,7 +202,7 @@ int InspectorRequest::clearParameter(const QString &name)
 }
 
 /*!
- * \brief Removes all parameters from this request.
+ * Removes all parameters from the request.
  */
 void InspectorRequest::clearParameters()
 {
@@ -186,7 +211,7 @@ void InspectorRequest::clearParameters()
 }
 
 /*!
- * \brief Returns the value of the \n name pararemter if set, otherwise \a defaultValue.
+ * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
 QVariant InspectorRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
@@ -195,7 +220,7 @@ QVariant InspectorRequest::parameter(const QString &name, const QVariant &defaul
 }
 
 /*!
- * \brief Returns a map of parameters included in this request.
+ * Returns the parameters included in this request.
  */
 const QVariantMap &InspectorRequest::parameters() const
 {
@@ -204,7 +229,7 @@ const QVariantMap &InspectorRequest::parameters() const
 }
 
 /*!
- * \brief Sets the \a name parameter to \a value.
+ * Sets the \a name parameter to \a value.
  */
 void InspectorRequest::setParameter(const QString &name, const QVariant &value)
 {
@@ -213,9 +238,8 @@ void InspectorRequest::setParameter(const QString &name, const QVariant &value)
 }
 
 /*!
- * \brief Sets the map of paramters for this request to \a parameters.
- *
- * Any request parameters set previously will be discarded.
+ * Sets the paramters for this request to \a parameters. Any request parameters
+ * set previously will be discarded.
  */
 void InspectorRequest::setParameters(const QVariantMap &parameters)
 {
@@ -224,11 +248,12 @@ void InspectorRequest::setParameters(const QVariantMap &parameters)
 }
 
 /*!
- * \brief Returns a network request for this Inspector request using the given \a endpoint.
+ * Returns a network request for the Inspector request using the given
+ * \a endpoint.
  *
- * This Inspector implementation builds request URLs by combining the common query
- * parameters (such as Action and Version), with any that have been added (via
- * setParameter) by child classes.
+ * This Inspector implementation builds request URLs by combining the
+ * common query parameters (such as Action and Version), with any that have
+ * been added (via setParameter) by child classes.
  */
 QNetworkRequest InspectorRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -239,17 +264,16 @@ QNetworkRequest InspectorRequest::unsignedRequest(const QUrl &endpoint) const
 }
 
 /*!
+ * \class QtAws::Inspector::InspectorRequestPrivate
+ * \brief The InspectorRequestPrivate class provides private implementation for InspectorRequest.
  * \internal
  *
- * \class  InspectorRequestPrivate
- *
- * \brief  Private implementation for InspectorRequest.
+ * \inmodule QtAwsInspector
  */
 
 /*!
- * \internal
- *
- * \brief Constructs a new InspectorRequestPrivate object.
+ * Constructs a InspectorRequestPrivate object for Inspector \a action with,
+ * public implementation \a q.
  */
 InspectorRequestPrivate::InspectorRequestPrivate(const InspectorRequest::Action action, InspectorRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
@@ -258,9 +282,7 @@ InspectorRequestPrivate::InspectorRequestPrivate(const InspectorRequest::Action 
 }
 
 /*!
- * \internal
- *
- * \brief Constructs a new InspectorRequestPrivate object, copying an existing one.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
@@ -276,15 +298,12 @@ InspectorRequestPrivate::InspectorRequestPrivate(const InspectorRequestPrivate &
 }
 
 /*!
- * \internal
- *
- * \brief Returns a string representing \a action.
+ * Returns a string represention of \a action, or a null string if \a action is
+ * invalid.
  *
  * This function converts InspectorRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the Inspector service's Action
  * query parameters.
- *
- * @return A string representing \a action, or a null string if \a action is invalid.
  */
 QString InspectorRequestPrivate::toString(const InspectorRequest::Action &action)
 {

@@ -27,19 +27,16 @@ namespace Pinpoint {
 
 /*!
  * \class QtAws::Pinpoint::DeleteApnsVoipChannelRequest
- *
  * \brief The DeleteApnsVoipChannelRequest class provides an interface for Pinpoint DeleteApnsVoipChannel requests.
  *
- * \ingroup Pinpoint
+ * \inmodule QtAwsPinpoint
  *
  *
  * \sa PinpointClient::deleteApnsVoipChannel
  */
 
 /*!
- * @brief  Constructs a new DeleteApnsVoipChannelRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteApnsVoipChannelRequest::DeleteApnsVoipChannelRequest(const DeleteApnsVoipChannelRequest &other)
     : PinpointRequest(new DeleteApnsVoipChannelRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ DeleteApnsVoipChannelRequest::DeleteApnsVoipChannelRequest(const DeleteApnsVoipC
 }
 
 /*!
- * @brief  Constructs a new DeleteApnsVoipChannelRequest object.
+ * Constructs a DeleteApnsVoipChannelRequest object.
  */
 DeleteApnsVoipChannelRequest::DeleteApnsVoipChannelRequest()
     : PinpointRequest(new DeleteApnsVoipChannelRequestPrivate(PinpointRequest::DeleteApnsVoipChannelAction, this))
@@ -66,14 +63,9 @@ bool DeleteApnsVoipChannelRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteApnsVoipChannelResponse object.
+ * Returns a DeleteApnsVoipChannelResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteApnsVoipChannelResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  PinpointClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteApnsVoipChannelRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * DeleteApnsVoipChannelRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::Pinpoint::DeleteApnsVoipChannelRequestPrivate
+ * \brief The DeleteApnsVoipChannelRequestPrivate class provides private implementation for DeleteApnsVoipChannelRequest.
+ * \internal
  *
- * @class  DeleteApnsVoipChannelRequestPrivate
- *
- * @brief  Private implementation for DeleteApnsVoipChannelRequest.
+ * \inmodule QtAwsPinpoint
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteApnsVoipChannelRequestPrivate object.
- *
- * @param  action  Pinpoint action being performed.
- * @param  q       Pointer to this object's public DeleteApnsVoipChannelRequest instance.
+ * Constructs a DeleteApnsVoipChannelRequestPrivate object for Pinpoint \a action with,
+ * public implementation \a q.
  */
 DeleteApnsVoipChannelRequestPrivate::DeleteApnsVoipChannelRequestPrivate(
     const PinpointRequest::Action action, DeleteApnsVoipChannelRequest * const q)
@@ -104,15 +93,10 @@ DeleteApnsVoipChannelRequestPrivate::DeleteApnsVoipChannelRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteApnsVoipChannelRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteApnsVoipChannelRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteApnsVoipChannelRequest instance.
  */
 DeleteApnsVoipChannelRequestPrivate::DeleteApnsVoipChannelRequestPrivate(
     const DeleteApnsVoipChannelRequestPrivate &other, DeleteApnsVoipChannelRequest * const q)

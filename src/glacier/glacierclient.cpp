@@ -94,6 +94,9 @@
 /*!
  * \namespace QtAws::Glacier
  * \brief The QtAws::Glacier contains stuff...
+ *
+ * \inmodule QtAwsGlacier
+ *
  * @todo Move this to a separate template file.
  */
 
@@ -181,7 +184,7 @@ GlacierClient::GlacierClient(
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * \a  AwsEndpoint::getEndpoint()
+ * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
 GlacierClient::GlacierClient(
     const QUrl &endpoint,

@@ -27,10 +27,9 @@ namespace WAFRegional {
 
 /*!
  * \class QtAws::WAFRegional::PutPermissionPolicyRequest
- *
  * \brief The PutPermissionPolicyRequest class provides an interface for WAFRegional PutPermissionPolicy requests.
  *
- * \ingroup WAFRegional
+ * \inmodule QtAwsWAFRegional
  *
  *  This is the <i>AWS WAF Regional API Reference</i> for using AWS WAF with Elastic Load Balancing (ELB) Application Load
  *  Balancers. The AWS WAF actions and data types listed in the reference are available for protecting Application Load
@@ -44,9 +43,7 @@ namespace WAFRegional {
  */
 
 /*!
- * @brief  Constructs a new PutPermissionPolicyRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 PutPermissionPolicyRequest::PutPermissionPolicyRequest(const PutPermissionPolicyRequest &other)
     : WAFRegionalRequest(new PutPermissionPolicyRequestPrivate(*other.d_func(), this))
@@ -55,7 +52,7 @@ PutPermissionPolicyRequest::PutPermissionPolicyRequest(const PutPermissionPolicy
 }
 
 /*!
- * @brief  Constructs a new PutPermissionPolicyRequest object.
+ * Constructs a PutPermissionPolicyRequest object.
  */
 PutPermissionPolicyRequest::PutPermissionPolicyRequest()
     : WAFRegionalRequest(new PutPermissionPolicyRequestPrivate(WAFRegionalRequest::PutPermissionPolicyAction, this))
@@ -73,14 +70,9 @@ bool PutPermissionPolicyRequest::isValid() const
 
 
 /*!
- * @brief  Construct an PutPermissionPolicyResponse object.
+ * Returns a PutPermissionPolicyResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An PutPermissionPolicyResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WAFRegionalClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * PutPermissionPolicyRequest::response(QNetworkReply * const reply) const
 {
@@ -88,20 +80,17 @@ QtAws::Core::AwsAbstractResponse * PutPermissionPolicyRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::WAFRegional::PutPermissionPolicyRequestPrivate
+ * \brief The PutPermissionPolicyRequestPrivate class provides private implementation for PutPermissionPolicyRequest.
+ * \internal
  *
- * @class  PutPermissionPolicyRequestPrivate
- *
- * @brief  Private implementation for PutPermissionPolicyRequest.
+ * \inmodule QtAwsWAFRegional
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new PutPermissionPolicyRequestPrivate object.
- *
- * @param  action  WAFRegional action being performed.
- * @param  q       Pointer to this object's public PutPermissionPolicyRequest instance.
+ * Constructs a PutPermissionPolicyRequestPrivate object for WAFRegional \a action with,
+ * public implementation \a q.
  */
 PutPermissionPolicyRequestPrivate::PutPermissionPolicyRequestPrivate(
     const WAFRegionalRequest::Action action, PutPermissionPolicyRequest * const q)
@@ -111,15 +100,10 @@ PutPermissionPolicyRequestPrivate::PutPermissionPolicyRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutPermissionPolicyRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the PutPermissionPolicyRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public PutPermissionPolicyRequest instance.
  */
 PutPermissionPolicyRequestPrivate::PutPermissionPolicyRequestPrivate(
     const PutPermissionPolicyRequestPrivate &other, PutPermissionPolicyRequest * const q)

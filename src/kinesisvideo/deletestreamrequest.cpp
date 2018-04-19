@@ -27,19 +27,16 @@ namespace KinesisVideo {
 
 /*!
  * \class QtAws::KinesisVideo::DeleteStreamRequest
- *
  * \brief The DeleteStreamRequest class provides an interface for KinesisVideo DeleteStream requests.
  *
- * \ingroup KinesisVideo
+ * \inmodule QtAwsKinesisVideo
  *
  *
  * \sa KinesisVideoClient::deleteStream
  */
 
 /*!
- * @brief  Constructs a new DeleteStreamRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteStreamRequest::DeleteStreamRequest(const DeleteStreamRequest &other)
     : KinesisVideoRequest(new DeleteStreamRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ DeleteStreamRequest::DeleteStreamRequest(const DeleteStreamRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DeleteStreamRequest object.
+ * Constructs a DeleteStreamRequest object.
  */
 DeleteStreamRequest::DeleteStreamRequest()
     : KinesisVideoRequest(new DeleteStreamRequestPrivate(KinesisVideoRequest::DeleteStreamAction, this))
@@ -66,14 +63,9 @@ bool DeleteStreamRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteStreamResponse object.
+ * Returns a DeleteStreamResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteStreamResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  KinesisVideoClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteStreamRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * DeleteStreamRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::KinesisVideo::DeleteStreamRequestPrivate
+ * \brief The DeleteStreamRequestPrivate class provides private implementation for DeleteStreamRequest.
+ * \internal
  *
- * @class  DeleteStreamRequestPrivate
- *
- * @brief  Private implementation for DeleteStreamRequest.
+ * \inmodule QtAwsKinesisVideo
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteStreamRequestPrivate object.
- *
- * @param  action  KinesisVideo action being performed.
- * @param  q       Pointer to this object's public DeleteStreamRequest instance.
+ * Constructs a DeleteStreamRequestPrivate object for KinesisVideo \a action with,
+ * public implementation \a q.
  */
 DeleteStreamRequestPrivate::DeleteStreamRequestPrivate(
     const KinesisVideoRequest::Action action, DeleteStreamRequest * const q)
@@ -104,15 +93,10 @@ DeleteStreamRequestPrivate::DeleteStreamRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteStreamRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteStreamRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteStreamRequest instance.
  */
 DeleteStreamRequestPrivate::DeleteStreamRequestPrivate(
     const DeleteStreamRequestPrivate &other, DeleteStreamRequest * const q)

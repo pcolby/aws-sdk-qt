@@ -27,10 +27,9 @@ namespace CloudWatchLogs {
 
 /*!
  * \class QtAws::CloudWatchLogs::GetLogEventsRequest
- *
  * \brief The GetLogEventsRequest class provides an interface for CloudWatchLogs GetLogEvents requests.
  *
- * \ingroup CloudWatchLogs
+ * \inmodule QtAwsCloudWatchLogs
  *
  *  You can use Amazon CloudWatch Logs to monitor, store, and access your log files from Amazon EC2 instances, AWS
  *  CloudTrail, or other sources. You can then retrieve the associated log data from CloudWatch Logs using the CloudWatch
@@ -66,9 +65,7 @@ namespace CloudWatchLogs {
  */
 
 /*!
- * @brief  Constructs a new GetLogEventsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetLogEventsRequest::GetLogEventsRequest(const GetLogEventsRequest &other)
     : CloudWatchLogsRequest(new GetLogEventsRequestPrivate(*other.d_func(), this))
@@ -77,7 +74,7 @@ GetLogEventsRequest::GetLogEventsRequest(const GetLogEventsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetLogEventsRequest object.
+ * Constructs a GetLogEventsRequest object.
  */
 GetLogEventsRequest::GetLogEventsRequest()
     : CloudWatchLogsRequest(new GetLogEventsRequestPrivate(CloudWatchLogsRequest::GetLogEventsAction, this))
@@ -95,14 +92,9 @@ bool GetLogEventsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetLogEventsResponse object.
+ * Returns a GetLogEventsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetLogEventsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudWatchLogsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetLogEventsRequest::response(QNetworkReply * const reply) const
 {
@@ -110,20 +102,17 @@ QtAws::Core::AwsAbstractResponse * GetLogEventsRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudWatchLogs::GetLogEventsRequestPrivate
+ * \brief The GetLogEventsRequestPrivate class provides private implementation for GetLogEventsRequest.
+ * \internal
  *
- * @class  GetLogEventsRequestPrivate
- *
- * @brief  Private implementation for GetLogEventsRequest.
+ * \inmodule QtAwsCloudWatchLogs
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetLogEventsRequestPrivate object.
- *
- * @param  action  CloudWatchLogs action being performed.
- * @param  q       Pointer to this object's public GetLogEventsRequest instance.
+ * Constructs a GetLogEventsRequestPrivate object for CloudWatchLogs \a action with,
+ * public implementation \a q.
  */
 GetLogEventsRequestPrivate::GetLogEventsRequestPrivate(
     const CloudWatchLogsRequest::Action action, GetLogEventsRequest * const q)
@@ -133,15 +122,10 @@ GetLogEventsRequestPrivate::GetLogEventsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetLogEventsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetLogEventsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetLogEventsRequest instance.
  */
 GetLogEventsRequestPrivate::GetLogEventsRequestPrivate(
     const GetLogEventsRequestPrivate &other, GetLogEventsRequest * const q)

@@ -27,10 +27,9 @@ namespace CloudSearch {
 
 /*!
  * \class QtAws::CloudSearch::DefineSuggesterRequest
- *
  * \brief The DefineSuggesterRequest class provides an interface for CloudSearch DefineSuggester requests.
  *
- * \ingroup CloudSearch
+ * \inmodule QtAwsCloudSearch
  *
  *  <fullname>Amazon CloudSearch Configuration Service</fullname>
  * 
@@ -48,9 +47,7 @@ namespace CloudSearch {
  */
 
 /*!
- * @brief  Constructs a new DefineSuggesterRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DefineSuggesterRequest::DefineSuggesterRequest(const DefineSuggesterRequest &other)
     : CloudSearchRequest(new DefineSuggesterRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ DefineSuggesterRequest::DefineSuggesterRequest(const DefineSuggesterRequest &oth
 }
 
 /*!
- * @brief  Constructs a new DefineSuggesterRequest object.
+ * Constructs a DefineSuggesterRequest object.
  */
 DefineSuggesterRequest::DefineSuggesterRequest()
     : CloudSearchRequest(new DefineSuggesterRequestPrivate(CloudSearchRequest::DefineSuggesterAction, this))
@@ -77,14 +74,9 @@ bool DefineSuggesterRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DefineSuggesterResponse object.
+ * Returns a DefineSuggesterResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DefineSuggesterResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudSearchClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DefineSuggesterRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * DefineSuggesterRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudSearch::DefineSuggesterRequestPrivate
+ * \brief The DefineSuggesterRequestPrivate class provides private implementation for DefineSuggesterRequest.
+ * \internal
  *
- * @class  DefineSuggesterRequestPrivate
- *
- * @brief  Private implementation for DefineSuggesterRequest.
+ * \inmodule QtAwsCloudSearch
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DefineSuggesterRequestPrivate object.
- *
- * @param  action  CloudSearch action being performed.
- * @param  q       Pointer to this object's public DefineSuggesterRequest instance.
+ * Constructs a DefineSuggesterRequestPrivate object for CloudSearch \a action with,
+ * public implementation \a q.
  */
 DefineSuggesterRequestPrivate::DefineSuggesterRequestPrivate(
     const CloudSearchRequest::Action action, DefineSuggesterRequest * const q)
@@ -115,15 +104,10 @@ DefineSuggesterRequestPrivate::DefineSuggesterRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DefineSuggesterRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DefineSuggesterRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DefineSuggesterRequest instance.
  */
 DefineSuggesterRequestPrivate::DefineSuggesterRequestPrivate(
     const DefineSuggesterRequestPrivate &other, DefineSuggesterRequest * const q)

@@ -27,10 +27,9 @@ namespace ResourceGroups {
 
 /*!
  * \class QtAws::ResourceGroups::ListGroupsRequest
- *
  * \brief The ListGroupsRequest class provides an interface for ResourceGroups ListGroups requests.
  *
- * \ingroup ResourceGroups
+ * \inmodule QtAwsResourceGroups
  *
  *  <fullname>AWS Resource Groups</fullname>
  * 
@@ -81,9 +80,7 @@ namespace ResourceGroups {
  */
 
 /*!
- * @brief  Constructs a new ListGroupsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListGroupsRequest::ListGroupsRequest(const ListGroupsRequest &other)
     : ResourceGroupsRequest(new ListGroupsRequestPrivate(*other.d_func(), this))
@@ -92,7 +89,7 @@ ListGroupsRequest::ListGroupsRequest(const ListGroupsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ListGroupsRequest object.
+ * Constructs a ListGroupsRequest object.
  */
 ListGroupsRequest::ListGroupsRequest()
     : ResourceGroupsRequest(new ListGroupsRequestPrivate(ResourceGroupsRequest::ListGroupsAction, this))
@@ -110,14 +107,9 @@ bool ListGroupsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListGroupsResponse object.
+ * Returns a ListGroupsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListGroupsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ResourceGroupsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListGroupsRequest::response(QNetworkReply * const reply) const
 {
@@ -125,20 +117,17 @@ QtAws::Core::AwsAbstractResponse * ListGroupsRequest::response(QNetworkReply * c
 }
 
 /*!
- * @internal
+ * \class QtAws::ResourceGroups::ListGroupsRequestPrivate
+ * \brief The ListGroupsRequestPrivate class provides private implementation for ListGroupsRequest.
+ * \internal
  *
- * @class  ListGroupsRequestPrivate
- *
- * @brief  Private implementation for ListGroupsRequest.
+ * \inmodule QtAwsResourceGroups
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListGroupsRequestPrivate object.
- *
- * @param  action  ResourceGroups action being performed.
- * @param  q       Pointer to this object's public ListGroupsRequest instance.
+ * Constructs a ListGroupsRequestPrivate object for ResourceGroups \a action with,
+ * public implementation \a q.
  */
 ListGroupsRequestPrivate::ListGroupsRequestPrivate(
     const ResourceGroupsRequest::Action action, ListGroupsRequest * const q)
@@ -148,15 +137,10 @@ ListGroupsRequestPrivate::ListGroupsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListGroupsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListGroupsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListGroupsRequest instance.
  */
 ListGroupsRequestPrivate::ListGroupsRequestPrivate(
     const ListGroupsRequestPrivate &other, ListGroupsRequest * const q)

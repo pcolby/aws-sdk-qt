@@ -27,10 +27,9 @@ namespace DynamoDB {
 
 /*!
  * \class QtAws::DynamoDB::DescribeBackupRequest
- *
  * \brief The DescribeBackupRequest class provides an interface for DynamoDB DescribeBackup requests.
  *
- * \ingroup DynamoDB
+ * \inmodule QtAwsDynamoDB
  *
  *  <fullname>Amazon DynamoDB</fullname>
  * 
@@ -56,9 +55,7 @@ namespace DynamoDB {
  */
 
 /*!
- * @brief  Constructs a new DescribeBackupRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeBackupRequest::DescribeBackupRequest(const DescribeBackupRequest &other)
     : DynamoDBRequest(new DescribeBackupRequestPrivate(*other.d_func(), this))
@@ -67,7 +64,7 @@ DescribeBackupRequest::DescribeBackupRequest(const DescribeBackupRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DescribeBackupRequest object.
+ * Constructs a DescribeBackupRequest object.
  */
 DescribeBackupRequest::DescribeBackupRequest()
     : DynamoDBRequest(new DescribeBackupRequestPrivate(DynamoDBRequest::DescribeBackupAction, this))
@@ -85,14 +82,9 @@ bool DescribeBackupRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeBackupResponse object.
+ * Returns a DescribeBackupResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeBackupResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DynamoDBClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeBackupRequest::response(QNetworkReply * const reply) const
 {
@@ -100,20 +92,17 @@ QtAws::Core::AwsAbstractResponse * DescribeBackupRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::DynamoDB::DescribeBackupRequestPrivate
+ * \brief The DescribeBackupRequestPrivate class provides private implementation for DescribeBackupRequest.
+ * \internal
  *
- * @class  DescribeBackupRequestPrivate
- *
- * @brief  Private implementation for DescribeBackupRequest.
+ * \inmodule QtAwsDynamoDB
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeBackupRequestPrivate object.
- *
- * @param  action  DynamoDB action being performed.
- * @param  q       Pointer to this object's public DescribeBackupRequest instance.
+ * Constructs a DescribeBackupRequestPrivate object for DynamoDB \a action with,
+ * public implementation \a q.
  */
 DescribeBackupRequestPrivate::DescribeBackupRequestPrivate(
     const DynamoDBRequest::Action action, DescribeBackupRequest * const q)
@@ -123,15 +112,10 @@ DescribeBackupRequestPrivate::DescribeBackupRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeBackupRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeBackupRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeBackupRequest instance.
  */
 DescribeBackupRequestPrivate::DescribeBackupRequestPrivate(
     const DescribeBackupRequestPrivate &other, DescribeBackupRequest * const q)

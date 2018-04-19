@@ -27,10 +27,9 @@ namespace ElasticsearchService {
 
 /*!
  * \class QtAws::ElasticsearchService::ListElasticsearchInstanceTypesRequest
- *
  * \brief The ListElasticsearchInstanceTypesRequest class provides an interface for ElasticsearchService ListElasticsearchInstanceTypes requests.
  *
- * \ingroup ElasticsearchService
+ * \inmodule QtAwsElasticsearchService
  *
  *  <fullname>Amazon Elasticsearch Configuration Service</fullname>
  * 
@@ -46,9 +45,7 @@ namespace ElasticsearchService {
  */
 
 /*!
- * @brief  Constructs a new ListElasticsearchInstanceTypesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListElasticsearchInstanceTypesRequest::ListElasticsearchInstanceTypesRequest(const ListElasticsearchInstanceTypesRequest &other)
     : ElasticsearchServiceRequest(new ListElasticsearchInstanceTypesRequestPrivate(*other.d_func(), this))
@@ -57,7 +54,7 @@ ListElasticsearchInstanceTypesRequest::ListElasticsearchInstanceTypesRequest(con
 }
 
 /*!
- * @brief  Constructs a new ListElasticsearchInstanceTypesRequest object.
+ * Constructs a ListElasticsearchInstanceTypesRequest object.
  */
 ListElasticsearchInstanceTypesRequest::ListElasticsearchInstanceTypesRequest()
     : ElasticsearchServiceRequest(new ListElasticsearchInstanceTypesRequestPrivate(ElasticsearchServiceRequest::ListElasticsearchInstanceTypesAction, this))
@@ -75,14 +72,9 @@ bool ListElasticsearchInstanceTypesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListElasticsearchInstanceTypesResponse object.
+ * Returns a ListElasticsearchInstanceTypesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListElasticsearchInstanceTypesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ElasticsearchServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListElasticsearchInstanceTypesRequest::response(QNetworkReply * const reply) const
 {
@@ -90,20 +82,17 @@ QtAws::Core::AwsAbstractResponse * ListElasticsearchInstanceTypesRequest::respon
 }
 
 /*!
- * @internal
+ * \class QtAws::ElasticsearchService::ListElasticsearchInstanceTypesRequestPrivate
+ * \brief The ListElasticsearchInstanceTypesRequestPrivate class provides private implementation for ListElasticsearchInstanceTypesRequest.
+ * \internal
  *
- * @class  ListElasticsearchInstanceTypesRequestPrivate
- *
- * @brief  Private implementation for ListElasticsearchInstanceTypesRequest.
+ * \inmodule QtAwsElasticsearchService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListElasticsearchInstanceTypesRequestPrivate object.
- *
- * @param  action  ElasticsearchService action being performed.
- * @param  q       Pointer to this object's public ListElasticsearchInstanceTypesRequest instance.
+ * Constructs a ListElasticsearchInstanceTypesRequestPrivate object for ElasticsearchService \a action with,
+ * public implementation \a q.
  */
 ListElasticsearchInstanceTypesRequestPrivate::ListElasticsearchInstanceTypesRequestPrivate(
     const ElasticsearchServiceRequest::Action action, ListElasticsearchInstanceTypesRequest * const q)
@@ -113,15 +102,10 @@ ListElasticsearchInstanceTypesRequestPrivate::ListElasticsearchInstanceTypesRequ
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListElasticsearchInstanceTypesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListElasticsearchInstanceTypesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListElasticsearchInstanceTypesRequest instance.
  */
 ListElasticsearchInstanceTypesRequestPrivate::ListElasticsearchInstanceTypesRequestPrivate(
     const ListElasticsearchInstanceTypesRequestPrivate &other, ListElasticsearchInstanceTypesRequest * const q)

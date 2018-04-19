@@ -27,10 +27,9 @@ namespace Redshift {
 
 /*!
  * \class QtAws::Redshift::CreateClusterSubnetGroupRequest
- *
  * \brief The CreateClusterSubnetGroupRequest class provides an interface for Redshift CreateClusterSubnetGroup requests.
  *
- * \ingroup Redshift
+ * \inmodule QtAwsRedshift
  *
  *  <fullname>Amazon Redshift</fullname>
  * 
@@ -67,9 +66,7 @@ namespace Redshift {
  */
 
 /*!
- * @brief  Constructs a new CreateClusterSubnetGroupRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateClusterSubnetGroupRequest::CreateClusterSubnetGroupRequest(const CreateClusterSubnetGroupRequest &other)
     : RedshiftRequest(new CreateClusterSubnetGroupRequestPrivate(*other.d_func(), this))
@@ -78,7 +75,7 @@ CreateClusterSubnetGroupRequest::CreateClusterSubnetGroupRequest(const CreateClu
 }
 
 /*!
- * @brief  Constructs a new CreateClusterSubnetGroupRequest object.
+ * Constructs a CreateClusterSubnetGroupRequest object.
  */
 CreateClusterSubnetGroupRequest::CreateClusterSubnetGroupRequest()
     : RedshiftRequest(new CreateClusterSubnetGroupRequestPrivate(RedshiftRequest::CreateClusterSubnetGroupAction, this))
@@ -96,14 +93,9 @@ bool CreateClusterSubnetGroupRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateClusterSubnetGroupResponse object.
+ * Returns a CreateClusterSubnetGroupResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateClusterSubnetGroupResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RedshiftClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateClusterSubnetGroupRequest::response(QNetworkReply * const reply) const
 {
@@ -111,20 +103,17 @@ QtAws::Core::AwsAbstractResponse * CreateClusterSubnetGroupRequest::response(QNe
 }
 
 /*!
- * @internal
+ * \class QtAws::Redshift::CreateClusterSubnetGroupRequestPrivate
+ * \brief The CreateClusterSubnetGroupRequestPrivate class provides private implementation for CreateClusterSubnetGroupRequest.
+ * \internal
  *
- * @class  CreateClusterSubnetGroupRequestPrivate
- *
- * @brief  Private implementation for CreateClusterSubnetGroupRequest.
+ * \inmodule QtAwsRedshift
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateClusterSubnetGroupRequestPrivate object.
- *
- * @param  action  Redshift action being performed.
- * @param  q       Pointer to this object's public CreateClusterSubnetGroupRequest instance.
+ * Constructs a CreateClusterSubnetGroupRequestPrivate object for Redshift \a action with,
+ * public implementation \a q.
  */
 CreateClusterSubnetGroupRequestPrivate::CreateClusterSubnetGroupRequestPrivate(
     const RedshiftRequest::Action action, CreateClusterSubnetGroupRequest * const q)
@@ -134,15 +123,10 @@ CreateClusterSubnetGroupRequestPrivate::CreateClusterSubnetGroupRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateClusterSubnetGroupRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateClusterSubnetGroupRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateClusterSubnetGroupRequest instance.
  */
 CreateClusterSubnetGroupRequestPrivate::CreateClusterSubnetGroupRequestPrivate(
     const CreateClusterSubnetGroupRequestPrivate &other, CreateClusterSubnetGroupRequest * const q)

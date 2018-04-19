@@ -27,10 +27,9 @@ namespace AlexaForBusiness {
 
 /*!
  * \class QtAws::AlexaForBusiness::AssociateDeviceWithRoomRequest
- *
  * \brief The AssociateDeviceWithRoomRequest class provides an interface for AlexaForBusiness AssociateDeviceWithRoom requests.
  *
- * \ingroup AlexaForBusiness
+ * \inmodule QtAwsAlexaForBusiness
  *
  *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
  *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
@@ -42,9 +41,7 @@ namespace AlexaForBusiness {
  */
 
 /*!
- * @brief  Constructs a new AssociateDeviceWithRoomRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AssociateDeviceWithRoomRequest::AssociateDeviceWithRoomRequest(const AssociateDeviceWithRoomRequest &other)
     : AlexaForBusinessRequest(new AssociateDeviceWithRoomRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ AssociateDeviceWithRoomRequest::AssociateDeviceWithRoomRequest(const AssociateDe
 }
 
 /*!
- * @brief  Constructs a new AssociateDeviceWithRoomRequest object.
+ * Constructs a AssociateDeviceWithRoomRequest object.
  */
 AssociateDeviceWithRoomRequest::AssociateDeviceWithRoomRequest()
     : AlexaForBusinessRequest(new AssociateDeviceWithRoomRequestPrivate(AlexaForBusinessRequest::AssociateDeviceWithRoomAction, this))
@@ -71,14 +68,9 @@ bool AssociateDeviceWithRoomRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AssociateDeviceWithRoomResponse object.
+ * Returns a AssociateDeviceWithRoomResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AssociateDeviceWithRoomResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AlexaForBusinessClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AssociateDeviceWithRoomRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * AssociateDeviceWithRoomRequest::response(QNet
 }
 
 /*!
- * @internal
+ * \class QtAws::AlexaForBusiness::AssociateDeviceWithRoomRequestPrivate
+ * \brief The AssociateDeviceWithRoomRequestPrivate class provides private implementation for AssociateDeviceWithRoomRequest.
+ * \internal
  *
- * @class  AssociateDeviceWithRoomRequestPrivate
- *
- * @brief  Private implementation for AssociateDeviceWithRoomRequest.
+ * \inmodule QtAwsAlexaForBusiness
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AssociateDeviceWithRoomRequestPrivate object.
- *
- * @param  action  AlexaForBusiness action being performed.
- * @param  q       Pointer to this object's public AssociateDeviceWithRoomRequest instance.
+ * Constructs a AssociateDeviceWithRoomRequestPrivate object for AlexaForBusiness \a action with,
+ * public implementation \a q.
  */
 AssociateDeviceWithRoomRequestPrivate::AssociateDeviceWithRoomRequestPrivate(
     const AlexaForBusinessRequest::Action action, AssociateDeviceWithRoomRequest * const q)
@@ -109,15 +98,10 @@ AssociateDeviceWithRoomRequestPrivate::AssociateDeviceWithRoomRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AssociateDeviceWithRoomRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AssociateDeviceWithRoomRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AssociateDeviceWithRoomRequest instance.
  */
 AssociateDeviceWithRoomRequestPrivate::AssociateDeviceWithRoomRequestPrivate(
     const AssociateDeviceWithRoomRequestPrivate &other, AssociateDeviceWithRoomRequest * const q)

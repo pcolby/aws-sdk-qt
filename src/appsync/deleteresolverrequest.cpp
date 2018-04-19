@@ -27,10 +27,9 @@ namespace AppSync {
 
 /*!
  * \class QtAws::AppSync::DeleteResolverRequest
- *
  * \brief The DeleteResolverRequest class provides an interface for AppSync DeleteResolver requests.
  *
- * \ingroup AppSync
+ * \inmodule QtAwsAppSync
  *
  *  AWS AppSync provides API actions for creating and interacting with data sources using GraphQL from your
  *
@@ -38,9 +37,7 @@ namespace AppSync {
  */
 
 /*!
- * @brief  Constructs a new DeleteResolverRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteResolverRequest::DeleteResolverRequest(const DeleteResolverRequest &other)
     : AppSyncRequest(new DeleteResolverRequestPrivate(*other.d_func(), this))
@@ -49,7 +46,7 @@ DeleteResolverRequest::DeleteResolverRequest(const DeleteResolverRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DeleteResolverRequest object.
+ * Constructs a DeleteResolverRequest object.
  */
 DeleteResolverRequest::DeleteResolverRequest()
     : AppSyncRequest(new DeleteResolverRequestPrivate(AppSyncRequest::DeleteResolverAction, this))
@@ -67,14 +64,9 @@ bool DeleteResolverRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteResolverResponse object.
+ * Returns a DeleteResolverResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteResolverResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AppSyncClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteResolverRequest::response(QNetworkReply * const reply) const
 {
@@ -82,20 +74,17 @@ QtAws::Core::AwsAbstractResponse * DeleteResolverRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::AppSync::DeleteResolverRequestPrivate
+ * \brief The DeleteResolverRequestPrivate class provides private implementation for DeleteResolverRequest.
+ * \internal
  *
- * @class  DeleteResolverRequestPrivate
- *
- * @brief  Private implementation for DeleteResolverRequest.
+ * \inmodule QtAwsAppSync
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteResolverRequestPrivate object.
- *
- * @param  action  AppSync action being performed.
- * @param  q       Pointer to this object's public DeleteResolverRequest instance.
+ * Constructs a DeleteResolverRequestPrivate object for AppSync \a action with,
+ * public implementation \a q.
  */
 DeleteResolverRequestPrivate::DeleteResolverRequestPrivate(
     const AppSyncRequest::Action action, DeleteResolverRequest * const q)
@@ -105,15 +94,10 @@ DeleteResolverRequestPrivate::DeleteResolverRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteResolverRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteResolverRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteResolverRequest instance.
  */
 DeleteResolverRequestPrivate::DeleteResolverRequestPrivate(
     const DeleteResolverRequestPrivate &other, DeleteResolverRequest * const q)

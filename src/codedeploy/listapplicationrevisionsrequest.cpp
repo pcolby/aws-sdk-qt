@@ -27,10 +27,9 @@ namespace CodeDeploy {
 
 /*!
  * \class QtAws::CodeDeploy::ListApplicationRevisionsRequest
- *
  * \brief The ListApplicationRevisionsRequest class provides an interface for CodeDeploy ListApplicationRevisions requests.
  *
- * \ingroup CodeDeploy
+ * \inmodule QtAwsCodeDeploy
  *
  *  <fullname>AWS CodeDeploy</fullname>
  * 
@@ -118,9 +117,7 @@ namespace CodeDeploy {
  */
 
 /*!
- * @brief  Constructs a new ListApplicationRevisionsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListApplicationRevisionsRequest::ListApplicationRevisionsRequest(const ListApplicationRevisionsRequest &other)
     : CodeDeployRequest(new ListApplicationRevisionsRequestPrivate(*other.d_func(), this))
@@ -129,7 +126,7 @@ ListApplicationRevisionsRequest::ListApplicationRevisionsRequest(const ListAppli
 }
 
 /*!
- * @brief  Constructs a new ListApplicationRevisionsRequest object.
+ * Constructs a ListApplicationRevisionsRequest object.
  */
 ListApplicationRevisionsRequest::ListApplicationRevisionsRequest()
     : CodeDeployRequest(new ListApplicationRevisionsRequestPrivate(CodeDeployRequest::ListApplicationRevisionsAction, this))
@@ -147,14 +144,9 @@ bool ListApplicationRevisionsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListApplicationRevisionsResponse object.
+ * Returns a ListApplicationRevisionsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListApplicationRevisionsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CodeDeployClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListApplicationRevisionsRequest::response(QNetworkReply * const reply) const
 {
@@ -162,20 +154,17 @@ QtAws::Core::AwsAbstractResponse * ListApplicationRevisionsRequest::response(QNe
 }
 
 /*!
- * @internal
+ * \class QtAws::CodeDeploy::ListApplicationRevisionsRequestPrivate
+ * \brief The ListApplicationRevisionsRequestPrivate class provides private implementation for ListApplicationRevisionsRequest.
+ * \internal
  *
- * @class  ListApplicationRevisionsRequestPrivate
- *
- * @brief  Private implementation for ListApplicationRevisionsRequest.
+ * \inmodule QtAwsCodeDeploy
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListApplicationRevisionsRequestPrivate object.
- *
- * @param  action  CodeDeploy action being performed.
- * @param  q       Pointer to this object's public ListApplicationRevisionsRequest instance.
+ * Constructs a ListApplicationRevisionsRequestPrivate object for CodeDeploy \a action with,
+ * public implementation \a q.
  */
 ListApplicationRevisionsRequestPrivate::ListApplicationRevisionsRequestPrivate(
     const CodeDeployRequest::Action action, ListApplicationRevisionsRequest * const q)
@@ -185,15 +174,10 @@ ListApplicationRevisionsRequestPrivate::ListApplicationRevisionsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListApplicationRevisionsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListApplicationRevisionsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListApplicationRevisionsRequest instance.
  */
 ListApplicationRevisionsRequestPrivate::ListApplicationRevisionsRequestPrivate(
     const ListApplicationRevisionsRequestPrivate &other, ListApplicationRevisionsRequest * const q)

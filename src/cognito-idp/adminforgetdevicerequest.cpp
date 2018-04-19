@@ -27,10 +27,9 @@ namespace CognitoIdentityProvider {
 
 /*!
  * \class QtAws::CognitoIdentityProvider::AdminForgetDeviceRequest
- *
  * \brief The AdminForgetDeviceRequest class provides an interface for CognitoIdentityProvider AdminForgetDevice requests.
  *
- * \ingroup CognitoIdentityProvider
+ * \inmodule QtAwsCognitoIdentityProvider
  *
  *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
  *  authenticate a user to obtain tokens related to user identity and access
@@ -47,9 +46,7 @@ namespace CognitoIdentityProvider {
  */
 
 /*!
- * @brief  Constructs a new AdminForgetDeviceRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AdminForgetDeviceRequest::AdminForgetDeviceRequest(const AdminForgetDeviceRequest &other)
     : CognitoIdentityProviderRequest(new AdminForgetDeviceRequestPrivate(*other.d_func(), this))
@@ -58,7 +55,7 @@ AdminForgetDeviceRequest::AdminForgetDeviceRequest(const AdminForgetDeviceReques
 }
 
 /*!
- * @brief  Constructs a new AdminForgetDeviceRequest object.
+ * Constructs a AdminForgetDeviceRequest object.
  */
 AdminForgetDeviceRequest::AdminForgetDeviceRequest()
     : CognitoIdentityProviderRequest(new AdminForgetDeviceRequestPrivate(CognitoIdentityProviderRequest::AdminForgetDeviceAction, this))
@@ -76,14 +73,9 @@ bool AdminForgetDeviceRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AdminForgetDeviceResponse object.
+ * Returns a AdminForgetDeviceResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AdminForgetDeviceResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CognitoIdentityProviderClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AdminForgetDeviceRequest::response(QNetworkReply * const reply) const
 {
@@ -91,20 +83,17 @@ QtAws::Core::AwsAbstractResponse * AdminForgetDeviceRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::CognitoIdentityProvider::AdminForgetDeviceRequestPrivate
+ * \brief The AdminForgetDeviceRequestPrivate class provides private implementation for AdminForgetDeviceRequest.
+ * \internal
  *
- * @class  AdminForgetDeviceRequestPrivate
- *
- * @brief  Private implementation for AdminForgetDeviceRequest.
+ * \inmodule QtAwsCognitoIdentityProvider
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AdminForgetDeviceRequestPrivate object.
- *
- * @param  action  CognitoIdentityProvider action being performed.
- * @param  q       Pointer to this object's public AdminForgetDeviceRequest instance.
+ * Constructs a AdminForgetDeviceRequestPrivate object for CognitoIdentityProvider \a action with,
+ * public implementation \a q.
  */
 AdminForgetDeviceRequestPrivate::AdminForgetDeviceRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, AdminForgetDeviceRequest * const q)
@@ -114,15 +103,10 @@ AdminForgetDeviceRequestPrivate::AdminForgetDeviceRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AdminForgetDeviceRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AdminForgetDeviceRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AdminForgetDeviceRequest instance.
  */
 AdminForgetDeviceRequestPrivate::AdminForgetDeviceRequestPrivate(
     const AdminForgetDeviceRequestPrivate &other, AdminForgetDeviceRequest * const q)

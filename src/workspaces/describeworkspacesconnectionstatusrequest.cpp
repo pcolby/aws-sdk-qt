@@ -27,10 +27,9 @@ namespace WorkSpaces {
 
 /*!
  * \class QtAws::WorkSpaces::DescribeWorkspacesConnectionStatusRequest
- *
  * \brief The DescribeWorkspacesConnectionStatusRequest class provides an interface for WorkSpaces DescribeWorkspacesConnectionStatus requests.
  *
- * \ingroup WorkSpaces
+ * \inmodule QtAwsWorkSpaces
  *
  *  <fullname>Amazon WorkSpaces Service</fullname>
  * 
@@ -40,9 +39,7 @@ namespace WorkSpaces {
  */
 
 /*!
- * @brief  Constructs a new DescribeWorkspacesConnectionStatusRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeWorkspacesConnectionStatusRequest::DescribeWorkspacesConnectionStatusRequest(const DescribeWorkspacesConnectionStatusRequest &other)
     : WorkSpacesRequest(new DescribeWorkspacesConnectionStatusRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ DescribeWorkspacesConnectionStatusRequest::DescribeWorkspacesConnectionStatusReq
 }
 
 /*!
- * @brief  Constructs a new DescribeWorkspacesConnectionStatusRequest object.
+ * Constructs a DescribeWorkspacesConnectionStatusRequest object.
  */
 DescribeWorkspacesConnectionStatusRequest::DescribeWorkspacesConnectionStatusRequest()
     : WorkSpacesRequest(new DescribeWorkspacesConnectionStatusRequestPrivate(WorkSpacesRequest::DescribeWorkspacesConnectionStatusAction, this))
@@ -69,14 +66,9 @@ bool DescribeWorkspacesConnectionStatusRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeWorkspacesConnectionStatusResponse object.
+ * Returns a DescribeWorkspacesConnectionStatusResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeWorkspacesConnectionStatusResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WorkSpacesClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeWorkspacesConnectionStatusRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * DescribeWorkspacesConnectionStatusRequest::re
 }
 
 /*!
- * @internal
+ * \class QtAws::WorkSpaces::DescribeWorkspacesConnectionStatusRequestPrivate
+ * \brief The DescribeWorkspacesConnectionStatusRequestPrivate class provides private implementation for DescribeWorkspacesConnectionStatusRequest.
+ * \internal
  *
- * @class  DescribeWorkspacesConnectionStatusRequestPrivate
- *
- * @brief  Private implementation for DescribeWorkspacesConnectionStatusRequest.
+ * \inmodule QtAwsWorkSpaces
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeWorkspacesConnectionStatusRequestPrivate object.
- *
- * @param  action  WorkSpaces action being performed.
- * @param  q       Pointer to this object's public DescribeWorkspacesConnectionStatusRequest instance.
+ * Constructs a DescribeWorkspacesConnectionStatusRequestPrivate object for WorkSpaces \a action with,
+ * public implementation \a q.
  */
 DescribeWorkspacesConnectionStatusRequestPrivate::DescribeWorkspacesConnectionStatusRequestPrivate(
     const WorkSpacesRequest::Action action, DescribeWorkspacesConnectionStatusRequest * const q)
@@ -107,15 +96,10 @@ DescribeWorkspacesConnectionStatusRequestPrivate::DescribeWorkspacesConnectionSt
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeWorkspacesConnectionStatusRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeWorkspacesConnectionStatusRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeWorkspacesConnectionStatusRequest instance.
  */
 DescribeWorkspacesConnectionStatusRequestPrivate::DescribeWorkspacesConnectionStatusRequestPrivate(
     const DescribeWorkspacesConnectionStatusRequestPrivate &other, DescribeWorkspacesConnectionStatusRequest * const q)

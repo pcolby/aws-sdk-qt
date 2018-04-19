@@ -25,16 +25,92 @@ namespace Lightsail {
 
 /*!
  * \class QtAws::Lightsail::LightsailRequest
- *
  * \brief The LightsailRequest class provides an interface for Lightsail requests.
  *
- * \ingroup Lightsail
+ * \inmodule QtAwsLightsail
  */
 
 /*!
- * @brief  Constructs a new LightsailRequest object.
+ * \enum LightsailRequest::Action
  *
- * @param  action  The Lightsail action to request.
+ * This enum describes the actions that can be performed as Lightsail
+ * requests.
+ *
+ * \value AllocateStaticIpAction Lightsail AllocateStaticIp action.
+ * \value AttachDiskAction Lightsail AttachDisk action.
+ * \value AttachInstancesToLoadBalancerAction Lightsail AttachInstancesToLoadBalancer action.
+ * \value AttachLoadBalancerTlsCertificateAction Lightsail AttachLoadBalancerTlsCertificate action.
+ * \value AttachStaticIpAction Lightsail AttachStaticIp action.
+ * \value CloseInstancePublicPortsAction Lightsail CloseInstancePublicPorts action.
+ * \value CreateDiskAction Lightsail CreateDisk action.
+ * \value CreateDiskFromSnapshotAction Lightsail CreateDiskFromSnapshot action.
+ * \value CreateDiskSnapshotAction Lightsail CreateDiskSnapshot action.
+ * \value CreateDomainAction Lightsail CreateDomain action.
+ * \value CreateDomainEntryAction Lightsail CreateDomainEntry action.
+ * \value CreateInstanceSnapshotAction Lightsail CreateInstanceSnapshot action.
+ * \value CreateInstancesAction Lightsail CreateInstances action.
+ * \value CreateInstancesFromSnapshotAction Lightsail CreateInstancesFromSnapshot action.
+ * \value CreateKeyPairAction Lightsail CreateKeyPair action.
+ * \value CreateLoadBalancerAction Lightsail CreateLoadBalancer action.
+ * \value CreateLoadBalancerTlsCertificateAction Lightsail CreateLoadBalancerTlsCertificate action.
+ * \value DeleteDiskAction Lightsail DeleteDisk action.
+ * \value DeleteDiskSnapshotAction Lightsail DeleteDiskSnapshot action.
+ * \value DeleteDomainAction Lightsail DeleteDomain action.
+ * \value DeleteDomainEntryAction Lightsail DeleteDomainEntry action.
+ * \value DeleteInstanceAction Lightsail DeleteInstance action.
+ * \value DeleteInstanceSnapshotAction Lightsail DeleteInstanceSnapshot action.
+ * \value DeleteKeyPairAction Lightsail DeleteKeyPair action.
+ * \value DeleteLoadBalancerAction Lightsail DeleteLoadBalancer action.
+ * \value DeleteLoadBalancerTlsCertificateAction Lightsail DeleteLoadBalancerTlsCertificate action.
+ * \value DetachDiskAction Lightsail DetachDisk action.
+ * \value DetachInstancesFromLoadBalancerAction Lightsail DetachInstancesFromLoadBalancer action.
+ * \value DetachStaticIpAction Lightsail DetachStaticIp action.
+ * \value DownloadDefaultKeyPairAction Lightsail DownloadDefaultKeyPair action.
+ * \value GetActiveNamesAction Lightsail GetActiveNames action.
+ * \value GetBlueprintsAction Lightsail GetBlueprints action.
+ * \value GetBundlesAction Lightsail GetBundles action.
+ * \value GetDiskAction Lightsail GetDisk action.
+ * \value GetDiskSnapshotAction Lightsail GetDiskSnapshot action.
+ * \value GetDiskSnapshotsAction Lightsail GetDiskSnapshots action.
+ * \value GetDisksAction Lightsail GetDisks action.
+ * \value GetDomainAction Lightsail GetDomain action.
+ * \value GetDomainsAction Lightsail GetDomains action.
+ * \value GetInstanceAction Lightsail GetInstance action.
+ * \value GetInstanceAccessDetailsAction Lightsail GetInstanceAccessDetails action.
+ * \value GetInstanceMetricDataAction Lightsail GetInstanceMetricData action.
+ * \value GetInstancePortStatesAction Lightsail GetInstancePortStates action.
+ * \value GetInstanceSnapshotAction Lightsail GetInstanceSnapshot action.
+ * \value GetInstanceSnapshotsAction Lightsail GetInstanceSnapshots action.
+ * \value GetInstanceStateAction Lightsail GetInstanceState action.
+ * \value GetInstancesAction Lightsail GetInstances action.
+ * \value GetKeyPairAction Lightsail GetKeyPair action.
+ * \value GetKeyPairsAction Lightsail GetKeyPairs action.
+ * \value GetLoadBalancerAction Lightsail GetLoadBalancer action.
+ * \value GetLoadBalancerMetricDataAction Lightsail GetLoadBalancerMetricData action.
+ * \value GetLoadBalancerTlsCertificatesAction Lightsail GetLoadBalancerTlsCertificates action.
+ * \value GetLoadBalancersAction Lightsail GetLoadBalancers action.
+ * \value GetOperationAction Lightsail GetOperation action.
+ * \value GetOperationsAction Lightsail GetOperations action.
+ * \value GetOperationsForResourceAction Lightsail GetOperationsForResource action.
+ * \value GetRegionsAction Lightsail GetRegions action.
+ * \value GetStaticIpAction Lightsail GetStaticIp action.
+ * \value GetStaticIpsAction Lightsail GetStaticIps action.
+ * \value ImportKeyPairAction Lightsail ImportKeyPair action.
+ * \value IsVpcPeeredAction Lightsail IsVpcPeered action.
+ * \value OpenInstancePublicPortsAction Lightsail OpenInstancePublicPorts action.
+ * \value PeerVpcAction Lightsail PeerVpc action.
+ * \value PutInstancePublicPortsAction Lightsail PutInstancePublicPorts action.
+ * \value RebootInstanceAction Lightsail RebootInstance action.
+ * \value ReleaseStaticIpAction Lightsail ReleaseStaticIp action.
+ * \value StartInstanceAction Lightsail StartInstance action.
+ * \value StopInstanceAction Lightsail StopInstance action.
+ * \value UnpeerVpcAction Lightsail UnpeerVpc action.
+ * \value UpdateDomainEntryAction Lightsail UpdateDomainEntry action.
+ * \value UpdateLoadBalancerAttributeAction Lightsail UpdateLoadBalancerAttribute action.
+ */
+
+/*!
+ * Constructs a[n] LightsailRequest object for Lightsail \a action.
  */
 LightsailRequest::LightsailRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new LightsailRequestPrivate(action, this))
@@ -43,9 +119,7 @@ LightsailRequest::LightsailRequest(const Action action)
 }
 
 /*!
- * @brief  Constructs a new LightsailRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 LightsailRequest::LightsailRequest(const LightsailRequest &other)
     : QtAws::Core::AwsAbstractRequest(new LightsailRequestPrivate(*other.d_func(), this))
@@ -54,13 +128,7 @@ LightsailRequest::LightsailRequest(const LightsailRequest &other)
 }
 
 /*!
- * @brief  Assignment operator.
- *
- * Assigns \a other to \c this.
- *
- * @param  other  Instance to copy.
- *
- * @return  A reference to \c this.
+ * Sets the LightsailRequest object to be equal to \a other.
  */
 LightsailRequest& LightsailRequest::operator=(const LightsailRequest &other)
 {
@@ -72,14 +140,10 @@ LightsailRequest& LightsailRequest::operator=(const LightsailRequest &other)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new LightsailRequest object.
+ * Constructs aa LightsailRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from LightsailRequestPrivate.
- *
- * @param  d  Pointer to private data (aka D-Pointer).
  */
 LightsailRequest::LightsailRequest(LightsailRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
@@ -87,7 +151,7 @@ LightsailRequest::LightsailRequest(LightsailRequestPrivate * const d) : QtAws::C
 }
 
 /*!
- * \brief Returns the Lightsail action to be performed by this request.
+ * Returns the Lightsail action to be performed by this request.
  */
 LightsailRequest::Action LightsailRequest::action() const
 {
@@ -96,7 +160,7 @@ LightsailRequest::Action LightsailRequest::action() const
 }
 
 /*!
- * \brief Returns the name of the Lightsail action to be performed by this request.
+ * Returns the name of the Lightsail action to be performed by this request.
  */
 QString LightsailRequest::actionString() const
 {
@@ -104,7 +168,7 @@ QString LightsailRequest::actionString() const
 }
 
 /*!
- * \brief Returns the Lightsail API version implemented by this request.
+ * Returns the Lightsail API version implemented by this request.
  */
 QString LightsailRequest::apiVersion() const
 {
@@ -113,7 +177,7 @@ QString LightsailRequest::apiVersion() const
 }
 
 /*!
- * @brief Set the Lightsail action to be performed by this request to \a action.
+ * Sets the Lightsail action to be performed by this request to \a action.
  */
 void LightsailRequest::setAction(const Action action)
 {
@@ -122,7 +186,7 @@ void LightsailRequest::setAction(const Action action)
 }
 
 /*!
- * Set the Lightsail API version to include in this request to \a version.
+ * Sets the Lightsail API version to include in this request to \a version.
  */
 void LightsailRequest::setApiVersion(const QString &version)
 {
@@ -131,7 +195,7 @@ void LightsailRequest::setApiVersion(const QString &version)
 }
 
 /*!
- * \brief Returns \c true if this request is the same as \a other.
+ * Returns \c true if this request is equal to \a other; \c false otherwise.
  *
  * Note, most derived *Request classes do not need to provider their own
  * implementations of this function, since most such request classes rely on
@@ -146,8 +210,8 @@ bool LightsailRequest::operator==(const LightsailRequest &other) const
             (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
-/*!
- * @brief  Check if \a queueName is a valid Lightsail queue name.
+/*
+ * Returns \c tue if \a queueName is a valid Lightsail queue name.
  *
  * @par From Lightsail FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
@@ -166,9 +230,8 @@ bool LightsailRequest::operator==(const LightsailRequest &other) const
 }*/
 
 /*!
- * \brief Removes the a \a name parameter from this request.
- *
- * Returns the count of paramters removed (typically \c 0 or \c 1).
+ * Removes the a \a name parameter from the request, then returns the number of
+ * paramters removed (typically \c 0 or \c 1).
  */
 int LightsailRequest::clearParameter(const QString &name)
 {
@@ -177,7 +240,7 @@ int LightsailRequest::clearParameter(const QString &name)
 }
 
 /*!
- * \brief Removes all parameters from this request.
+ * Removes all parameters from the request.
  */
 void LightsailRequest::clearParameters()
 {
@@ -186,7 +249,7 @@ void LightsailRequest::clearParameters()
 }
 
 /*!
- * \brief Returns the value of the \n name pararemter if set, otherwise \a defaultValue.
+ * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
 QVariant LightsailRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
@@ -195,7 +258,7 @@ QVariant LightsailRequest::parameter(const QString &name, const QVariant &defaul
 }
 
 /*!
- * \brief Returns a map of parameters included in this request.
+ * Returns the parameters included in this request.
  */
 const QVariantMap &LightsailRequest::parameters() const
 {
@@ -204,7 +267,7 @@ const QVariantMap &LightsailRequest::parameters() const
 }
 
 /*!
- * \brief Sets the \a name parameter to \a value.
+ * Sets the \a name parameter to \a value.
  */
 void LightsailRequest::setParameter(const QString &name, const QVariant &value)
 {
@@ -213,9 +276,8 @@ void LightsailRequest::setParameter(const QString &name, const QVariant &value)
 }
 
 /*!
- * \brief Sets the map of paramters for this request to \a parameters.
- *
- * Any request parameters set previously will be discarded.
+ * Sets the paramters for this request to \a parameters. Any request parameters
+ * set previously will be discarded.
  */
 void LightsailRequest::setParameters(const QVariantMap &parameters)
 {
@@ -224,11 +286,12 @@ void LightsailRequest::setParameters(const QVariantMap &parameters)
 }
 
 /*!
- * \brief Returns a network request for this Lightsail request using the given \a endpoint.
+ * Returns a network request for the Lightsail request using the given
+ * \a endpoint.
  *
- * This Lightsail implementation builds request URLs by combining the common query
- * parameters (such as Action and Version), with any that have been added (via
- * setParameter) by child classes.
+ * This Lightsail implementation builds request URLs by combining the
+ * common query parameters (such as Action and Version), with any that have
+ * been added (via setParameter) by child classes.
  */
 QNetworkRequest LightsailRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -239,17 +302,16 @@ QNetworkRequest LightsailRequest::unsignedRequest(const QUrl &endpoint) const
 }
 
 /*!
+ * \class QtAws::Lightsail::LightsailRequestPrivate
+ * \brief The LightsailRequestPrivate class provides private implementation for LightsailRequest.
  * \internal
  *
- * \class  LightsailRequestPrivate
- *
- * \brief  Private implementation for LightsailRequest.
+ * \inmodule QtAwsLightsail
  */
 
 /*!
- * \internal
- *
- * \brief Constructs a new LightsailRequestPrivate object.
+ * Constructs a LightsailRequestPrivate object for Lightsail \a action with,
+ * public implementation \a q.
  */
 LightsailRequestPrivate::LightsailRequestPrivate(const LightsailRequest::Action action, LightsailRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
@@ -258,9 +320,7 @@ LightsailRequestPrivate::LightsailRequestPrivate(const LightsailRequest::Action 
 }
 
 /*!
- * \internal
- *
- * \brief Constructs a new LightsailRequestPrivate object, copying an existing one.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
@@ -276,15 +336,12 @@ LightsailRequestPrivate::LightsailRequestPrivate(const LightsailRequestPrivate &
 }
 
 /*!
- * \internal
- *
- * \brief Returns a string representing \a action.
+ * Returns a string represention of \a action, or a null string if \a action is
+ * invalid.
  *
  * This function converts LightsailRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the Lightsail service's Action
  * query parameters.
- *
- * @return A string representing \a action, or a null string if \a action is invalid.
  */
 QString LightsailRequestPrivate::toString(const LightsailRequest::Action &action)
 {

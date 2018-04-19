@@ -27,19 +27,16 @@ namespace S3 {
 
 /*!
  * \class QtAws::S3::PutObjectAclRequest
- *
  * \brief The PutObjectAclRequest class provides an interface for S3 PutObjectAcl requests.
  *
- * \ingroup S3
+ * \inmodule QtAwsS3
  *
  *
  * \sa S3Client::putObjectAcl
  */
 
 /*!
- * @brief  Constructs a new PutObjectAclRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 PutObjectAclRequest::PutObjectAclRequest(const PutObjectAclRequest &other)
     : S3Request(new PutObjectAclRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ PutObjectAclRequest::PutObjectAclRequest(const PutObjectAclRequest &other)
 }
 
 /*!
- * @brief  Constructs a new PutObjectAclRequest object.
+ * Constructs a PutObjectAclRequest object.
  */
 PutObjectAclRequest::PutObjectAclRequest()
     : S3Request(new PutObjectAclRequestPrivate(S3Request::PutObjectAclAction, this))
@@ -66,14 +63,9 @@ bool PutObjectAclRequest::isValid() const
 
 
 /*!
- * @brief  Construct an PutObjectAclResponse object.
+ * Returns a PutObjectAclResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An PutObjectAclResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  S3Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * PutObjectAclRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * PutObjectAclRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::S3::PutObjectAclRequestPrivate
+ * \brief The PutObjectAclRequestPrivate class provides private implementation for PutObjectAclRequest.
+ * \internal
  *
- * @class  PutObjectAclRequestPrivate
- *
- * @brief  Private implementation for PutObjectAclRequest.
+ * \inmodule QtAwsS3
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new PutObjectAclRequestPrivate object.
- *
- * @param  action  S3 action being performed.
- * @param  q       Pointer to this object's public PutObjectAclRequest instance.
+ * Constructs a PutObjectAclRequestPrivate object for S3 \a action with,
+ * public implementation \a q.
  */
 PutObjectAclRequestPrivate::PutObjectAclRequestPrivate(
     const S3Request::Action action, PutObjectAclRequest * const q)
@@ -104,15 +93,10 @@ PutObjectAclRequestPrivate::PutObjectAclRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutObjectAclRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the PutObjectAclRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public PutObjectAclRequest instance.
  */
 PutObjectAclRequestPrivate::PutObjectAclRequestPrivate(
     const PutObjectAclRequestPrivate &other, PutObjectAclRequest * const q)

@@ -25,16 +25,52 @@ namespace SWF {
 
 /*!
  * \class QtAws::SWF::SWFRequest
- *
  * \brief The SWFRequest class provides an interface for SWF requests.
  *
- * \ingroup SWF
+ * \inmodule QtAwsSWF
  */
 
 /*!
- * @brief  Constructs a new SWFRequest object.
+ * \enum SWFRequest::Action
  *
- * @param  action  The SWF action to request.
+ * This enum describes the actions that can be performed as SWF
+ * requests.
+ *
+ * \value CountClosedWorkflowExecutionsAction SWF CountClosedWorkflowExecutions action.
+ * \value CountOpenWorkflowExecutionsAction SWF CountOpenWorkflowExecutions action.
+ * \value CountPendingActivityTasksAction SWF CountPendingActivityTasks action.
+ * \value CountPendingDecisionTasksAction SWF CountPendingDecisionTasks action.
+ * \value DeprecateActivityTypeAction SWF DeprecateActivityType action.
+ * \value DeprecateDomainAction SWF DeprecateDomain action.
+ * \value DeprecateWorkflowTypeAction SWF DeprecateWorkflowType action.
+ * \value DescribeActivityTypeAction SWF DescribeActivityType action.
+ * \value DescribeDomainAction SWF DescribeDomain action.
+ * \value DescribeWorkflowExecutionAction SWF DescribeWorkflowExecution action.
+ * \value DescribeWorkflowTypeAction SWF DescribeWorkflowType action.
+ * \value GetWorkflowExecutionHistoryAction SWF GetWorkflowExecutionHistory action.
+ * \value ListActivityTypesAction SWF ListActivityTypes action.
+ * \value ListClosedWorkflowExecutionsAction SWF ListClosedWorkflowExecutions action.
+ * \value ListDomainsAction SWF ListDomains action.
+ * \value ListOpenWorkflowExecutionsAction SWF ListOpenWorkflowExecutions action.
+ * \value ListWorkflowTypesAction SWF ListWorkflowTypes action.
+ * \value PollForActivityTaskAction SWF PollForActivityTask action.
+ * \value PollForDecisionTaskAction SWF PollForDecisionTask action.
+ * \value RecordActivityTaskHeartbeatAction SWF RecordActivityTaskHeartbeat action.
+ * \value RegisterActivityTypeAction SWF RegisterActivityType action.
+ * \value RegisterDomainAction SWF RegisterDomain action.
+ * \value RegisterWorkflowTypeAction SWF RegisterWorkflowType action.
+ * \value RequestCancelWorkflowExecutionAction SWF RequestCancelWorkflowExecution action.
+ * \value RespondActivityTaskCanceledAction SWF RespondActivityTaskCanceled action.
+ * \value RespondActivityTaskCompletedAction SWF RespondActivityTaskCompleted action.
+ * \value RespondActivityTaskFailedAction SWF RespondActivityTaskFailed action.
+ * \value RespondDecisionTaskCompletedAction SWF RespondDecisionTaskCompleted action.
+ * \value SignalWorkflowExecutionAction SWF SignalWorkflowExecution action.
+ * \value StartWorkflowExecutionAction SWF StartWorkflowExecution action.
+ * \value TerminateWorkflowExecutionAction SWF TerminateWorkflowExecution action.
+ */
+
+/*!
+ * Constructs a[n] SWFRequest object for SWF \a action.
  */
 SWFRequest::SWFRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new SWFRequestPrivate(action, this))
@@ -43,9 +79,7 @@ SWFRequest::SWFRequest(const Action action)
 }
 
 /*!
- * @brief  Constructs a new SWFRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 SWFRequest::SWFRequest(const SWFRequest &other)
     : QtAws::Core::AwsAbstractRequest(new SWFRequestPrivate(*other.d_func(), this))
@@ -54,13 +88,7 @@ SWFRequest::SWFRequest(const SWFRequest &other)
 }
 
 /*!
- * @brief  Assignment operator.
- *
- * Assigns \a other to \c this.
- *
- * @param  other  Instance to copy.
- *
- * @return  A reference to \c this.
+ * Sets the SWFRequest object to be equal to \a other.
  */
 SWFRequest& SWFRequest::operator=(const SWFRequest &other)
 {
@@ -72,14 +100,10 @@ SWFRequest& SWFRequest::operator=(const SWFRequest &other)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SWFRequest object.
+ * Constructs aa SWFRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from SWFRequestPrivate.
- *
- * @param  d  Pointer to private data (aka D-Pointer).
  */
 SWFRequest::SWFRequest(SWFRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
@@ -87,7 +111,7 @@ SWFRequest::SWFRequest(SWFRequestPrivate * const d) : QtAws::Core::AwsAbstractRe
 }
 
 /*!
- * \brief Returns the SWF action to be performed by this request.
+ * Returns the SWF action to be performed by this request.
  */
 SWFRequest::Action SWFRequest::action() const
 {
@@ -96,7 +120,7 @@ SWFRequest::Action SWFRequest::action() const
 }
 
 /*!
- * \brief Returns the name of the SWF action to be performed by this request.
+ * Returns the name of the SWF action to be performed by this request.
  */
 QString SWFRequest::actionString() const
 {
@@ -104,7 +128,7 @@ QString SWFRequest::actionString() const
 }
 
 /*!
- * \brief Returns the SWF API version implemented by this request.
+ * Returns the SWF API version implemented by this request.
  */
 QString SWFRequest::apiVersion() const
 {
@@ -113,7 +137,7 @@ QString SWFRequest::apiVersion() const
 }
 
 /*!
- * @brief Set the SWF action to be performed by this request to \a action.
+ * Sets the SWF action to be performed by this request to \a action.
  */
 void SWFRequest::setAction(const Action action)
 {
@@ -122,7 +146,7 @@ void SWFRequest::setAction(const Action action)
 }
 
 /*!
- * Set the SWF API version to include in this request to \a version.
+ * Sets the SWF API version to include in this request to \a version.
  */
 void SWFRequest::setApiVersion(const QString &version)
 {
@@ -131,7 +155,7 @@ void SWFRequest::setApiVersion(const QString &version)
 }
 
 /*!
- * \brief Returns \c true if this request is the same as \a other.
+ * Returns \c true if this request is equal to \a other; \c false otherwise.
  *
  * Note, most derived *Request classes do not need to provider their own
  * implementations of this function, since most such request classes rely on
@@ -146,8 +170,8 @@ bool SWFRequest::operator==(const SWFRequest &other) const
             (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
-/*!
- * @brief  Check if \a queueName is a valid SWF queue name.
+/*
+ * Returns \c tue if \a queueName is a valid SWF queue name.
  *
  * @par From SWF FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
@@ -166,9 +190,8 @@ bool SWFRequest::operator==(const SWFRequest &other) const
 }*/
 
 /*!
- * \brief Removes the a \a name parameter from this request.
- *
- * Returns the count of paramters removed (typically \c 0 or \c 1).
+ * Removes the a \a name parameter from the request, then returns the number of
+ * paramters removed (typically \c 0 or \c 1).
  */
 int SWFRequest::clearParameter(const QString &name)
 {
@@ -177,7 +200,7 @@ int SWFRequest::clearParameter(const QString &name)
 }
 
 /*!
- * \brief Removes all parameters from this request.
+ * Removes all parameters from the request.
  */
 void SWFRequest::clearParameters()
 {
@@ -186,7 +209,7 @@ void SWFRequest::clearParameters()
 }
 
 /*!
- * \brief Returns the value of the \n name pararemter if set, otherwise \a defaultValue.
+ * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
 QVariant SWFRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
@@ -195,7 +218,7 @@ QVariant SWFRequest::parameter(const QString &name, const QVariant &defaultValue
 }
 
 /*!
- * \brief Returns a map of parameters included in this request.
+ * Returns the parameters included in this request.
  */
 const QVariantMap &SWFRequest::parameters() const
 {
@@ -204,7 +227,7 @@ const QVariantMap &SWFRequest::parameters() const
 }
 
 /*!
- * \brief Sets the \a name parameter to \a value.
+ * Sets the \a name parameter to \a value.
  */
 void SWFRequest::setParameter(const QString &name, const QVariant &value)
 {
@@ -213,9 +236,8 @@ void SWFRequest::setParameter(const QString &name, const QVariant &value)
 }
 
 /*!
- * \brief Sets the map of paramters for this request to \a parameters.
- *
- * Any request parameters set previously will be discarded.
+ * Sets the paramters for this request to \a parameters. Any request parameters
+ * set previously will be discarded.
  */
 void SWFRequest::setParameters(const QVariantMap &parameters)
 {
@@ -224,11 +246,12 @@ void SWFRequest::setParameters(const QVariantMap &parameters)
 }
 
 /*!
- * \brief Returns a network request for this SWF request using the given \a endpoint.
+ * Returns a network request for the SWF request using the given
+ * \a endpoint.
  *
- * This SWF implementation builds request URLs by combining the common query
- * parameters (such as Action and Version), with any that have been added (via
- * setParameter) by child classes.
+ * This SWF implementation builds request URLs by combining the
+ * common query parameters (such as Action and Version), with any that have
+ * been added (via setParameter) by child classes.
  */
 QNetworkRequest SWFRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -239,17 +262,16 @@ QNetworkRequest SWFRequest::unsignedRequest(const QUrl &endpoint) const
 }
 
 /*!
+ * \class QtAws::SWF::SWFRequestPrivate
+ * \brief The SWFRequestPrivate class provides private implementation for SWFRequest.
  * \internal
  *
- * \class  SWFRequestPrivate
- *
- * \brief  Private implementation for SWFRequest.
+ * \inmodule QtAwsSWF
  */
 
 /*!
- * \internal
- *
- * \brief Constructs a new SWFRequestPrivate object.
+ * Constructs a SWFRequestPrivate object for SWF \a action with,
+ * public implementation \a q.
  */
 SWFRequestPrivate::SWFRequestPrivate(const SWFRequest::Action action, SWFRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
@@ -258,9 +280,7 @@ SWFRequestPrivate::SWFRequestPrivate(const SWFRequest::Action action, SWFRequest
 }
 
 /*!
- * \internal
- *
- * \brief Constructs a new SWFRequestPrivate object, copying an existing one.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
@@ -276,15 +296,12 @@ SWFRequestPrivate::SWFRequestPrivate(const SWFRequestPrivate &other,
 }
 
 /*!
- * \internal
- *
- * \brief Returns a string representing \a action.
+ * Returns a string represention of \a action, or a null string if \a action is
+ * invalid.
  *
  * This function converts SWFRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the SWF service's Action
  * query parameters.
- *
- * @return A string representing \a action, or a null string if \a action is invalid.
  */
 QString SWFRequestPrivate::toString(const SWFRequest::Action &action)
 {

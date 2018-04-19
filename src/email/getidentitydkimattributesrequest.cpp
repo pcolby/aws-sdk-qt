@@ -27,10 +27,9 @@ namespace SES {
 
 /*!
  * \class QtAws::SES::GetIdentityDkimAttributesRequest
- *
  * \brief The GetIdentityDkimAttributesRequest class provides an interface for SES GetIdentityDkimAttributes requests.
  *
- * \ingroup SES
+ * \inmodule QtAwsSES
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -48,9 +47,7 @@ namespace SES {
  */
 
 /*!
- * @brief  Constructs a new GetIdentityDkimAttributesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetIdentityDkimAttributesRequest::GetIdentityDkimAttributesRequest(const GetIdentityDkimAttributesRequest &other)
     : SESRequest(new GetIdentityDkimAttributesRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ GetIdentityDkimAttributesRequest::GetIdentityDkimAttributesRequest(const GetIden
 }
 
 /*!
- * @brief  Constructs a new GetIdentityDkimAttributesRequest object.
+ * Constructs a GetIdentityDkimAttributesRequest object.
  */
 GetIdentityDkimAttributesRequest::GetIdentityDkimAttributesRequest()
     : SESRequest(new GetIdentityDkimAttributesRequestPrivate(SESRequest::GetIdentityDkimAttributesAction, this))
@@ -77,14 +74,9 @@ bool GetIdentityDkimAttributesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetIdentityDkimAttributesResponse object.
+ * Returns a GetIdentityDkimAttributesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetIdentityDkimAttributesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SESClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetIdentityDkimAttributesRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * GetIdentityDkimAttributesRequest::response(QN
 }
 
 /*!
- * @internal
+ * \class QtAws::SES::GetIdentityDkimAttributesRequestPrivate
+ * \brief The GetIdentityDkimAttributesRequestPrivate class provides private implementation for GetIdentityDkimAttributesRequest.
+ * \internal
  *
- * @class  GetIdentityDkimAttributesRequestPrivate
- *
- * @brief  Private implementation for GetIdentityDkimAttributesRequest.
+ * \inmodule QtAwsSES
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetIdentityDkimAttributesRequestPrivate object.
- *
- * @param  action  SES action being performed.
- * @param  q       Pointer to this object's public GetIdentityDkimAttributesRequest instance.
+ * Constructs a GetIdentityDkimAttributesRequestPrivate object for SES \a action with,
+ * public implementation \a q.
  */
 GetIdentityDkimAttributesRequestPrivate::GetIdentityDkimAttributesRequestPrivate(
     const SESRequest::Action action, GetIdentityDkimAttributesRequest * const q)
@@ -115,15 +104,10 @@ GetIdentityDkimAttributesRequestPrivate::GetIdentityDkimAttributesRequestPrivate
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetIdentityDkimAttributesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetIdentityDkimAttributesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetIdentityDkimAttributesRequest instance.
  */
 GetIdentityDkimAttributesRequestPrivate::GetIdentityDkimAttributesRequestPrivate(
     const GetIdentityDkimAttributesRequestPrivate &other, GetIdentityDkimAttributesRequest * const q)

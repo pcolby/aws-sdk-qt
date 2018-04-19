@@ -27,10 +27,9 @@ namespace AlexaForBusiness {
 
 /*!
  * \class QtAws::AlexaForBusiness::DeleteContactRequest
- *
  * \brief The DeleteContactRequest class provides an interface for AlexaForBusiness DeleteContact requests.
  *
- * \ingroup AlexaForBusiness
+ * \inmodule QtAwsAlexaForBusiness
  *
  *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
  *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
@@ -42,9 +41,7 @@ namespace AlexaForBusiness {
  */
 
 /*!
- * @brief  Constructs a new DeleteContactRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteContactRequest::DeleteContactRequest(const DeleteContactRequest &other)
     : AlexaForBusinessRequest(new DeleteContactRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ DeleteContactRequest::DeleteContactRequest(const DeleteContactRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DeleteContactRequest object.
+ * Constructs a DeleteContactRequest object.
  */
 DeleteContactRequest::DeleteContactRequest()
     : AlexaForBusinessRequest(new DeleteContactRequestPrivate(AlexaForBusinessRequest::DeleteContactAction, this))
@@ -71,14 +68,9 @@ bool DeleteContactRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteContactResponse object.
+ * Returns a DeleteContactResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteContactResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AlexaForBusinessClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteContactRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * DeleteContactRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::AlexaForBusiness::DeleteContactRequestPrivate
+ * \brief The DeleteContactRequestPrivate class provides private implementation for DeleteContactRequest.
+ * \internal
  *
- * @class  DeleteContactRequestPrivate
- *
- * @brief  Private implementation for DeleteContactRequest.
+ * \inmodule QtAwsAlexaForBusiness
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteContactRequestPrivate object.
- *
- * @param  action  AlexaForBusiness action being performed.
- * @param  q       Pointer to this object's public DeleteContactRequest instance.
+ * Constructs a DeleteContactRequestPrivate object for AlexaForBusiness \a action with,
+ * public implementation \a q.
  */
 DeleteContactRequestPrivate::DeleteContactRequestPrivate(
     const AlexaForBusinessRequest::Action action, DeleteContactRequest * const q)
@@ -109,15 +98,10 @@ DeleteContactRequestPrivate::DeleteContactRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteContactRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteContactRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteContactRequest instance.
  */
 DeleteContactRequestPrivate::DeleteContactRequestPrivate(
     const DeleteContactRequestPrivate &other, DeleteContactRequest * const q)

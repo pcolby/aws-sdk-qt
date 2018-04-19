@@ -27,10 +27,9 @@ namespace SES {
 
 /*!
  * \class QtAws::SES::DeleteIdentityPolicyRequest
- *
  * \brief The DeleteIdentityPolicyRequest class provides an interface for SES DeleteIdentityPolicy requests.
  *
- * \ingroup SES
+ * \inmodule QtAwsSES
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -48,9 +47,7 @@ namespace SES {
  */
 
 /*!
- * @brief  Constructs a new DeleteIdentityPolicyRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteIdentityPolicyRequest::DeleteIdentityPolicyRequest(const DeleteIdentityPolicyRequest &other)
     : SESRequest(new DeleteIdentityPolicyRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ DeleteIdentityPolicyRequest::DeleteIdentityPolicyRequest(const DeleteIdentityPol
 }
 
 /*!
- * @brief  Constructs a new DeleteIdentityPolicyRequest object.
+ * Constructs a DeleteIdentityPolicyRequest object.
  */
 DeleteIdentityPolicyRequest::DeleteIdentityPolicyRequest()
     : SESRequest(new DeleteIdentityPolicyRequestPrivate(SESRequest::DeleteIdentityPolicyAction, this))
@@ -77,14 +74,9 @@ bool DeleteIdentityPolicyRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteIdentityPolicyResponse object.
+ * Returns a DeleteIdentityPolicyResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteIdentityPolicyResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SESClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteIdentityPolicyRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * DeleteIdentityPolicyRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::SES::DeleteIdentityPolicyRequestPrivate
+ * \brief The DeleteIdentityPolicyRequestPrivate class provides private implementation for DeleteIdentityPolicyRequest.
+ * \internal
  *
- * @class  DeleteIdentityPolicyRequestPrivate
- *
- * @brief  Private implementation for DeleteIdentityPolicyRequest.
+ * \inmodule QtAwsSES
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteIdentityPolicyRequestPrivate object.
- *
- * @param  action  SES action being performed.
- * @param  q       Pointer to this object's public DeleteIdentityPolicyRequest instance.
+ * Constructs a DeleteIdentityPolicyRequestPrivate object for SES \a action with,
+ * public implementation \a q.
  */
 DeleteIdentityPolicyRequestPrivate::DeleteIdentityPolicyRequestPrivate(
     const SESRequest::Action action, DeleteIdentityPolicyRequest * const q)
@@ -115,15 +104,10 @@ DeleteIdentityPolicyRequestPrivate::DeleteIdentityPolicyRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteIdentityPolicyRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteIdentityPolicyRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteIdentityPolicyRequest instance.
  */
 DeleteIdentityPolicyRequestPrivate::DeleteIdentityPolicyRequestPrivate(
     const DeleteIdentityPolicyRequestPrivate &other, DeleteIdentityPolicyRequest * const q)

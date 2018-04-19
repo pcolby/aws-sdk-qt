@@ -27,10 +27,9 @@ namespace ElasticLoadBalancing {
 
 /*!
  * \class QtAws::ElasticLoadBalancing::DescribeLoadBalancerPolicyTypesRequest
- *
  * \brief The DescribeLoadBalancerPolicyTypesRequest class provides an interface for ElasticLoadBalancing DescribeLoadBalancerPolicyTypes requests.
  *
- * \ingroup ElasticLoadBalancing
+ * \inmodule QtAwsElasticLoadBalancing
  *
  *  <fullname>Elastic Load Balancing</fullname>
  * 
@@ -65,9 +64,7 @@ namespace ElasticLoadBalancing {
  */
 
 /*!
- * @brief  Constructs a new DescribeLoadBalancerPolicyTypesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeLoadBalancerPolicyTypesRequest::DescribeLoadBalancerPolicyTypesRequest(const DescribeLoadBalancerPolicyTypesRequest &other)
     : ElasticLoadBalancingRequest(new DescribeLoadBalancerPolicyTypesRequestPrivate(*other.d_func(), this))
@@ -76,7 +73,7 @@ DescribeLoadBalancerPolicyTypesRequest::DescribeLoadBalancerPolicyTypesRequest(c
 }
 
 /*!
- * @brief  Constructs a new DescribeLoadBalancerPolicyTypesRequest object.
+ * Constructs a DescribeLoadBalancerPolicyTypesRequest object.
  */
 DescribeLoadBalancerPolicyTypesRequest::DescribeLoadBalancerPolicyTypesRequest()
     : ElasticLoadBalancingRequest(new DescribeLoadBalancerPolicyTypesRequestPrivate(ElasticLoadBalancingRequest::DescribeLoadBalancerPolicyTypesAction, this))
@@ -94,14 +91,9 @@ bool DescribeLoadBalancerPolicyTypesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeLoadBalancerPolicyTypesResponse object.
+ * Returns a DescribeLoadBalancerPolicyTypesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeLoadBalancerPolicyTypesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ElasticLoadBalancingClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeLoadBalancerPolicyTypesRequest::response(QNetworkReply * const reply) const
 {
@@ -109,20 +101,17 @@ QtAws::Core::AwsAbstractResponse * DescribeLoadBalancerPolicyTypesRequest::respo
 }
 
 /*!
- * @internal
+ * \class QtAws::ElasticLoadBalancing::DescribeLoadBalancerPolicyTypesRequestPrivate
+ * \brief The DescribeLoadBalancerPolicyTypesRequestPrivate class provides private implementation for DescribeLoadBalancerPolicyTypesRequest.
+ * \internal
  *
- * @class  DescribeLoadBalancerPolicyTypesRequestPrivate
- *
- * @brief  Private implementation for DescribeLoadBalancerPolicyTypesRequest.
+ * \inmodule QtAwsElasticLoadBalancing
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeLoadBalancerPolicyTypesRequestPrivate object.
- *
- * @param  action  ElasticLoadBalancing action being performed.
- * @param  q       Pointer to this object's public DescribeLoadBalancerPolicyTypesRequest instance.
+ * Constructs a DescribeLoadBalancerPolicyTypesRequestPrivate object for ElasticLoadBalancing \a action with,
+ * public implementation \a q.
  */
 DescribeLoadBalancerPolicyTypesRequestPrivate::DescribeLoadBalancerPolicyTypesRequestPrivate(
     const ElasticLoadBalancingRequest::Action action, DescribeLoadBalancerPolicyTypesRequest * const q)
@@ -132,15 +121,10 @@ DescribeLoadBalancerPolicyTypesRequestPrivate::DescribeLoadBalancerPolicyTypesRe
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeLoadBalancerPolicyTypesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeLoadBalancerPolicyTypesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeLoadBalancerPolicyTypesRequest instance.
  */
 DescribeLoadBalancerPolicyTypesRequestPrivate::DescribeLoadBalancerPolicyTypesRequestPrivate(
     const DescribeLoadBalancerPolicyTypesRequestPrivate &other, DescribeLoadBalancerPolicyTypesRequest * const q)

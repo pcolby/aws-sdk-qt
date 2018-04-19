@@ -27,19 +27,16 @@ namespace SageMaker {
 
 /*!
  * \class QtAws::SageMaker::CreateEndpointConfigRequest
- *
  * \brief The CreateEndpointConfigRequest class provides an interface for SageMaker CreateEndpointConfig requests.
  *
- * \ingroup SageMaker
+ * \inmodule QtAwsSageMaker
  *
  *
  * \sa SageMakerClient::createEndpointConfig
  */
 
 /*!
- * @brief  Constructs a new CreateEndpointConfigRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateEndpointConfigRequest::CreateEndpointConfigRequest(const CreateEndpointConfigRequest &other)
     : SageMakerRequest(new CreateEndpointConfigRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ CreateEndpointConfigRequest::CreateEndpointConfigRequest(const CreateEndpointCon
 }
 
 /*!
- * @brief  Constructs a new CreateEndpointConfigRequest object.
+ * Constructs a CreateEndpointConfigRequest object.
  */
 CreateEndpointConfigRequest::CreateEndpointConfigRequest()
     : SageMakerRequest(new CreateEndpointConfigRequestPrivate(SageMakerRequest::CreateEndpointConfigAction, this))
@@ -66,14 +63,9 @@ bool CreateEndpointConfigRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateEndpointConfigResponse object.
+ * Returns a CreateEndpointConfigResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateEndpointConfigResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SageMakerClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateEndpointConfigRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * CreateEndpointConfigRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::SageMaker::CreateEndpointConfigRequestPrivate
+ * \brief The CreateEndpointConfigRequestPrivate class provides private implementation for CreateEndpointConfigRequest.
+ * \internal
  *
- * @class  CreateEndpointConfigRequestPrivate
- *
- * @brief  Private implementation for CreateEndpointConfigRequest.
+ * \inmodule QtAwsSageMaker
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateEndpointConfigRequestPrivate object.
- *
- * @param  action  SageMaker action being performed.
- * @param  q       Pointer to this object's public CreateEndpointConfigRequest instance.
+ * Constructs a CreateEndpointConfigRequestPrivate object for SageMaker \a action with,
+ * public implementation \a q.
  */
 CreateEndpointConfigRequestPrivate::CreateEndpointConfigRequestPrivate(
     const SageMakerRequest::Action action, CreateEndpointConfigRequest * const q)
@@ -104,15 +93,10 @@ CreateEndpointConfigRequestPrivate::CreateEndpointConfigRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateEndpointConfigRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateEndpointConfigRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateEndpointConfigRequest instance.
  */
 CreateEndpointConfigRequestPrivate::CreateEndpointConfigRequestPrivate(
     const CreateEndpointConfigRequestPrivate &other, CreateEndpointConfigRequest * const q)

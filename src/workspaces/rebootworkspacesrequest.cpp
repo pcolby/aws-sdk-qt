@@ -27,10 +27,9 @@ namespace WorkSpaces {
 
 /*!
  * \class QtAws::WorkSpaces::RebootWorkspacesRequest
- *
  * \brief The RebootWorkspacesRequest class provides an interface for WorkSpaces RebootWorkspaces requests.
  *
- * \ingroup WorkSpaces
+ * \inmodule QtAwsWorkSpaces
  *
  *  <fullname>Amazon WorkSpaces Service</fullname>
  * 
@@ -40,9 +39,7 @@ namespace WorkSpaces {
  */
 
 /*!
- * @brief  Constructs a new RebootWorkspacesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 RebootWorkspacesRequest::RebootWorkspacesRequest(const RebootWorkspacesRequest &other)
     : WorkSpacesRequest(new RebootWorkspacesRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ RebootWorkspacesRequest::RebootWorkspacesRequest(const RebootWorkspacesRequest &
 }
 
 /*!
- * @brief  Constructs a new RebootWorkspacesRequest object.
+ * Constructs a RebootWorkspacesRequest object.
  */
 RebootWorkspacesRequest::RebootWorkspacesRequest()
     : WorkSpacesRequest(new RebootWorkspacesRequestPrivate(WorkSpacesRequest::RebootWorkspacesAction, this))
@@ -69,14 +66,9 @@ bool RebootWorkspacesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an RebootWorkspacesResponse object.
+ * Returns a RebootWorkspacesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An RebootWorkspacesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WorkSpacesClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * RebootWorkspacesRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * RebootWorkspacesRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::WorkSpaces::RebootWorkspacesRequestPrivate
+ * \brief The RebootWorkspacesRequestPrivate class provides private implementation for RebootWorkspacesRequest.
+ * \internal
  *
- * @class  RebootWorkspacesRequestPrivate
- *
- * @brief  Private implementation for RebootWorkspacesRequest.
+ * \inmodule QtAwsWorkSpaces
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new RebootWorkspacesRequestPrivate object.
- *
- * @param  action  WorkSpaces action being performed.
- * @param  q       Pointer to this object's public RebootWorkspacesRequest instance.
+ * Constructs a RebootWorkspacesRequestPrivate object for WorkSpaces \a action with,
+ * public implementation \a q.
  */
 RebootWorkspacesRequestPrivate::RebootWorkspacesRequestPrivate(
     const WorkSpacesRequest::Action action, RebootWorkspacesRequest * const q)
@@ -107,15 +96,10 @@ RebootWorkspacesRequestPrivate::RebootWorkspacesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RebootWorkspacesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the RebootWorkspacesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public RebootWorkspacesRequest instance.
  */
 RebootWorkspacesRequestPrivate::RebootWorkspacesRequestPrivate(
     const RebootWorkspacesRequestPrivate &other, RebootWorkspacesRequest * const q)

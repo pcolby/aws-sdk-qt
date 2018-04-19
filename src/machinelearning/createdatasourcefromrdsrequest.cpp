@@ -27,19 +27,16 @@ namespace MachineLearning {
 
 /*!
  * \class QtAws::MachineLearning::CreateDataSourceFromRDSRequest
- *
  * \brief The CreateDataSourceFromRDSRequest class provides an interface for MachineLearning CreateDataSourceFromRDS requests.
  *
- * \ingroup MachineLearning
+ * \inmodule QtAwsMachineLearning
  *
  *
  * \sa MachineLearningClient::createDataSourceFromRDS
  */
 
 /*!
- * @brief  Constructs a new CreateDataSourceFromRDSRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateDataSourceFromRDSRequest::CreateDataSourceFromRDSRequest(const CreateDataSourceFromRDSRequest &other)
     : MachineLearningRequest(new CreateDataSourceFromRDSRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ CreateDataSourceFromRDSRequest::CreateDataSourceFromRDSRequest(const CreateDataS
 }
 
 /*!
- * @brief  Constructs a new CreateDataSourceFromRDSRequest object.
+ * Constructs a CreateDataSourceFromRDSRequest object.
  */
 CreateDataSourceFromRDSRequest::CreateDataSourceFromRDSRequest()
     : MachineLearningRequest(new CreateDataSourceFromRDSRequestPrivate(MachineLearningRequest::CreateDataSourceFromRDSAction, this))
@@ -66,14 +63,9 @@ bool CreateDataSourceFromRDSRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateDataSourceFromRDSResponse object.
+ * Returns a CreateDataSourceFromRDSResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateDataSourceFromRDSResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MachineLearningClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateDataSourceFromRDSRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * CreateDataSourceFromRDSRequest::response(QNet
 }
 
 /*!
- * @internal
+ * \class QtAws::MachineLearning::CreateDataSourceFromRDSRequestPrivate
+ * \brief The CreateDataSourceFromRDSRequestPrivate class provides private implementation for CreateDataSourceFromRDSRequest.
+ * \internal
  *
- * @class  CreateDataSourceFromRDSRequestPrivate
- *
- * @brief  Private implementation for CreateDataSourceFromRDSRequest.
+ * \inmodule QtAwsMachineLearning
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateDataSourceFromRDSRequestPrivate object.
- *
- * @param  action  MachineLearning action being performed.
- * @param  q       Pointer to this object's public CreateDataSourceFromRDSRequest instance.
+ * Constructs a CreateDataSourceFromRDSRequestPrivate object for MachineLearning \a action with,
+ * public implementation \a q.
  */
 CreateDataSourceFromRDSRequestPrivate::CreateDataSourceFromRDSRequestPrivate(
     const MachineLearningRequest::Action action, CreateDataSourceFromRDSRequest * const q)
@@ -104,15 +93,10 @@ CreateDataSourceFromRDSRequestPrivate::CreateDataSourceFromRDSRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateDataSourceFromRDSRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateDataSourceFromRDSRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateDataSourceFromRDSRequest instance.
  */
 CreateDataSourceFromRDSRequestPrivate::CreateDataSourceFromRDSRequestPrivate(
     const CreateDataSourceFromRDSRequestPrivate &other, CreateDataSourceFromRDSRequest * const q)

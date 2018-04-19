@@ -27,10 +27,9 @@ namespace WAF {
 
 /*!
  * \class QtAws::WAF::ListSubscribedRuleGroupsRequest
- *
  * \brief The ListSubscribedRuleGroupsRequest class provides an interface for WAF ListSubscribedRuleGroups requests.
  *
- * \ingroup WAF
+ * \inmodule QtAwsWAF
  *
  *  This is the <i>AWS WAF API Reference</i> for using AWS WAF with Amazon CloudFront. The AWS WAF actions and data types
  *  listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data
@@ -42,9 +41,7 @@ namespace WAF {
  */
 
 /*!
- * @brief  Constructs a new ListSubscribedRuleGroupsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListSubscribedRuleGroupsRequest::ListSubscribedRuleGroupsRequest(const ListSubscribedRuleGroupsRequest &other)
     : WAFRequest(new ListSubscribedRuleGroupsRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ ListSubscribedRuleGroupsRequest::ListSubscribedRuleGroupsRequest(const ListSubsc
 }
 
 /*!
- * @brief  Constructs a new ListSubscribedRuleGroupsRequest object.
+ * Constructs a ListSubscribedRuleGroupsRequest object.
  */
 ListSubscribedRuleGroupsRequest::ListSubscribedRuleGroupsRequest()
     : WAFRequest(new ListSubscribedRuleGroupsRequestPrivate(WAFRequest::ListSubscribedRuleGroupsAction, this))
@@ -71,14 +68,9 @@ bool ListSubscribedRuleGroupsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListSubscribedRuleGroupsResponse object.
+ * Returns a ListSubscribedRuleGroupsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListSubscribedRuleGroupsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WAFClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListSubscribedRuleGroupsRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * ListSubscribedRuleGroupsRequest::response(QNe
 }
 
 /*!
- * @internal
+ * \class QtAws::WAF::ListSubscribedRuleGroupsRequestPrivate
+ * \brief The ListSubscribedRuleGroupsRequestPrivate class provides private implementation for ListSubscribedRuleGroupsRequest.
+ * \internal
  *
- * @class  ListSubscribedRuleGroupsRequestPrivate
- *
- * @brief  Private implementation for ListSubscribedRuleGroupsRequest.
+ * \inmodule QtAwsWAF
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListSubscribedRuleGroupsRequestPrivate object.
- *
- * @param  action  WAF action being performed.
- * @param  q       Pointer to this object's public ListSubscribedRuleGroupsRequest instance.
+ * Constructs a ListSubscribedRuleGroupsRequestPrivate object for WAF \a action with,
+ * public implementation \a q.
  */
 ListSubscribedRuleGroupsRequestPrivate::ListSubscribedRuleGroupsRequestPrivate(
     const WAFRequest::Action action, ListSubscribedRuleGroupsRequest * const q)
@@ -109,15 +98,10 @@ ListSubscribedRuleGroupsRequestPrivate::ListSubscribedRuleGroupsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListSubscribedRuleGroupsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListSubscribedRuleGroupsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListSubscribedRuleGroupsRequest instance.
  */
 ListSubscribedRuleGroupsRequestPrivate::ListSubscribedRuleGroupsRequestPrivate(
     const ListSubscribedRuleGroupsRequestPrivate &other, ListSubscribedRuleGroupsRequest * const q)

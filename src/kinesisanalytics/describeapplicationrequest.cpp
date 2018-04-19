@@ -27,19 +27,16 @@ namespace KinesisAnalytics {
 
 /*!
  * \class QtAws::KinesisAnalytics::DescribeApplicationRequest
- *
  * \brief The DescribeApplicationRequest class provides an interface for KinesisAnalytics DescribeApplication requests.
  *
- * \ingroup KinesisAnalytics
+ * \inmodule QtAwsKinesisAnalytics
  *
  *
  * \sa KinesisAnalyticsClient::describeApplication
  */
 
 /*!
- * @brief  Constructs a new DescribeApplicationRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeApplicationRequest::DescribeApplicationRequest(const DescribeApplicationRequest &other)
     : KinesisAnalyticsRequest(new DescribeApplicationRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ DescribeApplicationRequest::DescribeApplicationRequest(const DescribeApplication
 }
 
 /*!
- * @brief  Constructs a new DescribeApplicationRequest object.
+ * Constructs a DescribeApplicationRequest object.
  */
 DescribeApplicationRequest::DescribeApplicationRequest()
     : KinesisAnalyticsRequest(new DescribeApplicationRequestPrivate(KinesisAnalyticsRequest::DescribeApplicationAction, this))
@@ -66,14 +63,9 @@ bool DescribeApplicationRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeApplicationResponse object.
+ * Returns a DescribeApplicationResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeApplicationResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  KinesisAnalyticsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeApplicationRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * DescribeApplicationRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::KinesisAnalytics::DescribeApplicationRequestPrivate
+ * \brief The DescribeApplicationRequestPrivate class provides private implementation for DescribeApplicationRequest.
+ * \internal
  *
- * @class  DescribeApplicationRequestPrivate
- *
- * @brief  Private implementation for DescribeApplicationRequest.
+ * \inmodule QtAwsKinesisAnalytics
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeApplicationRequestPrivate object.
- *
- * @param  action  KinesisAnalytics action being performed.
- * @param  q       Pointer to this object's public DescribeApplicationRequest instance.
+ * Constructs a DescribeApplicationRequestPrivate object for KinesisAnalytics \a action with,
+ * public implementation \a q.
  */
 DescribeApplicationRequestPrivate::DescribeApplicationRequestPrivate(
     const KinesisAnalyticsRequest::Action action, DescribeApplicationRequest * const q)
@@ -104,15 +93,10 @@ DescribeApplicationRequestPrivate::DescribeApplicationRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeApplicationRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeApplicationRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeApplicationRequest instance.
  */
 DescribeApplicationRequestPrivate::DescribeApplicationRequestPrivate(
     const DescribeApplicationRequestPrivate &other, DescribeApplicationRequest * const q)

@@ -27,19 +27,16 @@ namespace MediaPackage {
 
 /*!
  * \class QtAws::MediaPackage::UpdateOriginEndpointRequest
- *
  * \brief The UpdateOriginEndpointRequest class provides an interface for MediaPackage UpdateOriginEndpoint requests.
  *
- * \ingroup MediaPackage
+ * \inmodule QtAwsMediaPackage
  *
  *
  * \sa MediaPackageClient::updateOriginEndpoint
  */
 
 /*!
- * @brief  Constructs a new UpdateOriginEndpointRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateOriginEndpointRequest::UpdateOriginEndpointRequest(const UpdateOriginEndpointRequest &other)
     : MediaPackageRequest(new UpdateOriginEndpointRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ UpdateOriginEndpointRequest::UpdateOriginEndpointRequest(const UpdateOriginEndpo
 }
 
 /*!
- * @brief  Constructs a new UpdateOriginEndpointRequest object.
+ * Constructs a UpdateOriginEndpointRequest object.
  */
 UpdateOriginEndpointRequest::UpdateOriginEndpointRequest()
     : MediaPackageRequest(new UpdateOriginEndpointRequestPrivate(MediaPackageRequest::UpdateOriginEndpointAction, this))
@@ -66,14 +63,9 @@ bool UpdateOriginEndpointRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateOriginEndpointResponse object.
+ * Returns a UpdateOriginEndpointResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateOriginEndpointResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MediaPackageClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateOriginEndpointRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * UpdateOriginEndpointRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::MediaPackage::UpdateOriginEndpointRequestPrivate
+ * \brief The UpdateOriginEndpointRequestPrivate class provides private implementation for UpdateOriginEndpointRequest.
+ * \internal
  *
- * @class  UpdateOriginEndpointRequestPrivate
- *
- * @brief  Private implementation for UpdateOriginEndpointRequest.
+ * \inmodule QtAwsMediaPackage
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateOriginEndpointRequestPrivate object.
- *
- * @param  action  MediaPackage action being performed.
- * @param  q       Pointer to this object's public UpdateOriginEndpointRequest instance.
+ * Constructs a UpdateOriginEndpointRequestPrivate object for MediaPackage \a action with,
+ * public implementation \a q.
  */
 UpdateOriginEndpointRequestPrivate::UpdateOriginEndpointRequestPrivate(
     const MediaPackageRequest::Action action, UpdateOriginEndpointRequest * const q)
@@ -104,15 +93,10 @@ UpdateOriginEndpointRequestPrivate::UpdateOriginEndpointRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateOriginEndpointRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateOriginEndpointRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateOriginEndpointRequest instance.
  */
 UpdateOriginEndpointRequestPrivate::UpdateOriginEndpointRequestPrivate(
     const UpdateOriginEndpointRequestPrivate &other, UpdateOriginEndpointRequest * const q)

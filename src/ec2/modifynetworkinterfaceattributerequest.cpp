@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::ModifyNetworkInterfaceAttributeRequest
- *
  * \brief The ModifyNetworkInterfaceAttributeRequest class provides an interface for EC2 ModifyNetworkInterfaceAttribute requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new ModifyNetworkInterfaceAttributeRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ModifyNetworkInterfaceAttributeRequest::ModifyNetworkInterfaceAttributeRequest(const ModifyNetworkInterfaceAttributeRequest &other)
     : EC2Request(new ModifyNetworkInterfaceAttributeRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ ModifyNetworkInterfaceAttributeRequest::ModifyNetworkInterfaceAttributeRequest(c
 }
 
 /*!
- * @brief  Constructs a new ModifyNetworkInterfaceAttributeRequest object.
+ * Constructs a ModifyNetworkInterfaceAttributeRequest object.
  */
 ModifyNetworkInterfaceAttributeRequest::ModifyNetworkInterfaceAttributeRequest()
     : EC2Request(new ModifyNetworkInterfaceAttributeRequestPrivate(EC2Request::ModifyNetworkInterfaceAttributeAction, this))
@@ -70,14 +67,9 @@ bool ModifyNetworkInterfaceAttributeRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ModifyNetworkInterfaceAttributeResponse object.
+ * Returns a ModifyNetworkInterfaceAttributeResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ModifyNetworkInterfaceAttributeResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ModifyNetworkInterfaceAttributeRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * ModifyNetworkInterfaceAttributeRequest::respo
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::ModifyNetworkInterfaceAttributeRequestPrivate
+ * \brief The ModifyNetworkInterfaceAttributeRequestPrivate class provides private implementation for ModifyNetworkInterfaceAttributeRequest.
+ * \internal
  *
- * @class  ModifyNetworkInterfaceAttributeRequestPrivate
- *
- * @brief  Private implementation for ModifyNetworkInterfaceAttributeRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ModifyNetworkInterfaceAttributeRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public ModifyNetworkInterfaceAttributeRequest instance.
+ * Constructs a ModifyNetworkInterfaceAttributeRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 ModifyNetworkInterfaceAttributeRequestPrivate::ModifyNetworkInterfaceAttributeRequestPrivate(
     const EC2Request::Action action, ModifyNetworkInterfaceAttributeRequest * const q)
@@ -108,15 +97,10 @@ ModifyNetworkInterfaceAttributeRequestPrivate::ModifyNetworkInterfaceAttributeRe
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ModifyNetworkInterfaceAttributeRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ModifyNetworkInterfaceAttributeRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ModifyNetworkInterfaceAttributeRequest instance.
  */
 ModifyNetworkInterfaceAttributeRequestPrivate::ModifyNetworkInterfaceAttributeRequestPrivate(
     const ModifyNetworkInterfaceAttributeRequestPrivate &other, ModifyNetworkInterfaceAttributeRequest * const q)

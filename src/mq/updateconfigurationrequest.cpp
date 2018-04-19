@@ -27,10 +27,9 @@ namespace MQ {
 
 /*!
  * \class QtAws::MQ::UpdateConfigurationRequest
- *
  * \brief The UpdateConfigurationRequest class provides an interface for MQ UpdateConfiguration requests.
  *
- * \ingroup MQ
+ * \inmodule QtAwsMQ
  *
  *  Amazon MQ is a managed message broker service for Apache ActiveMQ that makes it easy to set up and operate message
  *  brokers in the cloud. A message broker allows software applications and components to communicate using various
@@ -39,9 +38,7 @@ namespace MQ {
  */
 
 /*!
- * @brief  Constructs a new UpdateConfigurationRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateConfigurationRequest::UpdateConfigurationRequest(const UpdateConfigurationRequest &other)
     : MQRequest(new UpdateConfigurationRequestPrivate(*other.d_func(), this))
@@ -50,7 +47,7 @@ UpdateConfigurationRequest::UpdateConfigurationRequest(const UpdateConfiguration
 }
 
 /*!
- * @brief  Constructs a new UpdateConfigurationRequest object.
+ * Constructs a UpdateConfigurationRequest object.
  */
 UpdateConfigurationRequest::UpdateConfigurationRequest()
     : MQRequest(new UpdateConfigurationRequestPrivate(MQRequest::UpdateConfigurationAction, this))
@@ -68,14 +65,9 @@ bool UpdateConfigurationRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateConfigurationResponse object.
+ * Returns a UpdateConfigurationResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateConfigurationResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MQClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateConfigurationRequest::response(QNetworkReply * const reply) const
 {
@@ -83,20 +75,17 @@ QtAws::Core::AwsAbstractResponse * UpdateConfigurationRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::MQ::UpdateConfigurationRequestPrivate
+ * \brief The UpdateConfigurationRequestPrivate class provides private implementation for UpdateConfigurationRequest.
+ * \internal
  *
- * @class  UpdateConfigurationRequestPrivate
- *
- * @brief  Private implementation for UpdateConfigurationRequest.
+ * \inmodule QtAwsMQ
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateConfigurationRequestPrivate object.
- *
- * @param  action  MQ action being performed.
- * @param  q       Pointer to this object's public UpdateConfigurationRequest instance.
+ * Constructs a UpdateConfigurationRequestPrivate object for MQ \a action with,
+ * public implementation \a q.
  */
 UpdateConfigurationRequestPrivate::UpdateConfigurationRequestPrivate(
     const MQRequest::Action action, UpdateConfigurationRequest * const q)
@@ -106,15 +95,10 @@ UpdateConfigurationRequestPrivate::UpdateConfigurationRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateConfigurationRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateConfigurationRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateConfigurationRequest instance.
  */
 UpdateConfigurationRequestPrivate::UpdateConfigurationRequestPrivate(
     const UpdateConfigurationRequestPrivate &other, UpdateConfigurationRequest * const q)

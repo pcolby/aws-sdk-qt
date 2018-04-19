@@ -27,10 +27,9 @@ namespace SNS {
 
 /*!
  * \class QtAws::SNS::ConfirmSubscriptionRequest
- *
  * \brief The ConfirmSubscriptionRequest class provides an interface for SNS ConfirmSubscription requests.
  *
- * \ingroup SNS
+ * \inmodule QtAwsSNS
  *
  *  <fullname>Amazon Simple Notification Service</fullname>
  * 
@@ -51,9 +50,7 @@ namespace SNS {
  */
 
 /*!
- * @brief  Constructs a new ConfirmSubscriptionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ConfirmSubscriptionRequest::ConfirmSubscriptionRequest(const ConfirmSubscriptionRequest &other)
     : SNSRequest(new ConfirmSubscriptionRequestPrivate(*other.d_func(), this))
@@ -62,7 +59,7 @@ ConfirmSubscriptionRequest::ConfirmSubscriptionRequest(const ConfirmSubscription
 }
 
 /*!
- * @brief  Constructs a new ConfirmSubscriptionRequest object.
+ * Constructs a ConfirmSubscriptionRequest object.
  */
 ConfirmSubscriptionRequest::ConfirmSubscriptionRequest()
     : SNSRequest(new ConfirmSubscriptionRequestPrivate(SNSRequest::ConfirmSubscriptionAction, this))
@@ -80,14 +77,9 @@ bool ConfirmSubscriptionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ConfirmSubscriptionResponse object.
+ * Returns a ConfirmSubscriptionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ConfirmSubscriptionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SNSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ConfirmSubscriptionRequest::response(QNetworkReply * const reply) const
 {
@@ -95,20 +87,17 @@ QtAws::Core::AwsAbstractResponse * ConfirmSubscriptionRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::SNS::ConfirmSubscriptionRequestPrivate
+ * \brief The ConfirmSubscriptionRequestPrivate class provides private implementation for ConfirmSubscriptionRequest.
+ * \internal
  *
- * @class  ConfirmSubscriptionRequestPrivate
- *
- * @brief  Private implementation for ConfirmSubscriptionRequest.
+ * \inmodule QtAwsSNS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ConfirmSubscriptionRequestPrivate object.
- *
- * @param  action  SNS action being performed.
- * @param  q       Pointer to this object's public ConfirmSubscriptionRequest instance.
+ * Constructs a ConfirmSubscriptionRequestPrivate object for SNS \a action with,
+ * public implementation \a q.
  */
 ConfirmSubscriptionRequestPrivate::ConfirmSubscriptionRequestPrivate(
     const SNSRequest::Action action, ConfirmSubscriptionRequest * const q)
@@ -118,15 +107,10 @@ ConfirmSubscriptionRequestPrivate::ConfirmSubscriptionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ConfirmSubscriptionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ConfirmSubscriptionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ConfirmSubscriptionRequest instance.
  */
 ConfirmSubscriptionRequestPrivate::ConfirmSubscriptionRequestPrivate(
     const ConfirmSubscriptionRequestPrivate &other, ConfirmSubscriptionRequest * const q)

@@ -27,10 +27,9 @@ namespace ConfigService {
 
 /*!
  * \class QtAws::ConfigService::DescribeAggregateComplianceByConfigRulesRequest
- *
  * \brief The DescribeAggregateComplianceByConfigRulesRequest class provides an interface for ConfigService DescribeAggregateComplianceByConfigRules requests.
  *
- * \ingroup ConfigService
+ * \inmodule QtAwsConfigService
  *
  *  <fullname>AWS Config</fullname>
  * 
@@ -60,9 +59,7 @@ namespace ConfigService {
  */
 
 /*!
- * @brief  Constructs a new DescribeAggregateComplianceByConfigRulesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeAggregateComplianceByConfigRulesRequest::DescribeAggregateComplianceByConfigRulesRequest(const DescribeAggregateComplianceByConfigRulesRequest &other)
     : ConfigServiceRequest(new DescribeAggregateComplianceByConfigRulesRequestPrivate(*other.d_func(), this))
@@ -71,7 +68,7 @@ DescribeAggregateComplianceByConfigRulesRequest::DescribeAggregateComplianceByCo
 }
 
 /*!
- * @brief  Constructs a new DescribeAggregateComplianceByConfigRulesRequest object.
+ * Constructs a DescribeAggregateComplianceByConfigRulesRequest object.
  */
 DescribeAggregateComplianceByConfigRulesRequest::DescribeAggregateComplianceByConfigRulesRequest()
     : ConfigServiceRequest(new DescribeAggregateComplianceByConfigRulesRequestPrivate(ConfigServiceRequest::DescribeAggregateComplianceByConfigRulesAction, this))
@@ -89,14 +86,9 @@ bool DescribeAggregateComplianceByConfigRulesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeAggregateComplianceByConfigRulesResponse object.
+ * Returns a DescribeAggregateComplianceByConfigRulesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeAggregateComplianceByConfigRulesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ConfigServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeAggregateComplianceByConfigRulesRequest::response(QNetworkReply * const reply) const
 {
@@ -104,20 +96,17 @@ QtAws::Core::AwsAbstractResponse * DescribeAggregateComplianceByConfigRulesReque
 }
 
 /*!
- * @internal
+ * \class QtAws::ConfigService::DescribeAggregateComplianceByConfigRulesRequestPrivate
+ * \brief The DescribeAggregateComplianceByConfigRulesRequestPrivate class provides private implementation for DescribeAggregateComplianceByConfigRulesRequest.
+ * \internal
  *
- * @class  DescribeAggregateComplianceByConfigRulesRequestPrivate
- *
- * @brief  Private implementation for DescribeAggregateComplianceByConfigRulesRequest.
+ * \inmodule QtAwsConfigService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeAggregateComplianceByConfigRulesRequestPrivate object.
- *
- * @param  action  ConfigService action being performed.
- * @param  q       Pointer to this object's public DescribeAggregateComplianceByConfigRulesRequest instance.
+ * Constructs a DescribeAggregateComplianceByConfigRulesRequestPrivate object for ConfigService \a action with,
+ * public implementation \a q.
  */
 DescribeAggregateComplianceByConfigRulesRequestPrivate::DescribeAggregateComplianceByConfigRulesRequestPrivate(
     const ConfigServiceRequest::Action action, DescribeAggregateComplianceByConfigRulesRequest * const q)
@@ -127,15 +116,10 @@ DescribeAggregateComplianceByConfigRulesRequestPrivate::DescribeAggregateComplia
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeAggregateComplianceByConfigRulesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeAggregateComplianceByConfigRulesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeAggregateComplianceByConfigRulesRequest instance.
  */
 DescribeAggregateComplianceByConfigRulesRequestPrivate::DescribeAggregateComplianceByConfigRulesRequestPrivate(
     const DescribeAggregateComplianceByConfigRulesRequestPrivate &other, DescribeAggregateComplianceByConfigRulesRequest * const q)

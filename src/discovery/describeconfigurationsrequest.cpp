@@ -27,10 +27,9 @@ namespace ApplicationDiscoveryService {
 
 /*!
  * \class QtAws::ApplicationDiscoveryService::DescribeConfigurationsRequest
- *
  * \brief The DescribeConfigurationsRequest class provides an interface for ApplicationDiscoveryService DescribeConfigurations requests.
  *
- * \ingroup ApplicationDiscoveryService
+ * \inmodule QtAwsApplicationDiscoveryService
  *
  *  <fullname>AWS Application Discovery Service</fullname>
  * 
@@ -101,9 +100,7 @@ namespace ApplicationDiscoveryService {
  */
 
 /*!
- * @brief  Constructs a new DescribeConfigurationsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeConfigurationsRequest::DescribeConfigurationsRequest(const DescribeConfigurationsRequest &other)
     : ApplicationDiscoveryServiceRequest(new DescribeConfigurationsRequestPrivate(*other.d_func(), this))
@@ -112,7 +109,7 @@ DescribeConfigurationsRequest::DescribeConfigurationsRequest(const DescribeConfi
 }
 
 /*!
- * @brief  Constructs a new DescribeConfigurationsRequest object.
+ * Constructs a DescribeConfigurationsRequest object.
  */
 DescribeConfigurationsRequest::DescribeConfigurationsRequest()
     : ApplicationDiscoveryServiceRequest(new DescribeConfigurationsRequestPrivate(ApplicationDiscoveryServiceRequest::DescribeConfigurationsAction, this))
@@ -130,14 +127,9 @@ bool DescribeConfigurationsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeConfigurationsResponse object.
+ * Returns a DescribeConfigurationsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeConfigurationsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ApplicationDiscoveryServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeConfigurationsRequest::response(QNetworkReply * const reply) const
 {
@@ -145,20 +137,17 @@ QtAws::Core::AwsAbstractResponse * DescribeConfigurationsRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::ApplicationDiscoveryService::DescribeConfigurationsRequestPrivate
+ * \brief The DescribeConfigurationsRequestPrivate class provides private implementation for DescribeConfigurationsRequest.
+ * \internal
  *
- * @class  DescribeConfigurationsRequestPrivate
- *
- * @brief  Private implementation for DescribeConfigurationsRequest.
+ * \inmodule QtAwsApplicationDiscoveryService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeConfigurationsRequestPrivate object.
- *
- * @param  action  ApplicationDiscoveryService action being performed.
- * @param  q       Pointer to this object's public DescribeConfigurationsRequest instance.
+ * Constructs a DescribeConfigurationsRequestPrivate object for ApplicationDiscoveryService \a action with,
+ * public implementation \a q.
  */
 DescribeConfigurationsRequestPrivate::DescribeConfigurationsRequestPrivate(
     const ApplicationDiscoveryServiceRequest::Action action, DescribeConfigurationsRequest * const q)
@@ -168,15 +157,10 @@ DescribeConfigurationsRequestPrivate::DescribeConfigurationsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeConfigurationsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeConfigurationsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeConfigurationsRequest instance.
  */
 DescribeConfigurationsRequestPrivate::DescribeConfigurationsRequestPrivate(
     const DescribeConfigurationsRequestPrivate &other, DescribeConfigurationsRequest * const q)

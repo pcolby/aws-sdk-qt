@@ -27,10 +27,9 @@ namespace CloudWatchLogs {
 
 /*!
  * \class QtAws::CloudWatchLogs::DeleteMetricFilterRequest
- *
  * \brief The DeleteMetricFilterRequest class provides an interface for CloudWatchLogs DeleteMetricFilter requests.
  *
- * \ingroup CloudWatchLogs
+ * \inmodule QtAwsCloudWatchLogs
  *
  *  You can use Amazon CloudWatch Logs to monitor, store, and access your log files from Amazon EC2 instances, AWS
  *  CloudTrail, or other sources. You can then retrieve the associated log data from CloudWatch Logs using the CloudWatch
@@ -66,9 +65,7 @@ namespace CloudWatchLogs {
  */
 
 /*!
- * @brief  Constructs a new DeleteMetricFilterRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteMetricFilterRequest::DeleteMetricFilterRequest(const DeleteMetricFilterRequest &other)
     : CloudWatchLogsRequest(new DeleteMetricFilterRequestPrivate(*other.d_func(), this))
@@ -77,7 +74,7 @@ DeleteMetricFilterRequest::DeleteMetricFilterRequest(const DeleteMetricFilterReq
 }
 
 /*!
- * @brief  Constructs a new DeleteMetricFilterRequest object.
+ * Constructs a DeleteMetricFilterRequest object.
  */
 DeleteMetricFilterRequest::DeleteMetricFilterRequest()
     : CloudWatchLogsRequest(new DeleteMetricFilterRequestPrivate(CloudWatchLogsRequest::DeleteMetricFilterAction, this))
@@ -95,14 +92,9 @@ bool DeleteMetricFilterRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteMetricFilterResponse object.
+ * Returns a DeleteMetricFilterResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteMetricFilterResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudWatchLogsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteMetricFilterRequest::response(QNetworkReply * const reply) const
 {
@@ -110,20 +102,17 @@ QtAws::Core::AwsAbstractResponse * DeleteMetricFilterRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudWatchLogs::DeleteMetricFilterRequestPrivate
+ * \brief The DeleteMetricFilterRequestPrivate class provides private implementation for DeleteMetricFilterRequest.
+ * \internal
  *
- * @class  DeleteMetricFilterRequestPrivate
- *
- * @brief  Private implementation for DeleteMetricFilterRequest.
+ * \inmodule QtAwsCloudWatchLogs
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteMetricFilterRequestPrivate object.
- *
- * @param  action  CloudWatchLogs action being performed.
- * @param  q       Pointer to this object's public DeleteMetricFilterRequest instance.
+ * Constructs a DeleteMetricFilterRequestPrivate object for CloudWatchLogs \a action with,
+ * public implementation \a q.
  */
 DeleteMetricFilterRequestPrivate::DeleteMetricFilterRequestPrivate(
     const CloudWatchLogsRequest::Action action, DeleteMetricFilterRequest * const q)
@@ -133,15 +122,10 @@ DeleteMetricFilterRequestPrivate::DeleteMetricFilterRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteMetricFilterRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteMetricFilterRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteMetricFilterRequest instance.
  */
 DeleteMetricFilterRequestPrivate::DeleteMetricFilterRequestPrivate(
     const DeleteMetricFilterRequestPrivate &other, DeleteMetricFilterRequest * const q)

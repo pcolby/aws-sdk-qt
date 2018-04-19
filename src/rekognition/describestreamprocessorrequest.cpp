@@ -27,10 +27,9 @@ namespace Rekognition {
 
 /*!
  * \class QtAws::Rekognition::DescribeStreamProcessorRequest
- *
  * \brief The DescribeStreamProcessorRequest class provides an interface for Rekognition DescribeStreamProcessor requests.
  *
- * \ingroup Rekognition
+ * \inmodule QtAwsRekognition
  *
  *  This is the Amazon Rekognition API
  *
@@ -38,9 +37,7 @@ namespace Rekognition {
  */
 
 /*!
- * @brief  Constructs a new DescribeStreamProcessorRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeStreamProcessorRequest::DescribeStreamProcessorRequest(const DescribeStreamProcessorRequest &other)
     : RekognitionRequest(new DescribeStreamProcessorRequestPrivate(*other.d_func(), this))
@@ -49,7 +46,7 @@ DescribeStreamProcessorRequest::DescribeStreamProcessorRequest(const DescribeStr
 }
 
 /*!
- * @brief  Constructs a new DescribeStreamProcessorRequest object.
+ * Constructs a DescribeStreamProcessorRequest object.
  */
 DescribeStreamProcessorRequest::DescribeStreamProcessorRequest()
     : RekognitionRequest(new DescribeStreamProcessorRequestPrivate(RekognitionRequest::DescribeStreamProcessorAction, this))
@@ -67,14 +64,9 @@ bool DescribeStreamProcessorRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeStreamProcessorResponse object.
+ * Returns a DescribeStreamProcessorResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeStreamProcessorResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RekognitionClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeStreamProcessorRequest::response(QNetworkReply * const reply) const
 {
@@ -82,20 +74,17 @@ QtAws::Core::AwsAbstractResponse * DescribeStreamProcessorRequest::response(QNet
 }
 
 /*!
- * @internal
+ * \class QtAws::Rekognition::DescribeStreamProcessorRequestPrivate
+ * \brief The DescribeStreamProcessorRequestPrivate class provides private implementation for DescribeStreamProcessorRequest.
+ * \internal
  *
- * @class  DescribeStreamProcessorRequestPrivate
- *
- * @brief  Private implementation for DescribeStreamProcessorRequest.
+ * \inmodule QtAwsRekognition
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeStreamProcessorRequestPrivate object.
- *
- * @param  action  Rekognition action being performed.
- * @param  q       Pointer to this object's public DescribeStreamProcessorRequest instance.
+ * Constructs a DescribeStreamProcessorRequestPrivate object for Rekognition \a action with,
+ * public implementation \a q.
  */
 DescribeStreamProcessorRequestPrivate::DescribeStreamProcessorRequestPrivate(
     const RekognitionRequest::Action action, DescribeStreamProcessorRequest * const q)
@@ -105,15 +94,10 @@ DescribeStreamProcessorRequestPrivate::DescribeStreamProcessorRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeStreamProcessorRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeStreamProcessorRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeStreamProcessorRequest instance.
  */
 DescribeStreamProcessorRequestPrivate::DescribeStreamProcessorRequestPrivate(
     const DescribeStreamProcessorRequestPrivate &other, DescribeStreamProcessorRequest * const q)

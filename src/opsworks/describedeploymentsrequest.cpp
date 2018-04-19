@@ -27,10 +27,9 @@ namespace OpsWorks {
 
 /*!
  * \class QtAws::OpsWorks::DescribeDeploymentsRequest
- *
  * \brief The DescribeDeploymentsRequest class provides an interface for OpsWorks DescribeDeployments requests.
  *
- * \ingroup OpsWorks
+ * \inmodule QtAwsOpsWorks
  *
  *  <fullname>AWS OpsWorks</fullname>
  * 
@@ -143,9 +142,7 @@ namespace OpsWorks {
  */
 
 /*!
- * @brief  Constructs a new DescribeDeploymentsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeDeploymentsRequest::DescribeDeploymentsRequest(const DescribeDeploymentsRequest &other)
     : OpsWorksRequest(new DescribeDeploymentsRequestPrivate(*other.d_func(), this))
@@ -154,7 +151,7 @@ DescribeDeploymentsRequest::DescribeDeploymentsRequest(const DescribeDeployments
 }
 
 /*!
- * @brief  Constructs a new DescribeDeploymentsRequest object.
+ * Constructs a DescribeDeploymentsRequest object.
  */
 DescribeDeploymentsRequest::DescribeDeploymentsRequest()
     : OpsWorksRequest(new DescribeDeploymentsRequestPrivate(OpsWorksRequest::DescribeDeploymentsAction, this))
@@ -172,14 +169,9 @@ bool DescribeDeploymentsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeDeploymentsResponse object.
+ * Returns a DescribeDeploymentsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeDeploymentsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  OpsWorksClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeDeploymentsRequest::response(QNetworkReply * const reply) const
 {
@@ -187,20 +179,17 @@ QtAws::Core::AwsAbstractResponse * DescribeDeploymentsRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::OpsWorks::DescribeDeploymentsRequestPrivate
+ * \brief The DescribeDeploymentsRequestPrivate class provides private implementation for DescribeDeploymentsRequest.
+ * \internal
  *
- * @class  DescribeDeploymentsRequestPrivate
- *
- * @brief  Private implementation for DescribeDeploymentsRequest.
+ * \inmodule QtAwsOpsWorks
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeDeploymentsRequestPrivate object.
- *
- * @param  action  OpsWorks action being performed.
- * @param  q       Pointer to this object's public DescribeDeploymentsRequest instance.
+ * Constructs a DescribeDeploymentsRequestPrivate object for OpsWorks \a action with,
+ * public implementation \a q.
  */
 DescribeDeploymentsRequestPrivate::DescribeDeploymentsRequestPrivate(
     const OpsWorksRequest::Action action, DescribeDeploymentsRequest * const q)
@@ -210,15 +199,10 @@ DescribeDeploymentsRequestPrivate::DescribeDeploymentsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeDeploymentsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeDeploymentsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeDeploymentsRequest instance.
  */
 DescribeDeploymentsRequestPrivate::DescribeDeploymentsRequestPrivate(
     const DescribeDeploymentsRequestPrivate &other, DescribeDeploymentsRequest * const q)

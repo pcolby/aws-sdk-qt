@@ -27,10 +27,9 @@ namespace CognitoIdentity {
 
 /*!
  * \class QtAws::CognitoIdentity::MergeDeveloperIdentitiesRequest
- *
  * \brief The MergeDeveloperIdentitiesRequest class provides an interface for CognitoIdentity MergeDeveloperIdentities requests.
  *
- * \ingroup CognitoIdentity
+ * \inmodule QtAwsCognitoIdentity
  *
  *  <fullname>Amazon Cognito</fullname>
  * 
@@ -75,9 +74,7 @@ namespace CognitoIdentity {
  */
 
 /*!
- * @brief  Constructs a new MergeDeveloperIdentitiesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 MergeDeveloperIdentitiesRequest::MergeDeveloperIdentitiesRequest(const MergeDeveloperIdentitiesRequest &other)
     : CognitoIdentityRequest(new MergeDeveloperIdentitiesRequestPrivate(*other.d_func(), this))
@@ -86,7 +83,7 @@ MergeDeveloperIdentitiesRequest::MergeDeveloperIdentitiesRequest(const MergeDeve
 }
 
 /*!
- * @brief  Constructs a new MergeDeveloperIdentitiesRequest object.
+ * Constructs a MergeDeveloperIdentitiesRequest object.
  */
 MergeDeveloperIdentitiesRequest::MergeDeveloperIdentitiesRequest()
     : CognitoIdentityRequest(new MergeDeveloperIdentitiesRequestPrivate(CognitoIdentityRequest::MergeDeveloperIdentitiesAction, this))
@@ -104,14 +101,9 @@ bool MergeDeveloperIdentitiesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an MergeDeveloperIdentitiesResponse object.
+ * Returns a MergeDeveloperIdentitiesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An MergeDeveloperIdentitiesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CognitoIdentityClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * MergeDeveloperIdentitiesRequest::response(QNetworkReply * const reply) const
 {
@@ -119,20 +111,17 @@ QtAws::Core::AwsAbstractResponse * MergeDeveloperIdentitiesRequest::response(QNe
 }
 
 /*!
- * @internal
+ * \class QtAws::CognitoIdentity::MergeDeveloperIdentitiesRequestPrivate
+ * \brief The MergeDeveloperIdentitiesRequestPrivate class provides private implementation for MergeDeveloperIdentitiesRequest.
+ * \internal
  *
- * @class  MergeDeveloperIdentitiesRequestPrivate
- *
- * @brief  Private implementation for MergeDeveloperIdentitiesRequest.
+ * \inmodule QtAwsCognitoIdentity
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new MergeDeveloperIdentitiesRequestPrivate object.
- *
- * @param  action  CognitoIdentity action being performed.
- * @param  q       Pointer to this object's public MergeDeveloperIdentitiesRequest instance.
+ * Constructs a MergeDeveloperIdentitiesRequestPrivate object for CognitoIdentity \a action with,
+ * public implementation \a q.
  */
 MergeDeveloperIdentitiesRequestPrivate::MergeDeveloperIdentitiesRequestPrivate(
     const CognitoIdentityRequest::Action action, MergeDeveloperIdentitiesRequest * const q)
@@ -142,15 +131,10 @@ MergeDeveloperIdentitiesRequestPrivate::MergeDeveloperIdentitiesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new MergeDeveloperIdentitiesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the MergeDeveloperIdentitiesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public MergeDeveloperIdentitiesRequest instance.
  */
 MergeDeveloperIdentitiesRequestPrivate::MergeDeveloperIdentitiesRequestPrivate(
     const MergeDeveloperIdentitiesRequestPrivate &other, MergeDeveloperIdentitiesRequest * const q)

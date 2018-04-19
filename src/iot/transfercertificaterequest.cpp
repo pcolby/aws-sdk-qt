@@ -27,10 +27,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::TransferCertificateRequest
- *
  * \brief The TransferCertificateRequest class provides an interface for IoT TransferCertificate requests.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -48,9 +47,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new TransferCertificateRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 TransferCertificateRequest::TransferCertificateRequest(const TransferCertificateRequest &other)
     : IoTRequest(new TransferCertificateRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ TransferCertificateRequest::TransferCertificateRequest(const TransferCertificate
 }
 
 /*!
- * @brief  Constructs a new TransferCertificateRequest object.
+ * Constructs a TransferCertificateRequest object.
  */
 TransferCertificateRequest::TransferCertificateRequest()
     : IoTRequest(new TransferCertificateRequestPrivate(IoTRequest::TransferCertificateAction, this))
@@ -77,14 +74,9 @@ bool TransferCertificateRequest::isValid() const
 
 
 /*!
- * @brief  Construct an TransferCertificateResponse object.
+ * Returns a TransferCertificateResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An TransferCertificateResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IoTClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * TransferCertificateRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * TransferCertificateRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::IoT::TransferCertificateRequestPrivate
+ * \brief The TransferCertificateRequestPrivate class provides private implementation for TransferCertificateRequest.
+ * \internal
  *
- * @class  TransferCertificateRequestPrivate
- *
- * @brief  Private implementation for TransferCertificateRequest.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new TransferCertificateRequestPrivate object.
- *
- * @param  action  IoT action being performed.
- * @param  q       Pointer to this object's public TransferCertificateRequest instance.
+ * Constructs a TransferCertificateRequestPrivate object for IoT \a action with,
+ * public implementation \a q.
  */
 TransferCertificateRequestPrivate::TransferCertificateRequestPrivate(
     const IoTRequest::Action action, TransferCertificateRequest * const q)
@@ -115,15 +104,10 @@ TransferCertificateRequestPrivate::TransferCertificateRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new TransferCertificateRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the TransferCertificateRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public TransferCertificateRequest instance.
  */
 TransferCertificateRequestPrivate::TransferCertificateRequestPrivate(
     const TransferCertificateRequestPrivate &other, TransferCertificateRequest * const q)

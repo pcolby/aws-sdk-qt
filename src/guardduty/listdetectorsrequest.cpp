@@ -27,19 +27,16 @@ namespace GuardDuty {
 
 /*!
  * \class QtAws::GuardDuty::ListDetectorsRequest
- *
  * \brief The ListDetectorsRequest class provides an interface for GuardDuty ListDetectors requests.
  *
- * \ingroup GuardDuty
+ * \inmodule QtAwsGuardDuty
  *
  *
  * \sa GuardDutyClient::listDetectors
  */
 
 /*!
- * @brief  Constructs a new ListDetectorsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListDetectorsRequest::ListDetectorsRequest(const ListDetectorsRequest &other)
     : GuardDutyRequest(new ListDetectorsRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ ListDetectorsRequest::ListDetectorsRequest(const ListDetectorsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ListDetectorsRequest object.
+ * Constructs a ListDetectorsRequest object.
  */
 ListDetectorsRequest::ListDetectorsRequest()
     : GuardDutyRequest(new ListDetectorsRequestPrivate(GuardDutyRequest::ListDetectorsAction, this))
@@ -66,14 +63,9 @@ bool ListDetectorsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListDetectorsResponse object.
+ * Returns a ListDetectorsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListDetectorsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GuardDutyClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListDetectorsRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * ListDetectorsRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::GuardDuty::ListDetectorsRequestPrivate
+ * \brief The ListDetectorsRequestPrivate class provides private implementation for ListDetectorsRequest.
+ * \internal
  *
- * @class  ListDetectorsRequestPrivate
- *
- * @brief  Private implementation for ListDetectorsRequest.
+ * \inmodule QtAwsGuardDuty
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListDetectorsRequestPrivate object.
- *
- * @param  action  GuardDuty action being performed.
- * @param  q       Pointer to this object's public ListDetectorsRequest instance.
+ * Constructs a ListDetectorsRequestPrivate object for GuardDuty \a action with,
+ * public implementation \a q.
  */
 ListDetectorsRequestPrivate::ListDetectorsRequestPrivate(
     const GuardDutyRequest::Action action, ListDetectorsRequest * const q)
@@ -104,15 +93,10 @@ ListDetectorsRequestPrivate::ListDetectorsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListDetectorsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListDetectorsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListDetectorsRequest instance.
  */
 ListDetectorsRequestPrivate::ListDetectorsRequestPrivate(
     const ListDetectorsRequestPrivate &other, ListDetectorsRequest * const q)

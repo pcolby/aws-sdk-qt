@@ -27,10 +27,9 @@ namespace CognitoIdentityProvider {
 
 /*!
  * \class QtAws::CognitoIdentityProvider::AdminCreateUserRequest
- *
  * \brief The AdminCreateUserRequest class provides an interface for CognitoIdentityProvider AdminCreateUser requests.
  *
- * \ingroup CognitoIdentityProvider
+ * \inmodule QtAwsCognitoIdentityProvider
  *
  *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
  *  authenticate a user to obtain tokens related to user identity and access
@@ -47,9 +46,7 @@ namespace CognitoIdentityProvider {
  */
 
 /*!
- * @brief  Constructs a new AdminCreateUserRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AdminCreateUserRequest::AdminCreateUserRequest(const AdminCreateUserRequest &other)
     : CognitoIdentityProviderRequest(new AdminCreateUserRequestPrivate(*other.d_func(), this))
@@ -58,7 +55,7 @@ AdminCreateUserRequest::AdminCreateUserRequest(const AdminCreateUserRequest &oth
 }
 
 /*!
- * @brief  Constructs a new AdminCreateUserRequest object.
+ * Constructs a AdminCreateUserRequest object.
  */
 AdminCreateUserRequest::AdminCreateUserRequest()
     : CognitoIdentityProviderRequest(new AdminCreateUserRequestPrivate(CognitoIdentityProviderRequest::AdminCreateUserAction, this))
@@ -76,14 +73,9 @@ bool AdminCreateUserRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AdminCreateUserResponse object.
+ * Returns a AdminCreateUserResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AdminCreateUserResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CognitoIdentityProviderClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AdminCreateUserRequest::response(QNetworkReply * const reply) const
 {
@@ -91,20 +83,17 @@ QtAws::Core::AwsAbstractResponse * AdminCreateUserRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::CognitoIdentityProvider::AdminCreateUserRequestPrivate
+ * \brief The AdminCreateUserRequestPrivate class provides private implementation for AdminCreateUserRequest.
+ * \internal
  *
- * @class  AdminCreateUserRequestPrivate
- *
- * @brief  Private implementation for AdminCreateUserRequest.
+ * \inmodule QtAwsCognitoIdentityProvider
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AdminCreateUserRequestPrivate object.
- *
- * @param  action  CognitoIdentityProvider action being performed.
- * @param  q       Pointer to this object's public AdminCreateUserRequest instance.
+ * Constructs a AdminCreateUserRequestPrivate object for CognitoIdentityProvider \a action with,
+ * public implementation \a q.
  */
 AdminCreateUserRequestPrivate::AdminCreateUserRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, AdminCreateUserRequest * const q)
@@ -114,15 +103,10 @@ AdminCreateUserRequestPrivate::AdminCreateUserRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AdminCreateUserRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AdminCreateUserRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AdminCreateUserRequest instance.
  */
 AdminCreateUserRequestPrivate::AdminCreateUserRequestPrivate(
     const AdminCreateUserRequestPrivate &other, AdminCreateUserRequest * const q)

@@ -27,10 +27,9 @@ namespace StorageGateway {
 
 /*!
  * \class QtAws::StorageGateway::CreateTapeWithBarcodeRequest
- *
  * \brief The CreateTapeWithBarcodeRequest class provides an interface for StorageGateway CreateTapeWithBarcode requests.
  *
- * \ingroup StorageGateway
+ * \inmodule QtAwsStorageGateway
  *
  *  <fullname>AWS Storage Gateway Service</fullname>
  * 
@@ -106,9 +105,7 @@ namespace StorageGateway {
  */
 
 /*!
- * @brief  Constructs a new CreateTapeWithBarcodeRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateTapeWithBarcodeRequest::CreateTapeWithBarcodeRequest(const CreateTapeWithBarcodeRequest &other)
     : StorageGatewayRequest(new CreateTapeWithBarcodeRequestPrivate(*other.d_func(), this))
@@ -117,7 +114,7 @@ CreateTapeWithBarcodeRequest::CreateTapeWithBarcodeRequest(const CreateTapeWithB
 }
 
 /*!
- * @brief  Constructs a new CreateTapeWithBarcodeRequest object.
+ * Constructs a CreateTapeWithBarcodeRequest object.
  */
 CreateTapeWithBarcodeRequest::CreateTapeWithBarcodeRequest()
     : StorageGatewayRequest(new CreateTapeWithBarcodeRequestPrivate(StorageGatewayRequest::CreateTapeWithBarcodeAction, this))
@@ -135,14 +132,9 @@ bool CreateTapeWithBarcodeRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateTapeWithBarcodeResponse object.
+ * Returns a CreateTapeWithBarcodeResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateTapeWithBarcodeResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  StorageGatewayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateTapeWithBarcodeRequest::response(QNetworkReply * const reply) const
 {
@@ -150,20 +142,17 @@ QtAws::Core::AwsAbstractResponse * CreateTapeWithBarcodeRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::StorageGateway::CreateTapeWithBarcodeRequestPrivate
+ * \brief The CreateTapeWithBarcodeRequestPrivate class provides private implementation for CreateTapeWithBarcodeRequest.
+ * \internal
  *
- * @class  CreateTapeWithBarcodeRequestPrivate
- *
- * @brief  Private implementation for CreateTapeWithBarcodeRequest.
+ * \inmodule QtAwsStorageGateway
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateTapeWithBarcodeRequestPrivate object.
- *
- * @param  action  StorageGateway action being performed.
- * @param  q       Pointer to this object's public CreateTapeWithBarcodeRequest instance.
+ * Constructs a CreateTapeWithBarcodeRequestPrivate object for StorageGateway \a action with,
+ * public implementation \a q.
  */
 CreateTapeWithBarcodeRequestPrivate::CreateTapeWithBarcodeRequestPrivate(
     const StorageGatewayRequest::Action action, CreateTapeWithBarcodeRequest * const q)
@@ -173,15 +162,10 @@ CreateTapeWithBarcodeRequestPrivate::CreateTapeWithBarcodeRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateTapeWithBarcodeRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateTapeWithBarcodeRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateTapeWithBarcodeRequest instance.
  */
 CreateTapeWithBarcodeRequestPrivate::CreateTapeWithBarcodeRequestPrivate(
     const CreateTapeWithBarcodeRequestPrivate &other, CreateTapeWithBarcodeRequest * const q)

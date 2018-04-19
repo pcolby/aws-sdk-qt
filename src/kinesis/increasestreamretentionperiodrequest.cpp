@@ -27,10 +27,9 @@ namespace Kinesis {
 
 /*!
  * \class QtAws::Kinesis::IncreaseStreamRetentionPeriodRequest
- *
  * \brief The IncreaseStreamRetentionPeriodRequest class provides an interface for Kinesis IncreaseStreamRetentionPeriod requests.
  *
- * \ingroup Kinesis
+ * \inmodule QtAwsKinesis
  *
  *  <fullname>Amazon Kinesis Data Streams Service API Reference</fullname>
  * 
@@ -40,9 +39,7 @@ namespace Kinesis {
  */
 
 /*!
- * @brief  Constructs a new IncreaseStreamRetentionPeriodRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 IncreaseStreamRetentionPeriodRequest::IncreaseStreamRetentionPeriodRequest(const IncreaseStreamRetentionPeriodRequest &other)
     : KinesisRequest(new IncreaseStreamRetentionPeriodRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ IncreaseStreamRetentionPeriodRequest::IncreaseStreamRetentionPeriodRequest(const
 }
 
 /*!
- * @brief  Constructs a new IncreaseStreamRetentionPeriodRequest object.
+ * Constructs a IncreaseStreamRetentionPeriodRequest object.
  */
 IncreaseStreamRetentionPeriodRequest::IncreaseStreamRetentionPeriodRequest()
     : KinesisRequest(new IncreaseStreamRetentionPeriodRequestPrivate(KinesisRequest::IncreaseStreamRetentionPeriodAction, this))
@@ -69,14 +66,9 @@ bool IncreaseStreamRetentionPeriodRequest::isValid() const
 
 
 /*!
- * @brief  Construct an IncreaseStreamRetentionPeriodResponse object.
+ * Returns a IncreaseStreamRetentionPeriodResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An IncreaseStreamRetentionPeriodResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  KinesisClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * IncreaseStreamRetentionPeriodRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * IncreaseStreamRetentionPeriodRequest::respons
 }
 
 /*!
- * @internal
+ * \class QtAws::Kinesis::IncreaseStreamRetentionPeriodRequestPrivate
+ * \brief The IncreaseStreamRetentionPeriodRequestPrivate class provides private implementation for IncreaseStreamRetentionPeriodRequest.
+ * \internal
  *
- * @class  IncreaseStreamRetentionPeriodRequestPrivate
- *
- * @brief  Private implementation for IncreaseStreamRetentionPeriodRequest.
+ * \inmodule QtAwsKinesis
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new IncreaseStreamRetentionPeriodRequestPrivate object.
- *
- * @param  action  Kinesis action being performed.
- * @param  q       Pointer to this object's public IncreaseStreamRetentionPeriodRequest instance.
+ * Constructs a IncreaseStreamRetentionPeriodRequestPrivate object for Kinesis \a action with,
+ * public implementation \a q.
  */
 IncreaseStreamRetentionPeriodRequestPrivate::IncreaseStreamRetentionPeriodRequestPrivate(
     const KinesisRequest::Action action, IncreaseStreamRetentionPeriodRequest * const q)
@@ -107,15 +96,10 @@ IncreaseStreamRetentionPeriodRequestPrivate::IncreaseStreamRetentionPeriodReques
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new IncreaseStreamRetentionPeriodRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the IncreaseStreamRetentionPeriodRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public IncreaseStreamRetentionPeriodRequest instance.
  */
 IncreaseStreamRetentionPeriodRequestPrivate::IncreaseStreamRetentionPeriodRequestPrivate(
     const IncreaseStreamRetentionPeriodRequestPrivate &other, IncreaseStreamRetentionPeriodRequest * const q)

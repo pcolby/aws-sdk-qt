@@ -27,10 +27,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::CreateDeploymentRequest
- *
  * \brief The CreateDeploymentRequest class provides an interface for APIGateway CreateDeployment requests.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -42,9 +41,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new CreateDeploymentRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateDeploymentRequest::CreateDeploymentRequest(const CreateDeploymentRequest &other)
     : APIGatewayRequest(new CreateDeploymentRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ CreateDeploymentRequest::CreateDeploymentRequest(const CreateDeploymentRequest &
 }
 
 /*!
- * @brief  Constructs a new CreateDeploymentRequest object.
+ * Constructs a CreateDeploymentRequest object.
  */
 CreateDeploymentRequest::CreateDeploymentRequest()
     : APIGatewayRequest(new CreateDeploymentRequestPrivate(APIGatewayRequest::CreateDeploymentAction, this))
@@ -71,14 +68,9 @@ bool CreateDeploymentRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateDeploymentResponse object.
+ * Returns a CreateDeploymentResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateDeploymentResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  APIGatewayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateDeploymentRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * CreateDeploymentRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::APIGateway::CreateDeploymentRequestPrivate
+ * \brief The CreateDeploymentRequestPrivate class provides private implementation for CreateDeploymentRequest.
+ * \internal
  *
- * @class  CreateDeploymentRequestPrivate
- *
- * @brief  Private implementation for CreateDeploymentRequest.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateDeploymentRequestPrivate object.
- *
- * @param  action  APIGateway action being performed.
- * @param  q       Pointer to this object's public CreateDeploymentRequest instance.
+ * Constructs a CreateDeploymentRequestPrivate object for APIGateway \a action with,
+ * public implementation \a q.
  */
 CreateDeploymentRequestPrivate::CreateDeploymentRequestPrivate(
     const APIGatewayRequest::Action action, CreateDeploymentRequest * const q)
@@ -109,15 +98,10 @@ CreateDeploymentRequestPrivate::CreateDeploymentRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateDeploymentRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateDeploymentRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateDeploymentRequest instance.
  */
 CreateDeploymentRequestPrivate::CreateDeploymentRequestPrivate(
     const CreateDeploymentRequestPrivate &other, CreateDeploymentRequest * const q)

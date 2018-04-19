@@ -27,10 +27,9 @@ namespace WAFRegional {
 
 /*!
  * \class QtAws::WAFRegional::AssociateWebACLRequest
- *
  * \brief The AssociateWebACLRequest class provides an interface for WAFRegional AssociateWebACL requests.
  *
- * \ingroup WAFRegional
+ * \inmodule QtAwsWAFRegional
  *
  *  This is the <i>AWS WAF Regional API Reference</i> for using AWS WAF with Elastic Load Balancing (ELB) Application Load
  *  Balancers. The AWS WAF actions and data types listed in the reference are available for protecting Application Load
@@ -44,9 +43,7 @@ namespace WAFRegional {
  */
 
 /*!
- * @brief  Constructs a new AssociateWebACLRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AssociateWebACLRequest::AssociateWebACLRequest(const AssociateWebACLRequest &other)
     : WAFRegionalRequest(new AssociateWebACLRequestPrivate(*other.d_func(), this))
@@ -55,7 +52,7 @@ AssociateWebACLRequest::AssociateWebACLRequest(const AssociateWebACLRequest &oth
 }
 
 /*!
- * @brief  Constructs a new AssociateWebACLRequest object.
+ * Constructs a AssociateWebACLRequest object.
  */
 AssociateWebACLRequest::AssociateWebACLRequest()
     : WAFRegionalRequest(new AssociateWebACLRequestPrivate(WAFRegionalRequest::AssociateWebACLAction, this))
@@ -73,14 +70,9 @@ bool AssociateWebACLRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AssociateWebACLResponse object.
+ * Returns a AssociateWebACLResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AssociateWebACLResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WAFRegionalClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AssociateWebACLRequest::response(QNetworkReply * const reply) const
 {
@@ -88,20 +80,17 @@ QtAws::Core::AwsAbstractResponse * AssociateWebACLRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::WAFRegional::AssociateWebACLRequestPrivate
+ * \brief The AssociateWebACLRequestPrivate class provides private implementation for AssociateWebACLRequest.
+ * \internal
  *
- * @class  AssociateWebACLRequestPrivate
- *
- * @brief  Private implementation for AssociateWebACLRequest.
+ * \inmodule QtAwsWAFRegional
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AssociateWebACLRequestPrivate object.
- *
- * @param  action  WAFRegional action being performed.
- * @param  q       Pointer to this object's public AssociateWebACLRequest instance.
+ * Constructs a AssociateWebACLRequestPrivate object for WAFRegional \a action with,
+ * public implementation \a q.
  */
 AssociateWebACLRequestPrivate::AssociateWebACLRequestPrivate(
     const WAFRegionalRequest::Action action, AssociateWebACLRequest * const q)
@@ -111,15 +100,10 @@ AssociateWebACLRequestPrivate::AssociateWebACLRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AssociateWebACLRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AssociateWebACLRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AssociateWebACLRequest instance.
  */
 AssociateWebACLRequestPrivate::AssociateWebACLRequestPrivate(
     const AssociateWebACLRequestPrivate &other, AssociateWebACLRequest * const q)

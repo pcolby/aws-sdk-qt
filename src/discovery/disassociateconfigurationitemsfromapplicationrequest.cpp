@@ -27,10 +27,9 @@ namespace ApplicationDiscoveryService {
 
 /*!
  * \class QtAws::ApplicationDiscoveryService::DisassociateConfigurationItemsFromApplicationRequest
- *
  * \brief The DisassociateConfigurationItemsFromApplicationRequest class provides an interface for ApplicationDiscoveryService DisassociateConfigurationItemsFromApplication requests.
  *
- * \ingroup ApplicationDiscoveryService
+ * \inmodule QtAwsApplicationDiscoveryService
  *
  *  <fullname>AWS Application Discovery Service</fullname>
  * 
@@ -101,9 +100,7 @@ namespace ApplicationDiscoveryService {
  */
 
 /*!
- * @brief  Constructs a new DisassociateConfigurationItemsFromApplicationRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DisassociateConfigurationItemsFromApplicationRequest::DisassociateConfigurationItemsFromApplicationRequest(const DisassociateConfigurationItemsFromApplicationRequest &other)
     : ApplicationDiscoveryServiceRequest(new DisassociateConfigurationItemsFromApplicationRequestPrivate(*other.d_func(), this))
@@ -112,7 +109,7 @@ DisassociateConfigurationItemsFromApplicationRequest::DisassociateConfigurationI
 }
 
 /*!
- * @brief  Constructs a new DisassociateConfigurationItemsFromApplicationRequest object.
+ * Constructs a DisassociateConfigurationItemsFromApplicationRequest object.
  */
 DisassociateConfigurationItemsFromApplicationRequest::DisassociateConfigurationItemsFromApplicationRequest()
     : ApplicationDiscoveryServiceRequest(new DisassociateConfigurationItemsFromApplicationRequestPrivate(ApplicationDiscoveryServiceRequest::DisassociateConfigurationItemsFromApplicationAction, this))
@@ -130,14 +127,9 @@ bool DisassociateConfigurationItemsFromApplicationRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DisassociateConfigurationItemsFromApplicationResponse object.
+ * Returns a DisassociateConfigurationItemsFromApplicationResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DisassociateConfigurationItemsFromApplicationResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ApplicationDiscoveryServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DisassociateConfigurationItemsFromApplicationRequest::response(QNetworkReply * const reply) const
 {
@@ -145,20 +137,17 @@ QtAws::Core::AwsAbstractResponse * DisassociateConfigurationItemsFromApplication
 }
 
 /*!
- * @internal
+ * \class QtAws::ApplicationDiscoveryService::DisassociateConfigurationItemsFromApplicationRequestPrivate
+ * \brief The DisassociateConfigurationItemsFromApplicationRequestPrivate class provides private implementation for DisassociateConfigurationItemsFromApplicationRequest.
+ * \internal
  *
- * @class  DisassociateConfigurationItemsFromApplicationRequestPrivate
- *
- * @brief  Private implementation for DisassociateConfigurationItemsFromApplicationRequest.
+ * \inmodule QtAwsApplicationDiscoveryService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DisassociateConfigurationItemsFromApplicationRequestPrivate object.
- *
- * @param  action  ApplicationDiscoveryService action being performed.
- * @param  q       Pointer to this object's public DisassociateConfigurationItemsFromApplicationRequest instance.
+ * Constructs a DisassociateConfigurationItemsFromApplicationRequestPrivate object for ApplicationDiscoveryService \a action with,
+ * public implementation \a q.
  */
 DisassociateConfigurationItemsFromApplicationRequestPrivate::DisassociateConfigurationItemsFromApplicationRequestPrivate(
     const ApplicationDiscoveryServiceRequest::Action action, DisassociateConfigurationItemsFromApplicationRequest * const q)
@@ -168,15 +157,10 @@ DisassociateConfigurationItemsFromApplicationRequestPrivate::DisassociateConfigu
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DisassociateConfigurationItemsFromApplicationRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DisassociateConfigurationItemsFromApplicationRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DisassociateConfigurationItemsFromApplicationRequest instance.
  */
 DisassociateConfigurationItemsFromApplicationRequestPrivate::DisassociateConfigurationItemsFromApplicationRequestPrivate(
     const DisassociateConfigurationItemsFromApplicationRequestPrivate &other, DisassociateConfigurationItemsFromApplicationRequest * const q)

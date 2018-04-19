@@ -27,10 +27,9 @@ namespace ElasticLoadBalancingv2 {
 
 /*!
  * \class QtAws::ElasticLoadBalancingv2::SetRulePrioritiesRequest
- *
  * \brief The SetRulePrioritiesRequest class provides an interface for ElasticLoadBalancingv2 SetRulePriorities requests.
  *
- * \ingroup ElasticLoadBalancingv2
+ * \inmodule QtAwsElasticLoadBalancingv2
  *
  *  <fullname>Elastic Load Balancing</fullname>
  * 
@@ -105,9 +104,7 @@ namespace ElasticLoadBalancingv2 {
  */
 
 /*!
- * @brief  Constructs a new SetRulePrioritiesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 SetRulePrioritiesRequest::SetRulePrioritiesRequest(const SetRulePrioritiesRequest &other)
     : ElasticLoadBalancingv2Request(new SetRulePrioritiesRequestPrivate(*other.d_func(), this))
@@ -116,7 +113,7 @@ SetRulePrioritiesRequest::SetRulePrioritiesRequest(const SetRulePrioritiesReques
 }
 
 /*!
- * @brief  Constructs a new SetRulePrioritiesRequest object.
+ * Constructs a SetRulePrioritiesRequest object.
  */
 SetRulePrioritiesRequest::SetRulePrioritiesRequest()
     : ElasticLoadBalancingv2Request(new SetRulePrioritiesRequestPrivate(ElasticLoadBalancingv2Request::SetRulePrioritiesAction, this))
@@ -134,14 +131,9 @@ bool SetRulePrioritiesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an SetRulePrioritiesResponse object.
+ * Returns a SetRulePrioritiesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An SetRulePrioritiesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ElasticLoadBalancingv2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * SetRulePrioritiesRequest::response(QNetworkReply * const reply) const
 {
@@ -149,20 +141,17 @@ QtAws::Core::AwsAbstractResponse * SetRulePrioritiesRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::ElasticLoadBalancingv2::SetRulePrioritiesRequestPrivate
+ * \brief The SetRulePrioritiesRequestPrivate class provides private implementation for SetRulePrioritiesRequest.
+ * \internal
  *
- * @class  SetRulePrioritiesRequestPrivate
- *
- * @brief  Private implementation for SetRulePrioritiesRequest.
+ * \inmodule QtAwsElasticLoadBalancingv2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new SetRulePrioritiesRequestPrivate object.
- *
- * @param  action  ElasticLoadBalancingv2 action being performed.
- * @param  q       Pointer to this object's public SetRulePrioritiesRequest instance.
+ * Constructs a SetRulePrioritiesRequestPrivate object for ElasticLoadBalancingv2 \a action with,
+ * public implementation \a q.
  */
 SetRulePrioritiesRequestPrivate::SetRulePrioritiesRequestPrivate(
     const ElasticLoadBalancingv2Request::Action action, SetRulePrioritiesRequest * const q)
@@ -172,15 +161,10 @@ SetRulePrioritiesRequestPrivate::SetRulePrioritiesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SetRulePrioritiesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the SetRulePrioritiesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public SetRulePrioritiesRequest instance.
  */
 SetRulePrioritiesRequestPrivate::SetRulePrioritiesRequestPrivate(
     const SetRulePrioritiesRequestPrivate &other, SetRulePrioritiesRequest * const q)

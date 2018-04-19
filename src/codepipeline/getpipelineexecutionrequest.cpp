@@ -27,10 +27,9 @@ namespace CodePipeline {
 
 /*!
  * \class QtAws::CodePipeline::GetPipelineExecutionRequest
- *
  * \brief The GetPipelineExecutionRequest class provides an interface for CodePipeline GetPipelineExecution requests.
  *
- * \ingroup CodePipeline
+ * \inmodule QtAwsCodePipeline
  *
  *  <fullname>AWS CodePipeline</fullname>
  * 
@@ -200,9 +199,7 @@ namespace CodePipeline {
  */
 
 /*!
- * @brief  Constructs a new GetPipelineExecutionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetPipelineExecutionRequest::GetPipelineExecutionRequest(const GetPipelineExecutionRequest &other)
     : CodePipelineRequest(new GetPipelineExecutionRequestPrivate(*other.d_func(), this))
@@ -211,7 +208,7 @@ GetPipelineExecutionRequest::GetPipelineExecutionRequest(const GetPipelineExecut
 }
 
 /*!
- * @brief  Constructs a new GetPipelineExecutionRequest object.
+ * Constructs a GetPipelineExecutionRequest object.
  */
 GetPipelineExecutionRequest::GetPipelineExecutionRequest()
     : CodePipelineRequest(new GetPipelineExecutionRequestPrivate(CodePipelineRequest::GetPipelineExecutionAction, this))
@@ -229,14 +226,9 @@ bool GetPipelineExecutionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetPipelineExecutionResponse object.
+ * Returns a GetPipelineExecutionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetPipelineExecutionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CodePipelineClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetPipelineExecutionRequest::response(QNetworkReply * const reply) const
 {
@@ -244,20 +236,17 @@ QtAws::Core::AwsAbstractResponse * GetPipelineExecutionRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::CodePipeline::GetPipelineExecutionRequestPrivate
+ * \brief The GetPipelineExecutionRequestPrivate class provides private implementation for GetPipelineExecutionRequest.
+ * \internal
  *
- * @class  GetPipelineExecutionRequestPrivate
- *
- * @brief  Private implementation for GetPipelineExecutionRequest.
+ * \inmodule QtAwsCodePipeline
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetPipelineExecutionRequestPrivate object.
- *
- * @param  action  CodePipeline action being performed.
- * @param  q       Pointer to this object's public GetPipelineExecutionRequest instance.
+ * Constructs a GetPipelineExecutionRequestPrivate object for CodePipeline \a action with,
+ * public implementation \a q.
  */
 GetPipelineExecutionRequestPrivate::GetPipelineExecutionRequestPrivate(
     const CodePipelineRequest::Action action, GetPipelineExecutionRequest * const q)
@@ -267,15 +256,10 @@ GetPipelineExecutionRequestPrivate::GetPipelineExecutionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetPipelineExecutionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetPipelineExecutionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetPipelineExecutionRequest instance.
  */
 GetPipelineExecutionRequestPrivate::GetPipelineExecutionRequestPrivate(
     const GetPipelineExecutionRequestPrivate &other, GetPipelineExecutionRequest * const q)

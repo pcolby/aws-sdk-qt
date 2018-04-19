@@ -27,10 +27,9 @@ namespace CloudTrail {
 
 /*!
  * \class QtAws::CloudTrail::DescribeTrailsRequest
- *
  * \brief The DescribeTrailsRequest class provides an interface for CloudTrail DescribeTrails requests.
  *
- * \ingroup CloudTrail
+ * \inmodule QtAwsCloudTrail
  *
  *  <fullname>AWS CloudTrail</fullname>
  * 
@@ -60,9 +59,7 @@ namespace CloudTrail {
  */
 
 /*!
- * @brief  Constructs a new DescribeTrailsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeTrailsRequest::DescribeTrailsRequest(const DescribeTrailsRequest &other)
     : CloudTrailRequest(new DescribeTrailsRequestPrivate(*other.d_func(), this))
@@ -71,7 +68,7 @@ DescribeTrailsRequest::DescribeTrailsRequest(const DescribeTrailsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DescribeTrailsRequest object.
+ * Constructs a DescribeTrailsRequest object.
  */
 DescribeTrailsRequest::DescribeTrailsRequest()
     : CloudTrailRequest(new DescribeTrailsRequestPrivate(CloudTrailRequest::DescribeTrailsAction, this))
@@ -89,14 +86,9 @@ bool DescribeTrailsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeTrailsResponse object.
+ * Returns a DescribeTrailsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeTrailsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudTrailClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeTrailsRequest::response(QNetworkReply * const reply) const
 {
@@ -104,20 +96,17 @@ QtAws::Core::AwsAbstractResponse * DescribeTrailsRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudTrail::DescribeTrailsRequestPrivate
+ * \brief The DescribeTrailsRequestPrivate class provides private implementation for DescribeTrailsRequest.
+ * \internal
  *
- * @class  DescribeTrailsRequestPrivate
- *
- * @brief  Private implementation for DescribeTrailsRequest.
+ * \inmodule QtAwsCloudTrail
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeTrailsRequestPrivate object.
- *
- * @param  action  CloudTrail action being performed.
- * @param  q       Pointer to this object's public DescribeTrailsRequest instance.
+ * Constructs a DescribeTrailsRequestPrivate object for CloudTrail \a action with,
+ * public implementation \a q.
  */
 DescribeTrailsRequestPrivate::DescribeTrailsRequestPrivate(
     const CloudTrailRequest::Action action, DescribeTrailsRequest * const q)
@@ -127,15 +116,10 @@ DescribeTrailsRequestPrivate::DescribeTrailsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeTrailsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeTrailsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeTrailsRequest instance.
  */
 DescribeTrailsRequestPrivate::DescribeTrailsRequestPrivate(
     const DescribeTrailsRequestPrivate &other, DescribeTrailsRequest * const q)

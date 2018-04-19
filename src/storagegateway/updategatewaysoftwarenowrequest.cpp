@@ -27,10 +27,9 @@ namespace StorageGateway {
 
 /*!
  * \class QtAws::StorageGateway::UpdateGatewaySoftwareNowRequest
- *
  * \brief The UpdateGatewaySoftwareNowRequest class provides an interface for StorageGateway UpdateGatewaySoftwareNow requests.
  *
- * \ingroup StorageGateway
+ * \inmodule QtAwsStorageGateway
  *
  *  <fullname>AWS Storage Gateway Service</fullname>
  * 
@@ -106,9 +105,7 @@ namespace StorageGateway {
  */
 
 /*!
- * @brief  Constructs a new UpdateGatewaySoftwareNowRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateGatewaySoftwareNowRequest::UpdateGatewaySoftwareNowRequest(const UpdateGatewaySoftwareNowRequest &other)
     : StorageGatewayRequest(new UpdateGatewaySoftwareNowRequestPrivate(*other.d_func(), this))
@@ -117,7 +114,7 @@ UpdateGatewaySoftwareNowRequest::UpdateGatewaySoftwareNowRequest(const UpdateGat
 }
 
 /*!
- * @brief  Constructs a new UpdateGatewaySoftwareNowRequest object.
+ * Constructs a UpdateGatewaySoftwareNowRequest object.
  */
 UpdateGatewaySoftwareNowRequest::UpdateGatewaySoftwareNowRequest()
     : StorageGatewayRequest(new UpdateGatewaySoftwareNowRequestPrivate(StorageGatewayRequest::UpdateGatewaySoftwareNowAction, this))
@@ -135,14 +132,9 @@ bool UpdateGatewaySoftwareNowRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateGatewaySoftwareNowResponse object.
+ * Returns a UpdateGatewaySoftwareNowResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateGatewaySoftwareNowResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  StorageGatewayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateGatewaySoftwareNowRequest::response(QNetworkReply * const reply) const
 {
@@ -150,20 +142,17 @@ QtAws::Core::AwsAbstractResponse * UpdateGatewaySoftwareNowRequest::response(QNe
 }
 
 /*!
- * @internal
+ * \class QtAws::StorageGateway::UpdateGatewaySoftwareNowRequestPrivate
+ * \brief The UpdateGatewaySoftwareNowRequestPrivate class provides private implementation for UpdateGatewaySoftwareNowRequest.
+ * \internal
  *
- * @class  UpdateGatewaySoftwareNowRequestPrivate
- *
- * @brief  Private implementation for UpdateGatewaySoftwareNowRequest.
+ * \inmodule QtAwsStorageGateway
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateGatewaySoftwareNowRequestPrivate object.
- *
- * @param  action  StorageGateway action being performed.
- * @param  q       Pointer to this object's public UpdateGatewaySoftwareNowRequest instance.
+ * Constructs a UpdateGatewaySoftwareNowRequestPrivate object for StorageGateway \a action with,
+ * public implementation \a q.
  */
 UpdateGatewaySoftwareNowRequestPrivate::UpdateGatewaySoftwareNowRequestPrivate(
     const StorageGatewayRequest::Action action, UpdateGatewaySoftwareNowRequest * const q)
@@ -173,15 +162,10 @@ UpdateGatewaySoftwareNowRequestPrivate::UpdateGatewaySoftwareNowRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateGatewaySoftwareNowRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateGatewaySoftwareNowRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateGatewaySoftwareNowRequest instance.
  */
 UpdateGatewaySoftwareNowRequestPrivate::UpdateGatewaySoftwareNowRequestPrivate(
     const UpdateGatewaySoftwareNowRequestPrivate &other, UpdateGatewaySoftwareNowRequest * const q)

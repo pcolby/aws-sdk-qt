@@ -94,6 +94,9 @@
 /*!
  * \namespace QtAws::Rekognition
  * \brief The QtAws::Rekognition contains stuff...
+ *
+ * \inmodule QtAwsRekognition
+ *
  * @todo Move this to a separate template file.
  */
 
@@ -144,7 +147,7 @@ RekognitionClient::RekognitionClient(
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * \a  AwsEndpoint::getEndpoint()
+ * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
 RekognitionClient::RekognitionClient(
     const QUrl &endpoint,

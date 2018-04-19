@@ -27,10 +27,9 @@ namespace SFN {
 
 /*!
  * \class QtAws::SFN::DescribeExecutionRequest
- *
  * \brief The DescribeExecutionRequest class provides an interface for SFN DescribeExecution requests.
  *
- * \ingroup SFN
+ * \inmodule QtAwsSFN
  *
  *  <fullname>AWS Step Functions</fullname>
  * 
@@ -56,9 +55,7 @@ namespace SFN {
  */
 
 /*!
- * @brief  Constructs a new DescribeExecutionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeExecutionRequest::DescribeExecutionRequest(const DescribeExecutionRequest &other)
     : SFNRequest(new DescribeExecutionRequestPrivate(*other.d_func(), this))
@@ -67,7 +64,7 @@ DescribeExecutionRequest::DescribeExecutionRequest(const DescribeExecutionReques
 }
 
 /*!
- * @brief  Constructs a new DescribeExecutionRequest object.
+ * Constructs a DescribeExecutionRequest object.
  */
 DescribeExecutionRequest::DescribeExecutionRequest()
     : SFNRequest(new DescribeExecutionRequestPrivate(SFNRequest::DescribeExecutionAction, this))
@@ -85,14 +82,9 @@ bool DescribeExecutionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeExecutionResponse object.
+ * Returns a DescribeExecutionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeExecutionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SFNClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeExecutionRequest::response(QNetworkReply * const reply) const
 {
@@ -100,20 +92,17 @@ QtAws::Core::AwsAbstractResponse * DescribeExecutionRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::SFN::DescribeExecutionRequestPrivate
+ * \brief The DescribeExecutionRequestPrivate class provides private implementation for DescribeExecutionRequest.
+ * \internal
  *
- * @class  DescribeExecutionRequestPrivate
- *
- * @brief  Private implementation for DescribeExecutionRequest.
+ * \inmodule QtAwsSFN
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeExecutionRequestPrivate object.
- *
- * @param  action  SFN action being performed.
- * @param  q       Pointer to this object's public DescribeExecutionRequest instance.
+ * Constructs a DescribeExecutionRequestPrivate object for SFN \a action with,
+ * public implementation \a q.
  */
 DescribeExecutionRequestPrivate::DescribeExecutionRequestPrivate(
     const SFNRequest::Action action, DescribeExecutionRequest * const q)
@@ -123,15 +112,10 @@ DescribeExecutionRequestPrivate::DescribeExecutionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeExecutionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeExecutionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeExecutionRequest instance.
  */
 DescribeExecutionRequestPrivate::DescribeExecutionRequestPrivate(
     const DescribeExecutionRequestPrivate &other, DescribeExecutionRequest * const q)

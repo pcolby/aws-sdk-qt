@@ -27,10 +27,9 @@ namespace IoTJobsDataPlane {
 
 /*!
  * \class QtAws::IoTJobsDataPlane::StartNextPendingJobExecutionRequest
- *
  * \brief The StartNextPendingJobExecutionRequest class provides an interface for IoTJobsDataPlane StartNextPendingJobExecution requests.
  *
- * \ingroup IoTJobsDataPlane
+ * \inmodule QtAwsIoTJobsDataPlane
  *
  *  AWS IoT Jobs is a service that allows you to define a set of jobs — remote operations that are sent to and executed on
  *  one or more devices connected to AWS IoT. For example, you can define a job that instructs a set of devices to download
@@ -51,9 +50,7 @@ namespace IoTJobsDataPlane {
  */
 
 /*!
- * @brief  Constructs a new StartNextPendingJobExecutionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 StartNextPendingJobExecutionRequest::StartNextPendingJobExecutionRequest(const StartNextPendingJobExecutionRequest &other)
     : IoTJobsDataPlaneRequest(new StartNextPendingJobExecutionRequestPrivate(*other.d_func(), this))
@@ -62,7 +59,7 @@ StartNextPendingJobExecutionRequest::StartNextPendingJobExecutionRequest(const S
 }
 
 /*!
- * @brief  Constructs a new StartNextPendingJobExecutionRequest object.
+ * Constructs a StartNextPendingJobExecutionRequest object.
  */
 StartNextPendingJobExecutionRequest::StartNextPendingJobExecutionRequest()
     : IoTJobsDataPlaneRequest(new StartNextPendingJobExecutionRequestPrivate(IoTJobsDataPlaneRequest::StartNextPendingJobExecutionAction, this))
@@ -80,14 +77,9 @@ bool StartNextPendingJobExecutionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an StartNextPendingJobExecutionResponse object.
+ * Returns a StartNextPendingJobExecutionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An StartNextPendingJobExecutionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IoTJobsDataPlaneClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * StartNextPendingJobExecutionRequest::response(QNetworkReply * const reply) const
 {
@@ -95,20 +87,17 @@ QtAws::Core::AwsAbstractResponse * StartNextPendingJobExecutionRequest::response
 }
 
 /*!
- * @internal
+ * \class QtAws::IoTJobsDataPlane::StartNextPendingJobExecutionRequestPrivate
+ * \brief The StartNextPendingJobExecutionRequestPrivate class provides private implementation for StartNextPendingJobExecutionRequest.
+ * \internal
  *
- * @class  StartNextPendingJobExecutionRequestPrivate
- *
- * @brief  Private implementation for StartNextPendingJobExecutionRequest.
+ * \inmodule QtAwsIoTJobsDataPlane
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new StartNextPendingJobExecutionRequestPrivate object.
- *
- * @param  action  IoTJobsDataPlane action being performed.
- * @param  q       Pointer to this object's public StartNextPendingJobExecutionRequest instance.
+ * Constructs a StartNextPendingJobExecutionRequestPrivate object for IoTJobsDataPlane \a action with,
+ * public implementation \a q.
  */
 StartNextPendingJobExecutionRequestPrivate::StartNextPendingJobExecutionRequestPrivate(
     const IoTJobsDataPlaneRequest::Action action, StartNextPendingJobExecutionRequest * const q)
@@ -118,15 +107,10 @@ StartNextPendingJobExecutionRequestPrivate::StartNextPendingJobExecutionRequestP
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StartNextPendingJobExecutionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the StartNextPendingJobExecutionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public StartNextPendingJobExecutionRequest instance.
  */
 StartNextPendingJobExecutionRequestPrivate::StartNextPendingJobExecutionRequestPrivate(
     const StartNextPendingJobExecutionRequestPrivate &other, StartNextPendingJobExecutionRequest * const q)

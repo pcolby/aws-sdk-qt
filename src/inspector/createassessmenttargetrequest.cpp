@@ -27,10 +27,9 @@ namespace Inspector {
 
 /*!
  * \class QtAws::Inspector::CreateAssessmentTargetRequest
- *
  * \brief The CreateAssessmentTargetRequest class provides an interface for Inspector CreateAssessmentTarget requests.
  *
- * \ingroup Inspector
+ * \inmodule QtAwsInspector
  *
  *  <fullname>Amazon Inspector</fullname>
  * 
@@ -42,9 +41,7 @@ namespace Inspector {
  */
 
 /*!
- * @brief  Constructs a new CreateAssessmentTargetRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateAssessmentTargetRequest::CreateAssessmentTargetRequest(const CreateAssessmentTargetRequest &other)
     : InspectorRequest(new CreateAssessmentTargetRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ CreateAssessmentTargetRequest::CreateAssessmentTargetRequest(const CreateAssessm
 }
 
 /*!
- * @brief  Constructs a new CreateAssessmentTargetRequest object.
+ * Constructs a CreateAssessmentTargetRequest object.
  */
 CreateAssessmentTargetRequest::CreateAssessmentTargetRequest()
     : InspectorRequest(new CreateAssessmentTargetRequestPrivate(InspectorRequest::CreateAssessmentTargetAction, this))
@@ -71,14 +68,9 @@ bool CreateAssessmentTargetRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateAssessmentTargetResponse object.
+ * Returns a CreateAssessmentTargetResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateAssessmentTargetResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  InspectorClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateAssessmentTargetRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * CreateAssessmentTargetRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::Inspector::CreateAssessmentTargetRequestPrivate
+ * \brief The CreateAssessmentTargetRequestPrivate class provides private implementation for CreateAssessmentTargetRequest.
+ * \internal
  *
- * @class  CreateAssessmentTargetRequestPrivate
- *
- * @brief  Private implementation for CreateAssessmentTargetRequest.
+ * \inmodule QtAwsInspector
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateAssessmentTargetRequestPrivate object.
- *
- * @param  action  Inspector action being performed.
- * @param  q       Pointer to this object's public CreateAssessmentTargetRequest instance.
+ * Constructs a CreateAssessmentTargetRequestPrivate object for Inspector \a action with,
+ * public implementation \a q.
  */
 CreateAssessmentTargetRequestPrivate::CreateAssessmentTargetRequestPrivate(
     const InspectorRequest::Action action, CreateAssessmentTargetRequest * const q)
@@ -109,15 +98,10 @@ CreateAssessmentTargetRequestPrivate::CreateAssessmentTargetRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateAssessmentTargetRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateAssessmentTargetRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateAssessmentTargetRequest instance.
  */
 CreateAssessmentTargetRequestPrivate::CreateAssessmentTargetRequestPrivate(
     const CreateAssessmentTargetRequestPrivate &other, CreateAssessmentTargetRequest * const q)

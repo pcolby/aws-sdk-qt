@@ -27,10 +27,9 @@ namespace DeviceFarm {
 
 /*!
  * \class QtAws::DeviceFarm::ListSuitesRequest
- *
  * \brief The ListSuitesRequest class provides an interface for DeviceFarm ListSuites requests.
  *
- * \ingroup DeviceFarm
+ * \inmodule QtAwsDeviceFarm
  *
  *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
  *  phones, tablets, and other devices in the
@@ -39,9 +38,7 @@ namespace DeviceFarm {
  */
 
 /*!
- * @brief  Constructs a new ListSuitesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListSuitesRequest::ListSuitesRequest(const ListSuitesRequest &other)
     : DeviceFarmRequest(new ListSuitesRequestPrivate(*other.d_func(), this))
@@ -50,7 +47,7 @@ ListSuitesRequest::ListSuitesRequest(const ListSuitesRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ListSuitesRequest object.
+ * Constructs a ListSuitesRequest object.
  */
 ListSuitesRequest::ListSuitesRequest()
     : DeviceFarmRequest(new ListSuitesRequestPrivate(DeviceFarmRequest::ListSuitesAction, this))
@@ -68,14 +65,9 @@ bool ListSuitesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListSuitesResponse object.
+ * Returns a ListSuitesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListSuitesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DeviceFarmClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListSuitesRequest::response(QNetworkReply * const reply) const
 {
@@ -83,20 +75,17 @@ QtAws::Core::AwsAbstractResponse * ListSuitesRequest::response(QNetworkReply * c
 }
 
 /*!
- * @internal
+ * \class QtAws::DeviceFarm::ListSuitesRequestPrivate
+ * \brief The ListSuitesRequestPrivate class provides private implementation for ListSuitesRequest.
+ * \internal
  *
- * @class  ListSuitesRequestPrivate
- *
- * @brief  Private implementation for ListSuitesRequest.
+ * \inmodule QtAwsDeviceFarm
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListSuitesRequestPrivate object.
- *
- * @param  action  DeviceFarm action being performed.
- * @param  q       Pointer to this object's public ListSuitesRequest instance.
+ * Constructs a ListSuitesRequestPrivate object for DeviceFarm \a action with,
+ * public implementation \a q.
  */
 ListSuitesRequestPrivate::ListSuitesRequestPrivate(
     const DeviceFarmRequest::Action action, ListSuitesRequest * const q)
@@ -106,15 +95,10 @@ ListSuitesRequestPrivate::ListSuitesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListSuitesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListSuitesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListSuitesRequest instance.
  */
 ListSuitesRequestPrivate::ListSuitesRequestPrivate(
     const ListSuitesRequestPrivate &other, ListSuitesRequest * const q)

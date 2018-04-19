@@ -76,6 +76,9 @@
 /*!
  * \namespace QtAws::Route53Domains
  * \brief The QtAws::Route53Domains contains stuff...
+ *
+ * \inmodule QtAwsRoute53Domains
+ *
  * @todo Move this to a separate template file.
  */
 
@@ -126,7 +129,7 @@ Route53DomainsClient::Route53DomainsClient(
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * \a  AwsEndpoint::getEndpoint()
+ * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
 Route53DomainsClient::Route53DomainsClient(
     const QUrl &endpoint,

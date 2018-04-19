@@ -27,10 +27,9 @@ namespace Kinesis {
 
 /*!
  * \class QtAws::Kinesis::StopStreamEncryptionRequest
- *
  * \brief The StopStreamEncryptionRequest class provides an interface for Kinesis StopStreamEncryption requests.
  *
- * \ingroup Kinesis
+ * \inmodule QtAwsKinesis
  *
  *  <fullname>Amazon Kinesis Data Streams Service API Reference</fullname>
  * 
@@ -40,9 +39,7 @@ namespace Kinesis {
  */
 
 /*!
- * @brief  Constructs a new StopStreamEncryptionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 StopStreamEncryptionRequest::StopStreamEncryptionRequest(const StopStreamEncryptionRequest &other)
     : KinesisRequest(new StopStreamEncryptionRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ StopStreamEncryptionRequest::StopStreamEncryptionRequest(const StopStreamEncrypt
 }
 
 /*!
- * @brief  Constructs a new StopStreamEncryptionRequest object.
+ * Constructs a StopStreamEncryptionRequest object.
  */
 StopStreamEncryptionRequest::StopStreamEncryptionRequest()
     : KinesisRequest(new StopStreamEncryptionRequestPrivate(KinesisRequest::StopStreamEncryptionAction, this))
@@ -69,14 +66,9 @@ bool StopStreamEncryptionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an StopStreamEncryptionResponse object.
+ * Returns a StopStreamEncryptionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An StopStreamEncryptionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  KinesisClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * StopStreamEncryptionRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * StopStreamEncryptionRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::Kinesis::StopStreamEncryptionRequestPrivate
+ * \brief The StopStreamEncryptionRequestPrivate class provides private implementation for StopStreamEncryptionRequest.
+ * \internal
  *
- * @class  StopStreamEncryptionRequestPrivate
- *
- * @brief  Private implementation for StopStreamEncryptionRequest.
+ * \inmodule QtAwsKinesis
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new StopStreamEncryptionRequestPrivate object.
- *
- * @param  action  Kinesis action being performed.
- * @param  q       Pointer to this object's public StopStreamEncryptionRequest instance.
+ * Constructs a StopStreamEncryptionRequestPrivate object for Kinesis \a action with,
+ * public implementation \a q.
  */
 StopStreamEncryptionRequestPrivate::StopStreamEncryptionRequestPrivate(
     const KinesisRequest::Action action, StopStreamEncryptionRequest * const q)
@@ -107,15 +96,10 @@ StopStreamEncryptionRequestPrivate::StopStreamEncryptionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StopStreamEncryptionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the StopStreamEncryptionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public StopStreamEncryptionRequest instance.
  */
 StopStreamEncryptionRequestPrivate::StopStreamEncryptionRequestPrivate(
     const StopStreamEncryptionRequestPrivate &other, StopStreamEncryptionRequest * const q)

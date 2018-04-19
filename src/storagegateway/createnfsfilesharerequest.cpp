@@ -27,10 +27,9 @@ namespace StorageGateway {
 
 /*!
  * \class QtAws::StorageGateway::CreateNFSFileShareRequest
- *
  * \brief The CreateNFSFileShareRequest class provides an interface for StorageGateway CreateNFSFileShare requests.
  *
- * \ingroup StorageGateway
+ * \inmodule QtAwsStorageGateway
  *
  *  <fullname>AWS Storage Gateway Service</fullname>
  * 
@@ -106,9 +105,7 @@ namespace StorageGateway {
  */
 
 /*!
- * @brief  Constructs a new CreateNFSFileShareRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateNFSFileShareRequest::CreateNFSFileShareRequest(const CreateNFSFileShareRequest &other)
     : StorageGatewayRequest(new CreateNFSFileShareRequestPrivate(*other.d_func(), this))
@@ -117,7 +114,7 @@ CreateNFSFileShareRequest::CreateNFSFileShareRequest(const CreateNFSFileShareReq
 }
 
 /*!
- * @brief  Constructs a new CreateNFSFileShareRequest object.
+ * Constructs a CreateNFSFileShareRequest object.
  */
 CreateNFSFileShareRequest::CreateNFSFileShareRequest()
     : StorageGatewayRequest(new CreateNFSFileShareRequestPrivate(StorageGatewayRequest::CreateNFSFileShareAction, this))
@@ -135,14 +132,9 @@ bool CreateNFSFileShareRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateNFSFileShareResponse object.
+ * Returns a CreateNFSFileShareResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateNFSFileShareResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  StorageGatewayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateNFSFileShareRequest::response(QNetworkReply * const reply) const
 {
@@ -150,20 +142,17 @@ QtAws::Core::AwsAbstractResponse * CreateNFSFileShareRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::StorageGateway::CreateNFSFileShareRequestPrivate
+ * \brief The CreateNFSFileShareRequestPrivate class provides private implementation for CreateNFSFileShareRequest.
+ * \internal
  *
- * @class  CreateNFSFileShareRequestPrivate
- *
- * @brief  Private implementation for CreateNFSFileShareRequest.
+ * \inmodule QtAwsStorageGateway
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateNFSFileShareRequestPrivate object.
- *
- * @param  action  StorageGateway action being performed.
- * @param  q       Pointer to this object's public CreateNFSFileShareRequest instance.
+ * Constructs a CreateNFSFileShareRequestPrivate object for StorageGateway \a action with,
+ * public implementation \a q.
  */
 CreateNFSFileShareRequestPrivate::CreateNFSFileShareRequestPrivate(
     const StorageGatewayRequest::Action action, CreateNFSFileShareRequest * const q)
@@ -173,15 +162,10 @@ CreateNFSFileShareRequestPrivate::CreateNFSFileShareRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateNFSFileShareRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateNFSFileShareRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateNFSFileShareRequest instance.
  */
 CreateNFSFileShareRequestPrivate::CreateNFSFileShareRequestPrivate(
     const CreateNFSFileShareRequestPrivate &other, CreateNFSFileShareRequest * const q)

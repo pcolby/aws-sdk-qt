@@ -27,10 +27,9 @@ namespace DynamoDBStreams {
 
 /*!
  * \class QtAws::DynamoDBStreams::GetRecordsRequest
- *
  * \brief The GetRecordsRequest class provides an interface for DynamoDBStreams GetRecords requests.
  *
- * \ingroup DynamoDBStreams
+ * \inmodule QtAwsDynamoDBStreams
  *
  *  <fullname>Amazon DynamoDB Streams</fullname>
  * 
@@ -70,9 +69,7 @@ namespace DynamoDBStreams {
  */
 
 /*!
- * @brief  Constructs a new GetRecordsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetRecordsRequest::GetRecordsRequest(const GetRecordsRequest &other)
     : DynamoDBStreamsRequest(new GetRecordsRequestPrivate(*other.d_func(), this))
@@ -81,7 +78,7 @@ GetRecordsRequest::GetRecordsRequest(const GetRecordsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetRecordsRequest object.
+ * Constructs a GetRecordsRequest object.
  */
 GetRecordsRequest::GetRecordsRequest()
     : DynamoDBStreamsRequest(new GetRecordsRequestPrivate(DynamoDBStreamsRequest::GetRecordsAction, this))
@@ -99,14 +96,9 @@ bool GetRecordsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetRecordsResponse object.
+ * Returns a GetRecordsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetRecordsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DynamoDBStreamsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetRecordsRequest::response(QNetworkReply * const reply) const
 {
@@ -114,20 +106,17 @@ QtAws::Core::AwsAbstractResponse * GetRecordsRequest::response(QNetworkReply * c
 }
 
 /*!
- * @internal
+ * \class QtAws::DynamoDBStreams::GetRecordsRequestPrivate
+ * \brief The GetRecordsRequestPrivate class provides private implementation for GetRecordsRequest.
+ * \internal
  *
- * @class  GetRecordsRequestPrivate
- *
- * @brief  Private implementation for GetRecordsRequest.
+ * \inmodule QtAwsDynamoDBStreams
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetRecordsRequestPrivate object.
- *
- * @param  action  DynamoDBStreams action being performed.
- * @param  q       Pointer to this object's public GetRecordsRequest instance.
+ * Constructs a GetRecordsRequestPrivate object for DynamoDBStreams \a action with,
+ * public implementation \a q.
  */
 GetRecordsRequestPrivate::GetRecordsRequestPrivate(
     const DynamoDBStreamsRequest::Action action, GetRecordsRequest * const q)
@@ -137,15 +126,10 @@ GetRecordsRequestPrivate::GetRecordsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetRecordsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetRecordsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetRecordsRequest instance.
  */
 GetRecordsRequestPrivate::GetRecordsRequestPrivate(
     const GetRecordsRequestPrivate &other, GetRecordsRequest * const q)

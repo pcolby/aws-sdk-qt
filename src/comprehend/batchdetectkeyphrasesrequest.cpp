@@ -27,10 +27,9 @@ namespace Comprehend {
 
 /*!
  * \class QtAws::Comprehend::BatchDetectKeyPhrasesRequest
- *
  * \brief The BatchDetectKeyPhrasesRequest class provides an interface for Comprehend BatchDetectKeyPhrases requests.
  *
- * \ingroup Comprehend
+ * \inmodule QtAwsComprehend
  *
  *  Amazon Comprehend is an AWS service for gaining insight into the content of documents. Use these actions to determine
  *  the topics contained in your documents, the topics they discuss, the predominant sentiment expressed in them, the
@@ -40,9 +39,7 @@ namespace Comprehend {
  */
 
 /*!
- * @brief  Constructs a new BatchDetectKeyPhrasesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 BatchDetectKeyPhrasesRequest::BatchDetectKeyPhrasesRequest(const BatchDetectKeyPhrasesRequest &other)
     : ComprehendRequest(new BatchDetectKeyPhrasesRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ BatchDetectKeyPhrasesRequest::BatchDetectKeyPhrasesRequest(const BatchDetectKeyP
 }
 
 /*!
- * @brief  Constructs a new BatchDetectKeyPhrasesRequest object.
+ * Constructs a BatchDetectKeyPhrasesRequest object.
  */
 BatchDetectKeyPhrasesRequest::BatchDetectKeyPhrasesRequest()
     : ComprehendRequest(new BatchDetectKeyPhrasesRequestPrivate(ComprehendRequest::BatchDetectKeyPhrasesAction, this))
@@ -69,14 +66,9 @@ bool BatchDetectKeyPhrasesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an BatchDetectKeyPhrasesResponse object.
+ * Returns a BatchDetectKeyPhrasesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An BatchDetectKeyPhrasesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ComprehendClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * BatchDetectKeyPhrasesRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * BatchDetectKeyPhrasesRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::Comprehend::BatchDetectKeyPhrasesRequestPrivate
+ * \brief The BatchDetectKeyPhrasesRequestPrivate class provides private implementation for BatchDetectKeyPhrasesRequest.
+ * \internal
  *
- * @class  BatchDetectKeyPhrasesRequestPrivate
- *
- * @brief  Private implementation for BatchDetectKeyPhrasesRequest.
+ * \inmodule QtAwsComprehend
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new BatchDetectKeyPhrasesRequestPrivate object.
- *
- * @param  action  Comprehend action being performed.
- * @param  q       Pointer to this object's public BatchDetectKeyPhrasesRequest instance.
+ * Constructs a BatchDetectKeyPhrasesRequestPrivate object for Comprehend \a action with,
+ * public implementation \a q.
  */
 BatchDetectKeyPhrasesRequestPrivate::BatchDetectKeyPhrasesRequestPrivate(
     const ComprehendRequest::Action action, BatchDetectKeyPhrasesRequest * const q)
@@ -107,15 +96,10 @@ BatchDetectKeyPhrasesRequestPrivate::BatchDetectKeyPhrasesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new BatchDetectKeyPhrasesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the BatchDetectKeyPhrasesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public BatchDetectKeyPhrasesRequest instance.
  */
 BatchDetectKeyPhrasesRequestPrivate::BatchDetectKeyPhrasesRequestPrivate(
     const BatchDetectKeyPhrasesRequestPrivate &other, BatchDetectKeyPhrasesRequest * const q)

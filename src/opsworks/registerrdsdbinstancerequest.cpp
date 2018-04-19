@@ -27,10 +27,9 @@ namespace OpsWorks {
 
 /*!
  * \class QtAws::OpsWorks::RegisterRdsDbInstanceRequest
- *
  * \brief The RegisterRdsDbInstanceRequest class provides an interface for OpsWorks RegisterRdsDbInstance requests.
  *
- * \ingroup OpsWorks
+ * \inmodule QtAwsOpsWorks
  *
  *  <fullname>AWS OpsWorks</fullname>
  * 
@@ -143,9 +142,7 @@ namespace OpsWorks {
  */
 
 /*!
- * @brief  Constructs a new RegisterRdsDbInstanceRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 RegisterRdsDbInstanceRequest::RegisterRdsDbInstanceRequest(const RegisterRdsDbInstanceRequest &other)
     : OpsWorksRequest(new RegisterRdsDbInstanceRequestPrivate(*other.d_func(), this))
@@ -154,7 +151,7 @@ RegisterRdsDbInstanceRequest::RegisterRdsDbInstanceRequest(const RegisterRdsDbIn
 }
 
 /*!
- * @brief  Constructs a new RegisterRdsDbInstanceRequest object.
+ * Constructs a RegisterRdsDbInstanceRequest object.
  */
 RegisterRdsDbInstanceRequest::RegisterRdsDbInstanceRequest()
     : OpsWorksRequest(new RegisterRdsDbInstanceRequestPrivate(OpsWorksRequest::RegisterRdsDbInstanceAction, this))
@@ -172,14 +169,9 @@ bool RegisterRdsDbInstanceRequest::isValid() const
 
 
 /*!
- * @brief  Construct an RegisterRdsDbInstanceResponse object.
+ * Returns a RegisterRdsDbInstanceResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An RegisterRdsDbInstanceResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  OpsWorksClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * RegisterRdsDbInstanceRequest::response(QNetworkReply * const reply) const
 {
@@ -187,20 +179,17 @@ QtAws::Core::AwsAbstractResponse * RegisterRdsDbInstanceRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::OpsWorks::RegisterRdsDbInstanceRequestPrivate
+ * \brief The RegisterRdsDbInstanceRequestPrivate class provides private implementation for RegisterRdsDbInstanceRequest.
+ * \internal
  *
- * @class  RegisterRdsDbInstanceRequestPrivate
- *
- * @brief  Private implementation for RegisterRdsDbInstanceRequest.
+ * \inmodule QtAwsOpsWorks
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new RegisterRdsDbInstanceRequestPrivate object.
- *
- * @param  action  OpsWorks action being performed.
- * @param  q       Pointer to this object's public RegisterRdsDbInstanceRequest instance.
+ * Constructs a RegisterRdsDbInstanceRequestPrivate object for OpsWorks \a action with,
+ * public implementation \a q.
  */
 RegisterRdsDbInstanceRequestPrivate::RegisterRdsDbInstanceRequestPrivate(
     const OpsWorksRequest::Action action, RegisterRdsDbInstanceRequest * const q)
@@ -210,15 +199,10 @@ RegisterRdsDbInstanceRequestPrivate::RegisterRdsDbInstanceRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RegisterRdsDbInstanceRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the RegisterRdsDbInstanceRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public RegisterRdsDbInstanceRequest instance.
  */
 RegisterRdsDbInstanceRequestPrivate::RegisterRdsDbInstanceRequestPrivate(
     const RegisterRdsDbInstanceRequestPrivate &other, RegisterRdsDbInstanceRequest * const q)

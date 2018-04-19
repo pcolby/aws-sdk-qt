@@ -27,19 +27,16 @@ namespace SageMaker {
 
 /*!
  * \class QtAws::SageMaker::DescribeNotebookInstanceLifecycleConfigRequest
- *
  * \brief The DescribeNotebookInstanceLifecycleConfigRequest class provides an interface for SageMaker DescribeNotebookInstanceLifecycleConfig requests.
  *
- * \ingroup SageMaker
+ * \inmodule QtAwsSageMaker
  *
  *
  * \sa SageMakerClient::describeNotebookInstanceLifecycleConfig
  */
 
 /*!
- * @brief  Constructs a new DescribeNotebookInstanceLifecycleConfigRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeNotebookInstanceLifecycleConfigRequest::DescribeNotebookInstanceLifecycleConfigRequest(const DescribeNotebookInstanceLifecycleConfigRequest &other)
     : SageMakerRequest(new DescribeNotebookInstanceLifecycleConfigRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ DescribeNotebookInstanceLifecycleConfigRequest::DescribeNotebookInstanceLifecycl
 }
 
 /*!
- * @brief  Constructs a new DescribeNotebookInstanceLifecycleConfigRequest object.
+ * Constructs a DescribeNotebookInstanceLifecycleConfigRequest object.
  */
 DescribeNotebookInstanceLifecycleConfigRequest::DescribeNotebookInstanceLifecycleConfigRequest()
     : SageMakerRequest(new DescribeNotebookInstanceLifecycleConfigRequestPrivate(SageMakerRequest::DescribeNotebookInstanceLifecycleConfigAction, this))
@@ -66,14 +63,9 @@ bool DescribeNotebookInstanceLifecycleConfigRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeNotebookInstanceLifecycleConfigResponse object.
+ * Returns a DescribeNotebookInstanceLifecycleConfigResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeNotebookInstanceLifecycleConfigResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SageMakerClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeNotebookInstanceLifecycleConfigRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * DescribeNotebookInstanceLifecycleConfigReques
 }
 
 /*!
- * @internal
+ * \class QtAws::SageMaker::DescribeNotebookInstanceLifecycleConfigRequestPrivate
+ * \brief The DescribeNotebookInstanceLifecycleConfigRequestPrivate class provides private implementation for DescribeNotebookInstanceLifecycleConfigRequest.
+ * \internal
  *
- * @class  DescribeNotebookInstanceLifecycleConfigRequestPrivate
- *
- * @brief  Private implementation for DescribeNotebookInstanceLifecycleConfigRequest.
+ * \inmodule QtAwsSageMaker
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeNotebookInstanceLifecycleConfigRequestPrivate object.
- *
- * @param  action  SageMaker action being performed.
- * @param  q       Pointer to this object's public DescribeNotebookInstanceLifecycleConfigRequest instance.
+ * Constructs a DescribeNotebookInstanceLifecycleConfigRequestPrivate object for SageMaker \a action with,
+ * public implementation \a q.
  */
 DescribeNotebookInstanceLifecycleConfigRequestPrivate::DescribeNotebookInstanceLifecycleConfigRequestPrivate(
     const SageMakerRequest::Action action, DescribeNotebookInstanceLifecycleConfigRequest * const q)
@@ -104,15 +93,10 @@ DescribeNotebookInstanceLifecycleConfigRequestPrivate::DescribeNotebookInstanceL
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeNotebookInstanceLifecycleConfigRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeNotebookInstanceLifecycleConfigRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeNotebookInstanceLifecycleConfigRequest instance.
  */
 DescribeNotebookInstanceLifecycleConfigRequestPrivate::DescribeNotebookInstanceLifecycleConfigRequestPrivate(
     const DescribeNotebookInstanceLifecycleConfigRequestPrivate &other, DescribeNotebookInstanceLifecycleConfigRequest * const q)

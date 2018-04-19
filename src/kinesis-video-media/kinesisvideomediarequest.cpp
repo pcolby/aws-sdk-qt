@@ -25,16 +25,22 @@ namespace KinesisVideoMedia {
 
 /*!
  * \class QtAws::KinesisVideoMedia::KinesisVideoMediaRequest
- *
  * \brief The KinesisVideoMediaRequest class provides an interface for KinesisVideoMedia requests.
  *
- * \ingroup KinesisVideoMedia
+ * \inmodule QtAwsKinesisVideoMedia
  */
 
 /*!
- * @brief  Constructs a new KinesisVideoMediaRequest object.
+ * \enum KinesisVideoMediaRequest::Action
  *
- * @param  action  The KinesisVideoMedia action to request.
+ * This enum describes the actions that can be performed as KinesisVideoMedia
+ * requests.
+ *
+ * \value GetMediaAction KinesisVideoMedia GetMedia action.
+ */
+
+/*!
+ * Constructs a[n] KinesisVideoMediaRequest object for KinesisVideoMedia \a action.
  */
 KinesisVideoMediaRequest::KinesisVideoMediaRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new KinesisVideoMediaRequestPrivate(action, this))
@@ -43,9 +49,7 @@ KinesisVideoMediaRequest::KinesisVideoMediaRequest(const Action action)
 }
 
 /*!
- * @brief  Constructs a new KinesisVideoMediaRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 KinesisVideoMediaRequest::KinesisVideoMediaRequest(const KinesisVideoMediaRequest &other)
     : QtAws::Core::AwsAbstractRequest(new KinesisVideoMediaRequestPrivate(*other.d_func(), this))
@@ -54,13 +58,7 @@ KinesisVideoMediaRequest::KinesisVideoMediaRequest(const KinesisVideoMediaReques
 }
 
 /*!
- * @brief  Assignment operator.
- *
- * Assigns \a other to \c this.
- *
- * @param  other  Instance to copy.
- *
- * @return  A reference to \c this.
+ * Sets the KinesisVideoMediaRequest object to be equal to \a other.
  */
 KinesisVideoMediaRequest& KinesisVideoMediaRequest::operator=(const KinesisVideoMediaRequest &other)
 {
@@ -72,14 +70,10 @@ KinesisVideoMediaRequest& KinesisVideoMediaRequest::operator=(const KinesisVideo
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new KinesisVideoMediaRequest object.
+ * Constructs aa KinesisVideoMediaRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from KinesisVideoMediaRequestPrivate.
- *
- * @param  d  Pointer to private data (aka D-Pointer).
  */
 KinesisVideoMediaRequest::KinesisVideoMediaRequest(KinesisVideoMediaRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
@@ -87,7 +81,7 @@ KinesisVideoMediaRequest::KinesisVideoMediaRequest(KinesisVideoMediaRequestPriva
 }
 
 /*!
- * \brief Returns the KinesisVideoMedia action to be performed by this request.
+ * Returns the KinesisVideoMedia action to be performed by this request.
  */
 KinesisVideoMediaRequest::Action KinesisVideoMediaRequest::action() const
 {
@@ -96,7 +90,7 @@ KinesisVideoMediaRequest::Action KinesisVideoMediaRequest::action() const
 }
 
 /*!
- * \brief Returns the name of the KinesisVideoMedia action to be performed by this request.
+ * Returns the name of the KinesisVideoMedia action to be performed by this request.
  */
 QString KinesisVideoMediaRequest::actionString() const
 {
@@ -104,7 +98,7 @@ QString KinesisVideoMediaRequest::actionString() const
 }
 
 /*!
- * \brief Returns the KinesisVideoMedia API version implemented by this request.
+ * Returns the KinesisVideoMedia API version implemented by this request.
  */
 QString KinesisVideoMediaRequest::apiVersion() const
 {
@@ -113,7 +107,7 @@ QString KinesisVideoMediaRequest::apiVersion() const
 }
 
 /*!
- * @brief Set the KinesisVideoMedia action to be performed by this request to \a action.
+ * Sets the KinesisVideoMedia action to be performed by this request to \a action.
  */
 void KinesisVideoMediaRequest::setAction(const Action action)
 {
@@ -122,7 +116,7 @@ void KinesisVideoMediaRequest::setAction(const Action action)
 }
 
 /*!
- * Set the KinesisVideoMedia API version to include in this request to \a version.
+ * Sets the KinesisVideoMedia API version to include in this request to \a version.
  */
 void KinesisVideoMediaRequest::setApiVersion(const QString &version)
 {
@@ -131,7 +125,7 @@ void KinesisVideoMediaRequest::setApiVersion(const QString &version)
 }
 
 /*!
- * \brief Returns \c true if this request is the same as \a other.
+ * Returns \c true if this request is equal to \a other; \c false otherwise.
  *
  * Note, most derived *Request classes do not need to provider their own
  * implementations of this function, since most such request classes rely on
@@ -146,8 +140,8 @@ bool KinesisVideoMediaRequest::operator==(const KinesisVideoMediaRequest &other)
             (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
-/*!
- * @brief  Check if \a queueName is a valid KinesisVideoMedia queue name.
+/*
+ * Returns \c tue if \a queueName is a valid KinesisVideoMedia queue name.
  *
  * @par From KinesisVideoMedia FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
@@ -166,9 +160,8 @@ bool KinesisVideoMediaRequest::operator==(const KinesisVideoMediaRequest &other)
 }*/
 
 /*!
- * \brief Removes the a \a name parameter from this request.
- *
- * Returns the count of paramters removed (typically \c 0 or \c 1).
+ * Removes the a \a name parameter from the request, then returns the number of
+ * paramters removed (typically \c 0 or \c 1).
  */
 int KinesisVideoMediaRequest::clearParameter(const QString &name)
 {
@@ -177,7 +170,7 @@ int KinesisVideoMediaRequest::clearParameter(const QString &name)
 }
 
 /*!
- * \brief Removes all parameters from this request.
+ * Removes all parameters from the request.
  */
 void KinesisVideoMediaRequest::clearParameters()
 {
@@ -186,7 +179,7 @@ void KinesisVideoMediaRequest::clearParameters()
 }
 
 /*!
- * \brief Returns the value of the \n name pararemter if set, otherwise \a defaultValue.
+ * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
 QVariant KinesisVideoMediaRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
@@ -195,7 +188,7 @@ QVariant KinesisVideoMediaRequest::parameter(const QString &name, const QVariant
 }
 
 /*!
- * \brief Returns a map of parameters included in this request.
+ * Returns the parameters included in this request.
  */
 const QVariantMap &KinesisVideoMediaRequest::parameters() const
 {
@@ -204,7 +197,7 @@ const QVariantMap &KinesisVideoMediaRequest::parameters() const
 }
 
 /*!
- * \brief Sets the \a name parameter to \a value.
+ * Sets the \a name parameter to \a value.
  */
 void KinesisVideoMediaRequest::setParameter(const QString &name, const QVariant &value)
 {
@@ -213,9 +206,8 @@ void KinesisVideoMediaRequest::setParameter(const QString &name, const QVariant 
 }
 
 /*!
- * \brief Sets the map of paramters for this request to \a parameters.
- *
- * Any request parameters set previously will be discarded.
+ * Sets the paramters for this request to \a parameters. Any request parameters
+ * set previously will be discarded.
  */
 void KinesisVideoMediaRequest::setParameters(const QVariantMap &parameters)
 {
@@ -224,11 +216,12 @@ void KinesisVideoMediaRequest::setParameters(const QVariantMap &parameters)
 }
 
 /*!
- * \brief Returns a network request for this KinesisVideoMedia request using the given \a endpoint.
+ * Returns a network request for the KinesisVideoMedia request using the given
+ * \a endpoint.
  *
- * This KinesisVideoMedia implementation builds request URLs by combining the common query
- * parameters (such as Action and Version), with any that have been added (via
- * setParameter) by child classes.
+ * This KinesisVideoMedia implementation builds request URLs by combining the
+ * common query parameters (such as Action and Version), with any that have
+ * been added (via setParameter) by child classes.
  */
 QNetworkRequest KinesisVideoMediaRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -239,17 +232,16 @@ QNetworkRequest KinesisVideoMediaRequest::unsignedRequest(const QUrl &endpoint) 
 }
 
 /*!
+ * \class QtAws::KinesisVideoMedia::KinesisVideoMediaRequestPrivate
+ * \brief The KinesisVideoMediaRequestPrivate class provides private implementation for KinesisVideoMediaRequest.
  * \internal
  *
- * \class  KinesisVideoMediaRequestPrivate
- *
- * \brief  Private implementation for KinesisVideoMediaRequest.
+ * \inmodule QtAwsKinesisVideoMedia
  */
 
 /*!
- * \internal
- *
- * \brief Constructs a new KinesisVideoMediaRequestPrivate object.
+ * Constructs a KinesisVideoMediaRequestPrivate object for KinesisVideoMedia \a action with,
+ * public implementation \a q.
  */
 KinesisVideoMediaRequestPrivate::KinesisVideoMediaRequestPrivate(const KinesisVideoMediaRequest::Action action, KinesisVideoMediaRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
@@ -258,9 +250,7 @@ KinesisVideoMediaRequestPrivate::KinesisVideoMediaRequestPrivate(const KinesisVi
 }
 
 /*!
- * \internal
- *
- * \brief Constructs a new KinesisVideoMediaRequestPrivate object, copying an existing one.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
@@ -276,15 +266,12 @@ KinesisVideoMediaRequestPrivate::KinesisVideoMediaRequestPrivate(const KinesisVi
 }
 
 /*!
- * \internal
- *
- * \brief Returns a string representing \a action.
+ * Returns a string represention of \a action, or a null string if \a action is
+ * invalid.
  *
  * This function converts KinesisVideoMediaRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the KinesisVideoMedia service's Action
  * query parameters.
- *
- * @return A string representing \a action, or a null string if \a action is invalid.
  */
 QString KinesisVideoMediaRequestPrivate::toString(const KinesisVideoMediaRequest::Action &action)
 {

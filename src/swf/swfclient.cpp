@@ -90,6 +90,9 @@
 /*!
  * \namespace QtAws::SWF
  * \brief The QtAws::SWF contains stuff...
+ *
+ * \inmodule QtAwsSWF
+ *
  * @todo Move this to a separate template file.
  */
 
@@ -155,7 +158,7 @@ SwfClient::SwfClient(
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * \a  AwsEndpoint::getEndpoint()
+ * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
 SwfClient::SwfClient(
     const QUrl &endpoint,

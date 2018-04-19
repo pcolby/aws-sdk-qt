@@ -27,10 +27,9 @@ namespace SES {
 
 /*!
  * \class QtAws::SES::SetIdentityDkimEnabledRequest
- *
  * \brief The SetIdentityDkimEnabledRequest class provides an interface for SES SetIdentityDkimEnabled requests.
  *
- * \ingroup SES
+ * \inmodule QtAwsSES
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -48,9 +47,7 @@ namespace SES {
  */
 
 /*!
- * @brief  Constructs a new SetIdentityDkimEnabledRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 SetIdentityDkimEnabledRequest::SetIdentityDkimEnabledRequest(const SetIdentityDkimEnabledRequest &other)
     : SESRequest(new SetIdentityDkimEnabledRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ SetIdentityDkimEnabledRequest::SetIdentityDkimEnabledRequest(const SetIdentityDk
 }
 
 /*!
- * @brief  Constructs a new SetIdentityDkimEnabledRequest object.
+ * Constructs a SetIdentityDkimEnabledRequest object.
  */
 SetIdentityDkimEnabledRequest::SetIdentityDkimEnabledRequest()
     : SESRequest(new SetIdentityDkimEnabledRequestPrivate(SESRequest::SetIdentityDkimEnabledAction, this))
@@ -77,14 +74,9 @@ bool SetIdentityDkimEnabledRequest::isValid() const
 
 
 /*!
- * @brief  Construct an SetIdentityDkimEnabledResponse object.
+ * Returns a SetIdentityDkimEnabledResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An SetIdentityDkimEnabledResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SESClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * SetIdentityDkimEnabledRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * SetIdentityDkimEnabledRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::SES::SetIdentityDkimEnabledRequestPrivate
+ * \brief The SetIdentityDkimEnabledRequestPrivate class provides private implementation for SetIdentityDkimEnabledRequest.
+ * \internal
  *
- * @class  SetIdentityDkimEnabledRequestPrivate
- *
- * @brief  Private implementation for SetIdentityDkimEnabledRequest.
+ * \inmodule QtAwsSES
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new SetIdentityDkimEnabledRequestPrivate object.
- *
- * @param  action  SES action being performed.
- * @param  q       Pointer to this object's public SetIdentityDkimEnabledRequest instance.
+ * Constructs a SetIdentityDkimEnabledRequestPrivate object for SES \a action with,
+ * public implementation \a q.
  */
 SetIdentityDkimEnabledRequestPrivate::SetIdentityDkimEnabledRequestPrivate(
     const SESRequest::Action action, SetIdentityDkimEnabledRequest * const q)
@@ -115,15 +104,10 @@ SetIdentityDkimEnabledRequestPrivate::SetIdentityDkimEnabledRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SetIdentityDkimEnabledRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the SetIdentityDkimEnabledRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public SetIdentityDkimEnabledRequest instance.
  */
 SetIdentityDkimEnabledRequestPrivate::SetIdentityDkimEnabledRequestPrivate(
     const SetIdentityDkimEnabledRequestPrivate &other, SetIdentityDkimEnabledRequest * const q)

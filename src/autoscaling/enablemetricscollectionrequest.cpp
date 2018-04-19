@@ -27,10 +27,9 @@ namespace AutoScaling {
 
 /*!
  * \class QtAws::AutoScaling::EnableMetricsCollectionRequest
- *
  * \brief The EnableMetricsCollectionRequest class provides an interface for AutoScaling EnableMetricsCollection requests.
  *
- * \ingroup AutoScaling
+ * \inmodule QtAwsAutoScaling
  *
  *  <fullname>Amazon EC2 Auto Scaling</fullname>
  * 
@@ -42,9 +41,7 @@ namespace AutoScaling {
  */
 
 /*!
- * @brief  Constructs a new EnableMetricsCollectionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 EnableMetricsCollectionRequest::EnableMetricsCollectionRequest(const EnableMetricsCollectionRequest &other)
     : AutoScalingRequest(new EnableMetricsCollectionRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ EnableMetricsCollectionRequest::EnableMetricsCollectionRequest(const EnableMetri
 }
 
 /*!
- * @brief  Constructs a new EnableMetricsCollectionRequest object.
+ * Constructs a EnableMetricsCollectionRequest object.
  */
 EnableMetricsCollectionRequest::EnableMetricsCollectionRequest()
     : AutoScalingRequest(new EnableMetricsCollectionRequestPrivate(AutoScalingRequest::EnableMetricsCollectionAction, this))
@@ -71,14 +68,9 @@ bool EnableMetricsCollectionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an EnableMetricsCollectionResponse object.
+ * Returns a EnableMetricsCollectionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An EnableMetricsCollectionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AutoScalingClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * EnableMetricsCollectionRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * EnableMetricsCollectionRequest::response(QNet
 }
 
 /*!
- * @internal
+ * \class QtAws::AutoScaling::EnableMetricsCollectionRequestPrivate
+ * \brief The EnableMetricsCollectionRequestPrivate class provides private implementation for EnableMetricsCollectionRequest.
+ * \internal
  *
- * @class  EnableMetricsCollectionRequestPrivate
- *
- * @brief  Private implementation for EnableMetricsCollectionRequest.
+ * \inmodule QtAwsAutoScaling
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new EnableMetricsCollectionRequestPrivate object.
- *
- * @param  action  AutoScaling action being performed.
- * @param  q       Pointer to this object's public EnableMetricsCollectionRequest instance.
+ * Constructs a EnableMetricsCollectionRequestPrivate object for AutoScaling \a action with,
+ * public implementation \a q.
  */
 EnableMetricsCollectionRequestPrivate::EnableMetricsCollectionRequestPrivate(
     const AutoScalingRequest::Action action, EnableMetricsCollectionRequest * const q)
@@ -109,15 +98,10 @@ EnableMetricsCollectionRequestPrivate::EnableMetricsCollectionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new EnableMetricsCollectionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the EnableMetricsCollectionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public EnableMetricsCollectionRequest instance.
  */
 EnableMetricsCollectionRequestPrivate::EnableMetricsCollectionRequestPrivate(
     const EnableMetricsCollectionRequestPrivate &other, EnableMetricsCollectionRequest * const q)

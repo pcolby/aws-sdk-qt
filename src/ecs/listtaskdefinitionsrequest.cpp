@@ -27,10 +27,9 @@ namespace ECS {
 
 /*!
  * \class QtAws::ECS::ListTaskDefinitionsRequest
- *
  * \brief The ListTaskDefinitionsRequest class provides an interface for ECS ListTaskDefinitions requests.
  *
- * \ingroup ECS
+ * \inmodule QtAwsECS
  *
  *  Amazon Elastic Container Service (Amazon ECS) is a highly scalable, fast, container management service that makes it
  *  easy to run, stop, and manage Docker containers on a cluster. You can host your cluster on a serverless infrastructure
@@ -54,9 +53,7 @@ namespace ECS {
  */
 
 /*!
- * @brief  Constructs a new ListTaskDefinitionsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListTaskDefinitionsRequest::ListTaskDefinitionsRequest(const ListTaskDefinitionsRequest &other)
     : ECSRequest(new ListTaskDefinitionsRequestPrivate(*other.d_func(), this))
@@ -65,7 +62,7 @@ ListTaskDefinitionsRequest::ListTaskDefinitionsRequest(const ListTaskDefinitions
 }
 
 /*!
- * @brief  Constructs a new ListTaskDefinitionsRequest object.
+ * Constructs a ListTaskDefinitionsRequest object.
  */
 ListTaskDefinitionsRequest::ListTaskDefinitionsRequest()
     : ECSRequest(new ListTaskDefinitionsRequestPrivate(ECSRequest::ListTaskDefinitionsAction, this))
@@ -83,14 +80,9 @@ bool ListTaskDefinitionsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListTaskDefinitionsResponse object.
+ * Returns a ListTaskDefinitionsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListTaskDefinitionsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ECSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListTaskDefinitionsRequest::response(QNetworkReply * const reply) const
 {
@@ -98,20 +90,17 @@ QtAws::Core::AwsAbstractResponse * ListTaskDefinitionsRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::ECS::ListTaskDefinitionsRequestPrivate
+ * \brief The ListTaskDefinitionsRequestPrivate class provides private implementation for ListTaskDefinitionsRequest.
+ * \internal
  *
- * @class  ListTaskDefinitionsRequestPrivate
- *
- * @brief  Private implementation for ListTaskDefinitionsRequest.
+ * \inmodule QtAwsECS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListTaskDefinitionsRequestPrivate object.
- *
- * @param  action  ECS action being performed.
- * @param  q       Pointer to this object's public ListTaskDefinitionsRequest instance.
+ * Constructs a ListTaskDefinitionsRequestPrivate object for ECS \a action with,
+ * public implementation \a q.
  */
 ListTaskDefinitionsRequestPrivate::ListTaskDefinitionsRequestPrivate(
     const ECSRequest::Action action, ListTaskDefinitionsRequest * const q)
@@ -121,15 +110,10 @@ ListTaskDefinitionsRequestPrivate::ListTaskDefinitionsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListTaskDefinitionsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListTaskDefinitionsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListTaskDefinitionsRequest instance.
  */
 ListTaskDefinitionsRequestPrivate::ListTaskDefinitionsRequestPrivate(
     const ListTaskDefinitionsRequestPrivate &other, ListTaskDefinitionsRequest * const q)

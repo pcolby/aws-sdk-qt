@@ -27,10 +27,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::GetClientCertificatesRequest
- *
  * \brief The GetClientCertificatesRequest class provides an interface for APIGateway GetClientCertificates requests.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -42,9 +41,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new GetClientCertificatesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetClientCertificatesRequest::GetClientCertificatesRequest(const GetClientCertificatesRequest &other)
     : APIGatewayRequest(new GetClientCertificatesRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ GetClientCertificatesRequest::GetClientCertificatesRequest(const GetClientCertif
 }
 
 /*!
- * @brief  Constructs a new GetClientCertificatesRequest object.
+ * Constructs a GetClientCertificatesRequest object.
  */
 GetClientCertificatesRequest::GetClientCertificatesRequest()
     : APIGatewayRequest(new GetClientCertificatesRequestPrivate(APIGatewayRequest::GetClientCertificatesAction, this))
@@ -71,14 +68,9 @@ bool GetClientCertificatesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetClientCertificatesResponse object.
+ * Returns a GetClientCertificatesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetClientCertificatesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  APIGatewayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetClientCertificatesRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * GetClientCertificatesRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::APIGateway::GetClientCertificatesRequestPrivate
+ * \brief The GetClientCertificatesRequestPrivate class provides private implementation for GetClientCertificatesRequest.
+ * \internal
  *
- * @class  GetClientCertificatesRequestPrivate
- *
- * @brief  Private implementation for GetClientCertificatesRequest.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetClientCertificatesRequestPrivate object.
- *
- * @param  action  APIGateway action being performed.
- * @param  q       Pointer to this object's public GetClientCertificatesRequest instance.
+ * Constructs a GetClientCertificatesRequestPrivate object for APIGateway \a action with,
+ * public implementation \a q.
  */
 GetClientCertificatesRequestPrivate::GetClientCertificatesRequestPrivate(
     const APIGatewayRequest::Action action, GetClientCertificatesRequest * const q)
@@ -109,15 +98,10 @@ GetClientCertificatesRequestPrivate::GetClientCertificatesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetClientCertificatesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetClientCertificatesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetClientCertificatesRequest instance.
  */
 GetClientCertificatesRequestPrivate::GetClientCertificatesRequestPrivate(
     const GetClientCertificatesRequestPrivate &other, GetClientCertificatesRequest * const q)

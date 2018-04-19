@@ -90,6 +90,9 @@
 /*!
  * \namespace QtAws::WorkMail
  * \brief The QtAws::WorkMail contains stuff...
+ *
+ * \inmodule QtAwsWorkMail
+ *
  * @todo Move this to a separate template file.
  */
 
@@ -172,7 +175,7 @@ WorkMailClient::WorkMailClient(
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * \a  AwsEndpoint::getEndpoint()
+ * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
 WorkMailClient::WorkMailClient(
     const QUrl &endpoint,

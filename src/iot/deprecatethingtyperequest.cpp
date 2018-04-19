@@ -27,10 +27,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::DeprecateThingTypeRequest
- *
  * \brief The DeprecateThingTypeRequest class provides an interface for IoT DeprecateThingType requests.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -48,9 +47,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new DeprecateThingTypeRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeprecateThingTypeRequest::DeprecateThingTypeRequest(const DeprecateThingTypeRequest &other)
     : IoTRequest(new DeprecateThingTypeRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ DeprecateThingTypeRequest::DeprecateThingTypeRequest(const DeprecateThingTypeReq
 }
 
 /*!
- * @brief  Constructs a new DeprecateThingTypeRequest object.
+ * Constructs a DeprecateThingTypeRequest object.
  */
 DeprecateThingTypeRequest::DeprecateThingTypeRequest()
     : IoTRequest(new DeprecateThingTypeRequestPrivate(IoTRequest::DeprecateThingTypeAction, this))
@@ -77,14 +74,9 @@ bool DeprecateThingTypeRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeprecateThingTypeResponse object.
+ * Returns a DeprecateThingTypeResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeprecateThingTypeResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IoTClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeprecateThingTypeRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * DeprecateThingTypeRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::IoT::DeprecateThingTypeRequestPrivate
+ * \brief The DeprecateThingTypeRequestPrivate class provides private implementation for DeprecateThingTypeRequest.
+ * \internal
  *
- * @class  DeprecateThingTypeRequestPrivate
- *
- * @brief  Private implementation for DeprecateThingTypeRequest.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeprecateThingTypeRequestPrivate object.
- *
- * @param  action  IoT action being performed.
- * @param  q       Pointer to this object's public DeprecateThingTypeRequest instance.
+ * Constructs a DeprecateThingTypeRequestPrivate object for IoT \a action with,
+ * public implementation \a q.
  */
 DeprecateThingTypeRequestPrivate::DeprecateThingTypeRequestPrivate(
     const IoTRequest::Action action, DeprecateThingTypeRequest * const q)
@@ -115,15 +104,10 @@ DeprecateThingTypeRequestPrivate::DeprecateThingTypeRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeprecateThingTypeRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeprecateThingTypeRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeprecateThingTypeRequest instance.
  */
 DeprecateThingTypeRequestPrivate::DeprecateThingTypeRequestPrivate(
     const DeprecateThingTypeRequestPrivate &other, DeprecateThingTypeRequest * const q)

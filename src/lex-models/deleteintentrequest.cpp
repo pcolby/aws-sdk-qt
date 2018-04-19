@@ -27,10 +27,9 @@ namespace LexModelBuildingService {
 
 /*!
  * \class QtAws::LexModelBuildingService::DeleteIntentRequest
- *
  * \brief The DeleteIntentRequest class provides an interface for LexModelBuildingService DeleteIntent requests.
  *
- * \ingroup LexModelBuildingService
+ * \inmodule QtAwsLexModelBuildingService
  *
  *  <fullname>Amazon Lex Build-Time Actions</fullname>
  * 
@@ -41,9 +40,7 @@ namespace LexModelBuildingService {
  */
 
 /*!
- * @brief  Constructs a new DeleteIntentRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteIntentRequest::DeleteIntentRequest(const DeleteIntentRequest &other)
     : LexModelBuildingServiceRequest(new DeleteIntentRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ DeleteIntentRequest::DeleteIntentRequest(const DeleteIntentRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DeleteIntentRequest object.
+ * Constructs a DeleteIntentRequest object.
  */
 DeleteIntentRequest::DeleteIntentRequest()
     : LexModelBuildingServiceRequest(new DeleteIntentRequestPrivate(LexModelBuildingServiceRequest::DeleteIntentAction, this))
@@ -70,14 +67,9 @@ bool DeleteIntentRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteIntentResponse object.
+ * Returns a DeleteIntentResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteIntentResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  LexModelBuildingServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteIntentRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * DeleteIntentRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::LexModelBuildingService::DeleteIntentRequestPrivate
+ * \brief The DeleteIntentRequestPrivate class provides private implementation for DeleteIntentRequest.
+ * \internal
  *
- * @class  DeleteIntentRequestPrivate
- *
- * @brief  Private implementation for DeleteIntentRequest.
+ * \inmodule QtAwsLexModelBuildingService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteIntentRequestPrivate object.
- *
- * @param  action  LexModelBuildingService action being performed.
- * @param  q       Pointer to this object's public DeleteIntentRequest instance.
+ * Constructs a DeleteIntentRequestPrivate object for LexModelBuildingService \a action with,
+ * public implementation \a q.
  */
 DeleteIntentRequestPrivate::DeleteIntentRequestPrivate(
     const LexModelBuildingServiceRequest::Action action, DeleteIntentRequest * const q)
@@ -108,15 +97,10 @@ DeleteIntentRequestPrivate::DeleteIntentRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteIntentRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteIntentRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteIntentRequest instance.
  */
 DeleteIntentRequestPrivate::DeleteIntentRequestPrivate(
     const DeleteIntentRequestPrivate &other, DeleteIntentRequest * const q)

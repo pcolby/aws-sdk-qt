@@ -27,10 +27,9 @@ namespace WorkMail {
 
 /*!
  * \class QtAws::WorkMail::ListGroupMembersRequest
- *
  * \brief The ListGroupMembersRequest class provides an interface for WorkMail ListGroupMembers requests.
  *
- * \ingroup WorkMail
+ * \inmodule QtAwsWorkMail
  *
  *  Amazon WorkMail is a secure, managed business email and calendaring service with support for existing desktop and mobile
  *  email clients. You can access your email, contacts, and calendars using Microsoft Outlook, your browser, or their native
@@ -70,9 +69,7 @@ namespace WorkMail {
  */
 
 /*!
- * @brief  Constructs a new ListGroupMembersRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListGroupMembersRequest::ListGroupMembersRequest(const ListGroupMembersRequest &other)
     : WorkMailRequest(new ListGroupMembersRequestPrivate(*other.d_func(), this))
@@ -81,7 +78,7 @@ ListGroupMembersRequest::ListGroupMembersRequest(const ListGroupMembersRequest &
 }
 
 /*!
- * @brief  Constructs a new ListGroupMembersRequest object.
+ * Constructs a ListGroupMembersRequest object.
  */
 ListGroupMembersRequest::ListGroupMembersRequest()
     : WorkMailRequest(new ListGroupMembersRequestPrivate(WorkMailRequest::ListGroupMembersAction, this))
@@ -99,14 +96,9 @@ bool ListGroupMembersRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListGroupMembersResponse object.
+ * Returns a ListGroupMembersResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListGroupMembersResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WorkMailClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListGroupMembersRequest::response(QNetworkReply * const reply) const
 {
@@ -114,20 +106,17 @@ QtAws::Core::AwsAbstractResponse * ListGroupMembersRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::WorkMail::ListGroupMembersRequestPrivate
+ * \brief The ListGroupMembersRequestPrivate class provides private implementation for ListGroupMembersRequest.
+ * \internal
  *
- * @class  ListGroupMembersRequestPrivate
- *
- * @brief  Private implementation for ListGroupMembersRequest.
+ * \inmodule QtAwsWorkMail
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListGroupMembersRequestPrivate object.
- *
- * @param  action  WorkMail action being performed.
- * @param  q       Pointer to this object's public ListGroupMembersRequest instance.
+ * Constructs a ListGroupMembersRequestPrivate object for WorkMail \a action with,
+ * public implementation \a q.
  */
 ListGroupMembersRequestPrivate::ListGroupMembersRequestPrivate(
     const WorkMailRequest::Action action, ListGroupMembersRequest * const q)
@@ -137,15 +126,10 @@ ListGroupMembersRequestPrivate::ListGroupMembersRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListGroupMembersRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListGroupMembersRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListGroupMembersRequest instance.
  */
 ListGroupMembersRequestPrivate::ListGroupMembersRequestPrivate(
     const ListGroupMembersRequestPrivate &other, ListGroupMembersRequest * const q)

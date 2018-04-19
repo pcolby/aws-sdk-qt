@@ -27,10 +27,9 @@ namespace Organizations {
 
 /*!
  * \class QtAws::Organizations::DisableAWSServiceAccessRequest
- *
  * \brief The DisableAWSServiceAccessRequest class provides an interface for Organizations DisableAWSServiceAccess requests.
  *
- * \ingroup Organizations
+ * \inmodule QtAwsOrganizations
  *
  *  <fullname>AWS Organizations API Reference</fullname>
  * 
@@ -179,9 +178,7 @@ namespace Organizations {
  */
 
 /*!
- * @brief  Constructs a new DisableAWSServiceAccessRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DisableAWSServiceAccessRequest::DisableAWSServiceAccessRequest(const DisableAWSServiceAccessRequest &other)
     : OrganizationsRequest(new DisableAWSServiceAccessRequestPrivate(*other.d_func(), this))
@@ -190,7 +187,7 @@ DisableAWSServiceAccessRequest::DisableAWSServiceAccessRequest(const DisableAWSS
 }
 
 /*!
- * @brief  Constructs a new DisableAWSServiceAccessRequest object.
+ * Constructs a DisableAWSServiceAccessRequest object.
  */
 DisableAWSServiceAccessRequest::DisableAWSServiceAccessRequest()
     : OrganizationsRequest(new DisableAWSServiceAccessRequestPrivate(OrganizationsRequest::DisableAWSServiceAccessAction, this))
@@ -208,14 +205,9 @@ bool DisableAWSServiceAccessRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DisableAWSServiceAccessResponse object.
+ * Returns a DisableAWSServiceAccessResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DisableAWSServiceAccessResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  OrganizationsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DisableAWSServiceAccessRequest::response(QNetworkReply * const reply) const
 {
@@ -223,20 +215,17 @@ QtAws::Core::AwsAbstractResponse * DisableAWSServiceAccessRequest::response(QNet
 }
 
 /*!
- * @internal
+ * \class QtAws::Organizations::DisableAWSServiceAccessRequestPrivate
+ * \brief The DisableAWSServiceAccessRequestPrivate class provides private implementation for DisableAWSServiceAccessRequest.
+ * \internal
  *
- * @class  DisableAWSServiceAccessRequestPrivate
- *
- * @brief  Private implementation for DisableAWSServiceAccessRequest.
+ * \inmodule QtAwsOrganizations
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DisableAWSServiceAccessRequestPrivate object.
- *
- * @param  action  Organizations action being performed.
- * @param  q       Pointer to this object's public DisableAWSServiceAccessRequest instance.
+ * Constructs a DisableAWSServiceAccessRequestPrivate object for Organizations \a action with,
+ * public implementation \a q.
  */
 DisableAWSServiceAccessRequestPrivate::DisableAWSServiceAccessRequestPrivate(
     const OrganizationsRequest::Action action, DisableAWSServiceAccessRequest * const q)
@@ -246,15 +235,10 @@ DisableAWSServiceAccessRequestPrivate::DisableAWSServiceAccessRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DisableAWSServiceAccessRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DisableAWSServiceAccessRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DisableAWSServiceAccessRequest instance.
  */
 DisableAWSServiceAccessRequestPrivate::DisableAWSServiceAccessRequestPrivate(
     const DisableAWSServiceAccessRequestPrivate &other, DisableAWSServiceAccessRequest * const q)

@@ -27,19 +27,16 @@ namespace Route53 {
 
 /*!
  * \class QtAws::Route53::ChangeResourceRecordSetsRequest
- *
  * \brief The ChangeResourceRecordSetsRequest class provides an interface for Route53 ChangeResourceRecordSets requests.
  *
- * \ingroup Route53
+ * \inmodule QtAwsRoute53
  *
  *
  * \sa Route53Client::changeResourceRecordSets
  */
 
 /*!
- * @brief  Constructs a new ChangeResourceRecordSetsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ChangeResourceRecordSetsRequest::ChangeResourceRecordSetsRequest(const ChangeResourceRecordSetsRequest &other)
     : Route53Request(new ChangeResourceRecordSetsRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ ChangeResourceRecordSetsRequest::ChangeResourceRecordSetsRequest(const ChangeRes
 }
 
 /*!
- * @brief  Constructs a new ChangeResourceRecordSetsRequest object.
+ * Constructs a ChangeResourceRecordSetsRequest object.
  */
 ChangeResourceRecordSetsRequest::ChangeResourceRecordSetsRequest()
     : Route53Request(new ChangeResourceRecordSetsRequestPrivate(Route53Request::ChangeResourceRecordSetsAction, this))
@@ -66,14 +63,9 @@ bool ChangeResourceRecordSetsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ChangeResourceRecordSetsResponse object.
+ * Returns a ChangeResourceRecordSetsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ChangeResourceRecordSetsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  Route53Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ChangeResourceRecordSetsRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * ChangeResourceRecordSetsRequest::response(QNe
 }
 
 /*!
- * @internal
+ * \class QtAws::Route53::ChangeResourceRecordSetsRequestPrivate
+ * \brief The ChangeResourceRecordSetsRequestPrivate class provides private implementation for ChangeResourceRecordSetsRequest.
+ * \internal
  *
- * @class  ChangeResourceRecordSetsRequestPrivate
- *
- * @brief  Private implementation for ChangeResourceRecordSetsRequest.
+ * \inmodule QtAwsRoute53
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ChangeResourceRecordSetsRequestPrivate object.
- *
- * @param  action  Route53 action being performed.
- * @param  q       Pointer to this object's public ChangeResourceRecordSetsRequest instance.
+ * Constructs a ChangeResourceRecordSetsRequestPrivate object for Route53 \a action with,
+ * public implementation \a q.
  */
 ChangeResourceRecordSetsRequestPrivate::ChangeResourceRecordSetsRequestPrivate(
     const Route53Request::Action action, ChangeResourceRecordSetsRequest * const q)
@@ -104,15 +93,10 @@ ChangeResourceRecordSetsRequestPrivate::ChangeResourceRecordSetsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ChangeResourceRecordSetsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ChangeResourceRecordSetsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ChangeResourceRecordSetsRequest instance.
  */
 ChangeResourceRecordSetsRequestPrivate::ChangeResourceRecordSetsRequestPrivate(
     const ChangeResourceRecordSetsRequestPrivate &other, ChangeResourceRecordSetsRequest * const q)

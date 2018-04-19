@@ -27,19 +27,16 @@ namespace MTurk {
 
 /*!
  * \class QtAws::MTurk::DisassociateQualificationFromWorkerRequest
- *
  * \brief The DisassociateQualificationFromWorkerRequest class provides an interface for MTurk DisassociateQualificationFromWorker requests.
  *
- * \ingroup MTurk
+ * \inmodule QtAwsMTurk
  *
  *
  * \sa MTurkClient::disassociateQualificationFromWorker
  */
 
 /*!
- * @brief  Constructs a new DisassociateQualificationFromWorkerRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DisassociateQualificationFromWorkerRequest::DisassociateQualificationFromWorkerRequest(const DisassociateQualificationFromWorkerRequest &other)
     : MTurkRequest(new DisassociateQualificationFromWorkerRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ DisassociateQualificationFromWorkerRequest::DisassociateQualificationFromWorkerR
 }
 
 /*!
- * @brief  Constructs a new DisassociateQualificationFromWorkerRequest object.
+ * Constructs a DisassociateQualificationFromWorkerRequest object.
  */
 DisassociateQualificationFromWorkerRequest::DisassociateQualificationFromWorkerRequest()
     : MTurkRequest(new DisassociateQualificationFromWorkerRequestPrivate(MTurkRequest::DisassociateQualificationFromWorkerAction, this))
@@ -66,14 +63,9 @@ bool DisassociateQualificationFromWorkerRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DisassociateQualificationFromWorkerResponse object.
+ * Returns a DisassociateQualificationFromWorkerResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DisassociateQualificationFromWorkerResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MTurkClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DisassociateQualificationFromWorkerRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * DisassociateQualificationFromWorkerRequest::r
 }
 
 /*!
- * @internal
+ * \class QtAws::MTurk::DisassociateQualificationFromWorkerRequestPrivate
+ * \brief The DisassociateQualificationFromWorkerRequestPrivate class provides private implementation for DisassociateQualificationFromWorkerRequest.
+ * \internal
  *
- * @class  DisassociateQualificationFromWorkerRequestPrivate
- *
- * @brief  Private implementation for DisassociateQualificationFromWorkerRequest.
+ * \inmodule QtAwsMTurk
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DisassociateQualificationFromWorkerRequestPrivate object.
- *
- * @param  action  MTurk action being performed.
- * @param  q       Pointer to this object's public DisassociateQualificationFromWorkerRequest instance.
+ * Constructs a DisassociateQualificationFromWorkerRequestPrivate object for MTurk \a action with,
+ * public implementation \a q.
  */
 DisassociateQualificationFromWorkerRequestPrivate::DisassociateQualificationFromWorkerRequestPrivate(
     const MTurkRequest::Action action, DisassociateQualificationFromWorkerRequest * const q)
@@ -104,15 +93,10 @@ DisassociateQualificationFromWorkerRequestPrivate::DisassociateQualificationFrom
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DisassociateQualificationFromWorkerRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DisassociateQualificationFromWorkerRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DisassociateQualificationFromWorkerRequest instance.
  */
 DisassociateQualificationFromWorkerRequestPrivate::DisassociateQualificationFromWorkerRequestPrivate(
     const DisassociateQualificationFromWorkerRequestPrivate &other, DisassociateQualificationFromWorkerRequest * const q)

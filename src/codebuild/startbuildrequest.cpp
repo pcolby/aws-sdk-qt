@@ -27,10 +27,9 @@ namespace CodeBuild {
 
 /*!
  * \class QtAws::CodeBuild::StartBuildRequest
- *
  * \brief The StartBuildRequest class provides an interface for CodeBuild StartBuild requests.
  *
- * \ingroup CodeBuild
+ * \inmodule QtAwsCodeBuild
  *
  *  <fullname>AWS CodeBuild</fullname>
  * 
@@ -117,9 +116,7 @@ namespace CodeBuild {
  */
 
 /*!
- * @brief  Constructs a new StartBuildRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 StartBuildRequest::StartBuildRequest(const StartBuildRequest &other)
     : CodeBuildRequest(new StartBuildRequestPrivate(*other.d_func(), this))
@@ -128,7 +125,7 @@ StartBuildRequest::StartBuildRequest(const StartBuildRequest &other)
 }
 
 /*!
- * @brief  Constructs a new StartBuildRequest object.
+ * Constructs a StartBuildRequest object.
  */
 StartBuildRequest::StartBuildRequest()
     : CodeBuildRequest(new StartBuildRequestPrivate(CodeBuildRequest::StartBuildAction, this))
@@ -146,14 +143,9 @@ bool StartBuildRequest::isValid() const
 
 
 /*!
- * @brief  Construct an StartBuildResponse object.
+ * Returns a StartBuildResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An StartBuildResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CodeBuildClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * StartBuildRequest::response(QNetworkReply * const reply) const
 {
@@ -161,20 +153,17 @@ QtAws::Core::AwsAbstractResponse * StartBuildRequest::response(QNetworkReply * c
 }
 
 /*!
- * @internal
+ * \class QtAws::CodeBuild::StartBuildRequestPrivate
+ * \brief The StartBuildRequestPrivate class provides private implementation for StartBuildRequest.
+ * \internal
  *
- * @class  StartBuildRequestPrivate
- *
- * @brief  Private implementation for StartBuildRequest.
+ * \inmodule QtAwsCodeBuild
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new StartBuildRequestPrivate object.
- *
- * @param  action  CodeBuild action being performed.
- * @param  q       Pointer to this object's public StartBuildRequest instance.
+ * Constructs a StartBuildRequestPrivate object for CodeBuild \a action with,
+ * public implementation \a q.
  */
 StartBuildRequestPrivate::StartBuildRequestPrivate(
     const CodeBuildRequest::Action action, StartBuildRequest * const q)
@@ -184,15 +173,10 @@ StartBuildRequestPrivate::StartBuildRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StartBuildRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the StartBuildRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public StartBuildRequest instance.
  */
 StartBuildRequestPrivate::StartBuildRequestPrivate(
     const StartBuildRequestPrivate &other, StartBuildRequest * const q)

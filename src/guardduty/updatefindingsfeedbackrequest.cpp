@@ -27,19 +27,16 @@ namespace GuardDuty {
 
 /*!
  * \class QtAws::GuardDuty::UpdateFindingsFeedbackRequest
- *
  * \brief The UpdateFindingsFeedbackRequest class provides an interface for GuardDuty UpdateFindingsFeedback requests.
  *
- * \ingroup GuardDuty
+ * \inmodule QtAwsGuardDuty
  *
  *
  * \sa GuardDutyClient::updateFindingsFeedback
  */
 
 /*!
- * @brief  Constructs a new UpdateFindingsFeedbackRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateFindingsFeedbackRequest::UpdateFindingsFeedbackRequest(const UpdateFindingsFeedbackRequest &other)
     : GuardDutyRequest(new UpdateFindingsFeedbackRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ UpdateFindingsFeedbackRequest::UpdateFindingsFeedbackRequest(const UpdateFinding
 }
 
 /*!
- * @brief  Constructs a new UpdateFindingsFeedbackRequest object.
+ * Constructs a UpdateFindingsFeedbackRequest object.
  */
 UpdateFindingsFeedbackRequest::UpdateFindingsFeedbackRequest()
     : GuardDutyRequest(new UpdateFindingsFeedbackRequestPrivate(GuardDutyRequest::UpdateFindingsFeedbackAction, this))
@@ -66,14 +63,9 @@ bool UpdateFindingsFeedbackRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateFindingsFeedbackResponse object.
+ * Returns a UpdateFindingsFeedbackResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateFindingsFeedbackResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GuardDutyClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateFindingsFeedbackRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * UpdateFindingsFeedbackRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::GuardDuty::UpdateFindingsFeedbackRequestPrivate
+ * \brief The UpdateFindingsFeedbackRequestPrivate class provides private implementation for UpdateFindingsFeedbackRequest.
+ * \internal
  *
- * @class  UpdateFindingsFeedbackRequestPrivate
- *
- * @brief  Private implementation for UpdateFindingsFeedbackRequest.
+ * \inmodule QtAwsGuardDuty
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateFindingsFeedbackRequestPrivate object.
- *
- * @param  action  GuardDuty action being performed.
- * @param  q       Pointer to this object's public UpdateFindingsFeedbackRequest instance.
+ * Constructs a UpdateFindingsFeedbackRequestPrivate object for GuardDuty \a action with,
+ * public implementation \a q.
  */
 UpdateFindingsFeedbackRequestPrivate::UpdateFindingsFeedbackRequestPrivate(
     const GuardDutyRequest::Action action, UpdateFindingsFeedbackRequest * const q)
@@ -104,15 +93,10 @@ UpdateFindingsFeedbackRequestPrivate::UpdateFindingsFeedbackRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateFindingsFeedbackRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateFindingsFeedbackRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateFindingsFeedbackRequest instance.
  */
 UpdateFindingsFeedbackRequestPrivate::UpdateFindingsFeedbackRequestPrivate(
     const UpdateFindingsFeedbackRequestPrivate &other, UpdateFindingsFeedbackRequest * const q)

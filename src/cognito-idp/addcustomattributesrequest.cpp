@@ -27,10 +27,9 @@ namespace CognitoIdentityProvider {
 
 /*!
  * \class QtAws::CognitoIdentityProvider::AddCustomAttributesRequest
- *
  * \brief The AddCustomAttributesRequest class provides an interface for CognitoIdentityProvider AddCustomAttributes requests.
  *
- * \ingroup CognitoIdentityProvider
+ * \inmodule QtAwsCognitoIdentityProvider
  *
  *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
  *  authenticate a user to obtain tokens related to user identity and access
@@ -47,9 +46,7 @@ namespace CognitoIdentityProvider {
  */
 
 /*!
- * @brief  Constructs a new AddCustomAttributesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AddCustomAttributesRequest::AddCustomAttributesRequest(const AddCustomAttributesRequest &other)
     : CognitoIdentityProviderRequest(new AddCustomAttributesRequestPrivate(*other.d_func(), this))
@@ -58,7 +55,7 @@ AddCustomAttributesRequest::AddCustomAttributesRequest(const AddCustomAttributes
 }
 
 /*!
- * @brief  Constructs a new AddCustomAttributesRequest object.
+ * Constructs a AddCustomAttributesRequest object.
  */
 AddCustomAttributesRequest::AddCustomAttributesRequest()
     : CognitoIdentityProviderRequest(new AddCustomAttributesRequestPrivate(CognitoIdentityProviderRequest::AddCustomAttributesAction, this))
@@ -76,14 +73,9 @@ bool AddCustomAttributesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AddCustomAttributesResponse object.
+ * Returns a AddCustomAttributesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AddCustomAttributesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CognitoIdentityProviderClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AddCustomAttributesRequest::response(QNetworkReply * const reply) const
 {
@@ -91,20 +83,17 @@ QtAws::Core::AwsAbstractResponse * AddCustomAttributesRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::CognitoIdentityProvider::AddCustomAttributesRequestPrivate
+ * \brief The AddCustomAttributesRequestPrivate class provides private implementation for AddCustomAttributesRequest.
+ * \internal
  *
- * @class  AddCustomAttributesRequestPrivate
- *
- * @brief  Private implementation for AddCustomAttributesRequest.
+ * \inmodule QtAwsCognitoIdentityProvider
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AddCustomAttributesRequestPrivate object.
- *
- * @param  action  CognitoIdentityProvider action being performed.
- * @param  q       Pointer to this object's public AddCustomAttributesRequest instance.
+ * Constructs a AddCustomAttributesRequestPrivate object for CognitoIdentityProvider \a action with,
+ * public implementation \a q.
  */
 AddCustomAttributesRequestPrivate::AddCustomAttributesRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, AddCustomAttributesRequest * const q)
@@ -114,15 +103,10 @@ AddCustomAttributesRequestPrivate::AddCustomAttributesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AddCustomAttributesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AddCustomAttributesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AddCustomAttributesRequest instance.
  */
 AddCustomAttributesRequestPrivate::AddCustomAttributesRequestPrivate(
     const AddCustomAttributesRequestPrivate &other, AddCustomAttributesRequest * const q)

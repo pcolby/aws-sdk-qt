@@ -27,10 +27,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::GetLoginProfileRequest
- *
  * \brief The GetLoginProfileRequest class provides an interface for IAM GetLoginProfile requests.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -102,9 +101,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new GetLoginProfileRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetLoginProfileRequest::GetLoginProfileRequest(const GetLoginProfileRequest &other)
     : IAMRequest(new GetLoginProfileRequestPrivate(*other.d_func(), this))
@@ -113,7 +110,7 @@ GetLoginProfileRequest::GetLoginProfileRequest(const GetLoginProfileRequest &oth
 }
 
 /*!
- * @brief  Constructs a new GetLoginProfileRequest object.
+ * Constructs a GetLoginProfileRequest object.
  */
 GetLoginProfileRequest::GetLoginProfileRequest()
     : IAMRequest(new GetLoginProfileRequestPrivate(IAMRequest::GetLoginProfileAction, this))
@@ -131,14 +128,9 @@ bool GetLoginProfileRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetLoginProfileResponse object.
+ * Returns a GetLoginProfileResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetLoginProfileResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IAMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetLoginProfileRequest::response(QNetworkReply * const reply) const
 {
@@ -146,20 +138,17 @@ QtAws::Core::AwsAbstractResponse * GetLoginProfileRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::IAM::GetLoginProfileRequestPrivate
+ * \brief The GetLoginProfileRequestPrivate class provides private implementation for GetLoginProfileRequest.
+ * \internal
  *
- * @class  GetLoginProfileRequestPrivate
- *
- * @brief  Private implementation for GetLoginProfileRequest.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetLoginProfileRequestPrivate object.
- *
- * @param  action  IAM action being performed.
- * @param  q       Pointer to this object's public GetLoginProfileRequest instance.
+ * Constructs a GetLoginProfileRequestPrivate object for IAM \a action with,
+ * public implementation \a q.
  */
 GetLoginProfileRequestPrivate::GetLoginProfileRequestPrivate(
     const IAMRequest::Action action, GetLoginProfileRequest * const q)
@@ -169,15 +158,10 @@ GetLoginProfileRequestPrivate::GetLoginProfileRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetLoginProfileRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetLoginProfileRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetLoginProfileRequest instance.
  */
 GetLoginProfileRequestPrivate::GetLoginProfileRequestPrivate(
     const GetLoginProfileRequestPrivate &other, GetLoginProfileRequest * const q)

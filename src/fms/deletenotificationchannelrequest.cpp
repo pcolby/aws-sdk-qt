@@ -27,10 +27,9 @@ namespace FMS {
 
 /*!
  * \class QtAws::FMS::DeleteNotificationChannelRequest
- *
  * \brief The DeleteNotificationChannelRequest class provides an interface for FMS DeleteNotificationChannel requests.
  *
- * \ingroup FMS
+ * \inmodule QtAwsFMS
  *
  *  <fullname>AWS Firewall Manager</fullname>
  * 
@@ -43,9 +42,7 @@ namespace FMS {
  */
 
 /*!
- * @brief  Constructs a new DeleteNotificationChannelRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteNotificationChannelRequest::DeleteNotificationChannelRequest(const DeleteNotificationChannelRequest &other)
     : FMSRequest(new DeleteNotificationChannelRequestPrivate(*other.d_func(), this))
@@ -54,7 +51,7 @@ DeleteNotificationChannelRequest::DeleteNotificationChannelRequest(const DeleteN
 }
 
 /*!
- * @brief  Constructs a new DeleteNotificationChannelRequest object.
+ * Constructs a DeleteNotificationChannelRequest object.
  */
 DeleteNotificationChannelRequest::DeleteNotificationChannelRequest()
     : FMSRequest(new DeleteNotificationChannelRequestPrivate(FMSRequest::DeleteNotificationChannelAction, this))
@@ -72,14 +69,9 @@ bool DeleteNotificationChannelRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteNotificationChannelResponse object.
+ * Returns a DeleteNotificationChannelResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteNotificationChannelResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  FMSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteNotificationChannelRequest::response(QNetworkReply * const reply) const
 {
@@ -87,20 +79,17 @@ QtAws::Core::AwsAbstractResponse * DeleteNotificationChannelRequest::response(QN
 }
 
 /*!
- * @internal
+ * \class QtAws::FMS::DeleteNotificationChannelRequestPrivate
+ * \brief The DeleteNotificationChannelRequestPrivate class provides private implementation for DeleteNotificationChannelRequest.
+ * \internal
  *
- * @class  DeleteNotificationChannelRequestPrivate
- *
- * @brief  Private implementation for DeleteNotificationChannelRequest.
+ * \inmodule QtAwsFMS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteNotificationChannelRequestPrivate object.
- *
- * @param  action  FMS action being performed.
- * @param  q       Pointer to this object's public DeleteNotificationChannelRequest instance.
+ * Constructs a DeleteNotificationChannelRequestPrivate object for FMS \a action with,
+ * public implementation \a q.
  */
 DeleteNotificationChannelRequestPrivate::DeleteNotificationChannelRequestPrivate(
     const FMSRequest::Action action, DeleteNotificationChannelRequest * const q)
@@ -110,15 +99,10 @@ DeleteNotificationChannelRequestPrivate::DeleteNotificationChannelRequestPrivate
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteNotificationChannelRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteNotificationChannelRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteNotificationChannelRequest instance.
  */
 DeleteNotificationChannelRequestPrivate::DeleteNotificationChannelRequestPrivate(
     const DeleteNotificationChannelRequestPrivate &other, DeleteNotificationChannelRequest * const q)

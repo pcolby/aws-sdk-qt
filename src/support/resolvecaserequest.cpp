@@ -27,10 +27,9 @@ namespace Support {
 
 /*!
  * \class QtAws::Support::ResolveCaseRequest
- *
  * \brief The ResolveCaseRequest class provides an interface for Support ResolveCase requests.
  *
- * \ingroup Support
+ * \inmodule QtAwsSupport
  *
  *  <fullname>AWS Support</fullname>
  * 
@@ -105,9 +104,7 @@ namespace Support {
  */
 
 /*!
- * @brief  Constructs a new ResolveCaseRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ResolveCaseRequest::ResolveCaseRequest(const ResolveCaseRequest &other)
     : SupportRequest(new ResolveCaseRequestPrivate(*other.d_func(), this))
@@ -116,7 +113,7 @@ ResolveCaseRequest::ResolveCaseRequest(const ResolveCaseRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ResolveCaseRequest object.
+ * Constructs a ResolveCaseRequest object.
  */
 ResolveCaseRequest::ResolveCaseRequest()
     : SupportRequest(new ResolveCaseRequestPrivate(SupportRequest::ResolveCaseAction, this))
@@ -134,14 +131,9 @@ bool ResolveCaseRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ResolveCaseResponse object.
+ * Returns a ResolveCaseResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ResolveCaseResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SupportClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ResolveCaseRequest::response(QNetworkReply * const reply) const
 {
@@ -149,20 +141,17 @@ QtAws::Core::AwsAbstractResponse * ResolveCaseRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::Support::ResolveCaseRequestPrivate
+ * \brief The ResolveCaseRequestPrivate class provides private implementation for ResolveCaseRequest.
+ * \internal
  *
- * @class  ResolveCaseRequestPrivate
- *
- * @brief  Private implementation for ResolveCaseRequest.
+ * \inmodule QtAwsSupport
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ResolveCaseRequestPrivate object.
- *
- * @param  action  Support action being performed.
- * @param  q       Pointer to this object's public ResolveCaseRequest instance.
+ * Constructs a ResolveCaseRequestPrivate object for Support \a action with,
+ * public implementation \a q.
  */
 ResolveCaseRequestPrivate::ResolveCaseRequestPrivate(
     const SupportRequest::Action action, ResolveCaseRequest * const q)
@@ -172,15 +161,10 @@ ResolveCaseRequestPrivate::ResolveCaseRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ResolveCaseRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ResolveCaseRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ResolveCaseRequest instance.
  */
 ResolveCaseRequestPrivate::ResolveCaseRequestPrivate(
     const ResolveCaseRequestPrivate &other, ResolveCaseRequest * const q)

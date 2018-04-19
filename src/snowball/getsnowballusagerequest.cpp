@@ -27,10 +27,9 @@ namespace Snowball {
 
 /*!
  * \class QtAws::Snowball::GetSnowballUsageRequest
- *
  * \brief The GetSnowballUsageRequest class provides an interface for Snowball GetSnowballUsage requests.
  *
- * \ingroup Snowball
+ * \inmodule QtAwsSnowball
  *
  *  AWS Snowball is a petabyte-scale data transport solution that uses secure appliances to transfer large amounts of data
  *  between your on-premises data centers and Amazon Simple Storage Service (Amazon S3). The Snowball commands described
@@ -43,9 +42,7 @@ namespace Snowball {
  */
 
 /*!
- * @brief  Constructs a new GetSnowballUsageRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetSnowballUsageRequest::GetSnowballUsageRequest(const GetSnowballUsageRequest &other)
     : SnowballRequest(new GetSnowballUsageRequestPrivate(*other.d_func(), this))
@@ -54,7 +51,7 @@ GetSnowballUsageRequest::GetSnowballUsageRequest(const GetSnowballUsageRequest &
 }
 
 /*!
- * @brief  Constructs a new GetSnowballUsageRequest object.
+ * Constructs a GetSnowballUsageRequest object.
  */
 GetSnowballUsageRequest::GetSnowballUsageRequest()
     : SnowballRequest(new GetSnowballUsageRequestPrivate(SnowballRequest::GetSnowballUsageAction, this))
@@ -72,14 +69,9 @@ bool GetSnowballUsageRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetSnowballUsageResponse object.
+ * Returns a GetSnowballUsageResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetSnowballUsageResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SnowballClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetSnowballUsageRequest::response(QNetworkReply * const reply) const
 {
@@ -87,20 +79,17 @@ QtAws::Core::AwsAbstractResponse * GetSnowballUsageRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::Snowball::GetSnowballUsageRequestPrivate
+ * \brief The GetSnowballUsageRequestPrivate class provides private implementation for GetSnowballUsageRequest.
+ * \internal
  *
- * @class  GetSnowballUsageRequestPrivate
- *
- * @brief  Private implementation for GetSnowballUsageRequest.
+ * \inmodule QtAwsSnowball
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetSnowballUsageRequestPrivate object.
- *
- * @param  action  Snowball action being performed.
- * @param  q       Pointer to this object's public GetSnowballUsageRequest instance.
+ * Constructs a GetSnowballUsageRequestPrivate object for Snowball \a action with,
+ * public implementation \a q.
  */
 GetSnowballUsageRequestPrivate::GetSnowballUsageRequestPrivate(
     const SnowballRequest::Action action, GetSnowballUsageRequest * const q)
@@ -110,15 +99,10 @@ GetSnowballUsageRequestPrivate::GetSnowballUsageRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetSnowballUsageRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetSnowballUsageRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetSnowballUsageRequest instance.
  */
 GetSnowballUsageRequestPrivate::GetSnowballUsageRequestPrivate(
     const GetSnowballUsageRequestPrivate &other, GetSnowballUsageRequest * const q)

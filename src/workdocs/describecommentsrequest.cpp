@@ -27,10 +27,9 @@ namespace WorkDocs {
 
 /*!
  * \class QtAws::WorkDocs::DescribeCommentsRequest
- *
  * \brief The DescribeCommentsRequest class provides an interface for WorkDocs DescribeComments requests.
  *
- * \ingroup WorkDocs
+ * \inmodule QtAwsWorkDocs
  *
  *  The WorkDocs API is designed for the following use
  * 
@@ -66,9 +65,7 @@ namespace WorkDocs {
  */
 
 /*!
- * @brief  Constructs a new DescribeCommentsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeCommentsRequest::DescribeCommentsRequest(const DescribeCommentsRequest &other)
     : WorkDocsRequest(new DescribeCommentsRequestPrivate(*other.d_func(), this))
@@ -77,7 +74,7 @@ DescribeCommentsRequest::DescribeCommentsRequest(const DescribeCommentsRequest &
 }
 
 /*!
- * @brief  Constructs a new DescribeCommentsRequest object.
+ * Constructs a DescribeCommentsRequest object.
  */
 DescribeCommentsRequest::DescribeCommentsRequest()
     : WorkDocsRequest(new DescribeCommentsRequestPrivate(WorkDocsRequest::DescribeCommentsAction, this))
@@ -95,14 +92,9 @@ bool DescribeCommentsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeCommentsResponse object.
+ * Returns a DescribeCommentsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeCommentsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WorkDocsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeCommentsRequest::response(QNetworkReply * const reply) const
 {
@@ -110,20 +102,17 @@ QtAws::Core::AwsAbstractResponse * DescribeCommentsRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::WorkDocs::DescribeCommentsRequestPrivate
+ * \brief The DescribeCommentsRequestPrivate class provides private implementation for DescribeCommentsRequest.
+ * \internal
  *
- * @class  DescribeCommentsRequestPrivate
- *
- * @brief  Private implementation for DescribeCommentsRequest.
+ * \inmodule QtAwsWorkDocs
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeCommentsRequestPrivate object.
- *
- * @param  action  WorkDocs action being performed.
- * @param  q       Pointer to this object's public DescribeCommentsRequest instance.
+ * Constructs a DescribeCommentsRequestPrivate object for WorkDocs \a action with,
+ * public implementation \a q.
  */
 DescribeCommentsRequestPrivate::DescribeCommentsRequestPrivate(
     const WorkDocsRequest::Action action, DescribeCommentsRequest * const q)
@@ -133,15 +122,10 @@ DescribeCommentsRequestPrivate::DescribeCommentsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeCommentsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeCommentsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeCommentsRequest instance.
  */
 DescribeCommentsRequestPrivate::DescribeCommentsRequestPrivate(
     const DescribeCommentsRequestPrivate &other, DescribeCommentsRequest * const q)

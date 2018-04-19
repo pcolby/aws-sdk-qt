@@ -27,10 +27,9 @@ namespace Lambda {
 
 /*!
  * \class QtAws::Lambda::PutFunctionConcurrencyRequest
- *
  * \brief The PutFunctionConcurrencyRequest class provides an interface for Lambda PutFunctionConcurrency requests.
  *
- * \ingroup Lambda
+ * \inmodule QtAwsLambda
  *
  *  <fullname>AWS Lambda</fullname>
  * 
@@ -48,9 +47,7 @@ namespace Lambda {
  */
 
 /*!
- * @brief  Constructs a new PutFunctionConcurrencyRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 PutFunctionConcurrencyRequest::PutFunctionConcurrencyRequest(const PutFunctionConcurrencyRequest &other)
     : LambdaRequest(new PutFunctionConcurrencyRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ PutFunctionConcurrencyRequest::PutFunctionConcurrencyRequest(const PutFunctionCo
 }
 
 /*!
- * @brief  Constructs a new PutFunctionConcurrencyRequest object.
+ * Constructs a PutFunctionConcurrencyRequest object.
  */
 PutFunctionConcurrencyRequest::PutFunctionConcurrencyRequest()
     : LambdaRequest(new PutFunctionConcurrencyRequestPrivate(LambdaRequest::PutFunctionConcurrencyAction, this))
@@ -77,14 +74,9 @@ bool PutFunctionConcurrencyRequest::isValid() const
 
 
 /*!
- * @brief  Construct an PutFunctionConcurrencyResponse object.
+ * Returns a PutFunctionConcurrencyResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An PutFunctionConcurrencyResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  LambdaClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * PutFunctionConcurrencyRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * PutFunctionConcurrencyRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::Lambda::PutFunctionConcurrencyRequestPrivate
+ * \brief The PutFunctionConcurrencyRequestPrivate class provides private implementation for PutFunctionConcurrencyRequest.
+ * \internal
  *
- * @class  PutFunctionConcurrencyRequestPrivate
- *
- * @brief  Private implementation for PutFunctionConcurrencyRequest.
+ * \inmodule QtAwsLambda
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new PutFunctionConcurrencyRequestPrivate object.
- *
- * @param  action  Lambda action being performed.
- * @param  q       Pointer to this object's public PutFunctionConcurrencyRequest instance.
+ * Constructs a PutFunctionConcurrencyRequestPrivate object for Lambda \a action with,
+ * public implementation \a q.
  */
 PutFunctionConcurrencyRequestPrivate::PutFunctionConcurrencyRequestPrivate(
     const LambdaRequest::Action action, PutFunctionConcurrencyRequest * const q)
@@ -115,15 +104,10 @@ PutFunctionConcurrencyRequestPrivate::PutFunctionConcurrencyRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutFunctionConcurrencyRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the PutFunctionConcurrencyRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public PutFunctionConcurrencyRequest instance.
  */
 PutFunctionConcurrencyRequestPrivate::PutFunctionConcurrencyRequestPrivate(
     const PutFunctionConcurrencyRequestPrivate &other, PutFunctionConcurrencyRequest * const q)

@@ -27,10 +27,9 @@ namespace CognitoIdentityProvider {
 
 /*!
  * \class QtAws::CognitoIdentityProvider::GetUserAttributeVerificationCodeRequest
- *
  * \brief The GetUserAttributeVerificationCodeRequest class provides an interface for CognitoIdentityProvider GetUserAttributeVerificationCode requests.
  *
- * \ingroup CognitoIdentityProvider
+ * \inmodule QtAwsCognitoIdentityProvider
  *
  *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
  *  authenticate a user to obtain tokens related to user identity and access
@@ -47,9 +46,7 @@ namespace CognitoIdentityProvider {
  */
 
 /*!
- * @brief  Constructs a new GetUserAttributeVerificationCodeRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetUserAttributeVerificationCodeRequest::GetUserAttributeVerificationCodeRequest(const GetUserAttributeVerificationCodeRequest &other)
     : CognitoIdentityProviderRequest(new GetUserAttributeVerificationCodeRequestPrivate(*other.d_func(), this))
@@ -58,7 +55,7 @@ GetUserAttributeVerificationCodeRequest::GetUserAttributeVerificationCodeRequest
 }
 
 /*!
- * @brief  Constructs a new GetUserAttributeVerificationCodeRequest object.
+ * Constructs a GetUserAttributeVerificationCodeRequest object.
  */
 GetUserAttributeVerificationCodeRequest::GetUserAttributeVerificationCodeRequest()
     : CognitoIdentityProviderRequest(new GetUserAttributeVerificationCodeRequestPrivate(CognitoIdentityProviderRequest::GetUserAttributeVerificationCodeAction, this))
@@ -76,14 +73,9 @@ bool GetUserAttributeVerificationCodeRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetUserAttributeVerificationCodeResponse object.
+ * Returns a GetUserAttributeVerificationCodeResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetUserAttributeVerificationCodeResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CognitoIdentityProviderClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetUserAttributeVerificationCodeRequest::response(QNetworkReply * const reply) const
 {
@@ -91,20 +83,17 @@ QtAws::Core::AwsAbstractResponse * GetUserAttributeVerificationCodeRequest::resp
 }
 
 /*!
- * @internal
+ * \class QtAws::CognitoIdentityProvider::GetUserAttributeVerificationCodeRequestPrivate
+ * \brief The GetUserAttributeVerificationCodeRequestPrivate class provides private implementation for GetUserAttributeVerificationCodeRequest.
+ * \internal
  *
- * @class  GetUserAttributeVerificationCodeRequestPrivate
- *
- * @brief  Private implementation for GetUserAttributeVerificationCodeRequest.
+ * \inmodule QtAwsCognitoIdentityProvider
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetUserAttributeVerificationCodeRequestPrivate object.
- *
- * @param  action  CognitoIdentityProvider action being performed.
- * @param  q       Pointer to this object's public GetUserAttributeVerificationCodeRequest instance.
+ * Constructs a GetUserAttributeVerificationCodeRequestPrivate object for CognitoIdentityProvider \a action with,
+ * public implementation \a q.
  */
 GetUserAttributeVerificationCodeRequestPrivate::GetUserAttributeVerificationCodeRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, GetUserAttributeVerificationCodeRequest * const q)
@@ -114,15 +103,10 @@ GetUserAttributeVerificationCodeRequestPrivate::GetUserAttributeVerificationCode
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetUserAttributeVerificationCodeRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetUserAttributeVerificationCodeRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetUserAttributeVerificationCodeRequest instance.
  */
 GetUserAttributeVerificationCodeRequestPrivate::GetUserAttributeVerificationCodeRequestPrivate(
     const GetUserAttributeVerificationCodeRequestPrivate &other, GetUserAttributeVerificationCodeRequest * const q)

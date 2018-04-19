@@ -27,10 +27,9 @@ namespace ElasticBeanstalk {
 
 /*!
  * \class QtAws::ElasticBeanstalk::DeletePlatformVersionRequest
- *
  * \brief The DeletePlatformVersionRequest class provides an interface for ElasticBeanstalk DeletePlatformVersion requests.
  *
- * \ingroup ElasticBeanstalk
+ * \inmodule QtAwsElasticBeanstalk
  *
  *  <fullname>AWS Elastic Beanstalk</fullname>
  * 
@@ -59,9 +58,7 @@ namespace ElasticBeanstalk {
  */
 
 /*!
- * @brief  Constructs a new DeletePlatformVersionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeletePlatformVersionRequest::DeletePlatformVersionRequest(const DeletePlatformVersionRequest &other)
     : ElasticBeanstalkRequest(new DeletePlatformVersionRequestPrivate(*other.d_func(), this))
@@ -70,7 +67,7 @@ DeletePlatformVersionRequest::DeletePlatformVersionRequest(const DeletePlatformV
 }
 
 /*!
- * @brief  Constructs a new DeletePlatformVersionRequest object.
+ * Constructs a DeletePlatformVersionRequest object.
  */
 DeletePlatformVersionRequest::DeletePlatformVersionRequest()
     : ElasticBeanstalkRequest(new DeletePlatformVersionRequestPrivate(ElasticBeanstalkRequest::DeletePlatformVersionAction, this))
@@ -88,14 +85,9 @@ bool DeletePlatformVersionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeletePlatformVersionResponse object.
+ * Returns a DeletePlatformVersionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeletePlatformVersionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ElasticBeanstalkClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeletePlatformVersionRequest::response(QNetworkReply * const reply) const
 {
@@ -103,20 +95,17 @@ QtAws::Core::AwsAbstractResponse * DeletePlatformVersionRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::ElasticBeanstalk::DeletePlatformVersionRequestPrivate
+ * \brief The DeletePlatformVersionRequestPrivate class provides private implementation for DeletePlatformVersionRequest.
+ * \internal
  *
- * @class  DeletePlatformVersionRequestPrivate
- *
- * @brief  Private implementation for DeletePlatformVersionRequest.
+ * \inmodule QtAwsElasticBeanstalk
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeletePlatformVersionRequestPrivate object.
- *
- * @param  action  ElasticBeanstalk action being performed.
- * @param  q       Pointer to this object's public DeletePlatformVersionRequest instance.
+ * Constructs a DeletePlatformVersionRequestPrivate object for ElasticBeanstalk \a action with,
+ * public implementation \a q.
  */
 DeletePlatformVersionRequestPrivate::DeletePlatformVersionRequestPrivate(
     const ElasticBeanstalkRequest::Action action, DeletePlatformVersionRequest * const q)
@@ -126,15 +115,10 @@ DeletePlatformVersionRequestPrivate::DeletePlatformVersionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeletePlatformVersionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeletePlatformVersionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeletePlatformVersionRequest instance.
  */
 DeletePlatformVersionRequestPrivate::DeletePlatformVersionRequestPrivate(
     const DeletePlatformVersionRequestPrivate &other, DeletePlatformVersionRequest * const q)

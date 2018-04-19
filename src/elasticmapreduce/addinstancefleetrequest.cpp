@@ -27,10 +27,9 @@ namespace EMR {
 
 /*!
  * \class QtAws::EMR::AddInstanceFleetRequest
- *
  * \brief The AddInstanceFleetRequest class provides an interface for EMR AddInstanceFleet requests.
  *
- * \ingroup EMR
+ * \inmodule QtAwsEMR
  *
  *  Amazon EMR is a web service that makes it easy to process large amounts of data efficiently. Amazon EMR uses Hadoop
  *  processing combined with several AWS products to do tasks such as web indexing, data mining, log file analysis, machine
@@ -40,9 +39,7 @@ namespace EMR {
  */
 
 /*!
- * @brief  Constructs a new AddInstanceFleetRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AddInstanceFleetRequest::AddInstanceFleetRequest(const AddInstanceFleetRequest &other)
     : EMRRequest(new AddInstanceFleetRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ AddInstanceFleetRequest::AddInstanceFleetRequest(const AddInstanceFleetRequest &
 }
 
 /*!
- * @brief  Constructs a new AddInstanceFleetRequest object.
+ * Constructs a AddInstanceFleetRequest object.
  */
 AddInstanceFleetRequest::AddInstanceFleetRequest()
     : EMRRequest(new AddInstanceFleetRequestPrivate(EMRRequest::AddInstanceFleetAction, this))
@@ -69,14 +66,9 @@ bool AddInstanceFleetRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AddInstanceFleetResponse object.
+ * Returns a AddInstanceFleetResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AddInstanceFleetResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EMRClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AddInstanceFleetRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * AddInstanceFleetRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::EMR::AddInstanceFleetRequestPrivate
+ * \brief The AddInstanceFleetRequestPrivate class provides private implementation for AddInstanceFleetRequest.
+ * \internal
  *
- * @class  AddInstanceFleetRequestPrivate
- *
- * @brief  Private implementation for AddInstanceFleetRequest.
+ * \inmodule QtAwsEMR
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AddInstanceFleetRequestPrivate object.
- *
- * @param  action  EMR action being performed.
- * @param  q       Pointer to this object's public AddInstanceFleetRequest instance.
+ * Constructs a AddInstanceFleetRequestPrivate object for EMR \a action with,
+ * public implementation \a q.
  */
 AddInstanceFleetRequestPrivate::AddInstanceFleetRequestPrivate(
     const EMRRequest::Action action, AddInstanceFleetRequest * const q)
@@ -107,15 +96,10 @@ AddInstanceFleetRequestPrivate::AddInstanceFleetRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AddInstanceFleetRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AddInstanceFleetRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AddInstanceFleetRequest instance.
  */
 AddInstanceFleetRequestPrivate::AddInstanceFleetRequestPrivate(
     const AddInstanceFleetRequestPrivate &other, AddInstanceFleetRequest * const q)

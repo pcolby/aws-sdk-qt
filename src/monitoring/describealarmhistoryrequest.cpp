@@ -27,10 +27,9 @@ namespace CloudWatch {
 
 /*!
  * \class QtAws::CloudWatch::DescribeAlarmHistoryRequest
- *
  * \brief The DescribeAlarmHistoryRequest class provides an interface for CloudWatch DescribeAlarmHistory requests.
  *
- * \ingroup CloudWatch
+ * \inmodule QtAwsCloudWatch
  *
  *  Amazon CloudWatch monitors your Amazon Web Services (AWS) resources and the applications you run on AWS in real time.
  *  You can use CloudWatch to collect and track metrics, which are the variables you want to measure for your resources and
@@ -51,9 +50,7 @@ namespace CloudWatch {
  */
 
 /*!
- * @brief  Constructs a new DescribeAlarmHistoryRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeAlarmHistoryRequest::DescribeAlarmHistoryRequest(const DescribeAlarmHistoryRequest &other)
     : CloudWatchRequest(new DescribeAlarmHistoryRequestPrivate(*other.d_func(), this))
@@ -62,7 +59,7 @@ DescribeAlarmHistoryRequest::DescribeAlarmHistoryRequest(const DescribeAlarmHist
 }
 
 /*!
- * @brief  Constructs a new DescribeAlarmHistoryRequest object.
+ * Constructs a DescribeAlarmHistoryRequest object.
  */
 DescribeAlarmHistoryRequest::DescribeAlarmHistoryRequest()
     : CloudWatchRequest(new DescribeAlarmHistoryRequestPrivate(CloudWatchRequest::DescribeAlarmHistoryAction, this))
@@ -80,14 +77,9 @@ bool DescribeAlarmHistoryRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeAlarmHistoryResponse object.
+ * Returns a DescribeAlarmHistoryResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeAlarmHistoryResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudWatchClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeAlarmHistoryRequest::response(QNetworkReply * const reply) const
 {
@@ -95,20 +87,17 @@ QtAws::Core::AwsAbstractResponse * DescribeAlarmHistoryRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudWatch::DescribeAlarmHistoryRequestPrivate
+ * \brief The DescribeAlarmHistoryRequestPrivate class provides private implementation for DescribeAlarmHistoryRequest.
+ * \internal
  *
- * @class  DescribeAlarmHistoryRequestPrivate
- *
- * @brief  Private implementation for DescribeAlarmHistoryRequest.
+ * \inmodule QtAwsCloudWatch
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeAlarmHistoryRequestPrivate object.
- *
- * @param  action  CloudWatch action being performed.
- * @param  q       Pointer to this object's public DescribeAlarmHistoryRequest instance.
+ * Constructs a DescribeAlarmHistoryRequestPrivate object for CloudWatch \a action with,
+ * public implementation \a q.
  */
 DescribeAlarmHistoryRequestPrivate::DescribeAlarmHistoryRequestPrivate(
     const CloudWatchRequest::Action action, DescribeAlarmHistoryRequest * const q)
@@ -118,15 +107,10 @@ DescribeAlarmHistoryRequestPrivate::DescribeAlarmHistoryRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeAlarmHistoryRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeAlarmHistoryRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeAlarmHistoryRequest instance.
  */
 DescribeAlarmHistoryRequestPrivate::DescribeAlarmHistoryRequestPrivate(
     const DescribeAlarmHistoryRequestPrivate &other, DescribeAlarmHistoryRequest * const q)

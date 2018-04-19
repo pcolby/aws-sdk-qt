@@ -27,10 +27,9 @@ namespace CodeDeploy {
 
 /*!
  * \class QtAws::CodeDeploy::GetApplicationRevisionRequest
- *
  * \brief The GetApplicationRevisionRequest class provides an interface for CodeDeploy GetApplicationRevision requests.
  *
- * \ingroup CodeDeploy
+ * \inmodule QtAwsCodeDeploy
  *
  *  <fullname>AWS CodeDeploy</fullname>
  * 
@@ -118,9 +117,7 @@ namespace CodeDeploy {
  */
 
 /*!
- * @brief  Constructs a new GetApplicationRevisionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetApplicationRevisionRequest::GetApplicationRevisionRequest(const GetApplicationRevisionRequest &other)
     : CodeDeployRequest(new GetApplicationRevisionRequestPrivate(*other.d_func(), this))
@@ -129,7 +126,7 @@ GetApplicationRevisionRequest::GetApplicationRevisionRequest(const GetApplicatio
 }
 
 /*!
- * @brief  Constructs a new GetApplicationRevisionRequest object.
+ * Constructs a GetApplicationRevisionRequest object.
  */
 GetApplicationRevisionRequest::GetApplicationRevisionRequest()
     : CodeDeployRequest(new GetApplicationRevisionRequestPrivate(CodeDeployRequest::GetApplicationRevisionAction, this))
@@ -147,14 +144,9 @@ bool GetApplicationRevisionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetApplicationRevisionResponse object.
+ * Returns a GetApplicationRevisionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetApplicationRevisionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CodeDeployClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetApplicationRevisionRequest::response(QNetworkReply * const reply) const
 {
@@ -162,20 +154,17 @@ QtAws::Core::AwsAbstractResponse * GetApplicationRevisionRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::CodeDeploy::GetApplicationRevisionRequestPrivate
+ * \brief The GetApplicationRevisionRequestPrivate class provides private implementation for GetApplicationRevisionRequest.
+ * \internal
  *
- * @class  GetApplicationRevisionRequestPrivate
- *
- * @brief  Private implementation for GetApplicationRevisionRequest.
+ * \inmodule QtAwsCodeDeploy
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetApplicationRevisionRequestPrivate object.
- *
- * @param  action  CodeDeploy action being performed.
- * @param  q       Pointer to this object's public GetApplicationRevisionRequest instance.
+ * Constructs a GetApplicationRevisionRequestPrivate object for CodeDeploy \a action with,
+ * public implementation \a q.
  */
 GetApplicationRevisionRequestPrivate::GetApplicationRevisionRequestPrivate(
     const CodeDeployRequest::Action action, GetApplicationRevisionRequest * const q)
@@ -185,15 +174,10 @@ GetApplicationRevisionRequestPrivate::GetApplicationRevisionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetApplicationRevisionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetApplicationRevisionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetApplicationRevisionRequest instance.
  */
 GetApplicationRevisionRequestPrivate::GetApplicationRevisionRequestPrivate(
     const GetApplicationRevisionRequestPrivate &other, GetApplicationRevisionRequest * const q)

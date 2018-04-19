@@ -27,10 +27,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::DeleteSigningCertificateRequest
- *
  * \brief The DeleteSigningCertificateRequest class provides an interface for IAM DeleteSigningCertificate requests.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -102,9 +101,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new DeleteSigningCertificateRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteSigningCertificateRequest::DeleteSigningCertificateRequest(const DeleteSigningCertificateRequest &other)
     : IAMRequest(new DeleteSigningCertificateRequestPrivate(*other.d_func(), this))
@@ -113,7 +110,7 @@ DeleteSigningCertificateRequest::DeleteSigningCertificateRequest(const DeleteSig
 }
 
 /*!
- * @brief  Constructs a new DeleteSigningCertificateRequest object.
+ * Constructs a DeleteSigningCertificateRequest object.
  */
 DeleteSigningCertificateRequest::DeleteSigningCertificateRequest()
     : IAMRequest(new DeleteSigningCertificateRequestPrivate(IAMRequest::DeleteSigningCertificateAction, this))
@@ -131,14 +128,9 @@ bool DeleteSigningCertificateRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteSigningCertificateResponse object.
+ * Returns a DeleteSigningCertificateResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteSigningCertificateResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IAMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteSigningCertificateRequest::response(QNetworkReply * const reply) const
 {
@@ -146,20 +138,17 @@ QtAws::Core::AwsAbstractResponse * DeleteSigningCertificateRequest::response(QNe
 }
 
 /*!
- * @internal
+ * \class QtAws::IAM::DeleteSigningCertificateRequestPrivate
+ * \brief The DeleteSigningCertificateRequestPrivate class provides private implementation for DeleteSigningCertificateRequest.
+ * \internal
  *
- * @class  DeleteSigningCertificateRequestPrivate
- *
- * @brief  Private implementation for DeleteSigningCertificateRequest.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteSigningCertificateRequestPrivate object.
- *
- * @param  action  IAM action being performed.
- * @param  q       Pointer to this object's public DeleteSigningCertificateRequest instance.
+ * Constructs a DeleteSigningCertificateRequestPrivate object for IAM \a action with,
+ * public implementation \a q.
  */
 DeleteSigningCertificateRequestPrivate::DeleteSigningCertificateRequestPrivate(
     const IAMRequest::Action action, DeleteSigningCertificateRequest * const q)
@@ -169,15 +158,10 @@ DeleteSigningCertificateRequestPrivate::DeleteSigningCertificateRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteSigningCertificateRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteSigningCertificateRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteSigningCertificateRequest instance.
  */
 DeleteSigningCertificateRequestPrivate::DeleteSigningCertificateRequestPrivate(
     const DeleteSigningCertificateRequestPrivate &other, DeleteSigningCertificateRequest * const q)

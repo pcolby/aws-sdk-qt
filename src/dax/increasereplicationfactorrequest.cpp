@@ -27,10 +27,9 @@ namespace DAX {
 
 /*!
  * \class QtAws::DAX::IncreaseReplicationFactorRequest
- *
  * \brief The IncreaseReplicationFactorRequest class provides an interface for DAX IncreaseReplicationFactor requests.
  *
- * \ingroup DAX
+ * \inmodule QtAwsDAX
  *
  *  DAX is a managed caching service engineered for Amazon DynamoDB. DAX dramatically speeds up database reads by caching
  *  frequently-accessed data from DynamoDB, so applications can access that data with sub-millisecond latency. You can
@@ -41,9 +40,7 @@ namespace DAX {
  */
 
 /*!
- * @brief  Constructs a new IncreaseReplicationFactorRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 IncreaseReplicationFactorRequest::IncreaseReplicationFactorRequest(const IncreaseReplicationFactorRequest &other)
     : DAXRequest(new IncreaseReplicationFactorRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ IncreaseReplicationFactorRequest::IncreaseReplicationFactorRequest(const Increas
 }
 
 /*!
- * @brief  Constructs a new IncreaseReplicationFactorRequest object.
+ * Constructs a IncreaseReplicationFactorRequest object.
  */
 IncreaseReplicationFactorRequest::IncreaseReplicationFactorRequest()
     : DAXRequest(new IncreaseReplicationFactorRequestPrivate(DAXRequest::IncreaseReplicationFactorAction, this))
@@ -70,14 +67,9 @@ bool IncreaseReplicationFactorRequest::isValid() const
 
 
 /*!
- * @brief  Construct an IncreaseReplicationFactorResponse object.
+ * Returns a IncreaseReplicationFactorResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An IncreaseReplicationFactorResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DAXClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * IncreaseReplicationFactorRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * IncreaseReplicationFactorRequest::response(QN
 }
 
 /*!
- * @internal
+ * \class QtAws::DAX::IncreaseReplicationFactorRequestPrivate
+ * \brief The IncreaseReplicationFactorRequestPrivate class provides private implementation for IncreaseReplicationFactorRequest.
+ * \internal
  *
- * @class  IncreaseReplicationFactorRequestPrivate
- *
- * @brief  Private implementation for IncreaseReplicationFactorRequest.
+ * \inmodule QtAwsDAX
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new IncreaseReplicationFactorRequestPrivate object.
- *
- * @param  action  DAX action being performed.
- * @param  q       Pointer to this object's public IncreaseReplicationFactorRequest instance.
+ * Constructs a IncreaseReplicationFactorRequestPrivate object for DAX \a action with,
+ * public implementation \a q.
  */
 IncreaseReplicationFactorRequestPrivate::IncreaseReplicationFactorRequestPrivate(
     const DAXRequest::Action action, IncreaseReplicationFactorRequest * const q)
@@ -108,15 +97,10 @@ IncreaseReplicationFactorRequestPrivate::IncreaseReplicationFactorRequestPrivate
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new IncreaseReplicationFactorRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the IncreaseReplicationFactorRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public IncreaseReplicationFactorRequest instance.
  */
 IncreaseReplicationFactorRequestPrivate::IncreaseReplicationFactorRequestPrivate(
     const IncreaseReplicationFactorRequestPrivate &other, IncreaseReplicationFactorRequest * const q)

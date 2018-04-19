@@ -27,19 +27,16 @@ namespace KinesisAnalytics {
 
 /*!
  * \class QtAws::KinesisAnalytics::StopApplicationRequest
- *
  * \brief The StopApplicationRequest class provides an interface for KinesisAnalytics StopApplication requests.
  *
- * \ingroup KinesisAnalytics
+ * \inmodule QtAwsKinesisAnalytics
  *
  *
  * \sa KinesisAnalyticsClient::stopApplication
  */
 
 /*!
- * @brief  Constructs a new StopApplicationRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 StopApplicationRequest::StopApplicationRequest(const StopApplicationRequest &other)
     : KinesisAnalyticsRequest(new StopApplicationRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ StopApplicationRequest::StopApplicationRequest(const StopApplicationRequest &oth
 }
 
 /*!
- * @brief  Constructs a new StopApplicationRequest object.
+ * Constructs a StopApplicationRequest object.
  */
 StopApplicationRequest::StopApplicationRequest()
     : KinesisAnalyticsRequest(new StopApplicationRequestPrivate(KinesisAnalyticsRequest::StopApplicationAction, this))
@@ -66,14 +63,9 @@ bool StopApplicationRequest::isValid() const
 
 
 /*!
- * @brief  Construct an StopApplicationResponse object.
+ * Returns a StopApplicationResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An StopApplicationResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  KinesisAnalyticsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * StopApplicationRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * StopApplicationRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::KinesisAnalytics::StopApplicationRequestPrivate
+ * \brief The StopApplicationRequestPrivate class provides private implementation for StopApplicationRequest.
+ * \internal
  *
- * @class  StopApplicationRequestPrivate
- *
- * @brief  Private implementation for StopApplicationRequest.
+ * \inmodule QtAwsKinesisAnalytics
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new StopApplicationRequestPrivate object.
- *
- * @param  action  KinesisAnalytics action being performed.
- * @param  q       Pointer to this object's public StopApplicationRequest instance.
+ * Constructs a StopApplicationRequestPrivate object for KinesisAnalytics \a action with,
+ * public implementation \a q.
  */
 StopApplicationRequestPrivate::StopApplicationRequestPrivate(
     const KinesisAnalyticsRequest::Action action, StopApplicationRequest * const q)
@@ -104,15 +93,10 @@ StopApplicationRequestPrivate::StopApplicationRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StopApplicationRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the StopApplicationRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public StopApplicationRequest instance.
  */
 StopApplicationRequestPrivate::StopApplicationRequestPrivate(
     const StopApplicationRequestPrivate &other, StopApplicationRequest * const q)

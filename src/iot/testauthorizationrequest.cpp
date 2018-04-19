@@ -27,10 +27,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::TestAuthorizationRequest
- *
  * \brief The TestAuthorizationRequest class provides an interface for IoT TestAuthorization requests.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -48,9 +47,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new TestAuthorizationRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 TestAuthorizationRequest::TestAuthorizationRequest(const TestAuthorizationRequest &other)
     : IoTRequest(new TestAuthorizationRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ TestAuthorizationRequest::TestAuthorizationRequest(const TestAuthorizationReques
 }
 
 /*!
- * @brief  Constructs a new TestAuthorizationRequest object.
+ * Constructs a TestAuthorizationRequest object.
  */
 TestAuthorizationRequest::TestAuthorizationRequest()
     : IoTRequest(new TestAuthorizationRequestPrivate(IoTRequest::TestAuthorizationAction, this))
@@ -77,14 +74,9 @@ bool TestAuthorizationRequest::isValid() const
 
 
 /*!
- * @brief  Construct an TestAuthorizationResponse object.
+ * Returns a TestAuthorizationResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An TestAuthorizationResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IoTClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * TestAuthorizationRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * TestAuthorizationRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::IoT::TestAuthorizationRequestPrivate
+ * \brief The TestAuthorizationRequestPrivate class provides private implementation for TestAuthorizationRequest.
+ * \internal
  *
- * @class  TestAuthorizationRequestPrivate
- *
- * @brief  Private implementation for TestAuthorizationRequest.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new TestAuthorizationRequestPrivate object.
- *
- * @param  action  IoT action being performed.
- * @param  q       Pointer to this object's public TestAuthorizationRequest instance.
+ * Constructs a TestAuthorizationRequestPrivate object for IoT \a action with,
+ * public implementation \a q.
  */
 TestAuthorizationRequestPrivate::TestAuthorizationRequestPrivate(
     const IoTRequest::Action action, TestAuthorizationRequest * const q)
@@ -115,15 +104,10 @@ TestAuthorizationRequestPrivate::TestAuthorizationRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new TestAuthorizationRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the TestAuthorizationRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public TestAuthorizationRequest instance.
  */
 TestAuthorizationRequestPrivate::TestAuthorizationRequestPrivate(
     const TestAuthorizationRequestPrivate &other, TestAuthorizationRequest * const q)

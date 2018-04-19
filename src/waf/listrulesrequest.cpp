@@ -27,10 +27,9 @@ namespace WAF {
 
 /*!
  * \class QtAws::WAF::ListRulesRequest
- *
  * \brief The ListRulesRequest class provides an interface for WAF ListRules requests.
  *
- * \ingroup WAF
+ * \inmodule QtAwsWAF
  *
  *  This is the <i>AWS WAF API Reference</i> for using AWS WAF with Amazon CloudFront. The AWS WAF actions and data types
  *  listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data
@@ -42,9 +41,7 @@ namespace WAF {
  */
 
 /*!
- * @brief  Constructs a new ListRulesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListRulesRequest::ListRulesRequest(const ListRulesRequest &other)
     : WAFRequest(new ListRulesRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ ListRulesRequest::ListRulesRequest(const ListRulesRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ListRulesRequest object.
+ * Constructs a ListRulesRequest object.
  */
 ListRulesRequest::ListRulesRequest()
     : WAFRequest(new ListRulesRequestPrivate(WAFRequest::ListRulesAction, this))
@@ -71,14 +68,9 @@ bool ListRulesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListRulesResponse object.
+ * Returns a ListRulesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListRulesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WAFClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListRulesRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * ListRulesRequest::response(QNetworkReply * co
 }
 
 /*!
- * @internal
+ * \class QtAws::WAF::ListRulesRequestPrivate
+ * \brief The ListRulesRequestPrivate class provides private implementation for ListRulesRequest.
+ * \internal
  *
- * @class  ListRulesRequestPrivate
- *
- * @brief  Private implementation for ListRulesRequest.
+ * \inmodule QtAwsWAF
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListRulesRequestPrivate object.
- *
- * @param  action  WAF action being performed.
- * @param  q       Pointer to this object's public ListRulesRequest instance.
+ * Constructs a ListRulesRequestPrivate object for WAF \a action with,
+ * public implementation \a q.
  */
 ListRulesRequestPrivate::ListRulesRequestPrivate(
     const WAFRequest::Action action, ListRulesRequest * const q)
@@ -109,15 +98,10 @@ ListRulesRequestPrivate::ListRulesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListRulesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListRulesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListRulesRequest instance.
  */
 ListRulesRequestPrivate::ListRulesRequestPrivate(
     const ListRulesRequestPrivate &other, ListRulesRequest * const q)

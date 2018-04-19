@@ -25,16 +25,141 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::APIGatewayRequest
- *
  * \brief The APIGatewayRequest class provides an interface for APIGateway requests.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @brief  Constructs a new APIGatewayRequest object.
+ * \enum APIGatewayRequest::Action
  *
- * @param  action  The APIGateway action to request.
+ * This enum describes the actions that can be performed as APIGateway
+ * requests.
+ *
+ * \value CreateApiKeyAction APIGateway CreateApiKey action.
+ * \value CreateAuthorizerAction APIGateway CreateAuthorizer action.
+ * \value CreateBasePathMappingAction APIGateway CreateBasePathMapping action.
+ * \value CreateDeploymentAction APIGateway CreateDeployment action.
+ * \value CreateDocumentationPartAction APIGateway CreateDocumentationPart action.
+ * \value CreateDocumentationVersionAction APIGateway CreateDocumentationVersion action.
+ * \value CreateDomainNameAction APIGateway CreateDomainName action.
+ * \value CreateModelAction APIGateway CreateModel action.
+ * \value CreateRequestValidatorAction APIGateway CreateRequestValidator action.
+ * \value CreateResourceAction APIGateway CreateResource action.
+ * \value CreateRestApiAction APIGateway CreateRestApi action.
+ * \value CreateStageAction APIGateway CreateStage action.
+ * \value CreateUsagePlanAction APIGateway CreateUsagePlan action.
+ * \value CreateUsagePlanKeyAction APIGateway CreateUsagePlanKey action.
+ * \value CreateVpcLinkAction APIGateway CreateVpcLink action.
+ * \value DeleteApiKeyAction APIGateway DeleteApiKey action.
+ * \value DeleteAuthorizerAction APIGateway DeleteAuthorizer action.
+ * \value DeleteBasePathMappingAction APIGateway DeleteBasePathMapping action.
+ * \value DeleteClientCertificateAction APIGateway DeleteClientCertificate action.
+ * \value DeleteDeploymentAction APIGateway DeleteDeployment action.
+ * \value DeleteDocumentationPartAction APIGateway DeleteDocumentationPart action.
+ * \value DeleteDocumentationVersionAction APIGateway DeleteDocumentationVersion action.
+ * \value DeleteDomainNameAction APIGateway DeleteDomainName action.
+ * \value DeleteGatewayResponseAction APIGateway DeleteGatewayResponse action.
+ * \value DeleteIntegrationAction APIGateway DeleteIntegration action.
+ * \value DeleteIntegrationResponseAction APIGateway DeleteIntegrationResponse action.
+ * \value DeleteMethodAction APIGateway DeleteMethod action.
+ * \value DeleteMethodResponseAction APIGateway DeleteMethodResponse action.
+ * \value DeleteModelAction APIGateway DeleteModel action.
+ * \value DeleteRequestValidatorAction APIGateway DeleteRequestValidator action.
+ * \value DeleteResourceAction APIGateway DeleteResource action.
+ * \value DeleteRestApiAction APIGateway DeleteRestApi action.
+ * \value DeleteStageAction APIGateway DeleteStage action.
+ * \value DeleteUsagePlanAction APIGateway DeleteUsagePlan action.
+ * \value DeleteUsagePlanKeyAction APIGateway DeleteUsagePlanKey action.
+ * \value DeleteVpcLinkAction APIGateway DeleteVpcLink action.
+ * \value FlushStageAuthorizersCacheAction APIGateway FlushStageAuthorizersCache action.
+ * \value FlushStageCacheAction APIGateway FlushStageCache action.
+ * \value GenerateClientCertificateAction APIGateway GenerateClientCertificate action.
+ * \value GetAccountAction APIGateway GetAccount action.
+ * \value GetApiKeyAction APIGateway GetApiKey action.
+ * \value GetApiKeysAction APIGateway GetApiKeys action.
+ * \value GetAuthorizerAction APIGateway GetAuthorizer action.
+ * \value GetAuthorizersAction APIGateway GetAuthorizers action.
+ * \value GetBasePathMappingAction APIGateway GetBasePathMapping action.
+ * \value GetBasePathMappingsAction APIGateway GetBasePathMappings action.
+ * \value GetClientCertificateAction APIGateway GetClientCertificate action.
+ * \value GetClientCertificatesAction APIGateway GetClientCertificates action.
+ * \value GetDeploymentAction APIGateway GetDeployment action.
+ * \value GetDeploymentsAction APIGateway GetDeployments action.
+ * \value GetDocumentationPartAction APIGateway GetDocumentationPart action.
+ * \value GetDocumentationPartsAction APIGateway GetDocumentationParts action.
+ * \value GetDocumentationVersionAction APIGateway GetDocumentationVersion action.
+ * \value GetDocumentationVersionsAction APIGateway GetDocumentationVersions action.
+ * \value GetDomainNameAction APIGateway GetDomainName action.
+ * \value GetDomainNamesAction APIGateway GetDomainNames action.
+ * \value GetExportAction APIGateway GetExport action.
+ * \value GetGatewayResponseAction APIGateway GetGatewayResponse action.
+ * \value GetGatewayResponsesAction APIGateway GetGatewayResponses action.
+ * \value GetIntegrationAction APIGateway GetIntegration action.
+ * \value GetIntegrationResponseAction APIGateway GetIntegrationResponse action.
+ * \value GetMethodAction APIGateway GetMethod action.
+ * \value GetMethodResponseAction APIGateway GetMethodResponse action.
+ * \value GetModelAction APIGateway GetModel action.
+ * \value GetModelTemplateAction APIGateway GetModelTemplate action.
+ * \value GetModelsAction APIGateway GetModels action.
+ * \value GetRequestValidatorAction APIGateway GetRequestValidator action.
+ * \value GetRequestValidatorsAction APIGateway GetRequestValidators action.
+ * \value GetResourceAction APIGateway GetResource action.
+ * \value GetResourcesAction APIGateway GetResources action.
+ * \value GetRestApiAction APIGateway GetRestApi action.
+ * \value GetRestApisAction APIGateway GetRestApis action.
+ * \value GetSdkAction APIGateway GetSdk action.
+ * \value GetSdkTypeAction APIGateway GetSdkType action.
+ * \value GetSdkTypesAction APIGateway GetSdkTypes action.
+ * \value GetStageAction APIGateway GetStage action.
+ * \value GetStagesAction APIGateway GetStages action.
+ * \value GetTagsAction APIGateway GetTags action.
+ * \value GetUsageAction APIGateway GetUsage action.
+ * \value GetUsagePlanAction APIGateway GetUsagePlan action.
+ * \value GetUsagePlanKeyAction APIGateway GetUsagePlanKey action.
+ * \value GetUsagePlanKeysAction APIGateway GetUsagePlanKeys action.
+ * \value GetUsagePlansAction APIGateway GetUsagePlans action.
+ * \value GetVpcLinkAction APIGateway GetVpcLink action.
+ * \value GetVpcLinksAction APIGateway GetVpcLinks action.
+ * \value ImportApiKeysAction APIGateway ImportApiKeys action.
+ * \value ImportDocumentationPartsAction APIGateway ImportDocumentationParts action.
+ * \value ImportRestApiAction APIGateway ImportRestApi action.
+ * \value PutGatewayResponseAction APIGateway PutGatewayResponse action.
+ * \value PutIntegrationAction APIGateway PutIntegration action.
+ * \value PutIntegrationResponseAction APIGateway PutIntegrationResponse action.
+ * \value PutMethodAction APIGateway PutMethod action.
+ * \value PutMethodResponseAction APIGateway PutMethodResponse action.
+ * \value PutRestApiAction APIGateway PutRestApi action.
+ * \value TagResourceAction APIGateway TagResource action.
+ * \value TestInvokeAuthorizerAction APIGateway TestInvokeAuthorizer action.
+ * \value TestInvokeMethodAction APIGateway TestInvokeMethod action.
+ * \value UntagResourceAction APIGateway UntagResource action.
+ * \value UpdateAccountAction APIGateway UpdateAccount action.
+ * \value UpdateApiKeyAction APIGateway UpdateApiKey action.
+ * \value UpdateAuthorizerAction APIGateway UpdateAuthorizer action.
+ * \value UpdateBasePathMappingAction APIGateway UpdateBasePathMapping action.
+ * \value UpdateClientCertificateAction APIGateway UpdateClientCertificate action.
+ * \value UpdateDeploymentAction APIGateway UpdateDeployment action.
+ * \value UpdateDocumentationPartAction APIGateway UpdateDocumentationPart action.
+ * \value UpdateDocumentationVersionAction APIGateway UpdateDocumentationVersion action.
+ * \value UpdateDomainNameAction APIGateway UpdateDomainName action.
+ * \value UpdateGatewayResponseAction APIGateway UpdateGatewayResponse action.
+ * \value UpdateIntegrationAction APIGateway UpdateIntegration action.
+ * \value UpdateIntegrationResponseAction APIGateway UpdateIntegrationResponse action.
+ * \value UpdateMethodAction APIGateway UpdateMethod action.
+ * \value UpdateMethodResponseAction APIGateway UpdateMethodResponse action.
+ * \value UpdateModelAction APIGateway UpdateModel action.
+ * \value UpdateRequestValidatorAction APIGateway UpdateRequestValidator action.
+ * \value UpdateResourceAction APIGateway UpdateResource action.
+ * \value UpdateRestApiAction APIGateway UpdateRestApi action.
+ * \value UpdateStageAction APIGateway UpdateStage action.
+ * \value UpdateUsageAction APIGateway UpdateUsage action.
+ * \value UpdateUsagePlanAction APIGateway UpdateUsagePlan action.
+ * \value UpdateVpcLinkAction APIGateway UpdateVpcLink action.
+ */
+
+/*!
+ * Constructs a[n] APIGatewayRequest object for APIGateway \a action.
  */
 APIGatewayRequest::APIGatewayRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new APIGatewayRequestPrivate(action, this))
@@ -43,9 +168,7 @@ APIGatewayRequest::APIGatewayRequest(const Action action)
 }
 
 /*!
- * @brief  Constructs a new APIGatewayRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 APIGatewayRequest::APIGatewayRequest(const APIGatewayRequest &other)
     : QtAws::Core::AwsAbstractRequest(new APIGatewayRequestPrivate(*other.d_func(), this))
@@ -54,13 +177,7 @@ APIGatewayRequest::APIGatewayRequest(const APIGatewayRequest &other)
 }
 
 /*!
- * @brief  Assignment operator.
- *
- * Assigns \a other to \c this.
- *
- * @param  other  Instance to copy.
- *
- * @return  A reference to \c this.
+ * Sets the APIGatewayRequest object to be equal to \a other.
  */
 APIGatewayRequest& APIGatewayRequest::operator=(const APIGatewayRequest &other)
 {
@@ -72,14 +189,10 @@ APIGatewayRequest& APIGatewayRequest::operator=(const APIGatewayRequest &other)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new APIGatewayRequest object.
+ * Constructs aa APIGatewayRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from APIGatewayRequestPrivate.
- *
- * @param  d  Pointer to private data (aka D-Pointer).
  */
 APIGatewayRequest::APIGatewayRequest(APIGatewayRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
@@ -87,7 +200,7 @@ APIGatewayRequest::APIGatewayRequest(APIGatewayRequestPrivate * const d) : QtAws
 }
 
 /*!
- * \brief Returns the APIGateway action to be performed by this request.
+ * Returns the APIGateway action to be performed by this request.
  */
 APIGatewayRequest::Action APIGatewayRequest::action() const
 {
@@ -96,7 +209,7 @@ APIGatewayRequest::Action APIGatewayRequest::action() const
 }
 
 /*!
- * \brief Returns the name of the APIGateway action to be performed by this request.
+ * Returns the name of the APIGateway action to be performed by this request.
  */
 QString APIGatewayRequest::actionString() const
 {
@@ -104,7 +217,7 @@ QString APIGatewayRequest::actionString() const
 }
 
 /*!
- * \brief Returns the APIGateway API version implemented by this request.
+ * Returns the APIGateway API version implemented by this request.
  */
 QString APIGatewayRequest::apiVersion() const
 {
@@ -113,7 +226,7 @@ QString APIGatewayRequest::apiVersion() const
 }
 
 /*!
- * @brief Set the APIGateway action to be performed by this request to \a action.
+ * Sets the APIGateway action to be performed by this request to \a action.
  */
 void APIGatewayRequest::setAction(const Action action)
 {
@@ -122,7 +235,7 @@ void APIGatewayRequest::setAction(const Action action)
 }
 
 /*!
- * Set the APIGateway API version to include in this request to \a version.
+ * Sets the APIGateway API version to include in this request to \a version.
  */
 void APIGatewayRequest::setApiVersion(const QString &version)
 {
@@ -131,7 +244,7 @@ void APIGatewayRequest::setApiVersion(const QString &version)
 }
 
 /*!
- * \brief Returns \c true if this request is the same as \a other.
+ * Returns \c true if this request is equal to \a other; \c false otherwise.
  *
  * Note, most derived *Request classes do not need to provider their own
  * implementations of this function, since most such request classes rely on
@@ -146,8 +259,8 @@ bool APIGatewayRequest::operator==(const APIGatewayRequest &other) const
             (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
-/*!
- * @brief  Check if \a queueName is a valid APIGateway queue name.
+/*
+ * Returns \c tue if \a queueName is a valid APIGateway queue name.
  *
  * @par From APIGateway FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
@@ -166,9 +279,8 @@ bool APIGatewayRequest::operator==(const APIGatewayRequest &other) const
 }*/
 
 /*!
- * \brief Removes the a \a name parameter from this request.
- *
- * Returns the count of paramters removed (typically \c 0 or \c 1).
+ * Removes the a \a name parameter from the request, then returns the number of
+ * paramters removed (typically \c 0 or \c 1).
  */
 int APIGatewayRequest::clearParameter(const QString &name)
 {
@@ -177,7 +289,7 @@ int APIGatewayRequest::clearParameter(const QString &name)
 }
 
 /*!
- * \brief Removes all parameters from this request.
+ * Removes all parameters from the request.
  */
 void APIGatewayRequest::clearParameters()
 {
@@ -186,7 +298,7 @@ void APIGatewayRequest::clearParameters()
 }
 
 /*!
- * \brief Returns the value of the \n name pararemter if set, otherwise \a defaultValue.
+ * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
 QVariant APIGatewayRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
@@ -195,7 +307,7 @@ QVariant APIGatewayRequest::parameter(const QString &name, const QVariant &defau
 }
 
 /*!
- * \brief Returns a map of parameters included in this request.
+ * Returns the parameters included in this request.
  */
 const QVariantMap &APIGatewayRequest::parameters() const
 {
@@ -204,7 +316,7 @@ const QVariantMap &APIGatewayRequest::parameters() const
 }
 
 /*!
- * \brief Sets the \a name parameter to \a value.
+ * Sets the \a name parameter to \a value.
  */
 void APIGatewayRequest::setParameter(const QString &name, const QVariant &value)
 {
@@ -213,9 +325,8 @@ void APIGatewayRequest::setParameter(const QString &name, const QVariant &value)
 }
 
 /*!
- * \brief Sets the map of paramters for this request to \a parameters.
- *
- * Any request parameters set previously will be discarded.
+ * Sets the paramters for this request to \a parameters. Any request parameters
+ * set previously will be discarded.
  */
 void APIGatewayRequest::setParameters(const QVariantMap &parameters)
 {
@@ -224,11 +335,12 @@ void APIGatewayRequest::setParameters(const QVariantMap &parameters)
 }
 
 /*!
- * \brief Returns a network request for this APIGateway request using the given \a endpoint.
+ * Returns a network request for the APIGateway request using the given
+ * \a endpoint.
  *
- * This APIGateway implementation builds request URLs by combining the common query
- * parameters (such as Action and Version), with any that have been added (via
- * setParameter) by child classes.
+ * This APIGateway implementation builds request URLs by combining the
+ * common query parameters (such as Action and Version), with any that have
+ * been added (via setParameter) by child classes.
  */
 QNetworkRequest APIGatewayRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -239,17 +351,16 @@ QNetworkRequest APIGatewayRequest::unsignedRequest(const QUrl &endpoint) const
 }
 
 /*!
+ * \class QtAws::APIGateway::APIGatewayRequestPrivate
+ * \brief The APIGatewayRequestPrivate class provides private implementation for APIGatewayRequest.
  * \internal
  *
- * \class  APIGatewayRequestPrivate
- *
- * \brief  Private implementation for APIGatewayRequest.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * \internal
- *
- * \brief Constructs a new APIGatewayRequestPrivate object.
+ * Constructs a APIGatewayRequestPrivate object for APIGateway \a action with,
+ * public implementation \a q.
  */
 APIGatewayRequestPrivate::APIGatewayRequestPrivate(const APIGatewayRequest::Action action, APIGatewayRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
@@ -258,9 +369,7 @@ APIGatewayRequestPrivate::APIGatewayRequestPrivate(const APIGatewayRequest::Acti
 }
 
 /*!
- * \internal
- *
- * \brief Constructs a new APIGatewayRequestPrivate object, copying an existing one.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
@@ -276,15 +385,12 @@ APIGatewayRequestPrivate::APIGatewayRequestPrivate(const APIGatewayRequestPrivat
 }
 
 /*!
- * \internal
- *
- * \brief Returns a string representing \a action.
+ * Returns a string represention of \a action, or a null string if \a action is
+ * invalid.
  *
  * This function converts APIGatewayRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the APIGateway service's Action
  * query parameters.
- *
- * @return A string representing \a action, or a null string if \a action is invalid.
  */
 QString APIGatewayRequestPrivate::toString(const APIGatewayRequest::Action &action)
 {

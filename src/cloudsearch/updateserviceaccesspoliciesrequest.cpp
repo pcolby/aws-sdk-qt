@@ -27,10 +27,9 @@ namespace CloudSearch {
 
 /*!
  * \class QtAws::CloudSearch::UpdateServiceAccessPoliciesRequest
- *
  * \brief The UpdateServiceAccessPoliciesRequest class provides an interface for CloudSearch UpdateServiceAccessPolicies requests.
  *
- * \ingroup CloudSearch
+ * \inmodule QtAwsCloudSearch
  *
  *  <fullname>Amazon CloudSearch Configuration Service</fullname>
  * 
@@ -48,9 +47,7 @@ namespace CloudSearch {
  */
 
 /*!
- * @brief  Constructs a new UpdateServiceAccessPoliciesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateServiceAccessPoliciesRequest::UpdateServiceAccessPoliciesRequest(const UpdateServiceAccessPoliciesRequest &other)
     : CloudSearchRequest(new UpdateServiceAccessPoliciesRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ UpdateServiceAccessPoliciesRequest::UpdateServiceAccessPoliciesRequest(const Upd
 }
 
 /*!
- * @brief  Constructs a new UpdateServiceAccessPoliciesRequest object.
+ * Constructs a UpdateServiceAccessPoliciesRequest object.
  */
 UpdateServiceAccessPoliciesRequest::UpdateServiceAccessPoliciesRequest()
     : CloudSearchRequest(new UpdateServiceAccessPoliciesRequestPrivate(CloudSearchRequest::UpdateServiceAccessPoliciesAction, this))
@@ -77,14 +74,9 @@ bool UpdateServiceAccessPoliciesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateServiceAccessPoliciesResponse object.
+ * Returns a UpdateServiceAccessPoliciesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateServiceAccessPoliciesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudSearchClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateServiceAccessPoliciesRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * UpdateServiceAccessPoliciesRequest::response(
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudSearch::UpdateServiceAccessPoliciesRequestPrivate
+ * \brief The UpdateServiceAccessPoliciesRequestPrivate class provides private implementation for UpdateServiceAccessPoliciesRequest.
+ * \internal
  *
- * @class  UpdateServiceAccessPoliciesRequestPrivate
- *
- * @brief  Private implementation for UpdateServiceAccessPoliciesRequest.
+ * \inmodule QtAwsCloudSearch
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateServiceAccessPoliciesRequestPrivate object.
- *
- * @param  action  CloudSearch action being performed.
- * @param  q       Pointer to this object's public UpdateServiceAccessPoliciesRequest instance.
+ * Constructs a UpdateServiceAccessPoliciesRequestPrivate object for CloudSearch \a action with,
+ * public implementation \a q.
  */
 UpdateServiceAccessPoliciesRequestPrivate::UpdateServiceAccessPoliciesRequestPrivate(
     const CloudSearchRequest::Action action, UpdateServiceAccessPoliciesRequest * const q)
@@ -115,15 +104,10 @@ UpdateServiceAccessPoliciesRequestPrivate::UpdateServiceAccessPoliciesRequestPri
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateServiceAccessPoliciesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateServiceAccessPoliciesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateServiceAccessPoliciesRequest instance.
  */
 UpdateServiceAccessPoliciesRequestPrivate::UpdateServiceAccessPoliciesRequestPrivate(
     const UpdateServiceAccessPoliciesRequestPrivate &other, UpdateServiceAccessPoliciesRequest * const q)

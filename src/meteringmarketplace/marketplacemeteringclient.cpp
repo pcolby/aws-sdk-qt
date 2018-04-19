@@ -34,6 +34,9 @@
 /*!
  * \namespace QtAws::MarketplaceMetering
  * \brief The QtAws::MarketplaceMetering contains stuff...
+ *
+ * \inmodule QtAwsMarketplaceMetering
+ *
  * @todo Move this to a separate template file.
  */
 
@@ -113,7 +116,7 @@ MarketplaceMeteringClient::MarketplaceMeteringClient(
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * \a  AwsEndpoint::getEndpoint()
+ * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
 MarketplaceMeteringClient::MarketplaceMeteringClient(
     const QUrl &endpoint,

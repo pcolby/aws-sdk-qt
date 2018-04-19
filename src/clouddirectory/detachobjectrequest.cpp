@@ -27,10 +27,9 @@ namespace CloudDirectory {
 
 /*!
  * \class QtAws::CloudDirectory::DetachObjectRequest
- *
  * \brief The DetachObjectRequest class provides an interface for CloudDirectory DetachObject requests.
  *
- * \ingroup CloudDirectory
+ * \inmodule QtAwsCloudDirectory
  *
  *  <fullname>Amazon Cloud Directory</fullname>
  * 
@@ -44,9 +43,7 @@ namespace CloudDirectory {
  */
 
 /*!
- * @brief  Constructs a new DetachObjectRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DetachObjectRequest::DetachObjectRequest(const DetachObjectRequest &other)
     : CloudDirectoryRequest(new DetachObjectRequestPrivate(*other.d_func(), this))
@@ -55,7 +52,7 @@ DetachObjectRequest::DetachObjectRequest(const DetachObjectRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DetachObjectRequest object.
+ * Constructs a DetachObjectRequest object.
  */
 DetachObjectRequest::DetachObjectRequest()
     : CloudDirectoryRequest(new DetachObjectRequestPrivate(CloudDirectoryRequest::DetachObjectAction, this))
@@ -73,14 +70,9 @@ bool DetachObjectRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DetachObjectResponse object.
+ * Returns a DetachObjectResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DetachObjectResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudDirectoryClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DetachObjectRequest::response(QNetworkReply * const reply) const
 {
@@ -88,20 +80,17 @@ QtAws::Core::AwsAbstractResponse * DetachObjectRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudDirectory::DetachObjectRequestPrivate
+ * \brief The DetachObjectRequestPrivate class provides private implementation for DetachObjectRequest.
+ * \internal
  *
- * @class  DetachObjectRequestPrivate
- *
- * @brief  Private implementation for DetachObjectRequest.
+ * \inmodule QtAwsCloudDirectory
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DetachObjectRequestPrivate object.
- *
- * @param  action  CloudDirectory action being performed.
- * @param  q       Pointer to this object's public DetachObjectRequest instance.
+ * Constructs a DetachObjectRequestPrivate object for CloudDirectory \a action with,
+ * public implementation \a q.
  */
 DetachObjectRequestPrivate::DetachObjectRequestPrivate(
     const CloudDirectoryRequest::Action action, DetachObjectRequest * const q)
@@ -111,15 +100,10 @@ DetachObjectRequestPrivate::DetachObjectRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DetachObjectRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DetachObjectRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DetachObjectRequest instance.
  */
 DetachObjectRequestPrivate::DetachObjectRequestPrivate(
     const DetachObjectRequestPrivate &other, DetachObjectRequest * const q)

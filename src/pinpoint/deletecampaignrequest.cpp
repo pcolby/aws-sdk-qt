@@ -27,19 +27,16 @@ namespace Pinpoint {
 
 /*!
  * \class QtAws::Pinpoint::DeleteCampaignRequest
- *
  * \brief The DeleteCampaignRequest class provides an interface for Pinpoint DeleteCampaign requests.
  *
- * \ingroup Pinpoint
+ * \inmodule QtAwsPinpoint
  *
  *
  * \sa PinpointClient::deleteCampaign
  */
 
 /*!
- * @brief  Constructs a new DeleteCampaignRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteCampaignRequest::DeleteCampaignRequest(const DeleteCampaignRequest &other)
     : PinpointRequest(new DeleteCampaignRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ DeleteCampaignRequest::DeleteCampaignRequest(const DeleteCampaignRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DeleteCampaignRequest object.
+ * Constructs a DeleteCampaignRequest object.
  */
 DeleteCampaignRequest::DeleteCampaignRequest()
     : PinpointRequest(new DeleteCampaignRequestPrivate(PinpointRequest::DeleteCampaignAction, this))
@@ -66,14 +63,9 @@ bool DeleteCampaignRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteCampaignResponse object.
+ * Returns a DeleteCampaignResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteCampaignResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  PinpointClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteCampaignRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * DeleteCampaignRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::Pinpoint::DeleteCampaignRequestPrivate
+ * \brief The DeleteCampaignRequestPrivate class provides private implementation for DeleteCampaignRequest.
+ * \internal
  *
- * @class  DeleteCampaignRequestPrivate
- *
- * @brief  Private implementation for DeleteCampaignRequest.
+ * \inmodule QtAwsPinpoint
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteCampaignRequestPrivate object.
- *
- * @param  action  Pinpoint action being performed.
- * @param  q       Pointer to this object's public DeleteCampaignRequest instance.
+ * Constructs a DeleteCampaignRequestPrivate object for Pinpoint \a action with,
+ * public implementation \a q.
  */
 DeleteCampaignRequestPrivate::DeleteCampaignRequestPrivate(
     const PinpointRequest::Action action, DeleteCampaignRequest * const q)
@@ -104,15 +93,10 @@ DeleteCampaignRequestPrivate::DeleteCampaignRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteCampaignRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteCampaignRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteCampaignRequest instance.
  */
 DeleteCampaignRequestPrivate::DeleteCampaignRequestPrivate(
     const DeleteCampaignRequestPrivate &other, DeleteCampaignRequest * const q)

@@ -27,10 +27,9 @@ namespace Redshift {
 
 /*!
  * \class QtAws::Redshift::ModifyEventSubscriptionRequest
- *
  * \brief The ModifyEventSubscriptionRequest class provides an interface for Redshift ModifyEventSubscription requests.
  *
- * \ingroup Redshift
+ * \inmodule QtAwsRedshift
  *
  *  <fullname>Amazon Redshift</fullname>
  * 
@@ -67,9 +66,7 @@ namespace Redshift {
  */
 
 /*!
- * @brief  Constructs a new ModifyEventSubscriptionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ModifyEventSubscriptionRequest::ModifyEventSubscriptionRequest(const ModifyEventSubscriptionRequest &other)
     : RedshiftRequest(new ModifyEventSubscriptionRequestPrivate(*other.d_func(), this))
@@ -78,7 +75,7 @@ ModifyEventSubscriptionRequest::ModifyEventSubscriptionRequest(const ModifyEvent
 }
 
 /*!
- * @brief  Constructs a new ModifyEventSubscriptionRequest object.
+ * Constructs a ModifyEventSubscriptionRequest object.
  */
 ModifyEventSubscriptionRequest::ModifyEventSubscriptionRequest()
     : RedshiftRequest(new ModifyEventSubscriptionRequestPrivate(RedshiftRequest::ModifyEventSubscriptionAction, this))
@@ -96,14 +93,9 @@ bool ModifyEventSubscriptionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ModifyEventSubscriptionResponse object.
+ * Returns a ModifyEventSubscriptionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ModifyEventSubscriptionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RedshiftClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ModifyEventSubscriptionRequest::response(QNetworkReply * const reply) const
 {
@@ -111,20 +103,17 @@ QtAws::Core::AwsAbstractResponse * ModifyEventSubscriptionRequest::response(QNet
 }
 
 /*!
- * @internal
+ * \class QtAws::Redshift::ModifyEventSubscriptionRequestPrivate
+ * \brief The ModifyEventSubscriptionRequestPrivate class provides private implementation for ModifyEventSubscriptionRequest.
+ * \internal
  *
- * @class  ModifyEventSubscriptionRequestPrivate
- *
- * @brief  Private implementation for ModifyEventSubscriptionRequest.
+ * \inmodule QtAwsRedshift
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ModifyEventSubscriptionRequestPrivate object.
- *
- * @param  action  Redshift action being performed.
- * @param  q       Pointer to this object's public ModifyEventSubscriptionRequest instance.
+ * Constructs a ModifyEventSubscriptionRequestPrivate object for Redshift \a action with,
+ * public implementation \a q.
  */
 ModifyEventSubscriptionRequestPrivate::ModifyEventSubscriptionRequestPrivate(
     const RedshiftRequest::Action action, ModifyEventSubscriptionRequest * const q)
@@ -134,15 +123,10 @@ ModifyEventSubscriptionRequestPrivate::ModifyEventSubscriptionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ModifyEventSubscriptionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ModifyEventSubscriptionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ModifyEventSubscriptionRequest instance.
  */
 ModifyEventSubscriptionRequestPrivate::ModifyEventSubscriptionRequestPrivate(
     const ModifyEventSubscriptionRequestPrivate &other, ModifyEventSubscriptionRequest * const q)

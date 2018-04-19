@@ -27,10 +27,9 @@ namespace Glue {
 
 /*!
  * \class QtAws::Glue::GetTableVersionsRequest
- *
  * \brief The GetTableVersionsRequest class provides an interface for Glue GetTableVersions requests.
  *
- * \ingroup Glue
+ * \inmodule QtAwsGlue
  *
  *  <fullname>AWS Glue</fullname>
  * 
@@ -40,9 +39,7 @@ namespace Glue {
  */
 
 /*!
- * @brief  Constructs a new GetTableVersionsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetTableVersionsRequest::GetTableVersionsRequest(const GetTableVersionsRequest &other)
     : GlueRequest(new GetTableVersionsRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ GetTableVersionsRequest::GetTableVersionsRequest(const GetTableVersionsRequest &
 }
 
 /*!
- * @brief  Constructs a new GetTableVersionsRequest object.
+ * Constructs a GetTableVersionsRequest object.
  */
 GetTableVersionsRequest::GetTableVersionsRequest()
     : GlueRequest(new GetTableVersionsRequestPrivate(GlueRequest::GetTableVersionsAction, this))
@@ -69,14 +66,9 @@ bool GetTableVersionsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetTableVersionsResponse object.
+ * Returns a GetTableVersionsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetTableVersionsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GlueClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetTableVersionsRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * GetTableVersionsRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::Glue::GetTableVersionsRequestPrivate
+ * \brief The GetTableVersionsRequestPrivate class provides private implementation for GetTableVersionsRequest.
+ * \internal
  *
- * @class  GetTableVersionsRequestPrivate
- *
- * @brief  Private implementation for GetTableVersionsRequest.
+ * \inmodule QtAwsGlue
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetTableVersionsRequestPrivate object.
- *
- * @param  action  Glue action being performed.
- * @param  q       Pointer to this object's public GetTableVersionsRequest instance.
+ * Constructs a GetTableVersionsRequestPrivate object for Glue \a action with,
+ * public implementation \a q.
  */
 GetTableVersionsRequestPrivate::GetTableVersionsRequestPrivate(
     const GlueRequest::Action action, GetTableVersionsRequest * const q)
@@ -107,15 +96,10 @@ GetTableVersionsRequestPrivate::GetTableVersionsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetTableVersionsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetTableVersionsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetTableVersionsRequest instance.
  */
 GetTableVersionsRequestPrivate::GetTableVersionsRequestPrivate(
     const GetTableVersionsRequestPrivate &other, GetTableVersionsRequest * const q)

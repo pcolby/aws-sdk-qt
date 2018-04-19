@@ -27,10 +27,9 @@ namespace Athena {
 
 /*!
  * \class QtAws::Athena::StartQueryExecutionRequest
- *
  * \brief The StartQueryExecutionRequest class provides an interface for Athena StartQueryExecution requests.
  *
- * \ingroup Athena
+ * \inmodule QtAwsAthena
  *
  *  Amazon Athena is an interactive query service that lets you use standard SQL to analyze data directly in Amazon S3. You
  *  can point Athena at your data in Amazon S3 and run ad-hoc queries and get results in seconds. Athena is serverless, so
@@ -49,9 +48,7 @@ namespace Athena {
  */
 
 /*!
- * @brief  Constructs a new StartQueryExecutionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 StartQueryExecutionRequest::StartQueryExecutionRequest(const StartQueryExecutionRequest &other)
     : AthenaRequest(new StartQueryExecutionRequestPrivate(*other.d_func(), this))
@@ -60,7 +57,7 @@ StartQueryExecutionRequest::StartQueryExecutionRequest(const StartQueryExecution
 }
 
 /*!
- * @brief  Constructs a new StartQueryExecutionRequest object.
+ * Constructs a StartQueryExecutionRequest object.
  */
 StartQueryExecutionRequest::StartQueryExecutionRequest()
     : AthenaRequest(new StartQueryExecutionRequestPrivate(AthenaRequest::StartQueryExecutionAction, this))
@@ -78,14 +75,9 @@ bool StartQueryExecutionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an StartQueryExecutionResponse object.
+ * Returns a StartQueryExecutionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An StartQueryExecutionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AthenaClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * StartQueryExecutionRequest::response(QNetworkReply * const reply) const
 {
@@ -93,20 +85,17 @@ QtAws::Core::AwsAbstractResponse * StartQueryExecutionRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::Athena::StartQueryExecutionRequestPrivate
+ * \brief The StartQueryExecutionRequestPrivate class provides private implementation for StartQueryExecutionRequest.
+ * \internal
  *
- * @class  StartQueryExecutionRequestPrivate
- *
- * @brief  Private implementation for StartQueryExecutionRequest.
+ * \inmodule QtAwsAthena
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new StartQueryExecutionRequestPrivate object.
- *
- * @param  action  Athena action being performed.
- * @param  q       Pointer to this object's public StartQueryExecutionRequest instance.
+ * Constructs a StartQueryExecutionRequestPrivate object for Athena \a action with,
+ * public implementation \a q.
  */
 StartQueryExecutionRequestPrivate::StartQueryExecutionRequestPrivate(
     const AthenaRequest::Action action, StartQueryExecutionRequest * const q)
@@ -116,15 +105,10 @@ StartQueryExecutionRequestPrivate::StartQueryExecutionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StartQueryExecutionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the StartQueryExecutionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public StartQueryExecutionRequest instance.
  */
 StartQueryExecutionRequestPrivate::StartQueryExecutionRequestPrivate(
     const StartQueryExecutionRequestPrivate &other, StartQueryExecutionRequest * const q)

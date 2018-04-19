@@ -27,10 +27,9 @@ namespace ElasticLoadBalancingv2 {
 
 /*!
  * \class QtAws::ElasticLoadBalancingv2::ModifyLoadBalancerAttributesRequest
- *
  * \brief The ModifyLoadBalancerAttributesRequest class provides an interface for ElasticLoadBalancingv2 ModifyLoadBalancerAttributes requests.
  *
- * \ingroup ElasticLoadBalancingv2
+ * \inmodule QtAwsElasticLoadBalancingv2
  *
  *  <fullname>Elastic Load Balancing</fullname>
  * 
@@ -105,9 +104,7 @@ namespace ElasticLoadBalancingv2 {
  */
 
 /*!
- * @brief  Constructs a new ModifyLoadBalancerAttributesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ModifyLoadBalancerAttributesRequest::ModifyLoadBalancerAttributesRequest(const ModifyLoadBalancerAttributesRequest &other)
     : ElasticLoadBalancingv2Request(new ModifyLoadBalancerAttributesRequestPrivate(*other.d_func(), this))
@@ -116,7 +113,7 @@ ModifyLoadBalancerAttributesRequest::ModifyLoadBalancerAttributesRequest(const M
 }
 
 /*!
- * @brief  Constructs a new ModifyLoadBalancerAttributesRequest object.
+ * Constructs a ModifyLoadBalancerAttributesRequest object.
  */
 ModifyLoadBalancerAttributesRequest::ModifyLoadBalancerAttributesRequest()
     : ElasticLoadBalancingv2Request(new ModifyLoadBalancerAttributesRequestPrivate(ElasticLoadBalancingv2Request::ModifyLoadBalancerAttributesAction, this))
@@ -134,14 +131,9 @@ bool ModifyLoadBalancerAttributesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ModifyLoadBalancerAttributesResponse object.
+ * Returns a ModifyLoadBalancerAttributesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ModifyLoadBalancerAttributesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ElasticLoadBalancingv2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ModifyLoadBalancerAttributesRequest::response(QNetworkReply * const reply) const
 {
@@ -149,20 +141,17 @@ QtAws::Core::AwsAbstractResponse * ModifyLoadBalancerAttributesRequest::response
 }
 
 /*!
- * @internal
+ * \class QtAws::ElasticLoadBalancingv2::ModifyLoadBalancerAttributesRequestPrivate
+ * \brief The ModifyLoadBalancerAttributesRequestPrivate class provides private implementation for ModifyLoadBalancerAttributesRequest.
+ * \internal
  *
- * @class  ModifyLoadBalancerAttributesRequestPrivate
- *
- * @brief  Private implementation for ModifyLoadBalancerAttributesRequest.
+ * \inmodule QtAwsElasticLoadBalancingv2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ModifyLoadBalancerAttributesRequestPrivate object.
- *
- * @param  action  ElasticLoadBalancingv2 action being performed.
- * @param  q       Pointer to this object's public ModifyLoadBalancerAttributesRequest instance.
+ * Constructs a ModifyLoadBalancerAttributesRequestPrivate object for ElasticLoadBalancingv2 \a action with,
+ * public implementation \a q.
  */
 ModifyLoadBalancerAttributesRequestPrivate::ModifyLoadBalancerAttributesRequestPrivate(
     const ElasticLoadBalancingv2Request::Action action, ModifyLoadBalancerAttributesRequest * const q)
@@ -172,15 +161,10 @@ ModifyLoadBalancerAttributesRequestPrivate::ModifyLoadBalancerAttributesRequestP
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ModifyLoadBalancerAttributesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ModifyLoadBalancerAttributesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ModifyLoadBalancerAttributesRequest instance.
  */
 ModifyLoadBalancerAttributesRequestPrivate::ModifyLoadBalancerAttributesRequestPrivate(
     const ModifyLoadBalancerAttributesRequestPrivate &other, ModifyLoadBalancerAttributesRequest * const q)

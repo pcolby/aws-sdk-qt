@@ -27,10 +27,9 @@ namespace Glue {
 
 /*!
  * \class QtAws::Glue::GetTableRequest
- *
  * \brief The GetTableRequest class provides an interface for Glue GetTable requests.
  *
- * \ingroup Glue
+ * \inmodule QtAwsGlue
  *
  *  <fullname>AWS Glue</fullname>
  * 
@@ -40,9 +39,7 @@ namespace Glue {
  */
 
 /*!
- * @brief  Constructs a new GetTableRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetTableRequest::GetTableRequest(const GetTableRequest &other)
     : GlueRequest(new GetTableRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ GetTableRequest::GetTableRequest(const GetTableRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetTableRequest object.
+ * Constructs a GetTableRequest object.
  */
 GetTableRequest::GetTableRequest()
     : GlueRequest(new GetTableRequestPrivate(GlueRequest::GetTableAction, this))
@@ -69,14 +66,9 @@ bool GetTableRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetTableResponse object.
+ * Returns a GetTableResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetTableResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GlueClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetTableRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * GetTableRequest::response(QNetworkReply * con
 }
 
 /*!
- * @internal
+ * \class QtAws::Glue::GetTableRequestPrivate
+ * \brief The GetTableRequestPrivate class provides private implementation for GetTableRequest.
+ * \internal
  *
- * @class  GetTableRequestPrivate
- *
- * @brief  Private implementation for GetTableRequest.
+ * \inmodule QtAwsGlue
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetTableRequestPrivate object.
- *
- * @param  action  Glue action being performed.
- * @param  q       Pointer to this object's public GetTableRequest instance.
+ * Constructs a GetTableRequestPrivate object for Glue \a action with,
+ * public implementation \a q.
  */
 GetTableRequestPrivate::GetTableRequestPrivate(
     const GlueRequest::Action action, GetTableRequest * const q)
@@ -107,15 +96,10 @@ GetTableRequestPrivate::GetTableRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetTableRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetTableRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetTableRequest instance.
  */
 GetTableRequestPrivate::GetTableRequestPrivate(
     const GetTableRequestPrivate &other, GetTableRequest * const q)

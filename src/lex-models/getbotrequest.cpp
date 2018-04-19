@@ -27,10 +27,9 @@ namespace LexModelBuildingService {
 
 /*!
  * \class QtAws::LexModelBuildingService::GetBotRequest
- *
  * \brief The GetBotRequest class provides an interface for LexModelBuildingService GetBot requests.
  *
- * \ingroup LexModelBuildingService
+ * \inmodule QtAwsLexModelBuildingService
  *
  *  <fullname>Amazon Lex Build-Time Actions</fullname>
  * 
@@ -41,9 +40,7 @@ namespace LexModelBuildingService {
  */
 
 /*!
- * @brief  Constructs a new GetBotRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetBotRequest::GetBotRequest(const GetBotRequest &other)
     : LexModelBuildingServiceRequest(new GetBotRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ GetBotRequest::GetBotRequest(const GetBotRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetBotRequest object.
+ * Constructs a GetBotRequest object.
  */
 GetBotRequest::GetBotRequest()
     : LexModelBuildingServiceRequest(new GetBotRequestPrivate(LexModelBuildingServiceRequest::GetBotAction, this))
@@ -70,14 +67,9 @@ bool GetBotRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetBotResponse object.
+ * Returns a GetBotResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetBotResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  LexModelBuildingServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetBotRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * GetBotRequest::response(QNetworkReply * const
 }
 
 /*!
- * @internal
+ * \class QtAws::LexModelBuildingService::GetBotRequestPrivate
+ * \brief The GetBotRequestPrivate class provides private implementation for GetBotRequest.
+ * \internal
  *
- * @class  GetBotRequestPrivate
- *
- * @brief  Private implementation for GetBotRequest.
+ * \inmodule QtAwsLexModelBuildingService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetBotRequestPrivate object.
- *
- * @param  action  LexModelBuildingService action being performed.
- * @param  q       Pointer to this object's public GetBotRequest instance.
+ * Constructs a GetBotRequestPrivate object for LexModelBuildingService \a action with,
+ * public implementation \a q.
  */
 GetBotRequestPrivate::GetBotRequestPrivate(
     const LexModelBuildingServiceRequest::Action action, GetBotRequest * const q)
@@ -108,15 +97,10 @@ GetBotRequestPrivate::GetBotRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetBotRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetBotRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetBotRequest instance.
  */
 GetBotRequestPrivate::GetBotRequestPrivate(
     const GetBotRequestPrivate &other, GetBotRequest * const q)

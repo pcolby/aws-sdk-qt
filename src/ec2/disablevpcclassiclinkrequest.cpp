@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DisableVpcClassicLinkRequest
- *
  * \brief The DisableVpcClassicLinkRequest class provides an interface for EC2 DisableVpcClassicLink requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DisableVpcClassicLinkRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DisableVpcClassicLinkRequest::DisableVpcClassicLinkRequest(const DisableVpcClassicLinkRequest &other)
     : EC2Request(new DisableVpcClassicLinkRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ DisableVpcClassicLinkRequest::DisableVpcClassicLinkRequest(const DisableVpcClass
 }
 
 /*!
- * @brief  Constructs a new DisableVpcClassicLinkRequest object.
+ * Constructs a DisableVpcClassicLinkRequest object.
  */
 DisableVpcClassicLinkRequest::DisableVpcClassicLinkRequest()
     : EC2Request(new DisableVpcClassicLinkRequestPrivate(EC2Request::DisableVpcClassicLinkAction, this))
@@ -70,14 +67,9 @@ bool DisableVpcClassicLinkRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DisableVpcClassicLinkResponse object.
+ * Returns a DisableVpcClassicLinkResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DisableVpcClassicLinkResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DisableVpcClassicLinkRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * DisableVpcClassicLinkRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::DisableVpcClassicLinkRequestPrivate
+ * \brief The DisableVpcClassicLinkRequestPrivate class provides private implementation for DisableVpcClassicLinkRequest.
+ * \internal
  *
- * @class  DisableVpcClassicLinkRequestPrivate
- *
- * @brief  Private implementation for DisableVpcClassicLinkRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DisableVpcClassicLinkRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public DisableVpcClassicLinkRequest instance.
+ * Constructs a DisableVpcClassicLinkRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 DisableVpcClassicLinkRequestPrivate::DisableVpcClassicLinkRequestPrivate(
     const EC2Request::Action action, DisableVpcClassicLinkRequest * const q)
@@ -108,15 +97,10 @@ DisableVpcClassicLinkRequestPrivate::DisableVpcClassicLinkRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DisableVpcClassicLinkRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DisableVpcClassicLinkRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DisableVpcClassicLinkRequest instance.
  */
 DisableVpcClassicLinkRequestPrivate::DisableVpcClassicLinkRequestPrivate(
     const DisableVpcClassicLinkRequestPrivate &other, DisableVpcClassicLinkRequest * const q)

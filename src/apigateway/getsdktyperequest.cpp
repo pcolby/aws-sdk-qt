@@ -27,10 +27,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::GetSdkTypeRequest
- *
  * \brief The GetSdkTypeRequest class provides an interface for APIGateway GetSdkType requests.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -42,9 +41,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new GetSdkTypeRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetSdkTypeRequest::GetSdkTypeRequest(const GetSdkTypeRequest &other)
     : APIGatewayRequest(new GetSdkTypeRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ GetSdkTypeRequest::GetSdkTypeRequest(const GetSdkTypeRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetSdkTypeRequest object.
+ * Constructs a GetSdkTypeRequest object.
  */
 GetSdkTypeRequest::GetSdkTypeRequest()
     : APIGatewayRequest(new GetSdkTypeRequestPrivate(APIGatewayRequest::GetSdkTypeAction, this))
@@ -71,14 +68,9 @@ bool GetSdkTypeRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetSdkTypeResponse object.
+ * Returns a GetSdkTypeResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetSdkTypeResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  APIGatewayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetSdkTypeRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * GetSdkTypeRequest::response(QNetworkReply * c
 }
 
 /*!
- * @internal
+ * \class QtAws::APIGateway::GetSdkTypeRequestPrivate
+ * \brief The GetSdkTypeRequestPrivate class provides private implementation for GetSdkTypeRequest.
+ * \internal
  *
- * @class  GetSdkTypeRequestPrivate
- *
- * @brief  Private implementation for GetSdkTypeRequest.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetSdkTypeRequestPrivate object.
- *
- * @param  action  APIGateway action being performed.
- * @param  q       Pointer to this object's public GetSdkTypeRequest instance.
+ * Constructs a GetSdkTypeRequestPrivate object for APIGateway \a action with,
+ * public implementation \a q.
  */
 GetSdkTypeRequestPrivate::GetSdkTypeRequestPrivate(
     const APIGatewayRequest::Action action, GetSdkTypeRequest * const q)
@@ -109,15 +98,10 @@ GetSdkTypeRequestPrivate::GetSdkTypeRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetSdkTypeRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetSdkTypeRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetSdkTypeRequest instance.
  */
 GetSdkTypeRequestPrivate::GetSdkTypeRequestPrivate(
     const GetSdkTypeRequestPrivate &other, GetSdkTypeRequest * const q)

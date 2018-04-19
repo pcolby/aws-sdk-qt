@@ -27,10 +27,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::PromoteReadReplicaDBClusterRequest
- *
  * \brief The PromoteReadReplicaDBClusterRequest class provides an interface for RDS PromoteReadReplicaDBCluster requests.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -101,9 +100,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new PromoteReadReplicaDBClusterRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 PromoteReadReplicaDBClusterRequest::PromoteReadReplicaDBClusterRequest(const PromoteReadReplicaDBClusterRequest &other)
     : RDSRequest(new PromoteReadReplicaDBClusterRequestPrivate(*other.d_func(), this))
@@ -112,7 +109,7 @@ PromoteReadReplicaDBClusterRequest::PromoteReadReplicaDBClusterRequest(const Pro
 }
 
 /*!
- * @brief  Constructs a new PromoteReadReplicaDBClusterRequest object.
+ * Constructs a PromoteReadReplicaDBClusterRequest object.
  */
 PromoteReadReplicaDBClusterRequest::PromoteReadReplicaDBClusterRequest()
     : RDSRequest(new PromoteReadReplicaDBClusterRequestPrivate(RDSRequest::PromoteReadReplicaDBClusterAction, this))
@@ -130,14 +127,9 @@ bool PromoteReadReplicaDBClusterRequest::isValid() const
 
 
 /*!
- * @brief  Construct an PromoteReadReplicaDBClusterResponse object.
+ * Returns a PromoteReadReplicaDBClusterResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An PromoteReadReplicaDBClusterResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RDSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * PromoteReadReplicaDBClusterRequest::response(QNetworkReply * const reply) const
 {
@@ -145,20 +137,17 @@ QtAws::Core::AwsAbstractResponse * PromoteReadReplicaDBClusterRequest::response(
 }
 
 /*!
- * @internal
+ * \class QtAws::RDS::PromoteReadReplicaDBClusterRequestPrivate
+ * \brief The PromoteReadReplicaDBClusterRequestPrivate class provides private implementation for PromoteReadReplicaDBClusterRequest.
+ * \internal
  *
- * @class  PromoteReadReplicaDBClusterRequestPrivate
- *
- * @brief  Private implementation for PromoteReadReplicaDBClusterRequest.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new PromoteReadReplicaDBClusterRequestPrivate object.
- *
- * @param  action  RDS action being performed.
- * @param  q       Pointer to this object's public PromoteReadReplicaDBClusterRequest instance.
+ * Constructs a PromoteReadReplicaDBClusterRequestPrivate object for RDS \a action with,
+ * public implementation \a q.
  */
 PromoteReadReplicaDBClusterRequestPrivate::PromoteReadReplicaDBClusterRequestPrivate(
     const RDSRequest::Action action, PromoteReadReplicaDBClusterRequest * const q)
@@ -168,15 +157,10 @@ PromoteReadReplicaDBClusterRequestPrivate::PromoteReadReplicaDBClusterRequestPri
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PromoteReadReplicaDBClusterRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the PromoteReadReplicaDBClusterRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public PromoteReadReplicaDBClusterRequest instance.
  */
 PromoteReadReplicaDBClusterRequestPrivate::PromoteReadReplicaDBClusterRequestPrivate(
     const PromoteReadReplicaDBClusterRequestPrivate &other, PromoteReadReplicaDBClusterRequest * const q)

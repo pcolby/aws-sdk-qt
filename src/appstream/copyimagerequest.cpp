@@ -27,10 +27,9 @@ namespace AppStream {
 
 /*!
  * \class QtAws::AppStream::CopyImageRequest
- *
  * \brief The CopyImageRequest class provides an interface for AppStream CopyImage requests.
  *
- * \ingroup AppStream
+ * \inmodule QtAwsAppStream
  *
  *  <fullname>Amazon AppStream 2.0</fullname>
  * 
@@ -40,9 +39,7 @@ namespace AppStream {
  */
 
 /*!
- * @brief  Constructs a new CopyImageRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CopyImageRequest::CopyImageRequest(const CopyImageRequest &other)
     : AppStreamRequest(new CopyImageRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ CopyImageRequest::CopyImageRequest(const CopyImageRequest &other)
 }
 
 /*!
- * @brief  Constructs a new CopyImageRequest object.
+ * Constructs a CopyImageRequest object.
  */
 CopyImageRequest::CopyImageRequest()
     : AppStreamRequest(new CopyImageRequestPrivate(AppStreamRequest::CopyImageAction, this))
@@ -69,14 +66,9 @@ bool CopyImageRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CopyImageResponse object.
+ * Returns a CopyImageResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CopyImageResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AppStreamClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CopyImageRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * CopyImageRequest::response(QNetworkReply * co
 }
 
 /*!
- * @internal
+ * \class QtAws::AppStream::CopyImageRequestPrivate
+ * \brief The CopyImageRequestPrivate class provides private implementation for CopyImageRequest.
+ * \internal
  *
- * @class  CopyImageRequestPrivate
- *
- * @brief  Private implementation for CopyImageRequest.
+ * \inmodule QtAwsAppStream
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CopyImageRequestPrivate object.
- *
- * @param  action  AppStream action being performed.
- * @param  q       Pointer to this object's public CopyImageRequest instance.
+ * Constructs a CopyImageRequestPrivate object for AppStream \a action with,
+ * public implementation \a q.
  */
 CopyImageRequestPrivate::CopyImageRequestPrivate(
     const AppStreamRequest::Action action, CopyImageRequest * const q)
@@ -107,15 +96,10 @@ CopyImageRequestPrivate::CopyImageRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CopyImageRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CopyImageRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CopyImageRequest instance.
  */
 CopyImageRequestPrivate::CopyImageRequestPrivate(
     const CopyImageRequestPrivate &other, CopyImageRequest * const q)

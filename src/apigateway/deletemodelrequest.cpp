@@ -27,10 +27,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::DeleteModelRequest
- *
  * \brief The DeleteModelRequest class provides an interface for APIGateway DeleteModel requests.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -42,9 +41,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new DeleteModelRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteModelRequest::DeleteModelRequest(const DeleteModelRequest &other)
     : APIGatewayRequest(new DeleteModelRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ DeleteModelRequest::DeleteModelRequest(const DeleteModelRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DeleteModelRequest object.
+ * Constructs a DeleteModelRequest object.
  */
 DeleteModelRequest::DeleteModelRequest()
     : APIGatewayRequest(new DeleteModelRequestPrivate(APIGatewayRequest::DeleteModelAction, this))
@@ -71,14 +68,9 @@ bool DeleteModelRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteModelResponse object.
+ * Returns a DeleteModelResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteModelResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  APIGatewayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteModelRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * DeleteModelRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::APIGateway::DeleteModelRequestPrivate
+ * \brief The DeleteModelRequestPrivate class provides private implementation for DeleteModelRequest.
+ * \internal
  *
- * @class  DeleteModelRequestPrivate
- *
- * @brief  Private implementation for DeleteModelRequest.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteModelRequestPrivate object.
- *
- * @param  action  APIGateway action being performed.
- * @param  q       Pointer to this object's public DeleteModelRequest instance.
+ * Constructs a DeleteModelRequestPrivate object for APIGateway \a action with,
+ * public implementation \a q.
  */
 DeleteModelRequestPrivate::DeleteModelRequestPrivate(
     const APIGatewayRequest::Action action, DeleteModelRequest * const q)
@@ -109,15 +98,10 @@ DeleteModelRequestPrivate::DeleteModelRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteModelRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteModelRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteModelRequest instance.
  */
 DeleteModelRequestPrivate::DeleteModelRequestPrivate(
     const DeleteModelRequestPrivate &other, DeleteModelRequest * const q)

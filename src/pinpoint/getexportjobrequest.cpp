@@ -27,19 +27,16 @@ namespace Pinpoint {
 
 /*!
  * \class QtAws::Pinpoint::GetExportJobRequest
- *
  * \brief The GetExportJobRequest class provides an interface for Pinpoint GetExportJob requests.
  *
- * \ingroup Pinpoint
+ * \inmodule QtAwsPinpoint
  *
  *
  * \sa PinpointClient::getExportJob
  */
 
 /*!
- * @brief  Constructs a new GetExportJobRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetExportJobRequest::GetExportJobRequest(const GetExportJobRequest &other)
     : PinpointRequest(new GetExportJobRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ GetExportJobRequest::GetExportJobRequest(const GetExportJobRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetExportJobRequest object.
+ * Constructs a GetExportJobRequest object.
  */
 GetExportJobRequest::GetExportJobRequest()
     : PinpointRequest(new GetExportJobRequestPrivate(PinpointRequest::GetExportJobAction, this))
@@ -66,14 +63,9 @@ bool GetExportJobRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetExportJobResponse object.
+ * Returns a GetExportJobResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetExportJobResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  PinpointClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetExportJobRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * GetExportJobRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::Pinpoint::GetExportJobRequestPrivate
+ * \brief The GetExportJobRequestPrivate class provides private implementation for GetExportJobRequest.
+ * \internal
  *
- * @class  GetExportJobRequestPrivate
- *
- * @brief  Private implementation for GetExportJobRequest.
+ * \inmodule QtAwsPinpoint
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetExportJobRequestPrivate object.
- *
- * @param  action  Pinpoint action being performed.
- * @param  q       Pointer to this object's public GetExportJobRequest instance.
+ * Constructs a GetExportJobRequestPrivate object for Pinpoint \a action with,
+ * public implementation \a q.
  */
 GetExportJobRequestPrivate::GetExportJobRequestPrivate(
     const PinpointRequest::Action action, GetExportJobRequest * const q)
@@ -104,15 +93,10 @@ GetExportJobRequestPrivate::GetExportJobRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetExportJobRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetExportJobRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetExportJobRequest instance.
  */
 GetExportJobRequestPrivate::GetExportJobRequestPrivate(
     const GetExportJobRequestPrivate &other, GetExportJobRequest * const q)

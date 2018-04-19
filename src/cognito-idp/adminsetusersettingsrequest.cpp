@@ -27,10 +27,9 @@ namespace CognitoIdentityProvider {
 
 /*!
  * \class QtAws::CognitoIdentityProvider::AdminSetUserSettingsRequest
- *
  * \brief The AdminSetUserSettingsRequest class provides an interface for CognitoIdentityProvider AdminSetUserSettings requests.
  *
- * \ingroup CognitoIdentityProvider
+ * \inmodule QtAwsCognitoIdentityProvider
  *
  *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
  *  authenticate a user to obtain tokens related to user identity and access
@@ -47,9 +46,7 @@ namespace CognitoIdentityProvider {
  */
 
 /*!
- * @brief  Constructs a new AdminSetUserSettingsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AdminSetUserSettingsRequest::AdminSetUserSettingsRequest(const AdminSetUserSettingsRequest &other)
     : CognitoIdentityProviderRequest(new AdminSetUserSettingsRequestPrivate(*other.d_func(), this))
@@ -58,7 +55,7 @@ AdminSetUserSettingsRequest::AdminSetUserSettingsRequest(const AdminSetUserSetti
 }
 
 /*!
- * @brief  Constructs a new AdminSetUserSettingsRequest object.
+ * Constructs a AdminSetUserSettingsRequest object.
  */
 AdminSetUserSettingsRequest::AdminSetUserSettingsRequest()
     : CognitoIdentityProviderRequest(new AdminSetUserSettingsRequestPrivate(CognitoIdentityProviderRequest::AdminSetUserSettingsAction, this))
@@ -76,14 +73,9 @@ bool AdminSetUserSettingsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AdminSetUserSettingsResponse object.
+ * Returns a AdminSetUserSettingsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AdminSetUserSettingsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CognitoIdentityProviderClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AdminSetUserSettingsRequest::response(QNetworkReply * const reply) const
 {
@@ -91,20 +83,17 @@ QtAws::Core::AwsAbstractResponse * AdminSetUserSettingsRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::CognitoIdentityProvider::AdminSetUserSettingsRequestPrivate
+ * \brief The AdminSetUserSettingsRequestPrivate class provides private implementation for AdminSetUserSettingsRequest.
+ * \internal
  *
- * @class  AdminSetUserSettingsRequestPrivate
- *
- * @brief  Private implementation for AdminSetUserSettingsRequest.
+ * \inmodule QtAwsCognitoIdentityProvider
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AdminSetUserSettingsRequestPrivate object.
- *
- * @param  action  CognitoIdentityProvider action being performed.
- * @param  q       Pointer to this object's public AdminSetUserSettingsRequest instance.
+ * Constructs a AdminSetUserSettingsRequestPrivate object for CognitoIdentityProvider \a action with,
+ * public implementation \a q.
  */
 AdminSetUserSettingsRequestPrivate::AdminSetUserSettingsRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, AdminSetUserSettingsRequest * const q)
@@ -114,15 +103,10 @@ AdminSetUserSettingsRequestPrivate::AdminSetUserSettingsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AdminSetUserSettingsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AdminSetUserSettingsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AdminSetUserSettingsRequest instance.
  */
 AdminSetUserSettingsRequestPrivate::AdminSetUserSettingsRequestPrivate(
     const AdminSetUserSettingsRequestPrivate &other, AdminSetUserSettingsRequest * const q)

@@ -27,10 +27,9 @@ namespace StorageGateway {
 
 /*!
  * \class QtAws::StorageGateway::CreateSnapshotFromVolumeRecoveryPointRequest
- *
  * \brief The CreateSnapshotFromVolumeRecoveryPointRequest class provides an interface for StorageGateway CreateSnapshotFromVolumeRecoveryPoint requests.
  *
- * \ingroup StorageGateway
+ * \inmodule QtAwsStorageGateway
  *
  *  <fullname>AWS Storage Gateway Service</fullname>
  * 
@@ -106,9 +105,7 @@ namespace StorageGateway {
  */
 
 /*!
- * @brief  Constructs a new CreateSnapshotFromVolumeRecoveryPointRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateSnapshotFromVolumeRecoveryPointRequest::CreateSnapshotFromVolumeRecoveryPointRequest(const CreateSnapshotFromVolumeRecoveryPointRequest &other)
     : StorageGatewayRequest(new CreateSnapshotFromVolumeRecoveryPointRequestPrivate(*other.d_func(), this))
@@ -117,7 +114,7 @@ CreateSnapshotFromVolumeRecoveryPointRequest::CreateSnapshotFromVolumeRecoveryPo
 }
 
 /*!
- * @brief  Constructs a new CreateSnapshotFromVolumeRecoveryPointRequest object.
+ * Constructs a CreateSnapshotFromVolumeRecoveryPointRequest object.
  */
 CreateSnapshotFromVolumeRecoveryPointRequest::CreateSnapshotFromVolumeRecoveryPointRequest()
     : StorageGatewayRequest(new CreateSnapshotFromVolumeRecoveryPointRequestPrivate(StorageGatewayRequest::CreateSnapshotFromVolumeRecoveryPointAction, this))
@@ -135,14 +132,9 @@ bool CreateSnapshotFromVolumeRecoveryPointRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateSnapshotFromVolumeRecoveryPointResponse object.
+ * Returns a CreateSnapshotFromVolumeRecoveryPointResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateSnapshotFromVolumeRecoveryPointResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  StorageGatewayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateSnapshotFromVolumeRecoveryPointRequest::response(QNetworkReply * const reply) const
 {
@@ -150,20 +142,17 @@ QtAws::Core::AwsAbstractResponse * CreateSnapshotFromVolumeRecoveryPointRequest:
 }
 
 /*!
- * @internal
+ * \class QtAws::StorageGateway::CreateSnapshotFromVolumeRecoveryPointRequestPrivate
+ * \brief The CreateSnapshotFromVolumeRecoveryPointRequestPrivate class provides private implementation for CreateSnapshotFromVolumeRecoveryPointRequest.
+ * \internal
  *
- * @class  CreateSnapshotFromVolumeRecoveryPointRequestPrivate
- *
- * @brief  Private implementation for CreateSnapshotFromVolumeRecoveryPointRequest.
+ * \inmodule QtAwsStorageGateway
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateSnapshotFromVolumeRecoveryPointRequestPrivate object.
- *
- * @param  action  StorageGateway action being performed.
- * @param  q       Pointer to this object's public CreateSnapshotFromVolumeRecoveryPointRequest instance.
+ * Constructs a CreateSnapshotFromVolumeRecoveryPointRequestPrivate object for StorageGateway \a action with,
+ * public implementation \a q.
  */
 CreateSnapshotFromVolumeRecoveryPointRequestPrivate::CreateSnapshotFromVolumeRecoveryPointRequestPrivate(
     const StorageGatewayRequest::Action action, CreateSnapshotFromVolumeRecoveryPointRequest * const q)
@@ -173,15 +162,10 @@ CreateSnapshotFromVolumeRecoveryPointRequestPrivate::CreateSnapshotFromVolumeRec
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateSnapshotFromVolumeRecoveryPointRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateSnapshotFromVolumeRecoveryPointRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateSnapshotFromVolumeRecoveryPointRequest instance.
  */
 CreateSnapshotFromVolumeRecoveryPointRequestPrivate::CreateSnapshotFromVolumeRecoveryPointRequestPrivate(
     const CreateSnapshotFromVolumeRecoveryPointRequestPrivate &other, CreateSnapshotFromVolumeRecoveryPointRequest * const q)

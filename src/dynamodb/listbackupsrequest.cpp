@@ -27,10 +27,9 @@ namespace DynamoDB {
 
 /*!
  * \class QtAws::DynamoDB::ListBackupsRequest
- *
  * \brief The ListBackupsRequest class provides an interface for DynamoDB ListBackups requests.
  *
- * \ingroup DynamoDB
+ * \inmodule QtAwsDynamoDB
  *
  *  <fullname>Amazon DynamoDB</fullname>
  * 
@@ -56,9 +55,7 @@ namespace DynamoDB {
  */
 
 /*!
- * @brief  Constructs a new ListBackupsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListBackupsRequest::ListBackupsRequest(const ListBackupsRequest &other)
     : DynamoDBRequest(new ListBackupsRequestPrivate(*other.d_func(), this))
@@ -67,7 +64,7 @@ ListBackupsRequest::ListBackupsRequest(const ListBackupsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ListBackupsRequest object.
+ * Constructs a ListBackupsRequest object.
  */
 ListBackupsRequest::ListBackupsRequest()
     : DynamoDBRequest(new ListBackupsRequestPrivate(DynamoDBRequest::ListBackupsAction, this))
@@ -85,14 +82,9 @@ bool ListBackupsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListBackupsResponse object.
+ * Returns a ListBackupsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListBackupsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DynamoDBClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListBackupsRequest::response(QNetworkReply * const reply) const
 {
@@ -100,20 +92,17 @@ QtAws::Core::AwsAbstractResponse * ListBackupsRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::DynamoDB::ListBackupsRequestPrivate
+ * \brief The ListBackupsRequestPrivate class provides private implementation for ListBackupsRequest.
+ * \internal
  *
- * @class  ListBackupsRequestPrivate
- *
- * @brief  Private implementation for ListBackupsRequest.
+ * \inmodule QtAwsDynamoDB
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListBackupsRequestPrivate object.
- *
- * @param  action  DynamoDB action being performed.
- * @param  q       Pointer to this object's public ListBackupsRequest instance.
+ * Constructs a ListBackupsRequestPrivate object for DynamoDB \a action with,
+ * public implementation \a q.
  */
 ListBackupsRequestPrivate::ListBackupsRequestPrivate(
     const DynamoDBRequest::Action action, ListBackupsRequest * const q)
@@ -123,15 +112,10 @@ ListBackupsRequestPrivate::ListBackupsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListBackupsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListBackupsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListBackupsRequest instance.
  */
 ListBackupsRequestPrivate::ListBackupsRequestPrivate(
     const ListBackupsRequestPrivate &other, ListBackupsRequest * const q)

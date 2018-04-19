@@ -27,10 +27,9 @@ namespace ConfigService {
 
 /*!
  * \class QtAws::ConfigService::DescribeDeliveryChannelStatusRequest
- *
  * \brief The DescribeDeliveryChannelStatusRequest class provides an interface for ConfigService DescribeDeliveryChannelStatus requests.
  *
- * \ingroup ConfigService
+ * \inmodule QtAwsConfigService
  *
  *  <fullname>AWS Config</fullname>
  * 
@@ -60,9 +59,7 @@ namespace ConfigService {
  */
 
 /*!
- * @brief  Constructs a new DescribeDeliveryChannelStatusRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeDeliveryChannelStatusRequest::DescribeDeliveryChannelStatusRequest(const DescribeDeliveryChannelStatusRequest &other)
     : ConfigServiceRequest(new DescribeDeliveryChannelStatusRequestPrivate(*other.d_func(), this))
@@ -71,7 +68,7 @@ DescribeDeliveryChannelStatusRequest::DescribeDeliveryChannelStatusRequest(const
 }
 
 /*!
- * @brief  Constructs a new DescribeDeliveryChannelStatusRequest object.
+ * Constructs a DescribeDeliveryChannelStatusRequest object.
  */
 DescribeDeliveryChannelStatusRequest::DescribeDeliveryChannelStatusRequest()
     : ConfigServiceRequest(new DescribeDeliveryChannelStatusRequestPrivate(ConfigServiceRequest::DescribeDeliveryChannelStatusAction, this))
@@ -89,14 +86,9 @@ bool DescribeDeliveryChannelStatusRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeDeliveryChannelStatusResponse object.
+ * Returns a DescribeDeliveryChannelStatusResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeDeliveryChannelStatusResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ConfigServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeDeliveryChannelStatusRequest::response(QNetworkReply * const reply) const
 {
@@ -104,20 +96,17 @@ QtAws::Core::AwsAbstractResponse * DescribeDeliveryChannelStatusRequest::respons
 }
 
 /*!
- * @internal
+ * \class QtAws::ConfigService::DescribeDeliveryChannelStatusRequestPrivate
+ * \brief The DescribeDeliveryChannelStatusRequestPrivate class provides private implementation for DescribeDeliveryChannelStatusRequest.
+ * \internal
  *
- * @class  DescribeDeliveryChannelStatusRequestPrivate
- *
- * @brief  Private implementation for DescribeDeliveryChannelStatusRequest.
+ * \inmodule QtAwsConfigService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeDeliveryChannelStatusRequestPrivate object.
- *
- * @param  action  ConfigService action being performed.
- * @param  q       Pointer to this object's public DescribeDeliveryChannelStatusRequest instance.
+ * Constructs a DescribeDeliveryChannelStatusRequestPrivate object for ConfigService \a action with,
+ * public implementation \a q.
  */
 DescribeDeliveryChannelStatusRequestPrivate::DescribeDeliveryChannelStatusRequestPrivate(
     const ConfigServiceRequest::Action action, DescribeDeliveryChannelStatusRequest * const q)
@@ -127,15 +116,10 @@ DescribeDeliveryChannelStatusRequestPrivate::DescribeDeliveryChannelStatusReques
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeDeliveryChannelStatusRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeDeliveryChannelStatusRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeDeliveryChannelStatusRequest instance.
  */
 DescribeDeliveryChannelStatusRequestPrivate::DescribeDeliveryChannelStatusRequestPrivate(
     const DescribeDeliveryChannelStatusRequestPrivate &other, DescribeDeliveryChannelStatusRequest * const q)

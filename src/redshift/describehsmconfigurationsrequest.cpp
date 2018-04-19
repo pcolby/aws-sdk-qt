@@ -27,10 +27,9 @@ namespace Redshift {
 
 /*!
  * \class QtAws::Redshift::DescribeHsmConfigurationsRequest
- *
  * \brief The DescribeHsmConfigurationsRequest class provides an interface for Redshift DescribeHsmConfigurations requests.
  *
- * \ingroup Redshift
+ * \inmodule QtAwsRedshift
  *
  *  <fullname>Amazon Redshift</fullname>
  * 
@@ -67,9 +66,7 @@ namespace Redshift {
  */
 
 /*!
- * @brief  Constructs a new DescribeHsmConfigurationsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeHsmConfigurationsRequest::DescribeHsmConfigurationsRequest(const DescribeHsmConfigurationsRequest &other)
     : RedshiftRequest(new DescribeHsmConfigurationsRequestPrivate(*other.d_func(), this))
@@ -78,7 +75,7 @@ DescribeHsmConfigurationsRequest::DescribeHsmConfigurationsRequest(const Describ
 }
 
 /*!
- * @brief  Constructs a new DescribeHsmConfigurationsRequest object.
+ * Constructs a DescribeHsmConfigurationsRequest object.
  */
 DescribeHsmConfigurationsRequest::DescribeHsmConfigurationsRequest()
     : RedshiftRequest(new DescribeHsmConfigurationsRequestPrivate(RedshiftRequest::DescribeHsmConfigurationsAction, this))
@@ -96,14 +93,9 @@ bool DescribeHsmConfigurationsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeHsmConfigurationsResponse object.
+ * Returns a DescribeHsmConfigurationsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeHsmConfigurationsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RedshiftClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeHsmConfigurationsRequest::response(QNetworkReply * const reply) const
 {
@@ -111,20 +103,17 @@ QtAws::Core::AwsAbstractResponse * DescribeHsmConfigurationsRequest::response(QN
 }
 
 /*!
- * @internal
+ * \class QtAws::Redshift::DescribeHsmConfigurationsRequestPrivate
+ * \brief The DescribeHsmConfigurationsRequestPrivate class provides private implementation for DescribeHsmConfigurationsRequest.
+ * \internal
  *
- * @class  DescribeHsmConfigurationsRequestPrivate
- *
- * @brief  Private implementation for DescribeHsmConfigurationsRequest.
+ * \inmodule QtAwsRedshift
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeHsmConfigurationsRequestPrivate object.
- *
- * @param  action  Redshift action being performed.
- * @param  q       Pointer to this object's public DescribeHsmConfigurationsRequest instance.
+ * Constructs a DescribeHsmConfigurationsRequestPrivate object for Redshift \a action with,
+ * public implementation \a q.
  */
 DescribeHsmConfigurationsRequestPrivate::DescribeHsmConfigurationsRequestPrivate(
     const RedshiftRequest::Action action, DescribeHsmConfigurationsRequest * const q)
@@ -134,15 +123,10 @@ DescribeHsmConfigurationsRequestPrivate::DescribeHsmConfigurationsRequestPrivate
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeHsmConfigurationsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeHsmConfigurationsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeHsmConfigurationsRequest instance.
  */
 DescribeHsmConfigurationsRequestPrivate::DescribeHsmConfigurationsRequestPrivate(
     const DescribeHsmConfigurationsRequestPrivate &other, DescribeHsmConfigurationsRequest * const q)

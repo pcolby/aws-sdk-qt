@@ -27,10 +27,9 @@ namespace AutoScaling {
 
 /*!
  * \class QtAws::AutoScaling::DescribeAutoScalingInstancesRequest
- *
  * \brief The DescribeAutoScalingInstancesRequest class provides an interface for AutoScaling DescribeAutoScalingInstances requests.
  *
- * \ingroup AutoScaling
+ * \inmodule QtAwsAutoScaling
  *
  *  <fullname>Amazon EC2 Auto Scaling</fullname>
  * 
@@ -42,9 +41,7 @@ namespace AutoScaling {
  */
 
 /*!
- * @brief  Constructs a new DescribeAutoScalingInstancesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeAutoScalingInstancesRequest::DescribeAutoScalingInstancesRequest(const DescribeAutoScalingInstancesRequest &other)
     : AutoScalingRequest(new DescribeAutoScalingInstancesRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ DescribeAutoScalingInstancesRequest::DescribeAutoScalingInstancesRequest(const D
 }
 
 /*!
- * @brief  Constructs a new DescribeAutoScalingInstancesRequest object.
+ * Constructs a DescribeAutoScalingInstancesRequest object.
  */
 DescribeAutoScalingInstancesRequest::DescribeAutoScalingInstancesRequest()
     : AutoScalingRequest(new DescribeAutoScalingInstancesRequestPrivate(AutoScalingRequest::DescribeAutoScalingInstancesAction, this))
@@ -71,14 +68,9 @@ bool DescribeAutoScalingInstancesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeAutoScalingInstancesResponse object.
+ * Returns a DescribeAutoScalingInstancesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeAutoScalingInstancesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AutoScalingClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeAutoScalingInstancesRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * DescribeAutoScalingInstancesRequest::response
 }
 
 /*!
- * @internal
+ * \class QtAws::AutoScaling::DescribeAutoScalingInstancesRequestPrivate
+ * \brief The DescribeAutoScalingInstancesRequestPrivate class provides private implementation for DescribeAutoScalingInstancesRequest.
+ * \internal
  *
- * @class  DescribeAutoScalingInstancesRequestPrivate
- *
- * @brief  Private implementation for DescribeAutoScalingInstancesRequest.
+ * \inmodule QtAwsAutoScaling
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeAutoScalingInstancesRequestPrivate object.
- *
- * @param  action  AutoScaling action being performed.
- * @param  q       Pointer to this object's public DescribeAutoScalingInstancesRequest instance.
+ * Constructs a DescribeAutoScalingInstancesRequestPrivate object for AutoScaling \a action with,
+ * public implementation \a q.
  */
 DescribeAutoScalingInstancesRequestPrivate::DescribeAutoScalingInstancesRequestPrivate(
     const AutoScalingRequest::Action action, DescribeAutoScalingInstancesRequest * const q)
@@ -109,15 +98,10 @@ DescribeAutoScalingInstancesRequestPrivate::DescribeAutoScalingInstancesRequestP
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeAutoScalingInstancesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeAutoScalingInstancesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeAutoScalingInstancesRequest instance.
  */
 DescribeAutoScalingInstancesRequestPrivate::DescribeAutoScalingInstancesRequestPrivate(
     const DescribeAutoScalingInstancesRequestPrivate &other, DescribeAutoScalingInstancesRequest * const q)

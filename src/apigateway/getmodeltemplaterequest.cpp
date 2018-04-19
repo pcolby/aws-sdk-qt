@@ -27,10 +27,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::GetModelTemplateRequest
- *
  * \brief The GetModelTemplateRequest class provides an interface for APIGateway GetModelTemplate requests.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -42,9 +41,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new GetModelTemplateRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetModelTemplateRequest::GetModelTemplateRequest(const GetModelTemplateRequest &other)
     : APIGatewayRequest(new GetModelTemplateRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ GetModelTemplateRequest::GetModelTemplateRequest(const GetModelTemplateRequest &
 }
 
 /*!
- * @brief  Constructs a new GetModelTemplateRequest object.
+ * Constructs a GetModelTemplateRequest object.
  */
 GetModelTemplateRequest::GetModelTemplateRequest()
     : APIGatewayRequest(new GetModelTemplateRequestPrivate(APIGatewayRequest::GetModelTemplateAction, this))
@@ -71,14 +68,9 @@ bool GetModelTemplateRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetModelTemplateResponse object.
+ * Returns a GetModelTemplateResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetModelTemplateResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  APIGatewayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetModelTemplateRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * GetModelTemplateRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::APIGateway::GetModelTemplateRequestPrivate
+ * \brief The GetModelTemplateRequestPrivate class provides private implementation for GetModelTemplateRequest.
+ * \internal
  *
- * @class  GetModelTemplateRequestPrivate
- *
- * @brief  Private implementation for GetModelTemplateRequest.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetModelTemplateRequestPrivate object.
- *
- * @param  action  APIGateway action being performed.
- * @param  q       Pointer to this object's public GetModelTemplateRequest instance.
+ * Constructs a GetModelTemplateRequestPrivate object for APIGateway \a action with,
+ * public implementation \a q.
  */
 GetModelTemplateRequestPrivate::GetModelTemplateRequestPrivate(
     const APIGatewayRequest::Action action, GetModelTemplateRequest * const q)
@@ -109,15 +98,10 @@ GetModelTemplateRequestPrivate::GetModelTemplateRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetModelTemplateRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetModelTemplateRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetModelTemplateRequest instance.
  */
 GetModelTemplateRequestPrivate::GetModelTemplateRequestPrivate(
     const GetModelTemplateRequestPrivate &other, GetModelTemplateRequest * const q)

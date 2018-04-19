@@ -27,10 +27,9 @@ namespace Inspector {
 
 /*!
  * \class QtAws::Inspector::DescribeResourceGroupsRequest
- *
  * \brief The DescribeResourceGroupsRequest class provides an interface for Inspector DescribeResourceGroups requests.
  *
- * \ingroup Inspector
+ * \inmodule QtAwsInspector
  *
  *  <fullname>Amazon Inspector</fullname>
  * 
@@ -42,9 +41,7 @@ namespace Inspector {
  */
 
 /*!
- * @brief  Constructs a new DescribeResourceGroupsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeResourceGroupsRequest::DescribeResourceGroupsRequest(const DescribeResourceGroupsRequest &other)
     : InspectorRequest(new DescribeResourceGroupsRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ DescribeResourceGroupsRequest::DescribeResourceGroupsRequest(const DescribeResou
 }
 
 /*!
- * @brief  Constructs a new DescribeResourceGroupsRequest object.
+ * Constructs a DescribeResourceGroupsRequest object.
  */
 DescribeResourceGroupsRequest::DescribeResourceGroupsRequest()
     : InspectorRequest(new DescribeResourceGroupsRequestPrivate(InspectorRequest::DescribeResourceGroupsAction, this))
@@ -71,14 +68,9 @@ bool DescribeResourceGroupsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeResourceGroupsResponse object.
+ * Returns a DescribeResourceGroupsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeResourceGroupsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  InspectorClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeResourceGroupsRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * DescribeResourceGroupsRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::Inspector::DescribeResourceGroupsRequestPrivate
+ * \brief The DescribeResourceGroupsRequestPrivate class provides private implementation for DescribeResourceGroupsRequest.
+ * \internal
  *
- * @class  DescribeResourceGroupsRequestPrivate
- *
- * @brief  Private implementation for DescribeResourceGroupsRequest.
+ * \inmodule QtAwsInspector
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeResourceGroupsRequestPrivate object.
- *
- * @param  action  Inspector action being performed.
- * @param  q       Pointer to this object's public DescribeResourceGroupsRequest instance.
+ * Constructs a DescribeResourceGroupsRequestPrivate object for Inspector \a action with,
+ * public implementation \a q.
  */
 DescribeResourceGroupsRequestPrivate::DescribeResourceGroupsRequestPrivate(
     const InspectorRequest::Action action, DescribeResourceGroupsRequest * const q)
@@ -109,15 +98,10 @@ DescribeResourceGroupsRequestPrivate::DescribeResourceGroupsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeResourceGroupsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeResourceGroupsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeResourceGroupsRequest instance.
  */
 DescribeResourceGroupsRequestPrivate::DescribeResourceGroupsRequestPrivate(
     const DescribeResourceGroupsRequestPrivate &other, DescribeResourceGroupsRequest * const q)

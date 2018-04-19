@@ -27,10 +27,9 @@ namespace LexRuntimeService {
 
 /*!
  * \class QtAws::LexRuntimeService::PostContentRequest
- *
  * \brief The PostContentRequest class provides an interface for LexRuntimeService PostContent requests.
  *
- * \ingroup LexRuntimeService
+ * \inmodule QtAwsLexRuntimeService
  *
  *  Amazon Lex provides both build and runtime endpoints. Each endpoint provides a set of operations (API). Your
  *  conversational bot uses the runtime API to understand user utterances (user input text or voice). For example, suppose a
@@ -44,9 +43,7 @@ namespace LexRuntimeService {
  */
 
 /*!
- * @brief  Constructs a new PostContentRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 PostContentRequest::PostContentRequest(const PostContentRequest &other)
     : LexRuntimeServiceRequest(new PostContentRequestPrivate(*other.d_func(), this))
@@ -55,7 +52,7 @@ PostContentRequest::PostContentRequest(const PostContentRequest &other)
 }
 
 /*!
- * @brief  Constructs a new PostContentRequest object.
+ * Constructs a PostContentRequest object.
  */
 PostContentRequest::PostContentRequest()
     : LexRuntimeServiceRequest(new PostContentRequestPrivate(LexRuntimeServiceRequest::PostContentAction, this))
@@ -73,14 +70,9 @@ bool PostContentRequest::isValid() const
 
 
 /*!
- * @brief  Construct an PostContentResponse object.
+ * Returns a PostContentResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An PostContentResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  LexRuntimeServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * PostContentRequest::response(QNetworkReply * const reply) const
 {
@@ -88,20 +80,17 @@ QtAws::Core::AwsAbstractResponse * PostContentRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::LexRuntimeService::PostContentRequestPrivate
+ * \brief The PostContentRequestPrivate class provides private implementation for PostContentRequest.
+ * \internal
  *
- * @class  PostContentRequestPrivate
- *
- * @brief  Private implementation for PostContentRequest.
+ * \inmodule QtAwsLexRuntimeService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new PostContentRequestPrivate object.
- *
- * @param  action  LexRuntimeService action being performed.
- * @param  q       Pointer to this object's public PostContentRequest instance.
+ * Constructs a PostContentRequestPrivate object for LexRuntimeService \a action with,
+ * public implementation \a q.
  */
 PostContentRequestPrivate::PostContentRequestPrivate(
     const LexRuntimeServiceRequest::Action action, PostContentRequest * const q)
@@ -111,15 +100,10 @@ PostContentRequestPrivate::PostContentRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PostContentRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the PostContentRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public PostContentRequest instance.
  */
 PostContentRequestPrivate::PostContentRequestPrivate(
     const PostContentRequestPrivate &other, PostContentRequest * const q)

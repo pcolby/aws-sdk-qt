@@ -27,10 +27,9 @@ namespace WorkMail {
 
 /*!
  * \class QtAws::WorkMail::DeleteMailboxPermissionsRequest
- *
  * \brief The DeleteMailboxPermissionsRequest class provides an interface for WorkMail DeleteMailboxPermissions requests.
  *
- * \ingroup WorkMail
+ * \inmodule QtAwsWorkMail
  *
  *  Amazon WorkMail is a secure, managed business email and calendaring service with support for existing desktop and mobile
  *  email clients. You can access your email, contacts, and calendars using Microsoft Outlook, your browser, or their native
@@ -70,9 +69,7 @@ namespace WorkMail {
  */
 
 /*!
- * @brief  Constructs a new DeleteMailboxPermissionsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteMailboxPermissionsRequest::DeleteMailboxPermissionsRequest(const DeleteMailboxPermissionsRequest &other)
     : WorkMailRequest(new DeleteMailboxPermissionsRequestPrivate(*other.d_func(), this))
@@ -81,7 +78,7 @@ DeleteMailboxPermissionsRequest::DeleteMailboxPermissionsRequest(const DeleteMai
 }
 
 /*!
- * @brief  Constructs a new DeleteMailboxPermissionsRequest object.
+ * Constructs a DeleteMailboxPermissionsRequest object.
  */
 DeleteMailboxPermissionsRequest::DeleteMailboxPermissionsRequest()
     : WorkMailRequest(new DeleteMailboxPermissionsRequestPrivate(WorkMailRequest::DeleteMailboxPermissionsAction, this))
@@ -99,14 +96,9 @@ bool DeleteMailboxPermissionsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteMailboxPermissionsResponse object.
+ * Returns a DeleteMailboxPermissionsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteMailboxPermissionsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WorkMailClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteMailboxPermissionsRequest::response(QNetworkReply * const reply) const
 {
@@ -114,20 +106,17 @@ QtAws::Core::AwsAbstractResponse * DeleteMailboxPermissionsRequest::response(QNe
 }
 
 /*!
- * @internal
+ * \class QtAws::WorkMail::DeleteMailboxPermissionsRequestPrivate
+ * \brief The DeleteMailboxPermissionsRequestPrivate class provides private implementation for DeleteMailboxPermissionsRequest.
+ * \internal
  *
- * @class  DeleteMailboxPermissionsRequestPrivate
- *
- * @brief  Private implementation for DeleteMailboxPermissionsRequest.
+ * \inmodule QtAwsWorkMail
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteMailboxPermissionsRequestPrivate object.
- *
- * @param  action  WorkMail action being performed.
- * @param  q       Pointer to this object's public DeleteMailboxPermissionsRequest instance.
+ * Constructs a DeleteMailboxPermissionsRequestPrivate object for WorkMail \a action with,
+ * public implementation \a q.
  */
 DeleteMailboxPermissionsRequestPrivate::DeleteMailboxPermissionsRequestPrivate(
     const WorkMailRequest::Action action, DeleteMailboxPermissionsRequest * const q)
@@ -137,15 +126,10 @@ DeleteMailboxPermissionsRequestPrivate::DeleteMailboxPermissionsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteMailboxPermissionsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteMailboxPermissionsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteMailboxPermissionsRequest instance.
  */
 DeleteMailboxPermissionsRequestPrivate::DeleteMailboxPermissionsRequestPrivate(
     const DeleteMailboxPermissionsRequestPrivate &other, DeleteMailboxPermissionsRequest * const q)

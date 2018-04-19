@@ -269,6 +269,9 @@
 /*!
  * \namespace QtAws::IAM
  * \brief The QtAws::IAM contains stuff...
+ *
+ * \inmodule QtAwsIAM
+ *
  * @todo Move this to a separate template file.
  */
 
@@ -383,7 +386,7 @@ IamClient::IamClient(
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * \a  AwsEndpoint::getEndpoint()
+ * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
 IamClient::IamClient(
     const QUrl &endpoint,

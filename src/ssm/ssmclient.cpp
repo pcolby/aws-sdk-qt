@@ -222,6 +222,9 @@
 /*!
  * \namespace QtAws::SSM
  * \brief The QtAws::SSM contains stuff...
+ *
+ * \inmodule QtAwsSSM
+ *
  * @todo Move this to a separate template file.
  */
 
@@ -295,7 +298,7 @@ SsmClient::SsmClient(
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * \a  AwsEndpoint::getEndpoint()
+ * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
 SsmClient::SsmClient(
     const QUrl &endpoint,

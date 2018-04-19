@@ -25,16 +25,39 @@ namespace CodeStar {
 
 /*!
  * \class QtAws::CodeStar::CodeStarRequest
- *
  * \brief The CodeStarRequest class provides an interface for CodeStar requests.
  *
- * \ingroup CodeStar
+ * \inmodule QtAwsCodeStar
  */
 
 /*!
- * @brief  Constructs a new CodeStarRequest object.
+ * \enum CodeStarRequest::Action
  *
- * @param  action  The CodeStar action to request.
+ * This enum describes the actions that can be performed as CodeStar
+ * requests.
+ *
+ * \value AssociateTeamMemberAction CodeStar AssociateTeamMember action.
+ * \value CreateProjectAction CodeStar CreateProject action.
+ * \value CreateUserProfileAction CodeStar CreateUserProfile action.
+ * \value DeleteProjectAction CodeStar DeleteProject action.
+ * \value DeleteUserProfileAction CodeStar DeleteUserProfile action.
+ * \value DescribeProjectAction CodeStar DescribeProject action.
+ * \value DescribeUserProfileAction CodeStar DescribeUserProfile action.
+ * \value DisassociateTeamMemberAction CodeStar DisassociateTeamMember action.
+ * \value ListProjectsAction CodeStar ListProjects action.
+ * \value ListResourcesAction CodeStar ListResources action.
+ * \value ListTagsForProjectAction CodeStar ListTagsForProject action.
+ * \value ListTeamMembersAction CodeStar ListTeamMembers action.
+ * \value ListUserProfilesAction CodeStar ListUserProfiles action.
+ * \value TagProjectAction CodeStar TagProject action.
+ * \value UntagProjectAction CodeStar UntagProject action.
+ * \value UpdateProjectAction CodeStar UpdateProject action.
+ * \value UpdateTeamMemberAction CodeStar UpdateTeamMember action.
+ * \value UpdateUserProfileAction CodeStar UpdateUserProfile action.
+ */
+
+/*!
+ * Constructs a[n] CodeStarRequest object for CodeStar \a action.
  */
 CodeStarRequest::CodeStarRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new CodeStarRequestPrivate(action, this))
@@ -43,9 +66,7 @@ CodeStarRequest::CodeStarRequest(const Action action)
 }
 
 /*!
- * @brief  Constructs a new CodeStarRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CodeStarRequest::CodeStarRequest(const CodeStarRequest &other)
     : QtAws::Core::AwsAbstractRequest(new CodeStarRequestPrivate(*other.d_func(), this))
@@ -54,13 +75,7 @@ CodeStarRequest::CodeStarRequest(const CodeStarRequest &other)
 }
 
 /*!
- * @brief  Assignment operator.
- *
- * Assigns \a other to \c this.
- *
- * @param  other  Instance to copy.
- *
- * @return  A reference to \c this.
+ * Sets the CodeStarRequest object to be equal to \a other.
  */
 CodeStarRequest& CodeStarRequest::operator=(const CodeStarRequest &other)
 {
@@ -72,14 +87,10 @@ CodeStarRequest& CodeStarRequest::operator=(const CodeStarRequest &other)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CodeStarRequest object.
+ * Constructs aa CodeStarRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from CodeStarRequestPrivate.
- *
- * @param  d  Pointer to private data (aka D-Pointer).
  */
 CodeStarRequest::CodeStarRequest(CodeStarRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
@@ -87,7 +98,7 @@ CodeStarRequest::CodeStarRequest(CodeStarRequestPrivate * const d) : QtAws::Core
 }
 
 /*!
- * \brief Returns the CodeStar action to be performed by this request.
+ * Returns the CodeStar action to be performed by this request.
  */
 CodeStarRequest::Action CodeStarRequest::action() const
 {
@@ -96,7 +107,7 @@ CodeStarRequest::Action CodeStarRequest::action() const
 }
 
 /*!
- * \brief Returns the name of the CodeStar action to be performed by this request.
+ * Returns the name of the CodeStar action to be performed by this request.
  */
 QString CodeStarRequest::actionString() const
 {
@@ -104,7 +115,7 @@ QString CodeStarRequest::actionString() const
 }
 
 /*!
- * \brief Returns the CodeStar API version implemented by this request.
+ * Returns the CodeStar API version implemented by this request.
  */
 QString CodeStarRequest::apiVersion() const
 {
@@ -113,7 +124,7 @@ QString CodeStarRequest::apiVersion() const
 }
 
 /*!
- * @brief Set the CodeStar action to be performed by this request to \a action.
+ * Sets the CodeStar action to be performed by this request to \a action.
  */
 void CodeStarRequest::setAction(const Action action)
 {
@@ -122,7 +133,7 @@ void CodeStarRequest::setAction(const Action action)
 }
 
 /*!
- * Set the CodeStar API version to include in this request to \a version.
+ * Sets the CodeStar API version to include in this request to \a version.
  */
 void CodeStarRequest::setApiVersion(const QString &version)
 {
@@ -131,7 +142,7 @@ void CodeStarRequest::setApiVersion(const QString &version)
 }
 
 /*!
- * \brief Returns \c true if this request is the same as \a other.
+ * Returns \c true if this request is equal to \a other; \c false otherwise.
  *
  * Note, most derived *Request classes do not need to provider their own
  * implementations of this function, since most such request classes rely on
@@ -146,8 +157,8 @@ bool CodeStarRequest::operator==(const CodeStarRequest &other) const
             (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
-/*!
- * @brief  Check if \a queueName is a valid CodeStar queue name.
+/*
+ * Returns \c tue if \a queueName is a valid CodeStar queue name.
  *
  * @par From CodeStar FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
@@ -166,9 +177,8 @@ bool CodeStarRequest::operator==(const CodeStarRequest &other) const
 }*/
 
 /*!
- * \brief Removes the a \a name parameter from this request.
- *
- * Returns the count of paramters removed (typically \c 0 or \c 1).
+ * Removes the a \a name parameter from the request, then returns the number of
+ * paramters removed (typically \c 0 or \c 1).
  */
 int CodeStarRequest::clearParameter(const QString &name)
 {
@@ -177,7 +187,7 @@ int CodeStarRequest::clearParameter(const QString &name)
 }
 
 /*!
- * \brief Removes all parameters from this request.
+ * Removes all parameters from the request.
  */
 void CodeStarRequest::clearParameters()
 {
@@ -186,7 +196,7 @@ void CodeStarRequest::clearParameters()
 }
 
 /*!
- * \brief Returns the value of the \n name pararemter if set, otherwise \a defaultValue.
+ * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
 QVariant CodeStarRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
@@ -195,7 +205,7 @@ QVariant CodeStarRequest::parameter(const QString &name, const QVariant &default
 }
 
 /*!
- * \brief Returns a map of parameters included in this request.
+ * Returns the parameters included in this request.
  */
 const QVariantMap &CodeStarRequest::parameters() const
 {
@@ -204,7 +214,7 @@ const QVariantMap &CodeStarRequest::parameters() const
 }
 
 /*!
- * \brief Sets the \a name parameter to \a value.
+ * Sets the \a name parameter to \a value.
  */
 void CodeStarRequest::setParameter(const QString &name, const QVariant &value)
 {
@@ -213,9 +223,8 @@ void CodeStarRequest::setParameter(const QString &name, const QVariant &value)
 }
 
 /*!
- * \brief Sets the map of paramters for this request to \a parameters.
- *
- * Any request parameters set previously will be discarded.
+ * Sets the paramters for this request to \a parameters. Any request parameters
+ * set previously will be discarded.
  */
 void CodeStarRequest::setParameters(const QVariantMap &parameters)
 {
@@ -224,11 +233,12 @@ void CodeStarRequest::setParameters(const QVariantMap &parameters)
 }
 
 /*!
- * \brief Returns a network request for this CodeStar request using the given \a endpoint.
+ * Returns a network request for the CodeStar request using the given
+ * \a endpoint.
  *
- * This CodeStar implementation builds request URLs by combining the common query
- * parameters (such as Action and Version), with any that have been added (via
- * setParameter) by child classes.
+ * This CodeStar implementation builds request URLs by combining the
+ * common query parameters (such as Action and Version), with any that have
+ * been added (via setParameter) by child classes.
  */
 QNetworkRequest CodeStarRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -239,17 +249,16 @@ QNetworkRequest CodeStarRequest::unsignedRequest(const QUrl &endpoint) const
 }
 
 /*!
+ * \class QtAws::CodeStar::CodeStarRequestPrivate
+ * \brief The CodeStarRequestPrivate class provides private implementation for CodeStarRequest.
  * \internal
  *
- * \class  CodeStarRequestPrivate
- *
- * \brief  Private implementation for CodeStarRequest.
+ * \inmodule QtAwsCodeStar
  */
 
 /*!
- * \internal
- *
- * \brief Constructs a new CodeStarRequestPrivate object.
+ * Constructs a CodeStarRequestPrivate object for CodeStar \a action with,
+ * public implementation \a q.
  */
 CodeStarRequestPrivate::CodeStarRequestPrivate(const CodeStarRequest::Action action, CodeStarRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
@@ -258,9 +267,7 @@ CodeStarRequestPrivate::CodeStarRequestPrivate(const CodeStarRequest::Action act
 }
 
 /*!
- * \internal
- *
- * \brief Constructs a new CodeStarRequestPrivate object, copying an existing one.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
@@ -276,15 +283,12 @@ CodeStarRequestPrivate::CodeStarRequestPrivate(const CodeStarRequestPrivate &oth
 }
 
 /*!
- * \internal
- *
- * \brief Returns a string representing \a action.
+ * Returns a string represention of \a action, or a null string if \a action is
+ * invalid.
  *
  * This function converts CodeStarRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the CodeStar service's Action
  * query parameters.
- *
- * @return A string representing \a action, or a null string if \a action is invalid.
  */
 QString CodeStarRequestPrivate::toString(const CodeStarRequest::Action &action)
 {

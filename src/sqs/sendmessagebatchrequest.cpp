@@ -27,10 +27,9 @@ namespace SQS {
 
 /*!
  * \class QtAws::SQS::SendMessageBatchRequest
- *
  * \brief The SendMessageBatchRequest class provides an interface for SQS SendMessageBatch requests.
  *
- * \ingroup SQS
+ * \inmodule QtAwsSQS
  *
  *  Welcome to the <i>Amazon Simple Queue Service API
  * 
@@ -103,9 +102,7 @@ namespace SQS {
  */
 
 /*!
- * @brief  Constructs a new SendMessageBatchRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 SendMessageBatchRequest::SendMessageBatchRequest(const SendMessageBatchRequest &other)
     : SQSRequest(new SendMessageBatchRequestPrivate(*other.d_func(), this))
@@ -114,7 +111,7 @@ SendMessageBatchRequest::SendMessageBatchRequest(const SendMessageBatchRequest &
 }
 
 /*!
- * @brief  Constructs a new SendMessageBatchRequest object.
+ * Constructs a SendMessageBatchRequest object.
  */
 SendMessageBatchRequest::SendMessageBatchRequest()
     : SQSRequest(new SendMessageBatchRequestPrivate(SQSRequest::SendMessageBatchAction, this))
@@ -132,14 +129,9 @@ bool SendMessageBatchRequest::isValid() const
 
 
 /*!
- * @brief  Construct an SendMessageBatchResponse object.
+ * Returns a SendMessageBatchResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An SendMessageBatchResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SQSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * SendMessageBatchRequest::response(QNetworkReply * const reply) const
 {
@@ -147,20 +139,17 @@ QtAws::Core::AwsAbstractResponse * SendMessageBatchRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::SQS::SendMessageBatchRequestPrivate
+ * \brief The SendMessageBatchRequestPrivate class provides private implementation for SendMessageBatchRequest.
+ * \internal
  *
- * @class  SendMessageBatchRequestPrivate
- *
- * @brief  Private implementation for SendMessageBatchRequest.
+ * \inmodule QtAwsSQS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new SendMessageBatchRequestPrivate object.
- *
- * @param  action  SQS action being performed.
- * @param  q       Pointer to this object's public SendMessageBatchRequest instance.
+ * Constructs a SendMessageBatchRequestPrivate object for SQS \a action with,
+ * public implementation \a q.
  */
 SendMessageBatchRequestPrivate::SendMessageBatchRequestPrivate(
     const SQSRequest::Action action, SendMessageBatchRequest * const q)
@@ -170,15 +159,10 @@ SendMessageBatchRequestPrivate::SendMessageBatchRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SendMessageBatchRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the SendMessageBatchRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public SendMessageBatchRequest instance.
  */
 SendMessageBatchRequestPrivate::SendMessageBatchRequestPrivate(
     const SendMessageBatchRequestPrivate &other, SendMessageBatchRequest * const q)

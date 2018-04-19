@@ -27,10 +27,9 @@ namespace ServerlessApplicationRepository {
 
 /*!
  * \class QtAws::ServerlessApplicationRepository::GetApplicationRequest
- *
  * \brief The GetApplicationRequest class provides an interface for ServerlessApplicationRepository GetApplication requests.
  *
- * \ingroup ServerlessApplicationRepository
+ * \inmodule QtAwsServerlessApplicationRepository
  *
  *  The AWS Serverless Application Repository makes it easy for developers and enterprises to quickly find and deploy
  *  serverless applications in the AWS Cloud. For more information about serverless applications, see Serverless Computing
@@ -58,9 +57,7 @@ namespace ServerlessApplicationRepository {
  */
 
 /*!
- * @brief  Constructs a new GetApplicationRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetApplicationRequest::GetApplicationRequest(const GetApplicationRequest &other)
     : ServerlessApplicationRepositoryRequest(new GetApplicationRequestPrivate(*other.d_func(), this))
@@ -69,7 +66,7 @@ GetApplicationRequest::GetApplicationRequest(const GetApplicationRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetApplicationRequest object.
+ * Constructs a GetApplicationRequest object.
  */
 GetApplicationRequest::GetApplicationRequest()
     : ServerlessApplicationRepositoryRequest(new GetApplicationRequestPrivate(ServerlessApplicationRepositoryRequest::GetApplicationAction, this))
@@ -87,14 +84,9 @@ bool GetApplicationRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetApplicationResponse object.
+ * Returns a GetApplicationResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetApplicationResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ServerlessApplicationRepositoryClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetApplicationRequest::response(QNetworkReply * const reply) const
 {
@@ -102,20 +94,17 @@ QtAws::Core::AwsAbstractResponse * GetApplicationRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::ServerlessApplicationRepository::GetApplicationRequestPrivate
+ * \brief The GetApplicationRequestPrivate class provides private implementation for GetApplicationRequest.
+ * \internal
  *
- * @class  GetApplicationRequestPrivate
- *
- * @brief  Private implementation for GetApplicationRequest.
+ * \inmodule QtAwsServerlessApplicationRepository
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetApplicationRequestPrivate object.
- *
- * @param  action  ServerlessApplicationRepository action being performed.
- * @param  q       Pointer to this object's public GetApplicationRequest instance.
+ * Constructs a GetApplicationRequestPrivate object for ServerlessApplicationRepository \a action with,
+ * public implementation \a q.
  */
 GetApplicationRequestPrivate::GetApplicationRequestPrivate(
     const ServerlessApplicationRepositoryRequest::Action action, GetApplicationRequest * const q)
@@ -125,15 +114,10 @@ GetApplicationRequestPrivate::GetApplicationRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetApplicationRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetApplicationRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetApplicationRequest instance.
  */
 GetApplicationRequestPrivate::GetApplicationRequestPrivate(
     const GetApplicationRequestPrivate &other, GetApplicationRequest * const q)

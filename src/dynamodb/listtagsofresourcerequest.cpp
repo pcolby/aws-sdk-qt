@@ -27,10 +27,9 @@ namespace DynamoDB {
 
 /*!
  * \class QtAws::DynamoDB::ListTagsOfResourceRequest
- *
  * \brief The ListTagsOfResourceRequest class provides an interface for DynamoDB ListTagsOfResource requests.
  *
- * \ingroup DynamoDB
+ * \inmodule QtAwsDynamoDB
  *
  *  <fullname>Amazon DynamoDB</fullname>
  * 
@@ -56,9 +55,7 @@ namespace DynamoDB {
  */
 
 /*!
- * @brief  Constructs a new ListTagsOfResourceRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListTagsOfResourceRequest::ListTagsOfResourceRequest(const ListTagsOfResourceRequest &other)
     : DynamoDBRequest(new ListTagsOfResourceRequestPrivate(*other.d_func(), this))
@@ -67,7 +64,7 @@ ListTagsOfResourceRequest::ListTagsOfResourceRequest(const ListTagsOfResourceReq
 }
 
 /*!
- * @brief  Constructs a new ListTagsOfResourceRequest object.
+ * Constructs a ListTagsOfResourceRequest object.
  */
 ListTagsOfResourceRequest::ListTagsOfResourceRequest()
     : DynamoDBRequest(new ListTagsOfResourceRequestPrivate(DynamoDBRequest::ListTagsOfResourceAction, this))
@@ -85,14 +82,9 @@ bool ListTagsOfResourceRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListTagsOfResourceResponse object.
+ * Returns a ListTagsOfResourceResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListTagsOfResourceResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DynamoDBClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListTagsOfResourceRequest::response(QNetworkReply * const reply) const
 {
@@ -100,20 +92,17 @@ QtAws::Core::AwsAbstractResponse * ListTagsOfResourceRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::DynamoDB::ListTagsOfResourceRequestPrivate
+ * \brief The ListTagsOfResourceRequestPrivate class provides private implementation for ListTagsOfResourceRequest.
+ * \internal
  *
- * @class  ListTagsOfResourceRequestPrivate
- *
- * @brief  Private implementation for ListTagsOfResourceRequest.
+ * \inmodule QtAwsDynamoDB
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListTagsOfResourceRequestPrivate object.
- *
- * @param  action  DynamoDB action being performed.
- * @param  q       Pointer to this object's public ListTagsOfResourceRequest instance.
+ * Constructs a ListTagsOfResourceRequestPrivate object for DynamoDB \a action with,
+ * public implementation \a q.
  */
 ListTagsOfResourceRequestPrivate::ListTagsOfResourceRequestPrivate(
     const DynamoDBRequest::Action action, ListTagsOfResourceRequest * const q)
@@ -123,15 +112,10 @@ ListTagsOfResourceRequestPrivate::ListTagsOfResourceRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListTagsOfResourceRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListTagsOfResourceRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListTagsOfResourceRequest instance.
  */
 ListTagsOfResourceRequestPrivate::ListTagsOfResourceRequestPrivate(
     const ListTagsOfResourceRequestPrivate &other, ListTagsOfResourceRequest * const q)

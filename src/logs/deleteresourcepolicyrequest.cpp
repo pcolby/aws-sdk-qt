@@ -27,10 +27,9 @@ namespace CloudWatchLogs {
 
 /*!
  * \class QtAws::CloudWatchLogs::DeleteResourcePolicyRequest
- *
  * \brief The DeleteResourcePolicyRequest class provides an interface for CloudWatchLogs DeleteResourcePolicy requests.
  *
- * \ingroup CloudWatchLogs
+ * \inmodule QtAwsCloudWatchLogs
  *
  *  You can use Amazon CloudWatch Logs to monitor, store, and access your log files from Amazon EC2 instances, AWS
  *  CloudTrail, or other sources. You can then retrieve the associated log data from CloudWatch Logs using the CloudWatch
@@ -66,9 +65,7 @@ namespace CloudWatchLogs {
  */
 
 /*!
- * @brief  Constructs a new DeleteResourcePolicyRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteResourcePolicyRequest::DeleteResourcePolicyRequest(const DeleteResourcePolicyRequest &other)
     : CloudWatchLogsRequest(new DeleteResourcePolicyRequestPrivate(*other.d_func(), this))
@@ -77,7 +74,7 @@ DeleteResourcePolicyRequest::DeleteResourcePolicyRequest(const DeleteResourcePol
 }
 
 /*!
- * @brief  Constructs a new DeleteResourcePolicyRequest object.
+ * Constructs a DeleteResourcePolicyRequest object.
  */
 DeleteResourcePolicyRequest::DeleteResourcePolicyRequest()
     : CloudWatchLogsRequest(new DeleteResourcePolicyRequestPrivate(CloudWatchLogsRequest::DeleteResourcePolicyAction, this))
@@ -95,14 +92,9 @@ bool DeleteResourcePolicyRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteResourcePolicyResponse object.
+ * Returns a DeleteResourcePolicyResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteResourcePolicyResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudWatchLogsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteResourcePolicyRequest::response(QNetworkReply * const reply) const
 {
@@ -110,20 +102,17 @@ QtAws::Core::AwsAbstractResponse * DeleteResourcePolicyRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudWatchLogs::DeleteResourcePolicyRequestPrivate
+ * \brief The DeleteResourcePolicyRequestPrivate class provides private implementation for DeleteResourcePolicyRequest.
+ * \internal
  *
- * @class  DeleteResourcePolicyRequestPrivate
- *
- * @brief  Private implementation for DeleteResourcePolicyRequest.
+ * \inmodule QtAwsCloudWatchLogs
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteResourcePolicyRequestPrivate object.
- *
- * @param  action  CloudWatchLogs action being performed.
- * @param  q       Pointer to this object's public DeleteResourcePolicyRequest instance.
+ * Constructs a DeleteResourcePolicyRequestPrivate object for CloudWatchLogs \a action with,
+ * public implementation \a q.
  */
 DeleteResourcePolicyRequestPrivate::DeleteResourcePolicyRequestPrivate(
     const CloudWatchLogsRequest::Action action, DeleteResourcePolicyRequest * const q)
@@ -133,15 +122,10 @@ DeleteResourcePolicyRequestPrivate::DeleteResourcePolicyRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteResourcePolicyRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteResourcePolicyRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteResourcePolicyRequest instance.
  */
 DeleteResourcePolicyRequestPrivate::DeleteResourcePolicyRequestPrivate(
     const DeleteResourcePolicyRequestPrivate &other, DeleteResourcePolicyRequest * const q)

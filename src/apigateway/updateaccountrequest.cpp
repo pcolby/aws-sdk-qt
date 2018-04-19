@@ -27,10 +27,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::UpdateAccountRequest
- *
  * \brief The UpdateAccountRequest class provides an interface for APIGateway UpdateAccount requests.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -42,9 +41,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new UpdateAccountRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateAccountRequest::UpdateAccountRequest(const UpdateAccountRequest &other)
     : APIGatewayRequest(new UpdateAccountRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ UpdateAccountRequest::UpdateAccountRequest(const UpdateAccountRequest &other)
 }
 
 /*!
- * @brief  Constructs a new UpdateAccountRequest object.
+ * Constructs a UpdateAccountRequest object.
  */
 UpdateAccountRequest::UpdateAccountRequest()
     : APIGatewayRequest(new UpdateAccountRequestPrivate(APIGatewayRequest::UpdateAccountAction, this))
@@ -71,14 +68,9 @@ bool UpdateAccountRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateAccountResponse object.
+ * Returns a UpdateAccountResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateAccountResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  APIGatewayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateAccountRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * UpdateAccountRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::APIGateway::UpdateAccountRequestPrivate
+ * \brief The UpdateAccountRequestPrivate class provides private implementation for UpdateAccountRequest.
+ * \internal
  *
- * @class  UpdateAccountRequestPrivate
- *
- * @brief  Private implementation for UpdateAccountRequest.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateAccountRequestPrivate object.
- *
- * @param  action  APIGateway action being performed.
- * @param  q       Pointer to this object's public UpdateAccountRequest instance.
+ * Constructs a UpdateAccountRequestPrivate object for APIGateway \a action with,
+ * public implementation \a q.
  */
 UpdateAccountRequestPrivate::UpdateAccountRequestPrivate(
     const APIGatewayRequest::Action action, UpdateAccountRequest * const q)
@@ -109,15 +98,10 @@ UpdateAccountRequestPrivate::UpdateAccountRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateAccountRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateAccountRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateAccountRequest instance.
  */
 UpdateAccountRequestPrivate::UpdateAccountRequestPrivate(
     const UpdateAccountRequestPrivate &other, UpdateAccountRequest * const q)

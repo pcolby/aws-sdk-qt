@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DeleteVpnConnectionRouteRequest
- *
  * \brief The DeleteVpnConnectionRouteRequest class provides an interface for EC2 DeleteVpnConnectionRoute requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DeleteVpnConnectionRouteRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteVpnConnectionRouteRequest::DeleteVpnConnectionRouteRequest(const DeleteVpnConnectionRouteRequest &other)
     : EC2Request(new DeleteVpnConnectionRouteRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ DeleteVpnConnectionRouteRequest::DeleteVpnConnectionRouteRequest(const DeleteVpn
 }
 
 /*!
- * @brief  Constructs a new DeleteVpnConnectionRouteRequest object.
+ * Constructs a DeleteVpnConnectionRouteRequest object.
  */
 DeleteVpnConnectionRouteRequest::DeleteVpnConnectionRouteRequest()
     : EC2Request(new DeleteVpnConnectionRouteRequestPrivate(EC2Request::DeleteVpnConnectionRouteAction, this))
@@ -70,14 +67,9 @@ bool DeleteVpnConnectionRouteRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteVpnConnectionRouteResponse object.
+ * Returns a DeleteVpnConnectionRouteResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteVpnConnectionRouteResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteVpnConnectionRouteRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * DeleteVpnConnectionRouteRequest::response(QNe
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::DeleteVpnConnectionRouteRequestPrivate
+ * \brief The DeleteVpnConnectionRouteRequestPrivate class provides private implementation for DeleteVpnConnectionRouteRequest.
+ * \internal
  *
- * @class  DeleteVpnConnectionRouteRequestPrivate
- *
- * @brief  Private implementation for DeleteVpnConnectionRouteRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteVpnConnectionRouteRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public DeleteVpnConnectionRouteRequest instance.
+ * Constructs a DeleteVpnConnectionRouteRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 DeleteVpnConnectionRouteRequestPrivate::DeleteVpnConnectionRouteRequestPrivate(
     const EC2Request::Action action, DeleteVpnConnectionRouteRequest * const q)
@@ -108,15 +97,10 @@ DeleteVpnConnectionRouteRequestPrivate::DeleteVpnConnectionRouteRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteVpnConnectionRouteRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteVpnConnectionRouteRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteVpnConnectionRouteRequest instance.
  */
 DeleteVpnConnectionRouteRequestPrivate::DeleteVpnConnectionRouteRequestPrivate(
     const DeleteVpnConnectionRouteRequestPrivate &other, DeleteVpnConnectionRouteRequest * const q)

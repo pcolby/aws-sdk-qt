@@ -27,10 +27,9 @@ namespace ACMPCA {
 
 /*!
  * \class QtAws::ACMPCA::TagCertificateAuthorityRequest
- *
  * \brief The TagCertificateAuthorityRequest class provides an interface for ACMPCA TagCertificateAuthority requests.
  *
- * \ingroup ACMPCA
+ * \inmodule QtAwsACMPCA
  *
  *  You can use the ACM PCA API to create a private certificate authority (CA). You must first call the
  *  <a>CreateCertificateAuthority</a> function. If successful, the function returns an Amazon Resource Name (ARN) for your
@@ -67,9 +66,7 @@ namespace ACMPCA {
  */
 
 /*!
- * @brief  Constructs a new TagCertificateAuthorityRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 TagCertificateAuthorityRequest::TagCertificateAuthorityRequest(const TagCertificateAuthorityRequest &other)
     : ACMPCARequest(new TagCertificateAuthorityRequestPrivate(*other.d_func(), this))
@@ -78,7 +75,7 @@ TagCertificateAuthorityRequest::TagCertificateAuthorityRequest(const TagCertific
 }
 
 /*!
- * @brief  Constructs a new TagCertificateAuthorityRequest object.
+ * Constructs a TagCertificateAuthorityRequest object.
  */
 TagCertificateAuthorityRequest::TagCertificateAuthorityRequest()
     : ACMPCARequest(new TagCertificateAuthorityRequestPrivate(ACMPCARequest::TagCertificateAuthorityAction, this))
@@ -96,14 +93,9 @@ bool TagCertificateAuthorityRequest::isValid() const
 
 
 /*!
- * @brief  Construct an TagCertificateAuthorityResponse object.
+ * Returns a TagCertificateAuthorityResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An TagCertificateAuthorityResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ACMPCAClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * TagCertificateAuthorityRequest::response(QNetworkReply * const reply) const
 {
@@ -111,20 +103,17 @@ QtAws::Core::AwsAbstractResponse * TagCertificateAuthorityRequest::response(QNet
 }
 
 /*!
- * @internal
+ * \class QtAws::ACMPCA::TagCertificateAuthorityRequestPrivate
+ * \brief The TagCertificateAuthorityRequestPrivate class provides private implementation for TagCertificateAuthorityRequest.
+ * \internal
  *
- * @class  TagCertificateAuthorityRequestPrivate
- *
- * @brief  Private implementation for TagCertificateAuthorityRequest.
+ * \inmodule QtAwsACMPCA
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new TagCertificateAuthorityRequestPrivate object.
- *
- * @param  action  ACMPCA action being performed.
- * @param  q       Pointer to this object's public TagCertificateAuthorityRequest instance.
+ * Constructs a TagCertificateAuthorityRequestPrivate object for ACMPCA \a action with,
+ * public implementation \a q.
  */
 TagCertificateAuthorityRequestPrivate::TagCertificateAuthorityRequestPrivate(
     const ACMPCARequest::Action action, TagCertificateAuthorityRequest * const q)
@@ -134,15 +123,10 @@ TagCertificateAuthorityRequestPrivate::TagCertificateAuthorityRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new TagCertificateAuthorityRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the TagCertificateAuthorityRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public TagCertificateAuthorityRequest instance.
  */
 TagCertificateAuthorityRequestPrivate::TagCertificateAuthorityRequestPrivate(
     const TagCertificateAuthorityRequestPrivate &other, TagCertificateAuthorityRequest * const q)

@@ -27,10 +27,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::CreateUsagePlanRequest
- *
  * \brief The CreateUsagePlanRequest class provides an interface for APIGateway CreateUsagePlan requests.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -42,9 +41,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new CreateUsagePlanRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateUsagePlanRequest::CreateUsagePlanRequest(const CreateUsagePlanRequest &other)
     : APIGatewayRequest(new CreateUsagePlanRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ CreateUsagePlanRequest::CreateUsagePlanRequest(const CreateUsagePlanRequest &oth
 }
 
 /*!
- * @brief  Constructs a new CreateUsagePlanRequest object.
+ * Constructs a CreateUsagePlanRequest object.
  */
 CreateUsagePlanRequest::CreateUsagePlanRequest()
     : APIGatewayRequest(new CreateUsagePlanRequestPrivate(APIGatewayRequest::CreateUsagePlanAction, this))
@@ -71,14 +68,9 @@ bool CreateUsagePlanRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateUsagePlanResponse object.
+ * Returns a CreateUsagePlanResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateUsagePlanResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  APIGatewayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateUsagePlanRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * CreateUsagePlanRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::APIGateway::CreateUsagePlanRequestPrivate
+ * \brief The CreateUsagePlanRequestPrivate class provides private implementation for CreateUsagePlanRequest.
+ * \internal
  *
- * @class  CreateUsagePlanRequestPrivate
- *
- * @brief  Private implementation for CreateUsagePlanRequest.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateUsagePlanRequestPrivate object.
- *
- * @param  action  APIGateway action being performed.
- * @param  q       Pointer to this object's public CreateUsagePlanRequest instance.
+ * Constructs a CreateUsagePlanRequestPrivate object for APIGateway \a action with,
+ * public implementation \a q.
  */
 CreateUsagePlanRequestPrivate::CreateUsagePlanRequestPrivate(
     const APIGatewayRequest::Action action, CreateUsagePlanRequest * const q)
@@ -109,15 +98,10 @@ CreateUsagePlanRequestPrivate::CreateUsagePlanRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateUsagePlanRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateUsagePlanRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateUsagePlanRequest instance.
  */
 CreateUsagePlanRequestPrivate::CreateUsagePlanRequestPrivate(
     const CreateUsagePlanRequestPrivate &other, CreateUsagePlanRequest * const q)

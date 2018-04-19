@@ -27,10 +27,9 @@ namespace Glue {
 
 /*!
  * \class QtAws::Glue::GetJobRunsRequest
- *
  * \brief The GetJobRunsRequest class provides an interface for Glue GetJobRuns requests.
  *
- * \ingroup Glue
+ * \inmodule QtAwsGlue
  *
  *  <fullname>AWS Glue</fullname>
  * 
@@ -40,9 +39,7 @@ namespace Glue {
  */
 
 /*!
- * @brief  Constructs a new GetJobRunsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetJobRunsRequest::GetJobRunsRequest(const GetJobRunsRequest &other)
     : GlueRequest(new GetJobRunsRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ GetJobRunsRequest::GetJobRunsRequest(const GetJobRunsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetJobRunsRequest object.
+ * Constructs a GetJobRunsRequest object.
  */
 GetJobRunsRequest::GetJobRunsRequest()
     : GlueRequest(new GetJobRunsRequestPrivate(GlueRequest::GetJobRunsAction, this))
@@ -69,14 +66,9 @@ bool GetJobRunsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetJobRunsResponse object.
+ * Returns a GetJobRunsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetJobRunsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GlueClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetJobRunsRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * GetJobRunsRequest::response(QNetworkReply * c
 }
 
 /*!
- * @internal
+ * \class QtAws::Glue::GetJobRunsRequestPrivate
+ * \brief The GetJobRunsRequestPrivate class provides private implementation for GetJobRunsRequest.
+ * \internal
  *
- * @class  GetJobRunsRequestPrivate
- *
- * @brief  Private implementation for GetJobRunsRequest.
+ * \inmodule QtAwsGlue
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetJobRunsRequestPrivate object.
- *
- * @param  action  Glue action being performed.
- * @param  q       Pointer to this object's public GetJobRunsRequest instance.
+ * Constructs a GetJobRunsRequestPrivate object for Glue \a action with,
+ * public implementation \a q.
  */
 GetJobRunsRequestPrivate::GetJobRunsRequestPrivate(
     const GlueRequest::Action action, GetJobRunsRequest * const q)
@@ -107,15 +96,10 @@ GetJobRunsRequestPrivate::GetJobRunsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetJobRunsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetJobRunsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetJobRunsRequest instance.
  */
 GetJobRunsRequestPrivate::GetJobRunsRequestPrivate(
     const GetJobRunsRequestPrivate &other, GetJobRunsRequest * const q)

@@ -27,10 +27,9 @@ namespace ServiceCatalog {
 
 /*!
  * \class QtAws::ServiceCatalog::CreatePortfolioShareRequest
- *
  * \brief The CreatePortfolioShareRequest class provides an interface for ServiceCatalog CreatePortfolioShare requests.
  *
- * \ingroup ServiceCatalog
+ * \inmodule QtAwsServiceCatalog
  *
  *  <fullname>AWS Service Catalog</fullname>
  * 
@@ -43,9 +42,7 @@ namespace ServiceCatalog {
  */
 
 /*!
- * @brief  Constructs a new CreatePortfolioShareRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreatePortfolioShareRequest::CreatePortfolioShareRequest(const CreatePortfolioShareRequest &other)
     : ServiceCatalogRequest(new CreatePortfolioShareRequestPrivate(*other.d_func(), this))
@@ -54,7 +51,7 @@ CreatePortfolioShareRequest::CreatePortfolioShareRequest(const CreatePortfolioSh
 }
 
 /*!
- * @brief  Constructs a new CreatePortfolioShareRequest object.
+ * Constructs a CreatePortfolioShareRequest object.
  */
 CreatePortfolioShareRequest::CreatePortfolioShareRequest()
     : ServiceCatalogRequest(new CreatePortfolioShareRequestPrivate(ServiceCatalogRequest::CreatePortfolioShareAction, this))
@@ -72,14 +69,9 @@ bool CreatePortfolioShareRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreatePortfolioShareResponse object.
+ * Returns a CreatePortfolioShareResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreatePortfolioShareResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ServiceCatalogClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreatePortfolioShareRequest::response(QNetworkReply * const reply) const
 {
@@ -87,20 +79,17 @@ QtAws::Core::AwsAbstractResponse * CreatePortfolioShareRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::ServiceCatalog::CreatePortfolioShareRequestPrivate
+ * \brief The CreatePortfolioShareRequestPrivate class provides private implementation for CreatePortfolioShareRequest.
+ * \internal
  *
- * @class  CreatePortfolioShareRequestPrivate
- *
- * @brief  Private implementation for CreatePortfolioShareRequest.
+ * \inmodule QtAwsServiceCatalog
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreatePortfolioShareRequestPrivate object.
- *
- * @param  action  ServiceCatalog action being performed.
- * @param  q       Pointer to this object's public CreatePortfolioShareRequest instance.
+ * Constructs a CreatePortfolioShareRequestPrivate object for ServiceCatalog \a action with,
+ * public implementation \a q.
  */
 CreatePortfolioShareRequestPrivate::CreatePortfolioShareRequestPrivate(
     const ServiceCatalogRequest::Action action, CreatePortfolioShareRequest * const q)
@@ -110,15 +99,10 @@ CreatePortfolioShareRequestPrivate::CreatePortfolioShareRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreatePortfolioShareRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreatePortfolioShareRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreatePortfolioShareRequest instance.
  */
 CreatePortfolioShareRequestPrivate::CreatePortfolioShareRequestPrivate(
     const CreatePortfolioShareRequestPrivate &other, CreatePortfolioShareRequest * const q)

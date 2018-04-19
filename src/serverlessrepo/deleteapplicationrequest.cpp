@@ -27,10 +27,9 @@ namespace ServerlessApplicationRepository {
 
 /*!
  * \class QtAws::ServerlessApplicationRepository::DeleteApplicationRequest
- *
  * \brief The DeleteApplicationRequest class provides an interface for ServerlessApplicationRepository DeleteApplication requests.
  *
- * \ingroup ServerlessApplicationRepository
+ * \inmodule QtAwsServerlessApplicationRepository
  *
  *  The AWS Serverless Application Repository makes it easy for developers and enterprises to quickly find and deploy
  *  serverless applications in the AWS Cloud. For more information about serverless applications, see Serverless Computing
@@ -58,9 +57,7 @@ namespace ServerlessApplicationRepository {
  */
 
 /*!
- * @brief  Constructs a new DeleteApplicationRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteApplicationRequest::DeleteApplicationRequest(const DeleteApplicationRequest &other)
     : ServerlessApplicationRepositoryRequest(new DeleteApplicationRequestPrivate(*other.d_func(), this))
@@ -69,7 +66,7 @@ DeleteApplicationRequest::DeleteApplicationRequest(const DeleteApplicationReques
 }
 
 /*!
- * @brief  Constructs a new DeleteApplicationRequest object.
+ * Constructs a DeleteApplicationRequest object.
  */
 DeleteApplicationRequest::DeleteApplicationRequest()
     : ServerlessApplicationRepositoryRequest(new DeleteApplicationRequestPrivate(ServerlessApplicationRepositoryRequest::DeleteApplicationAction, this))
@@ -87,14 +84,9 @@ bool DeleteApplicationRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteApplicationResponse object.
+ * Returns a DeleteApplicationResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteApplicationResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ServerlessApplicationRepositoryClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteApplicationRequest::response(QNetworkReply * const reply) const
 {
@@ -102,20 +94,17 @@ QtAws::Core::AwsAbstractResponse * DeleteApplicationRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::ServerlessApplicationRepository::DeleteApplicationRequestPrivate
+ * \brief The DeleteApplicationRequestPrivate class provides private implementation for DeleteApplicationRequest.
+ * \internal
  *
- * @class  DeleteApplicationRequestPrivate
- *
- * @brief  Private implementation for DeleteApplicationRequest.
+ * \inmodule QtAwsServerlessApplicationRepository
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteApplicationRequestPrivate object.
- *
- * @param  action  ServerlessApplicationRepository action being performed.
- * @param  q       Pointer to this object's public DeleteApplicationRequest instance.
+ * Constructs a DeleteApplicationRequestPrivate object for ServerlessApplicationRepository \a action with,
+ * public implementation \a q.
  */
 DeleteApplicationRequestPrivate::DeleteApplicationRequestPrivate(
     const ServerlessApplicationRepositoryRequest::Action action, DeleteApplicationRequest * const q)
@@ -125,15 +114,10 @@ DeleteApplicationRequestPrivate::DeleteApplicationRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteApplicationRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteApplicationRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteApplicationRequest instance.
  */
 DeleteApplicationRequestPrivate::DeleteApplicationRequestPrivate(
     const DeleteApplicationRequestPrivate &other, DeleteApplicationRequest * const q)

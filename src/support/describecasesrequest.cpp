@@ -27,10 +27,9 @@ namespace Support {
 
 /*!
  * \class QtAws::Support::DescribeCasesRequest
- *
  * \brief The DescribeCasesRequest class provides an interface for Support DescribeCases requests.
  *
- * \ingroup Support
+ * \inmodule QtAwsSupport
  *
  *  <fullname>AWS Support</fullname>
  * 
@@ -105,9 +104,7 @@ namespace Support {
  */
 
 /*!
- * @brief  Constructs a new DescribeCasesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeCasesRequest::DescribeCasesRequest(const DescribeCasesRequest &other)
     : SupportRequest(new DescribeCasesRequestPrivate(*other.d_func(), this))
@@ -116,7 +113,7 @@ DescribeCasesRequest::DescribeCasesRequest(const DescribeCasesRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DescribeCasesRequest object.
+ * Constructs a DescribeCasesRequest object.
  */
 DescribeCasesRequest::DescribeCasesRequest()
     : SupportRequest(new DescribeCasesRequestPrivate(SupportRequest::DescribeCasesAction, this))
@@ -134,14 +131,9 @@ bool DescribeCasesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeCasesResponse object.
+ * Returns a DescribeCasesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeCasesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SupportClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeCasesRequest::response(QNetworkReply * const reply) const
 {
@@ -149,20 +141,17 @@ QtAws::Core::AwsAbstractResponse * DescribeCasesRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::Support::DescribeCasesRequestPrivate
+ * \brief The DescribeCasesRequestPrivate class provides private implementation for DescribeCasesRequest.
+ * \internal
  *
- * @class  DescribeCasesRequestPrivate
- *
- * @brief  Private implementation for DescribeCasesRequest.
+ * \inmodule QtAwsSupport
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeCasesRequestPrivate object.
- *
- * @param  action  Support action being performed.
- * @param  q       Pointer to this object's public DescribeCasesRequest instance.
+ * Constructs a DescribeCasesRequestPrivate object for Support \a action with,
+ * public implementation \a q.
  */
 DescribeCasesRequestPrivate::DescribeCasesRequestPrivate(
     const SupportRequest::Action action, DescribeCasesRequest * const q)
@@ -172,15 +161,10 @@ DescribeCasesRequestPrivate::DescribeCasesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeCasesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeCasesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeCasesRequest instance.
  */
 DescribeCasesRequestPrivate::DescribeCasesRequestPrivate(
     const DescribeCasesRequestPrivate &other, DescribeCasesRequest * const q)

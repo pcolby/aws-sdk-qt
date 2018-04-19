@@ -27,10 +27,9 @@ namespace DynamoDB {
 
 /*!
  * \class QtAws::DynamoDB::UpdateItemRequest
- *
  * \brief The UpdateItemRequest class provides an interface for DynamoDB UpdateItem requests.
  *
- * \ingroup DynamoDB
+ * \inmodule QtAwsDynamoDB
  *
  *  <fullname>Amazon DynamoDB</fullname>
  * 
@@ -56,9 +55,7 @@ namespace DynamoDB {
  */
 
 /*!
- * @brief  Constructs a new UpdateItemRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateItemRequest::UpdateItemRequest(const UpdateItemRequest &other)
     : DynamoDBRequest(new UpdateItemRequestPrivate(*other.d_func(), this))
@@ -67,7 +64,7 @@ UpdateItemRequest::UpdateItemRequest(const UpdateItemRequest &other)
 }
 
 /*!
- * @brief  Constructs a new UpdateItemRequest object.
+ * Constructs a UpdateItemRequest object.
  */
 UpdateItemRequest::UpdateItemRequest()
     : DynamoDBRequest(new UpdateItemRequestPrivate(DynamoDBRequest::UpdateItemAction, this))
@@ -85,14 +82,9 @@ bool UpdateItemRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateItemResponse object.
+ * Returns a UpdateItemResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateItemResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DynamoDBClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateItemRequest::response(QNetworkReply * const reply) const
 {
@@ -100,20 +92,17 @@ QtAws::Core::AwsAbstractResponse * UpdateItemRequest::response(QNetworkReply * c
 }
 
 /*!
- * @internal
+ * \class QtAws::DynamoDB::UpdateItemRequestPrivate
+ * \brief The UpdateItemRequestPrivate class provides private implementation for UpdateItemRequest.
+ * \internal
  *
- * @class  UpdateItemRequestPrivate
- *
- * @brief  Private implementation for UpdateItemRequest.
+ * \inmodule QtAwsDynamoDB
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateItemRequestPrivate object.
- *
- * @param  action  DynamoDB action being performed.
- * @param  q       Pointer to this object's public UpdateItemRequest instance.
+ * Constructs a UpdateItemRequestPrivate object for DynamoDB \a action with,
+ * public implementation \a q.
  */
 UpdateItemRequestPrivate::UpdateItemRequestPrivate(
     const DynamoDBRequest::Action action, UpdateItemRequest * const q)
@@ -123,15 +112,10 @@ UpdateItemRequestPrivate::UpdateItemRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateItemRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateItemRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateItemRequest instance.
  */
 UpdateItemRequestPrivate::UpdateItemRequestPrivate(
     const UpdateItemRequestPrivate &other, UpdateItemRequest * const q)

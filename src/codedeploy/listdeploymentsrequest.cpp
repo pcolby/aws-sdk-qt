@@ -27,10 +27,9 @@ namespace CodeDeploy {
 
 /*!
  * \class QtAws::CodeDeploy::ListDeploymentsRequest
- *
  * \brief The ListDeploymentsRequest class provides an interface for CodeDeploy ListDeployments requests.
  *
- * \ingroup CodeDeploy
+ * \inmodule QtAwsCodeDeploy
  *
  *  <fullname>AWS CodeDeploy</fullname>
  * 
@@ -118,9 +117,7 @@ namespace CodeDeploy {
  */
 
 /*!
- * @brief  Constructs a new ListDeploymentsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListDeploymentsRequest::ListDeploymentsRequest(const ListDeploymentsRequest &other)
     : CodeDeployRequest(new ListDeploymentsRequestPrivate(*other.d_func(), this))
@@ -129,7 +126,7 @@ ListDeploymentsRequest::ListDeploymentsRequest(const ListDeploymentsRequest &oth
 }
 
 /*!
- * @brief  Constructs a new ListDeploymentsRequest object.
+ * Constructs a ListDeploymentsRequest object.
  */
 ListDeploymentsRequest::ListDeploymentsRequest()
     : CodeDeployRequest(new ListDeploymentsRequestPrivate(CodeDeployRequest::ListDeploymentsAction, this))
@@ -147,14 +144,9 @@ bool ListDeploymentsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListDeploymentsResponse object.
+ * Returns a ListDeploymentsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListDeploymentsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CodeDeployClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListDeploymentsRequest::response(QNetworkReply * const reply) const
 {
@@ -162,20 +154,17 @@ QtAws::Core::AwsAbstractResponse * ListDeploymentsRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::CodeDeploy::ListDeploymentsRequestPrivate
+ * \brief The ListDeploymentsRequestPrivate class provides private implementation for ListDeploymentsRequest.
+ * \internal
  *
- * @class  ListDeploymentsRequestPrivate
- *
- * @brief  Private implementation for ListDeploymentsRequest.
+ * \inmodule QtAwsCodeDeploy
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListDeploymentsRequestPrivate object.
- *
- * @param  action  CodeDeploy action being performed.
- * @param  q       Pointer to this object's public ListDeploymentsRequest instance.
+ * Constructs a ListDeploymentsRequestPrivate object for CodeDeploy \a action with,
+ * public implementation \a q.
  */
 ListDeploymentsRequestPrivate::ListDeploymentsRequestPrivate(
     const CodeDeployRequest::Action action, ListDeploymentsRequest * const q)
@@ -185,15 +174,10 @@ ListDeploymentsRequestPrivate::ListDeploymentsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListDeploymentsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListDeploymentsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListDeploymentsRequest instance.
  */
 ListDeploymentsRequestPrivate::ListDeploymentsRequestPrivate(
     const ListDeploymentsRequestPrivate &other, ListDeploymentsRequest * const q)

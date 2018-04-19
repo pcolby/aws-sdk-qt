@@ -27,10 +27,9 @@ namespace SES {
 
 /*!
  * \class QtAws::SES::GetIdentityPoliciesRequest
- *
  * \brief The GetIdentityPoliciesRequest class provides an interface for SES GetIdentityPolicies requests.
  *
- * \ingroup SES
+ * \inmodule QtAwsSES
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -48,9 +47,7 @@ namespace SES {
  */
 
 /*!
- * @brief  Constructs a new GetIdentityPoliciesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetIdentityPoliciesRequest::GetIdentityPoliciesRequest(const GetIdentityPoliciesRequest &other)
     : SESRequest(new GetIdentityPoliciesRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ GetIdentityPoliciesRequest::GetIdentityPoliciesRequest(const GetIdentityPolicies
 }
 
 /*!
- * @brief  Constructs a new GetIdentityPoliciesRequest object.
+ * Constructs a GetIdentityPoliciesRequest object.
  */
 GetIdentityPoliciesRequest::GetIdentityPoliciesRequest()
     : SESRequest(new GetIdentityPoliciesRequestPrivate(SESRequest::GetIdentityPoliciesAction, this))
@@ -77,14 +74,9 @@ bool GetIdentityPoliciesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetIdentityPoliciesResponse object.
+ * Returns a GetIdentityPoliciesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetIdentityPoliciesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SESClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetIdentityPoliciesRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * GetIdentityPoliciesRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::SES::GetIdentityPoliciesRequestPrivate
+ * \brief The GetIdentityPoliciesRequestPrivate class provides private implementation for GetIdentityPoliciesRequest.
+ * \internal
  *
- * @class  GetIdentityPoliciesRequestPrivate
- *
- * @brief  Private implementation for GetIdentityPoliciesRequest.
+ * \inmodule QtAwsSES
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetIdentityPoliciesRequestPrivate object.
- *
- * @param  action  SES action being performed.
- * @param  q       Pointer to this object's public GetIdentityPoliciesRequest instance.
+ * Constructs a GetIdentityPoliciesRequestPrivate object for SES \a action with,
+ * public implementation \a q.
  */
 GetIdentityPoliciesRequestPrivate::GetIdentityPoliciesRequestPrivate(
     const SESRequest::Action action, GetIdentityPoliciesRequest * const q)
@@ -115,15 +104,10 @@ GetIdentityPoliciesRequestPrivate::GetIdentityPoliciesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetIdentityPoliciesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetIdentityPoliciesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetIdentityPoliciesRequest instance.
  */
 GetIdentityPoliciesRequestPrivate::GetIdentityPoliciesRequestPrivate(
     const GetIdentityPoliciesRequestPrivate &other, GetIdentityPoliciesRequest * const q)

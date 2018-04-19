@@ -27,19 +27,16 @@ namespace KinesisVideoMedia {
 
 /*!
  * \class QtAws::KinesisVideoMedia::GetMediaRequest
- *
  * \brief The GetMediaRequest class provides an interface for KinesisVideoMedia GetMedia requests.
  *
- * \ingroup KinesisVideoMedia
+ * \inmodule QtAwsKinesisVideoMedia
  *
  *
  * \sa KinesisVideoMediaClient::getMedia
  */
 
 /*!
- * @brief  Constructs a new GetMediaRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetMediaRequest::GetMediaRequest(const GetMediaRequest &other)
     : KinesisVideoMediaRequest(new GetMediaRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ GetMediaRequest::GetMediaRequest(const GetMediaRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetMediaRequest object.
+ * Constructs a GetMediaRequest object.
  */
 GetMediaRequest::GetMediaRequest()
     : KinesisVideoMediaRequest(new GetMediaRequestPrivate(KinesisVideoMediaRequest::GetMediaAction, this))
@@ -66,14 +63,9 @@ bool GetMediaRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetMediaResponse object.
+ * Returns a GetMediaResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetMediaResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  KinesisVideoMediaClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetMediaRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * GetMediaRequest::response(QNetworkReply * con
 }
 
 /*!
- * @internal
+ * \class QtAws::KinesisVideoMedia::GetMediaRequestPrivate
+ * \brief The GetMediaRequestPrivate class provides private implementation for GetMediaRequest.
+ * \internal
  *
- * @class  GetMediaRequestPrivate
- *
- * @brief  Private implementation for GetMediaRequest.
+ * \inmodule QtAwsKinesisVideoMedia
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetMediaRequestPrivate object.
- *
- * @param  action  KinesisVideoMedia action being performed.
- * @param  q       Pointer to this object's public GetMediaRequest instance.
+ * Constructs a GetMediaRequestPrivate object for KinesisVideoMedia \a action with,
+ * public implementation \a q.
  */
 GetMediaRequestPrivate::GetMediaRequestPrivate(
     const KinesisVideoMediaRequest::Action action, GetMediaRequest * const q)
@@ -104,15 +93,10 @@ GetMediaRequestPrivate::GetMediaRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetMediaRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetMediaRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetMediaRequest instance.
  */
 GetMediaRequestPrivate::GetMediaRequestPrivate(
     const GetMediaRequestPrivate &other, GetMediaRequest * const q)

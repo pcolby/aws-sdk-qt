@@ -27,10 +27,9 @@ namespace SQS {
 
 /*!
  * \class QtAws::SQS::ChangeMessageVisibilityRequest
- *
  * \brief The ChangeMessageVisibilityRequest class provides an interface for SQS ChangeMessageVisibility requests.
  *
- * \ingroup SQS
+ * \inmodule QtAwsSQS
  *
  *  Welcome to the <i>Amazon Simple Queue Service API
  * 
@@ -103,9 +102,7 @@ namespace SQS {
  */
 
 /*!
- * @brief  Constructs a new ChangeMessageVisibilityRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ChangeMessageVisibilityRequest::ChangeMessageVisibilityRequest(const ChangeMessageVisibilityRequest &other)
     : SQSRequest(new ChangeMessageVisibilityRequestPrivate(*other.d_func(), this))
@@ -114,7 +111,7 @@ ChangeMessageVisibilityRequest::ChangeMessageVisibilityRequest(const ChangeMessa
 }
 
 /*!
- * @brief  Constructs a new ChangeMessageVisibilityRequest object.
+ * Constructs a ChangeMessageVisibilityRequest object.
  */
 ChangeMessageVisibilityRequest::ChangeMessageVisibilityRequest()
     : SQSRequest(new ChangeMessageVisibilityRequestPrivate(SQSRequest::ChangeMessageVisibilityAction, this))
@@ -132,14 +129,9 @@ bool ChangeMessageVisibilityRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ChangeMessageVisibilityResponse object.
+ * Returns a ChangeMessageVisibilityResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ChangeMessageVisibilityResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SQSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ChangeMessageVisibilityRequest::response(QNetworkReply * const reply) const
 {
@@ -147,20 +139,17 @@ QtAws::Core::AwsAbstractResponse * ChangeMessageVisibilityRequest::response(QNet
 }
 
 /*!
- * @internal
+ * \class QtAws::SQS::ChangeMessageVisibilityRequestPrivate
+ * \brief The ChangeMessageVisibilityRequestPrivate class provides private implementation for ChangeMessageVisibilityRequest.
+ * \internal
  *
- * @class  ChangeMessageVisibilityRequestPrivate
- *
- * @brief  Private implementation for ChangeMessageVisibilityRequest.
+ * \inmodule QtAwsSQS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ChangeMessageVisibilityRequestPrivate object.
- *
- * @param  action  SQS action being performed.
- * @param  q       Pointer to this object's public ChangeMessageVisibilityRequest instance.
+ * Constructs a ChangeMessageVisibilityRequestPrivate object for SQS \a action with,
+ * public implementation \a q.
  */
 ChangeMessageVisibilityRequestPrivate::ChangeMessageVisibilityRequestPrivate(
     const SQSRequest::Action action, ChangeMessageVisibilityRequest * const q)
@@ -170,15 +159,10 @@ ChangeMessageVisibilityRequestPrivate::ChangeMessageVisibilityRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ChangeMessageVisibilityRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ChangeMessageVisibilityRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ChangeMessageVisibilityRequest instance.
  */
 ChangeMessageVisibilityRequestPrivate::ChangeMessageVisibilityRequestPrivate(
     const ChangeMessageVisibilityRequestPrivate &other, ChangeMessageVisibilityRequest * const q)

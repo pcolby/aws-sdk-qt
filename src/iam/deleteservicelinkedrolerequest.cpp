@@ -27,10 +27,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::DeleteServiceLinkedRoleRequest
- *
  * \brief The DeleteServiceLinkedRoleRequest class provides an interface for IAM DeleteServiceLinkedRole requests.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -102,9 +101,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new DeleteServiceLinkedRoleRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteServiceLinkedRoleRequest::DeleteServiceLinkedRoleRequest(const DeleteServiceLinkedRoleRequest &other)
     : IAMRequest(new DeleteServiceLinkedRoleRequestPrivate(*other.d_func(), this))
@@ -113,7 +110,7 @@ DeleteServiceLinkedRoleRequest::DeleteServiceLinkedRoleRequest(const DeleteServi
 }
 
 /*!
- * @brief  Constructs a new DeleteServiceLinkedRoleRequest object.
+ * Constructs a DeleteServiceLinkedRoleRequest object.
  */
 DeleteServiceLinkedRoleRequest::DeleteServiceLinkedRoleRequest()
     : IAMRequest(new DeleteServiceLinkedRoleRequestPrivate(IAMRequest::DeleteServiceLinkedRoleAction, this))
@@ -131,14 +128,9 @@ bool DeleteServiceLinkedRoleRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteServiceLinkedRoleResponse object.
+ * Returns a DeleteServiceLinkedRoleResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteServiceLinkedRoleResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IAMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteServiceLinkedRoleRequest::response(QNetworkReply * const reply) const
 {
@@ -146,20 +138,17 @@ QtAws::Core::AwsAbstractResponse * DeleteServiceLinkedRoleRequest::response(QNet
 }
 
 /*!
- * @internal
+ * \class QtAws::IAM::DeleteServiceLinkedRoleRequestPrivate
+ * \brief The DeleteServiceLinkedRoleRequestPrivate class provides private implementation for DeleteServiceLinkedRoleRequest.
+ * \internal
  *
- * @class  DeleteServiceLinkedRoleRequestPrivate
- *
- * @brief  Private implementation for DeleteServiceLinkedRoleRequest.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteServiceLinkedRoleRequestPrivate object.
- *
- * @param  action  IAM action being performed.
- * @param  q       Pointer to this object's public DeleteServiceLinkedRoleRequest instance.
+ * Constructs a DeleteServiceLinkedRoleRequestPrivate object for IAM \a action with,
+ * public implementation \a q.
  */
 DeleteServiceLinkedRoleRequestPrivate::DeleteServiceLinkedRoleRequestPrivate(
     const IAMRequest::Action action, DeleteServiceLinkedRoleRequest * const q)
@@ -169,15 +158,10 @@ DeleteServiceLinkedRoleRequestPrivate::DeleteServiceLinkedRoleRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteServiceLinkedRoleRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteServiceLinkedRoleRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteServiceLinkedRoleRequest instance.
  */
 DeleteServiceLinkedRoleRequestPrivate::DeleteServiceLinkedRoleRequestPrivate(
     const DeleteServiceLinkedRoleRequestPrivate &other, DeleteServiceLinkedRoleRequest * const q)

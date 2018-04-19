@@ -27,10 +27,9 @@ namespace EMR {
 
 /*!
  * \class QtAws::EMR::TerminateJobFlowsRequest
- *
  * \brief The TerminateJobFlowsRequest class provides an interface for EMR TerminateJobFlows requests.
  *
- * \ingroup EMR
+ * \inmodule QtAwsEMR
  *
  *  Amazon EMR is a web service that makes it easy to process large amounts of data efficiently. Amazon EMR uses Hadoop
  *  processing combined with several AWS products to do tasks such as web indexing, data mining, log file analysis, machine
@@ -40,9 +39,7 @@ namespace EMR {
  */
 
 /*!
- * @brief  Constructs a new TerminateJobFlowsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 TerminateJobFlowsRequest::TerminateJobFlowsRequest(const TerminateJobFlowsRequest &other)
     : EMRRequest(new TerminateJobFlowsRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ TerminateJobFlowsRequest::TerminateJobFlowsRequest(const TerminateJobFlowsReques
 }
 
 /*!
- * @brief  Constructs a new TerminateJobFlowsRequest object.
+ * Constructs a TerminateJobFlowsRequest object.
  */
 TerminateJobFlowsRequest::TerminateJobFlowsRequest()
     : EMRRequest(new TerminateJobFlowsRequestPrivate(EMRRequest::TerminateJobFlowsAction, this))
@@ -69,14 +66,9 @@ bool TerminateJobFlowsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an TerminateJobFlowsResponse object.
+ * Returns a TerminateJobFlowsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An TerminateJobFlowsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EMRClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * TerminateJobFlowsRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * TerminateJobFlowsRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::EMR::TerminateJobFlowsRequestPrivate
+ * \brief The TerminateJobFlowsRequestPrivate class provides private implementation for TerminateJobFlowsRequest.
+ * \internal
  *
- * @class  TerminateJobFlowsRequestPrivate
- *
- * @brief  Private implementation for TerminateJobFlowsRequest.
+ * \inmodule QtAwsEMR
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new TerminateJobFlowsRequestPrivate object.
- *
- * @param  action  EMR action being performed.
- * @param  q       Pointer to this object's public TerminateJobFlowsRequest instance.
+ * Constructs a TerminateJobFlowsRequestPrivate object for EMR \a action with,
+ * public implementation \a q.
  */
 TerminateJobFlowsRequestPrivate::TerminateJobFlowsRequestPrivate(
     const EMRRequest::Action action, TerminateJobFlowsRequest * const q)
@@ -107,15 +96,10 @@ TerminateJobFlowsRequestPrivate::TerminateJobFlowsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new TerminateJobFlowsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the TerminateJobFlowsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public TerminateJobFlowsRequest instance.
  */
 TerminateJobFlowsRequestPrivate::TerminateJobFlowsRequestPrivate(
     const TerminateJobFlowsRequestPrivate &other, TerminateJobFlowsRequest * const q)

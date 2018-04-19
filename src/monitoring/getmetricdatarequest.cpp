@@ -27,10 +27,9 @@ namespace CloudWatch {
 
 /*!
  * \class QtAws::CloudWatch::GetMetricDataRequest
- *
  * \brief The GetMetricDataRequest class provides an interface for CloudWatch GetMetricData requests.
  *
- * \ingroup CloudWatch
+ * \inmodule QtAwsCloudWatch
  *
  *  Amazon CloudWatch monitors your Amazon Web Services (AWS) resources and the applications you run on AWS in real time.
  *  You can use CloudWatch to collect and track metrics, which are the variables you want to measure for your resources and
@@ -51,9 +50,7 @@ namespace CloudWatch {
  */
 
 /*!
- * @brief  Constructs a new GetMetricDataRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetMetricDataRequest::GetMetricDataRequest(const GetMetricDataRequest &other)
     : CloudWatchRequest(new GetMetricDataRequestPrivate(*other.d_func(), this))
@@ -62,7 +59,7 @@ GetMetricDataRequest::GetMetricDataRequest(const GetMetricDataRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetMetricDataRequest object.
+ * Constructs a GetMetricDataRequest object.
  */
 GetMetricDataRequest::GetMetricDataRequest()
     : CloudWatchRequest(new GetMetricDataRequestPrivate(CloudWatchRequest::GetMetricDataAction, this))
@@ -80,14 +77,9 @@ bool GetMetricDataRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetMetricDataResponse object.
+ * Returns a GetMetricDataResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetMetricDataResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudWatchClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetMetricDataRequest::response(QNetworkReply * const reply) const
 {
@@ -95,20 +87,17 @@ QtAws::Core::AwsAbstractResponse * GetMetricDataRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudWatch::GetMetricDataRequestPrivate
+ * \brief The GetMetricDataRequestPrivate class provides private implementation for GetMetricDataRequest.
+ * \internal
  *
- * @class  GetMetricDataRequestPrivate
- *
- * @brief  Private implementation for GetMetricDataRequest.
+ * \inmodule QtAwsCloudWatch
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetMetricDataRequestPrivate object.
- *
- * @param  action  CloudWatch action being performed.
- * @param  q       Pointer to this object's public GetMetricDataRequest instance.
+ * Constructs a GetMetricDataRequestPrivate object for CloudWatch \a action with,
+ * public implementation \a q.
  */
 GetMetricDataRequestPrivate::GetMetricDataRequestPrivate(
     const CloudWatchRequest::Action action, GetMetricDataRequest * const q)
@@ -118,15 +107,10 @@ GetMetricDataRequestPrivate::GetMetricDataRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetMetricDataRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetMetricDataRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetMetricDataRequest instance.
  */
 GetMetricDataRequestPrivate::GetMetricDataRequestPrivate(
     const GetMetricDataRequestPrivate &other, GetMetricDataRequest * const q)

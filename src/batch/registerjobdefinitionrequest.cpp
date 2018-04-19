@@ -27,10 +27,9 @@ namespace Batch {
 
 /*!
  * \class QtAws::Batch::RegisterJobDefinitionRequest
- *
  * \brief The RegisterJobDefinitionRequest class provides an interface for Batch RegisterJobDefinition requests.
  *
- * \ingroup Batch
+ * \inmodule QtAwsBatch
  *
  *  AWS Batch enables you to run batch computing workloads on the AWS Cloud. Batch computing is a common way for developers,
  *  scientists, and engineers to access large amounts of compute resources, and AWS Batch removes the undifferentiated heavy
@@ -51,9 +50,7 @@ namespace Batch {
  */
 
 /*!
- * @brief  Constructs a new RegisterJobDefinitionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 RegisterJobDefinitionRequest::RegisterJobDefinitionRequest(const RegisterJobDefinitionRequest &other)
     : BatchRequest(new RegisterJobDefinitionRequestPrivate(*other.d_func(), this))
@@ -62,7 +59,7 @@ RegisterJobDefinitionRequest::RegisterJobDefinitionRequest(const RegisterJobDefi
 }
 
 /*!
- * @brief  Constructs a new RegisterJobDefinitionRequest object.
+ * Constructs a RegisterJobDefinitionRequest object.
  */
 RegisterJobDefinitionRequest::RegisterJobDefinitionRequest()
     : BatchRequest(new RegisterJobDefinitionRequestPrivate(BatchRequest::RegisterJobDefinitionAction, this))
@@ -80,14 +77,9 @@ bool RegisterJobDefinitionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an RegisterJobDefinitionResponse object.
+ * Returns a RegisterJobDefinitionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An RegisterJobDefinitionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  BatchClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * RegisterJobDefinitionRequest::response(QNetworkReply * const reply) const
 {
@@ -95,20 +87,17 @@ QtAws::Core::AwsAbstractResponse * RegisterJobDefinitionRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::Batch::RegisterJobDefinitionRequestPrivate
+ * \brief The RegisterJobDefinitionRequestPrivate class provides private implementation for RegisterJobDefinitionRequest.
+ * \internal
  *
- * @class  RegisterJobDefinitionRequestPrivate
- *
- * @brief  Private implementation for RegisterJobDefinitionRequest.
+ * \inmodule QtAwsBatch
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new RegisterJobDefinitionRequestPrivate object.
- *
- * @param  action  Batch action being performed.
- * @param  q       Pointer to this object's public RegisterJobDefinitionRequest instance.
+ * Constructs a RegisterJobDefinitionRequestPrivate object for Batch \a action with,
+ * public implementation \a q.
  */
 RegisterJobDefinitionRequestPrivate::RegisterJobDefinitionRequestPrivate(
     const BatchRequest::Action action, RegisterJobDefinitionRequest * const q)
@@ -118,15 +107,10 @@ RegisterJobDefinitionRequestPrivate::RegisterJobDefinitionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RegisterJobDefinitionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the RegisterJobDefinitionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public RegisterJobDefinitionRequest instance.
  */
 RegisterJobDefinitionRequestPrivate::RegisterJobDefinitionRequestPrivate(
     const RegisterJobDefinitionRequestPrivate &other, RegisterJobDefinitionRequest * const q)

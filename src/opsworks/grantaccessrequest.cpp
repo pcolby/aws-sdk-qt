@@ -27,10 +27,9 @@ namespace OpsWorks {
 
 /*!
  * \class QtAws::OpsWorks::GrantAccessRequest
- *
  * \brief The GrantAccessRequest class provides an interface for OpsWorks GrantAccess requests.
  *
- * \ingroup OpsWorks
+ * \inmodule QtAwsOpsWorks
  *
  *  <fullname>AWS OpsWorks</fullname>
  * 
@@ -143,9 +142,7 @@ namespace OpsWorks {
  */
 
 /*!
- * @brief  Constructs a new GrantAccessRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GrantAccessRequest::GrantAccessRequest(const GrantAccessRequest &other)
     : OpsWorksRequest(new GrantAccessRequestPrivate(*other.d_func(), this))
@@ -154,7 +151,7 @@ GrantAccessRequest::GrantAccessRequest(const GrantAccessRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GrantAccessRequest object.
+ * Constructs a GrantAccessRequest object.
  */
 GrantAccessRequest::GrantAccessRequest()
     : OpsWorksRequest(new GrantAccessRequestPrivate(OpsWorksRequest::GrantAccessAction, this))
@@ -172,14 +169,9 @@ bool GrantAccessRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GrantAccessResponse object.
+ * Returns a GrantAccessResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GrantAccessResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  OpsWorksClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GrantAccessRequest::response(QNetworkReply * const reply) const
 {
@@ -187,20 +179,17 @@ QtAws::Core::AwsAbstractResponse * GrantAccessRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::OpsWorks::GrantAccessRequestPrivate
+ * \brief The GrantAccessRequestPrivate class provides private implementation for GrantAccessRequest.
+ * \internal
  *
- * @class  GrantAccessRequestPrivate
- *
- * @brief  Private implementation for GrantAccessRequest.
+ * \inmodule QtAwsOpsWorks
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GrantAccessRequestPrivate object.
- *
- * @param  action  OpsWorks action being performed.
- * @param  q       Pointer to this object's public GrantAccessRequest instance.
+ * Constructs a GrantAccessRequestPrivate object for OpsWorks \a action with,
+ * public implementation \a q.
  */
 GrantAccessRequestPrivate::GrantAccessRequestPrivate(
     const OpsWorksRequest::Action action, GrantAccessRequest * const q)
@@ -210,15 +199,10 @@ GrantAccessRequestPrivate::GrantAccessRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GrantAccessRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GrantAccessRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GrantAccessRequest instance.
  */
 GrantAccessRequestPrivate::GrantAccessRequestPrivate(
     const GrantAccessRequestPrivate &other, GrantAccessRequest * const q)

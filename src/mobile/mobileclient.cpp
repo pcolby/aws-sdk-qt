@@ -46,6 +46,9 @@
 /*!
  * \namespace QtAws::Mobile
  * \brief The QtAws::Mobile contains stuff...
+ *
+ * \inmodule QtAwsMobile
+ *
  * @todo Move this to a separate template file.
  */
 
@@ -98,7 +101,7 @@ MobileClient::MobileClient(
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * \a  AwsEndpoint::getEndpoint()
+ * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
 MobileClient::MobileClient(
     const QUrl &endpoint,

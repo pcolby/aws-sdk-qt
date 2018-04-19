@@ -27,10 +27,9 @@ namespace GameLift {
 
 /*!
  * \class QtAws::GameLift::CreateAliasRequest
- *
  * \brief The CreateAliasRequest class provides an interface for GameLift CreateAlias requests.
  *
- * \ingroup GameLift
+ * \inmodule QtAwsGameLift
  *
  *  <fullname>Amazon GameLift Service</fullname>
  * 
@@ -473,9 +472,7 @@ namespace GameLift {
  */
 
 /*!
- * @brief  Constructs a new CreateAliasRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateAliasRequest::CreateAliasRequest(const CreateAliasRequest &other)
     : GameLiftRequest(new CreateAliasRequestPrivate(*other.d_func(), this))
@@ -484,7 +481,7 @@ CreateAliasRequest::CreateAliasRequest(const CreateAliasRequest &other)
 }
 
 /*!
- * @brief  Constructs a new CreateAliasRequest object.
+ * Constructs a CreateAliasRequest object.
  */
 CreateAliasRequest::CreateAliasRequest()
     : GameLiftRequest(new CreateAliasRequestPrivate(GameLiftRequest::CreateAliasAction, this))
@@ -502,14 +499,9 @@ bool CreateAliasRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateAliasResponse object.
+ * Returns a CreateAliasResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateAliasResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GameLiftClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateAliasRequest::response(QNetworkReply * const reply) const
 {
@@ -517,20 +509,17 @@ QtAws::Core::AwsAbstractResponse * CreateAliasRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::GameLift::CreateAliasRequestPrivate
+ * \brief The CreateAliasRequestPrivate class provides private implementation for CreateAliasRequest.
+ * \internal
  *
- * @class  CreateAliasRequestPrivate
- *
- * @brief  Private implementation for CreateAliasRequest.
+ * \inmodule QtAwsGameLift
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateAliasRequestPrivate object.
- *
- * @param  action  GameLift action being performed.
- * @param  q       Pointer to this object's public CreateAliasRequest instance.
+ * Constructs a CreateAliasRequestPrivate object for GameLift \a action with,
+ * public implementation \a q.
  */
 CreateAliasRequestPrivate::CreateAliasRequestPrivate(
     const GameLiftRequest::Action action, CreateAliasRequest * const q)
@@ -540,15 +529,10 @@ CreateAliasRequestPrivate::CreateAliasRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateAliasRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateAliasRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateAliasRequest instance.
  */
 CreateAliasRequestPrivate::CreateAliasRequestPrivate(
     const CreateAliasRequestPrivate &other, CreateAliasRequest * const q)

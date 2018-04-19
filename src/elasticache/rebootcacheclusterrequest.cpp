@@ -27,10 +27,9 @@ namespace ElastiCache {
 
 /*!
  * \class QtAws::ElastiCache::RebootCacheClusterRequest
- *
  * \brief The RebootCacheClusterRequest class provides an interface for ElastiCache RebootCacheCluster requests.
  *
- * \ingroup ElastiCache
+ * \inmodule QtAwsElastiCache
  *
  *  <fullname>Amazon ElastiCache</fullname>
  * 
@@ -51,9 +50,7 @@ namespace ElastiCache {
  */
 
 /*!
- * @brief  Constructs a new RebootCacheClusterRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 RebootCacheClusterRequest::RebootCacheClusterRequest(const RebootCacheClusterRequest &other)
     : ElastiCacheRequest(new RebootCacheClusterRequestPrivate(*other.d_func(), this))
@@ -62,7 +59,7 @@ RebootCacheClusterRequest::RebootCacheClusterRequest(const RebootCacheClusterReq
 }
 
 /*!
- * @brief  Constructs a new RebootCacheClusterRequest object.
+ * Constructs a RebootCacheClusterRequest object.
  */
 RebootCacheClusterRequest::RebootCacheClusterRequest()
     : ElastiCacheRequest(new RebootCacheClusterRequestPrivate(ElastiCacheRequest::RebootCacheClusterAction, this))
@@ -80,14 +77,9 @@ bool RebootCacheClusterRequest::isValid() const
 
 
 /*!
- * @brief  Construct an RebootCacheClusterResponse object.
+ * Returns a RebootCacheClusterResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An RebootCacheClusterResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ElastiCacheClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * RebootCacheClusterRequest::response(QNetworkReply * const reply) const
 {
@@ -95,20 +87,17 @@ QtAws::Core::AwsAbstractResponse * RebootCacheClusterRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::ElastiCache::RebootCacheClusterRequestPrivate
+ * \brief The RebootCacheClusterRequestPrivate class provides private implementation for RebootCacheClusterRequest.
+ * \internal
  *
- * @class  RebootCacheClusterRequestPrivate
- *
- * @brief  Private implementation for RebootCacheClusterRequest.
+ * \inmodule QtAwsElastiCache
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new RebootCacheClusterRequestPrivate object.
- *
- * @param  action  ElastiCache action being performed.
- * @param  q       Pointer to this object's public RebootCacheClusterRequest instance.
+ * Constructs a RebootCacheClusterRequestPrivate object for ElastiCache \a action with,
+ * public implementation \a q.
  */
 RebootCacheClusterRequestPrivate::RebootCacheClusterRequestPrivate(
     const ElastiCacheRequest::Action action, RebootCacheClusterRequest * const q)
@@ -118,15 +107,10 @@ RebootCacheClusterRequestPrivate::RebootCacheClusterRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RebootCacheClusterRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the RebootCacheClusterRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public RebootCacheClusterRequest instance.
  */
 RebootCacheClusterRequestPrivate::RebootCacheClusterRequestPrivate(
     const RebootCacheClusterRequestPrivate &other, RebootCacheClusterRequest * const q)

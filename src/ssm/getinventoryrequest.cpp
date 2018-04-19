@@ -27,10 +27,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::GetInventoryRequest
- *
  * \brief The GetInventoryRequest class provides an interface for SSM GetInventory requests.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -61,9 +60,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new GetInventoryRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetInventoryRequest::GetInventoryRequest(const GetInventoryRequest &other)
     : SSMRequest(new GetInventoryRequestPrivate(*other.d_func(), this))
@@ -72,7 +69,7 @@ GetInventoryRequest::GetInventoryRequest(const GetInventoryRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetInventoryRequest object.
+ * Constructs a GetInventoryRequest object.
  */
 GetInventoryRequest::GetInventoryRequest()
     : SSMRequest(new GetInventoryRequestPrivate(SSMRequest::GetInventoryAction, this))
@@ -90,14 +87,9 @@ bool GetInventoryRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetInventoryResponse object.
+ * Returns a GetInventoryResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetInventoryResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SSMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetInventoryRequest::response(QNetworkReply * const reply) const
 {
@@ -105,20 +97,17 @@ QtAws::Core::AwsAbstractResponse * GetInventoryRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::SSM::GetInventoryRequestPrivate
+ * \brief The GetInventoryRequestPrivate class provides private implementation for GetInventoryRequest.
+ * \internal
  *
- * @class  GetInventoryRequestPrivate
- *
- * @brief  Private implementation for GetInventoryRequest.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetInventoryRequestPrivate object.
- *
- * @param  action  SSM action being performed.
- * @param  q       Pointer to this object's public GetInventoryRequest instance.
+ * Constructs a GetInventoryRequestPrivate object for SSM \a action with,
+ * public implementation \a q.
  */
 GetInventoryRequestPrivate::GetInventoryRequestPrivate(
     const SSMRequest::Action action, GetInventoryRequest * const q)
@@ -128,15 +117,10 @@ GetInventoryRequestPrivate::GetInventoryRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetInventoryRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetInventoryRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetInventoryRequest instance.
  */
 GetInventoryRequestPrivate::GetInventoryRequestPrivate(
     const GetInventoryRequestPrivate &other, GetInventoryRequest * const q)

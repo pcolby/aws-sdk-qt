@@ -27,10 +27,9 @@ namespace AutoScalingPlans {
 
 /*!
  * \class QtAws::AutoScalingPlans::CreateScalingPlanRequest
- *
  * \brief The CreateScalingPlanRequest class provides an interface for AutoScalingPlans CreateScalingPlan requests.
  *
- * \ingroup AutoScalingPlans
+ * \inmodule QtAwsAutoScalingPlans
  *
  *  Use AWS Auto Scaling to quickly discover all the scalable AWS resources for your application and configure dynamic
  *  scaling for your scalable
@@ -46,9 +45,7 @@ namespace AutoScalingPlans {
  */
 
 /*!
- * @brief  Constructs a new CreateScalingPlanRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateScalingPlanRequest::CreateScalingPlanRequest(const CreateScalingPlanRequest &other)
     : AutoScalingPlansRequest(new CreateScalingPlanRequestPrivate(*other.d_func(), this))
@@ -57,7 +54,7 @@ CreateScalingPlanRequest::CreateScalingPlanRequest(const CreateScalingPlanReques
 }
 
 /*!
- * @brief  Constructs a new CreateScalingPlanRequest object.
+ * Constructs a CreateScalingPlanRequest object.
  */
 CreateScalingPlanRequest::CreateScalingPlanRequest()
     : AutoScalingPlansRequest(new CreateScalingPlanRequestPrivate(AutoScalingPlansRequest::CreateScalingPlanAction, this))
@@ -75,14 +72,9 @@ bool CreateScalingPlanRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateScalingPlanResponse object.
+ * Returns a CreateScalingPlanResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateScalingPlanResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AutoScalingPlansClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateScalingPlanRequest::response(QNetworkReply * const reply) const
 {
@@ -90,20 +82,17 @@ QtAws::Core::AwsAbstractResponse * CreateScalingPlanRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::AutoScalingPlans::CreateScalingPlanRequestPrivate
+ * \brief The CreateScalingPlanRequestPrivate class provides private implementation for CreateScalingPlanRequest.
+ * \internal
  *
- * @class  CreateScalingPlanRequestPrivate
- *
- * @brief  Private implementation for CreateScalingPlanRequest.
+ * \inmodule QtAwsAutoScalingPlans
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateScalingPlanRequestPrivate object.
- *
- * @param  action  AutoScalingPlans action being performed.
- * @param  q       Pointer to this object's public CreateScalingPlanRequest instance.
+ * Constructs a CreateScalingPlanRequestPrivate object for AutoScalingPlans \a action with,
+ * public implementation \a q.
  */
 CreateScalingPlanRequestPrivate::CreateScalingPlanRequestPrivate(
     const AutoScalingPlansRequest::Action action, CreateScalingPlanRequest * const q)
@@ -113,15 +102,10 @@ CreateScalingPlanRequestPrivate::CreateScalingPlanRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateScalingPlanRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateScalingPlanRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateScalingPlanRequest instance.
  */
 CreateScalingPlanRequestPrivate::CreateScalingPlanRequestPrivate(
     const CreateScalingPlanRequestPrivate &other, CreateScalingPlanRequest * const q)

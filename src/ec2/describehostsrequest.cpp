@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DescribeHostsRequest
- *
  * \brief The DescribeHostsRequest class provides an interface for EC2 DescribeHosts requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DescribeHostsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeHostsRequest::DescribeHostsRequest(const DescribeHostsRequest &other)
     : EC2Request(new DescribeHostsRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ DescribeHostsRequest::DescribeHostsRequest(const DescribeHostsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DescribeHostsRequest object.
+ * Constructs a DescribeHostsRequest object.
  */
 DescribeHostsRequest::DescribeHostsRequest()
     : EC2Request(new DescribeHostsRequestPrivate(EC2Request::DescribeHostsAction, this))
@@ -70,14 +67,9 @@ bool DescribeHostsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeHostsResponse object.
+ * Returns a DescribeHostsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeHostsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeHostsRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * DescribeHostsRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::DescribeHostsRequestPrivate
+ * \brief The DescribeHostsRequestPrivate class provides private implementation for DescribeHostsRequest.
+ * \internal
  *
- * @class  DescribeHostsRequestPrivate
- *
- * @brief  Private implementation for DescribeHostsRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeHostsRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public DescribeHostsRequest instance.
+ * Constructs a DescribeHostsRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 DescribeHostsRequestPrivate::DescribeHostsRequestPrivate(
     const EC2Request::Action action, DescribeHostsRequest * const q)
@@ -108,15 +97,10 @@ DescribeHostsRequestPrivate::DescribeHostsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeHostsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeHostsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeHostsRequest instance.
  */
 DescribeHostsRequestPrivate::DescribeHostsRequestPrivate(
     const DescribeHostsRequestPrivate &other, DescribeHostsRequest * const q)

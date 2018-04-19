@@ -27,10 +27,9 @@ namespace Lightsail {
 
 /*!
  * \class QtAws::Lightsail::AttachDiskRequest
- *
  * \brief The AttachDiskRequest class provides an interface for Lightsail AttachDisk requests.
  *
- * \ingroup Lightsail
+ * \inmodule QtAwsLightsail
  *
  *  Amazon Lightsail is the easiest way to get started with AWS for developers who just need virtual private servers.
  *  Lightsail includes everything you need to launch your project quickly - a virtual machine, SSD-based storage, data
@@ -53,9 +52,7 @@ namespace Lightsail {
  */
 
 /*!
- * @brief  Constructs a new AttachDiskRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AttachDiskRequest::AttachDiskRequest(const AttachDiskRequest &other)
     : LightsailRequest(new AttachDiskRequestPrivate(*other.d_func(), this))
@@ -64,7 +61,7 @@ AttachDiskRequest::AttachDiskRequest(const AttachDiskRequest &other)
 }
 
 /*!
- * @brief  Constructs a new AttachDiskRequest object.
+ * Constructs a AttachDiskRequest object.
  */
 AttachDiskRequest::AttachDiskRequest()
     : LightsailRequest(new AttachDiskRequestPrivate(LightsailRequest::AttachDiskAction, this))
@@ -82,14 +79,9 @@ bool AttachDiskRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AttachDiskResponse object.
+ * Returns a AttachDiskResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AttachDiskResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  LightsailClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AttachDiskRequest::response(QNetworkReply * const reply) const
 {
@@ -97,20 +89,17 @@ QtAws::Core::AwsAbstractResponse * AttachDiskRequest::response(QNetworkReply * c
 }
 
 /*!
- * @internal
+ * \class QtAws::Lightsail::AttachDiskRequestPrivate
+ * \brief The AttachDiskRequestPrivate class provides private implementation for AttachDiskRequest.
+ * \internal
  *
- * @class  AttachDiskRequestPrivate
- *
- * @brief  Private implementation for AttachDiskRequest.
+ * \inmodule QtAwsLightsail
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AttachDiskRequestPrivate object.
- *
- * @param  action  Lightsail action being performed.
- * @param  q       Pointer to this object's public AttachDiskRequest instance.
+ * Constructs a AttachDiskRequestPrivate object for Lightsail \a action with,
+ * public implementation \a q.
  */
 AttachDiskRequestPrivate::AttachDiskRequestPrivate(
     const LightsailRequest::Action action, AttachDiskRequest * const q)
@@ -120,15 +109,10 @@ AttachDiskRequestPrivate::AttachDiskRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AttachDiskRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AttachDiskRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AttachDiskRequest instance.
  */
 AttachDiskRequestPrivate::AttachDiskRequestPrivate(
     const AttachDiskRequestPrivate &other, AttachDiskRequest * const q)

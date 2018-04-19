@@ -27,10 +27,9 @@ namespace Lightsail {
 
 /*!
  * \class QtAws::Lightsail::GetInstancesRequest
- *
  * \brief The GetInstancesRequest class provides an interface for Lightsail GetInstances requests.
  *
- * \ingroup Lightsail
+ * \inmodule QtAwsLightsail
  *
  *  Amazon Lightsail is the easiest way to get started with AWS for developers who just need virtual private servers.
  *  Lightsail includes everything you need to launch your project quickly - a virtual machine, SSD-based storage, data
@@ -53,9 +52,7 @@ namespace Lightsail {
  */
 
 /*!
- * @brief  Constructs a new GetInstancesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetInstancesRequest::GetInstancesRequest(const GetInstancesRequest &other)
     : LightsailRequest(new GetInstancesRequestPrivate(*other.d_func(), this))
@@ -64,7 +61,7 @@ GetInstancesRequest::GetInstancesRequest(const GetInstancesRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetInstancesRequest object.
+ * Constructs a GetInstancesRequest object.
  */
 GetInstancesRequest::GetInstancesRequest()
     : LightsailRequest(new GetInstancesRequestPrivate(LightsailRequest::GetInstancesAction, this))
@@ -82,14 +79,9 @@ bool GetInstancesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetInstancesResponse object.
+ * Returns a GetInstancesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetInstancesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  LightsailClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetInstancesRequest::response(QNetworkReply * const reply) const
 {
@@ -97,20 +89,17 @@ QtAws::Core::AwsAbstractResponse * GetInstancesRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::Lightsail::GetInstancesRequestPrivate
+ * \brief The GetInstancesRequestPrivate class provides private implementation for GetInstancesRequest.
+ * \internal
  *
- * @class  GetInstancesRequestPrivate
- *
- * @brief  Private implementation for GetInstancesRequest.
+ * \inmodule QtAwsLightsail
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetInstancesRequestPrivate object.
- *
- * @param  action  Lightsail action being performed.
- * @param  q       Pointer to this object's public GetInstancesRequest instance.
+ * Constructs a GetInstancesRequestPrivate object for Lightsail \a action with,
+ * public implementation \a q.
  */
 GetInstancesRequestPrivate::GetInstancesRequestPrivate(
     const LightsailRequest::Action action, GetInstancesRequest * const q)
@@ -120,15 +109,10 @@ GetInstancesRequestPrivate::GetInstancesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetInstancesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetInstancesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetInstancesRequest instance.
  */
 GetInstancesRequestPrivate::GetInstancesRequestPrivate(
     const GetInstancesRequestPrivate &other, GetInstancesRequest * const q)

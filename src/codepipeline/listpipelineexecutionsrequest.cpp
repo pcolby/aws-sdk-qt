@@ -27,10 +27,9 @@ namespace CodePipeline {
 
 /*!
  * \class QtAws::CodePipeline::ListPipelineExecutionsRequest
- *
  * \brief The ListPipelineExecutionsRequest class provides an interface for CodePipeline ListPipelineExecutions requests.
  *
- * \ingroup CodePipeline
+ * \inmodule QtAwsCodePipeline
  *
  *  <fullname>AWS CodePipeline</fullname>
  * 
@@ -200,9 +199,7 @@ namespace CodePipeline {
  */
 
 /*!
- * @brief  Constructs a new ListPipelineExecutionsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListPipelineExecutionsRequest::ListPipelineExecutionsRequest(const ListPipelineExecutionsRequest &other)
     : CodePipelineRequest(new ListPipelineExecutionsRequestPrivate(*other.d_func(), this))
@@ -211,7 +208,7 @@ ListPipelineExecutionsRequest::ListPipelineExecutionsRequest(const ListPipelineE
 }
 
 /*!
- * @brief  Constructs a new ListPipelineExecutionsRequest object.
+ * Constructs a ListPipelineExecutionsRequest object.
  */
 ListPipelineExecutionsRequest::ListPipelineExecutionsRequest()
     : CodePipelineRequest(new ListPipelineExecutionsRequestPrivate(CodePipelineRequest::ListPipelineExecutionsAction, this))
@@ -229,14 +226,9 @@ bool ListPipelineExecutionsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListPipelineExecutionsResponse object.
+ * Returns a ListPipelineExecutionsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListPipelineExecutionsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CodePipelineClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListPipelineExecutionsRequest::response(QNetworkReply * const reply) const
 {
@@ -244,20 +236,17 @@ QtAws::Core::AwsAbstractResponse * ListPipelineExecutionsRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::CodePipeline::ListPipelineExecutionsRequestPrivate
+ * \brief The ListPipelineExecutionsRequestPrivate class provides private implementation for ListPipelineExecutionsRequest.
+ * \internal
  *
- * @class  ListPipelineExecutionsRequestPrivate
- *
- * @brief  Private implementation for ListPipelineExecutionsRequest.
+ * \inmodule QtAwsCodePipeline
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListPipelineExecutionsRequestPrivate object.
- *
- * @param  action  CodePipeline action being performed.
- * @param  q       Pointer to this object's public ListPipelineExecutionsRequest instance.
+ * Constructs a ListPipelineExecutionsRequestPrivate object for CodePipeline \a action with,
+ * public implementation \a q.
  */
 ListPipelineExecutionsRequestPrivate::ListPipelineExecutionsRequestPrivate(
     const CodePipelineRequest::Action action, ListPipelineExecutionsRequest * const q)
@@ -267,15 +256,10 @@ ListPipelineExecutionsRequestPrivate::ListPipelineExecutionsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListPipelineExecutionsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListPipelineExecutionsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListPipelineExecutionsRequest instance.
  */
 ListPipelineExecutionsRequestPrivate::ListPipelineExecutionsRequestPrivate(
     const ListPipelineExecutionsRequestPrivate &other, ListPipelineExecutionsRequest * const q)

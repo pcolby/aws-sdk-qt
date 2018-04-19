@@ -27,10 +27,9 @@ namespace KMS {
 
 /*!
  * \class QtAws::KMS::RetireGrantRequest
- *
  * \brief The RetireGrantRequest class provides an interface for KMS RetireGrant requests.
  *
- * \ingroup KMS
+ * \inmodule QtAwsKMS
  *
  *  <fullname>AWS Key Management Service</fullname>
  * 
@@ -136,9 +135,7 @@ namespace KMS {
  */
 
 /*!
- * @brief  Constructs a new RetireGrantRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 RetireGrantRequest::RetireGrantRequest(const RetireGrantRequest &other)
     : KMSRequest(new RetireGrantRequestPrivate(*other.d_func(), this))
@@ -147,7 +144,7 @@ RetireGrantRequest::RetireGrantRequest(const RetireGrantRequest &other)
 }
 
 /*!
- * @brief  Constructs a new RetireGrantRequest object.
+ * Constructs a RetireGrantRequest object.
  */
 RetireGrantRequest::RetireGrantRequest()
     : KMSRequest(new RetireGrantRequestPrivate(KMSRequest::RetireGrantAction, this))
@@ -165,14 +162,9 @@ bool RetireGrantRequest::isValid() const
 
 
 /*!
- * @brief  Construct an RetireGrantResponse object.
+ * Returns a RetireGrantResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An RetireGrantResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  KMSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * RetireGrantRequest::response(QNetworkReply * const reply) const
 {
@@ -180,20 +172,17 @@ QtAws::Core::AwsAbstractResponse * RetireGrantRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::KMS::RetireGrantRequestPrivate
+ * \brief The RetireGrantRequestPrivate class provides private implementation for RetireGrantRequest.
+ * \internal
  *
- * @class  RetireGrantRequestPrivate
- *
- * @brief  Private implementation for RetireGrantRequest.
+ * \inmodule QtAwsKMS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new RetireGrantRequestPrivate object.
- *
- * @param  action  KMS action being performed.
- * @param  q       Pointer to this object's public RetireGrantRequest instance.
+ * Constructs a RetireGrantRequestPrivate object for KMS \a action with,
+ * public implementation \a q.
  */
 RetireGrantRequestPrivate::RetireGrantRequestPrivate(
     const KMSRequest::Action action, RetireGrantRequest * const q)
@@ -203,15 +192,10 @@ RetireGrantRequestPrivate::RetireGrantRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RetireGrantRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the RetireGrantRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public RetireGrantRequest instance.
  */
 RetireGrantRequestPrivate::RetireGrantRequestPrivate(
     const RetireGrantRequestPrivate &other, RetireGrantRequest * const q)

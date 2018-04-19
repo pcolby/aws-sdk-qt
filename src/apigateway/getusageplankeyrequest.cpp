@@ -27,10 +27,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::GetUsagePlanKeyRequest
- *
  * \brief The GetUsagePlanKeyRequest class provides an interface for APIGateway GetUsagePlanKey requests.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -42,9 +41,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new GetUsagePlanKeyRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetUsagePlanKeyRequest::GetUsagePlanKeyRequest(const GetUsagePlanKeyRequest &other)
     : APIGatewayRequest(new GetUsagePlanKeyRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ GetUsagePlanKeyRequest::GetUsagePlanKeyRequest(const GetUsagePlanKeyRequest &oth
 }
 
 /*!
- * @brief  Constructs a new GetUsagePlanKeyRequest object.
+ * Constructs a GetUsagePlanKeyRequest object.
  */
 GetUsagePlanKeyRequest::GetUsagePlanKeyRequest()
     : APIGatewayRequest(new GetUsagePlanKeyRequestPrivate(APIGatewayRequest::GetUsagePlanKeyAction, this))
@@ -71,14 +68,9 @@ bool GetUsagePlanKeyRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetUsagePlanKeyResponse object.
+ * Returns a GetUsagePlanKeyResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetUsagePlanKeyResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  APIGatewayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetUsagePlanKeyRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * GetUsagePlanKeyRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::APIGateway::GetUsagePlanKeyRequestPrivate
+ * \brief The GetUsagePlanKeyRequestPrivate class provides private implementation for GetUsagePlanKeyRequest.
+ * \internal
  *
- * @class  GetUsagePlanKeyRequestPrivate
- *
- * @brief  Private implementation for GetUsagePlanKeyRequest.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetUsagePlanKeyRequestPrivate object.
- *
- * @param  action  APIGateway action being performed.
- * @param  q       Pointer to this object's public GetUsagePlanKeyRequest instance.
+ * Constructs a GetUsagePlanKeyRequestPrivate object for APIGateway \a action with,
+ * public implementation \a q.
  */
 GetUsagePlanKeyRequestPrivate::GetUsagePlanKeyRequestPrivate(
     const APIGatewayRequest::Action action, GetUsagePlanKeyRequest * const q)
@@ -109,15 +98,10 @@ GetUsagePlanKeyRequestPrivate::GetUsagePlanKeyRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetUsagePlanKeyRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetUsagePlanKeyRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetUsagePlanKeyRequest instance.
  */
 GetUsagePlanKeyRequestPrivate::GetUsagePlanKeyRequestPrivate(
     const GetUsagePlanKeyRequestPrivate &other, GetUsagePlanKeyRequest * const q)

@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DeregisterImageRequest
- *
  * \brief The DeregisterImageRequest class provides an interface for EC2 DeregisterImage requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DeregisterImageRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeregisterImageRequest::DeregisterImageRequest(const DeregisterImageRequest &other)
     : EC2Request(new DeregisterImageRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ DeregisterImageRequest::DeregisterImageRequest(const DeregisterImageRequest &oth
 }
 
 /*!
- * @brief  Constructs a new DeregisterImageRequest object.
+ * Constructs a DeregisterImageRequest object.
  */
 DeregisterImageRequest::DeregisterImageRequest()
     : EC2Request(new DeregisterImageRequestPrivate(EC2Request::DeregisterImageAction, this))
@@ -70,14 +67,9 @@ bool DeregisterImageRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeregisterImageResponse object.
+ * Returns a DeregisterImageResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeregisterImageResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeregisterImageRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * DeregisterImageRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::DeregisterImageRequestPrivate
+ * \brief The DeregisterImageRequestPrivate class provides private implementation for DeregisterImageRequest.
+ * \internal
  *
- * @class  DeregisterImageRequestPrivate
- *
- * @brief  Private implementation for DeregisterImageRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeregisterImageRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public DeregisterImageRequest instance.
+ * Constructs a DeregisterImageRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 DeregisterImageRequestPrivate::DeregisterImageRequestPrivate(
     const EC2Request::Action action, DeregisterImageRequest * const q)
@@ -108,15 +97,10 @@ DeregisterImageRequestPrivate::DeregisterImageRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeregisterImageRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeregisterImageRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeregisterImageRequest instance.
  */
 DeregisterImageRequestPrivate::DeregisterImageRequestPrivate(
     const DeregisterImageRequestPrivate &other, DeregisterImageRequest * const q)

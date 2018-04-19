@@ -27,10 +27,9 @@ namespace SecretsManager {
 
 /*!
  * \class QtAws::SecretsManager::ListSecretVersionIdsRequest
- *
  * \brief The ListSecretVersionIdsRequest class provides an interface for SecretsManager ListSecretVersionIds requests.
  *
- * \ingroup SecretsManager
+ * \inmodule QtAwsSecretsManager
  *
  *  <fullname>AWS Secrets Manager API Reference</fullname>
  * 
@@ -137,9 +136,7 @@ namespace SecretsManager {
  */
 
 /*!
- * @brief  Constructs a new ListSecretVersionIdsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListSecretVersionIdsRequest::ListSecretVersionIdsRequest(const ListSecretVersionIdsRequest &other)
     : SecretsManagerRequest(new ListSecretVersionIdsRequestPrivate(*other.d_func(), this))
@@ -148,7 +145,7 @@ ListSecretVersionIdsRequest::ListSecretVersionIdsRequest(const ListSecretVersion
 }
 
 /*!
- * @brief  Constructs a new ListSecretVersionIdsRequest object.
+ * Constructs a ListSecretVersionIdsRequest object.
  */
 ListSecretVersionIdsRequest::ListSecretVersionIdsRequest()
     : SecretsManagerRequest(new ListSecretVersionIdsRequestPrivate(SecretsManagerRequest::ListSecretVersionIdsAction, this))
@@ -166,14 +163,9 @@ bool ListSecretVersionIdsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListSecretVersionIdsResponse object.
+ * Returns a ListSecretVersionIdsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListSecretVersionIdsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SecretsManagerClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListSecretVersionIdsRequest::response(QNetworkReply * const reply) const
 {
@@ -181,20 +173,17 @@ QtAws::Core::AwsAbstractResponse * ListSecretVersionIdsRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::SecretsManager::ListSecretVersionIdsRequestPrivate
+ * \brief The ListSecretVersionIdsRequestPrivate class provides private implementation for ListSecretVersionIdsRequest.
+ * \internal
  *
- * @class  ListSecretVersionIdsRequestPrivate
- *
- * @brief  Private implementation for ListSecretVersionIdsRequest.
+ * \inmodule QtAwsSecretsManager
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListSecretVersionIdsRequestPrivate object.
- *
- * @param  action  SecretsManager action being performed.
- * @param  q       Pointer to this object's public ListSecretVersionIdsRequest instance.
+ * Constructs a ListSecretVersionIdsRequestPrivate object for SecretsManager \a action with,
+ * public implementation \a q.
  */
 ListSecretVersionIdsRequestPrivate::ListSecretVersionIdsRequestPrivate(
     const SecretsManagerRequest::Action action, ListSecretVersionIdsRequest * const q)
@@ -204,15 +193,10 @@ ListSecretVersionIdsRequestPrivate::ListSecretVersionIdsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListSecretVersionIdsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListSecretVersionIdsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListSecretVersionIdsRequest instance.
  */
 ListSecretVersionIdsRequestPrivate::ListSecretVersionIdsRequestPrivate(
     const ListSecretVersionIdsRequestPrivate &other, ListSecretVersionIdsRequest * const q)

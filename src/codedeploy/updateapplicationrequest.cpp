@@ -27,10 +27,9 @@ namespace CodeDeploy {
 
 /*!
  * \class QtAws::CodeDeploy::UpdateApplicationRequest
- *
  * \brief The UpdateApplicationRequest class provides an interface for CodeDeploy UpdateApplication requests.
  *
- * \ingroup CodeDeploy
+ * \inmodule QtAwsCodeDeploy
  *
  *  <fullname>AWS CodeDeploy</fullname>
  * 
@@ -118,9 +117,7 @@ namespace CodeDeploy {
  */
 
 /*!
- * @brief  Constructs a new UpdateApplicationRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateApplicationRequest::UpdateApplicationRequest(const UpdateApplicationRequest &other)
     : CodeDeployRequest(new UpdateApplicationRequestPrivate(*other.d_func(), this))
@@ -129,7 +126,7 @@ UpdateApplicationRequest::UpdateApplicationRequest(const UpdateApplicationReques
 }
 
 /*!
- * @brief  Constructs a new UpdateApplicationRequest object.
+ * Constructs a UpdateApplicationRequest object.
  */
 UpdateApplicationRequest::UpdateApplicationRequest()
     : CodeDeployRequest(new UpdateApplicationRequestPrivate(CodeDeployRequest::UpdateApplicationAction, this))
@@ -147,14 +144,9 @@ bool UpdateApplicationRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateApplicationResponse object.
+ * Returns a UpdateApplicationResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateApplicationResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CodeDeployClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateApplicationRequest::response(QNetworkReply * const reply) const
 {
@@ -162,20 +154,17 @@ QtAws::Core::AwsAbstractResponse * UpdateApplicationRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::CodeDeploy::UpdateApplicationRequestPrivate
+ * \brief The UpdateApplicationRequestPrivate class provides private implementation for UpdateApplicationRequest.
+ * \internal
  *
- * @class  UpdateApplicationRequestPrivate
- *
- * @brief  Private implementation for UpdateApplicationRequest.
+ * \inmodule QtAwsCodeDeploy
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateApplicationRequestPrivate object.
- *
- * @param  action  CodeDeploy action being performed.
- * @param  q       Pointer to this object's public UpdateApplicationRequest instance.
+ * Constructs a UpdateApplicationRequestPrivate object for CodeDeploy \a action with,
+ * public implementation \a q.
  */
 UpdateApplicationRequestPrivate::UpdateApplicationRequestPrivate(
     const CodeDeployRequest::Action action, UpdateApplicationRequest * const q)
@@ -185,15 +174,10 @@ UpdateApplicationRequestPrivate::UpdateApplicationRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateApplicationRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateApplicationRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateApplicationRequest instance.
  */
 UpdateApplicationRequestPrivate::UpdateApplicationRequestPrivate(
     const UpdateApplicationRequestPrivate &other, UpdateApplicationRequest * const q)

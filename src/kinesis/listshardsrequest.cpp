@@ -27,10 +27,9 @@ namespace Kinesis {
 
 /*!
  * \class QtAws::Kinesis::ListShardsRequest
- *
  * \brief The ListShardsRequest class provides an interface for Kinesis ListShards requests.
  *
- * \ingroup Kinesis
+ * \inmodule QtAwsKinesis
  *
  *  <fullname>Amazon Kinesis Data Streams Service API Reference</fullname>
  * 
@@ -40,9 +39,7 @@ namespace Kinesis {
  */
 
 /*!
- * @brief  Constructs a new ListShardsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListShardsRequest::ListShardsRequest(const ListShardsRequest &other)
     : KinesisRequest(new ListShardsRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ ListShardsRequest::ListShardsRequest(const ListShardsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ListShardsRequest object.
+ * Constructs a ListShardsRequest object.
  */
 ListShardsRequest::ListShardsRequest()
     : KinesisRequest(new ListShardsRequestPrivate(KinesisRequest::ListShardsAction, this))
@@ -69,14 +66,9 @@ bool ListShardsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListShardsResponse object.
+ * Returns a ListShardsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListShardsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  KinesisClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListShardsRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * ListShardsRequest::response(QNetworkReply * c
 }
 
 /*!
- * @internal
+ * \class QtAws::Kinesis::ListShardsRequestPrivate
+ * \brief The ListShardsRequestPrivate class provides private implementation for ListShardsRequest.
+ * \internal
  *
- * @class  ListShardsRequestPrivate
- *
- * @brief  Private implementation for ListShardsRequest.
+ * \inmodule QtAwsKinesis
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListShardsRequestPrivate object.
- *
- * @param  action  Kinesis action being performed.
- * @param  q       Pointer to this object's public ListShardsRequest instance.
+ * Constructs a ListShardsRequestPrivate object for Kinesis \a action with,
+ * public implementation \a q.
  */
 ListShardsRequestPrivate::ListShardsRequestPrivate(
     const KinesisRequest::Action action, ListShardsRequest * const q)
@@ -107,15 +96,10 @@ ListShardsRequestPrivate::ListShardsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListShardsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListShardsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListShardsRequest instance.
  */
 ListShardsRequestPrivate::ListShardsRequestPrivate(
     const ListShardsRequestPrivate &other, ListShardsRequest * const q)

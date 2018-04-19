@@ -27,10 +27,9 @@ namespace CognitoIdentity {
 
 /*!
  * \class QtAws::CognitoIdentity::GetCredentialsForIdentityRequest
- *
  * \brief The GetCredentialsForIdentityRequest class provides an interface for CognitoIdentity GetCredentialsForIdentity requests.
  *
- * \ingroup CognitoIdentity
+ * \inmodule QtAwsCognitoIdentity
  *
  *  <fullname>Amazon Cognito</fullname>
  * 
@@ -75,9 +74,7 @@ namespace CognitoIdentity {
  */
 
 /*!
- * @brief  Constructs a new GetCredentialsForIdentityRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetCredentialsForIdentityRequest::GetCredentialsForIdentityRequest(const GetCredentialsForIdentityRequest &other)
     : CognitoIdentityRequest(new GetCredentialsForIdentityRequestPrivate(*other.d_func(), this))
@@ -86,7 +83,7 @@ GetCredentialsForIdentityRequest::GetCredentialsForIdentityRequest(const GetCred
 }
 
 /*!
- * @brief  Constructs a new GetCredentialsForIdentityRequest object.
+ * Constructs a GetCredentialsForIdentityRequest object.
  */
 GetCredentialsForIdentityRequest::GetCredentialsForIdentityRequest()
     : CognitoIdentityRequest(new GetCredentialsForIdentityRequestPrivate(CognitoIdentityRequest::GetCredentialsForIdentityAction, this))
@@ -104,14 +101,9 @@ bool GetCredentialsForIdentityRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetCredentialsForIdentityResponse object.
+ * Returns a GetCredentialsForIdentityResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetCredentialsForIdentityResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CognitoIdentityClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetCredentialsForIdentityRequest::response(QNetworkReply * const reply) const
 {
@@ -119,20 +111,17 @@ QtAws::Core::AwsAbstractResponse * GetCredentialsForIdentityRequest::response(QN
 }
 
 /*!
- * @internal
+ * \class QtAws::CognitoIdentity::GetCredentialsForIdentityRequestPrivate
+ * \brief The GetCredentialsForIdentityRequestPrivate class provides private implementation for GetCredentialsForIdentityRequest.
+ * \internal
  *
- * @class  GetCredentialsForIdentityRequestPrivate
- *
- * @brief  Private implementation for GetCredentialsForIdentityRequest.
+ * \inmodule QtAwsCognitoIdentity
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetCredentialsForIdentityRequestPrivate object.
- *
- * @param  action  CognitoIdentity action being performed.
- * @param  q       Pointer to this object's public GetCredentialsForIdentityRequest instance.
+ * Constructs a GetCredentialsForIdentityRequestPrivate object for CognitoIdentity \a action with,
+ * public implementation \a q.
  */
 GetCredentialsForIdentityRequestPrivate::GetCredentialsForIdentityRequestPrivate(
     const CognitoIdentityRequest::Action action, GetCredentialsForIdentityRequest * const q)
@@ -142,15 +131,10 @@ GetCredentialsForIdentityRequestPrivate::GetCredentialsForIdentityRequestPrivate
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetCredentialsForIdentityRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetCredentialsForIdentityRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetCredentialsForIdentityRequest instance.
  */
 GetCredentialsForIdentityRequestPrivate::GetCredentialsForIdentityRequestPrivate(
     const GetCredentialsForIdentityRequestPrivate &other, GetCredentialsForIdentityRequest * const q)

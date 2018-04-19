@@ -25,16 +25,55 @@ namespace SageMaker {
 
 /*!
  * \class QtAws::SageMaker::SageMakerRequest
- *
  * \brief The SageMakerRequest class provides an interface for SageMaker requests.
  *
- * \ingroup SageMaker
+ * \inmodule QtAwsSageMaker
  */
 
 /*!
- * @brief  Constructs a new SageMakerRequest object.
+ * \enum SageMakerRequest::Action
  *
- * @param  action  The SageMaker action to request.
+ * This enum describes the actions that can be performed as SageMaker
+ * requests.
+ *
+ * \value AddTagsAction SageMaker AddTags action.
+ * \value CreateEndpointAction SageMaker CreateEndpoint action.
+ * \value CreateEndpointConfigAction SageMaker CreateEndpointConfig action.
+ * \value CreateModelAction SageMaker CreateModel action.
+ * \value CreateNotebookInstanceAction SageMaker CreateNotebookInstance action.
+ * \value CreateNotebookInstanceLifecycleConfigAction SageMaker CreateNotebookInstanceLifecycleConfig action.
+ * \value CreatePresignedNotebookInstanceUrlAction SageMaker CreatePresignedNotebookInstanceUrl action.
+ * \value CreateTrainingJobAction SageMaker CreateTrainingJob action.
+ * \value DeleteEndpointAction SageMaker DeleteEndpoint action.
+ * \value DeleteEndpointConfigAction SageMaker DeleteEndpointConfig action.
+ * \value DeleteModelAction SageMaker DeleteModel action.
+ * \value DeleteNotebookInstanceAction SageMaker DeleteNotebookInstance action.
+ * \value DeleteNotebookInstanceLifecycleConfigAction SageMaker DeleteNotebookInstanceLifecycleConfig action.
+ * \value DeleteTagsAction SageMaker DeleteTags action.
+ * \value DescribeEndpointAction SageMaker DescribeEndpoint action.
+ * \value DescribeEndpointConfigAction SageMaker DescribeEndpointConfig action.
+ * \value DescribeModelAction SageMaker DescribeModel action.
+ * \value DescribeNotebookInstanceAction SageMaker DescribeNotebookInstance action.
+ * \value DescribeNotebookInstanceLifecycleConfigAction SageMaker DescribeNotebookInstanceLifecycleConfig action.
+ * \value DescribeTrainingJobAction SageMaker DescribeTrainingJob action.
+ * \value ListEndpointConfigsAction SageMaker ListEndpointConfigs action.
+ * \value ListEndpointsAction SageMaker ListEndpoints action.
+ * \value ListModelsAction SageMaker ListModels action.
+ * \value ListNotebookInstanceLifecycleConfigsAction SageMaker ListNotebookInstanceLifecycleConfigs action.
+ * \value ListNotebookInstancesAction SageMaker ListNotebookInstances action.
+ * \value ListTagsAction SageMaker ListTags action.
+ * \value ListTrainingJobsAction SageMaker ListTrainingJobs action.
+ * \value StartNotebookInstanceAction SageMaker StartNotebookInstance action.
+ * \value StopNotebookInstanceAction SageMaker StopNotebookInstance action.
+ * \value StopTrainingJobAction SageMaker StopTrainingJob action.
+ * \value UpdateEndpointAction SageMaker UpdateEndpoint action.
+ * \value UpdateEndpointWeightsAndCapacitiesAction SageMaker UpdateEndpointWeightsAndCapacities action.
+ * \value UpdateNotebookInstanceAction SageMaker UpdateNotebookInstance action.
+ * \value UpdateNotebookInstanceLifecycleConfigAction SageMaker UpdateNotebookInstanceLifecycleConfig action.
+ */
+
+/*!
+ * Constructs a[n] SageMakerRequest object for SageMaker \a action.
  */
 SageMakerRequest::SageMakerRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new SageMakerRequestPrivate(action, this))
@@ -43,9 +82,7 @@ SageMakerRequest::SageMakerRequest(const Action action)
 }
 
 /*!
- * @brief  Constructs a new SageMakerRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 SageMakerRequest::SageMakerRequest(const SageMakerRequest &other)
     : QtAws::Core::AwsAbstractRequest(new SageMakerRequestPrivate(*other.d_func(), this))
@@ -54,13 +91,7 @@ SageMakerRequest::SageMakerRequest(const SageMakerRequest &other)
 }
 
 /*!
- * @brief  Assignment operator.
- *
- * Assigns \a other to \c this.
- *
- * @param  other  Instance to copy.
- *
- * @return  A reference to \c this.
+ * Sets the SageMakerRequest object to be equal to \a other.
  */
 SageMakerRequest& SageMakerRequest::operator=(const SageMakerRequest &other)
 {
@@ -72,14 +103,10 @@ SageMakerRequest& SageMakerRequest::operator=(const SageMakerRequest &other)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SageMakerRequest object.
+ * Constructs aa SageMakerRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from SageMakerRequestPrivate.
- *
- * @param  d  Pointer to private data (aka D-Pointer).
  */
 SageMakerRequest::SageMakerRequest(SageMakerRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
@@ -87,7 +114,7 @@ SageMakerRequest::SageMakerRequest(SageMakerRequestPrivate * const d) : QtAws::C
 }
 
 /*!
- * \brief Returns the SageMaker action to be performed by this request.
+ * Returns the SageMaker action to be performed by this request.
  */
 SageMakerRequest::Action SageMakerRequest::action() const
 {
@@ -96,7 +123,7 @@ SageMakerRequest::Action SageMakerRequest::action() const
 }
 
 /*!
- * \brief Returns the name of the SageMaker action to be performed by this request.
+ * Returns the name of the SageMaker action to be performed by this request.
  */
 QString SageMakerRequest::actionString() const
 {
@@ -104,7 +131,7 @@ QString SageMakerRequest::actionString() const
 }
 
 /*!
- * \brief Returns the SageMaker API version implemented by this request.
+ * Returns the SageMaker API version implemented by this request.
  */
 QString SageMakerRequest::apiVersion() const
 {
@@ -113,7 +140,7 @@ QString SageMakerRequest::apiVersion() const
 }
 
 /*!
- * @brief Set the SageMaker action to be performed by this request to \a action.
+ * Sets the SageMaker action to be performed by this request to \a action.
  */
 void SageMakerRequest::setAction(const Action action)
 {
@@ -122,7 +149,7 @@ void SageMakerRequest::setAction(const Action action)
 }
 
 /*!
- * Set the SageMaker API version to include in this request to \a version.
+ * Sets the SageMaker API version to include in this request to \a version.
  */
 void SageMakerRequest::setApiVersion(const QString &version)
 {
@@ -131,7 +158,7 @@ void SageMakerRequest::setApiVersion(const QString &version)
 }
 
 /*!
- * \brief Returns \c true if this request is the same as \a other.
+ * Returns \c true if this request is equal to \a other; \c false otherwise.
  *
  * Note, most derived *Request classes do not need to provider their own
  * implementations of this function, since most such request classes rely on
@@ -146,8 +173,8 @@ bool SageMakerRequest::operator==(const SageMakerRequest &other) const
             (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
-/*!
- * @brief  Check if \a queueName is a valid SageMaker queue name.
+/*
+ * Returns \c tue if \a queueName is a valid SageMaker queue name.
  *
  * @par From SageMaker FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
@@ -166,9 +193,8 @@ bool SageMakerRequest::operator==(const SageMakerRequest &other) const
 }*/
 
 /*!
- * \brief Removes the a \a name parameter from this request.
- *
- * Returns the count of paramters removed (typically \c 0 or \c 1).
+ * Removes the a \a name parameter from the request, then returns the number of
+ * paramters removed (typically \c 0 or \c 1).
  */
 int SageMakerRequest::clearParameter(const QString &name)
 {
@@ -177,7 +203,7 @@ int SageMakerRequest::clearParameter(const QString &name)
 }
 
 /*!
- * \brief Removes all parameters from this request.
+ * Removes all parameters from the request.
  */
 void SageMakerRequest::clearParameters()
 {
@@ -186,7 +212,7 @@ void SageMakerRequest::clearParameters()
 }
 
 /*!
- * \brief Returns the value of the \n name pararemter if set, otherwise \a defaultValue.
+ * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
 QVariant SageMakerRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
@@ -195,7 +221,7 @@ QVariant SageMakerRequest::parameter(const QString &name, const QVariant &defaul
 }
 
 /*!
- * \brief Returns a map of parameters included in this request.
+ * Returns the parameters included in this request.
  */
 const QVariantMap &SageMakerRequest::parameters() const
 {
@@ -204,7 +230,7 @@ const QVariantMap &SageMakerRequest::parameters() const
 }
 
 /*!
- * \brief Sets the \a name parameter to \a value.
+ * Sets the \a name parameter to \a value.
  */
 void SageMakerRequest::setParameter(const QString &name, const QVariant &value)
 {
@@ -213,9 +239,8 @@ void SageMakerRequest::setParameter(const QString &name, const QVariant &value)
 }
 
 /*!
- * \brief Sets the map of paramters for this request to \a parameters.
- *
- * Any request parameters set previously will be discarded.
+ * Sets the paramters for this request to \a parameters. Any request parameters
+ * set previously will be discarded.
  */
 void SageMakerRequest::setParameters(const QVariantMap &parameters)
 {
@@ -224,11 +249,12 @@ void SageMakerRequest::setParameters(const QVariantMap &parameters)
 }
 
 /*!
- * \brief Returns a network request for this SageMaker request using the given \a endpoint.
+ * Returns a network request for the SageMaker request using the given
+ * \a endpoint.
  *
- * This SageMaker implementation builds request URLs by combining the common query
- * parameters (such as Action and Version), with any that have been added (via
- * setParameter) by child classes.
+ * This SageMaker implementation builds request URLs by combining the
+ * common query parameters (such as Action and Version), with any that have
+ * been added (via setParameter) by child classes.
  */
 QNetworkRequest SageMakerRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -239,17 +265,16 @@ QNetworkRequest SageMakerRequest::unsignedRequest(const QUrl &endpoint) const
 }
 
 /*!
+ * \class QtAws::SageMaker::SageMakerRequestPrivate
+ * \brief The SageMakerRequestPrivate class provides private implementation for SageMakerRequest.
  * \internal
  *
- * \class  SageMakerRequestPrivate
- *
- * \brief  Private implementation for SageMakerRequest.
+ * \inmodule QtAwsSageMaker
  */
 
 /*!
- * \internal
- *
- * \brief Constructs a new SageMakerRequestPrivate object.
+ * Constructs a SageMakerRequestPrivate object for SageMaker \a action with,
+ * public implementation \a q.
  */
 SageMakerRequestPrivate::SageMakerRequestPrivate(const SageMakerRequest::Action action, SageMakerRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
@@ -258,9 +283,7 @@ SageMakerRequestPrivate::SageMakerRequestPrivate(const SageMakerRequest::Action 
 }
 
 /*!
- * \internal
- *
- * \brief Constructs a new SageMakerRequestPrivate object, copying an existing one.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
@@ -276,15 +299,12 @@ SageMakerRequestPrivate::SageMakerRequestPrivate(const SageMakerRequestPrivate &
 }
 
 /*!
- * \internal
- *
- * \brief Returns a string representing \a action.
+ * Returns a string represention of \a action, or a null string if \a action is
+ * invalid.
  *
  * This function converts SageMakerRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the SageMaker service's Action
  * query parameters.
- *
- * @return A string representing \a action, or a null string if \a action is invalid.
  */
 QString SageMakerRequestPrivate::toString(const SageMakerRequest::Action &action)
 {

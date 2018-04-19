@@ -25,16 +25,31 @@ namespace MediaStore {
 
 /*!
  * \class QtAws::MediaStore::MediaStoreRequest
- *
  * \brief The MediaStoreRequest class provides an interface for MediaStore requests.
  *
- * \ingroup MediaStore
+ * \inmodule QtAwsMediaStore
  */
 
 /*!
- * @brief  Constructs a new MediaStoreRequest object.
+ * \enum MediaStoreRequest::Action
  *
- * @param  action  The MediaStore action to request.
+ * This enum describes the actions that can be performed as MediaStore
+ * requests.
+ *
+ * \value CreateContainerAction MediaStore CreateContainer action.
+ * \value DeleteContainerAction MediaStore DeleteContainer action.
+ * \value DeleteContainerPolicyAction MediaStore DeleteContainerPolicy action.
+ * \value DeleteCorsPolicyAction MediaStore DeleteCorsPolicy action.
+ * \value DescribeContainerAction MediaStore DescribeContainer action.
+ * \value GetContainerPolicyAction MediaStore GetContainerPolicy action.
+ * \value GetCorsPolicyAction MediaStore GetCorsPolicy action.
+ * \value ListContainersAction MediaStore ListContainers action.
+ * \value PutContainerPolicyAction MediaStore PutContainerPolicy action.
+ * \value PutCorsPolicyAction MediaStore PutCorsPolicy action.
+ */
+
+/*!
+ * Constructs a[n] MediaStoreRequest object for MediaStore \a action.
  */
 MediaStoreRequest::MediaStoreRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new MediaStoreRequestPrivate(action, this))
@@ -43,9 +58,7 @@ MediaStoreRequest::MediaStoreRequest(const Action action)
 }
 
 /*!
- * @brief  Constructs a new MediaStoreRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 MediaStoreRequest::MediaStoreRequest(const MediaStoreRequest &other)
     : QtAws::Core::AwsAbstractRequest(new MediaStoreRequestPrivate(*other.d_func(), this))
@@ -54,13 +67,7 @@ MediaStoreRequest::MediaStoreRequest(const MediaStoreRequest &other)
 }
 
 /*!
- * @brief  Assignment operator.
- *
- * Assigns \a other to \c this.
- *
- * @param  other  Instance to copy.
- *
- * @return  A reference to \c this.
+ * Sets the MediaStoreRequest object to be equal to \a other.
  */
 MediaStoreRequest& MediaStoreRequest::operator=(const MediaStoreRequest &other)
 {
@@ -72,14 +79,10 @@ MediaStoreRequest& MediaStoreRequest::operator=(const MediaStoreRequest &other)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new MediaStoreRequest object.
+ * Constructs aa MediaStoreRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from MediaStoreRequestPrivate.
- *
- * @param  d  Pointer to private data (aka D-Pointer).
  */
 MediaStoreRequest::MediaStoreRequest(MediaStoreRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
@@ -87,7 +90,7 @@ MediaStoreRequest::MediaStoreRequest(MediaStoreRequestPrivate * const d) : QtAws
 }
 
 /*!
- * \brief Returns the MediaStore action to be performed by this request.
+ * Returns the MediaStore action to be performed by this request.
  */
 MediaStoreRequest::Action MediaStoreRequest::action() const
 {
@@ -96,7 +99,7 @@ MediaStoreRequest::Action MediaStoreRequest::action() const
 }
 
 /*!
- * \brief Returns the name of the MediaStore action to be performed by this request.
+ * Returns the name of the MediaStore action to be performed by this request.
  */
 QString MediaStoreRequest::actionString() const
 {
@@ -104,7 +107,7 @@ QString MediaStoreRequest::actionString() const
 }
 
 /*!
- * \brief Returns the MediaStore API version implemented by this request.
+ * Returns the MediaStore API version implemented by this request.
  */
 QString MediaStoreRequest::apiVersion() const
 {
@@ -113,7 +116,7 @@ QString MediaStoreRequest::apiVersion() const
 }
 
 /*!
- * @brief Set the MediaStore action to be performed by this request to \a action.
+ * Sets the MediaStore action to be performed by this request to \a action.
  */
 void MediaStoreRequest::setAction(const Action action)
 {
@@ -122,7 +125,7 @@ void MediaStoreRequest::setAction(const Action action)
 }
 
 /*!
- * Set the MediaStore API version to include in this request to \a version.
+ * Sets the MediaStore API version to include in this request to \a version.
  */
 void MediaStoreRequest::setApiVersion(const QString &version)
 {
@@ -131,7 +134,7 @@ void MediaStoreRequest::setApiVersion(const QString &version)
 }
 
 /*!
- * \brief Returns \c true if this request is the same as \a other.
+ * Returns \c true if this request is equal to \a other; \c false otherwise.
  *
  * Note, most derived *Request classes do not need to provider their own
  * implementations of this function, since most such request classes rely on
@@ -146,8 +149,8 @@ bool MediaStoreRequest::operator==(const MediaStoreRequest &other) const
             (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
-/*!
- * @brief  Check if \a queueName is a valid MediaStore queue name.
+/*
+ * Returns \c tue if \a queueName is a valid MediaStore queue name.
  *
  * @par From MediaStore FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
@@ -166,9 +169,8 @@ bool MediaStoreRequest::operator==(const MediaStoreRequest &other) const
 }*/
 
 /*!
- * \brief Removes the a \a name parameter from this request.
- *
- * Returns the count of paramters removed (typically \c 0 or \c 1).
+ * Removes the a \a name parameter from the request, then returns the number of
+ * paramters removed (typically \c 0 or \c 1).
  */
 int MediaStoreRequest::clearParameter(const QString &name)
 {
@@ -177,7 +179,7 @@ int MediaStoreRequest::clearParameter(const QString &name)
 }
 
 /*!
- * \brief Removes all parameters from this request.
+ * Removes all parameters from the request.
  */
 void MediaStoreRequest::clearParameters()
 {
@@ -186,7 +188,7 @@ void MediaStoreRequest::clearParameters()
 }
 
 /*!
- * \brief Returns the value of the \n name pararemter if set, otherwise \a defaultValue.
+ * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
 QVariant MediaStoreRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
@@ -195,7 +197,7 @@ QVariant MediaStoreRequest::parameter(const QString &name, const QVariant &defau
 }
 
 /*!
- * \brief Returns a map of parameters included in this request.
+ * Returns the parameters included in this request.
  */
 const QVariantMap &MediaStoreRequest::parameters() const
 {
@@ -204,7 +206,7 @@ const QVariantMap &MediaStoreRequest::parameters() const
 }
 
 /*!
- * \brief Sets the \a name parameter to \a value.
+ * Sets the \a name parameter to \a value.
  */
 void MediaStoreRequest::setParameter(const QString &name, const QVariant &value)
 {
@@ -213,9 +215,8 @@ void MediaStoreRequest::setParameter(const QString &name, const QVariant &value)
 }
 
 /*!
- * \brief Sets the map of paramters for this request to \a parameters.
- *
- * Any request parameters set previously will be discarded.
+ * Sets the paramters for this request to \a parameters. Any request parameters
+ * set previously will be discarded.
  */
 void MediaStoreRequest::setParameters(const QVariantMap &parameters)
 {
@@ -224,11 +225,12 @@ void MediaStoreRequest::setParameters(const QVariantMap &parameters)
 }
 
 /*!
- * \brief Returns a network request for this MediaStore request using the given \a endpoint.
+ * Returns a network request for the MediaStore request using the given
+ * \a endpoint.
  *
- * This MediaStore implementation builds request URLs by combining the common query
- * parameters (such as Action and Version), with any that have been added (via
- * setParameter) by child classes.
+ * This MediaStore implementation builds request URLs by combining the
+ * common query parameters (such as Action and Version), with any that have
+ * been added (via setParameter) by child classes.
  */
 QNetworkRequest MediaStoreRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -239,17 +241,16 @@ QNetworkRequest MediaStoreRequest::unsignedRequest(const QUrl &endpoint) const
 }
 
 /*!
+ * \class QtAws::MediaStore::MediaStoreRequestPrivate
+ * \brief The MediaStoreRequestPrivate class provides private implementation for MediaStoreRequest.
  * \internal
  *
- * \class  MediaStoreRequestPrivate
- *
- * \brief  Private implementation for MediaStoreRequest.
+ * \inmodule QtAwsMediaStore
  */
 
 /*!
- * \internal
- *
- * \brief Constructs a new MediaStoreRequestPrivate object.
+ * Constructs a MediaStoreRequestPrivate object for MediaStore \a action with,
+ * public implementation \a q.
  */
 MediaStoreRequestPrivate::MediaStoreRequestPrivate(const MediaStoreRequest::Action action, MediaStoreRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
@@ -258,9 +259,7 @@ MediaStoreRequestPrivate::MediaStoreRequestPrivate(const MediaStoreRequest::Acti
 }
 
 /*!
- * \internal
- *
- * \brief Constructs a new MediaStoreRequestPrivate object, copying an existing one.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
@@ -276,15 +275,12 @@ MediaStoreRequestPrivate::MediaStoreRequestPrivate(const MediaStoreRequestPrivat
 }
 
 /*!
- * \internal
- *
- * \brief Returns a string representing \a action.
+ * Returns a string represention of \a action, or a null string if \a action is
+ * invalid.
  *
  * This function converts MediaStoreRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the MediaStore service's Action
  * query parameters.
- *
- * @return A string representing \a action, or a null string if \a action is invalid.
  */
 QString MediaStoreRequestPrivate::toString(const MediaStoreRequest::Action &action)
 {

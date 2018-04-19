@@ -48,6 +48,9 @@
 /*!
  * \namespace QtAws::Cloud9
  * \brief The QtAws::Cloud9 contains stuff...
+ *
+ * \inmodule QtAwsCloud9
+ *
  * @todo Move this to a separate template file.
  */
 
@@ -151,7 +154,7 @@ Cloud9Client::Cloud9Client(
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * \a  AwsEndpoint::getEndpoint()
+ * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
 Cloud9Client::Cloud9Client(
     const QUrl &endpoint,

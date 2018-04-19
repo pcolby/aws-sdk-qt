@@ -27,10 +27,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::GetOTAUpdateRequest
- *
  * \brief The GetOTAUpdateRequest class provides an interface for IoT GetOTAUpdate requests.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -48,9 +47,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new GetOTAUpdateRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetOTAUpdateRequest::GetOTAUpdateRequest(const GetOTAUpdateRequest &other)
     : IoTRequest(new GetOTAUpdateRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ GetOTAUpdateRequest::GetOTAUpdateRequest(const GetOTAUpdateRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetOTAUpdateRequest object.
+ * Constructs a GetOTAUpdateRequest object.
  */
 GetOTAUpdateRequest::GetOTAUpdateRequest()
     : IoTRequest(new GetOTAUpdateRequestPrivate(IoTRequest::GetOTAUpdateAction, this))
@@ -77,14 +74,9 @@ bool GetOTAUpdateRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetOTAUpdateResponse object.
+ * Returns a GetOTAUpdateResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetOTAUpdateResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IoTClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetOTAUpdateRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * GetOTAUpdateRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::IoT::GetOTAUpdateRequestPrivate
+ * \brief The GetOTAUpdateRequestPrivate class provides private implementation for GetOTAUpdateRequest.
+ * \internal
  *
- * @class  GetOTAUpdateRequestPrivate
- *
- * @brief  Private implementation for GetOTAUpdateRequest.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetOTAUpdateRequestPrivate object.
- *
- * @param  action  IoT action being performed.
- * @param  q       Pointer to this object's public GetOTAUpdateRequest instance.
+ * Constructs a GetOTAUpdateRequestPrivate object for IoT \a action with,
+ * public implementation \a q.
  */
 GetOTAUpdateRequestPrivate::GetOTAUpdateRequestPrivate(
     const IoTRequest::Action action, GetOTAUpdateRequest * const q)
@@ -115,15 +104,10 @@ GetOTAUpdateRequestPrivate::GetOTAUpdateRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetOTAUpdateRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetOTAUpdateRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetOTAUpdateRequest instance.
  */
 GetOTAUpdateRequestPrivate::GetOTAUpdateRequestPrivate(
     const GetOTAUpdateRequestPrivate &other, GetOTAUpdateRequest * const q)

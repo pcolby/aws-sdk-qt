@@ -27,10 +27,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::GetSSHPublicKeyRequest
- *
  * \brief The GetSSHPublicKeyRequest class provides an interface for IAM GetSSHPublicKey requests.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -102,9 +101,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new GetSSHPublicKeyRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetSSHPublicKeyRequest::GetSSHPublicKeyRequest(const GetSSHPublicKeyRequest &other)
     : IAMRequest(new GetSSHPublicKeyRequestPrivate(*other.d_func(), this))
@@ -113,7 +110,7 @@ GetSSHPublicKeyRequest::GetSSHPublicKeyRequest(const GetSSHPublicKeyRequest &oth
 }
 
 /*!
- * @brief  Constructs a new GetSSHPublicKeyRequest object.
+ * Constructs a GetSSHPublicKeyRequest object.
  */
 GetSSHPublicKeyRequest::GetSSHPublicKeyRequest()
     : IAMRequest(new GetSSHPublicKeyRequestPrivate(IAMRequest::GetSSHPublicKeyAction, this))
@@ -131,14 +128,9 @@ bool GetSSHPublicKeyRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetSSHPublicKeyResponse object.
+ * Returns a GetSSHPublicKeyResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetSSHPublicKeyResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IAMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetSSHPublicKeyRequest::response(QNetworkReply * const reply) const
 {
@@ -146,20 +138,17 @@ QtAws::Core::AwsAbstractResponse * GetSSHPublicKeyRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::IAM::GetSSHPublicKeyRequestPrivate
+ * \brief The GetSSHPublicKeyRequestPrivate class provides private implementation for GetSSHPublicKeyRequest.
+ * \internal
  *
- * @class  GetSSHPublicKeyRequestPrivate
- *
- * @brief  Private implementation for GetSSHPublicKeyRequest.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetSSHPublicKeyRequestPrivate object.
- *
- * @param  action  IAM action being performed.
- * @param  q       Pointer to this object's public GetSSHPublicKeyRequest instance.
+ * Constructs a GetSSHPublicKeyRequestPrivate object for IAM \a action with,
+ * public implementation \a q.
  */
 GetSSHPublicKeyRequestPrivate::GetSSHPublicKeyRequestPrivate(
     const IAMRequest::Action action, GetSSHPublicKeyRequest * const q)
@@ -169,15 +158,10 @@ GetSSHPublicKeyRequestPrivate::GetSSHPublicKeyRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetSSHPublicKeyRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetSSHPublicKeyRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetSSHPublicKeyRequest instance.
  */
 GetSSHPublicKeyRequestPrivate::GetSSHPublicKeyRequestPrivate(
     const GetSSHPublicKeyRequestPrivate &other, GetSSHPublicKeyRequest * const q)

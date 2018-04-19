@@ -27,10 +27,9 @@ namespace CloudFront {
 
 /*!
  * \class QtAws::CloudFront::DeleteDistributionRequest
- *
  * \brief The DeleteDistributionRequest class provides an interface for CloudFront DeleteDistribution requests.
  *
- * \ingroup CloudFront
+ * \inmodule QtAwsCloudFront
  *
  *  <fullname>Amazon CloudFront</fullname>
  * 
@@ -42,9 +41,7 @@ namespace CloudFront {
  */
 
 /*!
- * @brief  Constructs a new DeleteDistributionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteDistributionRequest::DeleteDistributionRequest(const DeleteDistributionRequest &other)
     : CloudFrontRequest(new DeleteDistributionRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ DeleteDistributionRequest::DeleteDistributionRequest(const DeleteDistributionReq
 }
 
 /*!
- * @brief  Constructs a new DeleteDistributionRequest object.
+ * Constructs a DeleteDistributionRequest object.
  */
 DeleteDistributionRequest::DeleteDistributionRequest()
     : CloudFrontRequest(new DeleteDistributionRequestPrivate(CloudFrontRequest::DeleteDistributionAction, this))
@@ -71,14 +68,9 @@ bool DeleteDistributionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteDistributionResponse object.
+ * Returns a DeleteDistributionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteDistributionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudFrontClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteDistributionRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * DeleteDistributionRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudFront::DeleteDistributionRequestPrivate
+ * \brief The DeleteDistributionRequestPrivate class provides private implementation for DeleteDistributionRequest.
+ * \internal
  *
- * @class  DeleteDistributionRequestPrivate
- *
- * @brief  Private implementation for DeleteDistributionRequest.
+ * \inmodule QtAwsCloudFront
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteDistributionRequestPrivate object.
- *
- * @param  action  CloudFront action being performed.
- * @param  q       Pointer to this object's public DeleteDistributionRequest instance.
+ * Constructs a DeleteDistributionRequestPrivate object for CloudFront \a action with,
+ * public implementation \a q.
  */
 DeleteDistributionRequestPrivate::DeleteDistributionRequestPrivate(
     const CloudFrontRequest::Action action, DeleteDistributionRequest * const q)
@@ -109,15 +98,10 @@ DeleteDistributionRequestPrivate::DeleteDistributionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteDistributionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteDistributionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteDistributionRequest instance.
  */
 DeleteDistributionRequestPrivate::DeleteDistributionRequestPrivate(
     const DeleteDistributionRequestPrivate &other, DeleteDistributionRequest * const q)

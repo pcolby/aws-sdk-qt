@@ -27,10 +27,9 @@ namespace ElasticLoadBalancingv2 {
 
 /*!
  * \class QtAws::ElasticLoadBalancingv2::DeleteLoadBalancerRequest
- *
  * \brief The DeleteLoadBalancerRequest class provides an interface for ElasticLoadBalancingv2 DeleteLoadBalancer requests.
  *
- * \ingroup ElasticLoadBalancingv2
+ * \inmodule QtAwsElasticLoadBalancingv2
  *
  *  <fullname>Elastic Load Balancing</fullname>
  * 
@@ -105,9 +104,7 @@ namespace ElasticLoadBalancingv2 {
  */
 
 /*!
- * @brief  Constructs a new DeleteLoadBalancerRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteLoadBalancerRequest::DeleteLoadBalancerRequest(const DeleteLoadBalancerRequest &other)
     : ElasticLoadBalancingv2Request(new DeleteLoadBalancerRequestPrivate(*other.d_func(), this))
@@ -116,7 +113,7 @@ DeleteLoadBalancerRequest::DeleteLoadBalancerRequest(const DeleteLoadBalancerReq
 }
 
 /*!
- * @brief  Constructs a new DeleteLoadBalancerRequest object.
+ * Constructs a DeleteLoadBalancerRequest object.
  */
 DeleteLoadBalancerRequest::DeleteLoadBalancerRequest()
     : ElasticLoadBalancingv2Request(new DeleteLoadBalancerRequestPrivate(ElasticLoadBalancingv2Request::DeleteLoadBalancerAction, this))
@@ -134,14 +131,9 @@ bool DeleteLoadBalancerRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteLoadBalancerResponse object.
+ * Returns a DeleteLoadBalancerResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteLoadBalancerResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ElasticLoadBalancingv2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteLoadBalancerRequest::response(QNetworkReply * const reply) const
 {
@@ -149,20 +141,17 @@ QtAws::Core::AwsAbstractResponse * DeleteLoadBalancerRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::ElasticLoadBalancingv2::DeleteLoadBalancerRequestPrivate
+ * \brief The DeleteLoadBalancerRequestPrivate class provides private implementation for DeleteLoadBalancerRequest.
+ * \internal
  *
- * @class  DeleteLoadBalancerRequestPrivate
- *
- * @brief  Private implementation for DeleteLoadBalancerRequest.
+ * \inmodule QtAwsElasticLoadBalancingv2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteLoadBalancerRequestPrivate object.
- *
- * @param  action  ElasticLoadBalancingv2 action being performed.
- * @param  q       Pointer to this object's public DeleteLoadBalancerRequest instance.
+ * Constructs a DeleteLoadBalancerRequestPrivate object for ElasticLoadBalancingv2 \a action with,
+ * public implementation \a q.
  */
 DeleteLoadBalancerRequestPrivate::DeleteLoadBalancerRequestPrivate(
     const ElasticLoadBalancingv2Request::Action action, DeleteLoadBalancerRequest * const q)
@@ -172,15 +161,10 @@ DeleteLoadBalancerRequestPrivate::DeleteLoadBalancerRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteLoadBalancerRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteLoadBalancerRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteLoadBalancerRequest instance.
  */
 DeleteLoadBalancerRequestPrivate::DeleteLoadBalancerRequestPrivate(
     const DeleteLoadBalancerRequestPrivate &other, DeleteLoadBalancerRequest * const q)

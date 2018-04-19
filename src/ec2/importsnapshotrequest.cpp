@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::ImportSnapshotRequest
- *
  * \brief The ImportSnapshotRequest class provides an interface for EC2 ImportSnapshot requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new ImportSnapshotRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ImportSnapshotRequest::ImportSnapshotRequest(const ImportSnapshotRequest &other)
     : EC2Request(new ImportSnapshotRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ ImportSnapshotRequest::ImportSnapshotRequest(const ImportSnapshotRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ImportSnapshotRequest object.
+ * Constructs a ImportSnapshotRequest object.
  */
 ImportSnapshotRequest::ImportSnapshotRequest()
     : EC2Request(new ImportSnapshotRequestPrivate(EC2Request::ImportSnapshotAction, this))
@@ -70,14 +67,9 @@ bool ImportSnapshotRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ImportSnapshotResponse object.
+ * Returns a ImportSnapshotResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ImportSnapshotResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ImportSnapshotRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * ImportSnapshotRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::ImportSnapshotRequestPrivate
+ * \brief The ImportSnapshotRequestPrivate class provides private implementation for ImportSnapshotRequest.
+ * \internal
  *
- * @class  ImportSnapshotRequestPrivate
- *
- * @brief  Private implementation for ImportSnapshotRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ImportSnapshotRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public ImportSnapshotRequest instance.
+ * Constructs a ImportSnapshotRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 ImportSnapshotRequestPrivate::ImportSnapshotRequestPrivate(
     const EC2Request::Action action, ImportSnapshotRequest * const q)
@@ -108,15 +97,10 @@ ImportSnapshotRequestPrivate::ImportSnapshotRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ImportSnapshotRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ImportSnapshotRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ImportSnapshotRequest instance.
  */
 ImportSnapshotRequestPrivate::ImportSnapshotRequestPrivate(
     const ImportSnapshotRequestPrivate &other, ImportSnapshotRequest * const q)

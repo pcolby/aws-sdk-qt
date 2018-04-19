@@ -27,10 +27,9 @@ namespace Organizations {
 
 /*!
  * \class QtAws::Organizations::ListAccountsRequest
- *
  * \brief The ListAccountsRequest class provides an interface for Organizations ListAccounts requests.
  *
- * \ingroup Organizations
+ * \inmodule QtAwsOrganizations
  *
  *  <fullname>AWS Organizations API Reference</fullname>
  * 
@@ -179,9 +178,7 @@ namespace Organizations {
  */
 
 /*!
- * @brief  Constructs a new ListAccountsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListAccountsRequest::ListAccountsRequest(const ListAccountsRequest &other)
     : OrganizationsRequest(new ListAccountsRequestPrivate(*other.d_func(), this))
@@ -190,7 +187,7 @@ ListAccountsRequest::ListAccountsRequest(const ListAccountsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ListAccountsRequest object.
+ * Constructs a ListAccountsRequest object.
  */
 ListAccountsRequest::ListAccountsRequest()
     : OrganizationsRequest(new ListAccountsRequestPrivate(OrganizationsRequest::ListAccountsAction, this))
@@ -208,14 +205,9 @@ bool ListAccountsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListAccountsResponse object.
+ * Returns a ListAccountsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListAccountsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  OrganizationsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListAccountsRequest::response(QNetworkReply * const reply) const
 {
@@ -223,20 +215,17 @@ QtAws::Core::AwsAbstractResponse * ListAccountsRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::Organizations::ListAccountsRequestPrivate
+ * \brief The ListAccountsRequestPrivate class provides private implementation for ListAccountsRequest.
+ * \internal
  *
- * @class  ListAccountsRequestPrivate
- *
- * @brief  Private implementation for ListAccountsRequest.
+ * \inmodule QtAwsOrganizations
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListAccountsRequestPrivate object.
- *
- * @param  action  Organizations action being performed.
- * @param  q       Pointer to this object's public ListAccountsRequest instance.
+ * Constructs a ListAccountsRequestPrivate object for Organizations \a action with,
+ * public implementation \a q.
  */
 ListAccountsRequestPrivate::ListAccountsRequestPrivate(
     const OrganizationsRequest::Action action, ListAccountsRequest * const q)
@@ -246,15 +235,10 @@ ListAccountsRequestPrivate::ListAccountsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListAccountsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListAccountsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListAccountsRequest instance.
  */
 ListAccountsRequestPrivate::ListAccountsRequestPrivate(
     const ListAccountsRequestPrivate &other, ListAccountsRequest * const q)

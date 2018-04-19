@@ -27,19 +27,16 @@ namespace Route53 {
 
 /*!
  * \class QtAws::Route53::CreateReusableDelegationSetRequest
- *
  * \brief The CreateReusableDelegationSetRequest class provides an interface for Route53 CreateReusableDelegationSet requests.
  *
- * \ingroup Route53
+ * \inmodule QtAwsRoute53
  *
  *
  * \sa Route53Client::createReusableDelegationSet
  */
 
 /*!
- * @brief  Constructs a new CreateReusableDelegationSetRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateReusableDelegationSetRequest::CreateReusableDelegationSetRequest(const CreateReusableDelegationSetRequest &other)
     : Route53Request(new CreateReusableDelegationSetRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ CreateReusableDelegationSetRequest::CreateReusableDelegationSetRequest(const Cre
 }
 
 /*!
- * @brief  Constructs a new CreateReusableDelegationSetRequest object.
+ * Constructs a CreateReusableDelegationSetRequest object.
  */
 CreateReusableDelegationSetRequest::CreateReusableDelegationSetRequest()
     : Route53Request(new CreateReusableDelegationSetRequestPrivate(Route53Request::CreateReusableDelegationSetAction, this))
@@ -66,14 +63,9 @@ bool CreateReusableDelegationSetRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateReusableDelegationSetResponse object.
+ * Returns a CreateReusableDelegationSetResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateReusableDelegationSetResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  Route53Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateReusableDelegationSetRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * CreateReusableDelegationSetRequest::response(
 }
 
 /*!
- * @internal
+ * \class QtAws::Route53::CreateReusableDelegationSetRequestPrivate
+ * \brief The CreateReusableDelegationSetRequestPrivate class provides private implementation for CreateReusableDelegationSetRequest.
+ * \internal
  *
- * @class  CreateReusableDelegationSetRequestPrivate
- *
- * @brief  Private implementation for CreateReusableDelegationSetRequest.
+ * \inmodule QtAwsRoute53
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateReusableDelegationSetRequestPrivate object.
- *
- * @param  action  Route53 action being performed.
- * @param  q       Pointer to this object's public CreateReusableDelegationSetRequest instance.
+ * Constructs a CreateReusableDelegationSetRequestPrivate object for Route53 \a action with,
+ * public implementation \a q.
  */
 CreateReusableDelegationSetRequestPrivate::CreateReusableDelegationSetRequestPrivate(
     const Route53Request::Action action, CreateReusableDelegationSetRequest * const q)
@@ -104,15 +93,10 @@ CreateReusableDelegationSetRequestPrivate::CreateReusableDelegationSetRequestPri
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateReusableDelegationSetRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateReusableDelegationSetRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateReusableDelegationSetRequest instance.
  */
 CreateReusableDelegationSetRequestPrivate::CreateReusableDelegationSetRequestPrivate(
     const CreateReusableDelegationSetRequestPrivate &other, CreateReusableDelegationSetRequest * const q)

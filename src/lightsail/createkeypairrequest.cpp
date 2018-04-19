@@ -27,10 +27,9 @@ namespace Lightsail {
 
 /*!
  * \class QtAws::Lightsail::CreateKeyPairRequest
- *
  * \brief The CreateKeyPairRequest class provides an interface for Lightsail CreateKeyPair requests.
  *
- * \ingroup Lightsail
+ * \inmodule QtAwsLightsail
  *
  *  Amazon Lightsail is the easiest way to get started with AWS for developers who just need virtual private servers.
  *  Lightsail includes everything you need to launch your project quickly - a virtual machine, SSD-based storage, data
@@ -53,9 +52,7 @@ namespace Lightsail {
  */
 
 /*!
- * @brief  Constructs a new CreateKeyPairRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateKeyPairRequest::CreateKeyPairRequest(const CreateKeyPairRequest &other)
     : LightsailRequest(new CreateKeyPairRequestPrivate(*other.d_func(), this))
@@ -64,7 +61,7 @@ CreateKeyPairRequest::CreateKeyPairRequest(const CreateKeyPairRequest &other)
 }
 
 /*!
- * @brief  Constructs a new CreateKeyPairRequest object.
+ * Constructs a CreateKeyPairRequest object.
  */
 CreateKeyPairRequest::CreateKeyPairRequest()
     : LightsailRequest(new CreateKeyPairRequestPrivate(LightsailRequest::CreateKeyPairAction, this))
@@ -82,14 +79,9 @@ bool CreateKeyPairRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateKeyPairResponse object.
+ * Returns a CreateKeyPairResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateKeyPairResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  LightsailClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateKeyPairRequest::response(QNetworkReply * const reply) const
 {
@@ -97,20 +89,17 @@ QtAws::Core::AwsAbstractResponse * CreateKeyPairRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::Lightsail::CreateKeyPairRequestPrivate
+ * \brief The CreateKeyPairRequestPrivate class provides private implementation for CreateKeyPairRequest.
+ * \internal
  *
- * @class  CreateKeyPairRequestPrivate
- *
- * @brief  Private implementation for CreateKeyPairRequest.
+ * \inmodule QtAwsLightsail
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateKeyPairRequestPrivate object.
- *
- * @param  action  Lightsail action being performed.
- * @param  q       Pointer to this object's public CreateKeyPairRequest instance.
+ * Constructs a CreateKeyPairRequestPrivate object for Lightsail \a action with,
+ * public implementation \a q.
  */
 CreateKeyPairRequestPrivate::CreateKeyPairRequestPrivate(
     const LightsailRequest::Action action, CreateKeyPairRequest * const q)
@@ -120,15 +109,10 @@ CreateKeyPairRequestPrivate::CreateKeyPairRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateKeyPairRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateKeyPairRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateKeyPairRequest instance.
  */
 CreateKeyPairRequestPrivate::CreateKeyPairRequestPrivate(
     const CreateKeyPairRequestPrivate &other, CreateKeyPairRequest * const q)

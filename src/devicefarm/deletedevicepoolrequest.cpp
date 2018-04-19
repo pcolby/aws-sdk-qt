@@ -27,10 +27,9 @@ namespace DeviceFarm {
 
 /*!
  * \class QtAws::DeviceFarm::DeleteDevicePoolRequest
- *
  * \brief The DeleteDevicePoolRequest class provides an interface for DeviceFarm DeleteDevicePool requests.
  *
- * \ingroup DeviceFarm
+ * \inmodule QtAwsDeviceFarm
  *
  *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
  *  phones, tablets, and other devices in the
@@ -39,9 +38,7 @@ namespace DeviceFarm {
  */
 
 /*!
- * @brief  Constructs a new DeleteDevicePoolRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteDevicePoolRequest::DeleteDevicePoolRequest(const DeleteDevicePoolRequest &other)
     : DeviceFarmRequest(new DeleteDevicePoolRequestPrivate(*other.d_func(), this))
@@ -50,7 +47,7 @@ DeleteDevicePoolRequest::DeleteDevicePoolRequest(const DeleteDevicePoolRequest &
 }
 
 /*!
- * @brief  Constructs a new DeleteDevicePoolRequest object.
+ * Constructs a DeleteDevicePoolRequest object.
  */
 DeleteDevicePoolRequest::DeleteDevicePoolRequest()
     : DeviceFarmRequest(new DeleteDevicePoolRequestPrivate(DeviceFarmRequest::DeleteDevicePoolAction, this))
@@ -68,14 +65,9 @@ bool DeleteDevicePoolRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteDevicePoolResponse object.
+ * Returns a DeleteDevicePoolResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteDevicePoolResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DeviceFarmClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteDevicePoolRequest::response(QNetworkReply * const reply) const
 {
@@ -83,20 +75,17 @@ QtAws::Core::AwsAbstractResponse * DeleteDevicePoolRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::DeviceFarm::DeleteDevicePoolRequestPrivate
+ * \brief The DeleteDevicePoolRequestPrivate class provides private implementation for DeleteDevicePoolRequest.
+ * \internal
  *
- * @class  DeleteDevicePoolRequestPrivate
- *
- * @brief  Private implementation for DeleteDevicePoolRequest.
+ * \inmodule QtAwsDeviceFarm
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteDevicePoolRequestPrivate object.
- *
- * @param  action  DeviceFarm action being performed.
- * @param  q       Pointer to this object's public DeleteDevicePoolRequest instance.
+ * Constructs a DeleteDevicePoolRequestPrivate object for DeviceFarm \a action with,
+ * public implementation \a q.
  */
 DeleteDevicePoolRequestPrivate::DeleteDevicePoolRequestPrivate(
     const DeviceFarmRequest::Action action, DeleteDevicePoolRequest * const q)
@@ -106,15 +95,10 @@ DeleteDevicePoolRequestPrivate::DeleteDevicePoolRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteDevicePoolRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteDevicePoolRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteDevicePoolRequest instance.
  */
 DeleteDevicePoolRequestPrivate::DeleteDevicePoolRequestPrivate(
     const DeleteDevicePoolRequestPrivate &other, DeleteDevicePoolRequest * const q)

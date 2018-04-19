@@ -27,10 +27,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::GetContextKeysForCustomPolicyRequest
- *
  * \brief The GetContextKeysForCustomPolicyRequest class provides an interface for IAM GetContextKeysForCustomPolicy requests.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -102,9 +101,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new GetContextKeysForCustomPolicyRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetContextKeysForCustomPolicyRequest::GetContextKeysForCustomPolicyRequest(const GetContextKeysForCustomPolicyRequest &other)
     : IAMRequest(new GetContextKeysForCustomPolicyRequestPrivate(*other.d_func(), this))
@@ -113,7 +110,7 @@ GetContextKeysForCustomPolicyRequest::GetContextKeysForCustomPolicyRequest(const
 }
 
 /*!
- * @brief  Constructs a new GetContextKeysForCustomPolicyRequest object.
+ * Constructs a GetContextKeysForCustomPolicyRequest object.
  */
 GetContextKeysForCustomPolicyRequest::GetContextKeysForCustomPolicyRequest()
     : IAMRequest(new GetContextKeysForCustomPolicyRequestPrivate(IAMRequest::GetContextKeysForCustomPolicyAction, this))
@@ -131,14 +128,9 @@ bool GetContextKeysForCustomPolicyRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetContextKeysForCustomPolicyResponse object.
+ * Returns a GetContextKeysForCustomPolicyResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetContextKeysForCustomPolicyResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IAMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetContextKeysForCustomPolicyRequest::response(QNetworkReply * const reply) const
 {
@@ -146,20 +138,17 @@ QtAws::Core::AwsAbstractResponse * GetContextKeysForCustomPolicyRequest::respons
 }
 
 /*!
- * @internal
+ * \class QtAws::IAM::GetContextKeysForCustomPolicyRequestPrivate
+ * \brief The GetContextKeysForCustomPolicyRequestPrivate class provides private implementation for GetContextKeysForCustomPolicyRequest.
+ * \internal
  *
- * @class  GetContextKeysForCustomPolicyRequestPrivate
- *
- * @brief  Private implementation for GetContextKeysForCustomPolicyRequest.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetContextKeysForCustomPolicyRequestPrivate object.
- *
- * @param  action  IAM action being performed.
- * @param  q       Pointer to this object's public GetContextKeysForCustomPolicyRequest instance.
+ * Constructs a GetContextKeysForCustomPolicyRequestPrivate object for IAM \a action with,
+ * public implementation \a q.
  */
 GetContextKeysForCustomPolicyRequestPrivate::GetContextKeysForCustomPolicyRequestPrivate(
     const IAMRequest::Action action, GetContextKeysForCustomPolicyRequest * const q)
@@ -169,15 +158,10 @@ GetContextKeysForCustomPolicyRequestPrivate::GetContextKeysForCustomPolicyReques
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetContextKeysForCustomPolicyRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetContextKeysForCustomPolicyRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetContextKeysForCustomPolicyRequest instance.
  */
 GetContextKeysForCustomPolicyRequestPrivate::GetContextKeysForCustomPolicyRequestPrivate(
     const GetContextKeysForCustomPolicyRequestPrivate &other, GetContextKeysForCustomPolicyRequest * const q)

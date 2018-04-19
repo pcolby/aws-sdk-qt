@@ -27,10 +27,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::AttachPrincipalPolicyRequest
- *
  * \brief The AttachPrincipalPolicyRequest class provides an interface for IoT AttachPrincipalPolicy requests.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -48,9 +47,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new AttachPrincipalPolicyRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AttachPrincipalPolicyRequest::AttachPrincipalPolicyRequest(const AttachPrincipalPolicyRequest &other)
     : IoTRequest(new AttachPrincipalPolicyRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ AttachPrincipalPolicyRequest::AttachPrincipalPolicyRequest(const AttachPrincipal
 }
 
 /*!
- * @brief  Constructs a new AttachPrincipalPolicyRequest object.
+ * Constructs a AttachPrincipalPolicyRequest object.
  */
 AttachPrincipalPolicyRequest::AttachPrincipalPolicyRequest()
     : IoTRequest(new AttachPrincipalPolicyRequestPrivate(IoTRequest::AttachPrincipalPolicyAction, this))
@@ -77,14 +74,9 @@ bool AttachPrincipalPolicyRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AttachPrincipalPolicyResponse object.
+ * Returns a AttachPrincipalPolicyResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AttachPrincipalPolicyResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IoTClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AttachPrincipalPolicyRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * AttachPrincipalPolicyRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::IoT::AttachPrincipalPolicyRequestPrivate
+ * \brief The AttachPrincipalPolicyRequestPrivate class provides private implementation for AttachPrincipalPolicyRequest.
+ * \internal
  *
- * @class  AttachPrincipalPolicyRequestPrivate
- *
- * @brief  Private implementation for AttachPrincipalPolicyRequest.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AttachPrincipalPolicyRequestPrivate object.
- *
- * @param  action  IoT action being performed.
- * @param  q       Pointer to this object's public AttachPrincipalPolicyRequest instance.
+ * Constructs a AttachPrincipalPolicyRequestPrivate object for IoT \a action with,
+ * public implementation \a q.
  */
 AttachPrincipalPolicyRequestPrivate::AttachPrincipalPolicyRequestPrivate(
     const IoTRequest::Action action, AttachPrincipalPolicyRequest * const q)
@@ -115,15 +104,10 @@ AttachPrincipalPolicyRequestPrivate::AttachPrincipalPolicyRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AttachPrincipalPolicyRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AttachPrincipalPolicyRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AttachPrincipalPolicyRequest instance.
  */
 AttachPrincipalPolicyRequestPrivate::AttachPrincipalPolicyRequestPrivate(
     const AttachPrincipalPolicyRequestPrivate &other, AttachPrincipalPolicyRequest * const q)

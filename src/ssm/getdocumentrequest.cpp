@@ -27,10 +27,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::GetDocumentRequest
- *
  * \brief The GetDocumentRequest class provides an interface for SSM GetDocument requests.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -61,9 +60,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new GetDocumentRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetDocumentRequest::GetDocumentRequest(const GetDocumentRequest &other)
     : SSMRequest(new GetDocumentRequestPrivate(*other.d_func(), this))
@@ -72,7 +69,7 @@ GetDocumentRequest::GetDocumentRequest(const GetDocumentRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetDocumentRequest object.
+ * Constructs a GetDocumentRequest object.
  */
 GetDocumentRequest::GetDocumentRequest()
     : SSMRequest(new GetDocumentRequestPrivate(SSMRequest::GetDocumentAction, this))
@@ -90,14 +87,9 @@ bool GetDocumentRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetDocumentResponse object.
+ * Returns a GetDocumentResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetDocumentResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SSMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetDocumentRequest::response(QNetworkReply * const reply) const
 {
@@ -105,20 +97,17 @@ QtAws::Core::AwsAbstractResponse * GetDocumentRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::SSM::GetDocumentRequestPrivate
+ * \brief The GetDocumentRequestPrivate class provides private implementation for GetDocumentRequest.
+ * \internal
  *
- * @class  GetDocumentRequestPrivate
- *
- * @brief  Private implementation for GetDocumentRequest.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetDocumentRequestPrivate object.
- *
- * @param  action  SSM action being performed.
- * @param  q       Pointer to this object's public GetDocumentRequest instance.
+ * Constructs a GetDocumentRequestPrivate object for SSM \a action with,
+ * public implementation \a q.
  */
 GetDocumentRequestPrivate::GetDocumentRequestPrivate(
     const SSMRequest::Action action, GetDocumentRequest * const q)
@@ -128,15 +117,10 @@ GetDocumentRequestPrivate::GetDocumentRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetDocumentRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetDocumentRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetDocumentRequest instance.
  */
 GetDocumentRequestPrivate::GetDocumentRequestPrivate(
     const GetDocumentRequestPrivate &other, GetDocumentRequest * const q)

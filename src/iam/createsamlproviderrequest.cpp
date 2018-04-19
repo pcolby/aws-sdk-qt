@@ -27,10 +27,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::CreateSAMLProviderRequest
- *
  * \brief The CreateSAMLProviderRequest class provides an interface for IAM CreateSAMLProvider requests.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -102,9 +101,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new CreateSAMLProviderRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateSAMLProviderRequest::CreateSAMLProviderRequest(const CreateSAMLProviderRequest &other)
     : IAMRequest(new CreateSAMLProviderRequestPrivate(*other.d_func(), this))
@@ -113,7 +110,7 @@ CreateSAMLProviderRequest::CreateSAMLProviderRequest(const CreateSAMLProviderReq
 }
 
 /*!
- * @brief  Constructs a new CreateSAMLProviderRequest object.
+ * Constructs a CreateSAMLProviderRequest object.
  */
 CreateSAMLProviderRequest::CreateSAMLProviderRequest()
     : IAMRequest(new CreateSAMLProviderRequestPrivate(IAMRequest::CreateSAMLProviderAction, this))
@@ -131,14 +128,9 @@ bool CreateSAMLProviderRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateSAMLProviderResponse object.
+ * Returns a CreateSAMLProviderResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateSAMLProviderResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IAMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateSAMLProviderRequest::response(QNetworkReply * const reply) const
 {
@@ -146,20 +138,17 @@ QtAws::Core::AwsAbstractResponse * CreateSAMLProviderRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::IAM::CreateSAMLProviderRequestPrivate
+ * \brief The CreateSAMLProviderRequestPrivate class provides private implementation for CreateSAMLProviderRequest.
+ * \internal
  *
- * @class  CreateSAMLProviderRequestPrivate
- *
- * @brief  Private implementation for CreateSAMLProviderRequest.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateSAMLProviderRequestPrivate object.
- *
- * @param  action  IAM action being performed.
- * @param  q       Pointer to this object's public CreateSAMLProviderRequest instance.
+ * Constructs a CreateSAMLProviderRequestPrivate object for IAM \a action with,
+ * public implementation \a q.
  */
 CreateSAMLProviderRequestPrivate::CreateSAMLProviderRequestPrivate(
     const IAMRequest::Action action, CreateSAMLProviderRequest * const q)
@@ -169,15 +158,10 @@ CreateSAMLProviderRequestPrivate::CreateSAMLProviderRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateSAMLProviderRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateSAMLProviderRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateSAMLProviderRequest instance.
  */
 CreateSAMLProviderRequestPrivate::CreateSAMLProviderRequestPrivate(
     const CreateSAMLProviderRequestPrivate &other, CreateSAMLProviderRequest * const q)

@@ -27,10 +27,9 @@ namespace DirectoryService {
 
 /*!
  * \class QtAws::DirectoryService::CreateDirectoryRequest
- *
  * \brief The CreateDirectoryRequest class provides an interface for DirectoryService CreateDirectory requests.
  *
- * \ingroup DirectoryService
+ * \inmodule QtAwsDirectoryService
  *
  *  <fullname>AWS Directory Service</fullname>
  * 
@@ -51,9 +50,7 @@ namespace DirectoryService {
  */
 
 /*!
- * @brief  Constructs a new CreateDirectoryRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateDirectoryRequest::CreateDirectoryRequest(const CreateDirectoryRequest &other)
     : DirectoryServiceRequest(new CreateDirectoryRequestPrivate(*other.d_func(), this))
@@ -62,7 +59,7 @@ CreateDirectoryRequest::CreateDirectoryRequest(const CreateDirectoryRequest &oth
 }
 
 /*!
- * @brief  Constructs a new CreateDirectoryRequest object.
+ * Constructs a CreateDirectoryRequest object.
  */
 CreateDirectoryRequest::CreateDirectoryRequest()
     : DirectoryServiceRequest(new CreateDirectoryRequestPrivate(DirectoryServiceRequest::CreateDirectoryAction, this))
@@ -80,14 +77,9 @@ bool CreateDirectoryRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateDirectoryResponse object.
+ * Returns a CreateDirectoryResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateDirectoryResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DirectoryServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateDirectoryRequest::response(QNetworkReply * const reply) const
 {
@@ -95,20 +87,17 @@ QtAws::Core::AwsAbstractResponse * CreateDirectoryRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::DirectoryService::CreateDirectoryRequestPrivate
+ * \brief The CreateDirectoryRequestPrivate class provides private implementation for CreateDirectoryRequest.
+ * \internal
  *
- * @class  CreateDirectoryRequestPrivate
- *
- * @brief  Private implementation for CreateDirectoryRequest.
+ * \inmodule QtAwsDirectoryService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateDirectoryRequestPrivate object.
- *
- * @param  action  DirectoryService action being performed.
- * @param  q       Pointer to this object's public CreateDirectoryRequest instance.
+ * Constructs a CreateDirectoryRequestPrivate object for DirectoryService \a action with,
+ * public implementation \a q.
  */
 CreateDirectoryRequestPrivate::CreateDirectoryRequestPrivate(
     const DirectoryServiceRequest::Action action, CreateDirectoryRequest * const q)
@@ -118,15 +107,10 @@ CreateDirectoryRequestPrivate::CreateDirectoryRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateDirectoryRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateDirectoryRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateDirectoryRequest instance.
  */
 CreateDirectoryRequestPrivate::CreateDirectoryRequestPrivate(
     const CreateDirectoryRequestPrivate &other, CreateDirectoryRequest * const q)

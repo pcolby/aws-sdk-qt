@@ -27,10 +27,9 @@ namespace Redshift {
 
 /*!
  * \class QtAws::Redshift::DescribeTableRestoreStatusRequest
- *
  * \brief The DescribeTableRestoreStatusRequest class provides an interface for Redshift DescribeTableRestoreStatus requests.
  *
- * \ingroup Redshift
+ * \inmodule QtAwsRedshift
  *
  *  <fullname>Amazon Redshift</fullname>
  * 
@@ -67,9 +66,7 @@ namespace Redshift {
  */
 
 /*!
- * @brief  Constructs a new DescribeTableRestoreStatusRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeTableRestoreStatusRequest::DescribeTableRestoreStatusRequest(const DescribeTableRestoreStatusRequest &other)
     : RedshiftRequest(new DescribeTableRestoreStatusRequestPrivate(*other.d_func(), this))
@@ -78,7 +75,7 @@ DescribeTableRestoreStatusRequest::DescribeTableRestoreStatusRequest(const Descr
 }
 
 /*!
- * @brief  Constructs a new DescribeTableRestoreStatusRequest object.
+ * Constructs a DescribeTableRestoreStatusRequest object.
  */
 DescribeTableRestoreStatusRequest::DescribeTableRestoreStatusRequest()
     : RedshiftRequest(new DescribeTableRestoreStatusRequestPrivate(RedshiftRequest::DescribeTableRestoreStatusAction, this))
@@ -96,14 +93,9 @@ bool DescribeTableRestoreStatusRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeTableRestoreStatusResponse object.
+ * Returns a DescribeTableRestoreStatusResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeTableRestoreStatusResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RedshiftClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeTableRestoreStatusRequest::response(QNetworkReply * const reply) const
 {
@@ -111,20 +103,17 @@ QtAws::Core::AwsAbstractResponse * DescribeTableRestoreStatusRequest::response(Q
 }
 
 /*!
- * @internal
+ * \class QtAws::Redshift::DescribeTableRestoreStatusRequestPrivate
+ * \brief The DescribeTableRestoreStatusRequestPrivate class provides private implementation for DescribeTableRestoreStatusRequest.
+ * \internal
  *
- * @class  DescribeTableRestoreStatusRequestPrivate
- *
- * @brief  Private implementation for DescribeTableRestoreStatusRequest.
+ * \inmodule QtAwsRedshift
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeTableRestoreStatusRequestPrivate object.
- *
- * @param  action  Redshift action being performed.
- * @param  q       Pointer to this object's public DescribeTableRestoreStatusRequest instance.
+ * Constructs a DescribeTableRestoreStatusRequestPrivate object for Redshift \a action with,
+ * public implementation \a q.
  */
 DescribeTableRestoreStatusRequestPrivate::DescribeTableRestoreStatusRequestPrivate(
     const RedshiftRequest::Action action, DescribeTableRestoreStatusRequest * const q)
@@ -134,15 +123,10 @@ DescribeTableRestoreStatusRequestPrivate::DescribeTableRestoreStatusRequestPriva
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeTableRestoreStatusRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeTableRestoreStatusRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeTableRestoreStatusRequest instance.
  */
 DescribeTableRestoreStatusRequestPrivate::DescribeTableRestoreStatusRequestPrivate(
     const DescribeTableRestoreStatusRequestPrivate &other, DescribeTableRestoreStatusRequest * const q)

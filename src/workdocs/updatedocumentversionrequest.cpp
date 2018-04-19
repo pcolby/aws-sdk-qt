@@ -27,10 +27,9 @@ namespace WorkDocs {
 
 /*!
  * \class QtAws::WorkDocs::UpdateDocumentVersionRequest
- *
  * \brief The UpdateDocumentVersionRequest class provides an interface for WorkDocs UpdateDocumentVersion requests.
  *
- * \ingroup WorkDocs
+ * \inmodule QtAwsWorkDocs
  *
  *  The WorkDocs API is designed for the following use
  * 
@@ -66,9 +65,7 @@ namespace WorkDocs {
  */
 
 /*!
- * @brief  Constructs a new UpdateDocumentVersionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateDocumentVersionRequest::UpdateDocumentVersionRequest(const UpdateDocumentVersionRequest &other)
     : WorkDocsRequest(new UpdateDocumentVersionRequestPrivate(*other.d_func(), this))
@@ -77,7 +74,7 @@ UpdateDocumentVersionRequest::UpdateDocumentVersionRequest(const UpdateDocumentV
 }
 
 /*!
- * @brief  Constructs a new UpdateDocumentVersionRequest object.
+ * Constructs a UpdateDocumentVersionRequest object.
  */
 UpdateDocumentVersionRequest::UpdateDocumentVersionRequest()
     : WorkDocsRequest(new UpdateDocumentVersionRequestPrivate(WorkDocsRequest::UpdateDocumentVersionAction, this))
@@ -95,14 +92,9 @@ bool UpdateDocumentVersionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateDocumentVersionResponse object.
+ * Returns a UpdateDocumentVersionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateDocumentVersionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WorkDocsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateDocumentVersionRequest::response(QNetworkReply * const reply) const
 {
@@ -110,20 +102,17 @@ QtAws::Core::AwsAbstractResponse * UpdateDocumentVersionRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::WorkDocs::UpdateDocumentVersionRequestPrivate
+ * \brief The UpdateDocumentVersionRequestPrivate class provides private implementation for UpdateDocumentVersionRequest.
+ * \internal
  *
- * @class  UpdateDocumentVersionRequestPrivate
- *
- * @brief  Private implementation for UpdateDocumentVersionRequest.
+ * \inmodule QtAwsWorkDocs
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateDocumentVersionRequestPrivate object.
- *
- * @param  action  WorkDocs action being performed.
- * @param  q       Pointer to this object's public UpdateDocumentVersionRequest instance.
+ * Constructs a UpdateDocumentVersionRequestPrivate object for WorkDocs \a action with,
+ * public implementation \a q.
  */
 UpdateDocumentVersionRequestPrivate::UpdateDocumentVersionRequestPrivate(
     const WorkDocsRequest::Action action, UpdateDocumentVersionRequest * const q)
@@ -133,15 +122,10 @@ UpdateDocumentVersionRequestPrivate::UpdateDocumentVersionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateDocumentVersionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateDocumentVersionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateDocumentVersionRequest instance.
  */
 UpdateDocumentVersionRequestPrivate::UpdateDocumentVersionRequestPrivate(
     const UpdateDocumentVersionRequestPrivate &other, UpdateDocumentVersionRequest * const q)

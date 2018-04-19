@@ -27,10 +27,9 @@ namespace ElasticLoadBalancingv2 {
 
 /*!
  * \class QtAws::ElasticLoadBalancingv2::SetIpAddressTypeRequest
- *
  * \brief The SetIpAddressTypeRequest class provides an interface for ElasticLoadBalancingv2 SetIpAddressType requests.
  *
- * \ingroup ElasticLoadBalancingv2
+ * \inmodule QtAwsElasticLoadBalancingv2
  *
  *  <fullname>Elastic Load Balancing</fullname>
  * 
@@ -105,9 +104,7 @@ namespace ElasticLoadBalancingv2 {
  */
 
 /*!
- * @brief  Constructs a new SetIpAddressTypeRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 SetIpAddressTypeRequest::SetIpAddressTypeRequest(const SetIpAddressTypeRequest &other)
     : ElasticLoadBalancingv2Request(new SetIpAddressTypeRequestPrivate(*other.d_func(), this))
@@ -116,7 +113,7 @@ SetIpAddressTypeRequest::SetIpAddressTypeRequest(const SetIpAddressTypeRequest &
 }
 
 /*!
- * @brief  Constructs a new SetIpAddressTypeRequest object.
+ * Constructs a SetIpAddressTypeRequest object.
  */
 SetIpAddressTypeRequest::SetIpAddressTypeRequest()
     : ElasticLoadBalancingv2Request(new SetIpAddressTypeRequestPrivate(ElasticLoadBalancingv2Request::SetIpAddressTypeAction, this))
@@ -134,14 +131,9 @@ bool SetIpAddressTypeRequest::isValid() const
 
 
 /*!
- * @brief  Construct an SetIpAddressTypeResponse object.
+ * Returns a SetIpAddressTypeResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An SetIpAddressTypeResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ElasticLoadBalancingv2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * SetIpAddressTypeRequest::response(QNetworkReply * const reply) const
 {
@@ -149,20 +141,17 @@ QtAws::Core::AwsAbstractResponse * SetIpAddressTypeRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::ElasticLoadBalancingv2::SetIpAddressTypeRequestPrivate
+ * \brief The SetIpAddressTypeRequestPrivate class provides private implementation for SetIpAddressTypeRequest.
+ * \internal
  *
- * @class  SetIpAddressTypeRequestPrivate
- *
- * @brief  Private implementation for SetIpAddressTypeRequest.
+ * \inmodule QtAwsElasticLoadBalancingv2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new SetIpAddressTypeRequestPrivate object.
- *
- * @param  action  ElasticLoadBalancingv2 action being performed.
- * @param  q       Pointer to this object's public SetIpAddressTypeRequest instance.
+ * Constructs a SetIpAddressTypeRequestPrivate object for ElasticLoadBalancingv2 \a action with,
+ * public implementation \a q.
  */
 SetIpAddressTypeRequestPrivate::SetIpAddressTypeRequestPrivate(
     const ElasticLoadBalancingv2Request::Action action, SetIpAddressTypeRequest * const q)
@@ -172,15 +161,10 @@ SetIpAddressTypeRequestPrivate::SetIpAddressTypeRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SetIpAddressTypeRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the SetIpAddressTypeRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public SetIpAddressTypeRequest instance.
  */
 SetIpAddressTypeRequestPrivate::SetIpAddressTypeRequestPrivate(
     const SetIpAddressTypeRequestPrivate &other, SetIpAddressTypeRequest * const q)

@@ -27,19 +27,16 @@ namespace MTurk {
 
 /*!
  * \class QtAws::MTurk::GetFileUploadURLRequest
- *
  * \brief The GetFileUploadURLRequest class provides an interface for MTurk GetFileUploadURL requests.
  *
- * \ingroup MTurk
+ * \inmodule QtAwsMTurk
  *
  *
  * \sa MTurkClient::getFileUploadURL
  */
 
 /*!
- * @brief  Constructs a new GetFileUploadURLRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetFileUploadURLRequest::GetFileUploadURLRequest(const GetFileUploadURLRequest &other)
     : MTurkRequest(new GetFileUploadURLRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ GetFileUploadURLRequest::GetFileUploadURLRequest(const GetFileUploadURLRequest &
 }
 
 /*!
- * @brief  Constructs a new GetFileUploadURLRequest object.
+ * Constructs a GetFileUploadURLRequest object.
  */
 GetFileUploadURLRequest::GetFileUploadURLRequest()
     : MTurkRequest(new GetFileUploadURLRequestPrivate(MTurkRequest::GetFileUploadURLAction, this))
@@ -66,14 +63,9 @@ bool GetFileUploadURLRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetFileUploadURLResponse object.
+ * Returns a GetFileUploadURLResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetFileUploadURLResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MTurkClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetFileUploadURLRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * GetFileUploadURLRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::MTurk::GetFileUploadURLRequestPrivate
+ * \brief The GetFileUploadURLRequestPrivate class provides private implementation for GetFileUploadURLRequest.
+ * \internal
  *
- * @class  GetFileUploadURLRequestPrivate
- *
- * @brief  Private implementation for GetFileUploadURLRequest.
+ * \inmodule QtAwsMTurk
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetFileUploadURLRequestPrivate object.
- *
- * @param  action  MTurk action being performed.
- * @param  q       Pointer to this object's public GetFileUploadURLRequest instance.
+ * Constructs a GetFileUploadURLRequestPrivate object for MTurk \a action with,
+ * public implementation \a q.
  */
 GetFileUploadURLRequestPrivate::GetFileUploadURLRequestPrivate(
     const MTurkRequest::Action action, GetFileUploadURLRequest * const q)
@@ -104,15 +93,10 @@ GetFileUploadURLRequestPrivate::GetFileUploadURLRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetFileUploadURLRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetFileUploadURLRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetFileUploadURLRequest instance.
  */
 GetFileUploadURLRequestPrivate::GetFileUploadURLRequestPrivate(
     const GetFileUploadURLRequestPrivate &other, GetFileUploadURLRequest * const q)

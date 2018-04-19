@@ -27,10 +27,9 @@ namespace ServiceDiscovery {
 
 /*!
  * \class QtAws::ServiceDiscovery::GetInstanceRequest
- *
  * \brief The GetInstanceRequest class provides an interface for ServiceDiscovery GetInstance requests.
  *
- * \ingroup ServiceDiscovery
+ * \inmodule QtAwsServiceDiscovery
  *
  *  Amazon Route 53 auto naming lets you configure public or private namespaces that your microservice applications run in.
  *  When instances of the service become available, you can call the auto naming API to register the instance, and Route 53
@@ -41,9 +40,7 @@ namespace ServiceDiscovery {
  */
 
 /*!
- * @brief  Constructs a new GetInstanceRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetInstanceRequest::GetInstanceRequest(const GetInstanceRequest &other)
     : ServiceDiscoveryRequest(new GetInstanceRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ GetInstanceRequest::GetInstanceRequest(const GetInstanceRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetInstanceRequest object.
+ * Constructs a GetInstanceRequest object.
  */
 GetInstanceRequest::GetInstanceRequest()
     : ServiceDiscoveryRequest(new GetInstanceRequestPrivate(ServiceDiscoveryRequest::GetInstanceAction, this))
@@ -70,14 +67,9 @@ bool GetInstanceRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetInstanceResponse object.
+ * Returns a GetInstanceResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetInstanceResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ServiceDiscoveryClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetInstanceRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * GetInstanceRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::ServiceDiscovery::GetInstanceRequestPrivate
+ * \brief The GetInstanceRequestPrivate class provides private implementation for GetInstanceRequest.
+ * \internal
  *
- * @class  GetInstanceRequestPrivate
- *
- * @brief  Private implementation for GetInstanceRequest.
+ * \inmodule QtAwsServiceDiscovery
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetInstanceRequestPrivate object.
- *
- * @param  action  ServiceDiscovery action being performed.
- * @param  q       Pointer to this object's public GetInstanceRequest instance.
+ * Constructs a GetInstanceRequestPrivate object for ServiceDiscovery \a action with,
+ * public implementation \a q.
  */
 GetInstanceRequestPrivate::GetInstanceRequestPrivate(
     const ServiceDiscoveryRequest::Action action, GetInstanceRequest * const q)
@@ -108,15 +97,10 @@ GetInstanceRequestPrivate::GetInstanceRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetInstanceRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetInstanceRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetInstanceRequest instance.
  */
 GetInstanceRequestPrivate::GetInstanceRequestPrivate(
     const GetInstanceRequestPrivate &other, GetInstanceRequest * const q)

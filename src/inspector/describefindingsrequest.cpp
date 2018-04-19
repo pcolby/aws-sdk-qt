@@ -27,10 +27,9 @@ namespace Inspector {
 
 /*!
  * \class QtAws::Inspector::DescribeFindingsRequest
- *
  * \brief The DescribeFindingsRequest class provides an interface for Inspector DescribeFindings requests.
  *
- * \ingroup Inspector
+ * \inmodule QtAwsInspector
  *
  *  <fullname>Amazon Inspector</fullname>
  * 
@@ -42,9 +41,7 @@ namespace Inspector {
  */
 
 /*!
- * @brief  Constructs a new DescribeFindingsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeFindingsRequest::DescribeFindingsRequest(const DescribeFindingsRequest &other)
     : InspectorRequest(new DescribeFindingsRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ DescribeFindingsRequest::DescribeFindingsRequest(const DescribeFindingsRequest &
 }
 
 /*!
- * @brief  Constructs a new DescribeFindingsRequest object.
+ * Constructs a DescribeFindingsRequest object.
  */
 DescribeFindingsRequest::DescribeFindingsRequest()
     : InspectorRequest(new DescribeFindingsRequestPrivate(InspectorRequest::DescribeFindingsAction, this))
@@ -71,14 +68,9 @@ bool DescribeFindingsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeFindingsResponse object.
+ * Returns a DescribeFindingsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeFindingsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  InspectorClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeFindingsRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * DescribeFindingsRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::Inspector::DescribeFindingsRequestPrivate
+ * \brief The DescribeFindingsRequestPrivate class provides private implementation for DescribeFindingsRequest.
+ * \internal
  *
- * @class  DescribeFindingsRequestPrivate
- *
- * @brief  Private implementation for DescribeFindingsRequest.
+ * \inmodule QtAwsInspector
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeFindingsRequestPrivate object.
- *
- * @param  action  Inspector action being performed.
- * @param  q       Pointer to this object's public DescribeFindingsRequest instance.
+ * Constructs a DescribeFindingsRequestPrivate object for Inspector \a action with,
+ * public implementation \a q.
  */
 DescribeFindingsRequestPrivate::DescribeFindingsRequestPrivate(
     const InspectorRequest::Action action, DescribeFindingsRequest * const q)
@@ -109,15 +98,10 @@ DescribeFindingsRequestPrivate::DescribeFindingsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeFindingsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeFindingsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeFindingsRequest instance.
  */
 DescribeFindingsRequestPrivate::DescribeFindingsRequestPrivate(
     const DescribeFindingsRequestPrivate &other, DescribeFindingsRequest * const q)

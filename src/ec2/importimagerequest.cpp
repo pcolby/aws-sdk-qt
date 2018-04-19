@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::ImportImageRequest
- *
  * \brief The ImportImageRequest class provides an interface for EC2 ImportImage requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new ImportImageRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ImportImageRequest::ImportImageRequest(const ImportImageRequest &other)
     : EC2Request(new ImportImageRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ ImportImageRequest::ImportImageRequest(const ImportImageRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ImportImageRequest object.
+ * Constructs a ImportImageRequest object.
  */
 ImportImageRequest::ImportImageRequest()
     : EC2Request(new ImportImageRequestPrivate(EC2Request::ImportImageAction, this))
@@ -70,14 +67,9 @@ bool ImportImageRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ImportImageResponse object.
+ * Returns a ImportImageResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ImportImageResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ImportImageRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * ImportImageRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::ImportImageRequestPrivate
+ * \brief The ImportImageRequestPrivate class provides private implementation for ImportImageRequest.
+ * \internal
  *
- * @class  ImportImageRequestPrivate
- *
- * @brief  Private implementation for ImportImageRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ImportImageRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public ImportImageRequest instance.
+ * Constructs a ImportImageRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 ImportImageRequestPrivate::ImportImageRequestPrivate(
     const EC2Request::Action action, ImportImageRequest * const q)
@@ -108,15 +97,10 @@ ImportImageRequestPrivate::ImportImageRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ImportImageRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ImportImageRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ImportImageRequest instance.
  */
 ImportImageRequestPrivate::ImportImageRequestPrivate(
     const ImportImageRequestPrivate &other, ImportImageRequest * const q)

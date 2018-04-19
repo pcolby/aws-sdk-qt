@@ -50,6 +50,9 @@
 /*!
  * \namespace QtAws::SMS
  * \brief The QtAws::SMS contains stuff...
+ *
+ * \inmodule QtAwsSMS
+ *
  * @todo Move this to a separate template file.
  */
 
@@ -99,7 +102,7 @@ SmsClient::SmsClient(
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * \a  AwsEndpoint::getEndpoint()
+ * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
 SmsClient::SmsClient(
     const QUrl &endpoint,

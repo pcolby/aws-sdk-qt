@@ -25,16 +25,38 @@ namespace KinesisAnalytics {
 
 /*!
  * \class QtAws::KinesisAnalytics::KinesisAnalyticsRequest
- *
  * \brief The KinesisAnalyticsRequest class provides an interface for KinesisAnalytics requests.
  *
- * \ingroup KinesisAnalytics
+ * \inmodule QtAwsKinesisAnalytics
  */
 
 /*!
- * @brief  Constructs a new KinesisAnalyticsRequest object.
+ * \enum KinesisAnalyticsRequest::Action
  *
- * @param  action  The KinesisAnalytics action to request.
+ * This enum describes the actions that can be performed as KinesisAnalytics
+ * requests.
+ *
+ * \value AddApplicationCloudWatchLoggingOptionAction KinesisAnalytics AddApplicationCloudWatchLoggingOption action.
+ * \value AddApplicationInputAction KinesisAnalytics AddApplicationInput action.
+ * \value AddApplicationInputProcessingConfigurationAction KinesisAnalytics AddApplicationInputProcessingConfiguration action.
+ * \value AddApplicationOutputAction KinesisAnalytics AddApplicationOutput action.
+ * \value AddApplicationReferenceDataSourceAction KinesisAnalytics AddApplicationReferenceDataSource action.
+ * \value CreateApplicationAction KinesisAnalytics CreateApplication action.
+ * \value DeleteApplicationAction KinesisAnalytics DeleteApplication action.
+ * \value DeleteApplicationCloudWatchLoggingOptionAction KinesisAnalytics DeleteApplicationCloudWatchLoggingOption action.
+ * \value DeleteApplicationInputProcessingConfigurationAction KinesisAnalytics DeleteApplicationInputProcessingConfiguration action.
+ * \value DeleteApplicationOutputAction KinesisAnalytics DeleteApplicationOutput action.
+ * \value DeleteApplicationReferenceDataSourceAction KinesisAnalytics DeleteApplicationReferenceDataSource action.
+ * \value DescribeApplicationAction KinesisAnalytics DescribeApplication action.
+ * \value DiscoverInputSchemaAction KinesisAnalytics DiscoverInputSchema action.
+ * \value ListApplicationsAction KinesisAnalytics ListApplications action.
+ * \value StartApplicationAction KinesisAnalytics StartApplication action.
+ * \value StopApplicationAction KinesisAnalytics StopApplication action.
+ * \value UpdateApplicationAction KinesisAnalytics UpdateApplication action.
+ */
+
+/*!
+ * Constructs a[n] KinesisAnalyticsRequest object for KinesisAnalytics \a action.
  */
 KinesisAnalyticsRequest::KinesisAnalyticsRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new KinesisAnalyticsRequestPrivate(action, this))
@@ -43,9 +65,7 @@ KinesisAnalyticsRequest::KinesisAnalyticsRequest(const Action action)
 }
 
 /*!
- * @brief  Constructs a new KinesisAnalyticsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 KinesisAnalyticsRequest::KinesisAnalyticsRequest(const KinesisAnalyticsRequest &other)
     : QtAws::Core::AwsAbstractRequest(new KinesisAnalyticsRequestPrivate(*other.d_func(), this))
@@ -54,13 +74,7 @@ KinesisAnalyticsRequest::KinesisAnalyticsRequest(const KinesisAnalyticsRequest &
 }
 
 /*!
- * @brief  Assignment operator.
- *
- * Assigns \a other to \c this.
- *
- * @param  other  Instance to copy.
- *
- * @return  A reference to \c this.
+ * Sets the KinesisAnalyticsRequest object to be equal to \a other.
  */
 KinesisAnalyticsRequest& KinesisAnalyticsRequest::operator=(const KinesisAnalyticsRequest &other)
 {
@@ -72,14 +86,10 @@ KinesisAnalyticsRequest& KinesisAnalyticsRequest::operator=(const KinesisAnalyti
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new KinesisAnalyticsRequest object.
+ * Constructs aa KinesisAnalyticsRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from KinesisAnalyticsRequestPrivate.
- *
- * @param  d  Pointer to private data (aka D-Pointer).
  */
 KinesisAnalyticsRequest::KinesisAnalyticsRequest(KinesisAnalyticsRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
@@ -87,7 +97,7 @@ KinesisAnalyticsRequest::KinesisAnalyticsRequest(KinesisAnalyticsRequestPrivate 
 }
 
 /*!
- * \brief Returns the KinesisAnalytics action to be performed by this request.
+ * Returns the KinesisAnalytics action to be performed by this request.
  */
 KinesisAnalyticsRequest::Action KinesisAnalyticsRequest::action() const
 {
@@ -96,7 +106,7 @@ KinesisAnalyticsRequest::Action KinesisAnalyticsRequest::action() const
 }
 
 /*!
- * \brief Returns the name of the KinesisAnalytics action to be performed by this request.
+ * Returns the name of the KinesisAnalytics action to be performed by this request.
  */
 QString KinesisAnalyticsRequest::actionString() const
 {
@@ -104,7 +114,7 @@ QString KinesisAnalyticsRequest::actionString() const
 }
 
 /*!
- * \brief Returns the KinesisAnalytics API version implemented by this request.
+ * Returns the KinesisAnalytics API version implemented by this request.
  */
 QString KinesisAnalyticsRequest::apiVersion() const
 {
@@ -113,7 +123,7 @@ QString KinesisAnalyticsRequest::apiVersion() const
 }
 
 /*!
- * @brief Set the KinesisAnalytics action to be performed by this request to \a action.
+ * Sets the KinesisAnalytics action to be performed by this request to \a action.
  */
 void KinesisAnalyticsRequest::setAction(const Action action)
 {
@@ -122,7 +132,7 @@ void KinesisAnalyticsRequest::setAction(const Action action)
 }
 
 /*!
- * Set the KinesisAnalytics API version to include in this request to \a version.
+ * Sets the KinesisAnalytics API version to include in this request to \a version.
  */
 void KinesisAnalyticsRequest::setApiVersion(const QString &version)
 {
@@ -131,7 +141,7 @@ void KinesisAnalyticsRequest::setApiVersion(const QString &version)
 }
 
 /*!
- * \brief Returns \c true if this request is the same as \a other.
+ * Returns \c true if this request is equal to \a other; \c false otherwise.
  *
  * Note, most derived *Request classes do not need to provider their own
  * implementations of this function, since most such request classes rely on
@@ -146,8 +156,8 @@ bool KinesisAnalyticsRequest::operator==(const KinesisAnalyticsRequest &other) c
             (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
-/*!
- * @brief  Check if \a queueName is a valid KinesisAnalytics queue name.
+/*
+ * Returns \c tue if \a queueName is a valid KinesisAnalytics queue name.
  *
  * @par From KinesisAnalytics FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
@@ -166,9 +176,8 @@ bool KinesisAnalyticsRequest::operator==(const KinesisAnalyticsRequest &other) c
 }*/
 
 /*!
- * \brief Removes the a \a name parameter from this request.
- *
- * Returns the count of paramters removed (typically \c 0 or \c 1).
+ * Removes the a \a name parameter from the request, then returns the number of
+ * paramters removed (typically \c 0 or \c 1).
  */
 int KinesisAnalyticsRequest::clearParameter(const QString &name)
 {
@@ -177,7 +186,7 @@ int KinesisAnalyticsRequest::clearParameter(const QString &name)
 }
 
 /*!
- * \brief Removes all parameters from this request.
+ * Removes all parameters from the request.
  */
 void KinesisAnalyticsRequest::clearParameters()
 {
@@ -186,7 +195,7 @@ void KinesisAnalyticsRequest::clearParameters()
 }
 
 /*!
- * \brief Returns the value of the \n name pararemter if set, otherwise \a defaultValue.
+ * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
 QVariant KinesisAnalyticsRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
@@ -195,7 +204,7 @@ QVariant KinesisAnalyticsRequest::parameter(const QString &name, const QVariant 
 }
 
 /*!
- * \brief Returns a map of parameters included in this request.
+ * Returns the parameters included in this request.
  */
 const QVariantMap &KinesisAnalyticsRequest::parameters() const
 {
@@ -204,7 +213,7 @@ const QVariantMap &KinesisAnalyticsRequest::parameters() const
 }
 
 /*!
- * \brief Sets the \a name parameter to \a value.
+ * Sets the \a name parameter to \a value.
  */
 void KinesisAnalyticsRequest::setParameter(const QString &name, const QVariant &value)
 {
@@ -213,9 +222,8 @@ void KinesisAnalyticsRequest::setParameter(const QString &name, const QVariant &
 }
 
 /*!
- * \brief Sets the map of paramters for this request to \a parameters.
- *
- * Any request parameters set previously will be discarded.
+ * Sets the paramters for this request to \a parameters. Any request parameters
+ * set previously will be discarded.
  */
 void KinesisAnalyticsRequest::setParameters(const QVariantMap &parameters)
 {
@@ -224,11 +232,12 @@ void KinesisAnalyticsRequest::setParameters(const QVariantMap &parameters)
 }
 
 /*!
- * \brief Returns a network request for this KinesisAnalytics request using the given \a endpoint.
+ * Returns a network request for the KinesisAnalytics request using the given
+ * \a endpoint.
  *
- * This KinesisAnalytics implementation builds request URLs by combining the common query
- * parameters (such as Action and Version), with any that have been added (via
- * setParameter) by child classes.
+ * This KinesisAnalytics implementation builds request URLs by combining the
+ * common query parameters (such as Action and Version), with any that have
+ * been added (via setParameter) by child classes.
  */
 QNetworkRequest KinesisAnalyticsRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -239,17 +248,16 @@ QNetworkRequest KinesisAnalyticsRequest::unsignedRequest(const QUrl &endpoint) c
 }
 
 /*!
+ * \class QtAws::KinesisAnalytics::KinesisAnalyticsRequestPrivate
+ * \brief The KinesisAnalyticsRequestPrivate class provides private implementation for KinesisAnalyticsRequest.
  * \internal
  *
- * \class  KinesisAnalyticsRequestPrivate
- *
- * \brief  Private implementation for KinesisAnalyticsRequest.
+ * \inmodule QtAwsKinesisAnalytics
  */
 
 /*!
- * \internal
- *
- * \brief Constructs a new KinesisAnalyticsRequestPrivate object.
+ * Constructs a KinesisAnalyticsRequestPrivate object for KinesisAnalytics \a action with,
+ * public implementation \a q.
  */
 KinesisAnalyticsRequestPrivate::KinesisAnalyticsRequestPrivate(const KinesisAnalyticsRequest::Action action, KinesisAnalyticsRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
@@ -258,9 +266,7 @@ KinesisAnalyticsRequestPrivate::KinesisAnalyticsRequestPrivate(const KinesisAnal
 }
 
 /*!
- * \internal
- *
- * \brief Constructs a new KinesisAnalyticsRequestPrivate object, copying an existing one.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
@@ -276,15 +282,12 @@ KinesisAnalyticsRequestPrivate::KinesisAnalyticsRequestPrivate(const KinesisAnal
 }
 
 /*!
- * \internal
- *
- * \brief Returns a string representing \a action.
+ * Returns a string represention of \a action, or a null string if \a action is
+ * invalid.
  *
  * This function converts KinesisAnalyticsRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the KinesisAnalytics service's Action
  * query parameters.
- *
- * @return A string representing \a action, or a null string if \a action is invalid.
  */
 QString KinesisAnalyticsRequestPrivate::toString(const KinesisAnalyticsRequest::Action &action)
 {

@@ -27,10 +27,9 @@ namespace CognitoIdentityProvider {
 
 /*!
  * \class QtAws::CognitoIdentityProvider::SetRiskConfigurationRequest
- *
  * \brief The SetRiskConfigurationRequest class provides an interface for CognitoIdentityProvider SetRiskConfiguration requests.
  *
- * \ingroup CognitoIdentityProvider
+ * \inmodule QtAwsCognitoIdentityProvider
  *
  *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
  *  authenticate a user to obtain tokens related to user identity and access
@@ -47,9 +46,7 @@ namespace CognitoIdentityProvider {
  */
 
 /*!
- * @brief  Constructs a new SetRiskConfigurationRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 SetRiskConfigurationRequest::SetRiskConfigurationRequest(const SetRiskConfigurationRequest &other)
     : CognitoIdentityProviderRequest(new SetRiskConfigurationRequestPrivate(*other.d_func(), this))
@@ -58,7 +55,7 @@ SetRiskConfigurationRequest::SetRiskConfigurationRequest(const SetRiskConfigurat
 }
 
 /*!
- * @brief  Constructs a new SetRiskConfigurationRequest object.
+ * Constructs a SetRiskConfigurationRequest object.
  */
 SetRiskConfigurationRequest::SetRiskConfigurationRequest()
     : CognitoIdentityProviderRequest(new SetRiskConfigurationRequestPrivate(CognitoIdentityProviderRequest::SetRiskConfigurationAction, this))
@@ -76,14 +73,9 @@ bool SetRiskConfigurationRequest::isValid() const
 
 
 /*!
- * @brief  Construct an SetRiskConfigurationResponse object.
+ * Returns a SetRiskConfigurationResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An SetRiskConfigurationResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CognitoIdentityProviderClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * SetRiskConfigurationRequest::response(QNetworkReply * const reply) const
 {
@@ -91,20 +83,17 @@ QtAws::Core::AwsAbstractResponse * SetRiskConfigurationRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::CognitoIdentityProvider::SetRiskConfigurationRequestPrivate
+ * \brief The SetRiskConfigurationRequestPrivate class provides private implementation for SetRiskConfigurationRequest.
+ * \internal
  *
- * @class  SetRiskConfigurationRequestPrivate
- *
- * @brief  Private implementation for SetRiskConfigurationRequest.
+ * \inmodule QtAwsCognitoIdentityProvider
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new SetRiskConfigurationRequestPrivate object.
- *
- * @param  action  CognitoIdentityProvider action being performed.
- * @param  q       Pointer to this object's public SetRiskConfigurationRequest instance.
+ * Constructs a SetRiskConfigurationRequestPrivate object for CognitoIdentityProvider \a action with,
+ * public implementation \a q.
  */
 SetRiskConfigurationRequestPrivate::SetRiskConfigurationRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, SetRiskConfigurationRequest * const q)
@@ -114,15 +103,10 @@ SetRiskConfigurationRequestPrivate::SetRiskConfigurationRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SetRiskConfigurationRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the SetRiskConfigurationRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public SetRiskConfigurationRequest instance.
  */
 SetRiskConfigurationRequestPrivate::SetRiskConfigurationRequestPrivate(
     const SetRiskConfigurationRequestPrivate &other, SetRiskConfigurationRequest * const q)

@@ -27,10 +27,9 @@ namespace STS {
 
 /*!
  * \class QtAws::STS::AssumeRoleRequest
- *
  * \brief The AssumeRoleRequest class provides an interface for STS AssumeRole requests.
  *
- * \ingroup STS
+ * \inmodule QtAwsSTS
  *
  *  <fullname>AWS Security Token Service</fullname>
  * 
@@ -95,9 +94,7 @@ namespace STS {
  */
 
 /*!
- * @brief  Constructs a new AssumeRoleRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AssumeRoleRequest::AssumeRoleRequest(const AssumeRoleRequest &other)
     : STSRequest(new AssumeRoleRequestPrivate(*other.d_func(), this))
@@ -106,7 +103,7 @@ AssumeRoleRequest::AssumeRoleRequest(const AssumeRoleRequest &other)
 }
 
 /*!
- * @brief  Constructs a new AssumeRoleRequest object.
+ * Constructs a AssumeRoleRequest object.
  */
 AssumeRoleRequest::AssumeRoleRequest()
     : STSRequest(new AssumeRoleRequestPrivate(STSRequest::AssumeRoleAction, this))
@@ -124,14 +121,9 @@ bool AssumeRoleRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AssumeRoleResponse object.
+ * Returns a AssumeRoleResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AssumeRoleResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  STSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AssumeRoleRequest::response(QNetworkReply * const reply) const
 {
@@ -139,20 +131,17 @@ QtAws::Core::AwsAbstractResponse * AssumeRoleRequest::response(QNetworkReply * c
 }
 
 /*!
- * @internal
+ * \class QtAws::STS::AssumeRoleRequestPrivate
+ * \brief The AssumeRoleRequestPrivate class provides private implementation for AssumeRoleRequest.
+ * \internal
  *
- * @class  AssumeRoleRequestPrivate
- *
- * @brief  Private implementation for AssumeRoleRequest.
+ * \inmodule QtAwsSTS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AssumeRoleRequestPrivate object.
- *
- * @param  action  STS action being performed.
- * @param  q       Pointer to this object's public AssumeRoleRequest instance.
+ * Constructs a AssumeRoleRequestPrivate object for STS \a action with,
+ * public implementation \a q.
  */
 AssumeRoleRequestPrivate::AssumeRoleRequestPrivate(
     const STSRequest::Action action, AssumeRoleRequest * const q)
@@ -162,15 +151,10 @@ AssumeRoleRequestPrivate::AssumeRoleRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AssumeRoleRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AssumeRoleRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AssumeRoleRequest instance.
  */
 AssumeRoleRequestPrivate::AssumeRoleRequestPrivate(
     const AssumeRoleRequestPrivate &other, AssumeRoleRequest * const q)

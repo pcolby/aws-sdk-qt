@@ -27,19 +27,16 @@ namespace GuardDuty {
 
 /*!
  * \class QtAws::GuardDuty::GetFindingsStatisticsRequest
- *
  * \brief The GetFindingsStatisticsRequest class provides an interface for GuardDuty GetFindingsStatistics requests.
  *
- * \ingroup GuardDuty
+ * \inmodule QtAwsGuardDuty
  *
  *
  * \sa GuardDutyClient::getFindingsStatistics
  */
 
 /*!
- * @brief  Constructs a new GetFindingsStatisticsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetFindingsStatisticsRequest::GetFindingsStatisticsRequest(const GetFindingsStatisticsRequest &other)
     : GuardDutyRequest(new GetFindingsStatisticsRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ GetFindingsStatisticsRequest::GetFindingsStatisticsRequest(const GetFindingsStat
 }
 
 /*!
- * @brief  Constructs a new GetFindingsStatisticsRequest object.
+ * Constructs a GetFindingsStatisticsRequest object.
  */
 GetFindingsStatisticsRequest::GetFindingsStatisticsRequest()
     : GuardDutyRequest(new GetFindingsStatisticsRequestPrivate(GuardDutyRequest::GetFindingsStatisticsAction, this))
@@ -66,14 +63,9 @@ bool GetFindingsStatisticsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetFindingsStatisticsResponse object.
+ * Returns a GetFindingsStatisticsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetFindingsStatisticsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GuardDutyClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetFindingsStatisticsRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * GetFindingsStatisticsRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::GuardDuty::GetFindingsStatisticsRequestPrivate
+ * \brief The GetFindingsStatisticsRequestPrivate class provides private implementation for GetFindingsStatisticsRequest.
+ * \internal
  *
- * @class  GetFindingsStatisticsRequestPrivate
- *
- * @brief  Private implementation for GetFindingsStatisticsRequest.
+ * \inmodule QtAwsGuardDuty
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetFindingsStatisticsRequestPrivate object.
- *
- * @param  action  GuardDuty action being performed.
- * @param  q       Pointer to this object's public GetFindingsStatisticsRequest instance.
+ * Constructs a GetFindingsStatisticsRequestPrivate object for GuardDuty \a action with,
+ * public implementation \a q.
  */
 GetFindingsStatisticsRequestPrivate::GetFindingsStatisticsRequestPrivate(
     const GuardDutyRequest::Action action, GetFindingsStatisticsRequest * const q)
@@ -104,15 +93,10 @@ GetFindingsStatisticsRequestPrivate::GetFindingsStatisticsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetFindingsStatisticsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetFindingsStatisticsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetFindingsStatisticsRequest instance.
  */
 GetFindingsStatisticsRequestPrivate::GetFindingsStatisticsRequestPrivate(
     const GetFindingsStatisticsRequestPrivate &other, GetFindingsStatisticsRequest * const q)

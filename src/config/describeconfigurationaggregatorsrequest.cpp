@@ -27,10 +27,9 @@ namespace ConfigService {
 
 /*!
  * \class QtAws::ConfigService::DescribeConfigurationAggregatorsRequest
- *
  * \brief The DescribeConfigurationAggregatorsRequest class provides an interface for ConfigService DescribeConfigurationAggregators requests.
  *
- * \ingroup ConfigService
+ * \inmodule QtAwsConfigService
  *
  *  <fullname>AWS Config</fullname>
  * 
@@ -60,9 +59,7 @@ namespace ConfigService {
  */
 
 /*!
- * @brief  Constructs a new DescribeConfigurationAggregatorsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeConfigurationAggregatorsRequest::DescribeConfigurationAggregatorsRequest(const DescribeConfigurationAggregatorsRequest &other)
     : ConfigServiceRequest(new DescribeConfigurationAggregatorsRequestPrivate(*other.d_func(), this))
@@ -71,7 +68,7 @@ DescribeConfigurationAggregatorsRequest::DescribeConfigurationAggregatorsRequest
 }
 
 /*!
- * @brief  Constructs a new DescribeConfigurationAggregatorsRequest object.
+ * Constructs a DescribeConfigurationAggregatorsRequest object.
  */
 DescribeConfigurationAggregatorsRequest::DescribeConfigurationAggregatorsRequest()
     : ConfigServiceRequest(new DescribeConfigurationAggregatorsRequestPrivate(ConfigServiceRequest::DescribeConfigurationAggregatorsAction, this))
@@ -89,14 +86,9 @@ bool DescribeConfigurationAggregatorsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeConfigurationAggregatorsResponse object.
+ * Returns a DescribeConfigurationAggregatorsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeConfigurationAggregatorsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ConfigServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeConfigurationAggregatorsRequest::response(QNetworkReply * const reply) const
 {
@@ -104,20 +96,17 @@ QtAws::Core::AwsAbstractResponse * DescribeConfigurationAggregatorsRequest::resp
 }
 
 /*!
- * @internal
+ * \class QtAws::ConfigService::DescribeConfigurationAggregatorsRequestPrivate
+ * \brief The DescribeConfigurationAggregatorsRequestPrivate class provides private implementation for DescribeConfigurationAggregatorsRequest.
+ * \internal
  *
- * @class  DescribeConfigurationAggregatorsRequestPrivate
- *
- * @brief  Private implementation for DescribeConfigurationAggregatorsRequest.
+ * \inmodule QtAwsConfigService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeConfigurationAggregatorsRequestPrivate object.
- *
- * @param  action  ConfigService action being performed.
- * @param  q       Pointer to this object's public DescribeConfigurationAggregatorsRequest instance.
+ * Constructs a DescribeConfigurationAggregatorsRequestPrivate object for ConfigService \a action with,
+ * public implementation \a q.
  */
 DescribeConfigurationAggregatorsRequestPrivate::DescribeConfigurationAggregatorsRequestPrivate(
     const ConfigServiceRequest::Action action, DescribeConfigurationAggregatorsRequest * const q)
@@ -127,15 +116,10 @@ DescribeConfigurationAggregatorsRequestPrivate::DescribeConfigurationAggregators
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeConfigurationAggregatorsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeConfigurationAggregatorsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeConfigurationAggregatorsRequest instance.
  */
 DescribeConfigurationAggregatorsRequestPrivate::DescribeConfigurationAggregatorsRequestPrivate(
     const DescribeConfigurationAggregatorsRequestPrivate &other, DescribeConfigurationAggregatorsRequest * const q)

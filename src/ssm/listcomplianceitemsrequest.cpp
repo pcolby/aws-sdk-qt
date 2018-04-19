@@ -27,10 +27,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::ListComplianceItemsRequest
- *
  * \brief The ListComplianceItemsRequest class provides an interface for SSM ListComplianceItems requests.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -61,9 +60,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new ListComplianceItemsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListComplianceItemsRequest::ListComplianceItemsRequest(const ListComplianceItemsRequest &other)
     : SSMRequest(new ListComplianceItemsRequestPrivate(*other.d_func(), this))
@@ -72,7 +69,7 @@ ListComplianceItemsRequest::ListComplianceItemsRequest(const ListComplianceItems
 }
 
 /*!
- * @brief  Constructs a new ListComplianceItemsRequest object.
+ * Constructs a ListComplianceItemsRequest object.
  */
 ListComplianceItemsRequest::ListComplianceItemsRequest()
     : SSMRequest(new ListComplianceItemsRequestPrivate(SSMRequest::ListComplianceItemsAction, this))
@@ -90,14 +87,9 @@ bool ListComplianceItemsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListComplianceItemsResponse object.
+ * Returns a ListComplianceItemsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListComplianceItemsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SSMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListComplianceItemsRequest::response(QNetworkReply * const reply) const
 {
@@ -105,20 +97,17 @@ QtAws::Core::AwsAbstractResponse * ListComplianceItemsRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::SSM::ListComplianceItemsRequestPrivate
+ * \brief The ListComplianceItemsRequestPrivate class provides private implementation for ListComplianceItemsRequest.
+ * \internal
  *
- * @class  ListComplianceItemsRequestPrivate
- *
- * @brief  Private implementation for ListComplianceItemsRequest.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListComplianceItemsRequestPrivate object.
- *
- * @param  action  SSM action being performed.
- * @param  q       Pointer to this object's public ListComplianceItemsRequest instance.
+ * Constructs a ListComplianceItemsRequestPrivate object for SSM \a action with,
+ * public implementation \a q.
  */
 ListComplianceItemsRequestPrivate::ListComplianceItemsRequestPrivate(
     const SSMRequest::Action action, ListComplianceItemsRequest * const q)
@@ -128,15 +117,10 @@ ListComplianceItemsRequestPrivate::ListComplianceItemsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListComplianceItemsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListComplianceItemsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListComplianceItemsRequest instance.
  */
 ListComplianceItemsRequestPrivate::ListComplianceItemsRequestPrivate(
     const ListComplianceItemsRequestPrivate &other, ListComplianceItemsRequest * const q)

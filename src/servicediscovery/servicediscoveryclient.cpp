@@ -64,6 +64,9 @@
 /*!
  * \namespace QtAws::ServiceDiscovery
  * \brief The QtAws::ServiceDiscovery contains stuff...
+ *
+ * \inmodule QtAwsServiceDiscovery
+ *
  * @todo Move this to a separate template file.
  */
 
@@ -117,7 +120,7 @@ ServiceDiscoveryClient::ServiceDiscoveryClient(
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * \a  AwsEndpoint::getEndpoint()
+ * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
 ServiceDiscoveryClient::ServiceDiscoveryClient(
     const QUrl &endpoint,

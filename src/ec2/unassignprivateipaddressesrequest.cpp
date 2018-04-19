@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::UnassignPrivateIpAddressesRequest
- *
  * \brief The UnassignPrivateIpAddressesRequest class provides an interface for EC2 UnassignPrivateIpAddresses requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new UnassignPrivateIpAddressesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UnassignPrivateIpAddressesRequest::UnassignPrivateIpAddressesRequest(const UnassignPrivateIpAddressesRequest &other)
     : EC2Request(new UnassignPrivateIpAddressesRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ UnassignPrivateIpAddressesRequest::UnassignPrivateIpAddressesRequest(const Unass
 }
 
 /*!
- * @brief  Constructs a new UnassignPrivateIpAddressesRequest object.
+ * Constructs a UnassignPrivateIpAddressesRequest object.
  */
 UnassignPrivateIpAddressesRequest::UnassignPrivateIpAddressesRequest()
     : EC2Request(new UnassignPrivateIpAddressesRequestPrivate(EC2Request::UnassignPrivateIpAddressesAction, this))
@@ -70,14 +67,9 @@ bool UnassignPrivateIpAddressesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UnassignPrivateIpAddressesResponse object.
+ * Returns a UnassignPrivateIpAddressesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UnassignPrivateIpAddressesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UnassignPrivateIpAddressesRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * UnassignPrivateIpAddressesRequest::response(Q
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::UnassignPrivateIpAddressesRequestPrivate
+ * \brief The UnassignPrivateIpAddressesRequestPrivate class provides private implementation for UnassignPrivateIpAddressesRequest.
+ * \internal
  *
- * @class  UnassignPrivateIpAddressesRequestPrivate
- *
- * @brief  Private implementation for UnassignPrivateIpAddressesRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UnassignPrivateIpAddressesRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public UnassignPrivateIpAddressesRequest instance.
+ * Constructs a UnassignPrivateIpAddressesRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 UnassignPrivateIpAddressesRequestPrivate::UnassignPrivateIpAddressesRequestPrivate(
     const EC2Request::Action action, UnassignPrivateIpAddressesRequest * const q)
@@ -108,15 +97,10 @@ UnassignPrivateIpAddressesRequestPrivate::UnassignPrivateIpAddressesRequestPriva
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UnassignPrivateIpAddressesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UnassignPrivateIpAddressesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UnassignPrivateIpAddressesRequest instance.
  */
 UnassignPrivateIpAddressesRequestPrivate::UnassignPrivateIpAddressesRequestPrivate(
     const UnassignPrivateIpAddressesRequestPrivate &other, UnassignPrivateIpAddressesRequest * const q)

@@ -25,16 +25,37 @@ namespace CodeBuild {
 
 /*!
  * \class QtAws::CodeBuild::CodeBuildRequest
- *
  * \brief The CodeBuildRequest class provides an interface for CodeBuild requests.
  *
- * \ingroup CodeBuild
+ * \inmodule QtAwsCodeBuild
  */
 
 /*!
- * @brief  Constructs a new CodeBuildRequest object.
+ * \enum CodeBuildRequest::Action
  *
- * @param  action  The CodeBuild action to request.
+ * This enum describes the actions that can be performed as CodeBuild
+ * requests.
+ *
+ * \value BatchDeleteBuildsAction CodeBuild BatchDeleteBuilds action.
+ * \value BatchGetBuildsAction CodeBuild BatchGetBuilds action.
+ * \value BatchGetProjectsAction CodeBuild BatchGetProjects action.
+ * \value CreateProjectAction CodeBuild CreateProject action.
+ * \value CreateWebhookAction CodeBuild CreateWebhook action.
+ * \value DeleteProjectAction CodeBuild DeleteProject action.
+ * \value DeleteWebhookAction CodeBuild DeleteWebhook action.
+ * \value InvalidateProjectCacheAction CodeBuild InvalidateProjectCache action.
+ * \value ListBuildsAction CodeBuild ListBuilds action.
+ * \value ListBuildsForProjectAction CodeBuild ListBuildsForProject action.
+ * \value ListCuratedEnvironmentImagesAction CodeBuild ListCuratedEnvironmentImages action.
+ * \value ListProjectsAction CodeBuild ListProjects action.
+ * \value StartBuildAction CodeBuild StartBuild action.
+ * \value StopBuildAction CodeBuild StopBuild action.
+ * \value UpdateProjectAction CodeBuild UpdateProject action.
+ * \value UpdateWebhookAction CodeBuild UpdateWebhook action.
+ */
+
+/*!
+ * Constructs a[n] CodeBuildRequest object for CodeBuild \a action.
  */
 CodeBuildRequest::CodeBuildRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new CodeBuildRequestPrivate(action, this))
@@ -43,9 +64,7 @@ CodeBuildRequest::CodeBuildRequest(const Action action)
 }
 
 /*!
- * @brief  Constructs a new CodeBuildRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CodeBuildRequest::CodeBuildRequest(const CodeBuildRequest &other)
     : QtAws::Core::AwsAbstractRequest(new CodeBuildRequestPrivate(*other.d_func(), this))
@@ -54,13 +73,7 @@ CodeBuildRequest::CodeBuildRequest(const CodeBuildRequest &other)
 }
 
 /*!
- * @brief  Assignment operator.
- *
- * Assigns \a other to \c this.
- *
- * @param  other  Instance to copy.
- *
- * @return  A reference to \c this.
+ * Sets the CodeBuildRequest object to be equal to \a other.
  */
 CodeBuildRequest& CodeBuildRequest::operator=(const CodeBuildRequest &other)
 {
@@ -72,14 +85,10 @@ CodeBuildRequest& CodeBuildRequest::operator=(const CodeBuildRequest &other)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CodeBuildRequest object.
+ * Constructs aa CodeBuildRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from CodeBuildRequestPrivate.
- *
- * @param  d  Pointer to private data (aka D-Pointer).
  */
 CodeBuildRequest::CodeBuildRequest(CodeBuildRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
@@ -87,7 +96,7 @@ CodeBuildRequest::CodeBuildRequest(CodeBuildRequestPrivate * const d) : QtAws::C
 }
 
 /*!
- * \brief Returns the CodeBuild action to be performed by this request.
+ * Returns the CodeBuild action to be performed by this request.
  */
 CodeBuildRequest::Action CodeBuildRequest::action() const
 {
@@ -96,7 +105,7 @@ CodeBuildRequest::Action CodeBuildRequest::action() const
 }
 
 /*!
- * \brief Returns the name of the CodeBuild action to be performed by this request.
+ * Returns the name of the CodeBuild action to be performed by this request.
  */
 QString CodeBuildRequest::actionString() const
 {
@@ -104,7 +113,7 @@ QString CodeBuildRequest::actionString() const
 }
 
 /*!
- * \brief Returns the CodeBuild API version implemented by this request.
+ * Returns the CodeBuild API version implemented by this request.
  */
 QString CodeBuildRequest::apiVersion() const
 {
@@ -113,7 +122,7 @@ QString CodeBuildRequest::apiVersion() const
 }
 
 /*!
- * @brief Set the CodeBuild action to be performed by this request to \a action.
+ * Sets the CodeBuild action to be performed by this request to \a action.
  */
 void CodeBuildRequest::setAction(const Action action)
 {
@@ -122,7 +131,7 @@ void CodeBuildRequest::setAction(const Action action)
 }
 
 /*!
- * Set the CodeBuild API version to include in this request to \a version.
+ * Sets the CodeBuild API version to include in this request to \a version.
  */
 void CodeBuildRequest::setApiVersion(const QString &version)
 {
@@ -131,7 +140,7 @@ void CodeBuildRequest::setApiVersion(const QString &version)
 }
 
 /*!
- * \brief Returns \c true if this request is the same as \a other.
+ * Returns \c true if this request is equal to \a other; \c false otherwise.
  *
  * Note, most derived *Request classes do not need to provider their own
  * implementations of this function, since most such request classes rely on
@@ -146,8 +155,8 @@ bool CodeBuildRequest::operator==(const CodeBuildRequest &other) const
             (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
-/*!
- * @brief  Check if \a queueName is a valid CodeBuild queue name.
+/*
+ * Returns \c tue if \a queueName is a valid CodeBuild queue name.
  *
  * @par From CodeBuild FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
@@ -166,9 +175,8 @@ bool CodeBuildRequest::operator==(const CodeBuildRequest &other) const
 }*/
 
 /*!
- * \brief Removes the a \a name parameter from this request.
- *
- * Returns the count of paramters removed (typically \c 0 or \c 1).
+ * Removes the a \a name parameter from the request, then returns the number of
+ * paramters removed (typically \c 0 or \c 1).
  */
 int CodeBuildRequest::clearParameter(const QString &name)
 {
@@ -177,7 +185,7 @@ int CodeBuildRequest::clearParameter(const QString &name)
 }
 
 /*!
- * \brief Removes all parameters from this request.
+ * Removes all parameters from the request.
  */
 void CodeBuildRequest::clearParameters()
 {
@@ -186,7 +194,7 @@ void CodeBuildRequest::clearParameters()
 }
 
 /*!
- * \brief Returns the value of the \n name pararemter if set, otherwise \a defaultValue.
+ * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
 QVariant CodeBuildRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
@@ -195,7 +203,7 @@ QVariant CodeBuildRequest::parameter(const QString &name, const QVariant &defaul
 }
 
 /*!
- * \brief Returns a map of parameters included in this request.
+ * Returns the parameters included in this request.
  */
 const QVariantMap &CodeBuildRequest::parameters() const
 {
@@ -204,7 +212,7 @@ const QVariantMap &CodeBuildRequest::parameters() const
 }
 
 /*!
- * \brief Sets the \a name parameter to \a value.
+ * Sets the \a name parameter to \a value.
  */
 void CodeBuildRequest::setParameter(const QString &name, const QVariant &value)
 {
@@ -213,9 +221,8 @@ void CodeBuildRequest::setParameter(const QString &name, const QVariant &value)
 }
 
 /*!
- * \brief Sets the map of paramters for this request to \a parameters.
- *
- * Any request parameters set previously will be discarded.
+ * Sets the paramters for this request to \a parameters. Any request parameters
+ * set previously will be discarded.
  */
 void CodeBuildRequest::setParameters(const QVariantMap &parameters)
 {
@@ -224,11 +231,12 @@ void CodeBuildRequest::setParameters(const QVariantMap &parameters)
 }
 
 /*!
- * \brief Returns a network request for this CodeBuild request using the given \a endpoint.
+ * Returns a network request for the CodeBuild request using the given
+ * \a endpoint.
  *
- * This CodeBuild implementation builds request URLs by combining the common query
- * parameters (such as Action and Version), with any that have been added (via
- * setParameter) by child classes.
+ * This CodeBuild implementation builds request URLs by combining the
+ * common query parameters (such as Action and Version), with any that have
+ * been added (via setParameter) by child classes.
  */
 QNetworkRequest CodeBuildRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -239,17 +247,16 @@ QNetworkRequest CodeBuildRequest::unsignedRequest(const QUrl &endpoint) const
 }
 
 /*!
+ * \class QtAws::CodeBuild::CodeBuildRequestPrivate
+ * \brief The CodeBuildRequestPrivate class provides private implementation for CodeBuildRequest.
  * \internal
  *
- * \class  CodeBuildRequestPrivate
- *
- * \brief  Private implementation for CodeBuildRequest.
+ * \inmodule QtAwsCodeBuild
  */
 
 /*!
- * \internal
- *
- * \brief Constructs a new CodeBuildRequestPrivate object.
+ * Constructs a CodeBuildRequestPrivate object for CodeBuild \a action with,
+ * public implementation \a q.
  */
 CodeBuildRequestPrivate::CodeBuildRequestPrivate(const CodeBuildRequest::Action action, CodeBuildRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
@@ -258,9 +265,7 @@ CodeBuildRequestPrivate::CodeBuildRequestPrivate(const CodeBuildRequest::Action 
 }
 
 /*!
- * \internal
- *
- * \brief Constructs a new CodeBuildRequestPrivate object, copying an existing one.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
@@ -276,15 +281,12 @@ CodeBuildRequestPrivate::CodeBuildRequestPrivate(const CodeBuildRequestPrivate &
 }
 
 /*!
- * \internal
- *
- * \brief Returns a string representing \a action.
+ * Returns a string represention of \a action, or a null string if \a action is
+ * invalid.
  *
  * This function converts CodeBuildRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the CodeBuild service's Action
  * query parameters.
- *
- * @return A string representing \a action, or a null string if \a action is invalid.
  */
 QString CodeBuildRequestPrivate::toString(const CodeBuildRequest::Action &action)
 {

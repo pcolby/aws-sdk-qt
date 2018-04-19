@@ -27,10 +27,9 @@ namespace ECR {
 
 /*!
  * \class QtAws::ECR::GetDownloadUrlForLayerRequest
- *
  * \brief The GetDownloadUrlForLayerRequest class provides an interface for ECR GetDownloadUrlForLayer requests.
  *
- * \ingroup ECR
+ * \inmodule QtAwsECR
  *
  *  Amazon Elastic Container Registry (Amazon ECR) is a managed Docker registry service. Customers can use the familiar
  *  Docker CLI to push, pull, and manage images. Amazon ECR provides a secure, scalable, and reliable registry. Amazon ECR
@@ -41,9 +40,7 @@ namespace ECR {
  */
 
 /*!
- * @brief  Constructs a new GetDownloadUrlForLayerRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetDownloadUrlForLayerRequest::GetDownloadUrlForLayerRequest(const GetDownloadUrlForLayerRequest &other)
     : ECRRequest(new GetDownloadUrlForLayerRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ GetDownloadUrlForLayerRequest::GetDownloadUrlForLayerRequest(const GetDownloadUr
 }
 
 /*!
- * @brief  Constructs a new GetDownloadUrlForLayerRequest object.
+ * Constructs a GetDownloadUrlForLayerRequest object.
  */
 GetDownloadUrlForLayerRequest::GetDownloadUrlForLayerRequest()
     : ECRRequest(new GetDownloadUrlForLayerRequestPrivate(ECRRequest::GetDownloadUrlForLayerAction, this))
@@ -70,14 +67,9 @@ bool GetDownloadUrlForLayerRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetDownloadUrlForLayerResponse object.
+ * Returns a GetDownloadUrlForLayerResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetDownloadUrlForLayerResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ECRClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetDownloadUrlForLayerRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * GetDownloadUrlForLayerRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::ECR::GetDownloadUrlForLayerRequestPrivate
+ * \brief The GetDownloadUrlForLayerRequestPrivate class provides private implementation for GetDownloadUrlForLayerRequest.
+ * \internal
  *
- * @class  GetDownloadUrlForLayerRequestPrivate
- *
- * @brief  Private implementation for GetDownloadUrlForLayerRequest.
+ * \inmodule QtAwsECR
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetDownloadUrlForLayerRequestPrivate object.
- *
- * @param  action  ECR action being performed.
- * @param  q       Pointer to this object's public GetDownloadUrlForLayerRequest instance.
+ * Constructs a GetDownloadUrlForLayerRequestPrivate object for ECR \a action with,
+ * public implementation \a q.
  */
 GetDownloadUrlForLayerRequestPrivate::GetDownloadUrlForLayerRequestPrivate(
     const ECRRequest::Action action, GetDownloadUrlForLayerRequest * const q)
@@ -108,15 +97,10 @@ GetDownloadUrlForLayerRequestPrivate::GetDownloadUrlForLayerRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetDownloadUrlForLayerRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetDownloadUrlForLayerRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetDownloadUrlForLayerRequest instance.
  */
 GetDownloadUrlForLayerRequestPrivate::GetDownloadUrlForLayerRequestPrivate(
     const GetDownloadUrlForLayerRequestPrivate &other, GetDownloadUrlForLayerRequest * const q)

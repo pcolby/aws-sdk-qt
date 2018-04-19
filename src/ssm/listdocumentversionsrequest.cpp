@@ -27,10 +27,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::ListDocumentVersionsRequest
- *
  * \brief The ListDocumentVersionsRequest class provides an interface for SSM ListDocumentVersions requests.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -61,9 +60,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new ListDocumentVersionsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListDocumentVersionsRequest::ListDocumentVersionsRequest(const ListDocumentVersionsRequest &other)
     : SSMRequest(new ListDocumentVersionsRequestPrivate(*other.d_func(), this))
@@ -72,7 +69,7 @@ ListDocumentVersionsRequest::ListDocumentVersionsRequest(const ListDocumentVersi
 }
 
 /*!
- * @brief  Constructs a new ListDocumentVersionsRequest object.
+ * Constructs a ListDocumentVersionsRequest object.
  */
 ListDocumentVersionsRequest::ListDocumentVersionsRequest()
     : SSMRequest(new ListDocumentVersionsRequestPrivate(SSMRequest::ListDocumentVersionsAction, this))
@@ -90,14 +87,9 @@ bool ListDocumentVersionsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListDocumentVersionsResponse object.
+ * Returns a ListDocumentVersionsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListDocumentVersionsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SSMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListDocumentVersionsRequest::response(QNetworkReply * const reply) const
 {
@@ -105,20 +97,17 @@ QtAws::Core::AwsAbstractResponse * ListDocumentVersionsRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::SSM::ListDocumentVersionsRequestPrivate
+ * \brief The ListDocumentVersionsRequestPrivate class provides private implementation for ListDocumentVersionsRequest.
+ * \internal
  *
- * @class  ListDocumentVersionsRequestPrivate
- *
- * @brief  Private implementation for ListDocumentVersionsRequest.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListDocumentVersionsRequestPrivate object.
- *
- * @param  action  SSM action being performed.
- * @param  q       Pointer to this object's public ListDocumentVersionsRequest instance.
+ * Constructs a ListDocumentVersionsRequestPrivate object for SSM \a action with,
+ * public implementation \a q.
  */
 ListDocumentVersionsRequestPrivate::ListDocumentVersionsRequestPrivate(
     const SSMRequest::Action action, ListDocumentVersionsRequest * const q)
@@ -128,15 +117,10 @@ ListDocumentVersionsRequestPrivate::ListDocumentVersionsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListDocumentVersionsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListDocumentVersionsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListDocumentVersionsRequest instance.
  */
 ListDocumentVersionsRequestPrivate::ListDocumentVersionsRequestPrivate(
     const ListDocumentVersionsRequestPrivate &other, ListDocumentVersionsRequest * const q)

@@ -27,10 +27,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::ListAssociationsRequest
- *
  * \brief The ListAssociationsRequest class provides an interface for SSM ListAssociations requests.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -61,9 +60,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new ListAssociationsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListAssociationsRequest::ListAssociationsRequest(const ListAssociationsRequest &other)
     : SSMRequest(new ListAssociationsRequestPrivate(*other.d_func(), this))
@@ -72,7 +69,7 @@ ListAssociationsRequest::ListAssociationsRequest(const ListAssociationsRequest &
 }
 
 /*!
- * @brief  Constructs a new ListAssociationsRequest object.
+ * Constructs a ListAssociationsRequest object.
  */
 ListAssociationsRequest::ListAssociationsRequest()
     : SSMRequest(new ListAssociationsRequestPrivate(SSMRequest::ListAssociationsAction, this))
@@ -90,14 +87,9 @@ bool ListAssociationsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListAssociationsResponse object.
+ * Returns a ListAssociationsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListAssociationsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SSMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListAssociationsRequest::response(QNetworkReply * const reply) const
 {
@@ -105,20 +97,17 @@ QtAws::Core::AwsAbstractResponse * ListAssociationsRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::SSM::ListAssociationsRequestPrivate
+ * \brief The ListAssociationsRequestPrivate class provides private implementation for ListAssociationsRequest.
+ * \internal
  *
- * @class  ListAssociationsRequestPrivate
- *
- * @brief  Private implementation for ListAssociationsRequest.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListAssociationsRequestPrivate object.
- *
- * @param  action  SSM action being performed.
- * @param  q       Pointer to this object's public ListAssociationsRequest instance.
+ * Constructs a ListAssociationsRequestPrivate object for SSM \a action with,
+ * public implementation \a q.
  */
 ListAssociationsRequestPrivate::ListAssociationsRequestPrivate(
     const SSMRequest::Action action, ListAssociationsRequest * const q)
@@ -128,15 +117,10 @@ ListAssociationsRequestPrivate::ListAssociationsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListAssociationsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListAssociationsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListAssociationsRequest instance.
  */
 ListAssociationsRequestPrivate::ListAssociationsRequestPrivate(
     const ListAssociationsRequestPrivate &other, ListAssociationsRequest * const q)

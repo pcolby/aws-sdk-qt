@@ -27,10 +27,9 @@ namespace ECR {
 
 /*!
  * \class QtAws::ECR::BatchCheckLayerAvailabilityRequest
- *
  * \brief The BatchCheckLayerAvailabilityRequest class provides an interface for ECR BatchCheckLayerAvailability requests.
  *
- * \ingroup ECR
+ * \inmodule QtAwsECR
  *
  *  Amazon Elastic Container Registry (Amazon ECR) is a managed Docker registry service. Customers can use the familiar
  *  Docker CLI to push, pull, and manage images. Amazon ECR provides a secure, scalable, and reliable registry. Amazon ECR
@@ -41,9 +40,7 @@ namespace ECR {
  */
 
 /*!
- * @brief  Constructs a new BatchCheckLayerAvailabilityRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 BatchCheckLayerAvailabilityRequest::BatchCheckLayerAvailabilityRequest(const BatchCheckLayerAvailabilityRequest &other)
     : ECRRequest(new BatchCheckLayerAvailabilityRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ BatchCheckLayerAvailabilityRequest::BatchCheckLayerAvailabilityRequest(const Bat
 }
 
 /*!
- * @brief  Constructs a new BatchCheckLayerAvailabilityRequest object.
+ * Constructs a BatchCheckLayerAvailabilityRequest object.
  */
 BatchCheckLayerAvailabilityRequest::BatchCheckLayerAvailabilityRequest()
     : ECRRequest(new BatchCheckLayerAvailabilityRequestPrivate(ECRRequest::BatchCheckLayerAvailabilityAction, this))
@@ -70,14 +67,9 @@ bool BatchCheckLayerAvailabilityRequest::isValid() const
 
 
 /*!
- * @brief  Construct an BatchCheckLayerAvailabilityResponse object.
+ * Returns a BatchCheckLayerAvailabilityResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An BatchCheckLayerAvailabilityResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ECRClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * BatchCheckLayerAvailabilityRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * BatchCheckLayerAvailabilityRequest::response(
 }
 
 /*!
- * @internal
+ * \class QtAws::ECR::BatchCheckLayerAvailabilityRequestPrivate
+ * \brief The BatchCheckLayerAvailabilityRequestPrivate class provides private implementation for BatchCheckLayerAvailabilityRequest.
+ * \internal
  *
- * @class  BatchCheckLayerAvailabilityRequestPrivate
- *
- * @brief  Private implementation for BatchCheckLayerAvailabilityRequest.
+ * \inmodule QtAwsECR
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new BatchCheckLayerAvailabilityRequestPrivate object.
- *
- * @param  action  ECR action being performed.
- * @param  q       Pointer to this object's public BatchCheckLayerAvailabilityRequest instance.
+ * Constructs a BatchCheckLayerAvailabilityRequestPrivate object for ECR \a action with,
+ * public implementation \a q.
  */
 BatchCheckLayerAvailabilityRequestPrivate::BatchCheckLayerAvailabilityRequestPrivate(
     const ECRRequest::Action action, BatchCheckLayerAvailabilityRequest * const q)
@@ -108,15 +97,10 @@ BatchCheckLayerAvailabilityRequestPrivate::BatchCheckLayerAvailabilityRequestPri
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new BatchCheckLayerAvailabilityRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the BatchCheckLayerAvailabilityRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public BatchCheckLayerAvailabilityRequest instance.
  */
 BatchCheckLayerAvailabilityRequestPrivate::BatchCheckLayerAvailabilityRequestPrivate(
     const BatchCheckLayerAvailabilityRequestPrivate &other, BatchCheckLayerAvailabilityRequest * const q)

@@ -27,10 +27,9 @@ namespace CognitoIdentityProvider {
 
 /*!
  * \class QtAws::CognitoIdentityProvider::AdminSetUserMFAPreferenceRequest
- *
  * \brief The AdminSetUserMFAPreferenceRequest class provides an interface for CognitoIdentityProvider AdminSetUserMFAPreference requests.
  *
- * \ingroup CognitoIdentityProvider
+ * \inmodule QtAwsCognitoIdentityProvider
  *
  *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
  *  authenticate a user to obtain tokens related to user identity and access
@@ -47,9 +46,7 @@ namespace CognitoIdentityProvider {
  */
 
 /*!
- * @brief  Constructs a new AdminSetUserMFAPreferenceRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AdminSetUserMFAPreferenceRequest::AdminSetUserMFAPreferenceRequest(const AdminSetUserMFAPreferenceRequest &other)
     : CognitoIdentityProviderRequest(new AdminSetUserMFAPreferenceRequestPrivate(*other.d_func(), this))
@@ -58,7 +55,7 @@ AdminSetUserMFAPreferenceRequest::AdminSetUserMFAPreferenceRequest(const AdminSe
 }
 
 /*!
- * @brief  Constructs a new AdminSetUserMFAPreferenceRequest object.
+ * Constructs a AdminSetUserMFAPreferenceRequest object.
  */
 AdminSetUserMFAPreferenceRequest::AdminSetUserMFAPreferenceRequest()
     : CognitoIdentityProviderRequest(new AdminSetUserMFAPreferenceRequestPrivate(CognitoIdentityProviderRequest::AdminSetUserMFAPreferenceAction, this))
@@ -76,14 +73,9 @@ bool AdminSetUserMFAPreferenceRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AdminSetUserMFAPreferenceResponse object.
+ * Returns a AdminSetUserMFAPreferenceResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AdminSetUserMFAPreferenceResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CognitoIdentityProviderClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AdminSetUserMFAPreferenceRequest::response(QNetworkReply * const reply) const
 {
@@ -91,20 +83,17 @@ QtAws::Core::AwsAbstractResponse * AdminSetUserMFAPreferenceRequest::response(QN
 }
 
 /*!
- * @internal
+ * \class QtAws::CognitoIdentityProvider::AdminSetUserMFAPreferenceRequestPrivate
+ * \brief The AdminSetUserMFAPreferenceRequestPrivate class provides private implementation for AdminSetUserMFAPreferenceRequest.
+ * \internal
  *
- * @class  AdminSetUserMFAPreferenceRequestPrivate
- *
- * @brief  Private implementation for AdminSetUserMFAPreferenceRequest.
+ * \inmodule QtAwsCognitoIdentityProvider
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AdminSetUserMFAPreferenceRequestPrivate object.
- *
- * @param  action  CognitoIdentityProvider action being performed.
- * @param  q       Pointer to this object's public AdminSetUserMFAPreferenceRequest instance.
+ * Constructs a AdminSetUserMFAPreferenceRequestPrivate object for CognitoIdentityProvider \a action with,
+ * public implementation \a q.
  */
 AdminSetUserMFAPreferenceRequestPrivate::AdminSetUserMFAPreferenceRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, AdminSetUserMFAPreferenceRequest * const q)
@@ -114,15 +103,10 @@ AdminSetUserMFAPreferenceRequestPrivate::AdminSetUserMFAPreferenceRequestPrivate
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AdminSetUserMFAPreferenceRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AdminSetUserMFAPreferenceRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AdminSetUserMFAPreferenceRequest instance.
  */
 AdminSetUserMFAPreferenceRequestPrivate::AdminSetUserMFAPreferenceRequestPrivate(
     const AdminSetUserMFAPreferenceRequestPrivate &other, AdminSetUserMFAPreferenceRequest * const q)

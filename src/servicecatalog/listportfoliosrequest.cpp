@@ -27,10 +27,9 @@ namespace ServiceCatalog {
 
 /*!
  * \class QtAws::ServiceCatalog::ListPortfoliosRequest
- *
  * \brief The ListPortfoliosRequest class provides an interface for ServiceCatalog ListPortfolios requests.
  *
- * \ingroup ServiceCatalog
+ * \inmodule QtAwsServiceCatalog
  *
  *  <fullname>AWS Service Catalog</fullname>
  * 
@@ -43,9 +42,7 @@ namespace ServiceCatalog {
  */
 
 /*!
- * @brief  Constructs a new ListPortfoliosRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListPortfoliosRequest::ListPortfoliosRequest(const ListPortfoliosRequest &other)
     : ServiceCatalogRequest(new ListPortfoliosRequestPrivate(*other.d_func(), this))
@@ -54,7 +51,7 @@ ListPortfoliosRequest::ListPortfoliosRequest(const ListPortfoliosRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ListPortfoliosRequest object.
+ * Constructs a ListPortfoliosRequest object.
  */
 ListPortfoliosRequest::ListPortfoliosRequest()
     : ServiceCatalogRequest(new ListPortfoliosRequestPrivate(ServiceCatalogRequest::ListPortfoliosAction, this))
@@ -72,14 +69,9 @@ bool ListPortfoliosRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListPortfoliosResponse object.
+ * Returns a ListPortfoliosResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListPortfoliosResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ServiceCatalogClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListPortfoliosRequest::response(QNetworkReply * const reply) const
 {
@@ -87,20 +79,17 @@ QtAws::Core::AwsAbstractResponse * ListPortfoliosRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::ServiceCatalog::ListPortfoliosRequestPrivate
+ * \brief The ListPortfoliosRequestPrivate class provides private implementation for ListPortfoliosRequest.
+ * \internal
  *
- * @class  ListPortfoliosRequestPrivate
- *
- * @brief  Private implementation for ListPortfoliosRequest.
+ * \inmodule QtAwsServiceCatalog
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListPortfoliosRequestPrivate object.
- *
- * @param  action  ServiceCatalog action being performed.
- * @param  q       Pointer to this object's public ListPortfoliosRequest instance.
+ * Constructs a ListPortfoliosRequestPrivate object for ServiceCatalog \a action with,
+ * public implementation \a q.
  */
 ListPortfoliosRequestPrivate::ListPortfoliosRequestPrivate(
     const ServiceCatalogRequest::Action action, ListPortfoliosRequest * const q)
@@ -110,15 +99,10 @@ ListPortfoliosRequestPrivate::ListPortfoliosRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListPortfoliosRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListPortfoliosRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListPortfoliosRequest instance.
  */
 ListPortfoliosRequestPrivate::ListPortfoliosRequestPrivate(
     const ListPortfoliosRequestPrivate &other, ListPortfoliosRequest * const q)

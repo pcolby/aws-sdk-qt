@@ -25,16 +25,36 @@ namespace CloudWatchEvents {
 
 /*!
  * \class QtAws::CloudWatchEvents::CloudWatchEventsRequest
- *
  * \brief The CloudWatchEventsRequest class provides an interface for CloudWatchEvents requests.
  *
- * \ingroup CloudWatchEvents
+ * \inmodule QtAwsCloudWatchEvents
  */
 
 /*!
- * @brief  Constructs a new CloudWatchEventsRequest object.
+ * \enum CloudWatchEventsRequest::Action
  *
- * @param  action  The CloudWatchEvents action to request.
+ * This enum describes the actions that can be performed as CloudWatchEvents
+ * requests.
+ *
+ * \value DeleteRuleAction CloudWatchEvents DeleteRule action.
+ * \value DescribeEventBusAction CloudWatchEvents DescribeEventBus action.
+ * \value DescribeRuleAction CloudWatchEvents DescribeRule action.
+ * \value DisableRuleAction CloudWatchEvents DisableRule action.
+ * \value EnableRuleAction CloudWatchEvents EnableRule action.
+ * \value ListRuleNamesByTargetAction CloudWatchEvents ListRuleNamesByTarget action.
+ * \value ListRulesAction CloudWatchEvents ListRules action.
+ * \value ListTargetsByRuleAction CloudWatchEvents ListTargetsByRule action.
+ * \value PutEventsAction CloudWatchEvents PutEvents action.
+ * \value PutPermissionAction CloudWatchEvents PutPermission action.
+ * \value PutRuleAction CloudWatchEvents PutRule action.
+ * \value PutTargetsAction CloudWatchEvents PutTargets action.
+ * \value RemovePermissionAction CloudWatchEvents RemovePermission action.
+ * \value RemoveTargetsAction CloudWatchEvents RemoveTargets action.
+ * \value TestEventPatternAction CloudWatchEvents TestEventPattern action.
+ */
+
+/*!
+ * Constructs a[n] CloudWatchEventsRequest object for CloudWatchEvents \a action.
  */
 CloudWatchEventsRequest::CloudWatchEventsRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new CloudWatchEventsRequestPrivate(action, this))
@@ -43,9 +63,7 @@ CloudWatchEventsRequest::CloudWatchEventsRequest(const Action action)
 }
 
 /*!
- * @brief  Constructs a new CloudWatchEventsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CloudWatchEventsRequest::CloudWatchEventsRequest(const CloudWatchEventsRequest &other)
     : QtAws::Core::AwsAbstractRequest(new CloudWatchEventsRequestPrivate(*other.d_func(), this))
@@ -54,13 +72,7 @@ CloudWatchEventsRequest::CloudWatchEventsRequest(const CloudWatchEventsRequest &
 }
 
 /*!
- * @brief  Assignment operator.
- *
- * Assigns \a other to \c this.
- *
- * @param  other  Instance to copy.
- *
- * @return  A reference to \c this.
+ * Sets the CloudWatchEventsRequest object to be equal to \a other.
  */
 CloudWatchEventsRequest& CloudWatchEventsRequest::operator=(const CloudWatchEventsRequest &other)
 {
@@ -72,14 +84,10 @@ CloudWatchEventsRequest& CloudWatchEventsRequest::operator=(const CloudWatchEven
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CloudWatchEventsRequest object.
+ * Constructs aa CloudWatchEventsRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from CloudWatchEventsRequestPrivate.
- *
- * @param  d  Pointer to private data (aka D-Pointer).
  */
 CloudWatchEventsRequest::CloudWatchEventsRequest(CloudWatchEventsRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
@@ -87,7 +95,7 @@ CloudWatchEventsRequest::CloudWatchEventsRequest(CloudWatchEventsRequestPrivate 
 }
 
 /*!
- * \brief Returns the CloudWatchEvents action to be performed by this request.
+ * Returns the CloudWatchEvents action to be performed by this request.
  */
 CloudWatchEventsRequest::Action CloudWatchEventsRequest::action() const
 {
@@ -96,7 +104,7 @@ CloudWatchEventsRequest::Action CloudWatchEventsRequest::action() const
 }
 
 /*!
- * \brief Returns the name of the CloudWatchEvents action to be performed by this request.
+ * Returns the name of the CloudWatchEvents action to be performed by this request.
  */
 QString CloudWatchEventsRequest::actionString() const
 {
@@ -104,7 +112,7 @@ QString CloudWatchEventsRequest::actionString() const
 }
 
 /*!
- * \brief Returns the CloudWatchEvents API version implemented by this request.
+ * Returns the CloudWatchEvents API version implemented by this request.
  */
 QString CloudWatchEventsRequest::apiVersion() const
 {
@@ -113,7 +121,7 @@ QString CloudWatchEventsRequest::apiVersion() const
 }
 
 /*!
- * @brief Set the CloudWatchEvents action to be performed by this request to \a action.
+ * Sets the CloudWatchEvents action to be performed by this request to \a action.
  */
 void CloudWatchEventsRequest::setAction(const Action action)
 {
@@ -122,7 +130,7 @@ void CloudWatchEventsRequest::setAction(const Action action)
 }
 
 /*!
- * Set the CloudWatchEvents API version to include in this request to \a version.
+ * Sets the CloudWatchEvents API version to include in this request to \a version.
  */
 void CloudWatchEventsRequest::setApiVersion(const QString &version)
 {
@@ -131,7 +139,7 @@ void CloudWatchEventsRequest::setApiVersion(const QString &version)
 }
 
 /*!
- * \brief Returns \c true if this request is the same as \a other.
+ * Returns \c true if this request is equal to \a other; \c false otherwise.
  *
  * Note, most derived *Request classes do not need to provider their own
  * implementations of this function, since most such request classes rely on
@@ -146,8 +154,8 @@ bool CloudWatchEventsRequest::operator==(const CloudWatchEventsRequest &other) c
             (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
-/*!
- * @brief  Check if \a queueName is a valid CloudWatchEvents queue name.
+/*
+ * Returns \c tue if \a queueName is a valid CloudWatchEvents queue name.
  *
  * @par From CloudWatchEvents FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
@@ -166,9 +174,8 @@ bool CloudWatchEventsRequest::operator==(const CloudWatchEventsRequest &other) c
 }*/
 
 /*!
- * \brief Removes the a \a name parameter from this request.
- *
- * Returns the count of paramters removed (typically \c 0 or \c 1).
+ * Removes the a \a name parameter from the request, then returns the number of
+ * paramters removed (typically \c 0 or \c 1).
  */
 int CloudWatchEventsRequest::clearParameter(const QString &name)
 {
@@ -177,7 +184,7 @@ int CloudWatchEventsRequest::clearParameter(const QString &name)
 }
 
 /*!
- * \brief Removes all parameters from this request.
+ * Removes all parameters from the request.
  */
 void CloudWatchEventsRequest::clearParameters()
 {
@@ -186,7 +193,7 @@ void CloudWatchEventsRequest::clearParameters()
 }
 
 /*!
- * \brief Returns the value of the \n name pararemter if set, otherwise \a defaultValue.
+ * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
 QVariant CloudWatchEventsRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
@@ -195,7 +202,7 @@ QVariant CloudWatchEventsRequest::parameter(const QString &name, const QVariant 
 }
 
 /*!
- * \brief Returns a map of parameters included in this request.
+ * Returns the parameters included in this request.
  */
 const QVariantMap &CloudWatchEventsRequest::parameters() const
 {
@@ -204,7 +211,7 @@ const QVariantMap &CloudWatchEventsRequest::parameters() const
 }
 
 /*!
- * \brief Sets the \a name parameter to \a value.
+ * Sets the \a name parameter to \a value.
  */
 void CloudWatchEventsRequest::setParameter(const QString &name, const QVariant &value)
 {
@@ -213,9 +220,8 @@ void CloudWatchEventsRequest::setParameter(const QString &name, const QVariant &
 }
 
 /*!
- * \brief Sets the map of paramters for this request to \a parameters.
- *
- * Any request parameters set previously will be discarded.
+ * Sets the paramters for this request to \a parameters. Any request parameters
+ * set previously will be discarded.
  */
 void CloudWatchEventsRequest::setParameters(const QVariantMap &parameters)
 {
@@ -224,11 +230,12 @@ void CloudWatchEventsRequest::setParameters(const QVariantMap &parameters)
 }
 
 /*!
- * \brief Returns a network request for this CloudWatchEvents request using the given \a endpoint.
+ * Returns a network request for the CloudWatchEvents request using the given
+ * \a endpoint.
  *
- * This CloudWatchEvents implementation builds request URLs by combining the common query
- * parameters (such as Action and Version), with any that have been added (via
- * setParameter) by child classes.
+ * This CloudWatchEvents implementation builds request URLs by combining the
+ * common query parameters (such as Action and Version), with any that have
+ * been added (via setParameter) by child classes.
  */
 QNetworkRequest CloudWatchEventsRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -239,17 +246,16 @@ QNetworkRequest CloudWatchEventsRequest::unsignedRequest(const QUrl &endpoint) c
 }
 
 /*!
+ * \class QtAws::CloudWatchEvents::CloudWatchEventsRequestPrivate
+ * \brief The CloudWatchEventsRequestPrivate class provides private implementation for CloudWatchEventsRequest.
  * \internal
  *
- * \class  CloudWatchEventsRequestPrivate
- *
- * \brief  Private implementation for CloudWatchEventsRequest.
+ * \inmodule QtAwsCloudWatchEvents
  */
 
 /*!
- * \internal
- *
- * \brief Constructs a new CloudWatchEventsRequestPrivate object.
+ * Constructs a CloudWatchEventsRequestPrivate object for CloudWatchEvents \a action with,
+ * public implementation \a q.
  */
 CloudWatchEventsRequestPrivate::CloudWatchEventsRequestPrivate(const CloudWatchEventsRequest::Action action, CloudWatchEventsRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
@@ -258,9 +264,7 @@ CloudWatchEventsRequestPrivate::CloudWatchEventsRequestPrivate(const CloudWatchE
 }
 
 /*!
- * \internal
- *
- * \brief Constructs a new CloudWatchEventsRequestPrivate object, copying an existing one.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
@@ -276,15 +280,12 @@ CloudWatchEventsRequestPrivate::CloudWatchEventsRequestPrivate(const CloudWatchE
 }
 
 /*!
- * \internal
- *
- * \brief Returns a string representing \a action.
+ * Returns a string represention of \a action, or a null string if \a action is
+ * invalid.
  *
  * This function converts CloudWatchEventsRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the CloudWatchEvents service's Action
  * query parameters.
- *
- * @return A string representing \a action, or a null string if \a action is invalid.
  */
 QString CloudWatchEventsRequestPrivate::toString(const CloudWatchEventsRequest::Action &action)
 {

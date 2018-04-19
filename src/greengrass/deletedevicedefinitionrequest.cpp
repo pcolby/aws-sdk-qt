@@ -27,10 +27,9 @@ namespace Greengrass {
 
 /*!
  * \class QtAws::Greengrass::DeleteDeviceDefinitionRequest
- *
  * \brief The DeleteDeviceDefinitionRequest class provides an interface for Greengrass DeleteDeviceDefinition requests.
  *
- * \ingroup Greengrass
+ * \inmodule QtAwsGreengrass
  *
  *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
  *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
@@ -40,9 +39,7 @@ namespace Greengrass {
  */
 
 /*!
- * @brief  Constructs a new DeleteDeviceDefinitionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteDeviceDefinitionRequest::DeleteDeviceDefinitionRequest(const DeleteDeviceDefinitionRequest &other)
     : GreengrassRequest(new DeleteDeviceDefinitionRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ DeleteDeviceDefinitionRequest::DeleteDeviceDefinitionRequest(const DeleteDeviceD
 }
 
 /*!
- * @brief  Constructs a new DeleteDeviceDefinitionRequest object.
+ * Constructs a DeleteDeviceDefinitionRequest object.
  */
 DeleteDeviceDefinitionRequest::DeleteDeviceDefinitionRequest()
     : GreengrassRequest(new DeleteDeviceDefinitionRequestPrivate(GreengrassRequest::DeleteDeviceDefinitionAction, this))
@@ -69,14 +66,9 @@ bool DeleteDeviceDefinitionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteDeviceDefinitionResponse object.
+ * Returns a DeleteDeviceDefinitionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteDeviceDefinitionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GreengrassClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteDeviceDefinitionRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * DeleteDeviceDefinitionRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::Greengrass::DeleteDeviceDefinitionRequestPrivate
+ * \brief The DeleteDeviceDefinitionRequestPrivate class provides private implementation for DeleteDeviceDefinitionRequest.
+ * \internal
  *
- * @class  DeleteDeviceDefinitionRequestPrivate
- *
- * @brief  Private implementation for DeleteDeviceDefinitionRequest.
+ * \inmodule QtAwsGreengrass
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteDeviceDefinitionRequestPrivate object.
- *
- * @param  action  Greengrass action being performed.
- * @param  q       Pointer to this object's public DeleteDeviceDefinitionRequest instance.
+ * Constructs a DeleteDeviceDefinitionRequestPrivate object for Greengrass \a action with,
+ * public implementation \a q.
  */
 DeleteDeviceDefinitionRequestPrivate::DeleteDeviceDefinitionRequestPrivate(
     const GreengrassRequest::Action action, DeleteDeviceDefinitionRequest * const q)
@@ -107,15 +96,10 @@ DeleteDeviceDefinitionRequestPrivate::DeleteDeviceDefinitionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteDeviceDefinitionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteDeviceDefinitionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteDeviceDefinitionRequest instance.
  */
 DeleteDeviceDefinitionRequestPrivate::DeleteDeviceDefinitionRequestPrivate(
     const DeleteDeviceDefinitionRequestPrivate &other, DeleteDeviceDefinitionRequest * const q)

@@ -27,10 +27,9 @@ namespace OpsWorksCM {
 
 /*!
  * \class QtAws::OpsWorksCM::UpdateServerRequest
- *
  * \brief The UpdateServerRequest class provides an interface for OpsWorksCM UpdateServer requests.
  *
- * \ingroup OpsWorksCM
+ * \inmodule QtAwsOpsWorksCM
  *
  *  <fullname>AWS OpsWorks CM</fullname>
  * 
@@ -97,9 +96,7 @@ namespace OpsWorksCM {
  */
 
 /*!
- * @brief  Constructs a new UpdateServerRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateServerRequest::UpdateServerRequest(const UpdateServerRequest &other)
     : OpsWorksCMRequest(new UpdateServerRequestPrivate(*other.d_func(), this))
@@ -108,7 +105,7 @@ UpdateServerRequest::UpdateServerRequest(const UpdateServerRequest &other)
 }
 
 /*!
- * @brief  Constructs a new UpdateServerRequest object.
+ * Constructs a UpdateServerRequest object.
  */
 UpdateServerRequest::UpdateServerRequest()
     : OpsWorksCMRequest(new UpdateServerRequestPrivate(OpsWorksCMRequest::UpdateServerAction, this))
@@ -126,14 +123,9 @@ bool UpdateServerRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateServerResponse object.
+ * Returns a UpdateServerResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateServerResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  OpsWorksCMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateServerRequest::response(QNetworkReply * const reply) const
 {
@@ -141,20 +133,17 @@ QtAws::Core::AwsAbstractResponse * UpdateServerRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::OpsWorksCM::UpdateServerRequestPrivate
+ * \brief The UpdateServerRequestPrivate class provides private implementation for UpdateServerRequest.
+ * \internal
  *
- * @class  UpdateServerRequestPrivate
- *
- * @brief  Private implementation for UpdateServerRequest.
+ * \inmodule QtAwsOpsWorksCM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateServerRequestPrivate object.
- *
- * @param  action  OpsWorksCM action being performed.
- * @param  q       Pointer to this object's public UpdateServerRequest instance.
+ * Constructs a UpdateServerRequestPrivate object for OpsWorksCM \a action with,
+ * public implementation \a q.
  */
 UpdateServerRequestPrivate::UpdateServerRequestPrivate(
     const OpsWorksCMRequest::Action action, UpdateServerRequest * const q)
@@ -164,15 +153,10 @@ UpdateServerRequestPrivate::UpdateServerRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateServerRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateServerRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateServerRequest instance.
  */
 UpdateServerRequestPrivate::UpdateServerRequestPrivate(
     const UpdateServerRequestPrivate &other, UpdateServerRequest * const q)

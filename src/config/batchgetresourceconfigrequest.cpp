@@ -27,10 +27,9 @@ namespace ConfigService {
 
 /*!
  * \class QtAws::ConfigService::BatchGetResourceConfigRequest
- *
  * \brief The BatchGetResourceConfigRequest class provides an interface for ConfigService BatchGetResourceConfig requests.
  *
- * \ingroup ConfigService
+ * \inmodule QtAwsConfigService
  *
  *  <fullname>AWS Config</fullname>
  * 
@@ -60,9 +59,7 @@ namespace ConfigService {
  */
 
 /*!
- * @brief  Constructs a new BatchGetResourceConfigRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 BatchGetResourceConfigRequest::BatchGetResourceConfigRequest(const BatchGetResourceConfigRequest &other)
     : ConfigServiceRequest(new BatchGetResourceConfigRequestPrivate(*other.d_func(), this))
@@ -71,7 +68,7 @@ BatchGetResourceConfigRequest::BatchGetResourceConfigRequest(const BatchGetResou
 }
 
 /*!
- * @brief  Constructs a new BatchGetResourceConfigRequest object.
+ * Constructs a BatchGetResourceConfigRequest object.
  */
 BatchGetResourceConfigRequest::BatchGetResourceConfigRequest()
     : ConfigServiceRequest(new BatchGetResourceConfigRequestPrivate(ConfigServiceRequest::BatchGetResourceConfigAction, this))
@@ -89,14 +86,9 @@ bool BatchGetResourceConfigRequest::isValid() const
 
 
 /*!
- * @brief  Construct an BatchGetResourceConfigResponse object.
+ * Returns a BatchGetResourceConfigResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An BatchGetResourceConfigResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ConfigServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * BatchGetResourceConfigRequest::response(QNetworkReply * const reply) const
 {
@@ -104,20 +96,17 @@ QtAws::Core::AwsAbstractResponse * BatchGetResourceConfigRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::ConfigService::BatchGetResourceConfigRequestPrivate
+ * \brief The BatchGetResourceConfigRequestPrivate class provides private implementation for BatchGetResourceConfigRequest.
+ * \internal
  *
- * @class  BatchGetResourceConfigRequestPrivate
- *
- * @brief  Private implementation for BatchGetResourceConfigRequest.
+ * \inmodule QtAwsConfigService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new BatchGetResourceConfigRequestPrivate object.
- *
- * @param  action  ConfigService action being performed.
- * @param  q       Pointer to this object's public BatchGetResourceConfigRequest instance.
+ * Constructs a BatchGetResourceConfigRequestPrivate object for ConfigService \a action with,
+ * public implementation \a q.
  */
 BatchGetResourceConfigRequestPrivate::BatchGetResourceConfigRequestPrivate(
     const ConfigServiceRequest::Action action, BatchGetResourceConfigRequest * const q)
@@ -127,15 +116,10 @@ BatchGetResourceConfigRequestPrivate::BatchGetResourceConfigRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new BatchGetResourceConfigRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the BatchGetResourceConfigRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public BatchGetResourceConfigRequest instance.
  */
 BatchGetResourceConfigRequestPrivate::BatchGetResourceConfigRequestPrivate(
     const BatchGetResourceConfigRequestPrivate &other, BatchGetResourceConfigRequest * const q)

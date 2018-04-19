@@ -27,10 +27,9 @@ namespace MediaStore {
 
 /*!
  * \class QtAws::MediaStore::PutCorsPolicyRequest
- *
  * \brief The PutCorsPolicyRequest class provides an interface for MediaStore PutCorsPolicy requests.
  *
- * \ingroup MediaStore
+ * \inmodule QtAwsMediaStore
  *
  *  An AWS Elemental MediaStore container is a namespace that holds folders and objects. You use a container endpoint to
  *  create, read, and delete objects.
@@ -39,9 +38,7 @@ namespace MediaStore {
  */
 
 /*!
- * @brief  Constructs a new PutCorsPolicyRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 PutCorsPolicyRequest::PutCorsPolicyRequest(const PutCorsPolicyRequest &other)
     : MediaStoreRequest(new PutCorsPolicyRequestPrivate(*other.d_func(), this))
@@ -50,7 +47,7 @@ PutCorsPolicyRequest::PutCorsPolicyRequest(const PutCorsPolicyRequest &other)
 }
 
 /*!
- * @brief  Constructs a new PutCorsPolicyRequest object.
+ * Constructs a PutCorsPolicyRequest object.
  */
 PutCorsPolicyRequest::PutCorsPolicyRequest()
     : MediaStoreRequest(new PutCorsPolicyRequestPrivate(MediaStoreRequest::PutCorsPolicyAction, this))
@@ -68,14 +65,9 @@ bool PutCorsPolicyRequest::isValid() const
 
 
 /*!
- * @brief  Construct an PutCorsPolicyResponse object.
+ * Returns a PutCorsPolicyResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An PutCorsPolicyResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MediaStoreClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * PutCorsPolicyRequest::response(QNetworkReply * const reply) const
 {
@@ -83,20 +75,17 @@ QtAws::Core::AwsAbstractResponse * PutCorsPolicyRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::MediaStore::PutCorsPolicyRequestPrivate
+ * \brief The PutCorsPolicyRequestPrivate class provides private implementation for PutCorsPolicyRequest.
+ * \internal
  *
- * @class  PutCorsPolicyRequestPrivate
- *
- * @brief  Private implementation for PutCorsPolicyRequest.
+ * \inmodule QtAwsMediaStore
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new PutCorsPolicyRequestPrivate object.
- *
- * @param  action  MediaStore action being performed.
- * @param  q       Pointer to this object's public PutCorsPolicyRequest instance.
+ * Constructs a PutCorsPolicyRequestPrivate object for MediaStore \a action with,
+ * public implementation \a q.
  */
 PutCorsPolicyRequestPrivate::PutCorsPolicyRequestPrivate(
     const MediaStoreRequest::Action action, PutCorsPolicyRequest * const q)
@@ -106,15 +95,10 @@ PutCorsPolicyRequestPrivate::PutCorsPolicyRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutCorsPolicyRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the PutCorsPolicyRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public PutCorsPolicyRequest instance.
  */
 PutCorsPolicyRequestPrivate::PutCorsPolicyRequestPrivate(
     const PutCorsPolicyRequestPrivate &other, PutCorsPolicyRequest * const q)

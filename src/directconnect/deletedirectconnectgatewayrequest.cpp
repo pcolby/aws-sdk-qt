@@ -27,10 +27,9 @@ namespace DirectConnect {
 
 /*!
  * \class QtAws::DirectConnect::DeleteDirectConnectGatewayRequest
- *
  * \brief The DeleteDirectConnectGatewayRequest class provides an interface for DirectConnect DeleteDirectConnectGateway requests.
  *
- * \ingroup DirectConnect
+ * \inmodule QtAwsDirectConnect
  *
  *  AWS Direct Connect links your internal network to an AWS Direct Connect location over a standard 1 gigabit or 10 gigabit
  *  Ethernet fiber-optic cable. One end of the cable is connected to your router, the other to an AWS Direct Connect router.
@@ -45,9 +44,7 @@ namespace DirectConnect {
  */
 
 /*!
- * @brief  Constructs a new DeleteDirectConnectGatewayRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteDirectConnectGatewayRequest::DeleteDirectConnectGatewayRequest(const DeleteDirectConnectGatewayRequest &other)
     : DirectConnectRequest(new DeleteDirectConnectGatewayRequestPrivate(*other.d_func(), this))
@@ -56,7 +53,7 @@ DeleteDirectConnectGatewayRequest::DeleteDirectConnectGatewayRequest(const Delet
 }
 
 /*!
- * @brief  Constructs a new DeleteDirectConnectGatewayRequest object.
+ * Constructs a DeleteDirectConnectGatewayRequest object.
  */
 DeleteDirectConnectGatewayRequest::DeleteDirectConnectGatewayRequest()
     : DirectConnectRequest(new DeleteDirectConnectGatewayRequestPrivate(DirectConnectRequest::DeleteDirectConnectGatewayAction, this))
@@ -74,14 +71,9 @@ bool DeleteDirectConnectGatewayRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteDirectConnectGatewayResponse object.
+ * Returns a DeleteDirectConnectGatewayResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteDirectConnectGatewayResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DirectConnectClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteDirectConnectGatewayRequest::response(QNetworkReply * const reply) const
 {
@@ -89,20 +81,17 @@ QtAws::Core::AwsAbstractResponse * DeleteDirectConnectGatewayRequest::response(Q
 }
 
 /*!
- * @internal
+ * \class QtAws::DirectConnect::DeleteDirectConnectGatewayRequestPrivate
+ * \brief The DeleteDirectConnectGatewayRequestPrivate class provides private implementation for DeleteDirectConnectGatewayRequest.
+ * \internal
  *
- * @class  DeleteDirectConnectGatewayRequestPrivate
- *
- * @brief  Private implementation for DeleteDirectConnectGatewayRequest.
+ * \inmodule QtAwsDirectConnect
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteDirectConnectGatewayRequestPrivate object.
- *
- * @param  action  DirectConnect action being performed.
- * @param  q       Pointer to this object's public DeleteDirectConnectGatewayRequest instance.
+ * Constructs a DeleteDirectConnectGatewayRequestPrivate object for DirectConnect \a action with,
+ * public implementation \a q.
  */
 DeleteDirectConnectGatewayRequestPrivate::DeleteDirectConnectGatewayRequestPrivate(
     const DirectConnectRequest::Action action, DeleteDirectConnectGatewayRequest * const q)
@@ -112,15 +101,10 @@ DeleteDirectConnectGatewayRequestPrivate::DeleteDirectConnectGatewayRequestPriva
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteDirectConnectGatewayRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteDirectConnectGatewayRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteDirectConnectGatewayRequest instance.
  */
 DeleteDirectConnectGatewayRequestPrivate::DeleteDirectConnectGatewayRequestPrivate(
     const DeleteDirectConnectGatewayRequestPrivate &other, DeleteDirectConnectGatewayRequest * const q)

@@ -27,10 +27,9 @@ namespace CloudFront {
 
 /*!
  * \class QtAws::CloudFront::ListPublicKeysRequest
- *
  * \brief The ListPublicKeysRequest class provides an interface for CloudFront ListPublicKeys requests.
  *
- * \ingroup CloudFront
+ * \inmodule QtAwsCloudFront
  *
  *  <fullname>Amazon CloudFront</fullname>
  * 
@@ -42,9 +41,7 @@ namespace CloudFront {
  */
 
 /*!
- * @brief  Constructs a new ListPublicKeysRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListPublicKeysRequest::ListPublicKeysRequest(const ListPublicKeysRequest &other)
     : CloudFrontRequest(new ListPublicKeysRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ ListPublicKeysRequest::ListPublicKeysRequest(const ListPublicKeysRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ListPublicKeysRequest object.
+ * Constructs a ListPublicKeysRequest object.
  */
 ListPublicKeysRequest::ListPublicKeysRequest()
     : CloudFrontRequest(new ListPublicKeysRequestPrivate(CloudFrontRequest::ListPublicKeysAction, this))
@@ -71,14 +68,9 @@ bool ListPublicKeysRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListPublicKeysResponse object.
+ * Returns a ListPublicKeysResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListPublicKeysResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudFrontClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListPublicKeysRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * ListPublicKeysRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudFront::ListPublicKeysRequestPrivate
+ * \brief The ListPublicKeysRequestPrivate class provides private implementation for ListPublicKeysRequest.
+ * \internal
  *
- * @class  ListPublicKeysRequestPrivate
- *
- * @brief  Private implementation for ListPublicKeysRequest.
+ * \inmodule QtAwsCloudFront
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListPublicKeysRequestPrivate object.
- *
- * @param  action  CloudFront action being performed.
- * @param  q       Pointer to this object's public ListPublicKeysRequest instance.
+ * Constructs a ListPublicKeysRequestPrivate object for CloudFront \a action with,
+ * public implementation \a q.
  */
 ListPublicKeysRequestPrivate::ListPublicKeysRequestPrivate(
     const CloudFrontRequest::Action action, ListPublicKeysRequest * const q)
@@ -109,15 +98,10 @@ ListPublicKeysRequestPrivate::ListPublicKeysRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListPublicKeysRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListPublicKeysRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListPublicKeysRequest instance.
  */
 ListPublicKeysRequestPrivate::ListPublicKeysRequestPrivate(
     const ListPublicKeysRequestPrivate &other, ListPublicKeysRequest * const q)

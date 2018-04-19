@@ -27,10 +27,9 @@ namespace AlexaForBusiness {
 
 /*!
  * \class QtAws::AlexaForBusiness::CreateSkillGroupRequest
- *
  * \brief The CreateSkillGroupRequest class provides an interface for AlexaForBusiness CreateSkillGroup requests.
  *
- * \ingroup AlexaForBusiness
+ * \inmodule QtAwsAlexaForBusiness
  *
  *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
  *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
@@ -42,9 +41,7 @@ namespace AlexaForBusiness {
  */
 
 /*!
- * @brief  Constructs a new CreateSkillGroupRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateSkillGroupRequest::CreateSkillGroupRequest(const CreateSkillGroupRequest &other)
     : AlexaForBusinessRequest(new CreateSkillGroupRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ CreateSkillGroupRequest::CreateSkillGroupRequest(const CreateSkillGroupRequest &
 }
 
 /*!
- * @brief  Constructs a new CreateSkillGroupRequest object.
+ * Constructs a CreateSkillGroupRequest object.
  */
 CreateSkillGroupRequest::CreateSkillGroupRequest()
     : AlexaForBusinessRequest(new CreateSkillGroupRequestPrivate(AlexaForBusinessRequest::CreateSkillGroupAction, this))
@@ -71,14 +68,9 @@ bool CreateSkillGroupRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateSkillGroupResponse object.
+ * Returns a CreateSkillGroupResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateSkillGroupResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AlexaForBusinessClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateSkillGroupRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * CreateSkillGroupRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::AlexaForBusiness::CreateSkillGroupRequestPrivate
+ * \brief The CreateSkillGroupRequestPrivate class provides private implementation for CreateSkillGroupRequest.
+ * \internal
  *
- * @class  CreateSkillGroupRequestPrivate
- *
- * @brief  Private implementation for CreateSkillGroupRequest.
+ * \inmodule QtAwsAlexaForBusiness
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateSkillGroupRequestPrivate object.
- *
- * @param  action  AlexaForBusiness action being performed.
- * @param  q       Pointer to this object's public CreateSkillGroupRequest instance.
+ * Constructs a CreateSkillGroupRequestPrivate object for AlexaForBusiness \a action with,
+ * public implementation \a q.
  */
 CreateSkillGroupRequestPrivate::CreateSkillGroupRequestPrivate(
     const AlexaForBusinessRequest::Action action, CreateSkillGroupRequest * const q)
@@ -109,15 +98,10 @@ CreateSkillGroupRequestPrivate::CreateSkillGroupRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateSkillGroupRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateSkillGroupRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateSkillGroupRequest instance.
  */
 CreateSkillGroupRequestPrivate::CreateSkillGroupRequestPrivate(
     const CreateSkillGroupRequestPrivate &other, CreateSkillGroupRequest * const q)

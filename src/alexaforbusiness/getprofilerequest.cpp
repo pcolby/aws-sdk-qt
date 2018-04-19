@@ -27,10 +27,9 @@ namespace AlexaForBusiness {
 
 /*!
  * \class QtAws::AlexaForBusiness::GetProfileRequest
- *
  * \brief The GetProfileRequest class provides an interface for AlexaForBusiness GetProfile requests.
  *
- * \ingroup AlexaForBusiness
+ * \inmodule QtAwsAlexaForBusiness
  *
  *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
  *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
@@ -42,9 +41,7 @@ namespace AlexaForBusiness {
  */
 
 /*!
- * @brief  Constructs a new GetProfileRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetProfileRequest::GetProfileRequest(const GetProfileRequest &other)
     : AlexaForBusinessRequest(new GetProfileRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ GetProfileRequest::GetProfileRequest(const GetProfileRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetProfileRequest object.
+ * Constructs a GetProfileRequest object.
  */
 GetProfileRequest::GetProfileRequest()
     : AlexaForBusinessRequest(new GetProfileRequestPrivate(AlexaForBusinessRequest::GetProfileAction, this))
@@ -71,14 +68,9 @@ bool GetProfileRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetProfileResponse object.
+ * Returns a GetProfileResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetProfileResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AlexaForBusinessClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetProfileRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * GetProfileRequest::response(QNetworkReply * c
 }
 
 /*!
- * @internal
+ * \class QtAws::AlexaForBusiness::GetProfileRequestPrivate
+ * \brief The GetProfileRequestPrivate class provides private implementation for GetProfileRequest.
+ * \internal
  *
- * @class  GetProfileRequestPrivate
- *
- * @brief  Private implementation for GetProfileRequest.
+ * \inmodule QtAwsAlexaForBusiness
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetProfileRequestPrivate object.
- *
- * @param  action  AlexaForBusiness action being performed.
- * @param  q       Pointer to this object's public GetProfileRequest instance.
+ * Constructs a GetProfileRequestPrivate object for AlexaForBusiness \a action with,
+ * public implementation \a q.
  */
 GetProfileRequestPrivate::GetProfileRequestPrivate(
     const AlexaForBusinessRequest::Action action, GetProfileRequest * const q)
@@ -109,15 +98,10 @@ GetProfileRequestPrivate::GetProfileRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetProfileRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetProfileRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetProfileRequest instance.
  */
 GetProfileRequestPrivate::GetProfileRequestPrivate(
     const GetProfileRequestPrivate &other, GetProfileRequest * const q)

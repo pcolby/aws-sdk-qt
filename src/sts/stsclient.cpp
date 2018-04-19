@@ -42,6 +42,9 @@
 /*!
  * \namespace QtAws::STS
  * \brief The QtAws::STS contains stuff...
+ *
+ * \inmodule QtAwsSTS
+ *
  * @todo Move this to a separate template file.
  */
 
@@ -149,7 +152,7 @@ StsClient::StsClient(
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * \a  AwsEndpoint::getEndpoint()
+ * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
 StsClient::StsClient(
     const QUrl &endpoint,

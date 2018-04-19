@@ -27,10 +27,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::ListResourceDataSyncRequest
- *
  * \brief The ListResourceDataSyncRequest class provides an interface for SSM ListResourceDataSync requests.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -61,9 +60,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new ListResourceDataSyncRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListResourceDataSyncRequest::ListResourceDataSyncRequest(const ListResourceDataSyncRequest &other)
     : SSMRequest(new ListResourceDataSyncRequestPrivate(*other.d_func(), this))
@@ -72,7 +69,7 @@ ListResourceDataSyncRequest::ListResourceDataSyncRequest(const ListResourceDataS
 }
 
 /*!
- * @brief  Constructs a new ListResourceDataSyncRequest object.
+ * Constructs a ListResourceDataSyncRequest object.
  */
 ListResourceDataSyncRequest::ListResourceDataSyncRequest()
     : SSMRequest(new ListResourceDataSyncRequestPrivate(SSMRequest::ListResourceDataSyncAction, this))
@@ -90,14 +87,9 @@ bool ListResourceDataSyncRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListResourceDataSyncResponse object.
+ * Returns a ListResourceDataSyncResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListResourceDataSyncResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SSMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListResourceDataSyncRequest::response(QNetworkReply * const reply) const
 {
@@ -105,20 +97,17 @@ QtAws::Core::AwsAbstractResponse * ListResourceDataSyncRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::SSM::ListResourceDataSyncRequestPrivate
+ * \brief The ListResourceDataSyncRequestPrivate class provides private implementation for ListResourceDataSyncRequest.
+ * \internal
  *
- * @class  ListResourceDataSyncRequestPrivate
- *
- * @brief  Private implementation for ListResourceDataSyncRequest.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListResourceDataSyncRequestPrivate object.
- *
- * @param  action  SSM action being performed.
- * @param  q       Pointer to this object's public ListResourceDataSyncRequest instance.
+ * Constructs a ListResourceDataSyncRequestPrivate object for SSM \a action with,
+ * public implementation \a q.
  */
 ListResourceDataSyncRequestPrivate::ListResourceDataSyncRequestPrivate(
     const SSMRequest::Action action, ListResourceDataSyncRequest * const q)
@@ -128,15 +117,10 @@ ListResourceDataSyncRequestPrivate::ListResourceDataSyncRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListResourceDataSyncRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListResourceDataSyncRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListResourceDataSyncRequest instance.
  */
 ListResourceDataSyncRequestPrivate::ListResourceDataSyncRequestPrivate(
     const ListResourceDataSyncRequestPrivate &other, ListResourceDataSyncRequest * const q)

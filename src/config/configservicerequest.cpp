@@ -25,16 +25,61 @@ namespace ConfigService {
 
 /*!
  * \class QtAws::ConfigService::ConfigServiceRequest
- *
  * \brief The ConfigServiceRequest class provides an interface for ConfigService requests.
  *
- * \ingroup ConfigService
+ * \inmodule QtAwsConfigService
  */
 
 /*!
- * @brief  Constructs a new ConfigServiceRequest object.
+ * \enum ConfigServiceRequest::Action
  *
- * @param  action  The ConfigService action to request.
+ * This enum describes the actions that can be performed as ConfigService
+ * requests.
+ *
+ * \value BatchGetResourceConfigAction ConfigService BatchGetResourceConfig action.
+ * \value DeleteAggregationAuthorizationAction ConfigService DeleteAggregationAuthorization action.
+ * \value DeleteConfigRuleAction ConfigService DeleteConfigRule action.
+ * \value DeleteConfigurationAggregatorAction ConfigService DeleteConfigurationAggregator action.
+ * \value DeleteConfigurationRecorderAction ConfigService DeleteConfigurationRecorder action.
+ * \value DeleteDeliveryChannelAction ConfigService DeleteDeliveryChannel action.
+ * \value DeleteEvaluationResultsAction ConfigService DeleteEvaluationResults action.
+ * \value DeletePendingAggregationRequestAction ConfigService DeletePendingAggregationRequest action.
+ * \value DeliverConfigSnapshotAction ConfigService DeliverConfigSnapshot action.
+ * \value DescribeAggregateComplianceByConfigRulesAction ConfigService DescribeAggregateComplianceByConfigRules action.
+ * \value DescribeAggregationAuthorizationsAction ConfigService DescribeAggregationAuthorizations action.
+ * \value DescribeComplianceByConfigRuleAction ConfigService DescribeComplianceByConfigRule action.
+ * \value DescribeComplianceByResourceAction ConfigService DescribeComplianceByResource action.
+ * \value DescribeConfigRuleEvaluationStatusAction ConfigService DescribeConfigRuleEvaluationStatus action.
+ * \value DescribeConfigRulesAction ConfigService DescribeConfigRules action.
+ * \value DescribeConfigurationAggregatorSourcesStatusAction ConfigService DescribeConfigurationAggregatorSourcesStatus action.
+ * \value DescribeConfigurationAggregatorsAction ConfigService DescribeConfigurationAggregators action.
+ * \value DescribeConfigurationRecorderStatusAction ConfigService DescribeConfigurationRecorderStatus action.
+ * \value DescribeConfigurationRecordersAction ConfigService DescribeConfigurationRecorders action.
+ * \value DescribeDeliveryChannelStatusAction ConfigService DescribeDeliveryChannelStatus action.
+ * \value DescribeDeliveryChannelsAction ConfigService DescribeDeliveryChannels action.
+ * \value DescribePendingAggregationRequestsAction ConfigService DescribePendingAggregationRequests action.
+ * \value GetAggregateComplianceDetailsByConfigRuleAction ConfigService GetAggregateComplianceDetailsByConfigRule action.
+ * \value GetAggregateConfigRuleComplianceSummaryAction ConfigService GetAggregateConfigRuleComplianceSummary action.
+ * \value GetComplianceDetailsByConfigRuleAction ConfigService GetComplianceDetailsByConfigRule action.
+ * \value GetComplianceDetailsByResourceAction ConfigService GetComplianceDetailsByResource action.
+ * \value GetComplianceSummaryByConfigRuleAction ConfigService GetComplianceSummaryByConfigRule action.
+ * \value GetComplianceSummaryByResourceTypeAction ConfigService GetComplianceSummaryByResourceType action.
+ * \value GetDiscoveredResourceCountsAction ConfigService GetDiscoveredResourceCounts action.
+ * \value GetResourceConfigHistoryAction ConfigService GetResourceConfigHistory action.
+ * \value ListDiscoveredResourcesAction ConfigService ListDiscoveredResources action.
+ * \value PutAggregationAuthorizationAction ConfigService PutAggregationAuthorization action.
+ * \value PutConfigRuleAction ConfigService PutConfigRule action.
+ * \value PutConfigurationAggregatorAction ConfigService PutConfigurationAggregator action.
+ * \value PutConfigurationRecorderAction ConfigService PutConfigurationRecorder action.
+ * \value PutDeliveryChannelAction ConfigService PutDeliveryChannel action.
+ * \value PutEvaluationsAction ConfigService PutEvaluations action.
+ * \value StartConfigRulesEvaluationAction ConfigService StartConfigRulesEvaluation action.
+ * \value StartConfigurationRecorderAction ConfigService StartConfigurationRecorder action.
+ * \value StopConfigurationRecorderAction ConfigService StopConfigurationRecorder action.
+ */
+
+/*!
+ * Constructs a[n] ConfigServiceRequest object for ConfigService \a action.
  */
 ConfigServiceRequest::ConfigServiceRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new ConfigServiceRequestPrivate(action, this))
@@ -43,9 +88,7 @@ ConfigServiceRequest::ConfigServiceRequest(const Action action)
 }
 
 /*!
- * @brief  Constructs a new ConfigServiceRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ConfigServiceRequest::ConfigServiceRequest(const ConfigServiceRequest &other)
     : QtAws::Core::AwsAbstractRequest(new ConfigServiceRequestPrivate(*other.d_func(), this))
@@ -54,13 +97,7 @@ ConfigServiceRequest::ConfigServiceRequest(const ConfigServiceRequest &other)
 }
 
 /*!
- * @brief  Assignment operator.
- *
- * Assigns \a other to \c this.
- *
- * @param  other  Instance to copy.
- *
- * @return  A reference to \c this.
+ * Sets the ConfigServiceRequest object to be equal to \a other.
  */
 ConfigServiceRequest& ConfigServiceRequest::operator=(const ConfigServiceRequest &other)
 {
@@ -72,14 +109,10 @@ ConfigServiceRequest& ConfigServiceRequest::operator=(const ConfigServiceRequest
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ConfigServiceRequest object.
+ * Constructs aa ConfigServiceRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from ConfigServiceRequestPrivate.
- *
- * @param  d  Pointer to private data (aka D-Pointer).
  */
 ConfigServiceRequest::ConfigServiceRequest(ConfigServiceRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
@@ -87,7 +120,7 @@ ConfigServiceRequest::ConfigServiceRequest(ConfigServiceRequestPrivate * const d
 }
 
 /*!
- * \brief Returns the ConfigService action to be performed by this request.
+ * Returns the ConfigService action to be performed by this request.
  */
 ConfigServiceRequest::Action ConfigServiceRequest::action() const
 {
@@ -96,7 +129,7 @@ ConfigServiceRequest::Action ConfigServiceRequest::action() const
 }
 
 /*!
- * \brief Returns the name of the ConfigService action to be performed by this request.
+ * Returns the name of the ConfigService action to be performed by this request.
  */
 QString ConfigServiceRequest::actionString() const
 {
@@ -104,7 +137,7 @@ QString ConfigServiceRequest::actionString() const
 }
 
 /*!
- * \brief Returns the ConfigService API version implemented by this request.
+ * Returns the ConfigService API version implemented by this request.
  */
 QString ConfigServiceRequest::apiVersion() const
 {
@@ -113,7 +146,7 @@ QString ConfigServiceRequest::apiVersion() const
 }
 
 /*!
- * @brief Set the ConfigService action to be performed by this request to \a action.
+ * Sets the ConfigService action to be performed by this request to \a action.
  */
 void ConfigServiceRequest::setAction(const Action action)
 {
@@ -122,7 +155,7 @@ void ConfigServiceRequest::setAction(const Action action)
 }
 
 /*!
- * Set the ConfigService API version to include in this request to \a version.
+ * Sets the ConfigService API version to include in this request to \a version.
  */
 void ConfigServiceRequest::setApiVersion(const QString &version)
 {
@@ -131,7 +164,7 @@ void ConfigServiceRequest::setApiVersion(const QString &version)
 }
 
 /*!
- * \brief Returns \c true if this request is the same as \a other.
+ * Returns \c true if this request is equal to \a other; \c false otherwise.
  *
  * Note, most derived *Request classes do not need to provider their own
  * implementations of this function, since most such request classes rely on
@@ -146,8 +179,8 @@ bool ConfigServiceRequest::operator==(const ConfigServiceRequest &other) const
             (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
-/*!
- * @brief  Check if \a queueName is a valid ConfigService queue name.
+/*
+ * Returns \c tue if \a queueName is a valid ConfigService queue name.
  *
  * @par From ConfigService FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
@@ -166,9 +199,8 @@ bool ConfigServiceRequest::operator==(const ConfigServiceRequest &other) const
 }*/
 
 /*!
- * \brief Removes the a \a name parameter from this request.
- *
- * Returns the count of paramters removed (typically \c 0 or \c 1).
+ * Removes the a \a name parameter from the request, then returns the number of
+ * paramters removed (typically \c 0 or \c 1).
  */
 int ConfigServiceRequest::clearParameter(const QString &name)
 {
@@ -177,7 +209,7 @@ int ConfigServiceRequest::clearParameter(const QString &name)
 }
 
 /*!
- * \brief Removes all parameters from this request.
+ * Removes all parameters from the request.
  */
 void ConfigServiceRequest::clearParameters()
 {
@@ -186,7 +218,7 @@ void ConfigServiceRequest::clearParameters()
 }
 
 /*!
- * \brief Returns the value of the \n name pararemter if set, otherwise \a defaultValue.
+ * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
 QVariant ConfigServiceRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
@@ -195,7 +227,7 @@ QVariant ConfigServiceRequest::parameter(const QString &name, const QVariant &de
 }
 
 /*!
- * \brief Returns a map of parameters included in this request.
+ * Returns the parameters included in this request.
  */
 const QVariantMap &ConfigServiceRequest::parameters() const
 {
@@ -204,7 +236,7 @@ const QVariantMap &ConfigServiceRequest::parameters() const
 }
 
 /*!
- * \brief Sets the \a name parameter to \a value.
+ * Sets the \a name parameter to \a value.
  */
 void ConfigServiceRequest::setParameter(const QString &name, const QVariant &value)
 {
@@ -213,9 +245,8 @@ void ConfigServiceRequest::setParameter(const QString &name, const QVariant &val
 }
 
 /*!
- * \brief Sets the map of paramters for this request to \a parameters.
- *
- * Any request parameters set previously will be discarded.
+ * Sets the paramters for this request to \a parameters. Any request parameters
+ * set previously will be discarded.
  */
 void ConfigServiceRequest::setParameters(const QVariantMap &parameters)
 {
@@ -224,11 +255,12 @@ void ConfigServiceRequest::setParameters(const QVariantMap &parameters)
 }
 
 /*!
- * \brief Returns a network request for this ConfigService request using the given \a endpoint.
+ * Returns a network request for the ConfigService request using the given
+ * \a endpoint.
  *
- * This ConfigService implementation builds request URLs by combining the common query
- * parameters (such as Action and Version), with any that have been added (via
- * setParameter) by child classes.
+ * This ConfigService implementation builds request URLs by combining the
+ * common query parameters (such as Action and Version), with any that have
+ * been added (via setParameter) by child classes.
  */
 QNetworkRequest ConfigServiceRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -239,17 +271,16 @@ QNetworkRequest ConfigServiceRequest::unsignedRequest(const QUrl &endpoint) cons
 }
 
 /*!
+ * \class QtAws::ConfigService::ConfigServiceRequestPrivate
+ * \brief The ConfigServiceRequestPrivate class provides private implementation for ConfigServiceRequest.
  * \internal
  *
- * \class  ConfigServiceRequestPrivate
- *
- * \brief  Private implementation for ConfigServiceRequest.
+ * \inmodule QtAwsConfigService
  */
 
 /*!
- * \internal
- *
- * \brief Constructs a new ConfigServiceRequestPrivate object.
+ * Constructs a ConfigServiceRequestPrivate object for ConfigService \a action with,
+ * public implementation \a q.
  */
 ConfigServiceRequestPrivate::ConfigServiceRequestPrivate(const ConfigServiceRequest::Action action, ConfigServiceRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
@@ -258,9 +289,7 @@ ConfigServiceRequestPrivate::ConfigServiceRequestPrivate(const ConfigServiceRequ
 }
 
 /*!
- * \internal
- *
- * \brief Constructs a new ConfigServiceRequestPrivate object, copying an existing one.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
@@ -276,15 +305,12 @@ ConfigServiceRequestPrivate::ConfigServiceRequestPrivate(const ConfigServiceRequ
 }
 
 /*!
- * \internal
- *
- * \brief Returns a string representing \a action.
+ * Returns a string represention of \a action, or a null string if \a action is
+ * invalid.
  *
  * This function converts ConfigServiceRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the ConfigService service's Action
  * query parameters.
- *
- * @return A string representing \a action, or a null string if \a action is invalid.
  */
 QString ConfigServiceRequestPrivate::toString(const ConfigServiceRequest::Action &action)
 {

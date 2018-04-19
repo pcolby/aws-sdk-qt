@@ -27,10 +27,9 @@ namespace WAF {
 
 /*!
  * \class QtAws::WAF::ListIPSetsRequest
- *
  * \brief The ListIPSetsRequest class provides an interface for WAF ListIPSets requests.
  *
- * \ingroup WAF
+ * \inmodule QtAwsWAF
  *
  *  This is the <i>AWS WAF API Reference</i> for using AWS WAF with Amazon CloudFront. The AWS WAF actions and data types
  *  listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data
@@ -42,9 +41,7 @@ namespace WAF {
  */
 
 /*!
- * @brief  Constructs a new ListIPSetsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListIPSetsRequest::ListIPSetsRequest(const ListIPSetsRequest &other)
     : WAFRequest(new ListIPSetsRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ ListIPSetsRequest::ListIPSetsRequest(const ListIPSetsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ListIPSetsRequest object.
+ * Constructs a ListIPSetsRequest object.
  */
 ListIPSetsRequest::ListIPSetsRequest()
     : WAFRequest(new ListIPSetsRequestPrivate(WAFRequest::ListIPSetsAction, this))
@@ -71,14 +68,9 @@ bool ListIPSetsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListIPSetsResponse object.
+ * Returns a ListIPSetsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListIPSetsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WAFClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListIPSetsRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * ListIPSetsRequest::response(QNetworkReply * c
 }
 
 /*!
- * @internal
+ * \class QtAws::WAF::ListIPSetsRequestPrivate
+ * \brief The ListIPSetsRequestPrivate class provides private implementation for ListIPSetsRequest.
+ * \internal
  *
- * @class  ListIPSetsRequestPrivate
- *
- * @brief  Private implementation for ListIPSetsRequest.
+ * \inmodule QtAwsWAF
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListIPSetsRequestPrivate object.
- *
- * @param  action  WAF action being performed.
- * @param  q       Pointer to this object's public ListIPSetsRequest instance.
+ * Constructs a ListIPSetsRequestPrivate object for WAF \a action with,
+ * public implementation \a q.
  */
 ListIPSetsRequestPrivate::ListIPSetsRequestPrivate(
     const WAFRequest::Action action, ListIPSetsRequest * const q)
@@ -109,15 +98,10 @@ ListIPSetsRequestPrivate::ListIPSetsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListIPSetsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListIPSetsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListIPSetsRequest instance.
  */
 ListIPSetsRequestPrivate::ListIPSetsRequestPrivate(
     const ListIPSetsRequestPrivate &other, ListIPSetsRequest * const q)

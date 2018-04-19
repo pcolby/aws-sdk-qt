@@ -27,10 +27,9 @@ namespace CloudSearch {
 
 /*!
  * \class QtAws::CloudSearch::UpdateScalingParametersRequest
- *
  * \brief The UpdateScalingParametersRequest class provides an interface for CloudSearch UpdateScalingParameters requests.
  *
- * \ingroup CloudSearch
+ * \inmodule QtAwsCloudSearch
  *
  *  <fullname>Amazon CloudSearch Configuration Service</fullname>
  * 
@@ -48,9 +47,7 @@ namespace CloudSearch {
  */
 
 /*!
- * @brief  Constructs a new UpdateScalingParametersRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateScalingParametersRequest::UpdateScalingParametersRequest(const UpdateScalingParametersRequest &other)
     : CloudSearchRequest(new UpdateScalingParametersRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ UpdateScalingParametersRequest::UpdateScalingParametersRequest(const UpdateScali
 }
 
 /*!
- * @brief  Constructs a new UpdateScalingParametersRequest object.
+ * Constructs a UpdateScalingParametersRequest object.
  */
 UpdateScalingParametersRequest::UpdateScalingParametersRequest()
     : CloudSearchRequest(new UpdateScalingParametersRequestPrivate(CloudSearchRequest::UpdateScalingParametersAction, this))
@@ -77,14 +74,9 @@ bool UpdateScalingParametersRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateScalingParametersResponse object.
+ * Returns a UpdateScalingParametersResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateScalingParametersResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudSearchClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateScalingParametersRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * UpdateScalingParametersRequest::response(QNet
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudSearch::UpdateScalingParametersRequestPrivate
+ * \brief The UpdateScalingParametersRequestPrivate class provides private implementation for UpdateScalingParametersRequest.
+ * \internal
  *
- * @class  UpdateScalingParametersRequestPrivate
- *
- * @brief  Private implementation for UpdateScalingParametersRequest.
+ * \inmodule QtAwsCloudSearch
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateScalingParametersRequestPrivate object.
- *
- * @param  action  CloudSearch action being performed.
- * @param  q       Pointer to this object's public UpdateScalingParametersRequest instance.
+ * Constructs a UpdateScalingParametersRequestPrivate object for CloudSearch \a action with,
+ * public implementation \a q.
  */
 UpdateScalingParametersRequestPrivate::UpdateScalingParametersRequestPrivate(
     const CloudSearchRequest::Action action, UpdateScalingParametersRequest * const q)
@@ -115,15 +104,10 @@ UpdateScalingParametersRequestPrivate::UpdateScalingParametersRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateScalingParametersRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateScalingParametersRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateScalingParametersRequest instance.
  */
 UpdateScalingParametersRequestPrivate::UpdateScalingParametersRequestPrivate(
     const UpdateScalingParametersRequestPrivate &other, UpdateScalingParametersRequest * const q)

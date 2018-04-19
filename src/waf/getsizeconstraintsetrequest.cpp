@@ -27,10 +27,9 @@ namespace WAF {
 
 /*!
  * \class QtAws::WAF::GetSizeConstraintSetRequest
- *
  * \brief The GetSizeConstraintSetRequest class provides an interface for WAF GetSizeConstraintSet requests.
  *
- * \ingroup WAF
+ * \inmodule QtAwsWAF
  *
  *  This is the <i>AWS WAF API Reference</i> for using AWS WAF with Amazon CloudFront. The AWS WAF actions and data types
  *  listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data
@@ -42,9 +41,7 @@ namespace WAF {
  */
 
 /*!
- * @brief  Constructs a new GetSizeConstraintSetRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetSizeConstraintSetRequest::GetSizeConstraintSetRequest(const GetSizeConstraintSetRequest &other)
     : WAFRequest(new GetSizeConstraintSetRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ GetSizeConstraintSetRequest::GetSizeConstraintSetRequest(const GetSizeConstraint
 }
 
 /*!
- * @brief  Constructs a new GetSizeConstraintSetRequest object.
+ * Constructs a GetSizeConstraintSetRequest object.
  */
 GetSizeConstraintSetRequest::GetSizeConstraintSetRequest()
     : WAFRequest(new GetSizeConstraintSetRequestPrivate(WAFRequest::GetSizeConstraintSetAction, this))
@@ -71,14 +68,9 @@ bool GetSizeConstraintSetRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetSizeConstraintSetResponse object.
+ * Returns a GetSizeConstraintSetResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetSizeConstraintSetResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WAFClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetSizeConstraintSetRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * GetSizeConstraintSetRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::WAF::GetSizeConstraintSetRequestPrivate
+ * \brief The GetSizeConstraintSetRequestPrivate class provides private implementation for GetSizeConstraintSetRequest.
+ * \internal
  *
- * @class  GetSizeConstraintSetRequestPrivate
- *
- * @brief  Private implementation for GetSizeConstraintSetRequest.
+ * \inmodule QtAwsWAF
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetSizeConstraintSetRequestPrivate object.
- *
- * @param  action  WAF action being performed.
- * @param  q       Pointer to this object's public GetSizeConstraintSetRequest instance.
+ * Constructs a GetSizeConstraintSetRequestPrivate object for WAF \a action with,
+ * public implementation \a q.
  */
 GetSizeConstraintSetRequestPrivate::GetSizeConstraintSetRequestPrivate(
     const WAFRequest::Action action, GetSizeConstraintSetRequest * const q)
@@ -109,15 +98,10 @@ GetSizeConstraintSetRequestPrivate::GetSizeConstraintSetRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetSizeConstraintSetRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetSizeConstraintSetRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetSizeConstraintSetRequest instance.
  */
 GetSizeConstraintSetRequestPrivate::GetSizeConstraintSetRequestPrivate(
     const GetSizeConstraintSetRequestPrivate &other, GetSizeConstraintSetRequest * const q)

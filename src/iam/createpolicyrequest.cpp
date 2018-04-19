@@ -27,10 +27,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::CreatePolicyRequest
- *
  * \brief The CreatePolicyRequest class provides an interface for IAM CreatePolicy requests.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -102,9 +101,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new CreatePolicyRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreatePolicyRequest::CreatePolicyRequest(const CreatePolicyRequest &other)
     : IAMRequest(new CreatePolicyRequestPrivate(*other.d_func(), this))
@@ -113,7 +110,7 @@ CreatePolicyRequest::CreatePolicyRequest(const CreatePolicyRequest &other)
 }
 
 /*!
- * @brief  Constructs a new CreatePolicyRequest object.
+ * Constructs a CreatePolicyRequest object.
  */
 CreatePolicyRequest::CreatePolicyRequest()
     : IAMRequest(new CreatePolicyRequestPrivate(IAMRequest::CreatePolicyAction, this))
@@ -131,14 +128,9 @@ bool CreatePolicyRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreatePolicyResponse object.
+ * Returns a CreatePolicyResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreatePolicyResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IAMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreatePolicyRequest::response(QNetworkReply * const reply) const
 {
@@ -146,20 +138,17 @@ QtAws::Core::AwsAbstractResponse * CreatePolicyRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::IAM::CreatePolicyRequestPrivate
+ * \brief The CreatePolicyRequestPrivate class provides private implementation for CreatePolicyRequest.
+ * \internal
  *
- * @class  CreatePolicyRequestPrivate
- *
- * @brief  Private implementation for CreatePolicyRequest.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreatePolicyRequestPrivate object.
- *
- * @param  action  IAM action being performed.
- * @param  q       Pointer to this object's public CreatePolicyRequest instance.
+ * Constructs a CreatePolicyRequestPrivate object for IAM \a action with,
+ * public implementation \a q.
  */
 CreatePolicyRequestPrivate::CreatePolicyRequestPrivate(
     const IAMRequest::Action action, CreatePolicyRequest * const q)
@@ -169,15 +158,10 @@ CreatePolicyRequestPrivate::CreatePolicyRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreatePolicyRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreatePolicyRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreatePolicyRequest instance.
  */
 CreatePolicyRequestPrivate::CreatePolicyRequestPrivate(
     const CreatePolicyRequestPrivate &other, CreatePolicyRequest * const q)

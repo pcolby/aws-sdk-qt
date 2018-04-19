@@ -27,10 +27,9 @@ namespace LexModelBuildingService {
 
 /*!
  * \class QtAws::LexModelBuildingService::CreateIntentVersionRequest
- *
  * \brief The CreateIntentVersionRequest class provides an interface for LexModelBuildingService CreateIntentVersion requests.
  *
- * \ingroup LexModelBuildingService
+ * \inmodule QtAwsLexModelBuildingService
  *
  *  <fullname>Amazon Lex Build-Time Actions</fullname>
  * 
@@ -41,9 +40,7 @@ namespace LexModelBuildingService {
  */
 
 /*!
- * @brief  Constructs a new CreateIntentVersionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateIntentVersionRequest::CreateIntentVersionRequest(const CreateIntentVersionRequest &other)
     : LexModelBuildingServiceRequest(new CreateIntentVersionRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ CreateIntentVersionRequest::CreateIntentVersionRequest(const CreateIntentVersion
 }
 
 /*!
- * @brief  Constructs a new CreateIntentVersionRequest object.
+ * Constructs a CreateIntentVersionRequest object.
  */
 CreateIntentVersionRequest::CreateIntentVersionRequest()
     : LexModelBuildingServiceRequest(new CreateIntentVersionRequestPrivate(LexModelBuildingServiceRequest::CreateIntentVersionAction, this))
@@ -70,14 +67,9 @@ bool CreateIntentVersionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateIntentVersionResponse object.
+ * Returns a CreateIntentVersionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateIntentVersionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  LexModelBuildingServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateIntentVersionRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * CreateIntentVersionRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::LexModelBuildingService::CreateIntentVersionRequestPrivate
+ * \brief The CreateIntentVersionRequestPrivate class provides private implementation for CreateIntentVersionRequest.
+ * \internal
  *
- * @class  CreateIntentVersionRequestPrivate
- *
- * @brief  Private implementation for CreateIntentVersionRequest.
+ * \inmodule QtAwsLexModelBuildingService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateIntentVersionRequestPrivate object.
- *
- * @param  action  LexModelBuildingService action being performed.
- * @param  q       Pointer to this object's public CreateIntentVersionRequest instance.
+ * Constructs a CreateIntentVersionRequestPrivate object for LexModelBuildingService \a action with,
+ * public implementation \a q.
  */
 CreateIntentVersionRequestPrivate::CreateIntentVersionRequestPrivate(
     const LexModelBuildingServiceRequest::Action action, CreateIntentVersionRequest * const q)
@@ -108,15 +97,10 @@ CreateIntentVersionRequestPrivate::CreateIntentVersionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateIntentVersionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateIntentVersionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateIntentVersionRequest instance.
  */
 CreateIntentVersionRequestPrivate::CreateIntentVersionRequestPrivate(
     const CreateIntentVersionRequestPrivate &other, CreateIntentVersionRequest * const q)

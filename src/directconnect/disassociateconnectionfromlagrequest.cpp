@@ -27,10 +27,9 @@ namespace DirectConnect {
 
 /*!
  * \class QtAws::DirectConnect::DisassociateConnectionFromLagRequest
- *
  * \brief The DisassociateConnectionFromLagRequest class provides an interface for DirectConnect DisassociateConnectionFromLag requests.
  *
- * \ingroup DirectConnect
+ * \inmodule QtAwsDirectConnect
  *
  *  AWS Direct Connect links your internal network to an AWS Direct Connect location over a standard 1 gigabit or 10 gigabit
  *  Ethernet fiber-optic cable. One end of the cable is connected to your router, the other to an AWS Direct Connect router.
@@ -45,9 +44,7 @@ namespace DirectConnect {
  */
 
 /*!
- * @brief  Constructs a new DisassociateConnectionFromLagRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DisassociateConnectionFromLagRequest::DisassociateConnectionFromLagRequest(const DisassociateConnectionFromLagRequest &other)
     : DirectConnectRequest(new DisassociateConnectionFromLagRequestPrivate(*other.d_func(), this))
@@ -56,7 +53,7 @@ DisassociateConnectionFromLagRequest::DisassociateConnectionFromLagRequest(const
 }
 
 /*!
- * @brief  Constructs a new DisassociateConnectionFromLagRequest object.
+ * Constructs a DisassociateConnectionFromLagRequest object.
  */
 DisassociateConnectionFromLagRequest::DisassociateConnectionFromLagRequest()
     : DirectConnectRequest(new DisassociateConnectionFromLagRequestPrivate(DirectConnectRequest::DisassociateConnectionFromLagAction, this))
@@ -74,14 +71,9 @@ bool DisassociateConnectionFromLagRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DisassociateConnectionFromLagResponse object.
+ * Returns a DisassociateConnectionFromLagResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DisassociateConnectionFromLagResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DirectConnectClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DisassociateConnectionFromLagRequest::response(QNetworkReply * const reply) const
 {
@@ -89,20 +81,17 @@ QtAws::Core::AwsAbstractResponse * DisassociateConnectionFromLagRequest::respons
 }
 
 /*!
- * @internal
+ * \class QtAws::DirectConnect::DisassociateConnectionFromLagRequestPrivate
+ * \brief The DisassociateConnectionFromLagRequestPrivate class provides private implementation for DisassociateConnectionFromLagRequest.
+ * \internal
  *
- * @class  DisassociateConnectionFromLagRequestPrivate
- *
- * @brief  Private implementation for DisassociateConnectionFromLagRequest.
+ * \inmodule QtAwsDirectConnect
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DisassociateConnectionFromLagRequestPrivate object.
- *
- * @param  action  DirectConnect action being performed.
- * @param  q       Pointer to this object's public DisassociateConnectionFromLagRequest instance.
+ * Constructs a DisassociateConnectionFromLagRequestPrivate object for DirectConnect \a action with,
+ * public implementation \a q.
  */
 DisassociateConnectionFromLagRequestPrivate::DisassociateConnectionFromLagRequestPrivate(
     const DirectConnectRequest::Action action, DisassociateConnectionFromLagRequest * const q)
@@ -112,15 +101,10 @@ DisassociateConnectionFromLagRequestPrivate::DisassociateConnectionFromLagReques
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DisassociateConnectionFromLagRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DisassociateConnectionFromLagRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DisassociateConnectionFromLagRequest instance.
  */
 DisassociateConnectionFromLagRequestPrivate::DisassociateConnectionFromLagRequestPrivate(
     const DisassociateConnectionFromLagRequestPrivate &other, DisassociateConnectionFromLagRequest * const q)

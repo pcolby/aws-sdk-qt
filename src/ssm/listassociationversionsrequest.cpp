@@ -27,10 +27,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::ListAssociationVersionsRequest
- *
  * \brief The ListAssociationVersionsRequest class provides an interface for SSM ListAssociationVersions requests.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -61,9 +60,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new ListAssociationVersionsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListAssociationVersionsRequest::ListAssociationVersionsRequest(const ListAssociationVersionsRequest &other)
     : SSMRequest(new ListAssociationVersionsRequestPrivate(*other.d_func(), this))
@@ -72,7 +69,7 @@ ListAssociationVersionsRequest::ListAssociationVersionsRequest(const ListAssocia
 }
 
 /*!
- * @brief  Constructs a new ListAssociationVersionsRequest object.
+ * Constructs a ListAssociationVersionsRequest object.
  */
 ListAssociationVersionsRequest::ListAssociationVersionsRequest()
     : SSMRequest(new ListAssociationVersionsRequestPrivate(SSMRequest::ListAssociationVersionsAction, this))
@@ -90,14 +87,9 @@ bool ListAssociationVersionsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListAssociationVersionsResponse object.
+ * Returns a ListAssociationVersionsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListAssociationVersionsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SSMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListAssociationVersionsRequest::response(QNetworkReply * const reply) const
 {
@@ -105,20 +97,17 @@ QtAws::Core::AwsAbstractResponse * ListAssociationVersionsRequest::response(QNet
 }
 
 /*!
- * @internal
+ * \class QtAws::SSM::ListAssociationVersionsRequestPrivate
+ * \brief The ListAssociationVersionsRequestPrivate class provides private implementation for ListAssociationVersionsRequest.
+ * \internal
  *
- * @class  ListAssociationVersionsRequestPrivate
- *
- * @brief  Private implementation for ListAssociationVersionsRequest.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListAssociationVersionsRequestPrivate object.
- *
- * @param  action  SSM action being performed.
- * @param  q       Pointer to this object's public ListAssociationVersionsRequest instance.
+ * Constructs a ListAssociationVersionsRequestPrivate object for SSM \a action with,
+ * public implementation \a q.
  */
 ListAssociationVersionsRequestPrivate::ListAssociationVersionsRequestPrivate(
     const SSMRequest::Action action, ListAssociationVersionsRequest * const q)
@@ -128,15 +117,10 @@ ListAssociationVersionsRequestPrivate::ListAssociationVersionsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListAssociationVersionsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListAssociationVersionsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListAssociationVersionsRequest instance.
  */
 ListAssociationVersionsRequestPrivate::ListAssociationVersionsRequestPrivate(
     const ListAssociationVersionsRequestPrivate &other, ListAssociationVersionsRequest * const q)

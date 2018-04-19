@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::ModifyHostsRequest
- *
  * \brief The ModifyHostsRequest class provides an interface for EC2 ModifyHosts requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new ModifyHostsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ModifyHostsRequest::ModifyHostsRequest(const ModifyHostsRequest &other)
     : EC2Request(new ModifyHostsRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ ModifyHostsRequest::ModifyHostsRequest(const ModifyHostsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ModifyHostsRequest object.
+ * Constructs a ModifyHostsRequest object.
  */
 ModifyHostsRequest::ModifyHostsRequest()
     : EC2Request(new ModifyHostsRequestPrivate(EC2Request::ModifyHostsAction, this))
@@ -70,14 +67,9 @@ bool ModifyHostsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ModifyHostsResponse object.
+ * Returns a ModifyHostsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ModifyHostsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ModifyHostsRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * ModifyHostsRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::ModifyHostsRequestPrivate
+ * \brief The ModifyHostsRequestPrivate class provides private implementation for ModifyHostsRequest.
+ * \internal
  *
- * @class  ModifyHostsRequestPrivate
- *
- * @brief  Private implementation for ModifyHostsRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ModifyHostsRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public ModifyHostsRequest instance.
+ * Constructs a ModifyHostsRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 ModifyHostsRequestPrivate::ModifyHostsRequestPrivate(
     const EC2Request::Action action, ModifyHostsRequest * const q)
@@ -108,15 +97,10 @@ ModifyHostsRequestPrivate::ModifyHostsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ModifyHostsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ModifyHostsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ModifyHostsRequest instance.
  */
 ModifyHostsRequestPrivate::ModifyHostsRequestPrivate(
     const ModifyHostsRequestPrivate &other, ModifyHostsRequest * const q)

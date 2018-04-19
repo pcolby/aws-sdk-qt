@@ -154,6 +154,9 @@
 /*!
  * \namespace QtAws::CloudDirectory
  * \brief The QtAws::CloudDirectory contains stuff...
+ *
+ * \inmodule QtAwsCloudDirectory
+ *
  * @todo Move this to a separate template file.
  */
 
@@ -210,7 +213,7 @@ CloudDirectoryClient::CloudDirectoryClient(
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * \a  AwsEndpoint::getEndpoint()
+ * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
 CloudDirectoryClient::CloudDirectoryClient(
     const QUrl &endpoint,

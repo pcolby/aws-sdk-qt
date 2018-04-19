@@ -58,6 +58,9 @@
 /*!
  * \namespace QtAws::CloudWatchEvents
  * \brief The QtAws::CloudWatchEvents contains stuff...
+ *
+ * \inmodule QtAwsCloudWatchEvents
+ *
  * @todo Move this to a separate template file.
  */
 
@@ -130,7 +133,7 @@ CloudWatchEventsClient::CloudWatchEventsClient(
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * \a  AwsEndpoint::getEndpoint()
+ * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
 CloudWatchEventsClient::CloudWatchEventsClient(
     const QUrl &endpoint,

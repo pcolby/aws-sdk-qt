@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DescribeAggregateIdFormatRequest
- *
  * \brief The DescribeAggregateIdFormatRequest class provides an interface for EC2 DescribeAggregateIdFormat requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DescribeAggregateIdFormatRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeAggregateIdFormatRequest::DescribeAggregateIdFormatRequest(const DescribeAggregateIdFormatRequest &other)
     : EC2Request(new DescribeAggregateIdFormatRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ DescribeAggregateIdFormatRequest::DescribeAggregateIdFormatRequest(const Describ
 }
 
 /*!
- * @brief  Constructs a new DescribeAggregateIdFormatRequest object.
+ * Constructs a DescribeAggregateIdFormatRequest object.
  */
 DescribeAggregateIdFormatRequest::DescribeAggregateIdFormatRequest()
     : EC2Request(new DescribeAggregateIdFormatRequestPrivate(EC2Request::DescribeAggregateIdFormatAction, this))
@@ -70,14 +67,9 @@ bool DescribeAggregateIdFormatRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeAggregateIdFormatResponse object.
+ * Returns a DescribeAggregateIdFormatResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeAggregateIdFormatResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeAggregateIdFormatRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * DescribeAggregateIdFormatRequest::response(QN
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::DescribeAggregateIdFormatRequestPrivate
+ * \brief The DescribeAggregateIdFormatRequestPrivate class provides private implementation for DescribeAggregateIdFormatRequest.
+ * \internal
  *
- * @class  DescribeAggregateIdFormatRequestPrivate
- *
- * @brief  Private implementation for DescribeAggregateIdFormatRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeAggregateIdFormatRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public DescribeAggregateIdFormatRequest instance.
+ * Constructs a DescribeAggregateIdFormatRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 DescribeAggregateIdFormatRequestPrivate::DescribeAggregateIdFormatRequestPrivate(
     const EC2Request::Action action, DescribeAggregateIdFormatRequest * const q)
@@ -108,15 +97,10 @@ DescribeAggregateIdFormatRequestPrivate::DescribeAggregateIdFormatRequestPrivate
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeAggregateIdFormatRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeAggregateIdFormatRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeAggregateIdFormatRequest instance.
  */
 DescribeAggregateIdFormatRequestPrivate::DescribeAggregateIdFormatRequestPrivate(
     const DescribeAggregateIdFormatRequestPrivate &other, DescribeAggregateIdFormatRequest * const q)

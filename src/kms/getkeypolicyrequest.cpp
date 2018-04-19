@@ -27,10 +27,9 @@ namespace KMS {
 
 /*!
  * \class QtAws::KMS::GetKeyPolicyRequest
- *
  * \brief The GetKeyPolicyRequest class provides an interface for KMS GetKeyPolicy requests.
  *
- * \ingroup KMS
+ * \inmodule QtAwsKMS
  *
  *  <fullname>AWS Key Management Service</fullname>
  * 
@@ -136,9 +135,7 @@ namespace KMS {
  */
 
 /*!
- * @brief  Constructs a new GetKeyPolicyRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetKeyPolicyRequest::GetKeyPolicyRequest(const GetKeyPolicyRequest &other)
     : KMSRequest(new GetKeyPolicyRequestPrivate(*other.d_func(), this))
@@ -147,7 +144,7 @@ GetKeyPolicyRequest::GetKeyPolicyRequest(const GetKeyPolicyRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetKeyPolicyRequest object.
+ * Constructs a GetKeyPolicyRequest object.
  */
 GetKeyPolicyRequest::GetKeyPolicyRequest()
     : KMSRequest(new GetKeyPolicyRequestPrivate(KMSRequest::GetKeyPolicyAction, this))
@@ -165,14 +162,9 @@ bool GetKeyPolicyRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetKeyPolicyResponse object.
+ * Returns a GetKeyPolicyResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetKeyPolicyResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  KMSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetKeyPolicyRequest::response(QNetworkReply * const reply) const
 {
@@ -180,20 +172,17 @@ QtAws::Core::AwsAbstractResponse * GetKeyPolicyRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::KMS::GetKeyPolicyRequestPrivate
+ * \brief The GetKeyPolicyRequestPrivate class provides private implementation for GetKeyPolicyRequest.
+ * \internal
  *
- * @class  GetKeyPolicyRequestPrivate
- *
- * @brief  Private implementation for GetKeyPolicyRequest.
+ * \inmodule QtAwsKMS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetKeyPolicyRequestPrivate object.
- *
- * @param  action  KMS action being performed.
- * @param  q       Pointer to this object's public GetKeyPolicyRequest instance.
+ * Constructs a GetKeyPolicyRequestPrivate object for KMS \a action with,
+ * public implementation \a q.
  */
 GetKeyPolicyRequestPrivate::GetKeyPolicyRequestPrivate(
     const KMSRequest::Action action, GetKeyPolicyRequest * const q)
@@ -203,15 +192,10 @@ GetKeyPolicyRequestPrivate::GetKeyPolicyRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetKeyPolicyRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetKeyPolicyRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetKeyPolicyRequest instance.
  */
 GetKeyPolicyRequestPrivate::GetKeyPolicyRequestPrivate(
     const GetKeyPolicyRequestPrivate &other, GetKeyPolicyRequest * const q)

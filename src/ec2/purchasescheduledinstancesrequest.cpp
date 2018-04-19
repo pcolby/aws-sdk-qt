@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::PurchaseScheduledInstancesRequest
- *
  * \brief The PurchaseScheduledInstancesRequest class provides an interface for EC2 PurchaseScheduledInstances requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new PurchaseScheduledInstancesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 PurchaseScheduledInstancesRequest::PurchaseScheduledInstancesRequest(const PurchaseScheduledInstancesRequest &other)
     : EC2Request(new PurchaseScheduledInstancesRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ PurchaseScheduledInstancesRequest::PurchaseScheduledInstancesRequest(const Purch
 }
 
 /*!
- * @brief  Constructs a new PurchaseScheduledInstancesRequest object.
+ * Constructs a PurchaseScheduledInstancesRequest object.
  */
 PurchaseScheduledInstancesRequest::PurchaseScheduledInstancesRequest()
     : EC2Request(new PurchaseScheduledInstancesRequestPrivate(EC2Request::PurchaseScheduledInstancesAction, this))
@@ -70,14 +67,9 @@ bool PurchaseScheduledInstancesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an PurchaseScheduledInstancesResponse object.
+ * Returns a PurchaseScheduledInstancesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An PurchaseScheduledInstancesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * PurchaseScheduledInstancesRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * PurchaseScheduledInstancesRequest::response(Q
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::PurchaseScheduledInstancesRequestPrivate
+ * \brief The PurchaseScheduledInstancesRequestPrivate class provides private implementation for PurchaseScheduledInstancesRequest.
+ * \internal
  *
- * @class  PurchaseScheduledInstancesRequestPrivate
- *
- * @brief  Private implementation for PurchaseScheduledInstancesRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new PurchaseScheduledInstancesRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public PurchaseScheduledInstancesRequest instance.
+ * Constructs a PurchaseScheduledInstancesRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 PurchaseScheduledInstancesRequestPrivate::PurchaseScheduledInstancesRequestPrivate(
     const EC2Request::Action action, PurchaseScheduledInstancesRequest * const q)
@@ -108,15 +97,10 @@ PurchaseScheduledInstancesRequestPrivate::PurchaseScheduledInstancesRequestPriva
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PurchaseScheduledInstancesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the PurchaseScheduledInstancesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public PurchaseScheduledInstancesRequest instance.
  */
 PurchaseScheduledInstancesRequestPrivate::PurchaseScheduledInstancesRequestPrivate(
     const PurchaseScheduledInstancesRequestPrivate &other, PurchaseScheduledInstancesRequest * const q)

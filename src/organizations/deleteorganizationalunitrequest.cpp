@@ -27,10 +27,9 @@ namespace Organizations {
 
 /*!
  * \class QtAws::Organizations::DeleteOrganizationalUnitRequest
- *
  * \brief The DeleteOrganizationalUnitRequest class provides an interface for Organizations DeleteOrganizationalUnit requests.
  *
- * \ingroup Organizations
+ * \inmodule QtAwsOrganizations
  *
  *  <fullname>AWS Organizations API Reference</fullname>
  * 
@@ -179,9 +178,7 @@ namespace Organizations {
  */
 
 /*!
- * @brief  Constructs a new DeleteOrganizationalUnitRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteOrganizationalUnitRequest::DeleteOrganizationalUnitRequest(const DeleteOrganizationalUnitRequest &other)
     : OrganizationsRequest(new DeleteOrganizationalUnitRequestPrivate(*other.d_func(), this))
@@ -190,7 +187,7 @@ DeleteOrganizationalUnitRequest::DeleteOrganizationalUnitRequest(const DeleteOrg
 }
 
 /*!
- * @brief  Constructs a new DeleteOrganizationalUnitRequest object.
+ * Constructs a DeleteOrganizationalUnitRequest object.
  */
 DeleteOrganizationalUnitRequest::DeleteOrganizationalUnitRequest()
     : OrganizationsRequest(new DeleteOrganizationalUnitRequestPrivate(OrganizationsRequest::DeleteOrganizationalUnitAction, this))
@@ -208,14 +205,9 @@ bool DeleteOrganizationalUnitRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteOrganizationalUnitResponse object.
+ * Returns a DeleteOrganizationalUnitResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteOrganizationalUnitResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  OrganizationsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteOrganizationalUnitRequest::response(QNetworkReply * const reply) const
 {
@@ -223,20 +215,17 @@ QtAws::Core::AwsAbstractResponse * DeleteOrganizationalUnitRequest::response(QNe
 }
 
 /*!
- * @internal
+ * \class QtAws::Organizations::DeleteOrganizationalUnitRequestPrivate
+ * \brief The DeleteOrganizationalUnitRequestPrivate class provides private implementation for DeleteOrganizationalUnitRequest.
+ * \internal
  *
- * @class  DeleteOrganizationalUnitRequestPrivate
- *
- * @brief  Private implementation for DeleteOrganizationalUnitRequest.
+ * \inmodule QtAwsOrganizations
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteOrganizationalUnitRequestPrivate object.
- *
- * @param  action  Organizations action being performed.
- * @param  q       Pointer to this object's public DeleteOrganizationalUnitRequest instance.
+ * Constructs a DeleteOrganizationalUnitRequestPrivate object for Organizations \a action with,
+ * public implementation \a q.
  */
 DeleteOrganizationalUnitRequestPrivate::DeleteOrganizationalUnitRequestPrivate(
     const OrganizationsRequest::Action action, DeleteOrganizationalUnitRequest * const q)
@@ -246,15 +235,10 @@ DeleteOrganizationalUnitRequestPrivate::DeleteOrganizationalUnitRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteOrganizationalUnitRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteOrganizationalUnitRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteOrganizationalUnitRequest instance.
  */
 DeleteOrganizationalUnitRequestPrivate::DeleteOrganizationalUnitRequestPrivate(
     const DeleteOrganizationalUnitRequestPrivate &other, DeleteOrganizationalUnitRequest * const q)

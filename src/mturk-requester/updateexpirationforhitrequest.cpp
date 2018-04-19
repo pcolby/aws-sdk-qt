@@ -27,19 +27,16 @@ namespace MTurk {
 
 /*!
  * \class QtAws::MTurk::UpdateExpirationForHITRequest
- *
  * \brief The UpdateExpirationForHITRequest class provides an interface for MTurk UpdateExpirationForHIT requests.
  *
- * \ingroup MTurk
+ * \inmodule QtAwsMTurk
  *
  *
  * \sa MTurkClient::updateExpirationForHIT
  */
 
 /*!
- * @brief  Constructs a new UpdateExpirationForHITRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateExpirationForHITRequest::UpdateExpirationForHITRequest(const UpdateExpirationForHITRequest &other)
     : MTurkRequest(new UpdateExpirationForHITRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ UpdateExpirationForHITRequest::UpdateExpirationForHITRequest(const UpdateExpirat
 }
 
 /*!
- * @brief  Constructs a new UpdateExpirationForHITRequest object.
+ * Constructs a UpdateExpirationForHITRequest object.
  */
 UpdateExpirationForHITRequest::UpdateExpirationForHITRequest()
     : MTurkRequest(new UpdateExpirationForHITRequestPrivate(MTurkRequest::UpdateExpirationForHITAction, this))
@@ -66,14 +63,9 @@ bool UpdateExpirationForHITRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateExpirationForHITResponse object.
+ * Returns a UpdateExpirationForHITResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateExpirationForHITResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MTurkClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateExpirationForHITRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * UpdateExpirationForHITRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::MTurk::UpdateExpirationForHITRequestPrivate
+ * \brief The UpdateExpirationForHITRequestPrivate class provides private implementation for UpdateExpirationForHITRequest.
+ * \internal
  *
- * @class  UpdateExpirationForHITRequestPrivate
- *
- * @brief  Private implementation for UpdateExpirationForHITRequest.
+ * \inmodule QtAwsMTurk
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateExpirationForHITRequestPrivate object.
- *
- * @param  action  MTurk action being performed.
- * @param  q       Pointer to this object's public UpdateExpirationForHITRequest instance.
+ * Constructs a UpdateExpirationForHITRequestPrivate object for MTurk \a action with,
+ * public implementation \a q.
  */
 UpdateExpirationForHITRequestPrivate::UpdateExpirationForHITRequestPrivate(
     const MTurkRequest::Action action, UpdateExpirationForHITRequest * const q)
@@ -104,15 +93,10 @@ UpdateExpirationForHITRequestPrivate::UpdateExpirationForHITRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateExpirationForHITRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateExpirationForHITRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateExpirationForHITRequest instance.
  */
 UpdateExpirationForHITRequestPrivate::UpdateExpirationForHITRequestPrivate(
     const UpdateExpirationForHITRequestPrivate &other, UpdateExpirationForHITRequest * const q)

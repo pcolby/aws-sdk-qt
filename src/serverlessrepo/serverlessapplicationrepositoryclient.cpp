@@ -48,6 +48,9 @@
 /*!
  * \namespace QtAws::ServerlessApplicationRepository
  * \brief The QtAws::ServerlessApplicationRepository contains stuff...
+ *
+ * \inmodule QtAwsServerlessApplicationRepository
+ *
  * @todo Move this to a separate template file.
  */
 
@@ -118,7 +121,7 @@ ServerlessApplicationRepositoryClient::ServerlessApplicationRepositoryClient(
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * \a  AwsEndpoint::getEndpoint()
+ * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
 ServerlessApplicationRepositoryClient::ServerlessApplicationRepositoryClient(
     const QUrl &endpoint,

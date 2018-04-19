@@ -27,10 +27,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::CreateVpcLinkRequest
- *
  * \brief The CreateVpcLinkRequest class provides an interface for APIGateway CreateVpcLink requests.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -42,9 +41,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new CreateVpcLinkRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateVpcLinkRequest::CreateVpcLinkRequest(const CreateVpcLinkRequest &other)
     : APIGatewayRequest(new CreateVpcLinkRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ CreateVpcLinkRequest::CreateVpcLinkRequest(const CreateVpcLinkRequest &other)
 }
 
 /*!
- * @brief  Constructs a new CreateVpcLinkRequest object.
+ * Constructs a CreateVpcLinkRequest object.
  */
 CreateVpcLinkRequest::CreateVpcLinkRequest()
     : APIGatewayRequest(new CreateVpcLinkRequestPrivate(APIGatewayRequest::CreateVpcLinkAction, this))
@@ -71,14 +68,9 @@ bool CreateVpcLinkRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateVpcLinkResponse object.
+ * Returns a CreateVpcLinkResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateVpcLinkResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  APIGatewayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateVpcLinkRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * CreateVpcLinkRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::APIGateway::CreateVpcLinkRequestPrivate
+ * \brief The CreateVpcLinkRequestPrivate class provides private implementation for CreateVpcLinkRequest.
+ * \internal
  *
- * @class  CreateVpcLinkRequestPrivate
- *
- * @brief  Private implementation for CreateVpcLinkRequest.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateVpcLinkRequestPrivate object.
- *
- * @param  action  APIGateway action being performed.
- * @param  q       Pointer to this object's public CreateVpcLinkRequest instance.
+ * Constructs a CreateVpcLinkRequestPrivate object for APIGateway \a action with,
+ * public implementation \a q.
  */
 CreateVpcLinkRequestPrivate::CreateVpcLinkRequestPrivate(
     const APIGatewayRequest::Action action, CreateVpcLinkRequest * const q)
@@ -109,15 +98,10 @@ CreateVpcLinkRequestPrivate::CreateVpcLinkRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateVpcLinkRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateVpcLinkRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateVpcLinkRequest instance.
  */
 CreateVpcLinkRequestPrivate::CreateVpcLinkRequestPrivate(
     const CreateVpcLinkRequestPrivate &other, CreateVpcLinkRequest * const q)

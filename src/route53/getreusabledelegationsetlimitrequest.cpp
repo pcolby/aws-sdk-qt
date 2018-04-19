@@ -27,19 +27,16 @@ namespace Route53 {
 
 /*!
  * \class QtAws::Route53::GetReusableDelegationSetLimitRequest
- *
  * \brief The GetReusableDelegationSetLimitRequest class provides an interface for Route53 GetReusableDelegationSetLimit requests.
  *
- * \ingroup Route53
+ * \inmodule QtAwsRoute53
  *
  *
  * \sa Route53Client::getReusableDelegationSetLimit
  */
 
 /*!
- * @brief  Constructs a new GetReusableDelegationSetLimitRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetReusableDelegationSetLimitRequest::GetReusableDelegationSetLimitRequest(const GetReusableDelegationSetLimitRequest &other)
     : Route53Request(new GetReusableDelegationSetLimitRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ GetReusableDelegationSetLimitRequest::GetReusableDelegationSetLimitRequest(const
 }
 
 /*!
- * @brief  Constructs a new GetReusableDelegationSetLimitRequest object.
+ * Constructs a GetReusableDelegationSetLimitRequest object.
  */
 GetReusableDelegationSetLimitRequest::GetReusableDelegationSetLimitRequest()
     : Route53Request(new GetReusableDelegationSetLimitRequestPrivate(Route53Request::GetReusableDelegationSetLimitAction, this))
@@ -66,14 +63,9 @@ bool GetReusableDelegationSetLimitRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetReusableDelegationSetLimitResponse object.
+ * Returns a GetReusableDelegationSetLimitResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetReusableDelegationSetLimitResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  Route53Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetReusableDelegationSetLimitRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * GetReusableDelegationSetLimitRequest::respons
 }
 
 /*!
- * @internal
+ * \class QtAws::Route53::GetReusableDelegationSetLimitRequestPrivate
+ * \brief The GetReusableDelegationSetLimitRequestPrivate class provides private implementation for GetReusableDelegationSetLimitRequest.
+ * \internal
  *
- * @class  GetReusableDelegationSetLimitRequestPrivate
- *
- * @brief  Private implementation for GetReusableDelegationSetLimitRequest.
+ * \inmodule QtAwsRoute53
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetReusableDelegationSetLimitRequestPrivate object.
- *
- * @param  action  Route53 action being performed.
- * @param  q       Pointer to this object's public GetReusableDelegationSetLimitRequest instance.
+ * Constructs a GetReusableDelegationSetLimitRequestPrivate object for Route53 \a action with,
+ * public implementation \a q.
  */
 GetReusableDelegationSetLimitRequestPrivate::GetReusableDelegationSetLimitRequestPrivate(
     const Route53Request::Action action, GetReusableDelegationSetLimitRequest * const q)
@@ -104,15 +93,10 @@ GetReusableDelegationSetLimitRequestPrivate::GetReusableDelegationSetLimitReques
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetReusableDelegationSetLimitRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetReusableDelegationSetLimitRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetReusableDelegationSetLimitRequest instance.
  */
 GetReusableDelegationSetLimitRequestPrivate::GetReusableDelegationSetLimitRequestPrivate(
     const GetReusableDelegationSetLimitRequestPrivate &other, GetReusableDelegationSetLimitRequest * const q)

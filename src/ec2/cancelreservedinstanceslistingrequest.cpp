@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::CancelReservedInstancesListingRequest
- *
  * \brief The CancelReservedInstancesListingRequest class provides an interface for EC2 CancelReservedInstancesListing requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new CancelReservedInstancesListingRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CancelReservedInstancesListingRequest::CancelReservedInstancesListingRequest(const CancelReservedInstancesListingRequest &other)
     : EC2Request(new CancelReservedInstancesListingRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ CancelReservedInstancesListingRequest::CancelReservedInstancesListingRequest(con
 }
 
 /*!
- * @brief  Constructs a new CancelReservedInstancesListingRequest object.
+ * Constructs a CancelReservedInstancesListingRequest object.
  */
 CancelReservedInstancesListingRequest::CancelReservedInstancesListingRequest()
     : EC2Request(new CancelReservedInstancesListingRequestPrivate(EC2Request::CancelReservedInstancesListingAction, this))
@@ -70,14 +67,9 @@ bool CancelReservedInstancesListingRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CancelReservedInstancesListingResponse object.
+ * Returns a CancelReservedInstancesListingResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CancelReservedInstancesListingResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CancelReservedInstancesListingRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * CancelReservedInstancesListingRequest::respon
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::CancelReservedInstancesListingRequestPrivate
+ * \brief The CancelReservedInstancesListingRequestPrivate class provides private implementation for CancelReservedInstancesListingRequest.
+ * \internal
  *
- * @class  CancelReservedInstancesListingRequestPrivate
- *
- * @brief  Private implementation for CancelReservedInstancesListingRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CancelReservedInstancesListingRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public CancelReservedInstancesListingRequest instance.
+ * Constructs a CancelReservedInstancesListingRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 CancelReservedInstancesListingRequestPrivate::CancelReservedInstancesListingRequestPrivate(
     const EC2Request::Action action, CancelReservedInstancesListingRequest * const q)
@@ -108,15 +97,10 @@ CancelReservedInstancesListingRequestPrivate::CancelReservedInstancesListingRequ
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CancelReservedInstancesListingRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CancelReservedInstancesListingRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CancelReservedInstancesListingRequest instance.
  */
 CancelReservedInstancesListingRequestPrivate::CancelReservedInstancesListingRequestPrivate(
     const CancelReservedInstancesListingRequestPrivate &other, CancelReservedInstancesListingRequest * const q)

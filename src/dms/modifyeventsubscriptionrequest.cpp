@@ -27,10 +27,9 @@ namespace DatabaseMigrationService {
 
 /*!
  * \class QtAws::DatabaseMigrationService::ModifyEventSubscriptionRequest
- *
  * \brief The ModifyEventSubscriptionRequest class provides an interface for DatabaseMigrationService ModifyEventSubscription requests.
  *
- * \ingroup DatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigrationService
  *
  *  <fullname>AWS Database Migration Service</fullname>
  * 
@@ -48,9 +47,7 @@ namespace DatabaseMigrationService {
  */
 
 /*!
- * @brief  Constructs a new ModifyEventSubscriptionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ModifyEventSubscriptionRequest::ModifyEventSubscriptionRequest(const ModifyEventSubscriptionRequest &other)
     : DatabaseMigrationServiceRequest(new ModifyEventSubscriptionRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ ModifyEventSubscriptionRequest::ModifyEventSubscriptionRequest(const ModifyEvent
 }
 
 /*!
- * @brief  Constructs a new ModifyEventSubscriptionRequest object.
+ * Constructs a ModifyEventSubscriptionRequest object.
  */
 ModifyEventSubscriptionRequest::ModifyEventSubscriptionRequest()
     : DatabaseMigrationServiceRequest(new ModifyEventSubscriptionRequestPrivate(DatabaseMigrationServiceRequest::ModifyEventSubscriptionAction, this))
@@ -77,14 +74,9 @@ bool ModifyEventSubscriptionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ModifyEventSubscriptionResponse object.
+ * Returns a ModifyEventSubscriptionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ModifyEventSubscriptionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DatabaseMigrationServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ModifyEventSubscriptionRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * ModifyEventSubscriptionRequest::response(QNet
 }
 
 /*!
- * @internal
+ * \class QtAws::DatabaseMigrationService::ModifyEventSubscriptionRequestPrivate
+ * \brief The ModifyEventSubscriptionRequestPrivate class provides private implementation for ModifyEventSubscriptionRequest.
+ * \internal
  *
- * @class  ModifyEventSubscriptionRequestPrivate
- *
- * @brief  Private implementation for ModifyEventSubscriptionRequest.
+ * \inmodule QtAwsDatabaseMigrationService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ModifyEventSubscriptionRequestPrivate object.
- *
- * @param  action  DatabaseMigrationService action being performed.
- * @param  q       Pointer to this object's public ModifyEventSubscriptionRequest instance.
+ * Constructs a ModifyEventSubscriptionRequestPrivate object for DatabaseMigrationService \a action with,
+ * public implementation \a q.
  */
 ModifyEventSubscriptionRequestPrivate::ModifyEventSubscriptionRequestPrivate(
     const DatabaseMigrationServiceRequest::Action action, ModifyEventSubscriptionRequest * const q)
@@ -115,15 +104,10 @@ ModifyEventSubscriptionRequestPrivate::ModifyEventSubscriptionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ModifyEventSubscriptionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ModifyEventSubscriptionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ModifyEventSubscriptionRequest instance.
  */
 ModifyEventSubscriptionRequestPrivate::ModifyEventSubscriptionRequestPrivate(
     const ModifyEventSubscriptionRequestPrivate &other, ModifyEventSubscriptionRequest * const q)

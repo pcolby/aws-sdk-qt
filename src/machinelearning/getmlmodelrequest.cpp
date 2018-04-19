@@ -27,19 +27,16 @@ namespace MachineLearning {
 
 /*!
  * \class QtAws::MachineLearning::GetMLModelRequest
- *
  * \brief The GetMLModelRequest class provides an interface for MachineLearning GetMLModel requests.
  *
- * \ingroup MachineLearning
+ * \inmodule QtAwsMachineLearning
  *
  *
  * \sa MachineLearningClient::getMLModel
  */
 
 /*!
- * @brief  Constructs a new GetMLModelRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetMLModelRequest::GetMLModelRequest(const GetMLModelRequest &other)
     : MachineLearningRequest(new GetMLModelRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ GetMLModelRequest::GetMLModelRequest(const GetMLModelRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetMLModelRequest object.
+ * Constructs a GetMLModelRequest object.
  */
 GetMLModelRequest::GetMLModelRequest()
     : MachineLearningRequest(new GetMLModelRequestPrivate(MachineLearningRequest::GetMLModelAction, this))
@@ -66,14 +63,9 @@ bool GetMLModelRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetMLModelResponse object.
+ * Returns a GetMLModelResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetMLModelResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MachineLearningClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetMLModelRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * GetMLModelRequest::response(QNetworkReply * c
 }
 
 /*!
- * @internal
+ * \class QtAws::MachineLearning::GetMLModelRequestPrivate
+ * \brief The GetMLModelRequestPrivate class provides private implementation for GetMLModelRequest.
+ * \internal
  *
- * @class  GetMLModelRequestPrivate
- *
- * @brief  Private implementation for GetMLModelRequest.
+ * \inmodule QtAwsMachineLearning
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetMLModelRequestPrivate object.
- *
- * @param  action  MachineLearning action being performed.
- * @param  q       Pointer to this object's public GetMLModelRequest instance.
+ * Constructs a GetMLModelRequestPrivate object for MachineLearning \a action with,
+ * public implementation \a q.
  */
 GetMLModelRequestPrivate::GetMLModelRequestPrivate(
     const MachineLearningRequest::Action action, GetMLModelRequest * const q)
@@ -104,15 +93,10 @@ GetMLModelRequestPrivate::GetMLModelRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetMLModelRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetMLModelRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetMLModelRequest instance.
  */
 GetMLModelRequestPrivate::GetMLModelRequestPrivate(
     const GetMLModelRequestPrivate &other, GetMLModelRequest * const q)

@@ -27,19 +27,16 @@ namespace Route53 {
 
 /*!
  * \class QtAws::Route53::ListGeoLocationsRequest
- *
  * \brief The ListGeoLocationsRequest class provides an interface for Route53 ListGeoLocations requests.
  *
- * \ingroup Route53
+ * \inmodule QtAwsRoute53
  *
  *
  * \sa Route53Client::listGeoLocations
  */
 
 /*!
- * @brief  Constructs a new ListGeoLocationsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListGeoLocationsRequest::ListGeoLocationsRequest(const ListGeoLocationsRequest &other)
     : Route53Request(new ListGeoLocationsRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ ListGeoLocationsRequest::ListGeoLocationsRequest(const ListGeoLocationsRequest &
 }
 
 /*!
- * @brief  Constructs a new ListGeoLocationsRequest object.
+ * Constructs a ListGeoLocationsRequest object.
  */
 ListGeoLocationsRequest::ListGeoLocationsRequest()
     : Route53Request(new ListGeoLocationsRequestPrivate(Route53Request::ListGeoLocationsAction, this))
@@ -66,14 +63,9 @@ bool ListGeoLocationsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListGeoLocationsResponse object.
+ * Returns a ListGeoLocationsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListGeoLocationsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  Route53Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListGeoLocationsRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * ListGeoLocationsRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::Route53::ListGeoLocationsRequestPrivate
+ * \brief The ListGeoLocationsRequestPrivate class provides private implementation for ListGeoLocationsRequest.
+ * \internal
  *
- * @class  ListGeoLocationsRequestPrivate
- *
- * @brief  Private implementation for ListGeoLocationsRequest.
+ * \inmodule QtAwsRoute53
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListGeoLocationsRequestPrivate object.
- *
- * @param  action  Route53 action being performed.
- * @param  q       Pointer to this object's public ListGeoLocationsRequest instance.
+ * Constructs a ListGeoLocationsRequestPrivate object for Route53 \a action with,
+ * public implementation \a q.
  */
 ListGeoLocationsRequestPrivate::ListGeoLocationsRequestPrivate(
     const Route53Request::Action action, ListGeoLocationsRequest * const q)
@@ -104,15 +93,10 @@ ListGeoLocationsRequestPrivate::ListGeoLocationsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListGeoLocationsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListGeoLocationsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListGeoLocationsRequest instance.
  */
 ListGeoLocationsRequestPrivate::ListGeoLocationsRequestPrivate(
     const ListGeoLocationsRequestPrivate &other, ListGeoLocationsRequest * const q)

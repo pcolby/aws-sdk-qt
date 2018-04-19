@@ -52,6 +52,9 @@
 /*!
  * \namespace QtAws::FMS
  * \brief The QtAws::FMS contains stuff...
+ *
+ * \inmodule QtAwsFMS
+ *
  * @todo Move this to a separate template file.
  */
 
@@ -107,7 +110,7 @@ FmsClient::FmsClient(
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * \a  AwsEndpoint::getEndpoint()
+ * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
 FmsClient::FmsClient(
     const QUrl &endpoint,

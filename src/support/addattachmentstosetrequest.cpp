@@ -27,10 +27,9 @@ namespace Support {
 
 /*!
  * \class QtAws::Support::AddAttachmentsToSetRequest
- *
  * \brief The AddAttachmentsToSetRequest class provides an interface for Support AddAttachmentsToSet requests.
  *
- * \ingroup Support
+ * \inmodule QtAwsSupport
  *
  *  <fullname>AWS Support</fullname>
  * 
@@ -105,9 +104,7 @@ namespace Support {
  */
 
 /*!
- * @brief  Constructs a new AddAttachmentsToSetRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AddAttachmentsToSetRequest::AddAttachmentsToSetRequest(const AddAttachmentsToSetRequest &other)
     : SupportRequest(new AddAttachmentsToSetRequestPrivate(*other.d_func(), this))
@@ -116,7 +113,7 @@ AddAttachmentsToSetRequest::AddAttachmentsToSetRequest(const AddAttachmentsToSet
 }
 
 /*!
- * @brief  Constructs a new AddAttachmentsToSetRequest object.
+ * Constructs a AddAttachmentsToSetRequest object.
  */
 AddAttachmentsToSetRequest::AddAttachmentsToSetRequest()
     : SupportRequest(new AddAttachmentsToSetRequestPrivate(SupportRequest::AddAttachmentsToSetAction, this))
@@ -134,14 +131,9 @@ bool AddAttachmentsToSetRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AddAttachmentsToSetResponse object.
+ * Returns a AddAttachmentsToSetResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AddAttachmentsToSetResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SupportClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AddAttachmentsToSetRequest::response(QNetworkReply * const reply) const
 {
@@ -149,20 +141,17 @@ QtAws::Core::AwsAbstractResponse * AddAttachmentsToSetRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::Support::AddAttachmentsToSetRequestPrivate
+ * \brief The AddAttachmentsToSetRequestPrivate class provides private implementation for AddAttachmentsToSetRequest.
+ * \internal
  *
- * @class  AddAttachmentsToSetRequestPrivate
- *
- * @brief  Private implementation for AddAttachmentsToSetRequest.
+ * \inmodule QtAwsSupport
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AddAttachmentsToSetRequestPrivate object.
- *
- * @param  action  Support action being performed.
- * @param  q       Pointer to this object's public AddAttachmentsToSetRequest instance.
+ * Constructs a AddAttachmentsToSetRequestPrivate object for Support \a action with,
+ * public implementation \a q.
  */
 AddAttachmentsToSetRequestPrivate::AddAttachmentsToSetRequestPrivate(
     const SupportRequest::Action action, AddAttachmentsToSetRequest * const q)
@@ -172,15 +161,10 @@ AddAttachmentsToSetRequestPrivate::AddAttachmentsToSetRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AddAttachmentsToSetRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AddAttachmentsToSetRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AddAttachmentsToSetRequest instance.
  */
 AddAttachmentsToSetRequestPrivate::AddAttachmentsToSetRequestPrivate(
     const AddAttachmentsToSetRequestPrivate &other, AddAttachmentsToSetRequest * const q)

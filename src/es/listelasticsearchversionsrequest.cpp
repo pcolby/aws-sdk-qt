@@ -27,10 +27,9 @@ namespace ElasticsearchService {
 
 /*!
  * \class QtAws::ElasticsearchService::ListElasticsearchVersionsRequest
- *
  * \brief The ListElasticsearchVersionsRequest class provides an interface for ElasticsearchService ListElasticsearchVersions requests.
  *
- * \ingroup ElasticsearchService
+ * \inmodule QtAwsElasticsearchService
  *
  *  <fullname>Amazon Elasticsearch Configuration Service</fullname>
  * 
@@ -46,9 +45,7 @@ namespace ElasticsearchService {
  */
 
 /*!
- * @brief  Constructs a new ListElasticsearchVersionsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListElasticsearchVersionsRequest::ListElasticsearchVersionsRequest(const ListElasticsearchVersionsRequest &other)
     : ElasticsearchServiceRequest(new ListElasticsearchVersionsRequestPrivate(*other.d_func(), this))
@@ -57,7 +54,7 @@ ListElasticsearchVersionsRequest::ListElasticsearchVersionsRequest(const ListEla
 }
 
 /*!
- * @brief  Constructs a new ListElasticsearchVersionsRequest object.
+ * Constructs a ListElasticsearchVersionsRequest object.
  */
 ListElasticsearchVersionsRequest::ListElasticsearchVersionsRequest()
     : ElasticsearchServiceRequest(new ListElasticsearchVersionsRequestPrivate(ElasticsearchServiceRequest::ListElasticsearchVersionsAction, this))
@@ -75,14 +72,9 @@ bool ListElasticsearchVersionsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListElasticsearchVersionsResponse object.
+ * Returns a ListElasticsearchVersionsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListElasticsearchVersionsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ElasticsearchServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListElasticsearchVersionsRequest::response(QNetworkReply * const reply) const
 {
@@ -90,20 +82,17 @@ QtAws::Core::AwsAbstractResponse * ListElasticsearchVersionsRequest::response(QN
 }
 
 /*!
- * @internal
+ * \class QtAws::ElasticsearchService::ListElasticsearchVersionsRequestPrivate
+ * \brief The ListElasticsearchVersionsRequestPrivate class provides private implementation for ListElasticsearchVersionsRequest.
+ * \internal
  *
- * @class  ListElasticsearchVersionsRequestPrivate
- *
- * @brief  Private implementation for ListElasticsearchVersionsRequest.
+ * \inmodule QtAwsElasticsearchService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListElasticsearchVersionsRequestPrivate object.
- *
- * @param  action  ElasticsearchService action being performed.
- * @param  q       Pointer to this object's public ListElasticsearchVersionsRequest instance.
+ * Constructs a ListElasticsearchVersionsRequestPrivate object for ElasticsearchService \a action with,
+ * public implementation \a q.
  */
 ListElasticsearchVersionsRequestPrivate::ListElasticsearchVersionsRequestPrivate(
     const ElasticsearchServiceRequest::Action action, ListElasticsearchVersionsRequest * const q)
@@ -113,15 +102,10 @@ ListElasticsearchVersionsRequestPrivate::ListElasticsearchVersionsRequestPrivate
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListElasticsearchVersionsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListElasticsearchVersionsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListElasticsearchVersionsRequest instance.
  */
 ListElasticsearchVersionsRequestPrivate::ListElasticsearchVersionsRequestPrivate(
     const ListElasticsearchVersionsRequestPrivate &other, ListElasticsearchVersionsRequest * const q)

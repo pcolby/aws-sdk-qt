@@ -27,10 +27,9 @@ namespace ACM {
 
 /*!
  * \class QtAws::ACM::UpdateCertificateOptionsRequest
- *
  * \brief The UpdateCertificateOptionsRequest class provides an interface for ACM UpdateCertificateOptions requests.
  *
- * \ingroup ACM
+ * \inmodule QtAwsACM
  *
  *  <fullname>AWS Certificate Manager</fullname>
  * 
@@ -46,9 +45,7 @@ namespace ACM {
  */
 
 /*!
- * @brief  Constructs a new UpdateCertificateOptionsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateCertificateOptionsRequest::UpdateCertificateOptionsRequest(const UpdateCertificateOptionsRequest &other)
     : ACMRequest(new UpdateCertificateOptionsRequestPrivate(*other.d_func(), this))
@@ -57,7 +54,7 @@ UpdateCertificateOptionsRequest::UpdateCertificateOptionsRequest(const UpdateCer
 }
 
 /*!
- * @brief  Constructs a new UpdateCertificateOptionsRequest object.
+ * Constructs a UpdateCertificateOptionsRequest object.
  */
 UpdateCertificateOptionsRequest::UpdateCertificateOptionsRequest()
     : ACMRequest(new UpdateCertificateOptionsRequestPrivate(ACMRequest::UpdateCertificateOptionsAction, this))
@@ -75,14 +72,9 @@ bool UpdateCertificateOptionsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateCertificateOptionsResponse object.
+ * Returns a UpdateCertificateOptionsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateCertificateOptionsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ACMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateCertificateOptionsRequest::response(QNetworkReply * const reply) const
 {
@@ -90,20 +82,17 @@ QtAws::Core::AwsAbstractResponse * UpdateCertificateOptionsRequest::response(QNe
 }
 
 /*!
- * @internal
+ * \class QtAws::ACM::UpdateCertificateOptionsRequestPrivate
+ * \brief The UpdateCertificateOptionsRequestPrivate class provides private implementation for UpdateCertificateOptionsRequest.
+ * \internal
  *
- * @class  UpdateCertificateOptionsRequestPrivate
- *
- * @brief  Private implementation for UpdateCertificateOptionsRequest.
+ * \inmodule QtAwsACM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateCertificateOptionsRequestPrivate object.
- *
- * @param  action  ACM action being performed.
- * @param  q       Pointer to this object's public UpdateCertificateOptionsRequest instance.
+ * Constructs a UpdateCertificateOptionsRequestPrivate object for ACM \a action with,
+ * public implementation \a q.
  */
 UpdateCertificateOptionsRequestPrivate::UpdateCertificateOptionsRequestPrivate(
     const ACMRequest::Action action, UpdateCertificateOptionsRequest * const q)
@@ -113,15 +102,10 @@ UpdateCertificateOptionsRequestPrivate::UpdateCertificateOptionsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateCertificateOptionsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateCertificateOptionsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateCertificateOptionsRequest instance.
  */
 UpdateCertificateOptionsRequestPrivate::UpdateCertificateOptionsRequestPrivate(
     const UpdateCertificateOptionsRequestPrivate &other, UpdateCertificateOptionsRequest * const q)

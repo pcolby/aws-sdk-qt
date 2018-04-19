@@ -27,10 +27,9 @@ namespace AlexaForBusiness {
 
 /*!
  * \class QtAws::AlexaForBusiness::ListSkillsRequest
- *
  * \brief The ListSkillsRequest class provides an interface for AlexaForBusiness ListSkills requests.
  *
- * \ingroup AlexaForBusiness
+ * \inmodule QtAwsAlexaForBusiness
  *
  *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
  *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
@@ -42,9 +41,7 @@ namespace AlexaForBusiness {
  */
 
 /*!
- * @brief  Constructs a new ListSkillsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListSkillsRequest::ListSkillsRequest(const ListSkillsRequest &other)
     : AlexaForBusinessRequest(new ListSkillsRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ ListSkillsRequest::ListSkillsRequest(const ListSkillsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ListSkillsRequest object.
+ * Constructs a ListSkillsRequest object.
  */
 ListSkillsRequest::ListSkillsRequest()
     : AlexaForBusinessRequest(new ListSkillsRequestPrivate(AlexaForBusinessRequest::ListSkillsAction, this))
@@ -71,14 +68,9 @@ bool ListSkillsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListSkillsResponse object.
+ * Returns a ListSkillsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListSkillsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AlexaForBusinessClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListSkillsRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * ListSkillsRequest::response(QNetworkReply * c
 }
 
 /*!
- * @internal
+ * \class QtAws::AlexaForBusiness::ListSkillsRequestPrivate
+ * \brief The ListSkillsRequestPrivate class provides private implementation for ListSkillsRequest.
+ * \internal
  *
- * @class  ListSkillsRequestPrivate
- *
- * @brief  Private implementation for ListSkillsRequest.
+ * \inmodule QtAwsAlexaForBusiness
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListSkillsRequestPrivate object.
- *
- * @param  action  AlexaForBusiness action being performed.
- * @param  q       Pointer to this object's public ListSkillsRequest instance.
+ * Constructs a ListSkillsRequestPrivate object for AlexaForBusiness \a action with,
+ * public implementation \a q.
  */
 ListSkillsRequestPrivate::ListSkillsRequestPrivate(
     const AlexaForBusinessRequest::Action action, ListSkillsRequest * const q)
@@ -109,15 +98,10 @@ ListSkillsRequestPrivate::ListSkillsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListSkillsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListSkillsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListSkillsRequest instance.
  */
 ListSkillsRequestPrivate::ListSkillsRequestPrivate(
     const ListSkillsRequestPrivate &other, ListSkillsRequest * const q)

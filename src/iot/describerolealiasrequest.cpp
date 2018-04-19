@@ -27,10 +27,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::DescribeRoleAliasRequest
- *
  * \brief The DescribeRoleAliasRequest class provides an interface for IoT DescribeRoleAlias requests.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -48,9 +47,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new DescribeRoleAliasRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeRoleAliasRequest::DescribeRoleAliasRequest(const DescribeRoleAliasRequest &other)
     : IoTRequest(new DescribeRoleAliasRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ DescribeRoleAliasRequest::DescribeRoleAliasRequest(const DescribeRoleAliasReques
 }
 
 /*!
- * @brief  Constructs a new DescribeRoleAliasRequest object.
+ * Constructs a DescribeRoleAliasRequest object.
  */
 DescribeRoleAliasRequest::DescribeRoleAliasRequest()
     : IoTRequest(new DescribeRoleAliasRequestPrivate(IoTRequest::DescribeRoleAliasAction, this))
@@ -77,14 +74,9 @@ bool DescribeRoleAliasRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeRoleAliasResponse object.
+ * Returns a DescribeRoleAliasResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeRoleAliasResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IoTClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeRoleAliasRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * DescribeRoleAliasRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::IoT::DescribeRoleAliasRequestPrivate
+ * \brief The DescribeRoleAliasRequestPrivate class provides private implementation for DescribeRoleAliasRequest.
+ * \internal
  *
- * @class  DescribeRoleAliasRequestPrivate
- *
- * @brief  Private implementation for DescribeRoleAliasRequest.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeRoleAliasRequestPrivate object.
- *
- * @param  action  IoT action being performed.
- * @param  q       Pointer to this object's public DescribeRoleAliasRequest instance.
+ * Constructs a DescribeRoleAliasRequestPrivate object for IoT \a action with,
+ * public implementation \a q.
  */
 DescribeRoleAliasRequestPrivate::DescribeRoleAliasRequestPrivate(
     const IoTRequest::Action action, DescribeRoleAliasRequest * const q)
@@ -115,15 +104,10 @@ DescribeRoleAliasRequestPrivate::DescribeRoleAliasRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeRoleAliasRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeRoleAliasRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeRoleAliasRequest instance.
  */
 DescribeRoleAliasRequestPrivate::DescribeRoleAliasRequestPrivate(
     const DescribeRoleAliasRequestPrivate &other, DescribeRoleAliasRequest * const q)

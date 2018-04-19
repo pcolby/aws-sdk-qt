@@ -27,10 +27,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::DeregisterManagedInstanceRequest
- *
  * \brief The DeregisterManagedInstanceRequest class provides an interface for SSM DeregisterManagedInstance requests.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -61,9 +60,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new DeregisterManagedInstanceRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeregisterManagedInstanceRequest::DeregisterManagedInstanceRequest(const DeregisterManagedInstanceRequest &other)
     : SSMRequest(new DeregisterManagedInstanceRequestPrivate(*other.d_func(), this))
@@ -72,7 +69,7 @@ DeregisterManagedInstanceRequest::DeregisterManagedInstanceRequest(const Deregis
 }
 
 /*!
- * @brief  Constructs a new DeregisterManagedInstanceRequest object.
+ * Constructs a DeregisterManagedInstanceRequest object.
  */
 DeregisterManagedInstanceRequest::DeregisterManagedInstanceRequest()
     : SSMRequest(new DeregisterManagedInstanceRequestPrivate(SSMRequest::DeregisterManagedInstanceAction, this))
@@ -90,14 +87,9 @@ bool DeregisterManagedInstanceRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeregisterManagedInstanceResponse object.
+ * Returns a DeregisterManagedInstanceResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeregisterManagedInstanceResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SSMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeregisterManagedInstanceRequest::response(QNetworkReply * const reply) const
 {
@@ -105,20 +97,17 @@ QtAws::Core::AwsAbstractResponse * DeregisterManagedInstanceRequest::response(QN
 }
 
 /*!
- * @internal
+ * \class QtAws::SSM::DeregisterManagedInstanceRequestPrivate
+ * \brief The DeregisterManagedInstanceRequestPrivate class provides private implementation for DeregisterManagedInstanceRequest.
+ * \internal
  *
- * @class  DeregisterManagedInstanceRequestPrivate
- *
- * @brief  Private implementation for DeregisterManagedInstanceRequest.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeregisterManagedInstanceRequestPrivate object.
- *
- * @param  action  SSM action being performed.
- * @param  q       Pointer to this object's public DeregisterManagedInstanceRequest instance.
+ * Constructs a DeregisterManagedInstanceRequestPrivate object for SSM \a action with,
+ * public implementation \a q.
  */
 DeregisterManagedInstanceRequestPrivate::DeregisterManagedInstanceRequestPrivate(
     const SSMRequest::Action action, DeregisterManagedInstanceRequest * const q)
@@ -128,15 +117,10 @@ DeregisterManagedInstanceRequestPrivate::DeregisterManagedInstanceRequestPrivate
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeregisterManagedInstanceRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeregisterManagedInstanceRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeregisterManagedInstanceRequest instance.
  */
 DeregisterManagedInstanceRequestPrivate::DeregisterManagedInstanceRequestPrivate(
     const DeregisterManagedInstanceRequestPrivate &other, DeregisterManagedInstanceRequest * const q)

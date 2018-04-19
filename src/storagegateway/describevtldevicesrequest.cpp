@@ -27,10 +27,9 @@ namespace StorageGateway {
 
 /*!
  * \class QtAws::StorageGateway::DescribeVTLDevicesRequest
- *
  * \brief The DescribeVTLDevicesRequest class provides an interface for StorageGateway DescribeVTLDevices requests.
  *
- * \ingroup StorageGateway
+ * \inmodule QtAwsStorageGateway
  *
  *  <fullname>AWS Storage Gateway Service</fullname>
  * 
@@ -106,9 +105,7 @@ namespace StorageGateway {
  */
 
 /*!
- * @brief  Constructs a new DescribeVTLDevicesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeVTLDevicesRequest::DescribeVTLDevicesRequest(const DescribeVTLDevicesRequest &other)
     : StorageGatewayRequest(new DescribeVTLDevicesRequestPrivate(*other.d_func(), this))
@@ -117,7 +114,7 @@ DescribeVTLDevicesRequest::DescribeVTLDevicesRequest(const DescribeVTLDevicesReq
 }
 
 /*!
- * @brief  Constructs a new DescribeVTLDevicesRequest object.
+ * Constructs a DescribeVTLDevicesRequest object.
  */
 DescribeVTLDevicesRequest::DescribeVTLDevicesRequest()
     : StorageGatewayRequest(new DescribeVTLDevicesRequestPrivate(StorageGatewayRequest::DescribeVTLDevicesAction, this))
@@ -135,14 +132,9 @@ bool DescribeVTLDevicesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeVTLDevicesResponse object.
+ * Returns a DescribeVTLDevicesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeVTLDevicesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  StorageGatewayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeVTLDevicesRequest::response(QNetworkReply * const reply) const
 {
@@ -150,20 +142,17 @@ QtAws::Core::AwsAbstractResponse * DescribeVTLDevicesRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::StorageGateway::DescribeVTLDevicesRequestPrivate
+ * \brief The DescribeVTLDevicesRequestPrivate class provides private implementation for DescribeVTLDevicesRequest.
+ * \internal
  *
- * @class  DescribeVTLDevicesRequestPrivate
- *
- * @brief  Private implementation for DescribeVTLDevicesRequest.
+ * \inmodule QtAwsStorageGateway
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeVTLDevicesRequestPrivate object.
- *
- * @param  action  StorageGateway action being performed.
- * @param  q       Pointer to this object's public DescribeVTLDevicesRequest instance.
+ * Constructs a DescribeVTLDevicesRequestPrivate object for StorageGateway \a action with,
+ * public implementation \a q.
  */
 DescribeVTLDevicesRequestPrivate::DescribeVTLDevicesRequestPrivate(
     const StorageGatewayRequest::Action action, DescribeVTLDevicesRequest * const q)
@@ -173,15 +162,10 @@ DescribeVTLDevicesRequestPrivate::DescribeVTLDevicesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeVTLDevicesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeVTLDevicesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeVTLDevicesRequest instance.
  */
 DescribeVTLDevicesRequestPrivate::DescribeVTLDevicesRequestPrivate(
     const DescribeVTLDevicesRequestPrivate &other, DescribeVTLDevicesRequest * const q)

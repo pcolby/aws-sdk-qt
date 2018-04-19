@@ -27,19 +27,16 @@ namespace S3 {
 
 /*!
  * \class QtAws::S3::UploadPartCopyRequest
- *
  * \brief The UploadPartCopyRequest class provides an interface for S3 UploadPartCopy requests.
  *
- * \ingroup S3
+ * \inmodule QtAwsS3
  *
  *
  * \sa S3Client::uploadPartCopy
  */
 
 /*!
- * @brief  Constructs a new UploadPartCopyRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UploadPartCopyRequest::UploadPartCopyRequest(const UploadPartCopyRequest &other)
     : S3Request(new UploadPartCopyRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ UploadPartCopyRequest::UploadPartCopyRequest(const UploadPartCopyRequest &other)
 }
 
 /*!
- * @brief  Constructs a new UploadPartCopyRequest object.
+ * Constructs a UploadPartCopyRequest object.
  */
 UploadPartCopyRequest::UploadPartCopyRequest()
     : S3Request(new UploadPartCopyRequestPrivate(S3Request::UploadPartCopyAction, this))
@@ -66,14 +63,9 @@ bool UploadPartCopyRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UploadPartCopyResponse object.
+ * Returns a UploadPartCopyResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UploadPartCopyResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  S3Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UploadPartCopyRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * UploadPartCopyRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::S3::UploadPartCopyRequestPrivate
+ * \brief The UploadPartCopyRequestPrivate class provides private implementation for UploadPartCopyRequest.
+ * \internal
  *
- * @class  UploadPartCopyRequestPrivate
- *
- * @brief  Private implementation for UploadPartCopyRequest.
+ * \inmodule QtAwsS3
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UploadPartCopyRequestPrivate object.
- *
- * @param  action  S3 action being performed.
- * @param  q       Pointer to this object's public UploadPartCopyRequest instance.
+ * Constructs a UploadPartCopyRequestPrivate object for S3 \a action with,
+ * public implementation \a q.
  */
 UploadPartCopyRequestPrivate::UploadPartCopyRequestPrivate(
     const S3Request::Action action, UploadPartCopyRequest * const q)
@@ -104,15 +93,10 @@ UploadPartCopyRequestPrivate::UploadPartCopyRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UploadPartCopyRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UploadPartCopyRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UploadPartCopyRequest instance.
  */
 UploadPartCopyRequestPrivate::UploadPartCopyRequestPrivate(
     const UploadPartCopyRequestPrivate &other, UploadPartCopyRequest * const q)

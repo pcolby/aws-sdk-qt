@@ -27,10 +27,9 @@ namespace Greengrass {
 
 /*!
  * \class QtAws::Greengrass::GetLoggerDefinitionRequest
- *
  * \brief The GetLoggerDefinitionRequest class provides an interface for Greengrass GetLoggerDefinition requests.
  *
- * \ingroup Greengrass
+ * \inmodule QtAwsGreengrass
  *
  *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
  *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
@@ -40,9 +39,7 @@ namespace Greengrass {
  */
 
 /*!
- * @brief  Constructs a new GetLoggerDefinitionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetLoggerDefinitionRequest::GetLoggerDefinitionRequest(const GetLoggerDefinitionRequest &other)
     : GreengrassRequest(new GetLoggerDefinitionRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ GetLoggerDefinitionRequest::GetLoggerDefinitionRequest(const GetLoggerDefinition
 }
 
 /*!
- * @brief  Constructs a new GetLoggerDefinitionRequest object.
+ * Constructs a GetLoggerDefinitionRequest object.
  */
 GetLoggerDefinitionRequest::GetLoggerDefinitionRequest()
     : GreengrassRequest(new GetLoggerDefinitionRequestPrivate(GreengrassRequest::GetLoggerDefinitionAction, this))
@@ -69,14 +66,9 @@ bool GetLoggerDefinitionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetLoggerDefinitionResponse object.
+ * Returns a GetLoggerDefinitionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetLoggerDefinitionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GreengrassClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetLoggerDefinitionRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * GetLoggerDefinitionRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::Greengrass::GetLoggerDefinitionRequestPrivate
+ * \brief The GetLoggerDefinitionRequestPrivate class provides private implementation for GetLoggerDefinitionRequest.
+ * \internal
  *
- * @class  GetLoggerDefinitionRequestPrivate
- *
- * @brief  Private implementation for GetLoggerDefinitionRequest.
+ * \inmodule QtAwsGreengrass
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetLoggerDefinitionRequestPrivate object.
- *
- * @param  action  Greengrass action being performed.
- * @param  q       Pointer to this object's public GetLoggerDefinitionRequest instance.
+ * Constructs a GetLoggerDefinitionRequestPrivate object for Greengrass \a action with,
+ * public implementation \a q.
  */
 GetLoggerDefinitionRequestPrivate::GetLoggerDefinitionRequestPrivate(
     const GreengrassRequest::Action action, GetLoggerDefinitionRequest * const q)
@@ -107,15 +96,10 @@ GetLoggerDefinitionRequestPrivate::GetLoggerDefinitionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetLoggerDefinitionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetLoggerDefinitionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetLoggerDefinitionRequest instance.
  */
 GetLoggerDefinitionRequestPrivate::GetLoggerDefinitionRequestPrivate(
     const GetLoggerDefinitionRequestPrivate &other, GetLoggerDefinitionRequest * const q)

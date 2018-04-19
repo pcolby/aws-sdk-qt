@@ -27,10 +27,9 @@ namespace CodePipeline {
 
 /*!
  * \class QtAws::CodePipeline::PutThirdPartyJobFailureResultRequest
- *
  * \brief The PutThirdPartyJobFailureResultRequest class provides an interface for CodePipeline PutThirdPartyJobFailureResult requests.
  *
- * \ingroup CodePipeline
+ * \inmodule QtAwsCodePipeline
  *
  *  <fullname>AWS CodePipeline</fullname>
  * 
@@ -200,9 +199,7 @@ namespace CodePipeline {
  */
 
 /*!
- * @brief  Constructs a new PutThirdPartyJobFailureResultRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 PutThirdPartyJobFailureResultRequest::PutThirdPartyJobFailureResultRequest(const PutThirdPartyJobFailureResultRequest &other)
     : CodePipelineRequest(new PutThirdPartyJobFailureResultRequestPrivate(*other.d_func(), this))
@@ -211,7 +208,7 @@ PutThirdPartyJobFailureResultRequest::PutThirdPartyJobFailureResultRequest(const
 }
 
 /*!
- * @brief  Constructs a new PutThirdPartyJobFailureResultRequest object.
+ * Constructs a PutThirdPartyJobFailureResultRequest object.
  */
 PutThirdPartyJobFailureResultRequest::PutThirdPartyJobFailureResultRequest()
     : CodePipelineRequest(new PutThirdPartyJobFailureResultRequestPrivate(CodePipelineRequest::PutThirdPartyJobFailureResultAction, this))
@@ -229,14 +226,9 @@ bool PutThirdPartyJobFailureResultRequest::isValid() const
 
 
 /*!
- * @brief  Construct an PutThirdPartyJobFailureResultResponse object.
+ * Returns a PutThirdPartyJobFailureResultResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An PutThirdPartyJobFailureResultResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CodePipelineClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * PutThirdPartyJobFailureResultRequest::response(QNetworkReply * const reply) const
 {
@@ -244,20 +236,17 @@ QtAws::Core::AwsAbstractResponse * PutThirdPartyJobFailureResultRequest::respons
 }
 
 /*!
- * @internal
+ * \class QtAws::CodePipeline::PutThirdPartyJobFailureResultRequestPrivate
+ * \brief The PutThirdPartyJobFailureResultRequestPrivate class provides private implementation for PutThirdPartyJobFailureResultRequest.
+ * \internal
  *
- * @class  PutThirdPartyJobFailureResultRequestPrivate
- *
- * @brief  Private implementation for PutThirdPartyJobFailureResultRequest.
+ * \inmodule QtAwsCodePipeline
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new PutThirdPartyJobFailureResultRequestPrivate object.
- *
- * @param  action  CodePipeline action being performed.
- * @param  q       Pointer to this object's public PutThirdPartyJobFailureResultRequest instance.
+ * Constructs a PutThirdPartyJobFailureResultRequestPrivate object for CodePipeline \a action with,
+ * public implementation \a q.
  */
 PutThirdPartyJobFailureResultRequestPrivate::PutThirdPartyJobFailureResultRequestPrivate(
     const CodePipelineRequest::Action action, PutThirdPartyJobFailureResultRequest * const q)
@@ -267,15 +256,10 @@ PutThirdPartyJobFailureResultRequestPrivate::PutThirdPartyJobFailureResultReques
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutThirdPartyJobFailureResultRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the PutThirdPartyJobFailureResultRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public PutThirdPartyJobFailureResultRequest instance.
  */
 PutThirdPartyJobFailureResultRequestPrivate::PutThirdPartyJobFailureResultRequestPrivate(
     const PutThirdPartyJobFailureResultRequestPrivate &other, PutThirdPartyJobFailureResultRequest * const q)

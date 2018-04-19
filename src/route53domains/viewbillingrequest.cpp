@@ -27,10 +27,9 @@ namespace Route53Domains {
 
 /*!
  * \class QtAws::Route53Domains::ViewBillingRequest
- *
  * \brief The ViewBillingRequest class provides an interface for Route53Domains ViewBilling requests.
  *
- * \ingroup Route53Domains
+ * \inmodule QtAwsRoute53Domains
  *
  *  Amazon Route 53 API actions let you register domain names and perform related
  *
@@ -38,9 +37,7 @@ namespace Route53Domains {
  */
 
 /*!
- * @brief  Constructs a new ViewBillingRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ViewBillingRequest::ViewBillingRequest(const ViewBillingRequest &other)
     : Route53DomainsRequest(new ViewBillingRequestPrivate(*other.d_func(), this))
@@ -49,7 +46,7 @@ ViewBillingRequest::ViewBillingRequest(const ViewBillingRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ViewBillingRequest object.
+ * Constructs a ViewBillingRequest object.
  */
 ViewBillingRequest::ViewBillingRequest()
     : Route53DomainsRequest(new ViewBillingRequestPrivate(Route53DomainsRequest::ViewBillingAction, this))
@@ -67,14 +64,9 @@ bool ViewBillingRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ViewBillingResponse object.
+ * Returns a ViewBillingResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ViewBillingResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  Route53DomainsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ViewBillingRequest::response(QNetworkReply * const reply) const
 {
@@ -82,20 +74,17 @@ QtAws::Core::AwsAbstractResponse * ViewBillingRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::Route53Domains::ViewBillingRequestPrivate
+ * \brief The ViewBillingRequestPrivate class provides private implementation for ViewBillingRequest.
+ * \internal
  *
- * @class  ViewBillingRequestPrivate
- *
- * @brief  Private implementation for ViewBillingRequest.
+ * \inmodule QtAwsRoute53Domains
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ViewBillingRequestPrivate object.
- *
- * @param  action  Route53Domains action being performed.
- * @param  q       Pointer to this object's public ViewBillingRequest instance.
+ * Constructs a ViewBillingRequestPrivate object for Route53Domains \a action with,
+ * public implementation \a q.
  */
 ViewBillingRequestPrivate::ViewBillingRequestPrivate(
     const Route53DomainsRequest::Action action, ViewBillingRequest * const q)
@@ -105,15 +94,10 @@ ViewBillingRequestPrivate::ViewBillingRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ViewBillingRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ViewBillingRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ViewBillingRequest instance.
  */
 ViewBillingRequestPrivate::ViewBillingRequestPrivate(
     const ViewBillingRequestPrivate &other, ViewBillingRequest * const q)

@@ -27,10 +27,9 @@ namespace ElasticBeanstalk {
 
 /*!
  * \class QtAws::ElasticBeanstalk::DescribeApplicationsRequest
- *
  * \brief The DescribeApplicationsRequest class provides an interface for ElasticBeanstalk DescribeApplications requests.
  *
- * \ingroup ElasticBeanstalk
+ * \inmodule QtAwsElasticBeanstalk
  *
  *  <fullname>AWS Elastic Beanstalk</fullname>
  * 
@@ -59,9 +58,7 @@ namespace ElasticBeanstalk {
  */
 
 /*!
- * @brief  Constructs a new DescribeApplicationsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeApplicationsRequest::DescribeApplicationsRequest(const DescribeApplicationsRequest &other)
     : ElasticBeanstalkRequest(new DescribeApplicationsRequestPrivate(*other.d_func(), this))
@@ -70,7 +67,7 @@ DescribeApplicationsRequest::DescribeApplicationsRequest(const DescribeApplicati
 }
 
 /*!
- * @brief  Constructs a new DescribeApplicationsRequest object.
+ * Constructs a DescribeApplicationsRequest object.
  */
 DescribeApplicationsRequest::DescribeApplicationsRequest()
     : ElasticBeanstalkRequest(new DescribeApplicationsRequestPrivate(ElasticBeanstalkRequest::DescribeApplicationsAction, this))
@@ -88,14 +85,9 @@ bool DescribeApplicationsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeApplicationsResponse object.
+ * Returns a DescribeApplicationsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeApplicationsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ElasticBeanstalkClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeApplicationsRequest::response(QNetworkReply * const reply) const
 {
@@ -103,20 +95,17 @@ QtAws::Core::AwsAbstractResponse * DescribeApplicationsRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::ElasticBeanstalk::DescribeApplicationsRequestPrivate
+ * \brief The DescribeApplicationsRequestPrivate class provides private implementation for DescribeApplicationsRequest.
+ * \internal
  *
- * @class  DescribeApplicationsRequestPrivate
- *
- * @brief  Private implementation for DescribeApplicationsRequest.
+ * \inmodule QtAwsElasticBeanstalk
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeApplicationsRequestPrivate object.
- *
- * @param  action  ElasticBeanstalk action being performed.
- * @param  q       Pointer to this object's public DescribeApplicationsRequest instance.
+ * Constructs a DescribeApplicationsRequestPrivate object for ElasticBeanstalk \a action with,
+ * public implementation \a q.
  */
 DescribeApplicationsRequestPrivate::DescribeApplicationsRequestPrivate(
     const ElasticBeanstalkRequest::Action action, DescribeApplicationsRequest * const q)
@@ -126,15 +115,10 @@ DescribeApplicationsRequestPrivate::DescribeApplicationsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeApplicationsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeApplicationsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeApplicationsRequest instance.
  */
 DescribeApplicationsRequestPrivate::DescribeApplicationsRequestPrivate(
     const DescribeApplicationsRequestPrivate &other, DescribeApplicationsRequest * const q)

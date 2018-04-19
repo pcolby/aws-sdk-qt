@@ -27,10 +27,9 @@ namespace AlexaForBusiness {
 
 /*!
  * \class QtAws::AlexaForBusiness::CreateContactRequest
- *
  * \brief The CreateContactRequest class provides an interface for AlexaForBusiness CreateContact requests.
  *
- * \ingroup AlexaForBusiness
+ * \inmodule QtAwsAlexaForBusiness
  *
  *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
  *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
@@ -42,9 +41,7 @@ namespace AlexaForBusiness {
  */
 
 /*!
- * @brief  Constructs a new CreateContactRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateContactRequest::CreateContactRequest(const CreateContactRequest &other)
     : AlexaForBusinessRequest(new CreateContactRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ CreateContactRequest::CreateContactRequest(const CreateContactRequest &other)
 }
 
 /*!
- * @brief  Constructs a new CreateContactRequest object.
+ * Constructs a CreateContactRequest object.
  */
 CreateContactRequest::CreateContactRequest()
     : AlexaForBusinessRequest(new CreateContactRequestPrivate(AlexaForBusinessRequest::CreateContactAction, this))
@@ -71,14 +68,9 @@ bool CreateContactRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateContactResponse object.
+ * Returns a CreateContactResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateContactResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AlexaForBusinessClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateContactRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * CreateContactRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::AlexaForBusiness::CreateContactRequestPrivate
+ * \brief The CreateContactRequestPrivate class provides private implementation for CreateContactRequest.
+ * \internal
  *
- * @class  CreateContactRequestPrivate
- *
- * @brief  Private implementation for CreateContactRequest.
+ * \inmodule QtAwsAlexaForBusiness
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateContactRequestPrivate object.
- *
- * @param  action  AlexaForBusiness action being performed.
- * @param  q       Pointer to this object's public CreateContactRequest instance.
+ * Constructs a CreateContactRequestPrivate object for AlexaForBusiness \a action with,
+ * public implementation \a q.
  */
 CreateContactRequestPrivate::CreateContactRequestPrivate(
     const AlexaForBusinessRequest::Action action, CreateContactRequest * const q)
@@ -109,15 +98,10 @@ CreateContactRequestPrivate::CreateContactRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateContactRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateContactRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateContactRequest instance.
  */
 CreateContactRequestPrivate::CreateContactRequestPrivate(
     const CreateContactRequestPrivate &other, CreateContactRequest * const q)

@@ -27,10 +27,9 @@ namespace CognitoSync {
 
 /*!
  * \class QtAws::CognitoSync::DescribeIdentityPoolUsageRequest
- *
  * \brief The DescribeIdentityPoolUsageRequest class provides an interface for CognitoSync DescribeIdentityPoolUsage requests.
  *
- * \ingroup CognitoSync
+ * \inmodule QtAwsCognitoSync
  *
  *  <fullname>Amazon Cognito Sync</fullname>
  * 
@@ -57,9 +56,7 @@ namespace CognitoSync {
  */
 
 /*!
- * @brief  Constructs a new DescribeIdentityPoolUsageRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeIdentityPoolUsageRequest::DescribeIdentityPoolUsageRequest(const DescribeIdentityPoolUsageRequest &other)
     : CognitoSyncRequest(new DescribeIdentityPoolUsageRequestPrivate(*other.d_func(), this))
@@ -68,7 +65,7 @@ DescribeIdentityPoolUsageRequest::DescribeIdentityPoolUsageRequest(const Describ
 }
 
 /*!
- * @brief  Constructs a new DescribeIdentityPoolUsageRequest object.
+ * Constructs a DescribeIdentityPoolUsageRequest object.
  */
 DescribeIdentityPoolUsageRequest::DescribeIdentityPoolUsageRequest()
     : CognitoSyncRequest(new DescribeIdentityPoolUsageRequestPrivate(CognitoSyncRequest::DescribeIdentityPoolUsageAction, this))
@@ -86,14 +83,9 @@ bool DescribeIdentityPoolUsageRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeIdentityPoolUsageResponse object.
+ * Returns a DescribeIdentityPoolUsageResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeIdentityPoolUsageResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CognitoSyncClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeIdentityPoolUsageRequest::response(QNetworkReply * const reply) const
 {
@@ -101,20 +93,17 @@ QtAws::Core::AwsAbstractResponse * DescribeIdentityPoolUsageRequest::response(QN
 }
 
 /*!
- * @internal
+ * \class QtAws::CognitoSync::DescribeIdentityPoolUsageRequestPrivate
+ * \brief The DescribeIdentityPoolUsageRequestPrivate class provides private implementation for DescribeIdentityPoolUsageRequest.
+ * \internal
  *
- * @class  DescribeIdentityPoolUsageRequestPrivate
- *
- * @brief  Private implementation for DescribeIdentityPoolUsageRequest.
+ * \inmodule QtAwsCognitoSync
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeIdentityPoolUsageRequestPrivate object.
- *
- * @param  action  CognitoSync action being performed.
- * @param  q       Pointer to this object's public DescribeIdentityPoolUsageRequest instance.
+ * Constructs a DescribeIdentityPoolUsageRequestPrivate object for CognitoSync \a action with,
+ * public implementation \a q.
  */
 DescribeIdentityPoolUsageRequestPrivate::DescribeIdentityPoolUsageRequestPrivate(
     const CognitoSyncRequest::Action action, DescribeIdentityPoolUsageRequest * const q)
@@ -124,15 +113,10 @@ DescribeIdentityPoolUsageRequestPrivate::DescribeIdentityPoolUsageRequestPrivate
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeIdentityPoolUsageRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeIdentityPoolUsageRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeIdentityPoolUsageRequest instance.
  */
 DescribeIdentityPoolUsageRequestPrivate::DescribeIdentityPoolUsageRequestPrivate(
     const DescribeIdentityPoolUsageRequestPrivate &other, DescribeIdentityPoolUsageRequest * const q)

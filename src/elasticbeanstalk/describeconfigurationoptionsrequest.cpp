@@ -27,10 +27,9 @@ namespace ElasticBeanstalk {
 
 /*!
  * \class QtAws::ElasticBeanstalk::DescribeConfigurationOptionsRequest
- *
  * \brief The DescribeConfigurationOptionsRequest class provides an interface for ElasticBeanstalk DescribeConfigurationOptions requests.
  *
- * \ingroup ElasticBeanstalk
+ * \inmodule QtAwsElasticBeanstalk
  *
  *  <fullname>AWS Elastic Beanstalk</fullname>
  * 
@@ -59,9 +58,7 @@ namespace ElasticBeanstalk {
  */
 
 /*!
- * @brief  Constructs a new DescribeConfigurationOptionsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeConfigurationOptionsRequest::DescribeConfigurationOptionsRequest(const DescribeConfigurationOptionsRequest &other)
     : ElasticBeanstalkRequest(new DescribeConfigurationOptionsRequestPrivate(*other.d_func(), this))
@@ -70,7 +67,7 @@ DescribeConfigurationOptionsRequest::DescribeConfigurationOptionsRequest(const D
 }
 
 /*!
- * @brief  Constructs a new DescribeConfigurationOptionsRequest object.
+ * Constructs a DescribeConfigurationOptionsRequest object.
  */
 DescribeConfigurationOptionsRequest::DescribeConfigurationOptionsRequest()
     : ElasticBeanstalkRequest(new DescribeConfigurationOptionsRequestPrivate(ElasticBeanstalkRequest::DescribeConfigurationOptionsAction, this))
@@ -88,14 +85,9 @@ bool DescribeConfigurationOptionsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeConfigurationOptionsResponse object.
+ * Returns a DescribeConfigurationOptionsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeConfigurationOptionsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ElasticBeanstalkClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeConfigurationOptionsRequest::response(QNetworkReply * const reply) const
 {
@@ -103,20 +95,17 @@ QtAws::Core::AwsAbstractResponse * DescribeConfigurationOptionsRequest::response
 }
 
 /*!
- * @internal
+ * \class QtAws::ElasticBeanstalk::DescribeConfigurationOptionsRequestPrivate
+ * \brief The DescribeConfigurationOptionsRequestPrivate class provides private implementation for DescribeConfigurationOptionsRequest.
+ * \internal
  *
- * @class  DescribeConfigurationOptionsRequestPrivate
- *
- * @brief  Private implementation for DescribeConfigurationOptionsRequest.
+ * \inmodule QtAwsElasticBeanstalk
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeConfigurationOptionsRequestPrivate object.
- *
- * @param  action  ElasticBeanstalk action being performed.
- * @param  q       Pointer to this object's public DescribeConfigurationOptionsRequest instance.
+ * Constructs a DescribeConfigurationOptionsRequestPrivate object for ElasticBeanstalk \a action with,
+ * public implementation \a q.
  */
 DescribeConfigurationOptionsRequestPrivate::DescribeConfigurationOptionsRequestPrivate(
     const ElasticBeanstalkRequest::Action action, DescribeConfigurationOptionsRequest * const q)
@@ -126,15 +115,10 @@ DescribeConfigurationOptionsRequestPrivate::DescribeConfigurationOptionsRequestP
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeConfigurationOptionsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeConfigurationOptionsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeConfigurationOptionsRequest instance.
  */
 DescribeConfigurationOptionsRequestPrivate::DescribeConfigurationOptionsRequestPrivate(
     const DescribeConfigurationOptionsRequestPrivate &other, DescribeConfigurationOptionsRequest * const q)

@@ -27,10 +27,9 @@ namespace CloudTrail {
 
 /*!
  * \class QtAws::CloudTrail::UpdateTrailRequest
- *
  * \brief The UpdateTrailRequest class provides an interface for CloudTrail UpdateTrail requests.
  *
- * \ingroup CloudTrail
+ * \inmodule QtAwsCloudTrail
  *
  *  <fullname>AWS CloudTrail</fullname>
  * 
@@ -60,9 +59,7 @@ namespace CloudTrail {
  */
 
 /*!
- * @brief  Constructs a new UpdateTrailRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateTrailRequest::UpdateTrailRequest(const UpdateTrailRequest &other)
     : CloudTrailRequest(new UpdateTrailRequestPrivate(*other.d_func(), this))
@@ -71,7 +68,7 @@ UpdateTrailRequest::UpdateTrailRequest(const UpdateTrailRequest &other)
 }
 
 /*!
- * @brief  Constructs a new UpdateTrailRequest object.
+ * Constructs a UpdateTrailRequest object.
  */
 UpdateTrailRequest::UpdateTrailRequest()
     : CloudTrailRequest(new UpdateTrailRequestPrivate(CloudTrailRequest::UpdateTrailAction, this))
@@ -89,14 +86,9 @@ bool UpdateTrailRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateTrailResponse object.
+ * Returns a UpdateTrailResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateTrailResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudTrailClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateTrailRequest::response(QNetworkReply * const reply) const
 {
@@ -104,20 +96,17 @@ QtAws::Core::AwsAbstractResponse * UpdateTrailRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudTrail::UpdateTrailRequestPrivate
+ * \brief The UpdateTrailRequestPrivate class provides private implementation for UpdateTrailRequest.
+ * \internal
  *
- * @class  UpdateTrailRequestPrivate
- *
- * @brief  Private implementation for UpdateTrailRequest.
+ * \inmodule QtAwsCloudTrail
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateTrailRequestPrivate object.
- *
- * @param  action  CloudTrail action being performed.
- * @param  q       Pointer to this object's public UpdateTrailRequest instance.
+ * Constructs a UpdateTrailRequestPrivate object for CloudTrail \a action with,
+ * public implementation \a q.
  */
 UpdateTrailRequestPrivate::UpdateTrailRequestPrivate(
     const CloudTrailRequest::Action action, UpdateTrailRequest * const q)
@@ -127,15 +116,10 @@ UpdateTrailRequestPrivate::UpdateTrailRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateTrailRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateTrailRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateTrailRequest instance.
  */
 UpdateTrailRequestPrivate::UpdateTrailRequestPrivate(
     const UpdateTrailRequestPrivate &other, UpdateTrailRequest * const q)

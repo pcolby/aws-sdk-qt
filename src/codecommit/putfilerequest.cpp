@@ -27,10 +27,9 @@ namespace CodeCommit {
 
 /*!
  * \class QtAws::CodeCommit::PutFileRequest
- *
  * \brief The PutFileRequest class provides an interface for CodeCommit PutFile requests.
  *
- * \ingroup CodeCommit
+ * \inmodule QtAwsCodeCommit
  *
  *  <fullname>AWS CodeCommit</fullname>
  * 
@@ -227,9 +226,7 @@ namespace CodeCommit {
  */
 
 /*!
- * @brief  Constructs a new PutFileRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 PutFileRequest::PutFileRequest(const PutFileRequest &other)
     : CodeCommitRequest(new PutFileRequestPrivate(*other.d_func(), this))
@@ -238,7 +235,7 @@ PutFileRequest::PutFileRequest(const PutFileRequest &other)
 }
 
 /*!
- * @brief  Constructs a new PutFileRequest object.
+ * Constructs a PutFileRequest object.
  */
 PutFileRequest::PutFileRequest()
     : CodeCommitRequest(new PutFileRequestPrivate(CodeCommitRequest::PutFileAction, this))
@@ -256,14 +253,9 @@ bool PutFileRequest::isValid() const
 
 
 /*!
- * @brief  Construct an PutFileResponse object.
+ * Returns a PutFileResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An PutFileResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CodeCommitClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * PutFileRequest::response(QNetworkReply * const reply) const
 {
@@ -271,20 +263,17 @@ QtAws::Core::AwsAbstractResponse * PutFileRequest::response(QNetworkReply * cons
 }
 
 /*!
- * @internal
+ * \class QtAws::CodeCommit::PutFileRequestPrivate
+ * \brief The PutFileRequestPrivate class provides private implementation for PutFileRequest.
+ * \internal
  *
- * @class  PutFileRequestPrivate
- *
- * @brief  Private implementation for PutFileRequest.
+ * \inmodule QtAwsCodeCommit
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new PutFileRequestPrivate object.
- *
- * @param  action  CodeCommit action being performed.
- * @param  q       Pointer to this object's public PutFileRequest instance.
+ * Constructs a PutFileRequestPrivate object for CodeCommit \a action with,
+ * public implementation \a q.
  */
 PutFileRequestPrivate::PutFileRequestPrivate(
     const CodeCommitRequest::Action action, PutFileRequest * const q)
@@ -294,15 +283,10 @@ PutFileRequestPrivate::PutFileRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutFileRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the PutFileRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public PutFileRequest instance.
  */
 PutFileRequestPrivate::PutFileRequestPrivate(
     const PutFileRequestPrivate &other, PutFileRequest * const q)

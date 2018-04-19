@@ -27,10 +27,9 @@ namespace WorkDocs {
 
 /*!
  * \class QtAws::WorkDocs::RemoveResourcePermissionRequest
- *
  * \brief The RemoveResourcePermissionRequest class provides an interface for WorkDocs RemoveResourcePermission requests.
  *
- * \ingroup WorkDocs
+ * \inmodule QtAwsWorkDocs
  *
  *  The WorkDocs API is designed for the following use
  * 
@@ -66,9 +65,7 @@ namespace WorkDocs {
  */
 
 /*!
- * @brief  Constructs a new RemoveResourcePermissionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 RemoveResourcePermissionRequest::RemoveResourcePermissionRequest(const RemoveResourcePermissionRequest &other)
     : WorkDocsRequest(new RemoveResourcePermissionRequestPrivate(*other.d_func(), this))
@@ -77,7 +74,7 @@ RemoveResourcePermissionRequest::RemoveResourcePermissionRequest(const RemoveRes
 }
 
 /*!
- * @brief  Constructs a new RemoveResourcePermissionRequest object.
+ * Constructs a RemoveResourcePermissionRequest object.
  */
 RemoveResourcePermissionRequest::RemoveResourcePermissionRequest()
     : WorkDocsRequest(new RemoveResourcePermissionRequestPrivate(WorkDocsRequest::RemoveResourcePermissionAction, this))
@@ -95,14 +92,9 @@ bool RemoveResourcePermissionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an RemoveResourcePermissionResponse object.
+ * Returns a RemoveResourcePermissionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An RemoveResourcePermissionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WorkDocsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * RemoveResourcePermissionRequest::response(QNetworkReply * const reply) const
 {
@@ -110,20 +102,17 @@ QtAws::Core::AwsAbstractResponse * RemoveResourcePermissionRequest::response(QNe
 }
 
 /*!
- * @internal
+ * \class QtAws::WorkDocs::RemoveResourcePermissionRequestPrivate
+ * \brief The RemoveResourcePermissionRequestPrivate class provides private implementation for RemoveResourcePermissionRequest.
+ * \internal
  *
- * @class  RemoveResourcePermissionRequestPrivate
- *
- * @brief  Private implementation for RemoveResourcePermissionRequest.
+ * \inmodule QtAwsWorkDocs
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new RemoveResourcePermissionRequestPrivate object.
- *
- * @param  action  WorkDocs action being performed.
- * @param  q       Pointer to this object's public RemoveResourcePermissionRequest instance.
+ * Constructs a RemoveResourcePermissionRequestPrivate object for WorkDocs \a action with,
+ * public implementation \a q.
  */
 RemoveResourcePermissionRequestPrivate::RemoveResourcePermissionRequestPrivate(
     const WorkDocsRequest::Action action, RemoveResourcePermissionRequest * const q)
@@ -133,15 +122,10 @@ RemoveResourcePermissionRequestPrivate::RemoveResourcePermissionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RemoveResourcePermissionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the RemoveResourcePermissionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public RemoveResourcePermissionRequest instance.
  */
 RemoveResourcePermissionRequestPrivate::RemoveResourcePermissionRequestPrivate(
     const RemoveResourcePermissionRequestPrivate &other, RemoveResourcePermissionRequest * const q)

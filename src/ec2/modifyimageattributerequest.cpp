@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::ModifyImageAttributeRequest
- *
  * \brief The ModifyImageAttributeRequest class provides an interface for EC2 ModifyImageAttribute requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new ModifyImageAttributeRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ModifyImageAttributeRequest::ModifyImageAttributeRequest(const ModifyImageAttributeRequest &other)
     : EC2Request(new ModifyImageAttributeRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ ModifyImageAttributeRequest::ModifyImageAttributeRequest(const ModifyImageAttrib
 }
 
 /*!
- * @brief  Constructs a new ModifyImageAttributeRequest object.
+ * Constructs a ModifyImageAttributeRequest object.
  */
 ModifyImageAttributeRequest::ModifyImageAttributeRequest()
     : EC2Request(new ModifyImageAttributeRequestPrivate(EC2Request::ModifyImageAttributeAction, this))
@@ -70,14 +67,9 @@ bool ModifyImageAttributeRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ModifyImageAttributeResponse object.
+ * Returns a ModifyImageAttributeResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ModifyImageAttributeResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ModifyImageAttributeRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * ModifyImageAttributeRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::ModifyImageAttributeRequestPrivate
+ * \brief The ModifyImageAttributeRequestPrivate class provides private implementation for ModifyImageAttributeRequest.
+ * \internal
  *
- * @class  ModifyImageAttributeRequestPrivate
- *
- * @brief  Private implementation for ModifyImageAttributeRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ModifyImageAttributeRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public ModifyImageAttributeRequest instance.
+ * Constructs a ModifyImageAttributeRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 ModifyImageAttributeRequestPrivate::ModifyImageAttributeRequestPrivate(
     const EC2Request::Action action, ModifyImageAttributeRequest * const q)
@@ -108,15 +97,10 @@ ModifyImageAttributeRequestPrivate::ModifyImageAttributeRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ModifyImageAttributeRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ModifyImageAttributeRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ModifyImageAttributeRequest instance.
  */
 ModifyImageAttributeRequestPrivate::ModifyImageAttributeRequestPrivate(
     const ModifyImageAttributeRequestPrivate &other, ModifyImageAttributeRequest * const q)

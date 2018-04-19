@@ -27,10 +27,9 @@ namespace CloudWatchLogs {
 
 /*!
  * \class QtAws::CloudWatchLogs::DescribeSubscriptionFiltersRequest
- *
  * \brief The DescribeSubscriptionFiltersRequest class provides an interface for CloudWatchLogs DescribeSubscriptionFilters requests.
  *
- * \ingroup CloudWatchLogs
+ * \inmodule QtAwsCloudWatchLogs
  *
  *  You can use Amazon CloudWatch Logs to monitor, store, and access your log files from Amazon EC2 instances, AWS
  *  CloudTrail, or other sources. You can then retrieve the associated log data from CloudWatch Logs using the CloudWatch
@@ -66,9 +65,7 @@ namespace CloudWatchLogs {
  */
 
 /*!
- * @brief  Constructs a new DescribeSubscriptionFiltersRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeSubscriptionFiltersRequest::DescribeSubscriptionFiltersRequest(const DescribeSubscriptionFiltersRequest &other)
     : CloudWatchLogsRequest(new DescribeSubscriptionFiltersRequestPrivate(*other.d_func(), this))
@@ -77,7 +74,7 @@ DescribeSubscriptionFiltersRequest::DescribeSubscriptionFiltersRequest(const Des
 }
 
 /*!
- * @brief  Constructs a new DescribeSubscriptionFiltersRequest object.
+ * Constructs a DescribeSubscriptionFiltersRequest object.
  */
 DescribeSubscriptionFiltersRequest::DescribeSubscriptionFiltersRequest()
     : CloudWatchLogsRequest(new DescribeSubscriptionFiltersRequestPrivate(CloudWatchLogsRequest::DescribeSubscriptionFiltersAction, this))
@@ -95,14 +92,9 @@ bool DescribeSubscriptionFiltersRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeSubscriptionFiltersResponse object.
+ * Returns a DescribeSubscriptionFiltersResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeSubscriptionFiltersResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudWatchLogsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeSubscriptionFiltersRequest::response(QNetworkReply * const reply) const
 {
@@ -110,20 +102,17 @@ QtAws::Core::AwsAbstractResponse * DescribeSubscriptionFiltersRequest::response(
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudWatchLogs::DescribeSubscriptionFiltersRequestPrivate
+ * \brief The DescribeSubscriptionFiltersRequestPrivate class provides private implementation for DescribeSubscriptionFiltersRequest.
+ * \internal
  *
- * @class  DescribeSubscriptionFiltersRequestPrivate
- *
- * @brief  Private implementation for DescribeSubscriptionFiltersRequest.
+ * \inmodule QtAwsCloudWatchLogs
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeSubscriptionFiltersRequestPrivate object.
- *
- * @param  action  CloudWatchLogs action being performed.
- * @param  q       Pointer to this object's public DescribeSubscriptionFiltersRequest instance.
+ * Constructs a DescribeSubscriptionFiltersRequestPrivate object for CloudWatchLogs \a action with,
+ * public implementation \a q.
  */
 DescribeSubscriptionFiltersRequestPrivate::DescribeSubscriptionFiltersRequestPrivate(
     const CloudWatchLogsRequest::Action action, DescribeSubscriptionFiltersRequest * const q)
@@ -133,15 +122,10 @@ DescribeSubscriptionFiltersRequestPrivate::DescribeSubscriptionFiltersRequestPri
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeSubscriptionFiltersRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeSubscriptionFiltersRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeSubscriptionFiltersRequest instance.
  */
 DescribeSubscriptionFiltersRequestPrivate::DescribeSubscriptionFiltersRequestPrivate(
     const DescribeSubscriptionFiltersRequestPrivate &other, DescribeSubscriptionFiltersRequest * const q)

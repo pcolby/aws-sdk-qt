@@ -27,10 +27,9 @@ namespace DatabaseMigrationService {
 
 /*!
  * \class QtAws::DatabaseMigrationService::DescribeCertificatesRequest
- *
  * \brief The DescribeCertificatesRequest class provides an interface for DatabaseMigrationService DescribeCertificates requests.
  *
- * \ingroup DatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigrationService
  *
  *  <fullname>AWS Database Migration Service</fullname>
  * 
@@ -48,9 +47,7 @@ namespace DatabaseMigrationService {
  */
 
 /*!
- * @brief  Constructs a new DescribeCertificatesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeCertificatesRequest::DescribeCertificatesRequest(const DescribeCertificatesRequest &other)
     : DatabaseMigrationServiceRequest(new DescribeCertificatesRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ DescribeCertificatesRequest::DescribeCertificatesRequest(const DescribeCertifica
 }
 
 /*!
- * @brief  Constructs a new DescribeCertificatesRequest object.
+ * Constructs a DescribeCertificatesRequest object.
  */
 DescribeCertificatesRequest::DescribeCertificatesRequest()
     : DatabaseMigrationServiceRequest(new DescribeCertificatesRequestPrivate(DatabaseMigrationServiceRequest::DescribeCertificatesAction, this))
@@ -77,14 +74,9 @@ bool DescribeCertificatesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeCertificatesResponse object.
+ * Returns a DescribeCertificatesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeCertificatesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DatabaseMigrationServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeCertificatesRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * DescribeCertificatesRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::DatabaseMigrationService::DescribeCertificatesRequestPrivate
+ * \brief The DescribeCertificatesRequestPrivate class provides private implementation for DescribeCertificatesRequest.
+ * \internal
  *
- * @class  DescribeCertificatesRequestPrivate
- *
- * @brief  Private implementation for DescribeCertificatesRequest.
+ * \inmodule QtAwsDatabaseMigrationService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeCertificatesRequestPrivate object.
- *
- * @param  action  DatabaseMigrationService action being performed.
- * @param  q       Pointer to this object's public DescribeCertificatesRequest instance.
+ * Constructs a DescribeCertificatesRequestPrivate object for DatabaseMigrationService \a action with,
+ * public implementation \a q.
  */
 DescribeCertificatesRequestPrivate::DescribeCertificatesRequestPrivate(
     const DatabaseMigrationServiceRequest::Action action, DescribeCertificatesRequest * const q)
@@ -115,15 +104,10 @@ DescribeCertificatesRequestPrivate::DescribeCertificatesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeCertificatesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeCertificatesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeCertificatesRequest instance.
  */
 DescribeCertificatesRequestPrivate::DescribeCertificatesRequestPrivate(
     const DescribeCertificatesRequestPrivate &other, DescribeCertificatesRequest * const q)

@@ -27,19 +27,16 @@ namespace Route53 {
 
 /*!
  * \class QtAws::Route53::UpdateHealthCheckRequest
- *
  * \brief The UpdateHealthCheckRequest class provides an interface for Route53 UpdateHealthCheck requests.
  *
- * \ingroup Route53
+ * \inmodule QtAwsRoute53
  *
  *
  * \sa Route53Client::updateHealthCheck
  */
 
 /*!
- * @brief  Constructs a new UpdateHealthCheckRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateHealthCheckRequest::UpdateHealthCheckRequest(const UpdateHealthCheckRequest &other)
     : Route53Request(new UpdateHealthCheckRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ UpdateHealthCheckRequest::UpdateHealthCheckRequest(const UpdateHealthCheckReques
 }
 
 /*!
- * @brief  Constructs a new UpdateHealthCheckRequest object.
+ * Constructs a UpdateHealthCheckRequest object.
  */
 UpdateHealthCheckRequest::UpdateHealthCheckRequest()
     : Route53Request(new UpdateHealthCheckRequestPrivate(Route53Request::UpdateHealthCheckAction, this))
@@ -66,14 +63,9 @@ bool UpdateHealthCheckRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateHealthCheckResponse object.
+ * Returns a UpdateHealthCheckResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateHealthCheckResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  Route53Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateHealthCheckRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * UpdateHealthCheckRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::Route53::UpdateHealthCheckRequestPrivate
+ * \brief The UpdateHealthCheckRequestPrivate class provides private implementation for UpdateHealthCheckRequest.
+ * \internal
  *
- * @class  UpdateHealthCheckRequestPrivate
- *
- * @brief  Private implementation for UpdateHealthCheckRequest.
+ * \inmodule QtAwsRoute53
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateHealthCheckRequestPrivate object.
- *
- * @param  action  Route53 action being performed.
- * @param  q       Pointer to this object's public UpdateHealthCheckRequest instance.
+ * Constructs a UpdateHealthCheckRequestPrivate object for Route53 \a action with,
+ * public implementation \a q.
  */
 UpdateHealthCheckRequestPrivate::UpdateHealthCheckRequestPrivate(
     const Route53Request::Action action, UpdateHealthCheckRequest * const q)
@@ -104,15 +93,10 @@ UpdateHealthCheckRequestPrivate::UpdateHealthCheckRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateHealthCheckRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateHealthCheckRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateHealthCheckRequest instance.
  */
 UpdateHealthCheckRequestPrivate::UpdateHealthCheckRequestPrivate(
     const UpdateHealthCheckRequestPrivate &other, UpdateHealthCheckRequest * const q)

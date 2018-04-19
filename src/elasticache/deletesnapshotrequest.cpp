@@ -27,10 +27,9 @@ namespace ElastiCache {
 
 /*!
  * \class QtAws::ElastiCache::DeleteSnapshotRequest
- *
  * \brief The DeleteSnapshotRequest class provides an interface for ElastiCache DeleteSnapshot requests.
  *
- * \ingroup ElastiCache
+ * \inmodule QtAwsElastiCache
  *
  *  <fullname>Amazon ElastiCache</fullname>
  * 
@@ -51,9 +50,7 @@ namespace ElastiCache {
  */
 
 /*!
- * @brief  Constructs a new DeleteSnapshotRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteSnapshotRequest::DeleteSnapshotRequest(const DeleteSnapshotRequest &other)
     : ElastiCacheRequest(new DeleteSnapshotRequestPrivate(*other.d_func(), this))
@@ -62,7 +59,7 @@ DeleteSnapshotRequest::DeleteSnapshotRequest(const DeleteSnapshotRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DeleteSnapshotRequest object.
+ * Constructs a DeleteSnapshotRequest object.
  */
 DeleteSnapshotRequest::DeleteSnapshotRequest()
     : ElastiCacheRequest(new DeleteSnapshotRequestPrivate(ElastiCacheRequest::DeleteSnapshotAction, this))
@@ -80,14 +77,9 @@ bool DeleteSnapshotRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteSnapshotResponse object.
+ * Returns a DeleteSnapshotResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteSnapshotResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ElastiCacheClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteSnapshotRequest::response(QNetworkReply * const reply) const
 {
@@ -95,20 +87,17 @@ QtAws::Core::AwsAbstractResponse * DeleteSnapshotRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::ElastiCache::DeleteSnapshotRequestPrivate
+ * \brief The DeleteSnapshotRequestPrivate class provides private implementation for DeleteSnapshotRequest.
+ * \internal
  *
- * @class  DeleteSnapshotRequestPrivate
- *
- * @brief  Private implementation for DeleteSnapshotRequest.
+ * \inmodule QtAwsElastiCache
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteSnapshotRequestPrivate object.
- *
- * @param  action  ElastiCache action being performed.
- * @param  q       Pointer to this object's public DeleteSnapshotRequest instance.
+ * Constructs a DeleteSnapshotRequestPrivate object for ElastiCache \a action with,
+ * public implementation \a q.
  */
 DeleteSnapshotRequestPrivate::DeleteSnapshotRequestPrivate(
     const ElastiCacheRequest::Action action, DeleteSnapshotRequest * const q)
@@ -118,15 +107,10 @@ DeleteSnapshotRequestPrivate::DeleteSnapshotRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteSnapshotRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteSnapshotRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteSnapshotRequest instance.
  */
 DeleteSnapshotRequestPrivate::DeleteSnapshotRequestPrivate(
     const DeleteSnapshotRequestPrivate &other, DeleteSnapshotRequest * const q)

@@ -27,10 +27,9 @@ namespace XRay {
 
 /*!
  * \class QtAws::XRay::GetTraceSummariesRequest
- *
  * \brief The GetTraceSummariesRequest class provides an interface for XRay GetTraceSummaries requests.
  *
- * \ingroup XRay
+ * \inmodule QtAwsXRay
  *
  *  AWS X-Ray provides APIs for managing debug traces and retrieving service maps and other data created by processing those
  *
@@ -38,9 +37,7 @@ namespace XRay {
  */
 
 /*!
- * @brief  Constructs a new GetTraceSummariesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetTraceSummariesRequest::GetTraceSummariesRequest(const GetTraceSummariesRequest &other)
     : XRayRequest(new GetTraceSummariesRequestPrivate(*other.d_func(), this))
@@ -49,7 +46,7 @@ GetTraceSummariesRequest::GetTraceSummariesRequest(const GetTraceSummariesReques
 }
 
 /*!
- * @brief  Constructs a new GetTraceSummariesRequest object.
+ * Constructs a GetTraceSummariesRequest object.
  */
 GetTraceSummariesRequest::GetTraceSummariesRequest()
     : XRayRequest(new GetTraceSummariesRequestPrivate(XRayRequest::GetTraceSummariesAction, this))
@@ -67,14 +64,9 @@ bool GetTraceSummariesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetTraceSummariesResponse object.
+ * Returns a GetTraceSummariesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetTraceSummariesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  XRayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetTraceSummariesRequest::response(QNetworkReply * const reply) const
 {
@@ -82,20 +74,17 @@ QtAws::Core::AwsAbstractResponse * GetTraceSummariesRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::XRay::GetTraceSummariesRequestPrivate
+ * \brief The GetTraceSummariesRequestPrivate class provides private implementation for GetTraceSummariesRequest.
+ * \internal
  *
- * @class  GetTraceSummariesRequestPrivate
- *
- * @brief  Private implementation for GetTraceSummariesRequest.
+ * \inmodule QtAwsXRay
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetTraceSummariesRequestPrivate object.
- *
- * @param  action  XRay action being performed.
- * @param  q       Pointer to this object's public GetTraceSummariesRequest instance.
+ * Constructs a GetTraceSummariesRequestPrivate object for XRay \a action with,
+ * public implementation \a q.
  */
 GetTraceSummariesRequestPrivate::GetTraceSummariesRequestPrivate(
     const XRayRequest::Action action, GetTraceSummariesRequest * const q)
@@ -105,15 +94,10 @@ GetTraceSummariesRequestPrivate::GetTraceSummariesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetTraceSummariesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetTraceSummariesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetTraceSummariesRequest instance.
  */
 GetTraceSummariesRequestPrivate::GetTraceSummariesRequestPrivate(
     const GetTraceSummariesRequestPrivate &other, GetTraceSummariesRequest * const q)

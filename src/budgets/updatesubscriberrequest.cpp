@@ -27,10 +27,9 @@ namespace Budgets {
 
 /*!
  * \class QtAws::Budgets::UpdateSubscriberRequest
- *
  * \brief The UpdateSubscriberRequest class provides an interface for Budgets UpdateSubscriber requests.
  *
- * \ingroup Budgets
+ * \inmodule QtAwsBudgets
  *
  *  Budgets enable you to plan your service usage, service costs, and your RI utilization. You can also track how close your
  *  plan is to your budgeted amount or to the free tier limits. Budgets provide you with a quick way to see your
@@ -75,9 +74,7 @@ namespace Budgets {
  */
 
 /*!
- * @brief  Constructs a new UpdateSubscriberRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateSubscriberRequest::UpdateSubscriberRequest(const UpdateSubscriberRequest &other)
     : BudgetsRequest(new UpdateSubscriberRequestPrivate(*other.d_func(), this))
@@ -86,7 +83,7 @@ UpdateSubscriberRequest::UpdateSubscriberRequest(const UpdateSubscriberRequest &
 }
 
 /*!
- * @brief  Constructs a new UpdateSubscriberRequest object.
+ * Constructs a UpdateSubscriberRequest object.
  */
 UpdateSubscriberRequest::UpdateSubscriberRequest()
     : BudgetsRequest(new UpdateSubscriberRequestPrivate(BudgetsRequest::UpdateSubscriberAction, this))
@@ -104,14 +101,9 @@ bool UpdateSubscriberRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateSubscriberResponse object.
+ * Returns a UpdateSubscriberResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateSubscriberResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  BudgetsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateSubscriberRequest::response(QNetworkReply * const reply) const
 {
@@ -119,20 +111,17 @@ QtAws::Core::AwsAbstractResponse * UpdateSubscriberRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::Budgets::UpdateSubscriberRequestPrivate
+ * \brief The UpdateSubscriberRequestPrivate class provides private implementation for UpdateSubscriberRequest.
+ * \internal
  *
- * @class  UpdateSubscriberRequestPrivate
- *
- * @brief  Private implementation for UpdateSubscriberRequest.
+ * \inmodule QtAwsBudgets
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateSubscriberRequestPrivate object.
- *
- * @param  action  Budgets action being performed.
- * @param  q       Pointer to this object's public UpdateSubscriberRequest instance.
+ * Constructs a UpdateSubscriberRequestPrivate object for Budgets \a action with,
+ * public implementation \a q.
  */
 UpdateSubscriberRequestPrivate::UpdateSubscriberRequestPrivate(
     const BudgetsRequest::Action action, UpdateSubscriberRequest * const q)
@@ -142,15 +131,10 @@ UpdateSubscriberRequestPrivate::UpdateSubscriberRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateSubscriberRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateSubscriberRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateSubscriberRequest instance.
  */
 UpdateSubscriberRequestPrivate::UpdateSubscriberRequestPrivate(
     const UpdateSubscriberRequestPrivate &other, UpdateSubscriberRequest * const q)

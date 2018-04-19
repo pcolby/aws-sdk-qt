@@ -27,10 +27,9 @@ namespace ECR {
 
 /*!
  * \class QtAws::ECR::GetLifecyclePolicyPreviewRequest
- *
  * \brief The GetLifecyclePolicyPreviewRequest class provides an interface for ECR GetLifecyclePolicyPreview requests.
  *
- * \ingroup ECR
+ * \inmodule QtAwsECR
  *
  *  Amazon Elastic Container Registry (Amazon ECR) is a managed Docker registry service. Customers can use the familiar
  *  Docker CLI to push, pull, and manage images. Amazon ECR provides a secure, scalable, and reliable registry. Amazon ECR
@@ -41,9 +40,7 @@ namespace ECR {
  */
 
 /*!
- * @brief  Constructs a new GetLifecyclePolicyPreviewRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetLifecyclePolicyPreviewRequest::GetLifecyclePolicyPreviewRequest(const GetLifecyclePolicyPreviewRequest &other)
     : ECRRequest(new GetLifecyclePolicyPreviewRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ GetLifecyclePolicyPreviewRequest::GetLifecyclePolicyPreviewRequest(const GetLife
 }
 
 /*!
- * @brief  Constructs a new GetLifecyclePolicyPreviewRequest object.
+ * Constructs a GetLifecyclePolicyPreviewRequest object.
  */
 GetLifecyclePolicyPreviewRequest::GetLifecyclePolicyPreviewRequest()
     : ECRRequest(new GetLifecyclePolicyPreviewRequestPrivate(ECRRequest::GetLifecyclePolicyPreviewAction, this))
@@ -70,14 +67,9 @@ bool GetLifecyclePolicyPreviewRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetLifecyclePolicyPreviewResponse object.
+ * Returns a GetLifecyclePolicyPreviewResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetLifecyclePolicyPreviewResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ECRClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetLifecyclePolicyPreviewRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * GetLifecyclePolicyPreviewRequest::response(QN
 }
 
 /*!
- * @internal
+ * \class QtAws::ECR::GetLifecyclePolicyPreviewRequestPrivate
+ * \brief The GetLifecyclePolicyPreviewRequestPrivate class provides private implementation for GetLifecyclePolicyPreviewRequest.
+ * \internal
  *
- * @class  GetLifecyclePolicyPreviewRequestPrivate
- *
- * @brief  Private implementation for GetLifecyclePolicyPreviewRequest.
+ * \inmodule QtAwsECR
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetLifecyclePolicyPreviewRequestPrivate object.
- *
- * @param  action  ECR action being performed.
- * @param  q       Pointer to this object's public GetLifecyclePolicyPreviewRequest instance.
+ * Constructs a GetLifecyclePolicyPreviewRequestPrivate object for ECR \a action with,
+ * public implementation \a q.
  */
 GetLifecyclePolicyPreviewRequestPrivate::GetLifecyclePolicyPreviewRequestPrivate(
     const ECRRequest::Action action, GetLifecyclePolicyPreviewRequest * const q)
@@ -108,15 +97,10 @@ GetLifecyclePolicyPreviewRequestPrivate::GetLifecyclePolicyPreviewRequestPrivate
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetLifecyclePolicyPreviewRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetLifecyclePolicyPreviewRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetLifecyclePolicyPreviewRequest instance.
  */
 GetLifecyclePolicyPreviewRequestPrivate::GetLifecyclePolicyPreviewRequestPrivate(
     const GetLifecyclePolicyPreviewRequestPrivate &other, GetLifecyclePolicyPreviewRequest * const q)

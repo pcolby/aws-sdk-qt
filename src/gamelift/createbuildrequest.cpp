@@ -27,10 +27,9 @@ namespace GameLift {
 
 /*!
  * \class QtAws::GameLift::CreateBuildRequest
- *
  * \brief The CreateBuildRequest class provides an interface for GameLift CreateBuild requests.
  *
- * \ingroup GameLift
+ * \inmodule QtAwsGameLift
  *
  *  <fullname>Amazon GameLift Service</fullname>
  * 
@@ -473,9 +472,7 @@ namespace GameLift {
  */
 
 /*!
- * @brief  Constructs a new CreateBuildRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateBuildRequest::CreateBuildRequest(const CreateBuildRequest &other)
     : GameLiftRequest(new CreateBuildRequestPrivate(*other.d_func(), this))
@@ -484,7 +481,7 @@ CreateBuildRequest::CreateBuildRequest(const CreateBuildRequest &other)
 }
 
 /*!
- * @brief  Constructs a new CreateBuildRequest object.
+ * Constructs a CreateBuildRequest object.
  */
 CreateBuildRequest::CreateBuildRequest()
     : GameLiftRequest(new CreateBuildRequestPrivate(GameLiftRequest::CreateBuildAction, this))
@@ -502,14 +499,9 @@ bool CreateBuildRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateBuildResponse object.
+ * Returns a CreateBuildResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateBuildResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GameLiftClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateBuildRequest::response(QNetworkReply * const reply) const
 {
@@ -517,20 +509,17 @@ QtAws::Core::AwsAbstractResponse * CreateBuildRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::GameLift::CreateBuildRequestPrivate
+ * \brief The CreateBuildRequestPrivate class provides private implementation for CreateBuildRequest.
+ * \internal
  *
- * @class  CreateBuildRequestPrivate
- *
- * @brief  Private implementation for CreateBuildRequest.
+ * \inmodule QtAwsGameLift
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateBuildRequestPrivate object.
- *
- * @param  action  GameLift action being performed.
- * @param  q       Pointer to this object's public CreateBuildRequest instance.
+ * Constructs a CreateBuildRequestPrivate object for GameLift \a action with,
+ * public implementation \a q.
  */
 CreateBuildRequestPrivate::CreateBuildRequestPrivate(
     const GameLiftRequest::Action action, CreateBuildRequest * const q)
@@ -540,15 +529,10 @@ CreateBuildRequestPrivate::CreateBuildRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateBuildRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateBuildRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateBuildRequest instance.
  */
 CreateBuildRequestPrivate::CreateBuildRequestPrivate(
     const CreateBuildRequestPrivate &other, CreateBuildRequest * const q)

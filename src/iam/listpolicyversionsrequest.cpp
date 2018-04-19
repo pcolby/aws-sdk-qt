@@ -27,10 +27,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::ListPolicyVersionsRequest
- *
  * \brief The ListPolicyVersionsRequest class provides an interface for IAM ListPolicyVersions requests.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -102,9 +101,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new ListPolicyVersionsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListPolicyVersionsRequest::ListPolicyVersionsRequest(const ListPolicyVersionsRequest &other)
     : IAMRequest(new ListPolicyVersionsRequestPrivate(*other.d_func(), this))
@@ -113,7 +110,7 @@ ListPolicyVersionsRequest::ListPolicyVersionsRequest(const ListPolicyVersionsReq
 }
 
 /*!
- * @brief  Constructs a new ListPolicyVersionsRequest object.
+ * Constructs a ListPolicyVersionsRequest object.
  */
 ListPolicyVersionsRequest::ListPolicyVersionsRequest()
     : IAMRequest(new ListPolicyVersionsRequestPrivate(IAMRequest::ListPolicyVersionsAction, this))
@@ -131,14 +128,9 @@ bool ListPolicyVersionsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListPolicyVersionsResponse object.
+ * Returns a ListPolicyVersionsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListPolicyVersionsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IAMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListPolicyVersionsRequest::response(QNetworkReply * const reply) const
 {
@@ -146,20 +138,17 @@ QtAws::Core::AwsAbstractResponse * ListPolicyVersionsRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::IAM::ListPolicyVersionsRequestPrivate
+ * \brief The ListPolicyVersionsRequestPrivate class provides private implementation for ListPolicyVersionsRequest.
+ * \internal
  *
- * @class  ListPolicyVersionsRequestPrivate
- *
- * @brief  Private implementation for ListPolicyVersionsRequest.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListPolicyVersionsRequestPrivate object.
- *
- * @param  action  IAM action being performed.
- * @param  q       Pointer to this object's public ListPolicyVersionsRequest instance.
+ * Constructs a ListPolicyVersionsRequestPrivate object for IAM \a action with,
+ * public implementation \a q.
  */
 ListPolicyVersionsRequestPrivate::ListPolicyVersionsRequestPrivate(
     const IAMRequest::Action action, ListPolicyVersionsRequest * const q)
@@ -169,15 +158,10 @@ ListPolicyVersionsRequestPrivate::ListPolicyVersionsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListPolicyVersionsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListPolicyVersionsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListPolicyVersionsRequest instance.
  */
 ListPolicyVersionsRequestPrivate::ListPolicyVersionsRequestPrivate(
     const ListPolicyVersionsRequestPrivate &other, ListPolicyVersionsRequest * const q)

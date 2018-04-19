@@ -27,10 +27,9 @@ namespace Comprehend {
 
 /*!
  * \class QtAws::Comprehend::DescribeTopicsDetectionJobRequest
- *
  * \brief The DescribeTopicsDetectionJobRequest class provides an interface for Comprehend DescribeTopicsDetectionJob requests.
  *
- * \ingroup Comprehend
+ * \inmodule QtAwsComprehend
  *
  *  Amazon Comprehend is an AWS service for gaining insight into the content of documents. Use these actions to determine
  *  the topics contained in your documents, the topics they discuss, the predominant sentiment expressed in them, the
@@ -40,9 +39,7 @@ namespace Comprehend {
  */
 
 /*!
- * @brief  Constructs a new DescribeTopicsDetectionJobRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeTopicsDetectionJobRequest::DescribeTopicsDetectionJobRequest(const DescribeTopicsDetectionJobRequest &other)
     : ComprehendRequest(new DescribeTopicsDetectionJobRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ DescribeTopicsDetectionJobRequest::DescribeTopicsDetectionJobRequest(const Descr
 }
 
 /*!
- * @brief  Constructs a new DescribeTopicsDetectionJobRequest object.
+ * Constructs a DescribeTopicsDetectionJobRequest object.
  */
 DescribeTopicsDetectionJobRequest::DescribeTopicsDetectionJobRequest()
     : ComprehendRequest(new DescribeTopicsDetectionJobRequestPrivate(ComprehendRequest::DescribeTopicsDetectionJobAction, this))
@@ -69,14 +66,9 @@ bool DescribeTopicsDetectionJobRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeTopicsDetectionJobResponse object.
+ * Returns a DescribeTopicsDetectionJobResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeTopicsDetectionJobResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ComprehendClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeTopicsDetectionJobRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * DescribeTopicsDetectionJobRequest::response(Q
 }
 
 /*!
- * @internal
+ * \class QtAws::Comprehend::DescribeTopicsDetectionJobRequestPrivate
+ * \brief The DescribeTopicsDetectionJobRequestPrivate class provides private implementation for DescribeTopicsDetectionJobRequest.
+ * \internal
  *
- * @class  DescribeTopicsDetectionJobRequestPrivate
- *
- * @brief  Private implementation for DescribeTopicsDetectionJobRequest.
+ * \inmodule QtAwsComprehend
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeTopicsDetectionJobRequestPrivate object.
- *
- * @param  action  Comprehend action being performed.
- * @param  q       Pointer to this object's public DescribeTopicsDetectionJobRequest instance.
+ * Constructs a DescribeTopicsDetectionJobRequestPrivate object for Comprehend \a action with,
+ * public implementation \a q.
  */
 DescribeTopicsDetectionJobRequestPrivate::DescribeTopicsDetectionJobRequestPrivate(
     const ComprehendRequest::Action action, DescribeTopicsDetectionJobRequest * const q)
@@ -107,15 +96,10 @@ DescribeTopicsDetectionJobRequestPrivate::DescribeTopicsDetectionJobRequestPriva
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeTopicsDetectionJobRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeTopicsDetectionJobRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeTopicsDetectionJobRequest instance.
  */
 DescribeTopicsDetectionJobRequestPrivate::DescribeTopicsDetectionJobRequestPrivate(
     const DescribeTopicsDetectionJobRequestPrivate &other, DescribeTopicsDetectionJobRequest * const q)

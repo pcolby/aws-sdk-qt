@@ -27,10 +27,9 @@ namespace DatabaseMigrationService {
 
 /*!
  * \class QtAws::DatabaseMigrationService::CreateEndpointRequest
- *
  * \brief The CreateEndpointRequest class provides an interface for DatabaseMigrationService CreateEndpoint requests.
  *
- * \ingroup DatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigrationService
  *
  *  <fullname>AWS Database Migration Service</fullname>
  * 
@@ -48,9 +47,7 @@ namespace DatabaseMigrationService {
  */
 
 /*!
- * @brief  Constructs a new CreateEndpointRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateEndpointRequest::CreateEndpointRequest(const CreateEndpointRequest &other)
     : DatabaseMigrationServiceRequest(new CreateEndpointRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ CreateEndpointRequest::CreateEndpointRequest(const CreateEndpointRequest &other)
 }
 
 /*!
- * @brief  Constructs a new CreateEndpointRequest object.
+ * Constructs a CreateEndpointRequest object.
  */
 CreateEndpointRequest::CreateEndpointRequest()
     : DatabaseMigrationServiceRequest(new CreateEndpointRequestPrivate(DatabaseMigrationServiceRequest::CreateEndpointAction, this))
@@ -77,14 +74,9 @@ bool CreateEndpointRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateEndpointResponse object.
+ * Returns a CreateEndpointResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateEndpointResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DatabaseMigrationServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateEndpointRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * CreateEndpointRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::DatabaseMigrationService::CreateEndpointRequestPrivate
+ * \brief The CreateEndpointRequestPrivate class provides private implementation for CreateEndpointRequest.
+ * \internal
  *
- * @class  CreateEndpointRequestPrivate
- *
- * @brief  Private implementation for CreateEndpointRequest.
+ * \inmodule QtAwsDatabaseMigrationService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateEndpointRequestPrivate object.
- *
- * @param  action  DatabaseMigrationService action being performed.
- * @param  q       Pointer to this object's public CreateEndpointRequest instance.
+ * Constructs a CreateEndpointRequestPrivate object for DatabaseMigrationService \a action with,
+ * public implementation \a q.
  */
 CreateEndpointRequestPrivate::CreateEndpointRequestPrivate(
     const DatabaseMigrationServiceRequest::Action action, CreateEndpointRequest * const q)
@@ -115,15 +104,10 @@ CreateEndpointRequestPrivate::CreateEndpointRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateEndpointRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateEndpointRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateEndpointRequest instance.
  */
 CreateEndpointRequestPrivate::CreateEndpointRequestPrivate(
     const CreateEndpointRequestPrivate &other, CreateEndpointRequest * const q)

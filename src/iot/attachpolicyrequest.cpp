@@ -27,10 +27,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::AttachPolicyRequest
- *
  * \brief The AttachPolicyRequest class provides an interface for IoT AttachPolicy requests.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -48,9 +47,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new AttachPolicyRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AttachPolicyRequest::AttachPolicyRequest(const AttachPolicyRequest &other)
     : IoTRequest(new AttachPolicyRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ AttachPolicyRequest::AttachPolicyRequest(const AttachPolicyRequest &other)
 }
 
 /*!
- * @brief  Constructs a new AttachPolicyRequest object.
+ * Constructs a AttachPolicyRequest object.
  */
 AttachPolicyRequest::AttachPolicyRequest()
     : IoTRequest(new AttachPolicyRequestPrivate(IoTRequest::AttachPolicyAction, this))
@@ -77,14 +74,9 @@ bool AttachPolicyRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AttachPolicyResponse object.
+ * Returns a AttachPolicyResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AttachPolicyResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IoTClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AttachPolicyRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * AttachPolicyRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::IoT::AttachPolicyRequestPrivate
+ * \brief The AttachPolicyRequestPrivate class provides private implementation for AttachPolicyRequest.
+ * \internal
  *
- * @class  AttachPolicyRequestPrivate
- *
- * @brief  Private implementation for AttachPolicyRequest.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AttachPolicyRequestPrivate object.
- *
- * @param  action  IoT action being performed.
- * @param  q       Pointer to this object's public AttachPolicyRequest instance.
+ * Constructs a AttachPolicyRequestPrivate object for IoT \a action with,
+ * public implementation \a q.
  */
 AttachPolicyRequestPrivate::AttachPolicyRequestPrivate(
     const IoTRequest::Action action, AttachPolicyRequest * const q)
@@ -115,15 +104,10 @@ AttachPolicyRequestPrivate::AttachPolicyRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AttachPolicyRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AttachPolicyRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AttachPolicyRequest instance.
  */
 AttachPolicyRequestPrivate::AttachPolicyRequestPrivate(
     const AttachPolicyRequestPrivate &other, AttachPolicyRequest * const q)

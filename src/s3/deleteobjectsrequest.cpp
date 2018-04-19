@@ -27,19 +27,16 @@ namespace S3 {
 
 /*!
  * \class QtAws::S3::DeleteObjectsRequest
- *
  * \brief The DeleteObjectsRequest class provides an interface for S3 DeleteObjects requests.
  *
- * \ingroup S3
+ * \inmodule QtAwsS3
  *
  *
  * \sa S3Client::deleteObjects
  */
 
 /*!
- * @brief  Constructs a new DeleteObjectsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteObjectsRequest::DeleteObjectsRequest(const DeleteObjectsRequest &other)
     : S3Request(new DeleteObjectsRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ DeleteObjectsRequest::DeleteObjectsRequest(const DeleteObjectsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DeleteObjectsRequest object.
+ * Constructs a DeleteObjectsRequest object.
  */
 DeleteObjectsRequest::DeleteObjectsRequest()
     : S3Request(new DeleteObjectsRequestPrivate(S3Request::DeleteObjectsAction, this))
@@ -66,14 +63,9 @@ bool DeleteObjectsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteObjectsResponse object.
+ * Returns a DeleteObjectsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteObjectsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  S3Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteObjectsRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * DeleteObjectsRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::S3::DeleteObjectsRequestPrivate
+ * \brief The DeleteObjectsRequestPrivate class provides private implementation for DeleteObjectsRequest.
+ * \internal
  *
- * @class  DeleteObjectsRequestPrivate
- *
- * @brief  Private implementation for DeleteObjectsRequest.
+ * \inmodule QtAwsS3
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteObjectsRequestPrivate object.
- *
- * @param  action  S3 action being performed.
- * @param  q       Pointer to this object's public DeleteObjectsRequest instance.
+ * Constructs a DeleteObjectsRequestPrivate object for S3 \a action with,
+ * public implementation \a q.
  */
 DeleteObjectsRequestPrivate::DeleteObjectsRequestPrivate(
     const S3Request::Action action, DeleteObjectsRequest * const q)
@@ -104,15 +93,10 @@ DeleteObjectsRequestPrivate::DeleteObjectsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteObjectsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteObjectsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteObjectsRequest instance.
  */
 DeleteObjectsRequestPrivate::DeleteObjectsRequestPrivate(
     const DeleteObjectsRequestPrivate &other, DeleteObjectsRequest * const q)

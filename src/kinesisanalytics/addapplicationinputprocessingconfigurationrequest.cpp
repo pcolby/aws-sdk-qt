@@ -27,19 +27,16 @@ namespace KinesisAnalytics {
 
 /*!
  * \class QtAws::KinesisAnalytics::AddApplicationInputProcessingConfigurationRequest
- *
  * \brief The AddApplicationInputProcessingConfigurationRequest class provides an interface for KinesisAnalytics AddApplicationInputProcessingConfiguration requests.
  *
- * \ingroup KinesisAnalytics
+ * \inmodule QtAwsKinesisAnalytics
  *
  *
  * \sa KinesisAnalyticsClient::addApplicationInputProcessingConfiguration
  */
 
 /*!
- * @brief  Constructs a new AddApplicationInputProcessingConfigurationRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AddApplicationInputProcessingConfigurationRequest::AddApplicationInputProcessingConfigurationRequest(const AddApplicationInputProcessingConfigurationRequest &other)
     : KinesisAnalyticsRequest(new AddApplicationInputProcessingConfigurationRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ AddApplicationInputProcessingConfigurationRequest::AddApplicationInputProcessing
 }
 
 /*!
- * @brief  Constructs a new AddApplicationInputProcessingConfigurationRequest object.
+ * Constructs a AddApplicationInputProcessingConfigurationRequest object.
  */
 AddApplicationInputProcessingConfigurationRequest::AddApplicationInputProcessingConfigurationRequest()
     : KinesisAnalyticsRequest(new AddApplicationInputProcessingConfigurationRequestPrivate(KinesisAnalyticsRequest::AddApplicationInputProcessingConfigurationAction, this))
@@ -66,14 +63,9 @@ bool AddApplicationInputProcessingConfigurationRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AddApplicationInputProcessingConfigurationResponse object.
+ * Returns a AddApplicationInputProcessingConfigurationResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AddApplicationInputProcessingConfigurationResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  KinesisAnalyticsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AddApplicationInputProcessingConfigurationRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * AddApplicationInputProcessingConfigurationReq
 }
 
 /*!
- * @internal
+ * \class QtAws::KinesisAnalytics::AddApplicationInputProcessingConfigurationRequestPrivate
+ * \brief The AddApplicationInputProcessingConfigurationRequestPrivate class provides private implementation for AddApplicationInputProcessingConfigurationRequest.
+ * \internal
  *
- * @class  AddApplicationInputProcessingConfigurationRequestPrivate
- *
- * @brief  Private implementation for AddApplicationInputProcessingConfigurationRequest.
+ * \inmodule QtAwsKinesisAnalytics
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AddApplicationInputProcessingConfigurationRequestPrivate object.
- *
- * @param  action  KinesisAnalytics action being performed.
- * @param  q       Pointer to this object's public AddApplicationInputProcessingConfigurationRequest instance.
+ * Constructs a AddApplicationInputProcessingConfigurationRequestPrivate object for KinesisAnalytics \a action with,
+ * public implementation \a q.
  */
 AddApplicationInputProcessingConfigurationRequestPrivate::AddApplicationInputProcessingConfigurationRequestPrivate(
     const KinesisAnalyticsRequest::Action action, AddApplicationInputProcessingConfigurationRequest * const q)
@@ -104,15 +93,10 @@ AddApplicationInputProcessingConfigurationRequestPrivate::AddApplicationInputPro
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AddApplicationInputProcessingConfigurationRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AddApplicationInputProcessingConfigurationRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AddApplicationInputProcessingConfigurationRequest instance.
  */
 AddApplicationInputProcessingConfigurationRequestPrivate::AddApplicationInputProcessingConfigurationRequestPrivate(
     const AddApplicationInputProcessingConfigurationRequestPrivate &other, AddApplicationInputProcessingConfigurationRequest * const q)

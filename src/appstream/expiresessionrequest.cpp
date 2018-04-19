@@ -27,10 +27,9 @@ namespace AppStream {
 
 /*!
  * \class QtAws::AppStream::ExpireSessionRequest
- *
  * \brief The ExpireSessionRequest class provides an interface for AppStream ExpireSession requests.
  *
- * \ingroup AppStream
+ * \inmodule QtAwsAppStream
  *
  *  <fullname>Amazon AppStream 2.0</fullname>
  * 
@@ -40,9 +39,7 @@ namespace AppStream {
  */
 
 /*!
- * @brief  Constructs a new ExpireSessionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ExpireSessionRequest::ExpireSessionRequest(const ExpireSessionRequest &other)
     : AppStreamRequest(new ExpireSessionRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ ExpireSessionRequest::ExpireSessionRequest(const ExpireSessionRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ExpireSessionRequest object.
+ * Constructs a ExpireSessionRequest object.
  */
 ExpireSessionRequest::ExpireSessionRequest()
     : AppStreamRequest(new ExpireSessionRequestPrivate(AppStreamRequest::ExpireSessionAction, this))
@@ -69,14 +66,9 @@ bool ExpireSessionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ExpireSessionResponse object.
+ * Returns a ExpireSessionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ExpireSessionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AppStreamClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ExpireSessionRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * ExpireSessionRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::AppStream::ExpireSessionRequestPrivate
+ * \brief The ExpireSessionRequestPrivate class provides private implementation for ExpireSessionRequest.
+ * \internal
  *
- * @class  ExpireSessionRequestPrivate
- *
- * @brief  Private implementation for ExpireSessionRequest.
+ * \inmodule QtAwsAppStream
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ExpireSessionRequestPrivate object.
- *
- * @param  action  AppStream action being performed.
- * @param  q       Pointer to this object's public ExpireSessionRequest instance.
+ * Constructs a ExpireSessionRequestPrivate object for AppStream \a action with,
+ * public implementation \a q.
  */
 ExpireSessionRequestPrivate::ExpireSessionRequestPrivate(
     const AppStreamRequest::Action action, ExpireSessionRequest * const q)
@@ -107,15 +96,10 @@ ExpireSessionRequestPrivate::ExpireSessionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ExpireSessionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ExpireSessionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ExpireSessionRequest instance.
  */
 ExpireSessionRequestPrivate::ExpireSessionRequestPrivate(
     const ExpireSessionRequestPrivate &other, ExpireSessionRequest * const q)

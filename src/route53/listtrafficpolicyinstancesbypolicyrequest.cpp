@@ -27,19 +27,16 @@ namespace Route53 {
 
 /*!
  * \class QtAws::Route53::ListTrafficPolicyInstancesByPolicyRequest
- *
  * \brief The ListTrafficPolicyInstancesByPolicyRequest class provides an interface for Route53 ListTrafficPolicyInstancesByPolicy requests.
  *
- * \ingroup Route53
+ * \inmodule QtAwsRoute53
  *
  *
  * \sa Route53Client::listTrafficPolicyInstancesByPolicy
  */
 
 /*!
- * @brief  Constructs a new ListTrafficPolicyInstancesByPolicyRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListTrafficPolicyInstancesByPolicyRequest::ListTrafficPolicyInstancesByPolicyRequest(const ListTrafficPolicyInstancesByPolicyRequest &other)
     : Route53Request(new ListTrafficPolicyInstancesByPolicyRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ ListTrafficPolicyInstancesByPolicyRequest::ListTrafficPolicyInstancesByPolicyReq
 }
 
 /*!
- * @brief  Constructs a new ListTrafficPolicyInstancesByPolicyRequest object.
+ * Constructs a ListTrafficPolicyInstancesByPolicyRequest object.
  */
 ListTrafficPolicyInstancesByPolicyRequest::ListTrafficPolicyInstancesByPolicyRequest()
     : Route53Request(new ListTrafficPolicyInstancesByPolicyRequestPrivate(Route53Request::ListTrafficPolicyInstancesByPolicyAction, this))
@@ -66,14 +63,9 @@ bool ListTrafficPolicyInstancesByPolicyRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListTrafficPolicyInstancesByPolicyResponse object.
+ * Returns a ListTrafficPolicyInstancesByPolicyResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListTrafficPolicyInstancesByPolicyResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  Route53Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListTrafficPolicyInstancesByPolicyRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * ListTrafficPolicyInstancesByPolicyRequest::re
 }
 
 /*!
- * @internal
+ * \class QtAws::Route53::ListTrafficPolicyInstancesByPolicyRequestPrivate
+ * \brief The ListTrafficPolicyInstancesByPolicyRequestPrivate class provides private implementation for ListTrafficPolicyInstancesByPolicyRequest.
+ * \internal
  *
- * @class  ListTrafficPolicyInstancesByPolicyRequestPrivate
- *
- * @brief  Private implementation for ListTrafficPolicyInstancesByPolicyRequest.
+ * \inmodule QtAwsRoute53
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListTrafficPolicyInstancesByPolicyRequestPrivate object.
- *
- * @param  action  Route53 action being performed.
- * @param  q       Pointer to this object's public ListTrafficPolicyInstancesByPolicyRequest instance.
+ * Constructs a ListTrafficPolicyInstancesByPolicyRequestPrivate object for Route53 \a action with,
+ * public implementation \a q.
  */
 ListTrafficPolicyInstancesByPolicyRequestPrivate::ListTrafficPolicyInstancesByPolicyRequestPrivate(
     const Route53Request::Action action, ListTrafficPolicyInstancesByPolicyRequest * const q)
@@ -104,15 +93,10 @@ ListTrafficPolicyInstancesByPolicyRequestPrivate::ListTrafficPolicyInstancesByPo
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListTrafficPolicyInstancesByPolicyRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListTrafficPolicyInstancesByPolicyRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListTrafficPolicyInstancesByPolicyRequest instance.
  */
 ListTrafficPolicyInstancesByPolicyRequestPrivate::ListTrafficPolicyInstancesByPolicyRequestPrivate(
     const ListTrafficPolicyInstancesByPolicyRequestPrivate &other, ListTrafficPolicyInstancesByPolicyRequest * const q)

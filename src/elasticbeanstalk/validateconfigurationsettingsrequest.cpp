@@ -27,10 +27,9 @@ namespace ElasticBeanstalk {
 
 /*!
  * \class QtAws::ElasticBeanstalk::ValidateConfigurationSettingsRequest
- *
  * \brief The ValidateConfigurationSettingsRequest class provides an interface for ElasticBeanstalk ValidateConfigurationSettings requests.
  *
- * \ingroup ElasticBeanstalk
+ * \inmodule QtAwsElasticBeanstalk
  *
  *  <fullname>AWS Elastic Beanstalk</fullname>
  * 
@@ -59,9 +58,7 @@ namespace ElasticBeanstalk {
  */
 
 /*!
- * @brief  Constructs a new ValidateConfigurationSettingsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ValidateConfigurationSettingsRequest::ValidateConfigurationSettingsRequest(const ValidateConfigurationSettingsRequest &other)
     : ElasticBeanstalkRequest(new ValidateConfigurationSettingsRequestPrivate(*other.d_func(), this))
@@ -70,7 +67,7 @@ ValidateConfigurationSettingsRequest::ValidateConfigurationSettingsRequest(const
 }
 
 /*!
- * @brief  Constructs a new ValidateConfigurationSettingsRequest object.
+ * Constructs a ValidateConfigurationSettingsRequest object.
  */
 ValidateConfigurationSettingsRequest::ValidateConfigurationSettingsRequest()
     : ElasticBeanstalkRequest(new ValidateConfigurationSettingsRequestPrivate(ElasticBeanstalkRequest::ValidateConfigurationSettingsAction, this))
@@ -88,14 +85,9 @@ bool ValidateConfigurationSettingsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ValidateConfigurationSettingsResponse object.
+ * Returns a ValidateConfigurationSettingsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ValidateConfigurationSettingsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ElasticBeanstalkClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ValidateConfigurationSettingsRequest::response(QNetworkReply * const reply) const
 {
@@ -103,20 +95,17 @@ QtAws::Core::AwsAbstractResponse * ValidateConfigurationSettingsRequest::respons
 }
 
 /*!
- * @internal
+ * \class QtAws::ElasticBeanstalk::ValidateConfigurationSettingsRequestPrivate
+ * \brief The ValidateConfigurationSettingsRequestPrivate class provides private implementation for ValidateConfigurationSettingsRequest.
+ * \internal
  *
- * @class  ValidateConfigurationSettingsRequestPrivate
- *
- * @brief  Private implementation for ValidateConfigurationSettingsRequest.
+ * \inmodule QtAwsElasticBeanstalk
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ValidateConfigurationSettingsRequestPrivate object.
- *
- * @param  action  ElasticBeanstalk action being performed.
- * @param  q       Pointer to this object's public ValidateConfigurationSettingsRequest instance.
+ * Constructs a ValidateConfigurationSettingsRequestPrivate object for ElasticBeanstalk \a action with,
+ * public implementation \a q.
  */
 ValidateConfigurationSettingsRequestPrivate::ValidateConfigurationSettingsRequestPrivate(
     const ElasticBeanstalkRequest::Action action, ValidateConfigurationSettingsRequest * const q)
@@ -126,15 +115,10 @@ ValidateConfigurationSettingsRequestPrivate::ValidateConfigurationSettingsReques
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ValidateConfigurationSettingsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ValidateConfigurationSettingsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ValidateConfigurationSettingsRequest instance.
  */
 ValidateConfigurationSettingsRequestPrivate::ValidateConfigurationSettingsRequestPrivate(
     const ValidateConfigurationSettingsRequestPrivate &other, ValidateConfigurationSettingsRequest * const q)

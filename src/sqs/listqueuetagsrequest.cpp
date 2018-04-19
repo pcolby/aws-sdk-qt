@@ -27,10 +27,9 @@ namespace SQS {
 
 /*!
  * \class QtAws::SQS::ListQueueTagsRequest
- *
  * \brief The ListQueueTagsRequest class provides an interface for SQS ListQueueTags requests.
  *
- * \ingroup SQS
+ * \inmodule QtAwsSQS
  *
  *  Welcome to the <i>Amazon Simple Queue Service API
  * 
@@ -103,9 +102,7 @@ namespace SQS {
  */
 
 /*!
- * @brief  Constructs a new ListQueueTagsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListQueueTagsRequest::ListQueueTagsRequest(const ListQueueTagsRequest &other)
     : SQSRequest(new ListQueueTagsRequestPrivate(*other.d_func(), this))
@@ -114,7 +111,7 @@ ListQueueTagsRequest::ListQueueTagsRequest(const ListQueueTagsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ListQueueTagsRequest object.
+ * Constructs a ListQueueTagsRequest object.
  */
 ListQueueTagsRequest::ListQueueTagsRequest()
     : SQSRequest(new ListQueueTagsRequestPrivate(SQSRequest::ListQueueTagsAction, this))
@@ -132,14 +129,9 @@ bool ListQueueTagsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListQueueTagsResponse object.
+ * Returns a ListQueueTagsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListQueueTagsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SQSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListQueueTagsRequest::response(QNetworkReply * const reply) const
 {
@@ -147,20 +139,17 @@ QtAws::Core::AwsAbstractResponse * ListQueueTagsRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::SQS::ListQueueTagsRequestPrivate
+ * \brief The ListQueueTagsRequestPrivate class provides private implementation for ListQueueTagsRequest.
+ * \internal
  *
- * @class  ListQueueTagsRequestPrivate
- *
- * @brief  Private implementation for ListQueueTagsRequest.
+ * \inmodule QtAwsSQS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListQueueTagsRequestPrivate object.
- *
- * @param  action  SQS action being performed.
- * @param  q       Pointer to this object's public ListQueueTagsRequest instance.
+ * Constructs a ListQueueTagsRequestPrivate object for SQS \a action with,
+ * public implementation \a q.
  */
 ListQueueTagsRequestPrivate::ListQueueTagsRequestPrivate(
     const SQSRequest::Action action, ListQueueTagsRequest * const q)
@@ -170,15 +159,10 @@ ListQueueTagsRequestPrivate::ListQueueTagsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListQueueTagsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListQueueTagsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListQueueTagsRequest instance.
  */
 ListQueueTagsRequestPrivate::ListQueueTagsRequestPrivate(
     const ListQueueTagsRequestPrivate &other, ListQueueTagsRequest * const q)

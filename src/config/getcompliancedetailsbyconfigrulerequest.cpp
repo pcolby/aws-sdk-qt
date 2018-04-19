@@ -27,10 +27,9 @@ namespace ConfigService {
 
 /*!
  * \class QtAws::ConfigService::GetComplianceDetailsByConfigRuleRequest
- *
  * \brief The GetComplianceDetailsByConfigRuleRequest class provides an interface for ConfigService GetComplianceDetailsByConfigRule requests.
  *
- * \ingroup ConfigService
+ * \inmodule QtAwsConfigService
  *
  *  <fullname>AWS Config</fullname>
  * 
@@ -60,9 +59,7 @@ namespace ConfigService {
  */
 
 /*!
- * @brief  Constructs a new GetComplianceDetailsByConfigRuleRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetComplianceDetailsByConfigRuleRequest::GetComplianceDetailsByConfigRuleRequest(const GetComplianceDetailsByConfigRuleRequest &other)
     : ConfigServiceRequest(new GetComplianceDetailsByConfigRuleRequestPrivate(*other.d_func(), this))
@@ -71,7 +68,7 @@ GetComplianceDetailsByConfigRuleRequest::GetComplianceDetailsByConfigRuleRequest
 }
 
 /*!
- * @brief  Constructs a new GetComplianceDetailsByConfigRuleRequest object.
+ * Constructs a GetComplianceDetailsByConfigRuleRequest object.
  */
 GetComplianceDetailsByConfigRuleRequest::GetComplianceDetailsByConfigRuleRequest()
     : ConfigServiceRequest(new GetComplianceDetailsByConfigRuleRequestPrivate(ConfigServiceRequest::GetComplianceDetailsByConfigRuleAction, this))
@@ -89,14 +86,9 @@ bool GetComplianceDetailsByConfigRuleRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetComplianceDetailsByConfigRuleResponse object.
+ * Returns a GetComplianceDetailsByConfigRuleResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetComplianceDetailsByConfigRuleResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ConfigServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetComplianceDetailsByConfigRuleRequest::response(QNetworkReply * const reply) const
 {
@@ -104,20 +96,17 @@ QtAws::Core::AwsAbstractResponse * GetComplianceDetailsByConfigRuleRequest::resp
 }
 
 /*!
- * @internal
+ * \class QtAws::ConfigService::GetComplianceDetailsByConfigRuleRequestPrivate
+ * \brief The GetComplianceDetailsByConfigRuleRequestPrivate class provides private implementation for GetComplianceDetailsByConfigRuleRequest.
+ * \internal
  *
- * @class  GetComplianceDetailsByConfigRuleRequestPrivate
- *
- * @brief  Private implementation for GetComplianceDetailsByConfigRuleRequest.
+ * \inmodule QtAwsConfigService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetComplianceDetailsByConfigRuleRequestPrivate object.
- *
- * @param  action  ConfigService action being performed.
- * @param  q       Pointer to this object's public GetComplianceDetailsByConfigRuleRequest instance.
+ * Constructs a GetComplianceDetailsByConfigRuleRequestPrivate object for ConfigService \a action with,
+ * public implementation \a q.
  */
 GetComplianceDetailsByConfigRuleRequestPrivate::GetComplianceDetailsByConfigRuleRequestPrivate(
     const ConfigServiceRequest::Action action, GetComplianceDetailsByConfigRuleRequest * const q)
@@ -127,15 +116,10 @@ GetComplianceDetailsByConfigRuleRequestPrivate::GetComplianceDetailsByConfigRule
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetComplianceDetailsByConfigRuleRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetComplianceDetailsByConfigRuleRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetComplianceDetailsByConfigRuleRequest instance.
  */
 GetComplianceDetailsByConfigRuleRequestPrivate::GetComplianceDetailsByConfigRuleRequestPrivate(
     const GetComplianceDetailsByConfigRuleRequestPrivate &other, GetComplianceDetailsByConfigRuleRequest * const q)

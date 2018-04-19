@@ -27,10 +27,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::CreateApiKeyRequest
- *
  * \brief The CreateApiKeyRequest class provides an interface for APIGateway CreateApiKey requests.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -42,9 +41,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new CreateApiKeyRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateApiKeyRequest::CreateApiKeyRequest(const CreateApiKeyRequest &other)
     : APIGatewayRequest(new CreateApiKeyRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ CreateApiKeyRequest::CreateApiKeyRequest(const CreateApiKeyRequest &other)
 }
 
 /*!
- * @brief  Constructs a new CreateApiKeyRequest object.
+ * Constructs a CreateApiKeyRequest object.
  */
 CreateApiKeyRequest::CreateApiKeyRequest()
     : APIGatewayRequest(new CreateApiKeyRequestPrivate(APIGatewayRequest::CreateApiKeyAction, this))
@@ -71,14 +68,9 @@ bool CreateApiKeyRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateApiKeyResponse object.
+ * Returns a CreateApiKeyResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateApiKeyResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  APIGatewayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateApiKeyRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * CreateApiKeyRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::APIGateway::CreateApiKeyRequestPrivate
+ * \brief The CreateApiKeyRequestPrivate class provides private implementation for CreateApiKeyRequest.
+ * \internal
  *
- * @class  CreateApiKeyRequestPrivate
- *
- * @brief  Private implementation for CreateApiKeyRequest.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateApiKeyRequestPrivate object.
- *
- * @param  action  APIGateway action being performed.
- * @param  q       Pointer to this object's public CreateApiKeyRequest instance.
+ * Constructs a CreateApiKeyRequestPrivate object for APIGateway \a action with,
+ * public implementation \a q.
  */
 CreateApiKeyRequestPrivate::CreateApiKeyRequestPrivate(
     const APIGatewayRequest::Action action, CreateApiKeyRequest * const q)
@@ -109,15 +98,10 @@ CreateApiKeyRequestPrivate::CreateApiKeyRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateApiKeyRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateApiKeyRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateApiKeyRequest instance.
  */
 CreateApiKeyRequestPrivate::CreateApiKeyRequestPrivate(
     const CreateApiKeyRequestPrivate &other, CreateApiKeyRequest * const q)

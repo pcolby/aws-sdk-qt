@@ -27,10 +27,9 @@ namespace Kinesis {
 
 /*!
  * \class QtAws::Kinesis::DescribeLimitsRequest
- *
  * \brief The DescribeLimitsRequest class provides an interface for Kinesis DescribeLimits requests.
  *
- * \ingroup Kinesis
+ * \inmodule QtAwsKinesis
  *
  *  <fullname>Amazon Kinesis Data Streams Service API Reference</fullname>
  * 
@@ -40,9 +39,7 @@ namespace Kinesis {
  */
 
 /*!
- * @brief  Constructs a new DescribeLimitsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeLimitsRequest::DescribeLimitsRequest(const DescribeLimitsRequest &other)
     : KinesisRequest(new DescribeLimitsRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ DescribeLimitsRequest::DescribeLimitsRequest(const DescribeLimitsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DescribeLimitsRequest object.
+ * Constructs a DescribeLimitsRequest object.
  */
 DescribeLimitsRequest::DescribeLimitsRequest()
     : KinesisRequest(new DescribeLimitsRequestPrivate(KinesisRequest::DescribeLimitsAction, this))
@@ -69,14 +66,9 @@ bool DescribeLimitsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeLimitsResponse object.
+ * Returns a DescribeLimitsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeLimitsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  KinesisClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeLimitsRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * DescribeLimitsRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::Kinesis::DescribeLimitsRequestPrivate
+ * \brief The DescribeLimitsRequestPrivate class provides private implementation for DescribeLimitsRequest.
+ * \internal
  *
- * @class  DescribeLimitsRequestPrivate
- *
- * @brief  Private implementation for DescribeLimitsRequest.
+ * \inmodule QtAwsKinesis
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeLimitsRequestPrivate object.
- *
- * @param  action  Kinesis action being performed.
- * @param  q       Pointer to this object's public DescribeLimitsRequest instance.
+ * Constructs a DescribeLimitsRequestPrivate object for Kinesis \a action with,
+ * public implementation \a q.
  */
 DescribeLimitsRequestPrivate::DescribeLimitsRequestPrivate(
     const KinesisRequest::Action action, DescribeLimitsRequest * const q)
@@ -107,15 +96,10 @@ DescribeLimitsRequestPrivate::DescribeLimitsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeLimitsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeLimitsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeLimitsRequest instance.
  */
 DescribeLimitsRequestPrivate::DescribeLimitsRequestPrivate(
     const DescribeLimitsRequestPrivate &other, DescribeLimitsRequest * const q)

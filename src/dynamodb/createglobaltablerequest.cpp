@@ -27,10 +27,9 @@ namespace DynamoDB {
 
 /*!
  * \class QtAws::DynamoDB::CreateGlobalTableRequest
- *
  * \brief The CreateGlobalTableRequest class provides an interface for DynamoDB CreateGlobalTable requests.
  *
- * \ingroup DynamoDB
+ * \inmodule QtAwsDynamoDB
  *
  *  <fullname>Amazon DynamoDB</fullname>
  * 
@@ -56,9 +55,7 @@ namespace DynamoDB {
  */
 
 /*!
- * @brief  Constructs a new CreateGlobalTableRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateGlobalTableRequest::CreateGlobalTableRequest(const CreateGlobalTableRequest &other)
     : DynamoDBRequest(new CreateGlobalTableRequestPrivate(*other.d_func(), this))
@@ -67,7 +64,7 @@ CreateGlobalTableRequest::CreateGlobalTableRequest(const CreateGlobalTableReques
 }
 
 /*!
- * @brief  Constructs a new CreateGlobalTableRequest object.
+ * Constructs a CreateGlobalTableRequest object.
  */
 CreateGlobalTableRequest::CreateGlobalTableRequest()
     : DynamoDBRequest(new CreateGlobalTableRequestPrivate(DynamoDBRequest::CreateGlobalTableAction, this))
@@ -85,14 +82,9 @@ bool CreateGlobalTableRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateGlobalTableResponse object.
+ * Returns a CreateGlobalTableResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateGlobalTableResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DynamoDBClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateGlobalTableRequest::response(QNetworkReply * const reply) const
 {
@@ -100,20 +92,17 @@ QtAws::Core::AwsAbstractResponse * CreateGlobalTableRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::DynamoDB::CreateGlobalTableRequestPrivate
+ * \brief The CreateGlobalTableRequestPrivate class provides private implementation for CreateGlobalTableRequest.
+ * \internal
  *
- * @class  CreateGlobalTableRequestPrivate
- *
- * @brief  Private implementation for CreateGlobalTableRequest.
+ * \inmodule QtAwsDynamoDB
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateGlobalTableRequestPrivate object.
- *
- * @param  action  DynamoDB action being performed.
- * @param  q       Pointer to this object's public CreateGlobalTableRequest instance.
+ * Constructs a CreateGlobalTableRequestPrivate object for DynamoDB \a action with,
+ * public implementation \a q.
  */
 CreateGlobalTableRequestPrivate::CreateGlobalTableRequestPrivate(
     const DynamoDBRequest::Action action, CreateGlobalTableRequest * const q)
@@ -123,15 +112,10 @@ CreateGlobalTableRequestPrivate::CreateGlobalTableRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateGlobalTableRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateGlobalTableRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateGlobalTableRequest instance.
  */
 CreateGlobalTableRequestPrivate::CreateGlobalTableRequestPrivate(
     const CreateGlobalTableRequestPrivate &other, CreateGlobalTableRequest * const q)

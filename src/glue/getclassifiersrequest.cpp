@@ -27,10 +27,9 @@ namespace Glue {
 
 /*!
  * \class QtAws::Glue::GetClassifiersRequest
- *
  * \brief The GetClassifiersRequest class provides an interface for Glue GetClassifiers requests.
  *
- * \ingroup Glue
+ * \inmodule QtAwsGlue
  *
  *  <fullname>AWS Glue</fullname>
  * 
@@ -40,9 +39,7 @@ namespace Glue {
  */
 
 /*!
- * @brief  Constructs a new GetClassifiersRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetClassifiersRequest::GetClassifiersRequest(const GetClassifiersRequest &other)
     : GlueRequest(new GetClassifiersRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ GetClassifiersRequest::GetClassifiersRequest(const GetClassifiersRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetClassifiersRequest object.
+ * Constructs a GetClassifiersRequest object.
  */
 GetClassifiersRequest::GetClassifiersRequest()
     : GlueRequest(new GetClassifiersRequestPrivate(GlueRequest::GetClassifiersAction, this))
@@ -69,14 +66,9 @@ bool GetClassifiersRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetClassifiersResponse object.
+ * Returns a GetClassifiersResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetClassifiersResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GlueClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetClassifiersRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * GetClassifiersRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::Glue::GetClassifiersRequestPrivate
+ * \brief The GetClassifiersRequestPrivate class provides private implementation for GetClassifiersRequest.
+ * \internal
  *
- * @class  GetClassifiersRequestPrivate
- *
- * @brief  Private implementation for GetClassifiersRequest.
+ * \inmodule QtAwsGlue
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetClassifiersRequestPrivate object.
- *
- * @param  action  Glue action being performed.
- * @param  q       Pointer to this object's public GetClassifiersRequest instance.
+ * Constructs a GetClassifiersRequestPrivate object for Glue \a action with,
+ * public implementation \a q.
  */
 GetClassifiersRequestPrivate::GetClassifiersRequestPrivate(
     const GlueRequest::Action action, GetClassifiersRequest * const q)
@@ -107,15 +96,10 @@ GetClassifiersRequestPrivate::GetClassifiersRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetClassifiersRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetClassifiersRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetClassifiersRequest instance.
  */
 GetClassifiersRequestPrivate::GetClassifiersRequestPrivate(
     const GetClassifiersRequestPrivate &other, GetClassifiersRequest * const q)

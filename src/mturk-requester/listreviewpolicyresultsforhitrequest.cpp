@@ -27,19 +27,16 @@ namespace MTurk {
 
 /*!
  * \class QtAws::MTurk::ListReviewPolicyResultsForHITRequest
- *
  * \brief The ListReviewPolicyResultsForHITRequest class provides an interface for MTurk ListReviewPolicyResultsForHIT requests.
  *
- * \ingroup MTurk
+ * \inmodule QtAwsMTurk
  *
  *
  * \sa MTurkClient::listReviewPolicyResultsForHIT
  */
 
 /*!
- * @brief  Constructs a new ListReviewPolicyResultsForHITRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListReviewPolicyResultsForHITRequest::ListReviewPolicyResultsForHITRequest(const ListReviewPolicyResultsForHITRequest &other)
     : MTurkRequest(new ListReviewPolicyResultsForHITRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ ListReviewPolicyResultsForHITRequest::ListReviewPolicyResultsForHITRequest(const
 }
 
 /*!
- * @brief  Constructs a new ListReviewPolicyResultsForHITRequest object.
+ * Constructs a ListReviewPolicyResultsForHITRequest object.
  */
 ListReviewPolicyResultsForHITRequest::ListReviewPolicyResultsForHITRequest()
     : MTurkRequest(new ListReviewPolicyResultsForHITRequestPrivate(MTurkRequest::ListReviewPolicyResultsForHITAction, this))
@@ -66,14 +63,9 @@ bool ListReviewPolicyResultsForHITRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListReviewPolicyResultsForHITResponse object.
+ * Returns a ListReviewPolicyResultsForHITResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListReviewPolicyResultsForHITResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MTurkClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListReviewPolicyResultsForHITRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * ListReviewPolicyResultsForHITRequest::respons
 }
 
 /*!
- * @internal
+ * \class QtAws::MTurk::ListReviewPolicyResultsForHITRequestPrivate
+ * \brief The ListReviewPolicyResultsForHITRequestPrivate class provides private implementation for ListReviewPolicyResultsForHITRequest.
+ * \internal
  *
- * @class  ListReviewPolicyResultsForHITRequestPrivate
- *
- * @brief  Private implementation for ListReviewPolicyResultsForHITRequest.
+ * \inmodule QtAwsMTurk
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListReviewPolicyResultsForHITRequestPrivate object.
- *
- * @param  action  MTurk action being performed.
- * @param  q       Pointer to this object's public ListReviewPolicyResultsForHITRequest instance.
+ * Constructs a ListReviewPolicyResultsForHITRequestPrivate object for MTurk \a action with,
+ * public implementation \a q.
  */
 ListReviewPolicyResultsForHITRequestPrivate::ListReviewPolicyResultsForHITRequestPrivate(
     const MTurkRequest::Action action, ListReviewPolicyResultsForHITRequest * const q)
@@ -104,15 +93,10 @@ ListReviewPolicyResultsForHITRequestPrivate::ListReviewPolicyResultsForHITReques
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListReviewPolicyResultsForHITRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListReviewPolicyResultsForHITRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListReviewPolicyResultsForHITRequest instance.
  */
 ListReviewPolicyResultsForHITRequestPrivate::ListReviewPolicyResultsForHITRequestPrivate(
     const ListReviewPolicyResultsForHITRequestPrivate &other, ListReviewPolicyResultsForHITRequest * const q)

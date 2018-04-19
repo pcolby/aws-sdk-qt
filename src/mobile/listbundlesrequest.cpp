@@ -27,10 +27,9 @@ namespace Mobile {
 
 /*!
  * \class QtAws::Mobile::ListBundlesRequest
- *
  * \brief The ListBundlesRequest class provides an interface for Mobile ListBundles requests.
  *
- * \ingroup Mobile
+ * \inmodule QtAwsMobile
  *
  *  AWS Mobile Service provides mobile app and website developers with capabilities required to configure AWS resources and
  *  bootstrap their developer desktop projects with the necessary SDKs, constants, tools and samples to make use of those
@@ -40,9 +39,7 @@ namespace Mobile {
  */
 
 /*!
- * @brief  Constructs a new ListBundlesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListBundlesRequest::ListBundlesRequest(const ListBundlesRequest &other)
     : MobileRequest(new ListBundlesRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ ListBundlesRequest::ListBundlesRequest(const ListBundlesRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ListBundlesRequest object.
+ * Constructs a ListBundlesRequest object.
  */
 ListBundlesRequest::ListBundlesRequest()
     : MobileRequest(new ListBundlesRequestPrivate(MobileRequest::ListBundlesAction, this))
@@ -69,14 +66,9 @@ bool ListBundlesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListBundlesResponse object.
+ * Returns a ListBundlesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListBundlesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MobileClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListBundlesRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * ListBundlesRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::Mobile::ListBundlesRequestPrivate
+ * \brief The ListBundlesRequestPrivate class provides private implementation for ListBundlesRequest.
+ * \internal
  *
- * @class  ListBundlesRequestPrivate
- *
- * @brief  Private implementation for ListBundlesRequest.
+ * \inmodule QtAwsMobile
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListBundlesRequestPrivate object.
- *
- * @param  action  Mobile action being performed.
- * @param  q       Pointer to this object's public ListBundlesRequest instance.
+ * Constructs a ListBundlesRequestPrivate object for Mobile \a action with,
+ * public implementation \a q.
  */
 ListBundlesRequestPrivate::ListBundlesRequestPrivate(
     const MobileRequest::Action action, ListBundlesRequest * const q)
@@ -107,15 +96,10 @@ ListBundlesRequestPrivate::ListBundlesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListBundlesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListBundlesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListBundlesRequest instance.
  */
 ListBundlesRequestPrivate::ListBundlesRequestPrivate(
     const ListBundlesRequestPrivate &other, ListBundlesRequest * const q)

@@ -27,10 +27,9 @@ namespace ApplicationAutoScaling {
 
 /*!
  * \class QtAws::ApplicationAutoScaling::DescribeScalingActivitiesRequest
- *
  * \brief The DescribeScalingActivitiesRequest class provides an interface for ApplicationAutoScaling DescribeScalingActivities requests.
  *
- * \ingroup ApplicationAutoScaling
+ * \inmodule QtAwsApplicationAutoScaling
  *
  *  With Application Auto Scaling, you can configure automatic scaling for your scalable AWS resources. You can use
  *  Application Auto Scaling to accomplish the following
@@ -110,9 +109,7 @@ namespace ApplicationAutoScaling {
  */
 
 /*!
- * @brief  Constructs a new DescribeScalingActivitiesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeScalingActivitiesRequest::DescribeScalingActivitiesRequest(const DescribeScalingActivitiesRequest &other)
     : ApplicationAutoScalingRequest(new DescribeScalingActivitiesRequestPrivate(*other.d_func(), this))
@@ -121,7 +118,7 @@ DescribeScalingActivitiesRequest::DescribeScalingActivitiesRequest(const Describ
 }
 
 /*!
- * @brief  Constructs a new DescribeScalingActivitiesRequest object.
+ * Constructs a DescribeScalingActivitiesRequest object.
  */
 DescribeScalingActivitiesRequest::DescribeScalingActivitiesRequest()
     : ApplicationAutoScalingRequest(new DescribeScalingActivitiesRequestPrivate(ApplicationAutoScalingRequest::DescribeScalingActivitiesAction, this))
@@ -139,14 +136,9 @@ bool DescribeScalingActivitiesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeScalingActivitiesResponse object.
+ * Returns a DescribeScalingActivitiesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeScalingActivitiesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ApplicationAutoScalingClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeScalingActivitiesRequest::response(QNetworkReply * const reply) const
 {
@@ -154,20 +146,17 @@ QtAws::Core::AwsAbstractResponse * DescribeScalingActivitiesRequest::response(QN
 }
 
 /*!
- * @internal
+ * \class QtAws::ApplicationAutoScaling::DescribeScalingActivitiesRequestPrivate
+ * \brief The DescribeScalingActivitiesRequestPrivate class provides private implementation for DescribeScalingActivitiesRequest.
+ * \internal
  *
- * @class  DescribeScalingActivitiesRequestPrivate
- *
- * @brief  Private implementation for DescribeScalingActivitiesRequest.
+ * \inmodule QtAwsApplicationAutoScaling
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeScalingActivitiesRequestPrivate object.
- *
- * @param  action  ApplicationAutoScaling action being performed.
- * @param  q       Pointer to this object's public DescribeScalingActivitiesRequest instance.
+ * Constructs a DescribeScalingActivitiesRequestPrivate object for ApplicationAutoScaling \a action with,
+ * public implementation \a q.
  */
 DescribeScalingActivitiesRequestPrivate::DescribeScalingActivitiesRequestPrivate(
     const ApplicationAutoScalingRequest::Action action, DescribeScalingActivitiesRequest * const q)
@@ -177,15 +166,10 @@ DescribeScalingActivitiesRequestPrivate::DescribeScalingActivitiesRequestPrivate
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeScalingActivitiesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeScalingActivitiesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeScalingActivitiesRequest instance.
  */
 DescribeScalingActivitiesRequestPrivate::DescribeScalingActivitiesRequestPrivate(
     const DescribeScalingActivitiesRequestPrivate &other, DescribeScalingActivitiesRequest * const q)

@@ -27,10 +27,9 @@ namespace ElasticBeanstalk {
 
 /*!
  * \class QtAws::ElasticBeanstalk::RestartAppServerRequest
- *
  * \brief The RestartAppServerRequest class provides an interface for ElasticBeanstalk RestartAppServer requests.
  *
- * \ingroup ElasticBeanstalk
+ * \inmodule QtAwsElasticBeanstalk
  *
  *  <fullname>AWS Elastic Beanstalk</fullname>
  * 
@@ -59,9 +58,7 @@ namespace ElasticBeanstalk {
  */
 
 /*!
- * @brief  Constructs a new RestartAppServerRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 RestartAppServerRequest::RestartAppServerRequest(const RestartAppServerRequest &other)
     : ElasticBeanstalkRequest(new RestartAppServerRequestPrivate(*other.d_func(), this))
@@ -70,7 +67,7 @@ RestartAppServerRequest::RestartAppServerRequest(const RestartAppServerRequest &
 }
 
 /*!
- * @brief  Constructs a new RestartAppServerRequest object.
+ * Constructs a RestartAppServerRequest object.
  */
 RestartAppServerRequest::RestartAppServerRequest()
     : ElasticBeanstalkRequest(new RestartAppServerRequestPrivate(ElasticBeanstalkRequest::RestartAppServerAction, this))
@@ -88,14 +85,9 @@ bool RestartAppServerRequest::isValid() const
 
 
 /*!
- * @brief  Construct an RestartAppServerResponse object.
+ * Returns a RestartAppServerResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An RestartAppServerResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ElasticBeanstalkClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * RestartAppServerRequest::response(QNetworkReply * const reply) const
 {
@@ -103,20 +95,17 @@ QtAws::Core::AwsAbstractResponse * RestartAppServerRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::ElasticBeanstalk::RestartAppServerRequestPrivate
+ * \brief The RestartAppServerRequestPrivate class provides private implementation for RestartAppServerRequest.
+ * \internal
  *
- * @class  RestartAppServerRequestPrivate
- *
- * @brief  Private implementation for RestartAppServerRequest.
+ * \inmodule QtAwsElasticBeanstalk
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new RestartAppServerRequestPrivate object.
- *
- * @param  action  ElasticBeanstalk action being performed.
- * @param  q       Pointer to this object's public RestartAppServerRequest instance.
+ * Constructs a RestartAppServerRequestPrivate object for ElasticBeanstalk \a action with,
+ * public implementation \a q.
  */
 RestartAppServerRequestPrivate::RestartAppServerRequestPrivate(
     const ElasticBeanstalkRequest::Action action, RestartAppServerRequest * const q)
@@ -126,15 +115,10 @@ RestartAppServerRequestPrivate::RestartAppServerRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RestartAppServerRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the RestartAppServerRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public RestartAppServerRequest instance.
  */
 RestartAppServerRequestPrivate::RestartAppServerRequestPrivate(
     const RestartAppServerRequestPrivate &other, RestartAppServerRequest * const q)

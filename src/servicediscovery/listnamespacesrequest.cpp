@@ -27,10 +27,9 @@ namespace ServiceDiscovery {
 
 /*!
  * \class QtAws::ServiceDiscovery::ListNamespacesRequest
- *
  * \brief The ListNamespacesRequest class provides an interface for ServiceDiscovery ListNamespaces requests.
  *
- * \ingroup ServiceDiscovery
+ * \inmodule QtAwsServiceDiscovery
  *
  *  Amazon Route 53 auto naming lets you configure public or private namespaces that your microservice applications run in.
  *  When instances of the service become available, you can call the auto naming API to register the instance, and Route 53
@@ -41,9 +40,7 @@ namespace ServiceDiscovery {
  */
 
 /*!
- * @brief  Constructs a new ListNamespacesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListNamespacesRequest::ListNamespacesRequest(const ListNamespacesRequest &other)
     : ServiceDiscoveryRequest(new ListNamespacesRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ ListNamespacesRequest::ListNamespacesRequest(const ListNamespacesRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ListNamespacesRequest object.
+ * Constructs a ListNamespacesRequest object.
  */
 ListNamespacesRequest::ListNamespacesRequest()
     : ServiceDiscoveryRequest(new ListNamespacesRequestPrivate(ServiceDiscoveryRequest::ListNamespacesAction, this))
@@ -70,14 +67,9 @@ bool ListNamespacesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListNamespacesResponse object.
+ * Returns a ListNamespacesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListNamespacesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ServiceDiscoveryClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListNamespacesRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * ListNamespacesRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::ServiceDiscovery::ListNamespacesRequestPrivate
+ * \brief The ListNamespacesRequestPrivate class provides private implementation for ListNamespacesRequest.
+ * \internal
  *
- * @class  ListNamespacesRequestPrivate
- *
- * @brief  Private implementation for ListNamespacesRequest.
+ * \inmodule QtAwsServiceDiscovery
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListNamespacesRequestPrivate object.
- *
- * @param  action  ServiceDiscovery action being performed.
- * @param  q       Pointer to this object's public ListNamespacesRequest instance.
+ * Constructs a ListNamespacesRequestPrivate object for ServiceDiscovery \a action with,
+ * public implementation \a q.
  */
 ListNamespacesRequestPrivate::ListNamespacesRequestPrivate(
     const ServiceDiscoveryRequest::Action action, ListNamespacesRequest * const q)
@@ -108,15 +97,10 @@ ListNamespacesRequestPrivate::ListNamespacesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListNamespacesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListNamespacesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListNamespacesRequest instance.
  */
 ListNamespacesRequestPrivate::ListNamespacesRequestPrivate(
     const ListNamespacesRequestPrivate &other, ListNamespacesRequest * const q)

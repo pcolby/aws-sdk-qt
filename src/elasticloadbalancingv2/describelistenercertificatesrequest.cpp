@@ -27,10 +27,9 @@ namespace ElasticLoadBalancingv2 {
 
 /*!
  * \class QtAws::ElasticLoadBalancingv2::DescribeListenerCertificatesRequest
- *
  * \brief The DescribeListenerCertificatesRequest class provides an interface for ElasticLoadBalancingv2 DescribeListenerCertificates requests.
  *
- * \ingroup ElasticLoadBalancingv2
+ * \inmodule QtAwsElasticLoadBalancingv2
  *
  *  <fullname>Elastic Load Balancing</fullname>
  * 
@@ -105,9 +104,7 @@ namespace ElasticLoadBalancingv2 {
  */
 
 /*!
- * @brief  Constructs a new DescribeListenerCertificatesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeListenerCertificatesRequest::DescribeListenerCertificatesRequest(const DescribeListenerCertificatesRequest &other)
     : ElasticLoadBalancingv2Request(new DescribeListenerCertificatesRequestPrivate(*other.d_func(), this))
@@ -116,7 +113,7 @@ DescribeListenerCertificatesRequest::DescribeListenerCertificatesRequest(const D
 }
 
 /*!
- * @brief  Constructs a new DescribeListenerCertificatesRequest object.
+ * Constructs a DescribeListenerCertificatesRequest object.
  */
 DescribeListenerCertificatesRequest::DescribeListenerCertificatesRequest()
     : ElasticLoadBalancingv2Request(new DescribeListenerCertificatesRequestPrivate(ElasticLoadBalancingv2Request::DescribeListenerCertificatesAction, this))
@@ -134,14 +131,9 @@ bool DescribeListenerCertificatesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeListenerCertificatesResponse object.
+ * Returns a DescribeListenerCertificatesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeListenerCertificatesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ElasticLoadBalancingv2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeListenerCertificatesRequest::response(QNetworkReply * const reply) const
 {
@@ -149,20 +141,17 @@ QtAws::Core::AwsAbstractResponse * DescribeListenerCertificatesRequest::response
 }
 
 /*!
- * @internal
+ * \class QtAws::ElasticLoadBalancingv2::DescribeListenerCertificatesRequestPrivate
+ * \brief The DescribeListenerCertificatesRequestPrivate class provides private implementation for DescribeListenerCertificatesRequest.
+ * \internal
  *
- * @class  DescribeListenerCertificatesRequestPrivate
- *
- * @brief  Private implementation for DescribeListenerCertificatesRequest.
+ * \inmodule QtAwsElasticLoadBalancingv2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeListenerCertificatesRequestPrivate object.
- *
- * @param  action  ElasticLoadBalancingv2 action being performed.
- * @param  q       Pointer to this object's public DescribeListenerCertificatesRequest instance.
+ * Constructs a DescribeListenerCertificatesRequestPrivate object for ElasticLoadBalancingv2 \a action with,
+ * public implementation \a q.
  */
 DescribeListenerCertificatesRequestPrivate::DescribeListenerCertificatesRequestPrivate(
     const ElasticLoadBalancingv2Request::Action action, DescribeListenerCertificatesRequest * const q)
@@ -172,15 +161,10 @@ DescribeListenerCertificatesRequestPrivate::DescribeListenerCertificatesRequestP
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeListenerCertificatesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeListenerCertificatesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeListenerCertificatesRequest instance.
  */
 DescribeListenerCertificatesRequestPrivate::DescribeListenerCertificatesRequestPrivate(
     const DescribeListenerCertificatesRequestPrivate &other, DescribeListenerCertificatesRequest * const q)

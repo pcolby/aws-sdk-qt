@@ -27,10 +27,9 @@ namespace AppStream {
 
 /*!
  * \class QtAws::AppStream::CreateImageBuilderStreamingURLRequest
- *
  * \brief The CreateImageBuilderStreamingURLRequest class provides an interface for AppStream CreateImageBuilderStreamingURL requests.
  *
- * \ingroup AppStream
+ * \inmodule QtAwsAppStream
  *
  *  <fullname>Amazon AppStream 2.0</fullname>
  * 
@@ -40,9 +39,7 @@ namespace AppStream {
  */
 
 /*!
- * @brief  Constructs a new CreateImageBuilderStreamingURLRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateImageBuilderStreamingURLRequest::CreateImageBuilderStreamingURLRequest(const CreateImageBuilderStreamingURLRequest &other)
     : AppStreamRequest(new CreateImageBuilderStreamingURLRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ CreateImageBuilderStreamingURLRequest::CreateImageBuilderStreamingURLRequest(con
 }
 
 /*!
- * @brief  Constructs a new CreateImageBuilderStreamingURLRequest object.
+ * Constructs a CreateImageBuilderStreamingURLRequest object.
  */
 CreateImageBuilderStreamingURLRequest::CreateImageBuilderStreamingURLRequest()
     : AppStreamRequest(new CreateImageBuilderStreamingURLRequestPrivate(AppStreamRequest::CreateImageBuilderStreamingURLAction, this))
@@ -69,14 +66,9 @@ bool CreateImageBuilderStreamingURLRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateImageBuilderStreamingURLResponse object.
+ * Returns a CreateImageBuilderStreamingURLResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateImageBuilderStreamingURLResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AppStreamClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateImageBuilderStreamingURLRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * CreateImageBuilderStreamingURLRequest::respon
 }
 
 /*!
- * @internal
+ * \class QtAws::AppStream::CreateImageBuilderStreamingURLRequestPrivate
+ * \brief The CreateImageBuilderStreamingURLRequestPrivate class provides private implementation for CreateImageBuilderStreamingURLRequest.
+ * \internal
  *
- * @class  CreateImageBuilderStreamingURLRequestPrivate
- *
- * @brief  Private implementation for CreateImageBuilderStreamingURLRequest.
+ * \inmodule QtAwsAppStream
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateImageBuilderStreamingURLRequestPrivate object.
- *
- * @param  action  AppStream action being performed.
- * @param  q       Pointer to this object's public CreateImageBuilderStreamingURLRequest instance.
+ * Constructs a CreateImageBuilderStreamingURLRequestPrivate object for AppStream \a action with,
+ * public implementation \a q.
  */
 CreateImageBuilderStreamingURLRequestPrivate::CreateImageBuilderStreamingURLRequestPrivate(
     const AppStreamRequest::Action action, CreateImageBuilderStreamingURLRequest * const q)
@@ -107,15 +96,10 @@ CreateImageBuilderStreamingURLRequestPrivate::CreateImageBuilderStreamingURLRequ
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateImageBuilderStreamingURLRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateImageBuilderStreamingURLRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateImageBuilderStreamingURLRequest instance.
  */
 CreateImageBuilderStreamingURLRequestPrivate::CreateImageBuilderStreamingURLRequestPrivate(
     const CreateImageBuilderStreamingURLRequestPrivate &other, CreateImageBuilderStreamingURLRequest * const q)

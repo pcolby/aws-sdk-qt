@@ -27,10 +27,9 @@ namespace CloudWatchLogs {
 
 /*!
  * \class QtAws::CloudWatchLogs::DeleteSubscriptionFilterRequest
- *
  * \brief The DeleteSubscriptionFilterRequest class provides an interface for CloudWatchLogs DeleteSubscriptionFilter requests.
  *
- * \ingroup CloudWatchLogs
+ * \inmodule QtAwsCloudWatchLogs
  *
  *  You can use Amazon CloudWatch Logs to monitor, store, and access your log files from Amazon EC2 instances, AWS
  *  CloudTrail, or other sources. You can then retrieve the associated log data from CloudWatch Logs using the CloudWatch
@@ -66,9 +65,7 @@ namespace CloudWatchLogs {
  */
 
 /*!
- * @brief  Constructs a new DeleteSubscriptionFilterRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteSubscriptionFilterRequest::DeleteSubscriptionFilterRequest(const DeleteSubscriptionFilterRequest &other)
     : CloudWatchLogsRequest(new DeleteSubscriptionFilterRequestPrivate(*other.d_func(), this))
@@ -77,7 +74,7 @@ DeleteSubscriptionFilterRequest::DeleteSubscriptionFilterRequest(const DeleteSub
 }
 
 /*!
- * @brief  Constructs a new DeleteSubscriptionFilterRequest object.
+ * Constructs a DeleteSubscriptionFilterRequest object.
  */
 DeleteSubscriptionFilterRequest::DeleteSubscriptionFilterRequest()
     : CloudWatchLogsRequest(new DeleteSubscriptionFilterRequestPrivate(CloudWatchLogsRequest::DeleteSubscriptionFilterAction, this))
@@ -95,14 +92,9 @@ bool DeleteSubscriptionFilterRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteSubscriptionFilterResponse object.
+ * Returns a DeleteSubscriptionFilterResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteSubscriptionFilterResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudWatchLogsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteSubscriptionFilterRequest::response(QNetworkReply * const reply) const
 {
@@ -110,20 +102,17 @@ QtAws::Core::AwsAbstractResponse * DeleteSubscriptionFilterRequest::response(QNe
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudWatchLogs::DeleteSubscriptionFilterRequestPrivate
+ * \brief The DeleteSubscriptionFilterRequestPrivate class provides private implementation for DeleteSubscriptionFilterRequest.
+ * \internal
  *
- * @class  DeleteSubscriptionFilterRequestPrivate
- *
- * @brief  Private implementation for DeleteSubscriptionFilterRequest.
+ * \inmodule QtAwsCloudWatchLogs
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteSubscriptionFilterRequestPrivate object.
- *
- * @param  action  CloudWatchLogs action being performed.
- * @param  q       Pointer to this object's public DeleteSubscriptionFilterRequest instance.
+ * Constructs a DeleteSubscriptionFilterRequestPrivate object for CloudWatchLogs \a action with,
+ * public implementation \a q.
  */
 DeleteSubscriptionFilterRequestPrivate::DeleteSubscriptionFilterRequestPrivate(
     const CloudWatchLogsRequest::Action action, DeleteSubscriptionFilterRequest * const q)
@@ -133,15 +122,10 @@ DeleteSubscriptionFilterRequestPrivate::DeleteSubscriptionFilterRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteSubscriptionFilterRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteSubscriptionFilterRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteSubscriptionFilterRequest instance.
  */
 DeleteSubscriptionFilterRequestPrivate::DeleteSubscriptionFilterRequestPrivate(
     const DeleteSubscriptionFilterRequestPrivate &other, DeleteSubscriptionFilterRequest * const q)

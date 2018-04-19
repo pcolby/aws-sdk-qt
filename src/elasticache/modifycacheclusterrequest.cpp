@@ -27,10 +27,9 @@ namespace ElastiCache {
 
 /*!
  * \class QtAws::ElastiCache::ModifyCacheClusterRequest
- *
  * \brief The ModifyCacheClusterRequest class provides an interface for ElastiCache ModifyCacheCluster requests.
  *
- * \ingroup ElastiCache
+ * \inmodule QtAwsElastiCache
  *
  *  <fullname>Amazon ElastiCache</fullname>
  * 
@@ -51,9 +50,7 @@ namespace ElastiCache {
  */
 
 /*!
- * @brief  Constructs a new ModifyCacheClusterRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ModifyCacheClusterRequest::ModifyCacheClusterRequest(const ModifyCacheClusterRequest &other)
     : ElastiCacheRequest(new ModifyCacheClusterRequestPrivate(*other.d_func(), this))
@@ -62,7 +59,7 @@ ModifyCacheClusterRequest::ModifyCacheClusterRequest(const ModifyCacheClusterReq
 }
 
 /*!
- * @brief  Constructs a new ModifyCacheClusterRequest object.
+ * Constructs a ModifyCacheClusterRequest object.
  */
 ModifyCacheClusterRequest::ModifyCacheClusterRequest()
     : ElastiCacheRequest(new ModifyCacheClusterRequestPrivate(ElastiCacheRequest::ModifyCacheClusterAction, this))
@@ -80,14 +77,9 @@ bool ModifyCacheClusterRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ModifyCacheClusterResponse object.
+ * Returns a ModifyCacheClusterResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ModifyCacheClusterResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ElastiCacheClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ModifyCacheClusterRequest::response(QNetworkReply * const reply) const
 {
@@ -95,20 +87,17 @@ QtAws::Core::AwsAbstractResponse * ModifyCacheClusterRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::ElastiCache::ModifyCacheClusterRequestPrivate
+ * \brief The ModifyCacheClusterRequestPrivate class provides private implementation for ModifyCacheClusterRequest.
+ * \internal
  *
- * @class  ModifyCacheClusterRequestPrivate
- *
- * @brief  Private implementation for ModifyCacheClusterRequest.
+ * \inmodule QtAwsElastiCache
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ModifyCacheClusterRequestPrivate object.
- *
- * @param  action  ElastiCache action being performed.
- * @param  q       Pointer to this object's public ModifyCacheClusterRequest instance.
+ * Constructs a ModifyCacheClusterRequestPrivate object for ElastiCache \a action with,
+ * public implementation \a q.
  */
 ModifyCacheClusterRequestPrivate::ModifyCacheClusterRequestPrivate(
     const ElastiCacheRequest::Action action, ModifyCacheClusterRequest * const q)
@@ -118,15 +107,10 @@ ModifyCacheClusterRequestPrivate::ModifyCacheClusterRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ModifyCacheClusterRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ModifyCacheClusterRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ModifyCacheClusterRequest instance.
  */
 ModifyCacheClusterRequestPrivate::ModifyCacheClusterRequestPrivate(
     const ModifyCacheClusterRequestPrivate &other, ModifyCacheClusterRequest * const q)

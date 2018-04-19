@@ -58,6 +58,9 @@
 /*!
  * \namespace QtAws::SecretsManager
  * \brief The QtAws::SecretsManager contains stuff...
+ *
+ * \inmodule QtAwsSecretsManager
+ *
  * @todo Move this to a separate template file.
  */
 
@@ -207,7 +210,7 @@ SecretsManagerClient::SecretsManagerClient(
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * \a  AwsEndpoint::getEndpoint()
+ * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
 SecretsManagerClient::SecretsManagerClient(
     const QUrl &endpoint,

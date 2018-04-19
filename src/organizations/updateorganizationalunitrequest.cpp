@@ -27,10 +27,9 @@ namespace Organizations {
 
 /*!
  * \class QtAws::Organizations::UpdateOrganizationalUnitRequest
- *
  * \brief The UpdateOrganizationalUnitRequest class provides an interface for Organizations UpdateOrganizationalUnit requests.
  *
- * \ingroup Organizations
+ * \inmodule QtAwsOrganizations
  *
  *  <fullname>AWS Organizations API Reference</fullname>
  * 
@@ -179,9 +178,7 @@ namespace Organizations {
  */
 
 /*!
- * @brief  Constructs a new UpdateOrganizationalUnitRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateOrganizationalUnitRequest::UpdateOrganizationalUnitRequest(const UpdateOrganizationalUnitRequest &other)
     : OrganizationsRequest(new UpdateOrganizationalUnitRequestPrivate(*other.d_func(), this))
@@ -190,7 +187,7 @@ UpdateOrganizationalUnitRequest::UpdateOrganizationalUnitRequest(const UpdateOrg
 }
 
 /*!
- * @brief  Constructs a new UpdateOrganizationalUnitRequest object.
+ * Constructs a UpdateOrganizationalUnitRequest object.
  */
 UpdateOrganizationalUnitRequest::UpdateOrganizationalUnitRequest()
     : OrganizationsRequest(new UpdateOrganizationalUnitRequestPrivate(OrganizationsRequest::UpdateOrganizationalUnitAction, this))
@@ -208,14 +205,9 @@ bool UpdateOrganizationalUnitRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateOrganizationalUnitResponse object.
+ * Returns a UpdateOrganizationalUnitResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateOrganizationalUnitResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  OrganizationsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateOrganizationalUnitRequest::response(QNetworkReply * const reply) const
 {
@@ -223,20 +215,17 @@ QtAws::Core::AwsAbstractResponse * UpdateOrganizationalUnitRequest::response(QNe
 }
 
 /*!
- * @internal
+ * \class QtAws::Organizations::UpdateOrganizationalUnitRequestPrivate
+ * \brief The UpdateOrganizationalUnitRequestPrivate class provides private implementation for UpdateOrganizationalUnitRequest.
+ * \internal
  *
- * @class  UpdateOrganizationalUnitRequestPrivate
- *
- * @brief  Private implementation for UpdateOrganizationalUnitRequest.
+ * \inmodule QtAwsOrganizations
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateOrganizationalUnitRequestPrivate object.
- *
- * @param  action  Organizations action being performed.
- * @param  q       Pointer to this object's public UpdateOrganizationalUnitRequest instance.
+ * Constructs a UpdateOrganizationalUnitRequestPrivate object for Organizations \a action with,
+ * public implementation \a q.
  */
 UpdateOrganizationalUnitRequestPrivate::UpdateOrganizationalUnitRequestPrivate(
     const OrganizationsRequest::Action action, UpdateOrganizationalUnitRequest * const q)
@@ -246,15 +235,10 @@ UpdateOrganizationalUnitRequestPrivate::UpdateOrganizationalUnitRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateOrganizationalUnitRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateOrganizationalUnitRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateOrganizationalUnitRequest instance.
  */
 UpdateOrganizationalUnitRequestPrivate::UpdateOrganizationalUnitRequestPrivate(
     const UpdateOrganizationalUnitRequestPrivate &other, UpdateOrganizationalUnitRequest * const q)

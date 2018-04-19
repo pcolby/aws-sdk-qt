@@ -27,19 +27,16 @@ namespace MTurk {
 
 /*!
  * \class QtAws::MTurk::ListHITsForQualificationTypeRequest
- *
  * \brief The ListHITsForQualificationTypeRequest class provides an interface for MTurk ListHITsForQualificationType requests.
  *
- * \ingroup MTurk
+ * \inmodule QtAwsMTurk
  *
  *
  * \sa MTurkClient::listHITsForQualificationType
  */
 
 /*!
- * @brief  Constructs a new ListHITsForQualificationTypeRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListHITsForQualificationTypeRequest::ListHITsForQualificationTypeRequest(const ListHITsForQualificationTypeRequest &other)
     : MTurkRequest(new ListHITsForQualificationTypeRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ ListHITsForQualificationTypeRequest::ListHITsForQualificationTypeRequest(const L
 }
 
 /*!
- * @brief  Constructs a new ListHITsForQualificationTypeRequest object.
+ * Constructs a ListHITsForQualificationTypeRequest object.
  */
 ListHITsForQualificationTypeRequest::ListHITsForQualificationTypeRequest()
     : MTurkRequest(new ListHITsForQualificationTypeRequestPrivate(MTurkRequest::ListHITsForQualificationTypeAction, this))
@@ -66,14 +63,9 @@ bool ListHITsForQualificationTypeRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListHITsForQualificationTypeResponse object.
+ * Returns a ListHITsForQualificationTypeResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListHITsForQualificationTypeResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MTurkClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListHITsForQualificationTypeRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * ListHITsForQualificationTypeRequest::response
 }
 
 /*!
- * @internal
+ * \class QtAws::MTurk::ListHITsForQualificationTypeRequestPrivate
+ * \brief The ListHITsForQualificationTypeRequestPrivate class provides private implementation for ListHITsForQualificationTypeRequest.
+ * \internal
  *
- * @class  ListHITsForQualificationTypeRequestPrivate
- *
- * @brief  Private implementation for ListHITsForQualificationTypeRequest.
+ * \inmodule QtAwsMTurk
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListHITsForQualificationTypeRequestPrivate object.
- *
- * @param  action  MTurk action being performed.
- * @param  q       Pointer to this object's public ListHITsForQualificationTypeRequest instance.
+ * Constructs a ListHITsForQualificationTypeRequestPrivate object for MTurk \a action with,
+ * public implementation \a q.
  */
 ListHITsForQualificationTypeRequestPrivate::ListHITsForQualificationTypeRequestPrivate(
     const MTurkRequest::Action action, ListHITsForQualificationTypeRequest * const q)
@@ -104,15 +93,10 @@ ListHITsForQualificationTypeRequestPrivate::ListHITsForQualificationTypeRequestP
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListHITsForQualificationTypeRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListHITsForQualificationTypeRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListHITsForQualificationTypeRequest instance.
  */
 ListHITsForQualificationTypeRequestPrivate::ListHITsForQualificationTypeRequestPrivate(
     const ListHITsForQualificationTypeRequestPrivate &other, ListHITsForQualificationTypeRequest * const q)

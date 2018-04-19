@@ -27,10 +27,9 @@ namespace DataPipeline {
 
 /*!
  * \class QtAws::DataPipeline::DeactivatePipelineRequest
- *
  * \brief The DeactivatePipelineRequest class provides an interface for DataPipeline DeactivatePipeline requests.
  *
- * \ingroup DataPipeline
+ * \inmodule QtAwsDataPipeline
  *
  *  AWS Data Pipeline configures and manages a data-driven workflow called a pipeline. AWS Data Pipeline handles the details
  *  of scheduling and ensuring that data dependencies are met so that your application can focus on processing the
@@ -55,9 +54,7 @@ namespace DataPipeline {
  */
 
 /*!
- * @brief  Constructs a new DeactivatePipelineRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeactivatePipelineRequest::DeactivatePipelineRequest(const DeactivatePipelineRequest &other)
     : DataPipelineRequest(new DeactivatePipelineRequestPrivate(*other.d_func(), this))
@@ -66,7 +63,7 @@ DeactivatePipelineRequest::DeactivatePipelineRequest(const DeactivatePipelineReq
 }
 
 /*!
- * @brief  Constructs a new DeactivatePipelineRequest object.
+ * Constructs a DeactivatePipelineRequest object.
  */
 DeactivatePipelineRequest::DeactivatePipelineRequest()
     : DataPipelineRequest(new DeactivatePipelineRequestPrivate(DataPipelineRequest::DeactivatePipelineAction, this))
@@ -84,14 +81,9 @@ bool DeactivatePipelineRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeactivatePipelineResponse object.
+ * Returns a DeactivatePipelineResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeactivatePipelineResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DataPipelineClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeactivatePipelineRequest::response(QNetworkReply * const reply) const
 {
@@ -99,20 +91,17 @@ QtAws::Core::AwsAbstractResponse * DeactivatePipelineRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::DataPipeline::DeactivatePipelineRequestPrivate
+ * \brief The DeactivatePipelineRequestPrivate class provides private implementation for DeactivatePipelineRequest.
+ * \internal
  *
- * @class  DeactivatePipelineRequestPrivate
- *
- * @brief  Private implementation for DeactivatePipelineRequest.
+ * \inmodule QtAwsDataPipeline
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeactivatePipelineRequestPrivate object.
- *
- * @param  action  DataPipeline action being performed.
- * @param  q       Pointer to this object's public DeactivatePipelineRequest instance.
+ * Constructs a DeactivatePipelineRequestPrivate object for DataPipeline \a action with,
+ * public implementation \a q.
  */
 DeactivatePipelineRequestPrivate::DeactivatePipelineRequestPrivate(
     const DataPipelineRequest::Action action, DeactivatePipelineRequest * const q)
@@ -122,15 +111,10 @@ DeactivatePipelineRequestPrivate::DeactivatePipelineRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeactivatePipelineRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeactivatePipelineRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeactivatePipelineRequest instance.
  */
 DeactivatePipelineRequestPrivate::DeactivatePipelineRequestPrivate(
     const DeactivatePipelineRequestPrivate &other, DeactivatePipelineRequest * const q)

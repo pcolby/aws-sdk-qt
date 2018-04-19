@@ -82,6 +82,9 @@
 /*!
  * \namespace QtAws::CodePipeline
  * \brief The QtAws::CodePipeline contains stuff...
+ *
+ * \inmodule QtAwsCodePipeline
+ *
  * @todo Move this to a separate template file.
  */
 
@@ -294,7 +297,7 @@ CodePipelineClient::CodePipelineClient(
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * \a  AwsEndpoint::getEndpoint()
+ * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
 CodePipelineClient::CodePipelineClient(
     const QUrl &endpoint,

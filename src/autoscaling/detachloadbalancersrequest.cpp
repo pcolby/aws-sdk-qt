@@ -27,10 +27,9 @@ namespace AutoScaling {
 
 /*!
  * \class QtAws::AutoScaling::DetachLoadBalancersRequest
- *
  * \brief The DetachLoadBalancersRequest class provides an interface for AutoScaling DetachLoadBalancers requests.
  *
- * \ingroup AutoScaling
+ * \inmodule QtAwsAutoScaling
  *
  *  <fullname>Amazon EC2 Auto Scaling</fullname>
  * 
@@ -42,9 +41,7 @@ namespace AutoScaling {
  */
 
 /*!
- * @brief  Constructs a new DetachLoadBalancersRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DetachLoadBalancersRequest::DetachLoadBalancersRequest(const DetachLoadBalancersRequest &other)
     : AutoScalingRequest(new DetachLoadBalancersRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ DetachLoadBalancersRequest::DetachLoadBalancersRequest(const DetachLoadBalancers
 }
 
 /*!
- * @brief  Constructs a new DetachLoadBalancersRequest object.
+ * Constructs a DetachLoadBalancersRequest object.
  */
 DetachLoadBalancersRequest::DetachLoadBalancersRequest()
     : AutoScalingRequest(new DetachLoadBalancersRequestPrivate(AutoScalingRequest::DetachLoadBalancersAction, this))
@@ -71,14 +68,9 @@ bool DetachLoadBalancersRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DetachLoadBalancersResponse object.
+ * Returns a DetachLoadBalancersResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DetachLoadBalancersResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AutoScalingClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DetachLoadBalancersRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * DetachLoadBalancersRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::AutoScaling::DetachLoadBalancersRequestPrivate
+ * \brief The DetachLoadBalancersRequestPrivate class provides private implementation for DetachLoadBalancersRequest.
+ * \internal
  *
- * @class  DetachLoadBalancersRequestPrivate
- *
- * @brief  Private implementation for DetachLoadBalancersRequest.
+ * \inmodule QtAwsAutoScaling
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DetachLoadBalancersRequestPrivate object.
- *
- * @param  action  AutoScaling action being performed.
- * @param  q       Pointer to this object's public DetachLoadBalancersRequest instance.
+ * Constructs a DetachLoadBalancersRequestPrivate object for AutoScaling \a action with,
+ * public implementation \a q.
  */
 DetachLoadBalancersRequestPrivate::DetachLoadBalancersRequestPrivate(
     const AutoScalingRequest::Action action, DetachLoadBalancersRequest * const q)
@@ -109,15 +98,10 @@ DetachLoadBalancersRequestPrivate::DetachLoadBalancersRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DetachLoadBalancersRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DetachLoadBalancersRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DetachLoadBalancersRequest instance.
  */
 DetachLoadBalancersRequestPrivate::DetachLoadBalancersRequestPrivate(
     const DetachLoadBalancersRequestPrivate &other, DetachLoadBalancersRequest * const q)

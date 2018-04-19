@@ -27,10 +27,9 @@ namespace WorkDocs {
 
 /*!
  * \class QtAws::WorkDocs::AddResourcePermissionsRequest
- *
  * \brief The AddResourcePermissionsRequest class provides an interface for WorkDocs AddResourcePermissions requests.
  *
- * \ingroup WorkDocs
+ * \inmodule QtAwsWorkDocs
  *
  *  The WorkDocs API is designed for the following use
  * 
@@ -66,9 +65,7 @@ namespace WorkDocs {
  */
 
 /*!
- * @brief  Constructs a new AddResourcePermissionsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AddResourcePermissionsRequest::AddResourcePermissionsRequest(const AddResourcePermissionsRequest &other)
     : WorkDocsRequest(new AddResourcePermissionsRequestPrivate(*other.d_func(), this))
@@ -77,7 +74,7 @@ AddResourcePermissionsRequest::AddResourcePermissionsRequest(const AddResourcePe
 }
 
 /*!
- * @brief  Constructs a new AddResourcePermissionsRequest object.
+ * Constructs a AddResourcePermissionsRequest object.
  */
 AddResourcePermissionsRequest::AddResourcePermissionsRequest()
     : WorkDocsRequest(new AddResourcePermissionsRequestPrivate(WorkDocsRequest::AddResourcePermissionsAction, this))
@@ -95,14 +92,9 @@ bool AddResourcePermissionsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AddResourcePermissionsResponse object.
+ * Returns a AddResourcePermissionsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AddResourcePermissionsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WorkDocsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AddResourcePermissionsRequest::response(QNetworkReply * const reply) const
 {
@@ -110,20 +102,17 @@ QtAws::Core::AwsAbstractResponse * AddResourcePermissionsRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::WorkDocs::AddResourcePermissionsRequestPrivate
+ * \brief The AddResourcePermissionsRequestPrivate class provides private implementation for AddResourcePermissionsRequest.
+ * \internal
  *
- * @class  AddResourcePermissionsRequestPrivate
- *
- * @brief  Private implementation for AddResourcePermissionsRequest.
+ * \inmodule QtAwsWorkDocs
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AddResourcePermissionsRequestPrivate object.
- *
- * @param  action  WorkDocs action being performed.
- * @param  q       Pointer to this object's public AddResourcePermissionsRequest instance.
+ * Constructs a AddResourcePermissionsRequestPrivate object for WorkDocs \a action with,
+ * public implementation \a q.
  */
 AddResourcePermissionsRequestPrivate::AddResourcePermissionsRequestPrivate(
     const WorkDocsRequest::Action action, AddResourcePermissionsRequest * const q)
@@ -133,15 +122,10 @@ AddResourcePermissionsRequestPrivate::AddResourcePermissionsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AddResourcePermissionsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AddResourcePermissionsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AddResourcePermissionsRequest instance.
  */
 AddResourcePermissionsRequestPrivate::AddResourcePermissionsRequestPrivate(
     const AddResourcePermissionsRequestPrivate &other, AddResourcePermissionsRequest * const q)

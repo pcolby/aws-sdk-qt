@@ -27,10 +27,9 @@ namespace GameLift {
 
 /*!
  * \class QtAws::GameLift::DeleteMatchmakingConfigurationRequest
- *
  * \brief The DeleteMatchmakingConfigurationRequest class provides an interface for GameLift DeleteMatchmakingConfiguration requests.
  *
- * \ingroup GameLift
+ * \inmodule QtAwsGameLift
  *
  *  <fullname>Amazon GameLift Service</fullname>
  * 
@@ -473,9 +472,7 @@ namespace GameLift {
  */
 
 /*!
- * @brief  Constructs a new DeleteMatchmakingConfigurationRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteMatchmakingConfigurationRequest::DeleteMatchmakingConfigurationRequest(const DeleteMatchmakingConfigurationRequest &other)
     : GameLiftRequest(new DeleteMatchmakingConfigurationRequestPrivate(*other.d_func(), this))
@@ -484,7 +481,7 @@ DeleteMatchmakingConfigurationRequest::DeleteMatchmakingConfigurationRequest(con
 }
 
 /*!
- * @brief  Constructs a new DeleteMatchmakingConfigurationRequest object.
+ * Constructs a DeleteMatchmakingConfigurationRequest object.
  */
 DeleteMatchmakingConfigurationRequest::DeleteMatchmakingConfigurationRequest()
     : GameLiftRequest(new DeleteMatchmakingConfigurationRequestPrivate(GameLiftRequest::DeleteMatchmakingConfigurationAction, this))
@@ -502,14 +499,9 @@ bool DeleteMatchmakingConfigurationRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteMatchmakingConfigurationResponse object.
+ * Returns a DeleteMatchmakingConfigurationResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteMatchmakingConfigurationResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GameLiftClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteMatchmakingConfigurationRequest::response(QNetworkReply * const reply) const
 {
@@ -517,20 +509,17 @@ QtAws::Core::AwsAbstractResponse * DeleteMatchmakingConfigurationRequest::respon
 }
 
 /*!
- * @internal
+ * \class QtAws::GameLift::DeleteMatchmakingConfigurationRequestPrivate
+ * \brief The DeleteMatchmakingConfigurationRequestPrivate class provides private implementation for DeleteMatchmakingConfigurationRequest.
+ * \internal
  *
- * @class  DeleteMatchmakingConfigurationRequestPrivate
- *
- * @brief  Private implementation for DeleteMatchmakingConfigurationRequest.
+ * \inmodule QtAwsGameLift
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteMatchmakingConfigurationRequestPrivate object.
- *
- * @param  action  GameLift action being performed.
- * @param  q       Pointer to this object's public DeleteMatchmakingConfigurationRequest instance.
+ * Constructs a DeleteMatchmakingConfigurationRequestPrivate object for GameLift \a action with,
+ * public implementation \a q.
  */
 DeleteMatchmakingConfigurationRequestPrivate::DeleteMatchmakingConfigurationRequestPrivate(
     const GameLiftRequest::Action action, DeleteMatchmakingConfigurationRequest * const q)
@@ -540,15 +529,10 @@ DeleteMatchmakingConfigurationRequestPrivate::DeleteMatchmakingConfigurationRequ
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteMatchmakingConfigurationRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteMatchmakingConfigurationRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteMatchmakingConfigurationRequest instance.
  */
 DeleteMatchmakingConfigurationRequestPrivate::DeleteMatchmakingConfigurationRequestPrivate(
     const DeleteMatchmakingConfigurationRequestPrivate &other, DeleteMatchmakingConfigurationRequest * const q)

@@ -27,10 +27,9 @@ namespace ServiceCatalog {
 
 /*!
  * \class QtAws::ServiceCatalog::ListLaunchPathsRequest
- *
  * \brief The ListLaunchPathsRequest class provides an interface for ServiceCatalog ListLaunchPaths requests.
  *
- * \ingroup ServiceCatalog
+ * \inmodule QtAwsServiceCatalog
  *
  *  <fullname>AWS Service Catalog</fullname>
  * 
@@ -43,9 +42,7 @@ namespace ServiceCatalog {
  */
 
 /*!
- * @brief  Constructs a new ListLaunchPathsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListLaunchPathsRequest::ListLaunchPathsRequest(const ListLaunchPathsRequest &other)
     : ServiceCatalogRequest(new ListLaunchPathsRequestPrivate(*other.d_func(), this))
@@ -54,7 +51,7 @@ ListLaunchPathsRequest::ListLaunchPathsRequest(const ListLaunchPathsRequest &oth
 }
 
 /*!
- * @brief  Constructs a new ListLaunchPathsRequest object.
+ * Constructs a ListLaunchPathsRequest object.
  */
 ListLaunchPathsRequest::ListLaunchPathsRequest()
     : ServiceCatalogRequest(new ListLaunchPathsRequestPrivate(ServiceCatalogRequest::ListLaunchPathsAction, this))
@@ -72,14 +69,9 @@ bool ListLaunchPathsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListLaunchPathsResponse object.
+ * Returns a ListLaunchPathsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListLaunchPathsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ServiceCatalogClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListLaunchPathsRequest::response(QNetworkReply * const reply) const
 {
@@ -87,20 +79,17 @@ QtAws::Core::AwsAbstractResponse * ListLaunchPathsRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::ServiceCatalog::ListLaunchPathsRequestPrivate
+ * \brief The ListLaunchPathsRequestPrivate class provides private implementation for ListLaunchPathsRequest.
+ * \internal
  *
- * @class  ListLaunchPathsRequestPrivate
- *
- * @brief  Private implementation for ListLaunchPathsRequest.
+ * \inmodule QtAwsServiceCatalog
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListLaunchPathsRequestPrivate object.
- *
- * @param  action  ServiceCatalog action being performed.
- * @param  q       Pointer to this object's public ListLaunchPathsRequest instance.
+ * Constructs a ListLaunchPathsRequestPrivate object for ServiceCatalog \a action with,
+ * public implementation \a q.
  */
 ListLaunchPathsRequestPrivate::ListLaunchPathsRequestPrivate(
     const ServiceCatalogRequest::Action action, ListLaunchPathsRequest * const q)
@@ -110,15 +99,10 @@ ListLaunchPathsRequestPrivate::ListLaunchPathsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListLaunchPathsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListLaunchPathsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListLaunchPathsRequest instance.
  */
 ListLaunchPathsRequestPrivate::ListLaunchPathsRequestPrivate(
     const ListLaunchPathsRequestPrivate &other, ListLaunchPathsRequest * const q)

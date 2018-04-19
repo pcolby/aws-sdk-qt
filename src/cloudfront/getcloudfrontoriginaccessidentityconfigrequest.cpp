@@ -27,10 +27,9 @@ namespace CloudFront {
 
 /*!
  * \class QtAws::CloudFront::GetCloudFrontOriginAccessIdentityConfigRequest
- *
  * \brief The GetCloudFrontOriginAccessIdentityConfigRequest class provides an interface for CloudFront GetCloudFrontOriginAccessIdentityConfig requests.
  *
- * \ingroup CloudFront
+ * \inmodule QtAwsCloudFront
  *
  *  <fullname>Amazon CloudFront</fullname>
  * 
@@ -42,9 +41,7 @@ namespace CloudFront {
  */
 
 /*!
- * @brief  Constructs a new GetCloudFrontOriginAccessIdentityConfigRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetCloudFrontOriginAccessIdentityConfigRequest::GetCloudFrontOriginAccessIdentityConfigRequest(const GetCloudFrontOriginAccessIdentityConfigRequest &other)
     : CloudFrontRequest(new GetCloudFrontOriginAccessIdentityConfigRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ GetCloudFrontOriginAccessIdentityConfigRequest::GetCloudFrontOriginAccessIdentit
 }
 
 /*!
- * @brief  Constructs a new GetCloudFrontOriginAccessIdentityConfigRequest object.
+ * Constructs a GetCloudFrontOriginAccessIdentityConfigRequest object.
  */
 GetCloudFrontOriginAccessIdentityConfigRequest::GetCloudFrontOriginAccessIdentityConfigRequest()
     : CloudFrontRequest(new GetCloudFrontOriginAccessIdentityConfigRequestPrivate(CloudFrontRequest::GetCloudFrontOriginAccessIdentityConfigAction, this))
@@ -71,14 +68,9 @@ bool GetCloudFrontOriginAccessIdentityConfigRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetCloudFrontOriginAccessIdentityConfigResponse object.
+ * Returns a GetCloudFrontOriginAccessIdentityConfigResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetCloudFrontOriginAccessIdentityConfigResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudFrontClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetCloudFrontOriginAccessIdentityConfigRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * GetCloudFrontOriginAccessIdentityConfigReques
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudFront::GetCloudFrontOriginAccessIdentityConfigRequestPrivate
+ * \brief The GetCloudFrontOriginAccessIdentityConfigRequestPrivate class provides private implementation for GetCloudFrontOriginAccessIdentityConfigRequest.
+ * \internal
  *
- * @class  GetCloudFrontOriginAccessIdentityConfigRequestPrivate
- *
- * @brief  Private implementation for GetCloudFrontOriginAccessIdentityConfigRequest.
+ * \inmodule QtAwsCloudFront
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetCloudFrontOriginAccessIdentityConfigRequestPrivate object.
- *
- * @param  action  CloudFront action being performed.
- * @param  q       Pointer to this object's public GetCloudFrontOriginAccessIdentityConfigRequest instance.
+ * Constructs a GetCloudFrontOriginAccessIdentityConfigRequestPrivate object for CloudFront \a action with,
+ * public implementation \a q.
  */
 GetCloudFrontOriginAccessIdentityConfigRequestPrivate::GetCloudFrontOriginAccessIdentityConfigRequestPrivate(
     const CloudFrontRequest::Action action, GetCloudFrontOriginAccessIdentityConfigRequest * const q)
@@ -109,15 +98,10 @@ GetCloudFrontOriginAccessIdentityConfigRequestPrivate::GetCloudFrontOriginAccess
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetCloudFrontOriginAccessIdentityConfigRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetCloudFrontOriginAccessIdentityConfigRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetCloudFrontOriginAccessIdentityConfigRequest instance.
  */
 GetCloudFrontOriginAccessIdentityConfigRequestPrivate::GetCloudFrontOriginAccessIdentityConfigRequestPrivate(
     const GetCloudFrontOriginAccessIdentityConfigRequestPrivate &other, GetCloudFrontOriginAccessIdentityConfigRequest * const q)

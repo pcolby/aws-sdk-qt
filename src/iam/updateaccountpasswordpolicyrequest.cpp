@@ -27,10 +27,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::UpdateAccountPasswordPolicyRequest
- *
  * \brief The UpdateAccountPasswordPolicyRequest class provides an interface for IAM UpdateAccountPasswordPolicy requests.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -102,9 +101,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new UpdateAccountPasswordPolicyRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateAccountPasswordPolicyRequest::UpdateAccountPasswordPolicyRequest(const UpdateAccountPasswordPolicyRequest &other)
     : IAMRequest(new UpdateAccountPasswordPolicyRequestPrivate(*other.d_func(), this))
@@ -113,7 +110,7 @@ UpdateAccountPasswordPolicyRequest::UpdateAccountPasswordPolicyRequest(const Upd
 }
 
 /*!
- * @brief  Constructs a new UpdateAccountPasswordPolicyRequest object.
+ * Constructs a UpdateAccountPasswordPolicyRequest object.
  */
 UpdateAccountPasswordPolicyRequest::UpdateAccountPasswordPolicyRequest()
     : IAMRequest(new UpdateAccountPasswordPolicyRequestPrivate(IAMRequest::UpdateAccountPasswordPolicyAction, this))
@@ -131,14 +128,9 @@ bool UpdateAccountPasswordPolicyRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateAccountPasswordPolicyResponse object.
+ * Returns a UpdateAccountPasswordPolicyResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateAccountPasswordPolicyResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IAMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateAccountPasswordPolicyRequest::response(QNetworkReply * const reply) const
 {
@@ -146,20 +138,17 @@ QtAws::Core::AwsAbstractResponse * UpdateAccountPasswordPolicyRequest::response(
 }
 
 /*!
- * @internal
+ * \class QtAws::IAM::UpdateAccountPasswordPolicyRequestPrivate
+ * \brief The UpdateAccountPasswordPolicyRequestPrivate class provides private implementation for UpdateAccountPasswordPolicyRequest.
+ * \internal
  *
- * @class  UpdateAccountPasswordPolicyRequestPrivate
- *
- * @brief  Private implementation for UpdateAccountPasswordPolicyRequest.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateAccountPasswordPolicyRequestPrivate object.
- *
- * @param  action  IAM action being performed.
- * @param  q       Pointer to this object's public UpdateAccountPasswordPolicyRequest instance.
+ * Constructs a UpdateAccountPasswordPolicyRequestPrivate object for IAM \a action with,
+ * public implementation \a q.
  */
 UpdateAccountPasswordPolicyRequestPrivate::UpdateAccountPasswordPolicyRequestPrivate(
     const IAMRequest::Action action, UpdateAccountPasswordPolicyRequest * const q)
@@ -169,15 +158,10 @@ UpdateAccountPasswordPolicyRequestPrivate::UpdateAccountPasswordPolicyRequestPri
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateAccountPasswordPolicyRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateAccountPasswordPolicyRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateAccountPasswordPolicyRequest instance.
  */
 UpdateAccountPasswordPolicyRequestPrivate::UpdateAccountPasswordPolicyRequestPrivate(
     const UpdateAccountPasswordPolicyRequestPrivate &other, UpdateAccountPasswordPolicyRequest * const q)

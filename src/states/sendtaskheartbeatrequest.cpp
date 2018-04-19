@@ -27,10 +27,9 @@ namespace SFN {
 
 /*!
  * \class QtAws::SFN::SendTaskHeartbeatRequest
- *
  * \brief The SendTaskHeartbeatRequest class provides an interface for SFN SendTaskHeartbeat requests.
  *
- * \ingroup SFN
+ * \inmodule QtAwsSFN
  *
  *  <fullname>AWS Step Functions</fullname>
  * 
@@ -56,9 +55,7 @@ namespace SFN {
  */
 
 /*!
- * @brief  Constructs a new SendTaskHeartbeatRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 SendTaskHeartbeatRequest::SendTaskHeartbeatRequest(const SendTaskHeartbeatRequest &other)
     : SFNRequest(new SendTaskHeartbeatRequestPrivate(*other.d_func(), this))
@@ -67,7 +64,7 @@ SendTaskHeartbeatRequest::SendTaskHeartbeatRequest(const SendTaskHeartbeatReques
 }
 
 /*!
- * @brief  Constructs a new SendTaskHeartbeatRequest object.
+ * Constructs a SendTaskHeartbeatRequest object.
  */
 SendTaskHeartbeatRequest::SendTaskHeartbeatRequest()
     : SFNRequest(new SendTaskHeartbeatRequestPrivate(SFNRequest::SendTaskHeartbeatAction, this))
@@ -85,14 +82,9 @@ bool SendTaskHeartbeatRequest::isValid() const
 
 
 /*!
- * @brief  Construct an SendTaskHeartbeatResponse object.
+ * Returns a SendTaskHeartbeatResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An SendTaskHeartbeatResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SFNClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * SendTaskHeartbeatRequest::response(QNetworkReply * const reply) const
 {
@@ -100,20 +92,17 @@ QtAws::Core::AwsAbstractResponse * SendTaskHeartbeatRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::SFN::SendTaskHeartbeatRequestPrivate
+ * \brief The SendTaskHeartbeatRequestPrivate class provides private implementation for SendTaskHeartbeatRequest.
+ * \internal
  *
- * @class  SendTaskHeartbeatRequestPrivate
- *
- * @brief  Private implementation for SendTaskHeartbeatRequest.
+ * \inmodule QtAwsSFN
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new SendTaskHeartbeatRequestPrivate object.
- *
- * @param  action  SFN action being performed.
- * @param  q       Pointer to this object's public SendTaskHeartbeatRequest instance.
+ * Constructs a SendTaskHeartbeatRequestPrivate object for SFN \a action with,
+ * public implementation \a q.
  */
 SendTaskHeartbeatRequestPrivate::SendTaskHeartbeatRequestPrivate(
     const SFNRequest::Action action, SendTaskHeartbeatRequest * const q)
@@ -123,15 +112,10 @@ SendTaskHeartbeatRequestPrivate::SendTaskHeartbeatRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SendTaskHeartbeatRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the SendTaskHeartbeatRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public SendTaskHeartbeatRequest instance.
  */
 SendTaskHeartbeatRequestPrivate::SendTaskHeartbeatRequestPrivate(
     const SendTaskHeartbeatRequestPrivate &other, SendTaskHeartbeatRequest * const q)

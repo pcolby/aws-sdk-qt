@@ -27,10 +27,9 @@ namespace Glacier {
 
 /*!
  * \class QtAws::Glacier::DescribeJobRequest
- *
  * \brief The DescribeJobRequest class provides an interface for Glacier DescribeJob requests.
  *
- * \ingroup Glacier
+ * \inmodule QtAwsGlacier
  *
  *  Amazon Glacier is a storage solution for "cold
  * 
@@ -75,9 +74,7 @@ namespace Glacier {
  */
 
 /*!
- * @brief  Constructs a new DescribeJobRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeJobRequest::DescribeJobRequest(const DescribeJobRequest &other)
     : GlacierRequest(new DescribeJobRequestPrivate(*other.d_func(), this))
@@ -86,7 +83,7 @@ DescribeJobRequest::DescribeJobRequest(const DescribeJobRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DescribeJobRequest object.
+ * Constructs a DescribeJobRequest object.
  */
 DescribeJobRequest::DescribeJobRequest()
     : GlacierRequest(new DescribeJobRequestPrivate(GlacierRequest::DescribeJobAction, this))
@@ -104,14 +101,9 @@ bool DescribeJobRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeJobResponse object.
+ * Returns a DescribeJobResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeJobResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GlacierClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeJobRequest::response(QNetworkReply * const reply) const
 {
@@ -119,20 +111,17 @@ QtAws::Core::AwsAbstractResponse * DescribeJobRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::Glacier::DescribeJobRequestPrivate
+ * \brief The DescribeJobRequestPrivate class provides private implementation for DescribeJobRequest.
+ * \internal
  *
- * @class  DescribeJobRequestPrivate
- *
- * @brief  Private implementation for DescribeJobRequest.
+ * \inmodule QtAwsGlacier
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeJobRequestPrivate object.
- *
- * @param  action  Glacier action being performed.
- * @param  q       Pointer to this object's public DescribeJobRequest instance.
+ * Constructs a DescribeJobRequestPrivate object for Glacier \a action with,
+ * public implementation \a q.
  */
 DescribeJobRequestPrivate::DescribeJobRequestPrivate(
     const GlacierRequest::Action action, DescribeJobRequest * const q)
@@ -142,15 +131,10 @@ DescribeJobRequestPrivate::DescribeJobRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeJobRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeJobRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeJobRequest instance.
  */
 DescribeJobRequestPrivate::DescribeJobRequestPrivate(
     const DescribeJobRequestPrivate &other, DescribeJobRequest * const q)

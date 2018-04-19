@@ -36,6 +36,9 @@
 /*!
  * \namespace QtAws::IoTJobsDataPlane
  * \brief The QtAws::IoTJobsDataPlane contains stuff...
+ *
+ * \inmodule QtAwsIoTJobsDataPlane
+ *
  * @todo Move this to a separate template file.
  */
 
@@ -99,7 +102,7 @@ IoTJobsDataPlaneClient::IoTJobsDataPlaneClient(
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * \a  AwsEndpoint::getEndpoint()
+ * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
 IoTJobsDataPlaneClient::IoTJobsDataPlaneClient(
     const QUrl &endpoint,

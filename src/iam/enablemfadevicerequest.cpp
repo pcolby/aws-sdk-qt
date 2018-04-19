@@ -27,10 +27,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::EnableMFADeviceRequest
- *
  * \brief The EnableMFADeviceRequest class provides an interface for IAM EnableMFADevice requests.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -102,9 +101,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new EnableMFADeviceRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 EnableMFADeviceRequest::EnableMFADeviceRequest(const EnableMFADeviceRequest &other)
     : IAMRequest(new EnableMFADeviceRequestPrivate(*other.d_func(), this))
@@ -113,7 +110,7 @@ EnableMFADeviceRequest::EnableMFADeviceRequest(const EnableMFADeviceRequest &oth
 }
 
 /*!
- * @brief  Constructs a new EnableMFADeviceRequest object.
+ * Constructs a EnableMFADeviceRequest object.
  */
 EnableMFADeviceRequest::EnableMFADeviceRequest()
     : IAMRequest(new EnableMFADeviceRequestPrivate(IAMRequest::EnableMFADeviceAction, this))
@@ -131,14 +128,9 @@ bool EnableMFADeviceRequest::isValid() const
 
 
 /*!
- * @brief  Construct an EnableMFADeviceResponse object.
+ * Returns a EnableMFADeviceResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An EnableMFADeviceResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IAMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * EnableMFADeviceRequest::response(QNetworkReply * const reply) const
 {
@@ -146,20 +138,17 @@ QtAws::Core::AwsAbstractResponse * EnableMFADeviceRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::IAM::EnableMFADeviceRequestPrivate
+ * \brief The EnableMFADeviceRequestPrivate class provides private implementation for EnableMFADeviceRequest.
+ * \internal
  *
- * @class  EnableMFADeviceRequestPrivate
- *
- * @brief  Private implementation for EnableMFADeviceRequest.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new EnableMFADeviceRequestPrivate object.
- *
- * @param  action  IAM action being performed.
- * @param  q       Pointer to this object's public EnableMFADeviceRequest instance.
+ * Constructs a EnableMFADeviceRequestPrivate object for IAM \a action with,
+ * public implementation \a q.
  */
 EnableMFADeviceRequestPrivate::EnableMFADeviceRequestPrivate(
     const IAMRequest::Action action, EnableMFADeviceRequest * const q)
@@ -169,15 +158,10 @@ EnableMFADeviceRequestPrivate::EnableMFADeviceRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new EnableMFADeviceRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the EnableMFADeviceRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public EnableMFADeviceRequest instance.
  */
 EnableMFADeviceRequestPrivate::EnableMFADeviceRequestPrivate(
     const EnableMFADeviceRequestPrivate &other, EnableMFADeviceRequest * const q)

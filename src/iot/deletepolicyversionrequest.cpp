@@ -27,10 +27,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::DeletePolicyVersionRequest
- *
  * \brief The DeletePolicyVersionRequest class provides an interface for IoT DeletePolicyVersion requests.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -48,9 +47,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new DeletePolicyVersionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeletePolicyVersionRequest::DeletePolicyVersionRequest(const DeletePolicyVersionRequest &other)
     : IoTRequest(new DeletePolicyVersionRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ DeletePolicyVersionRequest::DeletePolicyVersionRequest(const DeletePolicyVersion
 }
 
 /*!
- * @brief  Constructs a new DeletePolicyVersionRequest object.
+ * Constructs a DeletePolicyVersionRequest object.
  */
 DeletePolicyVersionRequest::DeletePolicyVersionRequest()
     : IoTRequest(new DeletePolicyVersionRequestPrivate(IoTRequest::DeletePolicyVersionAction, this))
@@ -77,14 +74,9 @@ bool DeletePolicyVersionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeletePolicyVersionResponse object.
+ * Returns a DeletePolicyVersionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeletePolicyVersionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IoTClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeletePolicyVersionRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * DeletePolicyVersionRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::IoT::DeletePolicyVersionRequestPrivate
+ * \brief The DeletePolicyVersionRequestPrivate class provides private implementation for DeletePolicyVersionRequest.
+ * \internal
  *
- * @class  DeletePolicyVersionRequestPrivate
- *
- * @brief  Private implementation for DeletePolicyVersionRequest.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeletePolicyVersionRequestPrivate object.
- *
- * @param  action  IoT action being performed.
- * @param  q       Pointer to this object's public DeletePolicyVersionRequest instance.
+ * Constructs a DeletePolicyVersionRequestPrivate object for IoT \a action with,
+ * public implementation \a q.
  */
 DeletePolicyVersionRequestPrivate::DeletePolicyVersionRequestPrivate(
     const IoTRequest::Action action, DeletePolicyVersionRequest * const q)
@@ -115,15 +104,10 @@ DeletePolicyVersionRequestPrivate::DeletePolicyVersionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeletePolicyVersionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeletePolicyVersionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeletePolicyVersionRequest instance.
  */
 DeletePolicyVersionRequestPrivate::DeletePolicyVersionRequestPrivate(
     const DeletePolicyVersionRequestPrivate &other, DeletePolicyVersionRequest * const q)

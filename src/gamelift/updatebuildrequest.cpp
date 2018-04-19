@@ -27,10 +27,9 @@ namespace GameLift {
 
 /*!
  * \class QtAws::GameLift::UpdateBuildRequest
- *
  * \brief The UpdateBuildRequest class provides an interface for GameLift UpdateBuild requests.
  *
- * \ingroup GameLift
+ * \inmodule QtAwsGameLift
  *
  *  <fullname>Amazon GameLift Service</fullname>
  * 
@@ -473,9 +472,7 @@ namespace GameLift {
  */
 
 /*!
- * @brief  Constructs a new UpdateBuildRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateBuildRequest::UpdateBuildRequest(const UpdateBuildRequest &other)
     : GameLiftRequest(new UpdateBuildRequestPrivate(*other.d_func(), this))
@@ -484,7 +481,7 @@ UpdateBuildRequest::UpdateBuildRequest(const UpdateBuildRequest &other)
 }
 
 /*!
- * @brief  Constructs a new UpdateBuildRequest object.
+ * Constructs a UpdateBuildRequest object.
  */
 UpdateBuildRequest::UpdateBuildRequest()
     : GameLiftRequest(new UpdateBuildRequestPrivate(GameLiftRequest::UpdateBuildAction, this))
@@ -502,14 +499,9 @@ bool UpdateBuildRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateBuildResponse object.
+ * Returns a UpdateBuildResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateBuildResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GameLiftClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateBuildRequest::response(QNetworkReply * const reply) const
 {
@@ -517,20 +509,17 @@ QtAws::Core::AwsAbstractResponse * UpdateBuildRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::GameLift::UpdateBuildRequestPrivate
+ * \brief The UpdateBuildRequestPrivate class provides private implementation for UpdateBuildRequest.
+ * \internal
  *
- * @class  UpdateBuildRequestPrivate
- *
- * @brief  Private implementation for UpdateBuildRequest.
+ * \inmodule QtAwsGameLift
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateBuildRequestPrivate object.
- *
- * @param  action  GameLift action being performed.
- * @param  q       Pointer to this object's public UpdateBuildRequest instance.
+ * Constructs a UpdateBuildRequestPrivate object for GameLift \a action with,
+ * public implementation \a q.
  */
 UpdateBuildRequestPrivate::UpdateBuildRequestPrivate(
     const GameLiftRequest::Action action, UpdateBuildRequest * const q)
@@ -540,15 +529,10 @@ UpdateBuildRequestPrivate::UpdateBuildRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateBuildRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateBuildRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateBuildRequest instance.
  */
 UpdateBuildRequestPrivate::UpdateBuildRequestPrivate(
     const UpdateBuildRequestPrivate &other, UpdateBuildRequest * const q)

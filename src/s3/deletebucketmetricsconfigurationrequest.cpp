@@ -27,19 +27,16 @@ namespace S3 {
 
 /*!
  * \class QtAws::S3::DeleteBucketMetricsConfigurationRequest
- *
  * \brief The DeleteBucketMetricsConfigurationRequest class provides an interface for S3 DeleteBucketMetricsConfiguration requests.
  *
- * \ingroup S3
+ * \inmodule QtAwsS3
  *
  *
  * \sa S3Client::deleteBucketMetricsConfiguration
  */
 
 /*!
- * @brief  Constructs a new DeleteBucketMetricsConfigurationRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteBucketMetricsConfigurationRequest::DeleteBucketMetricsConfigurationRequest(const DeleteBucketMetricsConfigurationRequest &other)
     : S3Request(new DeleteBucketMetricsConfigurationRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ DeleteBucketMetricsConfigurationRequest::DeleteBucketMetricsConfigurationRequest
 }
 
 /*!
- * @brief  Constructs a new DeleteBucketMetricsConfigurationRequest object.
+ * Constructs a DeleteBucketMetricsConfigurationRequest object.
  */
 DeleteBucketMetricsConfigurationRequest::DeleteBucketMetricsConfigurationRequest()
     : S3Request(new DeleteBucketMetricsConfigurationRequestPrivate(S3Request::DeleteBucketMetricsConfigurationAction, this))
@@ -66,14 +63,9 @@ bool DeleteBucketMetricsConfigurationRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteBucketMetricsConfigurationResponse object.
+ * Returns a DeleteBucketMetricsConfigurationResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteBucketMetricsConfigurationResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  S3Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteBucketMetricsConfigurationRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * DeleteBucketMetricsConfigurationRequest::resp
 }
 
 /*!
- * @internal
+ * \class QtAws::S3::DeleteBucketMetricsConfigurationRequestPrivate
+ * \brief The DeleteBucketMetricsConfigurationRequestPrivate class provides private implementation for DeleteBucketMetricsConfigurationRequest.
+ * \internal
  *
- * @class  DeleteBucketMetricsConfigurationRequestPrivate
- *
- * @brief  Private implementation for DeleteBucketMetricsConfigurationRequest.
+ * \inmodule QtAwsS3
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteBucketMetricsConfigurationRequestPrivate object.
- *
- * @param  action  S3 action being performed.
- * @param  q       Pointer to this object's public DeleteBucketMetricsConfigurationRequest instance.
+ * Constructs a DeleteBucketMetricsConfigurationRequestPrivate object for S3 \a action with,
+ * public implementation \a q.
  */
 DeleteBucketMetricsConfigurationRequestPrivate::DeleteBucketMetricsConfigurationRequestPrivate(
     const S3Request::Action action, DeleteBucketMetricsConfigurationRequest * const q)
@@ -104,15 +93,10 @@ DeleteBucketMetricsConfigurationRequestPrivate::DeleteBucketMetricsConfiguration
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteBucketMetricsConfigurationRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteBucketMetricsConfigurationRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteBucketMetricsConfigurationRequest instance.
  */
 DeleteBucketMetricsConfigurationRequestPrivate::DeleteBucketMetricsConfigurationRequestPrivate(
     const DeleteBucketMetricsConfigurationRequestPrivate &other, DeleteBucketMetricsConfigurationRequest * const q)

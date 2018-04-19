@@ -27,10 +27,9 @@ namespace AlexaForBusiness {
 
 /*!
  * \class QtAws::AlexaForBusiness::DeleteRoomSkillParameterRequest
- *
  * \brief The DeleteRoomSkillParameterRequest class provides an interface for AlexaForBusiness DeleteRoomSkillParameter requests.
  *
- * \ingroup AlexaForBusiness
+ * \inmodule QtAwsAlexaForBusiness
  *
  *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
  *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
@@ -42,9 +41,7 @@ namespace AlexaForBusiness {
  */
 
 /*!
- * @brief  Constructs a new DeleteRoomSkillParameterRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteRoomSkillParameterRequest::DeleteRoomSkillParameterRequest(const DeleteRoomSkillParameterRequest &other)
     : AlexaForBusinessRequest(new DeleteRoomSkillParameterRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ DeleteRoomSkillParameterRequest::DeleteRoomSkillParameterRequest(const DeleteRoo
 }
 
 /*!
- * @brief  Constructs a new DeleteRoomSkillParameterRequest object.
+ * Constructs a DeleteRoomSkillParameterRequest object.
  */
 DeleteRoomSkillParameterRequest::DeleteRoomSkillParameterRequest()
     : AlexaForBusinessRequest(new DeleteRoomSkillParameterRequestPrivate(AlexaForBusinessRequest::DeleteRoomSkillParameterAction, this))
@@ -71,14 +68,9 @@ bool DeleteRoomSkillParameterRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteRoomSkillParameterResponse object.
+ * Returns a DeleteRoomSkillParameterResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteRoomSkillParameterResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AlexaForBusinessClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteRoomSkillParameterRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * DeleteRoomSkillParameterRequest::response(QNe
 }
 
 /*!
- * @internal
+ * \class QtAws::AlexaForBusiness::DeleteRoomSkillParameterRequestPrivate
+ * \brief The DeleteRoomSkillParameterRequestPrivate class provides private implementation for DeleteRoomSkillParameterRequest.
+ * \internal
  *
- * @class  DeleteRoomSkillParameterRequestPrivate
- *
- * @brief  Private implementation for DeleteRoomSkillParameterRequest.
+ * \inmodule QtAwsAlexaForBusiness
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteRoomSkillParameterRequestPrivate object.
- *
- * @param  action  AlexaForBusiness action being performed.
- * @param  q       Pointer to this object's public DeleteRoomSkillParameterRequest instance.
+ * Constructs a DeleteRoomSkillParameterRequestPrivate object for AlexaForBusiness \a action with,
+ * public implementation \a q.
  */
 DeleteRoomSkillParameterRequestPrivate::DeleteRoomSkillParameterRequestPrivate(
     const AlexaForBusinessRequest::Action action, DeleteRoomSkillParameterRequest * const q)
@@ -109,15 +98,10 @@ DeleteRoomSkillParameterRequestPrivate::DeleteRoomSkillParameterRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteRoomSkillParameterRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteRoomSkillParameterRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteRoomSkillParameterRequest instance.
  */
 DeleteRoomSkillParameterRequestPrivate::DeleteRoomSkillParameterRequestPrivate(
     const DeleteRoomSkillParameterRequestPrivate &other, DeleteRoomSkillParameterRequest * const q)

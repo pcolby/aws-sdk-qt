@@ -27,10 +27,9 @@ namespace CostExplorer {
 
 /*!
  * \class QtAws::CostExplorer::GetDimensionValuesRequest
- *
  * \brief The GetDimensionValuesRequest class provides an interface for CostExplorer GetDimensionValues requests.
  *
- * \ingroup CostExplorer
+ * \inmodule QtAwsCostExplorer
  *
  *  The Cost Explorer API allows you to programmatically query your cost and usage data. You can query for aggregated data
  *  such as total monthly costs or total daily usage. You can also query for granular data, such as the number of daily
@@ -50,9 +49,7 @@ namespace CostExplorer {
  */
 
 /*!
- * @brief  Constructs a new GetDimensionValuesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetDimensionValuesRequest::GetDimensionValuesRequest(const GetDimensionValuesRequest &other)
     : CostExplorerRequest(new GetDimensionValuesRequestPrivate(*other.d_func(), this))
@@ -61,7 +58,7 @@ GetDimensionValuesRequest::GetDimensionValuesRequest(const GetDimensionValuesReq
 }
 
 /*!
- * @brief  Constructs a new GetDimensionValuesRequest object.
+ * Constructs a GetDimensionValuesRequest object.
  */
 GetDimensionValuesRequest::GetDimensionValuesRequest()
     : CostExplorerRequest(new GetDimensionValuesRequestPrivate(CostExplorerRequest::GetDimensionValuesAction, this))
@@ -79,14 +76,9 @@ bool GetDimensionValuesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetDimensionValuesResponse object.
+ * Returns a GetDimensionValuesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetDimensionValuesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CostExplorerClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetDimensionValuesRequest::response(QNetworkReply * const reply) const
 {
@@ -94,20 +86,17 @@ QtAws::Core::AwsAbstractResponse * GetDimensionValuesRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::CostExplorer::GetDimensionValuesRequestPrivate
+ * \brief The GetDimensionValuesRequestPrivate class provides private implementation for GetDimensionValuesRequest.
+ * \internal
  *
- * @class  GetDimensionValuesRequestPrivate
- *
- * @brief  Private implementation for GetDimensionValuesRequest.
+ * \inmodule QtAwsCostExplorer
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetDimensionValuesRequestPrivate object.
- *
- * @param  action  CostExplorer action being performed.
- * @param  q       Pointer to this object's public GetDimensionValuesRequest instance.
+ * Constructs a GetDimensionValuesRequestPrivate object for CostExplorer \a action with,
+ * public implementation \a q.
  */
 GetDimensionValuesRequestPrivate::GetDimensionValuesRequestPrivate(
     const CostExplorerRequest::Action action, GetDimensionValuesRequest * const q)
@@ -117,15 +106,10 @@ GetDimensionValuesRequestPrivate::GetDimensionValuesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetDimensionValuesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetDimensionValuesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetDimensionValuesRequest instance.
  */
 GetDimensionValuesRequestPrivate::GetDimensionValuesRequestPrivate(
     const GetDimensionValuesRequestPrivate &other, GetDimensionValuesRequest * const q)

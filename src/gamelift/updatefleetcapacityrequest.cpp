@@ -27,10 +27,9 @@ namespace GameLift {
 
 /*!
  * \class QtAws::GameLift::UpdateFleetCapacityRequest
- *
  * \brief The UpdateFleetCapacityRequest class provides an interface for GameLift UpdateFleetCapacity requests.
  *
- * \ingroup GameLift
+ * \inmodule QtAwsGameLift
  *
  *  <fullname>Amazon GameLift Service</fullname>
  * 
@@ -473,9 +472,7 @@ namespace GameLift {
  */
 
 /*!
- * @brief  Constructs a new UpdateFleetCapacityRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateFleetCapacityRequest::UpdateFleetCapacityRequest(const UpdateFleetCapacityRequest &other)
     : GameLiftRequest(new UpdateFleetCapacityRequestPrivate(*other.d_func(), this))
@@ -484,7 +481,7 @@ UpdateFleetCapacityRequest::UpdateFleetCapacityRequest(const UpdateFleetCapacity
 }
 
 /*!
- * @brief  Constructs a new UpdateFleetCapacityRequest object.
+ * Constructs a UpdateFleetCapacityRequest object.
  */
 UpdateFleetCapacityRequest::UpdateFleetCapacityRequest()
     : GameLiftRequest(new UpdateFleetCapacityRequestPrivate(GameLiftRequest::UpdateFleetCapacityAction, this))
@@ -502,14 +499,9 @@ bool UpdateFleetCapacityRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateFleetCapacityResponse object.
+ * Returns a UpdateFleetCapacityResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateFleetCapacityResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GameLiftClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateFleetCapacityRequest::response(QNetworkReply * const reply) const
 {
@@ -517,20 +509,17 @@ QtAws::Core::AwsAbstractResponse * UpdateFleetCapacityRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::GameLift::UpdateFleetCapacityRequestPrivate
+ * \brief The UpdateFleetCapacityRequestPrivate class provides private implementation for UpdateFleetCapacityRequest.
+ * \internal
  *
- * @class  UpdateFleetCapacityRequestPrivate
- *
- * @brief  Private implementation for UpdateFleetCapacityRequest.
+ * \inmodule QtAwsGameLift
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateFleetCapacityRequestPrivate object.
- *
- * @param  action  GameLift action being performed.
- * @param  q       Pointer to this object's public UpdateFleetCapacityRequest instance.
+ * Constructs a UpdateFleetCapacityRequestPrivate object for GameLift \a action with,
+ * public implementation \a q.
  */
 UpdateFleetCapacityRequestPrivate::UpdateFleetCapacityRequestPrivate(
     const GameLiftRequest::Action action, UpdateFleetCapacityRequest * const q)
@@ -540,15 +529,10 @@ UpdateFleetCapacityRequestPrivate::UpdateFleetCapacityRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateFleetCapacityRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateFleetCapacityRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateFleetCapacityRequest instance.
  */
 UpdateFleetCapacityRequestPrivate::UpdateFleetCapacityRequestPrivate(
     const UpdateFleetCapacityRequestPrivate &other, UpdateFleetCapacityRequest * const q)

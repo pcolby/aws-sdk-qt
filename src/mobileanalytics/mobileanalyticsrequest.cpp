@@ -25,16 +25,22 @@ namespace MobileAnalytics {
 
 /*!
  * \class QtAws::MobileAnalytics::MobileAnalyticsRequest
- *
  * \brief The MobileAnalyticsRequest class provides an interface for MobileAnalytics requests.
  *
- * \ingroup MobileAnalytics
+ * \inmodule QtAwsMobileAnalytics
  */
 
 /*!
- * @brief  Constructs a new MobileAnalyticsRequest object.
+ * \enum MobileAnalyticsRequest::Action
  *
- * @param  action  The MobileAnalytics action to request.
+ * This enum describes the actions that can be performed as MobileAnalytics
+ * requests.
+ *
+ * \value PutEventsAction MobileAnalytics PutEvents action.
+ */
+
+/*!
+ * Constructs a[n] MobileAnalyticsRequest object for MobileAnalytics \a action.
  */
 MobileAnalyticsRequest::MobileAnalyticsRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new MobileAnalyticsRequestPrivate(action, this))
@@ -43,9 +49,7 @@ MobileAnalyticsRequest::MobileAnalyticsRequest(const Action action)
 }
 
 /*!
- * @brief  Constructs a new MobileAnalyticsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 MobileAnalyticsRequest::MobileAnalyticsRequest(const MobileAnalyticsRequest &other)
     : QtAws::Core::AwsAbstractRequest(new MobileAnalyticsRequestPrivate(*other.d_func(), this))
@@ -54,13 +58,7 @@ MobileAnalyticsRequest::MobileAnalyticsRequest(const MobileAnalyticsRequest &oth
 }
 
 /*!
- * @brief  Assignment operator.
- *
- * Assigns \a other to \c this.
- *
- * @param  other  Instance to copy.
- *
- * @return  A reference to \c this.
+ * Sets the MobileAnalyticsRequest object to be equal to \a other.
  */
 MobileAnalyticsRequest& MobileAnalyticsRequest::operator=(const MobileAnalyticsRequest &other)
 {
@@ -72,14 +70,10 @@ MobileAnalyticsRequest& MobileAnalyticsRequest::operator=(const MobileAnalyticsR
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new MobileAnalyticsRequest object.
+ * Constructs aa MobileAnalyticsRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from MobileAnalyticsRequestPrivate.
- *
- * @param  d  Pointer to private data (aka D-Pointer).
  */
 MobileAnalyticsRequest::MobileAnalyticsRequest(MobileAnalyticsRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
@@ -87,7 +81,7 @@ MobileAnalyticsRequest::MobileAnalyticsRequest(MobileAnalyticsRequestPrivate * c
 }
 
 /*!
- * \brief Returns the MobileAnalytics action to be performed by this request.
+ * Returns the MobileAnalytics action to be performed by this request.
  */
 MobileAnalyticsRequest::Action MobileAnalyticsRequest::action() const
 {
@@ -96,7 +90,7 @@ MobileAnalyticsRequest::Action MobileAnalyticsRequest::action() const
 }
 
 /*!
- * \brief Returns the name of the MobileAnalytics action to be performed by this request.
+ * Returns the name of the MobileAnalytics action to be performed by this request.
  */
 QString MobileAnalyticsRequest::actionString() const
 {
@@ -104,7 +98,7 @@ QString MobileAnalyticsRequest::actionString() const
 }
 
 /*!
- * \brief Returns the MobileAnalytics API version implemented by this request.
+ * Returns the MobileAnalytics API version implemented by this request.
  */
 QString MobileAnalyticsRequest::apiVersion() const
 {
@@ -113,7 +107,7 @@ QString MobileAnalyticsRequest::apiVersion() const
 }
 
 /*!
- * @brief Set the MobileAnalytics action to be performed by this request to \a action.
+ * Sets the MobileAnalytics action to be performed by this request to \a action.
  */
 void MobileAnalyticsRequest::setAction(const Action action)
 {
@@ -122,7 +116,7 @@ void MobileAnalyticsRequest::setAction(const Action action)
 }
 
 /*!
- * Set the MobileAnalytics API version to include in this request to \a version.
+ * Sets the MobileAnalytics API version to include in this request to \a version.
  */
 void MobileAnalyticsRequest::setApiVersion(const QString &version)
 {
@@ -131,7 +125,7 @@ void MobileAnalyticsRequest::setApiVersion(const QString &version)
 }
 
 /*!
- * \brief Returns \c true if this request is the same as \a other.
+ * Returns \c true if this request is equal to \a other; \c false otherwise.
  *
  * Note, most derived *Request classes do not need to provider their own
  * implementations of this function, since most such request classes rely on
@@ -146,8 +140,8 @@ bool MobileAnalyticsRequest::operator==(const MobileAnalyticsRequest &other) con
             (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
-/*!
- * @brief  Check if \a queueName is a valid MobileAnalytics queue name.
+/*
+ * Returns \c tue if \a queueName is a valid MobileAnalytics queue name.
  *
  * @par From MobileAnalytics FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
@@ -166,9 +160,8 @@ bool MobileAnalyticsRequest::operator==(const MobileAnalyticsRequest &other) con
 }*/
 
 /*!
- * \brief Removes the a \a name parameter from this request.
- *
- * Returns the count of paramters removed (typically \c 0 or \c 1).
+ * Removes the a \a name parameter from the request, then returns the number of
+ * paramters removed (typically \c 0 or \c 1).
  */
 int MobileAnalyticsRequest::clearParameter(const QString &name)
 {
@@ -177,7 +170,7 @@ int MobileAnalyticsRequest::clearParameter(const QString &name)
 }
 
 /*!
- * \brief Removes all parameters from this request.
+ * Removes all parameters from the request.
  */
 void MobileAnalyticsRequest::clearParameters()
 {
@@ -186,7 +179,7 @@ void MobileAnalyticsRequest::clearParameters()
 }
 
 /*!
- * \brief Returns the value of the \n name pararemter if set, otherwise \a defaultValue.
+ * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
 QVariant MobileAnalyticsRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
@@ -195,7 +188,7 @@ QVariant MobileAnalyticsRequest::parameter(const QString &name, const QVariant &
 }
 
 /*!
- * \brief Returns a map of parameters included in this request.
+ * Returns the parameters included in this request.
  */
 const QVariantMap &MobileAnalyticsRequest::parameters() const
 {
@@ -204,7 +197,7 @@ const QVariantMap &MobileAnalyticsRequest::parameters() const
 }
 
 /*!
- * \brief Sets the \a name parameter to \a value.
+ * Sets the \a name parameter to \a value.
  */
 void MobileAnalyticsRequest::setParameter(const QString &name, const QVariant &value)
 {
@@ -213,9 +206,8 @@ void MobileAnalyticsRequest::setParameter(const QString &name, const QVariant &v
 }
 
 /*!
- * \brief Sets the map of paramters for this request to \a parameters.
- *
- * Any request parameters set previously will be discarded.
+ * Sets the paramters for this request to \a parameters. Any request parameters
+ * set previously will be discarded.
  */
 void MobileAnalyticsRequest::setParameters(const QVariantMap &parameters)
 {
@@ -224,11 +216,12 @@ void MobileAnalyticsRequest::setParameters(const QVariantMap &parameters)
 }
 
 /*!
- * \brief Returns a network request for this MobileAnalytics request using the given \a endpoint.
+ * Returns a network request for the MobileAnalytics request using the given
+ * \a endpoint.
  *
- * This MobileAnalytics implementation builds request URLs by combining the common query
- * parameters (such as Action and Version), with any that have been added (via
- * setParameter) by child classes.
+ * This MobileAnalytics implementation builds request URLs by combining the
+ * common query parameters (such as Action and Version), with any that have
+ * been added (via setParameter) by child classes.
  */
 QNetworkRequest MobileAnalyticsRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -239,17 +232,16 @@ QNetworkRequest MobileAnalyticsRequest::unsignedRequest(const QUrl &endpoint) co
 }
 
 /*!
+ * \class QtAws::MobileAnalytics::MobileAnalyticsRequestPrivate
+ * \brief The MobileAnalyticsRequestPrivate class provides private implementation for MobileAnalyticsRequest.
  * \internal
  *
- * \class  MobileAnalyticsRequestPrivate
- *
- * \brief  Private implementation for MobileAnalyticsRequest.
+ * \inmodule QtAwsMobileAnalytics
  */
 
 /*!
- * \internal
- *
- * \brief Constructs a new MobileAnalyticsRequestPrivate object.
+ * Constructs a MobileAnalyticsRequestPrivate object for MobileAnalytics \a action with,
+ * public implementation \a q.
  */
 MobileAnalyticsRequestPrivate::MobileAnalyticsRequestPrivate(const MobileAnalyticsRequest::Action action, MobileAnalyticsRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
@@ -258,9 +250,7 @@ MobileAnalyticsRequestPrivate::MobileAnalyticsRequestPrivate(const MobileAnalyti
 }
 
 /*!
- * \internal
- *
- * \brief Constructs a new MobileAnalyticsRequestPrivate object, copying an existing one.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
@@ -276,15 +266,12 @@ MobileAnalyticsRequestPrivate::MobileAnalyticsRequestPrivate(const MobileAnalyti
 }
 
 /*!
- * \internal
- *
- * \brief Returns a string representing \a action.
+ * Returns a string represention of \a action, or a null string if \a action is
+ * invalid.
  *
  * This function converts MobileAnalyticsRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the MobileAnalytics service's Action
  * query parameters.
- *
- * @return A string representing \a action, or a null string if \a action is invalid.
  */
 QString MobileAnalyticsRequestPrivate::toString(const MobileAnalyticsRequest::Action &action)
 {

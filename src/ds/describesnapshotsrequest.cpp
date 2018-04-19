@@ -27,10 +27,9 @@ namespace DirectoryService {
 
 /*!
  * \class QtAws::DirectoryService::DescribeSnapshotsRequest
- *
  * \brief The DescribeSnapshotsRequest class provides an interface for DirectoryService DescribeSnapshots requests.
  *
- * \ingroup DirectoryService
+ * \inmodule QtAwsDirectoryService
  *
  *  <fullname>AWS Directory Service</fullname>
  * 
@@ -51,9 +50,7 @@ namespace DirectoryService {
  */
 
 /*!
- * @brief  Constructs a new DescribeSnapshotsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeSnapshotsRequest::DescribeSnapshotsRequest(const DescribeSnapshotsRequest &other)
     : DirectoryServiceRequest(new DescribeSnapshotsRequestPrivate(*other.d_func(), this))
@@ -62,7 +59,7 @@ DescribeSnapshotsRequest::DescribeSnapshotsRequest(const DescribeSnapshotsReques
 }
 
 /*!
- * @brief  Constructs a new DescribeSnapshotsRequest object.
+ * Constructs a DescribeSnapshotsRequest object.
  */
 DescribeSnapshotsRequest::DescribeSnapshotsRequest()
     : DirectoryServiceRequest(new DescribeSnapshotsRequestPrivate(DirectoryServiceRequest::DescribeSnapshotsAction, this))
@@ -80,14 +77,9 @@ bool DescribeSnapshotsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeSnapshotsResponse object.
+ * Returns a DescribeSnapshotsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeSnapshotsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DirectoryServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeSnapshotsRequest::response(QNetworkReply * const reply) const
 {
@@ -95,20 +87,17 @@ QtAws::Core::AwsAbstractResponse * DescribeSnapshotsRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::DirectoryService::DescribeSnapshotsRequestPrivate
+ * \brief The DescribeSnapshotsRequestPrivate class provides private implementation for DescribeSnapshotsRequest.
+ * \internal
  *
- * @class  DescribeSnapshotsRequestPrivate
- *
- * @brief  Private implementation for DescribeSnapshotsRequest.
+ * \inmodule QtAwsDirectoryService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeSnapshotsRequestPrivate object.
- *
- * @param  action  DirectoryService action being performed.
- * @param  q       Pointer to this object's public DescribeSnapshotsRequest instance.
+ * Constructs a DescribeSnapshotsRequestPrivate object for DirectoryService \a action with,
+ * public implementation \a q.
  */
 DescribeSnapshotsRequestPrivate::DescribeSnapshotsRequestPrivate(
     const DirectoryServiceRequest::Action action, DescribeSnapshotsRequest * const q)
@@ -118,15 +107,10 @@ DescribeSnapshotsRequestPrivate::DescribeSnapshotsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeSnapshotsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeSnapshotsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeSnapshotsRequest instance.
  */
 DescribeSnapshotsRequestPrivate::DescribeSnapshotsRequestPrivate(
     const DescribeSnapshotsRequestPrivate &other, DescribeSnapshotsRequest * const q)

@@ -27,10 +27,9 @@ namespace ConfigService {
 
 /*!
  * \class QtAws::ConfigService::PutAggregationAuthorizationRequest
- *
  * \brief The PutAggregationAuthorizationRequest class provides an interface for ConfigService PutAggregationAuthorization requests.
  *
- * \ingroup ConfigService
+ * \inmodule QtAwsConfigService
  *
  *  <fullname>AWS Config</fullname>
  * 
@@ -60,9 +59,7 @@ namespace ConfigService {
  */
 
 /*!
- * @brief  Constructs a new PutAggregationAuthorizationRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 PutAggregationAuthorizationRequest::PutAggregationAuthorizationRequest(const PutAggregationAuthorizationRequest &other)
     : ConfigServiceRequest(new PutAggregationAuthorizationRequestPrivate(*other.d_func(), this))
@@ -71,7 +68,7 @@ PutAggregationAuthorizationRequest::PutAggregationAuthorizationRequest(const Put
 }
 
 /*!
- * @brief  Constructs a new PutAggregationAuthorizationRequest object.
+ * Constructs a PutAggregationAuthorizationRequest object.
  */
 PutAggregationAuthorizationRequest::PutAggregationAuthorizationRequest()
     : ConfigServiceRequest(new PutAggregationAuthorizationRequestPrivate(ConfigServiceRequest::PutAggregationAuthorizationAction, this))
@@ -89,14 +86,9 @@ bool PutAggregationAuthorizationRequest::isValid() const
 
 
 /*!
- * @brief  Construct an PutAggregationAuthorizationResponse object.
+ * Returns a PutAggregationAuthorizationResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An PutAggregationAuthorizationResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ConfigServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * PutAggregationAuthorizationRequest::response(QNetworkReply * const reply) const
 {
@@ -104,20 +96,17 @@ QtAws::Core::AwsAbstractResponse * PutAggregationAuthorizationRequest::response(
 }
 
 /*!
- * @internal
+ * \class QtAws::ConfigService::PutAggregationAuthorizationRequestPrivate
+ * \brief The PutAggregationAuthorizationRequestPrivate class provides private implementation for PutAggregationAuthorizationRequest.
+ * \internal
  *
- * @class  PutAggregationAuthorizationRequestPrivate
- *
- * @brief  Private implementation for PutAggregationAuthorizationRequest.
+ * \inmodule QtAwsConfigService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new PutAggregationAuthorizationRequestPrivate object.
- *
- * @param  action  ConfigService action being performed.
- * @param  q       Pointer to this object's public PutAggregationAuthorizationRequest instance.
+ * Constructs a PutAggregationAuthorizationRequestPrivate object for ConfigService \a action with,
+ * public implementation \a q.
  */
 PutAggregationAuthorizationRequestPrivate::PutAggregationAuthorizationRequestPrivate(
     const ConfigServiceRequest::Action action, PutAggregationAuthorizationRequest * const q)
@@ -127,15 +116,10 @@ PutAggregationAuthorizationRequestPrivate::PutAggregationAuthorizationRequestPri
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutAggregationAuthorizationRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the PutAggregationAuthorizationRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public PutAggregationAuthorizationRequest instance.
  */
 PutAggregationAuthorizationRequestPrivate::PutAggregationAuthorizationRequestPrivate(
     const PutAggregationAuthorizationRequestPrivate &other, PutAggregationAuthorizationRequest * const q)

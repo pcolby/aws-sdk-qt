@@ -27,10 +27,9 @@ namespace Support {
 
 /*!
  * \class QtAws::Support::DescribeAttachmentRequest
- *
  * \brief The DescribeAttachmentRequest class provides an interface for Support DescribeAttachment requests.
  *
- * \ingroup Support
+ * \inmodule QtAwsSupport
  *
  *  <fullname>AWS Support</fullname>
  * 
@@ -105,9 +104,7 @@ namespace Support {
  */
 
 /*!
- * @brief  Constructs a new DescribeAttachmentRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeAttachmentRequest::DescribeAttachmentRequest(const DescribeAttachmentRequest &other)
     : SupportRequest(new DescribeAttachmentRequestPrivate(*other.d_func(), this))
@@ -116,7 +113,7 @@ DescribeAttachmentRequest::DescribeAttachmentRequest(const DescribeAttachmentReq
 }
 
 /*!
- * @brief  Constructs a new DescribeAttachmentRequest object.
+ * Constructs a DescribeAttachmentRequest object.
  */
 DescribeAttachmentRequest::DescribeAttachmentRequest()
     : SupportRequest(new DescribeAttachmentRequestPrivate(SupportRequest::DescribeAttachmentAction, this))
@@ -134,14 +131,9 @@ bool DescribeAttachmentRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeAttachmentResponse object.
+ * Returns a DescribeAttachmentResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeAttachmentResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SupportClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeAttachmentRequest::response(QNetworkReply * const reply) const
 {
@@ -149,20 +141,17 @@ QtAws::Core::AwsAbstractResponse * DescribeAttachmentRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::Support::DescribeAttachmentRequestPrivate
+ * \brief The DescribeAttachmentRequestPrivate class provides private implementation for DescribeAttachmentRequest.
+ * \internal
  *
- * @class  DescribeAttachmentRequestPrivate
- *
- * @brief  Private implementation for DescribeAttachmentRequest.
+ * \inmodule QtAwsSupport
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeAttachmentRequestPrivate object.
- *
- * @param  action  Support action being performed.
- * @param  q       Pointer to this object's public DescribeAttachmentRequest instance.
+ * Constructs a DescribeAttachmentRequestPrivate object for Support \a action with,
+ * public implementation \a q.
  */
 DescribeAttachmentRequestPrivate::DescribeAttachmentRequestPrivate(
     const SupportRequest::Action action, DescribeAttachmentRequest * const q)
@@ -172,15 +161,10 @@ DescribeAttachmentRequestPrivate::DescribeAttachmentRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeAttachmentRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeAttachmentRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeAttachmentRequest instance.
  */
 DescribeAttachmentRequestPrivate::DescribeAttachmentRequestPrivate(
     const DescribeAttachmentRequestPrivate &other, DescribeAttachmentRequest * const q)

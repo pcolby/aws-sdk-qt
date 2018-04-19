@@ -27,10 +27,9 @@ namespace GameLift {
 
 /*!
  * \class QtAws::GameLift::DescribeScalingPoliciesRequest
- *
  * \brief The DescribeScalingPoliciesRequest class provides an interface for GameLift DescribeScalingPolicies requests.
  *
- * \ingroup GameLift
+ * \inmodule QtAwsGameLift
  *
  *  <fullname>Amazon GameLift Service</fullname>
  * 
@@ -473,9 +472,7 @@ namespace GameLift {
  */
 
 /*!
- * @brief  Constructs a new DescribeScalingPoliciesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeScalingPoliciesRequest::DescribeScalingPoliciesRequest(const DescribeScalingPoliciesRequest &other)
     : GameLiftRequest(new DescribeScalingPoliciesRequestPrivate(*other.d_func(), this))
@@ -484,7 +481,7 @@ DescribeScalingPoliciesRequest::DescribeScalingPoliciesRequest(const DescribeSca
 }
 
 /*!
- * @brief  Constructs a new DescribeScalingPoliciesRequest object.
+ * Constructs a DescribeScalingPoliciesRequest object.
  */
 DescribeScalingPoliciesRequest::DescribeScalingPoliciesRequest()
     : GameLiftRequest(new DescribeScalingPoliciesRequestPrivate(GameLiftRequest::DescribeScalingPoliciesAction, this))
@@ -502,14 +499,9 @@ bool DescribeScalingPoliciesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeScalingPoliciesResponse object.
+ * Returns a DescribeScalingPoliciesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeScalingPoliciesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GameLiftClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeScalingPoliciesRequest::response(QNetworkReply * const reply) const
 {
@@ -517,20 +509,17 @@ QtAws::Core::AwsAbstractResponse * DescribeScalingPoliciesRequest::response(QNet
 }
 
 /*!
- * @internal
+ * \class QtAws::GameLift::DescribeScalingPoliciesRequestPrivate
+ * \brief The DescribeScalingPoliciesRequestPrivate class provides private implementation for DescribeScalingPoliciesRequest.
+ * \internal
  *
- * @class  DescribeScalingPoliciesRequestPrivate
- *
- * @brief  Private implementation for DescribeScalingPoliciesRequest.
+ * \inmodule QtAwsGameLift
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeScalingPoliciesRequestPrivate object.
- *
- * @param  action  GameLift action being performed.
- * @param  q       Pointer to this object's public DescribeScalingPoliciesRequest instance.
+ * Constructs a DescribeScalingPoliciesRequestPrivate object for GameLift \a action with,
+ * public implementation \a q.
  */
 DescribeScalingPoliciesRequestPrivate::DescribeScalingPoliciesRequestPrivate(
     const GameLiftRequest::Action action, DescribeScalingPoliciesRequest * const q)
@@ -540,15 +529,10 @@ DescribeScalingPoliciesRequestPrivate::DescribeScalingPoliciesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeScalingPoliciesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeScalingPoliciesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeScalingPoliciesRequest instance.
  */
 DescribeScalingPoliciesRequestPrivate::DescribeScalingPoliciesRequestPrivate(
     const DescribeScalingPoliciesRequestPrivate &other, DescribeScalingPoliciesRequest * const q)

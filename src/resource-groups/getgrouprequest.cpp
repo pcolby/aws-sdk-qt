@@ -27,10 +27,9 @@ namespace ResourceGroups {
 
 /*!
  * \class QtAws::ResourceGroups::GetGroupRequest
- *
  * \brief The GetGroupRequest class provides an interface for ResourceGroups GetGroup requests.
  *
- * \ingroup ResourceGroups
+ * \inmodule QtAwsResourceGroups
  *
  *  <fullname>AWS Resource Groups</fullname>
  * 
@@ -81,9 +80,7 @@ namespace ResourceGroups {
  */
 
 /*!
- * @brief  Constructs a new GetGroupRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetGroupRequest::GetGroupRequest(const GetGroupRequest &other)
     : ResourceGroupsRequest(new GetGroupRequestPrivate(*other.d_func(), this))
@@ -92,7 +89,7 @@ GetGroupRequest::GetGroupRequest(const GetGroupRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetGroupRequest object.
+ * Constructs a GetGroupRequest object.
  */
 GetGroupRequest::GetGroupRequest()
     : ResourceGroupsRequest(new GetGroupRequestPrivate(ResourceGroupsRequest::GetGroupAction, this))
@@ -110,14 +107,9 @@ bool GetGroupRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetGroupResponse object.
+ * Returns a GetGroupResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetGroupResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ResourceGroupsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetGroupRequest::response(QNetworkReply * const reply) const
 {
@@ -125,20 +117,17 @@ QtAws::Core::AwsAbstractResponse * GetGroupRequest::response(QNetworkReply * con
 }
 
 /*!
- * @internal
+ * \class QtAws::ResourceGroups::GetGroupRequestPrivate
+ * \brief The GetGroupRequestPrivate class provides private implementation for GetGroupRequest.
+ * \internal
  *
- * @class  GetGroupRequestPrivate
- *
- * @brief  Private implementation for GetGroupRequest.
+ * \inmodule QtAwsResourceGroups
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetGroupRequestPrivate object.
- *
- * @param  action  ResourceGroups action being performed.
- * @param  q       Pointer to this object's public GetGroupRequest instance.
+ * Constructs a GetGroupRequestPrivate object for ResourceGroups \a action with,
+ * public implementation \a q.
  */
 GetGroupRequestPrivate::GetGroupRequestPrivate(
     const ResourceGroupsRequest::Action action, GetGroupRequest * const q)
@@ -148,15 +137,10 @@ GetGroupRequestPrivate::GetGroupRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetGroupRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetGroupRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetGroupRequest instance.
  */
 GetGroupRequestPrivate::GetGroupRequestPrivate(
     const GetGroupRequestPrivate &other, GetGroupRequest * const q)

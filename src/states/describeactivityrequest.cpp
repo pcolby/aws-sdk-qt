@@ -27,10 +27,9 @@ namespace SFN {
 
 /*!
  * \class QtAws::SFN::DescribeActivityRequest
- *
  * \brief The DescribeActivityRequest class provides an interface for SFN DescribeActivity requests.
  *
- * \ingroup SFN
+ * \inmodule QtAwsSFN
  *
  *  <fullname>AWS Step Functions</fullname>
  * 
@@ -56,9 +55,7 @@ namespace SFN {
  */
 
 /*!
- * @brief  Constructs a new DescribeActivityRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeActivityRequest::DescribeActivityRequest(const DescribeActivityRequest &other)
     : SFNRequest(new DescribeActivityRequestPrivate(*other.d_func(), this))
@@ -67,7 +64,7 @@ DescribeActivityRequest::DescribeActivityRequest(const DescribeActivityRequest &
 }
 
 /*!
- * @brief  Constructs a new DescribeActivityRequest object.
+ * Constructs a DescribeActivityRequest object.
  */
 DescribeActivityRequest::DescribeActivityRequest()
     : SFNRequest(new DescribeActivityRequestPrivate(SFNRequest::DescribeActivityAction, this))
@@ -85,14 +82,9 @@ bool DescribeActivityRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeActivityResponse object.
+ * Returns a DescribeActivityResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeActivityResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SFNClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeActivityRequest::response(QNetworkReply * const reply) const
 {
@@ -100,20 +92,17 @@ QtAws::Core::AwsAbstractResponse * DescribeActivityRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::SFN::DescribeActivityRequestPrivate
+ * \brief The DescribeActivityRequestPrivate class provides private implementation for DescribeActivityRequest.
+ * \internal
  *
- * @class  DescribeActivityRequestPrivate
- *
- * @brief  Private implementation for DescribeActivityRequest.
+ * \inmodule QtAwsSFN
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeActivityRequestPrivate object.
- *
- * @param  action  SFN action being performed.
- * @param  q       Pointer to this object's public DescribeActivityRequest instance.
+ * Constructs a DescribeActivityRequestPrivate object for SFN \a action with,
+ * public implementation \a q.
  */
 DescribeActivityRequestPrivate::DescribeActivityRequestPrivate(
     const SFNRequest::Action action, DescribeActivityRequest * const q)
@@ -123,15 +112,10 @@ DescribeActivityRequestPrivate::DescribeActivityRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeActivityRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeActivityRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeActivityRequest instance.
  */
 DescribeActivityRequestPrivate::DescribeActivityRequestPrivate(
     const DescribeActivityRequestPrivate &other, DescribeActivityRequest * const q)

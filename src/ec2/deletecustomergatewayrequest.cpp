@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DeleteCustomerGatewayRequest
- *
  * \brief The DeleteCustomerGatewayRequest class provides an interface for EC2 DeleteCustomerGateway requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DeleteCustomerGatewayRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteCustomerGatewayRequest::DeleteCustomerGatewayRequest(const DeleteCustomerGatewayRequest &other)
     : EC2Request(new DeleteCustomerGatewayRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ DeleteCustomerGatewayRequest::DeleteCustomerGatewayRequest(const DeleteCustomerG
 }
 
 /*!
- * @brief  Constructs a new DeleteCustomerGatewayRequest object.
+ * Constructs a DeleteCustomerGatewayRequest object.
  */
 DeleteCustomerGatewayRequest::DeleteCustomerGatewayRequest()
     : EC2Request(new DeleteCustomerGatewayRequestPrivate(EC2Request::DeleteCustomerGatewayAction, this))
@@ -70,14 +67,9 @@ bool DeleteCustomerGatewayRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteCustomerGatewayResponse object.
+ * Returns a DeleteCustomerGatewayResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteCustomerGatewayResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteCustomerGatewayRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * DeleteCustomerGatewayRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::DeleteCustomerGatewayRequestPrivate
+ * \brief The DeleteCustomerGatewayRequestPrivate class provides private implementation for DeleteCustomerGatewayRequest.
+ * \internal
  *
- * @class  DeleteCustomerGatewayRequestPrivate
- *
- * @brief  Private implementation for DeleteCustomerGatewayRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteCustomerGatewayRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public DeleteCustomerGatewayRequest instance.
+ * Constructs a DeleteCustomerGatewayRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 DeleteCustomerGatewayRequestPrivate::DeleteCustomerGatewayRequestPrivate(
     const EC2Request::Action action, DeleteCustomerGatewayRequest * const q)
@@ -108,15 +97,10 @@ DeleteCustomerGatewayRequestPrivate::DeleteCustomerGatewayRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteCustomerGatewayRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteCustomerGatewayRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteCustomerGatewayRequest instance.
  */
 DeleteCustomerGatewayRequestPrivate::DeleteCustomerGatewayRequestPrivate(
     const DeleteCustomerGatewayRequestPrivate &other, DeleteCustomerGatewayRequest * const q)

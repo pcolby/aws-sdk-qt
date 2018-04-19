@@ -27,10 +27,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::CopyDBClusterParameterGroupRequest
- *
  * \brief The CopyDBClusterParameterGroupRequest class provides an interface for RDS CopyDBClusterParameterGroup requests.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -101,9 +100,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new CopyDBClusterParameterGroupRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CopyDBClusterParameterGroupRequest::CopyDBClusterParameterGroupRequest(const CopyDBClusterParameterGroupRequest &other)
     : RDSRequest(new CopyDBClusterParameterGroupRequestPrivate(*other.d_func(), this))
@@ -112,7 +109,7 @@ CopyDBClusterParameterGroupRequest::CopyDBClusterParameterGroupRequest(const Cop
 }
 
 /*!
- * @brief  Constructs a new CopyDBClusterParameterGroupRequest object.
+ * Constructs a CopyDBClusterParameterGroupRequest object.
  */
 CopyDBClusterParameterGroupRequest::CopyDBClusterParameterGroupRequest()
     : RDSRequest(new CopyDBClusterParameterGroupRequestPrivate(RDSRequest::CopyDBClusterParameterGroupAction, this))
@@ -130,14 +127,9 @@ bool CopyDBClusterParameterGroupRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CopyDBClusterParameterGroupResponse object.
+ * Returns a CopyDBClusterParameterGroupResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CopyDBClusterParameterGroupResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RDSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CopyDBClusterParameterGroupRequest::response(QNetworkReply * const reply) const
 {
@@ -145,20 +137,17 @@ QtAws::Core::AwsAbstractResponse * CopyDBClusterParameterGroupRequest::response(
 }
 
 /*!
- * @internal
+ * \class QtAws::RDS::CopyDBClusterParameterGroupRequestPrivate
+ * \brief The CopyDBClusterParameterGroupRequestPrivate class provides private implementation for CopyDBClusterParameterGroupRequest.
+ * \internal
  *
- * @class  CopyDBClusterParameterGroupRequestPrivate
- *
- * @brief  Private implementation for CopyDBClusterParameterGroupRequest.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CopyDBClusterParameterGroupRequestPrivate object.
- *
- * @param  action  RDS action being performed.
- * @param  q       Pointer to this object's public CopyDBClusterParameterGroupRequest instance.
+ * Constructs a CopyDBClusterParameterGroupRequestPrivate object for RDS \a action with,
+ * public implementation \a q.
  */
 CopyDBClusterParameterGroupRequestPrivate::CopyDBClusterParameterGroupRequestPrivate(
     const RDSRequest::Action action, CopyDBClusterParameterGroupRequest * const q)
@@ -168,15 +157,10 @@ CopyDBClusterParameterGroupRequestPrivate::CopyDBClusterParameterGroupRequestPri
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CopyDBClusterParameterGroupRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CopyDBClusterParameterGroupRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CopyDBClusterParameterGroupRequest instance.
  */
 CopyDBClusterParameterGroupRequestPrivate::CopyDBClusterParameterGroupRequestPrivate(
     const CopyDBClusterParameterGroupRequestPrivate &other, CopyDBClusterParameterGroupRequest * const q)

@@ -27,10 +27,9 @@ namespace Redshift {
 
 /*!
  * \class QtAws::Redshift::DeleteClusterRequest
- *
  * \brief The DeleteClusterRequest class provides an interface for Redshift DeleteCluster requests.
  *
- * \ingroup Redshift
+ * \inmodule QtAwsRedshift
  *
  *  <fullname>Amazon Redshift</fullname>
  * 
@@ -67,9 +66,7 @@ namespace Redshift {
  */
 
 /*!
- * @brief  Constructs a new DeleteClusterRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteClusterRequest::DeleteClusterRequest(const DeleteClusterRequest &other)
     : RedshiftRequest(new DeleteClusterRequestPrivate(*other.d_func(), this))
@@ -78,7 +75,7 @@ DeleteClusterRequest::DeleteClusterRequest(const DeleteClusterRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DeleteClusterRequest object.
+ * Constructs a DeleteClusterRequest object.
  */
 DeleteClusterRequest::DeleteClusterRequest()
     : RedshiftRequest(new DeleteClusterRequestPrivate(RedshiftRequest::DeleteClusterAction, this))
@@ -96,14 +93,9 @@ bool DeleteClusterRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteClusterResponse object.
+ * Returns a DeleteClusterResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteClusterResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RedshiftClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteClusterRequest::response(QNetworkReply * const reply) const
 {
@@ -111,20 +103,17 @@ QtAws::Core::AwsAbstractResponse * DeleteClusterRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::Redshift::DeleteClusterRequestPrivate
+ * \brief The DeleteClusterRequestPrivate class provides private implementation for DeleteClusterRequest.
+ * \internal
  *
- * @class  DeleteClusterRequestPrivate
- *
- * @brief  Private implementation for DeleteClusterRequest.
+ * \inmodule QtAwsRedshift
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteClusterRequestPrivate object.
- *
- * @param  action  Redshift action being performed.
- * @param  q       Pointer to this object's public DeleteClusterRequest instance.
+ * Constructs a DeleteClusterRequestPrivate object for Redshift \a action with,
+ * public implementation \a q.
  */
 DeleteClusterRequestPrivate::DeleteClusterRequestPrivate(
     const RedshiftRequest::Action action, DeleteClusterRequest * const q)
@@ -134,15 +123,10 @@ DeleteClusterRequestPrivate::DeleteClusterRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteClusterRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteClusterRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteClusterRequest instance.
  */
 DeleteClusterRequestPrivate::DeleteClusterRequestPrivate(
     const DeleteClusterRequestPrivate &other, DeleteClusterRequest * const q)

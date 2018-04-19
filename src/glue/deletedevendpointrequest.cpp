@@ -27,10 +27,9 @@ namespace Glue {
 
 /*!
  * \class QtAws::Glue::DeleteDevEndpointRequest
- *
  * \brief The DeleteDevEndpointRequest class provides an interface for Glue DeleteDevEndpoint requests.
  *
- * \ingroup Glue
+ * \inmodule QtAwsGlue
  *
  *  <fullname>AWS Glue</fullname>
  * 
@@ -40,9 +39,7 @@ namespace Glue {
  */
 
 /*!
- * @brief  Constructs a new DeleteDevEndpointRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteDevEndpointRequest::DeleteDevEndpointRequest(const DeleteDevEndpointRequest &other)
     : GlueRequest(new DeleteDevEndpointRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ DeleteDevEndpointRequest::DeleteDevEndpointRequest(const DeleteDevEndpointReques
 }
 
 /*!
- * @brief  Constructs a new DeleteDevEndpointRequest object.
+ * Constructs a DeleteDevEndpointRequest object.
  */
 DeleteDevEndpointRequest::DeleteDevEndpointRequest()
     : GlueRequest(new DeleteDevEndpointRequestPrivate(GlueRequest::DeleteDevEndpointAction, this))
@@ -69,14 +66,9 @@ bool DeleteDevEndpointRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteDevEndpointResponse object.
+ * Returns a DeleteDevEndpointResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteDevEndpointResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GlueClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteDevEndpointRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * DeleteDevEndpointRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::Glue::DeleteDevEndpointRequestPrivate
+ * \brief The DeleteDevEndpointRequestPrivate class provides private implementation for DeleteDevEndpointRequest.
+ * \internal
  *
- * @class  DeleteDevEndpointRequestPrivate
- *
- * @brief  Private implementation for DeleteDevEndpointRequest.
+ * \inmodule QtAwsGlue
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteDevEndpointRequestPrivate object.
- *
- * @param  action  Glue action being performed.
- * @param  q       Pointer to this object's public DeleteDevEndpointRequest instance.
+ * Constructs a DeleteDevEndpointRequestPrivate object for Glue \a action with,
+ * public implementation \a q.
  */
 DeleteDevEndpointRequestPrivate::DeleteDevEndpointRequestPrivate(
     const GlueRequest::Action action, DeleteDevEndpointRequest * const q)
@@ -107,15 +96,10 @@ DeleteDevEndpointRequestPrivate::DeleteDevEndpointRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteDevEndpointRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteDevEndpointRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteDevEndpointRequest instance.
  */
 DeleteDevEndpointRequestPrivate::DeleteDevEndpointRequestPrivate(
     const DeleteDevEndpointRequestPrivate &other, DeleteDevEndpointRequest * const q)

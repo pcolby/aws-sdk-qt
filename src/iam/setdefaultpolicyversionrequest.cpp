@@ -27,10 +27,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::SetDefaultPolicyVersionRequest
- *
  * \brief The SetDefaultPolicyVersionRequest class provides an interface for IAM SetDefaultPolicyVersion requests.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -102,9 +101,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new SetDefaultPolicyVersionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 SetDefaultPolicyVersionRequest::SetDefaultPolicyVersionRequest(const SetDefaultPolicyVersionRequest &other)
     : IAMRequest(new SetDefaultPolicyVersionRequestPrivate(*other.d_func(), this))
@@ -113,7 +110,7 @@ SetDefaultPolicyVersionRequest::SetDefaultPolicyVersionRequest(const SetDefaultP
 }
 
 /*!
- * @brief  Constructs a new SetDefaultPolicyVersionRequest object.
+ * Constructs a SetDefaultPolicyVersionRequest object.
  */
 SetDefaultPolicyVersionRequest::SetDefaultPolicyVersionRequest()
     : IAMRequest(new SetDefaultPolicyVersionRequestPrivate(IAMRequest::SetDefaultPolicyVersionAction, this))
@@ -131,14 +128,9 @@ bool SetDefaultPolicyVersionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an SetDefaultPolicyVersionResponse object.
+ * Returns a SetDefaultPolicyVersionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An SetDefaultPolicyVersionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IAMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * SetDefaultPolicyVersionRequest::response(QNetworkReply * const reply) const
 {
@@ -146,20 +138,17 @@ QtAws::Core::AwsAbstractResponse * SetDefaultPolicyVersionRequest::response(QNet
 }
 
 /*!
- * @internal
+ * \class QtAws::IAM::SetDefaultPolicyVersionRequestPrivate
+ * \brief The SetDefaultPolicyVersionRequestPrivate class provides private implementation for SetDefaultPolicyVersionRequest.
+ * \internal
  *
- * @class  SetDefaultPolicyVersionRequestPrivate
- *
- * @brief  Private implementation for SetDefaultPolicyVersionRequest.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new SetDefaultPolicyVersionRequestPrivate object.
- *
- * @param  action  IAM action being performed.
- * @param  q       Pointer to this object's public SetDefaultPolicyVersionRequest instance.
+ * Constructs a SetDefaultPolicyVersionRequestPrivate object for IAM \a action with,
+ * public implementation \a q.
  */
 SetDefaultPolicyVersionRequestPrivate::SetDefaultPolicyVersionRequestPrivate(
     const IAMRequest::Action action, SetDefaultPolicyVersionRequest * const q)
@@ -169,15 +158,10 @@ SetDefaultPolicyVersionRequestPrivate::SetDefaultPolicyVersionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SetDefaultPolicyVersionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the SetDefaultPolicyVersionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public SetDefaultPolicyVersionRequest instance.
  */
 SetDefaultPolicyVersionRequestPrivate::SetDefaultPolicyVersionRequestPrivate(
     const SetDefaultPolicyVersionRequestPrivate &other, SetDefaultPolicyVersionRequest * const q)

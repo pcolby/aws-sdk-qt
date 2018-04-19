@@ -27,10 +27,9 @@ namespace CodeCommit {
 
 /*!
  * \class QtAws::CodeCommit::GetCommitRequest
- *
  * \brief The GetCommitRequest class provides an interface for CodeCommit GetCommit requests.
  *
- * \ingroup CodeCommit
+ * \inmodule QtAwsCodeCommit
  *
  *  <fullname>AWS CodeCommit</fullname>
  * 
@@ -227,9 +226,7 @@ namespace CodeCommit {
  */
 
 /*!
- * @brief  Constructs a new GetCommitRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetCommitRequest::GetCommitRequest(const GetCommitRequest &other)
     : CodeCommitRequest(new GetCommitRequestPrivate(*other.d_func(), this))
@@ -238,7 +235,7 @@ GetCommitRequest::GetCommitRequest(const GetCommitRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetCommitRequest object.
+ * Constructs a GetCommitRequest object.
  */
 GetCommitRequest::GetCommitRequest()
     : CodeCommitRequest(new GetCommitRequestPrivate(CodeCommitRequest::GetCommitAction, this))
@@ -256,14 +253,9 @@ bool GetCommitRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetCommitResponse object.
+ * Returns a GetCommitResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetCommitResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CodeCommitClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetCommitRequest::response(QNetworkReply * const reply) const
 {
@@ -271,20 +263,17 @@ QtAws::Core::AwsAbstractResponse * GetCommitRequest::response(QNetworkReply * co
 }
 
 /*!
- * @internal
+ * \class QtAws::CodeCommit::GetCommitRequestPrivate
+ * \brief The GetCommitRequestPrivate class provides private implementation for GetCommitRequest.
+ * \internal
  *
- * @class  GetCommitRequestPrivate
- *
- * @brief  Private implementation for GetCommitRequest.
+ * \inmodule QtAwsCodeCommit
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetCommitRequestPrivate object.
- *
- * @param  action  CodeCommit action being performed.
- * @param  q       Pointer to this object's public GetCommitRequest instance.
+ * Constructs a GetCommitRequestPrivate object for CodeCommit \a action with,
+ * public implementation \a q.
  */
 GetCommitRequestPrivate::GetCommitRequestPrivate(
     const CodeCommitRequest::Action action, GetCommitRequest * const q)
@@ -294,15 +283,10 @@ GetCommitRequestPrivate::GetCommitRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetCommitRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetCommitRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetCommitRequest instance.
  */
 GetCommitRequestPrivate::GetCommitRequestPrivate(
     const GetCommitRequestPrivate &other, GetCommitRequest * const q)

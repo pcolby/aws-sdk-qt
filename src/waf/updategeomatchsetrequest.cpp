@@ -27,10 +27,9 @@ namespace WAF {
 
 /*!
  * \class QtAws::WAF::UpdateGeoMatchSetRequest
- *
  * \brief The UpdateGeoMatchSetRequest class provides an interface for WAF UpdateGeoMatchSet requests.
  *
- * \ingroup WAF
+ * \inmodule QtAwsWAF
  *
  *  This is the <i>AWS WAF API Reference</i> for using AWS WAF with Amazon CloudFront. The AWS WAF actions and data types
  *  listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data
@@ -42,9 +41,7 @@ namespace WAF {
  */
 
 /*!
- * @brief  Constructs a new UpdateGeoMatchSetRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateGeoMatchSetRequest::UpdateGeoMatchSetRequest(const UpdateGeoMatchSetRequest &other)
     : WAFRequest(new UpdateGeoMatchSetRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ UpdateGeoMatchSetRequest::UpdateGeoMatchSetRequest(const UpdateGeoMatchSetReques
 }
 
 /*!
- * @brief  Constructs a new UpdateGeoMatchSetRequest object.
+ * Constructs a UpdateGeoMatchSetRequest object.
  */
 UpdateGeoMatchSetRequest::UpdateGeoMatchSetRequest()
     : WAFRequest(new UpdateGeoMatchSetRequestPrivate(WAFRequest::UpdateGeoMatchSetAction, this))
@@ -71,14 +68,9 @@ bool UpdateGeoMatchSetRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateGeoMatchSetResponse object.
+ * Returns a UpdateGeoMatchSetResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateGeoMatchSetResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WAFClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateGeoMatchSetRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * UpdateGeoMatchSetRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::WAF::UpdateGeoMatchSetRequestPrivate
+ * \brief The UpdateGeoMatchSetRequestPrivate class provides private implementation for UpdateGeoMatchSetRequest.
+ * \internal
  *
- * @class  UpdateGeoMatchSetRequestPrivate
- *
- * @brief  Private implementation for UpdateGeoMatchSetRequest.
+ * \inmodule QtAwsWAF
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateGeoMatchSetRequestPrivate object.
- *
- * @param  action  WAF action being performed.
- * @param  q       Pointer to this object's public UpdateGeoMatchSetRequest instance.
+ * Constructs a UpdateGeoMatchSetRequestPrivate object for WAF \a action with,
+ * public implementation \a q.
  */
 UpdateGeoMatchSetRequestPrivate::UpdateGeoMatchSetRequestPrivate(
     const WAFRequest::Action action, UpdateGeoMatchSetRequest * const q)
@@ -109,15 +98,10 @@ UpdateGeoMatchSetRequestPrivate::UpdateGeoMatchSetRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateGeoMatchSetRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateGeoMatchSetRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateGeoMatchSetRequest instance.
  */
 UpdateGeoMatchSetRequestPrivate::UpdateGeoMatchSetRequestPrivate(
     const UpdateGeoMatchSetRequestPrivate &other, UpdateGeoMatchSetRequest * const q)

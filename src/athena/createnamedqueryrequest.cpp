@@ -27,10 +27,9 @@ namespace Athena {
 
 /*!
  * \class QtAws::Athena::CreateNamedQueryRequest
- *
  * \brief The CreateNamedQueryRequest class provides an interface for Athena CreateNamedQuery requests.
  *
- * \ingroup Athena
+ * \inmodule QtAwsAthena
  *
  *  Amazon Athena is an interactive query service that lets you use standard SQL to analyze data directly in Amazon S3. You
  *  can point Athena at your data in Amazon S3 and run ad-hoc queries and get results in seconds. Athena is serverless, so
@@ -49,9 +48,7 @@ namespace Athena {
  */
 
 /*!
- * @brief  Constructs a new CreateNamedQueryRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateNamedQueryRequest::CreateNamedQueryRequest(const CreateNamedQueryRequest &other)
     : AthenaRequest(new CreateNamedQueryRequestPrivate(*other.d_func(), this))
@@ -60,7 +57,7 @@ CreateNamedQueryRequest::CreateNamedQueryRequest(const CreateNamedQueryRequest &
 }
 
 /*!
- * @brief  Constructs a new CreateNamedQueryRequest object.
+ * Constructs a CreateNamedQueryRequest object.
  */
 CreateNamedQueryRequest::CreateNamedQueryRequest()
     : AthenaRequest(new CreateNamedQueryRequestPrivate(AthenaRequest::CreateNamedQueryAction, this))
@@ -78,14 +75,9 @@ bool CreateNamedQueryRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateNamedQueryResponse object.
+ * Returns a CreateNamedQueryResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateNamedQueryResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AthenaClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateNamedQueryRequest::response(QNetworkReply * const reply) const
 {
@@ -93,20 +85,17 @@ QtAws::Core::AwsAbstractResponse * CreateNamedQueryRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::Athena::CreateNamedQueryRequestPrivate
+ * \brief The CreateNamedQueryRequestPrivate class provides private implementation for CreateNamedQueryRequest.
+ * \internal
  *
- * @class  CreateNamedQueryRequestPrivate
- *
- * @brief  Private implementation for CreateNamedQueryRequest.
+ * \inmodule QtAwsAthena
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateNamedQueryRequestPrivate object.
- *
- * @param  action  Athena action being performed.
- * @param  q       Pointer to this object's public CreateNamedQueryRequest instance.
+ * Constructs a CreateNamedQueryRequestPrivate object for Athena \a action with,
+ * public implementation \a q.
  */
 CreateNamedQueryRequestPrivate::CreateNamedQueryRequestPrivate(
     const AthenaRequest::Action action, CreateNamedQueryRequest * const q)
@@ -116,15 +105,10 @@ CreateNamedQueryRequestPrivate::CreateNamedQueryRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateNamedQueryRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateNamedQueryRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateNamedQueryRequest instance.
  */
 CreateNamedQueryRequestPrivate::CreateNamedQueryRequestPrivate(
     const CreateNamedQueryRequestPrivate &other, CreateNamedQueryRequest * const q)

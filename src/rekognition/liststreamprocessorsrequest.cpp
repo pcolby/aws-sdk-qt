@@ -27,10 +27,9 @@ namespace Rekognition {
 
 /*!
  * \class QtAws::Rekognition::ListStreamProcessorsRequest
- *
  * \brief The ListStreamProcessorsRequest class provides an interface for Rekognition ListStreamProcessors requests.
  *
- * \ingroup Rekognition
+ * \inmodule QtAwsRekognition
  *
  *  This is the Amazon Rekognition API
  *
@@ -38,9 +37,7 @@ namespace Rekognition {
  */
 
 /*!
- * @brief  Constructs a new ListStreamProcessorsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListStreamProcessorsRequest::ListStreamProcessorsRequest(const ListStreamProcessorsRequest &other)
     : RekognitionRequest(new ListStreamProcessorsRequestPrivate(*other.d_func(), this))
@@ -49,7 +46,7 @@ ListStreamProcessorsRequest::ListStreamProcessorsRequest(const ListStreamProcess
 }
 
 /*!
- * @brief  Constructs a new ListStreamProcessorsRequest object.
+ * Constructs a ListStreamProcessorsRequest object.
  */
 ListStreamProcessorsRequest::ListStreamProcessorsRequest()
     : RekognitionRequest(new ListStreamProcessorsRequestPrivate(RekognitionRequest::ListStreamProcessorsAction, this))
@@ -67,14 +64,9 @@ bool ListStreamProcessorsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListStreamProcessorsResponse object.
+ * Returns a ListStreamProcessorsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListStreamProcessorsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RekognitionClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListStreamProcessorsRequest::response(QNetworkReply * const reply) const
 {
@@ -82,20 +74,17 @@ QtAws::Core::AwsAbstractResponse * ListStreamProcessorsRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::Rekognition::ListStreamProcessorsRequestPrivate
+ * \brief The ListStreamProcessorsRequestPrivate class provides private implementation for ListStreamProcessorsRequest.
+ * \internal
  *
- * @class  ListStreamProcessorsRequestPrivate
- *
- * @brief  Private implementation for ListStreamProcessorsRequest.
+ * \inmodule QtAwsRekognition
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListStreamProcessorsRequestPrivate object.
- *
- * @param  action  Rekognition action being performed.
- * @param  q       Pointer to this object's public ListStreamProcessorsRequest instance.
+ * Constructs a ListStreamProcessorsRequestPrivate object for Rekognition \a action with,
+ * public implementation \a q.
  */
 ListStreamProcessorsRequestPrivate::ListStreamProcessorsRequestPrivate(
     const RekognitionRequest::Action action, ListStreamProcessorsRequest * const q)
@@ -105,15 +94,10 @@ ListStreamProcessorsRequestPrivate::ListStreamProcessorsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListStreamProcessorsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListStreamProcessorsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListStreamProcessorsRequest instance.
  */
 ListStreamProcessorsRequestPrivate::ListStreamProcessorsRequestPrivate(
     const ListStreamProcessorsRequestPrivate &other, ListStreamProcessorsRequest * const q)

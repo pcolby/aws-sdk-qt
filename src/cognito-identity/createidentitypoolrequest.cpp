@@ -27,10 +27,9 @@ namespace CognitoIdentity {
 
 /*!
  * \class QtAws::CognitoIdentity::CreateIdentityPoolRequest
- *
  * \brief The CreateIdentityPoolRequest class provides an interface for CognitoIdentity CreateIdentityPool requests.
  *
- * \ingroup CognitoIdentity
+ * \inmodule QtAwsCognitoIdentity
  *
  *  <fullname>Amazon Cognito</fullname>
  * 
@@ -75,9 +74,7 @@ namespace CognitoIdentity {
  */
 
 /*!
- * @brief  Constructs a new CreateIdentityPoolRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateIdentityPoolRequest::CreateIdentityPoolRequest(const CreateIdentityPoolRequest &other)
     : CognitoIdentityRequest(new CreateIdentityPoolRequestPrivate(*other.d_func(), this))
@@ -86,7 +83,7 @@ CreateIdentityPoolRequest::CreateIdentityPoolRequest(const CreateIdentityPoolReq
 }
 
 /*!
- * @brief  Constructs a new CreateIdentityPoolRequest object.
+ * Constructs a CreateIdentityPoolRequest object.
  */
 CreateIdentityPoolRequest::CreateIdentityPoolRequest()
     : CognitoIdentityRequest(new CreateIdentityPoolRequestPrivate(CognitoIdentityRequest::CreateIdentityPoolAction, this))
@@ -104,14 +101,9 @@ bool CreateIdentityPoolRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateIdentityPoolResponse object.
+ * Returns a CreateIdentityPoolResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateIdentityPoolResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CognitoIdentityClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateIdentityPoolRequest::response(QNetworkReply * const reply) const
 {
@@ -119,20 +111,17 @@ QtAws::Core::AwsAbstractResponse * CreateIdentityPoolRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::CognitoIdentity::CreateIdentityPoolRequestPrivate
+ * \brief The CreateIdentityPoolRequestPrivate class provides private implementation for CreateIdentityPoolRequest.
+ * \internal
  *
- * @class  CreateIdentityPoolRequestPrivate
- *
- * @brief  Private implementation for CreateIdentityPoolRequest.
+ * \inmodule QtAwsCognitoIdentity
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateIdentityPoolRequestPrivate object.
- *
- * @param  action  CognitoIdentity action being performed.
- * @param  q       Pointer to this object's public CreateIdentityPoolRequest instance.
+ * Constructs a CreateIdentityPoolRequestPrivate object for CognitoIdentity \a action with,
+ * public implementation \a q.
  */
 CreateIdentityPoolRequestPrivate::CreateIdentityPoolRequestPrivate(
     const CognitoIdentityRequest::Action action, CreateIdentityPoolRequest * const q)
@@ -142,15 +131,10 @@ CreateIdentityPoolRequestPrivate::CreateIdentityPoolRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateIdentityPoolRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateIdentityPoolRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateIdentityPoolRequest instance.
  */
 CreateIdentityPoolRequestPrivate::CreateIdentityPoolRequestPrivate(
     const CreateIdentityPoolRequestPrivate &other, CreateIdentityPoolRequest * const q)

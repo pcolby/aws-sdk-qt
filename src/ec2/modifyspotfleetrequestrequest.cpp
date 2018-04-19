@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::ModifySpotFleetRequestRequest
- *
  * \brief The ModifySpotFleetRequestRequest class provides an interface for EC2 ModifySpotFleetRequest requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new ModifySpotFleetRequestRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ModifySpotFleetRequestRequest::ModifySpotFleetRequestRequest(const ModifySpotFleetRequestRequest &other)
     : EC2Request(new ModifySpotFleetRequestRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ ModifySpotFleetRequestRequest::ModifySpotFleetRequestRequest(const ModifySpotFle
 }
 
 /*!
- * @brief  Constructs a new ModifySpotFleetRequestRequest object.
+ * Constructs a ModifySpotFleetRequestRequest object.
  */
 ModifySpotFleetRequestRequest::ModifySpotFleetRequestRequest()
     : EC2Request(new ModifySpotFleetRequestRequestPrivate(EC2Request::ModifySpotFleetRequestAction, this))
@@ -70,14 +67,9 @@ bool ModifySpotFleetRequestRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ModifySpotFleetRequestResponse object.
+ * Returns a ModifySpotFleetRequestResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ModifySpotFleetRequestResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ModifySpotFleetRequestRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * ModifySpotFleetRequestRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::ModifySpotFleetRequestRequestPrivate
+ * \brief The ModifySpotFleetRequestRequestPrivate class provides private implementation for ModifySpotFleetRequestRequest.
+ * \internal
  *
- * @class  ModifySpotFleetRequestRequestPrivate
- *
- * @brief  Private implementation for ModifySpotFleetRequestRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ModifySpotFleetRequestRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public ModifySpotFleetRequestRequest instance.
+ * Constructs a ModifySpotFleetRequestRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 ModifySpotFleetRequestRequestPrivate::ModifySpotFleetRequestRequestPrivate(
     const EC2Request::Action action, ModifySpotFleetRequestRequest * const q)
@@ -108,15 +97,10 @@ ModifySpotFleetRequestRequestPrivate::ModifySpotFleetRequestRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ModifySpotFleetRequestRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ModifySpotFleetRequestRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ModifySpotFleetRequestRequest instance.
  */
 ModifySpotFleetRequestRequestPrivate::ModifySpotFleetRequestRequestPrivate(
     const ModifySpotFleetRequestRequestPrivate &other, ModifySpotFleetRequestRequest * const q)

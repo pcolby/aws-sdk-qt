@@ -27,10 +27,9 @@ namespace Batch {
 
 /*!
  * \class QtAws::Batch::DescribeJobQueuesRequest
- *
  * \brief The DescribeJobQueuesRequest class provides an interface for Batch DescribeJobQueues requests.
  *
- * \ingroup Batch
+ * \inmodule QtAwsBatch
  *
  *  AWS Batch enables you to run batch computing workloads on the AWS Cloud. Batch computing is a common way for developers,
  *  scientists, and engineers to access large amounts of compute resources, and AWS Batch removes the undifferentiated heavy
@@ -51,9 +50,7 @@ namespace Batch {
  */
 
 /*!
- * @brief  Constructs a new DescribeJobQueuesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeJobQueuesRequest::DescribeJobQueuesRequest(const DescribeJobQueuesRequest &other)
     : BatchRequest(new DescribeJobQueuesRequestPrivate(*other.d_func(), this))
@@ -62,7 +59,7 @@ DescribeJobQueuesRequest::DescribeJobQueuesRequest(const DescribeJobQueuesReques
 }
 
 /*!
- * @brief  Constructs a new DescribeJobQueuesRequest object.
+ * Constructs a DescribeJobQueuesRequest object.
  */
 DescribeJobQueuesRequest::DescribeJobQueuesRequest()
     : BatchRequest(new DescribeJobQueuesRequestPrivate(BatchRequest::DescribeJobQueuesAction, this))
@@ -80,14 +77,9 @@ bool DescribeJobQueuesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeJobQueuesResponse object.
+ * Returns a DescribeJobQueuesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeJobQueuesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  BatchClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeJobQueuesRequest::response(QNetworkReply * const reply) const
 {
@@ -95,20 +87,17 @@ QtAws::Core::AwsAbstractResponse * DescribeJobQueuesRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::Batch::DescribeJobQueuesRequestPrivate
+ * \brief The DescribeJobQueuesRequestPrivate class provides private implementation for DescribeJobQueuesRequest.
+ * \internal
  *
- * @class  DescribeJobQueuesRequestPrivate
- *
- * @brief  Private implementation for DescribeJobQueuesRequest.
+ * \inmodule QtAwsBatch
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeJobQueuesRequestPrivate object.
- *
- * @param  action  Batch action being performed.
- * @param  q       Pointer to this object's public DescribeJobQueuesRequest instance.
+ * Constructs a DescribeJobQueuesRequestPrivate object for Batch \a action with,
+ * public implementation \a q.
  */
 DescribeJobQueuesRequestPrivate::DescribeJobQueuesRequestPrivate(
     const BatchRequest::Action action, DescribeJobQueuesRequest * const q)
@@ -118,15 +107,10 @@ DescribeJobQueuesRequestPrivate::DescribeJobQueuesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeJobQueuesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeJobQueuesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeJobQueuesRequest instance.
  */
 DescribeJobQueuesRequestPrivate::DescribeJobQueuesRequestPrivate(
     const DescribeJobQueuesRequestPrivate &other, DescribeJobQueuesRequest * const q)

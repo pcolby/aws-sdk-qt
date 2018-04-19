@@ -27,10 +27,9 @@ namespace ServiceDiscovery {
 
 /*!
  * \class QtAws::ServiceDiscovery::UpdateServiceRequest
- *
  * \brief The UpdateServiceRequest class provides an interface for ServiceDiscovery UpdateService requests.
  *
- * \ingroup ServiceDiscovery
+ * \inmodule QtAwsServiceDiscovery
  *
  *  Amazon Route 53 auto naming lets you configure public or private namespaces that your microservice applications run in.
  *  When instances of the service become available, you can call the auto naming API to register the instance, and Route 53
@@ -41,9 +40,7 @@ namespace ServiceDiscovery {
  */
 
 /*!
- * @brief  Constructs a new UpdateServiceRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateServiceRequest::UpdateServiceRequest(const UpdateServiceRequest &other)
     : ServiceDiscoveryRequest(new UpdateServiceRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ UpdateServiceRequest::UpdateServiceRequest(const UpdateServiceRequest &other)
 }
 
 /*!
- * @brief  Constructs a new UpdateServiceRequest object.
+ * Constructs a UpdateServiceRequest object.
  */
 UpdateServiceRequest::UpdateServiceRequest()
     : ServiceDiscoveryRequest(new UpdateServiceRequestPrivate(ServiceDiscoveryRequest::UpdateServiceAction, this))
@@ -70,14 +67,9 @@ bool UpdateServiceRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateServiceResponse object.
+ * Returns a UpdateServiceResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateServiceResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ServiceDiscoveryClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateServiceRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * UpdateServiceRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::ServiceDiscovery::UpdateServiceRequestPrivate
+ * \brief The UpdateServiceRequestPrivate class provides private implementation for UpdateServiceRequest.
+ * \internal
  *
- * @class  UpdateServiceRequestPrivate
- *
- * @brief  Private implementation for UpdateServiceRequest.
+ * \inmodule QtAwsServiceDiscovery
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateServiceRequestPrivate object.
- *
- * @param  action  ServiceDiscovery action being performed.
- * @param  q       Pointer to this object's public UpdateServiceRequest instance.
+ * Constructs a UpdateServiceRequestPrivate object for ServiceDiscovery \a action with,
+ * public implementation \a q.
  */
 UpdateServiceRequestPrivate::UpdateServiceRequestPrivate(
     const ServiceDiscoveryRequest::Action action, UpdateServiceRequest * const q)
@@ -108,15 +97,10 @@ UpdateServiceRequestPrivate::UpdateServiceRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateServiceRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateServiceRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateServiceRequest instance.
  */
 UpdateServiceRequestPrivate::UpdateServiceRequestPrivate(
     const UpdateServiceRequestPrivate &other, UpdateServiceRequest * const q)

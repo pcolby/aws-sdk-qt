@@ -27,10 +27,9 @@ namespace SES {
 
 /*!
  * \class QtAws::SES::DeleteConfigurationSetRequest
- *
  * \brief The DeleteConfigurationSetRequest class provides an interface for SES DeleteConfigurationSet requests.
  *
- * \ingroup SES
+ * \inmodule QtAwsSES
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -48,9 +47,7 @@ namespace SES {
  */
 
 /*!
- * @brief  Constructs a new DeleteConfigurationSetRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteConfigurationSetRequest::DeleteConfigurationSetRequest(const DeleteConfigurationSetRequest &other)
     : SESRequest(new DeleteConfigurationSetRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ DeleteConfigurationSetRequest::DeleteConfigurationSetRequest(const DeleteConfigu
 }
 
 /*!
- * @brief  Constructs a new DeleteConfigurationSetRequest object.
+ * Constructs a DeleteConfigurationSetRequest object.
  */
 DeleteConfigurationSetRequest::DeleteConfigurationSetRequest()
     : SESRequest(new DeleteConfigurationSetRequestPrivate(SESRequest::DeleteConfigurationSetAction, this))
@@ -77,14 +74,9 @@ bool DeleteConfigurationSetRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteConfigurationSetResponse object.
+ * Returns a DeleteConfigurationSetResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteConfigurationSetResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SESClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteConfigurationSetRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * DeleteConfigurationSetRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::SES::DeleteConfigurationSetRequestPrivate
+ * \brief The DeleteConfigurationSetRequestPrivate class provides private implementation for DeleteConfigurationSetRequest.
+ * \internal
  *
- * @class  DeleteConfigurationSetRequestPrivate
- *
- * @brief  Private implementation for DeleteConfigurationSetRequest.
+ * \inmodule QtAwsSES
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteConfigurationSetRequestPrivate object.
- *
- * @param  action  SES action being performed.
- * @param  q       Pointer to this object's public DeleteConfigurationSetRequest instance.
+ * Constructs a DeleteConfigurationSetRequestPrivate object for SES \a action with,
+ * public implementation \a q.
  */
 DeleteConfigurationSetRequestPrivate::DeleteConfigurationSetRequestPrivate(
     const SESRequest::Action action, DeleteConfigurationSetRequest * const q)
@@ -115,15 +104,10 @@ DeleteConfigurationSetRequestPrivate::DeleteConfigurationSetRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteConfigurationSetRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteConfigurationSetRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteConfigurationSetRequest instance.
  */
 DeleteConfigurationSetRequestPrivate::DeleteConfigurationSetRequestPrivate(
     const DeleteConfigurationSetRequestPrivate &other, DeleteConfigurationSetRequest * const q)

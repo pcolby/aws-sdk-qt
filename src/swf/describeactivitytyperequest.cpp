@@ -27,10 +27,9 @@ namespace SWF {
 
 /*!
  * \class QtAws::SWF::DescribeActivityTypeRequest
- *
  * \brief The DescribeActivityTypeRequest class provides an interface for SWF DescribeActivityType requests.
  *
- * \ingroup SWF
+ * \inmodule QtAwsSWF
  *
  *  <fullname>Amazon Simple Workflow Service</fullname>
  * 
@@ -53,9 +52,7 @@ namespace SWF {
  */
 
 /*!
- * @brief  Constructs a new DescribeActivityTypeRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeActivityTypeRequest::DescribeActivityTypeRequest(const DescribeActivityTypeRequest &other)
     : SWFRequest(new DescribeActivityTypeRequestPrivate(*other.d_func(), this))
@@ -64,7 +61,7 @@ DescribeActivityTypeRequest::DescribeActivityTypeRequest(const DescribeActivityT
 }
 
 /*!
- * @brief  Constructs a new DescribeActivityTypeRequest object.
+ * Constructs a DescribeActivityTypeRequest object.
  */
 DescribeActivityTypeRequest::DescribeActivityTypeRequest()
     : SWFRequest(new DescribeActivityTypeRequestPrivate(SWFRequest::DescribeActivityTypeAction, this))
@@ -82,14 +79,9 @@ bool DescribeActivityTypeRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeActivityTypeResponse object.
+ * Returns a DescribeActivityTypeResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeActivityTypeResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SWFClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeActivityTypeRequest::response(QNetworkReply * const reply) const
 {
@@ -97,20 +89,17 @@ QtAws::Core::AwsAbstractResponse * DescribeActivityTypeRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::SWF::DescribeActivityTypeRequestPrivate
+ * \brief The DescribeActivityTypeRequestPrivate class provides private implementation for DescribeActivityTypeRequest.
+ * \internal
  *
- * @class  DescribeActivityTypeRequestPrivate
- *
- * @brief  Private implementation for DescribeActivityTypeRequest.
+ * \inmodule QtAwsSWF
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeActivityTypeRequestPrivate object.
- *
- * @param  action  SWF action being performed.
- * @param  q       Pointer to this object's public DescribeActivityTypeRequest instance.
+ * Constructs a DescribeActivityTypeRequestPrivate object for SWF \a action with,
+ * public implementation \a q.
  */
 DescribeActivityTypeRequestPrivate::DescribeActivityTypeRequestPrivate(
     const SWFRequest::Action action, DescribeActivityTypeRequest * const q)
@@ -120,15 +109,10 @@ DescribeActivityTypeRequestPrivate::DescribeActivityTypeRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeActivityTypeRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeActivityTypeRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeActivityTypeRequest instance.
  */
 DescribeActivityTypeRequestPrivate::DescribeActivityTypeRequestPrivate(
     const DescribeActivityTypeRequestPrivate &other, DescribeActivityTypeRequest * const q)

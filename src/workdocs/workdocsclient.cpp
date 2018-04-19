@@ -108,6 +108,9 @@
 /*!
  * \namespace QtAws::WorkDocs
  * \brief The QtAws::WorkDocs contains stuff...
+ *
+ * \inmodule QtAwsWorkDocs
+ *
  * @todo Move this to a separate template file.
  */
 
@@ -186,7 +189,7 @@ WorkDocsClient::WorkDocsClient(
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * \a  AwsEndpoint::getEndpoint()
+ * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
 WorkDocsClient::WorkDocsClient(
     const QUrl &endpoint,

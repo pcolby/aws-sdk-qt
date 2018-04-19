@@ -27,10 +27,9 @@ namespace MQ {
 
 /*!
  * \class QtAws::MQ::CreateBrokerRequest
- *
  * \brief The CreateBrokerRequest class provides an interface for MQ CreateBroker requests.
  *
- * \ingroup MQ
+ * \inmodule QtAwsMQ
  *
  *  Amazon MQ is a managed message broker service for Apache ActiveMQ that makes it easy to set up and operate message
  *  brokers in the cloud. A message broker allows software applications and components to communicate using various
@@ -39,9 +38,7 @@ namespace MQ {
  */
 
 /*!
- * @brief  Constructs a new CreateBrokerRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateBrokerRequest::CreateBrokerRequest(const CreateBrokerRequest &other)
     : MQRequest(new CreateBrokerRequestPrivate(*other.d_func(), this))
@@ -50,7 +47,7 @@ CreateBrokerRequest::CreateBrokerRequest(const CreateBrokerRequest &other)
 }
 
 /*!
- * @brief  Constructs a new CreateBrokerRequest object.
+ * Constructs a CreateBrokerRequest object.
  */
 CreateBrokerRequest::CreateBrokerRequest()
     : MQRequest(new CreateBrokerRequestPrivate(MQRequest::CreateBrokerAction, this))
@@ -68,14 +65,9 @@ bool CreateBrokerRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateBrokerResponse object.
+ * Returns a CreateBrokerResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateBrokerResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MQClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateBrokerRequest::response(QNetworkReply * const reply) const
 {
@@ -83,20 +75,17 @@ QtAws::Core::AwsAbstractResponse * CreateBrokerRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::MQ::CreateBrokerRequestPrivate
+ * \brief The CreateBrokerRequestPrivate class provides private implementation for CreateBrokerRequest.
+ * \internal
  *
- * @class  CreateBrokerRequestPrivate
- *
- * @brief  Private implementation for CreateBrokerRequest.
+ * \inmodule QtAwsMQ
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateBrokerRequestPrivate object.
- *
- * @param  action  MQ action being performed.
- * @param  q       Pointer to this object's public CreateBrokerRequest instance.
+ * Constructs a CreateBrokerRequestPrivate object for MQ \a action with,
+ * public implementation \a q.
  */
 CreateBrokerRequestPrivate::CreateBrokerRequestPrivate(
     const MQRequest::Action action, CreateBrokerRequest * const q)
@@ -106,15 +95,10 @@ CreateBrokerRequestPrivate::CreateBrokerRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateBrokerRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateBrokerRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateBrokerRequest instance.
  */
 CreateBrokerRequestPrivate::CreateBrokerRequestPrivate(
     const CreateBrokerRequestPrivate &other, CreateBrokerRequest * const q)

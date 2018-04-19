@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DescribePrefixListsRequest
- *
  * \brief The DescribePrefixListsRequest class provides an interface for EC2 DescribePrefixLists requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DescribePrefixListsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribePrefixListsRequest::DescribePrefixListsRequest(const DescribePrefixListsRequest &other)
     : EC2Request(new DescribePrefixListsRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ DescribePrefixListsRequest::DescribePrefixListsRequest(const DescribePrefixLists
 }
 
 /*!
- * @brief  Constructs a new DescribePrefixListsRequest object.
+ * Constructs a DescribePrefixListsRequest object.
  */
 DescribePrefixListsRequest::DescribePrefixListsRequest()
     : EC2Request(new DescribePrefixListsRequestPrivate(EC2Request::DescribePrefixListsAction, this))
@@ -70,14 +67,9 @@ bool DescribePrefixListsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribePrefixListsResponse object.
+ * Returns a DescribePrefixListsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribePrefixListsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribePrefixListsRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * DescribePrefixListsRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::DescribePrefixListsRequestPrivate
+ * \brief The DescribePrefixListsRequestPrivate class provides private implementation for DescribePrefixListsRequest.
+ * \internal
  *
- * @class  DescribePrefixListsRequestPrivate
- *
- * @brief  Private implementation for DescribePrefixListsRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribePrefixListsRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public DescribePrefixListsRequest instance.
+ * Constructs a DescribePrefixListsRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 DescribePrefixListsRequestPrivate::DescribePrefixListsRequestPrivate(
     const EC2Request::Action action, DescribePrefixListsRequest * const q)
@@ -108,15 +97,10 @@ DescribePrefixListsRequestPrivate::DescribePrefixListsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribePrefixListsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribePrefixListsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribePrefixListsRequest instance.
  */
 DescribePrefixListsRequestPrivate::DescribePrefixListsRequestPrivate(
     const DescribePrefixListsRequestPrivate &other, DescribePrefixListsRequest * const q)

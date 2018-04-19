@@ -27,10 +27,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::ResetServiceSpecificCredentialRequest
- *
  * \brief The ResetServiceSpecificCredentialRequest class provides an interface for IAM ResetServiceSpecificCredential requests.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -102,9 +101,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new ResetServiceSpecificCredentialRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ResetServiceSpecificCredentialRequest::ResetServiceSpecificCredentialRequest(const ResetServiceSpecificCredentialRequest &other)
     : IAMRequest(new ResetServiceSpecificCredentialRequestPrivate(*other.d_func(), this))
@@ -113,7 +110,7 @@ ResetServiceSpecificCredentialRequest::ResetServiceSpecificCredentialRequest(con
 }
 
 /*!
- * @brief  Constructs a new ResetServiceSpecificCredentialRequest object.
+ * Constructs a ResetServiceSpecificCredentialRequest object.
  */
 ResetServiceSpecificCredentialRequest::ResetServiceSpecificCredentialRequest()
     : IAMRequest(new ResetServiceSpecificCredentialRequestPrivate(IAMRequest::ResetServiceSpecificCredentialAction, this))
@@ -131,14 +128,9 @@ bool ResetServiceSpecificCredentialRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ResetServiceSpecificCredentialResponse object.
+ * Returns a ResetServiceSpecificCredentialResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ResetServiceSpecificCredentialResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IAMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ResetServiceSpecificCredentialRequest::response(QNetworkReply * const reply) const
 {
@@ -146,20 +138,17 @@ QtAws::Core::AwsAbstractResponse * ResetServiceSpecificCredentialRequest::respon
 }
 
 /*!
- * @internal
+ * \class QtAws::IAM::ResetServiceSpecificCredentialRequestPrivate
+ * \brief The ResetServiceSpecificCredentialRequestPrivate class provides private implementation for ResetServiceSpecificCredentialRequest.
+ * \internal
  *
- * @class  ResetServiceSpecificCredentialRequestPrivate
- *
- * @brief  Private implementation for ResetServiceSpecificCredentialRequest.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ResetServiceSpecificCredentialRequestPrivate object.
- *
- * @param  action  IAM action being performed.
- * @param  q       Pointer to this object's public ResetServiceSpecificCredentialRequest instance.
+ * Constructs a ResetServiceSpecificCredentialRequestPrivate object for IAM \a action with,
+ * public implementation \a q.
  */
 ResetServiceSpecificCredentialRequestPrivate::ResetServiceSpecificCredentialRequestPrivate(
     const IAMRequest::Action action, ResetServiceSpecificCredentialRequest * const q)
@@ -169,15 +158,10 @@ ResetServiceSpecificCredentialRequestPrivate::ResetServiceSpecificCredentialRequ
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ResetServiceSpecificCredentialRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ResetServiceSpecificCredentialRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ResetServiceSpecificCredentialRequest instance.
  */
 ResetServiceSpecificCredentialRequestPrivate::ResetServiceSpecificCredentialRequestPrivate(
     const ResetServiceSpecificCredentialRequestPrivate &other, ResetServiceSpecificCredentialRequest * const q)

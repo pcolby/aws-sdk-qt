@@ -27,10 +27,9 @@ namespace CognitoIdentityProvider {
 
 /*!
  * \class QtAws::CognitoIdentityProvider::RespondToAuthChallengeRequest
- *
  * \brief The RespondToAuthChallengeRequest class provides an interface for CognitoIdentityProvider RespondToAuthChallenge requests.
  *
- * \ingroup CognitoIdentityProvider
+ * \inmodule QtAwsCognitoIdentityProvider
  *
  *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
  *  authenticate a user to obtain tokens related to user identity and access
@@ -47,9 +46,7 @@ namespace CognitoIdentityProvider {
  */
 
 /*!
- * @brief  Constructs a new RespondToAuthChallengeRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 RespondToAuthChallengeRequest::RespondToAuthChallengeRequest(const RespondToAuthChallengeRequest &other)
     : CognitoIdentityProviderRequest(new RespondToAuthChallengeRequestPrivate(*other.d_func(), this))
@@ -58,7 +55,7 @@ RespondToAuthChallengeRequest::RespondToAuthChallengeRequest(const RespondToAuth
 }
 
 /*!
- * @brief  Constructs a new RespondToAuthChallengeRequest object.
+ * Constructs a RespondToAuthChallengeRequest object.
  */
 RespondToAuthChallengeRequest::RespondToAuthChallengeRequest()
     : CognitoIdentityProviderRequest(new RespondToAuthChallengeRequestPrivate(CognitoIdentityProviderRequest::RespondToAuthChallengeAction, this))
@@ -76,14 +73,9 @@ bool RespondToAuthChallengeRequest::isValid() const
 
 
 /*!
- * @brief  Construct an RespondToAuthChallengeResponse object.
+ * Returns a RespondToAuthChallengeResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An RespondToAuthChallengeResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CognitoIdentityProviderClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * RespondToAuthChallengeRequest::response(QNetworkReply * const reply) const
 {
@@ -91,20 +83,17 @@ QtAws::Core::AwsAbstractResponse * RespondToAuthChallengeRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::CognitoIdentityProvider::RespondToAuthChallengeRequestPrivate
+ * \brief The RespondToAuthChallengeRequestPrivate class provides private implementation for RespondToAuthChallengeRequest.
+ * \internal
  *
- * @class  RespondToAuthChallengeRequestPrivate
- *
- * @brief  Private implementation for RespondToAuthChallengeRequest.
+ * \inmodule QtAwsCognitoIdentityProvider
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new RespondToAuthChallengeRequestPrivate object.
- *
- * @param  action  CognitoIdentityProvider action being performed.
- * @param  q       Pointer to this object's public RespondToAuthChallengeRequest instance.
+ * Constructs a RespondToAuthChallengeRequestPrivate object for CognitoIdentityProvider \a action with,
+ * public implementation \a q.
  */
 RespondToAuthChallengeRequestPrivate::RespondToAuthChallengeRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, RespondToAuthChallengeRequest * const q)
@@ -114,15 +103,10 @@ RespondToAuthChallengeRequestPrivate::RespondToAuthChallengeRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RespondToAuthChallengeRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the RespondToAuthChallengeRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public RespondToAuthChallengeRequest instance.
  */
 RespondToAuthChallengeRequestPrivate::RespondToAuthChallengeRequestPrivate(
     const RespondToAuthChallengeRequestPrivate &other, RespondToAuthChallengeRequest * const q)

@@ -27,10 +27,9 @@ namespace CodeStar {
 
 /*!
  * \class QtAws::CodeStar::AssociateTeamMemberRequest
- *
  * \brief The AssociateTeamMemberRequest class provides an interface for CodeStar AssociateTeamMember requests.
  *
- * \ingroup CodeStar
+ * \inmodule QtAwsCodeStar
  *
  *  <fullname>AWS CodeStar</fullname>
  * 
@@ -125,9 +124,7 @@ namespace CodeStar {
  */
 
 /*!
- * @brief  Constructs a new AssociateTeamMemberRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AssociateTeamMemberRequest::AssociateTeamMemberRequest(const AssociateTeamMemberRequest &other)
     : CodeStarRequest(new AssociateTeamMemberRequestPrivate(*other.d_func(), this))
@@ -136,7 +133,7 @@ AssociateTeamMemberRequest::AssociateTeamMemberRequest(const AssociateTeamMember
 }
 
 /*!
- * @brief  Constructs a new AssociateTeamMemberRequest object.
+ * Constructs a AssociateTeamMemberRequest object.
  */
 AssociateTeamMemberRequest::AssociateTeamMemberRequest()
     : CodeStarRequest(new AssociateTeamMemberRequestPrivate(CodeStarRequest::AssociateTeamMemberAction, this))
@@ -154,14 +151,9 @@ bool AssociateTeamMemberRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AssociateTeamMemberResponse object.
+ * Returns a AssociateTeamMemberResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AssociateTeamMemberResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CodeStarClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AssociateTeamMemberRequest::response(QNetworkReply * const reply) const
 {
@@ -169,20 +161,17 @@ QtAws::Core::AwsAbstractResponse * AssociateTeamMemberRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::CodeStar::AssociateTeamMemberRequestPrivate
+ * \brief The AssociateTeamMemberRequestPrivate class provides private implementation for AssociateTeamMemberRequest.
+ * \internal
  *
- * @class  AssociateTeamMemberRequestPrivate
- *
- * @brief  Private implementation for AssociateTeamMemberRequest.
+ * \inmodule QtAwsCodeStar
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AssociateTeamMemberRequestPrivate object.
- *
- * @param  action  CodeStar action being performed.
- * @param  q       Pointer to this object's public AssociateTeamMemberRequest instance.
+ * Constructs a AssociateTeamMemberRequestPrivate object for CodeStar \a action with,
+ * public implementation \a q.
  */
 AssociateTeamMemberRequestPrivate::AssociateTeamMemberRequestPrivate(
     const CodeStarRequest::Action action, AssociateTeamMemberRequest * const q)
@@ -192,15 +181,10 @@ AssociateTeamMemberRequestPrivate::AssociateTeamMemberRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AssociateTeamMemberRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AssociateTeamMemberRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AssociateTeamMemberRequest instance.
  */
 AssociateTeamMemberRequestPrivate::AssociateTeamMemberRequestPrivate(
     const AssociateTeamMemberRequestPrivate &other, AssociateTeamMemberRequest * const q)

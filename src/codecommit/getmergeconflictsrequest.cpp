@@ -27,10 +27,9 @@ namespace CodeCommit {
 
 /*!
  * \class QtAws::CodeCommit::GetMergeConflictsRequest
- *
  * \brief The GetMergeConflictsRequest class provides an interface for CodeCommit GetMergeConflicts requests.
  *
- * \ingroup CodeCommit
+ * \inmodule QtAwsCodeCommit
  *
  *  <fullname>AWS CodeCommit</fullname>
  * 
@@ -227,9 +226,7 @@ namespace CodeCommit {
  */
 
 /*!
- * @brief  Constructs a new GetMergeConflictsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetMergeConflictsRequest::GetMergeConflictsRequest(const GetMergeConflictsRequest &other)
     : CodeCommitRequest(new GetMergeConflictsRequestPrivate(*other.d_func(), this))
@@ -238,7 +235,7 @@ GetMergeConflictsRequest::GetMergeConflictsRequest(const GetMergeConflictsReques
 }
 
 /*!
- * @brief  Constructs a new GetMergeConflictsRequest object.
+ * Constructs a GetMergeConflictsRequest object.
  */
 GetMergeConflictsRequest::GetMergeConflictsRequest()
     : CodeCommitRequest(new GetMergeConflictsRequestPrivate(CodeCommitRequest::GetMergeConflictsAction, this))
@@ -256,14 +253,9 @@ bool GetMergeConflictsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetMergeConflictsResponse object.
+ * Returns a GetMergeConflictsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetMergeConflictsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CodeCommitClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetMergeConflictsRequest::response(QNetworkReply * const reply) const
 {
@@ -271,20 +263,17 @@ QtAws::Core::AwsAbstractResponse * GetMergeConflictsRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::CodeCommit::GetMergeConflictsRequestPrivate
+ * \brief The GetMergeConflictsRequestPrivate class provides private implementation for GetMergeConflictsRequest.
+ * \internal
  *
- * @class  GetMergeConflictsRequestPrivate
- *
- * @brief  Private implementation for GetMergeConflictsRequest.
+ * \inmodule QtAwsCodeCommit
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetMergeConflictsRequestPrivate object.
- *
- * @param  action  CodeCommit action being performed.
- * @param  q       Pointer to this object's public GetMergeConflictsRequest instance.
+ * Constructs a GetMergeConflictsRequestPrivate object for CodeCommit \a action with,
+ * public implementation \a q.
  */
 GetMergeConflictsRequestPrivate::GetMergeConflictsRequestPrivate(
     const CodeCommitRequest::Action action, GetMergeConflictsRequest * const q)
@@ -294,15 +283,10 @@ GetMergeConflictsRequestPrivate::GetMergeConflictsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetMergeConflictsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetMergeConflictsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetMergeConflictsRequest instance.
  */
 GetMergeConflictsRequestPrivate::GetMergeConflictsRequestPrivate(
     const GetMergeConflictsRequestPrivate &other, GetMergeConflictsRequest * const q)

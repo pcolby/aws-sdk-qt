@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DeletePlacementGroupRequest
- *
  * \brief The DeletePlacementGroupRequest class provides an interface for EC2 DeletePlacementGroup requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DeletePlacementGroupRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeletePlacementGroupRequest::DeletePlacementGroupRequest(const DeletePlacementGroupRequest &other)
     : EC2Request(new DeletePlacementGroupRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ DeletePlacementGroupRequest::DeletePlacementGroupRequest(const DeletePlacementGr
 }
 
 /*!
- * @brief  Constructs a new DeletePlacementGroupRequest object.
+ * Constructs a DeletePlacementGroupRequest object.
  */
 DeletePlacementGroupRequest::DeletePlacementGroupRequest()
     : EC2Request(new DeletePlacementGroupRequestPrivate(EC2Request::DeletePlacementGroupAction, this))
@@ -70,14 +67,9 @@ bool DeletePlacementGroupRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeletePlacementGroupResponse object.
+ * Returns a DeletePlacementGroupResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeletePlacementGroupResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeletePlacementGroupRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * DeletePlacementGroupRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::DeletePlacementGroupRequestPrivate
+ * \brief The DeletePlacementGroupRequestPrivate class provides private implementation for DeletePlacementGroupRequest.
+ * \internal
  *
- * @class  DeletePlacementGroupRequestPrivate
- *
- * @brief  Private implementation for DeletePlacementGroupRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeletePlacementGroupRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public DeletePlacementGroupRequest instance.
+ * Constructs a DeletePlacementGroupRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 DeletePlacementGroupRequestPrivate::DeletePlacementGroupRequestPrivate(
     const EC2Request::Action action, DeletePlacementGroupRequest * const q)
@@ -108,15 +97,10 @@ DeletePlacementGroupRequestPrivate::DeletePlacementGroupRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeletePlacementGroupRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeletePlacementGroupRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeletePlacementGroupRequest instance.
  */
 DeletePlacementGroupRequestPrivate::DeletePlacementGroupRequestPrivate(
     const DeletePlacementGroupRequestPrivate &other, DeletePlacementGroupRequest * const q)

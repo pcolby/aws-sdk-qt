@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DeleteSubnetRequest
- *
  * \brief The DeleteSubnetRequest class provides an interface for EC2 DeleteSubnet requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DeleteSubnetRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteSubnetRequest::DeleteSubnetRequest(const DeleteSubnetRequest &other)
     : EC2Request(new DeleteSubnetRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ DeleteSubnetRequest::DeleteSubnetRequest(const DeleteSubnetRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DeleteSubnetRequest object.
+ * Constructs a DeleteSubnetRequest object.
  */
 DeleteSubnetRequest::DeleteSubnetRequest()
     : EC2Request(new DeleteSubnetRequestPrivate(EC2Request::DeleteSubnetAction, this))
@@ -70,14 +67,9 @@ bool DeleteSubnetRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteSubnetResponse object.
+ * Returns a DeleteSubnetResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteSubnetResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteSubnetRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * DeleteSubnetRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::DeleteSubnetRequestPrivate
+ * \brief The DeleteSubnetRequestPrivate class provides private implementation for DeleteSubnetRequest.
+ * \internal
  *
- * @class  DeleteSubnetRequestPrivate
- *
- * @brief  Private implementation for DeleteSubnetRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteSubnetRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public DeleteSubnetRequest instance.
+ * Constructs a DeleteSubnetRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 DeleteSubnetRequestPrivate::DeleteSubnetRequestPrivate(
     const EC2Request::Action action, DeleteSubnetRequest * const q)
@@ -108,15 +97,10 @@ DeleteSubnetRequestPrivate::DeleteSubnetRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteSubnetRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteSubnetRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteSubnetRequest instance.
  */
 DeleteSubnetRequestPrivate::DeleteSubnetRequestPrivate(
     const DeleteSubnetRequestPrivate &other, DeleteSubnetRequest * const q)

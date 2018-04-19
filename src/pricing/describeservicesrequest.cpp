@@ -27,10 +27,9 @@ namespace Pricing {
 
 /*!
  * \class QtAws::Pricing::DescribeServicesRequest
- *
  * \brief The DescribeServicesRequest class provides an interface for Pricing DescribeServices requests.
  *
- * \ingroup Pricing
+ * \inmodule QtAwsPricing
  *
  *  AWS Price List Service API (AWS Price List Service) is a centralized and convenient way to programmatically query Amazon
  *  Web Services for services, products, and pricing information. The AWS Price List Service uses standardized product
@@ -63,9 +62,7 @@ namespace Pricing {
  */
 
 /*!
- * @brief  Constructs a new DescribeServicesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeServicesRequest::DescribeServicesRequest(const DescribeServicesRequest &other)
     : PricingRequest(new DescribeServicesRequestPrivate(*other.d_func(), this))
@@ -74,7 +71,7 @@ DescribeServicesRequest::DescribeServicesRequest(const DescribeServicesRequest &
 }
 
 /*!
- * @brief  Constructs a new DescribeServicesRequest object.
+ * Constructs a DescribeServicesRequest object.
  */
 DescribeServicesRequest::DescribeServicesRequest()
     : PricingRequest(new DescribeServicesRequestPrivate(PricingRequest::DescribeServicesAction, this))
@@ -92,14 +89,9 @@ bool DescribeServicesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeServicesResponse object.
+ * Returns a DescribeServicesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeServicesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  PricingClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeServicesRequest::response(QNetworkReply * const reply) const
 {
@@ -107,20 +99,17 @@ QtAws::Core::AwsAbstractResponse * DescribeServicesRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::Pricing::DescribeServicesRequestPrivate
+ * \brief The DescribeServicesRequestPrivate class provides private implementation for DescribeServicesRequest.
+ * \internal
  *
- * @class  DescribeServicesRequestPrivate
- *
- * @brief  Private implementation for DescribeServicesRequest.
+ * \inmodule QtAwsPricing
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeServicesRequestPrivate object.
- *
- * @param  action  Pricing action being performed.
- * @param  q       Pointer to this object's public DescribeServicesRequest instance.
+ * Constructs a DescribeServicesRequestPrivate object for Pricing \a action with,
+ * public implementation \a q.
  */
 DescribeServicesRequestPrivate::DescribeServicesRequestPrivate(
     const PricingRequest::Action action, DescribeServicesRequest * const q)
@@ -130,15 +119,10 @@ DescribeServicesRequestPrivate::DescribeServicesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeServicesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeServicesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeServicesRequest instance.
  */
 DescribeServicesRequestPrivate::DescribeServicesRequestPrivate(
     const DescribeServicesRequestPrivate &other, DescribeServicesRequest * const q)

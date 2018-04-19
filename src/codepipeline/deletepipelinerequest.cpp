@@ -27,10 +27,9 @@ namespace CodePipeline {
 
 /*!
  * \class QtAws::CodePipeline::DeletePipelineRequest
- *
  * \brief The DeletePipelineRequest class provides an interface for CodePipeline DeletePipeline requests.
  *
- * \ingroup CodePipeline
+ * \inmodule QtAwsCodePipeline
  *
  *  <fullname>AWS CodePipeline</fullname>
  * 
@@ -200,9 +199,7 @@ namespace CodePipeline {
  */
 
 /*!
- * @brief  Constructs a new DeletePipelineRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeletePipelineRequest::DeletePipelineRequest(const DeletePipelineRequest &other)
     : CodePipelineRequest(new DeletePipelineRequestPrivate(*other.d_func(), this))
@@ -211,7 +208,7 @@ DeletePipelineRequest::DeletePipelineRequest(const DeletePipelineRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DeletePipelineRequest object.
+ * Constructs a DeletePipelineRequest object.
  */
 DeletePipelineRequest::DeletePipelineRequest()
     : CodePipelineRequest(new DeletePipelineRequestPrivate(CodePipelineRequest::DeletePipelineAction, this))
@@ -229,14 +226,9 @@ bool DeletePipelineRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeletePipelineResponse object.
+ * Returns a DeletePipelineResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeletePipelineResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CodePipelineClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeletePipelineRequest::response(QNetworkReply * const reply) const
 {
@@ -244,20 +236,17 @@ QtAws::Core::AwsAbstractResponse * DeletePipelineRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::CodePipeline::DeletePipelineRequestPrivate
+ * \brief The DeletePipelineRequestPrivate class provides private implementation for DeletePipelineRequest.
+ * \internal
  *
- * @class  DeletePipelineRequestPrivate
- *
- * @brief  Private implementation for DeletePipelineRequest.
+ * \inmodule QtAwsCodePipeline
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeletePipelineRequestPrivate object.
- *
- * @param  action  CodePipeline action being performed.
- * @param  q       Pointer to this object's public DeletePipelineRequest instance.
+ * Constructs a DeletePipelineRequestPrivate object for CodePipeline \a action with,
+ * public implementation \a q.
  */
 DeletePipelineRequestPrivate::DeletePipelineRequestPrivate(
     const CodePipelineRequest::Action action, DeletePipelineRequest * const q)
@@ -267,15 +256,10 @@ DeletePipelineRequestPrivate::DeletePipelineRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeletePipelineRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeletePipelineRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeletePipelineRequest instance.
  */
 DeletePipelineRequestPrivate::DeletePipelineRequestPrivate(
     const DeletePipelineRequestPrivate &other, DeletePipelineRequest * const q)

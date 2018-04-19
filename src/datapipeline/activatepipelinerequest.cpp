@@ -27,10 +27,9 @@ namespace DataPipeline {
 
 /*!
  * \class QtAws::DataPipeline::ActivatePipelineRequest
- *
  * \brief The ActivatePipelineRequest class provides an interface for DataPipeline ActivatePipeline requests.
  *
- * \ingroup DataPipeline
+ * \inmodule QtAwsDataPipeline
  *
  *  AWS Data Pipeline configures and manages a data-driven workflow called a pipeline. AWS Data Pipeline handles the details
  *  of scheduling and ensuring that data dependencies are met so that your application can focus on processing the
@@ -55,9 +54,7 @@ namespace DataPipeline {
  */
 
 /*!
- * @brief  Constructs a new ActivatePipelineRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ActivatePipelineRequest::ActivatePipelineRequest(const ActivatePipelineRequest &other)
     : DataPipelineRequest(new ActivatePipelineRequestPrivate(*other.d_func(), this))
@@ -66,7 +63,7 @@ ActivatePipelineRequest::ActivatePipelineRequest(const ActivatePipelineRequest &
 }
 
 /*!
- * @brief  Constructs a new ActivatePipelineRequest object.
+ * Constructs a ActivatePipelineRequest object.
  */
 ActivatePipelineRequest::ActivatePipelineRequest()
     : DataPipelineRequest(new ActivatePipelineRequestPrivate(DataPipelineRequest::ActivatePipelineAction, this))
@@ -84,14 +81,9 @@ bool ActivatePipelineRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ActivatePipelineResponse object.
+ * Returns a ActivatePipelineResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ActivatePipelineResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DataPipelineClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ActivatePipelineRequest::response(QNetworkReply * const reply) const
 {
@@ -99,20 +91,17 @@ QtAws::Core::AwsAbstractResponse * ActivatePipelineRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::DataPipeline::ActivatePipelineRequestPrivate
+ * \brief The ActivatePipelineRequestPrivate class provides private implementation for ActivatePipelineRequest.
+ * \internal
  *
- * @class  ActivatePipelineRequestPrivate
- *
- * @brief  Private implementation for ActivatePipelineRequest.
+ * \inmodule QtAwsDataPipeline
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ActivatePipelineRequestPrivate object.
- *
- * @param  action  DataPipeline action being performed.
- * @param  q       Pointer to this object's public ActivatePipelineRequest instance.
+ * Constructs a ActivatePipelineRequestPrivate object for DataPipeline \a action with,
+ * public implementation \a q.
  */
 ActivatePipelineRequestPrivate::ActivatePipelineRequestPrivate(
     const DataPipelineRequest::Action action, ActivatePipelineRequest * const q)
@@ -122,15 +111,10 @@ ActivatePipelineRequestPrivate::ActivatePipelineRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ActivatePipelineRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ActivatePipelineRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ActivatePipelineRequest instance.
  */
 ActivatePipelineRequestPrivate::ActivatePipelineRequestPrivate(
     const ActivatePipelineRequestPrivate &other, ActivatePipelineRequest * const q)

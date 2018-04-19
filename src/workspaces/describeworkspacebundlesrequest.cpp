@@ -27,10 +27,9 @@ namespace WorkSpaces {
 
 /*!
  * \class QtAws::WorkSpaces::DescribeWorkspaceBundlesRequest
- *
  * \brief The DescribeWorkspaceBundlesRequest class provides an interface for WorkSpaces DescribeWorkspaceBundles requests.
  *
- * \ingroup WorkSpaces
+ * \inmodule QtAwsWorkSpaces
  *
  *  <fullname>Amazon WorkSpaces Service</fullname>
  * 
@@ -40,9 +39,7 @@ namespace WorkSpaces {
  */
 
 /*!
- * @brief  Constructs a new DescribeWorkspaceBundlesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeWorkspaceBundlesRequest::DescribeWorkspaceBundlesRequest(const DescribeWorkspaceBundlesRequest &other)
     : WorkSpacesRequest(new DescribeWorkspaceBundlesRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ DescribeWorkspaceBundlesRequest::DescribeWorkspaceBundlesRequest(const DescribeW
 }
 
 /*!
- * @brief  Constructs a new DescribeWorkspaceBundlesRequest object.
+ * Constructs a DescribeWorkspaceBundlesRequest object.
  */
 DescribeWorkspaceBundlesRequest::DescribeWorkspaceBundlesRequest()
     : WorkSpacesRequest(new DescribeWorkspaceBundlesRequestPrivate(WorkSpacesRequest::DescribeWorkspaceBundlesAction, this))
@@ -69,14 +66,9 @@ bool DescribeWorkspaceBundlesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeWorkspaceBundlesResponse object.
+ * Returns a DescribeWorkspaceBundlesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeWorkspaceBundlesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WorkSpacesClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeWorkspaceBundlesRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * DescribeWorkspaceBundlesRequest::response(QNe
 }
 
 /*!
- * @internal
+ * \class QtAws::WorkSpaces::DescribeWorkspaceBundlesRequestPrivate
+ * \brief The DescribeWorkspaceBundlesRequestPrivate class provides private implementation for DescribeWorkspaceBundlesRequest.
+ * \internal
  *
- * @class  DescribeWorkspaceBundlesRequestPrivate
- *
- * @brief  Private implementation for DescribeWorkspaceBundlesRequest.
+ * \inmodule QtAwsWorkSpaces
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeWorkspaceBundlesRequestPrivate object.
- *
- * @param  action  WorkSpaces action being performed.
- * @param  q       Pointer to this object's public DescribeWorkspaceBundlesRequest instance.
+ * Constructs a DescribeWorkspaceBundlesRequestPrivate object for WorkSpaces \a action with,
+ * public implementation \a q.
  */
 DescribeWorkspaceBundlesRequestPrivate::DescribeWorkspaceBundlesRequestPrivate(
     const WorkSpacesRequest::Action action, DescribeWorkspaceBundlesRequest * const q)
@@ -107,15 +96,10 @@ DescribeWorkspaceBundlesRequestPrivate::DescribeWorkspaceBundlesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeWorkspaceBundlesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeWorkspaceBundlesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeWorkspaceBundlesRequest instance.
  */
 DescribeWorkspaceBundlesRequestPrivate::DescribeWorkspaceBundlesRequestPrivate(
     const DescribeWorkspaceBundlesRequestPrivate &other, DescribeWorkspaceBundlesRequest * const q)

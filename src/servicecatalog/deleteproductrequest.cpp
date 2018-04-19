@@ -27,10 +27,9 @@ namespace ServiceCatalog {
 
 /*!
  * \class QtAws::ServiceCatalog::DeleteProductRequest
- *
  * \brief The DeleteProductRequest class provides an interface for ServiceCatalog DeleteProduct requests.
  *
- * \ingroup ServiceCatalog
+ * \inmodule QtAwsServiceCatalog
  *
  *  <fullname>AWS Service Catalog</fullname>
  * 
@@ -43,9 +42,7 @@ namespace ServiceCatalog {
  */
 
 /*!
- * @brief  Constructs a new DeleteProductRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteProductRequest::DeleteProductRequest(const DeleteProductRequest &other)
     : ServiceCatalogRequest(new DeleteProductRequestPrivate(*other.d_func(), this))
@@ -54,7 +51,7 @@ DeleteProductRequest::DeleteProductRequest(const DeleteProductRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DeleteProductRequest object.
+ * Constructs a DeleteProductRequest object.
  */
 DeleteProductRequest::DeleteProductRequest()
     : ServiceCatalogRequest(new DeleteProductRequestPrivate(ServiceCatalogRequest::DeleteProductAction, this))
@@ -72,14 +69,9 @@ bool DeleteProductRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteProductResponse object.
+ * Returns a DeleteProductResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteProductResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ServiceCatalogClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteProductRequest::response(QNetworkReply * const reply) const
 {
@@ -87,20 +79,17 @@ QtAws::Core::AwsAbstractResponse * DeleteProductRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::ServiceCatalog::DeleteProductRequestPrivate
+ * \brief The DeleteProductRequestPrivate class provides private implementation for DeleteProductRequest.
+ * \internal
  *
- * @class  DeleteProductRequestPrivate
- *
- * @brief  Private implementation for DeleteProductRequest.
+ * \inmodule QtAwsServiceCatalog
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteProductRequestPrivate object.
- *
- * @param  action  ServiceCatalog action being performed.
- * @param  q       Pointer to this object's public DeleteProductRequest instance.
+ * Constructs a DeleteProductRequestPrivate object for ServiceCatalog \a action with,
+ * public implementation \a q.
  */
 DeleteProductRequestPrivate::DeleteProductRequestPrivate(
     const ServiceCatalogRequest::Action action, DeleteProductRequest * const q)
@@ -110,15 +99,10 @@ DeleteProductRequestPrivate::DeleteProductRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteProductRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteProductRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteProductRequest instance.
  */
 DeleteProductRequestPrivate::DeleteProductRequestPrivate(
     const DeleteProductRequestPrivate &other, DeleteProductRequest * const q)

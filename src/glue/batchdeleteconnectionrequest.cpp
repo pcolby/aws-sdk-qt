@@ -27,10 +27,9 @@ namespace Glue {
 
 /*!
  * \class QtAws::Glue::BatchDeleteConnectionRequest
- *
  * \brief The BatchDeleteConnectionRequest class provides an interface for Glue BatchDeleteConnection requests.
  *
- * \ingroup Glue
+ * \inmodule QtAwsGlue
  *
  *  <fullname>AWS Glue</fullname>
  * 
@@ -40,9 +39,7 @@ namespace Glue {
  */
 
 /*!
- * @brief  Constructs a new BatchDeleteConnectionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 BatchDeleteConnectionRequest::BatchDeleteConnectionRequest(const BatchDeleteConnectionRequest &other)
     : GlueRequest(new BatchDeleteConnectionRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ BatchDeleteConnectionRequest::BatchDeleteConnectionRequest(const BatchDeleteConn
 }
 
 /*!
- * @brief  Constructs a new BatchDeleteConnectionRequest object.
+ * Constructs a BatchDeleteConnectionRequest object.
  */
 BatchDeleteConnectionRequest::BatchDeleteConnectionRequest()
     : GlueRequest(new BatchDeleteConnectionRequestPrivate(GlueRequest::BatchDeleteConnectionAction, this))
@@ -69,14 +66,9 @@ bool BatchDeleteConnectionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an BatchDeleteConnectionResponse object.
+ * Returns a BatchDeleteConnectionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An BatchDeleteConnectionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GlueClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * BatchDeleteConnectionRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * BatchDeleteConnectionRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::Glue::BatchDeleteConnectionRequestPrivate
+ * \brief The BatchDeleteConnectionRequestPrivate class provides private implementation for BatchDeleteConnectionRequest.
+ * \internal
  *
- * @class  BatchDeleteConnectionRequestPrivate
- *
- * @brief  Private implementation for BatchDeleteConnectionRequest.
+ * \inmodule QtAwsGlue
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new BatchDeleteConnectionRequestPrivate object.
- *
- * @param  action  Glue action being performed.
- * @param  q       Pointer to this object's public BatchDeleteConnectionRequest instance.
+ * Constructs a BatchDeleteConnectionRequestPrivate object for Glue \a action with,
+ * public implementation \a q.
  */
 BatchDeleteConnectionRequestPrivate::BatchDeleteConnectionRequestPrivate(
     const GlueRequest::Action action, BatchDeleteConnectionRequest * const q)
@@ -107,15 +96,10 @@ BatchDeleteConnectionRequestPrivate::BatchDeleteConnectionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new BatchDeleteConnectionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the BatchDeleteConnectionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public BatchDeleteConnectionRequest instance.
  */
 BatchDeleteConnectionRequestPrivate::BatchDeleteConnectionRequestPrivate(
     const BatchDeleteConnectionRequestPrivate &other, BatchDeleteConnectionRequest * const q)

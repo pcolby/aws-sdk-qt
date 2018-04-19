@@ -27,10 +27,9 @@ namespace CloudSearch {
 
 /*!
  * \class QtAws::CloudSearch::DescribeDomainsRequest
- *
  * \brief The DescribeDomainsRequest class provides an interface for CloudSearch DescribeDomains requests.
  *
- * \ingroup CloudSearch
+ * \inmodule QtAwsCloudSearch
  *
  *  <fullname>Amazon CloudSearch Configuration Service</fullname>
  * 
@@ -48,9 +47,7 @@ namespace CloudSearch {
  */
 
 /*!
- * @brief  Constructs a new DescribeDomainsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeDomainsRequest::DescribeDomainsRequest(const DescribeDomainsRequest &other)
     : CloudSearchRequest(new DescribeDomainsRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ DescribeDomainsRequest::DescribeDomainsRequest(const DescribeDomainsRequest &oth
 }
 
 /*!
- * @brief  Constructs a new DescribeDomainsRequest object.
+ * Constructs a DescribeDomainsRequest object.
  */
 DescribeDomainsRequest::DescribeDomainsRequest()
     : CloudSearchRequest(new DescribeDomainsRequestPrivate(CloudSearchRequest::DescribeDomainsAction, this))
@@ -77,14 +74,9 @@ bool DescribeDomainsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeDomainsResponse object.
+ * Returns a DescribeDomainsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeDomainsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudSearchClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeDomainsRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * DescribeDomainsRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudSearch::DescribeDomainsRequestPrivate
+ * \brief The DescribeDomainsRequestPrivate class provides private implementation for DescribeDomainsRequest.
+ * \internal
  *
- * @class  DescribeDomainsRequestPrivate
- *
- * @brief  Private implementation for DescribeDomainsRequest.
+ * \inmodule QtAwsCloudSearch
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeDomainsRequestPrivate object.
- *
- * @param  action  CloudSearch action being performed.
- * @param  q       Pointer to this object's public DescribeDomainsRequest instance.
+ * Constructs a DescribeDomainsRequestPrivate object for CloudSearch \a action with,
+ * public implementation \a q.
  */
 DescribeDomainsRequestPrivate::DescribeDomainsRequestPrivate(
     const CloudSearchRequest::Action action, DescribeDomainsRequest * const q)
@@ -115,15 +104,10 @@ DescribeDomainsRequestPrivate::DescribeDomainsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeDomainsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeDomainsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeDomainsRequest instance.
  */
 DescribeDomainsRequestPrivate::DescribeDomainsRequestPrivate(
     const DescribeDomainsRequestPrivate &other, DescribeDomainsRequest * const q)

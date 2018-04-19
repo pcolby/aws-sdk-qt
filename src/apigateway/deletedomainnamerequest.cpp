@@ -27,10 +27,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::DeleteDomainNameRequest
- *
  * \brief The DeleteDomainNameRequest class provides an interface for APIGateway DeleteDomainName requests.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -42,9 +41,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new DeleteDomainNameRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteDomainNameRequest::DeleteDomainNameRequest(const DeleteDomainNameRequest &other)
     : APIGatewayRequest(new DeleteDomainNameRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ DeleteDomainNameRequest::DeleteDomainNameRequest(const DeleteDomainNameRequest &
 }
 
 /*!
- * @brief  Constructs a new DeleteDomainNameRequest object.
+ * Constructs a DeleteDomainNameRequest object.
  */
 DeleteDomainNameRequest::DeleteDomainNameRequest()
     : APIGatewayRequest(new DeleteDomainNameRequestPrivate(APIGatewayRequest::DeleteDomainNameAction, this))
@@ -71,14 +68,9 @@ bool DeleteDomainNameRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteDomainNameResponse object.
+ * Returns a DeleteDomainNameResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteDomainNameResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  APIGatewayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteDomainNameRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * DeleteDomainNameRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::APIGateway::DeleteDomainNameRequestPrivate
+ * \brief The DeleteDomainNameRequestPrivate class provides private implementation for DeleteDomainNameRequest.
+ * \internal
  *
- * @class  DeleteDomainNameRequestPrivate
- *
- * @brief  Private implementation for DeleteDomainNameRequest.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteDomainNameRequestPrivate object.
- *
- * @param  action  APIGateway action being performed.
- * @param  q       Pointer to this object's public DeleteDomainNameRequest instance.
+ * Constructs a DeleteDomainNameRequestPrivate object for APIGateway \a action with,
+ * public implementation \a q.
  */
 DeleteDomainNameRequestPrivate::DeleteDomainNameRequestPrivate(
     const APIGatewayRequest::Action action, DeleteDomainNameRequest * const q)
@@ -109,15 +98,10 @@ DeleteDomainNameRequestPrivate::DeleteDomainNameRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteDomainNameRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteDomainNameRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteDomainNameRequest instance.
  */
 DeleteDomainNameRequestPrivate::DeleteDomainNameRequestPrivate(
     const DeleteDomainNameRequestPrivate &other, DeleteDomainNameRequest * const q)

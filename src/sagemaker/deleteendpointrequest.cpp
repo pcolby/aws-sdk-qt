@@ -27,19 +27,16 @@ namespace SageMaker {
 
 /*!
  * \class QtAws::SageMaker::DeleteEndpointRequest
- *
  * \brief The DeleteEndpointRequest class provides an interface for SageMaker DeleteEndpoint requests.
  *
- * \ingroup SageMaker
+ * \inmodule QtAwsSageMaker
  *
  *
  * \sa SageMakerClient::deleteEndpoint
  */
 
 /*!
- * @brief  Constructs a new DeleteEndpointRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteEndpointRequest::DeleteEndpointRequest(const DeleteEndpointRequest &other)
     : SageMakerRequest(new DeleteEndpointRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ DeleteEndpointRequest::DeleteEndpointRequest(const DeleteEndpointRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DeleteEndpointRequest object.
+ * Constructs a DeleteEndpointRequest object.
  */
 DeleteEndpointRequest::DeleteEndpointRequest()
     : SageMakerRequest(new DeleteEndpointRequestPrivate(SageMakerRequest::DeleteEndpointAction, this))
@@ -66,14 +63,9 @@ bool DeleteEndpointRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteEndpointResponse object.
+ * Returns a DeleteEndpointResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteEndpointResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SageMakerClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteEndpointRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * DeleteEndpointRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::SageMaker::DeleteEndpointRequestPrivate
+ * \brief The DeleteEndpointRequestPrivate class provides private implementation for DeleteEndpointRequest.
+ * \internal
  *
- * @class  DeleteEndpointRequestPrivate
- *
- * @brief  Private implementation for DeleteEndpointRequest.
+ * \inmodule QtAwsSageMaker
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteEndpointRequestPrivate object.
- *
- * @param  action  SageMaker action being performed.
- * @param  q       Pointer to this object's public DeleteEndpointRequest instance.
+ * Constructs a DeleteEndpointRequestPrivate object for SageMaker \a action with,
+ * public implementation \a q.
  */
 DeleteEndpointRequestPrivate::DeleteEndpointRequestPrivate(
     const SageMakerRequest::Action action, DeleteEndpointRequest * const q)
@@ -104,15 +93,10 @@ DeleteEndpointRequestPrivate::DeleteEndpointRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteEndpointRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteEndpointRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteEndpointRequest instance.
  */
 DeleteEndpointRequestPrivate::DeleteEndpointRequestPrivate(
     const DeleteEndpointRequestPrivate &other, DeleteEndpointRequest * const q)

@@ -27,10 +27,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::UpdateRoleRequest
- *
  * \brief The UpdateRoleRequest class provides an interface for IAM UpdateRole requests.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -102,9 +101,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new UpdateRoleRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateRoleRequest::UpdateRoleRequest(const UpdateRoleRequest &other)
     : IAMRequest(new UpdateRoleRequestPrivate(*other.d_func(), this))
@@ -113,7 +110,7 @@ UpdateRoleRequest::UpdateRoleRequest(const UpdateRoleRequest &other)
 }
 
 /*!
- * @brief  Constructs a new UpdateRoleRequest object.
+ * Constructs a UpdateRoleRequest object.
  */
 UpdateRoleRequest::UpdateRoleRequest()
     : IAMRequest(new UpdateRoleRequestPrivate(IAMRequest::UpdateRoleAction, this))
@@ -131,14 +128,9 @@ bool UpdateRoleRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateRoleResponse object.
+ * Returns a UpdateRoleResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateRoleResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IAMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateRoleRequest::response(QNetworkReply * const reply) const
 {
@@ -146,20 +138,17 @@ QtAws::Core::AwsAbstractResponse * UpdateRoleRequest::response(QNetworkReply * c
 }
 
 /*!
- * @internal
+ * \class QtAws::IAM::UpdateRoleRequestPrivate
+ * \brief The UpdateRoleRequestPrivate class provides private implementation for UpdateRoleRequest.
+ * \internal
  *
- * @class  UpdateRoleRequestPrivate
- *
- * @brief  Private implementation for UpdateRoleRequest.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateRoleRequestPrivate object.
- *
- * @param  action  IAM action being performed.
- * @param  q       Pointer to this object's public UpdateRoleRequest instance.
+ * Constructs a UpdateRoleRequestPrivate object for IAM \a action with,
+ * public implementation \a q.
  */
 UpdateRoleRequestPrivate::UpdateRoleRequestPrivate(
     const IAMRequest::Action action, UpdateRoleRequest * const q)
@@ -169,15 +158,10 @@ UpdateRoleRequestPrivate::UpdateRoleRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateRoleRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateRoleRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateRoleRequest instance.
  */
 UpdateRoleRequestPrivate::UpdateRoleRequestPrivate(
     const UpdateRoleRequestPrivate &other, UpdateRoleRequest * const q)

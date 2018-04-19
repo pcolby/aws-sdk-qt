@@ -27,10 +27,9 @@ namespace OpsWorksCM {
 
 /*!
  * \class QtAws::OpsWorksCM::DescribeNodeAssociationStatusRequest
- *
  * \brief The DescribeNodeAssociationStatusRequest class provides an interface for OpsWorksCM DescribeNodeAssociationStatus requests.
  *
- * \ingroup OpsWorksCM
+ * \inmodule QtAwsOpsWorksCM
  *
  *  <fullname>AWS OpsWorks CM</fullname>
  * 
@@ -97,9 +96,7 @@ namespace OpsWorksCM {
  */
 
 /*!
- * @brief  Constructs a new DescribeNodeAssociationStatusRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeNodeAssociationStatusRequest::DescribeNodeAssociationStatusRequest(const DescribeNodeAssociationStatusRequest &other)
     : OpsWorksCMRequest(new DescribeNodeAssociationStatusRequestPrivate(*other.d_func(), this))
@@ -108,7 +105,7 @@ DescribeNodeAssociationStatusRequest::DescribeNodeAssociationStatusRequest(const
 }
 
 /*!
- * @brief  Constructs a new DescribeNodeAssociationStatusRequest object.
+ * Constructs a DescribeNodeAssociationStatusRequest object.
  */
 DescribeNodeAssociationStatusRequest::DescribeNodeAssociationStatusRequest()
     : OpsWorksCMRequest(new DescribeNodeAssociationStatusRequestPrivate(OpsWorksCMRequest::DescribeNodeAssociationStatusAction, this))
@@ -126,14 +123,9 @@ bool DescribeNodeAssociationStatusRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeNodeAssociationStatusResponse object.
+ * Returns a DescribeNodeAssociationStatusResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeNodeAssociationStatusResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  OpsWorksCMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeNodeAssociationStatusRequest::response(QNetworkReply * const reply) const
 {
@@ -141,20 +133,17 @@ QtAws::Core::AwsAbstractResponse * DescribeNodeAssociationStatusRequest::respons
 }
 
 /*!
- * @internal
+ * \class QtAws::OpsWorksCM::DescribeNodeAssociationStatusRequestPrivate
+ * \brief The DescribeNodeAssociationStatusRequestPrivate class provides private implementation for DescribeNodeAssociationStatusRequest.
+ * \internal
  *
- * @class  DescribeNodeAssociationStatusRequestPrivate
- *
- * @brief  Private implementation for DescribeNodeAssociationStatusRequest.
+ * \inmodule QtAwsOpsWorksCM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeNodeAssociationStatusRequestPrivate object.
- *
- * @param  action  OpsWorksCM action being performed.
- * @param  q       Pointer to this object's public DescribeNodeAssociationStatusRequest instance.
+ * Constructs a DescribeNodeAssociationStatusRequestPrivate object for OpsWorksCM \a action with,
+ * public implementation \a q.
  */
 DescribeNodeAssociationStatusRequestPrivate::DescribeNodeAssociationStatusRequestPrivate(
     const OpsWorksCMRequest::Action action, DescribeNodeAssociationStatusRequest * const q)
@@ -164,15 +153,10 @@ DescribeNodeAssociationStatusRequestPrivate::DescribeNodeAssociationStatusReques
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeNodeAssociationStatusRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeNodeAssociationStatusRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeNodeAssociationStatusRequest instance.
  */
 DescribeNodeAssociationStatusRequestPrivate::DescribeNodeAssociationStatusRequestPrivate(
     const DescribeNodeAssociationStatusRequestPrivate &other, DescribeNodeAssociationStatusRequest * const q)

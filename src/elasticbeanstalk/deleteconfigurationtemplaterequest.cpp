@@ -27,10 +27,9 @@ namespace ElasticBeanstalk {
 
 /*!
  * \class QtAws::ElasticBeanstalk::DeleteConfigurationTemplateRequest
- *
  * \brief The DeleteConfigurationTemplateRequest class provides an interface for ElasticBeanstalk DeleteConfigurationTemplate requests.
  *
- * \ingroup ElasticBeanstalk
+ * \inmodule QtAwsElasticBeanstalk
  *
  *  <fullname>AWS Elastic Beanstalk</fullname>
  * 
@@ -59,9 +58,7 @@ namespace ElasticBeanstalk {
  */
 
 /*!
- * @brief  Constructs a new DeleteConfigurationTemplateRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteConfigurationTemplateRequest::DeleteConfigurationTemplateRequest(const DeleteConfigurationTemplateRequest &other)
     : ElasticBeanstalkRequest(new DeleteConfigurationTemplateRequestPrivate(*other.d_func(), this))
@@ -70,7 +67,7 @@ DeleteConfigurationTemplateRequest::DeleteConfigurationTemplateRequest(const Del
 }
 
 /*!
- * @brief  Constructs a new DeleteConfigurationTemplateRequest object.
+ * Constructs a DeleteConfigurationTemplateRequest object.
  */
 DeleteConfigurationTemplateRequest::DeleteConfigurationTemplateRequest()
     : ElasticBeanstalkRequest(new DeleteConfigurationTemplateRequestPrivate(ElasticBeanstalkRequest::DeleteConfigurationTemplateAction, this))
@@ -88,14 +85,9 @@ bool DeleteConfigurationTemplateRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteConfigurationTemplateResponse object.
+ * Returns a DeleteConfigurationTemplateResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteConfigurationTemplateResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ElasticBeanstalkClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteConfigurationTemplateRequest::response(QNetworkReply * const reply) const
 {
@@ -103,20 +95,17 @@ QtAws::Core::AwsAbstractResponse * DeleteConfigurationTemplateRequest::response(
 }
 
 /*!
- * @internal
+ * \class QtAws::ElasticBeanstalk::DeleteConfigurationTemplateRequestPrivate
+ * \brief The DeleteConfigurationTemplateRequestPrivate class provides private implementation for DeleteConfigurationTemplateRequest.
+ * \internal
  *
- * @class  DeleteConfigurationTemplateRequestPrivate
- *
- * @brief  Private implementation for DeleteConfigurationTemplateRequest.
+ * \inmodule QtAwsElasticBeanstalk
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteConfigurationTemplateRequestPrivate object.
- *
- * @param  action  ElasticBeanstalk action being performed.
- * @param  q       Pointer to this object's public DeleteConfigurationTemplateRequest instance.
+ * Constructs a DeleteConfigurationTemplateRequestPrivate object for ElasticBeanstalk \a action with,
+ * public implementation \a q.
  */
 DeleteConfigurationTemplateRequestPrivate::DeleteConfigurationTemplateRequestPrivate(
     const ElasticBeanstalkRequest::Action action, DeleteConfigurationTemplateRequest * const q)
@@ -126,15 +115,10 @@ DeleteConfigurationTemplateRequestPrivate::DeleteConfigurationTemplateRequestPri
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteConfigurationTemplateRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteConfigurationTemplateRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteConfigurationTemplateRequest instance.
  */
 DeleteConfigurationTemplateRequestPrivate::DeleteConfigurationTemplateRequestPrivate(
     const DeleteConfigurationTemplateRequestPrivate &other, DeleteConfigurationTemplateRequest * const q)

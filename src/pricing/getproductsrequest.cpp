@@ -27,10 +27,9 @@ namespace Pricing {
 
 /*!
  * \class QtAws::Pricing::GetProductsRequest
- *
  * \brief The GetProductsRequest class provides an interface for Pricing GetProducts requests.
  *
- * \ingroup Pricing
+ * \inmodule QtAwsPricing
  *
  *  AWS Price List Service API (AWS Price List Service) is a centralized and convenient way to programmatically query Amazon
  *  Web Services for services, products, and pricing information. The AWS Price List Service uses standardized product
@@ -63,9 +62,7 @@ namespace Pricing {
  */
 
 /*!
- * @brief  Constructs a new GetProductsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetProductsRequest::GetProductsRequest(const GetProductsRequest &other)
     : PricingRequest(new GetProductsRequestPrivate(*other.d_func(), this))
@@ -74,7 +71,7 @@ GetProductsRequest::GetProductsRequest(const GetProductsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetProductsRequest object.
+ * Constructs a GetProductsRequest object.
  */
 GetProductsRequest::GetProductsRequest()
     : PricingRequest(new GetProductsRequestPrivate(PricingRequest::GetProductsAction, this))
@@ -92,14 +89,9 @@ bool GetProductsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetProductsResponse object.
+ * Returns a GetProductsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetProductsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  PricingClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetProductsRequest::response(QNetworkReply * const reply) const
 {
@@ -107,20 +99,17 @@ QtAws::Core::AwsAbstractResponse * GetProductsRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::Pricing::GetProductsRequestPrivate
+ * \brief The GetProductsRequestPrivate class provides private implementation for GetProductsRequest.
+ * \internal
  *
- * @class  GetProductsRequestPrivate
- *
- * @brief  Private implementation for GetProductsRequest.
+ * \inmodule QtAwsPricing
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetProductsRequestPrivate object.
- *
- * @param  action  Pricing action being performed.
- * @param  q       Pointer to this object's public GetProductsRequest instance.
+ * Constructs a GetProductsRequestPrivate object for Pricing \a action with,
+ * public implementation \a q.
  */
 GetProductsRequestPrivate::GetProductsRequestPrivate(
     const PricingRequest::Action action, GetProductsRequest * const q)
@@ -130,15 +119,10 @@ GetProductsRequestPrivate::GetProductsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetProductsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetProductsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetProductsRequest instance.
  */
 GetProductsRequestPrivate::GetProductsRequestPrivate(
     const GetProductsRequestPrivate &other, GetProductsRequest * const q)

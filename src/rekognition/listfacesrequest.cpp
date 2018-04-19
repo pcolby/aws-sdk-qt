@@ -27,10 +27,9 @@ namespace Rekognition {
 
 /*!
  * \class QtAws::Rekognition::ListFacesRequest
- *
  * \brief The ListFacesRequest class provides an interface for Rekognition ListFaces requests.
  *
- * \ingroup Rekognition
+ * \inmodule QtAwsRekognition
  *
  *  This is the Amazon Rekognition API
  *
@@ -38,9 +37,7 @@ namespace Rekognition {
  */
 
 /*!
- * @brief  Constructs a new ListFacesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListFacesRequest::ListFacesRequest(const ListFacesRequest &other)
     : RekognitionRequest(new ListFacesRequestPrivate(*other.d_func(), this))
@@ -49,7 +46,7 @@ ListFacesRequest::ListFacesRequest(const ListFacesRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ListFacesRequest object.
+ * Constructs a ListFacesRequest object.
  */
 ListFacesRequest::ListFacesRequest()
     : RekognitionRequest(new ListFacesRequestPrivate(RekognitionRequest::ListFacesAction, this))
@@ -67,14 +64,9 @@ bool ListFacesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListFacesResponse object.
+ * Returns a ListFacesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListFacesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RekognitionClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListFacesRequest::response(QNetworkReply * const reply) const
 {
@@ -82,20 +74,17 @@ QtAws::Core::AwsAbstractResponse * ListFacesRequest::response(QNetworkReply * co
 }
 
 /*!
- * @internal
+ * \class QtAws::Rekognition::ListFacesRequestPrivate
+ * \brief The ListFacesRequestPrivate class provides private implementation for ListFacesRequest.
+ * \internal
  *
- * @class  ListFacesRequestPrivate
- *
- * @brief  Private implementation for ListFacesRequest.
+ * \inmodule QtAwsRekognition
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListFacesRequestPrivate object.
- *
- * @param  action  Rekognition action being performed.
- * @param  q       Pointer to this object's public ListFacesRequest instance.
+ * Constructs a ListFacesRequestPrivate object for Rekognition \a action with,
+ * public implementation \a q.
  */
 ListFacesRequestPrivate::ListFacesRequestPrivate(
     const RekognitionRequest::Action action, ListFacesRequest * const q)
@@ -105,15 +94,10 @@ ListFacesRequestPrivate::ListFacesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListFacesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListFacesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListFacesRequest instance.
  */
 ListFacesRequestPrivate::ListFacesRequestPrivate(
     const ListFacesRequestPrivate &other, ListFacesRequest * const q)

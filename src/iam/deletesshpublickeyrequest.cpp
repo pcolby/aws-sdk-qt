@@ -27,10 +27,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::DeleteSSHPublicKeyRequest
- *
  * \brief The DeleteSSHPublicKeyRequest class provides an interface for IAM DeleteSSHPublicKey requests.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -102,9 +101,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new DeleteSSHPublicKeyRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteSSHPublicKeyRequest::DeleteSSHPublicKeyRequest(const DeleteSSHPublicKeyRequest &other)
     : IAMRequest(new DeleteSSHPublicKeyRequestPrivate(*other.d_func(), this))
@@ -113,7 +110,7 @@ DeleteSSHPublicKeyRequest::DeleteSSHPublicKeyRequest(const DeleteSSHPublicKeyReq
 }
 
 /*!
- * @brief  Constructs a new DeleteSSHPublicKeyRequest object.
+ * Constructs a DeleteSSHPublicKeyRequest object.
  */
 DeleteSSHPublicKeyRequest::DeleteSSHPublicKeyRequest()
     : IAMRequest(new DeleteSSHPublicKeyRequestPrivate(IAMRequest::DeleteSSHPublicKeyAction, this))
@@ -131,14 +128,9 @@ bool DeleteSSHPublicKeyRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteSSHPublicKeyResponse object.
+ * Returns a DeleteSSHPublicKeyResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteSSHPublicKeyResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IAMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteSSHPublicKeyRequest::response(QNetworkReply * const reply) const
 {
@@ -146,20 +138,17 @@ QtAws::Core::AwsAbstractResponse * DeleteSSHPublicKeyRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::IAM::DeleteSSHPublicKeyRequestPrivate
+ * \brief The DeleteSSHPublicKeyRequestPrivate class provides private implementation for DeleteSSHPublicKeyRequest.
+ * \internal
  *
- * @class  DeleteSSHPublicKeyRequestPrivate
- *
- * @brief  Private implementation for DeleteSSHPublicKeyRequest.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteSSHPublicKeyRequestPrivate object.
- *
- * @param  action  IAM action being performed.
- * @param  q       Pointer to this object's public DeleteSSHPublicKeyRequest instance.
+ * Constructs a DeleteSSHPublicKeyRequestPrivate object for IAM \a action with,
+ * public implementation \a q.
  */
 DeleteSSHPublicKeyRequestPrivate::DeleteSSHPublicKeyRequestPrivate(
     const IAMRequest::Action action, DeleteSSHPublicKeyRequest * const q)
@@ -169,15 +158,10 @@ DeleteSSHPublicKeyRequestPrivate::DeleteSSHPublicKeyRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteSSHPublicKeyRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteSSHPublicKeyRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteSSHPublicKeyRequest instance.
  */
 DeleteSSHPublicKeyRequestPrivate::DeleteSSHPublicKeyRequestPrivate(
     const DeleteSSHPublicKeyRequestPrivate &other, DeleteSSHPublicKeyRequest * const q)

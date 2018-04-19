@@ -27,10 +27,9 @@ namespace ResourceGroupsTaggingAPI {
 
 /*!
  * \class QtAws::ResourceGroupsTaggingAPI::GetTagKeysRequest
- *
  * \brief The GetTagKeysRequest class provides an interface for ResourceGroupsTaggingAPI GetTagKeys requests.
  *
- * \ingroup ResourceGroupsTaggingAPI
+ * \inmodule QtAwsResourceGroupsTaggingAPI
  *
  *  <fullname>Resource Groups Tagging API</fullname>
  * 
@@ -92,9 +91,7 @@ namespace ResourceGroupsTaggingAPI {
  */
 
 /*!
- * @brief  Constructs a new GetTagKeysRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetTagKeysRequest::GetTagKeysRequest(const GetTagKeysRequest &other)
     : ResourceGroupsTaggingAPIRequest(new GetTagKeysRequestPrivate(*other.d_func(), this))
@@ -103,7 +100,7 @@ GetTagKeysRequest::GetTagKeysRequest(const GetTagKeysRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetTagKeysRequest object.
+ * Constructs a GetTagKeysRequest object.
  */
 GetTagKeysRequest::GetTagKeysRequest()
     : ResourceGroupsTaggingAPIRequest(new GetTagKeysRequestPrivate(ResourceGroupsTaggingAPIRequest::GetTagKeysAction, this))
@@ -121,14 +118,9 @@ bool GetTagKeysRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetTagKeysResponse object.
+ * Returns a GetTagKeysResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetTagKeysResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ResourceGroupsTaggingAPIClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetTagKeysRequest::response(QNetworkReply * const reply) const
 {
@@ -136,20 +128,17 @@ QtAws::Core::AwsAbstractResponse * GetTagKeysRequest::response(QNetworkReply * c
 }
 
 /*!
- * @internal
+ * \class QtAws::ResourceGroupsTaggingAPI::GetTagKeysRequestPrivate
+ * \brief The GetTagKeysRequestPrivate class provides private implementation for GetTagKeysRequest.
+ * \internal
  *
- * @class  GetTagKeysRequestPrivate
- *
- * @brief  Private implementation for GetTagKeysRequest.
+ * \inmodule QtAwsResourceGroupsTaggingAPI
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetTagKeysRequestPrivate object.
- *
- * @param  action  ResourceGroupsTaggingAPI action being performed.
- * @param  q       Pointer to this object's public GetTagKeysRequest instance.
+ * Constructs a GetTagKeysRequestPrivate object for ResourceGroupsTaggingAPI \a action with,
+ * public implementation \a q.
  */
 GetTagKeysRequestPrivate::GetTagKeysRequestPrivate(
     const ResourceGroupsTaggingAPIRequest::Action action, GetTagKeysRequest * const q)
@@ -159,15 +148,10 @@ GetTagKeysRequestPrivate::GetTagKeysRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetTagKeysRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetTagKeysRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetTagKeysRequest instance.
  */
 GetTagKeysRequestPrivate::GetTagKeysRequestPrivate(
     const GetTagKeysRequestPrivate &other, GetTagKeysRequest * const q)

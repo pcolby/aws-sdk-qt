@@ -27,10 +27,9 @@ namespace AutoScaling {
 
 /*!
  * \class QtAws::AutoScaling::DescribePoliciesRequest
- *
  * \brief The DescribePoliciesRequest class provides an interface for AutoScaling DescribePolicies requests.
  *
- * \ingroup AutoScaling
+ * \inmodule QtAwsAutoScaling
  *
  *  <fullname>Amazon EC2 Auto Scaling</fullname>
  * 
@@ -42,9 +41,7 @@ namespace AutoScaling {
  */
 
 /*!
- * @brief  Constructs a new DescribePoliciesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribePoliciesRequest::DescribePoliciesRequest(const DescribePoliciesRequest &other)
     : AutoScalingRequest(new DescribePoliciesRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ DescribePoliciesRequest::DescribePoliciesRequest(const DescribePoliciesRequest &
 }
 
 /*!
- * @brief  Constructs a new DescribePoliciesRequest object.
+ * Constructs a DescribePoliciesRequest object.
  */
 DescribePoliciesRequest::DescribePoliciesRequest()
     : AutoScalingRequest(new DescribePoliciesRequestPrivate(AutoScalingRequest::DescribePoliciesAction, this))
@@ -71,14 +68,9 @@ bool DescribePoliciesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribePoliciesResponse object.
+ * Returns a DescribePoliciesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribePoliciesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AutoScalingClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribePoliciesRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * DescribePoliciesRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::AutoScaling::DescribePoliciesRequestPrivate
+ * \brief The DescribePoliciesRequestPrivate class provides private implementation for DescribePoliciesRequest.
+ * \internal
  *
- * @class  DescribePoliciesRequestPrivate
- *
- * @brief  Private implementation for DescribePoliciesRequest.
+ * \inmodule QtAwsAutoScaling
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribePoliciesRequestPrivate object.
- *
- * @param  action  AutoScaling action being performed.
- * @param  q       Pointer to this object's public DescribePoliciesRequest instance.
+ * Constructs a DescribePoliciesRequestPrivate object for AutoScaling \a action with,
+ * public implementation \a q.
  */
 DescribePoliciesRequestPrivate::DescribePoliciesRequestPrivate(
     const AutoScalingRequest::Action action, DescribePoliciesRequest * const q)
@@ -109,15 +98,10 @@ DescribePoliciesRequestPrivate::DescribePoliciesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribePoliciesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribePoliciesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribePoliciesRequest instance.
  */
 DescribePoliciesRequestPrivate::DescribePoliciesRequestPrivate(
     const DescribePoliciesRequestPrivate &other, DescribePoliciesRequest * const q)

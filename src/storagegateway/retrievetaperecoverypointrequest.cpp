@@ -27,10 +27,9 @@ namespace StorageGateway {
 
 /*!
  * \class QtAws::StorageGateway::RetrieveTapeRecoveryPointRequest
- *
  * \brief The RetrieveTapeRecoveryPointRequest class provides an interface for StorageGateway RetrieveTapeRecoveryPoint requests.
  *
- * \ingroup StorageGateway
+ * \inmodule QtAwsStorageGateway
  *
  *  <fullname>AWS Storage Gateway Service</fullname>
  * 
@@ -106,9 +105,7 @@ namespace StorageGateway {
  */
 
 /*!
- * @brief  Constructs a new RetrieveTapeRecoveryPointRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 RetrieveTapeRecoveryPointRequest::RetrieveTapeRecoveryPointRequest(const RetrieveTapeRecoveryPointRequest &other)
     : StorageGatewayRequest(new RetrieveTapeRecoveryPointRequestPrivate(*other.d_func(), this))
@@ -117,7 +114,7 @@ RetrieveTapeRecoveryPointRequest::RetrieveTapeRecoveryPointRequest(const Retriev
 }
 
 /*!
- * @brief  Constructs a new RetrieveTapeRecoveryPointRequest object.
+ * Constructs a RetrieveTapeRecoveryPointRequest object.
  */
 RetrieveTapeRecoveryPointRequest::RetrieveTapeRecoveryPointRequest()
     : StorageGatewayRequest(new RetrieveTapeRecoveryPointRequestPrivate(StorageGatewayRequest::RetrieveTapeRecoveryPointAction, this))
@@ -135,14 +132,9 @@ bool RetrieveTapeRecoveryPointRequest::isValid() const
 
 
 /*!
- * @brief  Construct an RetrieveTapeRecoveryPointResponse object.
+ * Returns a RetrieveTapeRecoveryPointResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An RetrieveTapeRecoveryPointResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  StorageGatewayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * RetrieveTapeRecoveryPointRequest::response(QNetworkReply * const reply) const
 {
@@ -150,20 +142,17 @@ QtAws::Core::AwsAbstractResponse * RetrieveTapeRecoveryPointRequest::response(QN
 }
 
 /*!
- * @internal
+ * \class QtAws::StorageGateway::RetrieveTapeRecoveryPointRequestPrivate
+ * \brief The RetrieveTapeRecoveryPointRequestPrivate class provides private implementation for RetrieveTapeRecoveryPointRequest.
+ * \internal
  *
- * @class  RetrieveTapeRecoveryPointRequestPrivate
- *
- * @brief  Private implementation for RetrieveTapeRecoveryPointRequest.
+ * \inmodule QtAwsStorageGateway
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new RetrieveTapeRecoveryPointRequestPrivate object.
- *
- * @param  action  StorageGateway action being performed.
- * @param  q       Pointer to this object's public RetrieveTapeRecoveryPointRequest instance.
+ * Constructs a RetrieveTapeRecoveryPointRequestPrivate object for StorageGateway \a action with,
+ * public implementation \a q.
  */
 RetrieveTapeRecoveryPointRequestPrivate::RetrieveTapeRecoveryPointRequestPrivate(
     const StorageGatewayRequest::Action action, RetrieveTapeRecoveryPointRequest * const q)
@@ -173,15 +162,10 @@ RetrieveTapeRecoveryPointRequestPrivate::RetrieveTapeRecoveryPointRequestPrivate
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RetrieveTapeRecoveryPointRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the RetrieveTapeRecoveryPointRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public RetrieveTapeRecoveryPointRequest instance.
  */
 RetrieveTapeRecoveryPointRequestPrivate::RetrieveTapeRecoveryPointRequestPrivate(
     const RetrieveTapeRecoveryPointRequestPrivate &other, RetrieveTapeRecoveryPointRequest * const q)

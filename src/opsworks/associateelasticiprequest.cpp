@@ -27,10 +27,9 @@ namespace OpsWorks {
 
 /*!
  * \class QtAws::OpsWorks::AssociateElasticIpRequest
- *
  * \brief The AssociateElasticIpRequest class provides an interface for OpsWorks AssociateElasticIp requests.
  *
- * \ingroup OpsWorks
+ * \inmodule QtAwsOpsWorks
  *
  *  <fullname>AWS OpsWorks</fullname>
  * 
@@ -143,9 +142,7 @@ namespace OpsWorks {
  */
 
 /*!
- * @brief  Constructs a new AssociateElasticIpRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AssociateElasticIpRequest::AssociateElasticIpRequest(const AssociateElasticIpRequest &other)
     : OpsWorksRequest(new AssociateElasticIpRequestPrivate(*other.d_func(), this))
@@ -154,7 +151,7 @@ AssociateElasticIpRequest::AssociateElasticIpRequest(const AssociateElasticIpReq
 }
 
 /*!
- * @brief  Constructs a new AssociateElasticIpRequest object.
+ * Constructs a AssociateElasticIpRequest object.
  */
 AssociateElasticIpRequest::AssociateElasticIpRequest()
     : OpsWorksRequest(new AssociateElasticIpRequestPrivate(OpsWorksRequest::AssociateElasticIpAction, this))
@@ -172,14 +169,9 @@ bool AssociateElasticIpRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AssociateElasticIpResponse object.
+ * Returns a AssociateElasticIpResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AssociateElasticIpResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  OpsWorksClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AssociateElasticIpRequest::response(QNetworkReply * const reply) const
 {
@@ -187,20 +179,17 @@ QtAws::Core::AwsAbstractResponse * AssociateElasticIpRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::OpsWorks::AssociateElasticIpRequestPrivate
+ * \brief The AssociateElasticIpRequestPrivate class provides private implementation for AssociateElasticIpRequest.
+ * \internal
  *
- * @class  AssociateElasticIpRequestPrivate
- *
- * @brief  Private implementation for AssociateElasticIpRequest.
+ * \inmodule QtAwsOpsWorks
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AssociateElasticIpRequestPrivate object.
- *
- * @param  action  OpsWorks action being performed.
- * @param  q       Pointer to this object's public AssociateElasticIpRequest instance.
+ * Constructs a AssociateElasticIpRequestPrivate object for OpsWorks \a action with,
+ * public implementation \a q.
  */
 AssociateElasticIpRequestPrivate::AssociateElasticIpRequestPrivate(
     const OpsWorksRequest::Action action, AssociateElasticIpRequest * const q)
@@ -210,15 +199,10 @@ AssociateElasticIpRequestPrivate::AssociateElasticIpRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AssociateElasticIpRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AssociateElasticIpRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AssociateElasticIpRequest instance.
  */
 AssociateElasticIpRequestPrivate::AssociateElasticIpRequestPrivate(
     const AssociateElasticIpRequestPrivate &other, AssociateElasticIpRequest * const q)

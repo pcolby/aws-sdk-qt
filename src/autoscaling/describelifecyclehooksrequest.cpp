@@ -27,10 +27,9 @@ namespace AutoScaling {
 
 /*!
  * \class QtAws::AutoScaling::DescribeLifecycleHooksRequest
- *
  * \brief The DescribeLifecycleHooksRequest class provides an interface for AutoScaling DescribeLifecycleHooks requests.
  *
- * \ingroup AutoScaling
+ * \inmodule QtAwsAutoScaling
  *
  *  <fullname>Amazon EC2 Auto Scaling</fullname>
  * 
@@ -42,9 +41,7 @@ namespace AutoScaling {
  */
 
 /*!
- * @brief  Constructs a new DescribeLifecycleHooksRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeLifecycleHooksRequest::DescribeLifecycleHooksRequest(const DescribeLifecycleHooksRequest &other)
     : AutoScalingRequest(new DescribeLifecycleHooksRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ DescribeLifecycleHooksRequest::DescribeLifecycleHooksRequest(const DescribeLifec
 }
 
 /*!
- * @brief  Constructs a new DescribeLifecycleHooksRequest object.
+ * Constructs a DescribeLifecycleHooksRequest object.
  */
 DescribeLifecycleHooksRequest::DescribeLifecycleHooksRequest()
     : AutoScalingRequest(new DescribeLifecycleHooksRequestPrivate(AutoScalingRequest::DescribeLifecycleHooksAction, this))
@@ -71,14 +68,9 @@ bool DescribeLifecycleHooksRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeLifecycleHooksResponse object.
+ * Returns a DescribeLifecycleHooksResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeLifecycleHooksResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AutoScalingClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeLifecycleHooksRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * DescribeLifecycleHooksRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::AutoScaling::DescribeLifecycleHooksRequestPrivate
+ * \brief The DescribeLifecycleHooksRequestPrivate class provides private implementation for DescribeLifecycleHooksRequest.
+ * \internal
  *
- * @class  DescribeLifecycleHooksRequestPrivate
- *
- * @brief  Private implementation for DescribeLifecycleHooksRequest.
+ * \inmodule QtAwsAutoScaling
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeLifecycleHooksRequestPrivate object.
- *
- * @param  action  AutoScaling action being performed.
- * @param  q       Pointer to this object's public DescribeLifecycleHooksRequest instance.
+ * Constructs a DescribeLifecycleHooksRequestPrivate object for AutoScaling \a action with,
+ * public implementation \a q.
  */
 DescribeLifecycleHooksRequestPrivate::DescribeLifecycleHooksRequestPrivate(
     const AutoScalingRequest::Action action, DescribeLifecycleHooksRequest * const q)
@@ -109,15 +98,10 @@ DescribeLifecycleHooksRequestPrivate::DescribeLifecycleHooksRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeLifecycleHooksRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeLifecycleHooksRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeLifecycleHooksRequest instance.
  */
 DescribeLifecycleHooksRequestPrivate::DescribeLifecycleHooksRequestPrivate(
     const DescribeLifecycleHooksRequestPrivate &other, DescribeLifecycleHooksRequest * const q)

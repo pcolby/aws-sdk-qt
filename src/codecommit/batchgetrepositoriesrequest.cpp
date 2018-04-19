@@ -27,10 +27,9 @@ namespace CodeCommit {
 
 /*!
  * \class QtAws::CodeCommit::BatchGetRepositoriesRequest
- *
  * \brief The BatchGetRepositoriesRequest class provides an interface for CodeCommit BatchGetRepositories requests.
  *
- * \ingroup CodeCommit
+ * \inmodule QtAwsCodeCommit
  *
  *  <fullname>AWS CodeCommit</fullname>
  * 
@@ -227,9 +226,7 @@ namespace CodeCommit {
  */
 
 /*!
- * @brief  Constructs a new BatchGetRepositoriesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 BatchGetRepositoriesRequest::BatchGetRepositoriesRequest(const BatchGetRepositoriesRequest &other)
     : CodeCommitRequest(new BatchGetRepositoriesRequestPrivate(*other.d_func(), this))
@@ -238,7 +235,7 @@ BatchGetRepositoriesRequest::BatchGetRepositoriesRequest(const BatchGetRepositor
 }
 
 /*!
- * @brief  Constructs a new BatchGetRepositoriesRequest object.
+ * Constructs a BatchGetRepositoriesRequest object.
  */
 BatchGetRepositoriesRequest::BatchGetRepositoriesRequest()
     : CodeCommitRequest(new BatchGetRepositoriesRequestPrivate(CodeCommitRequest::BatchGetRepositoriesAction, this))
@@ -256,14 +253,9 @@ bool BatchGetRepositoriesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an BatchGetRepositoriesResponse object.
+ * Returns a BatchGetRepositoriesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An BatchGetRepositoriesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CodeCommitClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * BatchGetRepositoriesRequest::response(QNetworkReply * const reply) const
 {
@@ -271,20 +263,17 @@ QtAws::Core::AwsAbstractResponse * BatchGetRepositoriesRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::CodeCommit::BatchGetRepositoriesRequestPrivate
+ * \brief The BatchGetRepositoriesRequestPrivate class provides private implementation for BatchGetRepositoriesRequest.
+ * \internal
  *
- * @class  BatchGetRepositoriesRequestPrivate
- *
- * @brief  Private implementation for BatchGetRepositoriesRequest.
+ * \inmodule QtAwsCodeCommit
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new BatchGetRepositoriesRequestPrivate object.
- *
- * @param  action  CodeCommit action being performed.
- * @param  q       Pointer to this object's public BatchGetRepositoriesRequest instance.
+ * Constructs a BatchGetRepositoriesRequestPrivate object for CodeCommit \a action with,
+ * public implementation \a q.
  */
 BatchGetRepositoriesRequestPrivate::BatchGetRepositoriesRequestPrivate(
     const CodeCommitRequest::Action action, BatchGetRepositoriesRequest * const q)
@@ -294,15 +283,10 @@ BatchGetRepositoriesRequestPrivate::BatchGetRepositoriesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new BatchGetRepositoriesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the BatchGetRepositoriesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public BatchGetRepositoriesRequest instance.
  */
 BatchGetRepositoriesRequestPrivate::BatchGetRepositoriesRequestPrivate(
     const BatchGetRepositoriesRequestPrivate &other, BatchGetRepositoriesRequest * const q)

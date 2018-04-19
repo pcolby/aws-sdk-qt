@@ -27,10 +27,9 @@ namespace Cloud9 {
 
 /*!
  * \class QtAws::Cloud9::CreateEnvironmentEC2Request
- *
  * \brief The CreateEnvironmentEC2Request class provides an interface for Cloud9 CreateEnvironmentEC2 requests.
  *
- * \ingroup Cloud9
+ * \inmodule QtAwsCloud9
  *
  *  <fullname>AWS Cloud9</fullname>
  * 
@@ -91,9 +90,7 @@ namespace Cloud9 {
  */
 
 /*!
- * @brief  Constructs a new CreateEnvironmentEC2Request object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateEnvironmentEC2Request::CreateEnvironmentEC2Request(const CreateEnvironmentEC2Request &other)
     : Cloud9Request(new CreateEnvironmentEC2RequestPrivate(*other.d_func(), this))
@@ -102,7 +99,7 @@ CreateEnvironmentEC2Request::CreateEnvironmentEC2Request(const CreateEnvironment
 }
 
 /*!
- * @brief  Constructs a new CreateEnvironmentEC2Request object.
+ * Constructs a CreateEnvironmentEC2Request object.
  */
 CreateEnvironmentEC2Request::CreateEnvironmentEC2Request()
     : Cloud9Request(new CreateEnvironmentEC2RequestPrivate(Cloud9Request::CreateEnvironmentEC2Action, this))
@@ -120,14 +117,9 @@ bool CreateEnvironmentEC2Request::isValid() const
 
 
 /*!
- * @brief  Construct an CreateEnvironmentEC2Response object.
+ * Returns a CreateEnvironmentEC2Response object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateEnvironmentEC2Response instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  Cloud9Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateEnvironmentEC2Request::response(QNetworkReply * const reply) const
 {
@@ -135,20 +127,17 @@ QtAws::Core::AwsAbstractResponse * CreateEnvironmentEC2Request::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::Cloud9::CreateEnvironmentEC2RequestPrivate
+ * \brief The CreateEnvironmentEC2RequestPrivate class provides private implementation for CreateEnvironmentEC2Request.
+ * \internal
  *
- * @class  CreateEnvironmentEC2RequestPrivate
- *
- * @brief  Private implementation for CreateEnvironmentEC2Request.
+ * \inmodule QtAwsCloud9
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateEnvironmentEC2RequestPrivate object.
- *
- * @param  action  Cloud9 action being performed.
- * @param  q       Pointer to this object's public CreateEnvironmentEC2Request instance.
+ * Constructs a CreateEnvironmentEC2RequestPrivate object for Cloud9 \a action with,
+ * public implementation \a q.
  */
 CreateEnvironmentEC2RequestPrivate::CreateEnvironmentEC2RequestPrivate(
     const Cloud9Request::Action action, CreateEnvironmentEC2Request * const q)
@@ -158,15 +147,10 @@ CreateEnvironmentEC2RequestPrivate::CreateEnvironmentEC2RequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateEnvironmentEC2RequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateEnvironmentEC2Request
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateEnvironmentEC2Request instance.
  */
 CreateEnvironmentEC2RequestPrivate::CreateEnvironmentEC2RequestPrivate(
     const CreateEnvironmentEC2RequestPrivate &other, CreateEnvironmentEC2Request * const q)

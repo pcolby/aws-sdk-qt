@@ -27,10 +27,9 @@ namespace ServiceCatalog {
 
 /*!
  * \class QtAws::ServiceCatalog::ListProvisioningArtifactsRequest
- *
  * \brief The ListProvisioningArtifactsRequest class provides an interface for ServiceCatalog ListProvisioningArtifacts requests.
  *
- * \ingroup ServiceCatalog
+ * \inmodule QtAwsServiceCatalog
  *
  *  <fullname>AWS Service Catalog</fullname>
  * 
@@ -43,9 +42,7 @@ namespace ServiceCatalog {
  */
 
 /*!
- * @brief  Constructs a new ListProvisioningArtifactsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListProvisioningArtifactsRequest::ListProvisioningArtifactsRequest(const ListProvisioningArtifactsRequest &other)
     : ServiceCatalogRequest(new ListProvisioningArtifactsRequestPrivate(*other.d_func(), this))
@@ -54,7 +51,7 @@ ListProvisioningArtifactsRequest::ListProvisioningArtifactsRequest(const ListPro
 }
 
 /*!
- * @brief  Constructs a new ListProvisioningArtifactsRequest object.
+ * Constructs a ListProvisioningArtifactsRequest object.
  */
 ListProvisioningArtifactsRequest::ListProvisioningArtifactsRequest()
     : ServiceCatalogRequest(new ListProvisioningArtifactsRequestPrivate(ServiceCatalogRequest::ListProvisioningArtifactsAction, this))
@@ -72,14 +69,9 @@ bool ListProvisioningArtifactsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListProvisioningArtifactsResponse object.
+ * Returns a ListProvisioningArtifactsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListProvisioningArtifactsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ServiceCatalogClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListProvisioningArtifactsRequest::response(QNetworkReply * const reply) const
 {
@@ -87,20 +79,17 @@ QtAws::Core::AwsAbstractResponse * ListProvisioningArtifactsRequest::response(QN
 }
 
 /*!
- * @internal
+ * \class QtAws::ServiceCatalog::ListProvisioningArtifactsRequestPrivate
+ * \brief The ListProvisioningArtifactsRequestPrivate class provides private implementation for ListProvisioningArtifactsRequest.
+ * \internal
  *
- * @class  ListProvisioningArtifactsRequestPrivate
- *
- * @brief  Private implementation for ListProvisioningArtifactsRequest.
+ * \inmodule QtAwsServiceCatalog
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListProvisioningArtifactsRequestPrivate object.
- *
- * @param  action  ServiceCatalog action being performed.
- * @param  q       Pointer to this object's public ListProvisioningArtifactsRequest instance.
+ * Constructs a ListProvisioningArtifactsRequestPrivate object for ServiceCatalog \a action with,
+ * public implementation \a q.
  */
 ListProvisioningArtifactsRequestPrivate::ListProvisioningArtifactsRequestPrivate(
     const ServiceCatalogRequest::Action action, ListProvisioningArtifactsRequest * const q)
@@ -110,15 +99,10 @@ ListProvisioningArtifactsRequestPrivate::ListProvisioningArtifactsRequestPrivate
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListProvisioningArtifactsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListProvisioningArtifactsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListProvisioningArtifactsRequest instance.
  */
 ListProvisioningArtifactsRequestPrivate::ListProvisioningArtifactsRequestPrivate(
     const ListProvisioningArtifactsRequestPrivate &other, ListProvisioningArtifactsRequest * const q)

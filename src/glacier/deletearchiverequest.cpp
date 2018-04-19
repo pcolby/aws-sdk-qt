@@ -27,10 +27,9 @@ namespace Glacier {
 
 /*!
  * \class QtAws::Glacier::DeleteArchiveRequest
- *
  * \brief The DeleteArchiveRequest class provides an interface for Glacier DeleteArchive requests.
  *
- * \ingroup Glacier
+ * \inmodule QtAwsGlacier
  *
  *  Amazon Glacier is a storage solution for "cold
  * 
@@ -75,9 +74,7 @@ namespace Glacier {
  */
 
 /*!
- * @brief  Constructs a new DeleteArchiveRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteArchiveRequest::DeleteArchiveRequest(const DeleteArchiveRequest &other)
     : GlacierRequest(new DeleteArchiveRequestPrivate(*other.d_func(), this))
@@ -86,7 +83,7 @@ DeleteArchiveRequest::DeleteArchiveRequest(const DeleteArchiveRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DeleteArchiveRequest object.
+ * Constructs a DeleteArchiveRequest object.
  */
 DeleteArchiveRequest::DeleteArchiveRequest()
     : GlacierRequest(new DeleteArchiveRequestPrivate(GlacierRequest::DeleteArchiveAction, this))
@@ -104,14 +101,9 @@ bool DeleteArchiveRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteArchiveResponse object.
+ * Returns a DeleteArchiveResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteArchiveResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GlacierClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteArchiveRequest::response(QNetworkReply * const reply) const
 {
@@ -119,20 +111,17 @@ QtAws::Core::AwsAbstractResponse * DeleteArchiveRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::Glacier::DeleteArchiveRequestPrivate
+ * \brief The DeleteArchiveRequestPrivate class provides private implementation for DeleteArchiveRequest.
+ * \internal
  *
- * @class  DeleteArchiveRequestPrivate
- *
- * @brief  Private implementation for DeleteArchiveRequest.
+ * \inmodule QtAwsGlacier
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteArchiveRequestPrivate object.
- *
- * @param  action  Glacier action being performed.
- * @param  q       Pointer to this object's public DeleteArchiveRequest instance.
+ * Constructs a DeleteArchiveRequestPrivate object for Glacier \a action with,
+ * public implementation \a q.
  */
 DeleteArchiveRequestPrivate::DeleteArchiveRequestPrivate(
     const GlacierRequest::Action action, DeleteArchiveRequest * const q)
@@ -142,15 +131,10 @@ DeleteArchiveRequestPrivate::DeleteArchiveRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteArchiveRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteArchiveRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteArchiveRequest instance.
  */
 DeleteArchiveRequestPrivate::DeleteArchiveRequestPrivate(
     const DeleteArchiveRequestPrivate &other, DeleteArchiveRequest * const q)

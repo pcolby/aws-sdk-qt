@@ -27,10 +27,9 @@ namespace CloudDirectory {
 
 /*!
  * \class QtAws::CloudDirectory::ListPolicyAttachmentsRequest
- *
  * \brief The ListPolicyAttachmentsRequest class provides an interface for CloudDirectory ListPolicyAttachments requests.
  *
- * \ingroup CloudDirectory
+ * \inmodule QtAwsCloudDirectory
  *
  *  <fullname>Amazon Cloud Directory</fullname>
  * 
@@ -44,9 +43,7 @@ namespace CloudDirectory {
  */
 
 /*!
- * @brief  Constructs a new ListPolicyAttachmentsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListPolicyAttachmentsRequest::ListPolicyAttachmentsRequest(const ListPolicyAttachmentsRequest &other)
     : CloudDirectoryRequest(new ListPolicyAttachmentsRequestPrivate(*other.d_func(), this))
@@ -55,7 +52,7 @@ ListPolicyAttachmentsRequest::ListPolicyAttachmentsRequest(const ListPolicyAttac
 }
 
 /*!
- * @brief  Constructs a new ListPolicyAttachmentsRequest object.
+ * Constructs a ListPolicyAttachmentsRequest object.
  */
 ListPolicyAttachmentsRequest::ListPolicyAttachmentsRequest()
     : CloudDirectoryRequest(new ListPolicyAttachmentsRequestPrivate(CloudDirectoryRequest::ListPolicyAttachmentsAction, this))
@@ -73,14 +70,9 @@ bool ListPolicyAttachmentsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListPolicyAttachmentsResponse object.
+ * Returns a ListPolicyAttachmentsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListPolicyAttachmentsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudDirectoryClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListPolicyAttachmentsRequest::response(QNetworkReply * const reply) const
 {
@@ -88,20 +80,17 @@ QtAws::Core::AwsAbstractResponse * ListPolicyAttachmentsRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudDirectory::ListPolicyAttachmentsRequestPrivate
+ * \brief The ListPolicyAttachmentsRequestPrivate class provides private implementation for ListPolicyAttachmentsRequest.
+ * \internal
  *
- * @class  ListPolicyAttachmentsRequestPrivate
- *
- * @brief  Private implementation for ListPolicyAttachmentsRequest.
+ * \inmodule QtAwsCloudDirectory
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListPolicyAttachmentsRequestPrivate object.
- *
- * @param  action  CloudDirectory action being performed.
- * @param  q       Pointer to this object's public ListPolicyAttachmentsRequest instance.
+ * Constructs a ListPolicyAttachmentsRequestPrivate object for CloudDirectory \a action with,
+ * public implementation \a q.
  */
 ListPolicyAttachmentsRequestPrivate::ListPolicyAttachmentsRequestPrivate(
     const CloudDirectoryRequest::Action action, ListPolicyAttachmentsRequest * const q)
@@ -111,15 +100,10 @@ ListPolicyAttachmentsRequestPrivate::ListPolicyAttachmentsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListPolicyAttachmentsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListPolicyAttachmentsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListPolicyAttachmentsRequest instance.
  */
 ListPolicyAttachmentsRequestPrivate::ListPolicyAttachmentsRequestPrivate(
     const ListPolicyAttachmentsRequestPrivate &other, ListPolicyAttachmentsRequest * const q)

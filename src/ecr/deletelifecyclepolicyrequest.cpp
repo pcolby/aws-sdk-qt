@@ -27,10 +27,9 @@ namespace ECR {
 
 /*!
  * \class QtAws::ECR::DeleteLifecyclePolicyRequest
- *
  * \brief The DeleteLifecyclePolicyRequest class provides an interface for ECR DeleteLifecyclePolicy requests.
  *
- * \ingroup ECR
+ * \inmodule QtAwsECR
  *
  *  Amazon Elastic Container Registry (Amazon ECR) is a managed Docker registry service. Customers can use the familiar
  *  Docker CLI to push, pull, and manage images. Amazon ECR provides a secure, scalable, and reliable registry. Amazon ECR
@@ -41,9 +40,7 @@ namespace ECR {
  */
 
 /*!
- * @brief  Constructs a new DeleteLifecyclePolicyRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteLifecyclePolicyRequest::DeleteLifecyclePolicyRequest(const DeleteLifecyclePolicyRequest &other)
     : ECRRequest(new DeleteLifecyclePolicyRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ DeleteLifecyclePolicyRequest::DeleteLifecyclePolicyRequest(const DeleteLifecycle
 }
 
 /*!
- * @brief  Constructs a new DeleteLifecyclePolicyRequest object.
+ * Constructs a DeleteLifecyclePolicyRequest object.
  */
 DeleteLifecyclePolicyRequest::DeleteLifecyclePolicyRequest()
     : ECRRequest(new DeleteLifecyclePolicyRequestPrivate(ECRRequest::DeleteLifecyclePolicyAction, this))
@@ -70,14 +67,9 @@ bool DeleteLifecyclePolicyRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteLifecyclePolicyResponse object.
+ * Returns a DeleteLifecyclePolicyResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteLifecyclePolicyResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ECRClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteLifecyclePolicyRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * DeleteLifecyclePolicyRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::ECR::DeleteLifecyclePolicyRequestPrivate
+ * \brief The DeleteLifecyclePolicyRequestPrivate class provides private implementation for DeleteLifecyclePolicyRequest.
+ * \internal
  *
- * @class  DeleteLifecyclePolicyRequestPrivate
- *
- * @brief  Private implementation for DeleteLifecyclePolicyRequest.
+ * \inmodule QtAwsECR
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteLifecyclePolicyRequestPrivate object.
- *
- * @param  action  ECR action being performed.
- * @param  q       Pointer to this object's public DeleteLifecyclePolicyRequest instance.
+ * Constructs a DeleteLifecyclePolicyRequestPrivate object for ECR \a action with,
+ * public implementation \a q.
  */
 DeleteLifecyclePolicyRequestPrivate::DeleteLifecyclePolicyRequestPrivate(
     const ECRRequest::Action action, DeleteLifecyclePolicyRequest * const q)
@@ -108,15 +97,10 @@ DeleteLifecyclePolicyRequestPrivate::DeleteLifecyclePolicyRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteLifecyclePolicyRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteLifecyclePolicyRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteLifecyclePolicyRequest instance.
  */
 DeleteLifecyclePolicyRequestPrivate::DeleteLifecyclePolicyRequestPrivate(
     const DeleteLifecyclePolicyRequestPrivate &other, DeleteLifecyclePolicyRequest * const q)

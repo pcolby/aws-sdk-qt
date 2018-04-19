@@ -27,10 +27,9 @@ namespace ECR {
 
 /*!
  * \class QtAws::ECR::CreateRepositoryRequest
- *
  * \brief The CreateRepositoryRequest class provides an interface for ECR CreateRepository requests.
  *
- * \ingroup ECR
+ * \inmodule QtAwsECR
  *
  *  Amazon Elastic Container Registry (Amazon ECR) is a managed Docker registry service. Customers can use the familiar
  *  Docker CLI to push, pull, and manage images. Amazon ECR provides a secure, scalable, and reliable registry. Amazon ECR
@@ -41,9 +40,7 @@ namespace ECR {
  */
 
 /*!
- * @brief  Constructs a new CreateRepositoryRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateRepositoryRequest::CreateRepositoryRequest(const CreateRepositoryRequest &other)
     : ECRRequest(new CreateRepositoryRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ CreateRepositoryRequest::CreateRepositoryRequest(const CreateRepositoryRequest &
 }
 
 /*!
- * @brief  Constructs a new CreateRepositoryRequest object.
+ * Constructs a CreateRepositoryRequest object.
  */
 CreateRepositoryRequest::CreateRepositoryRequest()
     : ECRRequest(new CreateRepositoryRequestPrivate(ECRRequest::CreateRepositoryAction, this))
@@ -70,14 +67,9 @@ bool CreateRepositoryRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateRepositoryResponse object.
+ * Returns a CreateRepositoryResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateRepositoryResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ECRClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateRepositoryRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * CreateRepositoryRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::ECR::CreateRepositoryRequestPrivate
+ * \brief The CreateRepositoryRequestPrivate class provides private implementation for CreateRepositoryRequest.
+ * \internal
  *
- * @class  CreateRepositoryRequestPrivate
- *
- * @brief  Private implementation for CreateRepositoryRequest.
+ * \inmodule QtAwsECR
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateRepositoryRequestPrivate object.
- *
- * @param  action  ECR action being performed.
- * @param  q       Pointer to this object's public CreateRepositoryRequest instance.
+ * Constructs a CreateRepositoryRequestPrivate object for ECR \a action with,
+ * public implementation \a q.
  */
 CreateRepositoryRequestPrivate::CreateRepositoryRequestPrivate(
     const ECRRequest::Action action, CreateRepositoryRequest * const q)
@@ -108,15 +97,10 @@ CreateRepositoryRequestPrivate::CreateRepositoryRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateRepositoryRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateRepositoryRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateRepositoryRequest instance.
  */
 CreateRepositoryRequestPrivate::CreateRepositoryRequestPrivate(
     const CreateRepositoryRequestPrivate &other, CreateRepositoryRequest * const q)

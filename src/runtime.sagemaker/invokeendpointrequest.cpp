@@ -27,10 +27,9 @@ namespace SageMakerRuntime {
 
 /*!
  * \class QtAws::SageMakerRuntime::InvokeEndpointRequest
- *
  * \brief The InvokeEndpointRequest class provides an interface for SageMakerRuntime InvokeEndpoint requests.
  *
- * \ingroup SageMakerRuntime
+ * \inmodule QtAwsSageMakerRuntime
  *
  *  Amazon SageMaker runtime API.
  *
@@ -38,9 +37,7 @@ namespace SageMakerRuntime {
  */
 
 /*!
- * @brief  Constructs a new InvokeEndpointRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 InvokeEndpointRequest::InvokeEndpointRequest(const InvokeEndpointRequest &other)
     : SageMakerRuntimeRequest(new InvokeEndpointRequestPrivate(*other.d_func(), this))
@@ -49,7 +46,7 @@ InvokeEndpointRequest::InvokeEndpointRequest(const InvokeEndpointRequest &other)
 }
 
 /*!
- * @brief  Constructs a new InvokeEndpointRequest object.
+ * Constructs a InvokeEndpointRequest object.
  */
 InvokeEndpointRequest::InvokeEndpointRequest()
     : SageMakerRuntimeRequest(new InvokeEndpointRequestPrivate(SageMakerRuntimeRequest::InvokeEndpointAction, this))
@@ -67,14 +64,9 @@ bool InvokeEndpointRequest::isValid() const
 
 
 /*!
- * @brief  Construct an InvokeEndpointResponse object.
+ * Returns a InvokeEndpointResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An InvokeEndpointResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SageMakerRuntimeClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * InvokeEndpointRequest::response(QNetworkReply * const reply) const
 {
@@ -82,20 +74,17 @@ QtAws::Core::AwsAbstractResponse * InvokeEndpointRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::SageMakerRuntime::InvokeEndpointRequestPrivate
+ * \brief The InvokeEndpointRequestPrivate class provides private implementation for InvokeEndpointRequest.
+ * \internal
  *
- * @class  InvokeEndpointRequestPrivate
- *
- * @brief  Private implementation for InvokeEndpointRequest.
+ * \inmodule QtAwsSageMakerRuntime
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new InvokeEndpointRequestPrivate object.
- *
- * @param  action  SageMakerRuntime action being performed.
- * @param  q       Pointer to this object's public InvokeEndpointRequest instance.
+ * Constructs a InvokeEndpointRequestPrivate object for SageMakerRuntime \a action with,
+ * public implementation \a q.
  */
 InvokeEndpointRequestPrivate::InvokeEndpointRequestPrivate(
     const SageMakerRuntimeRequest::Action action, InvokeEndpointRequest * const q)
@@ -105,15 +94,10 @@ InvokeEndpointRequestPrivate::InvokeEndpointRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new InvokeEndpointRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the InvokeEndpointRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public InvokeEndpointRequest instance.
  */
 InvokeEndpointRequestPrivate::InvokeEndpointRequestPrivate(
     const InvokeEndpointRequestPrivate &other, InvokeEndpointRequest * const q)

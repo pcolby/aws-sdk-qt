@@ -27,10 +27,9 @@ namespace CloudFront {
 
 /*!
  * \class QtAws::CloudFront::CreateDistributionWithTagsRequest
- *
  * \brief The CreateDistributionWithTagsRequest class provides an interface for CloudFront CreateDistributionWithTags requests.
  *
- * \ingroup CloudFront
+ * \inmodule QtAwsCloudFront
  *
  *  <fullname>Amazon CloudFront</fullname>
  * 
@@ -42,9 +41,7 @@ namespace CloudFront {
  */
 
 /*!
- * @brief  Constructs a new CreateDistributionWithTagsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateDistributionWithTagsRequest::CreateDistributionWithTagsRequest(const CreateDistributionWithTagsRequest &other)
     : CloudFrontRequest(new CreateDistributionWithTagsRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ CreateDistributionWithTagsRequest::CreateDistributionWithTagsRequest(const Creat
 }
 
 /*!
- * @brief  Constructs a new CreateDistributionWithTagsRequest object.
+ * Constructs a CreateDistributionWithTagsRequest object.
  */
 CreateDistributionWithTagsRequest::CreateDistributionWithTagsRequest()
     : CloudFrontRequest(new CreateDistributionWithTagsRequestPrivate(CloudFrontRequest::CreateDistributionWithTagsAction, this))
@@ -71,14 +68,9 @@ bool CreateDistributionWithTagsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateDistributionWithTagsResponse object.
+ * Returns a CreateDistributionWithTagsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateDistributionWithTagsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudFrontClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateDistributionWithTagsRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * CreateDistributionWithTagsRequest::response(Q
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudFront::CreateDistributionWithTagsRequestPrivate
+ * \brief The CreateDistributionWithTagsRequestPrivate class provides private implementation for CreateDistributionWithTagsRequest.
+ * \internal
  *
- * @class  CreateDistributionWithTagsRequestPrivate
- *
- * @brief  Private implementation for CreateDistributionWithTagsRequest.
+ * \inmodule QtAwsCloudFront
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateDistributionWithTagsRequestPrivate object.
- *
- * @param  action  CloudFront action being performed.
- * @param  q       Pointer to this object's public CreateDistributionWithTagsRequest instance.
+ * Constructs a CreateDistributionWithTagsRequestPrivate object for CloudFront \a action with,
+ * public implementation \a q.
  */
 CreateDistributionWithTagsRequestPrivate::CreateDistributionWithTagsRequestPrivate(
     const CloudFrontRequest::Action action, CreateDistributionWithTagsRequest * const q)
@@ -109,15 +98,10 @@ CreateDistributionWithTagsRequestPrivate::CreateDistributionWithTagsRequestPriva
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateDistributionWithTagsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateDistributionWithTagsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateDistributionWithTagsRequest instance.
  */
 CreateDistributionWithTagsRequestPrivate::CreateDistributionWithTagsRequestPrivate(
     const CreateDistributionWithTagsRequestPrivate &other, CreateDistributionWithTagsRequest * const q)

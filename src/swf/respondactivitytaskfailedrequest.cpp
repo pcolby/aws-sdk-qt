@@ -27,10 +27,9 @@ namespace SWF {
 
 /*!
  * \class QtAws::SWF::RespondActivityTaskFailedRequest
- *
  * \brief The RespondActivityTaskFailedRequest class provides an interface for SWF RespondActivityTaskFailed requests.
  *
- * \ingroup SWF
+ * \inmodule QtAwsSWF
  *
  *  <fullname>Amazon Simple Workflow Service</fullname>
  * 
@@ -53,9 +52,7 @@ namespace SWF {
  */
 
 /*!
- * @brief  Constructs a new RespondActivityTaskFailedRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 RespondActivityTaskFailedRequest::RespondActivityTaskFailedRequest(const RespondActivityTaskFailedRequest &other)
     : SWFRequest(new RespondActivityTaskFailedRequestPrivate(*other.d_func(), this))
@@ -64,7 +61,7 @@ RespondActivityTaskFailedRequest::RespondActivityTaskFailedRequest(const Respond
 }
 
 /*!
- * @brief  Constructs a new RespondActivityTaskFailedRequest object.
+ * Constructs a RespondActivityTaskFailedRequest object.
  */
 RespondActivityTaskFailedRequest::RespondActivityTaskFailedRequest()
     : SWFRequest(new RespondActivityTaskFailedRequestPrivate(SWFRequest::RespondActivityTaskFailedAction, this))
@@ -82,14 +79,9 @@ bool RespondActivityTaskFailedRequest::isValid() const
 
 
 /*!
- * @brief  Construct an RespondActivityTaskFailedResponse object.
+ * Returns a RespondActivityTaskFailedResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An RespondActivityTaskFailedResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SWFClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * RespondActivityTaskFailedRequest::response(QNetworkReply * const reply) const
 {
@@ -97,20 +89,17 @@ QtAws::Core::AwsAbstractResponse * RespondActivityTaskFailedRequest::response(QN
 }
 
 /*!
- * @internal
+ * \class QtAws::SWF::RespondActivityTaskFailedRequestPrivate
+ * \brief The RespondActivityTaskFailedRequestPrivate class provides private implementation for RespondActivityTaskFailedRequest.
+ * \internal
  *
- * @class  RespondActivityTaskFailedRequestPrivate
- *
- * @brief  Private implementation for RespondActivityTaskFailedRequest.
+ * \inmodule QtAwsSWF
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new RespondActivityTaskFailedRequestPrivate object.
- *
- * @param  action  SWF action being performed.
- * @param  q       Pointer to this object's public RespondActivityTaskFailedRequest instance.
+ * Constructs a RespondActivityTaskFailedRequestPrivate object for SWF \a action with,
+ * public implementation \a q.
  */
 RespondActivityTaskFailedRequestPrivate::RespondActivityTaskFailedRequestPrivate(
     const SWFRequest::Action action, RespondActivityTaskFailedRequest * const q)
@@ -120,15 +109,10 @@ RespondActivityTaskFailedRequestPrivate::RespondActivityTaskFailedRequestPrivate
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RespondActivityTaskFailedRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the RespondActivityTaskFailedRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public RespondActivityTaskFailedRequest instance.
  */
 RespondActivityTaskFailedRequestPrivate::RespondActivityTaskFailedRequestPrivate(
     const RespondActivityTaskFailedRequestPrivate &other, RespondActivityTaskFailedRequest * const q)

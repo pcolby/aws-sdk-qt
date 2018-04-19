@@ -27,10 +27,9 @@ namespace WorkMail {
 
 /*!
  * \class QtAws::WorkMail::CreateResourceRequest
- *
  * \brief The CreateResourceRequest class provides an interface for WorkMail CreateResource requests.
  *
- * \ingroup WorkMail
+ * \inmodule QtAwsWorkMail
  *
  *  Amazon WorkMail is a secure, managed business email and calendaring service with support for existing desktop and mobile
  *  email clients. You can access your email, contacts, and calendars using Microsoft Outlook, your browser, or their native
@@ -70,9 +69,7 @@ namespace WorkMail {
  */
 
 /*!
- * @brief  Constructs a new CreateResourceRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateResourceRequest::CreateResourceRequest(const CreateResourceRequest &other)
     : WorkMailRequest(new CreateResourceRequestPrivate(*other.d_func(), this))
@@ -81,7 +78,7 @@ CreateResourceRequest::CreateResourceRequest(const CreateResourceRequest &other)
 }
 
 /*!
- * @brief  Constructs a new CreateResourceRequest object.
+ * Constructs a CreateResourceRequest object.
  */
 CreateResourceRequest::CreateResourceRequest()
     : WorkMailRequest(new CreateResourceRequestPrivate(WorkMailRequest::CreateResourceAction, this))
@@ -99,14 +96,9 @@ bool CreateResourceRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateResourceResponse object.
+ * Returns a CreateResourceResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateResourceResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WorkMailClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateResourceRequest::response(QNetworkReply * const reply) const
 {
@@ -114,20 +106,17 @@ QtAws::Core::AwsAbstractResponse * CreateResourceRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::WorkMail::CreateResourceRequestPrivate
+ * \brief The CreateResourceRequestPrivate class provides private implementation for CreateResourceRequest.
+ * \internal
  *
- * @class  CreateResourceRequestPrivate
- *
- * @brief  Private implementation for CreateResourceRequest.
+ * \inmodule QtAwsWorkMail
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateResourceRequestPrivate object.
- *
- * @param  action  WorkMail action being performed.
- * @param  q       Pointer to this object's public CreateResourceRequest instance.
+ * Constructs a CreateResourceRequestPrivate object for WorkMail \a action with,
+ * public implementation \a q.
  */
 CreateResourceRequestPrivate::CreateResourceRequestPrivate(
     const WorkMailRequest::Action action, CreateResourceRequest * const q)
@@ -137,15 +126,10 @@ CreateResourceRequestPrivate::CreateResourceRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateResourceRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateResourceRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateResourceRequest instance.
  */
 CreateResourceRequestPrivate::CreateResourceRequestPrivate(
     const CreateResourceRequestPrivate &other, CreateResourceRequest * const q)

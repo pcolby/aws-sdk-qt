@@ -27,10 +27,9 @@ namespace SNS {
 
 /*!
  * \class QtAws::SNS::AddPermissionRequest
- *
  * \brief The AddPermissionRequest class provides an interface for SNS AddPermission requests.
  *
- * \ingroup SNS
+ * \inmodule QtAwsSNS
  *
  *  <fullname>Amazon Simple Notification Service</fullname>
  * 
@@ -51,9 +50,7 @@ namespace SNS {
  */
 
 /*!
- * @brief  Constructs a new AddPermissionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AddPermissionRequest::AddPermissionRequest(const AddPermissionRequest &other)
     : SNSRequest(new AddPermissionRequestPrivate(*other.d_func(), this))
@@ -62,7 +59,7 @@ AddPermissionRequest::AddPermissionRequest(const AddPermissionRequest &other)
 }
 
 /*!
- * @brief  Constructs a new AddPermissionRequest object.
+ * Constructs a AddPermissionRequest object.
  */
 AddPermissionRequest::AddPermissionRequest()
     : SNSRequest(new AddPermissionRequestPrivate(SNSRequest::AddPermissionAction, this))
@@ -80,14 +77,9 @@ bool AddPermissionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AddPermissionResponse object.
+ * Returns a AddPermissionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AddPermissionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SNSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AddPermissionRequest::response(QNetworkReply * const reply) const
 {
@@ -95,20 +87,17 @@ QtAws::Core::AwsAbstractResponse * AddPermissionRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::SNS::AddPermissionRequestPrivate
+ * \brief The AddPermissionRequestPrivate class provides private implementation for AddPermissionRequest.
+ * \internal
  *
- * @class  AddPermissionRequestPrivate
- *
- * @brief  Private implementation for AddPermissionRequest.
+ * \inmodule QtAwsSNS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AddPermissionRequestPrivate object.
- *
- * @param  action  SNS action being performed.
- * @param  q       Pointer to this object's public AddPermissionRequest instance.
+ * Constructs a AddPermissionRequestPrivate object for SNS \a action with,
+ * public implementation \a q.
  */
 AddPermissionRequestPrivate::AddPermissionRequestPrivate(
     const SNSRequest::Action action, AddPermissionRequest * const q)
@@ -118,15 +107,10 @@ AddPermissionRequestPrivate::AddPermissionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AddPermissionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AddPermissionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AddPermissionRequest instance.
  */
 AddPermissionRequestPrivate::AddPermissionRequestPrivate(
     const AddPermissionRequestPrivate &other, AddPermissionRequest * const q)

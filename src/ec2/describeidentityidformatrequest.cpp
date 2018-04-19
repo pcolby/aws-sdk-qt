@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DescribeIdentityIdFormatRequest
- *
  * \brief The DescribeIdentityIdFormatRequest class provides an interface for EC2 DescribeIdentityIdFormat requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DescribeIdentityIdFormatRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeIdentityIdFormatRequest::DescribeIdentityIdFormatRequest(const DescribeIdentityIdFormatRequest &other)
     : EC2Request(new DescribeIdentityIdFormatRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ DescribeIdentityIdFormatRequest::DescribeIdentityIdFormatRequest(const DescribeI
 }
 
 /*!
- * @brief  Constructs a new DescribeIdentityIdFormatRequest object.
+ * Constructs a DescribeIdentityIdFormatRequest object.
  */
 DescribeIdentityIdFormatRequest::DescribeIdentityIdFormatRequest()
     : EC2Request(new DescribeIdentityIdFormatRequestPrivate(EC2Request::DescribeIdentityIdFormatAction, this))
@@ -70,14 +67,9 @@ bool DescribeIdentityIdFormatRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeIdentityIdFormatResponse object.
+ * Returns a DescribeIdentityIdFormatResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeIdentityIdFormatResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeIdentityIdFormatRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * DescribeIdentityIdFormatRequest::response(QNe
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::DescribeIdentityIdFormatRequestPrivate
+ * \brief The DescribeIdentityIdFormatRequestPrivate class provides private implementation for DescribeIdentityIdFormatRequest.
+ * \internal
  *
- * @class  DescribeIdentityIdFormatRequestPrivate
- *
- * @brief  Private implementation for DescribeIdentityIdFormatRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeIdentityIdFormatRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public DescribeIdentityIdFormatRequest instance.
+ * Constructs a DescribeIdentityIdFormatRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 DescribeIdentityIdFormatRequestPrivate::DescribeIdentityIdFormatRequestPrivate(
     const EC2Request::Action action, DescribeIdentityIdFormatRequest * const q)
@@ -108,15 +97,10 @@ DescribeIdentityIdFormatRequestPrivate::DescribeIdentityIdFormatRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeIdentityIdFormatRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeIdentityIdFormatRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeIdentityIdFormatRequest instance.
  */
 DescribeIdentityIdFormatRequestPrivate::DescribeIdentityIdFormatRequestPrivate(
     const DescribeIdentityIdFormatRequestPrivate &other, DescribeIdentityIdFormatRequest * const q)

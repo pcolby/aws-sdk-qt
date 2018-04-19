@@ -27,10 +27,9 @@ namespace SES {
 
 /*!
  * \class QtAws::SES::CreateConfigurationSetRequest
- *
  * \brief The CreateConfigurationSetRequest class provides an interface for SES CreateConfigurationSet requests.
  *
- * \ingroup SES
+ * \inmodule QtAwsSES
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -48,9 +47,7 @@ namespace SES {
  */
 
 /*!
- * @brief  Constructs a new CreateConfigurationSetRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateConfigurationSetRequest::CreateConfigurationSetRequest(const CreateConfigurationSetRequest &other)
     : SESRequest(new CreateConfigurationSetRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ CreateConfigurationSetRequest::CreateConfigurationSetRequest(const CreateConfigu
 }
 
 /*!
- * @brief  Constructs a new CreateConfigurationSetRequest object.
+ * Constructs a CreateConfigurationSetRequest object.
  */
 CreateConfigurationSetRequest::CreateConfigurationSetRequest()
     : SESRequest(new CreateConfigurationSetRequestPrivate(SESRequest::CreateConfigurationSetAction, this))
@@ -77,14 +74,9 @@ bool CreateConfigurationSetRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateConfigurationSetResponse object.
+ * Returns a CreateConfigurationSetResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateConfigurationSetResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SESClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateConfigurationSetRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * CreateConfigurationSetRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::SES::CreateConfigurationSetRequestPrivate
+ * \brief The CreateConfigurationSetRequestPrivate class provides private implementation for CreateConfigurationSetRequest.
+ * \internal
  *
- * @class  CreateConfigurationSetRequestPrivate
- *
- * @brief  Private implementation for CreateConfigurationSetRequest.
+ * \inmodule QtAwsSES
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateConfigurationSetRequestPrivate object.
- *
- * @param  action  SES action being performed.
- * @param  q       Pointer to this object's public CreateConfigurationSetRequest instance.
+ * Constructs a CreateConfigurationSetRequestPrivate object for SES \a action with,
+ * public implementation \a q.
  */
 CreateConfigurationSetRequestPrivate::CreateConfigurationSetRequestPrivate(
     const SESRequest::Action action, CreateConfigurationSetRequest * const q)
@@ -115,15 +104,10 @@ CreateConfigurationSetRequestPrivate::CreateConfigurationSetRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateConfigurationSetRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateConfigurationSetRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateConfigurationSetRequest instance.
  */
 CreateConfigurationSetRequestPrivate::CreateConfigurationSetRequestPrivate(
     const CreateConfigurationSetRequestPrivate &other, CreateConfigurationSetRequest * const q)

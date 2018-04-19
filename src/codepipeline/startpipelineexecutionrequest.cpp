@@ -27,10 +27,9 @@ namespace CodePipeline {
 
 /*!
  * \class QtAws::CodePipeline::StartPipelineExecutionRequest
- *
  * \brief The StartPipelineExecutionRequest class provides an interface for CodePipeline StartPipelineExecution requests.
  *
- * \ingroup CodePipeline
+ * \inmodule QtAwsCodePipeline
  *
  *  <fullname>AWS CodePipeline</fullname>
  * 
@@ -200,9 +199,7 @@ namespace CodePipeline {
  */
 
 /*!
- * @brief  Constructs a new StartPipelineExecutionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 StartPipelineExecutionRequest::StartPipelineExecutionRequest(const StartPipelineExecutionRequest &other)
     : CodePipelineRequest(new StartPipelineExecutionRequestPrivate(*other.d_func(), this))
@@ -211,7 +208,7 @@ StartPipelineExecutionRequest::StartPipelineExecutionRequest(const StartPipeline
 }
 
 /*!
- * @brief  Constructs a new StartPipelineExecutionRequest object.
+ * Constructs a StartPipelineExecutionRequest object.
  */
 StartPipelineExecutionRequest::StartPipelineExecutionRequest()
     : CodePipelineRequest(new StartPipelineExecutionRequestPrivate(CodePipelineRequest::StartPipelineExecutionAction, this))
@@ -229,14 +226,9 @@ bool StartPipelineExecutionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an StartPipelineExecutionResponse object.
+ * Returns a StartPipelineExecutionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An StartPipelineExecutionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CodePipelineClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * StartPipelineExecutionRequest::response(QNetworkReply * const reply) const
 {
@@ -244,20 +236,17 @@ QtAws::Core::AwsAbstractResponse * StartPipelineExecutionRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::CodePipeline::StartPipelineExecutionRequestPrivate
+ * \brief The StartPipelineExecutionRequestPrivate class provides private implementation for StartPipelineExecutionRequest.
+ * \internal
  *
- * @class  StartPipelineExecutionRequestPrivate
- *
- * @brief  Private implementation for StartPipelineExecutionRequest.
+ * \inmodule QtAwsCodePipeline
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new StartPipelineExecutionRequestPrivate object.
- *
- * @param  action  CodePipeline action being performed.
- * @param  q       Pointer to this object's public StartPipelineExecutionRequest instance.
+ * Constructs a StartPipelineExecutionRequestPrivate object for CodePipeline \a action with,
+ * public implementation \a q.
  */
 StartPipelineExecutionRequestPrivate::StartPipelineExecutionRequestPrivate(
     const CodePipelineRequest::Action action, StartPipelineExecutionRequest * const q)
@@ -267,15 +256,10 @@ StartPipelineExecutionRequestPrivate::StartPipelineExecutionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StartPipelineExecutionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the StartPipelineExecutionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public StartPipelineExecutionRequest instance.
  */
 StartPipelineExecutionRequestPrivate::StartPipelineExecutionRequestPrivate(
     const StartPipelineExecutionRequestPrivate &other, StartPipelineExecutionRequest * const q)

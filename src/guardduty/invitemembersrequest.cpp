@@ -27,19 +27,16 @@ namespace GuardDuty {
 
 /*!
  * \class QtAws::GuardDuty::InviteMembersRequest
- *
  * \brief The InviteMembersRequest class provides an interface for GuardDuty InviteMembers requests.
  *
- * \ingroup GuardDuty
+ * \inmodule QtAwsGuardDuty
  *
  *
  * \sa GuardDutyClient::inviteMembers
  */
 
 /*!
- * @brief  Constructs a new InviteMembersRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 InviteMembersRequest::InviteMembersRequest(const InviteMembersRequest &other)
     : GuardDutyRequest(new InviteMembersRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ InviteMembersRequest::InviteMembersRequest(const InviteMembersRequest &other)
 }
 
 /*!
- * @brief  Constructs a new InviteMembersRequest object.
+ * Constructs a InviteMembersRequest object.
  */
 InviteMembersRequest::InviteMembersRequest()
     : GuardDutyRequest(new InviteMembersRequestPrivate(GuardDutyRequest::InviteMembersAction, this))
@@ -66,14 +63,9 @@ bool InviteMembersRequest::isValid() const
 
 
 /*!
- * @brief  Construct an InviteMembersResponse object.
+ * Returns a InviteMembersResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An InviteMembersResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GuardDutyClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * InviteMembersRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * InviteMembersRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::GuardDuty::InviteMembersRequestPrivate
+ * \brief The InviteMembersRequestPrivate class provides private implementation for InviteMembersRequest.
+ * \internal
  *
- * @class  InviteMembersRequestPrivate
- *
- * @brief  Private implementation for InviteMembersRequest.
+ * \inmodule QtAwsGuardDuty
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new InviteMembersRequestPrivate object.
- *
- * @param  action  GuardDuty action being performed.
- * @param  q       Pointer to this object's public InviteMembersRequest instance.
+ * Constructs a InviteMembersRequestPrivate object for GuardDuty \a action with,
+ * public implementation \a q.
  */
 InviteMembersRequestPrivate::InviteMembersRequestPrivate(
     const GuardDutyRequest::Action action, InviteMembersRequest * const q)
@@ -104,15 +93,10 @@ InviteMembersRequestPrivate::InviteMembersRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new InviteMembersRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the InviteMembersRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public InviteMembersRequest instance.
  */
 InviteMembersRequestPrivate::InviteMembersRequestPrivate(
     const InviteMembersRequestPrivate &other, InviteMembersRequest * const q)

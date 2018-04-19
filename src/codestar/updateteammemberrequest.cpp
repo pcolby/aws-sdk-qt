@@ -27,10 +27,9 @@ namespace CodeStar {
 
 /*!
  * \class QtAws::CodeStar::UpdateTeamMemberRequest
- *
  * \brief The UpdateTeamMemberRequest class provides an interface for CodeStar UpdateTeamMember requests.
  *
- * \ingroup CodeStar
+ * \inmodule QtAwsCodeStar
  *
  *  <fullname>AWS CodeStar</fullname>
  * 
@@ -125,9 +124,7 @@ namespace CodeStar {
  */
 
 /*!
- * @brief  Constructs a new UpdateTeamMemberRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateTeamMemberRequest::UpdateTeamMemberRequest(const UpdateTeamMemberRequest &other)
     : CodeStarRequest(new UpdateTeamMemberRequestPrivate(*other.d_func(), this))
@@ -136,7 +133,7 @@ UpdateTeamMemberRequest::UpdateTeamMemberRequest(const UpdateTeamMemberRequest &
 }
 
 /*!
- * @brief  Constructs a new UpdateTeamMemberRequest object.
+ * Constructs a UpdateTeamMemberRequest object.
  */
 UpdateTeamMemberRequest::UpdateTeamMemberRequest()
     : CodeStarRequest(new UpdateTeamMemberRequestPrivate(CodeStarRequest::UpdateTeamMemberAction, this))
@@ -154,14 +151,9 @@ bool UpdateTeamMemberRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateTeamMemberResponse object.
+ * Returns a UpdateTeamMemberResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateTeamMemberResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CodeStarClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateTeamMemberRequest::response(QNetworkReply * const reply) const
 {
@@ -169,20 +161,17 @@ QtAws::Core::AwsAbstractResponse * UpdateTeamMemberRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::CodeStar::UpdateTeamMemberRequestPrivate
+ * \brief The UpdateTeamMemberRequestPrivate class provides private implementation for UpdateTeamMemberRequest.
+ * \internal
  *
- * @class  UpdateTeamMemberRequestPrivate
- *
- * @brief  Private implementation for UpdateTeamMemberRequest.
+ * \inmodule QtAwsCodeStar
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateTeamMemberRequestPrivate object.
- *
- * @param  action  CodeStar action being performed.
- * @param  q       Pointer to this object's public UpdateTeamMemberRequest instance.
+ * Constructs a UpdateTeamMemberRequestPrivate object for CodeStar \a action with,
+ * public implementation \a q.
  */
 UpdateTeamMemberRequestPrivate::UpdateTeamMemberRequestPrivate(
     const CodeStarRequest::Action action, UpdateTeamMemberRequest * const q)
@@ -192,15 +181,10 @@ UpdateTeamMemberRequestPrivate::UpdateTeamMemberRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateTeamMemberRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateTeamMemberRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateTeamMemberRequest instance.
  */
 UpdateTeamMemberRequestPrivate::UpdateTeamMemberRequestPrivate(
     const UpdateTeamMemberRequestPrivate &other, UpdateTeamMemberRequest * const q)

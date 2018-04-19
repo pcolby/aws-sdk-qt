@@ -27,19 +27,16 @@ namespace MachineLearning {
 
 /*!
  * \class QtAws::MachineLearning::DeleteEvaluationRequest
- *
  * \brief The DeleteEvaluationRequest class provides an interface for MachineLearning DeleteEvaluation requests.
  *
- * \ingroup MachineLearning
+ * \inmodule QtAwsMachineLearning
  *
  *
  * \sa MachineLearningClient::deleteEvaluation
  */
 
 /*!
- * @brief  Constructs a new DeleteEvaluationRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteEvaluationRequest::DeleteEvaluationRequest(const DeleteEvaluationRequest &other)
     : MachineLearningRequest(new DeleteEvaluationRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ DeleteEvaluationRequest::DeleteEvaluationRequest(const DeleteEvaluationRequest &
 }
 
 /*!
- * @brief  Constructs a new DeleteEvaluationRequest object.
+ * Constructs a DeleteEvaluationRequest object.
  */
 DeleteEvaluationRequest::DeleteEvaluationRequest()
     : MachineLearningRequest(new DeleteEvaluationRequestPrivate(MachineLearningRequest::DeleteEvaluationAction, this))
@@ -66,14 +63,9 @@ bool DeleteEvaluationRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteEvaluationResponse object.
+ * Returns a DeleteEvaluationResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteEvaluationResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MachineLearningClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteEvaluationRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * DeleteEvaluationRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::MachineLearning::DeleteEvaluationRequestPrivate
+ * \brief The DeleteEvaluationRequestPrivate class provides private implementation for DeleteEvaluationRequest.
+ * \internal
  *
- * @class  DeleteEvaluationRequestPrivate
- *
- * @brief  Private implementation for DeleteEvaluationRequest.
+ * \inmodule QtAwsMachineLearning
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteEvaluationRequestPrivate object.
- *
- * @param  action  MachineLearning action being performed.
- * @param  q       Pointer to this object's public DeleteEvaluationRequest instance.
+ * Constructs a DeleteEvaluationRequestPrivate object for MachineLearning \a action with,
+ * public implementation \a q.
  */
 DeleteEvaluationRequestPrivate::DeleteEvaluationRequestPrivate(
     const MachineLearningRequest::Action action, DeleteEvaluationRequest * const q)
@@ -104,15 +93,10 @@ DeleteEvaluationRequestPrivate::DeleteEvaluationRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteEvaluationRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteEvaluationRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteEvaluationRequest instance.
  */
 DeleteEvaluationRequestPrivate::DeleteEvaluationRequestPrivate(
     const DeleteEvaluationRequestPrivate &other, DeleteEvaluationRequest * const q)

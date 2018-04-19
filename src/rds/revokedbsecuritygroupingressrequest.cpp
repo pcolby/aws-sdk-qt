@@ -27,10 +27,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::RevokeDBSecurityGroupIngressRequest
- *
  * \brief The RevokeDBSecurityGroupIngressRequest class provides an interface for RDS RevokeDBSecurityGroupIngress requests.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -101,9 +100,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new RevokeDBSecurityGroupIngressRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 RevokeDBSecurityGroupIngressRequest::RevokeDBSecurityGroupIngressRequest(const RevokeDBSecurityGroupIngressRequest &other)
     : RDSRequest(new RevokeDBSecurityGroupIngressRequestPrivate(*other.d_func(), this))
@@ -112,7 +109,7 @@ RevokeDBSecurityGroupIngressRequest::RevokeDBSecurityGroupIngressRequest(const R
 }
 
 /*!
- * @brief  Constructs a new RevokeDBSecurityGroupIngressRequest object.
+ * Constructs a RevokeDBSecurityGroupIngressRequest object.
  */
 RevokeDBSecurityGroupIngressRequest::RevokeDBSecurityGroupIngressRequest()
     : RDSRequest(new RevokeDBSecurityGroupIngressRequestPrivate(RDSRequest::RevokeDBSecurityGroupIngressAction, this))
@@ -130,14 +127,9 @@ bool RevokeDBSecurityGroupIngressRequest::isValid() const
 
 
 /*!
- * @brief  Construct an RevokeDBSecurityGroupIngressResponse object.
+ * Returns a RevokeDBSecurityGroupIngressResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An RevokeDBSecurityGroupIngressResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RDSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * RevokeDBSecurityGroupIngressRequest::response(QNetworkReply * const reply) const
 {
@@ -145,20 +137,17 @@ QtAws::Core::AwsAbstractResponse * RevokeDBSecurityGroupIngressRequest::response
 }
 
 /*!
- * @internal
+ * \class QtAws::RDS::RevokeDBSecurityGroupIngressRequestPrivate
+ * \brief The RevokeDBSecurityGroupIngressRequestPrivate class provides private implementation for RevokeDBSecurityGroupIngressRequest.
+ * \internal
  *
- * @class  RevokeDBSecurityGroupIngressRequestPrivate
- *
- * @brief  Private implementation for RevokeDBSecurityGroupIngressRequest.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new RevokeDBSecurityGroupIngressRequestPrivate object.
- *
- * @param  action  RDS action being performed.
- * @param  q       Pointer to this object's public RevokeDBSecurityGroupIngressRequest instance.
+ * Constructs a RevokeDBSecurityGroupIngressRequestPrivate object for RDS \a action with,
+ * public implementation \a q.
  */
 RevokeDBSecurityGroupIngressRequestPrivate::RevokeDBSecurityGroupIngressRequestPrivate(
     const RDSRequest::Action action, RevokeDBSecurityGroupIngressRequest * const q)
@@ -168,15 +157,10 @@ RevokeDBSecurityGroupIngressRequestPrivate::RevokeDBSecurityGroupIngressRequestP
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RevokeDBSecurityGroupIngressRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the RevokeDBSecurityGroupIngressRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public RevokeDBSecurityGroupIngressRequest instance.
  */
 RevokeDBSecurityGroupIngressRequestPrivate::RevokeDBSecurityGroupIngressRequestPrivate(
     const RevokeDBSecurityGroupIngressRequestPrivate &other, RevokeDBSecurityGroupIngressRequest * const q)

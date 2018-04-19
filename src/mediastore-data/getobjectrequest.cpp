@@ -27,10 +27,9 @@ namespace MediaStoreData {
 
 /*!
  * \class QtAws::MediaStoreData::GetObjectRequest
- *
  * \brief The GetObjectRequest class provides an interface for MediaStoreData GetObject requests.
  *
- * \ingroup MediaStoreData
+ * \inmodule QtAwsMediaStoreData
  *
  *  An AWS Elemental MediaStore asset is an object, similar to an object in the Amazon S3 service. Objects are the
  *  fundamental entities that are stored in AWS Elemental
@@ -39,9 +38,7 @@ namespace MediaStoreData {
  */
 
 /*!
- * @brief  Constructs a new GetObjectRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetObjectRequest::GetObjectRequest(const GetObjectRequest &other)
     : MediaStoreDataRequest(new GetObjectRequestPrivate(*other.d_func(), this))
@@ -50,7 +47,7 @@ GetObjectRequest::GetObjectRequest(const GetObjectRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetObjectRequest object.
+ * Constructs a GetObjectRequest object.
  */
 GetObjectRequest::GetObjectRequest()
     : MediaStoreDataRequest(new GetObjectRequestPrivate(MediaStoreDataRequest::GetObjectAction, this))
@@ -68,14 +65,9 @@ bool GetObjectRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetObjectResponse object.
+ * Returns a GetObjectResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetObjectResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MediaStoreDataClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetObjectRequest::response(QNetworkReply * const reply) const
 {
@@ -83,20 +75,17 @@ QtAws::Core::AwsAbstractResponse * GetObjectRequest::response(QNetworkReply * co
 }
 
 /*!
- * @internal
+ * \class QtAws::MediaStoreData::GetObjectRequestPrivate
+ * \brief The GetObjectRequestPrivate class provides private implementation for GetObjectRequest.
+ * \internal
  *
- * @class  GetObjectRequestPrivate
- *
- * @brief  Private implementation for GetObjectRequest.
+ * \inmodule QtAwsMediaStoreData
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetObjectRequestPrivate object.
- *
- * @param  action  MediaStoreData action being performed.
- * @param  q       Pointer to this object's public GetObjectRequest instance.
+ * Constructs a GetObjectRequestPrivate object for MediaStoreData \a action with,
+ * public implementation \a q.
  */
 GetObjectRequestPrivate::GetObjectRequestPrivate(
     const MediaStoreDataRequest::Action action, GetObjectRequest * const q)
@@ -106,15 +95,10 @@ GetObjectRequestPrivate::GetObjectRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetObjectRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetObjectRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetObjectRequest instance.
  */
 GetObjectRequestPrivate::GetObjectRequestPrivate(
     const GetObjectRequestPrivate &other, GetObjectRequest * const q)

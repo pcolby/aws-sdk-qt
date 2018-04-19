@@ -27,19 +27,16 @@ namespace MTurk {
 
 /*!
  * \class QtAws::MTurk::SendBonusRequest
- *
  * \brief The SendBonusRequest class provides an interface for MTurk SendBonus requests.
  *
- * \ingroup MTurk
+ * \inmodule QtAwsMTurk
  *
  *
  * \sa MTurkClient::sendBonus
  */
 
 /*!
- * @brief  Constructs a new SendBonusRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 SendBonusRequest::SendBonusRequest(const SendBonusRequest &other)
     : MTurkRequest(new SendBonusRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ SendBonusRequest::SendBonusRequest(const SendBonusRequest &other)
 }
 
 /*!
- * @brief  Constructs a new SendBonusRequest object.
+ * Constructs a SendBonusRequest object.
  */
 SendBonusRequest::SendBonusRequest()
     : MTurkRequest(new SendBonusRequestPrivate(MTurkRequest::SendBonusAction, this))
@@ -66,14 +63,9 @@ bool SendBonusRequest::isValid() const
 
 
 /*!
- * @brief  Construct an SendBonusResponse object.
+ * Returns a SendBonusResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An SendBonusResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MTurkClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * SendBonusRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * SendBonusRequest::response(QNetworkReply * co
 }
 
 /*!
- * @internal
+ * \class QtAws::MTurk::SendBonusRequestPrivate
+ * \brief The SendBonusRequestPrivate class provides private implementation for SendBonusRequest.
+ * \internal
  *
- * @class  SendBonusRequestPrivate
- *
- * @brief  Private implementation for SendBonusRequest.
+ * \inmodule QtAwsMTurk
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new SendBonusRequestPrivate object.
- *
- * @param  action  MTurk action being performed.
- * @param  q       Pointer to this object's public SendBonusRequest instance.
+ * Constructs a SendBonusRequestPrivate object for MTurk \a action with,
+ * public implementation \a q.
  */
 SendBonusRequestPrivate::SendBonusRequestPrivate(
     const MTurkRequest::Action action, SendBonusRequest * const q)
@@ -104,15 +93,10 @@ SendBonusRequestPrivate::SendBonusRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SendBonusRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the SendBonusRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public SendBonusRequest instance.
  */
 SendBonusRequestPrivate::SendBonusRequestPrivate(
     const SendBonusRequestPrivate &other, SendBonusRequest * const q)

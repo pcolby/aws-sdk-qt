@@ -50,6 +50,9 @@
 /*!
  * \namespace QtAws::Comprehend
  * \brief The QtAws::Comprehend contains stuff...
+ *
+ * \inmodule QtAwsComprehend
+ *
  * @todo Move this to a separate template file.
  */
 
@@ -102,7 +105,7 @@ ComprehendClient::ComprehendClient(
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * \a  AwsEndpoint::getEndpoint()
+ * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
 ComprehendClient::ComprehendClient(
     const QUrl &endpoint,

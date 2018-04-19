@@ -27,10 +27,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::AttachUserPolicyRequest
- *
  * \brief The AttachUserPolicyRequest class provides an interface for IAM AttachUserPolicy requests.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -102,9 +101,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new AttachUserPolicyRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AttachUserPolicyRequest::AttachUserPolicyRequest(const AttachUserPolicyRequest &other)
     : IAMRequest(new AttachUserPolicyRequestPrivate(*other.d_func(), this))
@@ -113,7 +110,7 @@ AttachUserPolicyRequest::AttachUserPolicyRequest(const AttachUserPolicyRequest &
 }
 
 /*!
- * @brief  Constructs a new AttachUserPolicyRequest object.
+ * Constructs a AttachUserPolicyRequest object.
  */
 AttachUserPolicyRequest::AttachUserPolicyRequest()
     : IAMRequest(new AttachUserPolicyRequestPrivate(IAMRequest::AttachUserPolicyAction, this))
@@ -131,14 +128,9 @@ bool AttachUserPolicyRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AttachUserPolicyResponse object.
+ * Returns a AttachUserPolicyResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AttachUserPolicyResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IAMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AttachUserPolicyRequest::response(QNetworkReply * const reply) const
 {
@@ -146,20 +138,17 @@ QtAws::Core::AwsAbstractResponse * AttachUserPolicyRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::IAM::AttachUserPolicyRequestPrivate
+ * \brief The AttachUserPolicyRequestPrivate class provides private implementation for AttachUserPolicyRequest.
+ * \internal
  *
- * @class  AttachUserPolicyRequestPrivate
- *
- * @brief  Private implementation for AttachUserPolicyRequest.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AttachUserPolicyRequestPrivate object.
- *
- * @param  action  IAM action being performed.
- * @param  q       Pointer to this object's public AttachUserPolicyRequest instance.
+ * Constructs a AttachUserPolicyRequestPrivate object for IAM \a action with,
+ * public implementation \a q.
  */
 AttachUserPolicyRequestPrivate::AttachUserPolicyRequestPrivate(
     const IAMRequest::Action action, AttachUserPolicyRequest * const q)
@@ -169,15 +158,10 @@ AttachUserPolicyRequestPrivate::AttachUserPolicyRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AttachUserPolicyRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AttachUserPolicyRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AttachUserPolicyRequest instance.
  */
 AttachUserPolicyRequestPrivate::AttachUserPolicyRequestPrivate(
     const AttachUserPolicyRequestPrivate &other, AttachUserPolicyRequest * const q)

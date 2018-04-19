@@ -27,10 +27,9 @@ namespace Polly {
 
 /*!
  * \class QtAws::Polly::DeleteLexiconRequest
- *
  * \brief The DeleteLexiconRequest class provides an interface for Polly DeleteLexicon requests.
  *
- * \ingroup Polly
+ * \inmodule QtAwsPolly
  *
  *  Amazon Polly is a web service that makes it easy to synthesize speech from
  * 
@@ -44,9 +43,7 @@ namespace Polly {
  */
 
 /*!
- * @brief  Constructs a new DeleteLexiconRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteLexiconRequest::DeleteLexiconRequest(const DeleteLexiconRequest &other)
     : PollyRequest(new DeleteLexiconRequestPrivate(*other.d_func(), this))
@@ -55,7 +52,7 @@ DeleteLexiconRequest::DeleteLexiconRequest(const DeleteLexiconRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DeleteLexiconRequest object.
+ * Constructs a DeleteLexiconRequest object.
  */
 DeleteLexiconRequest::DeleteLexiconRequest()
     : PollyRequest(new DeleteLexiconRequestPrivate(PollyRequest::DeleteLexiconAction, this))
@@ -73,14 +70,9 @@ bool DeleteLexiconRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteLexiconResponse object.
+ * Returns a DeleteLexiconResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteLexiconResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  PollyClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteLexiconRequest::response(QNetworkReply * const reply) const
 {
@@ -88,20 +80,17 @@ QtAws::Core::AwsAbstractResponse * DeleteLexiconRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::Polly::DeleteLexiconRequestPrivate
+ * \brief The DeleteLexiconRequestPrivate class provides private implementation for DeleteLexiconRequest.
+ * \internal
  *
- * @class  DeleteLexiconRequestPrivate
- *
- * @brief  Private implementation for DeleteLexiconRequest.
+ * \inmodule QtAwsPolly
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteLexiconRequestPrivate object.
- *
- * @param  action  Polly action being performed.
- * @param  q       Pointer to this object's public DeleteLexiconRequest instance.
+ * Constructs a DeleteLexiconRequestPrivate object for Polly \a action with,
+ * public implementation \a q.
  */
 DeleteLexiconRequestPrivate::DeleteLexiconRequestPrivate(
     const PollyRequest::Action action, DeleteLexiconRequest * const q)
@@ -111,15 +100,10 @@ DeleteLexiconRequestPrivate::DeleteLexiconRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteLexiconRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteLexiconRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteLexiconRequest instance.
  */
 DeleteLexiconRequestPrivate::DeleteLexiconRequestPrivate(
     const DeleteLexiconRequestPrivate &other, DeleteLexiconRequest * const q)

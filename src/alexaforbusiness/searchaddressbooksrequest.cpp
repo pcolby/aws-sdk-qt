@@ -27,10 +27,9 @@ namespace AlexaForBusiness {
 
 /*!
  * \class QtAws::AlexaForBusiness::SearchAddressBooksRequest
- *
  * \brief The SearchAddressBooksRequest class provides an interface for AlexaForBusiness SearchAddressBooks requests.
  *
- * \ingroup AlexaForBusiness
+ * \inmodule QtAwsAlexaForBusiness
  *
  *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
  *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
@@ -42,9 +41,7 @@ namespace AlexaForBusiness {
  */
 
 /*!
- * @brief  Constructs a new SearchAddressBooksRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 SearchAddressBooksRequest::SearchAddressBooksRequest(const SearchAddressBooksRequest &other)
     : AlexaForBusinessRequest(new SearchAddressBooksRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ SearchAddressBooksRequest::SearchAddressBooksRequest(const SearchAddressBooksReq
 }
 
 /*!
- * @brief  Constructs a new SearchAddressBooksRequest object.
+ * Constructs a SearchAddressBooksRequest object.
  */
 SearchAddressBooksRequest::SearchAddressBooksRequest()
     : AlexaForBusinessRequest(new SearchAddressBooksRequestPrivate(AlexaForBusinessRequest::SearchAddressBooksAction, this))
@@ -71,14 +68,9 @@ bool SearchAddressBooksRequest::isValid() const
 
 
 /*!
- * @brief  Construct an SearchAddressBooksResponse object.
+ * Returns a SearchAddressBooksResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An SearchAddressBooksResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AlexaForBusinessClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * SearchAddressBooksRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * SearchAddressBooksRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::AlexaForBusiness::SearchAddressBooksRequestPrivate
+ * \brief The SearchAddressBooksRequestPrivate class provides private implementation for SearchAddressBooksRequest.
+ * \internal
  *
- * @class  SearchAddressBooksRequestPrivate
- *
- * @brief  Private implementation for SearchAddressBooksRequest.
+ * \inmodule QtAwsAlexaForBusiness
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new SearchAddressBooksRequestPrivate object.
- *
- * @param  action  AlexaForBusiness action being performed.
- * @param  q       Pointer to this object's public SearchAddressBooksRequest instance.
+ * Constructs a SearchAddressBooksRequestPrivate object for AlexaForBusiness \a action with,
+ * public implementation \a q.
  */
 SearchAddressBooksRequestPrivate::SearchAddressBooksRequestPrivate(
     const AlexaForBusinessRequest::Action action, SearchAddressBooksRequest * const q)
@@ -109,15 +98,10 @@ SearchAddressBooksRequestPrivate::SearchAddressBooksRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SearchAddressBooksRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the SearchAddressBooksRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public SearchAddressBooksRequest instance.
  */
 SearchAddressBooksRequestPrivate::SearchAddressBooksRequestPrivate(
     const SearchAddressBooksRequestPrivate &other, SearchAddressBooksRequest * const q)

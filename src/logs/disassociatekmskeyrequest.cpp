@@ -27,10 +27,9 @@ namespace CloudWatchLogs {
 
 /*!
  * \class QtAws::CloudWatchLogs::DisassociateKmsKeyRequest
- *
  * \brief The DisassociateKmsKeyRequest class provides an interface for CloudWatchLogs DisassociateKmsKey requests.
  *
- * \ingroup CloudWatchLogs
+ * \inmodule QtAwsCloudWatchLogs
  *
  *  You can use Amazon CloudWatch Logs to monitor, store, and access your log files from Amazon EC2 instances, AWS
  *  CloudTrail, or other sources. You can then retrieve the associated log data from CloudWatch Logs using the CloudWatch
@@ -66,9 +65,7 @@ namespace CloudWatchLogs {
  */
 
 /*!
- * @brief  Constructs a new DisassociateKmsKeyRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DisassociateKmsKeyRequest::DisassociateKmsKeyRequest(const DisassociateKmsKeyRequest &other)
     : CloudWatchLogsRequest(new DisassociateKmsKeyRequestPrivate(*other.d_func(), this))
@@ -77,7 +74,7 @@ DisassociateKmsKeyRequest::DisassociateKmsKeyRequest(const DisassociateKmsKeyReq
 }
 
 /*!
- * @brief  Constructs a new DisassociateKmsKeyRequest object.
+ * Constructs a DisassociateKmsKeyRequest object.
  */
 DisassociateKmsKeyRequest::DisassociateKmsKeyRequest()
     : CloudWatchLogsRequest(new DisassociateKmsKeyRequestPrivate(CloudWatchLogsRequest::DisassociateKmsKeyAction, this))
@@ -95,14 +92,9 @@ bool DisassociateKmsKeyRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DisassociateKmsKeyResponse object.
+ * Returns a DisassociateKmsKeyResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DisassociateKmsKeyResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudWatchLogsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DisassociateKmsKeyRequest::response(QNetworkReply * const reply) const
 {
@@ -110,20 +102,17 @@ QtAws::Core::AwsAbstractResponse * DisassociateKmsKeyRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudWatchLogs::DisassociateKmsKeyRequestPrivate
+ * \brief The DisassociateKmsKeyRequestPrivate class provides private implementation for DisassociateKmsKeyRequest.
+ * \internal
  *
- * @class  DisassociateKmsKeyRequestPrivate
- *
- * @brief  Private implementation for DisassociateKmsKeyRequest.
+ * \inmodule QtAwsCloudWatchLogs
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DisassociateKmsKeyRequestPrivate object.
- *
- * @param  action  CloudWatchLogs action being performed.
- * @param  q       Pointer to this object's public DisassociateKmsKeyRequest instance.
+ * Constructs a DisassociateKmsKeyRequestPrivate object for CloudWatchLogs \a action with,
+ * public implementation \a q.
  */
 DisassociateKmsKeyRequestPrivate::DisassociateKmsKeyRequestPrivate(
     const CloudWatchLogsRequest::Action action, DisassociateKmsKeyRequest * const q)
@@ -133,15 +122,10 @@ DisassociateKmsKeyRequestPrivate::DisassociateKmsKeyRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DisassociateKmsKeyRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DisassociateKmsKeyRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DisassociateKmsKeyRequest instance.
  */
 DisassociateKmsKeyRequestPrivate::DisassociateKmsKeyRequestPrivate(
     const DisassociateKmsKeyRequestPrivate &other, DisassociateKmsKeyRequest * const q)

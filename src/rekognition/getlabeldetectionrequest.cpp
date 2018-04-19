@@ -27,10 +27,9 @@ namespace Rekognition {
 
 /*!
  * \class QtAws::Rekognition::GetLabelDetectionRequest
- *
  * \brief The GetLabelDetectionRequest class provides an interface for Rekognition GetLabelDetection requests.
  *
- * \ingroup Rekognition
+ * \inmodule QtAwsRekognition
  *
  *  This is the Amazon Rekognition API
  *
@@ -38,9 +37,7 @@ namespace Rekognition {
  */
 
 /*!
- * @brief  Constructs a new GetLabelDetectionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetLabelDetectionRequest::GetLabelDetectionRequest(const GetLabelDetectionRequest &other)
     : RekognitionRequest(new GetLabelDetectionRequestPrivate(*other.d_func(), this))
@@ -49,7 +46,7 @@ GetLabelDetectionRequest::GetLabelDetectionRequest(const GetLabelDetectionReques
 }
 
 /*!
- * @brief  Constructs a new GetLabelDetectionRequest object.
+ * Constructs a GetLabelDetectionRequest object.
  */
 GetLabelDetectionRequest::GetLabelDetectionRequest()
     : RekognitionRequest(new GetLabelDetectionRequestPrivate(RekognitionRequest::GetLabelDetectionAction, this))
@@ -67,14 +64,9 @@ bool GetLabelDetectionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetLabelDetectionResponse object.
+ * Returns a GetLabelDetectionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetLabelDetectionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RekognitionClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetLabelDetectionRequest::response(QNetworkReply * const reply) const
 {
@@ -82,20 +74,17 @@ QtAws::Core::AwsAbstractResponse * GetLabelDetectionRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::Rekognition::GetLabelDetectionRequestPrivate
+ * \brief The GetLabelDetectionRequestPrivate class provides private implementation for GetLabelDetectionRequest.
+ * \internal
  *
- * @class  GetLabelDetectionRequestPrivate
- *
- * @brief  Private implementation for GetLabelDetectionRequest.
+ * \inmodule QtAwsRekognition
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetLabelDetectionRequestPrivate object.
- *
- * @param  action  Rekognition action being performed.
- * @param  q       Pointer to this object's public GetLabelDetectionRequest instance.
+ * Constructs a GetLabelDetectionRequestPrivate object for Rekognition \a action with,
+ * public implementation \a q.
  */
 GetLabelDetectionRequestPrivate::GetLabelDetectionRequestPrivate(
     const RekognitionRequest::Action action, GetLabelDetectionRequest * const q)
@@ -105,15 +94,10 @@ GetLabelDetectionRequestPrivate::GetLabelDetectionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetLabelDetectionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetLabelDetectionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetLabelDetectionRequest instance.
  */
 GetLabelDetectionRequestPrivate::GetLabelDetectionRequestPrivate(
     const GetLabelDetectionRequestPrivate &other, GetLabelDetectionRequest * const q)

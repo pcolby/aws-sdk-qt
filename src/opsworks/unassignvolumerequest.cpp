@@ -27,10 +27,9 @@ namespace OpsWorks {
 
 /*!
  * \class QtAws::OpsWorks::UnassignVolumeRequest
- *
  * \brief The UnassignVolumeRequest class provides an interface for OpsWorks UnassignVolume requests.
  *
- * \ingroup OpsWorks
+ * \inmodule QtAwsOpsWorks
  *
  *  <fullname>AWS OpsWorks</fullname>
  * 
@@ -143,9 +142,7 @@ namespace OpsWorks {
  */
 
 /*!
- * @brief  Constructs a new UnassignVolumeRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UnassignVolumeRequest::UnassignVolumeRequest(const UnassignVolumeRequest &other)
     : OpsWorksRequest(new UnassignVolumeRequestPrivate(*other.d_func(), this))
@@ -154,7 +151,7 @@ UnassignVolumeRequest::UnassignVolumeRequest(const UnassignVolumeRequest &other)
 }
 
 /*!
- * @brief  Constructs a new UnassignVolumeRequest object.
+ * Constructs a UnassignVolumeRequest object.
  */
 UnassignVolumeRequest::UnassignVolumeRequest()
     : OpsWorksRequest(new UnassignVolumeRequestPrivate(OpsWorksRequest::UnassignVolumeAction, this))
@@ -172,14 +169,9 @@ bool UnassignVolumeRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UnassignVolumeResponse object.
+ * Returns a UnassignVolumeResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UnassignVolumeResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  OpsWorksClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UnassignVolumeRequest::response(QNetworkReply * const reply) const
 {
@@ -187,20 +179,17 @@ QtAws::Core::AwsAbstractResponse * UnassignVolumeRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::OpsWorks::UnassignVolumeRequestPrivate
+ * \brief The UnassignVolumeRequestPrivate class provides private implementation for UnassignVolumeRequest.
+ * \internal
  *
- * @class  UnassignVolumeRequestPrivate
- *
- * @brief  Private implementation for UnassignVolumeRequest.
+ * \inmodule QtAwsOpsWorks
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UnassignVolumeRequestPrivate object.
- *
- * @param  action  OpsWorks action being performed.
- * @param  q       Pointer to this object's public UnassignVolumeRequest instance.
+ * Constructs a UnassignVolumeRequestPrivate object for OpsWorks \a action with,
+ * public implementation \a q.
  */
 UnassignVolumeRequestPrivate::UnassignVolumeRequestPrivate(
     const OpsWorksRequest::Action action, UnassignVolumeRequest * const q)
@@ -210,15 +199,10 @@ UnassignVolumeRequestPrivate::UnassignVolumeRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UnassignVolumeRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UnassignVolumeRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UnassignVolumeRequest instance.
  */
 UnassignVolumeRequestPrivate::UnassignVolumeRequestPrivate(
     const UnassignVolumeRequestPrivate &other, UnassignVolumeRequest * const q)

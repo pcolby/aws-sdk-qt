@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::CopyFpgaImageRequest
- *
  * \brief The CopyFpgaImageRequest class provides an interface for EC2 CopyFpgaImage requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new CopyFpgaImageRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CopyFpgaImageRequest::CopyFpgaImageRequest(const CopyFpgaImageRequest &other)
     : EC2Request(new CopyFpgaImageRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ CopyFpgaImageRequest::CopyFpgaImageRequest(const CopyFpgaImageRequest &other)
 }
 
 /*!
- * @brief  Constructs a new CopyFpgaImageRequest object.
+ * Constructs a CopyFpgaImageRequest object.
  */
 CopyFpgaImageRequest::CopyFpgaImageRequest()
     : EC2Request(new CopyFpgaImageRequestPrivate(EC2Request::CopyFpgaImageAction, this))
@@ -70,14 +67,9 @@ bool CopyFpgaImageRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CopyFpgaImageResponse object.
+ * Returns a CopyFpgaImageResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CopyFpgaImageResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CopyFpgaImageRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * CopyFpgaImageRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::CopyFpgaImageRequestPrivate
+ * \brief The CopyFpgaImageRequestPrivate class provides private implementation for CopyFpgaImageRequest.
+ * \internal
  *
- * @class  CopyFpgaImageRequestPrivate
- *
- * @brief  Private implementation for CopyFpgaImageRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CopyFpgaImageRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public CopyFpgaImageRequest instance.
+ * Constructs a CopyFpgaImageRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 CopyFpgaImageRequestPrivate::CopyFpgaImageRequestPrivate(
     const EC2Request::Action action, CopyFpgaImageRequest * const q)
@@ -108,15 +97,10 @@ CopyFpgaImageRequestPrivate::CopyFpgaImageRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CopyFpgaImageRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CopyFpgaImageRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CopyFpgaImageRequest instance.
  */
 CopyFpgaImageRequestPrivate::CopyFpgaImageRequestPrivate(
     const CopyFpgaImageRequestPrivate &other, CopyFpgaImageRequest * const q)

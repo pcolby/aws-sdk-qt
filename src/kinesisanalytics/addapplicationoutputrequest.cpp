@@ -27,19 +27,16 @@ namespace KinesisAnalytics {
 
 /*!
  * \class QtAws::KinesisAnalytics::AddApplicationOutputRequest
- *
  * \brief The AddApplicationOutputRequest class provides an interface for KinesisAnalytics AddApplicationOutput requests.
  *
- * \ingroup KinesisAnalytics
+ * \inmodule QtAwsKinesisAnalytics
  *
  *
  * \sa KinesisAnalyticsClient::addApplicationOutput
  */
 
 /*!
- * @brief  Constructs a new AddApplicationOutputRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AddApplicationOutputRequest::AddApplicationOutputRequest(const AddApplicationOutputRequest &other)
     : KinesisAnalyticsRequest(new AddApplicationOutputRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ AddApplicationOutputRequest::AddApplicationOutputRequest(const AddApplicationOut
 }
 
 /*!
- * @brief  Constructs a new AddApplicationOutputRequest object.
+ * Constructs a AddApplicationOutputRequest object.
  */
 AddApplicationOutputRequest::AddApplicationOutputRequest()
     : KinesisAnalyticsRequest(new AddApplicationOutputRequestPrivate(KinesisAnalyticsRequest::AddApplicationOutputAction, this))
@@ -66,14 +63,9 @@ bool AddApplicationOutputRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AddApplicationOutputResponse object.
+ * Returns a AddApplicationOutputResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AddApplicationOutputResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  KinesisAnalyticsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AddApplicationOutputRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * AddApplicationOutputRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::KinesisAnalytics::AddApplicationOutputRequestPrivate
+ * \brief The AddApplicationOutputRequestPrivate class provides private implementation for AddApplicationOutputRequest.
+ * \internal
  *
- * @class  AddApplicationOutputRequestPrivate
- *
- * @brief  Private implementation for AddApplicationOutputRequest.
+ * \inmodule QtAwsKinesisAnalytics
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AddApplicationOutputRequestPrivate object.
- *
- * @param  action  KinesisAnalytics action being performed.
- * @param  q       Pointer to this object's public AddApplicationOutputRequest instance.
+ * Constructs a AddApplicationOutputRequestPrivate object for KinesisAnalytics \a action with,
+ * public implementation \a q.
  */
 AddApplicationOutputRequestPrivate::AddApplicationOutputRequestPrivate(
     const KinesisAnalyticsRequest::Action action, AddApplicationOutputRequest * const q)
@@ -104,15 +93,10 @@ AddApplicationOutputRequestPrivate::AddApplicationOutputRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AddApplicationOutputRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AddApplicationOutputRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AddApplicationOutputRequest instance.
  */
 AddApplicationOutputRequestPrivate::AddApplicationOutputRequestPrivate(
     const AddApplicationOutputRequestPrivate &other, AddApplicationOutputRequest * const q)

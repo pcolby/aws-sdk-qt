@@ -27,10 +27,9 @@ namespace Greengrass {
 
 /*!
  * \class QtAws::Greengrass::ResetDeploymentsRequest
- *
  * \brief The ResetDeploymentsRequest class provides an interface for Greengrass ResetDeployments requests.
  *
- * \ingroup Greengrass
+ * \inmodule QtAwsGreengrass
  *
  *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
  *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
@@ -40,9 +39,7 @@ namespace Greengrass {
  */
 
 /*!
- * @brief  Constructs a new ResetDeploymentsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ResetDeploymentsRequest::ResetDeploymentsRequest(const ResetDeploymentsRequest &other)
     : GreengrassRequest(new ResetDeploymentsRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ ResetDeploymentsRequest::ResetDeploymentsRequest(const ResetDeploymentsRequest &
 }
 
 /*!
- * @brief  Constructs a new ResetDeploymentsRequest object.
+ * Constructs a ResetDeploymentsRequest object.
  */
 ResetDeploymentsRequest::ResetDeploymentsRequest()
     : GreengrassRequest(new ResetDeploymentsRequestPrivate(GreengrassRequest::ResetDeploymentsAction, this))
@@ -69,14 +66,9 @@ bool ResetDeploymentsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ResetDeploymentsResponse object.
+ * Returns a ResetDeploymentsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ResetDeploymentsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GreengrassClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ResetDeploymentsRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * ResetDeploymentsRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::Greengrass::ResetDeploymentsRequestPrivate
+ * \brief The ResetDeploymentsRequestPrivate class provides private implementation for ResetDeploymentsRequest.
+ * \internal
  *
- * @class  ResetDeploymentsRequestPrivate
- *
- * @brief  Private implementation for ResetDeploymentsRequest.
+ * \inmodule QtAwsGreengrass
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ResetDeploymentsRequestPrivate object.
- *
- * @param  action  Greengrass action being performed.
- * @param  q       Pointer to this object's public ResetDeploymentsRequest instance.
+ * Constructs a ResetDeploymentsRequestPrivate object for Greengrass \a action with,
+ * public implementation \a q.
  */
 ResetDeploymentsRequestPrivate::ResetDeploymentsRequestPrivate(
     const GreengrassRequest::Action action, ResetDeploymentsRequest * const q)
@@ -107,15 +96,10 @@ ResetDeploymentsRequestPrivate::ResetDeploymentsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ResetDeploymentsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ResetDeploymentsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ResetDeploymentsRequest instance.
  */
 ResetDeploymentsRequestPrivate::ResetDeploymentsRequestPrivate(
     const ResetDeploymentsRequestPrivate &other, ResetDeploymentsRequest * const q)

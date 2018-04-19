@@ -27,10 +27,9 @@ namespace ElasticLoadBalancingv2 {
 
 /*!
  * \class QtAws::ElasticLoadBalancingv2::CreateTargetGroupRequest
- *
  * \brief The CreateTargetGroupRequest class provides an interface for ElasticLoadBalancingv2 CreateTargetGroup requests.
  *
- * \ingroup ElasticLoadBalancingv2
+ * \inmodule QtAwsElasticLoadBalancingv2
  *
  *  <fullname>Elastic Load Balancing</fullname>
  * 
@@ -105,9 +104,7 @@ namespace ElasticLoadBalancingv2 {
  */
 
 /*!
- * @brief  Constructs a new CreateTargetGroupRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateTargetGroupRequest::CreateTargetGroupRequest(const CreateTargetGroupRequest &other)
     : ElasticLoadBalancingv2Request(new CreateTargetGroupRequestPrivate(*other.d_func(), this))
@@ -116,7 +113,7 @@ CreateTargetGroupRequest::CreateTargetGroupRequest(const CreateTargetGroupReques
 }
 
 /*!
- * @brief  Constructs a new CreateTargetGroupRequest object.
+ * Constructs a CreateTargetGroupRequest object.
  */
 CreateTargetGroupRequest::CreateTargetGroupRequest()
     : ElasticLoadBalancingv2Request(new CreateTargetGroupRequestPrivate(ElasticLoadBalancingv2Request::CreateTargetGroupAction, this))
@@ -134,14 +131,9 @@ bool CreateTargetGroupRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateTargetGroupResponse object.
+ * Returns a CreateTargetGroupResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateTargetGroupResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ElasticLoadBalancingv2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateTargetGroupRequest::response(QNetworkReply * const reply) const
 {
@@ -149,20 +141,17 @@ QtAws::Core::AwsAbstractResponse * CreateTargetGroupRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::ElasticLoadBalancingv2::CreateTargetGroupRequestPrivate
+ * \brief The CreateTargetGroupRequestPrivate class provides private implementation for CreateTargetGroupRequest.
+ * \internal
  *
- * @class  CreateTargetGroupRequestPrivate
- *
- * @brief  Private implementation for CreateTargetGroupRequest.
+ * \inmodule QtAwsElasticLoadBalancingv2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateTargetGroupRequestPrivate object.
- *
- * @param  action  ElasticLoadBalancingv2 action being performed.
- * @param  q       Pointer to this object's public CreateTargetGroupRequest instance.
+ * Constructs a CreateTargetGroupRequestPrivate object for ElasticLoadBalancingv2 \a action with,
+ * public implementation \a q.
  */
 CreateTargetGroupRequestPrivate::CreateTargetGroupRequestPrivate(
     const ElasticLoadBalancingv2Request::Action action, CreateTargetGroupRequest * const q)
@@ -172,15 +161,10 @@ CreateTargetGroupRequestPrivate::CreateTargetGroupRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateTargetGroupRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateTargetGroupRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateTargetGroupRequest instance.
  */
 CreateTargetGroupRequestPrivate::CreateTargetGroupRequestPrivate(
     const CreateTargetGroupRequestPrivate &other, CreateTargetGroupRequest * const q)

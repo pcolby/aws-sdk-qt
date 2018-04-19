@@ -27,10 +27,9 @@ namespace ServiceCatalog {
 
 /*!
  * \class QtAws::ServiceCatalog::DescribeProductViewRequest
- *
  * \brief The DescribeProductViewRequest class provides an interface for ServiceCatalog DescribeProductView requests.
  *
- * \ingroup ServiceCatalog
+ * \inmodule QtAwsServiceCatalog
  *
  *  <fullname>AWS Service Catalog</fullname>
  * 
@@ -43,9 +42,7 @@ namespace ServiceCatalog {
  */
 
 /*!
- * @brief  Constructs a new DescribeProductViewRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeProductViewRequest::DescribeProductViewRequest(const DescribeProductViewRequest &other)
     : ServiceCatalogRequest(new DescribeProductViewRequestPrivate(*other.d_func(), this))
@@ -54,7 +51,7 @@ DescribeProductViewRequest::DescribeProductViewRequest(const DescribeProductView
 }
 
 /*!
- * @brief  Constructs a new DescribeProductViewRequest object.
+ * Constructs a DescribeProductViewRequest object.
  */
 DescribeProductViewRequest::DescribeProductViewRequest()
     : ServiceCatalogRequest(new DescribeProductViewRequestPrivate(ServiceCatalogRequest::DescribeProductViewAction, this))
@@ -72,14 +69,9 @@ bool DescribeProductViewRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeProductViewResponse object.
+ * Returns a DescribeProductViewResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeProductViewResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ServiceCatalogClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeProductViewRequest::response(QNetworkReply * const reply) const
 {
@@ -87,20 +79,17 @@ QtAws::Core::AwsAbstractResponse * DescribeProductViewRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::ServiceCatalog::DescribeProductViewRequestPrivate
+ * \brief The DescribeProductViewRequestPrivate class provides private implementation for DescribeProductViewRequest.
+ * \internal
  *
- * @class  DescribeProductViewRequestPrivate
- *
- * @brief  Private implementation for DescribeProductViewRequest.
+ * \inmodule QtAwsServiceCatalog
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeProductViewRequestPrivate object.
- *
- * @param  action  ServiceCatalog action being performed.
- * @param  q       Pointer to this object's public DescribeProductViewRequest instance.
+ * Constructs a DescribeProductViewRequestPrivate object for ServiceCatalog \a action with,
+ * public implementation \a q.
  */
 DescribeProductViewRequestPrivate::DescribeProductViewRequestPrivate(
     const ServiceCatalogRequest::Action action, DescribeProductViewRequest * const q)
@@ -110,15 +99,10 @@ DescribeProductViewRequestPrivate::DescribeProductViewRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeProductViewRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeProductViewRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeProductViewRequest instance.
  */
 DescribeProductViewRequestPrivate::DescribeProductViewRequestPrivate(
     const DescribeProductViewRequestPrivate &other, DescribeProductViewRequest * const q)

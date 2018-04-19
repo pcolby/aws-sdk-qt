@@ -27,10 +27,9 @@ namespace LexModelBuildingService {
 
 /*!
  * \class QtAws::LexModelBuildingService::CreateBotVersionRequest
- *
  * \brief The CreateBotVersionRequest class provides an interface for LexModelBuildingService CreateBotVersion requests.
  *
- * \ingroup LexModelBuildingService
+ * \inmodule QtAwsLexModelBuildingService
  *
  *  <fullname>Amazon Lex Build-Time Actions</fullname>
  * 
@@ -41,9 +40,7 @@ namespace LexModelBuildingService {
  */
 
 /*!
- * @brief  Constructs a new CreateBotVersionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateBotVersionRequest::CreateBotVersionRequest(const CreateBotVersionRequest &other)
     : LexModelBuildingServiceRequest(new CreateBotVersionRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ CreateBotVersionRequest::CreateBotVersionRequest(const CreateBotVersionRequest &
 }
 
 /*!
- * @brief  Constructs a new CreateBotVersionRequest object.
+ * Constructs a CreateBotVersionRequest object.
  */
 CreateBotVersionRequest::CreateBotVersionRequest()
     : LexModelBuildingServiceRequest(new CreateBotVersionRequestPrivate(LexModelBuildingServiceRequest::CreateBotVersionAction, this))
@@ -70,14 +67,9 @@ bool CreateBotVersionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateBotVersionResponse object.
+ * Returns a CreateBotVersionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateBotVersionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  LexModelBuildingServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateBotVersionRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * CreateBotVersionRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::LexModelBuildingService::CreateBotVersionRequestPrivate
+ * \brief The CreateBotVersionRequestPrivate class provides private implementation for CreateBotVersionRequest.
+ * \internal
  *
- * @class  CreateBotVersionRequestPrivate
- *
- * @brief  Private implementation for CreateBotVersionRequest.
+ * \inmodule QtAwsLexModelBuildingService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateBotVersionRequestPrivate object.
- *
- * @param  action  LexModelBuildingService action being performed.
- * @param  q       Pointer to this object's public CreateBotVersionRequest instance.
+ * Constructs a CreateBotVersionRequestPrivate object for LexModelBuildingService \a action with,
+ * public implementation \a q.
  */
 CreateBotVersionRequestPrivate::CreateBotVersionRequestPrivate(
     const LexModelBuildingServiceRequest::Action action, CreateBotVersionRequest * const q)
@@ -108,15 +97,10 @@ CreateBotVersionRequestPrivate::CreateBotVersionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateBotVersionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateBotVersionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateBotVersionRequest instance.
  */
 CreateBotVersionRequestPrivate::CreateBotVersionRequestPrivate(
     const CreateBotVersionRequestPrivate &other, CreateBotVersionRequest * const q)

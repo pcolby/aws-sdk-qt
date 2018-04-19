@@ -27,10 +27,9 @@ namespace CloudDirectory {
 
 /*!
  * \class QtAws::CloudDirectory::DetachFromIndexRequest
- *
  * \brief The DetachFromIndexRequest class provides an interface for CloudDirectory DetachFromIndex requests.
  *
- * \ingroup CloudDirectory
+ * \inmodule QtAwsCloudDirectory
  *
  *  <fullname>Amazon Cloud Directory</fullname>
  * 
@@ -44,9 +43,7 @@ namespace CloudDirectory {
  */
 
 /*!
- * @brief  Constructs a new DetachFromIndexRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DetachFromIndexRequest::DetachFromIndexRequest(const DetachFromIndexRequest &other)
     : CloudDirectoryRequest(new DetachFromIndexRequestPrivate(*other.d_func(), this))
@@ -55,7 +52,7 @@ DetachFromIndexRequest::DetachFromIndexRequest(const DetachFromIndexRequest &oth
 }
 
 /*!
- * @brief  Constructs a new DetachFromIndexRequest object.
+ * Constructs a DetachFromIndexRequest object.
  */
 DetachFromIndexRequest::DetachFromIndexRequest()
     : CloudDirectoryRequest(new DetachFromIndexRequestPrivate(CloudDirectoryRequest::DetachFromIndexAction, this))
@@ -73,14 +70,9 @@ bool DetachFromIndexRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DetachFromIndexResponse object.
+ * Returns a DetachFromIndexResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DetachFromIndexResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudDirectoryClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DetachFromIndexRequest::response(QNetworkReply * const reply) const
 {
@@ -88,20 +80,17 @@ QtAws::Core::AwsAbstractResponse * DetachFromIndexRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudDirectory::DetachFromIndexRequestPrivate
+ * \brief The DetachFromIndexRequestPrivate class provides private implementation for DetachFromIndexRequest.
+ * \internal
  *
- * @class  DetachFromIndexRequestPrivate
- *
- * @brief  Private implementation for DetachFromIndexRequest.
+ * \inmodule QtAwsCloudDirectory
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DetachFromIndexRequestPrivate object.
- *
- * @param  action  CloudDirectory action being performed.
- * @param  q       Pointer to this object's public DetachFromIndexRequest instance.
+ * Constructs a DetachFromIndexRequestPrivate object for CloudDirectory \a action with,
+ * public implementation \a q.
  */
 DetachFromIndexRequestPrivate::DetachFromIndexRequestPrivate(
     const CloudDirectoryRequest::Action action, DetachFromIndexRequest * const q)
@@ -111,15 +100,10 @@ DetachFromIndexRequestPrivate::DetachFromIndexRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DetachFromIndexRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DetachFromIndexRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DetachFromIndexRequest instance.
  */
 DetachFromIndexRequestPrivate::DetachFromIndexRequestPrivate(
     const DetachFromIndexRequestPrivate &other, DetachFromIndexRequest * const q)

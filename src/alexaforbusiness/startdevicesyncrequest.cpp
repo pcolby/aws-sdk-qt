@@ -27,10 +27,9 @@ namespace AlexaForBusiness {
 
 /*!
  * \class QtAws::AlexaForBusiness::StartDeviceSyncRequest
- *
  * \brief The StartDeviceSyncRequest class provides an interface for AlexaForBusiness StartDeviceSync requests.
  *
- * \ingroup AlexaForBusiness
+ * \inmodule QtAwsAlexaForBusiness
  *
  *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
  *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
@@ -42,9 +41,7 @@ namespace AlexaForBusiness {
  */
 
 /*!
- * @brief  Constructs a new StartDeviceSyncRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 StartDeviceSyncRequest::StartDeviceSyncRequest(const StartDeviceSyncRequest &other)
     : AlexaForBusinessRequest(new StartDeviceSyncRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ StartDeviceSyncRequest::StartDeviceSyncRequest(const StartDeviceSyncRequest &oth
 }
 
 /*!
- * @brief  Constructs a new StartDeviceSyncRequest object.
+ * Constructs a StartDeviceSyncRequest object.
  */
 StartDeviceSyncRequest::StartDeviceSyncRequest()
     : AlexaForBusinessRequest(new StartDeviceSyncRequestPrivate(AlexaForBusinessRequest::StartDeviceSyncAction, this))
@@ -71,14 +68,9 @@ bool StartDeviceSyncRequest::isValid() const
 
 
 /*!
- * @brief  Construct an StartDeviceSyncResponse object.
+ * Returns a StartDeviceSyncResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An StartDeviceSyncResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AlexaForBusinessClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * StartDeviceSyncRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * StartDeviceSyncRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::AlexaForBusiness::StartDeviceSyncRequestPrivate
+ * \brief The StartDeviceSyncRequestPrivate class provides private implementation for StartDeviceSyncRequest.
+ * \internal
  *
- * @class  StartDeviceSyncRequestPrivate
- *
- * @brief  Private implementation for StartDeviceSyncRequest.
+ * \inmodule QtAwsAlexaForBusiness
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new StartDeviceSyncRequestPrivate object.
- *
- * @param  action  AlexaForBusiness action being performed.
- * @param  q       Pointer to this object's public StartDeviceSyncRequest instance.
+ * Constructs a StartDeviceSyncRequestPrivate object for AlexaForBusiness \a action with,
+ * public implementation \a q.
  */
 StartDeviceSyncRequestPrivate::StartDeviceSyncRequestPrivate(
     const AlexaForBusinessRequest::Action action, StartDeviceSyncRequest * const q)
@@ -109,15 +98,10 @@ StartDeviceSyncRequestPrivate::StartDeviceSyncRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StartDeviceSyncRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the StartDeviceSyncRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public StartDeviceSyncRequest instance.
  */
 StartDeviceSyncRequestPrivate::StartDeviceSyncRequestPrivate(
     const StartDeviceSyncRequestPrivate &other, StartDeviceSyncRequest * const q)

@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DescribeBundleTasksRequest
- *
  * \brief The DescribeBundleTasksRequest class provides an interface for EC2 DescribeBundleTasks requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DescribeBundleTasksRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeBundleTasksRequest::DescribeBundleTasksRequest(const DescribeBundleTasksRequest &other)
     : EC2Request(new DescribeBundleTasksRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ DescribeBundleTasksRequest::DescribeBundleTasksRequest(const DescribeBundleTasks
 }
 
 /*!
- * @brief  Constructs a new DescribeBundleTasksRequest object.
+ * Constructs a DescribeBundleTasksRequest object.
  */
 DescribeBundleTasksRequest::DescribeBundleTasksRequest()
     : EC2Request(new DescribeBundleTasksRequestPrivate(EC2Request::DescribeBundleTasksAction, this))
@@ -70,14 +67,9 @@ bool DescribeBundleTasksRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeBundleTasksResponse object.
+ * Returns a DescribeBundleTasksResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeBundleTasksResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeBundleTasksRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * DescribeBundleTasksRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::DescribeBundleTasksRequestPrivate
+ * \brief The DescribeBundleTasksRequestPrivate class provides private implementation for DescribeBundleTasksRequest.
+ * \internal
  *
- * @class  DescribeBundleTasksRequestPrivate
- *
- * @brief  Private implementation for DescribeBundleTasksRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeBundleTasksRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public DescribeBundleTasksRequest instance.
+ * Constructs a DescribeBundleTasksRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 DescribeBundleTasksRequestPrivate::DescribeBundleTasksRequestPrivate(
     const EC2Request::Action action, DescribeBundleTasksRequest * const q)
@@ -108,15 +97,10 @@ DescribeBundleTasksRequestPrivate::DescribeBundleTasksRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeBundleTasksRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeBundleTasksRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeBundleTasksRequest instance.
  */
 DescribeBundleTasksRequestPrivate::DescribeBundleTasksRequestPrivate(
     const DescribeBundleTasksRequestPrivate &other, DescribeBundleTasksRequest * const q)

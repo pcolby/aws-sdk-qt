@@ -27,10 +27,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::UpdateThingRequest
- *
  * \brief The UpdateThingRequest class provides an interface for IoT UpdateThing requests.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -48,9 +47,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new UpdateThingRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateThingRequest::UpdateThingRequest(const UpdateThingRequest &other)
     : IoTRequest(new UpdateThingRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ UpdateThingRequest::UpdateThingRequest(const UpdateThingRequest &other)
 }
 
 /*!
- * @brief  Constructs a new UpdateThingRequest object.
+ * Constructs a UpdateThingRequest object.
  */
 UpdateThingRequest::UpdateThingRequest()
     : IoTRequest(new UpdateThingRequestPrivate(IoTRequest::UpdateThingAction, this))
@@ -77,14 +74,9 @@ bool UpdateThingRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateThingResponse object.
+ * Returns a UpdateThingResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateThingResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IoTClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateThingRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * UpdateThingRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::IoT::UpdateThingRequestPrivate
+ * \brief The UpdateThingRequestPrivate class provides private implementation for UpdateThingRequest.
+ * \internal
  *
- * @class  UpdateThingRequestPrivate
- *
- * @brief  Private implementation for UpdateThingRequest.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateThingRequestPrivate object.
- *
- * @param  action  IoT action being performed.
- * @param  q       Pointer to this object's public UpdateThingRequest instance.
+ * Constructs a UpdateThingRequestPrivate object for IoT \a action with,
+ * public implementation \a q.
  */
 UpdateThingRequestPrivate::UpdateThingRequestPrivate(
     const IoTRequest::Action action, UpdateThingRequest * const q)
@@ -115,15 +104,10 @@ UpdateThingRequestPrivate::UpdateThingRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateThingRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateThingRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateThingRequest instance.
  */
 UpdateThingRequestPrivate::UpdateThingRequestPrivate(
     const UpdateThingRequestPrivate &other, UpdateThingRequest * const q)

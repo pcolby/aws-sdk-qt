@@ -27,10 +27,9 @@ namespace Shield {
 
 /*!
  * \class QtAws::Shield::ListProtectionsRequest
- *
  * \brief The ListProtectionsRequest class provides an interface for Shield ListProtections requests.
  *
- * \ingroup Shield
+ * \inmodule QtAwsShield
  *
  *  <fullname>AWS Shield Advanced</fullname>
  * 
@@ -43,9 +42,7 @@ namespace Shield {
  */
 
 /*!
- * @brief  Constructs a new ListProtectionsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListProtectionsRequest::ListProtectionsRequest(const ListProtectionsRequest &other)
     : ShieldRequest(new ListProtectionsRequestPrivate(*other.d_func(), this))
@@ -54,7 +51,7 @@ ListProtectionsRequest::ListProtectionsRequest(const ListProtectionsRequest &oth
 }
 
 /*!
- * @brief  Constructs a new ListProtectionsRequest object.
+ * Constructs a ListProtectionsRequest object.
  */
 ListProtectionsRequest::ListProtectionsRequest()
     : ShieldRequest(new ListProtectionsRequestPrivate(ShieldRequest::ListProtectionsAction, this))
@@ -72,14 +69,9 @@ bool ListProtectionsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListProtectionsResponse object.
+ * Returns a ListProtectionsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListProtectionsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ShieldClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListProtectionsRequest::response(QNetworkReply * const reply) const
 {
@@ -87,20 +79,17 @@ QtAws::Core::AwsAbstractResponse * ListProtectionsRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::Shield::ListProtectionsRequestPrivate
+ * \brief The ListProtectionsRequestPrivate class provides private implementation for ListProtectionsRequest.
+ * \internal
  *
- * @class  ListProtectionsRequestPrivate
- *
- * @brief  Private implementation for ListProtectionsRequest.
+ * \inmodule QtAwsShield
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListProtectionsRequestPrivate object.
- *
- * @param  action  Shield action being performed.
- * @param  q       Pointer to this object's public ListProtectionsRequest instance.
+ * Constructs a ListProtectionsRequestPrivate object for Shield \a action with,
+ * public implementation \a q.
  */
 ListProtectionsRequestPrivate::ListProtectionsRequestPrivate(
     const ShieldRequest::Action action, ListProtectionsRequest * const q)
@@ -110,15 +99,10 @@ ListProtectionsRequestPrivate::ListProtectionsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListProtectionsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListProtectionsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListProtectionsRequest instance.
  */
 ListProtectionsRequestPrivate::ListProtectionsRequestPrivate(
     const ListProtectionsRequestPrivate &other, ListProtectionsRequest * const q)

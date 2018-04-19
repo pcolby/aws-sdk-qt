@@ -27,10 +27,9 @@ namespace WorkDocs {
 
 /*!
  * \class QtAws::WorkDocs::DescribeResourcePermissionsRequest
- *
  * \brief The DescribeResourcePermissionsRequest class provides an interface for WorkDocs DescribeResourcePermissions requests.
  *
- * \ingroup WorkDocs
+ * \inmodule QtAwsWorkDocs
  *
  *  The WorkDocs API is designed for the following use
  * 
@@ -66,9 +65,7 @@ namespace WorkDocs {
  */
 
 /*!
- * @brief  Constructs a new DescribeResourcePermissionsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeResourcePermissionsRequest::DescribeResourcePermissionsRequest(const DescribeResourcePermissionsRequest &other)
     : WorkDocsRequest(new DescribeResourcePermissionsRequestPrivate(*other.d_func(), this))
@@ -77,7 +74,7 @@ DescribeResourcePermissionsRequest::DescribeResourcePermissionsRequest(const Des
 }
 
 /*!
- * @brief  Constructs a new DescribeResourcePermissionsRequest object.
+ * Constructs a DescribeResourcePermissionsRequest object.
  */
 DescribeResourcePermissionsRequest::DescribeResourcePermissionsRequest()
     : WorkDocsRequest(new DescribeResourcePermissionsRequestPrivate(WorkDocsRequest::DescribeResourcePermissionsAction, this))
@@ -95,14 +92,9 @@ bool DescribeResourcePermissionsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeResourcePermissionsResponse object.
+ * Returns a DescribeResourcePermissionsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeResourcePermissionsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WorkDocsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeResourcePermissionsRequest::response(QNetworkReply * const reply) const
 {
@@ -110,20 +102,17 @@ QtAws::Core::AwsAbstractResponse * DescribeResourcePermissionsRequest::response(
 }
 
 /*!
- * @internal
+ * \class QtAws::WorkDocs::DescribeResourcePermissionsRequestPrivate
+ * \brief The DescribeResourcePermissionsRequestPrivate class provides private implementation for DescribeResourcePermissionsRequest.
+ * \internal
  *
- * @class  DescribeResourcePermissionsRequestPrivate
- *
- * @brief  Private implementation for DescribeResourcePermissionsRequest.
+ * \inmodule QtAwsWorkDocs
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeResourcePermissionsRequestPrivate object.
- *
- * @param  action  WorkDocs action being performed.
- * @param  q       Pointer to this object's public DescribeResourcePermissionsRequest instance.
+ * Constructs a DescribeResourcePermissionsRequestPrivate object for WorkDocs \a action with,
+ * public implementation \a q.
  */
 DescribeResourcePermissionsRequestPrivate::DescribeResourcePermissionsRequestPrivate(
     const WorkDocsRequest::Action action, DescribeResourcePermissionsRequest * const q)
@@ -133,15 +122,10 @@ DescribeResourcePermissionsRequestPrivate::DescribeResourcePermissionsRequestPri
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeResourcePermissionsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeResourcePermissionsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeResourcePermissionsRequest instance.
  */
 DescribeResourcePermissionsRequestPrivate::DescribeResourcePermissionsRequestPrivate(
     const DescribeResourcePermissionsRequestPrivate &other, DescribeResourcePermissionsRequest * const q)

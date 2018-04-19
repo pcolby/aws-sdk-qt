@@ -27,10 +27,9 @@ namespace DeviceFarm {
 
 /*!
  * \class QtAws::DeviceFarm::ListDeviceInstancesRequest
- *
  * \brief The ListDeviceInstancesRequest class provides an interface for DeviceFarm ListDeviceInstances requests.
  *
- * \ingroup DeviceFarm
+ * \inmodule QtAwsDeviceFarm
  *
  *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
  *  phones, tablets, and other devices in the
@@ -39,9 +38,7 @@ namespace DeviceFarm {
  */
 
 /*!
- * @brief  Constructs a new ListDeviceInstancesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListDeviceInstancesRequest::ListDeviceInstancesRequest(const ListDeviceInstancesRequest &other)
     : DeviceFarmRequest(new ListDeviceInstancesRequestPrivate(*other.d_func(), this))
@@ -50,7 +47,7 @@ ListDeviceInstancesRequest::ListDeviceInstancesRequest(const ListDeviceInstances
 }
 
 /*!
- * @brief  Constructs a new ListDeviceInstancesRequest object.
+ * Constructs a ListDeviceInstancesRequest object.
  */
 ListDeviceInstancesRequest::ListDeviceInstancesRequest()
     : DeviceFarmRequest(new ListDeviceInstancesRequestPrivate(DeviceFarmRequest::ListDeviceInstancesAction, this))
@@ -68,14 +65,9 @@ bool ListDeviceInstancesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListDeviceInstancesResponse object.
+ * Returns a ListDeviceInstancesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListDeviceInstancesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DeviceFarmClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListDeviceInstancesRequest::response(QNetworkReply * const reply) const
 {
@@ -83,20 +75,17 @@ QtAws::Core::AwsAbstractResponse * ListDeviceInstancesRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::DeviceFarm::ListDeviceInstancesRequestPrivate
+ * \brief The ListDeviceInstancesRequestPrivate class provides private implementation for ListDeviceInstancesRequest.
+ * \internal
  *
- * @class  ListDeviceInstancesRequestPrivate
- *
- * @brief  Private implementation for ListDeviceInstancesRequest.
+ * \inmodule QtAwsDeviceFarm
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListDeviceInstancesRequestPrivate object.
- *
- * @param  action  DeviceFarm action being performed.
- * @param  q       Pointer to this object's public ListDeviceInstancesRequest instance.
+ * Constructs a ListDeviceInstancesRequestPrivate object for DeviceFarm \a action with,
+ * public implementation \a q.
  */
 ListDeviceInstancesRequestPrivate::ListDeviceInstancesRequestPrivate(
     const DeviceFarmRequest::Action action, ListDeviceInstancesRequest * const q)
@@ -106,15 +95,10 @@ ListDeviceInstancesRequestPrivate::ListDeviceInstancesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListDeviceInstancesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListDeviceInstancesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListDeviceInstancesRequest instance.
  */
 ListDeviceInstancesRequestPrivate::ListDeviceInstancesRequestPrivate(
     const ListDeviceInstancesRequestPrivate &other, ListDeviceInstancesRequest * const q)

@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::ModifyVpcEndpointConnectionNotificationRequest
- *
  * \brief The ModifyVpcEndpointConnectionNotificationRequest class provides an interface for EC2 ModifyVpcEndpointConnectionNotification requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new ModifyVpcEndpointConnectionNotificationRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ModifyVpcEndpointConnectionNotificationRequest::ModifyVpcEndpointConnectionNotificationRequest(const ModifyVpcEndpointConnectionNotificationRequest &other)
     : EC2Request(new ModifyVpcEndpointConnectionNotificationRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ ModifyVpcEndpointConnectionNotificationRequest::ModifyVpcEndpointConnectionNotif
 }
 
 /*!
- * @brief  Constructs a new ModifyVpcEndpointConnectionNotificationRequest object.
+ * Constructs a ModifyVpcEndpointConnectionNotificationRequest object.
  */
 ModifyVpcEndpointConnectionNotificationRequest::ModifyVpcEndpointConnectionNotificationRequest()
     : EC2Request(new ModifyVpcEndpointConnectionNotificationRequestPrivate(EC2Request::ModifyVpcEndpointConnectionNotificationAction, this))
@@ -70,14 +67,9 @@ bool ModifyVpcEndpointConnectionNotificationRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ModifyVpcEndpointConnectionNotificationResponse object.
+ * Returns a ModifyVpcEndpointConnectionNotificationResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ModifyVpcEndpointConnectionNotificationResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ModifyVpcEndpointConnectionNotificationRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * ModifyVpcEndpointConnectionNotificationReques
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::ModifyVpcEndpointConnectionNotificationRequestPrivate
+ * \brief The ModifyVpcEndpointConnectionNotificationRequestPrivate class provides private implementation for ModifyVpcEndpointConnectionNotificationRequest.
+ * \internal
  *
- * @class  ModifyVpcEndpointConnectionNotificationRequestPrivate
- *
- * @brief  Private implementation for ModifyVpcEndpointConnectionNotificationRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ModifyVpcEndpointConnectionNotificationRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public ModifyVpcEndpointConnectionNotificationRequest instance.
+ * Constructs a ModifyVpcEndpointConnectionNotificationRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 ModifyVpcEndpointConnectionNotificationRequestPrivate::ModifyVpcEndpointConnectionNotificationRequestPrivate(
     const EC2Request::Action action, ModifyVpcEndpointConnectionNotificationRequest * const q)
@@ -108,15 +97,10 @@ ModifyVpcEndpointConnectionNotificationRequestPrivate::ModifyVpcEndpointConnecti
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ModifyVpcEndpointConnectionNotificationRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ModifyVpcEndpointConnectionNotificationRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ModifyVpcEndpointConnectionNotificationRequest instance.
  */
 ModifyVpcEndpointConnectionNotificationRequestPrivate::ModifyVpcEndpointConnectionNotificationRequestPrivate(
     const ModifyVpcEndpointConnectionNotificationRequestPrivate &other, ModifyVpcEndpointConnectionNotificationRequest * const q)

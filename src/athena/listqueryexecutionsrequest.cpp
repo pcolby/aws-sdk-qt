@@ -27,10 +27,9 @@ namespace Athena {
 
 /*!
  * \class QtAws::Athena::ListQueryExecutionsRequest
- *
  * \brief The ListQueryExecutionsRequest class provides an interface for Athena ListQueryExecutions requests.
  *
- * \ingroup Athena
+ * \inmodule QtAwsAthena
  *
  *  Amazon Athena is an interactive query service that lets you use standard SQL to analyze data directly in Amazon S3. You
  *  can point Athena at your data in Amazon S3 and run ad-hoc queries and get results in seconds. Athena is serverless, so
@@ -49,9 +48,7 @@ namespace Athena {
  */
 
 /*!
- * @brief  Constructs a new ListQueryExecutionsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListQueryExecutionsRequest::ListQueryExecutionsRequest(const ListQueryExecutionsRequest &other)
     : AthenaRequest(new ListQueryExecutionsRequestPrivate(*other.d_func(), this))
@@ -60,7 +57,7 @@ ListQueryExecutionsRequest::ListQueryExecutionsRequest(const ListQueryExecutions
 }
 
 /*!
- * @brief  Constructs a new ListQueryExecutionsRequest object.
+ * Constructs a ListQueryExecutionsRequest object.
  */
 ListQueryExecutionsRequest::ListQueryExecutionsRequest()
     : AthenaRequest(new ListQueryExecutionsRequestPrivate(AthenaRequest::ListQueryExecutionsAction, this))
@@ -78,14 +75,9 @@ bool ListQueryExecutionsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListQueryExecutionsResponse object.
+ * Returns a ListQueryExecutionsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListQueryExecutionsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AthenaClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListQueryExecutionsRequest::response(QNetworkReply * const reply) const
 {
@@ -93,20 +85,17 @@ QtAws::Core::AwsAbstractResponse * ListQueryExecutionsRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::Athena::ListQueryExecutionsRequestPrivate
+ * \brief The ListQueryExecutionsRequestPrivate class provides private implementation for ListQueryExecutionsRequest.
+ * \internal
  *
- * @class  ListQueryExecutionsRequestPrivate
- *
- * @brief  Private implementation for ListQueryExecutionsRequest.
+ * \inmodule QtAwsAthena
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListQueryExecutionsRequestPrivate object.
- *
- * @param  action  Athena action being performed.
- * @param  q       Pointer to this object's public ListQueryExecutionsRequest instance.
+ * Constructs a ListQueryExecutionsRequestPrivate object for Athena \a action with,
+ * public implementation \a q.
  */
 ListQueryExecutionsRequestPrivate::ListQueryExecutionsRequestPrivate(
     const AthenaRequest::Action action, ListQueryExecutionsRequest * const q)
@@ -116,15 +105,10 @@ ListQueryExecutionsRequestPrivate::ListQueryExecutionsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListQueryExecutionsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListQueryExecutionsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListQueryExecutionsRequest instance.
  */
 ListQueryExecutionsRequestPrivate::ListQueryExecutionsRequestPrivate(
     const ListQueryExecutionsRequestPrivate &other, ListQueryExecutionsRequest * const q)

@@ -27,10 +27,9 @@ namespace AlexaForBusiness {
 
 /*!
  * \class QtAws::AlexaForBusiness::ListTagsRequest
- *
  * \brief The ListTagsRequest class provides an interface for AlexaForBusiness ListTags requests.
  *
- * \ingroup AlexaForBusiness
+ * \inmodule QtAwsAlexaForBusiness
  *
  *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
  *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
@@ -42,9 +41,7 @@ namespace AlexaForBusiness {
  */
 
 /*!
- * @brief  Constructs a new ListTagsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListTagsRequest::ListTagsRequest(const ListTagsRequest &other)
     : AlexaForBusinessRequest(new ListTagsRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ ListTagsRequest::ListTagsRequest(const ListTagsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ListTagsRequest object.
+ * Constructs a ListTagsRequest object.
  */
 ListTagsRequest::ListTagsRequest()
     : AlexaForBusinessRequest(new ListTagsRequestPrivate(AlexaForBusinessRequest::ListTagsAction, this))
@@ -71,14 +68,9 @@ bool ListTagsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListTagsResponse object.
+ * Returns a ListTagsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListTagsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AlexaForBusinessClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListTagsRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * ListTagsRequest::response(QNetworkReply * con
 }
 
 /*!
- * @internal
+ * \class QtAws::AlexaForBusiness::ListTagsRequestPrivate
+ * \brief The ListTagsRequestPrivate class provides private implementation for ListTagsRequest.
+ * \internal
  *
- * @class  ListTagsRequestPrivate
- *
- * @brief  Private implementation for ListTagsRequest.
+ * \inmodule QtAwsAlexaForBusiness
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListTagsRequestPrivate object.
- *
- * @param  action  AlexaForBusiness action being performed.
- * @param  q       Pointer to this object's public ListTagsRequest instance.
+ * Constructs a ListTagsRequestPrivate object for AlexaForBusiness \a action with,
+ * public implementation \a q.
  */
 ListTagsRequestPrivate::ListTagsRequestPrivate(
     const AlexaForBusinessRequest::Action action, ListTagsRequest * const q)
@@ -109,15 +98,10 @@ ListTagsRequestPrivate::ListTagsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListTagsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListTagsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListTagsRequest instance.
  */
 ListTagsRequestPrivate::ListTagsRequestPrivate(
     const ListTagsRequestPrivate &other, ListTagsRequest * const q)

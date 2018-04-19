@@ -27,19 +27,16 @@ namespace S3 {
 
 /*!
  * \class QtAws::S3::DeleteBucketLifecycleRequest
- *
  * \brief The DeleteBucketLifecycleRequest class provides an interface for S3 DeleteBucketLifecycle requests.
  *
- * \ingroup S3
+ * \inmodule QtAwsS3
  *
  *
  * \sa S3Client::deleteBucketLifecycle
  */
 
 /*!
- * @brief  Constructs a new DeleteBucketLifecycleRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteBucketLifecycleRequest::DeleteBucketLifecycleRequest(const DeleteBucketLifecycleRequest &other)
     : S3Request(new DeleteBucketLifecycleRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ DeleteBucketLifecycleRequest::DeleteBucketLifecycleRequest(const DeleteBucketLif
 }
 
 /*!
- * @brief  Constructs a new DeleteBucketLifecycleRequest object.
+ * Constructs a DeleteBucketLifecycleRequest object.
  */
 DeleteBucketLifecycleRequest::DeleteBucketLifecycleRequest()
     : S3Request(new DeleteBucketLifecycleRequestPrivate(S3Request::DeleteBucketLifecycleAction, this))
@@ -66,14 +63,9 @@ bool DeleteBucketLifecycleRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteBucketLifecycleResponse object.
+ * Returns a DeleteBucketLifecycleResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteBucketLifecycleResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  S3Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteBucketLifecycleRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * DeleteBucketLifecycleRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::S3::DeleteBucketLifecycleRequestPrivate
+ * \brief The DeleteBucketLifecycleRequestPrivate class provides private implementation for DeleteBucketLifecycleRequest.
+ * \internal
  *
- * @class  DeleteBucketLifecycleRequestPrivate
- *
- * @brief  Private implementation for DeleteBucketLifecycleRequest.
+ * \inmodule QtAwsS3
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteBucketLifecycleRequestPrivate object.
- *
- * @param  action  S3 action being performed.
- * @param  q       Pointer to this object's public DeleteBucketLifecycleRequest instance.
+ * Constructs a DeleteBucketLifecycleRequestPrivate object for S3 \a action with,
+ * public implementation \a q.
  */
 DeleteBucketLifecycleRequestPrivate::DeleteBucketLifecycleRequestPrivate(
     const S3Request::Action action, DeleteBucketLifecycleRequest * const q)
@@ -104,15 +93,10 @@ DeleteBucketLifecycleRequestPrivate::DeleteBucketLifecycleRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteBucketLifecycleRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteBucketLifecycleRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteBucketLifecycleRequest instance.
  */
 DeleteBucketLifecycleRequestPrivate::DeleteBucketLifecycleRequestPrivate(
     const DeleteBucketLifecycleRequestPrivate &other, DeleteBucketLifecycleRequest * const q)

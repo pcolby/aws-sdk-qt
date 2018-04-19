@@ -27,19 +27,16 @@ namespace Route53 {
 
 /*!
  * \class QtAws::Route53::UpdateHostedZoneCommentRequest
- *
  * \brief The UpdateHostedZoneCommentRequest class provides an interface for Route53 UpdateHostedZoneComment requests.
  *
- * \ingroup Route53
+ * \inmodule QtAwsRoute53
  *
  *
  * \sa Route53Client::updateHostedZoneComment
  */
 
 /*!
- * @brief  Constructs a new UpdateHostedZoneCommentRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateHostedZoneCommentRequest::UpdateHostedZoneCommentRequest(const UpdateHostedZoneCommentRequest &other)
     : Route53Request(new UpdateHostedZoneCommentRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ UpdateHostedZoneCommentRequest::UpdateHostedZoneCommentRequest(const UpdateHoste
 }
 
 /*!
- * @brief  Constructs a new UpdateHostedZoneCommentRequest object.
+ * Constructs a UpdateHostedZoneCommentRequest object.
  */
 UpdateHostedZoneCommentRequest::UpdateHostedZoneCommentRequest()
     : Route53Request(new UpdateHostedZoneCommentRequestPrivate(Route53Request::UpdateHostedZoneCommentAction, this))
@@ -66,14 +63,9 @@ bool UpdateHostedZoneCommentRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateHostedZoneCommentResponse object.
+ * Returns a UpdateHostedZoneCommentResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateHostedZoneCommentResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  Route53Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateHostedZoneCommentRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * UpdateHostedZoneCommentRequest::response(QNet
 }
 
 /*!
- * @internal
+ * \class QtAws::Route53::UpdateHostedZoneCommentRequestPrivate
+ * \brief The UpdateHostedZoneCommentRequestPrivate class provides private implementation for UpdateHostedZoneCommentRequest.
+ * \internal
  *
- * @class  UpdateHostedZoneCommentRequestPrivate
- *
- * @brief  Private implementation for UpdateHostedZoneCommentRequest.
+ * \inmodule QtAwsRoute53
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateHostedZoneCommentRequestPrivate object.
- *
- * @param  action  Route53 action being performed.
- * @param  q       Pointer to this object's public UpdateHostedZoneCommentRequest instance.
+ * Constructs a UpdateHostedZoneCommentRequestPrivate object for Route53 \a action with,
+ * public implementation \a q.
  */
 UpdateHostedZoneCommentRequestPrivate::UpdateHostedZoneCommentRequestPrivate(
     const Route53Request::Action action, UpdateHostedZoneCommentRequest * const q)
@@ -104,15 +93,10 @@ UpdateHostedZoneCommentRequestPrivate::UpdateHostedZoneCommentRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateHostedZoneCommentRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateHostedZoneCommentRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateHostedZoneCommentRequest instance.
  */
 UpdateHostedZoneCommentRequestPrivate::UpdateHostedZoneCommentRequestPrivate(
     const UpdateHostedZoneCommentRequestPrivate &other, UpdateHostedZoneCommentRequest * const q)

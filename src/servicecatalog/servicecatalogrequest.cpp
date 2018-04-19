@@ -25,16 +25,81 @@ namespace ServiceCatalog {
 
 /*!
  * \class QtAws::ServiceCatalog::ServiceCatalogRequest
- *
  * \brief The ServiceCatalogRequest class provides an interface for ServiceCatalog requests.
  *
- * \ingroup ServiceCatalog
+ * \inmodule QtAwsServiceCatalog
  */
 
 /*!
- * @brief  Constructs a new ServiceCatalogRequest object.
+ * \enum ServiceCatalogRequest::Action
  *
- * @param  action  The ServiceCatalog action to request.
+ * This enum describes the actions that can be performed as ServiceCatalog
+ * requests.
+ *
+ * \value AcceptPortfolioShareAction ServiceCatalog AcceptPortfolioShare action.
+ * \value AssociatePrincipalWithPortfolioAction ServiceCatalog AssociatePrincipalWithPortfolio action.
+ * \value AssociateProductWithPortfolioAction ServiceCatalog AssociateProductWithPortfolio action.
+ * \value AssociateTagOptionWithResourceAction ServiceCatalog AssociateTagOptionWithResource action.
+ * \value CopyProductAction ServiceCatalog CopyProduct action.
+ * \value CreateConstraintAction ServiceCatalog CreateConstraint action.
+ * \value CreatePortfolioAction ServiceCatalog CreatePortfolio action.
+ * \value CreatePortfolioShareAction ServiceCatalog CreatePortfolioShare action.
+ * \value CreateProductAction ServiceCatalog CreateProduct action.
+ * \value CreateProvisionedProductPlanAction ServiceCatalog CreateProvisionedProductPlan action.
+ * \value CreateProvisioningArtifactAction ServiceCatalog CreateProvisioningArtifact action.
+ * \value CreateTagOptionAction ServiceCatalog CreateTagOption action.
+ * \value DeleteConstraintAction ServiceCatalog DeleteConstraint action.
+ * \value DeletePortfolioAction ServiceCatalog DeletePortfolio action.
+ * \value DeletePortfolioShareAction ServiceCatalog DeletePortfolioShare action.
+ * \value DeleteProductAction ServiceCatalog DeleteProduct action.
+ * \value DeleteProvisionedProductPlanAction ServiceCatalog DeleteProvisionedProductPlan action.
+ * \value DeleteProvisioningArtifactAction ServiceCatalog DeleteProvisioningArtifact action.
+ * \value DeleteTagOptionAction ServiceCatalog DeleteTagOption action.
+ * \value DescribeConstraintAction ServiceCatalog DescribeConstraint action.
+ * \value DescribeCopyProductStatusAction ServiceCatalog DescribeCopyProductStatus action.
+ * \value DescribePortfolioAction ServiceCatalog DescribePortfolio action.
+ * \value DescribeProductAction ServiceCatalog DescribeProduct action.
+ * \value DescribeProductAsAdminAction ServiceCatalog DescribeProductAsAdmin action.
+ * \value DescribeProductViewAction ServiceCatalog DescribeProductView action.
+ * \value DescribeProvisionedProductAction ServiceCatalog DescribeProvisionedProduct action.
+ * \value DescribeProvisionedProductPlanAction ServiceCatalog DescribeProvisionedProductPlan action.
+ * \value DescribeProvisioningArtifactAction ServiceCatalog DescribeProvisioningArtifact action.
+ * \value DescribeProvisioningParametersAction ServiceCatalog DescribeProvisioningParameters action.
+ * \value DescribeRecordAction ServiceCatalog DescribeRecord action.
+ * \value DescribeTagOptionAction ServiceCatalog DescribeTagOption action.
+ * \value DisassociatePrincipalFromPortfolioAction ServiceCatalog DisassociatePrincipalFromPortfolio action.
+ * \value DisassociateProductFromPortfolioAction ServiceCatalog DisassociateProductFromPortfolio action.
+ * \value DisassociateTagOptionFromResourceAction ServiceCatalog DisassociateTagOptionFromResource action.
+ * \value ExecuteProvisionedProductPlanAction ServiceCatalog ExecuteProvisionedProductPlan action.
+ * \value ListAcceptedPortfolioSharesAction ServiceCatalog ListAcceptedPortfolioShares action.
+ * \value ListConstraintsForPortfolioAction ServiceCatalog ListConstraintsForPortfolio action.
+ * \value ListLaunchPathsAction ServiceCatalog ListLaunchPaths action.
+ * \value ListPortfolioAccessAction ServiceCatalog ListPortfolioAccess action.
+ * \value ListPortfoliosAction ServiceCatalog ListPortfolios action.
+ * \value ListPortfoliosForProductAction ServiceCatalog ListPortfoliosForProduct action.
+ * \value ListPrincipalsForPortfolioAction ServiceCatalog ListPrincipalsForPortfolio action.
+ * \value ListProvisionedProductPlansAction ServiceCatalog ListProvisionedProductPlans action.
+ * \value ListProvisioningArtifactsAction ServiceCatalog ListProvisioningArtifacts action.
+ * \value ListRecordHistoryAction ServiceCatalog ListRecordHistory action.
+ * \value ListResourcesForTagOptionAction ServiceCatalog ListResourcesForTagOption action.
+ * \value ListTagOptionsAction ServiceCatalog ListTagOptions action.
+ * \value ProvisionProductAction ServiceCatalog ProvisionProduct action.
+ * \value RejectPortfolioShareAction ServiceCatalog RejectPortfolioShare action.
+ * \value ScanProvisionedProductsAction ServiceCatalog ScanProvisionedProducts action.
+ * \value SearchProductsAction ServiceCatalog SearchProducts action.
+ * \value SearchProductsAsAdminAction ServiceCatalog SearchProductsAsAdmin action.
+ * \value SearchProvisionedProductsAction ServiceCatalog SearchProvisionedProducts action.
+ * \value TerminateProvisionedProductAction ServiceCatalog TerminateProvisionedProduct action.
+ * \value UpdateConstraintAction ServiceCatalog UpdateConstraint action.
+ * \value UpdatePortfolioAction ServiceCatalog UpdatePortfolio action.
+ * \value UpdateProductAction ServiceCatalog UpdateProduct action.
+ * \value UpdateProvisionedProductAction ServiceCatalog UpdateProvisionedProduct action.
+ * \value UpdateProvisioningArtifactAction ServiceCatalog UpdateProvisioningArtifact action.
+ * \value UpdateTagOptionAction ServiceCatalog UpdateTagOption action.
+ */
+
+/*!
+ * Constructs a[n] ServiceCatalogRequest object for ServiceCatalog \a action.
  */
 ServiceCatalogRequest::ServiceCatalogRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new ServiceCatalogRequestPrivate(action, this))
@@ -43,9 +108,7 @@ ServiceCatalogRequest::ServiceCatalogRequest(const Action action)
 }
 
 /*!
- * @brief  Constructs a new ServiceCatalogRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ServiceCatalogRequest::ServiceCatalogRequest(const ServiceCatalogRequest &other)
     : QtAws::Core::AwsAbstractRequest(new ServiceCatalogRequestPrivate(*other.d_func(), this))
@@ -54,13 +117,7 @@ ServiceCatalogRequest::ServiceCatalogRequest(const ServiceCatalogRequest &other)
 }
 
 /*!
- * @brief  Assignment operator.
- *
- * Assigns \a other to \c this.
- *
- * @param  other  Instance to copy.
- *
- * @return  A reference to \c this.
+ * Sets the ServiceCatalogRequest object to be equal to \a other.
  */
 ServiceCatalogRequest& ServiceCatalogRequest::operator=(const ServiceCatalogRequest &other)
 {
@@ -72,14 +129,10 @@ ServiceCatalogRequest& ServiceCatalogRequest::operator=(const ServiceCatalogRequ
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ServiceCatalogRequest object.
+ * Constructs aa ServiceCatalogRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from ServiceCatalogRequestPrivate.
- *
- * @param  d  Pointer to private data (aka D-Pointer).
  */
 ServiceCatalogRequest::ServiceCatalogRequest(ServiceCatalogRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
@@ -87,7 +140,7 @@ ServiceCatalogRequest::ServiceCatalogRequest(ServiceCatalogRequestPrivate * cons
 }
 
 /*!
- * \brief Returns the ServiceCatalog action to be performed by this request.
+ * Returns the ServiceCatalog action to be performed by this request.
  */
 ServiceCatalogRequest::Action ServiceCatalogRequest::action() const
 {
@@ -96,7 +149,7 @@ ServiceCatalogRequest::Action ServiceCatalogRequest::action() const
 }
 
 /*!
- * \brief Returns the name of the ServiceCatalog action to be performed by this request.
+ * Returns the name of the ServiceCatalog action to be performed by this request.
  */
 QString ServiceCatalogRequest::actionString() const
 {
@@ -104,7 +157,7 @@ QString ServiceCatalogRequest::actionString() const
 }
 
 /*!
- * \brief Returns the ServiceCatalog API version implemented by this request.
+ * Returns the ServiceCatalog API version implemented by this request.
  */
 QString ServiceCatalogRequest::apiVersion() const
 {
@@ -113,7 +166,7 @@ QString ServiceCatalogRequest::apiVersion() const
 }
 
 /*!
- * @brief Set the ServiceCatalog action to be performed by this request to \a action.
+ * Sets the ServiceCatalog action to be performed by this request to \a action.
  */
 void ServiceCatalogRequest::setAction(const Action action)
 {
@@ -122,7 +175,7 @@ void ServiceCatalogRequest::setAction(const Action action)
 }
 
 /*!
- * Set the ServiceCatalog API version to include in this request to \a version.
+ * Sets the ServiceCatalog API version to include in this request to \a version.
  */
 void ServiceCatalogRequest::setApiVersion(const QString &version)
 {
@@ -131,7 +184,7 @@ void ServiceCatalogRequest::setApiVersion(const QString &version)
 }
 
 /*!
- * \brief Returns \c true if this request is the same as \a other.
+ * Returns \c true if this request is equal to \a other; \c false otherwise.
  *
  * Note, most derived *Request classes do not need to provider their own
  * implementations of this function, since most such request classes rely on
@@ -146,8 +199,8 @@ bool ServiceCatalogRequest::operator==(const ServiceCatalogRequest &other) const
             (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
-/*!
- * @brief  Check if \a queueName is a valid ServiceCatalog queue name.
+/*
+ * Returns \c tue if \a queueName is a valid ServiceCatalog queue name.
  *
  * @par From ServiceCatalog FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
@@ -166,9 +219,8 @@ bool ServiceCatalogRequest::operator==(const ServiceCatalogRequest &other) const
 }*/
 
 /*!
- * \brief Removes the a \a name parameter from this request.
- *
- * Returns the count of paramters removed (typically \c 0 or \c 1).
+ * Removes the a \a name parameter from the request, then returns the number of
+ * paramters removed (typically \c 0 or \c 1).
  */
 int ServiceCatalogRequest::clearParameter(const QString &name)
 {
@@ -177,7 +229,7 @@ int ServiceCatalogRequest::clearParameter(const QString &name)
 }
 
 /*!
- * \brief Removes all parameters from this request.
+ * Removes all parameters from the request.
  */
 void ServiceCatalogRequest::clearParameters()
 {
@@ -186,7 +238,7 @@ void ServiceCatalogRequest::clearParameters()
 }
 
 /*!
- * \brief Returns the value of the \n name pararemter if set, otherwise \a defaultValue.
+ * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
 QVariant ServiceCatalogRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
@@ -195,7 +247,7 @@ QVariant ServiceCatalogRequest::parameter(const QString &name, const QVariant &d
 }
 
 /*!
- * \brief Returns a map of parameters included in this request.
+ * Returns the parameters included in this request.
  */
 const QVariantMap &ServiceCatalogRequest::parameters() const
 {
@@ -204,7 +256,7 @@ const QVariantMap &ServiceCatalogRequest::parameters() const
 }
 
 /*!
- * \brief Sets the \a name parameter to \a value.
+ * Sets the \a name parameter to \a value.
  */
 void ServiceCatalogRequest::setParameter(const QString &name, const QVariant &value)
 {
@@ -213,9 +265,8 @@ void ServiceCatalogRequest::setParameter(const QString &name, const QVariant &va
 }
 
 /*!
- * \brief Sets the map of paramters for this request to \a parameters.
- *
- * Any request parameters set previously will be discarded.
+ * Sets the paramters for this request to \a parameters. Any request parameters
+ * set previously will be discarded.
  */
 void ServiceCatalogRequest::setParameters(const QVariantMap &parameters)
 {
@@ -224,11 +275,12 @@ void ServiceCatalogRequest::setParameters(const QVariantMap &parameters)
 }
 
 /*!
- * \brief Returns a network request for this ServiceCatalog request using the given \a endpoint.
+ * Returns a network request for the ServiceCatalog request using the given
+ * \a endpoint.
  *
- * This ServiceCatalog implementation builds request URLs by combining the common query
- * parameters (such as Action and Version), with any that have been added (via
- * setParameter) by child classes.
+ * This ServiceCatalog implementation builds request URLs by combining the
+ * common query parameters (such as Action and Version), with any that have
+ * been added (via setParameter) by child classes.
  */
 QNetworkRequest ServiceCatalogRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -239,17 +291,16 @@ QNetworkRequest ServiceCatalogRequest::unsignedRequest(const QUrl &endpoint) con
 }
 
 /*!
+ * \class QtAws::ServiceCatalog::ServiceCatalogRequestPrivate
+ * \brief The ServiceCatalogRequestPrivate class provides private implementation for ServiceCatalogRequest.
  * \internal
  *
- * \class  ServiceCatalogRequestPrivate
- *
- * \brief  Private implementation for ServiceCatalogRequest.
+ * \inmodule QtAwsServiceCatalog
  */
 
 /*!
- * \internal
- *
- * \brief Constructs a new ServiceCatalogRequestPrivate object.
+ * Constructs a ServiceCatalogRequestPrivate object for ServiceCatalog \a action with,
+ * public implementation \a q.
  */
 ServiceCatalogRequestPrivate::ServiceCatalogRequestPrivate(const ServiceCatalogRequest::Action action, ServiceCatalogRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
@@ -258,9 +309,7 @@ ServiceCatalogRequestPrivate::ServiceCatalogRequestPrivate(const ServiceCatalogR
 }
 
 /*!
- * \internal
- *
- * \brief Constructs a new ServiceCatalogRequestPrivate object, copying an existing one.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
@@ -276,15 +325,12 @@ ServiceCatalogRequestPrivate::ServiceCatalogRequestPrivate(const ServiceCatalogR
 }
 
 /*!
- * \internal
- *
- * \brief Returns a string representing \a action.
+ * Returns a string represention of \a action, or a null string if \a action is
+ * invalid.
  *
  * This function converts ServiceCatalogRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the ServiceCatalog service's Action
  * query parameters.
- *
- * @return A string representing \a action, or a null string if \a action is invalid.
  */
 QString ServiceCatalogRequestPrivate::toString(const ServiceCatalogRequest::Action &action)
 {

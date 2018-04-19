@@ -25,16 +25,52 @@ namespace WorkMail {
 
 /*!
  * \class QtAws::WorkMail::WorkMailRequest
- *
  * \brief The WorkMailRequest class provides an interface for WorkMail requests.
  *
- * \ingroup WorkMail
+ * \inmodule QtAwsWorkMail
  */
 
 /*!
- * @brief  Constructs a new WorkMailRequest object.
+ * \enum WorkMailRequest::Action
  *
- * @param  action  The WorkMail action to request.
+ * This enum describes the actions that can be performed as WorkMail
+ * requests.
+ *
+ * \value AssociateDelegateToResourceAction WorkMail AssociateDelegateToResource action.
+ * \value AssociateMemberToGroupAction WorkMail AssociateMemberToGroup action.
+ * \value CreateAliasAction WorkMail CreateAlias action.
+ * \value CreateGroupAction WorkMail CreateGroup action.
+ * \value CreateResourceAction WorkMail CreateResource action.
+ * \value CreateUserAction WorkMail CreateUser action.
+ * \value DeleteAliasAction WorkMail DeleteAlias action.
+ * \value DeleteGroupAction WorkMail DeleteGroup action.
+ * \value DeleteMailboxPermissionsAction WorkMail DeleteMailboxPermissions action.
+ * \value DeleteResourceAction WorkMail DeleteResource action.
+ * \value DeleteUserAction WorkMail DeleteUser action.
+ * \value DeregisterFromWorkMailAction WorkMail DeregisterFromWorkMail action.
+ * \value DescribeGroupAction WorkMail DescribeGroup action.
+ * \value DescribeOrganizationAction WorkMail DescribeOrganization action.
+ * \value DescribeResourceAction WorkMail DescribeResource action.
+ * \value DescribeUserAction WorkMail DescribeUser action.
+ * \value DisassociateDelegateFromResourceAction WorkMail DisassociateDelegateFromResource action.
+ * \value DisassociateMemberFromGroupAction WorkMail DisassociateMemberFromGroup action.
+ * \value ListAliasesAction WorkMail ListAliases action.
+ * \value ListGroupMembersAction WorkMail ListGroupMembers action.
+ * \value ListGroupsAction WorkMail ListGroups action.
+ * \value ListMailboxPermissionsAction WorkMail ListMailboxPermissions action.
+ * \value ListOrganizationsAction WorkMail ListOrganizations action.
+ * \value ListResourceDelegatesAction WorkMail ListResourceDelegates action.
+ * \value ListResourcesAction WorkMail ListResources action.
+ * \value ListUsersAction WorkMail ListUsers action.
+ * \value PutMailboxPermissionsAction WorkMail PutMailboxPermissions action.
+ * \value RegisterToWorkMailAction WorkMail RegisterToWorkMail action.
+ * \value ResetPasswordAction WorkMail ResetPassword action.
+ * \value UpdatePrimaryEmailAddressAction WorkMail UpdatePrimaryEmailAddress action.
+ * \value UpdateResourceAction WorkMail UpdateResource action.
+ */
+
+/*!
+ * Constructs a[n] WorkMailRequest object for WorkMail \a action.
  */
 WorkMailRequest::WorkMailRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new WorkMailRequestPrivate(action, this))
@@ -43,9 +79,7 @@ WorkMailRequest::WorkMailRequest(const Action action)
 }
 
 /*!
- * @brief  Constructs a new WorkMailRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 WorkMailRequest::WorkMailRequest(const WorkMailRequest &other)
     : QtAws::Core::AwsAbstractRequest(new WorkMailRequestPrivate(*other.d_func(), this))
@@ -54,13 +88,7 @@ WorkMailRequest::WorkMailRequest(const WorkMailRequest &other)
 }
 
 /*!
- * @brief  Assignment operator.
- *
- * Assigns \a other to \c this.
- *
- * @param  other  Instance to copy.
- *
- * @return  A reference to \c this.
+ * Sets the WorkMailRequest object to be equal to \a other.
  */
 WorkMailRequest& WorkMailRequest::operator=(const WorkMailRequest &other)
 {
@@ -72,14 +100,10 @@ WorkMailRequest& WorkMailRequest::operator=(const WorkMailRequest &other)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new WorkMailRequest object.
+ * Constructs aa WorkMailRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from WorkMailRequestPrivate.
- *
- * @param  d  Pointer to private data (aka D-Pointer).
  */
 WorkMailRequest::WorkMailRequest(WorkMailRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
@@ -87,7 +111,7 @@ WorkMailRequest::WorkMailRequest(WorkMailRequestPrivate * const d) : QtAws::Core
 }
 
 /*!
- * \brief Returns the WorkMail action to be performed by this request.
+ * Returns the WorkMail action to be performed by this request.
  */
 WorkMailRequest::Action WorkMailRequest::action() const
 {
@@ -96,7 +120,7 @@ WorkMailRequest::Action WorkMailRequest::action() const
 }
 
 /*!
- * \brief Returns the name of the WorkMail action to be performed by this request.
+ * Returns the name of the WorkMail action to be performed by this request.
  */
 QString WorkMailRequest::actionString() const
 {
@@ -104,7 +128,7 @@ QString WorkMailRequest::actionString() const
 }
 
 /*!
- * \brief Returns the WorkMail API version implemented by this request.
+ * Returns the WorkMail API version implemented by this request.
  */
 QString WorkMailRequest::apiVersion() const
 {
@@ -113,7 +137,7 @@ QString WorkMailRequest::apiVersion() const
 }
 
 /*!
- * @brief Set the WorkMail action to be performed by this request to \a action.
+ * Sets the WorkMail action to be performed by this request to \a action.
  */
 void WorkMailRequest::setAction(const Action action)
 {
@@ -122,7 +146,7 @@ void WorkMailRequest::setAction(const Action action)
 }
 
 /*!
- * Set the WorkMail API version to include in this request to \a version.
+ * Sets the WorkMail API version to include in this request to \a version.
  */
 void WorkMailRequest::setApiVersion(const QString &version)
 {
@@ -131,7 +155,7 @@ void WorkMailRequest::setApiVersion(const QString &version)
 }
 
 /*!
- * \brief Returns \c true if this request is the same as \a other.
+ * Returns \c true if this request is equal to \a other; \c false otherwise.
  *
  * Note, most derived *Request classes do not need to provider their own
  * implementations of this function, since most such request classes rely on
@@ -146,8 +170,8 @@ bool WorkMailRequest::operator==(const WorkMailRequest &other) const
             (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
-/*!
- * @brief  Check if \a queueName is a valid WorkMail queue name.
+/*
+ * Returns \c tue if \a queueName is a valid WorkMail queue name.
  *
  * @par From WorkMail FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
@@ -166,9 +190,8 @@ bool WorkMailRequest::operator==(const WorkMailRequest &other) const
 }*/
 
 /*!
- * \brief Removes the a \a name parameter from this request.
- *
- * Returns the count of paramters removed (typically \c 0 or \c 1).
+ * Removes the a \a name parameter from the request, then returns the number of
+ * paramters removed (typically \c 0 or \c 1).
  */
 int WorkMailRequest::clearParameter(const QString &name)
 {
@@ -177,7 +200,7 @@ int WorkMailRequest::clearParameter(const QString &name)
 }
 
 /*!
- * \brief Removes all parameters from this request.
+ * Removes all parameters from the request.
  */
 void WorkMailRequest::clearParameters()
 {
@@ -186,7 +209,7 @@ void WorkMailRequest::clearParameters()
 }
 
 /*!
- * \brief Returns the value of the \n name pararemter if set, otherwise \a defaultValue.
+ * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
 QVariant WorkMailRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
@@ -195,7 +218,7 @@ QVariant WorkMailRequest::parameter(const QString &name, const QVariant &default
 }
 
 /*!
- * \brief Returns a map of parameters included in this request.
+ * Returns the parameters included in this request.
  */
 const QVariantMap &WorkMailRequest::parameters() const
 {
@@ -204,7 +227,7 @@ const QVariantMap &WorkMailRequest::parameters() const
 }
 
 /*!
- * \brief Sets the \a name parameter to \a value.
+ * Sets the \a name parameter to \a value.
  */
 void WorkMailRequest::setParameter(const QString &name, const QVariant &value)
 {
@@ -213,9 +236,8 @@ void WorkMailRequest::setParameter(const QString &name, const QVariant &value)
 }
 
 /*!
- * \brief Sets the map of paramters for this request to \a parameters.
- *
- * Any request parameters set previously will be discarded.
+ * Sets the paramters for this request to \a parameters. Any request parameters
+ * set previously will be discarded.
  */
 void WorkMailRequest::setParameters(const QVariantMap &parameters)
 {
@@ -224,11 +246,12 @@ void WorkMailRequest::setParameters(const QVariantMap &parameters)
 }
 
 /*!
- * \brief Returns a network request for this WorkMail request using the given \a endpoint.
+ * Returns a network request for the WorkMail request using the given
+ * \a endpoint.
  *
- * This WorkMail implementation builds request URLs by combining the common query
- * parameters (such as Action and Version), with any that have been added (via
- * setParameter) by child classes.
+ * This WorkMail implementation builds request URLs by combining the
+ * common query parameters (such as Action and Version), with any that have
+ * been added (via setParameter) by child classes.
  */
 QNetworkRequest WorkMailRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -239,17 +262,16 @@ QNetworkRequest WorkMailRequest::unsignedRequest(const QUrl &endpoint) const
 }
 
 /*!
+ * \class QtAws::WorkMail::WorkMailRequestPrivate
+ * \brief The WorkMailRequestPrivate class provides private implementation for WorkMailRequest.
  * \internal
  *
- * \class  WorkMailRequestPrivate
- *
- * \brief  Private implementation for WorkMailRequest.
+ * \inmodule QtAwsWorkMail
  */
 
 /*!
- * \internal
- *
- * \brief Constructs a new WorkMailRequestPrivate object.
+ * Constructs a WorkMailRequestPrivate object for WorkMail \a action with,
+ * public implementation \a q.
  */
 WorkMailRequestPrivate::WorkMailRequestPrivate(const WorkMailRequest::Action action, WorkMailRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
@@ -258,9 +280,7 @@ WorkMailRequestPrivate::WorkMailRequestPrivate(const WorkMailRequest::Action act
 }
 
 /*!
- * \internal
- *
- * \brief Constructs a new WorkMailRequestPrivate object, copying an existing one.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
@@ -276,15 +296,12 @@ WorkMailRequestPrivate::WorkMailRequestPrivate(const WorkMailRequestPrivate &oth
 }
 
 /*!
- * \internal
- *
- * \brief Returns a string representing \a action.
+ * Returns a string represention of \a action, or a null string if \a action is
+ * invalid.
  *
  * This function converts WorkMailRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the WorkMail service's Action
  * query parameters.
- *
- * @return A string representing \a action, or a null string if \a action is invalid.
  */
 QString WorkMailRequestPrivate::toString(const WorkMailRequest::Action &action)
 {

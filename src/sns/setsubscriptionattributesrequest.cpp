@@ -27,10 +27,9 @@ namespace SNS {
 
 /*!
  * \class QtAws::SNS::SetSubscriptionAttributesRequest
- *
  * \brief The SetSubscriptionAttributesRequest class provides an interface for SNS SetSubscriptionAttributes requests.
  *
- * \ingroup SNS
+ * \inmodule QtAwsSNS
  *
  *  <fullname>Amazon Simple Notification Service</fullname>
  * 
@@ -51,9 +50,7 @@ namespace SNS {
  */
 
 /*!
- * @brief  Constructs a new SetSubscriptionAttributesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 SetSubscriptionAttributesRequest::SetSubscriptionAttributesRequest(const SetSubscriptionAttributesRequest &other)
     : SNSRequest(new SetSubscriptionAttributesRequestPrivate(*other.d_func(), this))
@@ -62,7 +59,7 @@ SetSubscriptionAttributesRequest::SetSubscriptionAttributesRequest(const SetSubs
 }
 
 /*!
- * @brief  Constructs a new SetSubscriptionAttributesRequest object.
+ * Constructs a SetSubscriptionAttributesRequest object.
  */
 SetSubscriptionAttributesRequest::SetSubscriptionAttributesRequest()
     : SNSRequest(new SetSubscriptionAttributesRequestPrivate(SNSRequest::SetSubscriptionAttributesAction, this))
@@ -80,14 +77,9 @@ bool SetSubscriptionAttributesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an SetSubscriptionAttributesResponse object.
+ * Returns a SetSubscriptionAttributesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An SetSubscriptionAttributesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SNSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * SetSubscriptionAttributesRequest::response(QNetworkReply * const reply) const
 {
@@ -95,20 +87,17 @@ QtAws::Core::AwsAbstractResponse * SetSubscriptionAttributesRequest::response(QN
 }
 
 /*!
- * @internal
+ * \class QtAws::SNS::SetSubscriptionAttributesRequestPrivate
+ * \brief The SetSubscriptionAttributesRequestPrivate class provides private implementation for SetSubscriptionAttributesRequest.
+ * \internal
  *
- * @class  SetSubscriptionAttributesRequestPrivate
- *
- * @brief  Private implementation for SetSubscriptionAttributesRequest.
+ * \inmodule QtAwsSNS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new SetSubscriptionAttributesRequestPrivate object.
- *
- * @param  action  SNS action being performed.
- * @param  q       Pointer to this object's public SetSubscriptionAttributesRequest instance.
+ * Constructs a SetSubscriptionAttributesRequestPrivate object for SNS \a action with,
+ * public implementation \a q.
  */
 SetSubscriptionAttributesRequestPrivate::SetSubscriptionAttributesRequestPrivate(
     const SNSRequest::Action action, SetSubscriptionAttributesRequest * const q)
@@ -118,15 +107,10 @@ SetSubscriptionAttributesRequestPrivate::SetSubscriptionAttributesRequestPrivate
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SetSubscriptionAttributesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the SetSubscriptionAttributesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public SetSubscriptionAttributesRequest instance.
  */
 SetSubscriptionAttributesRequestPrivate::SetSubscriptionAttributesRequestPrivate(
     const SetSubscriptionAttributesRequestPrivate &other, SetSubscriptionAttributesRequest * const q)

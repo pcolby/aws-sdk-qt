@@ -27,19 +27,16 @@ namespace MachineLearning {
 
 /*!
  * \class QtAws::MachineLearning::GetBatchPredictionRequest
- *
  * \brief The GetBatchPredictionRequest class provides an interface for MachineLearning GetBatchPrediction requests.
  *
- * \ingroup MachineLearning
+ * \inmodule QtAwsMachineLearning
  *
  *
  * \sa MachineLearningClient::getBatchPrediction
  */
 
 /*!
- * @brief  Constructs a new GetBatchPredictionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetBatchPredictionRequest::GetBatchPredictionRequest(const GetBatchPredictionRequest &other)
     : MachineLearningRequest(new GetBatchPredictionRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ GetBatchPredictionRequest::GetBatchPredictionRequest(const GetBatchPredictionReq
 }
 
 /*!
- * @brief  Constructs a new GetBatchPredictionRequest object.
+ * Constructs a GetBatchPredictionRequest object.
  */
 GetBatchPredictionRequest::GetBatchPredictionRequest()
     : MachineLearningRequest(new GetBatchPredictionRequestPrivate(MachineLearningRequest::GetBatchPredictionAction, this))
@@ -66,14 +63,9 @@ bool GetBatchPredictionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetBatchPredictionResponse object.
+ * Returns a GetBatchPredictionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetBatchPredictionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MachineLearningClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetBatchPredictionRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * GetBatchPredictionRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::MachineLearning::GetBatchPredictionRequestPrivate
+ * \brief The GetBatchPredictionRequestPrivate class provides private implementation for GetBatchPredictionRequest.
+ * \internal
  *
- * @class  GetBatchPredictionRequestPrivate
- *
- * @brief  Private implementation for GetBatchPredictionRequest.
+ * \inmodule QtAwsMachineLearning
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetBatchPredictionRequestPrivate object.
- *
- * @param  action  MachineLearning action being performed.
- * @param  q       Pointer to this object's public GetBatchPredictionRequest instance.
+ * Constructs a GetBatchPredictionRequestPrivate object for MachineLearning \a action with,
+ * public implementation \a q.
  */
 GetBatchPredictionRequestPrivate::GetBatchPredictionRequestPrivate(
     const MachineLearningRequest::Action action, GetBatchPredictionRequest * const q)
@@ -104,15 +93,10 @@ GetBatchPredictionRequestPrivate::GetBatchPredictionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetBatchPredictionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetBatchPredictionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetBatchPredictionRequest instance.
  */
 GetBatchPredictionRequestPrivate::GetBatchPredictionRequestPrivate(
     const GetBatchPredictionRequestPrivate &other, GetBatchPredictionRequest * const q)

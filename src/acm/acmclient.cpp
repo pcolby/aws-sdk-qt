@@ -52,6 +52,9 @@
 /*!
  * \namespace QtAws::ACM
  * \brief The QtAws::ACM contains stuff...
+ *
+ * \inmodule QtAwsACM
+ *
  * @todo Move this to a separate template file.
  */
 
@@ -110,7 +113,7 @@ AcmClient::AcmClient(
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * \a  AwsEndpoint::getEndpoint()
+ * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
 AcmClient::AcmClient(
     const QUrl &endpoint,

@@ -27,10 +27,9 @@ namespace Greengrass {
 
 /*!
  * \class QtAws::Greengrass::GetFunctionDefinitionVersionRequest
- *
  * \brief The GetFunctionDefinitionVersionRequest class provides an interface for Greengrass GetFunctionDefinitionVersion requests.
  *
- * \ingroup Greengrass
+ * \inmodule QtAwsGreengrass
  *
  *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
  *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
@@ -40,9 +39,7 @@ namespace Greengrass {
  */
 
 /*!
- * @brief  Constructs a new GetFunctionDefinitionVersionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetFunctionDefinitionVersionRequest::GetFunctionDefinitionVersionRequest(const GetFunctionDefinitionVersionRequest &other)
     : GreengrassRequest(new GetFunctionDefinitionVersionRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ GetFunctionDefinitionVersionRequest::GetFunctionDefinitionVersionRequest(const G
 }
 
 /*!
- * @brief  Constructs a new GetFunctionDefinitionVersionRequest object.
+ * Constructs a GetFunctionDefinitionVersionRequest object.
  */
 GetFunctionDefinitionVersionRequest::GetFunctionDefinitionVersionRequest()
     : GreengrassRequest(new GetFunctionDefinitionVersionRequestPrivate(GreengrassRequest::GetFunctionDefinitionVersionAction, this))
@@ -69,14 +66,9 @@ bool GetFunctionDefinitionVersionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetFunctionDefinitionVersionResponse object.
+ * Returns a GetFunctionDefinitionVersionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetFunctionDefinitionVersionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GreengrassClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetFunctionDefinitionVersionRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * GetFunctionDefinitionVersionRequest::response
 }
 
 /*!
- * @internal
+ * \class QtAws::Greengrass::GetFunctionDefinitionVersionRequestPrivate
+ * \brief The GetFunctionDefinitionVersionRequestPrivate class provides private implementation for GetFunctionDefinitionVersionRequest.
+ * \internal
  *
- * @class  GetFunctionDefinitionVersionRequestPrivate
- *
- * @brief  Private implementation for GetFunctionDefinitionVersionRequest.
+ * \inmodule QtAwsGreengrass
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetFunctionDefinitionVersionRequestPrivate object.
- *
- * @param  action  Greengrass action being performed.
- * @param  q       Pointer to this object's public GetFunctionDefinitionVersionRequest instance.
+ * Constructs a GetFunctionDefinitionVersionRequestPrivate object for Greengrass \a action with,
+ * public implementation \a q.
  */
 GetFunctionDefinitionVersionRequestPrivate::GetFunctionDefinitionVersionRequestPrivate(
     const GreengrassRequest::Action action, GetFunctionDefinitionVersionRequest * const q)
@@ -107,15 +96,10 @@ GetFunctionDefinitionVersionRequestPrivate::GetFunctionDefinitionVersionRequestP
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetFunctionDefinitionVersionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetFunctionDefinitionVersionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetFunctionDefinitionVersionRequest instance.
  */
 GetFunctionDefinitionVersionRequestPrivate::GetFunctionDefinitionVersionRequestPrivate(
     const GetFunctionDefinitionVersionRequestPrivate &other, GetFunctionDefinitionVersionRequest * const q)

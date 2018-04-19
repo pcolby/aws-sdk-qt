@@ -27,10 +27,9 @@ namespace ElasticBeanstalk {
 
 /*!
  * \class QtAws::ElasticBeanstalk::DescribeInstancesHealthRequest
- *
  * \brief The DescribeInstancesHealthRequest class provides an interface for ElasticBeanstalk DescribeInstancesHealth requests.
  *
- * \ingroup ElasticBeanstalk
+ * \inmodule QtAwsElasticBeanstalk
  *
  *  <fullname>AWS Elastic Beanstalk</fullname>
  * 
@@ -59,9 +58,7 @@ namespace ElasticBeanstalk {
  */
 
 /*!
- * @brief  Constructs a new DescribeInstancesHealthRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeInstancesHealthRequest::DescribeInstancesHealthRequest(const DescribeInstancesHealthRequest &other)
     : ElasticBeanstalkRequest(new DescribeInstancesHealthRequestPrivate(*other.d_func(), this))
@@ -70,7 +67,7 @@ DescribeInstancesHealthRequest::DescribeInstancesHealthRequest(const DescribeIns
 }
 
 /*!
- * @brief  Constructs a new DescribeInstancesHealthRequest object.
+ * Constructs a DescribeInstancesHealthRequest object.
  */
 DescribeInstancesHealthRequest::DescribeInstancesHealthRequest()
     : ElasticBeanstalkRequest(new DescribeInstancesHealthRequestPrivate(ElasticBeanstalkRequest::DescribeInstancesHealthAction, this))
@@ -88,14 +85,9 @@ bool DescribeInstancesHealthRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeInstancesHealthResponse object.
+ * Returns a DescribeInstancesHealthResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeInstancesHealthResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ElasticBeanstalkClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeInstancesHealthRequest::response(QNetworkReply * const reply) const
 {
@@ -103,20 +95,17 @@ QtAws::Core::AwsAbstractResponse * DescribeInstancesHealthRequest::response(QNet
 }
 
 /*!
- * @internal
+ * \class QtAws::ElasticBeanstalk::DescribeInstancesHealthRequestPrivate
+ * \brief The DescribeInstancesHealthRequestPrivate class provides private implementation for DescribeInstancesHealthRequest.
+ * \internal
  *
- * @class  DescribeInstancesHealthRequestPrivate
- *
- * @brief  Private implementation for DescribeInstancesHealthRequest.
+ * \inmodule QtAwsElasticBeanstalk
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeInstancesHealthRequestPrivate object.
- *
- * @param  action  ElasticBeanstalk action being performed.
- * @param  q       Pointer to this object's public DescribeInstancesHealthRequest instance.
+ * Constructs a DescribeInstancesHealthRequestPrivate object for ElasticBeanstalk \a action with,
+ * public implementation \a q.
  */
 DescribeInstancesHealthRequestPrivate::DescribeInstancesHealthRequestPrivate(
     const ElasticBeanstalkRequest::Action action, DescribeInstancesHealthRequest * const q)
@@ -126,15 +115,10 @@ DescribeInstancesHealthRequestPrivate::DescribeInstancesHealthRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeInstancesHealthRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeInstancesHealthRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeInstancesHealthRequest instance.
  */
 DescribeInstancesHealthRequestPrivate::DescribeInstancesHealthRequestPrivate(
     const DescribeInstancesHealthRequestPrivate &other, DescribeInstancesHealthRequest * const q)

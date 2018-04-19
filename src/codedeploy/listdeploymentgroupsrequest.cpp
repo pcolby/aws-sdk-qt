@@ -27,10 +27,9 @@ namespace CodeDeploy {
 
 /*!
  * \class QtAws::CodeDeploy::ListDeploymentGroupsRequest
- *
  * \brief The ListDeploymentGroupsRequest class provides an interface for CodeDeploy ListDeploymentGroups requests.
  *
- * \ingroup CodeDeploy
+ * \inmodule QtAwsCodeDeploy
  *
  *  <fullname>AWS CodeDeploy</fullname>
  * 
@@ -118,9 +117,7 @@ namespace CodeDeploy {
  */
 
 /*!
- * @brief  Constructs a new ListDeploymentGroupsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListDeploymentGroupsRequest::ListDeploymentGroupsRequest(const ListDeploymentGroupsRequest &other)
     : CodeDeployRequest(new ListDeploymentGroupsRequestPrivate(*other.d_func(), this))
@@ -129,7 +126,7 @@ ListDeploymentGroupsRequest::ListDeploymentGroupsRequest(const ListDeploymentGro
 }
 
 /*!
- * @brief  Constructs a new ListDeploymentGroupsRequest object.
+ * Constructs a ListDeploymentGroupsRequest object.
  */
 ListDeploymentGroupsRequest::ListDeploymentGroupsRequest()
     : CodeDeployRequest(new ListDeploymentGroupsRequestPrivate(CodeDeployRequest::ListDeploymentGroupsAction, this))
@@ -147,14 +144,9 @@ bool ListDeploymentGroupsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListDeploymentGroupsResponse object.
+ * Returns a ListDeploymentGroupsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListDeploymentGroupsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CodeDeployClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListDeploymentGroupsRequest::response(QNetworkReply * const reply) const
 {
@@ -162,20 +154,17 @@ QtAws::Core::AwsAbstractResponse * ListDeploymentGroupsRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::CodeDeploy::ListDeploymentGroupsRequestPrivate
+ * \brief The ListDeploymentGroupsRequestPrivate class provides private implementation for ListDeploymentGroupsRequest.
+ * \internal
  *
- * @class  ListDeploymentGroupsRequestPrivate
- *
- * @brief  Private implementation for ListDeploymentGroupsRequest.
+ * \inmodule QtAwsCodeDeploy
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListDeploymentGroupsRequestPrivate object.
- *
- * @param  action  CodeDeploy action being performed.
- * @param  q       Pointer to this object's public ListDeploymentGroupsRequest instance.
+ * Constructs a ListDeploymentGroupsRequestPrivate object for CodeDeploy \a action with,
+ * public implementation \a q.
  */
 ListDeploymentGroupsRequestPrivate::ListDeploymentGroupsRequestPrivate(
     const CodeDeployRequest::Action action, ListDeploymentGroupsRequest * const q)
@@ -185,15 +174,10 @@ ListDeploymentGroupsRequestPrivate::ListDeploymentGroupsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListDeploymentGroupsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListDeploymentGroupsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListDeploymentGroupsRequest instance.
  */
 ListDeploymentGroupsRequestPrivate::ListDeploymentGroupsRequestPrivate(
     const ListDeploymentGroupsRequestPrivate &other, ListDeploymentGroupsRequest * const q)

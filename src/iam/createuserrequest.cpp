@@ -27,10 +27,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::CreateUserRequest
- *
  * \brief The CreateUserRequest class provides an interface for IAM CreateUser requests.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -102,9 +101,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new CreateUserRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateUserRequest::CreateUserRequest(const CreateUserRequest &other)
     : IAMRequest(new CreateUserRequestPrivate(*other.d_func(), this))
@@ -113,7 +110,7 @@ CreateUserRequest::CreateUserRequest(const CreateUserRequest &other)
 }
 
 /*!
- * @brief  Constructs a new CreateUserRequest object.
+ * Constructs a CreateUserRequest object.
  */
 CreateUserRequest::CreateUserRequest()
     : IAMRequest(new CreateUserRequestPrivate(IAMRequest::CreateUserAction, this))
@@ -131,14 +128,9 @@ bool CreateUserRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateUserResponse object.
+ * Returns a CreateUserResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateUserResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IAMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateUserRequest::response(QNetworkReply * const reply) const
 {
@@ -146,20 +138,17 @@ QtAws::Core::AwsAbstractResponse * CreateUserRequest::response(QNetworkReply * c
 }
 
 /*!
- * @internal
+ * \class QtAws::IAM::CreateUserRequestPrivate
+ * \brief The CreateUserRequestPrivate class provides private implementation for CreateUserRequest.
+ * \internal
  *
- * @class  CreateUserRequestPrivate
- *
- * @brief  Private implementation for CreateUserRequest.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateUserRequestPrivate object.
- *
- * @param  action  IAM action being performed.
- * @param  q       Pointer to this object's public CreateUserRequest instance.
+ * Constructs a CreateUserRequestPrivate object for IAM \a action with,
+ * public implementation \a q.
  */
 CreateUserRequestPrivate::CreateUserRequestPrivate(
     const IAMRequest::Action action, CreateUserRequest * const q)
@@ -169,15 +158,10 @@ CreateUserRequestPrivate::CreateUserRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateUserRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateUserRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateUserRequest instance.
  */
 CreateUserRequestPrivate::CreateUserRequestPrivate(
     const CreateUserRequestPrivate &other, CreateUserRequest * const q)

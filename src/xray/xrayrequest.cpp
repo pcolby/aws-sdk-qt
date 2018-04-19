@@ -25,16 +25,27 @@ namespace XRay {
 
 /*!
  * \class QtAws::XRay::XRayRequest
- *
  * \brief The XRayRequest class provides an interface for XRay requests.
  *
- * \ingroup XRay
+ * \inmodule QtAwsXRay
  */
 
 /*!
- * @brief  Constructs a new XRayRequest object.
+ * \enum XRayRequest::Action
  *
- * @param  action  The XRay action to request.
+ * This enum describes the actions that can be performed as XRay
+ * requests.
+ *
+ * \value BatchGetTracesAction XRay BatchGetTraces action.
+ * \value GetServiceGraphAction XRay GetServiceGraph action.
+ * \value GetTraceGraphAction XRay GetTraceGraph action.
+ * \value GetTraceSummariesAction XRay GetTraceSummaries action.
+ * \value PutTelemetryRecordsAction XRay PutTelemetryRecords action.
+ * \value PutTraceSegmentsAction XRay PutTraceSegments action.
+ */
+
+/*!
+ * Constructs a[n] XRayRequest object for XRay \a action.
  */
 XRayRequest::XRayRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new XRayRequestPrivate(action, this))
@@ -43,9 +54,7 @@ XRayRequest::XRayRequest(const Action action)
 }
 
 /*!
- * @brief  Constructs a new XRayRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 XRayRequest::XRayRequest(const XRayRequest &other)
     : QtAws::Core::AwsAbstractRequest(new XRayRequestPrivate(*other.d_func(), this))
@@ -54,13 +63,7 @@ XRayRequest::XRayRequest(const XRayRequest &other)
 }
 
 /*!
- * @brief  Assignment operator.
- *
- * Assigns \a other to \c this.
- *
- * @param  other  Instance to copy.
- *
- * @return  A reference to \c this.
+ * Sets the XRayRequest object to be equal to \a other.
  */
 XRayRequest& XRayRequest::operator=(const XRayRequest &other)
 {
@@ -72,14 +75,10 @@ XRayRequest& XRayRequest::operator=(const XRayRequest &other)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new XRayRequest object.
+ * Constructs aa XRayRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from XRayRequestPrivate.
- *
- * @param  d  Pointer to private data (aka D-Pointer).
  */
 XRayRequest::XRayRequest(XRayRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
@@ -87,7 +86,7 @@ XRayRequest::XRayRequest(XRayRequestPrivate * const d) : QtAws::Core::AwsAbstrac
 }
 
 /*!
- * \brief Returns the XRay action to be performed by this request.
+ * Returns the XRay action to be performed by this request.
  */
 XRayRequest::Action XRayRequest::action() const
 {
@@ -96,7 +95,7 @@ XRayRequest::Action XRayRequest::action() const
 }
 
 /*!
- * \brief Returns the name of the XRay action to be performed by this request.
+ * Returns the name of the XRay action to be performed by this request.
  */
 QString XRayRequest::actionString() const
 {
@@ -104,7 +103,7 @@ QString XRayRequest::actionString() const
 }
 
 /*!
- * \brief Returns the XRay API version implemented by this request.
+ * Returns the XRay API version implemented by this request.
  */
 QString XRayRequest::apiVersion() const
 {
@@ -113,7 +112,7 @@ QString XRayRequest::apiVersion() const
 }
 
 /*!
- * @brief Set the XRay action to be performed by this request to \a action.
+ * Sets the XRay action to be performed by this request to \a action.
  */
 void XRayRequest::setAction(const Action action)
 {
@@ -122,7 +121,7 @@ void XRayRequest::setAction(const Action action)
 }
 
 /*!
- * Set the XRay API version to include in this request to \a version.
+ * Sets the XRay API version to include in this request to \a version.
  */
 void XRayRequest::setApiVersion(const QString &version)
 {
@@ -131,7 +130,7 @@ void XRayRequest::setApiVersion(const QString &version)
 }
 
 /*!
- * \brief Returns \c true if this request is the same as \a other.
+ * Returns \c true if this request is equal to \a other; \c false otherwise.
  *
  * Note, most derived *Request classes do not need to provider their own
  * implementations of this function, since most such request classes rely on
@@ -146,8 +145,8 @@ bool XRayRequest::operator==(const XRayRequest &other) const
             (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
-/*!
- * @brief  Check if \a queueName is a valid XRay queue name.
+/*
+ * Returns \c tue if \a queueName is a valid XRay queue name.
  *
  * @par From XRay FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
@@ -166,9 +165,8 @@ bool XRayRequest::operator==(const XRayRequest &other) const
 }*/
 
 /*!
- * \brief Removes the a \a name parameter from this request.
- *
- * Returns the count of paramters removed (typically \c 0 or \c 1).
+ * Removes the a \a name parameter from the request, then returns the number of
+ * paramters removed (typically \c 0 or \c 1).
  */
 int XRayRequest::clearParameter(const QString &name)
 {
@@ -177,7 +175,7 @@ int XRayRequest::clearParameter(const QString &name)
 }
 
 /*!
- * \brief Removes all parameters from this request.
+ * Removes all parameters from the request.
  */
 void XRayRequest::clearParameters()
 {
@@ -186,7 +184,7 @@ void XRayRequest::clearParameters()
 }
 
 /*!
- * \brief Returns the value of the \n name pararemter if set, otherwise \a defaultValue.
+ * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
 QVariant XRayRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
@@ -195,7 +193,7 @@ QVariant XRayRequest::parameter(const QString &name, const QVariant &defaultValu
 }
 
 /*!
- * \brief Returns a map of parameters included in this request.
+ * Returns the parameters included in this request.
  */
 const QVariantMap &XRayRequest::parameters() const
 {
@@ -204,7 +202,7 @@ const QVariantMap &XRayRequest::parameters() const
 }
 
 /*!
- * \brief Sets the \a name parameter to \a value.
+ * Sets the \a name parameter to \a value.
  */
 void XRayRequest::setParameter(const QString &name, const QVariant &value)
 {
@@ -213,9 +211,8 @@ void XRayRequest::setParameter(const QString &name, const QVariant &value)
 }
 
 /*!
- * \brief Sets the map of paramters for this request to \a parameters.
- *
- * Any request parameters set previously will be discarded.
+ * Sets the paramters for this request to \a parameters. Any request parameters
+ * set previously will be discarded.
  */
 void XRayRequest::setParameters(const QVariantMap &parameters)
 {
@@ -224,11 +221,12 @@ void XRayRequest::setParameters(const QVariantMap &parameters)
 }
 
 /*!
- * \brief Returns a network request for this XRay request using the given \a endpoint.
+ * Returns a network request for the XRay request using the given
+ * \a endpoint.
  *
- * This XRay implementation builds request URLs by combining the common query
- * parameters (such as Action and Version), with any that have been added (via
- * setParameter) by child classes.
+ * This XRay implementation builds request URLs by combining the
+ * common query parameters (such as Action and Version), with any that have
+ * been added (via setParameter) by child classes.
  */
 QNetworkRequest XRayRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -239,17 +237,16 @@ QNetworkRequest XRayRequest::unsignedRequest(const QUrl &endpoint) const
 }
 
 /*!
+ * \class QtAws::XRay::XRayRequestPrivate
+ * \brief The XRayRequestPrivate class provides private implementation for XRayRequest.
  * \internal
  *
- * \class  XRayRequestPrivate
- *
- * \brief  Private implementation for XRayRequest.
+ * \inmodule QtAwsXRay
  */
 
 /*!
- * \internal
- *
- * \brief Constructs a new XRayRequestPrivate object.
+ * Constructs a XRayRequestPrivate object for XRay \a action with,
+ * public implementation \a q.
  */
 XRayRequestPrivate::XRayRequestPrivate(const XRayRequest::Action action, XRayRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
@@ -258,9 +255,7 @@ XRayRequestPrivate::XRayRequestPrivate(const XRayRequest::Action action, XRayReq
 }
 
 /*!
- * \internal
- *
- * \brief Constructs a new XRayRequestPrivate object, copying an existing one.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
@@ -276,15 +271,12 @@ XRayRequestPrivate::XRayRequestPrivate(const XRayRequestPrivate &other,
 }
 
 /*!
- * \internal
- *
- * \brief Returns a string representing \a action.
+ * Returns a string represention of \a action, or a null string if \a action is
+ * invalid.
  *
  * This function converts XRayRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the XRay service's Action
  * query parameters.
- *
- * @return A string representing \a action, or a null string if \a action is invalid.
  */
 QString XRayRequestPrivate::toString(const XRayRequest::Action &action)
 {

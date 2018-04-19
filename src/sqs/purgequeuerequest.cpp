@@ -27,10 +27,9 @@ namespace SQS {
 
 /*!
  * \class QtAws::SQS::PurgeQueueRequest
- *
  * \brief The PurgeQueueRequest class provides an interface for SQS PurgeQueue requests.
  *
- * \ingroup SQS
+ * \inmodule QtAwsSQS
  *
  *  Welcome to the <i>Amazon Simple Queue Service API
  * 
@@ -103,9 +102,7 @@ namespace SQS {
  */
 
 /*!
- * @brief  Constructs a new PurgeQueueRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 PurgeQueueRequest::PurgeQueueRequest(const PurgeQueueRequest &other)
     : SQSRequest(new PurgeQueueRequestPrivate(*other.d_func(), this))
@@ -114,7 +111,7 @@ PurgeQueueRequest::PurgeQueueRequest(const PurgeQueueRequest &other)
 }
 
 /*!
- * @brief  Constructs a new PurgeQueueRequest object.
+ * Constructs a PurgeQueueRequest object.
  */
 PurgeQueueRequest::PurgeQueueRequest()
     : SQSRequest(new PurgeQueueRequestPrivate(SQSRequest::PurgeQueueAction, this))
@@ -132,14 +129,9 @@ bool PurgeQueueRequest::isValid() const
 
 
 /*!
- * @brief  Construct an PurgeQueueResponse object.
+ * Returns a PurgeQueueResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An PurgeQueueResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SQSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * PurgeQueueRequest::response(QNetworkReply * const reply) const
 {
@@ -147,20 +139,17 @@ QtAws::Core::AwsAbstractResponse * PurgeQueueRequest::response(QNetworkReply * c
 }
 
 /*!
- * @internal
+ * \class QtAws::SQS::PurgeQueueRequestPrivate
+ * \brief The PurgeQueueRequestPrivate class provides private implementation for PurgeQueueRequest.
+ * \internal
  *
- * @class  PurgeQueueRequestPrivate
- *
- * @brief  Private implementation for PurgeQueueRequest.
+ * \inmodule QtAwsSQS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new PurgeQueueRequestPrivate object.
- *
- * @param  action  SQS action being performed.
- * @param  q       Pointer to this object's public PurgeQueueRequest instance.
+ * Constructs a PurgeQueueRequestPrivate object for SQS \a action with,
+ * public implementation \a q.
  */
 PurgeQueueRequestPrivate::PurgeQueueRequestPrivate(
     const SQSRequest::Action action, PurgeQueueRequest * const q)
@@ -170,15 +159,10 @@ PurgeQueueRequestPrivate::PurgeQueueRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PurgeQueueRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the PurgeQueueRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public PurgeQueueRequest instance.
  */
 PurgeQueueRequestPrivate::PurgeQueueRequestPrivate(
     const PurgeQueueRequestPrivate &other, PurgeQueueRequest * const q)

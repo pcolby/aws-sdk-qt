@@ -27,10 +27,9 @@ namespace Route53Domains {
 
 /*!
  * \class QtAws::Route53Domains::RetrieveDomainAuthCodeRequest
- *
  * \brief The RetrieveDomainAuthCodeRequest class provides an interface for Route53Domains RetrieveDomainAuthCode requests.
  *
- * \ingroup Route53Domains
+ * \inmodule QtAwsRoute53Domains
  *
  *  Amazon Route 53 API actions let you register domain names and perform related
  *
@@ -38,9 +37,7 @@ namespace Route53Domains {
  */
 
 /*!
- * @brief  Constructs a new RetrieveDomainAuthCodeRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 RetrieveDomainAuthCodeRequest::RetrieveDomainAuthCodeRequest(const RetrieveDomainAuthCodeRequest &other)
     : Route53DomainsRequest(new RetrieveDomainAuthCodeRequestPrivate(*other.d_func(), this))
@@ -49,7 +46,7 @@ RetrieveDomainAuthCodeRequest::RetrieveDomainAuthCodeRequest(const RetrieveDomai
 }
 
 /*!
- * @brief  Constructs a new RetrieveDomainAuthCodeRequest object.
+ * Constructs a RetrieveDomainAuthCodeRequest object.
  */
 RetrieveDomainAuthCodeRequest::RetrieveDomainAuthCodeRequest()
     : Route53DomainsRequest(new RetrieveDomainAuthCodeRequestPrivate(Route53DomainsRequest::RetrieveDomainAuthCodeAction, this))
@@ -67,14 +64,9 @@ bool RetrieveDomainAuthCodeRequest::isValid() const
 
 
 /*!
- * @brief  Construct an RetrieveDomainAuthCodeResponse object.
+ * Returns a RetrieveDomainAuthCodeResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An RetrieveDomainAuthCodeResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  Route53DomainsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * RetrieveDomainAuthCodeRequest::response(QNetworkReply * const reply) const
 {
@@ -82,20 +74,17 @@ QtAws::Core::AwsAbstractResponse * RetrieveDomainAuthCodeRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::Route53Domains::RetrieveDomainAuthCodeRequestPrivate
+ * \brief The RetrieveDomainAuthCodeRequestPrivate class provides private implementation for RetrieveDomainAuthCodeRequest.
+ * \internal
  *
- * @class  RetrieveDomainAuthCodeRequestPrivate
- *
- * @brief  Private implementation for RetrieveDomainAuthCodeRequest.
+ * \inmodule QtAwsRoute53Domains
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new RetrieveDomainAuthCodeRequestPrivate object.
- *
- * @param  action  Route53Domains action being performed.
- * @param  q       Pointer to this object's public RetrieveDomainAuthCodeRequest instance.
+ * Constructs a RetrieveDomainAuthCodeRequestPrivate object for Route53Domains \a action with,
+ * public implementation \a q.
  */
 RetrieveDomainAuthCodeRequestPrivate::RetrieveDomainAuthCodeRequestPrivate(
     const Route53DomainsRequest::Action action, RetrieveDomainAuthCodeRequest * const q)
@@ -105,15 +94,10 @@ RetrieveDomainAuthCodeRequestPrivate::RetrieveDomainAuthCodeRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RetrieveDomainAuthCodeRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the RetrieveDomainAuthCodeRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public RetrieveDomainAuthCodeRequest instance.
  */
 RetrieveDomainAuthCodeRequestPrivate::RetrieveDomainAuthCodeRequestPrivate(
     const RetrieveDomainAuthCodeRequestPrivate &other, RetrieveDomainAuthCodeRequest * const q)

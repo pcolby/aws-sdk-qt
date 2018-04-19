@@ -27,19 +27,16 @@ namespace Pinpoint {
 
 /*!
  * \class QtAws::Pinpoint::GetCampaignActivitiesRequest
- *
  * \brief The GetCampaignActivitiesRequest class provides an interface for Pinpoint GetCampaignActivities requests.
  *
- * \ingroup Pinpoint
+ * \inmodule QtAwsPinpoint
  *
  *
  * \sa PinpointClient::getCampaignActivities
  */
 
 /*!
- * @brief  Constructs a new GetCampaignActivitiesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetCampaignActivitiesRequest::GetCampaignActivitiesRequest(const GetCampaignActivitiesRequest &other)
     : PinpointRequest(new GetCampaignActivitiesRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ GetCampaignActivitiesRequest::GetCampaignActivitiesRequest(const GetCampaignActi
 }
 
 /*!
- * @brief  Constructs a new GetCampaignActivitiesRequest object.
+ * Constructs a GetCampaignActivitiesRequest object.
  */
 GetCampaignActivitiesRequest::GetCampaignActivitiesRequest()
     : PinpointRequest(new GetCampaignActivitiesRequestPrivate(PinpointRequest::GetCampaignActivitiesAction, this))
@@ -66,14 +63,9 @@ bool GetCampaignActivitiesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetCampaignActivitiesResponse object.
+ * Returns a GetCampaignActivitiesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetCampaignActivitiesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  PinpointClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetCampaignActivitiesRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * GetCampaignActivitiesRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::Pinpoint::GetCampaignActivitiesRequestPrivate
+ * \brief The GetCampaignActivitiesRequestPrivate class provides private implementation for GetCampaignActivitiesRequest.
+ * \internal
  *
- * @class  GetCampaignActivitiesRequestPrivate
- *
- * @brief  Private implementation for GetCampaignActivitiesRequest.
+ * \inmodule QtAwsPinpoint
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetCampaignActivitiesRequestPrivate object.
- *
- * @param  action  Pinpoint action being performed.
- * @param  q       Pointer to this object's public GetCampaignActivitiesRequest instance.
+ * Constructs a GetCampaignActivitiesRequestPrivate object for Pinpoint \a action with,
+ * public implementation \a q.
  */
 GetCampaignActivitiesRequestPrivate::GetCampaignActivitiesRequestPrivate(
     const PinpointRequest::Action action, GetCampaignActivitiesRequest * const q)
@@ -104,15 +93,10 @@ GetCampaignActivitiesRequestPrivate::GetCampaignActivitiesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetCampaignActivitiesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetCampaignActivitiesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetCampaignActivitiesRequest instance.
  */
 GetCampaignActivitiesRequestPrivate::GetCampaignActivitiesRequestPrivate(
     const GetCampaignActivitiesRequestPrivate &other, GetCampaignActivitiesRequest * const q)

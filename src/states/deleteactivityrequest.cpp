@@ -27,10 +27,9 @@ namespace SFN {
 
 /*!
  * \class QtAws::SFN::DeleteActivityRequest
- *
  * \brief The DeleteActivityRequest class provides an interface for SFN DeleteActivity requests.
  *
- * \ingroup SFN
+ * \inmodule QtAwsSFN
  *
  *  <fullname>AWS Step Functions</fullname>
  * 
@@ -56,9 +55,7 @@ namespace SFN {
  */
 
 /*!
- * @brief  Constructs a new DeleteActivityRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteActivityRequest::DeleteActivityRequest(const DeleteActivityRequest &other)
     : SFNRequest(new DeleteActivityRequestPrivate(*other.d_func(), this))
@@ -67,7 +64,7 @@ DeleteActivityRequest::DeleteActivityRequest(const DeleteActivityRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DeleteActivityRequest object.
+ * Constructs a DeleteActivityRequest object.
  */
 DeleteActivityRequest::DeleteActivityRequest()
     : SFNRequest(new DeleteActivityRequestPrivate(SFNRequest::DeleteActivityAction, this))
@@ -85,14 +82,9 @@ bool DeleteActivityRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteActivityResponse object.
+ * Returns a DeleteActivityResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteActivityResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SFNClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteActivityRequest::response(QNetworkReply * const reply) const
 {
@@ -100,20 +92,17 @@ QtAws::Core::AwsAbstractResponse * DeleteActivityRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::SFN::DeleteActivityRequestPrivate
+ * \brief The DeleteActivityRequestPrivate class provides private implementation for DeleteActivityRequest.
+ * \internal
  *
- * @class  DeleteActivityRequestPrivate
- *
- * @brief  Private implementation for DeleteActivityRequest.
+ * \inmodule QtAwsSFN
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteActivityRequestPrivate object.
- *
- * @param  action  SFN action being performed.
- * @param  q       Pointer to this object's public DeleteActivityRequest instance.
+ * Constructs a DeleteActivityRequestPrivate object for SFN \a action with,
+ * public implementation \a q.
  */
 DeleteActivityRequestPrivate::DeleteActivityRequestPrivate(
     const SFNRequest::Action action, DeleteActivityRequest * const q)
@@ -123,15 +112,10 @@ DeleteActivityRequestPrivate::DeleteActivityRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteActivityRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteActivityRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteActivityRequest instance.
  */
 DeleteActivityRequestPrivate::DeleteActivityRequestPrivate(
     const DeleteActivityRequestPrivate &other, DeleteActivityRequest * const q)

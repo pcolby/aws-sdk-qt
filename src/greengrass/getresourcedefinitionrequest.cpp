@@ -27,10 +27,9 @@ namespace Greengrass {
 
 /*!
  * \class QtAws::Greengrass::GetResourceDefinitionRequest
- *
  * \brief The GetResourceDefinitionRequest class provides an interface for Greengrass GetResourceDefinition requests.
  *
- * \ingroup Greengrass
+ * \inmodule QtAwsGreengrass
  *
  *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
  *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
@@ -40,9 +39,7 @@ namespace Greengrass {
  */
 
 /*!
- * @brief  Constructs a new GetResourceDefinitionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetResourceDefinitionRequest::GetResourceDefinitionRequest(const GetResourceDefinitionRequest &other)
     : GreengrassRequest(new GetResourceDefinitionRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ GetResourceDefinitionRequest::GetResourceDefinitionRequest(const GetResourceDefi
 }
 
 /*!
- * @brief  Constructs a new GetResourceDefinitionRequest object.
+ * Constructs a GetResourceDefinitionRequest object.
  */
 GetResourceDefinitionRequest::GetResourceDefinitionRequest()
     : GreengrassRequest(new GetResourceDefinitionRequestPrivate(GreengrassRequest::GetResourceDefinitionAction, this))
@@ -69,14 +66,9 @@ bool GetResourceDefinitionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetResourceDefinitionResponse object.
+ * Returns a GetResourceDefinitionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetResourceDefinitionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GreengrassClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetResourceDefinitionRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * GetResourceDefinitionRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::Greengrass::GetResourceDefinitionRequestPrivate
+ * \brief The GetResourceDefinitionRequestPrivate class provides private implementation for GetResourceDefinitionRequest.
+ * \internal
  *
- * @class  GetResourceDefinitionRequestPrivate
- *
- * @brief  Private implementation for GetResourceDefinitionRequest.
+ * \inmodule QtAwsGreengrass
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetResourceDefinitionRequestPrivate object.
- *
- * @param  action  Greengrass action being performed.
- * @param  q       Pointer to this object's public GetResourceDefinitionRequest instance.
+ * Constructs a GetResourceDefinitionRequestPrivate object for Greengrass \a action with,
+ * public implementation \a q.
  */
 GetResourceDefinitionRequestPrivate::GetResourceDefinitionRequestPrivate(
     const GreengrassRequest::Action action, GetResourceDefinitionRequest * const q)
@@ -107,15 +96,10 @@ GetResourceDefinitionRequestPrivate::GetResourceDefinitionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetResourceDefinitionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetResourceDefinitionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetResourceDefinitionRequest instance.
  */
 GetResourceDefinitionRequestPrivate::GetResourceDefinitionRequestPrivate(
     const GetResourceDefinitionRequestPrivate &other, GetResourceDefinitionRequest * const q)

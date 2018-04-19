@@ -40,6 +40,9 @@
 /*!
  * \namespace QtAws::Health
  * \brief The QtAws::Health contains stuff...
+ *
+ * \inmodule QtAwsHealth
+ *
  * @todo Move this to a separate template file.
  */
 
@@ -150,7 +153,7 @@ HealthClient::HealthClient(
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * \a  AwsEndpoint::getEndpoint()
+ * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
 HealthClient::HealthClient(
     const QUrl &endpoint,

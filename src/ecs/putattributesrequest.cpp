@@ -27,10 +27,9 @@ namespace ECS {
 
 /*!
  * \class QtAws::ECS::PutAttributesRequest
- *
  * \brief The PutAttributesRequest class provides an interface for ECS PutAttributes requests.
  *
- * \ingroup ECS
+ * \inmodule QtAwsECS
  *
  *  Amazon Elastic Container Service (Amazon ECS) is a highly scalable, fast, container management service that makes it
  *  easy to run, stop, and manage Docker containers on a cluster. You can host your cluster on a serverless infrastructure
@@ -54,9 +53,7 @@ namespace ECS {
  */
 
 /*!
- * @brief  Constructs a new PutAttributesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 PutAttributesRequest::PutAttributesRequest(const PutAttributesRequest &other)
     : ECSRequest(new PutAttributesRequestPrivate(*other.d_func(), this))
@@ -65,7 +62,7 @@ PutAttributesRequest::PutAttributesRequest(const PutAttributesRequest &other)
 }
 
 /*!
- * @brief  Constructs a new PutAttributesRequest object.
+ * Constructs a PutAttributesRequest object.
  */
 PutAttributesRequest::PutAttributesRequest()
     : ECSRequest(new PutAttributesRequestPrivate(ECSRequest::PutAttributesAction, this))
@@ -83,14 +80,9 @@ bool PutAttributesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an PutAttributesResponse object.
+ * Returns a PutAttributesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An PutAttributesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ECSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * PutAttributesRequest::response(QNetworkReply * const reply) const
 {
@@ -98,20 +90,17 @@ QtAws::Core::AwsAbstractResponse * PutAttributesRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::ECS::PutAttributesRequestPrivate
+ * \brief The PutAttributesRequestPrivate class provides private implementation for PutAttributesRequest.
+ * \internal
  *
- * @class  PutAttributesRequestPrivate
- *
- * @brief  Private implementation for PutAttributesRequest.
+ * \inmodule QtAwsECS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new PutAttributesRequestPrivate object.
- *
- * @param  action  ECS action being performed.
- * @param  q       Pointer to this object's public PutAttributesRequest instance.
+ * Constructs a PutAttributesRequestPrivate object for ECS \a action with,
+ * public implementation \a q.
  */
 PutAttributesRequestPrivate::PutAttributesRequestPrivate(
     const ECSRequest::Action action, PutAttributesRequest * const q)
@@ -121,15 +110,10 @@ PutAttributesRequestPrivate::PutAttributesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutAttributesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the PutAttributesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public PutAttributesRequest instance.
  */
 PutAttributesRequestPrivate::PutAttributesRequestPrivate(
     const PutAttributesRequestPrivate &other, PutAttributesRequest * const q)

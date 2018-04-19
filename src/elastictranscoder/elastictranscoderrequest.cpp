@@ -25,16 +25,38 @@ namespace ElasticTranscoder {
 
 /*!
  * \class QtAws::ElasticTranscoder::ElasticTranscoderRequest
- *
  * \brief The ElasticTranscoderRequest class provides an interface for ElasticTranscoder requests.
  *
- * \ingroup ElasticTranscoder
+ * \inmodule QtAwsElasticTranscoder
  */
 
 /*!
- * @brief  Constructs a new ElasticTranscoderRequest object.
+ * \enum ElasticTranscoderRequest::Action
  *
- * @param  action  The ElasticTranscoder action to request.
+ * This enum describes the actions that can be performed as ElasticTranscoder
+ * requests.
+ *
+ * \value CancelJobAction ElasticTranscoder CancelJob action.
+ * \value CreateJobAction ElasticTranscoder CreateJob action.
+ * \value CreatePipelineAction ElasticTranscoder CreatePipeline action.
+ * \value CreatePresetAction ElasticTranscoder CreatePreset action.
+ * \value DeletePipelineAction ElasticTranscoder DeletePipeline action.
+ * \value DeletePresetAction ElasticTranscoder DeletePreset action.
+ * \value ListJobsByPipelineAction ElasticTranscoder ListJobsByPipeline action.
+ * \value ListJobsByStatusAction ElasticTranscoder ListJobsByStatus action.
+ * \value ListPipelinesAction ElasticTranscoder ListPipelines action.
+ * \value ListPresetsAction ElasticTranscoder ListPresets action.
+ * \value ReadJobAction ElasticTranscoder ReadJob action.
+ * \value ReadPipelineAction ElasticTranscoder ReadPipeline action.
+ * \value ReadPresetAction ElasticTranscoder ReadPreset action.
+ * \value TestRoleAction ElasticTranscoder TestRole action.
+ * \value UpdatePipelineAction ElasticTranscoder UpdatePipeline action.
+ * \value UpdatePipelineNotificationsAction ElasticTranscoder UpdatePipelineNotifications action.
+ * \value UpdatePipelineStatusAction ElasticTranscoder UpdatePipelineStatus action.
+ */
+
+/*!
+ * Constructs a[n] ElasticTranscoderRequest object for ElasticTranscoder \a action.
  */
 ElasticTranscoderRequest::ElasticTranscoderRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new ElasticTranscoderRequestPrivate(action, this))
@@ -43,9 +65,7 @@ ElasticTranscoderRequest::ElasticTranscoderRequest(const Action action)
 }
 
 /*!
- * @brief  Constructs a new ElasticTranscoderRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ElasticTranscoderRequest::ElasticTranscoderRequest(const ElasticTranscoderRequest &other)
     : QtAws::Core::AwsAbstractRequest(new ElasticTranscoderRequestPrivate(*other.d_func(), this))
@@ -54,13 +74,7 @@ ElasticTranscoderRequest::ElasticTranscoderRequest(const ElasticTranscoderReques
 }
 
 /*!
- * @brief  Assignment operator.
- *
- * Assigns \a other to \c this.
- *
- * @param  other  Instance to copy.
- *
- * @return  A reference to \c this.
+ * Sets the ElasticTranscoderRequest object to be equal to \a other.
  */
 ElasticTranscoderRequest& ElasticTranscoderRequest::operator=(const ElasticTranscoderRequest &other)
 {
@@ -72,14 +86,10 @@ ElasticTranscoderRequest& ElasticTranscoderRequest::operator=(const ElasticTrans
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ElasticTranscoderRequest object.
+ * Constructs aa ElasticTranscoderRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from ElasticTranscoderRequestPrivate.
- *
- * @param  d  Pointer to private data (aka D-Pointer).
  */
 ElasticTranscoderRequest::ElasticTranscoderRequest(ElasticTranscoderRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
@@ -87,7 +97,7 @@ ElasticTranscoderRequest::ElasticTranscoderRequest(ElasticTranscoderRequestPriva
 }
 
 /*!
- * \brief Returns the ElasticTranscoder action to be performed by this request.
+ * Returns the ElasticTranscoder action to be performed by this request.
  */
 ElasticTranscoderRequest::Action ElasticTranscoderRequest::action() const
 {
@@ -96,7 +106,7 @@ ElasticTranscoderRequest::Action ElasticTranscoderRequest::action() const
 }
 
 /*!
- * \brief Returns the name of the ElasticTranscoder action to be performed by this request.
+ * Returns the name of the ElasticTranscoder action to be performed by this request.
  */
 QString ElasticTranscoderRequest::actionString() const
 {
@@ -104,7 +114,7 @@ QString ElasticTranscoderRequest::actionString() const
 }
 
 /*!
- * \brief Returns the ElasticTranscoder API version implemented by this request.
+ * Returns the ElasticTranscoder API version implemented by this request.
  */
 QString ElasticTranscoderRequest::apiVersion() const
 {
@@ -113,7 +123,7 @@ QString ElasticTranscoderRequest::apiVersion() const
 }
 
 /*!
- * @brief Set the ElasticTranscoder action to be performed by this request to \a action.
+ * Sets the ElasticTranscoder action to be performed by this request to \a action.
  */
 void ElasticTranscoderRequest::setAction(const Action action)
 {
@@ -122,7 +132,7 @@ void ElasticTranscoderRequest::setAction(const Action action)
 }
 
 /*!
- * Set the ElasticTranscoder API version to include in this request to \a version.
+ * Sets the ElasticTranscoder API version to include in this request to \a version.
  */
 void ElasticTranscoderRequest::setApiVersion(const QString &version)
 {
@@ -131,7 +141,7 @@ void ElasticTranscoderRequest::setApiVersion(const QString &version)
 }
 
 /*!
- * \brief Returns \c true if this request is the same as \a other.
+ * Returns \c true if this request is equal to \a other; \c false otherwise.
  *
  * Note, most derived *Request classes do not need to provider their own
  * implementations of this function, since most such request classes rely on
@@ -146,8 +156,8 @@ bool ElasticTranscoderRequest::operator==(const ElasticTranscoderRequest &other)
             (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
-/*!
- * @brief  Check if \a queueName is a valid ElasticTranscoder queue name.
+/*
+ * Returns \c tue if \a queueName is a valid ElasticTranscoder queue name.
  *
  * @par From ElasticTranscoder FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
@@ -166,9 +176,8 @@ bool ElasticTranscoderRequest::operator==(const ElasticTranscoderRequest &other)
 }*/
 
 /*!
- * \brief Removes the a \a name parameter from this request.
- *
- * Returns the count of paramters removed (typically \c 0 or \c 1).
+ * Removes the a \a name parameter from the request, then returns the number of
+ * paramters removed (typically \c 0 or \c 1).
  */
 int ElasticTranscoderRequest::clearParameter(const QString &name)
 {
@@ -177,7 +186,7 @@ int ElasticTranscoderRequest::clearParameter(const QString &name)
 }
 
 /*!
- * \brief Removes all parameters from this request.
+ * Removes all parameters from the request.
  */
 void ElasticTranscoderRequest::clearParameters()
 {
@@ -186,7 +195,7 @@ void ElasticTranscoderRequest::clearParameters()
 }
 
 /*!
- * \brief Returns the value of the \n name pararemter if set, otherwise \a defaultValue.
+ * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
 QVariant ElasticTranscoderRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
@@ -195,7 +204,7 @@ QVariant ElasticTranscoderRequest::parameter(const QString &name, const QVariant
 }
 
 /*!
- * \brief Returns a map of parameters included in this request.
+ * Returns the parameters included in this request.
  */
 const QVariantMap &ElasticTranscoderRequest::parameters() const
 {
@@ -204,7 +213,7 @@ const QVariantMap &ElasticTranscoderRequest::parameters() const
 }
 
 /*!
- * \brief Sets the \a name parameter to \a value.
+ * Sets the \a name parameter to \a value.
  */
 void ElasticTranscoderRequest::setParameter(const QString &name, const QVariant &value)
 {
@@ -213,9 +222,8 @@ void ElasticTranscoderRequest::setParameter(const QString &name, const QVariant 
 }
 
 /*!
- * \brief Sets the map of paramters for this request to \a parameters.
- *
- * Any request parameters set previously will be discarded.
+ * Sets the paramters for this request to \a parameters. Any request parameters
+ * set previously will be discarded.
  */
 void ElasticTranscoderRequest::setParameters(const QVariantMap &parameters)
 {
@@ -224,11 +232,12 @@ void ElasticTranscoderRequest::setParameters(const QVariantMap &parameters)
 }
 
 /*!
- * \brief Returns a network request for this ElasticTranscoder request using the given \a endpoint.
+ * Returns a network request for the ElasticTranscoder request using the given
+ * \a endpoint.
  *
- * This ElasticTranscoder implementation builds request URLs by combining the common query
- * parameters (such as Action and Version), with any that have been added (via
- * setParameter) by child classes.
+ * This ElasticTranscoder implementation builds request URLs by combining the
+ * common query parameters (such as Action and Version), with any that have
+ * been added (via setParameter) by child classes.
  */
 QNetworkRequest ElasticTranscoderRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -239,17 +248,16 @@ QNetworkRequest ElasticTranscoderRequest::unsignedRequest(const QUrl &endpoint) 
 }
 
 /*!
+ * \class QtAws::ElasticTranscoder::ElasticTranscoderRequestPrivate
+ * \brief The ElasticTranscoderRequestPrivate class provides private implementation for ElasticTranscoderRequest.
  * \internal
  *
- * \class  ElasticTranscoderRequestPrivate
- *
- * \brief  Private implementation for ElasticTranscoderRequest.
+ * \inmodule QtAwsElasticTranscoder
  */
 
 /*!
- * \internal
- *
- * \brief Constructs a new ElasticTranscoderRequestPrivate object.
+ * Constructs a ElasticTranscoderRequestPrivate object for ElasticTranscoder \a action with,
+ * public implementation \a q.
  */
 ElasticTranscoderRequestPrivate::ElasticTranscoderRequestPrivate(const ElasticTranscoderRequest::Action action, ElasticTranscoderRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
@@ -258,9 +266,7 @@ ElasticTranscoderRequestPrivate::ElasticTranscoderRequestPrivate(const ElasticTr
 }
 
 /*!
- * \internal
- *
- * \brief Constructs a new ElasticTranscoderRequestPrivate object, copying an existing one.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
@@ -276,15 +282,12 @@ ElasticTranscoderRequestPrivate::ElasticTranscoderRequestPrivate(const ElasticTr
 }
 
 /*!
- * \internal
- *
- * \brief Returns a string representing \a action.
+ * Returns a string represention of \a action, or a null string if \a action is
+ * invalid.
  *
  * This function converts ElasticTranscoderRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the ElasticTranscoder service's Action
  * query parameters.
- *
- * @return A string representing \a action, or a null string if \a action is invalid.
  */
 QString ElasticTranscoderRequestPrivate::toString(const ElasticTranscoderRequest::Action &action)
 {

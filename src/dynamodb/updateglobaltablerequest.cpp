@@ -27,10 +27,9 @@ namespace DynamoDB {
 
 /*!
  * \class QtAws::DynamoDB::UpdateGlobalTableRequest
- *
  * \brief The UpdateGlobalTableRequest class provides an interface for DynamoDB UpdateGlobalTable requests.
  *
- * \ingroup DynamoDB
+ * \inmodule QtAwsDynamoDB
  *
  *  <fullname>Amazon DynamoDB</fullname>
  * 
@@ -56,9 +55,7 @@ namespace DynamoDB {
  */
 
 /*!
- * @brief  Constructs a new UpdateGlobalTableRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateGlobalTableRequest::UpdateGlobalTableRequest(const UpdateGlobalTableRequest &other)
     : DynamoDBRequest(new UpdateGlobalTableRequestPrivate(*other.d_func(), this))
@@ -67,7 +64,7 @@ UpdateGlobalTableRequest::UpdateGlobalTableRequest(const UpdateGlobalTableReques
 }
 
 /*!
- * @brief  Constructs a new UpdateGlobalTableRequest object.
+ * Constructs a UpdateGlobalTableRequest object.
  */
 UpdateGlobalTableRequest::UpdateGlobalTableRequest()
     : DynamoDBRequest(new UpdateGlobalTableRequestPrivate(DynamoDBRequest::UpdateGlobalTableAction, this))
@@ -85,14 +82,9 @@ bool UpdateGlobalTableRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateGlobalTableResponse object.
+ * Returns a UpdateGlobalTableResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateGlobalTableResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DynamoDBClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateGlobalTableRequest::response(QNetworkReply * const reply) const
 {
@@ -100,20 +92,17 @@ QtAws::Core::AwsAbstractResponse * UpdateGlobalTableRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::DynamoDB::UpdateGlobalTableRequestPrivate
+ * \brief The UpdateGlobalTableRequestPrivate class provides private implementation for UpdateGlobalTableRequest.
+ * \internal
  *
- * @class  UpdateGlobalTableRequestPrivate
- *
- * @brief  Private implementation for UpdateGlobalTableRequest.
+ * \inmodule QtAwsDynamoDB
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateGlobalTableRequestPrivate object.
- *
- * @param  action  DynamoDB action being performed.
- * @param  q       Pointer to this object's public UpdateGlobalTableRequest instance.
+ * Constructs a UpdateGlobalTableRequestPrivate object for DynamoDB \a action with,
+ * public implementation \a q.
  */
 UpdateGlobalTableRequestPrivate::UpdateGlobalTableRequestPrivate(
     const DynamoDBRequest::Action action, UpdateGlobalTableRequest * const q)
@@ -123,15 +112,10 @@ UpdateGlobalTableRequestPrivate::UpdateGlobalTableRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateGlobalTableRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateGlobalTableRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateGlobalTableRequest instance.
  */
 UpdateGlobalTableRequestPrivate::UpdateGlobalTableRequestPrivate(
     const UpdateGlobalTableRequestPrivate &other, UpdateGlobalTableRequest * const q)

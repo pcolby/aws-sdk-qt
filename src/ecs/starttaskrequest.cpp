@@ -27,10 +27,9 @@ namespace ECS {
 
 /*!
  * \class QtAws::ECS::StartTaskRequest
- *
  * \brief The StartTaskRequest class provides an interface for ECS StartTask requests.
  *
- * \ingroup ECS
+ * \inmodule QtAwsECS
  *
  *  Amazon Elastic Container Service (Amazon ECS) is a highly scalable, fast, container management service that makes it
  *  easy to run, stop, and manage Docker containers on a cluster. You can host your cluster on a serverless infrastructure
@@ -54,9 +53,7 @@ namespace ECS {
  */
 
 /*!
- * @brief  Constructs a new StartTaskRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 StartTaskRequest::StartTaskRequest(const StartTaskRequest &other)
     : ECSRequest(new StartTaskRequestPrivate(*other.d_func(), this))
@@ -65,7 +62,7 @@ StartTaskRequest::StartTaskRequest(const StartTaskRequest &other)
 }
 
 /*!
- * @brief  Constructs a new StartTaskRequest object.
+ * Constructs a StartTaskRequest object.
  */
 StartTaskRequest::StartTaskRequest()
     : ECSRequest(new StartTaskRequestPrivate(ECSRequest::StartTaskAction, this))
@@ -83,14 +80,9 @@ bool StartTaskRequest::isValid() const
 
 
 /*!
- * @brief  Construct an StartTaskResponse object.
+ * Returns a StartTaskResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An StartTaskResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ECSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * StartTaskRequest::response(QNetworkReply * const reply) const
 {
@@ -98,20 +90,17 @@ QtAws::Core::AwsAbstractResponse * StartTaskRequest::response(QNetworkReply * co
 }
 
 /*!
- * @internal
+ * \class QtAws::ECS::StartTaskRequestPrivate
+ * \brief The StartTaskRequestPrivate class provides private implementation for StartTaskRequest.
+ * \internal
  *
- * @class  StartTaskRequestPrivate
- *
- * @brief  Private implementation for StartTaskRequest.
+ * \inmodule QtAwsECS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new StartTaskRequestPrivate object.
- *
- * @param  action  ECS action being performed.
- * @param  q       Pointer to this object's public StartTaskRequest instance.
+ * Constructs a StartTaskRequestPrivate object for ECS \a action with,
+ * public implementation \a q.
  */
 StartTaskRequestPrivate::StartTaskRequestPrivate(
     const ECSRequest::Action action, StartTaskRequest * const q)
@@ -121,15 +110,10 @@ StartTaskRequestPrivate::StartTaskRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StartTaskRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the StartTaskRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public StartTaskRequest instance.
  */
 StartTaskRequestPrivate::StartTaskRequestPrivate(
     const StartTaskRequestPrivate &other, StartTaskRequest * const q)

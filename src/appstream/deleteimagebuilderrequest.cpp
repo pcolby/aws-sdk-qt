@@ -27,10 +27,9 @@ namespace AppStream {
 
 /*!
  * \class QtAws::AppStream::DeleteImageBuilderRequest
- *
  * \brief The DeleteImageBuilderRequest class provides an interface for AppStream DeleteImageBuilder requests.
  *
- * \ingroup AppStream
+ * \inmodule QtAwsAppStream
  *
  *  <fullname>Amazon AppStream 2.0</fullname>
  * 
@@ -40,9 +39,7 @@ namespace AppStream {
  */
 
 /*!
- * @brief  Constructs a new DeleteImageBuilderRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteImageBuilderRequest::DeleteImageBuilderRequest(const DeleteImageBuilderRequest &other)
     : AppStreamRequest(new DeleteImageBuilderRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ DeleteImageBuilderRequest::DeleteImageBuilderRequest(const DeleteImageBuilderReq
 }
 
 /*!
- * @brief  Constructs a new DeleteImageBuilderRequest object.
+ * Constructs a DeleteImageBuilderRequest object.
  */
 DeleteImageBuilderRequest::DeleteImageBuilderRequest()
     : AppStreamRequest(new DeleteImageBuilderRequestPrivate(AppStreamRequest::DeleteImageBuilderAction, this))
@@ -69,14 +66,9 @@ bool DeleteImageBuilderRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteImageBuilderResponse object.
+ * Returns a DeleteImageBuilderResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteImageBuilderResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AppStreamClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteImageBuilderRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * DeleteImageBuilderRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::AppStream::DeleteImageBuilderRequestPrivate
+ * \brief The DeleteImageBuilderRequestPrivate class provides private implementation for DeleteImageBuilderRequest.
+ * \internal
  *
- * @class  DeleteImageBuilderRequestPrivate
- *
- * @brief  Private implementation for DeleteImageBuilderRequest.
+ * \inmodule QtAwsAppStream
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteImageBuilderRequestPrivate object.
- *
- * @param  action  AppStream action being performed.
- * @param  q       Pointer to this object's public DeleteImageBuilderRequest instance.
+ * Constructs a DeleteImageBuilderRequestPrivate object for AppStream \a action with,
+ * public implementation \a q.
  */
 DeleteImageBuilderRequestPrivate::DeleteImageBuilderRequestPrivate(
     const AppStreamRequest::Action action, DeleteImageBuilderRequest * const q)
@@ -107,15 +96,10 @@ DeleteImageBuilderRequestPrivate::DeleteImageBuilderRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteImageBuilderRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteImageBuilderRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteImageBuilderRequest instance.
  */
 DeleteImageBuilderRequestPrivate::DeleteImageBuilderRequestPrivate(
     const DeleteImageBuilderRequestPrivate &other, DeleteImageBuilderRequest * const q)

@@ -27,10 +27,9 @@ namespace DirectoryService {
 
 /*!
  * \class QtAws::DirectoryService::DescribeEventTopicsRequest
- *
  * \brief The DescribeEventTopicsRequest class provides an interface for DirectoryService DescribeEventTopics requests.
  *
- * \ingroup DirectoryService
+ * \inmodule QtAwsDirectoryService
  *
  *  <fullname>AWS Directory Service</fullname>
  * 
@@ -51,9 +50,7 @@ namespace DirectoryService {
  */
 
 /*!
- * @brief  Constructs a new DescribeEventTopicsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeEventTopicsRequest::DescribeEventTopicsRequest(const DescribeEventTopicsRequest &other)
     : DirectoryServiceRequest(new DescribeEventTopicsRequestPrivate(*other.d_func(), this))
@@ -62,7 +59,7 @@ DescribeEventTopicsRequest::DescribeEventTopicsRequest(const DescribeEventTopics
 }
 
 /*!
- * @brief  Constructs a new DescribeEventTopicsRequest object.
+ * Constructs a DescribeEventTopicsRequest object.
  */
 DescribeEventTopicsRequest::DescribeEventTopicsRequest()
     : DirectoryServiceRequest(new DescribeEventTopicsRequestPrivate(DirectoryServiceRequest::DescribeEventTopicsAction, this))
@@ -80,14 +77,9 @@ bool DescribeEventTopicsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeEventTopicsResponse object.
+ * Returns a DescribeEventTopicsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeEventTopicsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DirectoryServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeEventTopicsRequest::response(QNetworkReply * const reply) const
 {
@@ -95,20 +87,17 @@ QtAws::Core::AwsAbstractResponse * DescribeEventTopicsRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::DirectoryService::DescribeEventTopicsRequestPrivate
+ * \brief The DescribeEventTopicsRequestPrivate class provides private implementation for DescribeEventTopicsRequest.
+ * \internal
  *
- * @class  DescribeEventTopicsRequestPrivate
- *
- * @brief  Private implementation for DescribeEventTopicsRequest.
+ * \inmodule QtAwsDirectoryService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeEventTopicsRequestPrivate object.
- *
- * @param  action  DirectoryService action being performed.
- * @param  q       Pointer to this object's public DescribeEventTopicsRequest instance.
+ * Constructs a DescribeEventTopicsRequestPrivate object for DirectoryService \a action with,
+ * public implementation \a q.
  */
 DescribeEventTopicsRequestPrivate::DescribeEventTopicsRequestPrivate(
     const DirectoryServiceRequest::Action action, DescribeEventTopicsRequest * const q)
@@ -118,15 +107,10 @@ DescribeEventTopicsRequestPrivate::DescribeEventTopicsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeEventTopicsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeEventTopicsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeEventTopicsRequest instance.
  */
 DescribeEventTopicsRequestPrivate::DescribeEventTopicsRequestPrivate(
     const DescribeEventTopicsRequestPrivate &other, DescribeEventTopicsRequest * const q)

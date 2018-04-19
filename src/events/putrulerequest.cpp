@@ -27,10 +27,9 @@ namespace CloudWatchEvents {
 
 /*!
  * \class QtAws::CloudWatchEvents::PutRuleRequest
- *
  * \brief The PutRuleRequest class provides an interface for CloudWatchEvents PutRule requests.
  *
- * \ingroup CloudWatchEvents
+ * \inmodule QtAwsCloudWatchEvents
  *
  *  Amazon CloudWatch Events helps you to respond to state changes in your AWS resources. When your resources change state,
  *  they automatically send events into an event stream. You can create rules that match selected events in the stream and
@@ -60,9 +59,7 @@ namespace CloudWatchEvents {
  */
 
 /*!
- * @brief  Constructs a new PutRuleRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 PutRuleRequest::PutRuleRequest(const PutRuleRequest &other)
     : CloudWatchEventsRequest(new PutRuleRequestPrivate(*other.d_func(), this))
@@ -71,7 +68,7 @@ PutRuleRequest::PutRuleRequest(const PutRuleRequest &other)
 }
 
 /*!
- * @brief  Constructs a new PutRuleRequest object.
+ * Constructs a PutRuleRequest object.
  */
 PutRuleRequest::PutRuleRequest()
     : CloudWatchEventsRequest(new PutRuleRequestPrivate(CloudWatchEventsRequest::PutRuleAction, this))
@@ -89,14 +86,9 @@ bool PutRuleRequest::isValid() const
 
 
 /*!
- * @brief  Construct an PutRuleResponse object.
+ * Returns a PutRuleResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An PutRuleResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudWatchEventsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * PutRuleRequest::response(QNetworkReply * const reply) const
 {
@@ -104,20 +96,17 @@ QtAws::Core::AwsAbstractResponse * PutRuleRequest::response(QNetworkReply * cons
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudWatchEvents::PutRuleRequestPrivate
+ * \brief The PutRuleRequestPrivate class provides private implementation for PutRuleRequest.
+ * \internal
  *
- * @class  PutRuleRequestPrivate
- *
- * @brief  Private implementation for PutRuleRequest.
+ * \inmodule QtAwsCloudWatchEvents
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new PutRuleRequestPrivate object.
- *
- * @param  action  CloudWatchEvents action being performed.
- * @param  q       Pointer to this object's public PutRuleRequest instance.
+ * Constructs a PutRuleRequestPrivate object for CloudWatchEvents \a action with,
+ * public implementation \a q.
  */
 PutRuleRequestPrivate::PutRuleRequestPrivate(
     const CloudWatchEventsRequest::Action action, PutRuleRequest * const q)
@@ -127,15 +116,10 @@ PutRuleRequestPrivate::PutRuleRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutRuleRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the PutRuleRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public PutRuleRequest instance.
  */
 PutRuleRequestPrivate::PutRuleRequestPrivate(
     const PutRuleRequestPrivate &other, PutRuleRequest * const q)

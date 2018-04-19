@@ -27,10 +27,9 @@ namespace ConfigService {
 
 /*!
  * \class QtAws::ConfigService::DescribeConfigurationRecorderStatusRequest
- *
  * \brief The DescribeConfigurationRecorderStatusRequest class provides an interface for ConfigService DescribeConfigurationRecorderStatus requests.
  *
- * \ingroup ConfigService
+ * \inmodule QtAwsConfigService
  *
  *  <fullname>AWS Config</fullname>
  * 
@@ -60,9 +59,7 @@ namespace ConfigService {
  */
 
 /*!
- * @brief  Constructs a new DescribeConfigurationRecorderStatusRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeConfigurationRecorderStatusRequest::DescribeConfigurationRecorderStatusRequest(const DescribeConfigurationRecorderStatusRequest &other)
     : ConfigServiceRequest(new DescribeConfigurationRecorderStatusRequestPrivate(*other.d_func(), this))
@@ -71,7 +68,7 @@ DescribeConfigurationRecorderStatusRequest::DescribeConfigurationRecorderStatusR
 }
 
 /*!
- * @brief  Constructs a new DescribeConfigurationRecorderStatusRequest object.
+ * Constructs a DescribeConfigurationRecorderStatusRequest object.
  */
 DescribeConfigurationRecorderStatusRequest::DescribeConfigurationRecorderStatusRequest()
     : ConfigServiceRequest(new DescribeConfigurationRecorderStatusRequestPrivate(ConfigServiceRequest::DescribeConfigurationRecorderStatusAction, this))
@@ -89,14 +86,9 @@ bool DescribeConfigurationRecorderStatusRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeConfigurationRecorderStatusResponse object.
+ * Returns a DescribeConfigurationRecorderStatusResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeConfigurationRecorderStatusResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ConfigServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeConfigurationRecorderStatusRequest::response(QNetworkReply * const reply) const
 {
@@ -104,20 +96,17 @@ QtAws::Core::AwsAbstractResponse * DescribeConfigurationRecorderStatusRequest::r
 }
 
 /*!
- * @internal
+ * \class QtAws::ConfigService::DescribeConfigurationRecorderStatusRequestPrivate
+ * \brief The DescribeConfigurationRecorderStatusRequestPrivate class provides private implementation for DescribeConfigurationRecorderStatusRequest.
+ * \internal
  *
- * @class  DescribeConfigurationRecorderStatusRequestPrivate
- *
- * @brief  Private implementation for DescribeConfigurationRecorderStatusRequest.
+ * \inmodule QtAwsConfigService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeConfigurationRecorderStatusRequestPrivate object.
- *
- * @param  action  ConfigService action being performed.
- * @param  q       Pointer to this object's public DescribeConfigurationRecorderStatusRequest instance.
+ * Constructs a DescribeConfigurationRecorderStatusRequestPrivate object for ConfigService \a action with,
+ * public implementation \a q.
  */
 DescribeConfigurationRecorderStatusRequestPrivate::DescribeConfigurationRecorderStatusRequestPrivate(
     const ConfigServiceRequest::Action action, DescribeConfigurationRecorderStatusRequest * const q)
@@ -127,15 +116,10 @@ DescribeConfigurationRecorderStatusRequestPrivate::DescribeConfigurationRecorder
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeConfigurationRecorderStatusRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeConfigurationRecorderStatusRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeConfigurationRecorderStatusRequest instance.
  */
 DescribeConfigurationRecorderStatusRequestPrivate::DescribeConfigurationRecorderStatusRequestPrivate(
     const DescribeConfigurationRecorderStatusRequestPrivate &other, DescribeConfigurationRecorderStatusRequest * const q)

@@ -27,10 +27,9 @@ namespace CloudFront {
 
 /*!
  * \class QtAws::CloudFront::UpdateCloudFrontOriginAccessIdentityRequest
- *
  * \brief The UpdateCloudFrontOriginAccessIdentityRequest class provides an interface for CloudFront UpdateCloudFrontOriginAccessIdentity requests.
  *
- * \ingroup CloudFront
+ * \inmodule QtAwsCloudFront
  *
  *  <fullname>Amazon CloudFront</fullname>
  * 
@@ -42,9 +41,7 @@ namespace CloudFront {
  */
 
 /*!
- * @brief  Constructs a new UpdateCloudFrontOriginAccessIdentityRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateCloudFrontOriginAccessIdentityRequest::UpdateCloudFrontOriginAccessIdentityRequest(const UpdateCloudFrontOriginAccessIdentityRequest &other)
     : CloudFrontRequest(new UpdateCloudFrontOriginAccessIdentityRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ UpdateCloudFrontOriginAccessIdentityRequest::UpdateCloudFrontOriginAccessIdentit
 }
 
 /*!
- * @brief  Constructs a new UpdateCloudFrontOriginAccessIdentityRequest object.
+ * Constructs a UpdateCloudFrontOriginAccessIdentityRequest object.
  */
 UpdateCloudFrontOriginAccessIdentityRequest::UpdateCloudFrontOriginAccessIdentityRequest()
     : CloudFrontRequest(new UpdateCloudFrontOriginAccessIdentityRequestPrivate(CloudFrontRequest::UpdateCloudFrontOriginAccessIdentityAction, this))
@@ -71,14 +68,9 @@ bool UpdateCloudFrontOriginAccessIdentityRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateCloudFrontOriginAccessIdentityResponse object.
+ * Returns a UpdateCloudFrontOriginAccessIdentityResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateCloudFrontOriginAccessIdentityResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudFrontClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateCloudFrontOriginAccessIdentityRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * UpdateCloudFrontOriginAccessIdentityRequest::
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudFront::UpdateCloudFrontOriginAccessIdentityRequestPrivate
+ * \brief The UpdateCloudFrontOriginAccessIdentityRequestPrivate class provides private implementation for UpdateCloudFrontOriginAccessIdentityRequest.
+ * \internal
  *
- * @class  UpdateCloudFrontOriginAccessIdentityRequestPrivate
- *
- * @brief  Private implementation for UpdateCloudFrontOriginAccessIdentityRequest.
+ * \inmodule QtAwsCloudFront
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateCloudFrontOriginAccessIdentityRequestPrivate object.
- *
- * @param  action  CloudFront action being performed.
- * @param  q       Pointer to this object's public UpdateCloudFrontOriginAccessIdentityRequest instance.
+ * Constructs a UpdateCloudFrontOriginAccessIdentityRequestPrivate object for CloudFront \a action with,
+ * public implementation \a q.
  */
 UpdateCloudFrontOriginAccessIdentityRequestPrivate::UpdateCloudFrontOriginAccessIdentityRequestPrivate(
     const CloudFrontRequest::Action action, UpdateCloudFrontOriginAccessIdentityRequest * const q)
@@ -109,15 +98,10 @@ UpdateCloudFrontOriginAccessIdentityRequestPrivate::UpdateCloudFrontOriginAccess
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateCloudFrontOriginAccessIdentityRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateCloudFrontOriginAccessIdentityRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateCloudFrontOriginAccessIdentityRequest instance.
  */
 UpdateCloudFrontOriginAccessIdentityRequestPrivate::UpdateCloudFrontOriginAccessIdentityRequestPrivate(
     const UpdateCloudFrontOriginAccessIdentityRequestPrivate &other, UpdateCloudFrontOriginAccessIdentityRequest * const q)

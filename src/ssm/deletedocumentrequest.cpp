@@ -27,10 +27,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::DeleteDocumentRequest
- *
  * \brief The DeleteDocumentRequest class provides an interface for SSM DeleteDocument requests.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -61,9 +60,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new DeleteDocumentRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteDocumentRequest::DeleteDocumentRequest(const DeleteDocumentRequest &other)
     : SSMRequest(new DeleteDocumentRequestPrivate(*other.d_func(), this))
@@ -72,7 +69,7 @@ DeleteDocumentRequest::DeleteDocumentRequest(const DeleteDocumentRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DeleteDocumentRequest object.
+ * Constructs a DeleteDocumentRequest object.
  */
 DeleteDocumentRequest::DeleteDocumentRequest()
     : SSMRequest(new DeleteDocumentRequestPrivate(SSMRequest::DeleteDocumentAction, this))
@@ -90,14 +87,9 @@ bool DeleteDocumentRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteDocumentResponse object.
+ * Returns a DeleteDocumentResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteDocumentResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SSMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteDocumentRequest::response(QNetworkReply * const reply) const
 {
@@ -105,20 +97,17 @@ QtAws::Core::AwsAbstractResponse * DeleteDocumentRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::SSM::DeleteDocumentRequestPrivate
+ * \brief The DeleteDocumentRequestPrivate class provides private implementation for DeleteDocumentRequest.
+ * \internal
  *
- * @class  DeleteDocumentRequestPrivate
- *
- * @brief  Private implementation for DeleteDocumentRequest.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteDocumentRequestPrivate object.
- *
- * @param  action  SSM action being performed.
- * @param  q       Pointer to this object's public DeleteDocumentRequest instance.
+ * Constructs a DeleteDocumentRequestPrivate object for SSM \a action with,
+ * public implementation \a q.
  */
 DeleteDocumentRequestPrivate::DeleteDocumentRequestPrivate(
     const SSMRequest::Action action, DeleteDocumentRequest * const q)
@@ -128,15 +117,10 @@ DeleteDocumentRequestPrivate::DeleteDocumentRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteDocumentRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteDocumentRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteDocumentRequest instance.
  */
 DeleteDocumentRequestPrivate::DeleteDocumentRequestPrivate(
     const DeleteDocumentRequestPrivate &other, DeleteDocumentRequest * const q)

@@ -27,19 +27,16 @@ namespace MTurk {
 
 /*!
  * \class QtAws::MTurk::UpdateHITTypeOfHITRequest
- *
  * \brief The UpdateHITTypeOfHITRequest class provides an interface for MTurk UpdateHITTypeOfHIT requests.
  *
- * \ingroup MTurk
+ * \inmodule QtAwsMTurk
  *
  *
  * \sa MTurkClient::updateHITTypeOfHIT
  */
 
 /*!
- * @brief  Constructs a new UpdateHITTypeOfHITRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateHITTypeOfHITRequest::UpdateHITTypeOfHITRequest(const UpdateHITTypeOfHITRequest &other)
     : MTurkRequest(new UpdateHITTypeOfHITRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ UpdateHITTypeOfHITRequest::UpdateHITTypeOfHITRequest(const UpdateHITTypeOfHITReq
 }
 
 /*!
- * @brief  Constructs a new UpdateHITTypeOfHITRequest object.
+ * Constructs a UpdateHITTypeOfHITRequest object.
  */
 UpdateHITTypeOfHITRequest::UpdateHITTypeOfHITRequest()
     : MTurkRequest(new UpdateHITTypeOfHITRequestPrivate(MTurkRequest::UpdateHITTypeOfHITAction, this))
@@ -66,14 +63,9 @@ bool UpdateHITTypeOfHITRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateHITTypeOfHITResponse object.
+ * Returns a UpdateHITTypeOfHITResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateHITTypeOfHITResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MTurkClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateHITTypeOfHITRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * UpdateHITTypeOfHITRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::MTurk::UpdateHITTypeOfHITRequestPrivate
+ * \brief The UpdateHITTypeOfHITRequestPrivate class provides private implementation for UpdateHITTypeOfHITRequest.
+ * \internal
  *
- * @class  UpdateHITTypeOfHITRequestPrivate
- *
- * @brief  Private implementation for UpdateHITTypeOfHITRequest.
+ * \inmodule QtAwsMTurk
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateHITTypeOfHITRequestPrivate object.
- *
- * @param  action  MTurk action being performed.
- * @param  q       Pointer to this object's public UpdateHITTypeOfHITRequest instance.
+ * Constructs a UpdateHITTypeOfHITRequestPrivate object for MTurk \a action with,
+ * public implementation \a q.
  */
 UpdateHITTypeOfHITRequestPrivate::UpdateHITTypeOfHITRequestPrivate(
     const MTurkRequest::Action action, UpdateHITTypeOfHITRequest * const q)
@@ -104,15 +93,10 @@ UpdateHITTypeOfHITRequestPrivate::UpdateHITTypeOfHITRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateHITTypeOfHITRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateHITTypeOfHITRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateHITTypeOfHITRequest instance.
  */
 UpdateHITTypeOfHITRequestPrivate::UpdateHITTypeOfHITRequestPrivate(
     const UpdateHITTypeOfHITRequestPrivate &other, UpdateHITTypeOfHITRequest * const q)

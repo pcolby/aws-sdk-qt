@@ -27,10 +27,9 @@ namespace SES {
 
 /*!
  * \class QtAws::SES::UpdateCustomVerificationEmailTemplateRequest
- *
  * \brief The UpdateCustomVerificationEmailTemplateRequest class provides an interface for SES UpdateCustomVerificationEmailTemplate requests.
  *
- * \ingroup SES
+ * \inmodule QtAwsSES
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -48,9 +47,7 @@ namespace SES {
  */
 
 /*!
- * @brief  Constructs a new UpdateCustomVerificationEmailTemplateRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateCustomVerificationEmailTemplateRequest::UpdateCustomVerificationEmailTemplateRequest(const UpdateCustomVerificationEmailTemplateRequest &other)
     : SESRequest(new UpdateCustomVerificationEmailTemplateRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ UpdateCustomVerificationEmailTemplateRequest::UpdateCustomVerificationEmailTempl
 }
 
 /*!
- * @brief  Constructs a new UpdateCustomVerificationEmailTemplateRequest object.
+ * Constructs a UpdateCustomVerificationEmailTemplateRequest object.
  */
 UpdateCustomVerificationEmailTemplateRequest::UpdateCustomVerificationEmailTemplateRequest()
     : SESRequest(new UpdateCustomVerificationEmailTemplateRequestPrivate(SESRequest::UpdateCustomVerificationEmailTemplateAction, this))
@@ -77,14 +74,9 @@ bool UpdateCustomVerificationEmailTemplateRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateCustomVerificationEmailTemplateResponse object.
+ * Returns a UpdateCustomVerificationEmailTemplateResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateCustomVerificationEmailTemplateResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SESClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateCustomVerificationEmailTemplateRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * UpdateCustomVerificationEmailTemplateRequest:
 }
 
 /*!
- * @internal
+ * \class QtAws::SES::UpdateCustomVerificationEmailTemplateRequestPrivate
+ * \brief The UpdateCustomVerificationEmailTemplateRequestPrivate class provides private implementation for UpdateCustomVerificationEmailTemplateRequest.
+ * \internal
  *
- * @class  UpdateCustomVerificationEmailTemplateRequestPrivate
- *
- * @brief  Private implementation for UpdateCustomVerificationEmailTemplateRequest.
+ * \inmodule QtAwsSES
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateCustomVerificationEmailTemplateRequestPrivate object.
- *
- * @param  action  SES action being performed.
- * @param  q       Pointer to this object's public UpdateCustomVerificationEmailTemplateRequest instance.
+ * Constructs a UpdateCustomVerificationEmailTemplateRequestPrivate object for SES \a action with,
+ * public implementation \a q.
  */
 UpdateCustomVerificationEmailTemplateRequestPrivate::UpdateCustomVerificationEmailTemplateRequestPrivate(
     const SESRequest::Action action, UpdateCustomVerificationEmailTemplateRequest * const q)
@@ -115,15 +104,10 @@ UpdateCustomVerificationEmailTemplateRequestPrivate::UpdateCustomVerificationEma
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateCustomVerificationEmailTemplateRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateCustomVerificationEmailTemplateRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateCustomVerificationEmailTemplateRequest instance.
  */
 UpdateCustomVerificationEmailTemplateRequestPrivate::UpdateCustomVerificationEmailTemplateRequestPrivate(
     const UpdateCustomVerificationEmailTemplateRequestPrivate &other, UpdateCustomVerificationEmailTemplateRequest * const q)

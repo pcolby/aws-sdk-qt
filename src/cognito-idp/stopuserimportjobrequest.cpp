@@ -27,10 +27,9 @@ namespace CognitoIdentityProvider {
 
 /*!
  * \class QtAws::CognitoIdentityProvider::StopUserImportJobRequest
- *
  * \brief The StopUserImportJobRequest class provides an interface for CognitoIdentityProvider StopUserImportJob requests.
  *
- * \ingroup CognitoIdentityProvider
+ * \inmodule QtAwsCognitoIdentityProvider
  *
  *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
  *  authenticate a user to obtain tokens related to user identity and access
@@ -47,9 +46,7 @@ namespace CognitoIdentityProvider {
  */
 
 /*!
- * @brief  Constructs a new StopUserImportJobRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 StopUserImportJobRequest::StopUserImportJobRequest(const StopUserImportJobRequest &other)
     : CognitoIdentityProviderRequest(new StopUserImportJobRequestPrivate(*other.d_func(), this))
@@ -58,7 +55,7 @@ StopUserImportJobRequest::StopUserImportJobRequest(const StopUserImportJobReques
 }
 
 /*!
- * @brief  Constructs a new StopUserImportJobRequest object.
+ * Constructs a StopUserImportJobRequest object.
  */
 StopUserImportJobRequest::StopUserImportJobRequest()
     : CognitoIdentityProviderRequest(new StopUserImportJobRequestPrivate(CognitoIdentityProviderRequest::StopUserImportJobAction, this))
@@ -76,14 +73,9 @@ bool StopUserImportJobRequest::isValid() const
 
 
 /*!
- * @brief  Construct an StopUserImportJobResponse object.
+ * Returns a StopUserImportJobResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An StopUserImportJobResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CognitoIdentityProviderClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * StopUserImportJobRequest::response(QNetworkReply * const reply) const
 {
@@ -91,20 +83,17 @@ QtAws::Core::AwsAbstractResponse * StopUserImportJobRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::CognitoIdentityProvider::StopUserImportJobRequestPrivate
+ * \brief The StopUserImportJobRequestPrivate class provides private implementation for StopUserImportJobRequest.
+ * \internal
  *
- * @class  StopUserImportJobRequestPrivate
- *
- * @brief  Private implementation for StopUserImportJobRequest.
+ * \inmodule QtAwsCognitoIdentityProvider
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new StopUserImportJobRequestPrivate object.
- *
- * @param  action  CognitoIdentityProvider action being performed.
- * @param  q       Pointer to this object's public StopUserImportJobRequest instance.
+ * Constructs a StopUserImportJobRequestPrivate object for CognitoIdentityProvider \a action with,
+ * public implementation \a q.
  */
 StopUserImportJobRequestPrivate::StopUserImportJobRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, StopUserImportJobRequest * const q)
@@ -114,15 +103,10 @@ StopUserImportJobRequestPrivate::StopUserImportJobRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StopUserImportJobRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the StopUserImportJobRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public StopUserImportJobRequest instance.
  */
 StopUserImportJobRequestPrivate::StopUserImportJobRequestPrivate(
     const StopUserImportJobRequestPrivate &other, StopUserImportJobRequest * const q)

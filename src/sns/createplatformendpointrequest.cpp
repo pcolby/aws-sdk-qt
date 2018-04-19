@@ -27,10 +27,9 @@ namespace SNS {
 
 /*!
  * \class QtAws::SNS::CreatePlatformEndpointRequest
- *
  * \brief The CreatePlatformEndpointRequest class provides an interface for SNS CreatePlatformEndpoint requests.
  *
- * \ingroup SNS
+ * \inmodule QtAwsSNS
  *
  *  <fullname>Amazon Simple Notification Service</fullname>
  * 
@@ -51,9 +50,7 @@ namespace SNS {
  */
 
 /*!
- * @brief  Constructs a new CreatePlatformEndpointRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreatePlatformEndpointRequest::CreatePlatformEndpointRequest(const CreatePlatformEndpointRequest &other)
     : SNSRequest(new CreatePlatformEndpointRequestPrivate(*other.d_func(), this))
@@ -62,7 +59,7 @@ CreatePlatformEndpointRequest::CreatePlatformEndpointRequest(const CreatePlatfor
 }
 
 /*!
- * @brief  Constructs a new CreatePlatformEndpointRequest object.
+ * Constructs a CreatePlatformEndpointRequest object.
  */
 CreatePlatformEndpointRequest::CreatePlatformEndpointRequest()
     : SNSRequest(new CreatePlatformEndpointRequestPrivate(SNSRequest::CreatePlatformEndpointAction, this))
@@ -80,14 +77,9 @@ bool CreatePlatformEndpointRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreatePlatformEndpointResponse object.
+ * Returns a CreatePlatformEndpointResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreatePlatformEndpointResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SNSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreatePlatformEndpointRequest::response(QNetworkReply * const reply) const
 {
@@ -95,20 +87,17 @@ QtAws::Core::AwsAbstractResponse * CreatePlatformEndpointRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::SNS::CreatePlatformEndpointRequestPrivate
+ * \brief The CreatePlatformEndpointRequestPrivate class provides private implementation for CreatePlatformEndpointRequest.
+ * \internal
  *
- * @class  CreatePlatformEndpointRequestPrivate
- *
- * @brief  Private implementation for CreatePlatformEndpointRequest.
+ * \inmodule QtAwsSNS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreatePlatformEndpointRequestPrivate object.
- *
- * @param  action  SNS action being performed.
- * @param  q       Pointer to this object's public CreatePlatformEndpointRequest instance.
+ * Constructs a CreatePlatformEndpointRequestPrivate object for SNS \a action with,
+ * public implementation \a q.
  */
 CreatePlatformEndpointRequestPrivate::CreatePlatformEndpointRequestPrivate(
     const SNSRequest::Action action, CreatePlatformEndpointRequest * const q)
@@ -118,15 +107,10 @@ CreatePlatformEndpointRequestPrivate::CreatePlatformEndpointRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreatePlatformEndpointRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreatePlatformEndpointRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreatePlatformEndpointRequest instance.
  */
 CreatePlatformEndpointRequestPrivate::CreatePlatformEndpointRequestPrivate(
     const CreatePlatformEndpointRequestPrivate &other, CreatePlatformEndpointRequest * const q)

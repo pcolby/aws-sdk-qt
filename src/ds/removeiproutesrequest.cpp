@@ -27,10 +27,9 @@ namespace DirectoryService {
 
 /*!
  * \class QtAws::DirectoryService::RemoveIpRoutesRequest
- *
  * \brief The RemoveIpRoutesRequest class provides an interface for DirectoryService RemoveIpRoutes requests.
  *
- * \ingroup DirectoryService
+ * \inmodule QtAwsDirectoryService
  *
  *  <fullname>AWS Directory Service</fullname>
  * 
@@ -51,9 +50,7 @@ namespace DirectoryService {
  */
 
 /*!
- * @brief  Constructs a new RemoveIpRoutesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 RemoveIpRoutesRequest::RemoveIpRoutesRequest(const RemoveIpRoutesRequest &other)
     : DirectoryServiceRequest(new RemoveIpRoutesRequestPrivate(*other.d_func(), this))
@@ -62,7 +59,7 @@ RemoveIpRoutesRequest::RemoveIpRoutesRequest(const RemoveIpRoutesRequest &other)
 }
 
 /*!
- * @brief  Constructs a new RemoveIpRoutesRequest object.
+ * Constructs a RemoveIpRoutesRequest object.
  */
 RemoveIpRoutesRequest::RemoveIpRoutesRequest()
     : DirectoryServiceRequest(new RemoveIpRoutesRequestPrivate(DirectoryServiceRequest::RemoveIpRoutesAction, this))
@@ -80,14 +77,9 @@ bool RemoveIpRoutesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an RemoveIpRoutesResponse object.
+ * Returns a RemoveIpRoutesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An RemoveIpRoutesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DirectoryServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * RemoveIpRoutesRequest::response(QNetworkReply * const reply) const
 {
@@ -95,20 +87,17 @@ QtAws::Core::AwsAbstractResponse * RemoveIpRoutesRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::DirectoryService::RemoveIpRoutesRequestPrivate
+ * \brief The RemoveIpRoutesRequestPrivate class provides private implementation for RemoveIpRoutesRequest.
+ * \internal
  *
- * @class  RemoveIpRoutesRequestPrivate
- *
- * @brief  Private implementation for RemoveIpRoutesRequest.
+ * \inmodule QtAwsDirectoryService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new RemoveIpRoutesRequestPrivate object.
- *
- * @param  action  DirectoryService action being performed.
- * @param  q       Pointer to this object's public RemoveIpRoutesRequest instance.
+ * Constructs a RemoveIpRoutesRequestPrivate object for DirectoryService \a action with,
+ * public implementation \a q.
  */
 RemoveIpRoutesRequestPrivate::RemoveIpRoutesRequestPrivate(
     const DirectoryServiceRequest::Action action, RemoveIpRoutesRequest * const q)
@@ -118,15 +107,10 @@ RemoveIpRoutesRequestPrivate::RemoveIpRoutesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RemoveIpRoutesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the RemoveIpRoutesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public RemoveIpRoutesRequest instance.
  */
 RemoveIpRoutesRequestPrivate::RemoveIpRoutesRequestPrivate(
     const RemoveIpRoutesRequestPrivate &other, RemoveIpRoutesRequest * const q)

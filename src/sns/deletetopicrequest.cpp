@@ -27,10 +27,9 @@ namespace SNS {
 
 /*!
  * \class QtAws::SNS::DeleteTopicRequest
- *
  * \brief The DeleteTopicRequest class provides an interface for SNS DeleteTopic requests.
  *
- * \ingroup SNS
+ * \inmodule QtAwsSNS
  *
  *  <fullname>Amazon Simple Notification Service</fullname>
  * 
@@ -51,9 +50,7 @@ namespace SNS {
  */
 
 /*!
- * @brief  Constructs a new DeleteTopicRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteTopicRequest::DeleteTopicRequest(const DeleteTopicRequest &other)
     : SNSRequest(new DeleteTopicRequestPrivate(*other.d_func(), this))
@@ -62,7 +59,7 @@ DeleteTopicRequest::DeleteTopicRequest(const DeleteTopicRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DeleteTopicRequest object.
+ * Constructs a DeleteTopicRequest object.
  */
 DeleteTopicRequest::DeleteTopicRequest()
     : SNSRequest(new DeleteTopicRequestPrivate(SNSRequest::DeleteTopicAction, this))
@@ -80,14 +77,9 @@ bool DeleteTopicRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteTopicResponse object.
+ * Returns a DeleteTopicResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteTopicResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SNSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteTopicRequest::response(QNetworkReply * const reply) const
 {
@@ -95,20 +87,17 @@ QtAws::Core::AwsAbstractResponse * DeleteTopicRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::SNS::DeleteTopicRequestPrivate
+ * \brief The DeleteTopicRequestPrivate class provides private implementation for DeleteTopicRequest.
+ * \internal
  *
- * @class  DeleteTopicRequestPrivate
- *
- * @brief  Private implementation for DeleteTopicRequest.
+ * \inmodule QtAwsSNS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteTopicRequestPrivate object.
- *
- * @param  action  SNS action being performed.
- * @param  q       Pointer to this object's public DeleteTopicRequest instance.
+ * Constructs a DeleteTopicRequestPrivate object for SNS \a action with,
+ * public implementation \a q.
  */
 DeleteTopicRequestPrivate::DeleteTopicRequestPrivate(
     const SNSRequest::Action action, DeleteTopicRequest * const q)
@@ -118,15 +107,10 @@ DeleteTopicRequestPrivate::DeleteTopicRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteTopicRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteTopicRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteTopicRequest instance.
  */
 DeleteTopicRequestPrivate::DeleteTopicRequestPrivate(
     const DeleteTopicRequestPrivate &other, DeleteTopicRequest * const q)

@@ -27,10 +27,9 @@ namespace AlexaForBusiness {
 
 /*!
  * \class QtAws::AlexaForBusiness::CreateUserRequest
- *
  * \brief The CreateUserRequest class provides an interface for AlexaForBusiness CreateUser requests.
  *
- * \ingroup AlexaForBusiness
+ * \inmodule QtAwsAlexaForBusiness
  *
  *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
  *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
@@ -42,9 +41,7 @@ namespace AlexaForBusiness {
  */
 
 /*!
- * @brief  Constructs a new CreateUserRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateUserRequest::CreateUserRequest(const CreateUserRequest &other)
     : AlexaForBusinessRequest(new CreateUserRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ CreateUserRequest::CreateUserRequest(const CreateUserRequest &other)
 }
 
 /*!
- * @brief  Constructs a new CreateUserRequest object.
+ * Constructs a CreateUserRequest object.
  */
 CreateUserRequest::CreateUserRequest()
     : AlexaForBusinessRequest(new CreateUserRequestPrivate(AlexaForBusinessRequest::CreateUserAction, this))
@@ -71,14 +68,9 @@ bool CreateUserRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateUserResponse object.
+ * Returns a CreateUserResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateUserResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AlexaForBusinessClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateUserRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * CreateUserRequest::response(QNetworkReply * c
 }
 
 /*!
- * @internal
+ * \class QtAws::AlexaForBusiness::CreateUserRequestPrivate
+ * \brief The CreateUserRequestPrivate class provides private implementation for CreateUserRequest.
+ * \internal
  *
- * @class  CreateUserRequestPrivate
- *
- * @brief  Private implementation for CreateUserRequest.
+ * \inmodule QtAwsAlexaForBusiness
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateUserRequestPrivate object.
- *
- * @param  action  AlexaForBusiness action being performed.
- * @param  q       Pointer to this object's public CreateUserRequest instance.
+ * Constructs a CreateUserRequestPrivate object for AlexaForBusiness \a action with,
+ * public implementation \a q.
  */
 CreateUserRequestPrivate::CreateUserRequestPrivate(
     const AlexaForBusinessRequest::Action action, CreateUserRequest * const q)
@@ -109,15 +98,10 @@ CreateUserRequestPrivate::CreateUserRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateUserRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateUserRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateUserRequest instance.
  */
 CreateUserRequestPrivate::CreateUserRequestPrivate(
     const CreateUserRequestPrivate &other, CreateUserRequest * const q)

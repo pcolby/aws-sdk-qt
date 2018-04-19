@@ -27,10 +27,9 @@ namespace CloudFormation {
 
 /*!
  * \class QtAws::CloudFormation::CreateStackRequest
- *
  * \brief The CreateStackRequest class provides an interface for CloudFormation CreateStack requests.
  *
- * \ingroup CloudFormation
+ * \inmodule QtAwsCloudFormation
  *
  *  <fullname>AWS CloudFormation</fullname>
  * 
@@ -59,9 +58,7 @@ namespace CloudFormation {
  */
 
 /*!
- * @brief  Constructs a new CreateStackRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateStackRequest::CreateStackRequest(const CreateStackRequest &other)
     : CloudFormationRequest(new CreateStackRequestPrivate(*other.d_func(), this))
@@ -70,7 +67,7 @@ CreateStackRequest::CreateStackRequest(const CreateStackRequest &other)
 }
 
 /*!
- * @brief  Constructs a new CreateStackRequest object.
+ * Constructs a CreateStackRequest object.
  */
 CreateStackRequest::CreateStackRequest()
     : CloudFormationRequest(new CreateStackRequestPrivate(CloudFormationRequest::CreateStackAction, this))
@@ -88,14 +85,9 @@ bool CreateStackRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateStackResponse object.
+ * Returns a CreateStackResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateStackResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudFormationClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateStackRequest::response(QNetworkReply * const reply) const
 {
@@ -103,20 +95,17 @@ QtAws::Core::AwsAbstractResponse * CreateStackRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudFormation::CreateStackRequestPrivate
+ * \brief The CreateStackRequestPrivate class provides private implementation for CreateStackRequest.
+ * \internal
  *
- * @class  CreateStackRequestPrivate
- *
- * @brief  Private implementation for CreateStackRequest.
+ * \inmodule QtAwsCloudFormation
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateStackRequestPrivate object.
- *
- * @param  action  CloudFormation action being performed.
- * @param  q       Pointer to this object's public CreateStackRequest instance.
+ * Constructs a CreateStackRequestPrivate object for CloudFormation \a action with,
+ * public implementation \a q.
  */
 CreateStackRequestPrivate::CreateStackRequestPrivate(
     const CloudFormationRequest::Action action, CreateStackRequest * const q)
@@ -126,15 +115,10 @@ CreateStackRequestPrivate::CreateStackRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateStackRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateStackRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateStackRequest instance.
  */
 CreateStackRequestPrivate::CreateStackRequestPrivate(
     const CreateStackRequestPrivate &other, CreateStackRequest * const q)

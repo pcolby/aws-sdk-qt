@@ -27,10 +27,9 @@ namespace STS {
 
 /*!
  * \class QtAws::STS::AssumeRoleWithSAMLRequest
- *
  * \brief The AssumeRoleWithSAMLRequest class provides an interface for STS AssumeRoleWithSAML requests.
  *
- * \ingroup STS
+ * \inmodule QtAwsSTS
  *
  *  <fullname>AWS Security Token Service</fullname>
  * 
@@ -95,9 +94,7 @@ namespace STS {
  */
 
 /*!
- * @brief  Constructs a new AssumeRoleWithSAMLRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AssumeRoleWithSAMLRequest::AssumeRoleWithSAMLRequest(const AssumeRoleWithSAMLRequest &other)
     : STSRequest(new AssumeRoleWithSAMLRequestPrivate(*other.d_func(), this))
@@ -106,7 +103,7 @@ AssumeRoleWithSAMLRequest::AssumeRoleWithSAMLRequest(const AssumeRoleWithSAMLReq
 }
 
 /*!
- * @brief  Constructs a new AssumeRoleWithSAMLRequest object.
+ * Constructs a AssumeRoleWithSAMLRequest object.
  */
 AssumeRoleWithSAMLRequest::AssumeRoleWithSAMLRequest()
     : STSRequest(new AssumeRoleWithSAMLRequestPrivate(STSRequest::AssumeRoleWithSAMLAction, this))
@@ -124,14 +121,9 @@ bool AssumeRoleWithSAMLRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AssumeRoleWithSAMLResponse object.
+ * Returns a AssumeRoleWithSAMLResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AssumeRoleWithSAMLResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  STSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AssumeRoleWithSAMLRequest::response(QNetworkReply * const reply) const
 {
@@ -139,20 +131,17 @@ QtAws::Core::AwsAbstractResponse * AssumeRoleWithSAMLRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::STS::AssumeRoleWithSAMLRequestPrivate
+ * \brief The AssumeRoleWithSAMLRequestPrivate class provides private implementation for AssumeRoleWithSAMLRequest.
+ * \internal
  *
- * @class  AssumeRoleWithSAMLRequestPrivate
- *
- * @brief  Private implementation for AssumeRoleWithSAMLRequest.
+ * \inmodule QtAwsSTS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AssumeRoleWithSAMLRequestPrivate object.
- *
- * @param  action  STS action being performed.
- * @param  q       Pointer to this object's public AssumeRoleWithSAMLRequest instance.
+ * Constructs a AssumeRoleWithSAMLRequestPrivate object for STS \a action with,
+ * public implementation \a q.
  */
 AssumeRoleWithSAMLRequestPrivate::AssumeRoleWithSAMLRequestPrivate(
     const STSRequest::Action action, AssumeRoleWithSAMLRequest * const q)
@@ -162,15 +151,10 @@ AssumeRoleWithSAMLRequestPrivate::AssumeRoleWithSAMLRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AssumeRoleWithSAMLRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AssumeRoleWithSAMLRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AssumeRoleWithSAMLRequest instance.
  */
 AssumeRoleWithSAMLRequestPrivate::AssumeRoleWithSAMLRequestPrivate(
     const AssumeRoleWithSAMLRequestPrivate &other, AssumeRoleWithSAMLRequest * const q)

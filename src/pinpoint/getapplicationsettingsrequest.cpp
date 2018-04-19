@@ -27,19 +27,16 @@ namespace Pinpoint {
 
 /*!
  * \class QtAws::Pinpoint::GetApplicationSettingsRequest
- *
  * \brief The GetApplicationSettingsRequest class provides an interface for Pinpoint GetApplicationSettings requests.
  *
- * \ingroup Pinpoint
+ * \inmodule QtAwsPinpoint
  *
  *
  * \sa PinpointClient::getApplicationSettings
  */
 
 /*!
- * @brief  Constructs a new GetApplicationSettingsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetApplicationSettingsRequest::GetApplicationSettingsRequest(const GetApplicationSettingsRequest &other)
     : PinpointRequest(new GetApplicationSettingsRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ GetApplicationSettingsRequest::GetApplicationSettingsRequest(const GetApplicatio
 }
 
 /*!
- * @brief  Constructs a new GetApplicationSettingsRequest object.
+ * Constructs a GetApplicationSettingsRequest object.
  */
 GetApplicationSettingsRequest::GetApplicationSettingsRequest()
     : PinpointRequest(new GetApplicationSettingsRequestPrivate(PinpointRequest::GetApplicationSettingsAction, this))
@@ -66,14 +63,9 @@ bool GetApplicationSettingsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetApplicationSettingsResponse object.
+ * Returns a GetApplicationSettingsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetApplicationSettingsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  PinpointClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetApplicationSettingsRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * GetApplicationSettingsRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::Pinpoint::GetApplicationSettingsRequestPrivate
+ * \brief The GetApplicationSettingsRequestPrivate class provides private implementation for GetApplicationSettingsRequest.
+ * \internal
  *
- * @class  GetApplicationSettingsRequestPrivate
- *
- * @brief  Private implementation for GetApplicationSettingsRequest.
+ * \inmodule QtAwsPinpoint
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetApplicationSettingsRequestPrivate object.
- *
- * @param  action  Pinpoint action being performed.
- * @param  q       Pointer to this object's public GetApplicationSettingsRequest instance.
+ * Constructs a GetApplicationSettingsRequestPrivate object for Pinpoint \a action with,
+ * public implementation \a q.
  */
 GetApplicationSettingsRequestPrivate::GetApplicationSettingsRequestPrivate(
     const PinpointRequest::Action action, GetApplicationSettingsRequest * const q)
@@ -104,15 +93,10 @@ GetApplicationSettingsRequestPrivate::GetApplicationSettingsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetApplicationSettingsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetApplicationSettingsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetApplicationSettingsRequest instance.
  */
 GetApplicationSettingsRequestPrivate::GetApplicationSettingsRequestPrivate(
     const GetApplicationSettingsRequestPrivate &other, GetApplicationSettingsRequest * const q)

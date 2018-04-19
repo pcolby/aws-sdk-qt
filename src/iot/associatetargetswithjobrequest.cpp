@@ -27,10 +27,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::AssociateTargetsWithJobRequest
- *
  * \brief The AssociateTargetsWithJobRequest class provides an interface for IoT AssociateTargetsWithJob requests.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -48,9 +47,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new AssociateTargetsWithJobRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AssociateTargetsWithJobRequest::AssociateTargetsWithJobRequest(const AssociateTargetsWithJobRequest &other)
     : IoTRequest(new AssociateTargetsWithJobRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ AssociateTargetsWithJobRequest::AssociateTargetsWithJobRequest(const AssociateTa
 }
 
 /*!
- * @brief  Constructs a new AssociateTargetsWithJobRequest object.
+ * Constructs a AssociateTargetsWithJobRequest object.
  */
 AssociateTargetsWithJobRequest::AssociateTargetsWithJobRequest()
     : IoTRequest(new AssociateTargetsWithJobRequestPrivate(IoTRequest::AssociateTargetsWithJobAction, this))
@@ -77,14 +74,9 @@ bool AssociateTargetsWithJobRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AssociateTargetsWithJobResponse object.
+ * Returns a AssociateTargetsWithJobResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AssociateTargetsWithJobResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IoTClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AssociateTargetsWithJobRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * AssociateTargetsWithJobRequest::response(QNet
 }
 
 /*!
- * @internal
+ * \class QtAws::IoT::AssociateTargetsWithJobRequestPrivate
+ * \brief The AssociateTargetsWithJobRequestPrivate class provides private implementation for AssociateTargetsWithJobRequest.
+ * \internal
  *
- * @class  AssociateTargetsWithJobRequestPrivate
- *
- * @brief  Private implementation for AssociateTargetsWithJobRequest.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AssociateTargetsWithJobRequestPrivate object.
- *
- * @param  action  IoT action being performed.
- * @param  q       Pointer to this object's public AssociateTargetsWithJobRequest instance.
+ * Constructs a AssociateTargetsWithJobRequestPrivate object for IoT \a action with,
+ * public implementation \a q.
  */
 AssociateTargetsWithJobRequestPrivate::AssociateTargetsWithJobRequestPrivate(
     const IoTRequest::Action action, AssociateTargetsWithJobRequest * const q)
@@ -115,15 +104,10 @@ AssociateTargetsWithJobRequestPrivate::AssociateTargetsWithJobRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AssociateTargetsWithJobRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AssociateTargetsWithJobRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AssociateTargetsWithJobRequest instance.
  */
 AssociateTargetsWithJobRequestPrivate::AssociateTargetsWithJobRequestPrivate(
     const AssociateTargetsWithJobRequestPrivate &other, AssociateTargetsWithJobRequest * const q)

@@ -27,19 +27,16 @@ namespace MediaConvert {
 
 /*!
  * \class QtAws::MediaConvert::UpdatePresetRequest
- *
  * \brief The UpdatePresetRequest class provides an interface for MediaConvert UpdatePreset requests.
  *
- * \ingroup MediaConvert
+ * \inmodule QtAwsMediaConvert
  *
  *
  * \sa MediaConvertClient::updatePreset
  */
 
 /*!
- * @brief  Constructs a new UpdatePresetRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdatePresetRequest::UpdatePresetRequest(const UpdatePresetRequest &other)
     : MediaConvertRequest(new UpdatePresetRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ UpdatePresetRequest::UpdatePresetRequest(const UpdatePresetRequest &other)
 }
 
 /*!
- * @brief  Constructs a new UpdatePresetRequest object.
+ * Constructs a UpdatePresetRequest object.
  */
 UpdatePresetRequest::UpdatePresetRequest()
     : MediaConvertRequest(new UpdatePresetRequestPrivate(MediaConvertRequest::UpdatePresetAction, this))
@@ -66,14 +63,9 @@ bool UpdatePresetRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdatePresetResponse object.
+ * Returns a UpdatePresetResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdatePresetResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MediaConvertClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdatePresetRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * UpdatePresetRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::MediaConvert::UpdatePresetRequestPrivate
+ * \brief The UpdatePresetRequestPrivate class provides private implementation for UpdatePresetRequest.
+ * \internal
  *
- * @class  UpdatePresetRequestPrivate
- *
- * @brief  Private implementation for UpdatePresetRequest.
+ * \inmodule QtAwsMediaConvert
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdatePresetRequestPrivate object.
- *
- * @param  action  MediaConvert action being performed.
- * @param  q       Pointer to this object's public UpdatePresetRequest instance.
+ * Constructs a UpdatePresetRequestPrivate object for MediaConvert \a action with,
+ * public implementation \a q.
  */
 UpdatePresetRequestPrivate::UpdatePresetRequestPrivate(
     const MediaConvertRequest::Action action, UpdatePresetRequest * const q)
@@ -104,15 +93,10 @@ UpdatePresetRequestPrivate::UpdatePresetRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdatePresetRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdatePresetRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdatePresetRequest instance.
  */
 UpdatePresetRequestPrivate::UpdatePresetRequestPrivate(
     const UpdatePresetRequestPrivate &other, UpdatePresetRequest * const q)

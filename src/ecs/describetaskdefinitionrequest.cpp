@@ -27,10 +27,9 @@ namespace ECS {
 
 /*!
  * \class QtAws::ECS::DescribeTaskDefinitionRequest
- *
  * \brief The DescribeTaskDefinitionRequest class provides an interface for ECS DescribeTaskDefinition requests.
  *
- * \ingroup ECS
+ * \inmodule QtAwsECS
  *
  *  Amazon Elastic Container Service (Amazon ECS) is a highly scalable, fast, container management service that makes it
  *  easy to run, stop, and manage Docker containers on a cluster. You can host your cluster on a serverless infrastructure
@@ -54,9 +53,7 @@ namespace ECS {
  */
 
 /*!
- * @brief  Constructs a new DescribeTaskDefinitionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeTaskDefinitionRequest::DescribeTaskDefinitionRequest(const DescribeTaskDefinitionRequest &other)
     : ECSRequest(new DescribeTaskDefinitionRequestPrivate(*other.d_func(), this))
@@ -65,7 +62,7 @@ DescribeTaskDefinitionRequest::DescribeTaskDefinitionRequest(const DescribeTaskD
 }
 
 /*!
- * @brief  Constructs a new DescribeTaskDefinitionRequest object.
+ * Constructs a DescribeTaskDefinitionRequest object.
  */
 DescribeTaskDefinitionRequest::DescribeTaskDefinitionRequest()
     : ECSRequest(new DescribeTaskDefinitionRequestPrivate(ECSRequest::DescribeTaskDefinitionAction, this))
@@ -83,14 +80,9 @@ bool DescribeTaskDefinitionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeTaskDefinitionResponse object.
+ * Returns a DescribeTaskDefinitionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeTaskDefinitionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ECSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeTaskDefinitionRequest::response(QNetworkReply * const reply) const
 {
@@ -98,20 +90,17 @@ QtAws::Core::AwsAbstractResponse * DescribeTaskDefinitionRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::ECS::DescribeTaskDefinitionRequestPrivate
+ * \brief The DescribeTaskDefinitionRequestPrivate class provides private implementation for DescribeTaskDefinitionRequest.
+ * \internal
  *
- * @class  DescribeTaskDefinitionRequestPrivate
- *
- * @brief  Private implementation for DescribeTaskDefinitionRequest.
+ * \inmodule QtAwsECS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeTaskDefinitionRequestPrivate object.
- *
- * @param  action  ECS action being performed.
- * @param  q       Pointer to this object's public DescribeTaskDefinitionRequest instance.
+ * Constructs a DescribeTaskDefinitionRequestPrivate object for ECS \a action with,
+ * public implementation \a q.
  */
 DescribeTaskDefinitionRequestPrivate::DescribeTaskDefinitionRequestPrivate(
     const ECSRequest::Action action, DescribeTaskDefinitionRequest * const q)
@@ -121,15 +110,10 @@ DescribeTaskDefinitionRequestPrivate::DescribeTaskDefinitionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeTaskDefinitionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeTaskDefinitionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeTaskDefinitionRequest instance.
  */
 DescribeTaskDefinitionRequestPrivate::DescribeTaskDefinitionRequestPrivate(
     const DescribeTaskDefinitionRequestPrivate &other, DescribeTaskDefinitionRequest * const q)

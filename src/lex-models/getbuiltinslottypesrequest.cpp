@@ -27,10 +27,9 @@ namespace LexModelBuildingService {
 
 /*!
  * \class QtAws::LexModelBuildingService::GetBuiltinSlotTypesRequest
- *
  * \brief The GetBuiltinSlotTypesRequest class provides an interface for LexModelBuildingService GetBuiltinSlotTypes requests.
  *
- * \ingroup LexModelBuildingService
+ * \inmodule QtAwsLexModelBuildingService
  *
  *  <fullname>Amazon Lex Build-Time Actions</fullname>
  * 
@@ -41,9 +40,7 @@ namespace LexModelBuildingService {
  */
 
 /*!
- * @brief  Constructs a new GetBuiltinSlotTypesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetBuiltinSlotTypesRequest::GetBuiltinSlotTypesRequest(const GetBuiltinSlotTypesRequest &other)
     : LexModelBuildingServiceRequest(new GetBuiltinSlotTypesRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ GetBuiltinSlotTypesRequest::GetBuiltinSlotTypesRequest(const GetBuiltinSlotTypes
 }
 
 /*!
- * @brief  Constructs a new GetBuiltinSlotTypesRequest object.
+ * Constructs a GetBuiltinSlotTypesRequest object.
  */
 GetBuiltinSlotTypesRequest::GetBuiltinSlotTypesRequest()
     : LexModelBuildingServiceRequest(new GetBuiltinSlotTypesRequestPrivate(LexModelBuildingServiceRequest::GetBuiltinSlotTypesAction, this))
@@ -70,14 +67,9 @@ bool GetBuiltinSlotTypesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetBuiltinSlotTypesResponse object.
+ * Returns a GetBuiltinSlotTypesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetBuiltinSlotTypesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  LexModelBuildingServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetBuiltinSlotTypesRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * GetBuiltinSlotTypesRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::LexModelBuildingService::GetBuiltinSlotTypesRequestPrivate
+ * \brief The GetBuiltinSlotTypesRequestPrivate class provides private implementation for GetBuiltinSlotTypesRequest.
+ * \internal
  *
- * @class  GetBuiltinSlotTypesRequestPrivate
- *
- * @brief  Private implementation for GetBuiltinSlotTypesRequest.
+ * \inmodule QtAwsLexModelBuildingService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetBuiltinSlotTypesRequestPrivate object.
- *
- * @param  action  LexModelBuildingService action being performed.
- * @param  q       Pointer to this object's public GetBuiltinSlotTypesRequest instance.
+ * Constructs a GetBuiltinSlotTypesRequestPrivate object for LexModelBuildingService \a action with,
+ * public implementation \a q.
  */
 GetBuiltinSlotTypesRequestPrivate::GetBuiltinSlotTypesRequestPrivate(
     const LexModelBuildingServiceRequest::Action action, GetBuiltinSlotTypesRequest * const q)
@@ -108,15 +97,10 @@ GetBuiltinSlotTypesRequestPrivate::GetBuiltinSlotTypesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetBuiltinSlotTypesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetBuiltinSlotTypesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetBuiltinSlotTypesRequest instance.
  */
 GetBuiltinSlotTypesRequestPrivate::GetBuiltinSlotTypesRequestPrivate(
     const GetBuiltinSlotTypesRequestPrivate &other, GetBuiltinSlotTypesRequest * const q)

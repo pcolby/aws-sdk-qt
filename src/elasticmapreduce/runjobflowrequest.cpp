@@ -27,10 +27,9 @@ namespace EMR {
 
 /*!
  * \class QtAws::EMR::RunJobFlowRequest
- *
  * \brief The RunJobFlowRequest class provides an interface for EMR RunJobFlow requests.
  *
- * \ingroup EMR
+ * \inmodule QtAwsEMR
  *
  *  Amazon EMR is a web service that makes it easy to process large amounts of data efficiently. Amazon EMR uses Hadoop
  *  processing combined with several AWS products to do tasks such as web indexing, data mining, log file analysis, machine
@@ -40,9 +39,7 @@ namespace EMR {
  */
 
 /*!
- * @brief  Constructs a new RunJobFlowRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 RunJobFlowRequest::RunJobFlowRequest(const RunJobFlowRequest &other)
     : EMRRequest(new RunJobFlowRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ RunJobFlowRequest::RunJobFlowRequest(const RunJobFlowRequest &other)
 }
 
 /*!
- * @brief  Constructs a new RunJobFlowRequest object.
+ * Constructs a RunJobFlowRequest object.
  */
 RunJobFlowRequest::RunJobFlowRequest()
     : EMRRequest(new RunJobFlowRequestPrivate(EMRRequest::RunJobFlowAction, this))
@@ -69,14 +66,9 @@ bool RunJobFlowRequest::isValid() const
 
 
 /*!
- * @brief  Construct an RunJobFlowResponse object.
+ * Returns a RunJobFlowResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An RunJobFlowResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EMRClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * RunJobFlowRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * RunJobFlowRequest::response(QNetworkReply * c
 }
 
 /*!
- * @internal
+ * \class QtAws::EMR::RunJobFlowRequestPrivate
+ * \brief The RunJobFlowRequestPrivate class provides private implementation for RunJobFlowRequest.
+ * \internal
  *
- * @class  RunJobFlowRequestPrivate
- *
- * @brief  Private implementation for RunJobFlowRequest.
+ * \inmodule QtAwsEMR
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new RunJobFlowRequestPrivate object.
- *
- * @param  action  EMR action being performed.
- * @param  q       Pointer to this object's public RunJobFlowRequest instance.
+ * Constructs a RunJobFlowRequestPrivate object for EMR \a action with,
+ * public implementation \a q.
  */
 RunJobFlowRequestPrivate::RunJobFlowRequestPrivate(
     const EMRRequest::Action action, RunJobFlowRequest * const q)
@@ -107,15 +96,10 @@ RunJobFlowRequestPrivate::RunJobFlowRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RunJobFlowRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the RunJobFlowRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public RunJobFlowRequest instance.
  */
 RunJobFlowRequestPrivate::RunJobFlowRequestPrivate(
     const RunJobFlowRequestPrivate &other, RunJobFlowRequest * const q)

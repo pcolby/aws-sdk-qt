@@ -42,6 +42,9 @@
 /*!
  * \namespace QtAws::Firehose
  * \brief The QtAws::Firehose contains stuff...
+ *
+ * \inmodule QtAwsFirehose
+ *
  * @todo Move this to a separate template file.
  */
 
@@ -95,7 +98,7 @@ FirehoseClient::FirehoseClient(
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * \a  AwsEndpoint::getEndpoint()
+ * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
 FirehoseClient::FirehoseClient(
     const QUrl &endpoint,

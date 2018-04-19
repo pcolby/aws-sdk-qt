@@ -27,10 +27,9 @@ namespace GameLift {
 
 /*!
  * \class QtAws::GameLift::DeleteFleetRequest
- *
  * \brief The DeleteFleetRequest class provides an interface for GameLift DeleteFleet requests.
  *
- * \ingroup GameLift
+ * \inmodule QtAwsGameLift
  *
  *  <fullname>Amazon GameLift Service</fullname>
  * 
@@ -473,9 +472,7 @@ namespace GameLift {
  */
 
 /*!
- * @brief  Constructs a new DeleteFleetRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteFleetRequest::DeleteFleetRequest(const DeleteFleetRequest &other)
     : GameLiftRequest(new DeleteFleetRequestPrivate(*other.d_func(), this))
@@ -484,7 +481,7 @@ DeleteFleetRequest::DeleteFleetRequest(const DeleteFleetRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DeleteFleetRequest object.
+ * Constructs a DeleteFleetRequest object.
  */
 DeleteFleetRequest::DeleteFleetRequest()
     : GameLiftRequest(new DeleteFleetRequestPrivate(GameLiftRequest::DeleteFleetAction, this))
@@ -502,14 +499,9 @@ bool DeleteFleetRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteFleetResponse object.
+ * Returns a DeleteFleetResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteFleetResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GameLiftClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteFleetRequest::response(QNetworkReply * const reply) const
 {
@@ -517,20 +509,17 @@ QtAws::Core::AwsAbstractResponse * DeleteFleetRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::GameLift::DeleteFleetRequestPrivate
+ * \brief The DeleteFleetRequestPrivate class provides private implementation for DeleteFleetRequest.
+ * \internal
  *
- * @class  DeleteFleetRequestPrivate
- *
- * @brief  Private implementation for DeleteFleetRequest.
+ * \inmodule QtAwsGameLift
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteFleetRequestPrivate object.
- *
- * @param  action  GameLift action being performed.
- * @param  q       Pointer to this object's public DeleteFleetRequest instance.
+ * Constructs a DeleteFleetRequestPrivate object for GameLift \a action with,
+ * public implementation \a q.
  */
 DeleteFleetRequestPrivate::DeleteFleetRequestPrivate(
     const GameLiftRequest::Action action, DeleteFleetRequest * const q)
@@ -540,15 +529,10 @@ DeleteFleetRequestPrivate::DeleteFleetRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteFleetRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteFleetRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteFleetRequest instance.
  */
 DeleteFleetRequestPrivate::DeleteFleetRequestPrivate(
     const DeleteFleetRequestPrivate &other, DeleteFleetRequest * const q)

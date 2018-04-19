@@ -27,10 +27,9 @@ namespace CognitoIdentityProvider {
 
 /*!
  * \class QtAws::CognitoIdentityProvider::AdminEnableUserRequest
- *
  * \brief The AdminEnableUserRequest class provides an interface for CognitoIdentityProvider AdminEnableUser requests.
  *
- * \ingroup CognitoIdentityProvider
+ * \inmodule QtAwsCognitoIdentityProvider
  *
  *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
  *  authenticate a user to obtain tokens related to user identity and access
@@ -47,9 +46,7 @@ namespace CognitoIdentityProvider {
  */
 
 /*!
- * @brief  Constructs a new AdminEnableUserRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AdminEnableUserRequest::AdminEnableUserRequest(const AdminEnableUserRequest &other)
     : CognitoIdentityProviderRequest(new AdminEnableUserRequestPrivate(*other.d_func(), this))
@@ -58,7 +55,7 @@ AdminEnableUserRequest::AdminEnableUserRequest(const AdminEnableUserRequest &oth
 }
 
 /*!
- * @brief  Constructs a new AdminEnableUserRequest object.
+ * Constructs a AdminEnableUserRequest object.
  */
 AdminEnableUserRequest::AdminEnableUserRequest()
     : CognitoIdentityProviderRequest(new AdminEnableUserRequestPrivate(CognitoIdentityProviderRequest::AdminEnableUserAction, this))
@@ -76,14 +73,9 @@ bool AdminEnableUserRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AdminEnableUserResponse object.
+ * Returns a AdminEnableUserResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AdminEnableUserResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CognitoIdentityProviderClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AdminEnableUserRequest::response(QNetworkReply * const reply) const
 {
@@ -91,20 +83,17 @@ QtAws::Core::AwsAbstractResponse * AdminEnableUserRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::CognitoIdentityProvider::AdminEnableUserRequestPrivate
+ * \brief The AdminEnableUserRequestPrivate class provides private implementation for AdminEnableUserRequest.
+ * \internal
  *
- * @class  AdminEnableUserRequestPrivate
- *
- * @brief  Private implementation for AdminEnableUserRequest.
+ * \inmodule QtAwsCognitoIdentityProvider
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AdminEnableUserRequestPrivate object.
- *
- * @param  action  CognitoIdentityProvider action being performed.
- * @param  q       Pointer to this object's public AdminEnableUserRequest instance.
+ * Constructs a AdminEnableUserRequestPrivate object for CognitoIdentityProvider \a action with,
+ * public implementation \a q.
  */
 AdminEnableUserRequestPrivate::AdminEnableUserRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, AdminEnableUserRequest * const q)
@@ -114,15 +103,10 @@ AdminEnableUserRequestPrivate::AdminEnableUserRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AdminEnableUserRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AdminEnableUserRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AdminEnableUserRequest instance.
  */
 AdminEnableUserRequestPrivate::AdminEnableUserRequestPrivate(
     const AdminEnableUserRequestPrivate &other, AdminEnableUserRequest * const q)

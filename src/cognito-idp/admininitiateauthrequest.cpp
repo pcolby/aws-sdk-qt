@@ -27,10 +27,9 @@ namespace CognitoIdentityProvider {
 
 /*!
  * \class QtAws::CognitoIdentityProvider::AdminInitiateAuthRequest
- *
  * \brief The AdminInitiateAuthRequest class provides an interface for CognitoIdentityProvider AdminInitiateAuth requests.
  *
- * \ingroup CognitoIdentityProvider
+ * \inmodule QtAwsCognitoIdentityProvider
  *
  *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
  *  authenticate a user to obtain tokens related to user identity and access
@@ -47,9 +46,7 @@ namespace CognitoIdentityProvider {
  */
 
 /*!
- * @brief  Constructs a new AdminInitiateAuthRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AdminInitiateAuthRequest::AdminInitiateAuthRequest(const AdminInitiateAuthRequest &other)
     : CognitoIdentityProviderRequest(new AdminInitiateAuthRequestPrivate(*other.d_func(), this))
@@ -58,7 +55,7 @@ AdminInitiateAuthRequest::AdminInitiateAuthRequest(const AdminInitiateAuthReques
 }
 
 /*!
- * @brief  Constructs a new AdminInitiateAuthRequest object.
+ * Constructs a AdminInitiateAuthRequest object.
  */
 AdminInitiateAuthRequest::AdminInitiateAuthRequest()
     : CognitoIdentityProviderRequest(new AdminInitiateAuthRequestPrivate(CognitoIdentityProviderRequest::AdminInitiateAuthAction, this))
@@ -76,14 +73,9 @@ bool AdminInitiateAuthRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AdminInitiateAuthResponse object.
+ * Returns a AdminInitiateAuthResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AdminInitiateAuthResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CognitoIdentityProviderClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AdminInitiateAuthRequest::response(QNetworkReply * const reply) const
 {
@@ -91,20 +83,17 @@ QtAws::Core::AwsAbstractResponse * AdminInitiateAuthRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::CognitoIdentityProvider::AdminInitiateAuthRequestPrivate
+ * \brief The AdminInitiateAuthRequestPrivate class provides private implementation for AdminInitiateAuthRequest.
+ * \internal
  *
- * @class  AdminInitiateAuthRequestPrivate
- *
- * @brief  Private implementation for AdminInitiateAuthRequest.
+ * \inmodule QtAwsCognitoIdentityProvider
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AdminInitiateAuthRequestPrivate object.
- *
- * @param  action  CognitoIdentityProvider action being performed.
- * @param  q       Pointer to this object's public AdminInitiateAuthRequest instance.
+ * Constructs a AdminInitiateAuthRequestPrivate object for CognitoIdentityProvider \a action with,
+ * public implementation \a q.
  */
 AdminInitiateAuthRequestPrivate::AdminInitiateAuthRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, AdminInitiateAuthRequest * const q)
@@ -114,15 +103,10 @@ AdminInitiateAuthRequestPrivate::AdminInitiateAuthRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AdminInitiateAuthRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AdminInitiateAuthRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AdminInitiateAuthRequest instance.
  */
 AdminInitiateAuthRequestPrivate::AdminInitiateAuthRequestPrivate(
     const AdminInitiateAuthRequestPrivate &other, AdminInitiateAuthRequest * const q)

@@ -25,16 +25,49 @@ namespace MachineLearning {
 
 /*!
  * \class QtAws::MachineLearning::MachineLearningRequest
- *
  * \brief The MachineLearningRequest class provides an interface for MachineLearning requests.
  *
- * \ingroup MachineLearning
+ * \inmodule QtAwsMachineLearning
  */
 
 /*!
- * @brief  Constructs a new MachineLearningRequest object.
+ * \enum MachineLearningRequest::Action
  *
- * @param  action  The MachineLearning action to request.
+ * This enum describes the actions that can be performed as MachineLearning
+ * requests.
+ *
+ * \value AddTagsAction MachineLearning AddTags action.
+ * \value CreateBatchPredictionAction MachineLearning CreateBatchPrediction action.
+ * \value CreateDataSourceFromRDSAction MachineLearning CreateDataSourceFromRDS action.
+ * \value CreateDataSourceFromRedshiftAction MachineLearning CreateDataSourceFromRedshift action.
+ * \value CreateDataSourceFromS3Action MachineLearning CreateDataSourceFromS3 action.
+ * \value CreateEvaluationAction MachineLearning CreateEvaluation action.
+ * \value CreateMLModelAction MachineLearning CreateMLModel action.
+ * \value CreateRealtimeEndpointAction MachineLearning CreateRealtimeEndpoint action.
+ * \value DeleteBatchPredictionAction MachineLearning DeleteBatchPrediction action.
+ * \value DeleteDataSourceAction MachineLearning DeleteDataSource action.
+ * \value DeleteEvaluationAction MachineLearning DeleteEvaluation action.
+ * \value DeleteMLModelAction MachineLearning DeleteMLModel action.
+ * \value DeleteRealtimeEndpointAction MachineLearning DeleteRealtimeEndpoint action.
+ * \value DeleteTagsAction MachineLearning DeleteTags action.
+ * \value DescribeBatchPredictionsAction MachineLearning DescribeBatchPredictions action.
+ * \value DescribeDataSourcesAction MachineLearning DescribeDataSources action.
+ * \value DescribeEvaluationsAction MachineLearning DescribeEvaluations action.
+ * \value DescribeMLModelsAction MachineLearning DescribeMLModels action.
+ * \value DescribeTagsAction MachineLearning DescribeTags action.
+ * \value GetBatchPredictionAction MachineLearning GetBatchPrediction action.
+ * \value GetDataSourceAction MachineLearning GetDataSource action.
+ * \value GetEvaluationAction MachineLearning GetEvaluation action.
+ * \value GetMLModelAction MachineLearning GetMLModel action.
+ * \value PredictAction MachineLearning Predict action.
+ * \value UpdateBatchPredictionAction MachineLearning UpdateBatchPrediction action.
+ * \value UpdateDataSourceAction MachineLearning UpdateDataSource action.
+ * \value UpdateEvaluationAction MachineLearning UpdateEvaluation action.
+ * \value UpdateMLModelAction MachineLearning UpdateMLModel action.
+ */
+
+/*!
+ * Constructs a[n] MachineLearningRequest object for MachineLearning \a action.
  */
 MachineLearningRequest::MachineLearningRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new MachineLearningRequestPrivate(action, this))
@@ -43,9 +76,7 @@ MachineLearningRequest::MachineLearningRequest(const Action action)
 }
 
 /*!
- * @brief  Constructs a new MachineLearningRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 MachineLearningRequest::MachineLearningRequest(const MachineLearningRequest &other)
     : QtAws::Core::AwsAbstractRequest(new MachineLearningRequestPrivate(*other.d_func(), this))
@@ -54,13 +85,7 @@ MachineLearningRequest::MachineLearningRequest(const MachineLearningRequest &oth
 }
 
 /*!
- * @brief  Assignment operator.
- *
- * Assigns \a other to \c this.
- *
- * @param  other  Instance to copy.
- *
- * @return  A reference to \c this.
+ * Sets the MachineLearningRequest object to be equal to \a other.
  */
 MachineLearningRequest& MachineLearningRequest::operator=(const MachineLearningRequest &other)
 {
@@ -72,14 +97,10 @@ MachineLearningRequest& MachineLearningRequest::operator=(const MachineLearningR
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new MachineLearningRequest object.
+ * Constructs aa MachineLearningRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from MachineLearningRequestPrivate.
- *
- * @param  d  Pointer to private data (aka D-Pointer).
  */
 MachineLearningRequest::MachineLearningRequest(MachineLearningRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
@@ -87,7 +108,7 @@ MachineLearningRequest::MachineLearningRequest(MachineLearningRequestPrivate * c
 }
 
 /*!
- * \brief Returns the MachineLearning action to be performed by this request.
+ * Returns the MachineLearning action to be performed by this request.
  */
 MachineLearningRequest::Action MachineLearningRequest::action() const
 {
@@ -96,7 +117,7 @@ MachineLearningRequest::Action MachineLearningRequest::action() const
 }
 
 /*!
- * \brief Returns the name of the MachineLearning action to be performed by this request.
+ * Returns the name of the MachineLearning action to be performed by this request.
  */
 QString MachineLearningRequest::actionString() const
 {
@@ -104,7 +125,7 @@ QString MachineLearningRequest::actionString() const
 }
 
 /*!
- * \brief Returns the MachineLearning API version implemented by this request.
+ * Returns the MachineLearning API version implemented by this request.
  */
 QString MachineLearningRequest::apiVersion() const
 {
@@ -113,7 +134,7 @@ QString MachineLearningRequest::apiVersion() const
 }
 
 /*!
- * @brief Set the MachineLearning action to be performed by this request to \a action.
+ * Sets the MachineLearning action to be performed by this request to \a action.
  */
 void MachineLearningRequest::setAction(const Action action)
 {
@@ -122,7 +143,7 @@ void MachineLearningRequest::setAction(const Action action)
 }
 
 /*!
- * Set the MachineLearning API version to include in this request to \a version.
+ * Sets the MachineLearning API version to include in this request to \a version.
  */
 void MachineLearningRequest::setApiVersion(const QString &version)
 {
@@ -131,7 +152,7 @@ void MachineLearningRequest::setApiVersion(const QString &version)
 }
 
 /*!
- * \brief Returns \c true if this request is the same as \a other.
+ * Returns \c true if this request is equal to \a other; \c false otherwise.
  *
  * Note, most derived *Request classes do not need to provider their own
  * implementations of this function, since most such request classes rely on
@@ -146,8 +167,8 @@ bool MachineLearningRequest::operator==(const MachineLearningRequest &other) con
             (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
-/*!
- * @brief  Check if \a queueName is a valid MachineLearning queue name.
+/*
+ * Returns \c tue if \a queueName is a valid MachineLearning queue name.
  *
  * @par From MachineLearning FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
@@ -166,9 +187,8 @@ bool MachineLearningRequest::operator==(const MachineLearningRequest &other) con
 }*/
 
 /*!
- * \brief Removes the a \a name parameter from this request.
- *
- * Returns the count of paramters removed (typically \c 0 or \c 1).
+ * Removes the a \a name parameter from the request, then returns the number of
+ * paramters removed (typically \c 0 or \c 1).
  */
 int MachineLearningRequest::clearParameter(const QString &name)
 {
@@ -177,7 +197,7 @@ int MachineLearningRequest::clearParameter(const QString &name)
 }
 
 /*!
- * \brief Removes all parameters from this request.
+ * Removes all parameters from the request.
  */
 void MachineLearningRequest::clearParameters()
 {
@@ -186,7 +206,7 @@ void MachineLearningRequest::clearParameters()
 }
 
 /*!
- * \brief Returns the value of the \n name pararemter if set, otherwise \a defaultValue.
+ * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
 QVariant MachineLearningRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
@@ -195,7 +215,7 @@ QVariant MachineLearningRequest::parameter(const QString &name, const QVariant &
 }
 
 /*!
- * \brief Returns a map of parameters included in this request.
+ * Returns the parameters included in this request.
  */
 const QVariantMap &MachineLearningRequest::parameters() const
 {
@@ -204,7 +224,7 @@ const QVariantMap &MachineLearningRequest::parameters() const
 }
 
 /*!
- * \brief Sets the \a name parameter to \a value.
+ * Sets the \a name parameter to \a value.
  */
 void MachineLearningRequest::setParameter(const QString &name, const QVariant &value)
 {
@@ -213,9 +233,8 @@ void MachineLearningRequest::setParameter(const QString &name, const QVariant &v
 }
 
 /*!
- * \brief Sets the map of paramters for this request to \a parameters.
- *
- * Any request parameters set previously will be discarded.
+ * Sets the paramters for this request to \a parameters. Any request parameters
+ * set previously will be discarded.
  */
 void MachineLearningRequest::setParameters(const QVariantMap &parameters)
 {
@@ -224,11 +243,12 @@ void MachineLearningRequest::setParameters(const QVariantMap &parameters)
 }
 
 /*!
- * \brief Returns a network request for this MachineLearning request using the given \a endpoint.
+ * Returns a network request for the MachineLearning request using the given
+ * \a endpoint.
  *
- * This MachineLearning implementation builds request URLs by combining the common query
- * parameters (such as Action and Version), with any that have been added (via
- * setParameter) by child classes.
+ * This MachineLearning implementation builds request URLs by combining the
+ * common query parameters (such as Action and Version), with any that have
+ * been added (via setParameter) by child classes.
  */
 QNetworkRequest MachineLearningRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -239,17 +259,16 @@ QNetworkRequest MachineLearningRequest::unsignedRequest(const QUrl &endpoint) co
 }
 
 /*!
+ * \class QtAws::MachineLearning::MachineLearningRequestPrivate
+ * \brief The MachineLearningRequestPrivate class provides private implementation for MachineLearningRequest.
  * \internal
  *
- * \class  MachineLearningRequestPrivate
- *
- * \brief  Private implementation for MachineLearningRequest.
+ * \inmodule QtAwsMachineLearning
  */
 
 /*!
- * \internal
- *
- * \brief Constructs a new MachineLearningRequestPrivate object.
+ * Constructs a MachineLearningRequestPrivate object for MachineLearning \a action with,
+ * public implementation \a q.
  */
 MachineLearningRequestPrivate::MachineLearningRequestPrivate(const MachineLearningRequest::Action action, MachineLearningRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
@@ -258,9 +277,7 @@ MachineLearningRequestPrivate::MachineLearningRequestPrivate(const MachineLearni
 }
 
 /*!
- * \internal
- *
- * \brief Constructs a new MachineLearningRequestPrivate object, copying an existing one.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
@@ -276,15 +293,12 @@ MachineLearningRequestPrivate::MachineLearningRequestPrivate(const MachineLearni
 }
 
 /*!
- * \internal
- *
- * \brief Returns a string representing \a action.
+ * Returns a string represention of \a action, or a null string if \a action is
+ * invalid.
  *
  * This function converts MachineLearningRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the MachineLearning service's Action
  * query parameters.
- *
- * @return A string representing \a action, or a null string if \a action is invalid.
  */
 QString MachineLearningRequestPrivate::toString(const MachineLearningRequest::Action &action)
 {

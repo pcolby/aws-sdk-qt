@@ -27,10 +27,9 @@ namespace StorageGateway {
 
 /*!
  * \class QtAws::StorageGateway::CreateTapesRequest
- *
  * \brief The CreateTapesRequest class provides an interface for StorageGateway CreateTapes requests.
  *
- * \ingroup StorageGateway
+ * \inmodule QtAwsStorageGateway
  *
  *  <fullname>AWS Storage Gateway Service</fullname>
  * 
@@ -106,9 +105,7 @@ namespace StorageGateway {
  */
 
 /*!
- * @brief  Constructs a new CreateTapesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateTapesRequest::CreateTapesRequest(const CreateTapesRequest &other)
     : StorageGatewayRequest(new CreateTapesRequestPrivate(*other.d_func(), this))
@@ -117,7 +114,7 @@ CreateTapesRequest::CreateTapesRequest(const CreateTapesRequest &other)
 }
 
 /*!
- * @brief  Constructs a new CreateTapesRequest object.
+ * Constructs a CreateTapesRequest object.
  */
 CreateTapesRequest::CreateTapesRequest()
     : StorageGatewayRequest(new CreateTapesRequestPrivate(StorageGatewayRequest::CreateTapesAction, this))
@@ -135,14 +132,9 @@ bool CreateTapesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateTapesResponse object.
+ * Returns a CreateTapesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateTapesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  StorageGatewayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateTapesRequest::response(QNetworkReply * const reply) const
 {
@@ -150,20 +142,17 @@ QtAws::Core::AwsAbstractResponse * CreateTapesRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::StorageGateway::CreateTapesRequestPrivate
+ * \brief The CreateTapesRequestPrivate class provides private implementation for CreateTapesRequest.
+ * \internal
  *
- * @class  CreateTapesRequestPrivate
- *
- * @brief  Private implementation for CreateTapesRequest.
+ * \inmodule QtAwsStorageGateway
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateTapesRequestPrivate object.
- *
- * @param  action  StorageGateway action being performed.
- * @param  q       Pointer to this object's public CreateTapesRequest instance.
+ * Constructs a CreateTapesRequestPrivate object for StorageGateway \a action with,
+ * public implementation \a q.
  */
 CreateTapesRequestPrivate::CreateTapesRequestPrivate(
     const StorageGatewayRequest::Action action, CreateTapesRequest * const q)
@@ -173,15 +162,10 @@ CreateTapesRequestPrivate::CreateTapesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateTapesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateTapesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateTapesRequest instance.
  */
 CreateTapesRequestPrivate::CreateTapesRequestPrivate(
     const CreateTapesRequestPrivate &other, CreateTapesRequest * const q)

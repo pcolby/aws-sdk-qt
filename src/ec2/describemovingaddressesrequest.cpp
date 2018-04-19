@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DescribeMovingAddressesRequest
- *
  * \brief The DescribeMovingAddressesRequest class provides an interface for EC2 DescribeMovingAddresses requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DescribeMovingAddressesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeMovingAddressesRequest::DescribeMovingAddressesRequest(const DescribeMovingAddressesRequest &other)
     : EC2Request(new DescribeMovingAddressesRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ DescribeMovingAddressesRequest::DescribeMovingAddressesRequest(const DescribeMov
 }
 
 /*!
- * @brief  Constructs a new DescribeMovingAddressesRequest object.
+ * Constructs a DescribeMovingAddressesRequest object.
  */
 DescribeMovingAddressesRequest::DescribeMovingAddressesRequest()
     : EC2Request(new DescribeMovingAddressesRequestPrivate(EC2Request::DescribeMovingAddressesAction, this))
@@ -70,14 +67,9 @@ bool DescribeMovingAddressesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeMovingAddressesResponse object.
+ * Returns a DescribeMovingAddressesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeMovingAddressesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeMovingAddressesRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * DescribeMovingAddressesRequest::response(QNet
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::DescribeMovingAddressesRequestPrivate
+ * \brief The DescribeMovingAddressesRequestPrivate class provides private implementation for DescribeMovingAddressesRequest.
+ * \internal
  *
- * @class  DescribeMovingAddressesRequestPrivate
- *
- * @brief  Private implementation for DescribeMovingAddressesRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeMovingAddressesRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public DescribeMovingAddressesRequest instance.
+ * Constructs a DescribeMovingAddressesRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 DescribeMovingAddressesRequestPrivate::DescribeMovingAddressesRequestPrivate(
     const EC2Request::Action action, DescribeMovingAddressesRequest * const q)
@@ -108,15 +97,10 @@ DescribeMovingAddressesRequestPrivate::DescribeMovingAddressesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeMovingAddressesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeMovingAddressesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeMovingAddressesRequest instance.
  */
 DescribeMovingAddressesRequestPrivate::DescribeMovingAddressesRequestPrivate(
     const DescribeMovingAddressesRequestPrivate &other, DescribeMovingAddressesRequest * const q)

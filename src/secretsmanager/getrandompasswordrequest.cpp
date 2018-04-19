@@ -27,10 +27,9 @@ namespace SecretsManager {
 
 /*!
  * \class QtAws::SecretsManager::GetRandomPasswordRequest
- *
  * \brief The GetRandomPasswordRequest class provides an interface for SecretsManager GetRandomPassword requests.
  *
- * \ingroup SecretsManager
+ * \inmodule QtAwsSecretsManager
  *
  *  <fullname>AWS Secrets Manager API Reference</fullname>
  * 
@@ -137,9 +136,7 @@ namespace SecretsManager {
  */
 
 /*!
- * @brief  Constructs a new GetRandomPasswordRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetRandomPasswordRequest::GetRandomPasswordRequest(const GetRandomPasswordRequest &other)
     : SecretsManagerRequest(new GetRandomPasswordRequestPrivate(*other.d_func(), this))
@@ -148,7 +145,7 @@ GetRandomPasswordRequest::GetRandomPasswordRequest(const GetRandomPasswordReques
 }
 
 /*!
- * @brief  Constructs a new GetRandomPasswordRequest object.
+ * Constructs a GetRandomPasswordRequest object.
  */
 GetRandomPasswordRequest::GetRandomPasswordRequest()
     : SecretsManagerRequest(new GetRandomPasswordRequestPrivate(SecretsManagerRequest::GetRandomPasswordAction, this))
@@ -166,14 +163,9 @@ bool GetRandomPasswordRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetRandomPasswordResponse object.
+ * Returns a GetRandomPasswordResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetRandomPasswordResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SecretsManagerClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetRandomPasswordRequest::response(QNetworkReply * const reply) const
 {
@@ -181,20 +173,17 @@ QtAws::Core::AwsAbstractResponse * GetRandomPasswordRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::SecretsManager::GetRandomPasswordRequestPrivate
+ * \brief The GetRandomPasswordRequestPrivate class provides private implementation for GetRandomPasswordRequest.
+ * \internal
  *
- * @class  GetRandomPasswordRequestPrivate
- *
- * @brief  Private implementation for GetRandomPasswordRequest.
+ * \inmodule QtAwsSecretsManager
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetRandomPasswordRequestPrivate object.
- *
- * @param  action  SecretsManager action being performed.
- * @param  q       Pointer to this object's public GetRandomPasswordRequest instance.
+ * Constructs a GetRandomPasswordRequestPrivate object for SecretsManager \a action with,
+ * public implementation \a q.
  */
 GetRandomPasswordRequestPrivate::GetRandomPasswordRequestPrivate(
     const SecretsManagerRequest::Action action, GetRandomPasswordRequest * const q)
@@ -204,15 +193,10 @@ GetRandomPasswordRequestPrivate::GetRandomPasswordRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetRandomPasswordRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetRandomPasswordRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetRandomPasswordRequest instance.
  */
 GetRandomPasswordRequestPrivate::GetRandomPasswordRequestPrivate(
     const GetRandomPasswordRequestPrivate &other, GetRandomPasswordRequest * const q)

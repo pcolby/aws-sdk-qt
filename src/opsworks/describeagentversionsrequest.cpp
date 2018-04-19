@@ -27,10 +27,9 @@ namespace OpsWorks {
 
 /*!
  * \class QtAws::OpsWorks::DescribeAgentVersionsRequest
- *
  * \brief The DescribeAgentVersionsRequest class provides an interface for OpsWorks DescribeAgentVersions requests.
  *
- * \ingroup OpsWorks
+ * \inmodule QtAwsOpsWorks
  *
  *  <fullname>AWS OpsWorks</fullname>
  * 
@@ -143,9 +142,7 @@ namespace OpsWorks {
  */
 
 /*!
- * @brief  Constructs a new DescribeAgentVersionsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeAgentVersionsRequest::DescribeAgentVersionsRequest(const DescribeAgentVersionsRequest &other)
     : OpsWorksRequest(new DescribeAgentVersionsRequestPrivate(*other.d_func(), this))
@@ -154,7 +151,7 @@ DescribeAgentVersionsRequest::DescribeAgentVersionsRequest(const DescribeAgentVe
 }
 
 /*!
- * @brief  Constructs a new DescribeAgentVersionsRequest object.
+ * Constructs a DescribeAgentVersionsRequest object.
  */
 DescribeAgentVersionsRequest::DescribeAgentVersionsRequest()
     : OpsWorksRequest(new DescribeAgentVersionsRequestPrivate(OpsWorksRequest::DescribeAgentVersionsAction, this))
@@ -172,14 +169,9 @@ bool DescribeAgentVersionsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeAgentVersionsResponse object.
+ * Returns a DescribeAgentVersionsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeAgentVersionsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  OpsWorksClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeAgentVersionsRequest::response(QNetworkReply * const reply) const
 {
@@ -187,20 +179,17 @@ QtAws::Core::AwsAbstractResponse * DescribeAgentVersionsRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::OpsWorks::DescribeAgentVersionsRequestPrivate
+ * \brief The DescribeAgentVersionsRequestPrivate class provides private implementation for DescribeAgentVersionsRequest.
+ * \internal
  *
- * @class  DescribeAgentVersionsRequestPrivate
- *
- * @brief  Private implementation for DescribeAgentVersionsRequest.
+ * \inmodule QtAwsOpsWorks
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeAgentVersionsRequestPrivate object.
- *
- * @param  action  OpsWorks action being performed.
- * @param  q       Pointer to this object's public DescribeAgentVersionsRequest instance.
+ * Constructs a DescribeAgentVersionsRequestPrivate object for OpsWorks \a action with,
+ * public implementation \a q.
  */
 DescribeAgentVersionsRequestPrivate::DescribeAgentVersionsRequestPrivate(
     const OpsWorksRequest::Action action, DescribeAgentVersionsRequest * const q)
@@ -210,15 +199,10 @@ DescribeAgentVersionsRequestPrivate::DescribeAgentVersionsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeAgentVersionsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeAgentVersionsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeAgentVersionsRequest instance.
  */
 DescribeAgentVersionsRequestPrivate::DescribeAgentVersionsRequestPrivate(
     const DescribeAgentVersionsRequestPrivate &other, DescribeAgentVersionsRequest * const q)

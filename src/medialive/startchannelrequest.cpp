@@ -27,19 +27,16 @@ namespace MediaLive {
 
 /*!
  * \class QtAws::MediaLive::StartChannelRequest
- *
  * \brief The StartChannelRequest class provides an interface for MediaLive StartChannel requests.
  *
- * \ingroup MediaLive
+ * \inmodule QtAwsMediaLive
  *
  *
  * \sa MediaLiveClient::startChannel
  */
 
 /*!
- * @brief  Constructs a new StartChannelRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 StartChannelRequest::StartChannelRequest(const StartChannelRequest &other)
     : MediaLiveRequest(new StartChannelRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ StartChannelRequest::StartChannelRequest(const StartChannelRequest &other)
 }
 
 /*!
- * @brief  Constructs a new StartChannelRequest object.
+ * Constructs a StartChannelRequest object.
  */
 StartChannelRequest::StartChannelRequest()
     : MediaLiveRequest(new StartChannelRequestPrivate(MediaLiveRequest::StartChannelAction, this))
@@ -66,14 +63,9 @@ bool StartChannelRequest::isValid() const
 
 
 /*!
- * @brief  Construct an StartChannelResponse object.
+ * Returns a StartChannelResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An StartChannelResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MediaLiveClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * StartChannelRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * StartChannelRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::MediaLive::StartChannelRequestPrivate
+ * \brief The StartChannelRequestPrivate class provides private implementation for StartChannelRequest.
+ * \internal
  *
- * @class  StartChannelRequestPrivate
- *
- * @brief  Private implementation for StartChannelRequest.
+ * \inmodule QtAwsMediaLive
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new StartChannelRequestPrivate object.
- *
- * @param  action  MediaLive action being performed.
- * @param  q       Pointer to this object's public StartChannelRequest instance.
+ * Constructs a StartChannelRequestPrivate object for MediaLive \a action with,
+ * public implementation \a q.
  */
 StartChannelRequestPrivate::StartChannelRequestPrivate(
     const MediaLiveRequest::Action action, StartChannelRequest * const q)
@@ -104,15 +93,10 @@ StartChannelRequestPrivate::StartChannelRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StartChannelRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the StartChannelRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public StartChannelRequest instance.
  */
 StartChannelRequestPrivate::StartChannelRequestPrivate(
     const StartChannelRequestPrivate &other, StartChannelRequest * const q)

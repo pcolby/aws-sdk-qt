@@ -27,10 +27,9 @@ namespace OpsWorksCM {
 
 /*!
  * \class QtAws::OpsWorksCM::DescribeServersRequest
- *
  * \brief The DescribeServersRequest class provides an interface for OpsWorksCM DescribeServers requests.
  *
- * \ingroup OpsWorksCM
+ * \inmodule QtAwsOpsWorksCM
  *
  *  <fullname>AWS OpsWorks CM</fullname>
  * 
@@ -97,9 +96,7 @@ namespace OpsWorksCM {
  */
 
 /*!
- * @brief  Constructs a new DescribeServersRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeServersRequest::DescribeServersRequest(const DescribeServersRequest &other)
     : OpsWorksCMRequest(new DescribeServersRequestPrivate(*other.d_func(), this))
@@ -108,7 +105,7 @@ DescribeServersRequest::DescribeServersRequest(const DescribeServersRequest &oth
 }
 
 /*!
- * @brief  Constructs a new DescribeServersRequest object.
+ * Constructs a DescribeServersRequest object.
  */
 DescribeServersRequest::DescribeServersRequest()
     : OpsWorksCMRequest(new DescribeServersRequestPrivate(OpsWorksCMRequest::DescribeServersAction, this))
@@ -126,14 +123,9 @@ bool DescribeServersRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeServersResponse object.
+ * Returns a DescribeServersResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeServersResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  OpsWorksCMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeServersRequest::response(QNetworkReply * const reply) const
 {
@@ -141,20 +133,17 @@ QtAws::Core::AwsAbstractResponse * DescribeServersRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::OpsWorksCM::DescribeServersRequestPrivate
+ * \brief The DescribeServersRequestPrivate class provides private implementation for DescribeServersRequest.
+ * \internal
  *
- * @class  DescribeServersRequestPrivate
- *
- * @brief  Private implementation for DescribeServersRequest.
+ * \inmodule QtAwsOpsWorksCM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeServersRequestPrivate object.
- *
- * @param  action  OpsWorksCM action being performed.
- * @param  q       Pointer to this object's public DescribeServersRequest instance.
+ * Constructs a DescribeServersRequestPrivate object for OpsWorksCM \a action with,
+ * public implementation \a q.
  */
 DescribeServersRequestPrivate::DescribeServersRequestPrivate(
     const OpsWorksCMRequest::Action action, DescribeServersRequest * const q)
@@ -164,15 +153,10 @@ DescribeServersRequestPrivate::DescribeServersRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeServersRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeServersRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeServersRequest instance.
  */
 DescribeServersRequestPrivate::DescribeServersRequestPrivate(
     const DescribeServersRequestPrivate &other, DescribeServersRequest * const q)

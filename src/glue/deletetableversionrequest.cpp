@@ -27,10 +27,9 @@ namespace Glue {
 
 /*!
  * \class QtAws::Glue::DeleteTableVersionRequest
- *
  * \brief The DeleteTableVersionRequest class provides an interface for Glue DeleteTableVersion requests.
  *
- * \ingroup Glue
+ * \inmodule QtAwsGlue
  *
  *  <fullname>AWS Glue</fullname>
  * 
@@ -40,9 +39,7 @@ namespace Glue {
  */
 
 /*!
- * @brief  Constructs a new DeleteTableVersionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteTableVersionRequest::DeleteTableVersionRequest(const DeleteTableVersionRequest &other)
     : GlueRequest(new DeleteTableVersionRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ DeleteTableVersionRequest::DeleteTableVersionRequest(const DeleteTableVersionReq
 }
 
 /*!
- * @brief  Constructs a new DeleteTableVersionRequest object.
+ * Constructs a DeleteTableVersionRequest object.
  */
 DeleteTableVersionRequest::DeleteTableVersionRequest()
     : GlueRequest(new DeleteTableVersionRequestPrivate(GlueRequest::DeleteTableVersionAction, this))
@@ -69,14 +66,9 @@ bool DeleteTableVersionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteTableVersionResponse object.
+ * Returns a DeleteTableVersionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteTableVersionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GlueClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteTableVersionRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * DeleteTableVersionRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::Glue::DeleteTableVersionRequestPrivate
+ * \brief The DeleteTableVersionRequestPrivate class provides private implementation for DeleteTableVersionRequest.
+ * \internal
  *
- * @class  DeleteTableVersionRequestPrivate
- *
- * @brief  Private implementation for DeleteTableVersionRequest.
+ * \inmodule QtAwsGlue
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteTableVersionRequestPrivate object.
- *
- * @param  action  Glue action being performed.
- * @param  q       Pointer to this object's public DeleteTableVersionRequest instance.
+ * Constructs a DeleteTableVersionRequestPrivate object for Glue \a action with,
+ * public implementation \a q.
  */
 DeleteTableVersionRequestPrivate::DeleteTableVersionRequestPrivate(
     const GlueRequest::Action action, DeleteTableVersionRequest * const q)
@@ -107,15 +96,10 @@ DeleteTableVersionRequestPrivate::DeleteTableVersionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteTableVersionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteTableVersionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteTableVersionRequest instance.
  */
 DeleteTableVersionRequestPrivate::DeleteTableVersionRequestPrivate(
     const DeleteTableVersionRequestPrivate &other, DeleteTableVersionRequest * const q)

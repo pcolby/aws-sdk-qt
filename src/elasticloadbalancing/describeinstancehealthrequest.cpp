@@ -27,10 +27,9 @@ namespace ElasticLoadBalancing {
 
 /*!
  * \class QtAws::ElasticLoadBalancing::DescribeInstanceHealthRequest
- *
  * \brief The DescribeInstanceHealthRequest class provides an interface for ElasticLoadBalancing DescribeInstanceHealth requests.
  *
- * \ingroup ElasticLoadBalancing
+ * \inmodule QtAwsElasticLoadBalancing
  *
  *  <fullname>Elastic Load Balancing</fullname>
  * 
@@ -65,9 +64,7 @@ namespace ElasticLoadBalancing {
  */
 
 /*!
- * @brief  Constructs a new DescribeInstanceHealthRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeInstanceHealthRequest::DescribeInstanceHealthRequest(const DescribeInstanceHealthRequest &other)
     : ElasticLoadBalancingRequest(new DescribeInstanceHealthRequestPrivate(*other.d_func(), this))
@@ -76,7 +73,7 @@ DescribeInstanceHealthRequest::DescribeInstanceHealthRequest(const DescribeInsta
 }
 
 /*!
- * @brief  Constructs a new DescribeInstanceHealthRequest object.
+ * Constructs a DescribeInstanceHealthRequest object.
  */
 DescribeInstanceHealthRequest::DescribeInstanceHealthRequest()
     : ElasticLoadBalancingRequest(new DescribeInstanceHealthRequestPrivate(ElasticLoadBalancingRequest::DescribeInstanceHealthAction, this))
@@ -94,14 +91,9 @@ bool DescribeInstanceHealthRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeInstanceHealthResponse object.
+ * Returns a DescribeInstanceHealthResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeInstanceHealthResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ElasticLoadBalancingClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeInstanceHealthRequest::response(QNetworkReply * const reply) const
 {
@@ -109,20 +101,17 @@ QtAws::Core::AwsAbstractResponse * DescribeInstanceHealthRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::ElasticLoadBalancing::DescribeInstanceHealthRequestPrivate
+ * \brief The DescribeInstanceHealthRequestPrivate class provides private implementation for DescribeInstanceHealthRequest.
+ * \internal
  *
- * @class  DescribeInstanceHealthRequestPrivate
- *
- * @brief  Private implementation for DescribeInstanceHealthRequest.
+ * \inmodule QtAwsElasticLoadBalancing
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeInstanceHealthRequestPrivate object.
- *
- * @param  action  ElasticLoadBalancing action being performed.
- * @param  q       Pointer to this object's public DescribeInstanceHealthRequest instance.
+ * Constructs a DescribeInstanceHealthRequestPrivate object for ElasticLoadBalancing \a action with,
+ * public implementation \a q.
  */
 DescribeInstanceHealthRequestPrivate::DescribeInstanceHealthRequestPrivate(
     const ElasticLoadBalancingRequest::Action action, DescribeInstanceHealthRequest * const q)
@@ -132,15 +121,10 @@ DescribeInstanceHealthRequestPrivate::DescribeInstanceHealthRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeInstanceHealthRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeInstanceHealthRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeInstanceHealthRequest instance.
  */
 DescribeInstanceHealthRequestPrivate::DescribeInstanceHealthRequestPrivate(
     const DescribeInstanceHealthRequestPrivate &other, DescribeInstanceHealthRequest * const q)

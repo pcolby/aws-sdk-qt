@@ -27,10 +27,9 @@ namespace Inspector {
 
 /*!
  * \class QtAws::Inspector::UpdateAssessmentTargetRequest
- *
  * \brief The UpdateAssessmentTargetRequest class provides an interface for Inspector UpdateAssessmentTarget requests.
  *
- * \ingroup Inspector
+ * \inmodule QtAwsInspector
  *
  *  <fullname>Amazon Inspector</fullname>
  * 
@@ -42,9 +41,7 @@ namespace Inspector {
  */
 
 /*!
- * @brief  Constructs a new UpdateAssessmentTargetRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateAssessmentTargetRequest::UpdateAssessmentTargetRequest(const UpdateAssessmentTargetRequest &other)
     : InspectorRequest(new UpdateAssessmentTargetRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ UpdateAssessmentTargetRequest::UpdateAssessmentTargetRequest(const UpdateAssessm
 }
 
 /*!
- * @brief  Constructs a new UpdateAssessmentTargetRequest object.
+ * Constructs a UpdateAssessmentTargetRequest object.
  */
 UpdateAssessmentTargetRequest::UpdateAssessmentTargetRequest()
     : InspectorRequest(new UpdateAssessmentTargetRequestPrivate(InspectorRequest::UpdateAssessmentTargetAction, this))
@@ -71,14 +68,9 @@ bool UpdateAssessmentTargetRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateAssessmentTargetResponse object.
+ * Returns a UpdateAssessmentTargetResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateAssessmentTargetResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  InspectorClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateAssessmentTargetRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * UpdateAssessmentTargetRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::Inspector::UpdateAssessmentTargetRequestPrivate
+ * \brief The UpdateAssessmentTargetRequestPrivate class provides private implementation for UpdateAssessmentTargetRequest.
+ * \internal
  *
- * @class  UpdateAssessmentTargetRequestPrivate
- *
- * @brief  Private implementation for UpdateAssessmentTargetRequest.
+ * \inmodule QtAwsInspector
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateAssessmentTargetRequestPrivate object.
- *
- * @param  action  Inspector action being performed.
- * @param  q       Pointer to this object's public UpdateAssessmentTargetRequest instance.
+ * Constructs a UpdateAssessmentTargetRequestPrivate object for Inspector \a action with,
+ * public implementation \a q.
  */
 UpdateAssessmentTargetRequestPrivate::UpdateAssessmentTargetRequestPrivate(
     const InspectorRequest::Action action, UpdateAssessmentTargetRequest * const q)
@@ -109,15 +98,10 @@ UpdateAssessmentTargetRequestPrivate::UpdateAssessmentTargetRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateAssessmentTargetRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateAssessmentTargetRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateAssessmentTargetRequest instance.
  */
 UpdateAssessmentTargetRequestPrivate::UpdateAssessmentTargetRequestPrivate(
     const UpdateAssessmentTargetRequestPrivate &other, UpdateAssessmentTargetRequest * const q)

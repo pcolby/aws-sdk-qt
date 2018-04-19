@@ -27,10 +27,9 @@ namespace DirectoryService {
 
 /*!
  * \class QtAws::DirectoryService::StartSchemaExtensionRequest
- *
  * \brief The StartSchemaExtensionRequest class provides an interface for DirectoryService StartSchemaExtension requests.
  *
- * \ingroup DirectoryService
+ * \inmodule QtAwsDirectoryService
  *
  *  <fullname>AWS Directory Service</fullname>
  * 
@@ -51,9 +50,7 @@ namespace DirectoryService {
  */
 
 /*!
- * @brief  Constructs a new StartSchemaExtensionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 StartSchemaExtensionRequest::StartSchemaExtensionRequest(const StartSchemaExtensionRequest &other)
     : DirectoryServiceRequest(new StartSchemaExtensionRequestPrivate(*other.d_func(), this))
@@ -62,7 +59,7 @@ StartSchemaExtensionRequest::StartSchemaExtensionRequest(const StartSchemaExtens
 }
 
 /*!
- * @brief  Constructs a new StartSchemaExtensionRequest object.
+ * Constructs a StartSchemaExtensionRequest object.
  */
 StartSchemaExtensionRequest::StartSchemaExtensionRequest()
     : DirectoryServiceRequest(new StartSchemaExtensionRequestPrivate(DirectoryServiceRequest::StartSchemaExtensionAction, this))
@@ -80,14 +77,9 @@ bool StartSchemaExtensionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an StartSchemaExtensionResponse object.
+ * Returns a StartSchemaExtensionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An StartSchemaExtensionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DirectoryServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * StartSchemaExtensionRequest::response(QNetworkReply * const reply) const
 {
@@ -95,20 +87,17 @@ QtAws::Core::AwsAbstractResponse * StartSchemaExtensionRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::DirectoryService::StartSchemaExtensionRequestPrivate
+ * \brief The StartSchemaExtensionRequestPrivate class provides private implementation for StartSchemaExtensionRequest.
+ * \internal
  *
- * @class  StartSchemaExtensionRequestPrivate
- *
- * @brief  Private implementation for StartSchemaExtensionRequest.
+ * \inmodule QtAwsDirectoryService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new StartSchemaExtensionRequestPrivate object.
- *
- * @param  action  DirectoryService action being performed.
- * @param  q       Pointer to this object's public StartSchemaExtensionRequest instance.
+ * Constructs a StartSchemaExtensionRequestPrivate object for DirectoryService \a action with,
+ * public implementation \a q.
  */
 StartSchemaExtensionRequestPrivate::StartSchemaExtensionRequestPrivate(
     const DirectoryServiceRequest::Action action, StartSchemaExtensionRequest * const q)
@@ -118,15 +107,10 @@ StartSchemaExtensionRequestPrivate::StartSchemaExtensionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StartSchemaExtensionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the StartSchemaExtensionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public StartSchemaExtensionRequest instance.
  */
 StartSchemaExtensionRequestPrivate::StartSchemaExtensionRequestPrivate(
     const StartSchemaExtensionRequestPrivate &other, StartSchemaExtensionRequest * const q)

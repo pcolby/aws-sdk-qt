@@ -27,10 +27,9 @@ namespace WAFRegional {
 
 /*!
  * \class QtAws::WAFRegional::ListActivatedRulesInRuleGroupRequest
- *
  * \brief The ListActivatedRulesInRuleGroupRequest class provides an interface for WAFRegional ListActivatedRulesInRuleGroup requests.
  *
- * \ingroup WAFRegional
+ * \inmodule QtAwsWAFRegional
  *
  *  This is the <i>AWS WAF Regional API Reference</i> for using AWS WAF with Elastic Load Balancing (ELB) Application Load
  *  Balancers. The AWS WAF actions and data types listed in the reference are available for protecting Application Load
@@ -44,9 +43,7 @@ namespace WAFRegional {
  */
 
 /*!
- * @brief  Constructs a new ListActivatedRulesInRuleGroupRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListActivatedRulesInRuleGroupRequest::ListActivatedRulesInRuleGroupRequest(const ListActivatedRulesInRuleGroupRequest &other)
     : WAFRegionalRequest(new ListActivatedRulesInRuleGroupRequestPrivate(*other.d_func(), this))
@@ -55,7 +52,7 @@ ListActivatedRulesInRuleGroupRequest::ListActivatedRulesInRuleGroupRequest(const
 }
 
 /*!
- * @brief  Constructs a new ListActivatedRulesInRuleGroupRequest object.
+ * Constructs a ListActivatedRulesInRuleGroupRequest object.
  */
 ListActivatedRulesInRuleGroupRequest::ListActivatedRulesInRuleGroupRequest()
     : WAFRegionalRequest(new ListActivatedRulesInRuleGroupRequestPrivate(WAFRegionalRequest::ListActivatedRulesInRuleGroupAction, this))
@@ -73,14 +70,9 @@ bool ListActivatedRulesInRuleGroupRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListActivatedRulesInRuleGroupResponse object.
+ * Returns a ListActivatedRulesInRuleGroupResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListActivatedRulesInRuleGroupResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WAFRegionalClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListActivatedRulesInRuleGroupRequest::response(QNetworkReply * const reply) const
 {
@@ -88,20 +80,17 @@ QtAws::Core::AwsAbstractResponse * ListActivatedRulesInRuleGroupRequest::respons
 }
 
 /*!
- * @internal
+ * \class QtAws::WAFRegional::ListActivatedRulesInRuleGroupRequestPrivate
+ * \brief The ListActivatedRulesInRuleGroupRequestPrivate class provides private implementation for ListActivatedRulesInRuleGroupRequest.
+ * \internal
  *
- * @class  ListActivatedRulesInRuleGroupRequestPrivate
- *
- * @brief  Private implementation for ListActivatedRulesInRuleGroupRequest.
+ * \inmodule QtAwsWAFRegional
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListActivatedRulesInRuleGroupRequestPrivate object.
- *
- * @param  action  WAFRegional action being performed.
- * @param  q       Pointer to this object's public ListActivatedRulesInRuleGroupRequest instance.
+ * Constructs a ListActivatedRulesInRuleGroupRequestPrivate object for WAFRegional \a action with,
+ * public implementation \a q.
  */
 ListActivatedRulesInRuleGroupRequestPrivate::ListActivatedRulesInRuleGroupRequestPrivate(
     const WAFRegionalRequest::Action action, ListActivatedRulesInRuleGroupRequest * const q)
@@ -111,15 +100,10 @@ ListActivatedRulesInRuleGroupRequestPrivate::ListActivatedRulesInRuleGroupReques
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListActivatedRulesInRuleGroupRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListActivatedRulesInRuleGroupRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListActivatedRulesInRuleGroupRequest instance.
  */
 ListActivatedRulesInRuleGroupRequestPrivate::ListActivatedRulesInRuleGroupRequestPrivate(
     const ListActivatedRulesInRuleGroupRequestPrivate &other, ListActivatedRulesInRuleGroupRequest * const q)

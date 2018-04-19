@@ -27,19 +27,16 @@ namespace MachineLearning {
 
 /*!
  * \class QtAws::MachineLearning::DeleteRealtimeEndpointRequest
- *
  * \brief The DeleteRealtimeEndpointRequest class provides an interface for MachineLearning DeleteRealtimeEndpoint requests.
  *
- * \ingroup MachineLearning
+ * \inmodule QtAwsMachineLearning
  *
  *
  * \sa MachineLearningClient::deleteRealtimeEndpoint
  */
 
 /*!
- * @brief  Constructs a new DeleteRealtimeEndpointRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteRealtimeEndpointRequest::DeleteRealtimeEndpointRequest(const DeleteRealtimeEndpointRequest &other)
     : MachineLearningRequest(new DeleteRealtimeEndpointRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ DeleteRealtimeEndpointRequest::DeleteRealtimeEndpointRequest(const DeleteRealtim
 }
 
 /*!
- * @brief  Constructs a new DeleteRealtimeEndpointRequest object.
+ * Constructs a DeleteRealtimeEndpointRequest object.
  */
 DeleteRealtimeEndpointRequest::DeleteRealtimeEndpointRequest()
     : MachineLearningRequest(new DeleteRealtimeEndpointRequestPrivate(MachineLearningRequest::DeleteRealtimeEndpointAction, this))
@@ -66,14 +63,9 @@ bool DeleteRealtimeEndpointRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteRealtimeEndpointResponse object.
+ * Returns a DeleteRealtimeEndpointResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteRealtimeEndpointResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MachineLearningClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteRealtimeEndpointRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * DeleteRealtimeEndpointRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::MachineLearning::DeleteRealtimeEndpointRequestPrivate
+ * \brief The DeleteRealtimeEndpointRequestPrivate class provides private implementation for DeleteRealtimeEndpointRequest.
+ * \internal
  *
- * @class  DeleteRealtimeEndpointRequestPrivate
- *
- * @brief  Private implementation for DeleteRealtimeEndpointRequest.
+ * \inmodule QtAwsMachineLearning
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteRealtimeEndpointRequestPrivate object.
- *
- * @param  action  MachineLearning action being performed.
- * @param  q       Pointer to this object's public DeleteRealtimeEndpointRequest instance.
+ * Constructs a DeleteRealtimeEndpointRequestPrivate object for MachineLearning \a action with,
+ * public implementation \a q.
  */
 DeleteRealtimeEndpointRequestPrivate::DeleteRealtimeEndpointRequestPrivate(
     const MachineLearningRequest::Action action, DeleteRealtimeEndpointRequest * const q)
@@ -104,15 +93,10 @@ DeleteRealtimeEndpointRequestPrivate::DeleteRealtimeEndpointRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteRealtimeEndpointRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteRealtimeEndpointRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteRealtimeEndpointRequest instance.
  */
 DeleteRealtimeEndpointRequestPrivate::DeleteRealtimeEndpointRequestPrivate(
     const DeleteRealtimeEndpointRequestPrivate &other, DeleteRealtimeEndpointRequest * const q)

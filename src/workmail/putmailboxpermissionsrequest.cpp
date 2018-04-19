@@ -27,10 +27,9 @@ namespace WorkMail {
 
 /*!
  * \class QtAws::WorkMail::PutMailboxPermissionsRequest
- *
  * \brief The PutMailboxPermissionsRequest class provides an interface for WorkMail PutMailboxPermissions requests.
  *
- * \ingroup WorkMail
+ * \inmodule QtAwsWorkMail
  *
  *  Amazon WorkMail is a secure, managed business email and calendaring service with support for existing desktop and mobile
  *  email clients. You can access your email, contacts, and calendars using Microsoft Outlook, your browser, or their native
@@ -70,9 +69,7 @@ namespace WorkMail {
  */
 
 /*!
- * @brief  Constructs a new PutMailboxPermissionsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 PutMailboxPermissionsRequest::PutMailboxPermissionsRequest(const PutMailboxPermissionsRequest &other)
     : WorkMailRequest(new PutMailboxPermissionsRequestPrivate(*other.d_func(), this))
@@ -81,7 +78,7 @@ PutMailboxPermissionsRequest::PutMailboxPermissionsRequest(const PutMailboxPermi
 }
 
 /*!
- * @brief  Constructs a new PutMailboxPermissionsRequest object.
+ * Constructs a PutMailboxPermissionsRequest object.
  */
 PutMailboxPermissionsRequest::PutMailboxPermissionsRequest()
     : WorkMailRequest(new PutMailboxPermissionsRequestPrivate(WorkMailRequest::PutMailboxPermissionsAction, this))
@@ -99,14 +96,9 @@ bool PutMailboxPermissionsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an PutMailboxPermissionsResponse object.
+ * Returns a PutMailboxPermissionsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An PutMailboxPermissionsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WorkMailClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * PutMailboxPermissionsRequest::response(QNetworkReply * const reply) const
 {
@@ -114,20 +106,17 @@ QtAws::Core::AwsAbstractResponse * PutMailboxPermissionsRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::WorkMail::PutMailboxPermissionsRequestPrivate
+ * \brief The PutMailboxPermissionsRequestPrivate class provides private implementation for PutMailboxPermissionsRequest.
+ * \internal
  *
- * @class  PutMailboxPermissionsRequestPrivate
- *
- * @brief  Private implementation for PutMailboxPermissionsRequest.
+ * \inmodule QtAwsWorkMail
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new PutMailboxPermissionsRequestPrivate object.
- *
- * @param  action  WorkMail action being performed.
- * @param  q       Pointer to this object's public PutMailboxPermissionsRequest instance.
+ * Constructs a PutMailboxPermissionsRequestPrivate object for WorkMail \a action with,
+ * public implementation \a q.
  */
 PutMailboxPermissionsRequestPrivate::PutMailboxPermissionsRequestPrivate(
     const WorkMailRequest::Action action, PutMailboxPermissionsRequest * const q)
@@ -137,15 +126,10 @@ PutMailboxPermissionsRequestPrivate::PutMailboxPermissionsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutMailboxPermissionsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the PutMailboxPermissionsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public PutMailboxPermissionsRequest instance.
  */
 PutMailboxPermissionsRequestPrivate::PutMailboxPermissionsRequestPrivate(
     const PutMailboxPermissionsRequestPrivate &other, PutMailboxPermissionsRequest * const q)

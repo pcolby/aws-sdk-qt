@@ -27,10 +27,9 @@ namespace Greengrass {
 
 /*!
  * \class QtAws::Greengrass::CreateLoggerDefinitionRequest
- *
  * \brief The CreateLoggerDefinitionRequest class provides an interface for Greengrass CreateLoggerDefinition requests.
  *
- * \ingroup Greengrass
+ * \inmodule QtAwsGreengrass
  *
  *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
  *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
@@ -40,9 +39,7 @@ namespace Greengrass {
  */
 
 /*!
- * @brief  Constructs a new CreateLoggerDefinitionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateLoggerDefinitionRequest::CreateLoggerDefinitionRequest(const CreateLoggerDefinitionRequest &other)
     : GreengrassRequest(new CreateLoggerDefinitionRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ CreateLoggerDefinitionRequest::CreateLoggerDefinitionRequest(const CreateLoggerD
 }
 
 /*!
- * @brief  Constructs a new CreateLoggerDefinitionRequest object.
+ * Constructs a CreateLoggerDefinitionRequest object.
  */
 CreateLoggerDefinitionRequest::CreateLoggerDefinitionRequest()
     : GreengrassRequest(new CreateLoggerDefinitionRequestPrivate(GreengrassRequest::CreateLoggerDefinitionAction, this))
@@ -69,14 +66,9 @@ bool CreateLoggerDefinitionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateLoggerDefinitionResponse object.
+ * Returns a CreateLoggerDefinitionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateLoggerDefinitionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GreengrassClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateLoggerDefinitionRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * CreateLoggerDefinitionRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::Greengrass::CreateLoggerDefinitionRequestPrivate
+ * \brief The CreateLoggerDefinitionRequestPrivate class provides private implementation for CreateLoggerDefinitionRequest.
+ * \internal
  *
- * @class  CreateLoggerDefinitionRequestPrivate
- *
- * @brief  Private implementation for CreateLoggerDefinitionRequest.
+ * \inmodule QtAwsGreengrass
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateLoggerDefinitionRequestPrivate object.
- *
- * @param  action  Greengrass action being performed.
- * @param  q       Pointer to this object's public CreateLoggerDefinitionRequest instance.
+ * Constructs a CreateLoggerDefinitionRequestPrivate object for Greengrass \a action with,
+ * public implementation \a q.
  */
 CreateLoggerDefinitionRequestPrivate::CreateLoggerDefinitionRequestPrivate(
     const GreengrassRequest::Action action, CreateLoggerDefinitionRequest * const q)
@@ -107,15 +96,10 @@ CreateLoggerDefinitionRequestPrivate::CreateLoggerDefinitionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateLoggerDefinitionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateLoggerDefinitionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateLoggerDefinitionRequest instance.
  */
 CreateLoggerDefinitionRequestPrivate::CreateLoggerDefinitionRequestPrivate(
     const CreateLoggerDefinitionRequestPrivate &other, CreateLoggerDefinitionRequest * const q)

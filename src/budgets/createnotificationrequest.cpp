@@ -27,10 +27,9 @@ namespace Budgets {
 
 /*!
  * \class QtAws::Budgets::CreateNotificationRequest
- *
  * \brief The CreateNotificationRequest class provides an interface for Budgets CreateNotification requests.
  *
- * \ingroup Budgets
+ * \inmodule QtAwsBudgets
  *
  *  Budgets enable you to plan your service usage, service costs, and your RI utilization. You can also track how close your
  *  plan is to your budgeted amount or to the free tier limits. Budgets provide you with a quick way to see your
@@ -75,9 +74,7 @@ namespace Budgets {
  */
 
 /*!
- * @brief  Constructs a new CreateNotificationRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateNotificationRequest::CreateNotificationRequest(const CreateNotificationRequest &other)
     : BudgetsRequest(new CreateNotificationRequestPrivate(*other.d_func(), this))
@@ -86,7 +83,7 @@ CreateNotificationRequest::CreateNotificationRequest(const CreateNotificationReq
 }
 
 /*!
- * @brief  Constructs a new CreateNotificationRequest object.
+ * Constructs a CreateNotificationRequest object.
  */
 CreateNotificationRequest::CreateNotificationRequest()
     : BudgetsRequest(new CreateNotificationRequestPrivate(BudgetsRequest::CreateNotificationAction, this))
@@ -104,14 +101,9 @@ bool CreateNotificationRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateNotificationResponse object.
+ * Returns a CreateNotificationResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateNotificationResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  BudgetsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateNotificationRequest::response(QNetworkReply * const reply) const
 {
@@ -119,20 +111,17 @@ QtAws::Core::AwsAbstractResponse * CreateNotificationRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::Budgets::CreateNotificationRequestPrivate
+ * \brief The CreateNotificationRequestPrivate class provides private implementation for CreateNotificationRequest.
+ * \internal
  *
- * @class  CreateNotificationRequestPrivate
- *
- * @brief  Private implementation for CreateNotificationRequest.
+ * \inmodule QtAwsBudgets
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateNotificationRequestPrivate object.
- *
- * @param  action  Budgets action being performed.
- * @param  q       Pointer to this object's public CreateNotificationRequest instance.
+ * Constructs a CreateNotificationRequestPrivate object for Budgets \a action with,
+ * public implementation \a q.
  */
 CreateNotificationRequestPrivate::CreateNotificationRequestPrivate(
     const BudgetsRequest::Action action, CreateNotificationRequest * const q)
@@ -142,15 +131,10 @@ CreateNotificationRequestPrivate::CreateNotificationRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateNotificationRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateNotificationRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateNotificationRequest instance.
  */
 CreateNotificationRequestPrivate::CreateNotificationRequestPrivate(
     const CreateNotificationRequestPrivate &other, CreateNotificationRequest * const q)

@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::ModifyVolumeAttributeRequest
- *
  * \brief The ModifyVolumeAttributeRequest class provides an interface for EC2 ModifyVolumeAttribute requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new ModifyVolumeAttributeRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ModifyVolumeAttributeRequest::ModifyVolumeAttributeRequest(const ModifyVolumeAttributeRequest &other)
     : EC2Request(new ModifyVolumeAttributeRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ ModifyVolumeAttributeRequest::ModifyVolumeAttributeRequest(const ModifyVolumeAtt
 }
 
 /*!
- * @brief  Constructs a new ModifyVolumeAttributeRequest object.
+ * Constructs a ModifyVolumeAttributeRequest object.
  */
 ModifyVolumeAttributeRequest::ModifyVolumeAttributeRequest()
     : EC2Request(new ModifyVolumeAttributeRequestPrivate(EC2Request::ModifyVolumeAttributeAction, this))
@@ -70,14 +67,9 @@ bool ModifyVolumeAttributeRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ModifyVolumeAttributeResponse object.
+ * Returns a ModifyVolumeAttributeResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ModifyVolumeAttributeResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ModifyVolumeAttributeRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * ModifyVolumeAttributeRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::ModifyVolumeAttributeRequestPrivate
+ * \brief The ModifyVolumeAttributeRequestPrivate class provides private implementation for ModifyVolumeAttributeRequest.
+ * \internal
  *
- * @class  ModifyVolumeAttributeRequestPrivate
- *
- * @brief  Private implementation for ModifyVolumeAttributeRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ModifyVolumeAttributeRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public ModifyVolumeAttributeRequest instance.
+ * Constructs a ModifyVolumeAttributeRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 ModifyVolumeAttributeRequestPrivate::ModifyVolumeAttributeRequestPrivate(
     const EC2Request::Action action, ModifyVolumeAttributeRequest * const q)
@@ -108,15 +97,10 @@ ModifyVolumeAttributeRequestPrivate::ModifyVolumeAttributeRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ModifyVolumeAttributeRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ModifyVolumeAttributeRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ModifyVolumeAttributeRequest instance.
  */
 ModifyVolumeAttributeRequestPrivate::ModifyVolumeAttributeRequestPrivate(
     const ModifyVolumeAttributeRequestPrivate &other, ModifyVolumeAttributeRequest * const q)

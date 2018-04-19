@@ -27,19 +27,16 @@ namespace S3 {
 
 /*!
  * \class QtAws::S3::CompleteMultipartUploadRequest
- *
  * \brief The CompleteMultipartUploadRequest class provides an interface for S3 CompleteMultipartUpload requests.
  *
- * \ingroup S3
+ * \inmodule QtAwsS3
  *
  *
  * \sa S3Client::completeMultipartUpload
  */
 
 /*!
- * @brief  Constructs a new CompleteMultipartUploadRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CompleteMultipartUploadRequest::CompleteMultipartUploadRequest(const CompleteMultipartUploadRequest &other)
     : S3Request(new CompleteMultipartUploadRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ CompleteMultipartUploadRequest::CompleteMultipartUploadRequest(const CompleteMul
 }
 
 /*!
- * @brief  Constructs a new CompleteMultipartUploadRequest object.
+ * Constructs a CompleteMultipartUploadRequest object.
  */
 CompleteMultipartUploadRequest::CompleteMultipartUploadRequest()
     : S3Request(new CompleteMultipartUploadRequestPrivate(S3Request::CompleteMultipartUploadAction, this))
@@ -66,14 +63,9 @@ bool CompleteMultipartUploadRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CompleteMultipartUploadResponse object.
+ * Returns a CompleteMultipartUploadResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CompleteMultipartUploadResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  S3Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CompleteMultipartUploadRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * CompleteMultipartUploadRequest::response(QNet
 }
 
 /*!
- * @internal
+ * \class QtAws::S3::CompleteMultipartUploadRequestPrivate
+ * \brief The CompleteMultipartUploadRequestPrivate class provides private implementation for CompleteMultipartUploadRequest.
+ * \internal
  *
- * @class  CompleteMultipartUploadRequestPrivate
- *
- * @brief  Private implementation for CompleteMultipartUploadRequest.
+ * \inmodule QtAwsS3
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CompleteMultipartUploadRequestPrivate object.
- *
- * @param  action  S3 action being performed.
- * @param  q       Pointer to this object's public CompleteMultipartUploadRequest instance.
+ * Constructs a CompleteMultipartUploadRequestPrivate object for S3 \a action with,
+ * public implementation \a q.
  */
 CompleteMultipartUploadRequestPrivate::CompleteMultipartUploadRequestPrivate(
     const S3Request::Action action, CompleteMultipartUploadRequest * const q)
@@ -104,15 +93,10 @@ CompleteMultipartUploadRequestPrivate::CompleteMultipartUploadRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CompleteMultipartUploadRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CompleteMultipartUploadRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CompleteMultipartUploadRequest instance.
  */
 CompleteMultipartUploadRequestPrivate::CompleteMultipartUploadRequestPrivate(
     const CompleteMultipartUploadRequestPrivate &other, CompleteMultipartUploadRequest * const q)

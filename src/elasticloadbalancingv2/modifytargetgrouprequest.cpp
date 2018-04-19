@@ -27,10 +27,9 @@ namespace ElasticLoadBalancingv2 {
 
 /*!
  * \class QtAws::ElasticLoadBalancingv2::ModifyTargetGroupRequest
- *
  * \brief The ModifyTargetGroupRequest class provides an interface for ElasticLoadBalancingv2 ModifyTargetGroup requests.
  *
- * \ingroup ElasticLoadBalancingv2
+ * \inmodule QtAwsElasticLoadBalancingv2
  *
  *  <fullname>Elastic Load Balancing</fullname>
  * 
@@ -105,9 +104,7 @@ namespace ElasticLoadBalancingv2 {
  */
 
 /*!
- * @brief  Constructs a new ModifyTargetGroupRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ModifyTargetGroupRequest::ModifyTargetGroupRequest(const ModifyTargetGroupRequest &other)
     : ElasticLoadBalancingv2Request(new ModifyTargetGroupRequestPrivate(*other.d_func(), this))
@@ -116,7 +113,7 @@ ModifyTargetGroupRequest::ModifyTargetGroupRequest(const ModifyTargetGroupReques
 }
 
 /*!
- * @brief  Constructs a new ModifyTargetGroupRequest object.
+ * Constructs a ModifyTargetGroupRequest object.
  */
 ModifyTargetGroupRequest::ModifyTargetGroupRequest()
     : ElasticLoadBalancingv2Request(new ModifyTargetGroupRequestPrivate(ElasticLoadBalancingv2Request::ModifyTargetGroupAction, this))
@@ -134,14 +131,9 @@ bool ModifyTargetGroupRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ModifyTargetGroupResponse object.
+ * Returns a ModifyTargetGroupResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ModifyTargetGroupResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ElasticLoadBalancingv2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ModifyTargetGroupRequest::response(QNetworkReply * const reply) const
 {
@@ -149,20 +141,17 @@ QtAws::Core::AwsAbstractResponse * ModifyTargetGroupRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::ElasticLoadBalancingv2::ModifyTargetGroupRequestPrivate
+ * \brief The ModifyTargetGroupRequestPrivate class provides private implementation for ModifyTargetGroupRequest.
+ * \internal
  *
- * @class  ModifyTargetGroupRequestPrivate
- *
- * @brief  Private implementation for ModifyTargetGroupRequest.
+ * \inmodule QtAwsElasticLoadBalancingv2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ModifyTargetGroupRequestPrivate object.
- *
- * @param  action  ElasticLoadBalancingv2 action being performed.
- * @param  q       Pointer to this object's public ModifyTargetGroupRequest instance.
+ * Constructs a ModifyTargetGroupRequestPrivate object for ElasticLoadBalancingv2 \a action with,
+ * public implementation \a q.
  */
 ModifyTargetGroupRequestPrivate::ModifyTargetGroupRequestPrivate(
     const ElasticLoadBalancingv2Request::Action action, ModifyTargetGroupRequest * const q)
@@ -172,15 +161,10 @@ ModifyTargetGroupRequestPrivate::ModifyTargetGroupRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ModifyTargetGroupRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ModifyTargetGroupRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ModifyTargetGroupRequest instance.
  */
 ModifyTargetGroupRequestPrivate::ModifyTargetGroupRequestPrivate(
     const ModifyTargetGroupRequestPrivate &other, ModifyTargetGroupRequest * const q)

@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::CreateLaunchTemplateVersionRequest
- *
  * \brief The CreateLaunchTemplateVersionRequest class provides an interface for EC2 CreateLaunchTemplateVersion requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new CreateLaunchTemplateVersionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateLaunchTemplateVersionRequest::CreateLaunchTemplateVersionRequest(const CreateLaunchTemplateVersionRequest &other)
     : EC2Request(new CreateLaunchTemplateVersionRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ CreateLaunchTemplateVersionRequest::CreateLaunchTemplateVersionRequest(const Cre
 }
 
 /*!
- * @brief  Constructs a new CreateLaunchTemplateVersionRequest object.
+ * Constructs a CreateLaunchTemplateVersionRequest object.
  */
 CreateLaunchTemplateVersionRequest::CreateLaunchTemplateVersionRequest()
     : EC2Request(new CreateLaunchTemplateVersionRequestPrivate(EC2Request::CreateLaunchTemplateVersionAction, this))
@@ -70,14 +67,9 @@ bool CreateLaunchTemplateVersionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateLaunchTemplateVersionResponse object.
+ * Returns a CreateLaunchTemplateVersionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateLaunchTemplateVersionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateLaunchTemplateVersionRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * CreateLaunchTemplateVersionRequest::response(
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::CreateLaunchTemplateVersionRequestPrivate
+ * \brief The CreateLaunchTemplateVersionRequestPrivate class provides private implementation for CreateLaunchTemplateVersionRequest.
+ * \internal
  *
- * @class  CreateLaunchTemplateVersionRequestPrivate
- *
- * @brief  Private implementation for CreateLaunchTemplateVersionRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateLaunchTemplateVersionRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public CreateLaunchTemplateVersionRequest instance.
+ * Constructs a CreateLaunchTemplateVersionRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 CreateLaunchTemplateVersionRequestPrivate::CreateLaunchTemplateVersionRequestPrivate(
     const EC2Request::Action action, CreateLaunchTemplateVersionRequest * const q)
@@ -108,15 +97,10 @@ CreateLaunchTemplateVersionRequestPrivate::CreateLaunchTemplateVersionRequestPri
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateLaunchTemplateVersionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateLaunchTemplateVersionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateLaunchTemplateVersionRequest instance.
  */
 CreateLaunchTemplateVersionRequestPrivate::CreateLaunchTemplateVersionRequestPrivate(
     const CreateLaunchTemplateVersionRequestPrivate &other, CreateLaunchTemplateVersionRequest * const q)

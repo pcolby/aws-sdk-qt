@@ -27,10 +27,9 @@ namespace Kinesis {
 
 /*!
  * \class QtAws::Kinesis::AddTagsToStreamRequest
- *
  * \brief The AddTagsToStreamRequest class provides an interface for Kinesis AddTagsToStream requests.
  *
- * \ingroup Kinesis
+ * \inmodule QtAwsKinesis
  *
  *  <fullname>Amazon Kinesis Data Streams Service API Reference</fullname>
  * 
@@ -40,9 +39,7 @@ namespace Kinesis {
  */
 
 /*!
- * @brief  Constructs a new AddTagsToStreamRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AddTagsToStreamRequest::AddTagsToStreamRequest(const AddTagsToStreamRequest &other)
     : KinesisRequest(new AddTagsToStreamRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ AddTagsToStreamRequest::AddTagsToStreamRequest(const AddTagsToStreamRequest &oth
 }
 
 /*!
- * @brief  Constructs a new AddTagsToStreamRequest object.
+ * Constructs a AddTagsToStreamRequest object.
  */
 AddTagsToStreamRequest::AddTagsToStreamRequest()
     : KinesisRequest(new AddTagsToStreamRequestPrivate(KinesisRequest::AddTagsToStreamAction, this))
@@ -69,14 +66,9 @@ bool AddTagsToStreamRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AddTagsToStreamResponse object.
+ * Returns a AddTagsToStreamResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AddTagsToStreamResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  KinesisClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AddTagsToStreamRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * AddTagsToStreamRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::Kinesis::AddTagsToStreamRequestPrivate
+ * \brief The AddTagsToStreamRequestPrivate class provides private implementation for AddTagsToStreamRequest.
+ * \internal
  *
- * @class  AddTagsToStreamRequestPrivate
- *
- * @brief  Private implementation for AddTagsToStreamRequest.
+ * \inmodule QtAwsKinesis
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AddTagsToStreamRequestPrivate object.
- *
- * @param  action  Kinesis action being performed.
- * @param  q       Pointer to this object's public AddTagsToStreamRequest instance.
+ * Constructs a AddTagsToStreamRequestPrivate object for Kinesis \a action with,
+ * public implementation \a q.
  */
 AddTagsToStreamRequestPrivate::AddTagsToStreamRequestPrivate(
     const KinesisRequest::Action action, AddTagsToStreamRequest * const q)
@@ -107,15 +96,10 @@ AddTagsToStreamRequestPrivate::AddTagsToStreamRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AddTagsToStreamRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AddTagsToStreamRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AddTagsToStreamRequest instance.
  */
 AddTagsToStreamRequestPrivate::AddTagsToStreamRequestPrivate(
     const AddTagsToStreamRequestPrivate &other, AddTagsToStreamRequest * const q)

@@ -27,10 +27,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::RemoveSourceIdentifierFromSubscriptionRequest
- *
  * \brief The RemoveSourceIdentifierFromSubscriptionRequest class provides an interface for RDS RemoveSourceIdentifierFromSubscription requests.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -101,9 +100,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new RemoveSourceIdentifierFromSubscriptionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 RemoveSourceIdentifierFromSubscriptionRequest::RemoveSourceIdentifierFromSubscriptionRequest(const RemoveSourceIdentifierFromSubscriptionRequest &other)
     : RDSRequest(new RemoveSourceIdentifierFromSubscriptionRequestPrivate(*other.d_func(), this))
@@ -112,7 +109,7 @@ RemoveSourceIdentifierFromSubscriptionRequest::RemoveSourceIdentifierFromSubscri
 }
 
 /*!
- * @brief  Constructs a new RemoveSourceIdentifierFromSubscriptionRequest object.
+ * Constructs a RemoveSourceIdentifierFromSubscriptionRequest object.
  */
 RemoveSourceIdentifierFromSubscriptionRequest::RemoveSourceIdentifierFromSubscriptionRequest()
     : RDSRequest(new RemoveSourceIdentifierFromSubscriptionRequestPrivate(RDSRequest::RemoveSourceIdentifierFromSubscriptionAction, this))
@@ -130,14 +127,9 @@ bool RemoveSourceIdentifierFromSubscriptionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an RemoveSourceIdentifierFromSubscriptionResponse object.
+ * Returns a RemoveSourceIdentifierFromSubscriptionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An RemoveSourceIdentifierFromSubscriptionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RDSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * RemoveSourceIdentifierFromSubscriptionRequest::response(QNetworkReply * const reply) const
 {
@@ -145,20 +137,17 @@ QtAws::Core::AwsAbstractResponse * RemoveSourceIdentifierFromSubscriptionRequest
 }
 
 /*!
- * @internal
+ * \class QtAws::RDS::RemoveSourceIdentifierFromSubscriptionRequestPrivate
+ * \brief The RemoveSourceIdentifierFromSubscriptionRequestPrivate class provides private implementation for RemoveSourceIdentifierFromSubscriptionRequest.
+ * \internal
  *
- * @class  RemoveSourceIdentifierFromSubscriptionRequestPrivate
- *
- * @brief  Private implementation for RemoveSourceIdentifierFromSubscriptionRequest.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new RemoveSourceIdentifierFromSubscriptionRequestPrivate object.
- *
- * @param  action  RDS action being performed.
- * @param  q       Pointer to this object's public RemoveSourceIdentifierFromSubscriptionRequest instance.
+ * Constructs a RemoveSourceIdentifierFromSubscriptionRequestPrivate object for RDS \a action with,
+ * public implementation \a q.
  */
 RemoveSourceIdentifierFromSubscriptionRequestPrivate::RemoveSourceIdentifierFromSubscriptionRequestPrivate(
     const RDSRequest::Action action, RemoveSourceIdentifierFromSubscriptionRequest * const q)
@@ -168,15 +157,10 @@ RemoveSourceIdentifierFromSubscriptionRequestPrivate::RemoveSourceIdentifierFrom
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RemoveSourceIdentifierFromSubscriptionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the RemoveSourceIdentifierFromSubscriptionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public RemoveSourceIdentifierFromSubscriptionRequest instance.
  */
 RemoveSourceIdentifierFromSubscriptionRequestPrivate::RemoveSourceIdentifierFromSubscriptionRequestPrivate(
     const RemoveSourceIdentifierFromSubscriptionRequestPrivate &other, RemoveSourceIdentifierFromSubscriptionRequest * const q)

@@ -27,10 +27,9 @@ namespace StorageGateway {
 
 /*!
  * \class QtAws::StorageGateway::StartGatewayRequest
- *
  * \brief The StartGatewayRequest class provides an interface for StorageGateway StartGateway requests.
  *
- * \ingroup StorageGateway
+ * \inmodule QtAwsStorageGateway
  *
  *  <fullname>AWS Storage Gateway Service</fullname>
  * 
@@ -106,9 +105,7 @@ namespace StorageGateway {
  */
 
 /*!
- * @brief  Constructs a new StartGatewayRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 StartGatewayRequest::StartGatewayRequest(const StartGatewayRequest &other)
     : StorageGatewayRequest(new StartGatewayRequestPrivate(*other.d_func(), this))
@@ -117,7 +114,7 @@ StartGatewayRequest::StartGatewayRequest(const StartGatewayRequest &other)
 }
 
 /*!
- * @brief  Constructs a new StartGatewayRequest object.
+ * Constructs a StartGatewayRequest object.
  */
 StartGatewayRequest::StartGatewayRequest()
     : StorageGatewayRequest(new StartGatewayRequestPrivate(StorageGatewayRequest::StartGatewayAction, this))
@@ -135,14 +132,9 @@ bool StartGatewayRequest::isValid() const
 
 
 /*!
- * @brief  Construct an StartGatewayResponse object.
+ * Returns a StartGatewayResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An StartGatewayResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  StorageGatewayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * StartGatewayRequest::response(QNetworkReply * const reply) const
 {
@@ -150,20 +142,17 @@ QtAws::Core::AwsAbstractResponse * StartGatewayRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::StorageGateway::StartGatewayRequestPrivate
+ * \brief The StartGatewayRequestPrivate class provides private implementation for StartGatewayRequest.
+ * \internal
  *
- * @class  StartGatewayRequestPrivate
- *
- * @brief  Private implementation for StartGatewayRequest.
+ * \inmodule QtAwsStorageGateway
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new StartGatewayRequestPrivate object.
- *
- * @param  action  StorageGateway action being performed.
- * @param  q       Pointer to this object's public StartGatewayRequest instance.
+ * Constructs a StartGatewayRequestPrivate object for StorageGateway \a action with,
+ * public implementation \a q.
  */
 StartGatewayRequestPrivate::StartGatewayRequestPrivate(
     const StorageGatewayRequest::Action action, StartGatewayRequest * const q)
@@ -173,15 +162,10 @@ StartGatewayRequestPrivate::StartGatewayRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StartGatewayRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the StartGatewayRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public StartGatewayRequest instance.
  */
 StartGatewayRequestPrivate::StartGatewayRequestPrivate(
     const StartGatewayRequestPrivate &other, StartGatewayRequest * const q)

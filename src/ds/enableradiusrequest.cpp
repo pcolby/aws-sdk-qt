@@ -27,10 +27,9 @@ namespace DirectoryService {
 
 /*!
  * \class QtAws::DirectoryService::EnableRadiusRequest
- *
  * \brief The EnableRadiusRequest class provides an interface for DirectoryService EnableRadius requests.
  *
- * \ingroup DirectoryService
+ * \inmodule QtAwsDirectoryService
  *
  *  <fullname>AWS Directory Service</fullname>
  * 
@@ -51,9 +50,7 @@ namespace DirectoryService {
  */
 
 /*!
- * @brief  Constructs a new EnableRadiusRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 EnableRadiusRequest::EnableRadiusRequest(const EnableRadiusRequest &other)
     : DirectoryServiceRequest(new EnableRadiusRequestPrivate(*other.d_func(), this))
@@ -62,7 +59,7 @@ EnableRadiusRequest::EnableRadiusRequest(const EnableRadiusRequest &other)
 }
 
 /*!
- * @brief  Constructs a new EnableRadiusRequest object.
+ * Constructs a EnableRadiusRequest object.
  */
 EnableRadiusRequest::EnableRadiusRequest()
     : DirectoryServiceRequest(new EnableRadiusRequestPrivate(DirectoryServiceRequest::EnableRadiusAction, this))
@@ -80,14 +77,9 @@ bool EnableRadiusRequest::isValid() const
 
 
 /*!
- * @brief  Construct an EnableRadiusResponse object.
+ * Returns a EnableRadiusResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An EnableRadiusResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DirectoryServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * EnableRadiusRequest::response(QNetworkReply * const reply) const
 {
@@ -95,20 +87,17 @@ QtAws::Core::AwsAbstractResponse * EnableRadiusRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::DirectoryService::EnableRadiusRequestPrivate
+ * \brief The EnableRadiusRequestPrivate class provides private implementation for EnableRadiusRequest.
+ * \internal
  *
- * @class  EnableRadiusRequestPrivate
- *
- * @brief  Private implementation for EnableRadiusRequest.
+ * \inmodule QtAwsDirectoryService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new EnableRadiusRequestPrivate object.
- *
- * @param  action  DirectoryService action being performed.
- * @param  q       Pointer to this object's public EnableRadiusRequest instance.
+ * Constructs a EnableRadiusRequestPrivate object for DirectoryService \a action with,
+ * public implementation \a q.
  */
 EnableRadiusRequestPrivate::EnableRadiusRequestPrivate(
     const DirectoryServiceRequest::Action action, EnableRadiusRequest * const q)
@@ -118,15 +107,10 @@ EnableRadiusRequestPrivate::EnableRadiusRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new EnableRadiusRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the EnableRadiusRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public EnableRadiusRequest instance.
  */
 EnableRadiusRequestPrivate::EnableRadiusRequestPrivate(
     const EnableRadiusRequestPrivate &other, EnableRadiusRequest * const q)

@@ -27,10 +27,9 @@ namespace Glue {
 
 /*!
  * \class QtAws::Glue::UpdateDevEndpointRequest
- *
  * \brief The UpdateDevEndpointRequest class provides an interface for Glue UpdateDevEndpoint requests.
  *
- * \ingroup Glue
+ * \inmodule QtAwsGlue
  *
  *  <fullname>AWS Glue</fullname>
  * 
@@ -40,9 +39,7 @@ namespace Glue {
  */
 
 /*!
- * @brief  Constructs a new UpdateDevEndpointRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateDevEndpointRequest::UpdateDevEndpointRequest(const UpdateDevEndpointRequest &other)
     : GlueRequest(new UpdateDevEndpointRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ UpdateDevEndpointRequest::UpdateDevEndpointRequest(const UpdateDevEndpointReques
 }
 
 /*!
- * @brief  Constructs a new UpdateDevEndpointRequest object.
+ * Constructs a UpdateDevEndpointRequest object.
  */
 UpdateDevEndpointRequest::UpdateDevEndpointRequest()
     : GlueRequest(new UpdateDevEndpointRequestPrivate(GlueRequest::UpdateDevEndpointAction, this))
@@ -69,14 +66,9 @@ bool UpdateDevEndpointRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateDevEndpointResponse object.
+ * Returns a UpdateDevEndpointResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateDevEndpointResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GlueClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateDevEndpointRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * UpdateDevEndpointRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::Glue::UpdateDevEndpointRequestPrivate
+ * \brief The UpdateDevEndpointRequestPrivate class provides private implementation for UpdateDevEndpointRequest.
+ * \internal
  *
- * @class  UpdateDevEndpointRequestPrivate
- *
- * @brief  Private implementation for UpdateDevEndpointRequest.
+ * \inmodule QtAwsGlue
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateDevEndpointRequestPrivate object.
- *
- * @param  action  Glue action being performed.
- * @param  q       Pointer to this object's public UpdateDevEndpointRequest instance.
+ * Constructs a UpdateDevEndpointRequestPrivate object for Glue \a action with,
+ * public implementation \a q.
  */
 UpdateDevEndpointRequestPrivate::UpdateDevEndpointRequestPrivate(
     const GlueRequest::Action action, UpdateDevEndpointRequest * const q)
@@ -107,15 +96,10 @@ UpdateDevEndpointRequestPrivate::UpdateDevEndpointRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateDevEndpointRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateDevEndpointRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateDevEndpointRequest instance.
  */
 UpdateDevEndpointRequestPrivate::UpdateDevEndpointRequestPrivate(
     const UpdateDevEndpointRequestPrivate &other, UpdateDevEndpointRequest * const q)

@@ -27,10 +27,9 @@ namespace AutoScaling {
 
 /*!
  * \class QtAws::AutoScaling::SetInstanceProtectionRequest
- *
  * \brief The SetInstanceProtectionRequest class provides an interface for AutoScaling SetInstanceProtection requests.
  *
- * \ingroup AutoScaling
+ * \inmodule QtAwsAutoScaling
  *
  *  <fullname>Amazon EC2 Auto Scaling</fullname>
  * 
@@ -42,9 +41,7 @@ namespace AutoScaling {
  */
 
 /*!
- * @brief  Constructs a new SetInstanceProtectionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 SetInstanceProtectionRequest::SetInstanceProtectionRequest(const SetInstanceProtectionRequest &other)
     : AutoScalingRequest(new SetInstanceProtectionRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ SetInstanceProtectionRequest::SetInstanceProtectionRequest(const SetInstanceProt
 }
 
 /*!
- * @brief  Constructs a new SetInstanceProtectionRequest object.
+ * Constructs a SetInstanceProtectionRequest object.
  */
 SetInstanceProtectionRequest::SetInstanceProtectionRequest()
     : AutoScalingRequest(new SetInstanceProtectionRequestPrivate(AutoScalingRequest::SetInstanceProtectionAction, this))
@@ -71,14 +68,9 @@ bool SetInstanceProtectionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an SetInstanceProtectionResponse object.
+ * Returns a SetInstanceProtectionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An SetInstanceProtectionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AutoScalingClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * SetInstanceProtectionRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * SetInstanceProtectionRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::AutoScaling::SetInstanceProtectionRequestPrivate
+ * \brief The SetInstanceProtectionRequestPrivate class provides private implementation for SetInstanceProtectionRequest.
+ * \internal
  *
- * @class  SetInstanceProtectionRequestPrivate
- *
- * @brief  Private implementation for SetInstanceProtectionRequest.
+ * \inmodule QtAwsAutoScaling
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new SetInstanceProtectionRequestPrivate object.
- *
- * @param  action  AutoScaling action being performed.
- * @param  q       Pointer to this object's public SetInstanceProtectionRequest instance.
+ * Constructs a SetInstanceProtectionRequestPrivate object for AutoScaling \a action with,
+ * public implementation \a q.
  */
 SetInstanceProtectionRequestPrivate::SetInstanceProtectionRequestPrivate(
     const AutoScalingRequest::Action action, SetInstanceProtectionRequest * const q)
@@ -109,15 +98,10 @@ SetInstanceProtectionRequestPrivate::SetInstanceProtectionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SetInstanceProtectionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the SetInstanceProtectionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public SetInstanceProtectionRequest instance.
  */
 SetInstanceProtectionRequestPrivate::SetInstanceProtectionRequestPrivate(
     const SetInstanceProtectionRequestPrivate &other, SetInstanceProtectionRequest * const q)

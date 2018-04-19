@@ -27,10 +27,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::AddRoleToInstanceProfileRequest
- *
  * \brief The AddRoleToInstanceProfileRequest class provides an interface for IAM AddRoleToInstanceProfile requests.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -102,9 +101,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new AddRoleToInstanceProfileRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AddRoleToInstanceProfileRequest::AddRoleToInstanceProfileRequest(const AddRoleToInstanceProfileRequest &other)
     : IAMRequest(new AddRoleToInstanceProfileRequestPrivate(*other.d_func(), this))
@@ -113,7 +110,7 @@ AddRoleToInstanceProfileRequest::AddRoleToInstanceProfileRequest(const AddRoleTo
 }
 
 /*!
- * @brief  Constructs a new AddRoleToInstanceProfileRequest object.
+ * Constructs a AddRoleToInstanceProfileRequest object.
  */
 AddRoleToInstanceProfileRequest::AddRoleToInstanceProfileRequest()
     : IAMRequest(new AddRoleToInstanceProfileRequestPrivate(IAMRequest::AddRoleToInstanceProfileAction, this))
@@ -131,14 +128,9 @@ bool AddRoleToInstanceProfileRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AddRoleToInstanceProfileResponse object.
+ * Returns a AddRoleToInstanceProfileResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AddRoleToInstanceProfileResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IAMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AddRoleToInstanceProfileRequest::response(QNetworkReply * const reply) const
 {
@@ -146,20 +138,17 @@ QtAws::Core::AwsAbstractResponse * AddRoleToInstanceProfileRequest::response(QNe
 }
 
 /*!
- * @internal
+ * \class QtAws::IAM::AddRoleToInstanceProfileRequestPrivate
+ * \brief The AddRoleToInstanceProfileRequestPrivate class provides private implementation for AddRoleToInstanceProfileRequest.
+ * \internal
  *
- * @class  AddRoleToInstanceProfileRequestPrivate
- *
- * @brief  Private implementation for AddRoleToInstanceProfileRequest.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AddRoleToInstanceProfileRequestPrivate object.
- *
- * @param  action  IAM action being performed.
- * @param  q       Pointer to this object's public AddRoleToInstanceProfileRequest instance.
+ * Constructs a AddRoleToInstanceProfileRequestPrivate object for IAM \a action with,
+ * public implementation \a q.
  */
 AddRoleToInstanceProfileRequestPrivate::AddRoleToInstanceProfileRequestPrivate(
     const IAMRequest::Action action, AddRoleToInstanceProfileRequest * const q)
@@ -169,15 +158,10 @@ AddRoleToInstanceProfileRequestPrivate::AddRoleToInstanceProfileRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AddRoleToInstanceProfileRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AddRoleToInstanceProfileRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AddRoleToInstanceProfileRequest instance.
  */
 AddRoleToInstanceProfileRequestPrivate::AddRoleToInstanceProfileRequestPrivate(
     const AddRoleToInstanceProfileRequestPrivate &other, AddRoleToInstanceProfileRequest * const q)

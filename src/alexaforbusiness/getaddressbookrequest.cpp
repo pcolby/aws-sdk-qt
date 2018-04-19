@@ -27,10 +27,9 @@ namespace AlexaForBusiness {
 
 /*!
  * \class QtAws::AlexaForBusiness::GetAddressBookRequest
- *
  * \brief The GetAddressBookRequest class provides an interface for AlexaForBusiness GetAddressBook requests.
  *
- * \ingroup AlexaForBusiness
+ * \inmodule QtAwsAlexaForBusiness
  *
  *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
  *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
@@ -42,9 +41,7 @@ namespace AlexaForBusiness {
  */
 
 /*!
- * @brief  Constructs a new GetAddressBookRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetAddressBookRequest::GetAddressBookRequest(const GetAddressBookRequest &other)
     : AlexaForBusinessRequest(new GetAddressBookRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ GetAddressBookRequest::GetAddressBookRequest(const GetAddressBookRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetAddressBookRequest object.
+ * Constructs a GetAddressBookRequest object.
  */
 GetAddressBookRequest::GetAddressBookRequest()
     : AlexaForBusinessRequest(new GetAddressBookRequestPrivate(AlexaForBusinessRequest::GetAddressBookAction, this))
@@ -71,14 +68,9 @@ bool GetAddressBookRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetAddressBookResponse object.
+ * Returns a GetAddressBookResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetAddressBookResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AlexaForBusinessClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetAddressBookRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * GetAddressBookRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::AlexaForBusiness::GetAddressBookRequestPrivate
+ * \brief The GetAddressBookRequestPrivate class provides private implementation for GetAddressBookRequest.
+ * \internal
  *
- * @class  GetAddressBookRequestPrivate
- *
- * @brief  Private implementation for GetAddressBookRequest.
+ * \inmodule QtAwsAlexaForBusiness
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetAddressBookRequestPrivate object.
- *
- * @param  action  AlexaForBusiness action being performed.
- * @param  q       Pointer to this object's public GetAddressBookRequest instance.
+ * Constructs a GetAddressBookRequestPrivate object for AlexaForBusiness \a action with,
+ * public implementation \a q.
  */
 GetAddressBookRequestPrivate::GetAddressBookRequestPrivate(
     const AlexaForBusinessRequest::Action action, GetAddressBookRequest * const q)
@@ -109,15 +98,10 @@ GetAddressBookRequestPrivate::GetAddressBookRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetAddressBookRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetAddressBookRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetAddressBookRequest instance.
  */
 GetAddressBookRequestPrivate::GetAddressBookRequestPrivate(
     const GetAddressBookRequestPrivate &other, GetAddressBookRequest * const q)

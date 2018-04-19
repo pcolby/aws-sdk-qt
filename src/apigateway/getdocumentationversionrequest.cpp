@@ -27,10 +27,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::GetDocumentationVersionRequest
- *
  * \brief The GetDocumentationVersionRequest class provides an interface for APIGateway GetDocumentationVersion requests.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -42,9 +41,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new GetDocumentationVersionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetDocumentationVersionRequest::GetDocumentationVersionRequest(const GetDocumentationVersionRequest &other)
     : APIGatewayRequest(new GetDocumentationVersionRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ GetDocumentationVersionRequest::GetDocumentationVersionRequest(const GetDocument
 }
 
 /*!
- * @brief  Constructs a new GetDocumentationVersionRequest object.
+ * Constructs a GetDocumentationVersionRequest object.
  */
 GetDocumentationVersionRequest::GetDocumentationVersionRequest()
     : APIGatewayRequest(new GetDocumentationVersionRequestPrivate(APIGatewayRequest::GetDocumentationVersionAction, this))
@@ -71,14 +68,9 @@ bool GetDocumentationVersionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetDocumentationVersionResponse object.
+ * Returns a GetDocumentationVersionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetDocumentationVersionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  APIGatewayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetDocumentationVersionRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * GetDocumentationVersionRequest::response(QNet
 }
 
 /*!
- * @internal
+ * \class QtAws::APIGateway::GetDocumentationVersionRequestPrivate
+ * \brief The GetDocumentationVersionRequestPrivate class provides private implementation for GetDocumentationVersionRequest.
+ * \internal
  *
- * @class  GetDocumentationVersionRequestPrivate
- *
- * @brief  Private implementation for GetDocumentationVersionRequest.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetDocumentationVersionRequestPrivate object.
- *
- * @param  action  APIGateway action being performed.
- * @param  q       Pointer to this object's public GetDocumentationVersionRequest instance.
+ * Constructs a GetDocumentationVersionRequestPrivate object for APIGateway \a action with,
+ * public implementation \a q.
  */
 GetDocumentationVersionRequestPrivate::GetDocumentationVersionRequestPrivate(
     const APIGatewayRequest::Action action, GetDocumentationVersionRequest * const q)
@@ -109,15 +98,10 @@ GetDocumentationVersionRequestPrivate::GetDocumentationVersionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetDocumentationVersionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetDocumentationVersionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetDocumentationVersionRequest instance.
  */
 GetDocumentationVersionRequestPrivate::GetDocumentationVersionRequestPrivate(
     const GetDocumentationVersionRequestPrivate &other, GetDocumentationVersionRequest * const q)

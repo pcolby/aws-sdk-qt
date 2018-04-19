@@ -27,10 +27,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::UpdateIntegrationRequest
- *
  * \brief The UpdateIntegrationRequest class provides an interface for APIGateway UpdateIntegration requests.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -42,9 +41,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new UpdateIntegrationRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateIntegrationRequest::UpdateIntegrationRequest(const UpdateIntegrationRequest &other)
     : APIGatewayRequest(new UpdateIntegrationRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ UpdateIntegrationRequest::UpdateIntegrationRequest(const UpdateIntegrationReques
 }
 
 /*!
- * @brief  Constructs a new UpdateIntegrationRequest object.
+ * Constructs a UpdateIntegrationRequest object.
  */
 UpdateIntegrationRequest::UpdateIntegrationRequest()
     : APIGatewayRequest(new UpdateIntegrationRequestPrivate(APIGatewayRequest::UpdateIntegrationAction, this))
@@ -71,14 +68,9 @@ bool UpdateIntegrationRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateIntegrationResponse object.
+ * Returns a UpdateIntegrationResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateIntegrationResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  APIGatewayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateIntegrationRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * UpdateIntegrationRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::APIGateway::UpdateIntegrationRequestPrivate
+ * \brief The UpdateIntegrationRequestPrivate class provides private implementation for UpdateIntegrationRequest.
+ * \internal
  *
- * @class  UpdateIntegrationRequestPrivate
- *
- * @brief  Private implementation for UpdateIntegrationRequest.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateIntegrationRequestPrivate object.
- *
- * @param  action  APIGateway action being performed.
- * @param  q       Pointer to this object's public UpdateIntegrationRequest instance.
+ * Constructs a UpdateIntegrationRequestPrivate object for APIGateway \a action with,
+ * public implementation \a q.
  */
 UpdateIntegrationRequestPrivate::UpdateIntegrationRequestPrivate(
     const APIGatewayRequest::Action action, UpdateIntegrationRequest * const q)
@@ -109,15 +98,10 @@ UpdateIntegrationRequestPrivate::UpdateIntegrationRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateIntegrationRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateIntegrationRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateIntegrationRequest instance.
  */
 UpdateIntegrationRequestPrivate::UpdateIntegrationRequestPrivate(
     const UpdateIntegrationRequestPrivate &other, UpdateIntegrationRequest * const q)

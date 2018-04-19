@@ -27,10 +27,9 @@ namespace Organizations {
 
 /*!
  * \class QtAws::Organizations::CreateOrganizationRequest
- *
  * \brief The CreateOrganizationRequest class provides an interface for Organizations CreateOrganization requests.
  *
- * \ingroup Organizations
+ * \inmodule QtAwsOrganizations
  *
  *  <fullname>AWS Organizations API Reference</fullname>
  * 
@@ -179,9 +178,7 @@ namespace Organizations {
  */
 
 /*!
- * @brief  Constructs a new CreateOrganizationRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateOrganizationRequest::CreateOrganizationRequest(const CreateOrganizationRequest &other)
     : OrganizationsRequest(new CreateOrganizationRequestPrivate(*other.d_func(), this))
@@ -190,7 +187,7 @@ CreateOrganizationRequest::CreateOrganizationRequest(const CreateOrganizationReq
 }
 
 /*!
- * @brief  Constructs a new CreateOrganizationRequest object.
+ * Constructs a CreateOrganizationRequest object.
  */
 CreateOrganizationRequest::CreateOrganizationRequest()
     : OrganizationsRequest(new CreateOrganizationRequestPrivate(OrganizationsRequest::CreateOrganizationAction, this))
@@ -208,14 +205,9 @@ bool CreateOrganizationRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateOrganizationResponse object.
+ * Returns a CreateOrganizationResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateOrganizationResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  OrganizationsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateOrganizationRequest::response(QNetworkReply * const reply) const
 {
@@ -223,20 +215,17 @@ QtAws::Core::AwsAbstractResponse * CreateOrganizationRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::Organizations::CreateOrganizationRequestPrivate
+ * \brief The CreateOrganizationRequestPrivate class provides private implementation for CreateOrganizationRequest.
+ * \internal
  *
- * @class  CreateOrganizationRequestPrivate
- *
- * @brief  Private implementation for CreateOrganizationRequest.
+ * \inmodule QtAwsOrganizations
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateOrganizationRequestPrivate object.
- *
- * @param  action  Organizations action being performed.
- * @param  q       Pointer to this object's public CreateOrganizationRequest instance.
+ * Constructs a CreateOrganizationRequestPrivate object for Organizations \a action with,
+ * public implementation \a q.
  */
 CreateOrganizationRequestPrivate::CreateOrganizationRequestPrivate(
     const OrganizationsRequest::Action action, CreateOrganizationRequest * const q)
@@ -246,15 +235,10 @@ CreateOrganizationRequestPrivate::CreateOrganizationRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateOrganizationRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateOrganizationRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateOrganizationRequest instance.
  */
 CreateOrganizationRequestPrivate::CreateOrganizationRequestPrivate(
     const CreateOrganizationRequestPrivate &other, CreateOrganizationRequest * const q)

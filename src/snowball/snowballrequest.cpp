@@ -25,16 +25,38 @@ namespace Snowball {
 
 /*!
  * \class QtAws::Snowball::SnowballRequest
- *
  * \brief The SnowballRequest class provides an interface for Snowball requests.
  *
- * \ingroup Snowball
+ * \inmodule QtAwsSnowball
  */
 
 /*!
- * @brief  Constructs a new SnowballRequest object.
+ * \enum SnowballRequest::Action
  *
- * @param  action  The Snowball action to request.
+ * This enum describes the actions that can be performed as Snowball
+ * requests.
+ *
+ * \value CancelClusterAction Snowball CancelCluster action.
+ * \value CancelJobAction Snowball CancelJob action.
+ * \value CreateAddressAction Snowball CreateAddress action.
+ * \value CreateClusterAction Snowball CreateCluster action.
+ * \value CreateJobAction Snowball CreateJob action.
+ * \value DescribeAddressAction Snowball DescribeAddress action.
+ * \value DescribeAddressesAction Snowball DescribeAddresses action.
+ * \value DescribeClusterAction Snowball DescribeCluster action.
+ * \value DescribeJobAction Snowball DescribeJob action.
+ * \value GetJobManifestAction Snowball GetJobManifest action.
+ * \value GetJobUnlockCodeAction Snowball GetJobUnlockCode action.
+ * \value GetSnowballUsageAction Snowball GetSnowballUsage action.
+ * \value ListClusterJobsAction Snowball ListClusterJobs action.
+ * \value ListClustersAction Snowball ListClusters action.
+ * \value ListJobsAction Snowball ListJobs action.
+ * \value UpdateClusterAction Snowball UpdateCluster action.
+ * \value UpdateJobAction Snowball UpdateJob action.
+ */
+
+/*!
+ * Constructs a[n] SnowballRequest object for Snowball \a action.
  */
 SnowballRequest::SnowballRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new SnowballRequestPrivate(action, this))
@@ -43,9 +65,7 @@ SnowballRequest::SnowballRequest(const Action action)
 }
 
 /*!
- * @brief  Constructs a new SnowballRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 SnowballRequest::SnowballRequest(const SnowballRequest &other)
     : QtAws::Core::AwsAbstractRequest(new SnowballRequestPrivate(*other.d_func(), this))
@@ -54,13 +74,7 @@ SnowballRequest::SnowballRequest(const SnowballRequest &other)
 }
 
 /*!
- * @brief  Assignment operator.
- *
- * Assigns \a other to \c this.
- *
- * @param  other  Instance to copy.
- *
- * @return  A reference to \c this.
+ * Sets the SnowballRequest object to be equal to \a other.
  */
 SnowballRequest& SnowballRequest::operator=(const SnowballRequest &other)
 {
@@ -72,14 +86,10 @@ SnowballRequest& SnowballRequest::operator=(const SnowballRequest &other)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SnowballRequest object.
+ * Constructs aa SnowballRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from SnowballRequestPrivate.
- *
- * @param  d  Pointer to private data (aka D-Pointer).
  */
 SnowballRequest::SnowballRequest(SnowballRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
@@ -87,7 +97,7 @@ SnowballRequest::SnowballRequest(SnowballRequestPrivate * const d) : QtAws::Core
 }
 
 /*!
- * \brief Returns the Snowball action to be performed by this request.
+ * Returns the Snowball action to be performed by this request.
  */
 SnowballRequest::Action SnowballRequest::action() const
 {
@@ -96,7 +106,7 @@ SnowballRequest::Action SnowballRequest::action() const
 }
 
 /*!
- * \brief Returns the name of the Snowball action to be performed by this request.
+ * Returns the name of the Snowball action to be performed by this request.
  */
 QString SnowballRequest::actionString() const
 {
@@ -104,7 +114,7 @@ QString SnowballRequest::actionString() const
 }
 
 /*!
- * \brief Returns the Snowball API version implemented by this request.
+ * Returns the Snowball API version implemented by this request.
  */
 QString SnowballRequest::apiVersion() const
 {
@@ -113,7 +123,7 @@ QString SnowballRequest::apiVersion() const
 }
 
 /*!
- * @brief Set the Snowball action to be performed by this request to \a action.
+ * Sets the Snowball action to be performed by this request to \a action.
  */
 void SnowballRequest::setAction(const Action action)
 {
@@ -122,7 +132,7 @@ void SnowballRequest::setAction(const Action action)
 }
 
 /*!
- * Set the Snowball API version to include in this request to \a version.
+ * Sets the Snowball API version to include in this request to \a version.
  */
 void SnowballRequest::setApiVersion(const QString &version)
 {
@@ -131,7 +141,7 @@ void SnowballRequest::setApiVersion(const QString &version)
 }
 
 /*!
- * \brief Returns \c true if this request is the same as \a other.
+ * Returns \c true if this request is equal to \a other; \c false otherwise.
  *
  * Note, most derived *Request classes do not need to provider their own
  * implementations of this function, since most such request classes rely on
@@ -146,8 +156,8 @@ bool SnowballRequest::operator==(const SnowballRequest &other) const
             (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
-/*!
- * @brief  Check if \a queueName is a valid Snowball queue name.
+/*
+ * Returns \c tue if \a queueName is a valid Snowball queue name.
  *
  * @par From Snowball FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
@@ -166,9 +176,8 @@ bool SnowballRequest::operator==(const SnowballRequest &other) const
 }*/
 
 /*!
- * \brief Removes the a \a name parameter from this request.
- *
- * Returns the count of paramters removed (typically \c 0 or \c 1).
+ * Removes the a \a name parameter from the request, then returns the number of
+ * paramters removed (typically \c 0 or \c 1).
  */
 int SnowballRequest::clearParameter(const QString &name)
 {
@@ -177,7 +186,7 @@ int SnowballRequest::clearParameter(const QString &name)
 }
 
 /*!
- * \brief Removes all parameters from this request.
+ * Removes all parameters from the request.
  */
 void SnowballRequest::clearParameters()
 {
@@ -186,7 +195,7 @@ void SnowballRequest::clearParameters()
 }
 
 /*!
- * \brief Returns the value of the \n name pararemter if set, otherwise \a defaultValue.
+ * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
 QVariant SnowballRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
@@ -195,7 +204,7 @@ QVariant SnowballRequest::parameter(const QString &name, const QVariant &default
 }
 
 /*!
- * \brief Returns a map of parameters included in this request.
+ * Returns the parameters included in this request.
  */
 const QVariantMap &SnowballRequest::parameters() const
 {
@@ -204,7 +213,7 @@ const QVariantMap &SnowballRequest::parameters() const
 }
 
 /*!
- * \brief Sets the \a name parameter to \a value.
+ * Sets the \a name parameter to \a value.
  */
 void SnowballRequest::setParameter(const QString &name, const QVariant &value)
 {
@@ -213,9 +222,8 @@ void SnowballRequest::setParameter(const QString &name, const QVariant &value)
 }
 
 /*!
- * \brief Sets the map of paramters for this request to \a parameters.
- *
- * Any request parameters set previously will be discarded.
+ * Sets the paramters for this request to \a parameters. Any request parameters
+ * set previously will be discarded.
  */
 void SnowballRequest::setParameters(const QVariantMap &parameters)
 {
@@ -224,11 +232,12 @@ void SnowballRequest::setParameters(const QVariantMap &parameters)
 }
 
 /*!
- * \brief Returns a network request for this Snowball request using the given \a endpoint.
+ * Returns a network request for the Snowball request using the given
+ * \a endpoint.
  *
- * This Snowball implementation builds request URLs by combining the common query
- * parameters (such as Action and Version), with any that have been added (via
- * setParameter) by child classes.
+ * This Snowball implementation builds request URLs by combining the
+ * common query parameters (such as Action and Version), with any that have
+ * been added (via setParameter) by child classes.
  */
 QNetworkRequest SnowballRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -239,17 +248,16 @@ QNetworkRequest SnowballRequest::unsignedRequest(const QUrl &endpoint) const
 }
 
 /*!
+ * \class QtAws::Snowball::SnowballRequestPrivate
+ * \brief The SnowballRequestPrivate class provides private implementation for SnowballRequest.
  * \internal
  *
- * \class  SnowballRequestPrivate
- *
- * \brief  Private implementation for SnowballRequest.
+ * \inmodule QtAwsSnowball
  */
 
 /*!
- * \internal
- *
- * \brief Constructs a new SnowballRequestPrivate object.
+ * Constructs a SnowballRequestPrivate object for Snowball \a action with,
+ * public implementation \a q.
  */
 SnowballRequestPrivate::SnowballRequestPrivate(const SnowballRequest::Action action, SnowballRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
@@ -258,9 +266,7 @@ SnowballRequestPrivate::SnowballRequestPrivate(const SnowballRequest::Action act
 }
 
 /*!
- * \internal
- *
- * \brief Constructs a new SnowballRequestPrivate object, copying an existing one.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
@@ -276,15 +282,12 @@ SnowballRequestPrivate::SnowballRequestPrivate(const SnowballRequestPrivate &oth
 }
 
 /*!
- * \internal
- *
- * \brief Returns a string representing \a action.
+ * Returns a string represention of \a action, or a null string if \a action is
+ * invalid.
  *
  * This function converts SnowballRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the Snowball service's Action
  * query parameters.
- *
- * @return A string representing \a action, or a null string if \a action is invalid.
  */
 QString SnowballRequestPrivate::toString(const SnowballRequest::Action &action)
 {

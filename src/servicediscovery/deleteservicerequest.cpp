@@ -27,10 +27,9 @@ namespace ServiceDiscovery {
 
 /*!
  * \class QtAws::ServiceDiscovery::DeleteServiceRequest
- *
  * \brief The DeleteServiceRequest class provides an interface for ServiceDiscovery DeleteService requests.
  *
- * \ingroup ServiceDiscovery
+ * \inmodule QtAwsServiceDiscovery
  *
  *  Amazon Route 53 auto naming lets you configure public or private namespaces that your microservice applications run in.
  *  When instances of the service become available, you can call the auto naming API to register the instance, and Route 53
@@ -41,9 +40,7 @@ namespace ServiceDiscovery {
  */
 
 /*!
- * @brief  Constructs a new DeleteServiceRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteServiceRequest::DeleteServiceRequest(const DeleteServiceRequest &other)
     : ServiceDiscoveryRequest(new DeleteServiceRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ DeleteServiceRequest::DeleteServiceRequest(const DeleteServiceRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DeleteServiceRequest object.
+ * Constructs a DeleteServiceRequest object.
  */
 DeleteServiceRequest::DeleteServiceRequest()
     : ServiceDiscoveryRequest(new DeleteServiceRequestPrivate(ServiceDiscoveryRequest::DeleteServiceAction, this))
@@ -70,14 +67,9 @@ bool DeleteServiceRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteServiceResponse object.
+ * Returns a DeleteServiceResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteServiceResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ServiceDiscoveryClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteServiceRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * DeleteServiceRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::ServiceDiscovery::DeleteServiceRequestPrivate
+ * \brief The DeleteServiceRequestPrivate class provides private implementation for DeleteServiceRequest.
+ * \internal
  *
- * @class  DeleteServiceRequestPrivate
- *
- * @brief  Private implementation for DeleteServiceRequest.
+ * \inmodule QtAwsServiceDiscovery
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteServiceRequestPrivate object.
- *
- * @param  action  ServiceDiscovery action being performed.
- * @param  q       Pointer to this object's public DeleteServiceRequest instance.
+ * Constructs a DeleteServiceRequestPrivate object for ServiceDiscovery \a action with,
+ * public implementation \a q.
  */
 DeleteServiceRequestPrivate::DeleteServiceRequestPrivate(
     const ServiceDiscoveryRequest::Action action, DeleteServiceRequest * const q)
@@ -108,15 +97,10 @@ DeleteServiceRequestPrivate::DeleteServiceRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteServiceRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteServiceRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteServiceRequest instance.
  */
 DeleteServiceRequestPrivate::DeleteServiceRequestPrivate(
     const DeleteServiceRequestPrivate &other, DeleteServiceRequest * const q)

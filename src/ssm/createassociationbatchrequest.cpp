@@ -27,10 +27,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::CreateAssociationBatchRequest
- *
  * \brief The CreateAssociationBatchRequest class provides an interface for SSM CreateAssociationBatch requests.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -61,9 +60,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new CreateAssociationBatchRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateAssociationBatchRequest::CreateAssociationBatchRequest(const CreateAssociationBatchRequest &other)
     : SSMRequest(new CreateAssociationBatchRequestPrivate(*other.d_func(), this))
@@ -72,7 +69,7 @@ CreateAssociationBatchRequest::CreateAssociationBatchRequest(const CreateAssocia
 }
 
 /*!
- * @brief  Constructs a new CreateAssociationBatchRequest object.
+ * Constructs a CreateAssociationBatchRequest object.
  */
 CreateAssociationBatchRequest::CreateAssociationBatchRequest()
     : SSMRequest(new CreateAssociationBatchRequestPrivate(SSMRequest::CreateAssociationBatchAction, this))
@@ -90,14 +87,9 @@ bool CreateAssociationBatchRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateAssociationBatchResponse object.
+ * Returns a CreateAssociationBatchResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateAssociationBatchResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SSMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateAssociationBatchRequest::response(QNetworkReply * const reply) const
 {
@@ -105,20 +97,17 @@ QtAws::Core::AwsAbstractResponse * CreateAssociationBatchRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::SSM::CreateAssociationBatchRequestPrivate
+ * \brief The CreateAssociationBatchRequestPrivate class provides private implementation for CreateAssociationBatchRequest.
+ * \internal
  *
- * @class  CreateAssociationBatchRequestPrivate
- *
- * @brief  Private implementation for CreateAssociationBatchRequest.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateAssociationBatchRequestPrivate object.
- *
- * @param  action  SSM action being performed.
- * @param  q       Pointer to this object's public CreateAssociationBatchRequest instance.
+ * Constructs a CreateAssociationBatchRequestPrivate object for SSM \a action with,
+ * public implementation \a q.
  */
 CreateAssociationBatchRequestPrivate::CreateAssociationBatchRequestPrivate(
     const SSMRequest::Action action, CreateAssociationBatchRequest * const q)
@@ -128,15 +117,10 @@ CreateAssociationBatchRequestPrivate::CreateAssociationBatchRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateAssociationBatchRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateAssociationBatchRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateAssociationBatchRequest instance.
  */
 CreateAssociationBatchRequestPrivate::CreateAssociationBatchRequestPrivate(
     const CreateAssociationBatchRequestPrivate &other, CreateAssociationBatchRequest * const q)

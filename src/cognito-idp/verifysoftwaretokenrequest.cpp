@@ -27,10 +27,9 @@ namespace CognitoIdentityProvider {
 
 /*!
  * \class QtAws::CognitoIdentityProvider::VerifySoftwareTokenRequest
- *
  * \brief The VerifySoftwareTokenRequest class provides an interface for CognitoIdentityProvider VerifySoftwareToken requests.
  *
- * \ingroup CognitoIdentityProvider
+ * \inmodule QtAwsCognitoIdentityProvider
  *
  *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
  *  authenticate a user to obtain tokens related to user identity and access
@@ -47,9 +46,7 @@ namespace CognitoIdentityProvider {
  */
 
 /*!
- * @brief  Constructs a new VerifySoftwareTokenRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 VerifySoftwareTokenRequest::VerifySoftwareTokenRequest(const VerifySoftwareTokenRequest &other)
     : CognitoIdentityProviderRequest(new VerifySoftwareTokenRequestPrivate(*other.d_func(), this))
@@ -58,7 +55,7 @@ VerifySoftwareTokenRequest::VerifySoftwareTokenRequest(const VerifySoftwareToken
 }
 
 /*!
- * @brief  Constructs a new VerifySoftwareTokenRequest object.
+ * Constructs a VerifySoftwareTokenRequest object.
  */
 VerifySoftwareTokenRequest::VerifySoftwareTokenRequest()
     : CognitoIdentityProviderRequest(new VerifySoftwareTokenRequestPrivate(CognitoIdentityProviderRequest::VerifySoftwareTokenAction, this))
@@ -76,14 +73,9 @@ bool VerifySoftwareTokenRequest::isValid() const
 
 
 /*!
- * @brief  Construct an VerifySoftwareTokenResponse object.
+ * Returns a VerifySoftwareTokenResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An VerifySoftwareTokenResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CognitoIdentityProviderClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * VerifySoftwareTokenRequest::response(QNetworkReply * const reply) const
 {
@@ -91,20 +83,17 @@ QtAws::Core::AwsAbstractResponse * VerifySoftwareTokenRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::CognitoIdentityProvider::VerifySoftwareTokenRequestPrivate
+ * \brief The VerifySoftwareTokenRequestPrivate class provides private implementation for VerifySoftwareTokenRequest.
+ * \internal
  *
- * @class  VerifySoftwareTokenRequestPrivate
- *
- * @brief  Private implementation for VerifySoftwareTokenRequest.
+ * \inmodule QtAwsCognitoIdentityProvider
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new VerifySoftwareTokenRequestPrivate object.
- *
- * @param  action  CognitoIdentityProvider action being performed.
- * @param  q       Pointer to this object's public VerifySoftwareTokenRequest instance.
+ * Constructs a VerifySoftwareTokenRequestPrivate object for CognitoIdentityProvider \a action with,
+ * public implementation \a q.
  */
 VerifySoftwareTokenRequestPrivate::VerifySoftwareTokenRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, VerifySoftwareTokenRequest * const q)
@@ -114,15 +103,10 @@ VerifySoftwareTokenRequestPrivate::VerifySoftwareTokenRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new VerifySoftwareTokenRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the VerifySoftwareTokenRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public VerifySoftwareTokenRequest instance.
  */
 VerifySoftwareTokenRequestPrivate::VerifySoftwareTokenRequestPrivate(
     const VerifySoftwareTokenRequestPrivate &other, VerifySoftwareTokenRequest * const q)

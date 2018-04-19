@@ -27,10 +27,9 @@ namespace CognitoIdentityProvider {
 
 /*!
  * \class QtAws::CognitoIdentityProvider::UpdateUserAttributesRequest
- *
  * \brief The UpdateUserAttributesRequest class provides an interface for CognitoIdentityProvider UpdateUserAttributes requests.
  *
- * \ingroup CognitoIdentityProvider
+ * \inmodule QtAwsCognitoIdentityProvider
  *
  *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
  *  authenticate a user to obtain tokens related to user identity and access
@@ -47,9 +46,7 @@ namespace CognitoIdentityProvider {
  */
 
 /*!
- * @brief  Constructs a new UpdateUserAttributesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateUserAttributesRequest::UpdateUserAttributesRequest(const UpdateUserAttributesRequest &other)
     : CognitoIdentityProviderRequest(new UpdateUserAttributesRequestPrivate(*other.d_func(), this))
@@ -58,7 +55,7 @@ UpdateUserAttributesRequest::UpdateUserAttributesRequest(const UpdateUserAttribu
 }
 
 /*!
- * @brief  Constructs a new UpdateUserAttributesRequest object.
+ * Constructs a UpdateUserAttributesRequest object.
  */
 UpdateUserAttributesRequest::UpdateUserAttributesRequest()
     : CognitoIdentityProviderRequest(new UpdateUserAttributesRequestPrivate(CognitoIdentityProviderRequest::UpdateUserAttributesAction, this))
@@ -76,14 +73,9 @@ bool UpdateUserAttributesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateUserAttributesResponse object.
+ * Returns a UpdateUserAttributesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateUserAttributesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CognitoIdentityProviderClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateUserAttributesRequest::response(QNetworkReply * const reply) const
 {
@@ -91,20 +83,17 @@ QtAws::Core::AwsAbstractResponse * UpdateUserAttributesRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::CognitoIdentityProvider::UpdateUserAttributesRequestPrivate
+ * \brief The UpdateUserAttributesRequestPrivate class provides private implementation for UpdateUserAttributesRequest.
+ * \internal
  *
- * @class  UpdateUserAttributesRequestPrivate
- *
- * @brief  Private implementation for UpdateUserAttributesRequest.
+ * \inmodule QtAwsCognitoIdentityProvider
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateUserAttributesRequestPrivate object.
- *
- * @param  action  CognitoIdentityProvider action being performed.
- * @param  q       Pointer to this object's public UpdateUserAttributesRequest instance.
+ * Constructs a UpdateUserAttributesRequestPrivate object for CognitoIdentityProvider \a action with,
+ * public implementation \a q.
  */
 UpdateUserAttributesRequestPrivate::UpdateUserAttributesRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, UpdateUserAttributesRequest * const q)
@@ -114,15 +103,10 @@ UpdateUserAttributesRequestPrivate::UpdateUserAttributesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateUserAttributesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateUserAttributesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateUserAttributesRequest instance.
  */
 UpdateUserAttributesRequestPrivate::UpdateUserAttributesRequestPrivate(
     const UpdateUserAttributesRequestPrivate &other, UpdateUserAttributesRequest * const q)

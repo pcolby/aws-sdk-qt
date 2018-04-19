@@ -27,10 +27,9 @@ namespace CloudDirectory {
 
 /*!
  * \class QtAws::CloudDirectory::ListDevelopmentSchemaArnsRequest
- *
  * \brief The ListDevelopmentSchemaArnsRequest class provides an interface for CloudDirectory ListDevelopmentSchemaArns requests.
  *
- * \ingroup CloudDirectory
+ * \inmodule QtAwsCloudDirectory
  *
  *  <fullname>Amazon Cloud Directory</fullname>
  * 
@@ -44,9 +43,7 @@ namespace CloudDirectory {
  */
 
 /*!
- * @brief  Constructs a new ListDevelopmentSchemaArnsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListDevelopmentSchemaArnsRequest::ListDevelopmentSchemaArnsRequest(const ListDevelopmentSchemaArnsRequest &other)
     : CloudDirectoryRequest(new ListDevelopmentSchemaArnsRequestPrivate(*other.d_func(), this))
@@ -55,7 +52,7 @@ ListDevelopmentSchemaArnsRequest::ListDevelopmentSchemaArnsRequest(const ListDev
 }
 
 /*!
- * @brief  Constructs a new ListDevelopmentSchemaArnsRequest object.
+ * Constructs a ListDevelopmentSchemaArnsRequest object.
  */
 ListDevelopmentSchemaArnsRequest::ListDevelopmentSchemaArnsRequest()
     : CloudDirectoryRequest(new ListDevelopmentSchemaArnsRequestPrivate(CloudDirectoryRequest::ListDevelopmentSchemaArnsAction, this))
@@ -73,14 +70,9 @@ bool ListDevelopmentSchemaArnsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListDevelopmentSchemaArnsResponse object.
+ * Returns a ListDevelopmentSchemaArnsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListDevelopmentSchemaArnsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudDirectoryClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListDevelopmentSchemaArnsRequest::response(QNetworkReply * const reply) const
 {
@@ -88,20 +80,17 @@ QtAws::Core::AwsAbstractResponse * ListDevelopmentSchemaArnsRequest::response(QN
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudDirectory::ListDevelopmentSchemaArnsRequestPrivate
+ * \brief The ListDevelopmentSchemaArnsRequestPrivate class provides private implementation for ListDevelopmentSchemaArnsRequest.
+ * \internal
  *
- * @class  ListDevelopmentSchemaArnsRequestPrivate
- *
- * @brief  Private implementation for ListDevelopmentSchemaArnsRequest.
+ * \inmodule QtAwsCloudDirectory
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListDevelopmentSchemaArnsRequestPrivate object.
- *
- * @param  action  CloudDirectory action being performed.
- * @param  q       Pointer to this object's public ListDevelopmentSchemaArnsRequest instance.
+ * Constructs a ListDevelopmentSchemaArnsRequestPrivate object for CloudDirectory \a action with,
+ * public implementation \a q.
  */
 ListDevelopmentSchemaArnsRequestPrivate::ListDevelopmentSchemaArnsRequestPrivate(
     const CloudDirectoryRequest::Action action, ListDevelopmentSchemaArnsRequest * const q)
@@ -111,15 +100,10 @@ ListDevelopmentSchemaArnsRequestPrivate::ListDevelopmentSchemaArnsRequestPrivate
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListDevelopmentSchemaArnsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListDevelopmentSchemaArnsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListDevelopmentSchemaArnsRequest instance.
  */
 ListDevelopmentSchemaArnsRequestPrivate::ListDevelopmentSchemaArnsRequestPrivate(
     const ListDevelopmentSchemaArnsRequestPrivate &other, ListDevelopmentSchemaArnsRequest * const q)

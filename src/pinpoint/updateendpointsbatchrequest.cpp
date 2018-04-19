@@ -27,19 +27,16 @@ namespace Pinpoint {
 
 /*!
  * \class QtAws::Pinpoint::UpdateEndpointsBatchRequest
- *
  * \brief The UpdateEndpointsBatchRequest class provides an interface for Pinpoint UpdateEndpointsBatch requests.
  *
- * \ingroup Pinpoint
+ * \inmodule QtAwsPinpoint
  *
  *
  * \sa PinpointClient::updateEndpointsBatch
  */
 
 /*!
- * @brief  Constructs a new UpdateEndpointsBatchRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateEndpointsBatchRequest::UpdateEndpointsBatchRequest(const UpdateEndpointsBatchRequest &other)
     : PinpointRequest(new UpdateEndpointsBatchRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ UpdateEndpointsBatchRequest::UpdateEndpointsBatchRequest(const UpdateEndpointsBa
 }
 
 /*!
- * @brief  Constructs a new UpdateEndpointsBatchRequest object.
+ * Constructs a UpdateEndpointsBatchRequest object.
  */
 UpdateEndpointsBatchRequest::UpdateEndpointsBatchRequest()
     : PinpointRequest(new UpdateEndpointsBatchRequestPrivate(PinpointRequest::UpdateEndpointsBatchAction, this))
@@ -66,14 +63,9 @@ bool UpdateEndpointsBatchRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateEndpointsBatchResponse object.
+ * Returns a UpdateEndpointsBatchResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateEndpointsBatchResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  PinpointClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateEndpointsBatchRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * UpdateEndpointsBatchRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::Pinpoint::UpdateEndpointsBatchRequestPrivate
+ * \brief The UpdateEndpointsBatchRequestPrivate class provides private implementation for UpdateEndpointsBatchRequest.
+ * \internal
  *
- * @class  UpdateEndpointsBatchRequestPrivate
- *
- * @brief  Private implementation for UpdateEndpointsBatchRequest.
+ * \inmodule QtAwsPinpoint
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateEndpointsBatchRequestPrivate object.
- *
- * @param  action  Pinpoint action being performed.
- * @param  q       Pointer to this object's public UpdateEndpointsBatchRequest instance.
+ * Constructs a UpdateEndpointsBatchRequestPrivate object for Pinpoint \a action with,
+ * public implementation \a q.
  */
 UpdateEndpointsBatchRequestPrivate::UpdateEndpointsBatchRequestPrivate(
     const PinpointRequest::Action action, UpdateEndpointsBatchRequest * const q)
@@ -104,15 +93,10 @@ UpdateEndpointsBatchRequestPrivate::UpdateEndpointsBatchRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateEndpointsBatchRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateEndpointsBatchRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateEndpointsBatchRequest instance.
  */
 UpdateEndpointsBatchRequestPrivate::UpdateEndpointsBatchRequestPrivate(
     const UpdateEndpointsBatchRequestPrivate &other, UpdateEndpointsBatchRequest * const q)

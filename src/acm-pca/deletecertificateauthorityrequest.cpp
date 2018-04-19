@@ -27,10 +27,9 @@ namespace ACMPCA {
 
 /*!
  * \class QtAws::ACMPCA::DeleteCertificateAuthorityRequest
- *
  * \brief The DeleteCertificateAuthorityRequest class provides an interface for ACMPCA DeleteCertificateAuthority requests.
  *
- * \ingroup ACMPCA
+ * \inmodule QtAwsACMPCA
  *
  *  You can use the ACM PCA API to create a private certificate authority (CA). You must first call the
  *  <a>CreateCertificateAuthority</a> function. If successful, the function returns an Amazon Resource Name (ARN) for your
@@ -67,9 +66,7 @@ namespace ACMPCA {
  */
 
 /*!
- * @brief  Constructs a new DeleteCertificateAuthorityRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteCertificateAuthorityRequest::DeleteCertificateAuthorityRequest(const DeleteCertificateAuthorityRequest &other)
     : ACMPCARequest(new DeleteCertificateAuthorityRequestPrivate(*other.d_func(), this))
@@ -78,7 +75,7 @@ DeleteCertificateAuthorityRequest::DeleteCertificateAuthorityRequest(const Delet
 }
 
 /*!
- * @brief  Constructs a new DeleteCertificateAuthorityRequest object.
+ * Constructs a DeleteCertificateAuthorityRequest object.
  */
 DeleteCertificateAuthorityRequest::DeleteCertificateAuthorityRequest()
     : ACMPCARequest(new DeleteCertificateAuthorityRequestPrivate(ACMPCARequest::DeleteCertificateAuthorityAction, this))
@@ -96,14 +93,9 @@ bool DeleteCertificateAuthorityRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteCertificateAuthorityResponse object.
+ * Returns a DeleteCertificateAuthorityResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteCertificateAuthorityResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ACMPCAClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteCertificateAuthorityRequest::response(QNetworkReply * const reply) const
 {
@@ -111,20 +103,17 @@ QtAws::Core::AwsAbstractResponse * DeleteCertificateAuthorityRequest::response(Q
 }
 
 /*!
- * @internal
+ * \class QtAws::ACMPCA::DeleteCertificateAuthorityRequestPrivate
+ * \brief The DeleteCertificateAuthorityRequestPrivate class provides private implementation for DeleteCertificateAuthorityRequest.
+ * \internal
  *
- * @class  DeleteCertificateAuthorityRequestPrivate
- *
- * @brief  Private implementation for DeleteCertificateAuthorityRequest.
+ * \inmodule QtAwsACMPCA
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteCertificateAuthorityRequestPrivate object.
- *
- * @param  action  ACMPCA action being performed.
- * @param  q       Pointer to this object's public DeleteCertificateAuthorityRequest instance.
+ * Constructs a DeleteCertificateAuthorityRequestPrivate object for ACMPCA \a action with,
+ * public implementation \a q.
  */
 DeleteCertificateAuthorityRequestPrivate::DeleteCertificateAuthorityRequestPrivate(
     const ACMPCARequest::Action action, DeleteCertificateAuthorityRequest * const q)
@@ -134,15 +123,10 @@ DeleteCertificateAuthorityRequestPrivate::DeleteCertificateAuthorityRequestPriva
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteCertificateAuthorityRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteCertificateAuthorityRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteCertificateAuthorityRequest instance.
  */
 DeleteCertificateAuthorityRequestPrivate::DeleteCertificateAuthorityRequestPrivate(
     const DeleteCertificateAuthorityRequestPrivate &other, DeleteCertificateAuthorityRequest * const q)

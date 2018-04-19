@@ -27,10 +27,9 @@ namespace CodeDeploy {
 
 /*!
  * \class QtAws::CodeDeploy::BatchGetApplicationRevisionsRequest
- *
  * \brief The BatchGetApplicationRevisionsRequest class provides an interface for CodeDeploy BatchGetApplicationRevisions requests.
  *
- * \ingroup CodeDeploy
+ * \inmodule QtAwsCodeDeploy
  *
  *  <fullname>AWS CodeDeploy</fullname>
  * 
@@ -118,9 +117,7 @@ namespace CodeDeploy {
  */
 
 /*!
- * @brief  Constructs a new BatchGetApplicationRevisionsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 BatchGetApplicationRevisionsRequest::BatchGetApplicationRevisionsRequest(const BatchGetApplicationRevisionsRequest &other)
     : CodeDeployRequest(new BatchGetApplicationRevisionsRequestPrivate(*other.d_func(), this))
@@ -129,7 +126,7 @@ BatchGetApplicationRevisionsRequest::BatchGetApplicationRevisionsRequest(const B
 }
 
 /*!
- * @brief  Constructs a new BatchGetApplicationRevisionsRequest object.
+ * Constructs a BatchGetApplicationRevisionsRequest object.
  */
 BatchGetApplicationRevisionsRequest::BatchGetApplicationRevisionsRequest()
     : CodeDeployRequest(new BatchGetApplicationRevisionsRequestPrivate(CodeDeployRequest::BatchGetApplicationRevisionsAction, this))
@@ -147,14 +144,9 @@ bool BatchGetApplicationRevisionsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an BatchGetApplicationRevisionsResponse object.
+ * Returns a BatchGetApplicationRevisionsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An BatchGetApplicationRevisionsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CodeDeployClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * BatchGetApplicationRevisionsRequest::response(QNetworkReply * const reply) const
 {
@@ -162,20 +154,17 @@ QtAws::Core::AwsAbstractResponse * BatchGetApplicationRevisionsRequest::response
 }
 
 /*!
- * @internal
+ * \class QtAws::CodeDeploy::BatchGetApplicationRevisionsRequestPrivate
+ * \brief The BatchGetApplicationRevisionsRequestPrivate class provides private implementation for BatchGetApplicationRevisionsRequest.
+ * \internal
  *
- * @class  BatchGetApplicationRevisionsRequestPrivate
- *
- * @brief  Private implementation for BatchGetApplicationRevisionsRequest.
+ * \inmodule QtAwsCodeDeploy
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new BatchGetApplicationRevisionsRequestPrivate object.
- *
- * @param  action  CodeDeploy action being performed.
- * @param  q       Pointer to this object's public BatchGetApplicationRevisionsRequest instance.
+ * Constructs a BatchGetApplicationRevisionsRequestPrivate object for CodeDeploy \a action with,
+ * public implementation \a q.
  */
 BatchGetApplicationRevisionsRequestPrivate::BatchGetApplicationRevisionsRequestPrivate(
     const CodeDeployRequest::Action action, BatchGetApplicationRevisionsRequest * const q)
@@ -185,15 +174,10 @@ BatchGetApplicationRevisionsRequestPrivate::BatchGetApplicationRevisionsRequestP
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new BatchGetApplicationRevisionsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the BatchGetApplicationRevisionsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public BatchGetApplicationRevisionsRequest instance.
  */
 BatchGetApplicationRevisionsRequestPrivate::BatchGetApplicationRevisionsRequestPrivate(
     const BatchGetApplicationRevisionsRequestPrivate &other, BatchGetApplicationRevisionsRequest * const q)

@@ -27,10 +27,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::ListOTAUpdatesRequest
- *
  * \brief The ListOTAUpdatesRequest class provides an interface for IoT ListOTAUpdates requests.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -48,9 +47,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new ListOTAUpdatesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListOTAUpdatesRequest::ListOTAUpdatesRequest(const ListOTAUpdatesRequest &other)
     : IoTRequest(new ListOTAUpdatesRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ ListOTAUpdatesRequest::ListOTAUpdatesRequest(const ListOTAUpdatesRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ListOTAUpdatesRequest object.
+ * Constructs a ListOTAUpdatesRequest object.
  */
 ListOTAUpdatesRequest::ListOTAUpdatesRequest()
     : IoTRequest(new ListOTAUpdatesRequestPrivate(IoTRequest::ListOTAUpdatesAction, this))
@@ -77,14 +74,9 @@ bool ListOTAUpdatesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListOTAUpdatesResponse object.
+ * Returns a ListOTAUpdatesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListOTAUpdatesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IoTClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListOTAUpdatesRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * ListOTAUpdatesRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::IoT::ListOTAUpdatesRequestPrivate
+ * \brief The ListOTAUpdatesRequestPrivate class provides private implementation for ListOTAUpdatesRequest.
+ * \internal
  *
- * @class  ListOTAUpdatesRequestPrivate
- *
- * @brief  Private implementation for ListOTAUpdatesRequest.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListOTAUpdatesRequestPrivate object.
- *
- * @param  action  IoT action being performed.
- * @param  q       Pointer to this object's public ListOTAUpdatesRequest instance.
+ * Constructs a ListOTAUpdatesRequestPrivate object for IoT \a action with,
+ * public implementation \a q.
  */
 ListOTAUpdatesRequestPrivate::ListOTAUpdatesRequestPrivate(
     const IoTRequest::Action action, ListOTAUpdatesRequest * const q)
@@ -115,15 +104,10 @@ ListOTAUpdatesRequestPrivate::ListOTAUpdatesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListOTAUpdatesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListOTAUpdatesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListOTAUpdatesRequest instance.
  */
 ListOTAUpdatesRequestPrivate::ListOTAUpdatesRequestPrivate(
     const ListOTAUpdatesRequestPrivate &other, ListOTAUpdatesRequest * const q)

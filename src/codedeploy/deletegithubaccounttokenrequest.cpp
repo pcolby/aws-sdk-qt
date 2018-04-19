@@ -27,10 +27,9 @@ namespace CodeDeploy {
 
 /*!
  * \class QtAws::CodeDeploy::DeleteGitHubAccountTokenRequest
- *
  * \brief The DeleteGitHubAccountTokenRequest class provides an interface for CodeDeploy DeleteGitHubAccountToken requests.
  *
- * \ingroup CodeDeploy
+ * \inmodule QtAwsCodeDeploy
  *
  *  <fullname>AWS CodeDeploy</fullname>
  * 
@@ -118,9 +117,7 @@ namespace CodeDeploy {
  */
 
 /*!
- * @brief  Constructs a new DeleteGitHubAccountTokenRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteGitHubAccountTokenRequest::DeleteGitHubAccountTokenRequest(const DeleteGitHubAccountTokenRequest &other)
     : CodeDeployRequest(new DeleteGitHubAccountTokenRequestPrivate(*other.d_func(), this))
@@ -129,7 +126,7 @@ DeleteGitHubAccountTokenRequest::DeleteGitHubAccountTokenRequest(const DeleteGit
 }
 
 /*!
- * @brief  Constructs a new DeleteGitHubAccountTokenRequest object.
+ * Constructs a DeleteGitHubAccountTokenRequest object.
  */
 DeleteGitHubAccountTokenRequest::DeleteGitHubAccountTokenRequest()
     : CodeDeployRequest(new DeleteGitHubAccountTokenRequestPrivate(CodeDeployRequest::DeleteGitHubAccountTokenAction, this))
@@ -147,14 +144,9 @@ bool DeleteGitHubAccountTokenRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteGitHubAccountTokenResponse object.
+ * Returns a DeleteGitHubAccountTokenResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteGitHubAccountTokenResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CodeDeployClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteGitHubAccountTokenRequest::response(QNetworkReply * const reply) const
 {
@@ -162,20 +154,17 @@ QtAws::Core::AwsAbstractResponse * DeleteGitHubAccountTokenRequest::response(QNe
 }
 
 /*!
- * @internal
+ * \class QtAws::CodeDeploy::DeleteGitHubAccountTokenRequestPrivate
+ * \brief The DeleteGitHubAccountTokenRequestPrivate class provides private implementation for DeleteGitHubAccountTokenRequest.
+ * \internal
  *
- * @class  DeleteGitHubAccountTokenRequestPrivate
- *
- * @brief  Private implementation for DeleteGitHubAccountTokenRequest.
+ * \inmodule QtAwsCodeDeploy
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteGitHubAccountTokenRequestPrivate object.
- *
- * @param  action  CodeDeploy action being performed.
- * @param  q       Pointer to this object's public DeleteGitHubAccountTokenRequest instance.
+ * Constructs a DeleteGitHubAccountTokenRequestPrivate object for CodeDeploy \a action with,
+ * public implementation \a q.
  */
 DeleteGitHubAccountTokenRequestPrivate::DeleteGitHubAccountTokenRequestPrivate(
     const CodeDeployRequest::Action action, DeleteGitHubAccountTokenRequest * const q)
@@ -185,15 +174,10 @@ DeleteGitHubAccountTokenRequestPrivate::DeleteGitHubAccountTokenRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteGitHubAccountTokenRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteGitHubAccountTokenRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteGitHubAccountTokenRequest instance.
  */
 DeleteGitHubAccountTokenRequestPrivate::DeleteGitHubAccountTokenRequestPrivate(
     const DeleteGitHubAccountTokenRequestPrivate &other, DeleteGitHubAccountTokenRequest * const q)

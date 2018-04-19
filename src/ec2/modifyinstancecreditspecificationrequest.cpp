@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::ModifyInstanceCreditSpecificationRequest
- *
  * \brief The ModifyInstanceCreditSpecificationRequest class provides an interface for EC2 ModifyInstanceCreditSpecification requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new ModifyInstanceCreditSpecificationRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ModifyInstanceCreditSpecificationRequest::ModifyInstanceCreditSpecificationRequest(const ModifyInstanceCreditSpecificationRequest &other)
     : EC2Request(new ModifyInstanceCreditSpecificationRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ ModifyInstanceCreditSpecificationRequest::ModifyInstanceCreditSpecificationReque
 }
 
 /*!
- * @brief  Constructs a new ModifyInstanceCreditSpecificationRequest object.
+ * Constructs a ModifyInstanceCreditSpecificationRequest object.
  */
 ModifyInstanceCreditSpecificationRequest::ModifyInstanceCreditSpecificationRequest()
     : EC2Request(new ModifyInstanceCreditSpecificationRequestPrivate(EC2Request::ModifyInstanceCreditSpecificationAction, this))
@@ -70,14 +67,9 @@ bool ModifyInstanceCreditSpecificationRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ModifyInstanceCreditSpecificationResponse object.
+ * Returns a ModifyInstanceCreditSpecificationResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ModifyInstanceCreditSpecificationResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ModifyInstanceCreditSpecificationRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * ModifyInstanceCreditSpecificationRequest::res
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::ModifyInstanceCreditSpecificationRequestPrivate
+ * \brief The ModifyInstanceCreditSpecificationRequestPrivate class provides private implementation for ModifyInstanceCreditSpecificationRequest.
+ * \internal
  *
- * @class  ModifyInstanceCreditSpecificationRequestPrivate
- *
- * @brief  Private implementation for ModifyInstanceCreditSpecificationRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ModifyInstanceCreditSpecificationRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public ModifyInstanceCreditSpecificationRequest instance.
+ * Constructs a ModifyInstanceCreditSpecificationRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 ModifyInstanceCreditSpecificationRequestPrivate::ModifyInstanceCreditSpecificationRequestPrivate(
     const EC2Request::Action action, ModifyInstanceCreditSpecificationRequest * const q)
@@ -108,15 +97,10 @@ ModifyInstanceCreditSpecificationRequestPrivate::ModifyInstanceCreditSpecificati
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ModifyInstanceCreditSpecificationRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ModifyInstanceCreditSpecificationRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ModifyInstanceCreditSpecificationRequest instance.
  */
 ModifyInstanceCreditSpecificationRequestPrivate::ModifyInstanceCreditSpecificationRequestPrivate(
     const ModifyInstanceCreditSpecificationRequestPrivate &other, ModifyInstanceCreditSpecificationRequest * const q)

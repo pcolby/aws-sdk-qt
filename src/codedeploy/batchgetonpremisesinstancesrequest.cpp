@@ -27,10 +27,9 @@ namespace CodeDeploy {
 
 /*!
  * \class QtAws::CodeDeploy::BatchGetOnPremisesInstancesRequest
- *
  * \brief The BatchGetOnPremisesInstancesRequest class provides an interface for CodeDeploy BatchGetOnPremisesInstances requests.
  *
- * \ingroup CodeDeploy
+ * \inmodule QtAwsCodeDeploy
  *
  *  <fullname>AWS CodeDeploy</fullname>
  * 
@@ -118,9 +117,7 @@ namespace CodeDeploy {
  */
 
 /*!
- * @brief  Constructs a new BatchGetOnPremisesInstancesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 BatchGetOnPremisesInstancesRequest::BatchGetOnPremisesInstancesRequest(const BatchGetOnPremisesInstancesRequest &other)
     : CodeDeployRequest(new BatchGetOnPremisesInstancesRequestPrivate(*other.d_func(), this))
@@ -129,7 +126,7 @@ BatchGetOnPremisesInstancesRequest::BatchGetOnPremisesInstancesRequest(const Bat
 }
 
 /*!
- * @brief  Constructs a new BatchGetOnPremisesInstancesRequest object.
+ * Constructs a BatchGetOnPremisesInstancesRequest object.
  */
 BatchGetOnPremisesInstancesRequest::BatchGetOnPremisesInstancesRequest()
     : CodeDeployRequest(new BatchGetOnPremisesInstancesRequestPrivate(CodeDeployRequest::BatchGetOnPremisesInstancesAction, this))
@@ -147,14 +144,9 @@ bool BatchGetOnPremisesInstancesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an BatchGetOnPremisesInstancesResponse object.
+ * Returns a BatchGetOnPremisesInstancesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An BatchGetOnPremisesInstancesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CodeDeployClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * BatchGetOnPremisesInstancesRequest::response(QNetworkReply * const reply) const
 {
@@ -162,20 +154,17 @@ QtAws::Core::AwsAbstractResponse * BatchGetOnPremisesInstancesRequest::response(
 }
 
 /*!
- * @internal
+ * \class QtAws::CodeDeploy::BatchGetOnPremisesInstancesRequestPrivate
+ * \brief The BatchGetOnPremisesInstancesRequestPrivate class provides private implementation for BatchGetOnPremisesInstancesRequest.
+ * \internal
  *
- * @class  BatchGetOnPremisesInstancesRequestPrivate
- *
- * @brief  Private implementation for BatchGetOnPremisesInstancesRequest.
+ * \inmodule QtAwsCodeDeploy
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new BatchGetOnPremisesInstancesRequestPrivate object.
- *
- * @param  action  CodeDeploy action being performed.
- * @param  q       Pointer to this object's public BatchGetOnPremisesInstancesRequest instance.
+ * Constructs a BatchGetOnPremisesInstancesRequestPrivate object for CodeDeploy \a action with,
+ * public implementation \a q.
  */
 BatchGetOnPremisesInstancesRequestPrivate::BatchGetOnPremisesInstancesRequestPrivate(
     const CodeDeployRequest::Action action, BatchGetOnPremisesInstancesRequest * const q)
@@ -185,15 +174,10 @@ BatchGetOnPremisesInstancesRequestPrivate::BatchGetOnPremisesInstancesRequestPri
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new BatchGetOnPremisesInstancesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the BatchGetOnPremisesInstancesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public BatchGetOnPremisesInstancesRequest instance.
  */
 BatchGetOnPremisesInstancesRequestPrivate::BatchGetOnPremisesInstancesRequestPrivate(
     const BatchGetOnPremisesInstancesRequestPrivate &other, BatchGetOnPremisesInstancesRequest * const q)

@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DescribeAvailabilityZonesRequest
- *
  * \brief The DescribeAvailabilityZonesRequest class provides an interface for EC2 DescribeAvailabilityZones requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DescribeAvailabilityZonesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeAvailabilityZonesRequest::DescribeAvailabilityZonesRequest(const DescribeAvailabilityZonesRequest &other)
     : EC2Request(new DescribeAvailabilityZonesRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ DescribeAvailabilityZonesRequest::DescribeAvailabilityZonesRequest(const Describ
 }
 
 /*!
- * @brief  Constructs a new DescribeAvailabilityZonesRequest object.
+ * Constructs a DescribeAvailabilityZonesRequest object.
  */
 DescribeAvailabilityZonesRequest::DescribeAvailabilityZonesRequest()
     : EC2Request(new DescribeAvailabilityZonesRequestPrivate(EC2Request::DescribeAvailabilityZonesAction, this))
@@ -70,14 +67,9 @@ bool DescribeAvailabilityZonesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeAvailabilityZonesResponse object.
+ * Returns a DescribeAvailabilityZonesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeAvailabilityZonesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeAvailabilityZonesRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * DescribeAvailabilityZonesRequest::response(QN
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::DescribeAvailabilityZonesRequestPrivate
+ * \brief The DescribeAvailabilityZonesRequestPrivate class provides private implementation for DescribeAvailabilityZonesRequest.
+ * \internal
  *
- * @class  DescribeAvailabilityZonesRequestPrivate
- *
- * @brief  Private implementation for DescribeAvailabilityZonesRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeAvailabilityZonesRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public DescribeAvailabilityZonesRequest instance.
+ * Constructs a DescribeAvailabilityZonesRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 DescribeAvailabilityZonesRequestPrivate::DescribeAvailabilityZonesRequestPrivate(
     const EC2Request::Action action, DescribeAvailabilityZonesRequest * const q)
@@ -108,15 +97,10 @@ DescribeAvailabilityZonesRequestPrivate::DescribeAvailabilityZonesRequestPrivate
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeAvailabilityZonesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeAvailabilityZonesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeAvailabilityZonesRequest instance.
  */
 DescribeAvailabilityZonesRequestPrivate::DescribeAvailabilityZonesRequestPrivate(
     const DescribeAvailabilityZonesRequestPrivate &other, DescribeAvailabilityZonesRequest * const q)

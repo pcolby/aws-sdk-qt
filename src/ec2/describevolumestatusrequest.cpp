@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DescribeVolumeStatusRequest
- *
  * \brief The DescribeVolumeStatusRequest class provides an interface for EC2 DescribeVolumeStatus requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DescribeVolumeStatusRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeVolumeStatusRequest::DescribeVolumeStatusRequest(const DescribeVolumeStatusRequest &other)
     : EC2Request(new DescribeVolumeStatusRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ DescribeVolumeStatusRequest::DescribeVolumeStatusRequest(const DescribeVolumeSta
 }
 
 /*!
- * @brief  Constructs a new DescribeVolumeStatusRequest object.
+ * Constructs a DescribeVolumeStatusRequest object.
  */
 DescribeVolumeStatusRequest::DescribeVolumeStatusRequest()
     : EC2Request(new DescribeVolumeStatusRequestPrivate(EC2Request::DescribeVolumeStatusAction, this))
@@ -70,14 +67,9 @@ bool DescribeVolumeStatusRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeVolumeStatusResponse object.
+ * Returns a DescribeVolumeStatusResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeVolumeStatusResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeVolumeStatusRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * DescribeVolumeStatusRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::DescribeVolumeStatusRequestPrivate
+ * \brief The DescribeVolumeStatusRequestPrivate class provides private implementation for DescribeVolumeStatusRequest.
+ * \internal
  *
- * @class  DescribeVolumeStatusRequestPrivate
- *
- * @brief  Private implementation for DescribeVolumeStatusRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeVolumeStatusRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public DescribeVolumeStatusRequest instance.
+ * Constructs a DescribeVolumeStatusRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 DescribeVolumeStatusRequestPrivate::DescribeVolumeStatusRequestPrivate(
     const EC2Request::Action action, DescribeVolumeStatusRequest * const q)
@@ -108,15 +97,10 @@ DescribeVolumeStatusRequestPrivate::DescribeVolumeStatusRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeVolumeStatusRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeVolumeStatusRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeVolumeStatusRequest instance.
  */
 DescribeVolumeStatusRequestPrivate::DescribeVolumeStatusRequestPrivate(
     const DescribeVolumeStatusRequestPrivate &other, DescribeVolumeStatusRequest * const q)

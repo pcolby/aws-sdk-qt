@@ -27,19 +27,16 @@ namespace MTurk {
 
 /*!
  * \class QtAws::MTurk::ListReviewableHITsRequest
- *
  * \brief The ListReviewableHITsRequest class provides an interface for MTurk ListReviewableHITs requests.
  *
- * \ingroup MTurk
+ * \inmodule QtAwsMTurk
  *
  *
  * \sa MTurkClient::listReviewableHITs
  */
 
 /*!
- * @brief  Constructs a new ListReviewableHITsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListReviewableHITsRequest::ListReviewableHITsRequest(const ListReviewableHITsRequest &other)
     : MTurkRequest(new ListReviewableHITsRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ ListReviewableHITsRequest::ListReviewableHITsRequest(const ListReviewableHITsReq
 }
 
 /*!
- * @brief  Constructs a new ListReviewableHITsRequest object.
+ * Constructs a ListReviewableHITsRequest object.
  */
 ListReviewableHITsRequest::ListReviewableHITsRequest()
     : MTurkRequest(new ListReviewableHITsRequestPrivate(MTurkRequest::ListReviewableHITsAction, this))
@@ -66,14 +63,9 @@ bool ListReviewableHITsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListReviewableHITsResponse object.
+ * Returns a ListReviewableHITsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListReviewableHITsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MTurkClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListReviewableHITsRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * ListReviewableHITsRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::MTurk::ListReviewableHITsRequestPrivate
+ * \brief The ListReviewableHITsRequestPrivate class provides private implementation for ListReviewableHITsRequest.
+ * \internal
  *
- * @class  ListReviewableHITsRequestPrivate
- *
- * @brief  Private implementation for ListReviewableHITsRequest.
+ * \inmodule QtAwsMTurk
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListReviewableHITsRequestPrivate object.
- *
- * @param  action  MTurk action being performed.
- * @param  q       Pointer to this object's public ListReviewableHITsRequest instance.
+ * Constructs a ListReviewableHITsRequestPrivate object for MTurk \a action with,
+ * public implementation \a q.
  */
 ListReviewableHITsRequestPrivate::ListReviewableHITsRequestPrivate(
     const MTurkRequest::Action action, ListReviewableHITsRequest * const q)
@@ -104,15 +93,10 @@ ListReviewableHITsRequestPrivate::ListReviewableHITsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListReviewableHITsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListReviewableHITsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListReviewableHITsRequest instance.
  */
 ListReviewableHITsRequestPrivate::ListReviewableHITsRequestPrivate(
     const ListReviewableHITsRequestPrivate &other, ListReviewableHITsRequest * const q)

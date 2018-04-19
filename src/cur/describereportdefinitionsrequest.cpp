@@ -27,19 +27,16 @@ namespace CostandUsageReportService {
 
 /*!
  * \class QtAws::CostandUsageReportService::DescribeReportDefinitionsRequest
- *
  * \brief The DescribeReportDefinitionsRequest class provides an interface for CostandUsageReportService DescribeReportDefinitions requests.
  *
- * \ingroup CostandUsageReportService
+ * \inmodule QtAwsCostandUsageReportService
  *
  *
  * \sa CostandUsageReportServiceClient::describeReportDefinitions
  */
 
 /*!
- * @brief  Constructs a new DescribeReportDefinitionsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeReportDefinitionsRequest::DescribeReportDefinitionsRequest(const DescribeReportDefinitionsRequest &other)
     : CostandUsageReportServiceRequest(new DescribeReportDefinitionsRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ DescribeReportDefinitionsRequest::DescribeReportDefinitionsRequest(const Describ
 }
 
 /*!
- * @brief  Constructs a new DescribeReportDefinitionsRequest object.
+ * Constructs a DescribeReportDefinitionsRequest object.
  */
 DescribeReportDefinitionsRequest::DescribeReportDefinitionsRequest()
     : CostandUsageReportServiceRequest(new DescribeReportDefinitionsRequestPrivate(CostandUsageReportServiceRequest::DescribeReportDefinitionsAction, this))
@@ -66,14 +63,9 @@ bool DescribeReportDefinitionsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeReportDefinitionsResponse object.
+ * Returns a DescribeReportDefinitionsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeReportDefinitionsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CostandUsageReportServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeReportDefinitionsRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * DescribeReportDefinitionsRequest::response(QN
 }
 
 /*!
- * @internal
+ * \class QtAws::CostandUsageReportService::DescribeReportDefinitionsRequestPrivate
+ * \brief The DescribeReportDefinitionsRequestPrivate class provides private implementation for DescribeReportDefinitionsRequest.
+ * \internal
  *
- * @class  DescribeReportDefinitionsRequestPrivate
- *
- * @brief  Private implementation for DescribeReportDefinitionsRequest.
+ * \inmodule QtAwsCostandUsageReportService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeReportDefinitionsRequestPrivate object.
- *
- * @param  action  CostandUsageReportService action being performed.
- * @param  q       Pointer to this object's public DescribeReportDefinitionsRequest instance.
+ * Constructs a DescribeReportDefinitionsRequestPrivate object for CostandUsageReportService \a action with,
+ * public implementation \a q.
  */
 DescribeReportDefinitionsRequestPrivate::DescribeReportDefinitionsRequestPrivate(
     const CostandUsageReportServiceRequest::Action action, DescribeReportDefinitionsRequest * const q)
@@ -104,15 +93,10 @@ DescribeReportDefinitionsRequestPrivate::DescribeReportDefinitionsRequestPrivate
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeReportDefinitionsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeReportDefinitionsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeReportDefinitionsRequest instance.
  */
 DescribeReportDefinitionsRequestPrivate::DescribeReportDefinitionsRequestPrivate(
     const DescribeReportDefinitionsRequestPrivate &other, DescribeReportDefinitionsRequest * const q)

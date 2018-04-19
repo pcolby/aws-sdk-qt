@@ -27,10 +27,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::UpdateLoginProfileRequest
- *
  * \brief The UpdateLoginProfileRequest class provides an interface for IAM UpdateLoginProfile requests.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -102,9 +101,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new UpdateLoginProfileRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateLoginProfileRequest::UpdateLoginProfileRequest(const UpdateLoginProfileRequest &other)
     : IAMRequest(new UpdateLoginProfileRequestPrivate(*other.d_func(), this))
@@ -113,7 +110,7 @@ UpdateLoginProfileRequest::UpdateLoginProfileRequest(const UpdateLoginProfileReq
 }
 
 /*!
- * @brief  Constructs a new UpdateLoginProfileRequest object.
+ * Constructs a UpdateLoginProfileRequest object.
  */
 UpdateLoginProfileRequest::UpdateLoginProfileRequest()
     : IAMRequest(new UpdateLoginProfileRequestPrivate(IAMRequest::UpdateLoginProfileAction, this))
@@ -131,14 +128,9 @@ bool UpdateLoginProfileRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateLoginProfileResponse object.
+ * Returns a UpdateLoginProfileResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateLoginProfileResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IAMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateLoginProfileRequest::response(QNetworkReply * const reply) const
 {
@@ -146,20 +138,17 @@ QtAws::Core::AwsAbstractResponse * UpdateLoginProfileRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::IAM::UpdateLoginProfileRequestPrivate
+ * \brief The UpdateLoginProfileRequestPrivate class provides private implementation for UpdateLoginProfileRequest.
+ * \internal
  *
- * @class  UpdateLoginProfileRequestPrivate
- *
- * @brief  Private implementation for UpdateLoginProfileRequest.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateLoginProfileRequestPrivate object.
- *
- * @param  action  IAM action being performed.
- * @param  q       Pointer to this object's public UpdateLoginProfileRequest instance.
+ * Constructs a UpdateLoginProfileRequestPrivate object for IAM \a action with,
+ * public implementation \a q.
  */
 UpdateLoginProfileRequestPrivate::UpdateLoginProfileRequestPrivate(
     const IAMRequest::Action action, UpdateLoginProfileRequest * const q)
@@ -169,15 +158,10 @@ UpdateLoginProfileRequestPrivate::UpdateLoginProfileRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateLoginProfileRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateLoginProfileRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateLoginProfileRequest instance.
  */
 UpdateLoginProfileRequestPrivate::UpdateLoginProfileRequestPrivate(
     const UpdateLoginProfileRequestPrivate &other, UpdateLoginProfileRequest * const q)

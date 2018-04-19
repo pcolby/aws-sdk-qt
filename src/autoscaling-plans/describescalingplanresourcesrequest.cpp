@@ -27,10 +27,9 @@ namespace AutoScalingPlans {
 
 /*!
  * \class QtAws::AutoScalingPlans::DescribeScalingPlanResourcesRequest
- *
  * \brief The DescribeScalingPlanResourcesRequest class provides an interface for AutoScalingPlans DescribeScalingPlanResources requests.
  *
- * \ingroup AutoScalingPlans
+ * \inmodule QtAwsAutoScalingPlans
  *
  *  Use AWS Auto Scaling to quickly discover all the scalable AWS resources for your application and configure dynamic
  *  scaling for your scalable
@@ -46,9 +45,7 @@ namespace AutoScalingPlans {
  */
 
 /*!
- * @brief  Constructs a new DescribeScalingPlanResourcesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeScalingPlanResourcesRequest::DescribeScalingPlanResourcesRequest(const DescribeScalingPlanResourcesRequest &other)
     : AutoScalingPlansRequest(new DescribeScalingPlanResourcesRequestPrivate(*other.d_func(), this))
@@ -57,7 +54,7 @@ DescribeScalingPlanResourcesRequest::DescribeScalingPlanResourcesRequest(const D
 }
 
 /*!
- * @brief  Constructs a new DescribeScalingPlanResourcesRequest object.
+ * Constructs a DescribeScalingPlanResourcesRequest object.
  */
 DescribeScalingPlanResourcesRequest::DescribeScalingPlanResourcesRequest()
     : AutoScalingPlansRequest(new DescribeScalingPlanResourcesRequestPrivate(AutoScalingPlansRequest::DescribeScalingPlanResourcesAction, this))
@@ -75,14 +72,9 @@ bool DescribeScalingPlanResourcesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeScalingPlanResourcesResponse object.
+ * Returns a DescribeScalingPlanResourcesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeScalingPlanResourcesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AutoScalingPlansClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeScalingPlanResourcesRequest::response(QNetworkReply * const reply) const
 {
@@ -90,20 +82,17 @@ QtAws::Core::AwsAbstractResponse * DescribeScalingPlanResourcesRequest::response
 }
 
 /*!
- * @internal
+ * \class QtAws::AutoScalingPlans::DescribeScalingPlanResourcesRequestPrivate
+ * \brief The DescribeScalingPlanResourcesRequestPrivate class provides private implementation for DescribeScalingPlanResourcesRequest.
+ * \internal
  *
- * @class  DescribeScalingPlanResourcesRequestPrivate
- *
- * @brief  Private implementation for DescribeScalingPlanResourcesRequest.
+ * \inmodule QtAwsAutoScalingPlans
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeScalingPlanResourcesRequestPrivate object.
- *
- * @param  action  AutoScalingPlans action being performed.
- * @param  q       Pointer to this object's public DescribeScalingPlanResourcesRequest instance.
+ * Constructs a DescribeScalingPlanResourcesRequestPrivate object for AutoScalingPlans \a action with,
+ * public implementation \a q.
  */
 DescribeScalingPlanResourcesRequestPrivate::DescribeScalingPlanResourcesRequestPrivate(
     const AutoScalingPlansRequest::Action action, DescribeScalingPlanResourcesRequest * const q)
@@ -113,15 +102,10 @@ DescribeScalingPlanResourcesRequestPrivate::DescribeScalingPlanResourcesRequestP
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeScalingPlanResourcesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeScalingPlanResourcesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeScalingPlanResourcesRequest instance.
  */
 DescribeScalingPlanResourcesRequestPrivate::DescribeScalingPlanResourcesRequestPrivate(
     const DescribeScalingPlanResourcesRequestPrivate &other, DescribeScalingPlanResourcesRequest * const q)

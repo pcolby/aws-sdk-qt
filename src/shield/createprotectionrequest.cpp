@@ -27,10 +27,9 @@ namespace Shield {
 
 /*!
  * \class QtAws::Shield::CreateProtectionRequest
- *
  * \brief The CreateProtectionRequest class provides an interface for Shield CreateProtection requests.
  *
- * \ingroup Shield
+ * \inmodule QtAwsShield
  *
  *  <fullname>AWS Shield Advanced</fullname>
  * 
@@ -43,9 +42,7 @@ namespace Shield {
  */
 
 /*!
- * @brief  Constructs a new CreateProtectionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateProtectionRequest::CreateProtectionRequest(const CreateProtectionRequest &other)
     : ShieldRequest(new CreateProtectionRequestPrivate(*other.d_func(), this))
@@ -54,7 +51,7 @@ CreateProtectionRequest::CreateProtectionRequest(const CreateProtectionRequest &
 }
 
 /*!
- * @brief  Constructs a new CreateProtectionRequest object.
+ * Constructs a CreateProtectionRequest object.
  */
 CreateProtectionRequest::CreateProtectionRequest()
     : ShieldRequest(new CreateProtectionRequestPrivate(ShieldRequest::CreateProtectionAction, this))
@@ -72,14 +69,9 @@ bool CreateProtectionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateProtectionResponse object.
+ * Returns a CreateProtectionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateProtectionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ShieldClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateProtectionRequest::response(QNetworkReply * const reply) const
 {
@@ -87,20 +79,17 @@ QtAws::Core::AwsAbstractResponse * CreateProtectionRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::Shield::CreateProtectionRequestPrivate
+ * \brief The CreateProtectionRequestPrivate class provides private implementation for CreateProtectionRequest.
+ * \internal
  *
- * @class  CreateProtectionRequestPrivate
- *
- * @brief  Private implementation for CreateProtectionRequest.
+ * \inmodule QtAwsShield
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateProtectionRequestPrivate object.
- *
- * @param  action  Shield action being performed.
- * @param  q       Pointer to this object's public CreateProtectionRequest instance.
+ * Constructs a CreateProtectionRequestPrivate object for Shield \a action with,
+ * public implementation \a q.
  */
 CreateProtectionRequestPrivate::CreateProtectionRequestPrivate(
     const ShieldRequest::Action action, CreateProtectionRequest * const q)
@@ -110,15 +99,10 @@ CreateProtectionRequestPrivate::CreateProtectionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateProtectionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateProtectionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateProtectionRequest instance.
  */
 CreateProtectionRequestPrivate::CreateProtectionRequestPrivate(
     const CreateProtectionRequestPrivate &other, CreateProtectionRequest * const q)

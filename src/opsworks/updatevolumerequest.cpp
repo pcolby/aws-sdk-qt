@@ -27,10 +27,9 @@ namespace OpsWorks {
 
 /*!
  * \class QtAws::OpsWorks::UpdateVolumeRequest
- *
  * \brief The UpdateVolumeRequest class provides an interface for OpsWorks UpdateVolume requests.
  *
- * \ingroup OpsWorks
+ * \inmodule QtAwsOpsWorks
  *
  *  <fullname>AWS OpsWorks</fullname>
  * 
@@ -143,9 +142,7 @@ namespace OpsWorks {
  */
 
 /*!
- * @brief  Constructs a new UpdateVolumeRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateVolumeRequest::UpdateVolumeRequest(const UpdateVolumeRequest &other)
     : OpsWorksRequest(new UpdateVolumeRequestPrivate(*other.d_func(), this))
@@ -154,7 +151,7 @@ UpdateVolumeRequest::UpdateVolumeRequest(const UpdateVolumeRequest &other)
 }
 
 /*!
- * @brief  Constructs a new UpdateVolumeRequest object.
+ * Constructs a UpdateVolumeRequest object.
  */
 UpdateVolumeRequest::UpdateVolumeRequest()
     : OpsWorksRequest(new UpdateVolumeRequestPrivate(OpsWorksRequest::UpdateVolumeAction, this))
@@ -172,14 +169,9 @@ bool UpdateVolumeRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateVolumeResponse object.
+ * Returns a UpdateVolumeResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateVolumeResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  OpsWorksClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateVolumeRequest::response(QNetworkReply * const reply) const
 {
@@ -187,20 +179,17 @@ QtAws::Core::AwsAbstractResponse * UpdateVolumeRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::OpsWorks::UpdateVolumeRequestPrivate
+ * \brief The UpdateVolumeRequestPrivate class provides private implementation for UpdateVolumeRequest.
+ * \internal
  *
- * @class  UpdateVolumeRequestPrivate
- *
- * @brief  Private implementation for UpdateVolumeRequest.
+ * \inmodule QtAwsOpsWorks
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateVolumeRequestPrivate object.
- *
- * @param  action  OpsWorks action being performed.
- * @param  q       Pointer to this object's public UpdateVolumeRequest instance.
+ * Constructs a UpdateVolumeRequestPrivate object for OpsWorks \a action with,
+ * public implementation \a q.
  */
 UpdateVolumeRequestPrivate::UpdateVolumeRequestPrivate(
     const OpsWorksRequest::Action action, UpdateVolumeRequest * const q)
@@ -210,15 +199,10 @@ UpdateVolumeRequestPrivate::UpdateVolumeRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateVolumeRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateVolumeRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateVolumeRequest instance.
  */
 UpdateVolumeRequestPrivate::UpdateVolumeRequestPrivate(
     const UpdateVolumeRequestPrivate &other, UpdateVolumeRequest * const q)

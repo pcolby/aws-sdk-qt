@@ -27,19 +27,16 @@ namespace S3 {
 
 /*!
  * \class QtAws::S3::GetBucketEncryptionRequest
- *
  * \brief The GetBucketEncryptionRequest class provides an interface for S3 GetBucketEncryption requests.
  *
- * \ingroup S3
+ * \inmodule QtAwsS3
  *
  *
  * \sa S3Client::getBucketEncryption
  */
 
 /*!
- * @brief  Constructs a new GetBucketEncryptionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetBucketEncryptionRequest::GetBucketEncryptionRequest(const GetBucketEncryptionRequest &other)
     : S3Request(new GetBucketEncryptionRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ GetBucketEncryptionRequest::GetBucketEncryptionRequest(const GetBucketEncryption
 }
 
 /*!
- * @brief  Constructs a new GetBucketEncryptionRequest object.
+ * Constructs a GetBucketEncryptionRequest object.
  */
 GetBucketEncryptionRequest::GetBucketEncryptionRequest()
     : S3Request(new GetBucketEncryptionRequestPrivate(S3Request::GetBucketEncryptionAction, this))
@@ -66,14 +63,9 @@ bool GetBucketEncryptionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetBucketEncryptionResponse object.
+ * Returns a GetBucketEncryptionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetBucketEncryptionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  S3Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetBucketEncryptionRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * GetBucketEncryptionRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::S3::GetBucketEncryptionRequestPrivate
+ * \brief The GetBucketEncryptionRequestPrivate class provides private implementation for GetBucketEncryptionRequest.
+ * \internal
  *
- * @class  GetBucketEncryptionRequestPrivate
- *
- * @brief  Private implementation for GetBucketEncryptionRequest.
+ * \inmodule QtAwsS3
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetBucketEncryptionRequestPrivate object.
- *
- * @param  action  S3 action being performed.
- * @param  q       Pointer to this object's public GetBucketEncryptionRequest instance.
+ * Constructs a GetBucketEncryptionRequestPrivate object for S3 \a action with,
+ * public implementation \a q.
  */
 GetBucketEncryptionRequestPrivate::GetBucketEncryptionRequestPrivate(
     const S3Request::Action action, GetBucketEncryptionRequest * const q)
@@ -104,15 +93,10 @@ GetBucketEncryptionRequestPrivate::GetBucketEncryptionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetBucketEncryptionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetBucketEncryptionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetBucketEncryptionRequest instance.
  */
 GetBucketEncryptionRequestPrivate::GetBucketEncryptionRequestPrivate(
     const GetBucketEncryptionRequestPrivate &other, GetBucketEncryptionRequest * const q)

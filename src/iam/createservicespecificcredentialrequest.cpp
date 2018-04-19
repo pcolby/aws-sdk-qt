@@ -27,10 +27,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::CreateServiceSpecificCredentialRequest
- *
  * \brief The CreateServiceSpecificCredentialRequest class provides an interface for IAM CreateServiceSpecificCredential requests.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -102,9 +101,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new CreateServiceSpecificCredentialRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateServiceSpecificCredentialRequest::CreateServiceSpecificCredentialRequest(const CreateServiceSpecificCredentialRequest &other)
     : IAMRequest(new CreateServiceSpecificCredentialRequestPrivate(*other.d_func(), this))
@@ -113,7 +110,7 @@ CreateServiceSpecificCredentialRequest::CreateServiceSpecificCredentialRequest(c
 }
 
 /*!
- * @brief  Constructs a new CreateServiceSpecificCredentialRequest object.
+ * Constructs a CreateServiceSpecificCredentialRequest object.
  */
 CreateServiceSpecificCredentialRequest::CreateServiceSpecificCredentialRequest()
     : IAMRequest(new CreateServiceSpecificCredentialRequestPrivate(IAMRequest::CreateServiceSpecificCredentialAction, this))
@@ -131,14 +128,9 @@ bool CreateServiceSpecificCredentialRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateServiceSpecificCredentialResponse object.
+ * Returns a CreateServiceSpecificCredentialResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateServiceSpecificCredentialResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IAMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateServiceSpecificCredentialRequest::response(QNetworkReply * const reply) const
 {
@@ -146,20 +138,17 @@ QtAws::Core::AwsAbstractResponse * CreateServiceSpecificCredentialRequest::respo
 }
 
 /*!
- * @internal
+ * \class QtAws::IAM::CreateServiceSpecificCredentialRequestPrivate
+ * \brief The CreateServiceSpecificCredentialRequestPrivate class provides private implementation for CreateServiceSpecificCredentialRequest.
+ * \internal
  *
- * @class  CreateServiceSpecificCredentialRequestPrivate
- *
- * @brief  Private implementation for CreateServiceSpecificCredentialRequest.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateServiceSpecificCredentialRequestPrivate object.
- *
- * @param  action  IAM action being performed.
- * @param  q       Pointer to this object's public CreateServiceSpecificCredentialRequest instance.
+ * Constructs a CreateServiceSpecificCredentialRequestPrivate object for IAM \a action with,
+ * public implementation \a q.
  */
 CreateServiceSpecificCredentialRequestPrivate::CreateServiceSpecificCredentialRequestPrivate(
     const IAMRequest::Action action, CreateServiceSpecificCredentialRequest * const q)
@@ -169,15 +158,10 @@ CreateServiceSpecificCredentialRequestPrivate::CreateServiceSpecificCredentialRe
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateServiceSpecificCredentialRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateServiceSpecificCredentialRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateServiceSpecificCredentialRequest instance.
  */
 CreateServiceSpecificCredentialRequestPrivate::CreateServiceSpecificCredentialRequestPrivate(
     const CreateServiceSpecificCredentialRequestPrivate &other, CreateServiceSpecificCredentialRequest * const q)

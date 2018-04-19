@@ -27,10 +27,9 @@ namespace CodePipeline {
 
 /*!
  * \class QtAws::CodePipeline::DisableStageTransitionRequest
- *
  * \brief The DisableStageTransitionRequest class provides an interface for CodePipeline DisableStageTransition requests.
  *
- * \ingroup CodePipeline
+ * \inmodule QtAwsCodePipeline
  *
  *  <fullname>AWS CodePipeline</fullname>
  * 
@@ -200,9 +199,7 @@ namespace CodePipeline {
  */
 
 /*!
- * @brief  Constructs a new DisableStageTransitionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DisableStageTransitionRequest::DisableStageTransitionRequest(const DisableStageTransitionRequest &other)
     : CodePipelineRequest(new DisableStageTransitionRequestPrivate(*other.d_func(), this))
@@ -211,7 +208,7 @@ DisableStageTransitionRequest::DisableStageTransitionRequest(const DisableStageT
 }
 
 /*!
- * @brief  Constructs a new DisableStageTransitionRequest object.
+ * Constructs a DisableStageTransitionRequest object.
  */
 DisableStageTransitionRequest::DisableStageTransitionRequest()
     : CodePipelineRequest(new DisableStageTransitionRequestPrivate(CodePipelineRequest::DisableStageTransitionAction, this))
@@ -229,14 +226,9 @@ bool DisableStageTransitionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DisableStageTransitionResponse object.
+ * Returns a DisableStageTransitionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DisableStageTransitionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CodePipelineClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DisableStageTransitionRequest::response(QNetworkReply * const reply) const
 {
@@ -244,20 +236,17 @@ QtAws::Core::AwsAbstractResponse * DisableStageTransitionRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::CodePipeline::DisableStageTransitionRequestPrivate
+ * \brief The DisableStageTransitionRequestPrivate class provides private implementation for DisableStageTransitionRequest.
+ * \internal
  *
- * @class  DisableStageTransitionRequestPrivate
- *
- * @brief  Private implementation for DisableStageTransitionRequest.
+ * \inmodule QtAwsCodePipeline
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DisableStageTransitionRequestPrivate object.
- *
- * @param  action  CodePipeline action being performed.
- * @param  q       Pointer to this object's public DisableStageTransitionRequest instance.
+ * Constructs a DisableStageTransitionRequestPrivate object for CodePipeline \a action with,
+ * public implementation \a q.
  */
 DisableStageTransitionRequestPrivate::DisableStageTransitionRequestPrivate(
     const CodePipelineRequest::Action action, DisableStageTransitionRequest * const q)
@@ -267,15 +256,10 @@ DisableStageTransitionRequestPrivate::DisableStageTransitionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DisableStageTransitionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DisableStageTransitionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DisableStageTransitionRequest instance.
  */
 DisableStageTransitionRequestPrivate::DisableStageTransitionRequestPrivate(
     const DisableStageTransitionRequestPrivate &other, DisableStageTransitionRequest * const q)

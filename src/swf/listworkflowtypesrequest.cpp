@@ -27,10 +27,9 @@ namespace SWF {
 
 /*!
  * \class QtAws::SWF::ListWorkflowTypesRequest
- *
  * \brief The ListWorkflowTypesRequest class provides an interface for SWF ListWorkflowTypes requests.
  *
- * \ingroup SWF
+ * \inmodule QtAwsSWF
  *
  *  <fullname>Amazon Simple Workflow Service</fullname>
  * 
@@ -53,9 +52,7 @@ namespace SWF {
  */
 
 /*!
- * @brief  Constructs a new ListWorkflowTypesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListWorkflowTypesRequest::ListWorkflowTypesRequest(const ListWorkflowTypesRequest &other)
     : SWFRequest(new ListWorkflowTypesRequestPrivate(*other.d_func(), this))
@@ -64,7 +61,7 @@ ListWorkflowTypesRequest::ListWorkflowTypesRequest(const ListWorkflowTypesReques
 }
 
 /*!
- * @brief  Constructs a new ListWorkflowTypesRequest object.
+ * Constructs a ListWorkflowTypesRequest object.
  */
 ListWorkflowTypesRequest::ListWorkflowTypesRequest()
     : SWFRequest(new ListWorkflowTypesRequestPrivate(SWFRequest::ListWorkflowTypesAction, this))
@@ -82,14 +79,9 @@ bool ListWorkflowTypesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListWorkflowTypesResponse object.
+ * Returns a ListWorkflowTypesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListWorkflowTypesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SWFClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListWorkflowTypesRequest::response(QNetworkReply * const reply) const
 {
@@ -97,20 +89,17 @@ QtAws::Core::AwsAbstractResponse * ListWorkflowTypesRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::SWF::ListWorkflowTypesRequestPrivate
+ * \brief The ListWorkflowTypesRequestPrivate class provides private implementation for ListWorkflowTypesRequest.
+ * \internal
  *
- * @class  ListWorkflowTypesRequestPrivate
- *
- * @brief  Private implementation for ListWorkflowTypesRequest.
+ * \inmodule QtAwsSWF
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListWorkflowTypesRequestPrivate object.
- *
- * @param  action  SWF action being performed.
- * @param  q       Pointer to this object's public ListWorkflowTypesRequest instance.
+ * Constructs a ListWorkflowTypesRequestPrivate object for SWF \a action with,
+ * public implementation \a q.
  */
 ListWorkflowTypesRequestPrivate::ListWorkflowTypesRequestPrivate(
     const SWFRequest::Action action, ListWorkflowTypesRequest * const q)
@@ -120,15 +109,10 @@ ListWorkflowTypesRequestPrivate::ListWorkflowTypesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListWorkflowTypesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListWorkflowTypesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListWorkflowTypesRequest instance.
  */
 ListWorkflowTypesRequestPrivate::ListWorkflowTypesRequestPrivate(
     const ListWorkflowTypesRequestPrivate &other, ListWorkflowTypesRequest * const q)

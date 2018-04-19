@@ -27,10 +27,9 @@ namespace ElasticTranscoder {
 
 /*!
  * \class QtAws::ElasticTranscoder::CreatePipelineRequest
- *
  * \brief The CreatePipelineRequest class provides an interface for ElasticTranscoder CreatePipeline requests.
  *
- * \ingroup ElasticTranscoder
+ * \inmodule QtAwsElasticTranscoder
  *
  *  <fullname>AWS Elastic Transcoder Service</fullname>
  * 
@@ -40,9 +39,7 @@ namespace ElasticTranscoder {
  */
 
 /*!
- * @brief  Constructs a new CreatePipelineRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreatePipelineRequest::CreatePipelineRequest(const CreatePipelineRequest &other)
     : ElasticTranscoderRequest(new CreatePipelineRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ CreatePipelineRequest::CreatePipelineRequest(const CreatePipelineRequest &other)
 }
 
 /*!
- * @brief  Constructs a new CreatePipelineRequest object.
+ * Constructs a CreatePipelineRequest object.
  */
 CreatePipelineRequest::CreatePipelineRequest()
     : ElasticTranscoderRequest(new CreatePipelineRequestPrivate(ElasticTranscoderRequest::CreatePipelineAction, this))
@@ -69,14 +66,9 @@ bool CreatePipelineRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreatePipelineResponse object.
+ * Returns a CreatePipelineResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreatePipelineResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ElasticTranscoderClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreatePipelineRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * CreatePipelineRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::ElasticTranscoder::CreatePipelineRequestPrivate
+ * \brief The CreatePipelineRequestPrivate class provides private implementation for CreatePipelineRequest.
+ * \internal
  *
- * @class  CreatePipelineRequestPrivate
- *
- * @brief  Private implementation for CreatePipelineRequest.
+ * \inmodule QtAwsElasticTranscoder
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreatePipelineRequestPrivate object.
- *
- * @param  action  ElasticTranscoder action being performed.
- * @param  q       Pointer to this object's public CreatePipelineRequest instance.
+ * Constructs a CreatePipelineRequestPrivate object for ElasticTranscoder \a action with,
+ * public implementation \a q.
  */
 CreatePipelineRequestPrivate::CreatePipelineRequestPrivate(
     const ElasticTranscoderRequest::Action action, CreatePipelineRequest * const q)
@@ -107,15 +96,10 @@ CreatePipelineRequestPrivate::CreatePipelineRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreatePipelineRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreatePipelineRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreatePipelineRequest instance.
  */
 CreatePipelineRequestPrivate::CreatePipelineRequestPrivate(
     const CreatePipelineRequestPrivate &other, CreatePipelineRequest * const q)

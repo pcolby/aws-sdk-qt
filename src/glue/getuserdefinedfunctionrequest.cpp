@@ -27,10 +27,9 @@ namespace Glue {
 
 /*!
  * \class QtAws::Glue::GetUserDefinedFunctionRequest
- *
  * \brief The GetUserDefinedFunctionRequest class provides an interface for Glue GetUserDefinedFunction requests.
  *
- * \ingroup Glue
+ * \inmodule QtAwsGlue
  *
  *  <fullname>AWS Glue</fullname>
  * 
@@ -40,9 +39,7 @@ namespace Glue {
  */
 
 /*!
- * @brief  Constructs a new GetUserDefinedFunctionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetUserDefinedFunctionRequest::GetUserDefinedFunctionRequest(const GetUserDefinedFunctionRequest &other)
     : GlueRequest(new GetUserDefinedFunctionRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ GetUserDefinedFunctionRequest::GetUserDefinedFunctionRequest(const GetUserDefine
 }
 
 /*!
- * @brief  Constructs a new GetUserDefinedFunctionRequest object.
+ * Constructs a GetUserDefinedFunctionRequest object.
  */
 GetUserDefinedFunctionRequest::GetUserDefinedFunctionRequest()
     : GlueRequest(new GetUserDefinedFunctionRequestPrivate(GlueRequest::GetUserDefinedFunctionAction, this))
@@ -69,14 +66,9 @@ bool GetUserDefinedFunctionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetUserDefinedFunctionResponse object.
+ * Returns a GetUserDefinedFunctionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetUserDefinedFunctionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GlueClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetUserDefinedFunctionRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * GetUserDefinedFunctionRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::Glue::GetUserDefinedFunctionRequestPrivate
+ * \brief The GetUserDefinedFunctionRequestPrivate class provides private implementation for GetUserDefinedFunctionRequest.
+ * \internal
  *
- * @class  GetUserDefinedFunctionRequestPrivate
- *
- * @brief  Private implementation for GetUserDefinedFunctionRequest.
+ * \inmodule QtAwsGlue
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetUserDefinedFunctionRequestPrivate object.
- *
- * @param  action  Glue action being performed.
- * @param  q       Pointer to this object's public GetUserDefinedFunctionRequest instance.
+ * Constructs a GetUserDefinedFunctionRequestPrivate object for Glue \a action with,
+ * public implementation \a q.
  */
 GetUserDefinedFunctionRequestPrivate::GetUserDefinedFunctionRequestPrivate(
     const GlueRequest::Action action, GetUserDefinedFunctionRequest * const q)
@@ -107,15 +96,10 @@ GetUserDefinedFunctionRequestPrivate::GetUserDefinedFunctionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetUserDefinedFunctionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetUserDefinedFunctionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetUserDefinedFunctionRequest instance.
  */
 GetUserDefinedFunctionRequestPrivate::GetUserDefinedFunctionRequestPrivate(
     const GetUserDefinedFunctionRequestPrivate &other, GetUserDefinedFunctionRequest * const q)

@@ -100,6 +100,9 @@
 /*!
  * \namespace QtAws::LexModelBuildingService
  * \brief The QtAws::LexModelBuildingService contains stuff...
+ *
+ * \inmodule QtAwsLexModelBuildingService
+ *
  * @todo Move this to a separate template file.
  */
 
@@ -153,7 +156,7 @@ LexModelBuildingServiceClient::LexModelBuildingServiceClient(
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * \a  AwsEndpoint::getEndpoint()
+ * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
 LexModelBuildingServiceClient::LexModelBuildingServiceClient(
     const QUrl &endpoint,

@@ -27,10 +27,9 @@ namespace Shield {
 
 /*!
  * \class QtAws::Shield::DescribeProtectionRequest
- *
  * \brief The DescribeProtectionRequest class provides an interface for Shield DescribeProtection requests.
  *
- * \ingroup Shield
+ * \inmodule QtAwsShield
  *
  *  <fullname>AWS Shield Advanced</fullname>
  * 
@@ -43,9 +42,7 @@ namespace Shield {
  */
 
 /*!
- * @brief  Constructs a new DescribeProtectionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeProtectionRequest::DescribeProtectionRequest(const DescribeProtectionRequest &other)
     : ShieldRequest(new DescribeProtectionRequestPrivate(*other.d_func(), this))
@@ -54,7 +51,7 @@ DescribeProtectionRequest::DescribeProtectionRequest(const DescribeProtectionReq
 }
 
 /*!
- * @brief  Constructs a new DescribeProtectionRequest object.
+ * Constructs a DescribeProtectionRequest object.
  */
 DescribeProtectionRequest::DescribeProtectionRequest()
     : ShieldRequest(new DescribeProtectionRequestPrivate(ShieldRequest::DescribeProtectionAction, this))
@@ -72,14 +69,9 @@ bool DescribeProtectionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeProtectionResponse object.
+ * Returns a DescribeProtectionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeProtectionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ShieldClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeProtectionRequest::response(QNetworkReply * const reply) const
 {
@@ -87,20 +79,17 @@ QtAws::Core::AwsAbstractResponse * DescribeProtectionRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::Shield::DescribeProtectionRequestPrivate
+ * \brief The DescribeProtectionRequestPrivate class provides private implementation for DescribeProtectionRequest.
+ * \internal
  *
- * @class  DescribeProtectionRequestPrivate
- *
- * @brief  Private implementation for DescribeProtectionRequest.
+ * \inmodule QtAwsShield
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeProtectionRequestPrivate object.
- *
- * @param  action  Shield action being performed.
- * @param  q       Pointer to this object's public DescribeProtectionRequest instance.
+ * Constructs a DescribeProtectionRequestPrivate object for Shield \a action with,
+ * public implementation \a q.
  */
 DescribeProtectionRequestPrivate::DescribeProtectionRequestPrivate(
     const ShieldRequest::Action action, DescribeProtectionRequest * const q)
@@ -110,15 +99,10 @@ DescribeProtectionRequestPrivate::DescribeProtectionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeProtectionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeProtectionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeProtectionRequest instance.
  */
 DescribeProtectionRequestPrivate::DescribeProtectionRequestPrivate(
     const DescribeProtectionRequestPrivate &other, DescribeProtectionRequest * const q)

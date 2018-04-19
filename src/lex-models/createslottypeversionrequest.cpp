@@ -27,10 +27,9 @@ namespace LexModelBuildingService {
 
 /*!
  * \class QtAws::LexModelBuildingService::CreateSlotTypeVersionRequest
- *
  * \brief The CreateSlotTypeVersionRequest class provides an interface for LexModelBuildingService CreateSlotTypeVersion requests.
  *
- * \ingroup LexModelBuildingService
+ * \inmodule QtAwsLexModelBuildingService
  *
  *  <fullname>Amazon Lex Build-Time Actions</fullname>
  * 
@@ -41,9 +40,7 @@ namespace LexModelBuildingService {
  */
 
 /*!
- * @brief  Constructs a new CreateSlotTypeVersionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateSlotTypeVersionRequest::CreateSlotTypeVersionRequest(const CreateSlotTypeVersionRequest &other)
     : LexModelBuildingServiceRequest(new CreateSlotTypeVersionRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ CreateSlotTypeVersionRequest::CreateSlotTypeVersionRequest(const CreateSlotTypeV
 }
 
 /*!
- * @brief  Constructs a new CreateSlotTypeVersionRequest object.
+ * Constructs a CreateSlotTypeVersionRequest object.
  */
 CreateSlotTypeVersionRequest::CreateSlotTypeVersionRequest()
     : LexModelBuildingServiceRequest(new CreateSlotTypeVersionRequestPrivate(LexModelBuildingServiceRequest::CreateSlotTypeVersionAction, this))
@@ -70,14 +67,9 @@ bool CreateSlotTypeVersionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateSlotTypeVersionResponse object.
+ * Returns a CreateSlotTypeVersionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateSlotTypeVersionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  LexModelBuildingServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateSlotTypeVersionRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * CreateSlotTypeVersionRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::LexModelBuildingService::CreateSlotTypeVersionRequestPrivate
+ * \brief The CreateSlotTypeVersionRequestPrivate class provides private implementation for CreateSlotTypeVersionRequest.
+ * \internal
  *
- * @class  CreateSlotTypeVersionRequestPrivate
- *
- * @brief  Private implementation for CreateSlotTypeVersionRequest.
+ * \inmodule QtAwsLexModelBuildingService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateSlotTypeVersionRequestPrivate object.
- *
- * @param  action  LexModelBuildingService action being performed.
- * @param  q       Pointer to this object's public CreateSlotTypeVersionRequest instance.
+ * Constructs a CreateSlotTypeVersionRequestPrivate object for LexModelBuildingService \a action with,
+ * public implementation \a q.
  */
 CreateSlotTypeVersionRequestPrivate::CreateSlotTypeVersionRequestPrivate(
     const LexModelBuildingServiceRequest::Action action, CreateSlotTypeVersionRequest * const q)
@@ -108,15 +97,10 @@ CreateSlotTypeVersionRequestPrivate::CreateSlotTypeVersionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateSlotTypeVersionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateSlotTypeVersionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateSlotTypeVersionRequest instance.
  */
 CreateSlotTypeVersionRequestPrivate::CreateSlotTypeVersionRequestPrivate(
     const CreateSlotTypeVersionRequestPrivate &other, CreateSlotTypeVersionRequest * const q)

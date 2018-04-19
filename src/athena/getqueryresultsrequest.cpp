@@ -27,10 +27,9 @@ namespace Athena {
 
 /*!
  * \class QtAws::Athena::GetQueryResultsRequest
- *
  * \brief The GetQueryResultsRequest class provides an interface for Athena GetQueryResults requests.
  *
- * \ingroup Athena
+ * \inmodule QtAwsAthena
  *
  *  Amazon Athena is an interactive query service that lets you use standard SQL to analyze data directly in Amazon S3. You
  *  can point Athena at your data in Amazon S3 and run ad-hoc queries and get results in seconds. Athena is serverless, so
@@ -49,9 +48,7 @@ namespace Athena {
  */
 
 /*!
- * @brief  Constructs a new GetQueryResultsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetQueryResultsRequest::GetQueryResultsRequest(const GetQueryResultsRequest &other)
     : AthenaRequest(new GetQueryResultsRequestPrivate(*other.d_func(), this))
@@ -60,7 +57,7 @@ GetQueryResultsRequest::GetQueryResultsRequest(const GetQueryResultsRequest &oth
 }
 
 /*!
- * @brief  Constructs a new GetQueryResultsRequest object.
+ * Constructs a GetQueryResultsRequest object.
  */
 GetQueryResultsRequest::GetQueryResultsRequest()
     : AthenaRequest(new GetQueryResultsRequestPrivate(AthenaRequest::GetQueryResultsAction, this))
@@ -78,14 +75,9 @@ bool GetQueryResultsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetQueryResultsResponse object.
+ * Returns a GetQueryResultsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetQueryResultsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AthenaClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetQueryResultsRequest::response(QNetworkReply * const reply) const
 {
@@ -93,20 +85,17 @@ QtAws::Core::AwsAbstractResponse * GetQueryResultsRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::Athena::GetQueryResultsRequestPrivate
+ * \brief The GetQueryResultsRequestPrivate class provides private implementation for GetQueryResultsRequest.
+ * \internal
  *
- * @class  GetQueryResultsRequestPrivate
- *
- * @brief  Private implementation for GetQueryResultsRequest.
+ * \inmodule QtAwsAthena
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetQueryResultsRequestPrivate object.
- *
- * @param  action  Athena action being performed.
- * @param  q       Pointer to this object's public GetQueryResultsRequest instance.
+ * Constructs a GetQueryResultsRequestPrivate object for Athena \a action with,
+ * public implementation \a q.
  */
 GetQueryResultsRequestPrivate::GetQueryResultsRequestPrivate(
     const AthenaRequest::Action action, GetQueryResultsRequest * const q)
@@ -116,15 +105,10 @@ GetQueryResultsRequestPrivate::GetQueryResultsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetQueryResultsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetQueryResultsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetQueryResultsRequest instance.
  */
 GetQueryResultsRequestPrivate::GetQueryResultsRequestPrivate(
     const GetQueryResultsRequestPrivate &other, GetQueryResultsRequest * const q)

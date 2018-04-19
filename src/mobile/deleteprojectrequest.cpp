@@ -27,10 +27,9 @@ namespace Mobile {
 
 /*!
  * \class QtAws::Mobile::DeleteProjectRequest
- *
  * \brief The DeleteProjectRequest class provides an interface for Mobile DeleteProject requests.
  *
- * \ingroup Mobile
+ * \inmodule QtAwsMobile
  *
  *  AWS Mobile Service provides mobile app and website developers with capabilities required to configure AWS resources and
  *  bootstrap their developer desktop projects with the necessary SDKs, constants, tools and samples to make use of those
@@ -40,9 +39,7 @@ namespace Mobile {
  */
 
 /*!
- * @brief  Constructs a new DeleteProjectRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteProjectRequest::DeleteProjectRequest(const DeleteProjectRequest &other)
     : MobileRequest(new DeleteProjectRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ DeleteProjectRequest::DeleteProjectRequest(const DeleteProjectRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DeleteProjectRequest object.
+ * Constructs a DeleteProjectRequest object.
  */
 DeleteProjectRequest::DeleteProjectRequest()
     : MobileRequest(new DeleteProjectRequestPrivate(MobileRequest::DeleteProjectAction, this))
@@ -69,14 +66,9 @@ bool DeleteProjectRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteProjectResponse object.
+ * Returns a DeleteProjectResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteProjectResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MobileClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteProjectRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * DeleteProjectRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::Mobile::DeleteProjectRequestPrivate
+ * \brief The DeleteProjectRequestPrivate class provides private implementation for DeleteProjectRequest.
+ * \internal
  *
- * @class  DeleteProjectRequestPrivate
- *
- * @brief  Private implementation for DeleteProjectRequest.
+ * \inmodule QtAwsMobile
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteProjectRequestPrivate object.
- *
- * @param  action  Mobile action being performed.
- * @param  q       Pointer to this object's public DeleteProjectRequest instance.
+ * Constructs a DeleteProjectRequestPrivate object for Mobile \a action with,
+ * public implementation \a q.
  */
 DeleteProjectRequestPrivate::DeleteProjectRequestPrivate(
     const MobileRequest::Action action, DeleteProjectRequest * const q)
@@ -107,15 +96,10 @@ DeleteProjectRequestPrivate::DeleteProjectRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteProjectRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteProjectRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteProjectRequest instance.
  */
 DeleteProjectRequestPrivate::DeleteProjectRequestPrivate(
     const DeleteProjectRequestPrivate &other, DeleteProjectRequest * const q)

@@ -27,10 +27,9 @@ namespace DirectConnect {
 
 /*!
  * \class QtAws::DirectConnect::AllocateHostedConnectionRequest
- *
  * \brief The AllocateHostedConnectionRequest class provides an interface for DirectConnect AllocateHostedConnection requests.
  *
- * \ingroup DirectConnect
+ * \inmodule QtAwsDirectConnect
  *
  *  AWS Direct Connect links your internal network to an AWS Direct Connect location over a standard 1 gigabit or 10 gigabit
  *  Ethernet fiber-optic cable. One end of the cable is connected to your router, the other to an AWS Direct Connect router.
@@ -45,9 +44,7 @@ namespace DirectConnect {
  */
 
 /*!
- * @brief  Constructs a new AllocateHostedConnectionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AllocateHostedConnectionRequest::AllocateHostedConnectionRequest(const AllocateHostedConnectionRequest &other)
     : DirectConnectRequest(new AllocateHostedConnectionRequestPrivate(*other.d_func(), this))
@@ -56,7 +53,7 @@ AllocateHostedConnectionRequest::AllocateHostedConnectionRequest(const AllocateH
 }
 
 /*!
- * @brief  Constructs a new AllocateHostedConnectionRequest object.
+ * Constructs a AllocateHostedConnectionRequest object.
  */
 AllocateHostedConnectionRequest::AllocateHostedConnectionRequest()
     : DirectConnectRequest(new AllocateHostedConnectionRequestPrivate(DirectConnectRequest::AllocateHostedConnectionAction, this))
@@ -74,14 +71,9 @@ bool AllocateHostedConnectionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AllocateHostedConnectionResponse object.
+ * Returns a AllocateHostedConnectionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AllocateHostedConnectionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DirectConnectClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AllocateHostedConnectionRequest::response(QNetworkReply * const reply) const
 {
@@ -89,20 +81,17 @@ QtAws::Core::AwsAbstractResponse * AllocateHostedConnectionRequest::response(QNe
 }
 
 /*!
- * @internal
+ * \class QtAws::DirectConnect::AllocateHostedConnectionRequestPrivate
+ * \brief The AllocateHostedConnectionRequestPrivate class provides private implementation for AllocateHostedConnectionRequest.
+ * \internal
  *
- * @class  AllocateHostedConnectionRequestPrivate
- *
- * @brief  Private implementation for AllocateHostedConnectionRequest.
+ * \inmodule QtAwsDirectConnect
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AllocateHostedConnectionRequestPrivate object.
- *
- * @param  action  DirectConnect action being performed.
- * @param  q       Pointer to this object's public AllocateHostedConnectionRequest instance.
+ * Constructs a AllocateHostedConnectionRequestPrivate object for DirectConnect \a action with,
+ * public implementation \a q.
  */
 AllocateHostedConnectionRequestPrivate::AllocateHostedConnectionRequestPrivate(
     const DirectConnectRequest::Action action, AllocateHostedConnectionRequest * const q)
@@ -112,15 +101,10 @@ AllocateHostedConnectionRequestPrivate::AllocateHostedConnectionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AllocateHostedConnectionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AllocateHostedConnectionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AllocateHostedConnectionRequest instance.
  */
 AllocateHostedConnectionRequestPrivate::AllocateHostedConnectionRequestPrivate(
     const AllocateHostedConnectionRequestPrivate &other, AllocateHostedConnectionRequest * const q)

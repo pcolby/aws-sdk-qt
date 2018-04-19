@@ -27,10 +27,9 @@ namespace ConfigService {
 
 /*!
  * \class QtAws::ConfigService::GetDiscoveredResourceCountsRequest
- *
  * \brief The GetDiscoveredResourceCountsRequest class provides an interface for ConfigService GetDiscoveredResourceCounts requests.
  *
- * \ingroup ConfigService
+ * \inmodule QtAwsConfigService
  *
  *  <fullname>AWS Config</fullname>
  * 
@@ -60,9 +59,7 @@ namespace ConfigService {
  */
 
 /*!
- * @brief  Constructs a new GetDiscoveredResourceCountsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetDiscoveredResourceCountsRequest::GetDiscoveredResourceCountsRequest(const GetDiscoveredResourceCountsRequest &other)
     : ConfigServiceRequest(new GetDiscoveredResourceCountsRequestPrivate(*other.d_func(), this))
@@ -71,7 +68,7 @@ GetDiscoveredResourceCountsRequest::GetDiscoveredResourceCountsRequest(const Get
 }
 
 /*!
- * @brief  Constructs a new GetDiscoveredResourceCountsRequest object.
+ * Constructs a GetDiscoveredResourceCountsRequest object.
  */
 GetDiscoveredResourceCountsRequest::GetDiscoveredResourceCountsRequest()
     : ConfigServiceRequest(new GetDiscoveredResourceCountsRequestPrivate(ConfigServiceRequest::GetDiscoveredResourceCountsAction, this))
@@ -89,14 +86,9 @@ bool GetDiscoveredResourceCountsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetDiscoveredResourceCountsResponse object.
+ * Returns a GetDiscoveredResourceCountsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetDiscoveredResourceCountsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ConfigServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetDiscoveredResourceCountsRequest::response(QNetworkReply * const reply) const
 {
@@ -104,20 +96,17 @@ QtAws::Core::AwsAbstractResponse * GetDiscoveredResourceCountsRequest::response(
 }
 
 /*!
- * @internal
+ * \class QtAws::ConfigService::GetDiscoveredResourceCountsRequestPrivate
+ * \brief The GetDiscoveredResourceCountsRequestPrivate class provides private implementation for GetDiscoveredResourceCountsRequest.
+ * \internal
  *
- * @class  GetDiscoveredResourceCountsRequestPrivate
- *
- * @brief  Private implementation for GetDiscoveredResourceCountsRequest.
+ * \inmodule QtAwsConfigService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetDiscoveredResourceCountsRequestPrivate object.
- *
- * @param  action  ConfigService action being performed.
- * @param  q       Pointer to this object's public GetDiscoveredResourceCountsRequest instance.
+ * Constructs a GetDiscoveredResourceCountsRequestPrivate object for ConfigService \a action with,
+ * public implementation \a q.
  */
 GetDiscoveredResourceCountsRequestPrivate::GetDiscoveredResourceCountsRequestPrivate(
     const ConfigServiceRequest::Action action, GetDiscoveredResourceCountsRequest * const q)
@@ -127,15 +116,10 @@ GetDiscoveredResourceCountsRequestPrivate::GetDiscoveredResourceCountsRequestPri
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetDiscoveredResourceCountsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetDiscoveredResourceCountsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetDiscoveredResourceCountsRequest instance.
  */
 GetDiscoveredResourceCountsRequestPrivate::GetDiscoveredResourceCountsRequestPrivate(
     const GetDiscoveredResourceCountsRequestPrivate &other, GetDiscoveredResourceCountsRequest * const q)

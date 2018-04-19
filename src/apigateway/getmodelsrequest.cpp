@@ -27,10 +27,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::GetModelsRequest
- *
  * \brief The GetModelsRequest class provides an interface for APIGateway GetModels requests.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -42,9 +41,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new GetModelsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetModelsRequest::GetModelsRequest(const GetModelsRequest &other)
     : APIGatewayRequest(new GetModelsRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ GetModelsRequest::GetModelsRequest(const GetModelsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetModelsRequest object.
+ * Constructs a GetModelsRequest object.
  */
 GetModelsRequest::GetModelsRequest()
     : APIGatewayRequest(new GetModelsRequestPrivate(APIGatewayRequest::GetModelsAction, this))
@@ -71,14 +68,9 @@ bool GetModelsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetModelsResponse object.
+ * Returns a GetModelsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetModelsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  APIGatewayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetModelsRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * GetModelsRequest::response(QNetworkReply * co
 }
 
 /*!
- * @internal
+ * \class QtAws::APIGateway::GetModelsRequestPrivate
+ * \brief The GetModelsRequestPrivate class provides private implementation for GetModelsRequest.
+ * \internal
  *
- * @class  GetModelsRequestPrivate
- *
- * @brief  Private implementation for GetModelsRequest.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetModelsRequestPrivate object.
- *
- * @param  action  APIGateway action being performed.
- * @param  q       Pointer to this object's public GetModelsRequest instance.
+ * Constructs a GetModelsRequestPrivate object for APIGateway \a action with,
+ * public implementation \a q.
  */
 GetModelsRequestPrivate::GetModelsRequestPrivate(
     const APIGatewayRequest::Action action, GetModelsRequest * const q)
@@ -109,15 +98,10 @@ GetModelsRequestPrivate::GetModelsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetModelsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetModelsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetModelsRequest instance.
  */
 GetModelsRequestPrivate::GetModelsRequestPrivate(
     const GetModelsRequestPrivate &other, GetModelsRequest * const q)

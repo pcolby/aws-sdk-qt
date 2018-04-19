@@ -27,10 +27,9 @@ namespace ApplicationDiscoveryService {
 
 /*!
  * \class QtAws::ApplicationDiscoveryService::DeleteTagsRequest
- *
  * \brief The DeleteTagsRequest class provides an interface for ApplicationDiscoveryService DeleteTags requests.
  *
- * \ingroup ApplicationDiscoveryService
+ * \inmodule QtAwsApplicationDiscoveryService
  *
  *  <fullname>AWS Application Discovery Service</fullname>
  * 
@@ -101,9 +100,7 @@ namespace ApplicationDiscoveryService {
  */
 
 /*!
- * @brief  Constructs a new DeleteTagsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteTagsRequest::DeleteTagsRequest(const DeleteTagsRequest &other)
     : ApplicationDiscoveryServiceRequest(new DeleteTagsRequestPrivate(*other.d_func(), this))
@@ -112,7 +109,7 @@ DeleteTagsRequest::DeleteTagsRequest(const DeleteTagsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DeleteTagsRequest object.
+ * Constructs a DeleteTagsRequest object.
  */
 DeleteTagsRequest::DeleteTagsRequest()
     : ApplicationDiscoveryServiceRequest(new DeleteTagsRequestPrivate(ApplicationDiscoveryServiceRequest::DeleteTagsAction, this))
@@ -130,14 +127,9 @@ bool DeleteTagsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteTagsResponse object.
+ * Returns a DeleteTagsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteTagsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ApplicationDiscoveryServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteTagsRequest::response(QNetworkReply * const reply) const
 {
@@ -145,20 +137,17 @@ QtAws::Core::AwsAbstractResponse * DeleteTagsRequest::response(QNetworkReply * c
 }
 
 /*!
- * @internal
+ * \class QtAws::ApplicationDiscoveryService::DeleteTagsRequestPrivate
+ * \brief The DeleteTagsRequestPrivate class provides private implementation for DeleteTagsRequest.
+ * \internal
  *
- * @class  DeleteTagsRequestPrivate
- *
- * @brief  Private implementation for DeleteTagsRequest.
+ * \inmodule QtAwsApplicationDiscoveryService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteTagsRequestPrivate object.
- *
- * @param  action  ApplicationDiscoveryService action being performed.
- * @param  q       Pointer to this object's public DeleteTagsRequest instance.
+ * Constructs a DeleteTagsRequestPrivate object for ApplicationDiscoveryService \a action with,
+ * public implementation \a q.
  */
 DeleteTagsRequestPrivate::DeleteTagsRequestPrivate(
     const ApplicationDiscoveryServiceRequest::Action action, DeleteTagsRequest * const q)
@@ -168,15 +157,10 @@ DeleteTagsRequestPrivate::DeleteTagsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteTagsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteTagsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteTagsRequest instance.
  */
 DeleteTagsRequestPrivate::DeleteTagsRequestPrivate(
     const DeleteTagsRequestPrivate &other, DeleteTagsRequest * const q)

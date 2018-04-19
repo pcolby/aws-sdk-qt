@@ -48,6 +48,9 @@
 /*!
  * \namespace QtAws::MediaStore
  * \brief The QtAws::MediaStore contains stuff...
+ *
+ * \inmodule QtAwsMediaStore
+ *
  * @todo Move this to a separate template file.
  */
 
@@ -99,7 +102,7 @@ MediaStoreClient::MediaStoreClient(
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * \a  AwsEndpoint::getEndpoint()
+ * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
 MediaStoreClient::MediaStoreClient(
     const QUrl &endpoint,

@@ -27,10 +27,9 @@ namespace ElasticLoadBalancing {
 
 /*!
  * \class QtAws::ElasticLoadBalancing::DeregisterInstancesFromLoadBalancerRequest
- *
  * \brief The DeregisterInstancesFromLoadBalancerRequest class provides an interface for ElasticLoadBalancing DeregisterInstancesFromLoadBalancer requests.
  *
- * \ingroup ElasticLoadBalancing
+ * \inmodule QtAwsElasticLoadBalancing
  *
  *  <fullname>Elastic Load Balancing</fullname>
  * 
@@ -65,9 +64,7 @@ namespace ElasticLoadBalancing {
  */
 
 /*!
- * @brief  Constructs a new DeregisterInstancesFromLoadBalancerRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeregisterInstancesFromLoadBalancerRequest::DeregisterInstancesFromLoadBalancerRequest(const DeregisterInstancesFromLoadBalancerRequest &other)
     : ElasticLoadBalancingRequest(new DeregisterInstancesFromLoadBalancerRequestPrivate(*other.d_func(), this))
@@ -76,7 +73,7 @@ DeregisterInstancesFromLoadBalancerRequest::DeregisterInstancesFromLoadBalancerR
 }
 
 /*!
- * @brief  Constructs a new DeregisterInstancesFromLoadBalancerRequest object.
+ * Constructs a DeregisterInstancesFromLoadBalancerRequest object.
  */
 DeregisterInstancesFromLoadBalancerRequest::DeregisterInstancesFromLoadBalancerRequest()
     : ElasticLoadBalancingRequest(new DeregisterInstancesFromLoadBalancerRequestPrivate(ElasticLoadBalancingRequest::DeregisterInstancesFromLoadBalancerAction, this))
@@ -94,14 +91,9 @@ bool DeregisterInstancesFromLoadBalancerRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeregisterInstancesFromLoadBalancerResponse object.
+ * Returns a DeregisterInstancesFromLoadBalancerResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeregisterInstancesFromLoadBalancerResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ElasticLoadBalancingClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeregisterInstancesFromLoadBalancerRequest::response(QNetworkReply * const reply) const
 {
@@ -109,20 +101,17 @@ QtAws::Core::AwsAbstractResponse * DeregisterInstancesFromLoadBalancerRequest::r
 }
 
 /*!
- * @internal
+ * \class QtAws::ElasticLoadBalancing::DeregisterInstancesFromLoadBalancerRequestPrivate
+ * \brief The DeregisterInstancesFromLoadBalancerRequestPrivate class provides private implementation for DeregisterInstancesFromLoadBalancerRequest.
+ * \internal
  *
- * @class  DeregisterInstancesFromLoadBalancerRequestPrivate
- *
- * @brief  Private implementation for DeregisterInstancesFromLoadBalancerRequest.
+ * \inmodule QtAwsElasticLoadBalancing
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeregisterInstancesFromLoadBalancerRequestPrivate object.
- *
- * @param  action  ElasticLoadBalancing action being performed.
- * @param  q       Pointer to this object's public DeregisterInstancesFromLoadBalancerRequest instance.
+ * Constructs a DeregisterInstancesFromLoadBalancerRequestPrivate object for ElasticLoadBalancing \a action with,
+ * public implementation \a q.
  */
 DeregisterInstancesFromLoadBalancerRequestPrivate::DeregisterInstancesFromLoadBalancerRequestPrivate(
     const ElasticLoadBalancingRequest::Action action, DeregisterInstancesFromLoadBalancerRequest * const q)
@@ -132,15 +121,10 @@ DeregisterInstancesFromLoadBalancerRequestPrivate::DeregisterInstancesFromLoadBa
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeregisterInstancesFromLoadBalancerRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeregisterInstancesFromLoadBalancerRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeregisterInstancesFromLoadBalancerRequest instance.
  */
 DeregisterInstancesFromLoadBalancerRequestPrivate::DeregisterInstancesFromLoadBalancerRequestPrivate(
     const DeregisterInstancesFromLoadBalancerRequestPrivate &other, DeregisterInstancesFromLoadBalancerRequest * const q)

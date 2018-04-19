@@ -27,10 +27,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::DeleteDBClusterSnapshotRequest
- *
  * \brief The DeleteDBClusterSnapshotRequest class provides an interface for RDS DeleteDBClusterSnapshot requests.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -101,9 +100,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new DeleteDBClusterSnapshotRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteDBClusterSnapshotRequest::DeleteDBClusterSnapshotRequest(const DeleteDBClusterSnapshotRequest &other)
     : RDSRequest(new DeleteDBClusterSnapshotRequestPrivate(*other.d_func(), this))
@@ -112,7 +109,7 @@ DeleteDBClusterSnapshotRequest::DeleteDBClusterSnapshotRequest(const DeleteDBClu
 }
 
 /*!
- * @brief  Constructs a new DeleteDBClusterSnapshotRequest object.
+ * Constructs a DeleteDBClusterSnapshotRequest object.
  */
 DeleteDBClusterSnapshotRequest::DeleteDBClusterSnapshotRequest()
     : RDSRequest(new DeleteDBClusterSnapshotRequestPrivate(RDSRequest::DeleteDBClusterSnapshotAction, this))
@@ -130,14 +127,9 @@ bool DeleteDBClusterSnapshotRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteDBClusterSnapshotResponse object.
+ * Returns a DeleteDBClusterSnapshotResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteDBClusterSnapshotResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RDSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteDBClusterSnapshotRequest::response(QNetworkReply * const reply) const
 {
@@ -145,20 +137,17 @@ QtAws::Core::AwsAbstractResponse * DeleteDBClusterSnapshotRequest::response(QNet
 }
 
 /*!
- * @internal
+ * \class QtAws::RDS::DeleteDBClusterSnapshotRequestPrivate
+ * \brief The DeleteDBClusterSnapshotRequestPrivate class provides private implementation for DeleteDBClusterSnapshotRequest.
+ * \internal
  *
- * @class  DeleteDBClusterSnapshotRequestPrivate
- *
- * @brief  Private implementation for DeleteDBClusterSnapshotRequest.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteDBClusterSnapshotRequestPrivate object.
- *
- * @param  action  RDS action being performed.
- * @param  q       Pointer to this object's public DeleteDBClusterSnapshotRequest instance.
+ * Constructs a DeleteDBClusterSnapshotRequestPrivate object for RDS \a action with,
+ * public implementation \a q.
  */
 DeleteDBClusterSnapshotRequestPrivate::DeleteDBClusterSnapshotRequestPrivate(
     const RDSRequest::Action action, DeleteDBClusterSnapshotRequest * const q)
@@ -168,15 +157,10 @@ DeleteDBClusterSnapshotRequestPrivate::DeleteDBClusterSnapshotRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteDBClusterSnapshotRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteDBClusterSnapshotRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteDBClusterSnapshotRequest instance.
  */
 DeleteDBClusterSnapshotRequestPrivate::DeleteDBClusterSnapshotRequestPrivate(
     const DeleteDBClusterSnapshotRequestPrivate &other, DeleteDBClusterSnapshotRequest * const q)

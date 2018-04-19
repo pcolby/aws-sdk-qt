@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DeleteFpgaImageRequest
- *
  * \brief The DeleteFpgaImageRequest class provides an interface for EC2 DeleteFpgaImage requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DeleteFpgaImageRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteFpgaImageRequest::DeleteFpgaImageRequest(const DeleteFpgaImageRequest &other)
     : EC2Request(new DeleteFpgaImageRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ DeleteFpgaImageRequest::DeleteFpgaImageRequest(const DeleteFpgaImageRequest &oth
 }
 
 /*!
- * @brief  Constructs a new DeleteFpgaImageRequest object.
+ * Constructs a DeleteFpgaImageRequest object.
  */
 DeleteFpgaImageRequest::DeleteFpgaImageRequest()
     : EC2Request(new DeleteFpgaImageRequestPrivate(EC2Request::DeleteFpgaImageAction, this))
@@ -70,14 +67,9 @@ bool DeleteFpgaImageRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteFpgaImageResponse object.
+ * Returns a DeleteFpgaImageResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteFpgaImageResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteFpgaImageRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * DeleteFpgaImageRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::DeleteFpgaImageRequestPrivate
+ * \brief The DeleteFpgaImageRequestPrivate class provides private implementation for DeleteFpgaImageRequest.
+ * \internal
  *
- * @class  DeleteFpgaImageRequestPrivate
- *
- * @brief  Private implementation for DeleteFpgaImageRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteFpgaImageRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public DeleteFpgaImageRequest instance.
+ * Constructs a DeleteFpgaImageRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 DeleteFpgaImageRequestPrivate::DeleteFpgaImageRequestPrivate(
     const EC2Request::Action action, DeleteFpgaImageRequest * const q)
@@ -108,15 +97,10 @@ DeleteFpgaImageRequestPrivate::DeleteFpgaImageRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteFpgaImageRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteFpgaImageRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteFpgaImageRequest instance.
  */
 DeleteFpgaImageRequestPrivate::DeleteFpgaImageRequestPrivate(
     const DeleteFpgaImageRequestPrivate &other, DeleteFpgaImageRequest * const q)

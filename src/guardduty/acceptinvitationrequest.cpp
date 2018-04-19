@@ -27,19 +27,16 @@ namespace GuardDuty {
 
 /*!
  * \class QtAws::GuardDuty::AcceptInvitationRequest
- *
  * \brief The AcceptInvitationRequest class provides an interface for GuardDuty AcceptInvitation requests.
  *
- * \ingroup GuardDuty
+ * \inmodule QtAwsGuardDuty
  *
  *
  * \sa GuardDutyClient::acceptInvitation
  */
 
 /*!
- * @brief  Constructs a new AcceptInvitationRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AcceptInvitationRequest::AcceptInvitationRequest(const AcceptInvitationRequest &other)
     : GuardDutyRequest(new AcceptInvitationRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ AcceptInvitationRequest::AcceptInvitationRequest(const AcceptInvitationRequest &
 }
 
 /*!
- * @brief  Constructs a new AcceptInvitationRequest object.
+ * Constructs a AcceptInvitationRequest object.
  */
 AcceptInvitationRequest::AcceptInvitationRequest()
     : GuardDutyRequest(new AcceptInvitationRequestPrivate(GuardDutyRequest::AcceptInvitationAction, this))
@@ -66,14 +63,9 @@ bool AcceptInvitationRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AcceptInvitationResponse object.
+ * Returns a AcceptInvitationResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AcceptInvitationResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GuardDutyClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AcceptInvitationRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * AcceptInvitationRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::GuardDuty::AcceptInvitationRequestPrivate
+ * \brief The AcceptInvitationRequestPrivate class provides private implementation for AcceptInvitationRequest.
+ * \internal
  *
- * @class  AcceptInvitationRequestPrivate
- *
- * @brief  Private implementation for AcceptInvitationRequest.
+ * \inmodule QtAwsGuardDuty
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AcceptInvitationRequestPrivate object.
- *
- * @param  action  GuardDuty action being performed.
- * @param  q       Pointer to this object's public AcceptInvitationRequest instance.
+ * Constructs a AcceptInvitationRequestPrivate object for GuardDuty \a action with,
+ * public implementation \a q.
  */
 AcceptInvitationRequestPrivate::AcceptInvitationRequestPrivate(
     const GuardDutyRequest::Action action, AcceptInvitationRequest * const q)
@@ -104,15 +93,10 @@ AcceptInvitationRequestPrivate::AcceptInvitationRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AcceptInvitationRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AcceptInvitationRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AcceptInvitationRequest instance.
  */
 AcceptInvitationRequestPrivate::AcceptInvitationRequestPrivate(
     const AcceptInvitationRequestPrivate &other, AcceptInvitationRequest * const q)

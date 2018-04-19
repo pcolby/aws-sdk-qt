@@ -27,10 +27,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::DeleteGroupPolicyRequest
- *
  * \brief The DeleteGroupPolicyRequest class provides an interface for IAM DeleteGroupPolicy requests.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -102,9 +101,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new DeleteGroupPolicyRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteGroupPolicyRequest::DeleteGroupPolicyRequest(const DeleteGroupPolicyRequest &other)
     : IAMRequest(new DeleteGroupPolicyRequestPrivate(*other.d_func(), this))
@@ -113,7 +110,7 @@ DeleteGroupPolicyRequest::DeleteGroupPolicyRequest(const DeleteGroupPolicyReques
 }
 
 /*!
- * @brief  Constructs a new DeleteGroupPolicyRequest object.
+ * Constructs a DeleteGroupPolicyRequest object.
  */
 DeleteGroupPolicyRequest::DeleteGroupPolicyRequest()
     : IAMRequest(new DeleteGroupPolicyRequestPrivate(IAMRequest::DeleteGroupPolicyAction, this))
@@ -131,14 +128,9 @@ bool DeleteGroupPolicyRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteGroupPolicyResponse object.
+ * Returns a DeleteGroupPolicyResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteGroupPolicyResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IAMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteGroupPolicyRequest::response(QNetworkReply * const reply) const
 {
@@ -146,20 +138,17 @@ QtAws::Core::AwsAbstractResponse * DeleteGroupPolicyRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::IAM::DeleteGroupPolicyRequestPrivate
+ * \brief The DeleteGroupPolicyRequestPrivate class provides private implementation for DeleteGroupPolicyRequest.
+ * \internal
  *
- * @class  DeleteGroupPolicyRequestPrivate
- *
- * @brief  Private implementation for DeleteGroupPolicyRequest.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteGroupPolicyRequestPrivate object.
- *
- * @param  action  IAM action being performed.
- * @param  q       Pointer to this object's public DeleteGroupPolicyRequest instance.
+ * Constructs a DeleteGroupPolicyRequestPrivate object for IAM \a action with,
+ * public implementation \a q.
  */
 DeleteGroupPolicyRequestPrivate::DeleteGroupPolicyRequestPrivate(
     const IAMRequest::Action action, DeleteGroupPolicyRequest * const q)
@@ -169,15 +158,10 @@ DeleteGroupPolicyRequestPrivate::DeleteGroupPolicyRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteGroupPolicyRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteGroupPolicyRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteGroupPolicyRequest instance.
  */
 DeleteGroupPolicyRequestPrivate::DeleteGroupPolicyRequestPrivate(
     const DeleteGroupPolicyRequestPrivate &other, DeleteGroupPolicyRequest * const q)

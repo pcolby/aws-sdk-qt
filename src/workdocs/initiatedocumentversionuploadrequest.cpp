@@ -27,10 +27,9 @@ namespace WorkDocs {
 
 /*!
  * \class QtAws::WorkDocs::InitiateDocumentVersionUploadRequest
- *
  * \brief The InitiateDocumentVersionUploadRequest class provides an interface for WorkDocs InitiateDocumentVersionUpload requests.
  *
- * \ingroup WorkDocs
+ * \inmodule QtAwsWorkDocs
  *
  *  The WorkDocs API is designed for the following use
  * 
@@ -66,9 +65,7 @@ namespace WorkDocs {
  */
 
 /*!
- * @brief  Constructs a new InitiateDocumentVersionUploadRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 InitiateDocumentVersionUploadRequest::InitiateDocumentVersionUploadRequest(const InitiateDocumentVersionUploadRequest &other)
     : WorkDocsRequest(new InitiateDocumentVersionUploadRequestPrivate(*other.d_func(), this))
@@ -77,7 +74,7 @@ InitiateDocumentVersionUploadRequest::InitiateDocumentVersionUploadRequest(const
 }
 
 /*!
- * @brief  Constructs a new InitiateDocumentVersionUploadRequest object.
+ * Constructs a InitiateDocumentVersionUploadRequest object.
  */
 InitiateDocumentVersionUploadRequest::InitiateDocumentVersionUploadRequest()
     : WorkDocsRequest(new InitiateDocumentVersionUploadRequestPrivate(WorkDocsRequest::InitiateDocumentVersionUploadAction, this))
@@ -95,14 +92,9 @@ bool InitiateDocumentVersionUploadRequest::isValid() const
 
 
 /*!
- * @brief  Construct an InitiateDocumentVersionUploadResponse object.
+ * Returns a InitiateDocumentVersionUploadResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An InitiateDocumentVersionUploadResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WorkDocsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * InitiateDocumentVersionUploadRequest::response(QNetworkReply * const reply) const
 {
@@ -110,20 +102,17 @@ QtAws::Core::AwsAbstractResponse * InitiateDocumentVersionUploadRequest::respons
 }
 
 /*!
- * @internal
+ * \class QtAws::WorkDocs::InitiateDocumentVersionUploadRequestPrivate
+ * \brief The InitiateDocumentVersionUploadRequestPrivate class provides private implementation for InitiateDocumentVersionUploadRequest.
+ * \internal
  *
- * @class  InitiateDocumentVersionUploadRequestPrivate
- *
- * @brief  Private implementation for InitiateDocumentVersionUploadRequest.
+ * \inmodule QtAwsWorkDocs
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new InitiateDocumentVersionUploadRequestPrivate object.
- *
- * @param  action  WorkDocs action being performed.
- * @param  q       Pointer to this object's public InitiateDocumentVersionUploadRequest instance.
+ * Constructs a InitiateDocumentVersionUploadRequestPrivate object for WorkDocs \a action with,
+ * public implementation \a q.
  */
 InitiateDocumentVersionUploadRequestPrivate::InitiateDocumentVersionUploadRequestPrivate(
     const WorkDocsRequest::Action action, InitiateDocumentVersionUploadRequest * const q)
@@ -133,15 +122,10 @@ InitiateDocumentVersionUploadRequestPrivate::InitiateDocumentVersionUploadReques
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new InitiateDocumentVersionUploadRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the InitiateDocumentVersionUploadRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public InitiateDocumentVersionUploadRequest instance.
  */
 InitiateDocumentVersionUploadRequestPrivate::InitiateDocumentVersionUploadRequestPrivate(
     const InitiateDocumentVersionUploadRequestPrivate &other, InitiateDocumentVersionUploadRequest * const q)

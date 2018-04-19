@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DescribeVolumeAttributeRequest
- *
  * \brief The DescribeVolumeAttributeRequest class provides an interface for EC2 DescribeVolumeAttribute requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DescribeVolumeAttributeRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeVolumeAttributeRequest::DescribeVolumeAttributeRequest(const DescribeVolumeAttributeRequest &other)
     : EC2Request(new DescribeVolumeAttributeRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ DescribeVolumeAttributeRequest::DescribeVolumeAttributeRequest(const DescribeVol
 }
 
 /*!
- * @brief  Constructs a new DescribeVolumeAttributeRequest object.
+ * Constructs a DescribeVolumeAttributeRequest object.
  */
 DescribeVolumeAttributeRequest::DescribeVolumeAttributeRequest()
     : EC2Request(new DescribeVolumeAttributeRequestPrivate(EC2Request::DescribeVolumeAttributeAction, this))
@@ -70,14 +67,9 @@ bool DescribeVolumeAttributeRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeVolumeAttributeResponse object.
+ * Returns a DescribeVolumeAttributeResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeVolumeAttributeResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeVolumeAttributeRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * DescribeVolumeAttributeRequest::response(QNet
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::DescribeVolumeAttributeRequestPrivate
+ * \brief The DescribeVolumeAttributeRequestPrivate class provides private implementation for DescribeVolumeAttributeRequest.
+ * \internal
  *
- * @class  DescribeVolumeAttributeRequestPrivate
- *
- * @brief  Private implementation for DescribeVolumeAttributeRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeVolumeAttributeRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public DescribeVolumeAttributeRequest instance.
+ * Constructs a DescribeVolumeAttributeRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 DescribeVolumeAttributeRequestPrivate::DescribeVolumeAttributeRequestPrivate(
     const EC2Request::Action action, DescribeVolumeAttributeRequest * const q)
@@ -108,15 +97,10 @@ DescribeVolumeAttributeRequestPrivate::DescribeVolumeAttributeRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeVolumeAttributeRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeVolumeAttributeRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeVolumeAttributeRequest instance.
  */
 DescribeVolumeAttributeRequestPrivate::DescribeVolumeAttributeRequestPrivate(
     const DescribeVolumeAttributeRequestPrivate &other, DescribeVolumeAttributeRequest * const q)

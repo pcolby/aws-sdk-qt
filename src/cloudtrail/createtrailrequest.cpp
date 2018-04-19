@@ -27,10 +27,9 @@ namespace CloudTrail {
 
 /*!
  * \class QtAws::CloudTrail::CreateTrailRequest
- *
  * \brief The CreateTrailRequest class provides an interface for CloudTrail CreateTrail requests.
  *
- * \ingroup CloudTrail
+ * \inmodule QtAwsCloudTrail
  *
  *  <fullname>AWS CloudTrail</fullname>
  * 
@@ -60,9 +59,7 @@ namespace CloudTrail {
  */
 
 /*!
- * @brief  Constructs a new CreateTrailRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateTrailRequest::CreateTrailRequest(const CreateTrailRequest &other)
     : CloudTrailRequest(new CreateTrailRequestPrivate(*other.d_func(), this))
@@ -71,7 +68,7 @@ CreateTrailRequest::CreateTrailRequest(const CreateTrailRequest &other)
 }
 
 /*!
- * @brief  Constructs a new CreateTrailRequest object.
+ * Constructs a CreateTrailRequest object.
  */
 CreateTrailRequest::CreateTrailRequest()
     : CloudTrailRequest(new CreateTrailRequestPrivate(CloudTrailRequest::CreateTrailAction, this))
@@ -89,14 +86,9 @@ bool CreateTrailRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateTrailResponse object.
+ * Returns a CreateTrailResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateTrailResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudTrailClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateTrailRequest::response(QNetworkReply * const reply) const
 {
@@ -104,20 +96,17 @@ QtAws::Core::AwsAbstractResponse * CreateTrailRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudTrail::CreateTrailRequestPrivate
+ * \brief The CreateTrailRequestPrivate class provides private implementation for CreateTrailRequest.
+ * \internal
  *
- * @class  CreateTrailRequestPrivate
- *
- * @brief  Private implementation for CreateTrailRequest.
+ * \inmodule QtAwsCloudTrail
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateTrailRequestPrivate object.
- *
- * @param  action  CloudTrail action being performed.
- * @param  q       Pointer to this object's public CreateTrailRequest instance.
+ * Constructs a CreateTrailRequestPrivate object for CloudTrail \a action with,
+ * public implementation \a q.
  */
 CreateTrailRequestPrivate::CreateTrailRequestPrivate(
     const CloudTrailRequest::Action action, CreateTrailRequest * const q)
@@ -127,15 +116,10 @@ CreateTrailRequestPrivate::CreateTrailRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateTrailRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateTrailRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateTrailRequest instance.
  */
 CreateTrailRequestPrivate::CreateTrailRequestPrivate(
     const CreateTrailRequestPrivate &other, CreateTrailRequest * const q)

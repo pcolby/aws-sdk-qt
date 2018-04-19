@@ -27,10 +27,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::UpdateOpenIDConnectProviderThumbprintRequest
- *
  * \brief The UpdateOpenIDConnectProviderThumbprintRequest class provides an interface for IAM UpdateOpenIDConnectProviderThumbprint requests.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -102,9 +101,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new UpdateOpenIDConnectProviderThumbprintRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateOpenIDConnectProviderThumbprintRequest::UpdateOpenIDConnectProviderThumbprintRequest(const UpdateOpenIDConnectProviderThumbprintRequest &other)
     : IAMRequest(new UpdateOpenIDConnectProviderThumbprintRequestPrivate(*other.d_func(), this))
@@ -113,7 +110,7 @@ UpdateOpenIDConnectProviderThumbprintRequest::UpdateOpenIDConnectProviderThumbpr
 }
 
 /*!
- * @brief  Constructs a new UpdateOpenIDConnectProviderThumbprintRequest object.
+ * Constructs a UpdateOpenIDConnectProviderThumbprintRequest object.
  */
 UpdateOpenIDConnectProviderThumbprintRequest::UpdateOpenIDConnectProviderThumbprintRequest()
     : IAMRequest(new UpdateOpenIDConnectProviderThumbprintRequestPrivate(IAMRequest::UpdateOpenIDConnectProviderThumbprintAction, this))
@@ -131,14 +128,9 @@ bool UpdateOpenIDConnectProviderThumbprintRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateOpenIDConnectProviderThumbprintResponse object.
+ * Returns a UpdateOpenIDConnectProviderThumbprintResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateOpenIDConnectProviderThumbprintResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IAMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateOpenIDConnectProviderThumbprintRequest::response(QNetworkReply * const reply) const
 {
@@ -146,20 +138,17 @@ QtAws::Core::AwsAbstractResponse * UpdateOpenIDConnectProviderThumbprintRequest:
 }
 
 /*!
- * @internal
+ * \class QtAws::IAM::UpdateOpenIDConnectProviderThumbprintRequestPrivate
+ * \brief The UpdateOpenIDConnectProviderThumbprintRequestPrivate class provides private implementation for UpdateOpenIDConnectProviderThumbprintRequest.
+ * \internal
  *
- * @class  UpdateOpenIDConnectProviderThumbprintRequestPrivate
- *
- * @brief  Private implementation for UpdateOpenIDConnectProviderThumbprintRequest.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateOpenIDConnectProviderThumbprintRequestPrivate object.
- *
- * @param  action  IAM action being performed.
- * @param  q       Pointer to this object's public UpdateOpenIDConnectProviderThumbprintRequest instance.
+ * Constructs a UpdateOpenIDConnectProviderThumbprintRequestPrivate object for IAM \a action with,
+ * public implementation \a q.
  */
 UpdateOpenIDConnectProviderThumbprintRequestPrivate::UpdateOpenIDConnectProviderThumbprintRequestPrivate(
     const IAMRequest::Action action, UpdateOpenIDConnectProviderThumbprintRequest * const q)
@@ -169,15 +158,10 @@ UpdateOpenIDConnectProviderThumbprintRequestPrivate::UpdateOpenIDConnectProvider
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateOpenIDConnectProviderThumbprintRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateOpenIDConnectProviderThumbprintRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateOpenIDConnectProviderThumbprintRequest instance.
  */
 UpdateOpenIDConnectProviderThumbprintRequestPrivate::UpdateOpenIDConnectProviderThumbprintRequestPrivate(
     const UpdateOpenIDConnectProviderThumbprintRequestPrivate &other, UpdateOpenIDConnectProviderThumbprintRequest * const q)

@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DescribeVpcAttributeRequest
- *
  * \brief The DescribeVpcAttributeRequest class provides an interface for EC2 DescribeVpcAttribute requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DescribeVpcAttributeRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeVpcAttributeRequest::DescribeVpcAttributeRequest(const DescribeVpcAttributeRequest &other)
     : EC2Request(new DescribeVpcAttributeRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ DescribeVpcAttributeRequest::DescribeVpcAttributeRequest(const DescribeVpcAttrib
 }
 
 /*!
- * @brief  Constructs a new DescribeVpcAttributeRequest object.
+ * Constructs a DescribeVpcAttributeRequest object.
  */
 DescribeVpcAttributeRequest::DescribeVpcAttributeRequest()
     : EC2Request(new DescribeVpcAttributeRequestPrivate(EC2Request::DescribeVpcAttributeAction, this))
@@ -70,14 +67,9 @@ bool DescribeVpcAttributeRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeVpcAttributeResponse object.
+ * Returns a DescribeVpcAttributeResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeVpcAttributeResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeVpcAttributeRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * DescribeVpcAttributeRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::DescribeVpcAttributeRequestPrivate
+ * \brief The DescribeVpcAttributeRequestPrivate class provides private implementation for DescribeVpcAttributeRequest.
+ * \internal
  *
- * @class  DescribeVpcAttributeRequestPrivate
- *
- * @brief  Private implementation for DescribeVpcAttributeRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeVpcAttributeRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public DescribeVpcAttributeRequest instance.
+ * Constructs a DescribeVpcAttributeRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 DescribeVpcAttributeRequestPrivate::DescribeVpcAttributeRequestPrivate(
     const EC2Request::Action action, DescribeVpcAttributeRequest * const q)
@@ -108,15 +97,10 @@ DescribeVpcAttributeRequestPrivate::DescribeVpcAttributeRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeVpcAttributeRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeVpcAttributeRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeVpcAttributeRequest instance.
  */
 DescribeVpcAttributeRequestPrivate::DescribeVpcAttributeRequestPrivate(
     const DescribeVpcAttributeRequestPrivate &other, DescribeVpcAttributeRequest * const q)

@@ -27,19 +27,16 @@ namespace GuardDuty {
 
 /*!
  * \class QtAws::GuardDuty::GetMembersRequest
- *
  * \brief The GetMembersRequest class provides an interface for GuardDuty GetMembers requests.
  *
- * \ingroup GuardDuty
+ * \inmodule QtAwsGuardDuty
  *
  *
  * \sa GuardDutyClient::getMembers
  */
 
 /*!
- * @brief  Constructs a new GetMembersRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetMembersRequest::GetMembersRequest(const GetMembersRequest &other)
     : GuardDutyRequest(new GetMembersRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ GetMembersRequest::GetMembersRequest(const GetMembersRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetMembersRequest object.
+ * Constructs a GetMembersRequest object.
  */
 GetMembersRequest::GetMembersRequest()
     : GuardDutyRequest(new GetMembersRequestPrivate(GuardDutyRequest::GetMembersAction, this))
@@ -66,14 +63,9 @@ bool GetMembersRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetMembersResponse object.
+ * Returns a GetMembersResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetMembersResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GuardDutyClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetMembersRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * GetMembersRequest::response(QNetworkReply * c
 }
 
 /*!
- * @internal
+ * \class QtAws::GuardDuty::GetMembersRequestPrivate
+ * \brief The GetMembersRequestPrivate class provides private implementation for GetMembersRequest.
+ * \internal
  *
- * @class  GetMembersRequestPrivate
- *
- * @brief  Private implementation for GetMembersRequest.
+ * \inmodule QtAwsGuardDuty
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetMembersRequestPrivate object.
- *
- * @param  action  GuardDuty action being performed.
- * @param  q       Pointer to this object's public GetMembersRequest instance.
+ * Constructs a GetMembersRequestPrivate object for GuardDuty \a action with,
+ * public implementation \a q.
  */
 GetMembersRequestPrivate::GetMembersRequestPrivate(
     const GuardDutyRequest::Action action, GetMembersRequest * const q)
@@ -104,15 +93,10 @@ GetMembersRequestPrivate::GetMembersRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetMembersRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetMembersRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetMembersRequest instance.
  */
 GetMembersRequestPrivate::GetMembersRequestPrivate(
     const GetMembersRequestPrivate &other, GetMembersRequest * const q)

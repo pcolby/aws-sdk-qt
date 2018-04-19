@@ -27,10 +27,9 @@ namespace Redshift {
 
 /*!
  * \class QtAws::Redshift::EnableSnapshotCopyRequest
- *
  * \brief The EnableSnapshotCopyRequest class provides an interface for Redshift EnableSnapshotCopy requests.
  *
- * \ingroup Redshift
+ * \inmodule QtAwsRedshift
  *
  *  <fullname>Amazon Redshift</fullname>
  * 
@@ -67,9 +66,7 @@ namespace Redshift {
  */
 
 /*!
- * @brief  Constructs a new EnableSnapshotCopyRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 EnableSnapshotCopyRequest::EnableSnapshotCopyRequest(const EnableSnapshotCopyRequest &other)
     : RedshiftRequest(new EnableSnapshotCopyRequestPrivate(*other.d_func(), this))
@@ -78,7 +75,7 @@ EnableSnapshotCopyRequest::EnableSnapshotCopyRequest(const EnableSnapshotCopyReq
 }
 
 /*!
- * @brief  Constructs a new EnableSnapshotCopyRequest object.
+ * Constructs a EnableSnapshotCopyRequest object.
  */
 EnableSnapshotCopyRequest::EnableSnapshotCopyRequest()
     : RedshiftRequest(new EnableSnapshotCopyRequestPrivate(RedshiftRequest::EnableSnapshotCopyAction, this))
@@ -96,14 +93,9 @@ bool EnableSnapshotCopyRequest::isValid() const
 
 
 /*!
- * @brief  Construct an EnableSnapshotCopyResponse object.
+ * Returns a EnableSnapshotCopyResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An EnableSnapshotCopyResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RedshiftClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * EnableSnapshotCopyRequest::response(QNetworkReply * const reply) const
 {
@@ -111,20 +103,17 @@ QtAws::Core::AwsAbstractResponse * EnableSnapshotCopyRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::Redshift::EnableSnapshotCopyRequestPrivate
+ * \brief The EnableSnapshotCopyRequestPrivate class provides private implementation for EnableSnapshotCopyRequest.
+ * \internal
  *
- * @class  EnableSnapshotCopyRequestPrivate
- *
- * @brief  Private implementation for EnableSnapshotCopyRequest.
+ * \inmodule QtAwsRedshift
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new EnableSnapshotCopyRequestPrivate object.
- *
- * @param  action  Redshift action being performed.
- * @param  q       Pointer to this object's public EnableSnapshotCopyRequest instance.
+ * Constructs a EnableSnapshotCopyRequestPrivate object for Redshift \a action with,
+ * public implementation \a q.
  */
 EnableSnapshotCopyRequestPrivate::EnableSnapshotCopyRequestPrivate(
     const RedshiftRequest::Action action, EnableSnapshotCopyRequest * const q)
@@ -134,15 +123,10 @@ EnableSnapshotCopyRequestPrivate::EnableSnapshotCopyRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new EnableSnapshotCopyRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the EnableSnapshotCopyRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public EnableSnapshotCopyRequest instance.
  */
 EnableSnapshotCopyRequestPrivate::EnableSnapshotCopyRequestPrivate(
     const EnableSnapshotCopyRequestPrivate &other, EnableSnapshotCopyRequest * const q)

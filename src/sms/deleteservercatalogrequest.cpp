@@ -27,19 +27,16 @@ namespace SMS {
 
 /*!
  * \class QtAws::SMS::DeleteServerCatalogRequest
- *
  * \brief The DeleteServerCatalogRequest class provides an interface for SMS DeleteServerCatalog requests.
  *
- * \ingroup SMS
+ * \inmodule QtAwsSMS
  *
  *
  * \sa SMSClient::deleteServerCatalog
  */
 
 /*!
- * @brief  Constructs a new DeleteServerCatalogRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteServerCatalogRequest::DeleteServerCatalogRequest(const DeleteServerCatalogRequest &other)
     : SMSRequest(new DeleteServerCatalogRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ DeleteServerCatalogRequest::DeleteServerCatalogRequest(const DeleteServerCatalog
 }
 
 /*!
- * @brief  Constructs a new DeleteServerCatalogRequest object.
+ * Constructs a DeleteServerCatalogRequest object.
  */
 DeleteServerCatalogRequest::DeleteServerCatalogRequest()
     : SMSRequest(new DeleteServerCatalogRequestPrivate(SMSRequest::DeleteServerCatalogAction, this))
@@ -66,14 +63,9 @@ bool DeleteServerCatalogRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteServerCatalogResponse object.
+ * Returns a DeleteServerCatalogResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteServerCatalogResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SMSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteServerCatalogRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * DeleteServerCatalogRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::SMS::DeleteServerCatalogRequestPrivate
+ * \brief The DeleteServerCatalogRequestPrivate class provides private implementation for DeleteServerCatalogRequest.
+ * \internal
  *
- * @class  DeleteServerCatalogRequestPrivate
- *
- * @brief  Private implementation for DeleteServerCatalogRequest.
+ * \inmodule QtAwsSMS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteServerCatalogRequestPrivate object.
- *
- * @param  action  SMS action being performed.
- * @param  q       Pointer to this object's public DeleteServerCatalogRequest instance.
+ * Constructs a DeleteServerCatalogRequestPrivate object for SMS \a action with,
+ * public implementation \a q.
  */
 DeleteServerCatalogRequestPrivate::DeleteServerCatalogRequestPrivate(
     const SMSRequest::Action action, DeleteServerCatalogRequest * const q)
@@ -104,15 +93,10 @@ DeleteServerCatalogRequestPrivate::DeleteServerCatalogRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteServerCatalogRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteServerCatalogRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteServerCatalogRequest instance.
  */
 DeleteServerCatalogRequestPrivate::DeleteServerCatalogRequestPrivate(
     const DeleteServerCatalogRequestPrivate &other, DeleteServerCatalogRequest * const q)

@@ -27,10 +27,9 @@ namespace AlexaForBusiness {
 
 /*!
  * \class QtAws::AlexaForBusiness::UpdateRoomRequest
- *
  * \brief The UpdateRoomRequest class provides an interface for AlexaForBusiness UpdateRoom requests.
  *
- * \ingroup AlexaForBusiness
+ * \inmodule QtAwsAlexaForBusiness
  *
  *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
  *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
@@ -42,9 +41,7 @@ namespace AlexaForBusiness {
  */
 
 /*!
- * @brief  Constructs a new UpdateRoomRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateRoomRequest::UpdateRoomRequest(const UpdateRoomRequest &other)
     : AlexaForBusinessRequest(new UpdateRoomRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ UpdateRoomRequest::UpdateRoomRequest(const UpdateRoomRequest &other)
 }
 
 /*!
- * @brief  Constructs a new UpdateRoomRequest object.
+ * Constructs a UpdateRoomRequest object.
  */
 UpdateRoomRequest::UpdateRoomRequest()
     : AlexaForBusinessRequest(new UpdateRoomRequestPrivate(AlexaForBusinessRequest::UpdateRoomAction, this))
@@ -71,14 +68,9 @@ bool UpdateRoomRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateRoomResponse object.
+ * Returns a UpdateRoomResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateRoomResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AlexaForBusinessClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateRoomRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * UpdateRoomRequest::response(QNetworkReply * c
 }
 
 /*!
- * @internal
+ * \class QtAws::AlexaForBusiness::UpdateRoomRequestPrivate
+ * \brief The UpdateRoomRequestPrivate class provides private implementation for UpdateRoomRequest.
+ * \internal
  *
- * @class  UpdateRoomRequestPrivate
- *
- * @brief  Private implementation for UpdateRoomRequest.
+ * \inmodule QtAwsAlexaForBusiness
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateRoomRequestPrivate object.
- *
- * @param  action  AlexaForBusiness action being performed.
- * @param  q       Pointer to this object's public UpdateRoomRequest instance.
+ * Constructs a UpdateRoomRequestPrivate object for AlexaForBusiness \a action with,
+ * public implementation \a q.
  */
 UpdateRoomRequestPrivate::UpdateRoomRequestPrivate(
     const AlexaForBusinessRequest::Action action, UpdateRoomRequest * const q)
@@ -109,15 +98,10 @@ UpdateRoomRequestPrivate::UpdateRoomRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateRoomRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateRoomRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateRoomRequest instance.
  */
 UpdateRoomRequestPrivate::UpdateRoomRequestPrivate(
     const UpdateRoomRequestPrivate &other, UpdateRoomRequest * const q)

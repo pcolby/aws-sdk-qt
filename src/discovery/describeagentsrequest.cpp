@@ -27,10 +27,9 @@ namespace ApplicationDiscoveryService {
 
 /*!
  * \class QtAws::ApplicationDiscoveryService::DescribeAgentsRequest
- *
  * \brief The DescribeAgentsRequest class provides an interface for ApplicationDiscoveryService DescribeAgents requests.
  *
- * \ingroup ApplicationDiscoveryService
+ * \inmodule QtAwsApplicationDiscoveryService
  *
  *  <fullname>AWS Application Discovery Service</fullname>
  * 
@@ -101,9 +100,7 @@ namespace ApplicationDiscoveryService {
  */
 
 /*!
- * @brief  Constructs a new DescribeAgentsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeAgentsRequest::DescribeAgentsRequest(const DescribeAgentsRequest &other)
     : ApplicationDiscoveryServiceRequest(new DescribeAgentsRequestPrivate(*other.d_func(), this))
@@ -112,7 +109,7 @@ DescribeAgentsRequest::DescribeAgentsRequest(const DescribeAgentsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DescribeAgentsRequest object.
+ * Constructs a DescribeAgentsRequest object.
  */
 DescribeAgentsRequest::DescribeAgentsRequest()
     : ApplicationDiscoveryServiceRequest(new DescribeAgentsRequestPrivate(ApplicationDiscoveryServiceRequest::DescribeAgentsAction, this))
@@ -130,14 +127,9 @@ bool DescribeAgentsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeAgentsResponse object.
+ * Returns a DescribeAgentsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeAgentsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ApplicationDiscoveryServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeAgentsRequest::response(QNetworkReply * const reply) const
 {
@@ -145,20 +137,17 @@ QtAws::Core::AwsAbstractResponse * DescribeAgentsRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::ApplicationDiscoveryService::DescribeAgentsRequestPrivate
+ * \brief The DescribeAgentsRequestPrivate class provides private implementation for DescribeAgentsRequest.
+ * \internal
  *
- * @class  DescribeAgentsRequestPrivate
- *
- * @brief  Private implementation for DescribeAgentsRequest.
+ * \inmodule QtAwsApplicationDiscoveryService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeAgentsRequestPrivate object.
- *
- * @param  action  ApplicationDiscoveryService action being performed.
- * @param  q       Pointer to this object's public DescribeAgentsRequest instance.
+ * Constructs a DescribeAgentsRequestPrivate object for ApplicationDiscoveryService \a action with,
+ * public implementation \a q.
  */
 DescribeAgentsRequestPrivate::DescribeAgentsRequestPrivate(
     const ApplicationDiscoveryServiceRequest::Action action, DescribeAgentsRequest * const q)
@@ -168,15 +157,10 @@ DescribeAgentsRequestPrivate::DescribeAgentsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeAgentsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeAgentsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeAgentsRequest instance.
  */
 DescribeAgentsRequestPrivate::DescribeAgentsRequestPrivate(
     const DescribeAgentsRequestPrivate &other, DescribeAgentsRequest * const q)

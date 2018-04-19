@@ -27,10 +27,9 @@ namespace DAX {
 
 /*!
  * \class QtAws::DAX::CreateSubnetGroupRequest
- *
  * \brief The CreateSubnetGroupRequest class provides an interface for DAX CreateSubnetGroup requests.
  *
- * \ingroup DAX
+ * \inmodule QtAwsDAX
  *
  *  DAX is a managed caching service engineered for Amazon DynamoDB. DAX dramatically speeds up database reads by caching
  *  frequently-accessed data from DynamoDB, so applications can access that data with sub-millisecond latency. You can
@@ -41,9 +40,7 @@ namespace DAX {
  */
 
 /*!
- * @brief  Constructs a new CreateSubnetGroupRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateSubnetGroupRequest::CreateSubnetGroupRequest(const CreateSubnetGroupRequest &other)
     : DAXRequest(new CreateSubnetGroupRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ CreateSubnetGroupRequest::CreateSubnetGroupRequest(const CreateSubnetGroupReques
 }
 
 /*!
- * @brief  Constructs a new CreateSubnetGroupRequest object.
+ * Constructs a CreateSubnetGroupRequest object.
  */
 CreateSubnetGroupRequest::CreateSubnetGroupRequest()
     : DAXRequest(new CreateSubnetGroupRequestPrivate(DAXRequest::CreateSubnetGroupAction, this))
@@ -70,14 +67,9 @@ bool CreateSubnetGroupRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateSubnetGroupResponse object.
+ * Returns a CreateSubnetGroupResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateSubnetGroupResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DAXClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateSubnetGroupRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * CreateSubnetGroupRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::DAX::CreateSubnetGroupRequestPrivate
+ * \brief The CreateSubnetGroupRequestPrivate class provides private implementation for CreateSubnetGroupRequest.
+ * \internal
  *
- * @class  CreateSubnetGroupRequestPrivate
- *
- * @brief  Private implementation for CreateSubnetGroupRequest.
+ * \inmodule QtAwsDAX
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateSubnetGroupRequestPrivate object.
- *
- * @param  action  DAX action being performed.
- * @param  q       Pointer to this object's public CreateSubnetGroupRequest instance.
+ * Constructs a CreateSubnetGroupRequestPrivate object for DAX \a action with,
+ * public implementation \a q.
  */
 CreateSubnetGroupRequestPrivate::CreateSubnetGroupRequestPrivate(
     const DAXRequest::Action action, CreateSubnetGroupRequest * const q)
@@ -108,15 +97,10 @@ CreateSubnetGroupRequestPrivate::CreateSubnetGroupRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateSubnetGroupRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateSubnetGroupRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateSubnetGroupRequest instance.
  */
 CreateSubnetGroupRequestPrivate::CreateSubnetGroupRequestPrivate(
     const CreateSubnetGroupRequestPrivate &other, CreateSubnetGroupRequest * const q)

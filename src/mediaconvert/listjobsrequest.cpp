@@ -27,19 +27,16 @@ namespace MediaConvert {
 
 /*!
  * \class QtAws::MediaConvert::ListJobsRequest
- *
  * \brief The ListJobsRequest class provides an interface for MediaConvert ListJobs requests.
  *
- * \ingroup MediaConvert
+ * \inmodule QtAwsMediaConvert
  *
  *
  * \sa MediaConvertClient::listJobs
  */
 
 /*!
- * @brief  Constructs a new ListJobsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListJobsRequest::ListJobsRequest(const ListJobsRequest &other)
     : MediaConvertRequest(new ListJobsRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ ListJobsRequest::ListJobsRequest(const ListJobsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ListJobsRequest object.
+ * Constructs a ListJobsRequest object.
  */
 ListJobsRequest::ListJobsRequest()
     : MediaConvertRequest(new ListJobsRequestPrivate(MediaConvertRequest::ListJobsAction, this))
@@ -66,14 +63,9 @@ bool ListJobsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListJobsResponse object.
+ * Returns a ListJobsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListJobsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MediaConvertClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListJobsRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * ListJobsRequest::response(QNetworkReply * con
 }
 
 /*!
- * @internal
+ * \class QtAws::MediaConvert::ListJobsRequestPrivate
+ * \brief The ListJobsRequestPrivate class provides private implementation for ListJobsRequest.
+ * \internal
  *
- * @class  ListJobsRequestPrivate
- *
- * @brief  Private implementation for ListJobsRequest.
+ * \inmodule QtAwsMediaConvert
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListJobsRequestPrivate object.
- *
- * @param  action  MediaConvert action being performed.
- * @param  q       Pointer to this object's public ListJobsRequest instance.
+ * Constructs a ListJobsRequestPrivate object for MediaConvert \a action with,
+ * public implementation \a q.
  */
 ListJobsRequestPrivate::ListJobsRequestPrivate(
     const MediaConvertRequest::Action action, ListJobsRequest * const q)
@@ -104,15 +93,10 @@ ListJobsRequestPrivate::ListJobsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListJobsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListJobsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListJobsRequest instance.
  */
 ListJobsRequestPrivate::ListJobsRequestPrivate(
     const ListJobsRequestPrivate &other, ListJobsRequest * const q)

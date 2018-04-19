@@ -27,10 +27,9 @@ namespace Lightsail {
 
 /*!
  * \class QtAws::Lightsail::GetRegionsRequest
- *
  * \brief The GetRegionsRequest class provides an interface for Lightsail GetRegions requests.
  *
- * \ingroup Lightsail
+ * \inmodule QtAwsLightsail
  *
  *  Amazon Lightsail is the easiest way to get started with AWS for developers who just need virtual private servers.
  *  Lightsail includes everything you need to launch your project quickly - a virtual machine, SSD-based storage, data
@@ -53,9 +52,7 @@ namespace Lightsail {
  */
 
 /*!
- * @brief  Constructs a new GetRegionsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetRegionsRequest::GetRegionsRequest(const GetRegionsRequest &other)
     : LightsailRequest(new GetRegionsRequestPrivate(*other.d_func(), this))
@@ -64,7 +61,7 @@ GetRegionsRequest::GetRegionsRequest(const GetRegionsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetRegionsRequest object.
+ * Constructs a GetRegionsRequest object.
  */
 GetRegionsRequest::GetRegionsRequest()
     : LightsailRequest(new GetRegionsRequestPrivate(LightsailRequest::GetRegionsAction, this))
@@ -82,14 +79,9 @@ bool GetRegionsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetRegionsResponse object.
+ * Returns a GetRegionsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetRegionsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  LightsailClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetRegionsRequest::response(QNetworkReply * const reply) const
 {
@@ -97,20 +89,17 @@ QtAws::Core::AwsAbstractResponse * GetRegionsRequest::response(QNetworkReply * c
 }
 
 /*!
- * @internal
+ * \class QtAws::Lightsail::GetRegionsRequestPrivate
+ * \brief The GetRegionsRequestPrivate class provides private implementation for GetRegionsRequest.
+ * \internal
  *
- * @class  GetRegionsRequestPrivate
- *
- * @brief  Private implementation for GetRegionsRequest.
+ * \inmodule QtAwsLightsail
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetRegionsRequestPrivate object.
- *
- * @param  action  Lightsail action being performed.
- * @param  q       Pointer to this object's public GetRegionsRequest instance.
+ * Constructs a GetRegionsRequestPrivate object for Lightsail \a action with,
+ * public implementation \a q.
  */
 GetRegionsRequestPrivate::GetRegionsRequestPrivate(
     const LightsailRequest::Action action, GetRegionsRequest * const q)
@@ -120,15 +109,10 @@ GetRegionsRequestPrivate::GetRegionsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetRegionsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetRegionsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetRegionsRequest instance.
  */
 GetRegionsRequestPrivate::GetRegionsRequestPrivate(
     const GetRegionsRequestPrivate &other, GetRegionsRequest * const q)

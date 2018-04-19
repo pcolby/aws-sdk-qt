@@ -27,10 +27,9 @@ namespace Lambda {
 
 /*!
  * \class QtAws::Lambda::UpdateFunctionCodeRequest
- *
  * \brief The UpdateFunctionCodeRequest class provides an interface for Lambda UpdateFunctionCode requests.
  *
- * \ingroup Lambda
+ * \inmodule QtAwsLambda
  *
  *  <fullname>AWS Lambda</fullname>
  * 
@@ -48,9 +47,7 @@ namespace Lambda {
  */
 
 /*!
- * @brief  Constructs a new UpdateFunctionCodeRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateFunctionCodeRequest::UpdateFunctionCodeRequest(const UpdateFunctionCodeRequest &other)
     : LambdaRequest(new UpdateFunctionCodeRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ UpdateFunctionCodeRequest::UpdateFunctionCodeRequest(const UpdateFunctionCodeReq
 }
 
 /*!
- * @brief  Constructs a new UpdateFunctionCodeRequest object.
+ * Constructs a UpdateFunctionCodeRequest object.
  */
 UpdateFunctionCodeRequest::UpdateFunctionCodeRequest()
     : LambdaRequest(new UpdateFunctionCodeRequestPrivate(LambdaRequest::UpdateFunctionCodeAction, this))
@@ -77,14 +74,9 @@ bool UpdateFunctionCodeRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateFunctionCodeResponse object.
+ * Returns a UpdateFunctionCodeResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateFunctionCodeResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  LambdaClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateFunctionCodeRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * UpdateFunctionCodeRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::Lambda::UpdateFunctionCodeRequestPrivate
+ * \brief The UpdateFunctionCodeRequestPrivate class provides private implementation for UpdateFunctionCodeRequest.
+ * \internal
  *
- * @class  UpdateFunctionCodeRequestPrivate
- *
- * @brief  Private implementation for UpdateFunctionCodeRequest.
+ * \inmodule QtAwsLambda
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateFunctionCodeRequestPrivate object.
- *
- * @param  action  Lambda action being performed.
- * @param  q       Pointer to this object's public UpdateFunctionCodeRequest instance.
+ * Constructs a UpdateFunctionCodeRequestPrivate object for Lambda \a action with,
+ * public implementation \a q.
  */
 UpdateFunctionCodeRequestPrivate::UpdateFunctionCodeRequestPrivate(
     const LambdaRequest::Action action, UpdateFunctionCodeRequest * const q)
@@ -115,15 +104,10 @@ UpdateFunctionCodeRequestPrivate::UpdateFunctionCodeRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateFunctionCodeRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateFunctionCodeRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateFunctionCodeRequest instance.
  */
 UpdateFunctionCodeRequestPrivate::UpdateFunctionCodeRequestPrivate(
     const UpdateFunctionCodeRequestPrivate &other, UpdateFunctionCodeRequest * const q)

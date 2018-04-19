@@ -27,10 +27,9 @@ namespace CodeCommit {
 
 /*!
  * \class QtAws::CodeCommit::UpdateCommentRequest
- *
  * \brief The UpdateCommentRequest class provides an interface for CodeCommit UpdateComment requests.
  *
- * \ingroup CodeCommit
+ * \inmodule QtAwsCodeCommit
  *
  *  <fullname>AWS CodeCommit</fullname>
  * 
@@ -227,9 +226,7 @@ namespace CodeCommit {
  */
 
 /*!
- * @brief  Constructs a new UpdateCommentRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateCommentRequest::UpdateCommentRequest(const UpdateCommentRequest &other)
     : CodeCommitRequest(new UpdateCommentRequestPrivate(*other.d_func(), this))
@@ -238,7 +235,7 @@ UpdateCommentRequest::UpdateCommentRequest(const UpdateCommentRequest &other)
 }
 
 /*!
- * @brief  Constructs a new UpdateCommentRequest object.
+ * Constructs a UpdateCommentRequest object.
  */
 UpdateCommentRequest::UpdateCommentRequest()
     : CodeCommitRequest(new UpdateCommentRequestPrivate(CodeCommitRequest::UpdateCommentAction, this))
@@ -256,14 +253,9 @@ bool UpdateCommentRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateCommentResponse object.
+ * Returns a UpdateCommentResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateCommentResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CodeCommitClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateCommentRequest::response(QNetworkReply * const reply) const
 {
@@ -271,20 +263,17 @@ QtAws::Core::AwsAbstractResponse * UpdateCommentRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::CodeCommit::UpdateCommentRequestPrivate
+ * \brief The UpdateCommentRequestPrivate class provides private implementation for UpdateCommentRequest.
+ * \internal
  *
- * @class  UpdateCommentRequestPrivate
- *
- * @brief  Private implementation for UpdateCommentRequest.
+ * \inmodule QtAwsCodeCommit
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateCommentRequestPrivate object.
- *
- * @param  action  CodeCommit action being performed.
- * @param  q       Pointer to this object's public UpdateCommentRequest instance.
+ * Constructs a UpdateCommentRequestPrivate object for CodeCommit \a action with,
+ * public implementation \a q.
  */
 UpdateCommentRequestPrivate::UpdateCommentRequestPrivate(
     const CodeCommitRequest::Action action, UpdateCommentRequest * const q)
@@ -294,15 +283,10 @@ UpdateCommentRequestPrivate::UpdateCommentRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateCommentRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateCommentRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateCommentRequest instance.
  */
 UpdateCommentRequestPrivate::UpdateCommentRequestPrivate(
     const UpdateCommentRequestPrivate &other, UpdateCommentRequest * const q)

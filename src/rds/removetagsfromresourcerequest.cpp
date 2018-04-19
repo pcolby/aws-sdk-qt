@@ -27,10 +27,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::RemoveTagsFromResourceRequest
- *
  * \brief The RemoveTagsFromResourceRequest class provides an interface for RDS RemoveTagsFromResource requests.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -101,9 +100,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new RemoveTagsFromResourceRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 RemoveTagsFromResourceRequest::RemoveTagsFromResourceRequest(const RemoveTagsFromResourceRequest &other)
     : RDSRequest(new RemoveTagsFromResourceRequestPrivate(*other.d_func(), this))
@@ -112,7 +109,7 @@ RemoveTagsFromResourceRequest::RemoveTagsFromResourceRequest(const RemoveTagsFro
 }
 
 /*!
- * @brief  Constructs a new RemoveTagsFromResourceRequest object.
+ * Constructs a RemoveTagsFromResourceRequest object.
  */
 RemoveTagsFromResourceRequest::RemoveTagsFromResourceRequest()
     : RDSRequest(new RemoveTagsFromResourceRequestPrivate(RDSRequest::RemoveTagsFromResourceAction, this))
@@ -130,14 +127,9 @@ bool RemoveTagsFromResourceRequest::isValid() const
 
 
 /*!
- * @brief  Construct an RemoveTagsFromResourceResponse object.
+ * Returns a RemoveTagsFromResourceResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An RemoveTagsFromResourceResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RDSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * RemoveTagsFromResourceRequest::response(QNetworkReply * const reply) const
 {
@@ -145,20 +137,17 @@ QtAws::Core::AwsAbstractResponse * RemoveTagsFromResourceRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::RDS::RemoveTagsFromResourceRequestPrivate
+ * \brief The RemoveTagsFromResourceRequestPrivate class provides private implementation for RemoveTagsFromResourceRequest.
+ * \internal
  *
- * @class  RemoveTagsFromResourceRequestPrivate
- *
- * @brief  Private implementation for RemoveTagsFromResourceRequest.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new RemoveTagsFromResourceRequestPrivate object.
- *
- * @param  action  RDS action being performed.
- * @param  q       Pointer to this object's public RemoveTagsFromResourceRequest instance.
+ * Constructs a RemoveTagsFromResourceRequestPrivate object for RDS \a action with,
+ * public implementation \a q.
  */
 RemoveTagsFromResourceRequestPrivate::RemoveTagsFromResourceRequestPrivate(
     const RDSRequest::Action action, RemoveTagsFromResourceRequest * const q)
@@ -168,15 +157,10 @@ RemoveTagsFromResourceRequestPrivate::RemoveTagsFromResourceRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RemoveTagsFromResourceRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the RemoveTagsFromResourceRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public RemoveTagsFromResourceRequest instance.
  */
 RemoveTagsFromResourceRequestPrivate::RemoveTagsFromResourceRequestPrivate(
     const RemoveTagsFromResourceRequestPrivate &other, RemoveTagsFromResourceRequest * const q)

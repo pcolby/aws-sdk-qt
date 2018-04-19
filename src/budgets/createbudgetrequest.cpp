@@ -27,10 +27,9 @@ namespace Budgets {
 
 /*!
  * \class QtAws::Budgets::CreateBudgetRequest
- *
  * \brief The CreateBudgetRequest class provides an interface for Budgets CreateBudget requests.
  *
- * \ingroup Budgets
+ * \inmodule QtAwsBudgets
  *
  *  Budgets enable you to plan your service usage, service costs, and your RI utilization. You can also track how close your
  *  plan is to your budgeted amount or to the free tier limits. Budgets provide you with a quick way to see your
@@ -75,9 +74,7 @@ namespace Budgets {
  */
 
 /*!
- * @brief  Constructs a new CreateBudgetRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateBudgetRequest::CreateBudgetRequest(const CreateBudgetRequest &other)
     : BudgetsRequest(new CreateBudgetRequestPrivate(*other.d_func(), this))
@@ -86,7 +83,7 @@ CreateBudgetRequest::CreateBudgetRequest(const CreateBudgetRequest &other)
 }
 
 /*!
- * @brief  Constructs a new CreateBudgetRequest object.
+ * Constructs a CreateBudgetRequest object.
  */
 CreateBudgetRequest::CreateBudgetRequest()
     : BudgetsRequest(new CreateBudgetRequestPrivate(BudgetsRequest::CreateBudgetAction, this))
@@ -104,14 +101,9 @@ bool CreateBudgetRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateBudgetResponse object.
+ * Returns a CreateBudgetResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateBudgetResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  BudgetsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateBudgetRequest::response(QNetworkReply * const reply) const
 {
@@ -119,20 +111,17 @@ QtAws::Core::AwsAbstractResponse * CreateBudgetRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::Budgets::CreateBudgetRequestPrivate
+ * \brief The CreateBudgetRequestPrivate class provides private implementation for CreateBudgetRequest.
+ * \internal
  *
- * @class  CreateBudgetRequestPrivate
- *
- * @brief  Private implementation for CreateBudgetRequest.
+ * \inmodule QtAwsBudgets
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateBudgetRequestPrivate object.
- *
- * @param  action  Budgets action being performed.
- * @param  q       Pointer to this object's public CreateBudgetRequest instance.
+ * Constructs a CreateBudgetRequestPrivate object for Budgets \a action with,
+ * public implementation \a q.
  */
 CreateBudgetRequestPrivate::CreateBudgetRequestPrivate(
     const BudgetsRequest::Action action, CreateBudgetRequest * const q)
@@ -142,15 +131,10 @@ CreateBudgetRequestPrivate::CreateBudgetRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateBudgetRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateBudgetRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateBudgetRequest instance.
  */
 CreateBudgetRequestPrivate::CreateBudgetRequestPrivate(
     const CreateBudgetRequestPrivate &other, CreateBudgetRequest * const q)

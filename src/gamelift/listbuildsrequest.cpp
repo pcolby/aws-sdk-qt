@@ -27,10 +27,9 @@ namespace GameLift {
 
 /*!
  * \class QtAws::GameLift::ListBuildsRequest
- *
  * \brief The ListBuildsRequest class provides an interface for GameLift ListBuilds requests.
  *
- * \ingroup GameLift
+ * \inmodule QtAwsGameLift
  *
  *  <fullname>Amazon GameLift Service</fullname>
  * 
@@ -473,9 +472,7 @@ namespace GameLift {
  */
 
 /*!
- * @brief  Constructs a new ListBuildsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListBuildsRequest::ListBuildsRequest(const ListBuildsRequest &other)
     : GameLiftRequest(new ListBuildsRequestPrivate(*other.d_func(), this))
@@ -484,7 +481,7 @@ ListBuildsRequest::ListBuildsRequest(const ListBuildsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ListBuildsRequest object.
+ * Constructs a ListBuildsRequest object.
  */
 ListBuildsRequest::ListBuildsRequest()
     : GameLiftRequest(new ListBuildsRequestPrivate(GameLiftRequest::ListBuildsAction, this))
@@ -502,14 +499,9 @@ bool ListBuildsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListBuildsResponse object.
+ * Returns a ListBuildsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListBuildsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GameLiftClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListBuildsRequest::response(QNetworkReply * const reply) const
 {
@@ -517,20 +509,17 @@ QtAws::Core::AwsAbstractResponse * ListBuildsRequest::response(QNetworkReply * c
 }
 
 /*!
- * @internal
+ * \class QtAws::GameLift::ListBuildsRequestPrivate
+ * \brief The ListBuildsRequestPrivate class provides private implementation for ListBuildsRequest.
+ * \internal
  *
- * @class  ListBuildsRequestPrivate
- *
- * @brief  Private implementation for ListBuildsRequest.
+ * \inmodule QtAwsGameLift
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListBuildsRequestPrivate object.
- *
- * @param  action  GameLift action being performed.
- * @param  q       Pointer to this object's public ListBuildsRequest instance.
+ * Constructs a ListBuildsRequestPrivate object for GameLift \a action with,
+ * public implementation \a q.
  */
 ListBuildsRequestPrivate::ListBuildsRequestPrivate(
     const GameLiftRequest::Action action, ListBuildsRequest * const q)
@@ -540,15 +529,10 @@ ListBuildsRequestPrivate::ListBuildsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListBuildsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListBuildsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListBuildsRequest instance.
  */
 ListBuildsRequestPrivate::ListBuildsRequestPrivate(
     const ListBuildsRequestPrivate &other, ListBuildsRequest * const q)

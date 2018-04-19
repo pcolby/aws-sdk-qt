@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DescribeSubnetsRequest
- *
  * \brief The DescribeSubnetsRequest class provides an interface for EC2 DescribeSubnets requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DescribeSubnetsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeSubnetsRequest::DescribeSubnetsRequest(const DescribeSubnetsRequest &other)
     : EC2Request(new DescribeSubnetsRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ DescribeSubnetsRequest::DescribeSubnetsRequest(const DescribeSubnetsRequest &oth
 }
 
 /*!
- * @brief  Constructs a new DescribeSubnetsRequest object.
+ * Constructs a DescribeSubnetsRequest object.
  */
 DescribeSubnetsRequest::DescribeSubnetsRequest()
     : EC2Request(new DescribeSubnetsRequestPrivate(EC2Request::DescribeSubnetsAction, this))
@@ -70,14 +67,9 @@ bool DescribeSubnetsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeSubnetsResponse object.
+ * Returns a DescribeSubnetsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeSubnetsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeSubnetsRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * DescribeSubnetsRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::DescribeSubnetsRequestPrivate
+ * \brief The DescribeSubnetsRequestPrivate class provides private implementation for DescribeSubnetsRequest.
+ * \internal
  *
- * @class  DescribeSubnetsRequestPrivate
- *
- * @brief  Private implementation for DescribeSubnetsRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeSubnetsRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public DescribeSubnetsRequest instance.
+ * Constructs a DescribeSubnetsRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 DescribeSubnetsRequestPrivate::DescribeSubnetsRequestPrivate(
     const EC2Request::Action action, DescribeSubnetsRequest * const q)
@@ -108,15 +97,10 @@ DescribeSubnetsRequestPrivate::DescribeSubnetsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeSubnetsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeSubnetsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeSubnetsRequest instance.
  */
 DescribeSubnetsRequestPrivate::DescribeSubnetsRequestPrivate(
     const DescribeSubnetsRequestPrivate &other, DescribeSubnetsRequest * const q)

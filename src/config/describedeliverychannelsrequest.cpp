@@ -27,10 +27,9 @@ namespace ConfigService {
 
 /*!
  * \class QtAws::ConfigService::DescribeDeliveryChannelsRequest
- *
  * \brief The DescribeDeliveryChannelsRequest class provides an interface for ConfigService DescribeDeliveryChannels requests.
  *
- * \ingroup ConfigService
+ * \inmodule QtAwsConfigService
  *
  *  <fullname>AWS Config</fullname>
  * 
@@ -60,9 +59,7 @@ namespace ConfigService {
  */
 
 /*!
- * @brief  Constructs a new DescribeDeliveryChannelsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeDeliveryChannelsRequest::DescribeDeliveryChannelsRequest(const DescribeDeliveryChannelsRequest &other)
     : ConfigServiceRequest(new DescribeDeliveryChannelsRequestPrivate(*other.d_func(), this))
@@ -71,7 +68,7 @@ DescribeDeliveryChannelsRequest::DescribeDeliveryChannelsRequest(const DescribeD
 }
 
 /*!
- * @brief  Constructs a new DescribeDeliveryChannelsRequest object.
+ * Constructs a DescribeDeliveryChannelsRequest object.
  */
 DescribeDeliveryChannelsRequest::DescribeDeliveryChannelsRequest()
     : ConfigServiceRequest(new DescribeDeliveryChannelsRequestPrivate(ConfigServiceRequest::DescribeDeliveryChannelsAction, this))
@@ -89,14 +86,9 @@ bool DescribeDeliveryChannelsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeDeliveryChannelsResponse object.
+ * Returns a DescribeDeliveryChannelsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeDeliveryChannelsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ConfigServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeDeliveryChannelsRequest::response(QNetworkReply * const reply) const
 {
@@ -104,20 +96,17 @@ QtAws::Core::AwsAbstractResponse * DescribeDeliveryChannelsRequest::response(QNe
 }
 
 /*!
- * @internal
+ * \class QtAws::ConfigService::DescribeDeliveryChannelsRequestPrivate
+ * \brief The DescribeDeliveryChannelsRequestPrivate class provides private implementation for DescribeDeliveryChannelsRequest.
+ * \internal
  *
- * @class  DescribeDeliveryChannelsRequestPrivate
- *
- * @brief  Private implementation for DescribeDeliveryChannelsRequest.
+ * \inmodule QtAwsConfigService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeDeliveryChannelsRequestPrivate object.
- *
- * @param  action  ConfigService action being performed.
- * @param  q       Pointer to this object's public DescribeDeliveryChannelsRequest instance.
+ * Constructs a DescribeDeliveryChannelsRequestPrivate object for ConfigService \a action with,
+ * public implementation \a q.
  */
 DescribeDeliveryChannelsRequestPrivate::DescribeDeliveryChannelsRequestPrivate(
     const ConfigServiceRequest::Action action, DescribeDeliveryChannelsRequest * const q)
@@ -127,15 +116,10 @@ DescribeDeliveryChannelsRequestPrivate::DescribeDeliveryChannelsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeDeliveryChannelsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeDeliveryChannelsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeDeliveryChannelsRequest instance.
  */
 DescribeDeliveryChannelsRequestPrivate::DescribeDeliveryChannelsRequestPrivate(
     const DescribeDeliveryChannelsRequestPrivate &other, DescribeDeliveryChannelsRequest * const q)

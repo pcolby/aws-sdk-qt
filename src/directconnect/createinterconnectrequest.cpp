@@ -27,10 +27,9 @@ namespace DirectConnect {
 
 /*!
  * \class QtAws::DirectConnect::CreateInterconnectRequest
- *
  * \brief The CreateInterconnectRequest class provides an interface for DirectConnect CreateInterconnect requests.
  *
- * \ingroup DirectConnect
+ * \inmodule QtAwsDirectConnect
  *
  *  AWS Direct Connect links your internal network to an AWS Direct Connect location over a standard 1 gigabit or 10 gigabit
  *  Ethernet fiber-optic cable. One end of the cable is connected to your router, the other to an AWS Direct Connect router.
@@ -45,9 +44,7 @@ namespace DirectConnect {
  */
 
 /*!
- * @brief  Constructs a new CreateInterconnectRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateInterconnectRequest::CreateInterconnectRequest(const CreateInterconnectRequest &other)
     : DirectConnectRequest(new CreateInterconnectRequestPrivate(*other.d_func(), this))
@@ -56,7 +53,7 @@ CreateInterconnectRequest::CreateInterconnectRequest(const CreateInterconnectReq
 }
 
 /*!
- * @brief  Constructs a new CreateInterconnectRequest object.
+ * Constructs a CreateInterconnectRequest object.
  */
 CreateInterconnectRequest::CreateInterconnectRequest()
     : DirectConnectRequest(new CreateInterconnectRequestPrivate(DirectConnectRequest::CreateInterconnectAction, this))
@@ -74,14 +71,9 @@ bool CreateInterconnectRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateInterconnectResponse object.
+ * Returns a CreateInterconnectResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateInterconnectResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DirectConnectClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateInterconnectRequest::response(QNetworkReply * const reply) const
 {
@@ -89,20 +81,17 @@ QtAws::Core::AwsAbstractResponse * CreateInterconnectRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::DirectConnect::CreateInterconnectRequestPrivate
+ * \brief The CreateInterconnectRequestPrivate class provides private implementation for CreateInterconnectRequest.
+ * \internal
  *
- * @class  CreateInterconnectRequestPrivate
- *
- * @brief  Private implementation for CreateInterconnectRequest.
+ * \inmodule QtAwsDirectConnect
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateInterconnectRequestPrivate object.
- *
- * @param  action  DirectConnect action being performed.
- * @param  q       Pointer to this object's public CreateInterconnectRequest instance.
+ * Constructs a CreateInterconnectRequestPrivate object for DirectConnect \a action with,
+ * public implementation \a q.
  */
 CreateInterconnectRequestPrivate::CreateInterconnectRequestPrivate(
     const DirectConnectRequest::Action action, CreateInterconnectRequest * const q)
@@ -112,15 +101,10 @@ CreateInterconnectRequestPrivate::CreateInterconnectRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateInterconnectRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateInterconnectRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateInterconnectRequest instance.
  */
 CreateInterconnectRequestPrivate::CreateInterconnectRequestPrivate(
     const CreateInterconnectRequestPrivate &other, CreateInterconnectRequest * const q)

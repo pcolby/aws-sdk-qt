@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DescribeDhcpOptionsRequest
- *
  * \brief The DescribeDhcpOptionsRequest class provides an interface for EC2 DescribeDhcpOptions requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DescribeDhcpOptionsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeDhcpOptionsRequest::DescribeDhcpOptionsRequest(const DescribeDhcpOptionsRequest &other)
     : EC2Request(new DescribeDhcpOptionsRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ DescribeDhcpOptionsRequest::DescribeDhcpOptionsRequest(const DescribeDhcpOptions
 }
 
 /*!
- * @brief  Constructs a new DescribeDhcpOptionsRequest object.
+ * Constructs a DescribeDhcpOptionsRequest object.
  */
 DescribeDhcpOptionsRequest::DescribeDhcpOptionsRequest()
     : EC2Request(new DescribeDhcpOptionsRequestPrivate(EC2Request::DescribeDhcpOptionsAction, this))
@@ -70,14 +67,9 @@ bool DescribeDhcpOptionsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeDhcpOptionsResponse object.
+ * Returns a DescribeDhcpOptionsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeDhcpOptionsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeDhcpOptionsRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * DescribeDhcpOptionsRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::DescribeDhcpOptionsRequestPrivate
+ * \brief The DescribeDhcpOptionsRequestPrivate class provides private implementation for DescribeDhcpOptionsRequest.
+ * \internal
  *
- * @class  DescribeDhcpOptionsRequestPrivate
- *
- * @brief  Private implementation for DescribeDhcpOptionsRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeDhcpOptionsRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public DescribeDhcpOptionsRequest instance.
+ * Constructs a DescribeDhcpOptionsRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 DescribeDhcpOptionsRequestPrivate::DescribeDhcpOptionsRequestPrivate(
     const EC2Request::Action action, DescribeDhcpOptionsRequest * const q)
@@ -108,15 +97,10 @@ DescribeDhcpOptionsRequestPrivate::DescribeDhcpOptionsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeDhcpOptionsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeDhcpOptionsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeDhcpOptionsRequest instance.
  */
 DescribeDhcpOptionsRequestPrivate::DescribeDhcpOptionsRequestPrivate(
     const DescribeDhcpOptionsRequestPrivate &other, DescribeDhcpOptionsRequest * const q)

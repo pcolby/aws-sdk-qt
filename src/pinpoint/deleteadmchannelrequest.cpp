@@ -27,19 +27,16 @@ namespace Pinpoint {
 
 /*!
  * \class QtAws::Pinpoint::DeleteAdmChannelRequest
- *
  * \brief The DeleteAdmChannelRequest class provides an interface for Pinpoint DeleteAdmChannel requests.
  *
- * \ingroup Pinpoint
+ * \inmodule QtAwsPinpoint
  *
  *
  * \sa PinpointClient::deleteAdmChannel
  */
 
 /*!
- * @brief  Constructs a new DeleteAdmChannelRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteAdmChannelRequest::DeleteAdmChannelRequest(const DeleteAdmChannelRequest &other)
     : PinpointRequest(new DeleteAdmChannelRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ DeleteAdmChannelRequest::DeleteAdmChannelRequest(const DeleteAdmChannelRequest &
 }
 
 /*!
- * @brief  Constructs a new DeleteAdmChannelRequest object.
+ * Constructs a DeleteAdmChannelRequest object.
  */
 DeleteAdmChannelRequest::DeleteAdmChannelRequest()
     : PinpointRequest(new DeleteAdmChannelRequestPrivate(PinpointRequest::DeleteAdmChannelAction, this))
@@ -66,14 +63,9 @@ bool DeleteAdmChannelRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteAdmChannelResponse object.
+ * Returns a DeleteAdmChannelResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteAdmChannelResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  PinpointClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteAdmChannelRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * DeleteAdmChannelRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::Pinpoint::DeleteAdmChannelRequestPrivate
+ * \brief The DeleteAdmChannelRequestPrivate class provides private implementation for DeleteAdmChannelRequest.
+ * \internal
  *
- * @class  DeleteAdmChannelRequestPrivate
- *
- * @brief  Private implementation for DeleteAdmChannelRequest.
+ * \inmodule QtAwsPinpoint
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteAdmChannelRequestPrivate object.
- *
- * @param  action  Pinpoint action being performed.
- * @param  q       Pointer to this object's public DeleteAdmChannelRequest instance.
+ * Constructs a DeleteAdmChannelRequestPrivate object for Pinpoint \a action with,
+ * public implementation \a q.
  */
 DeleteAdmChannelRequestPrivate::DeleteAdmChannelRequestPrivate(
     const PinpointRequest::Action action, DeleteAdmChannelRequest * const q)
@@ -104,15 +93,10 @@ DeleteAdmChannelRequestPrivate::DeleteAdmChannelRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteAdmChannelRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteAdmChannelRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteAdmChannelRequest instance.
  */
 DeleteAdmChannelRequestPrivate::DeleteAdmChannelRequestPrivate(
     const DeleteAdmChannelRequestPrivate &other, DeleteAdmChannelRequest * const q)

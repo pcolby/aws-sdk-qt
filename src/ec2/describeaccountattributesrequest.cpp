@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DescribeAccountAttributesRequest
- *
  * \brief The DescribeAccountAttributesRequest class provides an interface for EC2 DescribeAccountAttributes requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DescribeAccountAttributesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeAccountAttributesRequest::DescribeAccountAttributesRequest(const DescribeAccountAttributesRequest &other)
     : EC2Request(new DescribeAccountAttributesRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ DescribeAccountAttributesRequest::DescribeAccountAttributesRequest(const Describ
 }
 
 /*!
- * @brief  Constructs a new DescribeAccountAttributesRequest object.
+ * Constructs a DescribeAccountAttributesRequest object.
  */
 DescribeAccountAttributesRequest::DescribeAccountAttributesRequest()
     : EC2Request(new DescribeAccountAttributesRequestPrivate(EC2Request::DescribeAccountAttributesAction, this))
@@ -70,14 +67,9 @@ bool DescribeAccountAttributesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeAccountAttributesResponse object.
+ * Returns a DescribeAccountAttributesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeAccountAttributesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeAccountAttributesRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * DescribeAccountAttributesRequest::response(QN
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::DescribeAccountAttributesRequestPrivate
+ * \brief The DescribeAccountAttributesRequestPrivate class provides private implementation for DescribeAccountAttributesRequest.
+ * \internal
  *
- * @class  DescribeAccountAttributesRequestPrivate
- *
- * @brief  Private implementation for DescribeAccountAttributesRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeAccountAttributesRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public DescribeAccountAttributesRequest instance.
+ * Constructs a DescribeAccountAttributesRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 DescribeAccountAttributesRequestPrivate::DescribeAccountAttributesRequestPrivate(
     const EC2Request::Action action, DescribeAccountAttributesRequest * const q)
@@ -108,15 +97,10 @@ DescribeAccountAttributesRequestPrivate::DescribeAccountAttributesRequestPrivate
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeAccountAttributesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeAccountAttributesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeAccountAttributesRequest instance.
  */
 DescribeAccountAttributesRequestPrivate::DescribeAccountAttributesRequestPrivate(
     const DescribeAccountAttributesRequestPrivate &other, DescribeAccountAttributesRequest * const q)

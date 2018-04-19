@@ -27,10 +27,9 @@ namespace CloudFormation {
 
 /*!
  * \class QtAws::CloudFormation::ListStackInstancesRequest
- *
  * \brief The ListStackInstancesRequest class provides an interface for CloudFormation ListStackInstances requests.
  *
- * \ingroup CloudFormation
+ * \inmodule QtAwsCloudFormation
  *
  *  <fullname>AWS CloudFormation</fullname>
  * 
@@ -59,9 +58,7 @@ namespace CloudFormation {
  */
 
 /*!
- * @brief  Constructs a new ListStackInstancesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListStackInstancesRequest::ListStackInstancesRequest(const ListStackInstancesRequest &other)
     : CloudFormationRequest(new ListStackInstancesRequestPrivate(*other.d_func(), this))
@@ -70,7 +67,7 @@ ListStackInstancesRequest::ListStackInstancesRequest(const ListStackInstancesReq
 }
 
 /*!
- * @brief  Constructs a new ListStackInstancesRequest object.
+ * Constructs a ListStackInstancesRequest object.
  */
 ListStackInstancesRequest::ListStackInstancesRequest()
     : CloudFormationRequest(new ListStackInstancesRequestPrivate(CloudFormationRequest::ListStackInstancesAction, this))
@@ -88,14 +85,9 @@ bool ListStackInstancesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListStackInstancesResponse object.
+ * Returns a ListStackInstancesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListStackInstancesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudFormationClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListStackInstancesRequest::response(QNetworkReply * const reply) const
 {
@@ -103,20 +95,17 @@ QtAws::Core::AwsAbstractResponse * ListStackInstancesRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudFormation::ListStackInstancesRequestPrivate
+ * \brief The ListStackInstancesRequestPrivate class provides private implementation for ListStackInstancesRequest.
+ * \internal
  *
- * @class  ListStackInstancesRequestPrivate
- *
- * @brief  Private implementation for ListStackInstancesRequest.
+ * \inmodule QtAwsCloudFormation
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListStackInstancesRequestPrivate object.
- *
- * @param  action  CloudFormation action being performed.
- * @param  q       Pointer to this object's public ListStackInstancesRequest instance.
+ * Constructs a ListStackInstancesRequestPrivate object for CloudFormation \a action with,
+ * public implementation \a q.
  */
 ListStackInstancesRequestPrivate::ListStackInstancesRequestPrivate(
     const CloudFormationRequest::Action action, ListStackInstancesRequest * const q)
@@ -126,15 +115,10 @@ ListStackInstancesRequestPrivate::ListStackInstancesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListStackInstancesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListStackInstancesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListStackInstancesRequest instance.
  */
 ListStackInstancesRequestPrivate::ListStackInstancesRequestPrivate(
     const ListStackInstancesRequestPrivate &other, ListStackInstancesRequest * const q)

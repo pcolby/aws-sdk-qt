@@ -27,10 +27,9 @@ namespace WAFRegional {
 
 /*!
  * \class QtAws::WAFRegional::GetXssMatchSetRequest
- *
  * \brief The GetXssMatchSetRequest class provides an interface for WAFRegional GetXssMatchSet requests.
  *
- * \ingroup WAFRegional
+ * \inmodule QtAwsWAFRegional
  *
  *  This is the <i>AWS WAF Regional API Reference</i> for using AWS WAF with Elastic Load Balancing (ELB) Application Load
  *  Balancers. The AWS WAF actions and data types listed in the reference are available for protecting Application Load
@@ -44,9 +43,7 @@ namespace WAFRegional {
  */
 
 /*!
- * @brief  Constructs a new GetXssMatchSetRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetXssMatchSetRequest::GetXssMatchSetRequest(const GetXssMatchSetRequest &other)
     : WAFRegionalRequest(new GetXssMatchSetRequestPrivate(*other.d_func(), this))
@@ -55,7 +52,7 @@ GetXssMatchSetRequest::GetXssMatchSetRequest(const GetXssMatchSetRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetXssMatchSetRequest object.
+ * Constructs a GetXssMatchSetRequest object.
  */
 GetXssMatchSetRequest::GetXssMatchSetRequest()
     : WAFRegionalRequest(new GetXssMatchSetRequestPrivate(WAFRegionalRequest::GetXssMatchSetAction, this))
@@ -73,14 +70,9 @@ bool GetXssMatchSetRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetXssMatchSetResponse object.
+ * Returns a GetXssMatchSetResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetXssMatchSetResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WAFRegionalClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetXssMatchSetRequest::response(QNetworkReply * const reply) const
 {
@@ -88,20 +80,17 @@ QtAws::Core::AwsAbstractResponse * GetXssMatchSetRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::WAFRegional::GetXssMatchSetRequestPrivate
+ * \brief The GetXssMatchSetRequestPrivate class provides private implementation for GetXssMatchSetRequest.
+ * \internal
  *
- * @class  GetXssMatchSetRequestPrivate
- *
- * @brief  Private implementation for GetXssMatchSetRequest.
+ * \inmodule QtAwsWAFRegional
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetXssMatchSetRequestPrivate object.
- *
- * @param  action  WAFRegional action being performed.
- * @param  q       Pointer to this object's public GetXssMatchSetRequest instance.
+ * Constructs a GetXssMatchSetRequestPrivate object for WAFRegional \a action with,
+ * public implementation \a q.
  */
 GetXssMatchSetRequestPrivate::GetXssMatchSetRequestPrivate(
     const WAFRegionalRequest::Action action, GetXssMatchSetRequest * const q)
@@ -111,15 +100,10 @@ GetXssMatchSetRequestPrivate::GetXssMatchSetRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetXssMatchSetRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetXssMatchSetRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetXssMatchSetRequest instance.
  */
 GetXssMatchSetRequestPrivate::GetXssMatchSetRequestPrivate(
     const GetXssMatchSetRequestPrivate &other, GetXssMatchSetRequest * const q)

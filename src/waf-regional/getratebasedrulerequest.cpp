@@ -27,10 +27,9 @@ namespace WAFRegional {
 
 /*!
  * \class QtAws::WAFRegional::GetRateBasedRuleRequest
- *
  * \brief The GetRateBasedRuleRequest class provides an interface for WAFRegional GetRateBasedRule requests.
  *
- * \ingroup WAFRegional
+ * \inmodule QtAwsWAFRegional
  *
  *  This is the <i>AWS WAF Regional API Reference</i> for using AWS WAF with Elastic Load Balancing (ELB) Application Load
  *  Balancers. The AWS WAF actions and data types listed in the reference are available for protecting Application Load
@@ -44,9 +43,7 @@ namespace WAFRegional {
  */
 
 /*!
- * @brief  Constructs a new GetRateBasedRuleRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetRateBasedRuleRequest::GetRateBasedRuleRequest(const GetRateBasedRuleRequest &other)
     : WAFRegionalRequest(new GetRateBasedRuleRequestPrivate(*other.d_func(), this))
@@ -55,7 +52,7 @@ GetRateBasedRuleRequest::GetRateBasedRuleRequest(const GetRateBasedRuleRequest &
 }
 
 /*!
- * @brief  Constructs a new GetRateBasedRuleRequest object.
+ * Constructs a GetRateBasedRuleRequest object.
  */
 GetRateBasedRuleRequest::GetRateBasedRuleRequest()
     : WAFRegionalRequest(new GetRateBasedRuleRequestPrivate(WAFRegionalRequest::GetRateBasedRuleAction, this))
@@ -73,14 +70,9 @@ bool GetRateBasedRuleRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetRateBasedRuleResponse object.
+ * Returns a GetRateBasedRuleResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetRateBasedRuleResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WAFRegionalClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetRateBasedRuleRequest::response(QNetworkReply * const reply) const
 {
@@ -88,20 +80,17 @@ QtAws::Core::AwsAbstractResponse * GetRateBasedRuleRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::WAFRegional::GetRateBasedRuleRequestPrivate
+ * \brief The GetRateBasedRuleRequestPrivate class provides private implementation for GetRateBasedRuleRequest.
+ * \internal
  *
- * @class  GetRateBasedRuleRequestPrivate
- *
- * @brief  Private implementation for GetRateBasedRuleRequest.
+ * \inmodule QtAwsWAFRegional
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetRateBasedRuleRequestPrivate object.
- *
- * @param  action  WAFRegional action being performed.
- * @param  q       Pointer to this object's public GetRateBasedRuleRequest instance.
+ * Constructs a GetRateBasedRuleRequestPrivate object for WAFRegional \a action with,
+ * public implementation \a q.
  */
 GetRateBasedRuleRequestPrivate::GetRateBasedRuleRequestPrivate(
     const WAFRegionalRequest::Action action, GetRateBasedRuleRequest * const q)
@@ -111,15 +100,10 @@ GetRateBasedRuleRequestPrivate::GetRateBasedRuleRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetRateBasedRuleRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetRateBasedRuleRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetRateBasedRuleRequest instance.
  */
 GetRateBasedRuleRequestPrivate::GetRateBasedRuleRequestPrivate(
     const GetRateBasedRuleRequestPrivate &other, GetRateBasedRuleRequest * const q)

@@ -27,10 +27,9 @@ namespace CodeDeploy {
 
 /*!
  * \class QtAws::CodeDeploy::CreateDeploymentRequest
- *
  * \brief The CreateDeploymentRequest class provides an interface for CodeDeploy CreateDeployment requests.
  *
- * \ingroup CodeDeploy
+ * \inmodule QtAwsCodeDeploy
  *
  *  <fullname>AWS CodeDeploy</fullname>
  * 
@@ -118,9 +117,7 @@ namespace CodeDeploy {
  */
 
 /*!
- * @brief  Constructs a new CreateDeploymentRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateDeploymentRequest::CreateDeploymentRequest(const CreateDeploymentRequest &other)
     : CodeDeployRequest(new CreateDeploymentRequestPrivate(*other.d_func(), this))
@@ -129,7 +126,7 @@ CreateDeploymentRequest::CreateDeploymentRequest(const CreateDeploymentRequest &
 }
 
 /*!
- * @brief  Constructs a new CreateDeploymentRequest object.
+ * Constructs a CreateDeploymentRequest object.
  */
 CreateDeploymentRequest::CreateDeploymentRequest()
     : CodeDeployRequest(new CreateDeploymentRequestPrivate(CodeDeployRequest::CreateDeploymentAction, this))
@@ -147,14 +144,9 @@ bool CreateDeploymentRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateDeploymentResponse object.
+ * Returns a CreateDeploymentResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateDeploymentResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CodeDeployClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateDeploymentRequest::response(QNetworkReply * const reply) const
 {
@@ -162,20 +154,17 @@ QtAws::Core::AwsAbstractResponse * CreateDeploymentRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::CodeDeploy::CreateDeploymentRequestPrivate
+ * \brief The CreateDeploymentRequestPrivate class provides private implementation for CreateDeploymentRequest.
+ * \internal
  *
- * @class  CreateDeploymentRequestPrivate
- *
- * @brief  Private implementation for CreateDeploymentRequest.
+ * \inmodule QtAwsCodeDeploy
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateDeploymentRequestPrivate object.
- *
- * @param  action  CodeDeploy action being performed.
- * @param  q       Pointer to this object's public CreateDeploymentRequest instance.
+ * Constructs a CreateDeploymentRequestPrivate object for CodeDeploy \a action with,
+ * public implementation \a q.
  */
 CreateDeploymentRequestPrivate::CreateDeploymentRequestPrivate(
     const CodeDeployRequest::Action action, CreateDeploymentRequest * const q)
@@ -185,15 +174,10 @@ CreateDeploymentRequestPrivate::CreateDeploymentRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateDeploymentRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateDeploymentRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateDeploymentRequest instance.
  */
 CreateDeploymentRequestPrivate::CreateDeploymentRequestPrivate(
     const CreateDeploymentRequestPrivate &other, CreateDeploymentRequest * const q)

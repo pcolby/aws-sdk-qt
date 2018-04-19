@@ -27,10 +27,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::CreateDBClusterRequest
- *
  * \brief The CreateDBClusterRequest class provides an interface for RDS CreateDBCluster requests.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -101,9 +100,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new CreateDBClusterRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateDBClusterRequest::CreateDBClusterRequest(const CreateDBClusterRequest &other)
     : RDSRequest(new CreateDBClusterRequestPrivate(*other.d_func(), this))
@@ -112,7 +109,7 @@ CreateDBClusterRequest::CreateDBClusterRequest(const CreateDBClusterRequest &oth
 }
 
 /*!
- * @brief  Constructs a new CreateDBClusterRequest object.
+ * Constructs a CreateDBClusterRequest object.
  */
 CreateDBClusterRequest::CreateDBClusterRequest()
     : RDSRequest(new CreateDBClusterRequestPrivate(RDSRequest::CreateDBClusterAction, this))
@@ -130,14 +127,9 @@ bool CreateDBClusterRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateDBClusterResponse object.
+ * Returns a CreateDBClusterResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateDBClusterResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RDSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateDBClusterRequest::response(QNetworkReply * const reply) const
 {
@@ -145,20 +137,17 @@ QtAws::Core::AwsAbstractResponse * CreateDBClusterRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::RDS::CreateDBClusterRequestPrivate
+ * \brief The CreateDBClusterRequestPrivate class provides private implementation for CreateDBClusterRequest.
+ * \internal
  *
- * @class  CreateDBClusterRequestPrivate
- *
- * @brief  Private implementation for CreateDBClusterRequest.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateDBClusterRequestPrivate object.
- *
- * @param  action  RDS action being performed.
- * @param  q       Pointer to this object's public CreateDBClusterRequest instance.
+ * Constructs a CreateDBClusterRequestPrivate object for RDS \a action with,
+ * public implementation \a q.
  */
 CreateDBClusterRequestPrivate::CreateDBClusterRequestPrivate(
     const RDSRequest::Action action, CreateDBClusterRequest * const q)
@@ -168,15 +157,10 @@ CreateDBClusterRequestPrivate::CreateDBClusterRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateDBClusterRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateDBClusterRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateDBClusterRequest instance.
  */
 CreateDBClusterRequestPrivate::CreateDBClusterRequestPrivate(
     const CreateDBClusterRequestPrivate &other, CreateDBClusterRequest * const q)

@@ -27,10 +27,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::ModifyDBParameterGroupRequest
- *
  * \brief The ModifyDBParameterGroupRequest class provides an interface for RDS ModifyDBParameterGroup requests.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -101,9 +100,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new ModifyDBParameterGroupRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ModifyDBParameterGroupRequest::ModifyDBParameterGroupRequest(const ModifyDBParameterGroupRequest &other)
     : RDSRequest(new ModifyDBParameterGroupRequestPrivate(*other.d_func(), this))
@@ -112,7 +109,7 @@ ModifyDBParameterGroupRequest::ModifyDBParameterGroupRequest(const ModifyDBParam
 }
 
 /*!
- * @brief  Constructs a new ModifyDBParameterGroupRequest object.
+ * Constructs a ModifyDBParameterGroupRequest object.
  */
 ModifyDBParameterGroupRequest::ModifyDBParameterGroupRequest()
     : RDSRequest(new ModifyDBParameterGroupRequestPrivate(RDSRequest::ModifyDBParameterGroupAction, this))
@@ -130,14 +127,9 @@ bool ModifyDBParameterGroupRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ModifyDBParameterGroupResponse object.
+ * Returns a ModifyDBParameterGroupResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ModifyDBParameterGroupResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RDSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ModifyDBParameterGroupRequest::response(QNetworkReply * const reply) const
 {
@@ -145,20 +137,17 @@ QtAws::Core::AwsAbstractResponse * ModifyDBParameterGroupRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::RDS::ModifyDBParameterGroupRequestPrivate
+ * \brief The ModifyDBParameterGroupRequestPrivate class provides private implementation for ModifyDBParameterGroupRequest.
+ * \internal
  *
- * @class  ModifyDBParameterGroupRequestPrivate
- *
- * @brief  Private implementation for ModifyDBParameterGroupRequest.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ModifyDBParameterGroupRequestPrivate object.
- *
- * @param  action  RDS action being performed.
- * @param  q       Pointer to this object's public ModifyDBParameterGroupRequest instance.
+ * Constructs a ModifyDBParameterGroupRequestPrivate object for RDS \a action with,
+ * public implementation \a q.
  */
 ModifyDBParameterGroupRequestPrivate::ModifyDBParameterGroupRequestPrivate(
     const RDSRequest::Action action, ModifyDBParameterGroupRequest * const q)
@@ -168,15 +157,10 @@ ModifyDBParameterGroupRequestPrivate::ModifyDBParameterGroupRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ModifyDBParameterGroupRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ModifyDBParameterGroupRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ModifyDBParameterGroupRequest instance.
  */
 ModifyDBParameterGroupRequestPrivate::ModifyDBParameterGroupRequestPrivate(
     const ModifyDBParameterGroupRequestPrivate &other, ModifyDBParameterGroupRequest * const q)

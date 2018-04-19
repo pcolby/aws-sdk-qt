@@ -27,10 +27,9 @@ namespace OpsWorks {
 
 /*!
  * \class QtAws::OpsWorks::DescribeEcsClustersRequest
- *
  * \brief The DescribeEcsClustersRequest class provides an interface for OpsWorks DescribeEcsClusters requests.
  *
- * \ingroup OpsWorks
+ * \inmodule QtAwsOpsWorks
  *
  *  <fullname>AWS OpsWorks</fullname>
  * 
@@ -143,9 +142,7 @@ namespace OpsWorks {
  */
 
 /*!
- * @brief  Constructs a new DescribeEcsClustersRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeEcsClustersRequest::DescribeEcsClustersRequest(const DescribeEcsClustersRequest &other)
     : OpsWorksRequest(new DescribeEcsClustersRequestPrivate(*other.d_func(), this))
@@ -154,7 +151,7 @@ DescribeEcsClustersRequest::DescribeEcsClustersRequest(const DescribeEcsClusters
 }
 
 /*!
- * @brief  Constructs a new DescribeEcsClustersRequest object.
+ * Constructs a DescribeEcsClustersRequest object.
  */
 DescribeEcsClustersRequest::DescribeEcsClustersRequest()
     : OpsWorksRequest(new DescribeEcsClustersRequestPrivate(OpsWorksRequest::DescribeEcsClustersAction, this))
@@ -172,14 +169,9 @@ bool DescribeEcsClustersRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeEcsClustersResponse object.
+ * Returns a DescribeEcsClustersResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeEcsClustersResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  OpsWorksClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeEcsClustersRequest::response(QNetworkReply * const reply) const
 {
@@ -187,20 +179,17 @@ QtAws::Core::AwsAbstractResponse * DescribeEcsClustersRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::OpsWorks::DescribeEcsClustersRequestPrivate
+ * \brief The DescribeEcsClustersRequestPrivate class provides private implementation for DescribeEcsClustersRequest.
+ * \internal
  *
- * @class  DescribeEcsClustersRequestPrivate
- *
- * @brief  Private implementation for DescribeEcsClustersRequest.
+ * \inmodule QtAwsOpsWorks
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeEcsClustersRequestPrivate object.
- *
- * @param  action  OpsWorks action being performed.
- * @param  q       Pointer to this object's public DescribeEcsClustersRequest instance.
+ * Constructs a DescribeEcsClustersRequestPrivate object for OpsWorks \a action with,
+ * public implementation \a q.
  */
 DescribeEcsClustersRequestPrivate::DescribeEcsClustersRequestPrivate(
     const OpsWorksRequest::Action action, DescribeEcsClustersRequest * const q)
@@ -210,15 +199,10 @@ DescribeEcsClustersRequestPrivate::DescribeEcsClustersRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeEcsClustersRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeEcsClustersRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeEcsClustersRequest instance.
  */
 DescribeEcsClustersRequestPrivate::DescribeEcsClustersRequestPrivate(
     const DescribeEcsClustersRequestPrivate &other, DescribeEcsClustersRequest * const q)

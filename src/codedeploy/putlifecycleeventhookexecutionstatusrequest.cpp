@@ -27,10 +27,9 @@ namespace CodeDeploy {
 
 /*!
  * \class QtAws::CodeDeploy::PutLifecycleEventHookExecutionStatusRequest
- *
  * \brief The PutLifecycleEventHookExecutionStatusRequest class provides an interface for CodeDeploy PutLifecycleEventHookExecutionStatus requests.
  *
- * \ingroup CodeDeploy
+ * \inmodule QtAwsCodeDeploy
  *
  *  <fullname>AWS CodeDeploy</fullname>
  * 
@@ -118,9 +117,7 @@ namespace CodeDeploy {
  */
 
 /*!
- * @brief  Constructs a new PutLifecycleEventHookExecutionStatusRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 PutLifecycleEventHookExecutionStatusRequest::PutLifecycleEventHookExecutionStatusRequest(const PutLifecycleEventHookExecutionStatusRequest &other)
     : CodeDeployRequest(new PutLifecycleEventHookExecutionStatusRequestPrivate(*other.d_func(), this))
@@ -129,7 +126,7 @@ PutLifecycleEventHookExecutionStatusRequest::PutLifecycleEventHookExecutionStatu
 }
 
 /*!
- * @brief  Constructs a new PutLifecycleEventHookExecutionStatusRequest object.
+ * Constructs a PutLifecycleEventHookExecutionStatusRequest object.
  */
 PutLifecycleEventHookExecutionStatusRequest::PutLifecycleEventHookExecutionStatusRequest()
     : CodeDeployRequest(new PutLifecycleEventHookExecutionStatusRequestPrivate(CodeDeployRequest::PutLifecycleEventHookExecutionStatusAction, this))
@@ -147,14 +144,9 @@ bool PutLifecycleEventHookExecutionStatusRequest::isValid() const
 
 
 /*!
- * @brief  Construct an PutLifecycleEventHookExecutionStatusResponse object.
+ * Returns a PutLifecycleEventHookExecutionStatusResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An PutLifecycleEventHookExecutionStatusResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CodeDeployClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * PutLifecycleEventHookExecutionStatusRequest::response(QNetworkReply * const reply) const
 {
@@ -162,20 +154,17 @@ QtAws::Core::AwsAbstractResponse * PutLifecycleEventHookExecutionStatusRequest::
 }
 
 /*!
- * @internal
+ * \class QtAws::CodeDeploy::PutLifecycleEventHookExecutionStatusRequestPrivate
+ * \brief The PutLifecycleEventHookExecutionStatusRequestPrivate class provides private implementation for PutLifecycleEventHookExecutionStatusRequest.
+ * \internal
  *
- * @class  PutLifecycleEventHookExecutionStatusRequestPrivate
- *
- * @brief  Private implementation for PutLifecycleEventHookExecutionStatusRequest.
+ * \inmodule QtAwsCodeDeploy
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new PutLifecycleEventHookExecutionStatusRequestPrivate object.
- *
- * @param  action  CodeDeploy action being performed.
- * @param  q       Pointer to this object's public PutLifecycleEventHookExecutionStatusRequest instance.
+ * Constructs a PutLifecycleEventHookExecutionStatusRequestPrivate object for CodeDeploy \a action with,
+ * public implementation \a q.
  */
 PutLifecycleEventHookExecutionStatusRequestPrivate::PutLifecycleEventHookExecutionStatusRequestPrivate(
     const CodeDeployRequest::Action action, PutLifecycleEventHookExecutionStatusRequest * const q)
@@ -185,15 +174,10 @@ PutLifecycleEventHookExecutionStatusRequestPrivate::PutLifecycleEventHookExecuti
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutLifecycleEventHookExecutionStatusRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the PutLifecycleEventHookExecutionStatusRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public PutLifecycleEventHookExecutionStatusRequest instance.
  */
 PutLifecycleEventHookExecutionStatusRequestPrivate::PutLifecycleEventHookExecutionStatusRequestPrivate(
     const PutLifecycleEventHookExecutionStatusRequestPrivate &other, PutLifecycleEventHookExecutionStatusRequest * const q)

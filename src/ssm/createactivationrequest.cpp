@@ -27,10 +27,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::CreateActivationRequest
- *
  * \brief The CreateActivationRequest class provides an interface for SSM CreateActivation requests.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -61,9 +60,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new CreateActivationRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateActivationRequest::CreateActivationRequest(const CreateActivationRequest &other)
     : SSMRequest(new CreateActivationRequestPrivate(*other.d_func(), this))
@@ -72,7 +69,7 @@ CreateActivationRequest::CreateActivationRequest(const CreateActivationRequest &
 }
 
 /*!
- * @brief  Constructs a new CreateActivationRequest object.
+ * Constructs a CreateActivationRequest object.
  */
 CreateActivationRequest::CreateActivationRequest()
     : SSMRequest(new CreateActivationRequestPrivate(SSMRequest::CreateActivationAction, this))
@@ -90,14 +87,9 @@ bool CreateActivationRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateActivationResponse object.
+ * Returns a CreateActivationResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateActivationResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SSMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateActivationRequest::response(QNetworkReply * const reply) const
 {
@@ -105,20 +97,17 @@ QtAws::Core::AwsAbstractResponse * CreateActivationRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::SSM::CreateActivationRequestPrivate
+ * \brief The CreateActivationRequestPrivate class provides private implementation for CreateActivationRequest.
+ * \internal
  *
- * @class  CreateActivationRequestPrivate
- *
- * @brief  Private implementation for CreateActivationRequest.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateActivationRequestPrivate object.
- *
- * @param  action  SSM action being performed.
- * @param  q       Pointer to this object's public CreateActivationRequest instance.
+ * Constructs a CreateActivationRequestPrivate object for SSM \a action with,
+ * public implementation \a q.
  */
 CreateActivationRequestPrivate::CreateActivationRequestPrivate(
     const SSMRequest::Action action, CreateActivationRequest * const q)
@@ -128,15 +117,10 @@ CreateActivationRequestPrivate::CreateActivationRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateActivationRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateActivationRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateActivationRequest instance.
  */
 CreateActivationRequestPrivate::CreateActivationRequestPrivate(
     const CreateActivationRequestPrivate &other, CreateActivationRequest * const q)

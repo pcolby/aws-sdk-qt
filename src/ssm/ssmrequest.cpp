@@ -25,16 +25,118 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::SSMRequest
- *
  * \brief The SSMRequest class provides an interface for SSM requests.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @brief  Constructs a new SSMRequest object.
+ * \enum SSMRequest::Action
  *
- * @param  action  The SSM action to request.
+ * This enum describes the actions that can be performed as SSM
+ * requests.
+ *
+ * \value AddTagsToResourceAction SSM AddTagsToResource action.
+ * \value CancelCommandAction SSM CancelCommand action.
+ * \value CreateActivationAction SSM CreateActivation action.
+ * \value CreateAssociationAction SSM CreateAssociation action.
+ * \value CreateAssociationBatchAction SSM CreateAssociationBatch action.
+ * \value CreateDocumentAction SSM CreateDocument action.
+ * \value CreateMaintenanceWindowAction SSM CreateMaintenanceWindow action.
+ * \value CreatePatchBaselineAction SSM CreatePatchBaseline action.
+ * \value CreateResourceDataSyncAction SSM CreateResourceDataSync action.
+ * \value DeleteActivationAction SSM DeleteActivation action.
+ * \value DeleteAssociationAction SSM DeleteAssociation action.
+ * \value DeleteDocumentAction SSM DeleteDocument action.
+ * \value DeleteMaintenanceWindowAction SSM DeleteMaintenanceWindow action.
+ * \value DeleteParameterAction SSM DeleteParameter action.
+ * \value DeleteParametersAction SSM DeleteParameters action.
+ * \value DeletePatchBaselineAction SSM DeletePatchBaseline action.
+ * \value DeleteResourceDataSyncAction SSM DeleteResourceDataSync action.
+ * \value DeregisterManagedInstanceAction SSM DeregisterManagedInstance action.
+ * \value DeregisterPatchBaselineForPatchGroupAction SSM DeregisterPatchBaselineForPatchGroup action.
+ * \value DeregisterTargetFromMaintenanceWindowAction SSM DeregisterTargetFromMaintenanceWindow action.
+ * \value DeregisterTaskFromMaintenanceWindowAction SSM DeregisterTaskFromMaintenanceWindow action.
+ * \value DescribeActivationsAction SSM DescribeActivations action.
+ * \value DescribeAssociationAction SSM DescribeAssociation action.
+ * \value DescribeAutomationExecutionsAction SSM DescribeAutomationExecutions action.
+ * \value DescribeAutomationStepExecutionsAction SSM DescribeAutomationStepExecutions action.
+ * \value DescribeAvailablePatchesAction SSM DescribeAvailablePatches action.
+ * \value DescribeDocumentAction SSM DescribeDocument action.
+ * \value DescribeDocumentPermissionAction SSM DescribeDocumentPermission action.
+ * \value DescribeEffectiveInstanceAssociationsAction SSM DescribeEffectiveInstanceAssociations action.
+ * \value DescribeEffectivePatchesForPatchBaselineAction SSM DescribeEffectivePatchesForPatchBaseline action.
+ * \value DescribeInstanceAssociationsStatusAction SSM DescribeInstanceAssociationsStatus action.
+ * \value DescribeInstanceInformationAction SSM DescribeInstanceInformation action.
+ * \value DescribeInstancePatchStatesAction SSM DescribeInstancePatchStates action.
+ * \value DescribeInstancePatchStatesForPatchGroupAction SSM DescribeInstancePatchStatesForPatchGroup action.
+ * \value DescribeInstancePatchesAction SSM DescribeInstancePatches action.
+ * \value DescribeMaintenanceWindowExecutionTaskInvocationsAction SSM DescribeMaintenanceWindowExecutionTaskInvocations action.
+ * \value DescribeMaintenanceWindowExecutionTasksAction SSM DescribeMaintenanceWindowExecutionTasks action.
+ * \value DescribeMaintenanceWindowExecutionsAction SSM DescribeMaintenanceWindowExecutions action.
+ * \value DescribeMaintenanceWindowTargetsAction SSM DescribeMaintenanceWindowTargets action.
+ * \value DescribeMaintenanceWindowTasksAction SSM DescribeMaintenanceWindowTasks action.
+ * \value DescribeMaintenanceWindowsAction SSM DescribeMaintenanceWindows action.
+ * \value DescribeParametersAction SSM DescribeParameters action.
+ * \value DescribePatchBaselinesAction SSM DescribePatchBaselines action.
+ * \value DescribePatchGroupStateAction SSM DescribePatchGroupState action.
+ * \value DescribePatchGroupsAction SSM DescribePatchGroups action.
+ * \value GetAutomationExecutionAction SSM GetAutomationExecution action.
+ * \value GetCommandInvocationAction SSM GetCommandInvocation action.
+ * \value GetDefaultPatchBaselineAction SSM GetDefaultPatchBaseline action.
+ * \value GetDeployablePatchSnapshotForInstanceAction SSM GetDeployablePatchSnapshotForInstance action.
+ * \value GetDocumentAction SSM GetDocument action.
+ * \value GetInventoryAction SSM GetInventory action.
+ * \value GetInventorySchemaAction SSM GetInventorySchema action.
+ * \value GetMaintenanceWindowAction SSM GetMaintenanceWindow action.
+ * \value GetMaintenanceWindowExecutionAction SSM GetMaintenanceWindowExecution action.
+ * \value GetMaintenanceWindowExecutionTaskAction SSM GetMaintenanceWindowExecutionTask action.
+ * \value GetMaintenanceWindowExecutionTaskInvocationAction SSM GetMaintenanceWindowExecutionTaskInvocation action.
+ * \value GetMaintenanceWindowTaskAction SSM GetMaintenanceWindowTask action.
+ * \value GetParameterAction SSM GetParameter action.
+ * \value GetParameterHistoryAction SSM GetParameterHistory action.
+ * \value GetParametersAction SSM GetParameters action.
+ * \value GetParametersByPathAction SSM GetParametersByPath action.
+ * \value GetPatchBaselineAction SSM GetPatchBaseline action.
+ * \value GetPatchBaselineForPatchGroupAction SSM GetPatchBaselineForPatchGroup action.
+ * \value ListAssociationVersionsAction SSM ListAssociationVersions action.
+ * \value ListAssociationsAction SSM ListAssociations action.
+ * \value ListCommandInvocationsAction SSM ListCommandInvocations action.
+ * \value ListCommandsAction SSM ListCommands action.
+ * \value ListComplianceItemsAction SSM ListComplianceItems action.
+ * \value ListComplianceSummariesAction SSM ListComplianceSummaries action.
+ * \value ListDocumentVersionsAction SSM ListDocumentVersions action.
+ * \value ListDocumentsAction SSM ListDocuments action.
+ * \value ListInventoryEntriesAction SSM ListInventoryEntries action.
+ * \value ListResourceComplianceSummariesAction SSM ListResourceComplianceSummaries action.
+ * \value ListResourceDataSyncAction SSM ListResourceDataSync action.
+ * \value ListTagsForResourceAction SSM ListTagsForResource action.
+ * \value ModifyDocumentPermissionAction SSM ModifyDocumentPermission action.
+ * \value PutComplianceItemsAction SSM PutComplianceItems action.
+ * \value PutInventoryAction SSM PutInventory action.
+ * \value PutParameterAction SSM PutParameter action.
+ * \value RegisterDefaultPatchBaselineAction SSM RegisterDefaultPatchBaseline action.
+ * \value RegisterPatchBaselineForPatchGroupAction SSM RegisterPatchBaselineForPatchGroup action.
+ * \value RegisterTargetWithMaintenanceWindowAction SSM RegisterTargetWithMaintenanceWindow action.
+ * \value RegisterTaskWithMaintenanceWindowAction SSM RegisterTaskWithMaintenanceWindow action.
+ * \value RemoveTagsFromResourceAction SSM RemoveTagsFromResource action.
+ * \value SendAutomationSignalAction SSM SendAutomationSignal action.
+ * \value SendCommandAction SSM SendCommand action.
+ * \value StartAutomationExecutionAction SSM StartAutomationExecution action.
+ * \value StopAutomationExecutionAction SSM StopAutomationExecution action.
+ * \value UpdateAssociationAction SSM UpdateAssociation action.
+ * \value UpdateAssociationStatusAction SSM UpdateAssociationStatus action.
+ * \value UpdateDocumentAction SSM UpdateDocument action.
+ * \value UpdateDocumentDefaultVersionAction SSM UpdateDocumentDefaultVersion action.
+ * \value UpdateMaintenanceWindowAction SSM UpdateMaintenanceWindow action.
+ * \value UpdateMaintenanceWindowTargetAction SSM UpdateMaintenanceWindowTarget action.
+ * \value UpdateMaintenanceWindowTaskAction SSM UpdateMaintenanceWindowTask action.
+ * \value UpdateManagedInstanceRoleAction SSM UpdateManagedInstanceRole action.
+ * \value UpdatePatchBaselineAction SSM UpdatePatchBaseline action.
+ */
+
+/*!
+ * Constructs a[n] SSMRequest object for SSM \a action.
  */
 SSMRequest::SSMRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new SSMRequestPrivate(action, this))
@@ -43,9 +145,7 @@ SSMRequest::SSMRequest(const Action action)
 }
 
 /*!
- * @brief  Constructs a new SSMRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 SSMRequest::SSMRequest(const SSMRequest &other)
     : QtAws::Core::AwsAbstractRequest(new SSMRequestPrivate(*other.d_func(), this))
@@ -54,13 +154,7 @@ SSMRequest::SSMRequest(const SSMRequest &other)
 }
 
 /*!
- * @brief  Assignment operator.
- *
- * Assigns \a other to \c this.
- *
- * @param  other  Instance to copy.
- *
- * @return  A reference to \c this.
+ * Sets the SSMRequest object to be equal to \a other.
  */
 SSMRequest& SSMRequest::operator=(const SSMRequest &other)
 {
@@ -72,14 +166,10 @@ SSMRequest& SSMRequest::operator=(const SSMRequest &other)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SSMRequest object.
+ * Constructs aa SSMRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from SSMRequestPrivate.
- *
- * @param  d  Pointer to private data (aka D-Pointer).
  */
 SSMRequest::SSMRequest(SSMRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
@@ -87,7 +177,7 @@ SSMRequest::SSMRequest(SSMRequestPrivate * const d) : QtAws::Core::AwsAbstractRe
 }
 
 /*!
- * \brief Returns the SSM action to be performed by this request.
+ * Returns the SSM action to be performed by this request.
  */
 SSMRequest::Action SSMRequest::action() const
 {
@@ -96,7 +186,7 @@ SSMRequest::Action SSMRequest::action() const
 }
 
 /*!
- * \brief Returns the name of the SSM action to be performed by this request.
+ * Returns the name of the SSM action to be performed by this request.
  */
 QString SSMRequest::actionString() const
 {
@@ -104,7 +194,7 @@ QString SSMRequest::actionString() const
 }
 
 /*!
- * \brief Returns the SSM API version implemented by this request.
+ * Returns the SSM API version implemented by this request.
  */
 QString SSMRequest::apiVersion() const
 {
@@ -113,7 +203,7 @@ QString SSMRequest::apiVersion() const
 }
 
 /*!
- * @brief Set the SSM action to be performed by this request to \a action.
+ * Sets the SSM action to be performed by this request to \a action.
  */
 void SSMRequest::setAction(const Action action)
 {
@@ -122,7 +212,7 @@ void SSMRequest::setAction(const Action action)
 }
 
 /*!
- * Set the SSM API version to include in this request to \a version.
+ * Sets the SSM API version to include in this request to \a version.
  */
 void SSMRequest::setApiVersion(const QString &version)
 {
@@ -131,7 +221,7 @@ void SSMRequest::setApiVersion(const QString &version)
 }
 
 /*!
- * \brief Returns \c true if this request is the same as \a other.
+ * Returns \c true if this request is equal to \a other; \c false otherwise.
  *
  * Note, most derived *Request classes do not need to provider their own
  * implementations of this function, since most such request classes rely on
@@ -146,8 +236,8 @@ bool SSMRequest::operator==(const SSMRequest &other) const
             (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
-/*!
- * @brief  Check if \a queueName is a valid SSM queue name.
+/*
+ * Returns \c tue if \a queueName is a valid SSM queue name.
  *
  * @par From SSM FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
@@ -166,9 +256,8 @@ bool SSMRequest::operator==(const SSMRequest &other) const
 }*/
 
 /*!
- * \brief Removes the a \a name parameter from this request.
- *
- * Returns the count of paramters removed (typically \c 0 or \c 1).
+ * Removes the a \a name parameter from the request, then returns the number of
+ * paramters removed (typically \c 0 or \c 1).
  */
 int SSMRequest::clearParameter(const QString &name)
 {
@@ -177,7 +266,7 @@ int SSMRequest::clearParameter(const QString &name)
 }
 
 /*!
- * \brief Removes all parameters from this request.
+ * Removes all parameters from the request.
  */
 void SSMRequest::clearParameters()
 {
@@ -186,7 +275,7 @@ void SSMRequest::clearParameters()
 }
 
 /*!
- * \brief Returns the value of the \n name pararemter if set, otherwise \a defaultValue.
+ * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
 QVariant SSMRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
@@ -195,7 +284,7 @@ QVariant SSMRequest::parameter(const QString &name, const QVariant &defaultValue
 }
 
 /*!
- * \brief Returns a map of parameters included in this request.
+ * Returns the parameters included in this request.
  */
 const QVariantMap &SSMRequest::parameters() const
 {
@@ -204,7 +293,7 @@ const QVariantMap &SSMRequest::parameters() const
 }
 
 /*!
- * \brief Sets the \a name parameter to \a value.
+ * Sets the \a name parameter to \a value.
  */
 void SSMRequest::setParameter(const QString &name, const QVariant &value)
 {
@@ -213,9 +302,8 @@ void SSMRequest::setParameter(const QString &name, const QVariant &value)
 }
 
 /*!
- * \brief Sets the map of paramters for this request to \a parameters.
- *
- * Any request parameters set previously will be discarded.
+ * Sets the paramters for this request to \a parameters. Any request parameters
+ * set previously will be discarded.
  */
 void SSMRequest::setParameters(const QVariantMap &parameters)
 {
@@ -224,11 +312,12 @@ void SSMRequest::setParameters(const QVariantMap &parameters)
 }
 
 /*!
- * \brief Returns a network request for this SSM request using the given \a endpoint.
+ * Returns a network request for the SSM request using the given
+ * \a endpoint.
  *
- * This SSM implementation builds request URLs by combining the common query
- * parameters (such as Action and Version), with any that have been added (via
- * setParameter) by child classes.
+ * This SSM implementation builds request URLs by combining the
+ * common query parameters (such as Action and Version), with any that have
+ * been added (via setParameter) by child classes.
  */
 QNetworkRequest SSMRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -239,17 +328,16 @@ QNetworkRequest SSMRequest::unsignedRequest(const QUrl &endpoint) const
 }
 
 /*!
+ * \class QtAws::SSM::SSMRequestPrivate
+ * \brief The SSMRequestPrivate class provides private implementation for SSMRequest.
  * \internal
  *
- * \class  SSMRequestPrivate
- *
- * \brief  Private implementation for SSMRequest.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * \internal
- *
- * \brief Constructs a new SSMRequestPrivate object.
+ * Constructs a SSMRequestPrivate object for SSM \a action with,
+ * public implementation \a q.
  */
 SSMRequestPrivate::SSMRequestPrivate(const SSMRequest::Action action, SSMRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
@@ -258,9 +346,7 @@ SSMRequestPrivate::SSMRequestPrivate(const SSMRequest::Action action, SSMRequest
 }
 
 /*!
- * \internal
- *
- * \brief Constructs a new SSMRequestPrivate object, copying an existing one.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
@@ -276,15 +362,12 @@ SSMRequestPrivate::SSMRequestPrivate(const SSMRequestPrivate &other,
 }
 
 /*!
- * \internal
- *
- * \brief Returns a string representing \a action.
+ * Returns a string represention of \a action, or a null string if \a action is
+ * invalid.
  *
  * This function converts SSMRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the SSM service's Action
  * query parameters.
- *
- * @return A string representing \a action, or a null string if \a action is invalid.
  */
 QString SSMRequestPrivate::toString(const SSMRequest::Action &action)
 {

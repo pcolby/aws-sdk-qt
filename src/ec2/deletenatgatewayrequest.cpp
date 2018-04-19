@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DeleteNatGatewayRequest
- *
  * \brief The DeleteNatGatewayRequest class provides an interface for EC2 DeleteNatGateway requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DeleteNatGatewayRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteNatGatewayRequest::DeleteNatGatewayRequest(const DeleteNatGatewayRequest &other)
     : EC2Request(new DeleteNatGatewayRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ DeleteNatGatewayRequest::DeleteNatGatewayRequest(const DeleteNatGatewayRequest &
 }
 
 /*!
- * @brief  Constructs a new DeleteNatGatewayRequest object.
+ * Constructs a DeleteNatGatewayRequest object.
  */
 DeleteNatGatewayRequest::DeleteNatGatewayRequest()
     : EC2Request(new DeleteNatGatewayRequestPrivate(EC2Request::DeleteNatGatewayAction, this))
@@ -70,14 +67,9 @@ bool DeleteNatGatewayRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteNatGatewayResponse object.
+ * Returns a DeleteNatGatewayResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteNatGatewayResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteNatGatewayRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * DeleteNatGatewayRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::DeleteNatGatewayRequestPrivate
+ * \brief The DeleteNatGatewayRequestPrivate class provides private implementation for DeleteNatGatewayRequest.
+ * \internal
  *
- * @class  DeleteNatGatewayRequestPrivate
- *
- * @brief  Private implementation for DeleteNatGatewayRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteNatGatewayRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public DeleteNatGatewayRequest instance.
+ * Constructs a DeleteNatGatewayRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 DeleteNatGatewayRequestPrivate::DeleteNatGatewayRequestPrivate(
     const EC2Request::Action action, DeleteNatGatewayRequest * const q)
@@ -108,15 +97,10 @@ DeleteNatGatewayRequestPrivate::DeleteNatGatewayRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteNatGatewayRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteNatGatewayRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteNatGatewayRequest instance.
  */
 DeleteNatGatewayRequestPrivate::DeleteNatGatewayRequestPrivate(
     const DeleteNatGatewayRequestPrivate &other, DeleteNatGatewayRequest * const q)

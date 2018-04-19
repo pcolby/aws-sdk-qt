@@ -27,10 +27,9 @@ namespace CloudWatchEvents {
 
 /*!
  * \class QtAws::CloudWatchEvents::DescribeRuleRequest
- *
  * \brief The DescribeRuleRequest class provides an interface for CloudWatchEvents DescribeRule requests.
  *
- * \ingroup CloudWatchEvents
+ * \inmodule QtAwsCloudWatchEvents
  *
  *  Amazon CloudWatch Events helps you to respond to state changes in your AWS resources. When your resources change state,
  *  they automatically send events into an event stream. You can create rules that match selected events in the stream and
@@ -60,9 +59,7 @@ namespace CloudWatchEvents {
  */
 
 /*!
- * @brief  Constructs a new DescribeRuleRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeRuleRequest::DescribeRuleRequest(const DescribeRuleRequest &other)
     : CloudWatchEventsRequest(new DescribeRuleRequestPrivate(*other.d_func(), this))
@@ -71,7 +68,7 @@ DescribeRuleRequest::DescribeRuleRequest(const DescribeRuleRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DescribeRuleRequest object.
+ * Constructs a DescribeRuleRequest object.
  */
 DescribeRuleRequest::DescribeRuleRequest()
     : CloudWatchEventsRequest(new DescribeRuleRequestPrivate(CloudWatchEventsRequest::DescribeRuleAction, this))
@@ -89,14 +86,9 @@ bool DescribeRuleRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeRuleResponse object.
+ * Returns a DescribeRuleResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeRuleResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudWatchEventsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeRuleRequest::response(QNetworkReply * const reply) const
 {
@@ -104,20 +96,17 @@ QtAws::Core::AwsAbstractResponse * DescribeRuleRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudWatchEvents::DescribeRuleRequestPrivate
+ * \brief The DescribeRuleRequestPrivate class provides private implementation for DescribeRuleRequest.
+ * \internal
  *
- * @class  DescribeRuleRequestPrivate
- *
- * @brief  Private implementation for DescribeRuleRequest.
+ * \inmodule QtAwsCloudWatchEvents
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeRuleRequestPrivate object.
- *
- * @param  action  CloudWatchEvents action being performed.
- * @param  q       Pointer to this object's public DescribeRuleRequest instance.
+ * Constructs a DescribeRuleRequestPrivate object for CloudWatchEvents \a action with,
+ * public implementation \a q.
  */
 DescribeRuleRequestPrivate::DescribeRuleRequestPrivate(
     const CloudWatchEventsRequest::Action action, DescribeRuleRequest * const q)
@@ -127,15 +116,10 @@ DescribeRuleRequestPrivate::DescribeRuleRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeRuleRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeRuleRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeRuleRequest instance.
  */
 DescribeRuleRequestPrivate::DescribeRuleRequestPrivate(
     const DescribeRuleRequestPrivate &other, DescribeRuleRequest * const q)

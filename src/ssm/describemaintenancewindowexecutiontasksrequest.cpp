@@ -27,10 +27,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::DescribeMaintenanceWindowExecutionTasksRequest
- *
  * \brief The DescribeMaintenanceWindowExecutionTasksRequest class provides an interface for SSM DescribeMaintenanceWindowExecutionTasks requests.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -61,9 +60,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new DescribeMaintenanceWindowExecutionTasksRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeMaintenanceWindowExecutionTasksRequest::DescribeMaintenanceWindowExecutionTasksRequest(const DescribeMaintenanceWindowExecutionTasksRequest &other)
     : SSMRequest(new DescribeMaintenanceWindowExecutionTasksRequestPrivate(*other.d_func(), this))
@@ -72,7 +69,7 @@ DescribeMaintenanceWindowExecutionTasksRequest::DescribeMaintenanceWindowExecuti
 }
 
 /*!
- * @brief  Constructs a new DescribeMaintenanceWindowExecutionTasksRequest object.
+ * Constructs a DescribeMaintenanceWindowExecutionTasksRequest object.
  */
 DescribeMaintenanceWindowExecutionTasksRequest::DescribeMaintenanceWindowExecutionTasksRequest()
     : SSMRequest(new DescribeMaintenanceWindowExecutionTasksRequestPrivate(SSMRequest::DescribeMaintenanceWindowExecutionTasksAction, this))
@@ -90,14 +87,9 @@ bool DescribeMaintenanceWindowExecutionTasksRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeMaintenanceWindowExecutionTasksResponse object.
+ * Returns a DescribeMaintenanceWindowExecutionTasksResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeMaintenanceWindowExecutionTasksResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SSMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeMaintenanceWindowExecutionTasksRequest::response(QNetworkReply * const reply) const
 {
@@ -105,20 +97,17 @@ QtAws::Core::AwsAbstractResponse * DescribeMaintenanceWindowExecutionTasksReques
 }
 
 /*!
- * @internal
+ * \class QtAws::SSM::DescribeMaintenanceWindowExecutionTasksRequestPrivate
+ * \brief The DescribeMaintenanceWindowExecutionTasksRequestPrivate class provides private implementation for DescribeMaintenanceWindowExecutionTasksRequest.
+ * \internal
  *
- * @class  DescribeMaintenanceWindowExecutionTasksRequestPrivate
- *
- * @brief  Private implementation for DescribeMaintenanceWindowExecutionTasksRequest.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeMaintenanceWindowExecutionTasksRequestPrivate object.
- *
- * @param  action  SSM action being performed.
- * @param  q       Pointer to this object's public DescribeMaintenanceWindowExecutionTasksRequest instance.
+ * Constructs a DescribeMaintenanceWindowExecutionTasksRequestPrivate object for SSM \a action with,
+ * public implementation \a q.
  */
 DescribeMaintenanceWindowExecutionTasksRequestPrivate::DescribeMaintenanceWindowExecutionTasksRequestPrivate(
     const SSMRequest::Action action, DescribeMaintenanceWindowExecutionTasksRequest * const q)
@@ -128,15 +117,10 @@ DescribeMaintenanceWindowExecutionTasksRequestPrivate::DescribeMaintenanceWindow
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeMaintenanceWindowExecutionTasksRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeMaintenanceWindowExecutionTasksRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeMaintenanceWindowExecutionTasksRequest instance.
  */
 DescribeMaintenanceWindowExecutionTasksRequestPrivate::DescribeMaintenanceWindowExecutionTasksRequestPrivate(
     const DescribeMaintenanceWindowExecutionTasksRequestPrivate &other, DescribeMaintenanceWindowExecutionTasksRequest * const q)

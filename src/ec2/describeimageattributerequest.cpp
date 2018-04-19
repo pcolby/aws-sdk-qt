@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DescribeImageAttributeRequest
- *
  * \brief The DescribeImageAttributeRequest class provides an interface for EC2 DescribeImageAttribute requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DescribeImageAttributeRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeImageAttributeRequest::DescribeImageAttributeRequest(const DescribeImageAttributeRequest &other)
     : EC2Request(new DescribeImageAttributeRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ DescribeImageAttributeRequest::DescribeImageAttributeRequest(const DescribeImage
 }
 
 /*!
- * @brief  Constructs a new DescribeImageAttributeRequest object.
+ * Constructs a DescribeImageAttributeRequest object.
  */
 DescribeImageAttributeRequest::DescribeImageAttributeRequest()
     : EC2Request(new DescribeImageAttributeRequestPrivate(EC2Request::DescribeImageAttributeAction, this))
@@ -70,14 +67,9 @@ bool DescribeImageAttributeRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeImageAttributeResponse object.
+ * Returns a DescribeImageAttributeResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeImageAttributeResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeImageAttributeRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * DescribeImageAttributeRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::DescribeImageAttributeRequestPrivate
+ * \brief The DescribeImageAttributeRequestPrivate class provides private implementation for DescribeImageAttributeRequest.
+ * \internal
  *
- * @class  DescribeImageAttributeRequestPrivate
- *
- * @brief  Private implementation for DescribeImageAttributeRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeImageAttributeRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public DescribeImageAttributeRequest instance.
+ * Constructs a DescribeImageAttributeRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 DescribeImageAttributeRequestPrivate::DescribeImageAttributeRequestPrivate(
     const EC2Request::Action action, DescribeImageAttributeRequest * const q)
@@ -108,15 +97,10 @@ DescribeImageAttributeRequestPrivate::DescribeImageAttributeRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeImageAttributeRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeImageAttributeRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeImageAttributeRequest instance.
  */
 DescribeImageAttributeRequestPrivate::DescribeImageAttributeRequestPrivate(
     const DescribeImageAttributeRequestPrivate &other, DescribeImageAttributeRequest * const q)

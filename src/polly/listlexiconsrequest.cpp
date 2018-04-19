@@ -27,10 +27,9 @@ namespace Polly {
 
 /*!
  * \class QtAws::Polly::ListLexiconsRequest
- *
  * \brief The ListLexiconsRequest class provides an interface for Polly ListLexicons requests.
  *
- * \ingroup Polly
+ * \inmodule QtAwsPolly
  *
  *  Amazon Polly is a web service that makes it easy to synthesize speech from
  * 
@@ -44,9 +43,7 @@ namespace Polly {
  */
 
 /*!
- * @brief  Constructs a new ListLexiconsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListLexiconsRequest::ListLexiconsRequest(const ListLexiconsRequest &other)
     : PollyRequest(new ListLexiconsRequestPrivate(*other.d_func(), this))
@@ -55,7 +52,7 @@ ListLexiconsRequest::ListLexiconsRequest(const ListLexiconsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ListLexiconsRequest object.
+ * Constructs a ListLexiconsRequest object.
  */
 ListLexiconsRequest::ListLexiconsRequest()
     : PollyRequest(new ListLexiconsRequestPrivate(PollyRequest::ListLexiconsAction, this))
@@ -73,14 +70,9 @@ bool ListLexiconsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListLexiconsResponse object.
+ * Returns a ListLexiconsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListLexiconsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  PollyClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListLexiconsRequest::response(QNetworkReply * const reply) const
 {
@@ -88,20 +80,17 @@ QtAws::Core::AwsAbstractResponse * ListLexiconsRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::Polly::ListLexiconsRequestPrivate
+ * \brief The ListLexiconsRequestPrivate class provides private implementation for ListLexiconsRequest.
+ * \internal
  *
- * @class  ListLexiconsRequestPrivate
- *
- * @brief  Private implementation for ListLexiconsRequest.
+ * \inmodule QtAwsPolly
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListLexiconsRequestPrivate object.
- *
- * @param  action  Polly action being performed.
- * @param  q       Pointer to this object's public ListLexiconsRequest instance.
+ * Constructs a ListLexiconsRequestPrivate object for Polly \a action with,
+ * public implementation \a q.
  */
 ListLexiconsRequestPrivate::ListLexiconsRequestPrivate(
     const PollyRequest::Action action, ListLexiconsRequest * const q)
@@ -111,15 +100,10 @@ ListLexiconsRequestPrivate::ListLexiconsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListLexiconsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListLexiconsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListLexiconsRequest instance.
  */
 ListLexiconsRequestPrivate::ListLexiconsRequestPrivate(
     const ListLexiconsRequestPrivate &other, ListLexiconsRequest * const q)

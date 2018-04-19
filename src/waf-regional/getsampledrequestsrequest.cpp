@@ -27,10 +27,9 @@ namespace WAFRegional {
 
 /*!
  * \class QtAws::WAFRegional::GetSampledRequestsRequest
- *
  * \brief The GetSampledRequestsRequest class provides an interface for WAFRegional GetSampledRequests requests.
  *
- * \ingroup WAFRegional
+ * \inmodule QtAwsWAFRegional
  *
  *  This is the <i>AWS WAF Regional API Reference</i> for using AWS WAF with Elastic Load Balancing (ELB) Application Load
  *  Balancers. The AWS WAF actions and data types listed in the reference are available for protecting Application Load
@@ -44,9 +43,7 @@ namespace WAFRegional {
  */
 
 /*!
- * @brief  Constructs a new GetSampledRequestsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetSampledRequestsRequest::GetSampledRequestsRequest(const GetSampledRequestsRequest &other)
     : WAFRegionalRequest(new GetSampledRequestsRequestPrivate(*other.d_func(), this))
@@ -55,7 +52,7 @@ GetSampledRequestsRequest::GetSampledRequestsRequest(const GetSampledRequestsReq
 }
 
 /*!
- * @brief  Constructs a new GetSampledRequestsRequest object.
+ * Constructs a GetSampledRequestsRequest object.
  */
 GetSampledRequestsRequest::GetSampledRequestsRequest()
     : WAFRegionalRequest(new GetSampledRequestsRequestPrivate(WAFRegionalRequest::GetSampledRequestsAction, this))
@@ -73,14 +70,9 @@ bool GetSampledRequestsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetSampledRequestsResponse object.
+ * Returns a GetSampledRequestsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetSampledRequestsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WAFRegionalClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetSampledRequestsRequest::response(QNetworkReply * const reply) const
 {
@@ -88,20 +80,17 @@ QtAws::Core::AwsAbstractResponse * GetSampledRequestsRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::WAFRegional::GetSampledRequestsRequestPrivate
+ * \brief The GetSampledRequestsRequestPrivate class provides private implementation for GetSampledRequestsRequest.
+ * \internal
  *
- * @class  GetSampledRequestsRequestPrivate
- *
- * @brief  Private implementation for GetSampledRequestsRequest.
+ * \inmodule QtAwsWAFRegional
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetSampledRequestsRequestPrivate object.
- *
- * @param  action  WAFRegional action being performed.
- * @param  q       Pointer to this object's public GetSampledRequestsRequest instance.
+ * Constructs a GetSampledRequestsRequestPrivate object for WAFRegional \a action with,
+ * public implementation \a q.
  */
 GetSampledRequestsRequestPrivate::GetSampledRequestsRequestPrivate(
     const WAFRegionalRequest::Action action, GetSampledRequestsRequest * const q)
@@ -111,15 +100,10 @@ GetSampledRequestsRequestPrivate::GetSampledRequestsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetSampledRequestsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetSampledRequestsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetSampledRequestsRequest instance.
  */
 GetSampledRequestsRequestPrivate::GetSampledRequestsRequestPrivate(
     const GetSampledRequestsRequestPrivate &other, GetSampledRequestsRequest * const q)

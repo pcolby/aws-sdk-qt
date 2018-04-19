@@ -27,10 +27,9 @@ namespace SimpleDB {
 
 /*!
  * \class QtAws::SimpleDB::BatchDeleteAttributesRequest
- *
  * \brief The BatchDeleteAttributesRequest class provides an interface for SimpleDB BatchDeleteAttributes requests.
  *
- * \ingroup SimpleDB
+ * \inmodule QtAwsSimpleDB
  *
  *  Amazon SimpleDB is a web service providing the core database functions of data indexing and querying in the cloud. By
  *  offloading the time and effort associated with building and operating a web-scale database, SimpleDB provides developers
@@ -50,9 +49,7 @@ namespace SimpleDB {
  */
 
 /*!
- * @brief  Constructs a new BatchDeleteAttributesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 BatchDeleteAttributesRequest::BatchDeleteAttributesRequest(const BatchDeleteAttributesRequest &other)
     : SimpleDBRequest(new BatchDeleteAttributesRequestPrivate(*other.d_func(), this))
@@ -61,7 +58,7 @@ BatchDeleteAttributesRequest::BatchDeleteAttributesRequest(const BatchDeleteAttr
 }
 
 /*!
- * @brief  Constructs a new BatchDeleteAttributesRequest object.
+ * Constructs a BatchDeleteAttributesRequest object.
  */
 BatchDeleteAttributesRequest::BatchDeleteAttributesRequest()
     : SimpleDBRequest(new BatchDeleteAttributesRequestPrivate(SimpleDBRequest::BatchDeleteAttributesAction, this))
@@ -79,14 +76,9 @@ bool BatchDeleteAttributesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an BatchDeleteAttributesResponse object.
+ * Returns a BatchDeleteAttributesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An BatchDeleteAttributesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SimpleDBClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * BatchDeleteAttributesRequest::response(QNetworkReply * const reply) const
 {
@@ -94,20 +86,17 @@ QtAws::Core::AwsAbstractResponse * BatchDeleteAttributesRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::SimpleDB::BatchDeleteAttributesRequestPrivate
+ * \brief The BatchDeleteAttributesRequestPrivate class provides private implementation for BatchDeleteAttributesRequest.
+ * \internal
  *
- * @class  BatchDeleteAttributesRequestPrivate
- *
- * @brief  Private implementation for BatchDeleteAttributesRequest.
+ * \inmodule QtAwsSimpleDB
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new BatchDeleteAttributesRequestPrivate object.
- *
- * @param  action  SimpleDB action being performed.
- * @param  q       Pointer to this object's public BatchDeleteAttributesRequest instance.
+ * Constructs a BatchDeleteAttributesRequestPrivate object for SimpleDB \a action with,
+ * public implementation \a q.
  */
 BatchDeleteAttributesRequestPrivate::BatchDeleteAttributesRequestPrivate(
     const SimpleDBRequest::Action action, BatchDeleteAttributesRequest * const q)
@@ -117,15 +106,10 @@ BatchDeleteAttributesRequestPrivate::BatchDeleteAttributesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new BatchDeleteAttributesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the BatchDeleteAttributesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public BatchDeleteAttributesRequest instance.
  */
 BatchDeleteAttributesRequestPrivate::BatchDeleteAttributesRequestPrivate(
     const BatchDeleteAttributesRequestPrivate &other, BatchDeleteAttributesRequest * const q)

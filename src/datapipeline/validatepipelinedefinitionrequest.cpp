@@ -27,10 +27,9 @@ namespace DataPipeline {
 
 /*!
  * \class QtAws::DataPipeline::ValidatePipelineDefinitionRequest
- *
  * \brief The ValidatePipelineDefinitionRequest class provides an interface for DataPipeline ValidatePipelineDefinition requests.
  *
- * \ingroup DataPipeline
+ * \inmodule QtAwsDataPipeline
  *
  *  AWS Data Pipeline configures and manages a data-driven workflow called a pipeline. AWS Data Pipeline handles the details
  *  of scheduling and ensuring that data dependencies are met so that your application can focus on processing the
@@ -55,9 +54,7 @@ namespace DataPipeline {
  */
 
 /*!
- * @brief  Constructs a new ValidatePipelineDefinitionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ValidatePipelineDefinitionRequest::ValidatePipelineDefinitionRequest(const ValidatePipelineDefinitionRequest &other)
     : DataPipelineRequest(new ValidatePipelineDefinitionRequestPrivate(*other.d_func(), this))
@@ -66,7 +63,7 @@ ValidatePipelineDefinitionRequest::ValidatePipelineDefinitionRequest(const Valid
 }
 
 /*!
- * @brief  Constructs a new ValidatePipelineDefinitionRequest object.
+ * Constructs a ValidatePipelineDefinitionRequest object.
  */
 ValidatePipelineDefinitionRequest::ValidatePipelineDefinitionRequest()
     : DataPipelineRequest(new ValidatePipelineDefinitionRequestPrivate(DataPipelineRequest::ValidatePipelineDefinitionAction, this))
@@ -84,14 +81,9 @@ bool ValidatePipelineDefinitionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ValidatePipelineDefinitionResponse object.
+ * Returns a ValidatePipelineDefinitionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ValidatePipelineDefinitionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DataPipelineClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ValidatePipelineDefinitionRequest::response(QNetworkReply * const reply) const
 {
@@ -99,20 +91,17 @@ QtAws::Core::AwsAbstractResponse * ValidatePipelineDefinitionRequest::response(Q
 }
 
 /*!
- * @internal
+ * \class QtAws::DataPipeline::ValidatePipelineDefinitionRequestPrivate
+ * \brief The ValidatePipelineDefinitionRequestPrivate class provides private implementation for ValidatePipelineDefinitionRequest.
+ * \internal
  *
- * @class  ValidatePipelineDefinitionRequestPrivate
- *
- * @brief  Private implementation for ValidatePipelineDefinitionRequest.
+ * \inmodule QtAwsDataPipeline
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ValidatePipelineDefinitionRequestPrivate object.
- *
- * @param  action  DataPipeline action being performed.
- * @param  q       Pointer to this object's public ValidatePipelineDefinitionRequest instance.
+ * Constructs a ValidatePipelineDefinitionRequestPrivate object for DataPipeline \a action with,
+ * public implementation \a q.
  */
 ValidatePipelineDefinitionRequestPrivate::ValidatePipelineDefinitionRequestPrivate(
     const DataPipelineRequest::Action action, ValidatePipelineDefinitionRequest * const q)
@@ -122,15 +111,10 @@ ValidatePipelineDefinitionRequestPrivate::ValidatePipelineDefinitionRequestPriva
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ValidatePipelineDefinitionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ValidatePipelineDefinitionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ValidatePipelineDefinitionRequest instance.
  */
 ValidatePipelineDefinitionRequestPrivate::ValidatePipelineDefinitionRequestPrivate(
     const ValidatePipelineDefinitionRequestPrivate &other, ValidatePipelineDefinitionRequest * const q)

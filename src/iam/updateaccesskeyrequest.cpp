@@ -27,10 +27,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::UpdateAccessKeyRequest
- *
  * \brief The UpdateAccessKeyRequest class provides an interface for IAM UpdateAccessKey requests.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -102,9 +101,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new UpdateAccessKeyRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateAccessKeyRequest::UpdateAccessKeyRequest(const UpdateAccessKeyRequest &other)
     : IAMRequest(new UpdateAccessKeyRequestPrivate(*other.d_func(), this))
@@ -113,7 +110,7 @@ UpdateAccessKeyRequest::UpdateAccessKeyRequest(const UpdateAccessKeyRequest &oth
 }
 
 /*!
- * @brief  Constructs a new UpdateAccessKeyRequest object.
+ * Constructs a UpdateAccessKeyRequest object.
  */
 UpdateAccessKeyRequest::UpdateAccessKeyRequest()
     : IAMRequest(new UpdateAccessKeyRequestPrivate(IAMRequest::UpdateAccessKeyAction, this))
@@ -131,14 +128,9 @@ bool UpdateAccessKeyRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateAccessKeyResponse object.
+ * Returns a UpdateAccessKeyResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateAccessKeyResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IAMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateAccessKeyRequest::response(QNetworkReply * const reply) const
 {
@@ -146,20 +138,17 @@ QtAws::Core::AwsAbstractResponse * UpdateAccessKeyRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::IAM::UpdateAccessKeyRequestPrivate
+ * \brief The UpdateAccessKeyRequestPrivate class provides private implementation for UpdateAccessKeyRequest.
+ * \internal
  *
- * @class  UpdateAccessKeyRequestPrivate
- *
- * @brief  Private implementation for UpdateAccessKeyRequest.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateAccessKeyRequestPrivate object.
- *
- * @param  action  IAM action being performed.
- * @param  q       Pointer to this object's public UpdateAccessKeyRequest instance.
+ * Constructs a UpdateAccessKeyRequestPrivate object for IAM \a action with,
+ * public implementation \a q.
  */
 UpdateAccessKeyRequestPrivate::UpdateAccessKeyRequestPrivate(
     const IAMRequest::Action action, UpdateAccessKeyRequest * const q)
@@ -169,15 +158,10 @@ UpdateAccessKeyRequestPrivate::UpdateAccessKeyRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateAccessKeyRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateAccessKeyRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateAccessKeyRequest instance.
  */
 UpdateAccessKeyRequestPrivate::UpdateAccessKeyRequestPrivate(
     const UpdateAccessKeyRequestPrivate &other, UpdateAccessKeyRequest * const q)

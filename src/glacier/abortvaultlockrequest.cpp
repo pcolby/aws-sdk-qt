@@ -27,10 +27,9 @@ namespace Glacier {
 
 /*!
  * \class QtAws::Glacier::AbortVaultLockRequest
- *
  * \brief The AbortVaultLockRequest class provides an interface for Glacier AbortVaultLock requests.
  *
- * \ingroup Glacier
+ * \inmodule QtAwsGlacier
  *
  *  Amazon Glacier is a storage solution for "cold
  * 
@@ -75,9 +74,7 @@ namespace Glacier {
  */
 
 /*!
- * @brief  Constructs a new AbortVaultLockRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AbortVaultLockRequest::AbortVaultLockRequest(const AbortVaultLockRequest &other)
     : GlacierRequest(new AbortVaultLockRequestPrivate(*other.d_func(), this))
@@ -86,7 +83,7 @@ AbortVaultLockRequest::AbortVaultLockRequest(const AbortVaultLockRequest &other)
 }
 
 /*!
- * @brief  Constructs a new AbortVaultLockRequest object.
+ * Constructs a AbortVaultLockRequest object.
  */
 AbortVaultLockRequest::AbortVaultLockRequest()
     : GlacierRequest(new AbortVaultLockRequestPrivate(GlacierRequest::AbortVaultLockAction, this))
@@ -104,14 +101,9 @@ bool AbortVaultLockRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AbortVaultLockResponse object.
+ * Returns a AbortVaultLockResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AbortVaultLockResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GlacierClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AbortVaultLockRequest::response(QNetworkReply * const reply) const
 {
@@ -119,20 +111,17 @@ QtAws::Core::AwsAbstractResponse * AbortVaultLockRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::Glacier::AbortVaultLockRequestPrivate
+ * \brief The AbortVaultLockRequestPrivate class provides private implementation for AbortVaultLockRequest.
+ * \internal
  *
- * @class  AbortVaultLockRequestPrivate
- *
- * @brief  Private implementation for AbortVaultLockRequest.
+ * \inmodule QtAwsGlacier
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AbortVaultLockRequestPrivate object.
- *
- * @param  action  Glacier action being performed.
- * @param  q       Pointer to this object's public AbortVaultLockRequest instance.
+ * Constructs a AbortVaultLockRequestPrivate object for Glacier \a action with,
+ * public implementation \a q.
  */
 AbortVaultLockRequestPrivate::AbortVaultLockRequestPrivate(
     const GlacierRequest::Action action, AbortVaultLockRequest * const q)
@@ -142,15 +131,10 @@ AbortVaultLockRequestPrivate::AbortVaultLockRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AbortVaultLockRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AbortVaultLockRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AbortVaultLockRequest instance.
  */
 AbortVaultLockRequestPrivate::AbortVaultLockRequestPrivate(
     const AbortVaultLockRequestPrivate &other, AbortVaultLockRequest * const q)

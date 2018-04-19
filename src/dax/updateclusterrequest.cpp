@@ -27,10 +27,9 @@ namespace DAX {
 
 /*!
  * \class QtAws::DAX::UpdateClusterRequest
- *
  * \brief The UpdateClusterRequest class provides an interface for DAX UpdateCluster requests.
  *
- * \ingroup DAX
+ * \inmodule QtAwsDAX
  *
  *  DAX is a managed caching service engineered for Amazon DynamoDB. DAX dramatically speeds up database reads by caching
  *  frequently-accessed data from DynamoDB, so applications can access that data with sub-millisecond latency. You can
@@ -41,9 +40,7 @@ namespace DAX {
  */
 
 /*!
- * @brief  Constructs a new UpdateClusterRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateClusterRequest::UpdateClusterRequest(const UpdateClusterRequest &other)
     : DAXRequest(new UpdateClusterRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ UpdateClusterRequest::UpdateClusterRequest(const UpdateClusterRequest &other)
 }
 
 /*!
- * @brief  Constructs a new UpdateClusterRequest object.
+ * Constructs a UpdateClusterRequest object.
  */
 UpdateClusterRequest::UpdateClusterRequest()
     : DAXRequest(new UpdateClusterRequestPrivate(DAXRequest::UpdateClusterAction, this))
@@ -70,14 +67,9 @@ bool UpdateClusterRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateClusterResponse object.
+ * Returns a UpdateClusterResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateClusterResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DAXClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateClusterRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * UpdateClusterRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::DAX::UpdateClusterRequestPrivate
+ * \brief The UpdateClusterRequestPrivate class provides private implementation for UpdateClusterRequest.
+ * \internal
  *
- * @class  UpdateClusterRequestPrivate
- *
- * @brief  Private implementation for UpdateClusterRequest.
+ * \inmodule QtAwsDAX
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateClusterRequestPrivate object.
- *
- * @param  action  DAX action being performed.
- * @param  q       Pointer to this object's public UpdateClusterRequest instance.
+ * Constructs a UpdateClusterRequestPrivate object for DAX \a action with,
+ * public implementation \a q.
  */
 UpdateClusterRequestPrivate::UpdateClusterRequestPrivate(
     const DAXRequest::Action action, UpdateClusterRequest * const q)
@@ -108,15 +97,10 @@ UpdateClusterRequestPrivate::UpdateClusterRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateClusterRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateClusterRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateClusterRequest instance.
  */
 UpdateClusterRequestPrivate::UpdateClusterRequestPrivate(
     const UpdateClusterRequestPrivate &other, UpdateClusterRequest * const q)

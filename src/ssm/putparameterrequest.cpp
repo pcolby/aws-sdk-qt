@@ -27,10 +27,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::PutParameterRequest
- *
  * \brief The PutParameterRequest class provides an interface for SSM PutParameter requests.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -61,9 +60,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new PutParameterRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 PutParameterRequest::PutParameterRequest(const PutParameterRequest &other)
     : SSMRequest(new PutParameterRequestPrivate(*other.d_func(), this))
@@ -72,7 +69,7 @@ PutParameterRequest::PutParameterRequest(const PutParameterRequest &other)
 }
 
 /*!
- * @brief  Constructs a new PutParameterRequest object.
+ * Constructs a PutParameterRequest object.
  */
 PutParameterRequest::PutParameterRequest()
     : SSMRequest(new PutParameterRequestPrivate(SSMRequest::PutParameterAction, this))
@@ -90,14 +87,9 @@ bool PutParameterRequest::isValid() const
 
 
 /*!
- * @brief  Construct an PutParameterResponse object.
+ * Returns a PutParameterResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An PutParameterResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SSMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * PutParameterRequest::response(QNetworkReply * const reply) const
 {
@@ -105,20 +97,17 @@ QtAws::Core::AwsAbstractResponse * PutParameterRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::SSM::PutParameterRequestPrivate
+ * \brief The PutParameterRequestPrivate class provides private implementation for PutParameterRequest.
+ * \internal
  *
- * @class  PutParameterRequestPrivate
- *
- * @brief  Private implementation for PutParameterRequest.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new PutParameterRequestPrivate object.
- *
- * @param  action  SSM action being performed.
- * @param  q       Pointer to this object's public PutParameterRequest instance.
+ * Constructs a PutParameterRequestPrivate object for SSM \a action with,
+ * public implementation \a q.
  */
 PutParameterRequestPrivate::PutParameterRequestPrivate(
     const SSMRequest::Action action, PutParameterRequest * const q)
@@ -128,15 +117,10 @@ PutParameterRequestPrivate::PutParameterRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutParameterRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the PutParameterRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public PutParameterRequest instance.
  */
 PutParameterRequestPrivate::PutParameterRequestPrivate(
     const PutParameterRequestPrivate &other, PutParameterRequest * const q)

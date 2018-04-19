@@ -27,19 +27,16 @@ namespace MediaPackage {
 
 /*!
  * \class QtAws::MediaPackage::DeleteChannelRequest
- *
  * \brief The DeleteChannelRequest class provides an interface for MediaPackage DeleteChannel requests.
  *
- * \ingroup MediaPackage
+ * \inmodule QtAwsMediaPackage
  *
  *
  * \sa MediaPackageClient::deleteChannel
  */
 
 /*!
- * @brief  Constructs a new DeleteChannelRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteChannelRequest::DeleteChannelRequest(const DeleteChannelRequest &other)
     : MediaPackageRequest(new DeleteChannelRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ DeleteChannelRequest::DeleteChannelRequest(const DeleteChannelRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DeleteChannelRequest object.
+ * Constructs a DeleteChannelRequest object.
  */
 DeleteChannelRequest::DeleteChannelRequest()
     : MediaPackageRequest(new DeleteChannelRequestPrivate(MediaPackageRequest::DeleteChannelAction, this))
@@ -66,14 +63,9 @@ bool DeleteChannelRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteChannelResponse object.
+ * Returns a DeleteChannelResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteChannelResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MediaPackageClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteChannelRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * DeleteChannelRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::MediaPackage::DeleteChannelRequestPrivate
+ * \brief The DeleteChannelRequestPrivate class provides private implementation for DeleteChannelRequest.
+ * \internal
  *
- * @class  DeleteChannelRequestPrivate
- *
- * @brief  Private implementation for DeleteChannelRequest.
+ * \inmodule QtAwsMediaPackage
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteChannelRequestPrivate object.
- *
- * @param  action  MediaPackage action being performed.
- * @param  q       Pointer to this object's public DeleteChannelRequest instance.
+ * Constructs a DeleteChannelRequestPrivate object for MediaPackage \a action with,
+ * public implementation \a q.
  */
 DeleteChannelRequestPrivate::DeleteChannelRequestPrivate(
     const MediaPackageRequest::Action action, DeleteChannelRequest * const q)
@@ -104,15 +93,10 @@ DeleteChannelRequestPrivate::DeleteChannelRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteChannelRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteChannelRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteChannelRequest instance.
  */
 DeleteChannelRequestPrivate::DeleteChannelRequestPrivate(
     const DeleteChannelRequestPrivate &other, DeleteChannelRequest * const q)

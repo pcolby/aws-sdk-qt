@@ -27,19 +27,16 @@ namespace SageMaker {
 
 /*!
  * \class QtAws::SageMaker::ListTrainingJobsRequest
- *
  * \brief The ListTrainingJobsRequest class provides an interface for SageMaker ListTrainingJobs requests.
  *
- * \ingroup SageMaker
+ * \inmodule QtAwsSageMaker
  *
  *
  * \sa SageMakerClient::listTrainingJobs
  */
 
 /*!
- * @brief  Constructs a new ListTrainingJobsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListTrainingJobsRequest::ListTrainingJobsRequest(const ListTrainingJobsRequest &other)
     : SageMakerRequest(new ListTrainingJobsRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ ListTrainingJobsRequest::ListTrainingJobsRequest(const ListTrainingJobsRequest &
 }
 
 /*!
- * @brief  Constructs a new ListTrainingJobsRequest object.
+ * Constructs a ListTrainingJobsRequest object.
  */
 ListTrainingJobsRequest::ListTrainingJobsRequest()
     : SageMakerRequest(new ListTrainingJobsRequestPrivate(SageMakerRequest::ListTrainingJobsAction, this))
@@ -66,14 +63,9 @@ bool ListTrainingJobsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListTrainingJobsResponse object.
+ * Returns a ListTrainingJobsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListTrainingJobsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SageMakerClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListTrainingJobsRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * ListTrainingJobsRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::SageMaker::ListTrainingJobsRequestPrivate
+ * \brief The ListTrainingJobsRequestPrivate class provides private implementation for ListTrainingJobsRequest.
+ * \internal
  *
- * @class  ListTrainingJobsRequestPrivate
- *
- * @brief  Private implementation for ListTrainingJobsRequest.
+ * \inmodule QtAwsSageMaker
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListTrainingJobsRequestPrivate object.
- *
- * @param  action  SageMaker action being performed.
- * @param  q       Pointer to this object's public ListTrainingJobsRequest instance.
+ * Constructs a ListTrainingJobsRequestPrivate object for SageMaker \a action with,
+ * public implementation \a q.
  */
 ListTrainingJobsRequestPrivate::ListTrainingJobsRequestPrivate(
     const SageMakerRequest::Action action, ListTrainingJobsRequest * const q)
@@ -104,15 +93,10 @@ ListTrainingJobsRequestPrivate::ListTrainingJobsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListTrainingJobsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListTrainingJobsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListTrainingJobsRequest instance.
  */
 ListTrainingJobsRequestPrivate::ListTrainingJobsRequestPrivate(
     const ListTrainingJobsRequestPrivate &other, ListTrainingJobsRequest * const q)

@@ -27,10 +27,9 @@ namespace WorkMail {
 
 /*!
  * \class QtAws::WorkMail::DisassociateMemberFromGroupRequest
- *
  * \brief The DisassociateMemberFromGroupRequest class provides an interface for WorkMail DisassociateMemberFromGroup requests.
  *
- * \ingroup WorkMail
+ * \inmodule QtAwsWorkMail
  *
  *  Amazon WorkMail is a secure, managed business email and calendaring service with support for existing desktop and mobile
  *  email clients. You can access your email, contacts, and calendars using Microsoft Outlook, your browser, or their native
@@ -70,9 +69,7 @@ namespace WorkMail {
  */
 
 /*!
- * @brief  Constructs a new DisassociateMemberFromGroupRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DisassociateMemberFromGroupRequest::DisassociateMemberFromGroupRequest(const DisassociateMemberFromGroupRequest &other)
     : WorkMailRequest(new DisassociateMemberFromGroupRequestPrivate(*other.d_func(), this))
@@ -81,7 +78,7 @@ DisassociateMemberFromGroupRequest::DisassociateMemberFromGroupRequest(const Dis
 }
 
 /*!
- * @brief  Constructs a new DisassociateMemberFromGroupRequest object.
+ * Constructs a DisassociateMemberFromGroupRequest object.
  */
 DisassociateMemberFromGroupRequest::DisassociateMemberFromGroupRequest()
     : WorkMailRequest(new DisassociateMemberFromGroupRequestPrivate(WorkMailRequest::DisassociateMemberFromGroupAction, this))
@@ -99,14 +96,9 @@ bool DisassociateMemberFromGroupRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DisassociateMemberFromGroupResponse object.
+ * Returns a DisassociateMemberFromGroupResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DisassociateMemberFromGroupResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WorkMailClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DisassociateMemberFromGroupRequest::response(QNetworkReply * const reply) const
 {
@@ -114,20 +106,17 @@ QtAws::Core::AwsAbstractResponse * DisassociateMemberFromGroupRequest::response(
 }
 
 /*!
- * @internal
+ * \class QtAws::WorkMail::DisassociateMemberFromGroupRequestPrivate
+ * \brief The DisassociateMemberFromGroupRequestPrivate class provides private implementation for DisassociateMemberFromGroupRequest.
+ * \internal
  *
- * @class  DisassociateMemberFromGroupRequestPrivate
- *
- * @brief  Private implementation for DisassociateMemberFromGroupRequest.
+ * \inmodule QtAwsWorkMail
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DisassociateMemberFromGroupRequestPrivate object.
- *
- * @param  action  WorkMail action being performed.
- * @param  q       Pointer to this object's public DisassociateMemberFromGroupRequest instance.
+ * Constructs a DisassociateMemberFromGroupRequestPrivate object for WorkMail \a action with,
+ * public implementation \a q.
  */
 DisassociateMemberFromGroupRequestPrivate::DisassociateMemberFromGroupRequestPrivate(
     const WorkMailRequest::Action action, DisassociateMemberFromGroupRequest * const q)
@@ -137,15 +126,10 @@ DisassociateMemberFromGroupRequestPrivate::DisassociateMemberFromGroupRequestPri
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DisassociateMemberFromGroupRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DisassociateMemberFromGroupRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DisassociateMemberFromGroupRequest instance.
  */
 DisassociateMemberFromGroupRequestPrivate::DisassociateMemberFromGroupRequestPrivate(
     const DisassociateMemberFromGroupRequestPrivate &other, DisassociateMemberFromGroupRequest * const q)

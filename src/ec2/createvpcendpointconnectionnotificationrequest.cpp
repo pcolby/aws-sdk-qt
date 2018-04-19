@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::CreateVpcEndpointConnectionNotificationRequest
- *
  * \brief The CreateVpcEndpointConnectionNotificationRequest class provides an interface for EC2 CreateVpcEndpointConnectionNotification requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new CreateVpcEndpointConnectionNotificationRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateVpcEndpointConnectionNotificationRequest::CreateVpcEndpointConnectionNotificationRequest(const CreateVpcEndpointConnectionNotificationRequest &other)
     : EC2Request(new CreateVpcEndpointConnectionNotificationRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ CreateVpcEndpointConnectionNotificationRequest::CreateVpcEndpointConnectionNotif
 }
 
 /*!
- * @brief  Constructs a new CreateVpcEndpointConnectionNotificationRequest object.
+ * Constructs a CreateVpcEndpointConnectionNotificationRequest object.
  */
 CreateVpcEndpointConnectionNotificationRequest::CreateVpcEndpointConnectionNotificationRequest()
     : EC2Request(new CreateVpcEndpointConnectionNotificationRequestPrivate(EC2Request::CreateVpcEndpointConnectionNotificationAction, this))
@@ -70,14 +67,9 @@ bool CreateVpcEndpointConnectionNotificationRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateVpcEndpointConnectionNotificationResponse object.
+ * Returns a CreateVpcEndpointConnectionNotificationResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateVpcEndpointConnectionNotificationResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateVpcEndpointConnectionNotificationRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * CreateVpcEndpointConnectionNotificationReques
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::CreateVpcEndpointConnectionNotificationRequestPrivate
+ * \brief The CreateVpcEndpointConnectionNotificationRequestPrivate class provides private implementation for CreateVpcEndpointConnectionNotificationRequest.
+ * \internal
  *
- * @class  CreateVpcEndpointConnectionNotificationRequestPrivate
- *
- * @brief  Private implementation for CreateVpcEndpointConnectionNotificationRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateVpcEndpointConnectionNotificationRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public CreateVpcEndpointConnectionNotificationRequest instance.
+ * Constructs a CreateVpcEndpointConnectionNotificationRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 CreateVpcEndpointConnectionNotificationRequestPrivate::CreateVpcEndpointConnectionNotificationRequestPrivate(
     const EC2Request::Action action, CreateVpcEndpointConnectionNotificationRequest * const q)
@@ -108,15 +97,10 @@ CreateVpcEndpointConnectionNotificationRequestPrivate::CreateVpcEndpointConnecti
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateVpcEndpointConnectionNotificationRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateVpcEndpointConnectionNotificationRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateVpcEndpointConnectionNotificationRequest instance.
  */
 CreateVpcEndpointConnectionNotificationRequestPrivate::CreateVpcEndpointConnectionNotificationRequestPrivate(
     const CreateVpcEndpointConnectionNotificationRequestPrivate &other, CreateVpcEndpointConnectionNotificationRequest * const q)

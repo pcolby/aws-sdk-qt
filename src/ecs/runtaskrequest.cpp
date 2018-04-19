@@ -27,10 +27,9 @@ namespace ECS {
 
 /*!
  * \class QtAws::ECS::RunTaskRequest
- *
  * \brief The RunTaskRequest class provides an interface for ECS RunTask requests.
  *
- * \ingroup ECS
+ * \inmodule QtAwsECS
  *
  *  Amazon Elastic Container Service (Amazon ECS) is a highly scalable, fast, container management service that makes it
  *  easy to run, stop, and manage Docker containers on a cluster. You can host your cluster on a serverless infrastructure
@@ -54,9 +53,7 @@ namespace ECS {
  */
 
 /*!
- * @brief  Constructs a new RunTaskRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 RunTaskRequest::RunTaskRequest(const RunTaskRequest &other)
     : ECSRequest(new RunTaskRequestPrivate(*other.d_func(), this))
@@ -65,7 +62,7 @@ RunTaskRequest::RunTaskRequest(const RunTaskRequest &other)
 }
 
 /*!
- * @brief  Constructs a new RunTaskRequest object.
+ * Constructs a RunTaskRequest object.
  */
 RunTaskRequest::RunTaskRequest()
     : ECSRequest(new RunTaskRequestPrivate(ECSRequest::RunTaskAction, this))
@@ -83,14 +80,9 @@ bool RunTaskRequest::isValid() const
 
 
 /*!
- * @brief  Construct an RunTaskResponse object.
+ * Returns a RunTaskResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An RunTaskResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ECSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * RunTaskRequest::response(QNetworkReply * const reply) const
 {
@@ -98,20 +90,17 @@ QtAws::Core::AwsAbstractResponse * RunTaskRequest::response(QNetworkReply * cons
 }
 
 /*!
- * @internal
+ * \class QtAws::ECS::RunTaskRequestPrivate
+ * \brief The RunTaskRequestPrivate class provides private implementation for RunTaskRequest.
+ * \internal
  *
- * @class  RunTaskRequestPrivate
- *
- * @brief  Private implementation for RunTaskRequest.
+ * \inmodule QtAwsECS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new RunTaskRequestPrivate object.
- *
- * @param  action  ECS action being performed.
- * @param  q       Pointer to this object's public RunTaskRequest instance.
+ * Constructs a RunTaskRequestPrivate object for ECS \a action with,
+ * public implementation \a q.
  */
 RunTaskRequestPrivate::RunTaskRequestPrivate(
     const ECSRequest::Action action, RunTaskRequest * const q)
@@ -121,15 +110,10 @@ RunTaskRequestPrivate::RunTaskRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RunTaskRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the RunTaskRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public RunTaskRequest instance.
  */
 RunTaskRequestPrivate::RunTaskRequestPrivate(
     const RunTaskRequestPrivate &other, RunTaskRequest * const q)

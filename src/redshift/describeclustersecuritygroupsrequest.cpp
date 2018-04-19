@@ -27,10 +27,9 @@ namespace Redshift {
 
 /*!
  * \class QtAws::Redshift::DescribeClusterSecurityGroupsRequest
- *
  * \brief The DescribeClusterSecurityGroupsRequest class provides an interface for Redshift DescribeClusterSecurityGroups requests.
  *
- * \ingroup Redshift
+ * \inmodule QtAwsRedshift
  *
  *  <fullname>Amazon Redshift</fullname>
  * 
@@ -67,9 +66,7 @@ namespace Redshift {
  */
 
 /*!
- * @brief  Constructs a new DescribeClusterSecurityGroupsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeClusterSecurityGroupsRequest::DescribeClusterSecurityGroupsRequest(const DescribeClusterSecurityGroupsRequest &other)
     : RedshiftRequest(new DescribeClusterSecurityGroupsRequestPrivate(*other.d_func(), this))
@@ -78,7 +75,7 @@ DescribeClusterSecurityGroupsRequest::DescribeClusterSecurityGroupsRequest(const
 }
 
 /*!
- * @brief  Constructs a new DescribeClusterSecurityGroupsRequest object.
+ * Constructs a DescribeClusterSecurityGroupsRequest object.
  */
 DescribeClusterSecurityGroupsRequest::DescribeClusterSecurityGroupsRequest()
     : RedshiftRequest(new DescribeClusterSecurityGroupsRequestPrivate(RedshiftRequest::DescribeClusterSecurityGroupsAction, this))
@@ -96,14 +93,9 @@ bool DescribeClusterSecurityGroupsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeClusterSecurityGroupsResponse object.
+ * Returns a DescribeClusterSecurityGroupsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeClusterSecurityGroupsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RedshiftClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeClusterSecurityGroupsRequest::response(QNetworkReply * const reply) const
 {
@@ -111,20 +103,17 @@ QtAws::Core::AwsAbstractResponse * DescribeClusterSecurityGroupsRequest::respons
 }
 
 /*!
- * @internal
+ * \class QtAws::Redshift::DescribeClusterSecurityGroupsRequestPrivate
+ * \brief The DescribeClusterSecurityGroupsRequestPrivate class provides private implementation for DescribeClusterSecurityGroupsRequest.
+ * \internal
  *
- * @class  DescribeClusterSecurityGroupsRequestPrivate
- *
- * @brief  Private implementation for DescribeClusterSecurityGroupsRequest.
+ * \inmodule QtAwsRedshift
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeClusterSecurityGroupsRequestPrivate object.
- *
- * @param  action  Redshift action being performed.
- * @param  q       Pointer to this object's public DescribeClusterSecurityGroupsRequest instance.
+ * Constructs a DescribeClusterSecurityGroupsRequestPrivate object for Redshift \a action with,
+ * public implementation \a q.
  */
 DescribeClusterSecurityGroupsRequestPrivate::DescribeClusterSecurityGroupsRequestPrivate(
     const RedshiftRequest::Action action, DescribeClusterSecurityGroupsRequest * const q)
@@ -134,15 +123,10 @@ DescribeClusterSecurityGroupsRequestPrivate::DescribeClusterSecurityGroupsReques
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeClusterSecurityGroupsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeClusterSecurityGroupsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeClusterSecurityGroupsRequest instance.
  */
 DescribeClusterSecurityGroupsRequestPrivate::DescribeClusterSecurityGroupsRequestPrivate(
     const DescribeClusterSecurityGroupsRequestPrivate &other, DescribeClusterSecurityGroupsRequest * const q)

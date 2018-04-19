@@ -48,6 +48,9 @@
 /*!
  * \namespace QtAws::SimpleDB
  * \brief The QtAws::SimpleDB contains stuff...
+ *
+ * \inmodule QtAwsSimpleDB
+ *
  * @todo Move this to a separate template file.
  */
 
@@ -110,7 +113,7 @@ SimpleDBClient::SimpleDBClient(
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * \a  AwsEndpoint::getEndpoint()
+ * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
 SimpleDBClient::SimpleDBClient(
     const QUrl &endpoint,

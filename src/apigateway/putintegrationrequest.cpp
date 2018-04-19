@@ -27,10 +27,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::PutIntegrationRequest
- *
  * \brief The PutIntegrationRequest class provides an interface for APIGateway PutIntegration requests.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -42,9 +41,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new PutIntegrationRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 PutIntegrationRequest::PutIntegrationRequest(const PutIntegrationRequest &other)
     : APIGatewayRequest(new PutIntegrationRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ PutIntegrationRequest::PutIntegrationRequest(const PutIntegrationRequest &other)
 }
 
 /*!
- * @brief  Constructs a new PutIntegrationRequest object.
+ * Constructs a PutIntegrationRequest object.
  */
 PutIntegrationRequest::PutIntegrationRequest()
     : APIGatewayRequest(new PutIntegrationRequestPrivate(APIGatewayRequest::PutIntegrationAction, this))
@@ -71,14 +68,9 @@ bool PutIntegrationRequest::isValid() const
 
 
 /*!
- * @brief  Construct an PutIntegrationResponse object.
+ * Returns a PutIntegrationResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An PutIntegrationResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  APIGatewayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * PutIntegrationRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * PutIntegrationRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::APIGateway::PutIntegrationRequestPrivate
+ * \brief The PutIntegrationRequestPrivate class provides private implementation for PutIntegrationRequest.
+ * \internal
  *
- * @class  PutIntegrationRequestPrivate
- *
- * @brief  Private implementation for PutIntegrationRequest.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new PutIntegrationRequestPrivate object.
- *
- * @param  action  APIGateway action being performed.
- * @param  q       Pointer to this object's public PutIntegrationRequest instance.
+ * Constructs a PutIntegrationRequestPrivate object for APIGateway \a action with,
+ * public implementation \a q.
  */
 PutIntegrationRequestPrivate::PutIntegrationRequestPrivate(
     const APIGatewayRequest::Action action, PutIntegrationRequest * const q)
@@ -109,15 +98,10 @@ PutIntegrationRequestPrivate::PutIntegrationRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutIntegrationRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the PutIntegrationRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public PutIntegrationRequest instance.
  */
 PutIntegrationRequestPrivate::PutIntegrationRequestPrivate(
     const PutIntegrationRequestPrivate &other, PutIntegrationRequest * const q)

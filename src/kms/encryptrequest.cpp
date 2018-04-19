@@ -27,10 +27,9 @@ namespace KMS {
 
 /*!
  * \class QtAws::KMS::EncryptRequest
- *
  * \brief The EncryptRequest class provides an interface for KMS Encrypt requests.
  *
- * \ingroup KMS
+ * \inmodule QtAwsKMS
  *
  *  <fullname>AWS Key Management Service</fullname>
  * 
@@ -136,9 +135,7 @@ namespace KMS {
  */
 
 /*!
- * @brief  Constructs a new EncryptRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 EncryptRequest::EncryptRequest(const EncryptRequest &other)
     : KMSRequest(new EncryptRequestPrivate(*other.d_func(), this))
@@ -147,7 +144,7 @@ EncryptRequest::EncryptRequest(const EncryptRequest &other)
 }
 
 /*!
- * @brief  Constructs a new EncryptRequest object.
+ * Constructs a EncryptRequest object.
  */
 EncryptRequest::EncryptRequest()
     : KMSRequest(new EncryptRequestPrivate(KMSRequest::EncryptAction, this))
@@ -165,14 +162,9 @@ bool EncryptRequest::isValid() const
 
 
 /*!
- * @brief  Construct an EncryptResponse object.
+ * Returns a EncryptResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An EncryptResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  KMSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * EncryptRequest::response(QNetworkReply * const reply) const
 {
@@ -180,20 +172,17 @@ QtAws::Core::AwsAbstractResponse * EncryptRequest::response(QNetworkReply * cons
 }
 
 /*!
- * @internal
+ * \class QtAws::KMS::EncryptRequestPrivate
+ * \brief The EncryptRequestPrivate class provides private implementation for EncryptRequest.
+ * \internal
  *
- * @class  EncryptRequestPrivate
- *
- * @brief  Private implementation for EncryptRequest.
+ * \inmodule QtAwsKMS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new EncryptRequestPrivate object.
- *
- * @param  action  KMS action being performed.
- * @param  q       Pointer to this object's public EncryptRequest instance.
+ * Constructs a EncryptRequestPrivate object for KMS \a action with,
+ * public implementation \a q.
  */
 EncryptRequestPrivate::EncryptRequestPrivate(
     const KMSRequest::Action action, EncryptRequest * const q)
@@ -203,15 +192,10 @@ EncryptRequestPrivate::EncryptRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new EncryptRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the EncryptRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public EncryptRequest instance.
  */
 EncryptRequestPrivate::EncryptRequestPrivate(
     const EncryptRequestPrivate &other, EncryptRequest * const q)

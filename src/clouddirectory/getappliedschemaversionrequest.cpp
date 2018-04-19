@@ -27,10 +27,9 @@ namespace CloudDirectory {
 
 /*!
  * \class QtAws::CloudDirectory::GetAppliedSchemaVersionRequest
- *
  * \brief The GetAppliedSchemaVersionRequest class provides an interface for CloudDirectory GetAppliedSchemaVersion requests.
  *
- * \ingroup CloudDirectory
+ * \inmodule QtAwsCloudDirectory
  *
  *  <fullname>Amazon Cloud Directory</fullname>
  * 
@@ -44,9 +43,7 @@ namespace CloudDirectory {
  */
 
 /*!
- * @brief  Constructs a new GetAppliedSchemaVersionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetAppliedSchemaVersionRequest::GetAppliedSchemaVersionRequest(const GetAppliedSchemaVersionRequest &other)
     : CloudDirectoryRequest(new GetAppliedSchemaVersionRequestPrivate(*other.d_func(), this))
@@ -55,7 +52,7 @@ GetAppliedSchemaVersionRequest::GetAppliedSchemaVersionRequest(const GetAppliedS
 }
 
 /*!
- * @brief  Constructs a new GetAppliedSchemaVersionRequest object.
+ * Constructs a GetAppliedSchemaVersionRequest object.
  */
 GetAppliedSchemaVersionRequest::GetAppliedSchemaVersionRequest()
     : CloudDirectoryRequest(new GetAppliedSchemaVersionRequestPrivate(CloudDirectoryRequest::GetAppliedSchemaVersionAction, this))
@@ -73,14 +70,9 @@ bool GetAppliedSchemaVersionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetAppliedSchemaVersionResponse object.
+ * Returns a GetAppliedSchemaVersionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetAppliedSchemaVersionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudDirectoryClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetAppliedSchemaVersionRequest::response(QNetworkReply * const reply) const
 {
@@ -88,20 +80,17 @@ QtAws::Core::AwsAbstractResponse * GetAppliedSchemaVersionRequest::response(QNet
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudDirectory::GetAppliedSchemaVersionRequestPrivate
+ * \brief The GetAppliedSchemaVersionRequestPrivate class provides private implementation for GetAppliedSchemaVersionRequest.
+ * \internal
  *
- * @class  GetAppliedSchemaVersionRequestPrivate
- *
- * @brief  Private implementation for GetAppliedSchemaVersionRequest.
+ * \inmodule QtAwsCloudDirectory
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetAppliedSchemaVersionRequestPrivate object.
- *
- * @param  action  CloudDirectory action being performed.
- * @param  q       Pointer to this object's public GetAppliedSchemaVersionRequest instance.
+ * Constructs a GetAppliedSchemaVersionRequestPrivate object for CloudDirectory \a action with,
+ * public implementation \a q.
  */
 GetAppliedSchemaVersionRequestPrivate::GetAppliedSchemaVersionRequestPrivate(
     const CloudDirectoryRequest::Action action, GetAppliedSchemaVersionRequest * const q)
@@ -111,15 +100,10 @@ GetAppliedSchemaVersionRequestPrivate::GetAppliedSchemaVersionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetAppliedSchemaVersionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetAppliedSchemaVersionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetAppliedSchemaVersionRequest instance.
  */
 GetAppliedSchemaVersionRequestPrivate::GetAppliedSchemaVersionRequestPrivate(
     const GetAppliedSchemaVersionRequestPrivate &other, GetAppliedSchemaVersionRequest * const q)

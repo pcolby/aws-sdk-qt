@@ -27,19 +27,16 @@ namespace Route53 {
 
 /*!
  * \class QtAws::Route53::GetAccountLimitRequest
- *
  * \brief The GetAccountLimitRequest class provides an interface for Route53 GetAccountLimit requests.
  *
- * \ingroup Route53
+ * \inmodule QtAwsRoute53
  *
  *
  * \sa Route53Client::getAccountLimit
  */
 
 /*!
- * @brief  Constructs a new GetAccountLimitRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetAccountLimitRequest::GetAccountLimitRequest(const GetAccountLimitRequest &other)
     : Route53Request(new GetAccountLimitRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ GetAccountLimitRequest::GetAccountLimitRequest(const GetAccountLimitRequest &oth
 }
 
 /*!
- * @brief  Constructs a new GetAccountLimitRequest object.
+ * Constructs a GetAccountLimitRequest object.
  */
 GetAccountLimitRequest::GetAccountLimitRequest()
     : Route53Request(new GetAccountLimitRequestPrivate(Route53Request::GetAccountLimitAction, this))
@@ -66,14 +63,9 @@ bool GetAccountLimitRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetAccountLimitResponse object.
+ * Returns a GetAccountLimitResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetAccountLimitResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  Route53Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetAccountLimitRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * GetAccountLimitRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::Route53::GetAccountLimitRequestPrivate
+ * \brief The GetAccountLimitRequestPrivate class provides private implementation for GetAccountLimitRequest.
+ * \internal
  *
- * @class  GetAccountLimitRequestPrivate
- *
- * @brief  Private implementation for GetAccountLimitRequest.
+ * \inmodule QtAwsRoute53
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetAccountLimitRequestPrivate object.
- *
- * @param  action  Route53 action being performed.
- * @param  q       Pointer to this object's public GetAccountLimitRequest instance.
+ * Constructs a GetAccountLimitRequestPrivate object for Route53 \a action with,
+ * public implementation \a q.
  */
 GetAccountLimitRequestPrivate::GetAccountLimitRequestPrivate(
     const Route53Request::Action action, GetAccountLimitRequest * const q)
@@ -104,15 +93,10 @@ GetAccountLimitRequestPrivate::GetAccountLimitRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetAccountLimitRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetAccountLimitRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetAccountLimitRequest instance.
  */
 GetAccountLimitRequestPrivate::GetAccountLimitRequestPrivate(
     const GetAccountLimitRequestPrivate &other, GetAccountLimitRequest * const q)

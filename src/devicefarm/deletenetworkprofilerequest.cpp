@@ -27,10 +27,9 @@ namespace DeviceFarm {
 
 /*!
  * \class QtAws::DeviceFarm::DeleteNetworkProfileRequest
- *
  * \brief The DeleteNetworkProfileRequest class provides an interface for DeviceFarm DeleteNetworkProfile requests.
  *
- * \ingroup DeviceFarm
+ * \inmodule QtAwsDeviceFarm
  *
  *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
  *  phones, tablets, and other devices in the
@@ -39,9 +38,7 @@ namespace DeviceFarm {
  */
 
 /*!
- * @brief  Constructs a new DeleteNetworkProfileRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteNetworkProfileRequest::DeleteNetworkProfileRequest(const DeleteNetworkProfileRequest &other)
     : DeviceFarmRequest(new DeleteNetworkProfileRequestPrivate(*other.d_func(), this))
@@ -50,7 +47,7 @@ DeleteNetworkProfileRequest::DeleteNetworkProfileRequest(const DeleteNetworkProf
 }
 
 /*!
- * @brief  Constructs a new DeleteNetworkProfileRequest object.
+ * Constructs a DeleteNetworkProfileRequest object.
  */
 DeleteNetworkProfileRequest::DeleteNetworkProfileRequest()
     : DeviceFarmRequest(new DeleteNetworkProfileRequestPrivate(DeviceFarmRequest::DeleteNetworkProfileAction, this))
@@ -68,14 +65,9 @@ bool DeleteNetworkProfileRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteNetworkProfileResponse object.
+ * Returns a DeleteNetworkProfileResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteNetworkProfileResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DeviceFarmClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteNetworkProfileRequest::response(QNetworkReply * const reply) const
 {
@@ -83,20 +75,17 @@ QtAws::Core::AwsAbstractResponse * DeleteNetworkProfileRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::DeviceFarm::DeleteNetworkProfileRequestPrivate
+ * \brief The DeleteNetworkProfileRequestPrivate class provides private implementation for DeleteNetworkProfileRequest.
+ * \internal
  *
- * @class  DeleteNetworkProfileRequestPrivate
- *
- * @brief  Private implementation for DeleteNetworkProfileRequest.
+ * \inmodule QtAwsDeviceFarm
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteNetworkProfileRequestPrivate object.
- *
- * @param  action  DeviceFarm action being performed.
- * @param  q       Pointer to this object's public DeleteNetworkProfileRequest instance.
+ * Constructs a DeleteNetworkProfileRequestPrivate object for DeviceFarm \a action with,
+ * public implementation \a q.
  */
 DeleteNetworkProfileRequestPrivate::DeleteNetworkProfileRequestPrivate(
     const DeviceFarmRequest::Action action, DeleteNetworkProfileRequest * const q)
@@ -106,15 +95,10 @@ DeleteNetworkProfileRequestPrivate::DeleteNetworkProfileRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteNetworkProfileRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteNetworkProfileRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteNetworkProfileRequest instance.
  */
 DeleteNetworkProfileRequestPrivate::DeleteNetworkProfileRequestPrivate(
     const DeleteNetworkProfileRequestPrivate &other, DeleteNetworkProfileRequest * const q)

@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DeleteVpcPeeringConnectionRequest
- *
  * \brief The DeleteVpcPeeringConnectionRequest class provides an interface for EC2 DeleteVpcPeeringConnection requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DeleteVpcPeeringConnectionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteVpcPeeringConnectionRequest::DeleteVpcPeeringConnectionRequest(const DeleteVpcPeeringConnectionRequest &other)
     : EC2Request(new DeleteVpcPeeringConnectionRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ DeleteVpcPeeringConnectionRequest::DeleteVpcPeeringConnectionRequest(const Delet
 }
 
 /*!
- * @brief  Constructs a new DeleteVpcPeeringConnectionRequest object.
+ * Constructs a DeleteVpcPeeringConnectionRequest object.
  */
 DeleteVpcPeeringConnectionRequest::DeleteVpcPeeringConnectionRequest()
     : EC2Request(new DeleteVpcPeeringConnectionRequestPrivate(EC2Request::DeleteVpcPeeringConnectionAction, this))
@@ -70,14 +67,9 @@ bool DeleteVpcPeeringConnectionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteVpcPeeringConnectionResponse object.
+ * Returns a DeleteVpcPeeringConnectionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteVpcPeeringConnectionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteVpcPeeringConnectionRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * DeleteVpcPeeringConnectionRequest::response(Q
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::DeleteVpcPeeringConnectionRequestPrivate
+ * \brief The DeleteVpcPeeringConnectionRequestPrivate class provides private implementation for DeleteVpcPeeringConnectionRequest.
+ * \internal
  *
- * @class  DeleteVpcPeeringConnectionRequestPrivate
- *
- * @brief  Private implementation for DeleteVpcPeeringConnectionRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteVpcPeeringConnectionRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public DeleteVpcPeeringConnectionRequest instance.
+ * Constructs a DeleteVpcPeeringConnectionRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 DeleteVpcPeeringConnectionRequestPrivate::DeleteVpcPeeringConnectionRequestPrivate(
     const EC2Request::Action action, DeleteVpcPeeringConnectionRequest * const q)
@@ -108,15 +97,10 @@ DeleteVpcPeeringConnectionRequestPrivate::DeleteVpcPeeringConnectionRequestPriva
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteVpcPeeringConnectionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteVpcPeeringConnectionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteVpcPeeringConnectionRequest instance.
  */
 DeleteVpcPeeringConnectionRequestPrivate::DeleteVpcPeeringConnectionRequestPrivate(
     const DeleteVpcPeeringConnectionRequestPrivate &other, DeleteVpcPeeringConnectionRequest * const q)

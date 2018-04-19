@@ -27,10 +27,9 @@ namespace ApplicationAutoScaling {
 
 /*!
  * \class QtAws::ApplicationAutoScaling::DeleteScheduledActionRequest
- *
  * \brief The DeleteScheduledActionRequest class provides an interface for ApplicationAutoScaling DeleteScheduledAction requests.
  *
- * \ingroup ApplicationAutoScaling
+ * \inmodule QtAwsApplicationAutoScaling
  *
  *  With Application Auto Scaling, you can configure automatic scaling for your scalable AWS resources. You can use
  *  Application Auto Scaling to accomplish the following
@@ -110,9 +109,7 @@ namespace ApplicationAutoScaling {
  */
 
 /*!
- * @brief  Constructs a new DeleteScheduledActionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteScheduledActionRequest::DeleteScheduledActionRequest(const DeleteScheduledActionRequest &other)
     : ApplicationAutoScalingRequest(new DeleteScheduledActionRequestPrivate(*other.d_func(), this))
@@ -121,7 +118,7 @@ DeleteScheduledActionRequest::DeleteScheduledActionRequest(const DeleteScheduled
 }
 
 /*!
- * @brief  Constructs a new DeleteScheduledActionRequest object.
+ * Constructs a DeleteScheduledActionRequest object.
  */
 DeleteScheduledActionRequest::DeleteScheduledActionRequest()
     : ApplicationAutoScalingRequest(new DeleteScheduledActionRequestPrivate(ApplicationAutoScalingRequest::DeleteScheduledActionAction, this))
@@ -139,14 +136,9 @@ bool DeleteScheduledActionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteScheduledActionResponse object.
+ * Returns a DeleteScheduledActionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteScheduledActionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ApplicationAutoScalingClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteScheduledActionRequest::response(QNetworkReply * const reply) const
 {
@@ -154,20 +146,17 @@ QtAws::Core::AwsAbstractResponse * DeleteScheduledActionRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::ApplicationAutoScaling::DeleteScheduledActionRequestPrivate
+ * \brief The DeleteScheduledActionRequestPrivate class provides private implementation for DeleteScheduledActionRequest.
+ * \internal
  *
- * @class  DeleteScheduledActionRequestPrivate
- *
- * @brief  Private implementation for DeleteScheduledActionRequest.
+ * \inmodule QtAwsApplicationAutoScaling
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteScheduledActionRequestPrivate object.
- *
- * @param  action  ApplicationAutoScaling action being performed.
- * @param  q       Pointer to this object's public DeleteScheduledActionRequest instance.
+ * Constructs a DeleteScheduledActionRequestPrivate object for ApplicationAutoScaling \a action with,
+ * public implementation \a q.
  */
 DeleteScheduledActionRequestPrivate::DeleteScheduledActionRequestPrivate(
     const ApplicationAutoScalingRequest::Action action, DeleteScheduledActionRequest * const q)
@@ -177,15 +166,10 @@ DeleteScheduledActionRequestPrivate::DeleteScheduledActionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteScheduledActionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteScheduledActionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteScheduledActionRequest instance.
  */
 DeleteScheduledActionRequestPrivate::DeleteScheduledActionRequestPrivate(
     const DeleteScheduledActionRequestPrivate &other, DeleteScheduledActionRequest * const q)

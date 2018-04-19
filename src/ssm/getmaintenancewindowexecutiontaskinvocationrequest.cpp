@@ -27,10 +27,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::GetMaintenanceWindowExecutionTaskInvocationRequest
- *
  * \brief The GetMaintenanceWindowExecutionTaskInvocationRequest class provides an interface for SSM GetMaintenanceWindowExecutionTaskInvocation requests.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -61,9 +60,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new GetMaintenanceWindowExecutionTaskInvocationRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetMaintenanceWindowExecutionTaskInvocationRequest::GetMaintenanceWindowExecutionTaskInvocationRequest(const GetMaintenanceWindowExecutionTaskInvocationRequest &other)
     : SSMRequest(new GetMaintenanceWindowExecutionTaskInvocationRequestPrivate(*other.d_func(), this))
@@ -72,7 +69,7 @@ GetMaintenanceWindowExecutionTaskInvocationRequest::GetMaintenanceWindowExecutio
 }
 
 /*!
- * @brief  Constructs a new GetMaintenanceWindowExecutionTaskInvocationRequest object.
+ * Constructs a GetMaintenanceWindowExecutionTaskInvocationRequest object.
  */
 GetMaintenanceWindowExecutionTaskInvocationRequest::GetMaintenanceWindowExecutionTaskInvocationRequest()
     : SSMRequest(new GetMaintenanceWindowExecutionTaskInvocationRequestPrivate(SSMRequest::GetMaintenanceWindowExecutionTaskInvocationAction, this))
@@ -90,14 +87,9 @@ bool GetMaintenanceWindowExecutionTaskInvocationRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetMaintenanceWindowExecutionTaskInvocationResponse object.
+ * Returns a GetMaintenanceWindowExecutionTaskInvocationResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetMaintenanceWindowExecutionTaskInvocationResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SSMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetMaintenanceWindowExecutionTaskInvocationRequest::response(QNetworkReply * const reply) const
 {
@@ -105,20 +97,17 @@ QtAws::Core::AwsAbstractResponse * GetMaintenanceWindowExecutionTaskInvocationRe
 }
 
 /*!
- * @internal
+ * \class QtAws::SSM::GetMaintenanceWindowExecutionTaskInvocationRequestPrivate
+ * \brief The GetMaintenanceWindowExecutionTaskInvocationRequestPrivate class provides private implementation for GetMaintenanceWindowExecutionTaskInvocationRequest.
+ * \internal
  *
- * @class  GetMaintenanceWindowExecutionTaskInvocationRequestPrivate
- *
- * @brief  Private implementation for GetMaintenanceWindowExecutionTaskInvocationRequest.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetMaintenanceWindowExecutionTaskInvocationRequestPrivate object.
- *
- * @param  action  SSM action being performed.
- * @param  q       Pointer to this object's public GetMaintenanceWindowExecutionTaskInvocationRequest instance.
+ * Constructs a GetMaintenanceWindowExecutionTaskInvocationRequestPrivate object for SSM \a action with,
+ * public implementation \a q.
  */
 GetMaintenanceWindowExecutionTaskInvocationRequestPrivate::GetMaintenanceWindowExecutionTaskInvocationRequestPrivate(
     const SSMRequest::Action action, GetMaintenanceWindowExecutionTaskInvocationRequest * const q)
@@ -128,15 +117,10 @@ GetMaintenanceWindowExecutionTaskInvocationRequestPrivate::GetMaintenanceWindowE
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetMaintenanceWindowExecutionTaskInvocationRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetMaintenanceWindowExecutionTaskInvocationRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetMaintenanceWindowExecutionTaskInvocationRequest instance.
  */
 GetMaintenanceWindowExecutionTaskInvocationRequestPrivate::GetMaintenanceWindowExecutionTaskInvocationRequestPrivate(
     const GetMaintenanceWindowExecutionTaskInvocationRequestPrivate &other, GetMaintenanceWindowExecutionTaskInvocationRequest * const q)

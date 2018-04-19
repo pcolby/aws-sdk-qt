@@ -27,10 +27,9 @@ namespace GameLift {
 
 /*!
  * \class QtAws::GameLift::UpdateMatchmakingConfigurationRequest
- *
  * \brief The UpdateMatchmakingConfigurationRequest class provides an interface for GameLift UpdateMatchmakingConfiguration requests.
  *
- * \ingroup GameLift
+ * \inmodule QtAwsGameLift
  *
  *  <fullname>Amazon GameLift Service</fullname>
  * 
@@ -473,9 +472,7 @@ namespace GameLift {
  */
 
 /*!
- * @brief  Constructs a new UpdateMatchmakingConfigurationRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateMatchmakingConfigurationRequest::UpdateMatchmakingConfigurationRequest(const UpdateMatchmakingConfigurationRequest &other)
     : GameLiftRequest(new UpdateMatchmakingConfigurationRequestPrivate(*other.d_func(), this))
@@ -484,7 +481,7 @@ UpdateMatchmakingConfigurationRequest::UpdateMatchmakingConfigurationRequest(con
 }
 
 /*!
- * @brief  Constructs a new UpdateMatchmakingConfigurationRequest object.
+ * Constructs a UpdateMatchmakingConfigurationRequest object.
  */
 UpdateMatchmakingConfigurationRequest::UpdateMatchmakingConfigurationRequest()
     : GameLiftRequest(new UpdateMatchmakingConfigurationRequestPrivate(GameLiftRequest::UpdateMatchmakingConfigurationAction, this))
@@ -502,14 +499,9 @@ bool UpdateMatchmakingConfigurationRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateMatchmakingConfigurationResponse object.
+ * Returns a UpdateMatchmakingConfigurationResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateMatchmakingConfigurationResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GameLiftClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateMatchmakingConfigurationRequest::response(QNetworkReply * const reply) const
 {
@@ -517,20 +509,17 @@ QtAws::Core::AwsAbstractResponse * UpdateMatchmakingConfigurationRequest::respon
 }
 
 /*!
- * @internal
+ * \class QtAws::GameLift::UpdateMatchmakingConfigurationRequestPrivate
+ * \brief The UpdateMatchmakingConfigurationRequestPrivate class provides private implementation for UpdateMatchmakingConfigurationRequest.
+ * \internal
  *
- * @class  UpdateMatchmakingConfigurationRequestPrivate
- *
- * @brief  Private implementation for UpdateMatchmakingConfigurationRequest.
+ * \inmodule QtAwsGameLift
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateMatchmakingConfigurationRequestPrivate object.
- *
- * @param  action  GameLift action being performed.
- * @param  q       Pointer to this object's public UpdateMatchmakingConfigurationRequest instance.
+ * Constructs a UpdateMatchmakingConfigurationRequestPrivate object for GameLift \a action with,
+ * public implementation \a q.
  */
 UpdateMatchmakingConfigurationRequestPrivate::UpdateMatchmakingConfigurationRequestPrivate(
     const GameLiftRequest::Action action, UpdateMatchmakingConfigurationRequest * const q)
@@ -540,15 +529,10 @@ UpdateMatchmakingConfigurationRequestPrivate::UpdateMatchmakingConfigurationRequ
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateMatchmakingConfigurationRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateMatchmakingConfigurationRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateMatchmakingConfigurationRequest instance.
  */
 UpdateMatchmakingConfigurationRequestPrivate::UpdateMatchmakingConfigurationRequestPrivate(
     const UpdateMatchmakingConfigurationRequestPrivate &other, UpdateMatchmakingConfigurationRequest * const q)

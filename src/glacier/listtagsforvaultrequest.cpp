@@ -27,10 +27,9 @@ namespace Glacier {
 
 /*!
  * \class QtAws::Glacier::ListTagsForVaultRequest
- *
  * \brief The ListTagsForVaultRequest class provides an interface for Glacier ListTagsForVault requests.
  *
- * \ingroup Glacier
+ * \inmodule QtAwsGlacier
  *
  *  Amazon Glacier is a storage solution for "cold
  * 
@@ -75,9 +74,7 @@ namespace Glacier {
  */
 
 /*!
- * @brief  Constructs a new ListTagsForVaultRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListTagsForVaultRequest::ListTagsForVaultRequest(const ListTagsForVaultRequest &other)
     : GlacierRequest(new ListTagsForVaultRequestPrivate(*other.d_func(), this))
@@ -86,7 +83,7 @@ ListTagsForVaultRequest::ListTagsForVaultRequest(const ListTagsForVaultRequest &
 }
 
 /*!
- * @brief  Constructs a new ListTagsForVaultRequest object.
+ * Constructs a ListTagsForVaultRequest object.
  */
 ListTagsForVaultRequest::ListTagsForVaultRequest()
     : GlacierRequest(new ListTagsForVaultRequestPrivate(GlacierRequest::ListTagsForVaultAction, this))
@@ -104,14 +101,9 @@ bool ListTagsForVaultRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListTagsForVaultResponse object.
+ * Returns a ListTagsForVaultResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListTagsForVaultResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GlacierClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListTagsForVaultRequest::response(QNetworkReply * const reply) const
 {
@@ -119,20 +111,17 @@ QtAws::Core::AwsAbstractResponse * ListTagsForVaultRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::Glacier::ListTagsForVaultRequestPrivate
+ * \brief The ListTagsForVaultRequestPrivate class provides private implementation for ListTagsForVaultRequest.
+ * \internal
  *
- * @class  ListTagsForVaultRequestPrivate
- *
- * @brief  Private implementation for ListTagsForVaultRequest.
+ * \inmodule QtAwsGlacier
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListTagsForVaultRequestPrivate object.
- *
- * @param  action  Glacier action being performed.
- * @param  q       Pointer to this object's public ListTagsForVaultRequest instance.
+ * Constructs a ListTagsForVaultRequestPrivate object for Glacier \a action with,
+ * public implementation \a q.
  */
 ListTagsForVaultRequestPrivate::ListTagsForVaultRequestPrivate(
     const GlacierRequest::Action action, ListTagsForVaultRequest * const q)
@@ -142,15 +131,10 @@ ListTagsForVaultRequestPrivate::ListTagsForVaultRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListTagsForVaultRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListTagsForVaultRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListTagsForVaultRequest instance.
  */
 ListTagsForVaultRequestPrivate::ListTagsForVaultRequestPrivate(
     const ListTagsForVaultRequestPrivate &other, ListTagsForVaultRequest * const q)

@@ -27,10 +27,9 @@ namespace OpsWorks {
 
 /*!
  * \class QtAws::OpsWorks::DescribeElasticIpsRequest
- *
  * \brief The DescribeElasticIpsRequest class provides an interface for OpsWorks DescribeElasticIps requests.
  *
- * \ingroup OpsWorks
+ * \inmodule QtAwsOpsWorks
  *
  *  <fullname>AWS OpsWorks</fullname>
  * 
@@ -143,9 +142,7 @@ namespace OpsWorks {
  */
 
 /*!
- * @brief  Constructs a new DescribeElasticIpsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeElasticIpsRequest::DescribeElasticIpsRequest(const DescribeElasticIpsRequest &other)
     : OpsWorksRequest(new DescribeElasticIpsRequestPrivate(*other.d_func(), this))
@@ -154,7 +151,7 @@ DescribeElasticIpsRequest::DescribeElasticIpsRequest(const DescribeElasticIpsReq
 }
 
 /*!
- * @brief  Constructs a new DescribeElasticIpsRequest object.
+ * Constructs a DescribeElasticIpsRequest object.
  */
 DescribeElasticIpsRequest::DescribeElasticIpsRequest()
     : OpsWorksRequest(new DescribeElasticIpsRequestPrivate(OpsWorksRequest::DescribeElasticIpsAction, this))
@@ -172,14 +169,9 @@ bool DescribeElasticIpsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeElasticIpsResponse object.
+ * Returns a DescribeElasticIpsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeElasticIpsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  OpsWorksClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeElasticIpsRequest::response(QNetworkReply * const reply) const
 {
@@ -187,20 +179,17 @@ QtAws::Core::AwsAbstractResponse * DescribeElasticIpsRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::OpsWorks::DescribeElasticIpsRequestPrivate
+ * \brief The DescribeElasticIpsRequestPrivate class provides private implementation for DescribeElasticIpsRequest.
+ * \internal
  *
- * @class  DescribeElasticIpsRequestPrivate
- *
- * @brief  Private implementation for DescribeElasticIpsRequest.
+ * \inmodule QtAwsOpsWorks
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeElasticIpsRequestPrivate object.
- *
- * @param  action  OpsWorks action being performed.
- * @param  q       Pointer to this object's public DescribeElasticIpsRequest instance.
+ * Constructs a DescribeElasticIpsRequestPrivate object for OpsWorks \a action with,
+ * public implementation \a q.
  */
 DescribeElasticIpsRequestPrivate::DescribeElasticIpsRequestPrivate(
     const OpsWorksRequest::Action action, DescribeElasticIpsRequest * const q)
@@ -210,15 +199,10 @@ DescribeElasticIpsRequestPrivate::DescribeElasticIpsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeElasticIpsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeElasticIpsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeElasticIpsRequest instance.
  */
 DescribeElasticIpsRequestPrivate::DescribeElasticIpsRequestPrivate(
     const DescribeElasticIpsRequestPrivate &other, DescribeElasticIpsRequest * const q)

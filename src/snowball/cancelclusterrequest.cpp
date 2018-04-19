@@ -27,10 +27,9 @@ namespace Snowball {
 
 /*!
  * \class QtAws::Snowball::CancelClusterRequest
- *
  * \brief The CancelClusterRequest class provides an interface for Snowball CancelCluster requests.
  *
- * \ingroup Snowball
+ * \inmodule QtAwsSnowball
  *
  *  AWS Snowball is a petabyte-scale data transport solution that uses secure appliances to transfer large amounts of data
  *  between your on-premises data centers and Amazon Simple Storage Service (Amazon S3). The Snowball commands described
@@ -43,9 +42,7 @@ namespace Snowball {
  */
 
 /*!
- * @brief  Constructs a new CancelClusterRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CancelClusterRequest::CancelClusterRequest(const CancelClusterRequest &other)
     : SnowballRequest(new CancelClusterRequestPrivate(*other.d_func(), this))
@@ -54,7 +51,7 @@ CancelClusterRequest::CancelClusterRequest(const CancelClusterRequest &other)
 }
 
 /*!
- * @brief  Constructs a new CancelClusterRequest object.
+ * Constructs a CancelClusterRequest object.
  */
 CancelClusterRequest::CancelClusterRequest()
     : SnowballRequest(new CancelClusterRequestPrivate(SnowballRequest::CancelClusterAction, this))
@@ -72,14 +69,9 @@ bool CancelClusterRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CancelClusterResponse object.
+ * Returns a CancelClusterResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CancelClusterResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SnowballClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CancelClusterRequest::response(QNetworkReply * const reply) const
 {
@@ -87,20 +79,17 @@ QtAws::Core::AwsAbstractResponse * CancelClusterRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::Snowball::CancelClusterRequestPrivate
+ * \brief The CancelClusterRequestPrivate class provides private implementation for CancelClusterRequest.
+ * \internal
  *
- * @class  CancelClusterRequestPrivate
- *
- * @brief  Private implementation for CancelClusterRequest.
+ * \inmodule QtAwsSnowball
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CancelClusterRequestPrivate object.
- *
- * @param  action  Snowball action being performed.
- * @param  q       Pointer to this object's public CancelClusterRequest instance.
+ * Constructs a CancelClusterRequestPrivate object for Snowball \a action with,
+ * public implementation \a q.
  */
 CancelClusterRequestPrivate::CancelClusterRequestPrivate(
     const SnowballRequest::Action action, CancelClusterRequest * const q)
@@ -110,15 +99,10 @@ CancelClusterRequestPrivate::CancelClusterRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CancelClusterRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CancelClusterRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CancelClusterRequest instance.
  */
 CancelClusterRequestPrivate::CancelClusterRequestPrivate(
     const CancelClusterRequestPrivate &other, CancelClusterRequest * const q)

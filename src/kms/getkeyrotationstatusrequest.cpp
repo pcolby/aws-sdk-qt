@@ -27,10 +27,9 @@ namespace KMS {
 
 /*!
  * \class QtAws::KMS::GetKeyRotationStatusRequest
- *
  * \brief The GetKeyRotationStatusRequest class provides an interface for KMS GetKeyRotationStatus requests.
  *
- * \ingroup KMS
+ * \inmodule QtAwsKMS
  *
  *  <fullname>AWS Key Management Service</fullname>
  * 
@@ -136,9 +135,7 @@ namespace KMS {
  */
 
 /*!
- * @brief  Constructs a new GetKeyRotationStatusRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetKeyRotationStatusRequest::GetKeyRotationStatusRequest(const GetKeyRotationStatusRequest &other)
     : KMSRequest(new GetKeyRotationStatusRequestPrivate(*other.d_func(), this))
@@ -147,7 +144,7 @@ GetKeyRotationStatusRequest::GetKeyRotationStatusRequest(const GetKeyRotationSta
 }
 
 /*!
- * @brief  Constructs a new GetKeyRotationStatusRequest object.
+ * Constructs a GetKeyRotationStatusRequest object.
  */
 GetKeyRotationStatusRequest::GetKeyRotationStatusRequest()
     : KMSRequest(new GetKeyRotationStatusRequestPrivate(KMSRequest::GetKeyRotationStatusAction, this))
@@ -165,14 +162,9 @@ bool GetKeyRotationStatusRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetKeyRotationStatusResponse object.
+ * Returns a GetKeyRotationStatusResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetKeyRotationStatusResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  KMSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetKeyRotationStatusRequest::response(QNetworkReply * const reply) const
 {
@@ -180,20 +172,17 @@ QtAws::Core::AwsAbstractResponse * GetKeyRotationStatusRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::KMS::GetKeyRotationStatusRequestPrivate
+ * \brief The GetKeyRotationStatusRequestPrivate class provides private implementation for GetKeyRotationStatusRequest.
+ * \internal
  *
- * @class  GetKeyRotationStatusRequestPrivate
- *
- * @brief  Private implementation for GetKeyRotationStatusRequest.
+ * \inmodule QtAwsKMS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetKeyRotationStatusRequestPrivate object.
- *
- * @param  action  KMS action being performed.
- * @param  q       Pointer to this object's public GetKeyRotationStatusRequest instance.
+ * Constructs a GetKeyRotationStatusRequestPrivate object for KMS \a action with,
+ * public implementation \a q.
  */
 GetKeyRotationStatusRequestPrivate::GetKeyRotationStatusRequestPrivate(
     const KMSRequest::Action action, GetKeyRotationStatusRequest * const q)
@@ -203,15 +192,10 @@ GetKeyRotationStatusRequestPrivate::GetKeyRotationStatusRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetKeyRotationStatusRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetKeyRotationStatusRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetKeyRotationStatusRequest instance.
  */
 GetKeyRotationStatusRequestPrivate::GetKeyRotationStatusRequestPrivate(
     const GetKeyRotationStatusRequestPrivate &other, GetKeyRotationStatusRequest * const q)

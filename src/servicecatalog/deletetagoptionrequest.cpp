@@ -27,10 +27,9 @@ namespace ServiceCatalog {
 
 /*!
  * \class QtAws::ServiceCatalog::DeleteTagOptionRequest
- *
  * \brief The DeleteTagOptionRequest class provides an interface for ServiceCatalog DeleteTagOption requests.
  *
- * \ingroup ServiceCatalog
+ * \inmodule QtAwsServiceCatalog
  *
  *  <fullname>AWS Service Catalog</fullname>
  * 
@@ -43,9 +42,7 @@ namespace ServiceCatalog {
  */
 
 /*!
- * @brief  Constructs a new DeleteTagOptionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteTagOptionRequest::DeleteTagOptionRequest(const DeleteTagOptionRequest &other)
     : ServiceCatalogRequest(new DeleteTagOptionRequestPrivate(*other.d_func(), this))
@@ -54,7 +51,7 @@ DeleteTagOptionRequest::DeleteTagOptionRequest(const DeleteTagOptionRequest &oth
 }
 
 /*!
- * @brief  Constructs a new DeleteTagOptionRequest object.
+ * Constructs a DeleteTagOptionRequest object.
  */
 DeleteTagOptionRequest::DeleteTagOptionRequest()
     : ServiceCatalogRequest(new DeleteTagOptionRequestPrivate(ServiceCatalogRequest::DeleteTagOptionAction, this))
@@ -72,14 +69,9 @@ bool DeleteTagOptionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteTagOptionResponse object.
+ * Returns a DeleteTagOptionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteTagOptionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ServiceCatalogClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteTagOptionRequest::response(QNetworkReply * const reply) const
 {
@@ -87,20 +79,17 @@ QtAws::Core::AwsAbstractResponse * DeleteTagOptionRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::ServiceCatalog::DeleteTagOptionRequestPrivate
+ * \brief The DeleteTagOptionRequestPrivate class provides private implementation for DeleteTagOptionRequest.
+ * \internal
  *
- * @class  DeleteTagOptionRequestPrivate
- *
- * @brief  Private implementation for DeleteTagOptionRequest.
+ * \inmodule QtAwsServiceCatalog
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteTagOptionRequestPrivate object.
- *
- * @param  action  ServiceCatalog action being performed.
- * @param  q       Pointer to this object's public DeleteTagOptionRequest instance.
+ * Constructs a DeleteTagOptionRequestPrivate object for ServiceCatalog \a action with,
+ * public implementation \a q.
  */
 DeleteTagOptionRequestPrivate::DeleteTagOptionRequestPrivate(
     const ServiceCatalogRequest::Action action, DeleteTagOptionRequest * const q)
@@ -110,15 +99,10 @@ DeleteTagOptionRequestPrivate::DeleteTagOptionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteTagOptionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteTagOptionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteTagOptionRequest instance.
  */
 DeleteTagOptionRequestPrivate::DeleteTagOptionRequestPrivate(
     const DeleteTagOptionRequestPrivate &other, DeleteTagOptionRequest * const q)

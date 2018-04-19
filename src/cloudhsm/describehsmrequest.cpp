@@ -27,10 +27,9 @@ namespace CloudHSM {
 
 /*!
  * \class QtAws::CloudHSM::DescribeHsmRequest
- *
  * \brief The DescribeHsmRequest class provides an interface for CloudHSM DescribeHsm requests.
  *
- * \ingroup CloudHSM
+ * \inmodule QtAwsCloudHSM
  *
  *  <fullname>AWS CloudHSM Service</fullname>
  * 
@@ -49,9 +48,7 @@ namespace CloudHSM {
  */
 
 /*!
- * @brief  Constructs a new DescribeHsmRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeHsmRequest::DescribeHsmRequest(const DescribeHsmRequest &other)
     : CloudHSMRequest(new DescribeHsmRequestPrivate(*other.d_func(), this))
@@ -60,7 +57,7 @@ DescribeHsmRequest::DescribeHsmRequest(const DescribeHsmRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DescribeHsmRequest object.
+ * Constructs a DescribeHsmRequest object.
  */
 DescribeHsmRequest::DescribeHsmRequest()
     : CloudHSMRequest(new DescribeHsmRequestPrivate(CloudHSMRequest::DescribeHsmAction, this))
@@ -78,14 +75,9 @@ bool DescribeHsmRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeHsmResponse object.
+ * Returns a DescribeHsmResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeHsmResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudHSMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeHsmRequest::response(QNetworkReply * const reply) const
 {
@@ -93,20 +85,17 @@ QtAws::Core::AwsAbstractResponse * DescribeHsmRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudHSM::DescribeHsmRequestPrivate
+ * \brief The DescribeHsmRequestPrivate class provides private implementation for DescribeHsmRequest.
+ * \internal
  *
- * @class  DescribeHsmRequestPrivate
- *
- * @brief  Private implementation for DescribeHsmRequest.
+ * \inmodule QtAwsCloudHSM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeHsmRequestPrivate object.
- *
- * @param  action  CloudHSM action being performed.
- * @param  q       Pointer to this object's public DescribeHsmRequest instance.
+ * Constructs a DescribeHsmRequestPrivate object for CloudHSM \a action with,
+ * public implementation \a q.
  */
 DescribeHsmRequestPrivate::DescribeHsmRequestPrivate(
     const CloudHSMRequest::Action action, DescribeHsmRequest * const q)
@@ -116,15 +105,10 @@ DescribeHsmRequestPrivate::DescribeHsmRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeHsmRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeHsmRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeHsmRequest instance.
  */
 DescribeHsmRequestPrivate::DescribeHsmRequestPrivate(
     const DescribeHsmRequestPrivate &other, DescribeHsmRequest * const q)

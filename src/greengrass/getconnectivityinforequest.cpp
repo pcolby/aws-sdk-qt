@@ -27,10 +27,9 @@ namespace Greengrass {
 
 /*!
  * \class QtAws::Greengrass::GetConnectivityInfoRequest
- *
  * \brief The GetConnectivityInfoRequest class provides an interface for Greengrass GetConnectivityInfo requests.
  *
- * \ingroup Greengrass
+ * \inmodule QtAwsGreengrass
  *
  *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
  *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
@@ -40,9 +39,7 @@ namespace Greengrass {
  */
 
 /*!
- * @brief  Constructs a new GetConnectivityInfoRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetConnectivityInfoRequest::GetConnectivityInfoRequest(const GetConnectivityInfoRequest &other)
     : GreengrassRequest(new GetConnectivityInfoRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ GetConnectivityInfoRequest::GetConnectivityInfoRequest(const GetConnectivityInfo
 }
 
 /*!
- * @brief  Constructs a new GetConnectivityInfoRequest object.
+ * Constructs a GetConnectivityInfoRequest object.
  */
 GetConnectivityInfoRequest::GetConnectivityInfoRequest()
     : GreengrassRequest(new GetConnectivityInfoRequestPrivate(GreengrassRequest::GetConnectivityInfoAction, this))
@@ -69,14 +66,9 @@ bool GetConnectivityInfoRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetConnectivityInfoResponse object.
+ * Returns a GetConnectivityInfoResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetConnectivityInfoResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GreengrassClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetConnectivityInfoRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * GetConnectivityInfoRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::Greengrass::GetConnectivityInfoRequestPrivate
+ * \brief The GetConnectivityInfoRequestPrivate class provides private implementation for GetConnectivityInfoRequest.
+ * \internal
  *
- * @class  GetConnectivityInfoRequestPrivate
- *
- * @brief  Private implementation for GetConnectivityInfoRequest.
+ * \inmodule QtAwsGreengrass
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetConnectivityInfoRequestPrivate object.
- *
- * @param  action  Greengrass action being performed.
- * @param  q       Pointer to this object's public GetConnectivityInfoRequest instance.
+ * Constructs a GetConnectivityInfoRequestPrivate object for Greengrass \a action with,
+ * public implementation \a q.
  */
 GetConnectivityInfoRequestPrivate::GetConnectivityInfoRequestPrivate(
     const GreengrassRequest::Action action, GetConnectivityInfoRequest * const q)
@@ -107,15 +96,10 @@ GetConnectivityInfoRequestPrivate::GetConnectivityInfoRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetConnectivityInfoRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetConnectivityInfoRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetConnectivityInfoRequest instance.
  */
 GetConnectivityInfoRequestPrivate::GetConnectivityInfoRequestPrivate(
     const GetConnectivityInfoRequestPrivate &other, GetConnectivityInfoRequest * const q)

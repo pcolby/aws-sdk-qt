@@ -27,10 +27,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::GetPatchBaselineForPatchGroupRequest
- *
  * \brief The GetPatchBaselineForPatchGroupRequest class provides an interface for SSM GetPatchBaselineForPatchGroup requests.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -61,9 +60,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new GetPatchBaselineForPatchGroupRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetPatchBaselineForPatchGroupRequest::GetPatchBaselineForPatchGroupRequest(const GetPatchBaselineForPatchGroupRequest &other)
     : SSMRequest(new GetPatchBaselineForPatchGroupRequestPrivate(*other.d_func(), this))
@@ -72,7 +69,7 @@ GetPatchBaselineForPatchGroupRequest::GetPatchBaselineForPatchGroupRequest(const
 }
 
 /*!
- * @brief  Constructs a new GetPatchBaselineForPatchGroupRequest object.
+ * Constructs a GetPatchBaselineForPatchGroupRequest object.
  */
 GetPatchBaselineForPatchGroupRequest::GetPatchBaselineForPatchGroupRequest()
     : SSMRequest(new GetPatchBaselineForPatchGroupRequestPrivate(SSMRequest::GetPatchBaselineForPatchGroupAction, this))
@@ -90,14 +87,9 @@ bool GetPatchBaselineForPatchGroupRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetPatchBaselineForPatchGroupResponse object.
+ * Returns a GetPatchBaselineForPatchGroupResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetPatchBaselineForPatchGroupResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SSMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetPatchBaselineForPatchGroupRequest::response(QNetworkReply * const reply) const
 {
@@ -105,20 +97,17 @@ QtAws::Core::AwsAbstractResponse * GetPatchBaselineForPatchGroupRequest::respons
 }
 
 /*!
- * @internal
+ * \class QtAws::SSM::GetPatchBaselineForPatchGroupRequestPrivate
+ * \brief The GetPatchBaselineForPatchGroupRequestPrivate class provides private implementation for GetPatchBaselineForPatchGroupRequest.
+ * \internal
  *
- * @class  GetPatchBaselineForPatchGroupRequestPrivate
- *
- * @brief  Private implementation for GetPatchBaselineForPatchGroupRequest.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetPatchBaselineForPatchGroupRequestPrivate object.
- *
- * @param  action  SSM action being performed.
- * @param  q       Pointer to this object's public GetPatchBaselineForPatchGroupRequest instance.
+ * Constructs a GetPatchBaselineForPatchGroupRequestPrivate object for SSM \a action with,
+ * public implementation \a q.
  */
 GetPatchBaselineForPatchGroupRequestPrivate::GetPatchBaselineForPatchGroupRequestPrivate(
     const SSMRequest::Action action, GetPatchBaselineForPatchGroupRequest * const q)
@@ -128,15 +117,10 @@ GetPatchBaselineForPatchGroupRequestPrivate::GetPatchBaselineForPatchGroupReques
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetPatchBaselineForPatchGroupRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetPatchBaselineForPatchGroupRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetPatchBaselineForPatchGroupRequest instance.
  */
 GetPatchBaselineForPatchGroupRequestPrivate::GetPatchBaselineForPatchGroupRequestPrivate(
     const GetPatchBaselineForPatchGroupRequestPrivate &other, GetPatchBaselineForPatchGroupRequest * const q)

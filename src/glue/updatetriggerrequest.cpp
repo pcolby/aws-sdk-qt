@@ -27,10 +27,9 @@ namespace Glue {
 
 /*!
  * \class QtAws::Glue::UpdateTriggerRequest
- *
  * \brief The UpdateTriggerRequest class provides an interface for Glue UpdateTrigger requests.
  *
- * \ingroup Glue
+ * \inmodule QtAwsGlue
  *
  *  <fullname>AWS Glue</fullname>
  * 
@@ -40,9 +39,7 @@ namespace Glue {
  */
 
 /*!
- * @brief  Constructs a new UpdateTriggerRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateTriggerRequest::UpdateTriggerRequest(const UpdateTriggerRequest &other)
     : GlueRequest(new UpdateTriggerRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ UpdateTriggerRequest::UpdateTriggerRequest(const UpdateTriggerRequest &other)
 }
 
 /*!
- * @brief  Constructs a new UpdateTriggerRequest object.
+ * Constructs a UpdateTriggerRequest object.
  */
 UpdateTriggerRequest::UpdateTriggerRequest()
     : GlueRequest(new UpdateTriggerRequestPrivate(GlueRequest::UpdateTriggerAction, this))
@@ -69,14 +66,9 @@ bool UpdateTriggerRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateTriggerResponse object.
+ * Returns a UpdateTriggerResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateTriggerResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GlueClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateTriggerRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * UpdateTriggerRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::Glue::UpdateTriggerRequestPrivate
+ * \brief The UpdateTriggerRequestPrivate class provides private implementation for UpdateTriggerRequest.
+ * \internal
  *
- * @class  UpdateTriggerRequestPrivate
- *
- * @brief  Private implementation for UpdateTriggerRequest.
+ * \inmodule QtAwsGlue
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateTriggerRequestPrivate object.
- *
- * @param  action  Glue action being performed.
- * @param  q       Pointer to this object's public UpdateTriggerRequest instance.
+ * Constructs a UpdateTriggerRequestPrivate object for Glue \a action with,
+ * public implementation \a q.
  */
 UpdateTriggerRequestPrivate::UpdateTriggerRequestPrivate(
     const GlueRequest::Action action, UpdateTriggerRequest * const q)
@@ -107,15 +96,10 @@ UpdateTriggerRequestPrivate::UpdateTriggerRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateTriggerRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateTriggerRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateTriggerRequest instance.
  */
 UpdateTriggerRequestPrivate::UpdateTriggerRequestPrivate(
     const UpdateTriggerRequestPrivate &other, UpdateTriggerRequest * const q)

@@ -27,10 +27,9 @@ namespace DirectoryService {
 
 /*!
  * \class QtAws::DirectoryService::DeleteTrustRequest
- *
  * \brief The DeleteTrustRequest class provides an interface for DirectoryService DeleteTrust requests.
  *
- * \ingroup DirectoryService
+ * \inmodule QtAwsDirectoryService
  *
  *  <fullname>AWS Directory Service</fullname>
  * 
@@ -51,9 +50,7 @@ namespace DirectoryService {
  */
 
 /*!
- * @brief  Constructs a new DeleteTrustRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteTrustRequest::DeleteTrustRequest(const DeleteTrustRequest &other)
     : DirectoryServiceRequest(new DeleteTrustRequestPrivate(*other.d_func(), this))
@@ -62,7 +59,7 @@ DeleteTrustRequest::DeleteTrustRequest(const DeleteTrustRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DeleteTrustRequest object.
+ * Constructs a DeleteTrustRequest object.
  */
 DeleteTrustRequest::DeleteTrustRequest()
     : DirectoryServiceRequest(new DeleteTrustRequestPrivate(DirectoryServiceRequest::DeleteTrustAction, this))
@@ -80,14 +77,9 @@ bool DeleteTrustRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteTrustResponse object.
+ * Returns a DeleteTrustResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteTrustResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DirectoryServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteTrustRequest::response(QNetworkReply * const reply) const
 {
@@ -95,20 +87,17 @@ QtAws::Core::AwsAbstractResponse * DeleteTrustRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::DirectoryService::DeleteTrustRequestPrivate
+ * \brief The DeleteTrustRequestPrivate class provides private implementation for DeleteTrustRequest.
+ * \internal
  *
- * @class  DeleteTrustRequestPrivate
- *
- * @brief  Private implementation for DeleteTrustRequest.
+ * \inmodule QtAwsDirectoryService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteTrustRequestPrivate object.
- *
- * @param  action  DirectoryService action being performed.
- * @param  q       Pointer to this object's public DeleteTrustRequest instance.
+ * Constructs a DeleteTrustRequestPrivate object for DirectoryService \a action with,
+ * public implementation \a q.
  */
 DeleteTrustRequestPrivate::DeleteTrustRequestPrivate(
     const DirectoryServiceRequest::Action action, DeleteTrustRequest * const q)
@@ -118,15 +107,10 @@ DeleteTrustRequestPrivate::DeleteTrustRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteTrustRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteTrustRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteTrustRequest instance.
  */
 DeleteTrustRequestPrivate::DeleteTrustRequestPrivate(
     const DeleteTrustRequestPrivate &other, DeleteTrustRequest * const q)

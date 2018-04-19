@@ -27,10 +27,9 @@ namespace StorageGateway {
 
 /*!
  * \class QtAws::StorageGateway::DescribeCacheRequest
- *
  * \brief The DescribeCacheRequest class provides an interface for StorageGateway DescribeCache requests.
  *
- * \ingroup StorageGateway
+ * \inmodule QtAwsStorageGateway
  *
  *  <fullname>AWS Storage Gateway Service</fullname>
  * 
@@ -106,9 +105,7 @@ namespace StorageGateway {
  */
 
 /*!
- * @brief  Constructs a new DescribeCacheRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeCacheRequest::DescribeCacheRequest(const DescribeCacheRequest &other)
     : StorageGatewayRequest(new DescribeCacheRequestPrivate(*other.d_func(), this))
@@ -117,7 +114,7 @@ DescribeCacheRequest::DescribeCacheRequest(const DescribeCacheRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DescribeCacheRequest object.
+ * Constructs a DescribeCacheRequest object.
  */
 DescribeCacheRequest::DescribeCacheRequest()
     : StorageGatewayRequest(new DescribeCacheRequestPrivate(StorageGatewayRequest::DescribeCacheAction, this))
@@ -135,14 +132,9 @@ bool DescribeCacheRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeCacheResponse object.
+ * Returns a DescribeCacheResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeCacheResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  StorageGatewayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeCacheRequest::response(QNetworkReply * const reply) const
 {
@@ -150,20 +142,17 @@ QtAws::Core::AwsAbstractResponse * DescribeCacheRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::StorageGateway::DescribeCacheRequestPrivate
+ * \brief The DescribeCacheRequestPrivate class provides private implementation for DescribeCacheRequest.
+ * \internal
  *
- * @class  DescribeCacheRequestPrivate
- *
- * @brief  Private implementation for DescribeCacheRequest.
+ * \inmodule QtAwsStorageGateway
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeCacheRequestPrivate object.
- *
- * @param  action  StorageGateway action being performed.
- * @param  q       Pointer to this object's public DescribeCacheRequest instance.
+ * Constructs a DescribeCacheRequestPrivate object for StorageGateway \a action with,
+ * public implementation \a q.
  */
 DescribeCacheRequestPrivate::DescribeCacheRequestPrivate(
     const StorageGatewayRequest::Action action, DescribeCacheRequest * const q)
@@ -173,15 +162,10 @@ DescribeCacheRequestPrivate::DescribeCacheRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeCacheRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeCacheRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeCacheRequest instance.
  */
 DescribeCacheRequestPrivate::DescribeCacheRequestPrivate(
     const DescribeCacheRequestPrivate &other, DescribeCacheRequest * const q)

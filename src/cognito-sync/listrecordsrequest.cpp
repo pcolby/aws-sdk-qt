@@ -27,10 +27,9 @@ namespace CognitoSync {
 
 /*!
  * \class QtAws::CognitoSync::ListRecordsRequest
- *
  * \brief The ListRecordsRequest class provides an interface for CognitoSync ListRecords requests.
  *
- * \ingroup CognitoSync
+ * \inmodule QtAwsCognitoSync
  *
  *  <fullname>Amazon Cognito Sync</fullname>
  * 
@@ -57,9 +56,7 @@ namespace CognitoSync {
  */
 
 /*!
- * @brief  Constructs a new ListRecordsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListRecordsRequest::ListRecordsRequest(const ListRecordsRequest &other)
     : CognitoSyncRequest(new ListRecordsRequestPrivate(*other.d_func(), this))
@@ -68,7 +65,7 @@ ListRecordsRequest::ListRecordsRequest(const ListRecordsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ListRecordsRequest object.
+ * Constructs a ListRecordsRequest object.
  */
 ListRecordsRequest::ListRecordsRequest()
     : CognitoSyncRequest(new ListRecordsRequestPrivate(CognitoSyncRequest::ListRecordsAction, this))
@@ -86,14 +83,9 @@ bool ListRecordsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListRecordsResponse object.
+ * Returns a ListRecordsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListRecordsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CognitoSyncClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListRecordsRequest::response(QNetworkReply * const reply) const
 {
@@ -101,20 +93,17 @@ QtAws::Core::AwsAbstractResponse * ListRecordsRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::CognitoSync::ListRecordsRequestPrivate
+ * \brief The ListRecordsRequestPrivate class provides private implementation for ListRecordsRequest.
+ * \internal
  *
- * @class  ListRecordsRequestPrivate
- *
- * @brief  Private implementation for ListRecordsRequest.
+ * \inmodule QtAwsCognitoSync
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListRecordsRequestPrivate object.
- *
- * @param  action  CognitoSync action being performed.
- * @param  q       Pointer to this object's public ListRecordsRequest instance.
+ * Constructs a ListRecordsRequestPrivate object for CognitoSync \a action with,
+ * public implementation \a q.
  */
 ListRecordsRequestPrivate::ListRecordsRequestPrivate(
     const CognitoSyncRequest::Action action, ListRecordsRequest * const q)
@@ -124,15 +113,10 @@ ListRecordsRequestPrivate::ListRecordsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListRecordsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListRecordsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListRecordsRequest instance.
  */
 ListRecordsRequestPrivate::ListRecordsRequestPrivate(
     const ListRecordsRequestPrivate &other, ListRecordsRequest * const q)

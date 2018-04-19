@@ -27,10 +27,9 @@ namespace OpsWorks {
 
 /*!
  * \class QtAws::OpsWorks::AssignInstanceRequest
- *
  * \brief The AssignInstanceRequest class provides an interface for OpsWorks AssignInstance requests.
  *
- * \ingroup OpsWorks
+ * \inmodule QtAwsOpsWorks
  *
  *  <fullname>AWS OpsWorks</fullname>
  * 
@@ -143,9 +142,7 @@ namespace OpsWorks {
  */
 
 /*!
- * @brief  Constructs a new AssignInstanceRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AssignInstanceRequest::AssignInstanceRequest(const AssignInstanceRequest &other)
     : OpsWorksRequest(new AssignInstanceRequestPrivate(*other.d_func(), this))
@@ -154,7 +151,7 @@ AssignInstanceRequest::AssignInstanceRequest(const AssignInstanceRequest &other)
 }
 
 /*!
- * @brief  Constructs a new AssignInstanceRequest object.
+ * Constructs a AssignInstanceRequest object.
  */
 AssignInstanceRequest::AssignInstanceRequest()
     : OpsWorksRequest(new AssignInstanceRequestPrivate(OpsWorksRequest::AssignInstanceAction, this))
@@ -172,14 +169,9 @@ bool AssignInstanceRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AssignInstanceResponse object.
+ * Returns a AssignInstanceResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AssignInstanceResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  OpsWorksClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AssignInstanceRequest::response(QNetworkReply * const reply) const
 {
@@ -187,20 +179,17 @@ QtAws::Core::AwsAbstractResponse * AssignInstanceRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::OpsWorks::AssignInstanceRequestPrivate
+ * \brief The AssignInstanceRequestPrivate class provides private implementation for AssignInstanceRequest.
+ * \internal
  *
- * @class  AssignInstanceRequestPrivate
- *
- * @brief  Private implementation for AssignInstanceRequest.
+ * \inmodule QtAwsOpsWorks
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AssignInstanceRequestPrivate object.
- *
- * @param  action  OpsWorks action being performed.
- * @param  q       Pointer to this object's public AssignInstanceRequest instance.
+ * Constructs a AssignInstanceRequestPrivate object for OpsWorks \a action with,
+ * public implementation \a q.
  */
 AssignInstanceRequestPrivate::AssignInstanceRequestPrivate(
     const OpsWorksRequest::Action action, AssignInstanceRequest * const q)
@@ -210,15 +199,10 @@ AssignInstanceRequestPrivate::AssignInstanceRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AssignInstanceRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AssignInstanceRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AssignInstanceRequest instance.
  */
 AssignInstanceRequestPrivate::AssignInstanceRequestPrivate(
     const AssignInstanceRequestPrivate &other, AssignInstanceRequest * const q)

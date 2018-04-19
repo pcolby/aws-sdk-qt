@@ -27,10 +27,9 @@ namespace SES {
 
 /*!
  * \class QtAws::SES::ListIdentitiesRequest
- *
  * \brief The ListIdentitiesRequest class provides an interface for SES ListIdentities requests.
  *
- * \ingroup SES
+ * \inmodule QtAwsSES
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -48,9 +47,7 @@ namespace SES {
  */
 
 /*!
- * @brief  Constructs a new ListIdentitiesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListIdentitiesRequest::ListIdentitiesRequest(const ListIdentitiesRequest &other)
     : SESRequest(new ListIdentitiesRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ ListIdentitiesRequest::ListIdentitiesRequest(const ListIdentitiesRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ListIdentitiesRequest object.
+ * Constructs a ListIdentitiesRequest object.
  */
 ListIdentitiesRequest::ListIdentitiesRequest()
     : SESRequest(new ListIdentitiesRequestPrivate(SESRequest::ListIdentitiesAction, this))
@@ -77,14 +74,9 @@ bool ListIdentitiesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListIdentitiesResponse object.
+ * Returns a ListIdentitiesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListIdentitiesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SESClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListIdentitiesRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * ListIdentitiesRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::SES::ListIdentitiesRequestPrivate
+ * \brief The ListIdentitiesRequestPrivate class provides private implementation for ListIdentitiesRequest.
+ * \internal
  *
- * @class  ListIdentitiesRequestPrivate
- *
- * @brief  Private implementation for ListIdentitiesRequest.
+ * \inmodule QtAwsSES
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListIdentitiesRequestPrivate object.
- *
- * @param  action  SES action being performed.
- * @param  q       Pointer to this object's public ListIdentitiesRequest instance.
+ * Constructs a ListIdentitiesRequestPrivate object for SES \a action with,
+ * public implementation \a q.
  */
 ListIdentitiesRequestPrivate::ListIdentitiesRequestPrivate(
     const SESRequest::Action action, ListIdentitiesRequest * const q)
@@ -115,15 +104,10 @@ ListIdentitiesRequestPrivate::ListIdentitiesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListIdentitiesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListIdentitiesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListIdentitiesRequest instance.
  */
 ListIdentitiesRequestPrivate::ListIdentitiesRequestPrivate(
     const ListIdentitiesRequestPrivate &other, ListIdentitiesRequest * const q)

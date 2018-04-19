@@ -27,10 +27,9 @@ namespace SecretsManager {
 
 /*!
  * \class QtAws::SecretsManager::ListSecretsRequest
- *
  * \brief The ListSecretsRequest class provides an interface for SecretsManager ListSecrets requests.
  *
- * \ingroup SecretsManager
+ * \inmodule QtAwsSecretsManager
  *
  *  <fullname>AWS Secrets Manager API Reference</fullname>
  * 
@@ -137,9 +136,7 @@ namespace SecretsManager {
  */
 
 /*!
- * @brief  Constructs a new ListSecretsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListSecretsRequest::ListSecretsRequest(const ListSecretsRequest &other)
     : SecretsManagerRequest(new ListSecretsRequestPrivate(*other.d_func(), this))
@@ -148,7 +145,7 @@ ListSecretsRequest::ListSecretsRequest(const ListSecretsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ListSecretsRequest object.
+ * Constructs a ListSecretsRequest object.
  */
 ListSecretsRequest::ListSecretsRequest()
     : SecretsManagerRequest(new ListSecretsRequestPrivate(SecretsManagerRequest::ListSecretsAction, this))
@@ -166,14 +163,9 @@ bool ListSecretsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListSecretsResponse object.
+ * Returns a ListSecretsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListSecretsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SecretsManagerClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListSecretsRequest::response(QNetworkReply * const reply) const
 {
@@ -181,20 +173,17 @@ QtAws::Core::AwsAbstractResponse * ListSecretsRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::SecretsManager::ListSecretsRequestPrivate
+ * \brief The ListSecretsRequestPrivate class provides private implementation for ListSecretsRequest.
+ * \internal
  *
- * @class  ListSecretsRequestPrivate
- *
- * @brief  Private implementation for ListSecretsRequest.
+ * \inmodule QtAwsSecretsManager
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListSecretsRequestPrivate object.
- *
- * @param  action  SecretsManager action being performed.
- * @param  q       Pointer to this object's public ListSecretsRequest instance.
+ * Constructs a ListSecretsRequestPrivate object for SecretsManager \a action with,
+ * public implementation \a q.
  */
 ListSecretsRequestPrivate::ListSecretsRequestPrivate(
     const SecretsManagerRequest::Action action, ListSecretsRequest * const q)
@@ -204,15 +193,10 @@ ListSecretsRequestPrivate::ListSecretsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListSecretsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListSecretsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListSecretsRequest instance.
  */
 ListSecretsRequestPrivate::ListSecretsRequestPrivate(
     const ListSecretsRequestPrivate &other, ListSecretsRequest * const q)

@@ -27,10 +27,9 @@ namespace DirectoryService {
 
 /*!
  * \class QtAws::DirectoryService::DeleteDirectoryRequest
- *
  * \brief The DeleteDirectoryRequest class provides an interface for DirectoryService DeleteDirectory requests.
  *
- * \ingroup DirectoryService
+ * \inmodule QtAwsDirectoryService
  *
  *  <fullname>AWS Directory Service</fullname>
  * 
@@ -51,9 +50,7 @@ namespace DirectoryService {
  */
 
 /*!
- * @brief  Constructs a new DeleteDirectoryRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteDirectoryRequest::DeleteDirectoryRequest(const DeleteDirectoryRequest &other)
     : DirectoryServiceRequest(new DeleteDirectoryRequestPrivate(*other.d_func(), this))
@@ -62,7 +59,7 @@ DeleteDirectoryRequest::DeleteDirectoryRequest(const DeleteDirectoryRequest &oth
 }
 
 /*!
- * @brief  Constructs a new DeleteDirectoryRequest object.
+ * Constructs a DeleteDirectoryRequest object.
  */
 DeleteDirectoryRequest::DeleteDirectoryRequest()
     : DirectoryServiceRequest(new DeleteDirectoryRequestPrivate(DirectoryServiceRequest::DeleteDirectoryAction, this))
@@ -80,14 +77,9 @@ bool DeleteDirectoryRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteDirectoryResponse object.
+ * Returns a DeleteDirectoryResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteDirectoryResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DirectoryServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteDirectoryRequest::response(QNetworkReply * const reply) const
 {
@@ -95,20 +87,17 @@ QtAws::Core::AwsAbstractResponse * DeleteDirectoryRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::DirectoryService::DeleteDirectoryRequestPrivate
+ * \brief The DeleteDirectoryRequestPrivate class provides private implementation for DeleteDirectoryRequest.
+ * \internal
  *
- * @class  DeleteDirectoryRequestPrivate
- *
- * @brief  Private implementation for DeleteDirectoryRequest.
+ * \inmodule QtAwsDirectoryService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteDirectoryRequestPrivate object.
- *
- * @param  action  DirectoryService action being performed.
- * @param  q       Pointer to this object's public DeleteDirectoryRequest instance.
+ * Constructs a DeleteDirectoryRequestPrivate object for DirectoryService \a action with,
+ * public implementation \a q.
  */
 DeleteDirectoryRequestPrivate::DeleteDirectoryRequestPrivate(
     const DirectoryServiceRequest::Action action, DeleteDirectoryRequest * const q)
@@ -118,15 +107,10 @@ DeleteDirectoryRequestPrivate::DeleteDirectoryRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteDirectoryRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteDirectoryRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteDirectoryRequest instance.
  */
 DeleteDirectoryRequestPrivate::DeleteDirectoryRequestPrivate(
     const DeleteDirectoryRequestPrivate &other, DeleteDirectoryRequest * const q)

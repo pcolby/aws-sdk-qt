@@ -27,10 +27,9 @@ namespace CloudDirectory {
 
 /*!
  * \class QtAws::CloudDirectory::UpdateSchemaRequest
- *
  * \brief The UpdateSchemaRequest class provides an interface for CloudDirectory UpdateSchema requests.
  *
- * \ingroup CloudDirectory
+ * \inmodule QtAwsCloudDirectory
  *
  *  <fullname>Amazon Cloud Directory</fullname>
  * 
@@ -44,9 +43,7 @@ namespace CloudDirectory {
  */
 
 /*!
- * @brief  Constructs a new UpdateSchemaRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateSchemaRequest::UpdateSchemaRequest(const UpdateSchemaRequest &other)
     : CloudDirectoryRequest(new UpdateSchemaRequestPrivate(*other.d_func(), this))
@@ -55,7 +52,7 @@ UpdateSchemaRequest::UpdateSchemaRequest(const UpdateSchemaRequest &other)
 }
 
 /*!
- * @brief  Constructs a new UpdateSchemaRequest object.
+ * Constructs a UpdateSchemaRequest object.
  */
 UpdateSchemaRequest::UpdateSchemaRequest()
     : CloudDirectoryRequest(new UpdateSchemaRequestPrivate(CloudDirectoryRequest::UpdateSchemaAction, this))
@@ -73,14 +70,9 @@ bool UpdateSchemaRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateSchemaResponse object.
+ * Returns a UpdateSchemaResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateSchemaResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudDirectoryClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateSchemaRequest::response(QNetworkReply * const reply) const
 {
@@ -88,20 +80,17 @@ QtAws::Core::AwsAbstractResponse * UpdateSchemaRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudDirectory::UpdateSchemaRequestPrivate
+ * \brief The UpdateSchemaRequestPrivate class provides private implementation for UpdateSchemaRequest.
+ * \internal
  *
- * @class  UpdateSchemaRequestPrivate
- *
- * @brief  Private implementation for UpdateSchemaRequest.
+ * \inmodule QtAwsCloudDirectory
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateSchemaRequestPrivate object.
- *
- * @param  action  CloudDirectory action being performed.
- * @param  q       Pointer to this object's public UpdateSchemaRequest instance.
+ * Constructs a UpdateSchemaRequestPrivate object for CloudDirectory \a action with,
+ * public implementation \a q.
  */
 UpdateSchemaRequestPrivate::UpdateSchemaRequestPrivate(
     const CloudDirectoryRequest::Action action, UpdateSchemaRequest * const q)
@@ -111,15 +100,10 @@ UpdateSchemaRequestPrivate::UpdateSchemaRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateSchemaRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateSchemaRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateSchemaRequest instance.
  */
 UpdateSchemaRequestPrivate::UpdateSchemaRequestPrivate(
     const UpdateSchemaRequestPrivate &other, UpdateSchemaRequest * const q)

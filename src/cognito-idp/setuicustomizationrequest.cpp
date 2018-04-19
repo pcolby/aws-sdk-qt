@@ -27,10 +27,9 @@ namespace CognitoIdentityProvider {
 
 /*!
  * \class QtAws::CognitoIdentityProvider::SetUICustomizationRequest
- *
  * \brief The SetUICustomizationRequest class provides an interface for CognitoIdentityProvider SetUICustomization requests.
  *
- * \ingroup CognitoIdentityProvider
+ * \inmodule QtAwsCognitoIdentityProvider
  *
  *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
  *  authenticate a user to obtain tokens related to user identity and access
@@ -47,9 +46,7 @@ namespace CognitoIdentityProvider {
  */
 
 /*!
- * @brief  Constructs a new SetUICustomizationRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 SetUICustomizationRequest::SetUICustomizationRequest(const SetUICustomizationRequest &other)
     : CognitoIdentityProviderRequest(new SetUICustomizationRequestPrivate(*other.d_func(), this))
@@ -58,7 +55,7 @@ SetUICustomizationRequest::SetUICustomizationRequest(const SetUICustomizationReq
 }
 
 /*!
- * @brief  Constructs a new SetUICustomizationRequest object.
+ * Constructs a SetUICustomizationRequest object.
  */
 SetUICustomizationRequest::SetUICustomizationRequest()
     : CognitoIdentityProviderRequest(new SetUICustomizationRequestPrivate(CognitoIdentityProviderRequest::SetUICustomizationAction, this))
@@ -76,14 +73,9 @@ bool SetUICustomizationRequest::isValid() const
 
 
 /*!
- * @brief  Construct an SetUICustomizationResponse object.
+ * Returns a SetUICustomizationResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An SetUICustomizationResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CognitoIdentityProviderClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * SetUICustomizationRequest::response(QNetworkReply * const reply) const
 {
@@ -91,20 +83,17 @@ QtAws::Core::AwsAbstractResponse * SetUICustomizationRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::CognitoIdentityProvider::SetUICustomizationRequestPrivate
+ * \brief The SetUICustomizationRequestPrivate class provides private implementation for SetUICustomizationRequest.
+ * \internal
  *
- * @class  SetUICustomizationRequestPrivate
- *
- * @brief  Private implementation for SetUICustomizationRequest.
+ * \inmodule QtAwsCognitoIdentityProvider
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new SetUICustomizationRequestPrivate object.
- *
- * @param  action  CognitoIdentityProvider action being performed.
- * @param  q       Pointer to this object's public SetUICustomizationRequest instance.
+ * Constructs a SetUICustomizationRequestPrivate object for CognitoIdentityProvider \a action with,
+ * public implementation \a q.
  */
 SetUICustomizationRequestPrivate::SetUICustomizationRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, SetUICustomizationRequest * const q)
@@ -114,15 +103,10 @@ SetUICustomizationRequestPrivate::SetUICustomizationRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SetUICustomizationRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the SetUICustomizationRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public SetUICustomizationRequest instance.
  */
 SetUICustomizationRequestPrivate::SetUICustomizationRequestPrivate(
     const SetUICustomizationRequestPrivate &other, SetUICustomizationRequest * const q)

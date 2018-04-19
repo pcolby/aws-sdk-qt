@@ -27,10 +27,9 @@ namespace ECS {
 
 /*!
  * \class QtAws::ECS::DiscoverPollEndpointRequest
- *
  * \brief The DiscoverPollEndpointRequest class provides an interface for ECS DiscoverPollEndpoint requests.
  *
- * \ingroup ECS
+ * \inmodule QtAwsECS
  *
  *  Amazon Elastic Container Service (Amazon ECS) is a highly scalable, fast, container management service that makes it
  *  easy to run, stop, and manage Docker containers on a cluster. You can host your cluster on a serverless infrastructure
@@ -54,9 +53,7 @@ namespace ECS {
  */
 
 /*!
- * @brief  Constructs a new DiscoverPollEndpointRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DiscoverPollEndpointRequest::DiscoverPollEndpointRequest(const DiscoverPollEndpointRequest &other)
     : ECSRequest(new DiscoverPollEndpointRequestPrivate(*other.d_func(), this))
@@ -65,7 +62,7 @@ DiscoverPollEndpointRequest::DiscoverPollEndpointRequest(const DiscoverPollEndpo
 }
 
 /*!
- * @brief  Constructs a new DiscoverPollEndpointRequest object.
+ * Constructs a DiscoverPollEndpointRequest object.
  */
 DiscoverPollEndpointRequest::DiscoverPollEndpointRequest()
     : ECSRequest(new DiscoverPollEndpointRequestPrivate(ECSRequest::DiscoverPollEndpointAction, this))
@@ -83,14 +80,9 @@ bool DiscoverPollEndpointRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DiscoverPollEndpointResponse object.
+ * Returns a DiscoverPollEndpointResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DiscoverPollEndpointResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ECSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DiscoverPollEndpointRequest::response(QNetworkReply * const reply) const
 {
@@ -98,20 +90,17 @@ QtAws::Core::AwsAbstractResponse * DiscoverPollEndpointRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::ECS::DiscoverPollEndpointRequestPrivate
+ * \brief The DiscoverPollEndpointRequestPrivate class provides private implementation for DiscoverPollEndpointRequest.
+ * \internal
  *
- * @class  DiscoverPollEndpointRequestPrivate
- *
- * @brief  Private implementation for DiscoverPollEndpointRequest.
+ * \inmodule QtAwsECS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DiscoverPollEndpointRequestPrivate object.
- *
- * @param  action  ECS action being performed.
- * @param  q       Pointer to this object's public DiscoverPollEndpointRequest instance.
+ * Constructs a DiscoverPollEndpointRequestPrivate object for ECS \a action with,
+ * public implementation \a q.
  */
 DiscoverPollEndpointRequestPrivate::DiscoverPollEndpointRequestPrivate(
     const ECSRequest::Action action, DiscoverPollEndpointRequest * const q)
@@ -121,15 +110,10 @@ DiscoverPollEndpointRequestPrivate::DiscoverPollEndpointRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DiscoverPollEndpointRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DiscoverPollEndpointRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DiscoverPollEndpointRequest instance.
  */
 DiscoverPollEndpointRequestPrivate::DiscoverPollEndpointRequestPrivate(
     const DiscoverPollEndpointRequestPrivate &other, DiscoverPollEndpointRequest * const q)

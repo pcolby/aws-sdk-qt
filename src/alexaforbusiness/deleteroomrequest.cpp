@@ -27,10 +27,9 @@ namespace AlexaForBusiness {
 
 /*!
  * \class QtAws::AlexaForBusiness::DeleteRoomRequest
- *
  * \brief The DeleteRoomRequest class provides an interface for AlexaForBusiness DeleteRoom requests.
  *
- * \ingroup AlexaForBusiness
+ * \inmodule QtAwsAlexaForBusiness
  *
  *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
  *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
@@ -42,9 +41,7 @@ namespace AlexaForBusiness {
  */
 
 /*!
- * @brief  Constructs a new DeleteRoomRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteRoomRequest::DeleteRoomRequest(const DeleteRoomRequest &other)
     : AlexaForBusinessRequest(new DeleteRoomRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ DeleteRoomRequest::DeleteRoomRequest(const DeleteRoomRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DeleteRoomRequest object.
+ * Constructs a DeleteRoomRequest object.
  */
 DeleteRoomRequest::DeleteRoomRequest()
     : AlexaForBusinessRequest(new DeleteRoomRequestPrivate(AlexaForBusinessRequest::DeleteRoomAction, this))
@@ -71,14 +68,9 @@ bool DeleteRoomRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteRoomResponse object.
+ * Returns a DeleteRoomResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteRoomResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AlexaForBusinessClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteRoomRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * DeleteRoomRequest::response(QNetworkReply * c
 }
 
 /*!
- * @internal
+ * \class QtAws::AlexaForBusiness::DeleteRoomRequestPrivate
+ * \brief The DeleteRoomRequestPrivate class provides private implementation for DeleteRoomRequest.
+ * \internal
  *
- * @class  DeleteRoomRequestPrivate
- *
- * @brief  Private implementation for DeleteRoomRequest.
+ * \inmodule QtAwsAlexaForBusiness
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteRoomRequestPrivate object.
- *
- * @param  action  AlexaForBusiness action being performed.
- * @param  q       Pointer to this object's public DeleteRoomRequest instance.
+ * Constructs a DeleteRoomRequestPrivate object for AlexaForBusiness \a action with,
+ * public implementation \a q.
  */
 DeleteRoomRequestPrivate::DeleteRoomRequestPrivate(
     const AlexaForBusinessRequest::Action action, DeleteRoomRequest * const q)
@@ -109,15 +98,10 @@ DeleteRoomRequestPrivate::DeleteRoomRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteRoomRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteRoomRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteRoomRequest instance.
  */
 DeleteRoomRequestPrivate::DeleteRoomRequestPrivate(
     const DeleteRoomRequestPrivate &other, DeleteRoomRequest * const q)

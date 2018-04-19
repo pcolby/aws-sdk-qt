@@ -27,10 +27,9 @@ namespace Inspector {
 
 /*!
  * \class QtAws::Inspector::ListRulesPackagesRequest
- *
  * \brief The ListRulesPackagesRequest class provides an interface for Inspector ListRulesPackages requests.
  *
- * \ingroup Inspector
+ * \inmodule QtAwsInspector
  *
  *  <fullname>Amazon Inspector</fullname>
  * 
@@ -42,9 +41,7 @@ namespace Inspector {
  */
 
 /*!
- * @brief  Constructs a new ListRulesPackagesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListRulesPackagesRequest::ListRulesPackagesRequest(const ListRulesPackagesRequest &other)
     : InspectorRequest(new ListRulesPackagesRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ ListRulesPackagesRequest::ListRulesPackagesRequest(const ListRulesPackagesReques
 }
 
 /*!
- * @brief  Constructs a new ListRulesPackagesRequest object.
+ * Constructs a ListRulesPackagesRequest object.
  */
 ListRulesPackagesRequest::ListRulesPackagesRequest()
     : InspectorRequest(new ListRulesPackagesRequestPrivate(InspectorRequest::ListRulesPackagesAction, this))
@@ -71,14 +68,9 @@ bool ListRulesPackagesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListRulesPackagesResponse object.
+ * Returns a ListRulesPackagesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListRulesPackagesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  InspectorClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListRulesPackagesRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * ListRulesPackagesRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::Inspector::ListRulesPackagesRequestPrivate
+ * \brief The ListRulesPackagesRequestPrivate class provides private implementation for ListRulesPackagesRequest.
+ * \internal
  *
- * @class  ListRulesPackagesRequestPrivate
- *
- * @brief  Private implementation for ListRulesPackagesRequest.
+ * \inmodule QtAwsInspector
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListRulesPackagesRequestPrivate object.
- *
- * @param  action  Inspector action being performed.
- * @param  q       Pointer to this object's public ListRulesPackagesRequest instance.
+ * Constructs a ListRulesPackagesRequestPrivate object for Inspector \a action with,
+ * public implementation \a q.
  */
 ListRulesPackagesRequestPrivate::ListRulesPackagesRequestPrivate(
     const InspectorRequest::Action action, ListRulesPackagesRequest * const q)
@@ -109,15 +98,10 @@ ListRulesPackagesRequestPrivate::ListRulesPackagesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListRulesPackagesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListRulesPackagesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListRulesPackagesRequest instance.
  */
 ListRulesPackagesRequestPrivate::ListRulesPackagesRequestPrivate(
     const ListRulesPackagesRequestPrivate &other, ListRulesPackagesRequest * const q)

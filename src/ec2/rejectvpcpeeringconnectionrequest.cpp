@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::RejectVpcPeeringConnectionRequest
- *
  * \brief The RejectVpcPeeringConnectionRequest class provides an interface for EC2 RejectVpcPeeringConnection requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new RejectVpcPeeringConnectionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 RejectVpcPeeringConnectionRequest::RejectVpcPeeringConnectionRequest(const RejectVpcPeeringConnectionRequest &other)
     : EC2Request(new RejectVpcPeeringConnectionRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ RejectVpcPeeringConnectionRequest::RejectVpcPeeringConnectionRequest(const Rejec
 }
 
 /*!
- * @brief  Constructs a new RejectVpcPeeringConnectionRequest object.
+ * Constructs a RejectVpcPeeringConnectionRequest object.
  */
 RejectVpcPeeringConnectionRequest::RejectVpcPeeringConnectionRequest()
     : EC2Request(new RejectVpcPeeringConnectionRequestPrivate(EC2Request::RejectVpcPeeringConnectionAction, this))
@@ -70,14 +67,9 @@ bool RejectVpcPeeringConnectionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an RejectVpcPeeringConnectionResponse object.
+ * Returns a RejectVpcPeeringConnectionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An RejectVpcPeeringConnectionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * RejectVpcPeeringConnectionRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * RejectVpcPeeringConnectionRequest::response(Q
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::RejectVpcPeeringConnectionRequestPrivate
+ * \brief The RejectVpcPeeringConnectionRequestPrivate class provides private implementation for RejectVpcPeeringConnectionRequest.
+ * \internal
  *
- * @class  RejectVpcPeeringConnectionRequestPrivate
- *
- * @brief  Private implementation for RejectVpcPeeringConnectionRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new RejectVpcPeeringConnectionRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public RejectVpcPeeringConnectionRequest instance.
+ * Constructs a RejectVpcPeeringConnectionRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 RejectVpcPeeringConnectionRequestPrivate::RejectVpcPeeringConnectionRequestPrivate(
     const EC2Request::Action action, RejectVpcPeeringConnectionRequest * const q)
@@ -108,15 +97,10 @@ RejectVpcPeeringConnectionRequestPrivate::RejectVpcPeeringConnectionRequestPriva
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RejectVpcPeeringConnectionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the RejectVpcPeeringConnectionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public RejectVpcPeeringConnectionRequest instance.
  */
 RejectVpcPeeringConnectionRequestPrivate::RejectVpcPeeringConnectionRequestPrivate(
     const RejectVpcPeeringConnectionRequestPrivate &other, RejectVpcPeeringConnectionRequest * const q)

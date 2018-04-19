@@ -27,10 +27,9 @@ namespace WAF {
 
 /*!
  * \class QtAws::WAF::DeleteRateBasedRuleRequest
- *
  * \brief The DeleteRateBasedRuleRequest class provides an interface for WAF DeleteRateBasedRule requests.
  *
- * \ingroup WAF
+ * \inmodule QtAwsWAF
  *
  *  This is the <i>AWS WAF API Reference</i> for using AWS WAF with Amazon CloudFront. The AWS WAF actions and data types
  *  listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data
@@ -42,9 +41,7 @@ namespace WAF {
  */
 
 /*!
- * @brief  Constructs a new DeleteRateBasedRuleRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteRateBasedRuleRequest::DeleteRateBasedRuleRequest(const DeleteRateBasedRuleRequest &other)
     : WAFRequest(new DeleteRateBasedRuleRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ DeleteRateBasedRuleRequest::DeleteRateBasedRuleRequest(const DeleteRateBasedRule
 }
 
 /*!
- * @brief  Constructs a new DeleteRateBasedRuleRequest object.
+ * Constructs a DeleteRateBasedRuleRequest object.
  */
 DeleteRateBasedRuleRequest::DeleteRateBasedRuleRequest()
     : WAFRequest(new DeleteRateBasedRuleRequestPrivate(WAFRequest::DeleteRateBasedRuleAction, this))
@@ -71,14 +68,9 @@ bool DeleteRateBasedRuleRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteRateBasedRuleResponse object.
+ * Returns a DeleteRateBasedRuleResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteRateBasedRuleResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WAFClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteRateBasedRuleRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * DeleteRateBasedRuleRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::WAF::DeleteRateBasedRuleRequestPrivate
+ * \brief The DeleteRateBasedRuleRequestPrivate class provides private implementation for DeleteRateBasedRuleRequest.
+ * \internal
  *
- * @class  DeleteRateBasedRuleRequestPrivate
- *
- * @brief  Private implementation for DeleteRateBasedRuleRequest.
+ * \inmodule QtAwsWAF
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteRateBasedRuleRequestPrivate object.
- *
- * @param  action  WAF action being performed.
- * @param  q       Pointer to this object's public DeleteRateBasedRuleRequest instance.
+ * Constructs a DeleteRateBasedRuleRequestPrivate object for WAF \a action with,
+ * public implementation \a q.
  */
 DeleteRateBasedRuleRequestPrivate::DeleteRateBasedRuleRequestPrivate(
     const WAFRequest::Action action, DeleteRateBasedRuleRequest * const q)
@@ -109,15 +98,10 @@ DeleteRateBasedRuleRequestPrivate::DeleteRateBasedRuleRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteRateBasedRuleRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteRateBasedRuleRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteRateBasedRuleRequest instance.
  */
 DeleteRateBasedRuleRequestPrivate::DeleteRateBasedRuleRequestPrivate(
     const DeleteRateBasedRuleRequestPrivate &other, DeleteRateBasedRuleRequest * const q)

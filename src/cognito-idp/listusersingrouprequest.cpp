@@ -27,10 +27,9 @@ namespace CognitoIdentityProvider {
 
 /*!
  * \class QtAws::CognitoIdentityProvider::ListUsersInGroupRequest
- *
  * \brief The ListUsersInGroupRequest class provides an interface for CognitoIdentityProvider ListUsersInGroup requests.
  *
- * \ingroup CognitoIdentityProvider
+ * \inmodule QtAwsCognitoIdentityProvider
  *
  *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
  *  authenticate a user to obtain tokens related to user identity and access
@@ -47,9 +46,7 @@ namespace CognitoIdentityProvider {
  */
 
 /*!
- * @brief  Constructs a new ListUsersInGroupRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListUsersInGroupRequest::ListUsersInGroupRequest(const ListUsersInGroupRequest &other)
     : CognitoIdentityProviderRequest(new ListUsersInGroupRequestPrivate(*other.d_func(), this))
@@ -58,7 +55,7 @@ ListUsersInGroupRequest::ListUsersInGroupRequest(const ListUsersInGroupRequest &
 }
 
 /*!
- * @brief  Constructs a new ListUsersInGroupRequest object.
+ * Constructs a ListUsersInGroupRequest object.
  */
 ListUsersInGroupRequest::ListUsersInGroupRequest()
     : CognitoIdentityProviderRequest(new ListUsersInGroupRequestPrivate(CognitoIdentityProviderRequest::ListUsersInGroupAction, this))
@@ -76,14 +73,9 @@ bool ListUsersInGroupRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListUsersInGroupResponse object.
+ * Returns a ListUsersInGroupResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListUsersInGroupResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CognitoIdentityProviderClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListUsersInGroupRequest::response(QNetworkReply * const reply) const
 {
@@ -91,20 +83,17 @@ QtAws::Core::AwsAbstractResponse * ListUsersInGroupRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::CognitoIdentityProvider::ListUsersInGroupRequestPrivate
+ * \brief The ListUsersInGroupRequestPrivate class provides private implementation for ListUsersInGroupRequest.
+ * \internal
  *
- * @class  ListUsersInGroupRequestPrivate
- *
- * @brief  Private implementation for ListUsersInGroupRequest.
+ * \inmodule QtAwsCognitoIdentityProvider
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListUsersInGroupRequestPrivate object.
- *
- * @param  action  CognitoIdentityProvider action being performed.
- * @param  q       Pointer to this object's public ListUsersInGroupRequest instance.
+ * Constructs a ListUsersInGroupRequestPrivate object for CognitoIdentityProvider \a action with,
+ * public implementation \a q.
  */
 ListUsersInGroupRequestPrivate::ListUsersInGroupRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, ListUsersInGroupRequest * const q)
@@ -114,15 +103,10 @@ ListUsersInGroupRequestPrivate::ListUsersInGroupRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListUsersInGroupRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListUsersInGroupRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListUsersInGroupRequest instance.
  */
 ListUsersInGroupRequestPrivate::ListUsersInGroupRequestPrivate(
     const ListUsersInGroupRequestPrivate &other, ListUsersInGroupRequest * const q)

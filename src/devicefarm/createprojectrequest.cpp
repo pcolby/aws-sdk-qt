@@ -27,10 +27,9 @@ namespace DeviceFarm {
 
 /*!
  * \class QtAws::DeviceFarm::CreateProjectRequest
- *
  * \brief The CreateProjectRequest class provides an interface for DeviceFarm CreateProject requests.
  *
- * \ingroup DeviceFarm
+ * \inmodule QtAwsDeviceFarm
  *
  *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
  *  phones, tablets, and other devices in the
@@ -39,9 +38,7 @@ namespace DeviceFarm {
  */
 
 /*!
- * @brief  Constructs a new CreateProjectRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateProjectRequest::CreateProjectRequest(const CreateProjectRequest &other)
     : DeviceFarmRequest(new CreateProjectRequestPrivate(*other.d_func(), this))
@@ -50,7 +47,7 @@ CreateProjectRequest::CreateProjectRequest(const CreateProjectRequest &other)
 }
 
 /*!
- * @brief  Constructs a new CreateProjectRequest object.
+ * Constructs a CreateProjectRequest object.
  */
 CreateProjectRequest::CreateProjectRequest()
     : DeviceFarmRequest(new CreateProjectRequestPrivate(DeviceFarmRequest::CreateProjectAction, this))
@@ -68,14 +65,9 @@ bool CreateProjectRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateProjectResponse object.
+ * Returns a CreateProjectResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateProjectResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DeviceFarmClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateProjectRequest::response(QNetworkReply * const reply) const
 {
@@ -83,20 +75,17 @@ QtAws::Core::AwsAbstractResponse * CreateProjectRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::DeviceFarm::CreateProjectRequestPrivate
+ * \brief The CreateProjectRequestPrivate class provides private implementation for CreateProjectRequest.
+ * \internal
  *
- * @class  CreateProjectRequestPrivate
- *
- * @brief  Private implementation for CreateProjectRequest.
+ * \inmodule QtAwsDeviceFarm
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateProjectRequestPrivate object.
- *
- * @param  action  DeviceFarm action being performed.
- * @param  q       Pointer to this object's public CreateProjectRequest instance.
+ * Constructs a CreateProjectRequestPrivate object for DeviceFarm \a action with,
+ * public implementation \a q.
  */
 CreateProjectRequestPrivate::CreateProjectRequestPrivate(
     const DeviceFarmRequest::Action action, CreateProjectRequest * const q)
@@ -106,15 +95,10 @@ CreateProjectRequestPrivate::CreateProjectRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateProjectRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateProjectRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateProjectRequest instance.
  */
 CreateProjectRequestPrivate::CreateProjectRequestPrivate(
     const CreateProjectRequestPrivate &other, CreateProjectRequest * const q)

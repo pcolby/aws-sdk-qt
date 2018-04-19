@@ -27,10 +27,9 @@ namespace ACMPCA {
 
 /*!
  * \class QtAws::ACMPCA::ImportCertificateAuthorityCertificateRequest
- *
  * \brief The ImportCertificateAuthorityCertificateRequest class provides an interface for ACMPCA ImportCertificateAuthorityCertificate requests.
  *
- * \ingroup ACMPCA
+ * \inmodule QtAwsACMPCA
  *
  *  You can use the ACM PCA API to create a private certificate authority (CA). You must first call the
  *  <a>CreateCertificateAuthority</a> function. If successful, the function returns an Amazon Resource Name (ARN) for your
@@ -67,9 +66,7 @@ namespace ACMPCA {
  */
 
 /*!
- * @brief  Constructs a new ImportCertificateAuthorityCertificateRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ImportCertificateAuthorityCertificateRequest::ImportCertificateAuthorityCertificateRequest(const ImportCertificateAuthorityCertificateRequest &other)
     : ACMPCARequest(new ImportCertificateAuthorityCertificateRequestPrivate(*other.d_func(), this))
@@ -78,7 +75,7 @@ ImportCertificateAuthorityCertificateRequest::ImportCertificateAuthorityCertific
 }
 
 /*!
- * @brief  Constructs a new ImportCertificateAuthorityCertificateRequest object.
+ * Constructs a ImportCertificateAuthorityCertificateRequest object.
  */
 ImportCertificateAuthorityCertificateRequest::ImportCertificateAuthorityCertificateRequest()
     : ACMPCARequest(new ImportCertificateAuthorityCertificateRequestPrivate(ACMPCARequest::ImportCertificateAuthorityCertificateAction, this))
@@ -96,14 +93,9 @@ bool ImportCertificateAuthorityCertificateRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ImportCertificateAuthorityCertificateResponse object.
+ * Returns a ImportCertificateAuthorityCertificateResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ImportCertificateAuthorityCertificateResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ACMPCAClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ImportCertificateAuthorityCertificateRequest::response(QNetworkReply * const reply) const
 {
@@ -111,20 +103,17 @@ QtAws::Core::AwsAbstractResponse * ImportCertificateAuthorityCertificateRequest:
 }
 
 /*!
- * @internal
+ * \class QtAws::ACMPCA::ImportCertificateAuthorityCertificateRequestPrivate
+ * \brief The ImportCertificateAuthorityCertificateRequestPrivate class provides private implementation for ImportCertificateAuthorityCertificateRequest.
+ * \internal
  *
- * @class  ImportCertificateAuthorityCertificateRequestPrivate
- *
- * @brief  Private implementation for ImportCertificateAuthorityCertificateRequest.
+ * \inmodule QtAwsACMPCA
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ImportCertificateAuthorityCertificateRequestPrivate object.
- *
- * @param  action  ACMPCA action being performed.
- * @param  q       Pointer to this object's public ImportCertificateAuthorityCertificateRequest instance.
+ * Constructs a ImportCertificateAuthorityCertificateRequestPrivate object for ACMPCA \a action with,
+ * public implementation \a q.
  */
 ImportCertificateAuthorityCertificateRequestPrivate::ImportCertificateAuthorityCertificateRequestPrivate(
     const ACMPCARequest::Action action, ImportCertificateAuthorityCertificateRequest * const q)
@@ -134,15 +123,10 @@ ImportCertificateAuthorityCertificateRequestPrivate::ImportCertificateAuthorityC
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ImportCertificateAuthorityCertificateRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ImportCertificateAuthorityCertificateRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ImportCertificateAuthorityCertificateRequest instance.
  */
 ImportCertificateAuthorityCertificateRequestPrivate::ImportCertificateAuthorityCertificateRequestPrivate(
     const ImportCertificateAuthorityCertificateRequestPrivate &other, ImportCertificateAuthorityCertificateRequest * const q)

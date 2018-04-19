@@ -27,10 +27,9 @@ namespace SES {
 
 /*!
  * \class QtAws::SES::DeleteConfigurationSetTrackingOptionsRequest
- *
  * \brief The DeleteConfigurationSetTrackingOptionsRequest class provides an interface for SES DeleteConfigurationSetTrackingOptions requests.
  *
- * \ingroup SES
+ * \inmodule QtAwsSES
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -48,9 +47,7 @@ namespace SES {
  */
 
 /*!
- * @brief  Constructs a new DeleteConfigurationSetTrackingOptionsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteConfigurationSetTrackingOptionsRequest::DeleteConfigurationSetTrackingOptionsRequest(const DeleteConfigurationSetTrackingOptionsRequest &other)
     : SESRequest(new DeleteConfigurationSetTrackingOptionsRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ DeleteConfigurationSetTrackingOptionsRequest::DeleteConfigurationSetTrackingOpti
 }
 
 /*!
- * @brief  Constructs a new DeleteConfigurationSetTrackingOptionsRequest object.
+ * Constructs a DeleteConfigurationSetTrackingOptionsRequest object.
  */
 DeleteConfigurationSetTrackingOptionsRequest::DeleteConfigurationSetTrackingOptionsRequest()
     : SESRequest(new DeleteConfigurationSetTrackingOptionsRequestPrivate(SESRequest::DeleteConfigurationSetTrackingOptionsAction, this))
@@ -77,14 +74,9 @@ bool DeleteConfigurationSetTrackingOptionsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteConfigurationSetTrackingOptionsResponse object.
+ * Returns a DeleteConfigurationSetTrackingOptionsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteConfigurationSetTrackingOptionsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SESClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteConfigurationSetTrackingOptionsRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * DeleteConfigurationSetTrackingOptionsRequest:
 }
 
 /*!
- * @internal
+ * \class QtAws::SES::DeleteConfigurationSetTrackingOptionsRequestPrivate
+ * \brief The DeleteConfigurationSetTrackingOptionsRequestPrivate class provides private implementation for DeleteConfigurationSetTrackingOptionsRequest.
+ * \internal
  *
- * @class  DeleteConfigurationSetTrackingOptionsRequestPrivate
- *
- * @brief  Private implementation for DeleteConfigurationSetTrackingOptionsRequest.
+ * \inmodule QtAwsSES
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteConfigurationSetTrackingOptionsRequestPrivate object.
- *
- * @param  action  SES action being performed.
- * @param  q       Pointer to this object's public DeleteConfigurationSetTrackingOptionsRequest instance.
+ * Constructs a DeleteConfigurationSetTrackingOptionsRequestPrivate object for SES \a action with,
+ * public implementation \a q.
  */
 DeleteConfigurationSetTrackingOptionsRequestPrivate::DeleteConfigurationSetTrackingOptionsRequestPrivate(
     const SESRequest::Action action, DeleteConfigurationSetTrackingOptionsRequest * const q)
@@ -115,15 +104,10 @@ DeleteConfigurationSetTrackingOptionsRequestPrivate::DeleteConfigurationSetTrack
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteConfigurationSetTrackingOptionsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteConfigurationSetTrackingOptionsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteConfigurationSetTrackingOptionsRequest instance.
  */
 DeleteConfigurationSetTrackingOptionsRequestPrivate::DeleteConfigurationSetTrackingOptionsRequestPrivate(
     const DeleteConfigurationSetTrackingOptionsRequestPrivate &other, DeleteConfigurationSetTrackingOptionsRequest * const q)

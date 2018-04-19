@@ -27,10 +27,9 @@ namespace CloudTrail {
 
 /*!
  * \class QtAws::CloudTrail::DeleteTrailRequest
- *
  * \brief The DeleteTrailRequest class provides an interface for CloudTrail DeleteTrail requests.
  *
- * \ingroup CloudTrail
+ * \inmodule QtAwsCloudTrail
  *
  *  <fullname>AWS CloudTrail</fullname>
  * 
@@ -60,9 +59,7 @@ namespace CloudTrail {
  */
 
 /*!
- * @brief  Constructs a new DeleteTrailRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteTrailRequest::DeleteTrailRequest(const DeleteTrailRequest &other)
     : CloudTrailRequest(new DeleteTrailRequestPrivate(*other.d_func(), this))
@@ -71,7 +68,7 @@ DeleteTrailRequest::DeleteTrailRequest(const DeleteTrailRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DeleteTrailRequest object.
+ * Constructs a DeleteTrailRequest object.
  */
 DeleteTrailRequest::DeleteTrailRequest()
     : CloudTrailRequest(new DeleteTrailRequestPrivate(CloudTrailRequest::DeleteTrailAction, this))
@@ -89,14 +86,9 @@ bool DeleteTrailRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteTrailResponse object.
+ * Returns a DeleteTrailResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteTrailResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudTrailClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteTrailRequest::response(QNetworkReply * const reply) const
 {
@@ -104,20 +96,17 @@ QtAws::Core::AwsAbstractResponse * DeleteTrailRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudTrail::DeleteTrailRequestPrivate
+ * \brief The DeleteTrailRequestPrivate class provides private implementation for DeleteTrailRequest.
+ * \internal
  *
- * @class  DeleteTrailRequestPrivate
- *
- * @brief  Private implementation for DeleteTrailRequest.
+ * \inmodule QtAwsCloudTrail
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteTrailRequestPrivate object.
- *
- * @param  action  CloudTrail action being performed.
- * @param  q       Pointer to this object's public DeleteTrailRequest instance.
+ * Constructs a DeleteTrailRequestPrivate object for CloudTrail \a action with,
+ * public implementation \a q.
  */
 DeleteTrailRequestPrivate::DeleteTrailRequestPrivate(
     const CloudTrailRequest::Action action, DeleteTrailRequest * const q)
@@ -127,15 +116,10 @@ DeleteTrailRequestPrivate::DeleteTrailRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteTrailRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteTrailRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteTrailRequest instance.
  */
 DeleteTrailRequestPrivate::DeleteTrailRequestPrivate(
     const DeleteTrailRequestPrivate &other, DeleteTrailRequest * const q)

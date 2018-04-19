@@ -27,10 +27,9 @@ namespace AppStream {
 
 /*!
  * \class QtAws::AppStream::DescribeImagesRequest
- *
  * \brief The DescribeImagesRequest class provides an interface for AppStream DescribeImages requests.
  *
- * \ingroup AppStream
+ * \inmodule QtAwsAppStream
  *
  *  <fullname>Amazon AppStream 2.0</fullname>
  * 
@@ -40,9 +39,7 @@ namespace AppStream {
  */
 
 /*!
- * @brief  Constructs a new DescribeImagesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeImagesRequest::DescribeImagesRequest(const DescribeImagesRequest &other)
     : AppStreamRequest(new DescribeImagesRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ DescribeImagesRequest::DescribeImagesRequest(const DescribeImagesRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DescribeImagesRequest object.
+ * Constructs a DescribeImagesRequest object.
  */
 DescribeImagesRequest::DescribeImagesRequest()
     : AppStreamRequest(new DescribeImagesRequestPrivate(AppStreamRequest::DescribeImagesAction, this))
@@ -69,14 +66,9 @@ bool DescribeImagesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeImagesResponse object.
+ * Returns a DescribeImagesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeImagesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AppStreamClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeImagesRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * DescribeImagesRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::AppStream::DescribeImagesRequestPrivate
+ * \brief The DescribeImagesRequestPrivate class provides private implementation for DescribeImagesRequest.
+ * \internal
  *
- * @class  DescribeImagesRequestPrivate
- *
- * @brief  Private implementation for DescribeImagesRequest.
+ * \inmodule QtAwsAppStream
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeImagesRequestPrivate object.
- *
- * @param  action  AppStream action being performed.
- * @param  q       Pointer to this object's public DescribeImagesRequest instance.
+ * Constructs a DescribeImagesRequestPrivate object for AppStream \a action with,
+ * public implementation \a q.
  */
 DescribeImagesRequestPrivate::DescribeImagesRequestPrivate(
     const AppStreamRequest::Action action, DescribeImagesRequest * const q)
@@ -107,15 +96,10 @@ DescribeImagesRequestPrivate::DescribeImagesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeImagesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeImagesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeImagesRequest instance.
  */
 DescribeImagesRequestPrivate::DescribeImagesRequestPrivate(
     const DescribeImagesRequestPrivate &other, DescribeImagesRequest * const q)

@@ -27,10 +27,9 @@ namespace FMS {
 
 /*!
  * \class QtAws::FMS::PutPolicyRequest
- *
  * \brief The PutPolicyRequest class provides an interface for FMS PutPolicy requests.
  *
- * \ingroup FMS
+ * \inmodule QtAwsFMS
  *
  *  <fullname>AWS Firewall Manager</fullname>
  * 
@@ -43,9 +42,7 @@ namespace FMS {
  */
 
 /*!
- * @brief  Constructs a new PutPolicyRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 PutPolicyRequest::PutPolicyRequest(const PutPolicyRequest &other)
     : FMSRequest(new PutPolicyRequestPrivate(*other.d_func(), this))
@@ -54,7 +51,7 @@ PutPolicyRequest::PutPolicyRequest(const PutPolicyRequest &other)
 }
 
 /*!
- * @brief  Constructs a new PutPolicyRequest object.
+ * Constructs a PutPolicyRequest object.
  */
 PutPolicyRequest::PutPolicyRequest()
     : FMSRequest(new PutPolicyRequestPrivate(FMSRequest::PutPolicyAction, this))
@@ -72,14 +69,9 @@ bool PutPolicyRequest::isValid() const
 
 
 /*!
- * @brief  Construct an PutPolicyResponse object.
+ * Returns a PutPolicyResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An PutPolicyResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  FMSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * PutPolicyRequest::response(QNetworkReply * const reply) const
 {
@@ -87,20 +79,17 @@ QtAws::Core::AwsAbstractResponse * PutPolicyRequest::response(QNetworkReply * co
 }
 
 /*!
- * @internal
+ * \class QtAws::FMS::PutPolicyRequestPrivate
+ * \brief The PutPolicyRequestPrivate class provides private implementation for PutPolicyRequest.
+ * \internal
  *
- * @class  PutPolicyRequestPrivate
- *
- * @brief  Private implementation for PutPolicyRequest.
+ * \inmodule QtAwsFMS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new PutPolicyRequestPrivate object.
- *
- * @param  action  FMS action being performed.
- * @param  q       Pointer to this object's public PutPolicyRequest instance.
+ * Constructs a PutPolicyRequestPrivate object for FMS \a action with,
+ * public implementation \a q.
  */
 PutPolicyRequestPrivate::PutPolicyRequestPrivate(
     const FMSRequest::Action action, PutPolicyRequest * const q)
@@ -110,15 +99,10 @@ PutPolicyRequestPrivate::PutPolicyRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutPolicyRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the PutPolicyRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public PutPolicyRequest instance.
  */
 PutPolicyRequestPrivate::PutPolicyRequestPrivate(
     const PutPolicyRequestPrivate &other, PutPolicyRequest * const q)

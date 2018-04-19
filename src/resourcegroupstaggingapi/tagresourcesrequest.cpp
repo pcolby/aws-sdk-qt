@@ -27,10 +27,9 @@ namespace ResourceGroupsTaggingAPI {
 
 /*!
  * \class QtAws::ResourceGroupsTaggingAPI::TagResourcesRequest
- *
  * \brief The TagResourcesRequest class provides an interface for ResourceGroupsTaggingAPI TagResources requests.
  *
- * \ingroup ResourceGroupsTaggingAPI
+ * \inmodule QtAwsResourceGroupsTaggingAPI
  *
  *  <fullname>Resource Groups Tagging API</fullname>
  * 
@@ -92,9 +91,7 @@ namespace ResourceGroupsTaggingAPI {
  */
 
 /*!
- * @brief  Constructs a new TagResourcesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 TagResourcesRequest::TagResourcesRequest(const TagResourcesRequest &other)
     : ResourceGroupsTaggingAPIRequest(new TagResourcesRequestPrivate(*other.d_func(), this))
@@ -103,7 +100,7 @@ TagResourcesRequest::TagResourcesRequest(const TagResourcesRequest &other)
 }
 
 /*!
- * @brief  Constructs a new TagResourcesRequest object.
+ * Constructs a TagResourcesRequest object.
  */
 TagResourcesRequest::TagResourcesRequest()
     : ResourceGroupsTaggingAPIRequest(new TagResourcesRequestPrivate(ResourceGroupsTaggingAPIRequest::TagResourcesAction, this))
@@ -121,14 +118,9 @@ bool TagResourcesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an TagResourcesResponse object.
+ * Returns a TagResourcesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An TagResourcesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ResourceGroupsTaggingAPIClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * TagResourcesRequest::response(QNetworkReply * const reply) const
 {
@@ -136,20 +128,17 @@ QtAws::Core::AwsAbstractResponse * TagResourcesRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::ResourceGroupsTaggingAPI::TagResourcesRequestPrivate
+ * \brief The TagResourcesRequestPrivate class provides private implementation for TagResourcesRequest.
+ * \internal
  *
- * @class  TagResourcesRequestPrivate
- *
- * @brief  Private implementation for TagResourcesRequest.
+ * \inmodule QtAwsResourceGroupsTaggingAPI
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new TagResourcesRequestPrivate object.
- *
- * @param  action  ResourceGroupsTaggingAPI action being performed.
- * @param  q       Pointer to this object's public TagResourcesRequest instance.
+ * Constructs a TagResourcesRequestPrivate object for ResourceGroupsTaggingAPI \a action with,
+ * public implementation \a q.
  */
 TagResourcesRequestPrivate::TagResourcesRequestPrivate(
     const ResourceGroupsTaggingAPIRequest::Action action, TagResourcesRequest * const q)
@@ -159,15 +148,10 @@ TagResourcesRequestPrivate::TagResourcesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new TagResourcesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the TagResourcesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public TagResourcesRequest instance.
  */
 TagResourcesRequestPrivate::TagResourcesRequestPrivate(
     const TagResourcesRequestPrivate &other, TagResourcesRequest * const q)

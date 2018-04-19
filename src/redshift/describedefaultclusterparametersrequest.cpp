@@ -27,10 +27,9 @@ namespace Redshift {
 
 /*!
  * \class QtAws::Redshift::DescribeDefaultClusterParametersRequest
- *
  * \brief The DescribeDefaultClusterParametersRequest class provides an interface for Redshift DescribeDefaultClusterParameters requests.
  *
- * \ingroup Redshift
+ * \inmodule QtAwsRedshift
  *
  *  <fullname>Amazon Redshift</fullname>
  * 
@@ -67,9 +66,7 @@ namespace Redshift {
  */
 
 /*!
- * @brief  Constructs a new DescribeDefaultClusterParametersRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeDefaultClusterParametersRequest::DescribeDefaultClusterParametersRequest(const DescribeDefaultClusterParametersRequest &other)
     : RedshiftRequest(new DescribeDefaultClusterParametersRequestPrivate(*other.d_func(), this))
@@ -78,7 +75,7 @@ DescribeDefaultClusterParametersRequest::DescribeDefaultClusterParametersRequest
 }
 
 /*!
- * @brief  Constructs a new DescribeDefaultClusterParametersRequest object.
+ * Constructs a DescribeDefaultClusterParametersRequest object.
  */
 DescribeDefaultClusterParametersRequest::DescribeDefaultClusterParametersRequest()
     : RedshiftRequest(new DescribeDefaultClusterParametersRequestPrivate(RedshiftRequest::DescribeDefaultClusterParametersAction, this))
@@ -96,14 +93,9 @@ bool DescribeDefaultClusterParametersRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeDefaultClusterParametersResponse object.
+ * Returns a DescribeDefaultClusterParametersResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeDefaultClusterParametersResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RedshiftClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeDefaultClusterParametersRequest::response(QNetworkReply * const reply) const
 {
@@ -111,20 +103,17 @@ QtAws::Core::AwsAbstractResponse * DescribeDefaultClusterParametersRequest::resp
 }
 
 /*!
- * @internal
+ * \class QtAws::Redshift::DescribeDefaultClusterParametersRequestPrivate
+ * \brief The DescribeDefaultClusterParametersRequestPrivate class provides private implementation for DescribeDefaultClusterParametersRequest.
+ * \internal
  *
- * @class  DescribeDefaultClusterParametersRequestPrivate
- *
- * @brief  Private implementation for DescribeDefaultClusterParametersRequest.
+ * \inmodule QtAwsRedshift
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeDefaultClusterParametersRequestPrivate object.
- *
- * @param  action  Redshift action being performed.
- * @param  q       Pointer to this object's public DescribeDefaultClusterParametersRequest instance.
+ * Constructs a DescribeDefaultClusterParametersRequestPrivate object for Redshift \a action with,
+ * public implementation \a q.
  */
 DescribeDefaultClusterParametersRequestPrivate::DescribeDefaultClusterParametersRequestPrivate(
     const RedshiftRequest::Action action, DescribeDefaultClusterParametersRequest * const q)
@@ -134,15 +123,10 @@ DescribeDefaultClusterParametersRequestPrivate::DescribeDefaultClusterParameters
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeDefaultClusterParametersRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeDefaultClusterParametersRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeDefaultClusterParametersRequest instance.
  */
 DescribeDefaultClusterParametersRequestPrivate::DescribeDefaultClusterParametersRequestPrivate(
     const DescribeDefaultClusterParametersRequestPrivate &other, DescribeDefaultClusterParametersRequest * const q)

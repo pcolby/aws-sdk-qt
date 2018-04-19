@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DescribeVpcsRequest
- *
  * \brief The DescribeVpcsRequest class provides an interface for EC2 DescribeVpcs requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DescribeVpcsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeVpcsRequest::DescribeVpcsRequest(const DescribeVpcsRequest &other)
     : EC2Request(new DescribeVpcsRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ DescribeVpcsRequest::DescribeVpcsRequest(const DescribeVpcsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DescribeVpcsRequest object.
+ * Constructs a DescribeVpcsRequest object.
  */
 DescribeVpcsRequest::DescribeVpcsRequest()
     : EC2Request(new DescribeVpcsRequestPrivate(EC2Request::DescribeVpcsAction, this))
@@ -70,14 +67,9 @@ bool DescribeVpcsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeVpcsResponse object.
+ * Returns a DescribeVpcsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeVpcsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeVpcsRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * DescribeVpcsRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::DescribeVpcsRequestPrivate
+ * \brief The DescribeVpcsRequestPrivate class provides private implementation for DescribeVpcsRequest.
+ * \internal
  *
- * @class  DescribeVpcsRequestPrivate
- *
- * @brief  Private implementation for DescribeVpcsRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeVpcsRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public DescribeVpcsRequest instance.
+ * Constructs a DescribeVpcsRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 DescribeVpcsRequestPrivate::DescribeVpcsRequestPrivate(
     const EC2Request::Action action, DescribeVpcsRequest * const q)
@@ -108,15 +97,10 @@ DescribeVpcsRequestPrivate::DescribeVpcsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeVpcsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeVpcsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeVpcsRequest instance.
  */
 DescribeVpcsRequestPrivate::DescribeVpcsRequestPrivate(
     const DescribeVpcsRequestPrivate &other, DescribeVpcsRequest * const q)

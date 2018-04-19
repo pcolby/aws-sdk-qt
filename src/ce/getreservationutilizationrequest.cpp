@@ -27,10 +27,9 @@ namespace CostExplorer {
 
 /*!
  * \class QtAws::CostExplorer::GetReservationUtilizationRequest
- *
  * \brief The GetReservationUtilizationRequest class provides an interface for CostExplorer GetReservationUtilization requests.
  *
- * \ingroup CostExplorer
+ * \inmodule QtAwsCostExplorer
  *
  *  The Cost Explorer API allows you to programmatically query your cost and usage data. You can query for aggregated data
  *  such as total monthly costs or total daily usage. You can also query for granular data, such as the number of daily
@@ -50,9 +49,7 @@ namespace CostExplorer {
  */
 
 /*!
- * @brief  Constructs a new GetReservationUtilizationRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetReservationUtilizationRequest::GetReservationUtilizationRequest(const GetReservationUtilizationRequest &other)
     : CostExplorerRequest(new GetReservationUtilizationRequestPrivate(*other.d_func(), this))
@@ -61,7 +58,7 @@ GetReservationUtilizationRequest::GetReservationUtilizationRequest(const GetRese
 }
 
 /*!
- * @brief  Constructs a new GetReservationUtilizationRequest object.
+ * Constructs a GetReservationUtilizationRequest object.
  */
 GetReservationUtilizationRequest::GetReservationUtilizationRequest()
     : CostExplorerRequest(new GetReservationUtilizationRequestPrivate(CostExplorerRequest::GetReservationUtilizationAction, this))
@@ -79,14 +76,9 @@ bool GetReservationUtilizationRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetReservationUtilizationResponse object.
+ * Returns a GetReservationUtilizationResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetReservationUtilizationResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CostExplorerClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetReservationUtilizationRequest::response(QNetworkReply * const reply) const
 {
@@ -94,20 +86,17 @@ QtAws::Core::AwsAbstractResponse * GetReservationUtilizationRequest::response(QN
 }
 
 /*!
- * @internal
+ * \class QtAws::CostExplorer::GetReservationUtilizationRequestPrivate
+ * \brief The GetReservationUtilizationRequestPrivate class provides private implementation for GetReservationUtilizationRequest.
+ * \internal
  *
- * @class  GetReservationUtilizationRequestPrivate
- *
- * @brief  Private implementation for GetReservationUtilizationRequest.
+ * \inmodule QtAwsCostExplorer
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetReservationUtilizationRequestPrivate object.
- *
- * @param  action  CostExplorer action being performed.
- * @param  q       Pointer to this object's public GetReservationUtilizationRequest instance.
+ * Constructs a GetReservationUtilizationRequestPrivate object for CostExplorer \a action with,
+ * public implementation \a q.
  */
 GetReservationUtilizationRequestPrivate::GetReservationUtilizationRequestPrivate(
     const CostExplorerRequest::Action action, GetReservationUtilizationRequest * const q)
@@ -117,15 +106,10 @@ GetReservationUtilizationRequestPrivate::GetReservationUtilizationRequestPrivate
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetReservationUtilizationRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetReservationUtilizationRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetReservationUtilizationRequest instance.
  */
 GetReservationUtilizationRequestPrivate::GetReservationUtilizationRequestPrivate(
     const GetReservationUtilizationRequestPrivate &other, GetReservationUtilizationRequest * const q)

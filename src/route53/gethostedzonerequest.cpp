@@ -27,19 +27,16 @@ namespace Route53 {
 
 /*!
  * \class QtAws::Route53::GetHostedZoneRequest
- *
  * \brief The GetHostedZoneRequest class provides an interface for Route53 GetHostedZone requests.
  *
- * \ingroup Route53
+ * \inmodule QtAwsRoute53
  *
  *
  * \sa Route53Client::getHostedZone
  */
 
 /*!
- * @brief  Constructs a new GetHostedZoneRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetHostedZoneRequest::GetHostedZoneRequest(const GetHostedZoneRequest &other)
     : Route53Request(new GetHostedZoneRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ GetHostedZoneRequest::GetHostedZoneRequest(const GetHostedZoneRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetHostedZoneRequest object.
+ * Constructs a GetHostedZoneRequest object.
  */
 GetHostedZoneRequest::GetHostedZoneRequest()
     : Route53Request(new GetHostedZoneRequestPrivate(Route53Request::GetHostedZoneAction, this))
@@ -66,14 +63,9 @@ bool GetHostedZoneRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetHostedZoneResponse object.
+ * Returns a GetHostedZoneResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetHostedZoneResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  Route53Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetHostedZoneRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * GetHostedZoneRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::Route53::GetHostedZoneRequestPrivate
+ * \brief The GetHostedZoneRequestPrivate class provides private implementation for GetHostedZoneRequest.
+ * \internal
  *
- * @class  GetHostedZoneRequestPrivate
- *
- * @brief  Private implementation for GetHostedZoneRequest.
+ * \inmodule QtAwsRoute53
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetHostedZoneRequestPrivate object.
- *
- * @param  action  Route53 action being performed.
- * @param  q       Pointer to this object's public GetHostedZoneRequest instance.
+ * Constructs a GetHostedZoneRequestPrivate object for Route53 \a action with,
+ * public implementation \a q.
  */
 GetHostedZoneRequestPrivate::GetHostedZoneRequestPrivate(
     const Route53Request::Action action, GetHostedZoneRequest * const q)
@@ -104,15 +93,10 @@ GetHostedZoneRequestPrivate::GetHostedZoneRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetHostedZoneRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetHostedZoneRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetHostedZoneRequest instance.
  */
 GetHostedZoneRequestPrivate::GetHostedZoneRequestPrivate(
     const GetHostedZoneRequestPrivate &other, GetHostedZoneRequest * const q)

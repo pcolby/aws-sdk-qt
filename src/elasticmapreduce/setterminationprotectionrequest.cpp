@@ -27,10 +27,9 @@ namespace EMR {
 
 /*!
  * \class QtAws::EMR::SetTerminationProtectionRequest
- *
  * \brief The SetTerminationProtectionRequest class provides an interface for EMR SetTerminationProtection requests.
  *
- * \ingroup EMR
+ * \inmodule QtAwsEMR
  *
  *  Amazon EMR is a web service that makes it easy to process large amounts of data efficiently. Amazon EMR uses Hadoop
  *  processing combined with several AWS products to do tasks such as web indexing, data mining, log file analysis, machine
@@ -40,9 +39,7 @@ namespace EMR {
  */
 
 /*!
- * @brief  Constructs a new SetTerminationProtectionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 SetTerminationProtectionRequest::SetTerminationProtectionRequest(const SetTerminationProtectionRequest &other)
     : EMRRequest(new SetTerminationProtectionRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ SetTerminationProtectionRequest::SetTerminationProtectionRequest(const SetTermin
 }
 
 /*!
- * @brief  Constructs a new SetTerminationProtectionRequest object.
+ * Constructs a SetTerminationProtectionRequest object.
  */
 SetTerminationProtectionRequest::SetTerminationProtectionRequest()
     : EMRRequest(new SetTerminationProtectionRequestPrivate(EMRRequest::SetTerminationProtectionAction, this))
@@ -69,14 +66,9 @@ bool SetTerminationProtectionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an SetTerminationProtectionResponse object.
+ * Returns a SetTerminationProtectionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An SetTerminationProtectionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EMRClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * SetTerminationProtectionRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * SetTerminationProtectionRequest::response(QNe
 }
 
 /*!
- * @internal
+ * \class QtAws::EMR::SetTerminationProtectionRequestPrivate
+ * \brief The SetTerminationProtectionRequestPrivate class provides private implementation for SetTerminationProtectionRequest.
+ * \internal
  *
- * @class  SetTerminationProtectionRequestPrivate
- *
- * @brief  Private implementation for SetTerminationProtectionRequest.
+ * \inmodule QtAwsEMR
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new SetTerminationProtectionRequestPrivate object.
- *
- * @param  action  EMR action being performed.
- * @param  q       Pointer to this object's public SetTerminationProtectionRequest instance.
+ * Constructs a SetTerminationProtectionRequestPrivate object for EMR \a action with,
+ * public implementation \a q.
  */
 SetTerminationProtectionRequestPrivate::SetTerminationProtectionRequestPrivate(
     const EMRRequest::Action action, SetTerminationProtectionRequest * const q)
@@ -107,15 +96,10 @@ SetTerminationProtectionRequestPrivate::SetTerminationProtectionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SetTerminationProtectionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the SetTerminationProtectionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public SetTerminationProtectionRequest instance.
  */
 SetTerminationProtectionRequestPrivate::SetTerminationProtectionRequestPrivate(
     const SetTerminationProtectionRequestPrivate &other, SetTerminationProtectionRequest * const q)

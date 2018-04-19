@@ -27,10 +27,9 @@ namespace WAF {
 
 /*!
  * \class QtAws::WAF::ListRegexPatternSetsRequest
- *
  * \brief The ListRegexPatternSetsRequest class provides an interface for WAF ListRegexPatternSets requests.
  *
- * \ingroup WAF
+ * \inmodule QtAwsWAF
  *
  *  This is the <i>AWS WAF API Reference</i> for using AWS WAF with Amazon CloudFront. The AWS WAF actions and data types
  *  listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data
@@ -42,9 +41,7 @@ namespace WAF {
  */
 
 /*!
- * @brief  Constructs a new ListRegexPatternSetsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListRegexPatternSetsRequest::ListRegexPatternSetsRequest(const ListRegexPatternSetsRequest &other)
     : WAFRequest(new ListRegexPatternSetsRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ ListRegexPatternSetsRequest::ListRegexPatternSetsRequest(const ListRegexPatternS
 }
 
 /*!
- * @brief  Constructs a new ListRegexPatternSetsRequest object.
+ * Constructs a ListRegexPatternSetsRequest object.
  */
 ListRegexPatternSetsRequest::ListRegexPatternSetsRequest()
     : WAFRequest(new ListRegexPatternSetsRequestPrivate(WAFRequest::ListRegexPatternSetsAction, this))
@@ -71,14 +68,9 @@ bool ListRegexPatternSetsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListRegexPatternSetsResponse object.
+ * Returns a ListRegexPatternSetsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListRegexPatternSetsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WAFClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListRegexPatternSetsRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * ListRegexPatternSetsRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::WAF::ListRegexPatternSetsRequestPrivate
+ * \brief The ListRegexPatternSetsRequestPrivate class provides private implementation for ListRegexPatternSetsRequest.
+ * \internal
  *
- * @class  ListRegexPatternSetsRequestPrivate
- *
- * @brief  Private implementation for ListRegexPatternSetsRequest.
+ * \inmodule QtAwsWAF
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListRegexPatternSetsRequestPrivate object.
- *
- * @param  action  WAF action being performed.
- * @param  q       Pointer to this object's public ListRegexPatternSetsRequest instance.
+ * Constructs a ListRegexPatternSetsRequestPrivate object for WAF \a action with,
+ * public implementation \a q.
  */
 ListRegexPatternSetsRequestPrivate::ListRegexPatternSetsRequestPrivate(
     const WAFRequest::Action action, ListRegexPatternSetsRequest * const q)
@@ -109,15 +98,10 @@ ListRegexPatternSetsRequestPrivate::ListRegexPatternSetsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListRegexPatternSetsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListRegexPatternSetsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListRegexPatternSetsRequest instance.
  */
 ListRegexPatternSetsRequestPrivate::ListRegexPatternSetsRequestPrivate(
     const ListRegexPatternSetsRequestPrivate &other, ListRegexPatternSetsRequest * const q)

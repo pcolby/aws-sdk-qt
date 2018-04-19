@@ -27,10 +27,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::ModifyDBSnapshotRequest
- *
  * \brief The ModifyDBSnapshotRequest class provides an interface for RDS ModifyDBSnapshot requests.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -101,9 +100,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new ModifyDBSnapshotRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ModifyDBSnapshotRequest::ModifyDBSnapshotRequest(const ModifyDBSnapshotRequest &other)
     : RDSRequest(new ModifyDBSnapshotRequestPrivate(*other.d_func(), this))
@@ -112,7 +109,7 @@ ModifyDBSnapshotRequest::ModifyDBSnapshotRequest(const ModifyDBSnapshotRequest &
 }
 
 /*!
- * @brief  Constructs a new ModifyDBSnapshotRequest object.
+ * Constructs a ModifyDBSnapshotRequest object.
  */
 ModifyDBSnapshotRequest::ModifyDBSnapshotRequest()
     : RDSRequest(new ModifyDBSnapshotRequestPrivate(RDSRequest::ModifyDBSnapshotAction, this))
@@ -130,14 +127,9 @@ bool ModifyDBSnapshotRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ModifyDBSnapshotResponse object.
+ * Returns a ModifyDBSnapshotResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ModifyDBSnapshotResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RDSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ModifyDBSnapshotRequest::response(QNetworkReply * const reply) const
 {
@@ -145,20 +137,17 @@ QtAws::Core::AwsAbstractResponse * ModifyDBSnapshotRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::RDS::ModifyDBSnapshotRequestPrivate
+ * \brief The ModifyDBSnapshotRequestPrivate class provides private implementation for ModifyDBSnapshotRequest.
+ * \internal
  *
- * @class  ModifyDBSnapshotRequestPrivate
- *
- * @brief  Private implementation for ModifyDBSnapshotRequest.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ModifyDBSnapshotRequestPrivate object.
- *
- * @param  action  RDS action being performed.
- * @param  q       Pointer to this object's public ModifyDBSnapshotRequest instance.
+ * Constructs a ModifyDBSnapshotRequestPrivate object for RDS \a action with,
+ * public implementation \a q.
  */
 ModifyDBSnapshotRequestPrivate::ModifyDBSnapshotRequestPrivate(
     const RDSRequest::Action action, ModifyDBSnapshotRequest * const q)
@@ -168,15 +157,10 @@ ModifyDBSnapshotRequestPrivate::ModifyDBSnapshotRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ModifyDBSnapshotRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ModifyDBSnapshotRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ModifyDBSnapshotRequest instance.
  */
 ModifyDBSnapshotRequestPrivate::ModifyDBSnapshotRequestPrivate(
     const ModifyDBSnapshotRequestPrivate &other, ModifyDBSnapshotRequest * const q)

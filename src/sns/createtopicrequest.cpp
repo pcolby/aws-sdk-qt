@@ -27,10 +27,9 @@ namespace SNS {
 
 /*!
  * \class QtAws::SNS::CreateTopicRequest
- *
  * \brief The CreateTopicRequest class provides an interface for SNS CreateTopic requests.
  *
- * \ingroup SNS
+ * \inmodule QtAwsSNS
  *
  *  <fullname>Amazon Simple Notification Service</fullname>
  * 
@@ -51,9 +50,7 @@ namespace SNS {
  */
 
 /*!
- * @brief  Constructs a new CreateTopicRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateTopicRequest::CreateTopicRequest(const CreateTopicRequest &other)
     : SNSRequest(new CreateTopicRequestPrivate(*other.d_func(), this))
@@ -62,7 +59,7 @@ CreateTopicRequest::CreateTopicRequest(const CreateTopicRequest &other)
 }
 
 /*!
- * @brief  Constructs a new CreateTopicRequest object.
+ * Constructs a CreateTopicRequest object.
  */
 CreateTopicRequest::CreateTopicRequest()
     : SNSRequest(new CreateTopicRequestPrivate(SNSRequest::CreateTopicAction, this))
@@ -80,14 +77,9 @@ bool CreateTopicRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateTopicResponse object.
+ * Returns a CreateTopicResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateTopicResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SNSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateTopicRequest::response(QNetworkReply * const reply) const
 {
@@ -95,20 +87,17 @@ QtAws::Core::AwsAbstractResponse * CreateTopicRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::SNS::CreateTopicRequestPrivate
+ * \brief The CreateTopicRequestPrivate class provides private implementation for CreateTopicRequest.
+ * \internal
  *
- * @class  CreateTopicRequestPrivate
- *
- * @brief  Private implementation for CreateTopicRequest.
+ * \inmodule QtAwsSNS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateTopicRequestPrivate object.
- *
- * @param  action  SNS action being performed.
- * @param  q       Pointer to this object's public CreateTopicRequest instance.
+ * Constructs a CreateTopicRequestPrivate object for SNS \a action with,
+ * public implementation \a q.
  */
 CreateTopicRequestPrivate::CreateTopicRequestPrivate(
     const SNSRequest::Action action, CreateTopicRequest * const q)
@@ -118,15 +107,10 @@ CreateTopicRequestPrivate::CreateTopicRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateTopicRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateTopicRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateTopicRequest instance.
  */
 CreateTopicRequestPrivate::CreateTopicRequestPrivate(
     const CreateTopicRequestPrivate &other, CreateTopicRequest * const q)

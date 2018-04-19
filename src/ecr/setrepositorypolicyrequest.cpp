@@ -27,10 +27,9 @@ namespace ECR {
 
 /*!
  * \class QtAws::ECR::SetRepositoryPolicyRequest
- *
  * \brief The SetRepositoryPolicyRequest class provides an interface for ECR SetRepositoryPolicy requests.
  *
- * \ingroup ECR
+ * \inmodule QtAwsECR
  *
  *  Amazon Elastic Container Registry (Amazon ECR) is a managed Docker registry service. Customers can use the familiar
  *  Docker CLI to push, pull, and manage images. Amazon ECR provides a secure, scalable, and reliable registry. Amazon ECR
@@ -41,9 +40,7 @@ namespace ECR {
  */
 
 /*!
- * @brief  Constructs a new SetRepositoryPolicyRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 SetRepositoryPolicyRequest::SetRepositoryPolicyRequest(const SetRepositoryPolicyRequest &other)
     : ECRRequest(new SetRepositoryPolicyRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ SetRepositoryPolicyRequest::SetRepositoryPolicyRequest(const SetRepositoryPolicy
 }
 
 /*!
- * @brief  Constructs a new SetRepositoryPolicyRequest object.
+ * Constructs a SetRepositoryPolicyRequest object.
  */
 SetRepositoryPolicyRequest::SetRepositoryPolicyRequest()
     : ECRRequest(new SetRepositoryPolicyRequestPrivate(ECRRequest::SetRepositoryPolicyAction, this))
@@ -70,14 +67,9 @@ bool SetRepositoryPolicyRequest::isValid() const
 
 
 /*!
- * @brief  Construct an SetRepositoryPolicyResponse object.
+ * Returns a SetRepositoryPolicyResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An SetRepositoryPolicyResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ECRClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * SetRepositoryPolicyRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * SetRepositoryPolicyRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::ECR::SetRepositoryPolicyRequestPrivate
+ * \brief The SetRepositoryPolicyRequestPrivate class provides private implementation for SetRepositoryPolicyRequest.
+ * \internal
  *
- * @class  SetRepositoryPolicyRequestPrivate
- *
- * @brief  Private implementation for SetRepositoryPolicyRequest.
+ * \inmodule QtAwsECR
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new SetRepositoryPolicyRequestPrivate object.
- *
- * @param  action  ECR action being performed.
- * @param  q       Pointer to this object's public SetRepositoryPolicyRequest instance.
+ * Constructs a SetRepositoryPolicyRequestPrivate object for ECR \a action with,
+ * public implementation \a q.
  */
 SetRepositoryPolicyRequestPrivate::SetRepositoryPolicyRequestPrivate(
     const ECRRequest::Action action, SetRepositoryPolicyRequest * const q)
@@ -108,15 +97,10 @@ SetRepositoryPolicyRequestPrivate::SetRepositoryPolicyRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SetRepositoryPolicyRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the SetRepositoryPolicyRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public SetRepositoryPolicyRequest instance.
  */
 SetRepositoryPolicyRequestPrivate::SetRepositoryPolicyRequestPrivate(
     const SetRepositoryPolicyRequestPrivate &other, SetRepositoryPolicyRequest * const q)

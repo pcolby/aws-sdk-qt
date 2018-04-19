@@ -27,10 +27,9 @@ namespace OpsWorks {
 
 /*!
  * \class QtAws::OpsWorks::GetHostnameSuggestionRequest
- *
  * \brief The GetHostnameSuggestionRequest class provides an interface for OpsWorks GetHostnameSuggestion requests.
  *
- * \ingroup OpsWorks
+ * \inmodule QtAwsOpsWorks
  *
  *  <fullname>AWS OpsWorks</fullname>
  * 
@@ -143,9 +142,7 @@ namespace OpsWorks {
  */
 
 /*!
- * @brief  Constructs a new GetHostnameSuggestionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetHostnameSuggestionRequest::GetHostnameSuggestionRequest(const GetHostnameSuggestionRequest &other)
     : OpsWorksRequest(new GetHostnameSuggestionRequestPrivate(*other.d_func(), this))
@@ -154,7 +151,7 @@ GetHostnameSuggestionRequest::GetHostnameSuggestionRequest(const GetHostnameSugg
 }
 
 /*!
- * @brief  Constructs a new GetHostnameSuggestionRequest object.
+ * Constructs a GetHostnameSuggestionRequest object.
  */
 GetHostnameSuggestionRequest::GetHostnameSuggestionRequest()
     : OpsWorksRequest(new GetHostnameSuggestionRequestPrivate(OpsWorksRequest::GetHostnameSuggestionAction, this))
@@ -172,14 +169,9 @@ bool GetHostnameSuggestionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetHostnameSuggestionResponse object.
+ * Returns a GetHostnameSuggestionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetHostnameSuggestionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  OpsWorksClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetHostnameSuggestionRequest::response(QNetworkReply * const reply) const
 {
@@ -187,20 +179,17 @@ QtAws::Core::AwsAbstractResponse * GetHostnameSuggestionRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::OpsWorks::GetHostnameSuggestionRequestPrivate
+ * \brief The GetHostnameSuggestionRequestPrivate class provides private implementation for GetHostnameSuggestionRequest.
+ * \internal
  *
- * @class  GetHostnameSuggestionRequestPrivate
- *
- * @brief  Private implementation for GetHostnameSuggestionRequest.
+ * \inmodule QtAwsOpsWorks
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetHostnameSuggestionRequestPrivate object.
- *
- * @param  action  OpsWorks action being performed.
- * @param  q       Pointer to this object's public GetHostnameSuggestionRequest instance.
+ * Constructs a GetHostnameSuggestionRequestPrivate object for OpsWorks \a action with,
+ * public implementation \a q.
  */
 GetHostnameSuggestionRequestPrivate::GetHostnameSuggestionRequestPrivate(
     const OpsWorksRequest::Action action, GetHostnameSuggestionRequest * const q)
@@ -210,15 +199,10 @@ GetHostnameSuggestionRequestPrivate::GetHostnameSuggestionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetHostnameSuggestionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetHostnameSuggestionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetHostnameSuggestionRequest instance.
  */
 GetHostnameSuggestionRequestPrivate::GetHostnameSuggestionRequestPrivate(
     const GetHostnameSuggestionRequestPrivate &other, GetHostnameSuggestionRequest * const q)

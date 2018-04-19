@@ -27,10 +27,9 @@ namespace Redshift {
 
 /*!
  * \class QtAws::Redshift::DescribeEventsRequest
- *
  * \brief The DescribeEventsRequest class provides an interface for Redshift DescribeEvents requests.
  *
- * \ingroup Redshift
+ * \inmodule QtAwsRedshift
  *
  *  <fullname>Amazon Redshift</fullname>
  * 
@@ -67,9 +66,7 @@ namespace Redshift {
  */
 
 /*!
- * @brief  Constructs a new DescribeEventsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeEventsRequest::DescribeEventsRequest(const DescribeEventsRequest &other)
     : RedshiftRequest(new DescribeEventsRequestPrivate(*other.d_func(), this))
@@ -78,7 +75,7 @@ DescribeEventsRequest::DescribeEventsRequest(const DescribeEventsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DescribeEventsRequest object.
+ * Constructs a DescribeEventsRequest object.
  */
 DescribeEventsRequest::DescribeEventsRequest()
     : RedshiftRequest(new DescribeEventsRequestPrivate(RedshiftRequest::DescribeEventsAction, this))
@@ -96,14 +93,9 @@ bool DescribeEventsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeEventsResponse object.
+ * Returns a DescribeEventsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeEventsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RedshiftClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeEventsRequest::response(QNetworkReply * const reply) const
 {
@@ -111,20 +103,17 @@ QtAws::Core::AwsAbstractResponse * DescribeEventsRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::Redshift::DescribeEventsRequestPrivate
+ * \brief The DescribeEventsRequestPrivate class provides private implementation for DescribeEventsRequest.
+ * \internal
  *
- * @class  DescribeEventsRequestPrivate
- *
- * @brief  Private implementation for DescribeEventsRequest.
+ * \inmodule QtAwsRedshift
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeEventsRequestPrivate object.
- *
- * @param  action  Redshift action being performed.
- * @param  q       Pointer to this object's public DescribeEventsRequest instance.
+ * Constructs a DescribeEventsRequestPrivate object for Redshift \a action with,
+ * public implementation \a q.
  */
 DescribeEventsRequestPrivate::DescribeEventsRequestPrivate(
     const RedshiftRequest::Action action, DescribeEventsRequest * const q)
@@ -134,15 +123,10 @@ DescribeEventsRequestPrivate::DescribeEventsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeEventsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeEventsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeEventsRequest instance.
  */
 DescribeEventsRequestPrivate::DescribeEventsRequestPrivate(
     const DescribeEventsRequestPrivate &other, DescribeEventsRequest * const q)

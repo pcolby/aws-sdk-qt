@@ -27,10 +27,9 @@ namespace DirectConnect {
 
 /*!
  * \class QtAws::DirectConnect::AllocateConnectionOnInterconnectRequest
- *
  * \brief The AllocateConnectionOnInterconnectRequest class provides an interface for DirectConnect AllocateConnectionOnInterconnect requests.
  *
- * \ingroup DirectConnect
+ * \inmodule QtAwsDirectConnect
  *
  *  AWS Direct Connect links your internal network to an AWS Direct Connect location over a standard 1 gigabit or 10 gigabit
  *  Ethernet fiber-optic cable. One end of the cable is connected to your router, the other to an AWS Direct Connect router.
@@ -45,9 +44,7 @@ namespace DirectConnect {
  */
 
 /*!
- * @brief  Constructs a new AllocateConnectionOnInterconnectRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AllocateConnectionOnInterconnectRequest::AllocateConnectionOnInterconnectRequest(const AllocateConnectionOnInterconnectRequest &other)
     : DirectConnectRequest(new AllocateConnectionOnInterconnectRequestPrivate(*other.d_func(), this))
@@ -56,7 +53,7 @@ AllocateConnectionOnInterconnectRequest::AllocateConnectionOnInterconnectRequest
 }
 
 /*!
- * @brief  Constructs a new AllocateConnectionOnInterconnectRequest object.
+ * Constructs a AllocateConnectionOnInterconnectRequest object.
  */
 AllocateConnectionOnInterconnectRequest::AllocateConnectionOnInterconnectRequest()
     : DirectConnectRequest(new AllocateConnectionOnInterconnectRequestPrivate(DirectConnectRequest::AllocateConnectionOnInterconnectAction, this))
@@ -74,14 +71,9 @@ bool AllocateConnectionOnInterconnectRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AllocateConnectionOnInterconnectResponse object.
+ * Returns a AllocateConnectionOnInterconnectResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AllocateConnectionOnInterconnectResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DirectConnectClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AllocateConnectionOnInterconnectRequest::response(QNetworkReply * const reply) const
 {
@@ -89,20 +81,17 @@ QtAws::Core::AwsAbstractResponse * AllocateConnectionOnInterconnectRequest::resp
 }
 
 /*!
- * @internal
+ * \class QtAws::DirectConnect::AllocateConnectionOnInterconnectRequestPrivate
+ * \brief The AllocateConnectionOnInterconnectRequestPrivate class provides private implementation for AllocateConnectionOnInterconnectRequest.
+ * \internal
  *
- * @class  AllocateConnectionOnInterconnectRequestPrivate
- *
- * @brief  Private implementation for AllocateConnectionOnInterconnectRequest.
+ * \inmodule QtAwsDirectConnect
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AllocateConnectionOnInterconnectRequestPrivate object.
- *
- * @param  action  DirectConnect action being performed.
- * @param  q       Pointer to this object's public AllocateConnectionOnInterconnectRequest instance.
+ * Constructs a AllocateConnectionOnInterconnectRequestPrivate object for DirectConnect \a action with,
+ * public implementation \a q.
  */
 AllocateConnectionOnInterconnectRequestPrivate::AllocateConnectionOnInterconnectRequestPrivate(
     const DirectConnectRequest::Action action, AllocateConnectionOnInterconnectRequest * const q)
@@ -112,15 +101,10 @@ AllocateConnectionOnInterconnectRequestPrivate::AllocateConnectionOnInterconnect
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AllocateConnectionOnInterconnectRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AllocateConnectionOnInterconnectRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AllocateConnectionOnInterconnectRequest instance.
  */
 AllocateConnectionOnInterconnectRequestPrivate::AllocateConnectionOnInterconnectRequestPrivate(
     const AllocateConnectionOnInterconnectRequestPrivate &other, AllocateConnectionOnInterconnectRequest * const q)

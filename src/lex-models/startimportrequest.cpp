@@ -27,10 +27,9 @@ namespace LexModelBuildingService {
 
 /*!
  * \class QtAws::LexModelBuildingService::StartImportRequest
- *
  * \brief The StartImportRequest class provides an interface for LexModelBuildingService StartImport requests.
  *
- * \ingroup LexModelBuildingService
+ * \inmodule QtAwsLexModelBuildingService
  *
  *  <fullname>Amazon Lex Build-Time Actions</fullname>
  * 
@@ -41,9 +40,7 @@ namespace LexModelBuildingService {
  */
 
 /*!
- * @brief  Constructs a new StartImportRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 StartImportRequest::StartImportRequest(const StartImportRequest &other)
     : LexModelBuildingServiceRequest(new StartImportRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ StartImportRequest::StartImportRequest(const StartImportRequest &other)
 }
 
 /*!
- * @brief  Constructs a new StartImportRequest object.
+ * Constructs a StartImportRequest object.
  */
 StartImportRequest::StartImportRequest()
     : LexModelBuildingServiceRequest(new StartImportRequestPrivate(LexModelBuildingServiceRequest::StartImportAction, this))
@@ -70,14 +67,9 @@ bool StartImportRequest::isValid() const
 
 
 /*!
- * @brief  Construct an StartImportResponse object.
+ * Returns a StartImportResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An StartImportResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  LexModelBuildingServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * StartImportRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * StartImportRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::LexModelBuildingService::StartImportRequestPrivate
+ * \brief The StartImportRequestPrivate class provides private implementation for StartImportRequest.
+ * \internal
  *
- * @class  StartImportRequestPrivate
- *
- * @brief  Private implementation for StartImportRequest.
+ * \inmodule QtAwsLexModelBuildingService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new StartImportRequestPrivate object.
- *
- * @param  action  LexModelBuildingService action being performed.
- * @param  q       Pointer to this object's public StartImportRequest instance.
+ * Constructs a StartImportRequestPrivate object for LexModelBuildingService \a action with,
+ * public implementation \a q.
  */
 StartImportRequestPrivate::StartImportRequestPrivate(
     const LexModelBuildingServiceRequest::Action action, StartImportRequest * const q)
@@ -108,15 +97,10 @@ StartImportRequestPrivate::StartImportRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StartImportRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the StartImportRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public StartImportRequest instance.
  */
 StartImportRequestPrivate::StartImportRequestPrivate(
     const StartImportRequestPrivate &other, StartImportRequest * const q)

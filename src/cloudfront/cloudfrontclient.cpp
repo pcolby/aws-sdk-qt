@@ -120,6 +120,9 @@
 /*!
  * \namespace QtAws::CloudFront
  * \brief The QtAws::CloudFront contains stuff...
+ *
+ * \inmodule QtAwsCloudFront
+ *
  * @todo Move this to a separate template file.
  */
 
@@ -174,7 +177,7 @@ CloudFrontClient::CloudFrontClient(
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * \a  AwsEndpoint::getEndpoint()
+ * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
 CloudFrontClient::CloudFrontClient(
     const QUrl &endpoint,

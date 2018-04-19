@@ -27,10 +27,9 @@ namespace ElasticLoadBalancingv2 {
 
 /*!
  * \class QtAws::ElasticLoadBalancingv2::ModifyListenerRequest
- *
  * \brief The ModifyListenerRequest class provides an interface for ElasticLoadBalancingv2 ModifyListener requests.
  *
- * \ingroup ElasticLoadBalancingv2
+ * \inmodule QtAwsElasticLoadBalancingv2
  *
  *  <fullname>Elastic Load Balancing</fullname>
  * 
@@ -105,9 +104,7 @@ namespace ElasticLoadBalancingv2 {
  */
 
 /*!
- * @brief  Constructs a new ModifyListenerRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ModifyListenerRequest::ModifyListenerRequest(const ModifyListenerRequest &other)
     : ElasticLoadBalancingv2Request(new ModifyListenerRequestPrivate(*other.d_func(), this))
@@ -116,7 +113,7 @@ ModifyListenerRequest::ModifyListenerRequest(const ModifyListenerRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ModifyListenerRequest object.
+ * Constructs a ModifyListenerRequest object.
  */
 ModifyListenerRequest::ModifyListenerRequest()
     : ElasticLoadBalancingv2Request(new ModifyListenerRequestPrivate(ElasticLoadBalancingv2Request::ModifyListenerAction, this))
@@ -134,14 +131,9 @@ bool ModifyListenerRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ModifyListenerResponse object.
+ * Returns a ModifyListenerResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ModifyListenerResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ElasticLoadBalancingv2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ModifyListenerRequest::response(QNetworkReply * const reply) const
 {
@@ -149,20 +141,17 @@ QtAws::Core::AwsAbstractResponse * ModifyListenerRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::ElasticLoadBalancingv2::ModifyListenerRequestPrivate
+ * \brief The ModifyListenerRequestPrivate class provides private implementation for ModifyListenerRequest.
+ * \internal
  *
- * @class  ModifyListenerRequestPrivate
- *
- * @brief  Private implementation for ModifyListenerRequest.
+ * \inmodule QtAwsElasticLoadBalancingv2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ModifyListenerRequestPrivate object.
- *
- * @param  action  ElasticLoadBalancingv2 action being performed.
- * @param  q       Pointer to this object's public ModifyListenerRequest instance.
+ * Constructs a ModifyListenerRequestPrivate object for ElasticLoadBalancingv2 \a action with,
+ * public implementation \a q.
  */
 ModifyListenerRequestPrivate::ModifyListenerRequestPrivate(
     const ElasticLoadBalancingv2Request::Action action, ModifyListenerRequest * const q)
@@ -172,15 +161,10 @@ ModifyListenerRequestPrivate::ModifyListenerRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ModifyListenerRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ModifyListenerRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ModifyListenerRequest instance.
  */
 ModifyListenerRequestPrivate::ModifyListenerRequestPrivate(
     const ModifyListenerRequestPrivate &other, ModifyListenerRequest * const q)

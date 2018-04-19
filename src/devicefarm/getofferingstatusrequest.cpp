@@ -27,10 +27,9 @@ namespace DeviceFarm {
 
 /*!
  * \class QtAws::DeviceFarm::GetOfferingStatusRequest
- *
  * \brief The GetOfferingStatusRequest class provides an interface for DeviceFarm GetOfferingStatus requests.
  *
- * \ingroup DeviceFarm
+ * \inmodule QtAwsDeviceFarm
  *
  *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
  *  phones, tablets, and other devices in the
@@ -39,9 +38,7 @@ namespace DeviceFarm {
  */
 
 /*!
- * @brief  Constructs a new GetOfferingStatusRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetOfferingStatusRequest::GetOfferingStatusRequest(const GetOfferingStatusRequest &other)
     : DeviceFarmRequest(new GetOfferingStatusRequestPrivate(*other.d_func(), this))
@@ -50,7 +47,7 @@ GetOfferingStatusRequest::GetOfferingStatusRequest(const GetOfferingStatusReques
 }
 
 /*!
- * @brief  Constructs a new GetOfferingStatusRequest object.
+ * Constructs a GetOfferingStatusRequest object.
  */
 GetOfferingStatusRequest::GetOfferingStatusRequest()
     : DeviceFarmRequest(new GetOfferingStatusRequestPrivate(DeviceFarmRequest::GetOfferingStatusAction, this))
@@ -68,14 +65,9 @@ bool GetOfferingStatusRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetOfferingStatusResponse object.
+ * Returns a GetOfferingStatusResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetOfferingStatusResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DeviceFarmClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetOfferingStatusRequest::response(QNetworkReply * const reply) const
 {
@@ -83,20 +75,17 @@ QtAws::Core::AwsAbstractResponse * GetOfferingStatusRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::DeviceFarm::GetOfferingStatusRequestPrivate
+ * \brief The GetOfferingStatusRequestPrivate class provides private implementation for GetOfferingStatusRequest.
+ * \internal
  *
- * @class  GetOfferingStatusRequestPrivate
- *
- * @brief  Private implementation for GetOfferingStatusRequest.
+ * \inmodule QtAwsDeviceFarm
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetOfferingStatusRequestPrivate object.
- *
- * @param  action  DeviceFarm action being performed.
- * @param  q       Pointer to this object's public GetOfferingStatusRequest instance.
+ * Constructs a GetOfferingStatusRequestPrivate object for DeviceFarm \a action with,
+ * public implementation \a q.
  */
 GetOfferingStatusRequestPrivate::GetOfferingStatusRequestPrivate(
     const DeviceFarmRequest::Action action, GetOfferingStatusRequest * const q)
@@ -106,15 +95,10 @@ GetOfferingStatusRequestPrivate::GetOfferingStatusRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetOfferingStatusRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetOfferingStatusRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetOfferingStatusRequest instance.
  */
 GetOfferingStatusRequestPrivate::GetOfferingStatusRequestPrivate(
     const GetOfferingStatusRequestPrivate &other, GetOfferingStatusRequest * const q)

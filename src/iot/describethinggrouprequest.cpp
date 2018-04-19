@@ -27,10 +27,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::DescribeThingGroupRequest
- *
  * \brief The DescribeThingGroupRequest class provides an interface for IoT DescribeThingGroup requests.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -48,9 +47,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new DescribeThingGroupRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeThingGroupRequest::DescribeThingGroupRequest(const DescribeThingGroupRequest &other)
     : IoTRequest(new DescribeThingGroupRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ DescribeThingGroupRequest::DescribeThingGroupRequest(const DescribeThingGroupReq
 }
 
 /*!
- * @brief  Constructs a new DescribeThingGroupRequest object.
+ * Constructs a DescribeThingGroupRequest object.
  */
 DescribeThingGroupRequest::DescribeThingGroupRequest()
     : IoTRequest(new DescribeThingGroupRequestPrivate(IoTRequest::DescribeThingGroupAction, this))
@@ -77,14 +74,9 @@ bool DescribeThingGroupRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeThingGroupResponse object.
+ * Returns a DescribeThingGroupResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeThingGroupResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IoTClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeThingGroupRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * DescribeThingGroupRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::IoT::DescribeThingGroupRequestPrivate
+ * \brief The DescribeThingGroupRequestPrivate class provides private implementation for DescribeThingGroupRequest.
+ * \internal
  *
- * @class  DescribeThingGroupRequestPrivate
- *
- * @brief  Private implementation for DescribeThingGroupRequest.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeThingGroupRequestPrivate object.
- *
- * @param  action  IoT action being performed.
- * @param  q       Pointer to this object's public DescribeThingGroupRequest instance.
+ * Constructs a DescribeThingGroupRequestPrivate object for IoT \a action with,
+ * public implementation \a q.
  */
 DescribeThingGroupRequestPrivate::DescribeThingGroupRequestPrivate(
     const IoTRequest::Action action, DescribeThingGroupRequest * const q)
@@ -115,15 +104,10 @@ DescribeThingGroupRequestPrivate::DescribeThingGroupRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeThingGroupRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeThingGroupRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeThingGroupRequest instance.
  */
 DescribeThingGroupRequestPrivate::DescribeThingGroupRequestPrivate(
     const DescribeThingGroupRequestPrivate &other, DescribeThingGroupRequest * const q)

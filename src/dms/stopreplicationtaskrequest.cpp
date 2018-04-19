@@ -27,10 +27,9 @@ namespace DatabaseMigrationService {
 
 /*!
  * \class QtAws::DatabaseMigrationService::StopReplicationTaskRequest
- *
  * \brief The StopReplicationTaskRequest class provides an interface for DatabaseMigrationService StopReplicationTask requests.
  *
- * \ingroup DatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigrationService
  *
  *  <fullname>AWS Database Migration Service</fullname>
  * 
@@ -48,9 +47,7 @@ namespace DatabaseMigrationService {
  */
 
 /*!
- * @brief  Constructs a new StopReplicationTaskRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 StopReplicationTaskRequest::StopReplicationTaskRequest(const StopReplicationTaskRequest &other)
     : DatabaseMigrationServiceRequest(new StopReplicationTaskRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ StopReplicationTaskRequest::StopReplicationTaskRequest(const StopReplicationTask
 }
 
 /*!
- * @brief  Constructs a new StopReplicationTaskRequest object.
+ * Constructs a StopReplicationTaskRequest object.
  */
 StopReplicationTaskRequest::StopReplicationTaskRequest()
     : DatabaseMigrationServiceRequest(new StopReplicationTaskRequestPrivate(DatabaseMigrationServiceRequest::StopReplicationTaskAction, this))
@@ -77,14 +74,9 @@ bool StopReplicationTaskRequest::isValid() const
 
 
 /*!
- * @brief  Construct an StopReplicationTaskResponse object.
+ * Returns a StopReplicationTaskResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An StopReplicationTaskResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DatabaseMigrationServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * StopReplicationTaskRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * StopReplicationTaskRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::DatabaseMigrationService::StopReplicationTaskRequestPrivate
+ * \brief The StopReplicationTaskRequestPrivate class provides private implementation for StopReplicationTaskRequest.
+ * \internal
  *
- * @class  StopReplicationTaskRequestPrivate
- *
- * @brief  Private implementation for StopReplicationTaskRequest.
+ * \inmodule QtAwsDatabaseMigrationService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new StopReplicationTaskRequestPrivate object.
- *
- * @param  action  DatabaseMigrationService action being performed.
- * @param  q       Pointer to this object's public StopReplicationTaskRequest instance.
+ * Constructs a StopReplicationTaskRequestPrivate object for DatabaseMigrationService \a action with,
+ * public implementation \a q.
  */
 StopReplicationTaskRequestPrivate::StopReplicationTaskRequestPrivate(
     const DatabaseMigrationServiceRequest::Action action, StopReplicationTaskRequest * const q)
@@ -115,15 +104,10 @@ StopReplicationTaskRequestPrivate::StopReplicationTaskRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StopReplicationTaskRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the StopReplicationTaskRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public StopReplicationTaskRequest instance.
  */
 StopReplicationTaskRequestPrivate::StopReplicationTaskRequestPrivate(
     const StopReplicationTaskRequestPrivate &other, StopReplicationTaskRequest * const q)

@@ -27,10 +27,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::DescribeInstanceInformationRequest
- *
  * \brief The DescribeInstanceInformationRequest class provides an interface for SSM DescribeInstanceInformation requests.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -61,9 +60,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new DescribeInstanceInformationRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeInstanceInformationRequest::DescribeInstanceInformationRequest(const DescribeInstanceInformationRequest &other)
     : SSMRequest(new DescribeInstanceInformationRequestPrivate(*other.d_func(), this))
@@ -72,7 +69,7 @@ DescribeInstanceInformationRequest::DescribeInstanceInformationRequest(const Des
 }
 
 /*!
- * @brief  Constructs a new DescribeInstanceInformationRequest object.
+ * Constructs a DescribeInstanceInformationRequest object.
  */
 DescribeInstanceInformationRequest::DescribeInstanceInformationRequest()
     : SSMRequest(new DescribeInstanceInformationRequestPrivate(SSMRequest::DescribeInstanceInformationAction, this))
@@ -90,14 +87,9 @@ bool DescribeInstanceInformationRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeInstanceInformationResponse object.
+ * Returns a DescribeInstanceInformationResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeInstanceInformationResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SSMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeInstanceInformationRequest::response(QNetworkReply * const reply) const
 {
@@ -105,20 +97,17 @@ QtAws::Core::AwsAbstractResponse * DescribeInstanceInformationRequest::response(
 }
 
 /*!
- * @internal
+ * \class QtAws::SSM::DescribeInstanceInformationRequestPrivate
+ * \brief The DescribeInstanceInformationRequestPrivate class provides private implementation for DescribeInstanceInformationRequest.
+ * \internal
  *
- * @class  DescribeInstanceInformationRequestPrivate
- *
- * @brief  Private implementation for DescribeInstanceInformationRequest.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeInstanceInformationRequestPrivate object.
- *
- * @param  action  SSM action being performed.
- * @param  q       Pointer to this object's public DescribeInstanceInformationRequest instance.
+ * Constructs a DescribeInstanceInformationRequestPrivate object for SSM \a action with,
+ * public implementation \a q.
  */
 DescribeInstanceInformationRequestPrivate::DescribeInstanceInformationRequestPrivate(
     const SSMRequest::Action action, DescribeInstanceInformationRequest * const q)
@@ -128,15 +117,10 @@ DescribeInstanceInformationRequestPrivate::DescribeInstanceInformationRequestPri
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeInstanceInformationRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeInstanceInformationRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeInstanceInformationRequest instance.
  */
 DescribeInstanceInformationRequestPrivate::DescribeInstanceInformationRequestPrivate(
     const DescribeInstanceInformationRequestPrivate &other, DescribeInstanceInformationRequest * const q)

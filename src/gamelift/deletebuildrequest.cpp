@@ -27,10 +27,9 @@ namespace GameLift {
 
 /*!
  * \class QtAws::GameLift::DeleteBuildRequest
- *
  * \brief The DeleteBuildRequest class provides an interface for GameLift DeleteBuild requests.
  *
- * \ingroup GameLift
+ * \inmodule QtAwsGameLift
  *
  *  <fullname>Amazon GameLift Service</fullname>
  * 
@@ -473,9 +472,7 @@ namespace GameLift {
  */
 
 /*!
- * @brief  Constructs a new DeleteBuildRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteBuildRequest::DeleteBuildRequest(const DeleteBuildRequest &other)
     : GameLiftRequest(new DeleteBuildRequestPrivate(*other.d_func(), this))
@@ -484,7 +481,7 @@ DeleteBuildRequest::DeleteBuildRequest(const DeleteBuildRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DeleteBuildRequest object.
+ * Constructs a DeleteBuildRequest object.
  */
 DeleteBuildRequest::DeleteBuildRequest()
     : GameLiftRequest(new DeleteBuildRequestPrivate(GameLiftRequest::DeleteBuildAction, this))
@@ -502,14 +499,9 @@ bool DeleteBuildRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteBuildResponse object.
+ * Returns a DeleteBuildResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteBuildResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GameLiftClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteBuildRequest::response(QNetworkReply * const reply) const
 {
@@ -517,20 +509,17 @@ QtAws::Core::AwsAbstractResponse * DeleteBuildRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::GameLift::DeleteBuildRequestPrivate
+ * \brief The DeleteBuildRequestPrivate class provides private implementation for DeleteBuildRequest.
+ * \internal
  *
- * @class  DeleteBuildRequestPrivate
- *
- * @brief  Private implementation for DeleteBuildRequest.
+ * \inmodule QtAwsGameLift
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteBuildRequestPrivate object.
- *
- * @param  action  GameLift action being performed.
- * @param  q       Pointer to this object's public DeleteBuildRequest instance.
+ * Constructs a DeleteBuildRequestPrivate object for GameLift \a action with,
+ * public implementation \a q.
  */
 DeleteBuildRequestPrivate::DeleteBuildRequestPrivate(
     const GameLiftRequest::Action action, DeleteBuildRequest * const q)
@@ -540,15 +529,10 @@ DeleteBuildRequestPrivate::DeleteBuildRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteBuildRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteBuildRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteBuildRequest instance.
  */
 DeleteBuildRequestPrivate::DeleteBuildRequestPrivate(
     const DeleteBuildRequestPrivate &other, DeleteBuildRequest * const q)

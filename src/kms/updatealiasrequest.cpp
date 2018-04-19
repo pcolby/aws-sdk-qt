@@ -27,10 +27,9 @@ namespace KMS {
 
 /*!
  * \class QtAws::KMS::UpdateAliasRequest
- *
  * \brief The UpdateAliasRequest class provides an interface for KMS UpdateAlias requests.
  *
- * \ingroup KMS
+ * \inmodule QtAwsKMS
  *
  *  <fullname>AWS Key Management Service</fullname>
  * 
@@ -136,9 +135,7 @@ namespace KMS {
  */
 
 /*!
- * @brief  Constructs a new UpdateAliasRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateAliasRequest::UpdateAliasRequest(const UpdateAliasRequest &other)
     : KMSRequest(new UpdateAliasRequestPrivate(*other.d_func(), this))
@@ -147,7 +144,7 @@ UpdateAliasRequest::UpdateAliasRequest(const UpdateAliasRequest &other)
 }
 
 /*!
- * @brief  Constructs a new UpdateAliasRequest object.
+ * Constructs a UpdateAliasRequest object.
  */
 UpdateAliasRequest::UpdateAliasRequest()
     : KMSRequest(new UpdateAliasRequestPrivate(KMSRequest::UpdateAliasAction, this))
@@ -165,14 +162,9 @@ bool UpdateAliasRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateAliasResponse object.
+ * Returns a UpdateAliasResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateAliasResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  KMSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateAliasRequest::response(QNetworkReply * const reply) const
 {
@@ -180,20 +172,17 @@ QtAws::Core::AwsAbstractResponse * UpdateAliasRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::KMS::UpdateAliasRequestPrivate
+ * \brief The UpdateAliasRequestPrivate class provides private implementation for UpdateAliasRequest.
+ * \internal
  *
- * @class  UpdateAliasRequestPrivate
- *
- * @brief  Private implementation for UpdateAliasRequest.
+ * \inmodule QtAwsKMS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateAliasRequestPrivate object.
- *
- * @param  action  KMS action being performed.
- * @param  q       Pointer to this object's public UpdateAliasRequest instance.
+ * Constructs a UpdateAliasRequestPrivate object for KMS \a action with,
+ * public implementation \a q.
  */
 UpdateAliasRequestPrivate::UpdateAliasRequestPrivate(
     const KMSRequest::Action action, UpdateAliasRequest * const q)
@@ -203,15 +192,10 @@ UpdateAliasRequestPrivate::UpdateAliasRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateAliasRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateAliasRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateAliasRequest instance.
  */
 UpdateAliasRequestPrivate::UpdateAliasRequestPrivate(
     const UpdateAliasRequestPrivate &other, UpdateAliasRequest * const q)

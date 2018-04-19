@@ -27,10 +27,9 @@ namespace Glue {
 
 /*!
  * \class QtAws::Glue::DeleteTableRequest
- *
  * \brief The DeleteTableRequest class provides an interface for Glue DeleteTable requests.
  *
- * \ingroup Glue
+ * \inmodule QtAwsGlue
  *
  *  <fullname>AWS Glue</fullname>
  * 
@@ -40,9 +39,7 @@ namespace Glue {
  */
 
 /*!
- * @brief  Constructs a new DeleteTableRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteTableRequest::DeleteTableRequest(const DeleteTableRequest &other)
     : GlueRequest(new DeleteTableRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ DeleteTableRequest::DeleteTableRequest(const DeleteTableRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DeleteTableRequest object.
+ * Constructs a DeleteTableRequest object.
  */
 DeleteTableRequest::DeleteTableRequest()
     : GlueRequest(new DeleteTableRequestPrivate(GlueRequest::DeleteTableAction, this))
@@ -69,14 +66,9 @@ bool DeleteTableRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteTableResponse object.
+ * Returns a DeleteTableResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteTableResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GlueClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteTableRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * DeleteTableRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::Glue::DeleteTableRequestPrivate
+ * \brief The DeleteTableRequestPrivate class provides private implementation for DeleteTableRequest.
+ * \internal
  *
- * @class  DeleteTableRequestPrivate
- *
- * @brief  Private implementation for DeleteTableRequest.
+ * \inmodule QtAwsGlue
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteTableRequestPrivate object.
- *
- * @param  action  Glue action being performed.
- * @param  q       Pointer to this object's public DeleteTableRequest instance.
+ * Constructs a DeleteTableRequestPrivate object for Glue \a action with,
+ * public implementation \a q.
  */
 DeleteTableRequestPrivate::DeleteTableRequestPrivate(
     const GlueRequest::Action action, DeleteTableRequest * const q)
@@ -107,15 +96,10 @@ DeleteTableRequestPrivate::DeleteTableRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteTableRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteTableRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteTableRequest instance.
  */
 DeleteTableRequestPrivate::DeleteTableRequestPrivate(
     const DeleteTableRequestPrivate &other, DeleteTableRequest * const q)

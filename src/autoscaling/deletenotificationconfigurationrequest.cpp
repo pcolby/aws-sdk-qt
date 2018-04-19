@@ -27,10 +27,9 @@ namespace AutoScaling {
 
 /*!
  * \class QtAws::AutoScaling::DeleteNotificationConfigurationRequest
- *
  * \brief The DeleteNotificationConfigurationRequest class provides an interface for AutoScaling DeleteNotificationConfiguration requests.
  *
- * \ingroup AutoScaling
+ * \inmodule QtAwsAutoScaling
  *
  *  <fullname>Amazon EC2 Auto Scaling</fullname>
  * 
@@ -42,9 +41,7 @@ namespace AutoScaling {
  */
 
 /*!
- * @brief  Constructs a new DeleteNotificationConfigurationRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteNotificationConfigurationRequest::DeleteNotificationConfigurationRequest(const DeleteNotificationConfigurationRequest &other)
     : AutoScalingRequest(new DeleteNotificationConfigurationRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ DeleteNotificationConfigurationRequest::DeleteNotificationConfigurationRequest(c
 }
 
 /*!
- * @brief  Constructs a new DeleteNotificationConfigurationRequest object.
+ * Constructs a DeleteNotificationConfigurationRequest object.
  */
 DeleteNotificationConfigurationRequest::DeleteNotificationConfigurationRequest()
     : AutoScalingRequest(new DeleteNotificationConfigurationRequestPrivate(AutoScalingRequest::DeleteNotificationConfigurationAction, this))
@@ -71,14 +68,9 @@ bool DeleteNotificationConfigurationRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteNotificationConfigurationResponse object.
+ * Returns a DeleteNotificationConfigurationResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteNotificationConfigurationResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AutoScalingClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteNotificationConfigurationRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * DeleteNotificationConfigurationRequest::respo
 }
 
 /*!
- * @internal
+ * \class QtAws::AutoScaling::DeleteNotificationConfigurationRequestPrivate
+ * \brief The DeleteNotificationConfigurationRequestPrivate class provides private implementation for DeleteNotificationConfigurationRequest.
+ * \internal
  *
- * @class  DeleteNotificationConfigurationRequestPrivate
- *
- * @brief  Private implementation for DeleteNotificationConfigurationRequest.
+ * \inmodule QtAwsAutoScaling
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteNotificationConfigurationRequestPrivate object.
- *
- * @param  action  AutoScaling action being performed.
- * @param  q       Pointer to this object's public DeleteNotificationConfigurationRequest instance.
+ * Constructs a DeleteNotificationConfigurationRequestPrivate object for AutoScaling \a action with,
+ * public implementation \a q.
  */
 DeleteNotificationConfigurationRequestPrivate::DeleteNotificationConfigurationRequestPrivate(
     const AutoScalingRequest::Action action, DeleteNotificationConfigurationRequest * const q)
@@ -109,15 +98,10 @@ DeleteNotificationConfigurationRequestPrivate::DeleteNotificationConfigurationRe
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteNotificationConfigurationRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteNotificationConfigurationRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteNotificationConfigurationRequest instance.
  */
 DeleteNotificationConfigurationRequestPrivate::DeleteNotificationConfigurationRequestPrivate(
     const DeleteNotificationConfigurationRequestPrivate &other, DeleteNotificationConfigurationRequest * const q)

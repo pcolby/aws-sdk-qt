@@ -27,10 +27,9 @@ namespace KMS {
 
 /*!
  * \class QtAws::KMS::ListGrantsRequest
- *
  * \brief The ListGrantsRequest class provides an interface for KMS ListGrants requests.
  *
- * \ingroup KMS
+ * \inmodule QtAwsKMS
  *
  *  <fullname>AWS Key Management Service</fullname>
  * 
@@ -136,9 +135,7 @@ namespace KMS {
  */
 
 /*!
- * @brief  Constructs a new ListGrantsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListGrantsRequest::ListGrantsRequest(const ListGrantsRequest &other)
     : KMSRequest(new ListGrantsRequestPrivate(*other.d_func(), this))
@@ -147,7 +144,7 @@ ListGrantsRequest::ListGrantsRequest(const ListGrantsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ListGrantsRequest object.
+ * Constructs a ListGrantsRequest object.
  */
 ListGrantsRequest::ListGrantsRequest()
     : KMSRequest(new ListGrantsRequestPrivate(KMSRequest::ListGrantsAction, this))
@@ -165,14 +162,9 @@ bool ListGrantsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListGrantsResponse object.
+ * Returns a ListGrantsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListGrantsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  KMSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListGrantsRequest::response(QNetworkReply * const reply) const
 {
@@ -180,20 +172,17 @@ QtAws::Core::AwsAbstractResponse * ListGrantsRequest::response(QNetworkReply * c
 }
 
 /*!
- * @internal
+ * \class QtAws::KMS::ListGrantsRequestPrivate
+ * \brief The ListGrantsRequestPrivate class provides private implementation for ListGrantsRequest.
+ * \internal
  *
- * @class  ListGrantsRequestPrivate
- *
- * @brief  Private implementation for ListGrantsRequest.
+ * \inmodule QtAwsKMS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListGrantsRequestPrivate object.
- *
- * @param  action  KMS action being performed.
- * @param  q       Pointer to this object's public ListGrantsRequest instance.
+ * Constructs a ListGrantsRequestPrivate object for KMS \a action with,
+ * public implementation \a q.
  */
 ListGrantsRequestPrivate::ListGrantsRequestPrivate(
     const KMSRequest::Action action, ListGrantsRequest * const q)
@@ -203,15 +192,10 @@ ListGrantsRequestPrivate::ListGrantsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListGrantsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListGrantsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListGrantsRequest instance.
  */
 ListGrantsRequestPrivate::ListGrantsRequestPrivate(
     const ListGrantsRequestPrivate &other, ListGrantsRequest * const q)

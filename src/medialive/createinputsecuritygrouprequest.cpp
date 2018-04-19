@@ -27,19 +27,16 @@ namespace MediaLive {
 
 /*!
  * \class QtAws::MediaLive::CreateInputSecurityGroupRequest
- *
  * \brief The CreateInputSecurityGroupRequest class provides an interface for MediaLive CreateInputSecurityGroup requests.
  *
- * \ingroup MediaLive
+ * \inmodule QtAwsMediaLive
  *
  *
  * \sa MediaLiveClient::createInputSecurityGroup
  */
 
 /*!
- * @brief  Constructs a new CreateInputSecurityGroupRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateInputSecurityGroupRequest::CreateInputSecurityGroupRequest(const CreateInputSecurityGroupRequest &other)
     : MediaLiveRequest(new CreateInputSecurityGroupRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ CreateInputSecurityGroupRequest::CreateInputSecurityGroupRequest(const CreateInp
 }
 
 /*!
- * @brief  Constructs a new CreateInputSecurityGroupRequest object.
+ * Constructs a CreateInputSecurityGroupRequest object.
  */
 CreateInputSecurityGroupRequest::CreateInputSecurityGroupRequest()
     : MediaLiveRequest(new CreateInputSecurityGroupRequestPrivate(MediaLiveRequest::CreateInputSecurityGroupAction, this))
@@ -66,14 +63,9 @@ bool CreateInputSecurityGroupRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateInputSecurityGroupResponse object.
+ * Returns a CreateInputSecurityGroupResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateInputSecurityGroupResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MediaLiveClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateInputSecurityGroupRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * CreateInputSecurityGroupRequest::response(QNe
 }
 
 /*!
- * @internal
+ * \class QtAws::MediaLive::CreateInputSecurityGroupRequestPrivate
+ * \brief The CreateInputSecurityGroupRequestPrivate class provides private implementation for CreateInputSecurityGroupRequest.
+ * \internal
  *
- * @class  CreateInputSecurityGroupRequestPrivate
- *
- * @brief  Private implementation for CreateInputSecurityGroupRequest.
+ * \inmodule QtAwsMediaLive
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateInputSecurityGroupRequestPrivate object.
- *
- * @param  action  MediaLive action being performed.
- * @param  q       Pointer to this object's public CreateInputSecurityGroupRequest instance.
+ * Constructs a CreateInputSecurityGroupRequestPrivate object for MediaLive \a action with,
+ * public implementation \a q.
  */
 CreateInputSecurityGroupRequestPrivate::CreateInputSecurityGroupRequestPrivate(
     const MediaLiveRequest::Action action, CreateInputSecurityGroupRequest * const q)
@@ -104,15 +93,10 @@ CreateInputSecurityGroupRequestPrivate::CreateInputSecurityGroupRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateInputSecurityGroupRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateInputSecurityGroupRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateInputSecurityGroupRequest instance.
  */
 CreateInputSecurityGroupRequestPrivate::CreateInputSecurityGroupRequestPrivate(
     const CreateInputSecurityGroupRequestPrivate &other, CreateInputSecurityGroupRequest * const q)

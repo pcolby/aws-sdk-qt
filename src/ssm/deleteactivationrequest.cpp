@@ -27,10 +27,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::DeleteActivationRequest
- *
  * \brief The DeleteActivationRequest class provides an interface for SSM DeleteActivation requests.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -61,9 +60,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new DeleteActivationRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteActivationRequest::DeleteActivationRequest(const DeleteActivationRequest &other)
     : SSMRequest(new DeleteActivationRequestPrivate(*other.d_func(), this))
@@ -72,7 +69,7 @@ DeleteActivationRequest::DeleteActivationRequest(const DeleteActivationRequest &
 }
 
 /*!
- * @brief  Constructs a new DeleteActivationRequest object.
+ * Constructs a DeleteActivationRequest object.
  */
 DeleteActivationRequest::DeleteActivationRequest()
     : SSMRequest(new DeleteActivationRequestPrivate(SSMRequest::DeleteActivationAction, this))
@@ -90,14 +87,9 @@ bool DeleteActivationRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteActivationResponse object.
+ * Returns a DeleteActivationResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteActivationResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SSMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteActivationRequest::response(QNetworkReply * const reply) const
 {
@@ -105,20 +97,17 @@ QtAws::Core::AwsAbstractResponse * DeleteActivationRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::SSM::DeleteActivationRequestPrivate
+ * \brief The DeleteActivationRequestPrivate class provides private implementation for DeleteActivationRequest.
+ * \internal
  *
- * @class  DeleteActivationRequestPrivate
- *
- * @brief  Private implementation for DeleteActivationRequest.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteActivationRequestPrivate object.
- *
- * @param  action  SSM action being performed.
- * @param  q       Pointer to this object's public DeleteActivationRequest instance.
+ * Constructs a DeleteActivationRequestPrivate object for SSM \a action with,
+ * public implementation \a q.
  */
 DeleteActivationRequestPrivate::DeleteActivationRequestPrivate(
     const SSMRequest::Action action, DeleteActivationRequest * const q)
@@ -128,15 +117,10 @@ DeleteActivationRequestPrivate::DeleteActivationRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteActivationRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteActivationRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteActivationRequest instance.
  */
 DeleteActivationRequestPrivate::DeleteActivationRequestPrivate(
     const DeleteActivationRequestPrivate &other, DeleteActivationRequest * const q)

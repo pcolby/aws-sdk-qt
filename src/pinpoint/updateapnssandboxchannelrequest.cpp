@@ -27,19 +27,16 @@ namespace Pinpoint {
 
 /*!
  * \class QtAws::Pinpoint::UpdateApnsSandboxChannelRequest
- *
  * \brief The UpdateApnsSandboxChannelRequest class provides an interface for Pinpoint UpdateApnsSandboxChannel requests.
  *
- * \ingroup Pinpoint
+ * \inmodule QtAwsPinpoint
  *
  *
  * \sa PinpointClient::updateApnsSandboxChannel
  */
 
 /*!
- * @brief  Constructs a new UpdateApnsSandboxChannelRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateApnsSandboxChannelRequest::UpdateApnsSandboxChannelRequest(const UpdateApnsSandboxChannelRequest &other)
     : PinpointRequest(new UpdateApnsSandboxChannelRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ UpdateApnsSandboxChannelRequest::UpdateApnsSandboxChannelRequest(const UpdateApn
 }
 
 /*!
- * @brief  Constructs a new UpdateApnsSandboxChannelRequest object.
+ * Constructs a UpdateApnsSandboxChannelRequest object.
  */
 UpdateApnsSandboxChannelRequest::UpdateApnsSandboxChannelRequest()
     : PinpointRequest(new UpdateApnsSandboxChannelRequestPrivate(PinpointRequest::UpdateApnsSandboxChannelAction, this))
@@ -66,14 +63,9 @@ bool UpdateApnsSandboxChannelRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateApnsSandboxChannelResponse object.
+ * Returns a UpdateApnsSandboxChannelResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateApnsSandboxChannelResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  PinpointClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateApnsSandboxChannelRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * UpdateApnsSandboxChannelRequest::response(QNe
 }
 
 /*!
- * @internal
+ * \class QtAws::Pinpoint::UpdateApnsSandboxChannelRequestPrivate
+ * \brief The UpdateApnsSandboxChannelRequestPrivate class provides private implementation for UpdateApnsSandboxChannelRequest.
+ * \internal
  *
- * @class  UpdateApnsSandboxChannelRequestPrivate
- *
- * @brief  Private implementation for UpdateApnsSandboxChannelRequest.
+ * \inmodule QtAwsPinpoint
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateApnsSandboxChannelRequestPrivate object.
- *
- * @param  action  Pinpoint action being performed.
- * @param  q       Pointer to this object's public UpdateApnsSandboxChannelRequest instance.
+ * Constructs a UpdateApnsSandboxChannelRequestPrivate object for Pinpoint \a action with,
+ * public implementation \a q.
  */
 UpdateApnsSandboxChannelRequestPrivate::UpdateApnsSandboxChannelRequestPrivate(
     const PinpointRequest::Action action, UpdateApnsSandboxChannelRequest * const q)
@@ -104,15 +93,10 @@ UpdateApnsSandboxChannelRequestPrivate::UpdateApnsSandboxChannelRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateApnsSandboxChannelRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateApnsSandboxChannelRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateApnsSandboxChannelRequest instance.
  */
 UpdateApnsSandboxChannelRequestPrivate::UpdateApnsSandboxChannelRequestPrivate(
     const UpdateApnsSandboxChannelRequestPrivate &other, UpdateApnsSandboxChannelRequest * const q)

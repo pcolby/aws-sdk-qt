@@ -27,10 +27,9 @@ namespace CloudTrail {
 
 /*!
  * \class QtAws::CloudTrail::LookupEventsRequest
- *
  * \brief The LookupEventsRequest class provides an interface for CloudTrail LookupEvents requests.
  *
- * \ingroup CloudTrail
+ * \inmodule QtAwsCloudTrail
  *
  *  <fullname>AWS CloudTrail</fullname>
  * 
@@ -60,9 +59,7 @@ namespace CloudTrail {
  */
 
 /*!
- * @brief  Constructs a new LookupEventsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 LookupEventsRequest::LookupEventsRequest(const LookupEventsRequest &other)
     : CloudTrailRequest(new LookupEventsRequestPrivate(*other.d_func(), this))
@@ -71,7 +68,7 @@ LookupEventsRequest::LookupEventsRequest(const LookupEventsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new LookupEventsRequest object.
+ * Constructs a LookupEventsRequest object.
  */
 LookupEventsRequest::LookupEventsRequest()
     : CloudTrailRequest(new LookupEventsRequestPrivate(CloudTrailRequest::LookupEventsAction, this))
@@ -89,14 +86,9 @@ bool LookupEventsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an LookupEventsResponse object.
+ * Returns a LookupEventsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An LookupEventsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudTrailClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * LookupEventsRequest::response(QNetworkReply * const reply) const
 {
@@ -104,20 +96,17 @@ QtAws::Core::AwsAbstractResponse * LookupEventsRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudTrail::LookupEventsRequestPrivate
+ * \brief The LookupEventsRequestPrivate class provides private implementation for LookupEventsRequest.
+ * \internal
  *
- * @class  LookupEventsRequestPrivate
- *
- * @brief  Private implementation for LookupEventsRequest.
+ * \inmodule QtAwsCloudTrail
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new LookupEventsRequestPrivate object.
- *
- * @param  action  CloudTrail action being performed.
- * @param  q       Pointer to this object's public LookupEventsRequest instance.
+ * Constructs a LookupEventsRequestPrivate object for CloudTrail \a action with,
+ * public implementation \a q.
  */
 LookupEventsRequestPrivate::LookupEventsRequestPrivate(
     const CloudTrailRequest::Action action, LookupEventsRequest * const q)
@@ -127,15 +116,10 @@ LookupEventsRequestPrivate::LookupEventsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new LookupEventsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the LookupEventsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public LookupEventsRequest instance.
  */
 LookupEventsRequestPrivate::LookupEventsRequestPrivate(
     const LookupEventsRequestPrivate &other, LookupEventsRequest * const q)

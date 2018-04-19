@@ -27,10 +27,9 @@ namespace DAX {
 
 /*!
  * \class QtAws::DAX::DecreaseReplicationFactorRequest
- *
  * \brief The DecreaseReplicationFactorRequest class provides an interface for DAX DecreaseReplicationFactor requests.
  *
- * \ingroup DAX
+ * \inmodule QtAwsDAX
  *
  *  DAX is a managed caching service engineered for Amazon DynamoDB. DAX dramatically speeds up database reads by caching
  *  frequently-accessed data from DynamoDB, so applications can access that data with sub-millisecond latency. You can
@@ -41,9 +40,7 @@ namespace DAX {
  */
 
 /*!
- * @brief  Constructs a new DecreaseReplicationFactorRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DecreaseReplicationFactorRequest::DecreaseReplicationFactorRequest(const DecreaseReplicationFactorRequest &other)
     : DAXRequest(new DecreaseReplicationFactorRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ DecreaseReplicationFactorRequest::DecreaseReplicationFactorRequest(const Decreas
 }
 
 /*!
- * @brief  Constructs a new DecreaseReplicationFactorRequest object.
+ * Constructs a DecreaseReplicationFactorRequest object.
  */
 DecreaseReplicationFactorRequest::DecreaseReplicationFactorRequest()
     : DAXRequest(new DecreaseReplicationFactorRequestPrivate(DAXRequest::DecreaseReplicationFactorAction, this))
@@ -70,14 +67,9 @@ bool DecreaseReplicationFactorRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DecreaseReplicationFactorResponse object.
+ * Returns a DecreaseReplicationFactorResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DecreaseReplicationFactorResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DAXClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DecreaseReplicationFactorRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * DecreaseReplicationFactorRequest::response(QN
 }
 
 /*!
- * @internal
+ * \class QtAws::DAX::DecreaseReplicationFactorRequestPrivate
+ * \brief The DecreaseReplicationFactorRequestPrivate class provides private implementation for DecreaseReplicationFactorRequest.
+ * \internal
  *
- * @class  DecreaseReplicationFactorRequestPrivate
- *
- * @brief  Private implementation for DecreaseReplicationFactorRequest.
+ * \inmodule QtAwsDAX
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DecreaseReplicationFactorRequestPrivate object.
- *
- * @param  action  DAX action being performed.
- * @param  q       Pointer to this object's public DecreaseReplicationFactorRequest instance.
+ * Constructs a DecreaseReplicationFactorRequestPrivate object for DAX \a action with,
+ * public implementation \a q.
  */
 DecreaseReplicationFactorRequestPrivate::DecreaseReplicationFactorRequestPrivate(
     const DAXRequest::Action action, DecreaseReplicationFactorRequest * const q)
@@ -108,15 +97,10 @@ DecreaseReplicationFactorRequestPrivate::DecreaseReplicationFactorRequestPrivate
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DecreaseReplicationFactorRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DecreaseReplicationFactorRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DecreaseReplicationFactorRequest instance.
  */
 DecreaseReplicationFactorRequestPrivate::DecreaseReplicationFactorRequestPrivate(
     const DecreaseReplicationFactorRequestPrivate &other, DecreaseReplicationFactorRequest * const q)

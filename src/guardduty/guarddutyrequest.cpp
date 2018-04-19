@@ -25,16 +25,58 @@ namespace GuardDuty {
 
 /*!
  * \class QtAws::GuardDuty::GuardDutyRequest
- *
  * \brief The GuardDutyRequest class provides an interface for GuardDuty requests.
  *
- * \ingroup GuardDuty
+ * \inmodule QtAwsGuardDuty
  */
 
 /*!
- * @brief  Constructs a new GuardDutyRequest object.
+ * \enum GuardDutyRequest::Action
  *
- * @param  action  The GuardDuty action to request.
+ * This enum describes the actions that can be performed as GuardDuty
+ * requests.
+ *
+ * \value AcceptInvitationAction GuardDuty AcceptInvitation action.
+ * \value ArchiveFindingsAction GuardDuty ArchiveFindings action.
+ * \value CreateDetectorAction GuardDuty CreateDetector action.
+ * \value CreateIPSetAction GuardDuty CreateIPSet action.
+ * \value CreateMembersAction GuardDuty CreateMembers action.
+ * \value CreateSampleFindingsAction GuardDuty CreateSampleFindings action.
+ * \value CreateThreatIntelSetAction GuardDuty CreateThreatIntelSet action.
+ * \value DeclineInvitationsAction GuardDuty DeclineInvitations action.
+ * \value DeleteDetectorAction GuardDuty DeleteDetector action.
+ * \value DeleteIPSetAction GuardDuty DeleteIPSet action.
+ * \value DeleteInvitationsAction GuardDuty DeleteInvitations action.
+ * \value DeleteMembersAction GuardDuty DeleteMembers action.
+ * \value DeleteThreatIntelSetAction GuardDuty DeleteThreatIntelSet action.
+ * \value DisassociateFromMasterAccountAction GuardDuty DisassociateFromMasterAccount action.
+ * \value DisassociateMembersAction GuardDuty DisassociateMembers action.
+ * \value GetDetectorAction GuardDuty GetDetector action.
+ * \value GetFindingsAction GuardDuty GetFindings action.
+ * \value GetFindingsStatisticsAction GuardDuty GetFindingsStatistics action.
+ * \value GetIPSetAction GuardDuty GetIPSet action.
+ * \value GetInvitationsCountAction GuardDuty GetInvitationsCount action.
+ * \value GetMasterAccountAction GuardDuty GetMasterAccount action.
+ * \value GetMembersAction GuardDuty GetMembers action.
+ * \value GetThreatIntelSetAction GuardDuty GetThreatIntelSet action.
+ * \value InviteMembersAction GuardDuty InviteMembers action.
+ * \value ListDetectorsAction GuardDuty ListDetectors action.
+ * \value ListFindingsAction GuardDuty ListFindings action.
+ * \value ListIPSetsAction GuardDuty ListIPSets action.
+ * \value ListInvitationsAction GuardDuty ListInvitations action.
+ * \value ListMembersAction GuardDuty ListMembers action.
+ * \value ListThreatIntelSetsAction GuardDuty ListThreatIntelSets action.
+ * \value StartMonitoringMembersAction GuardDuty StartMonitoringMembers action.
+ * \value StopMonitoringMembersAction GuardDuty StopMonitoringMembers action.
+ * \value UnarchiveFindingsAction GuardDuty UnarchiveFindings action.
+ * \value UpdateDetectorAction GuardDuty UpdateDetector action.
+ * \value UpdateFindingsFeedbackAction GuardDuty UpdateFindingsFeedback action.
+ * \value UpdateIPSetAction GuardDuty UpdateIPSet action.
+ * \value UpdateThreatIntelSetAction GuardDuty UpdateThreatIntelSet action.
+ */
+
+/*!
+ * Constructs a[n] GuardDutyRequest object for GuardDuty \a action.
  */
 GuardDutyRequest::GuardDutyRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new GuardDutyRequestPrivate(action, this))
@@ -43,9 +85,7 @@ GuardDutyRequest::GuardDutyRequest(const Action action)
 }
 
 /*!
- * @brief  Constructs a new GuardDutyRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GuardDutyRequest::GuardDutyRequest(const GuardDutyRequest &other)
     : QtAws::Core::AwsAbstractRequest(new GuardDutyRequestPrivate(*other.d_func(), this))
@@ -54,13 +94,7 @@ GuardDutyRequest::GuardDutyRequest(const GuardDutyRequest &other)
 }
 
 /*!
- * @brief  Assignment operator.
- *
- * Assigns \a other to \c this.
- *
- * @param  other  Instance to copy.
- *
- * @return  A reference to \c this.
+ * Sets the GuardDutyRequest object to be equal to \a other.
  */
 GuardDutyRequest& GuardDutyRequest::operator=(const GuardDutyRequest &other)
 {
@@ -72,14 +106,10 @@ GuardDutyRequest& GuardDutyRequest::operator=(const GuardDutyRequest &other)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GuardDutyRequest object.
+ * Constructs aa GuardDutyRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from GuardDutyRequestPrivate.
- *
- * @param  d  Pointer to private data (aka D-Pointer).
  */
 GuardDutyRequest::GuardDutyRequest(GuardDutyRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
@@ -87,7 +117,7 @@ GuardDutyRequest::GuardDutyRequest(GuardDutyRequestPrivate * const d) : QtAws::C
 }
 
 /*!
- * \brief Returns the GuardDuty action to be performed by this request.
+ * Returns the GuardDuty action to be performed by this request.
  */
 GuardDutyRequest::Action GuardDutyRequest::action() const
 {
@@ -96,7 +126,7 @@ GuardDutyRequest::Action GuardDutyRequest::action() const
 }
 
 /*!
- * \brief Returns the name of the GuardDuty action to be performed by this request.
+ * Returns the name of the GuardDuty action to be performed by this request.
  */
 QString GuardDutyRequest::actionString() const
 {
@@ -104,7 +134,7 @@ QString GuardDutyRequest::actionString() const
 }
 
 /*!
- * \brief Returns the GuardDuty API version implemented by this request.
+ * Returns the GuardDuty API version implemented by this request.
  */
 QString GuardDutyRequest::apiVersion() const
 {
@@ -113,7 +143,7 @@ QString GuardDutyRequest::apiVersion() const
 }
 
 /*!
- * @brief Set the GuardDuty action to be performed by this request to \a action.
+ * Sets the GuardDuty action to be performed by this request to \a action.
  */
 void GuardDutyRequest::setAction(const Action action)
 {
@@ -122,7 +152,7 @@ void GuardDutyRequest::setAction(const Action action)
 }
 
 /*!
- * Set the GuardDuty API version to include in this request to \a version.
+ * Sets the GuardDuty API version to include in this request to \a version.
  */
 void GuardDutyRequest::setApiVersion(const QString &version)
 {
@@ -131,7 +161,7 @@ void GuardDutyRequest::setApiVersion(const QString &version)
 }
 
 /*!
- * \brief Returns \c true if this request is the same as \a other.
+ * Returns \c true if this request is equal to \a other; \c false otherwise.
  *
  * Note, most derived *Request classes do not need to provider their own
  * implementations of this function, since most such request classes rely on
@@ -146,8 +176,8 @@ bool GuardDutyRequest::operator==(const GuardDutyRequest &other) const
             (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
-/*!
- * @brief  Check if \a queueName is a valid GuardDuty queue name.
+/*
+ * Returns \c tue if \a queueName is a valid GuardDuty queue name.
  *
  * @par From GuardDuty FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
@@ -166,9 +196,8 @@ bool GuardDutyRequest::operator==(const GuardDutyRequest &other) const
 }*/
 
 /*!
- * \brief Removes the a \a name parameter from this request.
- *
- * Returns the count of paramters removed (typically \c 0 or \c 1).
+ * Removes the a \a name parameter from the request, then returns the number of
+ * paramters removed (typically \c 0 or \c 1).
  */
 int GuardDutyRequest::clearParameter(const QString &name)
 {
@@ -177,7 +206,7 @@ int GuardDutyRequest::clearParameter(const QString &name)
 }
 
 /*!
- * \brief Removes all parameters from this request.
+ * Removes all parameters from the request.
  */
 void GuardDutyRequest::clearParameters()
 {
@@ -186,7 +215,7 @@ void GuardDutyRequest::clearParameters()
 }
 
 /*!
- * \brief Returns the value of the \n name pararemter if set, otherwise \a defaultValue.
+ * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
 QVariant GuardDutyRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
@@ -195,7 +224,7 @@ QVariant GuardDutyRequest::parameter(const QString &name, const QVariant &defaul
 }
 
 /*!
- * \brief Returns a map of parameters included in this request.
+ * Returns the parameters included in this request.
  */
 const QVariantMap &GuardDutyRequest::parameters() const
 {
@@ -204,7 +233,7 @@ const QVariantMap &GuardDutyRequest::parameters() const
 }
 
 /*!
- * \brief Sets the \a name parameter to \a value.
+ * Sets the \a name parameter to \a value.
  */
 void GuardDutyRequest::setParameter(const QString &name, const QVariant &value)
 {
@@ -213,9 +242,8 @@ void GuardDutyRequest::setParameter(const QString &name, const QVariant &value)
 }
 
 /*!
- * \brief Sets the map of paramters for this request to \a parameters.
- *
- * Any request parameters set previously will be discarded.
+ * Sets the paramters for this request to \a parameters. Any request parameters
+ * set previously will be discarded.
  */
 void GuardDutyRequest::setParameters(const QVariantMap &parameters)
 {
@@ -224,11 +252,12 @@ void GuardDutyRequest::setParameters(const QVariantMap &parameters)
 }
 
 /*!
- * \brief Returns a network request for this GuardDuty request using the given \a endpoint.
+ * Returns a network request for the GuardDuty request using the given
+ * \a endpoint.
  *
- * This GuardDuty implementation builds request URLs by combining the common query
- * parameters (such as Action and Version), with any that have been added (via
- * setParameter) by child classes.
+ * This GuardDuty implementation builds request URLs by combining the
+ * common query parameters (such as Action and Version), with any that have
+ * been added (via setParameter) by child classes.
  */
 QNetworkRequest GuardDutyRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -239,17 +268,16 @@ QNetworkRequest GuardDutyRequest::unsignedRequest(const QUrl &endpoint) const
 }
 
 /*!
+ * \class QtAws::GuardDuty::GuardDutyRequestPrivate
+ * \brief The GuardDutyRequestPrivate class provides private implementation for GuardDutyRequest.
  * \internal
  *
- * \class  GuardDutyRequestPrivate
- *
- * \brief  Private implementation for GuardDutyRequest.
+ * \inmodule QtAwsGuardDuty
  */
 
 /*!
- * \internal
- *
- * \brief Constructs a new GuardDutyRequestPrivate object.
+ * Constructs a GuardDutyRequestPrivate object for GuardDuty \a action with,
+ * public implementation \a q.
  */
 GuardDutyRequestPrivate::GuardDutyRequestPrivate(const GuardDutyRequest::Action action, GuardDutyRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
@@ -258,9 +286,7 @@ GuardDutyRequestPrivate::GuardDutyRequestPrivate(const GuardDutyRequest::Action 
 }
 
 /*!
- * \internal
- *
- * \brief Constructs a new GuardDutyRequestPrivate object, copying an existing one.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
@@ -276,15 +302,12 @@ GuardDutyRequestPrivate::GuardDutyRequestPrivate(const GuardDutyRequestPrivate &
 }
 
 /*!
- * \internal
- *
- * \brief Returns a string representing \a action.
+ * Returns a string represention of \a action, or a null string if \a action is
+ * invalid.
  *
  * This function converts GuardDutyRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the GuardDuty service's Action
  * query parameters.
- *
- * @return A string representing \a action, or a null string if \a action is invalid.
  */
 QString GuardDutyRequestPrivate::toString(const GuardDutyRequest::Action &action)
 {

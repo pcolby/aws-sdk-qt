@@ -27,10 +27,9 @@ namespace AutoScaling {
 
 /*!
  * \class QtAws::AutoScaling::AttachLoadBalancerTargetGroupsRequest
- *
  * \brief The AttachLoadBalancerTargetGroupsRequest class provides an interface for AutoScaling AttachLoadBalancerTargetGroups requests.
  *
- * \ingroup AutoScaling
+ * \inmodule QtAwsAutoScaling
  *
  *  <fullname>Amazon EC2 Auto Scaling</fullname>
  * 
@@ -42,9 +41,7 @@ namespace AutoScaling {
  */
 
 /*!
- * @brief  Constructs a new AttachLoadBalancerTargetGroupsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AttachLoadBalancerTargetGroupsRequest::AttachLoadBalancerTargetGroupsRequest(const AttachLoadBalancerTargetGroupsRequest &other)
     : AutoScalingRequest(new AttachLoadBalancerTargetGroupsRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ AttachLoadBalancerTargetGroupsRequest::AttachLoadBalancerTargetGroupsRequest(con
 }
 
 /*!
- * @brief  Constructs a new AttachLoadBalancerTargetGroupsRequest object.
+ * Constructs a AttachLoadBalancerTargetGroupsRequest object.
  */
 AttachLoadBalancerTargetGroupsRequest::AttachLoadBalancerTargetGroupsRequest()
     : AutoScalingRequest(new AttachLoadBalancerTargetGroupsRequestPrivate(AutoScalingRequest::AttachLoadBalancerTargetGroupsAction, this))
@@ -71,14 +68,9 @@ bool AttachLoadBalancerTargetGroupsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AttachLoadBalancerTargetGroupsResponse object.
+ * Returns a AttachLoadBalancerTargetGroupsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AttachLoadBalancerTargetGroupsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AutoScalingClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AttachLoadBalancerTargetGroupsRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * AttachLoadBalancerTargetGroupsRequest::respon
 }
 
 /*!
- * @internal
+ * \class QtAws::AutoScaling::AttachLoadBalancerTargetGroupsRequestPrivate
+ * \brief The AttachLoadBalancerTargetGroupsRequestPrivate class provides private implementation for AttachLoadBalancerTargetGroupsRequest.
+ * \internal
  *
- * @class  AttachLoadBalancerTargetGroupsRequestPrivate
- *
- * @brief  Private implementation for AttachLoadBalancerTargetGroupsRequest.
+ * \inmodule QtAwsAutoScaling
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AttachLoadBalancerTargetGroupsRequestPrivate object.
- *
- * @param  action  AutoScaling action being performed.
- * @param  q       Pointer to this object's public AttachLoadBalancerTargetGroupsRequest instance.
+ * Constructs a AttachLoadBalancerTargetGroupsRequestPrivate object for AutoScaling \a action with,
+ * public implementation \a q.
  */
 AttachLoadBalancerTargetGroupsRequestPrivate::AttachLoadBalancerTargetGroupsRequestPrivate(
     const AutoScalingRequest::Action action, AttachLoadBalancerTargetGroupsRequest * const q)
@@ -109,15 +98,10 @@ AttachLoadBalancerTargetGroupsRequestPrivate::AttachLoadBalancerTargetGroupsRequ
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AttachLoadBalancerTargetGroupsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AttachLoadBalancerTargetGroupsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AttachLoadBalancerTargetGroupsRequest instance.
  */
 AttachLoadBalancerTargetGroupsRequestPrivate::AttachLoadBalancerTargetGroupsRequestPrivate(
     const AttachLoadBalancerTargetGroupsRequestPrivate &other, AttachLoadBalancerTargetGroupsRequest * const q)

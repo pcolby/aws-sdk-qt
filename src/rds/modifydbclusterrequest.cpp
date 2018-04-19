@@ -27,10 +27,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::ModifyDBClusterRequest
- *
  * \brief The ModifyDBClusterRequest class provides an interface for RDS ModifyDBCluster requests.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -101,9 +100,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new ModifyDBClusterRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ModifyDBClusterRequest::ModifyDBClusterRequest(const ModifyDBClusterRequest &other)
     : RDSRequest(new ModifyDBClusterRequestPrivate(*other.d_func(), this))
@@ -112,7 +109,7 @@ ModifyDBClusterRequest::ModifyDBClusterRequest(const ModifyDBClusterRequest &oth
 }
 
 /*!
- * @brief  Constructs a new ModifyDBClusterRequest object.
+ * Constructs a ModifyDBClusterRequest object.
  */
 ModifyDBClusterRequest::ModifyDBClusterRequest()
     : RDSRequest(new ModifyDBClusterRequestPrivate(RDSRequest::ModifyDBClusterAction, this))
@@ -130,14 +127,9 @@ bool ModifyDBClusterRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ModifyDBClusterResponse object.
+ * Returns a ModifyDBClusterResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ModifyDBClusterResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RDSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ModifyDBClusterRequest::response(QNetworkReply * const reply) const
 {
@@ -145,20 +137,17 @@ QtAws::Core::AwsAbstractResponse * ModifyDBClusterRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::RDS::ModifyDBClusterRequestPrivate
+ * \brief The ModifyDBClusterRequestPrivate class provides private implementation for ModifyDBClusterRequest.
+ * \internal
  *
- * @class  ModifyDBClusterRequestPrivate
- *
- * @brief  Private implementation for ModifyDBClusterRequest.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ModifyDBClusterRequestPrivate object.
- *
- * @param  action  RDS action being performed.
- * @param  q       Pointer to this object's public ModifyDBClusterRequest instance.
+ * Constructs a ModifyDBClusterRequestPrivate object for RDS \a action with,
+ * public implementation \a q.
  */
 ModifyDBClusterRequestPrivate::ModifyDBClusterRequestPrivate(
     const RDSRequest::Action action, ModifyDBClusterRequest * const q)
@@ -168,15 +157,10 @@ ModifyDBClusterRequestPrivate::ModifyDBClusterRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ModifyDBClusterRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ModifyDBClusterRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ModifyDBClusterRequest instance.
  */
 ModifyDBClusterRequestPrivate::ModifyDBClusterRequestPrivate(
     const ModifyDBClusterRequestPrivate &other, ModifyDBClusterRequest * const q)

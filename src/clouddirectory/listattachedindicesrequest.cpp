@@ -27,10 +27,9 @@ namespace CloudDirectory {
 
 /*!
  * \class QtAws::CloudDirectory::ListAttachedIndicesRequest
- *
  * \brief The ListAttachedIndicesRequest class provides an interface for CloudDirectory ListAttachedIndices requests.
  *
- * \ingroup CloudDirectory
+ * \inmodule QtAwsCloudDirectory
  *
  *  <fullname>Amazon Cloud Directory</fullname>
  * 
@@ -44,9 +43,7 @@ namespace CloudDirectory {
  */
 
 /*!
- * @brief  Constructs a new ListAttachedIndicesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListAttachedIndicesRequest::ListAttachedIndicesRequest(const ListAttachedIndicesRequest &other)
     : CloudDirectoryRequest(new ListAttachedIndicesRequestPrivate(*other.d_func(), this))
@@ -55,7 +52,7 @@ ListAttachedIndicesRequest::ListAttachedIndicesRequest(const ListAttachedIndices
 }
 
 /*!
- * @brief  Constructs a new ListAttachedIndicesRequest object.
+ * Constructs a ListAttachedIndicesRequest object.
  */
 ListAttachedIndicesRequest::ListAttachedIndicesRequest()
     : CloudDirectoryRequest(new ListAttachedIndicesRequestPrivate(CloudDirectoryRequest::ListAttachedIndicesAction, this))
@@ -73,14 +70,9 @@ bool ListAttachedIndicesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListAttachedIndicesResponse object.
+ * Returns a ListAttachedIndicesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListAttachedIndicesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudDirectoryClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListAttachedIndicesRequest::response(QNetworkReply * const reply) const
 {
@@ -88,20 +80,17 @@ QtAws::Core::AwsAbstractResponse * ListAttachedIndicesRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudDirectory::ListAttachedIndicesRequestPrivate
+ * \brief The ListAttachedIndicesRequestPrivate class provides private implementation for ListAttachedIndicesRequest.
+ * \internal
  *
- * @class  ListAttachedIndicesRequestPrivate
- *
- * @brief  Private implementation for ListAttachedIndicesRequest.
+ * \inmodule QtAwsCloudDirectory
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListAttachedIndicesRequestPrivate object.
- *
- * @param  action  CloudDirectory action being performed.
- * @param  q       Pointer to this object's public ListAttachedIndicesRequest instance.
+ * Constructs a ListAttachedIndicesRequestPrivate object for CloudDirectory \a action with,
+ * public implementation \a q.
  */
 ListAttachedIndicesRequestPrivate::ListAttachedIndicesRequestPrivate(
     const CloudDirectoryRequest::Action action, ListAttachedIndicesRequest * const q)
@@ -111,15 +100,10 @@ ListAttachedIndicesRequestPrivate::ListAttachedIndicesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListAttachedIndicesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListAttachedIndicesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListAttachedIndicesRequest instance.
  */
 ListAttachedIndicesRequestPrivate::ListAttachedIndicesRequestPrivate(
     const ListAttachedIndicesRequestPrivate &other, ListAttachedIndicesRequest * const q)

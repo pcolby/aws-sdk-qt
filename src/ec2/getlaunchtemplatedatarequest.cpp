@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::GetLaunchTemplateDataRequest
- *
  * \brief The GetLaunchTemplateDataRequest class provides an interface for EC2 GetLaunchTemplateData requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new GetLaunchTemplateDataRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetLaunchTemplateDataRequest::GetLaunchTemplateDataRequest(const GetLaunchTemplateDataRequest &other)
     : EC2Request(new GetLaunchTemplateDataRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ GetLaunchTemplateDataRequest::GetLaunchTemplateDataRequest(const GetLaunchTempla
 }
 
 /*!
- * @brief  Constructs a new GetLaunchTemplateDataRequest object.
+ * Constructs a GetLaunchTemplateDataRequest object.
  */
 GetLaunchTemplateDataRequest::GetLaunchTemplateDataRequest()
     : EC2Request(new GetLaunchTemplateDataRequestPrivate(EC2Request::GetLaunchTemplateDataAction, this))
@@ -70,14 +67,9 @@ bool GetLaunchTemplateDataRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetLaunchTemplateDataResponse object.
+ * Returns a GetLaunchTemplateDataResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetLaunchTemplateDataResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetLaunchTemplateDataRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * GetLaunchTemplateDataRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::GetLaunchTemplateDataRequestPrivate
+ * \brief The GetLaunchTemplateDataRequestPrivate class provides private implementation for GetLaunchTemplateDataRequest.
+ * \internal
  *
- * @class  GetLaunchTemplateDataRequestPrivate
- *
- * @brief  Private implementation for GetLaunchTemplateDataRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetLaunchTemplateDataRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public GetLaunchTemplateDataRequest instance.
+ * Constructs a GetLaunchTemplateDataRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 GetLaunchTemplateDataRequestPrivate::GetLaunchTemplateDataRequestPrivate(
     const EC2Request::Action action, GetLaunchTemplateDataRequest * const q)
@@ -108,15 +97,10 @@ GetLaunchTemplateDataRequestPrivate::GetLaunchTemplateDataRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetLaunchTemplateDataRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetLaunchTemplateDataRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetLaunchTemplateDataRequest instance.
  */
 GetLaunchTemplateDataRequestPrivate::GetLaunchTemplateDataRequestPrivate(
     const GetLaunchTemplateDataRequestPrivate &other, GetLaunchTemplateDataRequest * const q)

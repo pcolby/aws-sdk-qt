@@ -9,10 +9,9 @@ namespace {{NameSpaceName}} {
 
 /*!
  * \class QtAws::{{NameSpaceName}}::{{ClassName}}
- *
  * \brief The {{ClassName}} class provides an interface for {{ServiceName}} {{OperationName}} requests.
  *
- * \ingroup {{NameSpaceName}}
+ * \inmodule QtAws{{NameSpaceName}}
  *
 {% for line in ClassDocumentation %}
  * {% if line %} {{ line }}{% endif %}
@@ -22,9 +21,7 @@ namespace {{NameSpaceName}} {
  */
 
 /*!
- * @brief  Constructs a new {{ClassName}} object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 {{ClassName}}::{{ClassName}}(const {{ClassName}} &other)
     : {{ServiceName}}Request(new {{ClassName}}Private(*other.d_func(), this))
@@ -33,7 +30,7 @@ namespace {{NameSpaceName}} {
 }
 
 /*!
- * @brief  Constructs a new {{ClassName}} object.
+ * Constructs a {{ClassName}} object.
  */
 {{ClassName}}::{{ClassName}}()
     : {{ServiceName}}Request(new {{ClassName}}Private({{ServiceName}}Request::{{OperationName}}Action, this))
@@ -52,14 +49,9 @@ bool {{ClassName}}::isValid() const
 {# @todo Accessor methods #}
 
 /*!
- * @brief  Construct an {{OperationName}}Response object.
+ * Returns a {{OperationName}}Response object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An {{OperationName}}Response instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  {{ServiceName}}Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * {{ClassName}}::response(QNetworkReply * const reply) const
 {
@@ -67,20 +59,17 @@ QtAws::Core::AwsAbstractResponse * {{ClassName}}::response(QNetworkReply * const
 }
 
 /*!
- * @internal
+ * \class QtAws::{{NameSpaceName}}::{{ClassName}}Private
+ * \brief The {{ClassName}}Private class provides private implementation for {{ClassName}}.
+ * \internal
  *
- * @class  {{ClassName}}Private
- *
- * @brief  Private implementation for {{ClassName}}.
+ * \inmodule QtAws{{NameSpaceName}}
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new {{ClassName}}Private object.
- *
- * @param  action  {{ServiceName}} action being performed.
- * @param  q       Pointer to this object's public {{ClassName}} instance.
+ * Constructs a {{ClassName}}Private object for {{ServiceName}} \a action with,
+ * public implementation \a q.
  */
 {{ClassName}}Private::{{ClassName}}Private(
     const {{ServiceName}}Request::Action action, {{ClassName}} * const q)
@@ -90,15 +79,10 @@ QtAws::Core::AwsAbstractResponse * {{ClassName}}::response(QNetworkReply * const
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new {{ClassName}}Private object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the {{ClassName}}
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public {{ClassName}} instance.
  */
 {{ClassName}}Private::{{ClassName}}Private(
     const {{ClassName}}Private &other, {{ClassName}} * const q)

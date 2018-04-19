@@ -27,10 +27,9 @@ namespace CloudSearch {
 
 /*!
  * \class QtAws::CloudSearch::DescribeServiceAccessPoliciesRequest
- *
  * \brief The DescribeServiceAccessPoliciesRequest class provides an interface for CloudSearch DescribeServiceAccessPolicies requests.
  *
- * \ingroup CloudSearch
+ * \inmodule QtAwsCloudSearch
  *
  *  <fullname>Amazon CloudSearch Configuration Service</fullname>
  * 
@@ -48,9 +47,7 @@ namespace CloudSearch {
  */
 
 /*!
- * @brief  Constructs a new DescribeServiceAccessPoliciesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeServiceAccessPoliciesRequest::DescribeServiceAccessPoliciesRequest(const DescribeServiceAccessPoliciesRequest &other)
     : CloudSearchRequest(new DescribeServiceAccessPoliciesRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ DescribeServiceAccessPoliciesRequest::DescribeServiceAccessPoliciesRequest(const
 }
 
 /*!
- * @brief  Constructs a new DescribeServiceAccessPoliciesRequest object.
+ * Constructs a DescribeServiceAccessPoliciesRequest object.
  */
 DescribeServiceAccessPoliciesRequest::DescribeServiceAccessPoliciesRequest()
     : CloudSearchRequest(new DescribeServiceAccessPoliciesRequestPrivate(CloudSearchRequest::DescribeServiceAccessPoliciesAction, this))
@@ -77,14 +74,9 @@ bool DescribeServiceAccessPoliciesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeServiceAccessPoliciesResponse object.
+ * Returns a DescribeServiceAccessPoliciesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeServiceAccessPoliciesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudSearchClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeServiceAccessPoliciesRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * DescribeServiceAccessPoliciesRequest::respons
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudSearch::DescribeServiceAccessPoliciesRequestPrivate
+ * \brief The DescribeServiceAccessPoliciesRequestPrivate class provides private implementation for DescribeServiceAccessPoliciesRequest.
+ * \internal
  *
- * @class  DescribeServiceAccessPoliciesRequestPrivate
- *
- * @brief  Private implementation for DescribeServiceAccessPoliciesRequest.
+ * \inmodule QtAwsCloudSearch
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeServiceAccessPoliciesRequestPrivate object.
- *
- * @param  action  CloudSearch action being performed.
- * @param  q       Pointer to this object's public DescribeServiceAccessPoliciesRequest instance.
+ * Constructs a DescribeServiceAccessPoliciesRequestPrivate object for CloudSearch \a action with,
+ * public implementation \a q.
  */
 DescribeServiceAccessPoliciesRequestPrivate::DescribeServiceAccessPoliciesRequestPrivate(
     const CloudSearchRequest::Action action, DescribeServiceAccessPoliciesRequest * const q)
@@ -115,15 +104,10 @@ DescribeServiceAccessPoliciesRequestPrivate::DescribeServiceAccessPoliciesReques
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeServiceAccessPoliciesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeServiceAccessPoliciesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeServiceAccessPoliciesRequest instance.
  */
 DescribeServiceAccessPoliciesRequestPrivate::DescribeServiceAccessPoliciesRequestPrivate(
     const DescribeServiceAccessPoliciesRequestPrivate &other, DescribeServiceAccessPoliciesRequest * const q)

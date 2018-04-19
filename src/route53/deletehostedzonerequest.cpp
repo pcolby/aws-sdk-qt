@@ -27,19 +27,16 @@ namespace Route53 {
 
 /*!
  * \class QtAws::Route53::DeleteHostedZoneRequest
- *
  * \brief The DeleteHostedZoneRequest class provides an interface for Route53 DeleteHostedZone requests.
  *
- * \ingroup Route53
+ * \inmodule QtAwsRoute53
  *
  *
  * \sa Route53Client::deleteHostedZone
  */
 
 /*!
- * @brief  Constructs a new DeleteHostedZoneRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteHostedZoneRequest::DeleteHostedZoneRequest(const DeleteHostedZoneRequest &other)
     : Route53Request(new DeleteHostedZoneRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ DeleteHostedZoneRequest::DeleteHostedZoneRequest(const DeleteHostedZoneRequest &
 }
 
 /*!
- * @brief  Constructs a new DeleteHostedZoneRequest object.
+ * Constructs a DeleteHostedZoneRequest object.
  */
 DeleteHostedZoneRequest::DeleteHostedZoneRequest()
     : Route53Request(new DeleteHostedZoneRequestPrivate(Route53Request::DeleteHostedZoneAction, this))
@@ -66,14 +63,9 @@ bool DeleteHostedZoneRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteHostedZoneResponse object.
+ * Returns a DeleteHostedZoneResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteHostedZoneResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  Route53Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteHostedZoneRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * DeleteHostedZoneRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::Route53::DeleteHostedZoneRequestPrivate
+ * \brief The DeleteHostedZoneRequestPrivate class provides private implementation for DeleteHostedZoneRequest.
+ * \internal
  *
- * @class  DeleteHostedZoneRequestPrivate
- *
- * @brief  Private implementation for DeleteHostedZoneRequest.
+ * \inmodule QtAwsRoute53
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteHostedZoneRequestPrivate object.
- *
- * @param  action  Route53 action being performed.
- * @param  q       Pointer to this object's public DeleteHostedZoneRequest instance.
+ * Constructs a DeleteHostedZoneRequestPrivate object for Route53 \a action with,
+ * public implementation \a q.
  */
 DeleteHostedZoneRequestPrivate::DeleteHostedZoneRequestPrivate(
     const Route53Request::Action action, DeleteHostedZoneRequest * const q)
@@ -104,15 +93,10 @@ DeleteHostedZoneRequestPrivate::DeleteHostedZoneRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteHostedZoneRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteHostedZoneRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteHostedZoneRequest instance.
  */
 DeleteHostedZoneRequestPrivate::DeleteHostedZoneRequestPrivate(
     const DeleteHostedZoneRequestPrivate &other, DeleteHostedZoneRequest * const q)

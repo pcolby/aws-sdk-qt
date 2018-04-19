@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::CreateEgressOnlyInternetGatewayRequest
- *
  * \brief The CreateEgressOnlyInternetGatewayRequest class provides an interface for EC2 CreateEgressOnlyInternetGateway requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new CreateEgressOnlyInternetGatewayRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateEgressOnlyInternetGatewayRequest::CreateEgressOnlyInternetGatewayRequest(const CreateEgressOnlyInternetGatewayRequest &other)
     : EC2Request(new CreateEgressOnlyInternetGatewayRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ CreateEgressOnlyInternetGatewayRequest::CreateEgressOnlyInternetGatewayRequest(c
 }
 
 /*!
- * @brief  Constructs a new CreateEgressOnlyInternetGatewayRequest object.
+ * Constructs a CreateEgressOnlyInternetGatewayRequest object.
  */
 CreateEgressOnlyInternetGatewayRequest::CreateEgressOnlyInternetGatewayRequest()
     : EC2Request(new CreateEgressOnlyInternetGatewayRequestPrivate(EC2Request::CreateEgressOnlyInternetGatewayAction, this))
@@ -70,14 +67,9 @@ bool CreateEgressOnlyInternetGatewayRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateEgressOnlyInternetGatewayResponse object.
+ * Returns a CreateEgressOnlyInternetGatewayResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateEgressOnlyInternetGatewayResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateEgressOnlyInternetGatewayRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * CreateEgressOnlyInternetGatewayRequest::respo
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::CreateEgressOnlyInternetGatewayRequestPrivate
+ * \brief The CreateEgressOnlyInternetGatewayRequestPrivate class provides private implementation for CreateEgressOnlyInternetGatewayRequest.
+ * \internal
  *
- * @class  CreateEgressOnlyInternetGatewayRequestPrivate
- *
- * @brief  Private implementation for CreateEgressOnlyInternetGatewayRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateEgressOnlyInternetGatewayRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public CreateEgressOnlyInternetGatewayRequest instance.
+ * Constructs a CreateEgressOnlyInternetGatewayRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 CreateEgressOnlyInternetGatewayRequestPrivate::CreateEgressOnlyInternetGatewayRequestPrivate(
     const EC2Request::Action action, CreateEgressOnlyInternetGatewayRequest * const q)
@@ -108,15 +97,10 @@ CreateEgressOnlyInternetGatewayRequestPrivate::CreateEgressOnlyInternetGatewayRe
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateEgressOnlyInternetGatewayRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateEgressOnlyInternetGatewayRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateEgressOnlyInternetGatewayRequest instance.
  */
 CreateEgressOnlyInternetGatewayRequestPrivate::CreateEgressOnlyInternetGatewayRequestPrivate(
     const CreateEgressOnlyInternetGatewayRequestPrivate &other, CreateEgressOnlyInternetGatewayRequest * const q)

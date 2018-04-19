@@ -27,10 +27,9 @@ namespace Greengrass {
 
 /*!
  * \class QtAws::Greengrass::DeleteCoreDefinitionRequest
- *
  * \brief The DeleteCoreDefinitionRequest class provides an interface for Greengrass DeleteCoreDefinition requests.
  *
- * \ingroup Greengrass
+ * \inmodule QtAwsGreengrass
  *
  *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
  *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
@@ -40,9 +39,7 @@ namespace Greengrass {
  */
 
 /*!
- * @brief  Constructs a new DeleteCoreDefinitionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteCoreDefinitionRequest::DeleteCoreDefinitionRequest(const DeleteCoreDefinitionRequest &other)
     : GreengrassRequest(new DeleteCoreDefinitionRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ DeleteCoreDefinitionRequest::DeleteCoreDefinitionRequest(const DeleteCoreDefinit
 }
 
 /*!
- * @brief  Constructs a new DeleteCoreDefinitionRequest object.
+ * Constructs a DeleteCoreDefinitionRequest object.
  */
 DeleteCoreDefinitionRequest::DeleteCoreDefinitionRequest()
     : GreengrassRequest(new DeleteCoreDefinitionRequestPrivate(GreengrassRequest::DeleteCoreDefinitionAction, this))
@@ -69,14 +66,9 @@ bool DeleteCoreDefinitionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteCoreDefinitionResponse object.
+ * Returns a DeleteCoreDefinitionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteCoreDefinitionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GreengrassClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteCoreDefinitionRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * DeleteCoreDefinitionRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::Greengrass::DeleteCoreDefinitionRequestPrivate
+ * \brief The DeleteCoreDefinitionRequestPrivate class provides private implementation for DeleteCoreDefinitionRequest.
+ * \internal
  *
- * @class  DeleteCoreDefinitionRequestPrivate
- *
- * @brief  Private implementation for DeleteCoreDefinitionRequest.
+ * \inmodule QtAwsGreengrass
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteCoreDefinitionRequestPrivate object.
- *
- * @param  action  Greengrass action being performed.
- * @param  q       Pointer to this object's public DeleteCoreDefinitionRequest instance.
+ * Constructs a DeleteCoreDefinitionRequestPrivate object for Greengrass \a action with,
+ * public implementation \a q.
  */
 DeleteCoreDefinitionRequestPrivate::DeleteCoreDefinitionRequestPrivate(
     const GreengrassRequest::Action action, DeleteCoreDefinitionRequest * const q)
@@ -107,15 +96,10 @@ DeleteCoreDefinitionRequestPrivate::DeleteCoreDefinitionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteCoreDefinitionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteCoreDefinitionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteCoreDefinitionRequest instance.
  */
 DeleteCoreDefinitionRequestPrivate::DeleteCoreDefinitionRequestPrivate(
     const DeleteCoreDefinitionRequestPrivate &other, DeleteCoreDefinitionRequest * const q)

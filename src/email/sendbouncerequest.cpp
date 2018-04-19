@@ -27,10 +27,9 @@ namespace SES {
 
 /*!
  * \class QtAws::SES::SendBounceRequest
- *
  * \brief The SendBounceRequest class provides an interface for SES SendBounce requests.
  *
- * \ingroup SES
+ * \inmodule QtAwsSES
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -48,9 +47,7 @@ namespace SES {
  */
 
 /*!
- * @brief  Constructs a new SendBounceRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 SendBounceRequest::SendBounceRequest(const SendBounceRequest &other)
     : SESRequest(new SendBounceRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ SendBounceRequest::SendBounceRequest(const SendBounceRequest &other)
 }
 
 /*!
- * @brief  Constructs a new SendBounceRequest object.
+ * Constructs a SendBounceRequest object.
  */
 SendBounceRequest::SendBounceRequest()
     : SESRequest(new SendBounceRequestPrivate(SESRequest::SendBounceAction, this))
@@ -77,14 +74,9 @@ bool SendBounceRequest::isValid() const
 
 
 /*!
- * @brief  Construct an SendBounceResponse object.
+ * Returns a SendBounceResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An SendBounceResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SESClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * SendBounceRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * SendBounceRequest::response(QNetworkReply * c
 }
 
 /*!
- * @internal
+ * \class QtAws::SES::SendBounceRequestPrivate
+ * \brief The SendBounceRequestPrivate class provides private implementation for SendBounceRequest.
+ * \internal
  *
- * @class  SendBounceRequestPrivate
- *
- * @brief  Private implementation for SendBounceRequest.
+ * \inmodule QtAwsSES
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new SendBounceRequestPrivate object.
- *
- * @param  action  SES action being performed.
- * @param  q       Pointer to this object's public SendBounceRequest instance.
+ * Constructs a SendBounceRequestPrivate object for SES \a action with,
+ * public implementation \a q.
  */
 SendBounceRequestPrivate::SendBounceRequestPrivate(
     const SESRequest::Action action, SendBounceRequest * const q)
@@ -115,15 +104,10 @@ SendBounceRequestPrivate::SendBounceRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SendBounceRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the SendBounceRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public SendBounceRequest instance.
  */
 SendBounceRequestPrivate::SendBounceRequestPrivate(
     const SendBounceRequestPrivate &other, SendBounceRequest * const q)

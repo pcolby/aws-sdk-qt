@@ -27,10 +27,9 @@ namespace ElasticLoadBalancing {
 
 /*!
  * \class QtAws::ElasticLoadBalancing::DescribeLoadBalancersRequest
- *
  * \brief The DescribeLoadBalancersRequest class provides an interface for ElasticLoadBalancing DescribeLoadBalancers requests.
  *
- * \ingroup ElasticLoadBalancing
+ * \inmodule QtAwsElasticLoadBalancing
  *
  *  <fullname>Elastic Load Balancing</fullname>
  * 
@@ -65,9 +64,7 @@ namespace ElasticLoadBalancing {
  */
 
 /*!
- * @brief  Constructs a new DescribeLoadBalancersRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeLoadBalancersRequest::DescribeLoadBalancersRequest(const DescribeLoadBalancersRequest &other)
     : ElasticLoadBalancingRequest(new DescribeLoadBalancersRequestPrivate(*other.d_func(), this))
@@ -76,7 +73,7 @@ DescribeLoadBalancersRequest::DescribeLoadBalancersRequest(const DescribeLoadBal
 }
 
 /*!
- * @brief  Constructs a new DescribeLoadBalancersRequest object.
+ * Constructs a DescribeLoadBalancersRequest object.
  */
 DescribeLoadBalancersRequest::DescribeLoadBalancersRequest()
     : ElasticLoadBalancingRequest(new DescribeLoadBalancersRequestPrivate(ElasticLoadBalancingRequest::DescribeLoadBalancersAction, this))
@@ -94,14 +91,9 @@ bool DescribeLoadBalancersRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeLoadBalancersResponse object.
+ * Returns a DescribeLoadBalancersResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeLoadBalancersResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ElasticLoadBalancingClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeLoadBalancersRequest::response(QNetworkReply * const reply) const
 {
@@ -109,20 +101,17 @@ QtAws::Core::AwsAbstractResponse * DescribeLoadBalancersRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::ElasticLoadBalancing::DescribeLoadBalancersRequestPrivate
+ * \brief The DescribeLoadBalancersRequestPrivate class provides private implementation for DescribeLoadBalancersRequest.
+ * \internal
  *
- * @class  DescribeLoadBalancersRequestPrivate
- *
- * @brief  Private implementation for DescribeLoadBalancersRequest.
+ * \inmodule QtAwsElasticLoadBalancing
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeLoadBalancersRequestPrivate object.
- *
- * @param  action  ElasticLoadBalancing action being performed.
- * @param  q       Pointer to this object's public DescribeLoadBalancersRequest instance.
+ * Constructs a DescribeLoadBalancersRequestPrivate object for ElasticLoadBalancing \a action with,
+ * public implementation \a q.
  */
 DescribeLoadBalancersRequestPrivate::DescribeLoadBalancersRequestPrivate(
     const ElasticLoadBalancingRequest::Action action, DescribeLoadBalancersRequest * const q)
@@ -132,15 +121,10 @@ DescribeLoadBalancersRequestPrivate::DescribeLoadBalancersRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeLoadBalancersRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeLoadBalancersRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeLoadBalancersRequest instance.
  */
 DescribeLoadBalancersRequestPrivate::DescribeLoadBalancersRequestPrivate(
     const DescribeLoadBalancersRequestPrivate &other, DescribeLoadBalancersRequest * const q)

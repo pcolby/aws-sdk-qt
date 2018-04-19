@@ -27,10 +27,9 @@ namespace ApplicationDiscoveryService {
 
 /*!
  * \class QtAws::ApplicationDiscoveryService::ListConfigurationsRequest
- *
  * \brief The ListConfigurationsRequest class provides an interface for ApplicationDiscoveryService ListConfigurations requests.
  *
- * \ingroup ApplicationDiscoveryService
+ * \inmodule QtAwsApplicationDiscoveryService
  *
  *  <fullname>AWS Application Discovery Service</fullname>
  * 
@@ -101,9 +100,7 @@ namespace ApplicationDiscoveryService {
  */
 
 /*!
- * @brief  Constructs a new ListConfigurationsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListConfigurationsRequest::ListConfigurationsRequest(const ListConfigurationsRequest &other)
     : ApplicationDiscoveryServiceRequest(new ListConfigurationsRequestPrivate(*other.d_func(), this))
@@ -112,7 +109,7 @@ ListConfigurationsRequest::ListConfigurationsRequest(const ListConfigurationsReq
 }
 
 /*!
- * @brief  Constructs a new ListConfigurationsRequest object.
+ * Constructs a ListConfigurationsRequest object.
  */
 ListConfigurationsRequest::ListConfigurationsRequest()
     : ApplicationDiscoveryServiceRequest(new ListConfigurationsRequestPrivate(ApplicationDiscoveryServiceRequest::ListConfigurationsAction, this))
@@ -130,14 +127,9 @@ bool ListConfigurationsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListConfigurationsResponse object.
+ * Returns a ListConfigurationsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListConfigurationsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ApplicationDiscoveryServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListConfigurationsRequest::response(QNetworkReply * const reply) const
 {
@@ -145,20 +137,17 @@ QtAws::Core::AwsAbstractResponse * ListConfigurationsRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::ApplicationDiscoveryService::ListConfigurationsRequestPrivate
+ * \brief The ListConfigurationsRequestPrivate class provides private implementation for ListConfigurationsRequest.
+ * \internal
  *
- * @class  ListConfigurationsRequestPrivate
- *
- * @brief  Private implementation for ListConfigurationsRequest.
+ * \inmodule QtAwsApplicationDiscoveryService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListConfigurationsRequestPrivate object.
- *
- * @param  action  ApplicationDiscoveryService action being performed.
- * @param  q       Pointer to this object's public ListConfigurationsRequest instance.
+ * Constructs a ListConfigurationsRequestPrivate object for ApplicationDiscoveryService \a action with,
+ * public implementation \a q.
  */
 ListConfigurationsRequestPrivate::ListConfigurationsRequestPrivate(
     const ApplicationDiscoveryServiceRequest::Action action, ListConfigurationsRequest * const q)
@@ -168,15 +157,10 @@ ListConfigurationsRequestPrivate::ListConfigurationsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListConfigurationsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListConfigurationsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListConfigurationsRequest instance.
  */
 ListConfigurationsRequestPrivate::ListConfigurationsRequestPrivate(
     const ListConfigurationsRequestPrivate &other, ListConfigurationsRequest * const q)

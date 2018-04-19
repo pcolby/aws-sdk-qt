@@ -27,19 +27,16 @@ namespace Route53 {
 
 /*!
  * \class QtAws::Route53::GetHealthCheckStatusRequest
- *
  * \brief The GetHealthCheckStatusRequest class provides an interface for Route53 GetHealthCheckStatus requests.
  *
- * \ingroup Route53
+ * \inmodule QtAwsRoute53
  *
  *
  * \sa Route53Client::getHealthCheckStatus
  */
 
 /*!
- * @brief  Constructs a new GetHealthCheckStatusRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetHealthCheckStatusRequest::GetHealthCheckStatusRequest(const GetHealthCheckStatusRequest &other)
     : Route53Request(new GetHealthCheckStatusRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ GetHealthCheckStatusRequest::GetHealthCheckStatusRequest(const GetHealthCheckSta
 }
 
 /*!
- * @brief  Constructs a new GetHealthCheckStatusRequest object.
+ * Constructs a GetHealthCheckStatusRequest object.
  */
 GetHealthCheckStatusRequest::GetHealthCheckStatusRequest()
     : Route53Request(new GetHealthCheckStatusRequestPrivate(Route53Request::GetHealthCheckStatusAction, this))
@@ -66,14 +63,9 @@ bool GetHealthCheckStatusRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetHealthCheckStatusResponse object.
+ * Returns a GetHealthCheckStatusResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetHealthCheckStatusResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  Route53Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetHealthCheckStatusRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * GetHealthCheckStatusRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::Route53::GetHealthCheckStatusRequestPrivate
+ * \brief The GetHealthCheckStatusRequestPrivate class provides private implementation for GetHealthCheckStatusRequest.
+ * \internal
  *
- * @class  GetHealthCheckStatusRequestPrivate
- *
- * @brief  Private implementation for GetHealthCheckStatusRequest.
+ * \inmodule QtAwsRoute53
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetHealthCheckStatusRequestPrivate object.
- *
- * @param  action  Route53 action being performed.
- * @param  q       Pointer to this object's public GetHealthCheckStatusRequest instance.
+ * Constructs a GetHealthCheckStatusRequestPrivate object for Route53 \a action with,
+ * public implementation \a q.
  */
 GetHealthCheckStatusRequestPrivate::GetHealthCheckStatusRequestPrivate(
     const Route53Request::Action action, GetHealthCheckStatusRequest * const q)
@@ -104,15 +93,10 @@ GetHealthCheckStatusRequestPrivate::GetHealthCheckStatusRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetHealthCheckStatusRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetHealthCheckStatusRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetHealthCheckStatusRequest instance.
  */
 GetHealthCheckStatusRequestPrivate::GetHealthCheckStatusRequestPrivate(
     const GetHealthCheckStatusRequestPrivate &other, GetHealthCheckStatusRequest * const q)

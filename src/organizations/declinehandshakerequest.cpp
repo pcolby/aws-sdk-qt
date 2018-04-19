@@ -27,10 +27,9 @@ namespace Organizations {
 
 /*!
  * \class QtAws::Organizations::DeclineHandshakeRequest
- *
  * \brief The DeclineHandshakeRequest class provides an interface for Organizations DeclineHandshake requests.
  *
- * \ingroup Organizations
+ * \inmodule QtAwsOrganizations
  *
  *  <fullname>AWS Organizations API Reference</fullname>
  * 
@@ -179,9 +178,7 @@ namespace Organizations {
  */
 
 /*!
- * @brief  Constructs a new DeclineHandshakeRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeclineHandshakeRequest::DeclineHandshakeRequest(const DeclineHandshakeRequest &other)
     : OrganizationsRequest(new DeclineHandshakeRequestPrivate(*other.d_func(), this))
@@ -190,7 +187,7 @@ DeclineHandshakeRequest::DeclineHandshakeRequest(const DeclineHandshakeRequest &
 }
 
 /*!
- * @brief  Constructs a new DeclineHandshakeRequest object.
+ * Constructs a DeclineHandshakeRequest object.
  */
 DeclineHandshakeRequest::DeclineHandshakeRequest()
     : OrganizationsRequest(new DeclineHandshakeRequestPrivate(OrganizationsRequest::DeclineHandshakeAction, this))
@@ -208,14 +205,9 @@ bool DeclineHandshakeRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeclineHandshakeResponse object.
+ * Returns a DeclineHandshakeResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeclineHandshakeResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  OrganizationsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeclineHandshakeRequest::response(QNetworkReply * const reply) const
 {
@@ -223,20 +215,17 @@ QtAws::Core::AwsAbstractResponse * DeclineHandshakeRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::Organizations::DeclineHandshakeRequestPrivate
+ * \brief The DeclineHandshakeRequestPrivate class provides private implementation for DeclineHandshakeRequest.
+ * \internal
  *
- * @class  DeclineHandshakeRequestPrivate
- *
- * @brief  Private implementation for DeclineHandshakeRequest.
+ * \inmodule QtAwsOrganizations
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeclineHandshakeRequestPrivate object.
- *
- * @param  action  Organizations action being performed.
- * @param  q       Pointer to this object's public DeclineHandshakeRequest instance.
+ * Constructs a DeclineHandshakeRequestPrivate object for Organizations \a action with,
+ * public implementation \a q.
  */
 DeclineHandshakeRequestPrivate::DeclineHandshakeRequestPrivate(
     const OrganizationsRequest::Action action, DeclineHandshakeRequest * const q)
@@ -246,15 +235,10 @@ DeclineHandshakeRequestPrivate::DeclineHandshakeRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeclineHandshakeRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeclineHandshakeRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeclineHandshakeRequest instance.
  */
 DeclineHandshakeRequestPrivate::DeclineHandshakeRequestPrivate(
     const DeclineHandshakeRequestPrivate &other, DeclineHandshakeRequest * const q)

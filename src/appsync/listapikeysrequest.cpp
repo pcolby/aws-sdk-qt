@@ -27,10 +27,9 @@ namespace AppSync {
 
 /*!
  * \class QtAws::AppSync::ListApiKeysRequest
- *
  * \brief The ListApiKeysRequest class provides an interface for AppSync ListApiKeys requests.
  *
- * \ingroup AppSync
+ * \inmodule QtAwsAppSync
  *
  *  AWS AppSync provides API actions for creating and interacting with data sources using GraphQL from your
  *
@@ -38,9 +37,7 @@ namespace AppSync {
  */
 
 /*!
- * @brief  Constructs a new ListApiKeysRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListApiKeysRequest::ListApiKeysRequest(const ListApiKeysRequest &other)
     : AppSyncRequest(new ListApiKeysRequestPrivate(*other.d_func(), this))
@@ -49,7 +46,7 @@ ListApiKeysRequest::ListApiKeysRequest(const ListApiKeysRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ListApiKeysRequest object.
+ * Constructs a ListApiKeysRequest object.
  */
 ListApiKeysRequest::ListApiKeysRequest()
     : AppSyncRequest(new ListApiKeysRequestPrivate(AppSyncRequest::ListApiKeysAction, this))
@@ -67,14 +64,9 @@ bool ListApiKeysRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListApiKeysResponse object.
+ * Returns a ListApiKeysResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListApiKeysResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AppSyncClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListApiKeysRequest::response(QNetworkReply * const reply) const
 {
@@ -82,20 +74,17 @@ QtAws::Core::AwsAbstractResponse * ListApiKeysRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::AppSync::ListApiKeysRequestPrivate
+ * \brief The ListApiKeysRequestPrivate class provides private implementation for ListApiKeysRequest.
+ * \internal
  *
- * @class  ListApiKeysRequestPrivate
- *
- * @brief  Private implementation for ListApiKeysRequest.
+ * \inmodule QtAwsAppSync
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListApiKeysRequestPrivate object.
- *
- * @param  action  AppSync action being performed.
- * @param  q       Pointer to this object's public ListApiKeysRequest instance.
+ * Constructs a ListApiKeysRequestPrivate object for AppSync \a action with,
+ * public implementation \a q.
  */
 ListApiKeysRequestPrivate::ListApiKeysRequestPrivate(
     const AppSyncRequest::Action action, ListApiKeysRequest * const q)
@@ -105,15 +94,10 @@ ListApiKeysRequestPrivate::ListApiKeysRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListApiKeysRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListApiKeysRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListApiKeysRequest instance.
  */
 ListApiKeysRequestPrivate::ListApiKeysRequestPrivate(
     const ListApiKeysRequestPrivate &other, ListApiKeysRequest * const q)

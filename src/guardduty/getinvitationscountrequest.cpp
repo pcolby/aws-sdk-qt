@@ -27,19 +27,16 @@ namespace GuardDuty {
 
 /*!
  * \class QtAws::GuardDuty::GetInvitationsCountRequest
- *
  * \brief The GetInvitationsCountRequest class provides an interface for GuardDuty GetInvitationsCount requests.
  *
- * \ingroup GuardDuty
+ * \inmodule QtAwsGuardDuty
  *
  *
  * \sa GuardDutyClient::getInvitationsCount
  */
 
 /*!
- * @brief  Constructs a new GetInvitationsCountRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetInvitationsCountRequest::GetInvitationsCountRequest(const GetInvitationsCountRequest &other)
     : GuardDutyRequest(new GetInvitationsCountRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ GetInvitationsCountRequest::GetInvitationsCountRequest(const GetInvitationsCount
 }
 
 /*!
- * @brief  Constructs a new GetInvitationsCountRequest object.
+ * Constructs a GetInvitationsCountRequest object.
  */
 GetInvitationsCountRequest::GetInvitationsCountRequest()
     : GuardDutyRequest(new GetInvitationsCountRequestPrivate(GuardDutyRequest::GetInvitationsCountAction, this))
@@ -66,14 +63,9 @@ bool GetInvitationsCountRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetInvitationsCountResponse object.
+ * Returns a GetInvitationsCountResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetInvitationsCountResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GuardDutyClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetInvitationsCountRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * GetInvitationsCountRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::GuardDuty::GetInvitationsCountRequestPrivate
+ * \brief The GetInvitationsCountRequestPrivate class provides private implementation for GetInvitationsCountRequest.
+ * \internal
  *
- * @class  GetInvitationsCountRequestPrivate
- *
- * @brief  Private implementation for GetInvitationsCountRequest.
+ * \inmodule QtAwsGuardDuty
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetInvitationsCountRequestPrivate object.
- *
- * @param  action  GuardDuty action being performed.
- * @param  q       Pointer to this object's public GetInvitationsCountRequest instance.
+ * Constructs a GetInvitationsCountRequestPrivate object for GuardDuty \a action with,
+ * public implementation \a q.
  */
 GetInvitationsCountRequestPrivate::GetInvitationsCountRequestPrivate(
     const GuardDutyRequest::Action action, GetInvitationsCountRequest * const q)
@@ -104,15 +93,10 @@ GetInvitationsCountRequestPrivate::GetInvitationsCountRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetInvitationsCountRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetInvitationsCountRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetInvitationsCountRequest instance.
  */
 GetInvitationsCountRequestPrivate::GetInvitationsCountRequestPrivate(
     const GetInvitationsCountRequestPrivate &other, GetInvitationsCountRequest * const q)

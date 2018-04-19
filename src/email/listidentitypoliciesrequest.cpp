@@ -27,10 +27,9 @@ namespace SES {
 
 /*!
  * \class QtAws::SES::ListIdentityPoliciesRequest
- *
  * \brief The ListIdentityPoliciesRequest class provides an interface for SES ListIdentityPolicies requests.
  *
- * \ingroup SES
+ * \inmodule QtAwsSES
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -48,9 +47,7 @@ namespace SES {
  */
 
 /*!
- * @brief  Constructs a new ListIdentityPoliciesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListIdentityPoliciesRequest::ListIdentityPoliciesRequest(const ListIdentityPoliciesRequest &other)
     : SESRequest(new ListIdentityPoliciesRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ ListIdentityPoliciesRequest::ListIdentityPoliciesRequest(const ListIdentityPolic
 }
 
 /*!
- * @brief  Constructs a new ListIdentityPoliciesRequest object.
+ * Constructs a ListIdentityPoliciesRequest object.
  */
 ListIdentityPoliciesRequest::ListIdentityPoliciesRequest()
     : SESRequest(new ListIdentityPoliciesRequestPrivate(SESRequest::ListIdentityPoliciesAction, this))
@@ -77,14 +74,9 @@ bool ListIdentityPoliciesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListIdentityPoliciesResponse object.
+ * Returns a ListIdentityPoliciesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListIdentityPoliciesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SESClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListIdentityPoliciesRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * ListIdentityPoliciesRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::SES::ListIdentityPoliciesRequestPrivate
+ * \brief The ListIdentityPoliciesRequestPrivate class provides private implementation for ListIdentityPoliciesRequest.
+ * \internal
  *
- * @class  ListIdentityPoliciesRequestPrivate
- *
- * @brief  Private implementation for ListIdentityPoliciesRequest.
+ * \inmodule QtAwsSES
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListIdentityPoliciesRequestPrivate object.
- *
- * @param  action  SES action being performed.
- * @param  q       Pointer to this object's public ListIdentityPoliciesRequest instance.
+ * Constructs a ListIdentityPoliciesRequestPrivate object for SES \a action with,
+ * public implementation \a q.
  */
 ListIdentityPoliciesRequestPrivate::ListIdentityPoliciesRequestPrivate(
     const SESRequest::Action action, ListIdentityPoliciesRequest * const q)
@@ -115,15 +104,10 @@ ListIdentityPoliciesRequestPrivate::ListIdentityPoliciesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListIdentityPoliciesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListIdentityPoliciesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListIdentityPoliciesRequest instance.
  */
 ListIdentityPoliciesRequestPrivate::ListIdentityPoliciesRequestPrivate(
     const ListIdentityPoliciesRequestPrivate &other, ListIdentityPoliciesRequest * const q)

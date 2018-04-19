@@ -27,19 +27,16 @@ namespace KinesisAnalytics {
 
 /*!
  * \class QtAws::KinesisAnalytics::ListApplicationsRequest
- *
  * \brief The ListApplicationsRequest class provides an interface for KinesisAnalytics ListApplications requests.
  *
- * \ingroup KinesisAnalytics
+ * \inmodule QtAwsKinesisAnalytics
  *
  *
  * \sa KinesisAnalyticsClient::listApplications
  */
 
 /*!
- * @brief  Constructs a new ListApplicationsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListApplicationsRequest::ListApplicationsRequest(const ListApplicationsRequest &other)
     : KinesisAnalyticsRequest(new ListApplicationsRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ ListApplicationsRequest::ListApplicationsRequest(const ListApplicationsRequest &
 }
 
 /*!
- * @brief  Constructs a new ListApplicationsRequest object.
+ * Constructs a ListApplicationsRequest object.
  */
 ListApplicationsRequest::ListApplicationsRequest()
     : KinesisAnalyticsRequest(new ListApplicationsRequestPrivate(KinesisAnalyticsRequest::ListApplicationsAction, this))
@@ -66,14 +63,9 @@ bool ListApplicationsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListApplicationsResponse object.
+ * Returns a ListApplicationsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListApplicationsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  KinesisAnalyticsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListApplicationsRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * ListApplicationsRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::KinesisAnalytics::ListApplicationsRequestPrivate
+ * \brief The ListApplicationsRequestPrivate class provides private implementation for ListApplicationsRequest.
+ * \internal
  *
- * @class  ListApplicationsRequestPrivate
- *
- * @brief  Private implementation for ListApplicationsRequest.
+ * \inmodule QtAwsKinesisAnalytics
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListApplicationsRequestPrivate object.
- *
- * @param  action  KinesisAnalytics action being performed.
- * @param  q       Pointer to this object's public ListApplicationsRequest instance.
+ * Constructs a ListApplicationsRequestPrivate object for KinesisAnalytics \a action with,
+ * public implementation \a q.
  */
 ListApplicationsRequestPrivate::ListApplicationsRequestPrivate(
     const KinesisAnalyticsRequest::Action action, ListApplicationsRequest * const q)
@@ -104,15 +93,10 @@ ListApplicationsRequestPrivate::ListApplicationsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListApplicationsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListApplicationsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListApplicationsRequest instance.
  */
 ListApplicationsRequestPrivate::ListApplicationsRequestPrivate(
     const ListApplicationsRequestPrivate &other, ListApplicationsRequest * const q)

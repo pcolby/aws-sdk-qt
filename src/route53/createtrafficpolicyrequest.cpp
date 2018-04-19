@@ -27,19 +27,16 @@ namespace Route53 {
 
 /*!
  * \class QtAws::Route53::CreateTrafficPolicyRequest
- *
  * \brief The CreateTrafficPolicyRequest class provides an interface for Route53 CreateTrafficPolicy requests.
  *
- * \ingroup Route53
+ * \inmodule QtAwsRoute53
  *
  *
  * \sa Route53Client::createTrafficPolicy
  */
 
 /*!
- * @brief  Constructs a new CreateTrafficPolicyRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateTrafficPolicyRequest::CreateTrafficPolicyRequest(const CreateTrafficPolicyRequest &other)
     : Route53Request(new CreateTrafficPolicyRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ CreateTrafficPolicyRequest::CreateTrafficPolicyRequest(const CreateTrafficPolicy
 }
 
 /*!
- * @brief  Constructs a new CreateTrafficPolicyRequest object.
+ * Constructs a CreateTrafficPolicyRequest object.
  */
 CreateTrafficPolicyRequest::CreateTrafficPolicyRequest()
     : Route53Request(new CreateTrafficPolicyRequestPrivate(Route53Request::CreateTrafficPolicyAction, this))
@@ -66,14 +63,9 @@ bool CreateTrafficPolicyRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateTrafficPolicyResponse object.
+ * Returns a CreateTrafficPolicyResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateTrafficPolicyResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  Route53Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateTrafficPolicyRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * CreateTrafficPolicyRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::Route53::CreateTrafficPolicyRequestPrivate
+ * \brief The CreateTrafficPolicyRequestPrivate class provides private implementation for CreateTrafficPolicyRequest.
+ * \internal
  *
- * @class  CreateTrafficPolicyRequestPrivate
- *
- * @brief  Private implementation for CreateTrafficPolicyRequest.
+ * \inmodule QtAwsRoute53
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateTrafficPolicyRequestPrivate object.
- *
- * @param  action  Route53 action being performed.
- * @param  q       Pointer to this object's public CreateTrafficPolicyRequest instance.
+ * Constructs a CreateTrafficPolicyRequestPrivate object for Route53 \a action with,
+ * public implementation \a q.
  */
 CreateTrafficPolicyRequestPrivate::CreateTrafficPolicyRequestPrivate(
     const Route53Request::Action action, CreateTrafficPolicyRequest * const q)
@@ -104,15 +93,10 @@ CreateTrafficPolicyRequestPrivate::CreateTrafficPolicyRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateTrafficPolicyRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateTrafficPolicyRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateTrafficPolicyRequest instance.
  */
 CreateTrafficPolicyRequestPrivate::CreateTrafficPolicyRequestPrivate(
     const CreateTrafficPolicyRequestPrivate &other, CreateTrafficPolicyRequest * const q)

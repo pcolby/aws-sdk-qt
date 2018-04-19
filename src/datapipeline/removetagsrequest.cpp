@@ -27,10 +27,9 @@ namespace DataPipeline {
 
 /*!
  * \class QtAws::DataPipeline::RemoveTagsRequest
- *
  * \brief The RemoveTagsRequest class provides an interface for DataPipeline RemoveTags requests.
  *
- * \ingroup DataPipeline
+ * \inmodule QtAwsDataPipeline
  *
  *  AWS Data Pipeline configures and manages a data-driven workflow called a pipeline. AWS Data Pipeline handles the details
  *  of scheduling and ensuring that data dependencies are met so that your application can focus on processing the
@@ -55,9 +54,7 @@ namespace DataPipeline {
  */
 
 /*!
- * @brief  Constructs a new RemoveTagsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 RemoveTagsRequest::RemoveTagsRequest(const RemoveTagsRequest &other)
     : DataPipelineRequest(new RemoveTagsRequestPrivate(*other.d_func(), this))
@@ -66,7 +63,7 @@ RemoveTagsRequest::RemoveTagsRequest(const RemoveTagsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new RemoveTagsRequest object.
+ * Constructs a RemoveTagsRequest object.
  */
 RemoveTagsRequest::RemoveTagsRequest()
     : DataPipelineRequest(new RemoveTagsRequestPrivate(DataPipelineRequest::RemoveTagsAction, this))
@@ -84,14 +81,9 @@ bool RemoveTagsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an RemoveTagsResponse object.
+ * Returns a RemoveTagsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An RemoveTagsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DataPipelineClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * RemoveTagsRequest::response(QNetworkReply * const reply) const
 {
@@ -99,20 +91,17 @@ QtAws::Core::AwsAbstractResponse * RemoveTagsRequest::response(QNetworkReply * c
 }
 
 /*!
- * @internal
+ * \class QtAws::DataPipeline::RemoveTagsRequestPrivate
+ * \brief The RemoveTagsRequestPrivate class provides private implementation for RemoveTagsRequest.
+ * \internal
  *
- * @class  RemoveTagsRequestPrivate
- *
- * @brief  Private implementation for RemoveTagsRequest.
+ * \inmodule QtAwsDataPipeline
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new RemoveTagsRequestPrivate object.
- *
- * @param  action  DataPipeline action being performed.
- * @param  q       Pointer to this object's public RemoveTagsRequest instance.
+ * Constructs a RemoveTagsRequestPrivate object for DataPipeline \a action with,
+ * public implementation \a q.
  */
 RemoveTagsRequestPrivate::RemoveTagsRequestPrivate(
     const DataPipelineRequest::Action action, RemoveTagsRequest * const q)
@@ -122,15 +111,10 @@ RemoveTagsRequestPrivate::RemoveTagsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RemoveTagsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the RemoveTagsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public RemoveTagsRequest instance.
  */
 RemoveTagsRequestPrivate::RemoveTagsRequestPrivate(
     const RemoveTagsRequestPrivate &other, RemoveTagsRequest * const q)

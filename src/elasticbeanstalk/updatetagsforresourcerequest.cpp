@@ -27,10 +27,9 @@ namespace ElasticBeanstalk {
 
 /*!
  * \class QtAws::ElasticBeanstalk::UpdateTagsForResourceRequest
- *
  * \brief The UpdateTagsForResourceRequest class provides an interface for ElasticBeanstalk UpdateTagsForResource requests.
  *
- * \ingroup ElasticBeanstalk
+ * \inmodule QtAwsElasticBeanstalk
  *
  *  <fullname>AWS Elastic Beanstalk</fullname>
  * 
@@ -59,9 +58,7 @@ namespace ElasticBeanstalk {
  */
 
 /*!
- * @brief  Constructs a new UpdateTagsForResourceRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateTagsForResourceRequest::UpdateTagsForResourceRequest(const UpdateTagsForResourceRequest &other)
     : ElasticBeanstalkRequest(new UpdateTagsForResourceRequestPrivate(*other.d_func(), this))
@@ -70,7 +67,7 @@ UpdateTagsForResourceRequest::UpdateTagsForResourceRequest(const UpdateTagsForRe
 }
 
 /*!
- * @brief  Constructs a new UpdateTagsForResourceRequest object.
+ * Constructs a UpdateTagsForResourceRequest object.
  */
 UpdateTagsForResourceRequest::UpdateTagsForResourceRequest()
     : ElasticBeanstalkRequest(new UpdateTagsForResourceRequestPrivate(ElasticBeanstalkRequest::UpdateTagsForResourceAction, this))
@@ -88,14 +85,9 @@ bool UpdateTagsForResourceRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateTagsForResourceResponse object.
+ * Returns a UpdateTagsForResourceResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateTagsForResourceResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ElasticBeanstalkClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateTagsForResourceRequest::response(QNetworkReply * const reply) const
 {
@@ -103,20 +95,17 @@ QtAws::Core::AwsAbstractResponse * UpdateTagsForResourceRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::ElasticBeanstalk::UpdateTagsForResourceRequestPrivate
+ * \brief The UpdateTagsForResourceRequestPrivate class provides private implementation for UpdateTagsForResourceRequest.
+ * \internal
  *
- * @class  UpdateTagsForResourceRequestPrivate
- *
- * @brief  Private implementation for UpdateTagsForResourceRequest.
+ * \inmodule QtAwsElasticBeanstalk
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateTagsForResourceRequestPrivate object.
- *
- * @param  action  ElasticBeanstalk action being performed.
- * @param  q       Pointer to this object's public UpdateTagsForResourceRequest instance.
+ * Constructs a UpdateTagsForResourceRequestPrivate object for ElasticBeanstalk \a action with,
+ * public implementation \a q.
  */
 UpdateTagsForResourceRequestPrivate::UpdateTagsForResourceRequestPrivate(
     const ElasticBeanstalkRequest::Action action, UpdateTagsForResourceRequest * const q)
@@ -126,15 +115,10 @@ UpdateTagsForResourceRequestPrivate::UpdateTagsForResourceRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateTagsForResourceRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateTagsForResourceRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateTagsForResourceRequest instance.
  */
 UpdateTagsForResourceRequestPrivate::UpdateTagsForResourceRequestPrivate(
     const UpdateTagsForResourceRequestPrivate &other, UpdateTagsForResourceRequest * const q)

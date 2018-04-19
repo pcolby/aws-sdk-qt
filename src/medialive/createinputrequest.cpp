@@ -27,19 +27,16 @@ namespace MediaLive {
 
 /*!
  * \class QtAws::MediaLive::CreateInputRequest
- *
  * \brief The CreateInputRequest class provides an interface for MediaLive CreateInput requests.
  *
- * \ingroup MediaLive
+ * \inmodule QtAwsMediaLive
  *
  *
  * \sa MediaLiveClient::createInput
  */
 
 /*!
- * @brief  Constructs a new CreateInputRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateInputRequest::CreateInputRequest(const CreateInputRequest &other)
     : MediaLiveRequest(new CreateInputRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ CreateInputRequest::CreateInputRequest(const CreateInputRequest &other)
 }
 
 /*!
- * @brief  Constructs a new CreateInputRequest object.
+ * Constructs a CreateInputRequest object.
  */
 CreateInputRequest::CreateInputRequest()
     : MediaLiveRequest(new CreateInputRequestPrivate(MediaLiveRequest::CreateInputAction, this))
@@ -66,14 +63,9 @@ bool CreateInputRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateInputResponse object.
+ * Returns a CreateInputResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateInputResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MediaLiveClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateInputRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * CreateInputRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::MediaLive::CreateInputRequestPrivate
+ * \brief The CreateInputRequestPrivate class provides private implementation for CreateInputRequest.
+ * \internal
  *
- * @class  CreateInputRequestPrivate
- *
- * @brief  Private implementation for CreateInputRequest.
+ * \inmodule QtAwsMediaLive
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateInputRequestPrivate object.
- *
- * @param  action  MediaLive action being performed.
- * @param  q       Pointer to this object's public CreateInputRequest instance.
+ * Constructs a CreateInputRequestPrivate object for MediaLive \a action with,
+ * public implementation \a q.
  */
 CreateInputRequestPrivate::CreateInputRequestPrivate(
     const MediaLiveRequest::Action action, CreateInputRequest * const q)
@@ -104,15 +93,10 @@ CreateInputRequestPrivate::CreateInputRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateInputRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateInputRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateInputRequest instance.
  */
 CreateInputRequestPrivate::CreateInputRequestPrivate(
     const CreateInputRequestPrivate &other, CreateInputRequest * const q)

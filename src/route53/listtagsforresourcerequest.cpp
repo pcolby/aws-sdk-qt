@@ -27,19 +27,16 @@ namespace Route53 {
 
 /*!
  * \class QtAws::Route53::ListTagsForResourceRequest
- *
  * \brief The ListTagsForResourceRequest class provides an interface for Route53 ListTagsForResource requests.
  *
- * \ingroup Route53
+ * \inmodule QtAwsRoute53
  *
  *
  * \sa Route53Client::listTagsForResource
  */
 
 /*!
- * @brief  Constructs a new ListTagsForResourceRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListTagsForResourceRequest::ListTagsForResourceRequest(const ListTagsForResourceRequest &other)
     : Route53Request(new ListTagsForResourceRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ ListTagsForResourceRequest::ListTagsForResourceRequest(const ListTagsForResource
 }
 
 /*!
- * @brief  Constructs a new ListTagsForResourceRequest object.
+ * Constructs a ListTagsForResourceRequest object.
  */
 ListTagsForResourceRequest::ListTagsForResourceRequest()
     : Route53Request(new ListTagsForResourceRequestPrivate(Route53Request::ListTagsForResourceAction, this))
@@ -66,14 +63,9 @@ bool ListTagsForResourceRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListTagsForResourceResponse object.
+ * Returns a ListTagsForResourceResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListTagsForResourceResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  Route53Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListTagsForResourceRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * ListTagsForResourceRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::Route53::ListTagsForResourceRequestPrivate
+ * \brief The ListTagsForResourceRequestPrivate class provides private implementation for ListTagsForResourceRequest.
+ * \internal
  *
- * @class  ListTagsForResourceRequestPrivate
- *
- * @brief  Private implementation for ListTagsForResourceRequest.
+ * \inmodule QtAwsRoute53
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListTagsForResourceRequestPrivate object.
- *
- * @param  action  Route53 action being performed.
- * @param  q       Pointer to this object's public ListTagsForResourceRequest instance.
+ * Constructs a ListTagsForResourceRequestPrivate object for Route53 \a action with,
+ * public implementation \a q.
  */
 ListTagsForResourceRequestPrivate::ListTagsForResourceRequestPrivate(
     const Route53Request::Action action, ListTagsForResourceRequest * const q)
@@ -104,15 +93,10 @@ ListTagsForResourceRequestPrivate::ListTagsForResourceRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListTagsForResourceRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListTagsForResourceRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListTagsForResourceRequest instance.
  */
 ListTagsForResourceRequestPrivate::ListTagsForResourceRequestPrivate(
     const ListTagsForResourceRequestPrivate &other, ListTagsForResourceRequest * const q)

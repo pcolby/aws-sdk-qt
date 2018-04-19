@@ -27,10 +27,9 @@ namespace WAF {
 
 /*!
  * \class QtAws::WAF::CreateRegexPatternSetRequest
- *
  * \brief The CreateRegexPatternSetRequest class provides an interface for WAF CreateRegexPatternSet requests.
  *
- * \ingroup WAF
+ * \inmodule QtAwsWAF
  *
  *  This is the <i>AWS WAF API Reference</i> for using AWS WAF with Amazon CloudFront. The AWS WAF actions and data types
  *  listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data
@@ -42,9 +41,7 @@ namespace WAF {
  */
 
 /*!
- * @brief  Constructs a new CreateRegexPatternSetRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateRegexPatternSetRequest::CreateRegexPatternSetRequest(const CreateRegexPatternSetRequest &other)
     : WAFRequest(new CreateRegexPatternSetRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ CreateRegexPatternSetRequest::CreateRegexPatternSetRequest(const CreateRegexPatt
 }
 
 /*!
- * @brief  Constructs a new CreateRegexPatternSetRequest object.
+ * Constructs a CreateRegexPatternSetRequest object.
  */
 CreateRegexPatternSetRequest::CreateRegexPatternSetRequest()
     : WAFRequest(new CreateRegexPatternSetRequestPrivate(WAFRequest::CreateRegexPatternSetAction, this))
@@ -71,14 +68,9 @@ bool CreateRegexPatternSetRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateRegexPatternSetResponse object.
+ * Returns a CreateRegexPatternSetResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateRegexPatternSetResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WAFClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateRegexPatternSetRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * CreateRegexPatternSetRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::WAF::CreateRegexPatternSetRequestPrivate
+ * \brief The CreateRegexPatternSetRequestPrivate class provides private implementation for CreateRegexPatternSetRequest.
+ * \internal
  *
- * @class  CreateRegexPatternSetRequestPrivate
- *
- * @brief  Private implementation for CreateRegexPatternSetRequest.
+ * \inmodule QtAwsWAF
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateRegexPatternSetRequestPrivate object.
- *
- * @param  action  WAF action being performed.
- * @param  q       Pointer to this object's public CreateRegexPatternSetRequest instance.
+ * Constructs a CreateRegexPatternSetRequestPrivate object for WAF \a action with,
+ * public implementation \a q.
  */
 CreateRegexPatternSetRequestPrivate::CreateRegexPatternSetRequestPrivate(
     const WAFRequest::Action action, CreateRegexPatternSetRequest * const q)
@@ -109,15 +98,10 @@ CreateRegexPatternSetRequestPrivate::CreateRegexPatternSetRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateRegexPatternSetRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateRegexPatternSetRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateRegexPatternSetRequest instance.
  */
 CreateRegexPatternSetRequestPrivate::CreateRegexPatternSetRequestPrivate(
     const CreateRegexPatternSetRequestPrivate &other, CreateRegexPatternSetRequest * const q)

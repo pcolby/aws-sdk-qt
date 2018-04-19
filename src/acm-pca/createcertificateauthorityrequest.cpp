@@ -27,10 +27,9 @@ namespace ACMPCA {
 
 /*!
  * \class QtAws::ACMPCA::CreateCertificateAuthorityRequest
- *
  * \brief The CreateCertificateAuthorityRequest class provides an interface for ACMPCA CreateCertificateAuthority requests.
  *
- * \ingroup ACMPCA
+ * \inmodule QtAwsACMPCA
  *
  *  You can use the ACM PCA API to create a private certificate authority (CA). You must first call the
  *  <a>CreateCertificateAuthority</a> function. If successful, the function returns an Amazon Resource Name (ARN) for your
@@ -67,9 +66,7 @@ namespace ACMPCA {
  */
 
 /*!
- * @brief  Constructs a new CreateCertificateAuthorityRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateCertificateAuthorityRequest::CreateCertificateAuthorityRequest(const CreateCertificateAuthorityRequest &other)
     : ACMPCARequest(new CreateCertificateAuthorityRequestPrivate(*other.d_func(), this))
@@ -78,7 +75,7 @@ CreateCertificateAuthorityRequest::CreateCertificateAuthorityRequest(const Creat
 }
 
 /*!
- * @brief  Constructs a new CreateCertificateAuthorityRequest object.
+ * Constructs a CreateCertificateAuthorityRequest object.
  */
 CreateCertificateAuthorityRequest::CreateCertificateAuthorityRequest()
     : ACMPCARequest(new CreateCertificateAuthorityRequestPrivate(ACMPCARequest::CreateCertificateAuthorityAction, this))
@@ -96,14 +93,9 @@ bool CreateCertificateAuthorityRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateCertificateAuthorityResponse object.
+ * Returns a CreateCertificateAuthorityResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateCertificateAuthorityResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ACMPCAClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateCertificateAuthorityRequest::response(QNetworkReply * const reply) const
 {
@@ -111,20 +103,17 @@ QtAws::Core::AwsAbstractResponse * CreateCertificateAuthorityRequest::response(Q
 }
 
 /*!
- * @internal
+ * \class QtAws::ACMPCA::CreateCertificateAuthorityRequestPrivate
+ * \brief The CreateCertificateAuthorityRequestPrivate class provides private implementation for CreateCertificateAuthorityRequest.
+ * \internal
  *
- * @class  CreateCertificateAuthorityRequestPrivate
- *
- * @brief  Private implementation for CreateCertificateAuthorityRequest.
+ * \inmodule QtAwsACMPCA
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateCertificateAuthorityRequestPrivate object.
- *
- * @param  action  ACMPCA action being performed.
- * @param  q       Pointer to this object's public CreateCertificateAuthorityRequest instance.
+ * Constructs a CreateCertificateAuthorityRequestPrivate object for ACMPCA \a action with,
+ * public implementation \a q.
  */
 CreateCertificateAuthorityRequestPrivate::CreateCertificateAuthorityRequestPrivate(
     const ACMPCARequest::Action action, CreateCertificateAuthorityRequest * const q)
@@ -134,15 +123,10 @@ CreateCertificateAuthorityRequestPrivate::CreateCertificateAuthorityRequestPriva
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateCertificateAuthorityRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateCertificateAuthorityRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateCertificateAuthorityRequest instance.
  */
 CreateCertificateAuthorityRequestPrivate::CreateCertificateAuthorityRequestPrivate(
     const CreateCertificateAuthorityRequestPrivate &other, CreateCertificateAuthorityRequest * const q)

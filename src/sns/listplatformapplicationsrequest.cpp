@@ -27,10 +27,9 @@ namespace SNS {
 
 /*!
  * \class QtAws::SNS::ListPlatformApplicationsRequest
- *
  * \brief The ListPlatformApplicationsRequest class provides an interface for SNS ListPlatformApplications requests.
  *
- * \ingroup SNS
+ * \inmodule QtAwsSNS
  *
  *  <fullname>Amazon Simple Notification Service</fullname>
  * 
@@ -51,9 +50,7 @@ namespace SNS {
  */
 
 /*!
- * @brief  Constructs a new ListPlatformApplicationsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListPlatformApplicationsRequest::ListPlatformApplicationsRequest(const ListPlatformApplicationsRequest &other)
     : SNSRequest(new ListPlatformApplicationsRequestPrivate(*other.d_func(), this))
@@ -62,7 +59,7 @@ ListPlatformApplicationsRequest::ListPlatformApplicationsRequest(const ListPlatf
 }
 
 /*!
- * @brief  Constructs a new ListPlatformApplicationsRequest object.
+ * Constructs a ListPlatformApplicationsRequest object.
  */
 ListPlatformApplicationsRequest::ListPlatformApplicationsRequest()
     : SNSRequest(new ListPlatformApplicationsRequestPrivate(SNSRequest::ListPlatformApplicationsAction, this))
@@ -80,14 +77,9 @@ bool ListPlatformApplicationsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListPlatformApplicationsResponse object.
+ * Returns a ListPlatformApplicationsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListPlatformApplicationsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SNSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListPlatformApplicationsRequest::response(QNetworkReply * const reply) const
 {
@@ -95,20 +87,17 @@ QtAws::Core::AwsAbstractResponse * ListPlatformApplicationsRequest::response(QNe
 }
 
 /*!
- * @internal
+ * \class QtAws::SNS::ListPlatformApplicationsRequestPrivate
+ * \brief The ListPlatformApplicationsRequestPrivate class provides private implementation for ListPlatformApplicationsRequest.
+ * \internal
  *
- * @class  ListPlatformApplicationsRequestPrivate
- *
- * @brief  Private implementation for ListPlatformApplicationsRequest.
+ * \inmodule QtAwsSNS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListPlatformApplicationsRequestPrivate object.
- *
- * @param  action  SNS action being performed.
- * @param  q       Pointer to this object's public ListPlatformApplicationsRequest instance.
+ * Constructs a ListPlatformApplicationsRequestPrivate object for SNS \a action with,
+ * public implementation \a q.
  */
 ListPlatformApplicationsRequestPrivate::ListPlatformApplicationsRequestPrivate(
     const SNSRequest::Action action, ListPlatformApplicationsRequest * const q)
@@ -118,15 +107,10 @@ ListPlatformApplicationsRequestPrivate::ListPlatformApplicationsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListPlatformApplicationsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListPlatformApplicationsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListPlatformApplicationsRequest instance.
  */
 ListPlatformApplicationsRequestPrivate::ListPlatformApplicationsRequestPrivate(
     const ListPlatformApplicationsRequestPrivate &other, ListPlatformApplicationsRequest * const q)

@@ -27,10 +27,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::GetInventorySchemaRequest
- *
  * \brief The GetInventorySchemaRequest class provides an interface for SSM GetInventorySchema requests.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -61,9 +60,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new GetInventorySchemaRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetInventorySchemaRequest::GetInventorySchemaRequest(const GetInventorySchemaRequest &other)
     : SSMRequest(new GetInventorySchemaRequestPrivate(*other.d_func(), this))
@@ -72,7 +69,7 @@ GetInventorySchemaRequest::GetInventorySchemaRequest(const GetInventorySchemaReq
 }
 
 /*!
- * @brief  Constructs a new GetInventorySchemaRequest object.
+ * Constructs a GetInventorySchemaRequest object.
  */
 GetInventorySchemaRequest::GetInventorySchemaRequest()
     : SSMRequest(new GetInventorySchemaRequestPrivate(SSMRequest::GetInventorySchemaAction, this))
@@ -90,14 +87,9 @@ bool GetInventorySchemaRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetInventorySchemaResponse object.
+ * Returns a GetInventorySchemaResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetInventorySchemaResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SSMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetInventorySchemaRequest::response(QNetworkReply * const reply) const
 {
@@ -105,20 +97,17 @@ QtAws::Core::AwsAbstractResponse * GetInventorySchemaRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::SSM::GetInventorySchemaRequestPrivate
+ * \brief The GetInventorySchemaRequestPrivate class provides private implementation for GetInventorySchemaRequest.
+ * \internal
  *
- * @class  GetInventorySchemaRequestPrivate
- *
- * @brief  Private implementation for GetInventorySchemaRequest.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetInventorySchemaRequestPrivate object.
- *
- * @param  action  SSM action being performed.
- * @param  q       Pointer to this object's public GetInventorySchemaRequest instance.
+ * Constructs a GetInventorySchemaRequestPrivate object for SSM \a action with,
+ * public implementation \a q.
  */
 GetInventorySchemaRequestPrivate::GetInventorySchemaRequestPrivate(
     const SSMRequest::Action action, GetInventorySchemaRequest * const q)
@@ -128,15 +117,10 @@ GetInventorySchemaRequestPrivate::GetInventorySchemaRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetInventorySchemaRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetInventorySchemaRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetInventorySchemaRequest instance.
  */
 GetInventorySchemaRequestPrivate::GetInventorySchemaRequestPrivate(
     const GetInventorySchemaRequestPrivate &other, GetInventorySchemaRequest * const q)

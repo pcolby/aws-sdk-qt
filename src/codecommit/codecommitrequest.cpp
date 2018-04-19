@@ -25,16 +25,57 @@ namespace CodeCommit {
 
 /*!
  * \class QtAws::CodeCommit::CodeCommitRequest
- *
  * \brief The CodeCommitRequest class provides an interface for CodeCommit requests.
  *
- * \ingroup CodeCommit
+ * \inmodule QtAwsCodeCommit
  */
 
 /*!
- * @brief  Constructs a new CodeCommitRequest object.
+ * \enum CodeCommitRequest::Action
  *
- * @param  action  The CodeCommit action to request.
+ * This enum describes the actions that can be performed as CodeCommit
+ * requests.
+ *
+ * \value BatchGetRepositoriesAction CodeCommit BatchGetRepositories action.
+ * \value CreateBranchAction CodeCommit CreateBranch action.
+ * \value CreatePullRequestAction CodeCommit CreatePullRequest action.
+ * \value CreateRepositoryAction CodeCommit CreateRepository action.
+ * \value DeleteBranchAction CodeCommit DeleteBranch action.
+ * \value DeleteCommentContentAction CodeCommit DeleteCommentContent action.
+ * \value DeleteRepositoryAction CodeCommit DeleteRepository action.
+ * \value DescribePullRequestEventsAction CodeCommit DescribePullRequestEvents action.
+ * \value GetBlobAction CodeCommit GetBlob action.
+ * \value GetBranchAction CodeCommit GetBranch action.
+ * \value GetCommentAction CodeCommit GetComment action.
+ * \value GetCommentsForComparedCommitAction CodeCommit GetCommentsForComparedCommit action.
+ * \value GetCommentsForPullRequestAction CodeCommit GetCommentsForPullRequest action.
+ * \value GetCommitAction CodeCommit GetCommit action.
+ * \value GetDifferencesAction CodeCommit GetDifferences action.
+ * \value GetMergeConflictsAction CodeCommit GetMergeConflicts action.
+ * \value GetPullRequestAction CodeCommit GetPullRequest action.
+ * \value GetRepositoryAction CodeCommit GetRepository action.
+ * \value GetRepositoryTriggersAction CodeCommit GetRepositoryTriggers action.
+ * \value ListBranchesAction CodeCommit ListBranches action.
+ * \value ListPullRequestsAction CodeCommit ListPullRequests action.
+ * \value ListRepositoriesAction CodeCommit ListRepositories action.
+ * \value MergePullRequestByFastForwardAction CodeCommit MergePullRequestByFastForward action.
+ * \value PostCommentForComparedCommitAction CodeCommit PostCommentForComparedCommit action.
+ * \value PostCommentForPullRequestAction CodeCommit PostCommentForPullRequest action.
+ * \value PostCommentReplyAction CodeCommit PostCommentReply action.
+ * \value PutFileAction CodeCommit PutFile action.
+ * \value PutRepositoryTriggersAction CodeCommit PutRepositoryTriggers action.
+ * \value TestRepositoryTriggersAction CodeCommit TestRepositoryTriggers action.
+ * \value UpdateCommentAction CodeCommit UpdateComment action.
+ * \value UpdateDefaultBranchAction CodeCommit UpdateDefaultBranch action.
+ * \value UpdatePullRequestDescriptionAction CodeCommit UpdatePullRequestDescription action.
+ * \value UpdatePullRequestStatusAction CodeCommit UpdatePullRequestStatus action.
+ * \value UpdatePullRequestTitleAction CodeCommit UpdatePullRequestTitle action.
+ * \value UpdateRepositoryDescriptionAction CodeCommit UpdateRepositoryDescription action.
+ * \value UpdateRepositoryNameAction CodeCommit UpdateRepositoryName action.
+ */
+
+/*!
+ * Constructs a[n] CodeCommitRequest object for CodeCommit \a action.
  */
 CodeCommitRequest::CodeCommitRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new CodeCommitRequestPrivate(action, this))
@@ -43,9 +84,7 @@ CodeCommitRequest::CodeCommitRequest(const Action action)
 }
 
 /*!
- * @brief  Constructs a new CodeCommitRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CodeCommitRequest::CodeCommitRequest(const CodeCommitRequest &other)
     : QtAws::Core::AwsAbstractRequest(new CodeCommitRequestPrivate(*other.d_func(), this))
@@ -54,13 +93,7 @@ CodeCommitRequest::CodeCommitRequest(const CodeCommitRequest &other)
 }
 
 /*!
- * @brief  Assignment operator.
- *
- * Assigns \a other to \c this.
- *
- * @param  other  Instance to copy.
- *
- * @return  A reference to \c this.
+ * Sets the CodeCommitRequest object to be equal to \a other.
  */
 CodeCommitRequest& CodeCommitRequest::operator=(const CodeCommitRequest &other)
 {
@@ -72,14 +105,10 @@ CodeCommitRequest& CodeCommitRequest::operator=(const CodeCommitRequest &other)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CodeCommitRequest object.
+ * Constructs aa CodeCommitRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from CodeCommitRequestPrivate.
- *
- * @param  d  Pointer to private data (aka D-Pointer).
  */
 CodeCommitRequest::CodeCommitRequest(CodeCommitRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
@@ -87,7 +116,7 @@ CodeCommitRequest::CodeCommitRequest(CodeCommitRequestPrivate * const d) : QtAws
 }
 
 /*!
- * \brief Returns the CodeCommit action to be performed by this request.
+ * Returns the CodeCommit action to be performed by this request.
  */
 CodeCommitRequest::Action CodeCommitRequest::action() const
 {
@@ -96,7 +125,7 @@ CodeCommitRequest::Action CodeCommitRequest::action() const
 }
 
 /*!
- * \brief Returns the name of the CodeCommit action to be performed by this request.
+ * Returns the name of the CodeCommit action to be performed by this request.
  */
 QString CodeCommitRequest::actionString() const
 {
@@ -104,7 +133,7 @@ QString CodeCommitRequest::actionString() const
 }
 
 /*!
- * \brief Returns the CodeCommit API version implemented by this request.
+ * Returns the CodeCommit API version implemented by this request.
  */
 QString CodeCommitRequest::apiVersion() const
 {
@@ -113,7 +142,7 @@ QString CodeCommitRequest::apiVersion() const
 }
 
 /*!
- * @brief Set the CodeCommit action to be performed by this request to \a action.
+ * Sets the CodeCommit action to be performed by this request to \a action.
  */
 void CodeCommitRequest::setAction(const Action action)
 {
@@ -122,7 +151,7 @@ void CodeCommitRequest::setAction(const Action action)
 }
 
 /*!
- * Set the CodeCommit API version to include in this request to \a version.
+ * Sets the CodeCommit API version to include in this request to \a version.
  */
 void CodeCommitRequest::setApiVersion(const QString &version)
 {
@@ -131,7 +160,7 @@ void CodeCommitRequest::setApiVersion(const QString &version)
 }
 
 /*!
- * \brief Returns \c true if this request is the same as \a other.
+ * Returns \c true if this request is equal to \a other; \c false otherwise.
  *
  * Note, most derived *Request classes do not need to provider their own
  * implementations of this function, since most such request classes rely on
@@ -146,8 +175,8 @@ bool CodeCommitRequest::operator==(const CodeCommitRequest &other) const
             (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
-/*!
- * @brief  Check if \a queueName is a valid CodeCommit queue name.
+/*
+ * Returns \c tue if \a queueName is a valid CodeCommit queue name.
  *
  * @par From CodeCommit FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
@@ -166,9 +195,8 @@ bool CodeCommitRequest::operator==(const CodeCommitRequest &other) const
 }*/
 
 /*!
- * \brief Removes the a \a name parameter from this request.
- *
- * Returns the count of paramters removed (typically \c 0 or \c 1).
+ * Removes the a \a name parameter from the request, then returns the number of
+ * paramters removed (typically \c 0 or \c 1).
  */
 int CodeCommitRequest::clearParameter(const QString &name)
 {
@@ -177,7 +205,7 @@ int CodeCommitRequest::clearParameter(const QString &name)
 }
 
 /*!
- * \brief Removes all parameters from this request.
+ * Removes all parameters from the request.
  */
 void CodeCommitRequest::clearParameters()
 {
@@ -186,7 +214,7 @@ void CodeCommitRequest::clearParameters()
 }
 
 /*!
- * \brief Returns the value of the \n name pararemter if set, otherwise \a defaultValue.
+ * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
 QVariant CodeCommitRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
@@ -195,7 +223,7 @@ QVariant CodeCommitRequest::parameter(const QString &name, const QVariant &defau
 }
 
 /*!
- * \brief Returns a map of parameters included in this request.
+ * Returns the parameters included in this request.
  */
 const QVariantMap &CodeCommitRequest::parameters() const
 {
@@ -204,7 +232,7 @@ const QVariantMap &CodeCommitRequest::parameters() const
 }
 
 /*!
- * \brief Sets the \a name parameter to \a value.
+ * Sets the \a name parameter to \a value.
  */
 void CodeCommitRequest::setParameter(const QString &name, const QVariant &value)
 {
@@ -213,9 +241,8 @@ void CodeCommitRequest::setParameter(const QString &name, const QVariant &value)
 }
 
 /*!
- * \brief Sets the map of paramters for this request to \a parameters.
- *
- * Any request parameters set previously will be discarded.
+ * Sets the paramters for this request to \a parameters. Any request parameters
+ * set previously will be discarded.
  */
 void CodeCommitRequest::setParameters(const QVariantMap &parameters)
 {
@@ -224,11 +251,12 @@ void CodeCommitRequest::setParameters(const QVariantMap &parameters)
 }
 
 /*!
- * \brief Returns a network request for this CodeCommit request using the given \a endpoint.
+ * Returns a network request for the CodeCommit request using the given
+ * \a endpoint.
  *
- * This CodeCommit implementation builds request URLs by combining the common query
- * parameters (such as Action and Version), with any that have been added (via
- * setParameter) by child classes.
+ * This CodeCommit implementation builds request URLs by combining the
+ * common query parameters (such as Action and Version), with any that have
+ * been added (via setParameter) by child classes.
  */
 QNetworkRequest CodeCommitRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -239,17 +267,16 @@ QNetworkRequest CodeCommitRequest::unsignedRequest(const QUrl &endpoint) const
 }
 
 /*!
+ * \class QtAws::CodeCommit::CodeCommitRequestPrivate
+ * \brief The CodeCommitRequestPrivate class provides private implementation for CodeCommitRequest.
  * \internal
  *
- * \class  CodeCommitRequestPrivate
- *
- * \brief  Private implementation for CodeCommitRequest.
+ * \inmodule QtAwsCodeCommit
  */
 
 /*!
- * \internal
- *
- * \brief Constructs a new CodeCommitRequestPrivate object.
+ * Constructs a CodeCommitRequestPrivate object for CodeCommit \a action with,
+ * public implementation \a q.
  */
 CodeCommitRequestPrivate::CodeCommitRequestPrivate(const CodeCommitRequest::Action action, CodeCommitRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
@@ -258,9 +285,7 @@ CodeCommitRequestPrivate::CodeCommitRequestPrivate(const CodeCommitRequest::Acti
 }
 
 /*!
- * \internal
- *
- * \brief Constructs a new CodeCommitRequestPrivate object, copying an existing one.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
@@ -276,15 +301,12 @@ CodeCommitRequestPrivate::CodeCommitRequestPrivate(const CodeCommitRequestPrivat
 }
 
 /*!
- * \internal
- *
- * \brief Returns a string representing \a action.
+ * Returns a string represention of \a action, or a null string if \a action is
+ * invalid.
  *
  * This function converts CodeCommitRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the CodeCommit service's Action
  * query parameters.
- *
- * @return A string representing \a action, or a null string if \a action is invalid.
  */
 QString CodeCommitRequestPrivate::toString(const CodeCommitRequest::Action &action)
 {

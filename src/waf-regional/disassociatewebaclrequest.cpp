@@ -27,10 +27,9 @@ namespace WAFRegional {
 
 /*!
  * \class QtAws::WAFRegional::DisassociateWebACLRequest
- *
  * \brief The DisassociateWebACLRequest class provides an interface for WAFRegional DisassociateWebACL requests.
  *
- * \ingroup WAFRegional
+ * \inmodule QtAwsWAFRegional
  *
  *  This is the <i>AWS WAF Regional API Reference</i> for using AWS WAF with Elastic Load Balancing (ELB) Application Load
  *  Balancers. The AWS WAF actions and data types listed in the reference are available for protecting Application Load
@@ -44,9 +43,7 @@ namespace WAFRegional {
  */
 
 /*!
- * @brief  Constructs a new DisassociateWebACLRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DisassociateWebACLRequest::DisassociateWebACLRequest(const DisassociateWebACLRequest &other)
     : WAFRegionalRequest(new DisassociateWebACLRequestPrivate(*other.d_func(), this))
@@ -55,7 +52,7 @@ DisassociateWebACLRequest::DisassociateWebACLRequest(const DisassociateWebACLReq
 }
 
 /*!
- * @brief  Constructs a new DisassociateWebACLRequest object.
+ * Constructs a DisassociateWebACLRequest object.
  */
 DisassociateWebACLRequest::DisassociateWebACLRequest()
     : WAFRegionalRequest(new DisassociateWebACLRequestPrivate(WAFRegionalRequest::DisassociateWebACLAction, this))
@@ -73,14 +70,9 @@ bool DisassociateWebACLRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DisassociateWebACLResponse object.
+ * Returns a DisassociateWebACLResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DisassociateWebACLResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WAFRegionalClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DisassociateWebACLRequest::response(QNetworkReply * const reply) const
 {
@@ -88,20 +80,17 @@ QtAws::Core::AwsAbstractResponse * DisassociateWebACLRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::WAFRegional::DisassociateWebACLRequestPrivate
+ * \brief The DisassociateWebACLRequestPrivate class provides private implementation for DisassociateWebACLRequest.
+ * \internal
  *
- * @class  DisassociateWebACLRequestPrivate
- *
- * @brief  Private implementation for DisassociateWebACLRequest.
+ * \inmodule QtAwsWAFRegional
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DisassociateWebACLRequestPrivate object.
- *
- * @param  action  WAFRegional action being performed.
- * @param  q       Pointer to this object's public DisassociateWebACLRequest instance.
+ * Constructs a DisassociateWebACLRequestPrivate object for WAFRegional \a action with,
+ * public implementation \a q.
  */
 DisassociateWebACLRequestPrivate::DisassociateWebACLRequestPrivate(
     const WAFRegionalRequest::Action action, DisassociateWebACLRequest * const q)
@@ -111,15 +100,10 @@ DisassociateWebACLRequestPrivate::DisassociateWebACLRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DisassociateWebACLRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DisassociateWebACLRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DisassociateWebACLRequest instance.
  */
 DisassociateWebACLRequestPrivate::DisassociateWebACLRequestPrivate(
     const DisassociateWebACLRequestPrivate &other, DisassociateWebACLRequest * const q)

@@ -27,10 +27,9 @@ namespace WorkDocs {
 
 /*!
  * \class QtAws::WorkDocs::DescribeRootFoldersRequest
- *
  * \brief The DescribeRootFoldersRequest class provides an interface for WorkDocs DescribeRootFolders requests.
  *
- * \ingroup WorkDocs
+ * \inmodule QtAwsWorkDocs
  *
  *  The WorkDocs API is designed for the following use
  * 
@@ -66,9 +65,7 @@ namespace WorkDocs {
  */
 
 /*!
- * @brief  Constructs a new DescribeRootFoldersRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeRootFoldersRequest::DescribeRootFoldersRequest(const DescribeRootFoldersRequest &other)
     : WorkDocsRequest(new DescribeRootFoldersRequestPrivate(*other.d_func(), this))
@@ -77,7 +74,7 @@ DescribeRootFoldersRequest::DescribeRootFoldersRequest(const DescribeRootFolders
 }
 
 /*!
- * @brief  Constructs a new DescribeRootFoldersRequest object.
+ * Constructs a DescribeRootFoldersRequest object.
  */
 DescribeRootFoldersRequest::DescribeRootFoldersRequest()
     : WorkDocsRequest(new DescribeRootFoldersRequestPrivate(WorkDocsRequest::DescribeRootFoldersAction, this))
@@ -95,14 +92,9 @@ bool DescribeRootFoldersRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeRootFoldersResponse object.
+ * Returns a DescribeRootFoldersResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeRootFoldersResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WorkDocsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeRootFoldersRequest::response(QNetworkReply * const reply) const
 {
@@ -110,20 +102,17 @@ QtAws::Core::AwsAbstractResponse * DescribeRootFoldersRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::WorkDocs::DescribeRootFoldersRequestPrivate
+ * \brief The DescribeRootFoldersRequestPrivate class provides private implementation for DescribeRootFoldersRequest.
+ * \internal
  *
- * @class  DescribeRootFoldersRequestPrivate
- *
- * @brief  Private implementation for DescribeRootFoldersRequest.
+ * \inmodule QtAwsWorkDocs
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeRootFoldersRequestPrivate object.
- *
- * @param  action  WorkDocs action being performed.
- * @param  q       Pointer to this object's public DescribeRootFoldersRequest instance.
+ * Constructs a DescribeRootFoldersRequestPrivate object for WorkDocs \a action with,
+ * public implementation \a q.
  */
 DescribeRootFoldersRequestPrivate::DescribeRootFoldersRequestPrivate(
     const WorkDocsRequest::Action action, DescribeRootFoldersRequest * const q)
@@ -133,15 +122,10 @@ DescribeRootFoldersRequestPrivate::DescribeRootFoldersRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeRootFoldersRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeRootFoldersRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeRootFoldersRequest instance.
  */
 DescribeRootFoldersRequestPrivate::DescribeRootFoldersRequestPrivate(
     const DescribeRootFoldersRequestPrivate &other, DescribeRootFoldersRequest * const q)

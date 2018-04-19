@@ -27,10 +27,9 @@ namespace OpsWorksCM {
 
 /*!
  * \class QtAws::OpsWorksCM::AssociateNodeRequest
- *
  * \brief The AssociateNodeRequest class provides an interface for OpsWorksCM AssociateNode requests.
  *
- * \ingroup OpsWorksCM
+ * \inmodule QtAwsOpsWorksCM
  *
  *  <fullname>AWS OpsWorks CM</fullname>
  * 
@@ -97,9 +96,7 @@ namespace OpsWorksCM {
  */
 
 /*!
- * @brief  Constructs a new AssociateNodeRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AssociateNodeRequest::AssociateNodeRequest(const AssociateNodeRequest &other)
     : OpsWorksCMRequest(new AssociateNodeRequestPrivate(*other.d_func(), this))
@@ -108,7 +105,7 @@ AssociateNodeRequest::AssociateNodeRequest(const AssociateNodeRequest &other)
 }
 
 /*!
- * @brief  Constructs a new AssociateNodeRequest object.
+ * Constructs a AssociateNodeRequest object.
  */
 AssociateNodeRequest::AssociateNodeRequest()
     : OpsWorksCMRequest(new AssociateNodeRequestPrivate(OpsWorksCMRequest::AssociateNodeAction, this))
@@ -126,14 +123,9 @@ bool AssociateNodeRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AssociateNodeResponse object.
+ * Returns a AssociateNodeResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AssociateNodeResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  OpsWorksCMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AssociateNodeRequest::response(QNetworkReply * const reply) const
 {
@@ -141,20 +133,17 @@ QtAws::Core::AwsAbstractResponse * AssociateNodeRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::OpsWorksCM::AssociateNodeRequestPrivate
+ * \brief The AssociateNodeRequestPrivate class provides private implementation for AssociateNodeRequest.
+ * \internal
  *
- * @class  AssociateNodeRequestPrivate
- *
- * @brief  Private implementation for AssociateNodeRequest.
+ * \inmodule QtAwsOpsWorksCM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AssociateNodeRequestPrivate object.
- *
- * @param  action  OpsWorksCM action being performed.
- * @param  q       Pointer to this object's public AssociateNodeRequest instance.
+ * Constructs a AssociateNodeRequestPrivate object for OpsWorksCM \a action with,
+ * public implementation \a q.
  */
 AssociateNodeRequestPrivate::AssociateNodeRequestPrivate(
     const OpsWorksCMRequest::Action action, AssociateNodeRequest * const q)
@@ -164,15 +153,10 @@ AssociateNodeRequestPrivate::AssociateNodeRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AssociateNodeRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AssociateNodeRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AssociateNodeRequest instance.
  */
 AssociateNodeRequestPrivate::AssociateNodeRequestPrivate(
     const AssociateNodeRequestPrivate &other, AssociateNodeRequest * const q)

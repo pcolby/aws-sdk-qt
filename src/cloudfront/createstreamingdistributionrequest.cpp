@@ -27,10 +27,9 @@ namespace CloudFront {
 
 /*!
  * \class QtAws::CloudFront::CreateStreamingDistributionRequest
- *
  * \brief The CreateStreamingDistributionRequest class provides an interface for CloudFront CreateStreamingDistribution requests.
  *
- * \ingroup CloudFront
+ * \inmodule QtAwsCloudFront
  *
  *  <fullname>Amazon CloudFront</fullname>
  * 
@@ -42,9 +41,7 @@ namespace CloudFront {
  */
 
 /*!
- * @brief  Constructs a new CreateStreamingDistributionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateStreamingDistributionRequest::CreateStreamingDistributionRequest(const CreateStreamingDistributionRequest &other)
     : CloudFrontRequest(new CreateStreamingDistributionRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ CreateStreamingDistributionRequest::CreateStreamingDistributionRequest(const Cre
 }
 
 /*!
- * @brief  Constructs a new CreateStreamingDistributionRequest object.
+ * Constructs a CreateStreamingDistributionRequest object.
  */
 CreateStreamingDistributionRequest::CreateStreamingDistributionRequest()
     : CloudFrontRequest(new CreateStreamingDistributionRequestPrivate(CloudFrontRequest::CreateStreamingDistributionAction, this))
@@ -71,14 +68,9 @@ bool CreateStreamingDistributionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateStreamingDistributionResponse object.
+ * Returns a CreateStreamingDistributionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateStreamingDistributionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudFrontClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateStreamingDistributionRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * CreateStreamingDistributionRequest::response(
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudFront::CreateStreamingDistributionRequestPrivate
+ * \brief The CreateStreamingDistributionRequestPrivate class provides private implementation for CreateStreamingDistributionRequest.
+ * \internal
  *
- * @class  CreateStreamingDistributionRequestPrivate
- *
- * @brief  Private implementation for CreateStreamingDistributionRequest.
+ * \inmodule QtAwsCloudFront
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateStreamingDistributionRequestPrivate object.
- *
- * @param  action  CloudFront action being performed.
- * @param  q       Pointer to this object's public CreateStreamingDistributionRequest instance.
+ * Constructs a CreateStreamingDistributionRequestPrivate object for CloudFront \a action with,
+ * public implementation \a q.
  */
 CreateStreamingDistributionRequestPrivate::CreateStreamingDistributionRequestPrivate(
     const CloudFrontRequest::Action action, CreateStreamingDistributionRequest * const q)
@@ -109,15 +98,10 @@ CreateStreamingDistributionRequestPrivate::CreateStreamingDistributionRequestPri
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateStreamingDistributionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateStreamingDistributionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateStreamingDistributionRequest instance.
  */
 CreateStreamingDistributionRequestPrivate::CreateStreamingDistributionRequestPrivate(
     const CreateStreamingDistributionRequestPrivate &other, CreateStreamingDistributionRequest * const q)

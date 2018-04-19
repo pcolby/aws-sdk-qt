@@ -27,10 +27,9 @@ namespace ElasticBeanstalk {
 
 /*!
  * \class QtAws::ElasticBeanstalk::DescribeConfigurationSettingsRequest
- *
  * \brief The DescribeConfigurationSettingsRequest class provides an interface for ElasticBeanstalk DescribeConfigurationSettings requests.
  *
- * \ingroup ElasticBeanstalk
+ * \inmodule QtAwsElasticBeanstalk
  *
  *  <fullname>AWS Elastic Beanstalk</fullname>
  * 
@@ -59,9 +58,7 @@ namespace ElasticBeanstalk {
  */
 
 /*!
- * @brief  Constructs a new DescribeConfigurationSettingsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeConfigurationSettingsRequest::DescribeConfigurationSettingsRequest(const DescribeConfigurationSettingsRequest &other)
     : ElasticBeanstalkRequest(new DescribeConfigurationSettingsRequestPrivate(*other.d_func(), this))
@@ -70,7 +67,7 @@ DescribeConfigurationSettingsRequest::DescribeConfigurationSettingsRequest(const
 }
 
 /*!
- * @brief  Constructs a new DescribeConfigurationSettingsRequest object.
+ * Constructs a DescribeConfigurationSettingsRequest object.
  */
 DescribeConfigurationSettingsRequest::DescribeConfigurationSettingsRequest()
     : ElasticBeanstalkRequest(new DescribeConfigurationSettingsRequestPrivate(ElasticBeanstalkRequest::DescribeConfigurationSettingsAction, this))
@@ -88,14 +85,9 @@ bool DescribeConfigurationSettingsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeConfigurationSettingsResponse object.
+ * Returns a DescribeConfigurationSettingsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeConfigurationSettingsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ElasticBeanstalkClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeConfigurationSettingsRequest::response(QNetworkReply * const reply) const
 {
@@ -103,20 +95,17 @@ QtAws::Core::AwsAbstractResponse * DescribeConfigurationSettingsRequest::respons
 }
 
 /*!
- * @internal
+ * \class QtAws::ElasticBeanstalk::DescribeConfigurationSettingsRequestPrivate
+ * \brief The DescribeConfigurationSettingsRequestPrivate class provides private implementation for DescribeConfigurationSettingsRequest.
+ * \internal
  *
- * @class  DescribeConfigurationSettingsRequestPrivate
- *
- * @brief  Private implementation for DescribeConfigurationSettingsRequest.
+ * \inmodule QtAwsElasticBeanstalk
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeConfigurationSettingsRequestPrivate object.
- *
- * @param  action  ElasticBeanstalk action being performed.
- * @param  q       Pointer to this object's public DescribeConfigurationSettingsRequest instance.
+ * Constructs a DescribeConfigurationSettingsRequestPrivate object for ElasticBeanstalk \a action with,
+ * public implementation \a q.
  */
 DescribeConfigurationSettingsRequestPrivate::DescribeConfigurationSettingsRequestPrivate(
     const ElasticBeanstalkRequest::Action action, DescribeConfigurationSettingsRequest * const q)
@@ -126,15 +115,10 @@ DescribeConfigurationSettingsRequestPrivate::DescribeConfigurationSettingsReques
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeConfigurationSettingsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeConfigurationSettingsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeConfigurationSettingsRequest instance.
  */
 DescribeConfigurationSettingsRequestPrivate::DescribeConfigurationSettingsRequestPrivate(
     const DescribeConfigurationSettingsRequestPrivate &other, DescribeConfigurationSettingsRequest * const q)

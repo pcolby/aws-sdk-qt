@@ -27,10 +27,9 @@ namespace CognitoIdentity {
 
 /*!
  * \class QtAws::CognitoIdentity::UnlinkDeveloperIdentityRequest
- *
  * \brief The UnlinkDeveloperIdentityRequest class provides an interface for CognitoIdentity UnlinkDeveloperIdentity requests.
  *
- * \ingroup CognitoIdentity
+ * \inmodule QtAwsCognitoIdentity
  *
  *  <fullname>Amazon Cognito</fullname>
  * 
@@ -75,9 +74,7 @@ namespace CognitoIdentity {
  */
 
 /*!
- * @brief  Constructs a new UnlinkDeveloperIdentityRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UnlinkDeveloperIdentityRequest::UnlinkDeveloperIdentityRequest(const UnlinkDeveloperIdentityRequest &other)
     : CognitoIdentityRequest(new UnlinkDeveloperIdentityRequestPrivate(*other.d_func(), this))
@@ -86,7 +83,7 @@ UnlinkDeveloperIdentityRequest::UnlinkDeveloperIdentityRequest(const UnlinkDevel
 }
 
 /*!
- * @brief  Constructs a new UnlinkDeveloperIdentityRequest object.
+ * Constructs a UnlinkDeveloperIdentityRequest object.
  */
 UnlinkDeveloperIdentityRequest::UnlinkDeveloperIdentityRequest()
     : CognitoIdentityRequest(new UnlinkDeveloperIdentityRequestPrivate(CognitoIdentityRequest::UnlinkDeveloperIdentityAction, this))
@@ -104,14 +101,9 @@ bool UnlinkDeveloperIdentityRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UnlinkDeveloperIdentityResponse object.
+ * Returns a UnlinkDeveloperIdentityResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UnlinkDeveloperIdentityResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CognitoIdentityClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UnlinkDeveloperIdentityRequest::response(QNetworkReply * const reply) const
 {
@@ -119,20 +111,17 @@ QtAws::Core::AwsAbstractResponse * UnlinkDeveloperIdentityRequest::response(QNet
 }
 
 /*!
- * @internal
+ * \class QtAws::CognitoIdentity::UnlinkDeveloperIdentityRequestPrivate
+ * \brief The UnlinkDeveloperIdentityRequestPrivate class provides private implementation for UnlinkDeveloperIdentityRequest.
+ * \internal
  *
- * @class  UnlinkDeveloperIdentityRequestPrivate
- *
- * @brief  Private implementation for UnlinkDeveloperIdentityRequest.
+ * \inmodule QtAwsCognitoIdentity
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UnlinkDeveloperIdentityRequestPrivate object.
- *
- * @param  action  CognitoIdentity action being performed.
- * @param  q       Pointer to this object's public UnlinkDeveloperIdentityRequest instance.
+ * Constructs a UnlinkDeveloperIdentityRequestPrivate object for CognitoIdentity \a action with,
+ * public implementation \a q.
  */
 UnlinkDeveloperIdentityRequestPrivate::UnlinkDeveloperIdentityRequestPrivate(
     const CognitoIdentityRequest::Action action, UnlinkDeveloperIdentityRequest * const q)
@@ -142,15 +131,10 @@ UnlinkDeveloperIdentityRequestPrivate::UnlinkDeveloperIdentityRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UnlinkDeveloperIdentityRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UnlinkDeveloperIdentityRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UnlinkDeveloperIdentityRequest instance.
  */
 UnlinkDeveloperIdentityRequestPrivate::UnlinkDeveloperIdentityRequestPrivate(
     const UnlinkDeveloperIdentityRequestPrivate &other, UnlinkDeveloperIdentityRequest * const q)

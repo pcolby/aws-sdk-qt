@@ -27,10 +27,9 @@ namespace Greengrass {
 
 /*!
  * \class QtAws::Greengrass::UpdateLoggerDefinitionRequest
- *
  * \brief The UpdateLoggerDefinitionRequest class provides an interface for Greengrass UpdateLoggerDefinition requests.
  *
- * \ingroup Greengrass
+ * \inmodule QtAwsGreengrass
  *
  *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
  *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
@@ -40,9 +39,7 @@ namespace Greengrass {
  */
 
 /*!
- * @brief  Constructs a new UpdateLoggerDefinitionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateLoggerDefinitionRequest::UpdateLoggerDefinitionRequest(const UpdateLoggerDefinitionRequest &other)
     : GreengrassRequest(new UpdateLoggerDefinitionRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ UpdateLoggerDefinitionRequest::UpdateLoggerDefinitionRequest(const UpdateLoggerD
 }
 
 /*!
- * @brief  Constructs a new UpdateLoggerDefinitionRequest object.
+ * Constructs a UpdateLoggerDefinitionRequest object.
  */
 UpdateLoggerDefinitionRequest::UpdateLoggerDefinitionRequest()
     : GreengrassRequest(new UpdateLoggerDefinitionRequestPrivate(GreengrassRequest::UpdateLoggerDefinitionAction, this))
@@ -69,14 +66,9 @@ bool UpdateLoggerDefinitionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateLoggerDefinitionResponse object.
+ * Returns a UpdateLoggerDefinitionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateLoggerDefinitionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GreengrassClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateLoggerDefinitionRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * UpdateLoggerDefinitionRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::Greengrass::UpdateLoggerDefinitionRequestPrivate
+ * \brief The UpdateLoggerDefinitionRequestPrivate class provides private implementation for UpdateLoggerDefinitionRequest.
+ * \internal
  *
- * @class  UpdateLoggerDefinitionRequestPrivate
- *
- * @brief  Private implementation for UpdateLoggerDefinitionRequest.
+ * \inmodule QtAwsGreengrass
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateLoggerDefinitionRequestPrivate object.
- *
- * @param  action  Greengrass action being performed.
- * @param  q       Pointer to this object's public UpdateLoggerDefinitionRequest instance.
+ * Constructs a UpdateLoggerDefinitionRequestPrivate object for Greengrass \a action with,
+ * public implementation \a q.
  */
 UpdateLoggerDefinitionRequestPrivate::UpdateLoggerDefinitionRequestPrivate(
     const GreengrassRequest::Action action, UpdateLoggerDefinitionRequest * const q)
@@ -107,15 +96,10 @@ UpdateLoggerDefinitionRequestPrivate::UpdateLoggerDefinitionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateLoggerDefinitionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateLoggerDefinitionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateLoggerDefinitionRequest instance.
  */
 UpdateLoggerDefinitionRequestPrivate::UpdateLoggerDefinitionRequestPrivate(
     const UpdateLoggerDefinitionRequestPrivate &other, UpdateLoggerDefinitionRequest * const q)

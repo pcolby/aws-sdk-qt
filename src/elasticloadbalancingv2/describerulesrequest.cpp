@@ -27,10 +27,9 @@ namespace ElasticLoadBalancingv2 {
 
 /*!
  * \class QtAws::ElasticLoadBalancingv2::DescribeRulesRequest
- *
  * \brief The DescribeRulesRequest class provides an interface for ElasticLoadBalancingv2 DescribeRules requests.
  *
- * \ingroup ElasticLoadBalancingv2
+ * \inmodule QtAwsElasticLoadBalancingv2
  *
  *  <fullname>Elastic Load Balancing</fullname>
  * 
@@ -105,9 +104,7 @@ namespace ElasticLoadBalancingv2 {
  */
 
 /*!
- * @brief  Constructs a new DescribeRulesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeRulesRequest::DescribeRulesRequest(const DescribeRulesRequest &other)
     : ElasticLoadBalancingv2Request(new DescribeRulesRequestPrivate(*other.d_func(), this))
@@ -116,7 +113,7 @@ DescribeRulesRequest::DescribeRulesRequest(const DescribeRulesRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DescribeRulesRequest object.
+ * Constructs a DescribeRulesRequest object.
  */
 DescribeRulesRequest::DescribeRulesRequest()
     : ElasticLoadBalancingv2Request(new DescribeRulesRequestPrivate(ElasticLoadBalancingv2Request::DescribeRulesAction, this))
@@ -134,14 +131,9 @@ bool DescribeRulesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeRulesResponse object.
+ * Returns a DescribeRulesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeRulesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ElasticLoadBalancingv2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeRulesRequest::response(QNetworkReply * const reply) const
 {
@@ -149,20 +141,17 @@ QtAws::Core::AwsAbstractResponse * DescribeRulesRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::ElasticLoadBalancingv2::DescribeRulesRequestPrivate
+ * \brief The DescribeRulesRequestPrivate class provides private implementation for DescribeRulesRequest.
+ * \internal
  *
- * @class  DescribeRulesRequestPrivate
- *
- * @brief  Private implementation for DescribeRulesRequest.
+ * \inmodule QtAwsElasticLoadBalancingv2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeRulesRequestPrivate object.
- *
- * @param  action  ElasticLoadBalancingv2 action being performed.
- * @param  q       Pointer to this object's public DescribeRulesRequest instance.
+ * Constructs a DescribeRulesRequestPrivate object for ElasticLoadBalancingv2 \a action with,
+ * public implementation \a q.
  */
 DescribeRulesRequestPrivate::DescribeRulesRequestPrivate(
     const ElasticLoadBalancingv2Request::Action action, DescribeRulesRequest * const q)
@@ -172,15 +161,10 @@ DescribeRulesRequestPrivate::DescribeRulesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeRulesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeRulesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeRulesRequest instance.
  */
 DescribeRulesRequestPrivate::DescribeRulesRequestPrivate(
     const DescribeRulesRequestPrivate &other, DescribeRulesRequest * const q)

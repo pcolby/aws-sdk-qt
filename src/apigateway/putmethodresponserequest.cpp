@@ -27,10 +27,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::PutMethodResponseRequest
- *
  * \brief The PutMethodResponseRequest class provides an interface for APIGateway PutMethodResponse requests.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -42,9 +41,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new PutMethodResponseRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 PutMethodResponseRequest::PutMethodResponseRequest(const PutMethodResponseRequest &other)
     : APIGatewayRequest(new PutMethodResponseRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ PutMethodResponseRequest::PutMethodResponseRequest(const PutMethodResponseReques
 }
 
 /*!
- * @brief  Constructs a new PutMethodResponseRequest object.
+ * Constructs a PutMethodResponseRequest object.
  */
 PutMethodResponseRequest::PutMethodResponseRequest()
     : APIGatewayRequest(new PutMethodResponseRequestPrivate(APIGatewayRequest::PutMethodResponseAction, this))
@@ -71,14 +68,9 @@ bool PutMethodResponseRequest::isValid() const
 
 
 /*!
- * @brief  Construct an PutMethodResponseResponse object.
+ * Returns a PutMethodResponseResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An PutMethodResponseResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  APIGatewayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * PutMethodResponseRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * PutMethodResponseRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::APIGateway::PutMethodResponseRequestPrivate
+ * \brief The PutMethodResponseRequestPrivate class provides private implementation for PutMethodResponseRequest.
+ * \internal
  *
- * @class  PutMethodResponseRequestPrivate
- *
- * @brief  Private implementation for PutMethodResponseRequest.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new PutMethodResponseRequestPrivate object.
- *
- * @param  action  APIGateway action being performed.
- * @param  q       Pointer to this object's public PutMethodResponseRequest instance.
+ * Constructs a PutMethodResponseRequestPrivate object for APIGateway \a action with,
+ * public implementation \a q.
  */
 PutMethodResponseRequestPrivate::PutMethodResponseRequestPrivate(
     const APIGatewayRequest::Action action, PutMethodResponseRequest * const q)
@@ -109,15 +98,10 @@ PutMethodResponseRequestPrivate::PutMethodResponseRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutMethodResponseRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the PutMethodResponseRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public PutMethodResponseRequest instance.
  */
 PutMethodResponseRequestPrivate::PutMethodResponseRequestPrivate(
     const PutMethodResponseRequestPrivate &other, PutMethodResponseRequest * const q)

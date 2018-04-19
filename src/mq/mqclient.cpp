@@ -62,6 +62,9 @@
 /*!
  * \namespace QtAws::MQ
  * \brief The QtAws::MQ contains stuff...
+ *
+ * \inmodule QtAwsMQ
+ *
  * @todo Move this to a separate template file.
  */
 
@@ -113,7 +116,7 @@ MqClient::MqClient(
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * \a  AwsEndpoint::getEndpoint()
+ * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
 MqClient::MqClient(
     const QUrl &endpoint,

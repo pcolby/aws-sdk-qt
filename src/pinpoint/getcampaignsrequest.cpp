@@ -27,19 +27,16 @@ namespace Pinpoint {
 
 /*!
  * \class QtAws::Pinpoint::GetCampaignsRequest
- *
  * \brief The GetCampaignsRequest class provides an interface for Pinpoint GetCampaigns requests.
  *
- * \ingroup Pinpoint
+ * \inmodule QtAwsPinpoint
  *
  *
  * \sa PinpointClient::getCampaigns
  */
 
 /*!
- * @brief  Constructs a new GetCampaignsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetCampaignsRequest::GetCampaignsRequest(const GetCampaignsRequest &other)
     : PinpointRequest(new GetCampaignsRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ GetCampaignsRequest::GetCampaignsRequest(const GetCampaignsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetCampaignsRequest object.
+ * Constructs a GetCampaignsRequest object.
  */
 GetCampaignsRequest::GetCampaignsRequest()
     : PinpointRequest(new GetCampaignsRequestPrivate(PinpointRequest::GetCampaignsAction, this))
@@ -66,14 +63,9 @@ bool GetCampaignsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetCampaignsResponse object.
+ * Returns a GetCampaignsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetCampaignsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  PinpointClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetCampaignsRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * GetCampaignsRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::Pinpoint::GetCampaignsRequestPrivate
+ * \brief The GetCampaignsRequestPrivate class provides private implementation for GetCampaignsRequest.
+ * \internal
  *
- * @class  GetCampaignsRequestPrivate
- *
- * @brief  Private implementation for GetCampaignsRequest.
+ * \inmodule QtAwsPinpoint
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetCampaignsRequestPrivate object.
- *
- * @param  action  Pinpoint action being performed.
- * @param  q       Pointer to this object's public GetCampaignsRequest instance.
+ * Constructs a GetCampaignsRequestPrivate object for Pinpoint \a action with,
+ * public implementation \a q.
  */
 GetCampaignsRequestPrivate::GetCampaignsRequestPrivate(
     const PinpointRequest::Action action, GetCampaignsRequest * const q)
@@ -104,15 +93,10 @@ GetCampaignsRequestPrivate::GetCampaignsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetCampaignsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetCampaignsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetCampaignsRequest instance.
  */
 GetCampaignsRequestPrivate::GetCampaignsRequestPrivate(
     const GetCampaignsRequestPrivate &other, GetCampaignsRequest * const q)

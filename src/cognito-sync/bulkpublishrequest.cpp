@@ -27,10 +27,9 @@ namespace CognitoSync {
 
 /*!
  * \class QtAws::CognitoSync::BulkPublishRequest
- *
  * \brief The BulkPublishRequest class provides an interface for CognitoSync BulkPublish requests.
  *
- * \ingroup CognitoSync
+ * \inmodule QtAwsCognitoSync
  *
  *  <fullname>Amazon Cognito Sync</fullname>
  * 
@@ -57,9 +56,7 @@ namespace CognitoSync {
  */
 
 /*!
- * @brief  Constructs a new BulkPublishRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 BulkPublishRequest::BulkPublishRequest(const BulkPublishRequest &other)
     : CognitoSyncRequest(new BulkPublishRequestPrivate(*other.d_func(), this))
@@ -68,7 +65,7 @@ BulkPublishRequest::BulkPublishRequest(const BulkPublishRequest &other)
 }
 
 /*!
- * @brief  Constructs a new BulkPublishRequest object.
+ * Constructs a BulkPublishRequest object.
  */
 BulkPublishRequest::BulkPublishRequest()
     : CognitoSyncRequest(new BulkPublishRequestPrivate(CognitoSyncRequest::BulkPublishAction, this))
@@ -86,14 +83,9 @@ bool BulkPublishRequest::isValid() const
 
 
 /*!
- * @brief  Construct an BulkPublishResponse object.
+ * Returns a BulkPublishResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An BulkPublishResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CognitoSyncClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * BulkPublishRequest::response(QNetworkReply * const reply) const
 {
@@ -101,20 +93,17 @@ QtAws::Core::AwsAbstractResponse * BulkPublishRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::CognitoSync::BulkPublishRequestPrivate
+ * \brief The BulkPublishRequestPrivate class provides private implementation for BulkPublishRequest.
+ * \internal
  *
- * @class  BulkPublishRequestPrivate
- *
- * @brief  Private implementation for BulkPublishRequest.
+ * \inmodule QtAwsCognitoSync
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new BulkPublishRequestPrivate object.
- *
- * @param  action  CognitoSync action being performed.
- * @param  q       Pointer to this object's public BulkPublishRequest instance.
+ * Constructs a BulkPublishRequestPrivate object for CognitoSync \a action with,
+ * public implementation \a q.
  */
 BulkPublishRequestPrivate::BulkPublishRequestPrivate(
     const CognitoSyncRequest::Action action, BulkPublishRequest * const q)
@@ -124,15 +113,10 @@ BulkPublishRequestPrivate::BulkPublishRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new BulkPublishRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the BulkPublishRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public BulkPublishRequest instance.
  */
 BulkPublishRequestPrivate::BulkPublishRequestPrivate(
     const BulkPublishRequestPrivate &other, BulkPublishRequest * const q)

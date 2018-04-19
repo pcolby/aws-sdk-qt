@@ -27,10 +27,9 @@ namespace DeviceFarm {
 
 /*!
  * \class QtAws::DeviceFarm::UpdateInstanceProfileRequest
- *
  * \brief The UpdateInstanceProfileRequest class provides an interface for DeviceFarm UpdateInstanceProfile requests.
  *
- * \ingroup DeviceFarm
+ * \inmodule QtAwsDeviceFarm
  *
  *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
  *  phones, tablets, and other devices in the
@@ -39,9 +38,7 @@ namespace DeviceFarm {
  */
 
 /*!
- * @brief  Constructs a new UpdateInstanceProfileRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateInstanceProfileRequest::UpdateInstanceProfileRequest(const UpdateInstanceProfileRequest &other)
     : DeviceFarmRequest(new UpdateInstanceProfileRequestPrivate(*other.d_func(), this))
@@ -50,7 +47,7 @@ UpdateInstanceProfileRequest::UpdateInstanceProfileRequest(const UpdateInstanceP
 }
 
 /*!
- * @brief  Constructs a new UpdateInstanceProfileRequest object.
+ * Constructs a UpdateInstanceProfileRequest object.
  */
 UpdateInstanceProfileRequest::UpdateInstanceProfileRequest()
     : DeviceFarmRequest(new UpdateInstanceProfileRequestPrivate(DeviceFarmRequest::UpdateInstanceProfileAction, this))
@@ -68,14 +65,9 @@ bool UpdateInstanceProfileRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateInstanceProfileResponse object.
+ * Returns a UpdateInstanceProfileResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateInstanceProfileResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DeviceFarmClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateInstanceProfileRequest::response(QNetworkReply * const reply) const
 {
@@ -83,20 +75,17 @@ QtAws::Core::AwsAbstractResponse * UpdateInstanceProfileRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::DeviceFarm::UpdateInstanceProfileRequestPrivate
+ * \brief The UpdateInstanceProfileRequestPrivate class provides private implementation for UpdateInstanceProfileRequest.
+ * \internal
  *
- * @class  UpdateInstanceProfileRequestPrivate
- *
- * @brief  Private implementation for UpdateInstanceProfileRequest.
+ * \inmodule QtAwsDeviceFarm
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateInstanceProfileRequestPrivate object.
- *
- * @param  action  DeviceFarm action being performed.
- * @param  q       Pointer to this object's public UpdateInstanceProfileRequest instance.
+ * Constructs a UpdateInstanceProfileRequestPrivate object for DeviceFarm \a action with,
+ * public implementation \a q.
  */
 UpdateInstanceProfileRequestPrivate::UpdateInstanceProfileRequestPrivate(
     const DeviceFarmRequest::Action action, UpdateInstanceProfileRequest * const q)
@@ -106,15 +95,10 @@ UpdateInstanceProfileRequestPrivate::UpdateInstanceProfileRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateInstanceProfileRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateInstanceProfileRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateInstanceProfileRequest instance.
  */
 UpdateInstanceProfileRequestPrivate::UpdateInstanceProfileRequestPrivate(
     const UpdateInstanceProfileRequestPrivate &other, UpdateInstanceProfileRequest * const q)

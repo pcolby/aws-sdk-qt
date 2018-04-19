@@ -27,19 +27,16 @@ namespace MediaPackage {
 
 /*!
  * \class QtAws::MediaPackage::ListChannelsRequest
- *
  * \brief The ListChannelsRequest class provides an interface for MediaPackage ListChannels requests.
  *
- * \ingroup MediaPackage
+ * \inmodule QtAwsMediaPackage
  *
  *
  * \sa MediaPackageClient::listChannels
  */
 
 /*!
- * @brief  Constructs a new ListChannelsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListChannelsRequest::ListChannelsRequest(const ListChannelsRequest &other)
     : MediaPackageRequest(new ListChannelsRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ ListChannelsRequest::ListChannelsRequest(const ListChannelsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ListChannelsRequest object.
+ * Constructs a ListChannelsRequest object.
  */
 ListChannelsRequest::ListChannelsRequest()
     : MediaPackageRequest(new ListChannelsRequestPrivate(MediaPackageRequest::ListChannelsAction, this))
@@ -66,14 +63,9 @@ bool ListChannelsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListChannelsResponse object.
+ * Returns a ListChannelsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListChannelsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MediaPackageClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListChannelsRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * ListChannelsRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::MediaPackage::ListChannelsRequestPrivate
+ * \brief The ListChannelsRequestPrivate class provides private implementation for ListChannelsRequest.
+ * \internal
  *
- * @class  ListChannelsRequestPrivate
- *
- * @brief  Private implementation for ListChannelsRequest.
+ * \inmodule QtAwsMediaPackage
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListChannelsRequestPrivate object.
- *
- * @param  action  MediaPackage action being performed.
- * @param  q       Pointer to this object's public ListChannelsRequest instance.
+ * Constructs a ListChannelsRequestPrivate object for MediaPackage \a action with,
+ * public implementation \a q.
  */
 ListChannelsRequestPrivate::ListChannelsRequestPrivate(
     const MediaPackageRequest::Action action, ListChannelsRequest * const q)
@@ -104,15 +93,10 @@ ListChannelsRequestPrivate::ListChannelsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListChannelsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListChannelsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListChannelsRequest instance.
  */
 ListChannelsRequestPrivate::ListChannelsRequestPrivate(
     const ListChannelsRequestPrivate &other, ListChannelsRequest * const q)

@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DeleteVpcEndpointsRequest
- *
  * \brief The DeleteVpcEndpointsRequest class provides an interface for EC2 DeleteVpcEndpoints requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DeleteVpcEndpointsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteVpcEndpointsRequest::DeleteVpcEndpointsRequest(const DeleteVpcEndpointsRequest &other)
     : EC2Request(new DeleteVpcEndpointsRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ DeleteVpcEndpointsRequest::DeleteVpcEndpointsRequest(const DeleteVpcEndpointsReq
 }
 
 /*!
- * @brief  Constructs a new DeleteVpcEndpointsRequest object.
+ * Constructs a DeleteVpcEndpointsRequest object.
  */
 DeleteVpcEndpointsRequest::DeleteVpcEndpointsRequest()
     : EC2Request(new DeleteVpcEndpointsRequestPrivate(EC2Request::DeleteVpcEndpointsAction, this))
@@ -70,14 +67,9 @@ bool DeleteVpcEndpointsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteVpcEndpointsResponse object.
+ * Returns a DeleteVpcEndpointsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteVpcEndpointsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteVpcEndpointsRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * DeleteVpcEndpointsRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::DeleteVpcEndpointsRequestPrivate
+ * \brief The DeleteVpcEndpointsRequestPrivate class provides private implementation for DeleteVpcEndpointsRequest.
+ * \internal
  *
- * @class  DeleteVpcEndpointsRequestPrivate
- *
- * @brief  Private implementation for DeleteVpcEndpointsRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteVpcEndpointsRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public DeleteVpcEndpointsRequest instance.
+ * Constructs a DeleteVpcEndpointsRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 DeleteVpcEndpointsRequestPrivate::DeleteVpcEndpointsRequestPrivate(
     const EC2Request::Action action, DeleteVpcEndpointsRequest * const q)
@@ -108,15 +97,10 @@ DeleteVpcEndpointsRequestPrivate::DeleteVpcEndpointsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteVpcEndpointsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteVpcEndpointsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteVpcEndpointsRequest instance.
  */
 DeleteVpcEndpointsRequestPrivate::DeleteVpcEndpointsRequestPrivate(
     const DeleteVpcEndpointsRequestPrivate &other, DeleteVpcEndpointsRequest * const q)

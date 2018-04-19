@@ -27,10 +27,9 @@ namespace CognitoIdentityProvider {
 
 /*!
  * \class QtAws::CognitoIdentityProvider::DescribeRiskConfigurationRequest
- *
  * \brief The DescribeRiskConfigurationRequest class provides an interface for CognitoIdentityProvider DescribeRiskConfiguration requests.
  *
- * \ingroup CognitoIdentityProvider
+ * \inmodule QtAwsCognitoIdentityProvider
  *
  *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
  *  authenticate a user to obtain tokens related to user identity and access
@@ -47,9 +46,7 @@ namespace CognitoIdentityProvider {
  */
 
 /*!
- * @brief  Constructs a new DescribeRiskConfigurationRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeRiskConfigurationRequest::DescribeRiskConfigurationRequest(const DescribeRiskConfigurationRequest &other)
     : CognitoIdentityProviderRequest(new DescribeRiskConfigurationRequestPrivate(*other.d_func(), this))
@@ -58,7 +55,7 @@ DescribeRiskConfigurationRequest::DescribeRiskConfigurationRequest(const Describ
 }
 
 /*!
- * @brief  Constructs a new DescribeRiskConfigurationRequest object.
+ * Constructs a DescribeRiskConfigurationRequest object.
  */
 DescribeRiskConfigurationRequest::DescribeRiskConfigurationRequest()
     : CognitoIdentityProviderRequest(new DescribeRiskConfigurationRequestPrivate(CognitoIdentityProviderRequest::DescribeRiskConfigurationAction, this))
@@ -76,14 +73,9 @@ bool DescribeRiskConfigurationRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeRiskConfigurationResponse object.
+ * Returns a DescribeRiskConfigurationResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeRiskConfigurationResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CognitoIdentityProviderClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeRiskConfigurationRequest::response(QNetworkReply * const reply) const
 {
@@ -91,20 +83,17 @@ QtAws::Core::AwsAbstractResponse * DescribeRiskConfigurationRequest::response(QN
 }
 
 /*!
- * @internal
+ * \class QtAws::CognitoIdentityProvider::DescribeRiskConfigurationRequestPrivate
+ * \brief The DescribeRiskConfigurationRequestPrivate class provides private implementation for DescribeRiskConfigurationRequest.
+ * \internal
  *
- * @class  DescribeRiskConfigurationRequestPrivate
- *
- * @brief  Private implementation for DescribeRiskConfigurationRequest.
+ * \inmodule QtAwsCognitoIdentityProvider
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeRiskConfigurationRequestPrivate object.
- *
- * @param  action  CognitoIdentityProvider action being performed.
- * @param  q       Pointer to this object's public DescribeRiskConfigurationRequest instance.
+ * Constructs a DescribeRiskConfigurationRequestPrivate object for CognitoIdentityProvider \a action with,
+ * public implementation \a q.
  */
 DescribeRiskConfigurationRequestPrivate::DescribeRiskConfigurationRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, DescribeRiskConfigurationRequest * const q)
@@ -114,15 +103,10 @@ DescribeRiskConfigurationRequestPrivate::DescribeRiskConfigurationRequestPrivate
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeRiskConfigurationRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeRiskConfigurationRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeRiskConfigurationRequest instance.
  */
 DescribeRiskConfigurationRequestPrivate::DescribeRiskConfigurationRequestPrivate(
     const DescribeRiskConfigurationRequestPrivate &other, DescribeRiskConfigurationRequest * const q)

@@ -27,10 +27,9 @@ namespace CloudFormation {
 
 /*!
  * \class QtAws::CloudFormation::CancelUpdateStackRequest
- *
  * \brief The CancelUpdateStackRequest class provides an interface for CloudFormation CancelUpdateStack requests.
  *
- * \ingroup CloudFormation
+ * \inmodule QtAwsCloudFormation
  *
  *  <fullname>AWS CloudFormation</fullname>
  * 
@@ -59,9 +58,7 @@ namespace CloudFormation {
  */
 
 /*!
- * @brief  Constructs a new CancelUpdateStackRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CancelUpdateStackRequest::CancelUpdateStackRequest(const CancelUpdateStackRequest &other)
     : CloudFormationRequest(new CancelUpdateStackRequestPrivate(*other.d_func(), this))
@@ -70,7 +67,7 @@ CancelUpdateStackRequest::CancelUpdateStackRequest(const CancelUpdateStackReques
 }
 
 /*!
- * @brief  Constructs a new CancelUpdateStackRequest object.
+ * Constructs a CancelUpdateStackRequest object.
  */
 CancelUpdateStackRequest::CancelUpdateStackRequest()
     : CloudFormationRequest(new CancelUpdateStackRequestPrivate(CloudFormationRequest::CancelUpdateStackAction, this))
@@ -88,14 +85,9 @@ bool CancelUpdateStackRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CancelUpdateStackResponse object.
+ * Returns a CancelUpdateStackResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CancelUpdateStackResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudFormationClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CancelUpdateStackRequest::response(QNetworkReply * const reply) const
 {
@@ -103,20 +95,17 @@ QtAws::Core::AwsAbstractResponse * CancelUpdateStackRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudFormation::CancelUpdateStackRequestPrivate
+ * \brief The CancelUpdateStackRequestPrivate class provides private implementation for CancelUpdateStackRequest.
+ * \internal
  *
- * @class  CancelUpdateStackRequestPrivate
- *
- * @brief  Private implementation for CancelUpdateStackRequest.
+ * \inmodule QtAwsCloudFormation
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CancelUpdateStackRequestPrivate object.
- *
- * @param  action  CloudFormation action being performed.
- * @param  q       Pointer to this object's public CancelUpdateStackRequest instance.
+ * Constructs a CancelUpdateStackRequestPrivate object for CloudFormation \a action with,
+ * public implementation \a q.
  */
 CancelUpdateStackRequestPrivate::CancelUpdateStackRequestPrivate(
     const CloudFormationRequest::Action action, CancelUpdateStackRequest * const q)
@@ -126,15 +115,10 @@ CancelUpdateStackRequestPrivate::CancelUpdateStackRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CancelUpdateStackRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CancelUpdateStackRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CancelUpdateStackRequest instance.
  */
 CancelUpdateStackRequestPrivate::CancelUpdateStackRequestPrivate(
     const CancelUpdateStackRequestPrivate &other, CancelUpdateStackRequest * const q)

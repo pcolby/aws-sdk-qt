@@ -27,10 +27,9 @@ namespace WAF {
 
 /*!
  * \class QtAws::WAF::GetRegexMatchSetRequest
- *
  * \brief The GetRegexMatchSetRequest class provides an interface for WAF GetRegexMatchSet requests.
  *
- * \ingroup WAF
+ * \inmodule QtAwsWAF
  *
  *  This is the <i>AWS WAF API Reference</i> for using AWS WAF with Amazon CloudFront. The AWS WAF actions and data types
  *  listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data
@@ -42,9 +41,7 @@ namespace WAF {
  */
 
 /*!
- * @brief  Constructs a new GetRegexMatchSetRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetRegexMatchSetRequest::GetRegexMatchSetRequest(const GetRegexMatchSetRequest &other)
     : WAFRequest(new GetRegexMatchSetRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ GetRegexMatchSetRequest::GetRegexMatchSetRequest(const GetRegexMatchSetRequest &
 }
 
 /*!
- * @brief  Constructs a new GetRegexMatchSetRequest object.
+ * Constructs a GetRegexMatchSetRequest object.
  */
 GetRegexMatchSetRequest::GetRegexMatchSetRequest()
     : WAFRequest(new GetRegexMatchSetRequestPrivate(WAFRequest::GetRegexMatchSetAction, this))
@@ -71,14 +68,9 @@ bool GetRegexMatchSetRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetRegexMatchSetResponse object.
+ * Returns a GetRegexMatchSetResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetRegexMatchSetResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WAFClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetRegexMatchSetRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * GetRegexMatchSetRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::WAF::GetRegexMatchSetRequestPrivate
+ * \brief The GetRegexMatchSetRequestPrivate class provides private implementation for GetRegexMatchSetRequest.
+ * \internal
  *
- * @class  GetRegexMatchSetRequestPrivate
- *
- * @brief  Private implementation for GetRegexMatchSetRequest.
+ * \inmodule QtAwsWAF
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetRegexMatchSetRequestPrivate object.
- *
- * @param  action  WAF action being performed.
- * @param  q       Pointer to this object's public GetRegexMatchSetRequest instance.
+ * Constructs a GetRegexMatchSetRequestPrivate object for WAF \a action with,
+ * public implementation \a q.
  */
 GetRegexMatchSetRequestPrivate::GetRegexMatchSetRequestPrivate(
     const WAFRequest::Action action, GetRegexMatchSetRequest * const q)
@@ -109,15 +98,10 @@ GetRegexMatchSetRequestPrivate::GetRegexMatchSetRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetRegexMatchSetRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetRegexMatchSetRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetRegexMatchSetRequest instance.
  */
 GetRegexMatchSetRequestPrivate::GetRegexMatchSetRequestPrivate(
     const GetRegexMatchSetRequestPrivate &other, GetRegexMatchSetRequest * const q)

@@ -27,10 +27,9 @@ namespace ElasticBeanstalk {
 
 /*!
  * \class QtAws::ElasticBeanstalk::DescribeEnvironmentsRequest
- *
  * \brief The DescribeEnvironmentsRequest class provides an interface for ElasticBeanstalk DescribeEnvironments requests.
  *
- * \ingroup ElasticBeanstalk
+ * \inmodule QtAwsElasticBeanstalk
  *
  *  <fullname>AWS Elastic Beanstalk</fullname>
  * 
@@ -59,9 +58,7 @@ namespace ElasticBeanstalk {
  */
 
 /*!
- * @brief  Constructs a new DescribeEnvironmentsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeEnvironmentsRequest::DescribeEnvironmentsRequest(const DescribeEnvironmentsRequest &other)
     : ElasticBeanstalkRequest(new DescribeEnvironmentsRequestPrivate(*other.d_func(), this))
@@ -70,7 +67,7 @@ DescribeEnvironmentsRequest::DescribeEnvironmentsRequest(const DescribeEnvironme
 }
 
 /*!
- * @brief  Constructs a new DescribeEnvironmentsRequest object.
+ * Constructs a DescribeEnvironmentsRequest object.
  */
 DescribeEnvironmentsRequest::DescribeEnvironmentsRequest()
     : ElasticBeanstalkRequest(new DescribeEnvironmentsRequestPrivate(ElasticBeanstalkRequest::DescribeEnvironmentsAction, this))
@@ -88,14 +85,9 @@ bool DescribeEnvironmentsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeEnvironmentsResponse object.
+ * Returns a DescribeEnvironmentsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeEnvironmentsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ElasticBeanstalkClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeEnvironmentsRequest::response(QNetworkReply * const reply) const
 {
@@ -103,20 +95,17 @@ QtAws::Core::AwsAbstractResponse * DescribeEnvironmentsRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::ElasticBeanstalk::DescribeEnvironmentsRequestPrivate
+ * \brief The DescribeEnvironmentsRequestPrivate class provides private implementation for DescribeEnvironmentsRequest.
+ * \internal
  *
- * @class  DescribeEnvironmentsRequestPrivate
- *
- * @brief  Private implementation for DescribeEnvironmentsRequest.
+ * \inmodule QtAwsElasticBeanstalk
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeEnvironmentsRequestPrivate object.
- *
- * @param  action  ElasticBeanstalk action being performed.
- * @param  q       Pointer to this object's public DescribeEnvironmentsRequest instance.
+ * Constructs a DescribeEnvironmentsRequestPrivate object for ElasticBeanstalk \a action with,
+ * public implementation \a q.
  */
 DescribeEnvironmentsRequestPrivate::DescribeEnvironmentsRequestPrivate(
     const ElasticBeanstalkRequest::Action action, DescribeEnvironmentsRequest * const q)
@@ -126,15 +115,10 @@ DescribeEnvironmentsRequestPrivate::DescribeEnvironmentsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeEnvironmentsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeEnvironmentsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeEnvironmentsRequest instance.
  */
 DescribeEnvironmentsRequestPrivate::DescribeEnvironmentsRequestPrivate(
     const DescribeEnvironmentsRequestPrivate &other, DescribeEnvironmentsRequest * const q)

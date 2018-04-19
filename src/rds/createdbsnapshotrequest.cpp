@@ -27,10 +27,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::CreateDBSnapshotRequest
- *
  * \brief The CreateDBSnapshotRequest class provides an interface for RDS CreateDBSnapshot requests.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -101,9 +100,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new CreateDBSnapshotRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateDBSnapshotRequest::CreateDBSnapshotRequest(const CreateDBSnapshotRequest &other)
     : RDSRequest(new CreateDBSnapshotRequestPrivate(*other.d_func(), this))
@@ -112,7 +109,7 @@ CreateDBSnapshotRequest::CreateDBSnapshotRequest(const CreateDBSnapshotRequest &
 }
 
 /*!
- * @brief  Constructs a new CreateDBSnapshotRequest object.
+ * Constructs a CreateDBSnapshotRequest object.
  */
 CreateDBSnapshotRequest::CreateDBSnapshotRequest()
     : RDSRequest(new CreateDBSnapshotRequestPrivate(RDSRequest::CreateDBSnapshotAction, this))
@@ -130,14 +127,9 @@ bool CreateDBSnapshotRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateDBSnapshotResponse object.
+ * Returns a CreateDBSnapshotResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateDBSnapshotResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RDSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateDBSnapshotRequest::response(QNetworkReply * const reply) const
 {
@@ -145,20 +137,17 @@ QtAws::Core::AwsAbstractResponse * CreateDBSnapshotRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::RDS::CreateDBSnapshotRequestPrivate
+ * \brief The CreateDBSnapshotRequestPrivate class provides private implementation for CreateDBSnapshotRequest.
+ * \internal
  *
- * @class  CreateDBSnapshotRequestPrivate
- *
- * @brief  Private implementation for CreateDBSnapshotRequest.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateDBSnapshotRequestPrivate object.
- *
- * @param  action  RDS action being performed.
- * @param  q       Pointer to this object's public CreateDBSnapshotRequest instance.
+ * Constructs a CreateDBSnapshotRequestPrivate object for RDS \a action with,
+ * public implementation \a q.
  */
 CreateDBSnapshotRequestPrivate::CreateDBSnapshotRequestPrivate(
     const RDSRequest::Action action, CreateDBSnapshotRequest * const q)
@@ -168,15 +157,10 @@ CreateDBSnapshotRequestPrivate::CreateDBSnapshotRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateDBSnapshotRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateDBSnapshotRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateDBSnapshotRequest instance.
  */
 CreateDBSnapshotRequestPrivate::CreateDBSnapshotRequestPrivate(
     const CreateDBSnapshotRequestPrivate &other, CreateDBSnapshotRequest * const q)

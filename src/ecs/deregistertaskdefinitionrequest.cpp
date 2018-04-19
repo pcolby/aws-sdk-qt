@@ -27,10 +27,9 @@ namespace ECS {
 
 /*!
  * \class QtAws::ECS::DeregisterTaskDefinitionRequest
- *
  * \brief The DeregisterTaskDefinitionRequest class provides an interface for ECS DeregisterTaskDefinition requests.
  *
- * \ingroup ECS
+ * \inmodule QtAwsECS
  *
  *  Amazon Elastic Container Service (Amazon ECS) is a highly scalable, fast, container management service that makes it
  *  easy to run, stop, and manage Docker containers on a cluster. You can host your cluster on a serverless infrastructure
@@ -54,9 +53,7 @@ namespace ECS {
  */
 
 /*!
- * @brief  Constructs a new DeregisterTaskDefinitionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeregisterTaskDefinitionRequest::DeregisterTaskDefinitionRequest(const DeregisterTaskDefinitionRequest &other)
     : ECSRequest(new DeregisterTaskDefinitionRequestPrivate(*other.d_func(), this))
@@ -65,7 +62,7 @@ DeregisterTaskDefinitionRequest::DeregisterTaskDefinitionRequest(const Deregiste
 }
 
 /*!
- * @brief  Constructs a new DeregisterTaskDefinitionRequest object.
+ * Constructs a DeregisterTaskDefinitionRequest object.
  */
 DeregisterTaskDefinitionRequest::DeregisterTaskDefinitionRequest()
     : ECSRequest(new DeregisterTaskDefinitionRequestPrivate(ECSRequest::DeregisterTaskDefinitionAction, this))
@@ -83,14 +80,9 @@ bool DeregisterTaskDefinitionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeregisterTaskDefinitionResponse object.
+ * Returns a DeregisterTaskDefinitionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeregisterTaskDefinitionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ECSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeregisterTaskDefinitionRequest::response(QNetworkReply * const reply) const
 {
@@ -98,20 +90,17 @@ QtAws::Core::AwsAbstractResponse * DeregisterTaskDefinitionRequest::response(QNe
 }
 
 /*!
- * @internal
+ * \class QtAws::ECS::DeregisterTaskDefinitionRequestPrivate
+ * \brief The DeregisterTaskDefinitionRequestPrivate class provides private implementation for DeregisterTaskDefinitionRequest.
+ * \internal
  *
- * @class  DeregisterTaskDefinitionRequestPrivate
- *
- * @brief  Private implementation for DeregisterTaskDefinitionRequest.
+ * \inmodule QtAwsECS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeregisterTaskDefinitionRequestPrivate object.
- *
- * @param  action  ECS action being performed.
- * @param  q       Pointer to this object's public DeregisterTaskDefinitionRequest instance.
+ * Constructs a DeregisterTaskDefinitionRequestPrivate object for ECS \a action with,
+ * public implementation \a q.
  */
 DeregisterTaskDefinitionRequestPrivate::DeregisterTaskDefinitionRequestPrivate(
     const ECSRequest::Action action, DeregisterTaskDefinitionRequest * const q)
@@ -121,15 +110,10 @@ DeregisterTaskDefinitionRequestPrivate::DeregisterTaskDefinitionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeregisterTaskDefinitionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeregisterTaskDefinitionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeregisterTaskDefinitionRequest instance.
  */
 DeregisterTaskDefinitionRequestPrivate::DeregisterTaskDefinitionRequestPrivate(
     const DeregisterTaskDefinitionRequestPrivate &other, DeregisterTaskDefinitionRequest * const q)

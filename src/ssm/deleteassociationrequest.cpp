@@ -27,10 +27,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::DeleteAssociationRequest
- *
  * \brief The DeleteAssociationRequest class provides an interface for SSM DeleteAssociation requests.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -61,9 +60,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new DeleteAssociationRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteAssociationRequest::DeleteAssociationRequest(const DeleteAssociationRequest &other)
     : SSMRequest(new DeleteAssociationRequestPrivate(*other.d_func(), this))
@@ -72,7 +69,7 @@ DeleteAssociationRequest::DeleteAssociationRequest(const DeleteAssociationReques
 }
 
 /*!
- * @brief  Constructs a new DeleteAssociationRequest object.
+ * Constructs a DeleteAssociationRequest object.
  */
 DeleteAssociationRequest::DeleteAssociationRequest()
     : SSMRequest(new DeleteAssociationRequestPrivate(SSMRequest::DeleteAssociationAction, this))
@@ -90,14 +87,9 @@ bool DeleteAssociationRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteAssociationResponse object.
+ * Returns a DeleteAssociationResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteAssociationResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SSMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteAssociationRequest::response(QNetworkReply * const reply) const
 {
@@ -105,20 +97,17 @@ QtAws::Core::AwsAbstractResponse * DeleteAssociationRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::SSM::DeleteAssociationRequestPrivate
+ * \brief The DeleteAssociationRequestPrivate class provides private implementation for DeleteAssociationRequest.
+ * \internal
  *
- * @class  DeleteAssociationRequestPrivate
- *
- * @brief  Private implementation for DeleteAssociationRequest.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteAssociationRequestPrivate object.
- *
- * @param  action  SSM action being performed.
- * @param  q       Pointer to this object's public DeleteAssociationRequest instance.
+ * Constructs a DeleteAssociationRequestPrivate object for SSM \a action with,
+ * public implementation \a q.
  */
 DeleteAssociationRequestPrivate::DeleteAssociationRequestPrivate(
     const SSMRequest::Action action, DeleteAssociationRequest * const q)
@@ -128,15 +117,10 @@ DeleteAssociationRequestPrivate::DeleteAssociationRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteAssociationRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteAssociationRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteAssociationRequest instance.
  */
 DeleteAssociationRequestPrivate::DeleteAssociationRequestPrivate(
     const DeleteAssociationRequestPrivate &other, DeleteAssociationRequest * const q)

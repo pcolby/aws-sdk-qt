@@ -27,10 +27,9 @@ namespace CognitoIdentityProvider {
 
 /*!
  * \class QtAws::CognitoIdentityProvider::VerifyUserAttributeRequest
- *
  * \brief The VerifyUserAttributeRequest class provides an interface for CognitoIdentityProvider VerifyUserAttribute requests.
  *
- * \ingroup CognitoIdentityProvider
+ * \inmodule QtAwsCognitoIdentityProvider
  *
  *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
  *  authenticate a user to obtain tokens related to user identity and access
@@ -47,9 +46,7 @@ namespace CognitoIdentityProvider {
  */
 
 /*!
- * @brief  Constructs a new VerifyUserAttributeRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 VerifyUserAttributeRequest::VerifyUserAttributeRequest(const VerifyUserAttributeRequest &other)
     : CognitoIdentityProviderRequest(new VerifyUserAttributeRequestPrivate(*other.d_func(), this))
@@ -58,7 +55,7 @@ VerifyUserAttributeRequest::VerifyUserAttributeRequest(const VerifyUserAttribute
 }
 
 /*!
- * @brief  Constructs a new VerifyUserAttributeRequest object.
+ * Constructs a VerifyUserAttributeRequest object.
  */
 VerifyUserAttributeRequest::VerifyUserAttributeRequest()
     : CognitoIdentityProviderRequest(new VerifyUserAttributeRequestPrivate(CognitoIdentityProviderRequest::VerifyUserAttributeAction, this))
@@ -76,14 +73,9 @@ bool VerifyUserAttributeRequest::isValid() const
 
 
 /*!
- * @brief  Construct an VerifyUserAttributeResponse object.
+ * Returns a VerifyUserAttributeResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An VerifyUserAttributeResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CognitoIdentityProviderClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * VerifyUserAttributeRequest::response(QNetworkReply * const reply) const
 {
@@ -91,20 +83,17 @@ QtAws::Core::AwsAbstractResponse * VerifyUserAttributeRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::CognitoIdentityProvider::VerifyUserAttributeRequestPrivate
+ * \brief The VerifyUserAttributeRequestPrivate class provides private implementation for VerifyUserAttributeRequest.
+ * \internal
  *
- * @class  VerifyUserAttributeRequestPrivate
- *
- * @brief  Private implementation for VerifyUserAttributeRequest.
+ * \inmodule QtAwsCognitoIdentityProvider
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new VerifyUserAttributeRequestPrivate object.
- *
- * @param  action  CognitoIdentityProvider action being performed.
- * @param  q       Pointer to this object's public VerifyUserAttributeRequest instance.
+ * Constructs a VerifyUserAttributeRequestPrivate object for CognitoIdentityProvider \a action with,
+ * public implementation \a q.
  */
 VerifyUserAttributeRequestPrivate::VerifyUserAttributeRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, VerifyUserAttributeRequest * const q)
@@ -114,15 +103,10 @@ VerifyUserAttributeRequestPrivate::VerifyUserAttributeRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new VerifyUserAttributeRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the VerifyUserAttributeRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public VerifyUserAttributeRequest instance.
  */
 VerifyUserAttributeRequestPrivate::VerifyUserAttributeRequestPrivate(
     const VerifyUserAttributeRequestPrivate &other, VerifyUserAttributeRequest * const q)

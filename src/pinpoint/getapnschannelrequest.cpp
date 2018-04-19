@@ -27,19 +27,16 @@ namespace Pinpoint {
 
 /*!
  * \class QtAws::Pinpoint::GetApnsChannelRequest
- *
  * \brief The GetApnsChannelRequest class provides an interface for Pinpoint GetApnsChannel requests.
  *
- * \ingroup Pinpoint
+ * \inmodule QtAwsPinpoint
  *
  *
  * \sa PinpointClient::getApnsChannel
  */
 
 /*!
- * @brief  Constructs a new GetApnsChannelRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetApnsChannelRequest::GetApnsChannelRequest(const GetApnsChannelRequest &other)
     : PinpointRequest(new GetApnsChannelRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ GetApnsChannelRequest::GetApnsChannelRequest(const GetApnsChannelRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetApnsChannelRequest object.
+ * Constructs a GetApnsChannelRequest object.
  */
 GetApnsChannelRequest::GetApnsChannelRequest()
     : PinpointRequest(new GetApnsChannelRequestPrivate(PinpointRequest::GetApnsChannelAction, this))
@@ -66,14 +63,9 @@ bool GetApnsChannelRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetApnsChannelResponse object.
+ * Returns a GetApnsChannelResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetApnsChannelResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  PinpointClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetApnsChannelRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * GetApnsChannelRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::Pinpoint::GetApnsChannelRequestPrivate
+ * \brief The GetApnsChannelRequestPrivate class provides private implementation for GetApnsChannelRequest.
+ * \internal
  *
- * @class  GetApnsChannelRequestPrivate
- *
- * @brief  Private implementation for GetApnsChannelRequest.
+ * \inmodule QtAwsPinpoint
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetApnsChannelRequestPrivate object.
- *
- * @param  action  Pinpoint action being performed.
- * @param  q       Pointer to this object's public GetApnsChannelRequest instance.
+ * Constructs a GetApnsChannelRequestPrivate object for Pinpoint \a action with,
+ * public implementation \a q.
  */
 GetApnsChannelRequestPrivate::GetApnsChannelRequestPrivate(
     const PinpointRequest::Action action, GetApnsChannelRequest * const q)
@@ -104,15 +93,10 @@ GetApnsChannelRequestPrivate::GetApnsChannelRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetApnsChannelRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetApnsChannelRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetApnsChannelRequest instance.
  */
 GetApnsChannelRequestPrivate::GetApnsChannelRequestPrivate(
     const GetApnsChannelRequestPrivate &other, GetApnsChannelRequest * const q)

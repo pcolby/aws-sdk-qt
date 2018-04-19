@@ -27,10 +27,9 @@ namespace Rekognition {
 
 /*!
  * \class QtAws::Rekognition::GetContentModerationRequest
- *
  * \brief The GetContentModerationRequest class provides an interface for Rekognition GetContentModeration requests.
  *
- * \ingroup Rekognition
+ * \inmodule QtAwsRekognition
  *
  *  This is the Amazon Rekognition API
  *
@@ -38,9 +37,7 @@ namespace Rekognition {
  */
 
 /*!
- * @brief  Constructs a new GetContentModerationRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetContentModerationRequest::GetContentModerationRequest(const GetContentModerationRequest &other)
     : RekognitionRequest(new GetContentModerationRequestPrivate(*other.d_func(), this))
@@ -49,7 +46,7 @@ GetContentModerationRequest::GetContentModerationRequest(const GetContentModerat
 }
 
 /*!
- * @brief  Constructs a new GetContentModerationRequest object.
+ * Constructs a GetContentModerationRequest object.
  */
 GetContentModerationRequest::GetContentModerationRequest()
     : RekognitionRequest(new GetContentModerationRequestPrivate(RekognitionRequest::GetContentModerationAction, this))
@@ -67,14 +64,9 @@ bool GetContentModerationRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetContentModerationResponse object.
+ * Returns a GetContentModerationResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetContentModerationResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RekognitionClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetContentModerationRequest::response(QNetworkReply * const reply) const
 {
@@ -82,20 +74,17 @@ QtAws::Core::AwsAbstractResponse * GetContentModerationRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::Rekognition::GetContentModerationRequestPrivate
+ * \brief The GetContentModerationRequestPrivate class provides private implementation for GetContentModerationRequest.
+ * \internal
  *
- * @class  GetContentModerationRequestPrivate
- *
- * @brief  Private implementation for GetContentModerationRequest.
+ * \inmodule QtAwsRekognition
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetContentModerationRequestPrivate object.
- *
- * @param  action  Rekognition action being performed.
- * @param  q       Pointer to this object's public GetContentModerationRequest instance.
+ * Constructs a GetContentModerationRequestPrivate object for Rekognition \a action with,
+ * public implementation \a q.
  */
 GetContentModerationRequestPrivate::GetContentModerationRequestPrivate(
     const RekognitionRequest::Action action, GetContentModerationRequest * const q)
@@ -105,15 +94,10 @@ GetContentModerationRequestPrivate::GetContentModerationRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetContentModerationRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetContentModerationRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetContentModerationRequest instance.
  */
 GetContentModerationRequestPrivate::GetContentModerationRequestPrivate(
     const GetContentModerationRequestPrivate &other, GetContentModerationRequest * const q)

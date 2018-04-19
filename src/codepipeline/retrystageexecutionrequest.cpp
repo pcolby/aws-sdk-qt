@@ -27,10 +27,9 @@ namespace CodePipeline {
 
 /*!
  * \class QtAws::CodePipeline::RetryStageExecutionRequest
- *
  * \brief The RetryStageExecutionRequest class provides an interface for CodePipeline RetryStageExecution requests.
  *
- * \ingroup CodePipeline
+ * \inmodule QtAwsCodePipeline
  *
  *  <fullname>AWS CodePipeline</fullname>
  * 
@@ -200,9 +199,7 @@ namespace CodePipeline {
  */
 
 /*!
- * @brief  Constructs a new RetryStageExecutionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 RetryStageExecutionRequest::RetryStageExecutionRequest(const RetryStageExecutionRequest &other)
     : CodePipelineRequest(new RetryStageExecutionRequestPrivate(*other.d_func(), this))
@@ -211,7 +208,7 @@ RetryStageExecutionRequest::RetryStageExecutionRequest(const RetryStageExecution
 }
 
 /*!
- * @brief  Constructs a new RetryStageExecutionRequest object.
+ * Constructs a RetryStageExecutionRequest object.
  */
 RetryStageExecutionRequest::RetryStageExecutionRequest()
     : CodePipelineRequest(new RetryStageExecutionRequestPrivate(CodePipelineRequest::RetryStageExecutionAction, this))
@@ -229,14 +226,9 @@ bool RetryStageExecutionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an RetryStageExecutionResponse object.
+ * Returns a RetryStageExecutionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An RetryStageExecutionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CodePipelineClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * RetryStageExecutionRequest::response(QNetworkReply * const reply) const
 {
@@ -244,20 +236,17 @@ QtAws::Core::AwsAbstractResponse * RetryStageExecutionRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::CodePipeline::RetryStageExecutionRequestPrivate
+ * \brief The RetryStageExecutionRequestPrivate class provides private implementation for RetryStageExecutionRequest.
+ * \internal
  *
- * @class  RetryStageExecutionRequestPrivate
- *
- * @brief  Private implementation for RetryStageExecutionRequest.
+ * \inmodule QtAwsCodePipeline
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new RetryStageExecutionRequestPrivate object.
- *
- * @param  action  CodePipeline action being performed.
- * @param  q       Pointer to this object's public RetryStageExecutionRequest instance.
+ * Constructs a RetryStageExecutionRequestPrivate object for CodePipeline \a action with,
+ * public implementation \a q.
  */
 RetryStageExecutionRequestPrivate::RetryStageExecutionRequestPrivate(
     const CodePipelineRequest::Action action, RetryStageExecutionRequest * const q)
@@ -267,15 +256,10 @@ RetryStageExecutionRequestPrivate::RetryStageExecutionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RetryStageExecutionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the RetryStageExecutionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public RetryStageExecutionRequest instance.
  */
 RetryStageExecutionRequestPrivate::RetryStageExecutionRequestPrivate(
     const RetryStageExecutionRequestPrivate &other, RetryStageExecutionRequest * const q)

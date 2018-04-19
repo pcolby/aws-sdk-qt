@@ -27,19 +27,16 @@ namespace Pinpoint {
 
 /*!
  * \class QtAws::Pinpoint::CreateExportJobRequest
- *
  * \brief The CreateExportJobRequest class provides an interface for Pinpoint CreateExportJob requests.
  *
- * \ingroup Pinpoint
+ * \inmodule QtAwsPinpoint
  *
  *
  * \sa PinpointClient::createExportJob
  */
 
 /*!
- * @brief  Constructs a new CreateExportJobRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateExportJobRequest::CreateExportJobRequest(const CreateExportJobRequest &other)
     : PinpointRequest(new CreateExportJobRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ CreateExportJobRequest::CreateExportJobRequest(const CreateExportJobRequest &oth
 }
 
 /*!
- * @brief  Constructs a new CreateExportJobRequest object.
+ * Constructs a CreateExportJobRequest object.
  */
 CreateExportJobRequest::CreateExportJobRequest()
     : PinpointRequest(new CreateExportJobRequestPrivate(PinpointRequest::CreateExportJobAction, this))
@@ -66,14 +63,9 @@ bool CreateExportJobRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateExportJobResponse object.
+ * Returns a CreateExportJobResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateExportJobResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  PinpointClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateExportJobRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * CreateExportJobRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::Pinpoint::CreateExportJobRequestPrivate
+ * \brief The CreateExportJobRequestPrivate class provides private implementation for CreateExportJobRequest.
+ * \internal
  *
- * @class  CreateExportJobRequestPrivate
- *
- * @brief  Private implementation for CreateExportJobRequest.
+ * \inmodule QtAwsPinpoint
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateExportJobRequestPrivate object.
- *
- * @param  action  Pinpoint action being performed.
- * @param  q       Pointer to this object's public CreateExportJobRequest instance.
+ * Constructs a CreateExportJobRequestPrivate object for Pinpoint \a action with,
+ * public implementation \a q.
  */
 CreateExportJobRequestPrivate::CreateExportJobRequestPrivate(
     const PinpointRequest::Action action, CreateExportJobRequest * const q)
@@ -104,15 +93,10 @@ CreateExportJobRequestPrivate::CreateExportJobRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateExportJobRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateExportJobRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateExportJobRequest instance.
  */
 CreateExportJobRequestPrivate::CreateExportJobRequestPrivate(
     const CreateExportJobRequestPrivate &other, CreateExportJobRequest * const q)

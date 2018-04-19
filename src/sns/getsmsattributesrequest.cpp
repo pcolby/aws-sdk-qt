@@ -27,10 +27,9 @@ namespace SNS {
 
 /*!
  * \class QtAws::SNS::GetSMSAttributesRequest
- *
  * \brief The GetSMSAttributesRequest class provides an interface for SNS GetSMSAttributes requests.
  *
- * \ingroup SNS
+ * \inmodule QtAwsSNS
  *
  *  <fullname>Amazon Simple Notification Service</fullname>
  * 
@@ -51,9 +50,7 @@ namespace SNS {
  */
 
 /*!
- * @brief  Constructs a new GetSMSAttributesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetSMSAttributesRequest::GetSMSAttributesRequest(const GetSMSAttributesRequest &other)
     : SNSRequest(new GetSMSAttributesRequestPrivate(*other.d_func(), this))
@@ -62,7 +59,7 @@ GetSMSAttributesRequest::GetSMSAttributesRequest(const GetSMSAttributesRequest &
 }
 
 /*!
- * @brief  Constructs a new GetSMSAttributesRequest object.
+ * Constructs a GetSMSAttributesRequest object.
  */
 GetSMSAttributesRequest::GetSMSAttributesRequest()
     : SNSRequest(new GetSMSAttributesRequestPrivate(SNSRequest::GetSMSAttributesAction, this))
@@ -80,14 +77,9 @@ bool GetSMSAttributesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetSMSAttributesResponse object.
+ * Returns a GetSMSAttributesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetSMSAttributesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SNSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetSMSAttributesRequest::response(QNetworkReply * const reply) const
 {
@@ -95,20 +87,17 @@ QtAws::Core::AwsAbstractResponse * GetSMSAttributesRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::SNS::GetSMSAttributesRequestPrivate
+ * \brief The GetSMSAttributesRequestPrivate class provides private implementation for GetSMSAttributesRequest.
+ * \internal
  *
- * @class  GetSMSAttributesRequestPrivate
- *
- * @brief  Private implementation for GetSMSAttributesRequest.
+ * \inmodule QtAwsSNS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetSMSAttributesRequestPrivate object.
- *
- * @param  action  SNS action being performed.
- * @param  q       Pointer to this object's public GetSMSAttributesRequest instance.
+ * Constructs a GetSMSAttributesRequestPrivate object for SNS \a action with,
+ * public implementation \a q.
  */
 GetSMSAttributesRequestPrivate::GetSMSAttributesRequestPrivate(
     const SNSRequest::Action action, GetSMSAttributesRequest * const q)
@@ -118,15 +107,10 @@ GetSMSAttributesRequestPrivate::GetSMSAttributesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetSMSAttributesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetSMSAttributesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetSMSAttributesRequest instance.
  */
 GetSMSAttributesRequestPrivate::GetSMSAttributesRequestPrivate(
     const GetSMSAttributesRequestPrivate &other, GetSMSAttributesRequest * const q)

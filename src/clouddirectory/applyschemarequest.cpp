@@ -27,10 +27,9 @@ namespace CloudDirectory {
 
 /*!
  * \class QtAws::CloudDirectory::ApplySchemaRequest
- *
  * \brief The ApplySchemaRequest class provides an interface for CloudDirectory ApplySchema requests.
  *
- * \ingroup CloudDirectory
+ * \inmodule QtAwsCloudDirectory
  *
  *  <fullname>Amazon Cloud Directory</fullname>
  * 
@@ -44,9 +43,7 @@ namespace CloudDirectory {
  */
 
 /*!
- * @brief  Constructs a new ApplySchemaRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ApplySchemaRequest::ApplySchemaRequest(const ApplySchemaRequest &other)
     : CloudDirectoryRequest(new ApplySchemaRequestPrivate(*other.d_func(), this))
@@ -55,7 +52,7 @@ ApplySchemaRequest::ApplySchemaRequest(const ApplySchemaRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ApplySchemaRequest object.
+ * Constructs a ApplySchemaRequest object.
  */
 ApplySchemaRequest::ApplySchemaRequest()
     : CloudDirectoryRequest(new ApplySchemaRequestPrivate(CloudDirectoryRequest::ApplySchemaAction, this))
@@ -73,14 +70,9 @@ bool ApplySchemaRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ApplySchemaResponse object.
+ * Returns a ApplySchemaResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ApplySchemaResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudDirectoryClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ApplySchemaRequest::response(QNetworkReply * const reply) const
 {
@@ -88,20 +80,17 @@ QtAws::Core::AwsAbstractResponse * ApplySchemaRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudDirectory::ApplySchemaRequestPrivate
+ * \brief The ApplySchemaRequestPrivate class provides private implementation for ApplySchemaRequest.
+ * \internal
  *
- * @class  ApplySchemaRequestPrivate
- *
- * @brief  Private implementation for ApplySchemaRequest.
+ * \inmodule QtAwsCloudDirectory
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ApplySchemaRequestPrivate object.
- *
- * @param  action  CloudDirectory action being performed.
- * @param  q       Pointer to this object's public ApplySchemaRequest instance.
+ * Constructs a ApplySchemaRequestPrivate object for CloudDirectory \a action with,
+ * public implementation \a q.
  */
 ApplySchemaRequestPrivate::ApplySchemaRequestPrivate(
     const CloudDirectoryRequest::Action action, ApplySchemaRequest * const q)
@@ -111,15 +100,10 @@ ApplySchemaRequestPrivate::ApplySchemaRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ApplySchemaRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ApplySchemaRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ApplySchemaRequest instance.
  */
 ApplySchemaRequestPrivate::ApplySchemaRequestPrivate(
     const ApplySchemaRequestPrivate &other, ApplySchemaRequest * const q)

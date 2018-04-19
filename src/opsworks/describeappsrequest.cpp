@@ -27,10 +27,9 @@ namespace OpsWorks {
 
 /*!
  * \class QtAws::OpsWorks::DescribeAppsRequest
- *
  * \brief The DescribeAppsRequest class provides an interface for OpsWorks DescribeApps requests.
  *
- * \ingroup OpsWorks
+ * \inmodule QtAwsOpsWorks
  *
  *  <fullname>AWS OpsWorks</fullname>
  * 
@@ -143,9 +142,7 @@ namespace OpsWorks {
  */
 
 /*!
- * @brief  Constructs a new DescribeAppsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeAppsRequest::DescribeAppsRequest(const DescribeAppsRequest &other)
     : OpsWorksRequest(new DescribeAppsRequestPrivate(*other.d_func(), this))
@@ -154,7 +151,7 @@ DescribeAppsRequest::DescribeAppsRequest(const DescribeAppsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DescribeAppsRequest object.
+ * Constructs a DescribeAppsRequest object.
  */
 DescribeAppsRequest::DescribeAppsRequest()
     : OpsWorksRequest(new DescribeAppsRequestPrivate(OpsWorksRequest::DescribeAppsAction, this))
@@ -172,14 +169,9 @@ bool DescribeAppsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeAppsResponse object.
+ * Returns a DescribeAppsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeAppsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  OpsWorksClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeAppsRequest::response(QNetworkReply * const reply) const
 {
@@ -187,20 +179,17 @@ QtAws::Core::AwsAbstractResponse * DescribeAppsRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::OpsWorks::DescribeAppsRequestPrivate
+ * \brief The DescribeAppsRequestPrivate class provides private implementation for DescribeAppsRequest.
+ * \internal
  *
- * @class  DescribeAppsRequestPrivate
- *
- * @brief  Private implementation for DescribeAppsRequest.
+ * \inmodule QtAwsOpsWorks
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeAppsRequestPrivate object.
- *
- * @param  action  OpsWorks action being performed.
- * @param  q       Pointer to this object's public DescribeAppsRequest instance.
+ * Constructs a DescribeAppsRequestPrivate object for OpsWorks \a action with,
+ * public implementation \a q.
  */
 DescribeAppsRequestPrivate::DescribeAppsRequestPrivate(
     const OpsWorksRequest::Action action, DescribeAppsRequest * const q)
@@ -210,15 +199,10 @@ DescribeAppsRequestPrivate::DescribeAppsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeAppsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeAppsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeAppsRequest instance.
  */
 DescribeAppsRequestPrivate::DescribeAppsRequestPrivate(
     const DescribeAppsRequestPrivate &other, DescribeAppsRequest * const q)

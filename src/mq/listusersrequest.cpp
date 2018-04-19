@@ -27,10 +27,9 @@ namespace MQ {
 
 /*!
  * \class QtAws::MQ::ListUsersRequest
- *
  * \brief The ListUsersRequest class provides an interface for MQ ListUsers requests.
  *
- * \ingroup MQ
+ * \inmodule QtAwsMQ
  *
  *  Amazon MQ is a managed message broker service for Apache ActiveMQ that makes it easy to set up and operate message
  *  brokers in the cloud. A message broker allows software applications and components to communicate using various
@@ -39,9 +38,7 @@ namespace MQ {
  */
 
 /*!
- * @brief  Constructs a new ListUsersRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListUsersRequest::ListUsersRequest(const ListUsersRequest &other)
     : MQRequest(new ListUsersRequestPrivate(*other.d_func(), this))
@@ -50,7 +47,7 @@ ListUsersRequest::ListUsersRequest(const ListUsersRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ListUsersRequest object.
+ * Constructs a ListUsersRequest object.
  */
 ListUsersRequest::ListUsersRequest()
     : MQRequest(new ListUsersRequestPrivate(MQRequest::ListUsersAction, this))
@@ -68,14 +65,9 @@ bool ListUsersRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListUsersResponse object.
+ * Returns a ListUsersResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListUsersResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MQClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListUsersRequest::response(QNetworkReply * const reply) const
 {
@@ -83,20 +75,17 @@ QtAws::Core::AwsAbstractResponse * ListUsersRequest::response(QNetworkReply * co
 }
 
 /*!
- * @internal
+ * \class QtAws::MQ::ListUsersRequestPrivate
+ * \brief The ListUsersRequestPrivate class provides private implementation for ListUsersRequest.
+ * \internal
  *
- * @class  ListUsersRequestPrivate
- *
- * @brief  Private implementation for ListUsersRequest.
+ * \inmodule QtAwsMQ
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListUsersRequestPrivate object.
- *
- * @param  action  MQ action being performed.
- * @param  q       Pointer to this object's public ListUsersRequest instance.
+ * Constructs a ListUsersRequestPrivate object for MQ \a action with,
+ * public implementation \a q.
  */
 ListUsersRequestPrivate::ListUsersRequestPrivate(
     const MQRequest::Action action, ListUsersRequest * const q)
@@ -106,15 +95,10 @@ ListUsersRequestPrivate::ListUsersRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListUsersRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListUsersRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListUsersRequest instance.
  */
 ListUsersRequestPrivate::ListUsersRequestPrivate(
     const ListUsersRequestPrivate &other, ListUsersRequest * const q)

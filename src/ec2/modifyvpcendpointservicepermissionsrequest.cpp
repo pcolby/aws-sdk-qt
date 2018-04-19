@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::ModifyVpcEndpointServicePermissionsRequest
- *
  * \brief The ModifyVpcEndpointServicePermissionsRequest class provides an interface for EC2 ModifyVpcEndpointServicePermissions requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new ModifyVpcEndpointServicePermissionsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ModifyVpcEndpointServicePermissionsRequest::ModifyVpcEndpointServicePermissionsRequest(const ModifyVpcEndpointServicePermissionsRequest &other)
     : EC2Request(new ModifyVpcEndpointServicePermissionsRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ ModifyVpcEndpointServicePermissionsRequest::ModifyVpcEndpointServicePermissionsR
 }
 
 /*!
- * @brief  Constructs a new ModifyVpcEndpointServicePermissionsRequest object.
+ * Constructs a ModifyVpcEndpointServicePermissionsRequest object.
  */
 ModifyVpcEndpointServicePermissionsRequest::ModifyVpcEndpointServicePermissionsRequest()
     : EC2Request(new ModifyVpcEndpointServicePermissionsRequestPrivate(EC2Request::ModifyVpcEndpointServicePermissionsAction, this))
@@ -70,14 +67,9 @@ bool ModifyVpcEndpointServicePermissionsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ModifyVpcEndpointServicePermissionsResponse object.
+ * Returns a ModifyVpcEndpointServicePermissionsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ModifyVpcEndpointServicePermissionsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ModifyVpcEndpointServicePermissionsRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * ModifyVpcEndpointServicePermissionsRequest::r
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::ModifyVpcEndpointServicePermissionsRequestPrivate
+ * \brief The ModifyVpcEndpointServicePermissionsRequestPrivate class provides private implementation for ModifyVpcEndpointServicePermissionsRequest.
+ * \internal
  *
- * @class  ModifyVpcEndpointServicePermissionsRequestPrivate
- *
- * @brief  Private implementation for ModifyVpcEndpointServicePermissionsRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ModifyVpcEndpointServicePermissionsRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public ModifyVpcEndpointServicePermissionsRequest instance.
+ * Constructs a ModifyVpcEndpointServicePermissionsRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 ModifyVpcEndpointServicePermissionsRequestPrivate::ModifyVpcEndpointServicePermissionsRequestPrivate(
     const EC2Request::Action action, ModifyVpcEndpointServicePermissionsRequest * const q)
@@ -108,15 +97,10 @@ ModifyVpcEndpointServicePermissionsRequestPrivate::ModifyVpcEndpointServicePermi
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ModifyVpcEndpointServicePermissionsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ModifyVpcEndpointServicePermissionsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ModifyVpcEndpointServicePermissionsRequest instance.
  */
 ModifyVpcEndpointServicePermissionsRequestPrivate::ModifyVpcEndpointServicePermissionsRequestPrivate(
     const ModifyVpcEndpointServicePermissionsRequestPrivate &other, ModifyVpcEndpointServicePermissionsRequest * const q)

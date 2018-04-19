@@ -27,19 +27,16 @@ namespace MTurk {
 
 /*!
  * \class QtAws::MTurk::GetHITRequest
- *
  * \brief The GetHITRequest class provides an interface for MTurk GetHIT requests.
  *
- * \ingroup MTurk
+ * \inmodule QtAwsMTurk
  *
  *
  * \sa MTurkClient::getHIT
  */
 
 /*!
- * @brief  Constructs a new GetHITRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetHITRequest::GetHITRequest(const GetHITRequest &other)
     : MTurkRequest(new GetHITRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ GetHITRequest::GetHITRequest(const GetHITRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetHITRequest object.
+ * Constructs a GetHITRequest object.
  */
 GetHITRequest::GetHITRequest()
     : MTurkRequest(new GetHITRequestPrivate(MTurkRequest::GetHITAction, this))
@@ -66,14 +63,9 @@ bool GetHITRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetHITResponse object.
+ * Returns a GetHITResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetHITResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MTurkClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetHITRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * GetHITRequest::response(QNetworkReply * const
 }
 
 /*!
- * @internal
+ * \class QtAws::MTurk::GetHITRequestPrivate
+ * \brief The GetHITRequestPrivate class provides private implementation for GetHITRequest.
+ * \internal
  *
- * @class  GetHITRequestPrivate
- *
- * @brief  Private implementation for GetHITRequest.
+ * \inmodule QtAwsMTurk
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetHITRequestPrivate object.
- *
- * @param  action  MTurk action being performed.
- * @param  q       Pointer to this object's public GetHITRequest instance.
+ * Constructs a GetHITRequestPrivate object for MTurk \a action with,
+ * public implementation \a q.
  */
 GetHITRequestPrivate::GetHITRequestPrivate(
     const MTurkRequest::Action action, GetHITRequest * const q)
@@ -104,15 +93,10 @@ GetHITRequestPrivate::GetHITRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetHITRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetHITRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetHITRequest instance.
  */
 GetHITRequestPrivate::GetHITRequestPrivate(
     const GetHITRequestPrivate &other, GetHITRequest * const q)

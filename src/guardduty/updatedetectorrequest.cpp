@@ -27,19 +27,16 @@ namespace GuardDuty {
 
 /*!
  * \class QtAws::GuardDuty::UpdateDetectorRequest
- *
  * \brief The UpdateDetectorRequest class provides an interface for GuardDuty UpdateDetector requests.
  *
- * \ingroup GuardDuty
+ * \inmodule QtAwsGuardDuty
  *
  *
  * \sa GuardDutyClient::updateDetector
  */
 
 /*!
- * @brief  Constructs a new UpdateDetectorRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateDetectorRequest::UpdateDetectorRequest(const UpdateDetectorRequest &other)
     : GuardDutyRequest(new UpdateDetectorRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ UpdateDetectorRequest::UpdateDetectorRequest(const UpdateDetectorRequest &other)
 }
 
 /*!
- * @brief  Constructs a new UpdateDetectorRequest object.
+ * Constructs a UpdateDetectorRequest object.
  */
 UpdateDetectorRequest::UpdateDetectorRequest()
     : GuardDutyRequest(new UpdateDetectorRequestPrivate(GuardDutyRequest::UpdateDetectorAction, this))
@@ -66,14 +63,9 @@ bool UpdateDetectorRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateDetectorResponse object.
+ * Returns a UpdateDetectorResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateDetectorResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GuardDutyClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateDetectorRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * UpdateDetectorRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::GuardDuty::UpdateDetectorRequestPrivate
+ * \brief The UpdateDetectorRequestPrivate class provides private implementation for UpdateDetectorRequest.
+ * \internal
  *
- * @class  UpdateDetectorRequestPrivate
- *
- * @brief  Private implementation for UpdateDetectorRequest.
+ * \inmodule QtAwsGuardDuty
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateDetectorRequestPrivate object.
- *
- * @param  action  GuardDuty action being performed.
- * @param  q       Pointer to this object's public UpdateDetectorRequest instance.
+ * Constructs a UpdateDetectorRequestPrivate object for GuardDuty \a action with,
+ * public implementation \a q.
  */
 UpdateDetectorRequestPrivate::UpdateDetectorRequestPrivate(
     const GuardDutyRequest::Action action, UpdateDetectorRequest * const q)
@@ -104,15 +93,10 @@ UpdateDetectorRequestPrivate::UpdateDetectorRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateDetectorRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateDetectorRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateDetectorRequest instance.
  */
 UpdateDetectorRequestPrivate::UpdateDetectorRequestPrivate(
     const UpdateDetectorRequestPrivate &other, UpdateDetectorRequest * const q)

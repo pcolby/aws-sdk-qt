@@ -27,10 +27,9 @@ namespace WorkDocs {
 
 /*!
  * \class QtAws::WorkDocs::CreateCommentRequest
- *
  * \brief The CreateCommentRequest class provides an interface for WorkDocs CreateComment requests.
  *
- * \ingroup WorkDocs
+ * \inmodule QtAwsWorkDocs
  *
  *  The WorkDocs API is designed for the following use
  * 
@@ -66,9 +65,7 @@ namespace WorkDocs {
  */
 
 /*!
- * @brief  Constructs a new CreateCommentRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateCommentRequest::CreateCommentRequest(const CreateCommentRequest &other)
     : WorkDocsRequest(new CreateCommentRequestPrivate(*other.d_func(), this))
@@ -77,7 +74,7 @@ CreateCommentRequest::CreateCommentRequest(const CreateCommentRequest &other)
 }
 
 /*!
- * @brief  Constructs a new CreateCommentRequest object.
+ * Constructs a CreateCommentRequest object.
  */
 CreateCommentRequest::CreateCommentRequest()
     : WorkDocsRequest(new CreateCommentRequestPrivate(WorkDocsRequest::CreateCommentAction, this))
@@ -95,14 +92,9 @@ bool CreateCommentRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateCommentResponse object.
+ * Returns a CreateCommentResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateCommentResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WorkDocsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateCommentRequest::response(QNetworkReply * const reply) const
 {
@@ -110,20 +102,17 @@ QtAws::Core::AwsAbstractResponse * CreateCommentRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::WorkDocs::CreateCommentRequestPrivate
+ * \brief The CreateCommentRequestPrivate class provides private implementation for CreateCommentRequest.
+ * \internal
  *
- * @class  CreateCommentRequestPrivate
- *
- * @brief  Private implementation for CreateCommentRequest.
+ * \inmodule QtAwsWorkDocs
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateCommentRequestPrivate object.
- *
- * @param  action  WorkDocs action being performed.
- * @param  q       Pointer to this object's public CreateCommentRequest instance.
+ * Constructs a CreateCommentRequestPrivate object for WorkDocs \a action with,
+ * public implementation \a q.
  */
 CreateCommentRequestPrivate::CreateCommentRequestPrivate(
     const WorkDocsRequest::Action action, CreateCommentRequest * const q)
@@ -133,15 +122,10 @@ CreateCommentRequestPrivate::CreateCommentRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateCommentRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateCommentRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateCommentRequest instance.
  */
 CreateCommentRequestPrivate::CreateCommentRequestPrivate(
     const CreateCommentRequestPrivate &other, CreateCommentRequest * const q)

@@ -27,10 +27,9 @@ namespace SWF {
 
 /*!
  * \class QtAws::SWF::TerminateWorkflowExecutionRequest
- *
  * \brief The TerminateWorkflowExecutionRequest class provides an interface for SWF TerminateWorkflowExecution requests.
  *
- * \ingroup SWF
+ * \inmodule QtAwsSWF
  *
  *  <fullname>Amazon Simple Workflow Service</fullname>
  * 
@@ -53,9 +52,7 @@ namespace SWF {
  */
 
 /*!
- * @brief  Constructs a new TerminateWorkflowExecutionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 TerminateWorkflowExecutionRequest::TerminateWorkflowExecutionRequest(const TerminateWorkflowExecutionRequest &other)
     : SWFRequest(new TerminateWorkflowExecutionRequestPrivate(*other.d_func(), this))
@@ -64,7 +61,7 @@ TerminateWorkflowExecutionRequest::TerminateWorkflowExecutionRequest(const Termi
 }
 
 /*!
- * @brief  Constructs a new TerminateWorkflowExecutionRequest object.
+ * Constructs a TerminateWorkflowExecutionRequest object.
  */
 TerminateWorkflowExecutionRequest::TerminateWorkflowExecutionRequest()
     : SWFRequest(new TerminateWorkflowExecutionRequestPrivate(SWFRequest::TerminateWorkflowExecutionAction, this))
@@ -82,14 +79,9 @@ bool TerminateWorkflowExecutionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an TerminateWorkflowExecutionResponse object.
+ * Returns a TerminateWorkflowExecutionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An TerminateWorkflowExecutionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SWFClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * TerminateWorkflowExecutionRequest::response(QNetworkReply * const reply) const
 {
@@ -97,20 +89,17 @@ QtAws::Core::AwsAbstractResponse * TerminateWorkflowExecutionRequest::response(Q
 }
 
 /*!
- * @internal
+ * \class QtAws::SWF::TerminateWorkflowExecutionRequestPrivate
+ * \brief The TerminateWorkflowExecutionRequestPrivate class provides private implementation for TerminateWorkflowExecutionRequest.
+ * \internal
  *
- * @class  TerminateWorkflowExecutionRequestPrivate
- *
- * @brief  Private implementation for TerminateWorkflowExecutionRequest.
+ * \inmodule QtAwsSWF
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new TerminateWorkflowExecutionRequestPrivate object.
- *
- * @param  action  SWF action being performed.
- * @param  q       Pointer to this object's public TerminateWorkflowExecutionRequest instance.
+ * Constructs a TerminateWorkflowExecutionRequestPrivate object for SWF \a action with,
+ * public implementation \a q.
  */
 TerminateWorkflowExecutionRequestPrivate::TerminateWorkflowExecutionRequestPrivate(
     const SWFRequest::Action action, TerminateWorkflowExecutionRequest * const q)
@@ -120,15 +109,10 @@ TerminateWorkflowExecutionRequestPrivate::TerminateWorkflowExecutionRequestPriva
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new TerminateWorkflowExecutionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the TerminateWorkflowExecutionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public TerminateWorkflowExecutionRequest instance.
  */
 TerminateWorkflowExecutionRequestPrivate::TerminateWorkflowExecutionRequestPrivate(
     const TerminateWorkflowExecutionRequestPrivate &other, TerminateWorkflowExecutionRequest * const q)

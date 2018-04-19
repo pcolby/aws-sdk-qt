@@ -27,10 +27,9 @@ namespace Batch {
 
 /*!
  * \class QtAws::Batch::ListJobsRequest
- *
  * \brief The ListJobsRequest class provides an interface for Batch ListJobs requests.
  *
- * \ingroup Batch
+ * \inmodule QtAwsBatch
  *
  *  AWS Batch enables you to run batch computing workloads on the AWS Cloud. Batch computing is a common way for developers,
  *  scientists, and engineers to access large amounts of compute resources, and AWS Batch removes the undifferentiated heavy
@@ -51,9 +50,7 @@ namespace Batch {
  */
 
 /*!
- * @brief  Constructs a new ListJobsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListJobsRequest::ListJobsRequest(const ListJobsRequest &other)
     : BatchRequest(new ListJobsRequestPrivate(*other.d_func(), this))
@@ -62,7 +59,7 @@ ListJobsRequest::ListJobsRequest(const ListJobsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ListJobsRequest object.
+ * Constructs a ListJobsRequest object.
  */
 ListJobsRequest::ListJobsRequest()
     : BatchRequest(new ListJobsRequestPrivate(BatchRequest::ListJobsAction, this))
@@ -80,14 +77,9 @@ bool ListJobsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListJobsResponse object.
+ * Returns a ListJobsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListJobsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  BatchClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListJobsRequest::response(QNetworkReply * const reply) const
 {
@@ -95,20 +87,17 @@ QtAws::Core::AwsAbstractResponse * ListJobsRequest::response(QNetworkReply * con
 }
 
 /*!
- * @internal
+ * \class QtAws::Batch::ListJobsRequestPrivate
+ * \brief The ListJobsRequestPrivate class provides private implementation for ListJobsRequest.
+ * \internal
  *
- * @class  ListJobsRequestPrivate
- *
- * @brief  Private implementation for ListJobsRequest.
+ * \inmodule QtAwsBatch
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListJobsRequestPrivate object.
- *
- * @param  action  Batch action being performed.
- * @param  q       Pointer to this object's public ListJobsRequest instance.
+ * Constructs a ListJobsRequestPrivate object for Batch \a action with,
+ * public implementation \a q.
  */
 ListJobsRequestPrivate::ListJobsRequestPrivate(
     const BatchRequest::Action action, ListJobsRequest * const q)
@@ -118,15 +107,10 @@ ListJobsRequestPrivate::ListJobsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListJobsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListJobsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListJobsRequest instance.
  */
 ListJobsRequestPrivate::ListJobsRequestPrivate(
     const ListJobsRequestPrivate &other, ListJobsRequest * const q)

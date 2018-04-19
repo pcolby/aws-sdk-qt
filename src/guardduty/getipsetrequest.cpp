@@ -27,19 +27,16 @@ namespace GuardDuty {
 
 /*!
  * \class QtAws::GuardDuty::GetIPSetRequest
- *
  * \brief The GetIPSetRequest class provides an interface for GuardDuty GetIPSet requests.
  *
- * \ingroup GuardDuty
+ * \inmodule QtAwsGuardDuty
  *
  *
  * \sa GuardDutyClient::getIPSet
  */
 
 /*!
- * @brief  Constructs a new GetIPSetRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetIPSetRequest::GetIPSetRequest(const GetIPSetRequest &other)
     : GuardDutyRequest(new GetIPSetRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ GetIPSetRequest::GetIPSetRequest(const GetIPSetRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetIPSetRequest object.
+ * Constructs a GetIPSetRequest object.
  */
 GetIPSetRequest::GetIPSetRequest()
     : GuardDutyRequest(new GetIPSetRequestPrivate(GuardDutyRequest::GetIPSetAction, this))
@@ -66,14 +63,9 @@ bool GetIPSetRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetIPSetResponse object.
+ * Returns a GetIPSetResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetIPSetResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GuardDutyClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetIPSetRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * GetIPSetRequest::response(QNetworkReply * con
 }
 
 /*!
- * @internal
+ * \class QtAws::GuardDuty::GetIPSetRequestPrivate
+ * \brief The GetIPSetRequestPrivate class provides private implementation for GetIPSetRequest.
+ * \internal
  *
- * @class  GetIPSetRequestPrivate
- *
- * @brief  Private implementation for GetIPSetRequest.
+ * \inmodule QtAwsGuardDuty
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetIPSetRequestPrivate object.
- *
- * @param  action  GuardDuty action being performed.
- * @param  q       Pointer to this object's public GetIPSetRequest instance.
+ * Constructs a GetIPSetRequestPrivate object for GuardDuty \a action with,
+ * public implementation \a q.
  */
 GetIPSetRequestPrivate::GetIPSetRequestPrivate(
     const GuardDutyRequest::Action action, GetIPSetRequest * const q)
@@ -104,15 +93,10 @@ GetIPSetRequestPrivate::GetIPSetRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetIPSetRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetIPSetRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetIPSetRequest instance.
  */
 GetIPSetRequestPrivate::GetIPSetRequestPrivate(
     const GetIPSetRequestPrivate &other, GetIPSetRequest * const q)

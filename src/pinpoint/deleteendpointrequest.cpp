@@ -27,19 +27,16 @@ namespace Pinpoint {
 
 /*!
  * \class QtAws::Pinpoint::DeleteEndpointRequest
- *
  * \brief The DeleteEndpointRequest class provides an interface for Pinpoint DeleteEndpoint requests.
  *
- * \ingroup Pinpoint
+ * \inmodule QtAwsPinpoint
  *
  *
  * \sa PinpointClient::deleteEndpoint
  */
 
 /*!
- * @brief  Constructs a new DeleteEndpointRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteEndpointRequest::DeleteEndpointRequest(const DeleteEndpointRequest &other)
     : PinpointRequest(new DeleteEndpointRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ DeleteEndpointRequest::DeleteEndpointRequest(const DeleteEndpointRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DeleteEndpointRequest object.
+ * Constructs a DeleteEndpointRequest object.
  */
 DeleteEndpointRequest::DeleteEndpointRequest()
     : PinpointRequest(new DeleteEndpointRequestPrivate(PinpointRequest::DeleteEndpointAction, this))
@@ -66,14 +63,9 @@ bool DeleteEndpointRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteEndpointResponse object.
+ * Returns a DeleteEndpointResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteEndpointResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  PinpointClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteEndpointRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * DeleteEndpointRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::Pinpoint::DeleteEndpointRequestPrivate
+ * \brief The DeleteEndpointRequestPrivate class provides private implementation for DeleteEndpointRequest.
+ * \internal
  *
- * @class  DeleteEndpointRequestPrivate
- *
- * @brief  Private implementation for DeleteEndpointRequest.
+ * \inmodule QtAwsPinpoint
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteEndpointRequestPrivate object.
- *
- * @param  action  Pinpoint action being performed.
- * @param  q       Pointer to this object's public DeleteEndpointRequest instance.
+ * Constructs a DeleteEndpointRequestPrivate object for Pinpoint \a action with,
+ * public implementation \a q.
  */
 DeleteEndpointRequestPrivate::DeleteEndpointRequestPrivate(
     const PinpointRequest::Action action, DeleteEndpointRequest * const q)
@@ -104,15 +93,10 @@ DeleteEndpointRequestPrivate::DeleteEndpointRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteEndpointRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteEndpointRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteEndpointRequest instance.
  */
 DeleteEndpointRequestPrivate::DeleteEndpointRequestPrivate(
     const DeleteEndpointRequestPrivate &other, DeleteEndpointRequest * const q)

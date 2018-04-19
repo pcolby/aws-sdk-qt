@@ -27,10 +27,9 @@ namespace ConfigService {
 
 /*!
  * \class QtAws::ConfigService::DescribeComplianceByResourceRequest
- *
  * \brief The DescribeComplianceByResourceRequest class provides an interface for ConfigService DescribeComplianceByResource requests.
  *
- * \ingroup ConfigService
+ * \inmodule QtAwsConfigService
  *
  *  <fullname>AWS Config</fullname>
  * 
@@ -60,9 +59,7 @@ namespace ConfigService {
  */
 
 /*!
- * @brief  Constructs a new DescribeComplianceByResourceRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeComplianceByResourceRequest::DescribeComplianceByResourceRequest(const DescribeComplianceByResourceRequest &other)
     : ConfigServiceRequest(new DescribeComplianceByResourceRequestPrivate(*other.d_func(), this))
@@ -71,7 +68,7 @@ DescribeComplianceByResourceRequest::DescribeComplianceByResourceRequest(const D
 }
 
 /*!
- * @brief  Constructs a new DescribeComplianceByResourceRequest object.
+ * Constructs a DescribeComplianceByResourceRequest object.
  */
 DescribeComplianceByResourceRequest::DescribeComplianceByResourceRequest()
     : ConfigServiceRequest(new DescribeComplianceByResourceRequestPrivate(ConfigServiceRequest::DescribeComplianceByResourceAction, this))
@@ -89,14 +86,9 @@ bool DescribeComplianceByResourceRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeComplianceByResourceResponse object.
+ * Returns a DescribeComplianceByResourceResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeComplianceByResourceResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ConfigServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeComplianceByResourceRequest::response(QNetworkReply * const reply) const
 {
@@ -104,20 +96,17 @@ QtAws::Core::AwsAbstractResponse * DescribeComplianceByResourceRequest::response
 }
 
 /*!
- * @internal
+ * \class QtAws::ConfigService::DescribeComplianceByResourceRequestPrivate
+ * \brief The DescribeComplianceByResourceRequestPrivate class provides private implementation for DescribeComplianceByResourceRequest.
+ * \internal
  *
- * @class  DescribeComplianceByResourceRequestPrivate
- *
- * @brief  Private implementation for DescribeComplianceByResourceRequest.
+ * \inmodule QtAwsConfigService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeComplianceByResourceRequestPrivate object.
- *
- * @param  action  ConfigService action being performed.
- * @param  q       Pointer to this object's public DescribeComplianceByResourceRequest instance.
+ * Constructs a DescribeComplianceByResourceRequestPrivate object for ConfigService \a action with,
+ * public implementation \a q.
  */
 DescribeComplianceByResourceRequestPrivate::DescribeComplianceByResourceRequestPrivate(
     const ConfigServiceRequest::Action action, DescribeComplianceByResourceRequest * const q)
@@ -127,15 +116,10 @@ DescribeComplianceByResourceRequestPrivate::DescribeComplianceByResourceRequestP
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeComplianceByResourceRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeComplianceByResourceRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeComplianceByResourceRequest instance.
  */
 DescribeComplianceByResourceRequestPrivate::DescribeComplianceByResourceRequestPrivate(
     const DescribeComplianceByResourceRequestPrivate &other, DescribeComplianceByResourceRequest * const q)

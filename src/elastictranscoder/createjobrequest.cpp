@@ -27,10 +27,9 @@ namespace ElasticTranscoder {
 
 /*!
  * \class QtAws::ElasticTranscoder::CreateJobRequest
- *
  * \brief The CreateJobRequest class provides an interface for ElasticTranscoder CreateJob requests.
  *
- * \ingroup ElasticTranscoder
+ * \inmodule QtAwsElasticTranscoder
  *
  *  <fullname>AWS Elastic Transcoder Service</fullname>
  * 
@@ -40,9 +39,7 @@ namespace ElasticTranscoder {
  */
 
 /*!
- * @brief  Constructs a new CreateJobRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateJobRequest::CreateJobRequest(const CreateJobRequest &other)
     : ElasticTranscoderRequest(new CreateJobRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ CreateJobRequest::CreateJobRequest(const CreateJobRequest &other)
 }
 
 /*!
- * @brief  Constructs a new CreateJobRequest object.
+ * Constructs a CreateJobRequest object.
  */
 CreateJobRequest::CreateJobRequest()
     : ElasticTranscoderRequest(new CreateJobRequestPrivate(ElasticTranscoderRequest::CreateJobAction, this))
@@ -69,14 +66,9 @@ bool CreateJobRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateJobResponse object.
+ * Returns a CreateJobResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateJobResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ElasticTranscoderClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateJobRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * CreateJobRequest::response(QNetworkReply * co
 }
 
 /*!
- * @internal
+ * \class QtAws::ElasticTranscoder::CreateJobRequestPrivate
+ * \brief The CreateJobRequestPrivate class provides private implementation for CreateJobRequest.
+ * \internal
  *
- * @class  CreateJobRequestPrivate
- *
- * @brief  Private implementation for CreateJobRequest.
+ * \inmodule QtAwsElasticTranscoder
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateJobRequestPrivate object.
- *
- * @param  action  ElasticTranscoder action being performed.
- * @param  q       Pointer to this object's public CreateJobRequest instance.
+ * Constructs a CreateJobRequestPrivate object for ElasticTranscoder \a action with,
+ * public implementation \a q.
  */
 CreateJobRequestPrivate::CreateJobRequestPrivate(
     const ElasticTranscoderRequest::Action action, CreateJobRequest * const q)
@@ -107,15 +96,10 @@ CreateJobRequestPrivate::CreateJobRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateJobRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateJobRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateJobRequest instance.
  */
 CreateJobRequestPrivate::CreateJobRequestPrivate(
     const CreateJobRequestPrivate &other, CreateJobRequest * const q)

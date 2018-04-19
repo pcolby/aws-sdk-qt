@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::CreatePlacementGroupRequest
- *
  * \brief The CreatePlacementGroupRequest class provides an interface for EC2 CreatePlacementGroup requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new CreatePlacementGroupRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreatePlacementGroupRequest::CreatePlacementGroupRequest(const CreatePlacementGroupRequest &other)
     : EC2Request(new CreatePlacementGroupRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ CreatePlacementGroupRequest::CreatePlacementGroupRequest(const CreatePlacementGr
 }
 
 /*!
- * @brief  Constructs a new CreatePlacementGroupRequest object.
+ * Constructs a CreatePlacementGroupRequest object.
  */
 CreatePlacementGroupRequest::CreatePlacementGroupRequest()
     : EC2Request(new CreatePlacementGroupRequestPrivate(EC2Request::CreatePlacementGroupAction, this))
@@ -70,14 +67,9 @@ bool CreatePlacementGroupRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreatePlacementGroupResponse object.
+ * Returns a CreatePlacementGroupResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreatePlacementGroupResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreatePlacementGroupRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * CreatePlacementGroupRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::CreatePlacementGroupRequestPrivate
+ * \brief The CreatePlacementGroupRequestPrivate class provides private implementation for CreatePlacementGroupRequest.
+ * \internal
  *
- * @class  CreatePlacementGroupRequestPrivate
- *
- * @brief  Private implementation for CreatePlacementGroupRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreatePlacementGroupRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public CreatePlacementGroupRequest instance.
+ * Constructs a CreatePlacementGroupRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 CreatePlacementGroupRequestPrivate::CreatePlacementGroupRequestPrivate(
     const EC2Request::Action action, CreatePlacementGroupRequest * const q)
@@ -108,15 +97,10 @@ CreatePlacementGroupRequestPrivate::CreatePlacementGroupRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreatePlacementGroupRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreatePlacementGroupRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreatePlacementGroupRequest instance.
  */
 CreatePlacementGroupRequestPrivate::CreatePlacementGroupRequestPrivate(
     const CreatePlacementGroupRequestPrivate &other, CreatePlacementGroupRequest * const q)

@@ -27,10 +27,9 @@ namespace SES {
 
 /*!
  * \class QtAws::SES::VerifyEmailIdentityRequest
- *
  * \brief The VerifyEmailIdentityRequest class provides an interface for SES VerifyEmailIdentity requests.
  *
- * \ingroup SES
+ * \inmodule QtAwsSES
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -48,9 +47,7 @@ namespace SES {
  */
 
 /*!
- * @brief  Constructs a new VerifyEmailIdentityRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 VerifyEmailIdentityRequest::VerifyEmailIdentityRequest(const VerifyEmailIdentityRequest &other)
     : SESRequest(new VerifyEmailIdentityRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ VerifyEmailIdentityRequest::VerifyEmailIdentityRequest(const VerifyEmailIdentity
 }
 
 /*!
- * @brief  Constructs a new VerifyEmailIdentityRequest object.
+ * Constructs a VerifyEmailIdentityRequest object.
  */
 VerifyEmailIdentityRequest::VerifyEmailIdentityRequest()
     : SESRequest(new VerifyEmailIdentityRequestPrivate(SESRequest::VerifyEmailIdentityAction, this))
@@ -77,14 +74,9 @@ bool VerifyEmailIdentityRequest::isValid() const
 
 
 /*!
- * @brief  Construct an VerifyEmailIdentityResponse object.
+ * Returns a VerifyEmailIdentityResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An VerifyEmailIdentityResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SESClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * VerifyEmailIdentityRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * VerifyEmailIdentityRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::SES::VerifyEmailIdentityRequestPrivate
+ * \brief The VerifyEmailIdentityRequestPrivate class provides private implementation for VerifyEmailIdentityRequest.
+ * \internal
  *
- * @class  VerifyEmailIdentityRequestPrivate
- *
- * @brief  Private implementation for VerifyEmailIdentityRequest.
+ * \inmodule QtAwsSES
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new VerifyEmailIdentityRequestPrivate object.
- *
- * @param  action  SES action being performed.
- * @param  q       Pointer to this object's public VerifyEmailIdentityRequest instance.
+ * Constructs a VerifyEmailIdentityRequestPrivate object for SES \a action with,
+ * public implementation \a q.
  */
 VerifyEmailIdentityRequestPrivate::VerifyEmailIdentityRequestPrivate(
     const SESRequest::Action action, VerifyEmailIdentityRequest * const q)
@@ -115,15 +104,10 @@ VerifyEmailIdentityRequestPrivate::VerifyEmailIdentityRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new VerifyEmailIdentityRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the VerifyEmailIdentityRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public VerifyEmailIdentityRequest instance.
  */
 VerifyEmailIdentityRequestPrivate::VerifyEmailIdentityRequestPrivate(
     const VerifyEmailIdentityRequestPrivate &other, VerifyEmailIdentityRequest * const q)

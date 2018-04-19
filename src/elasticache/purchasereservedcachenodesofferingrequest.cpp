@@ -27,10 +27,9 @@ namespace ElastiCache {
 
 /*!
  * \class QtAws::ElastiCache::PurchaseReservedCacheNodesOfferingRequest
- *
  * \brief The PurchaseReservedCacheNodesOfferingRequest class provides an interface for ElastiCache PurchaseReservedCacheNodesOffering requests.
  *
- * \ingroup ElastiCache
+ * \inmodule QtAwsElastiCache
  *
  *  <fullname>Amazon ElastiCache</fullname>
  * 
@@ -51,9 +50,7 @@ namespace ElastiCache {
  */
 
 /*!
- * @brief  Constructs a new PurchaseReservedCacheNodesOfferingRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 PurchaseReservedCacheNodesOfferingRequest::PurchaseReservedCacheNodesOfferingRequest(const PurchaseReservedCacheNodesOfferingRequest &other)
     : ElastiCacheRequest(new PurchaseReservedCacheNodesOfferingRequestPrivate(*other.d_func(), this))
@@ -62,7 +59,7 @@ PurchaseReservedCacheNodesOfferingRequest::PurchaseReservedCacheNodesOfferingReq
 }
 
 /*!
- * @brief  Constructs a new PurchaseReservedCacheNodesOfferingRequest object.
+ * Constructs a PurchaseReservedCacheNodesOfferingRequest object.
  */
 PurchaseReservedCacheNodesOfferingRequest::PurchaseReservedCacheNodesOfferingRequest()
     : ElastiCacheRequest(new PurchaseReservedCacheNodesOfferingRequestPrivate(ElastiCacheRequest::PurchaseReservedCacheNodesOfferingAction, this))
@@ -80,14 +77,9 @@ bool PurchaseReservedCacheNodesOfferingRequest::isValid() const
 
 
 /*!
- * @brief  Construct an PurchaseReservedCacheNodesOfferingResponse object.
+ * Returns a PurchaseReservedCacheNodesOfferingResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An PurchaseReservedCacheNodesOfferingResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ElastiCacheClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * PurchaseReservedCacheNodesOfferingRequest::response(QNetworkReply * const reply) const
 {
@@ -95,20 +87,17 @@ QtAws::Core::AwsAbstractResponse * PurchaseReservedCacheNodesOfferingRequest::re
 }
 
 /*!
- * @internal
+ * \class QtAws::ElastiCache::PurchaseReservedCacheNodesOfferingRequestPrivate
+ * \brief The PurchaseReservedCacheNodesOfferingRequestPrivate class provides private implementation for PurchaseReservedCacheNodesOfferingRequest.
+ * \internal
  *
- * @class  PurchaseReservedCacheNodesOfferingRequestPrivate
- *
- * @brief  Private implementation for PurchaseReservedCacheNodesOfferingRequest.
+ * \inmodule QtAwsElastiCache
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new PurchaseReservedCacheNodesOfferingRequestPrivate object.
- *
- * @param  action  ElastiCache action being performed.
- * @param  q       Pointer to this object's public PurchaseReservedCacheNodesOfferingRequest instance.
+ * Constructs a PurchaseReservedCacheNodesOfferingRequestPrivate object for ElastiCache \a action with,
+ * public implementation \a q.
  */
 PurchaseReservedCacheNodesOfferingRequestPrivate::PurchaseReservedCacheNodesOfferingRequestPrivate(
     const ElastiCacheRequest::Action action, PurchaseReservedCacheNodesOfferingRequest * const q)
@@ -118,15 +107,10 @@ PurchaseReservedCacheNodesOfferingRequestPrivate::PurchaseReservedCacheNodesOffe
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PurchaseReservedCacheNodesOfferingRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the PurchaseReservedCacheNodesOfferingRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public PurchaseReservedCacheNodesOfferingRequest instance.
  */
 PurchaseReservedCacheNodesOfferingRequestPrivate::PurchaseReservedCacheNodesOfferingRequestPrivate(
     const PurchaseReservedCacheNodesOfferingRequestPrivate &other, PurchaseReservedCacheNodesOfferingRequest * const q)

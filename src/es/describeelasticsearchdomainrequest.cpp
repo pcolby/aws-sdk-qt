@@ -27,10 +27,9 @@ namespace ElasticsearchService {
 
 /*!
  * \class QtAws::ElasticsearchService::DescribeElasticsearchDomainRequest
- *
  * \brief The DescribeElasticsearchDomainRequest class provides an interface for ElasticsearchService DescribeElasticsearchDomain requests.
  *
- * \ingroup ElasticsearchService
+ * \inmodule QtAwsElasticsearchService
  *
  *  <fullname>Amazon Elasticsearch Configuration Service</fullname>
  * 
@@ -46,9 +45,7 @@ namespace ElasticsearchService {
  */
 
 /*!
- * @brief  Constructs a new DescribeElasticsearchDomainRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeElasticsearchDomainRequest::DescribeElasticsearchDomainRequest(const DescribeElasticsearchDomainRequest &other)
     : ElasticsearchServiceRequest(new DescribeElasticsearchDomainRequestPrivate(*other.d_func(), this))
@@ -57,7 +54,7 @@ DescribeElasticsearchDomainRequest::DescribeElasticsearchDomainRequest(const Des
 }
 
 /*!
- * @brief  Constructs a new DescribeElasticsearchDomainRequest object.
+ * Constructs a DescribeElasticsearchDomainRequest object.
  */
 DescribeElasticsearchDomainRequest::DescribeElasticsearchDomainRequest()
     : ElasticsearchServiceRequest(new DescribeElasticsearchDomainRequestPrivate(ElasticsearchServiceRequest::DescribeElasticsearchDomainAction, this))
@@ -75,14 +72,9 @@ bool DescribeElasticsearchDomainRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeElasticsearchDomainResponse object.
+ * Returns a DescribeElasticsearchDomainResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeElasticsearchDomainResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ElasticsearchServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeElasticsearchDomainRequest::response(QNetworkReply * const reply) const
 {
@@ -90,20 +82,17 @@ QtAws::Core::AwsAbstractResponse * DescribeElasticsearchDomainRequest::response(
 }
 
 /*!
- * @internal
+ * \class QtAws::ElasticsearchService::DescribeElasticsearchDomainRequestPrivate
+ * \brief The DescribeElasticsearchDomainRequestPrivate class provides private implementation for DescribeElasticsearchDomainRequest.
+ * \internal
  *
- * @class  DescribeElasticsearchDomainRequestPrivate
- *
- * @brief  Private implementation for DescribeElasticsearchDomainRequest.
+ * \inmodule QtAwsElasticsearchService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeElasticsearchDomainRequestPrivate object.
- *
- * @param  action  ElasticsearchService action being performed.
- * @param  q       Pointer to this object's public DescribeElasticsearchDomainRequest instance.
+ * Constructs a DescribeElasticsearchDomainRequestPrivate object for ElasticsearchService \a action with,
+ * public implementation \a q.
  */
 DescribeElasticsearchDomainRequestPrivate::DescribeElasticsearchDomainRequestPrivate(
     const ElasticsearchServiceRequest::Action action, DescribeElasticsearchDomainRequest * const q)
@@ -113,15 +102,10 @@ DescribeElasticsearchDomainRequestPrivate::DescribeElasticsearchDomainRequestPri
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeElasticsearchDomainRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeElasticsearchDomainRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeElasticsearchDomainRequest instance.
  */
 DescribeElasticsearchDomainRequestPrivate::DescribeElasticsearchDomainRequestPrivate(
     const DescribeElasticsearchDomainRequestPrivate &other, DescribeElasticsearchDomainRequest * const q)

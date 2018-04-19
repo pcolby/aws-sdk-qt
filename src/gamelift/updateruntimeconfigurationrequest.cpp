@@ -27,10 +27,9 @@ namespace GameLift {
 
 /*!
  * \class QtAws::GameLift::UpdateRuntimeConfigurationRequest
- *
  * \brief The UpdateRuntimeConfigurationRequest class provides an interface for GameLift UpdateRuntimeConfiguration requests.
  *
- * \ingroup GameLift
+ * \inmodule QtAwsGameLift
  *
  *  <fullname>Amazon GameLift Service</fullname>
  * 
@@ -473,9 +472,7 @@ namespace GameLift {
  */
 
 /*!
- * @brief  Constructs a new UpdateRuntimeConfigurationRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateRuntimeConfigurationRequest::UpdateRuntimeConfigurationRequest(const UpdateRuntimeConfigurationRequest &other)
     : GameLiftRequest(new UpdateRuntimeConfigurationRequestPrivate(*other.d_func(), this))
@@ -484,7 +481,7 @@ UpdateRuntimeConfigurationRequest::UpdateRuntimeConfigurationRequest(const Updat
 }
 
 /*!
- * @brief  Constructs a new UpdateRuntimeConfigurationRequest object.
+ * Constructs a UpdateRuntimeConfigurationRequest object.
  */
 UpdateRuntimeConfigurationRequest::UpdateRuntimeConfigurationRequest()
     : GameLiftRequest(new UpdateRuntimeConfigurationRequestPrivate(GameLiftRequest::UpdateRuntimeConfigurationAction, this))
@@ -502,14 +499,9 @@ bool UpdateRuntimeConfigurationRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateRuntimeConfigurationResponse object.
+ * Returns a UpdateRuntimeConfigurationResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateRuntimeConfigurationResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GameLiftClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateRuntimeConfigurationRequest::response(QNetworkReply * const reply) const
 {
@@ -517,20 +509,17 @@ QtAws::Core::AwsAbstractResponse * UpdateRuntimeConfigurationRequest::response(Q
 }
 
 /*!
- * @internal
+ * \class QtAws::GameLift::UpdateRuntimeConfigurationRequestPrivate
+ * \brief The UpdateRuntimeConfigurationRequestPrivate class provides private implementation for UpdateRuntimeConfigurationRequest.
+ * \internal
  *
- * @class  UpdateRuntimeConfigurationRequestPrivate
- *
- * @brief  Private implementation for UpdateRuntimeConfigurationRequest.
+ * \inmodule QtAwsGameLift
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateRuntimeConfigurationRequestPrivate object.
- *
- * @param  action  GameLift action being performed.
- * @param  q       Pointer to this object's public UpdateRuntimeConfigurationRequest instance.
+ * Constructs a UpdateRuntimeConfigurationRequestPrivate object for GameLift \a action with,
+ * public implementation \a q.
  */
 UpdateRuntimeConfigurationRequestPrivate::UpdateRuntimeConfigurationRequestPrivate(
     const GameLiftRequest::Action action, UpdateRuntimeConfigurationRequest * const q)
@@ -540,15 +529,10 @@ UpdateRuntimeConfigurationRequestPrivate::UpdateRuntimeConfigurationRequestPriva
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateRuntimeConfigurationRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateRuntimeConfigurationRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateRuntimeConfigurationRequest instance.
  */
 UpdateRuntimeConfigurationRequestPrivate::UpdateRuntimeConfigurationRequestPrivate(
     const UpdateRuntimeConfigurationRequestPrivate &other, UpdateRuntimeConfigurationRequest * const q)

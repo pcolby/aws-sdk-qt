@@ -27,19 +27,16 @@ namespace Route53 {
 
 /*!
  * \class QtAws::Route53::GetHostedZoneCountRequest
- *
  * \brief The GetHostedZoneCountRequest class provides an interface for Route53 GetHostedZoneCount requests.
  *
- * \ingroup Route53
+ * \inmodule QtAwsRoute53
  *
  *
  * \sa Route53Client::getHostedZoneCount
  */
 
 /*!
- * @brief  Constructs a new GetHostedZoneCountRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetHostedZoneCountRequest::GetHostedZoneCountRequest(const GetHostedZoneCountRequest &other)
     : Route53Request(new GetHostedZoneCountRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ GetHostedZoneCountRequest::GetHostedZoneCountRequest(const GetHostedZoneCountReq
 }
 
 /*!
- * @brief  Constructs a new GetHostedZoneCountRequest object.
+ * Constructs a GetHostedZoneCountRequest object.
  */
 GetHostedZoneCountRequest::GetHostedZoneCountRequest()
     : Route53Request(new GetHostedZoneCountRequestPrivate(Route53Request::GetHostedZoneCountAction, this))
@@ -66,14 +63,9 @@ bool GetHostedZoneCountRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetHostedZoneCountResponse object.
+ * Returns a GetHostedZoneCountResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetHostedZoneCountResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  Route53Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetHostedZoneCountRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * GetHostedZoneCountRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::Route53::GetHostedZoneCountRequestPrivate
+ * \brief The GetHostedZoneCountRequestPrivate class provides private implementation for GetHostedZoneCountRequest.
+ * \internal
  *
- * @class  GetHostedZoneCountRequestPrivate
- *
- * @brief  Private implementation for GetHostedZoneCountRequest.
+ * \inmodule QtAwsRoute53
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetHostedZoneCountRequestPrivate object.
- *
- * @param  action  Route53 action being performed.
- * @param  q       Pointer to this object's public GetHostedZoneCountRequest instance.
+ * Constructs a GetHostedZoneCountRequestPrivate object for Route53 \a action with,
+ * public implementation \a q.
  */
 GetHostedZoneCountRequestPrivate::GetHostedZoneCountRequestPrivate(
     const Route53Request::Action action, GetHostedZoneCountRequest * const q)
@@ -104,15 +93,10 @@ GetHostedZoneCountRequestPrivate::GetHostedZoneCountRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetHostedZoneCountRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetHostedZoneCountRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetHostedZoneCountRequest instance.
  */
 GetHostedZoneCountRequestPrivate::GetHostedZoneCountRequestPrivate(
     const GetHostedZoneCountRequestPrivate &other, GetHostedZoneCountRequest * const q)

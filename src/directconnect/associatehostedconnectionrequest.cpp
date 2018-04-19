@@ -27,10 +27,9 @@ namespace DirectConnect {
 
 /*!
  * \class QtAws::DirectConnect::AssociateHostedConnectionRequest
- *
  * \brief The AssociateHostedConnectionRequest class provides an interface for DirectConnect AssociateHostedConnection requests.
  *
- * \ingroup DirectConnect
+ * \inmodule QtAwsDirectConnect
  *
  *  AWS Direct Connect links your internal network to an AWS Direct Connect location over a standard 1 gigabit or 10 gigabit
  *  Ethernet fiber-optic cable. One end of the cable is connected to your router, the other to an AWS Direct Connect router.
@@ -45,9 +44,7 @@ namespace DirectConnect {
  */
 
 /*!
- * @brief  Constructs a new AssociateHostedConnectionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AssociateHostedConnectionRequest::AssociateHostedConnectionRequest(const AssociateHostedConnectionRequest &other)
     : DirectConnectRequest(new AssociateHostedConnectionRequestPrivate(*other.d_func(), this))
@@ -56,7 +53,7 @@ AssociateHostedConnectionRequest::AssociateHostedConnectionRequest(const Associa
 }
 
 /*!
- * @brief  Constructs a new AssociateHostedConnectionRequest object.
+ * Constructs a AssociateHostedConnectionRequest object.
  */
 AssociateHostedConnectionRequest::AssociateHostedConnectionRequest()
     : DirectConnectRequest(new AssociateHostedConnectionRequestPrivate(DirectConnectRequest::AssociateHostedConnectionAction, this))
@@ -74,14 +71,9 @@ bool AssociateHostedConnectionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AssociateHostedConnectionResponse object.
+ * Returns a AssociateHostedConnectionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AssociateHostedConnectionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DirectConnectClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AssociateHostedConnectionRequest::response(QNetworkReply * const reply) const
 {
@@ -89,20 +81,17 @@ QtAws::Core::AwsAbstractResponse * AssociateHostedConnectionRequest::response(QN
 }
 
 /*!
- * @internal
+ * \class QtAws::DirectConnect::AssociateHostedConnectionRequestPrivate
+ * \brief The AssociateHostedConnectionRequestPrivate class provides private implementation for AssociateHostedConnectionRequest.
+ * \internal
  *
- * @class  AssociateHostedConnectionRequestPrivate
- *
- * @brief  Private implementation for AssociateHostedConnectionRequest.
+ * \inmodule QtAwsDirectConnect
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AssociateHostedConnectionRequestPrivate object.
- *
- * @param  action  DirectConnect action being performed.
- * @param  q       Pointer to this object's public AssociateHostedConnectionRequest instance.
+ * Constructs a AssociateHostedConnectionRequestPrivate object for DirectConnect \a action with,
+ * public implementation \a q.
  */
 AssociateHostedConnectionRequestPrivate::AssociateHostedConnectionRequestPrivate(
     const DirectConnectRequest::Action action, AssociateHostedConnectionRequest * const q)
@@ -112,15 +101,10 @@ AssociateHostedConnectionRequestPrivate::AssociateHostedConnectionRequestPrivate
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AssociateHostedConnectionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AssociateHostedConnectionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AssociateHostedConnectionRequest instance.
  */
 AssociateHostedConnectionRequestPrivate::AssociateHostedConnectionRequestPrivate(
     const AssociateHostedConnectionRequestPrivate &other, AssociateHostedConnectionRequest * const q)

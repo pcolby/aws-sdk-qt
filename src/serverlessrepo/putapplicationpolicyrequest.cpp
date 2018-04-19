@@ -27,10 +27,9 @@ namespace ServerlessApplicationRepository {
 
 /*!
  * \class QtAws::ServerlessApplicationRepository::PutApplicationPolicyRequest
- *
  * \brief The PutApplicationPolicyRequest class provides an interface for ServerlessApplicationRepository PutApplicationPolicy requests.
  *
- * \ingroup ServerlessApplicationRepository
+ * \inmodule QtAwsServerlessApplicationRepository
  *
  *  The AWS Serverless Application Repository makes it easy for developers and enterprises to quickly find and deploy
  *  serverless applications in the AWS Cloud. For more information about serverless applications, see Serverless Computing
@@ -58,9 +57,7 @@ namespace ServerlessApplicationRepository {
  */
 
 /*!
- * @brief  Constructs a new PutApplicationPolicyRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 PutApplicationPolicyRequest::PutApplicationPolicyRequest(const PutApplicationPolicyRequest &other)
     : ServerlessApplicationRepositoryRequest(new PutApplicationPolicyRequestPrivate(*other.d_func(), this))
@@ -69,7 +66,7 @@ PutApplicationPolicyRequest::PutApplicationPolicyRequest(const PutApplicationPol
 }
 
 /*!
- * @brief  Constructs a new PutApplicationPolicyRequest object.
+ * Constructs a PutApplicationPolicyRequest object.
  */
 PutApplicationPolicyRequest::PutApplicationPolicyRequest()
     : ServerlessApplicationRepositoryRequest(new PutApplicationPolicyRequestPrivate(ServerlessApplicationRepositoryRequest::PutApplicationPolicyAction, this))
@@ -87,14 +84,9 @@ bool PutApplicationPolicyRequest::isValid() const
 
 
 /*!
- * @brief  Construct an PutApplicationPolicyResponse object.
+ * Returns a PutApplicationPolicyResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An PutApplicationPolicyResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ServerlessApplicationRepositoryClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * PutApplicationPolicyRequest::response(QNetworkReply * const reply) const
 {
@@ -102,20 +94,17 @@ QtAws::Core::AwsAbstractResponse * PutApplicationPolicyRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::ServerlessApplicationRepository::PutApplicationPolicyRequestPrivate
+ * \brief The PutApplicationPolicyRequestPrivate class provides private implementation for PutApplicationPolicyRequest.
+ * \internal
  *
- * @class  PutApplicationPolicyRequestPrivate
- *
- * @brief  Private implementation for PutApplicationPolicyRequest.
+ * \inmodule QtAwsServerlessApplicationRepository
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new PutApplicationPolicyRequestPrivate object.
- *
- * @param  action  ServerlessApplicationRepository action being performed.
- * @param  q       Pointer to this object's public PutApplicationPolicyRequest instance.
+ * Constructs a PutApplicationPolicyRequestPrivate object for ServerlessApplicationRepository \a action with,
+ * public implementation \a q.
  */
 PutApplicationPolicyRequestPrivate::PutApplicationPolicyRequestPrivate(
     const ServerlessApplicationRepositoryRequest::Action action, PutApplicationPolicyRequest * const q)
@@ -125,15 +114,10 @@ PutApplicationPolicyRequestPrivate::PutApplicationPolicyRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutApplicationPolicyRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the PutApplicationPolicyRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public PutApplicationPolicyRequest instance.
  */
 PutApplicationPolicyRequestPrivate::PutApplicationPolicyRequestPrivate(
     const PutApplicationPolicyRequestPrivate &other, PutApplicationPolicyRequest * const q)

@@ -27,10 +27,9 @@ namespace Comprehend {
 
 /*!
  * \class QtAws::Comprehend::BatchDetectSentimentRequest
- *
  * \brief The BatchDetectSentimentRequest class provides an interface for Comprehend BatchDetectSentiment requests.
  *
- * \ingroup Comprehend
+ * \inmodule QtAwsComprehend
  *
  *  Amazon Comprehend is an AWS service for gaining insight into the content of documents. Use these actions to determine
  *  the topics contained in your documents, the topics they discuss, the predominant sentiment expressed in them, the
@@ -40,9 +39,7 @@ namespace Comprehend {
  */
 
 /*!
- * @brief  Constructs a new BatchDetectSentimentRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 BatchDetectSentimentRequest::BatchDetectSentimentRequest(const BatchDetectSentimentRequest &other)
     : ComprehendRequest(new BatchDetectSentimentRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ BatchDetectSentimentRequest::BatchDetectSentimentRequest(const BatchDetectSentim
 }
 
 /*!
- * @brief  Constructs a new BatchDetectSentimentRequest object.
+ * Constructs a BatchDetectSentimentRequest object.
  */
 BatchDetectSentimentRequest::BatchDetectSentimentRequest()
     : ComprehendRequest(new BatchDetectSentimentRequestPrivate(ComprehendRequest::BatchDetectSentimentAction, this))
@@ -69,14 +66,9 @@ bool BatchDetectSentimentRequest::isValid() const
 
 
 /*!
- * @brief  Construct an BatchDetectSentimentResponse object.
+ * Returns a BatchDetectSentimentResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An BatchDetectSentimentResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ComprehendClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * BatchDetectSentimentRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * BatchDetectSentimentRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::Comprehend::BatchDetectSentimentRequestPrivate
+ * \brief The BatchDetectSentimentRequestPrivate class provides private implementation for BatchDetectSentimentRequest.
+ * \internal
  *
- * @class  BatchDetectSentimentRequestPrivate
- *
- * @brief  Private implementation for BatchDetectSentimentRequest.
+ * \inmodule QtAwsComprehend
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new BatchDetectSentimentRequestPrivate object.
- *
- * @param  action  Comprehend action being performed.
- * @param  q       Pointer to this object's public BatchDetectSentimentRequest instance.
+ * Constructs a BatchDetectSentimentRequestPrivate object for Comprehend \a action with,
+ * public implementation \a q.
  */
 BatchDetectSentimentRequestPrivate::BatchDetectSentimentRequestPrivate(
     const ComprehendRequest::Action action, BatchDetectSentimentRequest * const q)
@@ -107,15 +96,10 @@ BatchDetectSentimentRequestPrivate::BatchDetectSentimentRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new BatchDetectSentimentRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the BatchDetectSentimentRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public BatchDetectSentimentRequest instance.
  */
 BatchDetectSentimentRequestPrivate::BatchDetectSentimentRequestPrivate(
     const BatchDetectSentimentRequestPrivate &other, BatchDetectSentimentRequest * const q)

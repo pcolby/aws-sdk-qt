@@ -27,10 +27,9 @@ namespace ECR {
 
 /*!
  * \class QtAws::ECR::GetRepositoryPolicyRequest
- *
  * \brief The GetRepositoryPolicyRequest class provides an interface for ECR GetRepositoryPolicy requests.
  *
- * \ingroup ECR
+ * \inmodule QtAwsECR
  *
  *  Amazon Elastic Container Registry (Amazon ECR) is a managed Docker registry service. Customers can use the familiar
  *  Docker CLI to push, pull, and manage images. Amazon ECR provides a secure, scalable, and reliable registry. Amazon ECR
@@ -41,9 +40,7 @@ namespace ECR {
  */
 
 /*!
- * @brief  Constructs a new GetRepositoryPolicyRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetRepositoryPolicyRequest::GetRepositoryPolicyRequest(const GetRepositoryPolicyRequest &other)
     : ECRRequest(new GetRepositoryPolicyRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ GetRepositoryPolicyRequest::GetRepositoryPolicyRequest(const GetRepositoryPolicy
 }
 
 /*!
- * @brief  Constructs a new GetRepositoryPolicyRequest object.
+ * Constructs a GetRepositoryPolicyRequest object.
  */
 GetRepositoryPolicyRequest::GetRepositoryPolicyRequest()
     : ECRRequest(new GetRepositoryPolicyRequestPrivate(ECRRequest::GetRepositoryPolicyAction, this))
@@ -70,14 +67,9 @@ bool GetRepositoryPolicyRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetRepositoryPolicyResponse object.
+ * Returns a GetRepositoryPolicyResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetRepositoryPolicyResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ECRClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetRepositoryPolicyRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * GetRepositoryPolicyRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::ECR::GetRepositoryPolicyRequestPrivate
+ * \brief The GetRepositoryPolicyRequestPrivate class provides private implementation for GetRepositoryPolicyRequest.
+ * \internal
  *
- * @class  GetRepositoryPolicyRequestPrivate
- *
- * @brief  Private implementation for GetRepositoryPolicyRequest.
+ * \inmodule QtAwsECR
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetRepositoryPolicyRequestPrivate object.
- *
- * @param  action  ECR action being performed.
- * @param  q       Pointer to this object's public GetRepositoryPolicyRequest instance.
+ * Constructs a GetRepositoryPolicyRequestPrivate object for ECR \a action with,
+ * public implementation \a q.
  */
 GetRepositoryPolicyRequestPrivate::GetRepositoryPolicyRequestPrivate(
     const ECRRequest::Action action, GetRepositoryPolicyRequest * const q)
@@ -108,15 +97,10 @@ GetRepositoryPolicyRequestPrivate::GetRepositoryPolicyRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetRepositoryPolicyRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetRepositoryPolicyRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetRepositoryPolicyRequest instance.
  */
 GetRepositoryPolicyRequestPrivate::GetRepositoryPolicyRequestPrivate(
     const GetRepositoryPolicyRequestPrivate &other, GetRepositoryPolicyRequest * const q)

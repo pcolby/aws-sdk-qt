@@ -27,10 +27,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::GetDomainNamesRequest
- *
  * \brief The GetDomainNamesRequest class provides an interface for APIGateway GetDomainNames requests.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -42,9 +41,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new GetDomainNamesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetDomainNamesRequest::GetDomainNamesRequest(const GetDomainNamesRequest &other)
     : APIGatewayRequest(new GetDomainNamesRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ GetDomainNamesRequest::GetDomainNamesRequest(const GetDomainNamesRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetDomainNamesRequest object.
+ * Constructs a GetDomainNamesRequest object.
  */
 GetDomainNamesRequest::GetDomainNamesRequest()
     : APIGatewayRequest(new GetDomainNamesRequestPrivate(APIGatewayRequest::GetDomainNamesAction, this))
@@ -71,14 +68,9 @@ bool GetDomainNamesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetDomainNamesResponse object.
+ * Returns a GetDomainNamesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetDomainNamesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  APIGatewayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetDomainNamesRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * GetDomainNamesRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::APIGateway::GetDomainNamesRequestPrivate
+ * \brief The GetDomainNamesRequestPrivate class provides private implementation for GetDomainNamesRequest.
+ * \internal
  *
- * @class  GetDomainNamesRequestPrivate
- *
- * @brief  Private implementation for GetDomainNamesRequest.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetDomainNamesRequestPrivate object.
- *
- * @param  action  APIGateway action being performed.
- * @param  q       Pointer to this object's public GetDomainNamesRequest instance.
+ * Constructs a GetDomainNamesRequestPrivate object for APIGateway \a action with,
+ * public implementation \a q.
  */
 GetDomainNamesRequestPrivate::GetDomainNamesRequestPrivate(
     const APIGatewayRequest::Action action, GetDomainNamesRequest * const q)
@@ -109,15 +98,10 @@ GetDomainNamesRequestPrivate::GetDomainNamesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetDomainNamesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetDomainNamesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetDomainNamesRequest instance.
  */
 GetDomainNamesRequestPrivate::GetDomainNamesRequestPrivate(
     const GetDomainNamesRequestPrivate &other, GetDomainNamesRequest * const q)

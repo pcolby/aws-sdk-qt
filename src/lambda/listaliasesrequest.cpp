@@ -27,10 +27,9 @@ namespace Lambda {
 
 /*!
  * \class QtAws::Lambda::ListAliasesRequest
- *
  * \brief The ListAliasesRequest class provides an interface for Lambda ListAliases requests.
  *
- * \ingroup Lambda
+ * \inmodule QtAwsLambda
  *
  *  <fullname>AWS Lambda</fullname>
  * 
@@ -48,9 +47,7 @@ namespace Lambda {
  */
 
 /*!
- * @brief  Constructs a new ListAliasesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListAliasesRequest::ListAliasesRequest(const ListAliasesRequest &other)
     : LambdaRequest(new ListAliasesRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ ListAliasesRequest::ListAliasesRequest(const ListAliasesRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ListAliasesRequest object.
+ * Constructs a ListAliasesRequest object.
  */
 ListAliasesRequest::ListAliasesRequest()
     : LambdaRequest(new ListAliasesRequestPrivate(LambdaRequest::ListAliasesAction, this))
@@ -77,14 +74,9 @@ bool ListAliasesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListAliasesResponse object.
+ * Returns a ListAliasesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListAliasesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  LambdaClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListAliasesRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * ListAliasesRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::Lambda::ListAliasesRequestPrivate
+ * \brief The ListAliasesRequestPrivate class provides private implementation for ListAliasesRequest.
+ * \internal
  *
- * @class  ListAliasesRequestPrivate
- *
- * @brief  Private implementation for ListAliasesRequest.
+ * \inmodule QtAwsLambda
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListAliasesRequestPrivate object.
- *
- * @param  action  Lambda action being performed.
- * @param  q       Pointer to this object's public ListAliasesRequest instance.
+ * Constructs a ListAliasesRequestPrivate object for Lambda \a action with,
+ * public implementation \a q.
  */
 ListAliasesRequestPrivate::ListAliasesRequestPrivate(
     const LambdaRequest::Action action, ListAliasesRequest * const q)
@@ -115,15 +104,10 @@ ListAliasesRequestPrivate::ListAliasesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListAliasesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListAliasesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListAliasesRequest instance.
  */
 ListAliasesRequestPrivate::ListAliasesRequestPrivate(
     const ListAliasesRequestPrivate &other, ListAliasesRequest * const q)

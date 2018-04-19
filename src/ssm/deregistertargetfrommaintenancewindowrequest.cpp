@@ -27,10 +27,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::DeregisterTargetFromMaintenanceWindowRequest
- *
  * \brief The DeregisterTargetFromMaintenanceWindowRequest class provides an interface for SSM DeregisterTargetFromMaintenanceWindow requests.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -61,9 +60,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new DeregisterTargetFromMaintenanceWindowRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeregisterTargetFromMaintenanceWindowRequest::DeregisterTargetFromMaintenanceWindowRequest(const DeregisterTargetFromMaintenanceWindowRequest &other)
     : SSMRequest(new DeregisterTargetFromMaintenanceWindowRequestPrivate(*other.d_func(), this))
@@ -72,7 +69,7 @@ DeregisterTargetFromMaintenanceWindowRequest::DeregisterTargetFromMaintenanceWin
 }
 
 /*!
- * @brief  Constructs a new DeregisterTargetFromMaintenanceWindowRequest object.
+ * Constructs a DeregisterTargetFromMaintenanceWindowRequest object.
  */
 DeregisterTargetFromMaintenanceWindowRequest::DeregisterTargetFromMaintenanceWindowRequest()
     : SSMRequest(new DeregisterTargetFromMaintenanceWindowRequestPrivate(SSMRequest::DeregisterTargetFromMaintenanceWindowAction, this))
@@ -90,14 +87,9 @@ bool DeregisterTargetFromMaintenanceWindowRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeregisterTargetFromMaintenanceWindowResponse object.
+ * Returns a DeregisterTargetFromMaintenanceWindowResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeregisterTargetFromMaintenanceWindowResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SSMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeregisterTargetFromMaintenanceWindowRequest::response(QNetworkReply * const reply) const
 {
@@ -105,20 +97,17 @@ QtAws::Core::AwsAbstractResponse * DeregisterTargetFromMaintenanceWindowRequest:
 }
 
 /*!
- * @internal
+ * \class QtAws::SSM::DeregisterTargetFromMaintenanceWindowRequestPrivate
+ * \brief The DeregisterTargetFromMaintenanceWindowRequestPrivate class provides private implementation for DeregisterTargetFromMaintenanceWindowRequest.
+ * \internal
  *
- * @class  DeregisterTargetFromMaintenanceWindowRequestPrivate
- *
- * @brief  Private implementation for DeregisterTargetFromMaintenanceWindowRequest.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeregisterTargetFromMaintenanceWindowRequestPrivate object.
- *
- * @param  action  SSM action being performed.
- * @param  q       Pointer to this object's public DeregisterTargetFromMaintenanceWindowRequest instance.
+ * Constructs a DeregisterTargetFromMaintenanceWindowRequestPrivate object for SSM \a action with,
+ * public implementation \a q.
  */
 DeregisterTargetFromMaintenanceWindowRequestPrivate::DeregisterTargetFromMaintenanceWindowRequestPrivate(
     const SSMRequest::Action action, DeregisterTargetFromMaintenanceWindowRequest * const q)
@@ -128,15 +117,10 @@ DeregisterTargetFromMaintenanceWindowRequestPrivate::DeregisterTargetFromMainten
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeregisterTargetFromMaintenanceWindowRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeregisterTargetFromMaintenanceWindowRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeregisterTargetFromMaintenanceWindowRequest instance.
  */
 DeregisterTargetFromMaintenanceWindowRequestPrivate::DeregisterTargetFromMaintenanceWindowRequestPrivate(
     const DeregisterTargetFromMaintenanceWindowRequestPrivate &other, DeregisterTargetFromMaintenanceWindowRequest * const q)

@@ -27,10 +27,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::DeleteUserPolicyRequest
- *
  * \brief The DeleteUserPolicyRequest class provides an interface for IAM DeleteUserPolicy requests.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -102,9 +101,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new DeleteUserPolicyRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteUserPolicyRequest::DeleteUserPolicyRequest(const DeleteUserPolicyRequest &other)
     : IAMRequest(new DeleteUserPolicyRequestPrivate(*other.d_func(), this))
@@ -113,7 +110,7 @@ DeleteUserPolicyRequest::DeleteUserPolicyRequest(const DeleteUserPolicyRequest &
 }
 
 /*!
- * @brief  Constructs a new DeleteUserPolicyRequest object.
+ * Constructs a DeleteUserPolicyRequest object.
  */
 DeleteUserPolicyRequest::DeleteUserPolicyRequest()
     : IAMRequest(new DeleteUserPolicyRequestPrivate(IAMRequest::DeleteUserPolicyAction, this))
@@ -131,14 +128,9 @@ bool DeleteUserPolicyRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteUserPolicyResponse object.
+ * Returns a DeleteUserPolicyResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteUserPolicyResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IAMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteUserPolicyRequest::response(QNetworkReply * const reply) const
 {
@@ -146,20 +138,17 @@ QtAws::Core::AwsAbstractResponse * DeleteUserPolicyRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::IAM::DeleteUserPolicyRequestPrivate
+ * \brief The DeleteUserPolicyRequestPrivate class provides private implementation for DeleteUserPolicyRequest.
+ * \internal
  *
- * @class  DeleteUserPolicyRequestPrivate
- *
- * @brief  Private implementation for DeleteUserPolicyRequest.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteUserPolicyRequestPrivate object.
- *
- * @param  action  IAM action being performed.
- * @param  q       Pointer to this object's public DeleteUserPolicyRequest instance.
+ * Constructs a DeleteUserPolicyRequestPrivate object for IAM \a action with,
+ * public implementation \a q.
  */
 DeleteUserPolicyRequestPrivate::DeleteUserPolicyRequestPrivate(
     const IAMRequest::Action action, DeleteUserPolicyRequest * const q)
@@ -169,15 +158,10 @@ DeleteUserPolicyRequestPrivate::DeleteUserPolicyRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteUserPolicyRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteUserPolicyRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteUserPolicyRequest instance.
  */
 DeleteUserPolicyRequestPrivate::DeleteUserPolicyRequestPrivate(
     const DeleteUserPolicyRequestPrivate &other, DeleteUserPolicyRequest * const q)

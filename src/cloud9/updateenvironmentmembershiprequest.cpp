@@ -27,10 +27,9 @@ namespace Cloud9 {
 
 /*!
  * \class QtAws::Cloud9::UpdateEnvironmentMembershipRequest
- *
  * \brief The UpdateEnvironmentMembershipRequest class provides an interface for Cloud9 UpdateEnvironmentMembership requests.
  *
- * \ingroup Cloud9
+ * \inmodule QtAwsCloud9
  *
  *  <fullname>AWS Cloud9</fullname>
  * 
@@ -91,9 +90,7 @@ namespace Cloud9 {
  */
 
 /*!
- * @brief  Constructs a new UpdateEnvironmentMembershipRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateEnvironmentMembershipRequest::UpdateEnvironmentMembershipRequest(const UpdateEnvironmentMembershipRequest &other)
     : Cloud9Request(new UpdateEnvironmentMembershipRequestPrivate(*other.d_func(), this))
@@ -102,7 +99,7 @@ UpdateEnvironmentMembershipRequest::UpdateEnvironmentMembershipRequest(const Upd
 }
 
 /*!
- * @brief  Constructs a new UpdateEnvironmentMembershipRequest object.
+ * Constructs a UpdateEnvironmentMembershipRequest object.
  */
 UpdateEnvironmentMembershipRequest::UpdateEnvironmentMembershipRequest()
     : Cloud9Request(new UpdateEnvironmentMembershipRequestPrivate(Cloud9Request::UpdateEnvironmentMembershipAction, this))
@@ -120,14 +117,9 @@ bool UpdateEnvironmentMembershipRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateEnvironmentMembershipResponse object.
+ * Returns a UpdateEnvironmentMembershipResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateEnvironmentMembershipResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  Cloud9Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateEnvironmentMembershipRequest::response(QNetworkReply * const reply) const
 {
@@ -135,20 +127,17 @@ QtAws::Core::AwsAbstractResponse * UpdateEnvironmentMembershipRequest::response(
 }
 
 /*!
- * @internal
+ * \class QtAws::Cloud9::UpdateEnvironmentMembershipRequestPrivate
+ * \brief The UpdateEnvironmentMembershipRequestPrivate class provides private implementation for UpdateEnvironmentMembershipRequest.
+ * \internal
  *
- * @class  UpdateEnvironmentMembershipRequestPrivate
- *
- * @brief  Private implementation for UpdateEnvironmentMembershipRequest.
+ * \inmodule QtAwsCloud9
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateEnvironmentMembershipRequestPrivate object.
- *
- * @param  action  Cloud9 action being performed.
- * @param  q       Pointer to this object's public UpdateEnvironmentMembershipRequest instance.
+ * Constructs a UpdateEnvironmentMembershipRequestPrivate object for Cloud9 \a action with,
+ * public implementation \a q.
  */
 UpdateEnvironmentMembershipRequestPrivate::UpdateEnvironmentMembershipRequestPrivate(
     const Cloud9Request::Action action, UpdateEnvironmentMembershipRequest * const q)
@@ -158,15 +147,10 @@ UpdateEnvironmentMembershipRequestPrivate::UpdateEnvironmentMembershipRequestPri
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateEnvironmentMembershipRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateEnvironmentMembershipRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateEnvironmentMembershipRequest instance.
  */
 UpdateEnvironmentMembershipRequestPrivate::UpdateEnvironmentMembershipRequestPrivate(
     const UpdateEnvironmentMembershipRequestPrivate &other, UpdateEnvironmentMembershipRequest * const q)

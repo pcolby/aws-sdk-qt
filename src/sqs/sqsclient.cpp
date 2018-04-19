@@ -68,6 +68,9 @@
 /*!
  * \namespace QtAws::SQS
  * \brief The QtAws::SQS contains stuff...
+ *
+ * \inmodule QtAwsSQS
+ *
  * @todo Move this to a separate template file.
  */
 
@@ -183,7 +186,7 @@ SqsClient::SqsClient(
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * \a  AwsEndpoint::getEndpoint()
+ * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
 SqsClient::SqsClient(
     const QUrl &endpoint,

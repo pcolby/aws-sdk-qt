@@ -27,10 +27,9 @@ namespace CognitoIdentityProvider {
 
 /*!
  * \class QtAws::CognitoIdentityProvider::CreateIdentityProviderRequest
- *
  * \brief The CreateIdentityProviderRequest class provides an interface for CognitoIdentityProvider CreateIdentityProvider requests.
  *
- * \ingroup CognitoIdentityProvider
+ * \inmodule QtAwsCognitoIdentityProvider
  *
  *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
  *  authenticate a user to obtain tokens related to user identity and access
@@ -47,9 +46,7 @@ namespace CognitoIdentityProvider {
  */
 
 /*!
- * @brief  Constructs a new CreateIdentityProviderRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateIdentityProviderRequest::CreateIdentityProviderRequest(const CreateIdentityProviderRequest &other)
     : CognitoIdentityProviderRequest(new CreateIdentityProviderRequestPrivate(*other.d_func(), this))
@@ -58,7 +55,7 @@ CreateIdentityProviderRequest::CreateIdentityProviderRequest(const CreateIdentit
 }
 
 /*!
- * @brief  Constructs a new CreateIdentityProviderRequest object.
+ * Constructs a CreateIdentityProviderRequest object.
  */
 CreateIdentityProviderRequest::CreateIdentityProviderRequest()
     : CognitoIdentityProviderRequest(new CreateIdentityProviderRequestPrivate(CognitoIdentityProviderRequest::CreateIdentityProviderAction, this))
@@ -76,14 +73,9 @@ bool CreateIdentityProviderRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateIdentityProviderResponse object.
+ * Returns a CreateIdentityProviderResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateIdentityProviderResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CognitoIdentityProviderClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateIdentityProviderRequest::response(QNetworkReply * const reply) const
 {
@@ -91,20 +83,17 @@ QtAws::Core::AwsAbstractResponse * CreateIdentityProviderRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::CognitoIdentityProvider::CreateIdentityProviderRequestPrivate
+ * \brief The CreateIdentityProviderRequestPrivate class provides private implementation for CreateIdentityProviderRequest.
+ * \internal
  *
- * @class  CreateIdentityProviderRequestPrivate
- *
- * @brief  Private implementation for CreateIdentityProviderRequest.
+ * \inmodule QtAwsCognitoIdentityProvider
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateIdentityProviderRequestPrivate object.
- *
- * @param  action  CognitoIdentityProvider action being performed.
- * @param  q       Pointer to this object's public CreateIdentityProviderRequest instance.
+ * Constructs a CreateIdentityProviderRequestPrivate object for CognitoIdentityProvider \a action with,
+ * public implementation \a q.
  */
 CreateIdentityProviderRequestPrivate::CreateIdentityProviderRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, CreateIdentityProviderRequest * const q)
@@ -114,15 +103,10 @@ CreateIdentityProviderRequestPrivate::CreateIdentityProviderRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateIdentityProviderRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateIdentityProviderRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateIdentityProviderRequest instance.
  */
 CreateIdentityProviderRequestPrivate::CreateIdentityProviderRequestPrivate(
     const CreateIdentityProviderRequestPrivate &other, CreateIdentityProviderRequest * const q)

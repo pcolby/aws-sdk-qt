@@ -27,10 +27,9 @@ namespace ConfigService {
 
 /*!
  * \class QtAws::ConfigService::PutConfigurationAggregatorRequest
- *
  * \brief The PutConfigurationAggregatorRequest class provides an interface for ConfigService PutConfigurationAggregator requests.
  *
- * \ingroup ConfigService
+ * \inmodule QtAwsConfigService
  *
  *  <fullname>AWS Config</fullname>
  * 
@@ -60,9 +59,7 @@ namespace ConfigService {
  */
 
 /*!
- * @brief  Constructs a new PutConfigurationAggregatorRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 PutConfigurationAggregatorRequest::PutConfigurationAggregatorRequest(const PutConfigurationAggregatorRequest &other)
     : ConfigServiceRequest(new PutConfigurationAggregatorRequestPrivate(*other.d_func(), this))
@@ -71,7 +68,7 @@ PutConfigurationAggregatorRequest::PutConfigurationAggregatorRequest(const PutCo
 }
 
 /*!
- * @brief  Constructs a new PutConfigurationAggregatorRequest object.
+ * Constructs a PutConfigurationAggregatorRequest object.
  */
 PutConfigurationAggregatorRequest::PutConfigurationAggregatorRequest()
     : ConfigServiceRequest(new PutConfigurationAggregatorRequestPrivate(ConfigServiceRequest::PutConfigurationAggregatorAction, this))
@@ -89,14 +86,9 @@ bool PutConfigurationAggregatorRequest::isValid() const
 
 
 /*!
- * @brief  Construct an PutConfigurationAggregatorResponse object.
+ * Returns a PutConfigurationAggregatorResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An PutConfigurationAggregatorResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ConfigServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * PutConfigurationAggregatorRequest::response(QNetworkReply * const reply) const
 {
@@ -104,20 +96,17 @@ QtAws::Core::AwsAbstractResponse * PutConfigurationAggregatorRequest::response(Q
 }
 
 /*!
- * @internal
+ * \class QtAws::ConfigService::PutConfigurationAggregatorRequestPrivate
+ * \brief The PutConfigurationAggregatorRequestPrivate class provides private implementation for PutConfigurationAggregatorRequest.
+ * \internal
  *
- * @class  PutConfigurationAggregatorRequestPrivate
- *
- * @brief  Private implementation for PutConfigurationAggregatorRequest.
+ * \inmodule QtAwsConfigService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new PutConfigurationAggregatorRequestPrivate object.
- *
- * @param  action  ConfigService action being performed.
- * @param  q       Pointer to this object's public PutConfigurationAggregatorRequest instance.
+ * Constructs a PutConfigurationAggregatorRequestPrivate object for ConfigService \a action with,
+ * public implementation \a q.
  */
 PutConfigurationAggregatorRequestPrivate::PutConfigurationAggregatorRequestPrivate(
     const ConfigServiceRequest::Action action, PutConfigurationAggregatorRequest * const q)
@@ -127,15 +116,10 @@ PutConfigurationAggregatorRequestPrivate::PutConfigurationAggregatorRequestPriva
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutConfigurationAggregatorRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the PutConfigurationAggregatorRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public PutConfigurationAggregatorRequest instance.
  */
 PutConfigurationAggregatorRequestPrivate::PutConfigurationAggregatorRequestPrivate(
     const PutConfigurationAggregatorRequestPrivate &other, PutConfigurationAggregatorRequest * const q)

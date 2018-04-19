@@ -27,10 +27,9 @@ namespace DirectConnect {
 
 /*!
  * \class QtAws::DirectConnect::DeleteConnectionRequest
- *
  * \brief The DeleteConnectionRequest class provides an interface for DirectConnect DeleteConnection requests.
  *
- * \ingroup DirectConnect
+ * \inmodule QtAwsDirectConnect
  *
  *  AWS Direct Connect links your internal network to an AWS Direct Connect location over a standard 1 gigabit or 10 gigabit
  *  Ethernet fiber-optic cable. One end of the cable is connected to your router, the other to an AWS Direct Connect router.
@@ -45,9 +44,7 @@ namespace DirectConnect {
  */
 
 /*!
- * @brief  Constructs a new DeleteConnectionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteConnectionRequest::DeleteConnectionRequest(const DeleteConnectionRequest &other)
     : DirectConnectRequest(new DeleteConnectionRequestPrivate(*other.d_func(), this))
@@ -56,7 +53,7 @@ DeleteConnectionRequest::DeleteConnectionRequest(const DeleteConnectionRequest &
 }
 
 /*!
- * @brief  Constructs a new DeleteConnectionRequest object.
+ * Constructs a DeleteConnectionRequest object.
  */
 DeleteConnectionRequest::DeleteConnectionRequest()
     : DirectConnectRequest(new DeleteConnectionRequestPrivate(DirectConnectRequest::DeleteConnectionAction, this))
@@ -74,14 +71,9 @@ bool DeleteConnectionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteConnectionResponse object.
+ * Returns a DeleteConnectionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteConnectionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DirectConnectClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteConnectionRequest::response(QNetworkReply * const reply) const
 {
@@ -89,20 +81,17 @@ QtAws::Core::AwsAbstractResponse * DeleteConnectionRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::DirectConnect::DeleteConnectionRequestPrivate
+ * \brief The DeleteConnectionRequestPrivate class provides private implementation for DeleteConnectionRequest.
+ * \internal
  *
- * @class  DeleteConnectionRequestPrivate
- *
- * @brief  Private implementation for DeleteConnectionRequest.
+ * \inmodule QtAwsDirectConnect
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteConnectionRequestPrivate object.
- *
- * @param  action  DirectConnect action being performed.
- * @param  q       Pointer to this object's public DeleteConnectionRequest instance.
+ * Constructs a DeleteConnectionRequestPrivate object for DirectConnect \a action with,
+ * public implementation \a q.
  */
 DeleteConnectionRequestPrivate::DeleteConnectionRequestPrivate(
     const DirectConnectRequest::Action action, DeleteConnectionRequest * const q)
@@ -112,15 +101,10 @@ DeleteConnectionRequestPrivate::DeleteConnectionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteConnectionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteConnectionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteConnectionRequest instance.
  */
 DeleteConnectionRequestPrivate::DeleteConnectionRequestPrivate(
     const DeleteConnectionRequestPrivate &other, DeleteConnectionRequest * const q)

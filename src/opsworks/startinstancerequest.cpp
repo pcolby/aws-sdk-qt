@@ -27,10 +27,9 @@ namespace OpsWorks {
 
 /*!
  * \class QtAws::OpsWorks::StartInstanceRequest
- *
  * \brief The StartInstanceRequest class provides an interface for OpsWorks StartInstance requests.
  *
- * \ingroup OpsWorks
+ * \inmodule QtAwsOpsWorks
  *
  *  <fullname>AWS OpsWorks</fullname>
  * 
@@ -143,9 +142,7 @@ namespace OpsWorks {
  */
 
 /*!
- * @brief  Constructs a new StartInstanceRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 StartInstanceRequest::StartInstanceRequest(const StartInstanceRequest &other)
     : OpsWorksRequest(new StartInstanceRequestPrivate(*other.d_func(), this))
@@ -154,7 +151,7 @@ StartInstanceRequest::StartInstanceRequest(const StartInstanceRequest &other)
 }
 
 /*!
- * @brief  Constructs a new StartInstanceRequest object.
+ * Constructs a StartInstanceRequest object.
  */
 StartInstanceRequest::StartInstanceRequest()
     : OpsWorksRequest(new StartInstanceRequestPrivate(OpsWorksRequest::StartInstanceAction, this))
@@ -172,14 +169,9 @@ bool StartInstanceRequest::isValid() const
 
 
 /*!
- * @brief  Construct an StartInstanceResponse object.
+ * Returns a StartInstanceResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An StartInstanceResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  OpsWorksClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * StartInstanceRequest::response(QNetworkReply * const reply) const
 {
@@ -187,20 +179,17 @@ QtAws::Core::AwsAbstractResponse * StartInstanceRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::OpsWorks::StartInstanceRequestPrivate
+ * \brief The StartInstanceRequestPrivate class provides private implementation for StartInstanceRequest.
+ * \internal
  *
- * @class  StartInstanceRequestPrivate
- *
- * @brief  Private implementation for StartInstanceRequest.
+ * \inmodule QtAwsOpsWorks
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new StartInstanceRequestPrivate object.
- *
- * @param  action  OpsWorks action being performed.
- * @param  q       Pointer to this object's public StartInstanceRequest instance.
+ * Constructs a StartInstanceRequestPrivate object for OpsWorks \a action with,
+ * public implementation \a q.
  */
 StartInstanceRequestPrivate::StartInstanceRequestPrivate(
     const OpsWorksRequest::Action action, StartInstanceRequest * const q)
@@ -210,15 +199,10 @@ StartInstanceRequestPrivate::StartInstanceRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StartInstanceRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the StartInstanceRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public StartInstanceRequest instance.
  */
 StartInstanceRequestPrivate::StartInstanceRequestPrivate(
     const StartInstanceRequestPrivate &other, StartInstanceRequest * const q)

@@ -27,10 +27,9 @@ namespace DeviceFarm {
 
 /*!
  * \class QtAws::DeviceFarm::CreateUploadRequest
- *
  * \brief The CreateUploadRequest class provides an interface for DeviceFarm CreateUpload requests.
  *
- * \ingroup DeviceFarm
+ * \inmodule QtAwsDeviceFarm
  *
  *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
  *  phones, tablets, and other devices in the
@@ -39,9 +38,7 @@ namespace DeviceFarm {
  */
 
 /*!
- * @brief  Constructs a new CreateUploadRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateUploadRequest::CreateUploadRequest(const CreateUploadRequest &other)
     : DeviceFarmRequest(new CreateUploadRequestPrivate(*other.d_func(), this))
@@ -50,7 +47,7 @@ CreateUploadRequest::CreateUploadRequest(const CreateUploadRequest &other)
 }
 
 /*!
- * @brief  Constructs a new CreateUploadRequest object.
+ * Constructs a CreateUploadRequest object.
  */
 CreateUploadRequest::CreateUploadRequest()
     : DeviceFarmRequest(new CreateUploadRequestPrivate(DeviceFarmRequest::CreateUploadAction, this))
@@ -68,14 +65,9 @@ bool CreateUploadRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateUploadResponse object.
+ * Returns a CreateUploadResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateUploadResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DeviceFarmClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateUploadRequest::response(QNetworkReply * const reply) const
 {
@@ -83,20 +75,17 @@ QtAws::Core::AwsAbstractResponse * CreateUploadRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::DeviceFarm::CreateUploadRequestPrivate
+ * \brief The CreateUploadRequestPrivate class provides private implementation for CreateUploadRequest.
+ * \internal
  *
- * @class  CreateUploadRequestPrivate
- *
- * @brief  Private implementation for CreateUploadRequest.
+ * \inmodule QtAwsDeviceFarm
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateUploadRequestPrivate object.
- *
- * @param  action  DeviceFarm action being performed.
- * @param  q       Pointer to this object's public CreateUploadRequest instance.
+ * Constructs a CreateUploadRequestPrivate object for DeviceFarm \a action with,
+ * public implementation \a q.
  */
 CreateUploadRequestPrivate::CreateUploadRequestPrivate(
     const DeviceFarmRequest::Action action, CreateUploadRequest * const q)
@@ -106,15 +95,10 @@ CreateUploadRequestPrivate::CreateUploadRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateUploadRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateUploadRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateUploadRequest instance.
  */
 CreateUploadRequestPrivate::CreateUploadRequestPrivate(
     const CreateUploadRequestPrivate &other, CreateUploadRequest * const q)

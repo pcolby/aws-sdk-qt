@@ -27,10 +27,9 @@ namespace Organizations {
 
 /*!
  * \class QtAws::Organizations::CreatePolicyRequest
- *
  * \brief The CreatePolicyRequest class provides an interface for Organizations CreatePolicy requests.
  *
- * \ingroup Organizations
+ * \inmodule QtAwsOrganizations
  *
  *  <fullname>AWS Organizations API Reference</fullname>
  * 
@@ -179,9 +178,7 @@ namespace Organizations {
  */
 
 /*!
- * @brief  Constructs a new CreatePolicyRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreatePolicyRequest::CreatePolicyRequest(const CreatePolicyRequest &other)
     : OrganizationsRequest(new CreatePolicyRequestPrivate(*other.d_func(), this))
@@ -190,7 +187,7 @@ CreatePolicyRequest::CreatePolicyRequest(const CreatePolicyRequest &other)
 }
 
 /*!
- * @brief  Constructs a new CreatePolicyRequest object.
+ * Constructs a CreatePolicyRequest object.
  */
 CreatePolicyRequest::CreatePolicyRequest()
     : OrganizationsRequest(new CreatePolicyRequestPrivate(OrganizationsRequest::CreatePolicyAction, this))
@@ -208,14 +205,9 @@ bool CreatePolicyRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreatePolicyResponse object.
+ * Returns a CreatePolicyResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreatePolicyResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  OrganizationsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreatePolicyRequest::response(QNetworkReply * const reply) const
 {
@@ -223,20 +215,17 @@ QtAws::Core::AwsAbstractResponse * CreatePolicyRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::Organizations::CreatePolicyRequestPrivate
+ * \brief The CreatePolicyRequestPrivate class provides private implementation for CreatePolicyRequest.
+ * \internal
  *
- * @class  CreatePolicyRequestPrivate
- *
- * @brief  Private implementation for CreatePolicyRequest.
+ * \inmodule QtAwsOrganizations
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreatePolicyRequestPrivate object.
- *
- * @param  action  Organizations action being performed.
- * @param  q       Pointer to this object's public CreatePolicyRequest instance.
+ * Constructs a CreatePolicyRequestPrivate object for Organizations \a action with,
+ * public implementation \a q.
  */
 CreatePolicyRequestPrivate::CreatePolicyRequestPrivate(
     const OrganizationsRequest::Action action, CreatePolicyRequest * const q)
@@ -246,15 +235,10 @@ CreatePolicyRequestPrivate::CreatePolicyRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreatePolicyRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreatePolicyRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreatePolicyRequest instance.
  */
 CreatePolicyRequestPrivate::CreatePolicyRequestPrivate(
     const CreatePolicyRequestPrivate &other, CreatePolicyRequest * const q)

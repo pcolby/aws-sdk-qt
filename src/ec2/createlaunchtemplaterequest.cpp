@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::CreateLaunchTemplateRequest
- *
  * \brief The CreateLaunchTemplateRequest class provides an interface for EC2 CreateLaunchTemplate requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new CreateLaunchTemplateRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateLaunchTemplateRequest::CreateLaunchTemplateRequest(const CreateLaunchTemplateRequest &other)
     : EC2Request(new CreateLaunchTemplateRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ CreateLaunchTemplateRequest::CreateLaunchTemplateRequest(const CreateLaunchTempl
 }
 
 /*!
- * @brief  Constructs a new CreateLaunchTemplateRequest object.
+ * Constructs a CreateLaunchTemplateRequest object.
  */
 CreateLaunchTemplateRequest::CreateLaunchTemplateRequest()
     : EC2Request(new CreateLaunchTemplateRequestPrivate(EC2Request::CreateLaunchTemplateAction, this))
@@ -70,14 +67,9 @@ bool CreateLaunchTemplateRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateLaunchTemplateResponse object.
+ * Returns a CreateLaunchTemplateResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateLaunchTemplateResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateLaunchTemplateRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * CreateLaunchTemplateRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::CreateLaunchTemplateRequestPrivate
+ * \brief The CreateLaunchTemplateRequestPrivate class provides private implementation for CreateLaunchTemplateRequest.
+ * \internal
  *
- * @class  CreateLaunchTemplateRequestPrivate
- *
- * @brief  Private implementation for CreateLaunchTemplateRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateLaunchTemplateRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public CreateLaunchTemplateRequest instance.
+ * Constructs a CreateLaunchTemplateRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 CreateLaunchTemplateRequestPrivate::CreateLaunchTemplateRequestPrivate(
     const EC2Request::Action action, CreateLaunchTemplateRequest * const q)
@@ -108,15 +97,10 @@ CreateLaunchTemplateRequestPrivate::CreateLaunchTemplateRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateLaunchTemplateRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateLaunchTemplateRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateLaunchTemplateRequest instance.
  */
 CreateLaunchTemplateRequestPrivate::CreateLaunchTemplateRequestPrivate(
     const CreateLaunchTemplateRequestPrivate &other, CreateLaunchTemplateRequest * const q)

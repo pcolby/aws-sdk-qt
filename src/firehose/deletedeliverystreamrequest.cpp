@@ -27,10 +27,9 @@ namespace Firehose {
 
 /*!
  * \class QtAws::Firehose::DeleteDeliveryStreamRequest
- *
  * \brief The DeleteDeliveryStreamRequest class provides an interface for Firehose DeleteDeliveryStream requests.
  *
- * \ingroup Firehose
+ * \inmodule QtAwsFirehose
  *
  *  <fullname>Amazon Kinesis Firehose API Reference</fullname>
  * 
@@ -41,9 +40,7 @@ namespace Firehose {
  */
 
 /*!
- * @brief  Constructs a new DeleteDeliveryStreamRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteDeliveryStreamRequest::DeleteDeliveryStreamRequest(const DeleteDeliveryStreamRequest &other)
     : FirehoseRequest(new DeleteDeliveryStreamRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ DeleteDeliveryStreamRequest::DeleteDeliveryStreamRequest(const DeleteDeliveryStr
 }
 
 /*!
- * @brief  Constructs a new DeleteDeliveryStreamRequest object.
+ * Constructs a DeleteDeliveryStreamRequest object.
  */
 DeleteDeliveryStreamRequest::DeleteDeliveryStreamRequest()
     : FirehoseRequest(new DeleteDeliveryStreamRequestPrivate(FirehoseRequest::DeleteDeliveryStreamAction, this))
@@ -70,14 +67,9 @@ bool DeleteDeliveryStreamRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteDeliveryStreamResponse object.
+ * Returns a DeleteDeliveryStreamResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteDeliveryStreamResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  FirehoseClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteDeliveryStreamRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * DeleteDeliveryStreamRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::Firehose::DeleteDeliveryStreamRequestPrivate
+ * \brief The DeleteDeliveryStreamRequestPrivate class provides private implementation for DeleteDeliveryStreamRequest.
+ * \internal
  *
- * @class  DeleteDeliveryStreamRequestPrivate
- *
- * @brief  Private implementation for DeleteDeliveryStreamRequest.
+ * \inmodule QtAwsFirehose
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteDeliveryStreamRequestPrivate object.
- *
- * @param  action  Firehose action being performed.
- * @param  q       Pointer to this object's public DeleteDeliveryStreamRequest instance.
+ * Constructs a DeleteDeliveryStreamRequestPrivate object for Firehose \a action with,
+ * public implementation \a q.
  */
 DeleteDeliveryStreamRequestPrivate::DeleteDeliveryStreamRequestPrivate(
     const FirehoseRequest::Action action, DeleteDeliveryStreamRequest * const q)
@@ -108,15 +97,10 @@ DeleteDeliveryStreamRequestPrivate::DeleteDeliveryStreamRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteDeliveryStreamRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteDeliveryStreamRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteDeliveryStreamRequest instance.
  */
 DeleteDeliveryStreamRequestPrivate::DeleteDeliveryStreamRequestPrivate(
     const DeleteDeliveryStreamRequestPrivate &other, DeleteDeliveryStreamRequest * const q)

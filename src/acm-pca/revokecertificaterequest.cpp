@@ -27,10 +27,9 @@ namespace ACMPCA {
 
 /*!
  * \class QtAws::ACMPCA::RevokeCertificateRequest
- *
  * \brief The RevokeCertificateRequest class provides an interface for ACMPCA RevokeCertificate requests.
  *
- * \ingroup ACMPCA
+ * \inmodule QtAwsACMPCA
  *
  *  You can use the ACM PCA API to create a private certificate authority (CA). You must first call the
  *  <a>CreateCertificateAuthority</a> function. If successful, the function returns an Amazon Resource Name (ARN) for your
@@ -67,9 +66,7 @@ namespace ACMPCA {
  */
 
 /*!
- * @brief  Constructs a new RevokeCertificateRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 RevokeCertificateRequest::RevokeCertificateRequest(const RevokeCertificateRequest &other)
     : ACMPCARequest(new RevokeCertificateRequestPrivate(*other.d_func(), this))
@@ -78,7 +75,7 @@ RevokeCertificateRequest::RevokeCertificateRequest(const RevokeCertificateReques
 }
 
 /*!
- * @brief  Constructs a new RevokeCertificateRequest object.
+ * Constructs a RevokeCertificateRequest object.
  */
 RevokeCertificateRequest::RevokeCertificateRequest()
     : ACMPCARequest(new RevokeCertificateRequestPrivate(ACMPCARequest::RevokeCertificateAction, this))
@@ -96,14 +93,9 @@ bool RevokeCertificateRequest::isValid() const
 
 
 /*!
- * @brief  Construct an RevokeCertificateResponse object.
+ * Returns a RevokeCertificateResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An RevokeCertificateResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ACMPCAClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * RevokeCertificateRequest::response(QNetworkReply * const reply) const
 {
@@ -111,20 +103,17 @@ QtAws::Core::AwsAbstractResponse * RevokeCertificateRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::ACMPCA::RevokeCertificateRequestPrivate
+ * \brief The RevokeCertificateRequestPrivate class provides private implementation for RevokeCertificateRequest.
+ * \internal
  *
- * @class  RevokeCertificateRequestPrivate
- *
- * @brief  Private implementation for RevokeCertificateRequest.
+ * \inmodule QtAwsACMPCA
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new RevokeCertificateRequestPrivate object.
- *
- * @param  action  ACMPCA action being performed.
- * @param  q       Pointer to this object's public RevokeCertificateRequest instance.
+ * Constructs a RevokeCertificateRequestPrivate object for ACMPCA \a action with,
+ * public implementation \a q.
  */
 RevokeCertificateRequestPrivate::RevokeCertificateRequestPrivate(
     const ACMPCARequest::Action action, RevokeCertificateRequest * const q)
@@ -134,15 +123,10 @@ RevokeCertificateRequestPrivate::RevokeCertificateRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RevokeCertificateRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the RevokeCertificateRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public RevokeCertificateRequest instance.
  */
 RevokeCertificateRequestPrivate::RevokeCertificateRequestPrivate(
     const RevokeCertificateRequestPrivate &other, RevokeCertificateRequest * const q)

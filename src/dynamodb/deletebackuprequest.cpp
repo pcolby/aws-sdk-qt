@@ -27,10 +27,9 @@ namespace DynamoDB {
 
 /*!
  * \class QtAws::DynamoDB::DeleteBackupRequest
- *
  * \brief The DeleteBackupRequest class provides an interface for DynamoDB DeleteBackup requests.
  *
- * \ingroup DynamoDB
+ * \inmodule QtAwsDynamoDB
  *
  *  <fullname>Amazon DynamoDB</fullname>
  * 
@@ -56,9 +55,7 @@ namespace DynamoDB {
  */
 
 /*!
- * @brief  Constructs a new DeleteBackupRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteBackupRequest::DeleteBackupRequest(const DeleteBackupRequest &other)
     : DynamoDBRequest(new DeleteBackupRequestPrivate(*other.d_func(), this))
@@ -67,7 +64,7 @@ DeleteBackupRequest::DeleteBackupRequest(const DeleteBackupRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DeleteBackupRequest object.
+ * Constructs a DeleteBackupRequest object.
  */
 DeleteBackupRequest::DeleteBackupRequest()
     : DynamoDBRequest(new DeleteBackupRequestPrivate(DynamoDBRequest::DeleteBackupAction, this))
@@ -85,14 +82,9 @@ bool DeleteBackupRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteBackupResponse object.
+ * Returns a DeleteBackupResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteBackupResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DynamoDBClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteBackupRequest::response(QNetworkReply * const reply) const
 {
@@ -100,20 +92,17 @@ QtAws::Core::AwsAbstractResponse * DeleteBackupRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::DynamoDB::DeleteBackupRequestPrivate
+ * \brief The DeleteBackupRequestPrivate class provides private implementation for DeleteBackupRequest.
+ * \internal
  *
- * @class  DeleteBackupRequestPrivate
- *
- * @brief  Private implementation for DeleteBackupRequest.
+ * \inmodule QtAwsDynamoDB
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteBackupRequestPrivate object.
- *
- * @param  action  DynamoDB action being performed.
- * @param  q       Pointer to this object's public DeleteBackupRequest instance.
+ * Constructs a DeleteBackupRequestPrivate object for DynamoDB \a action with,
+ * public implementation \a q.
  */
 DeleteBackupRequestPrivate::DeleteBackupRequestPrivate(
     const DynamoDBRequest::Action action, DeleteBackupRequest * const q)
@@ -123,15 +112,10 @@ DeleteBackupRequestPrivate::DeleteBackupRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteBackupRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteBackupRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteBackupRequest instance.
  */
 DeleteBackupRequestPrivate::DeleteBackupRequestPrivate(
     const DeleteBackupRequestPrivate &other, DeleteBackupRequest * const q)

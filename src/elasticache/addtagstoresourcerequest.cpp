@@ -27,10 +27,9 @@ namespace ElastiCache {
 
 /*!
  * \class QtAws::ElastiCache::AddTagsToResourceRequest
- *
  * \brief The AddTagsToResourceRequest class provides an interface for ElastiCache AddTagsToResource requests.
  *
- * \ingroup ElastiCache
+ * \inmodule QtAwsElastiCache
  *
  *  <fullname>Amazon ElastiCache</fullname>
  * 
@@ -51,9 +50,7 @@ namespace ElastiCache {
  */
 
 /*!
- * @brief  Constructs a new AddTagsToResourceRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AddTagsToResourceRequest::AddTagsToResourceRequest(const AddTagsToResourceRequest &other)
     : ElastiCacheRequest(new AddTagsToResourceRequestPrivate(*other.d_func(), this))
@@ -62,7 +59,7 @@ AddTagsToResourceRequest::AddTagsToResourceRequest(const AddTagsToResourceReques
 }
 
 /*!
- * @brief  Constructs a new AddTagsToResourceRequest object.
+ * Constructs a AddTagsToResourceRequest object.
  */
 AddTagsToResourceRequest::AddTagsToResourceRequest()
     : ElastiCacheRequest(new AddTagsToResourceRequestPrivate(ElastiCacheRequest::AddTagsToResourceAction, this))
@@ -80,14 +77,9 @@ bool AddTagsToResourceRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AddTagsToResourceResponse object.
+ * Returns a AddTagsToResourceResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AddTagsToResourceResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ElastiCacheClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AddTagsToResourceRequest::response(QNetworkReply * const reply) const
 {
@@ -95,20 +87,17 @@ QtAws::Core::AwsAbstractResponse * AddTagsToResourceRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::ElastiCache::AddTagsToResourceRequestPrivate
+ * \brief The AddTagsToResourceRequestPrivate class provides private implementation for AddTagsToResourceRequest.
+ * \internal
  *
- * @class  AddTagsToResourceRequestPrivate
- *
- * @brief  Private implementation for AddTagsToResourceRequest.
+ * \inmodule QtAwsElastiCache
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AddTagsToResourceRequestPrivate object.
- *
- * @param  action  ElastiCache action being performed.
- * @param  q       Pointer to this object's public AddTagsToResourceRequest instance.
+ * Constructs a AddTagsToResourceRequestPrivate object for ElastiCache \a action with,
+ * public implementation \a q.
  */
 AddTagsToResourceRequestPrivate::AddTagsToResourceRequestPrivate(
     const ElastiCacheRequest::Action action, AddTagsToResourceRequest * const q)
@@ -118,15 +107,10 @@ AddTagsToResourceRequestPrivate::AddTagsToResourceRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AddTagsToResourceRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AddTagsToResourceRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AddTagsToResourceRequest instance.
  */
 AddTagsToResourceRequestPrivate::AddTagsToResourceRequestPrivate(
     const AddTagsToResourceRequestPrivate &other, AddTagsToResourceRequest * const q)

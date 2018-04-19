@@ -25,16 +25,35 @@ namespace Support {
 
 /*!
  * \class QtAws::Support::SupportRequest
- *
  * \brief The SupportRequest class provides an interface for Support requests.
  *
- * \ingroup Support
+ * \inmodule QtAwsSupport
  */
 
 /*!
- * @brief  Constructs a new SupportRequest object.
+ * \enum SupportRequest::Action
  *
- * @param  action  The Support action to request.
+ * This enum describes the actions that can be performed as Support
+ * requests.
+ *
+ * \value AddAttachmentsToSetAction Support AddAttachmentsToSet action.
+ * \value AddCommunicationToCaseAction Support AddCommunicationToCase action.
+ * \value CreateCaseAction Support CreateCase action.
+ * \value DescribeAttachmentAction Support DescribeAttachment action.
+ * \value DescribeCasesAction Support DescribeCases action.
+ * \value DescribeCommunicationsAction Support DescribeCommunications action.
+ * \value DescribeServicesAction Support DescribeServices action.
+ * \value DescribeSeverityLevelsAction Support DescribeSeverityLevels action.
+ * \value DescribeTrustedAdvisorCheckRefreshStatusesAction Support DescribeTrustedAdvisorCheckRefreshStatuses action.
+ * \value DescribeTrustedAdvisorCheckResultAction Support DescribeTrustedAdvisorCheckResult action.
+ * \value DescribeTrustedAdvisorCheckSummariesAction Support DescribeTrustedAdvisorCheckSummaries action.
+ * \value DescribeTrustedAdvisorChecksAction Support DescribeTrustedAdvisorChecks action.
+ * \value RefreshTrustedAdvisorCheckAction Support RefreshTrustedAdvisorCheck action.
+ * \value ResolveCaseAction Support ResolveCase action.
+ */
+
+/*!
+ * Constructs a[n] SupportRequest object for Support \a action.
  */
 SupportRequest::SupportRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new SupportRequestPrivate(action, this))
@@ -43,9 +62,7 @@ SupportRequest::SupportRequest(const Action action)
 }
 
 /*!
- * @brief  Constructs a new SupportRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 SupportRequest::SupportRequest(const SupportRequest &other)
     : QtAws::Core::AwsAbstractRequest(new SupportRequestPrivate(*other.d_func(), this))
@@ -54,13 +71,7 @@ SupportRequest::SupportRequest(const SupportRequest &other)
 }
 
 /*!
- * @brief  Assignment operator.
- *
- * Assigns \a other to \c this.
- *
- * @param  other  Instance to copy.
- *
- * @return  A reference to \c this.
+ * Sets the SupportRequest object to be equal to \a other.
  */
 SupportRequest& SupportRequest::operator=(const SupportRequest &other)
 {
@@ -72,14 +83,10 @@ SupportRequest& SupportRequest::operator=(const SupportRequest &other)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SupportRequest object.
+ * Constructs aa SupportRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from SupportRequestPrivate.
- *
- * @param  d  Pointer to private data (aka D-Pointer).
  */
 SupportRequest::SupportRequest(SupportRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
@@ -87,7 +94,7 @@ SupportRequest::SupportRequest(SupportRequestPrivate * const d) : QtAws::Core::A
 }
 
 /*!
- * \brief Returns the Support action to be performed by this request.
+ * Returns the Support action to be performed by this request.
  */
 SupportRequest::Action SupportRequest::action() const
 {
@@ -96,7 +103,7 @@ SupportRequest::Action SupportRequest::action() const
 }
 
 /*!
- * \brief Returns the name of the Support action to be performed by this request.
+ * Returns the name of the Support action to be performed by this request.
  */
 QString SupportRequest::actionString() const
 {
@@ -104,7 +111,7 @@ QString SupportRequest::actionString() const
 }
 
 /*!
- * \brief Returns the Support API version implemented by this request.
+ * Returns the Support API version implemented by this request.
  */
 QString SupportRequest::apiVersion() const
 {
@@ -113,7 +120,7 @@ QString SupportRequest::apiVersion() const
 }
 
 /*!
- * @brief Set the Support action to be performed by this request to \a action.
+ * Sets the Support action to be performed by this request to \a action.
  */
 void SupportRequest::setAction(const Action action)
 {
@@ -122,7 +129,7 @@ void SupportRequest::setAction(const Action action)
 }
 
 /*!
- * Set the Support API version to include in this request to \a version.
+ * Sets the Support API version to include in this request to \a version.
  */
 void SupportRequest::setApiVersion(const QString &version)
 {
@@ -131,7 +138,7 @@ void SupportRequest::setApiVersion(const QString &version)
 }
 
 /*!
- * \brief Returns \c true if this request is the same as \a other.
+ * Returns \c true if this request is equal to \a other; \c false otherwise.
  *
  * Note, most derived *Request classes do not need to provider their own
  * implementations of this function, since most such request classes rely on
@@ -146,8 +153,8 @@ bool SupportRequest::operator==(const SupportRequest &other) const
             (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
-/*!
- * @brief  Check if \a queueName is a valid Support queue name.
+/*
+ * Returns \c tue if \a queueName is a valid Support queue name.
  *
  * @par From Support FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
@@ -166,9 +173,8 @@ bool SupportRequest::operator==(const SupportRequest &other) const
 }*/
 
 /*!
- * \brief Removes the a \a name parameter from this request.
- *
- * Returns the count of paramters removed (typically \c 0 or \c 1).
+ * Removes the a \a name parameter from the request, then returns the number of
+ * paramters removed (typically \c 0 or \c 1).
  */
 int SupportRequest::clearParameter(const QString &name)
 {
@@ -177,7 +183,7 @@ int SupportRequest::clearParameter(const QString &name)
 }
 
 /*!
- * \brief Removes all parameters from this request.
+ * Removes all parameters from the request.
  */
 void SupportRequest::clearParameters()
 {
@@ -186,7 +192,7 @@ void SupportRequest::clearParameters()
 }
 
 /*!
- * \brief Returns the value of the \n name pararemter if set, otherwise \a defaultValue.
+ * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
 QVariant SupportRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
@@ -195,7 +201,7 @@ QVariant SupportRequest::parameter(const QString &name, const QVariant &defaultV
 }
 
 /*!
- * \brief Returns a map of parameters included in this request.
+ * Returns the parameters included in this request.
  */
 const QVariantMap &SupportRequest::parameters() const
 {
@@ -204,7 +210,7 @@ const QVariantMap &SupportRequest::parameters() const
 }
 
 /*!
- * \brief Sets the \a name parameter to \a value.
+ * Sets the \a name parameter to \a value.
  */
 void SupportRequest::setParameter(const QString &name, const QVariant &value)
 {
@@ -213,9 +219,8 @@ void SupportRequest::setParameter(const QString &name, const QVariant &value)
 }
 
 /*!
- * \brief Sets the map of paramters for this request to \a parameters.
- *
- * Any request parameters set previously will be discarded.
+ * Sets the paramters for this request to \a parameters. Any request parameters
+ * set previously will be discarded.
  */
 void SupportRequest::setParameters(const QVariantMap &parameters)
 {
@@ -224,11 +229,12 @@ void SupportRequest::setParameters(const QVariantMap &parameters)
 }
 
 /*!
- * \brief Returns a network request for this Support request using the given \a endpoint.
+ * Returns a network request for the Support request using the given
+ * \a endpoint.
  *
- * This Support implementation builds request URLs by combining the common query
- * parameters (such as Action and Version), with any that have been added (via
- * setParameter) by child classes.
+ * This Support implementation builds request URLs by combining the
+ * common query parameters (such as Action and Version), with any that have
+ * been added (via setParameter) by child classes.
  */
 QNetworkRequest SupportRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -239,17 +245,16 @@ QNetworkRequest SupportRequest::unsignedRequest(const QUrl &endpoint) const
 }
 
 /*!
+ * \class QtAws::Support::SupportRequestPrivate
+ * \brief The SupportRequestPrivate class provides private implementation for SupportRequest.
  * \internal
  *
- * \class  SupportRequestPrivate
- *
- * \brief  Private implementation for SupportRequest.
+ * \inmodule QtAwsSupport
  */
 
 /*!
- * \internal
- *
- * \brief Constructs a new SupportRequestPrivate object.
+ * Constructs a SupportRequestPrivate object for Support \a action with,
+ * public implementation \a q.
  */
 SupportRequestPrivate::SupportRequestPrivate(const SupportRequest::Action action, SupportRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
@@ -258,9 +263,7 @@ SupportRequestPrivate::SupportRequestPrivate(const SupportRequest::Action action
 }
 
 /*!
- * \internal
- *
- * \brief Constructs a new SupportRequestPrivate object, copying an existing one.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
@@ -276,15 +279,12 @@ SupportRequestPrivate::SupportRequestPrivate(const SupportRequestPrivate &other,
 }
 
 /*!
- * \internal
- *
- * \brief Returns a string representing \a action.
+ * Returns a string represention of \a action, or a null string if \a action is
+ * invalid.
  *
  * This function converts SupportRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the Support service's Action
  * query parameters.
- *
- * @return A string representing \a action, or a null string if \a action is invalid.
  */
 QString SupportRequestPrivate::toString(const SupportRequest::Action &action)
 {

@@ -27,10 +27,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::DescribeInstancePatchesRequest
- *
  * \brief The DescribeInstancePatchesRequest class provides an interface for SSM DescribeInstancePatches requests.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -61,9 +60,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new DescribeInstancePatchesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeInstancePatchesRequest::DescribeInstancePatchesRequest(const DescribeInstancePatchesRequest &other)
     : SSMRequest(new DescribeInstancePatchesRequestPrivate(*other.d_func(), this))
@@ -72,7 +69,7 @@ DescribeInstancePatchesRequest::DescribeInstancePatchesRequest(const DescribeIns
 }
 
 /*!
- * @brief  Constructs a new DescribeInstancePatchesRequest object.
+ * Constructs a DescribeInstancePatchesRequest object.
  */
 DescribeInstancePatchesRequest::DescribeInstancePatchesRequest()
     : SSMRequest(new DescribeInstancePatchesRequestPrivate(SSMRequest::DescribeInstancePatchesAction, this))
@@ -90,14 +87,9 @@ bool DescribeInstancePatchesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeInstancePatchesResponse object.
+ * Returns a DescribeInstancePatchesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeInstancePatchesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SSMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeInstancePatchesRequest::response(QNetworkReply * const reply) const
 {
@@ -105,20 +97,17 @@ QtAws::Core::AwsAbstractResponse * DescribeInstancePatchesRequest::response(QNet
 }
 
 /*!
- * @internal
+ * \class QtAws::SSM::DescribeInstancePatchesRequestPrivate
+ * \brief The DescribeInstancePatchesRequestPrivate class provides private implementation for DescribeInstancePatchesRequest.
+ * \internal
  *
- * @class  DescribeInstancePatchesRequestPrivate
- *
- * @brief  Private implementation for DescribeInstancePatchesRequest.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeInstancePatchesRequestPrivate object.
- *
- * @param  action  SSM action being performed.
- * @param  q       Pointer to this object's public DescribeInstancePatchesRequest instance.
+ * Constructs a DescribeInstancePatchesRequestPrivate object for SSM \a action with,
+ * public implementation \a q.
  */
 DescribeInstancePatchesRequestPrivate::DescribeInstancePatchesRequestPrivate(
     const SSMRequest::Action action, DescribeInstancePatchesRequest * const q)
@@ -128,15 +117,10 @@ DescribeInstancePatchesRequestPrivate::DescribeInstancePatchesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeInstancePatchesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeInstancePatchesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeInstancePatchesRequest instance.
  */
 DescribeInstancePatchesRequestPrivate::DescribeInstancePatchesRequestPrivate(
     const DescribeInstancePatchesRequestPrivate &other, DescribeInstancePatchesRequest * const q)

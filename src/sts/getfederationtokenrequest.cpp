@@ -27,10 +27,9 @@ namespace STS {
 
 /*!
  * \class QtAws::STS::GetFederationTokenRequest
- *
  * \brief The GetFederationTokenRequest class provides an interface for STS GetFederationToken requests.
  *
- * \ingroup STS
+ * \inmodule QtAwsSTS
  *
  *  <fullname>AWS Security Token Service</fullname>
  * 
@@ -95,9 +94,7 @@ namespace STS {
  */
 
 /*!
- * @brief  Constructs a new GetFederationTokenRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetFederationTokenRequest::GetFederationTokenRequest(const GetFederationTokenRequest &other)
     : STSRequest(new GetFederationTokenRequestPrivate(*other.d_func(), this))
@@ -106,7 +103,7 @@ GetFederationTokenRequest::GetFederationTokenRequest(const GetFederationTokenReq
 }
 
 /*!
- * @brief  Constructs a new GetFederationTokenRequest object.
+ * Constructs a GetFederationTokenRequest object.
  */
 GetFederationTokenRequest::GetFederationTokenRequest()
     : STSRequest(new GetFederationTokenRequestPrivate(STSRequest::GetFederationTokenAction, this))
@@ -124,14 +121,9 @@ bool GetFederationTokenRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetFederationTokenResponse object.
+ * Returns a GetFederationTokenResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetFederationTokenResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  STSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetFederationTokenRequest::response(QNetworkReply * const reply) const
 {
@@ -139,20 +131,17 @@ QtAws::Core::AwsAbstractResponse * GetFederationTokenRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::STS::GetFederationTokenRequestPrivate
+ * \brief The GetFederationTokenRequestPrivate class provides private implementation for GetFederationTokenRequest.
+ * \internal
  *
- * @class  GetFederationTokenRequestPrivate
- *
- * @brief  Private implementation for GetFederationTokenRequest.
+ * \inmodule QtAwsSTS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetFederationTokenRequestPrivate object.
- *
- * @param  action  STS action being performed.
- * @param  q       Pointer to this object's public GetFederationTokenRequest instance.
+ * Constructs a GetFederationTokenRequestPrivate object for STS \a action with,
+ * public implementation \a q.
  */
 GetFederationTokenRequestPrivate::GetFederationTokenRequestPrivate(
     const STSRequest::Action action, GetFederationTokenRequest * const q)
@@ -162,15 +151,10 @@ GetFederationTokenRequestPrivate::GetFederationTokenRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetFederationTokenRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetFederationTokenRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetFederationTokenRequest instance.
  */
 GetFederationTokenRequestPrivate::GetFederationTokenRequestPrivate(
     const GetFederationTokenRequestPrivate &other, GetFederationTokenRequest * const q)

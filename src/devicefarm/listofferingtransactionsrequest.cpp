@@ -27,10 +27,9 @@ namespace DeviceFarm {
 
 /*!
  * \class QtAws::DeviceFarm::ListOfferingTransactionsRequest
- *
  * \brief The ListOfferingTransactionsRequest class provides an interface for DeviceFarm ListOfferingTransactions requests.
  *
- * \ingroup DeviceFarm
+ * \inmodule QtAwsDeviceFarm
  *
  *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
  *  phones, tablets, and other devices in the
@@ -39,9 +38,7 @@ namespace DeviceFarm {
  */
 
 /*!
- * @brief  Constructs a new ListOfferingTransactionsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListOfferingTransactionsRequest::ListOfferingTransactionsRequest(const ListOfferingTransactionsRequest &other)
     : DeviceFarmRequest(new ListOfferingTransactionsRequestPrivate(*other.d_func(), this))
@@ -50,7 +47,7 @@ ListOfferingTransactionsRequest::ListOfferingTransactionsRequest(const ListOffer
 }
 
 /*!
- * @brief  Constructs a new ListOfferingTransactionsRequest object.
+ * Constructs a ListOfferingTransactionsRequest object.
  */
 ListOfferingTransactionsRequest::ListOfferingTransactionsRequest()
     : DeviceFarmRequest(new ListOfferingTransactionsRequestPrivate(DeviceFarmRequest::ListOfferingTransactionsAction, this))
@@ -68,14 +65,9 @@ bool ListOfferingTransactionsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListOfferingTransactionsResponse object.
+ * Returns a ListOfferingTransactionsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListOfferingTransactionsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DeviceFarmClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListOfferingTransactionsRequest::response(QNetworkReply * const reply) const
 {
@@ -83,20 +75,17 @@ QtAws::Core::AwsAbstractResponse * ListOfferingTransactionsRequest::response(QNe
 }
 
 /*!
- * @internal
+ * \class QtAws::DeviceFarm::ListOfferingTransactionsRequestPrivate
+ * \brief The ListOfferingTransactionsRequestPrivate class provides private implementation for ListOfferingTransactionsRequest.
+ * \internal
  *
- * @class  ListOfferingTransactionsRequestPrivate
- *
- * @brief  Private implementation for ListOfferingTransactionsRequest.
+ * \inmodule QtAwsDeviceFarm
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListOfferingTransactionsRequestPrivate object.
- *
- * @param  action  DeviceFarm action being performed.
- * @param  q       Pointer to this object's public ListOfferingTransactionsRequest instance.
+ * Constructs a ListOfferingTransactionsRequestPrivate object for DeviceFarm \a action with,
+ * public implementation \a q.
  */
 ListOfferingTransactionsRequestPrivate::ListOfferingTransactionsRequestPrivate(
     const DeviceFarmRequest::Action action, ListOfferingTransactionsRequest * const q)
@@ -106,15 +95,10 @@ ListOfferingTransactionsRequestPrivate::ListOfferingTransactionsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListOfferingTransactionsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListOfferingTransactionsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListOfferingTransactionsRequest instance.
  */
 ListOfferingTransactionsRequestPrivate::ListOfferingTransactionsRequestPrivate(
     const ListOfferingTransactionsRequestPrivate &other, ListOfferingTransactionsRequest * const q)

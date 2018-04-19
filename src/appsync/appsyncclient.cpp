@@ -82,6 +82,9 @@
 /*!
  * \namespace QtAws::AppSync
  * \brief The QtAws::AppSync contains stuff...
+ *
+ * \inmodule QtAwsAppSync
+ *
  * @todo Move this to a separate template file.
  */
 
@@ -132,7 +135,7 @@ AppSyncClient::AppSyncClient(
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * \a  AwsEndpoint::getEndpoint()
+ * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
 AppSyncClient::AppSyncClient(
     const QUrl &endpoint,

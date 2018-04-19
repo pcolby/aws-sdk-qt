@@ -27,10 +27,9 @@ namespace Greengrass {
 
 /*!
  * \class QtAws::Greengrass::ListLoggerDefinitionVersionsRequest
- *
  * \brief The ListLoggerDefinitionVersionsRequest class provides an interface for Greengrass ListLoggerDefinitionVersions requests.
  *
- * \ingroup Greengrass
+ * \inmodule QtAwsGreengrass
  *
  *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
  *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
@@ -40,9 +39,7 @@ namespace Greengrass {
  */
 
 /*!
- * @brief  Constructs a new ListLoggerDefinitionVersionsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListLoggerDefinitionVersionsRequest::ListLoggerDefinitionVersionsRequest(const ListLoggerDefinitionVersionsRequest &other)
     : GreengrassRequest(new ListLoggerDefinitionVersionsRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ ListLoggerDefinitionVersionsRequest::ListLoggerDefinitionVersionsRequest(const L
 }
 
 /*!
- * @brief  Constructs a new ListLoggerDefinitionVersionsRequest object.
+ * Constructs a ListLoggerDefinitionVersionsRequest object.
  */
 ListLoggerDefinitionVersionsRequest::ListLoggerDefinitionVersionsRequest()
     : GreengrassRequest(new ListLoggerDefinitionVersionsRequestPrivate(GreengrassRequest::ListLoggerDefinitionVersionsAction, this))
@@ -69,14 +66,9 @@ bool ListLoggerDefinitionVersionsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListLoggerDefinitionVersionsResponse object.
+ * Returns a ListLoggerDefinitionVersionsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListLoggerDefinitionVersionsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GreengrassClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListLoggerDefinitionVersionsRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * ListLoggerDefinitionVersionsRequest::response
 }
 
 /*!
- * @internal
+ * \class QtAws::Greengrass::ListLoggerDefinitionVersionsRequestPrivate
+ * \brief The ListLoggerDefinitionVersionsRequestPrivate class provides private implementation for ListLoggerDefinitionVersionsRequest.
+ * \internal
  *
- * @class  ListLoggerDefinitionVersionsRequestPrivate
- *
- * @brief  Private implementation for ListLoggerDefinitionVersionsRequest.
+ * \inmodule QtAwsGreengrass
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListLoggerDefinitionVersionsRequestPrivate object.
- *
- * @param  action  Greengrass action being performed.
- * @param  q       Pointer to this object's public ListLoggerDefinitionVersionsRequest instance.
+ * Constructs a ListLoggerDefinitionVersionsRequestPrivate object for Greengrass \a action with,
+ * public implementation \a q.
  */
 ListLoggerDefinitionVersionsRequestPrivate::ListLoggerDefinitionVersionsRequestPrivate(
     const GreengrassRequest::Action action, ListLoggerDefinitionVersionsRequest * const q)
@@ -107,15 +96,10 @@ ListLoggerDefinitionVersionsRequestPrivate::ListLoggerDefinitionVersionsRequestP
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListLoggerDefinitionVersionsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListLoggerDefinitionVersionsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListLoggerDefinitionVersionsRequest instance.
  */
 ListLoggerDefinitionVersionsRequestPrivate::ListLoggerDefinitionVersionsRequestPrivate(
     const ListLoggerDefinitionVersionsRequestPrivate &other, ListLoggerDefinitionVersionsRequest * const q)

@@ -27,10 +27,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::ModifyDBInstanceRequest
- *
  * \brief The ModifyDBInstanceRequest class provides an interface for RDS ModifyDBInstance requests.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -101,9 +100,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new ModifyDBInstanceRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ModifyDBInstanceRequest::ModifyDBInstanceRequest(const ModifyDBInstanceRequest &other)
     : RDSRequest(new ModifyDBInstanceRequestPrivate(*other.d_func(), this))
@@ -112,7 +109,7 @@ ModifyDBInstanceRequest::ModifyDBInstanceRequest(const ModifyDBInstanceRequest &
 }
 
 /*!
- * @brief  Constructs a new ModifyDBInstanceRequest object.
+ * Constructs a ModifyDBInstanceRequest object.
  */
 ModifyDBInstanceRequest::ModifyDBInstanceRequest()
     : RDSRequest(new ModifyDBInstanceRequestPrivate(RDSRequest::ModifyDBInstanceAction, this))
@@ -130,14 +127,9 @@ bool ModifyDBInstanceRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ModifyDBInstanceResponse object.
+ * Returns a ModifyDBInstanceResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ModifyDBInstanceResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RDSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ModifyDBInstanceRequest::response(QNetworkReply * const reply) const
 {
@@ -145,20 +137,17 @@ QtAws::Core::AwsAbstractResponse * ModifyDBInstanceRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::RDS::ModifyDBInstanceRequestPrivate
+ * \brief The ModifyDBInstanceRequestPrivate class provides private implementation for ModifyDBInstanceRequest.
+ * \internal
  *
- * @class  ModifyDBInstanceRequestPrivate
- *
- * @brief  Private implementation for ModifyDBInstanceRequest.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ModifyDBInstanceRequestPrivate object.
- *
- * @param  action  RDS action being performed.
- * @param  q       Pointer to this object's public ModifyDBInstanceRequest instance.
+ * Constructs a ModifyDBInstanceRequestPrivate object for RDS \a action with,
+ * public implementation \a q.
  */
 ModifyDBInstanceRequestPrivate::ModifyDBInstanceRequestPrivate(
     const RDSRequest::Action action, ModifyDBInstanceRequest * const q)
@@ -168,15 +157,10 @@ ModifyDBInstanceRequestPrivate::ModifyDBInstanceRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ModifyDBInstanceRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ModifyDBInstanceRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ModifyDBInstanceRequest instance.
  */
 ModifyDBInstanceRequestPrivate::ModifyDBInstanceRequestPrivate(
     const ModifyDBInstanceRequestPrivate &other, ModifyDBInstanceRequest * const q)

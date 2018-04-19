@@ -27,10 +27,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::ListThingGroupsForThingRequest
- *
  * \brief The ListThingGroupsForThingRequest class provides an interface for IoT ListThingGroupsForThing requests.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -48,9 +47,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new ListThingGroupsForThingRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListThingGroupsForThingRequest::ListThingGroupsForThingRequest(const ListThingGroupsForThingRequest &other)
     : IoTRequest(new ListThingGroupsForThingRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ ListThingGroupsForThingRequest::ListThingGroupsForThingRequest(const ListThingGr
 }
 
 /*!
- * @brief  Constructs a new ListThingGroupsForThingRequest object.
+ * Constructs a ListThingGroupsForThingRequest object.
  */
 ListThingGroupsForThingRequest::ListThingGroupsForThingRequest()
     : IoTRequest(new ListThingGroupsForThingRequestPrivate(IoTRequest::ListThingGroupsForThingAction, this))
@@ -77,14 +74,9 @@ bool ListThingGroupsForThingRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListThingGroupsForThingResponse object.
+ * Returns a ListThingGroupsForThingResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListThingGroupsForThingResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IoTClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListThingGroupsForThingRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * ListThingGroupsForThingRequest::response(QNet
 }
 
 /*!
- * @internal
+ * \class QtAws::IoT::ListThingGroupsForThingRequestPrivate
+ * \brief The ListThingGroupsForThingRequestPrivate class provides private implementation for ListThingGroupsForThingRequest.
+ * \internal
  *
- * @class  ListThingGroupsForThingRequestPrivate
- *
- * @brief  Private implementation for ListThingGroupsForThingRequest.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListThingGroupsForThingRequestPrivate object.
- *
- * @param  action  IoT action being performed.
- * @param  q       Pointer to this object's public ListThingGroupsForThingRequest instance.
+ * Constructs a ListThingGroupsForThingRequestPrivate object for IoT \a action with,
+ * public implementation \a q.
  */
 ListThingGroupsForThingRequestPrivate::ListThingGroupsForThingRequestPrivate(
     const IoTRequest::Action action, ListThingGroupsForThingRequest * const q)
@@ -115,15 +104,10 @@ ListThingGroupsForThingRequestPrivate::ListThingGroupsForThingRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListThingGroupsForThingRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListThingGroupsForThingRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListThingGroupsForThingRequest instance.
  */
 ListThingGroupsForThingRequestPrivate::ListThingGroupsForThingRequestPrivate(
     const ListThingGroupsForThingRequestPrivate &other, ListThingGroupsForThingRequest * const q)

@@ -27,10 +27,9 @@ namespace CloudFormation {
 
 /*!
  * \class QtAws::CloudFormation::DeleteStackSetRequest
- *
  * \brief The DeleteStackSetRequest class provides an interface for CloudFormation DeleteStackSet requests.
  *
- * \ingroup CloudFormation
+ * \inmodule QtAwsCloudFormation
  *
  *  <fullname>AWS CloudFormation</fullname>
  * 
@@ -59,9 +58,7 @@ namespace CloudFormation {
  */
 
 /*!
- * @brief  Constructs a new DeleteStackSetRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteStackSetRequest::DeleteStackSetRequest(const DeleteStackSetRequest &other)
     : CloudFormationRequest(new DeleteStackSetRequestPrivate(*other.d_func(), this))
@@ -70,7 +67,7 @@ DeleteStackSetRequest::DeleteStackSetRequest(const DeleteStackSetRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DeleteStackSetRequest object.
+ * Constructs a DeleteStackSetRequest object.
  */
 DeleteStackSetRequest::DeleteStackSetRequest()
     : CloudFormationRequest(new DeleteStackSetRequestPrivate(CloudFormationRequest::DeleteStackSetAction, this))
@@ -88,14 +85,9 @@ bool DeleteStackSetRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteStackSetResponse object.
+ * Returns a DeleteStackSetResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteStackSetResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudFormationClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteStackSetRequest::response(QNetworkReply * const reply) const
 {
@@ -103,20 +95,17 @@ QtAws::Core::AwsAbstractResponse * DeleteStackSetRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudFormation::DeleteStackSetRequestPrivate
+ * \brief The DeleteStackSetRequestPrivate class provides private implementation for DeleteStackSetRequest.
+ * \internal
  *
- * @class  DeleteStackSetRequestPrivate
- *
- * @brief  Private implementation for DeleteStackSetRequest.
+ * \inmodule QtAwsCloudFormation
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteStackSetRequestPrivate object.
- *
- * @param  action  CloudFormation action being performed.
- * @param  q       Pointer to this object's public DeleteStackSetRequest instance.
+ * Constructs a DeleteStackSetRequestPrivate object for CloudFormation \a action with,
+ * public implementation \a q.
  */
 DeleteStackSetRequestPrivate::DeleteStackSetRequestPrivate(
     const CloudFormationRequest::Action action, DeleteStackSetRequest * const q)
@@ -126,15 +115,10 @@ DeleteStackSetRequestPrivate::DeleteStackSetRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteStackSetRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteStackSetRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteStackSetRequest instance.
  */
 DeleteStackSetRequestPrivate::DeleteStackSetRequestPrivate(
     const DeleteStackSetRequestPrivate &other, DeleteStackSetRequest * const q)

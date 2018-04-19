@@ -27,10 +27,9 @@ namespace AutoScalingPlans {
 
 /*!
  * \class QtAws::AutoScalingPlans::DeleteScalingPlanRequest
- *
  * \brief The DeleteScalingPlanRequest class provides an interface for AutoScalingPlans DeleteScalingPlan requests.
  *
- * \ingroup AutoScalingPlans
+ * \inmodule QtAwsAutoScalingPlans
  *
  *  Use AWS Auto Scaling to quickly discover all the scalable AWS resources for your application and configure dynamic
  *  scaling for your scalable
@@ -46,9 +45,7 @@ namespace AutoScalingPlans {
  */
 
 /*!
- * @brief  Constructs a new DeleteScalingPlanRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteScalingPlanRequest::DeleteScalingPlanRequest(const DeleteScalingPlanRequest &other)
     : AutoScalingPlansRequest(new DeleteScalingPlanRequestPrivate(*other.d_func(), this))
@@ -57,7 +54,7 @@ DeleteScalingPlanRequest::DeleteScalingPlanRequest(const DeleteScalingPlanReques
 }
 
 /*!
- * @brief  Constructs a new DeleteScalingPlanRequest object.
+ * Constructs a DeleteScalingPlanRequest object.
  */
 DeleteScalingPlanRequest::DeleteScalingPlanRequest()
     : AutoScalingPlansRequest(new DeleteScalingPlanRequestPrivate(AutoScalingPlansRequest::DeleteScalingPlanAction, this))
@@ -75,14 +72,9 @@ bool DeleteScalingPlanRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteScalingPlanResponse object.
+ * Returns a DeleteScalingPlanResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteScalingPlanResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AutoScalingPlansClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteScalingPlanRequest::response(QNetworkReply * const reply) const
 {
@@ -90,20 +82,17 @@ QtAws::Core::AwsAbstractResponse * DeleteScalingPlanRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::AutoScalingPlans::DeleteScalingPlanRequestPrivate
+ * \brief The DeleteScalingPlanRequestPrivate class provides private implementation for DeleteScalingPlanRequest.
+ * \internal
  *
- * @class  DeleteScalingPlanRequestPrivate
- *
- * @brief  Private implementation for DeleteScalingPlanRequest.
+ * \inmodule QtAwsAutoScalingPlans
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteScalingPlanRequestPrivate object.
- *
- * @param  action  AutoScalingPlans action being performed.
- * @param  q       Pointer to this object's public DeleteScalingPlanRequest instance.
+ * Constructs a DeleteScalingPlanRequestPrivate object for AutoScalingPlans \a action with,
+ * public implementation \a q.
  */
 DeleteScalingPlanRequestPrivate::DeleteScalingPlanRequestPrivate(
     const AutoScalingPlansRequest::Action action, DeleteScalingPlanRequest * const q)
@@ -113,15 +102,10 @@ DeleteScalingPlanRequestPrivate::DeleteScalingPlanRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteScalingPlanRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteScalingPlanRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteScalingPlanRequest instance.
  */
 DeleteScalingPlanRequestPrivate::DeleteScalingPlanRequestPrivate(
     const DeleteScalingPlanRequestPrivate &other, DeleteScalingPlanRequest * const q)

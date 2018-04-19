@@ -27,10 +27,9 @@ namespace Glue {
 
 /*!
  * \class QtAws::Glue::GetDatabaseRequest
- *
  * \brief The GetDatabaseRequest class provides an interface for Glue GetDatabase requests.
  *
- * \ingroup Glue
+ * \inmodule QtAwsGlue
  *
  *  <fullname>AWS Glue</fullname>
  * 
@@ -40,9 +39,7 @@ namespace Glue {
  */
 
 /*!
- * @brief  Constructs a new GetDatabaseRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetDatabaseRequest::GetDatabaseRequest(const GetDatabaseRequest &other)
     : GlueRequest(new GetDatabaseRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ GetDatabaseRequest::GetDatabaseRequest(const GetDatabaseRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetDatabaseRequest object.
+ * Constructs a GetDatabaseRequest object.
  */
 GetDatabaseRequest::GetDatabaseRequest()
     : GlueRequest(new GetDatabaseRequestPrivate(GlueRequest::GetDatabaseAction, this))
@@ -69,14 +66,9 @@ bool GetDatabaseRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetDatabaseResponse object.
+ * Returns a GetDatabaseResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetDatabaseResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GlueClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetDatabaseRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * GetDatabaseRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::Glue::GetDatabaseRequestPrivate
+ * \brief The GetDatabaseRequestPrivate class provides private implementation for GetDatabaseRequest.
+ * \internal
  *
- * @class  GetDatabaseRequestPrivate
- *
- * @brief  Private implementation for GetDatabaseRequest.
+ * \inmodule QtAwsGlue
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetDatabaseRequestPrivate object.
- *
- * @param  action  Glue action being performed.
- * @param  q       Pointer to this object's public GetDatabaseRequest instance.
+ * Constructs a GetDatabaseRequestPrivate object for Glue \a action with,
+ * public implementation \a q.
  */
 GetDatabaseRequestPrivate::GetDatabaseRequestPrivate(
     const GlueRequest::Action action, GetDatabaseRequest * const q)
@@ -107,15 +96,10 @@ GetDatabaseRequestPrivate::GetDatabaseRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetDatabaseRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetDatabaseRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetDatabaseRequest instance.
  */
 GetDatabaseRequestPrivate::GetDatabaseRequestPrivate(
     const GetDatabaseRequestPrivate &other, GetDatabaseRequest * const q)

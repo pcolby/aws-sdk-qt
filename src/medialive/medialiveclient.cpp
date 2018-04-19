@@ -62,6 +62,9 @@
 /*!
  * \namespace QtAws::MediaLive
  * \brief The QtAws::MediaLive contains stuff...
+ *
+ * \inmodule QtAwsMediaLive
+ *
  * @todo Move this to a separate template file.
  */
 
@@ -111,7 +114,7 @@ MediaLiveClient::MediaLiveClient(
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * \a  AwsEndpoint::getEndpoint()
+ * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
 MediaLiveClient::MediaLiveClient(
     const QUrl &endpoint,

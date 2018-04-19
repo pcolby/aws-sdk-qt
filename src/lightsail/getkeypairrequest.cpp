@@ -27,10 +27,9 @@ namespace Lightsail {
 
 /*!
  * \class QtAws::Lightsail::GetKeyPairRequest
- *
  * \brief The GetKeyPairRequest class provides an interface for Lightsail GetKeyPair requests.
  *
- * \ingroup Lightsail
+ * \inmodule QtAwsLightsail
  *
  *  Amazon Lightsail is the easiest way to get started with AWS for developers who just need virtual private servers.
  *  Lightsail includes everything you need to launch your project quickly - a virtual machine, SSD-based storage, data
@@ -53,9 +52,7 @@ namespace Lightsail {
  */
 
 /*!
- * @brief  Constructs a new GetKeyPairRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetKeyPairRequest::GetKeyPairRequest(const GetKeyPairRequest &other)
     : LightsailRequest(new GetKeyPairRequestPrivate(*other.d_func(), this))
@@ -64,7 +61,7 @@ GetKeyPairRequest::GetKeyPairRequest(const GetKeyPairRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetKeyPairRequest object.
+ * Constructs a GetKeyPairRequest object.
  */
 GetKeyPairRequest::GetKeyPairRequest()
     : LightsailRequest(new GetKeyPairRequestPrivate(LightsailRequest::GetKeyPairAction, this))
@@ -82,14 +79,9 @@ bool GetKeyPairRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetKeyPairResponse object.
+ * Returns a GetKeyPairResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetKeyPairResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  LightsailClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetKeyPairRequest::response(QNetworkReply * const reply) const
 {
@@ -97,20 +89,17 @@ QtAws::Core::AwsAbstractResponse * GetKeyPairRequest::response(QNetworkReply * c
 }
 
 /*!
- * @internal
+ * \class QtAws::Lightsail::GetKeyPairRequestPrivate
+ * \brief The GetKeyPairRequestPrivate class provides private implementation for GetKeyPairRequest.
+ * \internal
  *
- * @class  GetKeyPairRequestPrivate
- *
- * @brief  Private implementation for GetKeyPairRequest.
+ * \inmodule QtAwsLightsail
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetKeyPairRequestPrivate object.
- *
- * @param  action  Lightsail action being performed.
- * @param  q       Pointer to this object's public GetKeyPairRequest instance.
+ * Constructs a GetKeyPairRequestPrivate object for Lightsail \a action with,
+ * public implementation \a q.
  */
 GetKeyPairRequestPrivate::GetKeyPairRequestPrivate(
     const LightsailRequest::Action action, GetKeyPairRequest * const q)
@@ -120,15 +109,10 @@ GetKeyPairRequestPrivate::GetKeyPairRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetKeyPairRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetKeyPairRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetKeyPairRequest instance.
  */
 GetKeyPairRequestPrivate::GetKeyPairRequestPrivate(
     const GetKeyPairRequestPrivate &other, GetKeyPairRequest * const q)

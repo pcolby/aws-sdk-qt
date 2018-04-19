@@ -27,10 +27,9 @@ namespace Snowball {
 
 /*!
  * \class QtAws::Snowball::DescribeAddressesRequest
- *
  * \brief The DescribeAddressesRequest class provides an interface for Snowball DescribeAddresses requests.
  *
- * \ingroup Snowball
+ * \inmodule QtAwsSnowball
  *
  *  AWS Snowball is a petabyte-scale data transport solution that uses secure appliances to transfer large amounts of data
  *  between your on-premises data centers and Amazon Simple Storage Service (Amazon S3). The Snowball commands described
@@ -43,9 +42,7 @@ namespace Snowball {
  */
 
 /*!
- * @brief  Constructs a new DescribeAddressesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeAddressesRequest::DescribeAddressesRequest(const DescribeAddressesRequest &other)
     : SnowballRequest(new DescribeAddressesRequestPrivate(*other.d_func(), this))
@@ -54,7 +51,7 @@ DescribeAddressesRequest::DescribeAddressesRequest(const DescribeAddressesReques
 }
 
 /*!
- * @brief  Constructs a new DescribeAddressesRequest object.
+ * Constructs a DescribeAddressesRequest object.
  */
 DescribeAddressesRequest::DescribeAddressesRequest()
     : SnowballRequest(new DescribeAddressesRequestPrivate(SnowballRequest::DescribeAddressesAction, this))
@@ -72,14 +69,9 @@ bool DescribeAddressesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeAddressesResponse object.
+ * Returns a DescribeAddressesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeAddressesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SnowballClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeAddressesRequest::response(QNetworkReply * const reply) const
 {
@@ -87,20 +79,17 @@ QtAws::Core::AwsAbstractResponse * DescribeAddressesRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::Snowball::DescribeAddressesRequestPrivate
+ * \brief The DescribeAddressesRequestPrivate class provides private implementation for DescribeAddressesRequest.
+ * \internal
  *
- * @class  DescribeAddressesRequestPrivate
- *
- * @brief  Private implementation for DescribeAddressesRequest.
+ * \inmodule QtAwsSnowball
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeAddressesRequestPrivate object.
- *
- * @param  action  Snowball action being performed.
- * @param  q       Pointer to this object's public DescribeAddressesRequest instance.
+ * Constructs a DescribeAddressesRequestPrivate object for Snowball \a action with,
+ * public implementation \a q.
  */
 DescribeAddressesRequestPrivate::DescribeAddressesRequestPrivate(
     const SnowballRequest::Action action, DescribeAddressesRequest * const q)
@@ -110,15 +99,10 @@ DescribeAddressesRequestPrivate::DescribeAddressesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeAddressesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeAddressesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeAddressesRequest instance.
  */
 DescribeAddressesRequestPrivate::DescribeAddressesRequestPrivate(
     const DescribeAddressesRequestPrivate &other, DescribeAddressesRequest * const q)

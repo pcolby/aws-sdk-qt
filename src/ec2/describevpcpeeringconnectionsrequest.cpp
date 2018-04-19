@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DescribeVpcPeeringConnectionsRequest
- *
  * \brief The DescribeVpcPeeringConnectionsRequest class provides an interface for EC2 DescribeVpcPeeringConnections requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DescribeVpcPeeringConnectionsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeVpcPeeringConnectionsRequest::DescribeVpcPeeringConnectionsRequest(const DescribeVpcPeeringConnectionsRequest &other)
     : EC2Request(new DescribeVpcPeeringConnectionsRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ DescribeVpcPeeringConnectionsRequest::DescribeVpcPeeringConnectionsRequest(const
 }
 
 /*!
- * @brief  Constructs a new DescribeVpcPeeringConnectionsRequest object.
+ * Constructs a DescribeVpcPeeringConnectionsRequest object.
  */
 DescribeVpcPeeringConnectionsRequest::DescribeVpcPeeringConnectionsRequest()
     : EC2Request(new DescribeVpcPeeringConnectionsRequestPrivate(EC2Request::DescribeVpcPeeringConnectionsAction, this))
@@ -70,14 +67,9 @@ bool DescribeVpcPeeringConnectionsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeVpcPeeringConnectionsResponse object.
+ * Returns a DescribeVpcPeeringConnectionsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeVpcPeeringConnectionsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeVpcPeeringConnectionsRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * DescribeVpcPeeringConnectionsRequest::respons
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::DescribeVpcPeeringConnectionsRequestPrivate
+ * \brief The DescribeVpcPeeringConnectionsRequestPrivate class provides private implementation for DescribeVpcPeeringConnectionsRequest.
+ * \internal
  *
- * @class  DescribeVpcPeeringConnectionsRequestPrivate
- *
- * @brief  Private implementation for DescribeVpcPeeringConnectionsRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeVpcPeeringConnectionsRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public DescribeVpcPeeringConnectionsRequest instance.
+ * Constructs a DescribeVpcPeeringConnectionsRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 DescribeVpcPeeringConnectionsRequestPrivate::DescribeVpcPeeringConnectionsRequestPrivate(
     const EC2Request::Action action, DescribeVpcPeeringConnectionsRequest * const q)
@@ -108,15 +97,10 @@ DescribeVpcPeeringConnectionsRequestPrivate::DescribeVpcPeeringConnectionsReques
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeVpcPeeringConnectionsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeVpcPeeringConnectionsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeVpcPeeringConnectionsRequest instance.
  */
 DescribeVpcPeeringConnectionsRequestPrivate::DescribeVpcPeeringConnectionsRequestPrivate(
     const DescribeVpcPeeringConnectionsRequestPrivate &other, DescribeVpcPeeringConnectionsRequest * const q)

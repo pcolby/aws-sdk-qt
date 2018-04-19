@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::CreateKeyPairRequest
- *
  * \brief The CreateKeyPairRequest class provides an interface for EC2 CreateKeyPair requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new CreateKeyPairRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateKeyPairRequest::CreateKeyPairRequest(const CreateKeyPairRequest &other)
     : EC2Request(new CreateKeyPairRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ CreateKeyPairRequest::CreateKeyPairRequest(const CreateKeyPairRequest &other)
 }
 
 /*!
- * @brief  Constructs a new CreateKeyPairRequest object.
+ * Constructs a CreateKeyPairRequest object.
  */
 CreateKeyPairRequest::CreateKeyPairRequest()
     : EC2Request(new CreateKeyPairRequestPrivate(EC2Request::CreateKeyPairAction, this))
@@ -70,14 +67,9 @@ bool CreateKeyPairRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateKeyPairResponse object.
+ * Returns a CreateKeyPairResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateKeyPairResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateKeyPairRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * CreateKeyPairRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::CreateKeyPairRequestPrivate
+ * \brief The CreateKeyPairRequestPrivate class provides private implementation for CreateKeyPairRequest.
+ * \internal
  *
- * @class  CreateKeyPairRequestPrivate
- *
- * @brief  Private implementation for CreateKeyPairRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateKeyPairRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public CreateKeyPairRequest instance.
+ * Constructs a CreateKeyPairRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 CreateKeyPairRequestPrivate::CreateKeyPairRequestPrivate(
     const EC2Request::Action action, CreateKeyPairRequest * const q)
@@ -108,15 +97,10 @@ CreateKeyPairRequestPrivate::CreateKeyPairRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateKeyPairRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateKeyPairRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateKeyPairRequest instance.
  */
 CreateKeyPairRequestPrivate::CreateKeyPairRequestPrivate(
     const CreateKeyPairRequestPrivate &other, CreateKeyPairRequest * const q)

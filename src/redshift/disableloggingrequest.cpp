@@ -27,10 +27,9 @@ namespace Redshift {
 
 /*!
  * \class QtAws::Redshift::DisableLoggingRequest
- *
  * \brief The DisableLoggingRequest class provides an interface for Redshift DisableLogging requests.
  *
- * \ingroup Redshift
+ * \inmodule QtAwsRedshift
  *
  *  <fullname>Amazon Redshift</fullname>
  * 
@@ -67,9 +66,7 @@ namespace Redshift {
  */
 
 /*!
- * @brief  Constructs a new DisableLoggingRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DisableLoggingRequest::DisableLoggingRequest(const DisableLoggingRequest &other)
     : RedshiftRequest(new DisableLoggingRequestPrivate(*other.d_func(), this))
@@ -78,7 +75,7 @@ DisableLoggingRequest::DisableLoggingRequest(const DisableLoggingRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DisableLoggingRequest object.
+ * Constructs a DisableLoggingRequest object.
  */
 DisableLoggingRequest::DisableLoggingRequest()
     : RedshiftRequest(new DisableLoggingRequestPrivate(RedshiftRequest::DisableLoggingAction, this))
@@ -96,14 +93,9 @@ bool DisableLoggingRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DisableLoggingResponse object.
+ * Returns a DisableLoggingResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DisableLoggingResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RedshiftClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DisableLoggingRequest::response(QNetworkReply * const reply) const
 {
@@ -111,20 +103,17 @@ QtAws::Core::AwsAbstractResponse * DisableLoggingRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::Redshift::DisableLoggingRequestPrivate
+ * \brief The DisableLoggingRequestPrivate class provides private implementation for DisableLoggingRequest.
+ * \internal
  *
- * @class  DisableLoggingRequestPrivate
- *
- * @brief  Private implementation for DisableLoggingRequest.
+ * \inmodule QtAwsRedshift
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DisableLoggingRequestPrivate object.
- *
- * @param  action  Redshift action being performed.
- * @param  q       Pointer to this object's public DisableLoggingRequest instance.
+ * Constructs a DisableLoggingRequestPrivate object for Redshift \a action with,
+ * public implementation \a q.
  */
 DisableLoggingRequestPrivate::DisableLoggingRequestPrivate(
     const RedshiftRequest::Action action, DisableLoggingRequest * const q)
@@ -134,15 +123,10 @@ DisableLoggingRequestPrivate::DisableLoggingRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DisableLoggingRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DisableLoggingRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DisableLoggingRequest instance.
  */
 DisableLoggingRequestPrivate::DisableLoggingRequestPrivate(
     const DisableLoggingRequestPrivate &other, DisableLoggingRequest * const q)

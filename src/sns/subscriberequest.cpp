@@ -27,10 +27,9 @@ namespace SNS {
 
 /*!
  * \class QtAws::SNS::SubscribeRequest
- *
  * \brief The SubscribeRequest class provides an interface for SNS Subscribe requests.
  *
- * \ingroup SNS
+ * \inmodule QtAwsSNS
  *
  *  <fullname>Amazon Simple Notification Service</fullname>
  * 
@@ -51,9 +50,7 @@ namespace SNS {
  */
 
 /*!
- * @brief  Constructs a new SubscribeRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 SubscribeRequest::SubscribeRequest(const SubscribeRequest &other)
     : SNSRequest(new SubscribeRequestPrivate(*other.d_func(), this))
@@ -62,7 +59,7 @@ SubscribeRequest::SubscribeRequest(const SubscribeRequest &other)
 }
 
 /*!
- * @brief  Constructs a new SubscribeRequest object.
+ * Constructs a SubscribeRequest object.
  */
 SubscribeRequest::SubscribeRequest()
     : SNSRequest(new SubscribeRequestPrivate(SNSRequest::SubscribeAction, this))
@@ -80,14 +77,9 @@ bool SubscribeRequest::isValid() const
 
 
 /*!
- * @brief  Construct an SubscribeResponse object.
+ * Returns a SubscribeResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An SubscribeResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SNSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * SubscribeRequest::response(QNetworkReply * const reply) const
 {
@@ -95,20 +87,17 @@ QtAws::Core::AwsAbstractResponse * SubscribeRequest::response(QNetworkReply * co
 }
 
 /*!
- * @internal
+ * \class QtAws::SNS::SubscribeRequestPrivate
+ * \brief The SubscribeRequestPrivate class provides private implementation for SubscribeRequest.
+ * \internal
  *
- * @class  SubscribeRequestPrivate
- *
- * @brief  Private implementation for SubscribeRequest.
+ * \inmodule QtAwsSNS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new SubscribeRequestPrivate object.
- *
- * @param  action  SNS action being performed.
- * @param  q       Pointer to this object's public SubscribeRequest instance.
+ * Constructs a SubscribeRequestPrivate object for SNS \a action with,
+ * public implementation \a q.
  */
 SubscribeRequestPrivate::SubscribeRequestPrivate(
     const SNSRequest::Action action, SubscribeRequest * const q)
@@ -118,15 +107,10 @@ SubscribeRequestPrivate::SubscribeRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SubscribeRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the SubscribeRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public SubscribeRequest instance.
  */
 SubscribeRequestPrivate::SubscribeRequestPrivate(
     const SubscribeRequestPrivate &other, SubscribeRequest * const q)

@@ -25,16 +25,67 @@ namespace CloudFront {
 
 /*!
  * \class QtAws::CloudFront::CloudFrontRequest
- *
  * \brief The CloudFrontRequest class provides an interface for CloudFront requests.
  *
- * \ingroup CloudFront
+ * \inmodule QtAwsCloudFront
  */
 
 /*!
- * @brief  Constructs a new CloudFrontRequest object.
+ * \enum CloudFrontRequest::Action
  *
- * @param  action  The CloudFront action to request.
+ * This enum describes the actions that can be performed as CloudFront
+ * requests.
+ *
+ * \value CreateCloudFrontOriginAccessIdentityAction CloudFront CreateCloudFrontOriginAccessIdentity action.
+ * \value CreateDistributionAction CloudFront CreateDistribution action.
+ * \value CreateDistributionWithTagsAction CloudFront CreateDistributionWithTags action.
+ * \value CreateFieldLevelEncryptionConfigAction CloudFront CreateFieldLevelEncryptionConfig action.
+ * \value CreateFieldLevelEncryptionProfileAction CloudFront CreateFieldLevelEncryptionProfile action.
+ * \value CreateInvalidationAction CloudFront CreateInvalidation action.
+ * \value CreatePublicKeyAction CloudFront CreatePublicKey action.
+ * \value CreateStreamingDistributionAction CloudFront CreateStreamingDistribution action.
+ * \value CreateStreamingDistributionWithTagsAction CloudFront CreateStreamingDistributionWithTags action.
+ * \value DeleteCloudFrontOriginAccessIdentityAction CloudFront DeleteCloudFrontOriginAccessIdentity action.
+ * \value DeleteDistributionAction CloudFront DeleteDistribution action.
+ * \value DeleteFieldLevelEncryptionConfigAction CloudFront DeleteFieldLevelEncryptionConfig action.
+ * \value DeleteFieldLevelEncryptionProfileAction CloudFront DeleteFieldLevelEncryptionProfile action.
+ * \value DeletePublicKeyAction CloudFront DeletePublicKey action.
+ * \value DeleteServiceLinkedRoleAction CloudFront DeleteServiceLinkedRole action.
+ * \value DeleteStreamingDistributionAction CloudFront DeleteStreamingDistribution action.
+ * \value GetCloudFrontOriginAccessIdentityAction CloudFront GetCloudFrontOriginAccessIdentity action.
+ * \value GetCloudFrontOriginAccessIdentityConfigAction CloudFront GetCloudFrontOriginAccessIdentityConfig action.
+ * \value GetDistributionAction CloudFront GetDistribution action.
+ * \value GetDistributionConfigAction CloudFront GetDistributionConfig action.
+ * \value GetFieldLevelEncryptionAction CloudFront GetFieldLevelEncryption action.
+ * \value GetFieldLevelEncryptionConfigAction CloudFront GetFieldLevelEncryptionConfig action.
+ * \value GetFieldLevelEncryptionProfileAction CloudFront GetFieldLevelEncryptionProfile action.
+ * \value GetFieldLevelEncryptionProfileConfigAction CloudFront GetFieldLevelEncryptionProfileConfig action.
+ * \value GetInvalidationAction CloudFront GetInvalidation action.
+ * \value GetPublicKeyAction CloudFront GetPublicKey action.
+ * \value GetPublicKeyConfigAction CloudFront GetPublicKeyConfig action.
+ * \value GetStreamingDistributionAction CloudFront GetStreamingDistribution action.
+ * \value GetStreamingDistributionConfigAction CloudFront GetStreamingDistributionConfig action.
+ * \value ListCloudFrontOriginAccessIdentitiesAction CloudFront ListCloudFrontOriginAccessIdentities action.
+ * \value ListDistributionsAction CloudFront ListDistributions action.
+ * \value ListDistributionsByWebACLIdAction CloudFront ListDistributionsByWebACLId action.
+ * \value ListFieldLevelEncryptionConfigsAction CloudFront ListFieldLevelEncryptionConfigs action.
+ * \value ListFieldLevelEncryptionProfilesAction CloudFront ListFieldLevelEncryptionProfiles action.
+ * \value ListInvalidationsAction CloudFront ListInvalidations action.
+ * \value ListPublicKeysAction CloudFront ListPublicKeys action.
+ * \value ListStreamingDistributionsAction CloudFront ListStreamingDistributions action.
+ * \value ListTagsForResourceAction CloudFront ListTagsForResource action.
+ * \value TagResourceAction CloudFront TagResource action.
+ * \value UntagResourceAction CloudFront UntagResource action.
+ * \value UpdateCloudFrontOriginAccessIdentityAction CloudFront UpdateCloudFrontOriginAccessIdentity action.
+ * \value UpdateDistributionAction CloudFront UpdateDistribution action.
+ * \value UpdateFieldLevelEncryptionConfigAction CloudFront UpdateFieldLevelEncryptionConfig action.
+ * \value UpdateFieldLevelEncryptionProfileAction CloudFront UpdateFieldLevelEncryptionProfile action.
+ * \value UpdatePublicKeyAction CloudFront UpdatePublicKey action.
+ * \value UpdateStreamingDistributionAction CloudFront UpdateStreamingDistribution action.
+ */
+
+/*!
+ * Constructs a[n] CloudFrontRequest object for CloudFront \a action.
  */
 CloudFrontRequest::CloudFrontRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new CloudFrontRequestPrivate(action, this))
@@ -43,9 +94,7 @@ CloudFrontRequest::CloudFrontRequest(const Action action)
 }
 
 /*!
- * @brief  Constructs a new CloudFrontRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CloudFrontRequest::CloudFrontRequest(const CloudFrontRequest &other)
     : QtAws::Core::AwsAbstractRequest(new CloudFrontRequestPrivate(*other.d_func(), this))
@@ -54,13 +103,7 @@ CloudFrontRequest::CloudFrontRequest(const CloudFrontRequest &other)
 }
 
 /*!
- * @brief  Assignment operator.
- *
- * Assigns \a other to \c this.
- *
- * @param  other  Instance to copy.
- *
- * @return  A reference to \c this.
+ * Sets the CloudFrontRequest object to be equal to \a other.
  */
 CloudFrontRequest& CloudFrontRequest::operator=(const CloudFrontRequest &other)
 {
@@ -72,14 +115,10 @@ CloudFrontRequest& CloudFrontRequest::operator=(const CloudFrontRequest &other)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CloudFrontRequest object.
+ * Constructs aa CloudFrontRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from CloudFrontRequestPrivate.
- *
- * @param  d  Pointer to private data (aka D-Pointer).
  */
 CloudFrontRequest::CloudFrontRequest(CloudFrontRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
@@ -87,7 +126,7 @@ CloudFrontRequest::CloudFrontRequest(CloudFrontRequestPrivate * const d) : QtAws
 }
 
 /*!
- * \brief Returns the CloudFront action to be performed by this request.
+ * Returns the CloudFront action to be performed by this request.
  */
 CloudFrontRequest::Action CloudFrontRequest::action() const
 {
@@ -96,7 +135,7 @@ CloudFrontRequest::Action CloudFrontRequest::action() const
 }
 
 /*!
- * \brief Returns the name of the CloudFront action to be performed by this request.
+ * Returns the name of the CloudFront action to be performed by this request.
  */
 QString CloudFrontRequest::actionString() const
 {
@@ -104,7 +143,7 @@ QString CloudFrontRequest::actionString() const
 }
 
 /*!
- * \brief Returns the CloudFront API version implemented by this request.
+ * Returns the CloudFront API version implemented by this request.
  */
 QString CloudFrontRequest::apiVersion() const
 {
@@ -113,7 +152,7 @@ QString CloudFrontRequest::apiVersion() const
 }
 
 /*!
- * @brief Set the CloudFront action to be performed by this request to \a action.
+ * Sets the CloudFront action to be performed by this request to \a action.
  */
 void CloudFrontRequest::setAction(const Action action)
 {
@@ -122,7 +161,7 @@ void CloudFrontRequest::setAction(const Action action)
 }
 
 /*!
- * Set the CloudFront API version to include in this request to \a version.
+ * Sets the CloudFront API version to include in this request to \a version.
  */
 void CloudFrontRequest::setApiVersion(const QString &version)
 {
@@ -131,7 +170,7 @@ void CloudFrontRequest::setApiVersion(const QString &version)
 }
 
 /*!
- * \brief Returns \c true if this request is the same as \a other.
+ * Returns \c true if this request is equal to \a other; \c false otherwise.
  *
  * Note, most derived *Request classes do not need to provider their own
  * implementations of this function, since most such request classes rely on
@@ -146,8 +185,8 @@ bool CloudFrontRequest::operator==(const CloudFrontRequest &other) const
             (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
-/*!
- * @brief  Check if \a queueName is a valid CloudFront queue name.
+/*
+ * Returns \c tue if \a queueName is a valid CloudFront queue name.
  *
  * @par From CloudFront FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
@@ -166,9 +205,8 @@ bool CloudFrontRequest::operator==(const CloudFrontRequest &other) const
 }*/
 
 /*!
- * \brief Removes the a \a name parameter from this request.
- *
- * Returns the count of paramters removed (typically \c 0 or \c 1).
+ * Removes the a \a name parameter from the request, then returns the number of
+ * paramters removed (typically \c 0 or \c 1).
  */
 int CloudFrontRequest::clearParameter(const QString &name)
 {
@@ -177,7 +215,7 @@ int CloudFrontRequest::clearParameter(const QString &name)
 }
 
 /*!
- * \brief Removes all parameters from this request.
+ * Removes all parameters from the request.
  */
 void CloudFrontRequest::clearParameters()
 {
@@ -186,7 +224,7 @@ void CloudFrontRequest::clearParameters()
 }
 
 /*!
- * \brief Returns the value of the \n name pararemter if set, otherwise \a defaultValue.
+ * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
 QVariant CloudFrontRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
@@ -195,7 +233,7 @@ QVariant CloudFrontRequest::parameter(const QString &name, const QVariant &defau
 }
 
 /*!
- * \brief Returns a map of parameters included in this request.
+ * Returns the parameters included in this request.
  */
 const QVariantMap &CloudFrontRequest::parameters() const
 {
@@ -204,7 +242,7 @@ const QVariantMap &CloudFrontRequest::parameters() const
 }
 
 /*!
- * \brief Sets the \a name parameter to \a value.
+ * Sets the \a name parameter to \a value.
  */
 void CloudFrontRequest::setParameter(const QString &name, const QVariant &value)
 {
@@ -213,9 +251,8 @@ void CloudFrontRequest::setParameter(const QString &name, const QVariant &value)
 }
 
 /*!
- * \brief Sets the map of paramters for this request to \a parameters.
- *
- * Any request parameters set previously will be discarded.
+ * Sets the paramters for this request to \a parameters. Any request parameters
+ * set previously will be discarded.
  */
 void CloudFrontRequest::setParameters(const QVariantMap &parameters)
 {
@@ -224,11 +261,12 @@ void CloudFrontRequest::setParameters(const QVariantMap &parameters)
 }
 
 /*!
- * \brief Returns a network request for this CloudFront request using the given \a endpoint.
+ * Returns a network request for the CloudFront request using the given
+ * \a endpoint.
  *
- * This CloudFront implementation builds request URLs by combining the common query
- * parameters (such as Action and Version), with any that have been added (via
- * setParameter) by child classes.
+ * This CloudFront implementation builds request URLs by combining the
+ * common query parameters (such as Action and Version), with any that have
+ * been added (via setParameter) by child classes.
  */
 QNetworkRequest CloudFrontRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -239,17 +277,16 @@ QNetworkRequest CloudFrontRequest::unsignedRequest(const QUrl &endpoint) const
 }
 
 /*!
+ * \class QtAws::CloudFront::CloudFrontRequestPrivate
+ * \brief The CloudFrontRequestPrivate class provides private implementation for CloudFrontRequest.
  * \internal
  *
- * \class  CloudFrontRequestPrivate
- *
- * \brief  Private implementation for CloudFrontRequest.
+ * \inmodule QtAwsCloudFront
  */
 
 /*!
- * \internal
- *
- * \brief Constructs a new CloudFrontRequestPrivate object.
+ * Constructs a CloudFrontRequestPrivate object for CloudFront \a action with,
+ * public implementation \a q.
  */
 CloudFrontRequestPrivate::CloudFrontRequestPrivate(const CloudFrontRequest::Action action, CloudFrontRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
@@ -258,9 +295,7 @@ CloudFrontRequestPrivate::CloudFrontRequestPrivate(const CloudFrontRequest::Acti
 }
 
 /*!
- * \internal
- *
- * \brief Constructs a new CloudFrontRequestPrivate object, copying an existing one.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
@@ -276,15 +311,12 @@ CloudFrontRequestPrivate::CloudFrontRequestPrivate(const CloudFrontRequestPrivat
 }
 
 /*!
- * \internal
- *
- * \brief Returns a string representing \a action.
+ * Returns a string represention of \a action, or a null string if \a action is
+ * invalid.
  *
  * This function converts CloudFrontRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the CloudFront service's Action
  * query parameters.
- *
- * @return A string representing \a action, or a null string if \a action is invalid.
  */
 QString CloudFrontRequestPrivate::toString(const CloudFrontRequest::Action &action)
 {

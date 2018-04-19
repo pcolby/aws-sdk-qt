@@ -27,10 +27,9 @@ namespace StorageGateway {
 
 /*!
  * \class QtAws::StorageGateway::AddUploadBufferRequest
- *
  * \brief The AddUploadBufferRequest class provides an interface for StorageGateway AddUploadBuffer requests.
  *
- * \ingroup StorageGateway
+ * \inmodule QtAwsStorageGateway
  *
  *  <fullname>AWS Storage Gateway Service</fullname>
  * 
@@ -106,9 +105,7 @@ namespace StorageGateway {
  */
 
 /*!
- * @brief  Constructs a new AddUploadBufferRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AddUploadBufferRequest::AddUploadBufferRequest(const AddUploadBufferRequest &other)
     : StorageGatewayRequest(new AddUploadBufferRequestPrivate(*other.d_func(), this))
@@ -117,7 +114,7 @@ AddUploadBufferRequest::AddUploadBufferRequest(const AddUploadBufferRequest &oth
 }
 
 /*!
- * @brief  Constructs a new AddUploadBufferRequest object.
+ * Constructs a AddUploadBufferRequest object.
  */
 AddUploadBufferRequest::AddUploadBufferRequest()
     : StorageGatewayRequest(new AddUploadBufferRequestPrivate(StorageGatewayRequest::AddUploadBufferAction, this))
@@ -135,14 +132,9 @@ bool AddUploadBufferRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AddUploadBufferResponse object.
+ * Returns a AddUploadBufferResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AddUploadBufferResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  StorageGatewayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AddUploadBufferRequest::response(QNetworkReply * const reply) const
 {
@@ -150,20 +142,17 @@ QtAws::Core::AwsAbstractResponse * AddUploadBufferRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::StorageGateway::AddUploadBufferRequestPrivate
+ * \brief The AddUploadBufferRequestPrivate class provides private implementation for AddUploadBufferRequest.
+ * \internal
  *
- * @class  AddUploadBufferRequestPrivate
- *
- * @brief  Private implementation for AddUploadBufferRequest.
+ * \inmodule QtAwsStorageGateway
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AddUploadBufferRequestPrivate object.
- *
- * @param  action  StorageGateway action being performed.
- * @param  q       Pointer to this object's public AddUploadBufferRequest instance.
+ * Constructs a AddUploadBufferRequestPrivate object for StorageGateway \a action with,
+ * public implementation \a q.
  */
 AddUploadBufferRequestPrivate::AddUploadBufferRequestPrivate(
     const StorageGatewayRequest::Action action, AddUploadBufferRequest * const q)
@@ -173,15 +162,10 @@ AddUploadBufferRequestPrivate::AddUploadBufferRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AddUploadBufferRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AddUploadBufferRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AddUploadBufferRequest instance.
  */
 AddUploadBufferRequestPrivate::AddUploadBufferRequestPrivate(
     const AddUploadBufferRequestPrivate &other, AddUploadBufferRequest * const q)

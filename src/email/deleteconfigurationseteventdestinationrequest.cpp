@@ -27,10 +27,9 @@ namespace SES {
 
 /*!
  * \class QtAws::SES::DeleteConfigurationSetEventDestinationRequest
- *
  * \brief The DeleteConfigurationSetEventDestinationRequest class provides an interface for SES DeleteConfigurationSetEventDestination requests.
  *
- * \ingroup SES
+ * \inmodule QtAwsSES
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -48,9 +47,7 @@ namespace SES {
  */
 
 /*!
- * @brief  Constructs a new DeleteConfigurationSetEventDestinationRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteConfigurationSetEventDestinationRequest::DeleteConfigurationSetEventDestinationRequest(const DeleteConfigurationSetEventDestinationRequest &other)
     : SESRequest(new DeleteConfigurationSetEventDestinationRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ DeleteConfigurationSetEventDestinationRequest::DeleteConfigurationSetEventDestin
 }
 
 /*!
- * @brief  Constructs a new DeleteConfigurationSetEventDestinationRequest object.
+ * Constructs a DeleteConfigurationSetEventDestinationRequest object.
  */
 DeleteConfigurationSetEventDestinationRequest::DeleteConfigurationSetEventDestinationRequest()
     : SESRequest(new DeleteConfigurationSetEventDestinationRequestPrivate(SESRequest::DeleteConfigurationSetEventDestinationAction, this))
@@ -77,14 +74,9 @@ bool DeleteConfigurationSetEventDestinationRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteConfigurationSetEventDestinationResponse object.
+ * Returns a DeleteConfigurationSetEventDestinationResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteConfigurationSetEventDestinationResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SESClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteConfigurationSetEventDestinationRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * DeleteConfigurationSetEventDestinationRequest
 }
 
 /*!
- * @internal
+ * \class QtAws::SES::DeleteConfigurationSetEventDestinationRequestPrivate
+ * \brief The DeleteConfigurationSetEventDestinationRequestPrivate class provides private implementation for DeleteConfigurationSetEventDestinationRequest.
+ * \internal
  *
- * @class  DeleteConfigurationSetEventDestinationRequestPrivate
- *
- * @brief  Private implementation for DeleteConfigurationSetEventDestinationRequest.
+ * \inmodule QtAwsSES
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteConfigurationSetEventDestinationRequestPrivate object.
- *
- * @param  action  SES action being performed.
- * @param  q       Pointer to this object's public DeleteConfigurationSetEventDestinationRequest instance.
+ * Constructs a DeleteConfigurationSetEventDestinationRequestPrivate object for SES \a action with,
+ * public implementation \a q.
  */
 DeleteConfigurationSetEventDestinationRequestPrivate::DeleteConfigurationSetEventDestinationRequestPrivate(
     const SESRequest::Action action, DeleteConfigurationSetEventDestinationRequest * const q)
@@ -115,15 +104,10 @@ DeleteConfigurationSetEventDestinationRequestPrivate::DeleteConfigurationSetEven
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteConfigurationSetEventDestinationRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteConfigurationSetEventDestinationRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteConfigurationSetEventDestinationRequest instance.
  */
 DeleteConfigurationSetEventDestinationRequestPrivate::DeleteConfigurationSetEventDestinationRequestPrivate(
     const DeleteConfigurationSetEventDestinationRequestPrivate &other, DeleteConfigurationSetEventDestinationRequest * const q)

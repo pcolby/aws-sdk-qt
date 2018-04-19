@@ -27,10 +27,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::DeleteRoleAliasRequest
- *
  * \brief The DeleteRoleAliasRequest class provides an interface for IoT DeleteRoleAlias requests.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -48,9 +47,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new DeleteRoleAliasRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteRoleAliasRequest::DeleteRoleAliasRequest(const DeleteRoleAliasRequest &other)
     : IoTRequest(new DeleteRoleAliasRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ DeleteRoleAliasRequest::DeleteRoleAliasRequest(const DeleteRoleAliasRequest &oth
 }
 
 /*!
- * @brief  Constructs a new DeleteRoleAliasRequest object.
+ * Constructs a DeleteRoleAliasRequest object.
  */
 DeleteRoleAliasRequest::DeleteRoleAliasRequest()
     : IoTRequest(new DeleteRoleAliasRequestPrivate(IoTRequest::DeleteRoleAliasAction, this))
@@ -77,14 +74,9 @@ bool DeleteRoleAliasRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteRoleAliasResponse object.
+ * Returns a DeleteRoleAliasResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteRoleAliasResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IoTClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteRoleAliasRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * DeleteRoleAliasRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::IoT::DeleteRoleAliasRequestPrivate
+ * \brief The DeleteRoleAliasRequestPrivate class provides private implementation for DeleteRoleAliasRequest.
+ * \internal
  *
- * @class  DeleteRoleAliasRequestPrivate
- *
- * @brief  Private implementation for DeleteRoleAliasRequest.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteRoleAliasRequestPrivate object.
- *
- * @param  action  IoT action being performed.
- * @param  q       Pointer to this object's public DeleteRoleAliasRequest instance.
+ * Constructs a DeleteRoleAliasRequestPrivate object for IoT \a action with,
+ * public implementation \a q.
  */
 DeleteRoleAliasRequestPrivate::DeleteRoleAliasRequestPrivate(
     const IoTRequest::Action action, DeleteRoleAliasRequest * const q)
@@ -115,15 +104,10 @@ DeleteRoleAliasRequestPrivate::DeleteRoleAliasRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteRoleAliasRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteRoleAliasRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteRoleAliasRequest instance.
  */
 DeleteRoleAliasRequestPrivate::DeleteRoleAliasRequestPrivate(
     const DeleteRoleAliasRequestPrivate &other, DeleteRoleAliasRequest * const q)

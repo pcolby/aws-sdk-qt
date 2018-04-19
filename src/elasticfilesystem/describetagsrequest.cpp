@@ -27,10 +27,9 @@ namespace EFS {
 
 /*!
  * \class QtAws::EFS::DescribeTagsRequest
- *
  * \brief The DescribeTagsRequest class provides an interface for EFS DescribeTags requests.
  *
- * \ingroup EFS
+ * \inmodule QtAwsEFS
  *
  *  <fullname>Amazon Elastic File System</fullname>
  * 
@@ -43,9 +42,7 @@ namespace EFS {
  */
 
 /*!
- * @brief  Constructs a new DescribeTagsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeTagsRequest::DescribeTagsRequest(const DescribeTagsRequest &other)
     : EFSRequest(new DescribeTagsRequestPrivate(*other.d_func(), this))
@@ -54,7 +51,7 @@ DescribeTagsRequest::DescribeTagsRequest(const DescribeTagsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DescribeTagsRequest object.
+ * Constructs a DescribeTagsRequest object.
  */
 DescribeTagsRequest::DescribeTagsRequest()
     : EFSRequest(new DescribeTagsRequestPrivate(EFSRequest::DescribeTagsAction, this))
@@ -72,14 +69,9 @@ bool DescribeTagsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeTagsResponse object.
+ * Returns a DescribeTagsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeTagsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EFSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeTagsRequest::response(QNetworkReply * const reply) const
 {
@@ -87,20 +79,17 @@ QtAws::Core::AwsAbstractResponse * DescribeTagsRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::EFS::DescribeTagsRequestPrivate
+ * \brief The DescribeTagsRequestPrivate class provides private implementation for DescribeTagsRequest.
+ * \internal
  *
- * @class  DescribeTagsRequestPrivate
- *
- * @brief  Private implementation for DescribeTagsRequest.
+ * \inmodule QtAwsEFS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeTagsRequestPrivate object.
- *
- * @param  action  EFS action being performed.
- * @param  q       Pointer to this object's public DescribeTagsRequest instance.
+ * Constructs a DescribeTagsRequestPrivate object for EFS \a action with,
+ * public implementation \a q.
  */
 DescribeTagsRequestPrivate::DescribeTagsRequestPrivate(
     const EFSRequest::Action action, DescribeTagsRequest * const q)
@@ -110,15 +99,10 @@ DescribeTagsRequestPrivate::DescribeTagsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeTagsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeTagsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeTagsRequest instance.
  */
 DescribeTagsRequestPrivate::DescribeTagsRequestPrivate(
     const DescribeTagsRequestPrivate &other, DescribeTagsRequest * const q)

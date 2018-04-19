@@ -27,10 +27,9 @@ namespace EMR {
 
 /*!
  * \class QtAws::EMR::SetVisibleToAllUsersRequest
- *
  * \brief The SetVisibleToAllUsersRequest class provides an interface for EMR SetVisibleToAllUsers requests.
  *
- * \ingroup EMR
+ * \inmodule QtAwsEMR
  *
  *  Amazon EMR is a web service that makes it easy to process large amounts of data efficiently. Amazon EMR uses Hadoop
  *  processing combined with several AWS products to do tasks such as web indexing, data mining, log file analysis, machine
@@ -40,9 +39,7 @@ namespace EMR {
  */
 
 /*!
- * @brief  Constructs a new SetVisibleToAllUsersRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 SetVisibleToAllUsersRequest::SetVisibleToAllUsersRequest(const SetVisibleToAllUsersRequest &other)
     : EMRRequest(new SetVisibleToAllUsersRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ SetVisibleToAllUsersRequest::SetVisibleToAllUsersRequest(const SetVisibleToAllUs
 }
 
 /*!
- * @brief  Constructs a new SetVisibleToAllUsersRequest object.
+ * Constructs a SetVisibleToAllUsersRequest object.
  */
 SetVisibleToAllUsersRequest::SetVisibleToAllUsersRequest()
     : EMRRequest(new SetVisibleToAllUsersRequestPrivate(EMRRequest::SetVisibleToAllUsersAction, this))
@@ -69,14 +66,9 @@ bool SetVisibleToAllUsersRequest::isValid() const
 
 
 /*!
- * @brief  Construct an SetVisibleToAllUsersResponse object.
+ * Returns a SetVisibleToAllUsersResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An SetVisibleToAllUsersResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EMRClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * SetVisibleToAllUsersRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * SetVisibleToAllUsersRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::EMR::SetVisibleToAllUsersRequestPrivate
+ * \brief The SetVisibleToAllUsersRequestPrivate class provides private implementation for SetVisibleToAllUsersRequest.
+ * \internal
  *
- * @class  SetVisibleToAllUsersRequestPrivate
- *
- * @brief  Private implementation for SetVisibleToAllUsersRequest.
+ * \inmodule QtAwsEMR
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new SetVisibleToAllUsersRequestPrivate object.
- *
- * @param  action  EMR action being performed.
- * @param  q       Pointer to this object's public SetVisibleToAllUsersRequest instance.
+ * Constructs a SetVisibleToAllUsersRequestPrivate object for EMR \a action with,
+ * public implementation \a q.
  */
 SetVisibleToAllUsersRequestPrivate::SetVisibleToAllUsersRequestPrivate(
     const EMRRequest::Action action, SetVisibleToAllUsersRequest * const q)
@@ -107,15 +96,10 @@ SetVisibleToAllUsersRequestPrivate::SetVisibleToAllUsersRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SetVisibleToAllUsersRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the SetVisibleToAllUsersRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public SetVisibleToAllUsersRequest instance.
  */
 SetVisibleToAllUsersRequestPrivate::SetVisibleToAllUsersRequestPrivate(
     const SetVisibleToAllUsersRequestPrivate &other, SetVisibleToAllUsersRequest * const q)

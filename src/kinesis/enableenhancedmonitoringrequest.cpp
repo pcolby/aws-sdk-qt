@@ -27,10 +27,9 @@ namespace Kinesis {
 
 /*!
  * \class QtAws::Kinesis::EnableEnhancedMonitoringRequest
- *
  * \brief The EnableEnhancedMonitoringRequest class provides an interface for Kinesis EnableEnhancedMonitoring requests.
  *
- * \ingroup Kinesis
+ * \inmodule QtAwsKinesis
  *
  *  <fullname>Amazon Kinesis Data Streams Service API Reference</fullname>
  * 
@@ -40,9 +39,7 @@ namespace Kinesis {
  */
 
 /*!
- * @brief  Constructs a new EnableEnhancedMonitoringRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 EnableEnhancedMonitoringRequest::EnableEnhancedMonitoringRequest(const EnableEnhancedMonitoringRequest &other)
     : KinesisRequest(new EnableEnhancedMonitoringRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ EnableEnhancedMonitoringRequest::EnableEnhancedMonitoringRequest(const EnableEnh
 }
 
 /*!
- * @brief  Constructs a new EnableEnhancedMonitoringRequest object.
+ * Constructs a EnableEnhancedMonitoringRequest object.
  */
 EnableEnhancedMonitoringRequest::EnableEnhancedMonitoringRequest()
     : KinesisRequest(new EnableEnhancedMonitoringRequestPrivate(KinesisRequest::EnableEnhancedMonitoringAction, this))
@@ -69,14 +66,9 @@ bool EnableEnhancedMonitoringRequest::isValid() const
 
 
 /*!
- * @brief  Construct an EnableEnhancedMonitoringResponse object.
+ * Returns a EnableEnhancedMonitoringResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An EnableEnhancedMonitoringResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  KinesisClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * EnableEnhancedMonitoringRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * EnableEnhancedMonitoringRequest::response(QNe
 }
 
 /*!
- * @internal
+ * \class QtAws::Kinesis::EnableEnhancedMonitoringRequestPrivate
+ * \brief The EnableEnhancedMonitoringRequestPrivate class provides private implementation for EnableEnhancedMonitoringRequest.
+ * \internal
  *
- * @class  EnableEnhancedMonitoringRequestPrivate
- *
- * @brief  Private implementation for EnableEnhancedMonitoringRequest.
+ * \inmodule QtAwsKinesis
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new EnableEnhancedMonitoringRequestPrivate object.
- *
- * @param  action  Kinesis action being performed.
- * @param  q       Pointer to this object's public EnableEnhancedMonitoringRequest instance.
+ * Constructs a EnableEnhancedMonitoringRequestPrivate object for Kinesis \a action with,
+ * public implementation \a q.
  */
 EnableEnhancedMonitoringRequestPrivate::EnableEnhancedMonitoringRequestPrivate(
     const KinesisRequest::Action action, EnableEnhancedMonitoringRequest * const q)
@@ -107,15 +96,10 @@ EnableEnhancedMonitoringRequestPrivate::EnableEnhancedMonitoringRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new EnableEnhancedMonitoringRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the EnableEnhancedMonitoringRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public EnableEnhancedMonitoringRequest instance.
  */
 EnableEnhancedMonitoringRequestPrivate::EnableEnhancedMonitoringRequestPrivate(
     const EnableEnhancedMonitoringRequestPrivate &other, EnableEnhancedMonitoringRequest * const q)

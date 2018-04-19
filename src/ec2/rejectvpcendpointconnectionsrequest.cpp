@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::RejectVpcEndpointConnectionsRequest
- *
  * \brief The RejectVpcEndpointConnectionsRequest class provides an interface for EC2 RejectVpcEndpointConnections requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new RejectVpcEndpointConnectionsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 RejectVpcEndpointConnectionsRequest::RejectVpcEndpointConnectionsRequest(const RejectVpcEndpointConnectionsRequest &other)
     : EC2Request(new RejectVpcEndpointConnectionsRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ RejectVpcEndpointConnectionsRequest::RejectVpcEndpointConnectionsRequest(const R
 }
 
 /*!
- * @brief  Constructs a new RejectVpcEndpointConnectionsRequest object.
+ * Constructs a RejectVpcEndpointConnectionsRequest object.
  */
 RejectVpcEndpointConnectionsRequest::RejectVpcEndpointConnectionsRequest()
     : EC2Request(new RejectVpcEndpointConnectionsRequestPrivate(EC2Request::RejectVpcEndpointConnectionsAction, this))
@@ -70,14 +67,9 @@ bool RejectVpcEndpointConnectionsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an RejectVpcEndpointConnectionsResponse object.
+ * Returns a RejectVpcEndpointConnectionsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An RejectVpcEndpointConnectionsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * RejectVpcEndpointConnectionsRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * RejectVpcEndpointConnectionsRequest::response
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::RejectVpcEndpointConnectionsRequestPrivate
+ * \brief The RejectVpcEndpointConnectionsRequestPrivate class provides private implementation for RejectVpcEndpointConnectionsRequest.
+ * \internal
  *
- * @class  RejectVpcEndpointConnectionsRequestPrivate
- *
- * @brief  Private implementation for RejectVpcEndpointConnectionsRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new RejectVpcEndpointConnectionsRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public RejectVpcEndpointConnectionsRequest instance.
+ * Constructs a RejectVpcEndpointConnectionsRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 RejectVpcEndpointConnectionsRequestPrivate::RejectVpcEndpointConnectionsRequestPrivate(
     const EC2Request::Action action, RejectVpcEndpointConnectionsRequest * const q)
@@ -108,15 +97,10 @@ RejectVpcEndpointConnectionsRequestPrivate::RejectVpcEndpointConnectionsRequestP
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RejectVpcEndpointConnectionsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the RejectVpcEndpointConnectionsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public RejectVpcEndpointConnectionsRequest instance.
  */
 RejectVpcEndpointConnectionsRequestPrivate::RejectVpcEndpointConnectionsRequestPrivate(
     const RejectVpcEndpointConnectionsRequestPrivate &other, RejectVpcEndpointConnectionsRequest * const q)

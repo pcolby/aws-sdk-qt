@@ -27,10 +27,9 @@ namespace WorkDocs {
 
 /*!
  * \class QtAws::WorkDocs::UpdateUserRequest
- *
  * \brief The UpdateUserRequest class provides an interface for WorkDocs UpdateUser requests.
  *
- * \ingroup WorkDocs
+ * \inmodule QtAwsWorkDocs
  *
  *  The WorkDocs API is designed for the following use
  * 
@@ -66,9 +65,7 @@ namespace WorkDocs {
  */
 
 /*!
- * @brief  Constructs a new UpdateUserRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateUserRequest::UpdateUserRequest(const UpdateUserRequest &other)
     : WorkDocsRequest(new UpdateUserRequestPrivate(*other.d_func(), this))
@@ -77,7 +74,7 @@ UpdateUserRequest::UpdateUserRequest(const UpdateUserRequest &other)
 }
 
 /*!
- * @brief  Constructs a new UpdateUserRequest object.
+ * Constructs a UpdateUserRequest object.
  */
 UpdateUserRequest::UpdateUserRequest()
     : WorkDocsRequest(new UpdateUserRequestPrivate(WorkDocsRequest::UpdateUserAction, this))
@@ -95,14 +92,9 @@ bool UpdateUserRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateUserResponse object.
+ * Returns a UpdateUserResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateUserResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WorkDocsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateUserRequest::response(QNetworkReply * const reply) const
 {
@@ -110,20 +102,17 @@ QtAws::Core::AwsAbstractResponse * UpdateUserRequest::response(QNetworkReply * c
 }
 
 /*!
- * @internal
+ * \class QtAws::WorkDocs::UpdateUserRequestPrivate
+ * \brief The UpdateUserRequestPrivate class provides private implementation for UpdateUserRequest.
+ * \internal
  *
- * @class  UpdateUserRequestPrivate
- *
- * @brief  Private implementation for UpdateUserRequest.
+ * \inmodule QtAwsWorkDocs
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateUserRequestPrivate object.
- *
- * @param  action  WorkDocs action being performed.
- * @param  q       Pointer to this object's public UpdateUserRequest instance.
+ * Constructs a UpdateUserRequestPrivate object for WorkDocs \a action with,
+ * public implementation \a q.
  */
 UpdateUserRequestPrivate::UpdateUserRequestPrivate(
     const WorkDocsRequest::Action action, UpdateUserRequest * const q)
@@ -133,15 +122,10 @@ UpdateUserRequestPrivate::UpdateUserRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateUserRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateUserRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateUserRequest instance.
  */
 UpdateUserRequestPrivate::UpdateUserRequestPrivate(
     const UpdateUserRequestPrivate &other, UpdateUserRequest * const q)

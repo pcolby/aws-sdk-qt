@@ -27,10 +27,9 @@ namespace Support {
 
 /*!
  * \class QtAws::Support::AddCommunicationToCaseRequest
- *
  * \brief The AddCommunicationToCaseRequest class provides an interface for Support AddCommunicationToCase requests.
  *
- * \ingroup Support
+ * \inmodule QtAwsSupport
  *
  *  <fullname>AWS Support</fullname>
  * 
@@ -105,9 +104,7 @@ namespace Support {
  */
 
 /*!
- * @brief  Constructs a new AddCommunicationToCaseRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AddCommunicationToCaseRequest::AddCommunicationToCaseRequest(const AddCommunicationToCaseRequest &other)
     : SupportRequest(new AddCommunicationToCaseRequestPrivate(*other.d_func(), this))
@@ -116,7 +113,7 @@ AddCommunicationToCaseRequest::AddCommunicationToCaseRequest(const AddCommunicat
 }
 
 /*!
- * @brief  Constructs a new AddCommunicationToCaseRequest object.
+ * Constructs a AddCommunicationToCaseRequest object.
  */
 AddCommunicationToCaseRequest::AddCommunicationToCaseRequest()
     : SupportRequest(new AddCommunicationToCaseRequestPrivate(SupportRequest::AddCommunicationToCaseAction, this))
@@ -134,14 +131,9 @@ bool AddCommunicationToCaseRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AddCommunicationToCaseResponse object.
+ * Returns a AddCommunicationToCaseResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AddCommunicationToCaseResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SupportClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AddCommunicationToCaseRequest::response(QNetworkReply * const reply) const
 {
@@ -149,20 +141,17 @@ QtAws::Core::AwsAbstractResponse * AddCommunicationToCaseRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::Support::AddCommunicationToCaseRequestPrivate
+ * \brief The AddCommunicationToCaseRequestPrivate class provides private implementation for AddCommunicationToCaseRequest.
+ * \internal
  *
- * @class  AddCommunicationToCaseRequestPrivate
- *
- * @brief  Private implementation for AddCommunicationToCaseRequest.
+ * \inmodule QtAwsSupport
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AddCommunicationToCaseRequestPrivate object.
- *
- * @param  action  Support action being performed.
- * @param  q       Pointer to this object's public AddCommunicationToCaseRequest instance.
+ * Constructs a AddCommunicationToCaseRequestPrivate object for Support \a action with,
+ * public implementation \a q.
  */
 AddCommunicationToCaseRequestPrivate::AddCommunicationToCaseRequestPrivate(
     const SupportRequest::Action action, AddCommunicationToCaseRequest * const q)
@@ -172,15 +161,10 @@ AddCommunicationToCaseRequestPrivate::AddCommunicationToCaseRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AddCommunicationToCaseRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AddCommunicationToCaseRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AddCommunicationToCaseRequest instance.
  */
 AddCommunicationToCaseRequestPrivate::AddCommunicationToCaseRequestPrivate(
     const AddCommunicationToCaseRequestPrivate &other, AddCommunicationToCaseRequest * const q)

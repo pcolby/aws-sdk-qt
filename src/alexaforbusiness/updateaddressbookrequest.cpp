@@ -27,10 +27,9 @@ namespace AlexaForBusiness {
 
 /*!
  * \class QtAws::AlexaForBusiness::UpdateAddressBookRequest
- *
  * \brief The UpdateAddressBookRequest class provides an interface for AlexaForBusiness UpdateAddressBook requests.
  *
- * \ingroup AlexaForBusiness
+ * \inmodule QtAwsAlexaForBusiness
  *
  *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
  *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
@@ -42,9 +41,7 @@ namespace AlexaForBusiness {
  */
 
 /*!
- * @brief  Constructs a new UpdateAddressBookRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateAddressBookRequest::UpdateAddressBookRequest(const UpdateAddressBookRequest &other)
     : AlexaForBusinessRequest(new UpdateAddressBookRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ UpdateAddressBookRequest::UpdateAddressBookRequest(const UpdateAddressBookReques
 }
 
 /*!
- * @brief  Constructs a new UpdateAddressBookRequest object.
+ * Constructs a UpdateAddressBookRequest object.
  */
 UpdateAddressBookRequest::UpdateAddressBookRequest()
     : AlexaForBusinessRequest(new UpdateAddressBookRequestPrivate(AlexaForBusinessRequest::UpdateAddressBookAction, this))
@@ -71,14 +68,9 @@ bool UpdateAddressBookRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateAddressBookResponse object.
+ * Returns a UpdateAddressBookResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateAddressBookResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AlexaForBusinessClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateAddressBookRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * UpdateAddressBookRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::AlexaForBusiness::UpdateAddressBookRequestPrivate
+ * \brief The UpdateAddressBookRequestPrivate class provides private implementation for UpdateAddressBookRequest.
+ * \internal
  *
- * @class  UpdateAddressBookRequestPrivate
- *
- * @brief  Private implementation for UpdateAddressBookRequest.
+ * \inmodule QtAwsAlexaForBusiness
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateAddressBookRequestPrivate object.
- *
- * @param  action  AlexaForBusiness action being performed.
- * @param  q       Pointer to this object's public UpdateAddressBookRequest instance.
+ * Constructs a UpdateAddressBookRequestPrivate object for AlexaForBusiness \a action with,
+ * public implementation \a q.
  */
 UpdateAddressBookRequestPrivate::UpdateAddressBookRequestPrivate(
     const AlexaForBusinessRequest::Action action, UpdateAddressBookRequest * const q)
@@ -109,15 +98,10 @@ UpdateAddressBookRequestPrivate::UpdateAddressBookRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateAddressBookRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateAddressBookRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateAddressBookRequest instance.
  */
 UpdateAddressBookRequestPrivate::UpdateAddressBookRequestPrivate(
     const UpdateAddressBookRequestPrivate &other, UpdateAddressBookRequest * const q)

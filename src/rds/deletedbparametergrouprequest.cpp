@@ -27,10 +27,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::DeleteDBParameterGroupRequest
- *
  * \brief The DeleteDBParameterGroupRequest class provides an interface for RDS DeleteDBParameterGroup requests.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -101,9 +100,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new DeleteDBParameterGroupRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteDBParameterGroupRequest::DeleteDBParameterGroupRequest(const DeleteDBParameterGroupRequest &other)
     : RDSRequest(new DeleteDBParameterGroupRequestPrivate(*other.d_func(), this))
@@ -112,7 +109,7 @@ DeleteDBParameterGroupRequest::DeleteDBParameterGroupRequest(const DeleteDBParam
 }
 
 /*!
- * @brief  Constructs a new DeleteDBParameterGroupRequest object.
+ * Constructs a DeleteDBParameterGroupRequest object.
  */
 DeleteDBParameterGroupRequest::DeleteDBParameterGroupRequest()
     : RDSRequest(new DeleteDBParameterGroupRequestPrivate(RDSRequest::DeleteDBParameterGroupAction, this))
@@ -130,14 +127,9 @@ bool DeleteDBParameterGroupRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteDBParameterGroupResponse object.
+ * Returns a DeleteDBParameterGroupResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteDBParameterGroupResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RDSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteDBParameterGroupRequest::response(QNetworkReply * const reply) const
 {
@@ -145,20 +137,17 @@ QtAws::Core::AwsAbstractResponse * DeleteDBParameterGroupRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::RDS::DeleteDBParameterGroupRequestPrivate
+ * \brief The DeleteDBParameterGroupRequestPrivate class provides private implementation for DeleteDBParameterGroupRequest.
+ * \internal
  *
- * @class  DeleteDBParameterGroupRequestPrivate
- *
- * @brief  Private implementation for DeleteDBParameterGroupRequest.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteDBParameterGroupRequestPrivate object.
- *
- * @param  action  RDS action being performed.
- * @param  q       Pointer to this object's public DeleteDBParameterGroupRequest instance.
+ * Constructs a DeleteDBParameterGroupRequestPrivate object for RDS \a action with,
+ * public implementation \a q.
  */
 DeleteDBParameterGroupRequestPrivate::DeleteDBParameterGroupRequestPrivate(
     const RDSRequest::Action action, DeleteDBParameterGroupRequest * const q)
@@ -168,15 +157,10 @@ DeleteDBParameterGroupRequestPrivate::DeleteDBParameterGroupRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteDBParameterGroupRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteDBParameterGroupRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteDBParameterGroupRequest instance.
  */
 DeleteDBParameterGroupRequestPrivate::DeleteDBParameterGroupRequestPrivate(
     const DeleteDBParameterGroupRequestPrivate &other, DeleteDBParameterGroupRequest * const q)

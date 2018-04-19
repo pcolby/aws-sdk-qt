@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::ReplaceRouteRequest
- *
  * \brief The ReplaceRouteRequest class provides an interface for EC2 ReplaceRoute requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new ReplaceRouteRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ReplaceRouteRequest::ReplaceRouteRequest(const ReplaceRouteRequest &other)
     : EC2Request(new ReplaceRouteRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ ReplaceRouteRequest::ReplaceRouteRequest(const ReplaceRouteRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ReplaceRouteRequest object.
+ * Constructs a ReplaceRouteRequest object.
  */
 ReplaceRouteRequest::ReplaceRouteRequest()
     : EC2Request(new ReplaceRouteRequestPrivate(EC2Request::ReplaceRouteAction, this))
@@ -70,14 +67,9 @@ bool ReplaceRouteRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ReplaceRouteResponse object.
+ * Returns a ReplaceRouteResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ReplaceRouteResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ReplaceRouteRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * ReplaceRouteRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::ReplaceRouteRequestPrivate
+ * \brief The ReplaceRouteRequestPrivate class provides private implementation for ReplaceRouteRequest.
+ * \internal
  *
- * @class  ReplaceRouteRequestPrivate
- *
- * @brief  Private implementation for ReplaceRouteRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ReplaceRouteRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public ReplaceRouteRequest instance.
+ * Constructs a ReplaceRouteRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 ReplaceRouteRequestPrivate::ReplaceRouteRequestPrivate(
     const EC2Request::Action action, ReplaceRouteRequest * const q)
@@ -108,15 +97,10 @@ ReplaceRouteRequestPrivate::ReplaceRouteRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ReplaceRouteRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ReplaceRouteRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ReplaceRouteRequest instance.
  */
 ReplaceRouteRequestPrivate::ReplaceRouteRequestPrivate(
     const ReplaceRouteRequestPrivate &other, ReplaceRouteRequest * const q)

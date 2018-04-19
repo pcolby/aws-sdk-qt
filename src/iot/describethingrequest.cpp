@@ -27,10 +27,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::DescribeThingRequest
- *
  * \brief The DescribeThingRequest class provides an interface for IoT DescribeThing requests.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -48,9 +47,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new DescribeThingRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeThingRequest::DescribeThingRequest(const DescribeThingRequest &other)
     : IoTRequest(new DescribeThingRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ DescribeThingRequest::DescribeThingRequest(const DescribeThingRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DescribeThingRequest object.
+ * Constructs a DescribeThingRequest object.
  */
 DescribeThingRequest::DescribeThingRequest()
     : IoTRequest(new DescribeThingRequestPrivate(IoTRequest::DescribeThingAction, this))
@@ -77,14 +74,9 @@ bool DescribeThingRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeThingResponse object.
+ * Returns a DescribeThingResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeThingResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IoTClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeThingRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * DescribeThingRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::IoT::DescribeThingRequestPrivate
+ * \brief The DescribeThingRequestPrivate class provides private implementation for DescribeThingRequest.
+ * \internal
  *
- * @class  DescribeThingRequestPrivate
- *
- * @brief  Private implementation for DescribeThingRequest.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeThingRequestPrivate object.
- *
- * @param  action  IoT action being performed.
- * @param  q       Pointer to this object's public DescribeThingRequest instance.
+ * Constructs a DescribeThingRequestPrivate object for IoT \a action with,
+ * public implementation \a q.
  */
 DescribeThingRequestPrivate::DescribeThingRequestPrivate(
     const IoTRequest::Action action, DescribeThingRequest * const q)
@@ -115,15 +104,10 @@ DescribeThingRequestPrivate::DescribeThingRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeThingRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeThingRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeThingRequest instance.
  */
 DescribeThingRequestPrivate::DescribeThingRequestPrivate(
     const DescribeThingRequestPrivate &other, DescribeThingRequest * const q)

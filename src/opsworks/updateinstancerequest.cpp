@@ -27,10 +27,9 @@ namespace OpsWorks {
 
 /*!
  * \class QtAws::OpsWorks::UpdateInstanceRequest
- *
  * \brief The UpdateInstanceRequest class provides an interface for OpsWorks UpdateInstance requests.
  *
- * \ingroup OpsWorks
+ * \inmodule QtAwsOpsWorks
  *
  *  <fullname>AWS OpsWorks</fullname>
  * 
@@ -143,9 +142,7 @@ namespace OpsWorks {
  */
 
 /*!
- * @brief  Constructs a new UpdateInstanceRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateInstanceRequest::UpdateInstanceRequest(const UpdateInstanceRequest &other)
     : OpsWorksRequest(new UpdateInstanceRequestPrivate(*other.d_func(), this))
@@ -154,7 +151,7 @@ UpdateInstanceRequest::UpdateInstanceRequest(const UpdateInstanceRequest &other)
 }
 
 /*!
- * @brief  Constructs a new UpdateInstanceRequest object.
+ * Constructs a UpdateInstanceRequest object.
  */
 UpdateInstanceRequest::UpdateInstanceRequest()
     : OpsWorksRequest(new UpdateInstanceRequestPrivate(OpsWorksRequest::UpdateInstanceAction, this))
@@ -172,14 +169,9 @@ bool UpdateInstanceRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateInstanceResponse object.
+ * Returns a UpdateInstanceResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateInstanceResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  OpsWorksClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateInstanceRequest::response(QNetworkReply * const reply) const
 {
@@ -187,20 +179,17 @@ QtAws::Core::AwsAbstractResponse * UpdateInstanceRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::OpsWorks::UpdateInstanceRequestPrivate
+ * \brief The UpdateInstanceRequestPrivate class provides private implementation for UpdateInstanceRequest.
+ * \internal
  *
- * @class  UpdateInstanceRequestPrivate
- *
- * @brief  Private implementation for UpdateInstanceRequest.
+ * \inmodule QtAwsOpsWorks
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateInstanceRequestPrivate object.
- *
- * @param  action  OpsWorks action being performed.
- * @param  q       Pointer to this object's public UpdateInstanceRequest instance.
+ * Constructs a UpdateInstanceRequestPrivate object for OpsWorks \a action with,
+ * public implementation \a q.
  */
 UpdateInstanceRequestPrivate::UpdateInstanceRequestPrivate(
     const OpsWorksRequest::Action action, UpdateInstanceRequest * const q)
@@ -210,15 +199,10 @@ UpdateInstanceRequestPrivate::UpdateInstanceRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateInstanceRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateInstanceRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateInstanceRequest instance.
  */
 UpdateInstanceRequestPrivate::UpdateInstanceRequestPrivate(
     const UpdateInstanceRequestPrivate &other, UpdateInstanceRequest * const q)

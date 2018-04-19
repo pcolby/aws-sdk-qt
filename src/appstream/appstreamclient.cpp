@@ -94,6 +94,9 @@
 /*!
  * \namespace QtAws::AppStream
  * \brief The QtAws::AppStream contains stuff...
+ *
+ * \inmodule QtAwsAppStream
+ *
  * @todo Move this to a separate template file.
  */
 
@@ -146,7 +149,7 @@ AppStreamClient::AppStreamClient(
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * \a  AwsEndpoint::getEndpoint()
+ * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
 AppStreamClient::AppStreamClient(
     const QUrl &endpoint,

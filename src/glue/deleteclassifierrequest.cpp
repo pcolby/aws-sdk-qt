@@ -27,10 +27,9 @@ namespace Glue {
 
 /*!
  * \class QtAws::Glue::DeleteClassifierRequest
- *
  * \brief The DeleteClassifierRequest class provides an interface for Glue DeleteClassifier requests.
  *
- * \ingroup Glue
+ * \inmodule QtAwsGlue
  *
  *  <fullname>AWS Glue</fullname>
  * 
@@ -40,9 +39,7 @@ namespace Glue {
  */
 
 /*!
- * @brief  Constructs a new DeleteClassifierRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteClassifierRequest::DeleteClassifierRequest(const DeleteClassifierRequest &other)
     : GlueRequest(new DeleteClassifierRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ DeleteClassifierRequest::DeleteClassifierRequest(const DeleteClassifierRequest &
 }
 
 /*!
- * @brief  Constructs a new DeleteClassifierRequest object.
+ * Constructs a DeleteClassifierRequest object.
  */
 DeleteClassifierRequest::DeleteClassifierRequest()
     : GlueRequest(new DeleteClassifierRequestPrivate(GlueRequest::DeleteClassifierAction, this))
@@ -69,14 +66,9 @@ bool DeleteClassifierRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteClassifierResponse object.
+ * Returns a DeleteClassifierResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteClassifierResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GlueClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteClassifierRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * DeleteClassifierRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::Glue::DeleteClassifierRequestPrivate
+ * \brief The DeleteClassifierRequestPrivate class provides private implementation for DeleteClassifierRequest.
+ * \internal
  *
- * @class  DeleteClassifierRequestPrivate
- *
- * @brief  Private implementation for DeleteClassifierRequest.
+ * \inmodule QtAwsGlue
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteClassifierRequestPrivate object.
- *
- * @param  action  Glue action being performed.
- * @param  q       Pointer to this object's public DeleteClassifierRequest instance.
+ * Constructs a DeleteClassifierRequestPrivate object for Glue \a action with,
+ * public implementation \a q.
  */
 DeleteClassifierRequestPrivate::DeleteClassifierRequestPrivate(
     const GlueRequest::Action action, DeleteClassifierRequest * const q)
@@ -107,15 +96,10 @@ DeleteClassifierRequestPrivate::DeleteClassifierRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteClassifierRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteClassifierRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteClassifierRequest instance.
  */
 DeleteClassifierRequestPrivate::DeleteClassifierRequestPrivate(
     const DeleteClassifierRequestPrivate &other, DeleteClassifierRequest * const q)

@@ -27,10 +27,9 @@ namespace ServiceCatalog {
 
 /*!
  * \class QtAws::ServiceCatalog::DeleteConstraintRequest
- *
  * \brief The DeleteConstraintRequest class provides an interface for ServiceCatalog DeleteConstraint requests.
  *
- * \ingroup ServiceCatalog
+ * \inmodule QtAwsServiceCatalog
  *
  *  <fullname>AWS Service Catalog</fullname>
  * 
@@ -43,9 +42,7 @@ namespace ServiceCatalog {
  */
 
 /*!
- * @brief  Constructs a new DeleteConstraintRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteConstraintRequest::DeleteConstraintRequest(const DeleteConstraintRequest &other)
     : ServiceCatalogRequest(new DeleteConstraintRequestPrivate(*other.d_func(), this))
@@ -54,7 +51,7 @@ DeleteConstraintRequest::DeleteConstraintRequest(const DeleteConstraintRequest &
 }
 
 /*!
- * @brief  Constructs a new DeleteConstraintRequest object.
+ * Constructs a DeleteConstraintRequest object.
  */
 DeleteConstraintRequest::DeleteConstraintRequest()
     : ServiceCatalogRequest(new DeleteConstraintRequestPrivate(ServiceCatalogRequest::DeleteConstraintAction, this))
@@ -72,14 +69,9 @@ bool DeleteConstraintRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteConstraintResponse object.
+ * Returns a DeleteConstraintResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteConstraintResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ServiceCatalogClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteConstraintRequest::response(QNetworkReply * const reply) const
 {
@@ -87,20 +79,17 @@ QtAws::Core::AwsAbstractResponse * DeleteConstraintRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::ServiceCatalog::DeleteConstraintRequestPrivate
+ * \brief The DeleteConstraintRequestPrivate class provides private implementation for DeleteConstraintRequest.
+ * \internal
  *
- * @class  DeleteConstraintRequestPrivate
- *
- * @brief  Private implementation for DeleteConstraintRequest.
+ * \inmodule QtAwsServiceCatalog
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteConstraintRequestPrivate object.
- *
- * @param  action  ServiceCatalog action being performed.
- * @param  q       Pointer to this object's public DeleteConstraintRequest instance.
+ * Constructs a DeleteConstraintRequestPrivate object for ServiceCatalog \a action with,
+ * public implementation \a q.
  */
 DeleteConstraintRequestPrivate::DeleteConstraintRequestPrivate(
     const ServiceCatalogRequest::Action action, DeleteConstraintRequest * const q)
@@ -110,15 +99,10 @@ DeleteConstraintRequestPrivate::DeleteConstraintRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteConstraintRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteConstraintRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteConstraintRequest instance.
  */
 DeleteConstraintRequestPrivate::DeleteConstraintRequestPrivate(
     const DeleteConstraintRequestPrivate &other, DeleteConstraintRequest * const q)

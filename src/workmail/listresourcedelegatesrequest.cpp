@@ -27,10 +27,9 @@ namespace WorkMail {
 
 /*!
  * \class QtAws::WorkMail::ListResourceDelegatesRequest
- *
  * \brief The ListResourceDelegatesRequest class provides an interface for WorkMail ListResourceDelegates requests.
  *
- * \ingroup WorkMail
+ * \inmodule QtAwsWorkMail
  *
  *  Amazon WorkMail is a secure, managed business email and calendaring service with support for existing desktop and mobile
  *  email clients. You can access your email, contacts, and calendars using Microsoft Outlook, your browser, or their native
@@ -70,9 +69,7 @@ namespace WorkMail {
  */
 
 /*!
- * @brief  Constructs a new ListResourceDelegatesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListResourceDelegatesRequest::ListResourceDelegatesRequest(const ListResourceDelegatesRequest &other)
     : WorkMailRequest(new ListResourceDelegatesRequestPrivate(*other.d_func(), this))
@@ -81,7 +78,7 @@ ListResourceDelegatesRequest::ListResourceDelegatesRequest(const ListResourceDel
 }
 
 /*!
- * @brief  Constructs a new ListResourceDelegatesRequest object.
+ * Constructs a ListResourceDelegatesRequest object.
  */
 ListResourceDelegatesRequest::ListResourceDelegatesRequest()
     : WorkMailRequest(new ListResourceDelegatesRequestPrivate(WorkMailRequest::ListResourceDelegatesAction, this))
@@ -99,14 +96,9 @@ bool ListResourceDelegatesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListResourceDelegatesResponse object.
+ * Returns a ListResourceDelegatesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListResourceDelegatesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WorkMailClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListResourceDelegatesRequest::response(QNetworkReply * const reply) const
 {
@@ -114,20 +106,17 @@ QtAws::Core::AwsAbstractResponse * ListResourceDelegatesRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::WorkMail::ListResourceDelegatesRequestPrivate
+ * \brief The ListResourceDelegatesRequestPrivate class provides private implementation for ListResourceDelegatesRequest.
+ * \internal
  *
- * @class  ListResourceDelegatesRequestPrivate
- *
- * @brief  Private implementation for ListResourceDelegatesRequest.
+ * \inmodule QtAwsWorkMail
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListResourceDelegatesRequestPrivate object.
- *
- * @param  action  WorkMail action being performed.
- * @param  q       Pointer to this object's public ListResourceDelegatesRequest instance.
+ * Constructs a ListResourceDelegatesRequestPrivate object for WorkMail \a action with,
+ * public implementation \a q.
  */
 ListResourceDelegatesRequestPrivate::ListResourceDelegatesRequestPrivate(
     const WorkMailRequest::Action action, ListResourceDelegatesRequest * const q)
@@ -137,15 +126,10 @@ ListResourceDelegatesRequestPrivate::ListResourceDelegatesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListResourceDelegatesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListResourceDelegatesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListResourceDelegatesRequest instance.
  */
 ListResourceDelegatesRequestPrivate::ListResourceDelegatesRequestPrivate(
     const ListResourceDelegatesRequestPrivate &other, ListResourceDelegatesRequest * const q)

@@ -27,10 +27,9 @@ namespace Inspector {
 
 /*!
  * \class QtAws::Inspector::RemoveAttributesFromFindingsRequest
- *
  * \brief The RemoveAttributesFromFindingsRequest class provides an interface for Inspector RemoveAttributesFromFindings requests.
  *
- * \ingroup Inspector
+ * \inmodule QtAwsInspector
  *
  *  <fullname>Amazon Inspector</fullname>
  * 
@@ -42,9 +41,7 @@ namespace Inspector {
  */
 
 /*!
- * @brief  Constructs a new RemoveAttributesFromFindingsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 RemoveAttributesFromFindingsRequest::RemoveAttributesFromFindingsRequest(const RemoveAttributesFromFindingsRequest &other)
     : InspectorRequest(new RemoveAttributesFromFindingsRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ RemoveAttributesFromFindingsRequest::RemoveAttributesFromFindingsRequest(const R
 }
 
 /*!
- * @brief  Constructs a new RemoveAttributesFromFindingsRequest object.
+ * Constructs a RemoveAttributesFromFindingsRequest object.
  */
 RemoveAttributesFromFindingsRequest::RemoveAttributesFromFindingsRequest()
     : InspectorRequest(new RemoveAttributesFromFindingsRequestPrivate(InspectorRequest::RemoveAttributesFromFindingsAction, this))
@@ -71,14 +68,9 @@ bool RemoveAttributesFromFindingsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an RemoveAttributesFromFindingsResponse object.
+ * Returns a RemoveAttributesFromFindingsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An RemoveAttributesFromFindingsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  InspectorClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * RemoveAttributesFromFindingsRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * RemoveAttributesFromFindingsRequest::response
 }
 
 /*!
- * @internal
+ * \class QtAws::Inspector::RemoveAttributesFromFindingsRequestPrivate
+ * \brief The RemoveAttributesFromFindingsRequestPrivate class provides private implementation for RemoveAttributesFromFindingsRequest.
+ * \internal
  *
- * @class  RemoveAttributesFromFindingsRequestPrivate
- *
- * @brief  Private implementation for RemoveAttributesFromFindingsRequest.
+ * \inmodule QtAwsInspector
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new RemoveAttributesFromFindingsRequestPrivate object.
- *
- * @param  action  Inspector action being performed.
- * @param  q       Pointer to this object's public RemoveAttributesFromFindingsRequest instance.
+ * Constructs a RemoveAttributesFromFindingsRequestPrivate object for Inspector \a action with,
+ * public implementation \a q.
  */
 RemoveAttributesFromFindingsRequestPrivate::RemoveAttributesFromFindingsRequestPrivate(
     const InspectorRequest::Action action, RemoveAttributesFromFindingsRequest * const q)
@@ -109,15 +98,10 @@ RemoveAttributesFromFindingsRequestPrivate::RemoveAttributesFromFindingsRequestP
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RemoveAttributesFromFindingsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the RemoveAttributesFromFindingsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public RemoveAttributesFromFindingsRequest instance.
  */
 RemoveAttributesFromFindingsRequestPrivate::RemoveAttributesFromFindingsRequestPrivate(
     const RemoveAttributesFromFindingsRequestPrivate &other, RemoveAttributesFromFindingsRequest * const q)

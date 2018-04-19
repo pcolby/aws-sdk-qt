@@ -27,10 +27,9 @@ namespace Lambda {
 
 /*!
  * \class QtAws::Lambda::ListFunctionsRequest
- *
  * \brief The ListFunctionsRequest class provides an interface for Lambda ListFunctions requests.
  *
- * \ingroup Lambda
+ * \inmodule QtAwsLambda
  *
  *  <fullname>AWS Lambda</fullname>
  * 
@@ -48,9 +47,7 @@ namespace Lambda {
  */
 
 /*!
- * @brief  Constructs a new ListFunctionsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListFunctionsRequest::ListFunctionsRequest(const ListFunctionsRequest &other)
     : LambdaRequest(new ListFunctionsRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ ListFunctionsRequest::ListFunctionsRequest(const ListFunctionsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ListFunctionsRequest object.
+ * Constructs a ListFunctionsRequest object.
  */
 ListFunctionsRequest::ListFunctionsRequest()
     : LambdaRequest(new ListFunctionsRequestPrivate(LambdaRequest::ListFunctionsAction, this))
@@ -77,14 +74,9 @@ bool ListFunctionsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListFunctionsResponse object.
+ * Returns a ListFunctionsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListFunctionsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  LambdaClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListFunctionsRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * ListFunctionsRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::Lambda::ListFunctionsRequestPrivate
+ * \brief The ListFunctionsRequestPrivate class provides private implementation for ListFunctionsRequest.
+ * \internal
  *
- * @class  ListFunctionsRequestPrivate
- *
- * @brief  Private implementation for ListFunctionsRequest.
+ * \inmodule QtAwsLambda
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListFunctionsRequestPrivate object.
- *
- * @param  action  Lambda action being performed.
- * @param  q       Pointer to this object's public ListFunctionsRequest instance.
+ * Constructs a ListFunctionsRequestPrivate object for Lambda \a action with,
+ * public implementation \a q.
  */
 ListFunctionsRequestPrivate::ListFunctionsRequestPrivate(
     const LambdaRequest::Action action, ListFunctionsRequest * const q)
@@ -115,15 +104,10 @@ ListFunctionsRequestPrivate::ListFunctionsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListFunctionsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListFunctionsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListFunctionsRequest instance.
  */
 ListFunctionsRequestPrivate::ListFunctionsRequestPrivate(
     const ListFunctionsRequestPrivate &other, ListFunctionsRequest * const q)

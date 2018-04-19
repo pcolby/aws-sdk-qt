@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::CreateNatGatewayRequest
- *
  * \brief The CreateNatGatewayRequest class provides an interface for EC2 CreateNatGateway requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new CreateNatGatewayRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateNatGatewayRequest::CreateNatGatewayRequest(const CreateNatGatewayRequest &other)
     : EC2Request(new CreateNatGatewayRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ CreateNatGatewayRequest::CreateNatGatewayRequest(const CreateNatGatewayRequest &
 }
 
 /*!
- * @brief  Constructs a new CreateNatGatewayRequest object.
+ * Constructs a CreateNatGatewayRequest object.
  */
 CreateNatGatewayRequest::CreateNatGatewayRequest()
     : EC2Request(new CreateNatGatewayRequestPrivate(EC2Request::CreateNatGatewayAction, this))
@@ -70,14 +67,9 @@ bool CreateNatGatewayRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateNatGatewayResponse object.
+ * Returns a CreateNatGatewayResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateNatGatewayResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateNatGatewayRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * CreateNatGatewayRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::CreateNatGatewayRequestPrivate
+ * \brief The CreateNatGatewayRequestPrivate class provides private implementation for CreateNatGatewayRequest.
+ * \internal
  *
- * @class  CreateNatGatewayRequestPrivate
- *
- * @brief  Private implementation for CreateNatGatewayRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateNatGatewayRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public CreateNatGatewayRequest instance.
+ * Constructs a CreateNatGatewayRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 CreateNatGatewayRequestPrivate::CreateNatGatewayRequestPrivate(
     const EC2Request::Action action, CreateNatGatewayRequest * const q)
@@ -108,15 +97,10 @@ CreateNatGatewayRequestPrivate::CreateNatGatewayRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateNatGatewayRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateNatGatewayRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateNatGatewayRequest instance.
  */
 CreateNatGatewayRequestPrivate::CreateNatGatewayRequestPrivate(
     const CreateNatGatewayRequestPrivate &other, CreateNatGatewayRequest * const q)

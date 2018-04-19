@@ -27,10 +27,9 @@ namespace AutoScaling {
 
 /*!
  * \class QtAws::AutoScaling::DeleteLaunchConfigurationRequest
- *
  * \brief The DeleteLaunchConfigurationRequest class provides an interface for AutoScaling DeleteLaunchConfiguration requests.
  *
- * \ingroup AutoScaling
+ * \inmodule QtAwsAutoScaling
  *
  *  <fullname>Amazon EC2 Auto Scaling</fullname>
  * 
@@ -42,9 +41,7 @@ namespace AutoScaling {
  */
 
 /*!
- * @brief  Constructs a new DeleteLaunchConfigurationRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteLaunchConfigurationRequest::DeleteLaunchConfigurationRequest(const DeleteLaunchConfigurationRequest &other)
     : AutoScalingRequest(new DeleteLaunchConfigurationRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ DeleteLaunchConfigurationRequest::DeleteLaunchConfigurationRequest(const DeleteL
 }
 
 /*!
- * @brief  Constructs a new DeleteLaunchConfigurationRequest object.
+ * Constructs a DeleteLaunchConfigurationRequest object.
  */
 DeleteLaunchConfigurationRequest::DeleteLaunchConfigurationRequest()
     : AutoScalingRequest(new DeleteLaunchConfigurationRequestPrivate(AutoScalingRequest::DeleteLaunchConfigurationAction, this))
@@ -71,14 +68,9 @@ bool DeleteLaunchConfigurationRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteLaunchConfigurationResponse object.
+ * Returns a DeleteLaunchConfigurationResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteLaunchConfigurationResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AutoScalingClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteLaunchConfigurationRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * DeleteLaunchConfigurationRequest::response(QN
 }
 
 /*!
- * @internal
+ * \class QtAws::AutoScaling::DeleteLaunchConfigurationRequestPrivate
+ * \brief The DeleteLaunchConfigurationRequestPrivate class provides private implementation for DeleteLaunchConfigurationRequest.
+ * \internal
  *
- * @class  DeleteLaunchConfigurationRequestPrivate
- *
- * @brief  Private implementation for DeleteLaunchConfigurationRequest.
+ * \inmodule QtAwsAutoScaling
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteLaunchConfigurationRequestPrivate object.
- *
- * @param  action  AutoScaling action being performed.
- * @param  q       Pointer to this object's public DeleteLaunchConfigurationRequest instance.
+ * Constructs a DeleteLaunchConfigurationRequestPrivate object for AutoScaling \a action with,
+ * public implementation \a q.
  */
 DeleteLaunchConfigurationRequestPrivate::DeleteLaunchConfigurationRequestPrivate(
     const AutoScalingRequest::Action action, DeleteLaunchConfigurationRequest * const q)
@@ -109,15 +98,10 @@ DeleteLaunchConfigurationRequestPrivate::DeleteLaunchConfigurationRequestPrivate
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteLaunchConfigurationRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteLaunchConfigurationRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteLaunchConfigurationRequest instance.
  */
 DeleteLaunchConfigurationRequestPrivate::DeleteLaunchConfigurationRequestPrivate(
     const DeleteLaunchConfigurationRequestPrivate &other, DeleteLaunchConfigurationRequest * const q)

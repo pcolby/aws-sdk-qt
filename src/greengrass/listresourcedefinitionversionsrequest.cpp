@@ -27,10 +27,9 @@ namespace Greengrass {
 
 /*!
  * \class QtAws::Greengrass::ListResourceDefinitionVersionsRequest
- *
  * \brief The ListResourceDefinitionVersionsRequest class provides an interface for Greengrass ListResourceDefinitionVersions requests.
  *
- * \ingroup Greengrass
+ * \inmodule QtAwsGreengrass
  *
  *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
  *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
@@ -40,9 +39,7 @@ namespace Greengrass {
  */
 
 /*!
- * @brief  Constructs a new ListResourceDefinitionVersionsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListResourceDefinitionVersionsRequest::ListResourceDefinitionVersionsRequest(const ListResourceDefinitionVersionsRequest &other)
     : GreengrassRequest(new ListResourceDefinitionVersionsRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ ListResourceDefinitionVersionsRequest::ListResourceDefinitionVersionsRequest(con
 }
 
 /*!
- * @brief  Constructs a new ListResourceDefinitionVersionsRequest object.
+ * Constructs a ListResourceDefinitionVersionsRequest object.
  */
 ListResourceDefinitionVersionsRequest::ListResourceDefinitionVersionsRequest()
     : GreengrassRequest(new ListResourceDefinitionVersionsRequestPrivate(GreengrassRequest::ListResourceDefinitionVersionsAction, this))
@@ -69,14 +66,9 @@ bool ListResourceDefinitionVersionsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListResourceDefinitionVersionsResponse object.
+ * Returns a ListResourceDefinitionVersionsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListResourceDefinitionVersionsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GreengrassClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListResourceDefinitionVersionsRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * ListResourceDefinitionVersionsRequest::respon
 }
 
 /*!
- * @internal
+ * \class QtAws::Greengrass::ListResourceDefinitionVersionsRequestPrivate
+ * \brief The ListResourceDefinitionVersionsRequestPrivate class provides private implementation for ListResourceDefinitionVersionsRequest.
+ * \internal
  *
- * @class  ListResourceDefinitionVersionsRequestPrivate
- *
- * @brief  Private implementation for ListResourceDefinitionVersionsRequest.
+ * \inmodule QtAwsGreengrass
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListResourceDefinitionVersionsRequestPrivate object.
- *
- * @param  action  Greengrass action being performed.
- * @param  q       Pointer to this object's public ListResourceDefinitionVersionsRequest instance.
+ * Constructs a ListResourceDefinitionVersionsRequestPrivate object for Greengrass \a action with,
+ * public implementation \a q.
  */
 ListResourceDefinitionVersionsRequestPrivate::ListResourceDefinitionVersionsRequestPrivate(
     const GreengrassRequest::Action action, ListResourceDefinitionVersionsRequest * const q)
@@ -107,15 +96,10 @@ ListResourceDefinitionVersionsRequestPrivate::ListResourceDefinitionVersionsRequ
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListResourceDefinitionVersionsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListResourceDefinitionVersionsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListResourceDefinitionVersionsRequest instance.
  */
 ListResourceDefinitionVersionsRequestPrivate::ListResourceDefinitionVersionsRequestPrivate(
     const ListResourceDefinitionVersionsRequestPrivate &other, ListResourceDefinitionVersionsRequest * const q)

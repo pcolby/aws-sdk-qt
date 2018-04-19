@@ -27,10 +27,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::DescribeValidDBInstanceModificationsRequest
- *
  * \brief The DescribeValidDBInstanceModificationsRequest class provides an interface for RDS DescribeValidDBInstanceModifications requests.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -101,9 +100,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new DescribeValidDBInstanceModificationsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeValidDBInstanceModificationsRequest::DescribeValidDBInstanceModificationsRequest(const DescribeValidDBInstanceModificationsRequest &other)
     : RDSRequest(new DescribeValidDBInstanceModificationsRequestPrivate(*other.d_func(), this))
@@ -112,7 +109,7 @@ DescribeValidDBInstanceModificationsRequest::DescribeValidDBInstanceModification
 }
 
 /*!
- * @brief  Constructs a new DescribeValidDBInstanceModificationsRequest object.
+ * Constructs a DescribeValidDBInstanceModificationsRequest object.
  */
 DescribeValidDBInstanceModificationsRequest::DescribeValidDBInstanceModificationsRequest()
     : RDSRequest(new DescribeValidDBInstanceModificationsRequestPrivate(RDSRequest::DescribeValidDBInstanceModificationsAction, this))
@@ -130,14 +127,9 @@ bool DescribeValidDBInstanceModificationsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeValidDBInstanceModificationsResponse object.
+ * Returns a DescribeValidDBInstanceModificationsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeValidDBInstanceModificationsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RDSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeValidDBInstanceModificationsRequest::response(QNetworkReply * const reply) const
 {
@@ -145,20 +137,17 @@ QtAws::Core::AwsAbstractResponse * DescribeValidDBInstanceModificationsRequest::
 }
 
 /*!
- * @internal
+ * \class QtAws::RDS::DescribeValidDBInstanceModificationsRequestPrivate
+ * \brief The DescribeValidDBInstanceModificationsRequestPrivate class provides private implementation for DescribeValidDBInstanceModificationsRequest.
+ * \internal
  *
- * @class  DescribeValidDBInstanceModificationsRequestPrivate
- *
- * @brief  Private implementation for DescribeValidDBInstanceModificationsRequest.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeValidDBInstanceModificationsRequestPrivate object.
- *
- * @param  action  RDS action being performed.
- * @param  q       Pointer to this object's public DescribeValidDBInstanceModificationsRequest instance.
+ * Constructs a DescribeValidDBInstanceModificationsRequestPrivate object for RDS \a action with,
+ * public implementation \a q.
  */
 DescribeValidDBInstanceModificationsRequestPrivate::DescribeValidDBInstanceModificationsRequestPrivate(
     const RDSRequest::Action action, DescribeValidDBInstanceModificationsRequest * const q)
@@ -168,15 +157,10 @@ DescribeValidDBInstanceModificationsRequestPrivate::DescribeValidDBInstanceModif
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeValidDBInstanceModificationsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeValidDBInstanceModificationsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeValidDBInstanceModificationsRequest instance.
  */
 DescribeValidDBInstanceModificationsRequestPrivate::DescribeValidDBInstanceModificationsRequestPrivate(
     const DescribeValidDBInstanceModificationsRequestPrivate &other, DescribeValidDBInstanceModificationsRequest * const q)

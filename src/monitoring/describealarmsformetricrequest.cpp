@@ -27,10 +27,9 @@ namespace CloudWatch {
 
 /*!
  * \class QtAws::CloudWatch::DescribeAlarmsForMetricRequest
- *
  * \brief The DescribeAlarmsForMetricRequest class provides an interface for CloudWatch DescribeAlarmsForMetric requests.
  *
- * \ingroup CloudWatch
+ * \inmodule QtAwsCloudWatch
  *
  *  Amazon CloudWatch monitors your Amazon Web Services (AWS) resources and the applications you run on AWS in real time.
  *  You can use CloudWatch to collect and track metrics, which are the variables you want to measure for your resources and
@@ -51,9 +50,7 @@ namespace CloudWatch {
  */
 
 /*!
- * @brief  Constructs a new DescribeAlarmsForMetricRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeAlarmsForMetricRequest::DescribeAlarmsForMetricRequest(const DescribeAlarmsForMetricRequest &other)
     : CloudWatchRequest(new DescribeAlarmsForMetricRequestPrivate(*other.d_func(), this))
@@ -62,7 +59,7 @@ DescribeAlarmsForMetricRequest::DescribeAlarmsForMetricRequest(const DescribeAla
 }
 
 /*!
- * @brief  Constructs a new DescribeAlarmsForMetricRequest object.
+ * Constructs a DescribeAlarmsForMetricRequest object.
  */
 DescribeAlarmsForMetricRequest::DescribeAlarmsForMetricRequest()
     : CloudWatchRequest(new DescribeAlarmsForMetricRequestPrivate(CloudWatchRequest::DescribeAlarmsForMetricAction, this))
@@ -80,14 +77,9 @@ bool DescribeAlarmsForMetricRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeAlarmsForMetricResponse object.
+ * Returns a DescribeAlarmsForMetricResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeAlarmsForMetricResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudWatchClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeAlarmsForMetricRequest::response(QNetworkReply * const reply) const
 {
@@ -95,20 +87,17 @@ QtAws::Core::AwsAbstractResponse * DescribeAlarmsForMetricRequest::response(QNet
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudWatch::DescribeAlarmsForMetricRequestPrivate
+ * \brief The DescribeAlarmsForMetricRequestPrivate class provides private implementation for DescribeAlarmsForMetricRequest.
+ * \internal
  *
- * @class  DescribeAlarmsForMetricRequestPrivate
- *
- * @brief  Private implementation for DescribeAlarmsForMetricRequest.
+ * \inmodule QtAwsCloudWatch
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeAlarmsForMetricRequestPrivate object.
- *
- * @param  action  CloudWatch action being performed.
- * @param  q       Pointer to this object's public DescribeAlarmsForMetricRequest instance.
+ * Constructs a DescribeAlarmsForMetricRequestPrivate object for CloudWatch \a action with,
+ * public implementation \a q.
  */
 DescribeAlarmsForMetricRequestPrivate::DescribeAlarmsForMetricRequestPrivate(
     const CloudWatchRequest::Action action, DescribeAlarmsForMetricRequest * const q)
@@ -118,15 +107,10 @@ DescribeAlarmsForMetricRequestPrivate::DescribeAlarmsForMetricRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeAlarmsForMetricRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeAlarmsForMetricRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeAlarmsForMetricRequest instance.
  */
 DescribeAlarmsForMetricRequestPrivate::DescribeAlarmsForMetricRequestPrivate(
     const DescribeAlarmsForMetricRequestPrivate &other, DescribeAlarmsForMetricRequest * const q)

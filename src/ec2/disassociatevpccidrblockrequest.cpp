@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DisassociateVpcCidrBlockRequest
- *
  * \brief The DisassociateVpcCidrBlockRequest class provides an interface for EC2 DisassociateVpcCidrBlock requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DisassociateVpcCidrBlockRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DisassociateVpcCidrBlockRequest::DisassociateVpcCidrBlockRequest(const DisassociateVpcCidrBlockRequest &other)
     : EC2Request(new DisassociateVpcCidrBlockRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ DisassociateVpcCidrBlockRequest::DisassociateVpcCidrBlockRequest(const Disassoci
 }
 
 /*!
- * @brief  Constructs a new DisassociateVpcCidrBlockRequest object.
+ * Constructs a DisassociateVpcCidrBlockRequest object.
  */
 DisassociateVpcCidrBlockRequest::DisassociateVpcCidrBlockRequest()
     : EC2Request(new DisassociateVpcCidrBlockRequestPrivate(EC2Request::DisassociateVpcCidrBlockAction, this))
@@ -70,14 +67,9 @@ bool DisassociateVpcCidrBlockRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DisassociateVpcCidrBlockResponse object.
+ * Returns a DisassociateVpcCidrBlockResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DisassociateVpcCidrBlockResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DisassociateVpcCidrBlockRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * DisassociateVpcCidrBlockRequest::response(QNe
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::DisassociateVpcCidrBlockRequestPrivate
+ * \brief The DisassociateVpcCidrBlockRequestPrivate class provides private implementation for DisassociateVpcCidrBlockRequest.
+ * \internal
  *
- * @class  DisassociateVpcCidrBlockRequestPrivate
- *
- * @brief  Private implementation for DisassociateVpcCidrBlockRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DisassociateVpcCidrBlockRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public DisassociateVpcCidrBlockRequest instance.
+ * Constructs a DisassociateVpcCidrBlockRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 DisassociateVpcCidrBlockRequestPrivate::DisassociateVpcCidrBlockRequestPrivate(
     const EC2Request::Action action, DisassociateVpcCidrBlockRequest * const q)
@@ -108,15 +97,10 @@ DisassociateVpcCidrBlockRequestPrivate::DisassociateVpcCidrBlockRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DisassociateVpcCidrBlockRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DisassociateVpcCidrBlockRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DisassociateVpcCidrBlockRequest instance.
  */
 DisassociateVpcCidrBlockRequestPrivate::DisassociateVpcCidrBlockRequestPrivate(
     const DisassociateVpcCidrBlockRequestPrivate &other, DisassociateVpcCidrBlockRequest * const q)

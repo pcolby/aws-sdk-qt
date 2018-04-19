@@ -27,10 +27,9 @@ namespace CloudDirectory {
 
 /*!
  * \class QtAws::CloudDirectory::ListObjectParentsRequest
- *
  * \brief The ListObjectParentsRequest class provides an interface for CloudDirectory ListObjectParents requests.
  *
- * \ingroup CloudDirectory
+ * \inmodule QtAwsCloudDirectory
  *
  *  <fullname>Amazon Cloud Directory</fullname>
  * 
@@ -44,9 +43,7 @@ namespace CloudDirectory {
  */
 
 /*!
- * @brief  Constructs a new ListObjectParentsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListObjectParentsRequest::ListObjectParentsRequest(const ListObjectParentsRequest &other)
     : CloudDirectoryRequest(new ListObjectParentsRequestPrivate(*other.d_func(), this))
@@ -55,7 +52,7 @@ ListObjectParentsRequest::ListObjectParentsRequest(const ListObjectParentsReques
 }
 
 /*!
- * @brief  Constructs a new ListObjectParentsRequest object.
+ * Constructs a ListObjectParentsRequest object.
  */
 ListObjectParentsRequest::ListObjectParentsRequest()
     : CloudDirectoryRequest(new ListObjectParentsRequestPrivate(CloudDirectoryRequest::ListObjectParentsAction, this))
@@ -73,14 +70,9 @@ bool ListObjectParentsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListObjectParentsResponse object.
+ * Returns a ListObjectParentsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListObjectParentsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudDirectoryClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListObjectParentsRequest::response(QNetworkReply * const reply) const
 {
@@ -88,20 +80,17 @@ QtAws::Core::AwsAbstractResponse * ListObjectParentsRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudDirectory::ListObjectParentsRequestPrivate
+ * \brief The ListObjectParentsRequestPrivate class provides private implementation for ListObjectParentsRequest.
+ * \internal
  *
- * @class  ListObjectParentsRequestPrivate
- *
- * @brief  Private implementation for ListObjectParentsRequest.
+ * \inmodule QtAwsCloudDirectory
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListObjectParentsRequestPrivate object.
- *
- * @param  action  CloudDirectory action being performed.
- * @param  q       Pointer to this object's public ListObjectParentsRequest instance.
+ * Constructs a ListObjectParentsRequestPrivate object for CloudDirectory \a action with,
+ * public implementation \a q.
  */
 ListObjectParentsRequestPrivate::ListObjectParentsRequestPrivate(
     const CloudDirectoryRequest::Action action, ListObjectParentsRequest * const q)
@@ -111,15 +100,10 @@ ListObjectParentsRequestPrivate::ListObjectParentsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListObjectParentsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListObjectParentsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListObjectParentsRequest instance.
  */
 ListObjectParentsRequestPrivate::ListObjectParentsRequestPrivate(
     const ListObjectParentsRequestPrivate &other, ListObjectParentsRequest * const q)

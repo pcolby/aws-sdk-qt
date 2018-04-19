@@ -25,16 +25,41 @@ namespace CloudHSM {
 
 /*!
  * \class QtAws::CloudHSM::CloudHSMRequest
- *
  * \brief The CloudHSMRequest class provides an interface for CloudHSM requests.
  *
- * \ingroup CloudHSM
+ * \inmodule QtAwsCloudHSM
  */
 
 /*!
- * @brief  Constructs a new CloudHSMRequest object.
+ * \enum CloudHSMRequest::Action
  *
- * @param  action  The CloudHSM action to request.
+ * This enum describes the actions that can be performed as CloudHSM
+ * requests.
+ *
+ * \value AddTagsToResourceAction CloudHSM AddTagsToResource action.
+ * \value CreateHapgAction CloudHSM CreateHapg action.
+ * \value CreateHsmAction CloudHSM CreateHsm action.
+ * \value CreateLunaClientAction CloudHSM CreateLunaClient action.
+ * \value DeleteHapgAction CloudHSM DeleteHapg action.
+ * \value DeleteHsmAction CloudHSM DeleteHsm action.
+ * \value DeleteLunaClientAction CloudHSM DeleteLunaClient action.
+ * \value DescribeHapgAction CloudHSM DescribeHapg action.
+ * \value DescribeHsmAction CloudHSM DescribeHsm action.
+ * \value DescribeLunaClientAction CloudHSM DescribeLunaClient action.
+ * \value GetConfigAction CloudHSM GetConfig action.
+ * \value ListAvailableZonesAction CloudHSM ListAvailableZones action.
+ * \value ListHapgsAction CloudHSM ListHapgs action.
+ * \value ListHsmsAction CloudHSM ListHsms action.
+ * \value ListLunaClientsAction CloudHSM ListLunaClients action.
+ * \value ListTagsForResourceAction CloudHSM ListTagsForResource action.
+ * \value ModifyHapgAction CloudHSM ModifyHapg action.
+ * \value ModifyHsmAction CloudHSM ModifyHsm action.
+ * \value ModifyLunaClientAction CloudHSM ModifyLunaClient action.
+ * \value RemoveTagsFromResourceAction CloudHSM RemoveTagsFromResource action.
+ */
+
+/*!
+ * Constructs a[n] CloudHSMRequest object for CloudHSM \a action.
  */
 CloudHSMRequest::CloudHSMRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new CloudHSMRequestPrivate(action, this))
@@ -43,9 +68,7 @@ CloudHSMRequest::CloudHSMRequest(const Action action)
 }
 
 /*!
- * @brief  Constructs a new CloudHSMRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CloudHSMRequest::CloudHSMRequest(const CloudHSMRequest &other)
     : QtAws::Core::AwsAbstractRequest(new CloudHSMRequestPrivate(*other.d_func(), this))
@@ -54,13 +77,7 @@ CloudHSMRequest::CloudHSMRequest(const CloudHSMRequest &other)
 }
 
 /*!
- * @brief  Assignment operator.
- *
- * Assigns \a other to \c this.
- *
- * @param  other  Instance to copy.
- *
- * @return  A reference to \c this.
+ * Sets the CloudHSMRequest object to be equal to \a other.
  */
 CloudHSMRequest& CloudHSMRequest::operator=(const CloudHSMRequest &other)
 {
@@ -72,14 +89,10 @@ CloudHSMRequest& CloudHSMRequest::operator=(const CloudHSMRequest &other)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CloudHSMRequest object.
+ * Constructs aa CloudHSMRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from CloudHSMRequestPrivate.
- *
- * @param  d  Pointer to private data (aka D-Pointer).
  */
 CloudHSMRequest::CloudHSMRequest(CloudHSMRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
@@ -87,7 +100,7 @@ CloudHSMRequest::CloudHSMRequest(CloudHSMRequestPrivate * const d) : QtAws::Core
 }
 
 /*!
- * \brief Returns the CloudHSM action to be performed by this request.
+ * Returns the CloudHSM action to be performed by this request.
  */
 CloudHSMRequest::Action CloudHSMRequest::action() const
 {
@@ -96,7 +109,7 @@ CloudHSMRequest::Action CloudHSMRequest::action() const
 }
 
 /*!
- * \brief Returns the name of the CloudHSM action to be performed by this request.
+ * Returns the name of the CloudHSM action to be performed by this request.
  */
 QString CloudHSMRequest::actionString() const
 {
@@ -104,7 +117,7 @@ QString CloudHSMRequest::actionString() const
 }
 
 /*!
- * \brief Returns the CloudHSM API version implemented by this request.
+ * Returns the CloudHSM API version implemented by this request.
  */
 QString CloudHSMRequest::apiVersion() const
 {
@@ -113,7 +126,7 @@ QString CloudHSMRequest::apiVersion() const
 }
 
 /*!
- * @brief Set the CloudHSM action to be performed by this request to \a action.
+ * Sets the CloudHSM action to be performed by this request to \a action.
  */
 void CloudHSMRequest::setAction(const Action action)
 {
@@ -122,7 +135,7 @@ void CloudHSMRequest::setAction(const Action action)
 }
 
 /*!
- * Set the CloudHSM API version to include in this request to \a version.
+ * Sets the CloudHSM API version to include in this request to \a version.
  */
 void CloudHSMRequest::setApiVersion(const QString &version)
 {
@@ -131,7 +144,7 @@ void CloudHSMRequest::setApiVersion(const QString &version)
 }
 
 /*!
- * \brief Returns \c true if this request is the same as \a other.
+ * Returns \c true if this request is equal to \a other; \c false otherwise.
  *
  * Note, most derived *Request classes do not need to provider their own
  * implementations of this function, since most such request classes rely on
@@ -146,8 +159,8 @@ bool CloudHSMRequest::operator==(const CloudHSMRequest &other) const
             (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
-/*!
- * @brief  Check if \a queueName is a valid CloudHSM queue name.
+/*
+ * Returns \c tue if \a queueName is a valid CloudHSM queue name.
  *
  * @par From CloudHSM FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
@@ -166,9 +179,8 @@ bool CloudHSMRequest::operator==(const CloudHSMRequest &other) const
 }*/
 
 /*!
- * \brief Removes the a \a name parameter from this request.
- *
- * Returns the count of paramters removed (typically \c 0 or \c 1).
+ * Removes the a \a name parameter from the request, then returns the number of
+ * paramters removed (typically \c 0 or \c 1).
  */
 int CloudHSMRequest::clearParameter(const QString &name)
 {
@@ -177,7 +189,7 @@ int CloudHSMRequest::clearParameter(const QString &name)
 }
 
 /*!
- * \brief Removes all parameters from this request.
+ * Removes all parameters from the request.
  */
 void CloudHSMRequest::clearParameters()
 {
@@ -186,7 +198,7 @@ void CloudHSMRequest::clearParameters()
 }
 
 /*!
- * \brief Returns the value of the \n name pararemter if set, otherwise \a defaultValue.
+ * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
 QVariant CloudHSMRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
@@ -195,7 +207,7 @@ QVariant CloudHSMRequest::parameter(const QString &name, const QVariant &default
 }
 
 /*!
- * \brief Returns a map of parameters included in this request.
+ * Returns the parameters included in this request.
  */
 const QVariantMap &CloudHSMRequest::parameters() const
 {
@@ -204,7 +216,7 @@ const QVariantMap &CloudHSMRequest::parameters() const
 }
 
 /*!
- * \brief Sets the \a name parameter to \a value.
+ * Sets the \a name parameter to \a value.
  */
 void CloudHSMRequest::setParameter(const QString &name, const QVariant &value)
 {
@@ -213,9 +225,8 @@ void CloudHSMRequest::setParameter(const QString &name, const QVariant &value)
 }
 
 /*!
- * \brief Sets the map of paramters for this request to \a parameters.
- *
- * Any request parameters set previously will be discarded.
+ * Sets the paramters for this request to \a parameters. Any request parameters
+ * set previously will be discarded.
  */
 void CloudHSMRequest::setParameters(const QVariantMap &parameters)
 {
@@ -224,11 +235,12 @@ void CloudHSMRequest::setParameters(const QVariantMap &parameters)
 }
 
 /*!
- * \brief Returns a network request for this CloudHSM request using the given \a endpoint.
+ * Returns a network request for the CloudHSM request using the given
+ * \a endpoint.
  *
- * This CloudHSM implementation builds request URLs by combining the common query
- * parameters (such as Action and Version), with any that have been added (via
- * setParameter) by child classes.
+ * This CloudHSM implementation builds request URLs by combining the
+ * common query parameters (such as Action and Version), with any that have
+ * been added (via setParameter) by child classes.
  */
 QNetworkRequest CloudHSMRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -239,17 +251,16 @@ QNetworkRequest CloudHSMRequest::unsignedRequest(const QUrl &endpoint) const
 }
 
 /*!
+ * \class QtAws::CloudHSM::CloudHSMRequestPrivate
+ * \brief The CloudHSMRequestPrivate class provides private implementation for CloudHSMRequest.
  * \internal
  *
- * \class  CloudHSMRequestPrivate
- *
- * \brief  Private implementation for CloudHSMRequest.
+ * \inmodule QtAwsCloudHSM
  */
 
 /*!
- * \internal
- *
- * \brief Constructs a new CloudHSMRequestPrivate object.
+ * Constructs a CloudHSMRequestPrivate object for CloudHSM \a action with,
+ * public implementation \a q.
  */
 CloudHSMRequestPrivate::CloudHSMRequestPrivate(const CloudHSMRequest::Action action, CloudHSMRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
@@ -258,9 +269,7 @@ CloudHSMRequestPrivate::CloudHSMRequestPrivate(const CloudHSMRequest::Action act
 }
 
 /*!
- * \internal
- *
- * \brief Constructs a new CloudHSMRequestPrivate object, copying an existing one.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
@@ -276,15 +285,12 @@ CloudHSMRequestPrivate::CloudHSMRequestPrivate(const CloudHSMRequestPrivate &oth
 }
 
 /*!
- * \internal
- *
- * \brief Returns a string representing \a action.
+ * Returns a string represention of \a action, or a null string if \a action is
+ * invalid.
  *
  * This function converts CloudHSMRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the CloudHSM service's Action
  * query parameters.
- *
- * @return A string representing \a action, or a null string if \a action is invalid.
  */
 QString CloudHSMRequestPrivate::toString(const CloudHSMRequest::Action &action)
 {

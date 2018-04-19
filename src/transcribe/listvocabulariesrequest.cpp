@@ -27,10 +27,9 @@ namespace TranscribeService {
 
 /*!
  * \class QtAws::TranscribeService::ListVocabulariesRequest
- *
  * \brief The ListVocabulariesRequest class provides an interface for TranscribeService ListVocabularies requests.
  *
- * \ingroup TranscribeService
+ * \inmodule QtAwsTranscribeService
  *
  *  Operations and objects for transcribing speech to
  *
@@ -38,9 +37,7 @@ namespace TranscribeService {
  */
 
 /*!
- * @brief  Constructs a new ListVocabulariesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListVocabulariesRequest::ListVocabulariesRequest(const ListVocabulariesRequest &other)
     : TranscribeServiceRequest(new ListVocabulariesRequestPrivate(*other.d_func(), this))
@@ -49,7 +46,7 @@ ListVocabulariesRequest::ListVocabulariesRequest(const ListVocabulariesRequest &
 }
 
 /*!
- * @brief  Constructs a new ListVocabulariesRequest object.
+ * Constructs a ListVocabulariesRequest object.
  */
 ListVocabulariesRequest::ListVocabulariesRequest()
     : TranscribeServiceRequest(new ListVocabulariesRequestPrivate(TranscribeServiceRequest::ListVocabulariesAction, this))
@@ -67,14 +64,9 @@ bool ListVocabulariesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListVocabulariesResponse object.
+ * Returns a ListVocabulariesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListVocabulariesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  TranscribeServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListVocabulariesRequest::response(QNetworkReply * const reply) const
 {
@@ -82,20 +74,17 @@ QtAws::Core::AwsAbstractResponse * ListVocabulariesRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::TranscribeService::ListVocabulariesRequestPrivate
+ * \brief The ListVocabulariesRequestPrivate class provides private implementation for ListVocabulariesRequest.
+ * \internal
  *
- * @class  ListVocabulariesRequestPrivate
- *
- * @brief  Private implementation for ListVocabulariesRequest.
+ * \inmodule QtAwsTranscribeService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListVocabulariesRequestPrivate object.
- *
- * @param  action  TranscribeService action being performed.
- * @param  q       Pointer to this object's public ListVocabulariesRequest instance.
+ * Constructs a ListVocabulariesRequestPrivate object for TranscribeService \a action with,
+ * public implementation \a q.
  */
 ListVocabulariesRequestPrivate::ListVocabulariesRequestPrivate(
     const TranscribeServiceRequest::Action action, ListVocabulariesRequest * const q)
@@ -105,15 +94,10 @@ ListVocabulariesRequestPrivate::ListVocabulariesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListVocabulariesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListVocabulariesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListVocabulariesRequest instance.
  */
 ListVocabulariesRequestPrivate::ListVocabulariesRequestPrivate(
     const ListVocabulariesRequestPrivate &other, ListVocabulariesRequest * const q)

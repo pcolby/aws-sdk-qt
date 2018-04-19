@@ -27,10 +27,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::GetVpcLinkRequest
- *
  * \brief The GetVpcLinkRequest class provides an interface for APIGateway GetVpcLink requests.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -42,9 +41,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new GetVpcLinkRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetVpcLinkRequest::GetVpcLinkRequest(const GetVpcLinkRequest &other)
     : APIGatewayRequest(new GetVpcLinkRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ GetVpcLinkRequest::GetVpcLinkRequest(const GetVpcLinkRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetVpcLinkRequest object.
+ * Constructs a GetVpcLinkRequest object.
  */
 GetVpcLinkRequest::GetVpcLinkRequest()
     : APIGatewayRequest(new GetVpcLinkRequestPrivate(APIGatewayRequest::GetVpcLinkAction, this))
@@ -71,14 +68,9 @@ bool GetVpcLinkRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetVpcLinkResponse object.
+ * Returns a GetVpcLinkResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetVpcLinkResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  APIGatewayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetVpcLinkRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * GetVpcLinkRequest::response(QNetworkReply * c
 }
 
 /*!
- * @internal
+ * \class QtAws::APIGateway::GetVpcLinkRequestPrivate
+ * \brief The GetVpcLinkRequestPrivate class provides private implementation for GetVpcLinkRequest.
+ * \internal
  *
- * @class  GetVpcLinkRequestPrivate
- *
- * @brief  Private implementation for GetVpcLinkRequest.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetVpcLinkRequestPrivate object.
- *
- * @param  action  APIGateway action being performed.
- * @param  q       Pointer to this object's public GetVpcLinkRequest instance.
+ * Constructs a GetVpcLinkRequestPrivate object for APIGateway \a action with,
+ * public implementation \a q.
  */
 GetVpcLinkRequestPrivate::GetVpcLinkRequestPrivate(
     const APIGatewayRequest::Action action, GetVpcLinkRequest * const q)
@@ -109,15 +98,10 @@ GetVpcLinkRequestPrivate::GetVpcLinkRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetVpcLinkRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetVpcLinkRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetVpcLinkRequest instance.
  */
 GetVpcLinkRequestPrivate::GetVpcLinkRequestPrivate(
     const GetVpcLinkRequestPrivate &other, GetVpcLinkRequest * const q)

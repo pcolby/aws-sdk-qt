@@ -27,10 +27,9 @@ namespace OpsWorks {
 
 /*!
  * \class QtAws::OpsWorks::DescribeLoadBasedAutoScalingRequest
- *
  * \brief The DescribeLoadBasedAutoScalingRequest class provides an interface for OpsWorks DescribeLoadBasedAutoScaling requests.
  *
- * \ingroup OpsWorks
+ * \inmodule QtAwsOpsWorks
  *
  *  <fullname>AWS OpsWorks</fullname>
  * 
@@ -143,9 +142,7 @@ namespace OpsWorks {
  */
 
 /*!
- * @brief  Constructs a new DescribeLoadBasedAutoScalingRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeLoadBasedAutoScalingRequest::DescribeLoadBasedAutoScalingRequest(const DescribeLoadBasedAutoScalingRequest &other)
     : OpsWorksRequest(new DescribeLoadBasedAutoScalingRequestPrivate(*other.d_func(), this))
@@ -154,7 +151,7 @@ DescribeLoadBasedAutoScalingRequest::DescribeLoadBasedAutoScalingRequest(const D
 }
 
 /*!
- * @brief  Constructs a new DescribeLoadBasedAutoScalingRequest object.
+ * Constructs a DescribeLoadBasedAutoScalingRequest object.
  */
 DescribeLoadBasedAutoScalingRequest::DescribeLoadBasedAutoScalingRequest()
     : OpsWorksRequest(new DescribeLoadBasedAutoScalingRequestPrivate(OpsWorksRequest::DescribeLoadBasedAutoScalingAction, this))
@@ -172,14 +169,9 @@ bool DescribeLoadBasedAutoScalingRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeLoadBasedAutoScalingResponse object.
+ * Returns a DescribeLoadBasedAutoScalingResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeLoadBasedAutoScalingResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  OpsWorksClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeLoadBasedAutoScalingRequest::response(QNetworkReply * const reply) const
 {
@@ -187,20 +179,17 @@ QtAws::Core::AwsAbstractResponse * DescribeLoadBasedAutoScalingRequest::response
 }
 
 /*!
- * @internal
+ * \class QtAws::OpsWorks::DescribeLoadBasedAutoScalingRequestPrivate
+ * \brief The DescribeLoadBasedAutoScalingRequestPrivate class provides private implementation for DescribeLoadBasedAutoScalingRequest.
+ * \internal
  *
- * @class  DescribeLoadBasedAutoScalingRequestPrivate
- *
- * @brief  Private implementation for DescribeLoadBasedAutoScalingRequest.
+ * \inmodule QtAwsOpsWorks
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeLoadBasedAutoScalingRequestPrivate object.
- *
- * @param  action  OpsWorks action being performed.
- * @param  q       Pointer to this object's public DescribeLoadBasedAutoScalingRequest instance.
+ * Constructs a DescribeLoadBasedAutoScalingRequestPrivate object for OpsWorks \a action with,
+ * public implementation \a q.
  */
 DescribeLoadBasedAutoScalingRequestPrivate::DescribeLoadBasedAutoScalingRequestPrivate(
     const OpsWorksRequest::Action action, DescribeLoadBasedAutoScalingRequest * const q)
@@ -210,15 +199,10 @@ DescribeLoadBasedAutoScalingRequestPrivate::DescribeLoadBasedAutoScalingRequestP
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeLoadBasedAutoScalingRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeLoadBasedAutoScalingRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeLoadBasedAutoScalingRequest instance.
  */
 DescribeLoadBasedAutoScalingRequestPrivate::DescribeLoadBasedAutoScalingRequestPrivate(
     const DescribeLoadBasedAutoScalingRequestPrivate &other, DescribeLoadBasedAutoScalingRequest * const q)

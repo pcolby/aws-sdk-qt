@@ -56,6 +56,9 @@
 /*!
  * \namespace QtAws::CloudTrail
  * \brief The QtAws::CloudTrail contains stuff...
+ *
+ * \inmodule QtAwsCloudTrail
+ *
  * @todo Move this to a separate template file.
  */
 
@@ -128,7 +131,7 @@ CloudTrailClient::CloudTrailClient(
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * \a  AwsEndpoint::getEndpoint()
+ * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
 CloudTrailClient::CloudTrailClient(
     const QUrl &endpoint,

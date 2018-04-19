@@ -27,10 +27,9 @@ namespace SNS {
 
 /*!
  * \class QtAws::SNS::GetTopicAttributesRequest
- *
  * \brief The GetTopicAttributesRequest class provides an interface for SNS GetTopicAttributes requests.
  *
- * \ingroup SNS
+ * \inmodule QtAwsSNS
  *
  *  <fullname>Amazon Simple Notification Service</fullname>
  * 
@@ -51,9 +50,7 @@ namespace SNS {
  */
 
 /*!
- * @brief  Constructs a new GetTopicAttributesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetTopicAttributesRequest::GetTopicAttributesRequest(const GetTopicAttributesRequest &other)
     : SNSRequest(new GetTopicAttributesRequestPrivate(*other.d_func(), this))
@@ -62,7 +59,7 @@ GetTopicAttributesRequest::GetTopicAttributesRequest(const GetTopicAttributesReq
 }
 
 /*!
- * @brief  Constructs a new GetTopicAttributesRequest object.
+ * Constructs a GetTopicAttributesRequest object.
  */
 GetTopicAttributesRequest::GetTopicAttributesRequest()
     : SNSRequest(new GetTopicAttributesRequestPrivate(SNSRequest::GetTopicAttributesAction, this))
@@ -80,14 +77,9 @@ bool GetTopicAttributesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetTopicAttributesResponse object.
+ * Returns a GetTopicAttributesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetTopicAttributesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SNSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetTopicAttributesRequest::response(QNetworkReply * const reply) const
 {
@@ -95,20 +87,17 @@ QtAws::Core::AwsAbstractResponse * GetTopicAttributesRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::SNS::GetTopicAttributesRequestPrivate
+ * \brief The GetTopicAttributesRequestPrivate class provides private implementation for GetTopicAttributesRequest.
+ * \internal
  *
- * @class  GetTopicAttributesRequestPrivate
- *
- * @brief  Private implementation for GetTopicAttributesRequest.
+ * \inmodule QtAwsSNS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetTopicAttributesRequestPrivate object.
- *
- * @param  action  SNS action being performed.
- * @param  q       Pointer to this object's public GetTopicAttributesRequest instance.
+ * Constructs a GetTopicAttributesRequestPrivate object for SNS \a action with,
+ * public implementation \a q.
  */
 GetTopicAttributesRequestPrivate::GetTopicAttributesRequestPrivate(
     const SNSRequest::Action action, GetTopicAttributesRequest * const q)
@@ -118,15 +107,10 @@ GetTopicAttributesRequestPrivate::GetTopicAttributesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetTopicAttributesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetTopicAttributesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetTopicAttributesRequest instance.
  */
 GetTopicAttributesRequestPrivate::GetTopicAttributesRequestPrivate(
     const GetTopicAttributesRequestPrivate &other, GetTopicAttributesRequest * const q)

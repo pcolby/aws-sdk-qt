@@ -27,10 +27,9 @@ namespace CloudWatchEvents {
 
 /*!
  * \class QtAws::CloudWatchEvents::ListRulesRequest
- *
  * \brief The ListRulesRequest class provides an interface for CloudWatchEvents ListRules requests.
  *
- * \ingroup CloudWatchEvents
+ * \inmodule QtAwsCloudWatchEvents
  *
  *  Amazon CloudWatch Events helps you to respond to state changes in your AWS resources. When your resources change state,
  *  they automatically send events into an event stream. You can create rules that match selected events in the stream and
@@ -60,9 +59,7 @@ namespace CloudWatchEvents {
  */
 
 /*!
- * @brief  Constructs a new ListRulesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListRulesRequest::ListRulesRequest(const ListRulesRequest &other)
     : CloudWatchEventsRequest(new ListRulesRequestPrivate(*other.d_func(), this))
@@ -71,7 +68,7 @@ ListRulesRequest::ListRulesRequest(const ListRulesRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ListRulesRequest object.
+ * Constructs a ListRulesRequest object.
  */
 ListRulesRequest::ListRulesRequest()
     : CloudWatchEventsRequest(new ListRulesRequestPrivate(CloudWatchEventsRequest::ListRulesAction, this))
@@ -89,14 +86,9 @@ bool ListRulesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListRulesResponse object.
+ * Returns a ListRulesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListRulesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudWatchEventsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListRulesRequest::response(QNetworkReply * const reply) const
 {
@@ -104,20 +96,17 @@ QtAws::Core::AwsAbstractResponse * ListRulesRequest::response(QNetworkReply * co
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudWatchEvents::ListRulesRequestPrivate
+ * \brief The ListRulesRequestPrivate class provides private implementation for ListRulesRequest.
+ * \internal
  *
- * @class  ListRulesRequestPrivate
- *
- * @brief  Private implementation for ListRulesRequest.
+ * \inmodule QtAwsCloudWatchEvents
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListRulesRequestPrivate object.
- *
- * @param  action  CloudWatchEvents action being performed.
- * @param  q       Pointer to this object's public ListRulesRequest instance.
+ * Constructs a ListRulesRequestPrivate object for CloudWatchEvents \a action with,
+ * public implementation \a q.
  */
 ListRulesRequestPrivate::ListRulesRequestPrivate(
     const CloudWatchEventsRequest::Action action, ListRulesRequest * const q)
@@ -127,15 +116,10 @@ ListRulesRequestPrivate::ListRulesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListRulesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListRulesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListRulesRequest instance.
  */
 ListRulesRequestPrivate::ListRulesRequestPrivate(
     const ListRulesRequestPrivate &other, ListRulesRequest * const q)

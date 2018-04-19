@@ -27,19 +27,16 @@ namespace MediaLive {
 
 /*!
  * \class QtAws::MediaLive::DescribeChannelRequest
- *
  * \brief The DescribeChannelRequest class provides an interface for MediaLive DescribeChannel requests.
  *
- * \ingroup MediaLive
+ * \inmodule QtAwsMediaLive
  *
  *
  * \sa MediaLiveClient::describeChannel
  */
 
 /*!
- * @brief  Constructs a new DescribeChannelRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeChannelRequest::DescribeChannelRequest(const DescribeChannelRequest &other)
     : MediaLiveRequest(new DescribeChannelRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ DescribeChannelRequest::DescribeChannelRequest(const DescribeChannelRequest &oth
 }
 
 /*!
- * @brief  Constructs a new DescribeChannelRequest object.
+ * Constructs a DescribeChannelRequest object.
  */
 DescribeChannelRequest::DescribeChannelRequest()
     : MediaLiveRequest(new DescribeChannelRequestPrivate(MediaLiveRequest::DescribeChannelAction, this))
@@ -66,14 +63,9 @@ bool DescribeChannelRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeChannelResponse object.
+ * Returns a DescribeChannelResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeChannelResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MediaLiveClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeChannelRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * DescribeChannelRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::MediaLive::DescribeChannelRequestPrivate
+ * \brief The DescribeChannelRequestPrivate class provides private implementation for DescribeChannelRequest.
+ * \internal
  *
- * @class  DescribeChannelRequestPrivate
- *
- * @brief  Private implementation for DescribeChannelRequest.
+ * \inmodule QtAwsMediaLive
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeChannelRequestPrivate object.
- *
- * @param  action  MediaLive action being performed.
- * @param  q       Pointer to this object's public DescribeChannelRequest instance.
+ * Constructs a DescribeChannelRequestPrivate object for MediaLive \a action with,
+ * public implementation \a q.
  */
 DescribeChannelRequestPrivate::DescribeChannelRequestPrivate(
     const MediaLiveRequest::Action action, DescribeChannelRequest * const q)
@@ -104,15 +93,10 @@ DescribeChannelRequestPrivate::DescribeChannelRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeChannelRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeChannelRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeChannelRequest instance.
  */
 DescribeChannelRequestPrivate::DescribeChannelRequestPrivate(
     const DescribeChannelRequestPrivate &other, DescribeChannelRequest * const q)

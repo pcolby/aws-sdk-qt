@@ -27,10 +27,9 @@ namespace Glue {
 
 /*!
  * \class QtAws::Glue::GetDataflowGraphRequest
- *
  * \brief The GetDataflowGraphRequest class provides an interface for Glue GetDataflowGraph requests.
  *
- * \ingroup Glue
+ * \inmodule QtAwsGlue
  *
  *  <fullname>AWS Glue</fullname>
  * 
@@ -40,9 +39,7 @@ namespace Glue {
  */
 
 /*!
- * @brief  Constructs a new GetDataflowGraphRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetDataflowGraphRequest::GetDataflowGraphRequest(const GetDataflowGraphRequest &other)
     : GlueRequest(new GetDataflowGraphRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ GetDataflowGraphRequest::GetDataflowGraphRequest(const GetDataflowGraphRequest &
 }
 
 /*!
- * @brief  Constructs a new GetDataflowGraphRequest object.
+ * Constructs a GetDataflowGraphRequest object.
  */
 GetDataflowGraphRequest::GetDataflowGraphRequest()
     : GlueRequest(new GetDataflowGraphRequestPrivate(GlueRequest::GetDataflowGraphAction, this))
@@ -69,14 +66,9 @@ bool GetDataflowGraphRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetDataflowGraphResponse object.
+ * Returns a GetDataflowGraphResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetDataflowGraphResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GlueClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetDataflowGraphRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * GetDataflowGraphRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::Glue::GetDataflowGraphRequestPrivate
+ * \brief The GetDataflowGraphRequestPrivate class provides private implementation for GetDataflowGraphRequest.
+ * \internal
  *
- * @class  GetDataflowGraphRequestPrivate
- *
- * @brief  Private implementation for GetDataflowGraphRequest.
+ * \inmodule QtAwsGlue
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetDataflowGraphRequestPrivate object.
- *
- * @param  action  Glue action being performed.
- * @param  q       Pointer to this object's public GetDataflowGraphRequest instance.
+ * Constructs a GetDataflowGraphRequestPrivate object for Glue \a action with,
+ * public implementation \a q.
  */
 GetDataflowGraphRequestPrivate::GetDataflowGraphRequestPrivate(
     const GlueRequest::Action action, GetDataflowGraphRequest * const q)
@@ -107,15 +96,10 @@ GetDataflowGraphRequestPrivate::GetDataflowGraphRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetDataflowGraphRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetDataflowGraphRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetDataflowGraphRequest instance.
  */
 GetDataflowGraphRequestPrivate::GetDataflowGraphRequestPrivate(
     const GetDataflowGraphRequestPrivate &other, GetDataflowGraphRequest * const q)

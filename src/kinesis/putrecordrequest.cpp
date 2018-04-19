@@ -27,10 +27,9 @@ namespace Kinesis {
 
 /*!
  * \class QtAws::Kinesis::PutRecordRequest
- *
  * \brief The PutRecordRequest class provides an interface for Kinesis PutRecord requests.
  *
- * \ingroup Kinesis
+ * \inmodule QtAwsKinesis
  *
  *  <fullname>Amazon Kinesis Data Streams Service API Reference</fullname>
  * 
@@ -40,9 +39,7 @@ namespace Kinesis {
  */
 
 /*!
- * @brief  Constructs a new PutRecordRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 PutRecordRequest::PutRecordRequest(const PutRecordRequest &other)
     : KinesisRequest(new PutRecordRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ PutRecordRequest::PutRecordRequest(const PutRecordRequest &other)
 }
 
 /*!
- * @brief  Constructs a new PutRecordRequest object.
+ * Constructs a PutRecordRequest object.
  */
 PutRecordRequest::PutRecordRequest()
     : KinesisRequest(new PutRecordRequestPrivate(KinesisRequest::PutRecordAction, this))
@@ -69,14 +66,9 @@ bool PutRecordRequest::isValid() const
 
 
 /*!
- * @brief  Construct an PutRecordResponse object.
+ * Returns a PutRecordResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An PutRecordResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  KinesisClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * PutRecordRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * PutRecordRequest::response(QNetworkReply * co
 }
 
 /*!
- * @internal
+ * \class QtAws::Kinesis::PutRecordRequestPrivate
+ * \brief The PutRecordRequestPrivate class provides private implementation for PutRecordRequest.
+ * \internal
  *
- * @class  PutRecordRequestPrivate
- *
- * @brief  Private implementation for PutRecordRequest.
+ * \inmodule QtAwsKinesis
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new PutRecordRequestPrivate object.
- *
- * @param  action  Kinesis action being performed.
- * @param  q       Pointer to this object's public PutRecordRequest instance.
+ * Constructs a PutRecordRequestPrivate object for Kinesis \a action with,
+ * public implementation \a q.
  */
 PutRecordRequestPrivate::PutRecordRequestPrivate(
     const KinesisRequest::Action action, PutRecordRequest * const q)
@@ -107,15 +96,10 @@ PutRecordRequestPrivate::PutRecordRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutRecordRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the PutRecordRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public PutRecordRequest instance.
  */
 PutRecordRequestPrivate::PutRecordRequestPrivate(
     const PutRecordRequestPrivate &other, PutRecordRequest * const q)

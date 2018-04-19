@@ -27,10 +27,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::UpdateVpcLinkRequest
- *
  * \brief The UpdateVpcLinkRequest class provides an interface for APIGateway UpdateVpcLink requests.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -42,9 +41,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new UpdateVpcLinkRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateVpcLinkRequest::UpdateVpcLinkRequest(const UpdateVpcLinkRequest &other)
     : APIGatewayRequest(new UpdateVpcLinkRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ UpdateVpcLinkRequest::UpdateVpcLinkRequest(const UpdateVpcLinkRequest &other)
 }
 
 /*!
- * @brief  Constructs a new UpdateVpcLinkRequest object.
+ * Constructs a UpdateVpcLinkRequest object.
  */
 UpdateVpcLinkRequest::UpdateVpcLinkRequest()
     : APIGatewayRequest(new UpdateVpcLinkRequestPrivate(APIGatewayRequest::UpdateVpcLinkAction, this))
@@ -71,14 +68,9 @@ bool UpdateVpcLinkRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateVpcLinkResponse object.
+ * Returns a UpdateVpcLinkResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateVpcLinkResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  APIGatewayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateVpcLinkRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * UpdateVpcLinkRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::APIGateway::UpdateVpcLinkRequestPrivate
+ * \brief The UpdateVpcLinkRequestPrivate class provides private implementation for UpdateVpcLinkRequest.
+ * \internal
  *
- * @class  UpdateVpcLinkRequestPrivate
- *
- * @brief  Private implementation for UpdateVpcLinkRequest.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateVpcLinkRequestPrivate object.
- *
- * @param  action  APIGateway action being performed.
- * @param  q       Pointer to this object's public UpdateVpcLinkRequest instance.
+ * Constructs a UpdateVpcLinkRequestPrivate object for APIGateway \a action with,
+ * public implementation \a q.
  */
 UpdateVpcLinkRequestPrivate::UpdateVpcLinkRequestPrivate(
     const APIGatewayRequest::Action action, UpdateVpcLinkRequest * const q)
@@ -109,15 +98,10 @@ UpdateVpcLinkRequestPrivate::UpdateVpcLinkRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateVpcLinkRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateVpcLinkRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateVpcLinkRequest instance.
  */
 UpdateVpcLinkRequestPrivate::UpdateVpcLinkRequestPrivate(
     const UpdateVpcLinkRequestPrivate &other, UpdateVpcLinkRequest * const q)

@@ -27,10 +27,9 @@ namespace Greengrass {
 
 /*!
  * \class QtAws::Greengrass::UpdateGroupRequest
- *
  * \brief The UpdateGroupRequest class provides an interface for Greengrass UpdateGroup requests.
  *
- * \ingroup Greengrass
+ * \inmodule QtAwsGreengrass
  *
  *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
  *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
@@ -40,9 +39,7 @@ namespace Greengrass {
  */
 
 /*!
- * @brief  Constructs a new UpdateGroupRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateGroupRequest::UpdateGroupRequest(const UpdateGroupRequest &other)
     : GreengrassRequest(new UpdateGroupRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ UpdateGroupRequest::UpdateGroupRequest(const UpdateGroupRequest &other)
 }
 
 /*!
- * @brief  Constructs a new UpdateGroupRequest object.
+ * Constructs a UpdateGroupRequest object.
  */
 UpdateGroupRequest::UpdateGroupRequest()
     : GreengrassRequest(new UpdateGroupRequestPrivate(GreengrassRequest::UpdateGroupAction, this))
@@ -69,14 +66,9 @@ bool UpdateGroupRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateGroupResponse object.
+ * Returns a UpdateGroupResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateGroupResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GreengrassClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateGroupRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * UpdateGroupRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::Greengrass::UpdateGroupRequestPrivate
+ * \brief The UpdateGroupRequestPrivate class provides private implementation for UpdateGroupRequest.
+ * \internal
  *
- * @class  UpdateGroupRequestPrivate
- *
- * @brief  Private implementation for UpdateGroupRequest.
+ * \inmodule QtAwsGreengrass
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateGroupRequestPrivate object.
- *
- * @param  action  Greengrass action being performed.
- * @param  q       Pointer to this object's public UpdateGroupRequest instance.
+ * Constructs a UpdateGroupRequestPrivate object for Greengrass \a action with,
+ * public implementation \a q.
  */
 UpdateGroupRequestPrivate::UpdateGroupRequestPrivate(
     const GreengrassRequest::Action action, UpdateGroupRequest * const q)
@@ -107,15 +96,10 @@ UpdateGroupRequestPrivate::UpdateGroupRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateGroupRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateGroupRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateGroupRequest instance.
  */
 UpdateGroupRequestPrivate::UpdateGroupRequestPrivate(
     const UpdateGroupRequestPrivate &other, UpdateGroupRequest * const q)

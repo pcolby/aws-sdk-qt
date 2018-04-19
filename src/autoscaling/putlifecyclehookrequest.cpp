@@ -27,10 +27,9 @@ namespace AutoScaling {
 
 /*!
  * \class QtAws::AutoScaling::PutLifecycleHookRequest
- *
  * \brief The PutLifecycleHookRequest class provides an interface for AutoScaling PutLifecycleHook requests.
  *
- * \ingroup AutoScaling
+ * \inmodule QtAwsAutoScaling
  *
  *  <fullname>Amazon EC2 Auto Scaling</fullname>
  * 
@@ -42,9 +41,7 @@ namespace AutoScaling {
  */
 
 /*!
- * @brief  Constructs a new PutLifecycleHookRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 PutLifecycleHookRequest::PutLifecycleHookRequest(const PutLifecycleHookRequest &other)
     : AutoScalingRequest(new PutLifecycleHookRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ PutLifecycleHookRequest::PutLifecycleHookRequest(const PutLifecycleHookRequest &
 }
 
 /*!
- * @brief  Constructs a new PutLifecycleHookRequest object.
+ * Constructs a PutLifecycleHookRequest object.
  */
 PutLifecycleHookRequest::PutLifecycleHookRequest()
     : AutoScalingRequest(new PutLifecycleHookRequestPrivate(AutoScalingRequest::PutLifecycleHookAction, this))
@@ -71,14 +68,9 @@ bool PutLifecycleHookRequest::isValid() const
 
 
 /*!
- * @brief  Construct an PutLifecycleHookResponse object.
+ * Returns a PutLifecycleHookResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An PutLifecycleHookResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AutoScalingClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * PutLifecycleHookRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * PutLifecycleHookRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::AutoScaling::PutLifecycleHookRequestPrivate
+ * \brief The PutLifecycleHookRequestPrivate class provides private implementation for PutLifecycleHookRequest.
+ * \internal
  *
- * @class  PutLifecycleHookRequestPrivate
- *
- * @brief  Private implementation for PutLifecycleHookRequest.
+ * \inmodule QtAwsAutoScaling
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new PutLifecycleHookRequestPrivate object.
- *
- * @param  action  AutoScaling action being performed.
- * @param  q       Pointer to this object's public PutLifecycleHookRequest instance.
+ * Constructs a PutLifecycleHookRequestPrivate object for AutoScaling \a action with,
+ * public implementation \a q.
  */
 PutLifecycleHookRequestPrivate::PutLifecycleHookRequestPrivate(
     const AutoScalingRequest::Action action, PutLifecycleHookRequest * const q)
@@ -109,15 +98,10 @@ PutLifecycleHookRequestPrivate::PutLifecycleHookRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutLifecycleHookRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the PutLifecycleHookRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public PutLifecycleHookRequest instance.
  */
 PutLifecycleHookRequestPrivate::PutLifecycleHookRequestPrivate(
     const PutLifecycleHookRequestPrivate &other, PutLifecycleHookRequest * const q)

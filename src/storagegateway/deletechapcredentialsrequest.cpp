@@ -27,10 +27,9 @@ namespace StorageGateway {
 
 /*!
  * \class QtAws::StorageGateway::DeleteChapCredentialsRequest
- *
  * \brief The DeleteChapCredentialsRequest class provides an interface for StorageGateway DeleteChapCredentials requests.
  *
- * \ingroup StorageGateway
+ * \inmodule QtAwsStorageGateway
  *
  *  <fullname>AWS Storage Gateway Service</fullname>
  * 
@@ -106,9 +105,7 @@ namespace StorageGateway {
  */
 
 /*!
- * @brief  Constructs a new DeleteChapCredentialsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteChapCredentialsRequest::DeleteChapCredentialsRequest(const DeleteChapCredentialsRequest &other)
     : StorageGatewayRequest(new DeleteChapCredentialsRequestPrivate(*other.d_func(), this))
@@ -117,7 +114,7 @@ DeleteChapCredentialsRequest::DeleteChapCredentialsRequest(const DeleteChapCrede
 }
 
 /*!
- * @brief  Constructs a new DeleteChapCredentialsRequest object.
+ * Constructs a DeleteChapCredentialsRequest object.
  */
 DeleteChapCredentialsRequest::DeleteChapCredentialsRequest()
     : StorageGatewayRequest(new DeleteChapCredentialsRequestPrivate(StorageGatewayRequest::DeleteChapCredentialsAction, this))
@@ -135,14 +132,9 @@ bool DeleteChapCredentialsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteChapCredentialsResponse object.
+ * Returns a DeleteChapCredentialsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteChapCredentialsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  StorageGatewayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteChapCredentialsRequest::response(QNetworkReply * const reply) const
 {
@@ -150,20 +142,17 @@ QtAws::Core::AwsAbstractResponse * DeleteChapCredentialsRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::StorageGateway::DeleteChapCredentialsRequestPrivate
+ * \brief The DeleteChapCredentialsRequestPrivate class provides private implementation for DeleteChapCredentialsRequest.
+ * \internal
  *
- * @class  DeleteChapCredentialsRequestPrivate
- *
- * @brief  Private implementation for DeleteChapCredentialsRequest.
+ * \inmodule QtAwsStorageGateway
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteChapCredentialsRequestPrivate object.
- *
- * @param  action  StorageGateway action being performed.
- * @param  q       Pointer to this object's public DeleteChapCredentialsRequest instance.
+ * Constructs a DeleteChapCredentialsRequestPrivate object for StorageGateway \a action with,
+ * public implementation \a q.
  */
 DeleteChapCredentialsRequestPrivate::DeleteChapCredentialsRequestPrivate(
     const StorageGatewayRequest::Action action, DeleteChapCredentialsRequest * const q)
@@ -173,15 +162,10 @@ DeleteChapCredentialsRequestPrivate::DeleteChapCredentialsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteChapCredentialsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteChapCredentialsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteChapCredentialsRequest instance.
  */
 DeleteChapCredentialsRequestPrivate::DeleteChapCredentialsRequestPrivate(
     const DeleteChapCredentialsRequestPrivate &other, DeleteChapCredentialsRequest * const q)

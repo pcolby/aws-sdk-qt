@@ -27,10 +27,9 @@ namespace CodeCommit {
 
 /*!
  * \class QtAws::CodeCommit::DescribePullRequestEventsRequest
- *
  * \brief The DescribePullRequestEventsRequest class provides an interface for CodeCommit DescribePullRequestEvents requests.
  *
- * \ingroup CodeCommit
+ * \inmodule QtAwsCodeCommit
  *
  *  <fullname>AWS CodeCommit</fullname>
  * 
@@ -227,9 +226,7 @@ namespace CodeCommit {
  */
 
 /*!
- * @brief  Constructs a new DescribePullRequestEventsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribePullRequestEventsRequest::DescribePullRequestEventsRequest(const DescribePullRequestEventsRequest &other)
     : CodeCommitRequest(new DescribePullRequestEventsRequestPrivate(*other.d_func(), this))
@@ -238,7 +235,7 @@ DescribePullRequestEventsRequest::DescribePullRequestEventsRequest(const Describ
 }
 
 /*!
- * @brief  Constructs a new DescribePullRequestEventsRequest object.
+ * Constructs a DescribePullRequestEventsRequest object.
  */
 DescribePullRequestEventsRequest::DescribePullRequestEventsRequest()
     : CodeCommitRequest(new DescribePullRequestEventsRequestPrivate(CodeCommitRequest::DescribePullRequestEventsAction, this))
@@ -256,14 +253,9 @@ bool DescribePullRequestEventsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribePullRequestEventsResponse object.
+ * Returns a DescribePullRequestEventsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribePullRequestEventsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CodeCommitClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribePullRequestEventsRequest::response(QNetworkReply * const reply) const
 {
@@ -271,20 +263,17 @@ QtAws::Core::AwsAbstractResponse * DescribePullRequestEventsRequest::response(QN
 }
 
 /*!
- * @internal
+ * \class QtAws::CodeCommit::DescribePullRequestEventsRequestPrivate
+ * \brief The DescribePullRequestEventsRequestPrivate class provides private implementation for DescribePullRequestEventsRequest.
+ * \internal
  *
- * @class  DescribePullRequestEventsRequestPrivate
- *
- * @brief  Private implementation for DescribePullRequestEventsRequest.
+ * \inmodule QtAwsCodeCommit
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribePullRequestEventsRequestPrivate object.
- *
- * @param  action  CodeCommit action being performed.
- * @param  q       Pointer to this object's public DescribePullRequestEventsRequest instance.
+ * Constructs a DescribePullRequestEventsRequestPrivate object for CodeCommit \a action with,
+ * public implementation \a q.
  */
 DescribePullRequestEventsRequestPrivate::DescribePullRequestEventsRequestPrivate(
     const CodeCommitRequest::Action action, DescribePullRequestEventsRequest * const q)
@@ -294,15 +283,10 @@ DescribePullRequestEventsRequestPrivate::DescribePullRequestEventsRequestPrivate
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribePullRequestEventsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribePullRequestEventsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribePullRequestEventsRequest instance.
  */
 DescribePullRequestEventsRequestPrivate::DescribePullRequestEventsRequestPrivate(
     const DescribePullRequestEventsRequestPrivate &other, DescribePullRequestEventsRequest * const q)

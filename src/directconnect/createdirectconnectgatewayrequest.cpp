@@ -27,10 +27,9 @@ namespace DirectConnect {
 
 /*!
  * \class QtAws::DirectConnect::CreateDirectConnectGatewayRequest
- *
  * \brief The CreateDirectConnectGatewayRequest class provides an interface for DirectConnect CreateDirectConnectGateway requests.
  *
- * \ingroup DirectConnect
+ * \inmodule QtAwsDirectConnect
  *
  *  AWS Direct Connect links your internal network to an AWS Direct Connect location over a standard 1 gigabit or 10 gigabit
  *  Ethernet fiber-optic cable. One end of the cable is connected to your router, the other to an AWS Direct Connect router.
@@ -45,9 +44,7 @@ namespace DirectConnect {
  */
 
 /*!
- * @brief  Constructs a new CreateDirectConnectGatewayRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateDirectConnectGatewayRequest::CreateDirectConnectGatewayRequest(const CreateDirectConnectGatewayRequest &other)
     : DirectConnectRequest(new CreateDirectConnectGatewayRequestPrivate(*other.d_func(), this))
@@ -56,7 +53,7 @@ CreateDirectConnectGatewayRequest::CreateDirectConnectGatewayRequest(const Creat
 }
 
 /*!
- * @brief  Constructs a new CreateDirectConnectGatewayRequest object.
+ * Constructs a CreateDirectConnectGatewayRequest object.
  */
 CreateDirectConnectGatewayRequest::CreateDirectConnectGatewayRequest()
     : DirectConnectRequest(new CreateDirectConnectGatewayRequestPrivate(DirectConnectRequest::CreateDirectConnectGatewayAction, this))
@@ -74,14 +71,9 @@ bool CreateDirectConnectGatewayRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateDirectConnectGatewayResponse object.
+ * Returns a CreateDirectConnectGatewayResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateDirectConnectGatewayResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DirectConnectClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateDirectConnectGatewayRequest::response(QNetworkReply * const reply) const
 {
@@ -89,20 +81,17 @@ QtAws::Core::AwsAbstractResponse * CreateDirectConnectGatewayRequest::response(Q
 }
 
 /*!
- * @internal
+ * \class QtAws::DirectConnect::CreateDirectConnectGatewayRequestPrivate
+ * \brief The CreateDirectConnectGatewayRequestPrivate class provides private implementation for CreateDirectConnectGatewayRequest.
+ * \internal
  *
- * @class  CreateDirectConnectGatewayRequestPrivate
- *
- * @brief  Private implementation for CreateDirectConnectGatewayRequest.
+ * \inmodule QtAwsDirectConnect
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateDirectConnectGatewayRequestPrivate object.
- *
- * @param  action  DirectConnect action being performed.
- * @param  q       Pointer to this object's public CreateDirectConnectGatewayRequest instance.
+ * Constructs a CreateDirectConnectGatewayRequestPrivate object for DirectConnect \a action with,
+ * public implementation \a q.
  */
 CreateDirectConnectGatewayRequestPrivate::CreateDirectConnectGatewayRequestPrivate(
     const DirectConnectRequest::Action action, CreateDirectConnectGatewayRequest * const q)
@@ -112,15 +101,10 @@ CreateDirectConnectGatewayRequestPrivate::CreateDirectConnectGatewayRequestPriva
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateDirectConnectGatewayRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateDirectConnectGatewayRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateDirectConnectGatewayRequest instance.
  */
 CreateDirectConnectGatewayRequestPrivate::CreateDirectConnectGatewayRequestPrivate(
     const CreateDirectConnectGatewayRequestPrivate &other, CreateDirectConnectGatewayRequest * const q)

@@ -27,10 +27,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::DisableTopicRuleRequest
- *
  * \brief The DisableTopicRuleRequest class provides an interface for IoT DisableTopicRule requests.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -48,9 +47,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new DisableTopicRuleRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DisableTopicRuleRequest::DisableTopicRuleRequest(const DisableTopicRuleRequest &other)
     : IoTRequest(new DisableTopicRuleRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ DisableTopicRuleRequest::DisableTopicRuleRequest(const DisableTopicRuleRequest &
 }
 
 /*!
- * @brief  Constructs a new DisableTopicRuleRequest object.
+ * Constructs a DisableTopicRuleRequest object.
  */
 DisableTopicRuleRequest::DisableTopicRuleRequest()
     : IoTRequest(new DisableTopicRuleRequestPrivate(IoTRequest::DisableTopicRuleAction, this))
@@ -77,14 +74,9 @@ bool DisableTopicRuleRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DisableTopicRuleResponse object.
+ * Returns a DisableTopicRuleResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DisableTopicRuleResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IoTClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DisableTopicRuleRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * DisableTopicRuleRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::IoT::DisableTopicRuleRequestPrivate
+ * \brief The DisableTopicRuleRequestPrivate class provides private implementation for DisableTopicRuleRequest.
+ * \internal
  *
- * @class  DisableTopicRuleRequestPrivate
- *
- * @brief  Private implementation for DisableTopicRuleRequest.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DisableTopicRuleRequestPrivate object.
- *
- * @param  action  IoT action being performed.
- * @param  q       Pointer to this object's public DisableTopicRuleRequest instance.
+ * Constructs a DisableTopicRuleRequestPrivate object for IoT \a action with,
+ * public implementation \a q.
  */
 DisableTopicRuleRequestPrivate::DisableTopicRuleRequestPrivate(
     const IoTRequest::Action action, DisableTopicRuleRequest * const q)
@@ -115,15 +104,10 @@ DisableTopicRuleRequestPrivate::DisableTopicRuleRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DisableTopicRuleRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DisableTopicRuleRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DisableTopicRuleRequest instance.
  */
 DisableTopicRuleRequestPrivate::DisableTopicRuleRequestPrivate(
     const DisableTopicRuleRequestPrivate &other, DisableTopicRuleRequest * const q)

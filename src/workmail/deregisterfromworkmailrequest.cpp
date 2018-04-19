@@ -27,10 +27,9 @@ namespace WorkMail {
 
 /*!
  * \class QtAws::WorkMail::DeregisterFromWorkMailRequest
- *
  * \brief The DeregisterFromWorkMailRequest class provides an interface for WorkMail DeregisterFromWorkMail requests.
  *
- * \ingroup WorkMail
+ * \inmodule QtAwsWorkMail
  *
  *  Amazon WorkMail is a secure, managed business email and calendaring service with support for existing desktop and mobile
  *  email clients. You can access your email, contacts, and calendars using Microsoft Outlook, your browser, or their native
@@ -70,9 +69,7 @@ namespace WorkMail {
  */
 
 /*!
- * @brief  Constructs a new DeregisterFromWorkMailRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeregisterFromWorkMailRequest::DeregisterFromWorkMailRequest(const DeregisterFromWorkMailRequest &other)
     : WorkMailRequest(new DeregisterFromWorkMailRequestPrivate(*other.d_func(), this))
@@ -81,7 +78,7 @@ DeregisterFromWorkMailRequest::DeregisterFromWorkMailRequest(const DeregisterFro
 }
 
 /*!
- * @brief  Constructs a new DeregisterFromWorkMailRequest object.
+ * Constructs a DeregisterFromWorkMailRequest object.
  */
 DeregisterFromWorkMailRequest::DeregisterFromWorkMailRequest()
     : WorkMailRequest(new DeregisterFromWorkMailRequestPrivate(WorkMailRequest::DeregisterFromWorkMailAction, this))
@@ -99,14 +96,9 @@ bool DeregisterFromWorkMailRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeregisterFromWorkMailResponse object.
+ * Returns a DeregisterFromWorkMailResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeregisterFromWorkMailResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WorkMailClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeregisterFromWorkMailRequest::response(QNetworkReply * const reply) const
 {
@@ -114,20 +106,17 @@ QtAws::Core::AwsAbstractResponse * DeregisterFromWorkMailRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::WorkMail::DeregisterFromWorkMailRequestPrivate
+ * \brief The DeregisterFromWorkMailRequestPrivate class provides private implementation for DeregisterFromWorkMailRequest.
+ * \internal
  *
- * @class  DeregisterFromWorkMailRequestPrivate
- *
- * @brief  Private implementation for DeregisterFromWorkMailRequest.
+ * \inmodule QtAwsWorkMail
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeregisterFromWorkMailRequestPrivate object.
- *
- * @param  action  WorkMail action being performed.
- * @param  q       Pointer to this object's public DeregisterFromWorkMailRequest instance.
+ * Constructs a DeregisterFromWorkMailRequestPrivate object for WorkMail \a action with,
+ * public implementation \a q.
  */
 DeregisterFromWorkMailRequestPrivate::DeregisterFromWorkMailRequestPrivate(
     const WorkMailRequest::Action action, DeregisterFromWorkMailRequest * const q)
@@ -137,15 +126,10 @@ DeregisterFromWorkMailRequestPrivate::DeregisterFromWorkMailRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeregisterFromWorkMailRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeregisterFromWorkMailRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeregisterFromWorkMailRequest instance.
  */
 DeregisterFromWorkMailRequestPrivate::DeregisterFromWorkMailRequestPrivate(
     const DeregisterFromWorkMailRequestPrivate &other, DeregisterFromWorkMailRequest * const q)

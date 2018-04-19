@@ -27,10 +27,9 @@ namespace SQS {
 
 /*!
  * \class QtAws::SQS::GetQueueUrlRequest
- *
  * \brief The GetQueueUrlRequest class provides an interface for SQS GetQueueUrl requests.
  *
- * \ingroup SQS
+ * \inmodule QtAwsSQS
  *
  *  Welcome to the <i>Amazon Simple Queue Service API
  * 
@@ -103,9 +102,7 @@ namespace SQS {
  */
 
 /*!
- * @brief  Constructs a new GetQueueUrlRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetQueueUrlRequest::GetQueueUrlRequest(const GetQueueUrlRequest &other)
     : SQSRequest(new GetQueueUrlRequestPrivate(*other.d_func(), this))
@@ -114,7 +111,7 @@ GetQueueUrlRequest::GetQueueUrlRequest(const GetQueueUrlRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetQueueUrlRequest object.
+ * Constructs a GetQueueUrlRequest object.
  */
 GetQueueUrlRequest::GetQueueUrlRequest()
     : SQSRequest(new GetQueueUrlRequestPrivate(SQSRequest::GetQueueUrlAction, this))
@@ -132,14 +129,9 @@ bool GetQueueUrlRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetQueueUrlResponse object.
+ * Returns a GetQueueUrlResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetQueueUrlResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SQSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetQueueUrlRequest::response(QNetworkReply * const reply) const
 {
@@ -147,20 +139,17 @@ QtAws::Core::AwsAbstractResponse * GetQueueUrlRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::SQS::GetQueueUrlRequestPrivate
+ * \brief The GetQueueUrlRequestPrivate class provides private implementation for GetQueueUrlRequest.
+ * \internal
  *
- * @class  GetQueueUrlRequestPrivate
- *
- * @brief  Private implementation for GetQueueUrlRequest.
+ * \inmodule QtAwsSQS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetQueueUrlRequestPrivate object.
- *
- * @param  action  SQS action being performed.
- * @param  q       Pointer to this object's public GetQueueUrlRequest instance.
+ * Constructs a GetQueueUrlRequestPrivate object for SQS \a action with,
+ * public implementation \a q.
  */
 GetQueueUrlRequestPrivate::GetQueueUrlRequestPrivate(
     const SQSRequest::Action action, GetQueueUrlRequest * const q)
@@ -170,15 +159,10 @@ GetQueueUrlRequestPrivate::GetQueueUrlRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetQueueUrlRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetQueueUrlRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetQueueUrlRequest instance.
  */
 GetQueueUrlRequestPrivate::GetQueueUrlRequestPrivate(
     const GetQueueUrlRequestPrivate &other, GetQueueUrlRequest * const q)

@@ -27,19 +27,16 @@ namespace Route53 {
 
 /*!
  * \class QtAws::Route53::ListTrafficPolicyInstancesByHostedZoneRequest
- *
  * \brief The ListTrafficPolicyInstancesByHostedZoneRequest class provides an interface for Route53 ListTrafficPolicyInstancesByHostedZone requests.
  *
- * \ingroup Route53
+ * \inmodule QtAwsRoute53
  *
  *
  * \sa Route53Client::listTrafficPolicyInstancesByHostedZone
  */
 
 /*!
- * @brief  Constructs a new ListTrafficPolicyInstancesByHostedZoneRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListTrafficPolicyInstancesByHostedZoneRequest::ListTrafficPolicyInstancesByHostedZoneRequest(const ListTrafficPolicyInstancesByHostedZoneRequest &other)
     : Route53Request(new ListTrafficPolicyInstancesByHostedZoneRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ ListTrafficPolicyInstancesByHostedZoneRequest::ListTrafficPolicyInstancesByHoste
 }
 
 /*!
- * @brief  Constructs a new ListTrafficPolicyInstancesByHostedZoneRequest object.
+ * Constructs a ListTrafficPolicyInstancesByHostedZoneRequest object.
  */
 ListTrafficPolicyInstancesByHostedZoneRequest::ListTrafficPolicyInstancesByHostedZoneRequest()
     : Route53Request(new ListTrafficPolicyInstancesByHostedZoneRequestPrivate(Route53Request::ListTrafficPolicyInstancesByHostedZoneAction, this))
@@ -66,14 +63,9 @@ bool ListTrafficPolicyInstancesByHostedZoneRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListTrafficPolicyInstancesByHostedZoneResponse object.
+ * Returns a ListTrafficPolicyInstancesByHostedZoneResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListTrafficPolicyInstancesByHostedZoneResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  Route53Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListTrafficPolicyInstancesByHostedZoneRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * ListTrafficPolicyInstancesByHostedZoneRequest
 }
 
 /*!
- * @internal
+ * \class QtAws::Route53::ListTrafficPolicyInstancesByHostedZoneRequestPrivate
+ * \brief The ListTrafficPolicyInstancesByHostedZoneRequestPrivate class provides private implementation for ListTrafficPolicyInstancesByHostedZoneRequest.
+ * \internal
  *
- * @class  ListTrafficPolicyInstancesByHostedZoneRequestPrivate
- *
- * @brief  Private implementation for ListTrafficPolicyInstancesByHostedZoneRequest.
+ * \inmodule QtAwsRoute53
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListTrafficPolicyInstancesByHostedZoneRequestPrivate object.
- *
- * @param  action  Route53 action being performed.
- * @param  q       Pointer to this object's public ListTrafficPolicyInstancesByHostedZoneRequest instance.
+ * Constructs a ListTrafficPolicyInstancesByHostedZoneRequestPrivate object for Route53 \a action with,
+ * public implementation \a q.
  */
 ListTrafficPolicyInstancesByHostedZoneRequestPrivate::ListTrafficPolicyInstancesByHostedZoneRequestPrivate(
     const Route53Request::Action action, ListTrafficPolicyInstancesByHostedZoneRequest * const q)
@@ -104,15 +93,10 @@ ListTrafficPolicyInstancesByHostedZoneRequestPrivate::ListTrafficPolicyInstances
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListTrafficPolicyInstancesByHostedZoneRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListTrafficPolicyInstancesByHostedZoneRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListTrafficPolicyInstancesByHostedZoneRequest instance.
  */
 ListTrafficPolicyInstancesByHostedZoneRequestPrivate::ListTrafficPolicyInstancesByHostedZoneRequestPrivate(
     const ListTrafficPolicyInstancesByHostedZoneRequestPrivate &other, ListTrafficPolicyInstancesByHostedZoneRequest * const q)

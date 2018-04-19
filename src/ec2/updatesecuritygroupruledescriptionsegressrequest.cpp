@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::UpdateSecurityGroupRuleDescriptionsEgressRequest
- *
  * \brief The UpdateSecurityGroupRuleDescriptionsEgressRequest class provides an interface for EC2 UpdateSecurityGroupRuleDescriptionsEgress requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new UpdateSecurityGroupRuleDescriptionsEgressRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateSecurityGroupRuleDescriptionsEgressRequest::UpdateSecurityGroupRuleDescriptionsEgressRequest(const UpdateSecurityGroupRuleDescriptionsEgressRequest &other)
     : EC2Request(new UpdateSecurityGroupRuleDescriptionsEgressRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ UpdateSecurityGroupRuleDescriptionsEgressRequest::UpdateSecurityGroupRuleDescrip
 }
 
 /*!
- * @brief  Constructs a new UpdateSecurityGroupRuleDescriptionsEgressRequest object.
+ * Constructs a UpdateSecurityGroupRuleDescriptionsEgressRequest object.
  */
 UpdateSecurityGroupRuleDescriptionsEgressRequest::UpdateSecurityGroupRuleDescriptionsEgressRequest()
     : EC2Request(new UpdateSecurityGroupRuleDescriptionsEgressRequestPrivate(EC2Request::UpdateSecurityGroupRuleDescriptionsEgressAction, this))
@@ -70,14 +67,9 @@ bool UpdateSecurityGroupRuleDescriptionsEgressRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateSecurityGroupRuleDescriptionsEgressResponse object.
+ * Returns a UpdateSecurityGroupRuleDescriptionsEgressResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateSecurityGroupRuleDescriptionsEgressResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateSecurityGroupRuleDescriptionsEgressRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * UpdateSecurityGroupRuleDescriptionsEgressRequ
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::UpdateSecurityGroupRuleDescriptionsEgressRequestPrivate
+ * \brief The UpdateSecurityGroupRuleDescriptionsEgressRequestPrivate class provides private implementation for UpdateSecurityGroupRuleDescriptionsEgressRequest.
+ * \internal
  *
- * @class  UpdateSecurityGroupRuleDescriptionsEgressRequestPrivate
- *
- * @brief  Private implementation for UpdateSecurityGroupRuleDescriptionsEgressRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateSecurityGroupRuleDescriptionsEgressRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public UpdateSecurityGroupRuleDescriptionsEgressRequest instance.
+ * Constructs a UpdateSecurityGroupRuleDescriptionsEgressRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 UpdateSecurityGroupRuleDescriptionsEgressRequestPrivate::UpdateSecurityGroupRuleDescriptionsEgressRequestPrivate(
     const EC2Request::Action action, UpdateSecurityGroupRuleDescriptionsEgressRequest * const q)
@@ -108,15 +97,10 @@ UpdateSecurityGroupRuleDescriptionsEgressRequestPrivate::UpdateSecurityGroupRule
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateSecurityGroupRuleDescriptionsEgressRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateSecurityGroupRuleDescriptionsEgressRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateSecurityGroupRuleDescriptionsEgressRequest instance.
  */
 UpdateSecurityGroupRuleDescriptionsEgressRequestPrivate::UpdateSecurityGroupRuleDescriptionsEgressRequestPrivate(
     const UpdateSecurityGroupRuleDescriptionsEgressRequestPrivate &other, UpdateSecurityGroupRuleDescriptionsEgressRequest * const q)

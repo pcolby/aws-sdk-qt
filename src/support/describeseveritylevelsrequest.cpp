@@ -27,10 +27,9 @@ namespace Support {
 
 /*!
  * \class QtAws::Support::DescribeSeverityLevelsRequest
- *
  * \brief The DescribeSeverityLevelsRequest class provides an interface for Support DescribeSeverityLevels requests.
  *
- * \ingroup Support
+ * \inmodule QtAwsSupport
  *
  *  <fullname>AWS Support</fullname>
  * 
@@ -105,9 +104,7 @@ namespace Support {
  */
 
 /*!
- * @brief  Constructs a new DescribeSeverityLevelsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeSeverityLevelsRequest::DescribeSeverityLevelsRequest(const DescribeSeverityLevelsRequest &other)
     : SupportRequest(new DescribeSeverityLevelsRequestPrivate(*other.d_func(), this))
@@ -116,7 +113,7 @@ DescribeSeverityLevelsRequest::DescribeSeverityLevelsRequest(const DescribeSever
 }
 
 /*!
- * @brief  Constructs a new DescribeSeverityLevelsRequest object.
+ * Constructs a DescribeSeverityLevelsRequest object.
  */
 DescribeSeverityLevelsRequest::DescribeSeverityLevelsRequest()
     : SupportRequest(new DescribeSeverityLevelsRequestPrivate(SupportRequest::DescribeSeverityLevelsAction, this))
@@ -134,14 +131,9 @@ bool DescribeSeverityLevelsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeSeverityLevelsResponse object.
+ * Returns a DescribeSeverityLevelsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeSeverityLevelsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SupportClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeSeverityLevelsRequest::response(QNetworkReply * const reply) const
 {
@@ -149,20 +141,17 @@ QtAws::Core::AwsAbstractResponse * DescribeSeverityLevelsRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::Support::DescribeSeverityLevelsRequestPrivate
+ * \brief The DescribeSeverityLevelsRequestPrivate class provides private implementation for DescribeSeverityLevelsRequest.
+ * \internal
  *
- * @class  DescribeSeverityLevelsRequestPrivate
- *
- * @brief  Private implementation for DescribeSeverityLevelsRequest.
+ * \inmodule QtAwsSupport
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeSeverityLevelsRequestPrivate object.
- *
- * @param  action  Support action being performed.
- * @param  q       Pointer to this object's public DescribeSeverityLevelsRequest instance.
+ * Constructs a DescribeSeverityLevelsRequestPrivate object for Support \a action with,
+ * public implementation \a q.
  */
 DescribeSeverityLevelsRequestPrivate::DescribeSeverityLevelsRequestPrivate(
     const SupportRequest::Action action, DescribeSeverityLevelsRequest * const q)
@@ -172,15 +161,10 @@ DescribeSeverityLevelsRequestPrivate::DescribeSeverityLevelsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeSeverityLevelsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeSeverityLevelsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeSeverityLevelsRequest instance.
  */
 DescribeSeverityLevelsRequestPrivate::DescribeSeverityLevelsRequestPrivate(
     const DescribeSeverityLevelsRequestPrivate &other, DescribeSeverityLevelsRequest * const q)

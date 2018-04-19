@@ -27,10 +27,9 @@ namespace GameLift {
 
 /*!
  * \class QtAws::GameLift::CreateMatchmakingRuleSetRequest
- *
  * \brief The CreateMatchmakingRuleSetRequest class provides an interface for GameLift CreateMatchmakingRuleSet requests.
  *
- * \ingroup GameLift
+ * \inmodule QtAwsGameLift
  *
  *  <fullname>Amazon GameLift Service</fullname>
  * 
@@ -473,9 +472,7 @@ namespace GameLift {
  */
 
 /*!
- * @brief  Constructs a new CreateMatchmakingRuleSetRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateMatchmakingRuleSetRequest::CreateMatchmakingRuleSetRequest(const CreateMatchmakingRuleSetRequest &other)
     : GameLiftRequest(new CreateMatchmakingRuleSetRequestPrivate(*other.d_func(), this))
@@ -484,7 +481,7 @@ CreateMatchmakingRuleSetRequest::CreateMatchmakingRuleSetRequest(const CreateMat
 }
 
 /*!
- * @brief  Constructs a new CreateMatchmakingRuleSetRequest object.
+ * Constructs a CreateMatchmakingRuleSetRequest object.
  */
 CreateMatchmakingRuleSetRequest::CreateMatchmakingRuleSetRequest()
     : GameLiftRequest(new CreateMatchmakingRuleSetRequestPrivate(GameLiftRequest::CreateMatchmakingRuleSetAction, this))
@@ -502,14 +499,9 @@ bool CreateMatchmakingRuleSetRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateMatchmakingRuleSetResponse object.
+ * Returns a CreateMatchmakingRuleSetResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateMatchmakingRuleSetResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GameLiftClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateMatchmakingRuleSetRequest::response(QNetworkReply * const reply) const
 {
@@ -517,20 +509,17 @@ QtAws::Core::AwsAbstractResponse * CreateMatchmakingRuleSetRequest::response(QNe
 }
 
 /*!
- * @internal
+ * \class QtAws::GameLift::CreateMatchmakingRuleSetRequestPrivate
+ * \brief The CreateMatchmakingRuleSetRequestPrivate class provides private implementation for CreateMatchmakingRuleSetRequest.
+ * \internal
  *
- * @class  CreateMatchmakingRuleSetRequestPrivate
- *
- * @brief  Private implementation for CreateMatchmakingRuleSetRequest.
+ * \inmodule QtAwsGameLift
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateMatchmakingRuleSetRequestPrivate object.
- *
- * @param  action  GameLift action being performed.
- * @param  q       Pointer to this object's public CreateMatchmakingRuleSetRequest instance.
+ * Constructs a CreateMatchmakingRuleSetRequestPrivate object for GameLift \a action with,
+ * public implementation \a q.
  */
 CreateMatchmakingRuleSetRequestPrivate::CreateMatchmakingRuleSetRequestPrivate(
     const GameLiftRequest::Action action, CreateMatchmakingRuleSetRequest * const q)
@@ -540,15 +529,10 @@ CreateMatchmakingRuleSetRequestPrivate::CreateMatchmakingRuleSetRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateMatchmakingRuleSetRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateMatchmakingRuleSetRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateMatchmakingRuleSetRequest instance.
  */
 CreateMatchmakingRuleSetRequestPrivate::CreateMatchmakingRuleSetRequestPrivate(
     const CreateMatchmakingRuleSetRequestPrivate &other, CreateMatchmakingRuleSetRequest * const q)

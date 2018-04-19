@@ -27,10 +27,9 @@ namespace CloudWatch {
 
 /*!
  * \class QtAws::CloudWatch::DeleteDashboardsRequest
- *
  * \brief The DeleteDashboardsRequest class provides an interface for CloudWatch DeleteDashboards requests.
  *
- * \ingroup CloudWatch
+ * \inmodule QtAwsCloudWatch
  *
  *  Amazon CloudWatch monitors your Amazon Web Services (AWS) resources and the applications you run on AWS in real time.
  *  You can use CloudWatch to collect and track metrics, which are the variables you want to measure for your resources and
@@ -51,9 +50,7 @@ namespace CloudWatch {
  */
 
 /*!
- * @brief  Constructs a new DeleteDashboardsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteDashboardsRequest::DeleteDashboardsRequest(const DeleteDashboardsRequest &other)
     : CloudWatchRequest(new DeleteDashboardsRequestPrivate(*other.d_func(), this))
@@ -62,7 +59,7 @@ DeleteDashboardsRequest::DeleteDashboardsRequest(const DeleteDashboardsRequest &
 }
 
 /*!
- * @brief  Constructs a new DeleteDashboardsRequest object.
+ * Constructs a DeleteDashboardsRequest object.
  */
 DeleteDashboardsRequest::DeleteDashboardsRequest()
     : CloudWatchRequest(new DeleteDashboardsRequestPrivate(CloudWatchRequest::DeleteDashboardsAction, this))
@@ -80,14 +77,9 @@ bool DeleteDashboardsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteDashboardsResponse object.
+ * Returns a DeleteDashboardsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteDashboardsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudWatchClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteDashboardsRequest::response(QNetworkReply * const reply) const
 {
@@ -95,20 +87,17 @@ QtAws::Core::AwsAbstractResponse * DeleteDashboardsRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudWatch::DeleteDashboardsRequestPrivate
+ * \brief The DeleteDashboardsRequestPrivate class provides private implementation for DeleteDashboardsRequest.
+ * \internal
  *
- * @class  DeleteDashboardsRequestPrivate
- *
- * @brief  Private implementation for DeleteDashboardsRequest.
+ * \inmodule QtAwsCloudWatch
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteDashboardsRequestPrivate object.
- *
- * @param  action  CloudWatch action being performed.
- * @param  q       Pointer to this object's public DeleteDashboardsRequest instance.
+ * Constructs a DeleteDashboardsRequestPrivate object for CloudWatch \a action with,
+ * public implementation \a q.
  */
 DeleteDashboardsRequestPrivate::DeleteDashboardsRequestPrivate(
     const CloudWatchRequest::Action action, DeleteDashboardsRequest * const q)
@@ -118,15 +107,10 @@ DeleteDashboardsRequestPrivate::DeleteDashboardsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteDashboardsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteDashboardsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteDashboardsRequest instance.
  */
 DeleteDashboardsRequestPrivate::DeleteDashboardsRequestPrivate(
     const DeleteDashboardsRequestPrivate &other, DeleteDashboardsRequest * const q)

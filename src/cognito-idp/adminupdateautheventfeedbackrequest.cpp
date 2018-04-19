@@ -27,10 +27,9 @@ namespace CognitoIdentityProvider {
 
 /*!
  * \class QtAws::CognitoIdentityProvider::AdminUpdateAuthEventFeedbackRequest
- *
  * \brief The AdminUpdateAuthEventFeedbackRequest class provides an interface for CognitoIdentityProvider AdminUpdateAuthEventFeedback requests.
  *
- * \ingroup CognitoIdentityProvider
+ * \inmodule QtAwsCognitoIdentityProvider
  *
  *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
  *  authenticate a user to obtain tokens related to user identity and access
@@ -47,9 +46,7 @@ namespace CognitoIdentityProvider {
  */
 
 /*!
- * @brief  Constructs a new AdminUpdateAuthEventFeedbackRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AdminUpdateAuthEventFeedbackRequest::AdminUpdateAuthEventFeedbackRequest(const AdminUpdateAuthEventFeedbackRequest &other)
     : CognitoIdentityProviderRequest(new AdminUpdateAuthEventFeedbackRequestPrivate(*other.d_func(), this))
@@ -58,7 +55,7 @@ AdminUpdateAuthEventFeedbackRequest::AdminUpdateAuthEventFeedbackRequest(const A
 }
 
 /*!
- * @brief  Constructs a new AdminUpdateAuthEventFeedbackRequest object.
+ * Constructs a AdminUpdateAuthEventFeedbackRequest object.
  */
 AdminUpdateAuthEventFeedbackRequest::AdminUpdateAuthEventFeedbackRequest()
     : CognitoIdentityProviderRequest(new AdminUpdateAuthEventFeedbackRequestPrivate(CognitoIdentityProviderRequest::AdminUpdateAuthEventFeedbackAction, this))
@@ -76,14 +73,9 @@ bool AdminUpdateAuthEventFeedbackRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AdminUpdateAuthEventFeedbackResponse object.
+ * Returns a AdminUpdateAuthEventFeedbackResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AdminUpdateAuthEventFeedbackResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CognitoIdentityProviderClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AdminUpdateAuthEventFeedbackRequest::response(QNetworkReply * const reply) const
 {
@@ -91,20 +83,17 @@ QtAws::Core::AwsAbstractResponse * AdminUpdateAuthEventFeedbackRequest::response
 }
 
 /*!
- * @internal
+ * \class QtAws::CognitoIdentityProvider::AdminUpdateAuthEventFeedbackRequestPrivate
+ * \brief The AdminUpdateAuthEventFeedbackRequestPrivate class provides private implementation for AdminUpdateAuthEventFeedbackRequest.
+ * \internal
  *
- * @class  AdminUpdateAuthEventFeedbackRequestPrivate
- *
- * @brief  Private implementation for AdminUpdateAuthEventFeedbackRequest.
+ * \inmodule QtAwsCognitoIdentityProvider
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AdminUpdateAuthEventFeedbackRequestPrivate object.
- *
- * @param  action  CognitoIdentityProvider action being performed.
- * @param  q       Pointer to this object's public AdminUpdateAuthEventFeedbackRequest instance.
+ * Constructs a AdminUpdateAuthEventFeedbackRequestPrivate object for CognitoIdentityProvider \a action with,
+ * public implementation \a q.
  */
 AdminUpdateAuthEventFeedbackRequestPrivate::AdminUpdateAuthEventFeedbackRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, AdminUpdateAuthEventFeedbackRequest * const q)
@@ -114,15 +103,10 @@ AdminUpdateAuthEventFeedbackRequestPrivate::AdminUpdateAuthEventFeedbackRequestP
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AdminUpdateAuthEventFeedbackRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AdminUpdateAuthEventFeedbackRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AdminUpdateAuthEventFeedbackRequest instance.
  */
 AdminUpdateAuthEventFeedbackRequestPrivate::AdminUpdateAuthEventFeedbackRequestPrivate(
     const AdminUpdateAuthEventFeedbackRequestPrivate &other, AdminUpdateAuthEventFeedbackRequest * const q)

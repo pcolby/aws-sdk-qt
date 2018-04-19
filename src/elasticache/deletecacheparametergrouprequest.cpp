@@ -27,10 +27,9 @@ namespace ElastiCache {
 
 /*!
  * \class QtAws::ElastiCache::DeleteCacheParameterGroupRequest
- *
  * \brief The DeleteCacheParameterGroupRequest class provides an interface for ElastiCache DeleteCacheParameterGroup requests.
  *
- * \ingroup ElastiCache
+ * \inmodule QtAwsElastiCache
  *
  *  <fullname>Amazon ElastiCache</fullname>
  * 
@@ -51,9 +50,7 @@ namespace ElastiCache {
  */
 
 /*!
- * @brief  Constructs a new DeleteCacheParameterGroupRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteCacheParameterGroupRequest::DeleteCacheParameterGroupRequest(const DeleteCacheParameterGroupRequest &other)
     : ElastiCacheRequest(new DeleteCacheParameterGroupRequestPrivate(*other.d_func(), this))
@@ -62,7 +59,7 @@ DeleteCacheParameterGroupRequest::DeleteCacheParameterGroupRequest(const DeleteC
 }
 
 /*!
- * @brief  Constructs a new DeleteCacheParameterGroupRequest object.
+ * Constructs a DeleteCacheParameterGroupRequest object.
  */
 DeleteCacheParameterGroupRequest::DeleteCacheParameterGroupRequest()
     : ElastiCacheRequest(new DeleteCacheParameterGroupRequestPrivate(ElastiCacheRequest::DeleteCacheParameterGroupAction, this))
@@ -80,14 +77,9 @@ bool DeleteCacheParameterGroupRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteCacheParameterGroupResponse object.
+ * Returns a DeleteCacheParameterGroupResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteCacheParameterGroupResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ElastiCacheClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteCacheParameterGroupRequest::response(QNetworkReply * const reply) const
 {
@@ -95,20 +87,17 @@ QtAws::Core::AwsAbstractResponse * DeleteCacheParameterGroupRequest::response(QN
 }
 
 /*!
- * @internal
+ * \class QtAws::ElastiCache::DeleteCacheParameterGroupRequestPrivate
+ * \brief The DeleteCacheParameterGroupRequestPrivate class provides private implementation for DeleteCacheParameterGroupRequest.
+ * \internal
  *
- * @class  DeleteCacheParameterGroupRequestPrivate
- *
- * @brief  Private implementation for DeleteCacheParameterGroupRequest.
+ * \inmodule QtAwsElastiCache
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteCacheParameterGroupRequestPrivate object.
- *
- * @param  action  ElastiCache action being performed.
- * @param  q       Pointer to this object's public DeleteCacheParameterGroupRequest instance.
+ * Constructs a DeleteCacheParameterGroupRequestPrivate object for ElastiCache \a action with,
+ * public implementation \a q.
  */
 DeleteCacheParameterGroupRequestPrivate::DeleteCacheParameterGroupRequestPrivate(
     const ElastiCacheRequest::Action action, DeleteCacheParameterGroupRequest * const q)
@@ -118,15 +107,10 @@ DeleteCacheParameterGroupRequestPrivate::DeleteCacheParameterGroupRequestPrivate
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteCacheParameterGroupRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteCacheParameterGroupRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteCacheParameterGroupRequest instance.
  */
 DeleteCacheParameterGroupRequestPrivate::DeleteCacheParameterGroupRequestPrivate(
     const DeleteCacheParameterGroupRequestPrivate &other, DeleteCacheParameterGroupRequest * const q)

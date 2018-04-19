@@ -27,10 +27,9 @@ namespace Organizations {
 
 /*!
  * \class QtAws::Organizations::DescribeOrganizationalUnitRequest
- *
  * \brief The DescribeOrganizationalUnitRequest class provides an interface for Organizations DescribeOrganizationalUnit requests.
  *
- * \ingroup Organizations
+ * \inmodule QtAwsOrganizations
  *
  *  <fullname>AWS Organizations API Reference</fullname>
  * 
@@ -179,9 +178,7 @@ namespace Organizations {
  */
 
 /*!
- * @brief  Constructs a new DescribeOrganizationalUnitRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeOrganizationalUnitRequest::DescribeOrganizationalUnitRequest(const DescribeOrganizationalUnitRequest &other)
     : OrganizationsRequest(new DescribeOrganizationalUnitRequestPrivate(*other.d_func(), this))
@@ -190,7 +187,7 @@ DescribeOrganizationalUnitRequest::DescribeOrganizationalUnitRequest(const Descr
 }
 
 /*!
- * @brief  Constructs a new DescribeOrganizationalUnitRequest object.
+ * Constructs a DescribeOrganizationalUnitRequest object.
  */
 DescribeOrganizationalUnitRequest::DescribeOrganizationalUnitRequest()
     : OrganizationsRequest(new DescribeOrganizationalUnitRequestPrivate(OrganizationsRequest::DescribeOrganizationalUnitAction, this))
@@ -208,14 +205,9 @@ bool DescribeOrganizationalUnitRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeOrganizationalUnitResponse object.
+ * Returns a DescribeOrganizationalUnitResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeOrganizationalUnitResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  OrganizationsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeOrganizationalUnitRequest::response(QNetworkReply * const reply) const
 {
@@ -223,20 +215,17 @@ QtAws::Core::AwsAbstractResponse * DescribeOrganizationalUnitRequest::response(Q
 }
 
 /*!
- * @internal
+ * \class QtAws::Organizations::DescribeOrganizationalUnitRequestPrivate
+ * \brief The DescribeOrganizationalUnitRequestPrivate class provides private implementation for DescribeOrganizationalUnitRequest.
+ * \internal
  *
- * @class  DescribeOrganizationalUnitRequestPrivate
- *
- * @brief  Private implementation for DescribeOrganizationalUnitRequest.
+ * \inmodule QtAwsOrganizations
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeOrganizationalUnitRequestPrivate object.
- *
- * @param  action  Organizations action being performed.
- * @param  q       Pointer to this object's public DescribeOrganizationalUnitRequest instance.
+ * Constructs a DescribeOrganizationalUnitRequestPrivate object for Organizations \a action with,
+ * public implementation \a q.
  */
 DescribeOrganizationalUnitRequestPrivate::DescribeOrganizationalUnitRequestPrivate(
     const OrganizationsRequest::Action action, DescribeOrganizationalUnitRequest * const q)
@@ -246,15 +235,10 @@ DescribeOrganizationalUnitRequestPrivate::DescribeOrganizationalUnitRequestPriva
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeOrganizationalUnitRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeOrganizationalUnitRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeOrganizationalUnitRequest instance.
  */
 DescribeOrganizationalUnitRequestPrivate::DescribeOrganizationalUnitRequestPrivate(
     const DescribeOrganizationalUnitRequestPrivate &other, DescribeOrganizationalUnitRequest * const q)

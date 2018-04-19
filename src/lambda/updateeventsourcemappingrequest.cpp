@@ -27,10 +27,9 @@ namespace Lambda {
 
 /*!
  * \class QtAws::Lambda::UpdateEventSourceMappingRequest
- *
  * \brief The UpdateEventSourceMappingRequest class provides an interface for Lambda UpdateEventSourceMapping requests.
  *
- * \ingroup Lambda
+ * \inmodule QtAwsLambda
  *
  *  <fullname>AWS Lambda</fullname>
  * 
@@ -48,9 +47,7 @@ namespace Lambda {
  */
 
 /*!
- * @brief  Constructs a new UpdateEventSourceMappingRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateEventSourceMappingRequest::UpdateEventSourceMappingRequest(const UpdateEventSourceMappingRequest &other)
     : LambdaRequest(new UpdateEventSourceMappingRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ UpdateEventSourceMappingRequest::UpdateEventSourceMappingRequest(const UpdateEve
 }
 
 /*!
- * @brief  Constructs a new UpdateEventSourceMappingRequest object.
+ * Constructs a UpdateEventSourceMappingRequest object.
  */
 UpdateEventSourceMappingRequest::UpdateEventSourceMappingRequest()
     : LambdaRequest(new UpdateEventSourceMappingRequestPrivate(LambdaRequest::UpdateEventSourceMappingAction, this))
@@ -77,14 +74,9 @@ bool UpdateEventSourceMappingRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateEventSourceMappingResponse object.
+ * Returns a UpdateEventSourceMappingResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateEventSourceMappingResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  LambdaClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateEventSourceMappingRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * UpdateEventSourceMappingRequest::response(QNe
 }
 
 /*!
- * @internal
+ * \class QtAws::Lambda::UpdateEventSourceMappingRequestPrivate
+ * \brief The UpdateEventSourceMappingRequestPrivate class provides private implementation for UpdateEventSourceMappingRequest.
+ * \internal
  *
- * @class  UpdateEventSourceMappingRequestPrivate
- *
- * @brief  Private implementation for UpdateEventSourceMappingRequest.
+ * \inmodule QtAwsLambda
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateEventSourceMappingRequestPrivate object.
- *
- * @param  action  Lambda action being performed.
- * @param  q       Pointer to this object's public UpdateEventSourceMappingRequest instance.
+ * Constructs a UpdateEventSourceMappingRequestPrivate object for Lambda \a action with,
+ * public implementation \a q.
  */
 UpdateEventSourceMappingRequestPrivate::UpdateEventSourceMappingRequestPrivate(
     const LambdaRequest::Action action, UpdateEventSourceMappingRequest * const q)
@@ -115,15 +104,10 @@ UpdateEventSourceMappingRequestPrivate::UpdateEventSourceMappingRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateEventSourceMappingRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateEventSourceMappingRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateEventSourceMappingRequest instance.
  */
 UpdateEventSourceMappingRequestPrivate::UpdateEventSourceMappingRequestPrivate(
     const UpdateEventSourceMappingRequestPrivate &other, UpdateEventSourceMappingRequest * const q)

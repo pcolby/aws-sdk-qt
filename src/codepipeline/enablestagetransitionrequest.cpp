@@ -27,10 +27,9 @@ namespace CodePipeline {
 
 /*!
  * \class QtAws::CodePipeline::EnableStageTransitionRequest
- *
  * \brief The EnableStageTransitionRequest class provides an interface for CodePipeline EnableStageTransition requests.
  *
- * \ingroup CodePipeline
+ * \inmodule QtAwsCodePipeline
  *
  *  <fullname>AWS CodePipeline</fullname>
  * 
@@ -200,9 +199,7 @@ namespace CodePipeline {
  */
 
 /*!
- * @brief  Constructs a new EnableStageTransitionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 EnableStageTransitionRequest::EnableStageTransitionRequest(const EnableStageTransitionRequest &other)
     : CodePipelineRequest(new EnableStageTransitionRequestPrivate(*other.d_func(), this))
@@ -211,7 +208,7 @@ EnableStageTransitionRequest::EnableStageTransitionRequest(const EnableStageTran
 }
 
 /*!
- * @brief  Constructs a new EnableStageTransitionRequest object.
+ * Constructs a EnableStageTransitionRequest object.
  */
 EnableStageTransitionRequest::EnableStageTransitionRequest()
     : CodePipelineRequest(new EnableStageTransitionRequestPrivate(CodePipelineRequest::EnableStageTransitionAction, this))
@@ -229,14 +226,9 @@ bool EnableStageTransitionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an EnableStageTransitionResponse object.
+ * Returns a EnableStageTransitionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An EnableStageTransitionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CodePipelineClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * EnableStageTransitionRequest::response(QNetworkReply * const reply) const
 {
@@ -244,20 +236,17 @@ QtAws::Core::AwsAbstractResponse * EnableStageTransitionRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::CodePipeline::EnableStageTransitionRequestPrivate
+ * \brief The EnableStageTransitionRequestPrivate class provides private implementation for EnableStageTransitionRequest.
+ * \internal
  *
- * @class  EnableStageTransitionRequestPrivate
- *
- * @brief  Private implementation for EnableStageTransitionRequest.
+ * \inmodule QtAwsCodePipeline
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new EnableStageTransitionRequestPrivate object.
- *
- * @param  action  CodePipeline action being performed.
- * @param  q       Pointer to this object's public EnableStageTransitionRequest instance.
+ * Constructs a EnableStageTransitionRequestPrivate object for CodePipeline \a action with,
+ * public implementation \a q.
  */
 EnableStageTransitionRequestPrivate::EnableStageTransitionRequestPrivate(
     const CodePipelineRequest::Action action, EnableStageTransitionRequest * const q)
@@ -267,15 +256,10 @@ EnableStageTransitionRequestPrivate::EnableStageTransitionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new EnableStageTransitionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the EnableStageTransitionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public EnableStageTransitionRequest instance.
  */
 EnableStageTransitionRequestPrivate::EnableStageTransitionRequestPrivate(
     const EnableStageTransitionRequestPrivate &other, EnableStageTransitionRequest * const q)

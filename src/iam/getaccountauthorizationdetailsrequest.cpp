@@ -27,10 +27,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::GetAccountAuthorizationDetailsRequest
- *
  * \brief The GetAccountAuthorizationDetailsRequest class provides an interface for IAM GetAccountAuthorizationDetails requests.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -102,9 +101,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new GetAccountAuthorizationDetailsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetAccountAuthorizationDetailsRequest::GetAccountAuthorizationDetailsRequest(const GetAccountAuthorizationDetailsRequest &other)
     : IAMRequest(new GetAccountAuthorizationDetailsRequestPrivate(*other.d_func(), this))
@@ -113,7 +110,7 @@ GetAccountAuthorizationDetailsRequest::GetAccountAuthorizationDetailsRequest(con
 }
 
 /*!
- * @brief  Constructs a new GetAccountAuthorizationDetailsRequest object.
+ * Constructs a GetAccountAuthorizationDetailsRequest object.
  */
 GetAccountAuthorizationDetailsRequest::GetAccountAuthorizationDetailsRequest()
     : IAMRequest(new GetAccountAuthorizationDetailsRequestPrivate(IAMRequest::GetAccountAuthorizationDetailsAction, this))
@@ -131,14 +128,9 @@ bool GetAccountAuthorizationDetailsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetAccountAuthorizationDetailsResponse object.
+ * Returns a GetAccountAuthorizationDetailsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetAccountAuthorizationDetailsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IAMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetAccountAuthorizationDetailsRequest::response(QNetworkReply * const reply) const
 {
@@ -146,20 +138,17 @@ QtAws::Core::AwsAbstractResponse * GetAccountAuthorizationDetailsRequest::respon
 }
 
 /*!
- * @internal
+ * \class QtAws::IAM::GetAccountAuthorizationDetailsRequestPrivate
+ * \brief The GetAccountAuthorizationDetailsRequestPrivate class provides private implementation for GetAccountAuthorizationDetailsRequest.
+ * \internal
  *
- * @class  GetAccountAuthorizationDetailsRequestPrivate
- *
- * @brief  Private implementation for GetAccountAuthorizationDetailsRequest.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetAccountAuthorizationDetailsRequestPrivate object.
- *
- * @param  action  IAM action being performed.
- * @param  q       Pointer to this object's public GetAccountAuthorizationDetailsRequest instance.
+ * Constructs a GetAccountAuthorizationDetailsRequestPrivate object for IAM \a action with,
+ * public implementation \a q.
  */
 GetAccountAuthorizationDetailsRequestPrivate::GetAccountAuthorizationDetailsRequestPrivate(
     const IAMRequest::Action action, GetAccountAuthorizationDetailsRequest * const q)
@@ -169,15 +158,10 @@ GetAccountAuthorizationDetailsRequestPrivate::GetAccountAuthorizationDetailsRequ
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetAccountAuthorizationDetailsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetAccountAuthorizationDetailsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetAccountAuthorizationDetailsRequest instance.
  */
 GetAccountAuthorizationDetailsRequestPrivate::GetAccountAuthorizationDetailsRequestPrivate(
     const GetAccountAuthorizationDetailsRequestPrivate &other, GetAccountAuthorizationDetailsRequest * const q)

@@ -27,10 +27,9 @@ namespace WorkSpaces {
 
 /*!
  * \class QtAws::WorkSpaces::CreateWorkspacesRequest
- *
  * \brief The CreateWorkspacesRequest class provides an interface for WorkSpaces CreateWorkspaces requests.
  *
- * \ingroup WorkSpaces
+ * \inmodule QtAwsWorkSpaces
  *
  *  <fullname>Amazon WorkSpaces Service</fullname>
  * 
@@ -40,9 +39,7 @@ namespace WorkSpaces {
  */
 
 /*!
- * @brief  Constructs a new CreateWorkspacesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateWorkspacesRequest::CreateWorkspacesRequest(const CreateWorkspacesRequest &other)
     : WorkSpacesRequest(new CreateWorkspacesRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ CreateWorkspacesRequest::CreateWorkspacesRequest(const CreateWorkspacesRequest &
 }
 
 /*!
- * @brief  Constructs a new CreateWorkspacesRequest object.
+ * Constructs a CreateWorkspacesRequest object.
  */
 CreateWorkspacesRequest::CreateWorkspacesRequest()
     : WorkSpacesRequest(new CreateWorkspacesRequestPrivate(WorkSpacesRequest::CreateWorkspacesAction, this))
@@ -69,14 +66,9 @@ bool CreateWorkspacesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateWorkspacesResponse object.
+ * Returns a CreateWorkspacesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateWorkspacesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WorkSpacesClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateWorkspacesRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * CreateWorkspacesRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::WorkSpaces::CreateWorkspacesRequestPrivate
+ * \brief The CreateWorkspacesRequestPrivate class provides private implementation for CreateWorkspacesRequest.
+ * \internal
  *
- * @class  CreateWorkspacesRequestPrivate
- *
- * @brief  Private implementation for CreateWorkspacesRequest.
+ * \inmodule QtAwsWorkSpaces
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateWorkspacesRequestPrivate object.
- *
- * @param  action  WorkSpaces action being performed.
- * @param  q       Pointer to this object's public CreateWorkspacesRequest instance.
+ * Constructs a CreateWorkspacesRequestPrivate object for WorkSpaces \a action with,
+ * public implementation \a q.
  */
 CreateWorkspacesRequestPrivate::CreateWorkspacesRequestPrivate(
     const WorkSpacesRequest::Action action, CreateWorkspacesRequest * const q)
@@ -107,15 +96,10 @@ CreateWorkspacesRequestPrivate::CreateWorkspacesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateWorkspacesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateWorkspacesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateWorkspacesRequest instance.
  */
 CreateWorkspacesRequestPrivate::CreateWorkspacesRequestPrivate(
     const CreateWorkspacesRequestPrivate &other, CreateWorkspacesRequest * const q)

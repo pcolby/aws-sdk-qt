@@ -27,10 +27,9 @@ namespace OpsWorks {
 
 /*!
  * \class QtAws::OpsWorks::DescribeStacksRequest
- *
  * \brief The DescribeStacksRequest class provides an interface for OpsWorks DescribeStacks requests.
  *
- * \ingroup OpsWorks
+ * \inmodule QtAwsOpsWorks
  *
  *  <fullname>AWS OpsWorks</fullname>
  * 
@@ -143,9 +142,7 @@ namespace OpsWorks {
  */
 
 /*!
- * @brief  Constructs a new DescribeStacksRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeStacksRequest::DescribeStacksRequest(const DescribeStacksRequest &other)
     : OpsWorksRequest(new DescribeStacksRequestPrivate(*other.d_func(), this))
@@ -154,7 +151,7 @@ DescribeStacksRequest::DescribeStacksRequest(const DescribeStacksRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DescribeStacksRequest object.
+ * Constructs a DescribeStacksRequest object.
  */
 DescribeStacksRequest::DescribeStacksRequest()
     : OpsWorksRequest(new DescribeStacksRequestPrivate(OpsWorksRequest::DescribeStacksAction, this))
@@ -172,14 +169,9 @@ bool DescribeStacksRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeStacksResponse object.
+ * Returns a DescribeStacksResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeStacksResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  OpsWorksClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeStacksRequest::response(QNetworkReply * const reply) const
 {
@@ -187,20 +179,17 @@ QtAws::Core::AwsAbstractResponse * DescribeStacksRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::OpsWorks::DescribeStacksRequestPrivate
+ * \brief The DescribeStacksRequestPrivate class provides private implementation for DescribeStacksRequest.
+ * \internal
  *
- * @class  DescribeStacksRequestPrivate
- *
- * @brief  Private implementation for DescribeStacksRequest.
+ * \inmodule QtAwsOpsWorks
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeStacksRequestPrivate object.
- *
- * @param  action  OpsWorks action being performed.
- * @param  q       Pointer to this object's public DescribeStacksRequest instance.
+ * Constructs a DescribeStacksRequestPrivate object for OpsWorks \a action with,
+ * public implementation \a q.
  */
 DescribeStacksRequestPrivate::DescribeStacksRequestPrivate(
     const OpsWorksRequest::Action action, DescribeStacksRequest * const q)
@@ -210,15 +199,10 @@ DescribeStacksRequestPrivate::DescribeStacksRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeStacksRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeStacksRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeStacksRequest instance.
  */
 DescribeStacksRequestPrivate::DescribeStacksRequestPrivate(
     const DescribeStacksRequestPrivate &other, DescribeStacksRequest * const q)

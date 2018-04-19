@@ -27,10 +27,9 @@ namespace OpsWorks {
 
 /*!
  * \class QtAws::OpsWorks::CreateUserProfileRequest
- *
  * \brief The CreateUserProfileRequest class provides an interface for OpsWorks CreateUserProfile requests.
  *
- * \ingroup OpsWorks
+ * \inmodule QtAwsOpsWorks
  *
  *  <fullname>AWS OpsWorks</fullname>
  * 
@@ -143,9 +142,7 @@ namespace OpsWorks {
  */
 
 /*!
- * @brief  Constructs a new CreateUserProfileRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateUserProfileRequest::CreateUserProfileRequest(const CreateUserProfileRequest &other)
     : OpsWorksRequest(new CreateUserProfileRequestPrivate(*other.d_func(), this))
@@ -154,7 +151,7 @@ CreateUserProfileRequest::CreateUserProfileRequest(const CreateUserProfileReques
 }
 
 /*!
- * @brief  Constructs a new CreateUserProfileRequest object.
+ * Constructs a CreateUserProfileRequest object.
  */
 CreateUserProfileRequest::CreateUserProfileRequest()
     : OpsWorksRequest(new CreateUserProfileRequestPrivate(OpsWorksRequest::CreateUserProfileAction, this))
@@ -172,14 +169,9 @@ bool CreateUserProfileRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateUserProfileResponse object.
+ * Returns a CreateUserProfileResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateUserProfileResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  OpsWorksClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateUserProfileRequest::response(QNetworkReply * const reply) const
 {
@@ -187,20 +179,17 @@ QtAws::Core::AwsAbstractResponse * CreateUserProfileRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::OpsWorks::CreateUserProfileRequestPrivate
+ * \brief The CreateUserProfileRequestPrivate class provides private implementation for CreateUserProfileRequest.
+ * \internal
  *
- * @class  CreateUserProfileRequestPrivate
- *
- * @brief  Private implementation for CreateUserProfileRequest.
+ * \inmodule QtAwsOpsWorks
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateUserProfileRequestPrivate object.
- *
- * @param  action  OpsWorks action being performed.
- * @param  q       Pointer to this object's public CreateUserProfileRequest instance.
+ * Constructs a CreateUserProfileRequestPrivate object for OpsWorks \a action with,
+ * public implementation \a q.
  */
 CreateUserProfileRequestPrivate::CreateUserProfileRequestPrivate(
     const OpsWorksRequest::Action action, CreateUserProfileRequest * const q)
@@ -210,15 +199,10 @@ CreateUserProfileRequestPrivate::CreateUserProfileRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateUserProfileRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateUserProfileRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateUserProfileRequest instance.
  */
 CreateUserProfileRequestPrivate::CreateUserProfileRequestPrivate(
     const CreateUserProfileRequestPrivate &other, CreateUserProfileRequest * const q)

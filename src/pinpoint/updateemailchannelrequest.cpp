@@ -27,19 +27,16 @@ namespace Pinpoint {
 
 /*!
  * \class QtAws::Pinpoint::UpdateEmailChannelRequest
- *
  * \brief The UpdateEmailChannelRequest class provides an interface for Pinpoint UpdateEmailChannel requests.
  *
- * \ingroup Pinpoint
+ * \inmodule QtAwsPinpoint
  *
  *
  * \sa PinpointClient::updateEmailChannel
  */
 
 /*!
- * @brief  Constructs a new UpdateEmailChannelRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateEmailChannelRequest::UpdateEmailChannelRequest(const UpdateEmailChannelRequest &other)
     : PinpointRequest(new UpdateEmailChannelRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ UpdateEmailChannelRequest::UpdateEmailChannelRequest(const UpdateEmailChannelReq
 }
 
 /*!
- * @brief  Constructs a new UpdateEmailChannelRequest object.
+ * Constructs a UpdateEmailChannelRequest object.
  */
 UpdateEmailChannelRequest::UpdateEmailChannelRequest()
     : PinpointRequest(new UpdateEmailChannelRequestPrivate(PinpointRequest::UpdateEmailChannelAction, this))
@@ -66,14 +63,9 @@ bool UpdateEmailChannelRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateEmailChannelResponse object.
+ * Returns a UpdateEmailChannelResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateEmailChannelResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  PinpointClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateEmailChannelRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * UpdateEmailChannelRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::Pinpoint::UpdateEmailChannelRequestPrivate
+ * \brief The UpdateEmailChannelRequestPrivate class provides private implementation for UpdateEmailChannelRequest.
+ * \internal
  *
- * @class  UpdateEmailChannelRequestPrivate
- *
- * @brief  Private implementation for UpdateEmailChannelRequest.
+ * \inmodule QtAwsPinpoint
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateEmailChannelRequestPrivate object.
- *
- * @param  action  Pinpoint action being performed.
- * @param  q       Pointer to this object's public UpdateEmailChannelRequest instance.
+ * Constructs a UpdateEmailChannelRequestPrivate object for Pinpoint \a action with,
+ * public implementation \a q.
  */
 UpdateEmailChannelRequestPrivate::UpdateEmailChannelRequestPrivate(
     const PinpointRequest::Action action, UpdateEmailChannelRequest * const q)
@@ -104,15 +93,10 @@ UpdateEmailChannelRequestPrivate::UpdateEmailChannelRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateEmailChannelRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateEmailChannelRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateEmailChannelRequest instance.
  */
 UpdateEmailChannelRequestPrivate::UpdateEmailChannelRequestPrivate(
     const UpdateEmailChannelRequestPrivate &other, UpdateEmailChannelRequest * const q)

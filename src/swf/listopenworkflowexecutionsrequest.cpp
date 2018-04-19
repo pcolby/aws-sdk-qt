@@ -27,10 +27,9 @@ namespace SWF {
 
 /*!
  * \class QtAws::SWF::ListOpenWorkflowExecutionsRequest
- *
  * \brief The ListOpenWorkflowExecutionsRequest class provides an interface for SWF ListOpenWorkflowExecutions requests.
  *
- * \ingroup SWF
+ * \inmodule QtAwsSWF
  *
  *  <fullname>Amazon Simple Workflow Service</fullname>
  * 
@@ -53,9 +52,7 @@ namespace SWF {
  */
 
 /*!
- * @brief  Constructs a new ListOpenWorkflowExecutionsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListOpenWorkflowExecutionsRequest::ListOpenWorkflowExecutionsRequest(const ListOpenWorkflowExecutionsRequest &other)
     : SWFRequest(new ListOpenWorkflowExecutionsRequestPrivate(*other.d_func(), this))
@@ -64,7 +61,7 @@ ListOpenWorkflowExecutionsRequest::ListOpenWorkflowExecutionsRequest(const ListO
 }
 
 /*!
- * @brief  Constructs a new ListOpenWorkflowExecutionsRequest object.
+ * Constructs a ListOpenWorkflowExecutionsRequest object.
  */
 ListOpenWorkflowExecutionsRequest::ListOpenWorkflowExecutionsRequest()
     : SWFRequest(new ListOpenWorkflowExecutionsRequestPrivate(SWFRequest::ListOpenWorkflowExecutionsAction, this))
@@ -82,14 +79,9 @@ bool ListOpenWorkflowExecutionsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListOpenWorkflowExecutionsResponse object.
+ * Returns a ListOpenWorkflowExecutionsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListOpenWorkflowExecutionsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SWFClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListOpenWorkflowExecutionsRequest::response(QNetworkReply * const reply) const
 {
@@ -97,20 +89,17 @@ QtAws::Core::AwsAbstractResponse * ListOpenWorkflowExecutionsRequest::response(Q
 }
 
 /*!
- * @internal
+ * \class QtAws::SWF::ListOpenWorkflowExecutionsRequestPrivate
+ * \brief The ListOpenWorkflowExecutionsRequestPrivate class provides private implementation for ListOpenWorkflowExecutionsRequest.
+ * \internal
  *
- * @class  ListOpenWorkflowExecutionsRequestPrivate
- *
- * @brief  Private implementation for ListOpenWorkflowExecutionsRequest.
+ * \inmodule QtAwsSWF
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListOpenWorkflowExecutionsRequestPrivate object.
- *
- * @param  action  SWF action being performed.
- * @param  q       Pointer to this object's public ListOpenWorkflowExecutionsRequest instance.
+ * Constructs a ListOpenWorkflowExecutionsRequestPrivate object for SWF \a action with,
+ * public implementation \a q.
  */
 ListOpenWorkflowExecutionsRequestPrivate::ListOpenWorkflowExecutionsRequestPrivate(
     const SWFRequest::Action action, ListOpenWorkflowExecutionsRequest * const q)
@@ -120,15 +109,10 @@ ListOpenWorkflowExecutionsRequestPrivate::ListOpenWorkflowExecutionsRequestPriva
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListOpenWorkflowExecutionsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListOpenWorkflowExecutionsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListOpenWorkflowExecutionsRequest instance.
  */
 ListOpenWorkflowExecutionsRequestPrivate::ListOpenWorkflowExecutionsRequestPrivate(
     const ListOpenWorkflowExecutionsRequestPrivate &other, ListOpenWorkflowExecutionsRequest * const q)

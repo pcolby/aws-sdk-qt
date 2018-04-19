@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DescribeVpnConnectionsRequest
- *
  * \brief The DescribeVpnConnectionsRequest class provides an interface for EC2 DescribeVpnConnections requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DescribeVpnConnectionsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeVpnConnectionsRequest::DescribeVpnConnectionsRequest(const DescribeVpnConnectionsRequest &other)
     : EC2Request(new DescribeVpnConnectionsRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ DescribeVpnConnectionsRequest::DescribeVpnConnectionsRequest(const DescribeVpnCo
 }
 
 /*!
- * @brief  Constructs a new DescribeVpnConnectionsRequest object.
+ * Constructs a DescribeVpnConnectionsRequest object.
  */
 DescribeVpnConnectionsRequest::DescribeVpnConnectionsRequest()
     : EC2Request(new DescribeVpnConnectionsRequestPrivate(EC2Request::DescribeVpnConnectionsAction, this))
@@ -70,14 +67,9 @@ bool DescribeVpnConnectionsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeVpnConnectionsResponse object.
+ * Returns a DescribeVpnConnectionsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeVpnConnectionsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeVpnConnectionsRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * DescribeVpnConnectionsRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::DescribeVpnConnectionsRequestPrivate
+ * \brief The DescribeVpnConnectionsRequestPrivate class provides private implementation for DescribeVpnConnectionsRequest.
+ * \internal
  *
- * @class  DescribeVpnConnectionsRequestPrivate
- *
- * @brief  Private implementation for DescribeVpnConnectionsRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeVpnConnectionsRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public DescribeVpnConnectionsRequest instance.
+ * Constructs a DescribeVpnConnectionsRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 DescribeVpnConnectionsRequestPrivate::DescribeVpnConnectionsRequestPrivate(
     const EC2Request::Action action, DescribeVpnConnectionsRequest * const q)
@@ -108,15 +97,10 @@ DescribeVpnConnectionsRequestPrivate::DescribeVpnConnectionsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeVpnConnectionsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeVpnConnectionsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeVpnConnectionsRequest instance.
  */
 DescribeVpnConnectionsRequestPrivate::DescribeVpnConnectionsRequestPrivate(
     const DescribeVpnConnectionsRequestPrivate &other, DescribeVpnConnectionsRequest * const q)

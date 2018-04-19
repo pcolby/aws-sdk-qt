@@ -27,10 +27,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::DeleteEventSubscriptionRequest
- *
  * \brief The DeleteEventSubscriptionRequest class provides an interface for RDS DeleteEventSubscription requests.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -101,9 +100,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new DeleteEventSubscriptionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteEventSubscriptionRequest::DeleteEventSubscriptionRequest(const DeleteEventSubscriptionRequest &other)
     : RDSRequest(new DeleteEventSubscriptionRequestPrivate(*other.d_func(), this))
@@ -112,7 +109,7 @@ DeleteEventSubscriptionRequest::DeleteEventSubscriptionRequest(const DeleteEvent
 }
 
 /*!
- * @brief  Constructs a new DeleteEventSubscriptionRequest object.
+ * Constructs a DeleteEventSubscriptionRequest object.
  */
 DeleteEventSubscriptionRequest::DeleteEventSubscriptionRequest()
     : RDSRequest(new DeleteEventSubscriptionRequestPrivate(RDSRequest::DeleteEventSubscriptionAction, this))
@@ -130,14 +127,9 @@ bool DeleteEventSubscriptionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteEventSubscriptionResponse object.
+ * Returns a DeleteEventSubscriptionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteEventSubscriptionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RDSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteEventSubscriptionRequest::response(QNetworkReply * const reply) const
 {
@@ -145,20 +137,17 @@ QtAws::Core::AwsAbstractResponse * DeleteEventSubscriptionRequest::response(QNet
 }
 
 /*!
- * @internal
+ * \class QtAws::RDS::DeleteEventSubscriptionRequestPrivate
+ * \brief The DeleteEventSubscriptionRequestPrivate class provides private implementation for DeleteEventSubscriptionRequest.
+ * \internal
  *
- * @class  DeleteEventSubscriptionRequestPrivate
- *
- * @brief  Private implementation for DeleteEventSubscriptionRequest.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteEventSubscriptionRequestPrivate object.
- *
- * @param  action  RDS action being performed.
- * @param  q       Pointer to this object's public DeleteEventSubscriptionRequest instance.
+ * Constructs a DeleteEventSubscriptionRequestPrivate object for RDS \a action with,
+ * public implementation \a q.
  */
 DeleteEventSubscriptionRequestPrivate::DeleteEventSubscriptionRequestPrivate(
     const RDSRequest::Action action, DeleteEventSubscriptionRequest * const q)
@@ -168,15 +157,10 @@ DeleteEventSubscriptionRequestPrivate::DeleteEventSubscriptionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteEventSubscriptionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteEventSubscriptionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteEventSubscriptionRequest instance.
  */
 DeleteEventSubscriptionRequestPrivate::DeleteEventSubscriptionRequestPrivate(
     const DeleteEventSubscriptionRequestPrivate &other, DeleteEventSubscriptionRequest * const q)

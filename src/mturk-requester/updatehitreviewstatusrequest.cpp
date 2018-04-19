@@ -27,19 +27,16 @@ namespace MTurk {
 
 /*!
  * \class QtAws::MTurk::UpdateHITReviewStatusRequest
- *
  * \brief The UpdateHITReviewStatusRequest class provides an interface for MTurk UpdateHITReviewStatus requests.
  *
- * \ingroup MTurk
+ * \inmodule QtAwsMTurk
  *
  *
  * \sa MTurkClient::updateHITReviewStatus
  */
 
 /*!
- * @brief  Constructs a new UpdateHITReviewStatusRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateHITReviewStatusRequest::UpdateHITReviewStatusRequest(const UpdateHITReviewStatusRequest &other)
     : MTurkRequest(new UpdateHITReviewStatusRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ UpdateHITReviewStatusRequest::UpdateHITReviewStatusRequest(const UpdateHITReview
 }
 
 /*!
- * @brief  Constructs a new UpdateHITReviewStatusRequest object.
+ * Constructs a UpdateHITReviewStatusRequest object.
  */
 UpdateHITReviewStatusRequest::UpdateHITReviewStatusRequest()
     : MTurkRequest(new UpdateHITReviewStatusRequestPrivate(MTurkRequest::UpdateHITReviewStatusAction, this))
@@ -66,14 +63,9 @@ bool UpdateHITReviewStatusRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateHITReviewStatusResponse object.
+ * Returns a UpdateHITReviewStatusResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateHITReviewStatusResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MTurkClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateHITReviewStatusRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * UpdateHITReviewStatusRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::MTurk::UpdateHITReviewStatusRequestPrivate
+ * \brief The UpdateHITReviewStatusRequestPrivate class provides private implementation for UpdateHITReviewStatusRequest.
+ * \internal
  *
- * @class  UpdateHITReviewStatusRequestPrivate
- *
- * @brief  Private implementation for UpdateHITReviewStatusRequest.
+ * \inmodule QtAwsMTurk
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateHITReviewStatusRequestPrivate object.
- *
- * @param  action  MTurk action being performed.
- * @param  q       Pointer to this object's public UpdateHITReviewStatusRequest instance.
+ * Constructs a UpdateHITReviewStatusRequestPrivate object for MTurk \a action with,
+ * public implementation \a q.
  */
 UpdateHITReviewStatusRequestPrivate::UpdateHITReviewStatusRequestPrivate(
     const MTurkRequest::Action action, UpdateHITReviewStatusRequest * const q)
@@ -104,15 +93,10 @@ UpdateHITReviewStatusRequestPrivate::UpdateHITReviewStatusRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateHITReviewStatusRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateHITReviewStatusRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateHITReviewStatusRequest instance.
  */
 UpdateHITReviewStatusRequestPrivate::UpdateHITReviewStatusRequestPrivate(
     const UpdateHITReviewStatusRequestPrivate &other, UpdateHITReviewStatusRequest * const q)

@@ -27,10 +27,9 @@ namespace CloudFormation {
 
 /*!
  * \class QtAws::CloudFormation::DescribeStackEventsRequest
- *
  * \brief The DescribeStackEventsRequest class provides an interface for CloudFormation DescribeStackEvents requests.
  *
- * \ingroup CloudFormation
+ * \inmodule QtAwsCloudFormation
  *
  *  <fullname>AWS CloudFormation</fullname>
  * 
@@ -59,9 +58,7 @@ namespace CloudFormation {
  */
 
 /*!
- * @brief  Constructs a new DescribeStackEventsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeStackEventsRequest::DescribeStackEventsRequest(const DescribeStackEventsRequest &other)
     : CloudFormationRequest(new DescribeStackEventsRequestPrivate(*other.d_func(), this))
@@ -70,7 +67,7 @@ DescribeStackEventsRequest::DescribeStackEventsRequest(const DescribeStackEvents
 }
 
 /*!
- * @brief  Constructs a new DescribeStackEventsRequest object.
+ * Constructs a DescribeStackEventsRequest object.
  */
 DescribeStackEventsRequest::DescribeStackEventsRequest()
     : CloudFormationRequest(new DescribeStackEventsRequestPrivate(CloudFormationRequest::DescribeStackEventsAction, this))
@@ -88,14 +85,9 @@ bool DescribeStackEventsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeStackEventsResponse object.
+ * Returns a DescribeStackEventsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeStackEventsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudFormationClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeStackEventsRequest::response(QNetworkReply * const reply) const
 {
@@ -103,20 +95,17 @@ QtAws::Core::AwsAbstractResponse * DescribeStackEventsRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudFormation::DescribeStackEventsRequestPrivate
+ * \brief The DescribeStackEventsRequestPrivate class provides private implementation for DescribeStackEventsRequest.
+ * \internal
  *
- * @class  DescribeStackEventsRequestPrivate
- *
- * @brief  Private implementation for DescribeStackEventsRequest.
+ * \inmodule QtAwsCloudFormation
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeStackEventsRequestPrivate object.
- *
- * @param  action  CloudFormation action being performed.
- * @param  q       Pointer to this object's public DescribeStackEventsRequest instance.
+ * Constructs a DescribeStackEventsRequestPrivate object for CloudFormation \a action with,
+ * public implementation \a q.
  */
 DescribeStackEventsRequestPrivate::DescribeStackEventsRequestPrivate(
     const CloudFormationRequest::Action action, DescribeStackEventsRequest * const q)
@@ -126,15 +115,10 @@ DescribeStackEventsRequestPrivate::DescribeStackEventsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeStackEventsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeStackEventsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeStackEventsRequest instance.
  */
 DescribeStackEventsRequestPrivate::DescribeStackEventsRequestPrivate(
     const DescribeStackEventsRequestPrivate &other, DescribeStackEventsRequest * const q)

@@ -27,10 +27,9 @@ namespace DeviceFarm {
 
 /*!
  * \class QtAws::DeviceFarm::ListUploadsRequest
- *
  * \brief The ListUploadsRequest class provides an interface for DeviceFarm ListUploads requests.
  *
- * \ingroup DeviceFarm
+ * \inmodule QtAwsDeviceFarm
  *
  *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
  *  phones, tablets, and other devices in the
@@ -39,9 +38,7 @@ namespace DeviceFarm {
  */
 
 /*!
- * @brief  Constructs a new ListUploadsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListUploadsRequest::ListUploadsRequest(const ListUploadsRequest &other)
     : DeviceFarmRequest(new ListUploadsRequestPrivate(*other.d_func(), this))
@@ -50,7 +47,7 @@ ListUploadsRequest::ListUploadsRequest(const ListUploadsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ListUploadsRequest object.
+ * Constructs a ListUploadsRequest object.
  */
 ListUploadsRequest::ListUploadsRequest()
     : DeviceFarmRequest(new ListUploadsRequestPrivate(DeviceFarmRequest::ListUploadsAction, this))
@@ -68,14 +65,9 @@ bool ListUploadsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListUploadsResponse object.
+ * Returns a ListUploadsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListUploadsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DeviceFarmClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListUploadsRequest::response(QNetworkReply * const reply) const
 {
@@ -83,20 +75,17 @@ QtAws::Core::AwsAbstractResponse * ListUploadsRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::DeviceFarm::ListUploadsRequestPrivate
+ * \brief The ListUploadsRequestPrivate class provides private implementation for ListUploadsRequest.
+ * \internal
  *
- * @class  ListUploadsRequestPrivate
- *
- * @brief  Private implementation for ListUploadsRequest.
+ * \inmodule QtAwsDeviceFarm
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListUploadsRequestPrivate object.
- *
- * @param  action  DeviceFarm action being performed.
- * @param  q       Pointer to this object's public ListUploadsRequest instance.
+ * Constructs a ListUploadsRequestPrivate object for DeviceFarm \a action with,
+ * public implementation \a q.
  */
 ListUploadsRequestPrivate::ListUploadsRequestPrivate(
     const DeviceFarmRequest::Action action, ListUploadsRequest * const q)
@@ -106,15 +95,10 @@ ListUploadsRequestPrivate::ListUploadsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListUploadsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListUploadsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListUploadsRequest instance.
  */
 ListUploadsRequestPrivate::ListUploadsRequestPrivate(
     const ListUploadsRequestPrivate &other, ListUploadsRequest * const q)

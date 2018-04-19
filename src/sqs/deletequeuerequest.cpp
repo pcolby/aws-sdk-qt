@@ -27,10 +27,9 @@ namespace SQS {
 
 /*!
  * \class QtAws::SQS::DeleteQueueRequest
- *
  * \brief The DeleteQueueRequest class provides an interface for SQS DeleteQueue requests.
  *
- * \ingroup SQS
+ * \inmodule QtAwsSQS
  *
  *  Welcome to the <i>Amazon Simple Queue Service API
  * 
@@ -103,9 +102,7 @@ namespace SQS {
  */
 
 /*!
- * @brief  Constructs a new DeleteQueueRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteQueueRequest::DeleteQueueRequest(const DeleteQueueRequest &other)
     : SQSRequest(new DeleteQueueRequestPrivate(*other.d_func(), this))
@@ -114,7 +111,7 @@ DeleteQueueRequest::DeleteQueueRequest(const DeleteQueueRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DeleteQueueRequest object.
+ * Constructs a DeleteQueueRequest object.
  */
 DeleteQueueRequest::DeleteQueueRequest()
     : SQSRequest(new DeleteQueueRequestPrivate(SQSRequest::DeleteQueueAction, this))
@@ -132,14 +129,9 @@ bool DeleteQueueRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteQueueResponse object.
+ * Returns a DeleteQueueResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteQueueResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SQSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteQueueRequest::response(QNetworkReply * const reply) const
 {
@@ -147,20 +139,17 @@ QtAws::Core::AwsAbstractResponse * DeleteQueueRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::SQS::DeleteQueueRequestPrivate
+ * \brief The DeleteQueueRequestPrivate class provides private implementation for DeleteQueueRequest.
+ * \internal
  *
- * @class  DeleteQueueRequestPrivate
- *
- * @brief  Private implementation for DeleteQueueRequest.
+ * \inmodule QtAwsSQS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteQueueRequestPrivate object.
- *
- * @param  action  SQS action being performed.
- * @param  q       Pointer to this object's public DeleteQueueRequest instance.
+ * Constructs a DeleteQueueRequestPrivate object for SQS \a action with,
+ * public implementation \a q.
  */
 DeleteQueueRequestPrivate::DeleteQueueRequestPrivate(
     const SQSRequest::Action action, DeleteQueueRequest * const q)
@@ -170,15 +159,10 @@ DeleteQueueRequestPrivate::DeleteQueueRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteQueueRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteQueueRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteQueueRequest instance.
  */
 DeleteQueueRequestPrivate::DeleteQueueRequestPrivate(
     const DeleteQueueRequestPrivate &other, DeleteQueueRequest * const q)

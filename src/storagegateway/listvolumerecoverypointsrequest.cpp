@@ -27,10 +27,9 @@ namespace StorageGateway {
 
 /*!
  * \class QtAws::StorageGateway::ListVolumeRecoveryPointsRequest
- *
  * \brief The ListVolumeRecoveryPointsRequest class provides an interface for StorageGateway ListVolumeRecoveryPoints requests.
  *
- * \ingroup StorageGateway
+ * \inmodule QtAwsStorageGateway
  *
  *  <fullname>AWS Storage Gateway Service</fullname>
  * 
@@ -106,9 +105,7 @@ namespace StorageGateway {
  */
 
 /*!
- * @brief  Constructs a new ListVolumeRecoveryPointsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListVolumeRecoveryPointsRequest::ListVolumeRecoveryPointsRequest(const ListVolumeRecoveryPointsRequest &other)
     : StorageGatewayRequest(new ListVolumeRecoveryPointsRequestPrivate(*other.d_func(), this))
@@ -117,7 +114,7 @@ ListVolumeRecoveryPointsRequest::ListVolumeRecoveryPointsRequest(const ListVolum
 }
 
 /*!
- * @brief  Constructs a new ListVolumeRecoveryPointsRequest object.
+ * Constructs a ListVolumeRecoveryPointsRequest object.
  */
 ListVolumeRecoveryPointsRequest::ListVolumeRecoveryPointsRequest()
     : StorageGatewayRequest(new ListVolumeRecoveryPointsRequestPrivate(StorageGatewayRequest::ListVolumeRecoveryPointsAction, this))
@@ -135,14 +132,9 @@ bool ListVolumeRecoveryPointsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListVolumeRecoveryPointsResponse object.
+ * Returns a ListVolumeRecoveryPointsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListVolumeRecoveryPointsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  StorageGatewayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListVolumeRecoveryPointsRequest::response(QNetworkReply * const reply) const
 {
@@ -150,20 +142,17 @@ QtAws::Core::AwsAbstractResponse * ListVolumeRecoveryPointsRequest::response(QNe
 }
 
 /*!
- * @internal
+ * \class QtAws::StorageGateway::ListVolumeRecoveryPointsRequestPrivate
+ * \brief The ListVolumeRecoveryPointsRequestPrivate class provides private implementation for ListVolumeRecoveryPointsRequest.
+ * \internal
  *
- * @class  ListVolumeRecoveryPointsRequestPrivate
- *
- * @brief  Private implementation for ListVolumeRecoveryPointsRequest.
+ * \inmodule QtAwsStorageGateway
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListVolumeRecoveryPointsRequestPrivate object.
- *
- * @param  action  StorageGateway action being performed.
- * @param  q       Pointer to this object's public ListVolumeRecoveryPointsRequest instance.
+ * Constructs a ListVolumeRecoveryPointsRequestPrivate object for StorageGateway \a action with,
+ * public implementation \a q.
  */
 ListVolumeRecoveryPointsRequestPrivate::ListVolumeRecoveryPointsRequestPrivate(
     const StorageGatewayRequest::Action action, ListVolumeRecoveryPointsRequest * const q)
@@ -173,15 +162,10 @@ ListVolumeRecoveryPointsRequestPrivate::ListVolumeRecoveryPointsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListVolumeRecoveryPointsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListVolumeRecoveryPointsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListVolumeRecoveryPointsRequest instance.
  */
 ListVolumeRecoveryPointsRequestPrivate::ListVolumeRecoveryPointsRequestPrivate(
     const ListVolumeRecoveryPointsRequestPrivate &other, ListVolumeRecoveryPointsRequest * const q)

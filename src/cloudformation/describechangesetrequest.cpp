@@ -27,10 +27,9 @@ namespace CloudFormation {
 
 /*!
  * \class QtAws::CloudFormation::DescribeChangeSetRequest
- *
  * \brief The DescribeChangeSetRequest class provides an interface for CloudFormation DescribeChangeSet requests.
  *
- * \ingroup CloudFormation
+ * \inmodule QtAwsCloudFormation
  *
  *  <fullname>AWS CloudFormation</fullname>
  * 
@@ -59,9 +58,7 @@ namespace CloudFormation {
  */
 
 /*!
- * @brief  Constructs a new DescribeChangeSetRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeChangeSetRequest::DescribeChangeSetRequest(const DescribeChangeSetRequest &other)
     : CloudFormationRequest(new DescribeChangeSetRequestPrivate(*other.d_func(), this))
@@ -70,7 +67,7 @@ DescribeChangeSetRequest::DescribeChangeSetRequest(const DescribeChangeSetReques
 }
 
 /*!
- * @brief  Constructs a new DescribeChangeSetRequest object.
+ * Constructs a DescribeChangeSetRequest object.
  */
 DescribeChangeSetRequest::DescribeChangeSetRequest()
     : CloudFormationRequest(new DescribeChangeSetRequestPrivate(CloudFormationRequest::DescribeChangeSetAction, this))
@@ -88,14 +85,9 @@ bool DescribeChangeSetRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeChangeSetResponse object.
+ * Returns a DescribeChangeSetResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeChangeSetResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudFormationClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeChangeSetRequest::response(QNetworkReply * const reply) const
 {
@@ -103,20 +95,17 @@ QtAws::Core::AwsAbstractResponse * DescribeChangeSetRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudFormation::DescribeChangeSetRequestPrivate
+ * \brief The DescribeChangeSetRequestPrivate class provides private implementation for DescribeChangeSetRequest.
+ * \internal
  *
- * @class  DescribeChangeSetRequestPrivate
- *
- * @brief  Private implementation for DescribeChangeSetRequest.
+ * \inmodule QtAwsCloudFormation
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeChangeSetRequestPrivate object.
- *
- * @param  action  CloudFormation action being performed.
- * @param  q       Pointer to this object's public DescribeChangeSetRequest instance.
+ * Constructs a DescribeChangeSetRequestPrivate object for CloudFormation \a action with,
+ * public implementation \a q.
  */
 DescribeChangeSetRequestPrivate::DescribeChangeSetRequestPrivate(
     const CloudFormationRequest::Action action, DescribeChangeSetRequest * const q)
@@ -126,15 +115,10 @@ DescribeChangeSetRequestPrivate::DescribeChangeSetRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeChangeSetRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeChangeSetRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeChangeSetRequest instance.
  */
 DescribeChangeSetRequestPrivate::DescribeChangeSetRequestPrivate(
     const DescribeChangeSetRequestPrivate &other, DescribeChangeSetRequest * const q)

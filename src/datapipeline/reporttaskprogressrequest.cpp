@@ -27,10 +27,9 @@ namespace DataPipeline {
 
 /*!
  * \class QtAws::DataPipeline::ReportTaskProgressRequest
- *
  * \brief The ReportTaskProgressRequest class provides an interface for DataPipeline ReportTaskProgress requests.
  *
- * \ingroup DataPipeline
+ * \inmodule QtAwsDataPipeline
  *
  *  AWS Data Pipeline configures and manages a data-driven workflow called a pipeline. AWS Data Pipeline handles the details
  *  of scheduling and ensuring that data dependencies are met so that your application can focus on processing the
@@ -55,9 +54,7 @@ namespace DataPipeline {
  */
 
 /*!
- * @brief  Constructs a new ReportTaskProgressRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ReportTaskProgressRequest::ReportTaskProgressRequest(const ReportTaskProgressRequest &other)
     : DataPipelineRequest(new ReportTaskProgressRequestPrivate(*other.d_func(), this))
@@ -66,7 +63,7 @@ ReportTaskProgressRequest::ReportTaskProgressRequest(const ReportTaskProgressReq
 }
 
 /*!
- * @brief  Constructs a new ReportTaskProgressRequest object.
+ * Constructs a ReportTaskProgressRequest object.
  */
 ReportTaskProgressRequest::ReportTaskProgressRequest()
     : DataPipelineRequest(new ReportTaskProgressRequestPrivate(DataPipelineRequest::ReportTaskProgressAction, this))
@@ -84,14 +81,9 @@ bool ReportTaskProgressRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ReportTaskProgressResponse object.
+ * Returns a ReportTaskProgressResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ReportTaskProgressResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DataPipelineClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ReportTaskProgressRequest::response(QNetworkReply * const reply) const
 {
@@ -99,20 +91,17 @@ QtAws::Core::AwsAbstractResponse * ReportTaskProgressRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::DataPipeline::ReportTaskProgressRequestPrivate
+ * \brief The ReportTaskProgressRequestPrivate class provides private implementation for ReportTaskProgressRequest.
+ * \internal
  *
- * @class  ReportTaskProgressRequestPrivate
- *
- * @brief  Private implementation for ReportTaskProgressRequest.
+ * \inmodule QtAwsDataPipeline
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ReportTaskProgressRequestPrivate object.
- *
- * @param  action  DataPipeline action being performed.
- * @param  q       Pointer to this object's public ReportTaskProgressRequest instance.
+ * Constructs a ReportTaskProgressRequestPrivate object for DataPipeline \a action with,
+ * public implementation \a q.
  */
 ReportTaskProgressRequestPrivate::ReportTaskProgressRequestPrivate(
     const DataPipelineRequest::Action action, ReportTaskProgressRequest * const q)
@@ -122,15 +111,10 @@ ReportTaskProgressRequestPrivate::ReportTaskProgressRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ReportTaskProgressRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ReportTaskProgressRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ReportTaskProgressRequest instance.
  */
 ReportTaskProgressRequestPrivate::ReportTaskProgressRequestPrivate(
     const ReportTaskProgressRequestPrivate &other, ReportTaskProgressRequest * const q)

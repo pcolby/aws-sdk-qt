@@ -27,10 +27,9 @@ namespace Glue {
 
 /*!
  * \class QtAws::Glue::GetCrawlersRequest
- *
  * \brief The GetCrawlersRequest class provides an interface for Glue GetCrawlers requests.
  *
- * \ingroup Glue
+ * \inmodule QtAwsGlue
  *
  *  <fullname>AWS Glue</fullname>
  * 
@@ -40,9 +39,7 @@ namespace Glue {
  */
 
 /*!
- * @brief  Constructs a new GetCrawlersRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetCrawlersRequest::GetCrawlersRequest(const GetCrawlersRequest &other)
     : GlueRequest(new GetCrawlersRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ GetCrawlersRequest::GetCrawlersRequest(const GetCrawlersRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetCrawlersRequest object.
+ * Constructs a GetCrawlersRequest object.
  */
 GetCrawlersRequest::GetCrawlersRequest()
     : GlueRequest(new GetCrawlersRequestPrivate(GlueRequest::GetCrawlersAction, this))
@@ -69,14 +66,9 @@ bool GetCrawlersRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetCrawlersResponse object.
+ * Returns a GetCrawlersResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetCrawlersResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GlueClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetCrawlersRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * GetCrawlersRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::Glue::GetCrawlersRequestPrivate
+ * \brief The GetCrawlersRequestPrivate class provides private implementation for GetCrawlersRequest.
+ * \internal
  *
- * @class  GetCrawlersRequestPrivate
- *
- * @brief  Private implementation for GetCrawlersRequest.
+ * \inmodule QtAwsGlue
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetCrawlersRequestPrivate object.
- *
- * @param  action  Glue action being performed.
- * @param  q       Pointer to this object's public GetCrawlersRequest instance.
+ * Constructs a GetCrawlersRequestPrivate object for Glue \a action with,
+ * public implementation \a q.
  */
 GetCrawlersRequestPrivate::GetCrawlersRequestPrivate(
     const GlueRequest::Action action, GetCrawlersRequest * const q)
@@ -107,15 +96,10 @@ GetCrawlersRequestPrivate::GetCrawlersRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetCrawlersRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetCrawlersRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetCrawlersRequest instance.
  */
 GetCrawlersRequestPrivate::GetCrawlersRequestPrivate(
     const GetCrawlersRequestPrivate &other, GetCrawlersRequest * const q)

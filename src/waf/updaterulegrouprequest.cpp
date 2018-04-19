@@ -27,10 +27,9 @@ namespace WAF {
 
 /*!
  * \class QtAws::WAF::UpdateRuleGroupRequest
- *
  * \brief The UpdateRuleGroupRequest class provides an interface for WAF UpdateRuleGroup requests.
  *
- * \ingroup WAF
+ * \inmodule QtAwsWAF
  *
  *  This is the <i>AWS WAF API Reference</i> for using AWS WAF with Amazon CloudFront. The AWS WAF actions and data types
  *  listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data
@@ -42,9 +41,7 @@ namespace WAF {
  */
 
 /*!
- * @brief  Constructs a new UpdateRuleGroupRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateRuleGroupRequest::UpdateRuleGroupRequest(const UpdateRuleGroupRequest &other)
     : WAFRequest(new UpdateRuleGroupRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ UpdateRuleGroupRequest::UpdateRuleGroupRequest(const UpdateRuleGroupRequest &oth
 }
 
 /*!
- * @brief  Constructs a new UpdateRuleGroupRequest object.
+ * Constructs a UpdateRuleGroupRequest object.
  */
 UpdateRuleGroupRequest::UpdateRuleGroupRequest()
     : WAFRequest(new UpdateRuleGroupRequestPrivate(WAFRequest::UpdateRuleGroupAction, this))
@@ -71,14 +68,9 @@ bool UpdateRuleGroupRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateRuleGroupResponse object.
+ * Returns a UpdateRuleGroupResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateRuleGroupResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WAFClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateRuleGroupRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * UpdateRuleGroupRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::WAF::UpdateRuleGroupRequestPrivate
+ * \brief The UpdateRuleGroupRequestPrivate class provides private implementation for UpdateRuleGroupRequest.
+ * \internal
  *
- * @class  UpdateRuleGroupRequestPrivate
- *
- * @brief  Private implementation for UpdateRuleGroupRequest.
+ * \inmodule QtAwsWAF
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateRuleGroupRequestPrivate object.
- *
- * @param  action  WAF action being performed.
- * @param  q       Pointer to this object's public UpdateRuleGroupRequest instance.
+ * Constructs a UpdateRuleGroupRequestPrivate object for WAF \a action with,
+ * public implementation \a q.
  */
 UpdateRuleGroupRequestPrivate::UpdateRuleGroupRequestPrivate(
     const WAFRequest::Action action, UpdateRuleGroupRequest * const q)
@@ -109,15 +98,10 @@ UpdateRuleGroupRequestPrivate::UpdateRuleGroupRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateRuleGroupRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateRuleGroupRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateRuleGroupRequest instance.
  */
 UpdateRuleGroupRequestPrivate::UpdateRuleGroupRequestPrivate(
     const UpdateRuleGroupRequestPrivate &other, UpdateRuleGroupRequest * const q)

@@ -27,10 +27,9 @@ namespace SQS {
 
 /*!
  * \class QtAws::SQS::TagQueueRequest
- *
  * \brief The TagQueueRequest class provides an interface for SQS TagQueue requests.
  *
- * \ingroup SQS
+ * \inmodule QtAwsSQS
  *
  *  Welcome to the <i>Amazon Simple Queue Service API
  * 
@@ -103,9 +102,7 @@ namespace SQS {
  */
 
 /*!
- * @brief  Constructs a new TagQueueRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 TagQueueRequest::TagQueueRequest(const TagQueueRequest &other)
     : SQSRequest(new TagQueueRequestPrivate(*other.d_func(), this))
@@ -114,7 +111,7 @@ TagQueueRequest::TagQueueRequest(const TagQueueRequest &other)
 }
 
 /*!
- * @brief  Constructs a new TagQueueRequest object.
+ * Constructs a TagQueueRequest object.
  */
 TagQueueRequest::TagQueueRequest()
     : SQSRequest(new TagQueueRequestPrivate(SQSRequest::TagQueueAction, this))
@@ -132,14 +129,9 @@ bool TagQueueRequest::isValid() const
 
 
 /*!
- * @brief  Construct an TagQueueResponse object.
+ * Returns a TagQueueResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An TagQueueResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SQSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * TagQueueRequest::response(QNetworkReply * const reply) const
 {
@@ -147,20 +139,17 @@ QtAws::Core::AwsAbstractResponse * TagQueueRequest::response(QNetworkReply * con
 }
 
 /*!
- * @internal
+ * \class QtAws::SQS::TagQueueRequestPrivate
+ * \brief The TagQueueRequestPrivate class provides private implementation for TagQueueRequest.
+ * \internal
  *
- * @class  TagQueueRequestPrivate
- *
- * @brief  Private implementation for TagQueueRequest.
+ * \inmodule QtAwsSQS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new TagQueueRequestPrivate object.
- *
- * @param  action  SQS action being performed.
- * @param  q       Pointer to this object's public TagQueueRequest instance.
+ * Constructs a TagQueueRequestPrivate object for SQS \a action with,
+ * public implementation \a q.
  */
 TagQueueRequestPrivate::TagQueueRequestPrivate(
     const SQSRequest::Action action, TagQueueRequest * const q)
@@ -170,15 +159,10 @@ TagQueueRequestPrivate::TagQueueRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new TagQueueRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the TagQueueRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public TagQueueRequest instance.
  */
 TagQueueRequestPrivate::TagQueueRequestPrivate(
     const TagQueueRequestPrivate &other, TagQueueRequest * const q)

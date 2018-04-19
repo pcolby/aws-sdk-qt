@@ -27,10 +27,9 @@ namespace GameLift {
 
 /*!
  * \class QtAws::GameLift::DescribeEC2InstanceLimitsRequest
- *
  * \brief The DescribeEC2InstanceLimitsRequest class provides an interface for GameLift DescribeEC2InstanceLimits requests.
  *
- * \ingroup GameLift
+ * \inmodule QtAwsGameLift
  *
  *  <fullname>Amazon GameLift Service</fullname>
  * 
@@ -473,9 +472,7 @@ namespace GameLift {
  */
 
 /*!
- * @brief  Constructs a new DescribeEC2InstanceLimitsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeEC2InstanceLimitsRequest::DescribeEC2InstanceLimitsRequest(const DescribeEC2InstanceLimitsRequest &other)
     : GameLiftRequest(new DescribeEC2InstanceLimitsRequestPrivate(*other.d_func(), this))
@@ -484,7 +481,7 @@ DescribeEC2InstanceLimitsRequest::DescribeEC2InstanceLimitsRequest(const Describ
 }
 
 /*!
- * @brief  Constructs a new DescribeEC2InstanceLimitsRequest object.
+ * Constructs a DescribeEC2InstanceLimitsRequest object.
  */
 DescribeEC2InstanceLimitsRequest::DescribeEC2InstanceLimitsRequest()
     : GameLiftRequest(new DescribeEC2InstanceLimitsRequestPrivate(GameLiftRequest::DescribeEC2InstanceLimitsAction, this))
@@ -502,14 +499,9 @@ bool DescribeEC2InstanceLimitsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeEC2InstanceLimitsResponse object.
+ * Returns a DescribeEC2InstanceLimitsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeEC2InstanceLimitsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GameLiftClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeEC2InstanceLimitsRequest::response(QNetworkReply * const reply) const
 {
@@ -517,20 +509,17 @@ QtAws::Core::AwsAbstractResponse * DescribeEC2InstanceLimitsRequest::response(QN
 }
 
 /*!
- * @internal
+ * \class QtAws::GameLift::DescribeEC2InstanceLimitsRequestPrivate
+ * \brief The DescribeEC2InstanceLimitsRequestPrivate class provides private implementation for DescribeEC2InstanceLimitsRequest.
+ * \internal
  *
- * @class  DescribeEC2InstanceLimitsRequestPrivate
- *
- * @brief  Private implementation for DescribeEC2InstanceLimitsRequest.
+ * \inmodule QtAwsGameLift
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeEC2InstanceLimitsRequestPrivate object.
- *
- * @param  action  GameLift action being performed.
- * @param  q       Pointer to this object's public DescribeEC2InstanceLimitsRequest instance.
+ * Constructs a DescribeEC2InstanceLimitsRequestPrivate object for GameLift \a action with,
+ * public implementation \a q.
  */
 DescribeEC2InstanceLimitsRequestPrivate::DescribeEC2InstanceLimitsRequestPrivate(
     const GameLiftRequest::Action action, DescribeEC2InstanceLimitsRequest * const q)
@@ -540,15 +529,10 @@ DescribeEC2InstanceLimitsRequestPrivate::DescribeEC2InstanceLimitsRequestPrivate
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeEC2InstanceLimitsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeEC2InstanceLimitsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeEC2InstanceLimitsRequest instance.
  */
 DescribeEC2InstanceLimitsRequestPrivate::DescribeEC2InstanceLimitsRequestPrivate(
     const DescribeEC2InstanceLimitsRequestPrivate &other, DescribeEC2InstanceLimitsRequest * const q)

@@ -27,10 +27,9 @@ namespace WorkSpaces {
 
 /*!
  * \class QtAws::WorkSpaces::RebuildWorkspacesRequest
- *
  * \brief The RebuildWorkspacesRequest class provides an interface for WorkSpaces RebuildWorkspaces requests.
  *
- * \ingroup WorkSpaces
+ * \inmodule QtAwsWorkSpaces
  *
  *  <fullname>Amazon WorkSpaces Service</fullname>
  * 
@@ -40,9 +39,7 @@ namespace WorkSpaces {
  */
 
 /*!
- * @brief  Constructs a new RebuildWorkspacesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 RebuildWorkspacesRequest::RebuildWorkspacesRequest(const RebuildWorkspacesRequest &other)
     : WorkSpacesRequest(new RebuildWorkspacesRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ RebuildWorkspacesRequest::RebuildWorkspacesRequest(const RebuildWorkspacesReques
 }
 
 /*!
- * @brief  Constructs a new RebuildWorkspacesRequest object.
+ * Constructs a RebuildWorkspacesRequest object.
  */
 RebuildWorkspacesRequest::RebuildWorkspacesRequest()
     : WorkSpacesRequest(new RebuildWorkspacesRequestPrivate(WorkSpacesRequest::RebuildWorkspacesAction, this))
@@ -69,14 +66,9 @@ bool RebuildWorkspacesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an RebuildWorkspacesResponse object.
+ * Returns a RebuildWorkspacesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An RebuildWorkspacesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WorkSpacesClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * RebuildWorkspacesRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * RebuildWorkspacesRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::WorkSpaces::RebuildWorkspacesRequestPrivate
+ * \brief The RebuildWorkspacesRequestPrivate class provides private implementation for RebuildWorkspacesRequest.
+ * \internal
  *
- * @class  RebuildWorkspacesRequestPrivate
- *
- * @brief  Private implementation for RebuildWorkspacesRequest.
+ * \inmodule QtAwsWorkSpaces
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new RebuildWorkspacesRequestPrivate object.
- *
- * @param  action  WorkSpaces action being performed.
- * @param  q       Pointer to this object's public RebuildWorkspacesRequest instance.
+ * Constructs a RebuildWorkspacesRequestPrivate object for WorkSpaces \a action with,
+ * public implementation \a q.
  */
 RebuildWorkspacesRequestPrivate::RebuildWorkspacesRequestPrivate(
     const WorkSpacesRequest::Action action, RebuildWorkspacesRequest * const q)
@@ -107,15 +96,10 @@ RebuildWorkspacesRequestPrivate::RebuildWorkspacesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RebuildWorkspacesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the RebuildWorkspacesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public RebuildWorkspacesRequest instance.
  */
 RebuildWorkspacesRequestPrivate::RebuildWorkspacesRequestPrivate(
     const RebuildWorkspacesRequestPrivate &other, RebuildWorkspacesRequest * const q)

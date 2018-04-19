@@ -27,19 +27,16 @@ namespace GuardDuty {
 
 /*!
  * \class QtAws::GuardDuty::DisassociateMembersRequest
- *
  * \brief The DisassociateMembersRequest class provides an interface for GuardDuty DisassociateMembers requests.
  *
- * \ingroup GuardDuty
+ * \inmodule QtAwsGuardDuty
  *
  *
  * \sa GuardDutyClient::disassociateMembers
  */
 
 /*!
- * @brief  Constructs a new DisassociateMembersRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DisassociateMembersRequest::DisassociateMembersRequest(const DisassociateMembersRequest &other)
     : GuardDutyRequest(new DisassociateMembersRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ DisassociateMembersRequest::DisassociateMembersRequest(const DisassociateMembers
 }
 
 /*!
- * @brief  Constructs a new DisassociateMembersRequest object.
+ * Constructs a DisassociateMembersRequest object.
  */
 DisassociateMembersRequest::DisassociateMembersRequest()
     : GuardDutyRequest(new DisassociateMembersRequestPrivate(GuardDutyRequest::DisassociateMembersAction, this))
@@ -66,14 +63,9 @@ bool DisassociateMembersRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DisassociateMembersResponse object.
+ * Returns a DisassociateMembersResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DisassociateMembersResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GuardDutyClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DisassociateMembersRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * DisassociateMembersRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::GuardDuty::DisassociateMembersRequestPrivate
+ * \brief The DisassociateMembersRequestPrivate class provides private implementation for DisassociateMembersRequest.
+ * \internal
  *
- * @class  DisassociateMembersRequestPrivate
- *
- * @brief  Private implementation for DisassociateMembersRequest.
+ * \inmodule QtAwsGuardDuty
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DisassociateMembersRequestPrivate object.
- *
- * @param  action  GuardDuty action being performed.
- * @param  q       Pointer to this object's public DisassociateMembersRequest instance.
+ * Constructs a DisassociateMembersRequestPrivate object for GuardDuty \a action with,
+ * public implementation \a q.
  */
 DisassociateMembersRequestPrivate::DisassociateMembersRequestPrivate(
     const GuardDutyRequest::Action action, DisassociateMembersRequest * const q)
@@ -104,15 +93,10 @@ DisassociateMembersRequestPrivate::DisassociateMembersRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DisassociateMembersRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DisassociateMembersRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DisassociateMembersRequest instance.
  */
 DisassociateMembersRequestPrivate::DisassociateMembersRequestPrivate(
     const DisassociateMembersRequestPrivate &other, DisassociateMembersRequest * const q)

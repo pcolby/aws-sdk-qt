@@ -27,10 +27,9 @@ namespace DeviceFarm {
 
 /*!
  * \class QtAws::DeviceFarm::GetDevicePoolRequest
- *
  * \brief The GetDevicePoolRequest class provides an interface for DeviceFarm GetDevicePool requests.
  *
- * \ingroup DeviceFarm
+ * \inmodule QtAwsDeviceFarm
  *
  *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
  *  phones, tablets, and other devices in the
@@ -39,9 +38,7 @@ namespace DeviceFarm {
  */
 
 /*!
- * @brief  Constructs a new GetDevicePoolRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetDevicePoolRequest::GetDevicePoolRequest(const GetDevicePoolRequest &other)
     : DeviceFarmRequest(new GetDevicePoolRequestPrivate(*other.d_func(), this))
@@ -50,7 +47,7 @@ GetDevicePoolRequest::GetDevicePoolRequest(const GetDevicePoolRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetDevicePoolRequest object.
+ * Constructs a GetDevicePoolRequest object.
  */
 GetDevicePoolRequest::GetDevicePoolRequest()
     : DeviceFarmRequest(new GetDevicePoolRequestPrivate(DeviceFarmRequest::GetDevicePoolAction, this))
@@ -68,14 +65,9 @@ bool GetDevicePoolRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetDevicePoolResponse object.
+ * Returns a GetDevicePoolResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetDevicePoolResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DeviceFarmClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetDevicePoolRequest::response(QNetworkReply * const reply) const
 {
@@ -83,20 +75,17 @@ QtAws::Core::AwsAbstractResponse * GetDevicePoolRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::DeviceFarm::GetDevicePoolRequestPrivate
+ * \brief The GetDevicePoolRequestPrivate class provides private implementation for GetDevicePoolRequest.
+ * \internal
  *
- * @class  GetDevicePoolRequestPrivate
- *
- * @brief  Private implementation for GetDevicePoolRequest.
+ * \inmodule QtAwsDeviceFarm
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetDevicePoolRequestPrivate object.
- *
- * @param  action  DeviceFarm action being performed.
- * @param  q       Pointer to this object's public GetDevicePoolRequest instance.
+ * Constructs a GetDevicePoolRequestPrivate object for DeviceFarm \a action with,
+ * public implementation \a q.
  */
 GetDevicePoolRequestPrivate::GetDevicePoolRequestPrivate(
     const DeviceFarmRequest::Action action, GetDevicePoolRequest * const q)
@@ -106,15 +95,10 @@ GetDevicePoolRequestPrivate::GetDevicePoolRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetDevicePoolRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetDevicePoolRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetDevicePoolRequest instance.
  */
 GetDevicePoolRequestPrivate::GetDevicePoolRequestPrivate(
     const GetDevicePoolRequestPrivate &other, GetDevicePoolRequest * const q)

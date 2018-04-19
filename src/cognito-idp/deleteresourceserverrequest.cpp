@@ -27,10 +27,9 @@ namespace CognitoIdentityProvider {
 
 /*!
  * \class QtAws::CognitoIdentityProvider::DeleteResourceServerRequest
- *
  * \brief The DeleteResourceServerRequest class provides an interface for CognitoIdentityProvider DeleteResourceServer requests.
  *
- * \ingroup CognitoIdentityProvider
+ * \inmodule QtAwsCognitoIdentityProvider
  *
  *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
  *  authenticate a user to obtain tokens related to user identity and access
@@ -47,9 +46,7 @@ namespace CognitoIdentityProvider {
  */
 
 /*!
- * @brief  Constructs a new DeleteResourceServerRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteResourceServerRequest::DeleteResourceServerRequest(const DeleteResourceServerRequest &other)
     : CognitoIdentityProviderRequest(new DeleteResourceServerRequestPrivate(*other.d_func(), this))
@@ -58,7 +55,7 @@ DeleteResourceServerRequest::DeleteResourceServerRequest(const DeleteResourceSer
 }
 
 /*!
- * @brief  Constructs a new DeleteResourceServerRequest object.
+ * Constructs a DeleteResourceServerRequest object.
  */
 DeleteResourceServerRequest::DeleteResourceServerRequest()
     : CognitoIdentityProviderRequest(new DeleteResourceServerRequestPrivate(CognitoIdentityProviderRequest::DeleteResourceServerAction, this))
@@ -76,14 +73,9 @@ bool DeleteResourceServerRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteResourceServerResponse object.
+ * Returns a DeleteResourceServerResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteResourceServerResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CognitoIdentityProviderClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteResourceServerRequest::response(QNetworkReply * const reply) const
 {
@@ -91,20 +83,17 @@ QtAws::Core::AwsAbstractResponse * DeleteResourceServerRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::CognitoIdentityProvider::DeleteResourceServerRequestPrivate
+ * \brief The DeleteResourceServerRequestPrivate class provides private implementation for DeleteResourceServerRequest.
+ * \internal
  *
- * @class  DeleteResourceServerRequestPrivate
- *
- * @brief  Private implementation for DeleteResourceServerRequest.
+ * \inmodule QtAwsCognitoIdentityProvider
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteResourceServerRequestPrivate object.
- *
- * @param  action  CognitoIdentityProvider action being performed.
- * @param  q       Pointer to this object's public DeleteResourceServerRequest instance.
+ * Constructs a DeleteResourceServerRequestPrivate object for CognitoIdentityProvider \a action with,
+ * public implementation \a q.
  */
 DeleteResourceServerRequestPrivate::DeleteResourceServerRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, DeleteResourceServerRequest * const q)
@@ -114,15 +103,10 @@ DeleteResourceServerRequestPrivate::DeleteResourceServerRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteResourceServerRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteResourceServerRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteResourceServerRequest instance.
  */
 DeleteResourceServerRequestPrivate::DeleteResourceServerRequestPrivate(
     const DeleteResourceServerRequestPrivate &other, DeleteResourceServerRequest * const q)

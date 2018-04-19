@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::ModifyVpcAttributeRequest
- *
  * \brief The ModifyVpcAttributeRequest class provides an interface for EC2 ModifyVpcAttribute requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new ModifyVpcAttributeRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ModifyVpcAttributeRequest::ModifyVpcAttributeRequest(const ModifyVpcAttributeRequest &other)
     : EC2Request(new ModifyVpcAttributeRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ ModifyVpcAttributeRequest::ModifyVpcAttributeRequest(const ModifyVpcAttributeReq
 }
 
 /*!
- * @brief  Constructs a new ModifyVpcAttributeRequest object.
+ * Constructs a ModifyVpcAttributeRequest object.
  */
 ModifyVpcAttributeRequest::ModifyVpcAttributeRequest()
     : EC2Request(new ModifyVpcAttributeRequestPrivate(EC2Request::ModifyVpcAttributeAction, this))
@@ -70,14 +67,9 @@ bool ModifyVpcAttributeRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ModifyVpcAttributeResponse object.
+ * Returns a ModifyVpcAttributeResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ModifyVpcAttributeResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ModifyVpcAttributeRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * ModifyVpcAttributeRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::ModifyVpcAttributeRequestPrivate
+ * \brief The ModifyVpcAttributeRequestPrivate class provides private implementation for ModifyVpcAttributeRequest.
+ * \internal
  *
- * @class  ModifyVpcAttributeRequestPrivate
- *
- * @brief  Private implementation for ModifyVpcAttributeRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ModifyVpcAttributeRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public ModifyVpcAttributeRequest instance.
+ * Constructs a ModifyVpcAttributeRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 ModifyVpcAttributeRequestPrivate::ModifyVpcAttributeRequestPrivate(
     const EC2Request::Action action, ModifyVpcAttributeRequest * const q)
@@ -108,15 +97,10 @@ ModifyVpcAttributeRequestPrivate::ModifyVpcAttributeRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ModifyVpcAttributeRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ModifyVpcAttributeRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ModifyVpcAttributeRequest instance.
  */
 ModifyVpcAttributeRequestPrivate::ModifyVpcAttributeRequestPrivate(
     const ModifyVpcAttributeRequestPrivate &other, ModifyVpcAttributeRequest * const q)

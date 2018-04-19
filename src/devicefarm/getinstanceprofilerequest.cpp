@@ -27,10 +27,9 @@ namespace DeviceFarm {
 
 /*!
  * \class QtAws::DeviceFarm::GetInstanceProfileRequest
- *
  * \brief The GetInstanceProfileRequest class provides an interface for DeviceFarm GetInstanceProfile requests.
  *
- * \ingroup DeviceFarm
+ * \inmodule QtAwsDeviceFarm
  *
  *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
  *  phones, tablets, and other devices in the
@@ -39,9 +38,7 @@ namespace DeviceFarm {
  */
 
 /*!
- * @brief  Constructs a new GetInstanceProfileRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetInstanceProfileRequest::GetInstanceProfileRequest(const GetInstanceProfileRequest &other)
     : DeviceFarmRequest(new GetInstanceProfileRequestPrivate(*other.d_func(), this))
@@ -50,7 +47,7 @@ GetInstanceProfileRequest::GetInstanceProfileRequest(const GetInstanceProfileReq
 }
 
 /*!
- * @brief  Constructs a new GetInstanceProfileRequest object.
+ * Constructs a GetInstanceProfileRequest object.
  */
 GetInstanceProfileRequest::GetInstanceProfileRequest()
     : DeviceFarmRequest(new GetInstanceProfileRequestPrivate(DeviceFarmRequest::GetInstanceProfileAction, this))
@@ -68,14 +65,9 @@ bool GetInstanceProfileRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetInstanceProfileResponse object.
+ * Returns a GetInstanceProfileResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetInstanceProfileResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DeviceFarmClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetInstanceProfileRequest::response(QNetworkReply * const reply) const
 {
@@ -83,20 +75,17 @@ QtAws::Core::AwsAbstractResponse * GetInstanceProfileRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::DeviceFarm::GetInstanceProfileRequestPrivate
+ * \brief The GetInstanceProfileRequestPrivate class provides private implementation for GetInstanceProfileRequest.
+ * \internal
  *
- * @class  GetInstanceProfileRequestPrivate
- *
- * @brief  Private implementation for GetInstanceProfileRequest.
+ * \inmodule QtAwsDeviceFarm
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetInstanceProfileRequestPrivate object.
- *
- * @param  action  DeviceFarm action being performed.
- * @param  q       Pointer to this object's public GetInstanceProfileRequest instance.
+ * Constructs a GetInstanceProfileRequestPrivate object for DeviceFarm \a action with,
+ * public implementation \a q.
  */
 GetInstanceProfileRequestPrivate::GetInstanceProfileRequestPrivate(
     const DeviceFarmRequest::Action action, GetInstanceProfileRequest * const q)
@@ -106,15 +95,10 @@ GetInstanceProfileRequestPrivate::GetInstanceProfileRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetInstanceProfileRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetInstanceProfileRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetInstanceProfileRequest instance.
  */
 GetInstanceProfileRequestPrivate::GetInstanceProfileRequestPrivate(
     const GetInstanceProfileRequestPrivate &other, GetInstanceProfileRequest * const q)

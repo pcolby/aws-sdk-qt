@@ -27,10 +27,9 @@ namespace OpsWorks {
 
 /*!
  * \class QtAws::OpsWorks::RegisterVolumeRequest
- *
  * \brief The RegisterVolumeRequest class provides an interface for OpsWorks RegisterVolume requests.
  *
- * \ingroup OpsWorks
+ * \inmodule QtAwsOpsWorks
  *
  *  <fullname>AWS OpsWorks</fullname>
  * 
@@ -143,9 +142,7 @@ namespace OpsWorks {
  */
 
 /*!
- * @brief  Constructs a new RegisterVolumeRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 RegisterVolumeRequest::RegisterVolumeRequest(const RegisterVolumeRequest &other)
     : OpsWorksRequest(new RegisterVolumeRequestPrivate(*other.d_func(), this))
@@ -154,7 +151,7 @@ RegisterVolumeRequest::RegisterVolumeRequest(const RegisterVolumeRequest &other)
 }
 
 /*!
- * @brief  Constructs a new RegisterVolumeRequest object.
+ * Constructs a RegisterVolumeRequest object.
  */
 RegisterVolumeRequest::RegisterVolumeRequest()
     : OpsWorksRequest(new RegisterVolumeRequestPrivate(OpsWorksRequest::RegisterVolumeAction, this))
@@ -172,14 +169,9 @@ bool RegisterVolumeRequest::isValid() const
 
 
 /*!
- * @brief  Construct an RegisterVolumeResponse object.
+ * Returns a RegisterVolumeResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An RegisterVolumeResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  OpsWorksClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * RegisterVolumeRequest::response(QNetworkReply * const reply) const
 {
@@ -187,20 +179,17 @@ QtAws::Core::AwsAbstractResponse * RegisterVolumeRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::OpsWorks::RegisterVolumeRequestPrivate
+ * \brief The RegisterVolumeRequestPrivate class provides private implementation for RegisterVolumeRequest.
+ * \internal
  *
- * @class  RegisterVolumeRequestPrivate
- *
- * @brief  Private implementation for RegisterVolumeRequest.
+ * \inmodule QtAwsOpsWorks
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new RegisterVolumeRequestPrivate object.
- *
- * @param  action  OpsWorks action being performed.
- * @param  q       Pointer to this object's public RegisterVolumeRequest instance.
+ * Constructs a RegisterVolumeRequestPrivate object for OpsWorks \a action with,
+ * public implementation \a q.
  */
 RegisterVolumeRequestPrivate::RegisterVolumeRequestPrivate(
     const OpsWorksRequest::Action action, RegisterVolumeRequest * const q)
@@ -210,15 +199,10 @@ RegisterVolumeRequestPrivate::RegisterVolumeRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RegisterVolumeRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the RegisterVolumeRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public RegisterVolumeRequest instance.
  */
 RegisterVolumeRequestPrivate::RegisterVolumeRequestPrivate(
     const RegisterVolumeRequestPrivate &other, RegisterVolumeRequest * const q)

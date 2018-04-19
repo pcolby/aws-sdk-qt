@@ -27,10 +27,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::ListRolePoliciesRequest
- *
  * \brief The ListRolePoliciesRequest class provides an interface for IAM ListRolePolicies requests.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -102,9 +101,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new ListRolePoliciesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListRolePoliciesRequest::ListRolePoliciesRequest(const ListRolePoliciesRequest &other)
     : IAMRequest(new ListRolePoliciesRequestPrivate(*other.d_func(), this))
@@ -113,7 +110,7 @@ ListRolePoliciesRequest::ListRolePoliciesRequest(const ListRolePoliciesRequest &
 }
 
 /*!
- * @brief  Constructs a new ListRolePoliciesRequest object.
+ * Constructs a ListRolePoliciesRequest object.
  */
 ListRolePoliciesRequest::ListRolePoliciesRequest()
     : IAMRequest(new ListRolePoliciesRequestPrivate(IAMRequest::ListRolePoliciesAction, this))
@@ -131,14 +128,9 @@ bool ListRolePoliciesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListRolePoliciesResponse object.
+ * Returns a ListRolePoliciesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListRolePoliciesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IAMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListRolePoliciesRequest::response(QNetworkReply * const reply) const
 {
@@ -146,20 +138,17 @@ QtAws::Core::AwsAbstractResponse * ListRolePoliciesRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::IAM::ListRolePoliciesRequestPrivate
+ * \brief The ListRolePoliciesRequestPrivate class provides private implementation for ListRolePoliciesRequest.
+ * \internal
  *
- * @class  ListRolePoliciesRequestPrivate
- *
- * @brief  Private implementation for ListRolePoliciesRequest.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListRolePoliciesRequestPrivate object.
- *
- * @param  action  IAM action being performed.
- * @param  q       Pointer to this object's public ListRolePoliciesRequest instance.
+ * Constructs a ListRolePoliciesRequestPrivate object for IAM \a action with,
+ * public implementation \a q.
  */
 ListRolePoliciesRequestPrivate::ListRolePoliciesRequestPrivate(
     const IAMRequest::Action action, ListRolePoliciesRequest * const q)
@@ -169,15 +158,10 @@ ListRolePoliciesRequestPrivate::ListRolePoliciesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListRolePoliciesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListRolePoliciesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListRolePoliciesRequest instance.
  */
 ListRolePoliciesRequestPrivate::ListRolePoliciesRequestPrivate(
     const ListRolePoliciesRequestPrivate &other, ListRolePoliciesRequest * const q)

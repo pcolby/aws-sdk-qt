@@ -27,10 +27,9 @@ namespace CloudSearchDomain {
 
 /*!
  * \class QtAws::CloudSearchDomain::UploadDocumentsRequest
- *
  * \brief The UploadDocumentsRequest class provides an interface for CloudSearchDomain UploadDocuments requests.
  *
- * \ingroup CloudSearchDomain
+ * \inmodule QtAwsCloudSearchDomain
  *
  *  You use the AmazonCloudSearch2013 API to upload documents to a search domain and search those documents.
  * 
@@ -50,9 +49,7 @@ namespace CloudSearchDomain {
  */
 
 /*!
- * @brief  Constructs a new UploadDocumentsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UploadDocumentsRequest::UploadDocumentsRequest(const UploadDocumentsRequest &other)
     : CloudSearchDomainRequest(new UploadDocumentsRequestPrivate(*other.d_func(), this))
@@ -61,7 +58,7 @@ UploadDocumentsRequest::UploadDocumentsRequest(const UploadDocumentsRequest &oth
 }
 
 /*!
- * @brief  Constructs a new UploadDocumentsRequest object.
+ * Constructs a UploadDocumentsRequest object.
  */
 UploadDocumentsRequest::UploadDocumentsRequest()
     : CloudSearchDomainRequest(new UploadDocumentsRequestPrivate(CloudSearchDomainRequest::UploadDocumentsAction, this))
@@ -79,14 +76,9 @@ bool UploadDocumentsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UploadDocumentsResponse object.
+ * Returns a UploadDocumentsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UploadDocumentsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudSearchDomainClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UploadDocumentsRequest::response(QNetworkReply * const reply) const
 {
@@ -94,20 +86,17 @@ QtAws::Core::AwsAbstractResponse * UploadDocumentsRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudSearchDomain::UploadDocumentsRequestPrivate
+ * \brief The UploadDocumentsRequestPrivate class provides private implementation for UploadDocumentsRequest.
+ * \internal
  *
- * @class  UploadDocumentsRequestPrivate
- *
- * @brief  Private implementation for UploadDocumentsRequest.
+ * \inmodule QtAwsCloudSearchDomain
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UploadDocumentsRequestPrivate object.
- *
- * @param  action  CloudSearchDomain action being performed.
- * @param  q       Pointer to this object's public UploadDocumentsRequest instance.
+ * Constructs a UploadDocumentsRequestPrivate object for CloudSearchDomain \a action with,
+ * public implementation \a q.
  */
 UploadDocumentsRequestPrivate::UploadDocumentsRequestPrivate(
     const CloudSearchDomainRequest::Action action, UploadDocumentsRequest * const q)
@@ -117,15 +106,10 @@ UploadDocumentsRequestPrivate::UploadDocumentsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UploadDocumentsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UploadDocumentsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UploadDocumentsRequest instance.
  */
 UploadDocumentsRequestPrivate::UploadDocumentsRequestPrivate(
     const UploadDocumentsRequestPrivate &other, UploadDocumentsRequest * const q)

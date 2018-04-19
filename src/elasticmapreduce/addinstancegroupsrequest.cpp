@@ -27,10 +27,9 @@ namespace EMR {
 
 /*!
  * \class QtAws::EMR::AddInstanceGroupsRequest
- *
  * \brief The AddInstanceGroupsRequest class provides an interface for EMR AddInstanceGroups requests.
  *
- * \ingroup EMR
+ * \inmodule QtAwsEMR
  *
  *  Amazon EMR is a web service that makes it easy to process large amounts of data efficiently. Amazon EMR uses Hadoop
  *  processing combined with several AWS products to do tasks such as web indexing, data mining, log file analysis, machine
@@ -40,9 +39,7 @@ namespace EMR {
  */
 
 /*!
- * @brief  Constructs a new AddInstanceGroupsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AddInstanceGroupsRequest::AddInstanceGroupsRequest(const AddInstanceGroupsRequest &other)
     : EMRRequest(new AddInstanceGroupsRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ AddInstanceGroupsRequest::AddInstanceGroupsRequest(const AddInstanceGroupsReques
 }
 
 /*!
- * @brief  Constructs a new AddInstanceGroupsRequest object.
+ * Constructs a AddInstanceGroupsRequest object.
  */
 AddInstanceGroupsRequest::AddInstanceGroupsRequest()
     : EMRRequest(new AddInstanceGroupsRequestPrivate(EMRRequest::AddInstanceGroupsAction, this))
@@ -69,14 +66,9 @@ bool AddInstanceGroupsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AddInstanceGroupsResponse object.
+ * Returns a AddInstanceGroupsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AddInstanceGroupsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EMRClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AddInstanceGroupsRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * AddInstanceGroupsRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::EMR::AddInstanceGroupsRequestPrivate
+ * \brief The AddInstanceGroupsRequestPrivate class provides private implementation for AddInstanceGroupsRequest.
+ * \internal
  *
- * @class  AddInstanceGroupsRequestPrivate
- *
- * @brief  Private implementation for AddInstanceGroupsRequest.
+ * \inmodule QtAwsEMR
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AddInstanceGroupsRequestPrivate object.
- *
- * @param  action  EMR action being performed.
- * @param  q       Pointer to this object's public AddInstanceGroupsRequest instance.
+ * Constructs a AddInstanceGroupsRequestPrivate object for EMR \a action with,
+ * public implementation \a q.
  */
 AddInstanceGroupsRequestPrivate::AddInstanceGroupsRequestPrivate(
     const EMRRequest::Action action, AddInstanceGroupsRequest * const q)
@@ -107,15 +96,10 @@ AddInstanceGroupsRequestPrivate::AddInstanceGroupsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AddInstanceGroupsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AddInstanceGroupsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AddInstanceGroupsRequest instance.
  */
 AddInstanceGroupsRequestPrivate::AddInstanceGroupsRequestPrivate(
     const AddInstanceGroupsRequestPrivate &other, AddInstanceGroupsRequest * const q)

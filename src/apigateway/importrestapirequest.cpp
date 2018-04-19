@@ -27,10 +27,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::ImportRestApiRequest
- *
  * \brief The ImportRestApiRequest class provides an interface for APIGateway ImportRestApi requests.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -42,9 +41,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new ImportRestApiRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ImportRestApiRequest::ImportRestApiRequest(const ImportRestApiRequest &other)
     : APIGatewayRequest(new ImportRestApiRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ ImportRestApiRequest::ImportRestApiRequest(const ImportRestApiRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ImportRestApiRequest object.
+ * Constructs a ImportRestApiRequest object.
  */
 ImportRestApiRequest::ImportRestApiRequest()
     : APIGatewayRequest(new ImportRestApiRequestPrivate(APIGatewayRequest::ImportRestApiAction, this))
@@ -71,14 +68,9 @@ bool ImportRestApiRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ImportRestApiResponse object.
+ * Returns a ImportRestApiResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ImportRestApiResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  APIGatewayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ImportRestApiRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * ImportRestApiRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::APIGateway::ImportRestApiRequestPrivate
+ * \brief The ImportRestApiRequestPrivate class provides private implementation for ImportRestApiRequest.
+ * \internal
  *
- * @class  ImportRestApiRequestPrivate
- *
- * @brief  Private implementation for ImportRestApiRequest.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ImportRestApiRequestPrivate object.
- *
- * @param  action  APIGateway action being performed.
- * @param  q       Pointer to this object's public ImportRestApiRequest instance.
+ * Constructs a ImportRestApiRequestPrivate object for APIGateway \a action with,
+ * public implementation \a q.
  */
 ImportRestApiRequestPrivate::ImportRestApiRequestPrivate(
     const APIGatewayRequest::Action action, ImportRestApiRequest * const q)
@@ -109,15 +98,10 @@ ImportRestApiRequestPrivate::ImportRestApiRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ImportRestApiRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ImportRestApiRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ImportRestApiRequest instance.
  */
 ImportRestApiRequestPrivate::ImportRestApiRequestPrivate(
     const ImportRestApiRequestPrivate &other, ImportRestApiRequest * const q)

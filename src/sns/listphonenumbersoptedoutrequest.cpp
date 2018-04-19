@@ -27,10 +27,9 @@ namespace SNS {
 
 /*!
  * \class QtAws::SNS::ListPhoneNumbersOptedOutRequest
- *
  * \brief The ListPhoneNumbersOptedOutRequest class provides an interface for SNS ListPhoneNumbersOptedOut requests.
  *
- * \ingroup SNS
+ * \inmodule QtAwsSNS
  *
  *  <fullname>Amazon Simple Notification Service</fullname>
  * 
@@ -51,9 +50,7 @@ namespace SNS {
  */
 
 /*!
- * @brief  Constructs a new ListPhoneNumbersOptedOutRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListPhoneNumbersOptedOutRequest::ListPhoneNumbersOptedOutRequest(const ListPhoneNumbersOptedOutRequest &other)
     : SNSRequest(new ListPhoneNumbersOptedOutRequestPrivate(*other.d_func(), this))
@@ -62,7 +59,7 @@ ListPhoneNumbersOptedOutRequest::ListPhoneNumbersOptedOutRequest(const ListPhone
 }
 
 /*!
- * @brief  Constructs a new ListPhoneNumbersOptedOutRequest object.
+ * Constructs a ListPhoneNumbersOptedOutRequest object.
  */
 ListPhoneNumbersOptedOutRequest::ListPhoneNumbersOptedOutRequest()
     : SNSRequest(new ListPhoneNumbersOptedOutRequestPrivate(SNSRequest::ListPhoneNumbersOptedOutAction, this))
@@ -80,14 +77,9 @@ bool ListPhoneNumbersOptedOutRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListPhoneNumbersOptedOutResponse object.
+ * Returns a ListPhoneNumbersOptedOutResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListPhoneNumbersOptedOutResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SNSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListPhoneNumbersOptedOutRequest::response(QNetworkReply * const reply) const
 {
@@ -95,20 +87,17 @@ QtAws::Core::AwsAbstractResponse * ListPhoneNumbersOptedOutRequest::response(QNe
 }
 
 /*!
- * @internal
+ * \class QtAws::SNS::ListPhoneNumbersOptedOutRequestPrivate
+ * \brief The ListPhoneNumbersOptedOutRequestPrivate class provides private implementation for ListPhoneNumbersOptedOutRequest.
+ * \internal
  *
- * @class  ListPhoneNumbersOptedOutRequestPrivate
- *
- * @brief  Private implementation for ListPhoneNumbersOptedOutRequest.
+ * \inmodule QtAwsSNS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListPhoneNumbersOptedOutRequestPrivate object.
- *
- * @param  action  SNS action being performed.
- * @param  q       Pointer to this object's public ListPhoneNumbersOptedOutRequest instance.
+ * Constructs a ListPhoneNumbersOptedOutRequestPrivate object for SNS \a action with,
+ * public implementation \a q.
  */
 ListPhoneNumbersOptedOutRequestPrivate::ListPhoneNumbersOptedOutRequestPrivate(
     const SNSRequest::Action action, ListPhoneNumbersOptedOutRequest * const q)
@@ -118,15 +107,10 @@ ListPhoneNumbersOptedOutRequestPrivate::ListPhoneNumbersOptedOutRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListPhoneNumbersOptedOutRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListPhoneNumbersOptedOutRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListPhoneNumbersOptedOutRequest instance.
  */
 ListPhoneNumbersOptedOutRequestPrivate::ListPhoneNumbersOptedOutRequestPrivate(
     const ListPhoneNumbersOptedOutRequestPrivate &other, ListPhoneNumbersOptedOutRequest * const q)

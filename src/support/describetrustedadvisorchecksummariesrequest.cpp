@@ -27,10 +27,9 @@ namespace Support {
 
 /*!
  * \class QtAws::Support::DescribeTrustedAdvisorCheckSummariesRequest
- *
  * \brief The DescribeTrustedAdvisorCheckSummariesRequest class provides an interface for Support DescribeTrustedAdvisorCheckSummaries requests.
  *
- * \ingroup Support
+ * \inmodule QtAwsSupport
  *
  *  <fullname>AWS Support</fullname>
  * 
@@ -105,9 +104,7 @@ namespace Support {
  */
 
 /*!
- * @brief  Constructs a new DescribeTrustedAdvisorCheckSummariesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeTrustedAdvisorCheckSummariesRequest::DescribeTrustedAdvisorCheckSummariesRequest(const DescribeTrustedAdvisorCheckSummariesRequest &other)
     : SupportRequest(new DescribeTrustedAdvisorCheckSummariesRequestPrivate(*other.d_func(), this))
@@ -116,7 +113,7 @@ DescribeTrustedAdvisorCheckSummariesRequest::DescribeTrustedAdvisorCheckSummarie
 }
 
 /*!
- * @brief  Constructs a new DescribeTrustedAdvisorCheckSummariesRequest object.
+ * Constructs a DescribeTrustedAdvisorCheckSummariesRequest object.
  */
 DescribeTrustedAdvisorCheckSummariesRequest::DescribeTrustedAdvisorCheckSummariesRequest()
     : SupportRequest(new DescribeTrustedAdvisorCheckSummariesRequestPrivate(SupportRequest::DescribeTrustedAdvisorCheckSummariesAction, this))
@@ -134,14 +131,9 @@ bool DescribeTrustedAdvisorCheckSummariesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeTrustedAdvisorCheckSummariesResponse object.
+ * Returns a DescribeTrustedAdvisorCheckSummariesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeTrustedAdvisorCheckSummariesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SupportClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeTrustedAdvisorCheckSummariesRequest::response(QNetworkReply * const reply) const
 {
@@ -149,20 +141,17 @@ QtAws::Core::AwsAbstractResponse * DescribeTrustedAdvisorCheckSummariesRequest::
 }
 
 /*!
- * @internal
+ * \class QtAws::Support::DescribeTrustedAdvisorCheckSummariesRequestPrivate
+ * \brief The DescribeTrustedAdvisorCheckSummariesRequestPrivate class provides private implementation for DescribeTrustedAdvisorCheckSummariesRequest.
+ * \internal
  *
- * @class  DescribeTrustedAdvisorCheckSummariesRequestPrivate
- *
- * @brief  Private implementation for DescribeTrustedAdvisorCheckSummariesRequest.
+ * \inmodule QtAwsSupport
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeTrustedAdvisorCheckSummariesRequestPrivate object.
- *
- * @param  action  Support action being performed.
- * @param  q       Pointer to this object's public DescribeTrustedAdvisorCheckSummariesRequest instance.
+ * Constructs a DescribeTrustedAdvisorCheckSummariesRequestPrivate object for Support \a action with,
+ * public implementation \a q.
  */
 DescribeTrustedAdvisorCheckSummariesRequestPrivate::DescribeTrustedAdvisorCheckSummariesRequestPrivate(
     const SupportRequest::Action action, DescribeTrustedAdvisorCheckSummariesRequest * const q)
@@ -172,15 +161,10 @@ DescribeTrustedAdvisorCheckSummariesRequestPrivate::DescribeTrustedAdvisorCheckS
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeTrustedAdvisorCheckSummariesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeTrustedAdvisorCheckSummariesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeTrustedAdvisorCheckSummariesRequest instance.
  */
 DescribeTrustedAdvisorCheckSummariesRequestPrivate::DescribeTrustedAdvisorCheckSummariesRequestPrivate(
     const DescribeTrustedAdvisorCheckSummariesRequestPrivate &other, DescribeTrustedAdvisorCheckSummariesRequest * const q)

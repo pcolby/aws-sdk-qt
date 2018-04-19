@@ -27,19 +27,16 @@ namespace Route53 {
 
 /*!
  * \class QtAws::Route53::ListQueryLoggingConfigsRequest
- *
  * \brief The ListQueryLoggingConfigsRequest class provides an interface for Route53 ListQueryLoggingConfigs requests.
  *
- * \ingroup Route53
+ * \inmodule QtAwsRoute53
  *
  *
  * \sa Route53Client::listQueryLoggingConfigs
  */
 
 /*!
- * @brief  Constructs a new ListQueryLoggingConfigsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListQueryLoggingConfigsRequest::ListQueryLoggingConfigsRequest(const ListQueryLoggingConfigsRequest &other)
     : Route53Request(new ListQueryLoggingConfigsRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ ListQueryLoggingConfigsRequest::ListQueryLoggingConfigsRequest(const ListQueryLo
 }
 
 /*!
- * @brief  Constructs a new ListQueryLoggingConfigsRequest object.
+ * Constructs a ListQueryLoggingConfigsRequest object.
  */
 ListQueryLoggingConfigsRequest::ListQueryLoggingConfigsRequest()
     : Route53Request(new ListQueryLoggingConfigsRequestPrivate(Route53Request::ListQueryLoggingConfigsAction, this))
@@ -66,14 +63,9 @@ bool ListQueryLoggingConfigsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListQueryLoggingConfigsResponse object.
+ * Returns a ListQueryLoggingConfigsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListQueryLoggingConfigsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  Route53Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListQueryLoggingConfigsRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * ListQueryLoggingConfigsRequest::response(QNet
 }
 
 /*!
- * @internal
+ * \class QtAws::Route53::ListQueryLoggingConfigsRequestPrivate
+ * \brief The ListQueryLoggingConfigsRequestPrivate class provides private implementation for ListQueryLoggingConfigsRequest.
+ * \internal
  *
- * @class  ListQueryLoggingConfigsRequestPrivate
- *
- * @brief  Private implementation for ListQueryLoggingConfigsRequest.
+ * \inmodule QtAwsRoute53
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListQueryLoggingConfigsRequestPrivate object.
- *
- * @param  action  Route53 action being performed.
- * @param  q       Pointer to this object's public ListQueryLoggingConfigsRequest instance.
+ * Constructs a ListQueryLoggingConfigsRequestPrivate object for Route53 \a action with,
+ * public implementation \a q.
  */
 ListQueryLoggingConfigsRequestPrivate::ListQueryLoggingConfigsRequestPrivate(
     const Route53Request::Action action, ListQueryLoggingConfigsRequest * const q)
@@ -104,15 +93,10 @@ ListQueryLoggingConfigsRequestPrivate::ListQueryLoggingConfigsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListQueryLoggingConfigsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListQueryLoggingConfigsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListQueryLoggingConfigsRequest instance.
  */
 ListQueryLoggingConfigsRequestPrivate::ListQueryLoggingConfigsRequestPrivate(
     const ListQueryLoggingConfigsRequestPrivate &other, ListQueryLoggingConfigsRequest * const q)

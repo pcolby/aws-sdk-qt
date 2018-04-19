@@ -27,10 +27,9 @@ namespace DatabaseMigrationService {
 
 /*!
  * \class QtAws::DatabaseMigrationService::ModifyReplicationInstanceRequest
- *
  * \brief The ModifyReplicationInstanceRequest class provides an interface for DatabaseMigrationService ModifyReplicationInstance requests.
  *
- * \ingroup DatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigrationService
  *
  *  <fullname>AWS Database Migration Service</fullname>
  * 
@@ -48,9 +47,7 @@ namespace DatabaseMigrationService {
  */
 
 /*!
- * @brief  Constructs a new ModifyReplicationInstanceRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ModifyReplicationInstanceRequest::ModifyReplicationInstanceRequest(const ModifyReplicationInstanceRequest &other)
     : DatabaseMigrationServiceRequest(new ModifyReplicationInstanceRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ ModifyReplicationInstanceRequest::ModifyReplicationInstanceRequest(const ModifyR
 }
 
 /*!
- * @brief  Constructs a new ModifyReplicationInstanceRequest object.
+ * Constructs a ModifyReplicationInstanceRequest object.
  */
 ModifyReplicationInstanceRequest::ModifyReplicationInstanceRequest()
     : DatabaseMigrationServiceRequest(new ModifyReplicationInstanceRequestPrivate(DatabaseMigrationServiceRequest::ModifyReplicationInstanceAction, this))
@@ -77,14 +74,9 @@ bool ModifyReplicationInstanceRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ModifyReplicationInstanceResponse object.
+ * Returns a ModifyReplicationInstanceResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ModifyReplicationInstanceResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DatabaseMigrationServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ModifyReplicationInstanceRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * ModifyReplicationInstanceRequest::response(QN
 }
 
 /*!
- * @internal
+ * \class QtAws::DatabaseMigrationService::ModifyReplicationInstanceRequestPrivate
+ * \brief The ModifyReplicationInstanceRequestPrivate class provides private implementation for ModifyReplicationInstanceRequest.
+ * \internal
  *
- * @class  ModifyReplicationInstanceRequestPrivate
- *
- * @brief  Private implementation for ModifyReplicationInstanceRequest.
+ * \inmodule QtAwsDatabaseMigrationService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ModifyReplicationInstanceRequestPrivate object.
- *
- * @param  action  DatabaseMigrationService action being performed.
- * @param  q       Pointer to this object's public ModifyReplicationInstanceRequest instance.
+ * Constructs a ModifyReplicationInstanceRequestPrivate object for DatabaseMigrationService \a action with,
+ * public implementation \a q.
  */
 ModifyReplicationInstanceRequestPrivate::ModifyReplicationInstanceRequestPrivate(
     const DatabaseMigrationServiceRequest::Action action, ModifyReplicationInstanceRequest * const q)
@@ -115,15 +104,10 @@ ModifyReplicationInstanceRequestPrivate::ModifyReplicationInstanceRequestPrivate
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ModifyReplicationInstanceRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ModifyReplicationInstanceRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ModifyReplicationInstanceRequest instance.
  */
 ModifyReplicationInstanceRequestPrivate::ModifyReplicationInstanceRequestPrivate(
     const ModifyReplicationInstanceRequestPrivate &other, ModifyReplicationInstanceRequest * const q)

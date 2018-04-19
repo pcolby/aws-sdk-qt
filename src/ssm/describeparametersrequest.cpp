@@ -27,10 +27,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::DescribeParametersRequest
- *
  * \brief The DescribeParametersRequest class provides an interface for SSM DescribeParameters requests.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -61,9 +60,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new DescribeParametersRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeParametersRequest::DescribeParametersRequest(const DescribeParametersRequest &other)
     : SSMRequest(new DescribeParametersRequestPrivate(*other.d_func(), this))
@@ -72,7 +69,7 @@ DescribeParametersRequest::DescribeParametersRequest(const DescribeParametersReq
 }
 
 /*!
- * @brief  Constructs a new DescribeParametersRequest object.
+ * Constructs a DescribeParametersRequest object.
  */
 DescribeParametersRequest::DescribeParametersRequest()
     : SSMRequest(new DescribeParametersRequestPrivate(SSMRequest::DescribeParametersAction, this))
@@ -90,14 +87,9 @@ bool DescribeParametersRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeParametersResponse object.
+ * Returns a DescribeParametersResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeParametersResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SSMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeParametersRequest::response(QNetworkReply * const reply) const
 {
@@ -105,20 +97,17 @@ QtAws::Core::AwsAbstractResponse * DescribeParametersRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::SSM::DescribeParametersRequestPrivate
+ * \brief The DescribeParametersRequestPrivate class provides private implementation for DescribeParametersRequest.
+ * \internal
  *
- * @class  DescribeParametersRequestPrivate
- *
- * @brief  Private implementation for DescribeParametersRequest.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeParametersRequestPrivate object.
- *
- * @param  action  SSM action being performed.
- * @param  q       Pointer to this object's public DescribeParametersRequest instance.
+ * Constructs a DescribeParametersRequestPrivate object for SSM \a action with,
+ * public implementation \a q.
  */
 DescribeParametersRequestPrivate::DescribeParametersRequestPrivate(
     const SSMRequest::Action action, DescribeParametersRequest * const q)
@@ -128,15 +117,10 @@ DescribeParametersRequestPrivate::DescribeParametersRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeParametersRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeParametersRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeParametersRequest instance.
  */
 DescribeParametersRequestPrivate::DescribeParametersRequestPrivate(
     const DescribeParametersRequestPrivate &other, DescribeParametersRequest * const q)

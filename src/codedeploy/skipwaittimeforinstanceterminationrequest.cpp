@@ -27,10 +27,9 @@ namespace CodeDeploy {
 
 /*!
  * \class QtAws::CodeDeploy::SkipWaitTimeForInstanceTerminationRequest
- *
  * \brief The SkipWaitTimeForInstanceTerminationRequest class provides an interface for CodeDeploy SkipWaitTimeForInstanceTermination requests.
  *
- * \ingroup CodeDeploy
+ * \inmodule QtAwsCodeDeploy
  *
  *  <fullname>AWS CodeDeploy</fullname>
  * 
@@ -118,9 +117,7 @@ namespace CodeDeploy {
  */
 
 /*!
- * @brief  Constructs a new SkipWaitTimeForInstanceTerminationRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 SkipWaitTimeForInstanceTerminationRequest::SkipWaitTimeForInstanceTerminationRequest(const SkipWaitTimeForInstanceTerminationRequest &other)
     : CodeDeployRequest(new SkipWaitTimeForInstanceTerminationRequestPrivate(*other.d_func(), this))
@@ -129,7 +126,7 @@ SkipWaitTimeForInstanceTerminationRequest::SkipWaitTimeForInstanceTerminationReq
 }
 
 /*!
- * @brief  Constructs a new SkipWaitTimeForInstanceTerminationRequest object.
+ * Constructs a SkipWaitTimeForInstanceTerminationRequest object.
  */
 SkipWaitTimeForInstanceTerminationRequest::SkipWaitTimeForInstanceTerminationRequest()
     : CodeDeployRequest(new SkipWaitTimeForInstanceTerminationRequestPrivate(CodeDeployRequest::SkipWaitTimeForInstanceTerminationAction, this))
@@ -147,14 +144,9 @@ bool SkipWaitTimeForInstanceTerminationRequest::isValid() const
 
 
 /*!
- * @brief  Construct an SkipWaitTimeForInstanceTerminationResponse object.
+ * Returns a SkipWaitTimeForInstanceTerminationResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An SkipWaitTimeForInstanceTerminationResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CodeDeployClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * SkipWaitTimeForInstanceTerminationRequest::response(QNetworkReply * const reply) const
 {
@@ -162,20 +154,17 @@ QtAws::Core::AwsAbstractResponse * SkipWaitTimeForInstanceTerminationRequest::re
 }
 
 /*!
- * @internal
+ * \class QtAws::CodeDeploy::SkipWaitTimeForInstanceTerminationRequestPrivate
+ * \brief The SkipWaitTimeForInstanceTerminationRequestPrivate class provides private implementation for SkipWaitTimeForInstanceTerminationRequest.
+ * \internal
  *
- * @class  SkipWaitTimeForInstanceTerminationRequestPrivate
- *
- * @brief  Private implementation for SkipWaitTimeForInstanceTerminationRequest.
+ * \inmodule QtAwsCodeDeploy
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new SkipWaitTimeForInstanceTerminationRequestPrivate object.
- *
- * @param  action  CodeDeploy action being performed.
- * @param  q       Pointer to this object's public SkipWaitTimeForInstanceTerminationRequest instance.
+ * Constructs a SkipWaitTimeForInstanceTerminationRequestPrivate object for CodeDeploy \a action with,
+ * public implementation \a q.
  */
 SkipWaitTimeForInstanceTerminationRequestPrivate::SkipWaitTimeForInstanceTerminationRequestPrivate(
     const CodeDeployRequest::Action action, SkipWaitTimeForInstanceTerminationRequest * const q)
@@ -185,15 +174,10 @@ SkipWaitTimeForInstanceTerminationRequestPrivate::SkipWaitTimeForInstanceTermina
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SkipWaitTimeForInstanceTerminationRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the SkipWaitTimeForInstanceTerminationRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public SkipWaitTimeForInstanceTerminationRequest instance.
  */
 SkipWaitTimeForInstanceTerminationRequestPrivate::SkipWaitTimeForInstanceTerminationRequestPrivate(
     const SkipWaitTimeForInstanceTerminationRequestPrivate &other, SkipWaitTimeForInstanceTerminationRequest * const q)

@@ -27,10 +27,9 @@ namespace AppStream {
 
 /*!
  * \class QtAws::AppStream::TagResourceRequest
- *
  * \brief The TagResourceRequest class provides an interface for AppStream TagResource requests.
  *
- * \ingroup AppStream
+ * \inmodule QtAwsAppStream
  *
  *  <fullname>Amazon AppStream 2.0</fullname>
  * 
@@ -40,9 +39,7 @@ namespace AppStream {
  */
 
 /*!
- * @brief  Constructs a new TagResourceRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 TagResourceRequest::TagResourceRequest(const TagResourceRequest &other)
     : AppStreamRequest(new TagResourceRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ TagResourceRequest::TagResourceRequest(const TagResourceRequest &other)
 }
 
 /*!
- * @brief  Constructs a new TagResourceRequest object.
+ * Constructs a TagResourceRequest object.
  */
 TagResourceRequest::TagResourceRequest()
     : AppStreamRequest(new TagResourceRequestPrivate(AppStreamRequest::TagResourceAction, this))
@@ -69,14 +66,9 @@ bool TagResourceRequest::isValid() const
 
 
 /*!
- * @brief  Construct an TagResourceResponse object.
+ * Returns a TagResourceResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An TagResourceResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AppStreamClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * TagResourceRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * TagResourceRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::AppStream::TagResourceRequestPrivate
+ * \brief The TagResourceRequestPrivate class provides private implementation for TagResourceRequest.
+ * \internal
  *
- * @class  TagResourceRequestPrivate
- *
- * @brief  Private implementation for TagResourceRequest.
+ * \inmodule QtAwsAppStream
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new TagResourceRequestPrivate object.
- *
- * @param  action  AppStream action being performed.
- * @param  q       Pointer to this object's public TagResourceRequest instance.
+ * Constructs a TagResourceRequestPrivate object for AppStream \a action with,
+ * public implementation \a q.
  */
 TagResourceRequestPrivate::TagResourceRequestPrivate(
     const AppStreamRequest::Action action, TagResourceRequest * const q)
@@ -107,15 +96,10 @@ TagResourceRequestPrivate::TagResourceRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new TagResourceRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the TagResourceRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public TagResourceRequest instance.
  */
 TagResourceRequestPrivate::TagResourceRequestPrivate(
     const TagResourceRequestPrivate &other, TagResourceRequest * const q)

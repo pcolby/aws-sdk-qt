@@ -27,10 +27,9 @@ namespace Athena {
 
 /*!
  * \class QtAws::Athena::ListNamedQueriesRequest
- *
  * \brief The ListNamedQueriesRequest class provides an interface for Athena ListNamedQueries requests.
  *
- * \ingroup Athena
+ * \inmodule QtAwsAthena
  *
  *  Amazon Athena is an interactive query service that lets you use standard SQL to analyze data directly in Amazon S3. You
  *  can point Athena at your data in Amazon S3 and run ad-hoc queries and get results in seconds. Athena is serverless, so
@@ -49,9 +48,7 @@ namespace Athena {
  */
 
 /*!
- * @brief  Constructs a new ListNamedQueriesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListNamedQueriesRequest::ListNamedQueriesRequest(const ListNamedQueriesRequest &other)
     : AthenaRequest(new ListNamedQueriesRequestPrivate(*other.d_func(), this))
@@ -60,7 +57,7 @@ ListNamedQueriesRequest::ListNamedQueriesRequest(const ListNamedQueriesRequest &
 }
 
 /*!
- * @brief  Constructs a new ListNamedQueriesRequest object.
+ * Constructs a ListNamedQueriesRequest object.
  */
 ListNamedQueriesRequest::ListNamedQueriesRequest()
     : AthenaRequest(new ListNamedQueriesRequestPrivate(AthenaRequest::ListNamedQueriesAction, this))
@@ -78,14 +75,9 @@ bool ListNamedQueriesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListNamedQueriesResponse object.
+ * Returns a ListNamedQueriesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListNamedQueriesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AthenaClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListNamedQueriesRequest::response(QNetworkReply * const reply) const
 {
@@ -93,20 +85,17 @@ QtAws::Core::AwsAbstractResponse * ListNamedQueriesRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::Athena::ListNamedQueriesRequestPrivate
+ * \brief The ListNamedQueriesRequestPrivate class provides private implementation for ListNamedQueriesRequest.
+ * \internal
  *
- * @class  ListNamedQueriesRequestPrivate
- *
- * @brief  Private implementation for ListNamedQueriesRequest.
+ * \inmodule QtAwsAthena
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListNamedQueriesRequestPrivate object.
- *
- * @param  action  Athena action being performed.
- * @param  q       Pointer to this object's public ListNamedQueriesRequest instance.
+ * Constructs a ListNamedQueriesRequestPrivate object for Athena \a action with,
+ * public implementation \a q.
  */
 ListNamedQueriesRequestPrivate::ListNamedQueriesRequestPrivate(
     const AthenaRequest::Action action, ListNamedQueriesRequest * const q)
@@ -116,15 +105,10 @@ ListNamedQueriesRequestPrivate::ListNamedQueriesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListNamedQueriesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListNamedQueriesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListNamedQueriesRequest instance.
  */
 ListNamedQueriesRequestPrivate::ListNamedQueriesRequestPrivate(
     const ListNamedQueriesRequestPrivate &other, ListNamedQueriesRequest * const q)

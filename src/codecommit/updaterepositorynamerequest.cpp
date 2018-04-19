@@ -27,10 +27,9 @@ namespace CodeCommit {
 
 /*!
  * \class QtAws::CodeCommit::UpdateRepositoryNameRequest
- *
  * \brief The UpdateRepositoryNameRequest class provides an interface for CodeCommit UpdateRepositoryName requests.
  *
- * \ingroup CodeCommit
+ * \inmodule QtAwsCodeCommit
  *
  *  <fullname>AWS CodeCommit</fullname>
  * 
@@ -227,9 +226,7 @@ namespace CodeCommit {
  */
 
 /*!
- * @brief  Constructs a new UpdateRepositoryNameRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateRepositoryNameRequest::UpdateRepositoryNameRequest(const UpdateRepositoryNameRequest &other)
     : CodeCommitRequest(new UpdateRepositoryNameRequestPrivate(*other.d_func(), this))
@@ -238,7 +235,7 @@ UpdateRepositoryNameRequest::UpdateRepositoryNameRequest(const UpdateRepositoryN
 }
 
 /*!
- * @brief  Constructs a new UpdateRepositoryNameRequest object.
+ * Constructs a UpdateRepositoryNameRequest object.
  */
 UpdateRepositoryNameRequest::UpdateRepositoryNameRequest()
     : CodeCommitRequest(new UpdateRepositoryNameRequestPrivate(CodeCommitRequest::UpdateRepositoryNameAction, this))
@@ -256,14 +253,9 @@ bool UpdateRepositoryNameRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateRepositoryNameResponse object.
+ * Returns a UpdateRepositoryNameResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateRepositoryNameResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CodeCommitClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateRepositoryNameRequest::response(QNetworkReply * const reply) const
 {
@@ -271,20 +263,17 @@ QtAws::Core::AwsAbstractResponse * UpdateRepositoryNameRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::CodeCommit::UpdateRepositoryNameRequestPrivate
+ * \brief The UpdateRepositoryNameRequestPrivate class provides private implementation for UpdateRepositoryNameRequest.
+ * \internal
  *
- * @class  UpdateRepositoryNameRequestPrivate
- *
- * @brief  Private implementation for UpdateRepositoryNameRequest.
+ * \inmodule QtAwsCodeCommit
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateRepositoryNameRequestPrivate object.
- *
- * @param  action  CodeCommit action being performed.
- * @param  q       Pointer to this object's public UpdateRepositoryNameRequest instance.
+ * Constructs a UpdateRepositoryNameRequestPrivate object for CodeCommit \a action with,
+ * public implementation \a q.
  */
 UpdateRepositoryNameRequestPrivate::UpdateRepositoryNameRequestPrivate(
     const CodeCommitRequest::Action action, UpdateRepositoryNameRequest * const q)
@@ -294,15 +283,10 @@ UpdateRepositoryNameRequestPrivate::UpdateRepositoryNameRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateRepositoryNameRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateRepositoryNameRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateRepositoryNameRequest instance.
  */
 UpdateRepositoryNameRequestPrivate::UpdateRepositoryNameRequestPrivate(
     const UpdateRepositoryNameRequestPrivate &other, UpdateRepositoryNameRequest * const q)

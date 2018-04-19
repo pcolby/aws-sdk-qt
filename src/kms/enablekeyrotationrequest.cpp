@@ -27,10 +27,9 @@ namespace KMS {
 
 /*!
  * \class QtAws::KMS::EnableKeyRotationRequest
- *
  * \brief The EnableKeyRotationRequest class provides an interface for KMS EnableKeyRotation requests.
  *
- * \ingroup KMS
+ * \inmodule QtAwsKMS
  *
  *  <fullname>AWS Key Management Service</fullname>
  * 
@@ -136,9 +135,7 @@ namespace KMS {
  */
 
 /*!
- * @brief  Constructs a new EnableKeyRotationRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 EnableKeyRotationRequest::EnableKeyRotationRequest(const EnableKeyRotationRequest &other)
     : KMSRequest(new EnableKeyRotationRequestPrivate(*other.d_func(), this))
@@ -147,7 +144,7 @@ EnableKeyRotationRequest::EnableKeyRotationRequest(const EnableKeyRotationReques
 }
 
 /*!
- * @brief  Constructs a new EnableKeyRotationRequest object.
+ * Constructs a EnableKeyRotationRequest object.
  */
 EnableKeyRotationRequest::EnableKeyRotationRequest()
     : KMSRequest(new EnableKeyRotationRequestPrivate(KMSRequest::EnableKeyRotationAction, this))
@@ -165,14 +162,9 @@ bool EnableKeyRotationRequest::isValid() const
 
 
 /*!
- * @brief  Construct an EnableKeyRotationResponse object.
+ * Returns a EnableKeyRotationResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An EnableKeyRotationResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  KMSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * EnableKeyRotationRequest::response(QNetworkReply * const reply) const
 {
@@ -180,20 +172,17 @@ QtAws::Core::AwsAbstractResponse * EnableKeyRotationRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::KMS::EnableKeyRotationRequestPrivate
+ * \brief The EnableKeyRotationRequestPrivate class provides private implementation for EnableKeyRotationRequest.
+ * \internal
  *
- * @class  EnableKeyRotationRequestPrivate
- *
- * @brief  Private implementation for EnableKeyRotationRequest.
+ * \inmodule QtAwsKMS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new EnableKeyRotationRequestPrivate object.
- *
- * @param  action  KMS action being performed.
- * @param  q       Pointer to this object's public EnableKeyRotationRequest instance.
+ * Constructs a EnableKeyRotationRequestPrivate object for KMS \a action with,
+ * public implementation \a q.
  */
 EnableKeyRotationRequestPrivate::EnableKeyRotationRequestPrivate(
     const KMSRequest::Action action, EnableKeyRotationRequest * const q)
@@ -203,15 +192,10 @@ EnableKeyRotationRequestPrivate::EnableKeyRotationRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new EnableKeyRotationRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the EnableKeyRotationRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public EnableKeyRotationRequest instance.
  */
 EnableKeyRotationRequestPrivate::EnableKeyRotationRequestPrivate(
     const EnableKeyRotationRequestPrivate &other, EnableKeyRotationRequest * const q)

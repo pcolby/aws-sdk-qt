@@ -27,10 +27,9 @@ namespace StorageGateway {
 
 /*!
  * \class QtAws::StorageGateway::ShutdownGatewayRequest
- *
  * \brief The ShutdownGatewayRequest class provides an interface for StorageGateway ShutdownGateway requests.
  *
- * \ingroup StorageGateway
+ * \inmodule QtAwsStorageGateway
  *
  *  <fullname>AWS Storage Gateway Service</fullname>
  * 
@@ -106,9 +105,7 @@ namespace StorageGateway {
  */
 
 /*!
- * @brief  Constructs a new ShutdownGatewayRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ShutdownGatewayRequest::ShutdownGatewayRequest(const ShutdownGatewayRequest &other)
     : StorageGatewayRequest(new ShutdownGatewayRequestPrivate(*other.d_func(), this))
@@ -117,7 +114,7 @@ ShutdownGatewayRequest::ShutdownGatewayRequest(const ShutdownGatewayRequest &oth
 }
 
 /*!
- * @brief  Constructs a new ShutdownGatewayRequest object.
+ * Constructs a ShutdownGatewayRequest object.
  */
 ShutdownGatewayRequest::ShutdownGatewayRequest()
     : StorageGatewayRequest(new ShutdownGatewayRequestPrivate(StorageGatewayRequest::ShutdownGatewayAction, this))
@@ -135,14 +132,9 @@ bool ShutdownGatewayRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ShutdownGatewayResponse object.
+ * Returns a ShutdownGatewayResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ShutdownGatewayResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  StorageGatewayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ShutdownGatewayRequest::response(QNetworkReply * const reply) const
 {
@@ -150,20 +142,17 @@ QtAws::Core::AwsAbstractResponse * ShutdownGatewayRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::StorageGateway::ShutdownGatewayRequestPrivate
+ * \brief The ShutdownGatewayRequestPrivate class provides private implementation for ShutdownGatewayRequest.
+ * \internal
  *
- * @class  ShutdownGatewayRequestPrivate
- *
- * @brief  Private implementation for ShutdownGatewayRequest.
+ * \inmodule QtAwsStorageGateway
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ShutdownGatewayRequestPrivate object.
- *
- * @param  action  StorageGateway action being performed.
- * @param  q       Pointer to this object's public ShutdownGatewayRequest instance.
+ * Constructs a ShutdownGatewayRequestPrivate object for StorageGateway \a action with,
+ * public implementation \a q.
  */
 ShutdownGatewayRequestPrivate::ShutdownGatewayRequestPrivate(
     const StorageGatewayRequest::Action action, ShutdownGatewayRequest * const q)
@@ -173,15 +162,10 @@ ShutdownGatewayRequestPrivate::ShutdownGatewayRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ShutdownGatewayRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ShutdownGatewayRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ShutdownGatewayRequest instance.
  */
 ShutdownGatewayRequestPrivate::ShutdownGatewayRequestPrivate(
     const ShutdownGatewayRequestPrivate &other, ShutdownGatewayRequest * const q)

@@ -27,10 +27,9 @@ namespace DirectConnect {
 
 /*!
  * \class QtAws::DirectConnect::CreateLagRequest
- *
  * \brief The CreateLagRequest class provides an interface for DirectConnect CreateLag requests.
  *
- * \ingroup DirectConnect
+ * \inmodule QtAwsDirectConnect
  *
  *  AWS Direct Connect links your internal network to an AWS Direct Connect location over a standard 1 gigabit or 10 gigabit
  *  Ethernet fiber-optic cable. One end of the cable is connected to your router, the other to an AWS Direct Connect router.
@@ -45,9 +44,7 @@ namespace DirectConnect {
  */
 
 /*!
- * @brief  Constructs a new CreateLagRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateLagRequest::CreateLagRequest(const CreateLagRequest &other)
     : DirectConnectRequest(new CreateLagRequestPrivate(*other.d_func(), this))
@@ -56,7 +53,7 @@ CreateLagRequest::CreateLagRequest(const CreateLagRequest &other)
 }
 
 /*!
- * @brief  Constructs a new CreateLagRequest object.
+ * Constructs a CreateLagRequest object.
  */
 CreateLagRequest::CreateLagRequest()
     : DirectConnectRequest(new CreateLagRequestPrivate(DirectConnectRequest::CreateLagAction, this))
@@ -74,14 +71,9 @@ bool CreateLagRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateLagResponse object.
+ * Returns a CreateLagResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateLagResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DirectConnectClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateLagRequest::response(QNetworkReply * const reply) const
 {
@@ -89,20 +81,17 @@ QtAws::Core::AwsAbstractResponse * CreateLagRequest::response(QNetworkReply * co
 }
 
 /*!
- * @internal
+ * \class QtAws::DirectConnect::CreateLagRequestPrivate
+ * \brief The CreateLagRequestPrivate class provides private implementation for CreateLagRequest.
+ * \internal
  *
- * @class  CreateLagRequestPrivate
- *
- * @brief  Private implementation for CreateLagRequest.
+ * \inmodule QtAwsDirectConnect
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateLagRequestPrivate object.
- *
- * @param  action  DirectConnect action being performed.
- * @param  q       Pointer to this object's public CreateLagRequest instance.
+ * Constructs a CreateLagRequestPrivate object for DirectConnect \a action with,
+ * public implementation \a q.
  */
 CreateLagRequestPrivate::CreateLagRequestPrivate(
     const DirectConnectRequest::Action action, CreateLagRequest * const q)
@@ -112,15 +101,10 @@ CreateLagRequestPrivate::CreateLagRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateLagRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateLagRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateLagRequest instance.
  */
 CreateLagRequestPrivate::CreateLagRequestPrivate(
     const CreateLagRequestPrivate &other, CreateLagRequest * const q)

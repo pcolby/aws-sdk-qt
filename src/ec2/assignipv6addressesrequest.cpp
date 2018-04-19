@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::AssignIpv6AddressesRequest
- *
  * \brief The AssignIpv6AddressesRequest class provides an interface for EC2 AssignIpv6Addresses requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new AssignIpv6AddressesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AssignIpv6AddressesRequest::AssignIpv6AddressesRequest(const AssignIpv6AddressesRequest &other)
     : EC2Request(new AssignIpv6AddressesRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ AssignIpv6AddressesRequest::AssignIpv6AddressesRequest(const AssignIpv6Addresses
 }
 
 /*!
- * @brief  Constructs a new AssignIpv6AddressesRequest object.
+ * Constructs a AssignIpv6AddressesRequest object.
  */
 AssignIpv6AddressesRequest::AssignIpv6AddressesRequest()
     : EC2Request(new AssignIpv6AddressesRequestPrivate(EC2Request::AssignIpv6AddressesAction, this))
@@ -70,14 +67,9 @@ bool AssignIpv6AddressesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AssignIpv6AddressesResponse object.
+ * Returns a AssignIpv6AddressesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AssignIpv6AddressesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AssignIpv6AddressesRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * AssignIpv6AddressesRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::AssignIpv6AddressesRequestPrivate
+ * \brief The AssignIpv6AddressesRequestPrivate class provides private implementation for AssignIpv6AddressesRequest.
+ * \internal
  *
- * @class  AssignIpv6AddressesRequestPrivate
- *
- * @brief  Private implementation for AssignIpv6AddressesRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AssignIpv6AddressesRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public AssignIpv6AddressesRequest instance.
+ * Constructs a AssignIpv6AddressesRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 AssignIpv6AddressesRequestPrivate::AssignIpv6AddressesRequestPrivate(
     const EC2Request::Action action, AssignIpv6AddressesRequest * const q)
@@ -108,15 +97,10 @@ AssignIpv6AddressesRequestPrivate::AssignIpv6AddressesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AssignIpv6AddressesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AssignIpv6AddressesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AssignIpv6AddressesRequest instance.
  */
 AssignIpv6AddressesRequestPrivate::AssignIpv6AddressesRequestPrivate(
     const AssignIpv6AddressesRequestPrivate &other, AssignIpv6AddressesRequest * const q)

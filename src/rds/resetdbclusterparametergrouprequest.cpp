@@ -27,10 +27,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::ResetDBClusterParameterGroupRequest
- *
  * \brief The ResetDBClusterParameterGroupRequest class provides an interface for RDS ResetDBClusterParameterGroup requests.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -101,9 +100,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new ResetDBClusterParameterGroupRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ResetDBClusterParameterGroupRequest::ResetDBClusterParameterGroupRequest(const ResetDBClusterParameterGroupRequest &other)
     : RDSRequest(new ResetDBClusterParameterGroupRequestPrivate(*other.d_func(), this))
@@ -112,7 +109,7 @@ ResetDBClusterParameterGroupRequest::ResetDBClusterParameterGroupRequest(const R
 }
 
 /*!
- * @brief  Constructs a new ResetDBClusterParameterGroupRequest object.
+ * Constructs a ResetDBClusterParameterGroupRequest object.
  */
 ResetDBClusterParameterGroupRequest::ResetDBClusterParameterGroupRequest()
     : RDSRequest(new ResetDBClusterParameterGroupRequestPrivate(RDSRequest::ResetDBClusterParameterGroupAction, this))
@@ -130,14 +127,9 @@ bool ResetDBClusterParameterGroupRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ResetDBClusterParameterGroupResponse object.
+ * Returns a ResetDBClusterParameterGroupResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ResetDBClusterParameterGroupResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RDSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ResetDBClusterParameterGroupRequest::response(QNetworkReply * const reply) const
 {
@@ -145,20 +137,17 @@ QtAws::Core::AwsAbstractResponse * ResetDBClusterParameterGroupRequest::response
 }
 
 /*!
- * @internal
+ * \class QtAws::RDS::ResetDBClusterParameterGroupRequestPrivate
+ * \brief The ResetDBClusterParameterGroupRequestPrivate class provides private implementation for ResetDBClusterParameterGroupRequest.
+ * \internal
  *
- * @class  ResetDBClusterParameterGroupRequestPrivate
- *
- * @brief  Private implementation for ResetDBClusterParameterGroupRequest.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ResetDBClusterParameterGroupRequestPrivate object.
- *
- * @param  action  RDS action being performed.
- * @param  q       Pointer to this object's public ResetDBClusterParameterGroupRequest instance.
+ * Constructs a ResetDBClusterParameterGroupRequestPrivate object for RDS \a action with,
+ * public implementation \a q.
  */
 ResetDBClusterParameterGroupRequestPrivate::ResetDBClusterParameterGroupRequestPrivate(
     const RDSRequest::Action action, ResetDBClusterParameterGroupRequest * const q)
@@ -168,15 +157,10 @@ ResetDBClusterParameterGroupRequestPrivate::ResetDBClusterParameterGroupRequestP
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ResetDBClusterParameterGroupRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ResetDBClusterParameterGroupRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ResetDBClusterParameterGroupRequest instance.
  */
 ResetDBClusterParameterGroupRequestPrivate::ResetDBClusterParameterGroupRequestPrivate(
     const ResetDBClusterParameterGroupRequestPrivate &other, ResetDBClusterParameterGroupRequest * const q)

@@ -27,10 +27,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::GetParameterRequest
- *
  * \brief The GetParameterRequest class provides an interface for SSM GetParameter requests.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -61,9 +60,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new GetParameterRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetParameterRequest::GetParameterRequest(const GetParameterRequest &other)
     : SSMRequest(new GetParameterRequestPrivate(*other.d_func(), this))
@@ -72,7 +69,7 @@ GetParameterRequest::GetParameterRequest(const GetParameterRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetParameterRequest object.
+ * Constructs a GetParameterRequest object.
  */
 GetParameterRequest::GetParameterRequest()
     : SSMRequest(new GetParameterRequestPrivate(SSMRequest::GetParameterAction, this))
@@ -90,14 +87,9 @@ bool GetParameterRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetParameterResponse object.
+ * Returns a GetParameterResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetParameterResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SSMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetParameterRequest::response(QNetworkReply * const reply) const
 {
@@ -105,20 +97,17 @@ QtAws::Core::AwsAbstractResponse * GetParameterRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::SSM::GetParameterRequestPrivate
+ * \brief The GetParameterRequestPrivate class provides private implementation for GetParameterRequest.
+ * \internal
  *
- * @class  GetParameterRequestPrivate
- *
- * @brief  Private implementation for GetParameterRequest.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetParameterRequestPrivate object.
- *
- * @param  action  SSM action being performed.
- * @param  q       Pointer to this object's public GetParameterRequest instance.
+ * Constructs a GetParameterRequestPrivate object for SSM \a action with,
+ * public implementation \a q.
  */
 GetParameterRequestPrivate::GetParameterRequestPrivate(
     const SSMRequest::Action action, GetParameterRequest * const q)
@@ -128,15 +117,10 @@ GetParameterRequestPrivate::GetParameterRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetParameterRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetParameterRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetParameterRequest instance.
  */
 GetParameterRequestPrivate::GetParameterRequestPrivate(
     const GetParameterRequestPrivate &other, GetParameterRequest * const q)

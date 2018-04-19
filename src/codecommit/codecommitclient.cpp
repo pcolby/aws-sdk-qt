@@ -100,6 +100,9 @@
 /*!
  * \namespace QtAws::CodeCommit
  * \brief The QtAws::CodeCommit contains stuff...
+ *
+ * \inmodule QtAwsCodeCommit
+ *
  * @todo Move this to a separate template file.
  */
 
@@ -339,7 +342,7 @@ CodeCommitClient::CodeCommitClient(
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * \a  AwsEndpoint::getEndpoint()
+ * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
 CodeCommitClient::CodeCommitClient(
     const QUrl &endpoint,

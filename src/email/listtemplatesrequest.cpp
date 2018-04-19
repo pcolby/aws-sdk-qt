@@ -27,10 +27,9 @@ namespace SES {
 
 /*!
  * \class QtAws::SES::ListTemplatesRequest
- *
  * \brief The ListTemplatesRequest class provides an interface for SES ListTemplates requests.
  *
- * \ingroup SES
+ * \inmodule QtAwsSES
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -48,9 +47,7 @@ namespace SES {
  */
 
 /*!
- * @brief  Constructs a new ListTemplatesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListTemplatesRequest::ListTemplatesRequest(const ListTemplatesRequest &other)
     : SESRequest(new ListTemplatesRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ ListTemplatesRequest::ListTemplatesRequest(const ListTemplatesRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ListTemplatesRequest object.
+ * Constructs a ListTemplatesRequest object.
  */
 ListTemplatesRequest::ListTemplatesRequest()
     : SESRequest(new ListTemplatesRequestPrivate(SESRequest::ListTemplatesAction, this))
@@ -77,14 +74,9 @@ bool ListTemplatesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListTemplatesResponse object.
+ * Returns a ListTemplatesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListTemplatesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SESClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListTemplatesRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * ListTemplatesRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::SES::ListTemplatesRequestPrivate
+ * \brief The ListTemplatesRequestPrivate class provides private implementation for ListTemplatesRequest.
+ * \internal
  *
- * @class  ListTemplatesRequestPrivate
- *
- * @brief  Private implementation for ListTemplatesRequest.
+ * \inmodule QtAwsSES
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListTemplatesRequestPrivate object.
- *
- * @param  action  SES action being performed.
- * @param  q       Pointer to this object's public ListTemplatesRequest instance.
+ * Constructs a ListTemplatesRequestPrivate object for SES \a action with,
+ * public implementation \a q.
  */
 ListTemplatesRequestPrivate::ListTemplatesRequestPrivate(
     const SESRequest::Action action, ListTemplatesRequest * const q)
@@ -115,15 +104,10 @@ ListTemplatesRequestPrivate::ListTemplatesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListTemplatesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListTemplatesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListTemplatesRequest instance.
  */
 ListTemplatesRequestPrivate::ListTemplatesRequestPrivate(
     const ListTemplatesRequestPrivate &other, ListTemplatesRequest * const q)

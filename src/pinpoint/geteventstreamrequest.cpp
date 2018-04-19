@@ -27,19 +27,16 @@ namespace Pinpoint {
 
 /*!
  * \class QtAws::Pinpoint::GetEventStreamRequest
- *
  * \brief The GetEventStreamRequest class provides an interface for Pinpoint GetEventStream requests.
  *
- * \ingroup Pinpoint
+ * \inmodule QtAwsPinpoint
  *
  *
  * \sa PinpointClient::getEventStream
  */
 
 /*!
- * @brief  Constructs a new GetEventStreamRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetEventStreamRequest::GetEventStreamRequest(const GetEventStreamRequest &other)
     : PinpointRequest(new GetEventStreamRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ GetEventStreamRequest::GetEventStreamRequest(const GetEventStreamRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetEventStreamRequest object.
+ * Constructs a GetEventStreamRequest object.
  */
 GetEventStreamRequest::GetEventStreamRequest()
     : PinpointRequest(new GetEventStreamRequestPrivate(PinpointRequest::GetEventStreamAction, this))
@@ -66,14 +63,9 @@ bool GetEventStreamRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetEventStreamResponse object.
+ * Returns a GetEventStreamResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetEventStreamResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  PinpointClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetEventStreamRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * GetEventStreamRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::Pinpoint::GetEventStreamRequestPrivate
+ * \brief The GetEventStreamRequestPrivate class provides private implementation for GetEventStreamRequest.
+ * \internal
  *
- * @class  GetEventStreamRequestPrivate
- *
- * @brief  Private implementation for GetEventStreamRequest.
+ * \inmodule QtAwsPinpoint
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetEventStreamRequestPrivate object.
- *
- * @param  action  Pinpoint action being performed.
- * @param  q       Pointer to this object's public GetEventStreamRequest instance.
+ * Constructs a GetEventStreamRequestPrivate object for Pinpoint \a action with,
+ * public implementation \a q.
  */
 GetEventStreamRequestPrivate::GetEventStreamRequestPrivate(
     const PinpointRequest::Action action, GetEventStreamRequest * const q)
@@ -104,15 +93,10 @@ GetEventStreamRequestPrivate::GetEventStreamRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetEventStreamRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetEventStreamRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetEventStreamRequest instance.
  */
 GetEventStreamRequestPrivate::GetEventStreamRequestPrivate(
     const GetEventStreamRequestPrivate &other, GetEventStreamRequest * const q)

@@ -34,6 +34,9 @@
 /*!
  * \namespace QtAws::Pricing
  * \brief The QtAws::Pricing contains stuff...
+ *
+ * \inmodule QtAwsPricing
+ *
  * @todo Move this to a separate template file.
  */
 
@@ -109,7 +112,7 @@ PricingClient::PricingClient(
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * \a  AwsEndpoint::getEndpoint()
+ * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
 PricingClient::PricingClient(
     const QUrl &endpoint,

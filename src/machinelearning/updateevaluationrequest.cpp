@@ -27,19 +27,16 @@ namespace MachineLearning {
 
 /*!
  * \class QtAws::MachineLearning::UpdateEvaluationRequest
- *
  * \brief The UpdateEvaluationRequest class provides an interface for MachineLearning UpdateEvaluation requests.
  *
- * \ingroup MachineLearning
+ * \inmodule QtAwsMachineLearning
  *
  *
  * \sa MachineLearningClient::updateEvaluation
  */
 
 /*!
- * @brief  Constructs a new UpdateEvaluationRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateEvaluationRequest::UpdateEvaluationRequest(const UpdateEvaluationRequest &other)
     : MachineLearningRequest(new UpdateEvaluationRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ UpdateEvaluationRequest::UpdateEvaluationRequest(const UpdateEvaluationRequest &
 }
 
 /*!
- * @brief  Constructs a new UpdateEvaluationRequest object.
+ * Constructs a UpdateEvaluationRequest object.
  */
 UpdateEvaluationRequest::UpdateEvaluationRequest()
     : MachineLearningRequest(new UpdateEvaluationRequestPrivate(MachineLearningRequest::UpdateEvaluationAction, this))
@@ -66,14 +63,9 @@ bool UpdateEvaluationRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateEvaluationResponse object.
+ * Returns a UpdateEvaluationResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateEvaluationResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MachineLearningClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateEvaluationRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * UpdateEvaluationRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::MachineLearning::UpdateEvaluationRequestPrivate
+ * \brief The UpdateEvaluationRequestPrivate class provides private implementation for UpdateEvaluationRequest.
+ * \internal
  *
- * @class  UpdateEvaluationRequestPrivate
- *
- * @brief  Private implementation for UpdateEvaluationRequest.
+ * \inmodule QtAwsMachineLearning
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateEvaluationRequestPrivate object.
- *
- * @param  action  MachineLearning action being performed.
- * @param  q       Pointer to this object's public UpdateEvaluationRequest instance.
+ * Constructs a UpdateEvaluationRequestPrivate object for MachineLearning \a action with,
+ * public implementation \a q.
  */
 UpdateEvaluationRequestPrivate::UpdateEvaluationRequestPrivate(
     const MachineLearningRequest::Action action, UpdateEvaluationRequest * const q)
@@ -104,15 +93,10 @@ UpdateEvaluationRequestPrivate::UpdateEvaluationRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateEvaluationRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateEvaluationRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateEvaluationRequest instance.
  */
 UpdateEvaluationRequestPrivate::UpdateEvaluationRequestPrivate(
     const UpdateEvaluationRequestPrivate &other, UpdateEvaluationRequest * const q)

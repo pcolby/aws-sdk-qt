@@ -27,10 +27,9 @@ namespace Redshift {
 
 /*!
  * \class QtAws::Redshift::DescribeClustersRequest
- *
  * \brief The DescribeClustersRequest class provides an interface for Redshift DescribeClusters requests.
  *
- * \ingroup Redshift
+ * \inmodule QtAwsRedshift
  *
  *  <fullname>Amazon Redshift</fullname>
  * 
@@ -67,9 +66,7 @@ namespace Redshift {
  */
 
 /*!
- * @brief  Constructs a new DescribeClustersRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeClustersRequest::DescribeClustersRequest(const DescribeClustersRequest &other)
     : RedshiftRequest(new DescribeClustersRequestPrivate(*other.d_func(), this))
@@ -78,7 +75,7 @@ DescribeClustersRequest::DescribeClustersRequest(const DescribeClustersRequest &
 }
 
 /*!
- * @brief  Constructs a new DescribeClustersRequest object.
+ * Constructs a DescribeClustersRequest object.
  */
 DescribeClustersRequest::DescribeClustersRequest()
     : RedshiftRequest(new DescribeClustersRequestPrivate(RedshiftRequest::DescribeClustersAction, this))
@@ -96,14 +93,9 @@ bool DescribeClustersRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeClustersResponse object.
+ * Returns a DescribeClustersResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeClustersResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RedshiftClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeClustersRequest::response(QNetworkReply * const reply) const
 {
@@ -111,20 +103,17 @@ QtAws::Core::AwsAbstractResponse * DescribeClustersRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::Redshift::DescribeClustersRequestPrivate
+ * \brief The DescribeClustersRequestPrivate class provides private implementation for DescribeClustersRequest.
+ * \internal
  *
- * @class  DescribeClustersRequestPrivate
- *
- * @brief  Private implementation for DescribeClustersRequest.
+ * \inmodule QtAwsRedshift
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeClustersRequestPrivate object.
- *
- * @param  action  Redshift action being performed.
- * @param  q       Pointer to this object's public DescribeClustersRequest instance.
+ * Constructs a DescribeClustersRequestPrivate object for Redshift \a action with,
+ * public implementation \a q.
  */
 DescribeClustersRequestPrivate::DescribeClustersRequestPrivate(
     const RedshiftRequest::Action action, DescribeClustersRequest * const q)
@@ -134,15 +123,10 @@ DescribeClustersRequestPrivate::DescribeClustersRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeClustersRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeClustersRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeClustersRequest instance.
  */
 DescribeClustersRequestPrivate::DescribeClustersRequestPrivate(
     const DescribeClustersRequestPrivate &other, DescribeClustersRequest * const q)

@@ -27,10 +27,9 @@ namespace ElasticBeanstalk {
 
 /*!
  * \class QtAws::ElasticBeanstalk::CheckDNSAvailabilityRequest
- *
  * \brief The CheckDNSAvailabilityRequest class provides an interface for ElasticBeanstalk CheckDNSAvailability requests.
  *
- * \ingroup ElasticBeanstalk
+ * \inmodule QtAwsElasticBeanstalk
  *
  *  <fullname>AWS Elastic Beanstalk</fullname>
  * 
@@ -59,9 +58,7 @@ namespace ElasticBeanstalk {
  */
 
 /*!
- * @brief  Constructs a new CheckDNSAvailabilityRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CheckDNSAvailabilityRequest::CheckDNSAvailabilityRequest(const CheckDNSAvailabilityRequest &other)
     : ElasticBeanstalkRequest(new CheckDNSAvailabilityRequestPrivate(*other.d_func(), this))
@@ -70,7 +67,7 @@ CheckDNSAvailabilityRequest::CheckDNSAvailabilityRequest(const CheckDNSAvailabil
 }
 
 /*!
- * @brief  Constructs a new CheckDNSAvailabilityRequest object.
+ * Constructs a CheckDNSAvailabilityRequest object.
  */
 CheckDNSAvailabilityRequest::CheckDNSAvailabilityRequest()
     : ElasticBeanstalkRequest(new CheckDNSAvailabilityRequestPrivate(ElasticBeanstalkRequest::CheckDNSAvailabilityAction, this))
@@ -88,14 +85,9 @@ bool CheckDNSAvailabilityRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CheckDNSAvailabilityResponse object.
+ * Returns a CheckDNSAvailabilityResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CheckDNSAvailabilityResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ElasticBeanstalkClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CheckDNSAvailabilityRequest::response(QNetworkReply * const reply) const
 {
@@ -103,20 +95,17 @@ QtAws::Core::AwsAbstractResponse * CheckDNSAvailabilityRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::ElasticBeanstalk::CheckDNSAvailabilityRequestPrivate
+ * \brief The CheckDNSAvailabilityRequestPrivate class provides private implementation for CheckDNSAvailabilityRequest.
+ * \internal
  *
- * @class  CheckDNSAvailabilityRequestPrivate
- *
- * @brief  Private implementation for CheckDNSAvailabilityRequest.
+ * \inmodule QtAwsElasticBeanstalk
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CheckDNSAvailabilityRequestPrivate object.
- *
- * @param  action  ElasticBeanstalk action being performed.
- * @param  q       Pointer to this object's public CheckDNSAvailabilityRequest instance.
+ * Constructs a CheckDNSAvailabilityRequestPrivate object for ElasticBeanstalk \a action with,
+ * public implementation \a q.
  */
 CheckDNSAvailabilityRequestPrivate::CheckDNSAvailabilityRequestPrivate(
     const ElasticBeanstalkRequest::Action action, CheckDNSAvailabilityRequest * const q)
@@ -126,15 +115,10 @@ CheckDNSAvailabilityRequestPrivate::CheckDNSAvailabilityRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CheckDNSAvailabilityRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CheckDNSAvailabilityRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CheckDNSAvailabilityRequest instance.
  */
 CheckDNSAvailabilityRequestPrivate::CheckDNSAvailabilityRequestPrivate(
     const CheckDNSAvailabilityRequestPrivate &other, CheckDNSAvailabilityRequest * const q)

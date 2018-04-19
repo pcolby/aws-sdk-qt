@@ -27,19 +27,16 @@ namespace SMS {
 
 /*!
  * \class QtAws::SMS::DisassociateConnectorRequest
- *
  * \brief The DisassociateConnectorRequest class provides an interface for SMS DisassociateConnector requests.
  *
- * \ingroup SMS
+ * \inmodule QtAwsSMS
  *
  *
  * \sa SMSClient::disassociateConnector
  */
 
 /*!
- * @brief  Constructs a new DisassociateConnectorRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DisassociateConnectorRequest::DisassociateConnectorRequest(const DisassociateConnectorRequest &other)
     : SMSRequest(new DisassociateConnectorRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ DisassociateConnectorRequest::DisassociateConnectorRequest(const DisassociateCon
 }
 
 /*!
- * @brief  Constructs a new DisassociateConnectorRequest object.
+ * Constructs a DisassociateConnectorRequest object.
  */
 DisassociateConnectorRequest::DisassociateConnectorRequest()
     : SMSRequest(new DisassociateConnectorRequestPrivate(SMSRequest::DisassociateConnectorAction, this))
@@ -66,14 +63,9 @@ bool DisassociateConnectorRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DisassociateConnectorResponse object.
+ * Returns a DisassociateConnectorResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DisassociateConnectorResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SMSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DisassociateConnectorRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * DisassociateConnectorRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::SMS::DisassociateConnectorRequestPrivate
+ * \brief The DisassociateConnectorRequestPrivate class provides private implementation for DisassociateConnectorRequest.
+ * \internal
  *
- * @class  DisassociateConnectorRequestPrivate
- *
- * @brief  Private implementation for DisassociateConnectorRequest.
+ * \inmodule QtAwsSMS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DisassociateConnectorRequestPrivate object.
- *
- * @param  action  SMS action being performed.
- * @param  q       Pointer to this object's public DisassociateConnectorRequest instance.
+ * Constructs a DisassociateConnectorRequestPrivate object for SMS \a action with,
+ * public implementation \a q.
  */
 DisassociateConnectorRequestPrivate::DisassociateConnectorRequestPrivate(
     const SMSRequest::Action action, DisassociateConnectorRequest * const q)
@@ -104,15 +93,10 @@ DisassociateConnectorRequestPrivate::DisassociateConnectorRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DisassociateConnectorRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DisassociateConnectorRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DisassociateConnectorRequest instance.
  */
 DisassociateConnectorRequestPrivate::DisassociateConnectorRequestPrivate(
     const DisassociateConnectorRequestPrivate &other, DisassociateConnectorRequest * const q)

@@ -27,10 +27,9 @@ namespace ECS {
 
 /*!
  * \class QtAws::ECS::DeleteServiceRequest
- *
  * \brief The DeleteServiceRequest class provides an interface for ECS DeleteService requests.
  *
- * \ingroup ECS
+ * \inmodule QtAwsECS
  *
  *  Amazon Elastic Container Service (Amazon ECS) is a highly scalable, fast, container management service that makes it
  *  easy to run, stop, and manage Docker containers on a cluster. You can host your cluster on a serverless infrastructure
@@ -54,9 +53,7 @@ namespace ECS {
  */
 
 /*!
- * @brief  Constructs a new DeleteServiceRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteServiceRequest::DeleteServiceRequest(const DeleteServiceRequest &other)
     : ECSRequest(new DeleteServiceRequestPrivate(*other.d_func(), this))
@@ -65,7 +62,7 @@ DeleteServiceRequest::DeleteServiceRequest(const DeleteServiceRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DeleteServiceRequest object.
+ * Constructs a DeleteServiceRequest object.
  */
 DeleteServiceRequest::DeleteServiceRequest()
     : ECSRequest(new DeleteServiceRequestPrivate(ECSRequest::DeleteServiceAction, this))
@@ -83,14 +80,9 @@ bool DeleteServiceRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteServiceResponse object.
+ * Returns a DeleteServiceResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteServiceResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ECSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteServiceRequest::response(QNetworkReply * const reply) const
 {
@@ -98,20 +90,17 @@ QtAws::Core::AwsAbstractResponse * DeleteServiceRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::ECS::DeleteServiceRequestPrivate
+ * \brief The DeleteServiceRequestPrivate class provides private implementation for DeleteServiceRequest.
+ * \internal
  *
- * @class  DeleteServiceRequestPrivate
- *
- * @brief  Private implementation for DeleteServiceRequest.
+ * \inmodule QtAwsECS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteServiceRequestPrivate object.
- *
- * @param  action  ECS action being performed.
- * @param  q       Pointer to this object's public DeleteServiceRequest instance.
+ * Constructs a DeleteServiceRequestPrivate object for ECS \a action with,
+ * public implementation \a q.
  */
 DeleteServiceRequestPrivate::DeleteServiceRequestPrivate(
     const ECSRequest::Action action, DeleteServiceRequest * const q)
@@ -121,15 +110,10 @@ DeleteServiceRequestPrivate::DeleteServiceRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteServiceRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteServiceRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteServiceRequest instance.
  */
 DeleteServiceRequestPrivate::DeleteServiceRequestPrivate(
     const DeleteServiceRequestPrivate &other, DeleteServiceRequest * const q)

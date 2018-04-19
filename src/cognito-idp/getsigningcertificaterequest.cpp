@@ -27,10 +27,9 @@ namespace CognitoIdentityProvider {
 
 /*!
  * \class QtAws::CognitoIdentityProvider::GetSigningCertificateRequest
- *
  * \brief The GetSigningCertificateRequest class provides an interface for CognitoIdentityProvider GetSigningCertificate requests.
  *
- * \ingroup CognitoIdentityProvider
+ * \inmodule QtAwsCognitoIdentityProvider
  *
  *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
  *  authenticate a user to obtain tokens related to user identity and access
@@ -47,9 +46,7 @@ namespace CognitoIdentityProvider {
  */
 
 /*!
- * @brief  Constructs a new GetSigningCertificateRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetSigningCertificateRequest::GetSigningCertificateRequest(const GetSigningCertificateRequest &other)
     : CognitoIdentityProviderRequest(new GetSigningCertificateRequestPrivate(*other.d_func(), this))
@@ -58,7 +55,7 @@ GetSigningCertificateRequest::GetSigningCertificateRequest(const GetSigningCerti
 }
 
 /*!
- * @brief  Constructs a new GetSigningCertificateRequest object.
+ * Constructs a GetSigningCertificateRequest object.
  */
 GetSigningCertificateRequest::GetSigningCertificateRequest()
     : CognitoIdentityProviderRequest(new GetSigningCertificateRequestPrivate(CognitoIdentityProviderRequest::GetSigningCertificateAction, this))
@@ -76,14 +73,9 @@ bool GetSigningCertificateRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetSigningCertificateResponse object.
+ * Returns a GetSigningCertificateResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetSigningCertificateResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CognitoIdentityProviderClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetSigningCertificateRequest::response(QNetworkReply * const reply) const
 {
@@ -91,20 +83,17 @@ QtAws::Core::AwsAbstractResponse * GetSigningCertificateRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::CognitoIdentityProvider::GetSigningCertificateRequestPrivate
+ * \brief The GetSigningCertificateRequestPrivate class provides private implementation for GetSigningCertificateRequest.
+ * \internal
  *
- * @class  GetSigningCertificateRequestPrivate
- *
- * @brief  Private implementation for GetSigningCertificateRequest.
+ * \inmodule QtAwsCognitoIdentityProvider
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetSigningCertificateRequestPrivate object.
- *
- * @param  action  CognitoIdentityProvider action being performed.
- * @param  q       Pointer to this object's public GetSigningCertificateRequest instance.
+ * Constructs a GetSigningCertificateRequestPrivate object for CognitoIdentityProvider \a action with,
+ * public implementation \a q.
  */
 GetSigningCertificateRequestPrivate::GetSigningCertificateRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, GetSigningCertificateRequest * const q)
@@ -114,15 +103,10 @@ GetSigningCertificateRequestPrivate::GetSigningCertificateRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetSigningCertificateRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetSigningCertificateRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetSigningCertificateRequest instance.
  */
 GetSigningCertificateRequestPrivate::GetSigningCertificateRequestPrivate(
     const GetSigningCertificateRequestPrivate &other, GetSigningCertificateRequest * const q)

@@ -27,10 +27,9 @@ namespace Organizations {
 
 /*!
  * \class QtAws::Organizations::DescribeAccountRequest
- *
  * \brief The DescribeAccountRequest class provides an interface for Organizations DescribeAccount requests.
  *
- * \ingroup Organizations
+ * \inmodule QtAwsOrganizations
  *
  *  <fullname>AWS Organizations API Reference</fullname>
  * 
@@ -179,9 +178,7 @@ namespace Organizations {
  */
 
 /*!
- * @brief  Constructs a new DescribeAccountRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeAccountRequest::DescribeAccountRequest(const DescribeAccountRequest &other)
     : OrganizationsRequest(new DescribeAccountRequestPrivate(*other.d_func(), this))
@@ -190,7 +187,7 @@ DescribeAccountRequest::DescribeAccountRequest(const DescribeAccountRequest &oth
 }
 
 /*!
- * @brief  Constructs a new DescribeAccountRequest object.
+ * Constructs a DescribeAccountRequest object.
  */
 DescribeAccountRequest::DescribeAccountRequest()
     : OrganizationsRequest(new DescribeAccountRequestPrivate(OrganizationsRequest::DescribeAccountAction, this))
@@ -208,14 +205,9 @@ bool DescribeAccountRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeAccountResponse object.
+ * Returns a DescribeAccountResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeAccountResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  OrganizationsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeAccountRequest::response(QNetworkReply * const reply) const
 {
@@ -223,20 +215,17 @@ QtAws::Core::AwsAbstractResponse * DescribeAccountRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::Organizations::DescribeAccountRequestPrivate
+ * \brief The DescribeAccountRequestPrivate class provides private implementation for DescribeAccountRequest.
+ * \internal
  *
- * @class  DescribeAccountRequestPrivate
- *
- * @brief  Private implementation for DescribeAccountRequest.
+ * \inmodule QtAwsOrganizations
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeAccountRequestPrivate object.
- *
- * @param  action  Organizations action being performed.
- * @param  q       Pointer to this object's public DescribeAccountRequest instance.
+ * Constructs a DescribeAccountRequestPrivate object for Organizations \a action with,
+ * public implementation \a q.
  */
 DescribeAccountRequestPrivate::DescribeAccountRequestPrivate(
     const OrganizationsRequest::Action action, DescribeAccountRequest * const q)
@@ -246,15 +235,10 @@ DescribeAccountRequestPrivate::DescribeAccountRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeAccountRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeAccountRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeAccountRequest instance.
  */
 DescribeAccountRequestPrivate::DescribeAccountRequestPrivate(
     const DescribeAccountRequestPrivate &other, DescribeAccountRequest * const q)

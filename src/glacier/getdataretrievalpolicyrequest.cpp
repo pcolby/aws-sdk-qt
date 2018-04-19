@@ -27,10 +27,9 @@ namespace Glacier {
 
 /*!
  * \class QtAws::Glacier::GetDataRetrievalPolicyRequest
- *
  * \brief The GetDataRetrievalPolicyRequest class provides an interface for Glacier GetDataRetrievalPolicy requests.
  *
- * \ingroup Glacier
+ * \inmodule QtAwsGlacier
  *
  *  Amazon Glacier is a storage solution for "cold
  * 
@@ -75,9 +74,7 @@ namespace Glacier {
  */
 
 /*!
- * @brief  Constructs a new GetDataRetrievalPolicyRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetDataRetrievalPolicyRequest::GetDataRetrievalPolicyRequest(const GetDataRetrievalPolicyRequest &other)
     : GlacierRequest(new GetDataRetrievalPolicyRequestPrivate(*other.d_func(), this))
@@ -86,7 +83,7 @@ GetDataRetrievalPolicyRequest::GetDataRetrievalPolicyRequest(const GetDataRetrie
 }
 
 /*!
- * @brief  Constructs a new GetDataRetrievalPolicyRequest object.
+ * Constructs a GetDataRetrievalPolicyRequest object.
  */
 GetDataRetrievalPolicyRequest::GetDataRetrievalPolicyRequest()
     : GlacierRequest(new GetDataRetrievalPolicyRequestPrivate(GlacierRequest::GetDataRetrievalPolicyAction, this))
@@ -104,14 +101,9 @@ bool GetDataRetrievalPolicyRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetDataRetrievalPolicyResponse object.
+ * Returns a GetDataRetrievalPolicyResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetDataRetrievalPolicyResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GlacierClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetDataRetrievalPolicyRequest::response(QNetworkReply * const reply) const
 {
@@ -119,20 +111,17 @@ QtAws::Core::AwsAbstractResponse * GetDataRetrievalPolicyRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::Glacier::GetDataRetrievalPolicyRequestPrivate
+ * \brief The GetDataRetrievalPolicyRequestPrivate class provides private implementation for GetDataRetrievalPolicyRequest.
+ * \internal
  *
- * @class  GetDataRetrievalPolicyRequestPrivate
- *
- * @brief  Private implementation for GetDataRetrievalPolicyRequest.
+ * \inmodule QtAwsGlacier
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetDataRetrievalPolicyRequestPrivate object.
- *
- * @param  action  Glacier action being performed.
- * @param  q       Pointer to this object's public GetDataRetrievalPolicyRequest instance.
+ * Constructs a GetDataRetrievalPolicyRequestPrivate object for Glacier \a action with,
+ * public implementation \a q.
  */
 GetDataRetrievalPolicyRequestPrivate::GetDataRetrievalPolicyRequestPrivate(
     const GlacierRequest::Action action, GetDataRetrievalPolicyRequest * const q)
@@ -142,15 +131,10 @@ GetDataRetrievalPolicyRequestPrivate::GetDataRetrievalPolicyRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetDataRetrievalPolicyRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetDataRetrievalPolicyRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetDataRetrievalPolicyRequest instance.
  */
 GetDataRetrievalPolicyRequestPrivate::GetDataRetrievalPolicyRequestPrivate(
     const GetDataRetrievalPolicyRequestPrivate &other, GetDataRetrievalPolicyRequest * const q)

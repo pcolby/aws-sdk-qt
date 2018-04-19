@@ -27,10 +27,9 @@ namespace ECS {
 
 /*!
  * \class QtAws::ECS::RegisterTaskDefinitionRequest
- *
  * \brief The RegisterTaskDefinitionRequest class provides an interface for ECS RegisterTaskDefinition requests.
  *
- * \ingroup ECS
+ * \inmodule QtAwsECS
  *
  *  Amazon Elastic Container Service (Amazon ECS) is a highly scalable, fast, container management service that makes it
  *  easy to run, stop, and manage Docker containers on a cluster. You can host your cluster on a serverless infrastructure
@@ -54,9 +53,7 @@ namespace ECS {
  */
 
 /*!
- * @brief  Constructs a new RegisterTaskDefinitionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 RegisterTaskDefinitionRequest::RegisterTaskDefinitionRequest(const RegisterTaskDefinitionRequest &other)
     : ECSRequest(new RegisterTaskDefinitionRequestPrivate(*other.d_func(), this))
@@ -65,7 +62,7 @@ RegisterTaskDefinitionRequest::RegisterTaskDefinitionRequest(const RegisterTaskD
 }
 
 /*!
- * @brief  Constructs a new RegisterTaskDefinitionRequest object.
+ * Constructs a RegisterTaskDefinitionRequest object.
  */
 RegisterTaskDefinitionRequest::RegisterTaskDefinitionRequest()
     : ECSRequest(new RegisterTaskDefinitionRequestPrivate(ECSRequest::RegisterTaskDefinitionAction, this))
@@ -83,14 +80,9 @@ bool RegisterTaskDefinitionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an RegisterTaskDefinitionResponse object.
+ * Returns a RegisterTaskDefinitionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An RegisterTaskDefinitionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ECSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * RegisterTaskDefinitionRequest::response(QNetworkReply * const reply) const
 {
@@ -98,20 +90,17 @@ QtAws::Core::AwsAbstractResponse * RegisterTaskDefinitionRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::ECS::RegisterTaskDefinitionRequestPrivate
+ * \brief The RegisterTaskDefinitionRequestPrivate class provides private implementation for RegisterTaskDefinitionRequest.
+ * \internal
  *
- * @class  RegisterTaskDefinitionRequestPrivate
- *
- * @brief  Private implementation for RegisterTaskDefinitionRequest.
+ * \inmodule QtAwsECS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new RegisterTaskDefinitionRequestPrivate object.
- *
- * @param  action  ECS action being performed.
- * @param  q       Pointer to this object's public RegisterTaskDefinitionRequest instance.
+ * Constructs a RegisterTaskDefinitionRequestPrivate object for ECS \a action with,
+ * public implementation \a q.
  */
 RegisterTaskDefinitionRequestPrivate::RegisterTaskDefinitionRequestPrivate(
     const ECSRequest::Action action, RegisterTaskDefinitionRequest * const q)
@@ -121,15 +110,10 @@ RegisterTaskDefinitionRequestPrivate::RegisterTaskDefinitionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RegisterTaskDefinitionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the RegisterTaskDefinitionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public RegisterTaskDefinitionRequest instance.
  */
 RegisterTaskDefinitionRequestPrivate::RegisterTaskDefinitionRequestPrivate(
     const RegisterTaskDefinitionRequestPrivate &other, RegisterTaskDefinitionRequest * const q)

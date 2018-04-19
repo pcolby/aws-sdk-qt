@@ -27,10 +27,9 @@ namespace CloudHSM {
 
 /*!
  * \class QtAws::CloudHSM::DeleteHapgRequest
- *
  * \brief The DeleteHapgRequest class provides an interface for CloudHSM DeleteHapg requests.
  *
- * \ingroup CloudHSM
+ * \inmodule QtAwsCloudHSM
  *
  *  <fullname>AWS CloudHSM Service</fullname>
  * 
@@ -49,9 +48,7 @@ namespace CloudHSM {
  */
 
 /*!
- * @brief  Constructs a new DeleteHapgRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteHapgRequest::DeleteHapgRequest(const DeleteHapgRequest &other)
     : CloudHSMRequest(new DeleteHapgRequestPrivate(*other.d_func(), this))
@@ -60,7 +57,7 @@ DeleteHapgRequest::DeleteHapgRequest(const DeleteHapgRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DeleteHapgRequest object.
+ * Constructs a DeleteHapgRequest object.
  */
 DeleteHapgRequest::DeleteHapgRequest()
     : CloudHSMRequest(new DeleteHapgRequestPrivate(CloudHSMRequest::DeleteHapgAction, this))
@@ -78,14 +75,9 @@ bool DeleteHapgRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteHapgResponse object.
+ * Returns a DeleteHapgResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteHapgResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudHSMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteHapgRequest::response(QNetworkReply * const reply) const
 {
@@ -93,20 +85,17 @@ QtAws::Core::AwsAbstractResponse * DeleteHapgRequest::response(QNetworkReply * c
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudHSM::DeleteHapgRequestPrivate
+ * \brief The DeleteHapgRequestPrivate class provides private implementation for DeleteHapgRequest.
+ * \internal
  *
- * @class  DeleteHapgRequestPrivate
- *
- * @brief  Private implementation for DeleteHapgRequest.
+ * \inmodule QtAwsCloudHSM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteHapgRequestPrivate object.
- *
- * @param  action  CloudHSM action being performed.
- * @param  q       Pointer to this object's public DeleteHapgRequest instance.
+ * Constructs a DeleteHapgRequestPrivate object for CloudHSM \a action with,
+ * public implementation \a q.
  */
 DeleteHapgRequestPrivate::DeleteHapgRequestPrivate(
     const CloudHSMRequest::Action action, DeleteHapgRequest * const q)
@@ -116,15 +105,10 @@ DeleteHapgRequestPrivate::DeleteHapgRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteHapgRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteHapgRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteHapgRequest instance.
  */
 DeleteHapgRequestPrivate::DeleteHapgRequestPrivate(
     const DeleteHapgRequestPrivate &other, DeleteHapgRequest * const q)

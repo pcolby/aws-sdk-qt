@@ -27,10 +27,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::DeleteOptionGroupRequest
- *
  * \brief The DeleteOptionGroupRequest class provides an interface for RDS DeleteOptionGroup requests.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -101,9 +100,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new DeleteOptionGroupRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteOptionGroupRequest::DeleteOptionGroupRequest(const DeleteOptionGroupRequest &other)
     : RDSRequest(new DeleteOptionGroupRequestPrivate(*other.d_func(), this))
@@ -112,7 +109,7 @@ DeleteOptionGroupRequest::DeleteOptionGroupRequest(const DeleteOptionGroupReques
 }
 
 /*!
- * @brief  Constructs a new DeleteOptionGroupRequest object.
+ * Constructs a DeleteOptionGroupRequest object.
  */
 DeleteOptionGroupRequest::DeleteOptionGroupRequest()
     : RDSRequest(new DeleteOptionGroupRequestPrivate(RDSRequest::DeleteOptionGroupAction, this))
@@ -130,14 +127,9 @@ bool DeleteOptionGroupRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteOptionGroupResponse object.
+ * Returns a DeleteOptionGroupResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteOptionGroupResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RDSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteOptionGroupRequest::response(QNetworkReply * const reply) const
 {
@@ -145,20 +137,17 @@ QtAws::Core::AwsAbstractResponse * DeleteOptionGroupRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::RDS::DeleteOptionGroupRequestPrivate
+ * \brief The DeleteOptionGroupRequestPrivate class provides private implementation for DeleteOptionGroupRequest.
+ * \internal
  *
- * @class  DeleteOptionGroupRequestPrivate
- *
- * @brief  Private implementation for DeleteOptionGroupRequest.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteOptionGroupRequestPrivate object.
- *
- * @param  action  RDS action being performed.
- * @param  q       Pointer to this object's public DeleteOptionGroupRequest instance.
+ * Constructs a DeleteOptionGroupRequestPrivate object for RDS \a action with,
+ * public implementation \a q.
  */
 DeleteOptionGroupRequestPrivate::DeleteOptionGroupRequestPrivate(
     const RDSRequest::Action action, DeleteOptionGroupRequest * const q)
@@ -168,15 +157,10 @@ DeleteOptionGroupRequestPrivate::DeleteOptionGroupRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteOptionGroupRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteOptionGroupRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteOptionGroupRequest instance.
  */
 DeleteOptionGroupRequestPrivate::DeleteOptionGroupRequestPrivate(
     const DeleteOptionGroupRequestPrivate &other, DeleteOptionGroupRequest * const q)

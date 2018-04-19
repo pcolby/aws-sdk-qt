@@ -27,10 +27,9 @@ namespace CognitoIdentityProvider {
 
 /*!
  * \class QtAws::CognitoIdentityProvider::AdminUserGlobalSignOutRequest
- *
  * \brief The AdminUserGlobalSignOutRequest class provides an interface for CognitoIdentityProvider AdminUserGlobalSignOut requests.
  *
- * \ingroup CognitoIdentityProvider
+ * \inmodule QtAwsCognitoIdentityProvider
  *
  *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
  *  authenticate a user to obtain tokens related to user identity and access
@@ -47,9 +46,7 @@ namespace CognitoIdentityProvider {
  */
 
 /*!
- * @brief  Constructs a new AdminUserGlobalSignOutRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AdminUserGlobalSignOutRequest::AdminUserGlobalSignOutRequest(const AdminUserGlobalSignOutRequest &other)
     : CognitoIdentityProviderRequest(new AdminUserGlobalSignOutRequestPrivate(*other.d_func(), this))
@@ -58,7 +55,7 @@ AdminUserGlobalSignOutRequest::AdminUserGlobalSignOutRequest(const AdminUserGlob
 }
 
 /*!
- * @brief  Constructs a new AdminUserGlobalSignOutRequest object.
+ * Constructs a AdminUserGlobalSignOutRequest object.
  */
 AdminUserGlobalSignOutRequest::AdminUserGlobalSignOutRequest()
     : CognitoIdentityProviderRequest(new AdminUserGlobalSignOutRequestPrivate(CognitoIdentityProviderRequest::AdminUserGlobalSignOutAction, this))
@@ -76,14 +73,9 @@ bool AdminUserGlobalSignOutRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AdminUserGlobalSignOutResponse object.
+ * Returns a AdminUserGlobalSignOutResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AdminUserGlobalSignOutResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CognitoIdentityProviderClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AdminUserGlobalSignOutRequest::response(QNetworkReply * const reply) const
 {
@@ -91,20 +83,17 @@ QtAws::Core::AwsAbstractResponse * AdminUserGlobalSignOutRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::CognitoIdentityProvider::AdminUserGlobalSignOutRequestPrivate
+ * \brief The AdminUserGlobalSignOutRequestPrivate class provides private implementation for AdminUserGlobalSignOutRequest.
+ * \internal
  *
- * @class  AdminUserGlobalSignOutRequestPrivate
- *
- * @brief  Private implementation for AdminUserGlobalSignOutRequest.
+ * \inmodule QtAwsCognitoIdentityProvider
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AdminUserGlobalSignOutRequestPrivate object.
- *
- * @param  action  CognitoIdentityProvider action being performed.
- * @param  q       Pointer to this object's public AdminUserGlobalSignOutRequest instance.
+ * Constructs a AdminUserGlobalSignOutRequestPrivate object for CognitoIdentityProvider \a action with,
+ * public implementation \a q.
  */
 AdminUserGlobalSignOutRequestPrivate::AdminUserGlobalSignOutRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, AdminUserGlobalSignOutRequest * const q)
@@ -114,15 +103,10 @@ AdminUserGlobalSignOutRequestPrivate::AdminUserGlobalSignOutRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AdminUserGlobalSignOutRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AdminUserGlobalSignOutRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AdminUserGlobalSignOutRequest instance.
  */
 AdminUserGlobalSignOutRequestPrivate::AdminUserGlobalSignOutRequestPrivate(
     const AdminUserGlobalSignOutRequestPrivate &other, AdminUserGlobalSignOutRequest * const q)

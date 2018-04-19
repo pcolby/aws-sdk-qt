@@ -27,10 +27,9 @@ namespace Inspector {
 
 /*!
  * \class QtAws::Inspector::GetAssessmentReportRequest
- *
  * \brief The GetAssessmentReportRequest class provides an interface for Inspector GetAssessmentReport requests.
  *
- * \ingroup Inspector
+ * \inmodule QtAwsInspector
  *
  *  <fullname>Amazon Inspector</fullname>
  * 
@@ -42,9 +41,7 @@ namespace Inspector {
  */
 
 /*!
- * @brief  Constructs a new GetAssessmentReportRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetAssessmentReportRequest::GetAssessmentReportRequest(const GetAssessmentReportRequest &other)
     : InspectorRequest(new GetAssessmentReportRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ GetAssessmentReportRequest::GetAssessmentReportRequest(const GetAssessmentReport
 }
 
 /*!
- * @brief  Constructs a new GetAssessmentReportRequest object.
+ * Constructs a GetAssessmentReportRequest object.
  */
 GetAssessmentReportRequest::GetAssessmentReportRequest()
     : InspectorRequest(new GetAssessmentReportRequestPrivate(InspectorRequest::GetAssessmentReportAction, this))
@@ -71,14 +68,9 @@ bool GetAssessmentReportRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetAssessmentReportResponse object.
+ * Returns a GetAssessmentReportResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetAssessmentReportResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  InspectorClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetAssessmentReportRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * GetAssessmentReportRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::Inspector::GetAssessmentReportRequestPrivate
+ * \brief The GetAssessmentReportRequestPrivate class provides private implementation for GetAssessmentReportRequest.
+ * \internal
  *
- * @class  GetAssessmentReportRequestPrivate
- *
- * @brief  Private implementation for GetAssessmentReportRequest.
+ * \inmodule QtAwsInspector
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetAssessmentReportRequestPrivate object.
- *
- * @param  action  Inspector action being performed.
- * @param  q       Pointer to this object's public GetAssessmentReportRequest instance.
+ * Constructs a GetAssessmentReportRequestPrivate object for Inspector \a action with,
+ * public implementation \a q.
  */
 GetAssessmentReportRequestPrivate::GetAssessmentReportRequestPrivate(
     const InspectorRequest::Action action, GetAssessmentReportRequest * const q)
@@ -109,15 +98,10 @@ GetAssessmentReportRequestPrivate::GetAssessmentReportRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetAssessmentReportRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetAssessmentReportRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetAssessmentReportRequest instance.
  */
 GetAssessmentReportRequestPrivate::GetAssessmentReportRequestPrivate(
     const GetAssessmentReportRequestPrivate &other, GetAssessmentReportRequest * const q)

@@ -27,10 +27,9 @@ namespace CodeStar {
 
 /*!
  * \class QtAws::CodeStar::ListTeamMembersRequest
- *
  * \brief The ListTeamMembersRequest class provides an interface for CodeStar ListTeamMembers requests.
  *
- * \ingroup CodeStar
+ * \inmodule QtAwsCodeStar
  *
  *  <fullname>AWS CodeStar</fullname>
  * 
@@ -125,9 +124,7 @@ namespace CodeStar {
  */
 
 /*!
- * @brief  Constructs a new ListTeamMembersRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListTeamMembersRequest::ListTeamMembersRequest(const ListTeamMembersRequest &other)
     : CodeStarRequest(new ListTeamMembersRequestPrivate(*other.d_func(), this))
@@ -136,7 +133,7 @@ ListTeamMembersRequest::ListTeamMembersRequest(const ListTeamMembersRequest &oth
 }
 
 /*!
- * @brief  Constructs a new ListTeamMembersRequest object.
+ * Constructs a ListTeamMembersRequest object.
  */
 ListTeamMembersRequest::ListTeamMembersRequest()
     : CodeStarRequest(new ListTeamMembersRequestPrivate(CodeStarRequest::ListTeamMembersAction, this))
@@ -154,14 +151,9 @@ bool ListTeamMembersRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListTeamMembersResponse object.
+ * Returns a ListTeamMembersResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListTeamMembersResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CodeStarClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListTeamMembersRequest::response(QNetworkReply * const reply) const
 {
@@ -169,20 +161,17 @@ QtAws::Core::AwsAbstractResponse * ListTeamMembersRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::CodeStar::ListTeamMembersRequestPrivate
+ * \brief The ListTeamMembersRequestPrivate class provides private implementation for ListTeamMembersRequest.
+ * \internal
  *
- * @class  ListTeamMembersRequestPrivate
- *
- * @brief  Private implementation for ListTeamMembersRequest.
+ * \inmodule QtAwsCodeStar
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListTeamMembersRequestPrivate object.
- *
- * @param  action  CodeStar action being performed.
- * @param  q       Pointer to this object's public ListTeamMembersRequest instance.
+ * Constructs a ListTeamMembersRequestPrivate object for CodeStar \a action with,
+ * public implementation \a q.
  */
 ListTeamMembersRequestPrivate::ListTeamMembersRequestPrivate(
     const CodeStarRequest::Action action, ListTeamMembersRequest * const q)
@@ -192,15 +181,10 @@ ListTeamMembersRequestPrivate::ListTeamMembersRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListTeamMembersRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListTeamMembersRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListTeamMembersRequest instance.
  */
 ListTeamMembersRequestPrivate::ListTeamMembersRequestPrivate(
     const ListTeamMembersRequestPrivate &other, ListTeamMembersRequest * const q)

@@ -210,6 +210,9 @@
 /*!
  * \namespace QtAws::RDS
  * \brief The QtAws::RDS contains stuff...
+ *
+ * \inmodule QtAwsRDS
+ *
  * @todo Move this to a separate template file.
  */
 
@@ -323,7 +326,7 @@ RdsClient::RdsClient(
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * \a  AwsEndpoint::getEndpoint()
+ * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
 RdsClient::RdsClient(
     const QUrl &endpoint,

@@ -27,19 +27,16 @@ namespace MachineLearning {
 
 /*!
  * \class QtAws::MachineLearning::GetEvaluationRequest
- *
  * \brief The GetEvaluationRequest class provides an interface for MachineLearning GetEvaluation requests.
  *
- * \ingroup MachineLearning
+ * \inmodule QtAwsMachineLearning
  *
  *
  * \sa MachineLearningClient::getEvaluation
  */
 
 /*!
- * @brief  Constructs a new GetEvaluationRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetEvaluationRequest::GetEvaluationRequest(const GetEvaluationRequest &other)
     : MachineLearningRequest(new GetEvaluationRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ GetEvaluationRequest::GetEvaluationRequest(const GetEvaluationRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetEvaluationRequest object.
+ * Constructs a GetEvaluationRequest object.
  */
 GetEvaluationRequest::GetEvaluationRequest()
     : MachineLearningRequest(new GetEvaluationRequestPrivate(MachineLearningRequest::GetEvaluationAction, this))
@@ -66,14 +63,9 @@ bool GetEvaluationRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetEvaluationResponse object.
+ * Returns a GetEvaluationResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetEvaluationResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MachineLearningClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetEvaluationRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * GetEvaluationRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::MachineLearning::GetEvaluationRequestPrivate
+ * \brief The GetEvaluationRequestPrivate class provides private implementation for GetEvaluationRequest.
+ * \internal
  *
- * @class  GetEvaluationRequestPrivate
- *
- * @brief  Private implementation for GetEvaluationRequest.
+ * \inmodule QtAwsMachineLearning
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetEvaluationRequestPrivate object.
- *
- * @param  action  MachineLearning action being performed.
- * @param  q       Pointer to this object's public GetEvaluationRequest instance.
+ * Constructs a GetEvaluationRequestPrivate object for MachineLearning \a action with,
+ * public implementation \a q.
  */
 GetEvaluationRequestPrivate::GetEvaluationRequestPrivate(
     const MachineLearningRequest::Action action, GetEvaluationRequest * const q)
@@ -104,15 +93,10 @@ GetEvaluationRequestPrivate::GetEvaluationRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetEvaluationRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetEvaluationRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetEvaluationRequest instance.
  */
 GetEvaluationRequestPrivate::GetEvaluationRequestPrivate(
     const GetEvaluationRequestPrivate &other, GetEvaluationRequest * const q)

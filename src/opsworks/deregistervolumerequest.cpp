@@ -27,10 +27,9 @@ namespace OpsWorks {
 
 /*!
  * \class QtAws::OpsWorks::DeregisterVolumeRequest
- *
  * \brief The DeregisterVolumeRequest class provides an interface for OpsWorks DeregisterVolume requests.
  *
- * \ingroup OpsWorks
+ * \inmodule QtAwsOpsWorks
  *
  *  <fullname>AWS OpsWorks</fullname>
  * 
@@ -143,9 +142,7 @@ namespace OpsWorks {
  */
 
 /*!
- * @brief  Constructs a new DeregisterVolumeRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeregisterVolumeRequest::DeregisterVolumeRequest(const DeregisterVolumeRequest &other)
     : OpsWorksRequest(new DeregisterVolumeRequestPrivate(*other.d_func(), this))
@@ -154,7 +151,7 @@ DeregisterVolumeRequest::DeregisterVolumeRequest(const DeregisterVolumeRequest &
 }
 
 /*!
- * @brief  Constructs a new DeregisterVolumeRequest object.
+ * Constructs a DeregisterVolumeRequest object.
  */
 DeregisterVolumeRequest::DeregisterVolumeRequest()
     : OpsWorksRequest(new DeregisterVolumeRequestPrivate(OpsWorksRequest::DeregisterVolumeAction, this))
@@ -172,14 +169,9 @@ bool DeregisterVolumeRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeregisterVolumeResponse object.
+ * Returns a DeregisterVolumeResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeregisterVolumeResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  OpsWorksClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeregisterVolumeRequest::response(QNetworkReply * const reply) const
 {
@@ -187,20 +179,17 @@ QtAws::Core::AwsAbstractResponse * DeregisterVolumeRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::OpsWorks::DeregisterVolumeRequestPrivate
+ * \brief The DeregisterVolumeRequestPrivate class provides private implementation for DeregisterVolumeRequest.
+ * \internal
  *
- * @class  DeregisterVolumeRequestPrivate
- *
- * @brief  Private implementation for DeregisterVolumeRequest.
+ * \inmodule QtAwsOpsWorks
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeregisterVolumeRequestPrivate object.
- *
- * @param  action  OpsWorks action being performed.
- * @param  q       Pointer to this object's public DeregisterVolumeRequest instance.
+ * Constructs a DeregisterVolumeRequestPrivate object for OpsWorks \a action with,
+ * public implementation \a q.
  */
 DeregisterVolumeRequestPrivate::DeregisterVolumeRequestPrivate(
     const OpsWorksRequest::Action action, DeregisterVolumeRequest * const q)
@@ -210,15 +199,10 @@ DeregisterVolumeRequestPrivate::DeregisterVolumeRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeregisterVolumeRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeregisterVolumeRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeregisterVolumeRequest instance.
  */
 DeregisterVolumeRequestPrivate::DeregisterVolumeRequestPrivate(
     const DeregisterVolumeRequestPrivate &other, DeregisterVolumeRequest * const q)

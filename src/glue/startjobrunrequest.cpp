@@ -27,10 +27,9 @@ namespace Glue {
 
 /*!
  * \class QtAws::Glue::StartJobRunRequest
- *
  * \brief The StartJobRunRequest class provides an interface for Glue StartJobRun requests.
  *
- * \ingroup Glue
+ * \inmodule QtAwsGlue
  *
  *  <fullname>AWS Glue</fullname>
  * 
@@ -40,9 +39,7 @@ namespace Glue {
  */
 
 /*!
- * @brief  Constructs a new StartJobRunRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 StartJobRunRequest::StartJobRunRequest(const StartJobRunRequest &other)
     : GlueRequest(new StartJobRunRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ StartJobRunRequest::StartJobRunRequest(const StartJobRunRequest &other)
 }
 
 /*!
- * @brief  Constructs a new StartJobRunRequest object.
+ * Constructs a StartJobRunRequest object.
  */
 StartJobRunRequest::StartJobRunRequest()
     : GlueRequest(new StartJobRunRequestPrivate(GlueRequest::StartJobRunAction, this))
@@ -69,14 +66,9 @@ bool StartJobRunRequest::isValid() const
 
 
 /*!
- * @brief  Construct an StartJobRunResponse object.
+ * Returns a StartJobRunResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An StartJobRunResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GlueClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * StartJobRunRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * StartJobRunRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::Glue::StartJobRunRequestPrivate
+ * \brief The StartJobRunRequestPrivate class provides private implementation for StartJobRunRequest.
+ * \internal
  *
- * @class  StartJobRunRequestPrivate
- *
- * @brief  Private implementation for StartJobRunRequest.
+ * \inmodule QtAwsGlue
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new StartJobRunRequestPrivate object.
- *
- * @param  action  Glue action being performed.
- * @param  q       Pointer to this object's public StartJobRunRequest instance.
+ * Constructs a StartJobRunRequestPrivate object for Glue \a action with,
+ * public implementation \a q.
  */
 StartJobRunRequestPrivate::StartJobRunRequestPrivate(
     const GlueRequest::Action action, StartJobRunRequest * const q)
@@ -107,15 +96,10 @@ StartJobRunRequestPrivate::StartJobRunRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StartJobRunRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the StartJobRunRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public StartJobRunRequest instance.
  */
 StartJobRunRequestPrivate::StartJobRunRequestPrivate(
     const StartJobRunRequestPrivate &other, StartJobRunRequest * const q)

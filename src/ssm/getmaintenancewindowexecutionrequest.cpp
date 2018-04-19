@@ -27,10 +27,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::GetMaintenanceWindowExecutionRequest
- *
  * \brief The GetMaintenanceWindowExecutionRequest class provides an interface for SSM GetMaintenanceWindowExecution requests.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -61,9 +60,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new GetMaintenanceWindowExecutionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetMaintenanceWindowExecutionRequest::GetMaintenanceWindowExecutionRequest(const GetMaintenanceWindowExecutionRequest &other)
     : SSMRequest(new GetMaintenanceWindowExecutionRequestPrivate(*other.d_func(), this))
@@ -72,7 +69,7 @@ GetMaintenanceWindowExecutionRequest::GetMaintenanceWindowExecutionRequest(const
 }
 
 /*!
- * @brief  Constructs a new GetMaintenanceWindowExecutionRequest object.
+ * Constructs a GetMaintenanceWindowExecutionRequest object.
  */
 GetMaintenanceWindowExecutionRequest::GetMaintenanceWindowExecutionRequest()
     : SSMRequest(new GetMaintenanceWindowExecutionRequestPrivate(SSMRequest::GetMaintenanceWindowExecutionAction, this))
@@ -90,14 +87,9 @@ bool GetMaintenanceWindowExecutionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetMaintenanceWindowExecutionResponse object.
+ * Returns a GetMaintenanceWindowExecutionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetMaintenanceWindowExecutionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SSMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetMaintenanceWindowExecutionRequest::response(QNetworkReply * const reply) const
 {
@@ -105,20 +97,17 @@ QtAws::Core::AwsAbstractResponse * GetMaintenanceWindowExecutionRequest::respons
 }
 
 /*!
- * @internal
+ * \class QtAws::SSM::GetMaintenanceWindowExecutionRequestPrivate
+ * \brief The GetMaintenanceWindowExecutionRequestPrivate class provides private implementation for GetMaintenanceWindowExecutionRequest.
+ * \internal
  *
- * @class  GetMaintenanceWindowExecutionRequestPrivate
- *
- * @brief  Private implementation for GetMaintenanceWindowExecutionRequest.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetMaintenanceWindowExecutionRequestPrivate object.
- *
- * @param  action  SSM action being performed.
- * @param  q       Pointer to this object's public GetMaintenanceWindowExecutionRequest instance.
+ * Constructs a GetMaintenanceWindowExecutionRequestPrivate object for SSM \a action with,
+ * public implementation \a q.
  */
 GetMaintenanceWindowExecutionRequestPrivate::GetMaintenanceWindowExecutionRequestPrivate(
     const SSMRequest::Action action, GetMaintenanceWindowExecutionRequest * const q)
@@ -128,15 +117,10 @@ GetMaintenanceWindowExecutionRequestPrivate::GetMaintenanceWindowExecutionReques
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetMaintenanceWindowExecutionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetMaintenanceWindowExecutionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetMaintenanceWindowExecutionRequest instance.
  */
 GetMaintenanceWindowExecutionRequestPrivate::GetMaintenanceWindowExecutionRequestPrivate(
     const GetMaintenanceWindowExecutionRequestPrivate &other, GetMaintenanceWindowExecutionRequest * const q)

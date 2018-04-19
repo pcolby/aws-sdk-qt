@@ -27,10 +27,9 @@ namespace CloudWatch {
 
 /*!
  * \class QtAws::CloudWatch::PutDashboardRequest
- *
  * \brief The PutDashboardRequest class provides an interface for CloudWatch PutDashboard requests.
  *
- * \ingroup CloudWatch
+ * \inmodule QtAwsCloudWatch
  *
  *  Amazon CloudWatch monitors your Amazon Web Services (AWS) resources and the applications you run on AWS in real time.
  *  You can use CloudWatch to collect and track metrics, which are the variables you want to measure for your resources and
@@ -51,9 +50,7 @@ namespace CloudWatch {
  */
 
 /*!
- * @brief  Constructs a new PutDashboardRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 PutDashboardRequest::PutDashboardRequest(const PutDashboardRequest &other)
     : CloudWatchRequest(new PutDashboardRequestPrivate(*other.d_func(), this))
@@ -62,7 +59,7 @@ PutDashboardRequest::PutDashboardRequest(const PutDashboardRequest &other)
 }
 
 /*!
- * @brief  Constructs a new PutDashboardRequest object.
+ * Constructs a PutDashboardRequest object.
  */
 PutDashboardRequest::PutDashboardRequest()
     : CloudWatchRequest(new PutDashboardRequestPrivate(CloudWatchRequest::PutDashboardAction, this))
@@ -80,14 +77,9 @@ bool PutDashboardRequest::isValid() const
 
 
 /*!
- * @brief  Construct an PutDashboardResponse object.
+ * Returns a PutDashboardResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An PutDashboardResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudWatchClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * PutDashboardRequest::response(QNetworkReply * const reply) const
 {
@@ -95,20 +87,17 @@ QtAws::Core::AwsAbstractResponse * PutDashboardRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudWatch::PutDashboardRequestPrivate
+ * \brief The PutDashboardRequestPrivate class provides private implementation for PutDashboardRequest.
+ * \internal
  *
- * @class  PutDashboardRequestPrivate
- *
- * @brief  Private implementation for PutDashboardRequest.
+ * \inmodule QtAwsCloudWatch
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new PutDashboardRequestPrivate object.
- *
- * @param  action  CloudWatch action being performed.
- * @param  q       Pointer to this object's public PutDashboardRequest instance.
+ * Constructs a PutDashboardRequestPrivate object for CloudWatch \a action with,
+ * public implementation \a q.
  */
 PutDashboardRequestPrivate::PutDashboardRequestPrivate(
     const CloudWatchRequest::Action action, PutDashboardRequest * const q)
@@ -118,15 +107,10 @@ PutDashboardRequestPrivate::PutDashboardRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutDashboardRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the PutDashboardRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public PutDashboardRequest instance.
  */
 PutDashboardRequestPrivate::PutDashboardRequestPrivate(
     const PutDashboardRequestPrivate &other, PutDashboardRequest * const q)

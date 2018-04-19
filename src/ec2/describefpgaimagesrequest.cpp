@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DescribeFpgaImagesRequest
- *
  * \brief The DescribeFpgaImagesRequest class provides an interface for EC2 DescribeFpgaImages requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DescribeFpgaImagesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeFpgaImagesRequest::DescribeFpgaImagesRequest(const DescribeFpgaImagesRequest &other)
     : EC2Request(new DescribeFpgaImagesRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ DescribeFpgaImagesRequest::DescribeFpgaImagesRequest(const DescribeFpgaImagesReq
 }
 
 /*!
- * @brief  Constructs a new DescribeFpgaImagesRequest object.
+ * Constructs a DescribeFpgaImagesRequest object.
  */
 DescribeFpgaImagesRequest::DescribeFpgaImagesRequest()
     : EC2Request(new DescribeFpgaImagesRequestPrivate(EC2Request::DescribeFpgaImagesAction, this))
@@ -70,14 +67,9 @@ bool DescribeFpgaImagesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeFpgaImagesResponse object.
+ * Returns a DescribeFpgaImagesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeFpgaImagesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeFpgaImagesRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * DescribeFpgaImagesRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::DescribeFpgaImagesRequestPrivate
+ * \brief The DescribeFpgaImagesRequestPrivate class provides private implementation for DescribeFpgaImagesRequest.
+ * \internal
  *
- * @class  DescribeFpgaImagesRequestPrivate
- *
- * @brief  Private implementation for DescribeFpgaImagesRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeFpgaImagesRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public DescribeFpgaImagesRequest instance.
+ * Constructs a DescribeFpgaImagesRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 DescribeFpgaImagesRequestPrivate::DescribeFpgaImagesRequestPrivate(
     const EC2Request::Action action, DescribeFpgaImagesRequest * const q)
@@ -108,15 +97,10 @@ DescribeFpgaImagesRequestPrivate::DescribeFpgaImagesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeFpgaImagesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeFpgaImagesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeFpgaImagesRequest instance.
  */
 DescribeFpgaImagesRequestPrivate::DescribeFpgaImagesRequestPrivate(
     const DescribeFpgaImagesRequestPrivate &other, DescribeFpgaImagesRequest * const q)

@@ -27,10 +27,9 @@ namespace StorageGateway {
 
 /*!
  * \class QtAws::StorageGateway::DeleteVolumeRequest
- *
  * \brief The DeleteVolumeRequest class provides an interface for StorageGateway DeleteVolume requests.
  *
- * \ingroup StorageGateway
+ * \inmodule QtAwsStorageGateway
  *
  *  <fullname>AWS Storage Gateway Service</fullname>
  * 
@@ -106,9 +105,7 @@ namespace StorageGateway {
  */
 
 /*!
- * @brief  Constructs a new DeleteVolumeRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteVolumeRequest::DeleteVolumeRequest(const DeleteVolumeRequest &other)
     : StorageGatewayRequest(new DeleteVolumeRequestPrivate(*other.d_func(), this))
@@ -117,7 +114,7 @@ DeleteVolumeRequest::DeleteVolumeRequest(const DeleteVolumeRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DeleteVolumeRequest object.
+ * Constructs a DeleteVolumeRequest object.
  */
 DeleteVolumeRequest::DeleteVolumeRequest()
     : StorageGatewayRequest(new DeleteVolumeRequestPrivate(StorageGatewayRequest::DeleteVolumeAction, this))
@@ -135,14 +132,9 @@ bool DeleteVolumeRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteVolumeResponse object.
+ * Returns a DeleteVolumeResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteVolumeResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  StorageGatewayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteVolumeRequest::response(QNetworkReply * const reply) const
 {
@@ -150,20 +142,17 @@ QtAws::Core::AwsAbstractResponse * DeleteVolumeRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::StorageGateway::DeleteVolumeRequestPrivate
+ * \brief The DeleteVolumeRequestPrivate class provides private implementation for DeleteVolumeRequest.
+ * \internal
  *
- * @class  DeleteVolumeRequestPrivate
- *
- * @brief  Private implementation for DeleteVolumeRequest.
+ * \inmodule QtAwsStorageGateway
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteVolumeRequestPrivate object.
- *
- * @param  action  StorageGateway action being performed.
- * @param  q       Pointer to this object's public DeleteVolumeRequest instance.
+ * Constructs a DeleteVolumeRequestPrivate object for StorageGateway \a action with,
+ * public implementation \a q.
  */
 DeleteVolumeRequestPrivate::DeleteVolumeRequestPrivate(
     const StorageGatewayRequest::Action action, DeleteVolumeRequest * const q)
@@ -173,15 +162,10 @@ DeleteVolumeRequestPrivate::DeleteVolumeRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteVolumeRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteVolumeRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteVolumeRequest instance.
  */
 DeleteVolumeRequestPrivate::DeleteVolumeRequestPrivate(
     const DeleteVolumeRequestPrivate &other, DeleteVolumeRequest * const q)

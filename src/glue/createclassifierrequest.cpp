@@ -27,10 +27,9 @@ namespace Glue {
 
 /*!
  * \class QtAws::Glue::CreateClassifierRequest
- *
  * \brief The CreateClassifierRequest class provides an interface for Glue CreateClassifier requests.
  *
- * \ingroup Glue
+ * \inmodule QtAwsGlue
  *
  *  <fullname>AWS Glue</fullname>
  * 
@@ -40,9 +39,7 @@ namespace Glue {
  */
 
 /*!
- * @brief  Constructs a new CreateClassifierRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateClassifierRequest::CreateClassifierRequest(const CreateClassifierRequest &other)
     : GlueRequest(new CreateClassifierRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ CreateClassifierRequest::CreateClassifierRequest(const CreateClassifierRequest &
 }
 
 /*!
- * @brief  Constructs a new CreateClassifierRequest object.
+ * Constructs a CreateClassifierRequest object.
  */
 CreateClassifierRequest::CreateClassifierRequest()
     : GlueRequest(new CreateClassifierRequestPrivate(GlueRequest::CreateClassifierAction, this))
@@ -69,14 +66,9 @@ bool CreateClassifierRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateClassifierResponse object.
+ * Returns a CreateClassifierResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateClassifierResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GlueClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateClassifierRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * CreateClassifierRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::Glue::CreateClassifierRequestPrivate
+ * \brief The CreateClassifierRequestPrivate class provides private implementation for CreateClassifierRequest.
+ * \internal
  *
- * @class  CreateClassifierRequestPrivate
- *
- * @brief  Private implementation for CreateClassifierRequest.
+ * \inmodule QtAwsGlue
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateClassifierRequestPrivate object.
- *
- * @param  action  Glue action being performed.
- * @param  q       Pointer to this object's public CreateClassifierRequest instance.
+ * Constructs a CreateClassifierRequestPrivate object for Glue \a action with,
+ * public implementation \a q.
  */
 CreateClassifierRequestPrivate::CreateClassifierRequestPrivate(
     const GlueRequest::Action action, CreateClassifierRequest * const q)
@@ -107,15 +96,10 @@ CreateClassifierRequestPrivate::CreateClassifierRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateClassifierRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateClassifierRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateClassifierRequest instance.
  */
 CreateClassifierRequestPrivate::CreateClassifierRequestPrivate(
     const CreateClassifierRequestPrivate &other, CreateClassifierRequest * const q)

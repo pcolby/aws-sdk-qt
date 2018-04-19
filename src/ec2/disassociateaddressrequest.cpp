@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DisassociateAddressRequest
- *
  * \brief The DisassociateAddressRequest class provides an interface for EC2 DisassociateAddress requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DisassociateAddressRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DisassociateAddressRequest::DisassociateAddressRequest(const DisassociateAddressRequest &other)
     : EC2Request(new DisassociateAddressRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ DisassociateAddressRequest::DisassociateAddressRequest(const DisassociateAddress
 }
 
 /*!
- * @brief  Constructs a new DisassociateAddressRequest object.
+ * Constructs a DisassociateAddressRequest object.
  */
 DisassociateAddressRequest::DisassociateAddressRequest()
     : EC2Request(new DisassociateAddressRequestPrivate(EC2Request::DisassociateAddressAction, this))
@@ -70,14 +67,9 @@ bool DisassociateAddressRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DisassociateAddressResponse object.
+ * Returns a DisassociateAddressResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DisassociateAddressResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DisassociateAddressRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * DisassociateAddressRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::DisassociateAddressRequestPrivate
+ * \brief The DisassociateAddressRequestPrivate class provides private implementation for DisassociateAddressRequest.
+ * \internal
  *
- * @class  DisassociateAddressRequestPrivate
- *
- * @brief  Private implementation for DisassociateAddressRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DisassociateAddressRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public DisassociateAddressRequest instance.
+ * Constructs a DisassociateAddressRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 DisassociateAddressRequestPrivate::DisassociateAddressRequestPrivate(
     const EC2Request::Action action, DisassociateAddressRequest * const q)
@@ -108,15 +97,10 @@ DisassociateAddressRequestPrivate::DisassociateAddressRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DisassociateAddressRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DisassociateAddressRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DisassociateAddressRequest instance.
  */
 DisassociateAddressRequestPrivate::DisassociateAddressRequestPrivate(
     const DisassociateAddressRequestPrivate &other, DisassociateAddressRequest * const q)

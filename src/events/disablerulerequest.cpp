@@ -27,10 +27,9 @@ namespace CloudWatchEvents {
 
 /*!
  * \class QtAws::CloudWatchEvents::DisableRuleRequest
- *
  * \brief The DisableRuleRequest class provides an interface for CloudWatchEvents DisableRule requests.
  *
- * \ingroup CloudWatchEvents
+ * \inmodule QtAwsCloudWatchEvents
  *
  *  Amazon CloudWatch Events helps you to respond to state changes in your AWS resources. When your resources change state,
  *  they automatically send events into an event stream. You can create rules that match selected events in the stream and
@@ -60,9 +59,7 @@ namespace CloudWatchEvents {
  */
 
 /*!
- * @brief  Constructs a new DisableRuleRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DisableRuleRequest::DisableRuleRequest(const DisableRuleRequest &other)
     : CloudWatchEventsRequest(new DisableRuleRequestPrivate(*other.d_func(), this))
@@ -71,7 +68,7 @@ DisableRuleRequest::DisableRuleRequest(const DisableRuleRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DisableRuleRequest object.
+ * Constructs a DisableRuleRequest object.
  */
 DisableRuleRequest::DisableRuleRequest()
     : CloudWatchEventsRequest(new DisableRuleRequestPrivate(CloudWatchEventsRequest::DisableRuleAction, this))
@@ -89,14 +86,9 @@ bool DisableRuleRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DisableRuleResponse object.
+ * Returns a DisableRuleResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DisableRuleResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudWatchEventsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DisableRuleRequest::response(QNetworkReply * const reply) const
 {
@@ -104,20 +96,17 @@ QtAws::Core::AwsAbstractResponse * DisableRuleRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudWatchEvents::DisableRuleRequestPrivate
+ * \brief The DisableRuleRequestPrivate class provides private implementation for DisableRuleRequest.
+ * \internal
  *
- * @class  DisableRuleRequestPrivate
- *
- * @brief  Private implementation for DisableRuleRequest.
+ * \inmodule QtAwsCloudWatchEvents
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DisableRuleRequestPrivate object.
- *
- * @param  action  CloudWatchEvents action being performed.
- * @param  q       Pointer to this object's public DisableRuleRequest instance.
+ * Constructs a DisableRuleRequestPrivate object for CloudWatchEvents \a action with,
+ * public implementation \a q.
  */
 DisableRuleRequestPrivate::DisableRuleRequestPrivate(
     const CloudWatchEventsRequest::Action action, DisableRuleRequest * const q)
@@ -127,15 +116,10 @@ DisableRuleRequestPrivate::DisableRuleRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DisableRuleRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DisableRuleRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DisableRuleRequest instance.
  */
 DisableRuleRequestPrivate::DisableRuleRequestPrivate(
     const DisableRuleRequestPrivate &other, DisableRuleRequest * const q)

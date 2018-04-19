@@ -27,10 +27,9 @@ namespace Greengrass {
 
 /*!
  * \class QtAws::Greengrass::CreateSubscriptionDefinitionRequest
- *
  * \brief The CreateSubscriptionDefinitionRequest class provides an interface for Greengrass CreateSubscriptionDefinition requests.
  *
- * \ingroup Greengrass
+ * \inmodule QtAwsGreengrass
  *
  *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
  *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
@@ -40,9 +39,7 @@ namespace Greengrass {
  */
 
 /*!
- * @brief  Constructs a new CreateSubscriptionDefinitionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateSubscriptionDefinitionRequest::CreateSubscriptionDefinitionRequest(const CreateSubscriptionDefinitionRequest &other)
     : GreengrassRequest(new CreateSubscriptionDefinitionRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ CreateSubscriptionDefinitionRequest::CreateSubscriptionDefinitionRequest(const C
 }
 
 /*!
- * @brief  Constructs a new CreateSubscriptionDefinitionRequest object.
+ * Constructs a CreateSubscriptionDefinitionRequest object.
  */
 CreateSubscriptionDefinitionRequest::CreateSubscriptionDefinitionRequest()
     : GreengrassRequest(new CreateSubscriptionDefinitionRequestPrivate(GreengrassRequest::CreateSubscriptionDefinitionAction, this))
@@ -69,14 +66,9 @@ bool CreateSubscriptionDefinitionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateSubscriptionDefinitionResponse object.
+ * Returns a CreateSubscriptionDefinitionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateSubscriptionDefinitionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GreengrassClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateSubscriptionDefinitionRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * CreateSubscriptionDefinitionRequest::response
 }
 
 /*!
- * @internal
+ * \class QtAws::Greengrass::CreateSubscriptionDefinitionRequestPrivate
+ * \brief The CreateSubscriptionDefinitionRequestPrivate class provides private implementation for CreateSubscriptionDefinitionRequest.
+ * \internal
  *
- * @class  CreateSubscriptionDefinitionRequestPrivate
- *
- * @brief  Private implementation for CreateSubscriptionDefinitionRequest.
+ * \inmodule QtAwsGreengrass
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateSubscriptionDefinitionRequestPrivate object.
- *
- * @param  action  Greengrass action being performed.
- * @param  q       Pointer to this object's public CreateSubscriptionDefinitionRequest instance.
+ * Constructs a CreateSubscriptionDefinitionRequestPrivate object for Greengrass \a action with,
+ * public implementation \a q.
  */
 CreateSubscriptionDefinitionRequestPrivate::CreateSubscriptionDefinitionRequestPrivate(
     const GreengrassRequest::Action action, CreateSubscriptionDefinitionRequest * const q)
@@ -107,15 +96,10 @@ CreateSubscriptionDefinitionRequestPrivate::CreateSubscriptionDefinitionRequestP
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateSubscriptionDefinitionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateSubscriptionDefinitionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateSubscriptionDefinitionRequest instance.
  */
 CreateSubscriptionDefinitionRequestPrivate::CreateSubscriptionDefinitionRequestPrivate(
     const CreateSubscriptionDefinitionRequestPrivate &other, CreateSubscriptionDefinitionRequest * const q)

@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DescribeLaunchTemplatesRequest
- *
  * \brief The DescribeLaunchTemplatesRequest class provides an interface for EC2 DescribeLaunchTemplates requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DescribeLaunchTemplatesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeLaunchTemplatesRequest::DescribeLaunchTemplatesRequest(const DescribeLaunchTemplatesRequest &other)
     : EC2Request(new DescribeLaunchTemplatesRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ DescribeLaunchTemplatesRequest::DescribeLaunchTemplatesRequest(const DescribeLau
 }
 
 /*!
- * @brief  Constructs a new DescribeLaunchTemplatesRequest object.
+ * Constructs a DescribeLaunchTemplatesRequest object.
  */
 DescribeLaunchTemplatesRequest::DescribeLaunchTemplatesRequest()
     : EC2Request(new DescribeLaunchTemplatesRequestPrivate(EC2Request::DescribeLaunchTemplatesAction, this))
@@ -70,14 +67,9 @@ bool DescribeLaunchTemplatesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeLaunchTemplatesResponse object.
+ * Returns a DescribeLaunchTemplatesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeLaunchTemplatesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeLaunchTemplatesRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * DescribeLaunchTemplatesRequest::response(QNet
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::DescribeLaunchTemplatesRequestPrivate
+ * \brief The DescribeLaunchTemplatesRequestPrivate class provides private implementation for DescribeLaunchTemplatesRequest.
+ * \internal
  *
- * @class  DescribeLaunchTemplatesRequestPrivate
- *
- * @brief  Private implementation for DescribeLaunchTemplatesRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeLaunchTemplatesRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public DescribeLaunchTemplatesRequest instance.
+ * Constructs a DescribeLaunchTemplatesRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 DescribeLaunchTemplatesRequestPrivate::DescribeLaunchTemplatesRequestPrivate(
     const EC2Request::Action action, DescribeLaunchTemplatesRequest * const q)
@@ -108,15 +97,10 @@ DescribeLaunchTemplatesRequestPrivate::DescribeLaunchTemplatesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeLaunchTemplatesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeLaunchTemplatesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeLaunchTemplatesRequest instance.
  */
 DescribeLaunchTemplatesRequestPrivate::DescribeLaunchTemplatesRequestPrivate(
     const DescribeLaunchTemplatesRequestPrivate &other, DescribeLaunchTemplatesRequest * const q)

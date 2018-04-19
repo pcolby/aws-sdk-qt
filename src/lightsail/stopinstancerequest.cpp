@@ -27,10 +27,9 @@ namespace Lightsail {
 
 /*!
  * \class QtAws::Lightsail::StopInstanceRequest
- *
  * \brief The StopInstanceRequest class provides an interface for Lightsail StopInstance requests.
  *
- * \ingroup Lightsail
+ * \inmodule QtAwsLightsail
  *
  *  Amazon Lightsail is the easiest way to get started with AWS for developers who just need virtual private servers.
  *  Lightsail includes everything you need to launch your project quickly - a virtual machine, SSD-based storage, data
@@ -53,9 +52,7 @@ namespace Lightsail {
  */
 
 /*!
- * @brief  Constructs a new StopInstanceRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 StopInstanceRequest::StopInstanceRequest(const StopInstanceRequest &other)
     : LightsailRequest(new StopInstanceRequestPrivate(*other.d_func(), this))
@@ -64,7 +61,7 @@ StopInstanceRequest::StopInstanceRequest(const StopInstanceRequest &other)
 }
 
 /*!
- * @brief  Constructs a new StopInstanceRequest object.
+ * Constructs a StopInstanceRequest object.
  */
 StopInstanceRequest::StopInstanceRequest()
     : LightsailRequest(new StopInstanceRequestPrivate(LightsailRequest::StopInstanceAction, this))
@@ -82,14 +79,9 @@ bool StopInstanceRequest::isValid() const
 
 
 /*!
- * @brief  Construct an StopInstanceResponse object.
+ * Returns a StopInstanceResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An StopInstanceResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  LightsailClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * StopInstanceRequest::response(QNetworkReply * const reply) const
 {
@@ -97,20 +89,17 @@ QtAws::Core::AwsAbstractResponse * StopInstanceRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::Lightsail::StopInstanceRequestPrivate
+ * \brief The StopInstanceRequestPrivate class provides private implementation for StopInstanceRequest.
+ * \internal
  *
- * @class  StopInstanceRequestPrivate
- *
- * @brief  Private implementation for StopInstanceRequest.
+ * \inmodule QtAwsLightsail
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new StopInstanceRequestPrivate object.
- *
- * @param  action  Lightsail action being performed.
- * @param  q       Pointer to this object's public StopInstanceRequest instance.
+ * Constructs a StopInstanceRequestPrivate object for Lightsail \a action with,
+ * public implementation \a q.
  */
 StopInstanceRequestPrivate::StopInstanceRequestPrivate(
     const LightsailRequest::Action action, StopInstanceRequest * const q)
@@ -120,15 +109,10 @@ StopInstanceRequestPrivate::StopInstanceRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StopInstanceRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the StopInstanceRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public StopInstanceRequest instance.
  */
 StopInstanceRequestPrivate::StopInstanceRequestPrivate(
     const StopInstanceRequestPrivate &other, StopInstanceRequest * const q)

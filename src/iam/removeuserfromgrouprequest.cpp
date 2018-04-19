@@ -27,10 +27,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::RemoveUserFromGroupRequest
- *
  * \brief The RemoveUserFromGroupRequest class provides an interface for IAM RemoveUserFromGroup requests.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -102,9 +101,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new RemoveUserFromGroupRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 RemoveUserFromGroupRequest::RemoveUserFromGroupRequest(const RemoveUserFromGroupRequest &other)
     : IAMRequest(new RemoveUserFromGroupRequestPrivate(*other.d_func(), this))
@@ -113,7 +110,7 @@ RemoveUserFromGroupRequest::RemoveUserFromGroupRequest(const RemoveUserFromGroup
 }
 
 /*!
- * @brief  Constructs a new RemoveUserFromGroupRequest object.
+ * Constructs a RemoveUserFromGroupRequest object.
  */
 RemoveUserFromGroupRequest::RemoveUserFromGroupRequest()
     : IAMRequest(new RemoveUserFromGroupRequestPrivate(IAMRequest::RemoveUserFromGroupAction, this))
@@ -131,14 +128,9 @@ bool RemoveUserFromGroupRequest::isValid() const
 
 
 /*!
- * @brief  Construct an RemoveUserFromGroupResponse object.
+ * Returns a RemoveUserFromGroupResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An RemoveUserFromGroupResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IAMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * RemoveUserFromGroupRequest::response(QNetworkReply * const reply) const
 {
@@ -146,20 +138,17 @@ QtAws::Core::AwsAbstractResponse * RemoveUserFromGroupRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::IAM::RemoveUserFromGroupRequestPrivate
+ * \brief The RemoveUserFromGroupRequestPrivate class provides private implementation for RemoveUserFromGroupRequest.
+ * \internal
  *
- * @class  RemoveUserFromGroupRequestPrivate
- *
- * @brief  Private implementation for RemoveUserFromGroupRequest.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new RemoveUserFromGroupRequestPrivate object.
- *
- * @param  action  IAM action being performed.
- * @param  q       Pointer to this object's public RemoveUserFromGroupRequest instance.
+ * Constructs a RemoveUserFromGroupRequestPrivate object for IAM \a action with,
+ * public implementation \a q.
  */
 RemoveUserFromGroupRequestPrivate::RemoveUserFromGroupRequestPrivate(
     const IAMRequest::Action action, RemoveUserFromGroupRequest * const q)
@@ -169,15 +158,10 @@ RemoveUserFromGroupRequestPrivate::RemoveUserFromGroupRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RemoveUserFromGroupRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the RemoveUserFromGroupRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public RemoveUserFromGroupRequest instance.
  */
 RemoveUserFromGroupRequestPrivate::RemoveUserFromGroupRequestPrivate(
     const RemoveUserFromGroupRequestPrivate &other, RemoveUserFromGroupRequest * const q)

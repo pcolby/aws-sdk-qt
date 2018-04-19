@@ -27,10 +27,9 @@ namespace DatabaseMigrationService {
 
 /*!
  * \class QtAws::DatabaseMigrationService::DescribeAccountAttributesRequest
- *
  * \brief The DescribeAccountAttributesRequest class provides an interface for DatabaseMigrationService DescribeAccountAttributes requests.
  *
- * \ingroup DatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigrationService
  *
  *  <fullname>AWS Database Migration Service</fullname>
  * 
@@ -48,9 +47,7 @@ namespace DatabaseMigrationService {
  */
 
 /*!
- * @brief  Constructs a new DescribeAccountAttributesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeAccountAttributesRequest::DescribeAccountAttributesRequest(const DescribeAccountAttributesRequest &other)
     : DatabaseMigrationServiceRequest(new DescribeAccountAttributesRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ DescribeAccountAttributesRequest::DescribeAccountAttributesRequest(const Describ
 }
 
 /*!
- * @brief  Constructs a new DescribeAccountAttributesRequest object.
+ * Constructs a DescribeAccountAttributesRequest object.
  */
 DescribeAccountAttributesRequest::DescribeAccountAttributesRequest()
     : DatabaseMigrationServiceRequest(new DescribeAccountAttributesRequestPrivate(DatabaseMigrationServiceRequest::DescribeAccountAttributesAction, this))
@@ -77,14 +74,9 @@ bool DescribeAccountAttributesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeAccountAttributesResponse object.
+ * Returns a DescribeAccountAttributesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeAccountAttributesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DatabaseMigrationServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeAccountAttributesRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * DescribeAccountAttributesRequest::response(QN
 }
 
 /*!
- * @internal
+ * \class QtAws::DatabaseMigrationService::DescribeAccountAttributesRequestPrivate
+ * \brief The DescribeAccountAttributesRequestPrivate class provides private implementation for DescribeAccountAttributesRequest.
+ * \internal
  *
- * @class  DescribeAccountAttributesRequestPrivate
- *
- * @brief  Private implementation for DescribeAccountAttributesRequest.
+ * \inmodule QtAwsDatabaseMigrationService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeAccountAttributesRequestPrivate object.
- *
- * @param  action  DatabaseMigrationService action being performed.
- * @param  q       Pointer to this object's public DescribeAccountAttributesRequest instance.
+ * Constructs a DescribeAccountAttributesRequestPrivate object for DatabaseMigrationService \a action with,
+ * public implementation \a q.
  */
 DescribeAccountAttributesRequestPrivate::DescribeAccountAttributesRequestPrivate(
     const DatabaseMigrationServiceRequest::Action action, DescribeAccountAttributesRequest * const q)
@@ -115,15 +104,10 @@ DescribeAccountAttributesRequestPrivate::DescribeAccountAttributesRequestPrivate
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeAccountAttributesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeAccountAttributesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeAccountAttributesRequest instance.
  */
 DescribeAccountAttributesRequestPrivate::DescribeAccountAttributesRequestPrivate(
     const DescribeAccountAttributesRequestPrivate &other, DescribeAccountAttributesRequest * const q)

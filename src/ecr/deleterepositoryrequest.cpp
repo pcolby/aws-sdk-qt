@@ -27,10 +27,9 @@ namespace ECR {
 
 /*!
  * \class QtAws::ECR::DeleteRepositoryRequest
- *
  * \brief The DeleteRepositoryRequest class provides an interface for ECR DeleteRepository requests.
  *
- * \ingroup ECR
+ * \inmodule QtAwsECR
  *
  *  Amazon Elastic Container Registry (Amazon ECR) is a managed Docker registry service. Customers can use the familiar
  *  Docker CLI to push, pull, and manage images. Amazon ECR provides a secure, scalable, and reliable registry. Amazon ECR
@@ -41,9 +40,7 @@ namespace ECR {
  */
 
 /*!
- * @brief  Constructs a new DeleteRepositoryRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteRepositoryRequest::DeleteRepositoryRequest(const DeleteRepositoryRequest &other)
     : ECRRequest(new DeleteRepositoryRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ DeleteRepositoryRequest::DeleteRepositoryRequest(const DeleteRepositoryRequest &
 }
 
 /*!
- * @brief  Constructs a new DeleteRepositoryRequest object.
+ * Constructs a DeleteRepositoryRequest object.
  */
 DeleteRepositoryRequest::DeleteRepositoryRequest()
     : ECRRequest(new DeleteRepositoryRequestPrivate(ECRRequest::DeleteRepositoryAction, this))
@@ -70,14 +67,9 @@ bool DeleteRepositoryRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteRepositoryResponse object.
+ * Returns a DeleteRepositoryResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteRepositoryResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ECRClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteRepositoryRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * DeleteRepositoryRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::ECR::DeleteRepositoryRequestPrivate
+ * \brief The DeleteRepositoryRequestPrivate class provides private implementation for DeleteRepositoryRequest.
+ * \internal
  *
- * @class  DeleteRepositoryRequestPrivate
- *
- * @brief  Private implementation for DeleteRepositoryRequest.
+ * \inmodule QtAwsECR
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteRepositoryRequestPrivate object.
- *
- * @param  action  ECR action being performed.
- * @param  q       Pointer to this object's public DeleteRepositoryRequest instance.
+ * Constructs a DeleteRepositoryRequestPrivate object for ECR \a action with,
+ * public implementation \a q.
  */
 DeleteRepositoryRequestPrivate::DeleteRepositoryRequestPrivate(
     const ECRRequest::Action action, DeleteRepositoryRequest * const q)
@@ -108,15 +97,10 @@ DeleteRepositoryRequestPrivate::DeleteRepositoryRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteRepositoryRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteRepositoryRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteRepositoryRequest instance.
  */
 DeleteRepositoryRequestPrivate::DeleteRepositoryRequestPrivate(
     const DeleteRepositoryRequestPrivate &other, DeleteRepositoryRequest * const q)

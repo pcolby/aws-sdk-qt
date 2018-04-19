@@ -27,10 +27,9 @@ namespace MQ {
 
 /*!
  * \class QtAws::MQ::RebootBrokerRequest
- *
  * \brief The RebootBrokerRequest class provides an interface for MQ RebootBroker requests.
  *
- * \ingroup MQ
+ * \inmodule QtAwsMQ
  *
  *  Amazon MQ is a managed message broker service for Apache ActiveMQ that makes it easy to set up and operate message
  *  brokers in the cloud. A message broker allows software applications and components to communicate using various
@@ -39,9 +38,7 @@ namespace MQ {
  */
 
 /*!
- * @brief  Constructs a new RebootBrokerRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 RebootBrokerRequest::RebootBrokerRequest(const RebootBrokerRequest &other)
     : MQRequest(new RebootBrokerRequestPrivate(*other.d_func(), this))
@@ -50,7 +47,7 @@ RebootBrokerRequest::RebootBrokerRequest(const RebootBrokerRequest &other)
 }
 
 /*!
- * @brief  Constructs a new RebootBrokerRequest object.
+ * Constructs a RebootBrokerRequest object.
  */
 RebootBrokerRequest::RebootBrokerRequest()
     : MQRequest(new RebootBrokerRequestPrivate(MQRequest::RebootBrokerAction, this))
@@ -68,14 +65,9 @@ bool RebootBrokerRequest::isValid() const
 
 
 /*!
- * @brief  Construct an RebootBrokerResponse object.
+ * Returns a RebootBrokerResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An RebootBrokerResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MQClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * RebootBrokerRequest::response(QNetworkReply * const reply) const
 {
@@ -83,20 +75,17 @@ QtAws::Core::AwsAbstractResponse * RebootBrokerRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::MQ::RebootBrokerRequestPrivate
+ * \brief The RebootBrokerRequestPrivate class provides private implementation for RebootBrokerRequest.
+ * \internal
  *
- * @class  RebootBrokerRequestPrivate
- *
- * @brief  Private implementation for RebootBrokerRequest.
+ * \inmodule QtAwsMQ
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new RebootBrokerRequestPrivate object.
- *
- * @param  action  MQ action being performed.
- * @param  q       Pointer to this object's public RebootBrokerRequest instance.
+ * Constructs a RebootBrokerRequestPrivate object for MQ \a action with,
+ * public implementation \a q.
  */
 RebootBrokerRequestPrivate::RebootBrokerRequestPrivate(
     const MQRequest::Action action, RebootBrokerRequest * const q)
@@ -106,15 +95,10 @@ RebootBrokerRequestPrivate::RebootBrokerRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RebootBrokerRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the RebootBrokerRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public RebootBrokerRequest instance.
  */
 RebootBrokerRequestPrivate::RebootBrokerRequestPrivate(
     const RebootBrokerRequestPrivate &other, RebootBrokerRequest * const q)

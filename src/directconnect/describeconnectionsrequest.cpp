@@ -27,10 +27,9 @@ namespace DirectConnect {
 
 /*!
  * \class QtAws::DirectConnect::DescribeConnectionsRequest
- *
  * \brief The DescribeConnectionsRequest class provides an interface for DirectConnect DescribeConnections requests.
  *
- * \ingroup DirectConnect
+ * \inmodule QtAwsDirectConnect
  *
  *  AWS Direct Connect links your internal network to an AWS Direct Connect location over a standard 1 gigabit or 10 gigabit
  *  Ethernet fiber-optic cable. One end of the cable is connected to your router, the other to an AWS Direct Connect router.
@@ -45,9 +44,7 @@ namespace DirectConnect {
  */
 
 /*!
- * @brief  Constructs a new DescribeConnectionsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeConnectionsRequest::DescribeConnectionsRequest(const DescribeConnectionsRequest &other)
     : DirectConnectRequest(new DescribeConnectionsRequestPrivate(*other.d_func(), this))
@@ -56,7 +53,7 @@ DescribeConnectionsRequest::DescribeConnectionsRequest(const DescribeConnections
 }
 
 /*!
- * @brief  Constructs a new DescribeConnectionsRequest object.
+ * Constructs a DescribeConnectionsRequest object.
  */
 DescribeConnectionsRequest::DescribeConnectionsRequest()
     : DirectConnectRequest(new DescribeConnectionsRequestPrivate(DirectConnectRequest::DescribeConnectionsAction, this))
@@ -74,14 +71,9 @@ bool DescribeConnectionsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeConnectionsResponse object.
+ * Returns a DescribeConnectionsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeConnectionsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DirectConnectClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeConnectionsRequest::response(QNetworkReply * const reply) const
 {
@@ -89,20 +81,17 @@ QtAws::Core::AwsAbstractResponse * DescribeConnectionsRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::DirectConnect::DescribeConnectionsRequestPrivate
+ * \brief The DescribeConnectionsRequestPrivate class provides private implementation for DescribeConnectionsRequest.
+ * \internal
  *
- * @class  DescribeConnectionsRequestPrivate
- *
- * @brief  Private implementation for DescribeConnectionsRequest.
+ * \inmodule QtAwsDirectConnect
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeConnectionsRequestPrivate object.
- *
- * @param  action  DirectConnect action being performed.
- * @param  q       Pointer to this object's public DescribeConnectionsRequest instance.
+ * Constructs a DescribeConnectionsRequestPrivate object for DirectConnect \a action with,
+ * public implementation \a q.
  */
 DescribeConnectionsRequestPrivate::DescribeConnectionsRequestPrivate(
     const DirectConnectRequest::Action action, DescribeConnectionsRequest * const q)
@@ -112,15 +101,10 @@ DescribeConnectionsRequestPrivate::DescribeConnectionsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeConnectionsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeConnectionsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeConnectionsRequest instance.
  */
 DescribeConnectionsRequestPrivate::DescribeConnectionsRequestPrivate(
     const DescribeConnectionsRequestPrivate &other, DescribeConnectionsRequest * const q)

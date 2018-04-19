@@ -27,10 +27,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::DescribeDBClusterSnapshotsRequest
- *
  * \brief The DescribeDBClusterSnapshotsRequest class provides an interface for RDS DescribeDBClusterSnapshots requests.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -101,9 +100,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new DescribeDBClusterSnapshotsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeDBClusterSnapshotsRequest::DescribeDBClusterSnapshotsRequest(const DescribeDBClusterSnapshotsRequest &other)
     : RDSRequest(new DescribeDBClusterSnapshotsRequestPrivate(*other.d_func(), this))
@@ -112,7 +109,7 @@ DescribeDBClusterSnapshotsRequest::DescribeDBClusterSnapshotsRequest(const Descr
 }
 
 /*!
- * @brief  Constructs a new DescribeDBClusterSnapshotsRequest object.
+ * Constructs a DescribeDBClusterSnapshotsRequest object.
  */
 DescribeDBClusterSnapshotsRequest::DescribeDBClusterSnapshotsRequest()
     : RDSRequest(new DescribeDBClusterSnapshotsRequestPrivate(RDSRequest::DescribeDBClusterSnapshotsAction, this))
@@ -130,14 +127,9 @@ bool DescribeDBClusterSnapshotsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeDBClusterSnapshotsResponse object.
+ * Returns a DescribeDBClusterSnapshotsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeDBClusterSnapshotsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RDSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeDBClusterSnapshotsRequest::response(QNetworkReply * const reply) const
 {
@@ -145,20 +137,17 @@ QtAws::Core::AwsAbstractResponse * DescribeDBClusterSnapshotsRequest::response(Q
 }
 
 /*!
- * @internal
+ * \class QtAws::RDS::DescribeDBClusterSnapshotsRequestPrivate
+ * \brief The DescribeDBClusterSnapshotsRequestPrivate class provides private implementation for DescribeDBClusterSnapshotsRequest.
+ * \internal
  *
- * @class  DescribeDBClusterSnapshotsRequestPrivate
- *
- * @brief  Private implementation for DescribeDBClusterSnapshotsRequest.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeDBClusterSnapshotsRequestPrivate object.
- *
- * @param  action  RDS action being performed.
- * @param  q       Pointer to this object's public DescribeDBClusterSnapshotsRequest instance.
+ * Constructs a DescribeDBClusterSnapshotsRequestPrivate object for RDS \a action with,
+ * public implementation \a q.
  */
 DescribeDBClusterSnapshotsRequestPrivate::DescribeDBClusterSnapshotsRequestPrivate(
     const RDSRequest::Action action, DescribeDBClusterSnapshotsRequest * const q)
@@ -168,15 +157,10 @@ DescribeDBClusterSnapshotsRequestPrivate::DescribeDBClusterSnapshotsRequestPriva
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeDBClusterSnapshotsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeDBClusterSnapshotsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeDBClusterSnapshotsRequest instance.
  */
 DescribeDBClusterSnapshotsRequestPrivate::DescribeDBClusterSnapshotsRequestPrivate(
     const DescribeDBClusterSnapshotsRequestPrivate &other, DescribeDBClusterSnapshotsRequest * const q)

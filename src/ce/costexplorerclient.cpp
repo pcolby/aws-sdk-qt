@@ -40,6 +40,9 @@
 /*!
  * \namespace QtAws::CostExplorer
  * \brief The QtAws::CostExplorer contains stuff...
+ *
+ * \inmodule QtAwsCostExplorer
+ *
  * @todo Move this to a separate template file.
  */
 
@@ -102,7 +105,7 @@ CostExplorerClient::CostExplorerClient(
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * \a  AwsEndpoint::getEndpoint()
+ * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
 CostExplorerClient::CostExplorerClient(
     const QUrl &endpoint,

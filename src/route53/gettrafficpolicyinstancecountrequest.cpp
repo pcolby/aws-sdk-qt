@@ -27,19 +27,16 @@ namespace Route53 {
 
 /*!
  * \class QtAws::Route53::GetTrafficPolicyInstanceCountRequest
- *
  * \brief The GetTrafficPolicyInstanceCountRequest class provides an interface for Route53 GetTrafficPolicyInstanceCount requests.
  *
- * \ingroup Route53
+ * \inmodule QtAwsRoute53
  *
  *
  * \sa Route53Client::getTrafficPolicyInstanceCount
  */
 
 /*!
- * @brief  Constructs a new GetTrafficPolicyInstanceCountRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetTrafficPolicyInstanceCountRequest::GetTrafficPolicyInstanceCountRequest(const GetTrafficPolicyInstanceCountRequest &other)
     : Route53Request(new GetTrafficPolicyInstanceCountRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ GetTrafficPolicyInstanceCountRequest::GetTrafficPolicyInstanceCountRequest(const
 }
 
 /*!
- * @brief  Constructs a new GetTrafficPolicyInstanceCountRequest object.
+ * Constructs a GetTrafficPolicyInstanceCountRequest object.
  */
 GetTrafficPolicyInstanceCountRequest::GetTrafficPolicyInstanceCountRequest()
     : Route53Request(new GetTrafficPolicyInstanceCountRequestPrivate(Route53Request::GetTrafficPolicyInstanceCountAction, this))
@@ -66,14 +63,9 @@ bool GetTrafficPolicyInstanceCountRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetTrafficPolicyInstanceCountResponse object.
+ * Returns a GetTrafficPolicyInstanceCountResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetTrafficPolicyInstanceCountResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  Route53Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetTrafficPolicyInstanceCountRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * GetTrafficPolicyInstanceCountRequest::respons
 }
 
 /*!
- * @internal
+ * \class QtAws::Route53::GetTrafficPolicyInstanceCountRequestPrivate
+ * \brief The GetTrafficPolicyInstanceCountRequestPrivate class provides private implementation for GetTrafficPolicyInstanceCountRequest.
+ * \internal
  *
- * @class  GetTrafficPolicyInstanceCountRequestPrivate
- *
- * @brief  Private implementation for GetTrafficPolicyInstanceCountRequest.
+ * \inmodule QtAwsRoute53
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetTrafficPolicyInstanceCountRequestPrivate object.
- *
- * @param  action  Route53 action being performed.
- * @param  q       Pointer to this object's public GetTrafficPolicyInstanceCountRequest instance.
+ * Constructs a GetTrafficPolicyInstanceCountRequestPrivate object for Route53 \a action with,
+ * public implementation \a q.
  */
 GetTrafficPolicyInstanceCountRequestPrivate::GetTrafficPolicyInstanceCountRequestPrivate(
     const Route53Request::Action action, GetTrafficPolicyInstanceCountRequest * const q)
@@ -104,15 +93,10 @@ GetTrafficPolicyInstanceCountRequestPrivate::GetTrafficPolicyInstanceCountReques
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetTrafficPolicyInstanceCountRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetTrafficPolicyInstanceCountRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetTrafficPolicyInstanceCountRequest instance.
  */
 GetTrafficPolicyInstanceCountRequestPrivate::GetTrafficPolicyInstanceCountRequestPrivate(
     const GetTrafficPolicyInstanceCountRequestPrivate &other, GetTrafficPolicyInstanceCountRequest * const q)

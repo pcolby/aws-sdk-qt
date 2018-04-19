@@ -27,10 +27,9 @@ namespace ACM {
 
 /*!
  * \class QtAws::ACM::ImportCertificateRequest
- *
  * \brief The ImportCertificateRequest class provides an interface for ACM ImportCertificate requests.
  *
- * \ingroup ACM
+ * \inmodule QtAwsACM
  *
  *  <fullname>AWS Certificate Manager</fullname>
  * 
@@ -46,9 +45,7 @@ namespace ACM {
  */
 
 /*!
- * @brief  Constructs a new ImportCertificateRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ImportCertificateRequest::ImportCertificateRequest(const ImportCertificateRequest &other)
     : ACMRequest(new ImportCertificateRequestPrivate(*other.d_func(), this))
@@ -57,7 +54,7 @@ ImportCertificateRequest::ImportCertificateRequest(const ImportCertificateReques
 }
 
 /*!
- * @brief  Constructs a new ImportCertificateRequest object.
+ * Constructs a ImportCertificateRequest object.
  */
 ImportCertificateRequest::ImportCertificateRequest()
     : ACMRequest(new ImportCertificateRequestPrivate(ACMRequest::ImportCertificateAction, this))
@@ -75,14 +72,9 @@ bool ImportCertificateRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ImportCertificateResponse object.
+ * Returns a ImportCertificateResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ImportCertificateResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ACMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ImportCertificateRequest::response(QNetworkReply * const reply) const
 {
@@ -90,20 +82,17 @@ QtAws::Core::AwsAbstractResponse * ImportCertificateRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::ACM::ImportCertificateRequestPrivate
+ * \brief The ImportCertificateRequestPrivate class provides private implementation for ImportCertificateRequest.
+ * \internal
  *
- * @class  ImportCertificateRequestPrivate
- *
- * @brief  Private implementation for ImportCertificateRequest.
+ * \inmodule QtAwsACM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ImportCertificateRequestPrivate object.
- *
- * @param  action  ACM action being performed.
- * @param  q       Pointer to this object's public ImportCertificateRequest instance.
+ * Constructs a ImportCertificateRequestPrivate object for ACM \a action with,
+ * public implementation \a q.
  */
 ImportCertificateRequestPrivate::ImportCertificateRequestPrivate(
     const ACMRequest::Action action, ImportCertificateRequest * const q)
@@ -113,15 +102,10 @@ ImportCertificateRequestPrivate::ImportCertificateRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ImportCertificateRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ImportCertificateRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ImportCertificateRequest instance.
  */
 ImportCertificateRequestPrivate::ImportCertificateRequestPrivate(
     const ImportCertificateRequestPrivate &other, ImportCertificateRequest * const q)

@@ -27,10 +27,9 @@ namespace LexModelBuildingService {
 
 /*!
  * \class QtAws::LexModelBuildingService::GetUtterancesViewRequest
- *
  * \brief The GetUtterancesViewRequest class provides an interface for LexModelBuildingService GetUtterancesView requests.
  *
- * \ingroup LexModelBuildingService
+ * \inmodule QtAwsLexModelBuildingService
  *
  *  <fullname>Amazon Lex Build-Time Actions</fullname>
  * 
@@ -41,9 +40,7 @@ namespace LexModelBuildingService {
  */
 
 /*!
- * @brief  Constructs a new GetUtterancesViewRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetUtterancesViewRequest::GetUtterancesViewRequest(const GetUtterancesViewRequest &other)
     : LexModelBuildingServiceRequest(new GetUtterancesViewRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ GetUtterancesViewRequest::GetUtterancesViewRequest(const GetUtterancesViewReques
 }
 
 /*!
- * @brief  Constructs a new GetUtterancesViewRequest object.
+ * Constructs a GetUtterancesViewRequest object.
  */
 GetUtterancesViewRequest::GetUtterancesViewRequest()
     : LexModelBuildingServiceRequest(new GetUtterancesViewRequestPrivate(LexModelBuildingServiceRequest::GetUtterancesViewAction, this))
@@ -70,14 +67,9 @@ bool GetUtterancesViewRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetUtterancesViewResponse object.
+ * Returns a GetUtterancesViewResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetUtterancesViewResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  LexModelBuildingServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetUtterancesViewRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * GetUtterancesViewRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::LexModelBuildingService::GetUtterancesViewRequestPrivate
+ * \brief The GetUtterancesViewRequestPrivate class provides private implementation for GetUtterancesViewRequest.
+ * \internal
  *
- * @class  GetUtterancesViewRequestPrivate
- *
- * @brief  Private implementation for GetUtterancesViewRequest.
+ * \inmodule QtAwsLexModelBuildingService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetUtterancesViewRequestPrivate object.
- *
- * @param  action  LexModelBuildingService action being performed.
- * @param  q       Pointer to this object's public GetUtterancesViewRequest instance.
+ * Constructs a GetUtterancesViewRequestPrivate object for LexModelBuildingService \a action with,
+ * public implementation \a q.
  */
 GetUtterancesViewRequestPrivate::GetUtterancesViewRequestPrivate(
     const LexModelBuildingServiceRequest::Action action, GetUtterancesViewRequest * const q)
@@ -108,15 +97,10 @@ GetUtterancesViewRequestPrivate::GetUtterancesViewRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetUtterancesViewRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetUtterancesViewRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetUtterancesViewRequest instance.
  */
 GetUtterancesViewRequestPrivate::GetUtterancesViewRequestPrivate(
     const GetUtterancesViewRequestPrivate &other, GetUtterancesViewRequest * const q)

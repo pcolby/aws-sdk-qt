@@ -25,16 +25,25 @@ namespace IoTDataPlane {
 
 /*!
  * \class QtAws::IoTDataPlane::IoTDataPlaneRequest
- *
  * \brief The IoTDataPlaneRequest class provides an interface for IoTDataPlane requests.
  *
- * \ingroup IoTDataPlane
+ * \inmodule QtAwsIoTDataPlane
  */
 
 /*!
- * @brief  Constructs a new IoTDataPlaneRequest object.
+ * \enum IoTDataPlaneRequest::Action
  *
- * @param  action  The IoTDataPlane action to request.
+ * This enum describes the actions that can be performed as IoTDataPlane
+ * requests.
+ *
+ * \value DeleteThingShadowAction IoTDataPlane DeleteThingShadow action.
+ * \value GetThingShadowAction IoTDataPlane GetThingShadow action.
+ * \value PublishAction IoTDataPlane Publish action.
+ * \value UpdateThingShadowAction IoTDataPlane UpdateThingShadow action.
+ */
+
+/*!
+ * Constructs a[n] IoTDataPlaneRequest object for IoTDataPlane \a action.
  */
 IoTDataPlaneRequest::IoTDataPlaneRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new IoTDataPlaneRequestPrivate(action, this))
@@ -43,9 +52,7 @@ IoTDataPlaneRequest::IoTDataPlaneRequest(const Action action)
 }
 
 /*!
- * @brief  Constructs a new IoTDataPlaneRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 IoTDataPlaneRequest::IoTDataPlaneRequest(const IoTDataPlaneRequest &other)
     : QtAws::Core::AwsAbstractRequest(new IoTDataPlaneRequestPrivate(*other.d_func(), this))
@@ -54,13 +61,7 @@ IoTDataPlaneRequest::IoTDataPlaneRequest(const IoTDataPlaneRequest &other)
 }
 
 /*!
- * @brief  Assignment operator.
- *
- * Assigns \a other to \c this.
- *
- * @param  other  Instance to copy.
- *
- * @return  A reference to \c this.
+ * Sets the IoTDataPlaneRequest object to be equal to \a other.
  */
 IoTDataPlaneRequest& IoTDataPlaneRequest::operator=(const IoTDataPlaneRequest &other)
 {
@@ -72,14 +73,10 @@ IoTDataPlaneRequest& IoTDataPlaneRequest::operator=(const IoTDataPlaneRequest &o
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new IoTDataPlaneRequest object.
+ * Constructs aa IoTDataPlaneRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from IoTDataPlaneRequestPrivate.
- *
- * @param  d  Pointer to private data (aka D-Pointer).
  */
 IoTDataPlaneRequest::IoTDataPlaneRequest(IoTDataPlaneRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
@@ -87,7 +84,7 @@ IoTDataPlaneRequest::IoTDataPlaneRequest(IoTDataPlaneRequestPrivate * const d) :
 }
 
 /*!
- * \brief Returns the IoTDataPlane action to be performed by this request.
+ * Returns the IoTDataPlane action to be performed by this request.
  */
 IoTDataPlaneRequest::Action IoTDataPlaneRequest::action() const
 {
@@ -96,7 +93,7 @@ IoTDataPlaneRequest::Action IoTDataPlaneRequest::action() const
 }
 
 /*!
- * \brief Returns the name of the IoTDataPlane action to be performed by this request.
+ * Returns the name of the IoTDataPlane action to be performed by this request.
  */
 QString IoTDataPlaneRequest::actionString() const
 {
@@ -104,7 +101,7 @@ QString IoTDataPlaneRequest::actionString() const
 }
 
 /*!
- * \brief Returns the IoTDataPlane API version implemented by this request.
+ * Returns the IoTDataPlane API version implemented by this request.
  */
 QString IoTDataPlaneRequest::apiVersion() const
 {
@@ -113,7 +110,7 @@ QString IoTDataPlaneRequest::apiVersion() const
 }
 
 /*!
- * @brief Set the IoTDataPlane action to be performed by this request to \a action.
+ * Sets the IoTDataPlane action to be performed by this request to \a action.
  */
 void IoTDataPlaneRequest::setAction(const Action action)
 {
@@ -122,7 +119,7 @@ void IoTDataPlaneRequest::setAction(const Action action)
 }
 
 /*!
- * Set the IoTDataPlane API version to include in this request to \a version.
+ * Sets the IoTDataPlane API version to include in this request to \a version.
  */
 void IoTDataPlaneRequest::setApiVersion(const QString &version)
 {
@@ -131,7 +128,7 @@ void IoTDataPlaneRequest::setApiVersion(const QString &version)
 }
 
 /*!
- * \brief Returns \c true if this request is the same as \a other.
+ * Returns \c true if this request is equal to \a other; \c false otherwise.
  *
  * Note, most derived *Request classes do not need to provider their own
  * implementations of this function, since most such request classes rely on
@@ -146,8 +143,8 @@ bool IoTDataPlaneRequest::operator==(const IoTDataPlaneRequest &other) const
             (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
-/*!
- * @brief  Check if \a queueName is a valid IoTDataPlane queue name.
+/*
+ * Returns \c tue if \a queueName is a valid IoTDataPlane queue name.
  *
  * @par From IoTDataPlane FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
@@ -166,9 +163,8 @@ bool IoTDataPlaneRequest::operator==(const IoTDataPlaneRequest &other) const
 }*/
 
 /*!
- * \brief Removes the a \a name parameter from this request.
- *
- * Returns the count of paramters removed (typically \c 0 or \c 1).
+ * Removes the a \a name parameter from the request, then returns the number of
+ * paramters removed (typically \c 0 or \c 1).
  */
 int IoTDataPlaneRequest::clearParameter(const QString &name)
 {
@@ -177,7 +173,7 @@ int IoTDataPlaneRequest::clearParameter(const QString &name)
 }
 
 /*!
- * \brief Removes all parameters from this request.
+ * Removes all parameters from the request.
  */
 void IoTDataPlaneRequest::clearParameters()
 {
@@ -186,7 +182,7 @@ void IoTDataPlaneRequest::clearParameters()
 }
 
 /*!
- * \brief Returns the value of the \n name pararemter if set, otherwise \a defaultValue.
+ * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
 QVariant IoTDataPlaneRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
@@ -195,7 +191,7 @@ QVariant IoTDataPlaneRequest::parameter(const QString &name, const QVariant &def
 }
 
 /*!
- * \brief Returns a map of parameters included in this request.
+ * Returns the parameters included in this request.
  */
 const QVariantMap &IoTDataPlaneRequest::parameters() const
 {
@@ -204,7 +200,7 @@ const QVariantMap &IoTDataPlaneRequest::parameters() const
 }
 
 /*!
- * \brief Sets the \a name parameter to \a value.
+ * Sets the \a name parameter to \a value.
  */
 void IoTDataPlaneRequest::setParameter(const QString &name, const QVariant &value)
 {
@@ -213,9 +209,8 @@ void IoTDataPlaneRequest::setParameter(const QString &name, const QVariant &valu
 }
 
 /*!
- * \brief Sets the map of paramters for this request to \a parameters.
- *
- * Any request parameters set previously will be discarded.
+ * Sets the paramters for this request to \a parameters. Any request parameters
+ * set previously will be discarded.
  */
 void IoTDataPlaneRequest::setParameters(const QVariantMap &parameters)
 {
@@ -224,11 +219,12 @@ void IoTDataPlaneRequest::setParameters(const QVariantMap &parameters)
 }
 
 /*!
- * \brief Returns a network request for this IoTDataPlane request using the given \a endpoint.
+ * Returns a network request for the IoTDataPlane request using the given
+ * \a endpoint.
  *
- * This IoTDataPlane implementation builds request URLs by combining the common query
- * parameters (such as Action and Version), with any that have been added (via
- * setParameter) by child classes.
+ * This IoTDataPlane implementation builds request URLs by combining the
+ * common query parameters (such as Action and Version), with any that have
+ * been added (via setParameter) by child classes.
  */
 QNetworkRequest IoTDataPlaneRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -239,17 +235,16 @@ QNetworkRequest IoTDataPlaneRequest::unsignedRequest(const QUrl &endpoint) const
 }
 
 /*!
+ * \class QtAws::IoTDataPlane::IoTDataPlaneRequestPrivate
+ * \brief The IoTDataPlaneRequestPrivate class provides private implementation for IoTDataPlaneRequest.
  * \internal
  *
- * \class  IoTDataPlaneRequestPrivate
- *
- * \brief  Private implementation for IoTDataPlaneRequest.
+ * \inmodule QtAwsIoTDataPlane
  */
 
 /*!
- * \internal
- *
- * \brief Constructs a new IoTDataPlaneRequestPrivate object.
+ * Constructs a IoTDataPlaneRequestPrivate object for IoTDataPlane \a action with,
+ * public implementation \a q.
  */
 IoTDataPlaneRequestPrivate::IoTDataPlaneRequestPrivate(const IoTDataPlaneRequest::Action action, IoTDataPlaneRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
@@ -258,9 +253,7 @@ IoTDataPlaneRequestPrivate::IoTDataPlaneRequestPrivate(const IoTDataPlaneRequest
 }
 
 /*!
- * \internal
- *
- * \brief Constructs a new IoTDataPlaneRequestPrivate object, copying an existing one.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
@@ -276,15 +269,12 @@ IoTDataPlaneRequestPrivate::IoTDataPlaneRequestPrivate(const IoTDataPlaneRequest
 }
 
 /*!
- * \internal
- *
- * \brief Returns a string representing \a action.
+ * Returns a string represention of \a action, or a null string if \a action is
+ * invalid.
  *
  * This function converts IoTDataPlaneRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the IoTDataPlane service's Action
  * query parameters.
- *
- * @return A string representing \a action, or a null string if \a action is invalid.
  */
 QString IoTDataPlaneRequestPrivate::toString(const IoTDataPlaneRequest::Action &action)
 {

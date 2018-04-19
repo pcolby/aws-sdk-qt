@@ -27,10 +27,9 @@ namespace FMS {
 
 /*!
  * \class QtAws::FMS::GetComplianceDetailRequest
- *
  * \brief The GetComplianceDetailRequest class provides an interface for FMS GetComplianceDetail requests.
  *
- * \ingroup FMS
+ * \inmodule QtAwsFMS
  *
  *  <fullname>AWS Firewall Manager</fullname>
  * 
@@ -43,9 +42,7 @@ namespace FMS {
  */
 
 /*!
- * @brief  Constructs a new GetComplianceDetailRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetComplianceDetailRequest::GetComplianceDetailRequest(const GetComplianceDetailRequest &other)
     : FMSRequest(new GetComplianceDetailRequestPrivate(*other.d_func(), this))
@@ -54,7 +51,7 @@ GetComplianceDetailRequest::GetComplianceDetailRequest(const GetComplianceDetail
 }
 
 /*!
- * @brief  Constructs a new GetComplianceDetailRequest object.
+ * Constructs a GetComplianceDetailRequest object.
  */
 GetComplianceDetailRequest::GetComplianceDetailRequest()
     : FMSRequest(new GetComplianceDetailRequestPrivate(FMSRequest::GetComplianceDetailAction, this))
@@ -72,14 +69,9 @@ bool GetComplianceDetailRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetComplianceDetailResponse object.
+ * Returns a GetComplianceDetailResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetComplianceDetailResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  FMSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetComplianceDetailRequest::response(QNetworkReply * const reply) const
 {
@@ -87,20 +79,17 @@ QtAws::Core::AwsAbstractResponse * GetComplianceDetailRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::FMS::GetComplianceDetailRequestPrivate
+ * \brief The GetComplianceDetailRequestPrivate class provides private implementation for GetComplianceDetailRequest.
+ * \internal
  *
- * @class  GetComplianceDetailRequestPrivate
- *
- * @brief  Private implementation for GetComplianceDetailRequest.
+ * \inmodule QtAwsFMS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetComplianceDetailRequestPrivate object.
- *
- * @param  action  FMS action being performed.
- * @param  q       Pointer to this object's public GetComplianceDetailRequest instance.
+ * Constructs a GetComplianceDetailRequestPrivate object for FMS \a action with,
+ * public implementation \a q.
  */
 GetComplianceDetailRequestPrivate::GetComplianceDetailRequestPrivate(
     const FMSRequest::Action action, GetComplianceDetailRequest * const q)
@@ -110,15 +99,10 @@ GetComplianceDetailRequestPrivate::GetComplianceDetailRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetComplianceDetailRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetComplianceDetailRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetComplianceDetailRequest instance.
  */
 GetComplianceDetailRequestPrivate::GetComplianceDetailRequestPrivate(
     const GetComplianceDetailRequestPrivate &other, GetComplianceDetailRequest * const q)

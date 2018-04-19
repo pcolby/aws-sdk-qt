@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::MonitorInstancesRequest
- *
  * \brief The MonitorInstancesRequest class provides an interface for EC2 MonitorInstances requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new MonitorInstancesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 MonitorInstancesRequest::MonitorInstancesRequest(const MonitorInstancesRequest &other)
     : EC2Request(new MonitorInstancesRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ MonitorInstancesRequest::MonitorInstancesRequest(const MonitorInstancesRequest &
 }
 
 /*!
- * @brief  Constructs a new MonitorInstancesRequest object.
+ * Constructs a MonitorInstancesRequest object.
  */
 MonitorInstancesRequest::MonitorInstancesRequest()
     : EC2Request(new MonitorInstancesRequestPrivate(EC2Request::MonitorInstancesAction, this))
@@ -70,14 +67,9 @@ bool MonitorInstancesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an MonitorInstancesResponse object.
+ * Returns a MonitorInstancesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An MonitorInstancesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * MonitorInstancesRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * MonitorInstancesRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::MonitorInstancesRequestPrivate
+ * \brief The MonitorInstancesRequestPrivate class provides private implementation for MonitorInstancesRequest.
+ * \internal
  *
- * @class  MonitorInstancesRequestPrivate
- *
- * @brief  Private implementation for MonitorInstancesRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new MonitorInstancesRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public MonitorInstancesRequest instance.
+ * Constructs a MonitorInstancesRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 MonitorInstancesRequestPrivate::MonitorInstancesRequestPrivate(
     const EC2Request::Action action, MonitorInstancesRequest * const q)
@@ -108,15 +97,10 @@ MonitorInstancesRequestPrivate::MonitorInstancesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new MonitorInstancesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the MonitorInstancesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public MonitorInstancesRequest instance.
  */
 MonitorInstancesRequestPrivate::MonitorInstancesRequestPrivate(
     const MonitorInstancesRequestPrivate &other, MonitorInstancesRequest * const q)

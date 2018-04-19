@@ -27,10 +27,9 @@ namespace CloudFront {
 
 /*!
  * \class QtAws::CloudFront::DeleteStreamingDistributionRequest
- *
  * \brief The DeleteStreamingDistributionRequest class provides an interface for CloudFront DeleteStreamingDistribution requests.
  *
- * \ingroup CloudFront
+ * \inmodule QtAwsCloudFront
  *
  *  <fullname>Amazon CloudFront</fullname>
  * 
@@ -42,9 +41,7 @@ namespace CloudFront {
  */
 
 /*!
- * @brief  Constructs a new DeleteStreamingDistributionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteStreamingDistributionRequest::DeleteStreamingDistributionRequest(const DeleteStreamingDistributionRequest &other)
     : CloudFrontRequest(new DeleteStreamingDistributionRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ DeleteStreamingDistributionRequest::DeleteStreamingDistributionRequest(const Del
 }
 
 /*!
- * @brief  Constructs a new DeleteStreamingDistributionRequest object.
+ * Constructs a DeleteStreamingDistributionRequest object.
  */
 DeleteStreamingDistributionRequest::DeleteStreamingDistributionRequest()
     : CloudFrontRequest(new DeleteStreamingDistributionRequestPrivate(CloudFrontRequest::DeleteStreamingDistributionAction, this))
@@ -71,14 +68,9 @@ bool DeleteStreamingDistributionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteStreamingDistributionResponse object.
+ * Returns a DeleteStreamingDistributionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteStreamingDistributionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudFrontClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteStreamingDistributionRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * DeleteStreamingDistributionRequest::response(
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudFront::DeleteStreamingDistributionRequestPrivate
+ * \brief The DeleteStreamingDistributionRequestPrivate class provides private implementation for DeleteStreamingDistributionRequest.
+ * \internal
  *
- * @class  DeleteStreamingDistributionRequestPrivate
- *
- * @brief  Private implementation for DeleteStreamingDistributionRequest.
+ * \inmodule QtAwsCloudFront
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteStreamingDistributionRequestPrivate object.
- *
- * @param  action  CloudFront action being performed.
- * @param  q       Pointer to this object's public DeleteStreamingDistributionRequest instance.
+ * Constructs a DeleteStreamingDistributionRequestPrivate object for CloudFront \a action with,
+ * public implementation \a q.
  */
 DeleteStreamingDistributionRequestPrivate::DeleteStreamingDistributionRequestPrivate(
     const CloudFrontRequest::Action action, DeleteStreamingDistributionRequest * const q)
@@ -109,15 +98,10 @@ DeleteStreamingDistributionRequestPrivate::DeleteStreamingDistributionRequestPri
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteStreamingDistributionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteStreamingDistributionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteStreamingDistributionRequest instance.
  */
 DeleteStreamingDistributionRequestPrivate::DeleteStreamingDistributionRequestPrivate(
     const DeleteStreamingDistributionRequestPrivate &other, DeleteStreamingDistributionRequest * const q)

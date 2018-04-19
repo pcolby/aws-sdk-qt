@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::RestoreAddressToClassicRequest
- *
  * \brief The RestoreAddressToClassicRequest class provides an interface for EC2 RestoreAddressToClassic requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new RestoreAddressToClassicRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 RestoreAddressToClassicRequest::RestoreAddressToClassicRequest(const RestoreAddressToClassicRequest &other)
     : EC2Request(new RestoreAddressToClassicRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ RestoreAddressToClassicRequest::RestoreAddressToClassicRequest(const RestoreAddr
 }
 
 /*!
- * @brief  Constructs a new RestoreAddressToClassicRequest object.
+ * Constructs a RestoreAddressToClassicRequest object.
  */
 RestoreAddressToClassicRequest::RestoreAddressToClassicRequest()
     : EC2Request(new RestoreAddressToClassicRequestPrivate(EC2Request::RestoreAddressToClassicAction, this))
@@ -70,14 +67,9 @@ bool RestoreAddressToClassicRequest::isValid() const
 
 
 /*!
- * @brief  Construct an RestoreAddressToClassicResponse object.
+ * Returns a RestoreAddressToClassicResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An RestoreAddressToClassicResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * RestoreAddressToClassicRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * RestoreAddressToClassicRequest::response(QNet
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::RestoreAddressToClassicRequestPrivate
+ * \brief The RestoreAddressToClassicRequestPrivate class provides private implementation for RestoreAddressToClassicRequest.
+ * \internal
  *
- * @class  RestoreAddressToClassicRequestPrivate
- *
- * @brief  Private implementation for RestoreAddressToClassicRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new RestoreAddressToClassicRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public RestoreAddressToClassicRequest instance.
+ * Constructs a RestoreAddressToClassicRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 RestoreAddressToClassicRequestPrivate::RestoreAddressToClassicRequestPrivate(
     const EC2Request::Action action, RestoreAddressToClassicRequest * const q)
@@ -108,15 +97,10 @@ RestoreAddressToClassicRequestPrivate::RestoreAddressToClassicRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RestoreAddressToClassicRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the RestoreAddressToClassicRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public RestoreAddressToClassicRequest instance.
  */
 RestoreAddressToClassicRequestPrivate::RestoreAddressToClassicRequestPrivate(
     const RestoreAddressToClassicRequestPrivate &other, RestoreAddressToClassicRequest * const q)

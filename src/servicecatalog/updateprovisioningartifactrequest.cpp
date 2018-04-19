@@ -27,10 +27,9 @@ namespace ServiceCatalog {
 
 /*!
  * \class QtAws::ServiceCatalog::UpdateProvisioningArtifactRequest
- *
  * \brief The UpdateProvisioningArtifactRequest class provides an interface for ServiceCatalog UpdateProvisioningArtifact requests.
  *
- * \ingroup ServiceCatalog
+ * \inmodule QtAwsServiceCatalog
  *
  *  <fullname>AWS Service Catalog</fullname>
  * 
@@ -43,9 +42,7 @@ namespace ServiceCatalog {
  */
 
 /*!
- * @brief  Constructs a new UpdateProvisioningArtifactRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateProvisioningArtifactRequest::UpdateProvisioningArtifactRequest(const UpdateProvisioningArtifactRequest &other)
     : ServiceCatalogRequest(new UpdateProvisioningArtifactRequestPrivate(*other.d_func(), this))
@@ -54,7 +51,7 @@ UpdateProvisioningArtifactRequest::UpdateProvisioningArtifactRequest(const Updat
 }
 
 /*!
- * @brief  Constructs a new UpdateProvisioningArtifactRequest object.
+ * Constructs a UpdateProvisioningArtifactRequest object.
  */
 UpdateProvisioningArtifactRequest::UpdateProvisioningArtifactRequest()
     : ServiceCatalogRequest(new UpdateProvisioningArtifactRequestPrivate(ServiceCatalogRequest::UpdateProvisioningArtifactAction, this))
@@ -72,14 +69,9 @@ bool UpdateProvisioningArtifactRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateProvisioningArtifactResponse object.
+ * Returns a UpdateProvisioningArtifactResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateProvisioningArtifactResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ServiceCatalogClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateProvisioningArtifactRequest::response(QNetworkReply * const reply) const
 {
@@ -87,20 +79,17 @@ QtAws::Core::AwsAbstractResponse * UpdateProvisioningArtifactRequest::response(Q
 }
 
 /*!
- * @internal
+ * \class QtAws::ServiceCatalog::UpdateProvisioningArtifactRequestPrivate
+ * \brief The UpdateProvisioningArtifactRequestPrivate class provides private implementation for UpdateProvisioningArtifactRequest.
+ * \internal
  *
- * @class  UpdateProvisioningArtifactRequestPrivate
- *
- * @brief  Private implementation for UpdateProvisioningArtifactRequest.
+ * \inmodule QtAwsServiceCatalog
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateProvisioningArtifactRequestPrivate object.
- *
- * @param  action  ServiceCatalog action being performed.
- * @param  q       Pointer to this object's public UpdateProvisioningArtifactRequest instance.
+ * Constructs a UpdateProvisioningArtifactRequestPrivate object for ServiceCatalog \a action with,
+ * public implementation \a q.
  */
 UpdateProvisioningArtifactRequestPrivate::UpdateProvisioningArtifactRequestPrivate(
     const ServiceCatalogRequest::Action action, UpdateProvisioningArtifactRequest * const q)
@@ -110,15 +99,10 @@ UpdateProvisioningArtifactRequestPrivate::UpdateProvisioningArtifactRequestPriva
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateProvisioningArtifactRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateProvisioningArtifactRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateProvisioningArtifactRequest instance.
  */
 UpdateProvisioningArtifactRequestPrivate::UpdateProvisioningArtifactRequestPrivate(
     const UpdateProvisioningArtifactRequestPrivate &other, UpdateProvisioningArtifactRequest * const q)

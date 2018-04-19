@@ -27,10 +27,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::GetMethodResponseRequest
- *
  * \brief The GetMethodResponseRequest class provides an interface for APIGateway GetMethodResponse requests.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -42,9 +41,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new GetMethodResponseRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetMethodResponseRequest::GetMethodResponseRequest(const GetMethodResponseRequest &other)
     : APIGatewayRequest(new GetMethodResponseRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ GetMethodResponseRequest::GetMethodResponseRequest(const GetMethodResponseReques
 }
 
 /*!
- * @brief  Constructs a new GetMethodResponseRequest object.
+ * Constructs a GetMethodResponseRequest object.
  */
 GetMethodResponseRequest::GetMethodResponseRequest()
     : APIGatewayRequest(new GetMethodResponseRequestPrivate(APIGatewayRequest::GetMethodResponseAction, this))
@@ -71,14 +68,9 @@ bool GetMethodResponseRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetMethodResponseResponse object.
+ * Returns a GetMethodResponseResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetMethodResponseResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  APIGatewayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetMethodResponseRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * GetMethodResponseRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::APIGateway::GetMethodResponseRequestPrivate
+ * \brief The GetMethodResponseRequestPrivate class provides private implementation for GetMethodResponseRequest.
+ * \internal
  *
- * @class  GetMethodResponseRequestPrivate
- *
- * @brief  Private implementation for GetMethodResponseRequest.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetMethodResponseRequestPrivate object.
- *
- * @param  action  APIGateway action being performed.
- * @param  q       Pointer to this object's public GetMethodResponseRequest instance.
+ * Constructs a GetMethodResponseRequestPrivate object for APIGateway \a action with,
+ * public implementation \a q.
  */
 GetMethodResponseRequestPrivate::GetMethodResponseRequestPrivate(
     const APIGatewayRequest::Action action, GetMethodResponseRequest * const q)
@@ -109,15 +98,10 @@ GetMethodResponseRequestPrivate::GetMethodResponseRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetMethodResponseRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetMethodResponseRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetMethodResponseRequest instance.
  */
 GetMethodResponseRequestPrivate::GetMethodResponseRequestPrivate(
     const GetMethodResponseRequestPrivate &other, GetMethodResponseRequest * const q)

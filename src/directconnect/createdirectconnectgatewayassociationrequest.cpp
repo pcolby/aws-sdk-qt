@@ -27,10 +27,9 @@ namespace DirectConnect {
 
 /*!
  * \class QtAws::DirectConnect::CreateDirectConnectGatewayAssociationRequest
- *
  * \brief The CreateDirectConnectGatewayAssociationRequest class provides an interface for DirectConnect CreateDirectConnectGatewayAssociation requests.
  *
- * \ingroup DirectConnect
+ * \inmodule QtAwsDirectConnect
  *
  *  AWS Direct Connect links your internal network to an AWS Direct Connect location over a standard 1 gigabit or 10 gigabit
  *  Ethernet fiber-optic cable. One end of the cable is connected to your router, the other to an AWS Direct Connect router.
@@ -45,9 +44,7 @@ namespace DirectConnect {
  */
 
 /*!
- * @brief  Constructs a new CreateDirectConnectGatewayAssociationRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateDirectConnectGatewayAssociationRequest::CreateDirectConnectGatewayAssociationRequest(const CreateDirectConnectGatewayAssociationRequest &other)
     : DirectConnectRequest(new CreateDirectConnectGatewayAssociationRequestPrivate(*other.d_func(), this))
@@ -56,7 +53,7 @@ CreateDirectConnectGatewayAssociationRequest::CreateDirectConnectGatewayAssociat
 }
 
 /*!
- * @brief  Constructs a new CreateDirectConnectGatewayAssociationRequest object.
+ * Constructs a CreateDirectConnectGatewayAssociationRequest object.
  */
 CreateDirectConnectGatewayAssociationRequest::CreateDirectConnectGatewayAssociationRequest()
     : DirectConnectRequest(new CreateDirectConnectGatewayAssociationRequestPrivate(DirectConnectRequest::CreateDirectConnectGatewayAssociationAction, this))
@@ -74,14 +71,9 @@ bool CreateDirectConnectGatewayAssociationRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateDirectConnectGatewayAssociationResponse object.
+ * Returns a CreateDirectConnectGatewayAssociationResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateDirectConnectGatewayAssociationResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DirectConnectClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateDirectConnectGatewayAssociationRequest::response(QNetworkReply * const reply) const
 {
@@ -89,20 +81,17 @@ QtAws::Core::AwsAbstractResponse * CreateDirectConnectGatewayAssociationRequest:
 }
 
 /*!
- * @internal
+ * \class QtAws::DirectConnect::CreateDirectConnectGatewayAssociationRequestPrivate
+ * \brief The CreateDirectConnectGatewayAssociationRequestPrivate class provides private implementation for CreateDirectConnectGatewayAssociationRequest.
+ * \internal
  *
- * @class  CreateDirectConnectGatewayAssociationRequestPrivate
- *
- * @brief  Private implementation for CreateDirectConnectGatewayAssociationRequest.
+ * \inmodule QtAwsDirectConnect
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateDirectConnectGatewayAssociationRequestPrivate object.
- *
- * @param  action  DirectConnect action being performed.
- * @param  q       Pointer to this object's public CreateDirectConnectGatewayAssociationRequest instance.
+ * Constructs a CreateDirectConnectGatewayAssociationRequestPrivate object for DirectConnect \a action with,
+ * public implementation \a q.
  */
 CreateDirectConnectGatewayAssociationRequestPrivate::CreateDirectConnectGatewayAssociationRequestPrivate(
     const DirectConnectRequest::Action action, CreateDirectConnectGatewayAssociationRequest * const q)
@@ -112,15 +101,10 @@ CreateDirectConnectGatewayAssociationRequestPrivate::CreateDirectConnectGatewayA
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateDirectConnectGatewayAssociationRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateDirectConnectGatewayAssociationRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateDirectConnectGatewayAssociationRequest instance.
  */
 CreateDirectConnectGatewayAssociationRequestPrivate::CreateDirectConnectGatewayAssociationRequestPrivate(
     const CreateDirectConnectGatewayAssociationRequestPrivate &other, CreateDirectConnectGatewayAssociationRequest * const q)

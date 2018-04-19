@@ -27,10 +27,9 @@ namespace DeviceFarm {
 
 /*!
  * \class QtAws::DeviceFarm::DeleteUploadRequest
- *
  * \brief The DeleteUploadRequest class provides an interface for DeviceFarm DeleteUpload requests.
  *
- * \ingroup DeviceFarm
+ * \inmodule QtAwsDeviceFarm
  *
  *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
  *  phones, tablets, and other devices in the
@@ -39,9 +38,7 @@ namespace DeviceFarm {
  */
 
 /*!
- * @brief  Constructs a new DeleteUploadRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteUploadRequest::DeleteUploadRequest(const DeleteUploadRequest &other)
     : DeviceFarmRequest(new DeleteUploadRequestPrivate(*other.d_func(), this))
@@ -50,7 +47,7 @@ DeleteUploadRequest::DeleteUploadRequest(const DeleteUploadRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DeleteUploadRequest object.
+ * Constructs a DeleteUploadRequest object.
  */
 DeleteUploadRequest::DeleteUploadRequest()
     : DeviceFarmRequest(new DeleteUploadRequestPrivate(DeviceFarmRequest::DeleteUploadAction, this))
@@ -68,14 +65,9 @@ bool DeleteUploadRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteUploadResponse object.
+ * Returns a DeleteUploadResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteUploadResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DeviceFarmClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteUploadRequest::response(QNetworkReply * const reply) const
 {
@@ -83,20 +75,17 @@ QtAws::Core::AwsAbstractResponse * DeleteUploadRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::DeviceFarm::DeleteUploadRequestPrivate
+ * \brief The DeleteUploadRequestPrivate class provides private implementation for DeleteUploadRequest.
+ * \internal
  *
- * @class  DeleteUploadRequestPrivate
- *
- * @brief  Private implementation for DeleteUploadRequest.
+ * \inmodule QtAwsDeviceFarm
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteUploadRequestPrivate object.
- *
- * @param  action  DeviceFarm action being performed.
- * @param  q       Pointer to this object's public DeleteUploadRequest instance.
+ * Constructs a DeleteUploadRequestPrivate object for DeviceFarm \a action with,
+ * public implementation \a q.
  */
 DeleteUploadRequestPrivate::DeleteUploadRequestPrivate(
     const DeviceFarmRequest::Action action, DeleteUploadRequest * const q)
@@ -106,15 +95,10 @@ DeleteUploadRequestPrivate::DeleteUploadRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteUploadRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteUploadRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteUploadRequest instance.
  */
 DeleteUploadRequestPrivate::DeleteUploadRequestPrivate(
     const DeleteUploadRequestPrivate &other, DeleteUploadRequest * const q)

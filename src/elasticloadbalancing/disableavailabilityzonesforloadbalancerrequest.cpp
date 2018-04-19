@@ -27,10 +27,9 @@ namespace ElasticLoadBalancing {
 
 /*!
  * \class QtAws::ElasticLoadBalancing::DisableAvailabilityZonesForLoadBalancerRequest
- *
  * \brief The DisableAvailabilityZonesForLoadBalancerRequest class provides an interface for ElasticLoadBalancing DisableAvailabilityZonesForLoadBalancer requests.
  *
- * \ingroup ElasticLoadBalancing
+ * \inmodule QtAwsElasticLoadBalancing
  *
  *  <fullname>Elastic Load Balancing</fullname>
  * 
@@ -65,9 +64,7 @@ namespace ElasticLoadBalancing {
  */
 
 /*!
- * @brief  Constructs a new DisableAvailabilityZonesForLoadBalancerRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DisableAvailabilityZonesForLoadBalancerRequest::DisableAvailabilityZonesForLoadBalancerRequest(const DisableAvailabilityZonesForLoadBalancerRequest &other)
     : ElasticLoadBalancingRequest(new DisableAvailabilityZonesForLoadBalancerRequestPrivate(*other.d_func(), this))
@@ -76,7 +73,7 @@ DisableAvailabilityZonesForLoadBalancerRequest::DisableAvailabilityZonesForLoadB
 }
 
 /*!
- * @brief  Constructs a new DisableAvailabilityZonesForLoadBalancerRequest object.
+ * Constructs a DisableAvailabilityZonesForLoadBalancerRequest object.
  */
 DisableAvailabilityZonesForLoadBalancerRequest::DisableAvailabilityZonesForLoadBalancerRequest()
     : ElasticLoadBalancingRequest(new DisableAvailabilityZonesForLoadBalancerRequestPrivate(ElasticLoadBalancingRequest::DisableAvailabilityZonesForLoadBalancerAction, this))
@@ -94,14 +91,9 @@ bool DisableAvailabilityZonesForLoadBalancerRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DisableAvailabilityZonesForLoadBalancerResponse object.
+ * Returns a DisableAvailabilityZonesForLoadBalancerResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DisableAvailabilityZonesForLoadBalancerResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ElasticLoadBalancingClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DisableAvailabilityZonesForLoadBalancerRequest::response(QNetworkReply * const reply) const
 {
@@ -109,20 +101,17 @@ QtAws::Core::AwsAbstractResponse * DisableAvailabilityZonesForLoadBalancerReques
 }
 
 /*!
- * @internal
+ * \class QtAws::ElasticLoadBalancing::DisableAvailabilityZonesForLoadBalancerRequestPrivate
+ * \brief The DisableAvailabilityZonesForLoadBalancerRequestPrivate class provides private implementation for DisableAvailabilityZonesForLoadBalancerRequest.
+ * \internal
  *
- * @class  DisableAvailabilityZonesForLoadBalancerRequestPrivate
- *
- * @brief  Private implementation for DisableAvailabilityZonesForLoadBalancerRequest.
+ * \inmodule QtAwsElasticLoadBalancing
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DisableAvailabilityZonesForLoadBalancerRequestPrivate object.
- *
- * @param  action  ElasticLoadBalancing action being performed.
- * @param  q       Pointer to this object's public DisableAvailabilityZonesForLoadBalancerRequest instance.
+ * Constructs a DisableAvailabilityZonesForLoadBalancerRequestPrivate object for ElasticLoadBalancing \a action with,
+ * public implementation \a q.
  */
 DisableAvailabilityZonesForLoadBalancerRequestPrivate::DisableAvailabilityZonesForLoadBalancerRequestPrivate(
     const ElasticLoadBalancingRequest::Action action, DisableAvailabilityZonesForLoadBalancerRequest * const q)
@@ -132,15 +121,10 @@ DisableAvailabilityZonesForLoadBalancerRequestPrivate::DisableAvailabilityZonesF
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DisableAvailabilityZonesForLoadBalancerRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DisableAvailabilityZonesForLoadBalancerRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DisableAvailabilityZonesForLoadBalancerRequest instance.
  */
 DisableAvailabilityZonesForLoadBalancerRequestPrivate::DisableAvailabilityZonesForLoadBalancerRequestPrivate(
     const DisableAvailabilityZonesForLoadBalancerRequestPrivate &other, DisableAvailabilityZonesForLoadBalancerRequest * const q)

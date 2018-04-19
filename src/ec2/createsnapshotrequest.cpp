@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::CreateSnapshotRequest
- *
  * \brief The CreateSnapshotRequest class provides an interface for EC2 CreateSnapshot requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new CreateSnapshotRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateSnapshotRequest::CreateSnapshotRequest(const CreateSnapshotRequest &other)
     : EC2Request(new CreateSnapshotRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ CreateSnapshotRequest::CreateSnapshotRequest(const CreateSnapshotRequest &other)
 }
 
 /*!
- * @brief  Constructs a new CreateSnapshotRequest object.
+ * Constructs a CreateSnapshotRequest object.
  */
 CreateSnapshotRequest::CreateSnapshotRequest()
     : EC2Request(new CreateSnapshotRequestPrivate(EC2Request::CreateSnapshotAction, this))
@@ -70,14 +67,9 @@ bool CreateSnapshotRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateSnapshotResponse object.
+ * Returns a CreateSnapshotResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateSnapshotResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateSnapshotRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * CreateSnapshotRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::CreateSnapshotRequestPrivate
+ * \brief The CreateSnapshotRequestPrivate class provides private implementation for CreateSnapshotRequest.
+ * \internal
  *
- * @class  CreateSnapshotRequestPrivate
- *
- * @brief  Private implementation for CreateSnapshotRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateSnapshotRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public CreateSnapshotRequest instance.
+ * Constructs a CreateSnapshotRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 CreateSnapshotRequestPrivate::CreateSnapshotRequestPrivate(
     const EC2Request::Action action, CreateSnapshotRequest * const q)
@@ -108,15 +97,10 @@ CreateSnapshotRequestPrivate::CreateSnapshotRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateSnapshotRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateSnapshotRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateSnapshotRequest instance.
  */
 CreateSnapshotRequestPrivate::CreateSnapshotRequestPrivate(
     const CreateSnapshotRequestPrivate &other, CreateSnapshotRequest * const q)

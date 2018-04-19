@@ -27,10 +27,9 @@ namespace ElasticTranscoder {
 
 /*!
  * \class QtAws::ElasticTranscoder::DeletePipelineRequest
- *
  * \brief The DeletePipelineRequest class provides an interface for ElasticTranscoder DeletePipeline requests.
  *
- * \ingroup ElasticTranscoder
+ * \inmodule QtAwsElasticTranscoder
  *
  *  <fullname>AWS Elastic Transcoder Service</fullname>
  * 
@@ -40,9 +39,7 @@ namespace ElasticTranscoder {
  */
 
 /*!
- * @brief  Constructs a new DeletePipelineRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeletePipelineRequest::DeletePipelineRequest(const DeletePipelineRequest &other)
     : ElasticTranscoderRequest(new DeletePipelineRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ DeletePipelineRequest::DeletePipelineRequest(const DeletePipelineRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DeletePipelineRequest object.
+ * Constructs a DeletePipelineRequest object.
  */
 DeletePipelineRequest::DeletePipelineRequest()
     : ElasticTranscoderRequest(new DeletePipelineRequestPrivate(ElasticTranscoderRequest::DeletePipelineAction, this))
@@ -69,14 +66,9 @@ bool DeletePipelineRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeletePipelineResponse object.
+ * Returns a DeletePipelineResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeletePipelineResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ElasticTranscoderClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeletePipelineRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * DeletePipelineRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::ElasticTranscoder::DeletePipelineRequestPrivate
+ * \brief The DeletePipelineRequestPrivate class provides private implementation for DeletePipelineRequest.
+ * \internal
  *
- * @class  DeletePipelineRequestPrivate
- *
- * @brief  Private implementation for DeletePipelineRequest.
+ * \inmodule QtAwsElasticTranscoder
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeletePipelineRequestPrivate object.
- *
- * @param  action  ElasticTranscoder action being performed.
- * @param  q       Pointer to this object's public DeletePipelineRequest instance.
+ * Constructs a DeletePipelineRequestPrivate object for ElasticTranscoder \a action with,
+ * public implementation \a q.
  */
 DeletePipelineRequestPrivate::DeletePipelineRequestPrivate(
     const ElasticTranscoderRequest::Action action, DeletePipelineRequest * const q)
@@ -107,15 +96,10 @@ DeletePipelineRequestPrivate::DeletePipelineRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeletePipelineRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeletePipelineRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeletePipelineRequest instance.
  */
 DeletePipelineRequestPrivate::DeletePipelineRequestPrivate(
     const DeletePipelineRequestPrivate &other, DeletePipelineRequest * const q)

@@ -27,10 +27,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::DeletePolicyRequest
- *
  * \brief The DeletePolicyRequest class provides an interface for IoT DeletePolicy requests.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -48,9 +47,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new DeletePolicyRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeletePolicyRequest::DeletePolicyRequest(const DeletePolicyRequest &other)
     : IoTRequest(new DeletePolicyRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ DeletePolicyRequest::DeletePolicyRequest(const DeletePolicyRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DeletePolicyRequest object.
+ * Constructs a DeletePolicyRequest object.
  */
 DeletePolicyRequest::DeletePolicyRequest()
     : IoTRequest(new DeletePolicyRequestPrivate(IoTRequest::DeletePolicyAction, this))
@@ -77,14 +74,9 @@ bool DeletePolicyRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeletePolicyResponse object.
+ * Returns a DeletePolicyResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeletePolicyResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IoTClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeletePolicyRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * DeletePolicyRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::IoT::DeletePolicyRequestPrivate
+ * \brief The DeletePolicyRequestPrivate class provides private implementation for DeletePolicyRequest.
+ * \internal
  *
- * @class  DeletePolicyRequestPrivate
- *
- * @brief  Private implementation for DeletePolicyRequest.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeletePolicyRequestPrivate object.
- *
- * @param  action  IoT action being performed.
- * @param  q       Pointer to this object's public DeletePolicyRequest instance.
+ * Constructs a DeletePolicyRequestPrivate object for IoT \a action with,
+ * public implementation \a q.
  */
 DeletePolicyRequestPrivate::DeletePolicyRequestPrivate(
     const IoTRequest::Action action, DeletePolicyRequest * const q)
@@ -115,15 +104,10 @@ DeletePolicyRequestPrivate::DeletePolicyRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeletePolicyRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeletePolicyRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeletePolicyRequest instance.
  */
 DeletePolicyRequestPrivate::DeletePolicyRequestPrivate(
     const DeletePolicyRequestPrivate &other, DeletePolicyRequest * const q)

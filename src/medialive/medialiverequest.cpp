@@ -25,16 +25,38 @@ namespace MediaLive {
 
 /*!
  * \class QtAws::MediaLive::MediaLiveRequest
- *
  * \brief The MediaLiveRequest class provides an interface for MediaLive requests.
  *
- * \ingroup MediaLive
+ * \inmodule QtAwsMediaLive
  */
 
 /*!
- * @brief  Constructs a new MediaLiveRequest object.
+ * \enum MediaLiveRequest::Action
  *
- * @param  action  The MediaLive action to request.
+ * This enum describes the actions that can be performed as MediaLive
+ * requests.
+ *
+ * \value CreateChannelAction MediaLive CreateChannel action.
+ * \value CreateInputAction MediaLive CreateInput action.
+ * \value CreateInputSecurityGroupAction MediaLive CreateInputSecurityGroup action.
+ * \value DeleteChannelAction MediaLive DeleteChannel action.
+ * \value DeleteInputAction MediaLive DeleteInput action.
+ * \value DeleteInputSecurityGroupAction MediaLive DeleteInputSecurityGroup action.
+ * \value DescribeChannelAction MediaLive DescribeChannel action.
+ * \value DescribeInputAction MediaLive DescribeInput action.
+ * \value DescribeInputSecurityGroupAction MediaLive DescribeInputSecurityGroup action.
+ * \value ListChannelsAction MediaLive ListChannels action.
+ * \value ListInputSecurityGroupsAction MediaLive ListInputSecurityGroups action.
+ * \value ListInputsAction MediaLive ListInputs action.
+ * \value StartChannelAction MediaLive StartChannel action.
+ * \value StopChannelAction MediaLive StopChannel action.
+ * \value UpdateChannelAction MediaLive UpdateChannel action.
+ * \value UpdateInputAction MediaLive UpdateInput action.
+ * \value UpdateInputSecurityGroupAction MediaLive UpdateInputSecurityGroup action.
+ */
+
+/*!
+ * Constructs a[n] MediaLiveRequest object for MediaLive \a action.
  */
 MediaLiveRequest::MediaLiveRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new MediaLiveRequestPrivate(action, this))
@@ -43,9 +65,7 @@ MediaLiveRequest::MediaLiveRequest(const Action action)
 }
 
 /*!
- * @brief  Constructs a new MediaLiveRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 MediaLiveRequest::MediaLiveRequest(const MediaLiveRequest &other)
     : QtAws::Core::AwsAbstractRequest(new MediaLiveRequestPrivate(*other.d_func(), this))
@@ -54,13 +74,7 @@ MediaLiveRequest::MediaLiveRequest(const MediaLiveRequest &other)
 }
 
 /*!
- * @brief  Assignment operator.
- *
- * Assigns \a other to \c this.
- *
- * @param  other  Instance to copy.
- *
- * @return  A reference to \c this.
+ * Sets the MediaLiveRequest object to be equal to \a other.
  */
 MediaLiveRequest& MediaLiveRequest::operator=(const MediaLiveRequest &other)
 {
@@ -72,14 +86,10 @@ MediaLiveRequest& MediaLiveRequest::operator=(const MediaLiveRequest &other)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new MediaLiveRequest object.
+ * Constructs aa MediaLiveRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from MediaLiveRequestPrivate.
- *
- * @param  d  Pointer to private data (aka D-Pointer).
  */
 MediaLiveRequest::MediaLiveRequest(MediaLiveRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
@@ -87,7 +97,7 @@ MediaLiveRequest::MediaLiveRequest(MediaLiveRequestPrivate * const d) : QtAws::C
 }
 
 /*!
- * \brief Returns the MediaLive action to be performed by this request.
+ * Returns the MediaLive action to be performed by this request.
  */
 MediaLiveRequest::Action MediaLiveRequest::action() const
 {
@@ -96,7 +106,7 @@ MediaLiveRequest::Action MediaLiveRequest::action() const
 }
 
 /*!
- * \brief Returns the name of the MediaLive action to be performed by this request.
+ * Returns the name of the MediaLive action to be performed by this request.
  */
 QString MediaLiveRequest::actionString() const
 {
@@ -104,7 +114,7 @@ QString MediaLiveRequest::actionString() const
 }
 
 /*!
- * \brief Returns the MediaLive API version implemented by this request.
+ * Returns the MediaLive API version implemented by this request.
  */
 QString MediaLiveRequest::apiVersion() const
 {
@@ -113,7 +123,7 @@ QString MediaLiveRequest::apiVersion() const
 }
 
 /*!
- * @brief Set the MediaLive action to be performed by this request to \a action.
+ * Sets the MediaLive action to be performed by this request to \a action.
  */
 void MediaLiveRequest::setAction(const Action action)
 {
@@ -122,7 +132,7 @@ void MediaLiveRequest::setAction(const Action action)
 }
 
 /*!
- * Set the MediaLive API version to include in this request to \a version.
+ * Sets the MediaLive API version to include in this request to \a version.
  */
 void MediaLiveRequest::setApiVersion(const QString &version)
 {
@@ -131,7 +141,7 @@ void MediaLiveRequest::setApiVersion(const QString &version)
 }
 
 /*!
- * \brief Returns \c true if this request is the same as \a other.
+ * Returns \c true if this request is equal to \a other; \c false otherwise.
  *
  * Note, most derived *Request classes do not need to provider their own
  * implementations of this function, since most such request classes rely on
@@ -146,8 +156,8 @@ bool MediaLiveRequest::operator==(const MediaLiveRequest &other) const
             (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
-/*!
- * @brief  Check if \a queueName is a valid MediaLive queue name.
+/*
+ * Returns \c tue if \a queueName is a valid MediaLive queue name.
  *
  * @par From MediaLive FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
@@ -166,9 +176,8 @@ bool MediaLiveRequest::operator==(const MediaLiveRequest &other) const
 }*/
 
 /*!
- * \brief Removes the a \a name parameter from this request.
- *
- * Returns the count of paramters removed (typically \c 0 or \c 1).
+ * Removes the a \a name parameter from the request, then returns the number of
+ * paramters removed (typically \c 0 or \c 1).
  */
 int MediaLiveRequest::clearParameter(const QString &name)
 {
@@ -177,7 +186,7 @@ int MediaLiveRequest::clearParameter(const QString &name)
 }
 
 /*!
- * \brief Removes all parameters from this request.
+ * Removes all parameters from the request.
  */
 void MediaLiveRequest::clearParameters()
 {
@@ -186,7 +195,7 @@ void MediaLiveRequest::clearParameters()
 }
 
 /*!
- * \brief Returns the value of the \n name pararemter if set, otherwise \a defaultValue.
+ * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
 QVariant MediaLiveRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
@@ -195,7 +204,7 @@ QVariant MediaLiveRequest::parameter(const QString &name, const QVariant &defaul
 }
 
 /*!
- * \brief Returns a map of parameters included in this request.
+ * Returns the parameters included in this request.
  */
 const QVariantMap &MediaLiveRequest::parameters() const
 {
@@ -204,7 +213,7 @@ const QVariantMap &MediaLiveRequest::parameters() const
 }
 
 /*!
- * \brief Sets the \a name parameter to \a value.
+ * Sets the \a name parameter to \a value.
  */
 void MediaLiveRequest::setParameter(const QString &name, const QVariant &value)
 {
@@ -213,9 +222,8 @@ void MediaLiveRequest::setParameter(const QString &name, const QVariant &value)
 }
 
 /*!
- * \brief Sets the map of paramters for this request to \a parameters.
- *
- * Any request parameters set previously will be discarded.
+ * Sets the paramters for this request to \a parameters. Any request parameters
+ * set previously will be discarded.
  */
 void MediaLiveRequest::setParameters(const QVariantMap &parameters)
 {
@@ -224,11 +232,12 @@ void MediaLiveRequest::setParameters(const QVariantMap &parameters)
 }
 
 /*!
- * \brief Returns a network request for this MediaLive request using the given \a endpoint.
+ * Returns a network request for the MediaLive request using the given
+ * \a endpoint.
  *
- * This MediaLive implementation builds request URLs by combining the common query
- * parameters (such as Action and Version), with any that have been added (via
- * setParameter) by child classes.
+ * This MediaLive implementation builds request URLs by combining the
+ * common query parameters (such as Action and Version), with any that have
+ * been added (via setParameter) by child classes.
  */
 QNetworkRequest MediaLiveRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -239,17 +248,16 @@ QNetworkRequest MediaLiveRequest::unsignedRequest(const QUrl &endpoint) const
 }
 
 /*!
+ * \class QtAws::MediaLive::MediaLiveRequestPrivate
+ * \brief The MediaLiveRequestPrivate class provides private implementation for MediaLiveRequest.
  * \internal
  *
- * \class  MediaLiveRequestPrivate
- *
- * \brief  Private implementation for MediaLiveRequest.
+ * \inmodule QtAwsMediaLive
  */
 
 /*!
- * \internal
- *
- * \brief Constructs a new MediaLiveRequestPrivate object.
+ * Constructs a MediaLiveRequestPrivate object for MediaLive \a action with,
+ * public implementation \a q.
  */
 MediaLiveRequestPrivate::MediaLiveRequestPrivate(const MediaLiveRequest::Action action, MediaLiveRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
@@ -258,9 +266,7 @@ MediaLiveRequestPrivate::MediaLiveRequestPrivate(const MediaLiveRequest::Action 
 }
 
 /*!
- * \internal
- *
- * \brief Constructs a new MediaLiveRequestPrivate object, copying an existing one.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
@@ -276,15 +282,12 @@ MediaLiveRequestPrivate::MediaLiveRequestPrivate(const MediaLiveRequestPrivate &
 }
 
 /*!
- * \internal
- *
- * \brief Returns a string representing \a action.
+ * Returns a string represention of \a action, or a null string if \a action is
+ * invalid.
  *
  * This function converts MediaLiveRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the MediaLive service's Action
  * query parameters.
- *
- * @return A string representing \a action, or a null string if \a action is invalid.
  */
 QString MediaLiveRequestPrivate::toString(const MediaLiveRequest::Action &action)
 {

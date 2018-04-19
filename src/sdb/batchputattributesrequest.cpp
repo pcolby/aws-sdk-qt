@@ -27,10 +27,9 @@ namespace SimpleDB {
 
 /*!
  * \class QtAws::SimpleDB::BatchPutAttributesRequest
- *
  * \brief The BatchPutAttributesRequest class provides an interface for SimpleDB BatchPutAttributes requests.
  *
- * \ingroup SimpleDB
+ * \inmodule QtAwsSimpleDB
  *
  *  Amazon SimpleDB is a web service providing the core database functions of data indexing and querying in the cloud. By
  *  offloading the time and effort associated with building and operating a web-scale database, SimpleDB provides developers
@@ -50,9 +49,7 @@ namespace SimpleDB {
  */
 
 /*!
- * @brief  Constructs a new BatchPutAttributesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 BatchPutAttributesRequest::BatchPutAttributesRequest(const BatchPutAttributesRequest &other)
     : SimpleDBRequest(new BatchPutAttributesRequestPrivate(*other.d_func(), this))
@@ -61,7 +58,7 @@ BatchPutAttributesRequest::BatchPutAttributesRequest(const BatchPutAttributesReq
 }
 
 /*!
- * @brief  Constructs a new BatchPutAttributesRequest object.
+ * Constructs a BatchPutAttributesRequest object.
  */
 BatchPutAttributesRequest::BatchPutAttributesRequest()
     : SimpleDBRequest(new BatchPutAttributesRequestPrivate(SimpleDBRequest::BatchPutAttributesAction, this))
@@ -79,14 +76,9 @@ bool BatchPutAttributesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an BatchPutAttributesResponse object.
+ * Returns a BatchPutAttributesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An BatchPutAttributesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SimpleDBClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * BatchPutAttributesRequest::response(QNetworkReply * const reply) const
 {
@@ -94,20 +86,17 @@ QtAws::Core::AwsAbstractResponse * BatchPutAttributesRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::SimpleDB::BatchPutAttributesRequestPrivate
+ * \brief The BatchPutAttributesRequestPrivate class provides private implementation for BatchPutAttributesRequest.
+ * \internal
  *
- * @class  BatchPutAttributesRequestPrivate
- *
- * @brief  Private implementation for BatchPutAttributesRequest.
+ * \inmodule QtAwsSimpleDB
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new BatchPutAttributesRequestPrivate object.
- *
- * @param  action  SimpleDB action being performed.
- * @param  q       Pointer to this object's public BatchPutAttributesRequest instance.
+ * Constructs a BatchPutAttributesRequestPrivate object for SimpleDB \a action with,
+ * public implementation \a q.
  */
 BatchPutAttributesRequestPrivate::BatchPutAttributesRequestPrivate(
     const SimpleDBRequest::Action action, BatchPutAttributesRequest * const q)
@@ -117,15 +106,10 @@ BatchPutAttributesRequestPrivate::BatchPutAttributesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new BatchPutAttributesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the BatchPutAttributesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public BatchPutAttributesRequest instance.
  */
 BatchPutAttributesRequestPrivate::BatchPutAttributesRequestPrivate(
     const BatchPutAttributesRequestPrivate &other, BatchPutAttributesRequest * const q)

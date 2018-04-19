@@ -27,10 +27,9 @@ namespace AppStream {
 
 /*!
  * \class QtAws::AppStream::DescribeSessionsRequest
- *
  * \brief The DescribeSessionsRequest class provides an interface for AppStream DescribeSessions requests.
  *
- * \ingroup AppStream
+ * \inmodule QtAwsAppStream
  *
  *  <fullname>Amazon AppStream 2.0</fullname>
  * 
@@ -40,9 +39,7 @@ namespace AppStream {
  */
 
 /*!
- * @brief  Constructs a new DescribeSessionsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeSessionsRequest::DescribeSessionsRequest(const DescribeSessionsRequest &other)
     : AppStreamRequest(new DescribeSessionsRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ DescribeSessionsRequest::DescribeSessionsRequest(const DescribeSessionsRequest &
 }
 
 /*!
- * @brief  Constructs a new DescribeSessionsRequest object.
+ * Constructs a DescribeSessionsRequest object.
  */
 DescribeSessionsRequest::DescribeSessionsRequest()
     : AppStreamRequest(new DescribeSessionsRequestPrivate(AppStreamRequest::DescribeSessionsAction, this))
@@ -69,14 +66,9 @@ bool DescribeSessionsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeSessionsResponse object.
+ * Returns a DescribeSessionsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeSessionsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AppStreamClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeSessionsRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * DescribeSessionsRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::AppStream::DescribeSessionsRequestPrivate
+ * \brief The DescribeSessionsRequestPrivate class provides private implementation for DescribeSessionsRequest.
+ * \internal
  *
- * @class  DescribeSessionsRequestPrivate
- *
- * @brief  Private implementation for DescribeSessionsRequest.
+ * \inmodule QtAwsAppStream
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeSessionsRequestPrivate object.
- *
- * @param  action  AppStream action being performed.
- * @param  q       Pointer to this object's public DescribeSessionsRequest instance.
+ * Constructs a DescribeSessionsRequestPrivate object for AppStream \a action with,
+ * public implementation \a q.
  */
 DescribeSessionsRequestPrivate::DescribeSessionsRequestPrivate(
     const AppStreamRequest::Action action, DescribeSessionsRequest * const q)
@@ -107,15 +96,10 @@ DescribeSessionsRequestPrivate::DescribeSessionsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeSessionsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeSessionsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeSessionsRequest instance.
  */
 DescribeSessionsRequestPrivate::DescribeSessionsRequestPrivate(
     const DescribeSessionsRequestPrivate &other, DescribeSessionsRequest * const q)

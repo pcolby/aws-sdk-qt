@@ -27,10 +27,9 @@ namespace Glue {
 
 /*!
  * \class QtAws::Glue::DeleteCrawlerRequest
- *
  * \brief The DeleteCrawlerRequest class provides an interface for Glue DeleteCrawler requests.
  *
- * \ingroup Glue
+ * \inmodule QtAwsGlue
  *
  *  <fullname>AWS Glue</fullname>
  * 
@@ -40,9 +39,7 @@ namespace Glue {
  */
 
 /*!
- * @brief  Constructs a new DeleteCrawlerRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteCrawlerRequest::DeleteCrawlerRequest(const DeleteCrawlerRequest &other)
     : GlueRequest(new DeleteCrawlerRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ DeleteCrawlerRequest::DeleteCrawlerRequest(const DeleteCrawlerRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DeleteCrawlerRequest object.
+ * Constructs a DeleteCrawlerRequest object.
  */
 DeleteCrawlerRequest::DeleteCrawlerRequest()
     : GlueRequest(new DeleteCrawlerRequestPrivate(GlueRequest::DeleteCrawlerAction, this))
@@ -69,14 +66,9 @@ bool DeleteCrawlerRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteCrawlerResponse object.
+ * Returns a DeleteCrawlerResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteCrawlerResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GlueClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteCrawlerRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * DeleteCrawlerRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::Glue::DeleteCrawlerRequestPrivate
+ * \brief The DeleteCrawlerRequestPrivate class provides private implementation for DeleteCrawlerRequest.
+ * \internal
  *
- * @class  DeleteCrawlerRequestPrivate
- *
- * @brief  Private implementation for DeleteCrawlerRequest.
+ * \inmodule QtAwsGlue
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteCrawlerRequestPrivate object.
- *
- * @param  action  Glue action being performed.
- * @param  q       Pointer to this object's public DeleteCrawlerRequest instance.
+ * Constructs a DeleteCrawlerRequestPrivate object for Glue \a action with,
+ * public implementation \a q.
  */
 DeleteCrawlerRequestPrivate::DeleteCrawlerRequestPrivate(
     const GlueRequest::Action action, DeleteCrawlerRequest * const q)
@@ -107,15 +96,10 @@ DeleteCrawlerRequestPrivate::DeleteCrawlerRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteCrawlerRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteCrawlerRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteCrawlerRequest instance.
  */
 DeleteCrawlerRequestPrivate::DeleteCrawlerRequestPrivate(
     const DeleteCrawlerRequestPrivate &other, DeleteCrawlerRequest * const q)

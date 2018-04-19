@@ -27,10 +27,9 @@ namespace DirectoryService {
 
 /*!
  * \class QtAws::DirectoryService::ConnectDirectoryRequest
- *
  * \brief The ConnectDirectoryRequest class provides an interface for DirectoryService ConnectDirectory requests.
  *
- * \ingroup DirectoryService
+ * \inmodule QtAwsDirectoryService
  *
  *  <fullname>AWS Directory Service</fullname>
  * 
@@ -51,9 +50,7 @@ namespace DirectoryService {
  */
 
 /*!
- * @brief  Constructs a new ConnectDirectoryRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ConnectDirectoryRequest::ConnectDirectoryRequest(const ConnectDirectoryRequest &other)
     : DirectoryServiceRequest(new ConnectDirectoryRequestPrivate(*other.d_func(), this))
@@ -62,7 +59,7 @@ ConnectDirectoryRequest::ConnectDirectoryRequest(const ConnectDirectoryRequest &
 }
 
 /*!
- * @brief  Constructs a new ConnectDirectoryRequest object.
+ * Constructs a ConnectDirectoryRequest object.
  */
 ConnectDirectoryRequest::ConnectDirectoryRequest()
     : DirectoryServiceRequest(new ConnectDirectoryRequestPrivate(DirectoryServiceRequest::ConnectDirectoryAction, this))
@@ -80,14 +77,9 @@ bool ConnectDirectoryRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ConnectDirectoryResponse object.
+ * Returns a ConnectDirectoryResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ConnectDirectoryResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DirectoryServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ConnectDirectoryRequest::response(QNetworkReply * const reply) const
 {
@@ -95,20 +87,17 @@ QtAws::Core::AwsAbstractResponse * ConnectDirectoryRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::DirectoryService::ConnectDirectoryRequestPrivate
+ * \brief The ConnectDirectoryRequestPrivate class provides private implementation for ConnectDirectoryRequest.
+ * \internal
  *
- * @class  ConnectDirectoryRequestPrivate
- *
- * @brief  Private implementation for ConnectDirectoryRequest.
+ * \inmodule QtAwsDirectoryService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ConnectDirectoryRequestPrivate object.
- *
- * @param  action  DirectoryService action being performed.
- * @param  q       Pointer to this object's public ConnectDirectoryRequest instance.
+ * Constructs a ConnectDirectoryRequestPrivate object for DirectoryService \a action with,
+ * public implementation \a q.
  */
 ConnectDirectoryRequestPrivate::ConnectDirectoryRequestPrivate(
     const DirectoryServiceRequest::Action action, ConnectDirectoryRequest * const q)
@@ -118,15 +107,10 @@ ConnectDirectoryRequestPrivate::ConnectDirectoryRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ConnectDirectoryRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ConnectDirectoryRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ConnectDirectoryRequest instance.
  */
 ConnectDirectoryRequestPrivate::ConnectDirectoryRequestPrivate(
     const ConnectDirectoryRequestPrivate &other, ConnectDirectoryRequest * const q)

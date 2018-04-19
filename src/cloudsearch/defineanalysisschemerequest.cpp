@@ -27,10 +27,9 @@ namespace CloudSearch {
 
 /*!
  * \class QtAws::CloudSearch::DefineAnalysisSchemeRequest
- *
  * \brief The DefineAnalysisSchemeRequest class provides an interface for CloudSearch DefineAnalysisScheme requests.
  *
- * \ingroup CloudSearch
+ * \inmodule QtAwsCloudSearch
  *
  *  <fullname>Amazon CloudSearch Configuration Service</fullname>
  * 
@@ -48,9 +47,7 @@ namespace CloudSearch {
  */
 
 /*!
- * @brief  Constructs a new DefineAnalysisSchemeRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DefineAnalysisSchemeRequest::DefineAnalysisSchemeRequest(const DefineAnalysisSchemeRequest &other)
     : CloudSearchRequest(new DefineAnalysisSchemeRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ DefineAnalysisSchemeRequest::DefineAnalysisSchemeRequest(const DefineAnalysisSch
 }
 
 /*!
- * @brief  Constructs a new DefineAnalysisSchemeRequest object.
+ * Constructs a DefineAnalysisSchemeRequest object.
  */
 DefineAnalysisSchemeRequest::DefineAnalysisSchemeRequest()
     : CloudSearchRequest(new DefineAnalysisSchemeRequestPrivate(CloudSearchRequest::DefineAnalysisSchemeAction, this))
@@ -77,14 +74,9 @@ bool DefineAnalysisSchemeRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DefineAnalysisSchemeResponse object.
+ * Returns a DefineAnalysisSchemeResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DefineAnalysisSchemeResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudSearchClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DefineAnalysisSchemeRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * DefineAnalysisSchemeRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudSearch::DefineAnalysisSchemeRequestPrivate
+ * \brief The DefineAnalysisSchemeRequestPrivate class provides private implementation for DefineAnalysisSchemeRequest.
+ * \internal
  *
- * @class  DefineAnalysisSchemeRequestPrivate
- *
- * @brief  Private implementation for DefineAnalysisSchemeRequest.
+ * \inmodule QtAwsCloudSearch
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DefineAnalysisSchemeRequestPrivate object.
- *
- * @param  action  CloudSearch action being performed.
- * @param  q       Pointer to this object's public DefineAnalysisSchemeRequest instance.
+ * Constructs a DefineAnalysisSchemeRequestPrivate object for CloudSearch \a action with,
+ * public implementation \a q.
  */
 DefineAnalysisSchemeRequestPrivate::DefineAnalysisSchemeRequestPrivate(
     const CloudSearchRequest::Action action, DefineAnalysisSchemeRequest * const q)
@@ -115,15 +104,10 @@ DefineAnalysisSchemeRequestPrivate::DefineAnalysisSchemeRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DefineAnalysisSchemeRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DefineAnalysisSchemeRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DefineAnalysisSchemeRequest instance.
  */
 DefineAnalysisSchemeRequestPrivate::DefineAnalysisSchemeRequestPrivate(
     const DefineAnalysisSchemeRequestPrivate &other, DefineAnalysisSchemeRequest * const q)

@@ -27,10 +27,9 @@ namespace Glue {
 
 /*!
  * \class QtAws::Glue::StartTriggerRequest
- *
  * \brief The StartTriggerRequest class provides an interface for Glue StartTrigger requests.
  *
- * \ingroup Glue
+ * \inmodule QtAwsGlue
  *
  *  <fullname>AWS Glue</fullname>
  * 
@@ -40,9 +39,7 @@ namespace Glue {
  */
 
 /*!
- * @brief  Constructs a new StartTriggerRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 StartTriggerRequest::StartTriggerRequest(const StartTriggerRequest &other)
     : GlueRequest(new StartTriggerRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ StartTriggerRequest::StartTriggerRequest(const StartTriggerRequest &other)
 }
 
 /*!
- * @brief  Constructs a new StartTriggerRequest object.
+ * Constructs a StartTriggerRequest object.
  */
 StartTriggerRequest::StartTriggerRequest()
     : GlueRequest(new StartTriggerRequestPrivate(GlueRequest::StartTriggerAction, this))
@@ -69,14 +66,9 @@ bool StartTriggerRequest::isValid() const
 
 
 /*!
- * @brief  Construct an StartTriggerResponse object.
+ * Returns a StartTriggerResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An StartTriggerResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GlueClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * StartTriggerRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * StartTriggerRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::Glue::StartTriggerRequestPrivate
+ * \brief The StartTriggerRequestPrivate class provides private implementation for StartTriggerRequest.
+ * \internal
  *
- * @class  StartTriggerRequestPrivate
- *
- * @brief  Private implementation for StartTriggerRequest.
+ * \inmodule QtAwsGlue
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new StartTriggerRequestPrivate object.
- *
- * @param  action  Glue action being performed.
- * @param  q       Pointer to this object's public StartTriggerRequest instance.
+ * Constructs a StartTriggerRequestPrivate object for Glue \a action with,
+ * public implementation \a q.
  */
 StartTriggerRequestPrivate::StartTriggerRequestPrivate(
     const GlueRequest::Action action, StartTriggerRequest * const q)
@@ -107,15 +96,10 @@ StartTriggerRequestPrivate::StartTriggerRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StartTriggerRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the StartTriggerRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public StartTriggerRequest instance.
  */
 StartTriggerRequestPrivate::StartTriggerRequestPrivate(
     const StartTriggerRequestPrivate &other, StartTriggerRequest * const q)

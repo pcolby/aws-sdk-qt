@@ -27,10 +27,9 @@ namespace Organizations {
 
 /*!
  * \class QtAws::Organizations::ListRootsRequest
- *
  * \brief The ListRootsRequest class provides an interface for Organizations ListRoots requests.
  *
- * \ingroup Organizations
+ * \inmodule QtAwsOrganizations
  *
  *  <fullname>AWS Organizations API Reference</fullname>
  * 
@@ -179,9 +178,7 @@ namespace Organizations {
  */
 
 /*!
- * @brief  Constructs a new ListRootsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListRootsRequest::ListRootsRequest(const ListRootsRequest &other)
     : OrganizationsRequest(new ListRootsRequestPrivate(*other.d_func(), this))
@@ -190,7 +187,7 @@ ListRootsRequest::ListRootsRequest(const ListRootsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ListRootsRequest object.
+ * Constructs a ListRootsRequest object.
  */
 ListRootsRequest::ListRootsRequest()
     : OrganizationsRequest(new ListRootsRequestPrivate(OrganizationsRequest::ListRootsAction, this))
@@ -208,14 +205,9 @@ bool ListRootsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListRootsResponse object.
+ * Returns a ListRootsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListRootsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  OrganizationsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListRootsRequest::response(QNetworkReply * const reply) const
 {
@@ -223,20 +215,17 @@ QtAws::Core::AwsAbstractResponse * ListRootsRequest::response(QNetworkReply * co
 }
 
 /*!
- * @internal
+ * \class QtAws::Organizations::ListRootsRequestPrivate
+ * \brief The ListRootsRequestPrivate class provides private implementation for ListRootsRequest.
+ * \internal
  *
- * @class  ListRootsRequestPrivate
- *
- * @brief  Private implementation for ListRootsRequest.
+ * \inmodule QtAwsOrganizations
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListRootsRequestPrivate object.
- *
- * @param  action  Organizations action being performed.
- * @param  q       Pointer to this object's public ListRootsRequest instance.
+ * Constructs a ListRootsRequestPrivate object for Organizations \a action with,
+ * public implementation \a q.
  */
 ListRootsRequestPrivate::ListRootsRequestPrivate(
     const OrganizationsRequest::Action action, ListRootsRequest * const q)
@@ -246,15 +235,10 @@ ListRootsRequestPrivate::ListRootsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListRootsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListRootsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListRootsRequest instance.
  */
 ListRootsRequestPrivate::ListRootsRequestPrivate(
     const ListRootsRequestPrivate &other, ListRootsRequest * const q)

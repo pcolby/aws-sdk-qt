@@ -27,10 +27,9 @@ namespace StorageGateway {
 
 /*!
  * \class QtAws::StorageGateway::CreateStorediSCSIVolumeRequest
- *
  * \brief The CreateStorediSCSIVolumeRequest class provides an interface for StorageGateway CreateStorediSCSIVolume requests.
  *
- * \ingroup StorageGateway
+ * \inmodule QtAwsStorageGateway
  *
  *  <fullname>AWS Storage Gateway Service</fullname>
  * 
@@ -106,9 +105,7 @@ namespace StorageGateway {
  */
 
 /*!
- * @brief  Constructs a new CreateStorediSCSIVolumeRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateStorediSCSIVolumeRequest::CreateStorediSCSIVolumeRequest(const CreateStorediSCSIVolumeRequest &other)
     : StorageGatewayRequest(new CreateStorediSCSIVolumeRequestPrivate(*other.d_func(), this))
@@ -117,7 +114,7 @@ CreateStorediSCSIVolumeRequest::CreateStorediSCSIVolumeRequest(const CreateStore
 }
 
 /*!
- * @brief  Constructs a new CreateStorediSCSIVolumeRequest object.
+ * Constructs a CreateStorediSCSIVolumeRequest object.
  */
 CreateStorediSCSIVolumeRequest::CreateStorediSCSIVolumeRequest()
     : StorageGatewayRequest(new CreateStorediSCSIVolumeRequestPrivate(StorageGatewayRequest::CreateStorediSCSIVolumeAction, this))
@@ -135,14 +132,9 @@ bool CreateStorediSCSIVolumeRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateStorediSCSIVolumeResponse object.
+ * Returns a CreateStorediSCSIVolumeResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateStorediSCSIVolumeResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  StorageGatewayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateStorediSCSIVolumeRequest::response(QNetworkReply * const reply) const
 {
@@ -150,20 +142,17 @@ QtAws::Core::AwsAbstractResponse * CreateStorediSCSIVolumeRequest::response(QNet
 }
 
 /*!
- * @internal
+ * \class QtAws::StorageGateway::CreateStorediSCSIVolumeRequestPrivate
+ * \brief The CreateStorediSCSIVolumeRequestPrivate class provides private implementation for CreateStorediSCSIVolumeRequest.
+ * \internal
  *
- * @class  CreateStorediSCSIVolumeRequestPrivate
- *
- * @brief  Private implementation for CreateStorediSCSIVolumeRequest.
+ * \inmodule QtAwsStorageGateway
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateStorediSCSIVolumeRequestPrivate object.
- *
- * @param  action  StorageGateway action being performed.
- * @param  q       Pointer to this object's public CreateStorediSCSIVolumeRequest instance.
+ * Constructs a CreateStorediSCSIVolumeRequestPrivate object for StorageGateway \a action with,
+ * public implementation \a q.
  */
 CreateStorediSCSIVolumeRequestPrivate::CreateStorediSCSIVolumeRequestPrivate(
     const StorageGatewayRequest::Action action, CreateStorediSCSIVolumeRequest * const q)
@@ -173,15 +162,10 @@ CreateStorediSCSIVolumeRequestPrivate::CreateStorediSCSIVolumeRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateStorediSCSIVolumeRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateStorediSCSIVolumeRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateStorediSCSIVolumeRequest instance.
  */
 CreateStorediSCSIVolumeRequestPrivate::CreateStorediSCSIVolumeRequestPrivate(
     const CreateStorediSCSIVolumeRequestPrivate &other, CreateStorediSCSIVolumeRequest * const q)

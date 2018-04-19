@@ -27,10 +27,9 @@ namespace Redshift {
 
 /*!
  * \class QtAws::Redshift::DeleteClusterParameterGroupRequest
- *
  * \brief The DeleteClusterParameterGroupRequest class provides an interface for Redshift DeleteClusterParameterGroup requests.
  *
- * \ingroup Redshift
+ * \inmodule QtAwsRedshift
  *
  *  <fullname>Amazon Redshift</fullname>
  * 
@@ -67,9 +66,7 @@ namespace Redshift {
  */
 
 /*!
- * @brief  Constructs a new DeleteClusterParameterGroupRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteClusterParameterGroupRequest::DeleteClusterParameterGroupRequest(const DeleteClusterParameterGroupRequest &other)
     : RedshiftRequest(new DeleteClusterParameterGroupRequestPrivate(*other.d_func(), this))
@@ -78,7 +75,7 @@ DeleteClusterParameterGroupRequest::DeleteClusterParameterGroupRequest(const Del
 }
 
 /*!
- * @brief  Constructs a new DeleteClusterParameterGroupRequest object.
+ * Constructs a DeleteClusterParameterGroupRequest object.
  */
 DeleteClusterParameterGroupRequest::DeleteClusterParameterGroupRequest()
     : RedshiftRequest(new DeleteClusterParameterGroupRequestPrivate(RedshiftRequest::DeleteClusterParameterGroupAction, this))
@@ -96,14 +93,9 @@ bool DeleteClusterParameterGroupRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteClusterParameterGroupResponse object.
+ * Returns a DeleteClusterParameterGroupResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteClusterParameterGroupResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RedshiftClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteClusterParameterGroupRequest::response(QNetworkReply * const reply) const
 {
@@ -111,20 +103,17 @@ QtAws::Core::AwsAbstractResponse * DeleteClusterParameterGroupRequest::response(
 }
 
 /*!
- * @internal
+ * \class QtAws::Redshift::DeleteClusterParameterGroupRequestPrivate
+ * \brief The DeleteClusterParameterGroupRequestPrivate class provides private implementation for DeleteClusterParameterGroupRequest.
+ * \internal
  *
- * @class  DeleteClusterParameterGroupRequestPrivate
- *
- * @brief  Private implementation for DeleteClusterParameterGroupRequest.
+ * \inmodule QtAwsRedshift
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteClusterParameterGroupRequestPrivate object.
- *
- * @param  action  Redshift action being performed.
- * @param  q       Pointer to this object's public DeleteClusterParameterGroupRequest instance.
+ * Constructs a DeleteClusterParameterGroupRequestPrivate object for Redshift \a action with,
+ * public implementation \a q.
  */
 DeleteClusterParameterGroupRequestPrivate::DeleteClusterParameterGroupRequestPrivate(
     const RedshiftRequest::Action action, DeleteClusterParameterGroupRequest * const q)
@@ -134,15 +123,10 @@ DeleteClusterParameterGroupRequestPrivate::DeleteClusterParameterGroupRequestPri
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteClusterParameterGroupRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteClusterParameterGroupRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteClusterParameterGroupRequest instance.
  */
 DeleteClusterParameterGroupRequestPrivate::DeleteClusterParameterGroupRequestPrivate(
     const DeleteClusterParameterGroupRequestPrivate &other, DeleteClusterParameterGroupRequest * const q)

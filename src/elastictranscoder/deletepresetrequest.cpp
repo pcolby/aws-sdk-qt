@@ -27,10 +27,9 @@ namespace ElasticTranscoder {
 
 /*!
  * \class QtAws::ElasticTranscoder::DeletePresetRequest
- *
  * \brief The DeletePresetRequest class provides an interface for ElasticTranscoder DeletePreset requests.
  *
- * \ingroup ElasticTranscoder
+ * \inmodule QtAwsElasticTranscoder
  *
  *  <fullname>AWS Elastic Transcoder Service</fullname>
  * 
@@ -40,9 +39,7 @@ namespace ElasticTranscoder {
  */
 
 /*!
- * @brief  Constructs a new DeletePresetRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeletePresetRequest::DeletePresetRequest(const DeletePresetRequest &other)
     : ElasticTranscoderRequest(new DeletePresetRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ DeletePresetRequest::DeletePresetRequest(const DeletePresetRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DeletePresetRequest object.
+ * Constructs a DeletePresetRequest object.
  */
 DeletePresetRequest::DeletePresetRequest()
     : ElasticTranscoderRequest(new DeletePresetRequestPrivate(ElasticTranscoderRequest::DeletePresetAction, this))
@@ -69,14 +66,9 @@ bool DeletePresetRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeletePresetResponse object.
+ * Returns a DeletePresetResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeletePresetResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ElasticTranscoderClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeletePresetRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * DeletePresetRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::ElasticTranscoder::DeletePresetRequestPrivate
+ * \brief The DeletePresetRequestPrivate class provides private implementation for DeletePresetRequest.
+ * \internal
  *
- * @class  DeletePresetRequestPrivate
- *
- * @brief  Private implementation for DeletePresetRequest.
+ * \inmodule QtAwsElasticTranscoder
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeletePresetRequestPrivate object.
- *
- * @param  action  ElasticTranscoder action being performed.
- * @param  q       Pointer to this object's public DeletePresetRequest instance.
+ * Constructs a DeletePresetRequestPrivate object for ElasticTranscoder \a action with,
+ * public implementation \a q.
  */
 DeletePresetRequestPrivate::DeletePresetRequestPrivate(
     const ElasticTranscoderRequest::Action action, DeletePresetRequest * const q)
@@ -107,15 +96,10 @@ DeletePresetRequestPrivate::DeletePresetRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeletePresetRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeletePresetRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeletePresetRequest instance.
  */
 DeletePresetRequestPrivate::DeletePresetRequestPrivate(
     const DeletePresetRequestPrivate &other, DeletePresetRequest * const q)

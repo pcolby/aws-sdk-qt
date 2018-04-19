@@ -25,16 +25,22 @@ namespace SageMakerRuntime {
 
 /*!
  * \class QtAws::SageMakerRuntime::SageMakerRuntimeRequest
- *
  * \brief The SageMakerRuntimeRequest class provides an interface for SageMakerRuntime requests.
  *
- * \ingroup SageMakerRuntime
+ * \inmodule QtAwsSageMakerRuntime
  */
 
 /*!
- * @brief  Constructs a new SageMakerRuntimeRequest object.
+ * \enum SageMakerRuntimeRequest::Action
  *
- * @param  action  The SageMakerRuntime action to request.
+ * This enum describes the actions that can be performed as SageMakerRuntime
+ * requests.
+ *
+ * \value InvokeEndpointAction SageMakerRuntime InvokeEndpoint action.
+ */
+
+/*!
+ * Constructs a[n] SageMakerRuntimeRequest object for SageMakerRuntime \a action.
  */
 SageMakerRuntimeRequest::SageMakerRuntimeRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new SageMakerRuntimeRequestPrivate(action, this))
@@ -43,9 +49,7 @@ SageMakerRuntimeRequest::SageMakerRuntimeRequest(const Action action)
 }
 
 /*!
- * @brief  Constructs a new SageMakerRuntimeRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 SageMakerRuntimeRequest::SageMakerRuntimeRequest(const SageMakerRuntimeRequest &other)
     : QtAws::Core::AwsAbstractRequest(new SageMakerRuntimeRequestPrivate(*other.d_func(), this))
@@ -54,13 +58,7 @@ SageMakerRuntimeRequest::SageMakerRuntimeRequest(const SageMakerRuntimeRequest &
 }
 
 /*!
- * @brief  Assignment operator.
- *
- * Assigns \a other to \c this.
- *
- * @param  other  Instance to copy.
- *
- * @return  A reference to \c this.
+ * Sets the SageMakerRuntimeRequest object to be equal to \a other.
  */
 SageMakerRuntimeRequest& SageMakerRuntimeRequest::operator=(const SageMakerRuntimeRequest &other)
 {
@@ -72,14 +70,10 @@ SageMakerRuntimeRequest& SageMakerRuntimeRequest::operator=(const SageMakerRunti
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SageMakerRuntimeRequest object.
+ * Constructs aa SageMakerRuntimeRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from SageMakerRuntimeRequestPrivate.
- *
- * @param  d  Pointer to private data (aka D-Pointer).
  */
 SageMakerRuntimeRequest::SageMakerRuntimeRequest(SageMakerRuntimeRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
@@ -87,7 +81,7 @@ SageMakerRuntimeRequest::SageMakerRuntimeRequest(SageMakerRuntimeRequestPrivate 
 }
 
 /*!
- * \brief Returns the SageMakerRuntime action to be performed by this request.
+ * Returns the SageMakerRuntime action to be performed by this request.
  */
 SageMakerRuntimeRequest::Action SageMakerRuntimeRequest::action() const
 {
@@ -96,7 +90,7 @@ SageMakerRuntimeRequest::Action SageMakerRuntimeRequest::action() const
 }
 
 /*!
- * \brief Returns the name of the SageMakerRuntime action to be performed by this request.
+ * Returns the name of the SageMakerRuntime action to be performed by this request.
  */
 QString SageMakerRuntimeRequest::actionString() const
 {
@@ -104,7 +98,7 @@ QString SageMakerRuntimeRequest::actionString() const
 }
 
 /*!
- * \brief Returns the SageMakerRuntime API version implemented by this request.
+ * Returns the SageMakerRuntime API version implemented by this request.
  */
 QString SageMakerRuntimeRequest::apiVersion() const
 {
@@ -113,7 +107,7 @@ QString SageMakerRuntimeRequest::apiVersion() const
 }
 
 /*!
- * @brief Set the SageMakerRuntime action to be performed by this request to \a action.
+ * Sets the SageMakerRuntime action to be performed by this request to \a action.
  */
 void SageMakerRuntimeRequest::setAction(const Action action)
 {
@@ -122,7 +116,7 @@ void SageMakerRuntimeRequest::setAction(const Action action)
 }
 
 /*!
- * Set the SageMakerRuntime API version to include in this request to \a version.
+ * Sets the SageMakerRuntime API version to include in this request to \a version.
  */
 void SageMakerRuntimeRequest::setApiVersion(const QString &version)
 {
@@ -131,7 +125,7 @@ void SageMakerRuntimeRequest::setApiVersion(const QString &version)
 }
 
 /*!
- * \brief Returns \c true if this request is the same as \a other.
+ * Returns \c true if this request is equal to \a other; \c false otherwise.
  *
  * Note, most derived *Request classes do not need to provider their own
  * implementations of this function, since most such request classes rely on
@@ -146,8 +140,8 @@ bool SageMakerRuntimeRequest::operator==(const SageMakerRuntimeRequest &other) c
             (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
-/*!
- * @brief  Check if \a queueName is a valid SageMakerRuntime queue name.
+/*
+ * Returns \c tue if \a queueName is a valid SageMakerRuntime queue name.
  *
  * @par From SageMakerRuntime FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
@@ -166,9 +160,8 @@ bool SageMakerRuntimeRequest::operator==(const SageMakerRuntimeRequest &other) c
 }*/
 
 /*!
- * \brief Removes the a \a name parameter from this request.
- *
- * Returns the count of paramters removed (typically \c 0 or \c 1).
+ * Removes the a \a name parameter from the request, then returns the number of
+ * paramters removed (typically \c 0 or \c 1).
  */
 int SageMakerRuntimeRequest::clearParameter(const QString &name)
 {
@@ -177,7 +170,7 @@ int SageMakerRuntimeRequest::clearParameter(const QString &name)
 }
 
 /*!
- * \brief Removes all parameters from this request.
+ * Removes all parameters from the request.
  */
 void SageMakerRuntimeRequest::clearParameters()
 {
@@ -186,7 +179,7 @@ void SageMakerRuntimeRequest::clearParameters()
 }
 
 /*!
- * \brief Returns the value of the \n name pararemter if set, otherwise \a defaultValue.
+ * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
 QVariant SageMakerRuntimeRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
@@ -195,7 +188,7 @@ QVariant SageMakerRuntimeRequest::parameter(const QString &name, const QVariant 
 }
 
 /*!
- * \brief Returns a map of parameters included in this request.
+ * Returns the parameters included in this request.
  */
 const QVariantMap &SageMakerRuntimeRequest::parameters() const
 {
@@ -204,7 +197,7 @@ const QVariantMap &SageMakerRuntimeRequest::parameters() const
 }
 
 /*!
- * \brief Sets the \a name parameter to \a value.
+ * Sets the \a name parameter to \a value.
  */
 void SageMakerRuntimeRequest::setParameter(const QString &name, const QVariant &value)
 {
@@ -213,9 +206,8 @@ void SageMakerRuntimeRequest::setParameter(const QString &name, const QVariant &
 }
 
 /*!
- * \brief Sets the map of paramters for this request to \a parameters.
- *
- * Any request parameters set previously will be discarded.
+ * Sets the paramters for this request to \a parameters. Any request parameters
+ * set previously will be discarded.
  */
 void SageMakerRuntimeRequest::setParameters(const QVariantMap &parameters)
 {
@@ -224,11 +216,12 @@ void SageMakerRuntimeRequest::setParameters(const QVariantMap &parameters)
 }
 
 /*!
- * \brief Returns a network request for this SageMakerRuntime request using the given \a endpoint.
+ * Returns a network request for the SageMakerRuntime request using the given
+ * \a endpoint.
  *
- * This SageMakerRuntime implementation builds request URLs by combining the common query
- * parameters (such as Action and Version), with any that have been added (via
- * setParameter) by child classes.
+ * This SageMakerRuntime implementation builds request URLs by combining the
+ * common query parameters (such as Action and Version), with any that have
+ * been added (via setParameter) by child classes.
  */
 QNetworkRequest SageMakerRuntimeRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -239,17 +232,16 @@ QNetworkRequest SageMakerRuntimeRequest::unsignedRequest(const QUrl &endpoint) c
 }
 
 /*!
+ * \class QtAws::SageMakerRuntime::SageMakerRuntimeRequestPrivate
+ * \brief The SageMakerRuntimeRequestPrivate class provides private implementation for SageMakerRuntimeRequest.
  * \internal
  *
- * \class  SageMakerRuntimeRequestPrivate
- *
- * \brief  Private implementation for SageMakerRuntimeRequest.
+ * \inmodule QtAwsSageMakerRuntime
  */
 
 /*!
- * \internal
- *
- * \brief Constructs a new SageMakerRuntimeRequestPrivate object.
+ * Constructs a SageMakerRuntimeRequestPrivate object for SageMakerRuntime \a action with,
+ * public implementation \a q.
  */
 SageMakerRuntimeRequestPrivate::SageMakerRuntimeRequestPrivate(const SageMakerRuntimeRequest::Action action, SageMakerRuntimeRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
@@ -258,9 +250,7 @@ SageMakerRuntimeRequestPrivate::SageMakerRuntimeRequestPrivate(const SageMakerRu
 }
 
 /*!
- * \internal
- *
- * \brief Constructs a new SageMakerRuntimeRequestPrivate object, copying an existing one.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
@@ -276,15 +266,12 @@ SageMakerRuntimeRequestPrivate::SageMakerRuntimeRequestPrivate(const SageMakerRu
 }
 
 /*!
- * \internal
- *
- * \brief Returns a string representing \a action.
+ * Returns a string represention of \a action, or a null string if \a action is
+ * invalid.
  *
  * This function converts SageMakerRuntimeRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the SageMakerRuntime service's Action
  * query parameters.
- *
- * @return A string representing \a action, or a null string if \a action is invalid.
  */
 QString SageMakerRuntimeRequestPrivate::toString(const SageMakerRuntimeRequest::Action &action)
 {

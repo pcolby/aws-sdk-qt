@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::UpdateSecurityGroupRuleDescriptionsIngressRequest
- *
  * \brief The UpdateSecurityGroupRuleDescriptionsIngressRequest class provides an interface for EC2 UpdateSecurityGroupRuleDescriptionsIngress requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new UpdateSecurityGroupRuleDescriptionsIngressRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateSecurityGroupRuleDescriptionsIngressRequest::UpdateSecurityGroupRuleDescriptionsIngressRequest(const UpdateSecurityGroupRuleDescriptionsIngressRequest &other)
     : EC2Request(new UpdateSecurityGroupRuleDescriptionsIngressRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ UpdateSecurityGroupRuleDescriptionsIngressRequest::UpdateSecurityGroupRuleDescri
 }
 
 /*!
- * @brief  Constructs a new UpdateSecurityGroupRuleDescriptionsIngressRequest object.
+ * Constructs a UpdateSecurityGroupRuleDescriptionsIngressRequest object.
  */
 UpdateSecurityGroupRuleDescriptionsIngressRequest::UpdateSecurityGroupRuleDescriptionsIngressRequest()
     : EC2Request(new UpdateSecurityGroupRuleDescriptionsIngressRequestPrivate(EC2Request::UpdateSecurityGroupRuleDescriptionsIngressAction, this))
@@ -70,14 +67,9 @@ bool UpdateSecurityGroupRuleDescriptionsIngressRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateSecurityGroupRuleDescriptionsIngressResponse object.
+ * Returns a UpdateSecurityGroupRuleDescriptionsIngressResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateSecurityGroupRuleDescriptionsIngressResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateSecurityGroupRuleDescriptionsIngressRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * UpdateSecurityGroupRuleDescriptionsIngressReq
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::UpdateSecurityGroupRuleDescriptionsIngressRequestPrivate
+ * \brief The UpdateSecurityGroupRuleDescriptionsIngressRequestPrivate class provides private implementation for UpdateSecurityGroupRuleDescriptionsIngressRequest.
+ * \internal
  *
- * @class  UpdateSecurityGroupRuleDescriptionsIngressRequestPrivate
- *
- * @brief  Private implementation for UpdateSecurityGroupRuleDescriptionsIngressRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateSecurityGroupRuleDescriptionsIngressRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public UpdateSecurityGroupRuleDescriptionsIngressRequest instance.
+ * Constructs a UpdateSecurityGroupRuleDescriptionsIngressRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 UpdateSecurityGroupRuleDescriptionsIngressRequestPrivate::UpdateSecurityGroupRuleDescriptionsIngressRequestPrivate(
     const EC2Request::Action action, UpdateSecurityGroupRuleDescriptionsIngressRequest * const q)
@@ -108,15 +97,10 @@ UpdateSecurityGroupRuleDescriptionsIngressRequestPrivate::UpdateSecurityGroupRul
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateSecurityGroupRuleDescriptionsIngressRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateSecurityGroupRuleDescriptionsIngressRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateSecurityGroupRuleDescriptionsIngressRequest instance.
  */
 UpdateSecurityGroupRuleDescriptionsIngressRequestPrivate::UpdateSecurityGroupRuleDescriptionsIngressRequestPrivate(
     const UpdateSecurityGroupRuleDescriptionsIngressRequestPrivate &other, UpdateSecurityGroupRuleDescriptionsIngressRequest * const q)

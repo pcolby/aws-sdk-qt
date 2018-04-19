@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::ModifySubnetAttributeRequest
- *
  * \brief The ModifySubnetAttributeRequest class provides an interface for EC2 ModifySubnetAttribute requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new ModifySubnetAttributeRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ModifySubnetAttributeRequest::ModifySubnetAttributeRequest(const ModifySubnetAttributeRequest &other)
     : EC2Request(new ModifySubnetAttributeRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ ModifySubnetAttributeRequest::ModifySubnetAttributeRequest(const ModifySubnetAtt
 }
 
 /*!
- * @brief  Constructs a new ModifySubnetAttributeRequest object.
+ * Constructs a ModifySubnetAttributeRequest object.
  */
 ModifySubnetAttributeRequest::ModifySubnetAttributeRequest()
     : EC2Request(new ModifySubnetAttributeRequestPrivate(EC2Request::ModifySubnetAttributeAction, this))
@@ -70,14 +67,9 @@ bool ModifySubnetAttributeRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ModifySubnetAttributeResponse object.
+ * Returns a ModifySubnetAttributeResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ModifySubnetAttributeResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ModifySubnetAttributeRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * ModifySubnetAttributeRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::ModifySubnetAttributeRequestPrivate
+ * \brief The ModifySubnetAttributeRequestPrivate class provides private implementation for ModifySubnetAttributeRequest.
+ * \internal
  *
- * @class  ModifySubnetAttributeRequestPrivate
- *
- * @brief  Private implementation for ModifySubnetAttributeRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ModifySubnetAttributeRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public ModifySubnetAttributeRequest instance.
+ * Constructs a ModifySubnetAttributeRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 ModifySubnetAttributeRequestPrivate::ModifySubnetAttributeRequestPrivate(
     const EC2Request::Action action, ModifySubnetAttributeRequest * const q)
@@ -108,15 +97,10 @@ ModifySubnetAttributeRequestPrivate::ModifySubnetAttributeRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ModifySubnetAttributeRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ModifySubnetAttributeRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ModifySubnetAttributeRequest instance.
  */
 ModifySubnetAttributeRequestPrivate::ModifySubnetAttributeRequestPrivate(
     const ModifySubnetAttributeRequestPrivate &other, ModifySubnetAttributeRequest * const q)

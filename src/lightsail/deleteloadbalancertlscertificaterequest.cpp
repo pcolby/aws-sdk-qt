@@ -27,10 +27,9 @@ namespace Lightsail {
 
 /*!
  * \class QtAws::Lightsail::DeleteLoadBalancerTlsCertificateRequest
- *
  * \brief The DeleteLoadBalancerTlsCertificateRequest class provides an interface for Lightsail DeleteLoadBalancerTlsCertificate requests.
  *
- * \ingroup Lightsail
+ * \inmodule QtAwsLightsail
  *
  *  Amazon Lightsail is the easiest way to get started with AWS for developers who just need virtual private servers.
  *  Lightsail includes everything you need to launch your project quickly - a virtual machine, SSD-based storage, data
@@ -53,9 +52,7 @@ namespace Lightsail {
  */
 
 /*!
- * @brief  Constructs a new DeleteLoadBalancerTlsCertificateRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteLoadBalancerTlsCertificateRequest::DeleteLoadBalancerTlsCertificateRequest(const DeleteLoadBalancerTlsCertificateRequest &other)
     : LightsailRequest(new DeleteLoadBalancerTlsCertificateRequestPrivate(*other.d_func(), this))
@@ -64,7 +61,7 @@ DeleteLoadBalancerTlsCertificateRequest::DeleteLoadBalancerTlsCertificateRequest
 }
 
 /*!
- * @brief  Constructs a new DeleteLoadBalancerTlsCertificateRequest object.
+ * Constructs a DeleteLoadBalancerTlsCertificateRequest object.
  */
 DeleteLoadBalancerTlsCertificateRequest::DeleteLoadBalancerTlsCertificateRequest()
     : LightsailRequest(new DeleteLoadBalancerTlsCertificateRequestPrivate(LightsailRequest::DeleteLoadBalancerTlsCertificateAction, this))
@@ -82,14 +79,9 @@ bool DeleteLoadBalancerTlsCertificateRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteLoadBalancerTlsCertificateResponse object.
+ * Returns a DeleteLoadBalancerTlsCertificateResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteLoadBalancerTlsCertificateResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  LightsailClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteLoadBalancerTlsCertificateRequest::response(QNetworkReply * const reply) const
 {
@@ -97,20 +89,17 @@ QtAws::Core::AwsAbstractResponse * DeleteLoadBalancerTlsCertificateRequest::resp
 }
 
 /*!
- * @internal
+ * \class QtAws::Lightsail::DeleteLoadBalancerTlsCertificateRequestPrivate
+ * \brief The DeleteLoadBalancerTlsCertificateRequestPrivate class provides private implementation for DeleteLoadBalancerTlsCertificateRequest.
+ * \internal
  *
- * @class  DeleteLoadBalancerTlsCertificateRequestPrivate
- *
- * @brief  Private implementation for DeleteLoadBalancerTlsCertificateRequest.
+ * \inmodule QtAwsLightsail
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteLoadBalancerTlsCertificateRequestPrivate object.
- *
- * @param  action  Lightsail action being performed.
- * @param  q       Pointer to this object's public DeleteLoadBalancerTlsCertificateRequest instance.
+ * Constructs a DeleteLoadBalancerTlsCertificateRequestPrivate object for Lightsail \a action with,
+ * public implementation \a q.
  */
 DeleteLoadBalancerTlsCertificateRequestPrivate::DeleteLoadBalancerTlsCertificateRequestPrivate(
     const LightsailRequest::Action action, DeleteLoadBalancerTlsCertificateRequest * const q)
@@ -120,15 +109,10 @@ DeleteLoadBalancerTlsCertificateRequestPrivate::DeleteLoadBalancerTlsCertificate
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteLoadBalancerTlsCertificateRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteLoadBalancerTlsCertificateRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteLoadBalancerTlsCertificateRequest instance.
  */
 DeleteLoadBalancerTlsCertificateRequestPrivate::DeleteLoadBalancerTlsCertificateRequestPrivate(
     const DeleteLoadBalancerTlsCertificateRequestPrivate &other, DeleteLoadBalancerTlsCertificateRequest * const q)

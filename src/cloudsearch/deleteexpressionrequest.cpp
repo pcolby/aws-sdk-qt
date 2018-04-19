@@ -27,10 +27,9 @@ namespace CloudSearch {
 
 /*!
  * \class QtAws::CloudSearch::DeleteExpressionRequest
- *
  * \brief The DeleteExpressionRequest class provides an interface for CloudSearch DeleteExpression requests.
  *
- * \ingroup CloudSearch
+ * \inmodule QtAwsCloudSearch
  *
  *  <fullname>Amazon CloudSearch Configuration Service</fullname>
  * 
@@ -48,9 +47,7 @@ namespace CloudSearch {
  */
 
 /*!
- * @brief  Constructs a new DeleteExpressionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteExpressionRequest::DeleteExpressionRequest(const DeleteExpressionRequest &other)
     : CloudSearchRequest(new DeleteExpressionRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ DeleteExpressionRequest::DeleteExpressionRequest(const DeleteExpressionRequest &
 }
 
 /*!
- * @brief  Constructs a new DeleteExpressionRequest object.
+ * Constructs a DeleteExpressionRequest object.
  */
 DeleteExpressionRequest::DeleteExpressionRequest()
     : CloudSearchRequest(new DeleteExpressionRequestPrivate(CloudSearchRequest::DeleteExpressionAction, this))
@@ -77,14 +74,9 @@ bool DeleteExpressionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteExpressionResponse object.
+ * Returns a DeleteExpressionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteExpressionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudSearchClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteExpressionRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * DeleteExpressionRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudSearch::DeleteExpressionRequestPrivate
+ * \brief The DeleteExpressionRequestPrivate class provides private implementation for DeleteExpressionRequest.
+ * \internal
  *
- * @class  DeleteExpressionRequestPrivate
- *
- * @brief  Private implementation for DeleteExpressionRequest.
+ * \inmodule QtAwsCloudSearch
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteExpressionRequestPrivate object.
- *
- * @param  action  CloudSearch action being performed.
- * @param  q       Pointer to this object's public DeleteExpressionRequest instance.
+ * Constructs a DeleteExpressionRequestPrivate object for CloudSearch \a action with,
+ * public implementation \a q.
  */
 DeleteExpressionRequestPrivate::DeleteExpressionRequestPrivate(
     const CloudSearchRequest::Action action, DeleteExpressionRequest * const q)
@@ -115,15 +104,10 @@ DeleteExpressionRequestPrivate::DeleteExpressionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteExpressionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteExpressionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteExpressionRequest instance.
  */
 DeleteExpressionRequestPrivate::DeleteExpressionRequestPrivate(
     const DeleteExpressionRequestPrivate &other, DeleteExpressionRequest * const q)

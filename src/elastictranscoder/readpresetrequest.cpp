@@ -27,10 +27,9 @@ namespace ElasticTranscoder {
 
 /*!
  * \class QtAws::ElasticTranscoder::ReadPresetRequest
- *
  * \brief The ReadPresetRequest class provides an interface for ElasticTranscoder ReadPreset requests.
  *
- * \ingroup ElasticTranscoder
+ * \inmodule QtAwsElasticTranscoder
  *
  *  <fullname>AWS Elastic Transcoder Service</fullname>
  * 
@@ -40,9 +39,7 @@ namespace ElasticTranscoder {
  */
 
 /*!
- * @brief  Constructs a new ReadPresetRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ReadPresetRequest::ReadPresetRequest(const ReadPresetRequest &other)
     : ElasticTranscoderRequest(new ReadPresetRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ ReadPresetRequest::ReadPresetRequest(const ReadPresetRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ReadPresetRequest object.
+ * Constructs a ReadPresetRequest object.
  */
 ReadPresetRequest::ReadPresetRequest()
     : ElasticTranscoderRequest(new ReadPresetRequestPrivate(ElasticTranscoderRequest::ReadPresetAction, this))
@@ -69,14 +66,9 @@ bool ReadPresetRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ReadPresetResponse object.
+ * Returns a ReadPresetResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ReadPresetResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ElasticTranscoderClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ReadPresetRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * ReadPresetRequest::response(QNetworkReply * c
 }
 
 /*!
- * @internal
+ * \class QtAws::ElasticTranscoder::ReadPresetRequestPrivate
+ * \brief The ReadPresetRequestPrivate class provides private implementation for ReadPresetRequest.
+ * \internal
  *
- * @class  ReadPresetRequestPrivate
- *
- * @brief  Private implementation for ReadPresetRequest.
+ * \inmodule QtAwsElasticTranscoder
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ReadPresetRequestPrivate object.
- *
- * @param  action  ElasticTranscoder action being performed.
- * @param  q       Pointer to this object's public ReadPresetRequest instance.
+ * Constructs a ReadPresetRequestPrivate object for ElasticTranscoder \a action with,
+ * public implementation \a q.
  */
 ReadPresetRequestPrivate::ReadPresetRequestPrivate(
     const ElasticTranscoderRequest::Action action, ReadPresetRequest * const q)
@@ -107,15 +96,10 @@ ReadPresetRequestPrivate::ReadPresetRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ReadPresetRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ReadPresetRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ReadPresetRequest instance.
  */
 ReadPresetRequestPrivate::ReadPresetRequestPrivate(
     const ReadPresetRequestPrivate &other, ReadPresetRequest * const q)

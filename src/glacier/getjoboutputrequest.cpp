@@ -27,10 +27,9 @@ namespace Glacier {
 
 /*!
  * \class QtAws::Glacier::GetJobOutputRequest
- *
  * \brief The GetJobOutputRequest class provides an interface for Glacier GetJobOutput requests.
  *
- * \ingroup Glacier
+ * \inmodule QtAwsGlacier
  *
  *  Amazon Glacier is a storage solution for "cold
  * 
@@ -75,9 +74,7 @@ namespace Glacier {
  */
 
 /*!
- * @brief  Constructs a new GetJobOutputRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetJobOutputRequest::GetJobOutputRequest(const GetJobOutputRequest &other)
     : GlacierRequest(new GetJobOutputRequestPrivate(*other.d_func(), this))
@@ -86,7 +83,7 @@ GetJobOutputRequest::GetJobOutputRequest(const GetJobOutputRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetJobOutputRequest object.
+ * Constructs a GetJobOutputRequest object.
  */
 GetJobOutputRequest::GetJobOutputRequest()
     : GlacierRequest(new GetJobOutputRequestPrivate(GlacierRequest::GetJobOutputAction, this))
@@ -104,14 +101,9 @@ bool GetJobOutputRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetJobOutputResponse object.
+ * Returns a GetJobOutputResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetJobOutputResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GlacierClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetJobOutputRequest::response(QNetworkReply * const reply) const
 {
@@ -119,20 +111,17 @@ QtAws::Core::AwsAbstractResponse * GetJobOutputRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::Glacier::GetJobOutputRequestPrivate
+ * \brief The GetJobOutputRequestPrivate class provides private implementation for GetJobOutputRequest.
+ * \internal
  *
- * @class  GetJobOutputRequestPrivate
- *
- * @brief  Private implementation for GetJobOutputRequest.
+ * \inmodule QtAwsGlacier
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetJobOutputRequestPrivate object.
- *
- * @param  action  Glacier action being performed.
- * @param  q       Pointer to this object's public GetJobOutputRequest instance.
+ * Constructs a GetJobOutputRequestPrivate object for Glacier \a action with,
+ * public implementation \a q.
  */
 GetJobOutputRequestPrivate::GetJobOutputRequestPrivate(
     const GlacierRequest::Action action, GetJobOutputRequest * const q)
@@ -142,15 +131,10 @@ GetJobOutputRequestPrivate::GetJobOutputRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetJobOutputRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetJobOutputRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetJobOutputRequest instance.
  */
 GetJobOutputRequestPrivate::GetJobOutputRequestPrivate(
     const GetJobOutputRequestPrivate &other, GetJobOutputRequest * const q)

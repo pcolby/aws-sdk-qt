@@ -27,10 +27,9 @@ namespace SES {
 
 /*!
  * \class QtAws::SES::VerifyDomainIdentityRequest
- *
  * \brief The VerifyDomainIdentityRequest class provides an interface for SES VerifyDomainIdentity requests.
  *
- * \ingroup SES
+ * \inmodule QtAwsSES
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -48,9 +47,7 @@ namespace SES {
  */
 
 /*!
- * @brief  Constructs a new VerifyDomainIdentityRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 VerifyDomainIdentityRequest::VerifyDomainIdentityRequest(const VerifyDomainIdentityRequest &other)
     : SESRequest(new VerifyDomainIdentityRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ VerifyDomainIdentityRequest::VerifyDomainIdentityRequest(const VerifyDomainIdent
 }
 
 /*!
- * @brief  Constructs a new VerifyDomainIdentityRequest object.
+ * Constructs a VerifyDomainIdentityRequest object.
  */
 VerifyDomainIdentityRequest::VerifyDomainIdentityRequest()
     : SESRequest(new VerifyDomainIdentityRequestPrivate(SESRequest::VerifyDomainIdentityAction, this))
@@ -77,14 +74,9 @@ bool VerifyDomainIdentityRequest::isValid() const
 
 
 /*!
- * @brief  Construct an VerifyDomainIdentityResponse object.
+ * Returns a VerifyDomainIdentityResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An VerifyDomainIdentityResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SESClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * VerifyDomainIdentityRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * VerifyDomainIdentityRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::SES::VerifyDomainIdentityRequestPrivate
+ * \brief The VerifyDomainIdentityRequestPrivate class provides private implementation for VerifyDomainIdentityRequest.
+ * \internal
  *
- * @class  VerifyDomainIdentityRequestPrivate
- *
- * @brief  Private implementation for VerifyDomainIdentityRequest.
+ * \inmodule QtAwsSES
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new VerifyDomainIdentityRequestPrivate object.
- *
- * @param  action  SES action being performed.
- * @param  q       Pointer to this object's public VerifyDomainIdentityRequest instance.
+ * Constructs a VerifyDomainIdentityRequestPrivate object for SES \a action with,
+ * public implementation \a q.
  */
 VerifyDomainIdentityRequestPrivate::VerifyDomainIdentityRequestPrivate(
     const SESRequest::Action action, VerifyDomainIdentityRequest * const q)
@@ -115,15 +104,10 @@ VerifyDomainIdentityRequestPrivate::VerifyDomainIdentityRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new VerifyDomainIdentityRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the VerifyDomainIdentityRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public VerifyDomainIdentityRequest instance.
  */
 VerifyDomainIdentityRequestPrivate::VerifyDomainIdentityRequestPrivate(
     const VerifyDomainIdentityRequestPrivate &other, VerifyDomainIdentityRequest * const q)

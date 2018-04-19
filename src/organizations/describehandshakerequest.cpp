@@ -27,10 +27,9 @@ namespace Organizations {
 
 /*!
  * \class QtAws::Organizations::DescribeHandshakeRequest
- *
  * \brief The DescribeHandshakeRequest class provides an interface for Organizations DescribeHandshake requests.
  *
- * \ingroup Organizations
+ * \inmodule QtAwsOrganizations
  *
  *  <fullname>AWS Organizations API Reference</fullname>
  * 
@@ -179,9 +178,7 @@ namespace Organizations {
  */
 
 /*!
- * @brief  Constructs a new DescribeHandshakeRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeHandshakeRequest::DescribeHandshakeRequest(const DescribeHandshakeRequest &other)
     : OrganizationsRequest(new DescribeHandshakeRequestPrivate(*other.d_func(), this))
@@ -190,7 +187,7 @@ DescribeHandshakeRequest::DescribeHandshakeRequest(const DescribeHandshakeReques
 }
 
 /*!
- * @brief  Constructs a new DescribeHandshakeRequest object.
+ * Constructs a DescribeHandshakeRequest object.
  */
 DescribeHandshakeRequest::DescribeHandshakeRequest()
     : OrganizationsRequest(new DescribeHandshakeRequestPrivate(OrganizationsRequest::DescribeHandshakeAction, this))
@@ -208,14 +205,9 @@ bool DescribeHandshakeRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeHandshakeResponse object.
+ * Returns a DescribeHandshakeResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeHandshakeResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  OrganizationsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeHandshakeRequest::response(QNetworkReply * const reply) const
 {
@@ -223,20 +215,17 @@ QtAws::Core::AwsAbstractResponse * DescribeHandshakeRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::Organizations::DescribeHandshakeRequestPrivate
+ * \brief The DescribeHandshakeRequestPrivate class provides private implementation for DescribeHandshakeRequest.
+ * \internal
  *
- * @class  DescribeHandshakeRequestPrivate
- *
- * @brief  Private implementation for DescribeHandshakeRequest.
+ * \inmodule QtAwsOrganizations
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeHandshakeRequestPrivate object.
- *
- * @param  action  Organizations action being performed.
- * @param  q       Pointer to this object's public DescribeHandshakeRequest instance.
+ * Constructs a DescribeHandshakeRequestPrivate object for Organizations \a action with,
+ * public implementation \a q.
  */
 DescribeHandshakeRequestPrivate::DescribeHandshakeRequestPrivate(
     const OrganizationsRequest::Action action, DescribeHandshakeRequest * const q)
@@ -246,15 +235,10 @@ DescribeHandshakeRequestPrivate::DescribeHandshakeRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeHandshakeRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeHandshakeRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeHandshakeRequest instance.
  */
 DescribeHandshakeRequestPrivate::DescribeHandshakeRequestPrivate(
     const DescribeHandshakeRequestPrivate &other, DescribeHandshakeRequest * const q)

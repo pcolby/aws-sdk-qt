@@ -27,10 +27,9 @@ namespace Organizations {
 
 /*!
  * \class QtAws::Organizations::ListHandshakesForAccountRequest
- *
  * \brief The ListHandshakesForAccountRequest class provides an interface for Organizations ListHandshakesForAccount requests.
  *
- * \ingroup Organizations
+ * \inmodule QtAwsOrganizations
  *
  *  <fullname>AWS Organizations API Reference</fullname>
  * 
@@ -179,9 +178,7 @@ namespace Organizations {
  */
 
 /*!
- * @brief  Constructs a new ListHandshakesForAccountRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListHandshakesForAccountRequest::ListHandshakesForAccountRequest(const ListHandshakesForAccountRequest &other)
     : OrganizationsRequest(new ListHandshakesForAccountRequestPrivate(*other.d_func(), this))
@@ -190,7 +187,7 @@ ListHandshakesForAccountRequest::ListHandshakesForAccountRequest(const ListHands
 }
 
 /*!
- * @brief  Constructs a new ListHandshakesForAccountRequest object.
+ * Constructs a ListHandshakesForAccountRequest object.
  */
 ListHandshakesForAccountRequest::ListHandshakesForAccountRequest()
     : OrganizationsRequest(new ListHandshakesForAccountRequestPrivate(OrganizationsRequest::ListHandshakesForAccountAction, this))
@@ -208,14 +205,9 @@ bool ListHandshakesForAccountRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListHandshakesForAccountResponse object.
+ * Returns a ListHandshakesForAccountResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListHandshakesForAccountResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  OrganizationsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListHandshakesForAccountRequest::response(QNetworkReply * const reply) const
 {
@@ -223,20 +215,17 @@ QtAws::Core::AwsAbstractResponse * ListHandshakesForAccountRequest::response(QNe
 }
 
 /*!
- * @internal
+ * \class QtAws::Organizations::ListHandshakesForAccountRequestPrivate
+ * \brief The ListHandshakesForAccountRequestPrivate class provides private implementation for ListHandshakesForAccountRequest.
+ * \internal
  *
- * @class  ListHandshakesForAccountRequestPrivate
- *
- * @brief  Private implementation for ListHandshakesForAccountRequest.
+ * \inmodule QtAwsOrganizations
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListHandshakesForAccountRequestPrivate object.
- *
- * @param  action  Organizations action being performed.
- * @param  q       Pointer to this object's public ListHandshakesForAccountRequest instance.
+ * Constructs a ListHandshakesForAccountRequestPrivate object for Organizations \a action with,
+ * public implementation \a q.
  */
 ListHandshakesForAccountRequestPrivate::ListHandshakesForAccountRequestPrivate(
     const OrganizationsRequest::Action action, ListHandshakesForAccountRequest * const q)
@@ -246,15 +235,10 @@ ListHandshakesForAccountRequestPrivate::ListHandshakesForAccountRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListHandshakesForAccountRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListHandshakesForAccountRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListHandshakesForAccountRequest instance.
  */
 ListHandshakesForAccountRequestPrivate::ListHandshakesForAccountRequestPrivate(
     const ListHandshakesForAccountRequestPrivate &other, ListHandshakesForAccountRequest * const q)

@@ -27,10 +27,9 @@ namespace WAFRegional {
 
 /*!
  * \class QtAws::WAFRegional::CreateRateBasedRuleRequest
- *
  * \brief The CreateRateBasedRuleRequest class provides an interface for WAFRegional CreateRateBasedRule requests.
  *
- * \ingroup WAFRegional
+ * \inmodule QtAwsWAFRegional
  *
  *  This is the <i>AWS WAF Regional API Reference</i> for using AWS WAF with Elastic Load Balancing (ELB) Application Load
  *  Balancers. The AWS WAF actions and data types listed in the reference are available for protecting Application Load
@@ -44,9 +43,7 @@ namespace WAFRegional {
  */
 
 /*!
- * @brief  Constructs a new CreateRateBasedRuleRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateRateBasedRuleRequest::CreateRateBasedRuleRequest(const CreateRateBasedRuleRequest &other)
     : WAFRegionalRequest(new CreateRateBasedRuleRequestPrivate(*other.d_func(), this))
@@ -55,7 +52,7 @@ CreateRateBasedRuleRequest::CreateRateBasedRuleRequest(const CreateRateBasedRule
 }
 
 /*!
- * @brief  Constructs a new CreateRateBasedRuleRequest object.
+ * Constructs a CreateRateBasedRuleRequest object.
  */
 CreateRateBasedRuleRequest::CreateRateBasedRuleRequest()
     : WAFRegionalRequest(new CreateRateBasedRuleRequestPrivate(WAFRegionalRequest::CreateRateBasedRuleAction, this))
@@ -73,14 +70,9 @@ bool CreateRateBasedRuleRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateRateBasedRuleResponse object.
+ * Returns a CreateRateBasedRuleResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateRateBasedRuleResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WAFRegionalClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateRateBasedRuleRequest::response(QNetworkReply * const reply) const
 {
@@ -88,20 +80,17 @@ QtAws::Core::AwsAbstractResponse * CreateRateBasedRuleRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::WAFRegional::CreateRateBasedRuleRequestPrivate
+ * \brief The CreateRateBasedRuleRequestPrivate class provides private implementation for CreateRateBasedRuleRequest.
+ * \internal
  *
- * @class  CreateRateBasedRuleRequestPrivate
- *
- * @brief  Private implementation for CreateRateBasedRuleRequest.
+ * \inmodule QtAwsWAFRegional
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateRateBasedRuleRequestPrivate object.
- *
- * @param  action  WAFRegional action being performed.
- * @param  q       Pointer to this object's public CreateRateBasedRuleRequest instance.
+ * Constructs a CreateRateBasedRuleRequestPrivate object for WAFRegional \a action with,
+ * public implementation \a q.
  */
 CreateRateBasedRuleRequestPrivate::CreateRateBasedRuleRequestPrivate(
     const WAFRegionalRequest::Action action, CreateRateBasedRuleRequest * const q)
@@ -111,15 +100,10 @@ CreateRateBasedRuleRequestPrivate::CreateRateBasedRuleRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateRateBasedRuleRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateRateBasedRuleRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateRateBasedRuleRequest instance.
  */
 CreateRateBasedRuleRequestPrivate::CreateRateBasedRuleRequestPrivate(
     const CreateRateBasedRuleRequestPrivate &other, CreateRateBasedRuleRequest * const q)

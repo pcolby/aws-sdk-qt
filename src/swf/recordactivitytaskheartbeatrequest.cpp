@@ -27,10 +27,9 @@ namespace SWF {
 
 /*!
  * \class QtAws::SWF::RecordActivityTaskHeartbeatRequest
- *
  * \brief The RecordActivityTaskHeartbeatRequest class provides an interface for SWF RecordActivityTaskHeartbeat requests.
  *
- * \ingroup SWF
+ * \inmodule QtAwsSWF
  *
  *  <fullname>Amazon Simple Workflow Service</fullname>
  * 
@@ -53,9 +52,7 @@ namespace SWF {
  */
 
 /*!
- * @brief  Constructs a new RecordActivityTaskHeartbeatRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 RecordActivityTaskHeartbeatRequest::RecordActivityTaskHeartbeatRequest(const RecordActivityTaskHeartbeatRequest &other)
     : SWFRequest(new RecordActivityTaskHeartbeatRequestPrivate(*other.d_func(), this))
@@ -64,7 +61,7 @@ RecordActivityTaskHeartbeatRequest::RecordActivityTaskHeartbeatRequest(const Rec
 }
 
 /*!
- * @brief  Constructs a new RecordActivityTaskHeartbeatRequest object.
+ * Constructs a RecordActivityTaskHeartbeatRequest object.
  */
 RecordActivityTaskHeartbeatRequest::RecordActivityTaskHeartbeatRequest()
     : SWFRequest(new RecordActivityTaskHeartbeatRequestPrivate(SWFRequest::RecordActivityTaskHeartbeatAction, this))
@@ -82,14 +79,9 @@ bool RecordActivityTaskHeartbeatRequest::isValid() const
 
 
 /*!
- * @brief  Construct an RecordActivityTaskHeartbeatResponse object.
+ * Returns a RecordActivityTaskHeartbeatResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An RecordActivityTaskHeartbeatResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SWFClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * RecordActivityTaskHeartbeatRequest::response(QNetworkReply * const reply) const
 {
@@ -97,20 +89,17 @@ QtAws::Core::AwsAbstractResponse * RecordActivityTaskHeartbeatRequest::response(
 }
 
 /*!
- * @internal
+ * \class QtAws::SWF::RecordActivityTaskHeartbeatRequestPrivate
+ * \brief The RecordActivityTaskHeartbeatRequestPrivate class provides private implementation for RecordActivityTaskHeartbeatRequest.
+ * \internal
  *
- * @class  RecordActivityTaskHeartbeatRequestPrivate
- *
- * @brief  Private implementation for RecordActivityTaskHeartbeatRequest.
+ * \inmodule QtAwsSWF
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new RecordActivityTaskHeartbeatRequestPrivate object.
- *
- * @param  action  SWF action being performed.
- * @param  q       Pointer to this object's public RecordActivityTaskHeartbeatRequest instance.
+ * Constructs a RecordActivityTaskHeartbeatRequestPrivate object for SWF \a action with,
+ * public implementation \a q.
  */
 RecordActivityTaskHeartbeatRequestPrivate::RecordActivityTaskHeartbeatRequestPrivate(
     const SWFRequest::Action action, RecordActivityTaskHeartbeatRequest * const q)
@@ -120,15 +109,10 @@ RecordActivityTaskHeartbeatRequestPrivate::RecordActivityTaskHeartbeatRequestPri
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RecordActivityTaskHeartbeatRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the RecordActivityTaskHeartbeatRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public RecordActivityTaskHeartbeatRequest instance.
  */
 RecordActivityTaskHeartbeatRequestPrivate::RecordActivityTaskHeartbeatRequestPrivate(
     const RecordActivityTaskHeartbeatRequestPrivate &other, RecordActivityTaskHeartbeatRequest * const q)

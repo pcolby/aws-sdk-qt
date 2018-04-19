@@ -27,10 +27,9 @@ namespace Polly {
 
 /*!
  * \class QtAws::Polly::SynthesizeSpeechRequest
- *
  * \brief The SynthesizeSpeechRequest class provides an interface for Polly SynthesizeSpeech requests.
  *
- * \ingroup Polly
+ * \inmodule QtAwsPolly
  *
  *  Amazon Polly is a web service that makes it easy to synthesize speech from
  * 
@@ -44,9 +43,7 @@ namespace Polly {
  */
 
 /*!
- * @brief  Constructs a new SynthesizeSpeechRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 SynthesizeSpeechRequest::SynthesizeSpeechRequest(const SynthesizeSpeechRequest &other)
     : PollyRequest(new SynthesizeSpeechRequestPrivate(*other.d_func(), this))
@@ -55,7 +52,7 @@ SynthesizeSpeechRequest::SynthesizeSpeechRequest(const SynthesizeSpeechRequest &
 }
 
 /*!
- * @brief  Constructs a new SynthesizeSpeechRequest object.
+ * Constructs a SynthesizeSpeechRequest object.
  */
 SynthesizeSpeechRequest::SynthesizeSpeechRequest()
     : PollyRequest(new SynthesizeSpeechRequestPrivate(PollyRequest::SynthesizeSpeechAction, this))
@@ -73,14 +70,9 @@ bool SynthesizeSpeechRequest::isValid() const
 
 
 /*!
- * @brief  Construct an SynthesizeSpeechResponse object.
+ * Returns a SynthesizeSpeechResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An SynthesizeSpeechResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  PollyClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * SynthesizeSpeechRequest::response(QNetworkReply * const reply) const
 {
@@ -88,20 +80,17 @@ QtAws::Core::AwsAbstractResponse * SynthesizeSpeechRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::Polly::SynthesizeSpeechRequestPrivate
+ * \brief The SynthesizeSpeechRequestPrivate class provides private implementation for SynthesizeSpeechRequest.
+ * \internal
  *
- * @class  SynthesizeSpeechRequestPrivate
- *
- * @brief  Private implementation for SynthesizeSpeechRequest.
+ * \inmodule QtAwsPolly
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new SynthesizeSpeechRequestPrivate object.
- *
- * @param  action  Polly action being performed.
- * @param  q       Pointer to this object's public SynthesizeSpeechRequest instance.
+ * Constructs a SynthesizeSpeechRequestPrivate object for Polly \a action with,
+ * public implementation \a q.
  */
 SynthesizeSpeechRequestPrivate::SynthesizeSpeechRequestPrivate(
     const PollyRequest::Action action, SynthesizeSpeechRequest * const q)
@@ -111,15 +100,10 @@ SynthesizeSpeechRequestPrivate::SynthesizeSpeechRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SynthesizeSpeechRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the SynthesizeSpeechRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public SynthesizeSpeechRequest instance.
  */
 SynthesizeSpeechRequestPrivate::SynthesizeSpeechRequestPrivate(
     const SynthesizeSpeechRequestPrivate &other, SynthesizeSpeechRequest * const q)

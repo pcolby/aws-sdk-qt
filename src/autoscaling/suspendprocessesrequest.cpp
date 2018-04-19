@@ -27,10 +27,9 @@ namespace AutoScaling {
 
 /*!
  * \class QtAws::AutoScaling::SuspendProcessesRequest
- *
  * \brief The SuspendProcessesRequest class provides an interface for AutoScaling SuspendProcesses requests.
  *
- * \ingroup AutoScaling
+ * \inmodule QtAwsAutoScaling
  *
  *  <fullname>Amazon EC2 Auto Scaling</fullname>
  * 
@@ -42,9 +41,7 @@ namespace AutoScaling {
  */
 
 /*!
- * @brief  Constructs a new SuspendProcessesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 SuspendProcessesRequest::SuspendProcessesRequest(const SuspendProcessesRequest &other)
     : AutoScalingRequest(new SuspendProcessesRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ SuspendProcessesRequest::SuspendProcessesRequest(const SuspendProcessesRequest &
 }
 
 /*!
- * @brief  Constructs a new SuspendProcessesRequest object.
+ * Constructs a SuspendProcessesRequest object.
  */
 SuspendProcessesRequest::SuspendProcessesRequest()
     : AutoScalingRequest(new SuspendProcessesRequestPrivate(AutoScalingRequest::SuspendProcessesAction, this))
@@ -71,14 +68,9 @@ bool SuspendProcessesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an SuspendProcessesResponse object.
+ * Returns a SuspendProcessesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An SuspendProcessesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AutoScalingClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * SuspendProcessesRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * SuspendProcessesRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::AutoScaling::SuspendProcessesRequestPrivate
+ * \brief The SuspendProcessesRequestPrivate class provides private implementation for SuspendProcessesRequest.
+ * \internal
  *
- * @class  SuspendProcessesRequestPrivate
- *
- * @brief  Private implementation for SuspendProcessesRequest.
+ * \inmodule QtAwsAutoScaling
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new SuspendProcessesRequestPrivate object.
- *
- * @param  action  AutoScaling action being performed.
- * @param  q       Pointer to this object's public SuspendProcessesRequest instance.
+ * Constructs a SuspendProcessesRequestPrivate object for AutoScaling \a action with,
+ * public implementation \a q.
  */
 SuspendProcessesRequestPrivate::SuspendProcessesRequestPrivate(
     const AutoScalingRequest::Action action, SuspendProcessesRequest * const q)
@@ -109,15 +98,10 @@ SuspendProcessesRequestPrivate::SuspendProcessesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SuspendProcessesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the SuspendProcessesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public SuspendProcessesRequest instance.
  */
 SuspendProcessesRequestPrivate::SuspendProcessesRequestPrivate(
     const SuspendProcessesRequestPrivate &other, SuspendProcessesRequest * const q)

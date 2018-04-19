@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DetachInternetGatewayRequest
- *
  * \brief The DetachInternetGatewayRequest class provides an interface for EC2 DetachInternetGateway requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DetachInternetGatewayRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DetachInternetGatewayRequest::DetachInternetGatewayRequest(const DetachInternetGatewayRequest &other)
     : EC2Request(new DetachInternetGatewayRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ DetachInternetGatewayRequest::DetachInternetGatewayRequest(const DetachInternetG
 }
 
 /*!
- * @brief  Constructs a new DetachInternetGatewayRequest object.
+ * Constructs a DetachInternetGatewayRequest object.
  */
 DetachInternetGatewayRequest::DetachInternetGatewayRequest()
     : EC2Request(new DetachInternetGatewayRequestPrivate(EC2Request::DetachInternetGatewayAction, this))
@@ -70,14 +67,9 @@ bool DetachInternetGatewayRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DetachInternetGatewayResponse object.
+ * Returns a DetachInternetGatewayResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DetachInternetGatewayResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DetachInternetGatewayRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * DetachInternetGatewayRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::DetachInternetGatewayRequestPrivate
+ * \brief The DetachInternetGatewayRequestPrivate class provides private implementation for DetachInternetGatewayRequest.
+ * \internal
  *
- * @class  DetachInternetGatewayRequestPrivate
- *
- * @brief  Private implementation for DetachInternetGatewayRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DetachInternetGatewayRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public DetachInternetGatewayRequest instance.
+ * Constructs a DetachInternetGatewayRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 DetachInternetGatewayRequestPrivate::DetachInternetGatewayRequestPrivate(
     const EC2Request::Action action, DetachInternetGatewayRequest * const q)
@@ -108,15 +97,10 @@ DetachInternetGatewayRequestPrivate::DetachInternetGatewayRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DetachInternetGatewayRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DetachInternetGatewayRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DetachInternetGatewayRequest instance.
  */
 DetachInternetGatewayRequestPrivate::DetachInternetGatewayRequestPrivate(
     const DetachInternetGatewayRequestPrivate &other, DetachInternetGatewayRequest * const q)

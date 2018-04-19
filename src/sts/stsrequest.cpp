@@ -25,16 +25,28 @@ namespace STS {
 
 /*!
  * \class QtAws::STS::STSRequest
- *
  * \brief The STSRequest class provides an interface for STS requests.
  *
- * \ingroup STS
+ * \inmodule QtAwsSTS
  */
 
 /*!
- * @brief  Constructs a new STSRequest object.
+ * \enum STSRequest::Action
  *
- * @param  action  The STS action to request.
+ * This enum describes the actions that can be performed as STS
+ * requests.
+ *
+ * \value AssumeRoleAction STS AssumeRole action.
+ * \value AssumeRoleWithSAMLAction STS AssumeRoleWithSAML action.
+ * \value AssumeRoleWithWebIdentityAction STS AssumeRoleWithWebIdentity action.
+ * \value DecodeAuthorizationMessageAction STS DecodeAuthorizationMessage action.
+ * \value GetCallerIdentityAction STS GetCallerIdentity action.
+ * \value GetFederationTokenAction STS GetFederationToken action.
+ * \value GetSessionTokenAction STS GetSessionToken action.
+ */
+
+/*!
+ * Constructs a[n] STSRequest object for STS \a action.
  */
 STSRequest::STSRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new STSRequestPrivate(action, this))
@@ -43,9 +55,7 @@ STSRequest::STSRequest(const Action action)
 }
 
 /*!
- * @brief  Constructs a new STSRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 STSRequest::STSRequest(const STSRequest &other)
     : QtAws::Core::AwsAbstractRequest(new STSRequestPrivate(*other.d_func(), this))
@@ -54,13 +64,7 @@ STSRequest::STSRequest(const STSRequest &other)
 }
 
 /*!
- * @brief  Assignment operator.
- *
- * Assigns \a other to \c this.
- *
- * @param  other  Instance to copy.
- *
- * @return  A reference to \c this.
+ * Sets the STSRequest object to be equal to \a other.
  */
 STSRequest& STSRequest::operator=(const STSRequest &other)
 {
@@ -72,14 +76,10 @@ STSRequest& STSRequest::operator=(const STSRequest &other)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new STSRequest object.
+ * Constructs aa STSRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from STSRequestPrivate.
- *
- * @param  d  Pointer to private data (aka D-Pointer).
  */
 STSRequest::STSRequest(STSRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
@@ -87,7 +87,7 @@ STSRequest::STSRequest(STSRequestPrivate * const d) : QtAws::Core::AwsAbstractRe
 }
 
 /*!
- * \brief Returns the STS action to be performed by this request.
+ * Returns the STS action to be performed by this request.
  */
 STSRequest::Action STSRequest::action() const
 {
@@ -96,7 +96,7 @@ STSRequest::Action STSRequest::action() const
 }
 
 /*!
- * \brief Returns the name of the STS action to be performed by this request.
+ * Returns the name of the STS action to be performed by this request.
  */
 QString STSRequest::actionString() const
 {
@@ -104,7 +104,7 @@ QString STSRequest::actionString() const
 }
 
 /*!
- * \brief Returns the STS API version implemented by this request.
+ * Returns the STS API version implemented by this request.
  */
 QString STSRequest::apiVersion() const
 {
@@ -113,7 +113,7 @@ QString STSRequest::apiVersion() const
 }
 
 /*!
- * @brief Set the STS action to be performed by this request to \a action.
+ * Sets the STS action to be performed by this request to \a action.
  */
 void STSRequest::setAction(const Action action)
 {
@@ -122,7 +122,7 @@ void STSRequest::setAction(const Action action)
 }
 
 /*!
- * Set the STS API version to include in this request to \a version.
+ * Sets the STS API version to include in this request to \a version.
  */
 void STSRequest::setApiVersion(const QString &version)
 {
@@ -131,7 +131,7 @@ void STSRequest::setApiVersion(const QString &version)
 }
 
 /*!
- * \brief Returns \c true if this request is the same as \a other.
+ * Returns \c true if this request is equal to \a other; \c false otherwise.
  *
  * Note, most derived *Request classes do not need to provider their own
  * implementations of this function, since most such request classes rely on
@@ -146,8 +146,8 @@ bool STSRequest::operator==(const STSRequest &other) const
             (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
-/*!
- * @brief  Check if \a queueName is a valid STS queue name.
+/*
+ * Returns \c tue if \a queueName is a valid STS queue name.
  *
  * @par From STS FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
@@ -166,9 +166,8 @@ bool STSRequest::operator==(const STSRequest &other) const
 }*/
 
 /*!
- * \brief Removes the a \a name parameter from this request.
- *
- * Returns the count of paramters removed (typically \c 0 or \c 1).
+ * Removes the a \a name parameter from the request, then returns the number of
+ * paramters removed (typically \c 0 or \c 1).
  */
 int STSRequest::clearParameter(const QString &name)
 {
@@ -177,7 +176,7 @@ int STSRequest::clearParameter(const QString &name)
 }
 
 /*!
- * \brief Removes all parameters from this request.
+ * Removes all parameters from the request.
  */
 void STSRequest::clearParameters()
 {
@@ -186,7 +185,7 @@ void STSRequest::clearParameters()
 }
 
 /*!
- * \brief Returns the value of the \n name pararemter if set, otherwise \a defaultValue.
+ * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
 QVariant STSRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
@@ -195,7 +194,7 @@ QVariant STSRequest::parameter(const QString &name, const QVariant &defaultValue
 }
 
 /*!
- * \brief Returns a map of parameters included in this request.
+ * Returns the parameters included in this request.
  */
 const QVariantMap &STSRequest::parameters() const
 {
@@ -204,7 +203,7 @@ const QVariantMap &STSRequest::parameters() const
 }
 
 /*!
- * \brief Sets the \a name parameter to \a value.
+ * Sets the \a name parameter to \a value.
  */
 void STSRequest::setParameter(const QString &name, const QVariant &value)
 {
@@ -213,9 +212,8 @@ void STSRequest::setParameter(const QString &name, const QVariant &value)
 }
 
 /*!
- * \brief Sets the map of paramters for this request to \a parameters.
- *
- * Any request parameters set previously will be discarded.
+ * Sets the paramters for this request to \a parameters. Any request parameters
+ * set previously will be discarded.
  */
 void STSRequest::setParameters(const QVariantMap &parameters)
 {
@@ -224,11 +222,12 @@ void STSRequest::setParameters(const QVariantMap &parameters)
 }
 
 /*!
- * \brief Returns a network request for this STS request using the given \a endpoint.
+ * Returns a network request for the STS request using the given
+ * \a endpoint.
  *
- * This STS implementation builds request URLs by combining the common query
- * parameters (such as Action and Version), with any that have been added (via
- * setParameter) by child classes.
+ * This STS implementation builds request URLs by combining the
+ * common query parameters (such as Action and Version), with any that have
+ * been added (via setParameter) by child classes.
  */
 QNetworkRequest STSRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -239,17 +238,16 @@ QNetworkRequest STSRequest::unsignedRequest(const QUrl &endpoint) const
 }
 
 /*!
+ * \class QtAws::STS::STSRequestPrivate
+ * \brief The STSRequestPrivate class provides private implementation for STSRequest.
  * \internal
  *
- * \class  STSRequestPrivate
- *
- * \brief  Private implementation for STSRequest.
+ * \inmodule QtAwsSTS
  */
 
 /*!
- * \internal
- *
- * \brief Constructs a new STSRequestPrivate object.
+ * Constructs a STSRequestPrivate object for STS \a action with,
+ * public implementation \a q.
  */
 STSRequestPrivate::STSRequestPrivate(const STSRequest::Action action, STSRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
@@ -258,9 +256,7 @@ STSRequestPrivate::STSRequestPrivate(const STSRequest::Action action, STSRequest
 }
 
 /*!
- * \internal
- *
- * \brief Constructs a new STSRequestPrivate object, copying an existing one.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
@@ -276,15 +272,12 @@ STSRequestPrivate::STSRequestPrivate(const STSRequestPrivate &other,
 }
 
 /*!
- * \internal
- *
- * \brief Returns a string representing \a action.
+ * Returns a string represention of \a action, or a null string if \a action is
+ * invalid.
  *
  * This function converts STSRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the STS service's Action
  * query parameters.
- *
- * @return A string representing \a action, or a null string if \a action is invalid.
  */
 QString STSRequestPrivate::toString(const STSRequest::Action &action)
 {

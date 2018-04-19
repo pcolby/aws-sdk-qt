@@ -27,10 +27,9 @@ namespace CognitoIdentityProvider {
 
 /*!
  * \class QtAws::CognitoIdentityProvider::AdminGetUserRequest
- *
  * \brief The AdminGetUserRequest class provides an interface for CognitoIdentityProvider AdminGetUser requests.
  *
- * \ingroup CognitoIdentityProvider
+ * \inmodule QtAwsCognitoIdentityProvider
  *
  *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
  *  authenticate a user to obtain tokens related to user identity and access
@@ -47,9 +46,7 @@ namespace CognitoIdentityProvider {
  */
 
 /*!
- * @brief  Constructs a new AdminGetUserRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AdminGetUserRequest::AdminGetUserRequest(const AdminGetUserRequest &other)
     : CognitoIdentityProviderRequest(new AdminGetUserRequestPrivate(*other.d_func(), this))
@@ -58,7 +55,7 @@ AdminGetUserRequest::AdminGetUserRequest(const AdminGetUserRequest &other)
 }
 
 /*!
- * @brief  Constructs a new AdminGetUserRequest object.
+ * Constructs a AdminGetUserRequest object.
  */
 AdminGetUserRequest::AdminGetUserRequest()
     : CognitoIdentityProviderRequest(new AdminGetUserRequestPrivate(CognitoIdentityProviderRequest::AdminGetUserAction, this))
@@ -76,14 +73,9 @@ bool AdminGetUserRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AdminGetUserResponse object.
+ * Returns a AdminGetUserResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AdminGetUserResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CognitoIdentityProviderClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AdminGetUserRequest::response(QNetworkReply * const reply) const
 {
@@ -91,20 +83,17 @@ QtAws::Core::AwsAbstractResponse * AdminGetUserRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::CognitoIdentityProvider::AdminGetUserRequestPrivate
+ * \brief The AdminGetUserRequestPrivate class provides private implementation for AdminGetUserRequest.
+ * \internal
  *
- * @class  AdminGetUserRequestPrivate
- *
- * @brief  Private implementation for AdminGetUserRequest.
+ * \inmodule QtAwsCognitoIdentityProvider
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AdminGetUserRequestPrivate object.
- *
- * @param  action  CognitoIdentityProvider action being performed.
- * @param  q       Pointer to this object's public AdminGetUserRequest instance.
+ * Constructs a AdminGetUserRequestPrivate object for CognitoIdentityProvider \a action with,
+ * public implementation \a q.
  */
 AdminGetUserRequestPrivate::AdminGetUserRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, AdminGetUserRequest * const q)
@@ -114,15 +103,10 @@ AdminGetUserRequestPrivate::AdminGetUserRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AdminGetUserRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AdminGetUserRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AdminGetUserRequest instance.
  */
 AdminGetUserRequestPrivate::AdminGetUserRequestPrivate(
     const AdminGetUserRequestPrivate &other, AdminGetUserRequest * const q)

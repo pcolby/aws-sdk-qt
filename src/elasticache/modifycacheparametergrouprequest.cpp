@@ -27,10 +27,9 @@ namespace ElastiCache {
 
 /*!
  * \class QtAws::ElastiCache::ModifyCacheParameterGroupRequest
- *
  * \brief The ModifyCacheParameterGroupRequest class provides an interface for ElastiCache ModifyCacheParameterGroup requests.
  *
- * \ingroup ElastiCache
+ * \inmodule QtAwsElastiCache
  *
  *  <fullname>Amazon ElastiCache</fullname>
  * 
@@ -51,9 +50,7 @@ namespace ElastiCache {
  */
 
 /*!
- * @brief  Constructs a new ModifyCacheParameterGroupRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ModifyCacheParameterGroupRequest::ModifyCacheParameterGroupRequest(const ModifyCacheParameterGroupRequest &other)
     : ElastiCacheRequest(new ModifyCacheParameterGroupRequestPrivate(*other.d_func(), this))
@@ -62,7 +59,7 @@ ModifyCacheParameterGroupRequest::ModifyCacheParameterGroupRequest(const ModifyC
 }
 
 /*!
- * @brief  Constructs a new ModifyCacheParameterGroupRequest object.
+ * Constructs a ModifyCacheParameterGroupRequest object.
  */
 ModifyCacheParameterGroupRequest::ModifyCacheParameterGroupRequest()
     : ElastiCacheRequest(new ModifyCacheParameterGroupRequestPrivate(ElastiCacheRequest::ModifyCacheParameterGroupAction, this))
@@ -80,14 +77,9 @@ bool ModifyCacheParameterGroupRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ModifyCacheParameterGroupResponse object.
+ * Returns a ModifyCacheParameterGroupResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ModifyCacheParameterGroupResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ElastiCacheClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ModifyCacheParameterGroupRequest::response(QNetworkReply * const reply) const
 {
@@ -95,20 +87,17 @@ QtAws::Core::AwsAbstractResponse * ModifyCacheParameterGroupRequest::response(QN
 }
 
 /*!
- * @internal
+ * \class QtAws::ElastiCache::ModifyCacheParameterGroupRequestPrivate
+ * \brief The ModifyCacheParameterGroupRequestPrivate class provides private implementation for ModifyCacheParameterGroupRequest.
+ * \internal
  *
- * @class  ModifyCacheParameterGroupRequestPrivate
- *
- * @brief  Private implementation for ModifyCacheParameterGroupRequest.
+ * \inmodule QtAwsElastiCache
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ModifyCacheParameterGroupRequestPrivate object.
- *
- * @param  action  ElastiCache action being performed.
- * @param  q       Pointer to this object's public ModifyCacheParameterGroupRequest instance.
+ * Constructs a ModifyCacheParameterGroupRequestPrivate object for ElastiCache \a action with,
+ * public implementation \a q.
  */
 ModifyCacheParameterGroupRequestPrivate::ModifyCacheParameterGroupRequestPrivate(
     const ElastiCacheRequest::Action action, ModifyCacheParameterGroupRequest * const q)
@@ -118,15 +107,10 @@ ModifyCacheParameterGroupRequestPrivate::ModifyCacheParameterGroupRequestPrivate
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ModifyCacheParameterGroupRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ModifyCacheParameterGroupRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ModifyCacheParameterGroupRequest instance.
  */
 ModifyCacheParameterGroupRequestPrivate::ModifyCacheParameterGroupRequestPrivate(
     const ModifyCacheParameterGroupRequestPrivate &other, ModifyCacheParameterGroupRequest * const q)

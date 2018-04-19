@@ -27,10 +27,9 @@ namespace WorkMail {
 
 /*!
  * \class QtAws::WorkMail::ListMailboxPermissionsRequest
- *
  * \brief The ListMailboxPermissionsRequest class provides an interface for WorkMail ListMailboxPermissions requests.
  *
- * \ingroup WorkMail
+ * \inmodule QtAwsWorkMail
  *
  *  Amazon WorkMail is a secure, managed business email and calendaring service with support for existing desktop and mobile
  *  email clients. You can access your email, contacts, and calendars using Microsoft Outlook, your browser, or their native
@@ -70,9 +69,7 @@ namespace WorkMail {
  */
 
 /*!
- * @brief  Constructs a new ListMailboxPermissionsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListMailboxPermissionsRequest::ListMailboxPermissionsRequest(const ListMailboxPermissionsRequest &other)
     : WorkMailRequest(new ListMailboxPermissionsRequestPrivate(*other.d_func(), this))
@@ -81,7 +78,7 @@ ListMailboxPermissionsRequest::ListMailboxPermissionsRequest(const ListMailboxPe
 }
 
 /*!
- * @brief  Constructs a new ListMailboxPermissionsRequest object.
+ * Constructs a ListMailboxPermissionsRequest object.
  */
 ListMailboxPermissionsRequest::ListMailboxPermissionsRequest()
     : WorkMailRequest(new ListMailboxPermissionsRequestPrivate(WorkMailRequest::ListMailboxPermissionsAction, this))
@@ -99,14 +96,9 @@ bool ListMailboxPermissionsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListMailboxPermissionsResponse object.
+ * Returns a ListMailboxPermissionsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListMailboxPermissionsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WorkMailClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListMailboxPermissionsRequest::response(QNetworkReply * const reply) const
 {
@@ -114,20 +106,17 @@ QtAws::Core::AwsAbstractResponse * ListMailboxPermissionsRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::WorkMail::ListMailboxPermissionsRequestPrivate
+ * \brief The ListMailboxPermissionsRequestPrivate class provides private implementation for ListMailboxPermissionsRequest.
+ * \internal
  *
- * @class  ListMailboxPermissionsRequestPrivate
- *
- * @brief  Private implementation for ListMailboxPermissionsRequest.
+ * \inmodule QtAwsWorkMail
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListMailboxPermissionsRequestPrivate object.
- *
- * @param  action  WorkMail action being performed.
- * @param  q       Pointer to this object's public ListMailboxPermissionsRequest instance.
+ * Constructs a ListMailboxPermissionsRequestPrivate object for WorkMail \a action with,
+ * public implementation \a q.
  */
 ListMailboxPermissionsRequestPrivate::ListMailboxPermissionsRequestPrivate(
     const WorkMailRequest::Action action, ListMailboxPermissionsRequest * const q)
@@ -137,15 +126,10 @@ ListMailboxPermissionsRequestPrivate::ListMailboxPermissionsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListMailboxPermissionsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListMailboxPermissionsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListMailboxPermissionsRequest instance.
  */
 ListMailboxPermissionsRequestPrivate::ListMailboxPermissionsRequestPrivate(
     const ListMailboxPermissionsRequestPrivate &other, ListMailboxPermissionsRequest * const q)

@@ -27,10 +27,9 @@ namespace MarketplaceMetering {
 
 /*!
  * \class QtAws::MarketplaceMetering::MeterUsageRequest
- *
  * \brief The MeterUsageRequest class provides an interface for MarketplaceMetering MeterUsage requests.
  *
- * \ingroup MarketplaceMetering
+ * \inmodule QtAwsMarketplaceMetering
  *
  *  <fullname>AWS Marketplace Metering Service</fullname>
  * 
@@ -67,9 +66,7 @@ namespace MarketplaceMetering {
  */
 
 /*!
- * @brief  Constructs a new MeterUsageRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 MeterUsageRequest::MeterUsageRequest(const MeterUsageRequest &other)
     : MarketplaceMeteringRequest(new MeterUsageRequestPrivate(*other.d_func(), this))
@@ -78,7 +75,7 @@ MeterUsageRequest::MeterUsageRequest(const MeterUsageRequest &other)
 }
 
 /*!
- * @brief  Constructs a new MeterUsageRequest object.
+ * Constructs a MeterUsageRequest object.
  */
 MeterUsageRequest::MeterUsageRequest()
     : MarketplaceMeteringRequest(new MeterUsageRequestPrivate(MarketplaceMeteringRequest::MeterUsageAction, this))
@@ -96,14 +93,9 @@ bool MeterUsageRequest::isValid() const
 
 
 /*!
- * @brief  Construct an MeterUsageResponse object.
+ * Returns a MeterUsageResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An MeterUsageResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MarketplaceMeteringClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * MeterUsageRequest::response(QNetworkReply * const reply) const
 {
@@ -111,20 +103,17 @@ QtAws::Core::AwsAbstractResponse * MeterUsageRequest::response(QNetworkReply * c
 }
 
 /*!
- * @internal
+ * \class QtAws::MarketplaceMetering::MeterUsageRequestPrivate
+ * \brief The MeterUsageRequestPrivate class provides private implementation for MeterUsageRequest.
+ * \internal
  *
- * @class  MeterUsageRequestPrivate
- *
- * @brief  Private implementation for MeterUsageRequest.
+ * \inmodule QtAwsMarketplaceMetering
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new MeterUsageRequestPrivate object.
- *
- * @param  action  MarketplaceMetering action being performed.
- * @param  q       Pointer to this object's public MeterUsageRequest instance.
+ * Constructs a MeterUsageRequestPrivate object for MarketplaceMetering \a action with,
+ * public implementation \a q.
  */
 MeterUsageRequestPrivate::MeterUsageRequestPrivate(
     const MarketplaceMeteringRequest::Action action, MeterUsageRequest * const q)
@@ -134,15 +123,10 @@ MeterUsageRequestPrivate::MeterUsageRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new MeterUsageRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the MeterUsageRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public MeterUsageRequest instance.
  */
 MeterUsageRequestPrivate::MeterUsageRequestPrivate(
     const MeterUsageRequestPrivate &other, MeterUsageRequest * const q)

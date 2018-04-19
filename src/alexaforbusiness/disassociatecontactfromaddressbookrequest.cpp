@@ -27,10 +27,9 @@ namespace AlexaForBusiness {
 
 /*!
  * \class QtAws::AlexaForBusiness::DisassociateContactFromAddressBookRequest
- *
  * \brief The DisassociateContactFromAddressBookRequest class provides an interface for AlexaForBusiness DisassociateContactFromAddressBook requests.
  *
- * \ingroup AlexaForBusiness
+ * \inmodule QtAwsAlexaForBusiness
  *
  *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
  *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
@@ -42,9 +41,7 @@ namespace AlexaForBusiness {
  */
 
 /*!
- * @brief  Constructs a new DisassociateContactFromAddressBookRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DisassociateContactFromAddressBookRequest::DisassociateContactFromAddressBookRequest(const DisassociateContactFromAddressBookRequest &other)
     : AlexaForBusinessRequest(new DisassociateContactFromAddressBookRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ DisassociateContactFromAddressBookRequest::DisassociateContactFromAddressBookReq
 }
 
 /*!
- * @brief  Constructs a new DisassociateContactFromAddressBookRequest object.
+ * Constructs a DisassociateContactFromAddressBookRequest object.
  */
 DisassociateContactFromAddressBookRequest::DisassociateContactFromAddressBookRequest()
     : AlexaForBusinessRequest(new DisassociateContactFromAddressBookRequestPrivate(AlexaForBusinessRequest::DisassociateContactFromAddressBookAction, this))
@@ -71,14 +68,9 @@ bool DisassociateContactFromAddressBookRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DisassociateContactFromAddressBookResponse object.
+ * Returns a DisassociateContactFromAddressBookResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DisassociateContactFromAddressBookResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AlexaForBusinessClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DisassociateContactFromAddressBookRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * DisassociateContactFromAddressBookRequest::re
 }
 
 /*!
- * @internal
+ * \class QtAws::AlexaForBusiness::DisassociateContactFromAddressBookRequestPrivate
+ * \brief The DisassociateContactFromAddressBookRequestPrivate class provides private implementation for DisassociateContactFromAddressBookRequest.
+ * \internal
  *
- * @class  DisassociateContactFromAddressBookRequestPrivate
- *
- * @brief  Private implementation for DisassociateContactFromAddressBookRequest.
+ * \inmodule QtAwsAlexaForBusiness
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DisassociateContactFromAddressBookRequestPrivate object.
- *
- * @param  action  AlexaForBusiness action being performed.
- * @param  q       Pointer to this object's public DisassociateContactFromAddressBookRequest instance.
+ * Constructs a DisassociateContactFromAddressBookRequestPrivate object for AlexaForBusiness \a action with,
+ * public implementation \a q.
  */
 DisassociateContactFromAddressBookRequestPrivate::DisassociateContactFromAddressBookRequestPrivate(
     const AlexaForBusinessRequest::Action action, DisassociateContactFromAddressBookRequest * const q)
@@ -109,15 +98,10 @@ DisassociateContactFromAddressBookRequestPrivate::DisassociateContactFromAddress
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DisassociateContactFromAddressBookRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DisassociateContactFromAddressBookRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DisassociateContactFromAddressBookRequest instance.
  */
 DisassociateContactFromAddressBookRequestPrivate::DisassociateContactFromAddressBookRequestPrivate(
     const DisassociateContactFromAddressBookRequestPrivate &other, DisassociateContactFromAddressBookRequest * const q)

@@ -27,10 +27,9 @@ namespace XRay {
 
 /*!
  * \class QtAws::XRay::PutTelemetryRecordsRequest
- *
  * \brief The PutTelemetryRecordsRequest class provides an interface for XRay PutTelemetryRecords requests.
  *
- * \ingroup XRay
+ * \inmodule QtAwsXRay
  *
  *  AWS X-Ray provides APIs for managing debug traces and retrieving service maps and other data created by processing those
  *
@@ -38,9 +37,7 @@ namespace XRay {
  */
 
 /*!
- * @brief  Constructs a new PutTelemetryRecordsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 PutTelemetryRecordsRequest::PutTelemetryRecordsRequest(const PutTelemetryRecordsRequest &other)
     : XRayRequest(new PutTelemetryRecordsRequestPrivate(*other.d_func(), this))
@@ -49,7 +46,7 @@ PutTelemetryRecordsRequest::PutTelemetryRecordsRequest(const PutTelemetryRecords
 }
 
 /*!
- * @brief  Constructs a new PutTelemetryRecordsRequest object.
+ * Constructs a PutTelemetryRecordsRequest object.
  */
 PutTelemetryRecordsRequest::PutTelemetryRecordsRequest()
     : XRayRequest(new PutTelemetryRecordsRequestPrivate(XRayRequest::PutTelemetryRecordsAction, this))
@@ -67,14 +64,9 @@ bool PutTelemetryRecordsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an PutTelemetryRecordsResponse object.
+ * Returns a PutTelemetryRecordsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An PutTelemetryRecordsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  XRayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * PutTelemetryRecordsRequest::response(QNetworkReply * const reply) const
 {
@@ -82,20 +74,17 @@ QtAws::Core::AwsAbstractResponse * PutTelemetryRecordsRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::XRay::PutTelemetryRecordsRequestPrivate
+ * \brief The PutTelemetryRecordsRequestPrivate class provides private implementation for PutTelemetryRecordsRequest.
+ * \internal
  *
- * @class  PutTelemetryRecordsRequestPrivate
- *
- * @brief  Private implementation for PutTelemetryRecordsRequest.
+ * \inmodule QtAwsXRay
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new PutTelemetryRecordsRequestPrivate object.
- *
- * @param  action  XRay action being performed.
- * @param  q       Pointer to this object's public PutTelemetryRecordsRequest instance.
+ * Constructs a PutTelemetryRecordsRequestPrivate object for XRay \a action with,
+ * public implementation \a q.
  */
 PutTelemetryRecordsRequestPrivate::PutTelemetryRecordsRequestPrivate(
     const XRayRequest::Action action, PutTelemetryRecordsRequest * const q)
@@ -105,15 +94,10 @@ PutTelemetryRecordsRequestPrivate::PutTelemetryRecordsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutTelemetryRecordsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the PutTelemetryRecordsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public PutTelemetryRecordsRequest instance.
  */
 PutTelemetryRecordsRequestPrivate::PutTelemetryRecordsRequestPrivate(
     const PutTelemetryRecordsRequestPrivate &other, PutTelemetryRecordsRequest * const q)

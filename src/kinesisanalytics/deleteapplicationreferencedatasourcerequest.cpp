@@ -27,19 +27,16 @@ namespace KinesisAnalytics {
 
 /*!
  * \class QtAws::KinesisAnalytics::DeleteApplicationReferenceDataSourceRequest
- *
  * \brief The DeleteApplicationReferenceDataSourceRequest class provides an interface for KinesisAnalytics DeleteApplicationReferenceDataSource requests.
  *
- * \ingroup KinesisAnalytics
+ * \inmodule QtAwsKinesisAnalytics
  *
  *
  * \sa KinesisAnalyticsClient::deleteApplicationReferenceDataSource
  */
 
 /*!
- * @brief  Constructs a new DeleteApplicationReferenceDataSourceRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteApplicationReferenceDataSourceRequest::DeleteApplicationReferenceDataSourceRequest(const DeleteApplicationReferenceDataSourceRequest &other)
     : KinesisAnalyticsRequest(new DeleteApplicationReferenceDataSourceRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ DeleteApplicationReferenceDataSourceRequest::DeleteApplicationReferenceDataSourc
 }
 
 /*!
- * @brief  Constructs a new DeleteApplicationReferenceDataSourceRequest object.
+ * Constructs a DeleteApplicationReferenceDataSourceRequest object.
  */
 DeleteApplicationReferenceDataSourceRequest::DeleteApplicationReferenceDataSourceRequest()
     : KinesisAnalyticsRequest(new DeleteApplicationReferenceDataSourceRequestPrivate(KinesisAnalyticsRequest::DeleteApplicationReferenceDataSourceAction, this))
@@ -66,14 +63,9 @@ bool DeleteApplicationReferenceDataSourceRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteApplicationReferenceDataSourceResponse object.
+ * Returns a DeleteApplicationReferenceDataSourceResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteApplicationReferenceDataSourceResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  KinesisAnalyticsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteApplicationReferenceDataSourceRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * DeleteApplicationReferenceDataSourceRequest::
 }
 
 /*!
- * @internal
+ * \class QtAws::KinesisAnalytics::DeleteApplicationReferenceDataSourceRequestPrivate
+ * \brief The DeleteApplicationReferenceDataSourceRequestPrivate class provides private implementation for DeleteApplicationReferenceDataSourceRequest.
+ * \internal
  *
- * @class  DeleteApplicationReferenceDataSourceRequestPrivate
- *
- * @brief  Private implementation for DeleteApplicationReferenceDataSourceRequest.
+ * \inmodule QtAwsKinesisAnalytics
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteApplicationReferenceDataSourceRequestPrivate object.
- *
- * @param  action  KinesisAnalytics action being performed.
- * @param  q       Pointer to this object's public DeleteApplicationReferenceDataSourceRequest instance.
+ * Constructs a DeleteApplicationReferenceDataSourceRequestPrivate object for KinesisAnalytics \a action with,
+ * public implementation \a q.
  */
 DeleteApplicationReferenceDataSourceRequestPrivate::DeleteApplicationReferenceDataSourceRequestPrivate(
     const KinesisAnalyticsRequest::Action action, DeleteApplicationReferenceDataSourceRequest * const q)
@@ -104,15 +93,10 @@ DeleteApplicationReferenceDataSourceRequestPrivate::DeleteApplicationReferenceDa
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteApplicationReferenceDataSourceRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteApplicationReferenceDataSourceRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteApplicationReferenceDataSourceRequest instance.
  */
 DeleteApplicationReferenceDataSourceRequestPrivate::DeleteApplicationReferenceDataSourceRequestPrivate(
     const DeleteApplicationReferenceDataSourceRequestPrivate &other, DeleteApplicationReferenceDataSourceRequest * const q)

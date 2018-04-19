@@ -27,10 +27,9 @@ namespace DirectoryService {
 
 /*!
  * \class QtAws::DirectoryService::DeregisterEventTopicRequest
- *
  * \brief The DeregisterEventTopicRequest class provides an interface for DirectoryService DeregisterEventTopic requests.
  *
- * \ingroup DirectoryService
+ * \inmodule QtAwsDirectoryService
  *
  *  <fullname>AWS Directory Service</fullname>
  * 
@@ -51,9 +50,7 @@ namespace DirectoryService {
  */
 
 /*!
- * @brief  Constructs a new DeregisterEventTopicRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeregisterEventTopicRequest::DeregisterEventTopicRequest(const DeregisterEventTopicRequest &other)
     : DirectoryServiceRequest(new DeregisterEventTopicRequestPrivate(*other.d_func(), this))
@@ -62,7 +59,7 @@ DeregisterEventTopicRequest::DeregisterEventTopicRequest(const DeregisterEventTo
 }
 
 /*!
- * @brief  Constructs a new DeregisterEventTopicRequest object.
+ * Constructs a DeregisterEventTopicRequest object.
  */
 DeregisterEventTopicRequest::DeregisterEventTopicRequest()
     : DirectoryServiceRequest(new DeregisterEventTopicRequestPrivate(DirectoryServiceRequest::DeregisterEventTopicAction, this))
@@ -80,14 +77,9 @@ bool DeregisterEventTopicRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeregisterEventTopicResponse object.
+ * Returns a DeregisterEventTopicResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeregisterEventTopicResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DirectoryServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeregisterEventTopicRequest::response(QNetworkReply * const reply) const
 {
@@ -95,20 +87,17 @@ QtAws::Core::AwsAbstractResponse * DeregisterEventTopicRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::DirectoryService::DeregisterEventTopicRequestPrivate
+ * \brief The DeregisterEventTopicRequestPrivate class provides private implementation for DeregisterEventTopicRequest.
+ * \internal
  *
- * @class  DeregisterEventTopicRequestPrivate
- *
- * @brief  Private implementation for DeregisterEventTopicRequest.
+ * \inmodule QtAwsDirectoryService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeregisterEventTopicRequestPrivate object.
- *
- * @param  action  DirectoryService action being performed.
- * @param  q       Pointer to this object's public DeregisterEventTopicRequest instance.
+ * Constructs a DeregisterEventTopicRequestPrivate object for DirectoryService \a action with,
+ * public implementation \a q.
  */
 DeregisterEventTopicRequestPrivate::DeregisterEventTopicRequestPrivate(
     const DirectoryServiceRequest::Action action, DeregisterEventTopicRequest * const q)
@@ -118,15 +107,10 @@ DeregisterEventTopicRequestPrivate::DeregisterEventTopicRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeregisterEventTopicRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeregisterEventTopicRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeregisterEventTopicRequest instance.
  */
 DeregisterEventTopicRequestPrivate::DeregisterEventTopicRequestPrivate(
     const DeregisterEventTopicRequestPrivate &other, DeregisterEventTopicRequest * const q)

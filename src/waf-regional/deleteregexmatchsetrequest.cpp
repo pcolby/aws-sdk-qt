@@ -27,10 +27,9 @@ namespace WAFRegional {
 
 /*!
  * \class QtAws::WAFRegional::DeleteRegexMatchSetRequest
- *
  * \brief The DeleteRegexMatchSetRequest class provides an interface for WAFRegional DeleteRegexMatchSet requests.
  *
- * \ingroup WAFRegional
+ * \inmodule QtAwsWAFRegional
  *
  *  This is the <i>AWS WAF Regional API Reference</i> for using AWS WAF with Elastic Load Balancing (ELB) Application Load
  *  Balancers. The AWS WAF actions and data types listed in the reference are available for protecting Application Load
@@ -44,9 +43,7 @@ namespace WAFRegional {
  */
 
 /*!
- * @brief  Constructs a new DeleteRegexMatchSetRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteRegexMatchSetRequest::DeleteRegexMatchSetRequest(const DeleteRegexMatchSetRequest &other)
     : WAFRegionalRequest(new DeleteRegexMatchSetRequestPrivate(*other.d_func(), this))
@@ -55,7 +52,7 @@ DeleteRegexMatchSetRequest::DeleteRegexMatchSetRequest(const DeleteRegexMatchSet
 }
 
 /*!
- * @brief  Constructs a new DeleteRegexMatchSetRequest object.
+ * Constructs a DeleteRegexMatchSetRequest object.
  */
 DeleteRegexMatchSetRequest::DeleteRegexMatchSetRequest()
     : WAFRegionalRequest(new DeleteRegexMatchSetRequestPrivate(WAFRegionalRequest::DeleteRegexMatchSetAction, this))
@@ -73,14 +70,9 @@ bool DeleteRegexMatchSetRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteRegexMatchSetResponse object.
+ * Returns a DeleteRegexMatchSetResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteRegexMatchSetResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WAFRegionalClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteRegexMatchSetRequest::response(QNetworkReply * const reply) const
 {
@@ -88,20 +80,17 @@ QtAws::Core::AwsAbstractResponse * DeleteRegexMatchSetRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::WAFRegional::DeleteRegexMatchSetRequestPrivate
+ * \brief The DeleteRegexMatchSetRequestPrivate class provides private implementation for DeleteRegexMatchSetRequest.
+ * \internal
  *
- * @class  DeleteRegexMatchSetRequestPrivate
- *
- * @brief  Private implementation for DeleteRegexMatchSetRequest.
+ * \inmodule QtAwsWAFRegional
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteRegexMatchSetRequestPrivate object.
- *
- * @param  action  WAFRegional action being performed.
- * @param  q       Pointer to this object's public DeleteRegexMatchSetRequest instance.
+ * Constructs a DeleteRegexMatchSetRequestPrivate object for WAFRegional \a action with,
+ * public implementation \a q.
  */
 DeleteRegexMatchSetRequestPrivate::DeleteRegexMatchSetRequestPrivate(
     const WAFRegionalRequest::Action action, DeleteRegexMatchSetRequest * const q)
@@ -111,15 +100,10 @@ DeleteRegexMatchSetRequestPrivate::DeleteRegexMatchSetRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteRegexMatchSetRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteRegexMatchSetRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteRegexMatchSetRequest instance.
  */
 DeleteRegexMatchSetRequestPrivate::DeleteRegexMatchSetRequestPrivate(
     const DeleteRegexMatchSetRequestPrivate &other, DeleteRegexMatchSetRequest * const q)

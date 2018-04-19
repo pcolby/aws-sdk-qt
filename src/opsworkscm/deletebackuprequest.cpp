@@ -27,10 +27,9 @@ namespace OpsWorksCM {
 
 /*!
  * \class QtAws::OpsWorksCM::DeleteBackupRequest
- *
  * \brief The DeleteBackupRequest class provides an interface for OpsWorksCM DeleteBackup requests.
  *
- * \ingroup OpsWorksCM
+ * \inmodule QtAwsOpsWorksCM
  *
  *  <fullname>AWS OpsWorks CM</fullname>
  * 
@@ -97,9 +96,7 @@ namespace OpsWorksCM {
  */
 
 /*!
- * @brief  Constructs a new DeleteBackupRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteBackupRequest::DeleteBackupRequest(const DeleteBackupRequest &other)
     : OpsWorksCMRequest(new DeleteBackupRequestPrivate(*other.d_func(), this))
@@ -108,7 +105,7 @@ DeleteBackupRequest::DeleteBackupRequest(const DeleteBackupRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DeleteBackupRequest object.
+ * Constructs a DeleteBackupRequest object.
  */
 DeleteBackupRequest::DeleteBackupRequest()
     : OpsWorksCMRequest(new DeleteBackupRequestPrivate(OpsWorksCMRequest::DeleteBackupAction, this))
@@ -126,14 +123,9 @@ bool DeleteBackupRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteBackupResponse object.
+ * Returns a DeleteBackupResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteBackupResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  OpsWorksCMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteBackupRequest::response(QNetworkReply * const reply) const
 {
@@ -141,20 +133,17 @@ QtAws::Core::AwsAbstractResponse * DeleteBackupRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::OpsWorksCM::DeleteBackupRequestPrivate
+ * \brief The DeleteBackupRequestPrivate class provides private implementation for DeleteBackupRequest.
+ * \internal
  *
- * @class  DeleteBackupRequestPrivate
- *
- * @brief  Private implementation for DeleteBackupRequest.
+ * \inmodule QtAwsOpsWorksCM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteBackupRequestPrivate object.
- *
- * @param  action  OpsWorksCM action being performed.
- * @param  q       Pointer to this object's public DeleteBackupRequest instance.
+ * Constructs a DeleteBackupRequestPrivate object for OpsWorksCM \a action with,
+ * public implementation \a q.
  */
 DeleteBackupRequestPrivate::DeleteBackupRequestPrivate(
     const OpsWorksCMRequest::Action action, DeleteBackupRequest * const q)
@@ -164,15 +153,10 @@ DeleteBackupRequestPrivate::DeleteBackupRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteBackupRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteBackupRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteBackupRequest instance.
  */
 DeleteBackupRequestPrivate::DeleteBackupRequestPrivate(
     const DeleteBackupRequestPrivate &other, DeleteBackupRequest * const q)

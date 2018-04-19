@@ -27,10 +27,9 @@ namespace CodeDeploy {
 
 /*!
  * \class QtAws::CodeDeploy::DeleteDeploymentConfigRequest
- *
  * \brief The DeleteDeploymentConfigRequest class provides an interface for CodeDeploy DeleteDeploymentConfig requests.
  *
- * \ingroup CodeDeploy
+ * \inmodule QtAwsCodeDeploy
  *
  *  <fullname>AWS CodeDeploy</fullname>
  * 
@@ -118,9 +117,7 @@ namespace CodeDeploy {
  */
 
 /*!
- * @brief  Constructs a new DeleteDeploymentConfigRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteDeploymentConfigRequest::DeleteDeploymentConfigRequest(const DeleteDeploymentConfigRequest &other)
     : CodeDeployRequest(new DeleteDeploymentConfigRequestPrivate(*other.d_func(), this))
@@ -129,7 +126,7 @@ DeleteDeploymentConfigRequest::DeleteDeploymentConfigRequest(const DeleteDeploym
 }
 
 /*!
- * @brief  Constructs a new DeleteDeploymentConfigRequest object.
+ * Constructs a DeleteDeploymentConfigRequest object.
  */
 DeleteDeploymentConfigRequest::DeleteDeploymentConfigRequest()
     : CodeDeployRequest(new DeleteDeploymentConfigRequestPrivate(CodeDeployRequest::DeleteDeploymentConfigAction, this))
@@ -147,14 +144,9 @@ bool DeleteDeploymentConfigRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteDeploymentConfigResponse object.
+ * Returns a DeleteDeploymentConfigResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteDeploymentConfigResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CodeDeployClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteDeploymentConfigRequest::response(QNetworkReply * const reply) const
 {
@@ -162,20 +154,17 @@ QtAws::Core::AwsAbstractResponse * DeleteDeploymentConfigRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::CodeDeploy::DeleteDeploymentConfigRequestPrivate
+ * \brief The DeleteDeploymentConfigRequestPrivate class provides private implementation for DeleteDeploymentConfigRequest.
+ * \internal
  *
- * @class  DeleteDeploymentConfigRequestPrivate
- *
- * @brief  Private implementation for DeleteDeploymentConfigRequest.
+ * \inmodule QtAwsCodeDeploy
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteDeploymentConfigRequestPrivate object.
- *
- * @param  action  CodeDeploy action being performed.
- * @param  q       Pointer to this object's public DeleteDeploymentConfigRequest instance.
+ * Constructs a DeleteDeploymentConfigRequestPrivate object for CodeDeploy \a action with,
+ * public implementation \a q.
  */
 DeleteDeploymentConfigRequestPrivate::DeleteDeploymentConfigRequestPrivate(
     const CodeDeployRequest::Action action, DeleteDeploymentConfigRequest * const q)
@@ -185,15 +174,10 @@ DeleteDeploymentConfigRequestPrivate::DeleteDeploymentConfigRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteDeploymentConfigRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteDeploymentConfigRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteDeploymentConfigRequest instance.
  */
 DeleteDeploymentConfigRequestPrivate::DeleteDeploymentConfigRequestPrivate(
     const DeleteDeploymentConfigRequestPrivate &other, DeleteDeploymentConfigRequest * const q)

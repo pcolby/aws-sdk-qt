@@ -27,10 +27,9 @@ namespace Lambda {
 
 /*!
  * \class QtAws::Lambda::UpdateFunctionConfigurationRequest
- *
  * \brief The UpdateFunctionConfigurationRequest class provides an interface for Lambda UpdateFunctionConfiguration requests.
  *
- * \ingroup Lambda
+ * \inmodule QtAwsLambda
  *
  *  <fullname>AWS Lambda</fullname>
  * 
@@ -48,9 +47,7 @@ namespace Lambda {
  */
 
 /*!
- * @brief  Constructs a new UpdateFunctionConfigurationRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateFunctionConfigurationRequest::UpdateFunctionConfigurationRequest(const UpdateFunctionConfigurationRequest &other)
     : LambdaRequest(new UpdateFunctionConfigurationRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ UpdateFunctionConfigurationRequest::UpdateFunctionConfigurationRequest(const Upd
 }
 
 /*!
- * @brief  Constructs a new UpdateFunctionConfigurationRequest object.
+ * Constructs a UpdateFunctionConfigurationRequest object.
  */
 UpdateFunctionConfigurationRequest::UpdateFunctionConfigurationRequest()
     : LambdaRequest(new UpdateFunctionConfigurationRequestPrivate(LambdaRequest::UpdateFunctionConfigurationAction, this))
@@ -77,14 +74,9 @@ bool UpdateFunctionConfigurationRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateFunctionConfigurationResponse object.
+ * Returns a UpdateFunctionConfigurationResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateFunctionConfigurationResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  LambdaClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateFunctionConfigurationRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * UpdateFunctionConfigurationRequest::response(
 }
 
 /*!
- * @internal
+ * \class QtAws::Lambda::UpdateFunctionConfigurationRequestPrivate
+ * \brief The UpdateFunctionConfigurationRequestPrivate class provides private implementation for UpdateFunctionConfigurationRequest.
+ * \internal
  *
- * @class  UpdateFunctionConfigurationRequestPrivate
- *
- * @brief  Private implementation for UpdateFunctionConfigurationRequest.
+ * \inmodule QtAwsLambda
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateFunctionConfigurationRequestPrivate object.
- *
- * @param  action  Lambda action being performed.
- * @param  q       Pointer to this object's public UpdateFunctionConfigurationRequest instance.
+ * Constructs a UpdateFunctionConfigurationRequestPrivate object for Lambda \a action with,
+ * public implementation \a q.
  */
 UpdateFunctionConfigurationRequestPrivate::UpdateFunctionConfigurationRequestPrivate(
     const LambdaRequest::Action action, UpdateFunctionConfigurationRequest * const q)
@@ -115,15 +104,10 @@ UpdateFunctionConfigurationRequestPrivate::UpdateFunctionConfigurationRequestPri
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateFunctionConfigurationRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateFunctionConfigurationRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateFunctionConfigurationRequest instance.
  */
 UpdateFunctionConfigurationRequestPrivate::UpdateFunctionConfigurationRequestPrivate(
     const UpdateFunctionConfigurationRequestPrivate &other, UpdateFunctionConfigurationRequest * const q)

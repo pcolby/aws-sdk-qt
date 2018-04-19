@@ -27,19 +27,16 @@ namespace SageMaker {
 
 /*!
  * \class QtAws::SageMaker::DescribeNotebookInstanceRequest
- *
  * \brief The DescribeNotebookInstanceRequest class provides an interface for SageMaker DescribeNotebookInstance requests.
  *
- * \ingroup SageMaker
+ * \inmodule QtAwsSageMaker
  *
  *
  * \sa SageMakerClient::describeNotebookInstance
  */
 
 /*!
- * @brief  Constructs a new DescribeNotebookInstanceRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeNotebookInstanceRequest::DescribeNotebookInstanceRequest(const DescribeNotebookInstanceRequest &other)
     : SageMakerRequest(new DescribeNotebookInstanceRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ DescribeNotebookInstanceRequest::DescribeNotebookInstanceRequest(const DescribeN
 }
 
 /*!
- * @brief  Constructs a new DescribeNotebookInstanceRequest object.
+ * Constructs a DescribeNotebookInstanceRequest object.
  */
 DescribeNotebookInstanceRequest::DescribeNotebookInstanceRequest()
     : SageMakerRequest(new DescribeNotebookInstanceRequestPrivate(SageMakerRequest::DescribeNotebookInstanceAction, this))
@@ -66,14 +63,9 @@ bool DescribeNotebookInstanceRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeNotebookInstanceResponse object.
+ * Returns a DescribeNotebookInstanceResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeNotebookInstanceResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SageMakerClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeNotebookInstanceRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * DescribeNotebookInstanceRequest::response(QNe
 }
 
 /*!
- * @internal
+ * \class QtAws::SageMaker::DescribeNotebookInstanceRequestPrivate
+ * \brief The DescribeNotebookInstanceRequestPrivate class provides private implementation for DescribeNotebookInstanceRequest.
+ * \internal
  *
- * @class  DescribeNotebookInstanceRequestPrivate
- *
- * @brief  Private implementation for DescribeNotebookInstanceRequest.
+ * \inmodule QtAwsSageMaker
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeNotebookInstanceRequestPrivate object.
- *
- * @param  action  SageMaker action being performed.
- * @param  q       Pointer to this object's public DescribeNotebookInstanceRequest instance.
+ * Constructs a DescribeNotebookInstanceRequestPrivate object for SageMaker \a action with,
+ * public implementation \a q.
  */
 DescribeNotebookInstanceRequestPrivate::DescribeNotebookInstanceRequestPrivate(
     const SageMakerRequest::Action action, DescribeNotebookInstanceRequest * const q)
@@ -104,15 +93,10 @@ DescribeNotebookInstanceRequestPrivate::DescribeNotebookInstanceRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeNotebookInstanceRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeNotebookInstanceRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeNotebookInstanceRequest instance.
  */
 DescribeNotebookInstanceRequestPrivate::DescribeNotebookInstanceRequestPrivate(
     const DescribeNotebookInstanceRequestPrivate &other, DescribeNotebookInstanceRequest * const q)

@@ -27,10 +27,9 @@ namespace WAFRegional {
 
 /*!
  * \class QtAws::WAFRegional::UpdateIPSetRequest
- *
  * \brief The UpdateIPSetRequest class provides an interface for WAFRegional UpdateIPSet requests.
  *
- * \ingroup WAFRegional
+ * \inmodule QtAwsWAFRegional
  *
  *  This is the <i>AWS WAF Regional API Reference</i> for using AWS WAF with Elastic Load Balancing (ELB) Application Load
  *  Balancers. The AWS WAF actions and data types listed in the reference are available for protecting Application Load
@@ -44,9 +43,7 @@ namespace WAFRegional {
  */
 
 /*!
- * @brief  Constructs a new UpdateIPSetRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateIPSetRequest::UpdateIPSetRequest(const UpdateIPSetRequest &other)
     : WAFRegionalRequest(new UpdateIPSetRequestPrivate(*other.d_func(), this))
@@ -55,7 +52,7 @@ UpdateIPSetRequest::UpdateIPSetRequest(const UpdateIPSetRequest &other)
 }
 
 /*!
- * @brief  Constructs a new UpdateIPSetRequest object.
+ * Constructs a UpdateIPSetRequest object.
  */
 UpdateIPSetRequest::UpdateIPSetRequest()
     : WAFRegionalRequest(new UpdateIPSetRequestPrivate(WAFRegionalRequest::UpdateIPSetAction, this))
@@ -73,14 +70,9 @@ bool UpdateIPSetRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateIPSetResponse object.
+ * Returns a UpdateIPSetResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateIPSetResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WAFRegionalClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateIPSetRequest::response(QNetworkReply * const reply) const
 {
@@ -88,20 +80,17 @@ QtAws::Core::AwsAbstractResponse * UpdateIPSetRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::WAFRegional::UpdateIPSetRequestPrivate
+ * \brief The UpdateIPSetRequestPrivate class provides private implementation for UpdateIPSetRequest.
+ * \internal
  *
- * @class  UpdateIPSetRequestPrivate
- *
- * @brief  Private implementation for UpdateIPSetRequest.
+ * \inmodule QtAwsWAFRegional
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateIPSetRequestPrivate object.
- *
- * @param  action  WAFRegional action being performed.
- * @param  q       Pointer to this object's public UpdateIPSetRequest instance.
+ * Constructs a UpdateIPSetRequestPrivate object for WAFRegional \a action with,
+ * public implementation \a q.
  */
 UpdateIPSetRequestPrivate::UpdateIPSetRequestPrivate(
     const WAFRegionalRequest::Action action, UpdateIPSetRequest * const q)
@@ -111,15 +100,10 @@ UpdateIPSetRequestPrivate::UpdateIPSetRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateIPSetRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateIPSetRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateIPSetRequest instance.
  */
 UpdateIPSetRequestPrivate::UpdateIPSetRequestPrivate(
     const UpdateIPSetRequestPrivate &other, UpdateIPSetRequest * const q)

@@ -27,10 +27,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::PromoteReadReplicaRequest
- *
  * \brief The PromoteReadReplicaRequest class provides an interface for RDS PromoteReadReplica requests.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -101,9 +100,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new PromoteReadReplicaRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 PromoteReadReplicaRequest::PromoteReadReplicaRequest(const PromoteReadReplicaRequest &other)
     : RDSRequest(new PromoteReadReplicaRequestPrivate(*other.d_func(), this))
@@ -112,7 +109,7 @@ PromoteReadReplicaRequest::PromoteReadReplicaRequest(const PromoteReadReplicaReq
 }
 
 /*!
- * @brief  Constructs a new PromoteReadReplicaRequest object.
+ * Constructs a PromoteReadReplicaRequest object.
  */
 PromoteReadReplicaRequest::PromoteReadReplicaRequest()
     : RDSRequest(new PromoteReadReplicaRequestPrivate(RDSRequest::PromoteReadReplicaAction, this))
@@ -130,14 +127,9 @@ bool PromoteReadReplicaRequest::isValid() const
 
 
 /*!
- * @brief  Construct an PromoteReadReplicaResponse object.
+ * Returns a PromoteReadReplicaResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An PromoteReadReplicaResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RDSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * PromoteReadReplicaRequest::response(QNetworkReply * const reply) const
 {
@@ -145,20 +137,17 @@ QtAws::Core::AwsAbstractResponse * PromoteReadReplicaRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::RDS::PromoteReadReplicaRequestPrivate
+ * \brief The PromoteReadReplicaRequestPrivate class provides private implementation for PromoteReadReplicaRequest.
+ * \internal
  *
- * @class  PromoteReadReplicaRequestPrivate
- *
- * @brief  Private implementation for PromoteReadReplicaRequest.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new PromoteReadReplicaRequestPrivate object.
- *
- * @param  action  RDS action being performed.
- * @param  q       Pointer to this object's public PromoteReadReplicaRequest instance.
+ * Constructs a PromoteReadReplicaRequestPrivate object for RDS \a action with,
+ * public implementation \a q.
  */
 PromoteReadReplicaRequestPrivate::PromoteReadReplicaRequestPrivate(
     const RDSRequest::Action action, PromoteReadReplicaRequest * const q)
@@ -168,15 +157,10 @@ PromoteReadReplicaRequestPrivate::PromoteReadReplicaRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PromoteReadReplicaRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the PromoteReadReplicaRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public PromoteReadReplicaRequest instance.
  */
 PromoteReadReplicaRequestPrivate::PromoteReadReplicaRequestPrivate(
     const PromoteReadReplicaRequestPrivate &other, PromoteReadReplicaRequest * const q)

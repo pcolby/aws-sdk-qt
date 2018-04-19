@@ -27,10 +27,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::DetachPolicyRequest
- *
  * \brief The DetachPolicyRequest class provides an interface for IoT DetachPolicy requests.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -48,9 +47,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new DetachPolicyRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DetachPolicyRequest::DetachPolicyRequest(const DetachPolicyRequest &other)
     : IoTRequest(new DetachPolicyRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ DetachPolicyRequest::DetachPolicyRequest(const DetachPolicyRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DetachPolicyRequest object.
+ * Constructs a DetachPolicyRequest object.
  */
 DetachPolicyRequest::DetachPolicyRequest()
     : IoTRequest(new DetachPolicyRequestPrivate(IoTRequest::DetachPolicyAction, this))
@@ -77,14 +74,9 @@ bool DetachPolicyRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DetachPolicyResponse object.
+ * Returns a DetachPolicyResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DetachPolicyResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IoTClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DetachPolicyRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * DetachPolicyRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::IoT::DetachPolicyRequestPrivate
+ * \brief The DetachPolicyRequestPrivate class provides private implementation for DetachPolicyRequest.
+ * \internal
  *
- * @class  DetachPolicyRequestPrivate
- *
- * @brief  Private implementation for DetachPolicyRequest.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DetachPolicyRequestPrivate object.
- *
- * @param  action  IoT action being performed.
- * @param  q       Pointer to this object's public DetachPolicyRequest instance.
+ * Constructs a DetachPolicyRequestPrivate object for IoT \a action with,
+ * public implementation \a q.
  */
 DetachPolicyRequestPrivate::DetachPolicyRequestPrivate(
     const IoTRequest::Action action, DetachPolicyRequest * const q)
@@ -115,15 +104,10 @@ DetachPolicyRequestPrivate::DetachPolicyRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DetachPolicyRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DetachPolicyRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DetachPolicyRequest instance.
  */
 DetachPolicyRequestPrivate::DetachPolicyRequestPrivate(
     const DetachPolicyRequestPrivate &other, DetachPolicyRequest * const q)

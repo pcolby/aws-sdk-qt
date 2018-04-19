@@ -27,10 +27,9 @@ namespace Kinesis {
 
 /*!
  * \class QtAws::Kinesis::DescribeStreamRequest
- *
  * \brief The DescribeStreamRequest class provides an interface for Kinesis DescribeStream requests.
  *
- * \ingroup Kinesis
+ * \inmodule QtAwsKinesis
  *
  *  <fullname>Amazon Kinesis Data Streams Service API Reference</fullname>
  * 
@@ -40,9 +39,7 @@ namespace Kinesis {
  */
 
 /*!
- * @brief  Constructs a new DescribeStreamRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeStreamRequest::DescribeStreamRequest(const DescribeStreamRequest &other)
     : KinesisRequest(new DescribeStreamRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ DescribeStreamRequest::DescribeStreamRequest(const DescribeStreamRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DescribeStreamRequest object.
+ * Constructs a DescribeStreamRequest object.
  */
 DescribeStreamRequest::DescribeStreamRequest()
     : KinesisRequest(new DescribeStreamRequestPrivate(KinesisRequest::DescribeStreamAction, this))
@@ -69,14 +66,9 @@ bool DescribeStreamRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeStreamResponse object.
+ * Returns a DescribeStreamResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeStreamResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  KinesisClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeStreamRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * DescribeStreamRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::Kinesis::DescribeStreamRequestPrivate
+ * \brief The DescribeStreamRequestPrivate class provides private implementation for DescribeStreamRequest.
+ * \internal
  *
- * @class  DescribeStreamRequestPrivate
- *
- * @brief  Private implementation for DescribeStreamRequest.
+ * \inmodule QtAwsKinesis
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeStreamRequestPrivate object.
- *
- * @param  action  Kinesis action being performed.
- * @param  q       Pointer to this object's public DescribeStreamRequest instance.
+ * Constructs a DescribeStreamRequestPrivate object for Kinesis \a action with,
+ * public implementation \a q.
  */
 DescribeStreamRequestPrivate::DescribeStreamRequestPrivate(
     const KinesisRequest::Action action, DescribeStreamRequest * const q)
@@ -107,15 +96,10 @@ DescribeStreamRequestPrivate::DescribeStreamRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeStreamRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeStreamRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeStreamRequest instance.
  */
 DescribeStreamRequestPrivate::DescribeStreamRequestPrivate(
     const DescribeStreamRequestPrivate &other, DescribeStreamRequest * const q)

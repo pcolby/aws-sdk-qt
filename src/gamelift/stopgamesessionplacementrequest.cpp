@@ -27,10 +27,9 @@ namespace GameLift {
 
 /*!
  * \class QtAws::GameLift::StopGameSessionPlacementRequest
- *
  * \brief The StopGameSessionPlacementRequest class provides an interface for GameLift StopGameSessionPlacement requests.
  *
- * \ingroup GameLift
+ * \inmodule QtAwsGameLift
  *
  *  <fullname>Amazon GameLift Service</fullname>
  * 
@@ -473,9 +472,7 @@ namespace GameLift {
  */
 
 /*!
- * @brief  Constructs a new StopGameSessionPlacementRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 StopGameSessionPlacementRequest::StopGameSessionPlacementRequest(const StopGameSessionPlacementRequest &other)
     : GameLiftRequest(new StopGameSessionPlacementRequestPrivate(*other.d_func(), this))
@@ -484,7 +481,7 @@ StopGameSessionPlacementRequest::StopGameSessionPlacementRequest(const StopGameS
 }
 
 /*!
- * @brief  Constructs a new StopGameSessionPlacementRequest object.
+ * Constructs a StopGameSessionPlacementRequest object.
  */
 StopGameSessionPlacementRequest::StopGameSessionPlacementRequest()
     : GameLiftRequest(new StopGameSessionPlacementRequestPrivate(GameLiftRequest::StopGameSessionPlacementAction, this))
@@ -502,14 +499,9 @@ bool StopGameSessionPlacementRequest::isValid() const
 
 
 /*!
- * @brief  Construct an StopGameSessionPlacementResponse object.
+ * Returns a StopGameSessionPlacementResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An StopGameSessionPlacementResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GameLiftClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * StopGameSessionPlacementRequest::response(QNetworkReply * const reply) const
 {
@@ -517,20 +509,17 @@ QtAws::Core::AwsAbstractResponse * StopGameSessionPlacementRequest::response(QNe
 }
 
 /*!
- * @internal
+ * \class QtAws::GameLift::StopGameSessionPlacementRequestPrivate
+ * \brief The StopGameSessionPlacementRequestPrivate class provides private implementation for StopGameSessionPlacementRequest.
+ * \internal
  *
- * @class  StopGameSessionPlacementRequestPrivate
- *
- * @brief  Private implementation for StopGameSessionPlacementRequest.
+ * \inmodule QtAwsGameLift
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new StopGameSessionPlacementRequestPrivate object.
- *
- * @param  action  GameLift action being performed.
- * @param  q       Pointer to this object's public StopGameSessionPlacementRequest instance.
+ * Constructs a StopGameSessionPlacementRequestPrivate object for GameLift \a action with,
+ * public implementation \a q.
  */
 StopGameSessionPlacementRequestPrivate::StopGameSessionPlacementRequestPrivate(
     const GameLiftRequest::Action action, StopGameSessionPlacementRequest * const q)
@@ -540,15 +529,10 @@ StopGameSessionPlacementRequestPrivate::StopGameSessionPlacementRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StopGameSessionPlacementRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the StopGameSessionPlacementRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public StopGameSessionPlacementRequest instance.
  */
 StopGameSessionPlacementRequestPrivate::StopGameSessionPlacementRequestPrivate(
     const StopGameSessionPlacementRequestPrivate &other, StopGameSessionPlacementRequest * const q)

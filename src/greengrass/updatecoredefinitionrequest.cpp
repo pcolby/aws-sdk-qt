@@ -27,10 +27,9 @@ namespace Greengrass {
 
 /*!
  * \class QtAws::Greengrass::UpdateCoreDefinitionRequest
- *
  * \brief The UpdateCoreDefinitionRequest class provides an interface for Greengrass UpdateCoreDefinition requests.
  *
- * \ingroup Greengrass
+ * \inmodule QtAwsGreengrass
  *
  *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
  *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
@@ -40,9 +39,7 @@ namespace Greengrass {
  */
 
 /*!
- * @brief  Constructs a new UpdateCoreDefinitionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateCoreDefinitionRequest::UpdateCoreDefinitionRequest(const UpdateCoreDefinitionRequest &other)
     : GreengrassRequest(new UpdateCoreDefinitionRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ UpdateCoreDefinitionRequest::UpdateCoreDefinitionRequest(const UpdateCoreDefinit
 }
 
 /*!
- * @brief  Constructs a new UpdateCoreDefinitionRequest object.
+ * Constructs a UpdateCoreDefinitionRequest object.
  */
 UpdateCoreDefinitionRequest::UpdateCoreDefinitionRequest()
     : GreengrassRequest(new UpdateCoreDefinitionRequestPrivate(GreengrassRequest::UpdateCoreDefinitionAction, this))
@@ -69,14 +66,9 @@ bool UpdateCoreDefinitionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateCoreDefinitionResponse object.
+ * Returns a UpdateCoreDefinitionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateCoreDefinitionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GreengrassClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateCoreDefinitionRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * UpdateCoreDefinitionRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::Greengrass::UpdateCoreDefinitionRequestPrivate
+ * \brief The UpdateCoreDefinitionRequestPrivate class provides private implementation for UpdateCoreDefinitionRequest.
+ * \internal
  *
- * @class  UpdateCoreDefinitionRequestPrivate
- *
- * @brief  Private implementation for UpdateCoreDefinitionRequest.
+ * \inmodule QtAwsGreengrass
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateCoreDefinitionRequestPrivate object.
- *
- * @param  action  Greengrass action being performed.
- * @param  q       Pointer to this object's public UpdateCoreDefinitionRequest instance.
+ * Constructs a UpdateCoreDefinitionRequestPrivate object for Greengrass \a action with,
+ * public implementation \a q.
  */
 UpdateCoreDefinitionRequestPrivate::UpdateCoreDefinitionRequestPrivate(
     const GreengrassRequest::Action action, UpdateCoreDefinitionRequest * const q)
@@ -107,15 +96,10 @@ UpdateCoreDefinitionRequestPrivate::UpdateCoreDefinitionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateCoreDefinitionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateCoreDefinitionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateCoreDefinitionRequest instance.
  */
 UpdateCoreDefinitionRequestPrivate::UpdateCoreDefinitionRequestPrivate(
     const UpdateCoreDefinitionRequestPrivate &other, UpdateCoreDefinitionRequest * const q)

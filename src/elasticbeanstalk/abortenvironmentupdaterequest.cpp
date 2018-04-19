@@ -27,10 +27,9 @@ namespace ElasticBeanstalk {
 
 /*!
  * \class QtAws::ElasticBeanstalk::AbortEnvironmentUpdateRequest
- *
  * \brief The AbortEnvironmentUpdateRequest class provides an interface for ElasticBeanstalk AbortEnvironmentUpdate requests.
  *
- * \ingroup ElasticBeanstalk
+ * \inmodule QtAwsElasticBeanstalk
  *
  *  <fullname>AWS Elastic Beanstalk</fullname>
  * 
@@ -59,9 +58,7 @@ namespace ElasticBeanstalk {
  */
 
 /*!
- * @brief  Constructs a new AbortEnvironmentUpdateRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AbortEnvironmentUpdateRequest::AbortEnvironmentUpdateRequest(const AbortEnvironmentUpdateRequest &other)
     : ElasticBeanstalkRequest(new AbortEnvironmentUpdateRequestPrivate(*other.d_func(), this))
@@ -70,7 +67,7 @@ AbortEnvironmentUpdateRequest::AbortEnvironmentUpdateRequest(const AbortEnvironm
 }
 
 /*!
- * @brief  Constructs a new AbortEnvironmentUpdateRequest object.
+ * Constructs a AbortEnvironmentUpdateRequest object.
  */
 AbortEnvironmentUpdateRequest::AbortEnvironmentUpdateRequest()
     : ElasticBeanstalkRequest(new AbortEnvironmentUpdateRequestPrivate(ElasticBeanstalkRequest::AbortEnvironmentUpdateAction, this))
@@ -88,14 +85,9 @@ bool AbortEnvironmentUpdateRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AbortEnvironmentUpdateResponse object.
+ * Returns a AbortEnvironmentUpdateResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AbortEnvironmentUpdateResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ElasticBeanstalkClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AbortEnvironmentUpdateRequest::response(QNetworkReply * const reply) const
 {
@@ -103,20 +95,17 @@ QtAws::Core::AwsAbstractResponse * AbortEnvironmentUpdateRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::ElasticBeanstalk::AbortEnvironmentUpdateRequestPrivate
+ * \brief The AbortEnvironmentUpdateRequestPrivate class provides private implementation for AbortEnvironmentUpdateRequest.
+ * \internal
  *
- * @class  AbortEnvironmentUpdateRequestPrivate
- *
- * @brief  Private implementation for AbortEnvironmentUpdateRequest.
+ * \inmodule QtAwsElasticBeanstalk
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AbortEnvironmentUpdateRequestPrivate object.
- *
- * @param  action  ElasticBeanstalk action being performed.
- * @param  q       Pointer to this object's public AbortEnvironmentUpdateRequest instance.
+ * Constructs a AbortEnvironmentUpdateRequestPrivate object for ElasticBeanstalk \a action with,
+ * public implementation \a q.
  */
 AbortEnvironmentUpdateRequestPrivate::AbortEnvironmentUpdateRequestPrivate(
     const ElasticBeanstalkRequest::Action action, AbortEnvironmentUpdateRequest * const q)
@@ -126,15 +115,10 @@ AbortEnvironmentUpdateRequestPrivate::AbortEnvironmentUpdateRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AbortEnvironmentUpdateRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AbortEnvironmentUpdateRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AbortEnvironmentUpdateRequest instance.
  */
 AbortEnvironmentUpdateRequestPrivate::AbortEnvironmentUpdateRequestPrivate(
     const AbortEnvironmentUpdateRequestPrivate &other, AbortEnvironmentUpdateRequest * const q)

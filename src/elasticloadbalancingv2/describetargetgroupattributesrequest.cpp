@@ -27,10 +27,9 @@ namespace ElasticLoadBalancingv2 {
 
 /*!
  * \class QtAws::ElasticLoadBalancingv2::DescribeTargetGroupAttributesRequest
- *
  * \brief The DescribeTargetGroupAttributesRequest class provides an interface for ElasticLoadBalancingv2 DescribeTargetGroupAttributes requests.
  *
- * \ingroup ElasticLoadBalancingv2
+ * \inmodule QtAwsElasticLoadBalancingv2
  *
  *  <fullname>Elastic Load Balancing</fullname>
  * 
@@ -105,9 +104,7 @@ namespace ElasticLoadBalancingv2 {
  */
 
 /*!
- * @brief  Constructs a new DescribeTargetGroupAttributesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeTargetGroupAttributesRequest::DescribeTargetGroupAttributesRequest(const DescribeTargetGroupAttributesRequest &other)
     : ElasticLoadBalancingv2Request(new DescribeTargetGroupAttributesRequestPrivate(*other.d_func(), this))
@@ -116,7 +113,7 @@ DescribeTargetGroupAttributesRequest::DescribeTargetGroupAttributesRequest(const
 }
 
 /*!
- * @brief  Constructs a new DescribeTargetGroupAttributesRequest object.
+ * Constructs a DescribeTargetGroupAttributesRequest object.
  */
 DescribeTargetGroupAttributesRequest::DescribeTargetGroupAttributesRequest()
     : ElasticLoadBalancingv2Request(new DescribeTargetGroupAttributesRequestPrivate(ElasticLoadBalancingv2Request::DescribeTargetGroupAttributesAction, this))
@@ -134,14 +131,9 @@ bool DescribeTargetGroupAttributesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeTargetGroupAttributesResponse object.
+ * Returns a DescribeTargetGroupAttributesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeTargetGroupAttributesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ElasticLoadBalancingv2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeTargetGroupAttributesRequest::response(QNetworkReply * const reply) const
 {
@@ -149,20 +141,17 @@ QtAws::Core::AwsAbstractResponse * DescribeTargetGroupAttributesRequest::respons
 }
 
 /*!
- * @internal
+ * \class QtAws::ElasticLoadBalancingv2::DescribeTargetGroupAttributesRequestPrivate
+ * \brief The DescribeTargetGroupAttributesRequestPrivate class provides private implementation for DescribeTargetGroupAttributesRequest.
+ * \internal
  *
- * @class  DescribeTargetGroupAttributesRequestPrivate
- *
- * @brief  Private implementation for DescribeTargetGroupAttributesRequest.
+ * \inmodule QtAwsElasticLoadBalancingv2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeTargetGroupAttributesRequestPrivate object.
- *
- * @param  action  ElasticLoadBalancingv2 action being performed.
- * @param  q       Pointer to this object's public DescribeTargetGroupAttributesRequest instance.
+ * Constructs a DescribeTargetGroupAttributesRequestPrivate object for ElasticLoadBalancingv2 \a action with,
+ * public implementation \a q.
  */
 DescribeTargetGroupAttributesRequestPrivate::DescribeTargetGroupAttributesRequestPrivate(
     const ElasticLoadBalancingv2Request::Action action, DescribeTargetGroupAttributesRequest * const q)
@@ -172,15 +161,10 @@ DescribeTargetGroupAttributesRequestPrivate::DescribeTargetGroupAttributesReques
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeTargetGroupAttributesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeTargetGroupAttributesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeTargetGroupAttributesRequest instance.
  */
 DescribeTargetGroupAttributesRequestPrivate::DescribeTargetGroupAttributesRequestPrivate(
     const DescribeTargetGroupAttributesRequestPrivate &other, DescribeTargetGroupAttributesRequest * const q)

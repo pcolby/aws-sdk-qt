@@ -27,10 +27,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::AuthorizeDBSecurityGroupIngressRequest
- *
  * \brief The AuthorizeDBSecurityGroupIngressRequest class provides an interface for RDS AuthorizeDBSecurityGroupIngress requests.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -101,9 +100,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new AuthorizeDBSecurityGroupIngressRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AuthorizeDBSecurityGroupIngressRequest::AuthorizeDBSecurityGroupIngressRequest(const AuthorizeDBSecurityGroupIngressRequest &other)
     : RDSRequest(new AuthorizeDBSecurityGroupIngressRequestPrivate(*other.d_func(), this))
@@ -112,7 +109,7 @@ AuthorizeDBSecurityGroupIngressRequest::AuthorizeDBSecurityGroupIngressRequest(c
 }
 
 /*!
- * @brief  Constructs a new AuthorizeDBSecurityGroupIngressRequest object.
+ * Constructs a AuthorizeDBSecurityGroupIngressRequest object.
  */
 AuthorizeDBSecurityGroupIngressRequest::AuthorizeDBSecurityGroupIngressRequest()
     : RDSRequest(new AuthorizeDBSecurityGroupIngressRequestPrivate(RDSRequest::AuthorizeDBSecurityGroupIngressAction, this))
@@ -130,14 +127,9 @@ bool AuthorizeDBSecurityGroupIngressRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AuthorizeDBSecurityGroupIngressResponse object.
+ * Returns a AuthorizeDBSecurityGroupIngressResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AuthorizeDBSecurityGroupIngressResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RDSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AuthorizeDBSecurityGroupIngressRequest::response(QNetworkReply * const reply) const
 {
@@ -145,20 +137,17 @@ QtAws::Core::AwsAbstractResponse * AuthorizeDBSecurityGroupIngressRequest::respo
 }
 
 /*!
- * @internal
+ * \class QtAws::RDS::AuthorizeDBSecurityGroupIngressRequestPrivate
+ * \brief The AuthorizeDBSecurityGroupIngressRequestPrivate class provides private implementation for AuthorizeDBSecurityGroupIngressRequest.
+ * \internal
  *
- * @class  AuthorizeDBSecurityGroupIngressRequestPrivate
- *
- * @brief  Private implementation for AuthorizeDBSecurityGroupIngressRequest.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AuthorizeDBSecurityGroupIngressRequestPrivate object.
- *
- * @param  action  RDS action being performed.
- * @param  q       Pointer to this object's public AuthorizeDBSecurityGroupIngressRequest instance.
+ * Constructs a AuthorizeDBSecurityGroupIngressRequestPrivate object for RDS \a action with,
+ * public implementation \a q.
  */
 AuthorizeDBSecurityGroupIngressRequestPrivate::AuthorizeDBSecurityGroupIngressRequestPrivate(
     const RDSRequest::Action action, AuthorizeDBSecurityGroupIngressRequest * const q)
@@ -168,15 +157,10 @@ AuthorizeDBSecurityGroupIngressRequestPrivate::AuthorizeDBSecurityGroupIngressRe
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AuthorizeDBSecurityGroupIngressRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AuthorizeDBSecurityGroupIngressRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AuthorizeDBSecurityGroupIngressRequest instance.
  */
 AuthorizeDBSecurityGroupIngressRequestPrivate::AuthorizeDBSecurityGroupIngressRequestPrivate(
     const AuthorizeDBSecurityGroupIngressRequestPrivate &other, AuthorizeDBSecurityGroupIngressRequest * const q)

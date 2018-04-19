@@ -27,10 +27,9 @@ namespace Budgets {
 
 /*!
  * \class QtAws::Budgets::DeleteNotificationRequest
- *
  * \brief The DeleteNotificationRequest class provides an interface for Budgets DeleteNotification requests.
  *
- * \ingroup Budgets
+ * \inmodule QtAwsBudgets
  *
  *  Budgets enable you to plan your service usage, service costs, and your RI utilization. You can also track how close your
  *  plan is to your budgeted amount or to the free tier limits. Budgets provide you with a quick way to see your
@@ -75,9 +74,7 @@ namespace Budgets {
  */
 
 /*!
- * @brief  Constructs a new DeleteNotificationRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteNotificationRequest::DeleteNotificationRequest(const DeleteNotificationRequest &other)
     : BudgetsRequest(new DeleteNotificationRequestPrivate(*other.d_func(), this))
@@ -86,7 +83,7 @@ DeleteNotificationRequest::DeleteNotificationRequest(const DeleteNotificationReq
 }
 
 /*!
- * @brief  Constructs a new DeleteNotificationRequest object.
+ * Constructs a DeleteNotificationRequest object.
  */
 DeleteNotificationRequest::DeleteNotificationRequest()
     : BudgetsRequest(new DeleteNotificationRequestPrivate(BudgetsRequest::DeleteNotificationAction, this))
@@ -104,14 +101,9 @@ bool DeleteNotificationRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteNotificationResponse object.
+ * Returns a DeleteNotificationResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteNotificationResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  BudgetsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteNotificationRequest::response(QNetworkReply * const reply) const
 {
@@ -119,20 +111,17 @@ QtAws::Core::AwsAbstractResponse * DeleteNotificationRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::Budgets::DeleteNotificationRequestPrivate
+ * \brief The DeleteNotificationRequestPrivate class provides private implementation for DeleteNotificationRequest.
+ * \internal
  *
- * @class  DeleteNotificationRequestPrivate
- *
- * @brief  Private implementation for DeleteNotificationRequest.
+ * \inmodule QtAwsBudgets
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteNotificationRequestPrivate object.
- *
- * @param  action  Budgets action being performed.
- * @param  q       Pointer to this object's public DeleteNotificationRequest instance.
+ * Constructs a DeleteNotificationRequestPrivate object for Budgets \a action with,
+ * public implementation \a q.
  */
 DeleteNotificationRequestPrivate::DeleteNotificationRequestPrivate(
     const BudgetsRequest::Action action, DeleteNotificationRequest * const q)
@@ -142,15 +131,10 @@ DeleteNotificationRequestPrivate::DeleteNotificationRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteNotificationRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteNotificationRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteNotificationRequest instance.
  */
 DeleteNotificationRequestPrivate::DeleteNotificationRequestPrivate(
     const DeleteNotificationRequestPrivate &other, DeleteNotificationRequest * const q)

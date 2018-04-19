@@ -27,10 +27,9 @@ namespace Rekognition {
 
 /*!
  * \class QtAws::Rekognition::DetectTextRequest
- *
  * \brief The DetectTextRequest class provides an interface for Rekognition DetectText requests.
  *
- * \ingroup Rekognition
+ * \inmodule QtAwsRekognition
  *
  *  This is the Amazon Rekognition API
  *
@@ -38,9 +37,7 @@ namespace Rekognition {
  */
 
 /*!
- * @brief  Constructs a new DetectTextRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DetectTextRequest::DetectTextRequest(const DetectTextRequest &other)
     : RekognitionRequest(new DetectTextRequestPrivate(*other.d_func(), this))
@@ -49,7 +46,7 @@ DetectTextRequest::DetectTextRequest(const DetectTextRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DetectTextRequest object.
+ * Constructs a DetectTextRequest object.
  */
 DetectTextRequest::DetectTextRequest()
     : RekognitionRequest(new DetectTextRequestPrivate(RekognitionRequest::DetectTextAction, this))
@@ -67,14 +64,9 @@ bool DetectTextRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DetectTextResponse object.
+ * Returns a DetectTextResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DetectTextResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RekognitionClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DetectTextRequest::response(QNetworkReply * const reply) const
 {
@@ -82,20 +74,17 @@ QtAws::Core::AwsAbstractResponse * DetectTextRequest::response(QNetworkReply * c
 }
 
 /*!
- * @internal
+ * \class QtAws::Rekognition::DetectTextRequestPrivate
+ * \brief The DetectTextRequestPrivate class provides private implementation for DetectTextRequest.
+ * \internal
  *
- * @class  DetectTextRequestPrivate
- *
- * @brief  Private implementation for DetectTextRequest.
+ * \inmodule QtAwsRekognition
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DetectTextRequestPrivate object.
- *
- * @param  action  Rekognition action being performed.
- * @param  q       Pointer to this object's public DetectTextRequest instance.
+ * Constructs a DetectTextRequestPrivate object for Rekognition \a action with,
+ * public implementation \a q.
  */
 DetectTextRequestPrivate::DetectTextRequestPrivate(
     const RekognitionRequest::Action action, DetectTextRequest * const q)
@@ -105,15 +94,10 @@ DetectTextRequestPrivate::DetectTextRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DetectTextRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DetectTextRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DetectTextRequest instance.
  */
 DetectTextRequestPrivate::DetectTextRequestPrivate(
     const DetectTextRequestPrivate &other, DetectTextRequest * const q)

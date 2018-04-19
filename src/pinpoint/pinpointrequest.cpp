@@ -25,16 +25,86 @@ namespace Pinpoint {
 
 /*!
  * \class QtAws::Pinpoint::PinpointRequest
- *
  * \brief The PinpointRequest class provides an interface for Pinpoint requests.
  *
- * \ingroup Pinpoint
+ * \inmodule QtAwsPinpoint
  */
 
 /*!
- * @brief  Constructs a new PinpointRequest object.
+ * \enum PinpointRequest::Action
  *
- * @param  action  The Pinpoint action to request.
+ * This enum describes the actions that can be performed as Pinpoint
+ * requests.
+ *
+ * \value CreateAppAction Pinpoint CreateApp action.
+ * \value CreateCampaignAction Pinpoint CreateCampaign action.
+ * \value CreateExportJobAction Pinpoint CreateExportJob action.
+ * \value CreateImportJobAction Pinpoint CreateImportJob action.
+ * \value CreateSegmentAction Pinpoint CreateSegment action.
+ * \value DeleteAdmChannelAction Pinpoint DeleteAdmChannel action.
+ * \value DeleteApnsChannelAction Pinpoint DeleteApnsChannel action.
+ * \value DeleteApnsSandboxChannelAction Pinpoint DeleteApnsSandboxChannel action.
+ * \value DeleteApnsVoipChannelAction Pinpoint DeleteApnsVoipChannel action.
+ * \value DeleteApnsVoipSandboxChannelAction Pinpoint DeleteApnsVoipSandboxChannel action.
+ * \value DeleteAppAction Pinpoint DeleteApp action.
+ * \value DeleteBaiduChannelAction Pinpoint DeleteBaiduChannel action.
+ * \value DeleteCampaignAction Pinpoint DeleteCampaign action.
+ * \value DeleteEmailChannelAction Pinpoint DeleteEmailChannel action.
+ * \value DeleteEndpointAction Pinpoint DeleteEndpoint action.
+ * \value DeleteEventStreamAction Pinpoint DeleteEventStream action.
+ * \value DeleteGcmChannelAction Pinpoint DeleteGcmChannel action.
+ * \value DeleteSegmentAction Pinpoint DeleteSegment action.
+ * \value DeleteSmsChannelAction Pinpoint DeleteSmsChannel action.
+ * \value GetAdmChannelAction Pinpoint GetAdmChannel action.
+ * \value GetApnsChannelAction Pinpoint GetApnsChannel action.
+ * \value GetApnsSandboxChannelAction Pinpoint GetApnsSandboxChannel action.
+ * \value GetApnsVoipChannelAction Pinpoint GetApnsVoipChannel action.
+ * \value GetApnsVoipSandboxChannelAction Pinpoint GetApnsVoipSandboxChannel action.
+ * \value GetAppAction Pinpoint GetApp action.
+ * \value GetApplicationSettingsAction Pinpoint GetApplicationSettings action.
+ * \value GetAppsAction Pinpoint GetApps action.
+ * \value GetBaiduChannelAction Pinpoint GetBaiduChannel action.
+ * \value GetCampaignAction Pinpoint GetCampaign action.
+ * \value GetCampaignActivitiesAction Pinpoint GetCampaignActivities action.
+ * \value GetCampaignVersionAction Pinpoint GetCampaignVersion action.
+ * \value GetCampaignVersionsAction Pinpoint GetCampaignVersions action.
+ * \value GetCampaignsAction Pinpoint GetCampaigns action.
+ * \value GetEmailChannelAction Pinpoint GetEmailChannel action.
+ * \value GetEndpointAction Pinpoint GetEndpoint action.
+ * \value GetEventStreamAction Pinpoint GetEventStream action.
+ * \value GetExportJobAction Pinpoint GetExportJob action.
+ * \value GetExportJobsAction Pinpoint GetExportJobs action.
+ * \value GetGcmChannelAction Pinpoint GetGcmChannel action.
+ * \value GetImportJobAction Pinpoint GetImportJob action.
+ * \value GetImportJobsAction Pinpoint GetImportJobs action.
+ * \value GetSegmentAction Pinpoint GetSegment action.
+ * \value GetSegmentExportJobsAction Pinpoint GetSegmentExportJobs action.
+ * \value GetSegmentImportJobsAction Pinpoint GetSegmentImportJobs action.
+ * \value GetSegmentVersionAction Pinpoint GetSegmentVersion action.
+ * \value GetSegmentVersionsAction Pinpoint GetSegmentVersions action.
+ * \value GetSegmentsAction Pinpoint GetSegments action.
+ * \value GetSmsChannelAction Pinpoint GetSmsChannel action.
+ * \value PutEventStreamAction Pinpoint PutEventStream action.
+ * \value SendMessagesAction Pinpoint SendMessages action.
+ * \value SendUsersMessagesAction Pinpoint SendUsersMessages action.
+ * \value UpdateAdmChannelAction Pinpoint UpdateAdmChannel action.
+ * \value UpdateApnsChannelAction Pinpoint UpdateApnsChannel action.
+ * \value UpdateApnsSandboxChannelAction Pinpoint UpdateApnsSandboxChannel action.
+ * \value UpdateApnsVoipChannelAction Pinpoint UpdateApnsVoipChannel action.
+ * \value UpdateApnsVoipSandboxChannelAction Pinpoint UpdateApnsVoipSandboxChannel action.
+ * \value UpdateApplicationSettingsAction Pinpoint UpdateApplicationSettings action.
+ * \value UpdateBaiduChannelAction Pinpoint UpdateBaiduChannel action.
+ * \value UpdateCampaignAction Pinpoint UpdateCampaign action.
+ * \value UpdateEmailChannelAction Pinpoint UpdateEmailChannel action.
+ * \value UpdateEndpointAction Pinpoint UpdateEndpoint action.
+ * \value UpdateEndpointsBatchAction Pinpoint UpdateEndpointsBatch action.
+ * \value UpdateGcmChannelAction Pinpoint UpdateGcmChannel action.
+ * \value UpdateSegmentAction Pinpoint UpdateSegment action.
+ * \value UpdateSmsChannelAction Pinpoint UpdateSmsChannel action.
+ */
+
+/*!
+ * Constructs a[n] PinpointRequest object for Pinpoint \a action.
  */
 PinpointRequest::PinpointRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new PinpointRequestPrivate(action, this))
@@ -43,9 +113,7 @@ PinpointRequest::PinpointRequest(const Action action)
 }
 
 /*!
- * @brief  Constructs a new PinpointRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 PinpointRequest::PinpointRequest(const PinpointRequest &other)
     : QtAws::Core::AwsAbstractRequest(new PinpointRequestPrivate(*other.d_func(), this))
@@ -54,13 +122,7 @@ PinpointRequest::PinpointRequest(const PinpointRequest &other)
 }
 
 /*!
- * @brief  Assignment operator.
- *
- * Assigns \a other to \c this.
- *
- * @param  other  Instance to copy.
- *
- * @return  A reference to \c this.
+ * Sets the PinpointRequest object to be equal to \a other.
  */
 PinpointRequest& PinpointRequest::operator=(const PinpointRequest &other)
 {
@@ -72,14 +134,10 @@ PinpointRequest& PinpointRequest::operator=(const PinpointRequest &other)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PinpointRequest object.
+ * Constructs aa PinpointRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from PinpointRequestPrivate.
- *
- * @param  d  Pointer to private data (aka D-Pointer).
  */
 PinpointRequest::PinpointRequest(PinpointRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
@@ -87,7 +145,7 @@ PinpointRequest::PinpointRequest(PinpointRequestPrivate * const d) : QtAws::Core
 }
 
 /*!
- * \brief Returns the Pinpoint action to be performed by this request.
+ * Returns the Pinpoint action to be performed by this request.
  */
 PinpointRequest::Action PinpointRequest::action() const
 {
@@ -96,7 +154,7 @@ PinpointRequest::Action PinpointRequest::action() const
 }
 
 /*!
- * \brief Returns the name of the Pinpoint action to be performed by this request.
+ * Returns the name of the Pinpoint action to be performed by this request.
  */
 QString PinpointRequest::actionString() const
 {
@@ -104,7 +162,7 @@ QString PinpointRequest::actionString() const
 }
 
 /*!
- * \brief Returns the Pinpoint API version implemented by this request.
+ * Returns the Pinpoint API version implemented by this request.
  */
 QString PinpointRequest::apiVersion() const
 {
@@ -113,7 +171,7 @@ QString PinpointRequest::apiVersion() const
 }
 
 /*!
- * @brief Set the Pinpoint action to be performed by this request to \a action.
+ * Sets the Pinpoint action to be performed by this request to \a action.
  */
 void PinpointRequest::setAction(const Action action)
 {
@@ -122,7 +180,7 @@ void PinpointRequest::setAction(const Action action)
 }
 
 /*!
- * Set the Pinpoint API version to include in this request to \a version.
+ * Sets the Pinpoint API version to include in this request to \a version.
  */
 void PinpointRequest::setApiVersion(const QString &version)
 {
@@ -131,7 +189,7 @@ void PinpointRequest::setApiVersion(const QString &version)
 }
 
 /*!
- * \brief Returns \c true if this request is the same as \a other.
+ * Returns \c true if this request is equal to \a other; \c false otherwise.
  *
  * Note, most derived *Request classes do not need to provider their own
  * implementations of this function, since most such request classes rely on
@@ -146,8 +204,8 @@ bool PinpointRequest::operator==(const PinpointRequest &other) const
             (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
-/*!
- * @brief  Check if \a queueName is a valid Pinpoint queue name.
+/*
+ * Returns \c tue if \a queueName is a valid Pinpoint queue name.
  *
  * @par From Pinpoint FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
@@ -166,9 +224,8 @@ bool PinpointRequest::operator==(const PinpointRequest &other) const
 }*/
 
 /*!
- * \brief Removes the a \a name parameter from this request.
- *
- * Returns the count of paramters removed (typically \c 0 or \c 1).
+ * Removes the a \a name parameter from the request, then returns the number of
+ * paramters removed (typically \c 0 or \c 1).
  */
 int PinpointRequest::clearParameter(const QString &name)
 {
@@ -177,7 +234,7 @@ int PinpointRequest::clearParameter(const QString &name)
 }
 
 /*!
- * \brief Removes all parameters from this request.
+ * Removes all parameters from the request.
  */
 void PinpointRequest::clearParameters()
 {
@@ -186,7 +243,7 @@ void PinpointRequest::clearParameters()
 }
 
 /*!
- * \brief Returns the value of the \n name pararemter if set, otherwise \a defaultValue.
+ * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
 QVariant PinpointRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
@@ -195,7 +252,7 @@ QVariant PinpointRequest::parameter(const QString &name, const QVariant &default
 }
 
 /*!
- * \brief Returns a map of parameters included in this request.
+ * Returns the parameters included in this request.
  */
 const QVariantMap &PinpointRequest::parameters() const
 {
@@ -204,7 +261,7 @@ const QVariantMap &PinpointRequest::parameters() const
 }
 
 /*!
- * \brief Sets the \a name parameter to \a value.
+ * Sets the \a name parameter to \a value.
  */
 void PinpointRequest::setParameter(const QString &name, const QVariant &value)
 {
@@ -213,9 +270,8 @@ void PinpointRequest::setParameter(const QString &name, const QVariant &value)
 }
 
 /*!
- * \brief Sets the map of paramters for this request to \a parameters.
- *
- * Any request parameters set previously will be discarded.
+ * Sets the paramters for this request to \a parameters. Any request parameters
+ * set previously will be discarded.
  */
 void PinpointRequest::setParameters(const QVariantMap &parameters)
 {
@@ -224,11 +280,12 @@ void PinpointRequest::setParameters(const QVariantMap &parameters)
 }
 
 /*!
- * \brief Returns a network request for this Pinpoint request using the given \a endpoint.
+ * Returns a network request for the Pinpoint request using the given
+ * \a endpoint.
  *
- * This Pinpoint implementation builds request URLs by combining the common query
- * parameters (such as Action and Version), with any that have been added (via
- * setParameter) by child classes.
+ * This Pinpoint implementation builds request URLs by combining the
+ * common query parameters (such as Action and Version), with any that have
+ * been added (via setParameter) by child classes.
  */
 QNetworkRequest PinpointRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -239,17 +296,16 @@ QNetworkRequest PinpointRequest::unsignedRequest(const QUrl &endpoint) const
 }
 
 /*!
+ * \class QtAws::Pinpoint::PinpointRequestPrivate
+ * \brief The PinpointRequestPrivate class provides private implementation for PinpointRequest.
  * \internal
  *
- * \class  PinpointRequestPrivate
- *
- * \brief  Private implementation for PinpointRequest.
+ * \inmodule QtAwsPinpoint
  */
 
 /*!
- * \internal
- *
- * \brief Constructs a new PinpointRequestPrivate object.
+ * Constructs a PinpointRequestPrivate object for Pinpoint \a action with,
+ * public implementation \a q.
  */
 PinpointRequestPrivate::PinpointRequestPrivate(const PinpointRequest::Action action, PinpointRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
@@ -258,9 +314,7 @@ PinpointRequestPrivate::PinpointRequestPrivate(const PinpointRequest::Action act
 }
 
 /*!
- * \internal
- *
- * \brief Constructs a new PinpointRequestPrivate object, copying an existing one.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
@@ -276,15 +330,12 @@ PinpointRequestPrivate::PinpointRequestPrivate(const PinpointRequestPrivate &oth
 }
 
 /*!
- * \internal
- *
- * \brief Returns a string representing \a action.
+ * Returns a string represention of \a action, or a null string if \a action is
+ * invalid.
  *
  * This function converts PinpointRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the Pinpoint service's Action
  * query parameters.
- *
- * @return A string representing \a action, or a null string if \a action is invalid.
  */
 QString PinpointRequestPrivate::toString(const PinpointRequest::Action &action)
 {

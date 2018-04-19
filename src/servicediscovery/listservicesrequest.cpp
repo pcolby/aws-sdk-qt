@@ -27,10 +27,9 @@ namespace ServiceDiscovery {
 
 /*!
  * \class QtAws::ServiceDiscovery::ListServicesRequest
- *
  * \brief The ListServicesRequest class provides an interface for ServiceDiscovery ListServices requests.
  *
- * \ingroup ServiceDiscovery
+ * \inmodule QtAwsServiceDiscovery
  *
  *  Amazon Route 53 auto naming lets you configure public or private namespaces that your microservice applications run in.
  *  When instances of the service become available, you can call the auto naming API to register the instance, and Route 53
@@ -41,9 +40,7 @@ namespace ServiceDiscovery {
  */
 
 /*!
- * @brief  Constructs a new ListServicesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListServicesRequest::ListServicesRequest(const ListServicesRequest &other)
     : ServiceDiscoveryRequest(new ListServicesRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ ListServicesRequest::ListServicesRequest(const ListServicesRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ListServicesRequest object.
+ * Constructs a ListServicesRequest object.
  */
 ListServicesRequest::ListServicesRequest()
     : ServiceDiscoveryRequest(new ListServicesRequestPrivate(ServiceDiscoveryRequest::ListServicesAction, this))
@@ -70,14 +67,9 @@ bool ListServicesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListServicesResponse object.
+ * Returns a ListServicesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListServicesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ServiceDiscoveryClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListServicesRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * ListServicesRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::ServiceDiscovery::ListServicesRequestPrivate
+ * \brief The ListServicesRequestPrivate class provides private implementation for ListServicesRequest.
+ * \internal
  *
- * @class  ListServicesRequestPrivate
- *
- * @brief  Private implementation for ListServicesRequest.
+ * \inmodule QtAwsServiceDiscovery
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListServicesRequestPrivate object.
- *
- * @param  action  ServiceDiscovery action being performed.
- * @param  q       Pointer to this object's public ListServicesRequest instance.
+ * Constructs a ListServicesRequestPrivate object for ServiceDiscovery \a action with,
+ * public implementation \a q.
  */
 ListServicesRequestPrivate::ListServicesRequestPrivate(
     const ServiceDiscoveryRequest::Action action, ListServicesRequest * const q)
@@ -108,15 +97,10 @@ ListServicesRequestPrivate::ListServicesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListServicesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListServicesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListServicesRequest instance.
  */
 ListServicesRequestPrivate::ListServicesRequestPrivate(
     const ListServicesRequestPrivate &other, ListServicesRequest * const q)

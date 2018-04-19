@@ -27,10 +27,9 @@ namespace SWF {
 
 /*!
  * \class QtAws::SWF::ListDomainsRequest
- *
  * \brief The ListDomainsRequest class provides an interface for SWF ListDomains requests.
  *
- * \ingroup SWF
+ * \inmodule QtAwsSWF
  *
  *  <fullname>Amazon Simple Workflow Service</fullname>
  * 
@@ -53,9 +52,7 @@ namespace SWF {
  */
 
 /*!
- * @brief  Constructs a new ListDomainsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListDomainsRequest::ListDomainsRequest(const ListDomainsRequest &other)
     : SWFRequest(new ListDomainsRequestPrivate(*other.d_func(), this))
@@ -64,7 +61,7 @@ ListDomainsRequest::ListDomainsRequest(const ListDomainsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ListDomainsRequest object.
+ * Constructs a ListDomainsRequest object.
  */
 ListDomainsRequest::ListDomainsRequest()
     : SWFRequest(new ListDomainsRequestPrivate(SWFRequest::ListDomainsAction, this))
@@ -82,14 +79,9 @@ bool ListDomainsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListDomainsResponse object.
+ * Returns a ListDomainsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListDomainsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SWFClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListDomainsRequest::response(QNetworkReply * const reply) const
 {
@@ -97,20 +89,17 @@ QtAws::Core::AwsAbstractResponse * ListDomainsRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::SWF::ListDomainsRequestPrivate
+ * \brief The ListDomainsRequestPrivate class provides private implementation for ListDomainsRequest.
+ * \internal
  *
- * @class  ListDomainsRequestPrivate
- *
- * @brief  Private implementation for ListDomainsRequest.
+ * \inmodule QtAwsSWF
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListDomainsRequestPrivate object.
- *
- * @param  action  SWF action being performed.
- * @param  q       Pointer to this object's public ListDomainsRequest instance.
+ * Constructs a ListDomainsRequestPrivate object for SWF \a action with,
+ * public implementation \a q.
  */
 ListDomainsRequestPrivate::ListDomainsRequestPrivate(
     const SWFRequest::Action action, ListDomainsRequest * const q)
@@ -120,15 +109,10 @@ ListDomainsRequestPrivate::ListDomainsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListDomainsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListDomainsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListDomainsRequest instance.
  */
 ListDomainsRequestPrivate::ListDomainsRequestPrivate(
     const ListDomainsRequestPrivate &other, ListDomainsRequest * const q)

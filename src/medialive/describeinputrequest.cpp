@@ -27,19 +27,16 @@ namespace MediaLive {
 
 /*!
  * \class QtAws::MediaLive::DescribeInputRequest
- *
  * \brief The DescribeInputRequest class provides an interface for MediaLive DescribeInput requests.
  *
- * \ingroup MediaLive
+ * \inmodule QtAwsMediaLive
  *
  *
  * \sa MediaLiveClient::describeInput
  */
 
 /*!
- * @brief  Constructs a new DescribeInputRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeInputRequest::DescribeInputRequest(const DescribeInputRequest &other)
     : MediaLiveRequest(new DescribeInputRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ DescribeInputRequest::DescribeInputRequest(const DescribeInputRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DescribeInputRequest object.
+ * Constructs a DescribeInputRequest object.
  */
 DescribeInputRequest::DescribeInputRequest()
     : MediaLiveRequest(new DescribeInputRequestPrivate(MediaLiveRequest::DescribeInputAction, this))
@@ -66,14 +63,9 @@ bool DescribeInputRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeInputResponse object.
+ * Returns a DescribeInputResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeInputResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MediaLiveClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeInputRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * DescribeInputRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::MediaLive::DescribeInputRequestPrivate
+ * \brief The DescribeInputRequestPrivate class provides private implementation for DescribeInputRequest.
+ * \internal
  *
- * @class  DescribeInputRequestPrivate
- *
- * @brief  Private implementation for DescribeInputRequest.
+ * \inmodule QtAwsMediaLive
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeInputRequestPrivate object.
- *
- * @param  action  MediaLive action being performed.
- * @param  q       Pointer to this object's public DescribeInputRequest instance.
+ * Constructs a DescribeInputRequestPrivate object for MediaLive \a action with,
+ * public implementation \a q.
  */
 DescribeInputRequestPrivate::DescribeInputRequestPrivate(
     const MediaLiveRequest::Action action, DescribeInputRequest * const q)
@@ -104,15 +93,10 @@ DescribeInputRequestPrivate::DescribeInputRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeInputRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeInputRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeInputRequest instance.
  */
 DescribeInputRequestPrivate::DescribeInputRequestPrivate(
     const DescribeInputRequestPrivate &other, DescribeInputRequest * const q)

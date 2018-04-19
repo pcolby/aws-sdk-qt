@@ -27,10 +27,9 @@ namespace ServiceCatalog {
 
 /*!
  * \class QtAws::ServiceCatalog::CreateProductRequest
- *
  * \brief The CreateProductRequest class provides an interface for ServiceCatalog CreateProduct requests.
  *
- * \ingroup ServiceCatalog
+ * \inmodule QtAwsServiceCatalog
  *
  *  <fullname>AWS Service Catalog</fullname>
  * 
@@ -43,9 +42,7 @@ namespace ServiceCatalog {
  */
 
 /*!
- * @brief  Constructs a new CreateProductRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateProductRequest::CreateProductRequest(const CreateProductRequest &other)
     : ServiceCatalogRequest(new CreateProductRequestPrivate(*other.d_func(), this))
@@ -54,7 +51,7 @@ CreateProductRequest::CreateProductRequest(const CreateProductRequest &other)
 }
 
 /*!
- * @brief  Constructs a new CreateProductRequest object.
+ * Constructs a CreateProductRequest object.
  */
 CreateProductRequest::CreateProductRequest()
     : ServiceCatalogRequest(new CreateProductRequestPrivate(ServiceCatalogRequest::CreateProductAction, this))
@@ -72,14 +69,9 @@ bool CreateProductRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateProductResponse object.
+ * Returns a CreateProductResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateProductResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ServiceCatalogClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateProductRequest::response(QNetworkReply * const reply) const
 {
@@ -87,20 +79,17 @@ QtAws::Core::AwsAbstractResponse * CreateProductRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::ServiceCatalog::CreateProductRequestPrivate
+ * \brief The CreateProductRequestPrivate class provides private implementation for CreateProductRequest.
+ * \internal
  *
- * @class  CreateProductRequestPrivate
- *
- * @brief  Private implementation for CreateProductRequest.
+ * \inmodule QtAwsServiceCatalog
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateProductRequestPrivate object.
- *
- * @param  action  ServiceCatalog action being performed.
- * @param  q       Pointer to this object's public CreateProductRequest instance.
+ * Constructs a CreateProductRequestPrivate object for ServiceCatalog \a action with,
+ * public implementation \a q.
  */
 CreateProductRequestPrivate::CreateProductRequestPrivate(
     const ServiceCatalogRequest::Action action, CreateProductRequest * const q)
@@ -110,15 +99,10 @@ CreateProductRequestPrivate::CreateProductRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateProductRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateProductRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateProductRequest instance.
  */
 CreateProductRequestPrivate::CreateProductRequestPrivate(
     const CreateProductRequestPrivate &other, CreateProductRequest * const q)

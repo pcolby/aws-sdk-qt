@@ -27,10 +27,9 @@ namespace Organizations {
 
 /*!
  * \class QtAws::Organizations::ListChildrenRequest
- *
  * \brief The ListChildrenRequest class provides an interface for Organizations ListChildren requests.
  *
- * \ingroup Organizations
+ * \inmodule QtAwsOrganizations
  *
  *  <fullname>AWS Organizations API Reference</fullname>
  * 
@@ -179,9 +178,7 @@ namespace Organizations {
  */
 
 /*!
- * @brief  Constructs a new ListChildrenRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListChildrenRequest::ListChildrenRequest(const ListChildrenRequest &other)
     : OrganizationsRequest(new ListChildrenRequestPrivate(*other.d_func(), this))
@@ -190,7 +187,7 @@ ListChildrenRequest::ListChildrenRequest(const ListChildrenRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ListChildrenRequest object.
+ * Constructs a ListChildrenRequest object.
  */
 ListChildrenRequest::ListChildrenRequest()
     : OrganizationsRequest(new ListChildrenRequestPrivate(OrganizationsRequest::ListChildrenAction, this))
@@ -208,14 +205,9 @@ bool ListChildrenRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListChildrenResponse object.
+ * Returns a ListChildrenResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListChildrenResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  OrganizationsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListChildrenRequest::response(QNetworkReply * const reply) const
 {
@@ -223,20 +215,17 @@ QtAws::Core::AwsAbstractResponse * ListChildrenRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::Organizations::ListChildrenRequestPrivate
+ * \brief The ListChildrenRequestPrivate class provides private implementation for ListChildrenRequest.
+ * \internal
  *
- * @class  ListChildrenRequestPrivate
- *
- * @brief  Private implementation for ListChildrenRequest.
+ * \inmodule QtAwsOrganizations
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListChildrenRequestPrivate object.
- *
- * @param  action  Organizations action being performed.
- * @param  q       Pointer to this object's public ListChildrenRequest instance.
+ * Constructs a ListChildrenRequestPrivate object for Organizations \a action with,
+ * public implementation \a q.
  */
 ListChildrenRequestPrivate::ListChildrenRequestPrivate(
     const OrganizationsRequest::Action action, ListChildrenRequest * const q)
@@ -246,15 +235,10 @@ ListChildrenRequestPrivate::ListChildrenRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListChildrenRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListChildrenRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListChildrenRequest instance.
  */
 ListChildrenRequestPrivate::ListChildrenRequestPrivate(
     const ListChildrenRequestPrivate &other, ListChildrenRequest * const q)

@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DescribeImportSnapshotTasksRequest
- *
  * \brief The DescribeImportSnapshotTasksRequest class provides an interface for EC2 DescribeImportSnapshotTasks requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DescribeImportSnapshotTasksRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeImportSnapshotTasksRequest::DescribeImportSnapshotTasksRequest(const DescribeImportSnapshotTasksRequest &other)
     : EC2Request(new DescribeImportSnapshotTasksRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ DescribeImportSnapshotTasksRequest::DescribeImportSnapshotTasksRequest(const Des
 }
 
 /*!
- * @brief  Constructs a new DescribeImportSnapshotTasksRequest object.
+ * Constructs a DescribeImportSnapshotTasksRequest object.
  */
 DescribeImportSnapshotTasksRequest::DescribeImportSnapshotTasksRequest()
     : EC2Request(new DescribeImportSnapshotTasksRequestPrivate(EC2Request::DescribeImportSnapshotTasksAction, this))
@@ -70,14 +67,9 @@ bool DescribeImportSnapshotTasksRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeImportSnapshotTasksResponse object.
+ * Returns a DescribeImportSnapshotTasksResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeImportSnapshotTasksResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeImportSnapshotTasksRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * DescribeImportSnapshotTasksRequest::response(
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::DescribeImportSnapshotTasksRequestPrivate
+ * \brief The DescribeImportSnapshotTasksRequestPrivate class provides private implementation for DescribeImportSnapshotTasksRequest.
+ * \internal
  *
- * @class  DescribeImportSnapshotTasksRequestPrivate
- *
- * @brief  Private implementation for DescribeImportSnapshotTasksRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeImportSnapshotTasksRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public DescribeImportSnapshotTasksRequest instance.
+ * Constructs a DescribeImportSnapshotTasksRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 DescribeImportSnapshotTasksRequestPrivate::DescribeImportSnapshotTasksRequestPrivate(
     const EC2Request::Action action, DescribeImportSnapshotTasksRequest * const q)
@@ -108,15 +97,10 @@ DescribeImportSnapshotTasksRequestPrivate::DescribeImportSnapshotTasksRequestPri
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeImportSnapshotTasksRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeImportSnapshotTasksRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeImportSnapshotTasksRequest instance.
  */
 DescribeImportSnapshotTasksRequestPrivate::DescribeImportSnapshotTasksRequestPrivate(
     const DescribeImportSnapshotTasksRequestPrivate &other, DescribeImportSnapshotTasksRequest * const q)

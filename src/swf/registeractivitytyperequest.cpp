@@ -27,10 +27,9 @@ namespace SWF {
 
 /*!
  * \class QtAws::SWF::RegisterActivityTypeRequest
- *
  * \brief The RegisterActivityTypeRequest class provides an interface for SWF RegisterActivityType requests.
  *
- * \ingroup SWF
+ * \inmodule QtAwsSWF
  *
  *  <fullname>Amazon Simple Workflow Service</fullname>
  * 
@@ -53,9 +52,7 @@ namespace SWF {
  */
 
 /*!
- * @brief  Constructs a new RegisterActivityTypeRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 RegisterActivityTypeRequest::RegisterActivityTypeRequest(const RegisterActivityTypeRequest &other)
     : SWFRequest(new RegisterActivityTypeRequestPrivate(*other.d_func(), this))
@@ -64,7 +61,7 @@ RegisterActivityTypeRequest::RegisterActivityTypeRequest(const RegisterActivityT
 }
 
 /*!
- * @brief  Constructs a new RegisterActivityTypeRequest object.
+ * Constructs a RegisterActivityTypeRequest object.
  */
 RegisterActivityTypeRequest::RegisterActivityTypeRequest()
     : SWFRequest(new RegisterActivityTypeRequestPrivate(SWFRequest::RegisterActivityTypeAction, this))
@@ -82,14 +79,9 @@ bool RegisterActivityTypeRequest::isValid() const
 
 
 /*!
- * @brief  Construct an RegisterActivityTypeResponse object.
+ * Returns a RegisterActivityTypeResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An RegisterActivityTypeResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SWFClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * RegisterActivityTypeRequest::response(QNetworkReply * const reply) const
 {
@@ -97,20 +89,17 @@ QtAws::Core::AwsAbstractResponse * RegisterActivityTypeRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::SWF::RegisterActivityTypeRequestPrivate
+ * \brief The RegisterActivityTypeRequestPrivate class provides private implementation for RegisterActivityTypeRequest.
+ * \internal
  *
- * @class  RegisterActivityTypeRequestPrivate
- *
- * @brief  Private implementation for RegisterActivityTypeRequest.
+ * \inmodule QtAwsSWF
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new RegisterActivityTypeRequestPrivate object.
- *
- * @param  action  SWF action being performed.
- * @param  q       Pointer to this object's public RegisterActivityTypeRequest instance.
+ * Constructs a RegisterActivityTypeRequestPrivate object for SWF \a action with,
+ * public implementation \a q.
  */
 RegisterActivityTypeRequestPrivate::RegisterActivityTypeRequestPrivate(
     const SWFRequest::Action action, RegisterActivityTypeRequest * const q)
@@ -120,15 +109,10 @@ RegisterActivityTypeRequestPrivate::RegisterActivityTypeRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RegisterActivityTypeRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the RegisterActivityTypeRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public RegisterActivityTypeRequest instance.
  */
 RegisterActivityTypeRequestPrivate::RegisterActivityTypeRequestPrivate(
     const RegisterActivityTypeRequestPrivate &other, RegisterActivityTypeRequest * const q)

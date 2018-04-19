@@ -27,10 +27,9 @@ namespace AppSync {
 
 /*!
  * \class QtAws::AppSync::CreateResolverRequest
- *
  * \brief The CreateResolverRequest class provides an interface for AppSync CreateResolver requests.
  *
- * \ingroup AppSync
+ * \inmodule QtAwsAppSync
  *
  *  AWS AppSync provides API actions for creating and interacting with data sources using GraphQL from your
  *
@@ -38,9 +37,7 @@ namespace AppSync {
  */
 
 /*!
- * @brief  Constructs a new CreateResolverRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateResolverRequest::CreateResolverRequest(const CreateResolverRequest &other)
     : AppSyncRequest(new CreateResolverRequestPrivate(*other.d_func(), this))
@@ -49,7 +46,7 @@ CreateResolverRequest::CreateResolverRequest(const CreateResolverRequest &other)
 }
 
 /*!
- * @brief  Constructs a new CreateResolverRequest object.
+ * Constructs a CreateResolverRequest object.
  */
 CreateResolverRequest::CreateResolverRequest()
     : AppSyncRequest(new CreateResolverRequestPrivate(AppSyncRequest::CreateResolverAction, this))
@@ -67,14 +64,9 @@ bool CreateResolverRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateResolverResponse object.
+ * Returns a CreateResolverResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateResolverResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AppSyncClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateResolverRequest::response(QNetworkReply * const reply) const
 {
@@ -82,20 +74,17 @@ QtAws::Core::AwsAbstractResponse * CreateResolverRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::AppSync::CreateResolverRequestPrivate
+ * \brief The CreateResolverRequestPrivate class provides private implementation for CreateResolverRequest.
+ * \internal
  *
- * @class  CreateResolverRequestPrivate
- *
- * @brief  Private implementation for CreateResolverRequest.
+ * \inmodule QtAwsAppSync
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateResolverRequestPrivate object.
- *
- * @param  action  AppSync action being performed.
- * @param  q       Pointer to this object's public CreateResolverRequest instance.
+ * Constructs a CreateResolverRequestPrivate object for AppSync \a action with,
+ * public implementation \a q.
  */
 CreateResolverRequestPrivate::CreateResolverRequestPrivate(
     const AppSyncRequest::Action action, CreateResolverRequest * const q)
@@ -105,15 +94,10 @@ CreateResolverRequestPrivate::CreateResolverRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateResolverRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateResolverRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateResolverRequest instance.
  */
 CreateResolverRequestPrivate::CreateResolverRequestPrivate(
     const CreateResolverRequestPrivate &other, CreateResolverRequest * const q)

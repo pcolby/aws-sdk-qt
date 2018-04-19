@@ -27,10 +27,9 @@ namespace MigrationHub {
 
 /*!
  * \class QtAws::MigrationHub::PutResourceAttributesRequest
- *
  * \brief The PutResourceAttributesRequest class provides an interface for MigrationHub PutResourceAttributes requests.
  *
- * \ingroup MigrationHub
+ * \inmodule QtAwsMigrationHub
  *
  *  The AWS Migration Hub API methods help to obtain server and application migration status and integrate your
  *  resource-specific migration tool by providing a programmatic interface to Migration Hub.
@@ -39,9 +38,7 @@ namespace MigrationHub {
  */
 
 /*!
- * @brief  Constructs a new PutResourceAttributesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 PutResourceAttributesRequest::PutResourceAttributesRequest(const PutResourceAttributesRequest &other)
     : MigrationHubRequest(new PutResourceAttributesRequestPrivate(*other.d_func(), this))
@@ -50,7 +47,7 @@ PutResourceAttributesRequest::PutResourceAttributesRequest(const PutResourceAttr
 }
 
 /*!
- * @brief  Constructs a new PutResourceAttributesRequest object.
+ * Constructs a PutResourceAttributesRequest object.
  */
 PutResourceAttributesRequest::PutResourceAttributesRequest()
     : MigrationHubRequest(new PutResourceAttributesRequestPrivate(MigrationHubRequest::PutResourceAttributesAction, this))
@@ -68,14 +65,9 @@ bool PutResourceAttributesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an PutResourceAttributesResponse object.
+ * Returns a PutResourceAttributesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An PutResourceAttributesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MigrationHubClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * PutResourceAttributesRequest::response(QNetworkReply * const reply) const
 {
@@ -83,20 +75,17 @@ QtAws::Core::AwsAbstractResponse * PutResourceAttributesRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::MigrationHub::PutResourceAttributesRequestPrivate
+ * \brief The PutResourceAttributesRequestPrivate class provides private implementation for PutResourceAttributesRequest.
+ * \internal
  *
- * @class  PutResourceAttributesRequestPrivate
- *
- * @brief  Private implementation for PutResourceAttributesRequest.
+ * \inmodule QtAwsMigrationHub
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new PutResourceAttributesRequestPrivate object.
- *
- * @param  action  MigrationHub action being performed.
- * @param  q       Pointer to this object's public PutResourceAttributesRequest instance.
+ * Constructs a PutResourceAttributesRequestPrivate object for MigrationHub \a action with,
+ * public implementation \a q.
  */
 PutResourceAttributesRequestPrivate::PutResourceAttributesRequestPrivate(
     const MigrationHubRequest::Action action, PutResourceAttributesRequest * const q)
@@ -106,15 +95,10 @@ PutResourceAttributesRequestPrivate::PutResourceAttributesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutResourceAttributesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the PutResourceAttributesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public PutResourceAttributesRequest instance.
  */
 PutResourceAttributesRequestPrivate::PutResourceAttributesRequestPrivate(
     const PutResourceAttributesRequestPrivate &other, PutResourceAttributesRequest * const q)

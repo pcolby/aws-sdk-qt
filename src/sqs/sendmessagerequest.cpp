@@ -27,10 +27,9 @@ namespace SQS {
 
 /*!
  * \class QtAws::SQS::SendMessageRequest
- *
  * \brief The SendMessageRequest class provides an interface for SQS SendMessage requests.
  *
- * \ingroup SQS
+ * \inmodule QtAwsSQS
  *
  *  Welcome to the <i>Amazon Simple Queue Service API
  * 
@@ -103,9 +102,7 @@ namespace SQS {
  */
 
 /*!
- * @brief  Constructs a new SendMessageRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 SendMessageRequest::SendMessageRequest(const SendMessageRequest &other)
     : SQSRequest(new SendMessageRequestPrivate(*other.d_func(), this))
@@ -114,7 +111,7 @@ SendMessageRequest::SendMessageRequest(const SendMessageRequest &other)
 }
 
 /*!
- * @brief  Constructs a new SendMessageRequest object.
+ * Constructs a SendMessageRequest object.
  */
 SendMessageRequest::SendMessageRequest()
     : SQSRequest(new SendMessageRequestPrivate(SQSRequest::SendMessageAction, this))
@@ -132,14 +129,9 @@ bool SendMessageRequest::isValid() const
 
 
 /*!
- * @brief  Construct an SendMessageResponse object.
+ * Returns a SendMessageResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An SendMessageResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SQSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * SendMessageRequest::response(QNetworkReply * const reply) const
 {
@@ -147,20 +139,17 @@ QtAws::Core::AwsAbstractResponse * SendMessageRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::SQS::SendMessageRequestPrivate
+ * \brief The SendMessageRequestPrivate class provides private implementation for SendMessageRequest.
+ * \internal
  *
- * @class  SendMessageRequestPrivate
- *
- * @brief  Private implementation for SendMessageRequest.
+ * \inmodule QtAwsSQS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new SendMessageRequestPrivate object.
- *
- * @param  action  SQS action being performed.
- * @param  q       Pointer to this object's public SendMessageRequest instance.
+ * Constructs a SendMessageRequestPrivate object for SQS \a action with,
+ * public implementation \a q.
  */
 SendMessageRequestPrivate::SendMessageRequestPrivate(
     const SQSRequest::Action action, SendMessageRequest * const q)
@@ -170,15 +159,10 @@ SendMessageRequestPrivate::SendMessageRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SendMessageRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the SendMessageRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public SendMessageRequest instance.
  */
 SendMessageRequestPrivate::SendMessageRequestPrivate(
     const SendMessageRequestPrivate &other, SendMessageRequest * const q)

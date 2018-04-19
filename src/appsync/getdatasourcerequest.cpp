@@ -27,10 +27,9 @@ namespace AppSync {
 
 /*!
  * \class QtAws::AppSync::GetDataSourceRequest
- *
  * \brief The GetDataSourceRequest class provides an interface for AppSync GetDataSource requests.
  *
- * \ingroup AppSync
+ * \inmodule QtAwsAppSync
  *
  *  AWS AppSync provides API actions for creating and interacting with data sources using GraphQL from your
  *
@@ -38,9 +37,7 @@ namespace AppSync {
  */
 
 /*!
- * @brief  Constructs a new GetDataSourceRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetDataSourceRequest::GetDataSourceRequest(const GetDataSourceRequest &other)
     : AppSyncRequest(new GetDataSourceRequestPrivate(*other.d_func(), this))
@@ -49,7 +46,7 @@ GetDataSourceRequest::GetDataSourceRequest(const GetDataSourceRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetDataSourceRequest object.
+ * Constructs a GetDataSourceRequest object.
  */
 GetDataSourceRequest::GetDataSourceRequest()
     : AppSyncRequest(new GetDataSourceRequestPrivate(AppSyncRequest::GetDataSourceAction, this))
@@ -67,14 +64,9 @@ bool GetDataSourceRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetDataSourceResponse object.
+ * Returns a GetDataSourceResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetDataSourceResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AppSyncClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetDataSourceRequest::response(QNetworkReply * const reply) const
 {
@@ -82,20 +74,17 @@ QtAws::Core::AwsAbstractResponse * GetDataSourceRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::AppSync::GetDataSourceRequestPrivate
+ * \brief The GetDataSourceRequestPrivate class provides private implementation for GetDataSourceRequest.
+ * \internal
  *
- * @class  GetDataSourceRequestPrivate
- *
- * @brief  Private implementation for GetDataSourceRequest.
+ * \inmodule QtAwsAppSync
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetDataSourceRequestPrivate object.
- *
- * @param  action  AppSync action being performed.
- * @param  q       Pointer to this object's public GetDataSourceRequest instance.
+ * Constructs a GetDataSourceRequestPrivate object for AppSync \a action with,
+ * public implementation \a q.
  */
 GetDataSourceRequestPrivate::GetDataSourceRequestPrivate(
     const AppSyncRequest::Action action, GetDataSourceRequest * const q)
@@ -105,15 +94,10 @@ GetDataSourceRequestPrivate::GetDataSourceRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetDataSourceRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetDataSourceRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetDataSourceRequest instance.
  */
 GetDataSourceRequestPrivate::GetDataSourceRequestPrivate(
     const GetDataSourceRequestPrivate &other, GetDataSourceRequest * const q)

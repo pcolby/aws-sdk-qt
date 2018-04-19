@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::ImportInstanceRequest
- *
  * \brief The ImportInstanceRequest class provides an interface for EC2 ImportInstance requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new ImportInstanceRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ImportInstanceRequest::ImportInstanceRequest(const ImportInstanceRequest &other)
     : EC2Request(new ImportInstanceRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ ImportInstanceRequest::ImportInstanceRequest(const ImportInstanceRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ImportInstanceRequest object.
+ * Constructs a ImportInstanceRequest object.
  */
 ImportInstanceRequest::ImportInstanceRequest()
     : EC2Request(new ImportInstanceRequestPrivate(EC2Request::ImportInstanceAction, this))
@@ -70,14 +67,9 @@ bool ImportInstanceRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ImportInstanceResponse object.
+ * Returns a ImportInstanceResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ImportInstanceResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ImportInstanceRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * ImportInstanceRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::ImportInstanceRequestPrivate
+ * \brief The ImportInstanceRequestPrivate class provides private implementation for ImportInstanceRequest.
+ * \internal
  *
- * @class  ImportInstanceRequestPrivate
- *
- * @brief  Private implementation for ImportInstanceRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ImportInstanceRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public ImportInstanceRequest instance.
+ * Constructs a ImportInstanceRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 ImportInstanceRequestPrivate::ImportInstanceRequestPrivate(
     const EC2Request::Action action, ImportInstanceRequest * const q)
@@ -108,15 +97,10 @@ ImportInstanceRequestPrivate::ImportInstanceRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ImportInstanceRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ImportInstanceRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ImportInstanceRequest instance.
  */
 ImportInstanceRequestPrivate::ImportInstanceRequestPrivate(
     const ImportInstanceRequestPrivate &other, ImportInstanceRequest * const q)

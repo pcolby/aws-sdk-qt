@@ -25,16 +25,45 @@ namespace Route53Domains {
 
 /*!
  * \class QtAws::Route53Domains::Route53DomainsRequest
- *
  * \brief The Route53DomainsRequest class provides an interface for Route53Domains requests.
  *
- * \ingroup Route53Domains
+ * \inmodule QtAwsRoute53Domains
  */
 
 /*!
- * @brief  Constructs a new Route53DomainsRequest object.
+ * \enum Route53DomainsRequest::Action
  *
- * @param  action  The Route53Domains action to request.
+ * This enum describes the actions that can be performed as Route53Domains
+ * requests.
+ *
+ * \value CheckDomainAvailabilityAction Route53Domains CheckDomainAvailability action.
+ * \value CheckDomainTransferabilityAction Route53Domains CheckDomainTransferability action.
+ * \value DeleteTagsForDomainAction Route53Domains DeleteTagsForDomain action.
+ * \value DisableDomainAutoRenewAction Route53Domains DisableDomainAutoRenew action.
+ * \value DisableDomainTransferLockAction Route53Domains DisableDomainTransferLock action.
+ * \value EnableDomainAutoRenewAction Route53Domains EnableDomainAutoRenew action.
+ * \value EnableDomainTransferLockAction Route53Domains EnableDomainTransferLock action.
+ * \value GetContactReachabilityStatusAction Route53Domains GetContactReachabilityStatus action.
+ * \value GetDomainDetailAction Route53Domains GetDomainDetail action.
+ * \value GetDomainSuggestionsAction Route53Domains GetDomainSuggestions action.
+ * \value GetOperationDetailAction Route53Domains GetOperationDetail action.
+ * \value ListDomainsAction Route53Domains ListDomains action.
+ * \value ListOperationsAction Route53Domains ListOperations action.
+ * \value ListTagsForDomainAction Route53Domains ListTagsForDomain action.
+ * \value RegisterDomainAction Route53Domains RegisterDomain action.
+ * \value RenewDomainAction Route53Domains RenewDomain action.
+ * \value ResendContactReachabilityEmailAction Route53Domains ResendContactReachabilityEmail action.
+ * \value RetrieveDomainAuthCodeAction Route53Domains RetrieveDomainAuthCode action.
+ * \value TransferDomainAction Route53Domains TransferDomain action.
+ * \value UpdateDomainContactAction Route53Domains UpdateDomainContact action.
+ * \value UpdateDomainContactPrivacyAction Route53Domains UpdateDomainContactPrivacy action.
+ * \value UpdateDomainNameserversAction Route53Domains UpdateDomainNameservers action.
+ * \value UpdateTagsForDomainAction Route53Domains UpdateTagsForDomain action.
+ * \value ViewBillingAction Route53Domains ViewBilling action.
+ */
+
+/*!
+ * Constructs a[n] Route53DomainsRequest object for Route53Domains \a action.
  */
 Route53DomainsRequest::Route53DomainsRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new Route53DomainsRequestPrivate(action, this))
@@ -43,9 +72,7 @@ Route53DomainsRequest::Route53DomainsRequest(const Action action)
 }
 
 /*!
- * @brief  Constructs a new Route53DomainsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 Route53DomainsRequest::Route53DomainsRequest(const Route53DomainsRequest &other)
     : QtAws::Core::AwsAbstractRequest(new Route53DomainsRequestPrivate(*other.d_func(), this))
@@ -54,13 +81,7 @@ Route53DomainsRequest::Route53DomainsRequest(const Route53DomainsRequest &other)
 }
 
 /*!
- * @brief  Assignment operator.
- *
- * Assigns \a other to \c this.
- *
- * @param  other  Instance to copy.
- *
- * @return  A reference to \c this.
+ * Sets the Route53DomainsRequest object to be equal to \a other.
  */
 Route53DomainsRequest& Route53DomainsRequest::operator=(const Route53DomainsRequest &other)
 {
@@ -72,14 +93,10 @@ Route53DomainsRequest& Route53DomainsRequest::operator=(const Route53DomainsRequ
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new Route53DomainsRequest object.
+ * Constructs aa Route53DomainsRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from Route53DomainsRequestPrivate.
- *
- * @param  d  Pointer to private data (aka D-Pointer).
  */
 Route53DomainsRequest::Route53DomainsRequest(Route53DomainsRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
@@ -87,7 +104,7 @@ Route53DomainsRequest::Route53DomainsRequest(Route53DomainsRequestPrivate * cons
 }
 
 /*!
- * \brief Returns the Route53Domains action to be performed by this request.
+ * Returns the Route53Domains action to be performed by this request.
  */
 Route53DomainsRequest::Action Route53DomainsRequest::action() const
 {
@@ -96,7 +113,7 @@ Route53DomainsRequest::Action Route53DomainsRequest::action() const
 }
 
 /*!
- * \brief Returns the name of the Route53Domains action to be performed by this request.
+ * Returns the name of the Route53Domains action to be performed by this request.
  */
 QString Route53DomainsRequest::actionString() const
 {
@@ -104,7 +121,7 @@ QString Route53DomainsRequest::actionString() const
 }
 
 /*!
- * \brief Returns the Route53Domains API version implemented by this request.
+ * Returns the Route53Domains API version implemented by this request.
  */
 QString Route53DomainsRequest::apiVersion() const
 {
@@ -113,7 +130,7 @@ QString Route53DomainsRequest::apiVersion() const
 }
 
 /*!
- * @brief Set the Route53Domains action to be performed by this request to \a action.
+ * Sets the Route53Domains action to be performed by this request to \a action.
  */
 void Route53DomainsRequest::setAction(const Action action)
 {
@@ -122,7 +139,7 @@ void Route53DomainsRequest::setAction(const Action action)
 }
 
 /*!
- * Set the Route53Domains API version to include in this request to \a version.
+ * Sets the Route53Domains API version to include in this request to \a version.
  */
 void Route53DomainsRequest::setApiVersion(const QString &version)
 {
@@ -131,7 +148,7 @@ void Route53DomainsRequest::setApiVersion(const QString &version)
 }
 
 /*!
- * \brief Returns \c true if this request is the same as \a other.
+ * Returns \c true if this request is equal to \a other; \c false otherwise.
  *
  * Note, most derived *Request classes do not need to provider their own
  * implementations of this function, since most such request classes rely on
@@ -146,8 +163,8 @@ bool Route53DomainsRequest::operator==(const Route53DomainsRequest &other) const
             (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
-/*!
- * @brief  Check if \a queueName is a valid Route53Domains queue name.
+/*
+ * Returns \c tue if \a queueName is a valid Route53Domains queue name.
  *
  * @par From Route53Domains FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
@@ -166,9 +183,8 @@ bool Route53DomainsRequest::operator==(const Route53DomainsRequest &other) const
 }*/
 
 /*!
- * \brief Removes the a \a name parameter from this request.
- *
- * Returns the count of paramters removed (typically \c 0 or \c 1).
+ * Removes the a \a name parameter from the request, then returns the number of
+ * paramters removed (typically \c 0 or \c 1).
  */
 int Route53DomainsRequest::clearParameter(const QString &name)
 {
@@ -177,7 +193,7 @@ int Route53DomainsRequest::clearParameter(const QString &name)
 }
 
 /*!
- * \brief Removes all parameters from this request.
+ * Removes all parameters from the request.
  */
 void Route53DomainsRequest::clearParameters()
 {
@@ -186,7 +202,7 @@ void Route53DomainsRequest::clearParameters()
 }
 
 /*!
- * \brief Returns the value of the \n name pararemter if set, otherwise \a defaultValue.
+ * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
 QVariant Route53DomainsRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
@@ -195,7 +211,7 @@ QVariant Route53DomainsRequest::parameter(const QString &name, const QVariant &d
 }
 
 /*!
- * \brief Returns a map of parameters included in this request.
+ * Returns the parameters included in this request.
  */
 const QVariantMap &Route53DomainsRequest::parameters() const
 {
@@ -204,7 +220,7 @@ const QVariantMap &Route53DomainsRequest::parameters() const
 }
 
 /*!
- * \brief Sets the \a name parameter to \a value.
+ * Sets the \a name parameter to \a value.
  */
 void Route53DomainsRequest::setParameter(const QString &name, const QVariant &value)
 {
@@ -213,9 +229,8 @@ void Route53DomainsRequest::setParameter(const QString &name, const QVariant &va
 }
 
 /*!
- * \brief Sets the map of paramters for this request to \a parameters.
- *
- * Any request parameters set previously will be discarded.
+ * Sets the paramters for this request to \a parameters. Any request parameters
+ * set previously will be discarded.
  */
 void Route53DomainsRequest::setParameters(const QVariantMap &parameters)
 {
@@ -224,11 +239,12 @@ void Route53DomainsRequest::setParameters(const QVariantMap &parameters)
 }
 
 /*!
- * \brief Returns a network request for this Route53Domains request using the given \a endpoint.
+ * Returns a network request for the Route53Domains request using the given
+ * \a endpoint.
  *
- * This Route53Domains implementation builds request URLs by combining the common query
- * parameters (such as Action and Version), with any that have been added (via
- * setParameter) by child classes.
+ * This Route53Domains implementation builds request URLs by combining the
+ * common query parameters (such as Action and Version), with any that have
+ * been added (via setParameter) by child classes.
  */
 QNetworkRequest Route53DomainsRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -239,17 +255,16 @@ QNetworkRequest Route53DomainsRequest::unsignedRequest(const QUrl &endpoint) con
 }
 
 /*!
+ * \class QtAws::Route53Domains::Route53DomainsRequestPrivate
+ * \brief The Route53DomainsRequestPrivate class provides private implementation for Route53DomainsRequest.
  * \internal
  *
- * \class  Route53DomainsRequestPrivate
- *
- * \brief  Private implementation for Route53DomainsRequest.
+ * \inmodule QtAwsRoute53Domains
  */
 
 /*!
- * \internal
- *
- * \brief Constructs a new Route53DomainsRequestPrivate object.
+ * Constructs a Route53DomainsRequestPrivate object for Route53Domains \a action with,
+ * public implementation \a q.
  */
 Route53DomainsRequestPrivate::Route53DomainsRequestPrivate(const Route53DomainsRequest::Action action, Route53DomainsRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
@@ -258,9 +273,7 @@ Route53DomainsRequestPrivate::Route53DomainsRequestPrivate(const Route53DomainsR
 }
 
 /*!
- * \internal
- *
- * \brief Constructs a new Route53DomainsRequestPrivate object, copying an existing one.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
@@ -276,15 +289,12 @@ Route53DomainsRequestPrivate::Route53DomainsRequestPrivate(const Route53DomainsR
 }
 
 /*!
- * \internal
- *
- * \brief Returns a string representing \a action.
+ * Returns a string represention of \a action, or a null string if \a action is
+ * invalid.
  *
  * This function converts Route53DomainsRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the Route53Domains service's Action
  * query parameters.
- *
- * @return A string representing \a action, or a null string if \a action is invalid.
  */
 QString Route53DomainsRequestPrivate::toString(const Route53DomainsRequest::Action &action)
 {

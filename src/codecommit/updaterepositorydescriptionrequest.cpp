@@ -27,10 +27,9 @@ namespace CodeCommit {
 
 /*!
  * \class QtAws::CodeCommit::UpdateRepositoryDescriptionRequest
- *
  * \brief The UpdateRepositoryDescriptionRequest class provides an interface for CodeCommit UpdateRepositoryDescription requests.
  *
- * \ingroup CodeCommit
+ * \inmodule QtAwsCodeCommit
  *
  *  <fullname>AWS CodeCommit</fullname>
  * 
@@ -227,9 +226,7 @@ namespace CodeCommit {
  */
 
 /*!
- * @brief  Constructs a new UpdateRepositoryDescriptionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateRepositoryDescriptionRequest::UpdateRepositoryDescriptionRequest(const UpdateRepositoryDescriptionRequest &other)
     : CodeCommitRequest(new UpdateRepositoryDescriptionRequestPrivate(*other.d_func(), this))
@@ -238,7 +235,7 @@ UpdateRepositoryDescriptionRequest::UpdateRepositoryDescriptionRequest(const Upd
 }
 
 /*!
- * @brief  Constructs a new UpdateRepositoryDescriptionRequest object.
+ * Constructs a UpdateRepositoryDescriptionRequest object.
  */
 UpdateRepositoryDescriptionRequest::UpdateRepositoryDescriptionRequest()
     : CodeCommitRequest(new UpdateRepositoryDescriptionRequestPrivate(CodeCommitRequest::UpdateRepositoryDescriptionAction, this))
@@ -256,14 +253,9 @@ bool UpdateRepositoryDescriptionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateRepositoryDescriptionResponse object.
+ * Returns a UpdateRepositoryDescriptionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateRepositoryDescriptionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CodeCommitClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateRepositoryDescriptionRequest::response(QNetworkReply * const reply) const
 {
@@ -271,20 +263,17 @@ QtAws::Core::AwsAbstractResponse * UpdateRepositoryDescriptionRequest::response(
 }
 
 /*!
- * @internal
+ * \class QtAws::CodeCommit::UpdateRepositoryDescriptionRequestPrivate
+ * \brief The UpdateRepositoryDescriptionRequestPrivate class provides private implementation for UpdateRepositoryDescriptionRequest.
+ * \internal
  *
- * @class  UpdateRepositoryDescriptionRequestPrivate
- *
- * @brief  Private implementation for UpdateRepositoryDescriptionRequest.
+ * \inmodule QtAwsCodeCommit
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateRepositoryDescriptionRequestPrivate object.
- *
- * @param  action  CodeCommit action being performed.
- * @param  q       Pointer to this object's public UpdateRepositoryDescriptionRequest instance.
+ * Constructs a UpdateRepositoryDescriptionRequestPrivate object for CodeCommit \a action with,
+ * public implementation \a q.
  */
 UpdateRepositoryDescriptionRequestPrivate::UpdateRepositoryDescriptionRequestPrivate(
     const CodeCommitRequest::Action action, UpdateRepositoryDescriptionRequest * const q)
@@ -294,15 +283,10 @@ UpdateRepositoryDescriptionRequestPrivate::UpdateRepositoryDescriptionRequestPri
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateRepositoryDescriptionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateRepositoryDescriptionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateRepositoryDescriptionRequest instance.
  */
 UpdateRepositoryDescriptionRequestPrivate::UpdateRepositoryDescriptionRequestPrivate(
     const UpdateRepositoryDescriptionRequestPrivate &other, UpdateRepositoryDescriptionRequest * const q)

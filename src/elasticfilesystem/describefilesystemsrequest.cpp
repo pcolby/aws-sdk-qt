@@ -27,10 +27,9 @@ namespace EFS {
 
 /*!
  * \class QtAws::EFS::DescribeFileSystemsRequest
- *
  * \brief The DescribeFileSystemsRequest class provides an interface for EFS DescribeFileSystems requests.
  *
- * \ingroup EFS
+ * \inmodule QtAwsEFS
  *
  *  <fullname>Amazon Elastic File System</fullname>
  * 
@@ -43,9 +42,7 @@ namespace EFS {
  */
 
 /*!
- * @brief  Constructs a new DescribeFileSystemsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeFileSystemsRequest::DescribeFileSystemsRequest(const DescribeFileSystemsRequest &other)
     : EFSRequest(new DescribeFileSystemsRequestPrivate(*other.d_func(), this))
@@ -54,7 +51,7 @@ DescribeFileSystemsRequest::DescribeFileSystemsRequest(const DescribeFileSystems
 }
 
 /*!
- * @brief  Constructs a new DescribeFileSystemsRequest object.
+ * Constructs a DescribeFileSystemsRequest object.
  */
 DescribeFileSystemsRequest::DescribeFileSystemsRequest()
     : EFSRequest(new DescribeFileSystemsRequestPrivate(EFSRequest::DescribeFileSystemsAction, this))
@@ -72,14 +69,9 @@ bool DescribeFileSystemsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeFileSystemsResponse object.
+ * Returns a DescribeFileSystemsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeFileSystemsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EFSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeFileSystemsRequest::response(QNetworkReply * const reply) const
 {
@@ -87,20 +79,17 @@ QtAws::Core::AwsAbstractResponse * DescribeFileSystemsRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::EFS::DescribeFileSystemsRequestPrivate
+ * \brief The DescribeFileSystemsRequestPrivate class provides private implementation for DescribeFileSystemsRequest.
+ * \internal
  *
- * @class  DescribeFileSystemsRequestPrivate
- *
- * @brief  Private implementation for DescribeFileSystemsRequest.
+ * \inmodule QtAwsEFS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeFileSystemsRequestPrivate object.
- *
- * @param  action  EFS action being performed.
- * @param  q       Pointer to this object's public DescribeFileSystemsRequest instance.
+ * Constructs a DescribeFileSystemsRequestPrivate object for EFS \a action with,
+ * public implementation \a q.
  */
 DescribeFileSystemsRequestPrivate::DescribeFileSystemsRequestPrivate(
     const EFSRequest::Action action, DescribeFileSystemsRequest * const q)
@@ -110,15 +99,10 @@ DescribeFileSystemsRequestPrivate::DescribeFileSystemsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeFileSystemsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeFileSystemsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeFileSystemsRequest instance.
  */
 DescribeFileSystemsRequestPrivate::DescribeFileSystemsRequestPrivate(
     const DescribeFileSystemsRequestPrivate &other, DescribeFileSystemsRequest * const q)

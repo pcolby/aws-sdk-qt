@@ -27,10 +27,9 @@ namespace Glue {
 
 /*!
  * \class QtAws::Glue::UpdatePartitionRequest
- *
  * \brief The UpdatePartitionRequest class provides an interface for Glue UpdatePartition requests.
  *
- * \ingroup Glue
+ * \inmodule QtAwsGlue
  *
  *  <fullname>AWS Glue</fullname>
  * 
@@ -40,9 +39,7 @@ namespace Glue {
  */
 
 /*!
- * @brief  Constructs a new UpdatePartitionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdatePartitionRequest::UpdatePartitionRequest(const UpdatePartitionRequest &other)
     : GlueRequest(new UpdatePartitionRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ UpdatePartitionRequest::UpdatePartitionRequest(const UpdatePartitionRequest &oth
 }
 
 /*!
- * @brief  Constructs a new UpdatePartitionRequest object.
+ * Constructs a UpdatePartitionRequest object.
  */
 UpdatePartitionRequest::UpdatePartitionRequest()
     : GlueRequest(new UpdatePartitionRequestPrivate(GlueRequest::UpdatePartitionAction, this))
@@ -69,14 +66,9 @@ bool UpdatePartitionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdatePartitionResponse object.
+ * Returns a UpdatePartitionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdatePartitionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GlueClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdatePartitionRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * UpdatePartitionRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::Glue::UpdatePartitionRequestPrivate
+ * \brief The UpdatePartitionRequestPrivate class provides private implementation for UpdatePartitionRequest.
+ * \internal
  *
- * @class  UpdatePartitionRequestPrivate
- *
- * @brief  Private implementation for UpdatePartitionRequest.
+ * \inmodule QtAwsGlue
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdatePartitionRequestPrivate object.
- *
- * @param  action  Glue action being performed.
- * @param  q       Pointer to this object's public UpdatePartitionRequest instance.
+ * Constructs a UpdatePartitionRequestPrivate object for Glue \a action with,
+ * public implementation \a q.
  */
 UpdatePartitionRequestPrivate::UpdatePartitionRequestPrivate(
     const GlueRequest::Action action, UpdatePartitionRequest * const q)
@@ -107,15 +96,10 @@ UpdatePartitionRequestPrivate::UpdatePartitionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdatePartitionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdatePartitionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdatePartitionRequest instance.
  */
 UpdatePartitionRequestPrivate::UpdatePartitionRequestPrivate(
     const UpdatePartitionRequestPrivate &other, UpdatePartitionRequest * const q)

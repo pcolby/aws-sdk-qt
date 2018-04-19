@@ -27,10 +27,9 @@ namespace Lightsail {
 
 /*!
  * \class QtAws::Lightsail::ReleaseStaticIpRequest
- *
  * \brief The ReleaseStaticIpRequest class provides an interface for Lightsail ReleaseStaticIp requests.
  *
- * \ingroup Lightsail
+ * \inmodule QtAwsLightsail
  *
  *  Amazon Lightsail is the easiest way to get started with AWS for developers who just need virtual private servers.
  *  Lightsail includes everything you need to launch your project quickly - a virtual machine, SSD-based storage, data
@@ -53,9 +52,7 @@ namespace Lightsail {
  */
 
 /*!
- * @brief  Constructs a new ReleaseStaticIpRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ReleaseStaticIpRequest::ReleaseStaticIpRequest(const ReleaseStaticIpRequest &other)
     : LightsailRequest(new ReleaseStaticIpRequestPrivate(*other.d_func(), this))
@@ -64,7 +61,7 @@ ReleaseStaticIpRequest::ReleaseStaticIpRequest(const ReleaseStaticIpRequest &oth
 }
 
 /*!
- * @brief  Constructs a new ReleaseStaticIpRequest object.
+ * Constructs a ReleaseStaticIpRequest object.
  */
 ReleaseStaticIpRequest::ReleaseStaticIpRequest()
     : LightsailRequest(new ReleaseStaticIpRequestPrivate(LightsailRequest::ReleaseStaticIpAction, this))
@@ -82,14 +79,9 @@ bool ReleaseStaticIpRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ReleaseStaticIpResponse object.
+ * Returns a ReleaseStaticIpResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ReleaseStaticIpResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  LightsailClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ReleaseStaticIpRequest::response(QNetworkReply * const reply) const
 {
@@ -97,20 +89,17 @@ QtAws::Core::AwsAbstractResponse * ReleaseStaticIpRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::Lightsail::ReleaseStaticIpRequestPrivate
+ * \brief The ReleaseStaticIpRequestPrivate class provides private implementation for ReleaseStaticIpRequest.
+ * \internal
  *
- * @class  ReleaseStaticIpRequestPrivate
- *
- * @brief  Private implementation for ReleaseStaticIpRequest.
+ * \inmodule QtAwsLightsail
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ReleaseStaticIpRequestPrivate object.
- *
- * @param  action  Lightsail action being performed.
- * @param  q       Pointer to this object's public ReleaseStaticIpRequest instance.
+ * Constructs a ReleaseStaticIpRequestPrivate object for Lightsail \a action with,
+ * public implementation \a q.
  */
 ReleaseStaticIpRequestPrivate::ReleaseStaticIpRequestPrivate(
     const LightsailRequest::Action action, ReleaseStaticIpRequest * const q)
@@ -120,15 +109,10 @@ ReleaseStaticIpRequestPrivate::ReleaseStaticIpRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ReleaseStaticIpRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ReleaseStaticIpRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ReleaseStaticIpRequest instance.
  */
 ReleaseStaticIpRequestPrivate::ReleaseStaticIpRequestPrivate(
     const ReleaseStaticIpRequestPrivate &other, ReleaseStaticIpRequest * const q)

@@ -27,10 +27,9 @@ namespace Snowball {
 
 /*!
  * \class QtAws::Snowball::GetJobManifestRequest
- *
  * \brief The GetJobManifestRequest class provides an interface for Snowball GetJobManifest requests.
  *
- * \ingroup Snowball
+ * \inmodule QtAwsSnowball
  *
  *  AWS Snowball is a petabyte-scale data transport solution that uses secure appliances to transfer large amounts of data
  *  between your on-premises data centers and Amazon Simple Storage Service (Amazon S3). The Snowball commands described
@@ -43,9 +42,7 @@ namespace Snowball {
  */
 
 /*!
- * @brief  Constructs a new GetJobManifestRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetJobManifestRequest::GetJobManifestRequest(const GetJobManifestRequest &other)
     : SnowballRequest(new GetJobManifestRequestPrivate(*other.d_func(), this))
@@ -54,7 +51,7 @@ GetJobManifestRequest::GetJobManifestRequest(const GetJobManifestRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetJobManifestRequest object.
+ * Constructs a GetJobManifestRequest object.
  */
 GetJobManifestRequest::GetJobManifestRequest()
     : SnowballRequest(new GetJobManifestRequestPrivate(SnowballRequest::GetJobManifestAction, this))
@@ -72,14 +69,9 @@ bool GetJobManifestRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetJobManifestResponse object.
+ * Returns a GetJobManifestResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetJobManifestResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SnowballClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetJobManifestRequest::response(QNetworkReply * const reply) const
 {
@@ -87,20 +79,17 @@ QtAws::Core::AwsAbstractResponse * GetJobManifestRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::Snowball::GetJobManifestRequestPrivate
+ * \brief The GetJobManifestRequestPrivate class provides private implementation for GetJobManifestRequest.
+ * \internal
  *
- * @class  GetJobManifestRequestPrivate
- *
- * @brief  Private implementation for GetJobManifestRequest.
+ * \inmodule QtAwsSnowball
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetJobManifestRequestPrivate object.
- *
- * @param  action  Snowball action being performed.
- * @param  q       Pointer to this object's public GetJobManifestRequest instance.
+ * Constructs a GetJobManifestRequestPrivate object for Snowball \a action with,
+ * public implementation \a q.
  */
 GetJobManifestRequestPrivate::GetJobManifestRequestPrivate(
     const SnowballRequest::Action action, GetJobManifestRequest * const q)
@@ -110,15 +99,10 @@ GetJobManifestRequestPrivate::GetJobManifestRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetJobManifestRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetJobManifestRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetJobManifestRequest instance.
  */
 GetJobManifestRequestPrivate::GetJobManifestRequestPrivate(
     const GetJobManifestRequestPrivate &other, GetJobManifestRequest * const q)

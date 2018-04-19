@@ -27,19 +27,16 @@ namespace SageMaker {
 
 /*!
  * \class QtAws::SageMaker::UpdateNotebookInstanceLifecycleConfigRequest
- *
  * \brief The UpdateNotebookInstanceLifecycleConfigRequest class provides an interface for SageMaker UpdateNotebookInstanceLifecycleConfig requests.
  *
- * \ingroup SageMaker
+ * \inmodule QtAwsSageMaker
  *
  *
  * \sa SageMakerClient::updateNotebookInstanceLifecycleConfig
  */
 
 /*!
- * @brief  Constructs a new UpdateNotebookInstanceLifecycleConfigRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateNotebookInstanceLifecycleConfigRequest::UpdateNotebookInstanceLifecycleConfigRequest(const UpdateNotebookInstanceLifecycleConfigRequest &other)
     : SageMakerRequest(new UpdateNotebookInstanceLifecycleConfigRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ UpdateNotebookInstanceLifecycleConfigRequest::UpdateNotebookInstanceLifecycleCon
 }
 
 /*!
- * @brief  Constructs a new UpdateNotebookInstanceLifecycleConfigRequest object.
+ * Constructs a UpdateNotebookInstanceLifecycleConfigRequest object.
  */
 UpdateNotebookInstanceLifecycleConfigRequest::UpdateNotebookInstanceLifecycleConfigRequest()
     : SageMakerRequest(new UpdateNotebookInstanceLifecycleConfigRequestPrivate(SageMakerRequest::UpdateNotebookInstanceLifecycleConfigAction, this))
@@ -66,14 +63,9 @@ bool UpdateNotebookInstanceLifecycleConfigRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateNotebookInstanceLifecycleConfigResponse object.
+ * Returns a UpdateNotebookInstanceLifecycleConfigResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateNotebookInstanceLifecycleConfigResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SageMakerClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateNotebookInstanceLifecycleConfigRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * UpdateNotebookInstanceLifecycleConfigRequest:
 }
 
 /*!
- * @internal
+ * \class QtAws::SageMaker::UpdateNotebookInstanceLifecycleConfigRequestPrivate
+ * \brief The UpdateNotebookInstanceLifecycleConfigRequestPrivate class provides private implementation for UpdateNotebookInstanceLifecycleConfigRequest.
+ * \internal
  *
- * @class  UpdateNotebookInstanceLifecycleConfigRequestPrivate
- *
- * @brief  Private implementation for UpdateNotebookInstanceLifecycleConfigRequest.
+ * \inmodule QtAwsSageMaker
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateNotebookInstanceLifecycleConfigRequestPrivate object.
- *
- * @param  action  SageMaker action being performed.
- * @param  q       Pointer to this object's public UpdateNotebookInstanceLifecycleConfigRequest instance.
+ * Constructs a UpdateNotebookInstanceLifecycleConfigRequestPrivate object for SageMaker \a action with,
+ * public implementation \a q.
  */
 UpdateNotebookInstanceLifecycleConfigRequestPrivate::UpdateNotebookInstanceLifecycleConfigRequestPrivate(
     const SageMakerRequest::Action action, UpdateNotebookInstanceLifecycleConfigRequest * const q)
@@ -104,15 +93,10 @@ UpdateNotebookInstanceLifecycleConfigRequestPrivate::UpdateNotebookInstanceLifec
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateNotebookInstanceLifecycleConfigRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateNotebookInstanceLifecycleConfigRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateNotebookInstanceLifecycleConfigRequest instance.
  */
 UpdateNotebookInstanceLifecycleConfigRequestPrivate::UpdateNotebookInstanceLifecycleConfigRequestPrivate(
     const UpdateNotebookInstanceLifecycleConfigRequestPrivate &other, UpdateNotebookInstanceLifecycleConfigRequest * const q)

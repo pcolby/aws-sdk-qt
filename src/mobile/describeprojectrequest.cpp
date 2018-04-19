@@ -27,10 +27,9 @@ namespace Mobile {
 
 /*!
  * \class QtAws::Mobile::DescribeProjectRequest
- *
  * \brief The DescribeProjectRequest class provides an interface for Mobile DescribeProject requests.
  *
- * \ingroup Mobile
+ * \inmodule QtAwsMobile
  *
  *  AWS Mobile Service provides mobile app and website developers with capabilities required to configure AWS resources and
  *  bootstrap their developer desktop projects with the necessary SDKs, constants, tools and samples to make use of those
@@ -40,9 +39,7 @@ namespace Mobile {
  */
 
 /*!
- * @brief  Constructs a new DescribeProjectRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeProjectRequest::DescribeProjectRequest(const DescribeProjectRequest &other)
     : MobileRequest(new DescribeProjectRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ DescribeProjectRequest::DescribeProjectRequest(const DescribeProjectRequest &oth
 }
 
 /*!
- * @brief  Constructs a new DescribeProjectRequest object.
+ * Constructs a DescribeProjectRequest object.
  */
 DescribeProjectRequest::DescribeProjectRequest()
     : MobileRequest(new DescribeProjectRequestPrivate(MobileRequest::DescribeProjectAction, this))
@@ -69,14 +66,9 @@ bool DescribeProjectRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeProjectResponse object.
+ * Returns a DescribeProjectResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeProjectResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MobileClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeProjectRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * DescribeProjectRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::Mobile::DescribeProjectRequestPrivate
+ * \brief The DescribeProjectRequestPrivate class provides private implementation for DescribeProjectRequest.
+ * \internal
  *
- * @class  DescribeProjectRequestPrivate
- *
- * @brief  Private implementation for DescribeProjectRequest.
+ * \inmodule QtAwsMobile
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeProjectRequestPrivate object.
- *
- * @param  action  Mobile action being performed.
- * @param  q       Pointer to this object's public DescribeProjectRequest instance.
+ * Constructs a DescribeProjectRequestPrivate object for Mobile \a action with,
+ * public implementation \a q.
  */
 DescribeProjectRequestPrivate::DescribeProjectRequestPrivate(
     const MobileRequest::Action action, DescribeProjectRequest * const q)
@@ -107,15 +96,10 @@ DescribeProjectRequestPrivate::DescribeProjectRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeProjectRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeProjectRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeProjectRequest instance.
  */
 DescribeProjectRequestPrivate::DescribeProjectRequestPrivate(
     const DescribeProjectRequestPrivate &other, DescribeProjectRequest * const q)

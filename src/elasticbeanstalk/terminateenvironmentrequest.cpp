@@ -27,10 +27,9 @@ namespace ElasticBeanstalk {
 
 /*!
  * \class QtAws::ElasticBeanstalk::TerminateEnvironmentRequest
- *
  * \brief The TerminateEnvironmentRequest class provides an interface for ElasticBeanstalk TerminateEnvironment requests.
  *
- * \ingroup ElasticBeanstalk
+ * \inmodule QtAwsElasticBeanstalk
  *
  *  <fullname>AWS Elastic Beanstalk</fullname>
  * 
@@ -59,9 +58,7 @@ namespace ElasticBeanstalk {
  */
 
 /*!
- * @brief  Constructs a new TerminateEnvironmentRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 TerminateEnvironmentRequest::TerminateEnvironmentRequest(const TerminateEnvironmentRequest &other)
     : ElasticBeanstalkRequest(new TerminateEnvironmentRequestPrivate(*other.d_func(), this))
@@ -70,7 +67,7 @@ TerminateEnvironmentRequest::TerminateEnvironmentRequest(const TerminateEnvironm
 }
 
 /*!
- * @brief  Constructs a new TerminateEnvironmentRequest object.
+ * Constructs a TerminateEnvironmentRequest object.
  */
 TerminateEnvironmentRequest::TerminateEnvironmentRequest()
     : ElasticBeanstalkRequest(new TerminateEnvironmentRequestPrivate(ElasticBeanstalkRequest::TerminateEnvironmentAction, this))
@@ -88,14 +85,9 @@ bool TerminateEnvironmentRequest::isValid() const
 
 
 /*!
- * @brief  Construct an TerminateEnvironmentResponse object.
+ * Returns a TerminateEnvironmentResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An TerminateEnvironmentResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ElasticBeanstalkClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * TerminateEnvironmentRequest::response(QNetworkReply * const reply) const
 {
@@ -103,20 +95,17 @@ QtAws::Core::AwsAbstractResponse * TerminateEnvironmentRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::ElasticBeanstalk::TerminateEnvironmentRequestPrivate
+ * \brief The TerminateEnvironmentRequestPrivate class provides private implementation for TerminateEnvironmentRequest.
+ * \internal
  *
- * @class  TerminateEnvironmentRequestPrivate
- *
- * @brief  Private implementation for TerminateEnvironmentRequest.
+ * \inmodule QtAwsElasticBeanstalk
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new TerminateEnvironmentRequestPrivate object.
- *
- * @param  action  ElasticBeanstalk action being performed.
- * @param  q       Pointer to this object's public TerminateEnvironmentRequest instance.
+ * Constructs a TerminateEnvironmentRequestPrivate object for ElasticBeanstalk \a action with,
+ * public implementation \a q.
  */
 TerminateEnvironmentRequestPrivate::TerminateEnvironmentRequestPrivate(
     const ElasticBeanstalkRequest::Action action, TerminateEnvironmentRequest * const q)
@@ -126,15 +115,10 @@ TerminateEnvironmentRequestPrivate::TerminateEnvironmentRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new TerminateEnvironmentRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the TerminateEnvironmentRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public TerminateEnvironmentRequest instance.
  */
 TerminateEnvironmentRequestPrivate::TerminateEnvironmentRequestPrivate(
     const TerminateEnvironmentRequestPrivate &other, TerminateEnvironmentRequest * const q)

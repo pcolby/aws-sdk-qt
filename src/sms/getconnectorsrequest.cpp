@@ -27,19 +27,16 @@ namespace SMS {
 
 /*!
  * \class QtAws::SMS::GetConnectorsRequest
- *
  * \brief The GetConnectorsRequest class provides an interface for SMS GetConnectors requests.
  *
- * \ingroup SMS
+ * \inmodule QtAwsSMS
  *
  *
  * \sa SMSClient::getConnectors
  */
 
 /*!
- * @brief  Constructs a new GetConnectorsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetConnectorsRequest::GetConnectorsRequest(const GetConnectorsRequest &other)
     : SMSRequest(new GetConnectorsRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ GetConnectorsRequest::GetConnectorsRequest(const GetConnectorsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetConnectorsRequest object.
+ * Constructs a GetConnectorsRequest object.
  */
 GetConnectorsRequest::GetConnectorsRequest()
     : SMSRequest(new GetConnectorsRequestPrivate(SMSRequest::GetConnectorsAction, this))
@@ -66,14 +63,9 @@ bool GetConnectorsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetConnectorsResponse object.
+ * Returns a GetConnectorsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetConnectorsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SMSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetConnectorsRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * GetConnectorsRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::SMS::GetConnectorsRequestPrivate
+ * \brief The GetConnectorsRequestPrivate class provides private implementation for GetConnectorsRequest.
+ * \internal
  *
- * @class  GetConnectorsRequestPrivate
- *
- * @brief  Private implementation for GetConnectorsRequest.
+ * \inmodule QtAwsSMS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetConnectorsRequestPrivate object.
- *
- * @param  action  SMS action being performed.
- * @param  q       Pointer to this object's public GetConnectorsRequest instance.
+ * Constructs a GetConnectorsRequestPrivate object for SMS \a action with,
+ * public implementation \a q.
  */
 GetConnectorsRequestPrivate::GetConnectorsRequestPrivate(
     const SMSRequest::Action action, GetConnectorsRequest * const q)
@@ -104,15 +93,10 @@ GetConnectorsRequestPrivate::GetConnectorsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetConnectorsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetConnectorsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetConnectorsRequest instance.
  */
 GetConnectorsRequestPrivate::GetConnectorsRequestPrivate(
     const GetConnectorsRequestPrivate &other, GetConnectorsRequest * const q)

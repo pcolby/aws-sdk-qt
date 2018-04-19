@@ -27,10 +27,9 @@ namespace Redshift {
 
 /*!
  * \class QtAws::Redshift::DescribeReservedNodeOfferingsRequest
- *
  * \brief The DescribeReservedNodeOfferingsRequest class provides an interface for Redshift DescribeReservedNodeOfferings requests.
  *
- * \ingroup Redshift
+ * \inmodule QtAwsRedshift
  *
  *  <fullname>Amazon Redshift</fullname>
  * 
@@ -67,9 +66,7 @@ namespace Redshift {
  */
 
 /*!
- * @brief  Constructs a new DescribeReservedNodeOfferingsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeReservedNodeOfferingsRequest::DescribeReservedNodeOfferingsRequest(const DescribeReservedNodeOfferingsRequest &other)
     : RedshiftRequest(new DescribeReservedNodeOfferingsRequestPrivate(*other.d_func(), this))
@@ -78,7 +75,7 @@ DescribeReservedNodeOfferingsRequest::DescribeReservedNodeOfferingsRequest(const
 }
 
 /*!
- * @brief  Constructs a new DescribeReservedNodeOfferingsRequest object.
+ * Constructs a DescribeReservedNodeOfferingsRequest object.
  */
 DescribeReservedNodeOfferingsRequest::DescribeReservedNodeOfferingsRequest()
     : RedshiftRequest(new DescribeReservedNodeOfferingsRequestPrivate(RedshiftRequest::DescribeReservedNodeOfferingsAction, this))
@@ -96,14 +93,9 @@ bool DescribeReservedNodeOfferingsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeReservedNodeOfferingsResponse object.
+ * Returns a DescribeReservedNodeOfferingsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeReservedNodeOfferingsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RedshiftClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeReservedNodeOfferingsRequest::response(QNetworkReply * const reply) const
 {
@@ -111,20 +103,17 @@ QtAws::Core::AwsAbstractResponse * DescribeReservedNodeOfferingsRequest::respons
 }
 
 /*!
- * @internal
+ * \class QtAws::Redshift::DescribeReservedNodeOfferingsRequestPrivate
+ * \brief The DescribeReservedNodeOfferingsRequestPrivate class provides private implementation for DescribeReservedNodeOfferingsRequest.
+ * \internal
  *
- * @class  DescribeReservedNodeOfferingsRequestPrivate
- *
- * @brief  Private implementation for DescribeReservedNodeOfferingsRequest.
+ * \inmodule QtAwsRedshift
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeReservedNodeOfferingsRequestPrivate object.
- *
- * @param  action  Redshift action being performed.
- * @param  q       Pointer to this object's public DescribeReservedNodeOfferingsRequest instance.
+ * Constructs a DescribeReservedNodeOfferingsRequestPrivate object for Redshift \a action with,
+ * public implementation \a q.
  */
 DescribeReservedNodeOfferingsRequestPrivate::DescribeReservedNodeOfferingsRequestPrivate(
     const RedshiftRequest::Action action, DescribeReservedNodeOfferingsRequest * const q)
@@ -134,15 +123,10 @@ DescribeReservedNodeOfferingsRequestPrivate::DescribeReservedNodeOfferingsReques
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeReservedNodeOfferingsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeReservedNodeOfferingsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeReservedNodeOfferingsRequest instance.
  */
 DescribeReservedNodeOfferingsRequestPrivate::DescribeReservedNodeOfferingsRequestPrivate(
     const DescribeReservedNodeOfferingsRequestPrivate &other, DescribeReservedNodeOfferingsRequest * const q)

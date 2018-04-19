@@ -27,19 +27,16 @@ namespace S3 {
 
 /*!
  * \class QtAws::S3::PutBucketAccelerateConfigurationRequest
- *
  * \brief The PutBucketAccelerateConfigurationRequest class provides an interface for S3 PutBucketAccelerateConfiguration requests.
  *
- * \ingroup S3
+ * \inmodule QtAwsS3
  *
  *
  * \sa S3Client::putBucketAccelerateConfiguration
  */
 
 /*!
- * @brief  Constructs a new PutBucketAccelerateConfigurationRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 PutBucketAccelerateConfigurationRequest::PutBucketAccelerateConfigurationRequest(const PutBucketAccelerateConfigurationRequest &other)
     : S3Request(new PutBucketAccelerateConfigurationRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ PutBucketAccelerateConfigurationRequest::PutBucketAccelerateConfigurationRequest
 }
 
 /*!
- * @brief  Constructs a new PutBucketAccelerateConfigurationRequest object.
+ * Constructs a PutBucketAccelerateConfigurationRequest object.
  */
 PutBucketAccelerateConfigurationRequest::PutBucketAccelerateConfigurationRequest()
     : S3Request(new PutBucketAccelerateConfigurationRequestPrivate(S3Request::PutBucketAccelerateConfigurationAction, this))
@@ -66,14 +63,9 @@ bool PutBucketAccelerateConfigurationRequest::isValid() const
 
 
 /*!
- * @brief  Construct an PutBucketAccelerateConfigurationResponse object.
+ * Returns a PutBucketAccelerateConfigurationResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An PutBucketAccelerateConfigurationResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  S3Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * PutBucketAccelerateConfigurationRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * PutBucketAccelerateConfigurationRequest::resp
 }
 
 /*!
- * @internal
+ * \class QtAws::S3::PutBucketAccelerateConfigurationRequestPrivate
+ * \brief The PutBucketAccelerateConfigurationRequestPrivate class provides private implementation for PutBucketAccelerateConfigurationRequest.
+ * \internal
  *
- * @class  PutBucketAccelerateConfigurationRequestPrivate
- *
- * @brief  Private implementation for PutBucketAccelerateConfigurationRequest.
+ * \inmodule QtAwsS3
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new PutBucketAccelerateConfigurationRequestPrivate object.
- *
- * @param  action  S3 action being performed.
- * @param  q       Pointer to this object's public PutBucketAccelerateConfigurationRequest instance.
+ * Constructs a PutBucketAccelerateConfigurationRequestPrivate object for S3 \a action with,
+ * public implementation \a q.
  */
 PutBucketAccelerateConfigurationRequestPrivate::PutBucketAccelerateConfigurationRequestPrivate(
     const S3Request::Action action, PutBucketAccelerateConfigurationRequest * const q)
@@ -104,15 +93,10 @@ PutBucketAccelerateConfigurationRequestPrivate::PutBucketAccelerateConfiguration
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutBucketAccelerateConfigurationRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the PutBucketAccelerateConfigurationRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public PutBucketAccelerateConfigurationRequest instance.
  */
 PutBucketAccelerateConfigurationRequestPrivate::PutBucketAccelerateConfigurationRequestPrivate(
     const PutBucketAccelerateConfigurationRequestPrivate &other, PutBucketAccelerateConfigurationRequest * const q)

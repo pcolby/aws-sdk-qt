@@ -27,10 +27,9 @@ namespace Lightsail {
 
 /*!
  * \class QtAws::Lightsail::DetachStaticIpRequest
- *
  * \brief The DetachStaticIpRequest class provides an interface for Lightsail DetachStaticIp requests.
  *
- * \ingroup Lightsail
+ * \inmodule QtAwsLightsail
  *
  *  Amazon Lightsail is the easiest way to get started with AWS for developers who just need virtual private servers.
  *  Lightsail includes everything you need to launch your project quickly - a virtual machine, SSD-based storage, data
@@ -53,9 +52,7 @@ namespace Lightsail {
  */
 
 /*!
- * @brief  Constructs a new DetachStaticIpRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DetachStaticIpRequest::DetachStaticIpRequest(const DetachStaticIpRequest &other)
     : LightsailRequest(new DetachStaticIpRequestPrivate(*other.d_func(), this))
@@ -64,7 +61,7 @@ DetachStaticIpRequest::DetachStaticIpRequest(const DetachStaticIpRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DetachStaticIpRequest object.
+ * Constructs a DetachStaticIpRequest object.
  */
 DetachStaticIpRequest::DetachStaticIpRequest()
     : LightsailRequest(new DetachStaticIpRequestPrivate(LightsailRequest::DetachStaticIpAction, this))
@@ -82,14 +79,9 @@ bool DetachStaticIpRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DetachStaticIpResponse object.
+ * Returns a DetachStaticIpResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DetachStaticIpResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  LightsailClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DetachStaticIpRequest::response(QNetworkReply * const reply) const
 {
@@ -97,20 +89,17 @@ QtAws::Core::AwsAbstractResponse * DetachStaticIpRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::Lightsail::DetachStaticIpRequestPrivate
+ * \brief The DetachStaticIpRequestPrivate class provides private implementation for DetachStaticIpRequest.
+ * \internal
  *
- * @class  DetachStaticIpRequestPrivate
- *
- * @brief  Private implementation for DetachStaticIpRequest.
+ * \inmodule QtAwsLightsail
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DetachStaticIpRequestPrivate object.
- *
- * @param  action  Lightsail action being performed.
- * @param  q       Pointer to this object's public DetachStaticIpRequest instance.
+ * Constructs a DetachStaticIpRequestPrivate object for Lightsail \a action with,
+ * public implementation \a q.
  */
 DetachStaticIpRequestPrivate::DetachStaticIpRequestPrivate(
     const LightsailRequest::Action action, DetachStaticIpRequest * const q)
@@ -120,15 +109,10 @@ DetachStaticIpRequestPrivate::DetachStaticIpRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DetachStaticIpRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DetachStaticIpRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DetachStaticIpRequest instance.
  */
 DetachStaticIpRequestPrivate::DetachStaticIpRequestPrivate(
     const DetachStaticIpRequestPrivate &other, DetachStaticIpRequest * const q)

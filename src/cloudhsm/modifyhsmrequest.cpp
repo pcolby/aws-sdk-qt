@@ -27,10 +27,9 @@ namespace CloudHSM {
 
 /*!
  * \class QtAws::CloudHSM::ModifyHsmRequest
- *
  * \brief The ModifyHsmRequest class provides an interface for CloudHSM ModifyHsm requests.
  *
- * \ingroup CloudHSM
+ * \inmodule QtAwsCloudHSM
  *
  *  <fullname>AWS CloudHSM Service</fullname>
  * 
@@ -49,9 +48,7 @@ namespace CloudHSM {
  */
 
 /*!
- * @brief  Constructs a new ModifyHsmRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ModifyHsmRequest::ModifyHsmRequest(const ModifyHsmRequest &other)
     : CloudHSMRequest(new ModifyHsmRequestPrivate(*other.d_func(), this))
@@ -60,7 +57,7 @@ ModifyHsmRequest::ModifyHsmRequest(const ModifyHsmRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ModifyHsmRequest object.
+ * Constructs a ModifyHsmRequest object.
  */
 ModifyHsmRequest::ModifyHsmRequest()
     : CloudHSMRequest(new ModifyHsmRequestPrivate(CloudHSMRequest::ModifyHsmAction, this))
@@ -78,14 +75,9 @@ bool ModifyHsmRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ModifyHsmResponse object.
+ * Returns a ModifyHsmResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ModifyHsmResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudHSMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ModifyHsmRequest::response(QNetworkReply * const reply) const
 {
@@ -93,20 +85,17 @@ QtAws::Core::AwsAbstractResponse * ModifyHsmRequest::response(QNetworkReply * co
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudHSM::ModifyHsmRequestPrivate
+ * \brief The ModifyHsmRequestPrivate class provides private implementation for ModifyHsmRequest.
+ * \internal
  *
- * @class  ModifyHsmRequestPrivate
- *
- * @brief  Private implementation for ModifyHsmRequest.
+ * \inmodule QtAwsCloudHSM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ModifyHsmRequestPrivate object.
- *
- * @param  action  CloudHSM action being performed.
- * @param  q       Pointer to this object's public ModifyHsmRequest instance.
+ * Constructs a ModifyHsmRequestPrivate object for CloudHSM \a action with,
+ * public implementation \a q.
  */
 ModifyHsmRequestPrivate::ModifyHsmRequestPrivate(
     const CloudHSMRequest::Action action, ModifyHsmRequest * const q)
@@ -116,15 +105,10 @@ ModifyHsmRequestPrivate::ModifyHsmRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ModifyHsmRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ModifyHsmRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ModifyHsmRequest instance.
  */
 ModifyHsmRequestPrivate::ModifyHsmRequestPrivate(
     const ModifyHsmRequestPrivate &other, ModifyHsmRequest * const q)

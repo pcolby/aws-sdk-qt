@@ -27,10 +27,9 @@ namespace CloudFormation {
 
 /*!
  * \class QtAws::CloudFormation::StopStackSetOperationRequest
- *
  * \brief The StopStackSetOperationRequest class provides an interface for CloudFormation StopStackSetOperation requests.
  *
- * \ingroup CloudFormation
+ * \inmodule QtAwsCloudFormation
  *
  *  <fullname>AWS CloudFormation</fullname>
  * 
@@ -59,9 +58,7 @@ namespace CloudFormation {
  */
 
 /*!
- * @brief  Constructs a new StopStackSetOperationRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 StopStackSetOperationRequest::StopStackSetOperationRequest(const StopStackSetOperationRequest &other)
     : CloudFormationRequest(new StopStackSetOperationRequestPrivate(*other.d_func(), this))
@@ -70,7 +67,7 @@ StopStackSetOperationRequest::StopStackSetOperationRequest(const StopStackSetOpe
 }
 
 /*!
- * @brief  Constructs a new StopStackSetOperationRequest object.
+ * Constructs a StopStackSetOperationRequest object.
  */
 StopStackSetOperationRequest::StopStackSetOperationRequest()
     : CloudFormationRequest(new StopStackSetOperationRequestPrivate(CloudFormationRequest::StopStackSetOperationAction, this))
@@ -88,14 +85,9 @@ bool StopStackSetOperationRequest::isValid() const
 
 
 /*!
- * @brief  Construct an StopStackSetOperationResponse object.
+ * Returns a StopStackSetOperationResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An StopStackSetOperationResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudFormationClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * StopStackSetOperationRequest::response(QNetworkReply * const reply) const
 {
@@ -103,20 +95,17 @@ QtAws::Core::AwsAbstractResponse * StopStackSetOperationRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudFormation::StopStackSetOperationRequestPrivate
+ * \brief The StopStackSetOperationRequestPrivate class provides private implementation for StopStackSetOperationRequest.
+ * \internal
  *
- * @class  StopStackSetOperationRequestPrivate
- *
- * @brief  Private implementation for StopStackSetOperationRequest.
+ * \inmodule QtAwsCloudFormation
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new StopStackSetOperationRequestPrivate object.
- *
- * @param  action  CloudFormation action being performed.
- * @param  q       Pointer to this object's public StopStackSetOperationRequest instance.
+ * Constructs a StopStackSetOperationRequestPrivate object for CloudFormation \a action with,
+ * public implementation \a q.
  */
 StopStackSetOperationRequestPrivate::StopStackSetOperationRequestPrivate(
     const CloudFormationRequest::Action action, StopStackSetOperationRequest * const q)
@@ -126,15 +115,10 @@ StopStackSetOperationRequestPrivate::StopStackSetOperationRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StopStackSetOperationRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the StopStackSetOperationRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public StopStackSetOperationRequest instance.
  */
 StopStackSetOperationRequestPrivate::StopStackSetOperationRequestPrivate(
     const StopStackSetOperationRequestPrivate &other, StopStackSetOperationRequest * const q)

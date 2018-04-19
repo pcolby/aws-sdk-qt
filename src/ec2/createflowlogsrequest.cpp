@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::CreateFlowLogsRequest
- *
  * \brief The CreateFlowLogsRequest class provides an interface for EC2 CreateFlowLogs requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new CreateFlowLogsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateFlowLogsRequest::CreateFlowLogsRequest(const CreateFlowLogsRequest &other)
     : EC2Request(new CreateFlowLogsRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ CreateFlowLogsRequest::CreateFlowLogsRequest(const CreateFlowLogsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new CreateFlowLogsRequest object.
+ * Constructs a CreateFlowLogsRequest object.
  */
 CreateFlowLogsRequest::CreateFlowLogsRequest()
     : EC2Request(new CreateFlowLogsRequestPrivate(EC2Request::CreateFlowLogsAction, this))
@@ -70,14 +67,9 @@ bool CreateFlowLogsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateFlowLogsResponse object.
+ * Returns a CreateFlowLogsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateFlowLogsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateFlowLogsRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * CreateFlowLogsRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::CreateFlowLogsRequestPrivate
+ * \brief The CreateFlowLogsRequestPrivate class provides private implementation for CreateFlowLogsRequest.
+ * \internal
  *
- * @class  CreateFlowLogsRequestPrivate
- *
- * @brief  Private implementation for CreateFlowLogsRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateFlowLogsRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public CreateFlowLogsRequest instance.
+ * Constructs a CreateFlowLogsRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 CreateFlowLogsRequestPrivate::CreateFlowLogsRequestPrivate(
     const EC2Request::Action action, CreateFlowLogsRequest * const q)
@@ -108,15 +97,10 @@ CreateFlowLogsRequestPrivate::CreateFlowLogsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateFlowLogsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateFlowLogsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateFlowLogsRequest instance.
  */
 CreateFlowLogsRequestPrivate::CreateFlowLogsRequestPrivate(
     const CreateFlowLogsRequestPrivate &other, CreateFlowLogsRequest * const q)

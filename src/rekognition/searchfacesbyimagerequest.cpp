@@ -27,10 +27,9 @@ namespace Rekognition {
 
 /*!
  * \class QtAws::Rekognition::SearchFacesByImageRequest
- *
  * \brief The SearchFacesByImageRequest class provides an interface for Rekognition SearchFacesByImage requests.
  *
- * \ingroup Rekognition
+ * \inmodule QtAwsRekognition
  *
  *  This is the Amazon Rekognition API
  *
@@ -38,9 +37,7 @@ namespace Rekognition {
  */
 
 /*!
- * @brief  Constructs a new SearchFacesByImageRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 SearchFacesByImageRequest::SearchFacesByImageRequest(const SearchFacesByImageRequest &other)
     : RekognitionRequest(new SearchFacesByImageRequestPrivate(*other.d_func(), this))
@@ -49,7 +46,7 @@ SearchFacesByImageRequest::SearchFacesByImageRequest(const SearchFacesByImageReq
 }
 
 /*!
- * @brief  Constructs a new SearchFacesByImageRequest object.
+ * Constructs a SearchFacesByImageRequest object.
  */
 SearchFacesByImageRequest::SearchFacesByImageRequest()
     : RekognitionRequest(new SearchFacesByImageRequestPrivate(RekognitionRequest::SearchFacesByImageAction, this))
@@ -67,14 +64,9 @@ bool SearchFacesByImageRequest::isValid() const
 
 
 /*!
- * @brief  Construct an SearchFacesByImageResponse object.
+ * Returns a SearchFacesByImageResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An SearchFacesByImageResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RekognitionClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * SearchFacesByImageRequest::response(QNetworkReply * const reply) const
 {
@@ -82,20 +74,17 @@ QtAws::Core::AwsAbstractResponse * SearchFacesByImageRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::Rekognition::SearchFacesByImageRequestPrivate
+ * \brief The SearchFacesByImageRequestPrivate class provides private implementation for SearchFacesByImageRequest.
+ * \internal
  *
- * @class  SearchFacesByImageRequestPrivate
- *
- * @brief  Private implementation for SearchFacesByImageRequest.
+ * \inmodule QtAwsRekognition
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new SearchFacesByImageRequestPrivate object.
- *
- * @param  action  Rekognition action being performed.
- * @param  q       Pointer to this object's public SearchFacesByImageRequest instance.
+ * Constructs a SearchFacesByImageRequestPrivate object for Rekognition \a action with,
+ * public implementation \a q.
  */
 SearchFacesByImageRequestPrivate::SearchFacesByImageRequestPrivate(
     const RekognitionRequest::Action action, SearchFacesByImageRequest * const q)
@@ -105,15 +94,10 @@ SearchFacesByImageRequestPrivate::SearchFacesByImageRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SearchFacesByImageRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the SearchFacesByImageRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public SearchFacesByImageRequest instance.
  */
 SearchFacesByImageRequestPrivate::SearchFacesByImageRequestPrivate(
     const SearchFacesByImageRequestPrivate &other, SearchFacesByImageRequest * const q)

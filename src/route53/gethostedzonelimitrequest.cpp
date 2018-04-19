@@ -27,19 +27,16 @@ namespace Route53 {
 
 /*!
  * \class QtAws::Route53::GetHostedZoneLimitRequest
- *
  * \brief The GetHostedZoneLimitRequest class provides an interface for Route53 GetHostedZoneLimit requests.
  *
- * \ingroup Route53
+ * \inmodule QtAwsRoute53
  *
  *
  * \sa Route53Client::getHostedZoneLimit
  */
 
 /*!
- * @brief  Constructs a new GetHostedZoneLimitRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetHostedZoneLimitRequest::GetHostedZoneLimitRequest(const GetHostedZoneLimitRequest &other)
     : Route53Request(new GetHostedZoneLimitRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ GetHostedZoneLimitRequest::GetHostedZoneLimitRequest(const GetHostedZoneLimitReq
 }
 
 /*!
- * @brief  Constructs a new GetHostedZoneLimitRequest object.
+ * Constructs a GetHostedZoneLimitRequest object.
  */
 GetHostedZoneLimitRequest::GetHostedZoneLimitRequest()
     : Route53Request(new GetHostedZoneLimitRequestPrivate(Route53Request::GetHostedZoneLimitAction, this))
@@ -66,14 +63,9 @@ bool GetHostedZoneLimitRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetHostedZoneLimitResponse object.
+ * Returns a GetHostedZoneLimitResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetHostedZoneLimitResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  Route53Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetHostedZoneLimitRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * GetHostedZoneLimitRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::Route53::GetHostedZoneLimitRequestPrivate
+ * \brief The GetHostedZoneLimitRequestPrivate class provides private implementation for GetHostedZoneLimitRequest.
+ * \internal
  *
- * @class  GetHostedZoneLimitRequestPrivate
- *
- * @brief  Private implementation for GetHostedZoneLimitRequest.
+ * \inmodule QtAwsRoute53
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetHostedZoneLimitRequestPrivate object.
- *
- * @param  action  Route53 action being performed.
- * @param  q       Pointer to this object's public GetHostedZoneLimitRequest instance.
+ * Constructs a GetHostedZoneLimitRequestPrivate object for Route53 \a action with,
+ * public implementation \a q.
  */
 GetHostedZoneLimitRequestPrivate::GetHostedZoneLimitRequestPrivate(
     const Route53Request::Action action, GetHostedZoneLimitRequest * const q)
@@ -104,15 +93,10 @@ GetHostedZoneLimitRequestPrivate::GetHostedZoneLimitRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetHostedZoneLimitRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetHostedZoneLimitRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetHostedZoneLimitRequest instance.
  */
 GetHostedZoneLimitRequestPrivate::GetHostedZoneLimitRequestPrivate(
     const GetHostedZoneLimitRequestPrivate &other, GetHostedZoneLimitRequest * const q)

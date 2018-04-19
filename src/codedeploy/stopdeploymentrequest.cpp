@@ -27,10 +27,9 @@ namespace CodeDeploy {
 
 /*!
  * \class QtAws::CodeDeploy::StopDeploymentRequest
- *
  * \brief The StopDeploymentRequest class provides an interface for CodeDeploy StopDeployment requests.
  *
- * \ingroup CodeDeploy
+ * \inmodule QtAwsCodeDeploy
  *
  *  <fullname>AWS CodeDeploy</fullname>
  * 
@@ -118,9 +117,7 @@ namespace CodeDeploy {
  */
 
 /*!
- * @brief  Constructs a new StopDeploymentRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 StopDeploymentRequest::StopDeploymentRequest(const StopDeploymentRequest &other)
     : CodeDeployRequest(new StopDeploymentRequestPrivate(*other.d_func(), this))
@@ -129,7 +126,7 @@ StopDeploymentRequest::StopDeploymentRequest(const StopDeploymentRequest &other)
 }
 
 /*!
- * @brief  Constructs a new StopDeploymentRequest object.
+ * Constructs a StopDeploymentRequest object.
  */
 StopDeploymentRequest::StopDeploymentRequest()
     : CodeDeployRequest(new StopDeploymentRequestPrivate(CodeDeployRequest::StopDeploymentAction, this))
@@ -147,14 +144,9 @@ bool StopDeploymentRequest::isValid() const
 
 
 /*!
- * @brief  Construct an StopDeploymentResponse object.
+ * Returns a StopDeploymentResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An StopDeploymentResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CodeDeployClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * StopDeploymentRequest::response(QNetworkReply * const reply) const
 {
@@ -162,20 +154,17 @@ QtAws::Core::AwsAbstractResponse * StopDeploymentRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::CodeDeploy::StopDeploymentRequestPrivate
+ * \brief The StopDeploymentRequestPrivate class provides private implementation for StopDeploymentRequest.
+ * \internal
  *
- * @class  StopDeploymentRequestPrivate
- *
- * @brief  Private implementation for StopDeploymentRequest.
+ * \inmodule QtAwsCodeDeploy
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new StopDeploymentRequestPrivate object.
- *
- * @param  action  CodeDeploy action being performed.
- * @param  q       Pointer to this object's public StopDeploymentRequest instance.
+ * Constructs a StopDeploymentRequestPrivate object for CodeDeploy \a action with,
+ * public implementation \a q.
  */
 StopDeploymentRequestPrivate::StopDeploymentRequestPrivate(
     const CodeDeployRequest::Action action, StopDeploymentRequest * const q)
@@ -185,15 +174,10 @@ StopDeploymentRequestPrivate::StopDeploymentRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StopDeploymentRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the StopDeploymentRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public StopDeploymentRequest instance.
  */
 StopDeploymentRequestPrivate::StopDeploymentRequestPrivate(
     const StopDeploymentRequestPrivate &other, StopDeploymentRequest * const q)

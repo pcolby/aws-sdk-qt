@@ -27,10 +27,9 @@ namespace DatabaseMigrationService {
 
 /*!
  * \class QtAws::DatabaseMigrationService::ListTagsForResourceRequest
- *
  * \brief The ListTagsForResourceRequest class provides an interface for DatabaseMigrationService ListTagsForResource requests.
  *
- * \ingroup DatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigrationService
  *
  *  <fullname>AWS Database Migration Service</fullname>
  * 
@@ -48,9 +47,7 @@ namespace DatabaseMigrationService {
  */
 
 /*!
- * @brief  Constructs a new ListTagsForResourceRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListTagsForResourceRequest::ListTagsForResourceRequest(const ListTagsForResourceRequest &other)
     : DatabaseMigrationServiceRequest(new ListTagsForResourceRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ ListTagsForResourceRequest::ListTagsForResourceRequest(const ListTagsForResource
 }
 
 /*!
- * @brief  Constructs a new ListTagsForResourceRequest object.
+ * Constructs a ListTagsForResourceRequest object.
  */
 ListTagsForResourceRequest::ListTagsForResourceRequest()
     : DatabaseMigrationServiceRequest(new ListTagsForResourceRequestPrivate(DatabaseMigrationServiceRequest::ListTagsForResourceAction, this))
@@ -77,14 +74,9 @@ bool ListTagsForResourceRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListTagsForResourceResponse object.
+ * Returns a ListTagsForResourceResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListTagsForResourceResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DatabaseMigrationServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListTagsForResourceRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * ListTagsForResourceRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::DatabaseMigrationService::ListTagsForResourceRequestPrivate
+ * \brief The ListTagsForResourceRequestPrivate class provides private implementation for ListTagsForResourceRequest.
+ * \internal
  *
- * @class  ListTagsForResourceRequestPrivate
- *
- * @brief  Private implementation for ListTagsForResourceRequest.
+ * \inmodule QtAwsDatabaseMigrationService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListTagsForResourceRequestPrivate object.
- *
- * @param  action  DatabaseMigrationService action being performed.
- * @param  q       Pointer to this object's public ListTagsForResourceRequest instance.
+ * Constructs a ListTagsForResourceRequestPrivate object for DatabaseMigrationService \a action with,
+ * public implementation \a q.
  */
 ListTagsForResourceRequestPrivate::ListTagsForResourceRequestPrivate(
     const DatabaseMigrationServiceRequest::Action action, ListTagsForResourceRequest * const q)
@@ -115,15 +104,10 @@ ListTagsForResourceRequestPrivate::ListTagsForResourceRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListTagsForResourceRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListTagsForResourceRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListTagsForResourceRequest instance.
  */
 ListTagsForResourceRequestPrivate::ListTagsForResourceRequestPrivate(
     const ListTagsForResourceRequestPrivate &other, ListTagsForResourceRequest * const q)

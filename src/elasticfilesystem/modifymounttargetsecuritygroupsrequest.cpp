@@ -27,10 +27,9 @@ namespace EFS {
 
 /*!
  * \class QtAws::EFS::ModifyMountTargetSecurityGroupsRequest
- *
  * \brief The ModifyMountTargetSecurityGroupsRequest class provides an interface for EFS ModifyMountTargetSecurityGroups requests.
  *
- * \ingroup EFS
+ * \inmodule QtAwsEFS
  *
  *  <fullname>Amazon Elastic File System</fullname>
  * 
@@ -43,9 +42,7 @@ namespace EFS {
  */
 
 /*!
- * @brief  Constructs a new ModifyMountTargetSecurityGroupsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ModifyMountTargetSecurityGroupsRequest::ModifyMountTargetSecurityGroupsRequest(const ModifyMountTargetSecurityGroupsRequest &other)
     : EFSRequest(new ModifyMountTargetSecurityGroupsRequestPrivate(*other.d_func(), this))
@@ -54,7 +51,7 @@ ModifyMountTargetSecurityGroupsRequest::ModifyMountTargetSecurityGroupsRequest(c
 }
 
 /*!
- * @brief  Constructs a new ModifyMountTargetSecurityGroupsRequest object.
+ * Constructs a ModifyMountTargetSecurityGroupsRequest object.
  */
 ModifyMountTargetSecurityGroupsRequest::ModifyMountTargetSecurityGroupsRequest()
     : EFSRequest(new ModifyMountTargetSecurityGroupsRequestPrivate(EFSRequest::ModifyMountTargetSecurityGroupsAction, this))
@@ -72,14 +69,9 @@ bool ModifyMountTargetSecurityGroupsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ModifyMountTargetSecurityGroupsResponse object.
+ * Returns a ModifyMountTargetSecurityGroupsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ModifyMountTargetSecurityGroupsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EFSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ModifyMountTargetSecurityGroupsRequest::response(QNetworkReply * const reply) const
 {
@@ -87,20 +79,17 @@ QtAws::Core::AwsAbstractResponse * ModifyMountTargetSecurityGroupsRequest::respo
 }
 
 /*!
- * @internal
+ * \class QtAws::EFS::ModifyMountTargetSecurityGroupsRequestPrivate
+ * \brief The ModifyMountTargetSecurityGroupsRequestPrivate class provides private implementation for ModifyMountTargetSecurityGroupsRequest.
+ * \internal
  *
- * @class  ModifyMountTargetSecurityGroupsRequestPrivate
- *
- * @brief  Private implementation for ModifyMountTargetSecurityGroupsRequest.
+ * \inmodule QtAwsEFS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ModifyMountTargetSecurityGroupsRequestPrivate object.
- *
- * @param  action  EFS action being performed.
- * @param  q       Pointer to this object's public ModifyMountTargetSecurityGroupsRequest instance.
+ * Constructs a ModifyMountTargetSecurityGroupsRequestPrivate object for EFS \a action with,
+ * public implementation \a q.
  */
 ModifyMountTargetSecurityGroupsRequestPrivate::ModifyMountTargetSecurityGroupsRequestPrivate(
     const EFSRequest::Action action, ModifyMountTargetSecurityGroupsRequest * const q)
@@ -110,15 +99,10 @@ ModifyMountTargetSecurityGroupsRequestPrivate::ModifyMountTargetSecurityGroupsRe
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ModifyMountTargetSecurityGroupsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ModifyMountTargetSecurityGroupsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ModifyMountTargetSecurityGroupsRequest instance.
  */
 ModifyMountTargetSecurityGroupsRequestPrivate::ModifyMountTargetSecurityGroupsRequestPrivate(
     const ModifyMountTargetSecurityGroupsRequestPrivate &other, ModifyMountTargetSecurityGroupsRequest * const q)

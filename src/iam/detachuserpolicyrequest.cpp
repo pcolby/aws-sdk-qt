@@ -27,10 +27,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::DetachUserPolicyRequest
- *
  * \brief The DetachUserPolicyRequest class provides an interface for IAM DetachUserPolicy requests.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -102,9 +101,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new DetachUserPolicyRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DetachUserPolicyRequest::DetachUserPolicyRequest(const DetachUserPolicyRequest &other)
     : IAMRequest(new DetachUserPolicyRequestPrivate(*other.d_func(), this))
@@ -113,7 +110,7 @@ DetachUserPolicyRequest::DetachUserPolicyRequest(const DetachUserPolicyRequest &
 }
 
 /*!
- * @brief  Constructs a new DetachUserPolicyRequest object.
+ * Constructs a DetachUserPolicyRequest object.
  */
 DetachUserPolicyRequest::DetachUserPolicyRequest()
     : IAMRequest(new DetachUserPolicyRequestPrivate(IAMRequest::DetachUserPolicyAction, this))
@@ -131,14 +128,9 @@ bool DetachUserPolicyRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DetachUserPolicyResponse object.
+ * Returns a DetachUserPolicyResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DetachUserPolicyResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IAMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DetachUserPolicyRequest::response(QNetworkReply * const reply) const
 {
@@ -146,20 +138,17 @@ QtAws::Core::AwsAbstractResponse * DetachUserPolicyRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::IAM::DetachUserPolicyRequestPrivate
+ * \brief The DetachUserPolicyRequestPrivate class provides private implementation for DetachUserPolicyRequest.
+ * \internal
  *
- * @class  DetachUserPolicyRequestPrivate
- *
- * @brief  Private implementation for DetachUserPolicyRequest.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DetachUserPolicyRequestPrivate object.
- *
- * @param  action  IAM action being performed.
- * @param  q       Pointer to this object's public DetachUserPolicyRequest instance.
+ * Constructs a DetachUserPolicyRequestPrivate object for IAM \a action with,
+ * public implementation \a q.
  */
 DetachUserPolicyRequestPrivate::DetachUserPolicyRequestPrivate(
     const IAMRequest::Action action, DetachUserPolicyRequest * const q)
@@ -169,15 +158,10 @@ DetachUserPolicyRequestPrivate::DetachUserPolicyRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DetachUserPolicyRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DetachUserPolicyRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DetachUserPolicyRequest instance.
  */
 DetachUserPolicyRequestPrivate::DetachUserPolicyRequestPrivate(
     const DetachUserPolicyRequestPrivate &other, DetachUserPolicyRequest * const q)

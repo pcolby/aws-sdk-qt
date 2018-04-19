@@ -27,10 +27,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::DescribeEffectivePatchesForPatchBaselineRequest
- *
  * \brief The DescribeEffectivePatchesForPatchBaselineRequest class provides an interface for SSM DescribeEffectivePatchesForPatchBaseline requests.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -61,9 +60,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new DescribeEffectivePatchesForPatchBaselineRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeEffectivePatchesForPatchBaselineRequest::DescribeEffectivePatchesForPatchBaselineRequest(const DescribeEffectivePatchesForPatchBaselineRequest &other)
     : SSMRequest(new DescribeEffectivePatchesForPatchBaselineRequestPrivate(*other.d_func(), this))
@@ -72,7 +69,7 @@ DescribeEffectivePatchesForPatchBaselineRequest::DescribeEffectivePatchesForPatc
 }
 
 /*!
- * @brief  Constructs a new DescribeEffectivePatchesForPatchBaselineRequest object.
+ * Constructs a DescribeEffectivePatchesForPatchBaselineRequest object.
  */
 DescribeEffectivePatchesForPatchBaselineRequest::DescribeEffectivePatchesForPatchBaselineRequest()
     : SSMRequest(new DescribeEffectivePatchesForPatchBaselineRequestPrivate(SSMRequest::DescribeEffectivePatchesForPatchBaselineAction, this))
@@ -90,14 +87,9 @@ bool DescribeEffectivePatchesForPatchBaselineRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeEffectivePatchesForPatchBaselineResponse object.
+ * Returns a DescribeEffectivePatchesForPatchBaselineResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeEffectivePatchesForPatchBaselineResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SSMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeEffectivePatchesForPatchBaselineRequest::response(QNetworkReply * const reply) const
 {
@@ -105,20 +97,17 @@ QtAws::Core::AwsAbstractResponse * DescribeEffectivePatchesForPatchBaselineReque
 }
 
 /*!
- * @internal
+ * \class QtAws::SSM::DescribeEffectivePatchesForPatchBaselineRequestPrivate
+ * \brief The DescribeEffectivePatchesForPatchBaselineRequestPrivate class provides private implementation for DescribeEffectivePatchesForPatchBaselineRequest.
+ * \internal
  *
- * @class  DescribeEffectivePatchesForPatchBaselineRequestPrivate
- *
- * @brief  Private implementation for DescribeEffectivePatchesForPatchBaselineRequest.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeEffectivePatchesForPatchBaselineRequestPrivate object.
- *
- * @param  action  SSM action being performed.
- * @param  q       Pointer to this object's public DescribeEffectivePatchesForPatchBaselineRequest instance.
+ * Constructs a DescribeEffectivePatchesForPatchBaselineRequestPrivate object for SSM \a action with,
+ * public implementation \a q.
  */
 DescribeEffectivePatchesForPatchBaselineRequestPrivate::DescribeEffectivePatchesForPatchBaselineRequestPrivate(
     const SSMRequest::Action action, DescribeEffectivePatchesForPatchBaselineRequest * const q)
@@ -128,15 +117,10 @@ DescribeEffectivePatchesForPatchBaselineRequestPrivate::DescribeEffectivePatches
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeEffectivePatchesForPatchBaselineRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeEffectivePatchesForPatchBaselineRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeEffectivePatchesForPatchBaselineRequest instance.
  */
 DescribeEffectivePatchesForPatchBaselineRequestPrivate::DescribeEffectivePatchesForPatchBaselineRequestPrivate(
     const DescribeEffectivePatchesForPatchBaselineRequestPrivate &other, DescribeEffectivePatchesForPatchBaselineRequest * const q)

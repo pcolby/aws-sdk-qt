@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::CreateInternetGatewayRequest
- *
  * \brief The CreateInternetGatewayRequest class provides an interface for EC2 CreateInternetGateway requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new CreateInternetGatewayRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateInternetGatewayRequest::CreateInternetGatewayRequest(const CreateInternetGatewayRequest &other)
     : EC2Request(new CreateInternetGatewayRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ CreateInternetGatewayRequest::CreateInternetGatewayRequest(const CreateInternetG
 }
 
 /*!
- * @brief  Constructs a new CreateInternetGatewayRequest object.
+ * Constructs a CreateInternetGatewayRequest object.
  */
 CreateInternetGatewayRequest::CreateInternetGatewayRequest()
     : EC2Request(new CreateInternetGatewayRequestPrivate(EC2Request::CreateInternetGatewayAction, this))
@@ -70,14 +67,9 @@ bool CreateInternetGatewayRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateInternetGatewayResponse object.
+ * Returns a CreateInternetGatewayResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateInternetGatewayResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateInternetGatewayRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * CreateInternetGatewayRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::CreateInternetGatewayRequestPrivate
+ * \brief The CreateInternetGatewayRequestPrivate class provides private implementation for CreateInternetGatewayRequest.
+ * \internal
  *
- * @class  CreateInternetGatewayRequestPrivate
- *
- * @brief  Private implementation for CreateInternetGatewayRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateInternetGatewayRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public CreateInternetGatewayRequest instance.
+ * Constructs a CreateInternetGatewayRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 CreateInternetGatewayRequestPrivate::CreateInternetGatewayRequestPrivate(
     const EC2Request::Action action, CreateInternetGatewayRequest * const q)
@@ -108,15 +97,10 @@ CreateInternetGatewayRequestPrivate::CreateInternetGatewayRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateInternetGatewayRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateInternetGatewayRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateInternetGatewayRequest instance.
  */
 CreateInternetGatewayRequestPrivate::CreateInternetGatewayRequestPrivate(
     const CreateInternetGatewayRequestPrivate &other, CreateInternetGatewayRequest * const q)

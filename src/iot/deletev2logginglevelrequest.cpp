@@ -27,10 +27,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::DeleteV2LoggingLevelRequest
- *
  * \brief The DeleteV2LoggingLevelRequest class provides an interface for IoT DeleteV2LoggingLevel requests.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -48,9 +47,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new DeleteV2LoggingLevelRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteV2LoggingLevelRequest::DeleteV2LoggingLevelRequest(const DeleteV2LoggingLevelRequest &other)
     : IoTRequest(new DeleteV2LoggingLevelRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ DeleteV2LoggingLevelRequest::DeleteV2LoggingLevelRequest(const DeleteV2LoggingLe
 }
 
 /*!
- * @brief  Constructs a new DeleteV2LoggingLevelRequest object.
+ * Constructs a DeleteV2LoggingLevelRequest object.
  */
 DeleteV2LoggingLevelRequest::DeleteV2LoggingLevelRequest()
     : IoTRequest(new DeleteV2LoggingLevelRequestPrivate(IoTRequest::DeleteV2LoggingLevelAction, this))
@@ -77,14 +74,9 @@ bool DeleteV2LoggingLevelRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteV2LoggingLevelResponse object.
+ * Returns a DeleteV2LoggingLevelResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteV2LoggingLevelResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IoTClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteV2LoggingLevelRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * DeleteV2LoggingLevelRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::IoT::DeleteV2LoggingLevelRequestPrivate
+ * \brief The DeleteV2LoggingLevelRequestPrivate class provides private implementation for DeleteV2LoggingLevelRequest.
+ * \internal
  *
- * @class  DeleteV2LoggingLevelRequestPrivate
- *
- * @brief  Private implementation for DeleteV2LoggingLevelRequest.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteV2LoggingLevelRequestPrivate object.
- *
- * @param  action  IoT action being performed.
- * @param  q       Pointer to this object's public DeleteV2LoggingLevelRequest instance.
+ * Constructs a DeleteV2LoggingLevelRequestPrivate object for IoT \a action with,
+ * public implementation \a q.
  */
 DeleteV2LoggingLevelRequestPrivate::DeleteV2LoggingLevelRequestPrivate(
     const IoTRequest::Action action, DeleteV2LoggingLevelRequest * const q)
@@ -115,15 +104,10 @@ DeleteV2LoggingLevelRequestPrivate::DeleteV2LoggingLevelRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteV2LoggingLevelRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteV2LoggingLevelRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteV2LoggingLevelRequest instance.
  */
 DeleteV2LoggingLevelRequestPrivate::DeleteV2LoggingLevelRequestPrivate(
     const DeleteV2LoggingLevelRequestPrivate &other, DeleteV2LoggingLevelRequest * const q)

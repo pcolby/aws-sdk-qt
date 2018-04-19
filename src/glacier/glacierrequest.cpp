@@ -25,16 +25,54 @@ namespace Glacier {
 
 /*!
  * \class QtAws::Glacier::GlacierRequest
- *
  * \brief The GlacierRequest class provides an interface for Glacier requests.
  *
- * \ingroup Glacier
+ * \inmodule QtAwsGlacier
  */
 
 /*!
- * @brief  Constructs a new GlacierRequest object.
+ * \enum GlacierRequest::Action
  *
- * @param  action  The Glacier action to request.
+ * This enum describes the actions that can be performed as Glacier
+ * requests.
+ *
+ * \value AbortMultipartUploadAction Glacier AbortMultipartUpload action.
+ * \value AbortVaultLockAction Glacier AbortVaultLock action.
+ * \value AddTagsToVaultAction Glacier AddTagsToVault action.
+ * \value CompleteMultipartUploadAction Glacier CompleteMultipartUpload action.
+ * \value CompleteVaultLockAction Glacier CompleteVaultLock action.
+ * \value CreateVaultAction Glacier CreateVault action.
+ * \value DeleteArchiveAction Glacier DeleteArchive action.
+ * \value DeleteVaultAction Glacier DeleteVault action.
+ * \value DeleteVaultAccessPolicyAction Glacier DeleteVaultAccessPolicy action.
+ * \value DeleteVaultNotificationsAction Glacier DeleteVaultNotifications action.
+ * \value DescribeJobAction Glacier DescribeJob action.
+ * \value DescribeVaultAction Glacier DescribeVault action.
+ * \value GetDataRetrievalPolicyAction Glacier GetDataRetrievalPolicy action.
+ * \value GetJobOutputAction Glacier GetJobOutput action.
+ * \value GetVaultAccessPolicyAction Glacier GetVaultAccessPolicy action.
+ * \value GetVaultLockAction Glacier GetVaultLock action.
+ * \value GetVaultNotificationsAction Glacier GetVaultNotifications action.
+ * \value InitiateJobAction Glacier InitiateJob action.
+ * \value InitiateMultipartUploadAction Glacier InitiateMultipartUpload action.
+ * \value InitiateVaultLockAction Glacier InitiateVaultLock action.
+ * \value ListJobsAction Glacier ListJobs action.
+ * \value ListMultipartUploadsAction Glacier ListMultipartUploads action.
+ * \value ListPartsAction Glacier ListParts action.
+ * \value ListProvisionedCapacityAction Glacier ListProvisionedCapacity action.
+ * \value ListTagsForVaultAction Glacier ListTagsForVault action.
+ * \value ListVaultsAction Glacier ListVaults action.
+ * \value PurchaseProvisionedCapacityAction Glacier PurchaseProvisionedCapacity action.
+ * \value RemoveTagsFromVaultAction Glacier RemoveTagsFromVault action.
+ * \value SetDataRetrievalPolicyAction Glacier SetDataRetrievalPolicy action.
+ * \value SetVaultAccessPolicyAction Glacier SetVaultAccessPolicy action.
+ * \value SetVaultNotificationsAction Glacier SetVaultNotifications action.
+ * \value UploadArchiveAction Glacier UploadArchive action.
+ * \value UploadMultipartPartAction Glacier UploadMultipartPart action.
+ */
+
+/*!
+ * Constructs a[n] GlacierRequest object for Glacier \a action.
  */
 GlacierRequest::GlacierRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new GlacierRequestPrivate(action, this))
@@ -43,9 +81,7 @@ GlacierRequest::GlacierRequest(const Action action)
 }
 
 /*!
- * @brief  Constructs a new GlacierRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GlacierRequest::GlacierRequest(const GlacierRequest &other)
     : QtAws::Core::AwsAbstractRequest(new GlacierRequestPrivate(*other.d_func(), this))
@@ -54,13 +90,7 @@ GlacierRequest::GlacierRequest(const GlacierRequest &other)
 }
 
 /*!
- * @brief  Assignment operator.
- *
- * Assigns \a other to \c this.
- *
- * @param  other  Instance to copy.
- *
- * @return  A reference to \c this.
+ * Sets the GlacierRequest object to be equal to \a other.
  */
 GlacierRequest& GlacierRequest::operator=(const GlacierRequest &other)
 {
@@ -72,14 +102,10 @@ GlacierRequest& GlacierRequest::operator=(const GlacierRequest &other)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GlacierRequest object.
+ * Constructs aa GlacierRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from GlacierRequestPrivate.
- *
- * @param  d  Pointer to private data (aka D-Pointer).
  */
 GlacierRequest::GlacierRequest(GlacierRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
@@ -87,7 +113,7 @@ GlacierRequest::GlacierRequest(GlacierRequestPrivate * const d) : QtAws::Core::A
 }
 
 /*!
- * \brief Returns the Glacier action to be performed by this request.
+ * Returns the Glacier action to be performed by this request.
  */
 GlacierRequest::Action GlacierRequest::action() const
 {
@@ -96,7 +122,7 @@ GlacierRequest::Action GlacierRequest::action() const
 }
 
 /*!
- * \brief Returns the name of the Glacier action to be performed by this request.
+ * Returns the name of the Glacier action to be performed by this request.
  */
 QString GlacierRequest::actionString() const
 {
@@ -104,7 +130,7 @@ QString GlacierRequest::actionString() const
 }
 
 /*!
- * \brief Returns the Glacier API version implemented by this request.
+ * Returns the Glacier API version implemented by this request.
  */
 QString GlacierRequest::apiVersion() const
 {
@@ -113,7 +139,7 @@ QString GlacierRequest::apiVersion() const
 }
 
 /*!
- * @brief Set the Glacier action to be performed by this request to \a action.
+ * Sets the Glacier action to be performed by this request to \a action.
  */
 void GlacierRequest::setAction(const Action action)
 {
@@ -122,7 +148,7 @@ void GlacierRequest::setAction(const Action action)
 }
 
 /*!
- * Set the Glacier API version to include in this request to \a version.
+ * Sets the Glacier API version to include in this request to \a version.
  */
 void GlacierRequest::setApiVersion(const QString &version)
 {
@@ -131,7 +157,7 @@ void GlacierRequest::setApiVersion(const QString &version)
 }
 
 /*!
- * \brief Returns \c true if this request is the same as \a other.
+ * Returns \c true if this request is equal to \a other; \c false otherwise.
  *
  * Note, most derived *Request classes do not need to provider their own
  * implementations of this function, since most such request classes rely on
@@ -146,8 +172,8 @@ bool GlacierRequest::operator==(const GlacierRequest &other) const
             (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
-/*!
- * @brief  Check if \a queueName is a valid Glacier queue name.
+/*
+ * Returns \c tue if \a queueName is a valid Glacier queue name.
  *
  * @par From Glacier FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
@@ -166,9 +192,8 @@ bool GlacierRequest::operator==(const GlacierRequest &other) const
 }*/
 
 /*!
- * \brief Removes the a \a name parameter from this request.
- *
- * Returns the count of paramters removed (typically \c 0 or \c 1).
+ * Removes the a \a name parameter from the request, then returns the number of
+ * paramters removed (typically \c 0 or \c 1).
  */
 int GlacierRequest::clearParameter(const QString &name)
 {
@@ -177,7 +202,7 @@ int GlacierRequest::clearParameter(const QString &name)
 }
 
 /*!
- * \brief Removes all parameters from this request.
+ * Removes all parameters from the request.
  */
 void GlacierRequest::clearParameters()
 {
@@ -186,7 +211,7 @@ void GlacierRequest::clearParameters()
 }
 
 /*!
- * \brief Returns the value of the \n name pararemter if set, otherwise \a defaultValue.
+ * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
 QVariant GlacierRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
@@ -195,7 +220,7 @@ QVariant GlacierRequest::parameter(const QString &name, const QVariant &defaultV
 }
 
 /*!
- * \brief Returns a map of parameters included in this request.
+ * Returns the parameters included in this request.
  */
 const QVariantMap &GlacierRequest::parameters() const
 {
@@ -204,7 +229,7 @@ const QVariantMap &GlacierRequest::parameters() const
 }
 
 /*!
- * \brief Sets the \a name parameter to \a value.
+ * Sets the \a name parameter to \a value.
  */
 void GlacierRequest::setParameter(const QString &name, const QVariant &value)
 {
@@ -213,9 +238,8 @@ void GlacierRequest::setParameter(const QString &name, const QVariant &value)
 }
 
 /*!
- * \brief Sets the map of paramters for this request to \a parameters.
- *
- * Any request parameters set previously will be discarded.
+ * Sets the paramters for this request to \a parameters. Any request parameters
+ * set previously will be discarded.
  */
 void GlacierRequest::setParameters(const QVariantMap &parameters)
 {
@@ -224,11 +248,12 @@ void GlacierRequest::setParameters(const QVariantMap &parameters)
 }
 
 /*!
- * \brief Returns a network request for this Glacier request using the given \a endpoint.
+ * Returns a network request for the Glacier request using the given
+ * \a endpoint.
  *
- * This Glacier implementation builds request URLs by combining the common query
- * parameters (such as Action and Version), with any that have been added (via
- * setParameter) by child classes.
+ * This Glacier implementation builds request URLs by combining the
+ * common query parameters (such as Action and Version), with any that have
+ * been added (via setParameter) by child classes.
  */
 QNetworkRequest GlacierRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -239,17 +264,16 @@ QNetworkRequest GlacierRequest::unsignedRequest(const QUrl &endpoint) const
 }
 
 /*!
+ * \class QtAws::Glacier::GlacierRequestPrivate
+ * \brief The GlacierRequestPrivate class provides private implementation for GlacierRequest.
  * \internal
  *
- * \class  GlacierRequestPrivate
- *
- * \brief  Private implementation for GlacierRequest.
+ * \inmodule QtAwsGlacier
  */
 
 /*!
- * \internal
- *
- * \brief Constructs a new GlacierRequestPrivate object.
+ * Constructs a GlacierRequestPrivate object for Glacier \a action with,
+ * public implementation \a q.
  */
 GlacierRequestPrivate::GlacierRequestPrivate(const GlacierRequest::Action action, GlacierRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
@@ -258,9 +282,7 @@ GlacierRequestPrivate::GlacierRequestPrivate(const GlacierRequest::Action action
 }
 
 /*!
- * \internal
- *
- * \brief Constructs a new GlacierRequestPrivate object, copying an existing one.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
@@ -276,15 +298,12 @@ GlacierRequestPrivate::GlacierRequestPrivate(const GlacierRequestPrivate &other,
 }
 
 /*!
- * \internal
- *
- * \brief Returns a string representing \a action.
+ * Returns a string represention of \a action, or a null string if \a action is
+ * invalid.
  *
  * This function converts GlacierRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the Glacier service's Action
  * query parameters.
- *
- * @return A string representing \a action, or a null string if \a action is invalid.
  */
 QString GlacierRequestPrivate::toString(const GlacierRequest::Action &action)
 {

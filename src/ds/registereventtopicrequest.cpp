@@ -27,10 +27,9 @@ namespace DirectoryService {
 
 /*!
  * \class QtAws::DirectoryService::RegisterEventTopicRequest
- *
  * \brief The RegisterEventTopicRequest class provides an interface for DirectoryService RegisterEventTopic requests.
  *
- * \ingroup DirectoryService
+ * \inmodule QtAwsDirectoryService
  *
  *  <fullname>AWS Directory Service</fullname>
  * 
@@ -51,9 +50,7 @@ namespace DirectoryService {
  */
 
 /*!
- * @brief  Constructs a new RegisterEventTopicRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 RegisterEventTopicRequest::RegisterEventTopicRequest(const RegisterEventTopicRequest &other)
     : DirectoryServiceRequest(new RegisterEventTopicRequestPrivate(*other.d_func(), this))
@@ -62,7 +59,7 @@ RegisterEventTopicRequest::RegisterEventTopicRequest(const RegisterEventTopicReq
 }
 
 /*!
- * @brief  Constructs a new RegisterEventTopicRequest object.
+ * Constructs a RegisterEventTopicRequest object.
  */
 RegisterEventTopicRequest::RegisterEventTopicRequest()
     : DirectoryServiceRequest(new RegisterEventTopicRequestPrivate(DirectoryServiceRequest::RegisterEventTopicAction, this))
@@ -80,14 +77,9 @@ bool RegisterEventTopicRequest::isValid() const
 
 
 /*!
- * @brief  Construct an RegisterEventTopicResponse object.
+ * Returns a RegisterEventTopicResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An RegisterEventTopicResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DirectoryServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * RegisterEventTopicRequest::response(QNetworkReply * const reply) const
 {
@@ -95,20 +87,17 @@ QtAws::Core::AwsAbstractResponse * RegisterEventTopicRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::DirectoryService::RegisterEventTopicRequestPrivate
+ * \brief The RegisterEventTopicRequestPrivate class provides private implementation for RegisterEventTopicRequest.
+ * \internal
  *
- * @class  RegisterEventTopicRequestPrivate
- *
- * @brief  Private implementation for RegisterEventTopicRequest.
+ * \inmodule QtAwsDirectoryService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new RegisterEventTopicRequestPrivate object.
- *
- * @param  action  DirectoryService action being performed.
- * @param  q       Pointer to this object's public RegisterEventTopicRequest instance.
+ * Constructs a RegisterEventTopicRequestPrivate object for DirectoryService \a action with,
+ * public implementation \a q.
  */
 RegisterEventTopicRequestPrivate::RegisterEventTopicRequestPrivate(
     const DirectoryServiceRequest::Action action, RegisterEventTopicRequest * const q)
@@ -118,15 +107,10 @@ RegisterEventTopicRequestPrivate::RegisterEventTopicRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RegisterEventTopicRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the RegisterEventTopicRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public RegisterEventTopicRequest instance.
  */
 RegisterEventTopicRequestPrivate::RegisterEventTopicRequestPrivate(
     const RegisterEventTopicRequestPrivate &other, RegisterEventTopicRequest * const q)

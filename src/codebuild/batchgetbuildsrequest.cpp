@@ -27,10 +27,9 @@ namespace CodeBuild {
 
 /*!
  * \class QtAws::CodeBuild::BatchGetBuildsRequest
- *
  * \brief The BatchGetBuildsRequest class provides an interface for CodeBuild BatchGetBuilds requests.
  *
- * \ingroup CodeBuild
+ * \inmodule QtAwsCodeBuild
  *
  *  <fullname>AWS CodeBuild</fullname>
  * 
@@ -117,9 +116,7 @@ namespace CodeBuild {
  */
 
 /*!
- * @brief  Constructs a new BatchGetBuildsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 BatchGetBuildsRequest::BatchGetBuildsRequest(const BatchGetBuildsRequest &other)
     : CodeBuildRequest(new BatchGetBuildsRequestPrivate(*other.d_func(), this))
@@ -128,7 +125,7 @@ BatchGetBuildsRequest::BatchGetBuildsRequest(const BatchGetBuildsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new BatchGetBuildsRequest object.
+ * Constructs a BatchGetBuildsRequest object.
  */
 BatchGetBuildsRequest::BatchGetBuildsRequest()
     : CodeBuildRequest(new BatchGetBuildsRequestPrivate(CodeBuildRequest::BatchGetBuildsAction, this))
@@ -146,14 +143,9 @@ bool BatchGetBuildsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an BatchGetBuildsResponse object.
+ * Returns a BatchGetBuildsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An BatchGetBuildsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CodeBuildClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * BatchGetBuildsRequest::response(QNetworkReply * const reply) const
 {
@@ -161,20 +153,17 @@ QtAws::Core::AwsAbstractResponse * BatchGetBuildsRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::CodeBuild::BatchGetBuildsRequestPrivate
+ * \brief The BatchGetBuildsRequestPrivate class provides private implementation for BatchGetBuildsRequest.
+ * \internal
  *
- * @class  BatchGetBuildsRequestPrivate
- *
- * @brief  Private implementation for BatchGetBuildsRequest.
+ * \inmodule QtAwsCodeBuild
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new BatchGetBuildsRequestPrivate object.
- *
- * @param  action  CodeBuild action being performed.
- * @param  q       Pointer to this object's public BatchGetBuildsRequest instance.
+ * Constructs a BatchGetBuildsRequestPrivate object for CodeBuild \a action with,
+ * public implementation \a q.
  */
 BatchGetBuildsRequestPrivate::BatchGetBuildsRequestPrivate(
     const CodeBuildRequest::Action action, BatchGetBuildsRequest * const q)
@@ -184,15 +173,10 @@ BatchGetBuildsRequestPrivate::BatchGetBuildsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new BatchGetBuildsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the BatchGetBuildsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public BatchGetBuildsRequest instance.
  */
 BatchGetBuildsRequestPrivate::BatchGetBuildsRequestPrivate(
     const BatchGetBuildsRequestPrivate &other, BatchGetBuildsRequest * const q)

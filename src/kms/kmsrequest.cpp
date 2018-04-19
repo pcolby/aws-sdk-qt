@@ -25,16 +25,56 @@ namespace KMS {
 
 /*!
  * \class QtAws::KMS::KMSRequest
- *
  * \brief The KMSRequest class provides an interface for KMS requests.
  *
- * \ingroup KMS
+ * \inmodule QtAwsKMS
  */
 
 /*!
- * @brief  Constructs a new KMSRequest object.
+ * \enum KMSRequest::Action
  *
- * @param  action  The KMS action to request.
+ * This enum describes the actions that can be performed as KMS
+ * requests.
+ *
+ * \value CancelKeyDeletionAction KMS CancelKeyDeletion action.
+ * \value CreateAliasAction KMS CreateAlias action.
+ * \value CreateGrantAction KMS CreateGrant action.
+ * \value CreateKeyAction KMS CreateKey action.
+ * \value DecryptAction KMS Decrypt action.
+ * \value DeleteAliasAction KMS DeleteAlias action.
+ * \value DeleteImportedKeyMaterialAction KMS DeleteImportedKeyMaterial action.
+ * \value DescribeKeyAction KMS DescribeKey action.
+ * \value DisableKeyAction KMS DisableKey action.
+ * \value DisableKeyRotationAction KMS DisableKeyRotation action.
+ * \value EnableKeyAction KMS EnableKey action.
+ * \value EnableKeyRotationAction KMS EnableKeyRotation action.
+ * \value EncryptAction KMS Encrypt action.
+ * \value GenerateDataKeyAction KMS GenerateDataKey action.
+ * \value GenerateDataKeyWithoutPlaintextAction KMS GenerateDataKeyWithoutPlaintext action.
+ * \value GenerateRandomAction KMS GenerateRandom action.
+ * \value GetKeyPolicyAction KMS GetKeyPolicy action.
+ * \value GetKeyRotationStatusAction KMS GetKeyRotationStatus action.
+ * \value GetParametersForImportAction KMS GetParametersForImport action.
+ * \value ImportKeyMaterialAction KMS ImportKeyMaterial action.
+ * \value ListAliasesAction KMS ListAliases action.
+ * \value ListGrantsAction KMS ListGrants action.
+ * \value ListKeyPoliciesAction KMS ListKeyPolicies action.
+ * \value ListKeysAction KMS ListKeys action.
+ * \value ListResourceTagsAction KMS ListResourceTags action.
+ * \value ListRetirableGrantsAction KMS ListRetirableGrants action.
+ * \value PutKeyPolicyAction KMS PutKeyPolicy action.
+ * \value ReEncryptAction KMS ReEncrypt action.
+ * \value RetireGrantAction KMS RetireGrant action.
+ * \value RevokeGrantAction KMS RevokeGrant action.
+ * \value ScheduleKeyDeletionAction KMS ScheduleKeyDeletion action.
+ * \value TagResourceAction KMS TagResource action.
+ * \value UntagResourceAction KMS UntagResource action.
+ * \value UpdateAliasAction KMS UpdateAlias action.
+ * \value UpdateKeyDescriptionAction KMS UpdateKeyDescription action.
+ */
+
+/*!
+ * Constructs a[n] KMSRequest object for KMS \a action.
  */
 KMSRequest::KMSRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new KMSRequestPrivate(action, this))
@@ -43,9 +83,7 @@ KMSRequest::KMSRequest(const Action action)
 }
 
 /*!
- * @brief  Constructs a new KMSRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 KMSRequest::KMSRequest(const KMSRequest &other)
     : QtAws::Core::AwsAbstractRequest(new KMSRequestPrivate(*other.d_func(), this))
@@ -54,13 +92,7 @@ KMSRequest::KMSRequest(const KMSRequest &other)
 }
 
 /*!
- * @brief  Assignment operator.
- *
- * Assigns \a other to \c this.
- *
- * @param  other  Instance to copy.
- *
- * @return  A reference to \c this.
+ * Sets the KMSRequest object to be equal to \a other.
  */
 KMSRequest& KMSRequest::operator=(const KMSRequest &other)
 {
@@ -72,14 +104,10 @@ KMSRequest& KMSRequest::operator=(const KMSRequest &other)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new KMSRequest object.
+ * Constructs aa KMSRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from KMSRequestPrivate.
- *
- * @param  d  Pointer to private data (aka D-Pointer).
  */
 KMSRequest::KMSRequest(KMSRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
@@ -87,7 +115,7 @@ KMSRequest::KMSRequest(KMSRequestPrivate * const d) : QtAws::Core::AwsAbstractRe
 }
 
 /*!
- * \brief Returns the KMS action to be performed by this request.
+ * Returns the KMS action to be performed by this request.
  */
 KMSRequest::Action KMSRequest::action() const
 {
@@ -96,7 +124,7 @@ KMSRequest::Action KMSRequest::action() const
 }
 
 /*!
- * \brief Returns the name of the KMS action to be performed by this request.
+ * Returns the name of the KMS action to be performed by this request.
  */
 QString KMSRequest::actionString() const
 {
@@ -104,7 +132,7 @@ QString KMSRequest::actionString() const
 }
 
 /*!
- * \brief Returns the KMS API version implemented by this request.
+ * Returns the KMS API version implemented by this request.
  */
 QString KMSRequest::apiVersion() const
 {
@@ -113,7 +141,7 @@ QString KMSRequest::apiVersion() const
 }
 
 /*!
- * @brief Set the KMS action to be performed by this request to \a action.
+ * Sets the KMS action to be performed by this request to \a action.
  */
 void KMSRequest::setAction(const Action action)
 {
@@ -122,7 +150,7 @@ void KMSRequest::setAction(const Action action)
 }
 
 /*!
- * Set the KMS API version to include in this request to \a version.
+ * Sets the KMS API version to include in this request to \a version.
  */
 void KMSRequest::setApiVersion(const QString &version)
 {
@@ -131,7 +159,7 @@ void KMSRequest::setApiVersion(const QString &version)
 }
 
 /*!
- * \brief Returns \c true if this request is the same as \a other.
+ * Returns \c true if this request is equal to \a other; \c false otherwise.
  *
  * Note, most derived *Request classes do not need to provider their own
  * implementations of this function, since most such request classes rely on
@@ -146,8 +174,8 @@ bool KMSRequest::operator==(const KMSRequest &other) const
             (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
-/*!
- * @brief  Check if \a queueName is a valid KMS queue name.
+/*
+ * Returns \c tue if \a queueName is a valid KMS queue name.
  *
  * @par From KMS FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
@@ -166,9 +194,8 @@ bool KMSRequest::operator==(const KMSRequest &other) const
 }*/
 
 /*!
- * \brief Removes the a \a name parameter from this request.
- *
- * Returns the count of paramters removed (typically \c 0 or \c 1).
+ * Removes the a \a name parameter from the request, then returns the number of
+ * paramters removed (typically \c 0 or \c 1).
  */
 int KMSRequest::clearParameter(const QString &name)
 {
@@ -177,7 +204,7 @@ int KMSRequest::clearParameter(const QString &name)
 }
 
 /*!
- * \brief Removes all parameters from this request.
+ * Removes all parameters from the request.
  */
 void KMSRequest::clearParameters()
 {
@@ -186,7 +213,7 @@ void KMSRequest::clearParameters()
 }
 
 /*!
- * \brief Returns the value of the \n name pararemter if set, otherwise \a defaultValue.
+ * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
 QVariant KMSRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
@@ -195,7 +222,7 @@ QVariant KMSRequest::parameter(const QString &name, const QVariant &defaultValue
 }
 
 /*!
- * \brief Returns a map of parameters included in this request.
+ * Returns the parameters included in this request.
  */
 const QVariantMap &KMSRequest::parameters() const
 {
@@ -204,7 +231,7 @@ const QVariantMap &KMSRequest::parameters() const
 }
 
 /*!
- * \brief Sets the \a name parameter to \a value.
+ * Sets the \a name parameter to \a value.
  */
 void KMSRequest::setParameter(const QString &name, const QVariant &value)
 {
@@ -213,9 +240,8 @@ void KMSRequest::setParameter(const QString &name, const QVariant &value)
 }
 
 /*!
- * \brief Sets the map of paramters for this request to \a parameters.
- *
- * Any request parameters set previously will be discarded.
+ * Sets the paramters for this request to \a parameters. Any request parameters
+ * set previously will be discarded.
  */
 void KMSRequest::setParameters(const QVariantMap &parameters)
 {
@@ -224,11 +250,12 @@ void KMSRequest::setParameters(const QVariantMap &parameters)
 }
 
 /*!
- * \brief Returns a network request for this KMS request using the given \a endpoint.
+ * Returns a network request for the KMS request using the given
+ * \a endpoint.
  *
- * This KMS implementation builds request URLs by combining the common query
- * parameters (such as Action and Version), with any that have been added (via
- * setParameter) by child classes.
+ * This KMS implementation builds request URLs by combining the
+ * common query parameters (such as Action and Version), with any that have
+ * been added (via setParameter) by child classes.
  */
 QNetworkRequest KMSRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -239,17 +266,16 @@ QNetworkRequest KMSRequest::unsignedRequest(const QUrl &endpoint) const
 }
 
 /*!
+ * \class QtAws::KMS::KMSRequestPrivate
+ * \brief The KMSRequestPrivate class provides private implementation for KMSRequest.
  * \internal
  *
- * \class  KMSRequestPrivate
- *
- * \brief  Private implementation for KMSRequest.
+ * \inmodule QtAwsKMS
  */
 
 /*!
- * \internal
- *
- * \brief Constructs a new KMSRequestPrivate object.
+ * Constructs a KMSRequestPrivate object for KMS \a action with,
+ * public implementation \a q.
  */
 KMSRequestPrivate::KMSRequestPrivate(const KMSRequest::Action action, KMSRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
@@ -258,9 +284,7 @@ KMSRequestPrivate::KMSRequestPrivate(const KMSRequest::Action action, KMSRequest
 }
 
 /*!
- * \internal
- *
- * \brief Constructs a new KMSRequestPrivate object, copying an existing one.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
@@ -276,15 +300,12 @@ KMSRequestPrivate::KMSRequestPrivate(const KMSRequestPrivate &other,
 }
 
 /*!
- * \internal
- *
- * \brief Returns a string representing \a action.
+ * Returns a string represention of \a action, or a null string if \a action is
+ * invalid.
  *
  * This function converts KMSRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the KMS service's Action
  * query parameters.
- *
- * @return A string representing \a action, or a null string if \a action is invalid.
  */
 QString KMSRequestPrivate::toString(const KMSRequest::Action &action)
 {

@@ -27,19 +27,16 @@ namespace MachineLearning {
 
 /*!
  * \class QtAws::MachineLearning::DeleteMLModelRequest
- *
  * \brief The DeleteMLModelRequest class provides an interface for MachineLearning DeleteMLModel requests.
  *
- * \ingroup MachineLearning
+ * \inmodule QtAwsMachineLearning
  *
  *
  * \sa MachineLearningClient::deleteMLModel
  */
 
 /*!
- * @brief  Constructs a new DeleteMLModelRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteMLModelRequest::DeleteMLModelRequest(const DeleteMLModelRequest &other)
     : MachineLearningRequest(new DeleteMLModelRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ DeleteMLModelRequest::DeleteMLModelRequest(const DeleteMLModelRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DeleteMLModelRequest object.
+ * Constructs a DeleteMLModelRequest object.
  */
 DeleteMLModelRequest::DeleteMLModelRequest()
     : MachineLearningRequest(new DeleteMLModelRequestPrivate(MachineLearningRequest::DeleteMLModelAction, this))
@@ -66,14 +63,9 @@ bool DeleteMLModelRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteMLModelResponse object.
+ * Returns a DeleteMLModelResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteMLModelResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MachineLearningClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteMLModelRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * DeleteMLModelRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::MachineLearning::DeleteMLModelRequestPrivate
+ * \brief The DeleteMLModelRequestPrivate class provides private implementation for DeleteMLModelRequest.
+ * \internal
  *
- * @class  DeleteMLModelRequestPrivate
- *
- * @brief  Private implementation for DeleteMLModelRequest.
+ * \inmodule QtAwsMachineLearning
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteMLModelRequestPrivate object.
- *
- * @param  action  MachineLearning action being performed.
- * @param  q       Pointer to this object's public DeleteMLModelRequest instance.
+ * Constructs a DeleteMLModelRequestPrivate object for MachineLearning \a action with,
+ * public implementation \a q.
  */
 DeleteMLModelRequestPrivate::DeleteMLModelRequestPrivate(
     const MachineLearningRequest::Action action, DeleteMLModelRequest * const q)
@@ -104,15 +93,10 @@ DeleteMLModelRequestPrivate::DeleteMLModelRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteMLModelRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteMLModelRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteMLModelRequest instance.
  */
 DeleteMLModelRequestPrivate::DeleteMLModelRequestPrivate(
     const DeleteMLModelRequestPrivate &other, DeleteMLModelRequest * const q)

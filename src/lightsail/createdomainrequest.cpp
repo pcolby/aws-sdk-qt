@@ -27,10 +27,9 @@ namespace Lightsail {
 
 /*!
  * \class QtAws::Lightsail::CreateDomainRequest
- *
  * \brief The CreateDomainRequest class provides an interface for Lightsail CreateDomain requests.
  *
- * \ingroup Lightsail
+ * \inmodule QtAwsLightsail
  *
  *  Amazon Lightsail is the easiest way to get started with AWS for developers who just need virtual private servers.
  *  Lightsail includes everything you need to launch your project quickly - a virtual machine, SSD-based storage, data
@@ -53,9 +52,7 @@ namespace Lightsail {
  */
 
 /*!
- * @brief  Constructs a new CreateDomainRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateDomainRequest::CreateDomainRequest(const CreateDomainRequest &other)
     : LightsailRequest(new CreateDomainRequestPrivate(*other.d_func(), this))
@@ -64,7 +61,7 @@ CreateDomainRequest::CreateDomainRequest(const CreateDomainRequest &other)
 }
 
 /*!
- * @brief  Constructs a new CreateDomainRequest object.
+ * Constructs a CreateDomainRequest object.
  */
 CreateDomainRequest::CreateDomainRequest()
     : LightsailRequest(new CreateDomainRequestPrivate(LightsailRequest::CreateDomainAction, this))
@@ -82,14 +79,9 @@ bool CreateDomainRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateDomainResponse object.
+ * Returns a CreateDomainResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateDomainResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  LightsailClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateDomainRequest::response(QNetworkReply * const reply) const
 {
@@ -97,20 +89,17 @@ QtAws::Core::AwsAbstractResponse * CreateDomainRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::Lightsail::CreateDomainRequestPrivate
+ * \brief The CreateDomainRequestPrivate class provides private implementation for CreateDomainRequest.
+ * \internal
  *
- * @class  CreateDomainRequestPrivate
- *
- * @brief  Private implementation for CreateDomainRequest.
+ * \inmodule QtAwsLightsail
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateDomainRequestPrivate object.
- *
- * @param  action  Lightsail action being performed.
- * @param  q       Pointer to this object's public CreateDomainRequest instance.
+ * Constructs a CreateDomainRequestPrivate object for Lightsail \a action with,
+ * public implementation \a q.
  */
 CreateDomainRequestPrivate::CreateDomainRequestPrivate(
     const LightsailRequest::Action action, CreateDomainRequest * const q)
@@ -120,15 +109,10 @@ CreateDomainRequestPrivate::CreateDomainRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateDomainRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateDomainRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateDomainRequest instance.
  */
 CreateDomainRequestPrivate::CreateDomainRequestPrivate(
     const CreateDomainRequestPrivate &other, CreateDomainRequest * const q)

@@ -27,10 +27,9 @@ namespace CodeDeploy {
 
 /*!
  * \class QtAws::CodeDeploy::RemoveTagsFromOnPremisesInstancesRequest
- *
  * \brief The RemoveTagsFromOnPremisesInstancesRequest class provides an interface for CodeDeploy RemoveTagsFromOnPremisesInstances requests.
  *
- * \ingroup CodeDeploy
+ * \inmodule QtAwsCodeDeploy
  *
  *  <fullname>AWS CodeDeploy</fullname>
  * 
@@ -118,9 +117,7 @@ namespace CodeDeploy {
  */
 
 /*!
- * @brief  Constructs a new RemoveTagsFromOnPremisesInstancesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 RemoveTagsFromOnPremisesInstancesRequest::RemoveTagsFromOnPremisesInstancesRequest(const RemoveTagsFromOnPremisesInstancesRequest &other)
     : CodeDeployRequest(new RemoveTagsFromOnPremisesInstancesRequestPrivate(*other.d_func(), this))
@@ -129,7 +126,7 @@ RemoveTagsFromOnPremisesInstancesRequest::RemoveTagsFromOnPremisesInstancesReque
 }
 
 /*!
- * @brief  Constructs a new RemoveTagsFromOnPremisesInstancesRequest object.
+ * Constructs a RemoveTagsFromOnPremisesInstancesRequest object.
  */
 RemoveTagsFromOnPremisesInstancesRequest::RemoveTagsFromOnPremisesInstancesRequest()
     : CodeDeployRequest(new RemoveTagsFromOnPremisesInstancesRequestPrivate(CodeDeployRequest::RemoveTagsFromOnPremisesInstancesAction, this))
@@ -147,14 +144,9 @@ bool RemoveTagsFromOnPremisesInstancesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an RemoveTagsFromOnPremisesInstancesResponse object.
+ * Returns a RemoveTagsFromOnPremisesInstancesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An RemoveTagsFromOnPremisesInstancesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CodeDeployClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * RemoveTagsFromOnPremisesInstancesRequest::response(QNetworkReply * const reply) const
 {
@@ -162,20 +154,17 @@ QtAws::Core::AwsAbstractResponse * RemoveTagsFromOnPremisesInstancesRequest::res
 }
 
 /*!
- * @internal
+ * \class QtAws::CodeDeploy::RemoveTagsFromOnPremisesInstancesRequestPrivate
+ * \brief The RemoveTagsFromOnPremisesInstancesRequestPrivate class provides private implementation for RemoveTagsFromOnPremisesInstancesRequest.
+ * \internal
  *
- * @class  RemoveTagsFromOnPremisesInstancesRequestPrivate
- *
- * @brief  Private implementation for RemoveTagsFromOnPremisesInstancesRequest.
+ * \inmodule QtAwsCodeDeploy
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new RemoveTagsFromOnPremisesInstancesRequestPrivate object.
- *
- * @param  action  CodeDeploy action being performed.
- * @param  q       Pointer to this object's public RemoveTagsFromOnPremisesInstancesRequest instance.
+ * Constructs a RemoveTagsFromOnPremisesInstancesRequestPrivate object for CodeDeploy \a action with,
+ * public implementation \a q.
  */
 RemoveTagsFromOnPremisesInstancesRequestPrivate::RemoveTagsFromOnPremisesInstancesRequestPrivate(
     const CodeDeployRequest::Action action, RemoveTagsFromOnPremisesInstancesRequest * const q)
@@ -185,15 +174,10 @@ RemoveTagsFromOnPremisesInstancesRequestPrivate::RemoveTagsFromOnPremisesInstanc
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RemoveTagsFromOnPremisesInstancesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the RemoveTagsFromOnPremisesInstancesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public RemoveTagsFromOnPremisesInstancesRequest instance.
  */
 RemoveTagsFromOnPremisesInstancesRequestPrivate::RemoveTagsFromOnPremisesInstancesRequestPrivate(
     const RemoveTagsFromOnPremisesInstancesRequestPrivate &other, RemoveTagsFromOnPremisesInstancesRequest * const q)

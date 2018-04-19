@@ -27,19 +27,16 @@ namespace SageMaker {
 
 /*!
  * \class QtAws::SageMaker::CreateNotebookInstanceLifecycleConfigRequest
- *
  * \brief The CreateNotebookInstanceLifecycleConfigRequest class provides an interface for SageMaker CreateNotebookInstanceLifecycleConfig requests.
  *
- * \ingroup SageMaker
+ * \inmodule QtAwsSageMaker
  *
  *
  * \sa SageMakerClient::createNotebookInstanceLifecycleConfig
  */
 
 /*!
- * @brief  Constructs a new CreateNotebookInstanceLifecycleConfigRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateNotebookInstanceLifecycleConfigRequest::CreateNotebookInstanceLifecycleConfigRequest(const CreateNotebookInstanceLifecycleConfigRequest &other)
     : SageMakerRequest(new CreateNotebookInstanceLifecycleConfigRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ CreateNotebookInstanceLifecycleConfigRequest::CreateNotebookInstanceLifecycleCon
 }
 
 /*!
- * @brief  Constructs a new CreateNotebookInstanceLifecycleConfigRequest object.
+ * Constructs a CreateNotebookInstanceLifecycleConfigRequest object.
  */
 CreateNotebookInstanceLifecycleConfigRequest::CreateNotebookInstanceLifecycleConfigRequest()
     : SageMakerRequest(new CreateNotebookInstanceLifecycleConfigRequestPrivate(SageMakerRequest::CreateNotebookInstanceLifecycleConfigAction, this))
@@ -66,14 +63,9 @@ bool CreateNotebookInstanceLifecycleConfigRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateNotebookInstanceLifecycleConfigResponse object.
+ * Returns a CreateNotebookInstanceLifecycleConfigResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateNotebookInstanceLifecycleConfigResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SageMakerClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateNotebookInstanceLifecycleConfigRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * CreateNotebookInstanceLifecycleConfigRequest:
 }
 
 /*!
- * @internal
+ * \class QtAws::SageMaker::CreateNotebookInstanceLifecycleConfigRequestPrivate
+ * \brief The CreateNotebookInstanceLifecycleConfigRequestPrivate class provides private implementation for CreateNotebookInstanceLifecycleConfigRequest.
+ * \internal
  *
- * @class  CreateNotebookInstanceLifecycleConfigRequestPrivate
- *
- * @brief  Private implementation for CreateNotebookInstanceLifecycleConfigRequest.
+ * \inmodule QtAwsSageMaker
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateNotebookInstanceLifecycleConfigRequestPrivate object.
- *
- * @param  action  SageMaker action being performed.
- * @param  q       Pointer to this object's public CreateNotebookInstanceLifecycleConfigRequest instance.
+ * Constructs a CreateNotebookInstanceLifecycleConfigRequestPrivate object for SageMaker \a action with,
+ * public implementation \a q.
  */
 CreateNotebookInstanceLifecycleConfigRequestPrivate::CreateNotebookInstanceLifecycleConfigRequestPrivate(
     const SageMakerRequest::Action action, CreateNotebookInstanceLifecycleConfigRequest * const q)
@@ -104,15 +93,10 @@ CreateNotebookInstanceLifecycleConfigRequestPrivate::CreateNotebookInstanceLifec
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateNotebookInstanceLifecycleConfigRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateNotebookInstanceLifecycleConfigRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateNotebookInstanceLifecycleConfigRequest instance.
  */
 CreateNotebookInstanceLifecycleConfigRequestPrivate::CreateNotebookInstanceLifecycleConfigRequestPrivate(
     const CreateNotebookInstanceLifecycleConfigRequestPrivate &other, CreateNotebookInstanceLifecycleConfigRequest * const q)

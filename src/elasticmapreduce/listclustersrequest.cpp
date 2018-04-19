@@ -27,10 +27,9 @@ namespace EMR {
 
 /*!
  * \class QtAws::EMR::ListClustersRequest
- *
  * \brief The ListClustersRequest class provides an interface for EMR ListClusters requests.
  *
- * \ingroup EMR
+ * \inmodule QtAwsEMR
  *
  *  Amazon EMR is a web service that makes it easy to process large amounts of data efficiently. Amazon EMR uses Hadoop
  *  processing combined with several AWS products to do tasks such as web indexing, data mining, log file analysis, machine
@@ -40,9 +39,7 @@ namespace EMR {
  */
 
 /*!
- * @brief  Constructs a new ListClustersRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListClustersRequest::ListClustersRequest(const ListClustersRequest &other)
     : EMRRequest(new ListClustersRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ ListClustersRequest::ListClustersRequest(const ListClustersRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ListClustersRequest object.
+ * Constructs a ListClustersRequest object.
  */
 ListClustersRequest::ListClustersRequest()
     : EMRRequest(new ListClustersRequestPrivate(EMRRequest::ListClustersAction, this))
@@ -69,14 +66,9 @@ bool ListClustersRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListClustersResponse object.
+ * Returns a ListClustersResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListClustersResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EMRClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListClustersRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * ListClustersRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::EMR::ListClustersRequestPrivate
+ * \brief The ListClustersRequestPrivate class provides private implementation for ListClustersRequest.
+ * \internal
  *
- * @class  ListClustersRequestPrivate
- *
- * @brief  Private implementation for ListClustersRequest.
+ * \inmodule QtAwsEMR
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListClustersRequestPrivate object.
- *
- * @param  action  EMR action being performed.
- * @param  q       Pointer to this object's public ListClustersRequest instance.
+ * Constructs a ListClustersRequestPrivate object for EMR \a action with,
+ * public implementation \a q.
  */
 ListClustersRequestPrivate::ListClustersRequestPrivate(
     const EMRRequest::Action action, ListClustersRequest * const q)
@@ -107,15 +96,10 @@ ListClustersRequestPrivate::ListClustersRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListClustersRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListClustersRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListClustersRequest instance.
  */
 ListClustersRequestPrivate::ListClustersRequestPrivate(
     const ListClustersRequestPrivate &other, ListClustersRequest * const q)

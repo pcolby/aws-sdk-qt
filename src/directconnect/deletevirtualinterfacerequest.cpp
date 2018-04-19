@@ -27,10 +27,9 @@ namespace DirectConnect {
 
 /*!
  * \class QtAws::DirectConnect::DeleteVirtualInterfaceRequest
- *
  * \brief The DeleteVirtualInterfaceRequest class provides an interface for DirectConnect DeleteVirtualInterface requests.
  *
- * \ingroup DirectConnect
+ * \inmodule QtAwsDirectConnect
  *
  *  AWS Direct Connect links your internal network to an AWS Direct Connect location over a standard 1 gigabit or 10 gigabit
  *  Ethernet fiber-optic cable. One end of the cable is connected to your router, the other to an AWS Direct Connect router.
@@ -45,9 +44,7 @@ namespace DirectConnect {
  */
 
 /*!
- * @brief  Constructs a new DeleteVirtualInterfaceRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteVirtualInterfaceRequest::DeleteVirtualInterfaceRequest(const DeleteVirtualInterfaceRequest &other)
     : DirectConnectRequest(new DeleteVirtualInterfaceRequestPrivate(*other.d_func(), this))
@@ -56,7 +53,7 @@ DeleteVirtualInterfaceRequest::DeleteVirtualInterfaceRequest(const DeleteVirtual
 }
 
 /*!
- * @brief  Constructs a new DeleteVirtualInterfaceRequest object.
+ * Constructs a DeleteVirtualInterfaceRequest object.
  */
 DeleteVirtualInterfaceRequest::DeleteVirtualInterfaceRequest()
     : DirectConnectRequest(new DeleteVirtualInterfaceRequestPrivate(DirectConnectRequest::DeleteVirtualInterfaceAction, this))
@@ -74,14 +71,9 @@ bool DeleteVirtualInterfaceRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteVirtualInterfaceResponse object.
+ * Returns a DeleteVirtualInterfaceResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteVirtualInterfaceResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DirectConnectClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteVirtualInterfaceRequest::response(QNetworkReply * const reply) const
 {
@@ -89,20 +81,17 @@ QtAws::Core::AwsAbstractResponse * DeleteVirtualInterfaceRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::DirectConnect::DeleteVirtualInterfaceRequestPrivate
+ * \brief The DeleteVirtualInterfaceRequestPrivate class provides private implementation for DeleteVirtualInterfaceRequest.
+ * \internal
  *
- * @class  DeleteVirtualInterfaceRequestPrivate
- *
- * @brief  Private implementation for DeleteVirtualInterfaceRequest.
+ * \inmodule QtAwsDirectConnect
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteVirtualInterfaceRequestPrivate object.
- *
- * @param  action  DirectConnect action being performed.
- * @param  q       Pointer to this object's public DeleteVirtualInterfaceRequest instance.
+ * Constructs a DeleteVirtualInterfaceRequestPrivate object for DirectConnect \a action with,
+ * public implementation \a q.
  */
 DeleteVirtualInterfaceRequestPrivate::DeleteVirtualInterfaceRequestPrivate(
     const DirectConnectRequest::Action action, DeleteVirtualInterfaceRequest * const q)
@@ -112,15 +101,10 @@ DeleteVirtualInterfaceRequestPrivate::DeleteVirtualInterfaceRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteVirtualInterfaceRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteVirtualInterfaceRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteVirtualInterfaceRequest instance.
  */
 DeleteVirtualInterfaceRequestPrivate::DeleteVirtualInterfaceRequestPrivate(
     const DeleteVirtualInterfaceRequestPrivate &other, DeleteVirtualInterfaceRequest * const q)

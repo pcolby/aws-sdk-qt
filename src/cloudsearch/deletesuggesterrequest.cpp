@@ -27,10 +27,9 @@ namespace CloudSearch {
 
 /*!
  * \class QtAws::CloudSearch::DeleteSuggesterRequest
- *
  * \brief The DeleteSuggesterRequest class provides an interface for CloudSearch DeleteSuggester requests.
  *
- * \ingroup CloudSearch
+ * \inmodule QtAwsCloudSearch
  *
  *  <fullname>Amazon CloudSearch Configuration Service</fullname>
  * 
@@ -48,9 +47,7 @@ namespace CloudSearch {
  */
 
 /*!
- * @brief  Constructs a new DeleteSuggesterRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteSuggesterRequest::DeleteSuggesterRequest(const DeleteSuggesterRequest &other)
     : CloudSearchRequest(new DeleteSuggesterRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ DeleteSuggesterRequest::DeleteSuggesterRequest(const DeleteSuggesterRequest &oth
 }
 
 /*!
- * @brief  Constructs a new DeleteSuggesterRequest object.
+ * Constructs a DeleteSuggesterRequest object.
  */
 DeleteSuggesterRequest::DeleteSuggesterRequest()
     : CloudSearchRequest(new DeleteSuggesterRequestPrivate(CloudSearchRequest::DeleteSuggesterAction, this))
@@ -77,14 +74,9 @@ bool DeleteSuggesterRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteSuggesterResponse object.
+ * Returns a DeleteSuggesterResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteSuggesterResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudSearchClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteSuggesterRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * DeleteSuggesterRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudSearch::DeleteSuggesterRequestPrivate
+ * \brief The DeleteSuggesterRequestPrivate class provides private implementation for DeleteSuggesterRequest.
+ * \internal
  *
- * @class  DeleteSuggesterRequestPrivate
- *
- * @brief  Private implementation for DeleteSuggesterRequest.
+ * \inmodule QtAwsCloudSearch
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteSuggesterRequestPrivate object.
- *
- * @param  action  CloudSearch action being performed.
- * @param  q       Pointer to this object's public DeleteSuggesterRequest instance.
+ * Constructs a DeleteSuggesterRequestPrivate object for CloudSearch \a action with,
+ * public implementation \a q.
  */
 DeleteSuggesterRequestPrivate::DeleteSuggesterRequestPrivate(
     const CloudSearchRequest::Action action, DeleteSuggesterRequest * const q)
@@ -115,15 +104,10 @@ DeleteSuggesterRequestPrivate::DeleteSuggesterRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteSuggesterRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteSuggesterRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteSuggesterRequest instance.
  */
 DeleteSuggesterRequestPrivate::DeleteSuggesterRequestPrivate(
     const DeleteSuggesterRequestPrivate &other, DeleteSuggesterRequest * const q)

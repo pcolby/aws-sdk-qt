@@ -27,10 +27,9 @@ namespace ServiceDiscovery {
 
 /*!
  * \class QtAws::ServiceDiscovery::CreatePrivateDnsNamespaceRequest
- *
  * \brief The CreatePrivateDnsNamespaceRequest class provides an interface for ServiceDiscovery CreatePrivateDnsNamespace requests.
  *
- * \ingroup ServiceDiscovery
+ * \inmodule QtAwsServiceDiscovery
  *
  *  Amazon Route 53 auto naming lets you configure public or private namespaces that your microservice applications run in.
  *  When instances of the service become available, you can call the auto naming API to register the instance, and Route 53
@@ -41,9 +40,7 @@ namespace ServiceDiscovery {
  */
 
 /*!
- * @brief  Constructs a new CreatePrivateDnsNamespaceRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreatePrivateDnsNamespaceRequest::CreatePrivateDnsNamespaceRequest(const CreatePrivateDnsNamespaceRequest &other)
     : ServiceDiscoveryRequest(new CreatePrivateDnsNamespaceRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ CreatePrivateDnsNamespaceRequest::CreatePrivateDnsNamespaceRequest(const CreateP
 }
 
 /*!
- * @brief  Constructs a new CreatePrivateDnsNamespaceRequest object.
+ * Constructs a CreatePrivateDnsNamespaceRequest object.
  */
 CreatePrivateDnsNamespaceRequest::CreatePrivateDnsNamespaceRequest()
     : ServiceDiscoveryRequest(new CreatePrivateDnsNamespaceRequestPrivate(ServiceDiscoveryRequest::CreatePrivateDnsNamespaceAction, this))
@@ -70,14 +67,9 @@ bool CreatePrivateDnsNamespaceRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreatePrivateDnsNamespaceResponse object.
+ * Returns a CreatePrivateDnsNamespaceResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreatePrivateDnsNamespaceResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ServiceDiscoveryClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreatePrivateDnsNamespaceRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * CreatePrivateDnsNamespaceRequest::response(QN
 }
 
 /*!
- * @internal
+ * \class QtAws::ServiceDiscovery::CreatePrivateDnsNamespaceRequestPrivate
+ * \brief The CreatePrivateDnsNamespaceRequestPrivate class provides private implementation for CreatePrivateDnsNamespaceRequest.
+ * \internal
  *
- * @class  CreatePrivateDnsNamespaceRequestPrivate
- *
- * @brief  Private implementation for CreatePrivateDnsNamespaceRequest.
+ * \inmodule QtAwsServiceDiscovery
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreatePrivateDnsNamespaceRequestPrivate object.
- *
- * @param  action  ServiceDiscovery action being performed.
- * @param  q       Pointer to this object's public CreatePrivateDnsNamespaceRequest instance.
+ * Constructs a CreatePrivateDnsNamespaceRequestPrivate object for ServiceDiscovery \a action with,
+ * public implementation \a q.
  */
 CreatePrivateDnsNamespaceRequestPrivate::CreatePrivateDnsNamespaceRequestPrivate(
     const ServiceDiscoveryRequest::Action action, CreatePrivateDnsNamespaceRequest * const q)
@@ -108,15 +97,10 @@ CreatePrivateDnsNamespaceRequestPrivate::CreatePrivateDnsNamespaceRequestPrivate
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreatePrivateDnsNamespaceRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreatePrivateDnsNamespaceRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreatePrivateDnsNamespaceRequest instance.
  */
 CreatePrivateDnsNamespaceRequestPrivate::CreatePrivateDnsNamespaceRequestPrivate(
     const CreatePrivateDnsNamespaceRequestPrivate &other, CreatePrivateDnsNamespaceRequest * const q)

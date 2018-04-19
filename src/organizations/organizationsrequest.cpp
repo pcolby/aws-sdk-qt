@@ -25,16 +25,63 @@ namespace Organizations {
 
 /*!
  * \class QtAws::Organizations::OrganizationsRequest
- *
  * \brief The OrganizationsRequest class provides an interface for Organizations requests.
  *
- * \ingroup Organizations
+ * \inmodule QtAwsOrganizations
  */
 
 /*!
- * @brief  Constructs a new OrganizationsRequest object.
+ * \enum OrganizationsRequest::Action
  *
- * @param  action  The Organizations action to request.
+ * This enum describes the actions that can be performed as Organizations
+ * requests.
+ *
+ * \value AcceptHandshakeAction Organizations AcceptHandshake action.
+ * \value AttachPolicyAction Organizations AttachPolicy action.
+ * \value CancelHandshakeAction Organizations CancelHandshake action.
+ * \value CreateAccountAction Organizations CreateAccount action.
+ * \value CreateOrganizationAction Organizations CreateOrganization action.
+ * \value CreateOrganizationalUnitAction Organizations CreateOrganizationalUnit action.
+ * \value CreatePolicyAction Organizations CreatePolicy action.
+ * \value DeclineHandshakeAction Organizations DeclineHandshake action.
+ * \value DeleteOrganizationAction Organizations DeleteOrganization action.
+ * \value DeleteOrganizationalUnitAction Organizations DeleteOrganizationalUnit action.
+ * \value DeletePolicyAction Organizations DeletePolicy action.
+ * \value DescribeAccountAction Organizations DescribeAccount action.
+ * \value DescribeCreateAccountStatusAction Organizations DescribeCreateAccountStatus action.
+ * \value DescribeHandshakeAction Organizations DescribeHandshake action.
+ * \value DescribeOrganizationAction Organizations DescribeOrganization action.
+ * \value DescribeOrganizationalUnitAction Organizations DescribeOrganizationalUnit action.
+ * \value DescribePolicyAction Organizations DescribePolicy action.
+ * \value DetachPolicyAction Organizations DetachPolicy action.
+ * \value DisableAWSServiceAccessAction Organizations DisableAWSServiceAccess action.
+ * \value DisablePolicyTypeAction Organizations DisablePolicyType action.
+ * \value EnableAWSServiceAccessAction Organizations EnableAWSServiceAccess action.
+ * \value EnableAllFeaturesAction Organizations EnableAllFeatures action.
+ * \value EnablePolicyTypeAction Organizations EnablePolicyType action.
+ * \value InviteAccountToOrganizationAction Organizations InviteAccountToOrganization action.
+ * \value LeaveOrganizationAction Organizations LeaveOrganization action.
+ * \value ListAWSServiceAccessForOrganizationAction Organizations ListAWSServiceAccessForOrganization action.
+ * \value ListAccountsAction Organizations ListAccounts action.
+ * \value ListAccountsForParentAction Organizations ListAccountsForParent action.
+ * \value ListChildrenAction Organizations ListChildren action.
+ * \value ListCreateAccountStatusAction Organizations ListCreateAccountStatus action.
+ * \value ListHandshakesForAccountAction Organizations ListHandshakesForAccount action.
+ * \value ListHandshakesForOrganizationAction Organizations ListHandshakesForOrganization action.
+ * \value ListOrganizationalUnitsForParentAction Organizations ListOrganizationalUnitsForParent action.
+ * \value ListParentsAction Organizations ListParents action.
+ * \value ListPoliciesAction Organizations ListPolicies action.
+ * \value ListPoliciesForTargetAction Organizations ListPoliciesForTarget action.
+ * \value ListRootsAction Organizations ListRoots action.
+ * \value ListTargetsForPolicyAction Organizations ListTargetsForPolicy action.
+ * \value MoveAccountAction Organizations MoveAccount action.
+ * \value RemoveAccountFromOrganizationAction Organizations RemoveAccountFromOrganization action.
+ * \value UpdateOrganizationalUnitAction Organizations UpdateOrganizationalUnit action.
+ * \value UpdatePolicyAction Organizations UpdatePolicy action.
+ */
+
+/*!
+ * Constructs a[n] OrganizationsRequest object for Organizations \a action.
  */
 OrganizationsRequest::OrganizationsRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new OrganizationsRequestPrivate(action, this))
@@ -43,9 +90,7 @@ OrganizationsRequest::OrganizationsRequest(const Action action)
 }
 
 /*!
- * @brief  Constructs a new OrganizationsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 OrganizationsRequest::OrganizationsRequest(const OrganizationsRequest &other)
     : QtAws::Core::AwsAbstractRequest(new OrganizationsRequestPrivate(*other.d_func(), this))
@@ -54,13 +99,7 @@ OrganizationsRequest::OrganizationsRequest(const OrganizationsRequest &other)
 }
 
 /*!
- * @brief  Assignment operator.
- *
- * Assigns \a other to \c this.
- *
- * @param  other  Instance to copy.
- *
- * @return  A reference to \c this.
+ * Sets the OrganizationsRequest object to be equal to \a other.
  */
 OrganizationsRequest& OrganizationsRequest::operator=(const OrganizationsRequest &other)
 {
@@ -72,14 +111,10 @@ OrganizationsRequest& OrganizationsRequest::operator=(const OrganizationsRequest
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new OrganizationsRequest object.
+ * Constructs aa OrganizationsRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from OrganizationsRequestPrivate.
- *
- * @param  d  Pointer to private data (aka D-Pointer).
  */
 OrganizationsRequest::OrganizationsRequest(OrganizationsRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
@@ -87,7 +122,7 @@ OrganizationsRequest::OrganizationsRequest(OrganizationsRequestPrivate * const d
 }
 
 /*!
- * \brief Returns the Organizations action to be performed by this request.
+ * Returns the Organizations action to be performed by this request.
  */
 OrganizationsRequest::Action OrganizationsRequest::action() const
 {
@@ -96,7 +131,7 @@ OrganizationsRequest::Action OrganizationsRequest::action() const
 }
 
 /*!
- * \brief Returns the name of the Organizations action to be performed by this request.
+ * Returns the name of the Organizations action to be performed by this request.
  */
 QString OrganizationsRequest::actionString() const
 {
@@ -104,7 +139,7 @@ QString OrganizationsRequest::actionString() const
 }
 
 /*!
- * \brief Returns the Organizations API version implemented by this request.
+ * Returns the Organizations API version implemented by this request.
  */
 QString OrganizationsRequest::apiVersion() const
 {
@@ -113,7 +148,7 @@ QString OrganizationsRequest::apiVersion() const
 }
 
 /*!
- * @brief Set the Organizations action to be performed by this request to \a action.
+ * Sets the Organizations action to be performed by this request to \a action.
  */
 void OrganizationsRequest::setAction(const Action action)
 {
@@ -122,7 +157,7 @@ void OrganizationsRequest::setAction(const Action action)
 }
 
 /*!
- * Set the Organizations API version to include in this request to \a version.
+ * Sets the Organizations API version to include in this request to \a version.
  */
 void OrganizationsRequest::setApiVersion(const QString &version)
 {
@@ -131,7 +166,7 @@ void OrganizationsRequest::setApiVersion(const QString &version)
 }
 
 /*!
- * \brief Returns \c true if this request is the same as \a other.
+ * Returns \c true if this request is equal to \a other; \c false otherwise.
  *
  * Note, most derived *Request classes do not need to provider their own
  * implementations of this function, since most such request classes rely on
@@ -146,8 +181,8 @@ bool OrganizationsRequest::operator==(const OrganizationsRequest &other) const
             (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
-/*!
- * @brief  Check if \a queueName is a valid Organizations queue name.
+/*
+ * Returns \c tue if \a queueName is a valid Organizations queue name.
  *
  * @par From Organizations FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
@@ -166,9 +201,8 @@ bool OrganizationsRequest::operator==(const OrganizationsRequest &other) const
 }*/
 
 /*!
- * \brief Removes the a \a name parameter from this request.
- *
- * Returns the count of paramters removed (typically \c 0 or \c 1).
+ * Removes the a \a name parameter from the request, then returns the number of
+ * paramters removed (typically \c 0 or \c 1).
  */
 int OrganizationsRequest::clearParameter(const QString &name)
 {
@@ -177,7 +211,7 @@ int OrganizationsRequest::clearParameter(const QString &name)
 }
 
 /*!
- * \brief Removes all parameters from this request.
+ * Removes all parameters from the request.
  */
 void OrganizationsRequest::clearParameters()
 {
@@ -186,7 +220,7 @@ void OrganizationsRequest::clearParameters()
 }
 
 /*!
- * \brief Returns the value of the \n name pararemter if set, otherwise \a defaultValue.
+ * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
 QVariant OrganizationsRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
@@ -195,7 +229,7 @@ QVariant OrganizationsRequest::parameter(const QString &name, const QVariant &de
 }
 
 /*!
- * \brief Returns a map of parameters included in this request.
+ * Returns the parameters included in this request.
  */
 const QVariantMap &OrganizationsRequest::parameters() const
 {
@@ -204,7 +238,7 @@ const QVariantMap &OrganizationsRequest::parameters() const
 }
 
 /*!
- * \brief Sets the \a name parameter to \a value.
+ * Sets the \a name parameter to \a value.
  */
 void OrganizationsRequest::setParameter(const QString &name, const QVariant &value)
 {
@@ -213,9 +247,8 @@ void OrganizationsRequest::setParameter(const QString &name, const QVariant &val
 }
 
 /*!
- * \brief Sets the map of paramters for this request to \a parameters.
- *
- * Any request parameters set previously will be discarded.
+ * Sets the paramters for this request to \a parameters. Any request parameters
+ * set previously will be discarded.
  */
 void OrganizationsRequest::setParameters(const QVariantMap &parameters)
 {
@@ -224,11 +257,12 @@ void OrganizationsRequest::setParameters(const QVariantMap &parameters)
 }
 
 /*!
- * \brief Returns a network request for this Organizations request using the given \a endpoint.
+ * Returns a network request for the Organizations request using the given
+ * \a endpoint.
  *
- * This Organizations implementation builds request URLs by combining the common query
- * parameters (such as Action and Version), with any that have been added (via
- * setParameter) by child classes.
+ * This Organizations implementation builds request URLs by combining the
+ * common query parameters (such as Action and Version), with any that have
+ * been added (via setParameter) by child classes.
  */
 QNetworkRequest OrganizationsRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -239,17 +273,16 @@ QNetworkRequest OrganizationsRequest::unsignedRequest(const QUrl &endpoint) cons
 }
 
 /*!
+ * \class QtAws::Organizations::OrganizationsRequestPrivate
+ * \brief The OrganizationsRequestPrivate class provides private implementation for OrganizationsRequest.
  * \internal
  *
- * \class  OrganizationsRequestPrivate
- *
- * \brief  Private implementation for OrganizationsRequest.
+ * \inmodule QtAwsOrganizations
  */
 
 /*!
- * \internal
- *
- * \brief Constructs a new OrganizationsRequestPrivate object.
+ * Constructs a OrganizationsRequestPrivate object for Organizations \a action with,
+ * public implementation \a q.
  */
 OrganizationsRequestPrivate::OrganizationsRequestPrivate(const OrganizationsRequest::Action action, OrganizationsRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
@@ -258,9 +291,7 @@ OrganizationsRequestPrivate::OrganizationsRequestPrivate(const OrganizationsRequ
 }
 
 /*!
- * \internal
- *
- * \brief Constructs a new OrganizationsRequestPrivate object, copying an existing one.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
@@ -276,15 +307,12 @@ OrganizationsRequestPrivate::OrganizationsRequestPrivate(const OrganizationsRequ
 }
 
 /*!
- * \internal
- *
- * \brief Returns a string representing \a action.
+ * Returns a string represention of \a action, or a null string if \a action is
+ * invalid.
  *
  * This function converts OrganizationsRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the Organizations service's Action
  * query parameters.
- *
- * @return A string representing \a action, or a null string if \a action is invalid.
  */
 QString OrganizationsRequestPrivate::toString(const OrganizationsRequest::Action &action)
 {

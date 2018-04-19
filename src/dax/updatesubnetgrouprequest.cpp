@@ -27,10 +27,9 @@ namespace DAX {
 
 /*!
  * \class QtAws::DAX::UpdateSubnetGroupRequest
- *
  * \brief The UpdateSubnetGroupRequest class provides an interface for DAX UpdateSubnetGroup requests.
  *
- * \ingroup DAX
+ * \inmodule QtAwsDAX
  *
  *  DAX is a managed caching service engineered for Amazon DynamoDB. DAX dramatically speeds up database reads by caching
  *  frequently-accessed data from DynamoDB, so applications can access that data with sub-millisecond latency. You can
@@ -41,9 +40,7 @@ namespace DAX {
  */
 
 /*!
- * @brief  Constructs a new UpdateSubnetGroupRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateSubnetGroupRequest::UpdateSubnetGroupRequest(const UpdateSubnetGroupRequest &other)
     : DAXRequest(new UpdateSubnetGroupRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ UpdateSubnetGroupRequest::UpdateSubnetGroupRequest(const UpdateSubnetGroupReques
 }
 
 /*!
- * @brief  Constructs a new UpdateSubnetGroupRequest object.
+ * Constructs a UpdateSubnetGroupRequest object.
  */
 UpdateSubnetGroupRequest::UpdateSubnetGroupRequest()
     : DAXRequest(new UpdateSubnetGroupRequestPrivate(DAXRequest::UpdateSubnetGroupAction, this))
@@ -70,14 +67,9 @@ bool UpdateSubnetGroupRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateSubnetGroupResponse object.
+ * Returns a UpdateSubnetGroupResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateSubnetGroupResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DAXClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateSubnetGroupRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * UpdateSubnetGroupRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::DAX::UpdateSubnetGroupRequestPrivate
+ * \brief The UpdateSubnetGroupRequestPrivate class provides private implementation for UpdateSubnetGroupRequest.
+ * \internal
  *
- * @class  UpdateSubnetGroupRequestPrivate
- *
- * @brief  Private implementation for UpdateSubnetGroupRequest.
+ * \inmodule QtAwsDAX
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateSubnetGroupRequestPrivate object.
- *
- * @param  action  DAX action being performed.
- * @param  q       Pointer to this object's public UpdateSubnetGroupRequest instance.
+ * Constructs a UpdateSubnetGroupRequestPrivate object for DAX \a action with,
+ * public implementation \a q.
  */
 UpdateSubnetGroupRequestPrivate::UpdateSubnetGroupRequestPrivate(
     const DAXRequest::Action action, UpdateSubnetGroupRequest * const q)
@@ -108,15 +97,10 @@ UpdateSubnetGroupRequestPrivate::UpdateSubnetGroupRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateSubnetGroupRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateSubnetGroupRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateSubnetGroupRequest instance.
  */
 UpdateSubnetGroupRequestPrivate::UpdateSubnetGroupRequestPrivate(
     const UpdateSubnetGroupRequestPrivate &other, UpdateSubnetGroupRequest * const q)

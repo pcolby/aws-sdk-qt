@@ -27,10 +27,9 @@ namespace OpsWorksCM {
 
 /*!
  * \class QtAws::OpsWorksCM::DisassociateNodeRequest
- *
  * \brief The DisassociateNodeRequest class provides an interface for OpsWorksCM DisassociateNode requests.
  *
- * \ingroup OpsWorksCM
+ * \inmodule QtAwsOpsWorksCM
  *
  *  <fullname>AWS OpsWorks CM</fullname>
  * 
@@ -97,9 +96,7 @@ namespace OpsWorksCM {
  */
 
 /*!
- * @brief  Constructs a new DisassociateNodeRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DisassociateNodeRequest::DisassociateNodeRequest(const DisassociateNodeRequest &other)
     : OpsWorksCMRequest(new DisassociateNodeRequestPrivate(*other.d_func(), this))
@@ -108,7 +105,7 @@ DisassociateNodeRequest::DisassociateNodeRequest(const DisassociateNodeRequest &
 }
 
 /*!
- * @brief  Constructs a new DisassociateNodeRequest object.
+ * Constructs a DisassociateNodeRequest object.
  */
 DisassociateNodeRequest::DisassociateNodeRequest()
     : OpsWorksCMRequest(new DisassociateNodeRequestPrivate(OpsWorksCMRequest::DisassociateNodeAction, this))
@@ -126,14 +123,9 @@ bool DisassociateNodeRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DisassociateNodeResponse object.
+ * Returns a DisassociateNodeResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DisassociateNodeResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  OpsWorksCMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DisassociateNodeRequest::response(QNetworkReply * const reply) const
 {
@@ -141,20 +133,17 @@ QtAws::Core::AwsAbstractResponse * DisassociateNodeRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::OpsWorksCM::DisassociateNodeRequestPrivate
+ * \brief The DisassociateNodeRequestPrivate class provides private implementation for DisassociateNodeRequest.
+ * \internal
  *
- * @class  DisassociateNodeRequestPrivate
- *
- * @brief  Private implementation for DisassociateNodeRequest.
+ * \inmodule QtAwsOpsWorksCM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DisassociateNodeRequestPrivate object.
- *
- * @param  action  OpsWorksCM action being performed.
- * @param  q       Pointer to this object's public DisassociateNodeRequest instance.
+ * Constructs a DisassociateNodeRequestPrivate object for OpsWorksCM \a action with,
+ * public implementation \a q.
  */
 DisassociateNodeRequestPrivate::DisassociateNodeRequestPrivate(
     const OpsWorksCMRequest::Action action, DisassociateNodeRequest * const q)
@@ -164,15 +153,10 @@ DisassociateNodeRequestPrivate::DisassociateNodeRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DisassociateNodeRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DisassociateNodeRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DisassociateNodeRequest instance.
  */
 DisassociateNodeRequestPrivate::DisassociateNodeRequestPrivate(
     const DisassociateNodeRequestPrivate &other, DisassociateNodeRequest * const q)

@@ -27,10 +27,9 @@ namespace MQ {
 
 /*!
  * \class QtAws::MQ::ListConfigurationRevisionsRequest
- *
  * \brief The ListConfigurationRevisionsRequest class provides an interface for MQ ListConfigurationRevisions requests.
  *
- * \ingroup MQ
+ * \inmodule QtAwsMQ
  *
  *  Amazon MQ is a managed message broker service for Apache ActiveMQ that makes it easy to set up and operate message
  *  brokers in the cloud. A message broker allows software applications and components to communicate using various
@@ -39,9 +38,7 @@ namespace MQ {
  */
 
 /*!
- * @brief  Constructs a new ListConfigurationRevisionsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListConfigurationRevisionsRequest::ListConfigurationRevisionsRequest(const ListConfigurationRevisionsRequest &other)
     : MQRequest(new ListConfigurationRevisionsRequestPrivate(*other.d_func(), this))
@@ -50,7 +47,7 @@ ListConfigurationRevisionsRequest::ListConfigurationRevisionsRequest(const ListC
 }
 
 /*!
- * @brief  Constructs a new ListConfigurationRevisionsRequest object.
+ * Constructs a ListConfigurationRevisionsRequest object.
  */
 ListConfigurationRevisionsRequest::ListConfigurationRevisionsRequest()
     : MQRequest(new ListConfigurationRevisionsRequestPrivate(MQRequest::ListConfigurationRevisionsAction, this))
@@ -68,14 +65,9 @@ bool ListConfigurationRevisionsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListConfigurationRevisionsResponse object.
+ * Returns a ListConfigurationRevisionsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListConfigurationRevisionsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MQClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListConfigurationRevisionsRequest::response(QNetworkReply * const reply) const
 {
@@ -83,20 +75,17 @@ QtAws::Core::AwsAbstractResponse * ListConfigurationRevisionsRequest::response(Q
 }
 
 /*!
- * @internal
+ * \class QtAws::MQ::ListConfigurationRevisionsRequestPrivate
+ * \brief The ListConfigurationRevisionsRequestPrivate class provides private implementation for ListConfigurationRevisionsRequest.
+ * \internal
  *
- * @class  ListConfigurationRevisionsRequestPrivate
- *
- * @brief  Private implementation for ListConfigurationRevisionsRequest.
+ * \inmodule QtAwsMQ
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListConfigurationRevisionsRequestPrivate object.
- *
- * @param  action  MQ action being performed.
- * @param  q       Pointer to this object's public ListConfigurationRevisionsRequest instance.
+ * Constructs a ListConfigurationRevisionsRequestPrivate object for MQ \a action with,
+ * public implementation \a q.
  */
 ListConfigurationRevisionsRequestPrivate::ListConfigurationRevisionsRequestPrivate(
     const MQRequest::Action action, ListConfigurationRevisionsRequest * const q)
@@ -106,15 +95,10 @@ ListConfigurationRevisionsRequestPrivate::ListConfigurationRevisionsRequestPriva
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListConfigurationRevisionsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListConfigurationRevisionsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListConfigurationRevisionsRequest instance.
  */
 ListConfigurationRevisionsRequestPrivate::ListConfigurationRevisionsRequestPrivate(
     const ListConfigurationRevisionsRequestPrivate &other, ListConfigurationRevisionsRequest * const q)

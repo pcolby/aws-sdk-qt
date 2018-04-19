@@ -27,10 +27,9 @@ namespace Greengrass {
 
 /*!
  * \class QtAws::Greengrass::CreateDeploymentRequest
- *
  * \brief The CreateDeploymentRequest class provides an interface for Greengrass CreateDeployment requests.
  *
- * \ingroup Greengrass
+ * \inmodule QtAwsGreengrass
  *
  *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
  *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
@@ -40,9 +39,7 @@ namespace Greengrass {
  */
 
 /*!
- * @brief  Constructs a new CreateDeploymentRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateDeploymentRequest::CreateDeploymentRequest(const CreateDeploymentRequest &other)
     : GreengrassRequest(new CreateDeploymentRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ CreateDeploymentRequest::CreateDeploymentRequest(const CreateDeploymentRequest &
 }
 
 /*!
- * @brief  Constructs a new CreateDeploymentRequest object.
+ * Constructs a CreateDeploymentRequest object.
  */
 CreateDeploymentRequest::CreateDeploymentRequest()
     : GreengrassRequest(new CreateDeploymentRequestPrivate(GreengrassRequest::CreateDeploymentAction, this))
@@ -69,14 +66,9 @@ bool CreateDeploymentRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateDeploymentResponse object.
+ * Returns a CreateDeploymentResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateDeploymentResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GreengrassClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateDeploymentRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * CreateDeploymentRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::Greengrass::CreateDeploymentRequestPrivate
+ * \brief The CreateDeploymentRequestPrivate class provides private implementation for CreateDeploymentRequest.
+ * \internal
  *
- * @class  CreateDeploymentRequestPrivate
- *
- * @brief  Private implementation for CreateDeploymentRequest.
+ * \inmodule QtAwsGreengrass
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateDeploymentRequestPrivate object.
- *
- * @param  action  Greengrass action being performed.
- * @param  q       Pointer to this object's public CreateDeploymentRequest instance.
+ * Constructs a CreateDeploymentRequestPrivate object for Greengrass \a action with,
+ * public implementation \a q.
  */
 CreateDeploymentRequestPrivate::CreateDeploymentRequestPrivate(
     const GreengrassRequest::Action action, CreateDeploymentRequest * const q)
@@ -107,15 +96,10 @@ CreateDeploymentRequestPrivate::CreateDeploymentRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateDeploymentRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateDeploymentRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateDeploymentRequest instance.
  */
 CreateDeploymentRequestPrivate::CreateDeploymentRequestPrivate(
     const CreateDeploymentRequestPrivate &other, CreateDeploymentRequest * const q)

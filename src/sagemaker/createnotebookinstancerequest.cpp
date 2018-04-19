@@ -27,19 +27,16 @@ namespace SageMaker {
 
 /*!
  * \class QtAws::SageMaker::CreateNotebookInstanceRequest
- *
  * \brief The CreateNotebookInstanceRequest class provides an interface for SageMaker CreateNotebookInstance requests.
  *
- * \ingroup SageMaker
+ * \inmodule QtAwsSageMaker
  *
  *
  * \sa SageMakerClient::createNotebookInstance
  */
 
 /*!
- * @brief  Constructs a new CreateNotebookInstanceRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateNotebookInstanceRequest::CreateNotebookInstanceRequest(const CreateNotebookInstanceRequest &other)
     : SageMakerRequest(new CreateNotebookInstanceRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ CreateNotebookInstanceRequest::CreateNotebookInstanceRequest(const CreateNoteboo
 }
 
 /*!
- * @brief  Constructs a new CreateNotebookInstanceRequest object.
+ * Constructs a CreateNotebookInstanceRequest object.
  */
 CreateNotebookInstanceRequest::CreateNotebookInstanceRequest()
     : SageMakerRequest(new CreateNotebookInstanceRequestPrivate(SageMakerRequest::CreateNotebookInstanceAction, this))
@@ -66,14 +63,9 @@ bool CreateNotebookInstanceRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateNotebookInstanceResponse object.
+ * Returns a CreateNotebookInstanceResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateNotebookInstanceResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SageMakerClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateNotebookInstanceRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * CreateNotebookInstanceRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::SageMaker::CreateNotebookInstanceRequestPrivate
+ * \brief The CreateNotebookInstanceRequestPrivate class provides private implementation for CreateNotebookInstanceRequest.
+ * \internal
  *
- * @class  CreateNotebookInstanceRequestPrivate
- *
- * @brief  Private implementation for CreateNotebookInstanceRequest.
+ * \inmodule QtAwsSageMaker
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateNotebookInstanceRequestPrivate object.
- *
- * @param  action  SageMaker action being performed.
- * @param  q       Pointer to this object's public CreateNotebookInstanceRequest instance.
+ * Constructs a CreateNotebookInstanceRequestPrivate object for SageMaker \a action with,
+ * public implementation \a q.
  */
 CreateNotebookInstanceRequestPrivate::CreateNotebookInstanceRequestPrivate(
     const SageMakerRequest::Action action, CreateNotebookInstanceRequest * const q)
@@ -104,15 +93,10 @@ CreateNotebookInstanceRequestPrivate::CreateNotebookInstanceRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateNotebookInstanceRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateNotebookInstanceRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateNotebookInstanceRequest instance.
  */
 CreateNotebookInstanceRequestPrivate::CreateNotebookInstanceRequestPrivate(
     const CreateNotebookInstanceRequestPrivate &other, CreateNotebookInstanceRequest * const q)

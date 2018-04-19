@@ -27,10 +27,9 @@ namespace AppStream {
 
 /*!
  * \class QtAws::AppStream::DescribeImageBuildersRequest
- *
  * \brief The DescribeImageBuildersRequest class provides an interface for AppStream DescribeImageBuilders requests.
  *
- * \ingroup AppStream
+ * \inmodule QtAwsAppStream
  *
  *  <fullname>Amazon AppStream 2.0</fullname>
  * 
@@ -40,9 +39,7 @@ namespace AppStream {
  */
 
 /*!
- * @brief  Constructs a new DescribeImageBuildersRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeImageBuildersRequest::DescribeImageBuildersRequest(const DescribeImageBuildersRequest &other)
     : AppStreamRequest(new DescribeImageBuildersRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ DescribeImageBuildersRequest::DescribeImageBuildersRequest(const DescribeImageBu
 }
 
 /*!
- * @brief  Constructs a new DescribeImageBuildersRequest object.
+ * Constructs a DescribeImageBuildersRequest object.
  */
 DescribeImageBuildersRequest::DescribeImageBuildersRequest()
     : AppStreamRequest(new DescribeImageBuildersRequestPrivate(AppStreamRequest::DescribeImageBuildersAction, this))
@@ -69,14 +66,9 @@ bool DescribeImageBuildersRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeImageBuildersResponse object.
+ * Returns a DescribeImageBuildersResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeImageBuildersResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AppStreamClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeImageBuildersRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * DescribeImageBuildersRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::AppStream::DescribeImageBuildersRequestPrivate
+ * \brief The DescribeImageBuildersRequestPrivate class provides private implementation for DescribeImageBuildersRequest.
+ * \internal
  *
- * @class  DescribeImageBuildersRequestPrivate
- *
- * @brief  Private implementation for DescribeImageBuildersRequest.
+ * \inmodule QtAwsAppStream
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeImageBuildersRequestPrivate object.
- *
- * @param  action  AppStream action being performed.
- * @param  q       Pointer to this object's public DescribeImageBuildersRequest instance.
+ * Constructs a DescribeImageBuildersRequestPrivate object for AppStream \a action with,
+ * public implementation \a q.
  */
 DescribeImageBuildersRequestPrivate::DescribeImageBuildersRequestPrivate(
     const AppStreamRequest::Action action, DescribeImageBuildersRequest * const q)
@@ -107,15 +96,10 @@ DescribeImageBuildersRequestPrivate::DescribeImageBuildersRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeImageBuildersRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeImageBuildersRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeImageBuildersRequest instance.
  */
 DescribeImageBuildersRequestPrivate::DescribeImageBuildersRequestPrivate(
     const DescribeImageBuildersRequestPrivate &other, DescribeImageBuildersRequest * const q)

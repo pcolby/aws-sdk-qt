@@ -27,10 +27,9 @@ namespace Inspector {
 
 /*!
  * \class QtAws::Inspector::ListAssessmentTemplatesRequest
- *
  * \brief The ListAssessmentTemplatesRequest class provides an interface for Inspector ListAssessmentTemplates requests.
  *
- * \ingroup Inspector
+ * \inmodule QtAwsInspector
  *
  *  <fullname>Amazon Inspector</fullname>
  * 
@@ -42,9 +41,7 @@ namespace Inspector {
  */
 
 /*!
- * @brief  Constructs a new ListAssessmentTemplatesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListAssessmentTemplatesRequest::ListAssessmentTemplatesRequest(const ListAssessmentTemplatesRequest &other)
     : InspectorRequest(new ListAssessmentTemplatesRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ ListAssessmentTemplatesRequest::ListAssessmentTemplatesRequest(const ListAssessm
 }
 
 /*!
- * @brief  Constructs a new ListAssessmentTemplatesRequest object.
+ * Constructs a ListAssessmentTemplatesRequest object.
  */
 ListAssessmentTemplatesRequest::ListAssessmentTemplatesRequest()
     : InspectorRequest(new ListAssessmentTemplatesRequestPrivate(InspectorRequest::ListAssessmentTemplatesAction, this))
@@ -71,14 +68,9 @@ bool ListAssessmentTemplatesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListAssessmentTemplatesResponse object.
+ * Returns a ListAssessmentTemplatesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListAssessmentTemplatesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  InspectorClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListAssessmentTemplatesRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * ListAssessmentTemplatesRequest::response(QNet
 }
 
 /*!
- * @internal
+ * \class QtAws::Inspector::ListAssessmentTemplatesRequestPrivate
+ * \brief The ListAssessmentTemplatesRequestPrivate class provides private implementation for ListAssessmentTemplatesRequest.
+ * \internal
  *
- * @class  ListAssessmentTemplatesRequestPrivate
- *
- * @brief  Private implementation for ListAssessmentTemplatesRequest.
+ * \inmodule QtAwsInspector
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListAssessmentTemplatesRequestPrivate object.
- *
- * @param  action  Inspector action being performed.
- * @param  q       Pointer to this object's public ListAssessmentTemplatesRequest instance.
+ * Constructs a ListAssessmentTemplatesRequestPrivate object for Inspector \a action with,
+ * public implementation \a q.
  */
 ListAssessmentTemplatesRequestPrivate::ListAssessmentTemplatesRequestPrivate(
     const InspectorRequest::Action action, ListAssessmentTemplatesRequest * const q)
@@ -109,15 +98,10 @@ ListAssessmentTemplatesRequestPrivate::ListAssessmentTemplatesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListAssessmentTemplatesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListAssessmentTemplatesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListAssessmentTemplatesRequest instance.
  */
 ListAssessmentTemplatesRequestPrivate::ListAssessmentTemplatesRequestPrivate(
     const ListAssessmentTemplatesRequestPrivate &other, ListAssessmentTemplatesRequest * const q)

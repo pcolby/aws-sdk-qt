@@ -27,10 +27,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::DeleteIntegrationRequest
- *
  * \brief The DeleteIntegrationRequest class provides an interface for APIGateway DeleteIntegration requests.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -42,9 +41,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new DeleteIntegrationRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteIntegrationRequest::DeleteIntegrationRequest(const DeleteIntegrationRequest &other)
     : APIGatewayRequest(new DeleteIntegrationRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ DeleteIntegrationRequest::DeleteIntegrationRequest(const DeleteIntegrationReques
 }
 
 /*!
- * @brief  Constructs a new DeleteIntegrationRequest object.
+ * Constructs a DeleteIntegrationRequest object.
  */
 DeleteIntegrationRequest::DeleteIntegrationRequest()
     : APIGatewayRequest(new DeleteIntegrationRequestPrivate(APIGatewayRequest::DeleteIntegrationAction, this))
@@ -71,14 +68,9 @@ bool DeleteIntegrationRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteIntegrationResponse object.
+ * Returns a DeleteIntegrationResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteIntegrationResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  APIGatewayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteIntegrationRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * DeleteIntegrationRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::APIGateway::DeleteIntegrationRequestPrivate
+ * \brief The DeleteIntegrationRequestPrivate class provides private implementation for DeleteIntegrationRequest.
+ * \internal
  *
- * @class  DeleteIntegrationRequestPrivate
- *
- * @brief  Private implementation for DeleteIntegrationRequest.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteIntegrationRequestPrivate object.
- *
- * @param  action  APIGateway action being performed.
- * @param  q       Pointer to this object's public DeleteIntegrationRequest instance.
+ * Constructs a DeleteIntegrationRequestPrivate object for APIGateway \a action with,
+ * public implementation \a q.
  */
 DeleteIntegrationRequestPrivate::DeleteIntegrationRequestPrivate(
     const APIGatewayRequest::Action action, DeleteIntegrationRequest * const q)
@@ -109,15 +98,10 @@ DeleteIntegrationRequestPrivate::DeleteIntegrationRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteIntegrationRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteIntegrationRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteIntegrationRequest instance.
  */
 DeleteIntegrationRequestPrivate::DeleteIntegrationRequestPrivate(
     const DeleteIntegrationRequestPrivate &other, DeleteIntegrationRequest * const q)

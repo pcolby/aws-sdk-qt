@@ -27,10 +27,9 @@ namespace LexModelBuildingService {
 
 /*!
  * \class QtAws::LexModelBuildingService::PutBotAliasRequest
- *
  * \brief The PutBotAliasRequest class provides an interface for LexModelBuildingService PutBotAlias requests.
  *
- * \ingroup LexModelBuildingService
+ * \inmodule QtAwsLexModelBuildingService
  *
  *  <fullname>Amazon Lex Build-Time Actions</fullname>
  * 
@@ -41,9 +40,7 @@ namespace LexModelBuildingService {
  */
 
 /*!
- * @brief  Constructs a new PutBotAliasRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 PutBotAliasRequest::PutBotAliasRequest(const PutBotAliasRequest &other)
     : LexModelBuildingServiceRequest(new PutBotAliasRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ PutBotAliasRequest::PutBotAliasRequest(const PutBotAliasRequest &other)
 }
 
 /*!
- * @brief  Constructs a new PutBotAliasRequest object.
+ * Constructs a PutBotAliasRequest object.
  */
 PutBotAliasRequest::PutBotAliasRequest()
     : LexModelBuildingServiceRequest(new PutBotAliasRequestPrivate(LexModelBuildingServiceRequest::PutBotAliasAction, this))
@@ -70,14 +67,9 @@ bool PutBotAliasRequest::isValid() const
 
 
 /*!
- * @brief  Construct an PutBotAliasResponse object.
+ * Returns a PutBotAliasResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An PutBotAliasResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  LexModelBuildingServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * PutBotAliasRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * PutBotAliasRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::LexModelBuildingService::PutBotAliasRequestPrivate
+ * \brief The PutBotAliasRequestPrivate class provides private implementation for PutBotAliasRequest.
+ * \internal
  *
- * @class  PutBotAliasRequestPrivate
- *
- * @brief  Private implementation for PutBotAliasRequest.
+ * \inmodule QtAwsLexModelBuildingService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new PutBotAliasRequestPrivate object.
- *
- * @param  action  LexModelBuildingService action being performed.
- * @param  q       Pointer to this object's public PutBotAliasRequest instance.
+ * Constructs a PutBotAliasRequestPrivate object for LexModelBuildingService \a action with,
+ * public implementation \a q.
  */
 PutBotAliasRequestPrivate::PutBotAliasRequestPrivate(
     const LexModelBuildingServiceRequest::Action action, PutBotAliasRequest * const q)
@@ -108,15 +97,10 @@ PutBotAliasRequestPrivate::PutBotAliasRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutBotAliasRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the PutBotAliasRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public PutBotAliasRequest instance.
  */
 PutBotAliasRequestPrivate::PutBotAliasRequestPrivate(
     const PutBotAliasRequestPrivate &other, PutBotAliasRequest * const q)

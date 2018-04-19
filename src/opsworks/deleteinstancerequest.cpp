@@ -27,10 +27,9 @@ namespace OpsWorks {
 
 /*!
  * \class QtAws::OpsWorks::DeleteInstanceRequest
- *
  * \brief The DeleteInstanceRequest class provides an interface for OpsWorks DeleteInstance requests.
  *
- * \ingroup OpsWorks
+ * \inmodule QtAwsOpsWorks
  *
  *  <fullname>AWS OpsWorks</fullname>
  * 
@@ -143,9 +142,7 @@ namespace OpsWorks {
  */
 
 /*!
- * @brief  Constructs a new DeleteInstanceRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteInstanceRequest::DeleteInstanceRequest(const DeleteInstanceRequest &other)
     : OpsWorksRequest(new DeleteInstanceRequestPrivate(*other.d_func(), this))
@@ -154,7 +151,7 @@ DeleteInstanceRequest::DeleteInstanceRequest(const DeleteInstanceRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DeleteInstanceRequest object.
+ * Constructs a DeleteInstanceRequest object.
  */
 DeleteInstanceRequest::DeleteInstanceRequest()
     : OpsWorksRequest(new DeleteInstanceRequestPrivate(OpsWorksRequest::DeleteInstanceAction, this))
@@ -172,14 +169,9 @@ bool DeleteInstanceRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteInstanceResponse object.
+ * Returns a DeleteInstanceResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteInstanceResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  OpsWorksClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteInstanceRequest::response(QNetworkReply * const reply) const
 {
@@ -187,20 +179,17 @@ QtAws::Core::AwsAbstractResponse * DeleteInstanceRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::OpsWorks::DeleteInstanceRequestPrivate
+ * \brief The DeleteInstanceRequestPrivate class provides private implementation for DeleteInstanceRequest.
+ * \internal
  *
- * @class  DeleteInstanceRequestPrivate
- *
- * @brief  Private implementation for DeleteInstanceRequest.
+ * \inmodule QtAwsOpsWorks
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteInstanceRequestPrivate object.
- *
- * @param  action  OpsWorks action being performed.
- * @param  q       Pointer to this object's public DeleteInstanceRequest instance.
+ * Constructs a DeleteInstanceRequestPrivate object for OpsWorks \a action with,
+ * public implementation \a q.
  */
 DeleteInstanceRequestPrivate::DeleteInstanceRequestPrivate(
     const OpsWorksRequest::Action action, DeleteInstanceRequest * const q)
@@ -210,15 +199,10 @@ DeleteInstanceRequestPrivate::DeleteInstanceRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteInstanceRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteInstanceRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteInstanceRequest instance.
  */
 DeleteInstanceRequestPrivate::DeleteInstanceRequestPrivate(
     const DeleteInstanceRequestPrivate &other, DeleteInstanceRequest * const q)

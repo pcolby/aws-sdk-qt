@@ -27,10 +27,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::CreateThingGroupRequest
- *
  * \brief The CreateThingGroupRequest class provides an interface for IoT CreateThingGroup requests.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -48,9 +47,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new CreateThingGroupRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateThingGroupRequest::CreateThingGroupRequest(const CreateThingGroupRequest &other)
     : IoTRequest(new CreateThingGroupRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ CreateThingGroupRequest::CreateThingGroupRequest(const CreateThingGroupRequest &
 }
 
 /*!
- * @brief  Constructs a new CreateThingGroupRequest object.
+ * Constructs a CreateThingGroupRequest object.
  */
 CreateThingGroupRequest::CreateThingGroupRequest()
     : IoTRequest(new CreateThingGroupRequestPrivate(IoTRequest::CreateThingGroupAction, this))
@@ -77,14 +74,9 @@ bool CreateThingGroupRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateThingGroupResponse object.
+ * Returns a CreateThingGroupResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateThingGroupResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IoTClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateThingGroupRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * CreateThingGroupRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::IoT::CreateThingGroupRequestPrivate
+ * \brief The CreateThingGroupRequestPrivate class provides private implementation for CreateThingGroupRequest.
+ * \internal
  *
- * @class  CreateThingGroupRequestPrivate
- *
- * @brief  Private implementation for CreateThingGroupRequest.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateThingGroupRequestPrivate object.
- *
- * @param  action  IoT action being performed.
- * @param  q       Pointer to this object's public CreateThingGroupRequest instance.
+ * Constructs a CreateThingGroupRequestPrivate object for IoT \a action with,
+ * public implementation \a q.
  */
 CreateThingGroupRequestPrivate::CreateThingGroupRequestPrivate(
     const IoTRequest::Action action, CreateThingGroupRequest * const q)
@@ -115,15 +104,10 @@ CreateThingGroupRequestPrivate::CreateThingGroupRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateThingGroupRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateThingGroupRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateThingGroupRequest instance.
  */
 CreateThingGroupRequestPrivate::CreateThingGroupRequestPrivate(
     const CreateThingGroupRequestPrivate &other, CreateThingGroupRequest * const q)

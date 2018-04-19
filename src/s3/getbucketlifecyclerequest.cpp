@@ -27,19 +27,16 @@ namespace S3 {
 
 /*!
  * \class QtAws::S3::GetBucketLifecycleRequest
- *
  * \brief The GetBucketLifecycleRequest class provides an interface for S3 GetBucketLifecycle requests.
  *
- * \ingroup S3
+ * \inmodule QtAwsS3
  *
  *
  * \sa S3Client::getBucketLifecycle
  */
 
 /*!
- * @brief  Constructs a new GetBucketLifecycleRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetBucketLifecycleRequest::GetBucketLifecycleRequest(const GetBucketLifecycleRequest &other)
     : S3Request(new GetBucketLifecycleRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ GetBucketLifecycleRequest::GetBucketLifecycleRequest(const GetBucketLifecycleReq
 }
 
 /*!
- * @brief  Constructs a new GetBucketLifecycleRequest object.
+ * Constructs a GetBucketLifecycleRequest object.
  */
 GetBucketLifecycleRequest::GetBucketLifecycleRequest()
     : S3Request(new GetBucketLifecycleRequestPrivate(S3Request::GetBucketLifecycleAction, this))
@@ -66,14 +63,9 @@ bool GetBucketLifecycleRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetBucketLifecycleResponse object.
+ * Returns a GetBucketLifecycleResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetBucketLifecycleResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  S3Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetBucketLifecycleRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * GetBucketLifecycleRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::S3::GetBucketLifecycleRequestPrivate
+ * \brief The GetBucketLifecycleRequestPrivate class provides private implementation for GetBucketLifecycleRequest.
+ * \internal
  *
- * @class  GetBucketLifecycleRequestPrivate
- *
- * @brief  Private implementation for GetBucketLifecycleRequest.
+ * \inmodule QtAwsS3
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetBucketLifecycleRequestPrivate object.
- *
- * @param  action  S3 action being performed.
- * @param  q       Pointer to this object's public GetBucketLifecycleRequest instance.
+ * Constructs a GetBucketLifecycleRequestPrivate object for S3 \a action with,
+ * public implementation \a q.
  */
 GetBucketLifecycleRequestPrivate::GetBucketLifecycleRequestPrivate(
     const S3Request::Action action, GetBucketLifecycleRequest * const q)
@@ -104,15 +93,10 @@ GetBucketLifecycleRequestPrivate::GetBucketLifecycleRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetBucketLifecycleRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetBucketLifecycleRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetBucketLifecycleRequest instance.
  */
 GetBucketLifecycleRequestPrivate::GetBucketLifecycleRequestPrivate(
     const GetBucketLifecycleRequestPrivate &other, GetBucketLifecycleRequest * const q)

@@ -27,10 +27,9 @@ namespace MigrationHub {
 
 /*!
  * \class QtAws::MigrationHub::ListProgressUpdateStreamsRequest
- *
  * \brief The ListProgressUpdateStreamsRequest class provides an interface for MigrationHub ListProgressUpdateStreams requests.
  *
- * \ingroup MigrationHub
+ * \inmodule QtAwsMigrationHub
  *
  *  The AWS Migration Hub API methods help to obtain server and application migration status and integrate your
  *  resource-specific migration tool by providing a programmatic interface to Migration Hub.
@@ -39,9 +38,7 @@ namespace MigrationHub {
  */
 
 /*!
- * @brief  Constructs a new ListProgressUpdateStreamsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListProgressUpdateStreamsRequest::ListProgressUpdateStreamsRequest(const ListProgressUpdateStreamsRequest &other)
     : MigrationHubRequest(new ListProgressUpdateStreamsRequestPrivate(*other.d_func(), this))
@@ -50,7 +47,7 @@ ListProgressUpdateStreamsRequest::ListProgressUpdateStreamsRequest(const ListPro
 }
 
 /*!
- * @brief  Constructs a new ListProgressUpdateStreamsRequest object.
+ * Constructs a ListProgressUpdateStreamsRequest object.
  */
 ListProgressUpdateStreamsRequest::ListProgressUpdateStreamsRequest()
     : MigrationHubRequest(new ListProgressUpdateStreamsRequestPrivate(MigrationHubRequest::ListProgressUpdateStreamsAction, this))
@@ -68,14 +65,9 @@ bool ListProgressUpdateStreamsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListProgressUpdateStreamsResponse object.
+ * Returns a ListProgressUpdateStreamsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListProgressUpdateStreamsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MigrationHubClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListProgressUpdateStreamsRequest::response(QNetworkReply * const reply) const
 {
@@ -83,20 +75,17 @@ QtAws::Core::AwsAbstractResponse * ListProgressUpdateStreamsRequest::response(QN
 }
 
 /*!
- * @internal
+ * \class QtAws::MigrationHub::ListProgressUpdateStreamsRequestPrivate
+ * \brief The ListProgressUpdateStreamsRequestPrivate class provides private implementation for ListProgressUpdateStreamsRequest.
+ * \internal
  *
- * @class  ListProgressUpdateStreamsRequestPrivate
- *
- * @brief  Private implementation for ListProgressUpdateStreamsRequest.
+ * \inmodule QtAwsMigrationHub
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListProgressUpdateStreamsRequestPrivate object.
- *
- * @param  action  MigrationHub action being performed.
- * @param  q       Pointer to this object's public ListProgressUpdateStreamsRequest instance.
+ * Constructs a ListProgressUpdateStreamsRequestPrivate object for MigrationHub \a action with,
+ * public implementation \a q.
  */
 ListProgressUpdateStreamsRequestPrivate::ListProgressUpdateStreamsRequestPrivate(
     const MigrationHubRequest::Action action, ListProgressUpdateStreamsRequest * const q)
@@ -106,15 +95,10 @@ ListProgressUpdateStreamsRequestPrivate::ListProgressUpdateStreamsRequestPrivate
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListProgressUpdateStreamsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListProgressUpdateStreamsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListProgressUpdateStreamsRequest instance.
  */
 ListProgressUpdateStreamsRequestPrivate::ListProgressUpdateStreamsRequestPrivate(
     const ListProgressUpdateStreamsRequestPrivate &other, ListProgressUpdateStreamsRequest * const q)

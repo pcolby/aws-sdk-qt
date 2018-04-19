@@ -27,10 +27,9 @@ namespace AppStream {
 
 /*!
  * \class QtAws::AppStream::DescribeStacksRequest
- *
  * \brief The DescribeStacksRequest class provides an interface for AppStream DescribeStacks requests.
  *
- * \ingroup AppStream
+ * \inmodule QtAwsAppStream
  *
  *  <fullname>Amazon AppStream 2.0</fullname>
  * 
@@ -40,9 +39,7 @@ namespace AppStream {
  */
 
 /*!
- * @brief  Constructs a new DescribeStacksRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeStacksRequest::DescribeStacksRequest(const DescribeStacksRequest &other)
     : AppStreamRequest(new DescribeStacksRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ DescribeStacksRequest::DescribeStacksRequest(const DescribeStacksRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DescribeStacksRequest object.
+ * Constructs a DescribeStacksRequest object.
  */
 DescribeStacksRequest::DescribeStacksRequest()
     : AppStreamRequest(new DescribeStacksRequestPrivate(AppStreamRequest::DescribeStacksAction, this))
@@ -69,14 +66,9 @@ bool DescribeStacksRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeStacksResponse object.
+ * Returns a DescribeStacksResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeStacksResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AppStreamClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeStacksRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * DescribeStacksRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::AppStream::DescribeStacksRequestPrivate
+ * \brief The DescribeStacksRequestPrivate class provides private implementation for DescribeStacksRequest.
+ * \internal
  *
- * @class  DescribeStacksRequestPrivate
- *
- * @brief  Private implementation for DescribeStacksRequest.
+ * \inmodule QtAwsAppStream
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeStacksRequestPrivate object.
- *
- * @param  action  AppStream action being performed.
- * @param  q       Pointer to this object's public DescribeStacksRequest instance.
+ * Constructs a DescribeStacksRequestPrivate object for AppStream \a action with,
+ * public implementation \a q.
  */
 DescribeStacksRequestPrivate::DescribeStacksRequestPrivate(
     const AppStreamRequest::Action action, DescribeStacksRequest * const q)
@@ -107,15 +96,10 @@ DescribeStacksRequestPrivate::DescribeStacksRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeStacksRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeStacksRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeStacksRequest instance.
  */
 DescribeStacksRequestPrivate::DescribeStacksRequestPrivate(
     const DescribeStacksRequestPrivate &other, DescribeStacksRequest * const q)

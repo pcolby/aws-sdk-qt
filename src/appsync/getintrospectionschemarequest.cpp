@@ -27,10 +27,9 @@ namespace AppSync {
 
 /*!
  * \class QtAws::AppSync::GetIntrospectionSchemaRequest
- *
  * \brief The GetIntrospectionSchemaRequest class provides an interface for AppSync GetIntrospectionSchema requests.
  *
- * \ingroup AppSync
+ * \inmodule QtAwsAppSync
  *
  *  AWS AppSync provides API actions for creating and interacting with data sources using GraphQL from your
  *
@@ -38,9 +37,7 @@ namespace AppSync {
  */
 
 /*!
- * @brief  Constructs a new GetIntrospectionSchemaRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetIntrospectionSchemaRequest::GetIntrospectionSchemaRequest(const GetIntrospectionSchemaRequest &other)
     : AppSyncRequest(new GetIntrospectionSchemaRequestPrivate(*other.d_func(), this))
@@ -49,7 +46,7 @@ GetIntrospectionSchemaRequest::GetIntrospectionSchemaRequest(const GetIntrospect
 }
 
 /*!
- * @brief  Constructs a new GetIntrospectionSchemaRequest object.
+ * Constructs a GetIntrospectionSchemaRequest object.
  */
 GetIntrospectionSchemaRequest::GetIntrospectionSchemaRequest()
     : AppSyncRequest(new GetIntrospectionSchemaRequestPrivate(AppSyncRequest::GetIntrospectionSchemaAction, this))
@@ -67,14 +64,9 @@ bool GetIntrospectionSchemaRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetIntrospectionSchemaResponse object.
+ * Returns a GetIntrospectionSchemaResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetIntrospectionSchemaResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AppSyncClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetIntrospectionSchemaRequest::response(QNetworkReply * const reply) const
 {
@@ -82,20 +74,17 @@ QtAws::Core::AwsAbstractResponse * GetIntrospectionSchemaRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::AppSync::GetIntrospectionSchemaRequestPrivate
+ * \brief The GetIntrospectionSchemaRequestPrivate class provides private implementation for GetIntrospectionSchemaRequest.
+ * \internal
  *
- * @class  GetIntrospectionSchemaRequestPrivate
- *
- * @brief  Private implementation for GetIntrospectionSchemaRequest.
+ * \inmodule QtAwsAppSync
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetIntrospectionSchemaRequestPrivate object.
- *
- * @param  action  AppSync action being performed.
- * @param  q       Pointer to this object's public GetIntrospectionSchemaRequest instance.
+ * Constructs a GetIntrospectionSchemaRequestPrivate object for AppSync \a action with,
+ * public implementation \a q.
  */
 GetIntrospectionSchemaRequestPrivate::GetIntrospectionSchemaRequestPrivate(
     const AppSyncRequest::Action action, GetIntrospectionSchemaRequest * const q)
@@ -105,15 +94,10 @@ GetIntrospectionSchemaRequestPrivate::GetIntrospectionSchemaRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetIntrospectionSchemaRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetIntrospectionSchemaRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetIntrospectionSchemaRequest instance.
  */
 GetIntrospectionSchemaRequestPrivate::GetIntrospectionSchemaRequestPrivate(
     const GetIntrospectionSchemaRequestPrivate &other, GetIntrospectionSchemaRequest * const q)

@@ -27,19 +27,16 @@ namespace S3 {
 
 /*!
  * \class QtAws::S3::GetBucketCorsRequest
- *
  * \brief The GetBucketCorsRequest class provides an interface for S3 GetBucketCors requests.
  *
- * \ingroup S3
+ * \inmodule QtAwsS3
  *
  *
  * \sa S3Client::getBucketCors
  */
 
 /*!
- * @brief  Constructs a new GetBucketCorsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetBucketCorsRequest::GetBucketCorsRequest(const GetBucketCorsRequest &other)
     : S3Request(new GetBucketCorsRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ GetBucketCorsRequest::GetBucketCorsRequest(const GetBucketCorsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetBucketCorsRequest object.
+ * Constructs a GetBucketCorsRequest object.
  */
 GetBucketCorsRequest::GetBucketCorsRequest()
     : S3Request(new GetBucketCorsRequestPrivate(S3Request::GetBucketCorsAction, this))
@@ -66,14 +63,9 @@ bool GetBucketCorsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetBucketCorsResponse object.
+ * Returns a GetBucketCorsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetBucketCorsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  S3Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetBucketCorsRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * GetBucketCorsRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::S3::GetBucketCorsRequestPrivate
+ * \brief The GetBucketCorsRequestPrivate class provides private implementation for GetBucketCorsRequest.
+ * \internal
  *
- * @class  GetBucketCorsRequestPrivate
- *
- * @brief  Private implementation for GetBucketCorsRequest.
+ * \inmodule QtAwsS3
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetBucketCorsRequestPrivate object.
- *
- * @param  action  S3 action being performed.
- * @param  q       Pointer to this object's public GetBucketCorsRequest instance.
+ * Constructs a GetBucketCorsRequestPrivate object for S3 \a action with,
+ * public implementation \a q.
  */
 GetBucketCorsRequestPrivate::GetBucketCorsRequestPrivate(
     const S3Request::Action action, GetBucketCorsRequest * const q)
@@ -104,15 +93,10 @@ GetBucketCorsRequestPrivate::GetBucketCorsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetBucketCorsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetBucketCorsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetBucketCorsRequest instance.
  */
 GetBucketCorsRequestPrivate::GetBucketCorsRequestPrivate(
     const GetBucketCorsRequestPrivate &other, GetBucketCorsRequest * const q)

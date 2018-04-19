@@ -27,10 +27,9 @@ namespace Greengrass {
 
 /*!
  * \class QtAws::Greengrass::GetLoggerDefinitionVersionRequest
- *
  * \brief The GetLoggerDefinitionVersionRequest class provides an interface for Greengrass GetLoggerDefinitionVersion requests.
  *
- * \ingroup Greengrass
+ * \inmodule QtAwsGreengrass
  *
  *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
  *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
@@ -40,9 +39,7 @@ namespace Greengrass {
  */
 
 /*!
- * @brief  Constructs a new GetLoggerDefinitionVersionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetLoggerDefinitionVersionRequest::GetLoggerDefinitionVersionRequest(const GetLoggerDefinitionVersionRequest &other)
     : GreengrassRequest(new GetLoggerDefinitionVersionRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ GetLoggerDefinitionVersionRequest::GetLoggerDefinitionVersionRequest(const GetLo
 }
 
 /*!
- * @brief  Constructs a new GetLoggerDefinitionVersionRequest object.
+ * Constructs a GetLoggerDefinitionVersionRequest object.
  */
 GetLoggerDefinitionVersionRequest::GetLoggerDefinitionVersionRequest()
     : GreengrassRequest(new GetLoggerDefinitionVersionRequestPrivate(GreengrassRequest::GetLoggerDefinitionVersionAction, this))
@@ -69,14 +66,9 @@ bool GetLoggerDefinitionVersionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetLoggerDefinitionVersionResponse object.
+ * Returns a GetLoggerDefinitionVersionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetLoggerDefinitionVersionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GreengrassClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetLoggerDefinitionVersionRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * GetLoggerDefinitionVersionRequest::response(Q
 }
 
 /*!
- * @internal
+ * \class QtAws::Greengrass::GetLoggerDefinitionVersionRequestPrivate
+ * \brief The GetLoggerDefinitionVersionRequestPrivate class provides private implementation for GetLoggerDefinitionVersionRequest.
+ * \internal
  *
- * @class  GetLoggerDefinitionVersionRequestPrivate
- *
- * @brief  Private implementation for GetLoggerDefinitionVersionRequest.
+ * \inmodule QtAwsGreengrass
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetLoggerDefinitionVersionRequestPrivate object.
- *
- * @param  action  Greengrass action being performed.
- * @param  q       Pointer to this object's public GetLoggerDefinitionVersionRequest instance.
+ * Constructs a GetLoggerDefinitionVersionRequestPrivate object for Greengrass \a action with,
+ * public implementation \a q.
  */
 GetLoggerDefinitionVersionRequestPrivate::GetLoggerDefinitionVersionRequestPrivate(
     const GreengrassRequest::Action action, GetLoggerDefinitionVersionRequest * const q)
@@ -107,15 +96,10 @@ GetLoggerDefinitionVersionRequestPrivate::GetLoggerDefinitionVersionRequestPriva
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetLoggerDefinitionVersionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetLoggerDefinitionVersionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetLoggerDefinitionVersionRequest instance.
  */
 GetLoggerDefinitionVersionRequestPrivate::GetLoggerDefinitionVersionRequestPrivate(
     const GetLoggerDefinitionVersionRequestPrivate &other, GetLoggerDefinitionVersionRequest * const q)

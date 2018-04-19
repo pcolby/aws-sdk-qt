@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::CreateVpnConnectionRouteRequest
- *
  * \brief The CreateVpnConnectionRouteRequest class provides an interface for EC2 CreateVpnConnectionRoute requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new CreateVpnConnectionRouteRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateVpnConnectionRouteRequest::CreateVpnConnectionRouteRequest(const CreateVpnConnectionRouteRequest &other)
     : EC2Request(new CreateVpnConnectionRouteRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ CreateVpnConnectionRouteRequest::CreateVpnConnectionRouteRequest(const CreateVpn
 }
 
 /*!
- * @brief  Constructs a new CreateVpnConnectionRouteRequest object.
+ * Constructs a CreateVpnConnectionRouteRequest object.
  */
 CreateVpnConnectionRouteRequest::CreateVpnConnectionRouteRequest()
     : EC2Request(new CreateVpnConnectionRouteRequestPrivate(EC2Request::CreateVpnConnectionRouteAction, this))
@@ -70,14 +67,9 @@ bool CreateVpnConnectionRouteRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateVpnConnectionRouteResponse object.
+ * Returns a CreateVpnConnectionRouteResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateVpnConnectionRouteResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateVpnConnectionRouteRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * CreateVpnConnectionRouteRequest::response(QNe
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::CreateVpnConnectionRouteRequestPrivate
+ * \brief The CreateVpnConnectionRouteRequestPrivate class provides private implementation for CreateVpnConnectionRouteRequest.
+ * \internal
  *
- * @class  CreateVpnConnectionRouteRequestPrivate
- *
- * @brief  Private implementation for CreateVpnConnectionRouteRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateVpnConnectionRouteRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public CreateVpnConnectionRouteRequest instance.
+ * Constructs a CreateVpnConnectionRouteRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 CreateVpnConnectionRouteRequestPrivate::CreateVpnConnectionRouteRequestPrivate(
     const EC2Request::Action action, CreateVpnConnectionRouteRequest * const q)
@@ -108,15 +97,10 @@ CreateVpnConnectionRouteRequestPrivate::CreateVpnConnectionRouteRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateVpnConnectionRouteRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateVpnConnectionRouteRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateVpnConnectionRouteRequest instance.
  */
 CreateVpnConnectionRouteRequestPrivate::CreateVpnConnectionRouteRequestPrivate(
     const CreateVpnConnectionRouteRequestPrivate &other, CreateVpnConnectionRouteRequest * const q)

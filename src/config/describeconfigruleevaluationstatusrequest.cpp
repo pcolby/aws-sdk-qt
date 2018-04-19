@@ -27,10 +27,9 @@ namespace ConfigService {
 
 /*!
  * \class QtAws::ConfigService::DescribeConfigRuleEvaluationStatusRequest
- *
  * \brief The DescribeConfigRuleEvaluationStatusRequest class provides an interface for ConfigService DescribeConfigRuleEvaluationStatus requests.
  *
- * \ingroup ConfigService
+ * \inmodule QtAwsConfigService
  *
  *  <fullname>AWS Config</fullname>
  * 
@@ -60,9 +59,7 @@ namespace ConfigService {
  */
 
 /*!
- * @brief  Constructs a new DescribeConfigRuleEvaluationStatusRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeConfigRuleEvaluationStatusRequest::DescribeConfigRuleEvaluationStatusRequest(const DescribeConfigRuleEvaluationStatusRequest &other)
     : ConfigServiceRequest(new DescribeConfigRuleEvaluationStatusRequestPrivate(*other.d_func(), this))
@@ -71,7 +68,7 @@ DescribeConfigRuleEvaluationStatusRequest::DescribeConfigRuleEvaluationStatusReq
 }
 
 /*!
- * @brief  Constructs a new DescribeConfigRuleEvaluationStatusRequest object.
+ * Constructs a DescribeConfigRuleEvaluationStatusRequest object.
  */
 DescribeConfigRuleEvaluationStatusRequest::DescribeConfigRuleEvaluationStatusRequest()
     : ConfigServiceRequest(new DescribeConfigRuleEvaluationStatusRequestPrivate(ConfigServiceRequest::DescribeConfigRuleEvaluationStatusAction, this))
@@ -89,14 +86,9 @@ bool DescribeConfigRuleEvaluationStatusRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeConfigRuleEvaluationStatusResponse object.
+ * Returns a DescribeConfigRuleEvaluationStatusResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeConfigRuleEvaluationStatusResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ConfigServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeConfigRuleEvaluationStatusRequest::response(QNetworkReply * const reply) const
 {
@@ -104,20 +96,17 @@ QtAws::Core::AwsAbstractResponse * DescribeConfigRuleEvaluationStatusRequest::re
 }
 
 /*!
- * @internal
+ * \class QtAws::ConfigService::DescribeConfigRuleEvaluationStatusRequestPrivate
+ * \brief The DescribeConfigRuleEvaluationStatusRequestPrivate class provides private implementation for DescribeConfigRuleEvaluationStatusRequest.
+ * \internal
  *
- * @class  DescribeConfigRuleEvaluationStatusRequestPrivate
- *
- * @brief  Private implementation for DescribeConfigRuleEvaluationStatusRequest.
+ * \inmodule QtAwsConfigService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeConfigRuleEvaluationStatusRequestPrivate object.
- *
- * @param  action  ConfigService action being performed.
- * @param  q       Pointer to this object's public DescribeConfigRuleEvaluationStatusRequest instance.
+ * Constructs a DescribeConfigRuleEvaluationStatusRequestPrivate object for ConfigService \a action with,
+ * public implementation \a q.
  */
 DescribeConfigRuleEvaluationStatusRequestPrivate::DescribeConfigRuleEvaluationStatusRequestPrivate(
     const ConfigServiceRequest::Action action, DescribeConfigRuleEvaluationStatusRequest * const q)
@@ -127,15 +116,10 @@ DescribeConfigRuleEvaluationStatusRequestPrivate::DescribeConfigRuleEvaluationSt
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeConfigRuleEvaluationStatusRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeConfigRuleEvaluationStatusRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeConfigRuleEvaluationStatusRequest instance.
  */
 DescribeConfigRuleEvaluationStatusRequestPrivate::DescribeConfigRuleEvaluationStatusRequestPrivate(
     const DescribeConfigRuleEvaluationStatusRequestPrivate &other, DescribeConfigRuleEvaluationStatusRequest * const q)

@@ -27,10 +27,9 @@ namespace Greengrass {
 
 /*!
  * \class QtAws::Greengrass::CreateSubscriptionDefinitionVersionRequest
- *
  * \brief The CreateSubscriptionDefinitionVersionRequest class provides an interface for Greengrass CreateSubscriptionDefinitionVersion requests.
  *
- * \ingroup Greengrass
+ * \inmodule QtAwsGreengrass
  *
  *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
  *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
@@ -40,9 +39,7 @@ namespace Greengrass {
  */
 
 /*!
- * @brief  Constructs a new CreateSubscriptionDefinitionVersionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateSubscriptionDefinitionVersionRequest::CreateSubscriptionDefinitionVersionRequest(const CreateSubscriptionDefinitionVersionRequest &other)
     : GreengrassRequest(new CreateSubscriptionDefinitionVersionRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ CreateSubscriptionDefinitionVersionRequest::CreateSubscriptionDefinitionVersionR
 }
 
 /*!
- * @brief  Constructs a new CreateSubscriptionDefinitionVersionRequest object.
+ * Constructs a CreateSubscriptionDefinitionVersionRequest object.
  */
 CreateSubscriptionDefinitionVersionRequest::CreateSubscriptionDefinitionVersionRequest()
     : GreengrassRequest(new CreateSubscriptionDefinitionVersionRequestPrivate(GreengrassRequest::CreateSubscriptionDefinitionVersionAction, this))
@@ -69,14 +66,9 @@ bool CreateSubscriptionDefinitionVersionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateSubscriptionDefinitionVersionResponse object.
+ * Returns a CreateSubscriptionDefinitionVersionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateSubscriptionDefinitionVersionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GreengrassClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateSubscriptionDefinitionVersionRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * CreateSubscriptionDefinitionVersionRequest::r
 }
 
 /*!
- * @internal
+ * \class QtAws::Greengrass::CreateSubscriptionDefinitionVersionRequestPrivate
+ * \brief The CreateSubscriptionDefinitionVersionRequestPrivate class provides private implementation for CreateSubscriptionDefinitionVersionRequest.
+ * \internal
  *
- * @class  CreateSubscriptionDefinitionVersionRequestPrivate
- *
- * @brief  Private implementation for CreateSubscriptionDefinitionVersionRequest.
+ * \inmodule QtAwsGreengrass
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateSubscriptionDefinitionVersionRequestPrivate object.
- *
- * @param  action  Greengrass action being performed.
- * @param  q       Pointer to this object's public CreateSubscriptionDefinitionVersionRequest instance.
+ * Constructs a CreateSubscriptionDefinitionVersionRequestPrivate object for Greengrass \a action with,
+ * public implementation \a q.
  */
 CreateSubscriptionDefinitionVersionRequestPrivate::CreateSubscriptionDefinitionVersionRequestPrivate(
     const GreengrassRequest::Action action, CreateSubscriptionDefinitionVersionRequest * const q)
@@ -107,15 +96,10 @@ CreateSubscriptionDefinitionVersionRequestPrivate::CreateSubscriptionDefinitionV
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateSubscriptionDefinitionVersionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateSubscriptionDefinitionVersionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateSubscriptionDefinitionVersionRequest instance.
  */
 CreateSubscriptionDefinitionVersionRequestPrivate::CreateSubscriptionDefinitionVersionRequestPrivate(
     const CreateSubscriptionDefinitionVersionRequestPrivate &other, CreateSubscriptionDefinitionVersionRequest * const q)

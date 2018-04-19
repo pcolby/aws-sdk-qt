@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::ResetInstanceAttributeRequest
- *
  * \brief The ResetInstanceAttributeRequest class provides an interface for EC2 ResetInstanceAttribute requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new ResetInstanceAttributeRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ResetInstanceAttributeRequest::ResetInstanceAttributeRequest(const ResetInstanceAttributeRequest &other)
     : EC2Request(new ResetInstanceAttributeRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ ResetInstanceAttributeRequest::ResetInstanceAttributeRequest(const ResetInstance
 }
 
 /*!
- * @brief  Constructs a new ResetInstanceAttributeRequest object.
+ * Constructs a ResetInstanceAttributeRequest object.
  */
 ResetInstanceAttributeRequest::ResetInstanceAttributeRequest()
     : EC2Request(new ResetInstanceAttributeRequestPrivate(EC2Request::ResetInstanceAttributeAction, this))
@@ -70,14 +67,9 @@ bool ResetInstanceAttributeRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ResetInstanceAttributeResponse object.
+ * Returns a ResetInstanceAttributeResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ResetInstanceAttributeResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ResetInstanceAttributeRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * ResetInstanceAttributeRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::ResetInstanceAttributeRequestPrivate
+ * \brief The ResetInstanceAttributeRequestPrivate class provides private implementation for ResetInstanceAttributeRequest.
+ * \internal
  *
- * @class  ResetInstanceAttributeRequestPrivate
- *
- * @brief  Private implementation for ResetInstanceAttributeRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ResetInstanceAttributeRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public ResetInstanceAttributeRequest instance.
+ * Constructs a ResetInstanceAttributeRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 ResetInstanceAttributeRequestPrivate::ResetInstanceAttributeRequestPrivate(
     const EC2Request::Action action, ResetInstanceAttributeRequest * const q)
@@ -108,15 +97,10 @@ ResetInstanceAttributeRequestPrivate::ResetInstanceAttributeRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ResetInstanceAttributeRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ResetInstanceAttributeRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ResetInstanceAttributeRequest instance.
  */
 ResetInstanceAttributeRequestPrivate::ResetInstanceAttributeRequestPrivate(
     const ResetInstanceAttributeRequestPrivate &other, ResetInstanceAttributeRequest * const q)

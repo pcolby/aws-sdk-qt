@@ -27,10 +27,9 @@ namespace ElastiCache {
 
 /*!
  * \class QtAws::ElastiCache::ListAllowedNodeTypeModificationsRequest
- *
  * \brief The ListAllowedNodeTypeModificationsRequest class provides an interface for ElastiCache ListAllowedNodeTypeModifications requests.
  *
- * \ingroup ElastiCache
+ * \inmodule QtAwsElastiCache
  *
  *  <fullname>Amazon ElastiCache</fullname>
  * 
@@ -51,9 +50,7 @@ namespace ElastiCache {
  */
 
 /*!
- * @brief  Constructs a new ListAllowedNodeTypeModificationsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListAllowedNodeTypeModificationsRequest::ListAllowedNodeTypeModificationsRequest(const ListAllowedNodeTypeModificationsRequest &other)
     : ElastiCacheRequest(new ListAllowedNodeTypeModificationsRequestPrivate(*other.d_func(), this))
@@ -62,7 +59,7 @@ ListAllowedNodeTypeModificationsRequest::ListAllowedNodeTypeModificationsRequest
 }
 
 /*!
- * @brief  Constructs a new ListAllowedNodeTypeModificationsRequest object.
+ * Constructs a ListAllowedNodeTypeModificationsRequest object.
  */
 ListAllowedNodeTypeModificationsRequest::ListAllowedNodeTypeModificationsRequest()
     : ElastiCacheRequest(new ListAllowedNodeTypeModificationsRequestPrivate(ElastiCacheRequest::ListAllowedNodeTypeModificationsAction, this))
@@ -80,14 +77,9 @@ bool ListAllowedNodeTypeModificationsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListAllowedNodeTypeModificationsResponse object.
+ * Returns a ListAllowedNodeTypeModificationsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListAllowedNodeTypeModificationsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ElastiCacheClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListAllowedNodeTypeModificationsRequest::response(QNetworkReply * const reply) const
 {
@@ -95,20 +87,17 @@ QtAws::Core::AwsAbstractResponse * ListAllowedNodeTypeModificationsRequest::resp
 }
 
 /*!
- * @internal
+ * \class QtAws::ElastiCache::ListAllowedNodeTypeModificationsRequestPrivate
+ * \brief The ListAllowedNodeTypeModificationsRequestPrivate class provides private implementation for ListAllowedNodeTypeModificationsRequest.
+ * \internal
  *
- * @class  ListAllowedNodeTypeModificationsRequestPrivate
- *
- * @brief  Private implementation for ListAllowedNodeTypeModificationsRequest.
+ * \inmodule QtAwsElastiCache
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListAllowedNodeTypeModificationsRequestPrivate object.
- *
- * @param  action  ElastiCache action being performed.
- * @param  q       Pointer to this object's public ListAllowedNodeTypeModificationsRequest instance.
+ * Constructs a ListAllowedNodeTypeModificationsRequestPrivate object for ElastiCache \a action with,
+ * public implementation \a q.
  */
 ListAllowedNodeTypeModificationsRequestPrivate::ListAllowedNodeTypeModificationsRequestPrivate(
     const ElastiCacheRequest::Action action, ListAllowedNodeTypeModificationsRequest * const q)
@@ -118,15 +107,10 @@ ListAllowedNodeTypeModificationsRequestPrivate::ListAllowedNodeTypeModifications
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListAllowedNodeTypeModificationsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListAllowedNodeTypeModificationsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListAllowedNodeTypeModificationsRequest instance.
  */
 ListAllowedNodeTypeModificationsRequestPrivate::ListAllowedNodeTypeModificationsRequestPrivate(
     const ListAllowedNodeTypeModificationsRequestPrivate &other, ListAllowedNodeTypeModificationsRequest * const q)

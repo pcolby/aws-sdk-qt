@@ -27,10 +27,9 @@ namespace WorkDocs {
 
 /*!
  * \class QtAws::WorkDocs::DeleteFolderRequest
- *
  * \brief The DeleteFolderRequest class provides an interface for WorkDocs DeleteFolder requests.
  *
- * \ingroup WorkDocs
+ * \inmodule QtAwsWorkDocs
  *
  *  The WorkDocs API is designed for the following use
  * 
@@ -66,9 +65,7 @@ namespace WorkDocs {
  */
 
 /*!
- * @brief  Constructs a new DeleteFolderRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteFolderRequest::DeleteFolderRequest(const DeleteFolderRequest &other)
     : WorkDocsRequest(new DeleteFolderRequestPrivate(*other.d_func(), this))
@@ -77,7 +74,7 @@ DeleteFolderRequest::DeleteFolderRequest(const DeleteFolderRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DeleteFolderRequest object.
+ * Constructs a DeleteFolderRequest object.
  */
 DeleteFolderRequest::DeleteFolderRequest()
     : WorkDocsRequest(new DeleteFolderRequestPrivate(WorkDocsRequest::DeleteFolderAction, this))
@@ -95,14 +92,9 @@ bool DeleteFolderRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteFolderResponse object.
+ * Returns a DeleteFolderResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteFolderResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WorkDocsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteFolderRequest::response(QNetworkReply * const reply) const
 {
@@ -110,20 +102,17 @@ QtAws::Core::AwsAbstractResponse * DeleteFolderRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::WorkDocs::DeleteFolderRequestPrivate
+ * \brief The DeleteFolderRequestPrivate class provides private implementation for DeleteFolderRequest.
+ * \internal
  *
- * @class  DeleteFolderRequestPrivate
- *
- * @brief  Private implementation for DeleteFolderRequest.
+ * \inmodule QtAwsWorkDocs
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteFolderRequestPrivate object.
- *
- * @param  action  WorkDocs action being performed.
- * @param  q       Pointer to this object's public DeleteFolderRequest instance.
+ * Constructs a DeleteFolderRequestPrivate object for WorkDocs \a action with,
+ * public implementation \a q.
  */
 DeleteFolderRequestPrivate::DeleteFolderRequestPrivate(
     const WorkDocsRequest::Action action, DeleteFolderRequest * const q)
@@ -133,15 +122,10 @@ DeleteFolderRequestPrivate::DeleteFolderRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteFolderRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteFolderRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteFolderRequest instance.
  */
 DeleteFolderRequestPrivate::DeleteFolderRequestPrivate(
     const DeleteFolderRequestPrivate &other, DeleteFolderRequest * const q)

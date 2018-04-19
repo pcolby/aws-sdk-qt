@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::GetConsoleOutputRequest
- *
  * \brief The GetConsoleOutputRequest class provides an interface for EC2 GetConsoleOutput requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new GetConsoleOutputRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetConsoleOutputRequest::GetConsoleOutputRequest(const GetConsoleOutputRequest &other)
     : EC2Request(new GetConsoleOutputRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ GetConsoleOutputRequest::GetConsoleOutputRequest(const GetConsoleOutputRequest &
 }
 
 /*!
- * @brief  Constructs a new GetConsoleOutputRequest object.
+ * Constructs a GetConsoleOutputRequest object.
  */
 GetConsoleOutputRequest::GetConsoleOutputRequest()
     : EC2Request(new GetConsoleOutputRequestPrivate(EC2Request::GetConsoleOutputAction, this))
@@ -70,14 +67,9 @@ bool GetConsoleOutputRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetConsoleOutputResponse object.
+ * Returns a GetConsoleOutputResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetConsoleOutputResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetConsoleOutputRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * GetConsoleOutputRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::GetConsoleOutputRequestPrivate
+ * \brief The GetConsoleOutputRequestPrivate class provides private implementation for GetConsoleOutputRequest.
+ * \internal
  *
- * @class  GetConsoleOutputRequestPrivate
- *
- * @brief  Private implementation for GetConsoleOutputRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetConsoleOutputRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public GetConsoleOutputRequest instance.
+ * Constructs a GetConsoleOutputRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 GetConsoleOutputRequestPrivate::GetConsoleOutputRequestPrivate(
     const EC2Request::Action action, GetConsoleOutputRequest * const q)
@@ -108,15 +97,10 @@ GetConsoleOutputRequestPrivate::GetConsoleOutputRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetConsoleOutputRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetConsoleOutputRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetConsoleOutputRequest instance.
  */
 GetConsoleOutputRequestPrivate::GetConsoleOutputRequestPrivate(
     const GetConsoleOutputRequestPrivate &other, GetConsoleOutputRequest * const q)

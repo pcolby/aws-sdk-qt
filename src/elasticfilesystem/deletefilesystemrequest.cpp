@@ -27,10 +27,9 @@ namespace EFS {
 
 /*!
  * \class QtAws::EFS::DeleteFileSystemRequest
- *
  * \brief The DeleteFileSystemRequest class provides an interface for EFS DeleteFileSystem requests.
  *
- * \ingroup EFS
+ * \inmodule QtAwsEFS
  *
  *  <fullname>Amazon Elastic File System</fullname>
  * 
@@ -43,9 +42,7 @@ namespace EFS {
  */
 
 /*!
- * @brief  Constructs a new DeleteFileSystemRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteFileSystemRequest::DeleteFileSystemRequest(const DeleteFileSystemRequest &other)
     : EFSRequest(new DeleteFileSystemRequestPrivate(*other.d_func(), this))
@@ -54,7 +51,7 @@ DeleteFileSystemRequest::DeleteFileSystemRequest(const DeleteFileSystemRequest &
 }
 
 /*!
- * @brief  Constructs a new DeleteFileSystemRequest object.
+ * Constructs a DeleteFileSystemRequest object.
  */
 DeleteFileSystemRequest::DeleteFileSystemRequest()
     : EFSRequest(new DeleteFileSystemRequestPrivate(EFSRequest::DeleteFileSystemAction, this))
@@ -72,14 +69,9 @@ bool DeleteFileSystemRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteFileSystemResponse object.
+ * Returns a DeleteFileSystemResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteFileSystemResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EFSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteFileSystemRequest::response(QNetworkReply * const reply) const
 {
@@ -87,20 +79,17 @@ QtAws::Core::AwsAbstractResponse * DeleteFileSystemRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::EFS::DeleteFileSystemRequestPrivate
+ * \brief The DeleteFileSystemRequestPrivate class provides private implementation for DeleteFileSystemRequest.
+ * \internal
  *
- * @class  DeleteFileSystemRequestPrivate
- *
- * @brief  Private implementation for DeleteFileSystemRequest.
+ * \inmodule QtAwsEFS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteFileSystemRequestPrivate object.
- *
- * @param  action  EFS action being performed.
- * @param  q       Pointer to this object's public DeleteFileSystemRequest instance.
+ * Constructs a DeleteFileSystemRequestPrivate object for EFS \a action with,
+ * public implementation \a q.
  */
 DeleteFileSystemRequestPrivate::DeleteFileSystemRequestPrivate(
     const EFSRequest::Action action, DeleteFileSystemRequest * const q)
@@ -110,15 +99,10 @@ DeleteFileSystemRequestPrivate::DeleteFileSystemRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteFileSystemRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteFileSystemRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteFileSystemRequest instance.
  */
 DeleteFileSystemRequestPrivate::DeleteFileSystemRequestPrivate(
     const DeleteFileSystemRequestPrivate &other, DeleteFileSystemRequest * const q)

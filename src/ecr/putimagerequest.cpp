@@ -27,10 +27,9 @@ namespace ECR {
 
 /*!
  * \class QtAws::ECR::PutImageRequest
- *
  * \brief The PutImageRequest class provides an interface for ECR PutImage requests.
  *
- * \ingroup ECR
+ * \inmodule QtAwsECR
  *
  *  Amazon Elastic Container Registry (Amazon ECR) is a managed Docker registry service. Customers can use the familiar
  *  Docker CLI to push, pull, and manage images. Amazon ECR provides a secure, scalable, and reliable registry. Amazon ECR
@@ -41,9 +40,7 @@ namespace ECR {
  */
 
 /*!
- * @brief  Constructs a new PutImageRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 PutImageRequest::PutImageRequest(const PutImageRequest &other)
     : ECRRequest(new PutImageRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ PutImageRequest::PutImageRequest(const PutImageRequest &other)
 }
 
 /*!
- * @brief  Constructs a new PutImageRequest object.
+ * Constructs a PutImageRequest object.
  */
 PutImageRequest::PutImageRequest()
     : ECRRequest(new PutImageRequestPrivate(ECRRequest::PutImageAction, this))
@@ -70,14 +67,9 @@ bool PutImageRequest::isValid() const
 
 
 /*!
- * @brief  Construct an PutImageResponse object.
+ * Returns a PutImageResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An PutImageResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ECRClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * PutImageRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * PutImageRequest::response(QNetworkReply * con
 }
 
 /*!
- * @internal
+ * \class QtAws::ECR::PutImageRequestPrivate
+ * \brief The PutImageRequestPrivate class provides private implementation for PutImageRequest.
+ * \internal
  *
- * @class  PutImageRequestPrivate
- *
- * @brief  Private implementation for PutImageRequest.
+ * \inmodule QtAwsECR
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new PutImageRequestPrivate object.
- *
- * @param  action  ECR action being performed.
- * @param  q       Pointer to this object's public PutImageRequest instance.
+ * Constructs a PutImageRequestPrivate object for ECR \a action with,
+ * public implementation \a q.
  */
 PutImageRequestPrivate::PutImageRequestPrivate(
     const ECRRequest::Action action, PutImageRequest * const q)
@@ -108,15 +97,10 @@ PutImageRequestPrivate::PutImageRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutImageRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the PutImageRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public PutImageRequest instance.
  */
 PutImageRequestPrivate::PutImageRequestPrivate(
     const PutImageRequestPrivate &other, PutImageRequest * const q)

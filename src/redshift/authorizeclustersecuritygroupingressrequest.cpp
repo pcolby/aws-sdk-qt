@@ -27,10 +27,9 @@ namespace Redshift {
 
 /*!
  * \class QtAws::Redshift::AuthorizeClusterSecurityGroupIngressRequest
- *
  * \brief The AuthorizeClusterSecurityGroupIngressRequest class provides an interface for Redshift AuthorizeClusterSecurityGroupIngress requests.
  *
- * \ingroup Redshift
+ * \inmodule QtAwsRedshift
  *
  *  <fullname>Amazon Redshift</fullname>
  * 
@@ -67,9 +66,7 @@ namespace Redshift {
  */
 
 /*!
- * @brief  Constructs a new AuthorizeClusterSecurityGroupIngressRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AuthorizeClusterSecurityGroupIngressRequest::AuthorizeClusterSecurityGroupIngressRequest(const AuthorizeClusterSecurityGroupIngressRequest &other)
     : RedshiftRequest(new AuthorizeClusterSecurityGroupIngressRequestPrivate(*other.d_func(), this))
@@ -78,7 +75,7 @@ AuthorizeClusterSecurityGroupIngressRequest::AuthorizeClusterSecurityGroupIngres
 }
 
 /*!
- * @brief  Constructs a new AuthorizeClusterSecurityGroupIngressRequest object.
+ * Constructs a AuthorizeClusterSecurityGroupIngressRequest object.
  */
 AuthorizeClusterSecurityGroupIngressRequest::AuthorizeClusterSecurityGroupIngressRequest()
     : RedshiftRequest(new AuthorizeClusterSecurityGroupIngressRequestPrivate(RedshiftRequest::AuthorizeClusterSecurityGroupIngressAction, this))
@@ -96,14 +93,9 @@ bool AuthorizeClusterSecurityGroupIngressRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AuthorizeClusterSecurityGroupIngressResponse object.
+ * Returns a AuthorizeClusterSecurityGroupIngressResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AuthorizeClusterSecurityGroupIngressResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RedshiftClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AuthorizeClusterSecurityGroupIngressRequest::response(QNetworkReply * const reply) const
 {
@@ -111,20 +103,17 @@ QtAws::Core::AwsAbstractResponse * AuthorizeClusterSecurityGroupIngressRequest::
 }
 
 /*!
- * @internal
+ * \class QtAws::Redshift::AuthorizeClusterSecurityGroupIngressRequestPrivate
+ * \brief The AuthorizeClusterSecurityGroupIngressRequestPrivate class provides private implementation for AuthorizeClusterSecurityGroupIngressRequest.
+ * \internal
  *
- * @class  AuthorizeClusterSecurityGroupIngressRequestPrivate
- *
- * @brief  Private implementation for AuthorizeClusterSecurityGroupIngressRequest.
+ * \inmodule QtAwsRedshift
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AuthorizeClusterSecurityGroupIngressRequestPrivate object.
- *
- * @param  action  Redshift action being performed.
- * @param  q       Pointer to this object's public AuthorizeClusterSecurityGroupIngressRequest instance.
+ * Constructs a AuthorizeClusterSecurityGroupIngressRequestPrivate object for Redshift \a action with,
+ * public implementation \a q.
  */
 AuthorizeClusterSecurityGroupIngressRequestPrivate::AuthorizeClusterSecurityGroupIngressRequestPrivate(
     const RedshiftRequest::Action action, AuthorizeClusterSecurityGroupIngressRequest * const q)
@@ -134,15 +123,10 @@ AuthorizeClusterSecurityGroupIngressRequestPrivate::AuthorizeClusterSecurityGrou
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AuthorizeClusterSecurityGroupIngressRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AuthorizeClusterSecurityGroupIngressRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AuthorizeClusterSecurityGroupIngressRequest instance.
  */
 AuthorizeClusterSecurityGroupIngressRequestPrivate::AuthorizeClusterSecurityGroupIngressRequestPrivate(
     const AuthorizeClusterSecurityGroupIngressRequestPrivate &other, AuthorizeClusterSecurityGroupIngressRequest * const q)

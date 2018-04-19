@@ -27,10 +27,9 @@ namespace Route53Domains {
 
 /*!
  * \class QtAws::Route53Domains::EnableDomainTransferLockRequest
- *
  * \brief The EnableDomainTransferLockRequest class provides an interface for Route53Domains EnableDomainTransferLock requests.
  *
- * \ingroup Route53Domains
+ * \inmodule QtAwsRoute53Domains
  *
  *  Amazon Route 53 API actions let you register domain names and perform related
  *
@@ -38,9 +37,7 @@ namespace Route53Domains {
  */
 
 /*!
- * @brief  Constructs a new EnableDomainTransferLockRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 EnableDomainTransferLockRequest::EnableDomainTransferLockRequest(const EnableDomainTransferLockRequest &other)
     : Route53DomainsRequest(new EnableDomainTransferLockRequestPrivate(*other.d_func(), this))
@@ -49,7 +46,7 @@ EnableDomainTransferLockRequest::EnableDomainTransferLockRequest(const EnableDom
 }
 
 /*!
- * @brief  Constructs a new EnableDomainTransferLockRequest object.
+ * Constructs a EnableDomainTransferLockRequest object.
  */
 EnableDomainTransferLockRequest::EnableDomainTransferLockRequest()
     : Route53DomainsRequest(new EnableDomainTransferLockRequestPrivate(Route53DomainsRequest::EnableDomainTransferLockAction, this))
@@ -67,14 +64,9 @@ bool EnableDomainTransferLockRequest::isValid() const
 
 
 /*!
- * @brief  Construct an EnableDomainTransferLockResponse object.
+ * Returns a EnableDomainTransferLockResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An EnableDomainTransferLockResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  Route53DomainsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * EnableDomainTransferLockRequest::response(QNetworkReply * const reply) const
 {
@@ -82,20 +74,17 @@ QtAws::Core::AwsAbstractResponse * EnableDomainTransferLockRequest::response(QNe
 }
 
 /*!
- * @internal
+ * \class QtAws::Route53Domains::EnableDomainTransferLockRequestPrivate
+ * \brief The EnableDomainTransferLockRequestPrivate class provides private implementation for EnableDomainTransferLockRequest.
+ * \internal
  *
- * @class  EnableDomainTransferLockRequestPrivate
- *
- * @brief  Private implementation for EnableDomainTransferLockRequest.
+ * \inmodule QtAwsRoute53Domains
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new EnableDomainTransferLockRequestPrivate object.
- *
- * @param  action  Route53Domains action being performed.
- * @param  q       Pointer to this object's public EnableDomainTransferLockRequest instance.
+ * Constructs a EnableDomainTransferLockRequestPrivate object for Route53Domains \a action with,
+ * public implementation \a q.
  */
 EnableDomainTransferLockRequestPrivate::EnableDomainTransferLockRequestPrivate(
     const Route53DomainsRequest::Action action, EnableDomainTransferLockRequest * const q)
@@ -105,15 +94,10 @@ EnableDomainTransferLockRequestPrivate::EnableDomainTransferLockRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new EnableDomainTransferLockRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the EnableDomainTransferLockRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public EnableDomainTransferLockRequest instance.
  */
 EnableDomainTransferLockRequestPrivate::EnableDomainTransferLockRequestPrivate(
     const EnableDomainTransferLockRequestPrivate &other, EnableDomainTransferLockRequest * const q)

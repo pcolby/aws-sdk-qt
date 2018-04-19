@@ -27,10 +27,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::ListAttachedUserPoliciesRequest
- *
  * \brief The ListAttachedUserPoliciesRequest class provides an interface for IAM ListAttachedUserPolicies requests.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -102,9 +101,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new ListAttachedUserPoliciesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListAttachedUserPoliciesRequest::ListAttachedUserPoliciesRequest(const ListAttachedUserPoliciesRequest &other)
     : IAMRequest(new ListAttachedUserPoliciesRequestPrivate(*other.d_func(), this))
@@ -113,7 +110,7 @@ ListAttachedUserPoliciesRequest::ListAttachedUserPoliciesRequest(const ListAttac
 }
 
 /*!
- * @brief  Constructs a new ListAttachedUserPoliciesRequest object.
+ * Constructs a ListAttachedUserPoliciesRequest object.
  */
 ListAttachedUserPoliciesRequest::ListAttachedUserPoliciesRequest()
     : IAMRequest(new ListAttachedUserPoliciesRequestPrivate(IAMRequest::ListAttachedUserPoliciesAction, this))
@@ -131,14 +128,9 @@ bool ListAttachedUserPoliciesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListAttachedUserPoliciesResponse object.
+ * Returns a ListAttachedUserPoliciesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListAttachedUserPoliciesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IAMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListAttachedUserPoliciesRequest::response(QNetworkReply * const reply) const
 {
@@ -146,20 +138,17 @@ QtAws::Core::AwsAbstractResponse * ListAttachedUserPoliciesRequest::response(QNe
 }
 
 /*!
- * @internal
+ * \class QtAws::IAM::ListAttachedUserPoliciesRequestPrivate
+ * \brief The ListAttachedUserPoliciesRequestPrivate class provides private implementation for ListAttachedUserPoliciesRequest.
+ * \internal
  *
- * @class  ListAttachedUserPoliciesRequestPrivate
- *
- * @brief  Private implementation for ListAttachedUserPoliciesRequest.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListAttachedUserPoliciesRequestPrivate object.
- *
- * @param  action  IAM action being performed.
- * @param  q       Pointer to this object's public ListAttachedUserPoliciesRequest instance.
+ * Constructs a ListAttachedUserPoliciesRequestPrivate object for IAM \a action with,
+ * public implementation \a q.
  */
 ListAttachedUserPoliciesRequestPrivate::ListAttachedUserPoliciesRequestPrivate(
     const IAMRequest::Action action, ListAttachedUserPoliciesRequest * const q)
@@ -169,15 +158,10 @@ ListAttachedUserPoliciesRequestPrivate::ListAttachedUserPoliciesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListAttachedUserPoliciesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListAttachedUserPoliciesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListAttachedUserPoliciesRequest instance.
  */
 ListAttachedUserPoliciesRequestPrivate::ListAttachedUserPoliciesRequestPrivate(
     const ListAttachedUserPoliciesRequestPrivate &other, ListAttachedUserPoliciesRequest * const q)

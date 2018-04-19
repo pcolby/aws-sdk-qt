@@ -27,10 +27,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::ListCACertificatesRequest
- *
  * \brief The ListCACertificatesRequest class provides an interface for IoT ListCACertificates requests.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -48,9 +47,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new ListCACertificatesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListCACertificatesRequest::ListCACertificatesRequest(const ListCACertificatesRequest &other)
     : IoTRequest(new ListCACertificatesRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ ListCACertificatesRequest::ListCACertificatesRequest(const ListCACertificatesReq
 }
 
 /*!
- * @brief  Constructs a new ListCACertificatesRequest object.
+ * Constructs a ListCACertificatesRequest object.
  */
 ListCACertificatesRequest::ListCACertificatesRequest()
     : IoTRequest(new ListCACertificatesRequestPrivate(IoTRequest::ListCACertificatesAction, this))
@@ -77,14 +74,9 @@ bool ListCACertificatesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListCACertificatesResponse object.
+ * Returns a ListCACertificatesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListCACertificatesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IoTClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListCACertificatesRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * ListCACertificatesRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::IoT::ListCACertificatesRequestPrivate
+ * \brief The ListCACertificatesRequestPrivate class provides private implementation for ListCACertificatesRequest.
+ * \internal
  *
- * @class  ListCACertificatesRequestPrivate
- *
- * @brief  Private implementation for ListCACertificatesRequest.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListCACertificatesRequestPrivate object.
- *
- * @param  action  IoT action being performed.
- * @param  q       Pointer to this object's public ListCACertificatesRequest instance.
+ * Constructs a ListCACertificatesRequestPrivate object for IoT \a action with,
+ * public implementation \a q.
  */
 ListCACertificatesRequestPrivate::ListCACertificatesRequestPrivate(
     const IoTRequest::Action action, ListCACertificatesRequest * const q)
@@ -115,15 +104,10 @@ ListCACertificatesRequestPrivate::ListCACertificatesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListCACertificatesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListCACertificatesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListCACertificatesRequest instance.
  */
 ListCACertificatesRequestPrivate::ListCACertificatesRequestPrivate(
     const ListCACertificatesRequestPrivate &other, ListCACertificatesRequest * const q)

@@ -25,16 +25,61 @@ namespace WorkDocs {
 
 /*!
  * \class QtAws::WorkDocs::WorkDocsRequest
- *
  * \brief The WorkDocsRequest class provides an interface for WorkDocs requests.
  *
- * \ingroup WorkDocs
+ * \inmodule QtAwsWorkDocs
  */
 
 /*!
- * @brief  Constructs a new WorkDocsRequest object.
+ * \enum WorkDocsRequest::Action
  *
- * @param  action  The WorkDocs action to request.
+ * This enum describes the actions that can be performed as WorkDocs
+ * requests.
+ *
+ * \value AbortDocumentVersionUploadAction WorkDocs AbortDocumentVersionUpload action.
+ * \value ActivateUserAction WorkDocs ActivateUser action.
+ * \value AddResourcePermissionsAction WorkDocs AddResourcePermissions action.
+ * \value CreateCommentAction WorkDocs CreateComment action.
+ * \value CreateCustomMetadataAction WorkDocs CreateCustomMetadata action.
+ * \value CreateFolderAction WorkDocs CreateFolder action.
+ * \value CreateLabelsAction WorkDocs CreateLabels action.
+ * \value CreateNotificationSubscriptionAction WorkDocs CreateNotificationSubscription action.
+ * \value CreateUserAction WorkDocs CreateUser action.
+ * \value DeactivateUserAction WorkDocs DeactivateUser action.
+ * \value DeleteCommentAction WorkDocs DeleteComment action.
+ * \value DeleteCustomMetadataAction WorkDocs DeleteCustomMetadata action.
+ * \value DeleteDocumentAction WorkDocs DeleteDocument action.
+ * \value DeleteFolderAction WorkDocs DeleteFolder action.
+ * \value DeleteFolderContentsAction WorkDocs DeleteFolderContents action.
+ * \value DeleteLabelsAction WorkDocs DeleteLabels action.
+ * \value DeleteNotificationSubscriptionAction WorkDocs DeleteNotificationSubscription action.
+ * \value DeleteUserAction WorkDocs DeleteUser action.
+ * \value DescribeActivitiesAction WorkDocs DescribeActivities action.
+ * \value DescribeCommentsAction WorkDocs DescribeComments action.
+ * \value DescribeDocumentVersionsAction WorkDocs DescribeDocumentVersions action.
+ * \value DescribeFolderContentsAction WorkDocs DescribeFolderContents action.
+ * \value DescribeGroupsAction WorkDocs DescribeGroups action.
+ * \value DescribeNotificationSubscriptionsAction WorkDocs DescribeNotificationSubscriptions action.
+ * \value DescribeResourcePermissionsAction WorkDocs DescribeResourcePermissions action.
+ * \value DescribeRootFoldersAction WorkDocs DescribeRootFolders action.
+ * \value DescribeUsersAction WorkDocs DescribeUsers action.
+ * \value GetCurrentUserAction WorkDocs GetCurrentUser action.
+ * \value GetDocumentAction WorkDocs GetDocument action.
+ * \value GetDocumentPathAction WorkDocs GetDocumentPath action.
+ * \value GetDocumentVersionAction WorkDocs GetDocumentVersion action.
+ * \value GetFolderAction WorkDocs GetFolder action.
+ * \value GetFolderPathAction WorkDocs GetFolderPath action.
+ * \value InitiateDocumentVersionUploadAction WorkDocs InitiateDocumentVersionUpload action.
+ * \value RemoveAllResourcePermissionsAction WorkDocs RemoveAllResourcePermissions action.
+ * \value RemoveResourcePermissionAction WorkDocs RemoveResourcePermission action.
+ * \value UpdateDocumentAction WorkDocs UpdateDocument action.
+ * \value UpdateDocumentVersionAction WorkDocs UpdateDocumentVersion action.
+ * \value UpdateFolderAction WorkDocs UpdateFolder action.
+ * \value UpdateUserAction WorkDocs UpdateUser action.
+ */
+
+/*!
+ * Constructs a[n] WorkDocsRequest object for WorkDocs \a action.
  */
 WorkDocsRequest::WorkDocsRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new WorkDocsRequestPrivate(action, this))
@@ -43,9 +88,7 @@ WorkDocsRequest::WorkDocsRequest(const Action action)
 }
 
 /*!
- * @brief  Constructs a new WorkDocsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 WorkDocsRequest::WorkDocsRequest(const WorkDocsRequest &other)
     : QtAws::Core::AwsAbstractRequest(new WorkDocsRequestPrivate(*other.d_func(), this))
@@ -54,13 +97,7 @@ WorkDocsRequest::WorkDocsRequest(const WorkDocsRequest &other)
 }
 
 /*!
- * @brief  Assignment operator.
- *
- * Assigns \a other to \c this.
- *
- * @param  other  Instance to copy.
- *
- * @return  A reference to \c this.
+ * Sets the WorkDocsRequest object to be equal to \a other.
  */
 WorkDocsRequest& WorkDocsRequest::operator=(const WorkDocsRequest &other)
 {
@@ -72,14 +109,10 @@ WorkDocsRequest& WorkDocsRequest::operator=(const WorkDocsRequest &other)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new WorkDocsRequest object.
+ * Constructs aa WorkDocsRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from WorkDocsRequestPrivate.
- *
- * @param  d  Pointer to private data (aka D-Pointer).
  */
 WorkDocsRequest::WorkDocsRequest(WorkDocsRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
@@ -87,7 +120,7 @@ WorkDocsRequest::WorkDocsRequest(WorkDocsRequestPrivate * const d) : QtAws::Core
 }
 
 /*!
- * \brief Returns the WorkDocs action to be performed by this request.
+ * Returns the WorkDocs action to be performed by this request.
  */
 WorkDocsRequest::Action WorkDocsRequest::action() const
 {
@@ -96,7 +129,7 @@ WorkDocsRequest::Action WorkDocsRequest::action() const
 }
 
 /*!
- * \brief Returns the name of the WorkDocs action to be performed by this request.
+ * Returns the name of the WorkDocs action to be performed by this request.
  */
 QString WorkDocsRequest::actionString() const
 {
@@ -104,7 +137,7 @@ QString WorkDocsRequest::actionString() const
 }
 
 /*!
- * \brief Returns the WorkDocs API version implemented by this request.
+ * Returns the WorkDocs API version implemented by this request.
  */
 QString WorkDocsRequest::apiVersion() const
 {
@@ -113,7 +146,7 @@ QString WorkDocsRequest::apiVersion() const
 }
 
 /*!
- * @brief Set the WorkDocs action to be performed by this request to \a action.
+ * Sets the WorkDocs action to be performed by this request to \a action.
  */
 void WorkDocsRequest::setAction(const Action action)
 {
@@ -122,7 +155,7 @@ void WorkDocsRequest::setAction(const Action action)
 }
 
 /*!
- * Set the WorkDocs API version to include in this request to \a version.
+ * Sets the WorkDocs API version to include in this request to \a version.
  */
 void WorkDocsRequest::setApiVersion(const QString &version)
 {
@@ -131,7 +164,7 @@ void WorkDocsRequest::setApiVersion(const QString &version)
 }
 
 /*!
- * \brief Returns \c true if this request is the same as \a other.
+ * Returns \c true if this request is equal to \a other; \c false otherwise.
  *
  * Note, most derived *Request classes do not need to provider their own
  * implementations of this function, since most such request classes rely on
@@ -146,8 +179,8 @@ bool WorkDocsRequest::operator==(const WorkDocsRequest &other) const
             (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
-/*!
- * @brief  Check if \a queueName is a valid WorkDocs queue name.
+/*
+ * Returns \c tue if \a queueName is a valid WorkDocs queue name.
  *
  * @par From WorkDocs FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
@@ -166,9 +199,8 @@ bool WorkDocsRequest::operator==(const WorkDocsRequest &other) const
 }*/
 
 /*!
- * \brief Removes the a \a name parameter from this request.
- *
- * Returns the count of paramters removed (typically \c 0 or \c 1).
+ * Removes the a \a name parameter from the request, then returns the number of
+ * paramters removed (typically \c 0 or \c 1).
  */
 int WorkDocsRequest::clearParameter(const QString &name)
 {
@@ -177,7 +209,7 @@ int WorkDocsRequest::clearParameter(const QString &name)
 }
 
 /*!
- * \brief Removes all parameters from this request.
+ * Removes all parameters from the request.
  */
 void WorkDocsRequest::clearParameters()
 {
@@ -186,7 +218,7 @@ void WorkDocsRequest::clearParameters()
 }
 
 /*!
- * \brief Returns the value of the \n name pararemter if set, otherwise \a defaultValue.
+ * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
 QVariant WorkDocsRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
@@ -195,7 +227,7 @@ QVariant WorkDocsRequest::parameter(const QString &name, const QVariant &default
 }
 
 /*!
- * \brief Returns a map of parameters included in this request.
+ * Returns the parameters included in this request.
  */
 const QVariantMap &WorkDocsRequest::parameters() const
 {
@@ -204,7 +236,7 @@ const QVariantMap &WorkDocsRequest::parameters() const
 }
 
 /*!
- * \brief Sets the \a name parameter to \a value.
+ * Sets the \a name parameter to \a value.
  */
 void WorkDocsRequest::setParameter(const QString &name, const QVariant &value)
 {
@@ -213,9 +245,8 @@ void WorkDocsRequest::setParameter(const QString &name, const QVariant &value)
 }
 
 /*!
- * \brief Sets the map of paramters for this request to \a parameters.
- *
- * Any request parameters set previously will be discarded.
+ * Sets the paramters for this request to \a parameters. Any request parameters
+ * set previously will be discarded.
  */
 void WorkDocsRequest::setParameters(const QVariantMap &parameters)
 {
@@ -224,11 +255,12 @@ void WorkDocsRequest::setParameters(const QVariantMap &parameters)
 }
 
 /*!
- * \brief Returns a network request for this WorkDocs request using the given \a endpoint.
+ * Returns a network request for the WorkDocs request using the given
+ * \a endpoint.
  *
- * This WorkDocs implementation builds request URLs by combining the common query
- * parameters (such as Action and Version), with any that have been added (via
- * setParameter) by child classes.
+ * This WorkDocs implementation builds request URLs by combining the
+ * common query parameters (such as Action and Version), with any that have
+ * been added (via setParameter) by child classes.
  */
 QNetworkRequest WorkDocsRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -239,17 +271,16 @@ QNetworkRequest WorkDocsRequest::unsignedRequest(const QUrl &endpoint) const
 }
 
 /*!
+ * \class QtAws::WorkDocs::WorkDocsRequestPrivate
+ * \brief The WorkDocsRequestPrivate class provides private implementation for WorkDocsRequest.
  * \internal
  *
- * \class  WorkDocsRequestPrivate
- *
- * \brief  Private implementation for WorkDocsRequest.
+ * \inmodule QtAwsWorkDocs
  */
 
 /*!
- * \internal
- *
- * \brief Constructs a new WorkDocsRequestPrivate object.
+ * Constructs a WorkDocsRequestPrivate object for WorkDocs \a action with,
+ * public implementation \a q.
  */
 WorkDocsRequestPrivate::WorkDocsRequestPrivate(const WorkDocsRequest::Action action, WorkDocsRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
@@ -258,9 +289,7 @@ WorkDocsRequestPrivate::WorkDocsRequestPrivate(const WorkDocsRequest::Action act
 }
 
 /*!
- * \internal
- *
- * \brief Constructs a new WorkDocsRequestPrivate object, copying an existing one.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
@@ -276,15 +305,12 @@ WorkDocsRequestPrivate::WorkDocsRequestPrivate(const WorkDocsRequestPrivate &oth
 }
 
 /*!
- * \internal
- *
- * \brief Returns a string representing \a action.
+ * Returns a string represention of \a action, or a null string if \a action is
+ * invalid.
  *
  * This function converts WorkDocsRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the WorkDocs service's Action
  * query parameters.
- *
- * @return A string representing \a action, or a null string if \a action is invalid.
  */
 QString WorkDocsRequestPrivate::toString(const WorkDocsRequest::Action &action)
 {

@@ -27,10 +27,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::ListSigningCertificatesRequest
- *
  * \brief The ListSigningCertificatesRequest class provides an interface for IAM ListSigningCertificates requests.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -102,9 +101,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new ListSigningCertificatesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListSigningCertificatesRequest::ListSigningCertificatesRequest(const ListSigningCertificatesRequest &other)
     : IAMRequest(new ListSigningCertificatesRequestPrivate(*other.d_func(), this))
@@ -113,7 +110,7 @@ ListSigningCertificatesRequest::ListSigningCertificatesRequest(const ListSigning
 }
 
 /*!
- * @brief  Constructs a new ListSigningCertificatesRequest object.
+ * Constructs a ListSigningCertificatesRequest object.
  */
 ListSigningCertificatesRequest::ListSigningCertificatesRequest()
     : IAMRequest(new ListSigningCertificatesRequestPrivate(IAMRequest::ListSigningCertificatesAction, this))
@@ -131,14 +128,9 @@ bool ListSigningCertificatesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListSigningCertificatesResponse object.
+ * Returns a ListSigningCertificatesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListSigningCertificatesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IAMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListSigningCertificatesRequest::response(QNetworkReply * const reply) const
 {
@@ -146,20 +138,17 @@ QtAws::Core::AwsAbstractResponse * ListSigningCertificatesRequest::response(QNet
 }
 
 /*!
- * @internal
+ * \class QtAws::IAM::ListSigningCertificatesRequestPrivate
+ * \brief The ListSigningCertificatesRequestPrivate class provides private implementation for ListSigningCertificatesRequest.
+ * \internal
  *
- * @class  ListSigningCertificatesRequestPrivate
- *
- * @brief  Private implementation for ListSigningCertificatesRequest.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListSigningCertificatesRequestPrivate object.
- *
- * @param  action  IAM action being performed.
- * @param  q       Pointer to this object's public ListSigningCertificatesRequest instance.
+ * Constructs a ListSigningCertificatesRequestPrivate object for IAM \a action with,
+ * public implementation \a q.
  */
 ListSigningCertificatesRequestPrivate::ListSigningCertificatesRequestPrivate(
     const IAMRequest::Action action, ListSigningCertificatesRequest * const q)
@@ -169,15 +158,10 @@ ListSigningCertificatesRequestPrivate::ListSigningCertificatesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListSigningCertificatesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListSigningCertificatesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListSigningCertificatesRequest instance.
  */
 ListSigningCertificatesRequestPrivate::ListSigningCertificatesRequestPrivate(
     const ListSigningCertificatesRequestPrivate &other, ListSigningCertificatesRequest * const q)

@@ -27,10 +27,9 @@ namespace CloudFront {
 
 /*!
  * \class QtAws::CloudFront::CreateStreamingDistributionWithTagsRequest
- *
  * \brief The CreateStreamingDistributionWithTagsRequest class provides an interface for CloudFront CreateStreamingDistributionWithTags requests.
  *
- * \ingroup CloudFront
+ * \inmodule QtAwsCloudFront
  *
  *  <fullname>Amazon CloudFront</fullname>
  * 
@@ -42,9 +41,7 @@ namespace CloudFront {
  */
 
 /*!
- * @brief  Constructs a new CreateStreamingDistributionWithTagsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateStreamingDistributionWithTagsRequest::CreateStreamingDistributionWithTagsRequest(const CreateStreamingDistributionWithTagsRequest &other)
     : CloudFrontRequest(new CreateStreamingDistributionWithTagsRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ CreateStreamingDistributionWithTagsRequest::CreateStreamingDistributionWithTagsR
 }
 
 /*!
- * @brief  Constructs a new CreateStreamingDistributionWithTagsRequest object.
+ * Constructs a CreateStreamingDistributionWithTagsRequest object.
  */
 CreateStreamingDistributionWithTagsRequest::CreateStreamingDistributionWithTagsRequest()
     : CloudFrontRequest(new CreateStreamingDistributionWithTagsRequestPrivate(CloudFrontRequest::CreateStreamingDistributionWithTagsAction, this))
@@ -71,14 +68,9 @@ bool CreateStreamingDistributionWithTagsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateStreamingDistributionWithTagsResponse object.
+ * Returns a CreateStreamingDistributionWithTagsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateStreamingDistributionWithTagsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudFrontClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateStreamingDistributionWithTagsRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * CreateStreamingDistributionWithTagsRequest::r
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudFront::CreateStreamingDistributionWithTagsRequestPrivate
+ * \brief The CreateStreamingDistributionWithTagsRequestPrivate class provides private implementation for CreateStreamingDistributionWithTagsRequest.
+ * \internal
  *
- * @class  CreateStreamingDistributionWithTagsRequestPrivate
- *
- * @brief  Private implementation for CreateStreamingDistributionWithTagsRequest.
+ * \inmodule QtAwsCloudFront
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateStreamingDistributionWithTagsRequestPrivate object.
- *
- * @param  action  CloudFront action being performed.
- * @param  q       Pointer to this object's public CreateStreamingDistributionWithTagsRequest instance.
+ * Constructs a CreateStreamingDistributionWithTagsRequestPrivate object for CloudFront \a action with,
+ * public implementation \a q.
  */
 CreateStreamingDistributionWithTagsRequestPrivate::CreateStreamingDistributionWithTagsRequestPrivate(
     const CloudFrontRequest::Action action, CreateStreamingDistributionWithTagsRequest * const q)
@@ -109,15 +98,10 @@ CreateStreamingDistributionWithTagsRequestPrivate::CreateStreamingDistributionWi
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateStreamingDistributionWithTagsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateStreamingDistributionWithTagsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateStreamingDistributionWithTagsRequest instance.
  */
 CreateStreamingDistributionWithTagsRequestPrivate::CreateStreamingDistributionWithTagsRequestPrivate(
     const CreateStreamingDistributionWithTagsRequestPrivate &other, CreateStreamingDistributionWithTagsRequest * const q)

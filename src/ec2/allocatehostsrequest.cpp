@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::AllocateHostsRequest
- *
  * \brief The AllocateHostsRequest class provides an interface for EC2 AllocateHosts requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new AllocateHostsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AllocateHostsRequest::AllocateHostsRequest(const AllocateHostsRequest &other)
     : EC2Request(new AllocateHostsRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ AllocateHostsRequest::AllocateHostsRequest(const AllocateHostsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new AllocateHostsRequest object.
+ * Constructs a AllocateHostsRequest object.
  */
 AllocateHostsRequest::AllocateHostsRequest()
     : EC2Request(new AllocateHostsRequestPrivate(EC2Request::AllocateHostsAction, this))
@@ -70,14 +67,9 @@ bool AllocateHostsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AllocateHostsResponse object.
+ * Returns a AllocateHostsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AllocateHostsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AllocateHostsRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * AllocateHostsRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::AllocateHostsRequestPrivate
+ * \brief The AllocateHostsRequestPrivate class provides private implementation for AllocateHostsRequest.
+ * \internal
  *
- * @class  AllocateHostsRequestPrivate
- *
- * @brief  Private implementation for AllocateHostsRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AllocateHostsRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public AllocateHostsRequest instance.
+ * Constructs a AllocateHostsRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 AllocateHostsRequestPrivate::AllocateHostsRequestPrivate(
     const EC2Request::Action action, AllocateHostsRequest * const q)
@@ -108,15 +97,10 @@ AllocateHostsRequestPrivate::AllocateHostsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AllocateHostsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AllocateHostsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AllocateHostsRequest instance.
  */
 AllocateHostsRequestPrivate::AllocateHostsRequestPrivate(
     const AllocateHostsRequestPrivate &other, AllocateHostsRequest * const q)

@@ -27,10 +27,9 @@ namespace CloudWatch {
 
 /*!
  * \class QtAws::CloudWatch::SetAlarmStateRequest
- *
  * \brief The SetAlarmStateRequest class provides an interface for CloudWatch SetAlarmState requests.
  *
- * \ingroup CloudWatch
+ * \inmodule QtAwsCloudWatch
  *
  *  Amazon CloudWatch monitors your Amazon Web Services (AWS) resources and the applications you run on AWS in real time.
  *  You can use CloudWatch to collect and track metrics, which are the variables you want to measure for your resources and
@@ -51,9 +50,7 @@ namespace CloudWatch {
  */
 
 /*!
- * @brief  Constructs a new SetAlarmStateRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 SetAlarmStateRequest::SetAlarmStateRequest(const SetAlarmStateRequest &other)
     : CloudWatchRequest(new SetAlarmStateRequestPrivate(*other.d_func(), this))
@@ -62,7 +59,7 @@ SetAlarmStateRequest::SetAlarmStateRequest(const SetAlarmStateRequest &other)
 }
 
 /*!
- * @brief  Constructs a new SetAlarmStateRequest object.
+ * Constructs a SetAlarmStateRequest object.
  */
 SetAlarmStateRequest::SetAlarmStateRequest()
     : CloudWatchRequest(new SetAlarmStateRequestPrivate(CloudWatchRequest::SetAlarmStateAction, this))
@@ -80,14 +77,9 @@ bool SetAlarmStateRequest::isValid() const
 
 
 /*!
- * @brief  Construct an SetAlarmStateResponse object.
+ * Returns a SetAlarmStateResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An SetAlarmStateResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudWatchClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * SetAlarmStateRequest::response(QNetworkReply * const reply) const
 {
@@ -95,20 +87,17 @@ QtAws::Core::AwsAbstractResponse * SetAlarmStateRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudWatch::SetAlarmStateRequestPrivate
+ * \brief The SetAlarmStateRequestPrivate class provides private implementation for SetAlarmStateRequest.
+ * \internal
  *
- * @class  SetAlarmStateRequestPrivate
- *
- * @brief  Private implementation for SetAlarmStateRequest.
+ * \inmodule QtAwsCloudWatch
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new SetAlarmStateRequestPrivate object.
- *
- * @param  action  CloudWatch action being performed.
- * @param  q       Pointer to this object's public SetAlarmStateRequest instance.
+ * Constructs a SetAlarmStateRequestPrivate object for CloudWatch \a action with,
+ * public implementation \a q.
  */
 SetAlarmStateRequestPrivate::SetAlarmStateRequestPrivate(
     const CloudWatchRequest::Action action, SetAlarmStateRequest * const q)
@@ -118,15 +107,10 @@ SetAlarmStateRequestPrivate::SetAlarmStateRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SetAlarmStateRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the SetAlarmStateRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public SetAlarmStateRequest instance.
  */
 SetAlarmStateRequestPrivate::SetAlarmStateRequestPrivate(
     const SetAlarmStateRequestPrivate &other, SetAlarmStateRequest * const q)

@@ -27,19 +27,16 @@ namespace Pinpoint {
 
 /*!
  * \class QtAws::Pinpoint::UpdateGcmChannelRequest
- *
  * \brief The UpdateGcmChannelRequest class provides an interface for Pinpoint UpdateGcmChannel requests.
  *
- * \ingroup Pinpoint
+ * \inmodule QtAwsPinpoint
  *
  *
  * \sa PinpointClient::updateGcmChannel
  */
 
 /*!
- * @brief  Constructs a new UpdateGcmChannelRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateGcmChannelRequest::UpdateGcmChannelRequest(const UpdateGcmChannelRequest &other)
     : PinpointRequest(new UpdateGcmChannelRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ UpdateGcmChannelRequest::UpdateGcmChannelRequest(const UpdateGcmChannelRequest &
 }
 
 /*!
- * @brief  Constructs a new UpdateGcmChannelRequest object.
+ * Constructs a UpdateGcmChannelRequest object.
  */
 UpdateGcmChannelRequest::UpdateGcmChannelRequest()
     : PinpointRequest(new UpdateGcmChannelRequestPrivate(PinpointRequest::UpdateGcmChannelAction, this))
@@ -66,14 +63,9 @@ bool UpdateGcmChannelRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateGcmChannelResponse object.
+ * Returns a UpdateGcmChannelResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateGcmChannelResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  PinpointClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateGcmChannelRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * UpdateGcmChannelRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::Pinpoint::UpdateGcmChannelRequestPrivate
+ * \brief The UpdateGcmChannelRequestPrivate class provides private implementation for UpdateGcmChannelRequest.
+ * \internal
  *
- * @class  UpdateGcmChannelRequestPrivate
- *
- * @brief  Private implementation for UpdateGcmChannelRequest.
+ * \inmodule QtAwsPinpoint
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateGcmChannelRequestPrivate object.
- *
- * @param  action  Pinpoint action being performed.
- * @param  q       Pointer to this object's public UpdateGcmChannelRequest instance.
+ * Constructs a UpdateGcmChannelRequestPrivate object for Pinpoint \a action with,
+ * public implementation \a q.
  */
 UpdateGcmChannelRequestPrivate::UpdateGcmChannelRequestPrivate(
     const PinpointRequest::Action action, UpdateGcmChannelRequest * const q)
@@ -104,15 +93,10 @@ UpdateGcmChannelRequestPrivate::UpdateGcmChannelRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateGcmChannelRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateGcmChannelRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateGcmChannelRequest instance.
  */
 UpdateGcmChannelRequestPrivate::UpdateGcmChannelRequestPrivate(
     const UpdateGcmChannelRequestPrivate &other, UpdateGcmChannelRequest * const q)

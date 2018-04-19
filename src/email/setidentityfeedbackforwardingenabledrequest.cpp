@@ -27,10 +27,9 @@ namespace SES {
 
 /*!
  * \class QtAws::SES::SetIdentityFeedbackForwardingEnabledRequest
- *
  * \brief The SetIdentityFeedbackForwardingEnabledRequest class provides an interface for SES SetIdentityFeedbackForwardingEnabled requests.
  *
- * \ingroup SES
+ * \inmodule QtAwsSES
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -48,9 +47,7 @@ namespace SES {
  */
 
 /*!
- * @brief  Constructs a new SetIdentityFeedbackForwardingEnabledRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 SetIdentityFeedbackForwardingEnabledRequest::SetIdentityFeedbackForwardingEnabledRequest(const SetIdentityFeedbackForwardingEnabledRequest &other)
     : SESRequest(new SetIdentityFeedbackForwardingEnabledRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ SetIdentityFeedbackForwardingEnabledRequest::SetIdentityFeedbackForwardingEnable
 }
 
 /*!
- * @brief  Constructs a new SetIdentityFeedbackForwardingEnabledRequest object.
+ * Constructs a SetIdentityFeedbackForwardingEnabledRequest object.
  */
 SetIdentityFeedbackForwardingEnabledRequest::SetIdentityFeedbackForwardingEnabledRequest()
     : SESRequest(new SetIdentityFeedbackForwardingEnabledRequestPrivate(SESRequest::SetIdentityFeedbackForwardingEnabledAction, this))
@@ -77,14 +74,9 @@ bool SetIdentityFeedbackForwardingEnabledRequest::isValid() const
 
 
 /*!
- * @brief  Construct an SetIdentityFeedbackForwardingEnabledResponse object.
+ * Returns a SetIdentityFeedbackForwardingEnabledResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An SetIdentityFeedbackForwardingEnabledResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SESClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * SetIdentityFeedbackForwardingEnabledRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * SetIdentityFeedbackForwardingEnabledRequest::
 }
 
 /*!
- * @internal
+ * \class QtAws::SES::SetIdentityFeedbackForwardingEnabledRequestPrivate
+ * \brief The SetIdentityFeedbackForwardingEnabledRequestPrivate class provides private implementation for SetIdentityFeedbackForwardingEnabledRequest.
+ * \internal
  *
- * @class  SetIdentityFeedbackForwardingEnabledRequestPrivate
- *
- * @brief  Private implementation for SetIdentityFeedbackForwardingEnabledRequest.
+ * \inmodule QtAwsSES
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new SetIdentityFeedbackForwardingEnabledRequestPrivate object.
- *
- * @param  action  SES action being performed.
- * @param  q       Pointer to this object's public SetIdentityFeedbackForwardingEnabledRequest instance.
+ * Constructs a SetIdentityFeedbackForwardingEnabledRequestPrivate object for SES \a action with,
+ * public implementation \a q.
  */
 SetIdentityFeedbackForwardingEnabledRequestPrivate::SetIdentityFeedbackForwardingEnabledRequestPrivate(
     const SESRequest::Action action, SetIdentityFeedbackForwardingEnabledRequest * const q)
@@ -115,15 +104,10 @@ SetIdentityFeedbackForwardingEnabledRequestPrivate::SetIdentityFeedbackForwardin
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SetIdentityFeedbackForwardingEnabledRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the SetIdentityFeedbackForwardingEnabledRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public SetIdentityFeedbackForwardingEnabledRequest instance.
  */
 SetIdentityFeedbackForwardingEnabledRequestPrivate::SetIdentityFeedbackForwardingEnabledRequestPrivate(
     const SetIdentityFeedbackForwardingEnabledRequestPrivate &other, SetIdentityFeedbackForwardingEnabledRequest * const q)

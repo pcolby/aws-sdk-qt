@@ -27,10 +27,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::CreateServiceLinkedRoleRequest
- *
  * \brief The CreateServiceLinkedRoleRequest class provides an interface for IAM CreateServiceLinkedRole requests.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -102,9 +101,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new CreateServiceLinkedRoleRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateServiceLinkedRoleRequest::CreateServiceLinkedRoleRequest(const CreateServiceLinkedRoleRequest &other)
     : IAMRequest(new CreateServiceLinkedRoleRequestPrivate(*other.d_func(), this))
@@ -113,7 +110,7 @@ CreateServiceLinkedRoleRequest::CreateServiceLinkedRoleRequest(const CreateServi
 }
 
 /*!
- * @brief  Constructs a new CreateServiceLinkedRoleRequest object.
+ * Constructs a CreateServiceLinkedRoleRequest object.
  */
 CreateServiceLinkedRoleRequest::CreateServiceLinkedRoleRequest()
     : IAMRequest(new CreateServiceLinkedRoleRequestPrivate(IAMRequest::CreateServiceLinkedRoleAction, this))
@@ -131,14 +128,9 @@ bool CreateServiceLinkedRoleRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateServiceLinkedRoleResponse object.
+ * Returns a CreateServiceLinkedRoleResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateServiceLinkedRoleResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IAMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateServiceLinkedRoleRequest::response(QNetworkReply * const reply) const
 {
@@ -146,20 +138,17 @@ QtAws::Core::AwsAbstractResponse * CreateServiceLinkedRoleRequest::response(QNet
 }
 
 /*!
- * @internal
+ * \class QtAws::IAM::CreateServiceLinkedRoleRequestPrivate
+ * \brief The CreateServiceLinkedRoleRequestPrivate class provides private implementation for CreateServiceLinkedRoleRequest.
+ * \internal
  *
- * @class  CreateServiceLinkedRoleRequestPrivate
- *
- * @brief  Private implementation for CreateServiceLinkedRoleRequest.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateServiceLinkedRoleRequestPrivate object.
- *
- * @param  action  IAM action being performed.
- * @param  q       Pointer to this object's public CreateServiceLinkedRoleRequest instance.
+ * Constructs a CreateServiceLinkedRoleRequestPrivate object for IAM \a action with,
+ * public implementation \a q.
  */
 CreateServiceLinkedRoleRequestPrivate::CreateServiceLinkedRoleRequestPrivate(
     const IAMRequest::Action action, CreateServiceLinkedRoleRequest * const q)
@@ -169,15 +158,10 @@ CreateServiceLinkedRoleRequestPrivate::CreateServiceLinkedRoleRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateServiceLinkedRoleRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateServiceLinkedRoleRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateServiceLinkedRoleRequest instance.
  */
 CreateServiceLinkedRoleRequestPrivate::CreateServiceLinkedRoleRequestPrivate(
     const CreateServiceLinkedRoleRequestPrivate &other, CreateServiceLinkedRoleRequest * const q)

@@ -27,10 +27,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::DeleteRolePolicyRequest
- *
  * \brief The DeleteRolePolicyRequest class provides an interface for IAM DeleteRolePolicy requests.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -102,9 +101,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new DeleteRolePolicyRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteRolePolicyRequest::DeleteRolePolicyRequest(const DeleteRolePolicyRequest &other)
     : IAMRequest(new DeleteRolePolicyRequestPrivate(*other.d_func(), this))
@@ -113,7 +110,7 @@ DeleteRolePolicyRequest::DeleteRolePolicyRequest(const DeleteRolePolicyRequest &
 }
 
 /*!
- * @brief  Constructs a new DeleteRolePolicyRequest object.
+ * Constructs a DeleteRolePolicyRequest object.
  */
 DeleteRolePolicyRequest::DeleteRolePolicyRequest()
     : IAMRequest(new DeleteRolePolicyRequestPrivate(IAMRequest::DeleteRolePolicyAction, this))
@@ -131,14 +128,9 @@ bool DeleteRolePolicyRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteRolePolicyResponse object.
+ * Returns a DeleteRolePolicyResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteRolePolicyResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IAMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteRolePolicyRequest::response(QNetworkReply * const reply) const
 {
@@ -146,20 +138,17 @@ QtAws::Core::AwsAbstractResponse * DeleteRolePolicyRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::IAM::DeleteRolePolicyRequestPrivate
+ * \brief The DeleteRolePolicyRequestPrivate class provides private implementation for DeleteRolePolicyRequest.
+ * \internal
  *
- * @class  DeleteRolePolicyRequestPrivate
- *
- * @brief  Private implementation for DeleteRolePolicyRequest.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteRolePolicyRequestPrivate object.
- *
- * @param  action  IAM action being performed.
- * @param  q       Pointer to this object's public DeleteRolePolicyRequest instance.
+ * Constructs a DeleteRolePolicyRequestPrivate object for IAM \a action with,
+ * public implementation \a q.
  */
 DeleteRolePolicyRequestPrivate::DeleteRolePolicyRequestPrivate(
     const IAMRequest::Action action, DeleteRolePolicyRequest * const q)
@@ -169,15 +158,10 @@ DeleteRolePolicyRequestPrivate::DeleteRolePolicyRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteRolePolicyRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteRolePolicyRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteRolePolicyRequest instance.
  */
 DeleteRolePolicyRequestPrivate::DeleteRolePolicyRequestPrivate(
     const DeleteRolePolicyRequestPrivate &other, DeleteRolePolicyRequest * const q)

@@ -27,19 +27,16 @@ namespace MachineLearning {
 
 /*!
  * \class QtAws::MachineLearning::CreateDataSourceFromRedshiftRequest
- *
  * \brief The CreateDataSourceFromRedshiftRequest class provides an interface for MachineLearning CreateDataSourceFromRedshift requests.
  *
- * \ingroup MachineLearning
+ * \inmodule QtAwsMachineLearning
  *
  *
  * \sa MachineLearningClient::createDataSourceFromRedshift
  */
 
 /*!
- * @brief  Constructs a new CreateDataSourceFromRedshiftRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateDataSourceFromRedshiftRequest::CreateDataSourceFromRedshiftRequest(const CreateDataSourceFromRedshiftRequest &other)
     : MachineLearningRequest(new CreateDataSourceFromRedshiftRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ CreateDataSourceFromRedshiftRequest::CreateDataSourceFromRedshiftRequest(const C
 }
 
 /*!
- * @brief  Constructs a new CreateDataSourceFromRedshiftRequest object.
+ * Constructs a CreateDataSourceFromRedshiftRequest object.
  */
 CreateDataSourceFromRedshiftRequest::CreateDataSourceFromRedshiftRequest()
     : MachineLearningRequest(new CreateDataSourceFromRedshiftRequestPrivate(MachineLearningRequest::CreateDataSourceFromRedshiftAction, this))
@@ -66,14 +63,9 @@ bool CreateDataSourceFromRedshiftRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateDataSourceFromRedshiftResponse object.
+ * Returns a CreateDataSourceFromRedshiftResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateDataSourceFromRedshiftResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MachineLearningClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateDataSourceFromRedshiftRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * CreateDataSourceFromRedshiftRequest::response
 }
 
 /*!
- * @internal
+ * \class QtAws::MachineLearning::CreateDataSourceFromRedshiftRequestPrivate
+ * \brief The CreateDataSourceFromRedshiftRequestPrivate class provides private implementation for CreateDataSourceFromRedshiftRequest.
+ * \internal
  *
- * @class  CreateDataSourceFromRedshiftRequestPrivate
- *
- * @brief  Private implementation for CreateDataSourceFromRedshiftRequest.
+ * \inmodule QtAwsMachineLearning
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateDataSourceFromRedshiftRequestPrivate object.
- *
- * @param  action  MachineLearning action being performed.
- * @param  q       Pointer to this object's public CreateDataSourceFromRedshiftRequest instance.
+ * Constructs a CreateDataSourceFromRedshiftRequestPrivate object for MachineLearning \a action with,
+ * public implementation \a q.
  */
 CreateDataSourceFromRedshiftRequestPrivate::CreateDataSourceFromRedshiftRequestPrivate(
     const MachineLearningRequest::Action action, CreateDataSourceFromRedshiftRequest * const q)
@@ -104,15 +93,10 @@ CreateDataSourceFromRedshiftRequestPrivate::CreateDataSourceFromRedshiftRequestP
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateDataSourceFromRedshiftRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateDataSourceFromRedshiftRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateDataSourceFromRedshiftRequest instance.
  */
 CreateDataSourceFromRedshiftRequestPrivate::CreateDataSourceFromRedshiftRequestPrivate(
     const CreateDataSourceFromRedshiftRequestPrivate &other, CreateDataSourceFromRedshiftRequest * const q)

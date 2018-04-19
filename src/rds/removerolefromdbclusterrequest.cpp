@@ -27,10 +27,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::RemoveRoleFromDBClusterRequest
- *
  * \brief The RemoveRoleFromDBClusterRequest class provides an interface for RDS RemoveRoleFromDBCluster requests.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -101,9 +100,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new RemoveRoleFromDBClusterRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 RemoveRoleFromDBClusterRequest::RemoveRoleFromDBClusterRequest(const RemoveRoleFromDBClusterRequest &other)
     : RDSRequest(new RemoveRoleFromDBClusterRequestPrivate(*other.d_func(), this))
@@ -112,7 +109,7 @@ RemoveRoleFromDBClusterRequest::RemoveRoleFromDBClusterRequest(const RemoveRoleF
 }
 
 /*!
- * @brief  Constructs a new RemoveRoleFromDBClusterRequest object.
+ * Constructs a RemoveRoleFromDBClusterRequest object.
  */
 RemoveRoleFromDBClusterRequest::RemoveRoleFromDBClusterRequest()
     : RDSRequest(new RemoveRoleFromDBClusterRequestPrivate(RDSRequest::RemoveRoleFromDBClusterAction, this))
@@ -130,14 +127,9 @@ bool RemoveRoleFromDBClusterRequest::isValid() const
 
 
 /*!
- * @brief  Construct an RemoveRoleFromDBClusterResponse object.
+ * Returns a RemoveRoleFromDBClusterResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An RemoveRoleFromDBClusterResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RDSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * RemoveRoleFromDBClusterRequest::response(QNetworkReply * const reply) const
 {
@@ -145,20 +137,17 @@ QtAws::Core::AwsAbstractResponse * RemoveRoleFromDBClusterRequest::response(QNet
 }
 
 /*!
- * @internal
+ * \class QtAws::RDS::RemoveRoleFromDBClusterRequestPrivate
+ * \brief The RemoveRoleFromDBClusterRequestPrivate class provides private implementation for RemoveRoleFromDBClusterRequest.
+ * \internal
  *
- * @class  RemoveRoleFromDBClusterRequestPrivate
- *
- * @brief  Private implementation for RemoveRoleFromDBClusterRequest.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new RemoveRoleFromDBClusterRequestPrivate object.
- *
- * @param  action  RDS action being performed.
- * @param  q       Pointer to this object's public RemoveRoleFromDBClusterRequest instance.
+ * Constructs a RemoveRoleFromDBClusterRequestPrivate object for RDS \a action with,
+ * public implementation \a q.
  */
 RemoveRoleFromDBClusterRequestPrivate::RemoveRoleFromDBClusterRequestPrivate(
     const RDSRequest::Action action, RemoveRoleFromDBClusterRequest * const q)
@@ -168,15 +157,10 @@ RemoveRoleFromDBClusterRequestPrivate::RemoveRoleFromDBClusterRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RemoveRoleFromDBClusterRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the RemoveRoleFromDBClusterRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public RemoveRoleFromDBClusterRequest instance.
  */
 RemoveRoleFromDBClusterRequestPrivate::RemoveRoleFromDBClusterRequestPrivate(
     const RemoveRoleFromDBClusterRequestPrivate &other, RemoveRoleFromDBClusterRequest * const q)

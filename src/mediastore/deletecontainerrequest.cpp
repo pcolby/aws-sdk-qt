@@ -27,10 +27,9 @@ namespace MediaStore {
 
 /*!
  * \class QtAws::MediaStore::DeleteContainerRequest
- *
  * \brief The DeleteContainerRequest class provides an interface for MediaStore DeleteContainer requests.
  *
- * \ingroup MediaStore
+ * \inmodule QtAwsMediaStore
  *
  *  An AWS Elemental MediaStore container is a namespace that holds folders and objects. You use a container endpoint to
  *  create, read, and delete objects.
@@ -39,9 +38,7 @@ namespace MediaStore {
  */
 
 /*!
- * @brief  Constructs a new DeleteContainerRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteContainerRequest::DeleteContainerRequest(const DeleteContainerRequest &other)
     : MediaStoreRequest(new DeleteContainerRequestPrivate(*other.d_func(), this))
@@ -50,7 +47,7 @@ DeleteContainerRequest::DeleteContainerRequest(const DeleteContainerRequest &oth
 }
 
 /*!
- * @brief  Constructs a new DeleteContainerRequest object.
+ * Constructs a DeleteContainerRequest object.
  */
 DeleteContainerRequest::DeleteContainerRequest()
     : MediaStoreRequest(new DeleteContainerRequestPrivate(MediaStoreRequest::DeleteContainerAction, this))
@@ -68,14 +65,9 @@ bool DeleteContainerRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteContainerResponse object.
+ * Returns a DeleteContainerResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteContainerResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MediaStoreClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteContainerRequest::response(QNetworkReply * const reply) const
 {
@@ -83,20 +75,17 @@ QtAws::Core::AwsAbstractResponse * DeleteContainerRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::MediaStore::DeleteContainerRequestPrivate
+ * \brief The DeleteContainerRequestPrivate class provides private implementation for DeleteContainerRequest.
+ * \internal
  *
- * @class  DeleteContainerRequestPrivate
- *
- * @brief  Private implementation for DeleteContainerRequest.
+ * \inmodule QtAwsMediaStore
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteContainerRequestPrivate object.
- *
- * @param  action  MediaStore action being performed.
- * @param  q       Pointer to this object's public DeleteContainerRequest instance.
+ * Constructs a DeleteContainerRequestPrivate object for MediaStore \a action with,
+ * public implementation \a q.
  */
 DeleteContainerRequestPrivate::DeleteContainerRequestPrivate(
     const MediaStoreRequest::Action action, DeleteContainerRequest * const q)
@@ -106,15 +95,10 @@ DeleteContainerRequestPrivate::DeleteContainerRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteContainerRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteContainerRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteContainerRequest instance.
  */
 DeleteContainerRequestPrivate::DeleteContainerRequestPrivate(
     const DeleteContainerRequestPrivate &other, DeleteContainerRequest * const q)

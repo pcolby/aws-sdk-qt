@@ -27,10 +27,9 @@ namespace AppSync {
 
 /*!
  * \class QtAws::AppSync::GetTypeRequest
- *
  * \brief The GetTypeRequest class provides an interface for AppSync GetType requests.
  *
- * \ingroup AppSync
+ * \inmodule QtAwsAppSync
  *
  *  AWS AppSync provides API actions for creating and interacting with data sources using GraphQL from your
  *
@@ -38,9 +37,7 @@ namespace AppSync {
  */
 
 /*!
- * @brief  Constructs a new GetTypeRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetTypeRequest::GetTypeRequest(const GetTypeRequest &other)
     : AppSyncRequest(new GetTypeRequestPrivate(*other.d_func(), this))
@@ -49,7 +46,7 @@ GetTypeRequest::GetTypeRequest(const GetTypeRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetTypeRequest object.
+ * Constructs a GetTypeRequest object.
  */
 GetTypeRequest::GetTypeRequest()
     : AppSyncRequest(new GetTypeRequestPrivate(AppSyncRequest::GetTypeAction, this))
@@ -67,14 +64,9 @@ bool GetTypeRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetTypeResponse object.
+ * Returns a GetTypeResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetTypeResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AppSyncClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetTypeRequest::response(QNetworkReply * const reply) const
 {
@@ -82,20 +74,17 @@ QtAws::Core::AwsAbstractResponse * GetTypeRequest::response(QNetworkReply * cons
 }
 
 /*!
- * @internal
+ * \class QtAws::AppSync::GetTypeRequestPrivate
+ * \brief The GetTypeRequestPrivate class provides private implementation for GetTypeRequest.
+ * \internal
  *
- * @class  GetTypeRequestPrivate
- *
- * @brief  Private implementation for GetTypeRequest.
+ * \inmodule QtAwsAppSync
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetTypeRequestPrivate object.
- *
- * @param  action  AppSync action being performed.
- * @param  q       Pointer to this object's public GetTypeRequest instance.
+ * Constructs a GetTypeRequestPrivate object for AppSync \a action with,
+ * public implementation \a q.
  */
 GetTypeRequestPrivate::GetTypeRequestPrivate(
     const AppSyncRequest::Action action, GetTypeRequest * const q)
@@ -105,15 +94,10 @@ GetTypeRequestPrivate::GetTypeRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetTypeRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetTypeRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetTypeRequest instance.
  */
 GetTypeRequestPrivate::GetTypeRequestPrivate(
     const GetTypeRequestPrivate &other, GetTypeRequest * const q)

@@ -27,10 +27,9 @@ namespace KMS {
 
 /*!
  * \class QtAws::KMS::ListResourceTagsRequest
- *
  * \brief The ListResourceTagsRequest class provides an interface for KMS ListResourceTags requests.
  *
- * \ingroup KMS
+ * \inmodule QtAwsKMS
  *
  *  <fullname>AWS Key Management Service</fullname>
  * 
@@ -136,9 +135,7 @@ namespace KMS {
  */
 
 /*!
- * @brief  Constructs a new ListResourceTagsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListResourceTagsRequest::ListResourceTagsRequest(const ListResourceTagsRequest &other)
     : KMSRequest(new ListResourceTagsRequestPrivate(*other.d_func(), this))
@@ -147,7 +144,7 @@ ListResourceTagsRequest::ListResourceTagsRequest(const ListResourceTagsRequest &
 }
 
 /*!
- * @brief  Constructs a new ListResourceTagsRequest object.
+ * Constructs a ListResourceTagsRequest object.
  */
 ListResourceTagsRequest::ListResourceTagsRequest()
     : KMSRequest(new ListResourceTagsRequestPrivate(KMSRequest::ListResourceTagsAction, this))
@@ -165,14 +162,9 @@ bool ListResourceTagsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListResourceTagsResponse object.
+ * Returns a ListResourceTagsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListResourceTagsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  KMSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListResourceTagsRequest::response(QNetworkReply * const reply) const
 {
@@ -180,20 +172,17 @@ QtAws::Core::AwsAbstractResponse * ListResourceTagsRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::KMS::ListResourceTagsRequestPrivate
+ * \brief The ListResourceTagsRequestPrivate class provides private implementation for ListResourceTagsRequest.
+ * \internal
  *
- * @class  ListResourceTagsRequestPrivate
- *
- * @brief  Private implementation for ListResourceTagsRequest.
+ * \inmodule QtAwsKMS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListResourceTagsRequestPrivate object.
- *
- * @param  action  KMS action being performed.
- * @param  q       Pointer to this object's public ListResourceTagsRequest instance.
+ * Constructs a ListResourceTagsRequestPrivate object for KMS \a action with,
+ * public implementation \a q.
  */
 ListResourceTagsRequestPrivate::ListResourceTagsRequestPrivate(
     const KMSRequest::Action action, ListResourceTagsRequest * const q)
@@ -203,15 +192,10 @@ ListResourceTagsRequestPrivate::ListResourceTagsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListResourceTagsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListResourceTagsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListResourceTagsRequest instance.
  */
 ListResourceTagsRequestPrivate::ListResourceTagsRequestPrivate(
     const ListResourceTagsRequestPrivate &other, ListResourceTagsRequest * const q)

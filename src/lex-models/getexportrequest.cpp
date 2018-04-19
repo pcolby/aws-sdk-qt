@@ -27,10 +27,9 @@ namespace LexModelBuildingService {
 
 /*!
  * \class QtAws::LexModelBuildingService::GetExportRequest
- *
  * \brief The GetExportRequest class provides an interface for LexModelBuildingService GetExport requests.
  *
- * \ingroup LexModelBuildingService
+ * \inmodule QtAwsLexModelBuildingService
  *
  *  <fullname>Amazon Lex Build-Time Actions</fullname>
  * 
@@ -41,9 +40,7 @@ namespace LexModelBuildingService {
  */
 
 /*!
- * @brief  Constructs a new GetExportRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetExportRequest::GetExportRequest(const GetExportRequest &other)
     : LexModelBuildingServiceRequest(new GetExportRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ GetExportRequest::GetExportRequest(const GetExportRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetExportRequest object.
+ * Constructs a GetExportRequest object.
  */
 GetExportRequest::GetExportRequest()
     : LexModelBuildingServiceRequest(new GetExportRequestPrivate(LexModelBuildingServiceRequest::GetExportAction, this))
@@ -70,14 +67,9 @@ bool GetExportRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetExportResponse object.
+ * Returns a GetExportResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetExportResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  LexModelBuildingServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetExportRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * GetExportRequest::response(QNetworkReply * co
 }
 
 /*!
- * @internal
+ * \class QtAws::LexModelBuildingService::GetExportRequestPrivate
+ * \brief The GetExportRequestPrivate class provides private implementation for GetExportRequest.
+ * \internal
  *
- * @class  GetExportRequestPrivate
- *
- * @brief  Private implementation for GetExportRequest.
+ * \inmodule QtAwsLexModelBuildingService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetExportRequestPrivate object.
- *
- * @param  action  LexModelBuildingService action being performed.
- * @param  q       Pointer to this object's public GetExportRequest instance.
+ * Constructs a GetExportRequestPrivate object for LexModelBuildingService \a action with,
+ * public implementation \a q.
  */
 GetExportRequestPrivate::GetExportRequestPrivate(
     const LexModelBuildingServiceRequest::Action action, GetExportRequest * const q)
@@ -108,15 +97,10 @@ GetExportRequestPrivate::GetExportRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetExportRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetExportRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetExportRequest instance.
  */
 GetExportRequestPrivate::GetExportRequestPrivate(
     const GetExportRequestPrivate &other, GetExportRequest * const q)

@@ -27,10 +27,9 @@ namespace Glacier {
 
 /*!
  * \class QtAws::Glacier::ListProvisionedCapacityRequest
- *
  * \brief The ListProvisionedCapacityRequest class provides an interface for Glacier ListProvisionedCapacity requests.
  *
- * \ingroup Glacier
+ * \inmodule QtAwsGlacier
  *
  *  Amazon Glacier is a storage solution for "cold
  * 
@@ -75,9 +74,7 @@ namespace Glacier {
  */
 
 /*!
- * @brief  Constructs a new ListProvisionedCapacityRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListProvisionedCapacityRequest::ListProvisionedCapacityRequest(const ListProvisionedCapacityRequest &other)
     : GlacierRequest(new ListProvisionedCapacityRequestPrivate(*other.d_func(), this))
@@ -86,7 +83,7 @@ ListProvisionedCapacityRequest::ListProvisionedCapacityRequest(const ListProvisi
 }
 
 /*!
- * @brief  Constructs a new ListProvisionedCapacityRequest object.
+ * Constructs a ListProvisionedCapacityRequest object.
  */
 ListProvisionedCapacityRequest::ListProvisionedCapacityRequest()
     : GlacierRequest(new ListProvisionedCapacityRequestPrivate(GlacierRequest::ListProvisionedCapacityAction, this))
@@ -104,14 +101,9 @@ bool ListProvisionedCapacityRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListProvisionedCapacityResponse object.
+ * Returns a ListProvisionedCapacityResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListProvisionedCapacityResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GlacierClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListProvisionedCapacityRequest::response(QNetworkReply * const reply) const
 {
@@ -119,20 +111,17 @@ QtAws::Core::AwsAbstractResponse * ListProvisionedCapacityRequest::response(QNet
 }
 
 /*!
- * @internal
+ * \class QtAws::Glacier::ListProvisionedCapacityRequestPrivate
+ * \brief The ListProvisionedCapacityRequestPrivate class provides private implementation for ListProvisionedCapacityRequest.
+ * \internal
  *
- * @class  ListProvisionedCapacityRequestPrivate
- *
- * @brief  Private implementation for ListProvisionedCapacityRequest.
+ * \inmodule QtAwsGlacier
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListProvisionedCapacityRequestPrivate object.
- *
- * @param  action  Glacier action being performed.
- * @param  q       Pointer to this object's public ListProvisionedCapacityRequest instance.
+ * Constructs a ListProvisionedCapacityRequestPrivate object for Glacier \a action with,
+ * public implementation \a q.
  */
 ListProvisionedCapacityRequestPrivate::ListProvisionedCapacityRequestPrivate(
     const GlacierRequest::Action action, ListProvisionedCapacityRequest * const q)
@@ -142,15 +131,10 @@ ListProvisionedCapacityRequestPrivate::ListProvisionedCapacityRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListProvisionedCapacityRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListProvisionedCapacityRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListProvisionedCapacityRequest instance.
  */
 ListProvisionedCapacityRequestPrivate::ListProvisionedCapacityRequestPrivate(
     const ListProvisionedCapacityRequestPrivate &other, ListProvisionedCapacityRequest * const q)

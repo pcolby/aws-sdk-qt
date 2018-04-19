@@ -27,10 +27,9 @@ namespace ElasticBeanstalk {
 
 /*!
  * \class QtAws::ElasticBeanstalk::ComposeEnvironmentsRequest
- *
  * \brief The ComposeEnvironmentsRequest class provides an interface for ElasticBeanstalk ComposeEnvironments requests.
  *
- * \ingroup ElasticBeanstalk
+ * \inmodule QtAwsElasticBeanstalk
  *
  *  <fullname>AWS Elastic Beanstalk</fullname>
  * 
@@ -59,9 +58,7 @@ namespace ElasticBeanstalk {
  */
 
 /*!
- * @brief  Constructs a new ComposeEnvironmentsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ComposeEnvironmentsRequest::ComposeEnvironmentsRequest(const ComposeEnvironmentsRequest &other)
     : ElasticBeanstalkRequest(new ComposeEnvironmentsRequestPrivate(*other.d_func(), this))
@@ -70,7 +67,7 @@ ComposeEnvironmentsRequest::ComposeEnvironmentsRequest(const ComposeEnvironments
 }
 
 /*!
- * @brief  Constructs a new ComposeEnvironmentsRequest object.
+ * Constructs a ComposeEnvironmentsRequest object.
  */
 ComposeEnvironmentsRequest::ComposeEnvironmentsRequest()
     : ElasticBeanstalkRequest(new ComposeEnvironmentsRequestPrivate(ElasticBeanstalkRequest::ComposeEnvironmentsAction, this))
@@ -88,14 +85,9 @@ bool ComposeEnvironmentsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ComposeEnvironmentsResponse object.
+ * Returns a ComposeEnvironmentsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ComposeEnvironmentsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ElasticBeanstalkClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ComposeEnvironmentsRequest::response(QNetworkReply * const reply) const
 {
@@ -103,20 +95,17 @@ QtAws::Core::AwsAbstractResponse * ComposeEnvironmentsRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::ElasticBeanstalk::ComposeEnvironmentsRequestPrivate
+ * \brief The ComposeEnvironmentsRequestPrivate class provides private implementation for ComposeEnvironmentsRequest.
+ * \internal
  *
- * @class  ComposeEnvironmentsRequestPrivate
- *
- * @brief  Private implementation for ComposeEnvironmentsRequest.
+ * \inmodule QtAwsElasticBeanstalk
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ComposeEnvironmentsRequestPrivate object.
- *
- * @param  action  ElasticBeanstalk action being performed.
- * @param  q       Pointer to this object's public ComposeEnvironmentsRequest instance.
+ * Constructs a ComposeEnvironmentsRequestPrivate object for ElasticBeanstalk \a action with,
+ * public implementation \a q.
  */
 ComposeEnvironmentsRequestPrivate::ComposeEnvironmentsRequestPrivate(
     const ElasticBeanstalkRequest::Action action, ComposeEnvironmentsRequest * const q)
@@ -126,15 +115,10 @@ ComposeEnvironmentsRequestPrivate::ComposeEnvironmentsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ComposeEnvironmentsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ComposeEnvironmentsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ComposeEnvironmentsRequest instance.
  */
 ComposeEnvironmentsRequestPrivate::ComposeEnvironmentsRequestPrivate(
     const ComposeEnvironmentsRequestPrivate &other, ComposeEnvironmentsRequest * const q)

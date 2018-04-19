@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DeleteKeyPairRequest
- *
  * \brief The DeleteKeyPairRequest class provides an interface for EC2 DeleteKeyPair requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DeleteKeyPairRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteKeyPairRequest::DeleteKeyPairRequest(const DeleteKeyPairRequest &other)
     : EC2Request(new DeleteKeyPairRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ DeleteKeyPairRequest::DeleteKeyPairRequest(const DeleteKeyPairRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DeleteKeyPairRequest object.
+ * Constructs a DeleteKeyPairRequest object.
  */
 DeleteKeyPairRequest::DeleteKeyPairRequest()
     : EC2Request(new DeleteKeyPairRequestPrivate(EC2Request::DeleteKeyPairAction, this))
@@ -70,14 +67,9 @@ bool DeleteKeyPairRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteKeyPairResponse object.
+ * Returns a DeleteKeyPairResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteKeyPairResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteKeyPairRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * DeleteKeyPairRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::DeleteKeyPairRequestPrivate
+ * \brief The DeleteKeyPairRequestPrivate class provides private implementation for DeleteKeyPairRequest.
+ * \internal
  *
- * @class  DeleteKeyPairRequestPrivate
- *
- * @brief  Private implementation for DeleteKeyPairRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteKeyPairRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public DeleteKeyPairRequest instance.
+ * Constructs a DeleteKeyPairRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 DeleteKeyPairRequestPrivate::DeleteKeyPairRequestPrivate(
     const EC2Request::Action action, DeleteKeyPairRequest * const q)
@@ -108,15 +97,10 @@ DeleteKeyPairRequestPrivate::DeleteKeyPairRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteKeyPairRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteKeyPairRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteKeyPairRequest instance.
  */
 DeleteKeyPairRequestPrivate::DeleteKeyPairRequestPrivate(
     const DeleteKeyPairRequestPrivate &other, DeleteKeyPairRequest * const q)

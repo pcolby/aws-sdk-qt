@@ -27,10 +27,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::SendCommandRequest
- *
  * \brief The SendCommandRequest class provides an interface for SSM SendCommand requests.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -61,9 +60,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new SendCommandRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 SendCommandRequest::SendCommandRequest(const SendCommandRequest &other)
     : SSMRequest(new SendCommandRequestPrivate(*other.d_func(), this))
@@ -72,7 +69,7 @@ SendCommandRequest::SendCommandRequest(const SendCommandRequest &other)
 }
 
 /*!
- * @brief  Constructs a new SendCommandRequest object.
+ * Constructs a SendCommandRequest object.
  */
 SendCommandRequest::SendCommandRequest()
     : SSMRequest(new SendCommandRequestPrivate(SSMRequest::SendCommandAction, this))
@@ -90,14 +87,9 @@ bool SendCommandRequest::isValid() const
 
 
 /*!
- * @brief  Construct an SendCommandResponse object.
+ * Returns a SendCommandResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An SendCommandResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SSMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * SendCommandRequest::response(QNetworkReply * const reply) const
 {
@@ -105,20 +97,17 @@ QtAws::Core::AwsAbstractResponse * SendCommandRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::SSM::SendCommandRequestPrivate
+ * \brief The SendCommandRequestPrivate class provides private implementation for SendCommandRequest.
+ * \internal
  *
- * @class  SendCommandRequestPrivate
- *
- * @brief  Private implementation for SendCommandRequest.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new SendCommandRequestPrivate object.
- *
- * @param  action  SSM action being performed.
- * @param  q       Pointer to this object's public SendCommandRequest instance.
+ * Constructs a SendCommandRequestPrivate object for SSM \a action with,
+ * public implementation \a q.
  */
 SendCommandRequestPrivate::SendCommandRequestPrivate(
     const SSMRequest::Action action, SendCommandRequest * const q)
@@ -128,15 +117,10 @@ SendCommandRequestPrivate::SendCommandRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SendCommandRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the SendCommandRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public SendCommandRequest instance.
  */
 SendCommandRequestPrivate::SendCommandRequestPrivate(
     const SendCommandRequestPrivate &other, SendCommandRequest * const q)

@@ -27,10 +27,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::ListServiceSpecificCredentialsRequest
- *
  * \brief The ListServiceSpecificCredentialsRequest class provides an interface for IAM ListServiceSpecificCredentials requests.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -102,9 +101,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new ListServiceSpecificCredentialsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListServiceSpecificCredentialsRequest::ListServiceSpecificCredentialsRequest(const ListServiceSpecificCredentialsRequest &other)
     : IAMRequest(new ListServiceSpecificCredentialsRequestPrivate(*other.d_func(), this))
@@ -113,7 +110,7 @@ ListServiceSpecificCredentialsRequest::ListServiceSpecificCredentialsRequest(con
 }
 
 /*!
- * @brief  Constructs a new ListServiceSpecificCredentialsRequest object.
+ * Constructs a ListServiceSpecificCredentialsRequest object.
  */
 ListServiceSpecificCredentialsRequest::ListServiceSpecificCredentialsRequest()
     : IAMRequest(new ListServiceSpecificCredentialsRequestPrivate(IAMRequest::ListServiceSpecificCredentialsAction, this))
@@ -131,14 +128,9 @@ bool ListServiceSpecificCredentialsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListServiceSpecificCredentialsResponse object.
+ * Returns a ListServiceSpecificCredentialsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListServiceSpecificCredentialsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IAMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListServiceSpecificCredentialsRequest::response(QNetworkReply * const reply) const
 {
@@ -146,20 +138,17 @@ QtAws::Core::AwsAbstractResponse * ListServiceSpecificCredentialsRequest::respon
 }
 
 /*!
- * @internal
+ * \class QtAws::IAM::ListServiceSpecificCredentialsRequestPrivate
+ * \brief The ListServiceSpecificCredentialsRequestPrivate class provides private implementation for ListServiceSpecificCredentialsRequest.
+ * \internal
  *
- * @class  ListServiceSpecificCredentialsRequestPrivate
- *
- * @brief  Private implementation for ListServiceSpecificCredentialsRequest.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListServiceSpecificCredentialsRequestPrivate object.
- *
- * @param  action  IAM action being performed.
- * @param  q       Pointer to this object's public ListServiceSpecificCredentialsRequest instance.
+ * Constructs a ListServiceSpecificCredentialsRequestPrivate object for IAM \a action with,
+ * public implementation \a q.
  */
 ListServiceSpecificCredentialsRequestPrivate::ListServiceSpecificCredentialsRequestPrivate(
     const IAMRequest::Action action, ListServiceSpecificCredentialsRequest * const q)
@@ -169,15 +158,10 @@ ListServiceSpecificCredentialsRequestPrivate::ListServiceSpecificCredentialsRequ
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListServiceSpecificCredentialsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListServiceSpecificCredentialsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListServiceSpecificCredentialsRequest instance.
  */
 ListServiceSpecificCredentialsRequestPrivate::ListServiceSpecificCredentialsRequestPrivate(
     const ListServiceSpecificCredentialsRequestPrivate &other, ListServiceSpecificCredentialsRequest * const q)

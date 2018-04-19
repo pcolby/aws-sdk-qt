@@ -27,10 +27,9 @@ namespace Redshift {
 
 /*!
  * \class QtAws::Redshift::DeleteHsmConfigurationRequest
- *
  * \brief The DeleteHsmConfigurationRequest class provides an interface for Redshift DeleteHsmConfiguration requests.
  *
- * \ingroup Redshift
+ * \inmodule QtAwsRedshift
  *
  *  <fullname>Amazon Redshift</fullname>
  * 
@@ -67,9 +66,7 @@ namespace Redshift {
  */
 
 /*!
- * @brief  Constructs a new DeleteHsmConfigurationRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteHsmConfigurationRequest::DeleteHsmConfigurationRequest(const DeleteHsmConfigurationRequest &other)
     : RedshiftRequest(new DeleteHsmConfigurationRequestPrivate(*other.d_func(), this))
@@ -78,7 +75,7 @@ DeleteHsmConfigurationRequest::DeleteHsmConfigurationRequest(const DeleteHsmConf
 }
 
 /*!
- * @brief  Constructs a new DeleteHsmConfigurationRequest object.
+ * Constructs a DeleteHsmConfigurationRequest object.
  */
 DeleteHsmConfigurationRequest::DeleteHsmConfigurationRequest()
     : RedshiftRequest(new DeleteHsmConfigurationRequestPrivate(RedshiftRequest::DeleteHsmConfigurationAction, this))
@@ -96,14 +93,9 @@ bool DeleteHsmConfigurationRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteHsmConfigurationResponse object.
+ * Returns a DeleteHsmConfigurationResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteHsmConfigurationResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RedshiftClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteHsmConfigurationRequest::response(QNetworkReply * const reply) const
 {
@@ -111,20 +103,17 @@ QtAws::Core::AwsAbstractResponse * DeleteHsmConfigurationRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::Redshift::DeleteHsmConfigurationRequestPrivate
+ * \brief The DeleteHsmConfigurationRequestPrivate class provides private implementation for DeleteHsmConfigurationRequest.
+ * \internal
  *
- * @class  DeleteHsmConfigurationRequestPrivate
- *
- * @brief  Private implementation for DeleteHsmConfigurationRequest.
+ * \inmodule QtAwsRedshift
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteHsmConfigurationRequestPrivate object.
- *
- * @param  action  Redshift action being performed.
- * @param  q       Pointer to this object's public DeleteHsmConfigurationRequest instance.
+ * Constructs a DeleteHsmConfigurationRequestPrivate object for Redshift \a action with,
+ * public implementation \a q.
  */
 DeleteHsmConfigurationRequestPrivate::DeleteHsmConfigurationRequestPrivate(
     const RedshiftRequest::Action action, DeleteHsmConfigurationRequest * const q)
@@ -134,15 +123,10 @@ DeleteHsmConfigurationRequestPrivate::DeleteHsmConfigurationRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteHsmConfigurationRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteHsmConfigurationRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteHsmConfigurationRequest instance.
  */
 DeleteHsmConfigurationRequestPrivate::DeleteHsmConfigurationRequestPrivate(
     const DeleteHsmConfigurationRequestPrivate &other, DeleteHsmConfigurationRequest * const q)

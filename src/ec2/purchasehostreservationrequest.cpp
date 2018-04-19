@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::PurchaseHostReservationRequest
- *
  * \brief The PurchaseHostReservationRequest class provides an interface for EC2 PurchaseHostReservation requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new PurchaseHostReservationRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 PurchaseHostReservationRequest::PurchaseHostReservationRequest(const PurchaseHostReservationRequest &other)
     : EC2Request(new PurchaseHostReservationRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ PurchaseHostReservationRequest::PurchaseHostReservationRequest(const PurchaseHos
 }
 
 /*!
- * @brief  Constructs a new PurchaseHostReservationRequest object.
+ * Constructs a PurchaseHostReservationRequest object.
  */
 PurchaseHostReservationRequest::PurchaseHostReservationRequest()
     : EC2Request(new PurchaseHostReservationRequestPrivate(EC2Request::PurchaseHostReservationAction, this))
@@ -70,14 +67,9 @@ bool PurchaseHostReservationRequest::isValid() const
 
 
 /*!
- * @brief  Construct an PurchaseHostReservationResponse object.
+ * Returns a PurchaseHostReservationResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An PurchaseHostReservationResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * PurchaseHostReservationRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * PurchaseHostReservationRequest::response(QNet
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::PurchaseHostReservationRequestPrivate
+ * \brief The PurchaseHostReservationRequestPrivate class provides private implementation for PurchaseHostReservationRequest.
+ * \internal
  *
- * @class  PurchaseHostReservationRequestPrivate
- *
- * @brief  Private implementation for PurchaseHostReservationRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new PurchaseHostReservationRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public PurchaseHostReservationRequest instance.
+ * Constructs a PurchaseHostReservationRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 PurchaseHostReservationRequestPrivate::PurchaseHostReservationRequestPrivate(
     const EC2Request::Action action, PurchaseHostReservationRequest * const q)
@@ -108,15 +97,10 @@ PurchaseHostReservationRequestPrivate::PurchaseHostReservationRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PurchaseHostReservationRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the PurchaseHostReservationRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public PurchaseHostReservationRequest instance.
  */
 PurchaseHostReservationRequestPrivate::PurchaseHostReservationRequestPrivate(
     const PurchaseHostReservationRequestPrivate &other, PurchaseHostReservationRequest * const q)

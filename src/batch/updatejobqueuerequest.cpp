@@ -27,10 +27,9 @@ namespace Batch {
 
 /*!
  * \class QtAws::Batch::UpdateJobQueueRequest
- *
  * \brief The UpdateJobQueueRequest class provides an interface for Batch UpdateJobQueue requests.
  *
- * \ingroup Batch
+ * \inmodule QtAwsBatch
  *
  *  AWS Batch enables you to run batch computing workloads on the AWS Cloud. Batch computing is a common way for developers,
  *  scientists, and engineers to access large amounts of compute resources, and AWS Batch removes the undifferentiated heavy
@@ -51,9 +50,7 @@ namespace Batch {
  */
 
 /*!
- * @brief  Constructs a new UpdateJobQueueRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateJobQueueRequest::UpdateJobQueueRequest(const UpdateJobQueueRequest &other)
     : BatchRequest(new UpdateJobQueueRequestPrivate(*other.d_func(), this))
@@ -62,7 +59,7 @@ UpdateJobQueueRequest::UpdateJobQueueRequest(const UpdateJobQueueRequest &other)
 }
 
 /*!
- * @brief  Constructs a new UpdateJobQueueRequest object.
+ * Constructs a UpdateJobQueueRequest object.
  */
 UpdateJobQueueRequest::UpdateJobQueueRequest()
     : BatchRequest(new UpdateJobQueueRequestPrivate(BatchRequest::UpdateJobQueueAction, this))
@@ -80,14 +77,9 @@ bool UpdateJobQueueRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateJobQueueResponse object.
+ * Returns a UpdateJobQueueResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateJobQueueResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  BatchClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateJobQueueRequest::response(QNetworkReply * const reply) const
 {
@@ -95,20 +87,17 @@ QtAws::Core::AwsAbstractResponse * UpdateJobQueueRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::Batch::UpdateJobQueueRequestPrivate
+ * \brief The UpdateJobQueueRequestPrivate class provides private implementation for UpdateJobQueueRequest.
+ * \internal
  *
- * @class  UpdateJobQueueRequestPrivate
- *
- * @brief  Private implementation for UpdateJobQueueRequest.
+ * \inmodule QtAwsBatch
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateJobQueueRequestPrivate object.
- *
- * @param  action  Batch action being performed.
- * @param  q       Pointer to this object's public UpdateJobQueueRequest instance.
+ * Constructs a UpdateJobQueueRequestPrivate object for Batch \a action with,
+ * public implementation \a q.
  */
 UpdateJobQueueRequestPrivate::UpdateJobQueueRequestPrivate(
     const BatchRequest::Action action, UpdateJobQueueRequest * const q)
@@ -118,15 +107,10 @@ UpdateJobQueueRequestPrivate::UpdateJobQueueRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateJobQueueRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateJobQueueRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateJobQueueRequest instance.
  */
 UpdateJobQueueRequestPrivate::UpdateJobQueueRequestPrivate(
     const UpdateJobQueueRequestPrivate &other, UpdateJobQueueRequest * const q)

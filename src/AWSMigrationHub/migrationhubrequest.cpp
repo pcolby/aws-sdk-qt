@@ -25,16 +25,37 @@ namespace MigrationHub {
 
 /*!
  * \class QtAws::MigrationHub::MigrationHubRequest
- *
  * \brief The MigrationHubRequest class provides an interface for MigrationHub requests.
  *
- * \ingroup MigrationHub
+ * \inmodule QtAwsMigrationHub
  */
 
 /*!
- * @brief  Constructs a new MigrationHubRequest object.
+ * \enum MigrationHubRequest::Action
  *
- * @param  action  The MigrationHub action to request.
+ * This enum describes the actions that can be performed as MigrationHub
+ * requests.
+ *
+ * \value AssociateCreatedArtifactAction MigrationHub AssociateCreatedArtifact action.
+ * \value AssociateDiscoveredResourceAction MigrationHub AssociateDiscoveredResource action.
+ * \value CreateProgressUpdateStreamAction MigrationHub CreateProgressUpdateStream action.
+ * \value DeleteProgressUpdateStreamAction MigrationHub DeleteProgressUpdateStream action.
+ * \value DescribeApplicationStateAction MigrationHub DescribeApplicationState action.
+ * \value DescribeMigrationTaskAction MigrationHub DescribeMigrationTask action.
+ * \value DisassociateCreatedArtifactAction MigrationHub DisassociateCreatedArtifact action.
+ * \value DisassociateDiscoveredResourceAction MigrationHub DisassociateDiscoveredResource action.
+ * \value ImportMigrationTaskAction MigrationHub ImportMigrationTask action.
+ * \value ListCreatedArtifactsAction MigrationHub ListCreatedArtifacts action.
+ * \value ListDiscoveredResourcesAction MigrationHub ListDiscoveredResources action.
+ * \value ListMigrationTasksAction MigrationHub ListMigrationTasks action.
+ * \value ListProgressUpdateStreamsAction MigrationHub ListProgressUpdateStreams action.
+ * \value NotifyApplicationStateAction MigrationHub NotifyApplicationState action.
+ * \value NotifyMigrationTaskStateAction MigrationHub NotifyMigrationTaskState action.
+ * \value PutResourceAttributesAction MigrationHub PutResourceAttributes action.
+ */
+
+/*!
+ * Constructs a[n] MigrationHubRequest object for MigrationHub \a action.
  */
 MigrationHubRequest::MigrationHubRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new MigrationHubRequestPrivate(action, this))
@@ -43,9 +64,7 @@ MigrationHubRequest::MigrationHubRequest(const Action action)
 }
 
 /*!
- * @brief  Constructs a new MigrationHubRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 MigrationHubRequest::MigrationHubRequest(const MigrationHubRequest &other)
     : QtAws::Core::AwsAbstractRequest(new MigrationHubRequestPrivate(*other.d_func(), this))
@@ -54,13 +73,7 @@ MigrationHubRequest::MigrationHubRequest(const MigrationHubRequest &other)
 }
 
 /*!
- * @brief  Assignment operator.
- *
- * Assigns \a other to \c this.
- *
- * @param  other  Instance to copy.
- *
- * @return  A reference to \c this.
+ * Sets the MigrationHubRequest object to be equal to \a other.
  */
 MigrationHubRequest& MigrationHubRequest::operator=(const MigrationHubRequest &other)
 {
@@ -72,14 +85,10 @@ MigrationHubRequest& MigrationHubRequest::operator=(const MigrationHubRequest &o
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new MigrationHubRequest object.
+ * Constructs aa MigrationHubRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from MigrationHubRequestPrivate.
- *
- * @param  d  Pointer to private data (aka D-Pointer).
  */
 MigrationHubRequest::MigrationHubRequest(MigrationHubRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
@@ -87,7 +96,7 @@ MigrationHubRequest::MigrationHubRequest(MigrationHubRequestPrivate * const d) :
 }
 
 /*!
- * \brief Returns the MigrationHub action to be performed by this request.
+ * Returns the MigrationHub action to be performed by this request.
  */
 MigrationHubRequest::Action MigrationHubRequest::action() const
 {
@@ -96,7 +105,7 @@ MigrationHubRequest::Action MigrationHubRequest::action() const
 }
 
 /*!
- * \brief Returns the name of the MigrationHub action to be performed by this request.
+ * Returns the name of the MigrationHub action to be performed by this request.
  */
 QString MigrationHubRequest::actionString() const
 {
@@ -104,7 +113,7 @@ QString MigrationHubRequest::actionString() const
 }
 
 /*!
- * \brief Returns the MigrationHub API version implemented by this request.
+ * Returns the MigrationHub API version implemented by this request.
  */
 QString MigrationHubRequest::apiVersion() const
 {
@@ -113,7 +122,7 @@ QString MigrationHubRequest::apiVersion() const
 }
 
 /*!
- * @brief Set the MigrationHub action to be performed by this request to \a action.
+ * Sets the MigrationHub action to be performed by this request to \a action.
  */
 void MigrationHubRequest::setAction(const Action action)
 {
@@ -122,7 +131,7 @@ void MigrationHubRequest::setAction(const Action action)
 }
 
 /*!
- * Set the MigrationHub API version to include in this request to \a version.
+ * Sets the MigrationHub API version to include in this request to \a version.
  */
 void MigrationHubRequest::setApiVersion(const QString &version)
 {
@@ -131,7 +140,7 @@ void MigrationHubRequest::setApiVersion(const QString &version)
 }
 
 /*!
- * \brief Returns \c true if this request is the same as \a other.
+ * Returns \c true if this request is equal to \a other; \c false otherwise.
  *
  * Note, most derived *Request classes do not need to provider their own
  * implementations of this function, since most such request classes rely on
@@ -146,8 +155,8 @@ bool MigrationHubRequest::operator==(const MigrationHubRequest &other) const
             (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
-/*!
- * @brief  Check if \a queueName is a valid MigrationHub queue name.
+/*
+ * Returns \c tue if \a queueName is a valid MigrationHub queue name.
  *
  * @par From MigrationHub FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
@@ -166,9 +175,8 @@ bool MigrationHubRequest::operator==(const MigrationHubRequest &other) const
 }*/
 
 /*!
- * \brief Removes the a \a name parameter from this request.
- *
- * Returns the count of paramters removed (typically \c 0 or \c 1).
+ * Removes the a \a name parameter from the request, then returns the number of
+ * paramters removed (typically \c 0 or \c 1).
  */
 int MigrationHubRequest::clearParameter(const QString &name)
 {
@@ -177,7 +185,7 @@ int MigrationHubRequest::clearParameter(const QString &name)
 }
 
 /*!
- * \brief Removes all parameters from this request.
+ * Removes all parameters from the request.
  */
 void MigrationHubRequest::clearParameters()
 {
@@ -186,7 +194,7 @@ void MigrationHubRequest::clearParameters()
 }
 
 /*!
- * \brief Returns the value of the \n name pararemter if set, otherwise \a defaultValue.
+ * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
 QVariant MigrationHubRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
@@ -195,7 +203,7 @@ QVariant MigrationHubRequest::parameter(const QString &name, const QVariant &def
 }
 
 /*!
- * \brief Returns a map of parameters included in this request.
+ * Returns the parameters included in this request.
  */
 const QVariantMap &MigrationHubRequest::parameters() const
 {
@@ -204,7 +212,7 @@ const QVariantMap &MigrationHubRequest::parameters() const
 }
 
 /*!
- * \brief Sets the \a name parameter to \a value.
+ * Sets the \a name parameter to \a value.
  */
 void MigrationHubRequest::setParameter(const QString &name, const QVariant &value)
 {
@@ -213,9 +221,8 @@ void MigrationHubRequest::setParameter(const QString &name, const QVariant &valu
 }
 
 /*!
- * \brief Sets the map of paramters for this request to \a parameters.
- *
- * Any request parameters set previously will be discarded.
+ * Sets the paramters for this request to \a parameters. Any request parameters
+ * set previously will be discarded.
  */
 void MigrationHubRequest::setParameters(const QVariantMap &parameters)
 {
@@ -224,11 +231,12 @@ void MigrationHubRequest::setParameters(const QVariantMap &parameters)
 }
 
 /*!
- * \brief Returns a network request for this MigrationHub request using the given \a endpoint.
+ * Returns a network request for the MigrationHub request using the given
+ * \a endpoint.
  *
- * This MigrationHub implementation builds request URLs by combining the common query
- * parameters (such as Action and Version), with any that have been added (via
- * setParameter) by child classes.
+ * This MigrationHub implementation builds request URLs by combining the
+ * common query parameters (such as Action and Version), with any that have
+ * been added (via setParameter) by child classes.
  */
 QNetworkRequest MigrationHubRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -239,17 +247,16 @@ QNetworkRequest MigrationHubRequest::unsignedRequest(const QUrl &endpoint) const
 }
 
 /*!
+ * \class QtAws::MigrationHub::MigrationHubRequestPrivate
+ * \brief The MigrationHubRequestPrivate class provides private implementation for MigrationHubRequest.
  * \internal
  *
- * \class  MigrationHubRequestPrivate
- *
- * \brief  Private implementation for MigrationHubRequest.
+ * \inmodule QtAwsMigrationHub
  */
 
 /*!
- * \internal
- *
- * \brief Constructs a new MigrationHubRequestPrivate object.
+ * Constructs a MigrationHubRequestPrivate object for MigrationHub \a action with,
+ * public implementation \a q.
  */
 MigrationHubRequestPrivate::MigrationHubRequestPrivate(const MigrationHubRequest::Action action, MigrationHubRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
@@ -258,9 +265,7 @@ MigrationHubRequestPrivate::MigrationHubRequestPrivate(const MigrationHubRequest
 }
 
 /*!
- * \internal
- *
- * \brief Constructs a new MigrationHubRequestPrivate object, copying an existing one.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
@@ -276,15 +281,12 @@ MigrationHubRequestPrivate::MigrationHubRequestPrivate(const MigrationHubRequest
 }
 
 /*!
- * \internal
- *
- * \brief Returns a string representing \a action.
+ * Returns a string represention of \a action, or a null string if \a action is
+ * invalid.
  *
  * This function converts MigrationHubRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the MigrationHub service's Action
  * query parameters.
- *
- * @return A string representing \a action, or a null string if \a action is invalid.
  */
 QString MigrationHubRequestPrivate::toString(const MigrationHubRequest::Action &action)
 {

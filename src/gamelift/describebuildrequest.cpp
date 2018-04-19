@@ -27,10 +27,9 @@ namespace GameLift {
 
 /*!
  * \class QtAws::GameLift::DescribeBuildRequest
- *
  * \brief The DescribeBuildRequest class provides an interface for GameLift DescribeBuild requests.
  *
- * \ingroup GameLift
+ * \inmodule QtAwsGameLift
  *
  *  <fullname>Amazon GameLift Service</fullname>
  * 
@@ -473,9 +472,7 @@ namespace GameLift {
  */
 
 /*!
- * @brief  Constructs a new DescribeBuildRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeBuildRequest::DescribeBuildRequest(const DescribeBuildRequest &other)
     : GameLiftRequest(new DescribeBuildRequestPrivate(*other.d_func(), this))
@@ -484,7 +481,7 @@ DescribeBuildRequest::DescribeBuildRequest(const DescribeBuildRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DescribeBuildRequest object.
+ * Constructs a DescribeBuildRequest object.
  */
 DescribeBuildRequest::DescribeBuildRequest()
     : GameLiftRequest(new DescribeBuildRequestPrivate(GameLiftRequest::DescribeBuildAction, this))
@@ -502,14 +499,9 @@ bool DescribeBuildRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeBuildResponse object.
+ * Returns a DescribeBuildResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeBuildResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GameLiftClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeBuildRequest::response(QNetworkReply * const reply) const
 {
@@ -517,20 +509,17 @@ QtAws::Core::AwsAbstractResponse * DescribeBuildRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::GameLift::DescribeBuildRequestPrivate
+ * \brief The DescribeBuildRequestPrivate class provides private implementation for DescribeBuildRequest.
+ * \internal
  *
- * @class  DescribeBuildRequestPrivate
- *
- * @brief  Private implementation for DescribeBuildRequest.
+ * \inmodule QtAwsGameLift
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeBuildRequestPrivate object.
- *
- * @param  action  GameLift action being performed.
- * @param  q       Pointer to this object's public DescribeBuildRequest instance.
+ * Constructs a DescribeBuildRequestPrivate object for GameLift \a action with,
+ * public implementation \a q.
  */
 DescribeBuildRequestPrivate::DescribeBuildRequestPrivate(
     const GameLiftRequest::Action action, DescribeBuildRequest * const q)
@@ -540,15 +529,10 @@ DescribeBuildRequestPrivate::DescribeBuildRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeBuildRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeBuildRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeBuildRequest instance.
  */
 DescribeBuildRequestPrivate::DescribeBuildRequestPrivate(
     const DescribeBuildRequestPrivate &other, DescribeBuildRequest * const q)

@@ -27,10 +27,9 @@ namespace SES {
 
 /*!
  * \class QtAws::SES::SendTemplatedEmailRequest
- *
  * \brief The SendTemplatedEmailRequest class provides an interface for SES SendTemplatedEmail requests.
  *
- * \ingroup SES
+ * \inmodule QtAwsSES
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -48,9 +47,7 @@ namespace SES {
  */
 
 /*!
- * @brief  Constructs a new SendTemplatedEmailRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 SendTemplatedEmailRequest::SendTemplatedEmailRequest(const SendTemplatedEmailRequest &other)
     : SESRequest(new SendTemplatedEmailRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ SendTemplatedEmailRequest::SendTemplatedEmailRequest(const SendTemplatedEmailReq
 }
 
 /*!
- * @brief  Constructs a new SendTemplatedEmailRequest object.
+ * Constructs a SendTemplatedEmailRequest object.
  */
 SendTemplatedEmailRequest::SendTemplatedEmailRequest()
     : SESRequest(new SendTemplatedEmailRequestPrivate(SESRequest::SendTemplatedEmailAction, this))
@@ -77,14 +74,9 @@ bool SendTemplatedEmailRequest::isValid() const
 
 
 /*!
- * @brief  Construct an SendTemplatedEmailResponse object.
+ * Returns a SendTemplatedEmailResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An SendTemplatedEmailResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SESClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * SendTemplatedEmailRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * SendTemplatedEmailRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::SES::SendTemplatedEmailRequestPrivate
+ * \brief The SendTemplatedEmailRequestPrivate class provides private implementation for SendTemplatedEmailRequest.
+ * \internal
  *
- * @class  SendTemplatedEmailRequestPrivate
- *
- * @brief  Private implementation for SendTemplatedEmailRequest.
+ * \inmodule QtAwsSES
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new SendTemplatedEmailRequestPrivate object.
- *
- * @param  action  SES action being performed.
- * @param  q       Pointer to this object's public SendTemplatedEmailRequest instance.
+ * Constructs a SendTemplatedEmailRequestPrivate object for SES \a action with,
+ * public implementation \a q.
  */
 SendTemplatedEmailRequestPrivate::SendTemplatedEmailRequestPrivate(
     const SESRequest::Action action, SendTemplatedEmailRequest * const q)
@@ -115,15 +104,10 @@ SendTemplatedEmailRequestPrivate::SendTemplatedEmailRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SendTemplatedEmailRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the SendTemplatedEmailRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public SendTemplatedEmailRequest instance.
  */
 SendTemplatedEmailRequestPrivate::SendTemplatedEmailRequestPrivate(
     const SendTemplatedEmailRequestPrivate &other, SendTemplatedEmailRequest * const q)

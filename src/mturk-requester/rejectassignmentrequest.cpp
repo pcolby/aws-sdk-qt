@@ -27,19 +27,16 @@ namespace MTurk {
 
 /*!
  * \class QtAws::MTurk::RejectAssignmentRequest
- *
  * \brief The RejectAssignmentRequest class provides an interface for MTurk RejectAssignment requests.
  *
- * \ingroup MTurk
+ * \inmodule QtAwsMTurk
  *
  *
  * \sa MTurkClient::rejectAssignment
  */
 
 /*!
- * @brief  Constructs a new RejectAssignmentRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 RejectAssignmentRequest::RejectAssignmentRequest(const RejectAssignmentRequest &other)
     : MTurkRequest(new RejectAssignmentRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ RejectAssignmentRequest::RejectAssignmentRequest(const RejectAssignmentRequest &
 }
 
 /*!
- * @brief  Constructs a new RejectAssignmentRequest object.
+ * Constructs a RejectAssignmentRequest object.
  */
 RejectAssignmentRequest::RejectAssignmentRequest()
     : MTurkRequest(new RejectAssignmentRequestPrivate(MTurkRequest::RejectAssignmentAction, this))
@@ -66,14 +63,9 @@ bool RejectAssignmentRequest::isValid() const
 
 
 /*!
- * @brief  Construct an RejectAssignmentResponse object.
+ * Returns a RejectAssignmentResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An RejectAssignmentResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MTurkClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * RejectAssignmentRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * RejectAssignmentRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::MTurk::RejectAssignmentRequestPrivate
+ * \brief The RejectAssignmentRequestPrivate class provides private implementation for RejectAssignmentRequest.
+ * \internal
  *
- * @class  RejectAssignmentRequestPrivate
- *
- * @brief  Private implementation for RejectAssignmentRequest.
+ * \inmodule QtAwsMTurk
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new RejectAssignmentRequestPrivate object.
- *
- * @param  action  MTurk action being performed.
- * @param  q       Pointer to this object's public RejectAssignmentRequest instance.
+ * Constructs a RejectAssignmentRequestPrivate object for MTurk \a action with,
+ * public implementation \a q.
  */
 RejectAssignmentRequestPrivate::RejectAssignmentRequestPrivate(
     const MTurkRequest::Action action, RejectAssignmentRequest * const q)
@@ -104,15 +93,10 @@ RejectAssignmentRequestPrivate::RejectAssignmentRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RejectAssignmentRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the RejectAssignmentRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public RejectAssignmentRequest instance.
  */
 RejectAssignmentRequestPrivate::RejectAssignmentRequestPrivate(
     const RejectAssignmentRequestPrivate &other, RejectAssignmentRequest * const q)

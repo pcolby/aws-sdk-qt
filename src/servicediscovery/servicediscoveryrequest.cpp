@@ -25,16 +25,39 @@ namespace ServiceDiscovery {
 
 /*!
  * \class QtAws::ServiceDiscovery::ServiceDiscoveryRequest
- *
  * \brief The ServiceDiscoveryRequest class provides an interface for ServiceDiscovery requests.
  *
- * \ingroup ServiceDiscovery
+ * \inmodule QtAwsServiceDiscovery
  */
 
 /*!
- * @brief  Constructs a new ServiceDiscoveryRequest object.
+ * \enum ServiceDiscoveryRequest::Action
  *
- * @param  action  The ServiceDiscovery action to request.
+ * This enum describes the actions that can be performed as ServiceDiscovery
+ * requests.
+ *
+ * \value CreatePrivateDnsNamespaceAction ServiceDiscovery CreatePrivateDnsNamespace action.
+ * \value CreatePublicDnsNamespaceAction ServiceDiscovery CreatePublicDnsNamespace action.
+ * \value CreateServiceAction ServiceDiscovery CreateService action.
+ * \value DeleteNamespaceAction ServiceDiscovery DeleteNamespace action.
+ * \value DeleteServiceAction ServiceDiscovery DeleteService action.
+ * \value DeregisterInstanceAction ServiceDiscovery DeregisterInstance action.
+ * \value GetInstanceAction ServiceDiscovery GetInstance action.
+ * \value GetInstancesHealthStatusAction ServiceDiscovery GetInstancesHealthStatus action.
+ * \value GetNamespaceAction ServiceDiscovery GetNamespace action.
+ * \value GetOperationAction ServiceDiscovery GetOperation action.
+ * \value GetServiceAction ServiceDiscovery GetService action.
+ * \value ListInstancesAction ServiceDiscovery ListInstances action.
+ * \value ListNamespacesAction ServiceDiscovery ListNamespaces action.
+ * \value ListOperationsAction ServiceDiscovery ListOperations action.
+ * \value ListServicesAction ServiceDiscovery ListServices action.
+ * \value RegisterInstanceAction ServiceDiscovery RegisterInstance action.
+ * \value UpdateInstanceCustomHealthStatusAction ServiceDiscovery UpdateInstanceCustomHealthStatus action.
+ * \value UpdateServiceAction ServiceDiscovery UpdateService action.
+ */
+
+/*!
+ * Constructs a[n] ServiceDiscoveryRequest object for ServiceDiscovery \a action.
  */
 ServiceDiscoveryRequest::ServiceDiscoveryRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new ServiceDiscoveryRequestPrivate(action, this))
@@ -43,9 +66,7 @@ ServiceDiscoveryRequest::ServiceDiscoveryRequest(const Action action)
 }
 
 /*!
- * @brief  Constructs a new ServiceDiscoveryRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ServiceDiscoveryRequest::ServiceDiscoveryRequest(const ServiceDiscoveryRequest &other)
     : QtAws::Core::AwsAbstractRequest(new ServiceDiscoveryRequestPrivate(*other.d_func(), this))
@@ -54,13 +75,7 @@ ServiceDiscoveryRequest::ServiceDiscoveryRequest(const ServiceDiscoveryRequest &
 }
 
 /*!
- * @brief  Assignment operator.
- *
- * Assigns \a other to \c this.
- *
- * @param  other  Instance to copy.
- *
- * @return  A reference to \c this.
+ * Sets the ServiceDiscoveryRequest object to be equal to \a other.
  */
 ServiceDiscoveryRequest& ServiceDiscoveryRequest::operator=(const ServiceDiscoveryRequest &other)
 {
@@ -72,14 +87,10 @@ ServiceDiscoveryRequest& ServiceDiscoveryRequest::operator=(const ServiceDiscove
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ServiceDiscoveryRequest object.
+ * Constructs aa ServiceDiscoveryRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from ServiceDiscoveryRequestPrivate.
- *
- * @param  d  Pointer to private data (aka D-Pointer).
  */
 ServiceDiscoveryRequest::ServiceDiscoveryRequest(ServiceDiscoveryRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
@@ -87,7 +98,7 @@ ServiceDiscoveryRequest::ServiceDiscoveryRequest(ServiceDiscoveryRequestPrivate 
 }
 
 /*!
- * \brief Returns the ServiceDiscovery action to be performed by this request.
+ * Returns the ServiceDiscovery action to be performed by this request.
  */
 ServiceDiscoveryRequest::Action ServiceDiscoveryRequest::action() const
 {
@@ -96,7 +107,7 @@ ServiceDiscoveryRequest::Action ServiceDiscoveryRequest::action() const
 }
 
 /*!
- * \brief Returns the name of the ServiceDiscovery action to be performed by this request.
+ * Returns the name of the ServiceDiscovery action to be performed by this request.
  */
 QString ServiceDiscoveryRequest::actionString() const
 {
@@ -104,7 +115,7 @@ QString ServiceDiscoveryRequest::actionString() const
 }
 
 /*!
- * \brief Returns the ServiceDiscovery API version implemented by this request.
+ * Returns the ServiceDiscovery API version implemented by this request.
  */
 QString ServiceDiscoveryRequest::apiVersion() const
 {
@@ -113,7 +124,7 @@ QString ServiceDiscoveryRequest::apiVersion() const
 }
 
 /*!
- * @brief Set the ServiceDiscovery action to be performed by this request to \a action.
+ * Sets the ServiceDiscovery action to be performed by this request to \a action.
  */
 void ServiceDiscoveryRequest::setAction(const Action action)
 {
@@ -122,7 +133,7 @@ void ServiceDiscoveryRequest::setAction(const Action action)
 }
 
 /*!
- * Set the ServiceDiscovery API version to include in this request to \a version.
+ * Sets the ServiceDiscovery API version to include in this request to \a version.
  */
 void ServiceDiscoveryRequest::setApiVersion(const QString &version)
 {
@@ -131,7 +142,7 @@ void ServiceDiscoveryRequest::setApiVersion(const QString &version)
 }
 
 /*!
- * \brief Returns \c true if this request is the same as \a other.
+ * Returns \c true if this request is equal to \a other; \c false otherwise.
  *
  * Note, most derived *Request classes do not need to provider their own
  * implementations of this function, since most such request classes rely on
@@ -146,8 +157,8 @@ bool ServiceDiscoveryRequest::operator==(const ServiceDiscoveryRequest &other) c
             (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
-/*!
- * @brief  Check if \a queueName is a valid ServiceDiscovery queue name.
+/*
+ * Returns \c tue if \a queueName is a valid ServiceDiscovery queue name.
  *
  * @par From ServiceDiscovery FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
@@ -166,9 +177,8 @@ bool ServiceDiscoveryRequest::operator==(const ServiceDiscoveryRequest &other) c
 }*/
 
 /*!
- * \brief Removes the a \a name parameter from this request.
- *
- * Returns the count of paramters removed (typically \c 0 or \c 1).
+ * Removes the a \a name parameter from the request, then returns the number of
+ * paramters removed (typically \c 0 or \c 1).
  */
 int ServiceDiscoveryRequest::clearParameter(const QString &name)
 {
@@ -177,7 +187,7 @@ int ServiceDiscoveryRequest::clearParameter(const QString &name)
 }
 
 /*!
- * \brief Removes all parameters from this request.
+ * Removes all parameters from the request.
  */
 void ServiceDiscoveryRequest::clearParameters()
 {
@@ -186,7 +196,7 @@ void ServiceDiscoveryRequest::clearParameters()
 }
 
 /*!
- * \brief Returns the value of the \n name pararemter if set, otherwise \a defaultValue.
+ * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
 QVariant ServiceDiscoveryRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
@@ -195,7 +205,7 @@ QVariant ServiceDiscoveryRequest::parameter(const QString &name, const QVariant 
 }
 
 /*!
- * \brief Returns a map of parameters included in this request.
+ * Returns the parameters included in this request.
  */
 const QVariantMap &ServiceDiscoveryRequest::parameters() const
 {
@@ -204,7 +214,7 @@ const QVariantMap &ServiceDiscoveryRequest::parameters() const
 }
 
 /*!
- * \brief Sets the \a name parameter to \a value.
+ * Sets the \a name parameter to \a value.
  */
 void ServiceDiscoveryRequest::setParameter(const QString &name, const QVariant &value)
 {
@@ -213,9 +223,8 @@ void ServiceDiscoveryRequest::setParameter(const QString &name, const QVariant &
 }
 
 /*!
- * \brief Sets the map of paramters for this request to \a parameters.
- *
- * Any request parameters set previously will be discarded.
+ * Sets the paramters for this request to \a parameters. Any request parameters
+ * set previously will be discarded.
  */
 void ServiceDiscoveryRequest::setParameters(const QVariantMap &parameters)
 {
@@ -224,11 +233,12 @@ void ServiceDiscoveryRequest::setParameters(const QVariantMap &parameters)
 }
 
 /*!
- * \brief Returns a network request for this ServiceDiscovery request using the given \a endpoint.
+ * Returns a network request for the ServiceDiscovery request using the given
+ * \a endpoint.
  *
- * This ServiceDiscovery implementation builds request URLs by combining the common query
- * parameters (such as Action and Version), with any that have been added (via
- * setParameter) by child classes.
+ * This ServiceDiscovery implementation builds request URLs by combining the
+ * common query parameters (such as Action and Version), with any that have
+ * been added (via setParameter) by child classes.
  */
 QNetworkRequest ServiceDiscoveryRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -239,17 +249,16 @@ QNetworkRequest ServiceDiscoveryRequest::unsignedRequest(const QUrl &endpoint) c
 }
 
 /*!
+ * \class QtAws::ServiceDiscovery::ServiceDiscoveryRequestPrivate
+ * \brief The ServiceDiscoveryRequestPrivate class provides private implementation for ServiceDiscoveryRequest.
  * \internal
  *
- * \class  ServiceDiscoveryRequestPrivate
- *
- * \brief  Private implementation for ServiceDiscoveryRequest.
+ * \inmodule QtAwsServiceDiscovery
  */
 
 /*!
- * \internal
- *
- * \brief Constructs a new ServiceDiscoveryRequestPrivate object.
+ * Constructs a ServiceDiscoveryRequestPrivate object for ServiceDiscovery \a action with,
+ * public implementation \a q.
  */
 ServiceDiscoveryRequestPrivate::ServiceDiscoveryRequestPrivate(const ServiceDiscoveryRequest::Action action, ServiceDiscoveryRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
@@ -258,9 +267,7 @@ ServiceDiscoveryRequestPrivate::ServiceDiscoveryRequestPrivate(const ServiceDisc
 }
 
 /*!
- * \internal
- *
- * \brief Constructs a new ServiceDiscoveryRequestPrivate object, copying an existing one.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
@@ -276,15 +283,12 @@ ServiceDiscoveryRequestPrivate::ServiceDiscoveryRequestPrivate(const ServiceDisc
 }
 
 /*!
- * \internal
- *
- * \brief Returns a string representing \a action.
+ * Returns a string represention of \a action, or a null string if \a action is
+ * invalid.
  *
  * This function converts ServiceDiscoveryRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the ServiceDiscovery service's Action
  * query parameters.
- *
- * @return A string representing \a action, or a null string if \a action is invalid.
  */
 QString ServiceDiscoveryRequestPrivate::toString(const ServiceDiscoveryRequest::Action &action)
 {

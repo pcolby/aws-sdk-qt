@@ -27,10 +27,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::RemoveThingFromThingGroupRequest
- *
  * \brief The RemoveThingFromThingGroupRequest class provides an interface for IoT RemoveThingFromThingGroup requests.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -48,9 +47,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new RemoveThingFromThingGroupRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 RemoveThingFromThingGroupRequest::RemoveThingFromThingGroupRequest(const RemoveThingFromThingGroupRequest &other)
     : IoTRequest(new RemoveThingFromThingGroupRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ RemoveThingFromThingGroupRequest::RemoveThingFromThingGroupRequest(const RemoveT
 }
 
 /*!
- * @brief  Constructs a new RemoveThingFromThingGroupRequest object.
+ * Constructs a RemoveThingFromThingGroupRequest object.
  */
 RemoveThingFromThingGroupRequest::RemoveThingFromThingGroupRequest()
     : IoTRequest(new RemoveThingFromThingGroupRequestPrivate(IoTRequest::RemoveThingFromThingGroupAction, this))
@@ -77,14 +74,9 @@ bool RemoveThingFromThingGroupRequest::isValid() const
 
 
 /*!
- * @brief  Construct an RemoveThingFromThingGroupResponse object.
+ * Returns a RemoveThingFromThingGroupResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An RemoveThingFromThingGroupResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IoTClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * RemoveThingFromThingGroupRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * RemoveThingFromThingGroupRequest::response(QN
 }
 
 /*!
- * @internal
+ * \class QtAws::IoT::RemoveThingFromThingGroupRequestPrivate
+ * \brief The RemoveThingFromThingGroupRequestPrivate class provides private implementation for RemoveThingFromThingGroupRequest.
+ * \internal
  *
- * @class  RemoveThingFromThingGroupRequestPrivate
- *
- * @brief  Private implementation for RemoveThingFromThingGroupRequest.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new RemoveThingFromThingGroupRequestPrivate object.
- *
- * @param  action  IoT action being performed.
- * @param  q       Pointer to this object's public RemoveThingFromThingGroupRequest instance.
+ * Constructs a RemoveThingFromThingGroupRequestPrivate object for IoT \a action with,
+ * public implementation \a q.
  */
 RemoveThingFromThingGroupRequestPrivate::RemoveThingFromThingGroupRequestPrivate(
     const IoTRequest::Action action, RemoveThingFromThingGroupRequest * const q)
@@ -115,15 +104,10 @@ RemoveThingFromThingGroupRequestPrivate::RemoveThingFromThingGroupRequestPrivate
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RemoveThingFromThingGroupRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the RemoveThingFromThingGroupRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public RemoveThingFromThingGroupRequest instance.
  */
 RemoveThingFromThingGroupRequestPrivate::RemoveThingFromThingGroupRequestPrivate(
     const RemoveThingFromThingGroupRequestPrivate &other, RemoveThingFromThingGroupRequest * const q)

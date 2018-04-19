@@ -27,10 +27,9 @@ namespace CodePipeline {
 
 /*!
  * \class QtAws::CodePipeline::PutJobFailureResultRequest
- *
  * \brief The PutJobFailureResultRequest class provides an interface for CodePipeline PutJobFailureResult requests.
  *
- * \ingroup CodePipeline
+ * \inmodule QtAwsCodePipeline
  *
  *  <fullname>AWS CodePipeline</fullname>
  * 
@@ -200,9 +199,7 @@ namespace CodePipeline {
  */
 
 /*!
- * @brief  Constructs a new PutJobFailureResultRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 PutJobFailureResultRequest::PutJobFailureResultRequest(const PutJobFailureResultRequest &other)
     : CodePipelineRequest(new PutJobFailureResultRequestPrivate(*other.d_func(), this))
@@ -211,7 +208,7 @@ PutJobFailureResultRequest::PutJobFailureResultRequest(const PutJobFailureResult
 }
 
 /*!
- * @brief  Constructs a new PutJobFailureResultRequest object.
+ * Constructs a PutJobFailureResultRequest object.
  */
 PutJobFailureResultRequest::PutJobFailureResultRequest()
     : CodePipelineRequest(new PutJobFailureResultRequestPrivate(CodePipelineRequest::PutJobFailureResultAction, this))
@@ -229,14 +226,9 @@ bool PutJobFailureResultRequest::isValid() const
 
 
 /*!
- * @brief  Construct an PutJobFailureResultResponse object.
+ * Returns a PutJobFailureResultResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An PutJobFailureResultResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CodePipelineClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * PutJobFailureResultRequest::response(QNetworkReply * const reply) const
 {
@@ -244,20 +236,17 @@ QtAws::Core::AwsAbstractResponse * PutJobFailureResultRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::CodePipeline::PutJobFailureResultRequestPrivate
+ * \brief The PutJobFailureResultRequestPrivate class provides private implementation for PutJobFailureResultRequest.
+ * \internal
  *
- * @class  PutJobFailureResultRequestPrivate
- *
- * @brief  Private implementation for PutJobFailureResultRequest.
+ * \inmodule QtAwsCodePipeline
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new PutJobFailureResultRequestPrivate object.
- *
- * @param  action  CodePipeline action being performed.
- * @param  q       Pointer to this object's public PutJobFailureResultRequest instance.
+ * Constructs a PutJobFailureResultRequestPrivate object for CodePipeline \a action with,
+ * public implementation \a q.
  */
 PutJobFailureResultRequestPrivate::PutJobFailureResultRequestPrivate(
     const CodePipelineRequest::Action action, PutJobFailureResultRequest * const q)
@@ -267,15 +256,10 @@ PutJobFailureResultRequestPrivate::PutJobFailureResultRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutJobFailureResultRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the PutJobFailureResultRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public PutJobFailureResultRequest instance.
  */
 PutJobFailureResultRequestPrivate::PutJobFailureResultRequestPrivate(
     const PutJobFailureResultRequestPrivate &other, PutJobFailureResultRequest * const q)

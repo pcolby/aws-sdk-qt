@@ -27,10 +27,9 @@ namespace CloudWatch {
 
 /*!
  * \class QtAws::CloudWatch::DeleteAlarmsRequest
- *
  * \brief The DeleteAlarmsRequest class provides an interface for CloudWatch DeleteAlarms requests.
  *
- * \ingroup CloudWatch
+ * \inmodule QtAwsCloudWatch
  *
  *  Amazon CloudWatch monitors your Amazon Web Services (AWS) resources and the applications you run on AWS in real time.
  *  You can use CloudWatch to collect and track metrics, which are the variables you want to measure for your resources and
@@ -51,9 +50,7 @@ namespace CloudWatch {
  */
 
 /*!
- * @brief  Constructs a new DeleteAlarmsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteAlarmsRequest::DeleteAlarmsRequest(const DeleteAlarmsRequest &other)
     : CloudWatchRequest(new DeleteAlarmsRequestPrivate(*other.d_func(), this))
@@ -62,7 +59,7 @@ DeleteAlarmsRequest::DeleteAlarmsRequest(const DeleteAlarmsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DeleteAlarmsRequest object.
+ * Constructs a DeleteAlarmsRequest object.
  */
 DeleteAlarmsRequest::DeleteAlarmsRequest()
     : CloudWatchRequest(new DeleteAlarmsRequestPrivate(CloudWatchRequest::DeleteAlarmsAction, this))
@@ -80,14 +77,9 @@ bool DeleteAlarmsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteAlarmsResponse object.
+ * Returns a DeleteAlarmsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteAlarmsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudWatchClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteAlarmsRequest::response(QNetworkReply * const reply) const
 {
@@ -95,20 +87,17 @@ QtAws::Core::AwsAbstractResponse * DeleteAlarmsRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudWatch::DeleteAlarmsRequestPrivate
+ * \brief The DeleteAlarmsRequestPrivate class provides private implementation for DeleteAlarmsRequest.
+ * \internal
  *
- * @class  DeleteAlarmsRequestPrivate
- *
- * @brief  Private implementation for DeleteAlarmsRequest.
+ * \inmodule QtAwsCloudWatch
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteAlarmsRequestPrivate object.
- *
- * @param  action  CloudWatch action being performed.
- * @param  q       Pointer to this object's public DeleteAlarmsRequest instance.
+ * Constructs a DeleteAlarmsRequestPrivate object for CloudWatch \a action with,
+ * public implementation \a q.
  */
 DeleteAlarmsRequestPrivate::DeleteAlarmsRequestPrivate(
     const CloudWatchRequest::Action action, DeleteAlarmsRequest * const q)
@@ -118,15 +107,10 @@ DeleteAlarmsRequestPrivate::DeleteAlarmsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteAlarmsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteAlarmsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteAlarmsRequest instance.
  */
 DeleteAlarmsRequestPrivate::DeleteAlarmsRequestPrivate(
     const DeleteAlarmsRequestPrivate &other, DeleteAlarmsRequest * const q)

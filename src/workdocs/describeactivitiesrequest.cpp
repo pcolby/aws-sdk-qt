@@ -27,10 +27,9 @@ namespace WorkDocs {
 
 /*!
  * \class QtAws::WorkDocs::DescribeActivitiesRequest
- *
  * \brief The DescribeActivitiesRequest class provides an interface for WorkDocs DescribeActivities requests.
  *
- * \ingroup WorkDocs
+ * \inmodule QtAwsWorkDocs
  *
  *  The WorkDocs API is designed for the following use
  * 
@@ -66,9 +65,7 @@ namespace WorkDocs {
  */
 
 /*!
- * @brief  Constructs a new DescribeActivitiesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeActivitiesRequest::DescribeActivitiesRequest(const DescribeActivitiesRequest &other)
     : WorkDocsRequest(new DescribeActivitiesRequestPrivate(*other.d_func(), this))
@@ -77,7 +74,7 @@ DescribeActivitiesRequest::DescribeActivitiesRequest(const DescribeActivitiesReq
 }
 
 /*!
- * @brief  Constructs a new DescribeActivitiesRequest object.
+ * Constructs a DescribeActivitiesRequest object.
  */
 DescribeActivitiesRequest::DescribeActivitiesRequest()
     : WorkDocsRequest(new DescribeActivitiesRequestPrivate(WorkDocsRequest::DescribeActivitiesAction, this))
@@ -95,14 +92,9 @@ bool DescribeActivitiesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeActivitiesResponse object.
+ * Returns a DescribeActivitiesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeActivitiesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WorkDocsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeActivitiesRequest::response(QNetworkReply * const reply) const
 {
@@ -110,20 +102,17 @@ QtAws::Core::AwsAbstractResponse * DescribeActivitiesRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::WorkDocs::DescribeActivitiesRequestPrivate
+ * \brief The DescribeActivitiesRequestPrivate class provides private implementation for DescribeActivitiesRequest.
+ * \internal
  *
- * @class  DescribeActivitiesRequestPrivate
- *
- * @brief  Private implementation for DescribeActivitiesRequest.
+ * \inmodule QtAwsWorkDocs
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeActivitiesRequestPrivate object.
- *
- * @param  action  WorkDocs action being performed.
- * @param  q       Pointer to this object's public DescribeActivitiesRequest instance.
+ * Constructs a DescribeActivitiesRequestPrivate object for WorkDocs \a action with,
+ * public implementation \a q.
  */
 DescribeActivitiesRequestPrivate::DescribeActivitiesRequestPrivate(
     const WorkDocsRequest::Action action, DescribeActivitiesRequest * const q)
@@ -133,15 +122,10 @@ DescribeActivitiesRequestPrivate::DescribeActivitiesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeActivitiesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeActivitiesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeActivitiesRequest instance.
  */
 DescribeActivitiesRequestPrivate::DescribeActivitiesRequestPrivate(
     const DescribeActivitiesRequestPrivate &other, DescribeActivitiesRequest * const q)

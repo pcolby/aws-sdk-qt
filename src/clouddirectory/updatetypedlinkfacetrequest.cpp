@@ -27,10 +27,9 @@ namespace CloudDirectory {
 
 /*!
  * \class QtAws::CloudDirectory::UpdateTypedLinkFacetRequest
- *
  * \brief The UpdateTypedLinkFacetRequest class provides an interface for CloudDirectory UpdateTypedLinkFacet requests.
  *
- * \ingroup CloudDirectory
+ * \inmodule QtAwsCloudDirectory
  *
  *  <fullname>Amazon Cloud Directory</fullname>
  * 
@@ -44,9 +43,7 @@ namespace CloudDirectory {
  */
 
 /*!
- * @brief  Constructs a new UpdateTypedLinkFacetRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateTypedLinkFacetRequest::UpdateTypedLinkFacetRequest(const UpdateTypedLinkFacetRequest &other)
     : CloudDirectoryRequest(new UpdateTypedLinkFacetRequestPrivate(*other.d_func(), this))
@@ -55,7 +52,7 @@ UpdateTypedLinkFacetRequest::UpdateTypedLinkFacetRequest(const UpdateTypedLinkFa
 }
 
 /*!
- * @brief  Constructs a new UpdateTypedLinkFacetRequest object.
+ * Constructs a UpdateTypedLinkFacetRequest object.
  */
 UpdateTypedLinkFacetRequest::UpdateTypedLinkFacetRequest()
     : CloudDirectoryRequest(new UpdateTypedLinkFacetRequestPrivate(CloudDirectoryRequest::UpdateTypedLinkFacetAction, this))
@@ -73,14 +70,9 @@ bool UpdateTypedLinkFacetRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateTypedLinkFacetResponse object.
+ * Returns a UpdateTypedLinkFacetResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateTypedLinkFacetResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudDirectoryClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateTypedLinkFacetRequest::response(QNetworkReply * const reply) const
 {
@@ -88,20 +80,17 @@ QtAws::Core::AwsAbstractResponse * UpdateTypedLinkFacetRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudDirectory::UpdateTypedLinkFacetRequestPrivate
+ * \brief The UpdateTypedLinkFacetRequestPrivate class provides private implementation for UpdateTypedLinkFacetRequest.
+ * \internal
  *
- * @class  UpdateTypedLinkFacetRequestPrivate
- *
- * @brief  Private implementation for UpdateTypedLinkFacetRequest.
+ * \inmodule QtAwsCloudDirectory
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateTypedLinkFacetRequestPrivate object.
- *
- * @param  action  CloudDirectory action being performed.
- * @param  q       Pointer to this object's public UpdateTypedLinkFacetRequest instance.
+ * Constructs a UpdateTypedLinkFacetRequestPrivate object for CloudDirectory \a action with,
+ * public implementation \a q.
  */
 UpdateTypedLinkFacetRequestPrivate::UpdateTypedLinkFacetRequestPrivate(
     const CloudDirectoryRequest::Action action, UpdateTypedLinkFacetRequest * const q)
@@ -111,15 +100,10 @@ UpdateTypedLinkFacetRequestPrivate::UpdateTypedLinkFacetRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateTypedLinkFacetRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateTypedLinkFacetRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateTypedLinkFacetRequest instance.
  */
 UpdateTypedLinkFacetRequestPrivate::UpdateTypedLinkFacetRequestPrivate(
     const UpdateTypedLinkFacetRequestPrivate &other, UpdateTypedLinkFacetRequest * const q)

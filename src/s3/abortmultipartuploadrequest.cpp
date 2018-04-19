@@ -27,19 +27,16 @@ namespace S3 {
 
 /*!
  * \class QtAws::S3::AbortMultipartUploadRequest
- *
  * \brief The AbortMultipartUploadRequest class provides an interface for S3 AbortMultipartUpload requests.
  *
- * \ingroup S3
+ * \inmodule QtAwsS3
  *
  *
  * \sa S3Client::abortMultipartUpload
  */
 
 /*!
- * @brief  Constructs a new AbortMultipartUploadRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AbortMultipartUploadRequest::AbortMultipartUploadRequest(const AbortMultipartUploadRequest &other)
     : S3Request(new AbortMultipartUploadRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ AbortMultipartUploadRequest::AbortMultipartUploadRequest(const AbortMultipartUpl
 }
 
 /*!
- * @brief  Constructs a new AbortMultipartUploadRequest object.
+ * Constructs a AbortMultipartUploadRequest object.
  */
 AbortMultipartUploadRequest::AbortMultipartUploadRequest()
     : S3Request(new AbortMultipartUploadRequestPrivate(S3Request::AbortMultipartUploadAction, this))
@@ -66,14 +63,9 @@ bool AbortMultipartUploadRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AbortMultipartUploadResponse object.
+ * Returns a AbortMultipartUploadResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AbortMultipartUploadResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  S3Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AbortMultipartUploadRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * AbortMultipartUploadRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::S3::AbortMultipartUploadRequestPrivate
+ * \brief The AbortMultipartUploadRequestPrivate class provides private implementation for AbortMultipartUploadRequest.
+ * \internal
  *
- * @class  AbortMultipartUploadRequestPrivate
- *
- * @brief  Private implementation for AbortMultipartUploadRequest.
+ * \inmodule QtAwsS3
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AbortMultipartUploadRequestPrivate object.
- *
- * @param  action  S3 action being performed.
- * @param  q       Pointer to this object's public AbortMultipartUploadRequest instance.
+ * Constructs a AbortMultipartUploadRequestPrivate object for S3 \a action with,
+ * public implementation \a q.
  */
 AbortMultipartUploadRequestPrivate::AbortMultipartUploadRequestPrivate(
     const S3Request::Action action, AbortMultipartUploadRequest * const q)
@@ -104,15 +93,10 @@ AbortMultipartUploadRequestPrivate::AbortMultipartUploadRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AbortMultipartUploadRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AbortMultipartUploadRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AbortMultipartUploadRequest instance.
  */
 AbortMultipartUploadRequestPrivate::AbortMultipartUploadRequestPrivate(
     const AbortMultipartUploadRequestPrivate &other, AbortMultipartUploadRequest * const q)

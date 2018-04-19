@@ -27,10 +27,9 @@ namespace DAX {
 
 /*!
  * \class QtAws::DAX::DescribeSubnetGroupsRequest
- *
  * \brief The DescribeSubnetGroupsRequest class provides an interface for DAX DescribeSubnetGroups requests.
  *
- * \ingroup DAX
+ * \inmodule QtAwsDAX
  *
  *  DAX is a managed caching service engineered for Amazon DynamoDB. DAX dramatically speeds up database reads by caching
  *  frequently-accessed data from DynamoDB, so applications can access that data with sub-millisecond latency. You can
@@ -41,9 +40,7 @@ namespace DAX {
  */
 
 /*!
- * @brief  Constructs a new DescribeSubnetGroupsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeSubnetGroupsRequest::DescribeSubnetGroupsRequest(const DescribeSubnetGroupsRequest &other)
     : DAXRequest(new DescribeSubnetGroupsRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ DescribeSubnetGroupsRequest::DescribeSubnetGroupsRequest(const DescribeSubnetGro
 }
 
 /*!
- * @brief  Constructs a new DescribeSubnetGroupsRequest object.
+ * Constructs a DescribeSubnetGroupsRequest object.
  */
 DescribeSubnetGroupsRequest::DescribeSubnetGroupsRequest()
     : DAXRequest(new DescribeSubnetGroupsRequestPrivate(DAXRequest::DescribeSubnetGroupsAction, this))
@@ -70,14 +67,9 @@ bool DescribeSubnetGroupsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeSubnetGroupsResponse object.
+ * Returns a DescribeSubnetGroupsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeSubnetGroupsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DAXClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeSubnetGroupsRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * DescribeSubnetGroupsRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::DAX::DescribeSubnetGroupsRequestPrivate
+ * \brief The DescribeSubnetGroupsRequestPrivate class provides private implementation for DescribeSubnetGroupsRequest.
+ * \internal
  *
- * @class  DescribeSubnetGroupsRequestPrivate
- *
- * @brief  Private implementation for DescribeSubnetGroupsRequest.
+ * \inmodule QtAwsDAX
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeSubnetGroupsRequestPrivate object.
- *
- * @param  action  DAX action being performed.
- * @param  q       Pointer to this object's public DescribeSubnetGroupsRequest instance.
+ * Constructs a DescribeSubnetGroupsRequestPrivate object for DAX \a action with,
+ * public implementation \a q.
  */
 DescribeSubnetGroupsRequestPrivate::DescribeSubnetGroupsRequestPrivate(
     const DAXRequest::Action action, DescribeSubnetGroupsRequest * const q)
@@ -108,15 +97,10 @@ DescribeSubnetGroupsRequestPrivate::DescribeSubnetGroupsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeSubnetGroupsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeSubnetGroupsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeSubnetGroupsRequest instance.
  */
 DescribeSubnetGroupsRequestPrivate::DescribeSubnetGroupsRequestPrivate(
     const DescribeSubnetGroupsRequestPrivate &other, DescribeSubnetGroupsRequest * const q)

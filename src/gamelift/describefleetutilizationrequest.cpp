@@ -27,10 +27,9 @@ namespace GameLift {
 
 /*!
  * \class QtAws::GameLift::DescribeFleetUtilizationRequest
- *
  * \brief The DescribeFleetUtilizationRequest class provides an interface for GameLift DescribeFleetUtilization requests.
  *
- * \ingroup GameLift
+ * \inmodule QtAwsGameLift
  *
  *  <fullname>Amazon GameLift Service</fullname>
  * 
@@ -473,9 +472,7 @@ namespace GameLift {
  */
 
 /*!
- * @brief  Constructs a new DescribeFleetUtilizationRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeFleetUtilizationRequest::DescribeFleetUtilizationRequest(const DescribeFleetUtilizationRequest &other)
     : GameLiftRequest(new DescribeFleetUtilizationRequestPrivate(*other.d_func(), this))
@@ -484,7 +481,7 @@ DescribeFleetUtilizationRequest::DescribeFleetUtilizationRequest(const DescribeF
 }
 
 /*!
- * @brief  Constructs a new DescribeFleetUtilizationRequest object.
+ * Constructs a DescribeFleetUtilizationRequest object.
  */
 DescribeFleetUtilizationRequest::DescribeFleetUtilizationRequest()
     : GameLiftRequest(new DescribeFleetUtilizationRequestPrivate(GameLiftRequest::DescribeFleetUtilizationAction, this))
@@ -502,14 +499,9 @@ bool DescribeFleetUtilizationRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeFleetUtilizationResponse object.
+ * Returns a DescribeFleetUtilizationResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeFleetUtilizationResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GameLiftClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeFleetUtilizationRequest::response(QNetworkReply * const reply) const
 {
@@ -517,20 +509,17 @@ QtAws::Core::AwsAbstractResponse * DescribeFleetUtilizationRequest::response(QNe
 }
 
 /*!
- * @internal
+ * \class QtAws::GameLift::DescribeFleetUtilizationRequestPrivate
+ * \brief The DescribeFleetUtilizationRequestPrivate class provides private implementation for DescribeFleetUtilizationRequest.
+ * \internal
  *
- * @class  DescribeFleetUtilizationRequestPrivate
- *
- * @brief  Private implementation for DescribeFleetUtilizationRequest.
+ * \inmodule QtAwsGameLift
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeFleetUtilizationRequestPrivate object.
- *
- * @param  action  GameLift action being performed.
- * @param  q       Pointer to this object's public DescribeFleetUtilizationRequest instance.
+ * Constructs a DescribeFleetUtilizationRequestPrivate object for GameLift \a action with,
+ * public implementation \a q.
  */
 DescribeFleetUtilizationRequestPrivate::DescribeFleetUtilizationRequestPrivate(
     const GameLiftRequest::Action action, DescribeFleetUtilizationRequest * const q)
@@ -540,15 +529,10 @@ DescribeFleetUtilizationRequestPrivate::DescribeFleetUtilizationRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeFleetUtilizationRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeFleetUtilizationRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeFleetUtilizationRequest instance.
  */
 DescribeFleetUtilizationRequestPrivate::DescribeFleetUtilizationRequestPrivate(
     const DescribeFleetUtilizationRequestPrivate &other, DescribeFleetUtilizationRequest * const q)

@@ -27,19 +27,16 @@ namespace Pinpoint {
 
 /*!
  * \class QtAws::Pinpoint::UpdateSegmentRequest
- *
  * \brief The UpdateSegmentRequest class provides an interface for Pinpoint UpdateSegment requests.
  *
- * \ingroup Pinpoint
+ * \inmodule QtAwsPinpoint
  *
  *
  * \sa PinpointClient::updateSegment
  */
 
 /*!
- * @brief  Constructs a new UpdateSegmentRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateSegmentRequest::UpdateSegmentRequest(const UpdateSegmentRequest &other)
     : PinpointRequest(new UpdateSegmentRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ UpdateSegmentRequest::UpdateSegmentRequest(const UpdateSegmentRequest &other)
 }
 
 /*!
- * @brief  Constructs a new UpdateSegmentRequest object.
+ * Constructs a UpdateSegmentRequest object.
  */
 UpdateSegmentRequest::UpdateSegmentRequest()
     : PinpointRequest(new UpdateSegmentRequestPrivate(PinpointRequest::UpdateSegmentAction, this))
@@ -66,14 +63,9 @@ bool UpdateSegmentRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateSegmentResponse object.
+ * Returns a UpdateSegmentResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateSegmentResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  PinpointClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateSegmentRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * UpdateSegmentRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::Pinpoint::UpdateSegmentRequestPrivate
+ * \brief The UpdateSegmentRequestPrivate class provides private implementation for UpdateSegmentRequest.
+ * \internal
  *
- * @class  UpdateSegmentRequestPrivate
- *
- * @brief  Private implementation for UpdateSegmentRequest.
+ * \inmodule QtAwsPinpoint
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateSegmentRequestPrivate object.
- *
- * @param  action  Pinpoint action being performed.
- * @param  q       Pointer to this object's public UpdateSegmentRequest instance.
+ * Constructs a UpdateSegmentRequestPrivate object for Pinpoint \a action with,
+ * public implementation \a q.
  */
 UpdateSegmentRequestPrivate::UpdateSegmentRequestPrivate(
     const PinpointRequest::Action action, UpdateSegmentRequest * const q)
@@ -104,15 +93,10 @@ UpdateSegmentRequestPrivate::UpdateSegmentRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateSegmentRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateSegmentRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateSegmentRequest instance.
  */
 UpdateSegmentRequestPrivate::UpdateSegmentRequestPrivate(
     const UpdateSegmentRequestPrivate &other, UpdateSegmentRequest * const q)

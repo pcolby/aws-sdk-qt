@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::ResetFpgaImageAttributeRequest
- *
  * \brief The ResetFpgaImageAttributeRequest class provides an interface for EC2 ResetFpgaImageAttribute requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new ResetFpgaImageAttributeRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ResetFpgaImageAttributeRequest::ResetFpgaImageAttributeRequest(const ResetFpgaImageAttributeRequest &other)
     : EC2Request(new ResetFpgaImageAttributeRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ ResetFpgaImageAttributeRequest::ResetFpgaImageAttributeRequest(const ResetFpgaIm
 }
 
 /*!
- * @brief  Constructs a new ResetFpgaImageAttributeRequest object.
+ * Constructs a ResetFpgaImageAttributeRequest object.
  */
 ResetFpgaImageAttributeRequest::ResetFpgaImageAttributeRequest()
     : EC2Request(new ResetFpgaImageAttributeRequestPrivate(EC2Request::ResetFpgaImageAttributeAction, this))
@@ -70,14 +67,9 @@ bool ResetFpgaImageAttributeRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ResetFpgaImageAttributeResponse object.
+ * Returns a ResetFpgaImageAttributeResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ResetFpgaImageAttributeResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ResetFpgaImageAttributeRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * ResetFpgaImageAttributeRequest::response(QNet
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::ResetFpgaImageAttributeRequestPrivate
+ * \brief The ResetFpgaImageAttributeRequestPrivate class provides private implementation for ResetFpgaImageAttributeRequest.
+ * \internal
  *
- * @class  ResetFpgaImageAttributeRequestPrivate
- *
- * @brief  Private implementation for ResetFpgaImageAttributeRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ResetFpgaImageAttributeRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public ResetFpgaImageAttributeRequest instance.
+ * Constructs a ResetFpgaImageAttributeRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 ResetFpgaImageAttributeRequestPrivate::ResetFpgaImageAttributeRequestPrivate(
     const EC2Request::Action action, ResetFpgaImageAttributeRequest * const q)
@@ -108,15 +97,10 @@ ResetFpgaImageAttributeRequestPrivate::ResetFpgaImageAttributeRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ResetFpgaImageAttributeRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ResetFpgaImageAttributeRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ResetFpgaImageAttributeRequest instance.
  */
 ResetFpgaImageAttributeRequestPrivate::ResetFpgaImageAttributeRequestPrivate(
     const ResetFpgaImageAttributeRequestPrivate &other, ResetFpgaImageAttributeRequest * const q)

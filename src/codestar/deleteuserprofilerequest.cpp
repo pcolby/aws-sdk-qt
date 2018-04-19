@@ -27,10 +27,9 @@ namespace CodeStar {
 
 /*!
  * \class QtAws::CodeStar::DeleteUserProfileRequest
- *
  * \brief The DeleteUserProfileRequest class provides an interface for CodeStar DeleteUserProfile requests.
  *
- * \ingroup CodeStar
+ * \inmodule QtAwsCodeStar
  *
  *  <fullname>AWS CodeStar</fullname>
  * 
@@ -125,9 +124,7 @@ namespace CodeStar {
  */
 
 /*!
- * @brief  Constructs a new DeleteUserProfileRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteUserProfileRequest::DeleteUserProfileRequest(const DeleteUserProfileRequest &other)
     : CodeStarRequest(new DeleteUserProfileRequestPrivate(*other.d_func(), this))
@@ -136,7 +133,7 @@ DeleteUserProfileRequest::DeleteUserProfileRequest(const DeleteUserProfileReques
 }
 
 /*!
- * @brief  Constructs a new DeleteUserProfileRequest object.
+ * Constructs a DeleteUserProfileRequest object.
  */
 DeleteUserProfileRequest::DeleteUserProfileRequest()
     : CodeStarRequest(new DeleteUserProfileRequestPrivate(CodeStarRequest::DeleteUserProfileAction, this))
@@ -154,14 +151,9 @@ bool DeleteUserProfileRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteUserProfileResponse object.
+ * Returns a DeleteUserProfileResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteUserProfileResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CodeStarClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteUserProfileRequest::response(QNetworkReply * const reply) const
 {
@@ -169,20 +161,17 @@ QtAws::Core::AwsAbstractResponse * DeleteUserProfileRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::CodeStar::DeleteUserProfileRequestPrivate
+ * \brief The DeleteUserProfileRequestPrivate class provides private implementation for DeleteUserProfileRequest.
+ * \internal
  *
- * @class  DeleteUserProfileRequestPrivate
- *
- * @brief  Private implementation for DeleteUserProfileRequest.
+ * \inmodule QtAwsCodeStar
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteUserProfileRequestPrivate object.
- *
- * @param  action  CodeStar action being performed.
- * @param  q       Pointer to this object's public DeleteUserProfileRequest instance.
+ * Constructs a DeleteUserProfileRequestPrivate object for CodeStar \a action with,
+ * public implementation \a q.
  */
 DeleteUserProfileRequestPrivate::DeleteUserProfileRequestPrivate(
     const CodeStarRequest::Action action, DeleteUserProfileRequest * const q)
@@ -192,15 +181,10 @@ DeleteUserProfileRequestPrivate::DeleteUserProfileRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteUserProfileRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteUserProfileRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteUserProfileRequest instance.
  */
 DeleteUserProfileRequestPrivate::DeleteUserProfileRequestPrivate(
     const DeleteUserProfileRequestPrivate &other, DeleteUserProfileRequest * const q)

@@ -27,19 +27,16 @@ namespace Route53 {
 
 /*!
  * \class QtAws::Route53::CreateHostedZoneRequest
- *
  * \brief The CreateHostedZoneRequest class provides an interface for Route53 CreateHostedZone requests.
  *
- * \ingroup Route53
+ * \inmodule QtAwsRoute53
  *
  *
  * \sa Route53Client::createHostedZone
  */
 
 /*!
- * @brief  Constructs a new CreateHostedZoneRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateHostedZoneRequest::CreateHostedZoneRequest(const CreateHostedZoneRequest &other)
     : Route53Request(new CreateHostedZoneRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ CreateHostedZoneRequest::CreateHostedZoneRequest(const CreateHostedZoneRequest &
 }
 
 /*!
- * @brief  Constructs a new CreateHostedZoneRequest object.
+ * Constructs a CreateHostedZoneRequest object.
  */
 CreateHostedZoneRequest::CreateHostedZoneRequest()
     : Route53Request(new CreateHostedZoneRequestPrivate(Route53Request::CreateHostedZoneAction, this))
@@ -66,14 +63,9 @@ bool CreateHostedZoneRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateHostedZoneResponse object.
+ * Returns a CreateHostedZoneResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateHostedZoneResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  Route53Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateHostedZoneRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * CreateHostedZoneRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::Route53::CreateHostedZoneRequestPrivate
+ * \brief The CreateHostedZoneRequestPrivate class provides private implementation for CreateHostedZoneRequest.
+ * \internal
  *
- * @class  CreateHostedZoneRequestPrivate
- *
- * @brief  Private implementation for CreateHostedZoneRequest.
+ * \inmodule QtAwsRoute53
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateHostedZoneRequestPrivate object.
- *
- * @param  action  Route53 action being performed.
- * @param  q       Pointer to this object's public CreateHostedZoneRequest instance.
+ * Constructs a CreateHostedZoneRequestPrivate object for Route53 \a action with,
+ * public implementation \a q.
  */
 CreateHostedZoneRequestPrivate::CreateHostedZoneRequestPrivate(
     const Route53Request::Action action, CreateHostedZoneRequest * const q)
@@ -104,15 +93,10 @@ CreateHostedZoneRequestPrivate::CreateHostedZoneRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateHostedZoneRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateHostedZoneRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateHostedZoneRequest instance.
  */
 CreateHostedZoneRequestPrivate::CreateHostedZoneRequestPrivate(
     const CreateHostedZoneRequestPrivate &other, CreateHostedZoneRequest * const q)

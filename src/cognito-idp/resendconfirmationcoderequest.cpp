@@ -27,10 +27,9 @@ namespace CognitoIdentityProvider {
 
 /*!
  * \class QtAws::CognitoIdentityProvider::ResendConfirmationCodeRequest
- *
  * \brief The ResendConfirmationCodeRequest class provides an interface for CognitoIdentityProvider ResendConfirmationCode requests.
  *
- * \ingroup CognitoIdentityProvider
+ * \inmodule QtAwsCognitoIdentityProvider
  *
  *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
  *  authenticate a user to obtain tokens related to user identity and access
@@ -47,9 +46,7 @@ namespace CognitoIdentityProvider {
  */
 
 /*!
- * @brief  Constructs a new ResendConfirmationCodeRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ResendConfirmationCodeRequest::ResendConfirmationCodeRequest(const ResendConfirmationCodeRequest &other)
     : CognitoIdentityProviderRequest(new ResendConfirmationCodeRequestPrivate(*other.d_func(), this))
@@ -58,7 +55,7 @@ ResendConfirmationCodeRequest::ResendConfirmationCodeRequest(const ResendConfirm
 }
 
 /*!
- * @brief  Constructs a new ResendConfirmationCodeRequest object.
+ * Constructs a ResendConfirmationCodeRequest object.
  */
 ResendConfirmationCodeRequest::ResendConfirmationCodeRequest()
     : CognitoIdentityProviderRequest(new ResendConfirmationCodeRequestPrivate(CognitoIdentityProviderRequest::ResendConfirmationCodeAction, this))
@@ -76,14 +73,9 @@ bool ResendConfirmationCodeRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ResendConfirmationCodeResponse object.
+ * Returns a ResendConfirmationCodeResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ResendConfirmationCodeResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CognitoIdentityProviderClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ResendConfirmationCodeRequest::response(QNetworkReply * const reply) const
 {
@@ -91,20 +83,17 @@ QtAws::Core::AwsAbstractResponse * ResendConfirmationCodeRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::CognitoIdentityProvider::ResendConfirmationCodeRequestPrivate
+ * \brief The ResendConfirmationCodeRequestPrivate class provides private implementation for ResendConfirmationCodeRequest.
+ * \internal
  *
- * @class  ResendConfirmationCodeRequestPrivate
- *
- * @brief  Private implementation for ResendConfirmationCodeRequest.
+ * \inmodule QtAwsCognitoIdentityProvider
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ResendConfirmationCodeRequestPrivate object.
- *
- * @param  action  CognitoIdentityProvider action being performed.
- * @param  q       Pointer to this object's public ResendConfirmationCodeRequest instance.
+ * Constructs a ResendConfirmationCodeRequestPrivate object for CognitoIdentityProvider \a action with,
+ * public implementation \a q.
  */
 ResendConfirmationCodeRequestPrivate::ResendConfirmationCodeRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, ResendConfirmationCodeRequest * const q)
@@ -114,15 +103,10 @@ ResendConfirmationCodeRequestPrivate::ResendConfirmationCodeRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ResendConfirmationCodeRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ResendConfirmationCodeRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ResendConfirmationCodeRequest instance.
  */
 ResendConfirmationCodeRequestPrivate::ResendConfirmationCodeRequestPrivate(
     const ResendConfirmationCodeRequestPrivate &other, ResendConfirmationCodeRequest * const q)

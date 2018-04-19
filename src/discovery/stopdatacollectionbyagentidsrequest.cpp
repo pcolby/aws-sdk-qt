@@ -27,10 +27,9 @@ namespace ApplicationDiscoveryService {
 
 /*!
  * \class QtAws::ApplicationDiscoveryService::StopDataCollectionByAgentIdsRequest
- *
  * \brief The StopDataCollectionByAgentIdsRequest class provides an interface for ApplicationDiscoveryService StopDataCollectionByAgentIds requests.
  *
- * \ingroup ApplicationDiscoveryService
+ * \inmodule QtAwsApplicationDiscoveryService
  *
  *  <fullname>AWS Application Discovery Service</fullname>
  * 
@@ -101,9 +100,7 @@ namespace ApplicationDiscoveryService {
  */
 
 /*!
- * @brief  Constructs a new StopDataCollectionByAgentIdsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 StopDataCollectionByAgentIdsRequest::StopDataCollectionByAgentIdsRequest(const StopDataCollectionByAgentIdsRequest &other)
     : ApplicationDiscoveryServiceRequest(new StopDataCollectionByAgentIdsRequestPrivate(*other.d_func(), this))
@@ -112,7 +109,7 @@ StopDataCollectionByAgentIdsRequest::StopDataCollectionByAgentIdsRequest(const S
 }
 
 /*!
- * @brief  Constructs a new StopDataCollectionByAgentIdsRequest object.
+ * Constructs a StopDataCollectionByAgentIdsRequest object.
  */
 StopDataCollectionByAgentIdsRequest::StopDataCollectionByAgentIdsRequest()
     : ApplicationDiscoveryServiceRequest(new StopDataCollectionByAgentIdsRequestPrivate(ApplicationDiscoveryServiceRequest::StopDataCollectionByAgentIdsAction, this))
@@ -130,14 +127,9 @@ bool StopDataCollectionByAgentIdsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an StopDataCollectionByAgentIdsResponse object.
+ * Returns a StopDataCollectionByAgentIdsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An StopDataCollectionByAgentIdsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ApplicationDiscoveryServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * StopDataCollectionByAgentIdsRequest::response(QNetworkReply * const reply) const
 {
@@ -145,20 +137,17 @@ QtAws::Core::AwsAbstractResponse * StopDataCollectionByAgentIdsRequest::response
 }
 
 /*!
- * @internal
+ * \class QtAws::ApplicationDiscoveryService::StopDataCollectionByAgentIdsRequestPrivate
+ * \brief The StopDataCollectionByAgentIdsRequestPrivate class provides private implementation for StopDataCollectionByAgentIdsRequest.
+ * \internal
  *
- * @class  StopDataCollectionByAgentIdsRequestPrivate
- *
- * @brief  Private implementation for StopDataCollectionByAgentIdsRequest.
+ * \inmodule QtAwsApplicationDiscoveryService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new StopDataCollectionByAgentIdsRequestPrivate object.
- *
- * @param  action  ApplicationDiscoveryService action being performed.
- * @param  q       Pointer to this object's public StopDataCollectionByAgentIdsRequest instance.
+ * Constructs a StopDataCollectionByAgentIdsRequestPrivate object for ApplicationDiscoveryService \a action with,
+ * public implementation \a q.
  */
 StopDataCollectionByAgentIdsRequestPrivate::StopDataCollectionByAgentIdsRequestPrivate(
     const ApplicationDiscoveryServiceRequest::Action action, StopDataCollectionByAgentIdsRequest * const q)
@@ -168,15 +157,10 @@ StopDataCollectionByAgentIdsRequestPrivate::StopDataCollectionByAgentIdsRequestP
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StopDataCollectionByAgentIdsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the StopDataCollectionByAgentIdsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public StopDataCollectionByAgentIdsRequest instance.
  */
 StopDataCollectionByAgentIdsRequestPrivate::StopDataCollectionByAgentIdsRequestPrivate(
     const StopDataCollectionByAgentIdsRequestPrivate &other, StopDataCollectionByAgentIdsRequest * const q)

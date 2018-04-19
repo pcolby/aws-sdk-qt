@@ -27,10 +27,9 @@ namespace Redshift {
 
 /*!
  * \class QtAws::Redshift::DeleteClusterSubnetGroupRequest
- *
  * \brief The DeleteClusterSubnetGroupRequest class provides an interface for Redshift DeleteClusterSubnetGroup requests.
  *
- * \ingroup Redshift
+ * \inmodule QtAwsRedshift
  *
  *  <fullname>Amazon Redshift</fullname>
  * 
@@ -67,9 +66,7 @@ namespace Redshift {
  */
 
 /*!
- * @brief  Constructs a new DeleteClusterSubnetGroupRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteClusterSubnetGroupRequest::DeleteClusterSubnetGroupRequest(const DeleteClusterSubnetGroupRequest &other)
     : RedshiftRequest(new DeleteClusterSubnetGroupRequestPrivate(*other.d_func(), this))
@@ -78,7 +75,7 @@ DeleteClusterSubnetGroupRequest::DeleteClusterSubnetGroupRequest(const DeleteClu
 }
 
 /*!
- * @brief  Constructs a new DeleteClusterSubnetGroupRequest object.
+ * Constructs a DeleteClusterSubnetGroupRequest object.
  */
 DeleteClusterSubnetGroupRequest::DeleteClusterSubnetGroupRequest()
     : RedshiftRequest(new DeleteClusterSubnetGroupRequestPrivate(RedshiftRequest::DeleteClusterSubnetGroupAction, this))
@@ -96,14 +93,9 @@ bool DeleteClusterSubnetGroupRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteClusterSubnetGroupResponse object.
+ * Returns a DeleteClusterSubnetGroupResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteClusterSubnetGroupResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RedshiftClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteClusterSubnetGroupRequest::response(QNetworkReply * const reply) const
 {
@@ -111,20 +103,17 @@ QtAws::Core::AwsAbstractResponse * DeleteClusterSubnetGroupRequest::response(QNe
 }
 
 /*!
- * @internal
+ * \class QtAws::Redshift::DeleteClusterSubnetGroupRequestPrivate
+ * \brief The DeleteClusterSubnetGroupRequestPrivate class provides private implementation for DeleteClusterSubnetGroupRequest.
+ * \internal
  *
- * @class  DeleteClusterSubnetGroupRequestPrivate
- *
- * @brief  Private implementation for DeleteClusterSubnetGroupRequest.
+ * \inmodule QtAwsRedshift
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteClusterSubnetGroupRequestPrivate object.
- *
- * @param  action  Redshift action being performed.
- * @param  q       Pointer to this object's public DeleteClusterSubnetGroupRequest instance.
+ * Constructs a DeleteClusterSubnetGroupRequestPrivate object for Redshift \a action with,
+ * public implementation \a q.
  */
 DeleteClusterSubnetGroupRequestPrivate::DeleteClusterSubnetGroupRequestPrivate(
     const RedshiftRequest::Action action, DeleteClusterSubnetGroupRequest * const q)
@@ -134,15 +123,10 @@ DeleteClusterSubnetGroupRequestPrivate::DeleteClusterSubnetGroupRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteClusterSubnetGroupRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteClusterSubnetGroupRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteClusterSubnetGroupRequest instance.
  */
 DeleteClusterSubnetGroupRequestPrivate::DeleteClusterSubnetGroupRequestPrivate(
     const DeleteClusterSubnetGroupRequestPrivate &other, DeleteClusterSubnetGroupRequest * const q)

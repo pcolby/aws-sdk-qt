@@ -27,10 +27,9 @@ namespace ConfigService {
 
 /*!
  * \class QtAws::ConfigService::DescribePendingAggregationRequestsRequest
- *
  * \brief The DescribePendingAggregationRequestsRequest class provides an interface for ConfigService DescribePendingAggregationRequests requests.
  *
- * \ingroup ConfigService
+ * \inmodule QtAwsConfigService
  *
  *  <fullname>AWS Config</fullname>
  * 
@@ -60,9 +59,7 @@ namespace ConfigService {
  */
 
 /*!
- * @brief  Constructs a new DescribePendingAggregationRequestsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribePendingAggregationRequestsRequest::DescribePendingAggregationRequestsRequest(const DescribePendingAggregationRequestsRequest &other)
     : ConfigServiceRequest(new DescribePendingAggregationRequestsRequestPrivate(*other.d_func(), this))
@@ -71,7 +68,7 @@ DescribePendingAggregationRequestsRequest::DescribePendingAggregationRequestsReq
 }
 
 /*!
- * @brief  Constructs a new DescribePendingAggregationRequestsRequest object.
+ * Constructs a DescribePendingAggregationRequestsRequest object.
  */
 DescribePendingAggregationRequestsRequest::DescribePendingAggregationRequestsRequest()
     : ConfigServiceRequest(new DescribePendingAggregationRequestsRequestPrivate(ConfigServiceRequest::DescribePendingAggregationRequestsAction, this))
@@ -89,14 +86,9 @@ bool DescribePendingAggregationRequestsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribePendingAggregationRequestsResponse object.
+ * Returns a DescribePendingAggregationRequestsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribePendingAggregationRequestsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ConfigServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribePendingAggregationRequestsRequest::response(QNetworkReply * const reply) const
 {
@@ -104,20 +96,17 @@ QtAws::Core::AwsAbstractResponse * DescribePendingAggregationRequestsRequest::re
 }
 
 /*!
- * @internal
+ * \class QtAws::ConfigService::DescribePendingAggregationRequestsRequestPrivate
+ * \brief The DescribePendingAggregationRequestsRequestPrivate class provides private implementation for DescribePendingAggregationRequestsRequest.
+ * \internal
  *
- * @class  DescribePendingAggregationRequestsRequestPrivate
- *
- * @brief  Private implementation for DescribePendingAggregationRequestsRequest.
+ * \inmodule QtAwsConfigService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribePendingAggregationRequestsRequestPrivate object.
- *
- * @param  action  ConfigService action being performed.
- * @param  q       Pointer to this object's public DescribePendingAggregationRequestsRequest instance.
+ * Constructs a DescribePendingAggregationRequestsRequestPrivate object for ConfigService \a action with,
+ * public implementation \a q.
  */
 DescribePendingAggregationRequestsRequestPrivate::DescribePendingAggregationRequestsRequestPrivate(
     const ConfigServiceRequest::Action action, DescribePendingAggregationRequestsRequest * const q)
@@ -127,15 +116,10 @@ DescribePendingAggregationRequestsRequestPrivate::DescribePendingAggregationRequ
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribePendingAggregationRequestsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribePendingAggregationRequestsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribePendingAggregationRequestsRequest instance.
  */
 DescribePendingAggregationRequestsRequestPrivate::DescribePendingAggregationRequestsRequestPrivate(
     const DescribePendingAggregationRequestsRequestPrivate &other, DescribePendingAggregationRequestsRequest * const q)

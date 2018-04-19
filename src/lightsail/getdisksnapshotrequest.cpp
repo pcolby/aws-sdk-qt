@@ -27,10 +27,9 @@ namespace Lightsail {
 
 /*!
  * \class QtAws::Lightsail::GetDiskSnapshotRequest
- *
  * \brief The GetDiskSnapshotRequest class provides an interface for Lightsail GetDiskSnapshot requests.
  *
- * \ingroup Lightsail
+ * \inmodule QtAwsLightsail
  *
  *  Amazon Lightsail is the easiest way to get started with AWS for developers who just need virtual private servers.
  *  Lightsail includes everything you need to launch your project quickly - a virtual machine, SSD-based storage, data
@@ -53,9 +52,7 @@ namespace Lightsail {
  */
 
 /*!
- * @brief  Constructs a new GetDiskSnapshotRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetDiskSnapshotRequest::GetDiskSnapshotRequest(const GetDiskSnapshotRequest &other)
     : LightsailRequest(new GetDiskSnapshotRequestPrivate(*other.d_func(), this))
@@ -64,7 +61,7 @@ GetDiskSnapshotRequest::GetDiskSnapshotRequest(const GetDiskSnapshotRequest &oth
 }
 
 /*!
- * @brief  Constructs a new GetDiskSnapshotRequest object.
+ * Constructs a GetDiskSnapshotRequest object.
  */
 GetDiskSnapshotRequest::GetDiskSnapshotRequest()
     : LightsailRequest(new GetDiskSnapshotRequestPrivate(LightsailRequest::GetDiskSnapshotAction, this))
@@ -82,14 +79,9 @@ bool GetDiskSnapshotRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetDiskSnapshotResponse object.
+ * Returns a GetDiskSnapshotResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetDiskSnapshotResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  LightsailClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetDiskSnapshotRequest::response(QNetworkReply * const reply) const
 {
@@ -97,20 +89,17 @@ QtAws::Core::AwsAbstractResponse * GetDiskSnapshotRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::Lightsail::GetDiskSnapshotRequestPrivate
+ * \brief The GetDiskSnapshotRequestPrivate class provides private implementation for GetDiskSnapshotRequest.
+ * \internal
  *
- * @class  GetDiskSnapshotRequestPrivate
- *
- * @brief  Private implementation for GetDiskSnapshotRequest.
+ * \inmodule QtAwsLightsail
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetDiskSnapshotRequestPrivate object.
- *
- * @param  action  Lightsail action being performed.
- * @param  q       Pointer to this object's public GetDiskSnapshotRequest instance.
+ * Constructs a GetDiskSnapshotRequestPrivate object for Lightsail \a action with,
+ * public implementation \a q.
  */
 GetDiskSnapshotRequestPrivate::GetDiskSnapshotRequestPrivate(
     const LightsailRequest::Action action, GetDiskSnapshotRequest * const q)
@@ -120,15 +109,10 @@ GetDiskSnapshotRequestPrivate::GetDiskSnapshotRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetDiskSnapshotRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetDiskSnapshotRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetDiskSnapshotRequest instance.
  */
 GetDiskSnapshotRequestPrivate::GetDiskSnapshotRequestPrivate(
     const GetDiskSnapshotRequestPrivate &other, GetDiskSnapshotRequest * const q)

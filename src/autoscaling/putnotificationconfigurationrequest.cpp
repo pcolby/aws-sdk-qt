@@ -27,10 +27,9 @@ namespace AutoScaling {
 
 /*!
  * \class QtAws::AutoScaling::PutNotificationConfigurationRequest
- *
  * \brief The PutNotificationConfigurationRequest class provides an interface for AutoScaling PutNotificationConfiguration requests.
  *
- * \ingroup AutoScaling
+ * \inmodule QtAwsAutoScaling
  *
  *  <fullname>Amazon EC2 Auto Scaling</fullname>
  * 
@@ -42,9 +41,7 @@ namespace AutoScaling {
  */
 
 /*!
- * @brief  Constructs a new PutNotificationConfigurationRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 PutNotificationConfigurationRequest::PutNotificationConfigurationRequest(const PutNotificationConfigurationRequest &other)
     : AutoScalingRequest(new PutNotificationConfigurationRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ PutNotificationConfigurationRequest::PutNotificationConfigurationRequest(const P
 }
 
 /*!
- * @brief  Constructs a new PutNotificationConfigurationRequest object.
+ * Constructs a PutNotificationConfigurationRequest object.
  */
 PutNotificationConfigurationRequest::PutNotificationConfigurationRequest()
     : AutoScalingRequest(new PutNotificationConfigurationRequestPrivate(AutoScalingRequest::PutNotificationConfigurationAction, this))
@@ -71,14 +68,9 @@ bool PutNotificationConfigurationRequest::isValid() const
 
 
 /*!
- * @brief  Construct an PutNotificationConfigurationResponse object.
+ * Returns a PutNotificationConfigurationResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An PutNotificationConfigurationResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AutoScalingClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * PutNotificationConfigurationRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * PutNotificationConfigurationRequest::response
 }
 
 /*!
- * @internal
+ * \class QtAws::AutoScaling::PutNotificationConfigurationRequestPrivate
+ * \brief The PutNotificationConfigurationRequestPrivate class provides private implementation for PutNotificationConfigurationRequest.
+ * \internal
  *
- * @class  PutNotificationConfigurationRequestPrivate
- *
- * @brief  Private implementation for PutNotificationConfigurationRequest.
+ * \inmodule QtAwsAutoScaling
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new PutNotificationConfigurationRequestPrivate object.
- *
- * @param  action  AutoScaling action being performed.
- * @param  q       Pointer to this object's public PutNotificationConfigurationRequest instance.
+ * Constructs a PutNotificationConfigurationRequestPrivate object for AutoScaling \a action with,
+ * public implementation \a q.
  */
 PutNotificationConfigurationRequestPrivate::PutNotificationConfigurationRequestPrivate(
     const AutoScalingRequest::Action action, PutNotificationConfigurationRequest * const q)
@@ -109,15 +98,10 @@ PutNotificationConfigurationRequestPrivate::PutNotificationConfigurationRequestP
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutNotificationConfigurationRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the PutNotificationConfigurationRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public PutNotificationConfigurationRequest instance.
  */
 PutNotificationConfigurationRequestPrivate::PutNotificationConfigurationRequestPrivate(
     const PutNotificationConfigurationRequestPrivate &other, PutNotificationConfigurationRequest * const q)

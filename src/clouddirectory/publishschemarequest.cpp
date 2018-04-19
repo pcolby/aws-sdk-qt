@@ -27,10 +27,9 @@ namespace CloudDirectory {
 
 /*!
  * \class QtAws::CloudDirectory::PublishSchemaRequest
- *
  * \brief The PublishSchemaRequest class provides an interface for CloudDirectory PublishSchema requests.
  *
- * \ingroup CloudDirectory
+ * \inmodule QtAwsCloudDirectory
  *
  *  <fullname>Amazon Cloud Directory</fullname>
  * 
@@ -44,9 +43,7 @@ namespace CloudDirectory {
  */
 
 /*!
- * @brief  Constructs a new PublishSchemaRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 PublishSchemaRequest::PublishSchemaRequest(const PublishSchemaRequest &other)
     : CloudDirectoryRequest(new PublishSchemaRequestPrivate(*other.d_func(), this))
@@ -55,7 +52,7 @@ PublishSchemaRequest::PublishSchemaRequest(const PublishSchemaRequest &other)
 }
 
 /*!
- * @brief  Constructs a new PublishSchemaRequest object.
+ * Constructs a PublishSchemaRequest object.
  */
 PublishSchemaRequest::PublishSchemaRequest()
     : CloudDirectoryRequest(new PublishSchemaRequestPrivate(CloudDirectoryRequest::PublishSchemaAction, this))
@@ -73,14 +70,9 @@ bool PublishSchemaRequest::isValid() const
 
 
 /*!
- * @brief  Construct an PublishSchemaResponse object.
+ * Returns a PublishSchemaResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An PublishSchemaResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudDirectoryClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * PublishSchemaRequest::response(QNetworkReply * const reply) const
 {
@@ -88,20 +80,17 @@ QtAws::Core::AwsAbstractResponse * PublishSchemaRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudDirectory::PublishSchemaRequestPrivate
+ * \brief The PublishSchemaRequestPrivate class provides private implementation for PublishSchemaRequest.
+ * \internal
  *
- * @class  PublishSchemaRequestPrivate
- *
- * @brief  Private implementation for PublishSchemaRequest.
+ * \inmodule QtAwsCloudDirectory
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new PublishSchemaRequestPrivate object.
- *
- * @param  action  CloudDirectory action being performed.
- * @param  q       Pointer to this object's public PublishSchemaRequest instance.
+ * Constructs a PublishSchemaRequestPrivate object for CloudDirectory \a action with,
+ * public implementation \a q.
  */
 PublishSchemaRequestPrivate::PublishSchemaRequestPrivate(
     const CloudDirectoryRequest::Action action, PublishSchemaRequest * const q)
@@ -111,15 +100,10 @@ PublishSchemaRequestPrivate::PublishSchemaRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PublishSchemaRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the PublishSchemaRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public PublishSchemaRequest instance.
  */
 PublishSchemaRequestPrivate::PublishSchemaRequestPrivate(
     const PublishSchemaRequestPrivate &other, PublishSchemaRequest * const q)

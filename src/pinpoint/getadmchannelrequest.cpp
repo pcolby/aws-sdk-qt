@@ -27,19 +27,16 @@ namespace Pinpoint {
 
 /*!
  * \class QtAws::Pinpoint::GetAdmChannelRequest
- *
  * \brief The GetAdmChannelRequest class provides an interface for Pinpoint GetAdmChannel requests.
  *
- * \ingroup Pinpoint
+ * \inmodule QtAwsPinpoint
  *
  *
  * \sa PinpointClient::getAdmChannel
  */
 
 /*!
- * @brief  Constructs a new GetAdmChannelRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetAdmChannelRequest::GetAdmChannelRequest(const GetAdmChannelRequest &other)
     : PinpointRequest(new GetAdmChannelRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ GetAdmChannelRequest::GetAdmChannelRequest(const GetAdmChannelRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetAdmChannelRequest object.
+ * Constructs a GetAdmChannelRequest object.
  */
 GetAdmChannelRequest::GetAdmChannelRequest()
     : PinpointRequest(new GetAdmChannelRequestPrivate(PinpointRequest::GetAdmChannelAction, this))
@@ -66,14 +63,9 @@ bool GetAdmChannelRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetAdmChannelResponse object.
+ * Returns a GetAdmChannelResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetAdmChannelResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  PinpointClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetAdmChannelRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * GetAdmChannelRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::Pinpoint::GetAdmChannelRequestPrivate
+ * \brief The GetAdmChannelRequestPrivate class provides private implementation for GetAdmChannelRequest.
+ * \internal
  *
- * @class  GetAdmChannelRequestPrivate
- *
- * @brief  Private implementation for GetAdmChannelRequest.
+ * \inmodule QtAwsPinpoint
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetAdmChannelRequestPrivate object.
- *
- * @param  action  Pinpoint action being performed.
- * @param  q       Pointer to this object's public GetAdmChannelRequest instance.
+ * Constructs a GetAdmChannelRequestPrivate object for Pinpoint \a action with,
+ * public implementation \a q.
  */
 GetAdmChannelRequestPrivate::GetAdmChannelRequestPrivate(
     const PinpointRequest::Action action, GetAdmChannelRequest * const q)
@@ -104,15 +93,10 @@ GetAdmChannelRequestPrivate::GetAdmChannelRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetAdmChannelRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetAdmChannelRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetAdmChannelRequest instance.
  */
 GetAdmChannelRequestPrivate::GetAdmChannelRequestPrivate(
     const GetAdmChannelRequestPrivate &other, GetAdmChannelRequest * const q)

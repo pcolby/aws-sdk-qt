@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::CreateVpcEndpointServiceConfigurationRequest
- *
  * \brief The CreateVpcEndpointServiceConfigurationRequest class provides an interface for EC2 CreateVpcEndpointServiceConfiguration requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new CreateVpcEndpointServiceConfigurationRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateVpcEndpointServiceConfigurationRequest::CreateVpcEndpointServiceConfigurationRequest(const CreateVpcEndpointServiceConfigurationRequest &other)
     : EC2Request(new CreateVpcEndpointServiceConfigurationRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ CreateVpcEndpointServiceConfigurationRequest::CreateVpcEndpointServiceConfigurat
 }
 
 /*!
- * @brief  Constructs a new CreateVpcEndpointServiceConfigurationRequest object.
+ * Constructs a CreateVpcEndpointServiceConfigurationRequest object.
  */
 CreateVpcEndpointServiceConfigurationRequest::CreateVpcEndpointServiceConfigurationRequest()
     : EC2Request(new CreateVpcEndpointServiceConfigurationRequestPrivate(EC2Request::CreateVpcEndpointServiceConfigurationAction, this))
@@ -70,14 +67,9 @@ bool CreateVpcEndpointServiceConfigurationRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateVpcEndpointServiceConfigurationResponse object.
+ * Returns a CreateVpcEndpointServiceConfigurationResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateVpcEndpointServiceConfigurationResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateVpcEndpointServiceConfigurationRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * CreateVpcEndpointServiceConfigurationRequest:
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::CreateVpcEndpointServiceConfigurationRequestPrivate
+ * \brief The CreateVpcEndpointServiceConfigurationRequestPrivate class provides private implementation for CreateVpcEndpointServiceConfigurationRequest.
+ * \internal
  *
- * @class  CreateVpcEndpointServiceConfigurationRequestPrivate
- *
- * @brief  Private implementation for CreateVpcEndpointServiceConfigurationRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateVpcEndpointServiceConfigurationRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public CreateVpcEndpointServiceConfigurationRequest instance.
+ * Constructs a CreateVpcEndpointServiceConfigurationRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 CreateVpcEndpointServiceConfigurationRequestPrivate::CreateVpcEndpointServiceConfigurationRequestPrivate(
     const EC2Request::Action action, CreateVpcEndpointServiceConfigurationRequest * const q)
@@ -108,15 +97,10 @@ CreateVpcEndpointServiceConfigurationRequestPrivate::CreateVpcEndpointServiceCon
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateVpcEndpointServiceConfigurationRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateVpcEndpointServiceConfigurationRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateVpcEndpointServiceConfigurationRequest instance.
  */
 CreateVpcEndpointServiceConfigurationRequestPrivate::CreateVpcEndpointServiceConfigurationRequestPrivate(
     const CreateVpcEndpointServiceConfigurationRequestPrivate &other, CreateVpcEndpointServiceConfigurationRequest * const q)

@@ -27,10 +27,9 @@ namespace SimpleDB {
 
 /*!
  * \class QtAws::SimpleDB::DomainMetadataRequest
- *
  * \brief The DomainMetadataRequest class provides an interface for SimpleDB DomainMetadata requests.
  *
- * \ingroup SimpleDB
+ * \inmodule QtAwsSimpleDB
  *
  *  Amazon SimpleDB is a web service providing the core database functions of data indexing and querying in the cloud. By
  *  offloading the time and effort associated with building and operating a web-scale database, SimpleDB provides developers
@@ -50,9 +49,7 @@ namespace SimpleDB {
  */
 
 /*!
- * @brief  Constructs a new DomainMetadataRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DomainMetadataRequest::DomainMetadataRequest(const DomainMetadataRequest &other)
     : SimpleDBRequest(new DomainMetadataRequestPrivate(*other.d_func(), this))
@@ -61,7 +58,7 @@ DomainMetadataRequest::DomainMetadataRequest(const DomainMetadataRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DomainMetadataRequest object.
+ * Constructs a DomainMetadataRequest object.
  */
 DomainMetadataRequest::DomainMetadataRequest()
     : SimpleDBRequest(new DomainMetadataRequestPrivate(SimpleDBRequest::DomainMetadataAction, this))
@@ -79,14 +76,9 @@ bool DomainMetadataRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DomainMetadataResponse object.
+ * Returns a DomainMetadataResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DomainMetadataResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SimpleDBClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DomainMetadataRequest::response(QNetworkReply * const reply) const
 {
@@ -94,20 +86,17 @@ QtAws::Core::AwsAbstractResponse * DomainMetadataRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::SimpleDB::DomainMetadataRequestPrivate
+ * \brief The DomainMetadataRequestPrivate class provides private implementation for DomainMetadataRequest.
+ * \internal
  *
- * @class  DomainMetadataRequestPrivate
- *
- * @brief  Private implementation for DomainMetadataRequest.
+ * \inmodule QtAwsSimpleDB
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DomainMetadataRequestPrivate object.
- *
- * @param  action  SimpleDB action being performed.
- * @param  q       Pointer to this object's public DomainMetadataRequest instance.
+ * Constructs a DomainMetadataRequestPrivate object for SimpleDB \a action with,
+ * public implementation \a q.
  */
 DomainMetadataRequestPrivate::DomainMetadataRequestPrivate(
     const SimpleDBRequest::Action action, DomainMetadataRequest * const q)
@@ -117,15 +106,10 @@ DomainMetadataRequestPrivate::DomainMetadataRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DomainMetadataRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DomainMetadataRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DomainMetadataRequest instance.
  */
 DomainMetadataRequestPrivate::DomainMetadataRequestPrivate(
     const DomainMetadataRequestPrivate &other, DomainMetadataRequest * const q)

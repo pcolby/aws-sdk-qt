@@ -27,10 +27,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::DeleteServiceSpecificCredentialRequest
- *
  * \brief The DeleteServiceSpecificCredentialRequest class provides an interface for IAM DeleteServiceSpecificCredential requests.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -102,9 +101,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new DeleteServiceSpecificCredentialRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteServiceSpecificCredentialRequest::DeleteServiceSpecificCredentialRequest(const DeleteServiceSpecificCredentialRequest &other)
     : IAMRequest(new DeleteServiceSpecificCredentialRequestPrivate(*other.d_func(), this))
@@ -113,7 +110,7 @@ DeleteServiceSpecificCredentialRequest::DeleteServiceSpecificCredentialRequest(c
 }
 
 /*!
- * @brief  Constructs a new DeleteServiceSpecificCredentialRequest object.
+ * Constructs a DeleteServiceSpecificCredentialRequest object.
  */
 DeleteServiceSpecificCredentialRequest::DeleteServiceSpecificCredentialRequest()
     : IAMRequest(new DeleteServiceSpecificCredentialRequestPrivate(IAMRequest::DeleteServiceSpecificCredentialAction, this))
@@ -131,14 +128,9 @@ bool DeleteServiceSpecificCredentialRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteServiceSpecificCredentialResponse object.
+ * Returns a DeleteServiceSpecificCredentialResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteServiceSpecificCredentialResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IAMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteServiceSpecificCredentialRequest::response(QNetworkReply * const reply) const
 {
@@ -146,20 +138,17 @@ QtAws::Core::AwsAbstractResponse * DeleteServiceSpecificCredentialRequest::respo
 }
 
 /*!
- * @internal
+ * \class QtAws::IAM::DeleteServiceSpecificCredentialRequestPrivate
+ * \brief The DeleteServiceSpecificCredentialRequestPrivate class provides private implementation for DeleteServiceSpecificCredentialRequest.
+ * \internal
  *
- * @class  DeleteServiceSpecificCredentialRequestPrivate
- *
- * @brief  Private implementation for DeleteServiceSpecificCredentialRequest.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteServiceSpecificCredentialRequestPrivate object.
- *
- * @param  action  IAM action being performed.
- * @param  q       Pointer to this object's public DeleteServiceSpecificCredentialRequest instance.
+ * Constructs a DeleteServiceSpecificCredentialRequestPrivate object for IAM \a action with,
+ * public implementation \a q.
  */
 DeleteServiceSpecificCredentialRequestPrivate::DeleteServiceSpecificCredentialRequestPrivate(
     const IAMRequest::Action action, DeleteServiceSpecificCredentialRequest * const q)
@@ -169,15 +158,10 @@ DeleteServiceSpecificCredentialRequestPrivate::DeleteServiceSpecificCredentialRe
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteServiceSpecificCredentialRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteServiceSpecificCredentialRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteServiceSpecificCredentialRequest instance.
  */
 DeleteServiceSpecificCredentialRequestPrivate::DeleteServiceSpecificCredentialRequestPrivate(
     const DeleteServiceSpecificCredentialRequestPrivate &other, DeleteServiceSpecificCredentialRequest * const q)

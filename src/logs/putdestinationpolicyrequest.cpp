@@ -27,10 +27,9 @@ namespace CloudWatchLogs {
 
 /*!
  * \class QtAws::CloudWatchLogs::PutDestinationPolicyRequest
- *
  * \brief The PutDestinationPolicyRequest class provides an interface for CloudWatchLogs PutDestinationPolicy requests.
  *
- * \ingroup CloudWatchLogs
+ * \inmodule QtAwsCloudWatchLogs
  *
  *  You can use Amazon CloudWatch Logs to monitor, store, and access your log files from Amazon EC2 instances, AWS
  *  CloudTrail, or other sources. You can then retrieve the associated log data from CloudWatch Logs using the CloudWatch
@@ -66,9 +65,7 @@ namespace CloudWatchLogs {
  */
 
 /*!
- * @brief  Constructs a new PutDestinationPolicyRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 PutDestinationPolicyRequest::PutDestinationPolicyRequest(const PutDestinationPolicyRequest &other)
     : CloudWatchLogsRequest(new PutDestinationPolicyRequestPrivate(*other.d_func(), this))
@@ -77,7 +74,7 @@ PutDestinationPolicyRequest::PutDestinationPolicyRequest(const PutDestinationPol
 }
 
 /*!
- * @brief  Constructs a new PutDestinationPolicyRequest object.
+ * Constructs a PutDestinationPolicyRequest object.
  */
 PutDestinationPolicyRequest::PutDestinationPolicyRequest()
     : CloudWatchLogsRequest(new PutDestinationPolicyRequestPrivate(CloudWatchLogsRequest::PutDestinationPolicyAction, this))
@@ -95,14 +92,9 @@ bool PutDestinationPolicyRequest::isValid() const
 
 
 /*!
- * @brief  Construct an PutDestinationPolicyResponse object.
+ * Returns a PutDestinationPolicyResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An PutDestinationPolicyResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudWatchLogsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * PutDestinationPolicyRequest::response(QNetworkReply * const reply) const
 {
@@ -110,20 +102,17 @@ QtAws::Core::AwsAbstractResponse * PutDestinationPolicyRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudWatchLogs::PutDestinationPolicyRequestPrivate
+ * \brief The PutDestinationPolicyRequestPrivate class provides private implementation for PutDestinationPolicyRequest.
+ * \internal
  *
- * @class  PutDestinationPolicyRequestPrivate
- *
- * @brief  Private implementation for PutDestinationPolicyRequest.
+ * \inmodule QtAwsCloudWatchLogs
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new PutDestinationPolicyRequestPrivate object.
- *
- * @param  action  CloudWatchLogs action being performed.
- * @param  q       Pointer to this object's public PutDestinationPolicyRequest instance.
+ * Constructs a PutDestinationPolicyRequestPrivate object for CloudWatchLogs \a action with,
+ * public implementation \a q.
  */
 PutDestinationPolicyRequestPrivate::PutDestinationPolicyRequestPrivate(
     const CloudWatchLogsRequest::Action action, PutDestinationPolicyRequest * const q)
@@ -133,15 +122,10 @@ PutDestinationPolicyRequestPrivate::PutDestinationPolicyRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutDestinationPolicyRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the PutDestinationPolicyRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public PutDestinationPolicyRequest instance.
  */
 PutDestinationPolicyRequestPrivate::PutDestinationPolicyRequestPrivate(
     const PutDestinationPolicyRequestPrivate &other, PutDestinationPolicyRequest * const q)

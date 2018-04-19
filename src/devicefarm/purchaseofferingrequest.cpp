@@ -27,10 +27,9 @@ namespace DeviceFarm {
 
 /*!
  * \class QtAws::DeviceFarm::PurchaseOfferingRequest
- *
  * \brief The PurchaseOfferingRequest class provides an interface for DeviceFarm PurchaseOffering requests.
  *
- * \ingroup DeviceFarm
+ * \inmodule QtAwsDeviceFarm
  *
  *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
  *  phones, tablets, and other devices in the
@@ -39,9 +38,7 @@ namespace DeviceFarm {
  */
 
 /*!
- * @brief  Constructs a new PurchaseOfferingRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 PurchaseOfferingRequest::PurchaseOfferingRequest(const PurchaseOfferingRequest &other)
     : DeviceFarmRequest(new PurchaseOfferingRequestPrivate(*other.d_func(), this))
@@ -50,7 +47,7 @@ PurchaseOfferingRequest::PurchaseOfferingRequest(const PurchaseOfferingRequest &
 }
 
 /*!
- * @brief  Constructs a new PurchaseOfferingRequest object.
+ * Constructs a PurchaseOfferingRequest object.
  */
 PurchaseOfferingRequest::PurchaseOfferingRequest()
     : DeviceFarmRequest(new PurchaseOfferingRequestPrivate(DeviceFarmRequest::PurchaseOfferingAction, this))
@@ -68,14 +65,9 @@ bool PurchaseOfferingRequest::isValid() const
 
 
 /*!
- * @brief  Construct an PurchaseOfferingResponse object.
+ * Returns a PurchaseOfferingResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An PurchaseOfferingResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DeviceFarmClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * PurchaseOfferingRequest::response(QNetworkReply * const reply) const
 {
@@ -83,20 +75,17 @@ QtAws::Core::AwsAbstractResponse * PurchaseOfferingRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::DeviceFarm::PurchaseOfferingRequestPrivate
+ * \brief The PurchaseOfferingRequestPrivate class provides private implementation for PurchaseOfferingRequest.
+ * \internal
  *
- * @class  PurchaseOfferingRequestPrivate
- *
- * @brief  Private implementation for PurchaseOfferingRequest.
+ * \inmodule QtAwsDeviceFarm
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new PurchaseOfferingRequestPrivate object.
- *
- * @param  action  DeviceFarm action being performed.
- * @param  q       Pointer to this object's public PurchaseOfferingRequest instance.
+ * Constructs a PurchaseOfferingRequestPrivate object for DeviceFarm \a action with,
+ * public implementation \a q.
  */
 PurchaseOfferingRequestPrivate::PurchaseOfferingRequestPrivate(
     const DeviceFarmRequest::Action action, PurchaseOfferingRequest * const q)
@@ -106,15 +95,10 @@ PurchaseOfferingRequestPrivate::PurchaseOfferingRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PurchaseOfferingRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the PurchaseOfferingRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public PurchaseOfferingRequest instance.
  */
 PurchaseOfferingRequestPrivate::PurchaseOfferingRequestPrivate(
     const PurchaseOfferingRequestPrivate &other, PurchaseOfferingRequest * const q)

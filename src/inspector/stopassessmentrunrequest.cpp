@@ -27,10 +27,9 @@ namespace Inspector {
 
 /*!
  * \class QtAws::Inspector::StopAssessmentRunRequest
- *
  * \brief The StopAssessmentRunRequest class provides an interface for Inspector StopAssessmentRun requests.
  *
- * \ingroup Inspector
+ * \inmodule QtAwsInspector
  *
  *  <fullname>Amazon Inspector</fullname>
  * 
@@ -42,9 +41,7 @@ namespace Inspector {
  */
 
 /*!
- * @brief  Constructs a new StopAssessmentRunRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 StopAssessmentRunRequest::StopAssessmentRunRequest(const StopAssessmentRunRequest &other)
     : InspectorRequest(new StopAssessmentRunRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ StopAssessmentRunRequest::StopAssessmentRunRequest(const StopAssessmentRunReques
 }
 
 /*!
- * @brief  Constructs a new StopAssessmentRunRequest object.
+ * Constructs a StopAssessmentRunRequest object.
  */
 StopAssessmentRunRequest::StopAssessmentRunRequest()
     : InspectorRequest(new StopAssessmentRunRequestPrivate(InspectorRequest::StopAssessmentRunAction, this))
@@ -71,14 +68,9 @@ bool StopAssessmentRunRequest::isValid() const
 
 
 /*!
- * @brief  Construct an StopAssessmentRunResponse object.
+ * Returns a StopAssessmentRunResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An StopAssessmentRunResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  InspectorClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * StopAssessmentRunRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * StopAssessmentRunRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::Inspector::StopAssessmentRunRequestPrivate
+ * \brief The StopAssessmentRunRequestPrivate class provides private implementation for StopAssessmentRunRequest.
+ * \internal
  *
- * @class  StopAssessmentRunRequestPrivate
- *
- * @brief  Private implementation for StopAssessmentRunRequest.
+ * \inmodule QtAwsInspector
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new StopAssessmentRunRequestPrivate object.
- *
- * @param  action  Inspector action being performed.
- * @param  q       Pointer to this object's public StopAssessmentRunRequest instance.
+ * Constructs a StopAssessmentRunRequestPrivate object for Inspector \a action with,
+ * public implementation \a q.
  */
 StopAssessmentRunRequestPrivate::StopAssessmentRunRequestPrivate(
     const InspectorRequest::Action action, StopAssessmentRunRequest * const q)
@@ -109,15 +98,10 @@ StopAssessmentRunRequestPrivate::StopAssessmentRunRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StopAssessmentRunRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the StopAssessmentRunRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public StopAssessmentRunRequest instance.
  */
 StopAssessmentRunRequestPrivate::StopAssessmentRunRequestPrivate(
     const StopAssessmentRunRequestPrivate &other, StopAssessmentRunRequest * const q)

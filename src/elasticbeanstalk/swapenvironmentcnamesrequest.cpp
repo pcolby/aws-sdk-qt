@@ -27,10 +27,9 @@ namespace ElasticBeanstalk {
 
 /*!
  * \class QtAws::ElasticBeanstalk::SwapEnvironmentCNAMEsRequest
- *
  * \brief The SwapEnvironmentCNAMEsRequest class provides an interface for ElasticBeanstalk SwapEnvironmentCNAMEs requests.
  *
- * \ingroup ElasticBeanstalk
+ * \inmodule QtAwsElasticBeanstalk
  *
  *  <fullname>AWS Elastic Beanstalk</fullname>
  * 
@@ -59,9 +58,7 @@ namespace ElasticBeanstalk {
  */
 
 /*!
- * @brief  Constructs a new SwapEnvironmentCNAMEsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 SwapEnvironmentCNAMEsRequest::SwapEnvironmentCNAMEsRequest(const SwapEnvironmentCNAMEsRequest &other)
     : ElasticBeanstalkRequest(new SwapEnvironmentCNAMEsRequestPrivate(*other.d_func(), this))
@@ -70,7 +67,7 @@ SwapEnvironmentCNAMEsRequest::SwapEnvironmentCNAMEsRequest(const SwapEnvironment
 }
 
 /*!
- * @brief  Constructs a new SwapEnvironmentCNAMEsRequest object.
+ * Constructs a SwapEnvironmentCNAMEsRequest object.
  */
 SwapEnvironmentCNAMEsRequest::SwapEnvironmentCNAMEsRequest()
     : ElasticBeanstalkRequest(new SwapEnvironmentCNAMEsRequestPrivate(ElasticBeanstalkRequest::SwapEnvironmentCNAMEsAction, this))
@@ -88,14 +85,9 @@ bool SwapEnvironmentCNAMEsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an SwapEnvironmentCNAMEsResponse object.
+ * Returns a SwapEnvironmentCNAMEsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An SwapEnvironmentCNAMEsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ElasticBeanstalkClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * SwapEnvironmentCNAMEsRequest::response(QNetworkReply * const reply) const
 {
@@ -103,20 +95,17 @@ QtAws::Core::AwsAbstractResponse * SwapEnvironmentCNAMEsRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::ElasticBeanstalk::SwapEnvironmentCNAMEsRequestPrivate
+ * \brief The SwapEnvironmentCNAMEsRequestPrivate class provides private implementation for SwapEnvironmentCNAMEsRequest.
+ * \internal
  *
- * @class  SwapEnvironmentCNAMEsRequestPrivate
- *
- * @brief  Private implementation for SwapEnvironmentCNAMEsRequest.
+ * \inmodule QtAwsElasticBeanstalk
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new SwapEnvironmentCNAMEsRequestPrivate object.
- *
- * @param  action  ElasticBeanstalk action being performed.
- * @param  q       Pointer to this object's public SwapEnvironmentCNAMEsRequest instance.
+ * Constructs a SwapEnvironmentCNAMEsRequestPrivate object for ElasticBeanstalk \a action with,
+ * public implementation \a q.
  */
 SwapEnvironmentCNAMEsRequestPrivate::SwapEnvironmentCNAMEsRequestPrivate(
     const ElasticBeanstalkRequest::Action action, SwapEnvironmentCNAMEsRequest * const q)
@@ -126,15 +115,10 @@ SwapEnvironmentCNAMEsRequestPrivate::SwapEnvironmentCNAMEsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SwapEnvironmentCNAMEsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the SwapEnvironmentCNAMEsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public SwapEnvironmentCNAMEsRequest instance.
  */
 SwapEnvironmentCNAMEsRequestPrivate::SwapEnvironmentCNAMEsRequestPrivate(
     const SwapEnvironmentCNAMEsRequestPrivate &other, SwapEnvironmentCNAMEsRequest * const q)

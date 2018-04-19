@@ -27,10 +27,9 @@ namespace Greengrass {
 
 /*!
  * \class QtAws::Greengrass::ListSubscriptionDefinitionVersionsRequest
- *
  * \brief The ListSubscriptionDefinitionVersionsRequest class provides an interface for Greengrass ListSubscriptionDefinitionVersions requests.
  *
- * \ingroup Greengrass
+ * \inmodule QtAwsGreengrass
  *
  *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
  *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
@@ -40,9 +39,7 @@ namespace Greengrass {
  */
 
 /*!
- * @brief  Constructs a new ListSubscriptionDefinitionVersionsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListSubscriptionDefinitionVersionsRequest::ListSubscriptionDefinitionVersionsRequest(const ListSubscriptionDefinitionVersionsRequest &other)
     : GreengrassRequest(new ListSubscriptionDefinitionVersionsRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ ListSubscriptionDefinitionVersionsRequest::ListSubscriptionDefinitionVersionsReq
 }
 
 /*!
- * @brief  Constructs a new ListSubscriptionDefinitionVersionsRequest object.
+ * Constructs a ListSubscriptionDefinitionVersionsRequest object.
  */
 ListSubscriptionDefinitionVersionsRequest::ListSubscriptionDefinitionVersionsRequest()
     : GreengrassRequest(new ListSubscriptionDefinitionVersionsRequestPrivate(GreengrassRequest::ListSubscriptionDefinitionVersionsAction, this))
@@ -69,14 +66,9 @@ bool ListSubscriptionDefinitionVersionsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListSubscriptionDefinitionVersionsResponse object.
+ * Returns a ListSubscriptionDefinitionVersionsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListSubscriptionDefinitionVersionsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GreengrassClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListSubscriptionDefinitionVersionsRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * ListSubscriptionDefinitionVersionsRequest::re
 }
 
 /*!
- * @internal
+ * \class QtAws::Greengrass::ListSubscriptionDefinitionVersionsRequestPrivate
+ * \brief The ListSubscriptionDefinitionVersionsRequestPrivate class provides private implementation for ListSubscriptionDefinitionVersionsRequest.
+ * \internal
  *
- * @class  ListSubscriptionDefinitionVersionsRequestPrivate
- *
- * @brief  Private implementation for ListSubscriptionDefinitionVersionsRequest.
+ * \inmodule QtAwsGreengrass
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListSubscriptionDefinitionVersionsRequestPrivate object.
- *
- * @param  action  Greengrass action being performed.
- * @param  q       Pointer to this object's public ListSubscriptionDefinitionVersionsRequest instance.
+ * Constructs a ListSubscriptionDefinitionVersionsRequestPrivate object for Greengrass \a action with,
+ * public implementation \a q.
  */
 ListSubscriptionDefinitionVersionsRequestPrivate::ListSubscriptionDefinitionVersionsRequestPrivate(
     const GreengrassRequest::Action action, ListSubscriptionDefinitionVersionsRequest * const q)
@@ -107,15 +96,10 @@ ListSubscriptionDefinitionVersionsRequestPrivate::ListSubscriptionDefinitionVers
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListSubscriptionDefinitionVersionsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListSubscriptionDefinitionVersionsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListSubscriptionDefinitionVersionsRequest instance.
  */
 ListSubscriptionDefinitionVersionsRequestPrivate::ListSubscriptionDefinitionVersionsRequestPrivate(
     const ListSubscriptionDefinitionVersionsRequestPrivate &other, ListSubscriptionDefinitionVersionsRequest * const q)

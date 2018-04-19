@@ -27,10 +27,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::ModifyDocumentPermissionRequest
- *
  * \brief The ModifyDocumentPermissionRequest class provides an interface for SSM ModifyDocumentPermission requests.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -61,9 +60,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new ModifyDocumentPermissionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ModifyDocumentPermissionRequest::ModifyDocumentPermissionRequest(const ModifyDocumentPermissionRequest &other)
     : SSMRequest(new ModifyDocumentPermissionRequestPrivate(*other.d_func(), this))
@@ -72,7 +69,7 @@ ModifyDocumentPermissionRequest::ModifyDocumentPermissionRequest(const ModifyDoc
 }
 
 /*!
- * @brief  Constructs a new ModifyDocumentPermissionRequest object.
+ * Constructs a ModifyDocumentPermissionRequest object.
  */
 ModifyDocumentPermissionRequest::ModifyDocumentPermissionRequest()
     : SSMRequest(new ModifyDocumentPermissionRequestPrivate(SSMRequest::ModifyDocumentPermissionAction, this))
@@ -90,14 +87,9 @@ bool ModifyDocumentPermissionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ModifyDocumentPermissionResponse object.
+ * Returns a ModifyDocumentPermissionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ModifyDocumentPermissionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SSMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ModifyDocumentPermissionRequest::response(QNetworkReply * const reply) const
 {
@@ -105,20 +97,17 @@ QtAws::Core::AwsAbstractResponse * ModifyDocumentPermissionRequest::response(QNe
 }
 
 /*!
- * @internal
+ * \class QtAws::SSM::ModifyDocumentPermissionRequestPrivate
+ * \brief The ModifyDocumentPermissionRequestPrivate class provides private implementation for ModifyDocumentPermissionRequest.
+ * \internal
  *
- * @class  ModifyDocumentPermissionRequestPrivate
- *
- * @brief  Private implementation for ModifyDocumentPermissionRequest.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ModifyDocumentPermissionRequestPrivate object.
- *
- * @param  action  SSM action being performed.
- * @param  q       Pointer to this object's public ModifyDocumentPermissionRequest instance.
+ * Constructs a ModifyDocumentPermissionRequestPrivate object for SSM \a action with,
+ * public implementation \a q.
  */
 ModifyDocumentPermissionRequestPrivate::ModifyDocumentPermissionRequestPrivate(
     const SSMRequest::Action action, ModifyDocumentPermissionRequest * const q)
@@ -128,15 +117,10 @@ ModifyDocumentPermissionRequestPrivate::ModifyDocumentPermissionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ModifyDocumentPermissionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ModifyDocumentPermissionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ModifyDocumentPermissionRequest instance.
  */
 ModifyDocumentPermissionRequestPrivate::ModifyDocumentPermissionRequestPrivate(
     const ModifyDocumentPermissionRequestPrivate &other, ModifyDocumentPermissionRequest * const q)

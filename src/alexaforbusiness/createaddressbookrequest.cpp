@@ -27,10 +27,9 @@ namespace AlexaForBusiness {
 
 /*!
  * \class QtAws::AlexaForBusiness::CreateAddressBookRequest
- *
  * \brief The CreateAddressBookRequest class provides an interface for AlexaForBusiness CreateAddressBook requests.
  *
- * \ingroup AlexaForBusiness
+ * \inmodule QtAwsAlexaForBusiness
  *
  *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
  *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
@@ -42,9 +41,7 @@ namespace AlexaForBusiness {
  */
 
 /*!
- * @brief  Constructs a new CreateAddressBookRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateAddressBookRequest::CreateAddressBookRequest(const CreateAddressBookRequest &other)
     : AlexaForBusinessRequest(new CreateAddressBookRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ CreateAddressBookRequest::CreateAddressBookRequest(const CreateAddressBookReques
 }
 
 /*!
- * @brief  Constructs a new CreateAddressBookRequest object.
+ * Constructs a CreateAddressBookRequest object.
  */
 CreateAddressBookRequest::CreateAddressBookRequest()
     : AlexaForBusinessRequest(new CreateAddressBookRequestPrivate(AlexaForBusinessRequest::CreateAddressBookAction, this))
@@ -71,14 +68,9 @@ bool CreateAddressBookRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateAddressBookResponse object.
+ * Returns a CreateAddressBookResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateAddressBookResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AlexaForBusinessClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateAddressBookRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * CreateAddressBookRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::AlexaForBusiness::CreateAddressBookRequestPrivate
+ * \brief The CreateAddressBookRequestPrivate class provides private implementation for CreateAddressBookRequest.
+ * \internal
  *
- * @class  CreateAddressBookRequestPrivate
- *
- * @brief  Private implementation for CreateAddressBookRequest.
+ * \inmodule QtAwsAlexaForBusiness
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateAddressBookRequestPrivate object.
- *
- * @param  action  AlexaForBusiness action being performed.
- * @param  q       Pointer to this object's public CreateAddressBookRequest instance.
+ * Constructs a CreateAddressBookRequestPrivate object for AlexaForBusiness \a action with,
+ * public implementation \a q.
  */
 CreateAddressBookRequestPrivate::CreateAddressBookRequestPrivate(
     const AlexaForBusinessRequest::Action action, CreateAddressBookRequest * const q)
@@ -109,15 +98,10 @@ CreateAddressBookRequestPrivate::CreateAddressBookRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateAddressBookRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateAddressBookRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateAddressBookRequest instance.
  */
 CreateAddressBookRequestPrivate::CreateAddressBookRequestPrivate(
     const CreateAddressBookRequestPrivate &other, CreateAddressBookRequest * const q)

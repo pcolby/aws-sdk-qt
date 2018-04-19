@@ -27,10 +27,9 @@ namespace Lightsail {
 
 /*!
  * \class QtAws::Lightsail::AllocateStaticIpRequest
- *
  * \brief The AllocateStaticIpRequest class provides an interface for Lightsail AllocateStaticIp requests.
  *
- * \ingroup Lightsail
+ * \inmodule QtAwsLightsail
  *
  *  Amazon Lightsail is the easiest way to get started with AWS for developers who just need virtual private servers.
  *  Lightsail includes everything you need to launch your project quickly - a virtual machine, SSD-based storage, data
@@ -53,9 +52,7 @@ namespace Lightsail {
  */
 
 /*!
- * @brief  Constructs a new AllocateStaticIpRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AllocateStaticIpRequest::AllocateStaticIpRequest(const AllocateStaticIpRequest &other)
     : LightsailRequest(new AllocateStaticIpRequestPrivate(*other.d_func(), this))
@@ -64,7 +61,7 @@ AllocateStaticIpRequest::AllocateStaticIpRequest(const AllocateStaticIpRequest &
 }
 
 /*!
- * @brief  Constructs a new AllocateStaticIpRequest object.
+ * Constructs a AllocateStaticIpRequest object.
  */
 AllocateStaticIpRequest::AllocateStaticIpRequest()
     : LightsailRequest(new AllocateStaticIpRequestPrivate(LightsailRequest::AllocateStaticIpAction, this))
@@ -82,14 +79,9 @@ bool AllocateStaticIpRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AllocateStaticIpResponse object.
+ * Returns a AllocateStaticIpResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AllocateStaticIpResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  LightsailClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AllocateStaticIpRequest::response(QNetworkReply * const reply) const
 {
@@ -97,20 +89,17 @@ QtAws::Core::AwsAbstractResponse * AllocateStaticIpRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::Lightsail::AllocateStaticIpRequestPrivate
+ * \brief The AllocateStaticIpRequestPrivate class provides private implementation for AllocateStaticIpRequest.
+ * \internal
  *
- * @class  AllocateStaticIpRequestPrivate
- *
- * @brief  Private implementation for AllocateStaticIpRequest.
+ * \inmodule QtAwsLightsail
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AllocateStaticIpRequestPrivate object.
- *
- * @param  action  Lightsail action being performed.
- * @param  q       Pointer to this object's public AllocateStaticIpRequest instance.
+ * Constructs a AllocateStaticIpRequestPrivate object for Lightsail \a action with,
+ * public implementation \a q.
  */
 AllocateStaticIpRequestPrivate::AllocateStaticIpRequestPrivate(
     const LightsailRequest::Action action, AllocateStaticIpRequest * const q)
@@ -120,15 +109,10 @@ AllocateStaticIpRequestPrivate::AllocateStaticIpRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AllocateStaticIpRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AllocateStaticIpRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AllocateStaticIpRequest instance.
  */
 AllocateStaticIpRequestPrivate::AllocateStaticIpRequestPrivate(
     const AllocateStaticIpRequestPrivate &other, AllocateStaticIpRequest * const q)

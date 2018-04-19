@@ -27,10 +27,9 @@ namespace DeviceFarm {
 
 /*!
  * \class QtAws::DeviceFarm::UpdateDeviceInstanceRequest
- *
  * \brief The UpdateDeviceInstanceRequest class provides an interface for DeviceFarm UpdateDeviceInstance requests.
  *
- * \ingroup DeviceFarm
+ * \inmodule QtAwsDeviceFarm
  *
  *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
  *  phones, tablets, and other devices in the
@@ -39,9 +38,7 @@ namespace DeviceFarm {
  */
 
 /*!
- * @brief  Constructs a new UpdateDeviceInstanceRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateDeviceInstanceRequest::UpdateDeviceInstanceRequest(const UpdateDeviceInstanceRequest &other)
     : DeviceFarmRequest(new UpdateDeviceInstanceRequestPrivate(*other.d_func(), this))
@@ -50,7 +47,7 @@ UpdateDeviceInstanceRequest::UpdateDeviceInstanceRequest(const UpdateDeviceInsta
 }
 
 /*!
- * @brief  Constructs a new UpdateDeviceInstanceRequest object.
+ * Constructs a UpdateDeviceInstanceRequest object.
  */
 UpdateDeviceInstanceRequest::UpdateDeviceInstanceRequest()
     : DeviceFarmRequest(new UpdateDeviceInstanceRequestPrivate(DeviceFarmRequest::UpdateDeviceInstanceAction, this))
@@ -68,14 +65,9 @@ bool UpdateDeviceInstanceRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateDeviceInstanceResponse object.
+ * Returns a UpdateDeviceInstanceResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateDeviceInstanceResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DeviceFarmClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateDeviceInstanceRequest::response(QNetworkReply * const reply) const
 {
@@ -83,20 +75,17 @@ QtAws::Core::AwsAbstractResponse * UpdateDeviceInstanceRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::DeviceFarm::UpdateDeviceInstanceRequestPrivate
+ * \brief The UpdateDeviceInstanceRequestPrivate class provides private implementation for UpdateDeviceInstanceRequest.
+ * \internal
  *
- * @class  UpdateDeviceInstanceRequestPrivate
- *
- * @brief  Private implementation for UpdateDeviceInstanceRequest.
+ * \inmodule QtAwsDeviceFarm
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateDeviceInstanceRequestPrivate object.
- *
- * @param  action  DeviceFarm action being performed.
- * @param  q       Pointer to this object's public UpdateDeviceInstanceRequest instance.
+ * Constructs a UpdateDeviceInstanceRequestPrivate object for DeviceFarm \a action with,
+ * public implementation \a q.
  */
 UpdateDeviceInstanceRequestPrivate::UpdateDeviceInstanceRequestPrivate(
     const DeviceFarmRequest::Action action, UpdateDeviceInstanceRequest * const q)
@@ -106,15 +95,10 @@ UpdateDeviceInstanceRequestPrivate::UpdateDeviceInstanceRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateDeviceInstanceRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateDeviceInstanceRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateDeviceInstanceRequest instance.
  */
 UpdateDeviceInstanceRequestPrivate::UpdateDeviceInstanceRequestPrivate(
     const UpdateDeviceInstanceRequestPrivate &other, UpdateDeviceInstanceRequest * const q)

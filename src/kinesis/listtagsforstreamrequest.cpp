@@ -27,10 +27,9 @@ namespace Kinesis {
 
 /*!
  * \class QtAws::Kinesis::ListTagsForStreamRequest
- *
  * \brief The ListTagsForStreamRequest class provides an interface for Kinesis ListTagsForStream requests.
  *
- * \ingroup Kinesis
+ * \inmodule QtAwsKinesis
  *
  *  <fullname>Amazon Kinesis Data Streams Service API Reference</fullname>
  * 
@@ -40,9 +39,7 @@ namespace Kinesis {
  */
 
 /*!
- * @brief  Constructs a new ListTagsForStreamRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListTagsForStreamRequest::ListTagsForStreamRequest(const ListTagsForStreamRequest &other)
     : KinesisRequest(new ListTagsForStreamRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ ListTagsForStreamRequest::ListTagsForStreamRequest(const ListTagsForStreamReques
 }
 
 /*!
- * @brief  Constructs a new ListTagsForStreamRequest object.
+ * Constructs a ListTagsForStreamRequest object.
  */
 ListTagsForStreamRequest::ListTagsForStreamRequest()
     : KinesisRequest(new ListTagsForStreamRequestPrivate(KinesisRequest::ListTagsForStreamAction, this))
@@ -69,14 +66,9 @@ bool ListTagsForStreamRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListTagsForStreamResponse object.
+ * Returns a ListTagsForStreamResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListTagsForStreamResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  KinesisClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListTagsForStreamRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * ListTagsForStreamRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::Kinesis::ListTagsForStreamRequestPrivate
+ * \brief The ListTagsForStreamRequestPrivate class provides private implementation for ListTagsForStreamRequest.
+ * \internal
  *
- * @class  ListTagsForStreamRequestPrivate
- *
- * @brief  Private implementation for ListTagsForStreamRequest.
+ * \inmodule QtAwsKinesis
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListTagsForStreamRequestPrivate object.
- *
- * @param  action  Kinesis action being performed.
- * @param  q       Pointer to this object's public ListTagsForStreamRequest instance.
+ * Constructs a ListTagsForStreamRequestPrivate object for Kinesis \a action with,
+ * public implementation \a q.
  */
 ListTagsForStreamRequestPrivate::ListTagsForStreamRequestPrivate(
     const KinesisRequest::Action action, ListTagsForStreamRequest * const q)
@@ -107,15 +96,10 @@ ListTagsForStreamRequestPrivate::ListTagsForStreamRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListTagsForStreamRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListTagsForStreamRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListTagsForStreamRequest instance.
  */
 ListTagsForStreamRequestPrivate::ListTagsForStreamRequestPrivate(
     const ListTagsForStreamRequestPrivate &other, ListTagsForStreamRequest * const q)

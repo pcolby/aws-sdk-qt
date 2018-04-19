@@ -27,10 +27,9 @@ namespace DeviceFarm {
 
 /*!
  * \class QtAws::DeviceFarm::CreateNetworkProfileRequest
- *
  * \brief The CreateNetworkProfileRequest class provides an interface for DeviceFarm CreateNetworkProfile requests.
  *
- * \ingroup DeviceFarm
+ * \inmodule QtAwsDeviceFarm
  *
  *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
  *  phones, tablets, and other devices in the
@@ -39,9 +38,7 @@ namespace DeviceFarm {
  */
 
 /*!
- * @brief  Constructs a new CreateNetworkProfileRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateNetworkProfileRequest::CreateNetworkProfileRequest(const CreateNetworkProfileRequest &other)
     : DeviceFarmRequest(new CreateNetworkProfileRequestPrivate(*other.d_func(), this))
@@ -50,7 +47,7 @@ CreateNetworkProfileRequest::CreateNetworkProfileRequest(const CreateNetworkProf
 }
 
 /*!
- * @brief  Constructs a new CreateNetworkProfileRequest object.
+ * Constructs a CreateNetworkProfileRequest object.
  */
 CreateNetworkProfileRequest::CreateNetworkProfileRequest()
     : DeviceFarmRequest(new CreateNetworkProfileRequestPrivate(DeviceFarmRequest::CreateNetworkProfileAction, this))
@@ -68,14 +65,9 @@ bool CreateNetworkProfileRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateNetworkProfileResponse object.
+ * Returns a CreateNetworkProfileResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateNetworkProfileResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DeviceFarmClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateNetworkProfileRequest::response(QNetworkReply * const reply) const
 {
@@ -83,20 +75,17 @@ QtAws::Core::AwsAbstractResponse * CreateNetworkProfileRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::DeviceFarm::CreateNetworkProfileRequestPrivate
+ * \brief The CreateNetworkProfileRequestPrivate class provides private implementation for CreateNetworkProfileRequest.
+ * \internal
  *
- * @class  CreateNetworkProfileRequestPrivate
- *
- * @brief  Private implementation for CreateNetworkProfileRequest.
+ * \inmodule QtAwsDeviceFarm
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateNetworkProfileRequestPrivate object.
- *
- * @param  action  DeviceFarm action being performed.
- * @param  q       Pointer to this object's public CreateNetworkProfileRequest instance.
+ * Constructs a CreateNetworkProfileRequestPrivate object for DeviceFarm \a action with,
+ * public implementation \a q.
  */
 CreateNetworkProfileRequestPrivate::CreateNetworkProfileRequestPrivate(
     const DeviceFarmRequest::Action action, CreateNetworkProfileRequest * const q)
@@ -106,15 +95,10 @@ CreateNetworkProfileRequestPrivate::CreateNetworkProfileRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateNetworkProfileRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateNetworkProfileRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateNetworkProfileRequest instance.
  */
 CreateNetworkProfileRequestPrivate::CreateNetworkProfileRequestPrivate(
     const CreateNetworkProfileRequestPrivate &other, CreateNetworkProfileRequest * const q)

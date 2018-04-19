@@ -27,10 +27,9 @@ namespace DynamoDB {
 
 /*!
  * \class QtAws::DynamoDB::CreateTableRequest
- *
  * \brief The CreateTableRequest class provides an interface for DynamoDB CreateTable requests.
  *
- * \ingroup DynamoDB
+ * \inmodule QtAwsDynamoDB
  *
  *  <fullname>Amazon DynamoDB</fullname>
  * 
@@ -56,9 +55,7 @@ namespace DynamoDB {
  */
 
 /*!
- * @brief  Constructs a new CreateTableRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateTableRequest::CreateTableRequest(const CreateTableRequest &other)
     : DynamoDBRequest(new CreateTableRequestPrivate(*other.d_func(), this))
@@ -67,7 +64,7 @@ CreateTableRequest::CreateTableRequest(const CreateTableRequest &other)
 }
 
 /*!
- * @brief  Constructs a new CreateTableRequest object.
+ * Constructs a CreateTableRequest object.
  */
 CreateTableRequest::CreateTableRequest()
     : DynamoDBRequest(new CreateTableRequestPrivate(DynamoDBRequest::CreateTableAction, this))
@@ -85,14 +82,9 @@ bool CreateTableRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateTableResponse object.
+ * Returns a CreateTableResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateTableResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DynamoDBClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateTableRequest::response(QNetworkReply * const reply) const
 {
@@ -100,20 +92,17 @@ QtAws::Core::AwsAbstractResponse * CreateTableRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::DynamoDB::CreateTableRequestPrivate
+ * \brief The CreateTableRequestPrivate class provides private implementation for CreateTableRequest.
+ * \internal
  *
- * @class  CreateTableRequestPrivate
- *
- * @brief  Private implementation for CreateTableRequest.
+ * \inmodule QtAwsDynamoDB
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateTableRequestPrivate object.
- *
- * @param  action  DynamoDB action being performed.
- * @param  q       Pointer to this object's public CreateTableRequest instance.
+ * Constructs a CreateTableRequestPrivate object for DynamoDB \a action with,
+ * public implementation \a q.
  */
 CreateTableRequestPrivate::CreateTableRequestPrivate(
     const DynamoDBRequest::Action action, CreateTableRequest * const q)
@@ -123,15 +112,10 @@ CreateTableRequestPrivate::CreateTableRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateTableRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateTableRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateTableRequest instance.
  */
 CreateTableRequestPrivate::CreateTableRequestPrivate(
     const CreateTableRequestPrivate &other, CreateTableRequest * const q)

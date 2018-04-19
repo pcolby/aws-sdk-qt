@@ -27,10 +27,9 @@ namespace CodeCommit {
 
 /*!
  * \class QtAws::CodeCommit::UpdatePullRequestDescriptionRequest
- *
  * \brief The UpdatePullRequestDescriptionRequest class provides an interface for CodeCommit UpdatePullRequestDescription requests.
  *
- * \ingroup CodeCommit
+ * \inmodule QtAwsCodeCommit
  *
  *  <fullname>AWS CodeCommit</fullname>
  * 
@@ -227,9 +226,7 @@ namespace CodeCommit {
  */
 
 /*!
- * @brief  Constructs a new UpdatePullRequestDescriptionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdatePullRequestDescriptionRequest::UpdatePullRequestDescriptionRequest(const UpdatePullRequestDescriptionRequest &other)
     : CodeCommitRequest(new UpdatePullRequestDescriptionRequestPrivate(*other.d_func(), this))
@@ -238,7 +235,7 @@ UpdatePullRequestDescriptionRequest::UpdatePullRequestDescriptionRequest(const U
 }
 
 /*!
- * @brief  Constructs a new UpdatePullRequestDescriptionRequest object.
+ * Constructs a UpdatePullRequestDescriptionRequest object.
  */
 UpdatePullRequestDescriptionRequest::UpdatePullRequestDescriptionRequest()
     : CodeCommitRequest(new UpdatePullRequestDescriptionRequestPrivate(CodeCommitRequest::UpdatePullRequestDescriptionAction, this))
@@ -256,14 +253,9 @@ bool UpdatePullRequestDescriptionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdatePullRequestDescriptionResponse object.
+ * Returns a UpdatePullRequestDescriptionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdatePullRequestDescriptionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CodeCommitClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdatePullRequestDescriptionRequest::response(QNetworkReply * const reply) const
 {
@@ -271,20 +263,17 @@ QtAws::Core::AwsAbstractResponse * UpdatePullRequestDescriptionRequest::response
 }
 
 /*!
- * @internal
+ * \class QtAws::CodeCommit::UpdatePullRequestDescriptionRequestPrivate
+ * \brief The UpdatePullRequestDescriptionRequestPrivate class provides private implementation for UpdatePullRequestDescriptionRequest.
+ * \internal
  *
- * @class  UpdatePullRequestDescriptionRequestPrivate
- *
- * @brief  Private implementation for UpdatePullRequestDescriptionRequest.
+ * \inmodule QtAwsCodeCommit
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdatePullRequestDescriptionRequestPrivate object.
- *
- * @param  action  CodeCommit action being performed.
- * @param  q       Pointer to this object's public UpdatePullRequestDescriptionRequest instance.
+ * Constructs a UpdatePullRequestDescriptionRequestPrivate object for CodeCommit \a action with,
+ * public implementation \a q.
  */
 UpdatePullRequestDescriptionRequestPrivate::UpdatePullRequestDescriptionRequestPrivate(
     const CodeCommitRequest::Action action, UpdatePullRequestDescriptionRequest * const q)
@@ -294,15 +283,10 @@ UpdatePullRequestDescriptionRequestPrivate::UpdatePullRequestDescriptionRequestP
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdatePullRequestDescriptionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdatePullRequestDescriptionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdatePullRequestDescriptionRequest instance.
  */
 UpdatePullRequestDescriptionRequestPrivate::UpdatePullRequestDescriptionRequestPrivate(
     const UpdatePullRequestDescriptionRequestPrivate &other, UpdatePullRequestDescriptionRequest * const q)

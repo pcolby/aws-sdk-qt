@@ -27,10 +27,9 @@ namespace CodeBuild {
 
 /*!
  * \class QtAws::CodeBuild::ListCuratedEnvironmentImagesRequest
- *
  * \brief The ListCuratedEnvironmentImagesRequest class provides an interface for CodeBuild ListCuratedEnvironmentImages requests.
  *
- * \ingroup CodeBuild
+ * \inmodule QtAwsCodeBuild
  *
  *  <fullname>AWS CodeBuild</fullname>
  * 
@@ -117,9 +116,7 @@ namespace CodeBuild {
  */
 
 /*!
- * @brief  Constructs a new ListCuratedEnvironmentImagesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListCuratedEnvironmentImagesRequest::ListCuratedEnvironmentImagesRequest(const ListCuratedEnvironmentImagesRequest &other)
     : CodeBuildRequest(new ListCuratedEnvironmentImagesRequestPrivate(*other.d_func(), this))
@@ -128,7 +125,7 @@ ListCuratedEnvironmentImagesRequest::ListCuratedEnvironmentImagesRequest(const L
 }
 
 /*!
- * @brief  Constructs a new ListCuratedEnvironmentImagesRequest object.
+ * Constructs a ListCuratedEnvironmentImagesRequest object.
  */
 ListCuratedEnvironmentImagesRequest::ListCuratedEnvironmentImagesRequest()
     : CodeBuildRequest(new ListCuratedEnvironmentImagesRequestPrivate(CodeBuildRequest::ListCuratedEnvironmentImagesAction, this))
@@ -146,14 +143,9 @@ bool ListCuratedEnvironmentImagesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListCuratedEnvironmentImagesResponse object.
+ * Returns a ListCuratedEnvironmentImagesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListCuratedEnvironmentImagesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CodeBuildClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListCuratedEnvironmentImagesRequest::response(QNetworkReply * const reply) const
 {
@@ -161,20 +153,17 @@ QtAws::Core::AwsAbstractResponse * ListCuratedEnvironmentImagesRequest::response
 }
 
 /*!
- * @internal
+ * \class QtAws::CodeBuild::ListCuratedEnvironmentImagesRequestPrivate
+ * \brief The ListCuratedEnvironmentImagesRequestPrivate class provides private implementation for ListCuratedEnvironmentImagesRequest.
+ * \internal
  *
- * @class  ListCuratedEnvironmentImagesRequestPrivate
- *
- * @brief  Private implementation for ListCuratedEnvironmentImagesRequest.
+ * \inmodule QtAwsCodeBuild
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListCuratedEnvironmentImagesRequestPrivate object.
- *
- * @param  action  CodeBuild action being performed.
- * @param  q       Pointer to this object's public ListCuratedEnvironmentImagesRequest instance.
+ * Constructs a ListCuratedEnvironmentImagesRequestPrivate object for CodeBuild \a action with,
+ * public implementation \a q.
  */
 ListCuratedEnvironmentImagesRequestPrivate::ListCuratedEnvironmentImagesRequestPrivate(
     const CodeBuildRequest::Action action, ListCuratedEnvironmentImagesRequest * const q)
@@ -184,15 +173,10 @@ ListCuratedEnvironmentImagesRequestPrivate::ListCuratedEnvironmentImagesRequestP
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListCuratedEnvironmentImagesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListCuratedEnvironmentImagesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListCuratedEnvironmentImagesRequest instance.
  */
 ListCuratedEnvironmentImagesRequestPrivate::ListCuratedEnvironmentImagesRequestPrivate(
     const ListCuratedEnvironmentImagesRequestPrivate &other, ListCuratedEnvironmentImagesRequest * const q)

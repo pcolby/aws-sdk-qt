@@ -27,10 +27,9 @@ namespace GameLift {
 
 /*!
  * \class QtAws::GameLift::GetInstanceAccessRequest
- *
  * \brief The GetInstanceAccessRequest class provides an interface for GameLift GetInstanceAccess requests.
  *
- * \ingroup GameLift
+ * \inmodule QtAwsGameLift
  *
  *  <fullname>Amazon GameLift Service</fullname>
  * 
@@ -473,9 +472,7 @@ namespace GameLift {
  */
 
 /*!
- * @brief  Constructs a new GetInstanceAccessRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetInstanceAccessRequest::GetInstanceAccessRequest(const GetInstanceAccessRequest &other)
     : GameLiftRequest(new GetInstanceAccessRequestPrivate(*other.d_func(), this))
@@ -484,7 +481,7 @@ GetInstanceAccessRequest::GetInstanceAccessRequest(const GetInstanceAccessReques
 }
 
 /*!
- * @brief  Constructs a new GetInstanceAccessRequest object.
+ * Constructs a GetInstanceAccessRequest object.
  */
 GetInstanceAccessRequest::GetInstanceAccessRequest()
     : GameLiftRequest(new GetInstanceAccessRequestPrivate(GameLiftRequest::GetInstanceAccessAction, this))
@@ -502,14 +499,9 @@ bool GetInstanceAccessRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetInstanceAccessResponse object.
+ * Returns a GetInstanceAccessResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetInstanceAccessResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GameLiftClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetInstanceAccessRequest::response(QNetworkReply * const reply) const
 {
@@ -517,20 +509,17 @@ QtAws::Core::AwsAbstractResponse * GetInstanceAccessRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::GameLift::GetInstanceAccessRequestPrivate
+ * \brief The GetInstanceAccessRequestPrivate class provides private implementation for GetInstanceAccessRequest.
+ * \internal
  *
- * @class  GetInstanceAccessRequestPrivate
- *
- * @brief  Private implementation for GetInstanceAccessRequest.
+ * \inmodule QtAwsGameLift
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetInstanceAccessRequestPrivate object.
- *
- * @param  action  GameLift action being performed.
- * @param  q       Pointer to this object's public GetInstanceAccessRequest instance.
+ * Constructs a GetInstanceAccessRequestPrivate object for GameLift \a action with,
+ * public implementation \a q.
  */
 GetInstanceAccessRequestPrivate::GetInstanceAccessRequestPrivate(
     const GameLiftRequest::Action action, GetInstanceAccessRequest * const q)
@@ -540,15 +529,10 @@ GetInstanceAccessRequestPrivate::GetInstanceAccessRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetInstanceAccessRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetInstanceAccessRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetInstanceAccessRequest instance.
  */
 GetInstanceAccessRequestPrivate::GetInstanceAccessRequestPrivate(
     const GetInstanceAccessRequestPrivate &other, GetInstanceAccessRequest * const q)

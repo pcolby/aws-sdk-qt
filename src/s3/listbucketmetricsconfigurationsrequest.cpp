@@ -27,19 +27,16 @@ namespace S3 {
 
 /*!
  * \class QtAws::S3::ListBucketMetricsConfigurationsRequest
- *
  * \brief The ListBucketMetricsConfigurationsRequest class provides an interface for S3 ListBucketMetricsConfigurations requests.
  *
- * \ingroup S3
+ * \inmodule QtAwsS3
  *
  *
  * \sa S3Client::listBucketMetricsConfigurations
  */
 
 /*!
- * @brief  Constructs a new ListBucketMetricsConfigurationsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListBucketMetricsConfigurationsRequest::ListBucketMetricsConfigurationsRequest(const ListBucketMetricsConfigurationsRequest &other)
     : S3Request(new ListBucketMetricsConfigurationsRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ ListBucketMetricsConfigurationsRequest::ListBucketMetricsConfigurationsRequest(c
 }
 
 /*!
- * @brief  Constructs a new ListBucketMetricsConfigurationsRequest object.
+ * Constructs a ListBucketMetricsConfigurationsRequest object.
  */
 ListBucketMetricsConfigurationsRequest::ListBucketMetricsConfigurationsRequest()
     : S3Request(new ListBucketMetricsConfigurationsRequestPrivate(S3Request::ListBucketMetricsConfigurationsAction, this))
@@ -66,14 +63,9 @@ bool ListBucketMetricsConfigurationsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListBucketMetricsConfigurationsResponse object.
+ * Returns a ListBucketMetricsConfigurationsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListBucketMetricsConfigurationsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  S3Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListBucketMetricsConfigurationsRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * ListBucketMetricsConfigurationsRequest::respo
 }
 
 /*!
- * @internal
+ * \class QtAws::S3::ListBucketMetricsConfigurationsRequestPrivate
+ * \brief The ListBucketMetricsConfigurationsRequestPrivate class provides private implementation for ListBucketMetricsConfigurationsRequest.
+ * \internal
  *
- * @class  ListBucketMetricsConfigurationsRequestPrivate
- *
- * @brief  Private implementation for ListBucketMetricsConfigurationsRequest.
+ * \inmodule QtAwsS3
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListBucketMetricsConfigurationsRequestPrivate object.
- *
- * @param  action  S3 action being performed.
- * @param  q       Pointer to this object's public ListBucketMetricsConfigurationsRequest instance.
+ * Constructs a ListBucketMetricsConfigurationsRequestPrivate object for S3 \a action with,
+ * public implementation \a q.
  */
 ListBucketMetricsConfigurationsRequestPrivate::ListBucketMetricsConfigurationsRequestPrivate(
     const S3Request::Action action, ListBucketMetricsConfigurationsRequest * const q)
@@ -104,15 +93,10 @@ ListBucketMetricsConfigurationsRequestPrivate::ListBucketMetricsConfigurationsRe
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListBucketMetricsConfigurationsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListBucketMetricsConfigurationsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListBucketMetricsConfigurationsRequest instance.
  */
 ListBucketMetricsConfigurationsRequestPrivate::ListBucketMetricsConfigurationsRequestPrivate(
     const ListBucketMetricsConfigurationsRequestPrivate &other, ListBucketMetricsConfigurationsRequest * const q)

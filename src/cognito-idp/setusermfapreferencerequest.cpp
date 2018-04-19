@@ -27,10 +27,9 @@ namespace CognitoIdentityProvider {
 
 /*!
  * \class QtAws::CognitoIdentityProvider::SetUserMFAPreferenceRequest
- *
  * \brief The SetUserMFAPreferenceRequest class provides an interface for CognitoIdentityProvider SetUserMFAPreference requests.
  *
- * \ingroup CognitoIdentityProvider
+ * \inmodule QtAwsCognitoIdentityProvider
  *
  *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
  *  authenticate a user to obtain tokens related to user identity and access
@@ -47,9 +46,7 @@ namespace CognitoIdentityProvider {
  */
 
 /*!
- * @brief  Constructs a new SetUserMFAPreferenceRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 SetUserMFAPreferenceRequest::SetUserMFAPreferenceRequest(const SetUserMFAPreferenceRequest &other)
     : CognitoIdentityProviderRequest(new SetUserMFAPreferenceRequestPrivate(*other.d_func(), this))
@@ -58,7 +55,7 @@ SetUserMFAPreferenceRequest::SetUserMFAPreferenceRequest(const SetUserMFAPrefere
 }
 
 /*!
- * @brief  Constructs a new SetUserMFAPreferenceRequest object.
+ * Constructs a SetUserMFAPreferenceRequest object.
  */
 SetUserMFAPreferenceRequest::SetUserMFAPreferenceRequest()
     : CognitoIdentityProviderRequest(new SetUserMFAPreferenceRequestPrivate(CognitoIdentityProviderRequest::SetUserMFAPreferenceAction, this))
@@ -76,14 +73,9 @@ bool SetUserMFAPreferenceRequest::isValid() const
 
 
 /*!
- * @brief  Construct an SetUserMFAPreferenceResponse object.
+ * Returns a SetUserMFAPreferenceResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An SetUserMFAPreferenceResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CognitoIdentityProviderClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * SetUserMFAPreferenceRequest::response(QNetworkReply * const reply) const
 {
@@ -91,20 +83,17 @@ QtAws::Core::AwsAbstractResponse * SetUserMFAPreferenceRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::CognitoIdentityProvider::SetUserMFAPreferenceRequestPrivate
+ * \brief The SetUserMFAPreferenceRequestPrivate class provides private implementation for SetUserMFAPreferenceRequest.
+ * \internal
  *
- * @class  SetUserMFAPreferenceRequestPrivate
- *
- * @brief  Private implementation for SetUserMFAPreferenceRequest.
+ * \inmodule QtAwsCognitoIdentityProvider
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new SetUserMFAPreferenceRequestPrivate object.
- *
- * @param  action  CognitoIdentityProvider action being performed.
- * @param  q       Pointer to this object's public SetUserMFAPreferenceRequest instance.
+ * Constructs a SetUserMFAPreferenceRequestPrivate object for CognitoIdentityProvider \a action with,
+ * public implementation \a q.
  */
 SetUserMFAPreferenceRequestPrivate::SetUserMFAPreferenceRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, SetUserMFAPreferenceRequest * const q)
@@ -114,15 +103,10 @@ SetUserMFAPreferenceRequestPrivate::SetUserMFAPreferenceRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SetUserMFAPreferenceRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the SetUserMFAPreferenceRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public SetUserMFAPreferenceRequest instance.
  */
 SetUserMFAPreferenceRequestPrivate::SetUserMFAPreferenceRequestPrivate(
     const SetUserMFAPreferenceRequestPrivate &other, SetUserMFAPreferenceRequest * const q)

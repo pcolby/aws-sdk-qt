@@ -27,10 +27,9 @@ namespace Greengrass {
 
 /*!
  * \class QtAws::Greengrass::AssociateServiceRoleToAccountRequest
- *
  * \brief The AssociateServiceRoleToAccountRequest class provides an interface for Greengrass AssociateServiceRoleToAccount requests.
  *
- * \ingroup Greengrass
+ * \inmodule QtAwsGreengrass
  *
  *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
  *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
@@ -40,9 +39,7 @@ namespace Greengrass {
  */
 
 /*!
- * @brief  Constructs a new AssociateServiceRoleToAccountRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AssociateServiceRoleToAccountRequest::AssociateServiceRoleToAccountRequest(const AssociateServiceRoleToAccountRequest &other)
     : GreengrassRequest(new AssociateServiceRoleToAccountRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ AssociateServiceRoleToAccountRequest::AssociateServiceRoleToAccountRequest(const
 }
 
 /*!
- * @brief  Constructs a new AssociateServiceRoleToAccountRequest object.
+ * Constructs a AssociateServiceRoleToAccountRequest object.
  */
 AssociateServiceRoleToAccountRequest::AssociateServiceRoleToAccountRequest()
     : GreengrassRequest(new AssociateServiceRoleToAccountRequestPrivate(GreengrassRequest::AssociateServiceRoleToAccountAction, this))
@@ -69,14 +66,9 @@ bool AssociateServiceRoleToAccountRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AssociateServiceRoleToAccountResponse object.
+ * Returns a AssociateServiceRoleToAccountResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AssociateServiceRoleToAccountResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GreengrassClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AssociateServiceRoleToAccountRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * AssociateServiceRoleToAccountRequest::respons
 }
 
 /*!
- * @internal
+ * \class QtAws::Greengrass::AssociateServiceRoleToAccountRequestPrivate
+ * \brief The AssociateServiceRoleToAccountRequestPrivate class provides private implementation for AssociateServiceRoleToAccountRequest.
+ * \internal
  *
- * @class  AssociateServiceRoleToAccountRequestPrivate
- *
- * @brief  Private implementation for AssociateServiceRoleToAccountRequest.
+ * \inmodule QtAwsGreengrass
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AssociateServiceRoleToAccountRequestPrivate object.
- *
- * @param  action  Greengrass action being performed.
- * @param  q       Pointer to this object's public AssociateServiceRoleToAccountRequest instance.
+ * Constructs a AssociateServiceRoleToAccountRequestPrivate object for Greengrass \a action with,
+ * public implementation \a q.
  */
 AssociateServiceRoleToAccountRequestPrivate::AssociateServiceRoleToAccountRequestPrivate(
     const GreengrassRequest::Action action, AssociateServiceRoleToAccountRequest * const q)
@@ -107,15 +96,10 @@ AssociateServiceRoleToAccountRequestPrivate::AssociateServiceRoleToAccountReques
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AssociateServiceRoleToAccountRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AssociateServiceRoleToAccountRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AssociateServiceRoleToAccountRequest instance.
  */
 AssociateServiceRoleToAccountRequestPrivate::AssociateServiceRoleToAccountRequestPrivate(
     const AssociateServiceRoleToAccountRequestPrivate &other, AssociateServiceRoleToAccountRequest * const q)

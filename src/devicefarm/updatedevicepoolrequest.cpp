@@ -27,10 +27,9 @@ namespace DeviceFarm {
 
 /*!
  * \class QtAws::DeviceFarm::UpdateDevicePoolRequest
- *
  * \brief The UpdateDevicePoolRequest class provides an interface for DeviceFarm UpdateDevicePool requests.
  *
- * \ingroup DeviceFarm
+ * \inmodule QtAwsDeviceFarm
  *
  *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
  *  phones, tablets, and other devices in the
@@ -39,9 +38,7 @@ namespace DeviceFarm {
  */
 
 /*!
- * @brief  Constructs a new UpdateDevicePoolRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateDevicePoolRequest::UpdateDevicePoolRequest(const UpdateDevicePoolRequest &other)
     : DeviceFarmRequest(new UpdateDevicePoolRequestPrivate(*other.d_func(), this))
@@ -50,7 +47,7 @@ UpdateDevicePoolRequest::UpdateDevicePoolRequest(const UpdateDevicePoolRequest &
 }
 
 /*!
- * @brief  Constructs a new UpdateDevicePoolRequest object.
+ * Constructs a UpdateDevicePoolRequest object.
  */
 UpdateDevicePoolRequest::UpdateDevicePoolRequest()
     : DeviceFarmRequest(new UpdateDevicePoolRequestPrivate(DeviceFarmRequest::UpdateDevicePoolAction, this))
@@ -68,14 +65,9 @@ bool UpdateDevicePoolRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateDevicePoolResponse object.
+ * Returns a UpdateDevicePoolResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateDevicePoolResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DeviceFarmClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateDevicePoolRequest::response(QNetworkReply * const reply) const
 {
@@ -83,20 +75,17 @@ QtAws::Core::AwsAbstractResponse * UpdateDevicePoolRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::DeviceFarm::UpdateDevicePoolRequestPrivate
+ * \brief The UpdateDevicePoolRequestPrivate class provides private implementation for UpdateDevicePoolRequest.
+ * \internal
  *
- * @class  UpdateDevicePoolRequestPrivate
- *
- * @brief  Private implementation for UpdateDevicePoolRequest.
+ * \inmodule QtAwsDeviceFarm
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateDevicePoolRequestPrivate object.
- *
- * @param  action  DeviceFarm action being performed.
- * @param  q       Pointer to this object's public UpdateDevicePoolRequest instance.
+ * Constructs a UpdateDevicePoolRequestPrivate object for DeviceFarm \a action with,
+ * public implementation \a q.
  */
 UpdateDevicePoolRequestPrivate::UpdateDevicePoolRequestPrivate(
     const DeviceFarmRequest::Action action, UpdateDevicePoolRequest * const q)
@@ -106,15 +95,10 @@ UpdateDevicePoolRequestPrivate::UpdateDevicePoolRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateDevicePoolRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateDevicePoolRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateDevicePoolRequest instance.
  */
 UpdateDevicePoolRequestPrivate::UpdateDevicePoolRequestPrivate(
     const UpdateDevicePoolRequestPrivate &other, UpdateDevicePoolRequest * const q)

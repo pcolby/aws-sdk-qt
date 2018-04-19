@@ -27,10 +27,9 @@ namespace Glue {
 
 /*!
  * \class QtAws::Glue::UpdateClassifierRequest
- *
  * \brief The UpdateClassifierRequest class provides an interface for Glue UpdateClassifier requests.
  *
- * \ingroup Glue
+ * \inmodule QtAwsGlue
  *
  *  <fullname>AWS Glue</fullname>
  * 
@@ -40,9 +39,7 @@ namespace Glue {
  */
 
 /*!
- * @brief  Constructs a new UpdateClassifierRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateClassifierRequest::UpdateClassifierRequest(const UpdateClassifierRequest &other)
     : GlueRequest(new UpdateClassifierRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ UpdateClassifierRequest::UpdateClassifierRequest(const UpdateClassifierRequest &
 }
 
 /*!
- * @brief  Constructs a new UpdateClassifierRequest object.
+ * Constructs a UpdateClassifierRequest object.
  */
 UpdateClassifierRequest::UpdateClassifierRequest()
     : GlueRequest(new UpdateClassifierRequestPrivate(GlueRequest::UpdateClassifierAction, this))
@@ -69,14 +66,9 @@ bool UpdateClassifierRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateClassifierResponse object.
+ * Returns a UpdateClassifierResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateClassifierResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GlueClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateClassifierRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * UpdateClassifierRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::Glue::UpdateClassifierRequestPrivate
+ * \brief The UpdateClassifierRequestPrivate class provides private implementation for UpdateClassifierRequest.
+ * \internal
  *
- * @class  UpdateClassifierRequestPrivate
- *
- * @brief  Private implementation for UpdateClassifierRequest.
+ * \inmodule QtAwsGlue
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateClassifierRequestPrivate object.
- *
- * @param  action  Glue action being performed.
- * @param  q       Pointer to this object's public UpdateClassifierRequest instance.
+ * Constructs a UpdateClassifierRequestPrivate object for Glue \a action with,
+ * public implementation \a q.
  */
 UpdateClassifierRequestPrivate::UpdateClassifierRequestPrivate(
     const GlueRequest::Action action, UpdateClassifierRequest * const q)
@@ -107,15 +96,10 @@ UpdateClassifierRequestPrivate::UpdateClassifierRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateClassifierRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateClassifierRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateClassifierRequest instance.
  */
 UpdateClassifierRequestPrivate::UpdateClassifierRequestPrivate(
     const UpdateClassifierRequestPrivate &other, UpdateClassifierRequest * const q)

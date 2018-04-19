@@ -27,19 +27,16 @@ namespace MTurk {
 
 /*!
  * \class QtAws::MTurk::CreateQualificationTypeRequest
- *
  * \brief The CreateQualificationTypeRequest class provides an interface for MTurk CreateQualificationType requests.
  *
- * \ingroup MTurk
+ * \inmodule QtAwsMTurk
  *
  *
  * \sa MTurkClient::createQualificationType
  */
 
 /*!
- * @brief  Constructs a new CreateQualificationTypeRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateQualificationTypeRequest::CreateQualificationTypeRequest(const CreateQualificationTypeRequest &other)
     : MTurkRequest(new CreateQualificationTypeRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ CreateQualificationTypeRequest::CreateQualificationTypeRequest(const CreateQuali
 }
 
 /*!
- * @brief  Constructs a new CreateQualificationTypeRequest object.
+ * Constructs a CreateQualificationTypeRequest object.
  */
 CreateQualificationTypeRequest::CreateQualificationTypeRequest()
     : MTurkRequest(new CreateQualificationTypeRequestPrivate(MTurkRequest::CreateQualificationTypeAction, this))
@@ -66,14 +63,9 @@ bool CreateQualificationTypeRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateQualificationTypeResponse object.
+ * Returns a CreateQualificationTypeResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateQualificationTypeResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MTurkClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateQualificationTypeRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * CreateQualificationTypeRequest::response(QNet
 }
 
 /*!
- * @internal
+ * \class QtAws::MTurk::CreateQualificationTypeRequestPrivate
+ * \brief The CreateQualificationTypeRequestPrivate class provides private implementation for CreateQualificationTypeRequest.
+ * \internal
  *
- * @class  CreateQualificationTypeRequestPrivate
- *
- * @brief  Private implementation for CreateQualificationTypeRequest.
+ * \inmodule QtAwsMTurk
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateQualificationTypeRequestPrivate object.
- *
- * @param  action  MTurk action being performed.
- * @param  q       Pointer to this object's public CreateQualificationTypeRequest instance.
+ * Constructs a CreateQualificationTypeRequestPrivate object for MTurk \a action with,
+ * public implementation \a q.
  */
 CreateQualificationTypeRequestPrivate::CreateQualificationTypeRequestPrivate(
     const MTurkRequest::Action action, CreateQualificationTypeRequest * const q)
@@ -104,15 +93,10 @@ CreateQualificationTypeRequestPrivate::CreateQualificationTypeRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateQualificationTypeRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateQualificationTypeRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateQualificationTypeRequest instance.
  */
 CreateQualificationTypeRequestPrivate::CreateQualificationTypeRequestPrivate(
     const CreateQualificationTypeRequestPrivate &other, CreateQualificationTypeRequest * const q)

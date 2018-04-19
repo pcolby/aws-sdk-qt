@@ -27,10 +27,9 @@ namespace ServiceCatalog {
 
 /*!
  * \class QtAws::ServiceCatalog::UpdateProvisionedProductRequest
- *
  * \brief The UpdateProvisionedProductRequest class provides an interface for ServiceCatalog UpdateProvisionedProduct requests.
  *
- * \ingroup ServiceCatalog
+ * \inmodule QtAwsServiceCatalog
  *
  *  <fullname>AWS Service Catalog</fullname>
  * 
@@ -43,9 +42,7 @@ namespace ServiceCatalog {
  */
 
 /*!
- * @brief  Constructs a new UpdateProvisionedProductRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateProvisionedProductRequest::UpdateProvisionedProductRequest(const UpdateProvisionedProductRequest &other)
     : ServiceCatalogRequest(new UpdateProvisionedProductRequestPrivate(*other.d_func(), this))
@@ -54,7 +51,7 @@ UpdateProvisionedProductRequest::UpdateProvisionedProductRequest(const UpdatePro
 }
 
 /*!
- * @brief  Constructs a new UpdateProvisionedProductRequest object.
+ * Constructs a UpdateProvisionedProductRequest object.
  */
 UpdateProvisionedProductRequest::UpdateProvisionedProductRequest()
     : ServiceCatalogRequest(new UpdateProvisionedProductRequestPrivate(ServiceCatalogRequest::UpdateProvisionedProductAction, this))
@@ -72,14 +69,9 @@ bool UpdateProvisionedProductRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateProvisionedProductResponse object.
+ * Returns a UpdateProvisionedProductResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateProvisionedProductResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ServiceCatalogClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateProvisionedProductRequest::response(QNetworkReply * const reply) const
 {
@@ -87,20 +79,17 @@ QtAws::Core::AwsAbstractResponse * UpdateProvisionedProductRequest::response(QNe
 }
 
 /*!
- * @internal
+ * \class QtAws::ServiceCatalog::UpdateProvisionedProductRequestPrivate
+ * \brief The UpdateProvisionedProductRequestPrivate class provides private implementation for UpdateProvisionedProductRequest.
+ * \internal
  *
- * @class  UpdateProvisionedProductRequestPrivate
- *
- * @brief  Private implementation for UpdateProvisionedProductRequest.
+ * \inmodule QtAwsServiceCatalog
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateProvisionedProductRequestPrivate object.
- *
- * @param  action  ServiceCatalog action being performed.
- * @param  q       Pointer to this object's public UpdateProvisionedProductRequest instance.
+ * Constructs a UpdateProvisionedProductRequestPrivate object for ServiceCatalog \a action with,
+ * public implementation \a q.
  */
 UpdateProvisionedProductRequestPrivate::UpdateProvisionedProductRequestPrivate(
     const ServiceCatalogRequest::Action action, UpdateProvisionedProductRequest * const q)
@@ -110,15 +99,10 @@ UpdateProvisionedProductRequestPrivate::UpdateProvisionedProductRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateProvisionedProductRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateProvisionedProductRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateProvisionedProductRequest instance.
  */
 UpdateProvisionedProductRequestPrivate::UpdateProvisionedProductRequestPrivate(
     const UpdateProvisionedProductRequestPrivate &other, UpdateProvisionedProductRequest * const q)

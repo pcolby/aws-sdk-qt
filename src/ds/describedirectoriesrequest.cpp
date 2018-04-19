@@ -27,10 +27,9 @@ namespace DirectoryService {
 
 /*!
  * \class QtAws::DirectoryService::DescribeDirectoriesRequest
- *
  * \brief The DescribeDirectoriesRequest class provides an interface for DirectoryService DescribeDirectories requests.
  *
- * \ingroup DirectoryService
+ * \inmodule QtAwsDirectoryService
  *
  *  <fullname>AWS Directory Service</fullname>
  * 
@@ -51,9 +50,7 @@ namespace DirectoryService {
  */
 
 /*!
- * @brief  Constructs a new DescribeDirectoriesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeDirectoriesRequest::DescribeDirectoriesRequest(const DescribeDirectoriesRequest &other)
     : DirectoryServiceRequest(new DescribeDirectoriesRequestPrivate(*other.d_func(), this))
@@ -62,7 +59,7 @@ DescribeDirectoriesRequest::DescribeDirectoriesRequest(const DescribeDirectories
 }
 
 /*!
- * @brief  Constructs a new DescribeDirectoriesRequest object.
+ * Constructs a DescribeDirectoriesRequest object.
  */
 DescribeDirectoriesRequest::DescribeDirectoriesRequest()
     : DirectoryServiceRequest(new DescribeDirectoriesRequestPrivate(DirectoryServiceRequest::DescribeDirectoriesAction, this))
@@ -80,14 +77,9 @@ bool DescribeDirectoriesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeDirectoriesResponse object.
+ * Returns a DescribeDirectoriesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeDirectoriesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DirectoryServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeDirectoriesRequest::response(QNetworkReply * const reply) const
 {
@@ -95,20 +87,17 @@ QtAws::Core::AwsAbstractResponse * DescribeDirectoriesRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::DirectoryService::DescribeDirectoriesRequestPrivate
+ * \brief The DescribeDirectoriesRequestPrivate class provides private implementation for DescribeDirectoriesRequest.
+ * \internal
  *
- * @class  DescribeDirectoriesRequestPrivate
- *
- * @brief  Private implementation for DescribeDirectoriesRequest.
+ * \inmodule QtAwsDirectoryService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeDirectoriesRequestPrivate object.
- *
- * @param  action  DirectoryService action being performed.
- * @param  q       Pointer to this object's public DescribeDirectoriesRequest instance.
+ * Constructs a DescribeDirectoriesRequestPrivate object for DirectoryService \a action with,
+ * public implementation \a q.
  */
 DescribeDirectoriesRequestPrivate::DescribeDirectoriesRequestPrivate(
     const DirectoryServiceRequest::Action action, DescribeDirectoriesRequest * const q)
@@ -118,15 +107,10 @@ DescribeDirectoriesRequestPrivate::DescribeDirectoriesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeDirectoriesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeDirectoriesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeDirectoriesRequest instance.
  */
 DescribeDirectoriesRequestPrivate::DescribeDirectoriesRequestPrivate(
     const DescribeDirectoriesRequestPrivate &other, DescribeDirectoriesRequest * const q)

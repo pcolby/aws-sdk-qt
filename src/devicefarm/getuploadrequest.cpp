@@ -27,10 +27,9 @@ namespace DeviceFarm {
 
 /*!
  * \class QtAws::DeviceFarm::GetUploadRequest
- *
  * \brief The GetUploadRequest class provides an interface for DeviceFarm GetUpload requests.
  *
- * \ingroup DeviceFarm
+ * \inmodule QtAwsDeviceFarm
  *
  *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
  *  phones, tablets, and other devices in the
@@ -39,9 +38,7 @@ namespace DeviceFarm {
  */
 
 /*!
- * @brief  Constructs a new GetUploadRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetUploadRequest::GetUploadRequest(const GetUploadRequest &other)
     : DeviceFarmRequest(new GetUploadRequestPrivate(*other.d_func(), this))
@@ -50,7 +47,7 @@ GetUploadRequest::GetUploadRequest(const GetUploadRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetUploadRequest object.
+ * Constructs a GetUploadRequest object.
  */
 GetUploadRequest::GetUploadRequest()
     : DeviceFarmRequest(new GetUploadRequestPrivate(DeviceFarmRequest::GetUploadAction, this))
@@ -68,14 +65,9 @@ bool GetUploadRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetUploadResponse object.
+ * Returns a GetUploadResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetUploadResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DeviceFarmClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetUploadRequest::response(QNetworkReply * const reply) const
 {
@@ -83,20 +75,17 @@ QtAws::Core::AwsAbstractResponse * GetUploadRequest::response(QNetworkReply * co
 }
 
 /*!
- * @internal
+ * \class QtAws::DeviceFarm::GetUploadRequestPrivate
+ * \brief The GetUploadRequestPrivate class provides private implementation for GetUploadRequest.
+ * \internal
  *
- * @class  GetUploadRequestPrivate
- *
- * @brief  Private implementation for GetUploadRequest.
+ * \inmodule QtAwsDeviceFarm
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetUploadRequestPrivate object.
- *
- * @param  action  DeviceFarm action being performed.
- * @param  q       Pointer to this object's public GetUploadRequest instance.
+ * Constructs a GetUploadRequestPrivate object for DeviceFarm \a action with,
+ * public implementation \a q.
  */
 GetUploadRequestPrivate::GetUploadRequestPrivate(
     const DeviceFarmRequest::Action action, GetUploadRequest * const q)
@@ -106,15 +95,10 @@ GetUploadRequestPrivate::GetUploadRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetUploadRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetUploadRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetUploadRequest instance.
  */
 GetUploadRequestPrivate::GetUploadRequestPrivate(
     const GetUploadRequestPrivate &other, GetUploadRequest * const q)

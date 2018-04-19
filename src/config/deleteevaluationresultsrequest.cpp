@@ -27,10 +27,9 @@ namespace ConfigService {
 
 /*!
  * \class QtAws::ConfigService::DeleteEvaluationResultsRequest
- *
  * \brief The DeleteEvaluationResultsRequest class provides an interface for ConfigService DeleteEvaluationResults requests.
  *
- * \ingroup ConfigService
+ * \inmodule QtAwsConfigService
  *
  *  <fullname>AWS Config</fullname>
  * 
@@ -60,9 +59,7 @@ namespace ConfigService {
  */
 
 /*!
- * @brief  Constructs a new DeleteEvaluationResultsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteEvaluationResultsRequest::DeleteEvaluationResultsRequest(const DeleteEvaluationResultsRequest &other)
     : ConfigServiceRequest(new DeleteEvaluationResultsRequestPrivate(*other.d_func(), this))
@@ -71,7 +68,7 @@ DeleteEvaluationResultsRequest::DeleteEvaluationResultsRequest(const DeleteEvalu
 }
 
 /*!
- * @brief  Constructs a new DeleteEvaluationResultsRequest object.
+ * Constructs a DeleteEvaluationResultsRequest object.
  */
 DeleteEvaluationResultsRequest::DeleteEvaluationResultsRequest()
     : ConfigServiceRequest(new DeleteEvaluationResultsRequestPrivate(ConfigServiceRequest::DeleteEvaluationResultsAction, this))
@@ -89,14 +86,9 @@ bool DeleteEvaluationResultsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteEvaluationResultsResponse object.
+ * Returns a DeleteEvaluationResultsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteEvaluationResultsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ConfigServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteEvaluationResultsRequest::response(QNetworkReply * const reply) const
 {
@@ -104,20 +96,17 @@ QtAws::Core::AwsAbstractResponse * DeleteEvaluationResultsRequest::response(QNet
 }
 
 /*!
- * @internal
+ * \class QtAws::ConfigService::DeleteEvaluationResultsRequestPrivate
+ * \brief The DeleteEvaluationResultsRequestPrivate class provides private implementation for DeleteEvaluationResultsRequest.
+ * \internal
  *
- * @class  DeleteEvaluationResultsRequestPrivate
- *
- * @brief  Private implementation for DeleteEvaluationResultsRequest.
+ * \inmodule QtAwsConfigService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteEvaluationResultsRequestPrivate object.
- *
- * @param  action  ConfigService action being performed.
- * @param  q       Pointer to this object's public DeleteEvaluationResultsRequest instance.
+ * Constructs a DeleteEvaluationResultsRequestPrivate object for ConfigService \a action with,
+ * public implementation \a q.
  */
 DeleteEvaluationResultsRequestPrivate::DeleteEvaluationResultsRequestPrivate(
     const ConfigServiceRequest::Action action, DeleteEvaluationResultsRequest * const q)
@@ -127,15 +116,10 @@ DeleteEvaluationResultsRequestPrivate::DeleteEvaluationResultsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteEvaluationResultsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteEvaluationResultsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteEvaluationResultsRequest instance.
  */
 DeleteEvaluationResultsRequestPrivate::DeleteEvaluationResultsRequestPrivate(
     const DeleteEvaluationResultsRequestPrivate &other, DeleteEvaluationResultsRequest * const q)

@@ -27,10 +27,9 @@ namespace CloudFormation {
 
 /*!
  * \class QtAws::CloudFormation::ValidateTemplateRequest
- *
  * \brief The ValidateTemplateRequest class provides an interface for CloudFormation ValidateTemplate requests.
  *
- * \ingroup CloudFormation
+ * \inmodule QtAwsCloudFormation
  *
  *  <fullname>AWS CloudFormation</fullname>
  * 
@@ -59,9 +58,7 @@ namespace CloudFormation {
  */
 
 /*!
- * @brief  Constructs a new ValidateTemplateRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ValidateTemplateRequest::ValidateTemplateRequest(const ValidateTemplateRequest &other)
     : CloudFormationRequest(new ValidateTemplateRequestPrivate(*other.d_func(), this))
@@ -70,7 +67,7 @@ ValidateTemplateRequest::ValidateTemplateRequest(const ValidateTemplateRequest &
 }
 
 /*!
- * @brief  Constructs a new ValidateTemplateRequest object.
+ * Constructs a ValidateTemplateRequest object.
  */
 ValidateTemplateRequest::ValidateTemplateRequest()
     : CloudFormationRequest(new ValidateTemplateRequestPrivate(CloudFormationRequest::ValidateTemplateAction, this))
@@ -88,14 +85,9 @@ bool ValidateTemplateRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ValidateTemplateResponse object.
+ * Returns a ValidateTemplateResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ValidateTemplateResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudFormationClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ValidateTemplateRequest::response(QNetworkReply * const reply) const
 {
@@ -103,20 +95,17 @@ QtAws::Core::AwsAbstractResponse * ValidateTemplateRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudFormation::ValidateTemplateRequestPrivate
+ * \brief The ValidateTemplateRequestPrivate class provides private implementation for ValidateTemplateRequest.
+ * \internal
  *
- * @class  ValidateTemplateRequestPrivate
- *
- * @brief  Private implementation for ValidateTemplateRequest.
+ * \inmodule QtAwsCloudFormation
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ValidateTemplateRequestPrivate object.
- *
- * @param  action  CloudFormation action being performed.
- * @param  q       Pointer to this object's public ValidateTemplateRequest instance.
+ * Constructs a ValidateTemplateRequestPrivate object for CloudFormation \a action with,
+ * public implementation \a q.
  */
 ValidateTemplateRequestPrivate::ValidateTemplateRequestPrivate(
     const CloudFormationRequest::Action action, ValidateTemplateRequest * const q)
@@ -126,15 +115,10 @@ ValidateTemplateRequestPrivate::ValidateTemplateRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ValidateTemplateRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ValidateTemplateRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ValidateTemplateRequest instance.
  */
 ValidateTemplateRequestPrivate::ValidateTemplateRequestPrivate(
     const ValidateTemplateRequestPrivate &other, ValidateTemplateRequest * const q)

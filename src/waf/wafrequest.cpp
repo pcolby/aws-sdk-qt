@@ -25,16 +25,90 @@ namespace WAF {
 
 /*!
  * \class QtAws::WAF::WAFRequest
- *
  * \brief The WAFRequest class provides an interface for WAF requests.
  *
- * \ingroup WAF
+ * \inmodule QtAwsWAF
  */
 
 /*!
- * @brief  Constructs a new WAFRequest object.
+ * \enum WAFRequest::Action
  *
- * @param  action  The WAF action to request.
+ * This enum describes the actions that can be performed as WAF
+ * requests.
+ *
+ * \value CreateByteMatchSetAction WAF CreateByteMatchSet action.
+ * \value CreateGeoMatchSetAction WAF CreateGeoMatchSet action.
+ * \value CreateIPSetAction WAF CreateIPSet action.
+ * \value CreateRateBasedRuleAction WAF CreateRateBasedRule action.
+ * \value CreateRegexMatchSetAction WAF CreateRegexMatchSet action.
+ * \value CreateRegexPatternSetAction WAF CreateRegexPatternSet action.
+ * \value CreateRuleAction WAF CreateRule action.
+ * \value CreateRuleGroupAction WAF CreateRuleGroup action.
+ * \value CreateSizeConstraintSetAction WAF CreateSizeConstraintSet action.
+ * \value CreateSqlInjectionMatchSetAction WAF CreateSqlInjectionMatchSet action.
+ * \value CreateWebACLAction WAF CreateWebACL action.
+ * \value CreateXssMatchSetAction WAF CreateXssMatchSet action.
+ * \value DeleteByteMatchSetAction WAF DeleteByteMatchSet action.
+ * \value DeleteGeoMatchSetAction WAF DeleteGeoMatchSet action.
+ * \value DeleteIPSetAction WAF DeleteIPSet action.
+ * \value DeletePermissionPolicyAction WAF DeletePermissionPolicy action.
+ * \value DeleteRateBasedRuleAction WAF DeleteRateBasedRule action.
+ * \value DeleteRegexMatchSetAction WAF DeleteRegexMatchSet action.
+ * \value DeleteRegexPatternSetAction WAF DeleteRegexPatternSet action.
+ * \value DeleteRuleAction WAF DeleteRule action.
+ * \value DeleteRuleGroupAction WAF DeleteRuleGroup action.
+ * \value DeleteSizeConstraintSetAction WAF DeleteSizeConstraintSet action.
+ * \value DeleteSqlInjectionMatchSetAction WAF DeleteSqlInjectionMatchSet action.
+ * \value DeleteWebACLAction WAF DeleteWebACL action.
+ * \value DeleteXssMatchSetAction WAF DeleteXssMatchSet action.
+ * \value GetByteMatchSetAction WAF GetByteMatchSet action.
+ * \value GetChangeTokenAction WAF GetChangeToken action.
+ * \value GetChangeTokenStatusAction WAF GetChangeTokenStatus action.
+ * \value GetGeoMatchSetAction WAF GetGeoMatchSet action.
+ * \value GetIPSetAction WAF GetIPSet action.
+ * \value GetPermissionPolicyAction WAF GetPermissionPolicy action.
+ * \value GetRateBasedRuleAction WAF GetRateBasedRule action.
+ * \value GetRateBasedRuleManagedKeysAction WAF GetRateBasedRuleManagedKeys action.
+ * \value GetRegexMatchSetAction WAF GetRegexMatchSet action.
+ * \value GetRegexPatternSetAction WAF GetRegexPatternSet action.
+ * \value GetRuleAction WAF GetRule action.
+ * \value GetRuleGroupAction WAF GetRuleGroup action.
+ * \value GetSampledRequestsAction WAF GetSampledRequests action.
+ * \value GetSizeConstraintSetAction WAF GetSizeConstraintSet action.
+ * \value GetSqlInjectionMatchSetAction WAF GetSqlInjectionMatchSet action.
+ * \value GetWebACLAction WAF GetWebACL action.
+ * \value GetXssMatchSetAction WAF GetXssMatchSet action.
+ * \value ListActivatedRulesInRuleGroupAction WAF ListActivatedRulesInRuleGroup action.
+ * \value ListByteMatchSetsAction WAF ListByteMatchSets action.
+ * \value ListGeoMatchSetsAction WAF ListGeoMatchSets action.
+ * \value ListIPSetsAction WAF ListIPSets action.
+ * \value ListRateBasedRulesAction WAF ListRateBasedRules action.
+ * \value ListRegexMatchSetsAction WAF ListRegexMatchSets action.
+ * \value ListRegexPatternSetsAction WAF ListRegexPatternSets action.
+ * \value ListRuleGroupsAction WAF ListRuleGroups action.
+ * \value ListRulesAction WAF ListRules action.
+ * \value ListSizeConstraintSetsAction WAF ListSizeConstraintSets action.
+ * \value ListSqlInjectionMatchSetsAction WAF ListSqlInjectionMatchSets action.
+ * \value ListSubscribedRuleGroupsAction WAF ListSubscribedRuleGroups action.
+ * \value ListWebACLsAction WAF ListWebACLs action.
+ * \value ListXssMatchSetsAction WAF ListXssMatchSets action.
+ * \value PutPermissionPolicyAction WAF PutPermissionPolicy action.
+ * \value UpdateByteMatchSetAction WAF UpdateByteMatchSet action.
+ * \value UpdateGeoMatchSetAction WAF UpdateGeoMatchSet action.
+ * \value UpdateIPSetAction WAF UpdateIPSet action.
+ * \value UpdateRateBasedRuleAction WAF UpdateRateBasedRule action.
+ * \value UpdateRegexMatchSetAction WAF UpdateRegexMatchSet action.
+ * \value UpdateRegexPatternSetAction WAF UpdateRegexPatternSet action.
+ * \value UpdateRuleAction WAF UpdateRule action.
+ * \value UpdateRuleGroupAction WAF UpdateRuleGroup action.
+ * \value UpdateSizeConstraintSetAction WAF UpdateSizeConstraintSet action.
+ * \value UpdateSqlInjectionMatchSetAction WAF UpdateSqlInjectionMatchSet action.
+ * \value UpdateWebACLAction WAF UpdateWebACL action.
+ * \value UpdateXssMatchSetAction WAF UpdateXssMatchSet action.
+ */
+
+/*!
+ * Constructs a[n] WAFRequest object for WAF \a action.
  */
 WAFRequest::WAFRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new WAFRequestPrivate(action, this))
@@ -43,9 +117,7 @@ WAFRequest::WAFRequest(const Action action)
 }
 
 /*!
- * @brief  Constructs a new WAFRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 WAFRequest::WAFRequest(const WAFRequest &other)
     : QtAws::Core::AwsAbstractRequest(new WAFRequestPrivate(*other.d_func(), this))
@@ -54,13 +126,7 @@ WAFRequest::WAFRequest(const WAFRequest &other)
 }
 
 /*!
- * @brief  Assignment operator.
- *
- * Assigns \a other to \c this.
- *
- * @param  other  Instance to copy.
- *
- * @return  A reference to \c this.
+ * Sets the WAFRequest object to be equal to \a other.
  */
 WAFRequest& WAFRequest::operator=(const WAFRequest &other)
 {
@@ -72,14 +138,10 @@ WAFRequest& WAFRequest::operator=(const WAFRequest &other)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new WAFRequest object.
+ * Constructs aa WAFRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from WAFRequestPrivate.
- *
- * @param  d  Pointer to private data (aka D-Pointer).
  */
 WAFRequest::WAFRequest(WAFRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
@@ -87,7 +149,7 @@ WAFRequest::WAFRequest(WAFRequestPrivate * const d) : QtAws::Core::AwsAbstractRe
 }
 
 /*!
- * \brief Returns the WAF action to be performed by this request.
+ * Returns the WAF action to be performed by this request.
  */
 WAFRequest::Action WAFRequest::action() const
 {
@@ -96,7 +158,7 @@ WAFRequest::Action WAFRequest::action() const
 }
 
 /*!
- * \brief Returns the name of the WAF action to be performed by this request.
+ * Returns the name of the WAF action to be performed by this request.
  */
 QString WAFRequest::actionString() const
 {
@@ -104,7 +166,7 @@ QString WAFRequest::actionString() const
 }
 
 /*!
- * \brief Returns the WAF API version implemented by this request.
+ * Returns the WAF API version implemented by this request.
  */
 QString WAFRequest::apiVersion() const
 {
@@ -113,7 +175,7 @@ QString WAFRequest::apiVersion() const
 }
 
 /*!
- * @brief Set the WAF action to be performed by this request to \a action.
+ * Sets the WAF action to be performed by this request to \a action.
  */
 void WAFRequest::setAction(const Action action)
 {
@@ -122,7 +184,7 @@ void WAFRequest::setAction(const Action action)
 }
 
 /*!
- * Set the WAF API version to include in this request to \a version.
+ * Sets the WAF API version to include in this request to \a version.
  */
 void WAFRequest::setApiVersion(const QString &version)
 {
@@ -131,7 +193,7 @@ void WAFRequest::setApiVersion(const QString &version)
 }
 
 /*!
- * \brief Returns \c true if this request is the same as \a other.
+ * Returns \c true if this request is equal to \a other; \c false otherwise.
  *
  * Note, most derived *Request classes do not need to provider their own
  * implementations of this function, since most such request classes rely on
@@ -146,8 +208,8 @@ bool WAFRequest::operator==(const WAFRequest &other) const
             (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
-/*!
- * @brief  Check if \a queueName is a valid WAF queue name.
+/*
+ * Returns \c tue if \a queueName is a valid WAF queue name.
  *
  * @par From WAF FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
@@ -166,9 +228,8 @@ bool WAFRequest::operator==(const WAFRequest &other) const
 }*/
 
 /*!
- * \brief Removes the a \a name parameter from this request.
- *
- * Returns the count of paramters removed (typically \c 0 or \c 1).
+ * Removes the a \a name parameter from the request, then returns the number of
+ * paramters removed (typically \c 0 or \c 1).
  */
 int WAFRequest::clearParameter(const QString &name)
 {
@@ -177,7 +238,7 @@ int WAFRequest::clearParameter(const QString &name)
 }
 
 /*!
- * \brief Removes all parameters from this request.
+ * Removes all parameters from the request.
  */
 void WAFRequest::clearParameters()
 {
@@ -186,7 +247,7 @@ void WAFRequest::clearParameters()
 }
 
 /*!
- * \brief Returns the value of the \n name pararemter if set, otherwise \a defaultValue.
+ * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
 QVariant WAFRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
@@ -195,7 +256,7 @@ QVariant WAFRequest::parameter(const QString &name, const QVariant &defaultValue
 }
 
 /*!
- * \brief Returns a map of parameters included in this request.
+ * Returns the parameters included in this request.
  */
 const QVariantMap &WAFRequest::parameters() const
 {
@@ -204,7 +265,7 @@ const QVariantMap &WAFRequest::parameters() const
 }
 
 /*!
- * \brief Sets the \a name parameter to \a value.
+ * Sets the \a name parameter to \a value.
  */
 void WAFRequest::setParameter(const QString &name, const QVariant &value)
 {
@@ -213,9 +274,8 @@ void WAFRequest::setParameter(const QString &name, const QVariant &value)
 }
 
 /*!
- * \brief Sets the map of paramters for this request to \a parameters.
- *
- * Any request parameters set previously will be discarded.
+ * Sets the paramters for this request to \a parameters. Any request parameters
+ * set previously will be discarded.
  */
 void WAFRequest::setParameters(const QVariantMap &parameters)
 {
@@ -224,11 +284,12 @@ void WAFRequest::setParameters(const QVariantMap &parameters)
 }
 
 /*!
- * \brief Returns a network request for this WAF request using the given \a endpoint.
+ * Returns a network request for the WAF request using the given
+ * \a endpoint.
  *
- * This WAF implementation builds request URLs by combining the common query
- * parameters (such as Action and Version), with any that have been added (via
- * setParameter) by child classes.
+ * This WAF implementation builds request URLs by combining the
+ * common query parameters (such as Action and Version), with any that have
+ * been added (via setParameter) by child classes.
  */
 QNetworkRequest WAFRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -239,17 +300,16 @@ QNetworkRequest WAFRequest::unsignedRequest(const QUrl &endpoint) const
 }
 
 /*!
+ * \class QtAws::WAF::WAFRequestPrivate
+ * \brief The WAFRequestPrivate class provides private implementation for WAFRequest.
  * \internal
  *
- * \class  WAFRequestPrivate
- *
- * \brief  Private implementation for WAFRequest.
+ * \inmodule QtAwsWAF
  */
 
 /*!
- * \internal
- *
- * \brief Constructs a new WAFRequestPrivate object.
+ * Constructs a WAFRequestPrivate object for WAF \a action with,
+ * public implementation \a q.
  */
 WAFRequestPrivate::WAFRequestPrivate(const WAFRequest::Action action, WAFRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
@@ -258,9 +318,7 @@ WAFRequestPrivate::WAFRequestPrivate(const WAFRequest::Action action, WAFRequest
 }
 
 /*!
- * \internal
- *
- * \brief Constructs a new WAFRequestPrivate object, copying an existing one.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
@@ -276,15 +334,12 @@ WAFRequestPrivate::WAFRequestPrivate(const WAFRequestPrivate &other,
 }
 
 /*!
- * \internal
- *
- * \brief Returns a string representing \a action.
+ * Returns a string represention of \a action, or a null string if \a action is
+ * invalid.
  *
  * This function converts WAFRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the WAF service's Action
  * query parameters.
- *
- * @return A string representing \a action, or a null string if \a action is invalid.
  */
 QString WAFRequestPrivate::toString(const WAFRequest::Action &action)
 {

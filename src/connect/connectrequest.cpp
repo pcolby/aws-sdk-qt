@@ -25,16 +25,23 @@ namespace Connect {
 
 /*!
  * \class QtAws::Connect::ConnectRequest
- *
  * \brief The ConnectRequest class provides an interface for Connect requests.
  *
- * \ingroup Connect
+ * \inmodule QtAwsConnect
  */
 
 /*!
- * @brief  Constructs a new ConnectRequest object.
+ * \enum ConnectRequest::Action
  *
- * @param  action  The Connect action to request.
+ * This enum describes the actions that can be performed as Connect
+ * requests.
+ *
+ * \value StartOutboundVoiceContactAction Connect StartOutboundVoiceContact action.
+ * \value StopContactAction Connect StopContact action.
+ */
+
+/*!
+ * Constructs a[n] ConnectRequest object for Connect \a action.
  */
 ConnectRequest::ConnectRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new ConnectRequestPrivate(action, this))
@@ -43,9 +50,7 @@ ConnectRequest::ConnectRequest(const Action action)
 }
 
 /*!
- * @brief  Constructs a new ConnectRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ConnectRequest::ConnectRequest(const ConnectRequest &other)
     : QtAws::Core::AwsAbstractRequest(new ConnectRequestPrivate(*other.d_func(), this))
@@ -54,13 +59,7 @@ ConnectRequest::ConnectRequest(const ConnectRequest &other)
 }
 
 /*!
- * @brief  Assignment operator.
- *
- * Assigns \a other to \c this.
- *
- * @param  other  Instance to copy.
- *
- * @return  A reference to \c this.
+ * Sets the ConnectRequest object to be equal to \a other.
  */
 ConnectRequest& ConnectRequest::operator=(const ConnectRequest &other)
 {
@@ -72,14 +71,10 @@ ConnectRequest& ConnectRequest::operator=(const ConnectRequest &other)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ConnectRequest object.
+ * Constructs aa ConnectRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from ConnectRequestPrivate.
- *
- * @param  d  Pointer to private data (aka D-Pointer).
  */
 ConnectRequest::ConnectRequest(ConnectRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
@@ -87,7 +82,7 @@ ConnectRequest::ConnectRequest(ConnectRequestPrivate * const d) : QtAws::Core::A
 }
 
 /*!
- * \brief Returns the Connect action to be performed by this request.
+ * Returns the Connect action to be performed by this request.
  */
 ConnectRequest::Action ConnectRequest::action() const
 {
@@ -96,7 +91,7 @@ ConnectRequest::Action ConnectRequest::action() const
 }
 
 /*!
- * \brief Returns the name of the Connect action to be performed by this request.
+ * Returns the name of the Connect action to be performed by this request.
  */
 QString ConnectRequest::actionString() const
 {
@@ -104,7 +99,7 @@ QString ConnectRequest::actionString() const
 }
 
 /*!
- * \brief Returns the Connect API version implemented by this request.
+ * Returns the Connect API version implemented by this request.
  */
 QString ConnectRequest::apiVersion() const
 {
@@ -113,7 +108,7 @@ QString ConnectRequest::apiVersion() const
 }
 
 /*!
- * @brief Set the Connect action to be performed by this request to \a action.
+ * Sets the Connect action to be performed by this request to \a action.
  */
 void ConnectRequest::setAction(const Action action)
 {
@@ -122,7 +117,7 @@ void ConnectRequest::setAction(const Action action)
 }
 
 /*!
- * Set the Connect API version to include in this request to \a version.
+ * Sets the Connect API version to include in this request to \a version.
  */
 void ConnectRequest::setApiVersion(const QString &version)
 {
@@ -131,7 +126,7 @@ void ConnectRequest::setApiVersion(const QString &version)
 }
 
 /*!
- * \brief Returns \c true if this request is the same as \a other.
+ * Returns \c true if this request is equal to \a other; \c false otherwise.
  *
  * Note, most derived *Request classes do not need to provider their own
  * implementations of this function, since most such request classes rely on
@@ -146,8 +141,8 @@ bool ConnectRequest::operator==(const ConnectRequest &other) const
             (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
-/*!
- * @brief  Check if \a queueName is a valid Connect queue name.
+/*
+ * Returns \c tue if \a queueName is a valid Connect queue name.
  *
  * @par From Connect FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
@@ -166,9 +161,8 @@ bool ConnectRequest::operator==(const ConnectRequest &other) const
 }*/
 
 /*!
- * \brief Removes the a \a name parameter from this request.
- *
- * Returns the count of paramters removed (typically \c 0 or \c 1).
+ * Removes the a \a name parameter from the request, then returns the number of
+ * paramters removed (typically \c 0 or \c 1).
  */
 int ConnectRequest::clearParameter(const QString &name)
 {
@@ -177,7 +171,7 @@ int ConnectRequest::clearParameter(const QString &name)
 }
 
 /*!
- * \brief Removes all parameters from this request.
+ * Removes all parameters from the request.
  */
 void ConnectRequest::clearParameters()
 {
@@ -186,7 +180,7 @@ void ConnectRequest::clearParameters()
 }
 
 /*!
- * \brief Returns the value of the \n name pararemter if set, otherwise \a defaultValue.
+ * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
 QVariant ConnectRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
@@ -195,7 +189,7 @@ QVariant ConnectRequest::parameter(const QString &name, const QVariant &defaultV
 }
 
 /*!
- * \brief Returns a map of parameters included in this request.
+ * Returns the parameters included in this request.
  */
 const QVariantMap &ConnectRequest::parameters() const
 {
@@ -204,7 +198,7 @@ const QVariantMap &ConnectRequest::parameters() const
 }
 
 /*!
- * \brief Sets the \a name parameter to \a value.
+ * Sets the \a name parameter to \a value.
  */
 void ConnectRequest::setParameter(const QString &name, const QVariant &value)
 {
@@ -213,9 +207,8 @@ void ConnectRequest::setParameter(const QString &name, const QVariant &value)
 }
 
 /*!
- * \brief Sets the map of paramters for this request to \a parameters.
- *
- * Any request parameters set previously will be discarded.
+ * Sets the paramters for this request to \a parameters. Any request parameters
+ * set previously will be discarded.
  */
 void ConnectRequest::setParameters(const QVariantMap &parameters)
 {
@@ -224,11 +217,12 @@ void ConnectRequest::setParameters(const QVariantMap &parameters)
 }
 
 /*!
- * \brief Returns a network request for this Connect request using the given \a endpoint.
+ * Returns a network request for the Connect request using the given
+ * \a endpoint.
  *
- * This Connect implementation builds request URLs by combining the common query
- * parameters (such as Action and Version), with any that have been added (via
- * setParameter) by child classes.
+ * This Connect implementation builds request URLs by combining the
+ * common query parameters (such as Action and Version), with any that have
+ * been added (via setParameter) by child classes.
  */
 QNetworkRequest ConnectRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -239,17 +233,16 @@ QNetworkRequest ConnectRequest::unsignedRequest(const QUrl &endpoint) const
 }
 
 /*!
+ * \class QtAws::Connect::ConnectRequestPrivate
+ * \brief The ConnectRequestPrivate class provides private implementation for ConnectRequest.
  * \internal
  *
- * \class  ConnectRequestPrivate
- *
- * \brief  Private implementation for ConnectRequest.
+ * \inmodule QtAwsConnect
  */
 
 /*!
- * \internal
- *
- * \brief Constructs a new ConnectRequestPrivate object.
+ * Constructs a ConnectRequestPrivate object for Connect \a action with,
+ * public implementation \a q.
  */
 ConnectRequestPrivate::ConnectRequestPrivate(const ConnectRequest::Action action, ConnectRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
@@ -258,9 +251,7 @@ ConnectRequestPrivate::ConnectRequestPrivate(const ConnectRequest::Action action
 }
 
 /*!
- * \internal
- *
- * \brief Constructs a new ConnectRequestPrivate object, copying an existing one.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
@@ -276,15 +267,12 @@ ConnectRequestPrivate::ConnectRequestPrivate(const ConnectRequestPrivate &other,
 }
 
 /*!
- * \internal
- *
- * \brief Returns a string representing \a action.
+ * Returns a string represention of \a action, or a null string if \a action is
+ * invalid.
  *
  * This function converts ConnectRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the Connect service's Action
  * query parameters.
- *
- * @return A string representing \a action, or a null string if \a action is invalid.
  */
 QString ConnectRequestPrivate::toString(const ConnectRequest::Action &action)
 {

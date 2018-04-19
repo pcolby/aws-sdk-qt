@@ -27,10 +27,9 @@ namespace Kinesis {
 
 /*!
  * \class QtAws::Kinesis::RemoveTagsFromStreamRequest
- *
  * \brief The RemoveTagsFromStreamRequest class provides an interface for Kinesis RemoveTagsFromStream requests.
  *
- * \ingroup Kinesis
+ * \inmodule QtAwsKinesis
  *
  *  <fullname>Amazon Kinesis Data Streams Service API Reference</fullname>
  * 
@@ -40,9 +39,7 @@ namespace Kinesis {
  */
 
 /*!
- * @brief  Constructs a new RemoveTagsFromStreamRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 RemoveTagsFromStreamRequest::RemoveTagsFromStreamRequest(const RemoveTagsFromStreamRequest &other)
     : KinesisRequest(new RemoveTagsFromStreamRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ RemoveTagsFromStreamRequest::RemoveTagsFromStreamRequest(const RemoveTagsFromStr
 }
 
 /*!
- * @brief  Constructs a new RemoveTagsFromStreamRequest object.
+ * Constructs a RemoveTagsFromStreamRequest object.
  */
 RemoveTagsFromStreamRequest::RemoveTagsFromStreamRequest()
     : KinesisRequest(new RemoveTagsFromStreamRequestPrivate(KinesisRequest::RemoveTagsFromStreamAction, this))
@@ -69,14 +66,9 @@ bool RemoveTagsFromStreamRequest::isValid() const
 
 
 /*!
- * @brief  Construct an RemoveTagsFromStreamResponse object.
+ * Returns a RemoveTagsFromStreamResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An RemoveTagsFromStreamResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  KinesisClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * RemoveTagsFromStreamRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * RemoveTagsFromStreamRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::Kinesis::RemoveTagsFromStreamRequestPrivate
+ * \brief The RemoveTagsFromStreamRequestPrivate class provides private implementation for RemoveTagsFromStreamRequest.
+ * \internal
  *
- * @class  RemoveTagsFromStreamRequestPrivate
- *
- * @brief  Private implementation for RemoveTagsFromStreamRequest.
+ * \inmodule QtAwsKinesis
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new RemoveTagsFromStreamRequestPrivate object.
- *
- * @param  action  Kinesis action being performed.
- * @param  q       Pointer to this object's public RemoveTagsFromStreamRequest instance.
+ * Constructs a RemoveTagsFromStreamRequestPrivate object for Kinesis \a action with,
+ * public implementation \a q.
  */
 RemoveTagsFromStreamRequestPrivate::RemoveTagsFromStreamRequestPrivate(
     const KinesisRequest::Action action, RemoveTagsFromStreamRequest * const q)
@@ -107,15 +96,10 @@ RemoveTagsFromStreamRequestPrivate::RemoveTagsFromStreamRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RemoveTagsFromStreamRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the RemoveTagsFromStreamRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public RemoveTagsFromStreamRequest instance.
  */
 RemoveTagsFromStreamRequestPrivate::RemoveTagsFromStreamRequestPrivate(
     const RemoveTagsFromStreamRequestPrivate &other, RemoveTagsFromStreamRequest * const q)

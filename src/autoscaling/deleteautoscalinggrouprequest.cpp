@@ -27,10 +27,9 @@ namespace AutoScaling {
 
 /*!
  * \class QtAws::AutoScaling::DeleteAutoScalingGroupRequest
- *
  * \brief The DeleteAutoScalingGroupRequest class provides an interface for AutoScaling DeleteAutoScalingGroup requests.
  *
- * \ingroup AutoScaling
+ * \inmodule QtAwsAutoScaling
  *
  *  <fullname>Amazon EC2 Auto Scaling</fullname>
  * 
@@ -42,9 +41,7 @@ namespace AutoScaling {
  */
 
 /*!
- * @brief  Constructs a new DeleteAutoScalingGroupRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteAutoScalingGroupRequest::DeleteAutoScalingGroupRequest(const DeleteAutoScalingGroupRequest &other)
     : AutoScalingRequest(new DeleteAutoScalingGroupRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ DeleteAutoScalingGroupRequest::DeleteAutoScalingGroupRequest(const DeleteAutoSca
 }
 
 /*!
- * @brief  Constructs a new DeleteAutoScalingGroupRequest object.
+ * Constructs a DeleteAutoScalingGroupRequest object.
  */
 DeleteAutoScalingGroupRequest::DeleteAutoScalingGroupRequest()
     : AutoScalingRequest(new DeleteAutoScalingGroupRequestPrivate(AutoScalingRequest::DeleteAutoScalingGroupAction, this))
@@ -71,14 +68,9 @@ bool DeleteAutoScalingGroupRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteAutoScalingGroupResponse object.
+ * Returns a DeleteAutoScalingGroupResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteAutoScalingGroupResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AutoScalingClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteAutoScalingGroupRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * DeleteAutoScalingGroupRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::AutoScaling::DeleteAutoScalingGroupRequestPrivate
+ * \brief The DeleteAutoScalingGroupRequestPrivate class provides private implementation for DeleteAutoScalingGroupRequest.
+ * \internal
  *
- * @class  DeleteAutoScalingGroupRequestPrivate
- *
- * @brief  Private implementation for DeleteAutoScalingGroupRequest.
+ * \inmodule QtAwsAutoScaling
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteAutoScalingGroupRequestPrivate object.
- *
- * @param  action  AutoScaling action being performed.
- * @param  q       Pointer to this object's public DeleteAutoScalingGroupRequest instance.
+ * Constructs a DeleteAutoScalingGroupRequestPrivate object for AutoScaling \a action with,
+ * public implementation \a q.
  */
 DeleteAutoScalingGroupRequestPrivate::DeleteAutoScalingGroupRequestPrivate(
     const AutoScalingRequest::Action action, DeleteAutoScalingGroupRequest * const q)
@@ -109,15 +98,10 @@ DeleteAutoScalingGroupRequestPrivate::DeleteAutoScalingGroupRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteAutoScalingGroupRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteAutoScalingGroupRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteAutoScalingGroupRequest instance.
  */
 DeleteAutoScalingGroupRequestPrivate::DeleteAutoScalingGroupRequestPrivate(
     const DeleteAutoScalingGroupRequestPrivate &other, DeleteAutoScalingGroupRequest * const q)

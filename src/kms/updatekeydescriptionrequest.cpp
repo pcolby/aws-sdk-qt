@@ -27,10 +27,9 @@ namespace KMS {
 
 /*!
  * \class QtAws::KMS::UpdateKeyDescriptionRequest
- *
  * \brief The UpdateKeyDescriptionRequest class provides an interface for KMS UpdateKeyDescription requests.
  *
- * \ingroup KMS
+ * \inmodule QtAwsKMS
  *
  *  <fullname>AWS Key Management Service</fullname>
  * 
@@ -136,9 +135,7 @@ namespace KMS {
  */
 
 /*!
- * @brief  Constructs a new UpdateKeyDescriptionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateKeyDescriptionRequest::UpdateKeyDescriptionRequest(const UpdateKeyDescriptionRequest &other)
     : KMSRequest(new UpdateKeyDescriptionRequestPrivate(*other.d_func(), this))
@@ -147,7 +144,7 @@ UpdateKeyDescriptionRequest::UpdateKeyDescriptionRequest(const UpdateKeyDescript
 }
 
 /*!
- * @brief  Constructs a new UpdateKeyDescriptionRequest object.
+ * Constructs a UpdateKeyDescriptionRequest object.
  */
 UpdateKeyDescriptionRequest::UpdateKeyDescriptionRequest()
     : KMSRequest(new UpdateKeyDescriptionRequestPrivate(KMSRequest::UpdateKeyDescriptionAction, this))
@@ -165,14 +162,9 @@ bool UpdateKeyDescriptionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateKeyDescriptionResponse object.
+ * Returns a UpdateKeyDescriptionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateKeyDescriptionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  KMSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateKeyDescriptionRequest::response(QNetworkReply * const reply) const
 {
@@ -180,20 +172,17 @@ QtAws::Core::AwsAbstractResponse * UpdateKeyDescriptionRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::KMS::UpdateKeyDescriptionRequestPrivate
+ * \brief The UpdateKeyDescriptionRequestPrivate class provides private implementation for UpdateKeyDescriptionRequest.
+ * \internal
  *
- * @class  UpdateKeyDescriptionRequestPrivate
- *
- * @brief  Private implementation for UpdateKeyDescriptionRequest.
+ * \inmodule QtAwsKMS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateKeyDescriptionRequestPrivate object.
- *
- * @param  action  KMS action being performed.
- * @param  q       Pointer to this object's public UpdateKeyDescriptionRequest instance.
+ * Constructs a UpdateKeyDescriptionRequestPrivate object for KMS \a action with,
+ * public implementation \a q.
  */
 UpdateKeyDescriptionRequestPrivate::UpdateKeyDescriptionRequestPrivate(
     const KMSRequest::Action action, UpdateKeyDescriptionRequest * const q)
@@ -203,15 +192,10 @@ UpdateKeyDescriptionRequestPrivate::UpdateKeyDescriptionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateKeyDescriptionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateKeyDescriptionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateKeyDescriptionRequest instance.
  */
 UpdateKeyDescriptionRequestPrivate::UpdateKeyDescriptionRequestPrivate(
     const UpdateKeyDescriptionRequestPrivate &other, UpdateKeyDescriptionRequest * const q)

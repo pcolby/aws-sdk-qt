@@ -27,10 +27,9 @@ namespace Lightsail {
 
 /*!
  * \class QtAws::Lightsail::CreateInstancesFromSnapshotRequest
- *
  * \brief The CreateInstancesFromSnapshotRequest class provides an interface for Lightsail CreateInstancesFromSnapshot requests.
  *
- * \ingroup Lightsail
+ * \inmodule QtAwsLightsail
  *
  *  Amazon Lightsail is the easiest way to get started with AWS for developers who just need virtual private servers.
  *  Lightsail includes everything you need to launch your project quickly - a virtual machine, SSD-based storage, data
@@ -53,9 +52,7 @@ namespace Lightsail {
  */
 
 /*!
- * @brief  Constructs a new CreateInstancesFromSnapshotRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateInstancesFromSnapshotRequest::CreateInstancesFromSnapshotRequest(const CreateInstancesFromSnapshotRequest &other)
     : LightsailRequest(new CreateInstancesFromSnapshotRequestPrivate(*other.d_func(), this))
@@ -64,7 +61,7 @@ CreateInstancesFromSnapshotRequest::CreateInstancesFromSnapshotRequest(const Cre
 }
 
 /*!
- * @brief  Constructs a new CreateInstancesFromSnapshotRequest object.
+ * Constructs a CreateInstancesFromSnapshotRequest object.
  */
 CreateInstancesFromSnapshotRequest::CreateInstancesFromSnapshotRequest()
     : LightsailRequest(new CreateInstancesFromSnapshotRequestPrivate(LightsailRequest::CreateInstancesFromSnapshotAction, this))
@@ -82,14 +79,9 @@ bool CreateInstancesFromSnapshotRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateInstancesFromSnapshotResponse object.
+ * Returns a CreateInstancesFromSnapshotResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateInstancesFromSnapshotResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  LightsailClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateInstancesFromSnapshotRequest::response(QNetworkReply * const reply) const
 {
@@ -97,20 +89,17 @@ QtAws::Core::AwsAbstractResponse * CreateInstancesFromSnapshotRequest::response(
 }
 
 /*!
- * @internal
+ * \class QtAws::Lightsail::CreateInstancesFromSnapshotRequestPrivate
+ * \brief The CreateInstancesFromSnapshotRequestPrivate class provides private implementation for CreateInstancesFromSnapshotRequest.
+ * \internal
  *
- * @class  CreateInstancesFromSnapshotRequestPrivate
- *
- * @brief  Private implementation for CreateInstancesFromSnapshotRequest.
+ * \inmodule QtAwsLightsail
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateInstancesFromSnapshotRequestPrivate object.
- *
- * @param  action  Lightsail action being performed.
- * @param  q       Pointer to this object's public CreateInstancesFromSnapshotRequest instance.
+ * Constructs a CreateInstancesFromSnapshotRequestPrivate object for Lightsail \a action with,
+ * public implementation \a q.
  */
 CreateInstancesFromSnapshotRequestPrivate::CreateInstancesFromSnapshotRequestPrivate(
     const LightsailRequest::Action action, CreateInstancesFromSnapshotRequest * const q)
@@ -120,15 +109,10 @@ CreateInstancesFromSnapshotRequestPrivate::CreateInstancesFromSnapshotRequestPri
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateInstancesFromSnapshotRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateInstancesFromSnapshotRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateInstancesFromSnapshotRequest instance.
  */
 CreateInstancesFromSnapshotRequestPrivate::CreateInstancesFromSnapshotRequestPrivate(
     const CreateInstancesFromSnapshotRequestPrivate &other, CreateInstancesFromSnapshotRequest * const q)

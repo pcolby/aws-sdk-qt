@@ -27,10 +27,9 @@ namespace MediaStore {
 
 /*!
  * \class QtAws::MediaStore::DeleteContainerPolicyRequest
- *
  * \brief The DeleteContainerPolicyRequest class provides an interface for MediaStore DeleteContainerPolicy requests.
  *
- * \ingroup MediaStore
+ * \inmodule QtAwsMediaStore
  *
  *  An AWS Elemental MediaStore container is a namespace that holds folders and objects. You use a container endpoint to
  *  create, read, and delete objects.
@@ -39,9 +38,7 @@ namespace MediaStore {
  */
 
 /*!
- * @brief  Constructs a new DeleteContainerPolicyRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteContainerPolicyRequest::DeleteContainerPolicyRequest(const DeleteContainerPolicyRequest &other)
     : MediaStoreRequest(new DeleteContainerPolicyRequestPrivate(*other.d_func(), this))
@@ -50,7 +47,7 @@ DeleteContainerPolicyRequest::DeleteContainerPolicyRequest(const DeleteContainer
 }
 
 /*!
- * @brief  Constructs a new DeleteContainerPolicyRequest object.
+ * Constructs a DeleteContainerPolicyRequest object.
  */
 DeleteContainerPolicyRequest::DeleteContainerPolicyRequest()
     : MediaStoreRequest(new DeleteContainerPolicyRequestPrivate(MediaStoreRequest::DeleteContainerPolicyAction, this))
@@ -68,14 +65,9 @@ bool DeleteContainerPolicyRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteContainerPolicyResponse object.
+ * Returns a DeleteContainerPolicyResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteContainerPolicyResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MediaStoreClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteContainerPolicyRequest::response(QNetworkReply * const reply) const
 {
@@ -83,20 +75,17 @@ QtAws::Core::AwsAbstractResponse * DeleteContainerPolicyRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::MediaStore::DeleteContainerPolicyRequestPrivate
+ * \brief The DeleteContainerPolicyRequestPrivate class provides private implementation for DeleteContainerPolicyRequest.
+ * \internal
  *
- * @class  DeleteContainerPolicyRequestPrivate
- *
- * @brief  Private implementation for DeleteContainerPolicyRequest.
+ * \inmodule QtAwsMediaStore
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteContainerPolicyRequestPrivate object.
- *
- * @param  action  MediaStore action being performed.
- * @param  q       Pointer to this object's public DeleteContainerPolicyRequest instance.
+ * Constructs a DeleteContainerPolicyRequestPrivate object for MediaStore \a action with,
+ * public implementation \a q.
  */
 DeleteContainerPolicyRequestPrivate::DeleteContainerPolicyRequestPrivate(
     const MediaStoreRequest::Action action, DeleteContainerPolicyRequest * const q)
@@ -106,15 +95,10 @@ DeleteContainerPolicyRequestPrivate::DeleteContainerPolicyRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteContainerPolicyRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteContainerPolicyRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteContainerPolicyRequest instance.
  */
 DeleteContainerPolicyRequestPrivate::DeleteContainerPolicyRequestPrivate(
     const DeleteContainerPolicyRequestPrivate &other, DeleteContainerPolicyRequest * const q)

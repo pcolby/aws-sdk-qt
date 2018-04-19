@@ -27,10 +27,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::DescribeAutomationExecutionsRequest
- *
  * \brief The DescribeAutomationExecutionsRequest class provides an interface for SSM DescribeAutomationExecutions requests.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -61,9 +60,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new DescribeAutomationExecutionsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeAutomationExecutionsRequest::DescribeAutomationExecutionsRequest(const DescribeAutomationExecutionsRequest &other)
     : SSMRequest(new DescribeAutomationExecutionsRequestPrivate(*other.d_func(), this))
@@ -72,7 +69,7 @@ DescribeAutomationExecutionsRequest::DescribeAutomationExecutionsRequest(const D
 }
 
 /*!
- * @brief  Constructs a new DescribeAutomationExecutionsRequest object.
+ * Constructs a DescribeAutomationExecutionsRequest object.
  */
 DescribeAutomationExecutionsRequest::DescribeAutomationExecutionsRequest()
     : SSMRequest(new DescribeAutomationExecutionsRequestPrivate(SSMRequest::DescribeAutomationExecutionsAction, this))
@@ -90,14 +87,9 @@ bool DescribeAutomationExecutionsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeAutomationExecutionsResponse object.
+ * Returns a DescribeAutomationExecutionsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeAutomationExecutionsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SSMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeAutomationExecutionsRequest::response(QNetworkReply * const reply) const
 {
@@ -105,20 +97,17 @@ QtAws::Core::AwsAbstractResponse * DescribeAutomationExecutionsRequest::response
 }
 
 /*!
- * @internal
+ * \class QtAws::SSM::DescribeAutomationExecutionsRequestPrivate
+ * \brief The DescribeAutomationExecutionsRequestPrivate class provides private implementation for DescribeAutomationExecutionsRequest.
+ * \internal
  *
- * @class  DescribeAutomationExecutionsRequestPrivate
- *
- * @brief  Private implementation for DescribeAutomationExecutionsRequest.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeAutomationExecutionsRequestPrivate object.
- *
- * @param  action  SSM action being performed.
- * @param  q       Pointer to this object's public DescribeAutomationExecutionsRequest instance.
+ * Constructs a DescribeAutomationExecutionsRequestPrivate object for SSM \a action with,
+ * public implementation \a q.
  */
 DescribeAutomationExecutionsRequestPrivate::DescribeAutomationExecutionsRequestPrivate(
     const SSMRequest::Action action, DescribeAutomationExecutionsRequest * const q)
@@ -128,15 +117,10 @@ DescribeAutomationExecutionsRequestPrivate::DescribeAutomationExecutionsRequestP
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeAutomationExecutionsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeAutomationExecutionsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeAutomationExecutionsRequest instance.
  */
 DescribeAutomationExecutionsRequestPrivate::DescribeAutomationExecutionsRequestPrivate(
     const DescribeAutomationExecutionsRequestPrivate &other, DescribeAutomationExecutionsRequest * const q)

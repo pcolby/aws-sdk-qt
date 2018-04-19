@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DeleteFlowLogsRequest
- *
  * \brief The DeleteFlowLogsRequest class provides an interface for EC2 DeleteFlowLogs requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DeleteFlowLogsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteFlowLogsRequest::DeleteFlowLogsRequest(const DeleteFlowLogsRequest &other)
     : EC2Request(new DeleteFlowLogsRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ DeleteFlowLogsRequest::DeleteFlowLogsRequest(const DeleteFlowLogsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DeleteFlowLogsRequest object.
+ * Constructs a DeleteFlowLogsRequest object.
  */
 DeleteFlowLogsRequest::DeleteFlowLogsRequest()
     : EC2Request(new DeleteFlowLogsRequestPrivate(EC2Request::DeleteFlowLogsAction, this))
@@ -70,14 +67,9 @@ bool DeleteFlowLogsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteFlowLogsResponse object.
+ * Returns a DeleteFlowLogsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteFlowLogsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteFlowLogsRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * DeleteFlowLogsRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::DeleteFlowLogsRequestPrivate
+ * \brief The DeleteFlowLogsRequestPrivate class provides private implementation for DeleteFlowLogsRequest.
+ * \internal
  *
- * @class  DeleteFlowLogsRequestPrivate
- *
- * @brief  Private implementation for DeleteFlowLogsRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteFlowLogsRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public DeleteFlowLogsRequest instance.
+ * Constructs a DeleteFlowLogsRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 DeleteFlowLogsRequestPrivate::DeleteFlowLogsRequestPrivate(
     const EC2Request::Action action, DeleteFlowLogsRequest * const q)
@@ -108,15 +97,10 @@ DeleteFlowLogsRequestPrivate::DeleteFlowLogsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteFlowLogsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteFlowLogsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteFlowLogsRequest instance.
  */
 DeleteFlowLogsRequestPrivate::DeleteFlowLogsRequestPrivate(
     const DeleteFlowLogsRequestPrivate &other, DeleteFlowLogsRequest * const q)

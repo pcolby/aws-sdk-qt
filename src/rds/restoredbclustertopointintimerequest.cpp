@@ -27,10 +27,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::RestoreDBClusterToPointInTimeRequest
- *
  * \brief The RestoreDBClusterToPointInTimeRequest class provides an interface for RDS RestoreDBClusterToPointInTime requests.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -101,9 +100,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new RestoreDBClusterToPointInTimeRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 RestoreDBClusterToPointInTimeRequest::RestoreDBClusterToPointInTimeRequest(const RestoreDBClusterToPointInTimeRequest &other)
     : RDSRequest(new RestoreDBClusterToPointInTimeRequestPrivate(*other.d_func(), this))
@@ -112,7 +109,7 @@ RestoreDBClusterToPointInTimeRequest::RestoreDBClusterToPointInTimeRequest(const
 }
 
 /*!
- * @brief  Constructs a new RestoreDBClusterToPointInTimeRequest object.
+ * Constructs a RestoreDBClusterToPointInTimeRequest object.
  */
 RestoreDBClusterToPointInTimeRequest::RestoreDBClusterToPointInTimeRequest()
     : RDSRequest(new RestoreDBClusterToPointInTimeRequestPrivate(RDSRequest::RestoreDBClusterToPointInTimeAction, this))
@@ -130,14 +127,9 @@ bool RestoreDBClusterToPointInTimeRequest::isValid() const
 
 
 /*!
- * @brief  Construct an RestoreDBClusterToPointInTimeResponse object.
+ * Returns a RestoreDBClusterToPointInTimeResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An RestoreDBClusterToPointInTimeResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RDSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * RestoreDBClusterToPointInTimeRequest::response(QNetworkReply * const reply) const
 {
@@ -145,20 +137,17 @@ QtAws::Core::AwsAbstractResponse * RestoreDBClusterToPointInTimeRequest::respons
 }
 
 /*!
- * @internal
+ * \class QtAws::RDS::RestoreDBClusterToPointInTimeRequestPrivate
+ * \brief The RestoreDBClusterToPointInTimeRequestPrivate class provides private implementation for RestoreDBClusterToPointInTimeRequest.
+ * \internal
  *
- * @class  RestoreDBClusterToPointInTimeRequestPrivate
- *
- * @brief  Private implementation for RestoreDBClusterToPointInTimeRequest.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new RestoreDBClusterToPointInTimeRequestPrivate object.
- *
- * @param  action  RDS action being performed.
- * @param  q       Pointer to this object's public RestoreDBClusterToPointInTimeRequest instance.
+ * Constructs a RestoreDBClusterToPointInTimeRequestPrivate object for RDS \a action with,
+ * public implementation \a q.
  */
 RestoreDBClusterToPointInTimeRequestPrivate::RestoreDBClusterToPointInTimeRequestPrivate(
     const RDSRequest::Action action, RestoreDBClusterToPointInTimeRequest * const q)
@@ -168,15 +157,10 @@ RestoreDBClusterToPointInTimeRequestPrivate::RestoreDBClusterToPointInTimeReques
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RestoreDBClusterToPointInTimeRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the RestoreDBClusterToPointInTimeRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public RestoreDBClusterToPointInTimeRequest instance.
  */
 RestoreDBClusterToPointInTimeRequestPrivate::RestoreDBClusterToPointInTimeRequestPrivate(
     const RestoreDBClusterToPointInTimeRequestPrivate &other, RestoreDBClusterToPointInTimeRequest * const q)

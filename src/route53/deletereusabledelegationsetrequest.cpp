@@ -27,19 +27,16 @@ namespace Route53 {
 
 /*!
  * \class QtAws::Route53::DeleteReusableDelegationSetRequest
- *
  * \brief The DeleteReusableDelegationSetRequest class provides an interface for Route53 DeleteReusableDelegationSet requests.
  *
- * \ingroup Route53
+ * \inmodule QtAwsRoute53
  *
  *
  * \sa Route53Client::deleteReusableDelegationSet
  */
 
 /*!
- * @brief  Constructs a new DeleteReusableDelegationSetRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteReusableDelegationSetRequest::DeleteReusableDelegationSetRequest(const DeleteReusableDelegationSetRequest &other)
     : Route53Request(new DeleteReusableDelegationSetRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ DeleteReusableDelegationSetRequest::DeleteReusableDelegationSetRequest(const Del
 }
 
 /*!
- * @brief  Constructs a new DeleteReusableDelegationSetRequest object.
+ * Constructs a DeleteReusableDelegationSetRequest object.
  */
 DeleteReusableDelegationSetRequest::DeleteReusableDelegationSetRequest()
     : Route53Request(new DeleteReusableDelegationSetRequestPrivate(Route53Request::DeleteReusableDelegationSetAction, this))
@@ -66,14 +63,9 @@ bool DeleteReusableDelegationSetRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteReusableDelegationSetResponse object.
+ * Returns a DeleteReusableDelegationSetResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteReusableDelegationSetResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  Route53Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteReusableDelegationSetRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * DeleteReusableDelegationSetRequest::response(
 }
 
 /*!
- * @internal
+ * \class QtAws::Route53::DeleteReusableDelegationSetRequestPrivate
+ * \brief The DeleteReusableDelegationSetRequestPrivate class provides private implementation for DeleteReusableDelegationSetRequest.
+ * \internal
  *
- * @class  DeleteReusableDelegationSetRequestPrivate
- *
- * @brief  Private implementation for DeleteReusableDelegationSetRequest.
+ * \inmodule QtAwsRoute53
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteReusableDelegationSetRequestPrivate object.
- *
- * @param  action  Route53 action being performed.
- * @param  q       Pointer to this object's public DeleteReusableDelegationSetRequest instance.
+ * Constructs a DeleteReusableDelegationSetRequestPrivate object for Route53 \a action with,
+ * public implementation \a q.
  */
 DeleteReusableDelegationSetRequestPrivate::DeleteReusableDelegationSetRequestPrivate(
     const Route53Request::Action action, DeleteReusableDelegationSetRequest * const q)
@@ -104,15 +93,10 @@ DeleteReusableDelegationSetRequestPrivate::DeleteReusableDelegationSetRequestPri
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteReusableDelegationSetRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteReusableDelegationSetRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteReusableDelegationSetRequest instance.
  */
 DeleteReusableDelegationSetRequestPrivate::DeleteReusableDelegationSetRequestPrivate(
     const DeleteReusableDelegationSetRequestPrivate &other, DeleteReusableDelegationSetRequest * const q)

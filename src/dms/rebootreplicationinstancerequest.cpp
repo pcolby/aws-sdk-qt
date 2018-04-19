@@ -27,10 +27,9 @@ namespace DatabaseMigrationService {
 
 /*!
  * \class QtAws::DatabaseMigrationService::RebootReplicationInstanceRequest
- *
  * \brief The RebootReplicationInstanceRequest class provides an interface for DatabaseMigrationService RebootReplicationInstance requests.
  *
- * \ingroup DatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigrationService
  *
  *  <fullname>AWS Database Migration Service</fullname>
  * 
@@ -48,9 +47,7 @@ namespace DatabaseMigrationService {
  */
 
 /*!
- * @brief  Constructs a new RebootReplicationInstanceRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 RebootReplicationInstanceRequest::RebootReplicationInstanceRequest(const RebootReplicationInstanceRequest &other)
     : DatabaseMigrationServiceRequest(new RebootReplicationInstanceRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ RebootReplicationInstanceRequest::RebootReplicationInstanceRequest(const RebootR
 }
 
 /*!
- * @brief  Constructs a new RebootReplicationInstanceRequest object.
+ * Constructs a RebootReplicationInstanceRequest object.
  */
 RebootReplicationInstanceRequest::RebootReplicationInstanceRequest()
     : DatabaseMigrationServiceRequest(new RebootReplicationInstanceRequestPrivate(DatabaseMigrationServiceRequest::RebootReplicationInstanceAction, this))
@@ -77,14 +74,9 @@ bool RebootReplicationInstanceRequest::isValid() const
 
 
 /*!
- * @brief  Construct an RebootReplicationInstanceResponse object.
+ * Returns a RebootReplicationInstanceResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An RebootReplicationInstanceResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DatabaseMigrationServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * RebootReplicationInstanceRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * RebootReplicationInstanceRequest::response(QN
 }
 
 /*!
- * @internal
+ * \class QtAws::DatabaseMigrationService::RebootReplicationInstanceRequestPrivate
+ * \brief The RebootReplicationInstanceRequestPrivate class provides private implementation for RebootReplicationInstanceRequest.
+ * \internal
  *
- * @class  RebootReplicationInstanceRequestPrivate
- *
- * @brief  Private implementation for RebootReplicationInstanceRequest.
+ * \inmodule QtAwsDatabaseMigrationService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new RebootReplicationInstanceRequestPrivate object.
- *
- * @param  action  DatabaseMigrationService action being performed.
- * @param  q       Pointer to this object's public RebootReplicationInstanceRequest instance.
+ * Constructs a RebootReplicationInstanceRequestPrivate object for DatabaseMigrationService \a action with,
+ * public implementation \a q.
  */
 RebootReplicationInstanceRequestPrivate::RebootReplicationInstanceRequestPrivate(
     const DatabaseMigrationServiceRequest::Action action, RebootReplicationInstanceRequest * const q)
@@ -115,15 +104,10 @@ RebootReplicationInstanceRequestPrivate::RebootReplicationInstanceRequestPrivate
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RebootReplicationInstanceRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the RebootReplicationInstanceRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public RebootReplicationInstanceRequest instance.
  */
 RebootReplicationInstanceRequestPrivate::RebootReplicationInstanceRequestPrivate(
     const RebootReplicationInstanceRequestPrivate &other, RebootReplicationInstanceRequest * const q)

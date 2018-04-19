@@ -27,10 +27,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::ListGroupsForUserRequest
- *
  * \brief The ListGroupsForUserRequest class provides an interface for IAM ListGroupsForUser requests.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -102,9 +101,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new ListGroupsForUserRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListGroupsForUserRequest::ListGroupsForUserRequest(const ListGroupsForUserRequest &other)
     : IAMRequest(new ListGroupsForUserRequestPrivate(*other.d_func(), this))
@@ -113,7 +110,7 @@ ListGroupsForUserRequest::ListGroupsForUserRequest(const ListGroupsForUserReques
 }
 
 /*!
- * @brief  Constructs a new ListGroupsForUserRequest object.
+ * Constructs a ListGroupsForUserRequest object.
  */
 ListGroupsForUserRequest::ListGroupsForUserRequest()
     : IAMRequest(new ListGroupsForUserRequestPrivate(IAMRequest::ListGroupsForUserAction, this))
@@ -131,14 +128,9 @@ bool ListGroupsForUserRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListGroupsForUserResponse object.
+ * Returns a ListGroupsForUserResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListGroupsForUserResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IAMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListGroupsForUserRequest::response(QNetworkReply * const reply) const
 {
@@ -146,20 +138,17 @@ QtAws::Core::AwsAbstractResponse * ListGroupsForUserRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::IAM::ListGroupsForUserRequestPrivate
+ * \brief The ListGroupsForUserRequestPrivate class provides private implementation for ListGroupsForUserRequest.
+ * \internal
  *
- * @class  ListGroupsForUserRequestPrivate
- *
- * @brief  Private implementation for ListGroupsForUserRequest.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListGroupsForUserRequestPrivate object.
- *
- * @param  action  IAM action being performed.
- * @param  q       Pointer to this object's public ListGroupsForUserRequest instance.
+ * Constructs a ListGroupsForUserRequestPrivate object for IAM \a action with,
+ * public implementation \a q.
  */
 ListGroupsForUserRequestPrivate::ListGroupsForUserRequestPrivate(
     const IAMRequest::Action action, ListGroupsForUserRequest * const q)
@@ -169,15 +158,10 @@ ListGroupsForUserRequestPrivate::ListGroupsForUserRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListGroupsForUserRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListGroupsForUserRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListGroupsForUserRequest instance.
  */
 ListGroupsForUserRequestPrivate::ListGroupsForUserRequestPrivate(
     const ListGroupsForUserRequestPrivate &other, ListGroupsForUserRequest * const q)

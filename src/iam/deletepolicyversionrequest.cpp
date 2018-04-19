@@ -27,10 +27,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::DeletePolicyVersionRequest
- *
  * \brief The DeletePolicyVersionRequest class provides an interface for IAM DeletePolicyVersion requests.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -102,9 +101,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new DeletePolicyVersionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeletePolicyVersionRequest::DeletePolicyVersionRequest(const DeletePolicyVersionRequest &other)
     : IAMRequest(new DeletePolicyVersionRequestPrivate(*other.d_func(), this))
@@ -113,7 +110,7 @@ DeletePolicyVersionRequest::DeletePolicyVersionRequest(const DeletePolicyVersion
 }
 
 /*!
- * @brief  Constructs a new DeletePolicyVersionRequest object.
+ * Constructs a DeletePolicyVersionRequest object.
  */
 DeletePolicyVersionRequest::DeletePolicyVersionRequest()
     : IAMRequest(new DeletePolicyVersionRequestPrivate(IAMRequest::DeletePolicyVersionAction, this))
@@ -131,14 +128,9 @@ bool DeletePolicyVersionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeletePolicyVersionResponse object.
+ * Returns a DeletePolicyVersionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeletePolicyVersionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IAMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeletePolicyVersionRequest::response(QNetworkReply * const reply) const
 {
@@ -146,20 +138,17 @@ QtAws::Core::AwsAbstractResponse * DeletePolicyVersionRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::IAM::DeletePolicyVersionRequestPrivate
+ * \brief The DeletePolicyVersionRequestPrivate class provides private implementation for DeletePolicyVersionRequest.
+ * \internal
  *
- * @class  DeletePolicyVersionRequestPrivate
- *
- * @brief  Private implementation for DeletePolicyVersionRequest.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeletePolicyVersionRequestPrivate object.
- *
- * @param  action  IAM action being performed.
- * @param  q       Pointer to this object's public DeletePolicyVersionRequest instance.
+ * Constructs a DeletePolicyVersionRequestPrivate object for IAM \a action with,
+ * public implementation \a q.
  */
 DeletePolicyVersionRequestPrivate::DeletePolicyVersionRequestPrivate(
     const IAMRequest::Action action, DeletePolicyVersionRequest * const q)
@@ -169,15 +158,10 @@ DeletePolicyVersionRequestPrivate::DeletePolicyVersionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeletePolicyVersionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeletePolicyVersionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeletePolicyVersionRequest instance.
  */
 DeletePolicyVersionRequestPrivate::DeletePolicyVersionRequestPrivate(
     const DeletePolicyVersionRequestPrivate &other, DeletePolicyVersionRequest * const q)

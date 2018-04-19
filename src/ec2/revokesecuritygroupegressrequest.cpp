@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::RevokeSecurityGroupEgressRequest
- *
  * \brief The RevokeSecurityGroupEgressRequest class provides an interface for EC2 RevokeSecurityGroupEgress requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new RevokeSecurityGroupEgressRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 RevokeSecurityGroupEgressRequest::RevokeSecurityGroupEgressRequest(const RevokeSecurityGroupEgressRequest &other)
     : EC2Request(new RevokeSecurityGroupEgressRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ RevokeSecurityGroupEgressRequest::RevokeSecurityGroupEgressRequest(const RevokeS
 }
 
 /*!
- * @brief  Constructs a new RevokeSecurityGroupEgressRequest object.
+ * Constructs a RevokeSecurityGroupEgressRequest object.
  */
 RevokeSecurityGroupEgressRequest::RevokeSecurityGroupEgressRequest()
     : EC2Request(new RevokeSecurityGroupEgressRequestPrivate(EC2Request::RevokeSecurityGroupEgressAction, this))
@@ -70,14 +67,9 @@ bool RevokeSecurityGroupEgressRequest::isValid() const
 
 
 /*!
- * @brief  Construct an RevokeSecurityGroupEgressResponse object.
+ * Returns a RevokeSecurityGroupEgressResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An RevokeSecurityGroupEgressResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * RevokeSecurityGroupEgressRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * RevokeSecurityGroupEgressRequest::response(QN
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::RevokeSecurityGroupEgressRequestPrivate
+ * \brief The RevokeSecurityGroupEgressRequestPrivate class provides private implementation for RevokeSecurityGroupEgressRequest.
+ * \internal
  *
- * @class  RevokeSecurityGroupEgressRequestPrivate
- *
- * @brief  Private implementation for RevokeSecurityGroupEgressRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new RevokeSecurityGroupEgressRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public RevokeSecurityGroupEgressRequest instance.
+ * Constructs a RevokeSecurityGroupEgressRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 RevokeSecurityGroupEgressRequestPrivate::RevokeSecurityGroupEgressRequestPrivate(
     const EC2Request::Action action, RevokeSecurityGroupEgressRequest * const q)
@@ -108,15 +97,10 @@ RevokeSecurityGroupEgressRequestPrivate::RevokeSecurityGroupEgressRequestPrivate
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RevokeSecurityGroupEgressRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the RevokeSecurityGroupEgressRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public RevokeSecurityGroupEgressRequest instance.
  */
 RevokeSecurityGroupEgressRequestPrivate::RevokeSecurityGroupEgressRequestPrivate(
     const RevokeSecurityGroupEgressRequestPrivate &other, RevokeSecurityGroupEgressRequest * const q)

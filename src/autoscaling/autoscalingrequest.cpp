@@ -25,16 +25,73 @@ namespace AutoScaling {
 
 /*!
  * \class QtAws::AutoScaling::AutoScalingRequest
- *
  * \brief The AutoScalingRequest class provides an interface for AutoScaling requests.
  *
- * \ingroup AutoScaling
+ * \inmodule QtAwsAutoScaling
  */
 
 /*!
- * @brief  Constructs a new AutoScalingRequest object.
+ * \enum AutoScalingRequest::Action
  *
- * @param  action  The AutoScaling action to request.
+ * This enum describes the actions that can be performed as AutoScaling
+ * requests.
+ *
+ * \value AttachInstancesAction AutoScaling AttachInstances action.
+ * \value AttachLoadBalancerTargetGroupsAction AutoScaling AttachLoadBalancerTargetGroups action.
+ * \value AttachLoadBalancersAction AutoScaling AttachLoadBalancers action.
+ * \value CompleteLifecycleActionAction AutoScaling CompleteLifecycleAction action.
+ * \value CreateAutoScalingGroupAction AutoScaling CreateAutoScalingGroup action.
+ * \value CreateLaunchConfigurationAction AutoScaling CreateLaunchConfiguration action.
+ * \value CreateOrUpdateTagsAction AutoScaling CreateOrUpdateTags action.
+ * \value DeleteAutoScalingGroupAction AutoScaling DeleteAutoScalingGroup action.
+ * \value DeleteLaunchConfigurationAction AutoScaling DeleteLaunchConfiguration action.
+ * \value DeleteLifecycleHookAction AutoScaling DeleteLifecycleHook action.
+ * \value DeleteNotificationConfigurationAction AutoScaling DeleteNotificationConfiguration action.
+ * \value DeletePolicyAction AutoScaling DeletePolicy action.
+ * \value DeleteScheduledActionAction AutoScaling DeleteScheduledAction action.
+ * \value DeleteTagsAction AutoScaling DeleteTags action.
+ * \value DescribeAccountLimitsAction AutoScaling DescribeAccountLimits action.
+ * \value DescribeAdjustmentTypesAction AutoScaling DescribeAdjustmentTypes action.
+ * \value DescribeAutoScalingGroupsAction AutoScaling DescribeAutoScalingGroups action.
+ * \value DescribeAutoScalingInstancesAction AutoScaling DescribeAutoScalingInstances action.
+ * \value DescribeAutoScalingNotificationTypesAction AutoScaling DescribeAutoScalingNotificationTypes action.
+ * \value DescribeLaunchConfigurationsAction AutoScaling DescribeLaunchConfigurations action.
+ * \value DescribeLifecycleHookTypesAction AutoScaling DescribeLifecycleHookTypes action.
+ * \value DescribeLifecycleHooksAction AutoScaling DescribeLifecycleHooks action.
+ * \value DescribeLoadBalancerTargetGroupsAction AutoScaling DescribeLoadBalancerTargetGroups action.
+ * \value DescribeLoadBalancersAction AutoScaling DescribeLoadBalancers action.
+ * \value DescribeMetricCollectionTypesAction AutoScaling DescribeMetricCollectionTypes action.
+ * \value DescribeNotificationConfigurationsAction AutoScaling DescribeNotificationConfigurations action.
+ * \value DescribePoliciesAction AutoScaling DescribePolicies action.
+ * \value DescribeScalingActivitiesAction AutoScaling DescribeScalingActivities action.
+ * \value DescribeScalingProcessTypesAction AutoScaling DescribeScalingProcessTypes action.
+ * \value DescribeScheduledActionsAction AutoScaling DescribeScheduledActions action.
+ * \value DescribeTagsAction AutoScaling DescribeTags action.
+ * \value DescribeTerminationPolicyTypesAction AutoScaling DescribeTerminationPolicyTypes action.
+ * \value DetachInstancesAction AutoScaling DetachInstances action.
+ * \value DetachLoadBalancerTargetGroupsAction AutoScaling DetachLoadBalancerTargetGroups action.
+ * \value DetachLoadBalancersAction AutoScaling DetachLoadBalancers action.
+ * \value DisableMetricsCollectionAction AutoScaling DisableMetricsCollection action.
+ * \value EnableMetricsCollectionAction AutoScaling EnableMetricsCollection action.
+ * \value EnterStandbyAction AutoScaling EnterStandby action.
+ * \value ExecutePolicyAction AutoScaling ExecutePolicy action.
+ * \value ExitStandbyAction AutoScaling ExitStandby action.
+ * \value PutLifecycleHookAction AutoScaling PutLifecycleHook action.
+ * \value PutNotificationConfigurationAction AutoScaling PutNotificationConfiguration action.
+ * \value PutScalingPolicyAction AutoScaling PutScalingPolicy action.
+ * \value PutScheduledUpdateGroupActionAction AutoScaling PutScheduledUpdateGroupAction action.
+ * \value RecordLifecycleActionHeartbeatAction AutoScaling RecordLifecycleActionHeartbeat action.
+ * \value ResumeProcessesAction AutoScaling ResumeProcesses action.
+ * \value SetDesiredCapacityAction AutoScaling SetDesiredCapacity action.
+ * \value SetInstanceHealthAction AutoScaling SetInstanceHealth action.
+ * \value SetInstanceProtectionAction AutoScaling SetInstanceProtection action.
+ * \value SuspendProcessesAction AutoScaling SuspendProcesses action.
+ * \value TerminateInstanceInAutoScalingGroupAction AutoScaling TerminateInstanceInAutoScalingGroup action.
+ * \value UpdateAutoScalingGroupAction AutoScaling UpdateAutoScalingGroup action.
+ */
+
+/*!
+ * Constructs a[n] AutoScalingRequest object for AutoScaling \a action.
  */
 AutoScalingRequest::AutoScalingRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new AutoScalingRequestPrivate(action, this))
@@ -43,9 +100,7 @@ AutoScalingRequest::AutoScalingRequest(const Action action)
 }
 
 /*!
- * @brief  Constructs a new AutoScalingRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AutoScalingRequest::AutoScalingRequest(const AutoScalingRequest &other)
     : QtAws::Core::AwsAbstractRequest(new AutoScalingRequestPrivate(*other.d_func(), this))
@@ -54,13 +109,7 @@ AutoScalingRequest::AutoScalingRequest(const AutoScalingRequest &other)
 }
 
 /*!
- * @brief  Assignment operator.
- *
- * Assigns \a other to \c this.
- *
- * @param  other  Instance to copy.
- *
- * @return  A reference to \c this.
+ * Sets the AutoScalingRequest object to be equal to \a other.
  */
 AutoScalingRequest& AutoScalingRequest::operator=(const AutoScalingRequest &other)
 {
@@ -72,14 +121,10 @@ AutoScalingRequest& AutoScalingRequest::operator=(const AutoScalingRequest &othe
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AutoScalingRequest object.
+ * Constructs aa AutoScalingRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from AutoScalingRequestPrivate.
- *
- * @param  d  Pointer to private data (aka D-Pointer).
  */
 AutoScalingRequest::AutoScalingRequest(AutoScalingRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
@@ -87,7 +132,7 @@ AutoScalingRequest::AutoScalingRequest(AutoScalingRequestPrivate * const d) : Qt
 }
 
 /*!
- * \brief Returns the AutoScaling action to be performed by this request.
+ * Returns the AutoScaling action to be performed by this request.
  */
 AutoScalingRequest::Action AutoScalingRequest::action() const
 {
@@ -96,7 +141,7 @@ AutoScalingRequest::Action AutoScalingRequest::action() const
 }
 
 /*!
- * \brief Returns the name of the AutoScaling action to be performed by this request.
+ * Returns the name of the AutoScaling action to be performed by this request.
  */
 QString AutoScalingRequest::actionString() const
 {
@@ -104,7 +149,7 @@ QString AutoScalingRequest::actionString() const
 }
 
 /*!
- * \brief Returns the AutoScaling API version implemented by this request.
+ * Returns the AutoScaling API version implemented by this request.
  */
 QString AutoScalingRequest::apiVersion() const
 {
@@ -113,7 +158,7 @@ QString AutoScalingRequest::apiVersion() const
 }
 
 /*!
- * @brief Set the AutoScaling action to be performed by this request to \a action.
+ * Sets the AutoScaling action to be performed by this request to \a action.
  */
 void AutoScalingRequest::setAction(const Action action)
 {
@@ -122,7 +167,7 @@ void AutoScalingRequest::setAction(const Action action)
 }
 
 /*!
- * Set the AutoScaling API version to include in this request to \a version.
+ * Sets the AutoScaling API version to include in this request to \a version.
  */
 void AutoScalingRequest::setApiVersion(const QString &version)
 {
@@ -131,7 +176,7 @@ void AutoScalingRequest::setApiVersion(const QString &version)
 }
 
 /*!
- * \brief Returns \c true if this request is the same as \a other.
+ * Returns \c true if this request is equal to \a other; \c false otherwise.
  *
  * Note, most derived *Request classes do not need to provider their own
  * implementations of this function, since most such request classes rely on
@@ -146,8 +191,8 @@ bool AutoScalingRequest::operator==(const AutoScalingRequest &other) const
             (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
-/*!
- * @brief  Check if \a queueName is a valid AutoScaling queue name.
+/*
+ * Returns \c tue if \a queueName is a valid AutoScaling queue name.
  *
  * @par From AutoScaling FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
@@ -166,9 +211,8 @@ bool AutoScalingRequest::operator==(const AutoScalingRequest &other) const
 }*/
 
 /*!
- * \brief Removes the a \a name parameter from this request.
- *
- * Returns the count of paramters removed (typically \c 0 or \c 1).
+ * Removes the a \a name parameter from the request, then returns the number of
+ * paramters removed (typically \c 0 or \c 1).
  */
 int AutoScalingRequest::clearParameter(const QString &name)
 {
@@ -177,7 +221,7 @@ int AutoScalingRequest::clearParameter(const QString &name)
 }
 
 /*!
- * \brief Removes all parameters from this request.
+ * Removes all parameters from the request.
  */
 void AutoScalingRequest::clearParameters()
 {
@@ -186,7 +230,7 @@ void AutoScalingRequest::clearParameters()
 }
 
 /*!
- * \brief Returns the value of the \n name pararemter if set, otherwise \a defaultValue.
+ * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
 QVariant AutoScalingRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
@@ -195,7 +239,7 @@ QVariant AutoScalingRequest::parameter(const QString &name, const QVariant &defa
 }
 
 /*!
- * \brief Returns a map of parameters included in this request.
+ * Returns the parameters included in this request.
  */
 const QVariantMap &AutoScalingRequest::parameters() const
 {
@@ -204,7 +248,7 @@ const QVariantMap &AutoScalingRequest::parameters() const
 }
 
 /*!
- * \brief Sets the \a name parameter to \a value.
+ * Sets the \a name parameter to \a value.
  */
 void AutoScalingRequest::setParameter(const QString &name, const QVariant &value)
 {
@@ -213,9 +257,8 @@ void AutoScalingRequest::setParameter(const QString &name, const QVariant &value
 }
 
 /*!
- * \brief Sets the map of paramters for this request to \a parameters.
- *
- * Any request parameters set previously will be discarded.
+ * Sets the paramters for this request to \a parameters. Any request parameters
+ * set previously will be discarded.
  */
 void AutoScalingRequest::setParameters(const QVariantMap &parameters)
 {
@@ -224,11 +267,12 @@ void AutoScalingRequest::setParameters(const QVariantMap &parameters)
 }
 
 /*!
- * \brief Returns a network request for this AutoScaling request using the given \a endpoint.
+ * Returns a network request for the AutoScaling request using the given
+ * \a endpoint.
  *
- * This AutoScaling implementation builds request URLs by combining the common query
- * parameters (such as Action and Version), with any that have been added (via
- * setParameter) by child classes.
+ * This AutoScaling implementation builds request URLs by combining the
+ * common query parameters (such as Action and Version), with any that have
+ * been added (via setParameter) by child classes.
  */
 QNetworkRequest AutoScalingRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -239,17 +283,16 @@ QNetworkRequest AutoScalingRequest::unsignedRequest(const QUrl &endpoint) const
 }
 
 /*!
+ * \class QtAws::AutoScaling::AutoScalingRequestPrivate
+ * \brief The AutoScalingRequestPrivate class provides private implementation for AutoScalingRequest.
  * \internal
  *
- * \class  AutoScalingRequestPrivate
- *
- * \brief  Private implementation for AutoScalingRequest.
+ * \inmodule QtAwsAutoScaling
  */
 
 /*!
- * \internal
- *
- * \brief Constructs a new AutoScalingRequestPrivate object.
+ * Constructs a AutoScalingRequestPrivate object for AutoScaling \a action with,
+ * public implementation \a q.
  */
 AutoScalingRequestPrivate::AutoScalingRequestPrivate(const AutoScalingRequest::Action action, AutoScalingRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
@@ -258,9 +301,7 @@ AutoScalingRequestPrivate::AutoScalingRequestPrivate(const AutoScalingRequest::A
 }
 
 /*!
- * \internal
- *
- * \brief Constructs a new AutoScalingRequestPrivate object, copying an existing one.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
@@ -276,15 +317,12 @@ AutoScalingRequestPrivate::AutoScalingRequestPrivate(const AutoScalingRequestPri
 }
 
 /*!
- * \internal
- *
- * \brief Returns a string representing \a action.
+ * Returns a string represention of \a action, or a null string if \a action is
+ * invalid.
  *
  * This function converts AutoScalingRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the AutoScaling service's Action
  * query parameters.
- *
- * @return A string representing \a action, or a null string if \a action is invalid.
  */
 QString AutoScalingRequestPrivate::toString(const AutoScalingRequest::Action &action)
 {

@@ -62,6 +62,9 @@
 /*!
  * \namespace QtAws::Snowball
  * \brief The QtAws::Snowball contains stuff...
+ *
+ * \inmodule QtAwsSnowball
+ *
  * @todo Move this to a separate template file.
  */
 
@@ -117,7 +120,7 @@ SnowballClient::SnowballClient(
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * \a  AwsEndpoint::getEndpoint()
+ * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
 SnowballClient::SnowballClient(
     const QUrl &endpoint,

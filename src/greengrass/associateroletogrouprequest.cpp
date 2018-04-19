@@ -27,10 +27,9 @@ namespace Greengrass {
 
 /*!
  * \class QtAws::Greengrass::AssociateRoleToGroupRequest
- *
  * \brief The AssociateRoleToGroupRequest class provides an interface for Greengrass AssociateRoleToGroup requests.
  *
- * \ingroup Greengrass
+ * \inmodule QtAwsGreengrass
  *
  *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
  *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
@@ -40,9 +39,7 @@ namespace Greengrass {
  */
 
 /*!
- * @brief  Constructs a new AssociateRoleToGroupRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AssociateRoleToGroupRequest::AssociateRoleToGroupRequest(const AssociateRoleToGroupRequest &other)
     : GreengrassRequest(new AssociateRoleToGroupRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ AssociateRoleToGroupRequest::AssociateRoleToGroupRequest(const AssociateRoleToGr
 }
 
 /*!
- * @brief  Constructs a new AssociateRoleToGroupRequest object.
+ * Constructs a AssociateRoleToGroupRequest object.
  */
 AssociateRoleToGroupRequest::AssociateRoleToGroupRequest()
     : GreengrassRequest(new AssociateRoleToGroupRequestPrivate(GreengrassRequest::AssociateRoleToGroupAction, this))
@@ -69,14 +66,9 @@ bool AssociateRoleToGroupRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AssociateRoleToGroupResponse object.
+ * Returns a AssociateRoleToGroupResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AssociateRoleToGroupResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GreengrassClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AssociateRoleToGroupRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * AssociateRoleToGroupRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::Greengrass::AssociateRoleToGroupRequestPrivate
+ * \brief The AssociateRoleToGroupRequestPrivate class provides private implementation for AssociateRoleToGroupRequest.
+ * \internal
  *
- * @class  AssociateRoleToGroupRequestPrivate
- *
- * @brief  Private implementation for AssociateRoleToGroupRequest.
+ * \inmodule QtAwsGreengrass
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AssociateRoleToGroupRequestPrivate object.
- *
- * @param  action  Greengrass action being performed.
- * @param  q       Pointer to this object's public AssociateRoleToGroupRequest instance.
+ * Constructs a AssociateRoleToGroupRequestPrivate object for Greengrass \a action with,
+ * public implementation \a q.
  */
 AssociateRoleToGroupRequestPrivate::AssociateRoleToGroupRequestPrivate(
     const GreengrassRequest::Action action, AssociateRoleToGroupRequest * const q)
@@ -107,15 +96,10 @@ AssociateRoleToGroupRequestPrivate::AssociateRoleToGroupRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AssociateRoleToGroupRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AssociateRoleToGroupRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AssociateRoleToGroupRequest instance.
  */
 AssociateRoleToGroupRequestPrivate::AssociateRoleToGroupRequestPrivate(
     const AssociateRoleToGroupRequestPrivate &other, AssociateRoleToGroupRequest * const q)

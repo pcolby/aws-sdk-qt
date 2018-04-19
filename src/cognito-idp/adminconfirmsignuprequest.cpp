@@ -27,10 +27,9 @@ namespace CognitoIdentityProvider {
 
 /*!
  * \class QtAws::CognitoIdentityProvider::AdminConfirmSignUpRequest
- *
  * \brief The AdminConfirmSignUpRequest class provides an interface for CognitoIdentityProvider AdminConfirmSignUp requests.
  *
- * \ingroup CognitoIdentityProvider
+ * \inmodule QtAwsCognitoIdentityProvider
  *
  *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
  *  authenticate a user to obtain tokens related to user identity and access
@@ -47,9 +46,7 @@ namespace CognitoIdentityProvider {
  */
 
 /*!
- * @brief  Constructs a new AdminConfirmSignUpRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AdminConfirmSignUpRequest::AdminConfirmSignUpRequest(const AdminConfirmSignUpRequest &other)
     : CognitoIdentityProviderRequest(new AdminConfirmSignUpRequestPrivate(*other.d_func(), this))
@@ -58,7 +55,7 @@ AdminConfirmSignUpRequest::AdminConfirmSignUpRequest(const AdminConfirmSignUpReq
 }
 
 /*!
- * @brief  Constructs a new AdminConfirmSignUpRequest object.
+ * Constructs a AdminConfirmSignUpRequest object.
  */
 AdminConfirmSignUpRequest::AdminConfirmSignUpRequest()
     : CognitoIdentityProviderRequest(new AdminConfirmSignUpRequestPrivate(CognitoIdentityProviderRequest::AdminConfirmSignUpAction, this))
@@ -76,14 +73,9 @@ bool AdminConfirmSignUpRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AdminConfirmSignUpResponse object.
+ * Returns a AdminConfirmSignUpResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AdminConfirmSignUpResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CognitoIdentityProviderClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AdminConfirmSignUpRequest::response(QNetworkReply * const reply) const
 {
@@ -91,20 +83,17 @@ QtAws::Core::AwsAbstractResponse * AdminConfirmSignUpRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::CognitoIdentityProvider::AdminConfirmSignUpRequestPrivate
+ * \brief The AdminConfirmSignUpRequestPrivate class provides private implementation for AdminConfirmSignUpRequest.
+ * \internal
  *
- * @class  AdminConfirmSignUpRequestPrivate
- *
- * @brief  Private implementation for AdminConfirmSignUpRequest.
+ * \inmodule QtAwsCognitoIdentityProvider
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AdminConfirmSignUpRequestPrivate object.
- *
- * @param  action  CognitoIdentityProvider action being performed.
- * @param  q       Pointer to this object's public AdminConfirmSignUpRequest instance.
+ * Constructs a AdminConfirmSignUpRequestPrivate object for CognitoIdentityProvider \a action with,
+ * public implementation \a q.
  */
 AdminConfirmSignUpRequestPrivate::AdminConfirmSignUpRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, AdminConfirmSignUpRequest * const q)
@@ -114,15 +103,10 @@ AdminConfirmSignUpRequestPrivate::AdminConfirmSignUpRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AdminConfirmSignUpRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AdminConfirmSignUpRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AdminConfirmSignUpRequest instance.
  */
 AdminConfirmSignUpRequestPrivate::AdminConfirmSignUpRequestPrivate(
     const AdminConfirmSignUpRequestPrivate &other, AdminConfirmSignUpRequest * const q)

@@ -27,10 +27,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::CreateOptionGroupRequest
- *
  * \brief The CreateOptionGroupRequest class provides an interface for RDS CreateOptionGroup requests.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -101,9 +100,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new CreateOptionGroupRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateOptionGroupRequest::CreateOptionGroupRequest(const CreateOptionGroupRequest &other)
     : RDSRequest(new CreateOptionGroupRequestPrivate(*other.d_func(), this))
@@ -112,7 +109,7 @@ CreateOptionGroupRequest::CreateOptionGroupRequest(const CreateOptionGroupReques
 }
 
 /*!
- * @brief  Constructs a new CreateOptionGroupRequest object.
+ * Constructs a CreateOptionGroupRequest object.
  */
 CreateOptionGroupRequest::CreateOptionGroupRequest()
     : RDSRequest(new CreateOptionGroupRequestPrivate(RDSRequest::CreateOptionGroupAction, this))
@@ -130,14 +127,9 @@ bool CreateOptionGroupRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateOptionGroupResponse object.
+ * Returns a CreateOptionGroupResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateOptionGroupResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RDSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateOptionGroupRequest::response(QNetworkReply * const reply) const
 {
@@ -145,20 +137,17 @@ QtAws::Core::AwsAbstractResponse * CreateOptionGroupRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::RDS::CreateOptionGroupRequestPrivate
+ * \brief The CreateOptionGroupRequestPrivate class provides private implementation for CreateOptionGroupRequest.
+ * \internal
  *
- * @class  CreateOptionGroupRequestPrivate
- *
- * @brief  Private implementation for CreateOptionGroupRequest.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateOptionGroupRequestPrivate object.
- *
- * @param  action  RDS action being performed.
- * @param  q       Pointer to this object's public CreateOptionGroupRequest instance.
+ * Constructs a CreateOptionGroupRequestPrivate object for RDS \a action with,
+ * public implementation \a q.
  */
 CreateOptionGroupRequestPrivate::CreateOptionGroupRequestPrivate(
     const RDSRequest::Action action, CreateOptionGroupRequest * const q)
@@ -168,15 +157,10 @@ CreateOptionGroupRequestPrivate::CreateOptionGroupRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateOptionGroupRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateOptionGroupRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateOptionGroupRequest instance.
  */
 CreateOptionGroupRequestPrivate::CreateOptionGroupRequestPrivate(
     const CreateOptionGroupRequestPrivate &other, CreateOptionGroupRequest * const q)

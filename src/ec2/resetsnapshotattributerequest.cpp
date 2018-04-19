@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::ResetSnapshotAttributeRequest
- *
  * \brief The ResetSnapshotAttributeRequest class provides an interface for EC2 ResetSnapshotAttribute requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new ResetSnapshotAttributeRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ResetSnapshotAttributeRequest::ResetSnapshotAttributeRequest(const ResetSnapshotAttributeRequest &other)
     : EC2Request(new ResetSnapshotAttributeRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ ResetSnapshotAttributeRequest::ResetSnapshotAttributeRequest(const ResetSnapshot
 }
 
 /*!
- * @brief  Constructs a new ResetSnapshotAttributeRequest object.
+ * Constructs a ResetSnapshotAttributeRequest object.
  */
 ResetSnapshotAttributeRequest::ResetSnapshotAttributeRequest()
     : EC2Request(new ResetSnapshotAttributeRequestPrivate(EC2Request::ResetSnapshotAttributeAction, this))
@@ -70,14 +67,9 @@ bool ResetSnapshotAttributeRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ResetSnapshotAttributeResponse object.
+ * Returns a ResetSnapshotAttributeResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ResetSnapshotAttributeResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ResetSnapshotAttributeRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * ResetSnapshotAttributeRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::ResetSnapshotAttributeRequestPrivate
+ * \brief The ResetSnapshotAttributeRequestPrivate class provides private implementation for ResetSnapshotAttributeRequest.
+ * \internal
  *
- * @class  ResetSnapshotAttributeRequestPrivate
- *
- * @brief  Private implementation for ResetSnapshotAttributeRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ResetSnapshotAttributeRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public ResetSnapshotAttributeRequest instance.
+ * Constructs a ResetSnapshotAttributeRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 ResetSnapshotAttributeRequestPrivate::ResetSnapshotAttributeRequestPrivate(
     const EC2Request::Action action, ResetSnapshotAttributeRequest * const q)
@@ -108,15 +97,10 @@ ResetSnapshotAttributeRequestPrivate::ResetSnapshotAttributeRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ResetSnapshotAttributeRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ResetSnapshotAttributeRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ResetSnapshotAttributeRequest instance.
  */
 ResetSnapshotAttributeRequestPrivate::ResetSnapshotAttributeRequestPrivate(
     const ResetSnapshotAttributeRequestPrivate &other, ResetSnapshotAttributeRequest * const q)

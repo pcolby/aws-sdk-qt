@@ -27,10 +27,9 @@ namespace Connect {
 
 /*!
  * \class QtAws::Connect::StartOutboundVoiceContactRequest
- *
  * \brief The StartOutboundVoiceContactRequest class provides an interface for Connect StartOutboundVoiceContact requests.
  *
- * \ingroup Connect
+ * \inmodule QtAwsConnect
  *
  *  The Amazon Connect API Reference provides descriptions, syntax, and usage examples for each of the Amazon Connect
  *  actions, data types, parameters, and errors. Amazon Connect is a cloud-based contact center solution that makes it easy
@@ -40,9 +39,7 @@ namespace Connect {
  */
 
 /*!
- * @brief  Constructs a new StartOutboundVoiceContactRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 StartOutboundVoiceContactRequest::StartOutboundVoiceContactRequest(const StartOutboundVoiceContactRequest &other)
     : ConnectRequest(new StartOutboundVoiceContactRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ StartOutboundVoiceContactRequest::StartOutboundVoiceContactRequest(const StartOu
 }
 
 /*!
- * @brief  Constructs a new StartOutboundVoiceContactRequest object.
+ * Constructs a StartOutboundVoiceContactRequest object.
  */
 StartOutboundVoiceContactRequest::StartOutboundVoiceContactRequest()
     : ConnectRequest(new StartOutboundVoiceContactRequestPrivate(ConnectRequest::StartOutboundVoiceContactAction, this))
@@ -69,14 +66,9 @@ bool StartOutboundVoiceContactRequest::isValid() const
 
 
 /*!
- * @brief  Construct an StartOutboundVoiceContactResponse object.
+ * Returns a StartOutboundVoiceContactResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An StartOutboundVoiceContactResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ConnectClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * StartOutboundVoiceContactRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * StartOutboundVoiceContactRequest::response(QN
 }
 
 /*!
- * @internal
+ * \class QtAws::Connect::StartOutboundVoiceContactRequestPrivate
+ * \brief The StartOutboundVoiceContactRequestPrivate class provides private implementation for StartOutboundVoiceContactRequest.
+ * \internal
  *
- * @class  StartOutboundVoiceContactRequestPrivate
- *
- * @brief  Private implementation for StartOutboundVoiceContactRequest.
+ * \inmodule QtAwsConnect
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new StartOutboundVoiceContactRequestPrivate object.
- *
- * @param  action  Connect action being performed.
- * @param  q       Pointer to this object's public StartOutboundVoiceContactRequest instance.
+ * Constructs a StartOutboundVoiceContactRequestPrivate object for Connect \a action with,
+ * public implementation \a q.
  */
 StartOutboundVoiceContactRequestPrivate::StartOutboundVoiceContactRequestPrivate(
     const ConnectRequest::Action action, StartOutboundVoiceContactRequest * const q)
@@ -107,15 +96,10 @@ StartOutboundVoiceContactRequestPrivate::StartOutboundVoiceContactRequestPrivate
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StartOutboundVoiceContactRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the StartOutboundVoiceContactRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public StartOutboundVoiceContactRequest instance.
  */
 StartOutboundVoiceContactRequestPrivate::StartOutboundVoiceContactRequestPrivate(
     const StartOutboundVoiceContactRequestPrivate &other, StartOutboundVoiceContactRequest * const q)

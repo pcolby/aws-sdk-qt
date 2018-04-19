@@ -27,10 +27,9 @@ namespace CloudDirectory {
 
 /*!
  * \class QtAws::CloudDirectory::UpgradeAppliedSchemaRequest
- *
  * \brief The UpgradeAppliedSchemaRequest class provides an interface for CloudDirectory UpgradeAppliedSchema requests.
  *
- * \ingroup CloudDirectory
+ * \inmodule QtAwsCloudDirectory
  *
  *  <fullname>Amazon Cloud Directory</fullname>
  * 
@@ -44,9 +43,7 @@ namespace CloudDirectory {
  */
 
 /*!
- * @brief  Constructs a new UpgradeAppliedSchemaRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpgradeAppliedSchemaRequest::UpgradeAppliedSchemaRequest(const UpgradeAppliedSchemaRequest &other)
     : CloudDirectoryRequest(new UpgradeAppliedSchemaRequestPrivate(*other.d_func(), this))
@@ -55,7 +52,7 @@ UpgradeAppliedSchemaRequest::UpgradeAppliedSchemaRequest(const UpgradeAppliedSch
 }
 
 /*!
- * @brief  Constructs a new UpgradeAppliedSchemaRequest object.
+ * Constructs a UpgradeAppliedSchemaRequest object.
  */
 UpgradeAppliedSchemaRequest::UpgradeAppliedSchemaRequest()
     : CloudDirectoryRequest(new UpgradeAppliedSchemaRequestPrivate(CloudDirectoryRequest::UpgradeAppliedSchemaAction, this))
@@ -73,14 +70,9 @@ bool UpgradeAppliedSchemaRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpgradeAppliedSchemaResponse object.
+ * Returns a UpgradeAppliedSchemaResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpgradeAppliedSchemaResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudDirectoryClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpgradeAppliedSchemaRequest::response(QNetworkReply * const reply) const
 {
@@ -88,20 +80,17 @@ QtAws::Core::AwsAbstractResponse * UpgradeAppliedSchemaRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudDirectory::UpgradeAppliedSchemaRequestPrivate
+ * \brief The UpgradeAppliedSchemaRequestPrivate class provides private implementation for UpgradeAppliedSchemaRequest.
+ * \internal
  *
- * @class  UpgradeAppliedSchemaRequestPrivate
- *
- * @brief  Private implementation for UpgradeAppliedSchemaRequest.
+ * \inmodule QtAwsCloudDirectory
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpgradeAppliedSchemaRequestPrivate object.
- *
- * @param  action  CloudDirectory action being performed.
- * @param  q       Pointer to this object's public UpgradeAppliedSchemaRequest instance.
+ * Constructs a UpgradeAppliedSchemaRequestPrivate object for CloudDirectory \a action with,
+ * public implementation \a q.
  */
 UpgradeAppliedSchemaRequestPrivate::UpgradeAppliedSchemaRequestPrivate(
     const CloudDirectoryRequest::Action action, UpgradeAppliedSchemaRequest * const q)
@@ -111,15 +100,10 @@ UpgradeAppliedSchemaRequestPrivate::UpgradeAppliedSchemaRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpgradeAppliedSchemaRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpgradeAppliedSchemaRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpgradeAppliedSchemaRequest instance.
  */
 UpgradeAppliedSchemaRequestPrivate::UpgradeAppliedSchemaRequestPrivate(
     const UpgradeAppliedSchemaRequestPrivate &other, UpgradeAppliedSchemaRequest * const q)

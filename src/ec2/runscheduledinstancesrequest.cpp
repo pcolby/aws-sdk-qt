@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::RunScheduledInstancesRequest
- *
  * \brief The RunScheduledInstancesRequest class provides an interface for EC2 RunScheduledInstances requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new RunScheduledInstancesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 RunScheduledInstancesRequest::RunScheduledInstancesRequest(const RunScheduledInstancesRequest &other)
     : EC2Request(new RunScheduledInstancesRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ RunScheduledInstancesRequest::RunScheduledInstancesRequest(const RunScheduledIns
 }
 
 /*!
- * @brief  Constructs a new RunScheduledInstancesRequest object.
+ * Constructs a RunScheduledInstancesRequest object.
  */
 RunScheduledInstancesRequest::RunScheduledInstancesRequest()
     : EC2Request(new RunScheduledInstancesRequestPrivate(EC2Request::RunScheduledInstancesAction, this))
@@ -70,14 +67,9 @@ bool RunScheduledInstancesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an RunScheduledInstancesResponse object.
+ * Returns a RunScheduledInstancesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An RunScheduledInstancesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * RunScheduledInstancesRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * RunScheduledInstancesRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::RunScheduledInstancesRequestPrivate
+ * \brief The RunScheduledInstancesRequestPrivate class provides private implementation for RunScheduledInstancesRequest.
+ * \internal
  *
- * @class  RunScheduledInstancesRequestPrivate
- *
- * @brief  Private implementation for RunScheduledInstancesRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new RunScheduledInstancesRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public RunScheduledInstancesRequest instance.
+ * Constructs a RunScheduledInstancesRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 RunScheduledInstancesRequestPrivate::RunScheduledInstancesRequestPrivate(
     const EC2Request::Action action, RunScheduledInstancesRequest * const q)
@@ -108,15 +97,10 @@ RunScheduledInstancesRequestPrivate::RunScheduledInstancesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RunScheduledInstancesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the RunScheduledInstancesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public RunScheduledInstancesRequest instance.
  */
 RunScheduledInstancesRequestPrivate::RunScheduledInstancesRequestPrivate(
     const RunScheduledInstancesRequestPrivate &other, RunScheduledInstancesRequest * const q)

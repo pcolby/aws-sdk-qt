@@ -27,10 +27,9 @@ namespace AlexaForBusiness {
 
 /*!
  * \class QtAws::AlexaForBusiness::GetDeviceRequest
- *
  * \brief The GetDeviceRequest class provides an interface for AlexaForBusiness GetDevice requests.
  *
- * \ingroup AlexaForBusiness
+ * \inmodule QtAwsAlexaForBusiness
  *
  *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
  *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
@@ -42,9 +41,7 @@ namespace AlexaForBusiness {
  */
 
 /*!
- * @brief  Constructs a new GetDeviceRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetDeviceRequest::GetDeviceRequest(const GetDeviceRequest &other)
     : AlexaForBusinessRequest(new GetDeviceRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ GetDeviceRequest::GetDeviceRequest(const GetDeviceRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetDeviceRequest object.
+ * Constructs a GetDeviceRequest object.
  */
 GetDeviceRequest::GetDeviceRequest()
     : AlexaForBusinessRequest(new GetDeviceRequestPrivate(AlexaForBusinessRequest::GetDeviceAction, this))
@@ -71,14 +68,9 @@ bool GetDeviceRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetDeviceResponse object.
+ * Returns a GetDeviceResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetDeviceResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AlexaForBusinessClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetDeviceRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * GetDeviceRequest::response(QNetworkReply * co
 }
 
 /*!
- * @internal
+ * \class QtAws::AlexaForBusiness::GetDeviceRequestPrivate
+ * \brief The GetDeviceRequestPrivate class provides private implementation for GetDeviceRequest.
+ * \internal
  *
- * @class  GetDeviceRequestPrivate
- *
- * @brief  Private implementation for GetDeviceRequest.
+ * \inmodule QtAwsAlexaForBusiness
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetDeviceRequestPrivate object.
- *
- * @param  action  AlexaForBusiness action being performed.
- * @param  q       Pointer to this object's public GetDeviceRequest instance.
+ * Constructs a GetDeviceRequestPrivate object for AlexaForBusiness \a action with,
+ * public implementation \a q.
  */
 GetDeviceRequestPrivate::GetDeviceRequestPrivate(
     const AlexaForBusinessRequest::Action action, GetDeviceRequest * const q)
@@ -109,15 +98,10 @@ GetDeviceRequestPrivate::GetDeviceRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetDeviceRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetDeviceRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetDeviceRequest instance.
  */
 GetDeviceRequestPrivate::GetDeviceRequestPrivate(
     const GetDeviceRequestPrivate &other, GetDeviceRequest * const q)

@@ -27,10 +27,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::CreateDBSecurityGroupRequest
- *
  * \brief The CreateDBSecurityGroupRequest class provides an interface for RDS CreateDBSecurityGroup requests.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -101,9 +100,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new CreateDBSecurityGroupRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateDBSecurityGroupRequest::CreateDBSecurityGroupRequest(const CreateDBSecurityGroupRequest &other)
     : RDSRequest(new CreateDBSecurityGroupRequestPrivate(*other.d_func(), this))
@@ -112,7 +109,7 @@ CreateDBSecurityGroupRequest::CreateDBSecurityGroupRequest(const CreateDBSecurit
 }
 
 /*!
- * @brief  Constructs a new CreateDBSecurityGroupRequest object.
+ * Constructs a CreateDBSecurityGroupRequest object.
  */
 CreateDBSecurityGroupRequest::CreateDBSecurityGroupRequest()
     : RDSRequest(new CreateDBSecurityGroupRequestPrivate(RDSRequest::CreateDBSecurityGroupAction, this))
@@ -130,14 +127,9 @@ bool CreateDBSecurityGroupRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateDBSecurityGroupResponse object.
+ * Returns a CreateDBSecurityGroupResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateDBSecurityGroupResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RDSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateDBSecurityGroupRequest::response(QNetworkReply * const reply) const
 {
@@ -145,20 +137,17 @@ QtAws::Core::AwsAbstractResponse * CreateDBSecurityGroupRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::RDS::CreateDBSecurityGroupRequestPrivate
+ * \brief The CreateDBSecurityGroupRequestPrivate class provides private implementation for CreateDBSecurityGroupRequest.
+ * \internal
  *
- * @class  CreateDBSecurityGroupRequestPrivate
- *
- * @brief  Private implementation for CreateDBSecurityGroupRequest.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateDBSecurityGroupRequestPrivate object.
- *
- * @param  action  RDS action being performed.
- * @param  q       Pointer to this object's public CreateDBSecurityGroupRequest instance.
+ * Constructs a CreateDBSecurityGroupRequestPrivate object for RDS \a action with,
+ * public implementation \a q.
  */
 CreateDBSecurityGroupRequestPrivate::CreateDBSecurityGroupRequestPrivate(
     const RDSRequest::Action action, CreateDBSecurityGroupRequest * const q)
@@ -168,15 +157,10 @@ CreateDBSecurityGroupRequestPrivate::CreateDBSecurityGroupRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateDBSecurityGroupRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateDBSecurityGroupRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateDBSecurityGroupRequest instance.
  */
 CreateDBSecurityGroupRequestPrivate::CreateDBSecurityGroupRequestPrivate(
     const CreateDBSecurityGroupRequestPrivate &other, CreateDBSecurityGroupRequest * const q)

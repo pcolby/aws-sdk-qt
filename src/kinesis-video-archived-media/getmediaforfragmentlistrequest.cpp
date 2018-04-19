@@ -27,19 +27,16 @@ namespace KinesisVideoArchivedMedia {
 
 /*!
  * \class QtAws::KinesisVideoArchivedMedia::GetMediaForFragmentListRequest
- *
  * \brief The GetMediaForFragmentListRequest class provides an interface for KinesisVideoArchivedMedia GetMediaForFragmentList requests.
  *
- * \ingroup KinesisVideoArchivedMedia
+ * \inmodule QtAwsKinesisVideoArchivedMedia
  *
  *
  * \sa KinesisVideoArchivedMediaClient::getMediaForFragmentList
  */
 
 /*!
- * @brief  Constructs a new GetMediaForFragmentListRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetMediaForFragmentListRequest::GetMediaForFragmentListRequest(const GetMediaForFragmentListRequest &other)
     : KinesisVideoArchivedMediaRequest(new GetMediaForFragmentListRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ GetMediaForFragmentListRequest::GetMediaForFragmentListRequest(const GetMediaFor
 }
 
 /*!
- * @brief  Constructs a new GetMediaForFragmentListRequest object.
+ * Constructs a GetMediaForFragmentListRequest object.
  */
 GetMediaForFragmentListRequest::GetMediaForFragmentListRequest()
     : KinesisVideoArchivedMediaRequest(new GetMediaForFragmentListRequestPrivate(KinesisVideoArchivedMediaRequest::GetMediaForFragmentListAction, this))
@@ -66,14 +63,9 @@ bool GetMediaForFragmentListRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetMediaForFragmentListResponse object.
+ * Returns a GetMediaForFragmentListResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetMediaForFragmentListResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  KinesisVideoArchivedMediaClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetMediaForFragmentListRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * GetMediaForFragmentListRequest::response(QNet
 }
 
 /*!
- * @internal
+ * \class QtAws::KinesisVideoArchivedMedia::GetMediaForFragmentListRequestPrivate
+ * \brief The GetMediaForFragmentListRequestPrivate class provides private implementation for GetMediaForFragmentListRequest.
+ * \internal
  *
- * @class  GetMediaForFragmentListRequestPrivate
- *
- * @brief  Private implementation for GetMediaForFragmentListRequest.
+ * \inmodule QtAwsKinesisVideoArchivedMedia
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetMediaForFragmentListRequestPrivate object.
- *
- * @param  action  KinesisVideoArchivedMedia action being performed.
- * @param  q       Pointer to this object's public GetMediaForFragmentListRequest instance.
+ * Constructs a GetMediaForFragmentListRequestPrivate object for KinesisVideoArchivedMedia \a action with,
+ * public implementation \a q.
  */
 GetMediaForFragmentListRequestPrivate::GetMediaForFragmentListRequestPrivate(
     const KinesisVideoArchivedMediaRequest::Action action, GetMediaForFragmentListRequest * const q)
@@ -104,15 +93,10 @@ GetMediaForFragmentListRequestPrivate::GetMediaForFragmentListRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetMediaForFragmentListRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetMediaForFragmentListRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetMediaForFragmentListRequest instance.
  */
 GetMediaForFragmentListRequestPrivate::GetMediaForFragmentListRequestPrivate(
     const GetMediaForFragmentListRequestPrivate &other, GetMediaForFragmentListRequest * const q)

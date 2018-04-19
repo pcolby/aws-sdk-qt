@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::ModifyFpgaImageAttributeRequest
- *
  * \brief The ModifyFpgaImageAttributeRequest class provides an interface for EC2 ModifyFpgaImageAttribute requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new ModifyFpgaImageAttributeRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ModifyFpgaImageAttributeRequest::ModifyFpgaImageAttributeRequest(const ModifyFpgaImageAttributeRequest &other)
     : EC2Request(new ModifyFpgaImageAttributeRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ ModifyFpgaImageAttributeRequest::ModifyFpgaImageAttributeRequest(const ModifyFpg
 }
 
 /*!
- * @brief  Constructs a new ModifyFpgaImageAttributeRequest object.
+ * Constructs a ModifyFpgaImageAttributeRequest object.
  */
 ModifyFpgaImageAttributeRequest::ModifyFpgaImageAttributeRequest()
     : EC2Request(new ModifyFpgaImageAttributeRequestPrivate(EC2Request::ModifyFpgaImageAttributeAction, this))
@@ -70,14 +67,9 @@ bool ModifyFpgaImageAttributeRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ModifyFpgaImageAttributeResponse object.
+ * Returns a ModifyFpgaImageAttributeResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ModifyFpgaImageAttributeResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ModifyFpgaImageAttributeRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * ModifyFpgaImageAttributeRequest::response(QNe
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::ModifyFpgaImageAttributeRequestPrivate
+ * \brief The ModifyFpgaImageAttributeRequestPrivate class provides private implementation for ModifyFpgaImageAttributeRequest.
+ * \internal
  *
- * @class  ModifyFpgaImageAttributeRequestPrivate
- *
- * @brief  Private implementation for ModifyFpgaImageAttributeRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ModifyFpgaImageAttributeRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public ModifyFpgaImageAttributeRequest instance.
+ * Constructs a ModifyFpgaImageAttributeRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 ModifyFpgaImageAttributeRequestPrivate::ModifyFpgaImageAttributeRequestPrivate(
     const EC2Request::Action action, ModifyFpgaImageAttributeRequest * const q)
@@ -108,15 +97,10 @@ ModifyFpgaImageAttributeRequestPrivate::ModifyFpgaImageAttributeRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ModifyFpgaImageAttributeRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ModifyFpgaImageAttributeRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ModifyFpgaImageAttributeRequest instance.
  */
 ModifyFpgaImageAttributeRequestPrivate::ModifyFpgaImageAttributeRequestPrivate(
     const ModifyFpgaImageAttributeRequestPrivate &other, ModifyFpgaImageAttributeRequest * const q)

@@ -27,19 +27,16 @@ namespace MachineLearning {
 
 /*!
  * \class QtAws::MachineLearning::UpdateDataSourceRequest
- *
  * \brief The UpdateDataSourceRequest class provides an interface for MachineLearning UpdateDataSource requests.
  *
- * \ingroup MachineLearning
+ * \inmodule QtAwsMachineLearning
  *
  *
  * \sa MachineLearningClient::updateDataSource
  */
 
 /*!
- * @brief  Constructs a new UpdateDataSourceRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateDataSourceRequest::UpdateDataSourceRequest(const UpdateDataSourceRequest &other)
     : MachineLearningRequest(new UpdateDataSourceRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ UpdateDataSourceRequest::UpdateDataSourceRequest(const UpdateDataSourceRequest &
 }
 
 /*!
- * @brief  Constructs a new UpdateDataSourceRequest object.
+ * Constructs a UpdateDataSourceRequest object.
  */
 UpdateDataSourceRequest::UpdateDataSourceRequest()
     : MachineLearningRequest(new UpdateDataSourceRequestPrivate(MachineLearningRequest::UpdateDataSourceAction, this))
@@ -66,14 +63,9 @@ bool UpdateDataSourceRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateDataSourceResponse object.
+ * Returns a UpdateDataSourceResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateDataSourceResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MachineLearningClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateDataSourceRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * UpdateDataSourceRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::MachineLearning::UpdateDataSourceRequestPrivate
+ * \brief The UpdateDataSourceRequestPrivate class provides private implementation for UpdateDataSourceRequest.
+ * \internal
  *
- * @class  UpdateDataSourceRequestPrivate
- *
- * @brief  Private implementation for UpdateDataSourceRequest.
+ * \inmodule QtAwsMachineLearning
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateDataSourceRequestPrivate object.
- *
- * @param  action  MachineLearning action being performed.
- * @param  q       Pointer to this object's public UpdateDataSourceRequest instance.
+ * Constructs a UpdateDataSourceRequestPrivate object for MachineLearning \a action with,
+ * public implementation \a q.
  */
 UpdateDataSourceRequestPrivate::UpdateDataSourceRequestPrivate(
     const MachineLearningRequest::Action action, UpdateDataSourceRequest * const q)
@@ -104,15 +93,10 @@ UpdateDataSourceRequestPrivate::UpdateDataSourceRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateDataSourceRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateDataSourceRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateDataSourceRequest instance.
  */
 UpdateDataSourceRequestPrivate::UpdateDataSourceRequestPrivate(
     const UpdateDataSourceRequestPrivate &other, UpdateDataSourceRequest * const q)

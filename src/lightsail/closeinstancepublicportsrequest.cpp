@@ -27,10 +27,9 @@ namespace Lightsail {
 
 /*!
  * \class QtAws::Lightsail::CloseInstancePublicPortsRequest
- *
  * \brief The CloseInstancePublicPortsRequest class provides an interface for Lightsail CloseInstancePublicPorts requests.
  *
- * \ingroup Lightsail
+ * \inmodule QtAwsLightsail
  *
  *  Amazon Lightsail is the easiest way to get started with AWS for developers who just need virtual private servers.
  *  Lightsail includes everything you need to launch your project quickly - a virtual machine, SSD-based storage, data
@@ -53,9 +52,7 @@ namespace Lightsail {
  */
 
 /*!
- * @brief  Constructs a new CloseInstancePublicPortsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CloseInstancePublicPortsRequest::CloseInstancePublicPortsRequest(const CloseInstancePublicPortsRequest &other)
     : LightsailRequest(new CloseInstancePublicPortsRequestPrivate(*other.d_func(), this))
@@ -64,7 +61,7 @@ CloseInstancePublicPortsRequest::CloseInstancePublicPortsRequest(const CloseInst
 }
 
 /*!
- * @brief  Constructs a new CloseInstancePublicPortsRequest object.
+ * Constructs a CloseInstancePublicPortsRequest object.
  */
 CloseInstancePublicPortsRequest::CloseInstancePublicPortsRequest()
     : LightsailRequest(new CloseInstancePublicPortsRequestPrivate(LightsailRequest::CloseInstancePublicPortsAction, this))
@@ -82,14 +79,9 @@ bool CloseInstancePublicPortsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CloseInstancePublicPortsResponse object.
+ * Returns a CloseInstancePublicPortsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CloseInstancePublicPortsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  LightsailClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CloseInstancePublicPortsRequest::response(QNetworkReply * const reply) const
 {
@@ -97,20 +89,17 @@ QtAws::Core::AwsAbstractResponse * CloseInstancePublicPortsRequest::response(QNe
 }
 
 /*!
- * @internal
+ * \class QtAws::Lightsail::CloseInstancePublicPortsRequestPrivate
+ * \brief The CloseInstancePublicPortsRequestPrivate class provides private implementation for CloseInstancePublicPortsRequest.
+ * \internal
  *
- * @class  CloseInstancePublicPortsRequestPrivate
- *
- * @brief  Private implementation for CloseInstancePublicPortsRequest.
+ * \inmodule QtAwsLightsail
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CloseInstancePublicPortsRequestPrivate object.
- *
- * @param  action  Lightsail action being performed.
- * @param  q       Pointer to this object's public CloseInstancePublicPortsRequest instance.
+ * Constructs a CloseInstancePublicPortsRequestPrivate object for Lightsail \a action with,
+ * public implementation \a q.
  */
 CloseInstancePublicPortsRequestPrivate::CloseInstancePublicPortsRequestPrivate(
     const LightsailRequest::Action action, CloseInstancePublicPortsRequest * const q)
@@ -120,15 +109,10 @@ CloseInstancePublicPortsRequestPrivate::CloseInstancePublicPortsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CloseInstancePublicPortsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CloseInstancePublicPortsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CloseInstancePublicPortsRequest instance.
  */
 CloseInstancePublicPortsRequestPrivate::CloseInstancePublicPortsRequestPrivate(
     const CloseInstancePublicPortsRequestPrivate &other, CloseInstancePublicPortsRequest * const q)

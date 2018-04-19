@@ -27,10 +27,9 @@ namespace IoTDataPlane {
 
 /*!
  * \class QtAws::IoTDataPlane::GetThingShadowRequest
- *
  * \brief The GetThingShadowRequest class provides an interface for IoTDataPlane GetThingShadow requests.
  *
- * \ingroup IoTDataPlane
+ * \inmodule QtAwsIoTDataPlane
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -43,9 +42,7 @@ namespace IoTDataPlane {
  */
 
 /*!
- * @brief  Constructs a new GetThingShadowRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetThingShadowRequest::GetThingShadowRequest(const GetThingShadowRequest &other)
     : IoTDataPlaneRequest(new GetThingShadowRequestPrivate(*other.d_func(), this))
@@ -54,7 +51,7 @@ GetThingShadowRequest::GetThingShadowRequest(const GetThingShadowRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetThingShadowRequest object.
+ * Constructs a GetThingShadowRequest object.
  */
 GetThingShadowRequest::GetThingShadowRequest()
     : IoTDataPlaneRequest(new GetThingShadowRequestPrivate(IoTDataPlaneRequest::GetThingShadowAction, this))
@@ -72,14 +69,9 @@ bool GetThingShadowRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetThingShadowResponse object.
+ * Returns a GetThingShadowResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetThingShadowResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IoTDataPlaneClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetThingShadowRequest::response(QNetworkReply * const reply) const
 {
@@ -87,20 +79,17 @@ QtAws::Core::AwsAbstractResponse * GetThingShadowRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::IoTDataPlane::GetThingShadowRequestPrivate
+ * \brief The GetThingShadowRequestPrivate class provides private implementation for GetThingShadowRequest.
+ * \internal
  *
- * @class  GetThingShadowRequestPrivate
- *
- * @brief  Private implementation for GetThingShadowRequest.
+ * \inmodule QtAwsIoTDataPlane
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetThingShadowRequestPrivate object.
- *
- * @param  action  IoTDataPlane action being performed.
- * @param  q       Pointer to this object's public GetThingShadowRequest instance.
+ * Constructs a GetThingShadowRequestPrivate object for IoTDataPlane \a action with,
+ * public implementation \a q.
  */
 GetThingShadowRequestPrivate::GetThingShadowRequestPrivate(
     const IoTDataPlaneRequest::Action action, GetThingShadowRequest * const q)
@@ -110,15 +99,10 @@ GetThingShadowRequestPrivate::GetThingShadowRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetThingShadowRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetThingShadowRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetThingShadowRequest instance.
  */
 GetThingShadowRequestPrivate::GetThingShadowRequestPrivate(
     const GetThingShadowRequestPrivate &other, GetThingShadowRequest * const q)

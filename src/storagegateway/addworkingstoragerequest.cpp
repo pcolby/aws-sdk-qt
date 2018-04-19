@@ -27,10 +27,9 @@ namespace StorageGateway {
 
 /*!
  * \class QtAws::StorageGateway::AddWorkingStorageRequest
- *
  * \brief The AddWorkingStorageRequest class provides an interface for StorageGateway AddWorkingStorage requests.
  *
- * \ingroup StorageGateway
+ * \inmodule QtAwsStorageGateway
  *
  *  <fullname>AWS Storage Gateway Service</fullname>
  * 
@@ -106,9 +105,7 @@ namespace StorageGateway {
  */
 
 /*!
- * @brief  Constructs a new AddWorkingStorageRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AddWorkingStorageRequest::AddWorkingStorageRequest(const AddWorkingStorageRequest &other)
     : StorageGatewayRequest(new AddWorkingStorageRequestPrivate(*other.d_func(), this))
@@ -117,7 +114,7 @@ AddWorkingStorageRequest::AddWorkingStorageRequest(const AddWorkingStorageReques
 }
 
 /*!
- * @brief  Constructs a new AddWorkingStorageRequest object.
+ * Constructs a AddWorkingStorageRequest object.
  */
 AddWorkingStorageRequest::AddWorkingStorageRequest()
     : StorageGatewayRequest(new AddWorkingStorageRequestPrivate(StorageGatewayRequest::AddWorkingStorageAction, this))
@@ -135,14 +132,9 @@ bool AddWorkingStorageRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AddWorkingStorageResponse object.
+ * Returns a AddWorkingStorageResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AddWorkingStorageResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  StorageGatewayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AddWorkingStorageRequest::response(QNetworkReply * const reply) const
 {
@@ -150,20 +142,17 @@ QtAws::Core::AwsAbstractResponse * AddWorkingStorageRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::StorageGateway::AddWorkingStorageRequestPrivate
+ * \brief The AddWorkingStorageRequestPrivate class provides private implementation for AddWorkingStorageRequest.
+ * \internal
  *
- * @class  AddWorkingStorageRequestPrivate
- *
- * @brief  Private implementation for AddWorkingStorageRequest.
+ * \inmodule QtAwsStorageGateway
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AddWorkingStorageRequestPrivate object.
- *
- * @param  action  StorageGateway action being performed.
- * @param  q       Pointer to this object's public AddWorkingStorageRequest instance.
+ * Constructs a AddWorkingStorageRequestPrivate object for StorageGateway \a action with,
+ * public implementation \a q.
  */
 AddWorkingStorageRequestPrivate::AddWorkingStorageRequestPrivate(
     const StorageGatewayRequest::Action action, AddWorkingStorageRequest * const q)
@@ -173,15 +162,10 @@ AddWorkingStorageRequestPrivate::AddWorkingStorageRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AddWorkingStorageRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AddWorkingStorageRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AddWorkingStorageRequest instance.
  */
 AddWorkingStorageRequestPrivate::AddWorkingStorageRequestPrivate(
     const AddWorkingStorageRequestPrivate &other, AddWorkingStorageRequest * const q)

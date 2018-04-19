@@ -27,10 +27,9 @@ namespace IoTDataPlane {
 
 /*!
  * \class QtAws::IoTDataPlane::DeleteThingShadowRequest
- *
  * \brief The DeleteThingShadowRequest class provides an interface for IoTDataPlane DeleteThingShadow requests.
  *
- * \ingroup IoTDataPlane
+ * \inmodule QtAwsIoTDataPlane
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -43,9 +42,7 @@ namespace IoTDataPlane {
  */
 
 /*!
- * @brief  Constructs a new DeleteThingShadowRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteThingShadowRequest::DeleteThingShadowRequest(const DeleteThingShadowRequest &other)
     : IoTDataPlaneRequest(new DeleteThingShadowRequestPrivate(*other.d_func(), this))
@@ -54,7 +51,7 @@ DeleteThingShadowRequest::DeleteThingShadowRequest(const DeleteThingShadowReques
 }
 
 /*!
- * @brief  Constructs a new DeleteThingShadowRequest object.
+ * Constructs a DeleteThingShadowRequest object.
  */
 DeleteThingShadowRequest::DeleteThingShadowRequest()
     : IoTDataPlaneRequest(new DeleteThingShadowRequestPrivate(IoTDataPlaneRequest::DeleteThingShadowAction, this))
@@ -72,14 +69,9 @@ bool DeleteThingShadowRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteThingShadowResponse object.
+ * Returns a DeleteThingShadowResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteThingShadowResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IoTDataPlaneClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteThingShadowRequest::response(QNetworkReply * const reply) const
 {
@@ -87,20 +79,17 @@ QtAws::Core::AwsAbstractResponse * DeleteThingShadowRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::IoTDataPlane::DeleteThingShadowRequestPrivate
+ * \brief The DeleteThingShadowRequestPrivate class provides private implementation for DeleteThingShadowRequest.
+ * \internal
  *
- * @class  DeleteThingShadowRequestPrivate
- *
- * @brief  Private implementation for DeleteThingShadowRequest.
+ * \inmodule QtAwsIoTDataPlane
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteThingShadowRequestPrivate object.
- *
- * @param  action  IoTDataPlane action being performed.
- * @param  q       Pointer to this object's public DeleteThingShadowRequest instance.
+ * Constructs a DeleteThingShadowRequestPrivate object for IoTDataPlane \a action with,
+ * public implementation \a q.
  */
 DeleteThingShadowRequestPrivate::DeleteThingShadowRequestPrivate(
     const IoTDataPlaneRequest::Action action, DeleteThingShadowRequest * const q)
@@ -110,15 +99,10 @@ DeleteThingShadowRequestPrivate::DeleteThingShadowRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteThingShadowRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteThingShadowRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteThingShadowRequest instance.
  */
 DeleteThingShadowRequestPrivate::DeleteThingShadowRequestPrivate(
     const DeleteThingShadowRequestPrivate &other, DeleteThingShadowRequest * const q)

@@ -27,10 +27,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::CreatePolicyVersionRequest
- *
  * \brief The CreatePolicyVersionRequest class provides an interface for IoT CreatePolicyVersion requests.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -48,9 +47,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new CreatePolicyVersionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreatePolicyVersionRequest::CreatePolicyVersionRequest(const CreatePolicyVersionRequest &other)
     : IoTRequest(new CreatePolicyVersionRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ CreatePolicyVersionRequest::CreatePolicyVersionRequest(const CreatePolicyVersion
 }
 
 /*!
- * @brief  Constructs a new CreatePolicyVersionRequest object.
+ * Constructs a CreatePolicyVersionRequest object.
  */
 CreatePolicyVersionRequest::CreatePolicyVersionRequest()
     : IoTRequest(new CreatePolicyVersionRequestPrivate(IoTRequest::CreatePolicyVersionAction, this))
@@ -77,14 +74,9 @@ bool CreatePolicyVersionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreatePolicyVersionResponse object.
+ * Returns a CreatePolicyVersionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreatePolicyVersionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IoTClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreatePolicyVersionRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * CreatePolicyVersionRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::IoT::CreatePolicyVersionRequestPrivate
+ * \brief The CreatePolicyVersionRequestPrivate class provides private implementation for CreatePolicyVersionRequest.
+ * \internal
  *
- * @class  CreatePolicyVersionRequestPrivate
- *
- * @brief  Private implementation for CreatePolicyVersionRequest.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreatePolicyVersionRequestPrivate object.
- *
- * @param  action  IoT action being performed.
- * @param  q       Pointer to this object's public CreatePolicyVersionRequest instance.
+ * Constructs a CreatePolicyVersionRequestPrivate object for IoT \a action with,
+ * public implementation \a q.
  */
 CreatePolicyVersionRequestPrivate::CreatePolicyVersionRequestPrivate(
     const IoTRequest::Action action, CreatePolicyVersionRequest * const q)
@@ -115,15 +104,10 @@ CreatePolicyVersionRequestPrivate::CreatePolicyVersionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreatePolicyVersionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreatePolicyVersionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreatePolicyVersionRequest instance.
  */
 CreatePolicyVersionRequestPrivate::CreatePolicyVersionRequestPrivate(
     const CreatePolicyVersionRequestPrivate &other, CreatePolicyVersionRequest * const q)

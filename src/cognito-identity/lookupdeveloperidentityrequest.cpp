@@ -27,10 +27,9 @@ namespace CognitoIdentity {
 
 /*!
  * \class QtAws::CognitoIdentity::LookupDeveloperIdentityRequest
- *
  * \brief The LookupDeveloperIdentityRequest class provides an interface for CognitoIdentity LookupDeveloperIdentity requests.
  *
- * \ingroup CognitoIdentity
+ * \inmodule QtAwsCognitoIdentity
  *
  *  <fullname>Amazon Cognito</fullname>
  * 
@@ -75,9 +74,7 @@ namespace CognitoIdentity {
  */
 
 /*!
- * @brief  Constructs a new LookupDeveloperIdentityRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 LookupDeveloperIdentityRequest::LookupDeveloperIdentityRequest(const LookupDeveloperIdentityRequest &other)
     : CognitoIdentityRequest(new LookupDeveloperIdentityRequestPrivate(*other.d_func(), this))
@@ -86,7 +83,7 @@ LookupDeveloperIdentityRequest::LookupDeveloperIdentityRequest(const LookupDevel
 }
 
 /*!
- * @brief  Constructs a new LookupDeveloperIdentityRequest object.
+ * Constructs a LookupDeveloperIdentityRequest object.
  */
 LookupDeveloperIdentityRequest::LookupDeveloperIdentityRequest()
     : CognitoIdentityRequest(new LookupDeveloperIdentityRequestPrivate(CognitoIdentityRequest::LookupDeveloperIdentityAction, this))
@@ -104,14 +101,9 @@ bool LookupDeveloperIdentityRequest::isValid() const
 
 
 /*!
- * @brief  Construct an LookupDeveloperIdentityResponse object.
+ * Returns a LookupDeveloperIdentityResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An LookupDeveloperIdentityResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CognitoIdentityClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * LookupDeveloperIdentityRequest::response(QNetworkReply * const reply) const
 {
@@ -119,20 +111,17 @@ QtAws::Core::AwsAbstractResponse * LookupDeveloperIdentityRequest::response(QNet
 }
 
 /*!
- * @internal
+ * \class QtAws::CognitoIdentity::LookupDeveloperIdentityRequestPrivate
+ * \brief The LookupDeveloperIdentityRequestPrivate class provides private implementation for LookupDeveloperIdentityRequest.
+ * \internal
  *
- * @class  LookupDeveloperIdentityRequestPrivate
- *
- * @brief  Private implementation for LookupDeveloperIdentityRequest.
+ * \inmodule QtAwsCognitoIdentity
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new LookupDeveloperIdentityRequestPrivate object.
- *
- * @param  action  CognitoIdentity action being performed.
- * @param  q       Pointer to this object's public LookupDeveloperIdentityRequest instance.
+ * Constructs a LookupDeveloperIdentityRequestPrivate object for CognitoIdentity \a action with,
+ * public implementation \a q.
  */
 LookupDeveloperIdentityRequestPrivate::LookupDeveloperIdentityRequestPrivate(
     const CognitoIdentityRequest::Action action, LookupDeveloperIdentityRequest * const q)
@@ -142,15 +131,10 @@ LookupDeveloperIdentityRequestPrivate::LookupDeveloperIdentityRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new LookupDeveloperIdentityRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the LookupDeveloperIdentityRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public LookupDeveloperIdentityRequest instance.
  */
 LookupDeveloperIdentityRequestPrivate::LookupDeveloperIdentityRequestPrivate(
     const LookupDeveloperIdentityRequestPrivate &other, LookupDeveloperIdentityRequest * const q)

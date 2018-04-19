@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DescribeReservedInstancesModificationsRequest
- *
  * \brief The DescribeReservedInstancesModificationsRequest class provides an interface for EC2 DescribeReservedInstancesModifications requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DescribeReservedInstancesModificationsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeReservedInstancesModificationsRequest::DescribeReservedInstancesModificationsRequest(const DescribeReservedInstancesModificationsRequest &other)
     : EC2Request(new DescribeReservedInstancesModificationsRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ DescribeReservedInstancesModificationsRequest::DescribeReservedInstancesModifica
 }
 
 /*!
- * @brief  Constructs a new DescribeReservedInstancesModificationsRequest object.
+ * Constructs a DescribeReservedInstancesModificationsRequest object.
  */
 DescribeReservedInstancesModificationsRequest::DescribeReservedInstancesModificationsRequest()
     : EC2Request(new DescribeReservedInstancesModificationsRequestPrivate(EC2Request::DescribeReservedInstancesModificationsAction, this))
@@ -70,14 +67,9 @@ bool DescribeReservedInstancesModificationsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeReservedInstancesModificationsResponse object.
+ * Returns a DescribeReservedInstancesModificationsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeReservedInstancesModificationsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeReservedInstancesModificationsRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * DescribeReservedInstancesModificationsRequest
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::DescribeReservedInstancesModificationsRequestPrivate
+ * \brief The DescribeReservedInstancesModificationsRequestPrivate class provides private implementation for DescribeReservedInstancesModificationsRequest.
+ * \internal
  *
- * @class  DescribeReservedInstancesModificationsRequestPrivate
- *
- * @brief  Private implementation for DescribeReservedInstancesModificationsRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeReservedInstancesModificationsRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public DescribeReservedInstancesModificationsRequest instance.
+ * Constructs a DescribeReservedInstancesModificationsRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 DescribeReservedInstancesModificationsRequestPrivate::DescribeReservedInstancesModificationsRequestPrivate(
     const EC2Request::Action action, DescribeReservedInstancesModificationsRequest * const q)
@@ -108,15 +97,10 @@ DescribeReservedInstancesModificationsRequestPrivate::DescribeReservedInstancesM
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeReservedInstancesModificationsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeReservedInstancesModificationsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeReservedInstancesModificationsRequest instance.
  */
 DescribeReservedInstancesModificationsRequestPrivate::DescribeReservedInstancesModificationsRequestPrivate(
     const DescribeReservedInstancesModificationsRequestPrivate &other, DescribeReservedInstancesModificationsRequest * const q)

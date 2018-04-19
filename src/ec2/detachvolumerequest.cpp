@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DetachVolumeRequest
- *
  * \brief The DetachVolumeRequest class provides an interface for EC2 DetachVolume requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DetachVolumeRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DetachVolumeRequest::DetachVolumeRequest(const DetachVolumeRequest &other)
     : EC2Request(new DetachVolumeRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ DetachVolumeRequest::DetachVolumeRequest(const DetachVolumeRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DetachVolumeRequest object.
+ * Constructs a DetachVolumeRequest object.
  */
 DetachVolumeRequest::DetachVolumeRequest()
     : EC2Request(new DetachVolumeRequestPrivate(EC2Request::DetachVolumeAction, this))
@@ -70,14 +67,9 @@ bool DetachVolumeRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DetachVolumeResponse object.
+ * Returns a DetachVolumeResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DetachVolumeResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DetachVolumeRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * DetachVolumeRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::DetachVolumeRequestPrivate
+ * \brief The DetachVolumeRequestPrivate class provides private implementation for DetachVolumeRequest.
+ * \internal
  *
- * @class  DetachVolumeRequestPrivate
- *
- * @brief  Private implementation for DetachVolumeRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DetachVolumeRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public DetachVolumeRequest instance.
+ * Constructs a DetachVolumeRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 DetachVolumeRequestPrivate::DetachVolumeRequestPrivate(
     const EC2Request::Action action, DetachVolumeRequest * const q)
@@ -108,15 +97,10 @@ DetachVolumeRequestPrivate::DetachVolumeRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DetachVolumeRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DetachVolumeRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DetachVolumeRequest instance.
  */
 DetachVolumeRequestPrivate::DetachVolumeRequestPrivate(
     const DetachVolumeRequestPrivate &other, DetachVolumeRequest * const q)

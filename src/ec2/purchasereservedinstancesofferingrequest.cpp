@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::PurchaseReservedInstancesOfferingRequest
- *
  * \brief The PurchaseReservedInstancesOfferingRequest class provides an interface for EC2 PurchaseReservedInstancesOffering requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new PurchaseReservedInstancesOfferingRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 PurchaseReservedInstancesOfferingRequest::PurchaseReservedInstancesOfferingRequest(const PurchaseReservedInstancesOfferingRequest &other)
     : EC2Request(new PurchaseReservedInstancesOfferingRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ PurchaseReservedInstancesOfferingRequest::PurchaseReservedInstancesOfferingReque
 }
 
 /*!
- * @brief  Constructs a new PurchaseReservedInstancesOfferingRequest object.
+ * Constructs a PurchaseReservedInstancesOfferingRequest object.
  */
 PurchaseReservedInstancesOfferingRequest::PurchaseReservedInstancesOfferingRequest()
     : EC2Request(new PurchaseReservedInstancesOfferingRequestPrivate(EC2Request::PurchaseReservedInstancesOfferingAction, this))
@@ -70,14 +67,9 @@ bool PurchaseReservedInstancesOfferingRequest::isValid() const
 
 
 /*!
- * @brief  Construct an PurchaseReservedInstancesOfferingResponse object.
+ * Returns a PurchaseReservedInstancesOfferingResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An PurchaseReservedInstancesOfferingResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * PurchaseReservedInstancesOfferingRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * PurchaseReservedInstancesOfferingRequest::res
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::PurchaseReservedInstancesOfferingRequestPrivate
+ * \brief The PurchaseReservedInstancesOfferingRequestPrivate class provides private implementation for PurchaseReservedInstancesOfferingRequest.
+ * \internal
  *
- * @class  PurchaseReservedInstancesOfferingRequestPrivate
- *
- * @brief  Private implementation for PurchaseReservedInstancesOfferingRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new PurchaseReservedInstancesOfferingRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public PurchaseReservedInstancesOfferingRequest instance.
+ * Constructs a PurchaseReservedInstancesOfferingRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 PurchaseReservedInstancesOfferingRequestPrivate::PurchaseReservedInstancesOfferingRequestPrivate(
     const EC2Request::Action action, PurchaseReservedInstancesOfferingRequest * const q)
@@ -108,15 +97,10 @@ PurchaseReservedInstancesOfferingRequestPrivate::PurchaseReservedInstancesOfferi
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PurchaseReservedInstancesOfferingRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the PurchaseReservedInstancesOfferingRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public PurchaseReservedInstancesOfferingRequest instance.
  */
 PurchaseReservedInstancesOfferingRequestPrivate::PurchaseReservedInstancesOfferingRequestPrivate(
     const PurchaseReservedInstancesOfferingRequestPrivate &other, PurchaseReservedInstancesOfferingRequest * const q)

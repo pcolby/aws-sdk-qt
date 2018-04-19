@@ -27,10 +27,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::PutComplianceItemsRequest
- *
  * \brief The PutComplianceItemsRequest class provides an interface for SSM PutComplianceItems requests.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -61,9 +60,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new PutComplianceItemsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 PutComplianceItemsRequest::PutComplianceItemsRequest(const PutComplianceItemsRequest &other)
     : SSMRequest(new PutComplianceItemsRequestPrivate(*other.d_func(), this))
@@ -72,7 +69,7 @@ PutComplianceItemsRequest::PutComplianceItemsRequest(const PutComplianceItemsReq
 }
 
 /*!
- * @brief  Constructs a new PutComplianceItemsRequest object.
+ * Constructs a PutComplianceItemsRequest object.
  */
 PutComplianceItemsRequest::PutComplianceItemsRequest()
     : SSMRequest(new PutComplianceItemsRequestPrivate(SSMRequest::PutComplianceItemsAction, this))
@@ -90,14 +87,9 @@ bool PutComplianceItemsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an PutComplianceItemsResponse object.
+ * Returns a PutComplianceItemsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An PutComplianceItemsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SSMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * PutComplianceItemsRequest::response(QNetworkReply * const reply) const
 {
@@ -105,20 +97,17 @@ QtAws::Core::AwsAbstractResponse * PutComplianceItemsRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::SSM::PutComplianceItemsRequestPrivate
+ * \brief The PutComplianceItemsRequestPrivate class provides private implementation for PutComplianceItemsRequest.
+ * \internal
  *
- * @class  PutComplianceItemsRequestPrivate
- *
- * @brief  Private implementation for PutComplianceItemsRequest.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new PutComplianceItemsRequestPrivate object.
- *
- * @param  action  SSM action being performed.
- * @param  q       Pointer to this object's public PutComplianceItemsRequest instance.
+ * Constructs a PutComplianceItemsRequestPrivate object for SSM \a action with,
+ * public implementation \a q.
  */
 PutComplianceItemsRequestPrivate::PutComplianceItemsRequestPrivate(
     const SSMRequest::Action action, PutComplianceItemsRequest * const q)
@@ -128,15 +117,10 @@ PutComplianceItemsRequestPrivate::PutComplianceItemsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutComplianceItemsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the PutComplianceItemsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public PutComplianceItemsRequest instance.
  */
 PutComplianceItemsRequestPrivate::PutComplianceItemsRequestPrivate(
     const PutComplianceItemsRequestPrivate &other, PutComplianceItemsRequest * const q)

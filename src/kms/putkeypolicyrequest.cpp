@@ -27,10 +27,9 @@ namespace KMS {
 
 /*!
  * \class QtAws::KMS::PutKeyPolicyRequest
- *
  * \brief The PutKeyPolicyRequest class provides an interface for KMS PutKeyPolicy requests.
  *
- * \ingroup KMS
+ * \inmodule QtAwsKMS
  *
  *  <fullname>AWS Key Management Service</fullname>
  * 
@@ -136,9 +135,7 @@ namespace KMS {
  */
 
 /*!
- * @brief  Constructs a new PutKeyPolicyRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 PutKeyPolicyRequest::PutKeyPolicyRequest(const PutKeyPolicyRequest &other)
     : KMSRequest(new PutKeyPolicyRequestPrivate(*other.d_func(), this))
@@ -147,7 +144,7 @@ PutKeyPolicyRequest::PutKeyPolicyRequest(const PutKeyPolicyRequest &other)
 }
 
 /*!
- * @brief  Constructs a new PutKeyPolicyRequest object.
+ * Constructs a PutKeyPolicyRequest object.
  */
 PutKeyPolicyRequest::PutKeyPolicyRequest()
     : KMSRequest(new PutKeyPolicyRequestPrivate(KMSRequest::PutKeyPolicyAction, this))
@@ -165,14 +162,9 @@ bool PutKeyPolicyRequest::isValid() const
 
 
 /*!
- * @brief  Construct an PutKeyPolicyResponse object.
+ * Returns a PutKeyPolicyResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An PutKeyPolicyResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  KMSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * PutKeyPolicyRequest::response(QNetworkReply * const reply) const
 {
@@ -180,20 +172,17 @@ QtAws::Core::AwsAbstractResponse * PutKeyPolicyRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::KMS::PutKeyPolicyRequestPrivate
+ * \brief The PutKeyPolicyRequestPrivate class provides private implementation for PutKeyPolicyRequest.
+ * \internal
  *
- * @class  PutKeyPolicyRequestPrivate
- *
- * @brief  Private implementation for PutKeyPolicyRequest.
+ * \inmodule QtAwsKMS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new PutKeyPolicyRequestPrivate object.
- *
- * @param  action  KMS action being performed.
- * @param  q       Pointer to this object's public PutKeyPolicyRequest instance.
+ * Constructs a PutKeyPolicyRequestPrivate object for KMS \a action with,
+ * public implementation \a q.
  */
 PutKeyPolicyRequestPrivate::PutKeyPolicyRequestPrivate(
     const KMSRequest::Action action, PutKeyPolicyRequest * const q)
@@ -203,15 +192,10 @@ PutKeyPolicyRequestPrivate::PutKeyPolicyRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutKeyPolicyRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the PutKeyPolicyRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public PutKeyPolicyRequest instance.
  */
 PutKeyPolicyRequestPrivate::PutKeyPolicyRequestPrivate(
     const PutKeyPolicyRequestPrivate &other, PutKeyPolicyRequest * const q)

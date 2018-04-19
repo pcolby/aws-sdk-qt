@@ -27,10 +27,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::DescribeThingRegistrationTaskRequest
- *
  * \brief The DescribeThingRegistrationTaskRequest class provides an interface for IoT DescribeThingRegistrationTask requests.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -48,9 +47,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new DescribeThingRegistrationTaskRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeThingRegistrationTaskRequest::DescribeThingRegistrationTaskRequest(const DescribeThingRegistrationTaskRequest &other)
     : IoTRequest(new DescribeThingRegistrationTaskRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ DescribeThingRegistrationTaskRequest::DescribeThingRegistrationTaskRequest(const
 }
 
 /*!
- * @brief  Constructs a new DescribeThingRegistrationTaskRequest object.
+ * Constructs a DescribeThingRegistrationTaskRequest object.
  */
 DescribeThingRegistrationTaskRequest::DescribeThingRegistrationTaskRequest()
     : IoTRequest(new DescribeThingRegistrationTaskRequestPrivate(IoTRequest::DescribeThingRegistrationTaskAction, this))
@@ -77,14 +74,9 @@ bool DescribeThingRegistrationTaskRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeThingRegistrationTaskResponse object.
+ * Returns a DescribeThingRegistrationTaskResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeThingRegistrationTaskResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IoTClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeThingRegistrationTaskRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * DescribeThingRegistrationTaskRequest::respons
 }
 
 /*!
- * @internal
+ * \class QtAws::IoT::DescribeThingRegistrationTaskRequestPrivate
+ * \brief The DescribeThingRegistrationTaskRequestPrivate class provides private implementation for DescribeThingRegistrationTaskRequest.
+ * \internal
  *
- * @class  DescribeThingRegistrationTaskRequestPrivate
- *
- * @brief  Private implementation for DescribeThingRegistrationTaskRequest.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeThingRegistrationTaskRequestPrivate object.
- *
- * @param  action  IoT action being performed.
- * @param  q       Pointer to this object's public DescribeThingRegistrationTaskRequest instance.
+ * Constructs a DescribeThingRegistrationTaskRequestPrivate object for IoT \a action with,
+ * public implementation \a q.
  */
 DescribeThingRegistrationTaskRequestPrivate::DescribeThingRegistrationTaskRequestPrivate(
     const IoTRequest::Action action, DescribeThingRegistrationTaskRequest * const q)
@@ -115,15 +104,10 @@ DescribeThingRegistrationTaskRequestPrivate::DescribeThingRegistrationTaskReques
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeThingRegistrationTaskRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeThingRegistrationTaskRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeThingRegistrationTaskRequest instance.
  */
 DescribeThingRegistrationTaskRequestPrivate::DescribeThingRegistrationTaskRequestPrivate(
     const DescribeThingRegistrationTaskRequestPrivate &other, DescribeThingRegistrationTaskRequest * const q)

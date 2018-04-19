@@ -27,10 +27,9 @@ namespace Inspector {
 
 /*!
  * \class QtAws::Inspector::ListAssessmentRunsRequest
- *
  * \brief The ListAssessmentRunsRequest class provides an interface for Inspector ListAssessmentRuns requests.
  *
- * \ingroup Inspector
+ * \inmodule QtAwsInspector
  *
  *  <fullname>Amazon Inspector</fullname>
  * 
@@ -42,9 +41,7 @@ namespace Inspector {
  */
 
 /*!
- * @brief  Constructs a new ListAssessmentRunsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListAssessmentRunsRequest::ListAssessmentRunsRequest(const ListAssessmentRunsRequest &other)
     : InspectorRequest(new ListAssessmentRunsRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ ListAssessmentRunsRequest::ListAssessmentRunsRequest(const ListAssessmentRunsReq
 }
 
 /*!
- * @brief  Constructs a new ListAssessmentRunsRequest object.
+ * Constructs a ListAssessmentRunsRequest object.
  */
 ListAssessmentRunsRequest::ListAssessmentRunsRequest()
     : InspectorRequest(new ListAssessmentRunsRequestPrivate(InspectorRequest::ListAssessmentRunsAction, this))
@@ -71,14 +68,9 @@ bool ListAssessmentRunsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListAssessmentRunsResponse object.
+ * Returns a ListAssessmentRunsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListAssessmentRunsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  InspectorClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListAssessmentRunsRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * ListAssessmentRunsRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::Inspector::ListAssessmentRunsRequestPrivate
+ * \brief The ListAssessmentRunsRequestPrivate class provides private implementation for ListAssessmentRunsRequest.
+ * \internal
  *
- * @class  ListAssessmentRunsRequestPrivate
- *
- * @brief  Private implementation for ListAssessmentRunsRequest.
+ * \inmodule QtAwsInspector
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListAssessmentRunsRequestPrivate object.
- *
- * @param  action  Inspector action being performed.
- * @param  q       Pointer to this object's public ListAssessmentRunsRequest instance.
+ * Constructs a ListAssessmentRunsRequestPrivate object for Inspector \a action with,
+ * public implementation \a q.
  */
 ListAssessmentRunsRequestPrivate::ListAssessmentRunsRequestPrivate(
     const InspectorRequest::Action action, ListAssessmentRunsRequest * const q)
@@ -109,15 +98,10 @@ ListAssessmentRunsRequestPrivate::ListAssessmentRunsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListAssessmentRunsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListAssessmentRunsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListAssessmentRunsRequest instance.
  */
 ListAssessmentRunsRequestPrivate::ListAssessmentRunsRequestPrivate(
     const ListAssessmentRunsRequestPrivate &other, ListAssessmentRunsRequest * const q)

@@ -27,10 +27,9 @@ namespace Redshift {
 
 /*!
  * \class QtAws::Redshift::CreateSnapshotCopyGrantRequest
- *
  * \brief The CreateSnapshotCopyGrantRequest class provides an interface for Redshift CreateSnapshotCopyGrant requests.
  *
- * \ingroup Redshift
+ * \inmodule QtAwsRedshift
  *
  *  <fullname>Amazon Redshift</fullname>
  * 
@@ -67,9 +66,7 @@ namespace Redshift {
  */
 
 /*!
- * @brief  Constructs a new CreateSnapshotCopyGrantRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateSnapshotCopyGrantRequest::CreateSnapshotCopyGrantRequest(const CreateSnapshotCopyGrantRequest &other)
     : RedshiftRequest(new CreateSnapshotCopyGrantRequestPrivate(*other.d_func(), this))
@@ -78,7 +75,7 @@ CreateSnapshotCopyGrantRequest::CreateSnapshotCopyGrantRequest(const CreateSnaps
 }
 
 /*!
- * @brief  Constructs a new CreateSnapshotCopyGrantRequest object.
+ * Constructs a CreateSnapshotCopyGrantRequest object.
  */
 CreateSnapshotCopyGrantRequest::CreateSnapshotCopyGrantRequest()
     : RedshiftRequest(new CreateSnapshotCopyGrantRequestPrivate(RedshiftRequest::CreateSnapshotCopyGrantAction, this))
@@ -96,14 +93,9 @@ bool CreateSnapshotCopyGrantRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateSnapshotCopyGrantResponse object.
+ * Returns a CreateSnapshotCopyGrantResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateSnapshotCopyGrantResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RedshiftClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateSnapshotCopyGrantRequest::response(QNetworkReply * const reply) const
 {
@@ -111,20 +103,17 @@ QtAws::Core::AwsAbstractResponse * CreateSnapshotCopyGrantRequest::response(QNet
 }
 
 /*!
- * @internal
+ * \class QtAws::Redshift::CreateSnapshotCopyGrantRequestPrivate
+ * \brief The CreateSnapshotCopyGrantRequestPrivate class provides private implementation for CreateSnapshotCopyGrantRequest.
+ * \internal
  *
- * @class  CreateSnapshotCopyGrantRequestPrivate
- *
- * @brief  Private implementation for CreateSnapshotCopyGrantRequest.
+ * \inmodule QtAwsRedshift
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateSnapshotCopyGrantRequestPrivate object.
- *
- * @param  action  Redshift action being performed.
- * @param  q       Pointer to this object's public CreateSnapshotCopyGrantRequest instance.
+ * Constructs a CreateSnapshotCopyGrantRequestPrivate object for Redshift \a action with,
+ * public implementation \a q.
  */
 CreateSnapshotCopyGrantRequestPrivate::CreateSnapshotCopyGrantRequestPrivate(
     const RedshiftRequest::Action action, CreateSnapshotCopyGrantRequest * const q)
@@ -134,15 +123,10 @@ CreateSnapshotCopyGrantRequestPrivate::CreateSnapshotCopyGrantRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateSnapshotCopyGrantRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateSnapshotCopyGrantRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateSnapshotCopyGrantRequest instance.
  */
 CreateSnapshotCopyGrantRequestPrivate::CreateSnapshotCopyGrantRequestPrivate(
     const CreateSnapshotCopyGrantRequestPrivate &other, CreateSnapshotCopyGrantRequest * const q)

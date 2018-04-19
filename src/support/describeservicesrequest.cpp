@@ -27,10 +27,9 @@ namespace Support {
 
 /*!
  * \class QtAws::Support::DescribeServicesRequest
- *
  * \brief The DescribeServicesRequest class provides an interface for Support DescribeServices requests.
  *
- * \ingroup Support
+ * \inmodule QtAwsSupport
  *
  *  <fullname>AWS Support</fullname>
  * 
@@ -105,9 +104,7 @@ namespace Support {
  */
 
 /*!
- * @brief  Constructs a new DescribeServicesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeServicesRequest::DescribeServicesRequest(const DescribeServicesRequest &other)
     : SupportRequest(new DescribeServicesRequestPrivate(*other.d_func(), this))
@@ -116,7 +113,7 @@ DescribeServicesRequest::DescribeServicesRequest(const DescribeServicesRequest &
 }
 
 /*!
- * @brief  Constructs a new DescribeServicesRequest object.
+ * Constructs a DescribeServicesRequest object.
  */
 DescribeServicesRequest::DescribeServicesRequest()
     : SupportRequest(new DescribeServicesRequestPrivate(SupportRequest::DescribeServicesAction, this))
@@ -134,14 +131,9 @@ bool DescribeServicesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeServicesResponse object.
+ * Returns a DescribeServicesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeServicesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SupportClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeServicesRequest::response(QNetworkReply * const reply) const
 {
@@ -149,20 +141,17 @@ QtAws::Core::AwsAbstractResponse * DescribeServicesRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::Support::DescribeServicesRequestPrivate
+ * \brief The DescribeServicesRequestPrivate class provides private implementation for DescribeServicesRequest.
+ * \internal
  *
- * @class  DescribeServicesRequestPrivate
- *
- * @brief  Private implementation for DescribeServicesRequest.
+ * \inmodule QtAwsSupport
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeServicesRequestPrivate object.
- *
- * @param  action  Support action being performed.
- * @param  q       Pointer to this object's public DescribeServicesRequest instance.
+ * Constructs a DescribeServicesRequestPrivate object for Support \a action with,
+ * public implementation \a q.
  */
 DescribeServicesRequestPrivate::DescribeServicesRequestPrivate(
     const SupportRequest::Action action, DescribeServicesRequest * const q)
@@ -172,15 +161,10 @@ DescribeServicesRequestPrivate::DescribeServicesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeServicesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeServicesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeServicesRequest instance.
  */
 DescribeServicesRequestPrivate::DescribeServicesRequestPrivate(
     const DescribeServicesRequestPrivate &other, DescribeServicesRequest * const q)

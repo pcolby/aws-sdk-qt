@@ -32,6 +32,9 @@
 /*!
  * \namespace QtAws::KinesisVideoArchivedMedia
  * \brief The QtAws::KinesisVideoArchivedMedia contains stuff...
+ *
+ * \inmodule QtAwsKinesisVideoArchivedMedia
+ *
  * @todo Move this to a separate template file.
  */
 
@@ -81,7 +84,7 @@ KinesisVideoArchivedMediaClient::KinesisVideoArchivedMediaClient(
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * \a  AwsEndpoint::getEndpoint()
+ * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
 KinesisVideoArchivedMediaClient::KinesisVideoArchivedMediaClient(
     const QUrl &endpoint,

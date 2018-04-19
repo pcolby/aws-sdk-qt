@@ -27,10 +27,9 @@ namespace CloudFormation {
 
 /*!
  * \class QtAws::CloudFormation::DeleteChangeSetRequest
- *
  * \brief The DeleteChangeSetRequest class provides an interface for CloudFormation DeleteChangeSet requests.
  *
- * \ingroup CloudFormation
+ * \inmodule QtAwsCloudFormation
  *
  *  <fullname>AWS CloudFormation</fullname>
  * 
@@ -59,9 +58,7 @@ namespace CloudFormation {
  */
 
 /*!
- * @brief  Constructs a new DeleteChangeSetRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteChangeSetRequest::DeleteChangeSetRequest(const DeleteChangeSetRequest &other)
     : CloudFormationRequest(new DeleteChangeSetRequestPrivate(*other.d_func(), this))
@@ -70,7 +67,7 @@ DeleteChangeSetRequest::DeleteChangeSetRequest(const DeleteChangeSetRequest &oth
 }
 
 /*!
- * @brief  Constructs a new DeleteChangeSetRequest object.
+ * Constructs a DeleteChangeSetRequest object.
  */
 DeleteChangeSetRequest::DeleteChangeSetRequest()
     : CloudFormationRequest(new DeleteChangeSetRequestPrivate(CloudFormationRequest::DeleteChangeSetAction, this))
@@ -88,14 +85,9 @@ bool DeleteChangeSetRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteChangeSetResponse object.
+ * Returns a DeleteChangeSetResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteChangeSetResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudFormationClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteChangeSetRequest::response(QNetworkReply * const reply) const
 {
@@ -103,20 +95,17 @@ QtAws::Core::AwsAbstractResponse * DeleteChangeSetRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudFormation::DeleteChangeSetRequestPrivate
+ * \brief The DeleteChangeSetRequestPrivate class provides private implementation for DeleteChangeSetRequest.
+ * \internal
  *
- * @class  DeleteChangeSetRequestPrivate
- *
- * @brief  Private implementation for DeleteChangeSetRequest.
+ * \inmodule QtAwsCloudFormation
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteChangeSetRequestPrivate object.
- *
- * @param  action  CloudFormation action being performed.
- * @param  q       Pointer to this object's public DeleteChangeSetRequest instance.
+ * Constructs a DeleteChangeSetRequestPrivate object for CloudFormation \a action with,
+ * public implementation \a q.
  */
 DeleteChangeSetRequestPrivate::DeleteChangeSetRequestPrivate(
     const CloudFormationRequest::Action action, DeleteChangeSetRequest * const q)
@@ -126,15 +115,10 @@ DeleteChangeSetRequestPrivate::DeleteChangeSetRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteChangeSetRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteChangeSetRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteChangeSetRequest instance.
  */
 DeleteChangeSetRequestPrivate::DeleteChangeSetRequestPrivate(
     const DeleteChangeSetRequestPrivate &other, DeleteChangeSetRequest * const q)

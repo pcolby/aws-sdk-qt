@@ -27,10 +27,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::DeleteLoginProfileRequest
- *
  * \brief The DeleteLoginProfileRequest class provides an interface for IAM DeleteLoginProfile requests.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -102,9 +101,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new DeleteLoginProfileRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteLoginProfileRequest::DeleteLoginProfileRequest(const DeleteLoginProfileRequest &other)
     : IAMRequest(new DeleteLoginProfileRequestPrivate(*other.d_func(), this))
@@ -113,7 +110,7 @@ DeleteLoginProfileRequest::DeleteLoginProfileRequest(const DeleteLoginProfileReq
 }
 
 /*!
- * @brief  Constructs a new DeleteLoginProfileRequest object.
+ * Constructs a DeleteLoginProfileRequest object.
  */
 DeleteLoginProfileRequest::DeleteLoginProfileRequest()
     : IAMRequest(new DeleteLoginProfileRequestPrivate(IAMRequest::DeleteLoginProfileAction, this))
@@ -131,14 +128,9 @@ bool DeleteLoginProfileRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteLoginProfileResponse object.
+ * Returns a DeleteLoginProfileResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteLoginProfileResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IAMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteLoginProfileRequest::response(QNetworkReply * const reply) const
 {
@@ -146,20 +138,17 @@ QtAws::Core::AwsAbstractResponse * DeleteLoginProfileRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::IAM::DeleteLoginProfileRequestPrivate
+ * \brief The DeleteLoginProfileRequestPrivate class provides private implementation for DeleteLoginProfileRequest.
+ * \internal
  *
- * @class  DeleteLoginProfileRequestPrivate
- *
- * @brief  Private implementation for DeleteLoginProfileRequest.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteLoginProfileRequestPrivate object.
- *
- * @param  action  IAM action being performed.
- * @param  q       Pointer to this object's public DeleteLoginProfileRequest instance.
+ * Constructs a DeleteLoginProfileRequestPrivate object for IAM \a action with,
+ * public implementation \a q.
  */
 DeleteLoginProfileRequestPrivate::DeleteLoginProfileRequestPrivate(
     const IAMRequest::Action action, DeleteLoginProfileRequest * const q)
@@ -169,15 +158,10 @@ DeleteLoginProfileRequestPrivate::DeleteLoginProfileRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteLoginProfileRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteLoginProfileRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteLoginProfileRequest instance.
  */
 DeleteLoginProfileRequestPrivate::DeleteLoginProfileRequestPrivate(
     const DeleteLoginProfileRequestPrivate &other, DeleteLoginProfileRequest * const q)

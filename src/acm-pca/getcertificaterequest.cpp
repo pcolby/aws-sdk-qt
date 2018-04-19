@@ -27,10 +27,9 @@ namespace ACMPCA {
 
 /*!
  * \class QtAws::ACMPCA::GetCertificateRequest
- *
  * \brief The GetCertificateRequest class provides an interface for ACMPCA GetCertificate requests.
  *
- * \ingroup ACMPCA
+ * \inmodule QtAwsACMPCA
  *
  *  You can use the ACM PCA API to create a private certificate authority (CA). You must first call the
  *  <a>CreateCertificateAuthority</a> function. If successful, the function returns an Amazon Resource Name (ARN) for your
@@ -67,9 +66,7 @@ namespace ACMPCA {
  */
 
 /*!
- * @brief  Constructs a new GetCertificateRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetCertificateRequest::GetCertificateRequest(const GetCertificateRequest &other)
     : ACMPCARequest(new GetCertificateRequestPrivate(*other.d_func(), this))
@@ -78,7 +75,7 @@ GetCertificateRequest::GetCertificateRequest(const GetCertificateRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetCertificateRequest object.
+ * Constructs a GetCertificateRequest object.
  */
 GetCertificateRequest::GetCertificateRequest()
     : ACMPCARequest(new GetCertificateRequestPrivate(ACMPCARequest::GetCertificateAction, this))
@@ -96,14 +93,9 @@ bool GetCertificateRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetCertificateResponse object.
+ * Returns a GetCertificateResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetCertificateResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ACMPCAClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetCertificateRequest::response(QNetworkReply * const reply) const
 {
@@ -111,20 +103,17 @@ QtAws::Core::AwsAbstractResponse * GetCertificateRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::ACMPCA::GetCertificateRequestPrivate
+ * \brief The GetCertificateRequestPrivate class provides private implementation for GetCertificateRequest.
+ * \internal
  *
- * @class  GetCertificateRequestPrivate
- *
- * @brief  Private implementation for GetCertificateRequest.
+ * \inmodule QtAwsACMPCA
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetCertificateRequestPrivate object.
- *
- * @param  action  ACMPCA action being performed.
- * @param  q       Pointer to this object's public GetCertificateRequest instance.
+ * Constructs a GetCertificateRequestPrivate object for ACMPCA \a action with,
+ * public implementation \a q.
  */
 GetCertificateRequestPrivate::GetCertificateRequestPrivate(
     const ACMPCARequest::Action action, GetCertificateRequest * const q)
@@ -134,15 +123,10 @@ GetCertificateRequestPrivate::GetCertificateRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetCertificateRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetCertificateRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetCertificateRequest instance.
  */
 GetCertificateRequestPrivate::GetCertificateRequestPrivate(
     const GetCertificateRequestPrivate &other, GetCertificateRequest * const q)

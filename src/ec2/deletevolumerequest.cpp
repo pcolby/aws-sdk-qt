@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DeleteVolumeRequest
- *
  * \brief The DeleteVolumeRequest class provides an interface for EC2 DeleteVolume requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DeleteVolumeRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteVolumeRequest::DeleteVolumeRequest(const DeleteVolumeRequest &other)
     : EC2Request(new DeleteVolumeRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ DeleteVolumeRequest::DeleteVolumeRequest(const DeleteVolumeRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DeleteVolumeRequest object.
+ * Constructs a DeleteVolumeRequest object.
  */
 DeleteVolumeRequest::DeleteVolumeRequest()
     : EC2Request(new DeleteVolumeRequestPrivate(EC2Request::DeleteVolumeAction, this))
@@ -70,14 +67,9 @@ bool DeleteVolumeRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteVolumeResponse object.
+ * Returns a DeleteVolumeResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteVolumeResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteVolumeRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * DeleteVolumeRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::DeleteVolumeRequestPrivate
+ * \brief The DeleteVolumeRequestPrivate class provides private implementation for DeleteVolumeRequest.
+ * \internal
  *
- * @class  DeleteVolumeRequestPrivate
- *
- * @brief  Private implementation for DeleteVolumeRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteVolumeRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public DeleteVolumeRequest instance.
+ * Constructs a DeleteVolumeRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 DeleteVolumeRequestPrivate::DeleteVolumeRequestPrivate(
     const EC2Request::Action action, DeleteVolumeRequest * const q)
@@ -108,15 +97,10 @@ DeleteVolumeRequestPrivate::DeleteVolumeRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteVolumeRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteVolumeRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteVolumeRequest instance.
  */
 DeleteVolumeRequestPrivate::DeleteVolumeRequestPrivate(
     const DeleteVolumeRequestPrivate &other, DeleteVolumeRequest * const q)

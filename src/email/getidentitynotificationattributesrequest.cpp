@@ -27,10 +27,9 @@ namespace SES {
 
 /*!
  * \class QtAws::SES::GetIdentityNotificationAttributesRequest
- *
  * \brief The GetIdentityNotificationAttributesRequest class provides an interface for SES GetIdentityNotificationAttributes requests.
  *
- * \ingroup SES
+ * \inmodule QtAwsSES
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -48,9 +47,7 @@ namespace SES {
  */
 
 /*!
- * @brief  Constructs a new GetIdentityNotificationAttributesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetIdentityNotificationAttributesRequest::GetIdentityNotificationAttributesRequest(const GetIdentityNotificationAttributesRequest &other)
     : SESRequest(new GetIdentityNotificationAttributesRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ GetIdentityNotificationAttributesRequest::GetIdentityNotificationAttributesReque
 }
 
 /*!
- * @brief  Constructs a new GetIdentityNotificationAttributesRequest object.
+ * Constructs a GetIdentityNotificationAttributesRequest object.
  */
 GetIdentityNotificationAttributesRequest::GetIdentityNotificationAttributesRequest()
     : SESRequest(new GetIdentityNotificationAttributesRequestPrivate(SESRequest::GetIdentityNotificationAttributesAction, this))
@@ -77,14 +74,9 @@ bool GetIdentityNotificationAttributesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetIdentityNotificationAttributesResponse object.
+ * Returns a GetIdentityNotificationAttributesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetIdentityNotificationAttributesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SESClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetIdentityNotificationAttributesRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * GetIdentityNotificationAttributesRequest::res
 }
 
 /*!
- * @internal
+ * \class QtAws::SES::GetIdentityNotificationAttributesRequestPrivate
+ * \brief The GetIdentityNotificationAttributesRequestPrivate class provides private implementation for GetIdentityNotificationAttributesRequest.
+ * \internal
  *
- * @class  GetIdentityNotificationAttributesRequestPrivate
- *
- * @brief  Private implementation for GetIdentityNotificationAttributesRequest.
+ * \inmodule QtAwsSES
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetIdentityNotificationAttributesRequestPrivate object.
- *
- * @param  action  SES action being performed.
- * @param  q       Pointer to this object's public GetIdentityNotificationAttributesRequest instance.
+ * Constructs a GetIdentityNotificationAttributesRequestPrivate object for SES \a action with,
+ * public implementation \a q.
  */
 GetIdentityNotificationAttributesRequestPrivate::GetIdentityNotificationAttributesRequestPrivate(
     const SESRequest::Action action, GetIdentityNotificationAttributesRequest * const q)
@@ -115,15 +104,10 @@ GetIdentityNotificationAttributesRequestPrivate::GetIdentityNotificationAttribut
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetIdentityNotificationAttributesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetIdentityNotificationAttributesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetIdentityNotificationAttributesRequest instance.
  */
 GetIdentityNotificationAttributesRequestPrivate::GetIdentityNotificationAttributesRequestPrivate(
     const GetIdentityNotificationAttributesRequestPrivate &other, GetIdentityNotificationAttributesRequest * const q)

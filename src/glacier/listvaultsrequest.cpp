@@ -27,10 +27,9 @@ namespace Glacier {
 
 /*!
  * \class QtAws::Glacier::ListVaultsRequest
- *
  * \brief The ListVaultsRequest class provides an interface for Glacier ListVaults requests.
  *
- * \ingroup Glacier
+ * \inmodule QtAwsGlacier
  *
  *  Amazon Glacier is a storage solution for "cold
  * 
@@ -75,9 +74,7 @@ namespace Glacier {
  */
 
 /*!
- * @brief  Constructs a new ListVaultsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListVaultsRequest::ListVaultsRequest(const ListVaultsRequest &other)
     : GlacierRequest(new ListVaultsRequestPrivate(*other.d_func(), this))
@@ -86,7 +83,7 @@ ListVaultsRequest::ListVaultsRequest(const ListVaultsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ListVaultsRequest object.
+ * Constructs a ListVaultsRequest object.
  */
 ListVaultsRequest::ListVaultsRequest()
     : GlacierRequest(new ListVaultsRequestPrivate(GlacierRequest::ListVaultsAction, this))
@@ -104,14 +101,9 @@ bool ListVaultsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListVaultsResponse object.
+ * Returns a ListVaultsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListVaultsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GlacierClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListVaultsRequest::response(QNetworkReply * const reply) const
 {
@@ -119,20 +111,17 @@ QtAws::Core::AwsAbstractResponse * ListVaultsRequest::response(QNetworkReply * c
 }
 
 /*!
- * @internal
+ * \class QtAws::Glacier::ListVaultsRequestPrivate
+ * \brief The ListVaultsRequestPrivate class provides private implementation for ListVaultsRequest.
+ * \internal
  *
- * @class  ListVaultsRequestPrivate
- *
- * @brief  Private implementation for ListVaultsRequest.
+ * \inmodule QtAwsGlacier
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListVaultsRequestPrivate object.
- *
- * @param  action  Glacier action being performed.
- * @param  q       Pointer to this object's public ListVaultsRequest instance.
+ * Constructs a ListVaultsRequestPrivate object for Glacier \a action with,
+ * public implementation \a q.
  */
 ListVaultsRequestPrivate::ListVaultsRequestPrivate(
     const GlacierRequest::Action action, ListVaultsRequest * const q)
@@ -142,15 +131,10 @@ ListVaultsRequestPrivate::ListVaultsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListVaultsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListVaultsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListVaultsRequest instance.
  */
 ListVaultsRequestPrivate::ListVaultsRequestPrivate(
     const ListVaultsRequestPrivate &other, ListVaultsRequest * const q)

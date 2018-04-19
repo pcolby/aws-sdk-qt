@@ -27,10 +27,9 @@ namespace ACM {
 
 /*!
  * \class QtAws::ACM::DescribeCertificateRequest
- *
  * \brief The DescribeCertificateRequest class provides an interface for ACM DescribeCertificate requests.
  *
- * \ingroup ACM
+ * \inmodule QtAwsACM
  *
  *  <fullname>AWS Certificate Manager</fullname>
  * 
@@ -46,9 +45,7 @@ namespace ACM {
  */
 
 /*!
- * @brief  Constructs a new DescribeCertificateRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeCertificateRequest::DescribeCertificateRequest(const DescribeCertificateRequest &other)
     : ACMRequest(new DescribeCertificateRequestPrivate(*other.d_func(), this))
@@ -57,7 +54,7 @@ DescribeCertificateRequest::DescribeCertificateRequest(const DescribeCertificate
 }
 
 /*!
- * @brief  Constructs a new DescribeCertificateRequest object.
+ * Constructs a DescribeCertificateRequest object.
  */
 DescribeCertificateRequest::DescribeCertificateRequest()
     : ACMRequest(new DescribeCertificateRequestPrivate(ACMRequest::DescribeCertificateAction, this))
@@ -75,14 +72,9 @@ bool DescribeCertificateRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeCertificateResponse object.
+ * Returns a DescribeCertificateResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeCertificateResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ACMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeCertificateRequest::response(QNetworkReply * const reply) const
 {
@@ -90,20 +82,17 @@ QtAws::Core::AwsAbstractResponse * DescribeCertificateRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::ACM::DescribeCertificateRequestPrivate
+ * \brief The DescribeCertificateRequestPrivate class provides private implementation for DescribeCertificateRequest.
+ * \internal
  *
- * @class  DescribeCertificateRequestPrivate
- *
- * @brief  Private implementation for DescribeCertificateRequest.
+ * \inmodule QtAwsACM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeCertificateRequestPrivate object.
- *
- * @param  action  ACM action being performed.
- * @param  q       Pointer to this object's public DescribeCertificateRequest instance.
+ * Constructs a DescribeCertificateRequestPrivate object for ACM \a action with,
+ * public implementation \a q.
  */
 DescribeCertificateRequestPrivate::DescribeCertificateRequestPrivate(
     const ACMRequest::Action action, DescribeCertificateRequest * const q)
@@ -113,15 +102,10 @@ DescribeCertificateRequestPrivate::DescribeCertificateRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeCertificateRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeCertificateRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeCertificateRequest instance.
  */
 DescribeCertificateRequestPrivate::DescribeCertificateRequestPrivate(
     const DescribeCertificateRequestPrivate &other, DescribeCertificateRequest * const q)

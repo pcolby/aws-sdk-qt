@@ -27,10 +27,9 @@ namespace FMS {
 
 /*!
  * \class QtAws::FMS::GetAdminAccountRequest
- *
  * \brief The GetAdminAccountRequest class provides an interface for FMS GetAdminAccount requests.
  *
- * \ingroup FMS
+ * \inmodule QtAwsFMS
  *
  *  <fullname>AWS Firewall Manager</fullname>
  * 
@@ -43,9 +42,7 @@ namespace FMS {
  */
 
 /*!
- * @brief  Constructs a new GetAdminAccountRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetAdminAccountRequest::GetAdminAccountRequest(const GetAdminAccountRequest &other)
     : FMSRequest(new GetAdminAccountRequestPrivate(*other.d_func(), this))
@@ -54,7 +51,7 @@ GetAdminAccountRequest::GetAdminAccountRequest(const GetAdminAccountRequest &oth
 }
 
 /*!
- * @brief  Constructs a new GetAdminAccountRequest object.
+ * Constructs a GetAdminAccountRequest object.
  */
 GetAdminAccountRequest::GetAdminAccountRequest()
     : FMSRequest(new GetAdminAccountRequestPrivate(FMSRequest::GetAdminAccountAction, this))
@@ -72,14 +69,9 @@ bool GetAdminAccountRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetAdminAccountResponse object.
+ * Returns a GetAdminAccountResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetAdminAccountResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  FMSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetAdminAccountRequest::response(QNetworkReply * const reply) const
 {
@@ -87,20 +79,17 @@ QtAws::Core::AwsAbstractResponse * GetAdminAccountRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::FMS::GetAdminAccountRequestPrivate
+ * \brief The GetAdminAccountRequestPrivate class provides private implementation for GetAdminAccountRequest.
+ * \internal
  *
- * @class  GetAdminAccountRequestPrivate
- *
- * @brief  Private implementation for GetAdminAccountRequest.
+ * \inmodule QtAwsFMS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetAdminAccountRequestPrivate object.
- *
- * @param  action  FMS action being performed.
- * @param  q       Pointer to this object's public GetAdminAccountRequest instance.
+ * Constructs a GetAdminAccountRequestPrivate object for FMS \a action with,
+ * public implementation \a q.
  */
 GetAdminAccountRequestPrivate::GetAdminAccountRequestPrivate(
     const FMSRequest::Action action, GetAdminAccountRequest * const q)
@@ -110,15 +99,10 @@ GetAdminAccountRequestPrivate::GetAdminAccountRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetAdminAccountRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetAdminAccountRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetAdminAccountRequest instance.
  */
 GetAdminAccountRequestPrivate::GetAdminAccountRequestPrivate(
     const GetAdminAccountRequestPrivate &other, GetAdminAccountRequest * const q)

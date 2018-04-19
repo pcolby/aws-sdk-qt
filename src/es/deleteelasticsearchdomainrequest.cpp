@@ -27,10 +27,9 @@ namespace ElasticsearchService {
 
 /*!
  * \class QtAws::ElasticsearchService::DeleteElasticsearchDomainRequest
- *
  * \brief The DeleteElasticsearchDomainRequest class provides an interface for ElasticsearchService DeleteElasticsearchDomain requests.
  *
- * \ingroup ElasticsearchService
+ * \inmodule QtAwsElasticsearchService
  *
  *  <fullname>Amazon Elasticsearch Configuration Service</fullname>
  * 
@@ -46,9 +45,7 @@ namespace ElasticsearchService {
  */
 
 /*!
- * @brief  Constructs a new DeleteElasticsearchDomainRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteElasticsearchDomainRequest::DeleteElasticsearchDomainRequest(const DeleteElasticsearchDomainRequest &other)
     : ElasticsearchServiceRequest(new DeleteElasticsearchDomainRequestPrivate(*other.d_func(), this))
@@ -57,7 +54,7 @@ DeleteElasticsearchDomainRequest::DeleteElasticsearchDomainRequest(const DeleteE
 }
 
 /*!
- * @brief  Constructs a new DeleteElasticsearchDomainRequest object.
+ * Constructs a DeleteElasticsearchDomainRequest object.
  */
 DeleteElasticsearchDomainRequest::DeleteElasticsearchDomainRequest()
     : ElasticsearchServiceRequest(new DeleteElasticsearchDomainRequestPrivate(ElasticsearchServiceRequest::DeleteElasticsearchDomainAction, this))
@@ -75,14 +72,9 @@ bool DeleteElasticsearchDomainRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteElasticsearchDomainResponse object.
+ * Returns a DeleteElasticsearchDomainResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteElasticsearchDomainResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ElasticsearchServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteElasticsearchDomainRequest::response(QNetworkReply * const reply) const
 {
@@ -90,20 +82,17 @@ QtAws::Core::AwsAbstractResponse * DeleteElasticsearchDomainRequest::response(QN
 }
 
 /*!
- * @internal
+ * \class QtAws::ElasticsearchService::DeleteElasticsearchDomainRequestPrivate
+ * \brief The DeleteElasticsearchDomainRequestPrivate class provides private implementation for DeleteElasticsearchDomainRequest.
+ * \internal
  *
- * @class  DeleteElasticsearchDomainRequestPrivate
- *
- * @brief  Private implementation for DeleteElasticsearchDomainRequest.
+ * \inmodule QtAwsElasticsearchService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteElasticsearchDomainRequestPrivate object.
- *
- * @param  action  ElasticsearchService action being performed.
- * @param  q       Pointer to this object's public DeleteElasticsearchDomainRequest instance.
+ * Constructs a DeleteElasticsearchDomainRequestPrivate object for ElasticsearchService \a action with,
+ * public implementation \a q.
  */
 DeleteElasticsearchDomainRequestPrivate::DeleteElasticsearchDomainRequestPrivate(
     const ElasticsearchServiceRequest::Action action, DeleteElasticsearchDomainRequest * const q)
@@ -113,15 +102,10 @@ DeleteElasticsearchDomainRequestPrivate::DeleteElasticsearchDomainRequestPrivate
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteElasticsearchDomainRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteElasticsearchDomainRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteElasticsearchDomainRequest instance.
  */
 DeleteElasticsearchDomainRequestPrivate::DeleteElasticsearchDomainRequestPrivate(
     const DeleteElasticsearchDomainRequestPrivate &other, DeleteElasticsearchDomainRequest * const q)

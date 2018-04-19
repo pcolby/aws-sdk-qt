@@ -27,10 +27,9 @@ namespace Shield {
 
 /*!
  * \class QtAws::Shield::DescribeAttackRequest
- *
  * \brief The DescribeAttackRequest class provides an interface for Shield DescribeAttack requests.
  *
- * \ingroup Shield
+ * \inmodule QtAwsShield
  *
  *  <fullname>AWS Shield Advanced</fullname>
  * 
@@ -43,9 +42,7 @@ namespace Shield {
  */
 
 /*!
- * @brief  Constructs a new DescribeAttackRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeAttackRequest::DescribeAttackRequest(const DescribeAttackRequest &other)
     : ShieldRequest(new DescribeAttackRequestPrivate(*other.d_func(), this))
@@ -54,7 +51,7 @@ DescribeAttackRequest::DescribeAttackRequest(const DescribeAttackRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DescribeAttackRequest object.
+ * Constructs a DescribeAttackRequest object.
  */
 DescribeAttackRequest::DescribeAttackRequest()
     : ShieldRequest(new DescribeAttackRequestPrivate(ShieldRequest::DescribeAttackAction, this))
@@ -72,14 +69,9 @@ bool DescribeAttackRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeAttackResponse object.
+ * Returns a DescribeAttackResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeAttackResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ShieldClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeAttackRequest::response(QNetworkReply * const reply) const
 {
@@ -87,20 +79,17 @@ QtAws::Core::AwsAbstractResponse * DescribeAttackRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::Shield::DescribeAttackRequestPrivate
+ * \brief The DescribeAttackRequestPrivate class provides private implementation for DescribeAttackRequest.
+ * \internal
  *
- * @class  DescribeAttackRequestPrivate
- *
- * @brief  Private implementation for DescribeAttackRequest.
+ * \inmodule QtAwsShield
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeAttackRequestPrivate object.
- *
- * @param  action  Shield action being performed.
- * @param  q       Pointer to this object's public DescribeAttackRequest instance.
+ * Constructs a DescribeAttackRequestPrivate object for Shield \a action with,
+ * public implementation \a q.
  */
 DescribeAttackRequestPrivate::DescribeAttackRequestPrivate(
     const ShieldRequest::Action action, DescribeAttackRequest * const q)
@@ -110,15 +99,10 @@ DescribeAttackRequestPrivate::DescribeAttackRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeAttackRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeAttackRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeAttackRequest instance.
  */
 DescribeAttackRequestPrivate::DescribeAttackRequestPrivate(
     const DescribeAttackRequestPrivate &other, DescribeAttackRequest * const q)

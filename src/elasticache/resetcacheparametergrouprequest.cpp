@@ -27,10 +27,9 @@ namespace ElastiCache {
 
 /*!
  * \class QtAws::ElastiCache::ResetCacheParameterGroupRequest
- *
  * \brief The ResetCacheParameterGroupRequest class provides an interface for ElastiCache ResetCacheParameterGroup requests.
  *
- * \ingroup ElastiCache
+ * \inmodule QtAwsElastiCache
  *
  *  <fullname>Amazon ElastiCache</fullname>
  * 
@@ -51,9 +50,7 @@ namespace ElastiCache {
  */
 
 /*!
- * @brief  Constructs a new ResetCacheParameterGroupRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ResetCacheParameterGroupRequest::ResetCacheParameterGroupRequest(const ResetCacheParameterGroupRequest &other)
     : ElastiCacheRequest(new ResetCacheParameterGroupRequestPrivate(*other.d_func(), this))
@@ -62,7 +59,7 @@ ResetCacheParameterGroupRequest::ResetCacheParameterGroupRequest(const ResetCach
 }
 
 /*!
- * @brief  Constructs a new ResetCacheParameterGroupRequest object.
+ * Constructs a ResetCacheParameterGroupRequest object.
  */
 ResetCacheParameterGroupRequest::ResetCacheParameterGroupRequest()
     : ElastiCacheRequest(new ResetCacheParameterGroupRequestPrivate(ElastiCacheRequest::ResetCacheParameterGroupAction, this))
@@ -80,14 +77,9 @@ bool ResetCacheParameterGroupRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ResetCacheParameterGroupResponse object.
+ * Returns a ResetCacheParameterGroupResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ResetCacheParameterGroupResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ElastiCacheClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ResetCacheParameterGroupRequest::response(QNetworkReply * const reply) const
 {
@@ -95,20 +87,17 @@ QtAws::Core::AwsAbstractResponse * ResetCacheParameterGroupRequest::response(QNe
 }
 
 /*!
- * @internal
+ * \class QtAws::ElastiCache::ResetCacheParameterGroupRequestPrivate
+ * \brief The ResetCacheParameterGroupRequestPrivate class provides private implementation for ResetCacheParameterGroupRequest.
+ * \internal
  *
- * @class  ResetCacheParameterGroupRequestPrivate
- *
- * @brief  Private implementation for ResetCacheParameterGroupRequest.
+ * \inmodule QtAwsElastiCache
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ResetCacheParameterGroupRequestPrivate object.
- *
- * @param  action  ElastiCache action being performed.
- * @param  q       Pointer to this object's public ResetCacheParameterGroupRequest instance.
+ * Constructs a ResetCacheParameterGroupRequestPrivate object for ElastiCache \a action with,
+ * public implementation \a q.
  */
 ResetCacheParameterGroupRequestPrivate::ResetCacheParameterGroupRequestPrivate(
     const ElastiCacheRequest::Action action, ResetCacheParameterGroupRequest * const q)
@@ -118,15 +107,10 @@ ResetCacheParameterGroupRequestPrivate::ResetCacheParameterGroupRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ResetCacheParameterGroupRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ResetCacheParameterGroupRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ResetCacheParameterGroupRequest instance.
  */
 ResetCacheParameterGroupRequestPrivate::ResetCacheParameterGroupRequestPrivate(
     const ResetCacheParameterGroupRequestPrivate &other, ResetCacheParameterGroupRequest * const q)

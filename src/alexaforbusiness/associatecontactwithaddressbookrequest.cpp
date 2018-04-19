@@ -27,10 +27,9 @@ namespace AlexaForBusiness {
 
 /*!
  * \class QtAws::AlexaForBusiness::AssociateContactWithAddressBookRequest
- *
  * \brief The AssociateContactWithAddressBookRequest class provides an interface for AlexaForBusiness AssociateContactWithAddressBook requests.
  *
- * \ingroup AlexaForBusiness
+ * \inmodule QtAwsAlexaForBusiness
  *
  *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
  *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
@@ -42,9 +41,7 @@ namespace AlexaForBusiness {
  */
 
 /*!
- * @brief  Constructs a new AssociateContactWithAddressBookRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AssociateContactWithAddressBookRequest::AssociateContactWithAddressBookRequest(const AssociateContactWithAddressBookRequest &other)
     : AlexaForBusinessRequest(new AssociateContactWithAddressBookRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ AssociateContactWithAddressBookRequest::AssociateContactWithAddressBookRequest(c
 }
 
 /*!
- * @brief  Constructs a new AssociateContactWithAddressBookRequest object.
+ * Constructs a AssociateContactWithAddressBookRequest object.
  */
 AssociateContactWithAddressBookRequest::AssociateContactWithAddressBookRequest()
     : AlexaForBusinessRequest(new AssociateContactWithAddressBookRequestPrivate(AlexaForBusinessRequest::AssociateContactWithAddressBookAction, this))
@@ -71,14 +68,9 @@ bool AssociateContactWithAddressBookRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AssociateContactWithAddressBookResponse object.
+ * Returns a AssociateContactWithAddressBookResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AssociateContactWithAddressBookResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AlexaForBusinessClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AssociateContactWithAddressBookRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * AssociateContactWithAddressBookRequest::respo
 }
 
 /*!
- * @internal
+ * \class QtAws::AlexaForBusiness::AssociateContactWithAddressBookRequestPrivate
+ * \brief The AssociateContactWithAddressBookRequestPrivate class provides private implementation for AssociateContactWithAddressBookRequest.
+ * \internal
  *
- * @class  AssociateContactWithAddressBookRequestPrivate
- *
- * @brief  Private implementation for AssociateContactWithAddressBookRequest.
+ * \inmodule QtAwsAlexaForBusiness
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AssociateContactWithAddressBookRequestPrivate object.
- *
- * @param  action  AlexaForBusiness action being performed.
- * @param  q       Pointer to this object's public AssociateContactWithAddressBookRequest instance.
+ * Constructs a AssociateContactWithAddressBookRequestPrivate object for AlexaForBusiness \a action with,
+ * public implementation \a q.
  */
 AssociateContactWithAddressBookRequestPrivate::AssociateContactWithAddressBookRequestPrivate(
     const AlexaForBusinessRequest::Action action, AssociateContactWithAddressBookRequest * const q)
@@ -109,15 +98,10 @@ AssociateContactWithAddressBookRequestPrivate::AssociateContactWithAddressBookRe
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AssociateContactWithAddressBookRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AssociateContactWithAddressBookRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AssociateContactWithAddressBookRequest instance.
  */
 AssociateContactWithAddressBookRequestPrivate::AssociateContactWithAddressBookRequestPrivate(
     const AssociateContactWithAddressBookRequestPrivate &other, AssociateContactWithAddressBookRequest * const q)

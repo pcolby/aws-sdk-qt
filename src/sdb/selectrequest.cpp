@@ -27,10 +27,9 @@ namespace SimpleDB {
 
 /*!
  * \class QtAws::SimpleDB::SelectRequest
- *
  * \brief The SelectRequest class provides an interface for SimpleDB Select requests.
  *
- * \ingroup SimpleDB
+ * \inmodule QtAwsSimpleDB
  *
  *  Amazon SimpleDB is a web service providing the core database functions of data indexing and querying in the cloud. By
  *  offloading the time and effort associated with building and operating a web-scale database, SimpleDB provides developers
@@ -50,9 +49,7 @@ namespace SimpleDB {
  */
 
 /*!
- * @brief  Constructs a new SelectRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 SelectRequest::SelectRequest(const SelectRequest &other)
     : SimpleDBRequest(new SelectRequestPrivate(*other.d_func(), this))
@@ -61,7 +58,7 @@ SelectRequest::SelectRequest(const SelectRequest &other)
 }
 
 /*!
- * @brief  Constructs a new SelectRequest object.
+ * Constructs a SelectRequest object.
  */
 SelectRequest::SelectRequest()
     : SimpleDBRequest(new SelectRequestPrivate(SimpleDBRequest::SelectAction, this))
@@ -79,14 +76,9 @@ bool SelectRequest::isValid() const
 
 
 /*!
- * @brief  Construct an SelectResponse object.
+ * Returns a SelectResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An SelectResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SimpleDBClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * SelectRequest::response(QNetworkReply * const reply) const
 {
@@ -94,20 +86,17 @@ QtAws::Core::AwsAbstractResponse * SelectRequest::response(QNetworkReply * const
 }
 
 /*!
- * @internal
+ * \class QtAws::SimpleDB::SelectRequestPrivate
+ * \brief The SelectRequestPrivate class provides private implementation for SelectRequest.
+ * \internal
  *
- * @class  SelectRequestPrivate
- *
- * @brief  Private implementation for SelectRequest.
+ * \inmodule QtAwsSimpleDB
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new SelectRequestPrivate object.
- *
- * @param  action  SimpleDB action being performed.
- * @param  q       Pointer to this object's public SelectRequest instance.
+ * Constructs a SelectRequestPrivate object for SimpleDB \a action with,
+ * public implementation \a q.
  */
 SelectRequestPrivate::SelectRequestPrivate(
     const SimpleDBRequest::Action action, SelectRequest * const q)
@@ -117,15 +106,10 @@ SelectRequestPrivate::SelectRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SelectRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the SelectRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public SelectRequest instance.
  */
 SelectRequestPrivate::SelectRequestPrivate(
     const SelectRequestPrivate &other, SelectRequest * const q)

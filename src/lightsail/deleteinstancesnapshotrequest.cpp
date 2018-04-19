@@ -27,10 +27,9 @@ namespace Lightsail {
 
 /*!
  * \class QtAws::Lightsail::DeleteInstanceSnapshotRequest
- *
  * \brief The DeleteInstanceSnapshotRequest class provides an interface for Lightsail DeleteInstanceSnapshot requests.
  *
- * \ingroup Lightsail
+ * \inmodule QtAwsLightsail
  *
  *  Amazon Lightsail is the easiest way to get started with AWS for developers who just need virtual private servers.
  *  Lightsail includes everything you need to launch your project quickly - a virtual machine, SSD-based storage, data
@@ -53,9 +52,7 @@ namespace Lightsail {
  */
 
 /*!
- * @brief  Constructs a new DeleteInstanceSnapshotRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteInstanceSnapshotRequest::DeleteInstanceSnapshotRequest(const DeleteInstanceSnapshotRequest &other)
     : LightsailRequest(new DeleteInstanceSnapshotRequestPrivate(*other.d_func(), this))
@@ -64,7 +61,7 @@ DeleteInstanceSnapshotRequest::DeleteInstanceSnapshotRequest(const DeleteInstanc
 }
 
 /*!
- * @brief  Constructs a new DeleteInstanceSnapshotRequest object.
+ * Constructs a DeleteInstanceSnapshotRequest object.
  */
 DeleteInstanceSnapshotRequest::DeleteInstanceSnapshotRequest()
     : LightsailRequest(new DeleteInstanceSnapshotRequestPrivate(LightsailRequest::DeleteInstanceSnapshotAction, this))
@@ -82,14 +79,9 @@ bool DeleteInstanceSnapshotRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteInstanceSnapshotResponse object.
+ * Returns a DeleteInstanceSnapshotResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteInstanceSnapshotResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  LightsailClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteInstanceSnapshotRequest::response(QNetworkReply * const reply) const
 {
@@ -97,20 +89,17 @@ QtAws::Core::AwsAbstractResponse * DeleteInstanceSnapshotRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::Lightsail::DeleteInstanceSnapshotRequestPrivate
+ * \brief The DeleteInstanceSnapshotRequestPrivate class provides private implementation for DeleteInstanceSnapshotRequest.
+ * \internal
  *
- * @class  DeleteInstanceSnapshotRequestPrivate
- *
- * @brief  Private implementation for DeleteInstanceSnapshotRequest.
+ * \inmodule QtAwsLightsail
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteInstanceSnapshotRequestPrivate object.
- *
- * @param  action  Lightsail action being performed.
- * @param  q       Pointer to this object's public DeleteInstanceSnapshotRequest instance.
+ * Constructs a DeleteInstanceSnapshotRequestPrivate object for Lightsail \a action with,
+ * public implementation \a q.
  */
 DeleteInstanceSnapshotRequestPrivate::DeleteInstanceSnapshotRequestPrivate(
     const LightsailRequest::Action action, DeleteInstanceSnapshotRequest * const q)
@@ -120,15 +109,10 @@ DeleteInstanceSnapshotRequestPrivate::DeleteInstanceSnapshotRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteInstanceSnapshotRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteInstanceSnapshotRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteInstanceSnapshotRequest instance.
  */
 DeleteInstanceSnapshotRequestPrivate::DeleteInstanceSnapshotRequestPrivate(
     const DeleteInstanceSnapshotRequestPrivate &other, DeleteInstanceSnapshotRequest * const q)

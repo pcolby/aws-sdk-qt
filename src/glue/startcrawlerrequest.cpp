@@ -27,10 +27,9 @@ namespace Glue {
 
 /*!
  * \class QtAws::Glue::StartCrawlerRequest
- *
  * \brief The StartCrawlerRequest class provides an interface for Glue StartCrawler requests.
  *
- * \ingroup Glue
+ * \inmodule QtAwsGlue
  *
  *  <fullname>AWS Glue</fullname>
  * 
@@ -40,9 +39,7 @@ namespace Glue {
  */
 
 /*!
- * @brief  Constructs a new StartCrawlerRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 StartCrawlerRequest::StartCrawlerRequest(const StartCrawlerRequest &other)
     : GlueRequest(new StartCrawlerRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ StartCrawlerRequest::StartCrawlerRequest(const StartCrawlerRequest &other)
 }
 
 /*!
- * @brief  Constructs a new StartCrawlerRequest object.
+ * Constructs a StartCrawlerRequest object.
  */
 StartCrawlerRequest::StartCrawlerRequest()
     : GlueRequest(new StartCrawlerRequestPrivate(GlueRequest::StartCrawlerAction, this))
@@ -69,14 +66,9 @@ bool StartCrawlerRequest::isValid() const
 
 
 /*!
- * @brief  Construct an StartCrawlerResponse object.
+ * Returns a StartCrawlerResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An StartCrawlerResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GlueClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * StartCrawlerRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * StartCrawlerRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::Glue::StartCrawlerRequestPrivate
+ * \brief The StartCrawlerRequestPrivate class provides private implementation for StartCrawlerRequest.
+ * \internal
  *
- * @class  StartCrawlerRequestPrivate
- *
- * @brief  Private implementation for StartCrawlerRequest.
+ * \inmodule QtAwsGlue
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new StartCrawlerRequestPrivate object.
- *
- * @param  action  Glue action being performed.
- * @param  q       Pointer to this object's public StartCrawlerRequest instance.
+ * Constructs a StartCrawlerRequestPrivate object for Glue \a action with,
+ * public implementation \a q.
  */
 StartCrawlerRequestPrivate::StartCrawlerRequestPrivate(
     const GlueRequest::Action action, StartCrawlerRequest * const q)
@@ -107,15 +96,10 @@ StartCrawlerRequestPrivate::StartCrawlerRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StartCrawlerRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the StartCrawlerRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public StartCrawlerRequest instance.
  */
 StartCrawlerRequestPrivate::StartCrawlerRequestPrivate(
     const StartCrawlerRequestPrivate &other, StartCrawlerRequest * const q)

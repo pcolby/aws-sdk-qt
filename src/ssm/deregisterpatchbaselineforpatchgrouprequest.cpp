@@ -27,10 +27,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::DeregisterPatchBaselineForPatchGroupRequest
- *
  * \brief The DeregisterPatchBaselineForPatchGroupRequest class provides an interface for SSM DeregisterPatchBaselineForPatchGroup requests.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -61,9 +60,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new DeregisterPatchBaselineForPatchGroupRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeregisterPatchBaselineForPatchGroupRequest::DeregisterPatchBaselineForPatchGroupRequest(const DeregisterPatchBaselineForPatchGroupRequest &other)
     : SSMRequest(new DeregisterPatchBaselineForPatchGroupRequestPrivate(*other.d_func(), this))
@@ -72,7 +69,7 @@ DeregisterPatchBaselineForPatchGroupRequest::DeregisterPatchBaselineForPatchGrou
 }
 
 /*!
- * @brief  Constructs a new DeregisterPatchBaselineForPatchGroupRequest object.
+ * Constructs a DeregisterPatchBaselineForPatchGroupRequest object.
  */
 DeregisterPatchBaselineForPatchGroupRequest::DeregisterPatchBaselineForPatchGroupRequest()
     : SSMRequest(new DeregisterPatchBaselineForPatchGroupRequestPrivate(SSMRequest::DeregisterPatchBaselineForPatchGroupAction, this))
@@ -90,14 +87,9 @@ bool DeregisterPatchBaselineForPatchGroupRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeregisterPatchBaselineForPatchGroupResponse object.
+ * Returns a DeregisterPatchBaselineForPatchGroupResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeregisterPatchBaselineForPatchGroupResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SSMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeregisterPatchBaselineForPatchGroupRequest::response(QNetworkReply * const reply) const
 {
@@ -105,20 +97,17 @@ QtAws::Core::AwsAbstractResponse * DeregisterPatchBaselineForPatchGroupRequest::
 }
 
 /*!
- * @internal
+ * \class QtAws::SSM::DeregisterPatchBaselineForPatchGroupRequestPrivate
+ * \brief The DeregisterPatchBaselineForPatchGroupRequestPrivate class provides private implementation for DeregisterPatchBaselineForPatchGroupRequest.
+ * \internal
  *
- * @class  DeregisterPatchBaselineForPatchGroupRequestPrivate
- *
- * @brief  Private implementation for DeregisterPatchBaselineForPatchGroupRequest.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeregisterPatchBaselineForPatchGroupRequestPrivate object.
- *
- * @param  action  SSM action being performed.
- * @param  q       Pointer to this object's public DeregisterPatchBaselineForPatchGroupRequest instance.
+ * Constructs a DeregisterPatchBaselineForPatchGroupRequestPrivate object for SSM \a action with,
+ * public implementation \a q.
  */
 DeregisterPatchBaselineForPatchGroupRequestPrivate::DeregisterPatchBaselineForPatchGroupRequestPrivate(
     const SSMRequest::Action action, DeregisterPatchBaselineForPatchGroupRequest * const q)
@@ -128,15 +117,10 @@ DeregisterPatchBaselineForPatchGroupRequestPrivate::DeregisterPatchBaselineForPa
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeregisterPatchBaselineForPatchGroupRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeregisterPatchBaselineForPatchGroupRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeregisterPatchBaselineForPatchGroupRequest instance.
  */
 DeregisterPatchBaselineForPatchGroupRequestPrivate::DeregisterPatchBaselineForPatchGroupRequestPrivate(
     const DeregisterPatchBaselineForPatchGroupRequestPrivate &other, DeregisterPatchBaselineForPatchGroupRequest * const q)

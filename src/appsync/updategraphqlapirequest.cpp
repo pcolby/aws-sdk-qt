@@ -27,10 +27,9 @@ namespace AppSync {
 
 /*!
  * \class QtAws::AppSync::UpdateGraphqlApiRequest
- *
  * \brief The UpdateGraphqlApiRequest class provides an interface for AppSync UpdateGraphqlApi requests.
  *
- * \ingroup AppSync
+ * \inmodule QtAwsAppSync
  *
  *  AWS AppSync provides API actions for creating and interacting with data sources using GraphQL from your
  *
@@ -38,9 +37,7 @@ namespace AppSync {
  */
 
 /*!
- * @brief  Constructs a new UpdateGraphqlApiRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateGraphqlApiRequest::UpdateGraphqlApiRequest(const UpdateGraphqlApiRequest &other)
     : AppSyncRequest(new UpdateGraphqlApiRequestPrivate(*other.d_func(), this))
@@ -49,7 +46,7 @@ UpdateGraphqlApiRequest::UpdateGraphqlApiRequest(const UpdateGraphqlApiRequest &
 }
 
 /*!
- * @brief  Constructs a new UpdateGraphqlApiRequest object.
+ * Constructs a UpdateGraphqlApiRequest object.
  */
 UpdateGraphqlApiRequest::UpdateGraphqlApiRequest()
     : AppSyncRequest(new UpdateGraphqlApiRequestPrivate(AppSyncRequest::UpdateGraphqlApiAction, this))
@@ -67,14 +64,9 @@ bool UpdateGraphqlApiRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateGraphqlApiResponse object.
+ * Returns a UpdateGraphqlApiResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateGraphqlApiResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AppSyncClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateGraphqlApiRequest::response(QNetworkReply * const reply) const
 {
@@ -82,20 +74,17 @@ QtAws::Core::AwsAbstractResponse * UpdateGraphqlApiRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::AppSync::UpdateGraphqlApiRequestPrivate
+ * \brief The UpdateGraphqlApiRequestPrivate class provides private implementation for UpdateGraphqlApiRequest.
+ * \internal
  *
- * @class  UpdateGraphqlApiRequestPrivate
- *
- * @brief  Private implementation for UpdateGraphqlApiRequest.
+ * \inmodule QtAwsAppSync
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateGraphqlApiRequestPrivate object.
- *
- * @param  action  AppSync action being performed.
- * @param  q       Pointer to this object's public UpdateGraphqlApiRequest instance.
+ * Constructs a UpdateGraphqlApiRequestPrivate object for AppSync \a action with,
+ * public implementation \a q.
  */
 UpdateGraphqlApiRequestPrivate::UpdateGraphqlApiRequestPrivate(
     const AppSyncRequest::Action action, UpdateGraphqlApiRequest * const q)
@@ -105,15 +94,10 @@ UpdateGraphqlApiRequestPrivate::UpdateGraphqlApiRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateGraphqlApiRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateGraphqlApiRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateGraphqlApiRequest instance.
  */
 UpdateGraphqlApiRequestPrivate::UpdateGraphqlApiRequestPrivate(
     const UpdateGraphqlApiRequestPrivate &other, UpdateGraphqlApiRequest * const q)

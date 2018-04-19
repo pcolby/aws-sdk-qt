@@ -27,19 +27,16 @@ namespace MediaConvert {
 
 /*!
  * \class QtAws::MediaConvert::GetJobTemplateRequest
- *
  * \brief The GetJobTemplateRequest class provides an interface for MediaConvert GetJobTemplate requests.
  *
- * \ingroup MediaConvert
+ * \inmodule QtAwsMediaConvert
  *
  *
  * \sa MediaConvertClient::getJobTemplate
  */
 
 /*!
- * @brief  Constructs a new GetJobTemplateRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetJobTemplateRequest::GetJobTemplateRequest(const GetJobTemplateRequest &other)
     : MediaConvertRequest(new GetJobTemplateRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ GetJobTemplateRequest::GetJobTemplateRequest(const GetJobTemplateRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetJobTemplateRequest object.
+ * Constructs a GetJobTemplateRequest object.
  */
 GetJobTemplateRequest::GetJobTemplateRequest()
     : MediaConvertRequest(new GetJobTemplateRequestPrivate(MediaConvertRequest::GetJobTemplateAction, this))
@@ -66,14 +63,9 @@ bool GetJobTemplateRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetJobTemplateResponse object.
+ * Returns a GetJobTemplateResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetJobTemplateResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MediaConvertClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetJobTemplateRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * GetJobTemplateRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::MediaConvert::GetJobTemplateRequestPrivate
+ * \brief The GetJobTemplateRequestPrivate class provides private implementation for GetJobTemplateRequest.
+ * \internal
  *
- * @class  GetJobTemplateRequestPrivate
- *
- * @brief  Private implementation for GetJobTemplateRequest.
+ * \inmodule QtAwsMediaConvert
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetJobTemplateRequestPrivate object.
- *
- * @param  action  MediaConvert action being performed.
- * @param  q       Pointer to this object's public GetJobTemplateRequest instance.
+ * Constructs a GetJobTemplateRequestPrivate object for MediaConvert \a action with,
+ * public implementation \a q.
  */
 GetJobTemplateRequestPrivate::GetJobTemplateRequestPrivate(
     const MediaConvertRequest::Action action, GetJobTemplateRequest * const q)
@@ -104,15 +93,10 @@ GetJobTemplateRequestPrivate::GetJobTemplateRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetJobTemplateRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetJobTemplateRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetJobTemplateRequest instance.
  */
 GetJobTemplateRequestPrivate::GetJobTemplateRequestPrivate(
     const GetJobTemplateRequestPrivate &other, GetJobTemplateRequest * const q)

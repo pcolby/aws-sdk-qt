@@ -27,10 +27,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::UpdateStageRequest
- *
  * \brief The UpdateStageRequest class provides an interface for APIGateway UpdateStage requests.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -42,9 +41,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new UpdateStageRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateStageRequest::UpdateStageRequest(const UpdateStageRequest &other)
     : APIGatewayRequest(new UpdateStageRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ UpdateStageRequest::UpdateStageRequest(const UpdateStageRequest &other)
 }
 
 /*!
- * @brief  Constructs a new UpdateStageRequest object.
+ * Constructs a UpdateStageRequest object.
  */
 UpdateStageRequest::UpdateStageRequest()
     : APIGatewayRequest(new UpdateStageRequestPrivate(APIGatewayRequest::UpdateStageAction, this))
@@ -71,14 +68,9 @@ bool UpdateStageRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateStageResponse object.
+ * Returns a UpdateStageResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateStageResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  APIGatewayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateStageRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * UpdateStageRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::APIGateway::UpdateStageRequestPrivate
+ * \brief The UpdateStageRequestPrivate class provides private implementation for UpdateStageRequest.
+ * \internal
  *
- * @class  UpdateStageRequestPrivate
- *
- * @brief  Private implementation for UpdateStageRequest.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateStageRequestPrivate object.
- *
- * @param  action  APIGateway action being performed.
- * @param  q       Pointer to this object's public UpdateStageRequest instance.
+ * Constructs a UpdateStageRequestPrivate object for APIGateway \a action with,
+ * public implementation \a q.
  */
 UpdateStageRequestPrivate::UpdateStageRequestPrivate(
     const APIGatewayRequest::Action action, UpdateStageRequest * const q)
@@ -109,15 +98,10 @@ UpdateStageRequestPrivate::UpdateStageRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateStageRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateStageRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateStageRequest instance.
  */
 UpdateStageRequestPrivate::UpdateStageRequestPrivate(
     const UpdateStageRequestPrivate &other, UpdateStageRequest * const q)

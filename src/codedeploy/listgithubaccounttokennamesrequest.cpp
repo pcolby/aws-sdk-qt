@@ -27,10 +27,9 @@ namespace CodeDeploy {
 
 /*!
  * \class QtAws::CodeDeploy::ListGitHubAccountTokenNamesRequest
- *
  * \brief The ListGitHubAccountTokenNamesRequest class provides an interface for CodeDeploy ListGitHubAccountTokenNames requests.
  *
- * \ingroup CodeDeploy
+ * \inmodule QtAwsCodeDeploy
  *
  *  <fullname>AWS CodeDeploy</fullname>
  * 
@@ -118,9 +117,7 @@ namespace CodeDeploy {
  */
 
 /*!
- * @brief  Constructs a new ListGitHubAccountTokenNamesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListGitHubAccountTokenNamesRequest::ListGitHubAccountTokenNamesRequest(const ListGitHubAccountTokenNamesRequest &other)
     : CodeDeployRequest(new ListGitHubAccountTokenNamesRequestPrivate(*other.d_func(), this))
@@ -129,7 +126,7 @@ ListGitHubAccountTokenNamesRequest::ListGitHubAccountTokenNamesRequest(const Lis
 }
 
 /*!
- * @brief  Constructs a new ListGitHubAccountTokenNamesRequest object.
+ * Constructs a ListGitHubAccountTokenNamesRequest object.
  */
 ListGitHubAccountTokenNamesRequest::ListGitHubAccountTokenNamesRequest()
     : CodeDeployRequest(new ListGitHubAccountTokenNamesRequestPrivate(CodeDeployRequest::ListGitHubAccountTokenNamesAction, this))
@@ -147,14 +144,9 @@ bool ListGitHubAccountTokenNamesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListGitHubAccountTokenNamesResponse object.
+ * Returns a ListGitHubAccountTokenNamesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListGitHubAccountTokenNamesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CodeDeployClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListGitHubAccountTokenNamesRequest::response(QNetworkReply * const reply) const
 {
@@ -162,20 +154,17 @@ QtAws::Core::AwsAbstractResponse * ListGitHubAccountTokenNamesRequest::response(
 }
 
 /*!
- * @internal
+ * \class QtAws::CodeDeploy::ListGitHubAccountTokenNamesRequestPrivate
+ * \brief The ListGitHubAccountTokenNamesRequestPrivate class provides private implementation for ListGitHubAccountTokenNamesRequest.
+ * \internal
  *
- * @class  ListGitHubAccountTokenNamesRequestPrivate
- *
- * @brief  Private implementation for ListGitHubAccountTokenNamesRequest.
+ * \inmodule QtAwsCodeDeploy
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListGitHubAccountTokenNamesRequestPrivate object.
- *
- * @param  action  CodeDeploy action being performed.
- * @param  q       Pointer to this object's public ListGitHubAccountTokenNamesRequest instance.
+ * Constructs a ListGitHubAccountTokenNamesRequestPrivate object for CodeDeploy \a action with,
+ * public implementation \a q.
  */
 ListGitHubAccountTokenNamesRequestPrivate::ListGitHubAccountTokenNamesRequestPrivate(
     const CodeDeployRequest::Action action, ListGitHubAccountTokenNamesRequest * const q)
@@ -185,15 +174,10 @@ ListGitHubAccountTokenNamesRequestPrivate::ListGitHubAccountTokenNamesRequestPri
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListGitHubAccountTokenNamesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListGitHubAccountTokenNamesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListGitHubAccountTokenNamesRequest instance.
  */
 ListGitHubAccountTokenNamesRequestPrivate::ListGitHubAccountTokenNamesRequestPrivate(
     const ListGitHubAccountTokenNamesRequestPrivate &other, ListGitHubAccountTokenNamesRequest * const q)

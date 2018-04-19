@@ -27,10 +27,9 @@ namespace CodeStar {
 
 /*!
  * \class QtAws::CodeStar::DeleteProjectRequest
- *
  * \brief The DeleteProjectRequest class provides an interface for CodeStar DeleteProject requests.
  *
- * \ingroup CodeStar
+ * \inmodule QtAwsCodeStar
  *
  *  <fullname>AWS CodeStar</fullname>
  * 
@@ -125,9 +124,7 @@ namespace CodeStar {
  */
 
 /*!
- * @brief  Constructs a new DeleteProjectRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteProjectRequest::DeleteProjectRequest(const DeleteProjectRequest &other)
     : CodeStarRequest(new DeleteProjectRequestPrivate(*other.d_func(), this))
@@ -136,7 +133,7 @@ DeleteProjectRequest::DeleteProjectRequest(const DeleteProjectRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DeleteProjectRequest object.
+ * Constructs a DeleteProjectRequest object.
  */
 DeleteProjectRequest::DeleteProjectRequest()
     : CodeStarRequest(new DeleteProjectRequestPrivate(CodeStarRequest::DeleteProjectAction, this))
@@ -154,14 +151,9 @@ bool DeleteProjectRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteProjectResponse object.
+ * Returns a DeleteProjectResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteProjectResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CodeStarClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteProjectRequest::response(QNetworkReply * const reply) const
 {
@@ -169,20 +161,17 @@ QtAws::Core::AwsAbstractResponse * DeleteProjectRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::CodeStar::DeleteProjectRequestPrivate
+ * \brief The DeleteProjectRequestPrivate class provides private implementation for DeleteProjectRequest.
+ * \internal
  *
- * @class  DeleteProjectRequestPrivate
- *
- * @brief  Private implementation for DeleteProjectRequest.
+ * \inmodule QtAwsCodeStar
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteProjectRequestPrivate object.
- *
- * @param  action  CodeStar action being performed.
- * @param  q       Pointer to this object's public DeleteProjectRequest instance.
+ * Constructs a DeleteProjectRequestPrivate object for CodeStar \a action with,
+ * public implementation \a q.
  */
 DeleteProjectRequestPrivate::DeleteProjectRequestPrivate(
     const CodeStarRequest::Action action, DeleteProjectRequest * const q)
@@ -192,15 +181,10 @@ DeleteProjectRequestPrivate::DeleteProjectRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteProjectRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteProjectRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteProjectRequest instance.
  */
 DeleteProjectRequestPrivate::DeleteProjectRequestPrivate(
     const DeleteProjectRequestPrivate &other, DeleteProjectRequest * const q)

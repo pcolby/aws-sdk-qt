@@ -27,19 +27,16 @@ namespace MediaConvert {
 
 /*!
  * \class QtAws::MediaConvert::ListPresetsRequest
- *
  * \brief The ListPresetsRequest class provides an interface for MediaConvert ListPresets requests.
  *
- * \ingroup MediaConvert
+ * \inmodule QtAwsMediaConvert
  *
  *
  * \sa MediaConvertClient::listPresets
  */
 
 /*!
- * @brief  Constructs a new ListPresetsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListPresetsRequest::ListPresetsRequest(const ListPresetsRequest &other)
     : MediaConvertRequest(new ListPresetsRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ ListPresetsRequest::ListPresetsRequest(const ListPresetsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ListPresetsRequest object.
+ * Constructs a ListPresetsRequest object.
  */
 ListPresetsRequest::ListPresetsRequest()
     : MediaConvertRequest(new ListPresetsRequestPrivate(MediaConvertRequest::ListPresetsAction, this))
@@ -66,14 +63,9 @@ bool ListPresetsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListPresetsResponse object.
+ * Returns a ListPresetsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListPresetsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MediaConvertClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListPresetsRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * ListPresetsRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::MediaConvert::ListPresetsRequestPrivate
+ * \brief The ListPresetsRequestPrivate class provides private implementation for ListPresetsRequest.
+ * \internal
  *
- * @class  ListPresetsRequestPrivate
- *
- * @brief  Private implementation for ListPresetsRequest.
+ * \inmodule QtAwsMediaConvert
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListPresetsRequestPrivate object.
- *
- * @param  action  MediaConvert action being performed.
- * @param  q       Pointer to this object's public ListPresetsRequest instance.
+ * Constructs a ListPresetsRequestPrivate object for MediaConvert \a action with,
+ * public implementation \a q.
  */
 ListPresetsRequestPrivate::ListPresetsRequestPrivate(
     const MediaConvertRequest::Action action, ListPresetsRequest * const q)
@@ -104,15 +93,10 @@ ListPresetsRequestPrivate::ListPresetsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListPresetsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListPresetsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListPresetsRequest instance.
  */
 ListPresetsRequestPrivate::ListPresetsRequestPrivate(
     const ListPresetsRequestPrivate &other, ListPresetsRequest * const q)

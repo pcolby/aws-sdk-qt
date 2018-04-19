@@ -27,10 +27,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::DescribeDBClusterParametersRequest
- *
  * \brief The DescribeDBClusterParametersRequest class provides an interface for RDS DescribeDBClusterParameters requests.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -101,9 +100,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new DescribeDBClusterParametersRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeDBClusterParametersRequest::DescribeDBClusterParametersRequest(const DescribeDBClusterParametersRequest &other)
     : RDSRequest(new DescribeDBClusterParametersRequestPrivate(*other.d_func(), this))
@@ -112,7 +109,7 @@ DescribeDBClusterParametersRequest::DescribeDBClusterParametersRequest(const Des
 }
 
 /*!
- * @brief  Constructs a new DescribeDBClusterParametersRequest object.
+ * Constructs a DescribeDBClusterParametersRequest object.
  */
 DescribeDBClusterParametersRequest::DescribeDBClusterParametersRequest()
     : RDSRequest(new DescribeDBClusterParametersRequestPrivate(RDSRequest::DescribeDBClusterParametersAction, this))
@@ -130,14 +127,9 @@ bool DescribeDBClusterParametersRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeDBClusterParametersResponse object.
+ * Returns a DescribeDBClusterParametersResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeDBClusterParametersResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RDSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeDBClusterParametersRequest::response(QNetworkReply * const reply) const
 {
@@ -145,20 +137,17 @@ QtAws::Core::AwsAbstractResponse * DescribeDBClusterParametersRequest::response(
 }
 
 /*!
- * @internal
+ * \class QtAws::RDS::DescribeDBClusterParametersRequestPrivate
+ * \brief The DescribeDBClusterParametersRequestPrivate class provides private implementation for DescribeDBClusterParametersRequest.
+ * \internal
  *
- * @class  DescribeDBClusterParametersRequestPrivate
- *
- * @brief  Private implementation for DescribeDBClusterParametersRequest.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeDBClusterParametersRequestPrivate object.
- *
- * @param  action  RDS action being performed.
- * @param  q       Pointer to this object's public DescribeDBClusterParametersRequest instance.
+ * Constructs a DescribeDBClusterParametersRequestPrivate object for RDS \a action with,
+ * public implementation \a q.
  */
 DescribeDBClusterParametersRequestPrivate::DescribeDBClusterParametersRequestPrivate(
     const RDSRequest::Action action, DescribeDBClusterParametersRequest * const q)
@@ -168,15 +157,10 @@ DescribeDBClusterParametersRequestPrivate::DescribeDBClusterParametersRequestPri
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeDBClusterParametersRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeDBClusterParametersRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeDBClusterParametersRequest instance.
  */
 DescribeDBClusterParametersRequestPrivate::DescribeDBClusterParametersRequestPrivate(
     const DescribeDBClusterParametersRequestPrivate &other, DescribeDBClusterParametersRequest * const q)

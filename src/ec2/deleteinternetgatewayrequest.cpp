@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DeleteInternetGatewayRequest
- *
  * \brief The DeleteInternetGatewayRequest class provides an interface for EC2 DeleteInternetGateway requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DeleteInternetGatewayRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteInternetGatewayRequest::DeleteInternetGatewayRequest(const DeleteInternetGatewayRequest &other)
     : EC2Request(new DeleteInternetGatewayRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ DeleteInternetGatewayRequest::DeleteInternetGatewayRequest(const DeleteInternetG
 }
 
 /*!
- * @brief  Constructs a new DeleteInternetGatewayRequest object.
+ * Constructs a DeleteInternetGatewayRequest object.
  */
 DeleteInternetGatewayRequest::DeleteInternetGatewayRequest()
     : EC2Request(new DeleteInternetGatewayRequestPrivate(EC2Request::DeleteInternetGatewayAction, this))
@@ -70,14 +67,9 @@ bool DeleteInternetGatewayRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteInternetGatewayResponse object.
+ * Returns a DeleteInternetGatewayResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteInternetGatewayResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteInternetGatewayRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * DeleteInternetGatewayRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::DeleteInternetGatewayRequestPrivate
+ * \brief The DeleteInternetGatewayRequestPrivate class provides private implementation for DeleteInternetGatewayRequest.
+ * \internal
  *
- * @class  DeleteInternetGatewayRequestPrivate
- *
- * @brief  Private implementation for DeleteInternetGatewayRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteInternetGatewayRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public DeleteInternetGatewayRequest instance.
+ * Constructs a DeleteInternetGatewayRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 DeleteInternetGatewayRequestPrivate::DeleteInternetGatewayRequestPrivate(
     const EC2Request::Action action, DeleteInternetGatewayRequest * const q)
@@ -108,15 +97,10 @@ DeleteInternetGatewayRequestPrivate::DeleteInternetGatewayRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteInternetGatewayRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteInternetGatewayRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteInternetGatewayRequest instance.
  */
 DeleteInternetGatewayRequestPrivate::DeleteInternetGatewayRequestPrivate(
     const DeleteInternetGatewayRequestPrivate &other, DeleteInternetGatewayRequest * const q)

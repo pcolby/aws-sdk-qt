@@ -27,10 +27,9 @@ namespace Lightsail {
 
 /*!
  * \class QtAws::Lightsail::AttachStaticIpRequest
- *
  * \brief The AttachStaticIpRequest class provides an interface for Lightsail AttachStaticIp requests.
  *
- * \ingroup Lightsail
+ * \inmodule QtAwsLightsail
  *
  *  Amazon Lightsail is the easiest way to get started with AWS for developers who just need virtual private servers.
  *  Lightsail includes everything you need to launch your project quickly - a virtual machine, SSD-based storage, data
@@ -53,9 +52,7 @@ namespace Lightsail {
  */
 
 /*!
- * @brief  Constructs a new AttachStaticIpRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AttachStaticIpRequest::AttachStaticIpRequest(const AttachStaticIpRequest &other)
     : LightsailRequest(new AttachStaticIpRequestPrivate(*other.d_func(), this))
@@ -64,7 +61,7 @@ AttachStaticIpRequest::AttachStaticIpRequest(const AttachStaticIpRequest &other)
 }
 
 /*!
- * @brief  Constructs a new AttachStaticIpRequest object.
+ * Constructs a AttachStaticIpRequest object.
  */
 AttachStaticIpRequest::AttachStaticIpRequest()
     : LightsailRequest(new AttachStaticIpRequestPrivate(LightsailRequest::AttachStaticIpAction, this))
@@ -82,14 +79,9 @@ bool AttachStaticIpRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AttachStaticIpResponse object.
+ * Returns a AttachStaticIpResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AttachStaticIpResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  LightsailClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AttachStaticIpRequest::response(QNetworkReply * const reply) const
 {
@@ -97,20 +89,17 @@ QtAws::Core::AwsAbstractResponse * AttachStaticIpRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::Lightsail::AttachStaticIpRequestPrivate
+ * \brief The AttachStaticIpRequestPrivate class provides private implementation for AttachStaticIpRequest.
+ * \internal
  *
- * @class  AttachStaticIpRequestPrivate
- *
- * @brief  Private implementation for AttachStaticIpRequest.
+ * \inmodule QtAwsLightsail
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AttachStaticIpRequestPrivate object.
- *
- * @param  action  Lightsail action being performed.
- * @param  q       Pointer to this object's public AttachStaticIpRequest instance.
+ * Constructs a AttachStaticIpRequestPrivate object for Lightsail \a action with,
+ * public implementation \a q.
  */
 AttachStaticIpRequestPrivate::AttachStaticIpRequestPrivate(
     const LightsailRequest::Action action, AttachStaticIpRequest * const q)
@@ -120,15 +109,10 @@ AttachStaticIpRequestPrivate::AttachStaticIpRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AttachStaticIpRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AttachStaticIpRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AttachStaticIpRequest instance.
  */
 AttachStaticIpRequestPrivate::AttachStaticIpRequestPrivate(
     const AttachStaticIpRequestPrivate &other, AttachStaticIpRequest * const q)

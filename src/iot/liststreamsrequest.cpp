@@ -27,10 +27,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::ListStreamsRequest
- *
  * \brief The ListStreamsRequest class provides an interface for IoT ListStreams requests.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -48,9 +47,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new ListStreamsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListStreamsRequest::ListStreamsRequest(const ListStreamsRequest &other)
     : IoTRequest(new ListStreamsRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ ListStreamsRequest::ListStreamsRequest(const ListStreamsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ListStreamsRequest object.
+ * Constructs a ListStreamsRequest object.
  */
 ListStreamsRequest::ListStreamsRequest()
     : IoTRequest(new ListStreamsRequestPrivate(IoTRequest::ListStreamsAction, this))
@@ -77,14 +74,9 @@ bool ListStreamsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListStreamsResponse object.
+ * Returns a ListStreamsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListStreamsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IoTClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListStreamsRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * ListStreamsRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::IoT::ListStreamsRequestPrivate
+ * \brief The ListStreamsRequestPrivate class provides private implementation for ListStreamsRequest.
+ * \internal
  *
- * @class  ListStreamsRequestPrivate
- *
- * @brief  Private implementation for ListStreamsRequest.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListStreamsRequestPrivate object.
- *
- * @param  action  IoT action being performed.
- * @param  q       Pointer to this object's public ListStreamsRequest instance.
+ * Constructs a ListStreamsRequestPrivate object for IoT \a action with,
+ * public implementation \a q.
  */
 ListStreamsRequestPrivate::ListStreamsRequestPrivate(
     const IoTRequest::Action action, ListStreamsRequest * const q)
@@ -115,15 +104,10 @@ ListStreamsRequestPrivate::ListStreamsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListStreamsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListStreamsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListStreamsRequest instance.
  */
 ListStreamsRequestPrivate::ListStreamsRequestPrivate(
     const ListStreamsRequestPrivate &other, ListStreamsRequest * const q)

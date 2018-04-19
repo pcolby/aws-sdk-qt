@@ -27,10 +27,9 @@ namespace WAF {
 
 /*!
  * \class QtAws::WAF::DeletePermissionPolicyRequest
- *
  * \brief The DeletePermissionPolicyRequest class provides an interface for WAF DeletePermissionPolicy requests.
  *
- * \ingroup WAF
+ * \inmodule QtAwsWAF
  *
  *  This is the <i>AWS WAF API Reference</i> for using AWS WAF with Amazon CloudFront. The AWS WAF actions and data types
  *  listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data
@@ -42,9 +41,7 @@ namespace WAF {
  */
 
 /*!
- * @brief  Constructs a new DeletePermissionPolicyRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeletePermissionPolicyRequest::DeletePermissionPolicyRequest(const DeletePermissionPolicyRequest &other)
     : WAFRequest(new DeletePermissionPolicyRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ DeletePermissionPolicyRequest::DeletePermissionPolicyRequest(const DeletePermiss
 }
 
 /*!
- * @brief  Constructs a new DeletePermissionPolicyRequest object.
+ * Constructs a DeletePermissionPolicyRequest object.
  */
 DeletePermissionPolicyRequest::DeletePermissionPolicyRequest()
     : WAFRequest(new DeletePermissionPolicyRequestPrivate(WAFRequest::DeletePermissionPolicyAction, this))
@@ -71,14 +68,9 @@ bool DeletePermissionPolicyRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeletePermissionPolicyResponse object.
+ * Returns a DeletePermissionPolicyResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeletePermissionPolicyResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WAFClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeletePermissionPolicyRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * DeletePermissionPolicyRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::WAF::DeletePermissionPolicyRequestPrivate
+ * \brief The DeletePermissionPolicyRequestPrivate class provides private implementation for DeletePermissionPolicyRequest.
+ * \internal
  *
- * @class  DeletePermissionPolicyRequestPrivate
- *
- * @brief  Private implementation for DeletePermissionPolicyRequest.
+ * \inmodule QtAwsWAF
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeletePermissionPolicyRequestPrivate object.
- *
- * @param  action  WAF action being performed.
- * @param  q       Pointer to this object's public DeletePermissionPolicyRequest instance.
+ * Constructs a DeletePermissionPolicyRequestPrivate object for WAF \a action with,
+ * public implementation \a q.
  */
 DeletePermissionPolicyRequestPrivate::DeletePermissionPolicyRequestPrivate(
     const WAFRequest::Action action, DeletePermissionPolicyRequest * const q)
@@ -109,15 +98,10 @@ DeletePermissionPolicyRequestPrivate::DeletePermissionPolicyRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeletePermissionPolicyRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeletePermissionPolicyRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeletePermissionPolicyRequest instance.
  */
 DeletePermissionPolicyRequestPrivate::DeletePermissionPolicyRequestPrivate(
     const DeletePermissionPolicyRequestPrivate &other, DeletePermissionPolicyRequest * const q)

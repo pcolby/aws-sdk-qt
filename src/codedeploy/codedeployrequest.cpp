@@ -25,16 +25,61 @@ namespace CodeDeploy {
 
 /*!
  * \class QtAws::CodeDeploy::CodeDeployRequest
- *
  * \brief The CodeDeployRequest class provides an interface for CodeDeploy requests.
  *
- * \ingroup CodeDeploy
+ * \inmodule QtAwsCodeDeploy
  */
 
 /*!
- * @brief  Constructs a new CodeDeployRequest object.
+ * \enum CodeDeployRequest::Action
  *
- * @param  action  The CodeDeploy action to request.
+ * This enum describes the actions that can be performed as CodeDeploy
+ * requests.
+ *
+ * \value AddTagsToOnPremisesInstancesAction CodeDeploy AddTagsToOnPremisesInstances action.
+ * \value BatchGetApplicationRevisionsAction CodeDeploy BatchGetApplicationRevisions action.
+ * \value BatchGetApplicationsAction CodeDeploy BatchGetApplications action.
+ * \value BatchGetDeploymentGroupsAction CodeDeploy BatchGetDeploymentGroups action.
+ * \value BatchGetDeploymentInstancesAction CodeDeploy BatchGetDeploymentInstances action.
+ * \value BatchGetDeploymentsAction CodeDeploy BatchGetDeployments action.
+ * \value BatchGetOnPremisesInstancesAction CodeDeploy BatchGetOnPremisesInstances action.
+ * \value ContinueDeploymentAction CodeDeploy ContinueDeployment action.
+ * \value CreateApplicationAction CodeDeploy CreateApplication action.
+ * \value CreateDeploymentAction CodeDeploy CreateDeployment action.
+ * \value CreateDeploymentConfigAction CodeDeploy CreateDeploymentConfig action.
+ * \value CreateDeploymentGroupAction CodeDeploy CreateDeploymentGroup action.
+ * \value DeleteApplicationAction CodeDeploy DeleteApplication action.
+ * \value DeleteDeploymentConfigAction CodeDeploy DeleteDeploymentConfig action.
+ * \value DeleteDeploymentGroupAction CodeDeploy DeleteDeploymentGroup action.
+ * \value DeleteGitHubAccountTokenAction CodeDeploy DeleteGitHubAccountToken action.
+ * \value DeregisterOnPremisesInstanceAction CodeDeploy DeregisterOnPremisesInstance action.
+ * \value GetApplicationAction CodeDeploy GetApplication action.
+ * \value GetApplicationRevisionAction CodeDeploy GetApplicationRevision action.
+ * \value GetDeploymentAction CodeDeploy GetDeployment action.
+ * \value GetDeploymentConfigAction CodeDeploy GetDeploymentConfig action.
+ * \value GetDeploymentGroupAction CodeDeploy GetDeploymentGroup action.
+ * \value GetDeploymentInstanceAction CodeDeploy GetDeploymentInstance action.
+ * \value GetOnPremisesInstanceAction CodeDeploy GetOnPremisesInstance action.
+ * \value ListApplicationRevisionsAction CodeDeploy ListApplicationRevisions action.
+ * \value ListApplicationsAction CodeDeploy ListApplications action.
+ * \value ListDeploymentConfigsAction CodeDeploy ListDeploymentConfigs action.
+ * \value ListDeploymentGroupsAction CodeDeploy ListDeploymentGroups action.
+ * \value ListDeploymentInstancesAction CodeDeploy ListDeploymentInstances action.
+ * \value ListDeploymentsAction CodeDeploy ListDeployments action.
+ * \value ListGitHubAccountTokenNamesAction CodeDeploy ListGitHubAccountTokenNames action.
+ * \value ListOnPremisesInstancesAction CodeDeploy ListOnPremisesInstances action.
+ * \value PutLifecycleEventHookExecutionStatusAction CodeDeploy PutLifecycleEventHookExecutionStatus action.
+ * \value RegisterApplicationRevisionAction CodeDeploy RegisterApplicationRevision action.
+ * \value RegisterOnPremisesInstanceAction CodeDeploy RegisterOnPremisesInstance action.
+ * \value RemoveTagsFromOnPremisesInstancesAction CodeDeploy RemoveTagsFromOnPremisesInstances action.
+ * \value SkipWaitTimeForInstanceTerminationAction CodeDeploy SkipWaitTimeForInstanceTermination action.
+ * \value StopDeploymentAction CodeDeploy StopDeployment action.
+ * \value UpdateApplicationAction CodeDeploy UpdateApplication action.
+ * \value UpdateDeploymentGroupAction CodeDeploy UpdateDeploymentGroup action.
+ */
+
+/*!
+ * Constructs a[n] CodeDeployRequest object for CodeDeploy \a action.
  */
 CodeDeployRequest::CodeDeployRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new CodeDeployRequestPrivate(action, this))
@@ -43,9 +88,7 @@ CodeDeployRequest::CodeDeployRequest(const Action action)
 }
 
 /*!
- * @brief  Constructs a new CodeDeployRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CodeDeployRequest::CodeDeployRequest(const CodeDeployRequest &other)
     : QtAws::Core::AwsAbstractRequest(new CodeDeployRequestPrivate(*other.d_func(), this))
@@ -54,13 +97,7 @@ CodeDeployRequest::CodeDeployRequest(const CodeDeployRequest &other)
 }
 
 /*!
- * @brief  Assignment operator.
- *
- * Assigns \a other to \c this.
- *
- * @param  other  Instance to copy.
- *
- * @return  A reference to \c this.
+ * Sets the CodeDeployRequest object to be equal to \a other.
  */
 CodeDeployRequest& CodeDeployRequest::operator=(const CodeDeployRequest &other)
 {
@@ -72,14 +109,10 @@ CodeDeployRequest& CodeDeployRequest::operator=(const CodeDeployRequest &other)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CodeDeployRequest object.
+ * Constructs aa CodeDeployRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from CodeDeployRequestPrivate.
- *
- * @param  d  Pointer to private data (aka D-Pointer).
  */
 CodeDeployRequest::CodeDeployRequest(CodeDeployRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
@@ -87,7 +120,7 @@ CodeDeployRequest::CodeDeployRequest(CodeDeployRequestPrivate * const d) : QtAws
 }
 
 /*!
- * \brief Returns the CodeDeploy action to be performed by this request.
+ * Returns the CodeDeploy action to be performed by this request.
  */
 CodeDeployRequest::Action CodeDeployRequest::action() const
 {
@@ -96,7 +129,7 @@ CodeDeployRequest::Action CodeDeployRequest::action() const
 }
 
 /*!
- * \brief Returns the name of the CodeDeploy action to be performed by this request.
+ * Returns the name of the CodeDeploy action to be performed by this request.
  */
 QString CodeDeployRequest::actionString() const
 {
@@ -104,7 +137,7 @@ QString CodeDeployRequest::actionString() const
 }
 
 /*!
- * \brief Returns the CodeDeploy API version implemented by this request.
+ * Returns the CodeDeploy API version implemented by this request.
  */
 QString CodeDeployRequest::apiVersion() const
 {
@@ -113,7 +146,7 @@ QString CodeDeployRequest::apiVersion() const
 }
 
 /*!
- * @brief Set the CodeDeploy action to be performed by this request to \a action.
+ * Sets the CodeDeploy action to be performed by this request to \a action.
  */
 void CodeDeployRequest::setAction(const Action action)
 {
@@ -122,7 +155,7 @@ void CodeDeployRequest::setAction(const Action action)
 }
 
 /*!
- * Set the CodeDeploy API version to include in this request to \a version.
+ * Sets the CodeDeploy API version to include in this request to \a version.
  */
 void CodeDeployRequest::setApiVersion(const QString &version)
 {
@@ -131,7 +164,7 @@ void CodeDeployRequest::setApiVersion(const QString &version)
 }
 
 /*!
- * \brief Returns \c true if this request is the same as \a other.
+ * Returns \c true if this request is equal to \a other; \c false otherwise.
  *
  * Note, most derived *Request classes do not need to provider their own
  * implementations of this function, since most such request classes rely on
@@ -146,8 +179,8 @@ bool CodeDeployRequest::operator==(const CodeDeployRequest &other) const
             (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
-/*!
- * @brief  Check if \a queueName is a valid CodeDeploy queue name.
+/*
+ * Returns \c tue if \a queueName is a valid CodeDeploy queue name.
  *
  * @par From CodeDeploy FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
@@ -166,9 +199,8 @@ bool CodeDeployRequest::operator==(const CodeDeployRequest &other) const
 }*/
 
 /*!
- * \brief Removes the a \a name parameter from this request.
- *
- * Returns the count of paramters removed (typically \c 0 or \c 1).
+ * Removes the a \a name parameter from the request, then returns the number of
+ * paramters removed (typically \c 0 or \c 1).
  */
 int CodeDeployRequest::clearParameter(const QString &name)
 {
@@ -177,7 +209,7 @@ int CodeDeployRequest::clearParameter(const QString &name)
 }
 
 /*!
- * \brief Removes all parameters from this request.
+ * Removes all parameters from the request.
  */
 void CodeDeployRequest::clearParameters()
 {
@@ -186,7 +218,7 @@ void CodeDeployRequest::clearParameters()
 }
 
 /*!
- * \brief Returns the value of the \n name pararemter if set, otherwise \a defaultValue.
+ * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
 QVariant CodeDeployRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
@@ -195,7 +227,7 @@ QVariant CodeDeployRequest::parameter(const QString &name, const QVariant &defau
 }
 
 /*!
- * \brief Returns a map of parameters included in this request.
+ * Returns the parameters included in this request.
  */
 const QVariantMap &CodeDeployRequest::parameters() const
 {
@@ -204,7 +236,7 @@ const QVariantMap &CodeDeployRequest::parameters() const
 }
 
 /*!
- * \brief Sets the \a name parameter to \a value.
+ * Sets the \a name parameter to \a value.
  */
 void CodeDeployRequest::setParameter(const QString &name, const QVariant &value)
 {
@@ -213,9 +245,8 @@ void CodeDeployRequest::setParameter(const QString &name, const QVariant &value)
 }
 
 /*!
- * \brief Sets the map of paramters for this request to \a parameters.
- *
- * Any request parameters set previously will be discarded.
+ * Sets the paramters for this request to \a parameters. Any request parameters
+ * set previously will be discarded.
  */
 void CodeDeployRequest::setParameters(const QVariantMap &parameters)
 {
@@ -224,11 +255,12 @@ void CodeDeployRequest::setParameters(const QVariantMap &parameters)
 }
 
 /*!
- * \brief Returns a network request for this CodeDeploy request using the given \a endpoint.
+ * Returns a network request for the CodeDeploy request using the given
+ * \a endpoint.
  *
- * This CodeDeploy implementation builds request URLs by combining the common query
- * parameters (such as Action and Version), with any that have been added (via
- * setParameter) by child classes.
+ * This CodeDeploy implementation builds request URLs by combining the
+ * common query parameters (such as Action and Version), with any that have
+ * been added (via setParameter) by child classes.
  */
 QNetworkRequest CodeDeployRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -239,17 +271,16 @@ QNetworkRequest CodeDeployRequest::unsignedRequest(const QUrl &endpoint) const
 }
 
 /*!
+ * \class QtAws::CodeDeploy::CodeDeployRequestPrivate
+ * \brief The CodeDeployRequestPrivate class provides private implementation for CodeDeployRequest.
  * \internal
  *
- * \class  CodeDeployRequestPrivate
- *
- * \brief  Private implementation for CodeDeployRequest.
+ * \inmodule QtAwsCodeDeploy
  */
 
 /*!
- * \internal
- *
- * \brief Constructs a new CodeDeployRequestPrivate object.
+ * Constructs a CodeDeployRequestPrivate object for CodeDeploy \a action with,
+ * public implementation \a q.
  */
 CodeDeployRequestPrivate::CodeDeployRequestPrivate(const CodeDeployRequest::Action action, CodeDeployRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
@@ -258,9 +289,7 @@ CodeDeployRequestPrivate::CodeDeployRequestPrivate(const CodeDeployRequest::Acti
 }
 
 /*!
- * \internal
- *
- * \brief Constructs a new CodeDeployRequestPrivate object, copying an existing one.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
@@ -276,15 +305,12 @@ CodeDeployRequestPrivate::CodeDeployRequestPrivate(const CodeDeployRequestPrivat
 }
 
 /*!
- * \internal
- *
- * \brief Returns a string representing \a action.
+ * Returns a string represention of \a action, or a null string if \a action is
+ * invalid.
  *
  * This function converts CodeDeployRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the CodeDeploy service's Action
  * query parameters.
- *
- * @return A string representing \a action, or a null string if \a action is invalid.
  */
 QString CodeDeployRequestPrivate::toString(const CodeDeployRequest::Action &action)
 {

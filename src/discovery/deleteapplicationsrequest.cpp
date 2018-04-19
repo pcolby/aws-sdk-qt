@@ -27,10 +27,9 @@ namespace ApplicationDiscoveryService {
 
 /*!
  * \class QtAws::ApplicationDiscoveryService::DeleteApplicationsRequest
- *
  * \brief The DeleteApplicationsRequest class provides an interface for ApplicationDiscoveryService DeleteApplications requests.
  *
- * \ingroup ApplicationDiscoveryService
+ * \inmodule QtAwsApplicationDiscoveryService
  *
  *  <fullname>AWS Application Discovery Service</fullname>
  * 
@@ -101,9 +100,7 @@ namespace ApplicationDiscoveryService {
  */
 
 /*!
- * @brief  Constructs a new DeleteApplicationsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteApplicationsRequest::DeleteApplicationsRequest(const DeleteApplicationsRequest &other)
     : ApplicationDiscoveryServiceRequest(new DeleteApplicationsRequestPrivate(*other.d_func(), this))
@@ -112,7 +109,7 @@ DeleteApplicationsRequest::DeleteApplicationsRequest(const DeleteApplicationsReq
 }
 
 /*!
- * @brief  Constructs a new DeleteApplicationsRequest object.
+ * Constructs a DeleteApplicationsRequest object.
  */
 DeleteApplicationsRequest::DeleteApplicationsRequest()
     : ApplicationDiscoveryServiceRequest(new DeleteApplicationsRequestPrivate(ApplicationDiscoveryServiceRequest::DeleteApplicationsAction, this))
@@ -130,14 +127,9 @@ bool DeleteApplicationsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteApplicationsResponse object.
+ * Returns a DeleteApplicationsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteApplicationsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ApplicationDiscoveryServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteApplicationsRequest::response(QNetworkReply * const reply) const
 {
@@ -145,20 +137,17 @@ QtAws::Core::AwsAbstractResponse * DeleteApplicationsRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::ApplicationDiscoveryService::DeleteApplicationsRequestPrivate
+ * \brief The DeleteApplicationsRequestPrivate class provides private implementation for DeleteApplicationsRequest.
+ * \internal
  *
- * @class  DeleteApplicationsRequestPrivate
- *
- * @brief  Private implementation for DeleteApplicationsRequest.
+ * \inmodule QtAwsApplicationDiscoveryService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteApplicationsRequestPrivate object.
- *
- * @param  action  ApplicationDiscoveryService action being performed.
- * @param  q       Pointer to this object's public DeleteApplicationsRequest instance.
+ * Constructs a DeleteApplicationsRequestPrivate object for ApplicationDiscoveryService \a action with,
+ * public implementation \a q.
  */
 DeleteApplicationsRequestPrivate::DeleteApplicationsRequestPrivate(
     const ApplicationDiscoveryServiceRequest::Action action, DeleteApplicationsRequest * const q)
@@ -168,15 +157,10 @@ DeleteApplicationsRequestPrivate::DeleteApplicationsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteApplicationsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteApplicationsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteApplicationsRequest instance.
  */
 DeleteApplicationsRequestPrivate::DeleteApplicationsRequestPrivate(
     const DeleteApplicationsRequestPrivate &other, DeleteApplicationsRequest * const q)

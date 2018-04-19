@@ -27,10 +27,9 @@ namespace ElasticTranscoder {
 
 /*!
  * \class QtAws::ElasticTranscoder::ReadJobRequest
- *
  * \brief The ReadJobRequest class provides an interface for ElasticTranscoder ReadJob requests.
  *
- * \ingroup ElasticTranscoder
+ * \inmodule QtAwsElasticTranscoder
  *
  *  <fullname>AWS Elastic Transcoder Service</fullname>
  * 
@@ -40,9 +39,7 @@ namespace ElasticTranscoder {
  */
 
 /*!
- * @brief  Constructs a new ReadJobRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ReadJobRequest::ReadJobRequest(const ReadJobRequest &other)
     : ElasticTranscoderRequest(new ReadJobRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ ReadJobRequest::ReadJobRequest(const ReadJobRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ReadJobRequest object.
+ * Constructs a ReadJobRequest object.
  */
 ReadJobRequest::ReadJobRequest()
     : ElasticTranscoderRequest(new ReadJobRequestPrivate(ElasticTranscoderRequest::ReadJobAction, this))
@@ -69,14 +66,9 @@ bool ReadJobRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ReadJobResponse object.
+ * Returns a ReadJobResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ReadJobResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ElasticTranscoderClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ReadJobRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * ReadJobRequest::response(QNetworkReply * cons
 }
 
 /*!
- * @internal
+ * \class QtAws::ElasticTranscoder::ReadJobRequestPrivate
+ * \brief The ReadJobRequestPrivate class provides private implementation for ReadJobRequest.
+ * \internal
  *
- * @class  ReadJobRequestPrivate
- *
- * @brief  Private implementation for ReadJobRequest.
+ * \inmodule QtAwsElasticTranscoder
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ReadJobRequestPrivate object.
- *
- * @param  action  ElasticTranscoder action being performed.
- * @param  q       Pointer to this object's public ReadJobRequest instance.
+ * Constructs a ReadJobRequestPrivate object for ElasticTranscoder \a action with,
+ * public implementation \a q.
  */
 ReadJobRequestPrivate::ReadJobRequestPrivate(
     const ElasticTranscoderRequest::Action action, ReadJobRequest * const q)
@@ -107,15 +96,10 @@ ReadJobRequestPrivate::ReadJobRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ReadJobRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ReadJobRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ReadJobRequest instance.
  */
 ReadJobRequestPrivate::ReadJobRequestPrivate(
     const ReadJobRequestPrivate &other, ReadJobRequest * const q)

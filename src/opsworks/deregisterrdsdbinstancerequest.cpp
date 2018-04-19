@@ -27,10 +27,9 @@ namespace OpsWorks {
 
 /*!
  * \class QtAws::OpsWorks::DeregisterRdsDbInstanceRequest
- *
  * \brief The DeregisterRdsDbInstanceRequest class provides an interface for OpsWorks DeregisterRdsDbInstance requests.
  *
- * \ingroup OpsWorks
+ * \inmodule QtAwsOpsWorks
  *
  *  <fullname>AWS OpsWorks</fullname>
  * 
@@ -143,9 +142,7 @@ namespace OpsWorks {
  */
 
 /*!
- * @brief  Constructs a new DeregisterRdsDbInstanceRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeregisterRdsDbInstanceRequest::DeregisterRdsDbInstanceRequest(const DeregisterRdsDbInstanceRequest &other)
     : OpsWorksRequest(new DeregisterRdsDbInstanceRequestPrivate(*other.d_func(), this))
@@ -154,7 +151,7 @@ DeregisterRdsDbInstanceRequest::DeregisterRdsDbInstanceRequest(const DeregisterR
 }
 
 /*!
- * @brief  Constructs a new DeregisterRdsDbInstanceRequest object.
+ * Constructs a DeregisterRdsDbInstanceRequest object.
  */
 DeregisterRdsDbInstanceRequest::DeregisterRdsDbInstanceRequest()
     : OpsWorksRequest(new DeregisterRdsDbInstanceRequestPrivate(OpsWorksRequest::DeregisterRdsDbInstanceAction, this))
@@ -172,14 +169,9 @@ bool DeregisterRdsDbInstanceRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeregisterRdsDbInstanceResponse object.
+ * Returns a DeregisterRdsDbInstanceResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeregisterRdsDbInstanceResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  OpsWorksClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeregisterRdsDbInstanceRequest::response(QNetworkReply * const reply) const
 {
@@ -187,20 +179,17 @@ QtAws::Core::AwsAbstractResponse * DeregisterRdsDbInstanceRequest::response(QNet
 }
 
 /*!
- * @internal
+ * \class QtAws::OpsWorks::DeregisterRdsDbInstanceRequestPrivate
+ * \brief The DeregisterRdsDbInstanceRequestPrivate class provides private implementation for DeregisterRdsDbInstanceRequest.
+ * \internal
  *
- * @class  DeregisterRdsDbInstanceRequestPrivate
- *
- * @brief  Private implementation for DeregisterRdsDbInstanceRequest.
+ * \inmodule QtAwsOpsWorks
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeregisterRdsDbInstanceRequestPrivate object.
- *
- * @param  action  OpsWorks action being performed.
- * @param  q       Pointer to this object's public DeregisterRdsDbInstanceRequest instance.
+ * Constructs a DeregisterRdsDbInstanceRequestPrivate object for OpsWorks \a action with,
+ * public implementation \a q.
  */
 DeregisterRdsDbInstanceRequestPrivate::DeregisterRdsDbInstanceRequestPrivate(
     const OpsWorksRequest::Action action, DeregisterRdsDbInstanceRequest * const q)
@@ -210,15 +199,10 @@ DeregisterRdsDbInstanceRequestPrivate::DeregisterRdsDbInstanceRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeregisterRdsDbInstanceRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeregisterRdsDbInstanceRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeregisterRdsDbInstanceRequest instance.
  */
 DeregisterRdsDbInstanceRequestPrivate::DeregisterRdsDbInstanceRequestPrivate(
     const DeregisterRdsDbInstanceRequestPrivate &other, DeregisterRdsDbInstanceRequest * const q)

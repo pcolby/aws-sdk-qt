@@ -27,10 +27,9 @@ namespace Mobile {
 
 /*!
  * \class QtAws::Mobile::ExportProjectRequest
- *
  * \brief The ExportProjectRequest class provides an interface for Mobile ExportProject requests.
  *
- * \ingroup Mobile
+ * \inmodule QtAwsMobile
  *
  *  AWS Mobile Service provides mobile app and website developers with capabilities required to configure AWS resources and
  *  bootstrap their developer desktop projects with the necessary SDKs, constants, tools and samples to make use of those
@@ -40,9 +39,7 @@ namespace Mobile {
  */
 
 /*!
- * @brief  Constructs a new ExportProjectRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ExportProjectRequest::ExportProjectRequest(const ExportProjectRequest &other)
     : MobileRequest(new ExportProjectRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ ExportProjectRequest::ExportProjectRequest(const ExportProjectRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ExportProjectRequest object.
+ * Constructs a ExportProjectRequest object.
  */
 ExportProjectRequest::ExportProjectRequest()
     : MobileRequest(new ExportProjectRequestPrivate(MobileRequest::ExportProjectAction, this))
@@ -69,14 +66,9 @@ bool ExportProjectRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ExportProjectResponse object.
+ * Returns a ExportProjectResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ExportProjectResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MobileClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ExportProjectRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * ExportProjectRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::Mobile::ExportProjectRequestPrivate
+ * \brief The ExportProjectRequestPrivate class provides private implementation for ExportProjectRequest.
+ * \internal
  *
- * @class  ExportProjectRequestPrivate
- *
- * @brief  Private implementation for ExportProjectRequest.
+ * \inmodule QtAwsMobile
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ExportProjectRequestPrivate object.
- *
- * @param  action  Mobile action being performed.
- * @param  q       Pointer to this object's public ExportProjectRequest instance.
+ * Constructs a ExportProjectRequestPrivate object for Mobile \a action with,
+ * public implementation \a q.
  */
 ExportProjectRequestPrivate::ExportProjectRequestPrivate(
     const MobileRequest::Action action, ExportProjectRequest * const q)
@@ -107,15 +96,10 @@ ExportProjectRequestPrivate::ExportProjectRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ExportProjectRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ExportProjectRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ExportProjectRequest instance.
  */
 ExportProjectRequestPrivate::ExportProjectRequestPrivate(
     const ExportProjectRequestPrivate &other, ExportProjectRequest * const q)

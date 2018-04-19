@@ -27,10 +27,9 @@ namespace ElastiCache {
 
 /*!
  * \class QtAws::ElastiCache::CopySnapshotRequest
- *
  * \brief The CopySnapshotRequest class provides an interface for ElastiCache CopySnapshot requests.
  *
- * \ingroup ElastiCache
+ * \inmodule QtAwsElastiCache
  *
  *  <fullname>Amazon ElastiCache</fullname>
  * 
@@ -51,9 +50,7 @@ namespace ElastiCache {
  */
 
 /*!
- * @brief  Constructs a new CopySnapshotRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CopySnapshotRequest::CopySnapshotRequest(const CopySnapshotRequest &other)
     : ElastiCacheRequest(new CopySnapshotRequestPrivate(*other.d_func(), this))
@@ -62,7 +59,7 @@ CopySnapshotRequest::CopySnapshotRequest(const CopySnapshotRequest &other)
 }
 
 /*!
- * @brief  Constructs a new CopySnapshotRequest object.
+ * Constructs a CopySnapshotRequest object.
  */
 CopySnapshotRequest::CopySnapshotRequest()
     : ElastiCacheRequest(new CopySnapshotRequestPrivate(ElastiCacheRequest::CopySnapshotAction, this))
@@ -80,14 +77,9 @@ bool CopySnapshotRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CopySnapshotResponse object.
+ * Returns a CopySnapshotResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CopySnapshotResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ElastiCacheClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CopySnapshotRequest::response(QNetworkReply * const reply) const
 {
@@ -95,20 +87,17 @@ QtAws::Core::AwsAbstractResponse * CopySnapshotRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::ElastiCache::CopySnapshotRequestPrivate
+ * \brief The CopySnapshotRequestPrivate class provides private implementation for CopySnapshotRequest.
+ * \internal
  *
- * @class  CopySnapshotRequestPrivate
- *
- * @brief  Private implementation for CopySnapshotRequest.
+ * \inmodule QtAwsElastiCache
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CopySnapshotRequestPrivate object.
- *
- * @param  action  ElastiCache action being performed.
- * @param  q       Pointer to this object's public CopySnapshotRequest instance.
+ * Constructs a CopySnapshotRequestPrivate object for ElastiCache \a action with,
+ * public implementation \a q.
  */
 CopySnapshotRequestPrivate::CopySnapshotRequestPrivate(
     const ElastiCacheRequest::Action action, CopySnapshotRequest * const q)
@@ -118,15 +107,10 @@ CopySnapshotRequestPrivate::CopySnapshotRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CopySnapshotRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CopySnapshotRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CopySnapshotRequest instance.
  */
 CopySnapshotRequestPrivate::CopySnapshotRequestPrivate(
     const CopySnapshotRequestPrivate &other, CopySnapshotRequest * const q)

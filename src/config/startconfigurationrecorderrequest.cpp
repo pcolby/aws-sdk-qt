@@ -27,10 +27,9 @@ namespace ConfigService {
 
 /*!
  * \class QtAws::ConfigService::StartConfigurationRecorderRequest
- *
  * \brief The StartConfigurationRecorderRequest class provides an interface for ConfigService StartConfigurationRecorder requests.
  *
- * \ingroup ConfigService
+ * \inmodule QtAwsConfigService
  *
  *  <fullname>AWS Config</fullname>
  * 
@@ -60,9 +59,7 @@ namespace ConfigService {
  */
 
 /*!
- * @brief  Constructs a new StartConfigurationRecorderRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 StartConfigurationRecorderRequest::StartConfigurationRecorderRequest(const StartConfigurationRecorderRequest &other)
     : ConfigServiceRequest(new StartConfigurationRecorderRequestPrivate(*other.d_func(), this))
@@ -71,7 +68,7 @@ StartConfigurationRecorderRequest::StartConfigurationRecorderRequest(const Start
 }
 
 /*!
- * @brief  Constructs a new StartConfigurationRecorderRequest object.
+ * Constructs a StartConfigurationRecorderRequest object.
  */
 StartConfigurationRecorderRequest::StartConfigurationRecorderRequest()
     : ConfigServiceRequest(new StartConfigurationRecorderRequestPrivate(ConfigServiceRequest::StartConfigurationRecorderAction, this))
@@ -89,14 +86,9 @@ bool StartConfigurationRecorderRequest::isValid() const
 
 
 /*!
- * @brief  Construct an StartConfigurationRecorderResponse object.
+ * Returns a StartConfigurationRecorderResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An StartConfigurationRecorderResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ConfigServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * StartConfigurationRecorderRequest::response(QNetworkReply * const reply) const
 {
@@ -104,20 +96,17 @@ QtAws::Core::AwsAbstractResponse * StartConfigurationRecorderRequest::response(Q
 }
 
 /*!
- * @internal
+ * \class QtAws::ConfigService::StartConfigurationRecorderRequestPrivate
+ * \brief The StartConfigurationRecorderRequestPrivate class provides private implementation for StartConfigurationRecorderRequest.
+ * \internal
  *
- * @class  StartConfigurationRecorderRequestPrivate
- *
- * @brief  Private implementation for StartConfigurationRecorderRequest.
+ * \inmodule QtAwsConfigService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new StartConfigurationRecorderRequestPrivate object.
- *
- * @param  action  ConfigService action being performed.
- * @param  q       Pointer to this object's public StartConfigurationRecorderRequest instance.
+ * Constructs a StartConfigurationRecorderRequestPrivate object for ConfigService \a action with,
+ * public implementation \a q.
  */
 StartConfigurationRecorderRequestPrivate::StartConfigurationRecorderRequestPrivate(
     const ConfigServiceRequest::Action action, StartConfigurationRecorderRequest * const q)
@@ -127,15 +116,10 @@ StartConfigurationRecorderRequestPrivate::StartConfigurationRecorderRequestPriva
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StartConfigurationRecorderRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the StartConfigurationRecorderRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public StartConfigurationRecorderRequest instance.
  */
 StartConfigurationRecorderRequestPrivate::StartConfigurationRecorderRequestPrivate(
     const StartConfigurationRecorderRequestPrivate &other, StartConfigurationRecorderRequest * const q)

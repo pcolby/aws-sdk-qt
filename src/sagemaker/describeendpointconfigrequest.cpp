@@ -27,19 +27,16 @@ namespace SageMaker {
 
 /*!
  * \class QtAws::SageMaker::DescribeEndpointConfigRequest
- *
  * \brief The DescribeEndpointConfigRequest class provides an interface for SageMaker DescribeEndpointConfig requests.
  *
- * \ingroup SageMaker
+ * \inmodule QtAwsSageMaker
  *
  *
  * \sa SageMakerClient::describeEndpointConfig
  */
 
 /*!
- * @brief  Constructs a new DescribeEndpointConfigRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeEndpointConfigRequest::DescribeEndpointConfigRequest(const DescribeEndpointConfigRequest &other)
     : SageMakerRequest(new DescribeEndpointConfigRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ DescribeEndpointConfigRequest::DescribeEndpointConfigRequest(const DescribeEndpo
 }
 
 /*!
- * @brief  Constructs a new DescribeEndpointConfigRequest object.
+ * Constructs a DescribeEndpointConfigRequest object.
  */
 DescribeEndpointConfigRequest::DescribeEndpointConfigRequest()
     : SageMakerRequest(new DescribeEndpointConfigRequestPrivate(SageMakerRequest::DescribeEndpointConfigAction, this))
@@ -66,14 +63,9 @@ bool DescribeEndpointConfigRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeEndpointConfigResponse object.
+ * Returns a DescribeEndpointConfigResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeEndpointConfigResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SageMakerClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeEndpointConfigRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * DescribeEndpointConfigRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::SageMaker::DescribeEndpointConfigRequestPrivate
+ * \brief The DescribeEndpointConfigRequestPrivate class provides private implementation for DescribeEndpointConfigRequest.
+ * \internal
  *
- * @class  DescribeEndpointConfigRequestPrivate
- *
- * @brief  Private implementation for DescribeEndpointConfigRequest.
+ * \inmodule QtAwsSageMaker
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeEndpointConfigRequestPrivate object.
- *
- * @param  action  SageMaker action being performed.
- * @param  q       Pointer to this object's public DescribeEndpointConfigRequest instance.
+ * Constructs a DescribeEndpointConfigRequestPrivate object for SageMaker \a action with,
+ * public implementation \a q.
  */
 DescribeEndpointConfigRequestPrivate::DescribeEndpointConfigRequestPrivate(
     const SageMakerRequest::Action action, DescribeEndpointConfigRequest * const q)
@@ -104,15 +93,10 @@ DescribeEndpointConfigRequestPrivate::DescribeEndpointConfigRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeEndpointConfigRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeEndpointConfigRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeEndpointConfigRequest instance.
  */
 DescribeEndpointConfigRequestPrivate::DescribeEndpointConfigRequestPrivate(
     const DescribeEndpointConfigRequestPrivate &other, DescribeEndpointConfigRequest * const q)

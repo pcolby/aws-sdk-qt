@@ -27,10 +27,9 @@ namespace KMS {
 
 /*!
  * \class QtAws::KMS::GenerateRandomRequest
- *
  * \brief The GenerateRandomRequest class provides an interface for KMS GenerateRandom requests.
  *
- * \ingroup KMS
+ * \inmodule QtAwsKMS
  *
  *  <fullname>AWS Key Management Service</fullname>
  * 
@@ -136,9 +135,7 @@ namespace KMS {
  */
 
 /*!
- * @brief  Constructs a new GenerateRandomRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GenerateRandomRequest::GenerateRandomRequest(const GenerateRandomRequest &other)
     : KMSRequest(new GenerateRandomRequestPrivate(*other.d_func(), this))
@@ -147,7 +144,7 @@ GenerateRandomRequest::GenerateRandomRequest(const GenerateRandomRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GenerateRandomRequest object.
+ * Constructs a GenerateRandomRequest object.
  */
 GenerateRandomRequest::GenerateRandomRequest()
     : KMSRequest(new GenerateRandomRequestPrivate(KMSRequest::GenerateRandomAction, this))
@@ -165,14 +162,9 @@ bool GenerateRandomRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GenerateRandomResponse object.
+ * Returns a GenerateRandomResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GenerateRandomResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  KMSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GenerateRandomRequest::response(QNetworkReply * const reply) const
 {
@@ -180,20 +172,17 @@ QtAws::Core::AwsAbstractResponse * GenerateRandomRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::KMS::GenerateRandomRequestPrivate
+ * \brief The GenerateRandomRequestPrivate class provides private implementation for GenerateRandomRequest.
+ * \internal
  *
- * @class  GenerateRandomRequestPrivate
- *
- * @brief  Private implementation for GenerateRandomRequest.
+ * \inmodule QtAwsKMS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GenerateRandomRequestPrivate object.
- *
- * @param  action  KMS action being performed.
- * @param  q       Pointer to this object's public GenerateRandomRequest instance.
+ * Constructs a GenerateRandomRequestPrivate object for KMS \a action with,
+ * public implementation \a q.
  */
 GenerateRandomRequestPrivate::GenerateRandomRequestPrivate(
     const KMSRequest::Action action, GenerateRandomRequest * const q)
@@ -203,15 +192,10 @@ GenerateRandomRequestPrivate::GenerateRandomRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GenerateRandomRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GenerateRandomRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GenerateRandomRequest instance.
  */
 GenerateRandomRequestPrivate::GenerateRandomRequestPrivate(
     const GenerateRandomRequestPrivate &other, GenerateRandomRequest * const q)

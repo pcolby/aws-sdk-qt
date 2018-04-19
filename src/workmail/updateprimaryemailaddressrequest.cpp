@@ -27,10 +27,9 @@ namespace WorkMail {
 
 /*!
  * \class QtAws::WorkMail::UpdatePrimaryEmailAddressRequest
- *
  * \brief The UpdatePrimaryEmailAddressRequest class provides an interface for WorkMail UpdatePrimaryEmailAddress requests.
  *
- * \ingroup WorkMail
+ * \inmodule QtAwsWorkMail
  *
  *  Amazon WorkMail is a secure, managed business email and calendaring service with support for existing desktop and mobile
  *  email clients. You can access your email, contacts, and calendars using Microsoft Outlook, your browser, or their native
@@ -70,9 +69,7 @@ namespace WorkMail {
  */
 
 /*!
- * @brief  Constructs a new UpdatePrimaryEmailAddressRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdatePrimaryEmailAddressRequest::UpdatePrimaryEmailAddressRequest(const UpdatePrimaryEmailAddressRequest &other)
     : WorkMailRequest(new UpdatePrimaryEmailAddressRequestPrivate(*other.d_func(), this))
@@ -81,7 +78,7 @@ UpdatePrimaryEmailAddressRequest::UpdatePrimaryEmailAddressRequest(const UpdateP
 }
 
 /*!
- * @brief  Constructs a new UpdatePrimaryEmailAddressRequest object.
+ * Constructs a UpdatePrimaryEmailAddressRequest object.
  */
 UpdatePrimaryEmailAddressRequest::UpdatePrimaryEmailAddressRequest()
     : WorkMailRequest(new UpdatePrimaryEmailAddressRequestPrivate(WorkMailRequest::UpdatePrimaryEmailAddressAction, this))
@@ -99,14 +96,9 @@ bool UpdatePrimaryEmailAddressRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdatePrimaryEmailAddressResponse object.
+ * Returns a UpdatePrimaryEmailAddressResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdatePrimaryEmailAddressResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WorkMailClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdatePrimaryEmailAddressRequest::response(QNetworkReply * const reply) const
 {
@@ -114,20 +106,17 @@ QtAws::Core::AwsAbstractResponse * UpdatePrimaryEmailAddressRequest::response(QN
 }
 
 /*!
- * @internal
+ * \class QtAws::WorkMail::UpdatePrimaryEmailAddressRequestPrivate
+ * \brief The UpdatePrimaryEmailAddressRequestPrivate class provides private implementation for UpdatePrimaryEmailAddressRequest.
+ * \internal
  *
- * @class  UpdatePrimaryEmailAddressRequestPrivate
- *
- * @brief  Private implementation for UpdatePrimaryEmailAddressRequest.
+ * \inmodule QtAwsWorkMail
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdatePrimaryEmailAddressRequestPrivate object.
- *
- * @param  action  WorkMail action being performed.
- * @param  q       Pointer to this object's public UpdatePrimaryEmailAddressRequest instance.
+ * Constructs a UpdatePrimaryEmailAddressRequestPrivate object for WorkMail \a action with,
+ * public implementation \a q.
  */
 UpdatePrimaryEmailAddressRequestPrivate::UpdatePrimaryEmailAddressRequestPrivate(
     const WorkMailRequest::Action action, UpdatePrimaryEmailAddressRequest * const q)
@@ -137,15 +126,10 @@ UpdatePrimaryEmailAddressRequestPrivate::UpdatePrimaryEmailAddressRequestPrivate
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdatePrimaryEmailAddressRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdatePrimaryEmailAddressRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdatePrimaryEmailAddressRequest instance.
  */
 UpdatePrimaryEmailAddressRequestPrivate::UpdatePrimaryEmailAddressRequestPrivate(
     const UpdatePrimaryEmailAddressRequestPrivate &other, UpdatePrimaryEmailAddressRequest * const q)

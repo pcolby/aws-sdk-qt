@@ -27,10 +27,9 @@ namespace Glue {
 
 /*!
  * \class QtAws::Glue::StopCrawlerRequest
- *
  * \brief The StopCrawlerRequest class provides an interface for Glue StopCrawler requests.
  *
- * \ingroup Glue
+ * \inmodule QtAwsGlue
  *
  *  <fullname>AWS Glue</fullname>
  * 
@@ -40,9 +39,7 @@ namespace Glue {
  */
 
 /*!
- * @brief  Constructs a new StopCrawlerRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 StopCrawlerRequest::StopCrawlerRequest(const StopCrawlerRequest &other)
     : GlueRequest(new StopCrawlerRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ StopCrawlerRequest::StopCrawlerRequest(const StopCrawlerRequest &other)
 }
 
 /*!
- * @brief  Constructs a new StopCrawlerRequest object.
+ * Constructs a StopCrawlerRequest object.
  */
 StopCrawlerRequest::StopCrawlerRequest()
     : GlueRequest(new StopCrawlerRequestPrivate(GlueRequest::StopCrawlerAction, this))
@@ -69,14 +66,9 @@ bool StopCrawlerRequest::isValid() const
 
 
 /*!
- * @brief  Construct an StopCrawlerResponse object.
+ * Returns a StopCrawlerResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An StopCrawlerResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GlueClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * StopCrawlerRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * StopCrawlerRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::Glue::StopCrawlerRequestPrivate
+ * \brief The StopCrawlerRequestPrivate class provides private implementation for StopCrawlerRequest.
+ * \internal
  *
- * @class  StopCrawlerRequestPrivate
- *
- * @brief  Private implementation for StopCrawlerRequest.
+ * \inmodule QtAwsGlue
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new StopCrawlerRequestPrivate object.
- *
- * @param  action  Glue action being performed.
- * @param  q       Pointer to this object's public StopCrawlerRequest instance.
+ * Constructs a StopCrawlerRequestPrivate object for Glue \a action with,
+ * public implementation \a q.
  */
 StopCrawlerRequestPrivate::StopCrawlerRequestPrivate(
     const GlueRequest::Action action, StopCrawlerRequest * const q)
@@ -107,15 +96,10 @@ StopCrawlerRequestPrivate::StopCrawlerRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StopCrawlerRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the StopCrawlerRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public StopCrawlerRequest instance.
  */
 StopCrawlerRequestPrivate::StopCrawlerRequestPrivate(
     const StopCrawlerRequestPrivate &other, StopCrawlerRequest * const q)

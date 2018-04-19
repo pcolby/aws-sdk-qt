@@ -27,10 +27,9 @@ namespace SFN {
 
 /*!
  * \class QtAws::SFN::ListExecutionsRequest
- *
  * \brief The ListExecutionsRequest class provides an interface for SFN ListExecutions requests.
  *
- * \ingroup SFN
+ * \inmodule QtAwsSFN
  *
  *  <fullname>AWS Step Functions</fullname>
  * 
@@ -56,9 +55,7 @@ namespace SFN {
  */
 
 /*!
- * @brief  Constructs a new ListExecutionsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListExecutionsRequest::ListExecutionsRequest(const ListExecutionsRequest &other)
     : SFNRequest(new ListExecutionsRequestPrivate(*other.d_func(), this))
@@ -67,7 +64,7 @@ ListExecutionsRequest::ListExecutionsRequest(const ListExecutionsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ListExecutionsRequest object.
+ * Constructs a ListExecutionsRequest object.
  */
 ListExecutionsRequest::ListExecutionsRequest()
     : SFNRequest(new ListExecutionsRequestPrivate(SFNRequest::ListExecutionsAction, this))
@@ -85,14 +82,9 @@ bool ListExecutionsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListExecutionsResponse object.
+ * Returns a ListExecutionsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListExecutionsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SFNClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListExecutionsRequest::response(QNetworkReply * const reply) const
 {
@@ -100,20 +92,17 @@ QtAws::Core::AwsAbstractResponse * ListExecutionsRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::SFN::ListExecutionsRequestPrivate
+ * \brief The ListExecutionsRequestPrivate class provides private implementation for ListExecutionsRequest.
+ * \internal
  *
- * @class  ListExecutionsRequestPrivate
- *
- * @brief  Private implementation for ListExecutionsRequest.
+ * \inmodule QtAwsSFN
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListExecutionsRequestPrivate object.
- *
- * @param  action  SFN action being performed.
- * @param  q       Pointer to this object's public ListExecutionsRequest instance.
+ * Constructs a ListExecutionsRequestPrivate object for SFN \a action with,
+ * public implementation \a q.
  */
 ListExecutionsRequestPrivate::ListExecutionsRequestPrivate(
     const SFNRequest::Action action, ListExecutionsRequest * const q)
@@ -123,15 +112,10 @@ ListExecutionsRequestPrivate::ListExecutionsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListExecutionsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListExecutionsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListExecutionsRequest instance.
  */
 ListExecutionsRequestPrivate::ListExecutionsRequestPrivate(
     const ListExecutionsRequestPrivate &other, ListExecutionsRequest * const q)

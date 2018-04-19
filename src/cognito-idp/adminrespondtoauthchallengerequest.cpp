@@ -27,10 +27,9 @@ namespace CognitoIdentityProvider {
 
 /*!
  * \class QtAws::CognitoIdentityProvider::AdminRespondToAuthChallengeRequest
- *
  * \brief The AdminRespondToAuthChallengeRequest class provides an interface for CognitoIdentityProvider AdminRespondToAuthChallenge requests.
  *
- * \ingroup CognitoIdentityProvider
+ * \inmodule QtAwsCognitoIdentityProvider
  *
  *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
  *  authenticate a user to obtain tokens related to user identity and access
@@ -47,9 +46,7 @@ namespace CognitoIdentityProvider {
  */
 
 /*!
- * @brief  Constructs a new AdminRespondToAuthChallengeRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AdminRespondToAuthChallengeRequest::AdminRespondToAuthChallengeRequest(const AdminRespondToAuthChallengeRequest &other)
     : CognitoIdentityProviderRequest(new AdminRespondToAuthChallengeRequestPrivate(*other.d_func(), this))
@@ -58,7 +55,7 @@ AdminRespondToAuthChallengeRequest::AdminRespondToAuthChallengeRequest(const Adm
 }
 
 /*!
- * @brief  Constructs a new AdminRespondToAuthChallengeRequest object.
+ * Constructs a AdminRespondToAuthChallengeRequest object.
  */
 AdminRespondToAuthChallengeRequest::AdminRespondToAuthChallengeRequest()
     : CognitoIdentityProviderRequest(new AdminRespondToAuthChallengeRequestPrivate(CognitoIdentityProviderRequest::AdminRespondToAuthChallengeAction, this))
@@ -76,14 +73,9 @@ bool AdminRespondToAuthChallengeRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AdminRespondToAuthChallengeResponse object.
+ * Returns a AdminRespondToAuthChallengeResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AdminRespondToAuthChallengeResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CognitoIdentityProviderClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AdminRespondToAuthChallengeRequest::response(QNetworkReply * const reply) const
 {
@@ -91,20 +83,17 @@ QtAws::Core::AwsAbstractResponse * AdminRespondToAuthChallengeRequest::response(
 }
 
 /*!
- * @internal
+ * \class QtAws::CognitoIdentityProvider::AdminRespondToAuthChallengeRequestPrivate
+ * \brief The AdminRespondToAuthChallengeRequestPrivate class provides private implementation for AdminRespondToAuthChallengeRequest.
+ * \internal
  *
- * @class  AdminRespondToAuthChallengeRequestPrivate
- *
- * @brief  Private implementation for AdminRespondToAuthChallengeRequest.
+ * \inmodule QtAwsCognitoIdentityProvider
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AdminRespondToAuthChallengeRequestPrivate object.
- *
- * @param  action  CognitoIdentityProvider action being performed.
- * @param  q       Pointer to this object's public AdminRespondToAuthChallengeRequest instance.
+ * Constructs a AdminRespondToAuthChallengeRequestPrivate object for CognitoIdentityProvider \a action with,
+ * public implementation \a q.
  */
 AdminRespondToAuthChallengeRequestPrivate::AdminRespondToAuthChallengeRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, AdminRespondToAuthChallengeRequest * const q)
@@ -114,15 +103,10 @@ AdminRespondToAuthChallengeRequestPrivate::AdminRespondToAuthChallengeRequestPri
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AdminRespondToAuthChallengeRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AdminRespondToAuthChallengeRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AdminRespondToAuthChallengeRequest instance.
  */
 AdminRespondToAuthChallengeRequestPrivate::AdminRespondToAuthChallengeRequestPrivate(
     const AdminRespondToAuthChallengeRequestPrivate &other, AdminRespondToAuthChallengeRequest * const q)

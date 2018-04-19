@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::GetHostReservationPurchasePreviewRequest
- *
  * \brief The GetHostReservationPurchasePreviewRequest class provides an interface for EC2 GetHostReservationPurchasePreview requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new GetHostReservationPurchasePreviewRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetHostReservationPurchasePreviewRequest::GetHostReservationPurchasePreviewRequest(const GetHostReservationPurchasePreviewRequest &other)
     : EC2Request(new GetHostReservationPurchasePreviewRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ GetHostReservationPurchasePreviewRequest::GetHostReservationPurchasePreviewReque
 }
 
 /*!
- * @brief  Constructs a new GetHostReservationPurchasePreviewRequest object.
+ * Constructs a GetHostReservationPurchasePreviewRequest object.
  */
 GetHostReservationPurchasePreviewRequest::GetHostReservationPurchasePreviewRequest()
     : EC2Request(new GetHostReservationPurchasePreviewRequestPrivate(EC2Request::GetHostReservationPurchasePreviewAction, this))
@@ -70,14 +67,9 @@ bool GetHostReservationPurchasePreviewRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetHostReservationPurchasePreviewResponse object.
+ * Returns a GetHostReservationPurchasePreviewResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetHostReservationPurchasePreviewResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetHostReservationPurchasePreviewRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * GetHostReservationPurchasePreviewRequest::res
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::GetHostReservationPurchasePreviewRequestPrivate
+ * \brief The GetHostReservationPurchasePreviewRequestPrivate class provides private implementation for GetHostReservationPurchasePreviewRequest.
+ * \internal
  *
- * @class  GetHostReservationPurchasePreviewRequestPrivate
- *
- * @brief  Private implementation for GetHostReservationPurchasePreviewRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetHostReservationPurchasePreviewRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public GetHostReservationPurchasePreviewRequest instance.
+ * Constructs a GetHostReservationPurchasePreviewRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 GetHostReservationPurchasePreviewRequestPrivate::GetHostReservationPurchasePreviewRequestPrivate(
     const EC2Request::Action action, GetHostReservationPurchasePreviewRequest * const q)
@@ -108,15 +97,10 @@ GetHostReservationPurchasePreviewRequestPrivate::GetHostReservationPurchasePrevi
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetHostReservationPurchasePreviewRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetHostReservationPurchasePreviewRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetHostReservationPurchasePreviewRequest instance.
  */
 GetHostReservationPurchasePreviewRequestPrivate::GetHostReservationPurchasePreviewRequestPrivate(
     const GetHostReservationPurchasePreviewRequestPrivate &other, GetHostReservationPurchasePreviewRequest * const q)

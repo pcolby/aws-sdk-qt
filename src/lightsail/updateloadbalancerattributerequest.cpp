@@ -27,10 +27,9 @@ namespace Lightsail {
 
 /*!
  * \class QtAws::Lightsail::UpdateLoadBalancerAttributeRequest
- *
  * \brief The UpdateLoadBalancerAttributeRequest class provides an interface for Lightsail UpdateLoadBalancerAttribute requests.
  *
- * \ingroup Lightsail
+ * \inmodule QtAwsLightsail
  *
  *  Amazon Lightsail is the easiest way to get started with AWS for developers who just need virtual private servers.
  *  Lightsail includes everything you need to launch your project quickly - a virtual machine, SSD-based storage, data
@@ -53,9 +52,7 @@ namespace Lightsail {
  */
 
 /*!
- * @brief  Constructs a new UpdateLoadBalancerAttributeRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateLoadBalancerAttributeRequest::UpdateLoadBalancerAttributeRequest(const UpdateLoadBalancerAttributeRequest &other)
     : LightsailRequest(new UpdateLoadBalancerAttributeRequestPrivate(*other.d_func(), this))
@@ -64,7 +61,7 @@ UpdateLoadBalancerAttributeRequest::UpdateLoadBalancerAttributeRequest(const Upd
 }
 
 /*!
- * @brief  Constructs a new UpdateLoadBalancerAttributeRequest object.
+ * Constructs a UpdateLoadBalancerAttributeRequest object.
  */
 UpdateLoadBalancerAttributeRequest::UpdateLoadBalancerAttributeRequest()
     : LightsailRequest(new UpdateLoadBalancerAttributeRequestPrivate(LightsailRequest::UpdateLoadBalancerAttributeAction, this))
@@ -82,14 +79,9 @@ bool UpdateLoadBalancerAttributeRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateLoadBalancerAttributeResponse object.
+ * Returns a UpdateLoadBalancerAttributeResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateLoadBalancerAttributeResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  LightsailClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateLoadBalancerAttributeRequest::response(QNetworkReply * const reply) const
 {
@@ -97,20 +89,17 @@ QtAws::Core::AwsAbstractResponse * UpdateLoadBalancerAttributeRequest::response(
 }
 
 /*!
- * @internal
+ * \class QtAws::Lightsail::UpdateLoadBalancerAttributeRequestPrivate
+ * \brief The UpdateLoadBalancerAttributeRequestPrivate class provides private implementation for UpdateLoadBalancerAttributeRequest.
+ * \internal
  *
- * @class  UpdateLoadBalancerAttributeRequestPrivate
- *
- * @brief  Private implementation for UpdateLoadBalancerAttributeRequest.
+ * \inmodule QtAwsLightsail
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateLoadBalancerAttributeRequestPrivate object.
- *
- * @param  action  Lightsail action being performed.
- * @param  q       Pointer to this object's public UpdateLoadBalancerAttributeRequest instance.
+ * Constructs a UpdateLoadBalancerAttributeRequestPrivate object for Lightsail \a action with,
+ * public implementation \a q.
  */
 UpdateLoadBalancerAttributeRequestPrivate::UpdateLoadBalancerAttributeRequestPrivate(
     const LightsailRequest::Action action, UpdateLoadBalancerAttributeRequest * const q)
@@ -120,15 +109,10 @@ UpdateLoadBalancerAttributeRequestPrivate::UpdateLoadBalancerAttributeRequestPri
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateLoadBalancerAttributeRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateLoadBalancerAttributeRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateLoadBalancerAttributeRequest instance.
  */
 UpdateLoadBalancerAttributeRequestPrivate::UpdateLoadBalancerAttributeRequestPrivate(
     const UpdateLoadBalancerAttributeRequestPrivate &other, UpdateLoadBalancerAttributeRequest * const q)

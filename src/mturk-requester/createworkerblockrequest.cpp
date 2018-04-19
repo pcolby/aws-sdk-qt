@@ -27,19 +27,16 @@ namespace MTurk {
 
 /*!
  * \class QtAws::MTurk::CreateWorkerBlockRequest
- *
  * \brief The CreateWorkerBlockRequest class provides an interface for MTurk CreateWorkerBlock requests.
  *
- * \ingroup MTurk
+ * \inmodule QtAwsMTurk
  *
  *
  * \sa MTurkClient::createWorkerBlock
  */
 
 /*!
- * @brief  Constructs a new CreateWorkerBlockRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateWorkerBlockRequest::CreateWorkerBlockRequest(const CreateWorkerBlockRequest &other)
     : MTurkRequest(new CreateWorkerBlockRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ CreateWorkerBlockRequest::CreateWorkerBlockRequest(const CreateWorkerBlockReques
 }
 
 /*!
- * @brief  Constructs a new CreateWorkerBlockRequest object.
+ * Constructs a CreateWorkerBlockRequest object.
  */
 CreateWorkerBlockRequest::CreateWorkerBlockRequest()
     : MTurkRequest(new CreateWorkerBlockRequestPrivate(MTurkRequest::CreateWorkerBlockAction, this))
@@ -66,14 +63,9 @@ bool CreateWorkerBlockRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateWorkerBlockResponse object.
+ * Returns a CreateWorkerBlockResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateWorkerBlockResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MTurkClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateWorkerBlockRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * CreateWorkerBlockRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::MTurk::CreateWorkerBlockRequestPrivate
+ * \brief The CreateWorkerBlockRequestPrivate class provides private implementation for CreateWorkerBlockRequest.
+ * \internal
  *
- * @class  CreateWorkerBlockRequestPrivate
- *
- * @brief  Private implementation for CreateWorkerBlockRequest.
+ * \inmodule QtAwsMTurk
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateWorkerBlockRequestPrivate object.
- *
- * @param  action  MTurk action being performed.
- * @param  q       Pointer to this object's public CreateWorkerBlockRequest instance.
+ * Constructs a CreateWorkerBlockRequestPrivate object for MTurk \a action with,
+ * public implementation \a q.
  */
 CreateWorkerBlockRequestPrivate::CreateWorkerBlockRequestPrivate(
     const MTurkRequest::Action action, CreateWorkerBlockRequest * const q)
@@ -104,15 +93,10 @@ CreateWorkerBlockRequestPrivate::CreateWorkerBlockRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateWorkerBlockRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateWorkerBlockRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateWorkerBlockRequest instance.
  */
 CreateWorkerBlockRequestPrivate::CreateWorkerBlockRequestPrivate(
     const CreateWorkerBlockRequestPrivate &other, CreateWorkerBlockRequest * const q)

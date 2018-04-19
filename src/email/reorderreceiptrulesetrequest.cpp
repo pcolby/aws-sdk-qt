@@ -27,10 +27,9 @@ namespace SES {
 
 /*!
  * \class QtAws::SES::ReorderReceiptRuleSetRequest
- *
  * \brief The ReorderReceiptRuleSetRequest class provides an interface for SES ReorderReceiptRuleSet requests.
  *
- * \ingroup SES
+ * \inmodule QtAwsSES
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -48,9 +47,7 @@ namespace SES {
  */
 
 /*!
- * @brief  Constructs a new ReorderReceiptRuleSetRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ReorderReceiptRuleSetRequest::ReorderReceiptRuleSetRequest(const ReorderReceiptRuleSetRequest &other)
     : SESRequest(new ReorderReceiptRuleSetRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ ReorderReceiptRuleSetRequest::ReorderReceiptRuleSetRequest(const ReorderReceiptR
 }
 
 /*!
- * @brief  Constructs a new ReorderReceiptRuleSetRequest object.
+ * Constructs a ReorderReceiptRuleSetRequest object.
  */
 ReorderReceiptRuleSetRequest::ReorderReceiptRuleSetRequest()
     : SESRequest(new ReorderReceiptRuleSetRequestPrivate(SESRequest::ReorderReceiptRuleSetAction, this))
@@ -77,14 +74,9 @@ bool ReorderReceiptRuleSetRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ReorderReceiptRuleSetResponse object.
+ * Returns a ReorderReceiptRuleSetResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ReorderReceiptRuleSetResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SESClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ReorderReceiptRuleSetRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * ReorderReceiptRuleSetRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::SES::ReorderReceiptRuleSetRequestPrivate
+ * \brief The ReorderReceiptRuleSetRequestPrivate class provides private implementation for ReorderReceiptRuleSetRequest.
+ * \internal
  *
- * @class  ReorderReceiptRuleSetRequestPrivate
- *
- * @brief  Private implementation for ReorderReceiptRuleSetRequest.
+ * \inmodule QtAwsSES
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ReorderReceiptRuleSetRequestPrivate object.
- *
- * @param  action  SES action being performed.
- * @param  q       Pointer to this object's public ReorderReceiptRuleSetRequest instance.
+ * Constructs a ReorderReceiptRuleSetRequestPrivate object for SES \a action with,
+ * public implementation \a q.
  */
 ReorderReceiptRuleSetRequestPrivate::ReorderReceiptRuleSetRequestPrivate(
     const SESRequest::Action action, ReorderReceiptRuleSetRequest * const q)
@@ -115,15 +104,10 @@ ReorderReceiptRuleSetRequestPrivate::ReorderReceiptRuleSetRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ReorderReceiptRuleSetRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ReorderReceiptRuleSetRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ReorderReceiptRuleSetRequest instance.
  */
 ReorderReceiptRuleSetRequestPrivate::ReorderReceiptRuleSetRequestPrivate(
     const ReorderReceiptRuleSetRequestPrivate &other, ReorderReceiptRuleSetRequest * const q)

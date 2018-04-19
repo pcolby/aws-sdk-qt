@@ -27,10 +27,9 @@ namespace WAFRegional {
 
 /*!
  * \class QtAws::WAFRegional::ListRegexMatchSetsRequest
- *
  * \brief The ListRegexMatchSetsRequest class provides an interface for WAFRegional ListRegexMatchSets requests.
  *
- * \ingroup WAFRegional
+ * \inmodule QtAwsWAFRegional
  *
  *  This is the <i>AWS WAF Regional API Reference</i> for using AWS WAF with Elastic Load Balancing (ELB) Application Load
  *  Balancers. The AWS WAF actions and data types listed in the reference are available for protecting Application Load
@@ -44,9 +43,7 @@ namespace WAFRegional {
  */
 
 /*!
- * @brief  Constructs a new ListRegexMatchSetsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListRegexMatchSetsRequest::ListRegexMatchSetsRequest(const ListRegexMatchSetsRequest &other)
     : WAFRegionalRequest(new ListRegexMatchSetsRequestPrivate(*other.d_func(), this))
@@ -55,7 +52,7 @@ ListRegexMatchSetsRequest::ListRegexMatchSetsRequest(const ListRegexMatchSetsReq
 }
 
 /*!
- * @brief  Constructs a new ListRegexMatchSetsRequest object.
+ * Constructs a ListRegexMatchSetsRequest object.
  */
 ListRegexMatchSetsRequest::ListRegexMatchSetsRequest()
     : WAFRegionalRequest(new ListRegexMatchSetsRequestPrivate(WAFRegionalRequest::ListRegexMatchSetsAction, this))
@@ -73,14 +70,9 @@ bool ListRegexMatchSetsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListRegexMatchSetsResponse object.
+ * Returns a ListRegexMatchSetsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListRegexMatchSetsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WAFRegionalClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListRegexMatchSetsRequest::response(QNetworkReply * const reply) const
 {
@@ -88,20 +80,17 @@ QtAws::Core::AwsAbstractResponse * ListRegexMatchSetsRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::WAFRegional::ListRegexMatchSetsRequestPrivate
+ * \brief The ListRegexMatchSetsRequestPrivate class provides private implementation for ListRegexMatchSetsRequest.
+ * \internal
  *
- * @class  ListRegexMatchSetsRequestPrivate
- *
- * @brief  Private implementation for ListRegexMatchSetsRequest.
+ * \inmodule QtAwsWAFRegional
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListRegexMatchSetsRequestPrivate object.
- *
- * @param  action  WAFRegional action being performed.
- * @param  q       Pointer to this object's public ListRegexMatchSetsRequest instance.
+ * Constructs a ListRegexMatchSetsRequestPrivate object for WAFRegional \a action with,
+ * public implementation \a q.
  */
 ListRegexMatchSetsRequestPrivate::ListRegexMatchSetsRequestPrivate(
     const WAFRegionalRequest::Action action, ListRegexMatchSetsRequest * const q)
@@ -111,15 +100,10 @@ ListRegexMatchSetsRequestPrivate::ListRegexMatchSetsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListRegexMatchSetsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListRegexMatchSetsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListRegexMatchSetsRequest instance.
  */
 ListRegexMatchSetsRequestPrivate::ListRegexMatchSetsRequestPrivate(
     const ListRegexMatchSetsRequestPrivate &other, ListRegexMatchSetsRequest * const q)

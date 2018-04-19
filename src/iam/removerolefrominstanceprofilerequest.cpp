@@ -27,10 +27,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::RemoveRoleFromInstanceProfileRequest
- *
  * \brief The RemoveRoleFromInstanceProfileRequest class provides an interface for IAM RemoveRoleFromInstanceProfile requests.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -102,9 +101,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new RemoveRoleFromInstanceProfileRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 RemoveRoleFromInstanceProfileRequest::RemoveRoleFromInstanceProfileRequest(const RemoveRoleFromInstanceProfileRequest &other)
     : IAMRequest(new RemoveRoleFromInstanceProfileRequestPrivate(*other.d_func(), this))
@@ -113,7 +110,7 @@ RemoveRoleFromInstanceProfileRequest::RemoveRoleFromInstanceProfileRequest(const
 }
 
 /*!
- * @brief  Constructs a new RemoveRoleFromInstanceProfileRequest object.
+ * Constructs a RemoveRoleFromInstanceProfileRequest object.
  */
 RemoveRoleFromInstanceProfileRequest::RemoveRoleFromInstanceProfileRequest()
     : IAMRequest(new RemoveRoleFromInstanceProfileRequestPrivate(IAMRequest::RemoveRoleFromInstanceProfileAction, this))
@@ -131,14 +128,9 @@ bool RemoveRoleFromInstanceProfileRequest::isValid() const
 
 
 /*!
- * @brief  Construct an RemoveRoleFromInstanceProfileResponse object.
+ * Returns a RemoveRoleFromInstanceProfileResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An RemoveRoleFromInstanceProfileResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IAMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * RemoveRoleFromInstanceProfileRequest::response(QNetworkReply * const reply) const
 {
@@ -146,20 +138,17 @@ QtAws::Core::AwsAbstractResponse * RemoveRoleFromInstanceProfileRequest::respons
 }
 
 /*!
- * @internal
+ * \class QtAws::IAM::RemoveRoleFromInstanceProfileRequestPrivate
+ * \brief The RemoveRoleFromInstanceProfileRequestPrivate class provides private implementation for RemoveRoleFromInstanceProfileRequest.
+ * \internal
  *
- * @class  RemoveRoleFromInstanceProfileRequestPrivate
- *
- * @brief  Private implementation for RemoveRoleFromInstanceProfileRequest.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new RemoveRoleFromInstanceProfileRequestPrivate object.
- *
- * @param  action  IAM action being performed.
- * @param  q       Pointer to this object's public RemoveRoleFromInstanceProfileRequest instance.
+ * Constructs a RemoveRoleFromInstanceProfileRequestPrivate object for IAM \a action with,
+ * public implementation \a q.
  */
 RemoveRoleFromInstanceProfileRequestPrivate::RemoveRoleFromInstanceProfileRequestPrivate(
     const IAMRequest::Action action, RemoveRoleFromInstanceProfileRequest * const q)
@@ -169,15 +158,10 @@ RemoveRoleFromInstanceProfileRequestPrivate::RemoveRoleFromInstanceProfileReques
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RemoveRoleFromInstanceProfileRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the RemoveRoleFromInstanceProfileRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public RemoveRoleFromInstanceProfileRequest instance.
  */
 RemoveRoleFromInstanceProfileRequestPrivate::RemoveRoleFromInstanceProfileRequestPrivate(
     const RemoveRoleFromInstanceProfileRequestPrivate &other, RemoveRoleFromInstanceProfileRequest * const q)

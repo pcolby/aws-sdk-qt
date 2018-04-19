@@ -27,10 +27,9 @@ namespace SFN {
 
 /*!
  * \class QtAws::SFN::DeleteStateMachineRequest
- *
  * \brief The DeleteStateMachineRequest class provides an interface for SFN DeleteStateMachine requests.
  *
- * \ingroup SFN
+ * \inmodule QtAwsSFN
  *
  *  <fullname>AWS Step Functions</fullname>
  * 
@@ -56,9 +55,7 @@ namespace SFN {
  */
 
 /*!
- * @brief  Constructs a new DeleteStateMachineRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteStateMachineRequest::DeleteStateMachineRequest(const DeleteStateMachineRequest &other)
     : SFNRequest(new DeleteStateMachineRequestPrivate(*other.d_func(), this))
@@ -67,7 +64,7 @@ DeleteStateMachineRequest::DeleteStateMachineRequest(const DeleteStateMachineReq
 }
 
 /*!
- * @brief  Constructs a new DeleteStateMachineRequest object.
+ * Constructs a DeleteStateMachineRequest object.
  */
 DeleteStateMachineRequest::DeleteStateMachineRequest()
     : SFNRequest(new DeleteStateMachineRequestPrivate(SFNRequest::DeleteStateMachineAction, this))
@@ -85,14 +82,9 @@ bool DeleteStateMachineRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteStateMachineResponse object.
+ * Returns a DeleteStateMachineResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteStateMachineResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SFNClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteStateMachineRequest::response(QNetworkReply * const reply) const
 {
@@ -100,20 +92,17 @@ QtAws::Core::AwsAbstractResponse * DeleteStateMachineRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::SFN::DeleteStateMachineRequestPrivate
+ * \brief The DeleteStateMachineRequestPrivate class provides private implementation for DeleteStateMachineRequest.
+ * \internal
  *
- * @class  DeleteStateMachineRequestPrivate
- *
- * @brief  Private implementation for DeleteStateMachineRequest.
+ * \inmodule QtAwsSFN
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteStateMachineRequestPrivate object.
- *
- * @param  action  SFN action being performed.
- * @param  q       Pointer to this object's public DeleteStateMachineRequest instance.
+ * Constructs a DeleteStateMachineRequestPrivate object for SFN \a action with,
+ * public implementation \a q.
  */
 DeleteStateMachineRequestPrivate::DeleteStateMachineRequestPrivate(
     const SFNRequest::Action action, DeleteStateMachineRequest * const q)
@@ -123,15 +112,10 @@ DeleteStateMachineRequestPrivate::DeleteStateMachineRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteStateMachineRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteStateMachineRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteStateMachineRequest instance.
  */
 DeleteStateMachineRequestPrivate::DeleteStateMachineRequestPrivate(
     const DeleteStateMachineRequestPrivate &other, DeleteStateMachineRequest * const q)

@@ -27,10 +27,9 @@ namespace CodeCommit {
 
 /*!
  * \class QtAws::CodeCommit::GetCommentRequest
- *
  * \brief The GetCommentRequest class provides an interface for CodeCommit GetComment requests.
  *
- * \ingroup CodeCommit
+ * \inmodule QtAwsCodeCommit
  *
  *  <fullname>AWS CodeCommit</fullname>
  * 
@@ -227,9 +226,7 @@ namespace CodeCommit {
  */
 
 /*!
- * @brief  Constructs a new GetCommentRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetCommentRequest::GetCommentRequest(const GetCommentRequest &other)
     : CodeCommitRequest(new GetCommentRequestPrivate(*other.d_func(), this))
@@ -238,7 +235,7 @@ GetCommentRequest::GetCommentRequest(const GetCommentRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetCommentRequest object.
+ * Constructs a GetCommentRequest object.
  */
 GetCommentRequest::GetCommentRequest()
     : CodeCommitRequest(new GetCommentRequestPrivate(CodeCommitRequest::GetCommentAction, this))
@@ -256,14 +253,9 @@ bool GetCommentRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetCommentResponse object.
+ * Returns a GetCommentResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetCommentResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CodeCommitClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetCommentRequest::response(QNetworkReply * const reply) const
 {
@@ -271,20 +263,17 @@ QtAws::Core::AwsAbstractResponse * GetCommentRequest::response(QNetworkReply * c
 }
 
 /*!
- * @internal
+ * \class QtAws::CodeCommit::GetCommentRequestPrivate
+ * \brief The GetCommentRequestPrivate class provides private implementation for GetCommentRequest.
+ * \internal
  *
- * @class  GetCommentRequestPrivate
- *
- * @brief  Private implementation for GetCommentRequest.
+ * \inmodule QtAwsCodeCommit
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetCommentRequestPrivate object.
- *
- * @param  action  CodeCommit action being performed.
- * @param  q       Pointer to this object's public GetCommentRequest instance.
+ * Constructs a GetCommentRequestPrivate object for CodeCommit \a action with,
+ * public implementation \a q.
  */
 GetCommentRequestPrivate::GetCommentRequestPrivate(
     const CodeCommitRequest::Action action, GetCommentRequest * const q)
@@ -294,15 +283,10 @@ GetCommentRequestPrivate::GetCommentRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetCommentRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetCommentRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetCommentRequest instance.
  */
 GetCommentRequestPrivate::GetCommentRequestPrivate(
     const GetCommentRequestPrivate &other, GetCommentRequest * const q)

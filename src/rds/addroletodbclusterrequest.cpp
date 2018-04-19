@@ -27,10 +27,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::AddRoleToDBClusterRequest
- *
  * \brief The AddRoleToDBClusterRequest class provides an interface for RDS AddRoleToDBCluster requests.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -101,9 +100,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new AddRoleToDBClusterRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AddRoleToDBClusterRequest::AddRoleToDBClusterRequest(const AddRoleToDBClusterRequest &other)
     : RDSRequest(new AddRoleToDBClusterRequestPrivate(*other.d_func(), this))
@@ -112,7 +109,7 @@ AddRoleToDBClusterRequest::AddRoleToDBClusterRequest(const AddRoleToDBClusterReq
 }
 
 /*!
- * @brief  Constructs a new AddRoleToDBClusterRequest object.
+ * Constructs a AddRoleToDBClusterRequest object.
  */
 AddRoleToDBClusterRequest::AddRoleToDBClusterRequest()
     : RDSRequest(new AddRoleToDBClusterRequestPrivate(RDSRequest::AddRoleToDBClusterAction, this))
@@ -130,14 +127,9 @@ bool AddRoleToDBClusterRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AddRoleToDBClusterResponse object.
+ * Returns a AddRoleToDBClusterResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AddRoleToDBClusterResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RDSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AddRoleToDBClusterRequest::response(QNetworkReply * const reply) const
 {
@@ -145,20 +137,17 @@ QtAws::Core::AwsAbstractResponse * AddRoleToDBClusterRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::RDS::AddRoleToDBClusterRequestPrivate
+ * \brief The AddRoleToDBClusterRequestPrivate class provides private implementation for AddRoleToDBClusterRequest.
+ * \internal
  *
- * @class  AddRoleToDBClusterRequestPrivate
- *
- * @brief  Private implementation for AddRoleToDBClusterRequest.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AddRoleToDBClusterRequestPrivate object.
- *
- * @param  action  RDS action being performed.
- * @param  q       Pointer to this object's public AddRoleToDBClusterRequest instance.
+ * Constructs a AddRoleToDBClusterRequestPrivate object for RDS \a action with,
+ * public implementation \a q.
  */
 AddRoleToDBClusterRequestPrivate::AddRoleToDBClusterRequestPrivate(
     const RDSRequest::Action action, AddRoleToDBClusterRequest * const q)
@@ -168,15 +157,10 @@ AddRoleToDBClusterRequestPrivate::AddRoleToDBClusterRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AddRoleToDBClusterRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AddRoleToDBClusterRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AddRoleToDBClusterRequest instance.
  */
 AddRoleToDBClusterRequestPrivate::AddRoleToDBClusterRequestPrivate(
     const AddRoleToDBClusterRequestPrivate &other, AddRoleToDBClusterRequest * const q)

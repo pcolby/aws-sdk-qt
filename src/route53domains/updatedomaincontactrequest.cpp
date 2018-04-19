@@ -27,10 +27,9 @@ namespace Route53Domains {
 
 /*!
  * \class QtAws::Route53Domains::UpdateDomainContactRequest
- *
  * \brief The UpdateDomainContactRequest class provides an interface for Route53Domains UpdateDomainContact requests.
  *
- * \ingroup Route53Domains
+ * \inmodule QtAwsRoute53Domains
  *
  *  Amazon Route 53 API actions let you register domain names and perform related
  *
@@ -38,9 +37,7 @@ namespace Route53Domains {
  */
 
 /*!
- * @brief  Constructs a new UpdateDomainContactRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateDomainContactRequest::UpdateDomainContactRequest(const UpdateDomainContactRequest &other)
     : Route53DomainsRequest(new UpdateDomainContactRequestPrivate(*other.d_func(), this))
@@ -49,7 +46,7 @@ UpdateDomainContactRequest::UpdateDomainContactRequest(const UpdateDomainContact
 }
 
 /*!
- * @brief  Constructs a new UpdateDomainContactRequest object.
+ * Constructs a UpdateDomainContactRequest object.
  */
 UpdateDomainContactRequest::UpdateDomainContactRequest()
     : Route53DomainsRequest(new UpdateDomainContactRequestPrivate(Route53DomainsRequest::UpdateDomainContactAction, this))
@@ -67,14 +64,9 @@ bool UpdateDomainContactRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateDomainContactResponse object.
+ * Returns a UpdateDomainContactResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateDomainContactResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  Route53DomainsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateDomainContactRequest::response(QNetworkReply * const reply) const
 {
@@ -82,20 +74,17 @@ QtAws::Core::AwsAbstractResponse * UpdateDomainContactRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::Route53Domains::UpdateDomainContactRequestPrivate
+ * \brief The UpdateDomainContactRequestPrivate class provides private implementation for UpdateDomainContactRequest.
+ * \internal
  *
- * @class  UpdateDomainContactRequestPrivate
- *
- * @brief  Private implementation for UpdateDomainContactRequest.
+ * \inmodule QtAwsRoute53Domains
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateDomainContactRequestPrivate object.
- *
- * @param  action  Route53Domains action being performed.
- * @param  q       Pointer to this object's public UpdateDomainContactRequest instance.
+ * Constructs a UpdateDomainContactRequestPrivate object for Route53Domains \a action with,
+ * public implementation \a q.
  */
 UpdateDomainContactRequestPrivate::UpdateDomainContactRequestPrivate(
     const Route53DomainsRequest::Action action, UpdateDomainContactRequest * const q)
@@ -105,15 +94,10 @@ UpdateDomainContactRequestPrivate::UpdateDomainContactRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateDomainContactRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateDomainContactRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateDomainContactRequest instance.
  */
 UpdateDomainContactRequestPrivate::UpdateDomainContactRequestPrivate(
     const UpdateDomainContactRequestPrivate &other, UpdateDomainContactRequest * const q)

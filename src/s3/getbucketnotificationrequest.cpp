@@ -27,19 +27,16 @@ namespace S3 {
 
 /*!
  * \class QtAws::S3::GetBucketNotificationRequest
- *
  * \brief The GetBucketNotificationRequest class provides an interface for S3 GetBucketNotification requests.
  *
- * \ingroup S3
+ * \inmodule QtAwsS3
  *
  *
  * \sa S3Client::getBucketNotification
  */
 
 /*!
- * @brief  Constructs a new GetBucketNotificationRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetBucketNotificationRequest::GetBucketNotificationRequest(const GetBucketNotificationRequest &other)
     : S3Request(new GetBucketNotificationRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ GetBucketNotificationRequest::GetBucketNotificationRequest(const GetBucketNotifi
 }
 
 /*!
- * @brief  Constructs a new GetBucketNotificationRequest object.
+ * Constructs a GetBucketNotificationRequest object.
  */
 GetBucketNotificationRequest::GetBucketNotificationRequest()
     : S3Request(new GetBucketNotificationRequestPrivate(S3Request::GetBucketNotificationAction, this))
@@ -66,14 +63,9 @@ bool GetBucketNotificationRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetBucketNotificationResponse object.
+ * Returns a GetBucketNotificationResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetBucketNotificationResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  S3Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetBucketNotificationRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * GetBucketNotificationRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::S3::GetBucketNotificationRequestPrivate
+ * \brief The GetBucketNotificationRequestPrivate class provides private implementation for GetBucketNotificationRequest.
+ * \internal
  *
- * @class  GetBucketNotificationRequestPrivate
- *
- * @brief  Private implementation for GetBucketNotificationRequest.
+ * \inmodule QtAwsS3
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetBucketNotificationRequestPrivate object.
- *
- * @param  action  S3 action being performed.
- * @param  q       Pointer to this object's public GetBucketNotificationRequest instance.
+ * Constructs a GetBucketNotificationRequestPrivate object for S3 \a action with,
+ * public implementation \a q.
  */
 GetBucketNotificationRequestPrivate::GetBucketNotificationRequestPrivate(
     const S3Request::Action action, GetBucketNotificationRequest * const q)
@@ -104,15 +93,10 @@ GetBucketNotificationRequestPrivate::GetBucketNotificationRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetBucketNotificationRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetBucketNotificationRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetBucketNotificationRequest instance.
  */
 GetBucketNotificationRequestPrivate::GetBucketNotificationRequestPrivate(
     const GetBucketNotificationRequestPrivate &other, GetBucketNotificationRequest * const q)

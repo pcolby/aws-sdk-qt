@@ -27,10 +27,9 @@ namespace CloudFront {
 
 /*!
  * \class QtAws::CloudFront::CreatePublicKeyRequest
- *
  * \brief The CreatePublicKeyRequest class provides an interface for CloudFront CreatePublicKey requests.
  *
- * \ingroup CloudFront
+ * \inmodule QtAwsCloudFront
  *
  *  <fullname>Amazon CloudFront</fullname>
  * 
@@ -42,9 +41,7 @@ namespace CloudFront {
  */
 
 /*!
- * @brief  Constructs a new CreatePublicKeyRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreatePublicKeyRequest::CreatePublicKeyRequest(const CreatePublicKeyRequest &other)
     : CloudFrontRequest(new CreatePublicKeyRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ CreatePublicKeyRequest::CreatePublicKeyRequest(const CreatePublicKeyRequest &oth
 }
 
 /*!
- * @brief  Constructs a new CreatePublicKeyRequest object.
+ * Constructs a CreatePublicKeyRequest object.
  */
 CreatePublicKeyRequest::CreatePublicKeyRequest()
     : CloudFrontRequest(new CreatePublicKeyRequestPrivate(CloudFrontRequest::CreatePublicKeyAction, this))
@@ -71,14 +68,9 @@ bool CreatePublicKeyRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreatePublicKeyResponse object.
+ * Returns a CreatePublicKeyResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreatePublicKeyResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudFrontClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreatePublicKeyRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * CreatePublicKeyRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudFront::CreatePublicKeyRequestPrivate
+ * \brief The CreatePublicKeyRequestPrivate class provides private implementation for CreatePublicKeyRequest.
+ * \internal
  *
- * @class  CreatePublicKeyRequestPrivate
- *
- * @brief  Private implementation for CreatePublicKeyRequest.
+ * \inmodule QtAwsCloudFront
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreatePublicKeyRequestPrivate object.
- *
- * @param  action  CloudFront action being performed.
- * @param  q       Pointer to this object's public CreatePublicKeyRequest instance.
+ * Constructs a CreatePublicKeyRequestPrivate object for CloudFront \a action with,
+ * public implementation \a q.
  */
 CreatePublicKeyRequestPrivate::CreatePublicKeyRequestPrivate(
     const CloudFrontRequest::Action action, CreatePublicKeyRequest * const q)
@@ -109,15 +98,10 @@ CreatePublicKeyRequestPrivate::CreatePublicKeyRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreatePublicKeyRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreatePublicKeyRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreatePublicKeyRequest instance.
  */
 CreatePublicKeyRequestPrivate::CreatePublicKeyRequestPrivate(
     const CreatePublicKeyRequestPrivate &other, CreatePublicKeyRequest * const q)

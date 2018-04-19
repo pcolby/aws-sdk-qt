@@ -27,10 +27,9 @@ namespace ServiceCatalog {
 
 /*!
  * \class QtAws::ServiceCatalog::DescribeProvisioningArtifactRequest
- *
  * \brief The DescribeProvisioningArtifactRequest class provides an interface for ServiceCatalog DescribeProvisioningArtifact requests.
  *
- * \ingroup ServiceCatalog
+ * \inmodule QtAwsServiceCatalog
  *
  *  <fullname>AWS Service Catalog</fullname>
  * 
@@ -43,9 +42,7 @@ namespace ServiceCatalog {
  */
 
 /*!
- * @brief  Constructs a new DescribeProvisioningArtifactRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeProvisioningArtifactRequest::DescribeProvisioningArtifactRequest(const DescribeProvisioningArtifactRequest &other)
     : ServiceCatalogRequest(new DescribeProvisioningArtifactRequestPrivate(*other.d_func(), this))
@@ -54,7 +51,7 @@ DescribeProvisioningArtifactRequest::DescribeProvisioningArtifactRequest(const D
 }
 
 /*!
- * @brief  Constructs a new DescribeProvisioningArtifactRequest object.
+ * Constructs a DescribeProvisioningArtifactRequest object.
  */
 DescribeProvisioningArtifactRequest::DescribeProvisioningArtifactRequest()
     : ServiceCatalogRequest(new DescribeProvisioningArtifactRequestPrivate(ServiceCatalogRequest::DescribeProvisioningArtifactAction, this))
@@ -72,14 +69,9 @@ bool DescribeProvisioningArtifactRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeProvisioningArtifactResponse object.
+ * Returns a DescribeProvisioningArtifactResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeProvisioningArtifactResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ServiceCatalogClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeProvisioningArtifactRequest::response(QNetworkReply * const reply) const
 {
@@ -87,20 +79,17 @@ QtAws::Core::AwsAbstractResponse * DescribeProvisioningArtifactRequest::response
 }
 
 /*!
- * @internal
+ * \class QtAws::ServiceCatalog::DescribeProvisioningArtifactRequestPrivate
+ * \brief The DescribeProvisioningArtifactRequestPrivate class provides private implementation for DescribeProvisioningArtifactRequest.
+ * \internal
  *
- * @class  DescribeProvisioningArtifactRequestPrivate
- *
- * @brief  Private implementation for DescribeProvisioningArtifactRequest.
+ * \inmodule QtAwsServiceCatalog
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeProvisioningArtifactRequestPrivate object.
- *
- * @param  action  ServiceCatalog action being performed.
- * @param  q       Pointer to this object's public DescribeProvisioningArtifactRequest instance.
+ * Constructs a DescribeProvisioningArtifactRequestPrivate object for ServiceCatalog \a action with,
+ * public implementation \a q.
  */
 DescribeProvisioningArtifactRequestPrivate::DescribeProvisioningArtifactRequestPrivate(
     const ServiceCatalogRequest::Action action, DescribeProvisioningArtifactRequest * const q)
@@ -110,15 +99,10 @@ DescribeProvisioningArtifactRequestPrivate::DescribeProvisioningArtifactRequestP
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeProvisioningArtifactRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeProvisioningArtifactRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeProvisioningArtifactRequest instance.
  */
 DescribeProvisioningArtifactRequestPrivate::DescribeProvisioningArtifactRequestPrivate(
     const DescribeProvisioningArtifactRequestPrivate &other, DescribeProvisioningArtifactRequest * const q)

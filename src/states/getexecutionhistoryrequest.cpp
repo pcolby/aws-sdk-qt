@@ -27,10 +27,9 @@ namespace SFN {
 
 /*!
  * \class QtAws::SFN::GetExecutionHistoryRequest
- *
  * \brief The GetExecutionHistoryRequest class provides an interface for SFN GetExecutionHistory requests.
  *
- * \ingroup SFN
+ * \inmodule QtAwsSFN
  *
  *  <fullname>AWS Step Functions</fullname>
  * 
@@ -56,9 +55,7 @@ namespace SFN {
  */
 
 /*!
- * @brief  Constructs a new GetExecutionHistoryRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetExecutionHistoryRequest::GetExecutionHistoryRequest(const GetExecutionHistoryRequest &other)
     : SFNRequest(new GetExecutionHistoryRequestPrivate(*other.d_func(), this))
@@ -67,7 +64,7 @@ GetExecutionHistoryRequest::GetExecutionHistoryRequest(const GetExecutionHistory
 }
 
 /*!
- * @brief  Constructs a new GetExecutionHistoryRequest object.
+ * Constructs a GetExecutionHistoryRequest object.
  */
 GetExecutionHistoryRequest::GetExecutionHistoryRequest()
     : SFNRequest(new GetExecutionHistoryRequestPrivate(SFNRequest::GetExecutionHistoryAction, this))
@@ -85,14 +82,9 @@ bool GetExecutionHistoryRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetExecutionHistoryResponse object.
+ * Returns a GetExecutionHistoryResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetExecutionHistoryResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SFNClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetExecutionHistoryRequest::response(QNetworkReply * const reply) const
 {
@@ -100,20 +92,17 @@ QtAws::Core::AwsAbstractResponse * GetExecutionHistoryRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::SFN::GetExecutionHistoryRequestPrivate
+ * \brief The GetExecutionHistoryRequestPrivate class provides private implementation for GetExecutionHistoryRequest.
+ * \internal
  *
- * @class  GetExecutionHistoryRequestPrivate
- *
- * @brief  Private implementation for GetExecutionHistoryRequest.
+ * \inmodule QtAwsSFN
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetExecutionHistoryRequestPrivate object.
- *
- * @param  action  SFN action being performed.
- * @param  q       Pointer to this object's public GetExecutionHistoryRequest instance.
+ * Constructs a GetExecutionHistoryRequestPrivate object for SFN \a action with,
+ * public implementation \a q.
  */
 GetExecutionHistoryRequestPrivate::GetExecutionHistoryRequestPrivate(
     const SFNRequest::Action action, GetExecutionHistoryRequest * const q)
@@ -123,15 +112,10 @@ GetExecutionHistoryRequestPrivate::GetExecutionHistoryRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetExecutionHistoryRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetExecutionHistoryRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetExecutionHistoryRequest instance.
  */
 GetExecutionHistoryRequestPrivate::GetExecutionHistoryRequestPrivate(
     const GetExecutionHistoryRequestPrivate &other, GetExecutionHistoryRequest * const q)

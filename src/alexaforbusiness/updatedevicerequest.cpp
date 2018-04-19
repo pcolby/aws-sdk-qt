@@ -27,10 +27,9 @@ namespace AlexaForBusiness {
 
 /*!
  * \class QtAws::AlexaForBusiness::UpdateDeviceRequest
- *
  * \brief The UpdateDeviceRequest class provides an interface for AlexaForBusiness UpdateDevice requests.
  *
- * \ingroup AlexaForBusiness
+ * \inmodule QtAwsAlexaForBusiness
  *
  *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
  *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
@@ -42,9 +41,7 @@ namespace AlexaForBusiness {
  */
 
 /*!
- * @brief  Constructs a new UpdateDeviceRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateDeviceRequest::UpdateDeviceRequest(const UpdateDeviceRequest &other)
     : AlexaForBusinessRequest(new UpdateDeviceRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ UpdateDeviceRequest::UpdateDeviceRequest(const UpdateDeviceRequest &other)
 }
 
 /*!
- * @brief  Constructs a new UpdateDeviceRequest object.
+ * Constructs a UpdateDeviceRequest object.
  */
 UpdateDeviceRequest::UpdateDeviceRequest()
     : AlexaForBusinessRequest(new UpdateDeviceRequestPrivate(AlexaForBusinessRequest::UpdateDeviceAction, this))
@@ -71,14 +68,9 @@ bool UpdateDeviceRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateDeviceResponse object.
+ * Returns a UpdateDeviceResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateDeviceResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AlexaForBusinessClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateDeviceRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * UpdateDeviceRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::AlexaForBusiness::UpdateDeviceRequestPrivate
+ * \brief The UpdateDeviceRequestPrivate class provides private implementation for UpdateDeviceRequest.
+ * \internal
  *
- * @class  UpdateDeviceRequestPrivate
- *
- * @brief  Private implementation for UpdateDeviceRequest.
+ * \inmodule QtAwsAlexaForBusiness
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateDeviceRequestPrivate object.
- *
- * @param  action  AlexaForBusiness action being performed.
- * @param  q       Pointer to this object's public UpdateDeviceRequest instance.
+ * Constructs a UpdateDeviceRequestPrivate object for AlexaForBusiness \a action with,
+ * public implementation \a q.
  */
 UpdateDeviceRequestPrivate::UpdateDeviceRequestPrivate(
     const AlexaForBusinessRequest::Action action, UpdateDeviceRequest * const q)
@@ -109,15 +98,10 @@ UpdateDeviceRequestPrivate::UpdateDeviceRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateDeviceRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateDeviceRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateDeviceRequest instance.
  */
 UpdateDeviceRequestPrivate::UpdateDeviceRequestPrivate(
     const UpdateDeviceRequestPrivate &other, UpdateDeviceRequest * const q)

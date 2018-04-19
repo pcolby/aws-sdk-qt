@@ -27,10 +27,9 @@ namespace SecretsManager {
 
 /*!
  * \class QtAws::SecretsManager::RotateSecretRequest
- *
  * \brief The RotateSecretRequest class provides an interface for SecretsManager RotateSecret requests.
  *
- * \ingroup SecretsManager
+ * \inmodule QtAwsSecretsManager
  *
  *  <fullname>AWS Secrets Manager API Reference</fullname>
  * 
@@ -137,9 +136,7 @@ namespace SecretsManager {
  */
 
 /*!
- * @brief  Constructs a new RotateSecretRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 RotateSecretRequest::RotateSecretRequest(const RotateSecretRequest &other)
     : SecretsManagerRequest(new RotateSecretRequestPrivate(*other.d_func(), this))
@@ -148,7 +145,7 @@ RotateSecretRequest::RotateSecretRequest(const RotateSecretRequest &other)
 }
 
 /*!
- * @brief  Constructs a new RotateSecretRequest object.
+ * Constructs a RotateSecretRequest object.
  */
 RotateSecretRequest::RotateSecretRequest()
     : SecretsManagerRequest(new RotateSecretRequestPrivate(SecretsManagerRequest::RotateSecretAction, this))
@@ -166,14 +163,9 @@ bool RotateSecretRequest::isValid() const
 
 
 /*!
- * @brief  Construct an RotateSecretResponse object.
+ * Returns a RotateSecretResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An RotateSecretResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SecretsManagerClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * RotateSecretRequest::response(QNetworkReply * const reply) const
 {
@@ -181,20 +173,17 @@ QtAws::Core::AwsAbstractResponse * RotateSecretRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::SecretsManager::RotateSecretRequestPrivate
+ * \brief The RotateSecretRequestPrivate class provides private implementation for RotateSecretRequest.
+ * \internal
  *
- * @class  RotateSecretRequestPrivate
- *
- * @brief  Private implementation for RotateSecretRequest.
+ * \inmodule QtAwsSecretsManager
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new RotateSecretRequestPrivate object.
- *
- * @param  action  SecretsManager action being performed.
- * @param  q       Pointer to this object's public RotateSecretRequest instance.
+ * Constructs a RotateSecretRequestPrivate object for SecretsManager \a action with,
+ * public implementation \a q.
  */
 RotateSecretRequestPrivate::RotateSecretRequestPrivate(
     const SecretsManagerRequest::Action action, RotateSecretRequest * const q)
@@ -204,15 +193,10 @@ RotateSecretRequestPrivate::RotateSecretRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RotateSecretRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the RotateSecretRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public RotateSecretRequest instance.
  */
 RotateSecretRequestPrivate::RotateSecretRequestPrivate(
     const RotateSecretRequestPrivate &other, RotateSecretRequest * const q)

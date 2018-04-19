@@ -27,10 +27,9 @@ namespace OpsWorks {
 
 /*!
  * \class QtAws::OpsWorks::DescribeTimeBasedAutoScalingRequest
- *
  * \brief The DescribeTimeBasedAutoScalingRequest class provides an interface for OpsWorks DescribeTimeBasedAutoScaling requests.
  *
- * \ingroup OpsWorks
+ * \inmodule QtAwsOpsWorks
  *
  *  <fullname>AWS OpsWorks</fullname>
  * 
@@ -143,9 +142,7 @@ namespace OpsWorks {
  */
 
 /*!
- * @brief  Constructs a new DescribeTimeBasedAutoScalingRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeTimeBasedAutoScalingRequest::DescribeTimeBasedAutoScalingRequest(const DescribeTimeBasedAutoScalingRequest &other)
     : OpsWorksRequest(new DescribeTimeBasedAutoScalingRequestPrivate(*other.d_func(), this))
@@ -154,7 +151,7 @@ DescribeTimeBasedAutoScalingRequest::DescribeTimeBasedAutoScalingRequest(const D
 }
 
 /*!
- * @brief  Constructs a new DescribeTimeBasedAutoScalingRequest object.
+ * Constructs a DescribeTimeBasedAutoScalingRequest object.
  */
 DescribeTimeBasedAutoScalingRequest::DescribeTimeBasedAutoScalingRequest()
     : OpsWorksRequest(new DescribeTimeBasedAutoScalingRequestPrivate(OpsWorksRequest::DescribeTimeBasedAutoScalingAction, this))
@@ -172,14 +169,9 @@ bool DescribeTimeBasedAutoScalingRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeTimeBasedAutoScalingResponse object.
+ * Returns a DescribeTimeBasedAutoScalingResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeTimeBasedAutoScalingResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  OpsWorksClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeTimeBasedAutoScalingRequest::response(QNetworkReply * const reply) const
 {
@@ -187,20 +179,17 @@ QtAws::Core::AwsAbstractResponse * DescribeTimeBasedAutoScalingRequest::response
 }
 
 /*!
- * @internal
+ * \class QtAws::OpsWorks::DescribeTimeBasedAutoScalingRequestPrivate
+ * \brief The DescribeTimeBasedAutoScalingRequestPrivate class provides private implementation for DescribeTimeBasedAutoScalingRequest.
+ * \internal
  *
- * @class  DescribeTimeBasedAutoScalingRequestPrivate
- *
- * @brief  Private implementation for DescribeTimeBasedAutoScalingRequest.
+ * \inmodule QtAwsOpsWorks
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeTimeBasedAutoScalingRequestPrivate object.
- *
- * @param  action  OpsWorks action being performed.
- * @param  q       Pointer to this object's public DescribeTimeBasedAutoScalingRequest instance.
+ * Constructs a DescribeTimeBasedAutoScalingRequestPrivate object for OpsWorks \a action with,
+ * public implementation \a q.
  */
 DescribeTimeBasedAutoScalingRequestPrivate::DescribeTimeBasedAutoScalingRequestPrivate(
     const OpsWorksRequest::Action action, DescribeTimeBasedAutoScalingRequest * const q)
@@ -210,15 +199,10 @@ DescribeTimeBasedAutoScalingRequestPrivate::DescribeTimeBasedAutoScalingRequestP
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeTimeBasedAutoScalingRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeTimeBasedAutoScalingRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeTimeBasedAutoScalingRequest instance.
  */
 DescribeTimeBasedAutoScalingRequestPrivate::DescribeTimeBasedAutoScalingRequestPrivate(
     const DescribeTimeBasedAutoScalingRequestPrivate &other, DescribeTimeBasedAutoScalingRequest * const q)

@@ -27,10 +27,9 @@ namespace FMS {
 
 /*!
  * \class QtAws::FMS::PutNotificationChannelRequest
- *
  * \brief The PutNotificationChannelRequest class provides an interface for FMS PutNotificationChannel requests.
  *
- * \ingroup FMS
+ * \inmodule QtAwsFMS
  *
  *  <fullname>AWS Firewall Manager</fullname>
  * 
@@ -43,9 +42,7 @@ namespace FMS {
  */
 
 /*!
- * @brief  Constructs a new PutNotificationChannelRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 PutNotificationChannelRequest::PutNotificationChannelRequest(const PutNotificationChannelRequest &other)
     : FMSRequest(new PutNotificationChannelRequestPrivate(*other.d_func(), this))
@@ -54,7 +51,7 @@ PutNotificationChannelRequest::PutNotificationChannelRequest(const PutNotificati
 }
 
 /*!
- * @brief  Constructs a new PutNotificationChannelRequest object.
+ * Constructs a PutNotificationChannelRequest object.
  */
 PutNotificationChannelRequest::PutNotificationChannelRequest()
     : FMSRequest(new PutNotificationChannelRequestPrivate(FMSRequest::PutNotificationChannelAction, this))
@@ -72,14 +69,9 @@ bool PutNotificationChannelRequest::isValid() const
 
 
 /*!
- * @brief  Construct an PutNotificationChannelResponse object.
+ * Returns a PutNotificationChannelResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An PutNotificationChannelResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  FMSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * PutNotificationChannelRequest::response(QNetworkReply * const reply) const
 {
@@ -87,20 +79,17 @@ QtAws::Core::AwsAbstractResponse * PutNotificationChannelRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::FMS::PutNotificationChannelRequestPrivate
+ * \brief The PutNotificationChannelRequestPrivate class provides private implementation for PutNotificationChannelRequest.
+ * \internal
  *
- * @class  PutNotificationChannelRequestPrivate
- *
- * @brief  Private implementation for PutNotificationChannelRequest.
+ * \inmodule QtAwsFMS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new PutNotificationChannelRequestPrivate object.
- *
- * @param  action  FMS action being performed.
- * @param  q       Pointer to this object's public PutNotificationChannelRequest instance.
+ * Constructs a PutNotificationChannelRequestPrivate object for FMS \a action with,
+ * public implementation \a q.
  */
 PutNotificationChannelRequestPrivate::PutNotificationChannelRequestPrivate(
     const FMSRequest::Action action, PutNotificationChannelRequest * const q)
@@ -110,15 +99,10 @@ PutNotificationChannelRequestPrivate::PutNotificationChannelRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutNotificationChannelRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the PutNotificationChannelRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public PutNotificationChannelRequest instance.
  */
 PutNotificationChannelRequestPrivate::PutNotificationChannelRequestPrivate(
     const PutNotificationChannelRequestPrivate &other, PutNotificationChannelRequest * const q)

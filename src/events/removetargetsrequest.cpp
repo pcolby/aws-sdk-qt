@@ -27,10 +27,9 @@ namespace CloudWatchEvents {
 
 /*!
  * \class QtAws::CloudWatchEvents::RemoveTargetsRequest
- *
  * \brief The RemoveTargetsRequest class provides an interface for CloudWatchEvents RemoveTargets requests.
  *
- * \ingroup CloudWatchEvents
+ * \inmodule QtAwsCloudWatchEvents
  *
  *  Amazon CloudWatch Events helps you to respond to state changes in your AWS resources. When your resources change state,
  *  they automatically send events into an event stream. You can create rules that match selected events in the stream and
@@ -60,9 +59,7 @@ namespace CloudWatchEvents {
  */
 
 /*!
- * @brief  Constructs a new RemoveTargetsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 RemoveTargetsRequest::RemoveTargetsRequest(const RemoveTargetsRequest &other)
     : CloudWatchEventsRequest(new RemoveTargetsRequestPrivate(*other.d_func(), this))
@@ -71,7 +68,7 @@ RemoveTargetsRequest::RemoveTargetsRequest(const RemoveTargetsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new RemoveTargetsRequest object.
+ * Constructs a RemoveTargetsRequest object.
  */
 RemoveTargetsRequest::RemoveTargetsRequest()
     : CloudWatchEventsRequest(new RemoveTargetsRequestPrivate(CloudWatchEventsRequest::RemoveTargetsAction, this))
@@ -89,14 +86,9 @@ bool RemoveTargetsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an RemoveTargetsResponse object.
+ * Returns a RemoveTargetsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An RemoveTargetsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudWatchEventsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * RemoveTargetsRequest::response(QNetworkReply * const reply) const
 {
@@ -104,20 +96,17 @@ QtAws::Core::AwsAbstractResponse * RemoveTargetsRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudWatchEvents::RemoveTargetsRequestPrivate
+ * \brief The RemoveTargetsRequestPrivate class provides private implementation for RemoveTargetsRequest.
+ * \internal
  *
- * @class  RemoveTargetsRequestPrivate
- *
- * @brief  Private implementation for RemoveTargetsRequest.
+ * \inmodule QtAwsCloudWatchEvents
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new RemoveTargetsRequestPrivate object.
- *
- * @param  action  CloudWatchEvents action being performed.
- * @param  q       Pointer to this object's public RemoveTargetsRequest instance.
+ * Constructs a RemoveTargetsRequestPrivate object for CloudWatchEvents \a action with,
+ * public implementation \a q.
  */
 RemoveTargetsRequestPrivate::RemoveTargetsRequestPrivate(
     const CloudWatchEventsRequest::Action action, RemoveTargetsRequest * const q)
@@ -127,15 +116,10 @@ RemoveTargetsRequestPrivate::RemoveTargetsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RemoveTargetsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the RemoveTargetsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public RemoveTargetsRequest instance.
  */
 RemoveTargetsRequestPrivate::RemoveTargetsRequestPrivate(
     const RemoveTargetsRequestPrivate &other, RemoveTargetsRequest * const q)

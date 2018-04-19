@@ -27,10 +27,9 @@ namespace MarketplaceEntitlementService {
 
 /*!
  * \class QtAws::MarketplaceEntitlementService::GetEntitlementsRequest
- *
  * \brief The GetEntitlementsRequest class provides an interface for MarketplaceEntitlementService GetEntitlements requests.
  *
- * \ingroup MarketplaceEntitlementService
+ * \inmodule QtAwsMarketplaceEntitlementService
  *
  *  <fullname>AWS Marketplace Entitlement Service</fullname>
  * 
@@ -54,9 +53,7 @@ namespace MarketplaceEntitlementService {
  */
 
 /*!
- * @brief  Constructs a new GetEntitlementsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetEntitlementsRequest::GetEntitlementsRequest(const GetEntitlementsRequest &other)
     : MarketplaceEntitlementServiceRequest(new GetEntitlementsRequestPrivate(*other.d_func(), this))
@@ -65,7 +62,7 @@ GetEntitlementsRequest::GetEntitlementsRequest(const GetEntitlementsRequest &oth
 }
 
 /*!
- * @brief  Constructs a new GetEntitlementsRequest object.
+ * Constructs a GetEntitlementsRequest object.
  */
 GetEntitlementsRequest::GetEntitlementsRequest()
     : MarketplaceEntitlementServiceRequest(new GetEntitlementsRequestPrivate(MarketplaceEntitlementServiceRequest::GetEntitlementsAction, this))
@@ -83,14 +80,9 @@ bool GetEntitlementsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetEntitlementsResponse object.
+ * Returns a GetEntitlementsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetEntitlementsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MarketplaceEntitlementServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetEntitlementsRequest::response(QNetworkReply * const reply) const
 {
@@ -98,20 +90,17 @@ QtAws::Core::AwsAbstractResponse * GetEntitlementsRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::MarketplaceEntitlementService::GetEntitlementsRequestPrivate
+ * \brief The GetEntitlementsRequestPrivate class provides private implementation for GetEntitlementsRequest.
+ * \internal
  *
- * @class  GetEntitlementsRequestPrivate
- *
- * @brief  Private implementation for GetEntitlementsRequest.
+ * \inmodule QtAwsMarketplaceEntitlementService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetEntitlementsRequestPrivate object.
- *
- * @param  action  MarketplaceEntitlementService action being performed.
- * @param  q       Pointer to this object's public GetEntitlementsRequest instance.
+ * Constructs a GetEntitlementsRequestPrivate object for MarketplaceEntitlementService \a action with,
+ * public implementation \a q.
  */
 GetEntitlementsRequestPrivate::GetEntitlementsRequestPrivate(
     const MarketplaceEntitlementServiceRequest::Action action, GetEntitlementsRequest * const q)
@@ -121,15 +110,10 @@ GetEntitlementsRequestPrivate::GetEntitlementsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetEntitlementsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetEntitlementsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetEntitlementsRequest instance.
  */
 GetEntitlementsRequestPrivate::GetEntitlementsRequestPrivate(
     const GetEntitlementsRequestPrivate &other, GetEntitlementsRequest * const q)

@@ -27,10 +27,9 @@ namespace CognitoSync {
 
 /*!
  * \class QtAws::CognitoSync::DescribeDatasetRequest
- *
  * \brief The DescribeDatasetRequest class provides an interface for CognitoSync DescribeDataset requests.
  *
- * \ingroup CognitoSync
+ * \inmodule QtAwsCognitoSync
  *
  *  <fullname>Amazon Cognito Sync</fullname>
  * 
@@ -57,9 +56,7 @@ namespace CognitoSync {
  */
 
 /*!
- * @brief  Constructs a new DescribeDatasetRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeDatasetRequest::DescribeDatasetRequest(const DescribeDatasetRequest &other)
     : CognitoSyncRequest(new DescribeDatasetRequestPrivate(*other.d_func(), this))
@@ -68,7 +65,7 @@ DescribeDatasetRequest::DescribeDatasetRequest(const DescribeDatasetRequest &oth
 }
 
 /*!
- * @brief  Constructs a new DescribeDatasetRequest object.
+ * Constructs a DescribeDatasetRequest object.
  */
 DescribeDatasetRequest::DescribeDatasetRequest()
     : CognitoSyncRequest(new DescribeDatasetRequestPrivate(CognitoSyncRequest::DescribeDatasetAction, this))
@@ -86,14 +83,9 @@ bool DescribeDatasetRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeDatasetResponse object.
+ * Returns a DescribeDatasetResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeDatasetResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CognitoSyncClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeDatasetRequest::response(QNetworkReply * const reply) const
 {
@@ -101,20 +93,17 @@ QtAws::Core::AwsAbstractResponse * DescribeDatasetRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::CognitoSync::DescribeDatasetRequestPrivate
+ * \brief The DescribeDatasetRequestPrivate class provides private implementation for DescribeDatasetRequest.
+ * \internal
  *
- * @class  DescribeDatasetRequestPrivate
- *
- * @brief  Private implementation for DescribeDatasetRequest.
+ * \inmodule QtAwsCognitoSync
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeDatasetRequestPrivate object.
- *
- * @param  action  CognitoSync action being performed.
- * @param  q       Pointer to this object's public DescribeDatasetRequest instance.
+ * Constructs a DescribeDatasetRequestPrivate object for CognitoSync \a action with,
+ * public implementation \a q.
  */
 DescribeDatasetRequestPrivate::DescribeDatasetRequestPrivate(
     const CognitoSyncRequest::Action action, DescribeDatasetRequest * const q)
@@ -124,15 +113,10 @@ DescribeDatasetRequestPrivate::DescribeDatasetRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeDatasetRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeDatasetRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeDatasetRequest instance.
  */
 DescribeDatasetRequestPrivate::DescribeDatasetRequestPrivate(
     const DescribeDatasetRequestPrivate &other, DescribeDatasetRequest * const q)

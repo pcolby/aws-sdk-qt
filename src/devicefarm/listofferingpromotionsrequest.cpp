@@ -27,10 +27,9 @@ namespace DeviceFarm {
 
 /*!
  * \class QtAws::DeviceFarm::ListOfferingPromotionsRequest
- *
  * \brief The ListOfferingPromotionsRequest class provides an interface for DeviceFarm ListOfferingPromotions requests.
  *
- * \ingroup DeviceFarm
+ * \inmodule QtAwsDeviceFarm
  *
  *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
  *  phones, tablets, and other devices in the
@@ -39,9 +38,7 @@ namespace DeviceFarm {
  */
 
 /*!
- * @brief  Constructs a new ListOfferingPromotionsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListOfferingPromotionsRequest::ListOfferingPromotionsRequest(const ListOfferingPromotionsRequest &other)
     : DeviceFarmRequest(new ListOfferingPromotionsRequestPrivate(*other.d_func(), this))
@@ -50,7 +47,7 @@ ListOfferingPromotionsRequest::ListOfferingPromotionsRequest(const ListOfferingP
 }
 
 /*!
- * @brief  Constructs a new ListOfferingPromotionsRequest object.
+ * Constructs a ListOfferingPromotionsRequest object.
  */
 ListOfferingPromotionsRequest::ListOfferingPromotionsRequest()
     : DeviceFarmRequest(new ListOfferingPromotionsRequestPrivate(DeviceFarmRequest::ListOfferingPromotionsAction, this))
@@ -68,14 +65,9 @@ bool ListOfferingPromotionsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListOfferingPromotionsResponse object.
+ * Returns a ListOfferingPromotionsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListOfferingPromotionsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DeviceFarmClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListOfferingPromotionsRequest::response(QNetworkReply * const reply) const
 {
@@ -83,20 +75,17 @@ QtAws::Core::AwsAbstractResponse * ListOfferingPromotionsRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::DeviceFarm::ListOfferingPromotionsRequestPrivate
+ * \brief The ListOfferingPromotionsRequestPrivate class provides private implementation for ListOfferingPromotionsRequest.
+ * \internal
  *
- * @class  ListOfferingPromotionsRequestPrivate
- *
- * @brief  Private implementation for ListOfferingPromotionsRequest.
+ * \inmodule QtAwsDeviceFarm
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListOfferingPromotionsRequestPrivate object.
- *
- * @param  action  DeviceFarm action being performed.
- * @param  q       Pointer to this object's public ListOfferingPromotionsRequest instance.
+ * Constructs a ListOfferingPromotionsRequestPrivate object for DeviceFarm \a action with,
+ * public implementation \a q.
  */
 ListOfferingPromotionsRequestPrivate::ListOfferingPromotionsRequestPrivate(
     const DeviceFarmRequest::Action action, ListOfferingPromotionsRequest * const q)
@@ -106,15 +95,10 @@ ListOfferingPromotionsRequestPrivate::ListOfferingPromotionsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListOfferingPromotionsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListOfferingPromotionsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListOfferingPromotionsRequest instance.
  */
 ListOfferingPromotionsRequestPrivate::ListOfferingPromotionsRequestPrivate(
     const ListOfferingPromotionsRequestPrivate &other, ListOfferingPromotionsRequest * const q)

@@ -27,10 +27,9 @@ namespace CloudWatchLogs {
 
 /*!
  * \class QtAws::CloudWatchLogs::DescribeMetricFiltersRequest
- *
  * \brief The DescribeMetricFiltersRequest class provides an interface for CloudWatchLogs DescribeMetricFilters requests.
  *
- * \ingroup CloudWatchLogs
+ * \inmodule QtAwsCloudWatchLogs
  *
  *  You can use Amazon CloudWatch Logs to monitor, store, and access your log files from Amazon EC2 instances, AWS
  *  CloudTrail, or other sources. You can then retrieve the associated log data from CloudWatch Logs using the CloudWatch
@@ -66,9 +65,7 @@ namespace CloudWatchLogs {
  */
 
 /*!
- * @brief  Constructs a new DescribeMetricFiltersRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeMetricFiltersRequest::DescribeMetricFiltersRequest(const DescribeMetricFiltersRequest &other)
     : CloudWatchLogsRequest(new DescribeMetricFiltersRequestPrivate(*other.d_func(), this))
@@ -77,7 +74,7 @@ DescribeMetricFiltersRequest::DescribeMetricFiltersRequest(const DescribeMetricF
 }
 
 /*!
- * @brief  Constructs a new DescribeMetricFiltersRequest object.
+ * Constructs a DescribeMetricFiltersRequest object.
  */
 DescribeMetricFiltersRequest::DescribeMetricFiltersRequest()
     : CloudWatchLogsRequest(new DescribeMetricFiltersRequestPrivate(CloudWatchLogsRequest::DescribeMetricFiltersAction, this))
@@ -95,14 +92,9 @@ bool DescribeMetricFiltersRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeMetricFiltersResponse object.
+ * Returns a DescribeMetricFiltersResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeMetricFiltersResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudWatchLogsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeMetricFiltersRequest::response(QNetworkReply * const reply) const
 {
@@ -110,20 +102,17 @@ QtAws::Core::AwsAbstractResponse * DescribeMetricFiltersRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudWatchLogs::DescribeMetricFiltersRequestPrivate
+ * \brief The DescribeMetricFiltersRequestPrivate class provides private implementation for DescribeMetricFiltersRequest.
+ * \internal
  *
- * @class  DescribeMetricFiltersRequestPrivate
- *
- * @brief  Private implementation for DescribeMetricFiltersRequest.
+ * \inmodule QtAwsCloudWatchLogs
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeMetricFiltersRequestPrivate object.
- *
- * @param  action  CloudWatchLogs action being performed.
- * @param  q       Pointer to this object's public DescribeMetricFiltersRequest instance.
+ * Constructs a DescribeMetricFiltersRequestPrivate object for CloudWatchLogs \a action with,
+ * public implementation \a q.
  */
 DescribeMetricFiltersRequestPrivate::DescribeMetricFiltersRequestPrivate(
     const CloudWatchLogsRequest::Action action, DescribeMetricFiltersRequest * const q)
@@ -133,15 +122,10 @@ DescribeMetricFiltersRequestPrivate::DescribeMetricFiltersRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeMetricFiltersRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeMetricFiltersRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeMetricFiltersRequest instance.
  */
 DescribeMetricFiltersRequestPrivate::DescribeMetricFiltersRequestPrivate(
     const DescribeMetricFiltersRequestPrivate &other, DescribeMetricFiltersRequest * const q)

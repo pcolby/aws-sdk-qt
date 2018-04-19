@@ -27,10 +27,9 @@ namespace ElasticLoadBalancingv2 {
 
 /*!
  * \class QtAws::ElasticLoadBalancingv2::AddListenerCertificatesRequest
- *
  * \brief The AddListenerCertificatesRequest class provides an interface for ElasticLoadBalancingv2 AddListenerCertificates requests.
  *
- * \ingroup ElasticLoadBalancingv2
+ * \inmodule QtAwsElasticLoadBalancingv2
  *
  *  <fullname>Elastic Load Balancing</fullname>
  * 
@@ -105,9 +104,7 @@ namespace ElasticLoadBalancingv2 {
  */
 
 /*!
- * @brief  Constructs a new AddListenerCertificatesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AddListenerCertificatesRequest::AddListenerCertificatesRequest(const AddListenerCertificatesRequest &other)
     : ElasticLoadBalancingv2Request(new AddListenerCertificatesRequestPrivate(*other.d_func(), this))
@@ -116,7 +113,7 @@ AddListenerCertificatesRequest::AddListenerCertificatesRequest(const AddListener
 }
 
 /*!
- * @brief  Constructs a new AddListenerCertificatesRequest object.
+ * Constructs a AddListenerCertificatesRequest object.
  */
 AddListenerCertificatesRequest::AddListenerCertificatesRequest()
     : ElasticLoadBalancingv2Request(new AddListenerCertificatesRequestPrivate(ElasticLoadBalancingv2Request::AddListenerCertificatesAction, this))
@@ -134,14 +131,9 @@ bool AddListenerCertificatesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AddListenerCertificatesResponse object.
+ * Returns a AddListenerCertificatesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AddListenerCertificatesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ElasticLoadBalancingv2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AddListenerCertificatesRequest::response(QNetworkReply * const reply) const
 {
@@ -149,20 +141,17 @@ QtAws::Core::AwsAbstractResponse * AddListenerCertificatesRequest::response(QNet
 }
 
 /*!
- * @internal
+ * \class QtAws::ElasticLoadBalancingv2::AddListenerCertificatesRequestPrivate
+ * \brief The AddListenerCertificatesRequestPrivate class provides private implementation for AddListenerCertificatesRequest.
+ * \internal
  *
- * @class  AddListenerCertificatesRequestPrivate
- *
- * @brief  Private implementation for AddListenerCertificatesRequest.
+ * \inmodule QtAwsElasticLoadBalancingv2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AddListenerCertificatesRequestPrivate object.
- *
- * @param  action  ElasticLoadBalancingv2 action being performed.
- * @param  q       Pointer to this object's public AddListenerCertificatesRequest instance.
+ * Constructs a AddListenerCertificatesRequestPrivate object for ElasticLoadBalancingv2 \a action with,
+ * public implementation \a q.
  */
 AddListenerCertificatesRequestPrivate::AddListenerCertificatesRequestPrivate(
     const ElasticLoadBalancingv2Request::Action action, AddListenerCertificatesRequest * const q)
@@ -172,15 +161,10 @@ AddListenerCertificatesRequestPrivate::AddListenerCertificatesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AddListenerCertificatesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AddListenerCertificatesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AddListenerCertificatesRequest instance.
  */
 AddListenerCertificatesRequestPrivate::AddListenerCertificatesRequestPrivate(
     const AddListenerCertificatesRequestPrivate &other, AddListenerCertificatesRequest * const q)

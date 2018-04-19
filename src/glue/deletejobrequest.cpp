@@ -27,10 +27,9 @@ namespace Glue {
 
 /*!
  * \class QtAws::Glue::DeleteJobRequest
- *
  * \brief The DeleteJobRequest class provides an interface for Glue DeleteJob requests.
  *
- * \ingroup Glue
+ * \inmodule QtAwsGlue
  *
  *  <fullname>AWS Glue</fullname>
  * 
@@ -40,9 +39,7 @@ namespace Glue {
  */
 
 /*!
- * @brief  Constructs a new DeleteJobRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteJobRequest::DeleteJobRequest(const DeleteJobRequest &other)
     : GlueRequest(new DeleteJobRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ DeleteJobRequest::DeleteJobRequest(const DeleteJobRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DeleteJobRequest object.
+ * Constructs a DeleteJobRequest object.
  */
 DeleteJobRequest::DeleteJobRequest()
     : GlueRequest(new DeleteJobRequestPrivate(GlueRequest::DeleteJobAction, this))
@@ -69,14 +66,9 @@ bool DeleteJobRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteJobResponse object.
+ * Returns a DeleteJobResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteJobResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GlueClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteJobRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * DeleteJobRequest::response(QNetworkReply * co
 }
 
 /*!
- * @internal
+ * \class QtAws::Glue::DeleteJobRequestPrivate
+ * \brief The DeleteJobRequestPrivate class provides private implementation for DeleteJobRequest.
+ * \internal
  *
- * @class  DeleteJobRequestPrivate
- *
- * @brief  Private implementation for DeleteJobRequest.
+ * \inmodule QtAwsGlue
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteJobRequestPrivate object.
- *
- * @param  action  Glue action being performed.
- * @param  q       Pointer to this object's public DeleteJobRequest instance.
+ * Constructs a DeleteJobRequestPrivate object for Glue \a action with,
+ * public implementation \a q.
  */
 DeleteJobRequestPrivate::DeleteJobRequestPrivate(
     const GlueRequest::Action action, DeleteJobRequest * const q)
@@ -107,15 +96,10 @@ DeleteJobRequestPrivate::DeleteJobRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteJobRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteJobRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteJobRequest instance.
  */
 DeleteJobRequestPrivate::DeleteJobRequestPrivate(
     const DeleteJobRequestPrivate &other, DeleteJobRequest * const q)

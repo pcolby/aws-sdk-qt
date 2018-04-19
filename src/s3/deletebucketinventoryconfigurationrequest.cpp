@@ -27,19 +27,16 @@ namespace S3 {
 
 /*!
  * \class QtAws::S3::DeleteBucketInventoryConfigurationRequest
- *
  * \brief The DeleteBucketInventoryConfigurationRequest class provides an interface for S3 DeleteBucketInventoryConfiguration requests.
  *
- * \ingroup S3
+ * \inmodule QtAwsS3
  *
  *
  * \sa S3Client::deleteBucketInventoryConfiguration
  */
 
 /*!
- * @brief  Constructs a new DeleteBucketInventoryConfigurationRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteBucketInventoryConfigurationRequest::DeleteBucketInventoryConfigurationRequest(const DeleteBucketInventoryConfigurationRequest &other)
     : S3Request(new DeleteBucketInventoryConfigurationRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ DeleteBucketInventoryConfigurationRequest::DeleteBucketInventoryConfigurationReq
 }
 
 /*!
- * @brief  Constructs a new DeleteBucketInventoryConfigurationRequest object.
+ * Constructs a DeleteBucketInventoryConfigurationRequest object.
  */
 DeleteBucketInventoryConfigurationRequest::DeleteBucketInventoryConfigurationRequest()
     : S3Request(new DeleteBucketInventoryConfigurationRequestPrivate(S3Request::DeleteBucketInventoryConfigurationAction, this))
@@ -66,14 +63,9 @@ bool DeleteBucketInventoryConfigurationRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteBucketInventoryConfigurationResponse object.
+ * Returns a DeleteBucketInventoryConfigurationResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteBucketInventoryConfigurationResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  S3Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteBucketInventoryConfigurationRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * DeleteBucketInventoryConfigurationRequest::re
 }
 
 /*!
- * @internal
+ * \class QtAws::S3::DeleteBucketInventoryConfigurationRequestPrivate
+ * \brief The DeleteBucketInventoryConfigurationRequestPrivate class provides private implementation for DeleteBucketInventoryConfigurationRequest.
+ * \internal
  *
- * @class  DeleteBucketInventoryConfigurationRequestPrivate
- *
- * @brief  Private implementation for DeleteBucketInventoryConfigurationRequest.
+ * \inmodule QtAwsS3
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteBucketInventoryConfigurationRequestPrivate object.
- *
- * @param  action  S3 action being performed.
- * @param  q       Pointer to this object's public DeleteBucketInventoryConfigurationRequest instance.
+ * Constructs a DeleteBucketInventoryConfigurationRequestPrivate object for S3 \a action with,
+ * public implementation \a q.
  */
 DeleteBucketInventoryConfigurationRequestPrivate::DeleteBucketInventoryConfigurationRequestPrivate(
     const S3Request::Action action, DeleteBucketInventoryConfigurationRequest * const q)
@@ -104,15 +93,10 @@ DeleteBucketInventoryConfigurationRequestPrivate::DeleteBucketInventoryConfigura
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteBucketInventoryConfigurationRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteBucketInventoryConfigurationRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteBucketInventoryConfigurationRequest instance.
  */
 DeleteBucketInventoryConfigurationRequestPrivate::DeleteBucketInventoryConfigurationRequestPrivate(
     const DeleteBucketInventoryConfigurationRequestPrivate &other, DeleteBucketInventoryConfigurationRequest * const q)

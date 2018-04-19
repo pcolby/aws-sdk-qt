@@ -27,19 +27,16 @@ namespace MTurk {
 
 /*!
  * \class QtAws::MTurk::DeleteHITRequest
- *
  * \brief The DeleteHITRequest class provides an interface for MTurk DeleteHIT requests.
  *
- * \ingroup MTurk
+ * \inmodule QtAwsMTurk
  *
  *
  * \sa MTurkClient::deleteHIT
  */
 
 /*!
- * @brief  Constructs a new DeleteHITRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteHITRequest::DeleteHITRequest(const DeleteHITRequest &other)
     : MTurkRequest(new DeleteHITRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ DeleteHITRequest::DeleteHITRequest(const DeleteHITRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DeleteHITRequest object.
+ * Constructs a DeleteHITRequest object.
  */
 DeleteHITRequest::DeleteHITRequest()
     : MTurkRequest(new DeleteHITRequestPrivate(MTurkRequest::DeleteHITAction, this))
@@ -66,14 +63,9 @@ bool DeleteHITRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteHITResponse object.
+ * Returns a DeleteHITResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteHITResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MTurkClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteHITRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * DeleteHITRequest::response(QNetworkReply * co
 }
 
 /*!
- * @internal
+ * \class QtAws::MTurk::DeleteHITRequestPrivate
+ * \brief The DeleteHITRequestPrivate class provides private implementation for DeleteHITRequest.
+ * \internal
  *
- * @class  DeleteHITRequestPrivate
- *
- * @brief  Private implementation for DeleteHITRequest.
+ * \inmodule QtAwsMTurk
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteHITRequestPrivate object.
- *
- * @param  action  MTurk action being performed.
- * @param  q       Pointer to this object's public DeleteHITRequest instance.
+ * Constructs a DeleteHITRequestPrivate object for MTurk \a action with,
+ * public implementation \a q.
  */
 DeleteHITRequestPrivate::DeleteHITRequestPrivate(
     const MTurkRequest::Action action, DeleteHITRequest * const q)
@@ -104,15 +93,10 @@ DeleteHITRequestPrivate::DeleteHITRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteHITRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteHITRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteHITRequest instance.
  */
 DeleteHITRequestPrivate::DeleteHITRequestPrivate(
     const DeleteHITRequestPrivate &other, DeleteHITRequest * const q)

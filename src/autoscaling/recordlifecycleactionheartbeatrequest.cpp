@@ -27,10 +27,9 @@ namespace AutoScaling {
 
 /*!
  * \class QtAws::AutoScaling::RecordLifecycleActionHeartbeatRequest
- *
  * \brief The RecordLifecycleActionHeartbeatRequest class provides an interface for AutoScaling RecordLifecycleActionHeartbeat requests.
  *
- * \ingroup AutoScaling
+ * \inmodule QtAwsAutoScaling
  *
  *  <fullname>Amazon EC2 Auto Scaling</fullname>
  * 
@@ -42,9 +41,7 @@ namespace AutoScaling {
  */
 
 /*!
- * @brief  Constructs a new RecordLifecycleActionHeartbeatRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 RecordLifecycleActionHeartbeatRequest::RecordLifecycleActionHeartbeatRequest(const RecordLifecycleActionHeartbeatRequest &other)
     : AutoScalingRequest(new RecordLifecycleActionHeartbeatRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ RecordLifecycleActionHeartbeatRequest::RecordLifecycleActionHeartbeatRequest(con
 }
 
 /*!
- * @brief  Constructs a new RecordLifecycleActionHeartbeatRequest object.
+ * Constructs a RecordLifecycleActionHeartbeatRequest object.
  */
 RecordLifecycleActionHeartbeatRequest::RecordLifecycleActionHeartbeatRequest()
     : AutoScalingRequest(new RecordLifecycleActionHeartbeatRequestPrivate(AutoScalingRequest::RecordLifecycleActionHeartbeatAction, this))
@@ -71,14 +68,9 @@ bool RecordLifecycleActionHeartbeatRequest::isValid() const
 
 
 /*!
- * @brief  Construct an RecordLifecycleActionHeartbeatResponse object.
+ * Returns a RecordLifecycleActionHeartbeatResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An RecordLifecycleActionHeartbeatResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AutoScalingClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * RecordLifecycleActionHeartbeatRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * RecordLifecycleActionHeartbeatRequest::respon
 }
 
 /*!
- * @internal
+ * \class QtAws::AutoScaling::RecordLifecycleActionHeartbeatRequestPrivate
+ * \brief The RecordLifecycleActionHeartbeatRequestPrivate class provides private implementation for RecordLifecycleActionHeartbeatRequest.
+ * \internal
  *
- * @class  RecordLifecycleActionHeartbeatRequestPrivate
- *
- * @brief  Private implementation for RecordLifecycleActionHeartbeatRequest.
+ * \inmodule QtAwsAutoScaling
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new RecordLifecycleActionHeartbeatRequestPrivate object.
- *
- * @param  action  AutoScaling action being performed.
- * @param  q       Pointer to this object's public RecordLifecycleActionHeartbeatRequest instance.
+ * Constructs a RecordLifecycleActionHeartbeatRequestPrivate object for AutoScaling \a action with,
+ * public implementation \a q.
  */
 RecordLifecycleActionHeartbeatRequestPrivate::RecordLifecycleActionHeartbeatRequestPrivate(
     const AutoScalingRequest::Action action, RecordLifecycleActionHeartbeatRequest * const q)
@@ -109,15 +98,10 @@ RecordLifecycleActionHeartbeatRequestPrivate::RecordLifecycleActionHeartbeatRequ
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RecordLifecycleActionHeartbeatRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the RecordLifecycleActionHeartbeatRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public RecordLifecycleActionHeartbeatRequest instance.
  */
 RecordLifecycleActionHeartbeatRequestPrivate::RecordLifecycleActionHeartbeatRequestPrivate(
     const RecordLifecycleActionHeartbeatRequestPrivate &other, RecordLifecycleActionHeartbeatRequest * const q)

@@ -27,10 +27,9 @@ namespace DatabaseMigrationService {
 
 /*!
  * \class QtAws::DatabaseMigrationService::DescribeReplicationInstanceTaskLogsRequest
- *
  * \brief The DescribeReplicationInstanceTaskLogsRequest class provides an interface for DatabaseMigrationService DescribeReplicationInstanceTaskLogs requests.
  *
- * \ingroup DatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigrationService
  *
  *  <fullname>AWS Database Migration Service</fullname>
  * 
@@ -48,9 +47,7 @@ namespace DatabaseMigrationService {
  */
 
 /*!
- * @brief  Constructs a new DescribeReplicationInstanceTaskLogsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeReplicationInstanceTaskLogsRequest::DescribeReplicationInstanceTaskLogsRequest(const DescribeReplicationInstanceTaskLogsRequest &other)
     : DatabaseMigrationServiceRequest(new DescribeReplicationInstanceTaskLogsRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ DescribeReplicationInstanceTaskLogsRequest::DescribeReplicationInstanceTaskLogsR
 }
 
 /*!
- * @brief  Constructs a new DescribeReplicationInstanceTaskLogsRequest object.
+ * Constructs a DescribeReplicationInstanceTaskLogsRequest object.
  */
 DescribeReplicationInstanceTaskLogsRequest::DescribeReplicationInstanceTaskLogsRequest()
     : DatabaseMigrationServiceRequest(new DescribeReplicationInstanceTaskLogsRequestPrivate(DatabaseMigrationServiceRequest::DescribeReplicationInstanceTaskLogsAction, this))
@@ -77,14 +74,9 @@ bool DescribeReplicationInstanceTaskLogsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeReplicationInstanceTaskLogsResponse object.
+ * Returns a DescribeReplicationInstanceTaskLogsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeReplicationInstanceTaskLogsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DatabaseMigrationServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeReplicationInstanceTaskLogsRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * DescribeReplicationInstanceTaskLogsRequest::r
 }
 
 /*!
- * @internal
+ * \class QtAws::DatabaseMigrationService::DescribeReplicationInstanceTaskLogsRequestPrivate
+ * \brief The DescribeReplicationInstanceTaskLogsRequestPrivate class provides private implementation for DescribeReplicationInstanceTaskLogsRequest.
+ * \internal
  *
- * @class  DescribeReplicationInstanceTaskLogsRequestPrivate
- *
- * @brief  Private implementation for DescribeReplicationInstanceTaskLogsRequest.
+ * \inmodule QtAwsDatabaseMigrationService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeReplicationInstanceTaskLogsRequestPrivate object.
- *
- * @param  action  DatabaseMigrationService action being performed.
- * @param  q       Pointer to this object's public DescribeReplicationInstanceTaskLogsRequest instance.
+ * Constructs a DescribeReplicationInstanceTaskLogsRequestPrivate object for DatabaseMigrationService \a action with,
+ * public implementation \a q.
  */
 DescribeReplicationInstanceTaskLogsRequestPrivate::DescribeReplicationInstanceTaskLogsRequestPrivate(
     const DatabaseMigrationServiceRequest::Action action, DescribeReplicationInstanceTaskLogsRequest * const q)
@@ -115,15 +104,10 @@ DescribeReplicationInstanceTaskLogsRequestPrivate::DescribeReplicationInstanceTa
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeReplicationInstanceTaskLogsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeReplicationInstanceTaskLogsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeReplicationInstanceTaskLogsRequest instance.
  */
 DescribeReplicationInstanceTaskLogsRequestPrivate::DescribeReplicationInstanceTaskLogsRequestPrivate(
     const DescribeReplicationInstanceTaskLogsRequestPrivate &other, DescribeReplicationInstanceTaskLogsRequest * const q)

@@ -27,19 +27,16 @@ namespace S3 {
 
 /*!
  * \class QtAws::S3::DeleteBucketAnalyticsConfigurationRequest
- *
  * \brief The DeleteBucketAnalyticsConfigurationRequest class provides an interface for S3 DeleteBucketAnalyticsConfiguration requests.
  *
- * \ingroup S3
+ * \inmodule QtAwsS3
  *
  *
  * \sa S3Client::deleteBucketAnalyticsConfiguration
  */
 
 /*!
- * @brief  Constructs a new DeleteBucketAnalyticsConfigurationRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteBucketAnalyticsConfigurationRequest::DeleteBucketAnalyticsConfigurationRequest(const DeleteBucketAnalyticsConfigurationRequest &other)
     : S3Request(new DeleteBucketAnalyticsConfigurationRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ DeleteBucketAnalyticsConfigurationRequest::DeleteBucketAnalyticsConfigurationReq
 }
 
 /*!
- * @brief  Constructs a new DeleteBucketAnalyticsConfigurationRequest object.
+ * Constructs a DeleteBucketAnalyticsConfigurationRequest object.
  */
 DeleteBucketAnalyticsConfigurationRequest::DeleteBucketAnalyticsConfigurationRequest()
     : S3Request(new DeleteBucketAnalyticsConfigurationRequestPrivate(S3Request::DeleteBucketAnalyticsConfigurationAction, this))
@@ -66,14 +63,9 @@ bool DeleteBucketAnalyticsConfigurationRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteBucketAnalyticsConfigurationResponse object.
+ * Returns a DeleteBucketAnalyticsConfigurationResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteBucketAnalyticsConfigurationResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  S3Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteBucketAnalyticsConfigurationRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * DeleteBucketAnalyticsConfigurationRequest::re
 }
 
 /*!
- * @internal
+ * \class QtAws::S3::DeleteBucketAnalyticsConfigurationRequestPrivate
+ * \brief The DeleteBucketAnalyticsConfigurationRequestPrivate class provides private implementation for DeleteBucketAnalyticsConfigurationRequest.
+ * \internal
  *
- * @class  DeleteBucketAnalyticsConfigurationRequestPrivate
- *
- * @brief  Private implementation for DeleteBucketAnalyticsConfigurationRequest.
+ * \inmodule QtAwsS3
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteBucketAnalyticsConfigurationRequestPrivate object.
- *
- * @param  action  S3 action being performed.
- * @param  q       Pointer to this object's public DeleteBucketAnalyticsConfigurationRequest instance.
+ * Constructs a DeleteBucketAnalyticsConfigurationRequestPrivate object for S3 \a action with,
+ * public implementation \a q.
  */
 DeleteBucketAnalyticsConfigurationRequestPrivate::DeleteBucketAnalyticsConfigurationRequestPrivate(
     const S3Request::Action action, DeleteBucketAnalyticsConfigurationRequest * const q)
@@ -104,15 +93,10 @@ DeleteBucketAnalyticsConfigurationRequestPrivate::DeleteBucketAnalyticsConfigura
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteBucketAnalyticsConfigurationRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteBucketAnalyticsConfigurationRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteBucketAnalyticsConfigurationRequest instance.
  */
 DeleteBucketAnalyticsConfigurationRequestPrivate::DeleteBucketAnalyticsConfigurationRequestPrivate(
     const DeleteBucketAnalyticsConfigurationRequestPrivate &other, DeleteBucketAnalyticsConfigurationRequest * const q)

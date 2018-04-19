@@ -27,10 +27,9 @@ namespace Glue {
 
 /*!
  * \class QtAws::Glue::GetTriggerRequest
- *
  * \brief The GetTriggerRequest class provides an interface for Glue GetTrigger requests.
  *
- * \ingroup Glue
+ * \inmodule QtAwsGlue
  *
  *  <fullname>AWS Glue</fullname>
  * 
@@ -40,9 +39,7 @@ namespace Glue {
  */
 
 /*!
- * @brief  Constructs a new GetTriggerRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetTriggerRequest::GetTriggerRequest(const GetTriggerRequest &other)
     : GlueRequest(new GetTriggerRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ GetTriggerRequest::GetTriggerRequest(const GetTriggerRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetTriggerRequest object.
+ * Constructs a GetTriggerRequest object.
  */
 GetTriggerRequest::GetTriggerRequest()
     : GlueRequest(new GetTriggerRequestPrivate(GlueRequest::GetTriggerAction, this))
@@ -69,14 +66,9 @@ bool GetTriggerRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetTriggerResponse object.
+ * Returns a GetTriggerResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetTriggerResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GlueClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetTriggerRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * GetTriggerRequest::response(QNetworkReply * c
 }
 
 /*!
- * @internal
+ * \class QtAws::Glue::GetTriggerRequestPrivate
+ * \brief The GetTriggerRequestPrivate class provides private implementation for GetTriggerRequest.
+ * \internal
  *
- * @class  GetTriggerRequestPrivate
- *
- * @brief  Private implementation for GetTriggerRequest.
+ * \inmodule QtAwsGlue
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetTriggerRequestPrivate object.
- *
- * @param  action  Glue action being performed.
- * @param  q       Pointer to this object's public GetTriggerRequest instance.
+ * Constructs a GetTriggerRequestPrivate object for Glue \a action with,
+ * public implementation \a q.
  */
 GetTriggerRequestPrivate::GetTriggerRequestPrivate(
     const GlueRequest::Action action, GetTriggerRequest * const q)
@@ -107,15 +96,10 @@ GetTriggerRequestPrivate::GetTriggerRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetTriggerRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetTriggerRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetTriggerRequest instance.
  */
 GetTriggerRequestPrivate::GetTriggerRequestPrivate(
     const GetTriggerRequestPrivate &other, GetTriggerRequest * const q)

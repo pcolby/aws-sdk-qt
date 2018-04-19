@@ -27,10 +27,9 @@ namespace Greengrass {
 
 /*!
  * \class QtAws::Greengrass::CreateDeviceDefinitionRequest
- *
  * \brief The CreateDeviceDefinitionRequest class provides an interface for Greengrass CreateDeviceDefinition requests.
  *
- * \ingroup Greengrass
+ * \inmodule QtAwsGreengrass
  *
  *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
  *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
@@ -40,9 +39,7 @@ namespace Greengrass {
  */
 
 /*!
- * @brief  Constructs a new CreateDeviceDefinitionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateDeviceDefinitionRequest::CreateDeviceDefinitionRequest(const CreateDeviceDefinitionRequest &other)
     : GreengrassRequest(new CreateDeviceDefinitionRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ CreateDeviceDefinitionRequest::CreateDeviceDefinitionRequest(const CreateDeviceD
 }
 
 /*!
- * @brief  Constructs a new CreateDeviceDefinitionRequest object.
+ * Constructs a CreateDeviceDefinitionRequest object.
  */
 CreateDeviceDefinitionRequest::CreateDeviceDefinitionRequest()
     : GreengrassRequest(new CreateDeviceDefinitionRequestPrivate(GreengrassRequest::CreateDeviceDefinitionAction, this))
@@ -69,14 +66,9 @@ bool CreateDeviceDefinitionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateDeviceDefinitionResponse object.
+ * Returns a CreateDeviceDefinitionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateDeviceDefinitionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GreengrassClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateDeviceDefinitionRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * CreateDeviceDefinitionRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::Greengrass::CreateDeviceDefinitionRequestPrivate
+ * \brief The CreateDeviceDefinitionRequestPrivate class provides private implementation for CreateDeviceDefinitionRequest.
+ * \internal
  *
- * @class  CreateDeviceDefinitionRequestPrivate
- *
- * @brief  Private implementation for CreateDeviceDefinitionRequest.
+ * \inmodule QtAwsGreengrass
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateDeviceDefinitionRequestPrivate object.
- *
- * @param  action  Greengrass action being performed.
- * @param  q       Pointer to this object's public CreateDeviceDefinitionRequest instance.
+ * Constructs a CreateDeviceDefinitionRequestPrivate object for Greengrass \a action with,
+ * public implementation \a q.
  */
 CreateDeviceDefinitionRequestPrivate::CreateDeviceDefinitionRequestPrivate(
     const GreengrassRequest::Action action, CreateDeviceDefinitionRequest * const q)
@@ -107,15 +96,10 @@ CreateDeviceDefinitionRequestPrivate::CreateDeviceDefinitionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateDeviceDefinitionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateDeviceDefinitionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateDeviceDefinitionRequest instance.
  */
 CreateDeviceDefinitionRequestPrivate::CreateDeviceDefinitionRequestPrivate(
     const CreateDeviceDefinitionRequestPrivate &other, CreateDeviceDefinitionRequest * const q)

@@ -27,10 +27,9 @@ namespace CodePipeline {
 
 /*!
  * \class QtAws::CodePipeline::PutApprovalResultRequest
- *
  * \brief The PutApprovalResultRequest class provides an interface for CodePipeline PutApprovalResult requests.
  *
- * \ingroup CodePipeline
+ * \inmodule QtAwsCodePipeline
  *
  *  <fullname>AWS CodePipeline</fullname>
  * 
@@ -200,9 +199,7 @@ namespace CodePipeline {
  */
 
 /*!
- * @brief  Constructs a new PutApprovalResultRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 PutApprovalResultRequest::PutApprovalResultRequest(const PutApprovalResultRequest &other)
     : CodePipelineRequest(new PutApprovalResultRequestPrivate(*other.d_func(), this))
@@ -211,7 +208,7 @@ PutApprovalResultRequest::PutApprovalResultRequest(const PutApprovalResultReques
 }
 
 /*!
- * @brief  Constructs a new PutApprovalResultRequest object.
+ * Constructs a PutApprovalResultRequest object.
  */
 PutApprovalResultRequest::PutApprovalResultRequest()
     : CodePipelineRequest(new PutApprovalResultRequestPrivate(CodePipelineRequest::PutApprovalResultAction, this))
@@ -229,14 +226,9 @@ bool PutApprovalResultRequest::isValid() const
 
 
 /*!
- * @brief  Construct an PutApprovalResultResponse object.
+ * Returns a PutApprovalResultResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An PutApprovalResultResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CodePipelineClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * PutApprovalResultRequest::response(QNetworkReply * const reply) const
 {
@@ -244,20 +236,17 @@ QtAws::Core::AwsAbstractResponse * PutApprovalResultRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::CodePipeline::PutApprovalResultRequestPrivate
+ * \brief The PutApprovalResultRequestPrivate class provides private implementation for PutApprovalResultRequest.
+ * \internal
  *
- * @class  PutApprovalResultRequestPrivate
- *
- * @brief  Private implementation for PutApprovalResultRequest.
+ * \inmodule QtAwsCodePipeline
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new PutApprovalResultRequestPrivate object.
- *
- * @param  action  CodePipeline action being performed.
- * @param  q       Pointer to this object's public PutApprovalResultRequest instance.
+ * Constructs a PutApprovalResultRequestPrivate object for CodePipeline \a action with,
+ * public implementation \a q.
  */
 PutApprovalResultRequestPrivate::PutApprovalResultRequestPrivate(
     const CodePipelineRequest::Action action, PutApprovalResultRequest * const q)
@@ -267,15 +256,10 @@ PutApprovalResultRequestPrivate::PutApprovalResultRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutApprovalResultRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the PutApprovalResultRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public PutApprovalResultRequest instance.
  */
 PutApprovalResultRequestPrivate::PutApprovalResultRequestPrivate(
     const PutApprovalResultRequestPrivate &other, PutApprovalResultRequest * const q)

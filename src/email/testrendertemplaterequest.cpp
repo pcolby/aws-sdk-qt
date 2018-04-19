@@ -27,10 +27,9 @@ namespace SES {
 
 /*!
  * \class QtAws::SES::TestRenderTemplateRequest
- *
  * \brief The TestRenderTemplateRequest class provides an interface for SES TestRenderTemplate requests.
  *
- * \ingroup SES
+ * \inmodule QtAwsSES
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -48,9 +47,7 @@ namespace SES {
  */
 
 /*!
- * @brief  Constructs a new TestRenderTemplateRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 TestRenderTemplateRequest::TestRenderTemplateRequest(const TestRenderTemplateRequest &other)
     : SESRequest(new TestRenderTemplateRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ TestRenderTemplateRequest::TestRenderTemplateRequest(const TestRenderTemplateReq
 }
 
 /*!
- * @brief  Constructs a new TestRenderTemplateRequest object.
+ * Constructs a TestRenderTemplateRequest object.
  */
 TestRenderTemplateRequest::TestRenderTemplateRequest()
     : SESRequest(new TestRenderTemplateRequestPrivate(SESRequest::TestRenderTemplateAction, this))
@@ -77,14 +74,9 @@ bool TestRenderTemplateRequest::isValid() const
 
 
 /*!
- * @brief  Construct an TestRenderTemplateResponse object.
+ * Returns a TestRenderTemplateResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An TestRenderTemplateResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SESClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * TestRenderTemplateRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * TestRenderTemplateRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::SES::TestRenderTemplateRequestPrivate
+ * \brief The TestRenderTemplateRequestPrivate class provides private implementation for TestRenderTemplateRequest.
+ * \internal
  *
- * @class  TestRenderTemplateRequestPrivate
- *
- * @brief  Private implementation for TestRenderTemplateRequest.
+ * \inmodule QtAwsSES
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new TestRenderTemplateRequestPrivate object.
- *
- * @param  action  SES action being performed.
- * @param  q       Pointer to this object's public TestRenderTemplateRequest instance.
+ * Constructs a TestRenderTemplateRequestPrivate object for SES \a action with,
+ * public implementation \a q.
  */
 TestRenderTemplateRequestPrivate::TestRenderTemplateRequestPrivate(
     const SESRequest::Action action, TestRenderTemplateRequest * const q)
@@ -115,15 +104,10 @@ TestRenderTemplateRequestPrivate::TestRenderTemplateRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new TestRenderTemplateRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the TestRenderTemplateRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public TestRenderTemplateRequest instance.
  */
 TestRenderTemplateRequestPrivate::TestRenderTemplateRequestPrivate(
     const TestRenderTemplateRequestPrivate &other, TestRenderTemplateRequest * const q)

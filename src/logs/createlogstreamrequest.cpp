@@ -27,10 +27,9 @@ namespace CloudWatchLogs {
 
 /*!
  * \class QtAws::CloudWatchLogs::CreateLogStreamRequest
- *
  * \brief The CreateLogStreamRequest class provides an interface for CloudWatchLogs CreateLogStream requests.
  *
- * \ingroup CloudWatchLogs
+ * \inmodule QtAwsCloudWatchLogs
  *
  *  You can use Amazon CloudWatch Logs to monitor, store, and access your log files from Amazon EC2 instances, AWS
  *  CloudTrail, or other sources. You can then retrieve the associated log data from CloudWatch Logs using the CloudWatch
@@ -66,9 +65,7 @@ namespace CloudWatchLogs {
  */
 
 /*!
- * @brief  Constructs a new CreateLogStreamRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateLogStreamRequest::CreateLogStreamRequest(const CreateLogStreamRequest &other)
     : CloudWatchLogsRequest(new CreateLogStreamRequestPrivate(*other.d_func(), this))
@@ -77,7 +74,7 @@ CreateLogStreamRequest::CreateLogStreamRequest(const CreateLogStreamRequest &oth
 }
 
 /*!
- * @brief  Constructs a new CreateLogStreamRequest object.
+ * Constructs a CreateLogStreamRequest object.
  */
 CreateLogStreamRequest::CreateLogStreamRequest()
     : CloudWatchLogsRequest(new CreateLogStreamRequestPrivate(CloudWatchLogsRequest::CreateLogStreamAction, this))
@@ -95,14 +92,9 @@ bool CreateLogStreamRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateLogStreamResponse object.
+ * Returns a CreateLogStreamResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateLogStreamResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudWatchLogsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateLogStreamRequest::response(QNetworkReply * const reply) const
 {
@@ -110,20 +102,17 @@ QtAws::Core::AwsAbstractResponse * CreateLogStreamRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudWatchLogs::CreateLogStreamRequestPrivate
+ * \brief The CreateLogStreamRequestPrivate class provides private implementation for CreateLogStreamRequest.
+ * \internal
  *
- * @class  CreateLogStreamRequestPrivate
- *
- * @brief  Private implementation for CreateLogStreamRequest.
+ * \inmodule QtAwsCloudWatchLogs
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateLogStreamRequestPrivate object.
- *
- * @param  action  CloudWatchLogs action being performed.
- * @param  q       Pointer to this object's public CreateLogStreamRequest instance.
+ * Constructs a CreateLogStreamRequestPrivate object for CloudWatchLogs \a action with,
+ * public implementation \a q.
  */
 CreateLogStreamRequestPrivate::CreateLogStreamRequestPrivate(
     const CloudWatchLogsRequest::Action action, CreateLogStreamRequest * const q)
@@ -133,15 +122,10 @@ CreateLogStreamRequestPrivate::CreateLogStreamRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateLogStreamRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateLogStreamRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateLogStreamRequest instance.
  */
 CreateLogStreamRequestPrivate::CreateLogStreamRequestPrivate(
     const CreateLogStreamRequestPrivate &other, CreateLogStreamRequest * const q)

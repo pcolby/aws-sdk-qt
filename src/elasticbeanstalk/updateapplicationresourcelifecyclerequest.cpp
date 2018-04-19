@@ -27,10 +27,9 @@ namespace ElasticBeanstalk {
 
 /*!
  * \class QtAws::ElasticBeanstalk::UpdateApplicationResourceLifecycleRequest
- *
  * \brief The UpdateApplicationResourceLifecycleRequest class provides an interface for ElasticBeanstalk UpdateApplicationResourceLifecycle requests.
  *
- * \ingroup ElasticBeanstalk
+ * \inmodule QtAwsElasticBeanstalk
  *
  *  <fullname>AWS Elastic Beanstalk</fullname>
  * 
@@ -59,9 +58,7 @@ namespace ElasticBeanstalk {
  */
 
 /*!
- * @brief  Constructs a new UpdateApplicationResourceLifecycleRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateApplicationResourceLifecycleRequest::UpdateApplicationResourceLifecycleRequest(const UpdateApplicationResourceLifecycleRequest &other)
     : ElasticBeanstalkRequest(new UpdateApplicationResourceLifecycleRequestPrivate(*other.d_func(), this))
@@ -70,7 +67,7 @@ UpdateApplicationResourceLifecycleRequest::UpdateApplicationResourceLifecycleReq
 }
 
 /*!
- * @brief  Constructs a new UpdateApplicationResourceLifecycleRequest object.
+ * Constructs a UpdateApplicationResourceLifecycleRequest object.
  */
 UpdateApplicationResourceLifecycleRequest::UpdateApplicationResourceLifecycleRequest()
     : ElasticBeanstalkRequest(new UpdateApplicationResourceLifecycleRequestPrivate(ElasticBeanstalkRequest::UpdateApplicationResourceLifecycleAction, this))
@@ -88,14 +85,9 @@ bool UpdateApplicationResourceLifecycleRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateApplicationResourceLifecycleResponse object.
+ * Returns a UpdateApplicationResourceLifecycleResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateApplicationResourceLifecycleResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ElasticBeanstalkClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateApplicationResourceLifecycleRequest::response(QNetworkReply * const reply) const
 {
@@ -103,20 +95,17 @@ QtAws::Core::AwsAbstractResponse * UpdateApplicationResourceLifecycleRequest::re
 }
 
 /*!
- * @internal
+ * \class QtAws::ElasticBeanstalk::UpdateApplicationResourceLifecycleRequestPrivate
+ * \brief The UpdateApplicationResourceLifecycleRequestPrivate class provides private implementation for UpdateApplicationResourceLifecycleRequest.
+ * \internal
  *
- * @class  UpdateApplicationResourceLifecycleRequestPrivate
- *
- * @brief  Private implementation for UpdateApplicationResourceLifecycleRequest.
+ * \inmodule QtAwsElasticBeanstalk
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateApplicationResourceLifecycleRequestPrivate object.
- *
- * @param  action  ElasticBeanstalk action being performed.
- * @param  q       Pointer to this object's public UpdateApplicationResourceLifecycleRequest instance.
+ * Constructs a UpdateApplicationResourceLifecycleRequestPrivate object for ElasticBeanstalk \a action with,
+ * public implementation \a q.
  */
 UpdateApplicationResourceLifecycleRequestPrivate::UpdateApplicationResourceLifecycleRequestPrivate(
     const ElasticBeanstalkRequest::Action action, UpdateApplicationResourceLifecycleRequest * const q)
@@ -126,15 +115,10 @@ UpdateApplicationResourceLifecycleRequestPrivate::UpdateApplicationResourceLifec
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateApplicationResourceLifecycleRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateApplicationResourceLifecycleRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateApplicationResourceLifecycleRequest instance.
  */
 UpdateApplicationResourceLifecycleRequestPrivate::UpdateApplicationResourceLifecycleRequestPrivate(
     const UpdateApplicationResourceLifecycleRequestPrivate &other, UpdateApplicationResourceLifecycleRequest * const q)

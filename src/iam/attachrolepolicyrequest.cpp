@@ -27,10 +27,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::AttachRolePolicyRequest
- *
  * \brief The AttachRolePolicyRequest class provides an interface for IAM AttachRolePolicy requests.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -102,9 +101,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new AttachRolePolicyRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AttachRolePolicyRequest::AttachRolePolicyRequest(const AttachRolePolicyRequest &other)
     : IAMRequest(new AttachRolePolicyRequestPrivate(*other.d_func(), this))
@@ -113,7 +110,7 @@ AttachRolePolicyRequest::AttachRolePolicyRequest(const AttachRolePolicyRequest &
 }
 
 /*!
- * @brief  Constructs a new AttachRolePolicyRequest object.
+ * Constructs a AttachRolePolicyRequest object.
  */
 AttachRolePolicyRequest::AttachRolePolicyRequest()
     : IAMRequest(new AttachRolePolicyRequestPrivate(IAMRequest::AttachRolePolicyAction, this))
@@ -131,14 +128,9 @@ bool AttachRolePolicyRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AttachRolePolicyResponse object.
+ * Returns a AttachRolePolicyResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AttachRolePolicyResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IAMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AttachRolePolicyRequest::response(QNetworkReply * const reply) const
 {
@@ -146,20 +138,17 @@ QtAws::Core::AwsAbstractResponse * AttachRolePolicyRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::IAM::AttachRolePolicyRequestPrivate
+ * \brief The AttachRolePolicyRequestPrivate class provides private implementation for AttachRolePolicyRequest.
+ * \internal
  *
- * @class  AttachRolePolicyRequestPrivate
- *
- * @brief  Private implementation for AttachRolePolicyRequest.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AttachRolePolicyRequestPrivate object.
- *
- * @param  action  IAM action being performed.
- * @param  q       Pointer to this object's public AttachRolePolicyRequest instance.
+ * Constructs a AttachRolePolicyRequestPrivate object for IAM \a action with,
+ * public implementation \a q.
  */
 AttachRolePolicyRequestPrivate::AttachRolePolicyRequestPrivate(
     const IAMRequest::Action action, AttachRolePolicyRequest * const q)
@@ -169,15 +158,10 @@ AttachRolePolicyRequestPrivate::AttachRolePolicyRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AttachRolePolicyRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AttachRolePolicyRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AttachRolePolicyRequest instance.
  */
 AttachRolePolicyRequestPrivate::AttachRolePolicyRequestPrivate(
     const AttachRolePolicyRequestPrivate &other, AttachRolePolicyRequest * const q)

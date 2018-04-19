@@ -27,10 +27,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::TestInvokeMethodRequest
- *
  * \brief The TestInvokeMethodRequest class provides an interface for APIGateway TestInvokeMethod requests.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -42,9 +41,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new TestInvokeMethodRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 TestInvokeMethodRequest::TestInvokeMethodRequest(const TestInvokeMethodRequest &other)
     : APIGatewayRequest(new TestInvokeMethodRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ TestInvokeMethodRequest::TestInvokeMethodRequest(const TestInvokeMethodRequest &
 }
 
 /*!
- * @brief  Constructs a new TestInvokeMethodRequest object.
+ * Constructs a TestInvokeMethodRequest object.
  */
 TestInvokeMethodRequest::TestInvokeMethodRequest()
     : APIGatewayRequest(new TestInvokeMethodRequestPrivate(APIGatewayRequest::TestInvokeMethodAction, this))
@@ -71,14 +68,9 @@ bool TestInvokeMethodRequest::isValid() const
 
 
 /*!
- * @brief  Construct an TestInvokeMethodResponse object.
+ * Returns a TestInvokeMethodResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An TestInvokeMethodResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  APIGatewayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * TestInvokeMethodRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * TestInvokeMethodRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::APIGateway::TestInvokeMethodRequestPrivate
+ * \brief The TestInvokeMethodRequestPrivate class provides private implementation for TestInvokeMethodRequest.
+ * \internal
  *
- * @class  TestInvokeMethodRequestPrivate
- *
- * @brief  Private implementation for TestInvokeMethodRequest.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new TestInvokeMethodRequestPrivate object.
- *
- * @param  action  APIGateway action being performed.
- * @param  q       Pointer to this object's public TestInvokeMethodRequest instance.
+ * Constructs a TestInvokeMethodRequestPrivate object for APIGateway \a action with,
+ * public implementation \a q.
  */
 TestInvokeMethodRequestPrivate::TestInvokeMethodRequestPrivate(
     const APIGatewayRequest::Action action, TestInvokeMethodRequest * const q)
@@ -109,15 +98,10 @@ TestInvokeMethodRequestPrivate::TestInvokeMethodRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new TestInvokeMethodRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the TestInvokeMethodRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public TestInvokeMethodRequest instance.
  */
 TestInvokeMethodRequestPrivate::TestInvokeMethodRequestPrivate(
     const TestInvokeMethodRequestPrivate &other, TestInvokeMethodRequest * const q)

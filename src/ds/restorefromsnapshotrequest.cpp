@@ -27,10 +27,9 @@ namespace DirectoryService {
 
 /*!
  * \class QtAws::DirectoryService::RestoreFromSnapshotRequest
- *
  * \brief The RestoreFromSnapshotRequest class provides an interface for DirectoryService RestoreFromSnapshot requests.
  *
- * \ingroup DirectoryService
+ * \inmodule QtAwsDirectoryService
  *
  *  <fullname>AWS Directory Service</fullname>
  * 
@@ -51,9 +50,7 @@ namespace DirectoryService {
  */
 
 /*!
- * @brief  Constructs a new RestoreFromSnapshotRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 RestoreFromSnapshotRequest::RestoreFromSnapshotRequest(const RestoreFromSnapshotRequest &other)
     : DirectoryServiceRequest(new RestoreFromSnapshotRequestPrivate(*other.d_func(), this))
@@ -62,7 +59,7 @@ RestoreFromSnapshotRequest::RestoreFromSnapshotRequest(const RestoreFromSnapshot
 }
 
 /*!
- * @brief  Constructs a new RestoreFromSnapshotRequest object.
+ * Constructs a RestoreFromSnapshotRequest object.
  */
 RestoreFromSnapshotRequest::RestoreFromSnapshotRequest()
     : DirectoryServiceRequest(new RestoreFromSnapshotRequestPrivate(DirectoryServiceRequest::RestoreFromSnapshotAction, this))
@@ -80,14 +77,9 @@ bool RestoreFromSnapshotRequest::isValid() const
 
 
 /*!
- * @brief  Construct an RestoreFromSnapshotResponse object.
+ * Returns a RestoreFromSnapshotResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An RestoreFromSnapshotResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DirectoryServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * RestoreFromSnapshotRequest::response(QNetworkReply * const reply) const
 {
@@ -95,20 +87,17 @@ QtAws::Core::AwsAbstractResponse * RestoreFromSnapshotRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::DirectoryService::RestoreFromSnapshotRequestPrivate
+ * \brief The RestoreFromSnapshotRequestPrivate class provides private implementation for RestoreFromSnapshotRequest.
+ * \internal
  *
- * @class  RestoreFromSnapshotRequestPrivate
- *
- * @brief  Private implementation for RestoreFromSnapshotRequest.
+ * \inmodule QtAwsDirectoryService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new RestoreFromSnapshotRequestPrivate object.
- *
- * @param  action  DirectoryService action being performed.
- * @param  q       Pointer to this object's public RestoreFromSnapshotRequest instance.
+ * Constructs a RestoreFromSnapshotRequestPrivate object for DirectoryService \a action with,
+ * public implementation \a q.
  */
 RestoreFromSnapshotRequestPrivate::RestoreFromSnapshotRequestPrivate(
     const DirectoryServiceRequest::Action action, RestoreFromSnapshotRequest * const q)
@@ -118,15 +107,10 @@ RestoreFromSnapshotRequestPrivate::RestoreFromSnapshotRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RestoreFromSnapshotRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the RestoreFromSnapshotRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public RestoreFromSnapshotRequest instance.
  */
 RestoreFromSnapshotRequestPrivate::RestoreFromSnapshotRequestPrivate(
     const RestoreFromSnapshotRequestPrivate &other, RestoreFromSnapshotRequest * const q)

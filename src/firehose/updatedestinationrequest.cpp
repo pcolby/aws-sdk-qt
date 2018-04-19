@@ -27,10 +27,9 @@ namespace Firehose {
 
 /*!
  * \class QtAws::Firehose::UpdateDestinationRequest
- *
  * \brief The UpdateDestinationRequest class provides an interface for Firehose UpdateDestination requests.
  *
- * \ingroup Firehose
+ * \inmodule QtAwsFirehose
  *
  *  <fullname>Amazon Kinesis Firehose API Reference</fullname>
  * 
@@ -41,9 +40,7 @@ namespace Firehose {
  */
 
 /*!
- * @brief  Constructs a new UpdateDestinationRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateDestinationRequest::UpdateDestinationRequest(const UpdateDestinationRequest &other)
     : FirehoseRequest(new UpdateDestinationRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ UpdateDestinationRequest::UpdateDestinationRequest(const UpdateDestinationReques
 }
 
 /*!
- * @brief  Constructs a new UpdateDestinationRequest object.
+ * Constructs a UpdateDestinationRequest object.
  */
 UpdateDestinationRequest::UpdateDestinationRequest()
     : FirehoseRequest(new UpdateDestinationRequestPrivate(FirehoseRequest::UpdateDestinationAction, this))
@@ -70,14 +67,9 @@ bool UpdateDestinationRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateDestinationResponse object.
+ * Returns a UpdateDestinationResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateDestinationResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  FirehoseClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateDestinationRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * UpdateDestinationRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::Firehose::UpdateDestinationRequestPrivate
+ * \brief The UpdateDestinationRequestPrivate class provides private implementation for UpdateDestinationRequest.
+ * \internal
  *
- * @class  UpdateDestinationRequestPrivate
- *
- * @brief  Private implementation for UpdateDestinationRequest.
+ * \inmodule QtAwsFirehose
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateDestinationRequestPrivate object.
- *
- * @param  action  Firehose action being performed.
- * @param  q       Pointer to this object's public UpdateDestinationRequest instance.
+ * Constructs a UpdateDestinationRequestPrivate object for Firehose \a action with,
+ * public implementation \a q.
  */
 UpdateDestinationRequestPrivate::UpdateDestinationRequestPrivate(
     const FirehoseRequest::Action action, UpdateDestinationRequest * const q)
@@ -108,15 +97,10 @@ UpdateDestinationRequestPrivate::UpdateDestinationRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateDestinationRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateDestinationRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateDestinationRequest instance.
  */
 UpdateDestinationRequestPrivate::UpdateDestinationRequestPrivate(
     const UpdateDestinationRequestPrivate &other, UpdateDestinationRequest * const q)

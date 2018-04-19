@@ -27,10 +27,9 @@ namespace CloudDirectory {
 
 /*!
  * \class QtAws::CloudDirectory::LookupPolicyRequest
- *
  * \brief The LookupPolicyRequest class provides an interface for CloudDirectory LookupPolicy requests.
  *
- * \ingroup CloudDirectory
+ * \inmodule QtAwsCloudDirectory
  *
  *  <fullname>Amazon Cloud Directory</fullname>
  * 
@@ -44,9 +43,7 @@ namespace CloudDirectory {
  */
 
 /*!
- * @brief  Constructs a new LookupPolicyRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 LookupPolicyRequest::LookupPolicyRequest(const LookupPolicyRequest &other)
     : CloudDirectoryRequest(new LookupPolicyRequestPrivate(*other.d_func(), this))
@@ -55,7 +52,7 @@ LookupPolicyRequest::LookupPolicyRequest(const LookupPolicyRequest &other)
 }
 
 /*!
- * @brief  Constructs a new LookupPolicyRequest object.
+ * Constructs a LookupPolicyRequest object.
  */
 LookupPolicyRequest::LookupPolicyRequest()
     : CloudDirectoryRequest(new LookupPolicyRequestPrivate(CloudDirectoryRequest::LookupPolicyAction, this))
@@ -73,14 +70,9 @@ bool LookupPolicyRequest::isValid() const
 
 
 /*!
- * @brief  Construct an LookupPolicyResponse object.
+ * Returns a LookupPolicyResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An LookupPolicyResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudDirectoryClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * LookupPolicyRequest::response(QNetworkReply * const reply) const
 {
@@ -88,20 +80,17 @@ QtAws::Core::AwsAbstractResponse * LookupPolicyRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudDirectory::LookupPolicyRequestPrivate
+ * \brief The LookupPolicyRequestPrivate class provides private implementation for LookupPolicyRequest.
+ * \internal
  *
- * @class  LookupPolicyRequestPrivate
- *
- * @brief  Private implementation for LookupPolicyRequest.
+ * \inmodule QtAwsCloudDirectory
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new LookupPolicyRequestPrivate object.
- *
- * @param  action  CloudDirectory action being performed.
- * @param  q       Pointer to this object's public LookupPolicyRequest instance.
+ * Constructs a LookupPolicyRequestPrivate object for CloudDirectory \a action with,
+ * public implementation \a q.
  */
 LookupPolicyRequestPrivate::LookupPolicyRequestPrivate(
     const CloudDirectoryRequest::Action action, LookupPolicyRequest * const q)
@@ -111,15 +100,10 @@ LookupPolicyRequestPrivate::LookupPolicyRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new LookupPolicyRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the LookupPolicyRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public LookupPolicyRequest instance.
  */
 LookupPolicyRequestPrivate::LookupPolicyRequestPrivate(
     const LookupPolicyRequestPrivate &other, LookupPolicyRequest * const q)

@@ -25,16 +25,60 @@ namespace MTurk {
 
 /*!
  * \class QtAws::MTurk::MTurkRequest
- *
  * \brief The MTurkRequest class provides an interface for MTurk requests.
  *
- * \ingroup MTurk
+ * \inmodule QtAwsMTurk
  */
 
 /*!
- * @brief  Constructs a new MTurkRequest object.
+ * \enum MTurkRequest::Action
  *
- * @param  action  The MTurk action to request.
+ * This enum describes the actions that can be performed as MTurk
+ * requests.
+ *
+ * \value AcceptQualificationRequestAction MTurk AcceptQualificationRequest action.
+ * \value ApproveAssignmentAction MTurk ApproveAssignment action.
+ * \value AssociateQualificationWithWorkerAction MTurk AssociateQualificationWithWorker action.
+ * \value CreateAdditionalAssignmentsForHITAction MTurk CreateAdditionalAssignmentsForHIT action.
+ * \value CreateHITAction MTurk CreateHIT action.
+ * \value CreateHITTypeAction MTurk CreateHITType action.
+ * \value CreateHITWithHITTypeAction MTurk CreateHITWithHITType action.
+ * \value CreateQualificationTypeAction MTurk CreateQualificationType action.
+ * \value CreateWorkerBlockAction MTurk CreateWorkerBlock action.
+ * \value DeleteHITAction MTurk DeleteHIT action.
+ * \value DeleteQualificationTypeAction MTurk DeleteQualificationType action.
+ * \value DeleteWorkerBlockAction MTurk DeleteWorkerBlock action.
+ * \value DisassociateQualificationFromWorkerAction MTurk DisassociateQualificationFromWorker action.
+ * \value GetAccountBalanceAction MTurk GetAccountBalance action.
+ * \value GetAssignmentAction MTurk GetAssignment action.
+ * \value GetFileUploadURLAction MTurk GetFileUploadURL action.
+ * \value GetHITAction MTurk GetHIT action.
+ * \value GetQualificationScoreAction MTurk GetQualificationScore action.
+ * \value GetQualificationTypeAction MTurk GetQualificationType action.
+ * \value ListAssignmentsForHITAction MTurk ListAssignmentsForHIT action.
+ * \value ListBonusPaymentsAction MTurk ListBonusPayments action.
+ * \value ListHITsAction MTurk ListHITs action.
+ * \value ListHITsForQualificationTypeAction MTurk ListHITsForQualificationType action.
+ * \value ListQualificationRequestsAction MTurk ListQualificationRequests action.
+ * \value ListQualificationTypesAction MTurk ListQualificationTypes action.
+ * \value ListReviewPolicyResultsForHITAction MTurk ListReviewPolicyResultsForHIT action.
+ * \value ListReviewableHITsAction MTurk ListReviewableHITs action.
+ * \value ListWorkerBlocksAction MTurk ListWorkerBlocks action.
+ * \value ListWorkersWithQualificationTypeAction MTurk ListWorkersWithQualificationType action.
+ * \value NotifyWorkersAction MTurk NotifyWorkers action.
+ * \value RejectAssignmentAction MTurk RejectAssignment action.
+ * \value RejectQualificationRequestAction MTurk RejectQualificationRequest action.
+ * \value SendBonusAction MTurk SendBonus action.
+ * \value SendTestEventNotificationAction MTurk SendTestEventNotification action.
+ * \value UpdateExpirationForHITAction MTurk UpdateExpirationForHIT action.
+ * \value UpdateHITReviewStatusAction MTurk UpdateHITReviewStatus action.
+ * \value UpdateHITTypeOfHITAction MTurk UpdateHITTypeOfHIT action.
+ * \value UpdateNotificationSettingsAction MTurk UpdateNotificationSettings action.
+ * \value UpdateQualificationTypeAction MTurk UpdateQualificationType action.
+ */
+
+/*!
+ * Constructs a[n] MTurkRequest object for MTurk \a action.
  */
 MTurkRequest::MTurkRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new MTurkRequestPrivate(action, this))
@@ -43,9 +87,7 @@ MTurkRequest::MTurkRequest(const Action action)
 }
 
 /*!
- * @brief  Constructs a new MTurkRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 MTurkRequest::MTurkRequest(const MTurkRequest &other)
     : QtAws::Core::AwsAbstractRequest(new MTurkRequestPrivate(*other.d_func(), this))
@@ -54,13 +96,7 @@ MTurkRequest::MTurkRequest(const MTurkRequest &other)
 }
 
 /*!
- * @brief  Assignment operator.
- *
- * Assigns \a other to \c this.
- *
- * @param  other  Instance to copy.
- *
- * @return  A reference to \c this.
+ * Sets the MTurkRequest object to be equal to \a other.
  */
 MTurkRequest& MTurkRequest::operator=(const MTurkRequest &other)
 {
@@ -72,14 +108,10 @@ MTurkRequest& MTurkRequest::operator=(const MTurkRequest &other)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new MTurkRequest object.
+ * Constructs aa MTurkRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from MTurkRequestPrivate.
- *
- * @param  d  Pointer to private data (aka D-Pointer).
  */
 MTurkRequest::MTurkRequest(MTurkRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
@@ -87,7 +119,7 @@ MTurkRequest::MTurkRequest(MTurkRequestPrivate * const d) : QtAws::Core::AwsAbst
 }
 
 /*!
- * \brief Returns the MTurk action to be performed by this request.
+ * Returns the MTurk action to be performed by this request.
  */
 MTurkRequest::Action MTurkRequest::action() const
 {
@@ -96,7 +128,7 @@ MTurkRequest::Action MTurkRequest::action() const
 }
 
 /*!
- * \brief Returns the name of the MTurk action to be performed by this request.
+ * Returns the name of the MTurk action to be performed by this request.
  */
 QString MTurkRequest::actionString() const
 {
@@ -104,7 +136,7 @@ QString MTurkRequest::actionString() const
 }
 
 /*!
- * \brief Returns the MTurk API version implemented by this request.
+ * Returns the MTurk API version implemented by this request.
  */
 QString MTurkRequest::apiVersion() const
 {
@@ -113,7 +145,7 @@ QString MTurkRequest::apiVersion() const
 }
 
 /*!
- * @brief Set the MTurk action to be performed by this request to \a action.
+ * Sets the MTurk action to be performed by this request to \a action.
  */
 void MTurkRequest::setAction(const Action action)
 {
@@ -122,7 +154,7 @@ void MTurkRequest::setAction(const Action action)
 }
 
 /*!
- * Set the MTurk API version to include in this request to \a version.
+ * Sets the MTurk API version to include in this request to \a version.
  */
 void MTurkRequest::setApiVersion(const QString &version)
 {
@@ -131,7 +163,7 @@ void MTurkRequest::setApiVersion(const QString &version)
 }
 
 /*!
- * \brief Returns \c true if this request is the same as \a other.
+ * Returns \c true if this request is equal to \a other; \c false otherwise.
  *
  * Note, most derived *Request classes do not need to provider their own
  * implementations of this function, since most such request classes rely on
@@ -146,8 +178,8 @@ bool MTurkRequest::operator==(const MTurkRequest &other) const
             (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
-/*!
- * @brief  Check if \a queueName is a valid MTurk queue name.
+/*
+ * Returns \c tue if \a queueName is a valid MTurk queue name.
  *
  * @par From MTurk FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
@@ -166,9 +198,8 @@ bool MTurkRequest::operator==(const MTurkRequest &other) const
 }*/
 
 /*!
- * \brief Removes the a \a name parameter from this request.
- *
- * Returns the count of paramters removed (typically \c 0 or \c 1).
+ * Removes the a \a name parameter from the request, then returns the number of
+ * paramters removed (typically \c 0 or \c 1).
  */
 int MTurkRequest::clearParameter(const QString &name)
 {
@@ -177,7 +208,7 @@ int MTurkRequest::clearParameter(const QString &name)
 }
 
 /*!
- * \brief Removes all parameters from this request.
+ * Removes all parameters from the request.
  */
 void MTurkRequest::clearParameters()
 {
@@ -186,7 +217,7 @@ void MTurkRequest::clearParameters()
 }
 
 /*!
- * \brief Returns the value of the \n name pararemter if set, otherwise \a defaultValue.
+ * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
 QVariant MTurkRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
@@ -195,7 +226,7 @@ QVariant MTurkRequest::parameter(const QString &name, const QVariant &defaultVal
 }
 
 /*!
- * \brief Returns a map of parameters included in this request.
+ * Returns the parameters included in this request.
  */
 const QVariantMap &MTurkRequest::parameters() const
 {
@@ -204,7 +235,7 @@ const QVariantMap &MTurkRequest::parameters() const
 }
 
 /*!
- * \brief Sets the \a name parameter to \a value.
+ * Sets the \a name parameter to \a value.
  */
 void MTurkRequest::setParameter(const QString &name, const QVariant &value)
 {
@@ -213,9 +244,8 @@ void MTurkRequest::setParameter(const QString &name, const QVariant &value)
 }
 
 /*!
- * \brief Sets the map of paramters for this request to \a parameters.
- *
- * Any request parameters set previously will be discarded.
+ * Sets the paramters for this request to \a parameters. Any request parameters
+ * set previously will be discarded.
  */
 void MTurkRequest::setParameters(const QVariantMap &parameters)
 {
@@ -224,11 +254,12 @@ void MTurkRequest::setParameters(const QVariantMap &parameters)
 }
 
 /*!
- * \brief Returns a network request for this MTurk request using the given \a endpoint.
+ * Returns a network request for the MTurk request using the given
+ * \a endpoint.
  *
- * This MTurk implementation builds request URLs by combining the common query
- * parameters (such as Action and Version), with any that have been added (via
- * setParameter) by child classes.
+ * This MTurk implementation builds request URLs by combining the
+ * common query parameters (such as Action and Version), with any that have
+ * been added (via setParameter) by child classes.
  */
 QNetworkRequest MTurkRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -239,17 +270,16 @@ QNetworkRequest MTurkRequest::unsignedRequest(const QUrl &endpoint) const
 }
 
 /*!
+ * \class QtAws::MTurk::MTurkRequestPrivate
+ * \brief The MTurkRequestPrivate class provides private implementation for MTurkRequest.
  * \internal
  *
- * \class  MTurkRequestPrivate
- *
- * \brief  Private implementation for MTurkRequest.
+ * \inmodule QtAwsMTurk
  */
 
 /*!
- * \internal
- *
- * \brief Constructs a new MTurkRequestPrivate object.
+ * Constructs a MTurkRequestPrivate object for MTurk \a action with,
+ * public implementation \a q.
  */
 MTurkRequestPrivate::MTurkRequestPrivate(const MTurkRequest::Action action, MTurkRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
@@ -258,9 +288,7 @@ MTurkRequestPrivate::MTurkRequestPrivate(const MTurkRequest::Action action, MTur
 }
 
 /*!
- * \internal
- *
- * \brief Constructs a new MTurkRequestPrivate object, copying an existing one.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
@@ -276,15 +304,12 @@ MTurkRequestPrivate::MTurkRequestPrivate(const MTurkRequestPrivate &other,
 }
 
 /*!
- * \internal
- *
- * \brief Returns a string representing \a action.
+ * Returns a string represention of \a action, or a null string if \a action is
+ * invalid.
  *
  * This function converts MTurkRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the MTurk service's Action
  * query parameters.
- *
- * @return A string representing \a action, or a null string if \a action is invalid.
  */
 QString MTurkRequestPrivate::toString(const MTurkRequest::Action &action)
 {

@@ -27,10 +27,9 @@ namespace Cloud9 {
 
 /*!
  * \class QtAws::Cloud9::DescribeEnvironmentMembershipsRequest
- *
  * \brief The DescribeEnvironmentMembershipsRequest class provides an interface for Cloud9 DescribeEnvironmentMemberships requests.
  *
- * \ingroup Cloud9
+ * \inmodule QtAwsCloud9
  *
  *  <fullname>AWS Cloud9</fullname>
  * 
@@ -91,9 +90,7 @@ namespace Cloud9 {
  */
 
 /*!
- * @brief  Constructs a new DescribeEnvironmentMembershipsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeEnvironmentMembershipsRequest::DescribeEnvironmentMembershipsRequest(const DescribeEnvironmentMembershipsRequest &other)
     : Cloud9Request(new DescribeEnvironmentMembershipsRequestPrivate(*other.d_func(), this))
@@ -102,7 +99,7 @@ DescribeEnvironmentMembershipsRequest::DescribeEnvironmentMembershipsRequest(con
 }
 
 /*!
- * @brief  Constructs a new DescribeEnvironmentMembershipsRequest object.
+ * Constructs a DescribeEnvironmentMembershipsRequest object.
  */
 DescribeEnvironmentMembershipsRequest::DescribeEnvironmentMembershipsRequest()
     : Cloud9Request(new DescribeEnvironmentMembershipsRequestPrivate(Cloud9Request::DescribeEnvironmentMembershipsAction, this))
@@ -120,14 +117,9 @@ bool DescribeEnvironmentMembershipsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeEnvironmentMembershipsResponse object.
+ * Returns a DescribeEnvironmentMembershipsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeEnvironmentMembershipsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  Cloud9Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeEnvironmentMembershipsRequest::response(QNetworkReply * const reply) const
 {
@@ -135,20 +127,17 @@ QtAws::Core::AwsAbstractResponse * DescribeEnvironmentMembershipsRequest::respon
 }
 
 /*!
- * @internal
+ * \class QtAws::Cloud9::DescribeEnvironmentMembershipsRequestPrivate
+ * \brief The DescribeEnvironmentMembershipsRequestPrivate class provides private implementation for DescribeEnvironmentMembershipsRequest.
+ * \internal
  *
- * @class  DescribeEnvironmentMembershipsRequestPrivate
- *
- * @brief  Private implementation for DescribeEnvironmentMembershipsRequest.
+ * \inmodule QtAwsCloud9
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeEnvironmentMembershipsRequestPrivate object.
- *
- * @param  action  Cloud9 action being performed.
- * @param  q       Pointer to this object's public DescribeEnvironmentMembershipsRequest instance.
+ * Constructs a DescribeEnvironmentMembershipsRequestPrivate object for Cloud9 \a action with,
+ * public implementation \a q.
  */
 DescribeEnvironmentMembershipsRequestPrivate::DescribeEnvironmentMembershipsRequestPrivate(
     const Cloud9Request::Action action, DescribeEnvironmentMembershipsRequest * const q)
@@ -158,15 +147,10 @@ DescribeEnvironmentMembershipsRequestPrivate::DescribeEnvironmentMembershipsRequ
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeEnvironmentMembershipsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeEnvironmentMembershipsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeEnvironmentMembershipsRequest instance.
  */
 DescribeEnvironmentMembershipsRequestPrivate::DescribeEnvironmentMembershipsRequestPrivate(
     const DescribeEnvironmentMembershipsRequestPrivate &other, DescribeEnvironmentMembershipsRequest * const q)

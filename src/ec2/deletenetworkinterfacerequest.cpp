@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DeleteNetworkInterfaceRequest
- *
  * \brief The DeleteNetworkInterfaceRequest class provides an interface for EC2 DeleteNetworkInterface requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DeleteNetworkInterfaceRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteNetworkInterfaceRequest::DeleteNetworkInterfaceRequest(const DeleteNetworkInterfaceRequest &other)
     : EC2Request(new DeleteNetworkInterfaceRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ DeleteNetworkInterfaceRequest::DeleteNetworkInterfaceRequest(const DeleteNetwork
 }
 
 /*!
- * @brief  Constructs a new DeleteNetworkInterfaceRequest object.
+ * Constructs a DeleteNetworkInterfaceRequest object.
  */
 DeleteNetworkInterfaceRequest::DeleteNetworkInterfaceRequest()
     : EC2Request(new DeleteNetworkInterfaceRequestPrivate(EC2Request::DeleteNetworkInterfaceAction, this))
@@ -70,14 +67,9 @@ bool DeleteNetworkInterfaceRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteNetworkInterfaceResponse object.
+ * Returns a DeleteNetworkInterfaceResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteNetworkInterfaceResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteNetworkInterfaceRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * DeleteNetworkInterfaceRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::DeleteNetworkInterfaceRequestPrivate
+ * \brief The DeleteNetworkInterfaceRequestPrivate class provides private implementation for DeleteNetworkInterfaceRequest.
+ * \internal
  *
- * @class  DeleteNetworkInterfaceRequestPrivate
- *
- * @brief  Private implementation for DeleteNetworkInterfaceRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteNetworkInterfaceRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public DeleteNetworkInterfaceRequest instance.
+ * Constructs a DeleteNetworkInterfaceRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 DeleteNetworkInterfaceRequestPrivate::DeleteNetworkInterfaceRequestPrivate(
     const EC2Request::Action action, DeleteNetworkInterfaceRequest * const q)
@@ -108,15 +97,10 @@ DeleteNetworkInterfaceRequestPrivate::DeleteNetworkInterfaceRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteNetworkInterfaceRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteNetworkInterfaceRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteNetworkInterfaceRequest instance.
  */
 DeleteNetworkInterfaceRequestPrivate::DeleteNetworkInterfaceRequestPrivate(
     const DeleteNetworkInterfaceRequestPrivate &other, DeleteNetworkInterfaceRequest * const q)

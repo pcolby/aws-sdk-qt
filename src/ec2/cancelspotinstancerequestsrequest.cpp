@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::CancelSpotInstanceRequestsRequest
- *
  * \brief The CancelSpotInstanceRequestsRequest class provides an interface for EC2 CancelSpotInstanceRequests requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new CancelSpotInstanceRequestsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CancelSpotInstanceRequestsRequest::CancelSpotInstanceRequestsRequest(const CancelSpotInstanceRequestsRequest &other)
     : EC2Request(new CancelSpotInstanceRequestsRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ CancelSpotInstanceRequestsRequest::CancelSpotInstanceRequestsRequest(const Cance
 }
 
 /*!
- * @brief  Constructs a new CancelSpotInstanceRequestsRequest object.
+ * Constructs a CancelSpotInstanceRequestsRequest object.
  */
 CancelSpotInstanceRequestsRequest::CancelSpotInstanceRequestsRequest()
     : EC2Request(new CancelSpotInstanceRequestsRequestPrivate(EC2Request::CancelSpotInstanceRequestsAction, this))
@@ -70,14 +67,9 @@ bool CancelSpotInstanceRequestsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CancelSpotInstanceRequestsResponse object.
+ * Returns a CancelSpotInstanceRequestsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CancelSpotInstanceRequestsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CancelSpotInstanceRequestsRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * CancelSpotInstanceRequestsRequest::response(Q
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::CancelSpotInstanceRequestsRequestPrivate
+ * \brief The CancelSpotInstanceRequestsRequestPrivate class provides private implementation for CancelSpotInstanceRequestsRequest.
+ * \internal
  *
- * @class  CancelSpotInstanceRequestsRequestPrivate
- *
- * @brief  Private implementation for CancelSpotInstanceRequestsRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CancelSpotInstanceRequestsRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public CancelSpotInstanceRequestsRequest instance.
+ * Constructs a CancelSpotInstanceRequestsRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 CancelSpotInstanceRequestsRequestPrivate::CancelSpotInstanceRequestsRequestPrivate(
     const EC2Request::Action action, CancelSpotInstanceRequestsRequest * const q)
@@ -108,15 +97,10 @@ CancelSpotInstanceRequestsRequestPrivate::CancelSpotInstanceRequestsRequestPriva
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CancelSpotInstanceRequestsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CancelSpotInstanceRequestsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CancelSpotInstanceRequestsRequest instance.
  */
 CancelSpotInstanceRequestsRequestPrivate::CancelSpotInstanceRequestsRequestPrivate(
     const CancelSpotInstanceRequestsRequestPrivate &other, CancelSpotInstanceRequestsRequest * const q)

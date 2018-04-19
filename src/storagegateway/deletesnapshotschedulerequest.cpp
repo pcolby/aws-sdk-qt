@@ -27,10 +27,9 @@ namespace StorageGateway {
 
 /*!
  * \class QtAws::StorageGateway::DeleteSnapshotScheduleRequest
- *
  * \brief The DeleteSnapshotScheduleRequest class provides an interface for StorageGateway DeleteSnapshotSchedule requests.
  *
- * \ingroup StorageGateway
+ * \inmodule QtAwsStorageGateway
  *
  *  <fullname>AWS Storage Gateway Service</fullname>
  * 
@@ -106,9 +105,7 @@ namespace StorageGateway {
  */
 
 /*!
- * @brief  Constructs a new DeleteSnapshotScheduleRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteSnapshotScheduleRequest::DeleteSnapshotScheduleRequest(const DeleteSnapshotScheduleRequest &other)
     : StorageGatewayRequest(new DeleteSnapshotScheduleRequestPrivate(*other.d_func(), this))
@@ -117,7 +114,7 @@ DeleteSnapshotScheduleRequest::DeleteSnapshotScheduleRequest(const DeleteSnapsho
 }
 
 /*!
- * @brief  Constructs a new DeleteSnapshotScheduleRequest object.
+ * Constructs a DeleteSnapshotScheduleRequest object.
  */
 DeleteSnapshotScheduleRequest::DeleteSnapshotScheduleRequest()
     : StorageGatewayRequest(new DeleteSnapshotScheduleRequestPrivate(StorageGatewayRequest::DeleteSnapshotScheduleAction, this))
@@ -135,14 +132,9 @@ bool DeleteSnapshotScheduleRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteSnapshotScheduleResponse object.
+ * Returns a DeleteSnapshotScheduleResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteSnapshotScheduleResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  StorageGatewayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteSnapshotScheduleRequest::response(QNetworkReply * const reply) const
 {
@@ -150,20 +142,17 @@ QtAws::Core::AwsAbstractResponse * DeleteSnapshotScheduleRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::StorageGateway::DeleteSnapshotScheduleRequestPrivate
+ * \brief The DeleteSnapshotScheduleRequestPrivate class provides private implementation for DeleteSnapshotScheduleRequest.
+ * \internal
  *
- * @class  DeleteSnapshotScheduleRequestPrivate
- *
- * @brief  Private implementation for DeleteSnapshotScheduleRequest.
+ * \inmodule QtAwsStorageGateway
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteSnapshotScheduleRequestPrivate object.
- *
- * @param  action  StorageGateway action being performed.
- * @param  q       Pointer to this object's public DeleteSnapshotScheduleRequest instance.
+ * Constructs a DeleteSnapshotScheduleRequestPrivate object for StorageGateway \a action with,
+ * public implementation \a q.
  */
 DeleteSnapshotScheduleRequestPrivate::DeleteSnapshotScheduleRequestPrivate(
     const StorageGatewayRequest::Action action, DeleteSnapshotScheduleRequest * const q)
@@ -173,15 +162,10 @@ DeleteSnapshotScheduleRequestPrivate::DeleteSnapshotScheduleRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteSnapshotScheduleRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteSnapshotScheduleRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteSnapshotScheduleRequest instance.
  */
 DeleteSnapshotScheduleRequestPrivate::DeleteSnapshotScheduleRequestPrivate(
     const DeleteSnapshotScheduleRequestPrivate &other, DeleteSnapshotScheduleRequest * const q)

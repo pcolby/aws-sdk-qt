@@ -27,10 +27,9 @@ namespace WAFRegional {
 
 /*!
  * \class QtAws::WAFRegional::ListResourcesForWebACLRequest
- *
  * \brief The ListResourcesForWebACLRequest class provides an interface for WAFRegional ListResourcesForWebACL requests.
  *
- * \ingroup WAFRegional
+ * \inmodule QtAwsWAFRegional
  *
  *  This is the <i>AWS WAF Regional API Reference</i> for using AWS WAF with Elastic Load Balancing (ELB) Application Load
  *  Balancers. The AWS WAF actions and data types listed in the reference are available for protecting Application Load
@@ -44,9 +43,7 @@ namespace WAFRegional {
  */
 
 /*!
- * @brief  Constructs a new ListResourcesForWebACLRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListResourcesForWebACLRequest::ListResourcesForWebACLRequest(const ListResourcesForWebACLRequest &other)
     : WAFRegionalRequest(new ListResourcesForWebACLRequestPrivate(*other.d_func(), this))
@@ -55,7 +52,7 @@ ListResourcesForWebACLRequest::ListResourcesForWebACLRequest(const ListResources
 }
 
 /*!
- * @brief  Constructs a new ListResourcesForWebACLRequest object.
+ * Constructs a ListResourcesForWebACLRequest object.
  */
 ListResourcesForWebACLRequest::ListResourcesForWebACLRequest()
     : WAFRegionalRequest(new ListResourcesForWebACLRequestPrivate(WAFRegionalRequest::ListResourcesForWebACLAction, this))
@@ -73,14 +70,9 @@ bool ListResourcesForWebACLRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListResourcesForWebACLResponse object.
+ * Returns a ListResourcesForWebACLResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListResourcesForWebACLResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WAFRegionalClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListResourcesForWebACLRequest::response(QNetworkReply * const reply) const
 {
@@ -88,20 +80,17 @@ QtAws::Core::AwsAbstractResponse * ListResourcesForWebACLRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::WAFRegional::ListResourcesForWebACLRequestPrivate
+ * \brief The ListResourcesForWebACLRequestPrivate class provides private implementation for ListResourcesForWebACLRequest.
+ * \internal
  *
- * @class  ListResourcesForWebACLRequestPrivate
- *
- * @brief  Private implementation for ListResourcesForWebACLRequest.
+ * \inmodule QtAwsWAFRegional
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListResourcesForWebACLRequestPrivate object.
- *
- * @param  action  WAFRegional action being performed.
- * @param  q       Pointer to this object's public ListResourcesForWebACLRequest instance.
+ * Constructs a ListResourcesForWebACLRequestPrivate object for WAFRegional \a action with,
+ * public implementation \a q.
  */
 ListResourcesForWebACLRequestPrivate::ListResourcesForWebACLRequestPrivate(
     const WAFRegionalRequest::Action action, ListResourcesForWebACLRequest * const q)
@@ -111,15 +100,10 @@ ListResourcesForWebACLRequestPrivate::ListResourcesForWebACLRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListResourcesForWebACLRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListResourcesForWebACLRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListResourcesForWebACLRequest instance.
  */
 ListResourcesForWebACLRequestPrivate::ListResourcesForWebACLRequestPrivate(
     const ListResourcesForWebACLRequestPrivate &other, ListResourcesForWebACLRequest * const q)

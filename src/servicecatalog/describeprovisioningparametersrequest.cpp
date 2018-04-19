@@ -27,10 +27,9 @@ namespace ServiceCatalog {
 
 /*!
  * \class QtAws::ServiceCatalog::DescribeProvisioningParametersRequest
- *
  * \brief The DescribeProvisioningParametersRequest class provides an interface for ServiceCatalog DescribeProvisioningParameters requests.
  *
- * \ingroup ServiceCatalog
+ * \inmodule QtAwsServiceCatalog
  *
  *  <fullname>AWS Service Catalog</fullname>
  * 
@@ -43,9 +42,7 @@ namespace ServiceCatalog {
  */
 
 /*!
- * @brief  Constructs a new DescribeProvisioningParametersRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeProvisioningParametersRequest::DescribeProvisioningParametersRequest(const DescribeProvisioningParametersRequest &other)
     : ServiceCatalogRequest(new DescribeProvisioningParametersRequestPrivate(*other.d_func(), this))
@@ -54,7 +51,7 @@ DescribeProvisioningParametersRequest::DescribeProvisioningParametersRequest(con
 }
 
 /*!
- * @brief  Constructs a new DescribeProvisioningParametersRequest object.
+ * Constructs a DescribeProvisioningParametersRequest object.
  */
 DescribeProvisioningParametersRequest::DescribeProvisioningParametersRequest()
     : ServiceCatalogRequest(new DescribeProvisioningParametersRequestPrivate(ServiceCatalogRequest::DescribeProvisioningParametersAction, this))
@@ -72,14 +69,9 @@ bool DescribeProvisioningParametersRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeProvisioningParametersResponse object.
+ * Returns a DescribeProvisioningParametersResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeProvisioningParametersResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ServiceCatalogClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeProvisioningParametersRequest::response(QNetworkReply * const reply) const
 {
@@ -87,20 +79,17 @@ QtAws::Core::AwsAbstractResponse * DescribeProvisioningParametersRequest::respon
 }
 
 /*!
- * @internal
+ * \class QtAws::ServiceCatalog::DescribeProvisioningParametersRequestPrivate
+ * \brief The DescribeProvisioningParametersRequestPrivate class provides private implementation for DescribeProvisioningParametersRequest.
+ * \internal
  *
- * @class  DescribeProvisioningParametersRequestPrivate
- *
- * @brief  Private implementation for DescribeProvisioningParametersRequest.
+ * \inmodule QtAwsServiceCatalog
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeProvisioningParametersRequestPrivate object.
- *
- * @param  action  ServiceCatalog action being performed.
- * @param  q       Pointer to this object's public DescribeProvisioningParametersRequest instance.
+ * Constructs a DescribeProvisioningParametersRequestPrivate object for ServiceCatalog \a action with,
+ * public implementation \a q.
  */
 DescribeProvisioningParametersRequestPrivate::DescribeProvisioningParametersRequestPrivate(
     const ServiceCatalogRequest::Action action, DescribeProvisioningParametersRequest * const q)
@@ -110,15 +99,10 @@ DescribeProvisioningParametersRequestPrivate::DescribeProvisioningParametersRequ
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeProvisioningParametersRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeProvisioningParametersRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeProvisioningParametersRequest instance.
  */
 DescribeProvisioningParametersRequestPrivate::DescribeProvisioningParametersRequestPrivate(
     const DescribeProvisioningParametersRequestPrivate &other, DescribeProvisioningParametersRequest * const q)

@@ -27,10 +27,9 @@ namespace Glue {
 
 /*!
  * \class QtAws::Glue::BatchDeletePartitionRequest
- *
  * \brief The BatchDeletePartitionRequest class provides an interface for Glue BatchDeletePartition requests.
  *
- * \ingroup Glue
+ * \inmodule QtAwsGlue
  *
  *  <fullname>AWS Glue</fullname>
  * 
@@ -40,9 +39,7 @@ namespace Glue {
  */
 
 /*!
- * @brief  Constructs a new BatchDeletePartitionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 BatchDeletePartitionRequest::BatchDeletePartitionRequest(const BatchDeletePartitionRequest &other)
     : GlueRequest(new BatchDeletePartitionRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ BatchDeletePartitionRequest::BatchDeletePartitionRequest(const BatchDeletePartit
 }
 
 /*!
- * @brief  Constructs a new BatchDeletePartitionRequest object.
+ * Constructs a BatchDeletePartitionRequest object.
  */
 BatchDeletePartitionRequest::BatchDeletePartitionRequest()
     : GlueRequest(new BatchDeletePartitionRequestPrivate(GlueRequest::BatchDeletePartitionAction, this))
@@ -69,14 +66,9 @@ bool BatchDeletePartitionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an BatchDeletePartitionResponse object.
+ * Returns a BatchDeletePartitionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An BatchDeletePartitionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GlueClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * BatchDeletePartitionRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * BatchDeletePartitionRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::Glue::BatchDeletePartitionRequestPrivate
+ * \brief The BatchDeletePartitionRequestPrivate class provides private implementation for BatchDeletePartitionRequest.
+ * \internal
  *
- * @class  BatchDeletePartitionRequestPrivate
- *
- * @brief  Private implementation for BatchDeletePartitionRequest.
+ * \inmodule QtAwsGlue
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new BatchDeletePartitionRequestPrivate object.
- *
- * @param  action  Glue action being performed.
- * @param  q       Pointer to this object's public BatchDeletePartitionRequest instance.
+ * Constructs a BatchDeletePartitionRequestPrivate object for Glue \a action with,
+ * public implementation \a q.
  */
 BatchDeletePartitionRequestPrivate::BatchDeletePartitionRequestPrivate(
     const GlueRequest::Action action, BatchDeletePartitionRequest * const q)
@@ -107,15 +96,10 @@ BatchDeletePartitionRequestPrivate::BatchDeletePartitionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new BatchDeletePartitionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the BatchDeletePartitionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public BatchDeletePartitionRequest instance.
  */
 BatchDeletePartitionRequestPrivate::BatchDeletePartitionRequestPrivate(
     const BatchDeletePartitionRequestPrivate &other, BatchDeletePartitionRequest * const q)

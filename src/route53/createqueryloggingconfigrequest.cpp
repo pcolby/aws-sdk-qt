@@ -27,19 +27,16 @@ namespace Route53 {
 
 /*!
  * \class QtAws::Route53::CreateQueryLoggingConfigRequest
- *
  * \brief The CreateQueryLoggingConfigRequest class provides an interface for Route53 CreateQueryLoggingConfig requests.
  *
- * \ingroup Route53
+ * \inmodule QtAwsRoute53
  *
  *
  * \sa Route53Client::createQueryLoggingConfig
  */
 
 /*!
- * @brief  Constructs a new CreateQueryLoggingConfigRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateQueryLoggingConfigRequest::CreateQueryLoggingConfigRequest(const CreateQueryLoggingConfigRequest &other)
     : Route53Request(new CreateQueryLoggingConfigRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ CreateQueryLoggingConfigRequest::CreateQueryLoggingConfigRequest(const CreateQue
 }
 
 /*!
- * @brief  Constructs a new CreateQueryLoggingConfigRequest object.
+ * Constructs a CreateQueryLoggingConfigRequest object.
  */
 CreateQueryLoggingConfigRequest::CreateQueryLoggingConfigRequest()
     : Route53Request(new CreateQueryLoggingConfigRequestPrivate(Route53Request::CreateQueryLoggingConfigAction, this))
@@ -66,14 +63,9 @@ bool CreateQueryLoggingConfigRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateQueryLoggingConfigResponse object.
+ * Returns a CreateQueryLoggingConfigResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateQueryLoggingConfigResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  Route53Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateQueryLoggingConfigRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * CreateQueryLoggingConfigRequest::response(QNe
 }
 
 /*!
- * @internal
+ * \class QtAws::Route53::CreateQueryLoggingConfigRequestPrivate
+ * \brief The CreateQueryLoggingConfigRequestPrivate class provides private implementation for CreateQueryLoggingConfigRequest.
+ * \internal
  *
- * @class  CreateQueryLoggingConfigRequestPrivate
- *
- * @brief  Private implementation for CreateQueryLoggingConfigRequest.
+ * \inmodule QtAwsRoute53
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateQueryLoggingConfigRequestPrivate object.
- *
- * @param  action  Route53 action being performed.
- * @param  q       Pointer to this object's public CreateQueryLoggingConfigRequest instance.
+ * Constructs a CreateQueryLoggingConfigRequestPrivate object for Route53 \a action with,
+ * public implementation \a q.
  */
 CreateQueryLoggingConfigRequestPrivate::CreateQueryLoggingConfigRequestPrivate(
     const Route53Request::Action action, CreateQueryLoggingConfigRequest * const q)
@@ -104,15 +93,10 @@ CreateQueryLoggingConfigRequestPrivate::CreateQueryLoggingConfigRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateQueryLoggingConfigRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateQueryLoggingConfigRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateQueryLoggingConfigRequest instance.
  */
 CreateQueryLoggingConfigRequestPrivate::CreateQueryLoggingConfigRequestPrivate(
     const CreateQueryLoggingConfigRequestPrivate &other, CreateQueryLoggingConfigRequest * const q)

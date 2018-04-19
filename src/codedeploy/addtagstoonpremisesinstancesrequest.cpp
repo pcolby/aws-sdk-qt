@@ -27,10 +27,9 @@ namespace CodeDeploy {
 
 /*!
  * \class QtAws::CodeDeploy::AddTagsToOnPremisesInstancesRequest
- *
  * \brief The AddTagsToOnPremisesInstancesRequest class provides an interface for CodeDeploy AddTagsToOnPremisesInstances requests.
  *
- * \ingroup CodeDeploy
+ * \inmodule QtAwsCodeDeploy
  *
  *  <fullname>AWS CodeDeploy</fullname>
  * 
@@ -118,9 +117,7 @@ namespace CodeDeploy {
  */
 
 /*!
- * @brief  Constructs a new AddTagsToOnPremisesInstancesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AddTagsToOnPremisesInstancesRequest::AddTagsToOnPremisesInstancesRequest(const AddTagsToOnPremisesInstancesRequest &other)
     : CodeDeployRequest(new AddTagsToOnPremisesInstancesRequestPrivate(*other.d_func(), this))
@@ -129,7 +126,7 @@ AddTagsToOnPremisesInstancesRequest::AddTagsToOnPremisesInstancesRequest(const A
 }
 
 /*!
- * @brief  Constructs a new AddTagsToOnPremisesInstancesRequest object.
+ * Constructs a AddTagsToOnPremisesInstancesRequest object.
  */
 AddTagsToOnPremisesInstancesRequest::AddTagsToOnPremisesInstancesRequest()
     : CodeDeployRequest(new AddTagsToOnPremisesInstancesRequestPrivate(CodeDeployRequest::AddTagsToOnPremisesInstancesAction, this))
@@ -147,14 +144,9 @@ bool AddTagsToOnPremisesInstancesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AddTagsToOnPremisesInstancesResponse object.
+ * Returns a AddTagsToOnPremisesInstancesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AddTagsToOnPremisesInstancesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CodeDeployClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AddTagsToOnPremisesInstancesRequest::response(QNetworkReply * const reply) const
 {
@@ -162,20 +154,17 @@ QtAws::Core::AwsAbstractResponse * AddTagsToOnPremisesInstancesRequest::response
 }
 
 /*!
- * @internal
+ * \class QtAws::CodeDeploy::AddTagsToOnPremisesInstancesRequestPrivate
+ * \brief The AddTagsToOnPremisesInstancesRequestPrivate class provides private implementation for AddTagsToOnPremisesInstancesRequest.
+ * \internal
  *
- * @class  AddTagsToOnPremisesInstancesRequestPrivate
- *
- * @brief  Private implementation for AddTagsToOnPremisesInstancesRequest.
+ * \inmodule QtAwsCodeDeploy
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AddTagsToOnPremisesInstancesRequestPrivate object.
- *
- * @param  action  CodeDeploy action being performed.
- * @param  q       Pointer to this object's public AddTagsToOnPremisesInstancesRequest instance.
+ * Constructs a AddTagsToOnPremisesInstancesRequestPrivate object for CodeDeploy \a action with,
+ * public implementation \a q.
  */
 AddTagsToOnPremisesInstancesRequestPrivate::AddTagsToOnPremisesInstancesRequestPrivate(
     const CodeDeployRequest::Action action, AddTagsToOnPremisesInstancesRequest * const q)
@@ -185,15 +174,10 @@ AddTagsToOnPremisesInstancesRequestPrivate::AddTagsToOnPremisesInstancesRequestP
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AddTagsToOnPremisesInstancesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AddTagsToOnPremisesInstancesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AddTagsToOnPremisesInstancesRequest instance.
  */
 AddTagsToOnPremisesInstancesRequestPrivate::AddTagsToOnPremisesInstancesRequestPrivate(
     const AddTagsToOnPremisesInstancesRequestPrivate &other, AddTagsToOnPremisesInstancesRequest * const q)

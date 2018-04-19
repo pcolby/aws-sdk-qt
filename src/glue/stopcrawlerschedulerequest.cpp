@@ -27,10 +27,9 @@ namespace Glue {
 
 /*!
  * \class QtAws::Glue::StopCrawlerScheduleRequest
- *
  * \brief The StopCrawlerScheduleRequest class provides an interface for Glue StopCrawlerSchedule requests.
  *
- * \ingroup Glue
+ * \inmodule QtAwsGlue
  *
  *  <fullname>AWS Glue</fullname>
  * 
@@ -40,9 +39,7 @@ namespace Glue {
  */
 
 /*!
- * @brief  Constructs a new StopCrawlerScheduleRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 StopCrawlerScheduleRequest::StopCrawlerScheduleRequest(const StopCrawlerScheduleRequest &other)
     : GlueRequest(new StopCrawlerScheduleRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ StopCrawlerScheduleRequest::StopCrawlerScheduleRequest(const StopCrawlerSchedule
 }
 
 /*!
- * @brief  Constructs a new StopCrawlerScheduleRequest object.
+ * Constructs a StopCrawlerScheduleRequest object.
  */
 StopCrawlerScheduleRequest::StopCrawlerScheduleRequest()
     : GlueRequest(new StopCrawlerScheduleRequestPrivate(GlueRequest::StopCrawlerScheduleAction, this))
@@ -69,14 +66,9 @@ bool StopCrawlerScheduleRequest::isValid() const
 
 
 /*!
- * @brief  Construct an StopCrawlerScheduleResponse object.
+ * Returns a StopCrawlerScheduleResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An StopCrawlerScheduleResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GlueClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * StopCrawlerScheduleRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * StopCrawlerScheduleRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::Glue::StopCrawlerScheduleRequestPrivate
+ * \brief The StopCrawlerScheduleRequestPrivate class provides private implementation for StopCrawlerScheduleRequest.
+ * \internal
  *
- * @class  StopCrawlerScheduleRequestPrivate
- *
- * @brief  Private implementation for StopCrawlerScheduleRequest.
+ * \inmodule QtAwsGlue
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new StopCrawlerScheduleRequestPrivate object.
- *
- * @param  action  Glue action being performed.
- * @param  q       Pointer to this object's public StopCrawlerScheduleRequest instance.
+ * Constructs a StopCrawlerScheduleRequestPrivate object for Glue \a action with,
+ * public implementation \a q.
  */
 StopCrawlerScheduleRequestPrivate::StopCrawlerScheduleRequestPrivate(
     const GlueRequest::Action action, StopCrawlerScheduleRequest * const q)
@@ -107,15 +96,10 @@ StopCrawlerScheduleRequestPrivate::StopCrawlerScheduleRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StopCrawlerScheduleRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the StopCrawlerScheduleRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public StopCrawlerScheduleRequest instance.
  */
 StopCrawlerScheduleRequestPrivate::StopCrawlerScheduleRequestPrivate(
     const StopCrawlerScheduleRequestPrivate &other, StopCrawlerScheduleRequest * const q)

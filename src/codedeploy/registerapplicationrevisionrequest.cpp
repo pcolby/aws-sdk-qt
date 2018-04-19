@@ -27,10 +27,9 @@ namespace CodeDeploy {
 
 /*!
  * \class QtAws::CodeDeploy::RegisterApplicationRevisionRequest
- *
  * \brief The RegisterApplicationRevisionRequest class provides an interface for CodeDeploy RegisterApplicationRevision requests.
  *
- * \ingroup CodeDeploy
+ * \inmodule QtAwsCodeDeploy
  *
  *  <fullname>AWS CodeDeploy</fullname>
  * 
@@ -118,9 +117,7 @@ namespace CodeDeploy {
  */
 
 /*!
- * @brief  Constructs a new RegisterApplicationRevisionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 RegisterApplicationRevisionRequest::RegisterApplicationRevisionRequest(const RegisterApplicationRevisionRequest &other)
     : CodeDeployRequest(new RegisterApplicationRevisionRequestPrivate(*other.d_func(), this))
@@ -129,7 +126,7 @@ RegisterApplicationRevisionRequest::RegisterApplicationRevisionRequest(const Reg
 }
 
 /*!
- * @brief  Constructs a new RegisterApplicationRevisionRequest object.
+ * Constructs a RegisterApplicationRevisionRequest object.
  */
 RegisterApplicationRevisionRequest::RegisterApplicationRevisionRequest()
     : CodeDeployRequest(new RegisterApplicationRevisionRequestPrivate(CodeDeployRequest::RegisterApplicationRevisionAction, this))
@@ -147,14 +144,9 @@ bool RegisterApplicationRevisionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an RegisterApplicationRevisionResponse object.
+ * Returns a RegisterApplicationRevisionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An RegisterApplicationRevisionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CodeDeployClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * RegisterApplicationRevisionRequest::response(QNetworkReply * const reply) const
 {
@@ -162,20 +154,17 @@ QtAws::Core::AwsAbstractResponse * RegisterApplicationRevisionRequest::response(
 }
 
 /*!
- * @internal
+ * \class QtAws::CodeDeploy::RegisterApplicationRevisionRequestPrivate
+ * \brief The RegisterApplicationRevisionRequestPrivate class provides private implementation for RegisterApplicationRevisionRequest.
+ * \internal
  *
- * @class  RegisterApplicationRevisionRequestPrivate
- *
- * @brief  Private implementation for RegisterApplicationRevisionRequest.
+ * \inmodule QtAwsCodeDeploy
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new RegisterApplicationRevisionRequestPrivate object.
- *
- * @param  action  CodeDeploy action being performed.
- * @param  q       Pointer to this object's public RegisterApplicationRevisionRequest instance.
+ * Constructs a RegisterApplicationRevisionRequestPrivate object for CodeDeploy \a action with,
+ * public implementation \a q.
  */
 RegisterApplicationRevisionRequestPrivate::RegisterApplicationRevisionRequestPrivate(
     const CodeDeployRequest::Action action, RegisterApplicationRevisionRequest * const q)
@@ -185,15 +174,10 @@ RegisterApplicationRevisionRequestPrivate::RegisterApplicationRevisionRequestPri
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RegisterApplicationRevisionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the RegisterApplicationRevisionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public RegisterApplicationRevisionRequest instance.
  */
 RegisterApplicationRevisionRequestPrivate::RegisterApplicationRevisionRequestPrivate(
     const RegisterApplicationRevisionRequestPrivate &other, RegisterApplicationRevisionRequest * const q)

@@ -27,10 +27,9 @@ namespace SES {
 
 /*!
  * \class QtAws::SES::SendCustomVerificationEmailRequest
- *
  * \brief The SendCustomVerificationEmailRequest class provides an interface for SES SendCustomVerificationEmail requests.
  *
- * \ingroup SES
+ * \inmodule QtAwsSES
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -48,9 +47,7 @@ namespace SES {
  */
 
 /*!
- * @brief  Constructs a new SendCustomVerificationEmailRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 SendCustomVerificationEmailRequest::SendCustomVerificationEmailRequest(const SendCustomVerificationEmailRequest &other)
     : SESRequest(new SendCustomVerificationEmailRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ SendCustomVerificationEmailRequest::SendCustomVerificationEmailRequest(const Sen
 }
 
 /*!
- * @brief  Constructs a new SendCustomVerificationEmailRequest object.
+ * Constructs a SendCustomVerificationEmailRequest object.
  */
 SendCustomVerificationEmailRequest::SendCustomVerificationEmailRequest()
     : SESRequest(new SendCustomVerificationEmailRequestPrivate(SESRequest::SendCustomVerificationEmailAction, this))
@@ -77,14 +74,9 @@ bool SendCustomVerificationEmailRequest::isValid() const
 
 
 /*!
- * @brief  Construct an SendCustomVerificationEmailResponse object.
+ * Returns a SendCustomVerificationEmailResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An SendCustomVerificationEmailResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SESClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * SendCustomVerificationEmailRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * SendCustomVerificationEmailRequest::response(
 }
 
 /*!
- * @internal
+ * \class QtAws::SES::SendCustomVerificationEmailRequestPrivate
+ * \brief The SendCustomVerificationEmailRequestPrivate class provides private implementation for SendCustomVerificationEmailRequest.
+ * \internal
  *
- * @class  SendCustomVerificationEmailRequestPrivate
- *
- * @brief  Private implementation for SendCustomVerificationEmailRequest.
+ * \inmodule QtAwsSES
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new SendCustomVerificationEmailRequestPrivate object.
- *
- * @param  action  SES action being performed.
- * @param  q       Pointer to this object's public SendCustomVerificationEmailRequest instance.
+ * Constructs a SendCustomVerificationEmailRequestPrivate object for SES \a action with,
+ * public implementation \a q.
  */
 SendCustomVerificationEmailRequestPrivate::SendCustomVerificationEmailRequestPrivate(
     const SESRequest::Action action, SendCustomVerificationEmailRequest * const q)
@@ -115,15 +104,10 @@ SendCustomVerificationEmailRequestPrivate::SendCustomVerificationEmailRequestPri
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SendCustomVerificationEmailRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the SendCustomVerificationEmailRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public SendCustomVerificationEmailRequest instance.
  */
 SendCustomVerificationEmailRequestPrivate::SendCustomVerificationEmailRequestPrivate(
     const SendCustomVerificationEmailRequestPrivate &other, SendCustomVerificationEmailRequest * const q)

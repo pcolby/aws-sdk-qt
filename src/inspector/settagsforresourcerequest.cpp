@@ -27,10 +27,9 @@ namespace Inspector {
 
 /*!
  * \class QtAws::Inspector::SetTagsForResourceRequest
- *
  * \brief The SetTagsForResourceRequest class provides an interface for Inspector SetTagsForResource requests.
  *
- * \ingroup Inspector
+ * \inmodule QtAwsInspector
  *
  *  <fullname>Amazon Inspector</fullname>
  * 
@@ -42,9 +41,7 @@ namespace Inspector {
  */
 
 /*!
- * @brief  Constructs a new SetTagsForResourceRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 SetTagsForResourceRequest::SetTagsForResourceRequest(const SetTagsForResourceRequest &other)
     : InspectorRequest(new SetTagsForResourceRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ SetTagsForResourceRequest::SetTagsForResourceRequest(const SetTagsForResourceReq
 }
 
 /*!
- * @brief  Constructs a new SetTagsForResourceRequest object.
+ * Constructs a SetTagsForResourceRequest object.
  */
 SetTagsForResourceRequest::SetTagsForResourceRequest()
     : InspectorRequest(new SetTagsForResourceRequestPrivate(InspectorRequest::SetTagsForResourceAction, this))
@@ -71,14 +68,9 @@ bool SetTagsForResourceRequest::isValid() const
 
 
 /*!
- * @brief  Construct an SetTagsForResourceResponse object.
+ * Returns a SetTagsForResourceResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An SetTagsForResourceResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  InspectorClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * SetTagsForResourceRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * SetTagsForResourceRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::Inspector::SetTagsForResourceRequestPrivate
+ * \brief The SetTagsForResourceRequestPrivate class provides private implementation for SetTagsForResourceRequest.
+ * \internal
  *
- * @class  SetTagsForResourceRequestPrivate
- *
- * @brief  Private implementation for SetTagsForResourceRequest.
+ * \inmodule QtAwsInspector
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new SetTagsForResourceRequestPrivate object.
- *
- * @param  action  Inspector action being performed.
- * @param  q       Pointer to this object's public SetTagsForResourceRequest instance.
+ * Constructs a SetTagsForResourceRequestPrivate object for Inspector \a action with,
+ * public implementation \a q.
  */
 SetTagsForResourceRequestPrivate::SetTagsForResourceRequestPrivate(
     const InspectorRequest::Action action, SetTagsForResourceRequest * const q)
@@ -109,15 +98,10 @@ SetTagsForResourceRequestPrivate::SetTagsForResourceRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SetTagsForResourceRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the SetTagsForResourceRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public SetTagsForResourceRequest instance.
  */
 SetTagsForResourceRequestPrivate::SetTagsForResourceRequestPrivate(
     const SetTagsForResourceRequestPrivate &other, SetTagsForResourceRequest * const q)

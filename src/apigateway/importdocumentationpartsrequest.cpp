@@ -27,10 +27,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::ImportDocumentationPartsRequest
- *
  * \brief The ImportDocumentationPartsRequest class provides an interface for APIGateway ImportDocumentationParts requests.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -42,9 +41,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new ImportDocumentationPartsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ImportDocumentationPartsRequest::ImportDocumentationPartsRequest(const ImportDocumentationPartsRequest &other)
     : APIGatewayRequest(new ImportDocumentationPartsRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ ImportDocumentationPartsRequest::ImportDocumentationPartsRequest(const ImportDoc
 }
 
 /*!
- * @brief  Constructs a new ImportDocumentationPartsRequest object.
+ * Constructs a ImportDocumentationPartsRequest object.
  */
 ImportDocumentationPartsRequest::ImportDocumentationPartsRequest()
     : APIGatewayRequest(new ImportDocumentationPartsRequestPrivate(APIGatewayRequest::ImportDocumentationPartsAction, this))
@@ -71,14 +68,9 @@ bool ImportDocumentationPartsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ImportDocumentationPartsResponse object.
+ * Returns a ImportDocumentationPartsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ImportDocumentationPartsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  APIGatewayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ImportDocumentationPartsRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * ImportDocumentationPartsRequest::response(QNe
 }
 
 /*!
- * @internal
+ * \class QtAws::APIGateway::ImportDocumentationPartsRequestPrivate
+ * \brief The ImportDocumentationPartsRequestPrivate class provides private implementation for ImportDocumentationPartsRequest.
+ * \internal
  *
- * @class  ImportDocumentationPartsRequestPrivate
- *
- * @brief  Private implementation for ImportDocumentationPartsRequest.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ImportDocumentationPartsRequestPrivate object.
- *
- * @param  action  APIGateway action being performed.
- * @param  q       Pointer to this object's public ImportDocumentationPartsRequest instance.
+ * Constructs a ImportDocumentationPartsRequestPrivate object for APIGateway \a action with,
+ * public implementation \a q.
  */
 ImportDocumentationPartsRequestPrivate::ImportDocumentationPartsRequestPrivate(
     const APIGatewayRequest::Action action, ImportDocumentationPartsRequest * const q)
@@ -109,15 +98,10 @@ ImportDocumentationPartsRequestPrivate::ImportDocumentationPartsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ImportDocumentationPartsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ImportDocumentationPartsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ImportDocumentationPartsRequest instance.
  */
 ImportDocumentationPartsRequestPrivate::ImportDocumentationPartsRequestPrivate(
     const ImportDocumentationPartsRequestPrivate &other, ImportDocumentationPartsRequest * const q)

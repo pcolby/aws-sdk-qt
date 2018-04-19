@@ -27,10 +27,9 @@ namespace OpsWorksCM {
 
 /*!
  * \class QtAws::OpsWorksCM::DescribeBackupsRequest
- *
  * \brief The DescribeBackupsRequest class provides an interface for OpsWorksCM DescribeBackups requests.
  *
- * \ingroup OpsWorksCM
+ * \inmodule QtAwsOpsWorksCM
  *
  *  <fullname>AWS OpsWorks CM</fullname>
  * 
@@ -97,9 +96,7 @@ namespace OpsWorksCM {
  */
 
 /*!
- * @brief  Constructs a new DescribeBackupsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeBackupsRequest::DescribeBackupsRequest(const DescribeBackupsRequest &other)
     : OpsWorksCMRequest(new DescribeBackupsRequestPrivate(*other.d_func(), this))
@@ -108,7 +105,7 @@ DescribeBackupsRequest::DescribeBackupsRequest(const DescribeBackupsRequest &oth
 }
 
 /*!
- * @brief  Constructs a new DescribeBackupsRequest object.
+ * Constructs a DescribeBackupsRequest object.
  */
 DescribeBackupsRequest::DescribeBackupsRequest()
     : OpsWorksCMRequest(new DescribeBackupsRequestPrivate(OpsWorksCMRequest::DescribeBackupsAction, this))
@@ -126,14 +123,9 @@ bool DescribeBackupsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeBackupsResponse object.
+ * Returns a DescribeBackupsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeBackupsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  OpsWorksCMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeBackupsRequest::response(QNetworkReply * const reply) const
 {
@@ -141,20 +133,17 @@ QtAws::Core::AwsAbstractResponse * DescribeBackupsRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::OpsWorksCM::DescribeBackupsRequestPrivate
+ * \brief The DescribeBackupsRequestPrivate class provides private implementation for DescribeBackupsRequest.
+ * \internal
  *
- * @class  DescribeBackupsRequestPrivate
- *
- * @brief  Private implementation for DescribeBackupsRequest.
+ * \inmodule QtAwsOpsWorksCM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeBackupsRequestPrivate object.
- *
- * @param  action  OpsWorksCM action being performed.
- * @param  q       Pointer to this object's public DescribeBackupsRequest instance.
+ * Constructs a DescribeBackupsRequestPrivate object for OpsWorksCM \a action with,
+ * public implementation \a q.
  */
 DescribeBackupsRequestPrivate::DescribeBackupsRequestPrivate(
     const OpsWorksCMRequest::Action action, DescribeBackupsRequest * const q)
@@ -164,15 +153,10 @@ DescribeBackupsRequestPrivate::DescribeBackupsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeBackupsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeBackupsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeBackupsRequest instance.
  */
 DescribeBackupsRequestPrivate::DescribeBackupsRequestPrivate(
     const DescribeBackupsRequestPrivate &other, DescribeBackupsRequest * const q)

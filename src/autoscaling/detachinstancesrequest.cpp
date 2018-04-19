@@ -27,10 +27,9 @@ namespace AutoScaling {
 
 /*!
  * \class QtAws::AutoScaling::DetachInstancesRequest
- *
  * \brief The DetachInstancesRequest class provides an interface for AutoScaling DetachInstances requests.
  *
- * \ingroup AutoScaling
+ * \inmodule QtAwsAutoScaling
  *
  *  <fullname>Amazon EC2 Auto Scaling</fullname>
  * 
@@ -42,9 +41,7 @@ namespace AutoScaling {
  */
 
 /*!
- * @brief  Constructs a new DetachInstancesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DetachInstancesRequest::DetachInstancesRequest(const DetachInstancesRequest &other)
     : AutoScalingRequest(new DetachInstancesRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ DetachInstancesRequest::DetachInstancesRequest(const DetachInstancesRequest &oth
 }
 
 /*!
- * @brief  Constructs a new DetachInstancesRequest object.
+ * Constructs a DetachInstancesRequest object.
  */
 DetachInstancesRequest::DetachInstancesRequest()
     : AutoScalingRequest(new DetachInstancesRequestPrivate(AutoScalingRequest::DetachInstancesAction, this))
@@ -71,14 +68,9 @@ bool DetachInstancesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DetachInstancesResponse object.
+ * Returns a DetachInstancesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DetachInstancesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AutoScalingClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DetachInstancesRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * DetachInstancesRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::AutoScaling::DetachInstancesRequestPrivate
+ * \brief The DetachInstancesRequestPrivate class provides private implementation for DetachInstancesRequest.
+ * \internal
  *
- * @class  DetachInstancesRequestPrivate
- *
- * @brief  Private implementation for DetachInstancesRequest.
+ * \inmodule QtAwsAutoScaling
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DetachInstancesRequestPrivate object.
- *
- * @param  action  AutoScaling action being performed.
- * @param  q       Pointer to this object's public DetachInstancesRequest instance.
+ * Constructs a DetachInstancesRequestPrivate object for AutoScaling \a action with,
+ * public implementation \a q.
  */
 DetachInstancesRequestPrivate::DetachInstancesRequestPrivate(
     const AutoScalingRequest::Action action, DetachInstancesRequest * const q)
@@ -109,15 +98,10 @@ DetachInstancesRequestPrivate::DetachInstancesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DetachInstancesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DetachInstancesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DetachInstancesRequest instance.
  */
 DetachInstancesRequestPrivate::DetachInstancesRequestPrivate(
     const DetachInstancesRequestPrivate &other, DetachInstancesRequest * const q)

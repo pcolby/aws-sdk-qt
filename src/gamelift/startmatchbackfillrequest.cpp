@@ -27,10 +27,9 @@ namespace GameLift {
 
 /*!
  * \class QtAws::GameLift::StartMatchBackfillRequest
- *
  * \brief The StartMatchBackfillRequest class provides an interface for GameLift StartMatchBackfill requests.
  *
- * \ingroup GameLift
+ * \inmodule QtAwsGameLift
  *
  *  <fullname>Amazon GameLift Service</fullname>
  * 
@@ -473,9 +472,7 @@ namespace GameLift {
  */
 
 /*!
- * @brief  Constructs a new StartMatchBackfillRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 StartMatchBackfillRequest::StartMatchBackfillRequest(const StartMatchBackfillRequest &other)
     : GameLiftRequest(new StartMatchBackfillRequestPrivate(*other.d_func(), this))
@@ -484,7 +481,7 @@ StartMatchBackfillRequest::StartMatchBackfillRequest(const StartMatchBackfillReq
 }
 
 /*!
- * @brief  Constructs a new StartMatchBackfillRequest object.
+ * Constructs a StartMatchBackfillRequest object.
  */
 StartMatchBackfillRequest::StartMatchBackfillRequest()
     : GameLiftRequest(new StartMatchBackfillRequestPrivate(GameLiftRequest::StartMatchBackfillAction, this))
@@ -502,14 +499,9 @@ bool StartMatchBackfillRequest::isValid() const
 
 
 /*!
- * @brief  Construct an StartMatchBackfillResponse object.
+ * Returns a StartMatchBackfillResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An StartMatchBackfillResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GameLiftClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * StartMatchBackfillRequest::response(QNetworkReply * const reply) const
 {
@@ -517,20 +509,17 @@ QtAws::Core::AwsAbstractResponse * StartMatchBackfillRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::GameLift::StartMatchBackfillRequestPrivate
+ * \brief The StartMatchBackfillRequestPrivate class provides private implementation for StartMatchBackfillRequest.
+ * \internal
  *
- * @class  StartMatchBackfillRequestPrivate
- *
- * @brief  Private implementation for StartMatchBackfillRequest.
+ * \inmodule QtAwsGameLift
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new StartMatchBackfillRequestPrivate object.
- *
- * @param  action  GameLift action being performed.
- * @param  q       Pointer to this object's public StartMatchBackfillRequest instance.
+ * Constructs a StartMatchBackfillRequestPrivate object for GameLift \a action with,
+ * public implementation \a q.
  */
 StartMatchBackfillRequestPrivate::StartMatchBackfillRequestPrivate(
     const GameLiftRequest::Action action, StartMatchBackfillRequest * const q)
@@ -540,15 +529,10 @@ StartMatchBackfillRequestPrivate::StartMatchBackfillRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StartMatchBackfillRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the StartMatchBackfillRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public StartMatchBackfillRequest instance.
  */
 StartMatchBackfillRequestPrivate::StartMatchBackfillRequestPrivate(
     const StartMatchBackfillRequestPrivate &other, StartMatchBackfillRequest * const q)

@@ -27,10 +27,9 @@ namespace ACM {
 
 /*!
  * \class QtAws::ACM::ListCertificatesRequest
- *
  * \brief The ListCertificatesRequest class provides an interface for ACM ListCertificates requests.
  *
- * \ingroup ACM
+ * \inmodule QtAwsACM
  *
  *  <fullname>AWS Certificate Manager</fullname>
  * 
@@ -46,9 +45,7 @@ namespace ACM {
  */
 
 /*!
- * @brief  Constructs a new ListCertificatesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListCertificatesRequest::ListCertificatesRequest(const ListCertificatesRequest &other)
     : ACMRequest(new ListCertificatesRequestPrivate(*other.d_func(), this))
@@ -57,7 +54,7 @@ ListCertificatesRequest::ListCertificatesRequest(const ListCertificatesRequest &
 }
 
 /*!
- * @brief  Constructs a new ListCertificatesRequest object.
+ * Constructs a ListCertificatesRequest object.
  */
 ListCertificatesRequest::ListCertificatesRequest()
     : ACMRequest(new ListCertificatesRequestPrivate(ACMRequest::ListCertificatesAction, this))
@@ -75,14 +72,9 @@ bool ListCertificatesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListCertificatesResponse object.
+ * Returns a ListCertificatesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListCertificatesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ACMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListCertificatesRequest::response(QNetworkReply * const reply) const
 {
@@ -90,20 +82,17 @@ QtAws::Core::AwsAbstractResponse * ListCertificatesRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::ACM::ListCertificatesRequestPrivate
+ * \brief The ListCertificatesRequestPrivate class provides private implementation for ListCertificatesRequest.
+ * \internal
  *
- * @class  ListCertificatesRequestPrivate
- *
- * @brief  Private implementation for ListCertificatesRequest.
+ * \inmodule QtAwsACM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListCertificatesRequestPrivate object.
- *
- * @param  action  ACM action being performed.
- * @param  q       Pointer to this object's public ListCertificatesRequest instance.
+ * Constructs a ListCertificatesRequestPrivate object for ACM \a action with,
+ * public implementation \a q.
  */
 ListCertificatesRequestPrivate::ListCertificatesRequestPrivate(
     const ACMRequest::Action action, ListCertificatesRequest * const q)
@@ -113,15 +102,10 @@ ListCertificatesRequestPrivate::ListCertificatesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListCertificatesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListCertificatesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListCertificatesRequest instance.
  */
 ListCertificatesRequestPrivate::ListCertificatesRequestPrivate(
     const ListCertificatesRequestPrivate &other, ListCertificatesRequest * const q)

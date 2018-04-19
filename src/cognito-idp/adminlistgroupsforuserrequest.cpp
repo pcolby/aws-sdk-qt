@@ -27,10 +27,9 @@ namespace CognitoIdentityProvider {
 
 /*!
  * \class QtAws::CognitoIdentityProvider::AdminListGroupsForUserRequest
- *
  * \brief The AdminListGroupsForUserRequest class provides an interface for CognitoIdentityProvider AdminListGroupsForUser requests.
  *
- * \ingroup CognitoIdentityProvider
+ * \inmodule QtAwsCognitoIdentityProvider
  *
  *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
  *  authenticate a user to obtain tokens related to user identity and access
@@ -47,9 +46,7 @@ namespace CognitoIdentityProvider {
  */
 
 /*!
- * @brief  Constructs a new AdminListGroupsForUserRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AdminListGroupsForUserRequest::AdminListGroupsForUserRequest(const AdminListGroupsForUserRequest &other)
     : CognitoIdentityProviderRequest(new AdminListGroupsForUserRequestPrivate(*other.d_func(), this))
@@ -58,7 +55,7 @@ AdminListGroupsForUserRequest::AdminListGroupsForUserRequest(const AdminListGrou
 }
 
 /*!
- * @brief  Constructs a new AdminListGroupsForUserRequest object.
+ * Constructs a AdminListGroupsForUserRequest object.
  */
 AdminListGroupsForUserRequest::AdminListGroupsForUserRequest()
     : CognitoIdentityProviderRequest(new AdminListGroupsForUserRequestPrivate(CognitoIdentityProviderRequest::AdminListGroupsForUserAction, this))
@@ -76,14 +73,9 @@ bool AdminListGroupsForUserRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AdminListGroupsForUserResponse object.
+ * Returns a AdminListGroupsForUserResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AdminListGroupsForUserResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CognitoIdentityProviderClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AdminListGroupsForUserRequest::response(QNetworkReply * const reply) const
 {
@@ -91,20 +83,17 @@ QtAws::Core::AwsAbstractResponse * AdminListGroupsForUserRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::CognitoIdentityProvider::AdminListGroupsForUserRequestPrivate
+ * \brief The AdminListGroupsForUserRequestPrivate class provides private implementation for AdminListGroupsForUserRequest.
+ * \internal
  *
- * @class  AdminListGroupsForUserRequestPrivate
- *
- * @brief  Private implementation for AdminListGroupsForUserRequest.
+ * \inmodule QtAwsCognitoIdentityProvider
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AdminListGroupsForUserRequestPrivate object.
- *
- * @param  action  CognitoIdentityProvider action being performed.
- * @param  q       Pointer to this object's public AdminListGroupsForUserRequest instance.
+ * Constructs a AdminListGroupsForUserRequestPrivate object for CognitoIdentityProvider \a action with,
+ * public implementation \a q.
  */
 AdminListGroupsForUserRequestPrivate::AdminListGroupsForUserRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, AdminListGroupsForUserRequest * const q)
@@ -114,15 +103,10 @@ AdminListGroupsForUserRequestPrivate::AdminListGroupsForUserRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AdminListGroupsForUserRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AdminListGroupsForUserRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AdminListGroupsForUserRequest instance.
  */
 AdminListGroupsForUserRequestPrivate::AdminListGroupsForUserRequestPrivate(
     const AdminListGroupsForUserRequestPrivate &other, AdminListGroupsForUserRequest * const q)

@@ -27,10 +27,9 @@ namespace Route53Domains {
 
 /*!
  * \class QtAws::Route53Domains::CheckDomainTransferabilityRequest
- *
  * \brief The CheckDomainTransferabilityRequest class provides an interface for Route53Domains CheckDomainTransferability requests.
  *
- * \ingroup Route53Domains
+ * \inmodule QtAwsRoute53Domains
  *
  *  Amazon Route 53 API actions let you register domain names and perform related
  *
@@ -38,9 +37,7 @@ namespace Route53Domains {
  */
 
 /*!
- * @brief  Constructs a new CheckDomainTransferabilityRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CheckDomainTransferabilityRequest::CheckDomainTransferabilityRequest(const CheckDomainTransferabilityRequest &other)
     : Route53DomainsRequest(new CheckDomainTransferabilityRequestPrivate(*other.d_func(), this))
@@ -49,7 +46,7 @@ CheckDomainTransferabilityRequest::CheckDomainTransferabilityRequest(const Check
 }
 
 /*!
- * @brief  Constructs a new CheckDomainTransferabilityRequest object.
+ * Constructs a CheckDomainTransferabilityRequest object.
  */
 CheckDomainTransferabilityRequest::CheckDomainTransferabilityRequest()
     : Route53DomainsRequest(new CheckDomainTransferabilityRequestPrivate(Route53DomainsRequest::CheckDomainTransferabilityAction, this))
@@ -67,14 +64,9 @@ bool CheckDomainTransferabilityRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CheckDomainTransferabilityResponse object.
+ * Returns a CheckDomainTransferabilityResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CheckDomainTransferabilityResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  Route53DomainsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CheckDomainTransferabilityRequest::response(QNetworkReply * const reply) const
 {
@@ -82,20 +74,17 @@ QtAws::Core::AwsAbstractResponse * CheckDomainTransferabilityRequest::response(Q
 }
 
 /*!
- * @internal
+ * \class QtAws::Route53Domains::CheckDomainTransferabilityRequestPrivate
+ * \brief The CheckDomainTransferabilityRequestPrivate class provides private implementation for CheckDomainTransferabilityRequest.
+ * \internal
  *
- * @class  CheckDomainTransferabilityRequestPrivate
- *
- * @brief  Private implementation for CheckDomainTransferabilityRequest.
+ * \inmodule QtAwsRoute53Domains
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CheckDomainTransferabilityRequestPrivate object.
- *
- * @param  action  Route53Domains action being performed.
- * @param  q       Pointer to this object's public CheckDomainTransferabilityRequest instance.
+ * Constructs a CheckDomainTransferabilityRequestPrivate object for Route53Domains \a action with,
+ * public implementation \a q.
  */
 CheckDomainTransferabilityRequestPrivate::CheckDomainTransferabilityRequestPrivate(
     const Route53DomainsRequest::Action action, CheckDomainTransferabilityRequest * const q)
@@ -105,15 +94,10 @@ CheckDomainTransferabilityRequestPrivate::CheckDomainTransferabilityRequestPriva
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CheckDomainTransferabilityRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CheckDomainTransferabilityRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CheckDomainTransferabilityRequest instance.
  */
 CheckDomainTransferabilityRequestPrivate::CheckDomainTransferabilityRequestPrivate(
     const CheckDomainTransferabilityRequestPrivate &other, CheckDomainTransferabilityRequest * const q)

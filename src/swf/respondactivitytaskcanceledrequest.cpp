@@ -27,10 +27,9 @@ namespace SWF {
 
 /*!
  * \class QtAws::SWF::RespondActivityTaskCanceledRequest
- *
  * \brief The RespondActivityTaskCanceledRequest class provides an interface for SWF RespondActivityTaskCanceled requests.
  *
- * \ingroup SWF
+ * \inmodule QtAwsSWF
  *
  *  <fullname>Amazon Simple Workflow Service</fullname>
  * 
@@ -53,9 +52,7 @@ namespace SWF {
  */
 
 /*!
- * @brief  Constructs a new RespondActivityTaskCanceledRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 RespondActivityTaskCanceledRequest::RespondActivityTaskCanceledRequest(const RespondActivityTaskCanceledRequest &other)
     : SWFRequest(new RespondActivityTaskCanceledRequestPrivate(*other.d_func(), this))
@@ -64,7 +61,7 @@ RespondActivityTaskCanceledRequest::RespondActivityTaskCanceledRequest(const Res
 }
 
 /*!
- * @brief  Constructs a new RespondActivityTaskCanceledRequest object.
+ * Constructs a RespondActivityTaskCanceledRequest object.
  */
 RespondActivityTaskCanceledRequest::RespondActivityTaskCanceledRequest()
     : SWFRequest(new RespondActivityTaskCanceledRequestPrivate(SWFRequest::RespondActivityTaskCanceledAction, this))
@@ -82,14 +79,9 @@ bool RespondActivityTaskCanceledRequest::isValid() const
 
 
 /*!
- * @brief  Construct an RespondActivityTaskCanceledResponse object.
+ * Returns a RespondActivityTaskCanceledResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An RespondActivityTaskCanceledResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SWFClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * RespondActivityTaskCanceledRequest::response(QNetworkReply * const reply) const
 {
@@ -97,20 +89,17 @@ QtAws::Core::AwsAbstractResponse * RespondActivityTaskCanceledRequest::response(
 }
 
 /*!
- * @internal
+ * \class QtAws::SWF::RespondActivityTaskCanceledRequestPrivate
+ * \brief The RespondActivityTaskCanceledRequestPrivate class provides private implementation for RespondActivityTaskCanceledRequest.
+ * \internal
  *
- * @class  RespondActivityTaskCanceledRequestPrivate
- *
- * @brief  Private implementation for RespondActivityTaskCanceledRequest.
+ * \inmodule QtAwsSWF
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new RespondActivityTaskCanceledRequestPrivate object.
- *
- * @param  action  SWF action being performed.
- * @param  q       Pointer to this object's public RespondActivityTaskCanceledRequest instance.
+ * Constructs a RespondActivityTaskCanceledRequestPrivate object for SWF \a action with,
+ * public implementation \a q.
  */
 RespondActivityTaskCanceledRequestPrivate::RespondActivityTaskCanceledRequestPrivate(
     const SWFRequest::Action action, RespondActivityTaskCanceledRequest * const q)
@@ -120,15 +109,10 @@ RespondActivityTaskCanceledRequestPrivate::RespondActivityTaskCanceledRequestPri
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RespondActivityTaskCanceledRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the RespondActivityTaskCanceledRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public RespondActivityTaskCanceledRequest instance.
  */
 RespondActivityTaskCanceledRequestPrivate::RespondActivityTaskCanceledRequestPrivate(
     const RespondActivityTaskCanceledRequestPrivate &other, RespondActivityTaskCanceledRequest * const q)

@@ -27,10 +27,9 @@ namespace AutoScaling {
 
 /*!
  * \class QtAws::AutoScaling::EnterStandbyRequest
- *
  * \brief The EnterStandbyRequest class provides an interface for AutoScaling EnterStandby requests.
  *
- * \ingroup AutoScaling
+ * \inmodule QtAwsAutoScaling
  *
  *  <fullname>Amazon EC2 Auto Scaling</fullname>
  * 
@@ -42,9 +41,7 @@ namespace AutoScaling {
  */
 
 /*!
- * @brief  Constructs a new EnterStandbyRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 EnterStandbyRequest::EnterStandbyRequest(const EnterStandbyRequest &other)
     : AutoScalingRequest(new EnterStandbyRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ EnterStandbyRequest::EnterStandbyRequest(const EnterStandbyRequest &other)
 }
 
 /*!
- * @brief  Constructs a new EnterStandbyRequest object.
+ * Constructs a EnterStandbyRequest object.
  */
 EnterStandbyRequest::EnterStandbyRequest()
     : AutoScalingRequest(new EnterStandbyRequestPrivate(AutoScalingRequest::EnterStandbyAction, this))
@@ -71,14 +68,9 @@ bool EnterStandbyRequest::isValid() const
 
 
 /*!
- * @brief  Construct an EnterStandbyResponse object.
+ * Returns a EnterStandbyResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An EnterStandbyResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AutoScalingClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * EnterStandbyRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * EnterStandbyRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::AutoScaling::EnterStandbyRequestPrivate
+ * \brief The EnterStandbyRequestPrivate class provides private implementation for EnterStandbyRequest.
+ * \internal
  *
- * @class  EnterStandbyRequestPrivate
- *
- * @brief  Private implementation for EnterStandbyRequest.
+ * \inmodule QtAwsAutoScaling
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new EnterStandbyRequestPrivate object.
- *
- * @param  action  AutoScaling action being performed.
- * @param  q       Pointer to this object's public EnterStandbyRequest instance.
+ * Constructs a EnterStandbyRequestPrivate object for AutoScaling \a action with,
+ * public implementation \a q.
  */
 EnterStandbyRequestPrivate::EnterStandbyRequestPrivate(
     const AutoScalingRequest::Action action, EnterStandbyRequest * const q)
@@ -109,15 +98,10 @@ EnterStandbyRequestPrivate::EnterStandbyRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new EnterStandbyRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the EnterStandbyRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public EnterStandbyRequest instance.
  */
 EnterStandbyRequestPrivate::EnterStandbyRequestPrivate(
     const EnterStandbyRequestPrivate &other, EnterStandbyRequest * const q)

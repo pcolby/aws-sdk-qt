@@ -27,10 +27,9 @@ namespace Translate {
 
 /*!
  * \class QtAws::Translate::TranslateTextRequest
- *
  * \brief The TranslateTextRequest class provides an interface for Translate TranslateText requests.
  *
- * \ingroup Translate
+ * \inmodule QtAwsTranslate
  *
  *  Provides translation between English and one of six languages, or between one of the six languages and
  *
@@ -38,9 +37,7 @@ namespace Translate {
  */
 
 /*!
- * @brief  Constructs a new TranslateTextRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 TranslateTextRequest::TranslateTextRequest(const TranslateTextRequest &other)
     : TranslateRequest(new TranslateTextRequestPrivate(*other.d_func(), this))
@@ -49,7 +46,7 @@ TranslateTextRequest::TranslateTextRequest(const TranslateTextRequest &other)
 }
 
 /*!
- * @brief  Constructs a new TranslateTextRequest object.
+ * Constructs a TranslateTextRequest object.
  */
 TranslateTextRequest::TranslateTextRequest()
     : TranslateRequest(new TranslateTextRequestPrivate(TranslateRequest::TranslateTextAction, this))
@@ -67,14 +64,9 @@ bool TranslateTextRequest::isValid() const
 
 
 /*!
- * @brief  Construct an TranslateTextResponse object.
+ * Returns a TranslateTextResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An TranslateTextResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  TranslateClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * TranslateTextRequest::response(QNetworkReply * const reply) const
 {
@@ -82,20 +74,17 @@ QtAws::Core::AwsAbstractResponse * TranslateTextRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::Translate::TranslateTextRequestPrivate
+ * \brief The TranslateTextRequestPrivate class provides private implementation for TranslateTextRequest.
+ * \internal
  *
- * @class  TranslateTextRequestPrivate
- *
- * @brief  Private implementation for TranslateTextRequest.
+ * \inmodule QtAwsTranslate
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new TranslateTextRequestPrivate object.
- *
- * @param  action  Translate action being performed.
- * @param  q       Pointer to this object's public TranslateTextRequest instance.
+ * Constructs a TranslateTextRequestPrivate object for Translate \a action with,
+ * public implementation \a q.
  */
 TranslateTextRequestPrivate::TranslateTextRequestPrivate(
     const TranslateRequest::Action action, TranslateTextRequest * const q)
@@ -105,15 +94,10 @@ TranslateTextRequestPrivate::TranslateTextRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new TranslateTextRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the TranslateTextRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public TranslateTextRequest instance.
  */
 TranslateTextRequestPrivate::TranslateTextRequestPrivate(
     const TranslateTextRequestPrivate &other, TranslateTextRequest * const q)

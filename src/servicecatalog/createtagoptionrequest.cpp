@@ -27,10 +27,9 @@ namespace ServiceCatalog {
 
 /*!
  * \class QtAws::ServiceCatalog::CreateTagOptionRequest
- *
  * \brief The CreateTagOptionRequest class provides an interface for ServiceCatalog CreateTagOption requests.
  *
- * \ingroup ServiceCatalog
+ * \inmodule QtAwsServiceCatalog
  *
  *  <fullname>AWS Service Catalog</fullname>
  * 
@@ -43,9 +42,7 @@ namespace ServiceCatalog {
  */
 
 /*!
- * @brief  Constructs a new CreateTagOptionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateTagOptionRequest::CreateTagOptionRequest(const CreateTagOptionRequest &other)
     : ServiceCatalogRequest(new CreateTagOptionRequestPrivate(*other.d_func(), this))
@@ -54,7 +51,7 @@ CreateTagOptionRequest::CreateTagOptionRequest(const CreateTagOptionRequest &oth
 }
 
 /*!
- * @brief  Constructs a new CreateTagOptionRequest object.
+ * Constructs a CreateTagOptionRequest object.
  */
 CreateTagOptionRequest::CreateTagOptionRequest()
     : ServiceCatalogRequest(new CreateTagOptionRequestPrivate(ServiceCatalogRequest::CreateTagOptionAction, this))
@@ -72,14 +69,9 @@ bool CreateTagOptionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateTagOptionResponse object.
+ * Returns a CreateTagOptionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateTagOptionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ServiceCatalogClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateTagOptionRequest::response(QNetworkReply * const reply) const
 {
@@ -87,20 +79,17 @@ QtAws::Core::AwsAbstractResponse * CreateTagOptionRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::ServiceCatalog::CreateTagOptionRequestPrivate
+ * \brief The CreateTagOptionRequestPrivate class provides private implementation for CreateTagOptionRequest.
+ * \internal
  *
- * @class  CreateTagOptionRequestPrivate
- *
- * @brief  Private implementation for CreateTagOptionRequest.
+ * \inmodule QtAwsServiceCatalog
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateTagOptionRequestPrivate object.
- *
- * @param  action  ServiceCatalog action being performed.
- * @param  q       Pointer to this object's public CreateTagOptionRequest instance.
+ * Constructs a CreateTagOptionRequestPrivate object for ServiceCatalog \a action with,
+ * public implementation \a q.
  */
 CreateTagOptionRequestPrivate::CreateTagOptionRequestPrivate(
     const ServiceCatalogRequest::Action action, CreateTagOptionRequest * const q)
@@ -110,15 +99,10 @@ CreateTagOptionRequestPrivate::CreateTagOptionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateTagOptionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateTagOptionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateTagOptionRequest instance.
  */
 CreateTagOptionRequestPrivate::CreateTagOptionRequestPrivate(
     const CreateTagOptionRequestPrivate &other, CreateTagOptionRequest * const q)

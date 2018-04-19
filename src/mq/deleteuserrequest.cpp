@@ -27,10 +27,9 @@ namespace MQ {
 
 /*!
  * \class QtAws::MQ::DeleteUserRequest
- *
  * \brief The DeleteUserRequest class provides an interface for MQ DeleteUser requests.
  *
- * \ingroup MQ
+ * \inmodule QtAwsMQ
  *
  *  Amazon MQ is a managed message broker service for Apache ActiveMQ that makes it easy to set up and operate message
  *  brokers in the cloud. A message broker allows software applications and components to communicate using various
@@ -39,9 +38,7 @@ namespace MQ {
  */
 
 /*!
- * @brief  Constructs a new DeleteUserRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteUserRequest::DeleteUserRequest(const DeleteUserRequest &other)
     : MQRequest(new DeleteUserRequestPrivate(*other.d_func(), this))
@@ -50,7 +47,7 @@ DeleteUserRequest::DeleteUserRequest(const DeleteUserRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DeleteUserRequest object.
+ * Constructs a DeleteUserRequest object.
  */
 DeleteUserRequest::DeleteUserRequest()
     : MQRequest(new DeleteUserRequestPrivate(MQRequest::DeleteUserAction, this))
@@ -68,14 +65,9 @@ bool DeleteUserRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteUserResponse object.
+ * Returns a DeleteUserResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteUserResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MQClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteUserRequest::response(QNetworkReply * const reply) const
 {
@@ -83,20 +75,17 @@ QtAws::Core::AwsAbstractResponse * DeleteUserRequest::response(QNetworkReply * c
 }
 
 /*!
- * @internal
+ * \class QtAws::MQ::DeleteUserRequestPrivate
+ * \brief The DeleteUserRequestPrivate class provides private implementation for DeleteUserRequest.
+ * \internal
  *
- * @class  DeleteUserRequestPrivate
- *
- * @brief  Private implementation for DeleteUserRequest.
+ * \inmodule QtAwsMQ
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteUserRequestPrivate object.
- *
- * @param  action  MQ action being performed.
- * @param  q       Pointer to this object's public DeleteUserRequest instance.
+ * Constructs a DeleteUserRequestPrivate object for MQ \a action with,
+ * public implementation \a q.
  */
 DeleteUserRequestPrivate::DeleteUserRequestPrivate(
     const MQRequest::Action action, DeleteUserRequest * const q)
@@ -106,15 +95,10 @@ DeleteUserRequestPrivate::DeleteUserRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteUserRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteUserRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteUserRequest instance.
  */
 DeleteUserRequestPrivate::DeleteUserRequestPrivate(
     const DeleteUserRequestPrivate &other, DeleteUserRequest * const q)

@@ -27,10 +27,9 @@ namespace ConfigService {
 
 /*!
  * \class QtAws::ConfigService::DeliverConfigSnapshotRequest
- *
  * \brief The DeliverConfigSnapshotRequest class provides an interface for ConfigService DeliverConfigSnapshot requests.
  *
- * \ingroup ConfigService
+ * \inmodule QtAwsConfigService
  *
  *  <fullname>AWS Config</fullname>
  * 
@@ -60,9 +59,7 @@ namespace ConfigService {
  */
 
 /*!
- * @brief  Constructs a new DeliverConfigSnapshotRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeliverConfigSnapshotRequest::DeliverConfigSnapshotRequest(const DeliverConfigSnapshotRequest &other)
     : ConfigServiceRequest(new DeliverConfigSnapshotRequestPrivate(*other.d_func(), this))
@@ -71,7 +68,7 @@ DeliverConfigSnapshotRequest::DeliverConfigSnapshotRequest(const DeliverConfigSn
 }
 
 /*!
- * @brief  Constructs a new DeliverConfigSnapshotRequest object.
+ * Constructs a DeliverConfigSnapshotRequest object.
  */
 DeliverConfigSnapshotRequest::DeliverConfigSnapshotRequest()
     : ConfigServiceRequest(new DeliverConfigSnapshotRequestPrivate(ConfigServiceRequest::DeliverConfigSnapshotAction, this))
@@ -89,14 +86,9 @@ bool DeliverConfigSnapshotRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeliverConfigSnapshotResponse object.
+ * Returns a DeliverConfigSnapshotResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeliverConfigSnapshotResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ConfigServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeliverConfigSnapshotRequest::response(QNetworkReply * const reply) const
 {
@@ -104,20 +96,17 @@ QtAws::Core::AwsAbstractResponse * DeliverConfigSnapshotRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::ConfigService::DeliverConfigSnapshotRequestPrivate
+ * \brief The DeliverConfigSnapshotRequestPrivate class provides private implementation for DeliverConfigSnapshotRequest.
+ * \internal
  *
- * @class  DeliverConfigSnapshotRequestPrivate
- *
- * @brief  Private implementation for DeliverConfigSnapshotRequest.
+ * \inmodule QtAwsConfigService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeliverConfigSnapshotRequestPrivate object.
- *
- * @param  action  ConfigService action being performed.
- * @param  q       Pointer to this object's public DeliverConfigSnapshotRequest instance.
+ * Constructs a DeliverConfigSnapshotRequestPrivate object for ConfigService \a action with,
+ * public implementation \a q.
  */
 DeliverConfigSnapshotRequestPrivate::DeliverConfigSnapshotRequestPrivate(
     const ConfigServiceRequest::Action action, DeliverConfigSnapshotRequest * const q)
@@ -127,15 +116,10 @@ DeliverConfigSnapshotRequestPrivate::DeliverConfigSnapshotRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeliverConfigSnapshotRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeliverConfigSnapshotRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeliverConfigSnapshotRequest instance.
  */
 DeliverConfigSnapshotRequestPrivate::DeliverConfigSnapshotRequestPrivate(
     const DeliverConfigSnapshotRequestPrivate &other, DeliverConfigSnapshotRequest * const q)

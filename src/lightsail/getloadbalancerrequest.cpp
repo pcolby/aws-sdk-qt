@@ -27,10 +27,9 @@ namespace Lightsail {
 
 /*!
  * \class QtAws::Lightsail::GetLoadBalancerRequest
- *
  * \brief The GetLoadBalancerRequest class provides an interface for Lightsail GetLoadBalancer requests.
  *
- * \ingroup Lightsail
+ * \inmodule QtAwsLightsail
  *
  *  Amazon Lightsail is the easiest way to get started with AWS for developers who just need virtual private servers.
  *  Lightsail includes everything you need to launch your project quickly - a virtual machine, SSD-based storage, data
@@ -53,9 +52,7 @@ namespace Lightsail {
  */
 
 /*!
- * @brief  Constructs a new GetLoadBalancerRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetLoadBalancerRequest::GetLoadBalancerRequest(const GetLoadBalancerRequest &other)
     : LightsailRequest(new GetLoadBalancerRequestPrivate(*other.d_func(), this))
@@ -64,7 +61,7 @@ GetLoadBalancerRequest::GetLoadBalancerRequest(const GetLoadBalancerRequest &oth
 }
 
 /*!
- * @brief  Constructs a new GetLoadBalancerRequest object.
+ * Constructs a GetLoadBalancerRequest object.
  */
 GetLoadBalancerRequest::GetLoadBalancerRequest()
     : LightsailRequest(new GetLoadBalancerRequestPrivate(LightsailRequest::GetLoadBalancerAction, this))
@@ -82,14 +79,9 @@ bool GetLoadBalancerRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetLoadBalancerResponse object.
+ * Returns a GetLoadBalancerResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetLoadBalancerResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  LightsailClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetLoadBalancerRequest::response(QNetworkReply * const reply) const
 {
@@ -97,20 +89,17 @@ QtAws::Core::AwsAbstractResponse * GetLoadBalancerRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::Lightsail::GetLoadBalancerRequestPrivate
+ * \brief The GetLoadBalancerRequestPrivate class provides private implementation for GetLoadBalancerRequest.
+ * \internal
  *
- * @class  GetLoadBalancerRequestPrivate
- *
- * @brief  Private implementation for GetLoadBalancerRequest.
+ * \inmodule QtAwsLightsail
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetLoadBalancerRequestPrivate object.
- *
- * @param  action  Lightsail action being performed.
- * @param  q       Pointer to this object's public GetLoadBalancerRequest instance.
+ * Constructs a GetLoadBalancerRequestPrivate object for Lightsail \a action with,
+ * public implementation \a q.
  */
 GetLoadBalancerRequestPrivate::GetLoadBalancerRequestPrivate(
     const LightsailRequest::Action action, GetLoadBalancerRequest * const q)
@@ -120,15 +109,10 @@ GetLoadBalancerRequestPrivate::GetLoadBalancerRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetLoadBalancerRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetLoadBalancerRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetLoadBalancerRequest instance.
  */
 GetLoadBalancerRequestPrivate::GetLoadBalancerRequestPrivate(
     const GetLoadBalancerRequestPrivate &other, GetLoadBalancerRequest * const q)

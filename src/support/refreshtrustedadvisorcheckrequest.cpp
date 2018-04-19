@@ -27,10 +27,9 @@ namespace Support {
 
 /*!
  * \class QtAws::Support::RefreshTrustedAdvisorCheckRequest
- *
  * \brief The RefreshTrustedAdvisorCheckRequest class provides an interface for Support RefreshTrustedAdvisorCheck requests.
  *
- * \ingroup Support
+ * \inmodule QtAwsSupport
  *
  *  <fullname>AWS Support</fullname>
  * 
@@ -105,9 +104,7 @@ namespace Support {
  */
 
 /*!
- * @brief  Constructs a new RefreshTrustedAdvisorCheckRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 RefreshTrustedAdvisorCheckRequest::RefreshTrustedAdvisorCheckRequest(const RefreshTrustedAdvisorCheckRequest &other)
     : SupportRequest(new RefreshTrustedAdvisorCheckRequestPrivate(*other.d_func(), this))
@@ -116,7 +113,7 @@ RefreshTrustedAdvisorCheckRequest::RefreshTrustedAdvisorCheckRequest(const Refre
 }
 
 /*!
- * @brief  Constructs a new RefreshTrustedAdvisorCheckRequest object.
+ * Constructs a RefreshTrustedAdvisorCheckRequest object.
  */
 RefreshTrustedAdvisorCheckRequest::RefreshTrustedAdvisorCheckRequest()
     : SupportRequest(new RefreshTrustedAdvisorCheckRequestPrivate(SupportRequest::RefreshTrustedAdvisorCheckAction, this))
@@ -134,14 +131,9 @@ bool RefreshTrustedAdvisorCheckRequest::isValid() const
 
 
 /*!
- * @brief  Construct an RefreshTrustedAdvisorCheckResponse object.
+ * Returns a RefreshTrustedAdvisorCheckResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An RefreshTrustedAdvisorCheckResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SupportClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * RefreshTrustedAdvisorCheckRequest::response(QNetworkReply * const reply) const
 {
@@ -149,20 +141,17 @@ QtAws::Core::AwsAbstractResponse * RefreshTrustedAdvisorCheckRequest::response(Q
 }
 
 /*!
- * @internal
+ * \class QtAws::Support::RefreshTrustedAdvisorCheckRequestPrivate
+ * \brief The RefreshTrustedAdvisorCheckRequestPrivate class provides private implementation for RefreshTrustedAdvisorCheckRequest.
+ * \internal
  *
- * @class  RefreshTrustedAdvisorCheckRequestPrivate
- *
- * @brief  Private implementation for RefreshTrustedAdvisorCheckRequest.
+ * \inmodule QtAwsSupport
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new RefreshTrustedAdvisorCheckRequestPrivate object.
- *
- * @param  action  Support action being performed.
- * @param  q       Pointer to this object's public RefreshTrustedAdvisorCheckRequest instance.
+ * Constructs a RefreshTrustedAdvisorCheckRequestPrivate object for Support \a action with,
+ * public implementation \a q.
  */
 RefreshTrustedAdvisorCheckRequestPrivate::RefreshTrustedAdvisorCheckRequestPrivate(
     const SupportRequest::Action action, RefreshTrustedAdvisorCheckRequest * const q)
@@ -172,15 +161,10 @@ RefreshTrustedAdvisorCheckRequestPrivate::RefreshTrustedAdvisorCheckRequestPriva
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RefreshTrustedAdvisorCheckRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the RefreshTrustedAdvisorCheckRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public RefreshTrustedAdvisorCheckRequest instance.
  */
 RefreshTrustedAdvisorCheckRequestPrivate::RefreshTrustedAdvisorCheckRequestPrivate(
     const RefreshTrustedAdvisorCheckRequestPrivate &other, RefreshTrustedAdvisorCheckRequest * const q)

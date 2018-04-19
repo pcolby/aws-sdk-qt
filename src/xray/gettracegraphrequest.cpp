@@ -27,10 +27,9 @@ namespace XRay {
 
 /*!
  * \class QtAws::XRay::GetTraceGraphRequest
- *
  * \brief The GetTraceGraphRequest class provides an interface for XRay GetTraceGraph requests.
  *
- * \ingroup XRay
+ * \inmodule QtAwsXRay
  *
  *  AWS X-Ray provides APIs for managing debug traces and retrieving service maps and other data created by processing those
  *
@@ -38,9 +37,7 @@ namespace XRay {
  */
 
 /*!
- * @brief  Constructs a new GetTraceGraphRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetTraceGraphRequest::GetTraceGraphRequest(const GetTraceGraphRequest &other)
     : XRayRequest(new GetTraceGraphRequestPrivate(*other.d_func(), this))
@@ -49,7 +46,7 @@ GetTraceGraphRequest::GetTraceGraphRequest(const GetTraceGraphRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetTraceGraphRequest object.
+ * Constructs a GetTraceGraphRequest object.
  */
 GetTraceGraphRequest::GetTraceGraphRequest()
     : XRayRequest(new GetTraceGraphRequestPrivate(XRayRequest::GetTraceGraphAction, this))
@@ -67,14 +64,9 @@ bool GetTraceGraphRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetTraceGraphResponse object.
+ * Returns a GetTraceGraphResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetTraceGraphResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  XRayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetTraceGraphRequest::response(QNetworkReply * const reply) const
 {
@@ -82,20 +74,17 @@ QtAws::Core::AwsAbstractResponse * GetTraceGraphRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::XRay::GetTraceGraphRequestPrivate
+ * \brief The GetTraceGraphRequestPrivate class provides private implementation for GetTraceGraphRequest.
+ * \internal
  *
- * @class  GetTraceGraphRequestPrivate
- *
- * @brief  Private implementation for GetTraceGraphRequest.
+ * \inmodule QtAwsXRay
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetTraceGraphRequestPrivate object.
- *
- * @param  action  XRay action being performed.
- * @param  q       Pointer to this object's public GetTraceGraphRequest instance.
+ * Constructs a GetTraceGraphRequestPrivate object for XRay \a action with,
+ * public implementation \a q.
  */
 GetTraceGraphRequestPrivate::GetTraceGraphRequestPrivate(
     const XRayRequest::Action action, GetTraceGraphRequest * const q)
@@ -105,15 +94,10 @@ GetTraceGraphRequestPrivate::GetTraceGraphRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetTraceGraphRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetTraceGraphRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetTraceGraphRequest instance.
  */
 GetTraceGraphRequestPrivate::GetTraceGraphRequestPrivate(
     const GetTraceGraphRequestPrivate &other, GetTraceGraphRequest * const q)

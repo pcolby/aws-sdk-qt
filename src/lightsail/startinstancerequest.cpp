@@ -27,10 +27,9 @@ namespace Lightsail {
 
 /*!
  * \class QtAws::Lightsail::StartInstanceRequest
- *
  * \brief The StartInstanceRequest class provides an interface for Lightsail StartInstance requests.
  *
- * \ingroup Lightsail
+ * \inmodule QtAwsLightsail
  *
  *  Amazon Lightsail is the easiest way to get started with AWS for developers who just need virtual private servers.
  *  Lightsail includes everything you need to launch your project quickly - a virtual machine, SSD-based storage, data
@@ -53,9 +52,7 @@ namespace Lightsail {
  */
 
 /*!
- * @brief  Constructs a new StartInstanceRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 StartInstanceRequest::StartInstanceRequest(const StartInstanceRequest &other)
     : LightsailRequest(new StartInstanceRequestPrivate(*other.d_func(), this))
@@ -64,7 +61,7 @@ StartInstanceRequest::StartInstanceRequest(const StartInstanceRequest &other)
 }
 
 /*!
- * @brief  Constructs a new StartInstanceRequest object.
+ * Constructs a StartInstanceRequest object.
  */
 StartInstanceRequest::StartInstanceRequest()
     : LightsailRequest(new StartInstanceRequestPrivate(LightsailRequest::StartInstanceAction, this))
@@ -82,14 +79,9 @@ bool StartInstanceRequest::isValid() const
 
 
 /*!
- * @brief  Construct an StartInstanceResponse object.
+ * Returns a StartInstanceResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An StartInstanceResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  LightsailClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * StartInstanceRequest::response(QNetworkReply * const reply) const
 {
@@ -97,20 +89,17 @@ QtAws::Core::AwsAbstractResponse * StartInstanceRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::Lightsail::StartInstanceRequestPrivate
+ * \brief The StartInstanceRequestPrivate class provides private implementation for StartInstanceRequest.
+ * \internal
  *
- * @class  StartInstanceRequestPrivate
- *
- * @brief  Private implementation for StartInstanceRequest.
+ * \inmodule QtAwsLightsail
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new StartInstanceRequestPrivate object.
- *
- * @param  action  Lightsail action being performed.
- * @param  q       Pointer to this object's public StartInstanceRequest instance.
+ * Constructs a StartInstanceRequestPrivate object for Lightsail \a action with,
+ * public implementation \a q.
  */
 StartInstanceRequestPrivate::StartInstanceRequestPrivate(
     const LightsailRequest::Action action, StartInstanceRequest * const q)
@@ -120,15 +109,10 @@ StartInstanceRequestPrivate::StartInstanceRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StartInstanceRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the StartInstanceRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public StartInstanceRequest instance.
  */
 StartInstanceRequestPrivate::StartInstanceRequestPrivate(
     const StartInstanceRequestPrivate &other, StartInstanceRequest * const q)

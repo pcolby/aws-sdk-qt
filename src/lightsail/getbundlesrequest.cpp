@@ -27,10 +27,9 @@ namespace Lightsail {
 
 /*!
  * \class QtAws::Lightsail::GetBundlesRequest
- *
  * \brief The GetBundlesRequest class provides an interface for Lightsail GetBundles requests.
  *
- * \ingroup Lightsail
+ * \inmodule QtAwsLightsail
  *
  *  Amazon Lightsail is the easiest way to get started with AWS for developers who just need virtual private servers.
  *  Lightsail includes everything you need to launch your project quickly - a virtual machine, SSD-based storage, data
@@ -53,9 +52,7 @@ namespace Lightsail {
  */
 
 /*!
- * @brief  Constructs a new GetBundlesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetBundlesRequest::GetBundlesRequest(const GetBundlesRequest &other)
     : LightsailRequest(new GetBundlesRequestPrivate(*other.d_func(), this))
@@ -64,7 +61,7 @@ GetBundlesRequest::GetBundlesRequest(const GetBundlesRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetBundlesRequest object.
+ * Constructs a GetBundlesRequest object.
  */
 GetBundlesRequest::GetBundlesRequest()
     : LightsailRequest(new GetBundlesRequestPrivate(LightsailRequest::GetBundlesAction, this))
@@ -82,14 +79,9 @@ bool GetBundlesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetBundlesResponse object.
+ * Returns a GetBundlesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetBundlesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  LightsailClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetBundlesRequest::response(QNetworkReply * const reply) const
 {
@@ -97,20 +89,17 @@ QtAws::Core::AwsAbstractResponse * GetBundlesRequest::response(QNetworkReply * c
 }
 
 /*!
- * @internal
+ * \class QtAws::Lightsail::GetBundlesRequestPrivate
+ * \brief The GetBundlesRequestPrivate class provides private implementation for GetBundlesRequest.
+ * \internal
  *
- * @class  GetBundlesRequestPrivate
- *
- * @brief  Private implementation for GetBundlesRequest.
+ * \inmodule QtAwsLightsail
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetBundlesRequestPrivate object.
- *
- * @param  action  Lightsail action being performed.
- * @param  q       Pointer to this object's public GetBundlesRequest instance.
+ * Constructs a GetBundlesRequestPrivate object for Lightsail \a action with,
+ * public implementation \a q.
  */
 GetBundlesRequestPrivate::GetBundlesRequestPrivate(
     const LightsailRequest::Action action, GetBundlesRequest * const q)
@@ -120,15 +109,10 @@ GetBundlesRequestPrivate::GetBundlesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetBundlesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetBundlesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetBundlesRequest instance.
  */
 GetBundlesRequestPrivate::GetBundlesRequestPrivate(
     const GetBundlesRequestPrivate &other, GetBundlesRequest * const q)

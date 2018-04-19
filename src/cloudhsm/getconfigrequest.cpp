@@ -27,10 +27,9 @@ namespace CloudHSM {
 
 /*!
  * \class QtAws::CloudHSM::GetConfigRequest
- *
  * \brief The GetConfigRequest class provides an interface for CloudHSM GetConfig requests.
  *
- * \ingroup CloudHSM
+ * \inmodule QtAwsCloudHSM
  *
  *  <fullname>AWS CloudHSM Service</fullname>
  * 
@@ -49,9 +48,7 @@ namespace CloudHSM {
  */
 
 /*!
- * @brief  Constructs a new GetConfigRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetConfigRequest::GetConfigRequest(const GetConfigRequest &other)
     : CloudHSMRequest(new GetConfigRequestPrivate(*other.d_func(), this))
@@ -60,7 +57,7 @@ GetConfigRequest::GetConfigRequest(const GetConfigRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetConfigRequest object.
+ * Constructs a GetConfigRequest object.
  */
 GetConfigRequest::GetConfigRequest()
     : CloudHSMRequest(new GetConfigRequestPrivate(CloudHSMRequest::GetConfigAction, this))
@@ -78,14 +75,9 @@ bool GetConfigRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetConfigResponse object.
+ * Returns a GetConfigResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetConfigResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudHSMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetConfigRequest::response(QNetworkReply * const reply) const
 {
@@ -93,20 +85,17 @@ QtAws::Core::AwsAbstractResponse * GetConfigRequest::response(QNetworkReply * co
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudHSM::GetConfigRequestPrivate
+ * \brief The GetConfigRequestPrivate class provides private implementation for GetConfigRequest.
+ * \internal
  *
- * @class  GetConfigRequestPrivate
- *
- * @brief  Private implementation for GetConfigRequest.
+ * \inmodule QtAwsCloudHSM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetConfigRequestPrivate object.
- *
- * @param  action  CloudHSM action being performed.
- * @param  q       Pointer to this object's public GetConfigRequest instance.
+ * Constructs a GetConfigRequestPrivate object for CloudHSM \a action with,
+ * public implementation \a q.
  */
 GetConfigRequestPrivate::GetConfigRequestPrivate(
     const CloudHSMRequest::Action action, GetConfigRequest * const q)
@@ -116,15 +105,10 @@ GetConfigRequestPrivate::GetConfigRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetConfigRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetConfigRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetConfigRequest instance.
  */
 GetConfigRequestPrivate::GetConfigRequestPrivate(
     const GetConfigRequestPrivate &other, GetConfigRequest * const q)

@@ -27,10 +27,9 @@ namespace CloudDirectory {
 
 /*!
  * \class QtAws::CloudDirectory::CreateSchemaRequest
- *
  * \brief The CreateSchemaRequest class provides an interface for CloudDirectory CreateSchema requests.
  *
- * \ingroup CloudDirectory
+ * \inmodule QtAwsCloudDirectory
  *
  *  <fullname>Amazon Cloud Directory</fullname>
  * 
@@ -44,9 +43,7 @@ namespace CloudDirectory {
  */
 
 /*!
- * @brief  Constructs a new CreateSchemaRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateSchemaRequest::CreateSchemaRequest(const CreateSchemaRequest &other)
     : CloudDirectoryRequest(new CreateSchemaRequestPrivate(*other.d_func(), this))
@@ -55,7 +52,7 @@ CreateSchemaRequest::CreateSchemaRequest(const CreateSchemaRequest &other)
 }
 
 /*!
- * @brief  Constructs a new CreateSchemaRequest object.
+ * Constructs a CreateSchemaRequest object.
  */
 CreateSchemaRequest::CreateSchemaRequest()
     : CloudDirectoryRequest(new CreateSchemaRequestPrivate(CloudDirectoryRequest::CreateSchemaAction, this))
@@ -73,14 +70,9 @@ bool CreateSchemaRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateSchemaResponse object.
+ * Returns a CreateSchemaResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateSchemaResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudDirectoryClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateSchemaRequest::response(QNetworkReply * const reply) const
 {
@@ -88,20 +80,17 @@ QtAws::Core::AwsAbstractResponse * CreateSchemaRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudDirectory::CreateSchemaRequestPrivate
+ * \brief The CreateSchemaRequestPrivate class provides private implementation for CreateSchemaRequest.
+ * \internal
  *
- * @class  CreateSchemaRequestPrivate
- *
- * @brief  Private implementation for CreateSchemaRequest.
+ * \inmodule QtAwsCloudDirectory
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateSchemaRequestPrivate object.
- *
- * @param  action  CloudDirectory action being performed.
- * @param  q       Pointer to this object's public CreateSchemaRequest instance.
+ * Constructs a CreateSchemaRequestPrivate object for CloudDirectory \a action with,
+ * public implementation \a q.
  */
 CreateSchemaRequestPrivate::CreateSchemaRequestPrivate(
     const CloudDirectoryRequest::Action action, CreateSchemaRequest * const q)
@@ -111,15 +100,10 @@ CreateSchemaRequestPrivate::CreateSchemaRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateSchemaRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateSchemaRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateSchemaRequest instance.
  */
 CreateSchemaRequestPrivate::CreateSchemaRequestPrivate(
     const CreateSchemaRequestPrivate &other, CreateSchemaRequest * const q)

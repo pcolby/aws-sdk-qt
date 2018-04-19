@@ -27,19 +27,16 @@ namespace Pinpoint {
 
 /*!
  * \class QtAws::Pinpoint::UpdateApnsVoipChannelRequest
- *
  * \brief The UpdateApnsVoipChannelRequest class provides an interface for Pinpoint UpdateApnsVoipChannel requests.
  *
- * \ingroup Pinpoint
+ * \inmodule QtAwsPinpoint
  *
  *
  * \sa PinpointClient::updateApnsVoipChannel
  */
 
 /*!
- * @brief  Constructs a new UpdateApnsVoipChannelRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateApnsVoipChannelRequest::UpdateApnsVoipChannelRequest(const UpdateApnsVoipChannelRequest &other)
     : PinpointRequest(new UpdateApnsVoipChannelRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ UpdateApnsVoipChannelRequest::UpdateApnsVoipChannelRequest(const UpdateApnsVoipC
 }
 
 /*!
- * @brief  Constructs a new UpdateApnsVoipChannelRequest object.
+ * Constructs a UpdateApnsVoipChannelRequest object.
  */
 UpdateApnsVoipChannelRequest::UpdateApnsVoipChannelRequest()
     : PinpointRequest(new UpdateApnsVoipChannelRequestPrivate(PinpointRequest::UpdateApnsVoipChannelAction, this))
@@ -66,14 +63,9 @@ bool UpdateApnsVoipChannelRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateApnsVoipChannelResponse object.
+ * Returns a UpdateApnsVoipChannelResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateApnsVoipChannelResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  PinpointClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateApnsVoipChannelRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * UpdateApnsVoipChannelRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::Pinpoint::UpdateApnsVoipChannelRequestPrivate
+ * \brief The UpdateApnsVoipChannelRequestPrivate class provides private implementation for UpdateApnsVoipChannelRequest.
+ * \internal
  *
- * @class  UpdateApnsVoipChannelRequestPrivate
- *
- * @brief  Private implementation for UpdateApnsVoipChannelRequest.
+ * \inmodule QtAwsPinpoint
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateApnsVoipChannelRequestPrivate object.
- *
- * @param  action  Pinpoint action being performed.
- * @param  q       Pointer to this object's public UpdateApnsVoipChannelRequest instance.
+ * Constructs a UpdateApnsVoipChannelRequestPrivate object for Pinpoint \a action with,
+ * public implementation \a q.
  */
 UpdateApnsVoipChannelRequestPrivate::UpdateApnsVoipChannelRequestPrivate(
     const PinpointRequest::Action action, UpdateApnsVoipChannelRequest * const q)
@@ -104,15 +93,10 @@ UpdateApnsVoipChannelRequestPrivate::UpdateApnsVoipChannelRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateApnsVoipChannelRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateApnsVoipChannelRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateApnsVoipChannelRequest instance.
  */
 UpdateApnsVoipChannelRequestPrivate::UpdateApnsVoipChannelRequestPrivate(
     const UpdateApnsVoipChannelRequestPrivate &other, UpdateApnsVoipChannelRequest * const q)

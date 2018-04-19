@@ -27,19 +27,16 @@ namespace GuardDuty {
 
 /*!
  * \class QtAws::GuardDuty::DeclineInvitationsRequest
- *
  * \brief The DeclineInvitationsRequest class provides an interface for GuardDuty DeclineInvitations requests.
  *
- * \ingroup GuardDuty
+ * \inmodule QtAwsGuardDuty
  *
  *
  * \sa GuardDutyClient::declineInvitations
  */
 
 /*!
- * @brief  Constructs a new DeclineInvitationsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeclineInvitationsRequest::DeclineInvitationsRequest(const DeclineInvitationsRequest &other)
     : GuardDutyRequest(new DeclineInvitationsRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ DeclineInvitationsRequest::DeclineInvitationsRequest(const DeclineInvitationsReq
 }
 
 /*!
- * @brief  Constructs a new DeclineInvitationsRequest object.
+ * Constructs a DeclineInvitationsRequest object.
  */
 DeclineInvitationsRequest::DeclineInvitationsRequest()
     : GuardDutyRequest(new DeclineInvitationsRequestPrivate(GuardDutyRequest::DeclineInvitationsAction, this))
@@ -66,14 +63,9 @@ bool DeclineInvitationsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeclineInvitationsResponse object.
+ * Returns a DeclineInvitationsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeclineInvitationsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GuardDutyClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeclineInvitationsRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * DeclineInvitationsRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::GuardDuty::DeclineInvitationsRequestPrivate
+ * \brief The DeclineInvitationsRequestPrivate class provides private implementation for DeclineInvitationsRequest.
+ * \internal
  *
- * @class  DeclineInvitationsRequestPrivate
- *
- * @brief  Private implementation for DeclineInvitationsRequest.
+ * \inmodule QtAwsGuardDuty
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeclineInvitationsRequestPrivate object.
- *
- * @param  action  GuardDuty action being performed.
- * @param  q       Pointer to this object's public DeclineInvitationsRequest instance.
+ * Constructs a DeclineInvitationsRequestPrivate object for GuardDuty \a action with,
+ * public implementation \a q.
  */
 DeclineInvitationsRequestPrivate::DeclineInvitationsRequestPrivate(
     const GuardDutyRequest::Action action, DeclineInvitationsRequest * const q)
@@ -104,15 +93,10 @@ DeclineInvitationsRequestPrivate::DeclineInvitationsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeclineInvitationsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeclineInvitationsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeclineInvitationsRequest instance.
  */
 DeclineInvitationsRequestPrivate::DeclineInvitationsRequestPrivate(
     const DeclineInvitationsRequestPrivate &other, DeclineInvitationsRequest * const q)

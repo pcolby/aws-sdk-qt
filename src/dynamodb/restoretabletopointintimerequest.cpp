@@ -27,10 +27,9 @@ namespace DynamoDB {
 
 /*!
  * \class QtAws::DynamoDB::RestoreTableToPointInTimeRequest
- *
  * \brief The RestoreTableToPointInTimeRequest class provides an interface for DynamoDB RestoreTableToPointInTime requests.
  *
- * \ingroup DynamoDB
+ * \inmodule QtAwsDynamoDB
  *
  *  <fullname>Amazon DynamoDB</fullname>
  * 
@@ -56,9 +55,7 @@ namespace DynamoDB {
  */
 
 /*!
- * @brief  Constructs a new RestoreTableToPointInTimeRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 RestoreTableToPointInTimeRequest::RestoreTableToPointInTimeRequest(const RestoreTableToPointInTimeRequest &other)
     : DynamoDBRequest(new RestoreTableToPointInTimeRequestPrivate(*other.d_func(), this))
@@ -67,7 +64,7 @@ RestoreTableToPointInTimeRequest::RestoreTableToPointInTimeRequest(const Restore
 }
 
 /*!
- * @brief  Constructs a new RestoreTableToPointInTimeRequest object.
+ * Constructs a RestoreTableToPointInTimeRequest object.
  */
 RestoreTableToPointInTimeRequest::RestoreTableToPointInTimeRequest()
     : DynamoDBRequest(new RestoreTableToPointInTimeRequestPrivate(DynamoDBRequest::RestoreTableToPointInTimeAction, this))
@@ -85,14 +82,9 @@ bool RestoreTableToPointInTimeRequest::isValid() const
 
 
 /*!
- * @brief  Construct an RestoreTableToPointInTimeResponse object.
+ * Returns a RestoreTableToPointInTimeResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An RestoreTableToPointInTimeResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DynamoDBClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * RestoreTableToPointInTimeRequest::response(QNetworkReply * const reply) const
 {
@@ -100,20 +92,17 @@ QtAws::Core::AwsAbstractResponse * RestoreTableToPointInTimeRequest::response(QN
 }
 
 /*!
- * @internal
+ * \class QtAws::DynamoDB::RestoreTableToPointInTimeRequestPrivate
+ * \brief The RestoreTableToPointInTimeRequestPrivate class provides private implementation for RestoreTableToPointInTimeRequest.
+ * \internal
  *
- * @class  RestoreTableToPointInTimeRequestPrivate
- *
- * @brief  Private implementation for RestoreTableToPointInTimeRequest.
+ * \inmodule QtAwsDynamoDB
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new RestoreTableToPointInTimeRequestPrivate object.
- *
- * @param  action  DynamoDB action being performed.
- * @param  q       Pointer to this object's public RestoreTableToPointInTimeRequest instance.
+ * Constructs a RestoreTableToPointInTimeRequestPrivate object for DynamoDB \a action with,
+ * public implementation \a q.
  */
 RestoreTableToPointInTimeRequestPrivate::RestoreTableToPointInTimeRequestPrivate(
     const DynamoDBRequest::Action action, RestoreTableToPointInTimeRequest * const q)
@@ -123,15 +112,10 @@ RestoreTableToPointInTimeRequestPrivate::RestoreTableToPointInTimeRequestPrivate
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RestoreTableToPointInTimeRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the RestoreTableToPointInTimeRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public RestoreTableToPointInTimeRequest instance.
  */
 RestoreTableToPointInTimeRequestPrivate::RestoreTableToPointInTimeRequestPrivate(
     const RestoreTableToPointInTimeRequestPrivate &other, RestoreTableToPointInTimeRequest * const q)

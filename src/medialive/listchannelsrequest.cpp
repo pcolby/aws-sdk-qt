@@ -27,19 +27,16 @@ namespace MediaLive {
 
 /*!
  * \class QtAws::MediaLive::ListChannelsRequest
- *
  * \brief The ListChannelsRequest class provides an interface for MediaLive ListChannels requests.
  *
- * \ingroup MediaLive
+ * \inmodule QtAwsMediaLive
  *
  *
  * \sa MediaLiveClient::listChannels
  */
 
 /*!
- * @brief  Constructs a new ListChannelsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListChannelsRequest::ListChannelsRequest(const ListChannelsRequest &other)
     : MediaLiveRequest(new ListChannelsRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ ListChannelsRequest::ListChannelsRequest(const ListChannelsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ListChannelsRequest object.
+ * Constructs a ListChannelsRequest object.
  */
 ListChannelsRequest::ListChannelsRequest()
     : MediaLiveRequest(new ListChannelsRequestPrivate(MediaLiveRequest::ListChannelsAction, this))
@@ -66,14 +63,9 @@ bool ListChannelsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListChannelsResponse object.
+ * Returns a ListChannelsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListChannelsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MediaLiveClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListChannelsRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * ListChannelsRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::MediaLive::ListChannelsRequestPrivate
+ * \brief The ListChannelsRequestPrivate class provides private implementation for ListChannelsRequest.
+ * \internal
  *
- * @class  ListChannelsRequestPrivate
- *
- * @brief  Private implementation for ListChannelsRequest.
+ * \inmodule QtAwsMediaLive
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListChannelsRequestPrivate object.
- *
- * @param  action  MediaLive action being performed.
- * @param  q       Pointer to this object's public ListChannelsRequest instance.
+ * Constructs a ListChannelsRequestPrivate object for MediaLive \a action with,
+ * public implementation \a q.
  */
 ListChannelsRequestPrivate::ListChannelsRequestPrivate(
     const MediaLiveRequest::Action action, ListChannelsRequest * const q)
@@ -104,15 +93,10 @@ ListChannelsRequestPrivate::ListChannelsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListChannelsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListChannelsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListChannelsRequest instance.
  */
 ListChannelsRequestPrivate::ListChannelsRequestPrivate(
     const ListChannelsRequestPrivate &other, ListChannelsRequest * const q)

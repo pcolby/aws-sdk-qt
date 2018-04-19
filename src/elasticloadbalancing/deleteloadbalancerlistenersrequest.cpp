@@ -27,10 +27,9 @@ namespace ElasticLoadBalancing {
 
 /*!
  * \class QtAws::ElasticLoadBalancing::DeleteLoadBalancerListenersRequest
- *
  * \brief The DeleteLoadBalancerListenersRequest class provides an interface for ElasticLoadBalancing DeleteLoadBalancerListeners requests.
  *
- * \ingroup ElasticLoadBalancing
+ * \inmodule QtAwsElasticLoadBalancing
  *
  *  <fullname>Elastic Load Balancing</fullname>
  * 
@@ -65,9 +64,7 @@ namespace ElasticLoadBalancing {
  */
 
 /*!
- * @brief  Constructs a new DeleteLoadBalancerListenersRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteLoadBalancerListenersRequest::DeleteLoadBalancerListenersRequest(const DeleteLoadBalancerListenersRequest &other)
     : ElasticLoadBalancingRequest(new DeleteLoadBalancerListenersRequestPrivate(*other.d_func(), this))
@@ -76,7 +73,7 @@ DeleteLoadBalancerListenersRequest::DeleteLoadBalancerListenersRequest(const Del
 }
 
 /*!
- * @brief  Constructs a new DeleteLoadBalancerListenersRequest object.
+ * Constructs a DeleteLoadBalancerListenersRequest object.
  */
 DeleteLoadBalancerListenersRequest::DeleteLoadBalancerListenersRequest()
     : ElasticLoadBalancingRequest(new DeleteLoadBalancerListenersRequestPrivate(ElasticLoadBalancingRequest::DeleteLoadBalancerListenersAction, this))
@@ -94,14 +91,9 @@ bool DeleteLoadBalancerListenersRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteLoadBalancerListenersResponse object.
+ * Returns a DeleteLoadBalancerListenersResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteLoadBalancerListenersResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ElasticLoadBalancingClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteLoadBalancerListenersRequest::response(QNetworkReply * const reply) const
 {
@@ -109,20 +101,17 @@ QtAws::Core::AwsAbstractResponse * DeleteLoadBalancerListenersRequest::response(
 }
 
 /*!
- * @internal
+ * \class QtAws::ElasticLoadBalancing::DeleteLoadBalancerListenersRequestPrivate
+ * \brief The DeleteLoadBalancerListenersRequestPrivate class provides private implementation for DeleteLoadBalancerListenersRequest.
+ * \internal
  *
- * @class  DeleteLoadBalancerListenersRequestPrivate
- *
- * @brief  Private implementation for DeleteLoadBalancerListenersRequest.
+ * \inmodule QtAwsElasticLoadBalancing
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteLoadBalancerListenersRequestPrivate object.
- *
- * @param  action  ElasticLoadBalancing action being performed.
- * @param  q       Pointer to this object's public DeleteLoadBalancerListenersRequest instance.
+ * Constructs a DeleteLoadBalancerListenersRequestPrivate object for ElasticLoadBalancing \a action with,
+ * public implementation \a q.
  */
 DeleteLoadBalancerListenersRequestPrivate::DeleteLoadBalancerListenersRequestPrivate(
     const ElasticLoadBalancingRequest::Action action, DeleteLoadBalancerListenersRequest * const q)
@@ -132,15 +121,10 @@ DeleteLoadBalancerListenersRequestPrivate::DeleteLoadBalancerListenersRequestPri
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteLoadBalancerListenersRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteLoadBalancerListenersRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteLoadBalancerListenersRequest instance.
  */
 DeleteLoadBalancerListenersRequestPrivate::DeleteLoadBalancerListenersRequestPrivate(
     const DeleteLoadBalancerListenersRequestPrivate &other, DeleteLoadBalancerListenersRequest * const q)

@@ -27,10 +27,9 @@ namespace SNS {
 
 /*!
  * \class QtAws::SNS::ListEndpointsByPlatformApplicationRequest
- *
  * \brief The ListEndpointsByPlatformApplicationRequest class provides an interface for SNS ListEndpointsByPlatformApplication requests.
  *
- * \ingroup SNS
+ * \inmodule QtAwsSNS
  *
  *  <fullname>Amazon Simple Notification Service</fullname>
  * 
@@ -51,9 +50,7 @@ namespace SNS {
  */
 
 /*!
- * @brief  Constructs a new ListEndpointsByPlatformApplicationRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListEndpointsByPlatformApplicationRequest::ListEndpointsByPlatformApplicationRequest(const ListEndpointsByPlatformApplicationRequest &other)
     : SNSRequest(new ListEndpointsByPlatformApplicationRequestPrivate(*other.d_func(), this))
@@ -62,7 +59,7 @@ ListEndpointsByPlatformApplicationRequest::ListEndpointsByPlatformApplicationReq
 }
 
 /*!
- * @brief  Constructs a new ListEndpointsByPlatformApplicationRequest object.
+ * Constructs a ListEndpointsByPlatformApplicationRequest object.
  */
 ListEndpointsByPlatformApplicationRequest::ListEndpointsByPlatformApplicationRequest()
     : SNSRequest(new ListEndpointsByPlatformApplicationRequestPrivate(SNSRequest::ListEndpointsByPlatformApplicationAction, this))
@@ -80,14 +77,9 @@ bool ListEndpointsByPlatformApplicationRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListEndpointsByPlatformApplicationResponse object.
+ * Returns a ListEndpointsByPlatformApplicationResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListEndpointsByPlatformApplicationResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SNSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListEndpointsByPlatformApplicationRequest::response(QNetworkReply * const reply) const
 {
@@ -95,20 +87,17 @@ QtAws::Core::AwsAbstractResponse * ListEndpointsByPlatformApplicationRequest::re
 }
 
 /*!
- * @internal
+ * \class QtAws::SNS::ListEndpointsByPlatformApplicationRequestPrivate
+ * \brief The ListEndpointsByPlatformApplicationRequestPrivate class provides private implementation for ListEndpointsByPlatformApplicationRequest.
+ * \internal
  *
- * @class  ListEndpointsByPlatformApplicationRequestPrivate
- *
- * @brief  Private implementation for ListEndpointsByPlatformApplicationRequest.
+ * \inmodule QtAwsSNS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListEndpointsByPlatformApplicationRequestPrivate object.
- *
- * @param  action  SNS action being performed.
- * @param  q       Pointer to this object's public ListEndpointsByPlatformApplicationRequest instance.
+ * Constructs a ListEndpointsByPlatformApplicationRequestPrivate object for SNS \a action with,
+ * public implementation \a q.
  */
 ListEndpointsByPlatformApplicationRequestPrivate::ListEndpointsByPlatformApplicationRequestPrivate(
     const SNSRequest::Action action, ListEndpointsByPlatformApplicationRequest * const q)
@@ -118,15 +107,10 @@ ListEndpointsByPlatformApplicationRequestPrivate::ListEndpointsByPlatformApplica
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListEndpointsByPlatformApplicationRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListEndpointsByPlatformApplicationRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListEndpointsByPlatformApplicationRequest instance.
  */
 ListEndpointsByPlatformApplicationRequestPrivate::ListEndpointsByPlatformApplicationRequestPrivate(
     const ListEndpointsByPlatformApplicationRequestPrivate &other, ListEndpointsByPlatformApplicationRequest * const q)

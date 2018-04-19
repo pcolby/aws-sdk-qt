@@ -27,10 +27,9 @@ namespace ImportExport {
 
 /*!
  * \class QtAws::ImportExport::UpdateJobRequest
- *
  * \brief The UpdateJobRequest class provides an interface for ImportExport UpdateJob requests.
  *
- * \ingroup ImportExport
+ * \inmodule QtAwsImportExport
  *
  *  <fullname>AWS Import/Export Service</fullname> AWS Import/Export accelerates transferring large amounts of data between
  *  the AWS cloud and portable storage devices that you mail to us. AWS Import/Export transfers data directly onto and off
@@ -40,9 +39,7 @@ namespace ImportExport {
  */
 
 /*!
- * @brief  Constructs a new UpdateJobRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateJobRequest::UpdateJobRequest(const UpdateJobRequest &other)
     : ImportExportRequest(new UpdateJobRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ UpdateJobRequest::UpdateJobRequest(const UpdateJobRequest &other)
 }
 
 /*!
- * @brief  Constructs a new UpdateJobRequest object.
+ * Constructs a UpdateJobRequest object.
  */
 UpdateJobRequest::UpdateJobRequest()
     : ImportExportRequest(new UpdateJobRequestPrivate(ImportExportRequest::UpdateJobAction, this))
@@ -69,14 +66,9 @@ bool UpdateJobRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateJobResponse object.
+ * Returns a UpdateJobResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateJobResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ImportExportClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateJobRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * UpdateJobRequest::response(QNetworkReply * co
 }
 
 /*!
- * @internal
+ * \class QtAws::ImportExport::UpdateJobRequestPrivate
+ * \brief The UpdateJobRequestPrivate class provides private implementation for UpdateJobRequest.
+ * \internal
  *
- * @class  UpdateJobRequestPrivate
- *
- * @brief  Private implementation for UpdateJobRequest.
+ * \inmodule QtAwsImportExport
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateJobRequestPrivate object.
- *
- * @param  action  ImportExport action being performed.
- * @param  q       Pointer to this object's public UpdateJobRequest instance.
+ * Constructs a UpdateJobRequestPrivate object for ImportExport \a action with,
+ * public implementation \a q.
  */
 UpdateJobRequestPrivate::UpdateJobRequestPrivate(
     const ImportExportRequest::Action action, UpdateJobRequest * const q)
@@ -107,15 +96,10 @@ UpdateJobRequestPrivate::UpdateJobRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateJobRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateJobRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateJobRequest instance.
  */
 UpdateJobRequestPrivate::UpdateJobRequestPrivate(
     const UpdateJobRequestPrivate &other, UpdateJobRequest * const q)

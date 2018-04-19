@@ -27,10 +27,9 @@ namespace Lightsail {
 
 /*!
  * \class QtAws::Lightsail::UnpeerVpcRequest
- *
  * \brief The UnpeerVpcRequest class provides an interface for Lightsail UnpeerVpc requests.
  *
- * \ingroup Lightsail
+ * \inmodule QtAwsLightsail
  *
  *  Amazon Lightsail is the easiest way to get started with AWS for developers who just need virtual private servers.
  *  Lightsail includes everything you need to launch your project quickly - a virtual machine, SSD-based storage, data
@@ -53,9 +52,7 @@ namespace Lightsail {
  */
 
 /*!
- * @brief  Constructs a new UnpeerVpcRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UnpeerVpcRequest::UnpeerVpcRequest(const UnpeerVpcRequest &other)
     : LightsailRequest(new UnpeerVpcRequestPrivate(*other.d_func(), this))
@@ -64,7 +61,7 @@ UnpeerVpcRequest::UnpeerVpcRequest(const UnpeerVpcRequest &other)
 }
 
 /*!
- * @brief  Constructs a new UnpeerVpcRequest object.
+ * Constructs a UnpeerVpcRequest object.
  */
 UnpeerVpcRequest::UnpeerVpcRequest()
     : LightsailRequest(new UnpeerVpcRequestPrivate(LightsailRequest::UnpeerVpcAction, this))
@@ -82,14 +79,9 @@ bool UnpeerVpcRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UnpeerVpcResponse object.
+ * Returns a UnpeerVpcResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UnpeerVpcResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  LightsailClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UnpeerVpcRequest::response(QNetworkReply * const reply) const
 {
@@ -97,20 +89,17 @@ QtAws::Core::AwsAbstractResponse * UnpeerVpcRequest::response(QNetworkReply * co
 }
 
 /*!
- * @internal
+ * \class QtAws::Lightsail::UnpeerVpcRequestPrivate
+ * \brief The UnpeerVpcRequestPrivate class provides private implementation for UnpeerVpcRequest.
+ * \internal
  *
- * @class  UnpeerVpcRequestPrivate
- *
- * @brief  Private implementation for UnpeerVpcRequest.
+ * \inmodule QtAwsLightsail
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UnpeerVpcRequestPrivate object.
- *
- * @param  action  Lightsail action being performed.
- * @param  q       Pointer to this object's public UnpeerVpcRequest instance.
+ * Constructs a UnpeerVpcRequestPrivate object for Lightsail \a action with,
+ * public implementation \a q.
  */
 UnpeerVpcRequestPrivate::UnpeerVpcRequestPrivate(
     const LightsailRequest::Action action, UnpeerVpcRequest * const q)
@@ -120,15 +109,10 @@ UnpeerVpcRequestPrivate::UnpeerVpcRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UnpeerVpcRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UnpeerVpcRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UnpeerVpcRequest instance.
  */
 UnpeerVpcRequestPrivate::UnpeerVpcRequestPrivate(
     const UnpeerVpcRequestPrivate &other, UnpeerVpcRequest * const q)

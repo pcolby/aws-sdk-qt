@@ -27,10 +27,9 @@ namespace CloudFormation {
 
 /*!
  * \class QtAws::CloudFormation::UpdateTerminationProtectionRequest
- *
  * \brief The UpdateTerminationProtectionRequest class provides an interface for CloudFormation UpdateTerminationProtection requests.
  *
- * \ingroup CloudFormation
+ * \inmodule QtAwsCloudFormation
  *
  *  <fullname>AWS CloudFormation</fullname>
  * 
@@ -59,9 +58,7 @@ namespace CloudFormation {
  */
 
 /*!
- * @brief  Constructs a new UpdateTerminationProtectionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateTerminationProtectionRequest::UpdateTerminationProtectionRequest(const UpdateTerminationProtectionRequest &other)
     : CloudFormationRequest(new UpdateTerminationProtectionRequestPrivate(*other.d_func(), this))
@@ -70,7 +67,7 @@ UpdateTerminationProtectionRequest::UpdateTerminationProtectionRequest(const Upd
 }
 
 /*!
- * @brief  Constructs a new UpdateTerminationProtectionRequest object.
+ * Constructs a UpdateTerminationProtectionRequest object.
  */
 UpdateTerminationProtectionRequest::UpdateTerminationProtectionRequest()
     : CloudFormationRequest(new UpdateTerminationProtectionRequestPrivate(CloudFormationRequest::UpdateTerminationProtectionAction, this))
@@ -88,14 +85,9 @@ bool UpdateTerminationProtectionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateTerminationProtectionResponse object.
+ * Returns a UpdateTerminationProtectionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateTerminationProtectionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudFormationClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateTerminationProtectionRequest::response(QNetworkReply * const reply) const
 {
@@ -103,20 +95,17 @@ QtAws::Core::AwsAbstractResponse * UpdateTerminationProtectionRequest::response(
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudFormation::UpdateTerminationProtectionRequestPrivate
+ * \brief The UpdateTerminationProtectionRequestPrivate class provides private implementation for UpdateTerminationProtectionRequest.
+ * \internal
  *
- * @class  UpdateTerminationProtectionRequestPrivate
- *
- * @brief  Private implementation for UpdateTerminationProtectionRequest.
+ * \inmodule QtAwsCloudFormation
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateTerminationProtectionRequestPrivate object.
- *
- * @param  action  CloudFormation action being performed.
- * @param  q       Pointer to this object's public UpdateTerminationProtectionRequest instance.
+ * Constructs a UpdateTerminationProtectionRequestPrivate object for CloudFormation \a action with,
+ * public implementation \a q.
  */
 UpdateTerminationProtectionRequestPrivate::UpdateTerminationProtectionRequestPrivate(
     const CloudFormationRequest::Action action, UpdateTerminationProtectionRequest * const q)
@@ -126,15 +115,10 @@ UpdateTerminationProtectionRequestPrivate::UpdateTerminationProtectionRequestPri
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateTerminationProtectionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateTerminationProtectionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateTerminationProtectionRequest instance.
  */
 UpdateTerminationProtectionRequestPrivate::UpdateTerminationProtectionRequestPrivate(
     const UpdateTerminationProtectionRequestPrivate &other, UpdateTerminationProtectionRequest * const q)

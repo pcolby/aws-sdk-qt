@@ -27,10 +27,9 @@ namespace Route53Domains {
 
 /*!
  * \class QtAws::Route53Domains::GetDomainSuggestionsRequest
- *
  * \brief The GetDomainSuggestionsRequest class provides an interface for Route53Domains GetDomainSuggestions requests.
  *
- * \ingroup Route53Domains
+ * \inmodule QtAwsRoute53Domains
  *
  *  Amazon Route 53 API actions let you register domain names and perform related
  *
@@ -38,9 +37,7 @@ namespace Route53Domains {
  */
 
 /*!
- * @brief  Constructs a new GetDomainSuggestionsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetDomainSuggestionsRequest::GetDomainSuggestionsRequest(const GetDomainSuggestionsRequest &other)
     : Route53DomainsRequest(new GetDomainSuggestionsRequestPrivate(*other.d_func(), this))
@@ -49,7 +46,7 @@ GetDomainSuggestionsRequest::GetDomainSuggestionsRequest(const GetDomainSuggesti
 }
 
 /*!
- * @brief  Constructs a new GetDomainSuggestionsRequest object.
+ * Constructs a GetDomainSuggestionsRequest object.
  */
 GetDomainSuggestionsRequest::GetDomainSuggestionsRequest()
     : Route53DomainsRequest(new GetDomainSuggestionsRequestPrivate(Route53DomainsRequest::GetDomainSuggestionsAction, this))
@@ -67,14 +64,9 @@ bool GetDomainSuggestionsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetDomainSuggestionsResponse object.
+ * Returns a GetDomainSuggestionsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetDomainSuggestionsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  Route53DomainsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetDomainSuggestionsRequest::response(QNetworkReply * const reply) const
 {
@@ -82,20 +74,17 @@ QtAws::Core::AwsAbstractResponse * GetDomainSuggestionsRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::Route53Domains::GetDomainSuggestionsRequestPrivate
+ * \brief The GetDomainSuggestionsRequestPrivate class provides private implementation for GetDomainSuggestionsRequest.
+ * \internal
  *
- * @class  GetDomainSuggestionsRequestPrivate
- *
- * @brief  Private implementation for GetDomainSuggestionsRequest.
+ * \inmodule QtAwsRoute53Domains
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetDomainSuggestionsRequestPrivate object.
- *
- * @param  action  Route53Domains action being performed.
- * @param  q       Pointer to this object's public GetDomainSuggestionsRequest instance.
+ * Constructs a GetDomainSuggestionsRequestPrivate object for Route53Domains \a action with,
+ * public implementation \a q.
  */
 GetDomainSuggestionsRequestPrivate::GetDomainSuggestionsRequestPrivate(
     const Route53DomainsRequest::Action action, GetDomainSuggestionsRequest * const q)
@@ -105,15 +94,10 @@ GetDomainSuggestionsRequestPrivate::GetDomainSuggestionsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetDomainSuggestionsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetDomainSuggestionsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetDomainSuggestionsRequest instance.
  */
 GetDomainSuggestionsRequestPrivate::GetDomainSuggestionsRequestPrivate(
     const GetDomainSuggestionsRequestPrivate &other, GetDomainSuggestionsRequest * const q)

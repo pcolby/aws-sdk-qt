@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::ModifyIdFormatRequest
- *
  * \brief The ModifyIdFormatRequest class provides an interface for EC2 ModifyIdFormat requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new ModifyIdFormatRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ModifyIdFormatRequest::ModifyIdFormatRequest(const ModifyIdFormatRequest &other)
     : EC2Request(new ModifyIdFormatRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ ModifyIdFormatRequest::ModifyIdFormatRequest(const ModifyIdFormatRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ModifyIdFormatRequest object.
+ * Constructs a ModifyIdFormatRequest object.
  */
 ModifyIdFormatRequest::ModifyIdFormatRequest()
     : EC2Request(new ModifyIdFormatRequestPrivate(EC2Request::ModifyIdFormatAction, this))
@@ -70,14 +67,9 @@ bool ModifyIdFormatRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ModifyIdFormatResponse object.
+ * Returns a ModifyIdFormatResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ModifyIdFormatResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ModifyIdFormatRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * ModifyIdFormatRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::ModifyIdFormatRequestPrivate
+ * \brief The ModifyIdFormatRequestPrivate class provides private implementation for ModifyIdFormatRequest.
+ * \internal
  *
- * @class  ModifyIdFormatRequestPrivate
- *
- * @brief  Private implementation for ModifyIdFormatRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ModifyIdFormatRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public ModifyIdFormatRequest instance.
+ * Constructs a ModifyIdFormatRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 ModifyIdFormatRequestPrivate::ModifyIdFormatRequestPrivate(
     const EC2Request::Action action, ModifyIdFormatRequest * const q)
@@ -108,15 +97,10 @@ ModifyIdFormatRequestPrivate::ModifyIdFormatRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ModifyIdFormatRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ModifyIdFormatRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ModifyIdFormatRequest instance.
  */
 ModifyIdFormatRequestPrivate::ModifyIdFormatRequestPrivate(
     const ModifyIdFormatRequestPrivate &other, ModifyIdFormatRequest * const q)

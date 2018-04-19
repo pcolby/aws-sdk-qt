@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::ImportVolumeRequest
- *
  * \brief The ImportVolumeRequest class provides an interface for EC2 ImportVolume requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new ImportVolumeRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ImportVolumeRequest::ImportVolumeRequest(const ImportVolumeRequest &other)
     : EC2Request(new ImportVolumeRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ ImportVolumeRequest::ImportVolumeRequest(const ImportVolumeRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ImportVolumeRequest object.
+ * Constructs a ImportVolumeRequest object.
  */
 ImportVolumeRequest::ImportVolumeRequest()
     : EC2Request(new ImportVolumeRequestPrivate(EC2Request::ImportVolumeAction, this))
@@ -70,14 +67,9 @@ bool ImportVolumeRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ImportVolumeResponse object.
+ * Returns a ImportVolumeResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ImportVolumeResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ImportVolumeRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * ImportVolumeRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::ImportVolumeRequestPrivate
+ * \brief The ImportVolumeRequestPrivate class provides private implementation for ImportVolumeRequest.
+ * \internal
  *
- * @class  ImportVolumeRequestPrivate
- *
- * @brief  Private implementation for ImportVolumeRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ImportVolumeRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public ImportVolumeRequest instance.
+ * Constructs a ImportVolumeRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 ImportVolumeRequestPrivate::ImportVolumeRequestPrivate(
     const EC2Request::Action action, ImportVolumeRequest * const q)
@@ -108,15 +97,10 @@ ImportVolumeRequestPrivate::ImportVolumeRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ImportVolumeRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ImportVolumeRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ImportVolumeRequest instance.
  */
 ImportVolumeRequestPrivate::ImportVolumeRequestPrivate(
     const ImportVolumeRequestPrivate &other, ImportVolumeRequest * const q)

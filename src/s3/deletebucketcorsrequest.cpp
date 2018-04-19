@@ -27,19 +27,16 @@ namespace S3 {
 
 /*!
  * \class QtAws::S3::DeleteBucketCorsRequest
- *
  * \brief The DeleteBucketCorsRequest class provides an interface for S3 DeleteBucketCors requests.
  *
- * \ingroup S3
+ * \inmodule QtAwsS3
  *
  *
  * \sa S3Client::deleteBucketCors
  */
 
 /*!
- * @brief  Constructs a new DeleteBucketCorsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteBucketCorsRequest::DeleteBucketCorsRequest(const DeleteBucketCorsRequest &other)
     : S3Request(new DeleteBucketCorsRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ DeleteBucketCorsRequest::DeleteBucketCorsRequest(const DeleteBucketCorsRequest &
 }
 
 /*!
- * @brief  Constructs a new DeleteBucketCorsRequest object.
+ * Constructs a DeleteBucketCorsRequest object.
  */
 DeleteBucketCorsRequest::DeleteBucketCorsRequest()
     : S3Request(new DeleteBucketCorsRequestPrivate(S3Request::DeleteBucketCorsAction, this))
@@ -66,14 +63,9 @@ bool DeleteBucketCorsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteBucketCorsResponse object.
+ * Returns a DeleteBucketCorsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteBucketCorsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  S3Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteBucketCorsRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * DeleteBucketCorsRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::S3::DeleteBucketCorsRequestPrivate
+ * \brief The DeleteBucketCorsRequestPrivate class provides private implementation for DeleteBucketCorsRequest.
+ * \internal
  *
- * @class  DeleteBucketCorsRequestPrivate
- *
- * @brief  Private implementation for DeleteBucketCorsRequest.
+ * \inmodule QtAwsS3
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteBucketCorsRequestPrivate object.
- *
- * @param  action  S3 action being performed.
- * @param  q       Pointer to this object's public DeleteBucketCorsRequest instance.
+ * Constructs a DeleteBucketCorsRequestPrivate object for S3 \a action with,
+ * public implementation \a q.
  */
 DeleteBucketCorsRequestPrivate::DeleteBucketCorsRequestPrivate(
     const S3Request::Action action, DeleteBucketCorsRequest * const q)
@@ -104,15 +93,10 @@ DeleteBucketCorsRequestPrivate::DeleteBucketCorsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteBucketCorsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteBucketCorsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteBucketCorsRequest instance.
  */
 DeleteBucketCorsRequestPrivate::DeleteBucketCorsRequestPrivate(
     const DeleteBucketCorsRequestPrivate &other, DeleteBucketCorsRequest * const q)

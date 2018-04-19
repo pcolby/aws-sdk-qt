@@ -27,10 +27,9 @@ namespace Glue {
 
 /*!
  * \class QtAws::Glue::ImportCatalogToGlueRequest
- *
  * \brief The ImportCatalogToGlueRequest class provides an interface for Glue ImportCatalogToGlue requests.
  *
- * \ingroup Glue
+ * \inmodule QtAwsGlue
  *
  *  <fullname>AWS Glue</fullname>
  * 
@@ -40,9 +39,7 @@ namespace Glue {
  */
 
 /*!
- * @brief  Constructs a new ImportCatalogToGlueRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ImportCatalogToGlueRequest::ImportCatalogToGlueRequest(const ImportCatalogToGlueRequest &other)
     : GlueRequest(new ImportCatalogToGlueRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ ImportCatalogToGlueRequest::ImportCatalogToGlueRequest(const ImportCatalogToGlue
 }
 
 /*!
- * @brief  Constructs a new ImportCatalogToGlueRequest object.
+ * Constructs a ImportCatalogToGlueRequest object.
  */
 ImportCatalogToGlueRequest::ImportCatalogToGlueRequest()
     : GlueRequest(new ImportCatalogToGlueRequestPrivate(GlueRequest::ImportCatalogToGlueAction, this))
@@ -69,14 +66,9 @@ bool ImportCatalogToGlueRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ImportCatalogToGlueResponse object.
+ * Returns a ImportCatalogToGlueResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ImportCatalogToGlueResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GlueClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ImportCatalogToGlueRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * ImportCatalogToGlueRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::Glue::ImportCatalogToGlueRequestPrivate
+ * \brief The ImportCatalogToGlueRequestPrivate class provides private implementation for ImportCatalogToGlueRequest.
+ * \internal
  *
- * @class  ImportCatalogToGlueRequestPrivate
- *
- * @brief  Private implementation for ImportCatalogToGlueRequest.
+ * \inmodule QtAwsGlue
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ImportCatalogToGlueRequestPrivate object.
- *
- * @param  action  Glue action being performed.
- * @param  q       Pointer to this object's public ImportCatalogToGlueRequest instance.
+ * Constructs a ImportCatalogToGlueRequestPrivate object for Glue \a action with,
+ * public implementation \a q.
  */
 ImportCatalogToGlueRequestPrivate::ImportCatalogToGlueRequestPrivate(
     const GlueRequest::Action action, ImportCatalogToGlueRequest * const q)
@@ -107,15 +96,10 @@ ImportCatalogToGlueRequestPrivate::ImportCatalogToGlueRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ImportCatalogToGlueRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ImportCatalogToGlueRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ImportCatalogToGlueRequest instance.
  */
 ImportCatalogToGlueRequestPrivate::ImportCatalogToGlueRequestPrivate(
     const ImportCatalogToGlueRequestPrivate &other, ImportCatalogToGlueRequest * const q)

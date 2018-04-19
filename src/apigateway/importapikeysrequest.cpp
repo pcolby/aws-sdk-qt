@@ -27,10 +27,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::ImportApiKeysRequest
- *
  * \brief The ImportApiKeysRequest class provides an interface for APIGateway ImportApiKeys requests.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -42,9 +41,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new ImportApiKeysRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ImportApiKeysRequest::ImportApiKeysRequest(const ImportApiKeysRequest &other)
     : APIGatewayRequest(new ImportApiKeysRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ ImportApiKeysRequest::ImportApiKeysRequest(const ImportApiKeysRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ImportApiKeysRequest object.
+ * Constructs a ImportApiKeysRequest object.
  */
 ImportApiKeysRequest::ImportApiKeysRequest()
     : APIGatewayRequest(new ImportApiKeysRequestPrivate(APIGatewayRequest::ImportApiKeysAction, this))
@@ -71,14 +68,9 @@ bool ImportApiKeysRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ImportApiKeysResponse object.
+ * Returns a ImportApiKeysResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ImportApiKeysResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  APIGatewayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ImportApiKeysRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * ImportApiKeysRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::APIGateway::ImportApiKeysRequestPrivate
+ * \brief The ImportApiKeysRequestPrivate class provides private implementation for ImportApiKeysRequest.
+ * \internal
  *
- * @class  ImportApiKeysRequestPrivate
- *
- * @brief  Private implementation for ImportApiKeysRequest.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ImportApiKeysRequestPrivate object.
- *
- * @param  action  APIGateway action being performed.
- * @param  q       Pointer to this object's public ImportApiKeysRequest instance.
+ * Constructs a ImportApiKeysRequestPrivate object for APIGateway \a action with,
+ * public implementation \a q.
  */
 ImportApiKeysRequestPrivate::ImportApiKeysRequestPrivate(
     const APIGatewayRequest::Action action, ImportApiKeysRequest * const q)
@@ -109,15 +98,10 @@ ImportApiKeysRequestPrivate::ImportApiKeysRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ImportApiKeysRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ImportApiKeysRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ImportApiKeysRequest instance.
  */
 ImportApiKeysRequestPrivate::ImportApiKeysRequestPrivate(
     const ImportApiKeysRequestPrivate &other, ImportApiKeysRequest * const q)

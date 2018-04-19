@@ -27,10 +27,9 @@ namespace SFN {
 
 /*!
  * \class QtAws::SFN::UpdateStateMachineRequest
- *
  * \brief The UpdateStateMachineRequest class provides an interface for SFN UpdateStateMachine requests.
  *
- * \ingroup SFN
+ * \inmodule QtAwsSFN
  *
  *  <fullname>AWS Step Functions</fullname>
  * 
@@ -56,9 +55,7 @@ namespace SFN {
  */
 
 /*!
- * @brief  Constructs a new UpdateStateMachineRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateStateMachineRequest::UpdateStateMachineRequest(const UpdateStateMachineRequest &other)
     : SFNRequest(new UpdateStateMachineRequestPrivate(*other.d_func(), this))
@@ -67,7 +64,7 @@ UpdateStateMachineRequest::UpdateStateMachineRequest(const UpdateStateMachineReq
 }
 
 /*!
- * @brief  Constructs a new UpdateStateMachineRequest object.
+ * Constructs a UpdateStateMachineRequest object.
  */
 UpdateStateMachineRequest::UpdateStateMachineRequest()
     : SFNRequest(new UpdateStateMachineRequestPrivate(SFNRequest::UpdateStateMachineAction, this))
@@ -85,14 +82,9 @@ bool UpdateStateMachineRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateStateMachineResponse object.
+ * Returns a UpdateStateMachineResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateStateMachineResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SFNClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateStateMachineRequest::response(QNetworkReply * const reply) const
 {
@@ -100,20 +92,17 @@ QtAws::Core::AwsAbstractResponse * UpdateStateMachineRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::SFN::UpdateStateMachineRequestPrivate
+ * \brief The UpdateStateMachineRequestPrivate class provides private implementation for UpdateStateMachineRequest.
+ * \internal
  *
- * @class  UpdateStateMachineRequestPrivate
- *
- * @brief  Private implementation for UpdateStateMachineRequest.
+ * \inmodule QtAwsSFN
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateStateMachineRequestPrivate object.
- *
- * @param  action  SFN action being performed.
- * @param  q       Pointer to this object's public UpdateStateMachineRequest instance.
+ * Constructs a UpdateStateMachineRequestPrivate object for SFN \a action with,
+ * public implementation \a q.
  */
 UpdateStateMachineRequestPrivate::UpdateStateMachineRequestPrivate(
     const SFNRequest::Action action, UpdateStateMachineRequest * const q)
@@ -123,15 +112,10 @@ UpdateStateMachineRequestPrivate::UpdateStateMachineRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateStateMachineRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateStateMachineRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateStateMachineRequest instance.
  */
 UpdateStateMachineRequestPrivate::UpdateStateMachineRequestPrivate(
     const UpdateStateMachineRequestPrivate &other, UpdateStateMachineRequest * const q)

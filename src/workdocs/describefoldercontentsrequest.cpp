@@ -27,10 +27,9 @@ namespace WorkDocs {
 
 /*!
  * \class QtAws::WorkDocs::DescribeFolderContentsRequest
- *
  * \brief The DescribeFolderContentsRequest class provides an interface for WorkDocs DescribeFolderContents requests.
  *
- * \ingroup WorkDocs
+ * \inmodule QtAwsWorkDocs
  *
  *  The WorkDocs API is designed for the following use
  * 
@@ -66,9 +65,7 @@ namespace WorkDocs {
  */
 
 /*!
- * @brief  Constructs a new DescribeFolderContentsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeFolderContentsRequest::DescribeFolderContentsRequest(const DescribeFolderContentsRequest &other)
     : WorkDocsRequest(new DescribeFolderContentsRequestPrivate(*other.d_func(), this))
@@ -77,7 +74,7 @@ DescribeFolderContentsRequest::DescribeFolderContentsRequest(const DescribeFolde
 }
 
 /*!
- * @brief  Constructs a new DescribeFolderContentsRequest object.
+ * Constructs a DescribeFolderContentsRequest object.
  */
 DescribeFolderContentsRequest::DescribeFolderContentsRequest()
     : WorkDocsRequest(new DescribeFolderContentsRequestPrivate(WorkDocsRequest::DescribeFolderContentsAction, this))
@@ -95,14 +92,9 @@ bool DescribeFolderContentsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeFolderContentsResponse object.
+ * Returns a DescribeFolderContentsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeFolderContentsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WorkDocsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeFolderContentsRequest::response(QNetworkReply * const reply) const
 {
@@ -110,20 +102,17 @@ QtAws::Core::AwsAbstractResponse * DescribeFolderContentsRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::WorkDocs::DescribeFolderContentsRequestPrivate
+ * \brief The DescribeFolderContentsRequestPrivate class provides private implementation for DescribeFolderContentsRequest.
+ * \internal
  *
- * @class  DescribeFolderContentsRequestPrivate
- *
- * @brief  Private implementation for DescribeFolderContentsRequest.
+ * \inmodule QtAwsWorkDocs
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeFolderContentsRequestPrivate object.
- *
- * @param  action  WorkDocs action being performed.
- * @param  q       Pointer to this object's public DescribeFolderContentsRequest instance.
+ * Constructs a DescribeFolderContentsRequestPrivate object for WorkDocs \a action with,
+ * public implementation \a q.
  */
 DescribeFolderContentsRequestPrivate::DescribeFolderContentsRequestPrivate(
     const WorkDocsRequest::Action action, DescribeFolderContentsRequest * const q)
@@ -133,15 +122,10 @@ DescribeFolderContentsRequestPrivate::DescribeFolderContentsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeFolderContentsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeFolderContentsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeFolderContentsRequest instance.
  */
 DescribeFolderContentsRequestPrivate::DescribeFolderContentsRequestPrivate(
     const DescribeFolderContentsRequestPrivate &other, DescribeFolderContentsRequest * const q)

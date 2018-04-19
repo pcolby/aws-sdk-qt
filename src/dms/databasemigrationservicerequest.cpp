@@ -25,16 +25,65 @@ namespace DatabaseMigrationService {
 
 /*!
  * \class QtAws::DatabaseMigrationService::DatabaseMigrationServiceRequest
- *
  * \brief The DatabaseMigrationServiceRequest class provides an interface for DatabaseMigrationService requests.
  *
- * \ingroup DatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigrationService
  */
 
 /*!
- * @brief  Constructs a new DatabaseMigrationServiceRequest object.
+ * \enum DatabaseMigrationServiceRequest::Action
  *
- * @param  action  The DatabaseMigrationService action to request.
+ * This enum describes the actions that can be performed as DatabaseMigrationService
+ * requests.
+ *
+ * \value AddTagsToResourceAction DatabaseMigrationService AddTagsToResource action.
+ * \value CreateEndpointAction DatabaseMigrationService CreateEndpoint action.
+ * \value CreateEventSubscriptionAction DatabaseMigrationService CreateEventSubscription action.
+ * \value CreateReplicationInstanceAction DatabaseMigrationService CreateReplicationInstance action.
+ * \value CreateReplicationSubnetGroupAction DatabaseMigrationService CreateReplicationSubnetGroup action.
+ * \value CreateReplicationTaskAction DatabaseMigrationService CreateReplicationTask action.
+ * \value DeleteCertificateAction DatabaseMigrationService DeleteCertificate action.
+ * \value DeleteEndpointAction DatabaseMigrationService DeleteEndpoint action.
+ * \value DeleteEventSubscriptionAction DatabaseMigrationService DeleteEventSubscription action.
+ * \value DeleteReplicationInstanceAction DatabaseMigrationService DeleteReplicationInstance action.
+ * \value DeleteReplicationSubnetGroupAction DatabaseMigrationService DeleteReplicationSubnetGroup action.
+ * \value DeleteReplicationTaskAction DatabaseMigrationService DeleteReplicationTask action.
+ * \value DescribeAccountAttributesAction DatabaseMigrationService DescribeAccountAttributes action.
+ * \value DescribeCertificatesAction DatabaseMigrationService DescribeCertificates action.
+ * \value DescribeConnectionsAction DatabaseMigrationService DescribeConnections action.
+ * \value DescribeEndpointTypesAction DatabaseMigrationService DescribeEndpointTypes action.
+ * \value DescribeEndpointsAction DatabaseMigrationService DescribeEndpoints action.
+ * \value DescribeEventCategoriesAction DatabaseMigrationService DescribeEventCategories action.
+ * \value DescribeEventSubscriptionsAction DatabaseMigrationService DescribeEventSubscriptions action.
+ * \value DescribeEventsAction DatabaseMigrationService DescribeEvents action.
+ * \value DescribeOrderableReplicationInstancesAction DatabaseMigrationService DescribeOrderableReplicationInstances action.
+ * \value DescribeRefreshSchemasStatusAction DatabaseMigrationService DescribeRefreshSchemasStatus action.
+ * \value DescribeReplicationInstanceTaskLogsAction DatabaseMigrationService DescribeReplicationInstanceTaskLogs action.
+ * \value DescribeReplicationInstancesAction DatabaseMigrationService DescribeReplicationInstances action.
+ * \value DescribeReplicationSubnetGroupsAction DatabaseMigrationService DescribeReplicationSubnetGroups action.
+ * \value DescribeReplicationTaskAssessmentResultsAction DatabaseMigrationService DescribeReplicationTaskAssessmentResults action.
+ * \value DescribeReplicationTasksAction DatabaseMigrationService DescribeReplicationTasks action.
+ * \value DescribeSchemasAction DatabaseMigrationService DescribeSchemas action.
+ * \value DescribeTableStatisticsAction DatabaseMigrationService DescribeTableStatistics action.
+ * \value ImportCertificateAction DatabaseMigrationService ImportCertificate action.
+ * \value ListTagsForResourceAction DatabaseMigrationService ListTagsForResource action.
+ * \value ModifyEndpointAction DatabaseMigrationService ModifyEndpoint action.
+ * \value ModifyEventSubscriptionAction DatabaseMigrationService ModifyEventSubscription action.
+ * \value ModifyReplicationInstanceAction DatabaseMigrationService ModifyReplicationInstance action.
+ * \value ModifyReplicationSubnetGroupAction DatabaseMigrationService ModifyReplicationSubnetGroup action.
+ * \value ModifyReplicationTaskAction DatabaseMigrationService ModifyReplicationTask action.
+ * \value RebootReplicationInstanceAction DatabaseMigrationService RebootReplicationInstance action.
+ * \value RefreshSchemasAction DatabaseMigrationService RefreshSchemas action.
+ * \value ReloadTablesAction DatabaseMigrationService ReloadTables action.
+ * \value RemoveTagsFromResourceAction DatabaseMigrationService RemoveTagsFromResource action.
+ * \value StartReplicationTaskAction DatabaseMigrationService StartReplicationTask action.
+ * \value StartReplicationTaskAssessmentAction DatabaseMigrationService StartReplicationTaskAssessment action.
+ * \value StopReplicationTaskAction DatabaseMigrationService StopReplicationTask action.
+ * \value TestConnectionAction DatabaseMigrationService TestConnection action.
+ */
+
+/*!
+ * Constructs a[n] DatabaseMigrationServiceRequest object for DatabaseMigrationService \a action.
  */
 DatabaseMigrationServiceRequest::DatabaseMigrationServiceRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new DatabaseMigrationServiceRequestPrivate(action, this))
@@ -43,9 +92,7 @@ DatabaseMigrationServiceRequest::DatabaseMigrationServiceRequest(const Action ac
 }
 
 /*!
- * @brief  Constructs a new DatabaseMigrationServiceRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DatabaseMigrationServiceRequest::DatabaseMigrationServiceRequest(const DatabaseMigrationServiceRequest &other)
     : QtAws::Core::AwsAbstractRequest(new DatabaseMigrationServiceRequestPrivate(*other.d_func(), this))
@@ -54,13 +101,7 @@ DatabaseMigrationServiceRequest::DatabaseMigrationServiceRequest(const DatabaseM
 }
 
 /*!
- * @brief  Assignment operator.
- *
- * Assigns \a other to \c this.
- *
- * @param  other  Instance to copy.
- *
- * @return  A reference to \c this.
+ * Sets the DatabaseMigrationServiceRequest object to be equal to \a other.
  */
 DatabaseMigrationServiceRequest& DatabaseMigrationServiceRequest::operator=(const DatabaseMigrationServiceRequest &other)
 {
@@ -72,14 +113,10 @@ DatabaseMigrationServiceRequest& DatabaseMigrationServiceRequest::operator=(cons
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DatabaseMigrationServiceRequest object.
+ * Constructs aa DatabaseMigrationServiceRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from DatabaseMigrationServiceRequestPrivate.
- *
- * @param  d  Pointer to private data (aka D-Pointer).
  */
 DatabaseMigrationServiceRequest::DatabaseMigrationServiceRequest(DatabaseMigrationServiceRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
@@ -87,7 +124,7 @@ DatabaseMigrationServiceRequest::DatabaseMigrationServiceRequest(DatabaseMigrati
 }
 
 /*!
- * \brief Returns the DatabaseMigrationService action to be performed by this request.
+ * Returns the DatabaseMigrationService action to be performed by this request.
  */
 DatabaseMigrationServiceRequest::Action DatabaseMigrationServiceRequest::action() const
 {
@@ -96,7 +133,7 @@ DatabaseMigrationServiceRequest::Action DatabaseMigrationServiceRequest::action(
 }
 
 /*!
- * \brief Returns the name of the DatabaseMigrationService action to be performed by this request.
+ * Returns the name of the DatabaseMigrationService action to be performed by this request.
  */
 QString DatabaseMigrationServiceRequest::actionString() const
 {
@@ -104,7 +141,7 @@ QString DatabaseMigrationServiceRequest::actionString() const
 }
 
 /*!
- * \brief Returns the DatabaseMigrationService API version implemented by this request.
+ * Returns the DatabaseMigrationService API version implemented by this request.
  */
 QString DatabaseMigrationServiceRequest::apiVersion() const
 {
@@ -113,7 +150,7 @@ QString DatabaseMigrationServiceRequest::apiVersion() const
 }
 
 /*!
- * @brief Set the DatabaseMigrationService action to be performed by this request to \a action.
+ * Sets the DatabaseMigrationService action to be performed by this request to \a action.
  */
 void DatabaseMigrationServiceRequest::setAction(const Action action)
 {
@@ -122,7 +159,7 @@ void DatabaseMigrationServiceRequest::setAction(const Action action)
 }
 
 /*!
- * Set the DatabaseMigrationService API version to include in this request to \a version.
+ * Sets the DatabaseMigrationService API version to include in this request to \a version.
  */
 void DatabaseMigrationServiceRequest::setApiVersion(const QString &version)
 {
@@ -131,7 +168,7 @@ void DatabaseMigrationServiceRequest::setApiVersion(const QString &version)
 }
 
 /*!
- * \brief Returns \c true if this request is the same as \a other.
+ * Returns \c true if this request is equal to \a other; \c false otherwise.
  *
  * Note, most derived *Request classes do not need to provider their own
  * implementations of this function, since most such request classes rely on
@@ -146,8 +183,8 @@ bool DatabaseMigrationServiceRequest::operator==(const DatabaseMigrationServiceR
             (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
-/*!
- * @brief  Check if \a queueName is a valid DatabaseMigrationService queue name.
+/*
+ * Returns \c tue if \a queueName is a valid DatabaseMigrationService queue name.
  *
  * @par From DatabaseMigrationService FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
@@ -166,9 +203,8 @@ bool DatabaseMigrationServiceRequest::operator==(const DatabaseMigrationServiceR
 }*/
 
 /*!
- * \brief Removes the a \a name parameter from this request.
- *
- * Returns the count of paramters removed (typically \c 0 or \c 1).
+ * Removes the a \a name parameter from the request, then returns the number of
+ * paramters removed (typically \c 0 or \c 1).
  */
 int DatabaseMigrationServiceRequest::clearParameter(const QString &name)
 {
@@ -177,7 +213,7 @@ int DatabaseMigrationServiceRequest::clearParameter(const QString &name)
 }
 
 /*!
- * \brief Removes all parameters from this request.
+ * Removes all parameters from the request.
  */
 void DatabaseMigrationServiceRequest::clearParameters()
 {
@@ -186,7 +222,7 @@ void DatabaseMigrationServiceRequest::clearParameters()
 }
 
 /*!
- * \brief Returns the value of the \n name pararemter if set, otherwise \a defaultValue.
+ * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
 QVariant DatabaseMigrationServiceRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
@@ -195,7 +231,7 @@ QVariant DatabaseMigrationServiceRequest::parameter(const QString &name, const Q
 }
 
 /*!
- * \brief Returns a map of parameters included in this request.
+ * Returns the parameters included in this request.
  */
 const QVariantMap &DatabaseMigrationServiceRequest::parameters() const
 {
@@ -204,7 +240,7 @@ const QVariantMap &DatabaseMigrationServiceRequest::parameters() const
 }
 
 /*!
- * \brief Sets the \a name parameter to \a value.
+ * Sets the \a name parameter to \a value.
  */
 void DatabaseMigrationServiceRequest::setParameter(const QString &name, const QVariant &value)
 {
@@ -213,9 +249,8 @@ void DatabaseMigrationServiceRequest::setParameter(const QString &name, const QV
 }
 
 /*!
- * \brief Sets the map of paramters for this request to \a parameters.
- *
- * Any request parameters set previously will be discarded.
+ * Sets the paramters for this request to \a parameters. Any request parameters
+ * set previously will be discarded.
  */
 void DatabaseMigrationServiceRequest::setParameters(const QVariantMap &parameters)
 {
@@ -224,11 +259,12 @@ void DatabaseMigrationServiceRequest::setParameters(const QVariantMap &parameter
 }
 
 /*!
- * \brief Returns a network request for this DatabaseMigrationService request using the given \a endpoint.
+ * Returns a network request for the DatabaseMigrationService request using the given
+ * \a endpoint.
  *
- * This DatabaseMigrationService implementation builds request URLs by combining the common query
- * parameters (such as Action and Version), with any that have been added (via
- * setParameter) by child classes.
+ * This DatabaseMigrationService implementation builds request URLs by combining the
+ * common query parameters (such as Action and Version), with any that have
+ * been added (via setParameter) by child classes.
  */
 QNetworkRequest DatabaseMigrationServiceRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -239,17 +275,16 @@ QNetworkRequest DatabaseMigrationServiceRequest::unsignedRequest(const QUrl &end
 }
 
 /*!
+ * \class QtAws::DatabaseMigrationService::DatabaseMigrationServiceRequestPrivate
+ * \brief The DatabaseMigrationServiceRequestPrivate class provides private implementation for DatabaseMigrationServiceRequest.
  * \internal
  *
- * \class  DatabaseMigrationServiceRequestPrivate
- *
- * \brief  Private implementation for DatabaseMigrationServiceRequest.
+ * \inmodule QtAwsDatabaseMigrationService
  */
 
 /*!
- * \internal
- *
- * \brief Constructs a new DatabaseMigrationServiceRequestPrivate object.
+ * Constructs a DatabaseMigrationServiceRequestPrivate object for DatabaseMigrationService \a action with,
+ * public implementation \a q.
  */
 DatabaseMigrationServiceRequestPrivate::DatabaseMigrationServiceRequestPrivate(const DatabaseMigrationServiceRequest::Action action, DatabaseMigrationServiceRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
@@ -258,9 +293,7 @@ DatabaseMigrationServiceRequestPrivate::DatabaseMigrationServiceRequestPrivate(c
 }
 
 /*!
- * \internal
- *
- * \brief Constructs a new DatabaseMigrationServiceRequestPrivate object, copying an existing one.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
@@ -276,15 +309,12 @@ DatabaseMigrationServiceRequestPrivate::DatabaseMigrationServiceRequestPrivate(c
 }
 
 /*!
- * \internal
- *
- * \brief Returns a string representing \a action.
+ * Returns a string represention of \a action, or a null string if \a action is
+ * invalid.
  *
  * This function converts DatabaseMigrationServiceRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the DatabaseMigrationService service's Action
  * query parameters.
- *
- * @return A string representing \a action, or a null string if \a action is invalid.
  */
 QString DatabaseMigrationServiceRequestPrivate::toString(const DatabaseMigrationServiceRequest::Action &action)
 {

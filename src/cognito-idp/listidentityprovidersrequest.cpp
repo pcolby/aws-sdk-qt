@@ -27,10 +27,9 @@ namespace CognitoIdentityProvider {
 
 /*!
  * \class QtAws::CognitoIdentityProvider::ListIdentityProvidersRequest
- *
  * \brief The ListIdentityProvidersRequest class provides an interface for CognitoIdentityProvider ListIdentityProviders requests.
  *
- * \ingroup CognitoIdentityProvider
+ * \inmodule QtAwsCognitoIdentityProvider
  *
  *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
  *  authenticate a user to obtain tokens related to user identity and access
@@ -47,9 +46,7 @@ namespace CognitoIdentityProvider {
  */
 
 /*!
- * @brief  Constructs a new ListIdentityProvidersRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListIdentityProvidersRequest::ListIdentityProvidersRequest(const ListIdentityProvidersRequest &other)
     : CognitoIdentityProviderRequest(new ListIdentityProvidersRequestPrivate(*other.d_func(), this))
@@ -58,7 +55,7 @@ ListIdentityProvidersRequest::ListIdentityProvidersRequest(const ListIdentityPro
 }
 
 /*!
- * @brief  Constructs a new ListIdentityProvidersRequest object.
+ * Constructs a ListIdentityProvidersRequest object.
  */
 ListIdentityProvidersRequest::ListIdentityProvidersRequest()
     : CognitoIdentityProviderRequest(new ListIdentityProvidersRequestPrivate(CognitoIdentityProviderRequest::ListIdentityProvidersAction, this))
@@ -76,14 +73,9 @@ bool ListIdentityProvidersRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListIdentityProvidersResponse object.
+ * Returns a ListIdentityProvidersResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListIdentityProvidersResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CognitoIdentityProviderClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListIdentityProvidersRequest::response(QNetworkReply * const reply) const
 {
@@ -91,20 +83,17 @@ QtAws::Core::AwsAbstractResponse * ListIdentityProvidersRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::CognitoIdentityProvider::ListIdentityProvidersRequestPrivate
+ * \brief The ListIdentityProvidersRequestPrivate class provides private implementation for ListIdentityProvidersRequest.
+ * \internal
  *
- * @class  ListIdentityProvidersRequestPrivate
- *
- * @brief  Private implementation for ListIdentityProvidersRequest.
+ * \inmodule QtAwsCognitoIdentityProvider
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListIdentityProvidersRequestPrivate object.
- *
- * @param  action  CognitoIdentityProvider action being performed.
- * @param  q       Pointer to this object's public ListIdentityProvidersRequest instance.
+ * Constructs a ListIdentityProvidersRequestPrivate object for CognitoIdentityProvider \a action with,
+ * public implementation \a q.
  */
 ListIdentityProvidersRequestPrivate::ListIdentityProvidersRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, ListIdentityProvidersRequest * const q)
@@ -114,15 +103,10 @@ ListIdentityProvidersRequestPrivate::ListIdentityProvidersRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListIdentityProvidersRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListIdentityProvidersRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListIdentityProvidersRequest instance.
  */
 ListIdentityProvidersRequestPrivate::ListIdentityProvidersRequestPrivate(
     const ListIdentityProvidersRequestPrivate &other, ListIdentityProvidersRequest * const q)

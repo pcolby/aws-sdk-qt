@@ -27,10 +27,9 @@ namespace DeviceFarm {
 
 /*!
  * \class QtAws::DeviceFarm::RenewOfferingRequest
- *
  * \brief The RenewOfferingRequest class provides an interface for DeviceFarm RenewOffering requests.
  *
- * \ingroup DeviceFarm
+ * \inmodule QtAwsDeviceFarm
  *
  *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
  *  phones, tablets, and other devices in the
@@ -39,9 +38,7 @@ namespace DeviceFarm {
  */
 
 /*!
- * @brief  Constructs a new RenewOfferingRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 RenewOfferingRequest::RenewOfferingRequest(const RenewOfferingRequest &other)
     : DeviceFarmRequest(new RenewOfferingRequestPrivate(*other.d_func(), this))
@@ -50,7 +47,7 @@ RenewOfferingRequest::RenewOfferingRequest(const RenewOfferingRequest &other)
 }
 
 /*!
- * @brief  Constructs a new RenewOfferingRequest object.
+ * Constructs a RenewOfferingRequest object.
  */
 RenewOfferingRequest::RenewOfferingRequest()
     : DeviceFarmRequest(new RenewOfferingRequestPrivate(DeviceFarmRequest::RenewOfferingAction, this))
@@ -68,14 +65,9 @@ bool RenewOfferingRequest::isValid() const
 
 
 /*!
- * @brief  Construct an RenewOfferingResponse object.
+ * Returns a RenewOfferingResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An RenewOfferingResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DeviceFarmClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * RenewOfferingRequest::response(QNetworkReply * const reply) const
 {
@@ -83,20 +75,17 @@ QtAws::Core::AwsAbstractResponse * RenewOfferingRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::DeviceFarm::RenewOfferingRequestPrivate
+ * \brief The RenewOfferingRequestPrivate class provides private implementation for RenewOfferingRequest.
+ * \internal
  *
- * @class  RenewOfferingRequestPrivate
- *
- * @brief  Private implementation for RenewOfferingRequest.
+ * \inmodule QtAwsDeviceFarm
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new RenewOfferingRequestPrivate object.
- *
- * @param  action  DeviceFarm action being performed.
- * @param  q       Pointer to this object's public RenewOfferingRequest instance.
+ * Constructs a RenewOfferingRequestPrivate object for DeviceFarm \a action with,
+ * public implementation \a q.
  */
 RenewOfferingRequestPrivate::RenewOfferingRequestPrivate(
     const DeviceFarmRequest::Action action, RenewOfferingRequest * const q)
@@ -106,15 +95,10 @@ RenewOfferingRequestPrivate::RenewOfferingRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RenewOfferingRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the RenewOfferingRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public RenewOfferingRequest instance.
  */
 RenewOfferingRequestPrivate::RenewOfferingRequestPrivate(
     const RenewOfferingRequestPrivate &other, RenewOfferingRequest * const q)

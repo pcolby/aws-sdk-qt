@@ -48,6 +48,9 @@
 /*!
  * \namespace QtAws::Shield
  * \brief The QtAws::Shield contains stuff...
+ *
+ * \inmodule QtAwsShield
+ *
  * @todo Move this to a separate template file.
  */
 
@@ -103,7 +106,7 @@ ShieldClient::ShieldClient(
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * \a  AwsEndpoint::getEndpoint()
+ * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
 ShieldClient::ShieldClient(
     const QUrl &endpoint,

@@ -27,10 +27,9 @@ namespace CloudDirectory {
 
 /*!
  * \class QtAws::CloudDirectory::DetachPolicyRequest
- *
  * \brief The DetachPolicyRequest class provides an interface for CloudDirectory DetachPolicy requests.
  *
- * \ingroup CloudDirectory
+ * \inmodule QtAwsCloudDirectory
  *
  *  <fullname>Amazon Cloud Directory</fullname>
  * 
@@ -44,9 +43,7 @@ namespace CloudDirectory {
  */
 
 /*!
- * @brief  Constructs a new DetachPolicyRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DetachPolicyRequest::DetachPolicyRequest(const DetachPolicyRequest &other)
     : CloudDirectoryRequest(new DetachPolicyRequestPrivate(*other.d_func(), this))
@@ -55,7 +52,7 @@ DetachPolicyRequest::DetachPolicyRequest(const DetachPolicyRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DetachPolicyRequest object.
+ * Constructs a DetachPolicyRequest object.
  */
 DetachPolicyRequest::DetachPolicyRequest()
     : CloudDirectoryRequest(new DetachPolicyRequestPrivate(CloudDirectoryRequest::DetachPolicyAction, this))
@@ -73,14 +70,9 @@ bool DetachPolicyRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DetachPolicyResponse object.
+ * Returns a DetachPolicyResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DetachPolicyResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudDirectoryClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DetachPolicyRequest::response(QNetworkReply * const reply) const
 {
@@ -88,20 +80,17 @@ QtAws::Core::AwsAbstractResponse * DetachPolicyRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudDirectory::DetachPolicyRequestPrivate
+ * \brief The DetachPolicyRequestPrivate class provides private implementation for DetachPolicyRequest.
+ * \internal
  *
- * @class  DetachPolicyRequestPrivate
- *
- * @brief  Private implementation for DetachPolicyRequest.
+ * \inmodule QtAwsCloudDirectory
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DetachPolicyRequestPrivate object.
- *
- * @param  action  CloudDirectory action being performed.
- * @param  q       Pointer to this object's public DetachPolicyRequest instance.
+ * Constructs a DetachPolicyRequestPrivate object for CloudDirectory \a action with,
+ * public implementation \a q.
  */
 DetachPolicyRequestPrivate::DetachPolicyRequestPrivate(
     const CloudDirectoryRequest::Action action, DetachPolicyRequest * const q)
@@ -111,15 +100,10 @@ DetachPolicyRequestPrivate::DetachPolicyRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DetachPolicyRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DetachPolicyRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DetachPolicyRequest instance.
  */
 DetachPolicyRequestPrivate::DetachPolicyRequestPrivate(
     const DetachPolicyRequestPrivate &other, DetachPolicyRequest * const q)

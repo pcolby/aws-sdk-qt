@@ -27,19 +27,16 @@ namespace S3 {
 
 /*!
  * \class QtAws::S3::PutBucketLifecycleConfigurationRequest
- *
  * \brief The PutBucketLifecycleConfigurationRequest class provides an interface for S3 PutBucketLifecycleConfiguration requests.
  *
- * \ingroup S3
+ * \inmodule QtAwsS3
  *
  *
  * \sa S3Client::putBucketLifecycleConfiguration
  */
 
 /*!
- * @brief  Constructs a new PutBucketLifecycleConfigurationRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 PutBucketLifecycleConfigurationRequest::PutBucketLifecycleConfigurationRequest(const PutBucketLifecycleConfigurationRequest &other)
     : S3Request(new PutBucketLifecycleConfigurationRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ PutBucketLifecycleConfigurationRequest::PutBucketLifecycleConfigurationRequest(c
 }
 
 /*!
- * @brief  Constructs a new PutBucketLifecycleConfigurationRequest object.
+ * Constructs a PutBucketLifecycleConfigurationRequest object.
  */
 PutBucketLifecycleConfigurationRequest::PutBucketLifecycleConfigurationRequest()
     : S3Request(new PutBucketLifecycleConfigurationRequestPrivate(S3Request::PutBucketLifecycleConfigurationAction, this))
@@ -66,14 +63,9 @@ bool PutBucketLifecycleConfigurationRequest::isValid() const
 
 
 /*!
- * @brief  Construct an PutBucketLifecycleConfigurationResponse object.
+ * Returns a PutBucketLifecycleConfigurationResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An PutBucketLifecycleConfigurationResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  S3Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * PutBucketLifecycleConfigurationRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * PutBucketLifecycleConfigurationRequest::respo
 }
 
 /*!
- * @internal
+ * \class QtAws::S3::PutBucketLifecycleConfigurationRequestPrivate
+ * \brief The PutBucketLifecycleConfigurationRequestPrivate class provides private implementation for PutBucketLifecycleConfigurationRequest.
+ * \internal
  *
- * @class  PutBucketLifecycleConfigurationRequestPrivate
- *
- * @brief  Private implementation for PutBucketLifecycleConfigurationRequest.
+ * \inmodule QtAwsS3
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new PutBucketLifecycleConfigurationRequestPrivate object.
- *
- * @param  action  S3 action being performed.
- * @param  q       Pointer to this object's public PutBucketLifecycleConfigurationRequest instance.
+ * Constructs a PutBucketLifecycleConfigurationRequestPrivate object for S3 \a action with,
+ * public implementation \a q.
  */
 PutBucketLifecycleConfigurationRequestPrivate::PutBucketLifecycleConfigurationRequestPrivate(
     const S3Request::Action action, PutBucketLifecycleConfigurationRequest * const q)
@@ -104,15 +93,10 @@ PutBucketLifecycleConfigurationRequestPrivate::PutBucketLifecycleConfigurationRe
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutBucketLifecycleConfigurationRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the PutBucketLifecycleConfigurationRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public PutBucketLifecycleConfigurationRequest instance.
  */
 PutBucketLifecycleConfigurationRequestPrivate::PutBucketLifecycleConfigurationRequestPrivate(
     const PutBucketLifecycleConfigurationRequestPrivate &other, PutBucketLifecycleConfigurationRequest * const q)

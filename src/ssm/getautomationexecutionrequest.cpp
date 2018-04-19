@@ -27,10 +27,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::GetAutomationExecutionRequest
- *
  * \brief The GetAutomationExecutionRequest class provides an interface for SSM GetAutomationExecution requests.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -61,9 +60,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new GetAutomationExecutionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetAutomationExecutionRequest::GetAutomationExecutionRequest(const GetAutomationExecutionRequest &other)
     : SSMRequest(new GetAutomationExecutionRequestPrivate(*other.d_func(), this))
@@ -72,7 +69,7 @@ GetAutomationExecutionRequest::GetAutomationExecutionRequest(const GetAutomation
 }
 
 /*!
- * @brief  Constructs a new GetAutomationExecutionRequest object.
+ * Constructs a GetAutomationExecutionRequest object.
  */
 GetAutomationExecutionRequest::GetAutomationExecutionRequest()
     : SSMRequest(new GetAutomationExecutionRequestPrivate(SSMRequest::GetAutomationExecutionAction, this))
@@ -90,14 +87,9 @@ bool GetAutomationExecutionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetAutomationExecutionResponse object.
+ * Returns a GetAutomationExecutionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetAutomationExecutionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SSMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetAutomationExecutionRequest::response(QNetworkReply * const reply) const
 {
@@ -105,20 +97,17 @@ QtAws::Core::AwsAbstractResponse * GetAutomationExecutionRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::SSM::GetAutomationExecutionRequestPrivate
+ * \brief The GetAutomationExecutionRequestPrivate class provides private implementation for GetAutomationExecutionRequest.
+ * \internal
  *
- * @class  GetAutomationExecutionRequestPrivate
- *
- * @brief  Private implementation for GetAutomationExecutionRequest.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetAutomationExecutionRequestPrivate object.
- *
- * @param  action  SSM action being performed.
- * @param  q       Pointer to this object's public GetAutomationExecutionRequest instance.
+ * Constructs a GetAutomationExecutionRequestPrivate object for SSM \a action with,
+ * public implementation \a q.
  */
 GetAutomationExecutionRequestPrivate::GetAutomationExecutionRequestPrivate(
     const SSMRequest::Action action, GetAutomationExecutionRequest * const q)
@@ -128,15 +117,10 @@ GetAutomationExecutionRequestPrivate::GetAutomationExecutionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetAutomationExecutionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetAutomationExecutionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetAutomationExecutionRequest instance.
  */
 GetAutomationExecutionRequestPrivate::GetAutomationExecutionRequestPrivate(
     const GetAutomationExecutionRequestPrivate &other, GetAutomationExecutionRequest * const q)

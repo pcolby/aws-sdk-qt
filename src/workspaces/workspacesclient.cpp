@@ -56,6 +56,9 @@
 /*!
  * \namespace QtAws::WorkSpaces
  * \brief The QtAws::WorkSpaces contains stuff...
+ *
+ * \inmodule QtAwsWorkSpaces
+ *
  * @todo Move this to a separate template file.
  */
 
@@ -108,7 +111,7 @@ WorkSpacesClient::WorkSpacesClient(
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * \a  AwsEndpoint::getEndpoint()
+ * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
 WorkSpacesClient::WorkSpacesClient(
     const QUrl &endpoint,

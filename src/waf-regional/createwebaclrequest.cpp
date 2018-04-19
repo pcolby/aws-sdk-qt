@@ -27,10 +27,9 @@ namespace WAFRegional {
 
 /*!
  * \class QtAws::WAFRegional::CreateWebACLRequest
- *
  * \brief The CreateWebACLRequest class provides an interface for WAFRegional CreateWebACL requests.
  *
- * \ingroup WAFRegional
+ * \inmodule QtAwsWAFRegional
  *
  *  This is the <i>AWS WAF Regional API Reference</i> for using AWS WAF with Elastic Load Balancing (ELB) Application Load
  *  Balancers. The AWS WAF actions and data types listed in the reference are available for protecting Application Load
@@ -44,9 +43,7 @@ namespace WAFRegional {
  */
 
 /*!
- * @brief  Constructs a new CreateWebACLRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateWebACLRequest::CreateWebACLRequest(const CreateWebACLRequest &other)
     : WAFRegionalRequest(new CreateWebACLRequestPrivate(*other.d_func(), this))
@@ -55,7 +52,7 @@ CreateWebACLRequest::CreateWebACLRequest(const CreateWebACLRequest &other)
 }
 
 /*!
- * @brief  Constructs a new CreateWebACLRequest object.
+ * Constructs a CreateWebACLRequest object.
  */
 CreateWebACLRequest::CreateWebACLRequest()
     : WAFRegionalRequest(new CreateWebACLRequestPrivate(WAFRegionalRequest::CreateWebACLAction, this))
@@ -73,14 +70,9 @@ bool CreateWebACLRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateWebACLResponse object.
+ * Returns a CreateWebACLResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateWebACLResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WAFRegionalClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateWebACLRequest::response(QNetworkReply * const reply) const
 {
@@ -88,20 +80,17 @@ QtAws::Core::AwsAbstractResponse * CreateWebACLRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::WAFRegional::CreateWebACLRequestPrivate
+ * \brief The CreateWebACLRequestPrivate class provides private implementation for CreateWebACLRequest.
+ * \internal
  *
- * @class  CreateWebACLRequestPrivate
- *
- * @brief  Private implementation for CreateWebACLRequest.
+ * \inmodule QtAwsWAFRegional
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateWebACLRequestPrivate object.
- *
- * @param  action  WAFRegional action being performed.
- * @param  q       Pointer to this object's public CreateWebACLRequest instance.
+ * Constructs a CreateWebACLRequestPrivate object for WAFRegional \a action with,
+ * public implementation \a q.
  */
 CreateWebACLRequestPrivate::CreateWebACLRequestPrivate(
     const WAFRegionalRequest::Action action, CreateWebACLRequest * const q)
@@ -111,15 +100,10 @@ CreateWebACLRequestPrivate::CreateWebACLRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateWebACLRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateWebACLRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateWebACLRequest instance.
  */
 CreateWebACLRequestPrivate::CreateWebACLRequestPrivate(
     const CreateWebACLRequestPrivate &other, CreateWebACLRequest * const q)

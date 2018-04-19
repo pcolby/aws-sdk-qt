@@ -27,10 +27,9 @@ namespace Inspector {
 
 /*!
  * \class QtAws::Inspector::CreateAssessmentTemplateRequest
- *
  * \brief The CreateAssessmentTemplateRequest class provides an interface for Inspector CreateAssessmentTemplate requests.
  *
- * \ingroup Inspector
+ * \inmodule QtAwsInspector
  *
  *  <fullname>Amazon Inspector</fullname>
  * 
@@ -42,9 +41,7 @@ namespace Inspector {
  */
 
 /*!
- * @brief  Constructs a new CreateAssessmentTemplateRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateAssessmentTemplateRequest::CreateAssessmentTemplateRequest(const CreateAssessmentTemplateRequest &other)
     : InspectorRequest(new CreateAssessmentTemplateRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ CreateAssessmentTemplateRequest::CreateAssessmentTemplateRequest(const CreateAss
 }
 
 /*!
- * @brief  Constructs a new CreateAssessmentTemplateRequest object.
+ * Constructs a CreateAssessmentTemplateRequest object.
  */
 CreateAssessmentTemplateRequest::CreateAssessmentTemplateRequest()
     : InspectorRequest(new CreateAssessmentTemplateRequestPrivate(InspectorRequest::CreateAssessmentTemplateAction, this))
@@ -71,14 +68,9 @@ bool CreateAssessmentTemplateRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateAssessmentTemplateResponse object.
+ * Returns a CreateAssessmentTemplateResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateAssessmentTemplateResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  InspectorClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateAssessmentTemplateRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * CreateAssessmentTemplateRequest::response(QNe
 }
 
 /*!
- * @internal
+ * \class QtAws::Inspector::CreateAssessmentTemplateRequestPrivate
+ * \brief The CreateAssessmentTemplateRequestPrivate class provides private implementation for CreateAssessmentTemplateRequest.
+ * \internal
  *
- * @class  CreateAssessmentTemplateRequestPrivate
- *
- * @brief  Private implementation for CreateAssessmentTemplateRequest.
+ * \inmodule QtAwsInspector
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateAssessmentTemplateRequestPrivate object.
- *
- * @param  action  Inspector action being performed.
- * @param  q       Pointer to this object's public CreateAssessmentTemplateRequest instance.
+ * Constructs a CreateAssessmentTemplateRequestPrivate object for Inspector \a action with,
+ * public implementation \a q.
  */
 CreateAssessmentTemplateRequestPrivate::CreateAssessmentTemplateRequestPrivate(
     const InspectorRequest::Action action, CreateAssessmentTemplateRequest * const q)
@@ -109,15 +98,10 @@ CreateAssessmentTemplateRequestPrivate::CreateAssessmentTemplateRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateAssessmentTemplateRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateAssessmentTemplateRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateAssessmentTemplateRequest instance.
  */
 CreateAssessmentTemplateRequestPrivate::CreateAssessmentTemplateRequestPrivate(
     const CreateAssessmentTemplateRequestPrivate &other, CreateAssessmentTemplateRequest * const q)

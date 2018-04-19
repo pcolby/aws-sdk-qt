@@ -25,16 +25,61 @@ namespace ElastiCache {
 
 /*!
  * \class QtAws::ElastiCache::ElastiCacheRequest
- *
  * \brief The ElastiCacheRequest class provides an interface for ElastiCache requests.
  *
- * \ingroup ElastiCache
+ * \inmodule QtAwsElastiCache
  */
 
 /*!
- * @brief  Constructs a new ElastiCacheRequest object.
+ * \enum ElastiCacheRequest::Action
  *
- * @param  action  The ElastiCache action to request.
+ * This enum describes the actions that can be performed as ElastiCache
+ * requests.
+ *
+ * \value AddTagsToResourceAction ElastiCache AddTagsToResource action.
+ * \value AuthorizeCacheSecurityGroupIngressAction ElastiCache AuthorizeCacheSecurityGroupIngress action.
+ * \value CopySnapshotAction ElastiCache CopySnapshot action.
+ * \value CreateCacheClusterAction ElastiCache CreateCacheCluster action.
+ * \value CreateCacheParameterGroupAction ElastiCache CreateCacheParameterGroup action.
+ * \value CreateCacheSecurityGroupAction ElastiCache CreateCacheSecurityGroup action.
+ * \value CreateCacheSubnetGroupAction ElastiCache CreateCacheSubnetGroup action.
+ * \value CreateReplicationGroupAction ElastiCache CreateReplicationGroup action.
+ * \value CreateSnapshotAction ElastiCache CreateSnapshot action.
+ * \value DeleteCacheClusterAction ElastiCache DeleteCacheCluster action.
+ * \value DeleteCacheParameterGroupAction ElastiCache DeleteCacheParameterGroup action.
+ * \value DeleteCacheSecurityGroupAction ElastiCache DeleteCacheSecurityGroup action.
+ * \value DeleteCacheSubnetGroupAction ElastiCache DeleteCacheSubnetGroup action.
+ * \value DeleteReplicationGroupAction ElastiCache DeleteReplicationGroup action.
+ * \value DeleteSnapshotAction ElastiCache DeleteSnapshot action.
+ * \value DescribeCacheClustersAction ElastiCache DescribeCacheClusters action.
+ * \value DescribeCacheEngineVersionsAction ElastiCache DescribeCacheEngineVersions action.
+ * \value DescribeCacheParameterGroupsAction ElastiCache DescribeCacheParameterGroups action.
+ * \value DescribeCacheParametersAction ElastiCache DescribeCacheParameters action.
+ * \value DescribeCacheSecurityGroupsAction ElastiCache DescribeCacheSecurityGroups action.
+ * \value DescribeCacheSubnetGroupsAction ElastiCache DescribeCacheSubnetGroups action.
+ * \value DescribeEngineDefaultParametersAction ElastiCache DescribeEngineDefaultParameters action.
+ * \value DescribeEventsAction ElastiCache DescribeEvents action.
+ * \value DescribeReplicationGroupsAction ElastiCache DescribeReplicationGroups action.
+ * \value DescribeReservedCacheNodesAction ElastiCache DescribeReservedCacheNodes action.
+ * \value DescribeReservedCacheNodesOfferingsAction ElastiCache DescribeReservedCacheNodesOfferings action.
+ * \value DescribeSnapshotsAction ElastiCache DescribeSnapshots action.
+ * \value ListAllowedNodeTypeModificationsAction ElastiCache ListAllowedNodeTypeModifications action.
+ * \value ListTagsForResourceAction ElastiCache ListTagsForResource action.
+ * \value ModifyCacheClusterAction ElastiCache ModifyCacheCluster action.
+ * \value ModifyCacheParameterGroupAction ElastiCache ModifyCacheParameterGroup action.
+ * \value ModifyCacheSubnetGroupAction ElastiCache ModifyCacheSubnetGroup action.
+ * \value ModifyReplicationGroupAction ElastiCache ModifyReplicationGroup action.
+ * \value ModifyReplicationGroupShardConfigurationAction ElastiCache ModifyReplicationGroupShardConfiguration action.
+ * \value PurchaseReservedCacheNodesOfferingAction ElastiCache PurchaseReservedCacheNodesOffering action.
+ * \value RebootCacheClusterAction ElastiCache RebootCacheCluster action.
+ * \value RemoveTagsFromResourceAction ElastiCache RemoveTagsFromResource action.
+ * \value ResetCacheParameterGroupAction ElastiCache ResetCacheParameterGroup action.
+ * \value RevokeCacheSecurityGroupIngressAction ElastiCache RevokeCacheSecurityGroupIngress action.
+ * \value TestFailoverAction ElastiCache TestFailover action.
+ */
+
+/*!
+ * Constructs a[n] ElastiCacheRequest object for ElastiCache \a action.
  */
 ElastiCacheRequest::ElastiCacheRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new ElastiCacheRequestPrivate(action, this))
@@ -43,9 +88,7 @@ ElastiCacheRequest::ElastiCacheRequest(const Action action)
 }
 
 /*!
- * @brief  Constructs a new ElastiCacheRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ElastiCacheRequest::ElastiCacheRequest(const ElastiCacheRequest &other)
     : QtAws::Core::AwsAbstractRequest(new ElastiCacheRequestPrivate(*other.d_func(), this))
@@ -54,13 +97,7 @@ ElastiCacheRequest::ElastiCacheRequest(const ElastiCacheRequest &other)
 }
 
 /*!
- * @brief  Assignment operator.
- *
- * Assigns \a other to \c this.
- *
- * @param  other  Instance to copy.
- *
- * @return  A reference to \c this.
+ * Sets the ElastiCacheRequest object to be equal to \a other.
  */
 ElastiCacheRequest& ElastiCacheRequest::operator=(const ElastiCacheRequest &other)
 {
@@ -72,14 +109,10 @@ ElastiCacheRequest& ElastiCacheRequest::operator=(const ElastiCacheRequest &othe
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ElastiCacheRequest object.
+ * Constructs aa ElastiCacheRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from ElastiCacheRequestPrivate.
- *
- * @param  d  Pointer to private data (aka D-Pointer).
  */
 ElastiCacheRequest::ElastiCacheRequest(ElastiCacheRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
@@ -87,7 +120,7 @@ ElastiCacheRequest::ElastiCacheRequest(ElastiCacheRequestPrivate * const d) : Qt
 }
 
 /*!
- * \brief Returns the ElastiCache action to be performed by this request.
+ * Returns the ElastiCache action to be performed by this request.
  */
 ElastiCacheRequest::Action ElastiCacheRequest::action() const
 {
@@ -96,7 +129,7 @@ ElastiCacheRequest::Action ElastiCacheRequest::action() const
 }
 
 /*!
- * \brief Returns the name of the ElastiCache action to be performed by this request.
+ * Returns the name of the ElastiCache action to be performed by this request.
  */
 QString ElastiCacheRequest::actionString() const
 {
@@ -104,7 +137,7 @@ QString ElastiCacheRequest::actionString() const
 }
 
 /*!
- * \brief Returns the ElastiCache API version implemented by this request.
+ * Returns the ElastiCache API version implemented by this request.
  */
 QString ElastiCacheRequest::apiVersion() const
 {
@@ -113,7 +146,7 @@ QString ElastiCacheRequest::apiVersion() const
 }
 
 /*!
- * @brief Set the ElastiCache action to be performed by this request to \a action.
+ * Sets the ElastiCache action to be performed by this request to \a action.
  */
 void ElastiCacheRequest::setAction(const Action action)
 {
@@ -122,7 +155,7 @@ void ElastiCacheRequest::setAction(const Action action)
 }
 
 /*!
- * Set the ElastiCache API version to include in this request to \a version.
+ * Sets the ElastiCache API version to include in this request to \a version.
  */
 void ElastiCacheRequest::setApiVersion(const QString &version)
 {
@@ -131,7 +164,7 @@ void ElastiCacheRequest::setApiVersion(const QString &version)
 }
 
 /*!
- * \brief Returns \c true if this request is the same as \a other.
+ * Returns \c true if this request is equal to \a other; \c false otherwise.
  *
  * Note, most derived *Request classes do not need to provider their own
  * implementations of this function, since most such request classes rely on
@@ -146,8 +179,8 @@ bool ElastiCacheRequest::operator==(const ElastiCacheRequest &other) const
             (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
-/*!
- * @brief  Check if \a queueName is a valid ElastiCache queue name.
+/*
+ * Returns \c tue if \a queueName is a valid ElastiCache queue name.
  *
  * @par From ElastiCache FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
@@ -166,9 +199,8 @@ bool ElastiCacheRequest::operator==(const ElastiCacheRequest &other) const
 }*/
 
 /*!
- * \brief Removes the a \a name parameter from this request.
- *
- * Returns the count of paramters removed (typically \c 0 or \c 1).
+ * Removes the a \a name parameter from the request, then returns the number of
+ * paramters removed (typically \c 0 or \c 1).
  */
 int ElastiCacheRequest::clearParameter(const QString &name)
 {
@@ -177,7 +209,7 @@ int ElastiCacheRequest::clearParameter(const QString &name)
 }
 
 /*!
- * \brief Removes all parameters from this request.
+ * Removes all parameters from the request.
  */
 void ElastiCacheRequest::clearParameters()
 {
@@ -186,7 +218,7 @@ void ElastiCacheRequest::clearParameters()
 }
 
 /*!
- * \brief Returns the value of the \n name pararemter if set, otherwise \a defaultValue.
+ * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
 QVariant ElastiCacheRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
@@ -195,7 +227,7 @@ QVariant ElastiCacheRequest::parameter(const QString &name, const QVariant &defa
 }
 
 /*!
- * \brief Returns a map of parameters included in this request.
+ * Returns the parameters included in this request.
  */
 const QVariantMap &ElastiCacheRequest::parameters() const
 {
@@ -204,7 +236,7 @@ const QVariantMap &ElastiCacheRequest::parameters() const
 }
 
 /*!
- * \brief Sets the \a name parameter to \a value.
+ * Sets the \a name parameter to \a value.
  */
 void ElastiCacheRequest::setParameter(const QString &name, const QVariant &value)
 {
@@ -213,9 +245,8 @@ void ElastiCacheRequest::setParameter(const QString &name, const QVariant &value
 }
 
 /*!
- * \brief Sets the map of paramters for this request to \a parameters.
- *
- * Any request parameters set previously will be discarded.
+ * Sets the paramters for this request to \a parameters. Any request parameters
+ * set previously will be discarded.
  */
 void ElastiCacheRequest::setParameters(const QVariantMap &parameters)
 {
@@ -224,11 +255,12 @@ void ElastiCacheRequest::setParameters(const QVariantMap &parameters)
 }
 
 /*!
- * \brief Returns a network request for this ElastiCache request using the given \a endpoint.
+ * Returns a network request for the ElastiCache request using the given
+ * \a endpoint.
  *
- * This ElastiCache implementation builds request URLs by combining the common query
- * parameters (such as Action and Version), with any that have been added (via
- * setParameter) by child classes.
+ * This ElastiCache implementation builds request URLs by combining the
+ * common query parameters (such as Action and Version), with any that have
+ * been added (via setParameter) by child classes.
  */
 QNetworkRequest ElastiCacheRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -239,17 +271,16 @@ QNetworkRequest ElastiCacheRequest::unsignedRequest(const QUrl &endpoint) const
 }
 
 /*!
+ * \class QtAws::ElastiCache::ElastiCacheRequestPrivate
+ * \brief The ElastiCacheRequestPrivate class provides private implementation for ElastiCacheRequest.
  * \internal
  *
- * \class  ElastiCacheRequestPrivate
- *
- * \brief  Private implementation for ElastiCacheRequest.
+ * \inmodule QtAwsElastiCache
  */
 
 /*!
- * \internal
- *
- * \brief Constructs a new ElastiCacheRequestPrivate object.
+ * Constructs a ElastiCacheRequestPrivate object for ElastiCache \a action with,
+ * public implementation \a q.
  */
 ElastiCacheRequestPrivate::ElastiCacheRequestPrivate(const ElastiCacheRequest::Action action, ElastiCacheRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
@@ -258,9 +289,7 @@ ElastiCacheRequestPrivate::ElastiCacheRequestPrivate(const ElastiCacheRequest::A
 }
 
 /*!
- * \internal
- *
- * \brief Constructs a new ElastiCacheRequestPrivate object, copying an existing one.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
@@ -276,15 +305,12 @@ ElastiCacheRequestPrivate::ElastiCacheRequestPrivate(const ElastiCacheRequestPri
 }
 
 /*!
- * \internal
- *
- * \brief Returns a string representing \a action.
+ * Returns a string represention of \a action, or a null string if \a action is
+ * invalid.
  *
  * This function converts ElastiCacheRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the ElastiCache service's Action
  * query parameters.
- *
- * @return A string representing \a action, or a null string if \a action is invalid.
  */
 QString ElastiCacheRequestPrivate::toString(const ElastiCacheRequest::Action &action)
 {

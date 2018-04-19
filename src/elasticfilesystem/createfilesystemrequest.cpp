@@ -27,10 +27,9 @@ namespace EFS {
 
 /*!
  * \class QtAws::EFS::CreateFileSystemRequest
- *
  * \brief The CreateFileSystemRequest class provides an interface for EFS CreateFileSystem requests.
  *
- * \ingroup EFS
+ * \inmodule QtAwsEFS
  *
  *  <fullname>Amazon Elastic File System</fullname>
  * 
@@ -43,9 +42,7 @@ namespace EFS {
  */
 
 /*!
- * @brief  Constructs a new CreateFileSystemRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateFileSystemRequest::CreateFileSystemRequest(const CreateFileSystemRequest &other)
     : EFSRequest(new CreateFileSystemRequestPrivate(*other.d_func(), this))
@@ -54,7 +51,7 @@ CreateFileSystemRequest::CreateFileSystemRequest(const CreateFileSystemRequest &
 }
 
 /*!
- * @brief  Constructs a new CreateFileSystemRequest object.
+ * Constructs a CreateFileSystemRequest object.
  */
 CreateFileSystemRequest::CreateFileSystemRequest()
     : EFSRequest(new CreateFileSystemRequestPrivate(EFSRequest::CreateFileSystemAction, this))
@@ -72,14 +69,9 @@ bool CreateFileSystemRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateFileSystemResponse object.
+ * Returns a CreateFileSystemResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateFileSystemResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EFSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateFileSystemRequest::response(QNetworkReply * const reply) const
 {
@@ -87,20 +79,17 @@ QtAws::Core::AwsAbstractResponse * CreateFileSystemRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::EFS::CreateFileSystemRequestPrivate
+ * \brief The CreateFileSystemRequestPrivate class provides private implementation for CreateFileSystemRequest.
+ * \internal
  *
- * @class  CreateFileSystemRequestPrivate
- *
- * @brief  Private implementation for CreateFileSystemRequest.
+ * \inmodule QtAwsEFS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateFileSystemRequestPrivate object.
- *
- * @param  action  EFS action being performed.
- * @param  q       Pointer to this object's public CreateFileSystemRequest instance.
+ * Constructs a CreateFileSystemRequestPrivate object for EFS \a action with,
+ * public implementation \a q.
  */
 CreateFileSystemRequestPrivate::CreateFileSystemRequestPrivate(
     const EFSRequest::Action action, CreateFileSystemRequest * const q)
@@ -110,15 +99,10 @@ CreateFileSystemRequestPrivate::CreateFileSystemRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateFileSystemRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateFileSystemRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateFileSystemRequest instance.
  */
 CreateFileSystemRequestPrivate::CreateFileSystemRequestPrivate(
     const CreateFileSystemRequestPrivate &other, CreateFileSystemRequest * const q)

@@ -27,10 +27,9 @@ namespace WorkDocs {
 
 /*!
  * \class QtAws::WorkDocs::RemoveAllResourcePermissionsRequest
- *
  * \brief The RemoveAllResourcePermissionsRequest class provides an interface for WorkDocs RemoveAllResourcePermissions requests.
  *
- * \ingroup WorkDocs
+ * \inmodule QtAwsWorkDocs
  *
  *  The WorkDocs API is designed for the following use
  * 
@@ -66,9 +65,7 @@ namespace WorkDocs {
  */
 
 /*!
- * @brief  Constructs a new RemoveAllResourcePermissionsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 RemoveAllResourcePermissionsRequest::RemoveAllResourcePermissionsRequest(const RemoveAllResourcePermissionsRequest &other)
     : WorkDocsRequest(new RemoveAllResourcePermissionsRequestPrivate(*other.d_func(), this))
@@ -77,7 +74,7 @@ RemoveAllResourcePermissionsRequest::RemoveAllResourcePermissionsRequest(const R
 }
 
 /*!
- * @brief  Constructs a new RemoveAllResourcePermissionsRequest object.
+ * Constructs a RemoveAllResourcePermissionsRequest object.
  */
 RemoveAllResourcePermissionsRequest::RemoveAllResourcePermissionsRequest()
     : WorkDocsRequest(new RemoveAllResourcePermissionsRequestPrivate(WorkDocsRequest::RemoveAllResourcePermissionsAction, this))
@@ -95,14 +92,9 @@ bool RemoveAllResourcePermissionsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an RemoveAllResourcePermissionsResponse object.
+ * Returns a RemoveAllResourcePermissionsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An RemoveAllResourcePermissionsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WorkDocsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * RemoveAllResourcePermissionsRequest::response(QNetworkReply * const reply) const
 {
@@ -110,20 +102,17 @@ QtAws::Core::AwsAbstractResponse * RemoveAllResourcePermissionsRequest::response
 }
 
 /*!
- * @internal
+ * \class QtAws::WorkDocs::RemoveAllResourcePermissionsRequestPrivate
+ * \brief The RemoveAllResourcePermissionsRequestPrivate class provides private implementation for RemoveAllResourcePermissionsRequest.
+ * \internal
  *
- * @class  RemoveAllResourcePermissionsRequestPrivate
- *
- * @brief  Private implementation for RemoveAllResourcePermissionsRequest.
+ * \inmodule QtAwsWorkDocs
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new RemoveAllResourcePermissionsRequestPrivate object.
- *
- * @param  action  WorkDocs action being performed.
- * @param  q       Pointer to this object's public RemoveAllResourcePermissionsRequest instance.
+ * Constructs a RemoveAllResourcePermissionsRequestPrivate object for WorkDocs \a action with,
+ * public implementation \a q.
  */
 RemoveAllResourcePermissionsRequestPrivate::RemoveAllResourcePermissionsRequestPrivate(
     const WorkDocsRequest::Action action, RemoveAllResourcePermissionsRequest * const q)
@@ -133,15 +122,10 @@ RemoveAllResourcePermissionsRequestPrivate::RemoveAllResourcePermissionsRequestP
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RemoveAllResourcePermissionsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the RemoveAllResourcePermissionsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public RemoveAllResourcePermissionsRequest instance.
  */
 RemoveAllResourcePermissionsRequestPrivate::RemoveAllResourcePermissionsRequestPrivate(
     const RemoveAllResourcePermissionsRequestPrivate &other, RemoveAllResourcePermissionsRequest * const q)

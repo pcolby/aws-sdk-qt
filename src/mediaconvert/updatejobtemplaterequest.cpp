@@ -27,19 +27,16 @@ namespace MediaConvert {
 
 /*!
  * \class QtAws::MediaConvert::UpdateJobTemplateRequest
- *
  * \brief The UpdateJobTemplateRequest class provides an interface for MediaConvert UpdateJobTemplate requests.
  *
- * \ingroup MediaConvert
+ * \inmodule QtAwsMediaConvert
  *
  *
  * \sa MediaConvertClient::updateJobTemplate
  */
 
 /*!
- * @brief  Constructs a new UpdateJobTemplateRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateJobTemplateRequest::UpdateJobTemplateRequest(const UpdateJobTemplateRequest &other)
     : MediaConvertRequest(new UpdateJobTemplateRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ UpdateJobTemplateRequest::UpdateJobTemplateRequest(const UpdateJobTemplateReques
 }
 
 /*!
- * @brief  Constructs a new UpdateJobTemplateRequest object.
+ * Constructs a UpdateJobTemplateRequest object.
  */
 UpdateJobTemplateRequest::UpdateJobTemplateRequest()
     : MediaConvertRequest(new UpdateJobTemplateRequestPrivate(MediaConvertRequest::UpdateJobTemplateAction, this))
@@ -66,14 +63,9 @@ bool UpdateJobTemplateRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateJobTemplateResponse object.
+ * Returns a UpdateJobTemplateResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateJobTemplateResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MediaConvertClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateJobTemplateRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * UpdateJobTemplateRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::MediaConvert::UpdateJobTemplateRequestPrivate
+ * \brief The UpdateJobTemplateRequestPrivate class provides private implementation for UpdateJobTemplateRequest.
+ * \internal
  *
- * @class  UpdateJobTemplateRequestPrivate
- *
- * @brief  Private implementation for UpdateJobTemplateRequest.
+ * \inmodule QtAwsMediaConvert
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateJobTemplateRequestPrivate object.
- *
- * @param  action  MediaConvert action being performed.
- * @param  q       Pointer to this object's public UpdateJobTemplateRequest instance.
+ * Constructs a UpdateJobTemplateRequestPrivate object for MediaConvert \a action with,
+ * public implementation \a q.
  */
 UpdateJobTemplateRequestPrivate::UpdateJobTemplateRequestPrivate(
     const MediaConvertRequest::Action action, UpdateJobTemplateRequest * const q)
@@ -104,15 +93,10 @@ UpdateJobTemplateRequestPrivate::UpdateJobTemplateRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateJobTemplateRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateJobTemplateRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateJobTemplateRequest instance.
  */
 UpdateJobTemplateRequestPrivate::UpdateJobTemplateRequestPrivate(
     const UpdateJobTemplateRequestPrivate &other, UpdateJobTemplateRequest * const q)

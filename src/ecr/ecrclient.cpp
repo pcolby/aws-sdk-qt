@@ -72,6 +72,9 @@
 /*!
  * \namespace QtAws::ECR
  * \brief The QtAws::ECR contains stuff...
+ *
+ * \inmodule QtAwsECR
+ *
  * @todo Move this to a separate template file.
  */
 
@@ -125,7 +128,7 @@ EcrClient::EcrClient(
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * \a  AwsEndpoint::getEndpoint()
+ * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
 EcrClient::EcrClient(
     const QUrl &endpoint,

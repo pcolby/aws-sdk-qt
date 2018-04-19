@@ -27,10 +27,9 @@ namespace DynamoDB {
 
 /*!
  * \class QtAws::DynamoDB::DescribeContinuousBackupsRequest
- *
  * \brief The DescribeContinuousBackupsRequest class provides an interface for DynamoDB DescribeContinuousBackups requests.
  *
- * \ingroup DynamoDB
+ * \inmodule QtAwsDynamoDB
  *
  *  <fullname>Amazon DynamoDB</fullname>
  * 
@@ -56,9 +55,7 @@ namespace DynamoDB {
  */
 
 /*!
- * @brief  Constructs a new DescribeContinuousBackupsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeContinuousBackupsRequest::DescribeContinuousBackupsRequest(const DescribeContinuousBackupsRequest &other)
     : DynamoDBRequest(new DescribeContinuousBackupsRequestPrivate(*other.d_func(), this))
@@ -67,7 +64,7 @@ DescribeContinuousBackupsRequest::DescribeContinuousBackupsRequest(const Describ
 }
 
 /*!
- * @brief  Constructs a new DescribeContinuousBackupsRequest object.
+ * Constructs a DescribeContinuousBackupsRequest object.
  */
 DescribeContinuousBackupsRequest::DescribeContinuousBackupsRequest()
     : DynamoDBRequest(new DescribeContinuousBackupsRequestPrivate(DynamoDBRequest::DescribeContinuousBackupsAction, this))
@@ -85,14 +82,9 @@ bool DescribeContinuousBackupsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeContinuousBackupsResponse object.
+ * Returns a DescribeContinuousBackupsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeContinuousBackupsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DynamoDBClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeContinuousBackupsRequest::response(QNetworkReply * const reply) const
 {
@@ -100,20 +92,17 @@ QtAws::Core::AwsAbstractResponse * DescribeContinuousBackupsRequest::response(QN
 }
 
 /*!
- * @internal
+ * \class QtAws::DynamoDB::DescribeContinuousBackupsRequestPrivate
+ * \brief The DescribeContinuousBackupsRequestPrivate class provides private implementation for DescribeContinuousBackupsRequest.
+ * \internal
  *
- * @class  DescribeContinuousBackupsRequestPrivate
- *
- * @brief  Private implementation for DescribeContinuousBackupsRequest.
+ * \inmodule QtAwsDynamoDB
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeContinuousBackupsRequestPrivate object.
- *
- * @param  action  DynamoDB action being performed.
- * @param  q       Pointer to this object's public DescribeContinuousBackupsRequest instance.
+ * Constructs a DescribeContinuousBackupsRequestPrivate object for DynamoDB \a action with,
+ * public implementation \a q.
  */
 DescribeContinuousBackupsRequestPrivate::DescribeContinuousBackupsRequestPrivate(
     const DynamoDBRequest::Action action, DescribeContinuousBackupsRequest * const q)
@@ -123,15 +112,10 @@ DescribeContinuousBackupsRequestPrivate::DescribeContinuousBackupsRequestPrivate
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeContinuousBackupsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeContinuousBackupsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeContinuousBackupsRequest instance.
  */
 DescribeContinuousBackupsRequestPrivate::DescribeContinuousBackupsRequestPrivate(
     const DescribeContinuousBackupsRequestPrivate &other, DescribeContinuousBackupsRequest * const q)

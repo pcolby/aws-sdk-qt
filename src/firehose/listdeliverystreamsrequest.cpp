@@ -27,10 +27,9 @@ namespace Firehose {
 
 /*!
  * \class QtAws::Firehose::ListDeliveryStreamsRequest
- *
  * \brief The ListDeliveryStreamsRequest class provides an interface for Firehose ListDeliveryStreams requests.
  *
- * \ingroup Firehose
+ * \inmodule QtAwsFirehose
  *
  *  <fullname>Amazon Kinesis Firehose API Reference</fullname>
  * 
@@ -41,9 +40,7 @@ namespace Firehose {
  */
 
 /*!
- * @brief  Constructs a new ListDeliveryStreamsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListDeliveryStreamsRequest::ListDeliveryStreamsRequest(const ListDeliveryStreamsRequest &other)
     : FirehoseRequest(new ListDeliveryStreamsRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ ListDeliveryStreamsRequest::ListDeliveryStreamsRequest(const ListDeliveryStreams
 }
 
 /*!
- * @brief  Constructs a new ListDeliveryStreamsRequest object.
+ * Constructs a ListDeliveryStreamsRequest object.
  */
 ListDeliveryStreamsRequest::ListDeliveryStreamsRequest()
     : FirehoseRequest(new ListDeliveryStreamsRequestPrivate(FirehoseRequest::ListDeliveryStreamsAction, this))
@@ -70,14 +67,9 @@ bool ListDeliveryStreamsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListDeliveryStreamsResponse object.
+ * Returns a ListDeliveryStreamsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListDeliveryStreamsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  FirehoseClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListDeliveryStreamsRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * ListDeliveryStreamsRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::Firehose::ListDeliveryStreamsRequestPrivate
+ * \brief The ListDeliveryStreamsRequestPrivate class provides private implementation for ListDeliveryStreamsRequest.
+ * \internal
  *
- * @class  ListDeliveryStreamsRequestPrivate
- *
- * @brief  Private implementation for ListDeliveryStreamsRequest.
+ * \inmodule QtAwsFirehose
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListDeliveryStreamsRequestPrivate object.
- *
- * @param  action  Firehose action being performed.
- * @param  q       Pointer to this object's public ListDeliveryStreamsRequest instance.
+ * Constructs a ListDeliveryStreamsRequestPrivate object for Firehose \a action with,
+ * public implementation \a q.
  */
 ListDeliveryStreamsRequestPrivate::ListDeliveryStreamsRequestPrivate(
     const FirehoseRequest::Action action, ListDeliveryStreamsRequest * const q)
@@ -108,15 +97,10 @@ ListDeliveryStreamsRequestPrivate::ListDeliveryStreamsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListDeliveryStreamsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListDeliveryStreamsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListDeliveryStreamsRequest instance.
  */
 ListDeliveryStreamsRequestPrivate::ListDeliveryStreamsRequestPrivate(
     const ListDeliveryStreamsRequestPrivate &other, ListDeliveryStreamsRequest * const q)

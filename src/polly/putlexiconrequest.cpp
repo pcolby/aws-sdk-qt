@@ -27,10 +27,9 @@ namespace Polly {
 
 /*!
  * \class QtAws::Polly::PutLexiconRequest
- *
  * \brief The PutLexiconRequest class provides an interface for Polly PutLexicon requests.
  *
- * \ingroup Polly
+ * \inmodule QtAwsPolly
  *
  *  Amazon Polly is a web service that makes it easy to synthesize speech from
  * 
@@ -44,9 +43,7 @@ namespace Polly {
  */
 
 /*!
- * @brief  Constructs a new PutLexiconRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 PutLexiconRequest::PutLexiconRequest(const PutLexiconRequest &other)
     : PollyRequest(new PutLexiconRequestPrivate(*other.d_func(), this))
@@ -55,7 +52,7 @@ PutLexiconRequest::PutLexiconRequest(const PutLexiconRequest &other)
 }
 
 /*!
- * @brief  Constructs a new PutLexiconRequest object.
+ * Constructs a PutLexiconRequest object.
  */
 PutLexiconRequest::PutLexiconRequest()
     : PollyRequest(new PutLexiconRequestPrivate(PollyRequest::PutLexiconAction, this))
@@ -73,14 +70,9 @@ bool PutLexiconRequest::isValid() const
 
 
 /*!
- * @brief  Construct an PutLexiconResponse object.
+ * Returns a PutLexiconResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An PutLexiconResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  PollyClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * PutLexiconRequest::response(QNetworkReply * const reply) const
 {
@@ -88,20 +80,17 @@ QtAws::Core::AwsAbstractResponse * PutLexiconRequest::response(QNetworkReply * c
 }
 
 /*!
- * @internal
+ * \class QtAws::Polly::PutLexiconRequestPrivate
+ * \brief The PutLexiconRequestPrivate class provides private implementation for PutLexiconRequest.
+ * \internal
  *
- * @class  PutLexiconRequestPrivate
- *
- * @brief  Private implementation for PutLexiconRequest.
+ * \inmodule QtAwsPolly
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new PutLexiconRequestPrivate object.
- *
- * @param  action  Polly action being performed.
- * @param  q       Pointer to this object's public PutLexiconRequest instance.
+ * Constructs a PutLexiconRequestPrivate object for Polly \a action with,
+ * public implementation \a q.
  */
 PutLexiconRequestPrivate::PutLexiconRequestPrivate(
     const PollyRequest::Action action, PutLexiconRequest * const q)
@@ -111,15 +100,10 @@ PutLexiconRequestPrivate::PutLexiconRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutLexiconRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the PutLexiconRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public PutLexiconRequest instance.
  */
 PutLexiconRequestPrivate::PutLexiconRequestPrivate(
     const PutLexiconRequestPrivate &other, PutLexiconRequest * const q)

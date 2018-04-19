@@ -27,10 +27,9 @@ namespace CodeCommit {
 
 /*!
  * \class QtAws::CodeCommit::TestRepositoryTriggersRequest
- *
  * \brief The TestRepositoryTriggersRequest class provides an interface for CodeCommit TestRepositoryTriggers requests.
  *
- * \ingroup CodeCommit
+ * \inmodule QtAwsCodeCommit
  *
  *  <fullname>AWS CodeCommit</fullname>
  * 
@@ -227,9 +226,7 @@ namespace CodeCommit {
  */
 
 /*!
- * @brief  Constructs a new TestRepositoryTriggersRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 TestRepositoryTriggersRequest::TestRepositoryTriggersRequest(const TestRepositoryTriggersRequest &other)
     : CodeCommitRequest(new TestRepositoryTriggersRequestPrivate(*other.d_func(), this))
@@ -238,7 +235,7 @@ TestRepositoryTriggersRequest::TestRepositoryTriggersRequest(const TestRepositor
 }
 
 /*!
- * @brief  Constructs a new TestRepositoryTriggersRequest object.
+ * Constructs a TestRepositoryTriggersRequest object.
  */
 TestRepositoryTriggersRequest::TestRepositoryTriggersRequest()
     : CodeCommitRequest(new TestRepositoryTriggersRequestPrivate(CodeCommitRequest::TestRepositoryTriggersAction, this))
@@ -256,14 +253,9 @@ bool TestRepositoryTriggersRequest::isValid() const
 
 
 /*!
- * @brief  Construct an TestRepositoryTriggersResponse object.
+ * Returns a TestRepositoryTriggersResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An TestRepositoryTriggersResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CodeCommitClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * TestRepositoryTriggersRequest::response(QNetworkReply * const reply) const
 {
@@ -271,20 +263,17 @@ QtAws::Core::AwsAbstractResponse * TestRepositoryTriggersRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::CodeCommit::TestRepositoryTriggersRequestPrivate
+ * \brief The TestRepositoryTriggersRequestPrivate class provides private implementation for TestRepositoryTriggersRequest.
+ * \internal
  *
- * @class  TestRepositoryTriggersRequestPrivate
- *
- * @brief  Private implementation for TestRepositoryTriggersRequest.
+ * \inmodule QtAwsCodeCommit
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new TestRepositoryTriggersRequestPrivate object.
- *
- * @param  action  CodeCommit action being performed.
- * @param  q       Pointer to this object's public TestRepositoryTriggersRequest instance.
+ * Constructs a TestRepositoryTriggersRequestPrivate object for CodeCommit \a action with,
+ * public implementation \a q.
  */
 TestRepositoryTriggersRequestPrivate::TestRepositoryTriggersRequestPrivate(
     const CodeCommitRequest::Action action, TestRepositoryTriggersRequest * const q)
@@ -294,15 +283,10 @@ TestRepositoryTriggersRequestPrivate::TestRepositoryTriggersRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new TestRepositoryTriggersRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the TestRepositoryTriggersRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public TestRepositoryTriggersRequest instance.
  */
 TestRepositoryTriggersRequestPrivate::TestRepositoryTriggersRequestPrivate(
     const TestRepositoryTriggersRequestPrivate &other, TestRepositoryTriggersRequest * const q)

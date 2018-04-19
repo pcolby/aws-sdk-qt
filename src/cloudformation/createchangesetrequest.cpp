@@ -27,10 +27,9 @@ namespace CloudFormation {
 
 /*!
  * \class QtAws::CloudFormation::CreateChangeSetRequest
- *
  * \brief The CreateChangeSetRequest class provides an interface for CloudFormation CreateChangeSet requests.
  *
- * \ingroup CloudFormation
+ * \inmodule QtAwsCloudFormation
  *
  *  <fullname>AWS CloudFormation</fullname>
  * 
@@ -59,9 +58,7 @@ namespace CloudFormation {
  */
 
 /*!
- * @brief  Constructs a new CreateChangeSetRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateChangeSetRequest::CreateChangeSetRequest(const CreateChangeSetRequest &other)
     : CloudFormationRequest(new CreateChangeSetRequestPrivate(*other.d_func(), this))
@@ -70,7 +67,7 @@ CreateChangeSetRequest::CreateChangeSetRequest(const CreateChangeSetRequest &oth
 }
 
 /*!
- * @brief  Constructs a new CreateChangeSetRequest object.
+ * Constructs a CreateChangeSetRequest object.
  */
 CreateChangeSetRequest::CreateChangeSetRequest()
     : CloudFormationRequest(new CreateChangeSetRequestPrivate(CloudFormationRequest::CreateChangeSetAction, this))
@@ -88,14 +85,9 @@ bool CreateChangeSetRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateChangeSetResponse object.
+ * Returns a CreateChangeSetResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateChangeSetResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudFormationClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateChangeSetRequest::response(QNetworkReply * const reply) const
 {
@@ -103,20 +95,17 @@ QtAws::Core::AwsAbstractResponse * CreateChangeSetRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudFormation::CreateChangeSetRequestPrivate
+ * \brief The CreateChangeSetRequestPrivate class provides private implementation for CreateChangeSetRequest.
+ * \internal
  *
- * @class  CreateChangeSetRequestPrivate
- *
- * @brief  Private implementation for CreateChangeSetRequest.
+ * \inmodule QtAwsCloudFormation
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateChangeSetRequestPrivate object.
- *
- * @param  action  CloudFormation action being performed.
- * @param  q       Pointer to this object's public CreateChangeSetRequest instance.
+ * Constructs a CreateChangeSetRequestPrivate object for CloudFormation \a action with,
+ * public implementation \a q.
  */
 CreateChangeSetRequestPrivate::CreateChangeSetRequestPrivate(
     const CloudFormationRequest::Action action, CreateChangeSetRequest * const q)
@@ -126,15 +115,10 @@ CreateChangeSetRequestPrivate::CreateChangeSetRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateChangeSetRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateChangeSetRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateChangeSetRequest instance.
  */
 CreateChangeSetRequestPrivate::CreateChangeSetRequestPrivate(
     const CreateChangeSetRequestPrivate &other, CreateChangeSetRequest * const q)

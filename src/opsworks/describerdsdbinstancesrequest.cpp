@@ -27,10 +27,9 @@ namespace OpsWorks {
 
 /*!
  * \class QtAws::OpsWorks::DescribeRdsDbInstancesRequest
- *
  * \brief The DescribeRdsDbInstancesRequest class provides an interface for OpsWorks DescribeRdsDbInstances requests.
  *
- * \ingroup OpsWorks
+ * \inmodule QtAwsOpsWorks
  *
  *  <fullname>AWS OpsWorks</fullname>
  * 
@@ -143,9 +142,7 @@ namespace OpsWorks {
  */
 
 /*!
- * @brief  Constructs a new DescribeRdsDbInstancesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeRdsDbInstancesRequest::DescribeRdsDbInstancesRequest(const DescribeRdsDbInstancesRequest &other)
     : OpsWorksRequest(new DescribeRdsDbInstancesRequestPrivate(*other.d_func(), this))
@@ -154,7 +151,7 @@ DescribeRdsDbInstancesRequest::DescribeRdsDbInstancesRequest(const DescribeRdsDb
 }
 
 /*!
- * @brief  Constructs a new DescribeRdsDbInstancesRequest object.
+ * Constructs a DescribeRdsDbInstancesRequest object.
  */
 DescribeRdsDbInstancesRequest::DescribeRdsDbInstancesRequest()
     : OpsWorksRequest(new DescribeRdsDbInstancesRequestPrivate(OpsWorksRequest::DescribeRdsDbInstancesAction, this))
@@ -172,14 +169,9 @@ bool DescribeRdsDbInstancesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeRdsDbInstancesResponse object.
+ * Returns a DescribeRdsDbInstancesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeRdsDbInstancesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  OpsWorksClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeRdsDbInstancesRequest::response(QNetworkReply * const reply) const
 {
@@ -187,20 +179,17 @@ QtAws::Core::AwsAbstractResponse * DescribeRdsDbInstancesRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::OpsWorks::DescribeRdsDbInstancesRequestPrivate
+ * \brief The DescribeRdsDbInstancesRequestPrivate class provides private implementation for DescribeRdsDbInstancesRequest.
+ * \internal
  *
- * @class  DescribeRdsDbInstancesRequestPrivate
- *
- * @brief  Private implementation for DescribeRdsDbInstancesRequest.
+ * \inmodule QtAwsOpsWorks
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeRdsDbInstancesRequestPrivate object.
- *
- * @param  action  OpsWorks action being performed.
- * @param  q       Pointer to this object's public DescribeRdsDbInstancesRequest instance.
+ * Constructs a DescribeRdsDbInstancesRequestPrivate object for OpsWorks \a action with,
+ * public implementation \a q.
  */
 DescribeRdsDbInstancesRequestPrivate::DescribeRdsDbInstancesRequestPrivate(
     const OpsWorksRequest::Action action, DescribeRdsDbInstancesRequest * const q)
@@ -210,15 +199,10 @@ DescribeRdsDbInstancesRequestPrivate::DescribeRdsDbInstancesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeRdsDbInstancesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeRdsDbInstancesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeRdsDbInstancesRequest instance.
  */
 DescribeRdsDbInstancesRequestPrivate::DescribeRdsDbInstancesRequestPrivate(
     const DescribeRdsDbInstancesRequestPrivate &other, DescribeRdsDbInstancesRequest * const q)

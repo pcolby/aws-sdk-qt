@@ -32,6 +32,9 @@
 /*!
  * \namespace QtAws::MarketplaceCommerceAnalytics
  * \brief The QtAws::MarketplaceCommerceAnalytics contains stuff...
+ *
+ * \inmodule QtAwsMarketplaceCommerceAnalytics
+ *
  * @todo Move this to a separate template file.
  */
 
@@ -81,7 +84,7 @@ MarketplaceCommerceAnalyticsClient::MarketplaceCommerceAnalyticsClient(
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * \a  AwsEndpoint::getEndpoint()
+ * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
 MarketplaceCommerceAnalyticsClient::MarketplaceCommerceAnalyticsClient(
     const QUrl &endpoint,

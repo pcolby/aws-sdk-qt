@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DescribeInstanceAttributeRequest
- *
  * \brief The DescribeInstanceAttributeRequest class provides an interface for EC2 DescribeInstanceAttribute requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DescribeInstanceAttributeRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeInstanceAttributeRequest::DescribeInstanceAttributeRequest(const DescribeInstanceAttributeRequest &other)
     : EC2Request(new DescribeInstanceAttributeRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ DescribeInstanceAttributeRequest::DescribeInstanceAttributeRequest(const Describ
 }
 
 /*!
- * @brief  Constructs a new DescribeInstanceAttributeRequest object.
+ * Constructs a DescribeInstanceAttributeRequest object.
  */
 DescribeInstanceAttributeRequest::DescribeInstanceAttributeRequest()
     : EC2Request(new DescribeInstanceAttributeRequestPrivate(EC2Request::DescribeInstanceAttributeAction, this))
@@ -70,14 +67,9 @@ bool DescribeInstanceAttributeRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeInstanceAttributeResponse object.
+ * Returns a DescribeInstanceAttributeResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeInstanceAttributeResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeInstanceAttributeRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * DescribeInstanceAttributeRequest::response(QN
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::DescribeInstanceAttributeRequestPrivate
+ * \brief The DescribeInstanceAttributeRequestPrivate class provides private implementation for DescribeInstanceAttributeRequest.
+ * \internal
  *
- * @class  DescribeInstanceAttributeRequestPrivate
- *
- * @brief  Private implementation for DescribeInstanceAttributeRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeInstanceAttributeRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public DescribeInstanceAttributeRequest instance.
+ * Constructs a DescribeInstanceAttributeRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 DescribeInstanceAttributeRequestPrivate::DescribeInstanceAttributeRequestPrivate(
     const EC2Request::Action action, DescribeInstanceAttributeRequest * const q)
@@ -108,15 +97,10 @@ DescribeInstanceAttributeRequestPrivate::DescribeInstanceAttributeRequestPrivate
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeInstanceAttributeRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeInstanceAttributeRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeInstanceAttributeRequest instance.
  */
 DescribeInstanceAttributeRequestPrivate::DescribeInstanceAttributeRequestPrivate(
     const DescribeInstanceAttributeRequestPrivate &other, DescribeInstanceAttributeRequest * const q)

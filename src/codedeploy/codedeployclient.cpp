@@ -108,6 +108,9 @@
 /*!
  * \namespace QtAws::CodeDeploy
  * \brief The QtAws::CodeDeploy contains stuff...
+ *
+ * \inmodule QtAwsCodeDeploy
+ *
  * @todo Move this to a separate template file.
  */
 
@@ -238,7 +241,7 @@ CodeDeployClient::CodeDeployClient(
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * \a  AwsEndpoint::getEndpoint()
+ * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
 CodeDeployClient::CodeDeployClient(
     const QUrl &endpoint,

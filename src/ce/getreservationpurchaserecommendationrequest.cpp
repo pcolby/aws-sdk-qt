@@ -27,10 +27,9 @@ namespace CostExplorer {
 
 /*!
  * \class QtAws::CostExplorer::GetReservationPurchaseRecommendationRequest
- *
  * \brief The GetReservationPurchaseRecommendationRequest class provides an interface for CostExplorer GetReservationPurchaseRecommendation requests.
  *
- * \ingroup CostExplorer
+ * \inmodule QtAwsCostExplorer
  *
  *  The Cost Explorer API allows you to programmatically query your cost and usage data. You can query for aggregated data
  *  such as total monthly costs or total daily usage. You can also query for granular data, such as the number of daily
@@ -50,9 +49,7 @@ namespace CostExplorer {
  */
 
 /*!
- * @brief  Constructs a new GetReservationPurchaseRecommendationRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetReservationPurchaseRecommendationRequest::GetReservationPurchaseRecommendationRequest(const GetReservationPurchaseRecommendationRequest &other)
     : CostExplorerRequest(new GetReservationPurchaseRecommendationRequestPrivate(*other.d_func(), this))
@@ -61,7 +58,7 @@ GetReservationPurchaseRecommendationRequest::GetReservationPurchaseRecommendatio
 }
 
 /*!
- * @brief  Constructs a new GetReservationPurchaseRecommendationRequest object.
+ * Constructs a GetReservationPurchaseRecommendationRequest object.
  */
 GetReservationPurchaseRecommendationRequest::GetReservationPurchaseRecommendationRequest()
     : CostExplorerRequest(new GetReservationPurchaseRecommendationRequestPrivate(CostExplorerRequest::GetReservationPurchaseRecommendationAction, this))
@@ -79,14 +76,9 @@ bool GetReservationPurchaseRecommendationRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetReservationPurchaseRecommendationResponse object.
+ * Returns a GetReservationPurchaseRecommendationResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetReservationPurchaseRecommendationResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CostExplorerClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetReservationPurchaseRecommendationRequest::response(QNetworkReply * const reply) const
 {
@@ -94,20 +86,17 @@ QtAws::Core::AwsAbstractResponse * GetReservationPurchaseRecommendationRequest::
 }
 
 /*!
- * @internal
+ * \class QtAws::CostExplorer::GetReservationPurchaseRecommendationRequestPrivate
+ * \brief The GetReservationPurchaseRecommendationRequestPrivate class provides private implementation for GetReservationPurchaseRecommendationRequest.
+ * \internal
  *
- * @class  GetReservationPurchaseRecommendationRequestPrivate
- *
- * @brief  Private implementation for GetReservationPurchaseRecommendationRequest.
+ * \inmodule QtAwsCostExplorer
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetReservationPurchaseRecommendationRequestPrivate object.
- *
- * @param  action  CostExplorer action being performed.
- * @param  q       Pointer to this object's public GetReservationPurchaseRecommendationRequest instance.
+ * Constructs a GetReservationPurchaseRecommendationRequestPrivate object for CostExplorer \a action with,
+ * public implementation \a q.
  */
 GetReservationPurchaseRecommendationRequestPrivate::GetReservationPurchaseRecommendationRequestPrivate(
     const CostExplorerRequest::Action action, GetReservationPurchaseRecommendationRequest * const q)
@@ -117,15 +106,10 @@ GetReservationPurchaseRecommendationRequestPrivate::GetReservationPurchaseRecomm
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetReservationPurchaseRecommendationRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetReservationPurchaseRecommendationRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetReservationPurchaseRecommendationRequest instance.
  */
 GetReservationPurchaseRecommendationRequestPrivate::GetReservationPurchaseRecommendationRequestPrivate(
     const GetReservationPurchaseRecommendationRequestPrivate &other, GetReservationPurchaseRecommendationRequest * const q)

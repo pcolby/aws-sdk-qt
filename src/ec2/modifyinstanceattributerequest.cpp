@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::ModifyInstanceAttributeRequest
- *
  * \brief The ModifyInstanceAttributeRequest class provides an interface for EC2 ModifyInstanceAttribute requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new ModifyInstanceAttributeRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ModifyInstanceAttributeRequest::ModifyInstanceAttributeRequest(const ModifyInstanceAttributeRequest &other)
     : EC2Request(new ModifyInstanceAttributeRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ ModifyInstanceAttributeRequest::ModifyInstanceAttributeRequest(const ModifyInsta
 }
 
 /*!
- * @brief  Constructs a new ModifyInstanceAttributeRequest object.
+ * Constructs a ModifyInstanceAttributeRequest object.
  */
 ModifyInstanceAttributeRequest::ModifyInstanceAttributeRequest()
     : EC2Request(new ModifyInstanceAttributeRequestPrivate(EC2Request::ModifyInstanceAttributeAction, this))
@@ -70,14 +67,9 @@ bool ModifyInstanceAttributeRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ModifyInstanceAttributeResponse object.
+ * Returns a ModifyInstanceAttributeResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ModifyInstanceAttributeResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ModifyInstanceAttributeRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * ModifyInstanceAttributeRequest::response(QNet
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::ModifyInstanceAttributeRequestPrivate
+ * \brief The ModifyInstanceAttributeRequestPrivate class provides private implementation for ModifyInstanceAttributeRequest.
+ * \internal
  *
- * @class  ModifyInstanceAttributeRequestPrivate
- *
- * @brief  Private implementation for ModifyInstanceAttributeRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ModifyInstanceAttributeRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public ModifyInstanceAttributeRequest instance.
+ * Constructs a ModifyInstanceAttributeRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 ModifyInstanceAttributeRequestPrivate::ModifyInstanceAttributeRequestPrivate(
     const EC2Request::Action action, ModifyInstanceAttributeRequest * const q)
@@ -108,15 +97,10 @@ ModifyInstanceAttributeRequestPrivate::ModifyInstanceAttributeRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ModifyInstanceAttributeRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ModifyInstanceAttributeRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ModifyInstanceAttributeRequest instance.
  */
 ModifyInstanceAttributeRequestPrivate::ModifyInstanceAttributeRequestPrivate(
     const ModifyInstanceAttributeRequestPrivate &other, ModifyInstanceAttributeRequest * const q)

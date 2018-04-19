@@ -27,10 +27,9 @@ namespace OpsWorks {
 
 /*!
  * \class QtAws::OpsWorks::DescribeServiceErrorsRequest
- *
  * \brief The DescribeServiceErrorsRequest class provides an interface for OpsWorks DescribeServiceErrors requests.
  *
- * \ingroup OpsWorks
+ * \inmodule QtAwsOpsWorks
  *
  *  <fullname>AWS OpsWorks</fullname>
  * 
@@ -143,9 +142,7 @@ namespace OpsWorks {
  */
 
 /*!
- * @brief  Constructs a new DescribeServiceErrorsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeServiceErrorsRequest::DescribeServiceErrorsRequest(const DescribeServiceErrorsRequest &other)
     : OpsWorksRequest(new DescribeServiceErrorsRequestPrivate(*other.d_func(), this))
@@ -154,7 +151,7 @@ DescribeServiceErrorsRequest::DescribeServiceErrorsRequest(const DescribeService
 }
 
 /*!
- * @brief  Constructs a new DescribeServiceErrorsRequest object.
+ * Constructs a DescribeServiceErrorsRequest object.
  */
 DescribeServiceErrorsRequest::DescribeServiceErrorsRequest()
     : OpsWorksRequest(new DescribeServiceErrorsRequestPrivate(OpsWorksRequest::DescribeServiceErrorsAction, this))
@@ -172,14 +169,9 @@ bool DescribeServiceErrorsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeServiceErrorsResponse object.
+ * Returns a DescribeServiceErrorsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeServiceErrorsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  OpsWorksClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeServiceErrorsRequest::response(QNetworkReply * const reply) const
 {
@@ -187,20 +179,17 @@ QtAws::Core::AwsAbstractResponse * DescribeServiceErrorsRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::OpsWorks::DescribeServiceErrorsRequestPrivate
+ * \brief The DescribeServiceErrorsRequestPrivate class provides private implementation for DescribeServiceErrorsRequest.
+ * \internal
  *
- * @class  DescribeServiceErrorsRequestPrivate
- *
- * @brief  Private implementation for DescribeServiceErrorsRequest.
+ * \inmodule QtAwsOpsWorks
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeServiceErrorsRequestPrivate object.
- *
- * @param  action  OpsWorks action being performed.
- * @param  q       Pointer to this object's public DescribeServiceErrorsRequest instance.
+ * Constructs a DescribeServiceErrorsRequestPrivate object for OpsWorks \a action with,
+ * public implementation \a q.
  */
 DescribeServiceErrorsRequestPrivate::DescribeServiceErrorsRequestPrivate(
     const OpsWorksRequest::Action action, DescribeServiceErrorsRequest * const q)
@@ -210,15 +199,10 @@ DescribeServiceErrorsRequestPrivate::DescribeServiceErrorsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeServiceErrorsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeServiceErrorsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeServiceErrorsRequest instance.
  */
 DescribeServiceErrorsRequestPrivate::DescribeServiceErrorsRequestPrivate(
     const DescribeServiceErrorsRequestPrivate &other, DescribeServiceErrorsRequest * const q)

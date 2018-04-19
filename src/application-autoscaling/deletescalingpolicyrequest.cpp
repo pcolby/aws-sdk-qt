@@ -27,10 +27,9 @@ namespace ApplicationAutoScaling {
 
 /*!
  * \class QtAws::ApplicationAutoScaling::DeleteScalingPolicyRequest
- *
  * \brief The DeleteScalingPolicyRequest class provides an interface for ApplicationAutoScaling DeleteScalingPolicy requests.
  *
- * \ingroup ApplicationAutoScaling
+ * \inmodule QtAwsApplicationAutoScaling
  *
  *  With Application Auto Scaling, you can configure automatic scaling for your scalable AWS resources. You can use
  *  Application Auto Scaling to accomplish the following
@@ -110,9 +109,7 @@ namespace ApplicationAutoScaling {
  */
 
 /*!
- * @brief  Constructs a new DeleteScalingPolicyRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteScalingPolicyRequest::DeleteScalingPolicyRequest(const DeleteScalingPolicyRequest &other)
     : ApplicationAutoScalingRequest(new DeleteScalingPolicyRequestPrivate(*other.d_func(), this))
@@ -121,7 +118,7 @@ DeleteScalingPolicyRequest::DeleteScalingPolicyRequest(const DeleteScalingPolicy
 }
 
 /*!
- * @brief  Constructs a new DeleteScalingPolicyRequest object.
+ * Constructs a DeleteScalingPolicyRequest object.
  */
 DeleteScalingPolicyRequest::DeleteScalingPolicyRequest()
     : ApplicationAutoScalingRequest(new DeleteScalingPolicyRequestPrivate(ApplicationAutoScalingRequest::DeleteScalingPolicyAction, this))
@@ -139,14 +136,9 @@ bool DeleteScalingPolicyRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteScalingPolicyResponse object.
+ * Returns a DeleteScalingPolicyResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteScalingPolicyResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ApplicationAutoScalingClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteScalingPolicyRequest::response(QNetworkReply * const reply) const
 {
@@ -154,20 +146,17 @@ QtAws::Core::AwsAbstractResponse * DeleteScalingPolicyRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::ApplicationAutoScaling::DeleteScalingPolicyRequestPrivate
+ * \brief The DeleteScalingPolicyRequestPrivate class provides private implementation for DeleteScalingPolicyRequest.
+ * \internal
  *
- * @class  DeleteScalingPolicyRequestPrivate
- *
- * @brief  Private implementation for DeleteScalingPolicyRequest.
+ * \inmodule QtAwsApplicationAutoScaling
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteScalingPolicyRequestPrivate object.
- *
- * @param  action  ApplicationAutoScaling action being performed.
- * @param  q       Pointer to this object's public DeleteScalingPolicyRequest instance.
+ * Constructs a DeleteScalingPolicyRequestPrivate object for ApplicationAutoScaling \a action with,
+ * public implementation \a q.
  */
 DeleteScalingPolicyRequestPrivate::DeleteScalingPolicyRequestPrivate(
     const ApplicationAutoScalingRequest::Action action, DeleteScalingPolicyRequest * const q)
@@ -177,15 +166,10 @@ DeleteScalingPolicyRequestPrivate::DeleteScalingPolicyRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteScalingPolicyRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteScalingPolicyRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteScalingPolicyRequest instance.
  */
 DeleteScalingPolicyRequestPrivate::DeleteScalingPolicyRequestPrivate(
     const DeleteScalingPolicyRequestPrivate &other, DeleteScalingPolicyRequest * const q)

@@ -27,10 +27,9 @@ namespace SES {
 
 /*!
  * \class QtAws::SES::CreateReceiptFilterRequest
- *
  * \brief The CreateReceiptFilterRequest class provides an interface for SES CreateReceiptFilter requests.
  *
- * \ingroup SES
+ * \inmodule QtAwsSES
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -48,9 +47,7 @@ namespace SES {
  */
 
 /*!
- * @brief  Constructs a new CreateReceiptFilterRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateReceiptFilterRequest::CreateReceiptFilterRequest(const CreateReceiptFilterRequest &other)
     : SESRequest(new CreateReceiptFilterRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ CreateReceiptFilterRequest::CreateReceiptFilterRequest(const CreateReceiptFilter
 }
 
 /*!
- * @brief  Constructs a new CreateReceiptFilterRequest object.
+ * Constructs a CreateReceiptFilterRequest object.
  */
 CreateReceiptFilterRequest::CreateReceiptFilterRequest()
     : SESRequest(new CreateReceiptFilterRequestPrivate(SESRequest::CreateReceiptFilterAction, this))
@@ -77,14 +74,9 @@ bool CreateReceiptFilterRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateReceiptFilterResponse object.
+ * Returns a CreateReceiptFilterResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateReceiptFilterResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SESClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateReceiptFilterRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * CreateReceiptFilterRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::SES::CreateReceiptFilterRequestPrivate
+ * \brief The CreateReceiptFilterRequestPrivate class provides private implementation for CreateReceiptFilterRequest.
+ * \internal
  *
- * @class  CreateReceiptFilterRequestPrivate
- *
- * @brief  Private implementation for CreateReceiptFilterRequest.
+ * \inmodule QtAwsSES
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateReceiptFilterRequestPrivate object.
- *
- * @param  action  SES action being performed.
- * @param  q       Pointer to this object's public CreateReceiptFilterRequest instance.
+ * Constructs a CreateReceiptFilterRequestPrivate object for SES \a action with,
+ * public implementation \a q.
  */
 CreateReceiptFilterRequestPrivate::CreateReceiptFilterRequestPrivate(
     const SESRequest::Action action, CreateReceiptFilterRequest * const q)
@@ -115,15 +104,10 @@ CreateReceiptFilterRequestPrivate::CreateReceiptFilterRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateReceiptFilterRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateReceiptFilterRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateReceiptFilterRequest instance.
  */
 CreateReceiptFilterRequestPrivate::CreateReceiptFilterRequestPrivate(
     const CreateReceiptFilterRequestPrivate &other, CreateReceiptFilterRequest * const q)

@@ -27,10 +27,9 @@ namespace WAFRegional {
 
 /*!
  * \class QtAws::WAFRegional::UpdateXssMatchSetRequest
- *
  * \brief The UpdateXssMatchSetRequest class provides an interface for WAFRegional UpdateXssMatchSet requests.
  *
- * \ingroup WAFRegional
+ * \inmodule QtAwsWAFRegional
  *
  *  This is the <i>AWS WAF Regional API Reference</i> for using AWS WAF with Elastic Load Balancing (ELB) Application Load
  *  Balancers. The AWS WAF actions and data types listed in the reference are available for protecting Application Load
@@ -44,9 +43,7 @@ namespace WAFRegional {
  */
 
 /*!
- * @brief  Constructs a new UpdateXssMatchSetRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateXssMatchSetRequest::UpdateXssMatchSetRequest(const UpdateXssMatchSetRequest &other)
     : WAFRegionalRequest(new UpdateXssMatchSetRequestPrivate(*other.d_func(), this))
@@ -55,7 +52,7 @@ UpdateXssMatchSetRequest::UpdateXssMatchSetRequest(const UpdateXssMatchSetReques
 }
 
 /*!
- * @brief  Constructs a new UpdateXssMatchSetRequest object.
+ * Constructs a UpdateXssMatchSetRequest object.
  */
 UpdateXssMatchSetRequest::UpdateXssMatchSetRequest()
     : WAFRegionalRequest(new UpdateXssMatchSetRequestPrivate(WAFRegionalRequest::UpdateXssMatchSetAction, this))
@@ -73,14 +70,9 @@ bool UpdateXssMatchSetRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateXssMatchSetResponse object.
+ * Returns a UpdateXssMatchSetResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateXssMatchSetResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WAFRegionalClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateXssMatchSetRequest::response(QNetworkReply * const reply) const
 {
@@ -88,20 +80,17 @@ QtAws::Core::AwsAbstractResponse * UpdateXssMatchSetRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::WAFRegional::UpdateXssMatchSetRequestPrivate
+ * \brief The UpdateXssMatchSetRequestPrivate class provides private implementation for UpdateXssMatchSetRequest.
+ * \internal
  *
- * @class  UpdateXssMatchSetRequestPrivate
- *
- * @brief  Private implementation for UpdateXssMatchSetRequest.
+ * \inmodule QtAwsWAFRegional
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateXssMatchSetRequestPrivate object.
- *
- * @param  action  WAFRegional action being performed.
- * @param  q       Pointer to this object's public UpdateXssMatchSetRequest instance.
+ * Constructs a UpdateXssMatchSetRequestPrivate object for WAFRegional \a action with,
+ * public implementation \a q.
  */
 UpdateXssMatchSetRequestPrivate::UpdateXssMatchSetRequestPrivate(
     const WAFRegionalRequest::Action action, UpdateXssMatchSetRequest * const q)
@@ -111,15 +100,10 @@ UpdateXssMatchSetRequestPrivate::UpdateXssMatchSetRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateXssMatchSetRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateXssMatchSetRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateXssMatchSetRequest instance.
  */
 UpdateXssMatchSetRequestPrivate::UpdateXssMatchSetRequestPrivate(
     const UpdateXssMatchSetRequestPrivate &other, UpdateXssMatchSetRequest * const q)

@@ -27,19 +27,16 @@ namespace MediaConvert {
 
 /*!
  * \class QtAws::MediaConvert::DeletePresetRequest
- *
  * \brief The DeletePresetRequest class provides an interface for MediaConvert DeletePreset requests.
  *
- * \ingroup MediaConvert
+ * \inmodule QtAwsMediaConvert
  *
  *
  * \sa MediaConvertClient::deletePreset
  */
 
 /*!
- * @brief  Constructs a new DeletePresetRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeletePresetRequest::DeletePresetRequest(const DeletePresetRequest &other)
     : MediaConvertRequest(new DeletePresetRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ DeletePresetRequest::DeletePresetRequest(const DeletePresetRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DeletePresetRequest object.
+ * Constructs a DeletePresetRequest object.
  */
 DeletePresetRequest::DeletePresetRequest()
     : MediaConvertRequest(new DeletePresetRequestPrivate(MediaConvertRequest::DeletePresetAction, this))
@@ -66,14 +63,9 @@ bool DeletePresetRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeletePresetResponse object.
+ * Returns a DeletePresetResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeletePresetResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MediaConvertClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeletePresetRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * DeletePresetRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::MediaConvert::DeletePresetRequestPrivate
+ * \brief The DeletePresetRequestPrivate class provides private implementation for DeletePresetRequest.
+ * \internal
  *
- * @class  DeletePresetRequestPrivate
- *
- * @brief  Private implementation for DeletePresetRequest.
+ * \inmodule QtAwsMediaConvert
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeletePresetRequestPrivate object.
- *
- * @param  action  MediaConvert action being performed.
- * @param  q       Pointer to this object's public DeletePresetRequest instance.
+ * Constructs a DeletePresetRequestPrivate object for MediaConvert \a action with,
+ * public implementation \a q.
  */
 DeletePresetRequestPrivate::DeletePresetRequestPrivate(
     const MediaConvertRequest::Action action, DeletePresetRequest * const q)
@@ -104,15 +93,10 @@ DeletePresetRequestPrivate::DeletePresetRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeletePresetRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeletePresetRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeletePresetRequest instance.
  */
 DeletePresetRequestPrivate::DeletePresetRequestPrivate(
     const DeletePresetRequestPrivate &other, DeletePresetRequest * const q)

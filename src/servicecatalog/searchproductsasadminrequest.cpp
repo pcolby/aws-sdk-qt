@@ -27,10 +27,9 @@ namespace ServiceCatalog {
 
 /*!
  * \class QtAws::ServiceCatalog::SearchProductsAsAdminRequest
- *
  * \brief The SearchProductsAsAdminRequest class provides an interface for ServiceCatalog SearchProductsAsAdmin requests.
  *
- * \ingroup ServiceCatalog
+ * \inmodule QtAwsServiceCatalog
  *
  *  <fullname>AWS Service Catalog</fullname>
  * 
@@ -43,9 +42,7 @@ namespace ServiceCatalog {
  */
 
 /*!
- * @brief  Constructs a new SearchProductsAsAdminRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 SearchProductsAsAdminRequest::SearchProductsAsAdminRequest(const SearchProductsAsAdminRequest &other)
     : ServiceCatalogRequest(new SearchProductsAsAdminRequestPrivate(*other.d_func(), this))
@@ -54,7 +51,7 @@ SearchProductsAsAdminRequest::SearchProductsAsAdminRequest(const SearchProductsA
 }
 
 /*!
- * @brief  Constructs a new SearchProductsAsAdminRequest object.
+ * Constructs a SearchProductsAsAdminRequest object.
  */
 SearchProductsAsAdminRequest::SearchProductsAsAdminRequest()
     : ServiceCatalogRequest(new SearchProductsAsAdminRequestPrivate(ServiceCatalogRequest::SearchProductsAsAdminAction, this))
@@ -72,14 +69,9 @@ bool SearchProductsAsAdminRequest::isValid() const
 
 
 /*!
- * @brief  Construct an SearchProductsAsAdminResponse object.
+ * Returns a SearchProductsAsAdminResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An SearchProductsAsAdminResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ServiceCatalogClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * SearchProductsAsAdminRequest::response(QNetworkReply * const reply) const
 {
@@ -87,20 +79,17 @@ QtAws::Core::AwsAbstractResponse * SearchProductsAsAdminRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::ServiceCatalog::SearchProductsAsAdminRequestPrivate
+ * \brief The SearchProductsAsAdminRequestPrivate class provides private implementation for SearchProductsAsAdminRequest.
+ * \internal
  *
- * @class  SearchProductsAsAdminRequestPrivate
- *
- * @brief  Private implementation for SearchProductsAsAdminRequest.
+ * \inmodule QtAwsServiceCatalog
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new SearchProductsAsAdminRequestPrivate object.
- *
- * @param  action  ServiceCatalog action being performed.
- * @param  q       Pointer to this object's public SearchProductsAsAdminRequest instance.
+ * Constructs a SearchProductsAsAdminRequestPrivate object for ServiceCatalog \a action with,
+ * public implementation \a q.
  */
 SearchProductsAsAdminRequestPrivate::SearchProductsAsAdminRequestPrivate(
     const ServiceCatalogRequest::Action action, SearchProductsAsAdminRequest * const q)
@@ -110,15 +99,10 @@ SearchProductsAsAdminRequestPrivate::SearchProductsAsAdminRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SearchProductsAsAdminRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the SearchProductsAsAdminRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public SearchProductsAsAdminRequest instance.
  */
 SearchProductsAsAdminRequestPrivate::SearchProductsAsAdminRequestPrivate(
     const SearchProductsAsAdminRequestPrivate &other, SearchProductsAsAdminRequest * const q)

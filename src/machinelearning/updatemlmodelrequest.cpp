@@ -27,19 +27,16 @@ namespace MachineLearning {
 
 /*!
  * \class QtAws::MachineLearning::UpdateMLModelRequest
- *
  * \brief The UpdateMLModelRequest class provides an interface for MachineLearning UpdateMLModel requests.
  *
- * \ingroup MachineLearning
+ * \inmodule QtAwsMachineLearning
  *
  *
  * \sa MachineLearningClient::updateMLModel
  */
 
 /*!
- * @brief  Constructs a new UpdateMLModelRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateMLModelRequest::UpdateMLModelRequest(const UpdateMLModelRequest &other)
     : MachineLearningRequest(new UpdateMLModelRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ UpdateMLModelRequest::UpdateMLModelRequest(const UpdateMLModelRequest &other)
 }
 
 /*!
- * @brief  Constructs a new UpdateMLModelRequest object.
+ * Constructs a UpdateMLModelRequest object.
  */
 UpdateMLModelRequest::UpdateMLModelRequest()
     : MachineLearningRequest(new UpdateMLModelRequestPrivate(MachineLearningRequest::UpdateMLModelAction, this))
@@ -66,14 +63,9 @@ bool UpdateMLModelRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateMLModelResponse object.
+ * Returns a UpdateMLModelResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateMLModelResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MachineLearningClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateMLModelRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * UpdateMLModelRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::MachineLearning::UpdateMLModelRequestPrivate
+ * \brief The UpdateMLModelRequestPrivate class provides private implementation for UpdateMLModelRequest.
+ * \internal
  *
- * @class  UpdateMLModelRequestPrivate
- *
- * @brief  Private implementation for UpdateMLModelRequest.
+ * \inmodule QtAwsMachineLearning
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateMLModelRequestPrivate object.
- *
- * @param  action  MachineLearning action being performed.
- * @param  q       Pointer to this object's public UpdateMLModelRequest instance.
+ * Constructs a UpdateMLModelRequestPrivate object for MachineLearning \a action with,
+ * public implementation \a q.
  */
 UpdateMLModelRequestPrivate::UpdateMLModelRequestPrivate(
     const MachineLearningRequest::Action action, UpdateMLModelRequest * const q)
@@ -104,15 +93,10 @@ UpdateMLModelRequestPrivate::UpdateMLModelRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateMLModelRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateMLModelRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateMLModelRequest instance.
  */
 UpdateMLModelRequestPrivate::UpdateMLModelRequestPrivate(
     const UpdateMLModelRequestPrivate &other, UpdateMLModelRequest * const q)

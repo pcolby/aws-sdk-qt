@@ -27,10 +27,9 @@ namespace WorkDocs {
 
 /*!
  * \class QtAws::WorkDocs::GetFolderRequest
- *
  * \brief The GetFolderRequest class provides an interface for WorkDocs GetFolder requests.
  *
- * \ingroup WorkDocs
+ * \inmodule QtAwsWorkDocs
  *
  *  The WorkDocs API is designed for the following use
  * 
@@ -66,9 +65,7 @@ namespace WorkDocs {
  */
 
 /*!
- * @brief  Constructs a new GetFolderRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetFolderRequest::GetFolderRequest(const GetFolderRequest &other)
     : WorkDocsRequest(new GetFolderRequestPrivate(*other.d_func(), this))
@@ -77,7 +74,7 @@ GetFolderRequest::GetFolderRequest(const GetFolderRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetFolderRequest object.
+ * Constructs a GetFolderRequest object.
  */
 GetFolderRequest::GetFolderRequest()
     : WorkDocsRequest(new GetFolderRequestPrivate(WorkDocsRequest::GetFolderAction, this))
@@ -95,14 +92,9 @@ bool GetFolderRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetFolderResponse object.
+ * Returns a GetFolderResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetFolderResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WorkDocsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetFolderRequest::response(QNetworkReply * const reply) const
 {
@@ -110,20 +102,17 @@ QtAws::Core::AwsAbstractResponse * GetFolderRequest::response(QNetworkReply * co
 }
 
 /*!
- * @internal
+ * \class QtAws::WorkDocs::GetFolderRequestPrivate
+ * \brief The GetFolderRequestPrivate class provides private implementation for GetFolderRequest.
+ * \internal
  *
- * @class  GetFolderRequestPrivate
- *
- * @brief  Private implementation for GetFolderRequest.
+ * \inmodule QtAwsWorkDocs
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetFolderRequestPrivate object.
- *
- * @param  action  WorkDocs action being performed.
- * @param  q       Pointer to this object's public GetFolderRequest instance.
+ * Constructs a GetFolderRequestPrivate object for WorkDocs \a action with,
+ * public implementation \a q.
  */
 GetFolderRequestPrivate::GetFolderRequestPrivate(
     const WorkDocsRequest::Action action, GetFolderRequest * const q)
@@ -133,15 +122,10 @@ GetFolderRequestPrivate::GetFolderRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetFolderRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetFolderRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetFolderRequest instance.
  */
 GetFolderRequestPrivate::GetFolderRequestPrivate(
     const GetFolderRequestPrivate &other, GetFolderRequest * const q)

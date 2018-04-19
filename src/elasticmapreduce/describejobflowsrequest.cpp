@@ -27,10 +27,9 @@ namespace EMR {
 
 /*!
  * \class QtAws::EMR::DescribeJobFlowsRequest
- *
  * \brief The DescribeJobFlowsRequest class provides an interface for EMR DescribeJobFlows requests.
  *
- * \ingroup EMR
+ * \inmodule QtAwsEMR
  *
  *  Amazon EMR is a web service that makes it easy to process large amounts of data efficiently. Amazon EMR uses Hadoop
  *  processing combined with several AWS products to do tasks such as web indexing, data mining, log file analysis, machine
@@ -40,9 +39,7 @@ namespace EMR {
  */
 
 /*!
- * @brief  Constructs a new DescribeJobFlowsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeJobFlowsRequest::DescribeJobFlowsRequest(const DescribeJobFlowsRequest &other)
     : EMRRequest(new DescribeJobFlowsRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ DescribeJobFlowsRequest::DescribeJobFlowsRequest(const DescribeJobFlowsRequest &
 }
 
 /*!
- * @brief  Constructs a new DescribeJobFlowsRequest object.
+ * Constructs a DescribeJobFlowsRequest object.
  */
 DescribeJobFlowsRequest::DescribeJobFlowsRequest()
     : EMRRequest(new DescribeJobFlowsRequestPrivate(EMRRequest::DescribeJobFlowsAction, this))
@@ -69,14 +66,9 @@ bool DescribeJobFlowsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeJobFlowsResponse object.
+ * Returns a DescribeJobFlowsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeJobFlowsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EMRClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeJobFlowsRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * DescribeJobFlowsRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::EMR::DescribeJobFlowsRequestPrivate
+ * \brief The DescribeJobFlowsRequestPrivate class provides private implementation for DescribeJobFlowsRequest.
+ * \internal
  *
- * @class  DescribeJobFlowsRequestPrivate
- *
- * @brief  Private implementation for DescribeJobFlowsRequest.
+ * \inmodule QtAwsEMR
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeJobFlowsRequestPrivate object.
- *
- * @param  action  EMR action being performed.
- * @param  q       Pointer to this object's public DescribeJobFlowsRequest instance.
+ * Constructs a DescribeJobFlowsRequestPrivate object for EMR \a action with,
+ * public implementation \a q.
  */
 DescribeJobFlowsRequestPrivate::DescribeJobFlowsRequestPrivate(
     const EMRRequest::Action action, DescribeJobFlowsRequest * const q)
@@ -107,15 +96,10 @@ DescribeJobFlowsRequestPrivate::DescribeJobFlowsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeJobFlowsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeJobFlowsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeJobFlowsRequest instance.
  */
 DescribeJobFlowsRequestPrivate::DescribeJobFlowsRequestPrivate(
     const DescribeJobFlowsRequestPrivate &other, DescribeJobFlowsRequest * const q)

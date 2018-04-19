@@ -27,10 +27,9 @@ namespace ServiceDiscovery {
 
 /*!
  * \class QtAws::ServiceDiscovery::GetInstancesHealthStatusRequest
- *
  * \brief The GetInstancesHealthStatusRequest class provides an interface for ServiceDiscovery GetInstancesHealthStatus requests.
  *
- * \ingroup ServiceDiscovery
+ * \inmodule QtAwsServiceDiscovery
  *
  *  Amazon Route 53 auto naming lets you configure public or private namespaces that your microservice applications run in.
  *  When instances of the service become available, you can call the auto naming API to register the instance, and Route 53
@@ -41,9 +40,7 @@ namespace ServiceDiscovery {
  */
 
 /*!
- * @brief  Constructs a new GetInstancesHealthStatusRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetInstancesHealthStatusRequest::GetInstancesHealthStatusRequest(const GetInstancesHealthStatusRequest &other)
     : ServiceDiscoveryRequest(new GetInstancesHealthStatusRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ GetInstancesHealthStatusRequest::GetInstancesHealthStatusRequest(const GetInstan
 }
 
 /*!
- * @brief  Constructs a new GetInstancesHealthStatusRequest object.
+ * Constructs a GetInstancesHealthStatusRequest object.
  */
 GetInstancesHealthStatusRequest::GetInstancesHealthStatusRequest()
     : ServiceDiscoveryRequest(new GetInstancesHealthStatusRequestPrivate(ServiceDiscoveryRequest::GetInstancesHealthStatusAction, this))
@@ -70,14 +67,9 @@ bool GetInstancesHealthStatusRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetInstancesHealthStatusResponse object.
+ * Returns a GetInstancesHealthStatusResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetInstancesHealthStatusResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ServiceDiscoveryClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetInstancesHealthStatusRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * GetInstancesHealthStatusRequest::response(QNe
 }
 
 /*!
- * @internal
+ * \class QtAws::ServiceDiscovery::GetInstancesHealthStatusRequestPrivate
+ * \brief The GetInstancesHealthStatusRequestPrivate class provides private implementation for GetInstancesHealthStatusRequest.
+ * \internal
  *
- * @class  GetInstancesHealthStatusRequestPrivate
- *
- * @brief  Private implementation for GetInstancesHealthStatusRequest.
+ * \inmodule QtAwsServiceDiscovery
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetInstancesHealthStatusRequestPrivate object.
- *
- * @param  action  ServiceDiscovery action being performed.
- * @param  q       Pointer to this object's public GetInstancesHealthStatusRequest instance.
+ * Constructs a GetInstancesHealthStatusRequestPrivate object for ServiceDiscovery \a action with,
+ * public implementation \a q.
  */
 GetInstancesHealthStatusRequestPrivate::GetInstancesHealthStatusRequestPrivate(
     const ServiceDiscoveryRequest::Action action, GetInstancesHealthStatusRequest * const q)
@@ -108,15 +97,10 @@ GetInstancesHealthStatusRequestPrivate::GetInstancesHealthStatusRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetInstancesHealthStatusRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetInstancesHealthStatusRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetInstancesHealthStatusRequest instance.
  */
 GetInstancesHealthStatusRequestPrivate::GetInstancesHealthStatusRequestPrivate(
     const GetInstancesHealthStatusRequestPrivate &other, GetInstancesHealthStatusRequest * const q)

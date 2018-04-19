@@ -27,10 +27,9 @@ namespace Redshift {
 
 /*!
  * \class QtAws::Redshift::RestoreTableFromClusterSnapshotRequest
- *
  * \brief The RestoreTableFromClusterSnapshotRequest class provides an interface for Redshift RestoreTableFromClusterSnapshot requests.
  *
- * \ingroup Redshift
+ * \inmodule QtAwsRedshift
  *
  *  <fullname>Amazon Redshift</fullname>
  * 
@@ -67,9 +66,7 @@ namespace Redshift {
  */
 
 /*!
- * @brief  Constructs a new RestoreTableFromClusterSnapshotRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 RestoreTableFromClusterSnapshotRequest::RestoreTableFromClusterSnapshotRequest(const RestoreTableFromClusterSnapshotRequest &other)
     : RedshiftRequest(new RestoreTableFromClusterSnapshotRequestPrivate(*other.d_func(), this))
@@ -78,7 +75,7 @@ RestoreTableFromClusterSnapshotRequest::RestoreTableFromClusterSnapshotRequest(c
 }
 
 /*!
- * @brief  Constructs a new RestoreTableFromClusterSnapshotRequest object.
+ * Constructs a RestoreTableFromClusterSnapshotRequest object.
  */
 RestoreTableFromClusterSnapshotRequest::RestoreTableFromClusterSnapshotRequest()
     : RedshiftRequest(new RestoreTableFromClusterSnapshotRequestPrivate(RedshiftRequest::RestoreTableFromClusterSnapshotAction, this))
@@ -96,14 +93,9 @@ bool RestoreTableFromClusterSnapshotRequest::isValid() const
 
 
 /*!
- * @brief  Construct an RestoreTableFromClusterSnapshotResponse object.
+ * Returns a RestoreTableFromClusterSnapshotResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An RestoreTableFromClusterSnapshotResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RedshiftClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * RestoreTableFromClusterSnapshotRequest::response(QNetworkReply * const reply) const
 {
@@ -111,20 +103,17 @@ QtAws::Core::AwsAbstractResponse * RestoreTableFromClusterSnapshotRequest::respo
 }
 
 /*!
- * @internal
+ * \class QtAws::Redshift::RestoreTableFromClusterSnapshotRequestPrivate
+ * \brief The RestoreTableFromClusterSnapshotRequestPrivate class provides private implementation for RestoreTableFromClusterSnapshotRequest.
+ * \internal
  *
- * @class  RestoreTableFromClusterSnapshotRequestPrivate
- *
- * @brief  Private implementation for RestoreTableFromClusterSnapshotRequest.
+ * \inmodule QtAwsRedshift
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new RestoreTableFromClusterSnapshotRequestPrivate object.
- *
- * @param  action  Redshift action being performed.
- * @param  q       Pointer to this object's public RestoreTableFromClusterSnapshotRequest instance.
+ * Constructs a RestoreTableFromClusterSnapshotRequestPrivate object for Redshift \a action with,
+ * public implementation \a q.
  */
 RestoreTableFromClusterSnapshotRequestPrivate::RestoreTableFromClusterSnapshotRequestPrivate(
     const RedshiftRequest::Action action, RestoreTableFromClusterSnapshotRequest * const q)
@@ -134,15 +123,10 @@ RestoreTableFromClusterSnapshotRequestPrivate::RestoreTableFromClusterSnapshotRe
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RestoreTableFromClusterSnapshotRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the RestoreTableFromClusterSnapshotRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public RestoreTableFromClusterSnapshotRequest instance.
  */
 RestoreTableFromClusterSnapshotRequestPrivate::RestoreTableFromClusterSnapshotRequestPrivate(
     const RestoreTableFromClusterSnapshotRequestPrivate &other, RestoreTableFromClusterSnapshotRequest * const q)

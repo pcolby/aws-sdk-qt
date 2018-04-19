@@ -66,6 +66,9 @@
 /*!
  * \namespace QtAws::SFN
  * \brief The QtAws::SFN contains stuff...
+ *
+ * \inmodule QtAwsSFN
+ *
  * @todo Move this to a separate template file.
  */
 
@@ -134,7 +137,7 @@ SfnClient::SfnClient(
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * \a  AwsEndpoint::getEndpoint()
+ * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
 SfnClient::SfnClient(
     const QUrl &endpoint,

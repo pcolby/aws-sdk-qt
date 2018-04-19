@@ -27,10 +27,9 @@ namespace Glue {
 
 /*!
  * \class QtAws::Glue::CreateDatabaseRequest
- *
  * \brief The CreateDatabaseRequest class provides an interface for Glue CreateDatabase requests.
  *
- * \ingroup Glue
+ * \inmodule QtAwsGlue
  *
  *  <fullname>AWS Glue</fullname>
  * 
@@ -40,9 +39,7 @@ namespace Glue {
  */
 
 /*!
- * @brief  Constructs a new CreateDatabaseRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateDatabaseRequest::CreateDatabaseRequest(const CreateDatabaseRequest &other)
     : GlueRequest(new CreateDatabaseRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ CreateDatabaseRequest::CreateDatabaseRequest(const CreateDatabaseRequest &other)
 }
 
 /*!
- * @brief  Constructs a new CreateDatabaseRequest object.
+ * Constructs a CreateDatabaseRequest object.
  */
 CreateDatabaseRequest::CreateDatabaseRequest()
     : GlueRequest(new CreateDatabaseRequestPrivate(GlueRequest::CreateDatabaseAction, this))
@@ -69,14 +66,9 @@ bool CreateDatabaseRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateDatabaseResponse object.
+ * Returns a CreateDatabaseResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateDatabaseResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GlueClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateDatabaseRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * CreateDatabaseRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::Glue::CreateDatabaseRequestPrivate
+ * \brief The CreateDatabaseRequestPrivate class provides private implementation for CreateDatabaseRequest.
+ * \internal
  *
- * @class  CreateDatabaseRequestPrivate
- *
- * @brief  Private implementation for CreateDatabaseRequest.
+ * \inmodule QtAwsGlue
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateDatabaseRequestPrivate object.
- *
- * @param  action  Glue action being performed.
- * @param  q       Pointer to this object's public CreateDatabaseRequest instance.
+ * Constructs a CreateDatabaseRequestPrivate object for Glue \a action with,
+ * public implementation \a q.
  */
 CreateDatabaseRequestPrivate::CreateDatabaseRequestPrivate(
     const GlueRequest::Action action, CreateDatabaseRequest * const q)
@@ -107,15 +96,10 @@ CreateDatabaseRequestPrivate::CreateDatabaseRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateDatabaseRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateDatabaseRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateDatabaseRequest instance.
  */
 CreateDatabaseRequestPrivate::CreateDatabaseRequestPrivate(
     const CreateDatabaseRequestPrivate &other, CreateDatabaseRequest * const q)

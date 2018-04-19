@@ -27,10 +27,9 @@ namespace DirectConnect {
 
 /*!
  * \class QtAws::DirectConnect::DescribeInterconnectLoaRequest
- *
  * \brief The DescribeInterconnectLoaRequest class provides an interface for DirectConnect DescribeInterconnectLoa requests.
  *
- * \ingroup DirectConnect
+ * \inmodule QtAwsDirectConnect
  *
  *  AWS Direct Connect links your internal network to an AWS Direct Connect location over a standard 1 gigabit or 10 gigabit
  *  Ethernet fiber-optic cable. One end of the cable is connected to your router, the other to an AWS Direct Connect router.
@@ -45,9 +44,7 @@ namespace DirectConnect {
  */
 
 /*!
- * @brief  Constructs a new DescribeInterconnectLoaRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeInterconnectLoaRequest::DescribeInterconnectLoaRequest(const DescribeInterconnectLoaRequest &other)
     : DirectConnectRequest(new DescribeInterconnectLoaRequestPrivate(*other.d_func(), this))
@@ -56,7 +53,7 @@ DescribeInterconnectLoaRequest::DescribeInterconnectLoaRequest(const DescribeInt
 }
 
 /*!
- * @brief  Constructs a new DescribeInterconnectLoaRequest object.
+ * Constructs a DescribeInterconnectLoaRequest object.
  */
 DescribeInterconnectLoaRequest::DescribeInterconnectLoaRequest()
     : DirectConnectRequest(new DescribeInterconnectLoaRequestPrivate(DirectConnectRequest::DescribeInterconnectLoaAction, this))
@@ -74,14 +71,9 @@ bool DescribeInterconnectLoaRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeInterconnectLoaResponse object.
+ * Returns a DescribeInterconnectLoaResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeInterconnectLoaResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DirectConnectClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeInterconnectLoaRequest::response(QNetworkReply * const reply) const
 {
@@ -89,20 +81,17 @@ QtAws::Core::AwsAbstractResponse * DescribeInterconnectLoaRequest::response(QNet
 }
 
 /*!
- * @internal
+ * \class QtAws::DirectConnect::DescribeInterconnectLoaRequestPrivate
+ * \brief The DescribeInterconnectLoaRequestPrivate class provides private implementation for DescribeInterconnectLoaRequest.
+ * \internal
  *
- * @class  DescribeInterconnectLoaRequestPrivate
- *
- * @brief  Private implementation for DescribeInterconnectLoaRequest.
+ * \inmodule QtAwsDirectConnect
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeInterconnectLoaRequestPrivate object.
- *
- * @param  action  DirectConnect action being performed.
- * @param  q       Pointer to this object's public DescribeInterconnectLoaRequest instance.
+ * Constructs a DescribeInterconnectLoaRequestPrivate object for DirectConnect \a action with,
+ * public implementation \a q.
  */
 DescribeInterconnectLoaRequestPrivate::DescribeInterconnectLoaRequestPrivate(
     const DirectConnectRequest::Action action, DescribeInterconnectLoaRequest * const q)
@@ -112,15 +101,10 @@ DescribeInterconnectLoaRequestPrivate::DescribeInterconnectLoaRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeInterconnectLoaRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeInterconnectLoaRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeInterconnectLoaRequest instance.
  */
 DescribeInterconnectLoaRequestPrivate::DescribeInterconnectLoaRequestPrivate(
     const DescribeInterconnectLoaRequestPrivate &other, DescribeInterconnectLoaRequest * const q)

@@ -27,19 +27,16 @@ namespace KinesisVideoArchivedMedia {
 
 /*!
  * \class QtAws::KinesisVideoArchivedMedia::ListFragmentsRequest
- *
  * \brief The ListFragmentsRequest class provides an interface for KinesisVideoArchivedMedia ListFragments requests.
  *
- * \ingroup KinesisVideoArchivedMedia
+ * \inmodule QtAwsKinesisVideoArchivedMedia
  *
  *
  * \sa KinesisVideoArchivedMediaClient::listFragments
  */
 
 /*!
- * @brief  Constructs a new ListFragmentsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListFragmentsRequest::ListFragmentsRequest(const ListFragmentsRequest &other)
     : KinesisVideoArchivedMediaRequest(new ListFragmentsRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ ListFragmentsRequest::ListFragmentsRequest(const ListFragmentsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ListFragmentsRequest object.
+ * Constructs a ListFragmentsRequest object.
  */
 ListFragmentsRequest::ListFragmentsRequest()
     : KinesisVideoArchivedMediaRequest(new ListFragmentsRequestPrivate(KinesisVideoArchivedMediaRequest::ListFragmentsAction, this))
@@ -66,14 +63,9 @@ bool ListFragmentsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListFragmentsResponse object.
+ * Returns a ListFragmentsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListFragmentsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  KinesisVideoArchivedMediaClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListFragmentsRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * ListFragmentsRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::KinesisVideoArchivedMedia::ListFragmentsRequestPrivate
+ * \brief The ListFragmentsRequestPrivate class provides private implementation for ListFragmentsRequest.
+ * \internal
  *
- * @class  ListFragmentsRequestPrivate
- *
- * @brief  Private implementation for ListFragmentsRequest.
+ * \inmodule QtAwsKinesisVideoArchivedMedia
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListFragmentsRequestPrivate object.
- *
- * @param  action  KinesisVideoArchivedMedia action being performed.
- * @param  q       Pointer to this object's public ListFragmentsRequest instance.
+ * Constructs a ListFragmentsRequestPrivate object for KinesisVideoArchivedMedia \a action with,
+ * public implementation \a q.
  */
 ListFragmentsRequestPrivate::ListFragmentsRequestPrivate(
     const KinesisVideoArchivedMediaRequest::Action action, ListFragmentsRequest * const q)
@@ -104,15 +93,10 @@ ListFragmentsRequestPrivate::ListFragmentsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListFragmentsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListFragmentsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListFragmentsRequest instance.
  */
 ListFragmentsRequestPrivate::ListFragmentsRequestPrivate(
     const ListFragmentsRequestPrivate &other, ListFragmentsRequest * const q)

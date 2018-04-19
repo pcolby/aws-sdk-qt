@@ -25,16 +25,42 @@ namespace DAX {
 
 /*!
  * \class QtAws::DAX::DAXRequest
- *
  * \brief The DAXRequest class provides an interface for DAX requests.
  *
- * \ingroup DAX
+ * \inmodule QtAwsDAX
  */
 
 /*!
- * @brief  Constructs a new DAXRequest object.
+ * \enum DAXRequest::Action
  *
- * @param  action  The DAX action to request.
+ * This enum describes the actions that can be performed as DAX
+ * requests.
+ *
+ * \value CreateClusterAction DAX CreateCluster action.
+ * \value CreateParameterGroupAction DAX CreateParameterGroup action.
+ * \value CreateSubnetGroupAction DAX CreateSubnetGroup action.
+ * \value DecreaseReplicationFactorAction DAX DecreaseReplicationFactor action.
+ * \value DeleteClusterAction DAX DeleteCluster action.
+ * \value DeleteParameterGroupAction DAX DeleteParameterGroup action.
+ * \value DeleteSubnetGroupAction DAX DeleteSubnetGroup action.
+ * \value DescribeClustersAction DAX DescribeClusters action.
+ * \value DescribeDefaultParametersAction DAX DescribeDefaultParameters action.
+ * \value DescribeEventsAction DAX DescribeEvents action.
+ * \value DescribeParameterGroupsAction DAX DescribeParameterGroups action.
+ * \value DescribeParametersAction DAX DescribeParameters action.
+ * \value DescribeSubnetGroupsAction DAX DescribeSubnetGroups action.
+ * \value IncreaseReplicationFactorAction DAX IncreaseReplicationFactor action.
+ * \value ListTagsAction DAX ListTags action.
+ * \value RebootNodeAction DAX RebootNode action.
+ * \value TagResourceAction DAX TagResource action.
+ * \value UntagResourceAction DAX UntagResource action.
+ * \value UpdateClusterAction DAX UpdateCluster action.
+ * \value UpdateParameterGroupAction DAX UpdateParameterGroup action.
+ * \value UpdateSubnetGroupAction DAX UpdateSubnetGroup action.
+ */
+
+/*!
+ * Constructs a[n] DAXRequest object for DAX \a action.
  */
 DAXRequest::DAXRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new DAXRequestPrivate(action, this))
@@ -43,9 +69,7 @@ DAXRequest::DAXRequest(const Action action)
 }
 
 /*!
- * @brief  Constructs a new DAXRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DAXRequest::DAXRequest(const DAXRequest &other)
     : QtAws::Core::AwsAbstractRequest(new DAXRequestPrivate(*other.d_func(), this))
@@ -54,13 +78,7 @@ DAXRequest::DAXRequest(const DAXRequest &other)
 }
 
 /*!
- * @brief  Assignment operator.
- *
- * Assigns \a other to \c this.
- *
- * @param  other  Instance to copy.
- *
- * @return  A reference to \c this.
+ * Sets the DAXRequest object to be equal to \a other.
  */
 DAXRequest& DAXRequest::operator=(const DAXRequest &other)
 {
@@ -72,14 +90,10 @@ DAXRequest& DAXRequest::operator=(const DAXRequest &other)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DAXRequest object.
+ * Constructs aa DAXRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from DAXRequestPrivate.
- *
- * @param  d  Pointer to private data (aka D-Pointer).
  */
 DAXRequest::DAXRequest(DAXRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
@@ -87,7 +101,7 @@ DAXRequest::DAXRequest(DAXRequestPrivate * const d) : QtAws::Core::AwsAbstractRe
 }
 
 /*!
- * \brief Returns the DAX action to be performed by this request.
+ * Returns the DAX action to be performed by this request.
  */
 DAXRequest::Action DAXRequest::action() const
 {
@@ -96,7 +110,7 @@ DAXRequest::Action DAXRequest::action() const
 }
 
 /*!
- * \brief Returns the name of the DAX action to be performed by this request.
+ * Returns the name of the DAX action to be performed by this request.
  */
 QString DAXRequest::actionString() const
 {
@@ -104,7 +118,7 @@ QString DAXRequest::actionString() const
 }
 
 /*!
- * \brief Returns the DAX API version implemented by this request.
+ * Returns the DAX API version implemented by this request.
  */
 QString DAXRequest::apiVersion() const
 {
@@ -113,7 +127,7 @@ QString DAXRequest::apiVersion() const
 }
 
 /*!
- * @brief Set the DAX action to be performed by this request to \a action.
+ * Sets the DAX action to be performed by this request to \a action.
  */
 void DAXRequest::setAction(const Action action)
 {
@@ -122,7 +136,7 @@ void DAXRequest::setAction(const Action action)
 }
 
 /*!
- * Set the DAX API version to include in this request to \a version.
+ * Sets the DAX API version to include in this request to \a version.
  */
 void DAXRequest::setApiVersion(const QString &version)
 {
@@ -131,7 +145,7 @@ void DAXRequest::setApiVersion(const QString &version)
 }
 
 /*!
- * \brief Returns \c true if this request is the same as \a other.
+ * Returns \c true if this request is equal to \a other; \c false otherwise.
  *
  * Note, most derived *Request classes do not need to provider their own
  * implementations of this function, since most such request classes rely on
@@ -146,8 +160,8 @@ bool DAXRequest::operator==(const DAXRequest &other) const
             (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
-/*!
- * @brief  Check if \a queueName is a valid DAX queue name.
+/*
+ * Returns \c tue if \a queueName is a valid DAX queue name.
  *
  * @par From DAX FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
@@ -166,9 +180,8 @@ bool DAXRequest::operator==(const DAXRequest &other) const
 }*/
 
 /*!
- * \brief Removes the a \a name parameter from this request.
- *
- * Returns the count of paramters removed (typically \c 0 or \c 1).
+ * Removes the a \a name parameter from the request, then returns the number of
+ * paramters removed (typically \c 0 or \c 1).
  */
 int DAXRequest::clearParameter(const QString &name)
 {
@@ -177,7 +190,7 @@ int DAXRequest::clearParameter(const QString &name)
 }
 
 /*!
- * \brief Removes all parameters from this request.
+ * Removes all parameters from the request.
  */
 void DAXRequest::clearParameters()
 {
@@ -186,7 +199,7 @@ void DAXRequest::clearParameters()
 }
 
 /*!
- * \brief Returns the value of the \n name pararemter if set, otherwise \a defaultValue.
+ * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
 QVariant DAXRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
@@ -195,7 +208,7 @@ QVariant DAXRequest::parameter(const QString &name, const QVariant &defaultValue
 }
 
 /*!
- * \brief Returns a map of parameters included in this request.
+ * Returns the parameters included in this request.
  */
 const QVariantMap &DAXRequest::parameters() const
 {
@@ -204,7 +217,7 @@ const QVariantMap &DAXRequest::parameters() const
 }
 
 /*!
- * \brief Sets the \a name parameter to \a value.
+ * Sets the \a name parameter to \a value.
  */
 void DAXRequest::setParameter(const QString &name, const QVariant &value)
 {
@@ -213,9 +226,8 @@ void DAXRequest::setParameter(const QString &name, const QVariant &value)
 }
 
 /*!
- * \brief Sets the map of paramters for this request to \a parameters.
- *
- * Any request parameters set previously will be discarded.
+ * Sets the paramters for this request to \a parameters. Any request parameters
+ * set previously will be discarded.
  */
 void DAXRequest::setParameters(const QVariantMap &parameters)
 {
@@ -224,11 +236,12 @@ void DAXRequest::setParameters(const QVariantMap &parameters)
 }
 
 /*!
- * \brief Returns a network request for this DAX request using the given \a endpoint.
+ * Returns a network request for the DAX request using the given
+ * \a endpoint.
  *
- * This DAX implementation builds request URLs by combining the common query
- * parameters (such as Action and Version), with any that have been added (via
- * setParameter) by child classes.
+ * This DAX implementation builds request URLs by combining the
+ * common query parameters (such as Action and Version), with any that have
+ * been added (via setParameter) by child classes.
  */
 QNetworkRequest DAXRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -239,17 +252,16 @@ QNetworkRequest DAXRequest::unsignedRequest(const QUrl &endpoint) const
 }
 
 /*!
+ * \class QtAws::DAX::DAXRequestPrivate
+ * \brief The DAXRequestPrivate class provides private implementation for DAXRequest.
  * \internal
  *
- * \class  DAXRequestPrivate
- *
- * \brief  Private implementation for DAXRequest.
+ * \inmodule QtAwsDAX
  */
 
 /*!
- * \internal
- *
- * \brief Constructs a new DAXRequestPrivate object.
+ * Constructs a DAXRequestPrivate object for DAX \a action with,
+ * public implementation \a q.
  */
 DAXRequestPrivate::DAXRequestPrivate(const DAXRequest::Action action, DAXRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
@@ -258,9 +270,7 @@ DAXRequestPrivate::DAXRequestPrivate(const DAXRequest::Action action, DAXRequest
 }
 
 /*!
- * \internal
- *
- * \brief Constructs a new DAXRequestPrivate object, copying an existing one.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
@@ -276,15 +286,12 @@ DAXRequestPrivate::DAXRequestPrivate(const DAXRequestPrivate &other,
 }
 
 /*!
- * \internal
- *
- * \brief Returns a string representing \a action.
+ * Returns a string represention of \a action, or a null string if \a action is
+ * invalid.
  *
  * This function converts DAXRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the DAX service's Action
  * query parameters.
- *
- * @return A string representing \a action, or a null string if \a action is invalid.
  */
 QString DAXRequestPrivate::toString(const DAXRequest::Action &action)
 {

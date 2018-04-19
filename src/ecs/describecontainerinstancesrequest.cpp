@@ -27,10 +27,9 @@ namespace ECS {
 
 /*!
  * \class QtAws::ECS::DescribeContainerInstancesRequest
- *
  * \brief The DescribeContainerInstancesRequest class provides an interface for ECS DescribeContainerInstances requests.
  *
- * \ingroup ECS
+ * \inmodule QtAwsECS
  *
  *  Amazon Elastic Container Service (Amazon ECS) is a highly scalable, fast, container management service that makes it
  *  easy to run, stop, and manage Docker containers on a cluster. You can host your cluster on a serverless infrastructure
@@ -54,9 +53,7 @@ namespace ECS {
  */
 
 /*!
- * @brief  Constructs a new DescribeContainerInstancesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeContainerInstancesRequest::DescribeContainerInstancesRequest(const DescribeContainerInstancesRequest &other)
     : ECSRequest(new DescribeContainerInstancesRequestPrivate(*other.d_func(), this))
@@ -65,7 +62,7 @@ DescribeContainerInstancesRequest::DescribeContainerInstancesRequest(const Descr
 }
 
 /*!
- * @brief  Constructs a new DescribeContainerInstancesRequest object.
+ * Constructs a DescribeContainerInstancesRequest object.
  */
 DescribeContainerInstancesRequest::DescribeContainerInstancesRequest()
     : ECSRequest(new DescribeContainerInstancesRequestPrivate(ECSRequest::DescribeContainerInstancesAction, this))
@@ -83,14 +80,9 @@ bool DescribeContainerInstancesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeContainerInstancesResponse object.
+ * Returns a DescribeContainerInstancesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeContainerInstancesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ECSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeContainerInstancesRequest::response(QNetworkReply * const reply) const
 {
@@ -98,20 +90,17 @@ QtAws::Core::AwsAbstractResponse * DescribeContainerInstancesRequest::response(Q
 }
 
 /*!
- * @internal
+ * \class QtAws::ECS::DescribeContainerInstancesRequestPrivate
+ * \brief The DescribeContainerInstancesRequestPrivate class provides private implementation for DescribeContainerInstancesRequest.
+ * \internal
  *
- * @class  DescribeContainerInstancesRequestPrivate
- *
- * @brief  Private implementation for DescribeContainerInstancesRequest.
+ * \inmodule QtAwsECS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeContainerInstancesRequestPrivate object.
- *
- * @param  action  ECS action being performed.
- * @param  q       Pointer to this object's public DescribeContainerInstancesRequest instance.
+ * Constructs a DescribeContainerInstancesRequestPrivate object for ECS \a action with,
+ * public implementation \a q.
  */
 DescribeContainerInstancesRequestPrivate::DescribeContainerInstancesRequestPrivate(
     const ECSRequest::Action action, DescribeContainerInstancesRequest * const q)
@@ -121,15 +110,10 @@ DescribeContainerInstancesRequestPrivate::DescribeContainerInstancesRequestPriva
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeContainerInstancesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeContainerInstancesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeContainerInstancesRequest instance.
  */
 DescribeContainerInstancesRequestPrivate::DescribeContainerInstancesRequestPrivate(
     const DescribeContainerInstancesRequestPrivate &other, DescribeContainerInstancesRequest * const q)

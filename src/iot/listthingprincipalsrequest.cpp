@@ -27,10 +27,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::ListThingPrincipalsRequest
- *
  * \brief The ListThingPrincipalsRequest class provides an interface for IoT ListThingPrincipals requests.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -48,9 +47,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new ListThingPrincipalsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListThingPrincipalsRequest::ListThingPrincipalsRequest(const ListThingPrincipalsRequest &other)
     : IoTRequest(new ListThingPrincipalsRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ ListThingPrincipalsRequest::ListThingPrincipalsRequest(const ListThingPrincipals
 }
 
 /*!
- * @brief  Constructs a new ListThingPrincipalsRequest object.
+ * Constructs a ListThingPrincipalsRequest object.
  */
 ListThingPrincipalsRequest::ListThingPrincipalsRequest()
     : IoTRequest(new ListThingPrincipalsRequestPrivate(IoTRequest::ListThingPrincipalsAction, this))
@@ -77,14 +74,9 @@ bool ListThingPrincipalsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListThingPrincipalsResponse object.
+ * Returns a ListThingPrincipalsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListThingPrincipalsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IoTClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListThingPrincipalsRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * ListThingPrincipalsRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::IoT::ListThingPrincipalsRequestPrivate
+ * \brief The ListThingPrincipalsRequestPrivate class provides private implementation for ListThingPrincipalsRequest.
+ * \internal
  *
- * @class  ListThingPrincipalsRequestPrivate
- *
- * @brief  Private implementation for ListThingPrincipalsRequest.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListThingPrincipalsRequestPrivate object.
- *
- * @param  action  IoT action being performed.
- * @param  q       Pointer to this object's public ListThingPrincipalsRequest instance.
+ * Constructs a ListThingPrincipalsRequestPrivate object for IoT \a action with,
+ * public implementation \a q.
  */
 ListThingPrincipalsRequestPrivate::ListThingPrincipalsRequestPrivate(
     const IoTRequest::Action action, ListThingPrincipalsRequest * const q)
@@ -115,15 +104,10 @@ ListThingPrincipalsRequestPrivate::ListThingPrincipalsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListThingPrincipalsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListThingPrincipalsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListThingPrincipalsRequest instance.
  */
 ListThingPrincipalsRequestPrivate::ListThingPrincipalsRequestPrivate(
     const ListThingPrincipalsRequestPrivate &other, ListThingPrincipalsRequest * const q)

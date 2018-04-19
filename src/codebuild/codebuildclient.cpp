@@ -60,6 +60,9 @@
 /*!
  * \namespace QtAws::CodeBuild
  * \brief The QtAws::CodeBuild contains stuff...
+ *
+ * \inmodule QtAwsCodeBuild
+ *
  * @todo Move this to a separate template file.
  */
 
@@ -189,7 +192,7 @@ CodeBuildClient::CodeBuildClient(
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * \a  AwsEndpoint::getEndpoint()
+ * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
 CodeBuildClient::CodeBuildClient(
     const QUrl &endpoint,

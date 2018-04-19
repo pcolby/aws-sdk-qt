@@ -27,10 +27,9 @@ namespace CognitoIdentity {
 
 /*!
  * \class QtAws::CognitoIdentity::GetOpenIdTokenForDeveloperIdentityRequest
- *
  * \brief The GetOpenIdTokenForDeveloperIdentityRequest class provides an interface for CognitoIdentity GetOpenIdTokenForDeveloperIdentity requests.
  *
- * \ingroup CognitoIdentity
+ * \inmodule QtAwsCognitoIdentity
  *
  *  <fullname>Amazon Cognito</fullname>
  * 
@@ -75,9 +74,7 @@ namespace CognitoIdentity {
  */
 
 /*!
- * @brief  Constructs a new GetOpenIdTokenForDeveloperIdentityRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetOpenIdTokenForDeveloperIdentityRequest::GetOpenIdTokenForDeveloperIdentityRequest(const GetOpenIdTokenForDeveloperIdentityRequest &other)
     : CognitoIdentityRequest(new GetOpenIdTokenForDeveloperIdentityRequestPrivate(*other.d_func(), this))
@@ -86,7 +83,7 @@ GetOpenIdTokenForDeveloperIdentityRequest::GetOpenIdTokenForDeveloperIdentityReq
 }
 
 /*!
- * @brief  Constructs a new GetOpenIdTokenForDeveloperIdentityRequest object.
+ * Constructs a GetOpenIdTokenForDeveloperIdentityRequest object.
  */
 GetOpenIdTokenForDeveloperIdentityRequest::GetOpenIdTokenForDeveloperIdentityRequest()
     : CognitoIdentityRequest(new GetOpenIdTokenForDeveloperIdentityRequestPrivate(CognitoIdentityRequest::GetOpenIdTokenForDeveloperIdentityAction, this))
@@ -104,14 +101,9 @@ bool GetOpenIdTokenForDeveloperIdentityRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetOpenIdTokenForDeveloperIdentityResponse object.
+ * Returns a GetOpenIdTokenForDeveloperIdentityResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetOpenIdTokenForDeveloperIdentityResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CognitoIdentityClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetOpenIdTokenForDeveloperIdentityRequest::response(QNetworkReply * const reply) const
 {
@@ -119,20 +111,17 @@ QtAws::Core::AwsAbstractResponse * GetOpenIdTokenForDeveloperIdentityRequest::re
 }
 
 /*!
- * @internal
+ * \class QtAws::CognitoIdentity::GetOpenIdTokenForDeveloperIdentityRequestPrivate
+ * \brief The GetOpenIdTokenForDeveloperIdentityRequestPrivate class provides private implementation for GetOpenIdTokenForDeveloperIdentityRequest.
+ * \internal
  *
- * @class  GetOpenIdTokenForDeveloperIdentityRequestPrivate
- *
- * @brief  Private implementation for GetOpenIdTokenForDeveloperIdentityRequest.
+ * \inmodule QtAwsCognitoIdentity
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetOpenIdTokenForDeveloperIdentityRequestPrivate object.
- *
- * @param  action  CognitoIdentity action being performed.
- * @param  q       Pointer to this object's public GetOpenIdTokenForDeveloperIdentityRequest instance.
+ * Constructs a GetOpenIdTokenForDeveloperIdentityRequestPrivate object for CognitoIdentity \a action with,
+ * public implementation \a q.
  */
 GetOpenIdTokenForDeveloperIdentityRequestPrivate::GetOpenIdTokenForDeveloperIdentityRequestPrivate(
     const CognitoIdentityRequest::Action action, GetOpenIdTokenForDeveloperIdentityRequest * const q)
@@ -142,15 +131,10 @@ GetOpenIdTokenForDeveloperIdentityRequestPrivate::GetOpenIdTokenForDeveloperIden
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetOpenIdTokenForDeveloperIdentityRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetOpenIdTokenForDeveloperIdentityRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetOpenIdTokenForDeveloperIdentityRequest instance.
  */
 GetOpenIdTokenForDeveloperIdentityRequestPrivate::GetOpenIdTokenForDeveloperIdentityRequestPrivate(
     const GetOpenIdTokenForDeveloperIdentityRequestPrivate &other, GetOpenIdTokenForDeveloperIdentityRequest * const q)

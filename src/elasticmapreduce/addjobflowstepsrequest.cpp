@@ -27,10 +27,9 @@ namespace EMR {
 
 /*!
  * \class QtAws::EMR::AddJobFlowStepsRequest
- *
  * \brief The AddJobFlowStepsRequest class provides an interface for EMR AddJobFlowSteps requests.
  *
- * \ingroup EMR
+ * \inmodule QtAwsEMR
  *
  *  Amazon EMR is a web service that makes it easy to process large amounts of data efficiently. Amazon EMR uses Hadoop
  *  processing combined with several AWS products to do tasks such as web indexing, data mining, log file analysis, machine
@@ -40,9 +39,7 @@ namespace EMR {
  */
 
 /*!
- * @brief  Constructs a new AddJobFlowStepsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AddJobFlowStepsRequest::AddJobFlowStepsRequest(const AddJobFlowStepsRequest &other)
     : EMRRequest(new AddJobFlowStepsRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ AddJobFlowStepsRequest::AddJobFlowStepsRequest(const AddJobFlowStepsRequest &oth
 }
 
 /*!
- * @brief  Constructs a new AddJobFlowStepsRequest object.
+ * Constructs a AddJobFlowStepsRequest object.
  */
 AddJobFlowStepsRequest::AddJobFlowStepsRequest()
     : EMRRequest(new AddJobFlowStepsRequestPrivate(EMRRequest::AddJobFlowStepsAction, this))
@@ -69,14 +66,9 @@ bool AddJobFlowStepsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AddJobFlowStepsResponse object.
+ * Returns a AddJobFlowStepsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AddJobFlowStepsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EMRClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AddJobFlowStepsRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * AddJobFlowStepsRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::EMR::AddJobFlowStepsRequestPrivate
+ * \brief The AddJobFlowStepsRequestPrivate class provides private implementation for AddJobFlowStepsRequest.
+ * \internal
  *
- * @class  AddJobFlowStepsRequestPrivate
- *
- * @brief  Private implementation for AddJobFlowStepsRequest.
+ * \inmodule QtAwsEMR
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AddJobFlowStepsRequestPrivate object.
- *
- * @param  action  EMR action being performed.
- * @param  q       Pointer to this object's public AddJobFlowStepsRequest instance.
+ * Constructs a AddJobFlowStepsRequestPrivate object for EMR \a action with,
+ * public implementation \a q.
  */
 AddJobFlowStepsRequestPrivate::AddJobFlowStepsRequestPrivate(
     const EMRRequest::Action action, AddJobFlowStepsRequest * const q)
@@ -107,15 +96,10 @@ AddJobFlowStepsRequestPrivate::AddJobFlowStepsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AddJobFlowStepsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AddJobFlowStepsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AddJobFlowStepsRequest instance.
  */
 AddJobFlowStepsRequestPrivate::AddJobFlowStepsRequestPrivate(
     const AddJobFlowStepsRequestPrivate &other, AddJobFlowStepsRequest * const q)

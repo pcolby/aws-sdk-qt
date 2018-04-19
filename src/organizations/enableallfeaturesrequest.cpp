@@ -27,10 +27,9 @@ namespace Organizations {
 
 /*!
  * \class QtAws::Organizations::EnableAllFeaturesRequest
- *
  * \brief The EnableAllFeaturesRequest class provides an interface for Organizations EnableAllFeatures requests.
  *
- * \ingroup Organizations
+ * \inmodule QtAwsOrganizations
  *
  *  <fullname>AWS Organizations API Reference</fullname>
  * 
@@ -179,9 +178,7 @@ namespace Organizations {
  */
 
 /*!
- * @brief  Constructs a new EnableAllFeaturesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 EnableAllFeaturesRequest::EnableAllFeaturesRequest(const EnableAllFeaturesRequest &other)
     : OrganizationsRequest(new EnableAllFeaturesRequestPrivate(*other.d_func(), this))
@@ -190,7 +187,7 @@ EnableAllFeaturesRequest::EnableAllFeaturesRequest(const EnableAllFeaturesReques
 }
 
 /*!
- * @brief  Constructs a new EnableAllFeaturesRequest object.
+ * Constructs a EnableAllFeaturesRequest object.
  */
 EnableAllFeaturesRequest::EnableAllFeaturesRequest()
     : OrganizationsRequest(new EnableAllFeaturesRequestPrivate(OrganizationsRequest::EnableAllFeaturesAction, this))
@@ -208,14 +205,9 @@ bool EnableAllFeaturesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an EnableAllFeaturesResponse object.
+ * Returns a EnableAllFeaturesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An EnableAllFeaturesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  OrganizationsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * EnableAllFeaturesRequest::response(QNetworkReply * const reply) const
 {
@@ -223,20 +215,17 @@ QtAws::Core::AwsAbstractResponse * EnableAllFeaturesRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::Organizations::EnableAllFeaturesRequestPrivate
+ * \brief The EnableAllFeaturesRequestPrivate class provides private implementation for EnableAllFeaturesRequest.
+ * \internal
  *
- * @class  EnableAllFeaturesRequestPrivate
- *
- * @brief  Private implementation for EnableAllFeaturesRequest.
+ * \inmodule QtAwsOrganizations
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new EnableAllFeaturesRequestPrivate object.
- *
- * @param  action  Organizations action being performed.
- * @param  q       Pointer to this object's public EnableAllFeaturesRequest instance.
+ * Constructs a EnableAllFeaturesRequestPrivate object for Organizations \a action with,
+ * public implementation \a q.
  */
 EnableAllFeaturesRequestPrivate::EnableAllFeaturesRequestPrivate(
     const OrganizationsRequest::Action action, EnableAllFeaturesRequest * const q)
@@ -246,15 +235,10 @@ EnableAllFeaturesRequestPrivate::EnableAllFeaturesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new EnableAllFeaturesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the EnableAllFeaturesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public EnableAllFeaturesRequest instance.
  */
 EnableAllFeaturesRequestPrivate::EnableAllFeaturesRequestPrivate(
     const EnableAllFeaturesRequestPrivate &other, EnableAllFeaturesRequest * const q)

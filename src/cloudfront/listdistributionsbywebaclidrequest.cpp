@@ -27,10 +27,9 @@ namespace CloudFront {
 
 /*!
  * \class QtAws::CloudFront::ListDistributionsByWebACLIdRequest
- *
  * \brief The ListDistributionsByWebACLIdRequest class provides an interface for CloudFront ListDistributionsByWebACLId requests.
  *
- * \ingroup CloudFront
+ * \inmodule QtAwsCloudFront
  *
  *  <fullname>Amazon CloudFront</fullname>
  * 
@@ -42,9 +41,7 @@ namespace CloudFront {
  */
 
 /*!
- * @brief  Constructs a new ListDistributionsByWebACLIdRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListDistributionsByWebACLIdRequest::ListDistributionsByWebACLIdRequest(const ListDistributionsByWebACLIdRequest &other)
     : CloudFrontRequest(new ListDistributionsByWebACLIdRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ ListDistributionsByWebACLIdRequest::ListDistributionsByWebACLIdRequest(const Lis
 }
 
 /*!
- * @brief  Constructs a new ListDistributionsByWebACLIdRequest object.
+ * Constructs a ListDistributionsByWebACLIdRequest object.
  */
 ListDistributionsByWebACLIdRequest::ListDistributionsByWebACLIdRequest()
     : CloudFrontRequest(new ListDistributionsByWebACLIdRequestPrivate(CloudFrontRequest::ListDistributionsByWebACLIdAction, this))
@@ -71,14 +68,9 @@ bool ListDistributionsByWebACLIdRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListDistributionsByWebACLIdResponse object.
+ * Returns a ListDistributionsByWebACLIdResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListDistributionsByWebACLIdResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudFrontClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListDistributionsByWebACLIdRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * ListDistributionsByWebACLIdRequest::response(
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudFront::ListDistributionsByWebACLIdRequestPrivate
+ * \brief The ListDistributionsByWebACLIdRequestPrivate class provides private implementation for ListDistributionsByWebACLIdRequest.
+ * \internal
  *
- * @class  ListDistributionsByWebACLIdRequestPrivate
- *
- * @brief  Private implementation for ListDistributionsByWebACLIdRequest.
+ * \inmodule QtAwsCloudFront
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListDistributionsByWebACLIdRequestPrivate object.
- *
- * @param  action  CloudFront action being performed.
- * @param  q       Pointer to this object's public ListDistributionsByWebACLIdRequest instance.
+ * Constructs a ListDistributionsByWebACLIdRequestPrivate object for CloudFront \a action with,
+ * public implementation \a q.
  */
 ListDistributionsByWebACLIdRequestPrivate::ListDistributionsByWebACLIdRequestPrivate(
     const CloudFrontRequest::Action action, ListDistributionsByWebACLIdRequest * const q)
@@ -109,15 +98,10 @@ ListDistributionsByWebACLIdRequestPrivate::ListDistributionsByWebACLIdRequestPri
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListDistributionsByWebACLIdRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListDistributionsByWebACLIdRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListDistributionsByWebACLIdRequest instance.
  */
 ListDistributionsByWebACLIdRequestPrivate::ListDistributionsByWebACLIdRequestPrivate(
     const ListDistributionsByWebACLIdRequestPrivate &other, ListDistributionsByWebACLIdRequest * const q)

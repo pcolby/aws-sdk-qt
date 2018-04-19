@@ -27,10 +27,9 @@ namespace WorkDocs {
 
 /*!
  * \class QtAws::WorkDocs::DeleteNotificationSubscriptionRequest
- *
  * \brief The DeleteNotificationSubscriptionRequest class provides an interface for WorkDocs DeleteNotificationSubscription requests.
  *
- * \ingroup WorkDocs
+ * \inmodule QtAwsWorkDocs
  *
  *  The WorkDocs API is designed for the following use
  * 
@@ -66,9 +65,7 @@ namespace WorkDocs {
  */
 
 /*!
- * @brief  Constructs a new DeleteNotificationSubscriptionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteNotificationSubscriptionRequest::DeleteNotificationSubscriptionRequest(const DeleteNotificationSubscriptionRequest &other)
     : WorkDocsRequest(new DeleteNotificationSubscriptionRequestPrivate(*other.d_func(), this))
@@ -77,7 +74,7 @@ DeleteNotificationSubscriptionRequest::DeleteNotificationSubscriptionRequest(con
 }
 
 /*!
- * @brief  Constructs a new DeleteNotificationSubscriptionRequest object.
+ * Constructs a DeleteNotificationSubscriptionRequest object.
  */
 DeleteNotificationSubscriptionRequest::DeleteNotificationSubscriptionRequest()
     : WorkDocsRequest(new DeleteNotificationSubscriptionRequestPrivate(WorkDocsRequest::DeleteNotificationSubscriptionAction, this))
@@ -95,14 +92,9 @@ bool DeleteNotificationSubscriptionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteNotificationSubscriptionResponse object.
+ * Returns a DeleteNotificationSubscriptionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteNotificationSubscriptionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WorkDocsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteNotificationSubscriptionRequest::response(QNetworkReply * const reply) const
 {
@@ -110,20 +102,17 @@ QtAws::Core::AwsAbstractResponse * DeleteNotificationSubscriptionRequest::respon
 }
 
 /*!
- * @internal
+ * \class QtAws::WorkDocs::DeleteNotificationSubscriptionRequestPrivate
+ * \brief The DeleteNotificationSubscriptionRequestPrivate class provides private implementation for DeleteNotificationSubscriptionRequest.
+ * \internal
  *
- * @class  DeleteNotificationSubscriptionRequestPrivate
- *
- * @brief  Private implementation for DeleteNotificationSubscriptionRequest.
+ * \inmodule QtAwsWorkDocs
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteNotificationSubscriptionRequestPrivate object.
- *
- * @param  action  WorkDocs action being performed.
- * @param  q       Pointer to this object's public DeleteNotificationSubscriptionRequest instance.
+ * Constructs a DeleteNotificationSubscriptionRequestPrivate object for WorkDocs \a action with,
+ * public implementation \a q.
  */
 DeleteNotificationSubscriptionRequestPrivate::DeleteNotificationSubscriptionRequestPrivate(
     const WorkDocsRequest::Action action, DeleteNotificationSubscriptionRequest * const q)
@@ -133,15 +122,10 @@ DeleteNotificationSubscriptionRequestPrivate::DeleteNotificationSubscriptionRequ
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteNotificationSubscriptionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteNotificationSubscriptionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteNotificationSubscriptionRequest instance.
  */
 DeleteNotificationSubscriptionRequestPrivate::DeleteNotificationSubscriptionRequestPrivate(
     const DeleteNotificationSubscriptionRequestPrivate &other, DeleteNotificationSubscriptionRequest * const q)

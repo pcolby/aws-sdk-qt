@@ -27,10 +27,9 @@ namespace WorkDocs {
 
 /*!
  * \class QtAws::WorkDocs::CreateFolderRequest
- *
  * \brief The CreateFolderRequest class provides an interface for WorkDocs CreateFolder requests.
  *
- * \ingroup WorkDocs
+ * \inmodule QtAwsWorkDocs
  *
  *  The WorkDocs API is designed for the following use
  * 
@@ -66,9 +65,7 @@ namespace WorkDocs {
  */
 
 /*!
- * @brief  Constructs a new CreateFolderRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateFolderRequest::CreateFolderRequest(const CreateFolderRequest &other)
     : WorkDocsRequest(new CreateFolderRequestPrivate(*other.d_func(), this))
@@ -77,7 +74,7 @@ CreateFolderRequest::CreateFolderRequest(const CreateFolderRequest &other)
 }
 
 /*!
- * @brief  Constructs a new CreateFolderRequest object.
+ * Constructs a CreateFolderRequest object.
  */
 CreateFolderRequest::CreateFolderRequest()
     : WorkDocsRequest(new CreateFolderRequestPrivate(WorkDocsRequest::CreateFolderAction, this))
@@ -95,14 +92,9 @@ bool CreateFolderRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateFolderResponse object.
+ * Returns a CreateFolderResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateFolderResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WorkDocsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateFolderRequest::response(QNetworkReply * const reply) const
 {
@@ -110,20 +102,17 @@ QtAws::Core::AwsAbstractResponse * CreateFolderRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::WorkDocs::CreateFolderRequestPrivate
+ * \brief The CreateFolderRequestPrivate class provides private implementation for CreateFolderRequest.
+ * \internal
  *
- * @class  CreateFolderRequestPrivate
- *
- * @brief  Private implementation for CreateFolderRequest.
+ * \inmodule QtAwsWorkDocs
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateFolderRequestPrivate object.
- *
- * @param  action  WorkDocs action being performed.
- * @param  q       Pointer to this object's public CreateFolderRequest instance.
+ * Constructs a CreateFolderRequestPrivate object for WorkDocs \a action with,
+ * public implementation \a q.
  */
 CreateFolderRequestPrivate::CreateFolderRequestPrivate(
     const WorkDocsRequest::Action action, CreateFolderRequest * const q)
@@ -133,15 +122,10 @@ CreateFolderRequestPrivate::CreateFolderRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateFolderRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateFolderRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateFolderRequest instance.
  */
 CreateFolderRequestPrivate::CreateFolderRequestPrivate(
     const CreateFolderRequestPrivate &other, CreateFolderRequest * const q)

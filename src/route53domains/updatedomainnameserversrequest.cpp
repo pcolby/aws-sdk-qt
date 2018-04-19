@@ -27,10 +27,9 @@ namespace Route53Domains {
 
 /*!
  * \class QtAws::Route53Domains::UpdateDomainNameserversRequest
- *
  * \brief The UpdateDomainNameserversRequest class provides an interface for Route53Domains UpdateDomainNameservers requests.
  *
- * \ingroup Route53Domains
+ * \inmodule QtAwsRoute53Domains
  *
  *  Amazon Route 53 API actions let you register domain names and perform related
  *
@@ -38,9 +37,7 @@ namespace Route53Domains {
  */
 
 /*!
- * @brief  Constructs a new UpdateDomainNameserversRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateDomainNameserversRequest::UpdateDomainNameserversRequest(const UpdateDomainNameserversRequest &other)
     : Route53DomainsRequest(new UpdateDomainNameserversRequestPrivate(*other.d_func(), this))
@@ -49,7 +46,7 @@ UpdateDomainNameserversRequest::UpdateDomainNameserversRequest(const UpdateDomai
 }
 
 /*!
- * @brief  Constructs a new UpdateDomainNameserversRequest object.
+ * Constructs a UpdateDomainNameserversRequest object.
  */
 UpdateDomainNameserversRequest::UpdateDomainNameserversRequest()
     : Route53DomainsRequest(new UpdateDomainNameserversRequestPrivate(Route53DomainsRequest::UpdateDomainNameserversAction, this))
@@ -67,14 +64,9 @@ bool UpdateDomainNameserversRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateDomainNameserversResponse object.
+ * Returns a UpdateDomainNameserversResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateDomainNameserversResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  Route53DomainsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateDomainNameserversRequest::response(QNetworkReply * const reply) const
 {
@@ -82,20 +74,17 @@ QtAws::Core::AwsAbstractResponse * UpdateDomainNameserversRequest::response(QNet
 }
 
 /*!
- * @internal
+ * \class QtAws::Route53Domains::UpdateDomainNameserversRequestPrivate
+ * \brief The UpdateDomainNameserversRequestPrivate class provides private implementation for UpdateDomainNameserversRequest.
+ * \internal
  *
- * @class  UpdateDomainNameserversRequestPrivate
- *
- * @brief  Private implementation for UpdateDomainNameserversRequest.
+ * \inmodule QtAwsRoute53Domains
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateDomainNameserversRequestPrivate object.
- *
- * @param  action  Route53Domains action being performed.
- * @param  q       Pointer to this object's public UpdateDomainNameserversRequest instance.
+ * Constructs a UpdateDomainNameserversRequestPrivate object for Route53Domains \a action with,
+ * public implementation \a q.
  */
 UpdateDomainNameserversRequestPrivate::UpdateDomainNameserversRequestPrivate(
     const Route53DomainsRequest::Action action, UpdateDomainNameserversRequest * const q)
@@ -105,15 +94,10 @@ UpdateDomainNameserversRequestPrivate::UpdateDomainNameserversRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateDomainNameserversRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateDomainNameserversRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateDomainNameserversRequest instance.
  */
 UpdateDomainNameserversRequestPrivate::UpdateDomainNameserversRequestPrivate(
     const UpdateDomainNameserversRequestPrivate &other, UpdateDomainNameserversRequest * const q)

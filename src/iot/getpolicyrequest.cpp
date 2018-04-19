@@ -27,10 +27,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::GetPolicyRequest
- *
  * \brief The GetPolicyRequest class provides an interface for IoT GetPolicy requests.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -48,9 +47,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new GetPolicyRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetPolicyRequest::GetPolicyRequest(const GetPolicyRequest &other)
     : IoTRequest(new GetPolicyRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ GetPolicyRequest::GetPolicyRequest(const GetPolicyRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetPolicyRequest object.
+ * Constructs a GetPolicyRequest object.
  */
 GetPolicyRequest::GetPolicyRequest()
     : IoTRequest(new GetPolicyRequestPrivate(IoTRequest::GetPolicyAction, this))
@@ -77,14 +74,9 @@ bool GetPolicyRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetPolicyResponse object.
+ * Returns a GetPolicyResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetPolicyResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IoTClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetPolicyRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * GetPolicyRequest::response(QNetworkReply * co
 }
 
 /*!
- * @internal
+ * \class QtAws::IoT::GetPolicyRequestPrivate
+ * \brief The GetPolicyRequestPrivate class provides private implementation for GetPolicyRequest.
+ * \internal
  *
- * @class  GetPolicyRequestPrivate
- *
- * @brief  Private implementation for GetPolicyRequest.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetPolicyRequestPrivate object.
- *
- * @param  action  IoT action being performed.
- * @param  q       Pointer to this object's public GetPolicyRequest instance.
+ * Constructs a GetPolicyRequestPrivate object for IoT \a action with,
+ * public implementation \a q.
  */
 GetPolicyRequestPrivate::GetPolicyRequestPrivate(
     const IoTRequest::Action action, GetPolicyRequest * const q)
@@ -115,15 +104,10 @@ GetPolicyRequestPrivate::GetPolicyRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetPolicyRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetPolicyRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetPolicyRequest instance.
  */
 GetPolicyRequestPrivate::GetPolicyRequestPrivate(
     const GetPolicyRequestPrivate &other, GetPolicyRequest * const q)

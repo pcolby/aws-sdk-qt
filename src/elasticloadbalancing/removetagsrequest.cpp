@@ -27,10 +27,9 @@ namespace ElasticLoadBalancing {
 
 /*!
  * \class QtAws::ElasticLoadBalancing::RemoveTagsRequest
- *
  * \brief The RemoveTagsRequest class provides an interface for ElasticLoadBalancing RemoveTags requests.
  *
- * \ingroup ElasticLoadBalancing
+ * \inmodule QtAwsElasticLoadBalancing
  *
  *  <fullname>Elastic Load Balancing</fullname>
  * 
@@ -65,9 +64,7 @@ namespace ElasticLoadBalancing {
  */
 
 /*!
- * @brief  Constructs a new RemoveTagsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 RemoveTagsRequest::RemoveTagsRequest(const RemoveTagsRequest &other)
     : ElasticLoadBalancingRequest(new RemoveTagsRequestPrivate(*other.d_func(), this))
@@ -76,7 +73,7 @@ RemoveTagsRequest::RemoveTagsRequest(const RemoveTagsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new RemoveTagsRequest object.
+ * Constructs a RemoveTagsRequest object.
  */
 RemoveTagsRequest::RemoveTagsRequest()
     : ElasticLoadBalancingRequest(new RemoveTagsRequestPrivate(ElasticLoadBalancingRequest::RemoveTagsAction, this))
@@ -94,14 +91,9 @@ bool RemoveTagsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an RemoveTagsResponse object.
+ * Returns a RemoveTagsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An RemoveTagsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ElasticLoadBalancingClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * RemoveTagsRequest::response(QNetworkReply * const reply) const
 {
@@ -109,20 +101,17 @@ QtAws::Core::AwsAbstractResponse * RemoveTagsRequest::response(QNetworkReply * c
 }
 
 /*!
- * @internal
+ * \class QtAws::ElasticLoadBalancing::RemoveTagsRequestPrivate
+ * \brief The RemoveTagsRequestPrivate class provides private implementation for RemoveTagsRequest.
+ * \internal
  *
- * @class  RemoveTagsRequestPrivate
- *
- * @brief  Private implementation for RemoveTagsRequest.
+ * \inmodule QtAwsElasticLoadBalancing
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new RemoveTagsRequestPrivate object.
- *
- * @param  action  ElasticLoadBalancing action being performed.
- * @param  q       Pointer to this object's public RemoveTagsRequest instance.
+ * Constructs a RemoveTagsRequestPrivate object for ElasticLoadBalancing \a action with,
+ * public implementation \a q.
  */
 RemoveTagsRequestPrivate::RemoveTagsRequestPrivate(
     const ElasticLoadBalancingRequest::Action action, RemoveTagsRequest * const q)
@@ -132,15 +121,10 @@ RemoveTagsRequestPrivate::RemoveTagsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RemoveTagsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the RemoveTagsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public RemoveTagsRequest instance.
  */
 RemoveTagsRequestPrivate::RemoveTagsRequestPrivate(
     const RemoveTagsRequestPrivate &other, RemoveTagsRequest * const q)

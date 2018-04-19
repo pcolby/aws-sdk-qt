@@ -27,10 +27,9 @@ namespace AlexaForBusiness {
 
 /*!
  * \class QtAws::AlexaForBusiness::GetRoomSkillParameterRequest
- *
  * \brief The GetRoomSkillParameterRequest class provides an interface for AlexaForBusiness GetRoomSkillParameter requests.
  *
- * \ingroup AlexaForBusiness
+ * \inmodule QtAwsAlexaForBusiness
  *
  *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
  *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
@@ -42,9 +41,7 @@ namespace AlexaForBusiness {
  */
 
 /*!
- * @brief  Constructs a new GetRoomSkillParameterRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetRoomSkillParameterRequest::GetRoomSkillParameterRequest(const GetRoomSkillParameterRequest &other)
     : AlexaForBusinessRequest(new GetRoomSkillParameterRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ GetRoomSkillParameterRequest::GetRoomSkillParameterRequest(const GetRoomSkillPar
 }
 
 /*!
- * @brief  Constructs a new GetRoomSkillParameterRequest object.
+ * Constructs a GetRoomSkillParameterRequest object.
  */
 GetRoomSkillParameterRequest::GetRoomSkillParameterRequest()
     : AlexaForBusinessRequest(new GetRoomSkillParameterRequestPrivate(AlexaForBusinessRequest::GetRoomSkillParameterAction, this))
@@ -71,14 +68,9 @@ bool GetRoomSkillParameterRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetRoomSkillParameterResponse object.
+ * Returns a GetRoomSkillParameterResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetRoomSkillParameterResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AlexaForBusinessClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetRoomSkillParameterRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * GetRoomSkillParameterRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::AlexaForBusiness::GetRoomSkillParameterRequestPrivate
+ * \brief The GetRoomSkillParameterRequestPrivate class provides private implementation for GetRoomSkillParameterRequest.
+ * \internal
  *
- * @class  GetRoomSkillParameterRequestPrivate
- *
- * @brief  Private implementation for GetRoomSkillParameterRequest.
+ * \inmodule QtAwsAlexaForBusiness
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetRoomSkillParameterRequestPrivate object.
- *
- * @param  action  AlexaForBusiness action being performed.
- * @param  q       Pointer to this object's public GetRoomSkillParameterRequest instance.
+ * Constructs a GetRoomSkillParameterRequestPrivate object for AlexaForBusiness \a action with,
+ * public implementation \a q.
  */
 GetRoomSkillParameterRequestPrivate::GetRoomSkillParameterRequestPrivate(
     const AlexaForBusinessRequest::Action action, GetRoomSkillParameterRequest * const q)
@@ -109,15 +98,10 @@ GetRoomSkillParameterRequestPrivate::GetRoomSkillParameterRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetRoomSkillParameterRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetRoomSkillParameterRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetRoomSkillParameterRequest instance.
  */
 GetRoomSkillParameterRequestPrivate::GetRoomSkillParameterRequestPrivate(
     const GetRoomSkillParameterRequestPrivate &other, GetRoomSkillParameterRequest * const q)

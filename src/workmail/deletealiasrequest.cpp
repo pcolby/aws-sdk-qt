@@ -27,10 +27,9 @@ namespace WorkMail {
 
 /*!
  * \class QtAws::WorkMail::DeleteAliasRequest
- *
  * \brief The DeleteAliasRequest class provides an interface for WorkMail DeleteAlias requests.
  *
- * \ingroup WorkMail
+ * \inmodule QtAwsWorkMail
  *
  *  Amazon WorkMail is a secure, managed business email and calendaring service with support for existing desktop and mobile
  *  email clients. You can access your email, contacts, and calendars using Microsoft Outlook, your browser, or their native
@@ -70,9 +69,7 @@ namespace WorkMail {
  */
 
 /*!
- * @brief  Constructs a new DeleteAliasRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteAliasRequest::DeleteAliasRequest(const DeleteAliasRequest &other)
     : WorkMailRequest(new DeleteAliasRequestPrivate(*other.d_func(), this))
@@ -81,7 +78,7 @@ DeleteAliasRequest::DeleteAliasRequest(const DeleteAliasRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DeleteAliasRequest object.
+ * Constructs a DeleteAliasRequest object.
  */
 DeleteAliasRequest::DeleteAliasRequest()
     : WorkMailRequest(new DeleteAliasRequestPrivate(WorkMailRequest::DeleteAliasAction, this))
@@ -99,14 +96,9 @@ bool DeleteAliasRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteAliasResponse object.
+ * Returns a DeleteAliasResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteAliasResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WorkMailClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteAliasRequest::response(QNetworkReply * const reply) const
 {
@@ -114,20 +106,17 @@ QtAws::Core::AwsAbstractResponse * DeleteAliasRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::WorkMail::DeleteAliasRequestPrivate
+ * \brief The DeleteAliasRequestPrivate class provides private implementation for DeleteAliasRequest.
+ * \internal
  *
- * @class  DeleteAliasRequestPrivate
- *
- * @brief  Private implementation for DeleteAliasRequest.
+ * \inmodule QtAwsWorkMail
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteAliasRequestPrivate object.
- *
- * @param  action  WorkMail action being performed.
- * @param  q       Pointer to this object's public DeleteAliasRequest instance.
+ * Constructs a DeleteAliasRequestPrivate object for WorkMail \a action with,
+ * public implementation \a q.
  */
 DeleteAliasRequestPrivate::DeleteAliasRequestPrivate(
     const WorkMailRequest::Action action, DeleteAliasRequest * const q)
@@ -137,15 +126,10 @@ DeleteAliasRequestPrivate::DeleteAliasRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteAliasRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteAliasRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteAliasRequest instance.
  */
 DeleteAliasRequestPrivate::DeleteAliasRequestPrivate(
     const DeleteAliasRequestPrivate &other, DeleteAliasRequest * const q)

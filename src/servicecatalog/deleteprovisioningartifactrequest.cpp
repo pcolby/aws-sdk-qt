@@ -27,10 +27,9 @@ namespace ServiceCatalog {
 
 /*!
  * \class QtAws::ServiceCatalog::DeleteProvisioningArtifactRequest
- *
  * \brief The DeleteProvisioningArtifactRequest class provides an interface for ServiceCatalog DeleteProvisioningArtifact requests.
  *
- * \ingroup ServiceCatalog
+ * \inmodule QtAwsServiceCatalog
  *
  *  <fullname>AWS Service Catalog</fullname>
  * 
@@ -43,9 +42,7 @@ namespace ServiceCatalog {
  */
 
 /*!
- * @brief  Constructs a new DeleteProvisioningArtifactRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteProvisioningArtifactRequest::DeleteProvisioningArtifactRequest(const DeleteProvisioningArtifactRequest &other)
     : ServiceCatalogRequest(new DeleteProvisioningArtifactRequestPrivate(*other.d_func(), this))
@@ -54,7 +51,7 @@ DeleteProvisioningArtifactRequest::DeleteProvisioningArtifactRequest(const Delet
 }
 
 /*!
- * @brief  Constructs a new DeleteProvisioningArtifactRequest object.
+ * Constructs a DeleteProvisioningArtifactRequest object.
  */
 DeleteProvisioningArtifactRequest::DeleteProvisioningArtifactRequest()
     : ServiceCatalogRequest(new DeleteProvisioningArtifactRequestPrivate(ServiceCatalogRequest::DeleteProvisioningArtifactAction, this))
@@ -72,14 +69,9 @@ bool DeleteProvisioningArtifactRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteProvisioningArtifactResponse object.
+ * Returns a DeleteProvisioningArtifactResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteProvisioningArtifactResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ServiceCatalogClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteProvisioningArtifactRequest::response(QNetworkReply * const reply) const
 {
@@ -87,20 +79,17 @@ QtAws::Core::AwsAbstractResponse * DeleteProvisioningArtifactRequest::response(Q
 }
 
 /*!
- * @internal
+ * \class QtAws::ServiceCatalog::DeleteProvisioningArtifactRequestPrivate
+ * \brief The DeleteProvisioningArtifactRequestPrivate class provides private implementation for DeleteProvisioningArtifactRequest.
+ * \internal
  *
- * @class  DeleteProvisioningArtifactRequestPrivate
- *
- * @brief  Private implementation for DeleteProvisioningArtifactRequest.
+ * \inmodule QtAwsServiceCatalog
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteProvisioningArtifactRequestPrivate object.
- *
- * @param  action  ServiceCatalog action being performed.
- * @param  q       Pointer to this object's public DeleteProvisioningArtifactRequest instance.
+ * Constructs a DeleteProvisioningArtifactRequestPrivate object for ServiceCatalog \a action with,
+ * public implementation \a q.
  */
 DeleteProvisioningArtifactRequestPrivate::DeleteProvisioningArtifactRequestPrivate(
     const ServiceCatalogRequest::Action action, DeleteProvisioningArtifactRequest * const q)
@@ -110,15 +99,10 @@ DeleteProvisioningArtifactRequestPrivate::DeleteProvisioningArtifactRequestPriva
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteProvisioningArtifactRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteProvisioningArtifactRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteProvisioningArtifactRequest instance.
  */
 DeleteProvisioningArtifactRequestPrivate::DeleteProvisioningArtifactRequestPrivate(
     const DeleteProvisioningArtifactRequestPrivate &other, DeleteProvisioningArtifactRequest * const q)

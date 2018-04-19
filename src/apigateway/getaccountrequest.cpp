@@ -27,10 +27,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::GetAccountRequest
- *
  * \brief The GetAccountRequest class provides an interface for APIGateway GetAccount requests.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -42,9 +41,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new GetAccountRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetAccountRequest::GetAccountRequest(const GetAccountRequest &other)
     : APIGatewayRequest(new GetAccountRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ GetAccountRequest::GetAccountRequest(const GetAccountRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetAccountRequest object.
+ * Constructs a GetAccountRequest object.
  */
 GetAccountRequest::GetAccountRequest()
     : APIGatewayRequest(new GetAccountRequestPrivate(APIGatewayRequest::GetAccountAction, this))
@@ -71,14 +68,9 @@ bool GetAccountRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetAccountResponse object.
+ * Returns a GetAccountResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetAccountResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  APIGatewayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetAccountRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * GetAccountRequest::response(QNetworkReply * c
 }
 
 /*!
- * @internal
+ * \class QtAws::APIGateway::GetAccountRequestPrivate
+ * \brief The GetAccountRequestPrivate class provides private implementation for GetAccountRequest.
+ * \internal
  *
- * @class  GetAccountRequestPrivate
- *
- * @brief  Private implementation for GetAccountRequest.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetAccountRequestPrivate object.
- *
- * @param  action  APIGateway action being performed.
- * @param  q       Pointer to this object's public GetAccountRequest instance.
+ * Constructs a GetAccountRequestPrivate object for APIGateway \a action with,
+ * public implementation \a q.
  */
 GetAccountRequestPrivate::GetAccountRequestPrivate(
     const APIGatewayRequest::Action action, GetAccountRequest * const q)
@@ -109,15 +98,10 @@ GetAccountRequestPrivate::GetAccountRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetAccountRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetAccountRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetAccountRequest instance.
  */
 GetAccountRequestPrivate::GetAccountRequestPrivate(
     const GetAccountRequestPrivate &other, GetAccountRequest * const q)

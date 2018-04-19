@@ -54,6 +54,9 @@
 /*!
  * \namespace QtAws::ElasticsearchService
  * \brief The QtAws::ElasticsearchService contains stuff...
+ *
+ * \inmodule QtAwsElasticsearchService
+ *
  * @todo Move this to a separate template file.
  */
 
@@ -112,7 +115,7 @@ ElasticsearchServiceClient::ElasticsearchServiceClient(
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * \a  AwsEndpoint::getEndpoint()
+ * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
 ElasticsearchServiceClient::ElasticsearchServiceClient(
     const QUrl &endpoint,

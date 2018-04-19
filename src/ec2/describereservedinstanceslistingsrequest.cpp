@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DescribeReservedInstancesListingsRequest
- *
  * \brief The DescribeReservedInstancesListingsRequest class provides an interface for EC2 DescribeReservedInstancesListings requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DescribeReservedInstancesListingsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeReservedInstancesListingsRequest::DescribeReservedInstancesListingsRequest(const DescribeReservedInstancesListingsRequest &other)
     : EC2Request(new DescribeReservedInstancesListingsRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ DescribeReservedInstancesListingsRequest::DescribeReservedInstancesListingsReque
 }
 
 /*!
- * @brief  Constructs a new DescribeReservedInstancesListingsRequest object.
+ * Constructs a DescribeReservedInstancesListingsRequest object.
  */
 DescribeReservedInstancesListingsRequest::DescribeReservedInstancesListingsRequest()
     : EC2Request(new DescribeReservedInstancesListingsRequestPrivate(EC2Request::DescribeReservedInstancesListingsAction, this))
@@ -70,14 +67,9 @@ bool DescribeReservedInstancesListingsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeReservedInstancesListingsResponse object.
+ * Returns a DescribeReservedInstancesListingsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeReservedInstancesListingsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeReservedInstancesListingsRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * DescribeReservedInstancesListingsRequest::res
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::DescribeReservedInstancesListingsRequestPrivate
+ * \brief The DescribeReservedInstancesListingsRequestPrivate class provides private implementation for DescribeReservedInstancesListingsRequest.
+ * \internal
  *
- * @class  DescribeReservedInstancesListingsRequestPrivate
- *
- * @brief  Private implementation for DescribeReservedInstancesListingsRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeReservedInstancesListingsRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public DescribeReservedInstancesListingsRequest instance.
+ * Constructs a DescribeReservedInstancesListingsRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 DescribeReservedInstancesListingsRequestPrivate::DescribeReservedInstancesListingsRequestPrivate(
     const EC2Request::Action action, DescribeReservedInstancesListingsRequest * const q)
@@ -108,15 +97,10 @@ DescribeReservedInstancesListingsRequestPrivate::DescribeReservedInstancesListin
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeReservedInstancesListingsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeReservedInstancesListingsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeReservedInstancesListingsRequest instance.
  */
 DescribeReservedInstancesListingsRequestPrivate::DescribeReservedInstancesListingsRequestPrivate(
     const DescribeReservedInstancesListingsRequestPrivate &other, DescribeReservedInstancesListingsRequest * const q)

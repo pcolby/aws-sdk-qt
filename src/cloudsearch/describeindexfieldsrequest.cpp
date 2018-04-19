@@ -27,10 +27,9 @@ namespace CloudSearch {
 
 /*!
  * \class QtAws::CloudSearch::DescribeIndexFieldsRequest
- *
  * \brief The DescribeIndexFieldsRequest class provides an interface for CloudSearch DescribeIndexFields requests.
  *
- * \ingroup CloudSearch
+ * \inmodule QtAwsCloudSearch
  *
  *  <fullname>Amazon CloudSearch Configuration Service</fullname>
  * 
@@ -48,9 +47,7 @@ namespace CloudSearch {
  */
 
 /*!
- * @brief  Constructs a new DescribeIndexFieldsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeIndexFieldsRequest::DescribeIndexFieldsRequest(const DescribeIndexFieldsRequest &other)
     : CloudSearchRequest(new DescribeIndexFieldsRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ DescribeIndexFieldsRequest::DescribeIndexFieldsRequest(const DescribeIndexFields
 }
 
 /*!
- * @brief  Constructs a new DescribeIndexFieldsRequest object.
+ * Constructs a DescribeIndexFieldsRequest object.
  */
 DescribeIndexFieldsRequest::DescribeIndexFieldsRequest()
     : CloudSearchRequest(new DescribeIndexFieldsRequestPrivate(CloudSearchRequest::DescribeIndexFieldsAction, this))
@@ -77,14 +74,9 @@ bool DescribeIndexFieldsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeIndexFieldsResponse object.
+ * Returns a DescribeIndexFieldsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeIndexFieldsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudSearchClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeIndexFieldsRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * DescribeIndexFieldsRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudSearch::DescribeIndexFieldsRequestPrivate
+ * \brief The DescribeIndexFieldsRequestPrivate class provides private implementation for DescribeIndexFieldsRequest.
+ * \internal
  *
- * @class  DescribeIndexFieldsRequestPrivate
- *
- * @brief  Private implementation for DescribeIndexFieldsRequest.
+ * \inmodule QtAwsCloudSearch
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeIndexFieldsRequestPrivate object.
- *
- * @param  action  CloudSearch action being performed.
- * @param  q       Pointer to this object's public DescribeIndexFieldsRequest instance.
+ * Constructs a DescribeIndexFieldsRequestPrivate object for CloudSearch \a action with,
+ * public implementation \a q.
  */
 DescribeIndexFieldsRequestPrivate::DescribeIndexFieldsRequestPrivate(
     const CloudSearchRequest::Action action, DescribeIndexFieldsRequest * const q)
@@ -115,15 +104,10 @@ DescribeIndexFieldsRequestPrivate::DescribeIndexFieldsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeIndexFieldsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeIndexFieldsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeIndexFieldsRequest instance.
  */
 DescribeIndexFieldsRequestPrivate::DescribeIndexFieldsRequestPrivate(
     const DescribeIndexFieldsRequestPrivate &other, DescribeIndexFieldsRequest * const q)

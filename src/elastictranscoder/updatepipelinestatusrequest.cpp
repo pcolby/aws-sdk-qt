@@ -27,10 +27,9 @@ namespace ElasticTranscoder {
 
 /*!
  * \class QtAws::ElasticTranscoder::UpdatePipelineStatusRequest
- *
  * \brief The UpdatePipelineStatusRequest class provides an interface for ElasticTranscoder UpdatePipelineStatus requests.
  *
- * \ingroup ElasticTranscoder
+ * \inmodule QtAwsElasticTranscoder
  *
  *  <fullname>AWS Elastic Transcoder Service</fullname>
  * 
@@ -40,9 +39,7 @@ namespace ElasticTranscoder {
  */
 
 /*!
- * @brief  Constructs a new UpdatePipelineStatusRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdatePipelineStatusRequest::UpdatePipelineStatusRequest(const UpdatePipelineStatusRequest &other)
     : ElasticTranscoderRequest(new UpdatePipelineStatusRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ UpdatePipelineStatusRequest::UpdatePipelineStatusRequest(const UpdatePipelineSta
 }
 
 /*!
- * @brief  Constructs a new UpdatePipelineStatusRequest object.
+ * Constructs a UpdatePipelineStatusRequest object.
  */
 UpdatePipelineStatusRequest::UpdatePipelineStatusRequest()
     : ElasticTranscoderRequest(new UpdatePipelineStatusRequestPrivate(ElasticTranscoderRequest::UpdatePipelineStatusAction, this))
@@ -69,14 +66,9 @@ bool UpdatePipelineStatusRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdatePipelineStatusResponse object.
+ * Returns a UpdatePipelineStatusResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdatePipelineStatusResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ElasticTranscoderClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdatePipelineStatusRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * UpdatePipelineStatusRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::ElasticTranscoder::UpdatePipelineStatusRequestPrivate
+ * \brief The UpdatePipelineStatusRequestPrivate class provides private implementation for UpdatePipelineStatusRequest.
+ * \internal
  *
- * @class  UpdatePipelineStatusRequestPrivate
- *
- * @brief  Private implementation for UpdatePipelineStatusRequest.
+ * \inmodule QtAwsElasticTranscoder
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdatePipelineStatusRequestPrivate object.
- *
- * @param  action  ElasticTranscoder action being performed.
- * @param  q       Pointer to this object's public UpdatePipelineStatusRequest instance.
+ * Constructs a UpdatePipelineStatusRequestPrivate object for ElasticTranscoder \a action with,
+ * public implementation \a q.
  */
 UpdatePipelineStatusRequestPrivate::UpdatePipelineStatusRequestPrivate(
     const ElasticTranscoderRequest::Action action, UpdatePipelineStatusRequest * const q)
@@ -107,15 +96,10 @@ UpdatePipelineStatusRequestPrivate::UpdatePipelineStatusRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdatePipelineStatusRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdatePipelineStatusRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdatePipelineStatusRequest instance.
  */
 UpdatePipelineStatusRequestPrivate::UpdatePipelineStatusRequestPrivate(
     const UpdatePipelineStatusRequestPrivate &other, UpdatePipelineStatusRequest * const q)

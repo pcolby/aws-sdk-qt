@@ -27,10 +27,9 @@ namespace Glue {
 
 /*!
  * \class QtAws::Glue::StartCrawlerScheduleRequest
- *
  * \brief The StartCrawlerScheduleRequest class provides an interface for Glue StartCrawlerSchedule requests.
  *
- * \ingroup Glue
+ * \inmodule QtAwsGlue
  *
  *  <fullname>AWS Glue</fullname>
  * 
@@ -40,9 +39,7 @@ namespace Glue {
  */
 
 /*!
- * @brief  Constructs a new StartCrawlerScheduleRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 StartCrawlerScheduleRequest::StartCrawlerScheduleRequest(const StartCrawlerScheduleRequest &other)
     : GlueRequest(new StartCrawlerScheduleRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ StartCrawlerScheduleRequest::StartCrawlerScheduleRequest(const StartCrawlerSched
 }
 
 /*!
- * @brief  Constructs a new StartCrawlerScheduleRequest object.
+ * Constructs a StartCrawlerScheduleRequest object.
  */
 StartCrawlerScheduleRequest::StartCrawlerScheduleRequest()
     : GlueRequest(new StartCrawlerScheduleRequestPrivate(GlueRequest::StartCrawlerScheduleAction, this))
@@ -69,14 +66,9 @@ bool StartCrawlerScheduleRequest::isValid() const
 
 
 /*!
- * @brief  Construct an StartCrawlerScheduleResponse object.
+ * Returns a StartCrawlerScheduleResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An StartCrawlerScheduleResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GlueClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * StartCrawlerScheduleRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * StartCrawlerScheduleRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::Glue::StartCrawlerScheduleRequestPrivate
+ * \brief The StartCrawlerScheduleRequestPrivate class provides private implementation for StartCrawlerScheduleRequest.
+ * \internal
  *
- * @class  StartCrawlerScheduleRequestPrivate
- *
- * @brief  Private implementation for StartCrawlerScheduleRequest.
+ * \inmodule QtAwsGlue
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new StartCrawlerScheduleRequestPrivate object.
- *
- * @param  action  Glue action being performed.
- * @param  q       Pointer to this object's public StartCrawlerScheduleRequest instance.
+ * Constructs a StartCrawlerScheduleRequestPrivate object for Glue \a action with,
+ * public implementation \a q.
  */
 StartCrawlerScheduleRequestPrivate::StartCrawlerScheduleRequestPrivate(
     const GlueRequest::Action action, StartCrawlerScheduleRequest * const q)
@@ -107,15 +96,10 @@ StartCrawlerScheduleRequestPrivate::StartCrawlerScheduleRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StartCrawlerScheduleRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the StartCrawlerScheduleRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public StartCrawlerScheduleRequest instance.
  */
 StartCrawlerScheduleRequestPrivate::StartCrawlerScheduleRequestPrivate(
     const StartCrawlerScheduleRequestPrivate &other, StartCrawlerScheduleRequest * const q)

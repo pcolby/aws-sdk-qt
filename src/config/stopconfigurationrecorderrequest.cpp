@@ -27,10 +27,9 @@ namespace ConfigService {
 
 /*!
  * \class QtAws::ConfigService::StopConfigurationRecorderRequest
- *
  * \brief The StopConfigurationRecorderRequest class provides an interface for ConfigService StopConfigurationRecorder requests.
  *
- * \ingroup ConfigService
+ * \inmodule QtAwsConfigService
  *
  *  <fullname>AWS Config</fullname>
  * 
@@ -60,9 +59,7 @@ namespace ConfigService {
  */
 
 /*!
- * @brief  Constructs a new StopConfigurationRecorderRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 StopConfigurationRecorderRequest::StopConfigurationRecorderRequest(const StopConfigurationRecorderRequest &other)
     : ConfigServiceRequest(new StopConfigurationRecorderRequestPrivate(*other.d_func(), this))
@@ -71,7 +68,7 @@ StopConfigurationRecorderRequest::StopConfigurationRecorderRequest(const StopCon
 }
 
 /*!
- * @brief  Constructs a new StopConfigurationRecorderRequest object.
+ * Constructs a StopConfigurationRecorderRequest object.
  */
 StopConfigurationRecorderRequest::StopConfigurationRecorderRequest()
     : ConfigServiceRequest(new StopConfigurationRecorderRequestPrivate(ConfigServiceRequest::StopConfigurationRecorderAction, this))
@@ -89,14 +86,9 @@ bool StopConfigurationRecorderRequest::isValid() const
 
 
 /*!
- * @brief  Construct an StopConfigurationRecorderResponse object.
+ * Returns a StopConfigurationRecorderResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An StopConfigurationRecorderResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ConfigServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * StopConfigurationRecorderRequest::response(QNetworkReply * const reply) const
 {
@@ -104,20 +96,17 @@ QtAws::Core::AwsAbstractResponse * StopConfigurationRecorderRequest::response(QN
 }
 
 /*!
- * @internal
+ * \class QtAws::ConfigService::StopConfigurationRecorderRequestPrivate
+ * \brief The StopConfigurationRecorderRequestPrivate class provides private implementation for StopConfigurationRecorderRequest.
+ * \internal
  *
- * @class  StopConfigurationRecorderRequestPrivate
- *
- * @brief  Private implementation for StopConfigurationRecorderRequest.
+ * \inmodule QtAwsConfigService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new StopConfigurationRecorderRequestPrivate object.
- *
- * @param  action  ConfigService action being performed.
- * @param  q       Pointer to this object's public StopConfigurationRecorderRequest instance.
+ * Constructs a StopConfigurationRecorderRequestPrivate object for ConfigService \a action with,
+ * public implementation \a q.
  */
 StopConfigurationRecorderRequestPrivate::StopConfigurationRecorderRequestPrivate(
     const ConfigServiceRequest::Action action, StopConfigurationRecorderRequest * const q)
@@ -127,15 +116,10 @@ StopConfigurationRecorderRequestPrivate::StopConfigurationRecorderRequestPrivate
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StopConfigurationRecorderRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the StopConfigurationRecorderRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public StopConfigurationRecorderRequest instance.
  */
 StopConfigurationRecorderRequestPrivate::StopConfigurationRecorderRequestPrivate(
     const StopConfigurationRecorderRequestPrivate &other, StopConfigurationRecorderRequest * const q)

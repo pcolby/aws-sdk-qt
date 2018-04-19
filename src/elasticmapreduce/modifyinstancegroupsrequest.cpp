@@ -27,10 +27,9 @@ namespace EMR {
 
 /*!
  * \class QtAws::EMR::ModifyInstanceGroupsRequest
- *
  * \brief The ModifyInstanceGroupsRequest class provides an interface for EMR ModifyInstanceGroups requests.
  *
- * \ingroup EMR
+ * \inmodule QtAwsEMR
  *
  *  Amazon EMR is a web service that makes it easy to process large amounts of data efficiently. Amazon EMR uses Hadoop
  *  processing combined with several AWS products to do tasks such as web indexing, data mining, log file analysis, machine
@@ -40,9 +39,7 @@ namespace EMR {
  */
 
 /*!
- * @brief  Constructs a new ModifyInstanceGroupsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ModifyInstanceGroupsRequest::ModifyInstanceGroupsRequest(const ModifyInstanceGroupsRequest &other)
     : EMRRequest(new ModifyInstanceGroupsRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ ModifyInstanceGroupsRequest::ModifyInstanceGroupsRequest(const ModifyInstanceGro
 }
 
 /*!
- * @brief  Constructs a new ModifyInstanceGroupsRequest object.
+ * Constructs a ModifyInstanceGroupsRequest object.
  */
 ModifyInstanceGroupsRequest::ModifyInstanceGroupsRequest()
     : EMRRequest(new ModifyInstanceGroupsRequestPrivate(EMRRequest::ModifyInstanceGroupsAction, this))
@@ -69,14 +66,9 @@ bool ModifyInstanceGroupsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ModifyInstanceGroupsResponse object.
+ * Returns a ModifyInstanceGroupsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ModifyInstanceGroupsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EMRClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ModifyInstanceGroupsRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * ModifyInstanceGroupsRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::EMR::ModifyInstanceGroupsRequestPrivate
+ * \brief The ModifyInstanceGroupsRequestPrivate class provides private implementation for ModifyInstanceGroupsRequest.
+ * \internal
  *
- * @class  ModifyInstanceGroupsRequestPrivate
- *
- * @brief  Private implementation for ModifyInstanceGroupsRequest.
+ * \inmodule QtAwsEMR
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ModifyInstanceGroupsRequestPrivate object.
- *
- * @param  action  EMR action being performed.
- * @param  q       Pointer to this object's public ModifyInstanceGroupsRequest instance.
+ * Constructs a ModifyInstanceGroupsRequestPrivate object for EMR \a action with,
+ * public implementation \a q.
  */
 ModifyInstanceGroupsRequestPrivate::ModifyInstanceGroupsRequestPrivate(
     const EMRRequest::Action action, ModifyInstanceGroupsRequest * const q)
@@ -107,15 +96,10 @@ ModifyInstanceGroupsRequestPrivate::ModifyInstanceGroupsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ModifyInstanceGroupsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ModifyInstanceGroupsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ModifyInstanceGroupsRequest instance.
  */
 ModifyInstanceGroupsRequestPrivate::ModifyInstanceGroupsRequestPrivate(
     const ModifyInstanceGroupsRequestPrivate &other, ModifyInstanceGroupsRequest * const q)

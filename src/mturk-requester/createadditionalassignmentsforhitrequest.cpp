@@ -27,19 +27,16 @@ namespace MTurk {
 
 /*!
  * \class QtAws::MTurk::CreateAdditionalAssignmentsForHITRequest
- *
  * \brief The CreateAdditionalAssignmentsForHITRequest class provides an interface for MTurk CreateAdditionalAssignmentsForHIT requests.
  *
- * \ingroup MTurk
+ * \inmodule QtAwsMTurk
  *
  *
  * \sa MTurkClient::createAdditionalAssignmentsForHIT
  */
 
 /*!
- * @brief  Constructs a new CreateAdditionalAssignmentsForHITRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateAdditionalAssignmentsForHITRequest::CreateAdditionalAssignmentsForHITRequest(const CreateAdditionalAssignmentsForHITRequest &other)
     : MTurkRequest(new CreateAdditionalAssignmentsForHITRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ CreateAdditionalAssignmentsForHITRequest::CreateAdditionalAssignmentsForHITReque
 }
 
 /*!
- * @brief  Constructs a new CreateAdditionalAssignmentsForHITRequest object.
+ * Constructs a CreateAdditionalAssignmentsForHITRequest object.
  */
 CreateAdditionalAssignmentsForHITRequest::CreateAdditionalAssignmentsForHITRequest()
     : MTurkRequest(new CreateAdditionalAssignmentsForHITRequestPrivate(MTurkRequest::CreateAdditionalAssignmentsForHITAction, this))
@@ -66,14 +63,9 @@ bool CreateAdditionalAssignmentsForHITRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateAdditionalAssignmentsForHITResponse object.
+ * Returns a CreateAdditionalAssignmentsForHITResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateAdditionalAssignmentsForHITResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MTurkClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateAdditionalAssignmentsForHITRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * CreateAdditionalAssignmentsForHITRequest::res
 }
 
 /*!
- * @internal
+ * \class QtAws::MTurk::CreateAdditionalAssignmentsForHITRequestPrivate
+ * \brief The CreateAdditionalAssignmentsForHITRequestPrivate class provides private implementation for CreateAdditionalAssignmentsForHITRequest.
+ * \internal
  *
- * @class  CreateAdditionalAssignmentsForHITRequestPrivate
- *
- * @brief  Private implementation for CreateAdditionalAssignmentsForHITRequest.
+ * \inmodule QtAwsMTurk
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateAdditionalAssignmentsForHITRequestPrivate object.
- *
- * @param  action  MTurk action being performed.
- * @param  q       Pointer to this object's public CreateAdditionalAssignmentsForHITRequest instance.
+ * Constructs a CreateAdditionalAssignmentsForHITRequestPrivate object for MTurk \a action with,
+ * public implementation \a q.
  */
 CreateAdditionalAssignmentsForHITRequestPrivate::CreateAdditionalAssignmentsForHITRequestPrivate(
     const MTurkRequest::Action action, CreateAdditionalAssignmentsForHITRequest * const q)
@@ -104,15 +93,10 @@ CreateAdditionalAssignmentsForHITRequestPrivate::CreateAdditionalAssignmentsForH
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateAdditionalAssignmentsForHITRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateAdditionalAssignmentsForHITRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateAdditionalAssignmentsForHITRequest instance.
  */
 CreateAdditionalAssignmentsForHITRequestPrivate::CreateAdditionalAssignmentsForHITRequestPrivate(
     const CreateAdditionalAssignmentsForHITRequestPrivate &other, CreateAdditionalAssignmentsForHITRequest * const q)

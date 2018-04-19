@@ -27,10 +27,9 @@ namespace WorkDocs {
 
 /*!
  * \class QtAws::WorkDocs::CreateLabelsRequest
- *
  * \brief The CreateLabelsRequest class provides an interface for WorkDocs CreateLabels requests.
  *
- * \ingroup WorkDocs
+ * \inmodule QtAwsWorkDocs
  *
  *  The WorkDocs API is designed for the following use
  * 
@@ -66,9 +65,7 @@ namespace WorkDocs {
  */
 
 /*!
- * @brief  Constructs a new CreateLabelsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateLabelsRequest::CreateLabelsRequest(const CreateLabelsRequest &other)
     : WorkDocsRequest(new CreateLabelsRequestPrivate(*other.d_func(), this))
@@ -77,7 +74,7 @@ CreateLabelsRequest::CreateLabelsRequest(const CreateLabelsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new CreateLabelsRequest object.
+ * Constructs a CreateLabelsRequest object.
  */
 CreateLabelsRequest::CreateLabelsRequest()
     : WorkDocsRequest(new CreateLabelsRequestPrivate(WorkDocsRequest::CreateLabelsAction, this))
@@ -95,14 +92,9 @@ bool CreateLabelsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateLabelsResponse object.
+ * Returns a CreateLabelsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateLabelsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WorkDocsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateLabelsRequest::response(QNetworkReply * const reply) const
 {
@@ -110,20 +102,17 @@ QtAws::Core::AwsAbstractResponse * CreateLabelsRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::WorkDocs::CreateLabelsRequestPrivate
+ * \brief The CreateLabelsRequestPrivate class provides private implementation for CreateLabelsRequest.
+ * \internal
  *
- * @class  CreateLabelsRequestPrivate
- *
- * @brief  Private implementation for CreateLabelsRequest.
+ * \inmodule QtAwsWorkDocs
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateLabelsRequestPrivate object.
- *
- * @param  action  WorkDocs action being performed.
- * @param  q       Pointer to this object's public CreateLabelsRequest instance.
+ * Constructs a CreateLabelsRequestPrivate object for WorkDocs \a action with,
+ * public implementation \a q.
  */
 CreateLabelsRequestPrivate::CreateLabelsRequestPrivate(
     const WorkDocsRequest::Action action, CreateLabelsRequest * const q)
@@ -133,15 +122,10 @@ CreateLabelsRequestPrivate::CreateLabelsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateLabelsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateLabelsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateLabelsRequest instance.
  */
 CreateLabelsRequestPrivate::CreateLabelsRequestPrivate(
     const CreateLabelsRequestPrivate &other, CreateLabelsRequest * const q)

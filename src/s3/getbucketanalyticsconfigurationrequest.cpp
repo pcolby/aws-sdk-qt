@@ -27,19 +27,16 @@ namespace S3 {
 
 /*!
  * \class QtAws::S3::GetBucketAnalyticsConfigurationRequest
- *
  * \brief The GetBucketAnalyticsConfigurationRequest class provides an interface for S3 GetBucketAnalyticsConfiguration requests.
  *
- * \ingroup S3
+ * \inmodule QtAwsS3
  *
  *
  * \sa S3Client::getBucketAnalyticsConfiguration
  */
 
 /*!
- * @brief  Constructs a new GetBucketAnalyticsConfigurationRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetBucketAnalyticsConfigurationRequest::GetBucketAnalyticsConfigurationRequest(const GetBucketAnalyticsConfigurationRequest &other)
     : S3Request(new GetBucketAnalyticsConfigurationRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ GetBucketAnalyticsConfigurationRequest::GetBucketAnalyticsConfigurationRequest(c
 }
 
 /*!
- * @brief  Constructs a new GetBucketAnalyticsConfigurationRequest object.
+ * Constructs a GetBucketAnalyticsConfigurationRequest object.
  */
 GetBucketAnalyticsConfigurationRequest::GetBucketAnalyticsConfigurationRequest()
     : S3Request(new GetBucketAnalyticsConfigurationRequestPrivate(S3Request::GetBucketAnalyticsConfigurationAction, this))
@@ -66,14 +63,9 @@ bool GetBucketAnalyticsConfigurationRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetBucketAnalyticsConfigurationResponse object.
+ * Returns a GetBucketAnalyticsConfigurationResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetBucketAnalyticsConfigurationResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  S3Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetBucketAnalyticsConfigurationRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * GetBucketAnalyticsConfigurationRequest::respo
 }
 
 /*!
- * @internal
+ * \class QtAws::S3::GetBucketAnalyticsConfigurationRequestPrivate
+ * \brief The GetBucketAnalyticsConfigurationRequestPrivate class provides private implementation for GetBucketAnalyticsConfigurationRequest.
+ * \internal
  *
- * @class  GetBucketAnalyticsConfigurationRequestPrivate
- *
- * @brief  Private implementation for GetBucketAnalyticsConfigurationRequest.
+ * \inmodule QtAwsS3
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetBucketAnalyticsConfigurationRequestPrivate object.
- *
- * @param  action  S3 action being performed.
- * @param  q       Pointer to this object's public GetBucketAnalyticsConfigurationRequest instance.
+ * Constructs a GetBucketAnalyticsConfigurationRequestPrivate object for S3 \a action with,
+ * public implementation \a q.
  */
 GetBucketAnalyticsConfigurationRequestPrivate::GetBucketAnalyticsConfigurationRequestPrivate(
     const S3Request::Action action, GetBucketAnalyticsConfigurationRequest * const q)
@@ -104,15 +93,10 @@ GetBucketAnalyticsConfigurationRequestPrivate::GetBucketAnalyticsConfigurationRe
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetBucketAnalyticsConfigurationRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetBucketAnalyticsConfigurationRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetBucketAnalyticsConfigurationRequest instance.
  */
 GetBucketAnalyticsConfigurationRequestPrivate::GetBucketAnalyticsConfigurationRequestPrivate(
     const GetBucketAnalyticsConfigurationRequestPrivate &other, GetBucketAnalyticsConfigurationRequest * const q)

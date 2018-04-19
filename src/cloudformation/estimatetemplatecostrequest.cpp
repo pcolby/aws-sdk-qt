@@ -27,10 +27,9 @@ namespace CloudFormation {
 
 /*!
  * \class QtAws::CloudFormation::EstimateTemplateCostRequest
- *
  * \brief The EstimateTemplateCostRequest class provides an interface for CloudFormation EstimateTemplateCost requests.
  *
- * \ingroup CloudFormation
+ * \inmodule QtAwsCloudFormation
  *
  *  <fullname>AWS CloudFormation</fullname>
  * 
@@ -59,9 +58,7 @@ namespace CloudFormation {
  */
 
 /*!
- * @brief  Constructs a new EstimateTemplateCostRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 EstimateTemplateCostRequest::EstimateTemplateCostRequest(const EstimateTemplateCostRequest &other)
     : CloudFormationRequest(new EstimateTemplateCostRequestPrivate(*other.d_func(), this))
@@ -70,7 +67,7 @@ EstimateTemplateCostRequest::EstimateTemplateCostRequest(const EstimateTemplateC
 }
 
 /*!
- * @brief  Constructs a new EstimateTemplateCostRequest object.
+ * Constructs a EstimateTemplateCostRequest object.
  */
 EstimateTemplateCostRequest::EstimateTemplateCostRequest()
     : CloudFormationRequest(new EstimateTemplateCostRequestPrivate(CloudFormationRequest::EstimateTemplateCostAction, this))
@@ -88,14 +85,9 @@ bool EstimateTemplateCostRequest::isValid() const
 
 
 /*!
- * @brief  Construct an EstimateTemplateCostResponse object.
+ * Returns a EstimateTemplateCostResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An EstimateTemplateCostResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudFormationClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * EstimateTemplateCostRequest::response(QNetworkReply * const reply) const
 {
@@ -103,20 +95,17 @@ QtAws::Core::AwsAbstractResponse * EstimateTemplateCostRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudFormation::EstimateTemplateCostRequestPrivate
+ * \brief The EstimateTemplateCostRequestPrivate class provides private implementation for EstimateTemplateCostRequest.
+ * \internal
  *
- * @class  EstimateTemplateCostRequestPrivate
- *
- * @brief  Private implementation for EstimateTemplateCostRequest.
+ * \inmodule QtAwsCloudFormation
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new EstimateTemplateCostRequestPrivate object.
- *
- * @param  action  CloudFormation action being performed.
- * @param  q       Pointer to this object's public EstimateTemplateCostRequest instance.
+ * Constructs a EstimateTemplateCostRequestPrivate object for CloudFormation \a action with,
+ * public implementation \a q.
  */
 EstimateTemplateCostRequestPrivate::EstimateTemplateCostRequestPrivate(
     const CloudFormationRequest::Action action, EstimateTemplateCostRequest * const q)
@@ -126,15 +115,10 @@ EstimateTemplateCostRequestPrivate::EstimateTemplateCostRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new EstimateTemplateCostRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the EstimateTemplateCostRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public EstimateTemplateCostRequest instance.
  */
 EstimateTemplateCostRequestPrivate::EstimateTemplateCostRequestPrivate(
     const EstimateTemplateCostRequestPrivate &other, EstimateTemplateCostRequest * const q)

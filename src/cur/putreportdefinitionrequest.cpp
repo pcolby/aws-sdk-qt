@@ -27,19 +27,16 @@ namespace CostandUsageReportService {
 
 /*!
  * \class QtAws::CostandUsageReportService::PutReportDefinitionRequest
- *
  * \brief The PutReportDefinitionRequest class provides an interface for CostandUsageReportService PutReportDefinition requests.
  *
- * \ingroup CostandUsageReportService
+ * \inmodule QtAwsCostandUsageReportService
  *
  *
  * \sa CostandUsageReportServiceClient::putReportDefinition
  */
 
 /*!
- * @brief  Constructs a new PutReportDefinitionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 PutReportDefinitionRequest::PutReportDefinitionRequest(const PutReportDefinitionRequest &other)
     : CostandUsageReportServiceRequest(new PutReportDefinitionRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ PutReportDefinitionRequest::PutReportDefinitionRequest(const PutReportDefinition
 }
 
 /*!
- * @brief  Constructs a new PutReportDefinitionRequest object.
+ * Constructs a PutReportDefinitionRequest object.
  */
 PutReportDefinitionRequest::PutReportDefinitionRequest()
     : CostandUsageReportServiceRequest(new PutReportDefinitionRequestPrivate(CostandUsageReportServiceRequest::PutReportDefinitionAction, this))
@@ -66,14 +63,9 @@ bool PutReportDefinitionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an PutReportDefinitionResponse object.
+ * Returns a PutReportDefinitionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An PutReportDefinitionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CostandUsageReportServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * PutReportDefinitionRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * PutReportDefinitionRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::CostandUsageReportService::PutReportDefinitionRequestPrivate
+ * \brief The PutReportDefinitionRequestPrivate class provides private implementation for PutReportDefinitionRequest.
+ * \internal
  *
- * @class  PutReportDefinitionRequestPrivate
- *
- * @brief  Private implementation for PutReportDefinitionRequest.
+ * \inmodule QtAwsCostandUsageReportService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new PutReportDefinitionRequestPrivate object.
- *
- * @param  action  CostandUsageReportService action being performed.
- * @param  q       Pointer to this object's public PutReportDefinitionRequest instance.
+ * Constructs a PutReportDefinitionRequestPrivate object for CostandUsageReportService \a action with,
+ * public implementation \a q.
  */
 PutReportDefinitionRequestPrivate::PutReportDefinitionRequestPrivate(
     const CostandUsageReportServiceRequest::Action action, PutReportDefinitionRequest * const q)
@@ -104,15 +93,10 @@ PutReportDefinitionRequestPrivate::PutReportDefinitionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutReportDefinitionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the PutReportDefinitionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public PutReportDefinitionRequest instance.
  */
 PutReportDefinitionRequestPrivate::PutReportDefinitionRequestPrivate(
     const PutReportDefinitionRequestPrivate &other, PutReportDefinitionRequest * const q)

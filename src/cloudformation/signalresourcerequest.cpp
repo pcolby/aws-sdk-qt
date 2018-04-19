@@ -27,10 +27,9 @@ namespace CloudFormation {
 
 /*!
  * \class QtAws::CloudFormation::SignalResourceRequest
- *
  * \brief The SignalResourceRequest class provides an interface for CloudFormation SignalResource requests.
  *
- * \ingroup CloudFormation
+ * \inmodule QtAwsCloudFormation
  *
  *  <fullname>AWS CloudFormation</fullname>
  * 
@@ -59,9 +58,7 @@ namespace CloudFormation {
  */
 
 /*!
- * @brief  Constructs a new SignalResourceRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 SignalResourceRequest::SignalResourceRequest(const SignalResourceRequest &other)
     : CloudFormationRequest(new SignalResourceRequestPrivate(*other.d_func(), this))
@@ -70,7 +67,7 @@ SignalResourceRequest::SignalResourceRequest(const SignalResourceRequest &other)
 }
 
 /*!
- * @brief  Constructs a new SignalResourceRequest object.
+ * Constructs a SignalResourceRequest object.
  */
 SignalResourceRequest::SignalResourceRequest()
     : CloudFormationRequest(new SignalResourceRequestPrivate(CloudFormationRequest::SignalResourceAction, this))
@@ -88,14 +85,9 @@ bool SignalResourceRequest::isValid() const
 
 
 /*!
- * @brief  Construct an SignalResourceResponse object.
+ * Returns a SignalResourceResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An SignalResourceResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudFormationClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * SignalResourceRequest::response(QNetworkReply * const reply) const
 {
@@ -103,20 +95,17 @@ QtAws::Core::AwsAbstractResponse * SignalResourceRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudFormation::SignalResourceRequestPrivate
+ * \brief The SignalResourceRequestPrivate class provides private implementation for SignalResourceRequest.
+ * \internal
  *
- * @class  SignalResourceRequestPrivate
- *
- * @brief  Private implementation for SignalResourceRequest.
+ * \inmodule QtAwsCloudFormation
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new SignalResourceRequestPrivate object.
- *
- * @param  action  CloudFormation action being performed.
- * @param  q       Pointer to this object's public SignalResourceRequest instance.
+ * Constructs a SignalResourceRequestPrivate object for CloudFormation \a action with,
+ * public implementation \a q.
  */
 SignalResourceRequestPrivate::SignalResourceRequestPrivate(
     const CloudFormationRequest::Action action, SignalResourceRequest * const q)
@@ -126,15 +115,10 @@ SignalResourceRequestPrivate::SignalResourceRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SignalResourceRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the SignalResourceRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public SignalResourceRequest instance.
  */
 SignalResourceRequestPrivate::SignalResourceRequestPrivate(
     const SignalResourceRequestPrivate &other, SignalResourceRequest * const q)

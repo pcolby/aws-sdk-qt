@@ -27,10 +27,9 @@ namespace LexModelBuildingService {
 
 /*!
  * \class QtAws::LexModelBuildingService::DeleteUtterancesRequest
- *
  * \brief The DeleteUtterancesRequest class provides an interface for LexModelBuildingService DeleteUtterances requests.
  *
- * \ingroup LexModelBuildingService
+ * \inmodule QtAwsLexModelBuildingService
  *
  *  <fullname>Amazon Lex Build-Time Actions</fullname>
  * 
@@ -41,9 +40,7 @@ namespace LexModelBuildingService {
  */
 
 /*!
- * @brief  Constructs a new DeleteUtterancesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteUtterancesRequest::DeleteUtterancesRequest(const DeleteUtterancesRequest &other)
     : LexModelBuildingServiceRequest(new DeleteUtterancesRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ DeleteUtterancesRequest::DeleteUtterancesRequest(const DeleteUtterancesRequest &
 }
 
 /*!
- * @brief  Constructs a new DeleteUtterancesRequest object.
+ * Constructs a DeleteUtterancesRequest object.
  */
 DeleteUtterancesRequest::DeleteUtterancesRequest()
     : LexModelBuildingServiceRequest(new DeleteUtterancesRequestPrivate(LexModelBuildingServiceRequest::DeleteUtterancesAction, this))
@@ -70,14 +67,9 @@ bool DeleteUtterancesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteUtterancesResponse object.
+ * Returns a DeleteUtterancesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteUtterancesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  LexModelBuildingServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteUtterancesRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * DeleteUtterancesRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::LexModelBuildingService::DeleteUtterancesRequestPrivate
+ * \brief The DeleteUtterancesRequestPrivate class provides private implementation for DeleteUtterancesRequest.
+ * \internal
  *
- * @class  DeleteUtterancesRequestPrivate
- *
- * @brief  Private implementation for DeleteUtterancesRequest.
+ * \inmodule QtAwsLexModelBuildingService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteUtterancesRequestPrivate object.
- *
- * @param  action  LexModelBuildingService action being performed.
- * @param  q       Pointer to this object's public DeleteUtterancesRequest instance.
+ * Constructs a DeleteUtterancesRequestPrivate object for LexModelBuildingService \a action with,
+ * public implementation \a q.
  */
 DeleteUtterancesRequestPrivate::DeleteUtterancesRequestPrivate(
     const LexModelBuildingServiceRequest::Action action, DeleteUtterancesRequest * const q)
@@ -108,15 +97,10 @@ DeleteUtterancesRequestPrivate::DeleteUtterancesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteUtterancesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteUtterancesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteUtterancesRequest instance.
  */
 DeleteUtterancesRequestPrivate::DeleteUtterancesRequestPrivate(
     const DeleteUtterancesRequestPrivate &other, DeleteUtterancesRequest * const q)

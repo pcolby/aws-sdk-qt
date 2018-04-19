@@ -27,10 +27,9 @@ namespace WAF {
 
 /*!
  * \class QtAws::WAF::ListByteMatchSetsRequest
- *
  * \brief The ListByteMatchSetsRequest class provides an interface for WAF ListByteMatchSets requests.
  *
- * \ingroup WAF
+ * \inmodule QtAwsWAF
  *
  *  This is the <i>AWS WAF API Reference</i> for using AWS WAF with Amazon CloudFront. The AWS WAF actions and data types
  *  listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data
@@ -42,9 +41,7 @@ namespace WAF {
  */
 
 /*!
- * @brief  Constructs a new ListByteMatchSetsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListByteMatchSetsRequest::ListByteMatchSetsRequest(const ListByteMatchSetsRequest &other)
     : WAFRequest(new ListByteMatchSetsRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ ListByteMatchSetsRequest::ListByteMatchSetsRequest(const ListByteMatchSetsReques
 }
 
 /*!
- * @brief  Constructs a new ListByteMatchSetsRequest object.
+ * Constructs a ListByteMatchSetsRequest object.
  */
 ListByteMatchSetsRequest::ListByteMatchSetsRequest()
     : WAFRequest(new ListByteMatchSetsRequestPrivate(WAFRequest::ListByteMatchSetsAction, this))
@@ -71,14 +68,9 @@ bool ListByteMatchSetsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListByteMatchSetsResponse object.
+ * Returns a ListByteMatchSetsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListByteMatchSetsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WAFClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListByteMatchSetsRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * ListByteMatchSetsRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::WAF::ListByteMatchSetsRequestPrivate
+ * \brief The ListByteMatchSetsRequestPrivate class provides private implementation for ListByteMatchSetsRequest.
+ * \internal
  *
- * @class  ListByteMatchSetsRequestPrivate
- *
- * @brief  Private implementation for ListByteMatchSetsRequest.
+ * \inmodule QtAwsWAF
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListByteMatchSetsRequestPrivate object.
- *
- * @param  action  WAF action being performed.
- * @param  q       Pointer to this object's public ListByteMatchSetsRequest instance.
+ * Constructs a ListByteMatchSetsRequestPrivate object for WAF \a action with,
+ * public implementation \a q.
  */
 ListByteMatchSetsRequestPrivate::ListByteMatchSetsRequestPrivate(
     const WAFRequest::Action action, ListByteMatchSetsRequest * const q)
@@ -109,15 +98,10 @@ ListByteMatchSetsRequestPrivate::ListByteMatchSetsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListByteMatchSetsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListByteMatchSetsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListByteMatchSetsRequest instance.
  */
 ListByteMatchSetsRequestPrivate::ListByteMatchSetsRequestPrivate(
     const ListByteMatchSetsRequestPrivate &other, ListByteMatchSetsRequest * const q)

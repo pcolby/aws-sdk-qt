@@ -27,10 +27,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::UpdateDocumentationVersionRequest
- *
  * \brief The UpdateDocumentationVersionRequest class provides an interface for APIGateway UpdateDocumentationVersion requests.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -42,9 +41,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new UpdateDocumentationVersionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateDocumentationVersionRequest::UpdateDocumentationVersionRequest(const UpdateDocumentationVersionRequest &other)
     : APIGatewayRequest(new UpdateDocumentationVersionRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ UpdateDocumentationVersionRequest::UpdateDocumentationVersionRequest(const Updat
 }
 
 /*!
- * @brief  Constructs a new UpdateDocumentationVersionRequest object.
+ * Constructs a UpdateDocumentationVersionRequest object.
  */
 UpdateDocumentationVersionRequest::UpdateDocumentationVersionRequest()
     : APIGatewayRequest(new UpdateDocumentationVersionRequestPrivate(APIGatewayRequest::UpdateDocumentationVersionAction, this))
@@ -71,14 +68,9 @@ bool UpdateDocumentationVersionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateDocumentationVersionResponse object.
+ * Returns a UpdateDocumentationVersionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateDocumentationVersionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  APIGatewayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateDocumentationVersionRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * UpdateDocumentationVersionRequest::response(Q
 }
 
 /*!
- * @internal
+ * \class QtAws::APIGateway::UpdateDocumentationVersionRequestPrivate
+ * \brief The UpdateDocumentationVersionRequestPrivate class provides private implementation for UpdateDocumentationVersionRequest.
+ * \internal
  *
- * @class  UpdateDocumentationVersionRequestPrivate
- *
- * @brief  Private implementation for UpdateDocumentationVersionRequest.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateDocumentationVersionRequestPrivate object.
- *
- * @param  action  APIGateway action being performed.
- * @param  q       Pointer to this object's public UpdateDocumentationVersionRequest instance.
+ * Constructs a UpdateDocumentationVersionRequestPrivate object for APIGateway \a action with,
+ * public implementation \a q.
  */
 UpdateDocumentationVersionRequestPrivate::UpdateDocumentationVersionRequestPrivate(
     const APIGatewayRequest::Action action, UpdateDocumentationVersionRequest * const q)
@@ -109,15 +98,10 @@ UpdateDocumentationVersionRequestPrivate::UpdateDocumentationVersionRequestPriva
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateDocumentationVersionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateDocumentationVersionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateDocumentationVersionRequest instance.
  */
 UpdateDocumentationVersionRequestPrivate::UpdateDocumentationVersionRequestPrivate(
     const UpdateDocumentationVersionRequestPrivate &other, UpdateDocumentationVersionRequest * const q)

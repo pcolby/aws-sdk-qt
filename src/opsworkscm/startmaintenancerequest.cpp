@@ -27,10 +27,9 @@ namespace OpsWorksCM {
 
 /*!
  * \class QtAws::OpsWorksCM::StartMaintenanceRequest
- *
  * \brief The StartMaintenanceRequest class provides an interface for OpsWorksCM StartMaintenance requests.
  *
- * \ingroup OpsWorksCM
+ * \inmodule QtAwsOpsWorksCM
  *
  *  <fullname>AWS OpsWorks CM</fullname>
  * 
@@ -97,9 +96,7 @@ namespace OpsWorksCM {
  */
 
 /*!
- * @brief  Constructs a new StartMaintenanceRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 StartMaintenanceRequest::StartMaintenanceRequest(const StartMaintenanceRequest &other)
     : OpsWorksCMRequest(new StartMaintenanceRequestPrivate(*other.d_func(), this))
@@ -108,7 +105,7 @@ StartMaintenanceRequest::StartMaintenanceRequest(const StartMaintenanceRequest &
 }
 
 /*!
- * @brief  Constructs a new StartMaintenanceRequest object.
+ * Constructs a StartMaintenanceRequest object.
  */
 StartMaintenanceRequest::StartMaintenanceRequest()
     : OpsWorksCMRequest(new StartMaintenanceRequestPrivate(OpsWorksCMRequest::StartMaintenanceAction, this))
@@ -126,14 +123,9 @@ bool StartMaintenanceRequest::isValid() const
 
 
 /*!
- * @brief  Construct an StartMaintenanceResponse object.
+ * Returns a StartMaintenanceResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An StartMaintenanceResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  OpsWorksCMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * StartMaintenanceRequest::response(QNetworkReply * const reply) const
 {
@@ -141,20 +133,17 @@ QtAws::Core::AwsAbstractResponse * StartMaintenanceRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::OpsWorksCM::StartMaintenanceRequestPrivate
+ * \brief The StartMaintenanceRequestPrivate class provides private implementation for StartMaintenanceRequest.
+ * \internal
  *
- * @class  StartMaintenanceRequestPrivate
- *
- * @brief  Private implementation for StartMaintenanceRequest.
+ * \inmodule QtAwsOpsWorksCM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new StartMaintenanceRequestPrivate object.
- *
- * @param  action  OpsWorksCM action being performed.
- * @param  q       Pointer to this object's public StartMaintenanceRequest instance.
+ * Constructs a StartMaintenanceRequestPrivate object for OpsWorksCM \a action with,
+ * public implementation \a q.
  */
 StartMaintenanceRequestPrivate::StartMaintenanceRequestPrivate(
     const OpsWorksCMRequest::Action action, StartMaintenanceRequest * const q)
@@ -164,15 +153,10 @@ StartMaintenanceRequestPrivate::StartMaintenanceRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StartMaintenanceRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the StartMaintenanceRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public StartMaintenanceRequest instance.
  */
 StartMaintenanceRequestPrivate::StartMaintenanceRequestPrivate(
     const StartMaintenanceRequestPrivate &other, StartMaintenanceRequest * const q)

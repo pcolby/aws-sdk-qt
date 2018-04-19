@@ -27,10 +27,9 @@ namespace Organizations {
 
 /*!
  * \class QtAws::Organizations::ListPoliciesForTargetRequest
- *
  * \brief The ListPoliciesForTargetRequest class provides an interface for Organizations ListPoliciesForTarget requests.
  *
- * \ingroup Organizations
+ * \inmodule QtAwsOrganizations
  *
  *  <fullname>AWS Organizations API Reference</fullname>
  * 
@@ -179,9 +178,7 @@ namespace Organizations {
  */
 
 /*!
- * @brief  Constructs a new ListPoliciesForTargetRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListPoliciesForTargetRequest::ListPoliciesForTargetRequest(const ListPoliciesForTargetRequest &other)
     : OrganizationsRequest(new ListPoliciesForTargetRequestPrivate(*other.d_func(), this))
@@ -190,7 +187,7 @@ ListPoliciesForTargetRequest::ListPoliciesForTargetRequest(const ListPoliciesFor
 }
 
 /*!
- * @brief  Constructs a new ListPoliciesForTargetRequest object.
+ * Constructs a ListPoliciesForTargetRequest object.
  */
 ListPoliciesForTargetRequest::ListPoliciesForTargetRequest()
     : OrganizationsRequest(new ListPoliciesForTargetRequestPrivate(OrganizationsRequest::ListPoliciesForTargetAction, this))
@@ -208,14 +205,9 @@ bool ListPoliciesForTargetRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListPoliciesForTargetResponse object.
+ * Returns a ListPoliciesForTargetResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListPoliciesForTargetResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  OrganizationsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListPoliciesForTargetRequest::response(QNetworkReply * const reply) const
 {
@@ -223,20 +215,17 @@ QtAws::Core::AwsAbstractResponse * ListPoliciesForTargetRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::Organizations::ListPoliciesForTargetRequestPrivate
+ * \brief The ListPoliciesForTargetRequestPrivate class provides private implementation for ListPoliciesForTargetRequest.
+ * \internal
  *
- * @class  ListPoliciesForTargetRequestPrivate
- *
- * @brief  Private implementation for ListPoliciesForTargetRequest.
+ * \inmodule QtAwsOrganizations
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListPoliciesForTargetRequestPrivate object.
- *
- * @param  action  Organizations action being performed.
- * @param  q       Pointer to this object's public ListPoliciesForTargetRequest instance.
+ * Constructs a ListPoliciesForTargetRequestPrivate object for Organizations \a action with,
+ * public implementation \a q.
  */
 ListPoliciesForTargetRequestPrivate::ListPoliciesForTargetRequestPrivate(
     const OrganizationsRequest::Action action, ListPoliciesForTargetRequest * const q)
@@ -246,15 +235,10 @@ ListPoliciesForTargetRequestPrivate::ListPoliciesForTargetRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListPoliciesForTargetRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListPoliciesForTargetRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListPoliciesForTargetRequest instance.
  */
 ListPoliciesForTargetRequestPrivate::ListPoliciesForTargetRequestPrivate(
     const ListPoliciesForTargetRequestPrivate &other, ListPoliciesForTargetRequest * const q)

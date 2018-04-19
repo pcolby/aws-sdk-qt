@@ -27,10 +27,9 @@ namespace StorageGateway {
 
 /*!
  * \class QtAws::StorageGateway::CancelArchivalRequest
- *
  * \brief The CancelArchivalRequest class provides an interface for StorageGateway CancelArchival requests.
  *
- * \ingroup StorageGateway
+ * \inmodule QtAwsStorageGateway
  *
  *  <fullname>AWS Storage Gateway Service</fullname>
  * 
@@ -106,9 +105,7 @@ namespace StorageGateway {
  */
 
 /*!
- * @brief  Constructs a new CancelArchivalRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CancelArchivalRequest::CancelArchivalRequest(const CancelArchivalRequest &other)
     : StorageGatewayRequest(new CancelArchivalRequestPrivate(*other.d_func(), this))
@@ -117,7 +114,7 @@ CancelArchivalRequest::CancelArchivalRequest(const CancelArchivalRequest &other)
 }
 
 /*!
- * @brief  Constructs a new CancelArchivalRequest object.
+ * Constructs a CancelArchivalRequest object.
  */
 CancelArchivalRequest::CancelArchivalRequest()
     : StorageGatewayRequest(new CancelArchivalRequestPrivate(StorageGatewayRequest::CancelArchivalAction, this))
@@ -135,14 +132,9 @@ bool CancelArchivalRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CancelArchivalResponse object.
+ * Returns a CancelArchivalResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CancelArchivalResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  StorageGatewayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CancelArchivalRequest::response(QNetworkReply * const reply) const
 {
@@ -150,20 +142,17 @@ QtAws::Core::AwsAbstractResponse * CancelArchivalRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::StorageGateway::CancelArchivalRequestPrivate
+ * \brief The CancelArchivalRequestPrivate class provides private implementation for CancelArchivalRequest.
+ * \internal
  *
- * @class  CancelArchivalRequestPrivate
- *
- * @brief  Private implementation for CancelArchivalRequest.
+ * \inmodule QtAwsStorageGateway
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CancelArchivalRequestPrivate object.
- *
- * @param  action  StorageGateway action being performed.
- * @param  q       Pointer to this object's public CancelArchivalRequest instance.
+ * Constructs a CancelArchivalRequestPrivate object for StorageGateway \a action with,
+ * public implementation \a q.
  */
 CancelArchivalRequestPrivate::CancelArchivalRequestPrivate(
     const StorageGatewayRequest::Action action, CancelArchivalRequest * const q)
@@ -173,15 +162,10 @@ CancelArchivalRequestPrivate::CancelArchivalRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CancelArchivalRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CancelArchivalRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CancelArchivalRequest instance.
  */
 CancelArchivalRequestPrivate::CancelArchivalRequestPrivate(
     const CancelArchivalRequestPrivate &other, CancelArchivalRequest * const q)

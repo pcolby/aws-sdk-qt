@@ -27,10 +27,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::DescribePendingMaintenanceActionsRequest
- *
  * \brief The DescribePendingMaintenanceActionsRequest class provides an interface for RDS DescribePendingMaintenanceActions requests.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -101,9 +100,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new DescribePendingMaintenanceActionsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribePendingMaintenanceActionsRequest::DescribePendingMaintenanceActionsRequest(const DescribePendingMaintenanceActionsRequest &other)
     : RDSRequest(new DescribePendingMaintenanceActionsRequestPrivate(*other.d_func(), this))
@@ -112,7 +109,7 @@ DescribePendingMaintenanceActionsRequest::DescribePendingMaintenanceActionsReque
 }
 
 /*!
- * @brief  Constructs a new DescribePendingMaintenanceActionsRequest object.
+ * Constructs a DescribePendingMaintenanceActionsRequest object.
  */
 DescribePendingMaintenanceActionsRequest::DescribePendingMaintenanceActionsRequest()
     : RDSRequest(new DescribePendingMaintenanceActionsRequestPrivate(RDSRequest::DescribePendingMaintenanceActionsAction, this))
@@ -130,14 +127,9 @@ bool DescribePendingMaintenanceActionsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribePendingMaintenanceActionsResponse object.
+ * Returns a DescribePendingMaintenanceActionsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribePendingMaintenanceActionsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RDSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribePendingMaintenanceActionsRequest::response(QNetworkReply * const reply) const
 {
@@ -145,20 +137,17 @@ QtAws::Core::AwsAbstractResponse * DescribePendingMaintenanceActionsRequest::res
 }
 
 /*!
- * @internal
+ * \class QtAws::RDS::DescribePendingMaintenanceActionsRequestPrivate
+ * \brief The DescribePendingMaintenanceActionsRequestPrivate class provides private implementation for DescribePendingMaintenanceActionsRequest.
+ * \internal
  *
- * @class  DescribePendingMaintenanceActionsRequestPrivate
- *
- * @brief  Private implementation for DescribePendingMaintenanceActionsRequest.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribePendingMaintenanceActionsRequestPrivate object.
- *
- * @param  action  RDS action being performed.
- * @param  q       Pointer to this object's public DescribePendingMaintenanceActionsRequest instance.
+ * Constructs a DescribePendingMaintenanceActionsRequestPrivate object for RDS \a action with,
+ * public implementation \a q.
  */
 DescribePendingMaintenanceActionsRequestPrivate::DescribePendingMaintenanceActionsRequestPrivate(
     const RDSRequest::Action action, DescribePendingMaintenanceActionsRequest * const q)
@@ -168,15 +157,10 @@ DescribePendingMaintenanceActionsRequestPrivate::DescribePendingMaintenanceActio
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribePendingMaintenanceActionsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribePendingMaintenanceActionsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribePendingMaintenanceActionsRequest instance.
  */
 DescribePendingMaintenanceActionsRequestPrivate::DescribePendingMaintenanceActionsRequestPrivate(
     const DescribePendingMaintenanceActionsRequestPrivate &other, DescribePendingMaintenanceActionsRequest * const q)

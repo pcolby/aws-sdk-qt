@@ -27,10 +27,9 @@ namespace Glue {
 
 /*!
  * \class QtAws::Glue::GetPartitionRequest
- *
  * \brief The GetPartitionRequest class provides an interface for Glue GetPartition requests.
  *
- * \ingroup Glue
+ * \inmodule QtAwsGlue
  *
  *  <fullname>AWS Glue</fullname>
  * 
@@ -40,9 +39,7 @@ namespace Glue {
  */
 
 /*!
- * @brief  Constructs a new GetPartitionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetPartitionRequest::GetPartitionRequest(const GetPartitionRequest &other)
     : GlueRequest(new GetPartitionRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ GetPartitionRequest::GetPartitionRequest(const GetPartitionRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetPartitionRequest object.
+ * Constructs a GetPartitionRequest object.
  */
 GetPartitionRequest::GetPartitionRequest()
     : GlueRequest(new GetPartitionRequestPrivate(GlueRequest::GetPartitionAction, this))
@@ -69,14 +66,9 @@ bool GetPartitionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetPartitionResponse object.
+ * Returns a GetPartitionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetPartitionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GlueClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetPartitionRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * GetPartitionRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::Glue::GetPartitionRequestPrivate
+ * \brief The GetPartitionRequestPrivate class provides private implementation for GetPartitionRequest.
+ * \internal
  *
- * @class  GetPartitionRequestPrivate
- *
- * @brief  Private implementation for GetPartitionRequest.
+ * \inmodule QtAwsGlue
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetPartitionRequestPrivate object.
- *
- * @param  action  Glue action being performed.
- * @param  q       Pointer to this object's public GetPartitionRequest instance.
+ * Constructs a GetPartitionRequestPrivate object for Glue \a action with,
+ * public implementation \a q.
  */
 GetPartitionRequestPrivate::GetPartitionRequestPrivate(
     const GlueRequest::Action action, GetPartitionRequest * const q)
@@ -107,15 +96,10 @@ GetPartitionRequestPrivate::GetPartitionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetPartitionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetPartitionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetPartitionRequest instance.
  */
 GetPartitionRequestPrivate::GetPartitionRequestPrivate(
     const GetPartitionRequestPrivate &other, GetPartitionRequest * const q)

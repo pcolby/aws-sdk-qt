@@ -27,10 +27,9 @@ namespace Lightsail {
 
 /*!
  * \class QtAws::Lightsail::GetInstanceStateRequest
- *
  * \brief The GetInstanceStateRequest class provides an interface for Lightsail GetInstanceState requests.
  *
- * \ingroup Lightsail
+ * \inmodule QtAwsLightsail
  *
  *  Amazon Lightsail is the easiest way to get started with AWS for developers who just need virtual private servers.
  *  Lightsail includes everything you need to launch your project quickly - a virtual machine, SSD-based storage, data
@@ -53,9 +52,7 @@ namespace Lightsail {
  */
 
 /*!
- * @brief  Constructs a new GetInstanceStateRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetInstanceStateRequest::GetInstanceStateRequest(const GetInstanceStateRequest &other)
     : LightsailRequest(new GetInstanceStateRequestPrivate(*other.d_func(), this))
@@ -64,7 +61,7 @@ GetInstanceStateRequest::GetInstanceStateRequest(const GetInstanceStateRequest &
 }
 
 /*!
- * @brief  Constructs a new GetInstanceStateRequest object.
+ * Constructs a GetInstanceStateRequest object.
  */
 GetInstanceStateRequest::GetInstanceStateRequest()
     : LightsailRequest(new GetInstanceStateRequestPrivate(LightsailRequest::GetInstanceStateAction, this))
@@ -82,14 +79,9 @@ bool GetInstanceStateRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetInstanceStateResponse object.
+ * Returns a GetInstanceStateResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetInstanceStateResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  LightsailClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetInstanceStateRequest::response(QNetworkReply * const reply) const
 {
@@ -97,20 +89,17 @@ QtAws::Core::AwsAbstractResponse * GetInstanceStateRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::Lightsail::GetInstanceStateRequestPrivate
+ * \brief The GetInstanceStateRequestPrivate class provides private implementation for GetInstanceStateRequest.
+ * \internal
  *
- * @class  GetInstanceStateRequestPrivate
- *
- * @brief  Private implementation for GetInstanceStateRequest.
+ * \inmodule QtAwsLightsail
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetInstanceStateRequestPrivate object.
- *
- * @param  action  Lightsail action being performed.
- * @param  q       Pointer to this object's public GetInstanceStateRequest instance.
+ * Constructs a GetInstanceStateRequestPrivate object for Lightsail \a action with,
+ * public implementation \a q.
  */
 GetInstanceStateRequestPrivate::GetInstanceStateRequestPrivate(
     const LightsailRequest::Action action, GetInstanceStateRequest * const q)
@@ -120,15 +109,10 @@ GetInstanceStateRequestPrivate::GetInstanceStateRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetInstanceStateRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetInstanceStateRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetInstanceStateRequest instance.
  */
 GetInstanceStateRequestPrivate::GetInstanceStateRequestPrivate(
     const GetInstanceStateRequestPrivate &other, GetInstanceStateRequest * const q)

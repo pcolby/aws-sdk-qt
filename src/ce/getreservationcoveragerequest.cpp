@@ -27,10 +27,9 @@ namespace CostExplorer {
 
 /*!
  * \class QtAws::CostExplorer::GetReservationCoverageRequest
- *
  * \brief The GetReservationCoverageRequest class provides an interface for CostExplorer GetReservationCoverage requests.
  *
- * \ingroup CostExplorer
+ * \inmodule QtAwsCostExplorer
  *
  *  The Cost Explorer API allows you to programmatically query your cost and usage data. You can query for aggregated data
  *  such as total monthly costs or total daily usage. You can also query for granular data, such as the number of daily
@@ -50,9 +49,7 @@ namespace CostExplorer {
  */
 
 /*!
- * @brief  Constructs a new GetReservationCoverageRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetReservationCoverageRequest::GetReservationCoverageRequest(const GetReservationCoverageRequest &other)
     : CostExplorerRequest(new GetReservationCoverageRequestPrivate(*other.d_func(), this))
@@ -61,7 +58,7 @@ GetReservationCoverageRequest::GetReservationCoverageRequest(const GetReservatio
 }
 
 /*!
- * @brief  Constructs a new GetReservationCoverageRequest object.
+ * Constructs a GetReservationCoverageRequest object.
  */
 GetReservationCoverageRequest::GetReservationCoverageRequest()
     : CostExplorerRequest(new GetReservationCoverageRequestPrivate(CostExplorerRequest::GetReservationCoverageAction, this))
@@ -79,14 +76,9 @@ bool GetReservationCoverageRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetReservationCoverageResponse object.
+ * Returns a GetReservationCoverageResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetReservationCoverageResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CostExplorerClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetReservationCoverageRequest::response(QNetworkReply * const reply) const
 {
@@ -94,20 +86,17 @@ QtAws::Core::AwsAbstractResponse * GetReservationCoverageRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::CostExplorer::GetReservationCoverageRequestPrivate
+ * \brief The GetReservationCoverageRequestPrivate class provides private implementation for GetReservationCoverageRequest.
+ * \internal
  *
- * @class  GetReservationCoverageRequestPrivate
- *
- * @brief  Private implementation for GetReservationCoverageRequest.
+ * \inmodule QtAwsCostExplorer
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetReservationCoverageRequestPrivate object.
- *
- * @param  action  CostExplorer action being performed.
- * @param  q       Pointer to this object's public GetReservationCoverageRequest instance.
+ * Constructs a GetReservationCoverageRequestPrivate object for CostExplorer \a action with,
+ * public implementation \a q.
  */
 GetReservationCoverageRequestPrivate::GetReservationCoverageRequestPrivate(
     const CostExplorerRequest::Action action, GetReservationCoverageRequest * const q)
@@ -117,15 +106,10 @@ GetReservationCoverageRequestPrivate::GetReservationCoverageRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetReservationCoverageRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetReservationCoverageRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetReservationCoverageRequest instance.
  */
 GetReservationCoverageRequestPrivate::GetReservationCoverageRequestPrivate(
     const GetReservationCoverageRequestPrivate &other, GetReservationCoverageRequest * const q)

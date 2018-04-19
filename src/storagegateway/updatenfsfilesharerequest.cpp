@@ -27,10 +27,9 @@ namespace StorageGateway {
 
 /*!
  * \class QtAws::StorageGateway::UpdateNFSFileShareRequest
- *
  * \brief The UpdateNFSFileShareRequest class provides an interface for StorageGateway UpdateNFSFileShare requests.
  *
- * \ingroup StorageGateway
+ * \inmodule QtAwsStorageGateway
  *
  *  <fullname>AWS Storage Gateway Service</fullname>
  * 
@@ -106,9 +105,7 @@ namespace StorageGateway {
  */
 
 /*!
- * @brief  Constructs a new UpdateNFSFileShareRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateNFSFileShareRequest::UpdateNFSFileShareRequest(const UpdateNFSFileShareRequest &other)
     : StorageGatewayRequest(new UpdateNFSFileShareRequestPrivate(*other.d_func(), this))
@@ -117,7 +114,7 @@ UpdateNFSFileShareRequest::UpdateNFSFileShareRequest(const UpdateNFSFileShareReq
 }
 
 /*!
- * @brief  Constructs a new UpdateNFSFileShareRequest object.
+ * Constructs a UpdateNFSFileShareRequest object.
  */
 UpdateNFSFileShareRequest::UpdateNFSFileShareRequest()
     : StorageGatewayRequest(new UpdateNFSFileShareRequestPrivate(StorageGatewayRequest::UpdateNFSFileShareAction, this))
@@ -135,14 +132,9 @@ bool UpdateNFSFileShareRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateNFSFileShareResponse object.
+ * Returns a UpdateNFSFileShareResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateNFSFileShareResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  StorageGatewayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateNFSFileShareRequest::response(QNetworkReply * const reply) const
 {
@@ -150,20 +142,17 @@ QtAws::Core::AwsAbstractResponse * UpdateNFSFileShareRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::StorageGateway::UpdateNFSFileShareRequestPrivate
+ * \brief The UpdateNFSFileShareRequestPrivate class provides private implementation for UpdateNFSFileShareRequest.
+ * \internal
  *
- * @class  UpdateNFSFileShareRequestPrivate
- *
- * @brief  Private implementation for UpdateNFSFileShareRequest.
+ * \inmodule QtAwsStorageGateway
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateNFSFileShareRequestPrivate object.
- *
- * @param  action  StorageGateway action being performed.
- * @param  q       Pointer to this object's public UpdateNFSFileShareRequest instance.
+ * Constructs a UpdateNFSFileShareRequestPrivate object for StorageGateway \a action with,
+ * public implementation \a q.
  */
 UpdateNFSFileShareRequestPrivate::UpdateNFSFileShareRequestPrivate(
     const StorageGatewayRequest::Action action, UpdateNFSFileShareRequest * const q)
@@ -173,15 +162,10 @@ UpdateNFSFileShareRequestPrivate::UpdateNFSFileShareRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateNFSFileShareRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateNFSFileShareRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateNFSFileShareRequest instance.
  */
 UpdateNFSFileShareRequestPrivate::UpdateNFSFileShareRequestPrivate(
     const UpdateNFSFileShareRequestPrivate &other, UpdateNFSFileShareRequest * const q)

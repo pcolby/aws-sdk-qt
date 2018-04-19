@@ -27,10 +27,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::RestoreDBClusterFromSnapshotRequest
- *
  * \brief The RestoreDBClusterFromSnapshotRequest class provides an interface for RDS RestoreDBClusterFromSnapshot requests.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -101,9 +100,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new RestoreDBClusterFromSnapshotRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 RestoreDBClusterFromSnapshotRequest::RestoreDBClusterFromSnapshotRequest(const RestoreDBClusterFromSnapshotRequest &other)
     : RDSRequest(new RestoreDBClusterFromSnapshotRequestPrivate(*other.d_func(), this))
@@ -112,7 +109,7 @@ RestoreDBClusterFromSnapshotRequest::RestoreDBClusterFromSnapshotRequest(const R
 }
 
 /*!
- * @brief  Constructs a new RestoreDBClusterFromSnapshotRequest object.
+ * Constructs a RestoreDBClusterFromSnapshotRequest object.
  */
 RestoreDBClusterFromSnapshotRequest::RestoreDBClusterFromSnapshotRequest()
     : RDSRequest(new RestoreDBClusterFromSnapshotRequestPrivate(RDSRequest::RestoreDBClusterFromSnapshotAction, this))
@@ -130,14 +127,9 @@ bool RestoreDBClusterFromSnapshotRequest::isValid() const
 
 
 /*!
- * @brief  Construct an RestoreDBClusterFromSnapshotResponse object.
+ * Returns a RestoreDBClusterFromSnapshotResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An RestoreDBClusterFromSnapshotResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RDSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * RestoreDBClusterFromSnapshotRequest::response(QNetworkReply * const reply) const
 {
@@ -145,20 +137,17 @@ QtAws::Core::AwsAbstractResponse * RestoreDBClusterFromSnapshotRequest::response
 }
 
 /*!
- * @internal
+ * \class QtAws::RDS::RestoreDBClusterFromSnapshotRequestPrivate
+ * \brief The RestoreDBClusterFromSnapshotRequestPrivate class provides private implementation for RestoreDBClusterFromSnapshotRequest.
+ * \internal
  *
- * @class  RestoreDBClusterFromSnapshotRequestPrivate
- *
- * @brief  Private implementation for RestoreDBClusterFromSnapshotRequest.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new RestoreDBClusterFromSnapshotRequestPrivate object.
- *
- * @param  action  RDS action being performed.
- * @param  q       Pointer to this object's public RestoreDBClusterFromSnapshotRequest instance.
+ * Constructs a RestoreDBClusterFromSnapshotRequestPrivate object for RDS \a action with,
+ * public implementation \a q.
  */
 RestoreDBClusterFromSnapshotRequestPrivate::RestoreDBClusterFromSnapshotRequestPrivate(
     const RDSRequest::Action action, RestoreDBClusterFromSnapshotRequest * const q)
@@ -168,15 +157,10 @@ RestoreDBClusterFromSnapshotRequestPrivate::RestoreDBClusterFromSnapshotRequestP
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RestoreDBClusterFromSnapshotRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the RestoreDBClusterFromSnapshotRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public RestoreDBClusterFromSnapshotRequest instance.
  */
 RestoreDBClusterFromSnapshotRequestPrivate::RestoreDBClusterFromSnapshotRequestPrivate(
     const RestoreDBClusterFromSnapshotRequestPrivate &other, RestoreDBClusterFromSnapshotRequest * const q)

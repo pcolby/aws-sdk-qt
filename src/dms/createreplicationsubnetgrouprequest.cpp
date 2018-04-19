@@ -27,10 +27,9 @@ namespace DatabaseMigrationService {
 
 /*!
  * \class QtAws::DatabaseMigrationService::CreateReplicationSubnetGroupRequest
- *
  * \brief The CreateReplicationSubnetGroupRequest class provides an interface for DatabaseMigrationService CreateReplicationSubnetGroup requests.
  *
- * \ingroup DatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigrationService
  *
  *  <fullname>AWS Database Migration Service</fullname>
  * 
@@ -48,9 +47,7 @@ namespace DatabaseMigrationService {
  */
 
 /*!
- * @brief  Constructs a new CreateReplicationSubnetGroupRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateReplicationSubnetGroupRequest::CreateReplicationSubnetGroupRequest(const CreateReplicationSubnetGroupRequest &other)
     : DatabaseMigrationServiceRequest(new CreateReplicationSubnetGroupRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ CreateReplicationSubnetGroupRequest::CreateReplicationSubnetGroupRequest(const C
 }
 
 /*!
- * @brief  Constructs a new CreateReplicationSubnetGroupRequest object.
+ * Constructs a CreateReplicationSubnetGroupRequest object.
  */
 CreateReplicationSubnetGroupRequest::CreateReplicationSubnetGroupRequest()
     : DatabaseMigrationServiceRequest(new CreateReplicationSubnetGroupRequestPrivate(DatabaseMigrationServiceRequest::CreateReplicationSubnetGroupAction, this))
@@ -77,14 +74,9 @@ bool CreateReplicationSubnetGroupRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateReplicationSubnetGroupResponse object.
+ * Returns a CreateReplicationSubnetGroupResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateReplicationSubnetGroupResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DatabaseMigrationServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateReplicationSubnetGroupRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * CreateReplicationSubnetGroupRequest::response
 }
 
 /*!
- * @internal
+ * \class QtAws::DatabaseMigrationService::CreateReplicationSubnetGroupRequestPrivate
+ * \brief The CreateReplicationSubnetGroupRequestPrivate class provides private implementation for CreateReplicationSubnetGroupRequest.
+ * \internal
  *
- * @class  CreateReplicationSubnetGroupRequestPrivate
- *
- * @brief  Private implementation for CreateReplicationSubnetGroupRequest.
+ * \inmodule QtAwsDatabaseMigrationService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateReplicationSubnetGroupRequestPrivate object.
- *
- * @param  action  DatabaseMigrationService action being performed.
- * @param  q       Pointer to this object's public CreateReplicationSubnetGroupRequest instance.
+ * Constructs a CreateReplicationSubnetGroupRequestPrivate object for DatabaseMigrationService \a action with,
+ * public implementation \a q.
  */
 CreateReplicationSubnetGroupRequestPrivate::CreateReplicationSubnetGroupRequestPrivate(
     const DatabaseMigrationServiceRequest::Action action, CreateReplicationSubnetGroupRequest * const q)
@@ -115,15 +104,10 @@ CreateReplicationSubnetGroupRequestPrivate::CreateReplicationSubnetGroupRequestP
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateReplicationSubnetGroupRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateReplicationSubnetGroupRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateReplicationSubnetGroupRequest instance.
  */
 CreateReplicationSubnetGroupRequestPrivate::CreateReplicationSubnetGroupRequestPrivate(
     const CreateReplicationSubnetGroupRequestPrivate &other, CreateReplicationSubnetGroupRequest * const q)

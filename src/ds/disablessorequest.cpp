@@ -27,10 +27,9 @@ namespace DirectoryService {
 
 /*!
  * \class QtAws::DirectoryService::DisableSsoRequest
- *
  * \brief The DisableSsoRequest class provides an interface for DirectoryService DisableSso requests.
  *
- * \ingroup DirectoryService
+ * \inmodule QtAwsDirectoryService
  *
  *  <fullname>AWS Directory Service</fullname>
  * 
@@ -51,9 +50,7 @@ namespace DirectoryService {
  */
 
 /*!
- * @brief  Constructs a new DisableSsoRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DisableSsoRequest::DisableSsoRequest(const DisableSsoRequest &other)
     : DirectoryServiceRequest(new DisableSsoRequestPrivate(*other.d_func(), this))
@@ -62,7 +59,7 @@ DisableSsoRequest::DisableSsoRequest(const DisableSsoRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DisableSsoRequest object.
+ * Constructs a DisableSsoRequest object.
  */
 DisableSsoRequest::DisableSsoRequest()
     : DirectoryServiceRequest(new DisableSsoRequestPrivate(DirectoryServiceRequest::DisableSsoAction, this))
@@ -80,14 +77,9 @@ bool DisableSsoRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DisableSsoResponse object.
+ * Returns a DisableSsoResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DisableSsoResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DirectoryServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DisableSsoRequest::response(QNetworkReply * const reply) const
 {
@@ -95,20 +87,17 @@ QtAws::Core::AwsAbstractResponse * DisableSsoRequest::response(QNetworkReply * c
 }
 
 /*!
- * @internal
+ * \class QtAws::DirectoryService::DisableSsoRequestPrivate
+ * \brief The DisableSsoRequestPrivate class provides private implementation for DisableSsoRequest.
+ * \internal
  *
- * @class  DisableSsoRequestPrivate
- *
- * @brief  Private implementation for DisableSsoRequest.
+ * \inmodule QtAwsDirectoryService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DisableSsoRequestPrivate object.
- *
- * @param  action  DirectoryService action being performed.
- * @param  q       Pointer to this object's public DisableSsoRequest instance.
+ * Constructs a DisableSsoRequestPrivate object for DirectoryService \a action with,
+ * public implementation \a q.
  */
 DisableSsoRequestPrivate::DisableSsoRequestPrivate(
     const DirectoryServiceRequest::Action action, DisableSsoRequest * const q)
@@ -118,15 +107,10 @@ DisableSsoRequestPrivate::DisableSsoRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DisableSsoRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DisableSsoRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DisableSsoRequest instance.
  */
 DisableSsoRequestPrivate::DisableSsoRequestPrivate(
     const DisableSsoRequestPrivate &other, DisableSsoRequest * const q)

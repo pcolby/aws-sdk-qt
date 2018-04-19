@@ -27,10 +27,9 @@ namespace Organizations {
 
 /*!
  * \class QtAws::Organizations::InviteAccountToOrganizationRequest
- *
  * \brief The InviteAccountToOrganizationRequest class provides an interface for Organizations InviteAccountToOrganization requests.
  *
- * \ingroup Organizations
+ * \inmodule QtAwsOrganizations
  *
  *  <fullname>AWS Organizations API Reference</fullname>
  * 
@@ -179,9 +178,7 @@ namespace Organizations {
  */
 
 /*!
- * @brief  Constructs a new InviteAccountToOrganizationRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 InviteAccountToOrganizationRequest::InviteAccountToOrganizationRequest(const InviteAccountToOrganizationRequest &other)
     : OrganizationsRequest(new InviteAccountToOrganizationRequestPrivate(*other.d_func(), this))
@@ -190,7 +187,7 @@ InviteAccountToOrganizationRequest::InviteAccountToOrganizationRequest(const Inv
 }
 
 /*!
- * @brief  Constructs a new InviteAccountToOrganizationRequest object.
+ * Constructs a InviteAccountToOrganizationRequest object.
  */
 InviteAccountToOrganizationRequest::InviteAccountToOrganizationRequest()
     : OrganizationsRequest(new InviteAccountToOrganizationRequestPrivate(OrganizationsRequest::InviteAccountToOrganizationAction, this))
@@ -208,14 +205,9 @@ bool InviteAccountToOrganizationRequest::isValid() const
 
 
 /*!
- * @brief  Construct an InviteAccountToOrganizationResponse object.
+ * Returns a InviteAccountToOrganizationResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An InviteAccountToOrganizationResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  OrganizationsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * InviteAccountToOrganizationRequest::response(QNetworkReply * const reply) const
 {
@@ -223,20 +215,17 @@ QtAws::Core::AwsAbstractResponse * InviteAccountToOrganizationRequest::response(
 }
 
 /*!
- * @internal
+ * \class QtAws::Organizations::InviteAccountToOrganizationRequestPrivate
+ * \brief The InviteAccountToOrganizationRequestPrivate class provides private implementation for InviteAccountToOrganizationRequest.
+ * \internal
  *
- * @class  InviteAccountToOrganizationRequestPrivate
- *
- * @brief  Private implementation for InviteAccountToOrganizationRequest.
+ * \inmodule QtAwsOrganizations
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new InviteAccountToOrganizationRequestPrivate object.
- *
- * @param  action  Organizations action being performed.
- * @param  q       Pointer to this object's public InviteAccountToOrganizationRequest instance.
+ * Constructs a InviteAccountToOrganizationRequestPrivate object for Organizations \a action with,
+ * public implementation \a q.
  */
 InviteAccountToOrganizationRequestPrivate::InviteAccountToOrganizationRequestPrivate(
     const OrganizationsRequest::Action action, InviteAccountToOrganizationRequest * const q)
@@ -246,15 +235,10 @@ InviteAccountToOrganizationRequestPrivate::InviteAccountToOrganizationRequestPri
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new InviteAccountToOrganizationRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the InviteAccountToOrganizationRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public InviteAccountToOrganizationRequest instance.
  */
 InviteAccountToOrganizationRequestPrivate::InviteAccountToOrganizationRequestPrivate(
     const InviteAccountToOrganizationRequestPrivate &other, InviteAccountToOrganizationRequest * const q)

@@ -27,10 +27,9 @@ namespace ConfigService {
 
 /*!
  * \class QtAws::ConfigService::DescribeConfigurationAggregatorSourcesStatusRequest
- *
  * \brief The DescribeConfigurationAggregatorSourcesStatusRequest class provides an interface for ConfigService DescribeConfigurationAggregatorSourcesStatus requests.
  *
- * \ingroup ConfigService
+ * \inmodule QtAwsConfigService
  *
  *  <fullname>AWS Config</fullname>
  * 
@@ -60,9 +59,7 @@ namespace ConfigService {
  */
 
 /*!
- * @brief  Constructs a new DescribeConfigurationAggregatorSourcesStatusRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeConfigurationAggregatorSourcesStatusRequest::DescribeConfigurationAggregatorSourcesStatusRequest(const DescribeConfigurationAggregatorSourcesStatusRequest &other)
     : ConfigServiceRequest(new DescribeConfigurationAggregatorSourcesStatusRequestPrivate(*other.d_func(), this))
@@ -71,7 +68,7 @@ DescribeConfigurationAggregatorSourcesStatusRequest::DescribeConfigurationAggreg
 }
 
 /*!
- * @brief  Constructs a new DescribeConfigurationAggregatorSourcesStatusRequest object.
+ * Constructs a DescribeConfigurationAggregatorSourcesStatusRequest object.
  */
 DescribeConfigurationAggregatorSourcesStatusRequest::DescribeConfigurationAggregatorSourcesStatusRequest()
     : ConfigServiceRequest(new DescribeConfigurationAggregatorSourcesStatusRequestPrivate(ConfigServiceRequest::DescribeConfigurationAggregatorSourcesStatusAction, this))
@@ -89,14 +86,9 @@ bool DescribeConfigurationAggregatorSourcesStatusRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeConfigurationAggregatorSourcesStatusResponse object.
+ * Returns a DescribeConfigurationAggregatorSourcesStatusResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeConfigurationAggregatorSourcesStatusResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ConfigServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeConfigurationAggregatorSourcesStatusRequest::response(QNetworkReply * const reply) const
 {
@@ -104,20 +96,17 @@ QtAws::Core::AwsAbstractResponse * DescribeConfigurationAggregatorSourcesStatusR
 }
 
 /*!
- * @internal
+ * \class QtAws::ConfigService::DescribeConfigurationAggregatorSourcesStatusRequestPrivate
+ * \brief The DescribeConfigurationAggregatorSourcesStatusRequestPrivate class provides private implementation for DescribeConfigurationAggregatorSourcesStatusRequest.
+ * \internal
  *
- * @class  DescribeConfigurationAggregatorSourcesStatusRequestPrivate
- *
- * @brief  Private implementation for DescribeConfigurationAggregatorSourcesStatusRequest.
+ * \inmodule QtAwsConfigService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeConfigurationAggregatorSourcesStatusRequestPrivate object.
- *
- * @param  action  ConfigService action being performed.
- * @param  q       Pointer to this object's public DescribeConfigurationAggregatorSourcesStatusRequest instance.
+ * Constructs a DescribeConfigurationAggregatorSourcesStatusRequestPrivate object for ConfigService \a action with,
+ * public implementation \a q.
  */
 DescribeConfigurationAggregatorSourcesStatusRequestPrivate::DescribeConfigurationAggregatorSourcesStatusRequestPrivate(
     const ConfigServiceRequest::Action action, DescribeConfigurationAggregatorSourcesStatusRequest * const q)
@@ -127,15 +116,10 @@ DescribeConfigurationAggregatorSourcesStatusRequestPrivate::DescribeConfiguratio
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeConfigurationAggregatorSourcesStatusRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeConfigurationAggregatorSourcesStatusRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeConfigurationAggregatorSourcesStatusRequest instance.
  */
 DescribeConfigurationAggregatorSourcesStatusRequestPrivate::DescribeConfigurationAggregatorSourcesStatusRequestPrivate(
     const DescribeConfigurationAggregatorSourcesStatusRequestPrivate &other, DescribeConfigurationAggregatorSourcesStatusRequest * const q)

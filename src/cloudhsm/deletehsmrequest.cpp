@@ -27,10 +27,9 @@ namespace CloudHSM {
 
 /*!
  * \class QtAws::CloudHSM::DeleteHsmRequest
- *
  * \brief The DeleteHsmRequest class provides an interface for CloudHSM DeleteHsm requests.
  *
- * \ingroup CloudHSM
+ * \inmodule QtAwsCloudHSM
  *
  *  <fullname>AWS CloudHSM Service</fullname>
  * 
@@ -49,9 +48,7 @@ namespace CloudHSM {
  */
 
 /*!
- * @brief  Constructs a new DeleteHsmRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteHsmRequest::DeleteHsmRequest(const DeleteHsmRequest &other)
     : CloudHSMRequest(new DeleteHsmRequestPrivate(*other.d_func(), this))
@@ -60,7 +57,7 @@ DeleteHsmRequest::DeleteHsmRequest(const DeleteHsmRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DeleteHsmRequest object.
+ * Constructs a DeleteHsmRequest object.
  */
 DeleteHsmRequest::DeleteHsmRequest()
     : CloudHSMRequest(new DeleteHsmRequestPrivate(CloudHSMRequest::DeleteHsmAction, this))
@@ -78,14 +75,9 @@ bool DeleteHsmRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteHsmResponse object.
+ * Returns a DeleteHsmResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteHsmResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudHSMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteHsmRequest::response(QNetworkReply * const reply) const
 {
@@ -93,20 +85,17 @@ QtAws::Core::AwsAbstractResponse * DeleteHsmRequest::response(QNetworkReply * co
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudHSM::DeleteHsmRequestPrivate
+ * \brief The DeleteHsmRequestPrivate class provides private implementation for DeleteHsmRequest.
+ * \internal
  *
- * @class  DeleteHsmRequestPrivate
- *
- * @brief  Private implementation for DeleteHsmRequest.
+ * \inmodule QtAwsCloudHSM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteHsmRequestPrivate object.
- *
- * @param  action  CloudHSM action being performed.
- * @param  q       Pointer to this object's public DeleteHsmRequest instance.
+ * Constructs a DeleteHsmRequestPrivate object for CloudHSM \a action with,
+ * public implementation \a q.
  */
 DeleteHsmRequestPrivate::DeleteHsmRequestPrivate(
     const CloudHSMRequest::Action action, DeleteHsmRequest * const q)
@@ -116,15 +105,10 @@ DeleteHsmRequestPrivate::DeleteHsmRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteHsmRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteHsmRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteHsmRequest instance.
  */
 DeleteHsmRequestPrivate::DeleteHsmRequestPrivate(
     const DeleteHsmRequestPrivate &other, DeleteHsmRequest * const q)

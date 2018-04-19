@@ -27,10 +27,9 @@ namespace ServiceCatalog {
 
 /*!
  * \class QtAws::ServiceCatalog::RejectPortfolioShareRequest
- *
  * \brief The RejectPortfolioShareRequest class provides an interface for ServiceCatalog RejectPortfolioShare requests.
  *
- * \ingroup ServiceCatalog
+ * \inmodule QtAwsServiceCatalog
  *
  *  <fullname>AWS Service Catalog</fullname>
  * 
@@ -43,9 +42,7 @@ namespace ServiceCatalog {
  */
 
 /*!
- * @brief  Constructs a new RejectPortfolioShareRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 RejectPortfolioShareRequest::RejectPortfolioShareRequest(const RejectPortfolioShareRequest &other)
     : ServiceCatalogRequest(new RejectPortfolioShareRequestPrivate(*other.d_func(), this))
@@ -54,7 +51,7 @@ RejectPortfolioShareRequest::RejectPortfolioShareRequest(const RejectPortfolioSh
 }
 
 /*!
- * @brief  Constructs a new RejectPortfolioShareRequest object.
+ * Constructs a RejectPortfolioShareRequest object.
  */
 RejectPortfolioShareRequest::RejectPortfolioShareRequest()
     : ServiceCatalogRequest(new RejectPortfolioShareRequestPrivate(ServiceCatalogRequest::RejectPortfolioShareAction, this))
@@ -72,14 +69,9 @@ bool RejectPortfolioShareRequest::isValid() const
 
 
 /*!
- * @brief  Construct an RejectPortfolioShareResponse object.
+ * Returns a RejectPortfolioShareResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An RejectPortfolioShareResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ServiceCatalogClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * RejectPortfolioShareRequest::response(QNetworkReply * const reply) const
 {
@@ -87,20 +79,17 @@ QtAws::Core::AwsAbstractResponse * RejectPortfolioShareRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::ServiceCatalog::RejectPortfolioShareRequestPrivate
+ * \brief The RejectPortfolioShareRequestPrivate class provides private implementation for RejectPortfolioShareRequest.
+ * \internal
  *
- * @class  RejectPortfolioShareRequestPrivate
- *
- * @brief  Private implementation for RejectPortfolioShareRequest.
+ * \inmodule QtAwsServiceCatalog
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new RejectPortfolioShareRequestPrivate object.
- *
- * @param  action  ServiceCatalog action being performed.
- * @param  q       Pointer to this object's public RejectPortfolioShareRequest instance.
+ * Constructs a RejectPortfolioShareRequestPrivate object for ServiceCatalog \a action with,
+ * public implementation \a q.
  */
 RejectPortfolioShareRequestPrivate::RejectPortfolioShareRequestPrivate(
     const ServiceCatalogRequest::Action action, RejectPortfolioShareRequest * const q)
@@ -110,15 +99,10 @@ RejectPortfolioShareRequestPrivate::RejectPortfolioShareRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RejectPortfolioShareRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the RejectPortfolioShareRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public RejectPortfolioShareRequest instance.
  */
 RejectPortfolioShareRequestPrivate::RejectPortfolioShareRequestPrivate(
     const RejectPortfolioShareRequestPrivate &other, RejectPortfolioShareRequest * const q)

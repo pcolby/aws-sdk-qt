@@ -65,6 +65,9 @@
 /*!
  * \namespace QtAws::ApplicationDiscoveryService
  * \brief The QtAws::ApplicationDiscoveryService contains stuff...
+ *
+ * \inmodule QtAwsApplicationDiscoveryService
+ *
  * @todo Move this to a separate template file.
  */
 
@@ -178,7 +181,7 @@ ApplicationDiscoveryServiceClient::ApplicationDiscoveryServiceClient(
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * \a  AwsEndpoint::getEndpoint()
+ * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
 ApplicationDiscoveryServiceClient::ApplicationDiscoveryServiceClient(
     const QUrl &endpoint,

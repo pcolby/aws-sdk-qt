@@ -27,10 +27,9 @@ namespace WAFRegional {
 
 /*!
  * \class QtAws::WAFRegional::DeleteSizeConstraintSetRequest
- *
  * \brief The DeleteSizeConstraintSetRequest class provides an interface for WAFRegional DeleteSizeConstraintSet requests.
  *
- * \ingroup WAFRegional
+ * \inmodule QtAwsWAFRegional
  *
  *  This is the <i>AWS WAF Regional API Reference</i> for using AWS WAF with Elastic Load Balancing (ELB) Application Load
  *  Balancers. The AWS WAF actions and data types listed in the reference are available for protecting Application Load
@@ -44,9 +43,7 @@ namespace WAFRegional {
  */
 
 /*!
- * @brief  Constructs a new DeleteSizeConstraintSetRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteSizeConstraintSetRequest::DeleteSizeConstraintSetRequest(const DeleteSizeConstraintSetRequest &other)
     : WAFRegionalRequest(new DeleteSizeConstraintSetRequestPrivate(*other.d_func(), this))
@@ -55,7 +52,7 @@ DeleteSizeConstraintSetRequest::DeleteSizeConstraintSetRequest(const DeleteSizeC
 }
 
 /*!
- * @brief  Constructs a new DeleteSizeConstraintSetRequest object.
+ * Constructs a DeleteSizeConstraintSetRequest object.
  */
 DeleteSizeConstraintSetRequest::DeleteSizeConstraintSetRequest()
     : WAFRegionalRequest(new DeleteSizeConstraintSetRequestPrivate(WAFRegionalRequest::DeleteSizeConstraintSetAction, this))
@@ -73,14 +70,9 @@ bool DeleteSizeConstraintSetRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteSizeConstraintSetResponse object.
+ * Returns a DeleteSizeConstraintSetResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteSizeConstraintSetResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WAFRegionalClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteSizeConstraintSetRequest::response(QNetworkReply * const reply) const
 {
@@ -88,20 +80,17 @@ QtAws::Core::AwsAbstractResponse * DeleteSizeConstraintSetRequest::response(QNet
 }
 
 /*!
- * @internal
+ * \class QtAws::WAFRegional::DeleteSizeConstraintSetRequestPrivate
+ * \brief The DeleteSizeConstraintSetRequestPrivate class provides private implementation for DeleteSizeConstraintSetRequest.
+ * \internal
  *
- * @class  DeleteSizeConstraintSetRequestPrivate
- *
- * @brief  Private implementation for DeleteSizeConstraintSetRequest.
+ * \inmodule QtAwsWAFRegional
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteSizeConstraintSetRequestPrivate object.
- *
- * @param  action  WAFRegional action being performed.
- * @param  q       Pointer to this object's public DeleteSizeConstraintSetRequest instance.
+ * Constructs a DeleteSizeConstraintSetRequestPrivate object for WAFRegional \a action with,
+ * public implementation \a q.
  */
 DeleteSizeConstraintSetRequestPrivate::DeleteSizeConstraintSetRequestPrivate(
     const WAFRegionalRequest::Action action, DeleteSizeConstraintSetRequest * const q)
@@ -111,15 +100,10 @@ DeleteSizeConstraintSetRequestPrivate::DeleteSizeConstraintSetRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteSizeConstraintSetRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteSizeConstraintSetRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteSizeConstraintSetRequest instance.
  */
 DeleteSizeConstraintSetRequestPrivate::DeleteSizeConstraintSetRequestPrivate(
     const DeleteSizeConstraintSetRequestPrivate &other, DeleteSizeConstraintSetRequest * const q)

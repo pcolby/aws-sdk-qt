@@ -27,19 +27,16 @@ namespace MTurk {
 
 /*!
  * \class QtAws::MTurk::GetQualificationScoreRequest
- *
  * \brief The GetQualificationScoreRequest class provides an interface for MTurk GetQualificationScore requests.
  *
- * \ingroup MTurk
+ * \inmodule QtAwsMTurk
  *
  *
  * \sa MTurkClient::getQualificationScore
  */
 
 /*!
- * @brief  Constructs a new GetQualificationScoreRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetQualificationScoreRequest::GetQualificationScoreRequest(const GetQualificationScoreRequest &other)
     : MTurkRequest(new GetQualificationScoreRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ GetQualificationScoreRequest::GetQualificationScoreRequest(const GetQualificatio
 }
 
 /*!
- * @brief  Constructs a new GetQualificationScoreRequest object.
+ * Constructs a GetQualificationScoreRequest object.
  */
 GetQualificationScoreRequest::GetQualificationScoreRequest()
     : MTurkRequest(new GetQualificationScoreRequestPrivate(MTurkRequest::GetQualificationScoreAction, this))
@@ -66,14 +63,9 @@ bool GetQualificationScoreRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetQualificationScoreResponse object.
+ * Returns a GetQualificationScoreResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetQualificationScoreResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MTurkClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetQualificationScoreRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * GetQualificationScoreRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::MTurk::GetQualificationScoreRequestPrivate
+ * \brief The GetQualificationScoreRequestPrivate class provides private implementation for GetQualificationScoreRequest.
+ * \internal
  *
- * @class  GetQualificationScoreRequestPrivate
- *
- * @brief  Private implementation for GetQualificationScoreRequest.
+ * \inmodule QtAwsMTurk
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetQualificationScoreRequestPrivate object.
- *
- * @param  action  MTurk action being performed.
- * @param  q       Pointer to this object's public GetQualificationScoreRequest instance.
+ * Constructs a GetQualificationScoreRequestPrivate object for MTurk \a action with,
+ * public implementation \a q.
  */
 GetQualificationScoreRequestPrivate::GetQualificationScoreRequestPrivate(
     const MTurkRequest::Action action, GetQualificationScoreRequest * const q)
@@ -104,15 +93,10 @@ GetQualificationScoreRequestPrivate::GetQualificationScoreRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetQualificationScoreRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetQualificationScoreRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetQualificationScoreRequest instance.
  */
 GetQualificationScoreRequestPrivate::GetQualificationScoreRequestPrivate(
     const GetQualificationScoreRequestPrivate &other, GetQualificationScoreRequest * const q)

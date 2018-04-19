@@ -27,10 +27,9 @@ namespace KMS {
 
 /*!
  * \class QtAws::KMS::DecryptRequest
- *
  * \brief The DecryptRequest class provides an interface for KMS Decrypt requests.
  *
- * \ingroup KMS
+ * \inmodule QtAwsKMS
  *
  *  <fullname>AWS Key Management Service</fullname>
  * 
@@ -136,9 +135,7 @@ namespace KMS {
  */
 
 /*!
- * @brief  Constructs a new DecryptRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DecryptRequest::DecryptRequest(const DecryptRequest &other)
     : KMSRequest(new DecryptRequestPrivate(*other.d_func(), this))
@@ -147,7 +144,7 @@ DecryptRequest::DecryptRequest(const DecryptRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DecryptRequest object.
+ * Constructs a DecryptRequest object.
  */
 DecryptRequest::DecryptRequest()
     : KMSRequest(new DecryptRequestPrivate(KMSRequest::DecryptAction, this))
@@ -165,14 +162,9 @@ bool DecryptRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DecryptResponse object.
+ * Returns a DecryptResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DecryptResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  KMSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DecryptRequest::response(QNetworkReply * const reply) const
 {
@@ -180,20 +172,17 @@ QtAws::Core::AwsAbstractResponse * DecryptRequest::response(QNetworkReply * cons
 }
 
 /*!
- * @internal
+ * \class QtAws::KMS::DecryptRequestPrivate
+ * \brief The DecryptRequestPrivate class provides private implementation for DecryptRequest.
+ * \internal
  *
- * @class  DecryptRequestPrivate
- *
- * @brief  Private implementation for DecryptRequest.
+ * \inmodule QtAwsKMS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DecryptRequestPrivate object.
- *
- * @param  action  KMS action being performed.
- * @param  q       Pointer to this object's public DecryptRequest instance.
+ * Constructs a DecryptRequestPrivate object for KMS \a action with,
+ * public implementation \a q.
  */
 DecryptRequestPrivate::DecryptRequestPrivate(
     const KMSRequest::Action action, DecryptRequest * const q)
@@ -203,15 +192,10 @@ DecryptRequestPrivate::DecryptRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DecryptRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DecryptRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DecryptRequest instance.
  */
 DecryptRequestPrivate::DecryptRequestPrivate(
     const DecryptRequestPrivate &other, DecryptRequest * const q)

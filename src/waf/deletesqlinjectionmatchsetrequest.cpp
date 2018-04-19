@@ -27,10 +27,9 @@ namespace WAF {
 
 /*!
  * \class QtAws::WAF::DeleteSqlInjectionMatchSetRequest
- *
  * \brief The DeleteSqlInjectionMatchSetRequest class provides an interface for WAF DeleteSqlInjectionMatchSet requests.
  *
- * \ingroup WAF
+ * \inmodule QtAwsWAF
  *
  *  This is the <i>AWS WAF API Reference</i> for using AWS WAF with Amazon CloudFront. The AWS WAF actions and data types
  *  listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data
@@ -42,9 +41,7 @@ namespace WAF {
  */
 
 /*!
- * @brief  Constructs a new DeleteSqlInjectionMatchSetRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteSqlInjectionMatchSetRequest::DeleteSqlInjectionMatchSetRequest(const DeleteSqlInjectionMatchSetRequest &other)
     : WAFRequest(new DeleteSqlInjectionMatchSetRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ DeleteSqlInjectionMatchSetRequest::DeleteSqlInjectionMatchSetRequest(const Delet
 }
 
 /*!
- * @brief  Constructs a new DeleteSqlInjectionMatchSetRequest object.
+ * Constructs a DeleteSqlInjectionMatchSetRequest object.
  */
 DeleteSqlInjectionMatchSetRequest::DeleteSqlInjectionMatchSetRequest()
     : WAFRequest(new DeleteSqlInjectionMatchSetRequestPrivate(WAFRequest::DeleteSqlInjectionMatchSetAction, this))
@@ -71,14 +68,9 @@ bool DeleteSqlInjectionMatchSetRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteSqlInjectionMatchSetResponse object.
+ * Returns a DeleteSqlInjectionMatchSetResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteSqlInjectionMatchSetResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WAFClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteSqlInjectionMatchSetRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * DeleteSqlInjectionMatchSetRequest::response(Q
 }
 
 /*!
- * @internal
+ * \class QtAws::WAF::DeleteSqlInjectionMatchSetRequestPrivate
+ * \brief The DeleteSqlInjectionMatchSetRequestPrivate class provides private implementation for DeleteSqlInjectionMatchSetRequest.
+ * \internal
  *
- * @class  DeleteSqlInjectionMatchSetRequestPrivate
- *
- * @brief  Private implementation for DeleteSqlInjectionMatchSetRequest.
+ * \inmodule QtAwsWAF
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteSqlInjectionMatchSetRequestPrivate object.
- *
- * @param  action  WAF action being performed.
- * @param  q       Pointer to this object's public DeleteSqlInjectionMatchSetRequest instance.
+ * Constructs a DeleteSqlInjectionMatchSetRequestPrivate object for WAF \a action with,
+ * public implementation \a q.
  */
 DeleteSqlInjectionMatchSetRequestPrivate::DeleteSqlInjectionMatchSetRequestPrivate(
     const WAFRequest::Action action, DeleteSqlInjectionMatchSetRequest * const q)
@@ -109,15 +98,10 @@ DeleteSqlInjectionMatchSetRequestPrivate::DeleteSqlInjectionMatchSetRequestPriva
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteSqlInjectionMatchSetRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteSqlInjectionMatchSetRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteSqlInjectionMatchSetRequest instance.
  */
 DeleteSqlInjectionMatchSetRequestPrivate::DeleteSqlInjectionMatchSetRequestPrivate(
     const DeleteSqlInjectionMatchSetRequestPrivate &other, DeleteSqlInjectionMatchSetRequest * const q)

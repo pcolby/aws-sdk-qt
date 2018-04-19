@@ -27,10 +27,9 @@ namespace CodeCommit {
 
 /*!
  * \class QtAws::CodeCommit::UpdatePullRequestStatusRequest
- *
  * \brief The UpdatePullRequestStatusRequest class provides an interface for CodeCommit UpdatePullRequestStatus requests.
  *
- * \ingroup CodeCommit
+ * \inmodule QtAwsCodeCommit
  *
  *  <fullname>AWS CodeCommit</fullname>
  * 
@@ -227,9 +226,7 @@ namespace CodeCommit {
  */
 
 /*!
- * @brief  Constructs a new UpdatePullRequestStatusRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdatePullRequestStatusRequest::UpdatePullRequestStatusRequest(const UpdatePullRequestStatusRequest &other)
     : CodeCommitRequest(new UpdatePullRequestStatusRequestPrivate(*other.d_func(), this))
@@ -238,7 +235,7 @@ UpdatePullRequestStatusRequest::UpdatePullRequestStatusRequest(const UpdatePullR
 }
 
 /*!
- * @brief  Constructs a new UpdatePullRequestStatusRequest object.
+ * Constructs a UpdatePullRequestStatusRequest object.
  */
 UpdatePullRequestStatusRequest::UpdatePullRequestStatusRequest()
     : CodeCommitRequest(new UpdatePullRequestStatusRequestPrivate(CodeCommitRequest::UpdatePullRequestStatusAction, this))
@@ -256,14 +253,9 @@ bool UpdatePullRequestStatusRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdatePullRequestStatusResponse object.
+ * Returns a UpdatePullRequestStatusResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdatePullRequestStatusResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CodeCommitClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdatePullRequestStatusRequest::response(QNetworkReply * const reply) const
 {
@@ -271,20 +263,17 @@ QtAws::Core::AwsAbstractResponse * UpdatePullRequestStatusRequest::response(QNet
 }
 
 /*!
- * @internal
+ * \class QtAws::CodeCommit::UpdatePullRequestStatusRequestPrivate
+ * \brief The UpdatePullRequestStatusRequestPrivate class provides private implementation for UpdatePullRequestStatusRequest.
+ * \internal
  *
- * @class  UpdatePullRequestStatusRequestPrivate
- *
- * @brief  Private implementation for UpdatePullRequestStatusRequest.
+ * \inmodule QtAwsCodeCommit
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdatePullRequestStatusRequestPrivate object.
- *
- * @param  action  CodeCommit action being performed.
- * @param  q       Pointer to this object's public UpdatePullRequestStatusRequest instance.
+ * Constructs a UpdatePullRequestStatusRequestPrivate object for CodeCommit \a action with,
+ * public implementation \a q.
  */
 UpdatePullRequestStatusRequestPrivate::UpdatePullRequestStatusRequestPrivate(
     const CodeCommitRequest::Action action, UpdatePullRequestStatusRequest * const q)
@@ -294,15 +283,10 @@ UpdatePullRequestStatusRequestPrivate::UpdatePullRequestStatusRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdatePullRequestStatusRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdatePullRequestStatusRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdatePullRequestStatusRequest instance.
  */
 UpdatePullRequestStatusRequestPrivate::UpdatePullRequestStatusRequestPrivate(
     const UpdatePullRequestStatusRequestPrivate &other, UpdatePullRequestStatusRequest * const q)

@@ -27,10 +27,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::SendAutomationSignalRequest
- *
  * \brief The SendAutomationSignalRequest class provides an interface for SSM SendAutomationSignal requests.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -61,9 +60,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new SendAutomationSignalRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 SendAutomationSignalRequest::SendAutomationSignalRequest(const SendAutomationSignalRequest &other)
     : SSMRequest(new SendAutomationSignalRequestPrivate(*other.d_func(), this))
@@ -72,7 +69,7 @@ SendAutomationSignalRequest::SendAutomationSignalRequest(const SendAutomationSig
 }
 
 /*!
- * @brief  Constructs a new SendAutomationSignalRequest object.
+ * Constructs a SendAutomationSignalRequest object.
  */
 SendAutomationSignalRequest::SendAutomationSignalRequest()
     : SSMRequest(new SendAutomationSignalRequestPrivate(SSMRequest::SendAutomationSignalAction, this))
@@ -90,14 +87,9 @@ bool SendAutomationSignalRequest::isValid() const
 
 
 /*!
- * @brief  Construct an SendAutomationSignalResponse object.
+ * Returns a SendAutomationSignalResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An SendAutomationSignalResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SSMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * SendAutomationSignalRequest::response(QNetworkReply * const reply) const
 {
@@ -105,20 +97,17 @@ QtAws::Core::AwsAbstractResponse * SendAutomationSignalRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::SSM::SendAutomationSignalRequestPrivate
+ * \brief The SendAutomationSignalRequestPrivate class provides private implementation for SendAutomationSignalRequest.
+ * \internal
  *
- * @class  SendAutomationSignalRequestPrivate
- *
- * @brief  Private implementation for SendAutomationSignalRequest.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new SendAutomationSignalRequestPrivate object.
- *
- * @param  action  SSM action being performed.
- * @param  q       Pointer to this object's public SendAutomationSignalRequest instance.
+ * Constructs a SendAutomationSignalRequestPrivate object for SSM \a action with,
+ * public implementation \a q.
  */
 SendAutomationSignalRequestPrivate::SendAutomationSignalRequestPrivate(
     const SSMRequest::Action action, SendAutomationSignalRequest * const q)
@@ -128,15 +117,10 @@ SendAutomationSignalRequestPrivate::SendAutomationSignalRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SendAutomationSignalRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the SendAutomationSignalRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public SendAutomationSignalRequest instance.
  */
 SendAutomationSignalRequestPrivate::SendAutomationSignalRequestPrivate(
     const SendAutomationSignalRequestPrivate &other, SendAutomationSignalRequest * const q)

@@ -27,10 +27,9 @@ namespace CognitoIdentityProvider {
 
 /*!
  * \class QtAws::CognitoIdentityProvider::AdminGetDeviceRequest
- *
  * \brief The AdminGetDeviceRequest class provides an interface for CognitoIdentityProvider AdminGetDevice requests.
  *
- * \ingroup CognitoIdentityProvider
+ * \inmodule QtAwsCognitoIdentityProvider
  *
  *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
  *  authenticate a user to obtain tokens related to user identity and access
@@ -47,9 +46,7 @@ namespace CognitoIdentityProvider {
  */
 
 /*!
- * @brief  Constructs a new AdminGetDeviceRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AdminGetDeviceRequest::AdminGetDeviceRequest(const AdminGetDeviceRequest &other)
     : CognitoIdentityProviderRequest(new AdminGetDeviceRequestPrivate(*other.d_func(), this))
@@ -58,7 +55,7 @@ AdminGetDeviceRequest::AdminGetDeviceRequest(const AdminGetDeviceRequest &other)
 }
 
 /*!
- * @brief  Constructs a new AdminGetDeviceRequest object.
+ * Constructs a AdminGetDeviceRequest object.
  */
 AdminGetDeviceRequest::AdminGetDeviceRequest()
     : CognitoIdentityProviderRequest(new AdminGetDeviceRequestPrivate(CognitoIdentityProviderRequest::AdminGetDeviceAction, this))
@@ -76,14 +73,9 @@ bool AdminGetDeviceRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AdminGetDeviceResponse object.
+ * Returns a AdminGetDeviceResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AdminGetDeviceResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CognitoIdentityProviderClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AdminGetDeviceRequest::response(QNetworkReply * const reply) const
 {
@@ -91,20 +83,17 @@ QtAws::Core::AwsAbstractResponse * AdminGetDeviceRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::CognitoIdentityProvider::AdminGetDeviceRequestPrivate
+ * \brief The AdminGetDeviceRequestPrivate class provides private implementation for AdminGetDeviceRequest.
+ * \internal
  *
- * @class  AdminGetDeviceRequestPrivate
- *
- * @brief  Private implementation for AdminGetDeviceRequest.
+ * \inmodule QtAwsCognitoIdentityProvider
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AdminGetDeviceRequestPrivate object.
- *
- * @param  action  CognitoIdentityProvider action being performed.
- * @param  q       Pointer to this object's public AdminGetDeviceRequest instance.
+ * Constructs a AdminGetDeviceRequestPrivate object for CognitoIdentityProvider \a action with,
+ * public implementation \a q.
  */
 AdminGetDeviceRequestPrivate::AdminGetDeviceRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, AdminGetDeviceRequest * const q)
@@ -114,15 +103,10 @@ AdminGetDeviceRequestPrivate::AdminGetDeviceRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AdminGetDeviceRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AdminGetDeviceRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AdminGetDeviceRequest instance.
  */
 AdminGetDeviceRequestPrivate::AdminGetDeviceRequestPrivate(
     const AdminGetDeviceRequestPrivate &other, AdminGetDeviceRequest * const q)

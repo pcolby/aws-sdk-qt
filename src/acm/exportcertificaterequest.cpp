@@ -27,10 +27,9 @@ namespace ACM {
 
 /*!
  * \class QtAws::ACM::ExportCertificateRequest
- *
  * \brief The ExportCertificateRequest class provides an interface for ACM ExportCertificate requests.
  *
- * \ingroup ACM
+ * \inmodule QtAwsACM
  *
  *  <fullname>AWS Certificate Manager</fullname>
  * 
@@ -46,9 +45,7 @@ namespace ACM {
  */
 
 /*!
- * @brief  Constructs a new ExportCertificateRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ExportCertificateRequest::ExportCertificateRequest(const ExportCertificateRequest &other)
     : ACMRequest(new ExportCertificateRequestPrivate(*other.d_func(), this))
@@ -57,7 +54,7 @@ ExportCertificateRequest::ExportCertificateRequest(const ExportCertificateReques
 }
 
 /*!
- * @brief  Constructs a new ExportCertificateRequest object.
+ * Constructs a ExportCertificateRequest object.
  */
 ExportCertificateRequest::ExportCertificateRequest()
     : ACMRequest(new ExportCertificateRequestPrivate(ACMRequest::ExportCertificateAction, this))
@@ -75,14 +72,9 @@ bool ExportCertificateRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ExportCertificateResponse object.
+ * Returns a ExportCertificateResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ExportCertificateResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ACMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ExportCertificateRequest::response(QNetworkReply * const reply) const
 {
@@ -90,20 +82,17 @@ QtAws::Core::AwsAbstractResponse * ExportCertificateRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::ACM::ExportCertificateRequestPrivate
+ * \brief The ExportCertificateRequestPrivate class provides private implementation for ExportCertificateRequest.
+ * \internal
  *
- * @class  ExportCertificateRequestPrivate
- *
- * @brief  Private implementation for ExportCertificateRequest.
+ * \inmodule QtAwsACM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ExportCertificateRequestPrivate object.
- *
- * @param  action  ACM action being performed.
- * @param  q       Pointer to this object's public ExportCertificateRequest instance.
+ * Constructs a ExportCertificateRequestPrivate object for ACM \a action with,
+ * public implementation \a q.
  */
 ExportCertificateRequestPrivate::ExportCertificateRequestPrivate(
     const ACMRequest::Action action, ExportCertificateRequest * const q)
@@ -113,15 +102,10 @@ ExportCertificateRequestPrivate::ExportCertificateRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ExportCertificateRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ExportCertificateRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ExportCertificateRequest instance.
  */
 ExportCertificateRequestPrivate::ExportCertificateRequestPrivate(
     const ExportCertificateRequestPrivate &other, ExportCertificateRequest * const q)

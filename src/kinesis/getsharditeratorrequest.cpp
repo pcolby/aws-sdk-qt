@@ -27,10 +27,9 @@ namespace Kinesis {
 
 /*!
  * \class QtAws::Kinesis::GetShardIteratorRequest
- *
  * \brief The GetShardIteratorRequest class provides an interface for Kinesis GetShardIterator requests.
  *
- * \ingroup Kinesis
+ * \inmodule QtAwsKinesis
  *
  *  <fullname>Amazon Kinesis Data Streams Service API Reference</fullname>
  * 
@@ -40,9 +39,7 @@ namespace Kinesis {
  */
 
 /*!
- * @brief  Constructs a new GetShardIteratorRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetShardIteratorRequest::GetShardIteratorRequest(const GetShardIteratorRequest &other)
     : KinesisRequest(new GetShardIteratorRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ GetShardIteratorRequest::GetShardIteratorRequest(const GetShardIteratorRequest &
 }
 
 /*!
- * @brief  Constructs a new GetShardIteratorRequest object.
+ * Constructs a GetShardIteratorRequest object.
  */
 GetShardIteratorRequest::GetShardIteratorRequest()
     : KinesisRequest(new GetShardIteratorRequestPrivate(KinesisRequest::GetShardIteratorAction, this))
@@ -69,14 +66,9 @@ bool GetShardIteratorRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetShardIteratorResponse object.
+ * Returns a GetShardIteratorResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetShardIteratorResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  KinesisClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetShardIteratorRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * GetShardIteratorRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::Kinesis::GetShardIteratorRequestPrivate
+ * \brief The GetShardIteratorRequestPrivate class provides private implementation for GetShardIteratorRequest.
+ * \internal
  *
- * @class  GetShardIteratorRequestPrivate
- *
- * @brief  Private implementation for GetShardIteratorRequest.
+ * \inmodule QtAwsKinesis
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetShardIteratorRequestPrivate object.
- *
- * @param  action  Kinesis action being performed.
- * @param  q       Pointer to this object's public GetShardIteratorRequest instance.
+ * Constructs a GetShardIteratorRequestPrivate object for Kinesis \a action with,
+ * public implementation \a q.
  */
 GetShardIteratorRequestPrivate::GetShardIteratorRequestPrivate(
     const KinesisRequest::Action action, GetShardIteratorRequest * const q)
@@ -107,15 +96,10 @@ GetShardIteratorRequestPrivate::GetShardIteratorRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetShardIteratorRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetShardIteratorRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetShardIteratorRequest instance.
  */
 GetShardIteratorRequestPrivate::GetShardIteratorRequestPrivate(
     const GetShardIteratorRequestPrivate &other, GetShardIteratorRequest * const q)

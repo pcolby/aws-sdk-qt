@@ -27,10 +27,9 @@ namespace CognitoSync {
 
 /*!
  * \class QtAws::CognitoSync::ListIdentityPoolUsageRequest
- *
  * \brief The ListIdentityPoolUsageRequest class provides an interface for CognitoSync ListIdentityPoolUsage requests.
  *
- * \ingroup CognitoSync
+ * \inmodule QtAwsCognitoSync
  *
  *  <fullname>Amazon Cognito Sync</fullname>
  * 
@@ -57,9 +56,7 @@ namespace CognitoSync {
  */
 
 /*!
- * @brief  Constructs a new ListIdentityPoolUsageRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListIdentityPoolUsageRequest::ListIdentityPoolUsageRequest(const ListIdentityPoolUsageRequest &other)
     : CognitoSyncRequest(new ListIdentityPoolUsageRequestPrivate(*other.d_func(), this))
@@ -68,7 +65,7 @@ ListIdentityPoolUsageRequest::ListIdentityPoolUsageRequest(const ListIdentityPoo
 }
 
 /*!
- * @brief  Constructs a new ListIdentityPoolUsageRequest object.
+ * Constructs a ListIdentityPoolUsageRequest object.
  */
 ListIdentityPoolUsageRequest::ListIdentityPoolUsageRequest()
     : CognitoSyncRequest(new ListIdentityPoolUsageRequestPrivate(CognitoSyncRequest::ListIdentityPoolUsageAction, this))
@@ -86,14 +83,9 @@ bool ListIdentityPoolUsageRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListIdentityPoolUsageResponse object.
+ * Returns a ListIdentityPoolUsageResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListIdentityPoolUsageResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CognitoSyncClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListIdentityPoolUsageRequest::response(QNetworkReply * const reply) const
 {
@@ -101,20 +93,17 @@ QtAws::Core::AwsAbstractResponse * ListIdentityPoolUsageRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::CognitoSync::ListIdentityPoolUsageRequestPrivate
+ * \brief The ListIdentityPoolUsageRequestPrivate class provides private implementation for ListIdentityPoolUsageRequest.
+ * \internal
  *
- * @class  ListIdentityPoolUsageRequestPrivate
- *
- * @brief  Private implementation for ListIdentityPoolUsageRequest.
+ * \inmodule QtAwsCognitoSync
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListIdentityPoolUsageRequestPrivate object.
- *
- * @param  action  CognitoSync action being performed.
- * @param  q       Pointer to this object's public ListIdentityPoolUsageRequest instance.
+ * Constructs a ListIdentityPoolUsageRequestPrivate object for CognitoSync \a action with,
+ * public implementation \a q.
  */
 ListIdentityPoolUsageRequestPrivate::ListIdentityPoolUsageRequestPrivate(
     const CognitoSyncRequest::Action action, ListIdentityPoolUsageRequest * const q)
@@ -124,15 +113,10 @@ ListIdentityPoolUsageRequestPrivate::ListIdentityPoolUsageRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListIdentityPoolUsageRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListIdentityPoolUsageRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListIdentityPoolUsageRequest instance.
  */
 ListIdentityPoolUsageRequestPrivate::ListIdentityPoolUsageRequestPrivate(
     const ListIdentityPoolUsageRequestPrivate &other, ListIdentityPoolUsageRequest * const q)

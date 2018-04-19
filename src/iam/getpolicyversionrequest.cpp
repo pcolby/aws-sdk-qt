@@ -27,10 +27,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::GetPolicyVersionRequest
- *
  * \brief The GetPolicyVersionRequest class provides an interface for IAM GetPolicyVersion requests.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -102,9 +101,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new GetPolicyVersionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetPolicyVersionRequest::GetPolicyVersionRequest(const GetPolicyVersionRequest &other)
     : IAMRequest(new GetPolicyVersionRequestPrivate(*other.d_func(), this))
@@ -113,7 +110,7 @@ GetPolicyVersionRequest::GetPolicyVersionRequest(const GetPolicyVersionRequest &
 }
 
 /*!
- * @brief  Constructs a new GetPolicyVersionRequest object.
+ * Constructs a GetPolicyVersionRequest object.
  */
 GetPolicyVersionRequest::GetPolicyVersionRequest()
     : IAMRequest(new GetPolicyVersionRequestPrivate(IAMRequest::GetPolicyVersionAction, this))
@@ -131,14 +128,9 @@ bool GetPolicyVersionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetPolicyVersionResponse object.
+ * Returns a GetPolicyVersionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetPolicyVersionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IAMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetPolicyVersionRequest::response(QNetworkReply * const reply) const
 {
@@ -146,20 +138,17 @@ QtAws::Core::AwsAbstractResponse * GetPolicyVersionRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::IAM::GetPolicyVersionRequestPrivate
+ * \brief The GetPolicyVersionRequestPrivate class provides private implementation for GetPolicyVersionRequest.
+ * \internal
  *
- * @class  GetPolicyVersionRequestPrivate
- *
- * @brief  Private implementation for GetPolicyVersionRequest.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetPolicyVersionRequestPrivate object.
- *
- * @param  action  IAM action being performed.
- * @param  q       Pointer to this object's public GetPolicyVersionRequest instance.
+ * Constructs a GetPolicyVersionRequestPrivate object for IAM \a action with,
+ * public implementation \a q.
  */
 GetPolicyVersionRequestPrivate::GetPolicyVersionRequestPrivate(
     const IAMRequest::Action action, GetPolicyVersionRequest * const q)
@@ -169,15 +158,10 @@ GetPolicyVersionRequestPrivate::GetPolicyVersionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetPolicyVersionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetPolicyVersionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetPolicyVersionRequest instance.
  */
 GetPolicyVersionRequestPrivate::GetPolicyVersionRequestPrivate(
     const GetPolicyVersionRequestPrivate &other, GetPolicyVersionRequest * const q)

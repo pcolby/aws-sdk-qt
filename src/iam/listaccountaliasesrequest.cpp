@@ -27,10 +27,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::ListAccountAliasesRequest
- *
  * \brief The ListAccountAliasesRequest class provides an interface for IAM ListAccountAliases requests.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -102,9 +101,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new ListAccountAliasesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListAccountAliasesRequest::ListAccountAliasesRequest(const ListAccountAliasesRequest &other)
     : IAMRequest(new ListAccountAliasesRequestPrivate(*other.d_func(), this))
@@ -113,7 +110,7 @@ ListAccountAliasesRequest::ListAccountAliasesRequest(const ListAccountAliasesReq
 }
 
 /*!
- * @brief  Constructs a new ListAccountAliasesRequest object.
+ * Constructs a ListAccountAliasesRequest object.
  */
 ListAccountAliasesRequest::ListAccountAliasesRequest()
     : IAMRequest(new ListAccountAliasesRequestPrivate(IAMRequest::ListAccountAliasesAction, this))
@@ -131,14 +128,9 @@ bool ListAccountAliasesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListAccountAliasesResponse object.
+ * Returns a ListAccountAliasesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListAccountAliasesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IAMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListAccountAliasesRequest::response(QNetworkReply * const reply) const
 {
@@ -146,20 +138,17 @@ QtAws::Core::AwsAbstractResponse * ListAccountAliasesRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::IAM::ListAccountAliasesRequestPrivate
+ * \brief The ListAccountAliasesRequestPrivate class provides private implementation for ListAccountAliasesRequest.
+ * \internal
  *
- * @class  ListAccountAliasesRequestPrivate
- *
- * @brief  Private implementation for ListAccountAliasesRequest.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListAccountAliasesRequestPrivate object.
- *
- * @param  action  IAM action being performed.
- * @param  q       Pointer to this object's public ListAccountAliasesRequest instance.
+ * Constructs a ListAccountAliasesRequestPrivate object for IAM \a action with,
+ * public implementation \a q.
  */
 ListAccountAliasesRequestPrivate::ListAccountAliasesRequestPrivate(
     const IAMRequest::Action action, ListAccountAliasesRequest * const q)
@@ -169,15 +158,10 @@ ListAccountAliasesRequestPrivate::ListAccountAliasesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListAccountAliasesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListAccountAliasesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListAccountAliasesRequest instance.
  */
 ListAccountAliasesRequestPrivate::ListAccountAliasesRequestPrivate(
     const ListAccountAliasesRequestPrivate &other, ListAccountAliasesRequest * const q)

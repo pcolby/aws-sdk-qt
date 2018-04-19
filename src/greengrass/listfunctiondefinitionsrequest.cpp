@@ -27,10 +27,9 @@ namespace Greengrass {
 
 /*!
  * \class QtAws::Greengrass::ListFunctionDefinitionsRequest
- *
  * \brief The ListFunctionDefinitionsRequest class provides an interface for Greengrass ListFunctionDefinitions requests.
  *
- * \ingroup Greengrass
+ * \inmodule QtAwsGreengrass
  *
  *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
  *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
@@ -40,9 +39,7 @@ namespace Greengrass {
  */
 
 /*!
- * @brief  Constructs a new ListFunctionDefinitionsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListFunctionDefinitionsRequest::ListFunctionDefinitionsRequest(const ListFunctionDefinitionsRequest &other)
     : GreengrassRequest(new ListFunctionDefinitionsRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ ListFunctionDefinitionsRequest::ListFunctionDefinitionsRequest(const ListFunctio
 }
 
 /*!
- * @brief  Constructs a new ListFunctionDefinitionsRequest object.
+ * Constructs a ListFunctionDefinitionsRequest object.
  */
 ListFunctionDefinitionsRequest::ListFunctionDefinitionsRequest()
     : GreengrassRequest(new ListFunctionDefinitionsRequestPrivate(GreengrassRequest::ListFunctionDefinitionsAction, this))
@@ -69,14 +66,9 @@ bool ListFunctionDefinitionsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListFunctionDefinitionsResponse object.
+ * Returns a ListFunctionDefinitionsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListFunctionDefinitionsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GreengrassClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListFunctionDefinitionsRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * ListFunctionDefinitionsRequest::response(QNet
 }
 
 /*!
- * @internal
+ * \class QtAws::Greengrass::ListFunctionDefinitionsRequestPrivate
+ * \brief The ListFunctionDefinitionsRequestPrivate class provides private implementation for ListFunctionDefinitionsRequest.
+ * \internal
  *
- * @class  ListFunctionDefinitionsRequestPrivate
- *
- * @brief  Private implementation for ListFunctionDefinitionsRequest.
+ * \inmodule QtAwsGreengrass
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListFunctionDefinitionsRequestPrivate object.
- *
- * @param  action  Greengrass action being performed.
- * @param  q       Pointer to this object's public ListFunctionDefinitionsRequest instance.
+ * Constructs a ListFunctionDefinitionsRequestPrivate object for Greengrass \a action with,
+ * public implementation \a q.
  */
 ListFunctionDefinitionsRequestPrivate::ListFunctionDefinitionsRequestPrivate(
     const GreengrassRequest::Action action, ListFunctionDefinitionsRequest * const q)
@@ -107,15 +96,10 @@ ListFunctionDefinitionsRequestPrivate::ListFunctionDefinitionsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListFunctionDefinitionsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListFunctionDefinitionsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListFunctionDefinitionsRequest instance.
  */
 ListFunctionDefinitionsRequestPrivate::ListFunctionDefinitionsRequestPrivate(
     const ListFunctionDefinitionsRequestPrivate &other, ListFunctionDefinitionsRequest * const q)

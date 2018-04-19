@@ -27,10 +27,9 @@ namespace MediaStore {
 
 /*!
  * \class QtAws::MediaStore::DescribeContainerRequest
- *
  * \brief The DescribeContainerRequest class provides an interface for MediaStore DescribeContainer requests.
  *
- * \ingroup MediaStore
+ * \inmodule QtAwsMediaStore
  *
  *  An AWS Elemental MediaStore container is a namespace that holds folders and objects. You use a container endpoint to
  *  create, read, and delete objects.
@@ -39,9 +38,7 @@ namespace MediaStore {
  */
 
 /*!
- * @brief  Constructs a new DescribeContainerRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeContainerRequest::DescribeContainerRequest(const DescribeContainerRequest &other)
     : MediaStoreRequest(new DescribeContainerRequestPrivate(*other.d_func(), this))
@@ -50,7 +47,7 @@ DescribeContainerRequest::DescribeContainerRequest(const DescribeContainerReques
 }
 
 /*!
- * @brief  Constructs a new DescribeContainerRequest object.
+ * Constructs a DescribeContainerRequest object.
  */
 DescribeContainerRequest::DescribeContainerRequest()
     : MediaStoreRequest(new DescribeContainerRequestPrivate(MediaStoreRequest::DescribeContainerAction, this))
@@ -68,14 +65,9 @@ bool DescribeContainerRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeContainerResponse object.
+ * Returns a DescribeContainerResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeContainerResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MediaStoreClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeContainerRequest::response(QNetworkReply * const reply) const
 {
@@ -83,20 +75,17 @@ QtAws::Core::AwsAbstractResponse * DescribeContainerRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::MediaStore::DescribeContainerRequestPrivate
+ * \brief The DescribeContainerRequestPrivate class provides private implementation for DescribeContainerRequest.
+ * \internal
  *
- * @class  DescribeContainerRequestPrivate
- *
- * @brief  Private implementation for DescribeContainerRequest.
+ * \inmodule QtAwsMediaStore
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeContainerRequestPrivate object.
- *
- * @param  action  MediaStore action being performed.
- * @param  q       Pointer to this object's public DescribeContainerRequest instance.
+ * Constructs a DescribeContainerRequestPrivate object for MediaStore \a action with,
+ * public implementation \a q.
  */
 DescribeContainerRequestPrivate::DescribeContainerRequestPrivate(
     const MediaStoreRequest::Action action, DescribeContainerRequest * const q)
@@ -106,15 +95,10 @@ DescribeContainerRequestPrivate::DescribeContainerRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeContainerRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeContainerRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeContainerRequest instance.
  */
 DescribeContainerRequestPrivate::DescribeContainerRequestPrivate(
     const DescribeContainerRequestPrivate &other, DescribeContainerRequest * const q)

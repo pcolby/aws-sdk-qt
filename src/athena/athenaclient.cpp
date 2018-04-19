@@ -50,6 +50,9 @@
 /*!
  * \namespace QtAws::Athena
  * \brief The QtAws::Athena contains stuff...
+ *
+ * \inmodule QtAwsAthena
+ *
  * @todo Move this to a separate template file.
  */
 
@@ -111,7 +114,7 @@ AthenaClient::AthenaClient(
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * \a  AwsEndpoint::getEndpoint()
+ * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
 AthenaClient::AthenaClient(
     const QUrl &endpoint,

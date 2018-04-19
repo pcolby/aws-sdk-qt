@@ -27,10 +27,9 @@ namespace ACM {
 
 /*!
  * \class QtAws::ACM::ListTagsForCertificateRequest
- *
  * \brief The ListTagsForCertificateRequest class provides an interface for ACM ListTagsForCertificate requests.
  *
- * \ingroup ACM
+ * \inmodule QtAwsACM
  *
  *  <fullname>AWS Certificate Manager</fullname>
  * 
@@ -46,9 +45,7 @@ namespace ACM {
  */
 
 /*!
- * @brief  Constructs a new ListTagsForCertificateRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListTagsForCertificateRequest::ListTagsForCertificateRequest(const ListTagsForCertificateRequest &other)
     : ACMRequest(new ListTagsForCertificateRequestPrivate(*other.d_func(), this))
@@ -57,7 +54,7 @@ ListTagsForCertificateRequest::ListTagsForCertificateRequest(const ListTagsForCe
 }
 
 /*!
- * @brief  Constructs a new ListTagsForCertificateRequest object.
+ * Constructs a ListTagsForCertificateRequest object.
  */
 ListTagsForCertificateRequest::ListTagsForCertificateRequest()
     : ACMRequest(new ListTagsForCertificateRequestPrivate(ACMRequest::ListTagsForCertificateAction, this))
@@ -75,14 +72,9 @@ bool ListTagsForCertificateRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListTagsForCertificateResponse object.
+ * Returns a ListTagsForCertificateResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListTagsForCertificateResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ACMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListTagsForCertificateRequest::response(QNetworkReply * const reply) const
 {
@@ -90,20 +82,17 @@ QtAws::Core::AwsAbstractResponse * ListTagsForCertificateRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::ACM::ListTagsForCertificateRequestPrivate
+ * \brief The ListTagsForCertificateRequestPrivate class provides private implementation for ListTagsForCertificateRequest.
+ * \internal
  *
- * @class  ListTagsForCertificateRequestPrivate
- *
- * @brief  Private implementation for ListTagsForCertificateRequest.
+ * \inmodule QtAwsACM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListTagsForCertificateRequestPrivate object.
- *
- * @param  action  ACM action being performed.
- * @param  q       Pointer to this object's public ListTagsForCertificateRequest instance.
+ * Constructs a ListTagsForCertificateRequestPrivate object for ACM \a action with,
+ * public implementation \a q.
  */
 ListTagsForCertificateRequestPrivate::ListTagsForCertificateRequestPrivate(
     const ACMRequest::Action action, ListTagsForCertificateRequest * const q)
@@ -113,15 +102,10 @@ ListTagsForCertificateRequestPrivate::ListTagsForCertificateRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListTagsForCertificateRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListTagsForCertificateRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListTagsForCertificateRequest instance.
  */
 ListTagsForCertificateRequestPrivate::ListTagsForCertificateRequestPrivate(
     const ListTagsForCertificateRequestPrivate &other, ListTagsForCertificateRequest * const q)

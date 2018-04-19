@@ -27,10 +27,9 @@ namespace FMS {
 
 /*!
  * \class QtAws::FMS::AssociateAdminAccountRequest
- *
  * \brief The AssociateAdminAccountRequest class provides an interface for FMS AssociateAdminAccount requests.
  *
- * \ingroup FMS
+ * \inmodule QtAwsFMS
  *
  *  <fullname>AWS Firewall Manager</fullname>
  * 
@@ -43,9 +42,7 @@ namespace FMS {
  */
 
 /*!
- * @brief  Constructs a new AssociateAdminAccountRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AssociateAdminAccountRequest::AssociateAdminAccountRequest(const AssociateAdminAccountRequest &other)
     : FMSRequest(new AssociateAdminAccountRequestPrivate(*other.d_func(), this))
@@ -54,7 +51,7 @@ AssociateAdminAccountRequest::AssociateAdminAccountRequest(const AssociateAdminA
 }
 
 /*!
- * @brief  Constructs a new AssociateAdminAccountRequest object.
+ * Constructs a AssociateAdminAccountRequest object.
  */
 AssociateAdminAccountRequest::AssociateAdminAccountRequest()
     : FMSRequest(new AssociateAdminAccountRequestPrivate(FMSRequest::AssociateAdminAccountAction, this))
@@ -72,14 +69,9 @@ bool AssociateAdminAccountRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AssociateAdminAccountResponse object.
+ * Returns a AssociateAdminAccountResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AssociateAdminAccountResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  FMSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AssociateAdminAccountRequest::response(QNetworkReply * const reply) const
 {
@@ -87,20 +79,17 @@ QtAws::Core::AwsAbstractResponse * AssociateAdminAccountRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::FMS::AssociateAdminAccountRequestPrivate
+ * \brief The AssociateAdminAccountRequestPrivate class provides private implementation for AssociateAdminAccountRequest.
+ * \internal
  *
- * @class  AssociateAdminAccountRequestPrivate
- *
- * @brief  Private implementation for AssociateAdminAccountRequest.
+ * \inmodule QtAwsFMS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AssociateAdminAccountRequestPrivate object.
- *
- * @param  action  FMS action being performed.
- * @param  q       Pointer to this object's public AssociateAdminAccountRequest instance.
+ * Constructs a AssociateAdminAccountRequestPrivate object for FMS \a action with,
+ * public implementation \a q.
  */
 AssociateAdminAccountRequestPrivate::AssociateAdminAccountRequestPrivate(
     const FMSRequest::Action action, AssociateAdminAccountRequest * const q)
@@ -110,15 +99,10 @@ AssociateAdminAccountRequestPrivate::AssociateAdminAccountRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AssociateAdminAccountRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AssociateAdminAccountRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AssociateAdminAccountRequest instance.
  */
 AssociateAdminAccountRequestPrivate::AssociateAdminAccountRequestPrivate(
     const AssociateAdminAccountRequestPrivate &other, AssociateAdminAccountRequest * const q)

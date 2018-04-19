@@ -27,10 +27,9 @@ namespace DirectoryService {
 
 /*!
  * \class QtAws::DirectoryService::UpdateNumberOfDomainControllersRequest
- *
  * \brief The UpdateNumberOfDomainControllersRequest class provides an interface for DirectoryService UpdateNumberOfDomainControllers requests.
  *
- * \ingroup DirectoryService
+ * \inmodule QtAwsDirectoryService
  *
  *  <fullname>AWS Directory Service</fullname>
  * 
@@ -51,9 +50,7 @@ namespace DirectoryService {
  */
 
 /*!
- * @brief  Constructs a new UpdateNumberOfDomainControllersRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateNumberOfDomainControllersRequest::UpdateNumberOfDomainControllersRequest(const UpdateNumberOfDomainControllersRequest &other)
     : DirectoryServiceRequest(new UpdateNumberOfDomainControllersRequestPrivate(*other.d_func(), this))
@@ -62,7 +59,7 @@ UpdateNumberOfDomainControllersRequest::UpdateNumberOfDomainControllersRequest(c
 }
 
 /*!
- * @brief  Constructs a new UpdateNumberOfDomainControllersRequest object.
+ * Constructs a UpdateNumberOfDomainControllersRequest object.
  */
 UpdateNumberOfDomainControllersRequest::UpdateNumberOfDomainControllersRequest()
     : DirectoryServiceRequest(new UpdateNumberOfDomainControllersRequestPrivate(DirectoryServiceRequest::UpdateNumberOfDomainControllersAction, this))
@@ -80,14 +77,9 @@ bool UpdateNumberOfDomainControllersRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateNumberOfDomainControllersResponse object.
+ * Returns a UpdateNumberOfDomainControllersResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateNumberOfDomainControllersResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DirectoryServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateNumberOfDomainControllersRequest::response(QNetworkReply * const reply) const
 {
@@ -95,20 +87,17 @@ QtAws::Core::AwsAbstractResponse * UpdateNumberOfDomainControllersRequest::respo
 }
 
 /*!
- * @internal
+ * \class QtAws::DirectoryService::UpdateNumberOfDomainControllersRequestPrivate
+ * \brief The UpdateNumberOfDomainControllersRequestPrivate class provides private implementation for UpdateNumberOfDomainControllersRequest.
+ * \internal
  *
- * @class  UpdateNumberOfDomainControllersRequestPrivate
- *
- * @brief  Private implementation for UpdateNumberOfDomainControllersRequest.
+ * \inmodule QtAwsDirectoryService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateNumberOfDomainControllersRequestPrivate object.
- *
- * @param  action  DirectoryService action being performed.
- * @param  q       Pointer to this object's public UpdateNumberOfDomainControllersRequest instance.
+ * Constructs a UpdateNumberOfDomainControllersRequestPrivate object for DirectoryService \a action with,
+ * public implementation \a q.
  */
 UpdateNumberOfDomainControllersRequestPrivate::UpdateNumberOfDomainControllersRequestPrivate(
     const DirectoryServiceRequest::Action action, UpdateNumberOfDomainControllersRequest * const q)
@@ -118,15 +107,10 @@ UpdateNumberOfDomainControllersRequestPrivate::UpdateNumberOfDomainControllersRe
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateNumberOfDomainControllersRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateNumberOfDomainControllersRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateNumberOfDomainControllersRequest instance.
  */
 UpdateNumberOfDomainControllersRequestPrivate::UpdateNumberOfDomainControllersRequestPrivate(
     const UpdateNumberOfDomainControllersRequestPrivate &other, UpdateNumberOfDomainControllersRequest * const q)

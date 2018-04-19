@@ -27,10 +27,9 @@ namespace SFN {
 
 /*!
  * \class QtAws::SFN::DescribeStateMachineRequest
- *
  * \brief The DescribeStateMachineRequest class provides an interface for SFN DescribeStateMachine requests.
  *
- * \ingroup SFN
+ * \inmodule QtAwsSFN
  *
  *  <fullname>AWS Step Functions</fullname>
  * 
@@ -56,9 +55,7 @@ namespace SFN {
  */
 
 /*!
- * @brief  Constructs a new DescribeStateMachineRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeStateMachineRequest::DescribeStateMachineRequest(const DescribeStateMachineRequest &other)
     : SFNRequest(new DescribeStateMachineRequestPrivate(*other.d_func(), this))
@@ -67,7 +64,7 @@ DescribeStateMachineRequest::DescribeStateMachineRequest(const DescribeStateMach
 }
 
 /*!
- * @brief  Constructs a new DescribeStateMachineRequest object.
+ * Constructs a DescribeStateMachineRequest object.
  */
 DescribeStateMachineRequest::DescribeStateMachineRequest()
     : SFNRequest(new DescribeStateMachineRequestPrivate(SFNRequest::DescribeStateMachineAction, this))
@@ -85,14 +82,9 @@ bool DescribeStateMachineRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeStateMachineResponse object.
+ * Returns a DescribeStateMachineResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeStateMachineResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SFNClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeStateMachineRequest::response(QNetworkReply * const reply) const
 {
@@ -100,20 +92,17 @@ QtAws::Core::AwsAbstractResponse * DescribeStateMachineRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::SFN::DescribeStateMachineRequestPrivate
+ * \brief The DescribeStateMachineRequestPrivate class provides private implementation for DescribeStateMachineRequest.
+ * \internal
  *
- * @class  DescribeStateMachineRequestPrivate
- *
- * @brief  Private implementation for DescribeStateMachineRequest.
+ * \inmodule QtAwsSFN
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeStateMachineRequestPrivate object.
- *
- * @param  action  SFN action being performed.
- * @param  q       Pointer to this object's public DescribeStateMachineRequest instance.
+ * Constructs a DescribeStateMachineRequestPrivate object for SFN \a action with,
+ * public implementation \a q.
  */
 DescribeStateMachineRequestPrivate::DescribeStateMachineRequestPrivate(
     const SFNRequest::Action action, DescribeStateMachineRequest * const q)
@@ -123,15 +112,10 @@ DescribeStateMachineRequestPrivate::DescribeStateMachineRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeStateMachineRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeStateMachineRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeStateMachineRequest instance.
  */
 DescribeStateMachineRequestPrivate::DescribeStateMachineRequestPrivate(
     const DescribeStateMachineRequestPrivate &other, DescribeStateMachineRequest * const q)

@@ -25,16 +25,84 @@ namespace CloudDirectory {
 
 /*!
  * \class QtAws::CloudDirectory::CloudDirectoryRequest
- *
  * \brief The CloudDirectoryRequest class provides an interface for CloudDirectory requests.
  *
- * \ingroup CloudDirectory
+ * \inmodule QtAwsCloudDirectory
  */
 
 /*!
- * @brief  Constructs a new CloudDirectoryRequest object.
+ * \enum CloudDirectoryRequest::Action
  *
- * @param  action  The CloudDirectory action to request.
+ * This enum describes the actions that can be performed as CloudDirectory
+ * requests.
+ *
+ * \value AddFacetToObjectAction CloudDirectory AddFacetToObject action.
+ * \value ApplySchemaAction CloudDirectory ApplySchema action.
+ * \value AttachObjectAction CloudDirectory AttachObject action.
+ * \value AttachPolicyAction CloudDirectory AttachPolicy action.
+ * \value AttachToIndexAction CloudDirectory AttachToIndex action.
+ * \value AttachTypedLinkAction CloudDirectory AttachTypedLink action.
+ * \value BatchReadAction CloudDirectory BatchRead action.
+ * \value BatchWriteAction CloudDirectory BatchWrite action.
+ * \value CreateDirectoryAction CloudDirectory CreateDirectory action.
+ * \value CreateFacetAction CloudDirectory CreateFacet action.
+ * \value CreateIndexAction CloudDirectory CreateIndex action.
+ * \value CreateObjectAction CloudDirectory CreateObject action.
+ * \value CreateSchemaAction CloudDirectory CreateSchema action.
+ * \value CreateTypedLinkFacetAction CloudDirectory CreateTypedLinkFacet action.
+ * \value DeleteDirectoryAction CloudDirectory DeleteDirectory action.
+ * \value DeleteFacetAction CloudDirectory DeleteFacet action.
+ * \value DeleteObjectAction CloudDirectory DeleteObject action.
+ * \value DeleteSchemaAction CloudDirectory DeleteSchema action.
+ * \value DeleteTypedLinkFacetAction CloudDirectory DeleteTypedLinkFacet action.
+ * \value DetachFromIndexAction CloudDirectory DetachFromIndex action.
+ * \value DetachObjectAction CloudDirectory DetachObject action.
+ * \value DetachPolicyAction CloudDirectory DetachPolicy action.
+ * \value DetachTypedLinkAction CloudDirectory DetachTypedLink action.
+ * \value DisableDirectoryAction CloudDirectory DisableDirectory action.
+ * \value EnableDirectoryAction CloudDirectory EnableDirectory action.
+ * \value GetAppliedSchemaVersionAction CloudDirectory GetAppliedSchemaVersion action.
+ * \value GetDirectoryAction CloudDirectory GetDirectory action.
+ * \value GetFacetAction CloudDirectory GetFacet action.
+ * \value GetObjectAttributesAction CloudDirectory GetObjectAttributes action.
+ * \value GetObjectInformationAction CloudDirectory GetObjectInformation action.
+ * \value GetSchemaAsJsonAction CloudDirectory GetSchemaAsJson action.
+ * \value GetTypedLinkFacetInformationAction CloudDirectory GetTypedLinkFacetInformation action.
+ * \value ListAppliedSchemaArnsAction CloudDirectory ListAppliedSchemaArns action.
+ * \value ListAttachedIndicesAction CloudDirectory ListAttachedIndices action.
+ * \value ListDevelopmentSchemaArnsAction CloudDirectory ListDevelopmentSchemaArns action.
+ * \value ListDirectoriesAction CloudDirectory ListDirectories action.
+ * \value ListFacetAttributesAction CloudDirectory ListFacetAttributes action.
+ * \value ListFacetNamesAction CloudDirectory ListFacetNames action.
+ * \value ListIncomingTypedLinksAction CloudDirectory ListIncomingTypedLinks action.
+ * \value ListIndexAction CloudDirectory ListIndex action.
+ * \value ListObjectAttributesAction CloudDirectory ListObjectAttributes action.
+ * \value ListObjectChildrenAction CloudDirectory ListObjectChildren action.
+ * \value ListObjectParentPathsAction CloudDirectory ListObjectParentPaths action.
+ * \value ListObjectParentsAction CloudDirectory ListObjectParents action.
+ * \value ListObjectPoliciesAction CloudDirectory ListObjectPolicies action.
+ * \value ListOutgoingTypedLinksAction CloudDirectory ListOutgoingTypedLinks action.
+ * \value ListPolicyAttachmentsAction CloudDirectory ListPolicyAttachments action.
+ * \value ListPublishedSchemaArnsAction CloudDirectory ListPublishedSchemaArns action.
+ * \value ListTagsForResourceAction CloudDirectory ListTagsForResource action.
+ * \value ListTypedLinkFacetAttributesAction CloudDirectory ListTypedLinkFacetAttributes action.
+ * \value ListTypedLinkFacetNamesAction CloudDirectory ListTypedLinkFacetNames action.
+ * \value LookupPolicyAction CloudDirectory LookupPolicy action.
+ * \value PublishSchemaAction CloudDirectory PublishSchema action.
+ * \value PutSchemaFromJsonAction CloudDirectory PutSchemaFromJson action.
+ * \value RemoveFacetFromObjectAction CloudDirectory RemoveFacetFromObject action.
+ * \value TagResourceAction CloudDirectory TagResource action.
+ * \value UntagResourceAction CloudDirectory UntagResource action.
+ * \value UpdateFacetAction CloudDirectory UpdateFacet action.
+ * \value UpdateObjectAttributesAction CloudDirectory UpdateObjectAttributes action.
+ * \value UpdateSchemaAction CloudDirectory UpdateSchema action.
+ * \value UpdateTypedLinkFacetAction CloudDirectory UpdateTypedLinkFacet action.
+ * \value UpgradeAppliedSchemaAction CloudDirectory UpgradeAppliedSchema action.
+ * \value UpgradePublishedSchemaAction CloudDirectory UpgradePublishedSchema action.
+ */
+
+/*!
+ * Constructs a[n] CloudDirectoryRequest object for CloudDirectory \a action.
  */
 CloudDirectoryRequest::CloudDirectoryRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new CloudDirectoryRequestPrivate(action, this))
@@ -43,9 +111,7 @@ CloudDirectoryRequest::CloudDirectoryRequest(const Action action)
 }
 
 /*!
- * @brief  Constructs a new CloudDirectoryRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CloudDirectoryRequest::CloudDirectoryRequest(const CloudDirectoryRequest &other)
     : QtAws::Core::AwsAbstractRequest(new CloudDirectoryRequestPrivate(*other.d_func(), this))
@@ -54,13 +120,7 @@ CloudDirectoryRequest::CloudDirectoryRequest(const CloudDirectoryRequest &other)
 }
 
 /*!
- * @brief  Assignment operator.
- *
- * Assigns \a other to \c this.
- *
- * @param  other  Instance to copy.
- *
- * @return  A reference to \c this.
+ * Sets the CloudDirectoryRequest object to be equal to \a other.
  */
 CloudDirectoryRequest& CloudDirectoryRequest::operator=(const CloudDirectoryRequest &other)
 {
@@ -72,14 +132,10 @@ CloudDirectoryRequest& CloudDirectoryRequest::operator=(const CloudDirectoryRequ
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CloudDirectoryRequest object.
+ * Constructs aa CloudDirectoryRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from CloudDirectoryRequestPrivate.
- *
- * @param  d  Pointer to private data (aka D-Pointer).
  */
 CloudDirectoryRequest::CloudDirectoryRequest(CloudDirectoryRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
@@ -87,7 +143,7 @@ CloudDirectoryRequest::CloudDirectoryRequest(CloudDirectoryRequestPrivate * cons
 }
 
 /*!
- * \brief Returns the CloudDirectory action to be performed by this request.
+ * Returns the CloudDirectory action to be performed by this request.
  */
 CloudDirectoryRequest::Action CloudDirectoryRequest::action() const
 {
@@ -96,7 +152,7 @@ CloudDirectoryRequest::Action CloudDirectoryRequest::action() const
 }
 
 /*!
- * \brief Returns the name of the CloudDirectory action to be performed by this request.
+ * Returns the name of the CloudDirectory action to be performed by this request.
  */
 QString CloudDirectoryRequest::actionString() const
 {
@@ -104,7 +160,7 @@ QString CloudDirectoryRequest::actionString() const
 }
 
 /*!
- * \brief Returns the CloudDirectory API version implemented by this request.
+ * Returns the CloudDirectory API version implemented by this request.
  */
 QString CloudDirectoryRequest::apiVersion() const
 {
@@ -113,7 +169,7 @@ QString CloudDirectoryRequest::apiVersion() const
 }
 
 /*!
- * @brief Set the CloudDirectory action to be performed by this request to \a action.
+ * Sets the CloudDirectory action to be performed by this request to \a action.
  */
 void CloudDirectoryRequest::setAction(const Action action)
 {
@@ -122,7 +178,7 @@ void CloudDirectoryRequest::setAction(const Action action)
 }
 
 /*!
- * Set the CloudDirectory API version to include in this request to \a version.
+ * Sets the CloudDirectory API version to include in this request to \a version.
  */
 void CloudDirectoryRequest::setApiVersion(const QString &version)
 {
@@ -131,7 +187,7 @@ void CloudDirectoryRequest::setApiVersion(const QString &version)
 }
 
 /*!
- * \brief Returns \c true if this request is the same as \a other.
+ * Returns \c true if this request is equal to \a other; \c false otherwise.
  *
  * Note, most derived *Request classes do not need to provider their own
  * implementations of this function, since most such request classes rely on
@@ -146,8 +202,8 @@ bool CloudDirectoryRequest::operator==(const CloudDirectoryRequest &other) const
             (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
-/*!
- * @brief  Check if \a queueName is a valid CloudDirectory queue name.
+/*
+ * Returns \c tue if \a queueName is a valid CloudDirectory queue name.
  *
  * @par From CloudDirectory FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
@@ -166,9 +222,8 @@ bool CloudDirectoryRequest::operator==(const CloudDirectoryRequest &other) const
 }*/
 
 /*!
- * \brief Removes the a \a name parameter from this request.
- *
- * Returns the count of paramters removed (typically \c 0 or \c 1).
+ * Removes the a \a name parameter from the request, then returns the number of
+ * paramters removed (typically \c 0 or \c 1).
  */
 int CloudDirectoryRequest::clearParameter(const QString &name)
 {
@@ -177,7 +232,7 @@ int CloudDirectoryRequest::clearParameter(const QString &name)
 }
 
 /*!
- * \brief Removes all parameters from this request.
+ * Removes all parameters from the request.
  */
 void CloudDirectoryRequest::clearParameters()
 {
@@ -186,7 +241,7 @@ void CloudDirectoryRequest::clearParameters()
 }
 
 /*!
- * \brief Returns the value of the \n name pararemter if set, otherwise \a defaultValue.
+ * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
 QVariant CloudDirectoryRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
@@ -195,7 +250,7 @@ QVariant CloudDirectoryRequest::parameter(const QString &name, const QVariant &d
 }
 
 /*!
- * \brief Returns a map of parameters included in this request.
+ * Returns the parameters included in this request.
  */
 const QVariantMap &CloudDirectoryRequest::parameters() const
 {
@@ -204,7 +259,7 @@ const QVariantMap &CloudDirectoryRequest::parameters() const
 }
 
 /*!
- * \brief Sets the \a name parameter to \a value.
+ * Sets the \a name parameter to \a value.
  */
 void CloudDirectoryRequest::setParameter(const QString &name, const QVariant &value)
 {
@@ -213,9 +268,8 @@ void CloudDirectoryRequest::setParameter(const QString &name, const QVariant &va
 }
 
 /*!
- * \brief Sets the map of paramters for this request to \a parameters.
- *
- * Any request parameters set previously will be discarded.
+ * Sets the paramters for this request to \a parameters. Any request parameters
+ * set previously will be discarded.
  */
 void CloudDirectoryRequest::setParameters(const QVariantMap &parameters)
 {
@@ -224,11 +278,12 @@ void CloudDirectoryRequest::setParameters(const QVariantMap &parameters)
 }
 
 /*!
- * \brief Returns a network request for this CloudDirectory request using the given \a endpoint.
+ * Returns a network request for the CloudDirectory request using the given
+ * \a endpoint.
  *
- * This CloudDirectory implementation builds request URLs by combining the common query
- * parameters (such as Action and Version), with any that have been added (via
- * setParameter) by child classes.
+ * This CloudDirectory implementation builds request URLs by combining the
+ * common query parameters (such as Action and Version), with any that have
+ * been added (via setParameter) by child classes.
  */
 QNetworkRequest CloudDirectoryRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -239,17 +294,16 @@ QNetworkRequest CloudDirectoryRequest::unsignedRequest(const QUrl &endpoint) con
 }
 
 /*!
+ * \class QtAws::CloudDirectory::CloudDirectoryRequestPrivate
+ * \brief The CloudDirectoryRequestPrivate class provides private implementation for CloudDirectoryRequest.
  * \internal
  *
- * \class  CloudDirectoryRequestPrivate
- *
- * \brief  Private implementation for CloudDirectoryRequest.
+ * \inmodule QtAwsCloudDirectory
  */
 
 /*!
- * \internal
- *
- * \brief Constructs a new CloudDirectoryRequestPrivate object.
+ * Constructs a CloudDirectoryRequestPrivate object for CloudDirectory \a action with,
+ * public implementation \a q.
  */
 CloudDirectoryRequestPrivate::CloudDirectoryRequestPrivate(const CloudDirectoryRequest::Action action, CloudDirectoryRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
@@ -258,9 +312,7 @@ CloudDirectoryRequestPrivate::CloudDirectoryRequestPrivate(const CloudDirectoryR
 }
 
 /*!
- * \internal
- *
- * \brief Constructs a new CloudDirectoryRequestPrivate object, copying an existing one.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
@@ -276,15 +328,12 @@ CloudDirectoryRequestPrivate::CloudDirectoryRequestPrivate(const CloudDirectoryR
 }
 
 /*!
- * \internal
- *
- * \brief Returns a string representing \a action.
+ * Returns a string represention of \a action, or a null string if \a action is
+ * invalid.
  *
  * This function converts CloudDirectoryRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the CloudDirectory service's Action
  * query parameters.
- *
- * @return A string representing \a action, or a null string if \a action is invalid.
  */
 QString CloudDirectoryRequestPrivate::toString(const CloudDirectoryRequest::Action &action)
 {

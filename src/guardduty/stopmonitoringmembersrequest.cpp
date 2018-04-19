@@ -27,19 +27,16 @@ namespace GuardDuty {
 
 /*!
  * \class QtAws::GuardDuty::StopMonitoringMembersRequest
- *
  * \brief The StopMonitoringMembersRequest class provides an interface for GuardDuty StopMonitoringMembers requests.
  *
- * \ingroup GuardDuty
+ * \inmodule QtAwsGuardDuty
  *
  *
  * \sa GuardDutyClient::stopMonitoringMembers
  */
 
 /*!
- * @brief  Constructs a new StopMonitoringMembersRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 StopMonitoringMembersRequest::StopMonitoringMembersRequest(const StopMonitoringMembersRequest &other)
     : GuardDutyRequest(new StopMonitoringMembersRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ StopMonitoringMembersRequest::StopMonitoringMembersRequest(const StopMonitoringM
 }
 
 /*!
- * @brief  Constructs a new StopMonitoringMembersRequest object.
+ * Constructs a StopMonitoringMembersRequest object.
  */
 StopMonitoringMembersRequest::StopMonitoringMembersRequest()
     : GuardDutyRequest(new StopMonitoringMembersRequestPrivate(GuardDutyRequest::StopMonitoringMembersAction, this))
@@ -66,14 +63,9 @@ bool StopMonitoringMembersRequest::isValid() const
 
 
 /*!
- * @brief  Construct an StopMonitoringMembersResponse object.
+ * Returns a StopMonitoringMembersResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An StopMonitoringMembersResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GuardDutyClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * StopMonitoringMembersRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * StopMonitoringMembersRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::GuardDuty::StopMonitoringMembersRequestPrivate
+ * \brief The StopMonitoringMembersRequestPrivate class provides private implementation for StopMonitoringMembersRequest.
+ * \internal
  *
- * @class  StopMonitoringMembersRequestPrivate
- *
- * @brief  Private implementation for StopMonitoringMembersRequest.
+ * \inmodule QtAwsGuardDuty
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new StopMonitoringMembersRequestPrivate object.
- *
- * @param  action  GuardDuty action being performed.
- * @param  q       Pointer to this object's public StopMonitoringMembersRequest instance.
+ * Constructs a StopMonitoringMembersRequestPrivate object for GuardDuty \a action with,
+ * public implementation \a q.
  */
 StopMonitoringMembersRequestPrivate::StopMonitoringMembersRequestPrivate(
     const GuardDutyRequest::Action action, StopMonitoringMembersRequest * const q)
@@ -104,15 +93,10 @@ StopMonitoringMembersRequestPrivate::StopMonitoringMembersRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StopMonitoringMembersRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the StopMonitoringMembersRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public StopMonitoringMembersRequest instance.
  */
 StopMonitoringMembersRequestPrivate::StopMonitoringMembersRequestPrivate(
     const StopMonitoringMembersRequestPrivate &other, StopMonitoringMembersRequest * const q)

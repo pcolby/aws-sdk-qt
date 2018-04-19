@@ -27,10 +27,9 @@ namespace DynamoDB {
 
 /*!
  * \class QtAws::DynamoDB::UpdateTimeToLiveRequest
- *
  * \brief The UpdateTimeToLiveRequest class provides an interface for DynamoDB UpdateTimeToLive requests.
  *
- * \ingroup DynamoDB
+ * \inmodule QtAwsDynamoDB
  *
  *  <fullname>Amazon DynamoDB</fullname>
  * 
@@ -56,9 +55,7 @@ namespace DynamoDB {
  */
 
 /*!
- * @brief  Constructs a new UpdateTimeToLiveRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateTimeToLiveRequest::UpdateTimeToLiveRequest(const UpdateTimeToLiveRequest &other)
     : DynamoDBRequest(new UpdateTimeToLiveRequestPrivate(*other.d_func(), this))
@@ -67,7 +64,7 @@ UpdateTimeToLiveRequest::UpdateTimeToLiveRequest(const UpdateTimeToLiveRequest &
 }
 
 /*!
- * @brief  Constructs a new UpdateTimeToLiveRequest object.
+ * Constructs a UpdateTimeToLiveRequest object.
  */
 UpdateTimeToLiveRequest::UpdateTimeToLiveRequest()
     : DynamoDBRequest(new UpdateTimeToLiveRequestPrivate(DynamoDBRequest::UpdateTimeToLiveAction, this))
@@ -85,14 +82,9 @@ bool UpdateTimeToLiveRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateTimeToLiveResponse object.
+ * Returns a UpdateTimeToLiveResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateTimeToLiveResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DynamoDBClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateTimeToLiveRequest::response(QNetworkReply * const reply) const
 {
@@ -100,20 +92,17 @@ QtAws::Core::AwsAbstractResponse * UpdateTimeToLiveRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::DynamoDB::UpdateTimeToLiveRequestPrivate
+ * \brief The UpdateTimeToLiveRequestPrivate class provides private implementation for UpdateTimeToLiveRequest.
+ * \internal
  *
- * @class  UpdateTimeToLiveRequestPrivate
- *
- * @brief  Private implementation for UpdateTimeToLiveRequest.
+ * \inmodule QtAwsDynamoDB
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateTimeToLiveRequestPrivate object.
- *
- * @param  action  DynamoDB action being performed.
- * @param  q       Pointer to this object's public UpdateTimeToLiveRequest instance.
+ * Constructs a UpdateTimeToLiveRequestPrivate object for DynamoDB \a action with,
+ * public implementation \a q.
  */
 UpdateTimeToLiveRequestPrivate::UpdateTimeToLiveRequestPrivate(
     const DynamoDBRequest::Action action, UpdateTimeToLiveRequest * const q)
@@ -123,15 +112,10 @@ UpdateTimeToLiveRequestPrivate::UpdateTimeToLiveRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateTimeToLiveRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateTimeToLiveRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateTimeToLiveRequest instance.
  */
 UpdateTimeToLiveRequestPrivate::UpdateTimeToLiveRequestPrivate(
     const UpdateTimeToLiveRequestPrivate &other, UpdateTimeToLiveRequest * const q)

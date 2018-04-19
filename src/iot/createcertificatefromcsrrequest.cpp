@@ -27,10 +27,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::CreateCertificateFromCsrRequest
- *
  * \brief The CreateCertificateFromCsrRequest class provides an interface for IoT CreateCertificateFromCsr requests.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -48,9 +47,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new CreateCertificateFromCsrRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateCertificateFromCsrRequest::CreateCertificateFromCsrRequest(const CreateCertificateFromCsrRequest &other)
     : IoTRequest(new CreateCertificateFromCsrRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ CreateCertificateFromCsrRequest::CreateCertificateFromCsrRequest(const CreateCer
 }
 
 /*!
- * @brief  Constructs a new CreateCertificateFromCsrRequest object.
+ * Constructs a CreateCertificateFromCsrRequest object.
  */
 CreateCertificateFromCsrRequest::CreateCertificateFromCsrRequest()
     : IoTRequest(new CreateCertificateFromCsrRequestPrivate(IoTRequest::CreateCertificateFromCsrAction, this))
@@ -77,14 +74,9 @@ bool CreateCertificateFromCsrRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateCertificateFromCsrResponse object.
+ * Returns a CreateCertificateFromCsrResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateCertificateFromCsrResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IoTClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateCertificateFromCsrRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * CreateCertificateFromCsrRequest::response(QNe
 }
 
 /*!
- * @internal
+ * \class QtAws::IoT::CreateCertificateFromCsrRequestPrivate
+ * \brief The CreateCertificateFromCsrRequestPrivate class provides private implementation for CreateCertificateFromCsrRequest.
+ * \internal
  *
- * @class  CreateCertificateFromCsrRequestPrivate
- *
- * @brief  Private implementation for CreateCertificateFromCsrRequest.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateCertificateFromCsrRequestPrivate object.
- *
- * @param  action  IoT action being performed.
- * @param  q       Pointer to this object's public CreateCertificateFromCsrRequest instance.
+ * Constructs a CreateCertificateFromCsrRequestPrivate object for IoT \a action with,
+ * public implementation \a q.
  */
 CreateCertificateFromCsrRequestPrivate::CreateCertificateFromCsrRequestPrivate(
     const IoTRequest::Action action, CreateCertificateFromCsrRequest * const q)
@@ -115,15 +104,10 @@ CreateCertificateFromCsrRequestPrivate::CreateCertificateFromCsrRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateCertificateFromCsrRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateCertificateFromCsrRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateCertificateFromCsrRequest instance.
  */
 CreateCertificateFromCsrRequestPrivate::CreateCertificateFromCsrRequestPrivate(
     const CreateCertificateFromCsrRequestPrivate &other, CreateCertificateFromCsrRequest * const q)

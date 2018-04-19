@@ -27,10 +27,9 @@ namespace LexModelBuildingService {
 
 /*!
  * \class QtAws::LexModelBuildingService::GetBotChannelAssociationsRequest
- *
  * \brief The GetBotChannelAssociationsRequest class provides an interface for LexModelBuildingService GetBotChannelAssociations requests.
  *
- * \ingroup LexModelBuildingService
+ * \inmodule QtAwsLexModelBuildingService
  *
  *  <fullname>Amazon Lex Build-Time Actions</fullname>
  * 
@@ -41,9 +40,7 @@ namespace LexModelBuildingService {
  */
 
 /*!
- * @brief  Constructs a new GetBotChannelAssociationsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetBotChannelAssociationsRequest::GetBotChannelAssociationsRequest(const GetBotChannelAssociationsRequest &other)
     : LexModelBuildingServiceRequest(new GetBotChannelAssociationsRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ GetBotChannelAssociationsRequest::GetBotChannelAssociationsRequest(const GetBotC
 }
 
 /*!
- * @brief  Constructs a new GetBotChannelAssociationsRequest object.
+ * Constructs a GetBotChannelAssociationsRequest object.
  */
 GetBotChannelAssociationsRequest::GetBotChannelAssociationsRequest()
     : LexModelBuildingServiceRequest(new GetBotChannelAssociationsRequestPrivate(LexModelBuildingServiceRequest::GetBotChannelAssociationsAction, this))
@@ -70,14 +67,9 @@ bool GetBotChannelAssociationsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetBotChannelAssociationsResponse object.
+ * Returns a GetBotChannelAssociationsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetBotChannelAssociationsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  LexModelBuildingServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetBotChannelAssociationsRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * GetBotChannelAssociationsRequest::response(QN
 }
 
 /*!
- * @internal
+ * \class QtAws::LexModelBuildingService::GetBotChannelAssociationsRequestPrivate
+ * \brief The GetBotChannelAssociationsRequestPrivate class provides private implementation for GetBotChannelAssociationsRequest.
+ * \internal
  *
- * @class  GetBotChannelAssociationsRequestPrivate
- *
- * @brief  Private implementation for GetBotChannelAssociationsRequest.
+ * \inmodule QtAwsLexModelBuildingService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetBotChannelAssociationsRequestPrivate object.
- *
- * @param  action  LexModelBuildingService action being performed.
- * @param  q       Pointer to this object's public GetBotChannelAssociationsRequest instance.
+ * Constructs a GetBotChannelAssociationsRequestPrivate object for LexModelBuildingService \a action with,
+ * public implementation \a q.
  */
 GetBotChannelAssociationsRequestPrivate::GetBotChannelAssociationsRequestPrivate(
     const LexModelBuildingServiceRequest::Action action, GetBotChannelAssociationsRequest * const q)
@@ -108,15 +97,10 @@ GetBotChannelAssociationsRequestPrivate::GetBotChannelAssociationsRequestPrivate
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetBotChannelAssociationsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetBotChannelAssociationsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetBotChannelAssociationsRequest instance.
  */
 GetBotChannelAssociationsRequestPrivate::GetBotChannelAssociationsRequestPrivate(
     const GetBotChannelAssociationsRequestPrivate &other, GetBotChannelAssociationsRequest * const q)

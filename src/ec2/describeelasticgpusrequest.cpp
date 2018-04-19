@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DescribeElasticGpusRequest
- *
  * \brief The DescribeElasticGpusRequest class provides an interface for EC2 DescribeElasticGpus requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DescribeElasticGpusRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeElasticGpusRequest::DescribeElasticGpusRequest(const DescribeElasticGpusRequest &other)
     : EC2Request(new DescribeElasticGpusRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ DescribeElasticGpusRequest::DescribeElasticGpusRequest(const DescribeElasticGpus
 }
 
 /*!
- * @brief  Constructs a new DescribeElasticGpusRequest object.
+ * Constructs a DescribeElasticGpusRequest object.
  */
 DescribeElasticGpusRequest::DescribeElasticGpusRequest()
     : EC2Request(new DescribeElasticGpusRequestPrivate(EC2Request::DescribeElasticGpusAction, this))
@@ -70,14 +67,9 @@ bool DescribeElasticGpusRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeElasticGpusResponse object.
+ * Returns a DescribeElasticGpusResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeElasticGpusResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeElasticGpusRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * DescribeElasticGpusRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::DescribeElasticGpusRequestPrivate
+ * \brief The DescribeElasticGpusRequestPrivate class provides private implementation for DescribeElasticGpusRequest.
+ * \internal
  *
- * @class  DescribeElasticGpusRequestPrivate
- *
- * @brief  Private implementation for DescribeElasticGpusRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeElasticGpusRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public DescribeElasticGpusRequest instance.
+ * Constructs a DescribeElasticGpusRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 DescribeElasticGpusRequestPrivate::DescribeElasticGpusRequestPrivate(
     const EC2Request::Action action, DescribeElasticGpusRequest * const q)
@@ -108,15 +97,10 @@ DescribeElasticGpusRequestPrivate::DescribeElasticGpusRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeElasticGpusRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeElasticGpusRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeElasticGpusRequest instance.
  */
 DescribeElasticGpusRequestPrivate::DescribeElasticGpusRequestPrivate(
     const DescribeElasticGpusRequestPrivate &other, DescribeElasticGpusRequest * const q)

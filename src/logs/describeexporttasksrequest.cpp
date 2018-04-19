@@ -27,10 +27,9 @@ namespace CloudWatchLogs {
 
 /*!
  * \class QtAws::CloudWatchLogs::DescribeExportTasksRequest
- *
  * \brief The DescribeExportTasksRequest class provides an interface for CloudWatchLogs DescribeExportTasks requests.
  *
- * \ingroup CloudWatchLogs
+ * \inmodule QtAwsCloudWatchLogs
  *
  *  You can use Amazon CloudWatch Logs to monitor, store, and access your log files from Amazon EC2 instances, AWS
  *  CloudTrail, or other sources. You can then retrieve the associated log data from CloudWatch Logs using the CloudWatch
@@ -66,9 +65,7 @@ namespace CloudWatchLogs {
  */
 
 /*!
- * @brief  Constructs a new DescribeExportTasksRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeExportTasksRequest::DescribeExportTasksRequest(const DescribeExportTasksRequest &other)
     : CloudWatchLogsRequest(new DescribeExportTasksRequestPrivate(*other.d_func(), this))
@@ -77,7 +74,7 @@ DescribeExportTasksRequest::DescribeExportTasksRequest(const DescribeExportTasks
 }
 
 /*!
- * @brief  Constructs a new DescribeExportTasksRequest object.
+ * Constructs a DescribeExportTasksRequest object.
  */
 DescribeExportTasksRequest::DescribeExportTasksRequest()
     : CloudWatchLogsRequest(new DescribeExportTasksRequestPrivate(CloudWatchLogsRequest::DescribeExportTasksAction, this))
@@ -95,14 +92,9 @@ bool DescribeExportTasksRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeExportTasksResponse object.
+ * Returns a DescribeExportTasksResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeExportTasksResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudWatchLogsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeExportTasksRequest::response(QNetworkReply * const reply) const
 {
@@ -110,20 +102,17 @@ QtAws::Core::AwsAbstractResponse * DescribeExportTasksRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudWatchLogs::DescribeExportTasksRequestPrivate
+ * \brief The DescribeExportTasksRequestPrivate class provides private implementation for DescribeExportTasksRequest.
+ * \internal
  *
- * @class  DescribeExportTasksRequestPrivate
- *
- * @brief  Private implementation for DescribeExportTasksRequest.
+ * \inmodule QtAwsCloudWatchLogs
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeExportTasksRequestPrivate object.
- *
- * @param  action  CloudWatchLogs action being performed.
- * @param  q       Pointer to this object's public DescribeExportTasksRequest instance.
+ * Constructs a DescribeExportTasksRequestPrivate object for CloudWatchLogs \a action with,
+ * public implementation \a q.
  */
 DescribeExportTasksRequestPrivate::DescribeExportTasksRequestPrivate(
     const CloudWatchLogsRequest::Action action, DescribeExportTasksRequest * const q)
@@ -133,15 +122,10 @@ DescribeExportTasksRequestPrivate::DescribeExportTasksRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeExportTasksRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeExportTasksRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeExportTasksRequest instance.
  */
 DescribeExportTasksRequestPrivate::DescribeExportTasksRequestPrivate(
     const DescribeExportTasksRequestPrivate &other, DescribeExportTasksRequest * const q)

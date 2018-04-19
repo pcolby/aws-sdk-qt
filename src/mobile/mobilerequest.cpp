@@ -25,16 +25,30 @@ namespace Mobile {
 
 /*!
  * \class QtAws::Mobile::MobileRequest
- *
  * \brief The MobileRequest class provides an interface for Mobile requests.
  *
- * \ingroup Mobile
+ * \inmodule QtAwsMobile
  */
 
 /*!
- * @brief  Constructs a new MobileRequest object.
+ * \enum MobileRequest::Action
  *
- * @param  action  The Mobile action to request.
+ * This enum describes the actions that can be performed as Mobile
+ * requests.
+ *
+ * \value CreateProjectAction Mobile CreateProject action.
+ * \value DeleteProjectAction Mobile DeleteProject action.
+ * \value DescribeBundleAction Mobile DescribeBundle action.
+ * \value DescribeProjectAction Mobile DescribeProject action.
+ * \value ExportBundleAction Mobile ExportBundle action.
+ * \value ExportProjectAction Mobile ExportProject action.
+ * \value ListBundlesAction Mobile ListBundles action.
+ * \value ListProjectsAction Mobile ListProjects action.
+ * \value UpdateProjectAction Mobile UpdateProject action.
+ */
+
+/*!
+ * Constructs a[n] MobileRequest object for Mobile \a action.
  */
 MobileRequest::MobileRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new MobileRequestPrivate(action, this))
@@ -43,9 +57,7 @@ MobileRequest::MobileRequest(const Action action)
 }
 
 /*!
- * @brief  Constructs a new MobileRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 MobileRequest::MobileRequest(const MobileRequest &other)
     : QtAws::Core::AwsAbstractRequest(new MobileRequestPrivate(*other.d_func(), this))
@@ -54,13 +66,7 @@ MobileRequest::MobileRequest(const MobileRequest &other)
 }
 
 /*!
- * @brief  Assignment operator.
- *
- * Assigns \a other to \c this.
- *
- * @param  other  Instance to copy.
- *
- * @return  A reference to \c this.
+ * Sets the MobileRequest object to be equal to \a other.
  */
 MobileRequest& MobileRequest::operator=(const MobileRequest &other)
 {
@@ -72,14 +78,10 @@ MobileRequest& MobileRequest::operator=(const MobileRequest &other)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new MobileRequest object.
+ * Constructs aa MobileRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from MobileRequestPrivate.
- *
- * @param  d  Pointer to private data (aka D-Pointer).
  */
 MobileRequest::MobileRequest(MobileRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
@@ -87,7 +89,7 @@ MobileRequest::MobileRequest(MobileRequestPrivate * const d) : QtAws::Core::AwsA
 }
 
 /*!
- * \brief Returns the Mobile action to be performed by this request.
+ * Returns the Mobile action to be performed by this request.
  */
 MobileRequest::Action MobileRequest::action() const
 {
@@ -96,7 +98,7 @@ MobileRequest::Action MobileRequest::action() const
 }
 
 /*!
- * \brief Returns the name of the Mobile action to be performed by this request.
+ * Returns the name of the Mobile action to be performed by this request.
  */
 QString MobileRequest::actionString() const
 {
@@ -104,7 +106,7 @@ QString MobileRequest::actionString() const
 }
 
 /*!
- * \brief Returns the Mobile API version implemented by this request.
+ * Returns the Mobile API version implemented by this request.
  */
 QString MobileRequest::apiVersion() const
 {
@@ -113,7 +115,7 @@ QString MobileRequest::apiVersion() const
 }
 
 /*!
- * @brief Set the Mobile action to be performed by this request to \a action.
+ * Sets the Mobile action to be performed by this request to \a action.
  */
 void MobileRequest::setAction(const Action action)
 {
@@ -122,7 +124,7 @@ void MobileRequest::setAction(const Action action)
 }
 
 /*!
- * Set the Mobile API version to include in this request to \a version.
+ * Sets the Mobile API version to include in this request to \a version.
  */
 void MobileRequest::setApiVersion(const QString &version)
 {
@@ -131,7 +133,7 @@ void MobileRequest::setApiVersion(const QString &version)
 }
 
 /*!
- * \brief Returns \c true if this request is the same as \a other.
+ * Returns \c true if this request is equal to \a other; \c false otherwise.
  *
  * Note, most derived *Request classes do not need to provider their own
  * implementations of this function, since most such request classes rely on
@@ -146,8 +148,8 @@ bool MobileRequest::operator==(const MobileRequest &other) const
             (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
-/*!
- * @brief  Check if \a queueName is a valid Mobile queue name.
+/*
+ * Returns \c tue if \a queueName is a valid Mobile queue name.
  *
  * @par From Mobile FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
@@ -166,9 +168,8 @@ bool MobileRequest::operator==(const MobileRequest &other) const
 }*/
 
 /*!
- * \brief Removes the a \a name parameter from this request.
- *
- * Returns the count of paramters removed (typically \c 0 or \c 1).
+ * Removes the a \a name parameter from the request, then returns the number of
+ * paramters removed (typically \c 0 or \c 1).
  */
 int MobileRequest::clearParameter(const QString &name)
 {
@@ -177,7 +178,7 @@ int MobileRequest::clearParameter(const QString &name)
 }
 
 /*!
- * \brief Removes all parameters from this request.
+ * Removes all parameters from the request.
  */
 void MobileRequest::clearParameters()
 {
@@ -186,7 +187,7 @@ void MobileRequest::clearParameters()
 }
 
 /*!
- * \brief Returns the value of the \n name pararemter if set, otherwise \a defaultValue.
+ * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
 QVariant MobileRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
@@ -195,7 +196,7 @@ QVariant MobileRequest::parameter(const QString &name, const QVariant &defaultVa
 }
 
 /*!
- * \brief Returns a map of parameters included in this request.
+ * Returns the parameters included in this request.
  */
 const QVariantMap &MobileRequest::parameters() const
 {
@@ -204,7 +205,7 @@ const QVariantMap &MobileRequest::parameters() const
 }
 
 /*!
- * \brief Sets the \a name parameter to \a value.
+ * Sets the \a name parameter to \a value.
  */
 void MobileRequest::setParameter(const QString &name, const QVariant &value)
 {
@@ -213,9 +214,8 @@ void MobileRequest::setParameter(const QString &name, const QVariant &value)
 }
 
 /*!
- * \brief Sets the map of paramters for this request to \a parameters.
- *
- * Any request parameters set previously will be discarded.
+ * Sets the paramters for this request to \a parameters. Any request parameters
+ * set previously will be discarded.
  */
 void MobileRequest::setParameters(const QVariantMap &parameters)
 {
@@ -224,11 +224,12 @@ void MobileRequest::setParameters(const QVariantMap &parameters)
 }
 
 /*!
- * \brief Returns a network request for this Mobile request using the given \a endpoint.
+ * Returns a network request for the Mobile request using the given
+ * \a endpoint.
  *
- * This Mobile implementation builds request URLs by combining the common query
- * parameters (such as Action and Version), with any that have been added (via
- * setParameter) by child classes.
+ * This Mobile implementation builds request URLs by combining the
+ * common query parameters (such as Action and Version), with any that have
+ * been added (via setParameter) by child classes.
  */
 QNetworkRequest MobileRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -239,17 +240,16 @@ QNetworkRequest MobileRequest::unsignedRequest(const QUrl &endpoint) const
 }
 
 /*!
+ * \class QtAws::Mobile::MobileRequestPrivate
+ * \brief The MobileRequestPrivate class provides private implementation for MobileRequest.
  * \internal
  *
- * \class  MobileRequestPrivate
- *
- * \brief  Private implementation for MobileRequest.
+ * \inmodule QtAwsMobile
  */
 
 /*!
- * \internal
- *
- * \brief Constructs a new MobileRequestPrivate object.
+ * Constructs a MobileRequestPrivate object for Mobile \a action with,
+ * public implementation \a q.
  */
 MobileRequestPrivate::MobileRequestPrivate(const MobileRequest::Action action, MobileRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
@@ -258,9 +258,7 @@ MobileRequestPrivate::MobileRequestPrivate(const MobileRequest::Action action, M
 }
 
 /*!
- * \internal
- *
- * \brief Constructs a new MobileRequestPrivate object, copying an existing one.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
@@ -276,15 +274,12 @@ MobileRequestPrivate::MobileRequestPrivate(const MobileRequestPrivate &other,
 }
 
 /*!
- * \internal
- *
- * \brief Returns a string representing \a action.
+ * Returns a string represention of \a action, or a null string if \a action is
+ * invalid.
  *
  * This function converts MobileRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the Mobile service's Action
  * query parameters.
- *
- * @return A string representing \a action, or a null string if \a action is invalid.
  */
 QString MobileRequestPrivate::toString(const MobileRequest::Action &action)
 {

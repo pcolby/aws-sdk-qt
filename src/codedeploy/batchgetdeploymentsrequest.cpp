@@ -27,10 +27,9 @@ namespace CodeDeploy {
 
 /*!
  * \class QtAws::CodeDeploy::BatchGetDeploymentsRequest
- *
  * \brief The BatchGetDeploymentsRequest class provides an interface for CodeDeploy BatchGetDeployments requests.
  *
- * \ingroup CodeDeploy
+ * \inmodule QtAwsCodeDeploy
  *
  *  <fullname>AWS CodeDeploy</fullname>
  * 
@@ -118,9 +117,7 @@ namespace CodeDeploy {
  */
 
 /*!
- * @brief  Constructs a new BatchGetDeploymentsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 BatchGetDeploymentsRequest::BatchGetDeploymentsRequest(const BatchGetDeploymentsRequest &other)
     : CodeDeployRequest(new BatchGetDeploymentsRequestPrivate(*other.d_func(), this))
@@ -129,7 +126,7 @@ BatchGetDeploymentsRequest::BatchGetDeploymentsRequest(const BatchGetDeployments
 }
 
 /*!
- * @brief  Constructs a new BatchGetDeploymentsRequest object.
+ * Constructs a BatchGetDeploymentsRequest object.
  */
 BatchGetDeploymentsRequest::BatchGetDeploymentsRequest()
     : CodeDeployRequest(new BatchGetDeploymentsRequestPrivate(CodeDeployRequest::BatchGetDeploymentsAction, this))
@@ -147,14 +144,9 @@ bool BatchGetDeploymentsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an BatchGetDeploymentsResponse object.
+ * Returns a BatchGetDeploymentsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An BatchGetDeploymentsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CodeDeployClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * BatchGetDeploymentsRequest::response(QNetworkReply * const reply) const
 {
@@ -162,20 +154,17 @@ QtAws::Core::AwsAbstractResponse * BatchGetDeploymentsRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::CodeDeploy::BatchGetDeploymentsRequestPrivate
+ * \brief The BatchGetDeploymentsRequestPrivate class provides private implementation for BatchGetDeploymentsRequest.
+ * \internal
  *
- * @class  BatchGetDeploymentsRequestPrivate
- *
- * @brief  Private implementation for BatchGetDeploymentsRequest.
+ * \inmodule QtAwsCodeDeploy
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new BatchGetDeploymentsRequestPrivate object.
- *
- * @param  action  CodeDeploy action being performed.
- * @param  q       Pointer to this object's public BatchGetDeploymentsRequest instance.
+ * Constructs a BatchGetDeploymentsRequestPrivate object for CodeDeploy \a action with,
+ * public implementation \a q.
  */
 BatchGetDeploymentsRequestPrivate::BatchGetDeploymentsRequestPrivate(
     const CodeDeployRequest::Action action, BatchGetDeploymentsRequest * const q)
@@ -185,15 +174,10 @@ BatchGetDeploymentsRequestPrivate::BatchGetDeploymentsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new BatchGetDeploymentsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the BatchGetDeploymentsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public BatchGetDeploymentsRequest instance.
  */
 BatchGetDeploymentsRequestPrivate::BatchGetDeploymentsRequestPrivate(
     const BatchGetDeploymentsRequestPrivate &other, BatchGetDeploymentsRequest * const q)

@@ -27,10 +27,9 @@ namespace DynamoDB {
 
 /*!
  * \class QtAws::DynamoDB::BatchWriteItemRequest
- *
  * \brief The BatchWriteItemRequest class provides an interface for DynamoDB BatchWriteItem requests.
  *
- * \ingroup DynamoDB
+ * \inmodule QtAwsDynamoDB
  *
  *  <fullname>Amazon DynamoDB</fullname>
  * 
@@ -56,9 +55,7 @@ namespace DynamoDB {
  */
 
 /*!
- * @brief  Constructs a new BatchWriteItemRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 BatchWriteItemRequest::BatchWriteItemRequest(const BatchWriteItemRequest &other)
     : DynamoDBRequest(new BatchWriteItemRequestPrivate(*other.d_func(), this))
@@ -67,7 +64,7 @@ BatchWriteItemRequest::BatchWriteItemRequest(const BatchWriteItemRequest &other)
 }
 
 /*!
- * @brief  Constructs a new BatchWriteItemRequest object.
+ * Constructs a BatchWriteItemRequest object.
  */
 BatchWriteItemRequest::BatchWriteItemRequest()
     : DynamoDBRequest(new BatchWriteItemRequestPrivate(DynamoDBRequest::BatchWriteItemAction, this))
@@ -85,14 +82,9 @@ bool BatchWriteItemRequest::isValid() const
 
 
 /*!
- * @brief  Construct an BatchWriteItemResponse object.
+ * Returns a BatchWriteItemResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An BatchWriteItemResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DynamoDBClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * BatchWriteItemRequest::response(QNetworkReply * const reply) const
 {
@@ -100,20 +92,17 @@ QtAws::Core::AwsAbstractResponse * BatchWriteItemRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::DynamoDB::BatchWriteItemRequestPrivate
+ * \brief The BatchWriteItemRequestPrivate class provides private implementation for BatchWriteItemRequest.
+ * \internal
  *
- * @class  BatchWriteItemRequestPrivate
- *
- * @brief  Private implementation for BatchWriteItemRequest.
+ * \inmodule QtAwsDynamoDB
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new BatchWriteItemRequestPrivate object.
- *
- * @param  action  DynamoDB action being performed.
- * @param  q       Pointer to this object's public BatchWriteItemRequest instance.
+ * Constructs a BatchWriteItemRequestPrivate object for DynamoDB \a action with,
+ * public implementation \a q.
  */
 BatchWriteItemRequestPrivate::BatchWriteItemRequestPrivate(
     const DynamoDBRequest::Action action, BatchWriteItemRequest * const q)
@@ -123,15 +112,10 @@ BatchWriteItemRequestPrivate::BatchWriteItemRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new BatchWriteItemRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the BatchWriteItemRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public BatchWriteItemRequest instance.
  */
 BatchWriteItemRequestPrivate::BatchWriteItemRequestPrivate(
     const BatchWriteItemRequestPrivate &other, BatchWriteItemRequest * const q)

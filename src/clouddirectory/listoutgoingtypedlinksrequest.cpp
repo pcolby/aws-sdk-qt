@@ -27,10 +27,9 @@ namespace CloudDirectory {
 
 /*!
  * \class QtAws::CloudDirectory::ListOutgoingTypedLinksRequest
- *
  * \brief The ListOutgoingTypedLinksRequest class provides an interface for CloudDirectory ListOutgoingTypedLinks requests.
  *
- * \ingroup CloudDirectory
+ * \inmodule QtAwsCloudDirectory
  *
  *  <fullname>Amazon Cloud Directory</fullname>
  * 
@@ -44,9 +43,7 @@ namespace CloudDirectory {
  */
 
 /*!
- * @brief  Constructs a new ListOutgoingTypedLinksRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListOutgoingTypedLinksRequest::ListOutgoingTypedLinksRequest(const ListOutgoingTypedLinksRequest &other)
     : CloudDirectoryRequest(new ListOutgoingTypedLinksRequestPrivate(*other.d_func(), this))
@@ -55,7 +52,7 @@ ListOutgoingTypedLinksRequest::ListOutgoingTypedLinksRequest(const ListOutgoingT
 }
 
 /*!
- * @brief  Constructs a new ListOutgoingTypedLinksRequest object.
+ * Constructs a ListOutgoingTypedLinksRequest object.
  */
 ListOutgoingTypedLinksRequest::ListOutgoingTypedLinksRequest()
     : CloudDirectoryRequest(new ListOutgoingTypedLinksRequestPrivate(CloudDirectoryRequest::ListOutgoingTypedLinksAction, this))
@@ -73,14 +70,9 @@ bool ListOutgoingTypedLinksRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListOutgoingTypedLinksResponse object.
+ * Returns a ListOutgoingTypedLinksResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListOutgoingTypedLinksResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudDirectoryClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListOutgoingTypedLinksRequest::response(QNetworkReply * const reply) const
 {
@@ -88,20 +80,17 @@ QtAws::Core::AwsAbstractResponse * ListOutgoingTypedLinksRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudDirectory::ListOutgoingTypedLinksRequestPrivate
+ * \brief The ListOutgoingTypedLinksRequestPrivate class provides private implementation for ListOutgoingTypedLinksRequest.
+ * \internal
  *
- * @class  ListOutgoingTypedLinksRequestPrivate
- *
- * @brief  Private implementation for ListOutgoingTypedLinksRequest.
+ * \inmodule QtAwsCloudDirectory
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListOutgoingTypedLinksRequestPrivate object.
- *
- * @param  action  CloudDirectory action being performed.
- * @param  q       Pointer to this object's public ListOutgoingTypedLinksRequest instance.
+ * Constructs a ListOutgoingTypedLinksRequestPrivate object for CloudDirectory \a action with,
+ * public implementation \a q.
  */
 ListOutgoingTypedLinksRequestPrivate::ListOutgoingTypedLinksRequestPrivate(
     const CloudDirectoryRequest::Action action, ListOutgoingTypedLinksRequest * const q)
@@ -111,15 +100,10 @@ ListOutgoingTypedLinksRequestPrivate::ListOutgoingTypedLinksRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListOutgoingTypedLinksRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListOutgoingTypedLinksRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListOutgoingTypedLinksRequest instance.
  */
 ListOutgoingTypedLinksRequestPrivate::ListOutgoingTypedLinksRequestPrivate(
     const ListOutgoingTypedLinksRequestPrivate &other, ListOutgoingTypedLinksRequest * const q)

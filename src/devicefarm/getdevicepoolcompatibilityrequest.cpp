@@ -27,10 +27,9 @@ namespace DeviceFarm {
 
 /*!
  * \class QtAws::DeviceFarm::GetDevicePoolCompatibilityRequest
- *
  * \brief The GetDevicePoolCompatibilityRequest class provides an interface for DeviceFarm GetDevicePoolCompatibility requests.
  *
- * \ingroup DeviceFarm
+ * \inmodule QtAwsDeviceFarm
  *
  *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
  *  phones, tablets, and other devices in the
@@ -39,9 +38,7 @@ namespace DeviceFarm {
  */
 
 /*!
- * @brief  Constructs a new GetDevicePoolCompatibilityRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetDevicePoolCompatibilityRequest::GetDevicePoolCompatibilityRequest(const GetDevicePoolCompatibilityRequest &other)
     : DeviceFarmRequest(new GetDevicePoolCompatibilityRequestPrivate(*other.d_func(), this))
@@ -50,7 +47,7 @@ GetDevicePoolCompatibilityRequest::GetDevicePoolCompatibilityRequest(const GetDe
 }
 
 /*!
- * @brief  Constructs a new GetDevicePoolCompatibilityRequest object.
+ * Constructs a GetDevicePoolCompatibilityRequest object.
  */
 GetDevicePoolCompatibilityRequest::GetDevicePoolCompatibilityRequest()
     : DeviceFarmRequest(new GetDevicePoolCompatibilityRequestPrivate(DeviceFarmRequest::GetDevicePoolCompatibilityAction, this))
@@ -68,14 +65,9 @@ bool GetDevicePoolCompatibilityRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetDevicePoolCompatibilityResponse object.
+ * Returns a GetDevicePoolCompatibilityResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetDevicePoolCompatibilityResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DeviceFarmClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetDevicePoolCompatibilityRequest::response(QNetworkReply * const reply) const
 {
@@ -83,20 +75,17 @@ QtAws::Core::AwsAbstractResponse * GetDevicePoolCompatibilityRequest::response(Q
 }
 
 /*!
- * @internal
+ * \class QtAws::DeviceFarm::GetDevicePoolCompatibilityRequestPrivate
+ * \brief The GetDevicePoolCompatibilityRequestPrivate class provides private implementation for GetDevicePoolCompatibilityRequest.
+ * \internal
  *
- * @class  GetDevicePoolCompatibilityRequestPrivate
- *
- * @brief  Private implementation for GetDevicePoolCompatibilityRequest.
+ * \inmodule QtAwsDeviceFarm
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetDevicePoolCompatibilityRequestPrivate object.
- *
- * @param  action  DeviceFarm action being performed.
- * @param  q       Pointer to this object's public GetDevicePoolCompatibilityRequest instance.
+ * Constructs a GetDevicePoolCompatibilityRequestPrivate object for DeviceFarm \a action with,
+ * public implementation \a q.
  */
 GetDevicePoolCompatibilityRequestPrivate::GetDevicePoolCompatibilityRequestPrivate(
     const DeviceFarmRequest::Action action, GetDevicePoolCompatibilityRequest * const q)
@@ -106,15 +95,10 @@ GetDevicePoolCompatibilityRequestPrivate::GetDevicePoolCompatibilityRequestPriva
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetDevicePoolCompatibilityRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetDevicePoolCompatibilityRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetDevicePoolCompatibilityRequest instance.
  */
 GetDevicePoolCompatibilityRequestPrivate::GetDevicePoolCompatibilityRequestPrivate(
     const GetDevicePoolCompatibilityRequestPrivate &other, GetDevicePoolCompatibilityRequest * const q)

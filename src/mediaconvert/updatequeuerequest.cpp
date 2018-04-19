@@ -27,19 +27,16 @@ namespace MediaConvert {
 
 /*!
  * \class QtAws::MediaConvert::UpdateQueueRequest
- *
  * \brief The UpdateQueueRequest class provides an interface for MediaConvert UpdateQueue requests.
  *
- * \ingroup MediaConvert
+ * \inmodule QtAwsMediaConvert
  *
  *
  * \sa MediaConvertClient::updateQueue
  */
 
 /*!
- * @brief  Constructs a new UpdateQueueRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateQueueRequest::UpdateQueueRequest(const UpdateQueueRequest &other)
     : MediaConvertRequest(new UpdateQueueRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ UpdateQueueRequest::UpdateQueueRequest(const UpdateQueueRequest &other)
 }
 
 /*!
- * @brief  Constructs a new UpdateQueueRequest object.
+ * Constructs a UpdateQueueRequest object.
  */
 UpdateQueueRequest::UpdateQueueRequest()
     : MediaConvertRequest(new UpdateQueueRequestPrivate(MediaConvertRequest::UpdateQueueAction, this))
@@ -66,14 +63,9 @@ bool UpdateQueueRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateQueueResponse object.
+ * Returns a UpdateQueueResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateQueueResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MediaConvertClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateQueueRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * UpdateQueueRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::MediaConvert::UpdateQueueRequestPrivate
+ * \brief The UpdateQueueRequestPrivate class provides private implementation for UpdateQueueRequest.
+ * \internal
  *
- * @class  UpdateQueueRequestPrivate
- *
- * @brief  Private implementation for UpdateQueueRequest.
+ * \inmodule QtAwsMediaConvert
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateQueueRequestPrivate object.
- *
- * @param  action  MediaConvert action being performed.
- * @param  q       Pointer to this object's public UpdateQueueRequest instance.
+ * Constructs a UpdateQueueRequestPrivate object for MediaConvert \a action with,
+ * public implementation \a q.
  */
 UpdateQueueRequestPrivate::UpdateQueueRequestPrivate(
     const MediaConvertRequest::Action action, UpdateQueueRequest * const q)
@@ -104,15 +93,10 @@ UpdateQueueRequestPrivate::UpdateQueueRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateQueueRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateQueueRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateQueueRequest instance.
  */
 UpdateQueueRequestPrivate::UpdateQueueRequestPrivate(
     const UpdateQueueRequestPrivate &other, UpdateQueueRequest * const q)

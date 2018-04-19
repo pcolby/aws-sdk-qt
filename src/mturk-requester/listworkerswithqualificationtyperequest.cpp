@@ -27,19 +27,16 @@ namespace MTurk {
 
 /*!
  * \class QtAws::MTurk::ListWorkersWithQualificationTypeRequest
- *
  * \brief The ListWorkersWithQualificationTypeRequest class provides an interface for MTurk ListWorkersWithQualificationType requests.
  *
- * \ingroup MTurk
+ * \inmodule QtAwsMTurk
  *
  *
  * \sa MTurkClient::listWorkersWithQualificationType
  */
 
 /*!
- * @brief  Constructs a new ListWorkersWithQualificationTypeRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListWorkersWithQualificationTypeRequest::ListWorkersWithQualificationTypeRequest(const ListWorkersWithQualificationTypeRequest &other)
     : MTurkRequest(new ListWorkersWithQualificationTypeRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ ListWorkersWithQualificationTypeRequest::ListWorkersWithQualificationTypeRequest
 }
 
 /*!
- * @brief  Constructs a new ListWorkersWithQualificationTypeRequest object.
+ * Constructs a ListWorkersWithQualificationTypeRequest object.
  */
 ListWorkersWithQualificationTypeRequest::ListWorkersWithQualificationTypeRequest()
     : MTurkRequest(new ListWorkersWithQualificationTypeRequestPrivate(MTurkRequest::ListWorkersWithQualificationTypeAction, this))
@@ -66,14 +63,9 @@ bool ListWorkersWithQualificationTypeRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListWorkersWithQualificationTypeResponse object.
+ * Returns a ListWorkersWithQualificationTypeResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListWorkersWithQualificationTypeResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MTurkClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListWorkersWithQualificationTypeRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * ListWorkersWithQualificationTypeRequest::resp
 }
 
 /*!
- * @internal
+ * \class QtAws::MTurk::ListWorkersWithQualificationTypeRequestPrivate
+ * \brief The ListWorkersWithQualificationTypeRequestPrivate class provides private implementation for ListWorkersWithQualificationTypeRequest.
+ * \internal
  *
- * @class  ListWorkersWithQualificationTypeRequestPrivate
- *
- * @brief  Private implementation for ListWorkersWithQualificationTypeRequest.
+ * \inmodule QtAwsMTurk
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListWorkersWithQualificationTypeRequestPrivate object.
- *
- * @param  action  MTurk action being performed.
- * @param  q       Pointer to this object's public ListWorkersWithQualificationTypeRequest instance.
+ * Constructs a ListWorkersWithQualificationTypeRequestPrivate object for MTurk \a action with,
+ * public implementation \a q.
  */
 ListWorkersWithQualificationTypeRequestPrivate::ListWorkersWithQualificationTypeRequestPrivate(
     const MTurkRequest::Action action, ListWorkersWithQualificationTypeRequest * const q)
@@ -104,15 +93,10 @@ ListWorkersWithQualificationTypeRequestPrivate::ListWorkersWithQualificationType
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListWorkersWithQualificationTypeRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListWorkersWithQualificationTypeRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListWorkersWithQualificationTypeRequest instance.
  */
 ListWorkersWithQualificationTypeRequestPrivate::ListWorkersWithQualificationTypeRequestPrivate(
     const ListWorkersWithQualificationTypeRequestPrivate &other, ListWorkersWithQualificationTypeRequest * const q)

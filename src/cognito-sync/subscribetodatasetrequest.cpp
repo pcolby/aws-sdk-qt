@@ -27,10 +27,9 @@ namespace CognitoSync {
 
 /*!
  * \class QtAws::CognitoSync::SubscribeToDatasetRequest
- *
  * \brief The SubscribeToDatasetRequest class provides an interface for CognitoSync SubscribeToDataset requests.
  *
- * \ingroup CognitoSync
+ * \inmodule QtAwsCognitoSync
  *
  *  <fullname>Amazon Cognito Sync</fullname>
  * 
@@ -57,9 +56,7 @@ namespace CognitoSync {
  */
 
 /*!
- * @brief  Constructs a new SubscribeToDatasetRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 SubscribeToDatasetRequest::SubscribeToDatasetRequest(const SubscribeToDatasetRequest &other)
     : CognitoSyncRequest(new SubscribeToDatasetRequestPrivate(*other.d_func(), this))
@@ -68,7 +65,7 @@ SubscribeToDatasetRequest::SubscribeToDatasetRequest(const SubscribeToDatasetReq
 }
 
 /*!
- * @brief  Constructs a new SubscribeToDatasetRequest object.
+ * Constructs a SubscribeToDatasetRequest object.
  */
 SubscribeToDatasetRequest::SubscribeToDatasetRequest()
     : CognitoSyncRequest(new SubscribeToDatasetRequestPrivate(CognitoSyncRequest::SubscribeToDatasetAction, this))
@@ -86,14 +83,9 @@ bool SubscribeToDatasetRequest::isValid() const
 
 
 /*!
- * @brief  Construct an SubscribeToDatasetResponse object.
+ * Returns a SubscribeToDatasetResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An SubscribeToDatasetResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CognitoSyncClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * SubscribeToDatasetRequest::response(QNetworkReply * const reply) const
 {
@@ -101,20 +93,17 @@ QtAws::Core::AwsAbstractResponse * SubscribeToDatasetRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::CognitoSync::SubscribeToDatasetRequestPrivate
+ * \brief The SubscribeToDatasetRequestPrivate class provides private implementation for SubscribeToDatasetRequest.
+ * \internal
  *
- * @class  SubscribeToDatasetRequestPrivate
- *
- * @brief  Private implementation for SubscribeToDatasetRequest.
+ * \inmodule QtAwsCognitoSync
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new SubscribeToDatasetRequestPrivate object.
- *
- * @param  action  CognitoSync action being performed.
- * @param  q       Pointer to this object's public SubscribeToDatasetRequest instance.
+ * Constructs a SubscribeToDatasetRequestPrivate object for CognitoSync \a action with,
+ * public implementation \a q.
  */
 SubscribeToDatasetRequestPrivate::SubscribeToDatasetRequestPrivate(
     const CognitoSyncRequest::Action action, SubscribeToDatasetRequest * const q)
@@ -124,15 +113,10 @@ SubscribeToDatasetRequestPrivate::SubscribeToDatasetRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SubscribeToDatasetRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the SubscribeToDatasetRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public SubscribeToDatasetRequest instance.
  */
 SubscribeToDatasetRequestPrivate::SubscribeToDatasetRequestPrivate(
     const SubscribeToDatasetRequestPrivate &other, SubscribeToDatasetRequest * const q)

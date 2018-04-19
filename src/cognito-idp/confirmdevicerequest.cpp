@@ -27,10 +27,9 @@ namespace CognitoIdentityProvider {
 
 /*!
  * \class QtAws::CognitoIdentityProvider::ConfirmDeviceRequest
- *
  * \brief The ConfirmDeviceRequest class provides an interface for CognitoIdentityProvider ConfirmDevice requests.
  *
- * \ingroup CognitoIdentityProvider
+ * \inmodule QtAwsCognitoIdentityProvider
  *
  *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
  *  authenticate a user to obtain tokens related to user identity and access
@@ -47,9 +46,7 @@ namespace CognitoIdentityProvider {
  */
 
 /*!
- * @brief  Constructs a new ConfirmDeviceRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ConfirmDeviceRequest::ConfirmDeviceRequest(const ConfirmDeviceRequest &other)
     : CognitoIdentityProviderRequest(new ConfirmDeviceRequestPrivate(*other.d_func(), this))
@@ -58,7 +55,7 @@ ConfirmDeviceRequest::ConfirmDeviceRequest(const ConfirmDeviceRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ConfirmDeviceRequest object.
+ * Constructs a ConfirmDeviceRequest object.
  */
 ConfirmDeviceRequest::ConfirmDeviceRequest()
     : CognitoIdentityProviderRequest(new ConfirmDeviceRequestPrivate(CognitoIdentityProviderRequest::ConfirmDeviceAction, this))
@@ -76,14 +73,9 @@ bool ConfirmDeviceRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ConfirmDeviceResponse object.
+ * Returns a ConfirmDeviceResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ConfirmDeviceResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CognitoIdentityProviderClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ConfirmDeviceRequest::response(QNetworkReply * const reply) const
 {
@@ -91,20 +83,17 @@ QtAws::Core::AwsAbstractResponse * ConfirmDeviceRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::CognitoIdentityProvider::ConfirmDeviceRequestPrivate
+ * \brief The ConfirmDeviceRequestPrivate class provides private implementation for ConfirmDeviceRequest.
+ * \internal
  *
- * @class  ConfirmDeviceRequestPrivate
- *
- * @brief  Private implementation for ConfirmDeviceRequest.
+ * \inmodule QtAwsCognitoIdentityProvider
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ConfirmDeviceRequestPrivate object.
- *
- * @param  action  CognitoIdentityProvider action being performed.
- * @param  q       Pointer to this object's public ConfirmDeviceRequest instance.
+ * Constructs a ConfirmDeviceRequestPrivate object for CognitoIdentityProvider \a action with,
+ * public implementation \a q.
  */
 ConfirmDeviceRequestPrivate::ConfirmDeviceRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, ConfirmDeviceRequest * const q)
@@ -114,15 +103,10 @@ ConfirmDeviceRequestPrivate::ConfirmDeviceRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ConfirmDeviceRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ConfirmDeviceRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ConfirmDeviceRequest instance.
  */
 ConfirmDeviceRequestPrivate::ConfirmDeviceRequestPrivate(
     const ConfirmDeviceRequestPrivate &other, ConfirmDeviceRequest * const q)

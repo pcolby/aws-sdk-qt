@@ -27,10 +27,9 @@ namespace SQS {
 
 /*!
  * \class QtAws::SQS::ChangeMessageVisibilityBatchRequest
- *
  * \brief The ChangeMessageVisibilityBatchRequest class provides an interface for SQS ChangeMessageVisibilityBatch requests.
  *
- * \ingroup SQS
+ * \inmodule QtAwsSQS
  *
  *  Welcome to the <i>Amazon Simple Queue Service API
  * 
@@ -103,9 +102,7 @@ namespace SQS {
  */
 
 /*!
- * @brief  Constructs a new ChangeMessageVisibilityBatchRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ChangeMessageVisibilityBatchRequest::ChangeMessageVisibilityBatchRequest(const ChangeMessageVisibilityBatchRequest &other)
     : SQSRequest(new ChangeMessageVisibilityBatchRequestPrivate(*other.d_func(), this))
@@ -114,7 +111,7 @@ ChangeMessageVisibilityBatchRequest::ChangeMessageVisibilityBatchRequest(const C
 }
 
 /*!
- * @brief  Constructs a new ChangeMessageVisibilityBatchRequest object.
+ * Constructs a ChangeMessageVisibilityBatchRequest object.
  */
 ChangeMessageVisibilityBatchRequest::ChangeMessageVisibilityBatchRequest()
     : SQSRequest(new ChangeMessageVisibilityBatchRequestPrivate(SQSRequest::ChangeMessageVisibilityBatchAction, this))
@@ -132,14 +129,9 @@ bool ChangeMessageVisibilityBatchRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ChangeMessageVisibilityBatchResponse object.
+ * Returns a ChangeMessageVisibilityBatchResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ChangeMessageVisibilityBatchResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SQSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ChangeMessageVisibilityBatchRequest::response(QNetworkReply * const reply) const
 {
@@ -147,20 +139,17 @@ QtAws::Core::AwsAbstractResponse * ChangeMessageVisibilityBatchRequest::response
 }
 
 /*!
- * @internal
+ * \class QtAws::SQS::ChangeMessageVisibilityBatchRequestPrivate
+ * \brief The ChangeMessageVisibilityBatchRequestPrivate class provides private implementation for ChangeMessageVisibilityBatchRequest.
+ * \internal
  *
- * @class  ChangeMessageVisibilityBatchRequestPrivate
- *
- * @brief  Private implementation for ChangeMessageVisibilityBatchRequest.
+ * \inmodule QtAwsSQS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ChangeMessageVisibilityBatchRequestPrivate object.
- *
- * @param  action  SQS action being performed.
- * @param  q       Pointer to this object's public ChangeMessageVisibilityBatchRequest instance.
+ * Constructs a ChangeMessageVisibilityBatchRequestPrivate object for SQS \a action with,
+ * public implementation \a q.
  */
 ChangeMessageVisibilityBatchRequestPrivate::ChangeMessageVisibilityBatchRequestPrivate(
     const SQSRequest::Action action, ChangeMessageVisibilityBatchRequest * const q)
@@ -170,15 +159,10 @@ ChangeMessageVisibilityBatchRequestPrivate::ChangeMessageVisibilityBatchRequestP
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ChangeMessageVisibilityBatchRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ChangeMessageVisibilityBatchRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ChangeMessageVisibilityBatchRequest instance.
  */
 ChangeMessageVisibilityBatchRequestPrivate::ChangeMessageVisibilityBatchRequestPrivate(
     const ChangeMessageVisibilityBatchRequestPrivate &other, ChangeMessageVisibilityBatchRequest * const q)

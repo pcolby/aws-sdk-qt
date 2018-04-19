@@ -27,10 +27,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::SetDefaultAuthorizerRequest
- *
  * \brief The SetDefaultAuthorizerRequest class provides an interface for IoT SetDefaultAuthorizer requests.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -48,9 +47,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new SetDefaultAuthorizerRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 SetDefaultAuthorizerRequest::SetDefaultAuthorizerRequest(const SetDefaultAuthorizerRequest &other)
     : IoTRequest(new SetDefaultAuthorizerRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ SetDefaultAuthorizerRequest::SetDefaultAuthorizerRequest(const SetDefaultAuthori
 }
 
 /*!
- * @brief  Constructs a new SetDefaultAuthorizerRequest object.
+ * Constructs a SetDefaultAuthorizerRequest object.
  */
 SetDefaultAuthorizerRequest::SetDefaultAuthorizerRequest()
     : IoTRequest(new SetDefaultAuthorizerRequestPrivate(IoTRequest::SetDefaultAuthorizerAction, this))
@@ -77,14 +74,9 @@ bool SetDefaultAuthorizerRequest::isValid() const
 
 
 /*!
- * @brief  Construct an SetDefaultAuthorizerResponse object.
+ * Returns a SetDefaultAuthorizerResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An SetDefaultAuthorizerResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IoTClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * SetDefaultAuthorizerRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * SetDefaultAuthorizerRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::IoT::SetDefaultAuthorizerRequestPrivate
+ * \brief The SetDefaultAuthorizerRequestPrivate class provides private implementation for SetDefaultAuthorizerRequest.
+ * \internal
  *
- * @class  SetDefaultAuthorizerRequestPrivate
- *
- * @brief  Private implementation for SetDefaultAuthorizerRequest.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new SetDefaultAuthorizerRequestPrivate object.
- *
- * @param  action  IoT action being performed.
- * @param  q       Pointer to this object's public SetDefaultAuthorizerRequest instance.
+ * Constructs a SetDefaultAuthorizerRequestPrivate object for IoT \a action with,
+ * public implementation \a q.
  */
 SetDefaultAuthorizerRequestPrivate::SetDefaultAuthorizerRequestPrivate(
     const IoTRequest::Action action, SetDefaultAuthorizerRequest * const q)
@@ -115,15 +104,10 @@ SetDefaultAuthorizerRequestPrivate::SetDefaultAuthorizerRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SetDefaultAuthorizerRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the SetDefaultAuthorizerRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public SetDefaultAuthorizerRequest instance.
  */
 SetDefaultAuthorizerRequestPrivate::SetDefaultAuthorizerRequestPrivate(
     const SetDefaultAuthorizerRequestPrivate &other, SetDefaultAuthorizerRequest * const q)

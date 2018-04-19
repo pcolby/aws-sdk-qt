@@ -27,10 +27,9 @@ namespace GameLift {
 
 /*!
  * \class QtAws::GameLift::SearchGameSessionsRequest
- *
  * \brief The SearchGameSessionsRequest class provides an interface for GameLift SearchGameSessions requests.
  *
- * \ingroup GameLift
+ * \inmodule QtAwsGameLift
  *
  *  <fullname>Amazon GameLift Service</fullname>
  * 
@@ -473,9 +472,7 @@ namespace GameLift {
  */
 
 /*!
- * @brief  Constructs a new SearchGameSessionsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 SearchGameSessionsRequest::SearchGameSessionsRequest(const SearchGameSessionsRequest &other)
     : GameLiftRequest(new SearchGameSessionsRequestPrivate(*other.d_func(), this))
@@ -484,7 +481,7 @@ SearchGameSessionsRequest::SearchGameSessionsRequest(const SearchGameSessionsReq
 }
 
 /*!
- * @brief  Constructs a new SearchGameSessionsRequest object.
+ * Constructs a SearchGameSessionsRequest object.
  */
 SearchGameSessionsRequest::SearchGameSessionsRequest()
     : GameLiftRequest(new SearchGameSessionsRequestPrivate(GameLiftRequest::SearchGameSessionsAction, this))
@@ -502,14 +499,9 @@ bool SearchGameSessionsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an SearchGameSessionsResponse object.
+ * Returns a SearchGameSessionsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An SearchGameSessionsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GameLiftClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * SearchGameSessionsRequest::response(QNetworkReply * const reply) const
 {
@@ -517,20 +509,17 @@ QtAws::Core::AwsAbstractResponse * SearchGameSessionsRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::GameLift::SearchGameSessionsRequestPrivate
+ * \brief The SearchGameSessionsRequestPrivate class provides private implementation for SearchGameSessionsRequest.
+ * \internal
  *
- * @class  SearchGameSessionsRequestPrivate
- *
- * @brief  Private implementation for SearchGameSessionsRequest.
+ * \inmodule QtAwsGameLift
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new SearchGameSessionsRequestPrivate object.
- *
- * @param  action  GameLift action being performed.
- * @param  q       Pointer to this object's public SearchGameSessionsRequest instance.
+ * Constructs a SearchGameSessionsRequestPrivate object for GameLift \a action with,
+ * public implementation \a q.
  */
 SearchGameSessionsRequestPrivate::SearchGameSessionsRequestPrivate(
     const GameLiftRequest::Action action, SearchGameSessionsRequest * const q)
@@ -540,15 +529,10 @@ SearchGameSessionsRequestPrivate::SearchGameSessionsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SearchGameSessionsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the SearchGameSessionsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public SearchGameSessionsRequest instance.
  */
 SearchGameSessionsRequestPrivate::SearchGameSessionsRequestPrivate(
     const SearchGameSessionsRequestPrivate &other, SearchGameSessionsRequest * const q)

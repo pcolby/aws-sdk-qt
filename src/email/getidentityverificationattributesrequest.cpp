@@ -27,10 +27,9 @@ namespace SES {
 
 /*!
  * \class QtAws::SES::GetIdentityVerificationAttributesRequest
- *
  * \brief The GetIdentityVerificationAttributesRequest class provides an interface for SES GetIdentityVerificationAttributes requests.
  *
- * \ingroup SES
+ * \inmodule QtAwsSES
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -48,9 +47,7 @@ namespace SES {
  */
 
 /*!
- * @brief  Constructs a new GetIdentityVerificationAttributesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetIdentityVerificationAttributesRequest::GetIdentityVerificationAttributesRequest(const GetIdentityVerificationAttributesRequest &other)
     : SESRequest(new GetIdentityVerificationAttributesRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ GetIdentityVerificationAttributesRequest::GetIdentityVerificationAttributesReque
 }
 
 /*!
- * @brief  Constructs a new GetIdentityVerificationAttributesRequest object.
+ * Constructs a GetIdentityVerificationAttributesRequest object.
  */
 GetIdentityVerificationAttributesRequest::GetIdentityVerificationAttributesRequest()
     : SESRequest(new GetIdentityVerificationAttributesRequestPrivate(SESRequest::GetIdentityVerificationAttributesAction, this))
@@ -77,14 +74,9 @@ bool GetIdentityVerificationAttributesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetIdentityVerificationAttributesResponse object.
+ * Returns a GetIdentityVerificationAttributesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetIdentityVerificationAttributesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SESClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetIdentityVerificationAttributesRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * GetIdentityVerificationAttributesRequest::res
 }
 
 /*!
- * @internal
+ * \class QtAws::SES::GetIdentityVerificationAttributesRequestPrivate
+ * \brief The GetIdentityVerificationAttributesRequestPrivate class provides private implementation for GetIdentityVerificationAttributesRequest.
+ * \internal
  *
- * @class  GetIdentityVerificationAttributesRequestPrivate
- *
- * @brief  Private implementation for GetIdentityVerificationAttributesRequest.
+ * \inmodule QtAwsSES
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetIdentityVerificationAttributesRequestPrivate object.
- *
- * @param  action  SES action being performed.
- * @param  q       Pointer to this object's public GetIdentityVerificationAttributesRequest instance.
+ * Constructs a GetIdentityVerificationAttributesRequestPrivate object for SES \a action with,
+ * public implementation \a q.
  */
 GetIdentityVerificationAttributesRequestPrivate::GetIdentityVerificationAttributesRequestPrivate(
     const SESRequest::Action action, GetIdentityVerificationAttributesRequest * const q)
@@ -115,15 +104,10 @@ GetIdentityVerificationAttributesRequestPrivate::GetIdentityVerificationAttribut
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetIdentityVerificationAttributesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetIdentityVerificationAttributesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetIdentityVerificationAttributesRequest instance.
  */
 GetIdentityVerificationAttributesRequestPrivate::GetIdentityVerificationAttributesRequestPrivate(
     const GetIdentityVerificationAttributesRequestPrivate &other, GetIdentityVerificationAttributesRequest * const q)

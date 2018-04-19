@@ -27,10 +27,9 @@ namespace ECS {
 
 /*!
  * \class QtAws::ECS::StopTaskRequest
- *
  * \brief The StopTaskRequest class provides an interface for ECS StopTask requests.
  *
- * \ingroup ECS
+ * \inmodule QtAwsECS
  *
  *  Amazon Elastic Container Service (Amazon ECS) is a highly scalable, fast, container management service that makes it
  *  easy to run, stop, and manage Docker containers on a cluster. You can host your cluster on a serverless infrastructure
@@ -54,9 +53,7 @@ namespace ECS {
  */
 
 /*!
- * @brief  Constructs a new StopTaskRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 StopTaskRequest::StopTaskRequest(const StopTaskRequest &other)
     : ECSRequest(new StopTaskRequestPrivate(*other.d_func(), this))
@@ -65,7 +62,7 @@ StopTaskRequest::StopTaskRequest(const StopTaskRequest &other)
 }
 
 /*!
- * @brief  Constructs a new StopTaskRequest object.
+ * Constructs a StopTaskRequest object.
  */
 StopTaskRequest::StopTaskRequest()
     : ECSRequest(new StopTaskRequestPrivate(ECSRequest::StopTaskAction, this))
@@ -83,14 +80,9 @@ bool StopTaskRequest::isValid() const
 
 
 /*!
- * @brief  Construct an StopTaskResponse object.
+ * Returns a StopTaskResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An StopTaskResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ECSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * StopTaskRequest::response(QNetworkReply * const reply) const
 {
@@ -98,20 +90,17 @@ QtAws::Core::AwsAbstractResponse * StopTaskRequest::response(QNetworkReply * con
 }
 
 /*!
- * @internal
+ * \class QtAws::ECS::StopTaskRequestPrivate
+ * \brief The StopTaskRequestPrivate class provides private implementation for StopTaskRequest.
+ * \internal
  *
- * @class  StopTaskRequestPrivate
- *
- * @brief  Private implementation for StopTaskRequest.
+ * \inmodule QtAwsECS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new StopTaskRequestPrivate object.
- *
- * @param  action  ECS action being performed.
- * @param  q       Pointer to this object's public StopTaskRequest instance.
+ * Constructs a StopTaskRequestPrivate object for ECS \a action with,
+ * public implementation \a q.
  */
 StopTaskRequestPrivate::StopTaskRequestPrivate(
     const ECSRequest::Action action, StopTaskRequest * const q)
@@ -121,15 +110,10 @@ StopTaskRequestPrivate::StopTaskRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StopTaskRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the StopTaskRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public StopTaskRequest instance.
  */
 StopTaskRequestPrivate::StopTaskRequestPrivate(
     const StopTaskRequestPrivate &other, StopTaskRequest * const q)

@@ -27,10 +27,9 @@ namespace Redshift {
 
 /*!
  * \class QtAws::Redshift::ModifyClusterIamRolesRequest
- *
  * \brief The ModifyClusterIamRolesRequest class provides an interface for Redshift ModifyClusterIamRoles requests.
  *
- * \ingroup Redshift
+ * \inmodule QtAwsRedshift
  *
  *  <fullname>Amazon Redshift</fullname>
  * 
@@ -67,9 +66,7 @@ namespace Redshift {
  */
 
 /*!
- * @brief  Constructs a new ModifyClusterIamRolesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ModifyClusterIamRolesRequest::ModifyClusterIamRolesRequest(const ModifyClusterIamRolesRequest &other)
     : RedshiftRequest(new ModifyClusterIamRolesRequestPrivate(*other.d_func(), this))
@@ -78,7 +75,7 @@ ModifyClusterIamRolesRequest::ModifyClusterIamRolesRequest(const ModifyClusterIa
 }
 
 /*!
- * @brief  Constructs a new ModifyClusterIamRolesRequest object.
+ * Constructs a ModifyClusterIamRolesRequest object.
  */
 ModifyClusterIamRolesRequest::ModifyClusterIamRolesRequest()
     : RedshiftRequest(new ModifyClusterIamRolesRequestPrivate(RedshiftRequest::ModifyClusterIamRolesAction, this))
@@ -96,14 +93,9 @@ bool ModifyClusterIamRolesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ModifyClusterIamRolesResponse object.
+ * Returns a ModifyClusterIamRolesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ModifyClusterIamRolesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RedshiftClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ModifyClusterIamRolesRequest::response(QNetworkReply * const reply) const
 {
@@ -111,20 +103,17 @@ QtAws::Core::AwsAbstractResponse * ModifyClusterIamRolesRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::Redshift::ModifyClusterIamRolesRequestPrivate
+ * \brief The ModifyClusterIamRolesRequestPrivate class provides private implementation for ModifyClusterIamRolesRequest.
+ * \internal
  *
- * @class  ModifyClusterIamRolesRequestPrivate
- *
- * @brief  Private implementation for ModifyClusterIamRolesRequest.
+ * \inmodule QtAwsRedshift
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ModifyClusterIamRolesRequestPrivate object.
- *
- * @param  action  Redshift action being performed.
- * @param  q       Pointer to this object's public ModifyClusterIamRolesRequest instance.
+ * Constructs a ModifyClusterIamRolesRequestPrivate object for Redshift \a action with,
+ * public implementation \a q.
  */
 ModifyClusterIamRolesRequestPrivate::ModifyClusterIamRolesRequestPrivate(
     const RedshiftRequest::Action action, ModifyClusterIamRolesRequest * const q)
@@ -134,15 +123,10 @@ ModifyClusterIamRolesRequestPrivate::ModifyClusterIamRolesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ModifyClusterIamRolesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ModifyClusterIamRolesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ModifyClusterIamRolesRequest instance.
  */
 ModifyClusterIamRolesRequestPrivate::ModifyClusterIamRolesRequestPrivate(
     const ModifyClusterIamRolesRequestPrivate &other, ModifyClusterIamRolesRequest * const q)

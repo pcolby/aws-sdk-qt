@@ -27,10 +27,9 @@ namespace CloudWatchLogs {
 
 /*!
  * \class QtAws::CloudWatchLogs::PutRetentionPolicyRequest
- *
  * \brief The PutRetentionPolicyRequest class provides an interface for CloudWatchLogs PutRetentionPolicy requests.
  *
- * \ingroup CloudWatchLogs
+ * \inmodule QtAwsCloudWatchLogs
  *
  *  You can use Amazon CloudWatch Logs to monitor, store, and access your log files from Amazon EC2 instances, AWS
  *  CloudTrail, or other sources. You can then retrieve the associated log data from CloudWatch Logs using the CloudWatch
@@ -66,9 +65,7 @@ namespace CloudWatchLogs {
  */
 
 /*!
- * @brief  Constructs a new PutRetentionPolicyRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 PutRetentionPolicyRequest::PutRetentionPolicyRequest(const PutRetentionPolicyRequest &other)
     : CloudWatchLogsRequest(new PutRetentionPolicyRequestPrivate(*other.d_func(), this))
@@ -77,7 +74,7 @@ PutRetentionPolicyRequest::PutRetentionPolicyRequest(const PutRetentionPolicyReq
 }
 
 /*!
- * @brief  Constructs a new PutRetentionPolicyRequest object.
+ * Constructs a PutRetentionPolicyRequest object.
  */
 PutRetentionPolicyRequest::PutRetentionPolicyRequest()
     : CloudWatchLogsRequest(new PutRetentionPolicyRequestPrivate(CloudWatchLogsRequest::PutRetentionPolicyAction, this))
@@ -95,14 +92,9 @@ bool PutRetentionPolicyRequest::isValid() const
 
 
 /*!
- * @brief  Construct an PutRetentionPolicyResponse object.
+ * Returns a PutRetentionPolicyResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An PutRetentionPolicyResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudWatchLogsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * PutRetentionPolicyRequest::response(QNetworkReply * const reply) const
 {
@@ -110,20 +102,17 @@ QtAws::Core::AwsAbstractResponse * PutRetentionPolicyRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudWatchLogs::PutRetentionPolicyRequestPrivate
+ * \brief The PutRetentionPolicyRequestPrivate class provides private implementation for PutRetentionPolicyRequest.
+ * \internal
  *
- * @class  PutRetentionPolicyRequestPrivate
- *
- * @brief  Private implementation for PutRetentionPolicyRequest.
+ * \inmodule QtAwsCloudWatchLogs
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new PutRetentionPolicyRequestPrivate object.
- *
- * @param  action  CloudWatchLogs action being performed.
- * @param  q       Pointer to this object's public PutRetentionPolicyRequest instance.
+ * Constructs a PutRetentionPolicyRequestPrivate object for CloudWatchLogs \a action with,
+ * public implementation \a q.
  */
 PutRetentionPolicyRequestPrivate::PutRetentionPolicyRequestPrivate(
     const CloudWatchLogsRequest::Action action, PutRetentionPolicyRequest * const q)
@@ -133,15 +122,10 @@ PutRetentionPolicyRequestPrivate::PutRetentionPolicyRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutRetentionPolicyRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the PutRetentionPolicyRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public PutRetentionPolicyRequest instance.
  */
 PutRetentionPolicyRequestPrivate::PutRetentionPolicyRequestPrivate(
     const PutRetentionPolicyRequestPrivate &other, PutRetentionPolicyRequest * const q)

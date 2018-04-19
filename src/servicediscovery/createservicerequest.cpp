@@ -27,10 +27,9 @@ namespace ServiceDiscovery {
 
 /*!
  * \class QtAws::ServiceDiscovery::CreateServiceRequest
- *
  * \brief The CreateServiceRequest class provides an interface for ServiceDiscovery CreateService requests.
  *
- * \ingroup ServiceDiscovery
+ * \inmodule QtAwsServiceDiscovery
  *
  *  Amazon Route 53 auto naming lets you configure public or private namespaces that your microservice applications run in.
  *  When instances of the service become available, you can call the auto naming API to register the instance, and Route 53
@@ -41,9 +40,7 @@ namespace ServiceDiscovery {
  */
 
 /*!
- * @brief  Constructs a new CreateServiceRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateServiceRequest::CreateServiceRequest(const CreateServiceRequest &other)
     : ServiceDiscoveryRequest(new CreateServiceRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ CreateServiceRequest::CreateServiceRequest(const CreateServiceRequest &other)
 }
 
 /*!
- * @brief  Constructs a new CreateServiceRequest object.
+ * Constructs a CreateServiceRequest object.
  */
 CreateServiceRequest::CreateServiceRequest()
     : ServiceDiscoveryRequest(new CreateServiceRequestPrivate(ServiceDiscoveryRequest::CreateServiceAction, this))
@@ -70,14 +67,9 @@ bool CreateServiceRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateServiceResponse object.
+ * Returns a CreateServiceResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateServiceResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ServiceDiscoveryClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateServiceRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * CreateServiceRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::ServiceDiscovery::CreateServiceRequestPrivate
+ * \brief The CreateServiceRequestPrivate class provides private implementation for CreateServiceRequest.
+ * \internal
  *
- * @class  CreateServiceRequestPrivate
- *
- * @brief  Private implementation for CreateServiceRequest.
+ * \inmodule QtAwsServiceDiscovery
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateServiceRequestPrivate object.
- *
- * @param  action  ServiceDiscovery action being performed.
- * @param  q       Pointer to this object's public CreateServiceRequest instance.
+ * Constructs a CreateServiceRequestPrivate object for ServiceDiscovery \a action with,
+ * public implementation \a q.
  */
 CreateServiceRequestPrivate::CreateServiceRequestPrivate(
     const ServiceDiscoveryRequest::Action action, CreateServiceRequest * const q)
@@ -108,15 +97,10 @@ CreateServiceRequestPrivate::CreateServiceRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateServiceRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateServiceRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateServiceRequest instance.
  */
 CreateServiceRequestPrivate::CreateServiceRequestPrivate(
     const CreateServiceRequestPrivate &other, CreateServiceRequest * const q)

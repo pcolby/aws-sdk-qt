@@ -27,10 +27,9 @@ namespace MQ {
 
 /*!
  * \class QtAws::MQ::DescribeUserRequest
- *
  * \brief The DescribeUserRequest class provides an interface for MQ DescribeUser requests.
  *
- * \ingroup MQ
+ * \inmodule QtAwsMQ
  *
  *  Amazon MQ is a managed message broker service for Apache ActiveMQ that makes it easy to set up and operate message
  *  brokers in the cloud. A message broker allows software applications and components to communicate using various
@@ -39,9 +38,7 @@ namespace MQ {
  */
 
 /*!
- * @brief  Constructs a new DescribeUserRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeUserRequest::DescribeUserRequest(const DescribeUserRequest &other)
     : MQRequest(new DescribeUserRequestPrivate(*other.d_func(), this))
@@ -50,7 +47,7 @@ DescribeUserRequest::DescribeUserRequest(const DescribeUserRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DescribeUserRequest object.
+ * Constructs a DescribeUserRequest object.
  */
 DescribeUserRequest::DescribeUserRequest()
     : MQRequest(new DescribeUserRequestPrivate(MQRequest::DescribeUserAction, this))
@@ -68,14 +65,9 @@ bool DescribeUserRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeUserResponse object.
+ * Returns a DescribeUserResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeUserResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MQClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeUserRequest::response(QNetworkReply * const reply) const
 {
@@ -83,20 +75,17 @@ QtAws::Core::AwsAbstractResponse * DescribeUserRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::MQ::DescribeUserRequestPrivate
+ * \brief The DescribeUserRequestPrivate class provides private implementation for DescribeUserRequest.
+ * \internal
  *
- * @class  DescribeUserRequestPrivate
- *
- * @brief  Private implementation for DescribeUserRequest.
+ * \inmodule QtAwsMQ
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeUserRequestPrivate object.
- *
- * @param  action  MQ action being performed.
- * @param  q       Pointer to this object's public DescribeUserRequest instance.
+ * Constructs a DescribeUserRequestPrivate object for MQ \a action with,
+ * public implementation \a q.
  */
 DescribeUserRequestPrivate::DescribeUserRequestPrivate(
     const MQRequest::Action action, DescribeUserRequest * const q)
@@ -106,15 +95,10 @@ DescribeUserRequestPrivate::DescribeUserRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeUserRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeUserRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeUserRequest instance.
  */
 DescribeUserRequestPrivate::DescribeUserRequestPrivate(
     const DescribeUserRequestPrivate &other, DescribeUserRequest * const q)

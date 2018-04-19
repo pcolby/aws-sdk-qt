@@ -27,10 +27,9 @@ namespace Budgets {
 
 /*!
  * \class QtAws::Budgets::CreateSubscriberRequest
- *
  * \brief The CreateSubscriberRequest class provides an interface for Budgets CreateSubscriber requests.
  *
- * \ingroup Budgets
+ * \inmodule QtAwsBudgets
  *
  *  Budgets enable you to plan your service usage, service costs, and your RI utilization. You can also track how close your
  *  plan is to your budgeted amount or to the free tier limits. Budgets provide you with a quick way to see your
@@ -75,9 +74,7 @@ namespace Budgets {
  */
 
 /*!
- * @brief  Constructs a new CreateSubscriberRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateSubscriberRequest::CreateSubscriberRequest(const CreateSubscriberRequest &other)
     : BudgetsRequest(new CreateSubscriberRequestPrivate(*other.d_func(), this))
@@ -86,7 +83,7 @@ CreateSubscriberRequest::CreateSubscriberRequest(const CreateSubscriberRequest &
 }
 
 /*!
- * @brief  Constructs a new CreateSubscriberRequest object.
+ * Constructs a CreateSubscriberRequest object.
  */
 CreateSubscriberRequest::CreateSubscriberRequest()
     : BudgetsRequest(new CreateSubscriberRequestPrivate(BudgetsRequest::CreateSubscriberAction, this))
@@ -104,14 +101,9 @@ bool CreateSubscriberRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateSubscriberResponse object.
+ * Returns a CreateSubscriberResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateSubscriberResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  BudgetsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateSubscriberRequest::response(QNetworkReply * const reply) const
 {
@@ -119,20 +111,17 @@ QtAws::Core::AwsAbstractResponse * CreateSubscriberRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::Budgets::CreateSubscriberRequestPrivate
+ * \brief The CreateSubscriberRequestPrivate class provides private implementation for CreateSubscriberRequest.
+ * \internal
  *
- * @class  CreateSubscriberRequestPrivate
- *
- * @brief  Private implementation for CreateSubscriberRequest.
+ * \inmodule QtAwsBudgets
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateSubscriberRequestPrivate object.
- *
- * @param  action  Budgets action being performed.
- * @param  q       Pointer to this object's public CreateSubscriberRequest instance.
+ * Constructs a CreateSubscriberRequestPrivate object for Budgets \a action with,
+ * public implementation \a q.
  */
 CreateSubscriberRequestPrivate::CreateSubscriberRequestPrivate(
     const BudgetsRequest::Action action, CreateSubscriberRequest * const q)
@@ -142,15 +131,10 @@ CreateSubscriberRequestPrivate::CreateSubscriberRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateSubscriberRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateSubscriberRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateSubscriberRequest instance.
  */
 CreateSubscriberRequestPrivate::CreateSubscriberRequestPrivate(
     const CreateSubscriberRequestPrivate &other, CreateSubscriberRequest * const q)

@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::ModifyVpcEndpointRequest
- *
  * \brief The ModifyVpcEndpointRequest class provides an interface for EC2 ModifyVpcEndpoint requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new ModifyVpcEndpointRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ModifyVpcEndpointRequest::ModifyVpcEndpointRequest(const ModifyVpcEndpointRequest &other)
     : EC2Request(new ModifyVpcEndpointRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ ModifyVpcEndpointRequest::ModifyVpcEndpointRequest(const ModifyVpcEndpointReques
 }
 
 /*!
- * @brief  Constructs a new ModifyVpcEndpointRequest object.
+ * Constructs a ModifyVpcEndpointRequest object.
  */
 ModifyVpcEndpointRequest::ModifyVpcEndpointRequest()
     : EC2Request(new ModifyVpcEndpointRequestPrivate(EC2Request::ModifyVpcEndpointAction, this))
@@ -70,14 +67,9 @@ bool ModifyVpcEndpointRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ModifyVpcEndpointResponse object.
+ * Returns a ModifyVpcEndpointResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ModifyVpcEndpointResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ModifyVpcEndpointRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * ModifyVpcEndpointRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::ModifyVpcEndpointRequestPrivate
+ * \brief The ModifyVpcEndpointRequestPrivate class provides private implementation for ModifyVpcEndpointRequest.
+ * \internal
  *
- * @class  ModifyVpcEndpointRequestPrivate
- *
- * @brief  Private implementation for ModifyVpcEndpointRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ModifyVpcEndpointRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public ModifyVpcEndpointRequest instance.
+ * Constructs a ModifyVpcEndpointRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 ModifyVpcEndpointRequestPrivate::ModifyVpcEndpointRequestPrivate(
     const EC2Request::Action action, ModifyVpcEndpointRequest * const q)
@@ -108,15 +97,10 @@ ModifyVpcEndpointRequestPrivate::ModifyVpcEndpointRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ModifyVpcEndpointRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ModifyVpcEndpointRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ModifyVpcEndpointRequest instance.
  */
 ModifyVpcEndpointRequestPrivate::ModifyVpcEndpointRequestPrivate(
     const ModifyVpcEndpointRequestPrivate &other, ModifyVpcEndpointRequest * const q)

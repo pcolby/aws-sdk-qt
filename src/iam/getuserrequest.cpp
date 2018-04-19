@@ -27,10 +27,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::GetUserRequest
- *
  * \brief The GetUserRequest class provides an interface for IAM GetUser requests.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -102,9 +101,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new GetUserRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetUserRequest::GetUserRequest(const GetUserRequest &other)
     : IAMRequest(new GetUserRequestPrivate(*other.d_func(), this))
@@ -113,7 +110,7 @@ GetUserRequest::GetUserRequest(const GetUserRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetUserRequest object.
+ * Constructs a GetUserRequest object.
  */
 GetUserRequest::GetUserRequest()
     : IAMRequest(new GetUserRequestPrivate(IAMRequest::GetUserAction, this))
@@ -131,14 +128,9 @@ bool GetUserRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetUserResponse object.
+ * Returns a GetUserResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetUserResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IAMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetUserRequest::response(QNetworkReply * const reply) const
 {
@@ -146,20 +138,17 @@ QtAws::Core::AwsAbstractResponse * GetUserRequest::response(QNetworkReply * cons
 }
 
 /*!
- * @internal
+ * \class QtAws::IAM::GetUserRequestPrivate
+ * \brief The GetUserRequestPrivate class provides private implementation for GetUserRequest.
+ * \internal
  *
- * @class  GetUserRequestPrivate
- *
- * @brief  Private implementation for GetUserRequest.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetUserRequestPrivate object.
- *
- * @param  action  IAM action being performed.
- * @param  q       Pointer to this object's public GetUserRequest instance.
+ * Constructs a GetUserRequestPrivate object for IAM \a action with,
+ * public implementation \a q.
  */
 GetUserRequestPrivate::GetUserRequestPrivate(
     const IAMRequest::Action action, GetUserRequest * const q)
@@ -169,15 +158,10 @@ GetUserRequestPrivate::GetUserRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetUserRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetUserRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetUserRequest instance.
  */
 GetUserRequestPrivate::GetUserRequestPrivate(
     const GetUserRequestPrivate &other, GetUserRequest * const q)

@@ -27,10 +27,9 @@ namespace LexModelBuildingService {
 
 /*!
  * \class QtAws::LexModelBuildingService::PutSlotTypeRequest
- *
  * \brief The PutSlotTypeRequest class provides an interface for LexModelBuildingService PutSlotType requests.
  *
- * \ingroup LexModelBuildingService
+ * \inmodule QtAwsLexModelBuildingService
  *
  *  <fullname>Amazon Lex Build-Time Actions</fullname>
  * 
@@ -41,9 +40,7 @@ namespace LexModelBuildingService {
  */
 
 /*!
- * @brief  Constructs a new PutSlotTypeRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 PutSlotTypeRequest::PutSlotTypeRequest(const PutSlotTypeRequest &other)
     : LexModelBuildingServiceRequest(new PutSlotTypeRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ PutSlotTypeRequest::PutSlotTypeRequest(const PutSlotTypeRequest &other)
 }
 
 /*!
- * @brief  Constructs a new PutSlotTypeRequest object.
+ * Constructs a PutSlotTypeRequest object.
  */
 PutSlotTypeRequest::PutSlotTypeRequest()
     : LexModelBuildingServiceRequest(new PutSlotTypeRequestPrivate(LexModelBuildingServiceRequest::PutSlotTypeAction, this))
@@ -70,14 +67,9 @@ bool PutSlotTypeRequest::isValid() const
 
 
 /*!
- * @brief  Construct an PutSlotTypeResponse object.
+ * Returns a PutSlotTypeResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An PutSlotTypeResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  LexModelBuildingServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * PutSlotTypeRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * PutSlotTypeRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::LexModelBuildingService::PutSlotTypeRequestPrivate
+ * \brief The PutSlotTypeRequestPrivate class provides private implementation for PutSlotTypeRequest.
+ * \internal
  *
- * @class  PutSlotTypeRequestPrivate
- *
- * @brief  Private implementation for PutSlotTypeRequest.
+ * \inmodule QtAwsLexModelBuildingService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new PutSlotTypeRequestPrivate object.
- *
- * @param  action  LexModelBuildingService action being performed.
- * @param  q       Pointer to this object's public PutSlotTypeRequest instance.
+ * Constructs a PutSlotTypeRequestPrivate object for LexModelBuildingService \a action with,
+ * public implementation \a q.
  */
 PutSlotTypeRequestPrivate::PutSlotTypeRequestPrivate(
     const LexModelBuildingServiceRequest::Action action, PutSlotTypeRequest * const q)
@@ -108,15 +97,10 @@ PutSlotTypeRequestPrivate::PutSlotTypeRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutSlotTypeRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the PutSlotTypeRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public PutSlotTypeRequest instance.
  */
 PutSlotTypeRequestPrivate::PutSlotTypeRequestPrivate(
     const PutSlotTypeRequestPrivate &other, PutSlotTypeRequest * const q)

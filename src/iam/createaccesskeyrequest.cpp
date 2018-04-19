@@ -27,10 +27,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::CreateAccessKeyRequest
- *
  * \brief The CreateAccessKeyRequest class provides an interface for IAM CreateAccessKey requests.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -102,9 +101,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new CreateAccessKeyRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateAccessKeyRequest::CreateAccessKeyRequest(const CreateAccessKeyRequest &other)
     : IAMRequest(new CreateAccessKeyRequestPrivate(*other.d_func(), this))
@@ -113,7 +110,7 @@ CreateAccessKeyRequest::CreateAccessKeyRequest(const CreateAccessKeyRequest &oth
 }
 
 /*!
- * @brief  Constructs a new CreateAccessKeyRequest object.
+ * Constructs a CreateAccessKeyRequest object.
  */
 CreateAccessKeyRequest::CreateAccessKeyRequest()
     : IAMRequest(new CreateAccessKeyRequestPrivate(IAMRequest::CreateAccessKeyAction, this))
@@ -131,14 +128,9 @@ bool CreateAccessKeyRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateAccessKeyResponse object.
+ * Returns a CreateAccessKeyResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateAccessKeyResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IAMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateAccessKeyRequest::response(QNetworkReply * const reply) const
 {
@@ -146,20 +138,17 @@ QtAws::Core::AwsAbstractResponse * CreateAccessKeyRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::IAM::CreateAccessKeyRequestPrivate
+ * \brief The CreateAccessKeyRequestPrivate class provides private implementation for CreateAccessKeyRequest.
+ * \internal
  *
- * @class  CreateAccessKeyRequestPrivate
- *
- * @brief  Private implementation for CreateAccessKeyRequest.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateAccessKeyRequestPrivate object.
- *
- * @param  action  IAM action being performed.
- * @param  q       Pointer to this object's public CreateAccessKeyRequest instance.
+ * Constructs a CreateAccessKeyRequestPrivate object for IAM \a action with,
+ * public implementation \a q.
  */
 CreateAccessKeyRequestPrivate::CreateAccessKeyRequestPrivate(
     const IAMRequest::Action action, CreateAccessKeyRequest * const q)
@@ -169,15 +158,10 @@ CreateAccessKeyRequestPrivate::CreateAccessKeyRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateAccessKeyRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateAccessKeyRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateAccessKeyRequest instance.
  */
 CreateAccessKeyRequestPrivate::CreateAccessKeyRequestPrivate(
     const CreateAccessKeyRequestPrivate &other, CreateAccessKeyRequest * const q)

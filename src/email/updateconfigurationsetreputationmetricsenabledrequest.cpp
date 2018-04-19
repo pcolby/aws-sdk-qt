@@ -27,10 +27,9 @@ namespace SES {
 
 /*!
  * \class QtAws::SES::UpdateConfigurationSetReputationMetricsEnabledRequest
- *
  * \brief The UpdateConfigurationSetReputationMetricsEnabledRequest class provides an interface for SES UpdateConfigurationSetReputationMetricsEnabled requests.
  *
- * \ingroup SES
+ * \inmodule QtAwsSES
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -48,9 +47,7 @@ namespace SES {
  */
 
 /*!
- * @brief  Constructs a new UpdateConfigurationSetReputationMetricsEnabledRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateConfigurationSetReputationMetricsEnabledRequest::UpdateConfigurationSetReputationMetricsEnabledRequest(const UpdateConfigurationSetReputationMetricsEnabledRequest &other)
     : SESRequest(new UpdateConfigurationSetReputationMetricsEnabledRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ UpdateConfigurationSetReputationMetricsEnabledRequest::UpdateConfigurationSetRep
 }
 
 /*!
- * @brief  Constructs a new UpdateConfigurationSetReputationMetricsEnabledRequest object.
+ * Constructs a UpdateConfigurationSetReputationMetricsEnabledRequest object.
  */
 UpdateConfigurationSetReputationMetricsEnabledRequest::UpdateConfigurationSetReputationMetricsEnabledRequest()
     : SESRequest(new UpdateConfigurationSetReputationMetricsEnabledRequestPrivate(SESRequest::UpdateConfigurationSetReputationMetricsEnabledAction, this))
@@ -77,14 +74,9 @@ bool UpdateConfigurationSetReputationMetricsEnabledRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateConfigurationSetReputationMetricsEnabledResponse object.
+ * Returns a UpdateConfigurationSetReputationMetricsEnabledResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateConfigurationSetReputationMetricsEnabledResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SESClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateConfigurationSetReputationMetricsEnabledRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * UpdateConfigurationSetReputationMetricsEnable
 }
 
 /*!
- * @internal
+ * \class QtAws::SES::UpdateConfigurationSetReputationMetricsEnabledRequestPrivate
+ * \brief The UpdateConfigurationSetReputationMetricsEnabledRequestPrivate class provides private implementation for UpdateConfigurationSetReputationMetricsEnabledRequest.
+ * \internal
  *
- * @class  UpdateConfigurationSetReputationMetricsEnabledRequestPrivate
- *
- * @brief  Private implementation for UpdateConfigurationSetReputationMetricsEnabledRequest.
+ * \inmodule QtAwsSES
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateConfigurationSetReputationMetricsEnabledRequestPrivate object.
- *
- * @param  action  SES action being performed.
- * @param  q       Pointer to this object's public UpdateConfigurationSetReputationMetricsEnabledRequest instance.
+ * Constructs a UpdateConfigurationSetReputationMetricsEnabledRequestPrivate object for SES \a action with,
+ * public implementation \a q.
  */
 UpdateConfigurationSetReputationMetricsEnabledRequestPrivate::UpdateConfigurationSetReputationMetricsEnabledRequestPrivate(
     const SESRequest::Action action, UpdateConfigurationSetReputationMetricsEnabledRequest * const q)
@@ -115,15 +104,10 @@ UpdateConfigurationSetReputationMetricsEnabledRequestPrivate::UpdateConfiguratio
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateConfigurationSetReputationMetricsEnabledRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateConfigurationSetReputationMetricsEnabledRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateConfigurationSetReputationMetricsEnabledRequest instance.
  */
 UpdateConfigurationSetReputationMetricsEnabledRequestPrivate::UpdateConfigurationSetReputationMetricsEnabledRequestPrivate(
     const UpdateConfigurationSetReputationMetricsEnabledRequestPrivate &other, UpdateConfigurationSetReputationMetricsEnabledRequest * const q)

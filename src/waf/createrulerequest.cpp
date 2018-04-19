@@ -27,10 +27,9 @@ namespace WAF {
 
 /*!
  * \class QtAws::WAF::CreateRuleRequest
- *
  * \brief The CreateRuleRequest class provides an interface for WAF CreateRule requests.
  *
- * \ingroup WAF
+ * \inmodule QtAwsWAF
  *
  *  This is the <i>AWS WAF API Reference</i> for using AWS WAF with Amazon CloudFront. The AWS WAF actions and data types
  *  listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data
@@ -42,9 +41,7 @@ namespace WAF {
  */
 
 /*!
- * @brief  Constructs a new CreateRuleRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateRuleRequest::CreateRuleRequest(const CreateRuleRequest &other)
     : WAFRequest(new CreateRuleRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ CreateRuleRequest::CreateRuleRequest(const CreateRuleRequest &other)
 }
 
 /*!
- * @brief  Constructs a new CreateRuleRequest object.
+ * Constructs a CreateRuleRequest object.
  */
 CreateRuleRequest::CreateRuleRequest()
     : WAFRequest(new CreateRuleRequestPrivate(WAFRequest::CreateRuleAction, this))
@@ -71,14 +68,9 @@ bool CreateRuleRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateRuleResponse object.
+ * Returns a CreateRuleResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateRuleResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WAFClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateRuleRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * CreateRuleRequest::response(QNetworkReply * c
 }
 
 /*!
- * @internal
+ * \class QtAws::WAF::CreateRuleRequestPrivate
+ * \brief The CreateRuleRequestPrivate class provides private implementation for CreateRuleRequest.
+ * \internal
  *
- * @class  CreateRuleRequestPrivate
- *
- * @brief  Private implementation for CreateRuleRequest.
+ * \inmodule QtAwsWAF
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateRuleRequestPrivate object.
- *
- * @param  action  WAF action being performed.
- * @param  q       Pointer to this object's public CreateRuleRequest instance.
+ * Constructs a CreateRuleRequestPrivate object for WAF \a action with,
+ * public implementation \a q.
  */
 CreateRuleRequestPrivate::CreateRuleRequestPrivate(
     const WAFRequest::Action action, CreateRuleRequest * const q)
@@ -109,15 +98,10 @@ CreateRuleRequestPrivate::CreateRuleRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateRuleRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateRuleRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateRuleRequest instance.
  */
 CreateRuleRequestPrivate::CreateRuleRequestPrivate(
     const CreateRuleRequestPrivate &other, CreateRuleRequest * const q)

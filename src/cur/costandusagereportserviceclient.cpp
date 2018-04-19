@@ -34,6 +34,9 @@
 /*!
  * \namespace QtAws::CostandUsageReportService
  * \brief The QtAws::CostandUsageReportService contains stuff...
+ *
+ * \inmodule QtAwsCostandUsageReportService
+ *
  * @todo Move this to a separate template file.
  */
 
@@ -83,7 +86,7 @@ CostandUsageReportServiceClient::CostandUsageReportServiceClient(
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * \a  AwsEndpoint::getEndpoint()
+ * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
 CostandUsageReportServiceClient::CostandUsageReportServiceClient(
     const QUrl &endpoint,

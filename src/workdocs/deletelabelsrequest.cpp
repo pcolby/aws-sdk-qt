@@ -27,10 +27,9 @@ namespace WorkDocs {
 
 /*!
  * \class QtAws::WorkDocs::DeleteLabelsRequest
- *
  * \brief The DeleteLabelsRequest class provides an interface for WorkDocs DeleteLabels requests.
  *
- * \ingroup WorkDocs
+ * \inmodule QtAwsWorkDocs
  *
  *  The WorkDocs API is designed for the following use
  * 
@@ -66,9 +65,7 @@ namespace WorkDocs {
  */
 
 /*!
- * @brief  Constructs a new DeleteLabelsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteLabelsRequest::DeleteLabelsRequest(const DeleteLabelsRequest &other)
     : WorkDocsRequest(new DeleteLabelsRequestPrivate(*other.d_func(), this))
@@ -77,7 +74,7 @@ DeleteLabelsRequest::DeleteLabelsRequest(const DeleteLabelsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DeleteLabelsRequest object.
+ * Constructs a DeleteLabelsRequest object.
  */
 DeleteLabelsRequest::DeleteLabelsRequest()
     : WorkDocsRequest(new DeleteLabelsRequestPrivate(WorkDocsRequest::DeleteLabelsAction, this))
@@ -95,14 +92,9 @@ bool DeleteLabelsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteLabelsResponse object.
+ * Returns a DeleteLabelsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteLabelsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WorkDocsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteLabelsRequest::response(QNetworkReply * const reply) const
 {
@@ -110,20 +102,17 @@ QtAws::Core::AwsAbstractResponse * DeleteLabelsRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::WorkDocs::DeleteLabelsRequestPrivate
+ * \brief The DeleteLabelsRequestPrivate class provides private implementation for DeleteLabelsRequest.
+ * \internal
  *
- * @class  DeleteLabelsRequestPrivate
- *
- * @brief  Private implementation for DeleteLabelsRequest.
+ * \inmodule QtAwsWorkDocs
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteLabelsRequestPrivate object.
- *
- * @param  action  WorkDocs action being performed.
- * @param  q       Pointer to this object's public DeleteLabelsRequest instance.
+ * Constructs a DeleteLabelsRequestPrivate object for WorkDocs \a action with,
+ * public implementation \a q.
  */
 DeleteLabelsRequestPrivate::DeleteLabelsRequestPrivate(
     const WorkDocsRequest::Action action, DeleteLabelsRequest * const q)
@@ -133,15 +122,10 @@ DeleteLabelsRequestPrivate::DeleteLabelsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteLabelsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteLabelsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteLabelsRequest instance.
  */
 DeleteLabelsRequestPrivate::DeleteLabelsRequestPrivate(
     const DeleteLabelsRequestPrivate &other, DeleteLabelsRequest * const q)

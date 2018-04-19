@@ -27,10 +27,9 @@ namespace AppSync {
 
 /*!
  * \class QtAws::AppSync::DeleteTypeRequest
- *
  * \brief The DeleteTypeRequest class provides an interface for AppSync DeleteType requests.
  *
- * \ingroup AppSync
+ * \inmodule QtAwsAppSync
  *
  *  AWS AppSync provides API actions for creating and interacting with data sources using GraphQL from your
  *
@@ -38,9 +37,7 @@ namespace AppSync {
  */
 
 /*!
- * @brief  Constructs a new DeleteTypeRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteTypeRequest::DeleteTypeRequest(const DeleteTypeRequest &other)
     : AppSyncRequest(new DeleteTypeRequestPrivate(*other.d_func(), this))
@@ -49,7 +46,7 @@ DeleteTypeRequest::DeleteTypeRequest(const DeleteTypeRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DeleteTypeRequest object.
+ * Constructs a DeleteTypeRequest object.
  */
 DeleteTypeRequest::DeleteTypeRequest()
     : AppSyncRequest(new DeleteTypeRequestPrivate(AppSyncRequest::DeleteTypeAction, this))
@@ -67,14 +64,9 @@ bool DeleteTypeRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteTypeResponse object.
+ * Returns a DeleteTypeResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteTypeResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AppSyncClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteTypeRequest::response(QNetworkReply * const reply) const
 {
@@ -82,20 +74,17 @@ QtAws::Core::AwsAbstractResponse * DeleteTypeRequest::response(QNetworkReply * c
 }
 
 /*!
- * @internal
+ * \class QtAws::AppSync::DeleteTypeRequestPrivate
+ * \brief The DeleteTypeRequestPrivate class provides private implementation for DeleteTypeRequest.
+ * \internal
  *
- * @class  DeleteTypeRequestPrivate
- *
- * @brief  Private implementation for DeleteTypeRequest.
+ * \inmodule QtAwsAppSync
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteTypeRequestPrivate object.
- *
- * @param  action  AppSync action being performed.
- * @param  q       Pointer to this object's public DeleteTypeRequest instance.
+ * Constructs a DeleteTypeRequestPrivate object for AppSync \a action with,
+ * public implementation \a q.
  */
 DeleteTypeRequestPrivate::DeleteTypeRequestPrivate(
     const AppSyncRequest::Action action, DeleteTypeRequest * const q)
@@ -105,15 +94,10 @@ DeleteTypeRequestPrivate::DeleteTypeRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteTypeRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteTypeRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteTypeRequest instance.
  */
 DeleteTypeRequestPrivate::DeleteTypeRequestPrivate(
     const DeleteTypeRequestPrivate &other, DeleteTypeRequest * const q)

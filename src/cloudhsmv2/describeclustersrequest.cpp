@@ -27,10 +27,9 @@ namespace CloudHSMV2 {
 
 /*!
  * \class QtAws::CloudHSMV2::DescribeClustersRequest
- *
  * \brief The DescribeClustersRequest class provides an interface for CloudHSMV2 DescribeClusters requests.
  *
- * \ingroup CloudHSMV2
+ * \inmodule QtAwsCloudHSMV2
  *
  *  For more information about AWS CloudHSM, see <a href="http://aws.amazon.com/cloudhsm/">AWS CloudHSM</a> and the <a
  *  href="http://docs.aws.amazon.com/cloudhsm/latest/userguide/">AWS CloudHSM User
@@ -39,9 +38,7 @@ namespace CloudHSMV2 {
  */
 
 /*!
- * @brief  Constructs a new DescribeClustersRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeClustersRequest::DescribeClustersRequest(const DescribeClustersRequest &other)
     : CloudHSMV2Request(new DescribeClustersRequestPrivate(*other.d_func(), this))
@@ -50,7 +47,7 @@ DescribeClustersRequest::DescribeClustersRequest(const DescribeClustersRequest &
 }
 
 /*!
- * @brief  Constructs a new DescribeClustersRequest object.
+ * Constructs a DescribeClustersRequest object.
  */
 DescribeClustersRequest::DescribeClustersRequest()
     : CloudHSMV2Request(new DescribeClustersRequestPrivate(CloudHSMV2Request::DescribeClustersAction, this))
@@ -68,14 +65,9 @@ bool DescribeClustersRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeClustersResponse object.
+ * Returns a DescribeClustersResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeClustersResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudHSMV2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeClustersRequest::response(QNetworkReply * const reply) const
 {
@@ -83,20 +75,17 @@ QtAws::Core::AwsAbstractResponse * DescribeClustersRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudHSMV2::DescribeClustersRequestPrivate
+ * \brief The DescribeClustersRequestPrivate class provides private implementation for DescribeClustersRequest.
+ * \internal
  *
- * @class  DescribeClustersRequestPrivate
- *
- * @brief  Private implementation for DescribeClustersRequest.
+ * \inmodule QtAwsCloudHSMV2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeClustersRequestPrivate object.
- *
- * @param  action  CloudHSMV2 action being performed.
- * @param  q       Pointer to this object's public DescribeClustersRequest instance.
+ * Constructs a DescribeClustersRequestPrivate object for CloudHSMV2 \a action with,
+ * public implementation \a q.
  */
 DescribeClustersRequestPrivate::DescribeClustersRequestPrivate(
     const CloudHSMV2Request::Action action, DescribeClustersRequest * const q)
@@ -106,15 +95,10 @@ DescribeClustersRequestPrivate::DescribeClustersRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeClustersRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeClustersRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeClustersRequest instance.
  */
 DescribeClustersRequestPrivate::DescribeClustersRequestPrivate(
     const DescribeClustersRequestPrivate &other, DescribeClustersRequest * const q)

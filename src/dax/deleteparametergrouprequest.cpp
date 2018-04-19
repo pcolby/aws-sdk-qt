@@ -27,10 +27,9 @@ namespace DAX {
 
 /*!
  * \class QtAws::DAX::DeleteParameterGroupRequest
- *
  * \brief The DeleteParameterGroupRequest class provides an interface for DAX DeleteParameterGroup requests.
  *
- * \ingroup DAX
+ * \inmodule QtAwsDAX
  *
  *  DAX is a managed caching service engineered for Amazon DynamoDB. DAX dramatically speeds up database reads by caching
  *  frequently-accessed data from DynamoDB, so applications can access that data with sub-millisecond latency. You can
@@ -41,9 +40,7 @@ namespace DAX {
  */
 
 /*!
- * @brief  Constructs a new DeleteParameterGroupRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteParameterGroupRequest::DeleteParameterGroupRequest(const DeleteParameterGroupRequest &other)
     : DAXRequest(new DeleteParameterGroupRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ DeleteParameterGroupRequest::DeleteParameterGroupRequest(const DeleteParameterGr
 }
 
 /*!
- * @brief  Constructs a new DeleteParameterGroupRequest object.
+ * Constructs a DeleteParameterGroupRequest object.
  */
 DeleteParameterGroupRequest::DeleteParameterGroupRequest()
     : DAXRequest(new DeleteParameterGroupRequestPrivate(DAXRequest::DeleteParameterGroupAction, this))
@@ -70,14 +67,9 @@ bool DeleteParameterGroupRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteParameterGroupResponse object.
+ * Returns a DeleteParameterGroupResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteParameterGroupResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DAXClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteParameterGroupRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * DeleteParameterGroupRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::DAX::DeleteParameterGroupRequestPrivate
+ * \brief The DeleteParameterGroupRequestPrivate class provides private implementation for DeleteParameterGroupRequest.
+ * \internal
  *
- * @class  DeleteParameterGroupRequestPrivate
- *
- * @brief  Private implementation for DeleteParameterGroupRequest.
+ * \inmodule QtAwsDAX
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteParameterGroupRequestPrivate object.
- *
- * @param  action  DAX action being performed.
- * @param  q       Pointer to this object's public DeleteParameterGroupRequest instance.
+ * Constructs a DeleteParameterGroupRequestPrivate object for DAX \a action with,
+ * public implementation \a q.
  */
 DeleteParameterGroupRequestPrivate::DeleteParameterGroupRequestPrivate(
     const DAXRequest::Action action, DeleteParameterGroupRequest * const q)
@@ -108,15 +97,10 @@ DeleteParameterGroupRequestPrivate::DeleteParameterGroupRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteParameterGroupRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteParameterGroupRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteParameterGroupRequest instance.
  */
 DeleteParameterGroupRequestPrivate::DeleteParameterGroupRequestPrivate(
     const DeleteParameterGroupRequestPrivate &other, DeleteParameterGroupRequest * const q)

@@ -27,10 +27,9 @@ namespace DynamoDB {
 
 /*!
  * \class QtAws::DynamoDB::PutItemRequest
- *
  * \brief The PutItemRequest class provides an interface for DynamoDB PutItem requests.
  *
- * \ingroup DynamoDB
+ * \inmodule QtAwsDynamoDB
  *
  *  <fullname>Amazon DynamoDB</fullname>
  * 
@@ -56,9 +55,7 @@ namespace DynamoDB {
  */
 
 /*!
- * @brief  Constructs a new PutItemRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 PutItemRequest::PutItemRequest(const PutItemRequest &other)
     : DynamoDBRequest(new PutItemRequestPrivate(*other.d_func(), this))
@@ -67,7 +64,7 @@ PutItemRequest::PutItemRequest(const PutItemRequest &other)
 }
 
 /*!
- * @brief  Constructs a new PutItemRequest object.
+ * Constructs a PutItemRequest object.
  */
 PutItemRequest::PutItemRequest()
     : DynamoDBRequest(new PutItemRequestPrivate(DynamoDBRequest::PutItemAction, this))
@@ -85,14 +82,9 @@ bool PutItemRequest::isValid() const
 
 
 /*!
- * @brief  Construct an PutItemResponse object.
+ * Returns a PutItemResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An PutItemResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DynamoDBClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * PutItemRequest::response(QNetworkReply * const reply) const
 {
@@ -100,20 +92,17 @@ QtAws::Core::AwsAbstractResponse * PutItemRequest::response(QNetworkReply * cons
 }
 
 /*!
- * @internal
+ * \class QtAws::DynamoDB::PutItemRequestPrivate
+ * \brief The PutItemRequestPrivate class provides private implementation for PutItemRequest.
+ * \internal
  *
- * @class  PutItemRequestPrivate
- *
- * @brief  Private implementation for PutItemRequest.
+ * \inmodule QtAwsDynamoDB
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new PutItemRequestPrivate object.
- *
- * @param  action  DynamoDB action being performed.
- * @param  q       Pointer to this object's public PutItemRequest instance.
+ * Constructs a PutItemRequestPrivate object for DynamoDB \a action with,
+ * public implementation \a q.
  */
 PutItemRequestPrivate::PutItemRequestPrivate(
     const DynamoDBRequest::Action action, PutItemRequest * const q)
@@ -123,15 +112,10 @@ PutItemRequestPrivate::PutItemRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutItemRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the PutItemRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public PutItemRequest instance.
  */
 PutItemRequestPrivate::PutItemRequestPrivate(
     const PutItemRequestPrivate &other, PutItemRequest * const q)

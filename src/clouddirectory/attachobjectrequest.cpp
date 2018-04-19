@@ -27,10 +27,9 @@ namespace CloudDirectory {
 
 /*!
  * \class QtAws::CloudDirectory::AttachObjectRequest
- *
  * \brief The AttachObjectRequest class provides an interface for CloudDirectory AttachObject requests.
  *
- * \ingroup CloudDirectory
+ * \inmodule QtAwsCloudDirectory
  *
  *  <fullname>Amazon Cloud Directory</fullname>
  * 
@@ -44,9 +43,7 @@ namespace CloudDirectory {
  */
 
 /*!
- * @brief  Constructs a new AttachObjectRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AttachObjectRequest::AttachObjectRequest(const AttachObjectRequest &other)
     : CloudDirectoryRequest(new AttachObjectRequestPrivate(*other.d_func(), this))
@@ -55,7 +52,7 @@ AttachObjectRequest::AttachObjectRequest(const AttachObjectRequest &other)
 }
 
 /*!
- * @brief  Constructs a new AttachObjectRequest object.
+ * Constructs a AttachObjectRequest object.
  */
 AttachObjectRequest::AttachObjectRequest()
     : CloudDirectoryRequest(new AttachObjectRequestPrivate(CloudDirectoryRequest::AttachObjectAction, this))
@@ -73,14 +70,9 @@ bool AttachObjectRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AttachObjectResponse object.
+ * Returns a AttachObjectResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AttachObjectResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudDirectoryClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AttachObjectRequest::response(QNetworkReply * const reply) const
 {
@@ -88,20 +80,17 @@ QtAws::Core::AwsAbstractResponse * AttachObjectRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudDirectory::AttachObjectRequestPrivate
+ * \brief The AttachObjectRequestPrivate class provides private implementation for AttachObjectRequest.
+ * \internal
  *
- * @class  AttachObjectRequestPrivate
- *
- * @brief  Private implementation for AttachObjectRequest.
+ * \inmodule QtAwsCloudDirectory
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AttachObjectRequestPrivate object.
- *
- * @param  action  CloudDirectory action being performed.
- * @param  q       Pointer to this object's public AttachObjectRequest instance.
+ * Constructs a AttachObjectRequestPrivate object for CloudDirectory \a action with,
+ * public implementation \a q.
  */
 AttachObjectRequestPrivate::AttachObjectRequestPrivate(
     const CloudDirectoryRequest::Action action, AttachObjectRequest * const q)
@@ -111,15 +100,10 @@ AttachObjectRequestPrivate::AttachObjectRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AttachObjectRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AttachObjectRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AttachObjectRequest instance.
  */
 AttachObjectRequestPrivate::AttachObjectRequestPrivate(
     const AttachObjectRequestPrivate &other, AttachObjectRequest * const q)

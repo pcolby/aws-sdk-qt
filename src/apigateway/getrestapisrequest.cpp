@@ -27,10 +27,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::GetRestApisRequest
- *
  * \brief The GetRestApisRequest class provides an interface for APIGateway GetRestApis requests.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -42,9 +41,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new GetRestApisRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetRestApisRequest::GetRestApisRequest(const GetRestApisRequest &other)
     : APIGatewayRequest(new GetRestApisRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ GetRestApisRequest::GetRestApisRequest(const GetRestApisRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetRestApisRequest object.
+ * Constructs a GetRestApisRequest object.
  */
 GetRestApisRequest::GetRestApisRequest()
     : APIGatewayRequest(new GetRestApisRequestPrivate(APIGatewayRequest::GetRestApisAction, this))
@@ -71,14 +68,9 @@ bool GetRestApisRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetRestApisResponse object.
+ * Returns a GetRestApisResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetRestApisResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  APIGatewayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetRestApisRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * GetRestApisRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::APIGateway::GetRestApisRequestPrivate
+ * \brief The GetRestApisRequestPrivate class provides private implementation for GetRestApisRequest.
+ * \internal
  *
- * @class  GetRestApisRequestPrivate
- *
- * @brief  Private implementation for GetRestApisRequest.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetRestApisRequestPrivate object.
- *
- * @param  action  APIGateway action being performed.
- * @param  q       Pointer to this object's public GetRestApisRequest instance.
+ * Constructs a GetRestApisRequestPrivate object for APIGateway \a action with,
+ * public implementation \a q.
  */
 GetRestApisRequestPrivate::GetRestApisRequestPrivate(
     const APIGatewayRequest::Action action, GetRestApisRequest * const q)
@@ -109,15 +98,10 @@ GetRestApisRequestPrivate::GetRestApisRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetRestApisRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetRestApisRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetRestApisRequest instance.
  */
 GetRestApisRequestPrivate::GetRestApisRequestPrivate(
     const GetRestApisRequestPrivate &other, GetRestApisRequest * const q)

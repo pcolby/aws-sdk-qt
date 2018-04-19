@@ -27,10 +27,9 @@ namespace StorageGateway {
 
 /*!
  * \class QtAws::StorageGateway::DescribeWorkingStorageRequest
- *
  * \brief The DescribeWorkingStorageRequest class provides an interface for StorageGateway DescribeWorkingStorage requests.
  *
- * \ingroup StorageGateway
+ * \inmodule QtAwsStorageGateway
  *
  *  <fullname>AWS Storage Gateway Service</fullname>
  * 
@@ -106,9 +105,7 @@ namespace StorageGateway {
  */
 
 /*!
- * @brief  Constructs a new DescribeWorkingStorageRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeWorkingStorageRequest::DescribeWorkingStorageRequest(const DescribeWorkingStorageRequest &other)
     : StorageGatewayRequest(new DescribeWorkingStorageRequestPrivate(*other.d_func(), this))
@@ -117,7 +114,7 @@ DescribeWorkingStorageRequest::DescribeWorkingStorageRequest(const DescribeWorki
 }
 
 /*!
- * @brief  Constructs a new DescribeWorkingStorageRequest object.
+ * Constructs a DescribeWorkingStorageRequest object.
  */
 DescribeWorkingStorageRequest::DescribeWorkingStorageRequest()
     : StorageGatewayRequest(new DescribeWorkingStorageRequestPrivate(StorageGatewayRequest::DescribeWorkingStorageAction, this))
@@ -135,14 +132,9 @@ bool DescribeWorkingStorageRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeWorkingStorageResponse object.
+ * Returns a DescribeWorkingStorageResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeWorkingStorageResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  StorageGatewayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeWorkingStorageRequest::response(QNetworkReply * const reply) const
 {
@@ -150,20 +142,17 @@ QtAws::Core::AwsAbstractResponse * DescribeWorkingStorageRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::StorageGateway::DescribeWorkingStorageRequestPrivate
+ * \brief The DescribeWorkingStorageRequestPrivate class provides private implementation for DescribeWorkingStorageRequest.
+ * \internal
  *
- * @class  DescribeWorkingStorageRequestPrivate
- *
- * @brief  Private implementation for DescribeWorkingStorageRequest.
+ * \inmodule QtAwsStorageGateway
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeWorkingStorageRequestPrivate object.
- *
- * @param  action  StorageGateway action being performed.
- * @param  q       Pointer to this object's public DescribeWorkingStorageRequest instance.
+ * Constructs a DescribeWorkingStorageRequestPrivate object for StorageGateway \a action with,
+ * public implementation \a q.
  */
 DescribeWorkingStorageRequestPrivate::DescribeWorkingStorageRequestPrivate(
     const StorageGatewayRequest::Action action, DescribeWorkingStorageRequest * const q)
@@ -173,15 +162,10 @@ DescribeWorkingStorageRequestPrivate::DescribeWorkingStorageRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeWorkingStorageRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeWorkingStorageRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeWorkingStorageRequest instance.
  */
 DescribeWorkingStorageRequestPrivate::DescribeWorkingStorageRequestPrivate(
     const DescribeWorkingStorageRequestPrivate &other, DescribeWorkingStorageRequest * const q)

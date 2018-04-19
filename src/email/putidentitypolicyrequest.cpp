@@ -27,10 +27,9 @@ namespace SES {
 
 /*!
  * \class QtAws::SES::PutIdentityPolicyRequest
- *
  * \brief The PutIdentityPolicyRequest class provides an interface for SES PutIdentityPolicy requests.
  *
- * \ingroup SES
+ * \inmodule QtAwsSES
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -48,9 +47,7 @@ namespace SES {
  */
 
 /*!
- * @brief  Constructs a new PutIdentityPolicyRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 PutIdentityPolicyRequest::PutIdentityPolicyRequest(const PutIdentityPolicyRequest &other)
     : SESRequest(new PutIdentityPolicyRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ PutIdentityPolicyRequest::PutIdentityPolicyRequest(const PutIdentityPolicyReques
 }
 
 /*!
- * @brief  Constructs a new PutIdentityPolicyRequest object.
+ * Constructs a PutIdentityPolicyRequest object.
  */
 PutIdentityPolicyRequest::PutIdentityPolicyRequest()
     : SESRequest(new PutIdentityPolicyRequestPrivate(SESRequest::PutIdentityPolicyAction, this))
@@ -77,14 +74,9 @@ bool PutIdentityPolicyRequest::isValid() const
 
 
 /*!
- * @brief  Construct an PutIdentityPolicyResponse object.
+ * Returns a PutIdentityPolicyResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An PutIdentityPolicyResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SESClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * PutIdentityPolicyRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * PutIdentityPolicyRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::SES::PutIdentityPolicyRequestPrivate
+ * \brief The PutIdentityPolicyRequestPrivate class provides private implementation for PutIdentityPolicyRequest.
+ * \internal
  *
- * @class  PutIdentityPolicyRequestPrivate
- *
- * @brief  Private implementation for PutIdentityPolicyRequest.
+ * \inmodule QtAwsSES
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new PutIdentityPolicyRequestPrivate object.
- *
- * @param  action  SES action being performed.
- * @param  q       Pointer to this object's public PutIdentityPolicyRequest instance.
+ * Constructs a PutIdentityPolicyRequestPrivate object for SES \a action with,
+ * public implementation \a q.
  */
 PutIdentityPolicyRequestPrivate::PutIdentityPolicyRequestPrivate(
     const SESRequest::Action action, PutIdentityPolicyRequest * const q)
@@ -115,15 +104,10 @@ PutIdentityPolicyRequestPrivate::PutIdentityPolicyRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutIdentityPolicyRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the PutIdentityPolicyRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public PutIdentityPolicyRequest instance.
  */
 PutIdentityPolicyRequestPrivate::PutIdentityPolicyRequestPrivate(
     const PutIdentityPolicyRequestPrivate &other, PutIdentityPolicyRequest * const q)

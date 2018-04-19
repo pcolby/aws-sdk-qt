@@ -27,10 +27,9 @@ namespace AutoScaling {
 
 /*!
  * \class QtAws::AutoScaling::CreateLaunchConfigurationRequest
- *
  * \brief The CreateLaunchConfigurationRequest class provides an interface for AutoScaling CreateLaunchConfiguration requests.
  *
- * \ingroup AutoScaling
+ * \inmodule QtAwsAutoScaling
  *
  *  <fullname>Amazon EC2 Auto Scaling</fullname>
  * 
@@ -42,9 +41,7 @@ namespace AutoScaling {
  */
 
 /*!
- * @brief  Constructs a new CreateLaunchConfigurationRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateLaunchConfigurationRequest::CreateLaunchConfigurationRequest(const CreateLaunchConfigurationRequest &other)
     : AutoScalingRequest(new CreateLaunchConfigurationRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ CreateLaunchConfigurationRequest::CreateLaunchConfigurationRequest(const CreateL
 }
 
 /*!
- * @brief  Constructs a new CreateLaunchConfigurationRequest object.
+ * Constructs a CreateLaunchConfigurationRequest object.
  */
 CreateLaunchConfigurationRequest::CreateLaunchConfigurationRequest()
     : AutoScalingRequest(new CreateLaunchConfigurationRequestPrivate(AutoScalingRequest::CreateLaunchConfigurationAction, this))
@@ -71,14 +68,9 @@ bool CreateLaunchConfigurationRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateLaunchConfigurationResponse object.
+ * Returns a CreateLaunchConfigurationResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateLaunchConfigurationResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AutoScalingClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateLaunchConfigurationRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * CreateLaunchConfigurationRequest::response(QN
 }
 
 /*!
- * @internal
+ * \class QtAws::AutoScaling::CreateLaunchConfigurationRequestPrivate
+ * \brief The CreateLaunchConfigurationRequestPrivate class provides private implementation for CreateLaunchConfigurationRequest.
+ * \internal
  *
- * @class  CreateLaunchConfigurationRequestPrivate
- *
- * @brief  Private implementation for CreateLaunchConfigurationRequest.
+ * \inmodule QtAwsAutoScaling
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateLaunchConfigurationRequestPrivate object.
- *
- * @param  action  AutoScaling action being performed.
- * @param  q       Pointer to this object's public CreateLaunchConfigurationRequest instance.
+ * Constructs a CreateLaunchConfigurationRequestPrivate object for AutoScaling \a action with,
+ * public implementation \a q.
  */
 CreateLaunchConfigurationRequestPrivate::CreateLaunchConfigurationRequestPrivate(
     const AutoScalingRequest::Action action, CreateLaunchConfigurationRequest * const q)
@@ -109,15 +98,10 @@ CreateLaunchConfigurationRequestPrivate::CreateLaunchConfigurationRequestPrivate
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateLaunchConfigurationRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateLaunchConfigurationRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateLaunchConfigurationRequest instance.
  */
 CreateLaunchConfigurationRequestPrivate::CreateLaunchConfigurationRequestPrivate(
     const CreateLaunchConfigurationRequestPrivate &other, CreateLaunchConfigurationRequest * const q)

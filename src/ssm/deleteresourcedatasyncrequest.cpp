@@ -27,10 +27,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::DeleteResourceDataSyncRequest
- *
  * \brief The DeleteResourceDataSyncRequest class provides an interface for SSM DeleteResourceDataSync requests.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -61,9 +60,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new DeleteResourceDataSyncRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteResourceDataSyncRequest::DeleteResourceDataSyncRequest(const DeleteResourceDataSyncRequest &other)
     : SSMRequest(new DeleteResourceDataSyncRequestPrivate(*other.d_func(), this))
@@ -72,7 +69,7 @@ DeleteResourceDataSyncRequest::DeleteResourceDataSyncRequest(const DeleteResourc
 }
 
 /*!
- * @brief  Constructs a new DeleteResourceDataSyncRequest object.
+ * Constructs a DeleteResourceDataSyncRequest object.
  */
 DeleteResourceDataSyncRequest::DeleteResourceDataSyncRequest()
     : SSMRequest(new DeleteResourceDataSyncRequestPrivate(SSMRequest::DeleteResourceDataSyncAction, this))
@@ -90,14 +87,9 @@ bool DeleteResourceDataSyncRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteResourceDataSyncResponse object.
+ * Returns a DeleteResourceDataSyncResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteResourceDataSyncResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SSMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteResourceDataSyncRequest::response(QNetworkReply * const reply) const
 {
@@ -105,20 +97,17 @@ QtAws::Core::AwsAbstractResponse * DeleteResourceDataSyncRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::SSM::DeleteResourceDataSyncRequestPrivate
+ * \brief The DeleteResourceDataSyncRequestPrivate class provides private implementation for DeleteResourceDataSyncRequest.
+ * \internal
  *
- * @class  DeleteResourceDataSyncRequestPrivate
- *
- * @brief  Private implementation for DeleteResourceDataSyncRequest.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteResourceDataSyncRequestPrivate object.
- *
- * @param  action  SSM action being performed.
- * @param  q       Pointer to this object's public DeleteResourceDataSyncRequest instance.
+ * Constructs a DeleteResourceDataSyncRequestPrivate object for SSM \a action with,
+ * public implementation \a q.
  */
 DeleteResourceDataSyncRequestPrivate::DeleteResourceDataSyncRequestPrivate(
     const SSMRequest::Action action, DeleteResourceDataSyncRequest * const q)
@@ -128,15 +117,10 @@ DeleteResourceDataSyncRequestPrivate::DeleteResourceDataSyncRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteResourceDataSyncRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteResourceDataSyncRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteResourceDataSyncRequest instance.
  */
 DeleteResourceDataSyncRequestPrivate::DeleteResourceDataSyncRequestPrivate(
     const DeleteResourceDataSyncRequestPrivate &other, DeleteResourceDataSyncRequest * const q)

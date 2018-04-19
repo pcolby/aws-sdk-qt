@@ -27,10 +27,9 @@ namespace CodeDeploy {
 
 /*!
  * \class QtAws::CodeDeploy::DeleteDeploymentGroupRequest
- *
  * \brief The DeleteDeploymentGroupRequest class provides an interface for CodeDeploy DeleteDeploymentGroup requests.
  *
- * \ingroup CodeDeploy
+ * \inmodule QtAwsCodeDeploy
  *
  *  <fullname>AWS CodeDeploy</fullname>
  * 
@@ -118,9 +117,7 @@ namespace CodeDeploy {
  */
 
 /*!
- * @brief  Constructs a new DeleteDeploymentGroupRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteDeploymentGroupRequest::DeleteDeploymentGroupRequest(const DeleteDeploymentGroupRequest &other)
     : CodeDeployRequest(new DeleteDeploymentGroupRequestPrivate(*other.d_func(), this))
@@ -129,7 +126,7 @@ DeleteDeploymentGroupRequest::DeleteDeploymentGroupRequest(const DeleteDeploymen
 }
 
 /*!
- * @brief  Constructs a new DeleteDeploymentGroupRequest object.
+ * Constructs a DeleteDeploymentGroupRequest object.
  */
 DeleteDeploymentGroupRequest::DeleteDeploymentGroupRequest()
     : CodeDeployRequest(new DeleteDeploymentGroupRequestPrivate(CodeDeployRequest::DeleteDeploymentGroupAction, this))
@@ -147,14 +144,9 @@ bool DeleteDeploymentGroupRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteDeploymentGroupResponse object.
+ * Returns a DeleteDeploymentGroupResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteDeploymentGroupResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CodeDeployClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteDeploymentGroupRequest::response(QNetworkReply * const reply) const
 {
@@ -162,20 +154,17 @@ QtAws::Core::AwsAbstractResponse * DeleteDeploymentGroupRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::CodeDeploy::DeleteDeploymentGroupRequestPrivate
+ * \brief The DeleteDeploymentGroupRequestPrivate class provides private implementation for DeleteDeploymentGroupRequest.
+ * \internal
  *
- * @class  DeleteDeploymentGroupRequestPrivate
- *
- * @brief  Private implementation for DeleteDeploymentGroupRequest.
+ * \inmodule QtAwsCodeDeploy
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteDeploymentGroupRequestPrivate object.
- *
- * @param  action  CodeDeploy action being performed.
- * @param  q       Pointer to this object's public DeleteDeploymentGroupRequest instance.
+ * Constructs a DeleteDeploymentGroupRequestPrivate object for CodeDeploy \a action with,
+ * public implementation \a q.
  */
 DeleteDeploymentGroupRequestPrivate::DeleteDeploymentGroupRequestPrivate(
     const CodeDeployRequest::Action action, DeleteDeploymentGroupRequest * const q)
@@ -185,15 +174,10 @@ DeleteDeploymentGroupRequestPrivate::DeleteDeploymentGroupRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteDeploymentGroupRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteDeploymentGroupRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteDeploymentGroupRequest instance.
  */
 DeleteDeploymentGroupRequestPrivate::DeleteDeploymentGroupRequestPrivate(
     const DeleteDeploymentGroupRequestPrivate &other, DeleteDeploymentGroupRequest * const q)

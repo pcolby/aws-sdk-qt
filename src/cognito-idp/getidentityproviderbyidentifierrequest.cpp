@@ -27,10 +27,9 @@ namespace CognitoIdentityProvider {
 
 /*!
  * \class QtAws::CognitoIdentityProvider::GetIdentityProviderByIdentifierRequest
- *
  * \brief The GetIdentityProviderByIdentifierRequest class provides an interface for CognitoIdentityProvider GetIdentityProviderByIdentifier requests.
  *
- * \ingroup CognitoIdentityProvider
+ * \inmodule QtAwsCognitoIdentityProvider
  *
  *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
  *  authenticate a user to obtain tokens related to user identity and access
@@ -47,9 +46,7 @@ namespace CognitoIdentityProvider {
  */
 
 /*!
- * @brief  Constructs a new GetIdentityProviderByIdentifierRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetIdentityProviderByIdentifierRequest::GetIdentityProviderByIdentifierRequest(const GetIdentityProviderByIdentifierRequest &other)
     : CognitoIdentityProviderRequest(new GetIdentityProviderByIdentifierRequestPrivate(*other.d_func(), this))
@@ -58,7 +55,7 @@ GetIdentityProviderByIdentifierRequest::GetIdentityProviderByIdentifierRequest(c
 }
 
 /*!
- * @brief  Constructs a new GetIdentityProviderByIdentifierRequest object.
+ * Constructs a GetIdentityProviderByIdentifierRequest object.
  */
 GetIdentityProviderByIdentifierRequest::GetIdentityProviderByIdentifierRequest()
     : CognitoIdentityProviderRequest(new GetIdentityProviderByIdentifierRequestPrivate(CognitoIdentityProviderRequest::GetIdentityProviderByIdentifierAction, this))
@@ -76,14 +73,9 @@ bool GetIdentityProviderByIdentifierRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetIdentityProviderByIdentifierResponse object.
+ * Returns a GetIdentityProviderByIdentifierResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetIdentityProviderByIdentifierResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CognitoIdentityProviderClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetIdentityProviderByIdentifierRequest::response(QNetworkReply * const reply) const
 {
@@ -91,20 +83,17 @@ QtAws::Core::AwsAbstractResponse * GetIdentityProviderByIdentifierRequest::respo
 }
 
 /*!
- * @internal
+ * \class QtAws::CognitoIdentityProvider::GetIdentityProviderByIdentifierRequestPrivate
+ * \brief The GetIdentityProviderByIdentifierRequestPrivate class provides private implementation for GetIdentityProviderByIdentifierRequest.
+ * \internal
  *
- * @class  GetIdentityProviderByIdentifierRequestPrivate
- *
- * @brief  Private implementation for GetIdentityProviderByIdentifierRequest.
+ * \inmodule QtAwsCognitoIdentityProvider
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetIdentityProviderByIdentifierRequestPrivate object.
- *
- * @param  action  CognitoIdentityProvider action being performed.
- * @param  q       Pointer to this object's public GetIdentityProviderByIdentifierRequest instance.
+ * Constructs a GetIdentityProviderByIdentifierRequestPrivate object for CognitoIdentityProvider \a action with,
+ * public implementation \a q.
  */
 GetIdentityProviderByIdentifierRequestPrivate::GetIdentityProviderByIdentifierRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, GetIdentityProviderByIdentifierRequest * const q)
@@ -114,15 +103,10 @@ GetIdentityProviderByIdentifierRequestPrivate::GetIdentityProviderByIdentifierRe
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetIdentityProviderByIdentifierRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetIdentityProviderByIdentifierRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetIdentityProviderByIdentifierRequest instance.
  */
 GetIdentityProviderByIdentifierRequestPrivate::GetIdentityProviderByIdentifierRequestPrivate(
     const GetIdentityProviderByIdentifierRequestPrivate &other, GetIdentityProviderByIdentifierRequest * const q)

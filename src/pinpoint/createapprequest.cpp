@@ -27,19 +27,16 @@ namespace Pinpoint {
 
 /*!
  * \class QtAws::Pinpoint::CreateAppRequest
- *
  * \brief The CreateAppRequest class provides an interface for Pinpoint CreateApp requests.
  *
- * \ingroup Pinpoint
+ * \inmodule QtAwsPinpoint
  *
  *
  * \sa PinpointClient::createApp
  */
 
 /*!
- * @brief  Constructs a new CreateAppRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateAppRequest::CreateAppRequest(const CreateAppRequest &other)
     : PinpointRequest(new CreateAppRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ CreateAppRequest::CreateAppRequest(const CreateAppRequest &other)
 }
 
 /*!
- * @brief  Constructs a new CreateAppRequest object.
+ * Constructs a CreateAppRequest object.
  */
 CreateAppRequest::CreateAppRequest()
     : PinpointRequest(new CreateAppRequestPrivate(PinpointRequest::CreateAppAction, this))
@@ -66,14 +63,9 @@ bool CreateAppRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateAppResponse object.
+ * Returns a CreateAppResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateAppResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  PinpointClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateAppRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * CreateAppRequest::response(QNetworkReply * co
 }
 
 /*!
- * @internal
+ * \class QtAws::Pinpoint::CreateAppRequestPrivate
+ * \brief The CreateAppRequestPrivate class provides private implementation for CreateAppRequest.
+ * \internal
  *
- * @class  CreateAppRequestPrivate
- *
- * @brief  Private implementation for CreateAppRequest.
+ * \inmodule QtAwsPinpoint
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateAppRequestPrivate object.
- *
- * @param  action  Pinpoint action being performed.
- * @param  q       Pointer to this object's public CreateAppRequest instance.
+ * Constructs a CreateAppRequestPrivate object for Pinpoint \a action with,
+ * public implementation \a q.
  */
 CreateAppRequestPrivate::CreateAppRequestPrivate(
     const PinpointRequest::Action action, CreateAppRequest * const q)
@@ -104,15 +93,10 @@ CreateAppRequestPrivate::CreateAppRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateAppRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateAppRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateAppRequest instance.
  */
 CreateAppRequestPrivate::CreateAppRequestPrivate(
     const CreateAppRequestPrivate &other, CreateAppRequest * const q)

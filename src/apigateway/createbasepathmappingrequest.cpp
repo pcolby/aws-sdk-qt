@@ -27,10 +27,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::CreateBasePathMappingRequest
- *
  * \brief The CreateBasePathMappingRequest class provides an interface for APIGateway CreateBasePathMapping requests.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -42,9 +41,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new CreateBasePathMappingRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateBasePathMappingRequest::CreateBasePathMappingRequest(const CreateBasePathMappingRequest &other)
     : APIGatewayRequest(new CreateBasePathMappingRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ CreateBasePathMappingRequest::CreateBasePathMappingRequest(const CreateBasePathM
 }
 
 /*!
- * @brief  Constructs a new CreateBasePathMappingRequest object.
+ * Constructs a CreateBasePathMappingRequest object.
  */
 CreateBasePathMappingRequest::CreateBasePathMappingRequest()
     : APIGatewayRequest(new CreateBasePathMappingRequestPrivate(APIGatewayRequest::CreateBasePathMappingAction, this))
@@ -71,14 +68,9 @@ bool CreateBasePathMappingRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateBasePathMappingResponse object.
+ * Returns a CreateBasePathMappingResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateBasePathMappingResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  APIGatewayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateBasePathMappingRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * CreateBasePathMappingRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::APIGateway::CreateBasePathMappingRequestPrivate
+ * \brief The CreateBasePathMappingRequestPrivate class provides private implementation for CreateBasePathMappingRequest.
+ * \internal
  *
- * @class  CreateBasePathMappingRequestPrivate
- *
- * @brief  Private implementation for CreateBasePathMappingRequest.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateBasePathMappingRequestPrivate object.
- *
- * @param  action  APIGateway action being performed.
- * @param  q       Pointer to this object's public CreateBasePathMappingRequest instance.
+ * Constructs a CreateBasePathMappingRequestPrivate object for APIGateway \a action with,
+ * public implementation \a q.
  */
 CreateBasePathMappingRequestPrivate::CreateBasePathMappingRequestPrivate(
     const APIGatewayRequest::Action action, CreateBasePathMappingRequest * const q)
@@ -109,15 +98,10 @@ CreateBasePathMappingRequestPrivate::CreateBasePathMappingRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateBasePathMappingRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateBasePathMappingRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateBasePathMappingRequest instance.
  */
 CreateBasePathMappingRequestPrivate::CreateBasePathMappingRequestPrivate(
     const CreateBasePathMappingRequestPrivate &other, CreateBasePathMappingRequest * const q)

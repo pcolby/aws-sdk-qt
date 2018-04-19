@@ -27,10 +27,9 @@ namespace DeviceFarm {
 
 /*!
  * \class QtAws::DeviceFarm::ListRunsRequest
- *
  * \brief The ListRunsRequest class provides an interface for DeviceFarm ListRuns requests.
  *
- * \ingroup DeviceFarm
+ * \inmodule QtAwsDeviceFarm
  *
  *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
  *  phones, tablets, and other devices in the
@@ -39,9 +38,7 @@ namespace DeviceFarm {
  */
 
 /*!
- * @brief  Constructs a new ListRunsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListRunsRequest::ListRunsRequest(const ListRunsRequest &other)
     : DeviceFarmRequest(new ListRunsRequestPrivate(*other.d_func(), this))
@@ -50,7 +47,7 @@ ListRunsRequest::ListRunsRequest(const ListRunsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ListRunsRequest object.
+ * Constructs a ListRunsRequest object.
  */
 ListRunsRequest::ListRunsRequest()
     : DeviceFarmRequest(new ListRunsRequestPrivate(DeviceFarmRequest::ListRunsAction, this))
@@ -68,14 +65,9 @@ bool ListRunsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListRunsResponse object.
+ * Returns a ListRunsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListRunsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DeviceFarmClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListRunsRequest::response(QNetworkReply * const reply) const
 {
@@ -83,20 +75,17 @@ QtAws::Core::AwsAbstractResponse * ListRunsRequest::response(QNetworkReply * con
 }
 
 /*!
- * @internal
+ * \class QtAws::DeviceFarm::ListRunsRequestPrivate
+ * \brief The ListRunsRequestPrivate class provides private implementation for ListRunsRequest.
+ * \internal
  *
- * @class  ListRunsRequestPrivate
- *
- * @brief  Private implementation for ListRunsRequest.
+ * \inmodule QtAwsDeviceFarm
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListRunsRequestPrivate object.
- *
- * @param  action  DeviceFarm action being performed.
- * @param  q       Pointer to this object's public ListRunsRequest instance.
+ * Constructs a ListRunsRequestPrivate object for DeviceFarm \a action with,
+ * public implementation \a q.
  */
 ListRunsRequestPrivate::ListRunsRequestPrivate(
     const DeviceFarmRequest::Action action, ListRunsRequest * const q)
@@ -106,15 +95,10 @@ ListRunsRequestPrivate::ListRunsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListRunsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListRunsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListRunsRequest instance.
  */
 ListRunsRequestPrivate::ListRunsRequestPrivate(
     const ListRunsRequestPrivate &other, ListRunsRequest * const q)

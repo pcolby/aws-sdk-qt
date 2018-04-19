@@ -27,10 +27,9 @@ namespace Batch {
 
 /*!
  * \class QtAws::Batch::DeregisterJobDefinitionRequest
- *
  * \brief The DeregisterJobDefinitionRequest class provides an interface for Batch DeregisterJobDefinition requests.
  *
- * \ingroup Batch
+ * \inmodule QtAwsBatch
  *
  *  AWS Batch enables you to run batch computing workloads on the AWS Cloud. Batch computing is a common way for developers,
  *  scientists, and engineers to access large amounts of compute resources, and AWS Batch removes the undifferentiated heavy
@@ -51,9 +50,7 @@ namespace Batch {
  */
 
 /*!
- * @brief  Constructs a new DeregisterJobDefinitionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeregisterJobDefinitionRequest::DeregisterJobDefinitionRequest(const DeregisterJobDefinitionRequest &other)
     : BatchRequest(new DeregisterJobDefinitionRequestPrivate(*other.d_func(), this))
@@ -62,7 +59,7 @@ DeregisterJobDefinitionRequest::DeregisterJobDefinitionRequest(const DeregisterJ
 }
 
 /*!
- * @brief  Constructs a new DeregisterJobDefinitionRequest object.
+ * Constructs a DeregisterJobDefinitionRequest object.
  */
 DeregisterJobDefinitionRequest::DeregisterJobDefinitionRequest()
     : BatchRequest(new DeregisterJobDefinitionRequestPrivate(BatchRequest::DeregisterJobDefinitionAction, this))
@@ -80,14 +77,9 @@ bool DeregisterJobDefinitionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeregisterJobDefinitionResponse object.
+ * Returns a DeregisterJobDefinitionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeregisterJobDefinitionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  BatchClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeregisterJobDefinitionRequest::response(QNetworkReply * const reply) const
 {
@@ -95,20 +87,17 @@ QtAws::Core::AwsAbstractResponse * DeregisterJobDefinitionRequest::response(QNet
 }
 
 /*!
- * @internal
+ * \class QtAws::Batch::DeregisterJobDefinitionRequestPrivate
+ * \brief The DeregisterJobDefinitionRequestPrivate class provides private implementation for DeregisterJobDefinitionRequest.
+ * \internal
  *
- * @class  DeregisterJobDefinitionRequestPrivate
- *
- * @brief  Private implementation for DeregisterJobDefinitionRequest.
+ * \inmodule QtAwsBatch
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeregisterJobDefinitionRequestPrivate object.
- *
- * @param  action  Batch action being performed.
- * @param  q       Pointer to this object's public DeregisterJobDefinitionRequest instance.
+ * Constructs a DeregisterJobDefinitionRequestPrivate object for Batch \a action with,
+ * public implementation \a q.
  */
 DeregisterJobDefinitionRequestPrivate::DeregisterJobDefinitionRequestPrivate(
     const BatchRequest::Action action, DeregisterJobDefinitionRequest * const q)
@@ -118,15 +107,10 @@ DeregisterJobDefinitionRequestPrivate::DeregisterJobDefinitionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeregisterJobDefinitionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeregisterJobDefinitionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeregisterJobDefinitionRequest instance.
  */
 DeregisterJobDefinitionRequestPrivate::DeregisterJobDefinitionRequestPrivate(
     const DeregisterJobDefinitionRequestPrivate &other, DeregisterJobDefinitionRequest * const q)

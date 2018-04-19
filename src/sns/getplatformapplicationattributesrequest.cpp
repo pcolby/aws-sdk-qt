@@ -27,10 +27,9 @@ namespace SNS {
 
 /*!
  * \class QtAws::SNS::GetPlatformApplicationAttributesRequest
- *
  * \brief The GetPlatformApplicationAttributesRequest class provides an interface for SNS GetPlatformApplicationAttributes requests.
  *
- * \ingroup SNS
+ * \inmodule QtAwsSNS
  *
  *  <fullname>Amazon Simple Notification Service</fullname>
  * 
@@ -51,9 +50,7 @@ namespace SNS {
  */
 
 /*!
- * @brief  Constructs a new GetPlatformApplicationAttributesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetPlatformApplicationAttributesRequest::GetPlatformApplicationAttributesRequest(const GetPlatformApplicationAttributesRequest &other)
     : SNSRequest(new GetPlatformApplicationAttributesRequestPrivate(*other.d_func(), this))
@@ -62,7 +59,7 @@ GetPlatformApplicationAttributesRequest::GetPlatformApplicationAttributesRequest
 }
 
 /*!
- * @brief  Constructs a new GetPlatformApplicationAttributesRequest object.
+ * Constructs a GetPlatformApplicationAttributesRequest object.
  */
 GetPlatformApplicationAttributesRequest::GetPlatformApplicationAttributesRequest()
     : SNSRequest(new GetPlatformApplicationAttributesRequestPrivate(SNSRequest::GetPlatformApplicationAttributesAction, this))
@@ -80,14 +77,9 @@ bool GetPlatformApplicationAttributesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetPlatformApplicationAttributesResponse object.
+ * Returns a GetPlatformApplicationAttributesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetPlatformApplicationAttributesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SNSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetPlatformApplicationAttributesRequest::response(QNetworkReply * const reply) const
 {
@@ -95,20 +87,17 @@ QtAws::Core::AwsAbstractResponse * GetPlatformApplicationAttributesRequest::resp
 }
 
 /*!
- * @internal
+ * \class QtAws::SNS::GetPlatformApplicationAttributesRequestPrivate
+ * \brief The GetPlatformApplicationAttributesRequestPrivate class provides private implementation for GetPlatformApplicationAttributesRequest.
+ * \internal
  *
- * @class  GetPlatformApplicationAttributesRequestPrivate
- *
- * @brief  Private implementation for GetPlatformApplicationAttributesRequest.
+ * \inmodule QtAwsSNS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetPlatformApplicationAttributesRequestPrivate object.
- *
- * @param  action  SNS action being performed.
- * @param  q       Pointer to this object's public GetPlatformApplicationAttributesRequest instance.
+ * Constructs a GetPlatformApplicationAttributesRequestPrivate object for SNS \a action with,
+ * public implementation \a q.
  */
 GetPlatformApplicationAttributesRequestPrivate::GetPlatformApplicationAttributesRequestPrivate(
     const SNSRequest::Action action, GetPlatformApplicationAttributesRequest * const q)
@@ -118,15 +107,10 @@ GetPlatformApplicationAttributesRequestPrivate::GetPlatformApplicationAttributes
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetPlatformApplicationAttributesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetPlatformApplicationAttributesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetPlatformApplicationAttributesRequest instance.
  */
 GetPlatformApplicationAttributesRequestPrivate::GetPlatformApplicationAttributesRequestPrivate(
     const GetPlatformApplicationAttributesRequestPrivate &other, GetPlatformApplicationAttributesRequest * const q)

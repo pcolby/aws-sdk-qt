@@ -27,10 +27,9 @@ namespace CloudFront {
 
 /*!
  * \class QtAws::CloudFront::CreateFieldLevelEncryptionConfigRequest
- *
  * \brief The CreateFieldLevelEncryptionConfigRequest class provides an interface for CloudFront CreateFieldLevelEncryptionConfig requests.
  *
- * \ingroup CloudFront
+ * \inmodule QtAwsCloudFront
  *
  *  <fullname>Amazon CloudFront</fullname>
  * 
@@ -42,9 +41,7 @@ namespace CloudFront {
  */
 
 /*!
- * @brief  Constructs a new CreateFieldLevelEncryptionConfigRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateFieldLevelEncryptionConfigRequest::CreateFieldLevelEncryptionConfigRequest(const CreateFieldLevelEncryptionConfigRequest &other)
     : CloudFrontRequest(new CreateFieldLevelEncryptionConfigRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ CreateFieldLevelEncryptionConfigRequest::CreateFieldLevelEncryptionConfigRequest
 }
 
 /*!
- * @brief  Constructs a new CreateFieldLevelEncryptionConfigRequest object.
+ * Constructs a CreateFieldLevelEncryptionConfigRequest object.
  */
 CreateFieldLevelEncryptionConfigRequest::CreateFieldLevelEncryptionConfigRequest()
     : CloudFrontRequest(new CreateFieldLevelEncryptionConfigRequestPrivate(CloudFrontRequest::CreateFieldLevelEncryptionConfigAction, this))
@@ -71,14 +68,9 @@ bool CreateFieldLevelEncryptionConfigRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateFieldLevelEncryptionConfigResponse object.
+ * Returns a CreateFieldLevelEncryptionConfigResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateFieldLevelEncryptionConfigResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudFrontClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateFieldLevelEncryptionConfigRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * CreateFieldLevelEncryptionConfigRequest::resp
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudFront::CreateFieldLevelEncryptionConfigRequestPrivate
+ * \brief The CreateFieldLevelEncryptionConfigRequestPrivate class provides private implementation for CreateFieldLevelEncryptionConfigRequest.
+ * \internal
  *
- * @class  CreateFieldLevelEncryptionConfigRequestPrivate
- *
- * @brief  Private implementation for CreateFieldLevelEncryptionConfigRequest.
+ * \inmodule QtAwsCloudFront
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateFieldLevelEncryptionConfigRequestPrivate object.
- *
- * @param  action  CloudFront action being performed.
- * @param  q       Pointer to this object's public CreateFieldLevelEncryptionConfigRequest instance.
+ * Constructs a CreateFieldLevelEncryptionConfigRequestPrivate object for CloudFront \a action with,
+ * public implementation \a q.
  */
 CreateFieldLevelEncryptionConfigRequestPrivate::CreateFieldLevelEncryptionConfigRequestPrivate(
     const CloudFrontRequest::Action action, CreateFieldLevelEncryptionConfigRequest * const q)
@@ -109,15 +98,10 @@ CreateFieldLevelEncryptionConfigRequestPrivate::CreateFieldLevelEncryptionConfig
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateFieldLevelEncryptionConfigRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateFieldLevelEncryptionConfigRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateFieldLevelEncryptionConfigRequest instance.
  */
 CreateFieldLevelEncryptionConfigRequestPrivate::CreateFieldLevelEncryptionConfigRequestPrivate(
     const CreateFieldLevelEncryptionConfigRequestPrivate &other, CreateFieldLevelEncryptionConfigRequest * const q)

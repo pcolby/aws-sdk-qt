@@ -27,10 +27,9 @@ namespace ServiceCatalog {
 
 /*!
  * \class QtAws::ServiceCatalog::DescribeRecordRequest
- *
  * \brief The DescribeRecordRequest class provides an interface for ServiceCatalog DescribeRecord requests.
  *
- * \ingroup ServiceCatalog
+ * \inmodule QtAwsServiceCatalog
  *
  *  <fullname>AWS Service Catalog</fullname>
  * 
@@ -43,9 +42,7 @@ namespace ServiceCatalog {
  */
 
 /*!
- * @brief  Constructs a new DescribeRecordRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeRecordRequest::DescribeRecordRequest(const DescribeRecordRequest &other)
     : ServiceCatalogRequest(new DescribeRecordRequestPrivate(*other.d_func(), this))
@@ -54,7 +51,7 @@ DescribeRecordRequest::DescribeRecordRequest(const DescribeRecordRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DescribeRecordRequest object.
+ * Constructs a DescribeRecordRequest object.
  */
 DescribeRecordRequest::DescribeRecordRequest()
     : ServiceCatalogRequest(new DescribeRecordRequestPrivate(ServiceCatalogRequest::DescribeRecordAction, this))
@@ -72,14 +69,9 @@ bool DescribeRecordRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeRecordResponse object.
+ * Returns a DescribeRecordResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeRecordResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ServiceCatalogClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeRecordRequest::response(QNetworkReply * const reply) const
 {
@@ -87,20 +79,17 @@ QtAws::Core::AwsAbstractResponse * DescribeRecordRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::ServiceCatalog::DescribeRecordRequestPrivate
+ * \brief The DescribeRecordRequestPrivate class provides private implementation for DescribeRecordRequest.
+ * \internal
  *
- * @class  DescribeRecordRequestPrivate
- *
- * @brief  Private implementation for DescribeRecordRequest.
+ * \inmodule QtAwsServiceCatalog
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeRecordRequestPrivate object.
- *
- * @param  action  ServiceCatalog action being performed.
- * @param  q       Pointer to this object's public DescribeRecordRequest instance.
+ * Constructs a DescribeRecordRequestPrivate object for ServiceCatalog \a action with,
+ * public implementation \a q.
  */
 DescribeRecordRequestPrivate::DescribeRecordRequestPrivate(
     const ServiceCatalogRequest::Action action, DescribeRecordRequest * const q)
@@ -110,15 +99,10 @@ DescribeRecordRequestPrivate::DescribeRecordRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeRecordRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeRecordRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeRecordRequest instance.
  */
 DescribeRecordRequestPrivate::DescribeRecordRequestPrivate(
     const DescribeRecordRequestPrivate &other, DescribeRecordRequest * const q)

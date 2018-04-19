@@ -27,10 +27,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::CreateDBParameterGroupRequest
- *
  * \brief The CreateDBParameterGroupRequest class provides an interface for RDS CreateDBParameterGroup requests.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -101,9 +100,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new CreateDBParameterGroupRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateDBParameterGroupRequest::CreateDBParameterGroupRequest(const CreateDBParameterGroupRequest &other)
     : RDSRequest(new CreateDBParameterGroupRequestPrivate(*other.d_func(), this))
@@ -112,7 +109,7 @@ CreateDBParameterGroupRequest::CreateDBParameterGroupRequest(const CreateDBParam
 }
 
 /*!
- * @brief  Constructs a new CreateDBParameterGroupRequest object.
+ * Constructs a CreateDBParameterGroupRequest object.
  */
 CreateDBParameterGroupRequest::CreateDBParameterGroupRequest()
     : RDSRequest(new CreateDBParameterGroupRequestPrivate(RDSRequest::CreateDBParameterGroupAction, this))
@@ -130,14 +127,9 @@ bool CreateDBParameterGroupRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateDBParameterGroupResponse object.
+ * Returns a CreateDBParameterGroupResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateDBParameterGroupResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RDSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateDBParameterGroupRequest::response(QNetworkReply * const reply) const
 {
@@ -145,20 +137,17 @@ QtAws::Core::AwsAbstractResponse * CreateDBParameterGroupRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::RDS::CreateDBParameterGroupRequestPrivate
+ * \brief The CreateDBParameterGroupRequestPrivate class provides private implementation for CreateDBParameterGroupRequest.
+ * \internal
  *
- * @class  CreateDBParameterGroupRequestPrivate
- *
- * @brief  Private implementation for CreateDBParameterGroupRequest.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateDBParameterGroupRequestPrivate object.
- *
- * @param  action  RDS action being performed.
- * @param  q       Pointer to this object's public CreateDBParameterGroupRequest instance.
+ * Constructs a CreateDBParameterGroupRequestPrivate object for RDS \a action with,
+ * public implementation \a q.
  */
 CreateDBParameterGroupRequestPrivate::CreateDBParameterGroupRequestPrivate(
     const RDSRequest::Action action, CreateDBParameterGroupRequest * const q)
@@ -168,15 +157,10 @@ CreateDBParameterGroupRequestPrivate::CreateDBParameterGroupRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateDBParameterGroupRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateDBParameterGroupRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateDBParameterGroupRequest instance.
  */
 CreateDBParameterGroupRequestPrivate::CreateDBParameterGroupRequestPrivate(
     const CreateDBParameterGroupRequestPrivate &other, CreateDBParameterGroupRequest * const q)

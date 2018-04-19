@@ -27,10 +27,9 @@ namespace DirectConnect {
 
 /*!
  * \class QtAws::DirectConnect::DeleteDirectConnectGatewayAssociationRequest
- *
  * \brief The DeleteDirectConnectGatewayAssociationRequest class provides an interface for DirectConnect DeleteDirectConnectGatewayAssociation requests.
  *
- * \ingroup DirectConnect
+ * \inmodule QtAwsDirectConnect
  *
  *  AWS Direct Connect links your internal network to an AWS Direct Connect location over a standard 1 gigabit or 10 gigabit
  *  Ethernet fiber-optic cable. One end of the cable is connected to your router, the other to an AWS Direct Connect router.
@@ -45,9 +44,7 @@ namespace DirectConnect {
  */
 
 /*!
- * @brief  Constructs a new DeleteDirectConnectGatewayAssociationRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteDirectConnectGatewayAssociationRequest::DeleteDirectConnectGatewayAssociationRequest(const DeleteDirectConnectGatewayAssociationRequest &other)
     : DirectConnectRequest(new DeleteDirectConnectGatewayAssociationRequestPrivate(*other.d_func(), this))
@@ -56,7 +53,7 @@ DeleteDirectConnectGatewayAssociationRequest::DeleteDirectConnectGatewayAssociat
 }
 
 /*!
- * @brief  Constructs a new DeleteDirectConnectGatewayAssociationRequest object.
+ * Constructs a DeleteDirectConnectGatewayAssociationRequest object.
  */
 DeleteDirectConnectGatewayAssociationRequest::DeleteDirectConnectGatewayAssociationRequest()
     : DirectConnectRequest(new DeleteDirectConnectGatewayAssociationRequestPrivate(DirectConnectRequest::DeleteDirectConnectGatewayAssociationAction, this))
@@ -74,14 +71,9 @@ bool DeleteDirectConnectGatewayAssociationRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteDirectConnectGatewayAssociationResponse object.
+ * Returns a DeleteDirectConnectGatewayAssociationResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteDirectConnectGatewayAssociationResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DirectConnectClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteDirectConnectGatewayAssociationRequest::response(QNetworkReply * const reply) const
 {
@@ -89,20 +81,17 @@ QtAws::Core::AwsAbstractResponse * DeleteDirectConnectGatewayAssociationRequest:
 }
 
 /*!
- * @internal
+ * \class QtAws::DirectConnect::DeleteDirectConnectGatewayAssociationRequestPrivate
+ * \brief The DeleteDirectConnectGatewayAssociationRequestPrivate class provides private implementation for DeleteDirectConnectGatewayAssociationRequest.
+ * \internal
  *
- * @class  DeleteDirectConnectGatewayAssociationRequestPrivate
- *
- * @brief  Private implementation for DeleteDirectConnectGatewayAssociationRequest.
+ * \inmodule QtAwsDirectConnect
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteDirectConnectGatewayAssociationRequestPrivate object.
- *
- * @param  action  DirectConnect action being performed.
- * @param  q       Pointer to this object's public DeleteDirectConnectGatewayAssociationRequest instance.
+ * Constructs a DeleteDirectConnectGatewayAssociationRequestPrivate object for DirectConnect \a action with,
+ * public implementation \a q.
  */
 DeleteDirectConnectGatewayAssociationRequestPrivate::DeleteDirectConnectGatewayAssociationRequestPrivate(
     const DirectConnectRequest::Action action, DeleteDirectConnectGatewayAssociationRequest * const q)
@@ -112,15 +101,10 @@ DeleteDirectConnectGatewayAssociationRequestPrivate::DeleteDirectConnectGatewayA
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteDirectConnectGatewayAssociationRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteDirectConnectGatewayAssociationRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteDirectConnectGatewayAssociationRequest instance.
  */
 DeleteDirectConnectGatewayAssociationRequestPrivate::DeleteDirectConnectGatewayAssociationRequestPrivate(
     const DeleteDirectConnectGatewayAssociationRequestPrivate &other, DeleteDirectConnectGatewayAssociationRequest * const q)

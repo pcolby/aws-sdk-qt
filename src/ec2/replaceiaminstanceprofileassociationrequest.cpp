@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::ReplaceIamInstanceProfileAssociationRequest
- *
  * \brief The ReplaceIamInstanceProfileAssociationRequest class provides an interface for EC2 ReplaceIamInstanceProfileAssociation requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new ReplaceIamInstanceProfileAssociationRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ReplaceIamInstanceProfileAssociationRequest::ReplaceIamInstanceProfileAssociationRequest(const ReplaceIamInstanceProfileAssociationRequest &other)
     : EC2Request(new ReplaceIamInstanceProfileAssociationRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ ReplaceIamInstanceProfileAssociationRequest::ReplaceIamInstanceProfileAssociatio
 }
 
 /*!
- * @brief  Constructs a new ReplaceIamInstanceProfileAssociationRequest object.
+ * Constructs a ReplaceIamInstanceProfileAssociationRequest object.
  */
 ReplaceIamInstanceProfileAssociationRequest::ReplaceIamInstanceProfileAssociationRequest()
     : EC2Request(new ReplaceIamInstanceProfileAssociationRequestPrivate(EC2Request::ReplaceIamInstanceProfileAssociationAction, this))
@@ -70,14 +67,9 @@ bool ReplaceIamInstanceProfileAssociationRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ReplaceIamInstanceProfileAssociationResponse object.
+ * Returns a ReplaceIamInstanceProfileAssociationResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ReplaceIamInstanceProfileAssociationResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ReplaceIamInstanceProfileAssociationRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * ReplaceIamInstanceProfileAssociationRequest::
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::ReplaceIamInstanceProfileAssociationRequestPrivate
+ * \brief The ReplaceIamInstanceProfileAssociationRequestPrivate class provides private implementation for ReplaceIamInstanceProfileAssociationRequest.
+ * \internal
  *
- * @class  ReplaceIamInstanceProfileAssociationRequestPrivate
- *
- * @brief  Private implementation for ReplaceIamInstanceProfileAssociationRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ReplaceIamInstanceProfileAssociationRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public ReplaceIamInstanceProfileAssociationRequest instance.
+ * Constructs a ReplaceIamInstanceProfileAssociationRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 ReplaceIamInstanceProfileAssociationRequestPrivate::ReplaceIamInstanceProfileAssociationRequestPrivate(
     const EC2Request::Action action, ReplaceIamInstanceProfileAssociationRequest * const q)
@@ -108,15 +97,10 @@ ReplaceIamInstanceProfileAssociationRequestPrivate::ReplaceIamInstanceProfileAss
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ReplaceIamInstanceProfileAssociationRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ReplaceIamInstanceProfileAssociationRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ReplaceIamInstanceProfileAssociationRequest instance.
  */
 ReplaceIamInstanceProfileAssociationRequestPrivate::ReplaceIamInstanceProfileAssociationRequestPrivate(
     const ReplaceIamInstanceProfileAssociationRequestPrivate &other, ReplaceIamInstanceProfileAssociationRequest * const q)

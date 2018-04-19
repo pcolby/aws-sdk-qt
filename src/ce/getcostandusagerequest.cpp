@@ -27,10 +27,9 @@ namespace CostExplorer {
 
 /*!
  * \class QtAws::CostExplorer::GetCostAndUsageRequest
- *
  * \brief The GetCostAndUsageRequest class provides an interface for CostExplorer GetCostAndUsage requests.
  *
- * \ingroup CostExplorer
+ * \inmodule QtAwsCostExplorer
  *
  *  The Cost Explorer API allows you to programmatically query your cost and usage data. You can query for aggregated data
  *  such as total monthly costs or total daily usage. You can also query for granular data, such as the number of daily
@@ -50,9 +49,7 @@ namespace CostExplorer {
  */
 
 /*!
- * @brief  Constructs a new GetCostAndUsageRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetCostAndUsageRequest::GetCostAndUsageRequest(const GetCostAndUsageRequest &other)
     : CostExplorerRequest(new GetCostAndUsageRequestPrivate(*other.d_func(), this))
@@ -61,7 +58,7 @@ GetCostAndUsageRequest::GetCostAndUsageRequest(const GetCostAndUsageRequest &oth
 }
 
 /*!
- * @brief  Constructs a new GetCostAndUsageRequest object.
+ * Constructs a GetCostAndUsageRequest object.
  */
 GetCostAndUsageRequest::GetCostAndUsageRequest()
     : CostExplorerRequest(new GetCostAndUsageRequestPrivate(CostExplorerRequest::GetCostAndUsageAction, this))
@@ -79,14 +76,9 @@ bool GetCostAndUsageRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetCostAndUsageResponse object.
+ * Returns a GetCostAndUsageResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetCostAndUsageResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CostExplorerClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetCostAndUsageRequest::response(QNetworkReply * const reply) const
 {
@@ -94,20 +86,17 @@ QtAws::Core::AwsAbstractResponse * GetCostAndUsageRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::CostExplorer::GetCostAndUsageRequestPrivate
+ * \brief The GetCostAndUsageRequestPrivate class provides private implementation for GetCostAndUsageRequest.
+ * \internal
  *
- * @class  GetCostAndUsageRequestPrivate
- *
- * @brief  Private implementation for GetCostAndUsageRequest.
+ * \inmodule QtAwsCostExplorer
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetCostAndUsageRequestPrivate object.
- *
- * @param  action  CostExplorer action being performed.
- * @param  q       Pointer to this object's public GetCostAndUsageRequest instance.
+ * Constructs a GetCostAndUsageRequestPrivate object for CostExplorer \a action with,
+ * public implementation \a q.
  */
 GetCostAndUsageRequestPrivate::GetCostAndUsageRequestPrivate(
     const CostExplorerRequest::Action action, GetCostAndUsageRequest * const q)
@@ -117,15 +106,10 @@ GetCostAndUsageRequestPrivate::GetCostAndUsageRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetCostAndUsageRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetCostAndUsageRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetCostAndUsageRequest instance.
  */
 GetCostAndUsageRequestPrivate::GetCostAndUsageRequestPrivate(
     const GetCostAndUsageRequestPrivate &other, GetCostAndUsageRequest * const q)

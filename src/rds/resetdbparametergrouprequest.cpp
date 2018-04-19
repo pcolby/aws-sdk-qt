@@ -27,10 +27,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::ResetDBParameterGroupRequest
- *
  * \brief The ResetDBParameterGroupRequest class provides an interface for RDS ResetDBParameterGroup requests.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -101,9 +100,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new ResetDBParameterGroupRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ResetDBParameterGroupRequest::ResetDBParameterGroupRequest(const ResetDBParameterGroupRequest &other)
     : RDSRequest(new ResetDBParameterGroupRequestPrivate(*other.d_func(), this))
@@ -112,7 +109,7 @@ ResetDBParameterGroupRequest::ResetDBParameterGroupRequest(const ResetDBParamete
 }
 
 /*!
- * @brief  Constructs a new ResetDBParameterGroupRequest object.
+ * Constructs a ResetDBParameterGroupRequest object.
  */
 ResetDBParameterGroupRequest::ResetDBParameterGroupRequest()
     : RDSRequest(new ResetDBParameterGroupRequestPrivate(RDSRequest::ResetDBParameterGroupAction, this))
@@ -130,14 +127,9 @@ bool ResetDBParameterGroupRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ResetDBParameterGroupResponse object.
+ * Returns a ResetDBParameterGroupResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ResetDBParameterGroupResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RDSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ResetDBParameterGroupRequest::response(QNetworkReply * const reply) const
 {
@@ -145,20 +137,17 @@ QtAws::Core::AwsAbstractResponse * ResetDBParameterGroupRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::RDS::ResetDBParameterGroupRequestPrivate
+ * \brief The ResetDBParameterGroupRequestPrivate class provides private implementation for ResetDBParameterGroupRequest.
+ * \internal
  *
- * @class  ResetDBParameterGroupRequestPrivate
- *
- * @brief  Private implementation for ResetDBParameterGroupRequest.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ResetDBParameterGroupRequestPrivate object.
- *
- * @param  action  RDS action being performed.
- * @param  q       Pointer to this object's public ResetDBParameterGroupRequest instance.
+ * Constructs a ResetDBParameterGroupRequestPrivate object for RDS \a action with,
+ * public implementation \a q.
  */
 ResetDBParameterGroupRequestPrivate::ResetDBParameterGroupRequestPrivate(
     const RDSRequest::Action action, ResetDBParameterGroupRequest * const q)
@@ -168,15 +157,10 @@ ResetDBParameterGroupRequestPrivate::ResetDBParameterGroupRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ResetDBParameterGroupRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ResetDBParameterGroupRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ResetDBParameterGroupRequest instance.
  */
 ResetDBParameterGroupRequestPrivate::ResetDBParameterGroupRequestPrivate(
     const ResetDBParameterGroupRequestPrivate &other, ResetDBParameterGroupRequest * const q)

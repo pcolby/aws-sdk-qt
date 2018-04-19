@@ -27,10 +27,9 @@ namespace StorageGateway {
 
 /*!
  * \class QtAws::StorageGateway::ListLocalDisksRequest
- *
  * \brief The ListLocalDisksRequest class provides an interface for StorageGateway ListLocalDisks requests.
  *
- * \ingroup StorageGateway
+ * \inmodule QtAwsStorageGateway
  *
  *  <fullname>AWS Storage Gateway Service</fullname>
  * 
@@ -106,9 +105,7 @@ namespace StorageGateway {
  */
 
 /*!
- * @brief  Constructs a new ListLocalDisksRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListLocalDisksRequest::ListLocalDisksRequest(const ListLocalDisksRequest &other)
     : StorageGatewayRequest(new ListLocalDisksRequestPrivate(*other.d_func(), this))
@@ -117,7 +114,7 @@ ListLocalDisksRequest::ListLocalDisksRequest(const ListLocalDisksRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ListLocalDisksRequest object.
+ * Constructs a ListLocalDisksRequest object.
  */
 ListLocalDisksRequest::ListLocalDisksRequest()
     : StorageGatewayRequest(new ListLocalDisksRequestPrivate(StorageGatewayRequest::ListLocalDisksAction, this))
@@ -135,14 +132,9 @@ bool ListLocalDisksRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListLocalDisksResponse object.
+ * Returns a ListLocalDisksResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListLocalDisksResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  StorageGatewayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListLocalDisksRequest::response(QNetworkReply * const reply) const
 {
@@ -150,20 +142,17 @@ QtAws::Core::AwsAbstractResponse * ListLocalDisksRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::StorageGateway::ListLocalDisksRequestPrivate
+ * \brief The ListLocalDisksRequestPrivate class provides private implementation for ListLocalDisksRequest.
+ * \internal
  *
- * @class  ListLocalDisksRequestPrivate
- *
- * @brief  Private implementation for ListLocalDisksRequest.
+ * \inmodule QtAwsStorageGateway
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListLocalDisksRequestPrivate object.
- *
- * @param  action  StorageGateway action being performed.
- * @param  q       Pointer to this object's public ListLocalDisksRequest instance.
+ * Constructs a ListLocalDisksRequestPrivate object for StorageGateway \a action with,
+ * public implementation \a q.
  */
 ListLocalDisksRequestPrivate::ListLocalDisksRequestPrivate(
     const StorageGatewayRequest::Action action, ListLocalDisksRequest * const q)
@@ -173,15 +162,10 @@ ListLocalDisksRequestPrivate::ListLocalDisksRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListLocalDisksRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListLocalDisksRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListLocalDisksRequest instance.
  */
 ListLocalDisksRequestPrivate::ListLocalDisksRequestPrivate(
     const ListLocalDisksRequestPrivate &other, ListLocalDisksRequest * const q)

@@ -27,10 +27,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::DeleteDBInstanceRequest
- *
  * \brief The DeleteDBInstanceRequest class provides an interface for RDS DeleteDBInstance requests.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -101,9 +100,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new DeleteDBInstanceRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteDBInstanceRequest::DeleteDBInstanceRequest(const DeleteDBInstanceRequest &other)
     : RDSRequest(new DeleteDBInstanceRequestPrivate(*other.d_func(), this))
@@ -112,7 +109,7 @@ DeleteDBInstanceRequest::DeleteDBInstanceRequest(const DeleteDBInstanceRequest &
 }
 
 /*!
- * @brief  Constructs a new DeleteDBInstanceRequest object.
+ * Constructs a DeleteDBInstanceRequest object.
  */
 DeleteDBInstanceRequest::DeleteDBInstanceRequest()
     : RDSRequest(new DeleteDBInstanceRequestPrivate(RDSRequest::DeleteDBInstanceAction, this))
@@ -130,14 +127,9 @@ bool DeleteDBInstanceRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteDBInstanceResponse object.
+ * Returns a DeleteDBInstanceResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteDBInstanceResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RDSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteDBInstanceRequest::response(QNetworkReply * const reply) const
 {
@@ -145,20 +137,17 @@ QtAws::Core::AwsAbstractResponse * DeleteDBInstanceRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::RDS::DeleteDBInstanceRequestPrivate
+ * \brief The DeleteDBInstanceRequestPrivate class provides private implementation for DeleteDBInstanceRequest.
+ * \internal
  *
- * @class  DeleteDBInstanceRequestPrivate
- *
- * @brief  Private implementation for DeleteDBInstanceRequest.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteDBInstanceRequestPrivate object.
- *
- * @param  action  RDS action being performed.
- * @param  q       Pointer to this object's public DeleteDBInstanceRequest instance.
+ * Constructs a DeleteDBInstanceRequestPrivate object for RDS \a action with,
+ * public implementation \a q.
  */
 DeleteDBInstanceRequestPrivate::DeleteDBInstanceRequestPrivate(
     const RDSRequest::Action action, DeleteDBInstanceRequest * const q)
@@ -168,15 +157,10 @@ DeleteDBInstanceRequestPrivate::DeleteDBInstanceRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteDBInstanceRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteDBInstanceRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteDBInstanceRequest instance.
  */
 DeleteDBInstanceRequestPrivate::DeleteDBInstanceRequestPrivate(
     const DeleteDBInstanceRequestPrivate &other, DeleteDBInstanceRequest * const q)

@@ -27,10 +27,9 @@ namespace ElasticBeanstalk {
 
 /*!
  * \class QtAws::ElasticBeanstalk::UpdateConfigurationTemplateRequest
- *
  * \brief The UpdateConfigurationTemplateRequest class provides an interface for ElasticBeanstalk UpdateConfigurationTemplate requests.
  *
- * \ingroup ElasticBeanstalk
+ * \inmodule QtAwsElasticBeanstalk
  *
  *  <fullname>AWS Elastic Beanstalk</fullname>
  * 
@@ -59,9 +58,7 @@ namespace ElasticBeanstalk {
  */
 
 /*!
- * @brief  Constructs a new UpdateConfigurationTemplateRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateConfigurationTemplateRequest::UpdateConfigurationTemplateRequest(const UpdateConfigurationTemplateRequest &other)
     : ElasticBeanstalkRequest(new UpdateConfigurationTemplateRequestPrivate(*other.d_func(), this))
@@ -70,7 +67,7 @@ UpdateConfigurationTemplateRequest::UpdateConfigurationTemplateRequest(const Upd
 }
 
 /*!
- * @brief  Constructs a new UpdateConfigurationTemplateRequest object.
+ * Constructs a UpdateConfigurationTemplateRequest object.
  */
 UpdateConfigurationTemplateRequest::UpdateConfigurationTemplateRequest()
     : ElasticBeanstalkRequest(new UpdateConfigurationTemplateRequestPrivate(ElasticBeanstalkRequest::UpdateConfigurationTemplateAction, this))
@@ -88,14 +85,9 @@ bool UpdateConfigurationTemplateRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateConfigurationTemplateResponse object.
+ * Returns a UpdateConfigurationTemplateResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateConfigurationTemplateResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ElasticBeanstalkClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateConfigurationTemplateRequest::response(QNetworkReply * const reply) const
 {
@@ -103,20 +95,17 @@ QtAws::Core::AwsAbstractResponse * UpdateConfigurationTemplateRequest::response(
 }
 
 /*!
- * @internal
+ * \class QtAws::ElasticBeanstalk::UpdateConfigurationTemplateRequestPrivate
+ * \brief The UpdateConfigurationTemplateRequestPrivate class provides private implementation for UpdateConfigurationTemplateRequest.
+ * \internal
  *
- * @class  UpdateConfigurationTemplateRequestPrivate
- *
- * @brief  Private implementation for UpdateConfigurationTemplateRequest.
+ * \inmodule QtAwsElasticBeanstalk
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateConfigurationTemplateRequestPrivate object.
- *
- * @param  action  ElasticBeanstalk action being performed.
- * @param  q       Pointer to this object's public UpdateConfigurationTemplateRequest instance.
+ * Constructs a UpdateConfigurationTemplateRequestPrivate object for ElasticBeanstalk \a action with,
+ * public implementation \a q.
  */
 UpdateConfigurationTemplateRequestPrivate::UpdateConfigurationTemplateRequestPrivate(
     const ElasticBeanstalkRequest::Action action, UpdateConfigurationTemplateRequest * const q)
@@ -126,15 +115,10 @@ UpdateConfigurationTemplateRequestPrivate::UpdateConfigurationTemplateRequestPri
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateConfigurationTemplateRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateConfigurationTemplateRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateConfigurationTemplateRequest instance.
  */
 UpdateConfigurationTemplateRequestPrivate::UpdateConfigurationTemplateRequestPrivate(
     const UpdateConfigurationTemplateRequestPrivate &other, UpdateConfigurationTemplateRequest * const q)

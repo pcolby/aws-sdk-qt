@@ -27,10 +27,9 @@ namespace WAF {
 
 /*!
  * \class QtAws::WAF::PutPermissionPolicyRequest
- *
  * \brief The PutPermissionPolicyRequest class provides an interface for WAF PutPermissionPolicy requests.
  *
- * \ingroup WAF
+ * \inmodule QtAwsWAF
  *
  *  This is the <i>AWS WAF API Reference</i> for using AWS WAF with Amazon CloudFront. The AWS WAF actions and data types
  *  listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data
@@ -42,9 +41,7 @@ namespace WAF {
  */
 
 /*!
- * @brief  Constructs a new PutPermissionPolicyRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 PutPermissionPolicyRequest::PutPermissionPolicyRequest(const PutPermissionPolicyRequest &other)
     : WAFRequest(new PutPermissionPolicyRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ PutPermissionPolicyRequest::PutPermissionPolicyRequest(const PutPermissionPolicy
 }
 
 /*!
- * @brief  Constructs a new PutPermissionPolicyRequest object.
+ * Constructs a PutPermissionPolicyRequest object.
  */
 PutPermissionPolicyRequest::PutPermissionPolicyRequest()
     : WAFRequest(new PutPermissionPolicyRequestPrivate(WAFRequest::PutPermissionPolicyAction, this))
@@ -71,14 +68,9 @@ bool PutPermissionPolicyRequest::isValid() const
 
 
 /*!
- * @brief  Construct an PutPermissionPolicyResponse object.
+ * Returns a PutPermissionPolicyResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An PutPermissionPolicyResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WAFClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * PutPermissionPolicyRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * PutPermissionPolicyRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::WAF::PutPermissionPolicyRequestPrivate
+ * \brief The PutPermissionPolicyRequestPrivate class provides private implementation for PutPermissionPolicyRequest.
+ * \internal
  *
- * @class  PutPermissionPolicyRequestPrivate
- *
- * @brief  Private implementation for PutPermissionPolicyRequest.
+ * \inmodule QtAwsWAF
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new PutPermissionPolicyRequestPrivate object.
- *
- * @param  action  WAF action being performed.
- * @param  q       Pointer to this object's public PutPermissionPolicyRequest instance.
+ * Constructs a PutPermissionPolicyRequestPrivate object for WAF \a action with,
+ * public implementation \a q.
  */
 PutPermissionPolicyRequestPrivate::PutPermissionPolicyRequestPrivate(
     const WAFRequest::Action action, PutPermissionPolicyRequest * const q)
@@ -109,15 +98,10 @@ PutPermissionPolicyRequestPrivate::PutPermissionPolicyRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutPermissionPolicyRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the PutPermissionPolicyRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public PutPermissionPolicyRequest instance.
  */
 PutPermissionPolicyRequestPrivate::PutPermissionPolicyRequestPrivate(
     const PutPermissionPolicyRequestPrivate &other, PutPermissionPolicyRequest * const q)

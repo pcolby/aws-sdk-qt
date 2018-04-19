@@ -27,10 +27,9 @@ namespace DynamoDB {
 
 /*!
  * \class QtAws::DynamoDB::BatchGetItemRequest
- *
  * \brief The BatchGetItemRequest class provides an interface for DynamoDB BatchGetItem requests.
  *
- * \ingroup DynamoDB
+ * \inmodule QtAwsDynamoDB
  *
  *  <fullname>Amazon DynamoDB</fullname>
  * 
@@ -56,9 +55,7 @@ namespace DynamoDB {
  */
 
 /*!
- * @brief  Constructs a new BatchGetItemRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 BatchGetItemRequest::BatchGetItemRequest(const BatchGetItemRequest &other)
     : DynamoDBRequest(new BatchGetItemRequestPrivate(*other.d_func(), this))
@@ -67,7 +64,7 @@ BatchGetItemRequest::BatchGetItemRequest(const BatchGetItemRequest &other)
 }
 
 /*!
- * @brief  Constructs a new BatchGetItemRequest object.
+ * Constructs a BatchGetItemRequest object.
  */
 BatchGetItemRequest::BatchGetItemRequest()
     : DynamoDBRequest(new BatchGetItemRequestPrivate(DynamoDBRequest::BatchGetItemAction, this))
@@ -85,14 +82,9 @@ bool BatchGetItemRequest::isValid() const
 
 
 /*!
- * @brief  Construct an BatchGetItemResponse object.
+ * Returns a BatchGetItemResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An BatchGetItemResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DynamoDBClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * BatchGetItemRequest::response(QNetworkReply * const reply) const
 {
@@ -100,20 +92,17 @@ QtAws::Core::AwsAbstractResponse * BatchGetItemRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::DynamoDB::BatchGetItemRequestPrivate
+ * \brief The BatchGetItemRequestPrivate class provides private implementation for BatchGetItemRequest.
+ * \internal
  *
- * @class  BatchGetItemRequestPrivate
- *
- * @brief  Private implementation for BatchGetItemRequest.
+ * \inmodule QtAwsDynamoDB
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new BatchGetItemRequestPrivate object.
- *
- * @param  action  DynamoDB action being performed.
- * @param  q       Pointer to this object's public BatchGetItemRequest instance.
+ * Constructs a BatchGetItemRequestPrivate object for DynamoDB \a action with,
+ * public implementation \a q.
  */
 BatchGetItemRequestPrivate::BatchGetItemRequestPrivate(
     const DynamoDBRequest::Action action, BatchGetItemRequest * const q)
@@ -123,15 +112,10 @@ BatchGetItemRequestPrivate::BatchGetItemRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new BatchGetItemRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the BatchGetItemRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public BatchGetItemRequest instance.
  */
 BatchGetItemRequestPrivate::BatchGetItemRequestPrivate(
     const BatchGetItemRequestPrivate &other, BatchGetItemRequest * const q)

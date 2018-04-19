@@ -27,10 +27,9 @@ namespace ConfigService {
 
 /*!
  * \class QtAws::ConfigService::GetComplianceSummaryByResourceTypeRequest
- *
  * \brief The GetComplianceSummaryByResourceTypeRequest class provides an interface for ConfigService GetComplianceSummaryByResourceType requests.
  *
- * \ingroup ConfigService
+ * \inmodule QtAwsConfigService
  *
  *  <fullname>AWS Config</fullname>
  * 
@@ -60,9 +59,7 @@ namespace ConfigService {
  */
 
 /*!
- * @brief  Constructs a new GetComplianceSummaryByResourceTypeRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetComplianceSummaryByResourceTypeRequest::GetComplianceSummaryByResourceTypeRequest(const GetComplianceSummaryByResourceTypeRequest &other)
     : ConfigServiceRequest(new GetComplianceSummaryByResourceTypeRequestPrivate(*other.d_func(), this))
@@ -71,7 +68,7 @@ GetComplianceSummaryByResourceTypeRequest::GetComplianceSummaryByResourceTypeReq
 }
 
 /*!
- * @brief  Constructs a new GetComplianceSummaryByResourceTypeRequest object.
+ * Constructs a GetComplianceSummaryByResourceTypeRequest object.
  */
 GetComplianceSummaryByResourceTypeRequest::GetComplianceSummaryByResourceTypeRequest()
     : ConfigServiceRequest(new GetComplianceSummaryByResourceTypeRequestPrivate(ConfigServiceRequest::GetComplianceSummaryByResourceTypeAction, this))
@@ -89,14 +86,9 @@ bool GetComplianceSummaryByResourceTypeRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetComplianceSummaryByResourceTypeResponse object.
+ * Returns a GetComplianceSummaryByResourceTypeResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetComplianceSummaryByResourceTypeResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ConfigServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetComplianceSummaryByResourceTypeRequest::response(QNetworkReply * const reply) const
 {
@@ -104,20 +96,17 @@ QtAws::Core::AwsAbstractResponse * GetComplianceSummaryByResourceTypeRequest::re
 }
 
 /*!
- * @internal
+ * \class QtAws::ConfigService::GetComplianceSummaryByResourceTypeRequestPrivate
+ * \brief The GetComplianceSummaryByResourceTypeRequestPrivate class provides private implementation for GetComplianceSummaryByResourceTypeRequest.
+ * \internal
  *
- * @class  GetComplianceSummaryByResourceTypeRequestPrivate
- *
- * @brief  Private implementation for GetComplianceSummaryByResourceTypeRequest.
+ * \inmodule QtAwsConfigService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetComplianceSummaryByResourceTypeRequestPrivate object.
- *
- * @param  action  ConfigService action being performed.
- * @param  q       Pointer to this object's public GetComplianceSummaryByResourceTypeRequest instance.
+ * Constructs a GetComplianceSummaryByResourceTypeRequestPrivate object for ConfigService \a action with,
+ * public implementation \a q.
  */
 GetComplianceSummaryByResourceTypeRequestPrivate::GetComplianceSummaryByResourceTypeRequestPrivate(
     const ConfigServiceRequest::Action action, GetComplianceSummaryByResourceTypeRequest * const q)
@@ -127,15 +116,10 @@ GetComplianceSummaryByResourceTypeRequestPrivate::GetComplianceSummaryByResource
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetComplianceSummaryByResourceTypeRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetComplianceSummaryByResourceTypeRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetComplianceSummaryByResourceTypeRequest instance.
  */
 GetComplianceSummaryByResourceTypeRequestPrivate::GetComplianceSummaryByResourceTypeRequestPrivate(
     const GetComplianceSummaryByResourceTypeRequestPrivate &other, GetComplianceSummaryByResourceTypeRequest * const q)

@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DescribeVpnGatewaysRequest
- *
  * \brief The DescribeVpnGatewaysRequest class provides an interface for EC2 DescribeVpnGateways requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DescribeVpnGatewaysRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeVpnGatewaysRequest::DescribeVpnGatewaysRequest(const DescribeVpnGatewaysRequest &other)
     : EC2Request(new DescribeVpnGatewaysRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ DescribeVpnGatewaysRequest::DescribeVpnGatewaysRequest(const DescribeVpnGateways
 }
 
 /*!
- * @brief  Constructs a new DescribeVpnGatewaysRequest object.
+ * Constructs a DescribeVpnGatewaysRequest object.
  */
 DescribeVpnGatewaysRequest::DescribeVpnGatewaysRequest()
     : EC2Request(new DescribeVpnGatewaysRequestPrivate(EC2Request::DescribeVpnGatewaysAction, this))
@@ -70,14 +67,9 @@ bool DescribeVpnGatewaysRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeVpnGatewaysResponse object.
+ * Returns a DescribeVpnGatewaysResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeVpnGatewaysResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeVpnGatewaysRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * DescribeVpnGatewaysRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::DescribeVpnGatewaysRequestPrivate
+ * \brief The DescribeVpnGatewaysRequestPrivate class provides private implementation for DescribeVpnGatewaysRequest.
+ * \internal
  *
- * @class  DescribeVpnGatewaysRequestPrivate
- *
- * @brief  Private implementation for DescribeVpnGatewaysRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeVpnGatewaysRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public DescribeVpnGatewaysRequest instance.
+ * Constructs a DescribeVpnGatewaysRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 DescribeVpnGatewaysRequestPrivate::DescribeVpnGatewaysRequestPrivate(
     const EC2Request::Action action, DescribeVpnGatewaysRequest * const q)
@@ -108,15 +97,10 @@ DescribeVpnGatewaysRequestPrivate::DescribeVpnGatewaysRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeVpnGatewaysRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeVpnGatewaysRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeVpnGatewaysRequest instance.
  */
 DescribeVpnGatewaysRequestPrivate::DescribeVpnGatewaysRequestPrivate(
     const DescribeVpnGatewaysRequestPrivate &other, DescribeVpnGatewaysRequest * const q)

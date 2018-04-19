@@ -34,6 +34,9 @@
 /*!
  * \namespace QtAws::CloudSearchDomain
  * \brief The QtAws::CloudSearchDomain contains stuff...
+ *
+ * \inmodule QtAwsCloudSearchDomain
+ *
  * @todo Move this to a separate template file.
  */
 
@@ -96,7 +99,7 @@ CloudSearchDomainClient::CloudSearchDomainClient(
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * \a  AwsEndpoint::getEndpoint()
+ * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
 CloudSearchDomainClient::CloudSearchDomainClient(
     const QUrl &endpoint,

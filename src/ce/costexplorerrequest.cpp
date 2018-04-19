@@ -25,16 +25,27 @@ namespace CostExplorer {
 
 /*!
  * \class QtAws::CostExplorer::CostExplorerRequest
- *
  * \brief The CostExplorerRequest class provides an interface for CostExplorer requests.
  *
- * \ingroup CostExplorer
+ * \inmodule QtAwsCostExplorer
  */
 
 /*!
- * @brief  Constructs a new CostExplorerRequest object.
+ * \enum CostExplorerRequest::Action
  *
- * @param  action  The CostExplorer action to request.
+ * This enum describes the actions that can be performed as CostExplorer
+ * requests.
+ *
+ * \value GetCostAndUsageAction CostExplorer GetCostAndUsage action.
+ * \value GetDimensionValuesAction CostExplorer GetDimensionValues action.
+ * \value GetReservationCoverageAction CostExplorer GetReservationCoverage action.
+ * \value GetReservationPurchaseRecommendationAction CostExplorer GetReservationPurchaseRecommendation action.
+ * \value GetReservationUtilizationAction CostExplorer GetReservationUtilization action.
+ * \value GetTagsAction CostExplorer GetTags action.
+ */
+
+/*!
+ * Constructs a[n] CostExplorerRequest object for CostExplorer \a action.
  */
 CostExplorerRequest::CostExplorerRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new CostExplorerRequestPrivate(action, this))
@@ -43,9 +54,7 @@ CostExplorerRequest::CostExplorerRequest(const Action action)
 }
 
 /*!
- * @brief  Constructs a new CostExplorerRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CostExplorerRequest::CostExplorerRequest(const CostExplorerRequest &other)
     : QtAws::Core::AwsAbstractRequest(new CostExplorerRequestPrivate(*other.d_func(), this))
@@ -54,13 +63,7 @@ CostExplorerRequest::CostExplorerRequest(const CostExplorerRequest &other)
 }
 
 /*!
- * @brief  Assignment operator.
- *
- * Assigns \a other to \c this.
- *
- * @param  other  Instance to copy.
- *
- * @return  A reference to \c this.
+ * Sets the CostExplorerRequest object to be equal to \a other.
  */
 CostExplorerRequest& CostExplorerRequest::operator=(const CostExplorerRequest &other)
 {
@@ -72,14 +75,10 @@ CostExplorerRequest& CostExplorerRequest::operator=(const CostExplorerRequest &o
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CostExplorerRequest object.
+ * Constructs aa CostExplorerRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from CostExplorerRequestPrivate.
- *
- * @param  d  Pointer to private data (aka D-Pointer).
  */
 CostExplorerRequest::CostExplorerRequest(CostExplorerRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
@@ -87,7 +86,7 @@ CostExplorerRequest::CostExplorerRequest(CostExplorerRequestPrivate * const d) :
 }
 
 /*!
- * \brief Returns the CostExplorer action to be performed by this request.
+ * Returns the CostExplorer action to be performed by this request.
  */
 CostExplorerRequest::Action CostExplorerRequest::action() const
 {
@@ -96,7 +95,7 @@ CostExplorerRequest::Action CostExplorerRequest::action() const
 }
 
 /*!
- * \brief Returns the name of the CostExplorer action to be performed by this request.
+ * Returns the name of the CostExplorer action to be performed by this request.
  */
 QString CostExplorerRequest::actionString() const
 {
@@ -104,7 +103,7 @@ QString CostExplorerRequest::actionString() const
 }
 
 /*!
- * \brief Returns the CostExplorer API version implemented by this request.
+ * Returns the CostExplorer API version implemented by this request.
  */
 QString CostExplorerRequest::apiVersion() const
 {
@@ -113,7 +112,7 @@ QString CostExplorerRequest::apiVersion() const
 }
 
 /*!
- * @brief Set the CostExplorer action to be performed by this request to \a action.
+ * Sets the CostExplorer action to be performed by this request to \a action.
  */
 void CostExplorerRequest::setAction(const Action action)
 {
@@ -122,7 +121,7 @@ void CostExplorerRequest::setAction(const Action action)
 }
 
 /*!
- * Set the CostExplorer API version to include in this request to \a version.
+ * Sets the CostExplorer API version to include in this request to \a version.
  */
 void CostExplorerRequest::setApiVersion(const QString &version)
 {
@@ -131,7 +130,7 @@ void CostExplorerRequest::setApiVersion(const QString &version)
 }
 
 /*!
- * \brief Returns \c true if this request is the same as \a other.
+ * Returns \c true if this request is equal to \a other; \c false otherwise.
  *
  * Note, most derived *Request classes do not need to provider their own
  * implementations of this function, since most such request classes rely on
@@ -146,8 +145,8 @@ bool CostExplorerRequest::operator==(const CostExplorerRequest &other) const
             (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
-/*!
- * @brief  Check if \a queueName is a valid CostExplorer queue name.
+/*
+ * Returns \c tue if \a queueName is a valid CostExplorer queue name.
  *
  * @par From CostExplorer FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
@@ -166,9 +165,8 @@ bool CostExplorerRequest::operator==(const CostExplorerRequest &other) const
 }*/
 
 /*!
- * \brief Removes the a \a name parameter from this request.
- *
- * Returns the count of paramters removed (typically \c 0 or \c 1).
+ * Removes the a \a name parameter from the request, then returns the number of
+ * paramters removed (typically \c 0 or \c 1).
  */
 int CostExplorerRequest::clearParameter(const QString &name)
 {
@@ -177,7 +175,7 @@ int CostExplorerRequest::clearParameter(const QString &name)
 }
 
 /*!
- * \brief Removes all parameters from this request.
+ * Removes all parameters from the request.
  */
 void CostExplorerRequest::clearParameters()
 {
@@ -186,7 +184,7 @@ void CostExplorerRequest::clearParameters()
 }
 
 /*!
- * \brief Returns the value of the \n name pararemter if set, otherwise \a defaultValue.
+ * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
 QVariant CostExplorerRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
@@ -195,7 +193,7 @@ QVariant CostExplorerRequest::parameter(const QString &name, const QVariant &def
 }
 
 /*!
- * \brief Returns a map of parameters included in this request.
+ * Returns the parameters included in this request.
  */
 const QVariantMap &CostExplorerRequest::parameters() const
 {
@@ -204,7 +202,7 @@ const QVariantMap &CostExplorerRequest::parameters() const
 }
 
 /*!
- * \brief Sets the \a name parameter to \a value.
+ * Sets the \a name parameter to \a value.
  */
 void CostExplorerRequest::setParameter(const QString &name, const QVariant &value)
 {
@@ -213,9 +211,8 @@ void CostExplorerRequest::setParameter(const QString &name, const QVariant &valu
 }
 
 /*!
- * \brief Sets the map of paramters for this request to \a parameters.
- *
- * Any request parameters set previously will be discarded.
+ * Sets the paramters for this request to \a parameters. Any request parameters
+ * set previously will be discarded.
  */
 void CostExplorerRequest::setParameters(const QVariantMap &parameters)
 {
@@ -224,11 +221,12 @@ void CostExplorerRequest::setParameters(const QVariantMap &parameters)
 }
 
 /*!
- * \brief Returns a network request for this CostExplorer request using the given \a endpoint.
+ * Returns a network request for the CostExplorer request using the given
+ * \a endpoint.
  *
- * This CostExplorer implementation builds request URLs by combining the common query
- * parameters (such as Action and Version), with any that have been added (via
- * setParameter) by child classes.
+ * This CostExplorer implementation builds request URLs by combining the
+ * common query parameters (such as Action and Version), with any that have
+ * been added (via setParameter) by child classes.
  */
 QNetworkRequest CostExplorerRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -239,17 +237,16 @@ QNetworkRequest CostExplorerRequest::unsignedRequest(const QUrl &endpoint) const
 }
 
 /*!
+ * \class QtAws::CostExplorer::CostExplorerRequestPrivate
+ * \brief The CostExplorerRequestPrivate class provides private implementation for CostExplorerRequest.
  * \internal
  *
- * \class  CostExplorerRequestPrivate
- *
- * \brief  Private implementation for CostExplorerRequest.
+ * \inmodule QtAwsCostExplorer
  */
 
 /*!
- * \internal
- *
- * \brief Constructs a new CostExplorerRequestPrivate object.
+ * Constructs a CostExplorerRequestPrivate object for CostExplorer \a action with,
+ * public implementation \a q.
  */
 CostExplorerRequestPrivate::CostExplorerRequestPrivate(const CostExplorerRequest::Action action, CostExplorerRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
@@ -258,9 +255,7 @@ CostExplorerRequestPrivate::CostExplorerRequestPrivate(const CostExplorerRequest
 }
 
 /*!
- * \internal
- *
- * \brief Constructs a new CostExplorerRequestPrivate object, copying an existing one.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
@@ -276,15 +271,12 @@ CostExplorerRequestPrivate::CostExplorerRequestPrivate(const CostExplorerRequest
 }
 
 /*!
- * \internal
- *
- * \brief Returns a string representing \a action.
+ * Returns a string represention of \a action, or a null string if \a action is
+ * invalid.
  *
  * This function converts CostExplorerRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the CostExplorer service's Action
  * query parameters.
- *
- * @return A string representing \a action, or a null string if \a action is invalid.
  */
 QString CostExplorerRequestPrivate::toString(const CostExplorerRequest::Action &action)
 {

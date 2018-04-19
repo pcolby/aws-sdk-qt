@@ -40,6 +40,9 @@
 /*!
  * \namespace QtAws::Polly
  * \brief The QtAws::Polly contains stuff...
+ *
+ * \inmodule QtAwsPolly
+ *
  * @todo Move this to a separate template file.
  */
 
@@ -96,7 +99,7 @@ PollyClient::PollyClient(
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * \a  AwsEndpoint::getEndpoint()
+ * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
 PollyClient::PollyClient(
     const QUrl &endpoint,

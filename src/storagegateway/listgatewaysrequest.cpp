@@ -27,10 +27,9 @@ namespace StorageGateway {
 
 /*!
  * \class QtAws::StorageGateway::ListGatewaysRequest
- *
  * \brief The ListGatewaysRequest class provides an interface for StorageGateway ListGateways requests.
  *
- * \ingroup StorageGateway
+ * \inmodule QtAwsStorageGateway
  *
  *  <fullname>AWS Storage Gateway Service</fullname>
  * 
@@ -106,9 +105,7 @@ namespace StorageGateway {
  */
 
 /*!
- * @brief  Constructs a new ListGatewaysRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListGatewaysRequest::ListGatewaysRequest(const ListGatewaysRequest &other)
     : StorageGatewayRequest(new ListGatewaysRequestPrivate(*other.d_func(), this))
@@ -117,7 +114,7 @@ ListGatewaysRequest::ListGatewaysRequest(const ListGatewaysRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ListGatewaysRequest object.
+ * Constructs a ListGatewaysRequest object.
  */
 ListGatewaysRequest::ListGatewaysRequest()
     : StorageGatewayRequest(new ListGatewaysRequestPrivate(StorageGatewayRequest::ListGatewaysAction, this))
@@ -135,14 +132,9 @@ bool ListGatewaysRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListGatewaysResponse object.
+ * Returns a ListGatewaysResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListGatewaysResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  StorageGatewayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListGatewaysRequest::response(QNetworkReply * const reply) const
 {
@@ -150,20 +142,17 @@ QtAws::Core::AwsAbstractResponse * ListGatewaysRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::StorageGateway::ListGatewaysRequestPrivate
+ * \brief The ListGatewaysRequestPrivate class provides private implementation for ListGatewaysRequest.
+ * \internal
  *
- * @class  ListGatewaysRequestPrivate
- *
- * @brief  Private implementation for ListGatewaysRequest.
+ * \inmodule QtAwsStorageGateway
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListGatewaysRequestPrivate object.
- *
- * @param  action  StorageGateway action being performed.
- * @param  q       Pointer to this object's public ListGatewaysRequest instance.
+ * Constructs a ListGatewaysRequestPrivate object for StorageGateway \a action with,
+ * public implementation \a q.
  */
 ListGatewaysRequestPrivate::ListGatewaysRequestPrivate(
     const StorageGatewayRequest::Action action, ListGatewaysRequest * const q)
@@ -173,15 +162,10 @@ ListGatewaysRequestPrivate::ListGatewaysRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListGatewaysRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListGatewaysRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListGatewaysRequest instance.
  */
 ListGatewaysRequestPrivate::ListGatewaysRequestPrivate(
     const ListGatewaysRequestPrivate &other, ListGatewaysRequest * const q)

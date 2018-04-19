@@ -60,6 +60,9 @@
 /*!
  * \namespace QtAws::MigrationHub
  * \brief The QtAws::MigrationHub contains stuff...
+ *
+ * \inmodule QtAwsMigrationHub
+ *
  * @todo Move this to a separate template file.
  */
 
@@ -111,7 +114,7 @@ MigrationHubClient::MigrationHubClient(
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * \a  AwsEndpoint::getEndpoint()
+ * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
 MigrationHubClient::MigrationHubClient(
     const QUrl &endpoint,

@@ -27,10 +27,9 @@ namespace ServiceDiscovery {
 
 /*!
  * \class QtAws::ServiceDiscovery::RegisterInstanceRequest
- *
  * \brief The RegisterInstanceRequest class provides an interface for ServiceDiscovery RegisterInstance requests.
  *
- * \ingroup ServiceDiscovery
+ * \inmodule QtAwsServiceDiscovery
  *
  *  Amazon Route 53 auto naming lets you configure public or private namespaces that your microservice applications run in.
  *  When instances of the service become available, you can call the auto naming API to register the instance, and Route 53
@@ -41,9 +40,7 @@ namespace ServiceDiscovery {
  */
 
 /*!
- * @brief  Constructs a new RegisterInstanceRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 RegisterInstanceRequest::RegisterInstanceRequest(const RegisterInstanceRequest &other)
     : ServiceDiscoveryRequest(new RegisterInstanceRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ RegisterInstanceRequest::RegisterInstanceRequest(const RegisterInstanceRequest &
 }
 
 /*!
- * @brief  Constructs a new RegisterInstanceRequest object.
+ * Constructs a RegisterInstanceRequest object.
  */
 RegisterInstanceRequest::RegisterInstanceRequest()
     : ServiceDiscoveryRequest(new RegisterInstanceRequestPrivate(ServiceDiscoveryRequest::RegisterInstanceAction, this))
@@ -70,14 +67,9 @@ bool RegisterInstanceRequest::isValid() const
 
 
 /*!
- * @brief  Construct an RegisterInstanceResponse object.
+ * Returns a RegisterInstanceResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An RegisterInstanceResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ServiceDiscoveryClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * RegisterInstanceRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * RegisterInstanceRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::ServiceDiscovery::RegisterInstanceRequestPrivate
+ * \brief The RegisterInstanceRequestPrivate class provides private implementation for RegisterInstanceRequest.
+ * \internal
  *
- * @class  RegisterInstanceRequestPrivate
- *
- * @brief  Private implementation for RegisterInstanceRequest.
+ * \inmodule QtAwsServiceDiscovery
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new RegisterInstanceRequestPrivate object.
- *
- * @param  action  ServiceDiscovery action being performed.
- * @param  q       Pointer to this object's public RegisterInstanceRequest instance.
+ * Constructs a RegisterInstanceRequestPrivate object for ServiceDiscovery \a action with,
+ * public implementation \a q.
  */
 RegisterInstanceRequestPrivate::RegisterInstanceRequestPrivate(
     const ServiceDiscoveryRequest::Action action, RegisterInstanceRequest * const q)
@@ -108,15 +97,10 @@ RegisterInstanceRequestPrivate::RegisterInstanceRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RegisterInstanceRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the RegisterInstanceRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public RegisterInstanceRequest instance.
  */
 RegisterInstanceRequestPrivate::RegisterInstanceRequestPrivate(
     const RegisterInstanceRequestPrivate &other, RegisterInstanceRequest * const q)

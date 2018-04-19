@@ -158,6 +158,9 @@
 /*!
  * \namespace QtAws::Pinpoint
  * \brief The QtAws::Pinpoint contains stuff...
+ *
+ * \inmodule QtAwsPinpoint
+ *
  * @todo Move this to a separate template file.
  */
 
@@ -207,7 +210,7 @@ PinpointClient::PinpointClient(
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * \a  AwsEndpoint::getEndpoint()
+ * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
 PinpointClient::PinpointClient(
     const QUrl &endpoint,

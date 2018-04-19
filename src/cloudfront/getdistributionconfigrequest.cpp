@@ -27,10 +27,9 @@ namespace CloudFront {
 
 /*!
  * \class QtAws::CloudFront::GetDistributionConfigRequest
- *
  * \brief The GetDistributionConfigRequest class provides an interface for CloudFront GetDistributionConfig requests.
  *
- * \ingroup CloudFront
+ * \inmodule QtAwsCloudFront
  *
  *  <fullname>Amazon CloudFront</fullname>
  * 
@@ -42,9 +41,7 @@ namespace CloudFront {
  */
 
 /*!
- * @brief  Constructs a new GetDistributionConfigRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetDistributionConfigRequest::GetDistributionConfigRequest(const GetDistributionConfigRequest &other)
     : CloudFrontRequest(new GetDistributionConfigRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ GetDistributionConfigRequest::GetDistributionConfigRequest(const GetDistribution
 }
 
 /*!
- * @brief  Constructs a new GetDistributionConfigRequest object.
+ * Constructs a GetDistributionConfigRequest object.
  */
 GetDistributionConfigRequest::GetDistributionConfigRequest()
     : CloudFrontRequest(new GetDistributionConfigRequestPrivate(CloudFrontRequest::GetDistributionConfigAction, this))
@@ -71,14 +68,9 @@ bool GetDistributionConfigRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetDistributionConfigResponse object.
+ * Returns a GetDistributionConfigResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetDistributionConfigResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudFrontClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetDistributionConfigRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * GetDistributionConfigRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudFront::GetDistributionConfigRequestPrivate
+ * \brief The GetDistributionConfigRequestPrivate class provides private implementation for GetDistributionConfigRequest.
+ * \internal
  *
- * @class  GetDistributionConfigRequestPrivate
- *
- * @brief  Private implementation for GetDistributionConfigRequest.
+ * \inmodule QtAwsCloudFront
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetDistributionConfigRequestPrivate object.
- *
- * @param  action  CloudFront action being performed.
- * @param  q       Pointer to this object's public GetDistributionConfigRequest instance.
+ * Constructs a GetDistributionConfigRequestPrivate object for CloudFront \a action with,
+ * public implementation \a q.
  */
 GetDistributionConfigRequestPrivate::GetDistributionConfigRequestPrivate(
     const CloudFrontRequest::Action action, GetDistributionConfigRequest * const q)
@@ -109,15 +98,10 @@ GetDistributionConfigRequestPrivate::GetDistributionConfigRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetDistributionConfigRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetDistributionConfigRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetDistributionConfigRequest instance.
  */
 GetDistributionConfigRequestPrivate::GetDistributionConfigRequestPrivate(
     const GetDistributionConfigRequestPrivate &other, GetDistributionConfigRequest * const q)

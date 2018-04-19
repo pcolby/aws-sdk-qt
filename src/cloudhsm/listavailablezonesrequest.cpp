@@ -27,10 +27,9 @@ namespace CloudHSM {
 
 /*!
  * \class QtAws::CloudHSM::ListAvailableZonesRequest
- *
  * \brief The ListAvailableZonesRequest class provides an interface for CloudHSM ListAvailableZones requests.
  *
- * \ingroup CloudHSM
+ * \inmodule QtAwsCloudHSM
  *
  *  <fullname>AWS CloudHSM Service</fullname>
  * 
@@ -49,9 +48,7 @@ namespace CloudHSM {
  */
 
 /*!
- * @brief  Constructs a new ListAvailableZonesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListAvailableZonesRequest::ListAvailableZonesRequest(const ListAvailableZonesRequest &other)
     : CloudHSMRequest(new ListAvailableZonesRequestPrivate(*other.d_func(), this))
@@ -60,7 +57,7 @@ ListAvailableZonesRequest::ListAvailableZonesRequest(const ListAvailableZonesReq
 }
 
 /*!
- * @brief  Constructs a new ListAvailableZonesRequest object.
+ * Constructs a ListAvailableZonesRequest object.
  */
 ListAvailableZonesRequest::ListAvailableZonesRequest()
     : CloudHSMRequest(new ListAvailableZonesRequestPrivate(CloudHSMRequest::ListAvailableZonesAction, this))
@@ -78,14 +75,9 @@ bool ListAvailableZonesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListAvailableZonesResponse object.
+ * Returns a ListAvailableZonesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListAvailableZonesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudHSMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListAvailableZonesRequest::response(QNetworkReply * const reply) const
 {
@@ -93,20 +85,17 @@ QtAws::Core::AwsAbstractResponse * ListAvailableZonesRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudHSM::ListAvailableZonesRequestPrivate
+ * \brief The ListAvailableZonesRequestPrivate class provides private implementation for ListAvailableZonesRequest.
+ * \internal
  *
- * @class  ListAvailableZonesRequestPrivate
- *
- * @brief  Private implementation for ListAvailableZonesRequest.
+ * \inmodule QtAwsCloudHSM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListAvailableZonesRequestPrivate object.
- *
- * @param  action  CloudHSM action being performed.
- * @param  q       Pointer to this object's public ListAvailableZonesRequest instance.
+ * Constructs a ListAvailableZonesRequestPrivate object for CloudHSM \a action with,
+ * public implementation \a q.
  */
 ListAvailableZonesRequestPrivate::ListAvailableZonesRequestPrivate(
     const CloudHSMRequest::Action action, ListAvailableZonesRequest * const q)
@@ -116,15 +105,10 @@ ListAvailableZonesRequestPrivate::ListAvailableZonesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListAvailableZonesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListAvailableZonesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListAvailableZonesRequest instance.
  */
 ListAvailableZonesRequestPrivate::ListAvailableZonesRequestPrivate(
     const ListAvailableZonesRequestPrivate &other, ListAvailableZonesRequest * const q)

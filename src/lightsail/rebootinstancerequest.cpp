@@ -27,10 +27,9 @@ namespace Lightsail {
 
 /*!
  * \class QtAws::Lightsail::RebootInstanceRequest
- *
  * \brief The RebootInstanceRequest class provides an interface for Lightsail RebootInstance requests.
  *
- * \ingroup Lightsail
+ * \inmodule QtAwsLightsail
  *
  *  Amazon Lightsail is the easiest way to get started with AWS for developers who just need virtual private servers.
  *  Lightsail includes everything you need to launch your project quickly - a virtual machine, SSD-based storage, data
@@ -53,9 +52,7 @@ namespace Lightsail {
  */
 
 /*!
- * @brief  Constructs a new RebootInstanceRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 RebootInstanceRequest::RebootInstanceRequest(const RebootInstanceRequest &other)
     : LightsailRequest(new RebootInstanceRequestPrivate(*other.d_func(), this))
@@ -64,7 +61,7 @@ RebootInstanceRequest::RebootInstanceRequest(const RebootInstanceRequest &other)
 }
 
 /*!
- * @brief  Constructs a new RebootInstanceRequest object.
+ * Constructs a RebootInstanceRequest object.
  */
 RebootInstanceRequest::RebootInstanceRequest()
     : LightsailRequest(new RebootInstanceRequestPrivate(LightsailRequest::RebootInstanceAction, this))
@@ -82,14 +79,9 @@ bool RebootInstanceRequest::isValid() const
 
 
 /*!
- * @brief  Construct an RebootInstanceResponse object.
+ * Returns a RebootInstanceResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An RebootInstanceResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  LightsailClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * RebootInstanceRequest::response(QNetworkReply * const reply) const
 {
@@ -97,20 +89,17 @@ QtAws::Core::AwsAbstractResponse * RebootInstanceRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::Lightsail::RebootInstanceRequestPrivate
+ * \brief The RebootInstanceRequestPrivate class provides private implementation for RebootInstanceRequest.
+ * \internal
  *
- * @class  RebootInstanceRequestPrivate
- *
- * @brief  Private implementation for RebootInstanceRequest.
+ * \inmodule QtAwsLightsail
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new RebootInstanceRequestPrivate object.
- *
- * @param  action  Lightsail action being performed.
- * @param  q       Pointer to this object's public RebootInstanceRequest instance.
+ * Constructs a RebootInstanceRequestPrivate object for Lightsail \a action with,
+ * public implementation \a q.
  */
 RebootInstanceRequestPrivate::RebootInstanceRequestPrivate(
     const LightsailRequest::Action action, RebootInstanceRequest * const q)
@@ -120,15 +109,10 @@ RebootInstanceRequestPrivate::RebootInstanceRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RebootInstanceRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the RebootInstanceRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public RebootInstanceRequest instance.
  */
 RebootInstanceRequestPrivate::RebootInstanceRequestPrivate(
     const RebootInstanceRequestPrivate &other, RebootInstanceRequest * const q)

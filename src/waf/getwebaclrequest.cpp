@@ -27,10 +27,9 @@ namespace WAF {
 
 /*!
  * \class QtAws::WAF::GetWebACLRequest
- *
  * \brief The GetWebACLRequest class provides an interface for WAF GetWebACL requests.
  *
- * \ingroup WAF
+ * \inmodule QtAwsWAF
  *
  *  This is the <i>AWS WAF API Reference</i> for using AWS WAF with Amazon CloudFront. The AWS WAF actions and data types
  *  listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data
@@ -42,9 +41,7 @@ namespace WAF {
  */
 
 /*!
- * @brief  Constructs a new GetWebACLRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetWebACLRequest::GetWebACLRequest(const GetWebACLRequest &other)
     : WAFRequest(new GetWebACLRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ GetWebACLRequest::GetWebACLRequest(const GetWebACLRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetWebACLRequest object.
+ * Constructs a GetWebACLRequest object.
  */
 GetWebACLRequest::GetWebACLRequest()
     : WAFRequest(new GetWebACLRequestPrivate(WAFRequest::GetWebACLAction, this))
@@ -71,14 +68,9 @@ bool GetWebACLRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetWebACLResponse object.
+ * Returns a GetWebACLResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetWebACLResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WAFClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetWebACLRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * GetWebACLRequest::response(QNetworkReply * co
 }
 
 /*!
- * @internal
+ * \class QtAws::WAF::GetWebACLRequestPrivate
+ * \brief The GetWebACLRequestPrivate class provides private implementation for GetWebACLRequest.
+ * \internal
  *
- * @class  GetWebACLRequestPrivate
- *
- * @brief  Private implementation for GetWebACLRequest.
+ * \inmodule QtAwsWAF
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetWebACLRequestPrivate object.
- *
- * @param  action  WAF action being performed.
- * @param  q       Pointer to this object's public GetWebACLRequest instance.
+ * Constructs a GetWebACLRequestPrivate object for WAF \a action with,
+ * public implementation \a q.
  */
 GetWebACLRequestPrivate::GetWebACLRequestPrivate(
     const WAFRequest::Action action, GetWebACLRequest * const q)
@@ -109,15 +98,10 @@ GetWebACLRequestPrivate::GetWebACLRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetWebACLRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetWebACLRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetWebACLRequest instance.
  */
 GetWebACLRequestPrivate::GetWebACLRequestPrivate(
     const GetWebACLRequestPrivate &other, GetWebACLRequest * const q)

@@ -27,10 +27,9 @@ namespace Mobile {
 
 /*!
  * \class QtAws::Mobile::ListProjectsRequest
- *
  * \brief The ListProjectsRequest class provides an interface for Mobile ListProjects requests.
  *
- * \ingroup Mobile
+ * \inmodule QtAwsMobile
  *
  *  AWS Mobile Service provides mobile app and website developers with capabilities required to configure AWS resources and
  *  bootstrap their developer desktop projects with the necessary SDKs, constants, tools and samples to make use of those
@@ -40,9 +39,7 @@ namespace Mobile {
  */
 
 /*!
- * @brief  Constructs a new ListProjectsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListProjectsRequest::ListProjectsRequest(const ListProjectsRequest &other)
     : MobileRequest(new ListProjectsRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ ListProjectsRequest::ListProjectsRequest(const ListProjectsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ListProjectsRequest object.
+ * Constructs a ListProjectsRequest object.
  */
 ListProjectsRequest::ListProjectsRequest()
     : MobileRequest(new ListProjectsRequestPrivate(MobileRequest::ListProjectsAction, this))
@@ -69,14 +66,9 @@ bool ListProjectsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListProjectsResponse object.
+ * Returns a ListProjectsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListProjectsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MobileClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListProjectsRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * ListProjectsRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::Mobile::ListProjectsRequestPrivate
+ * \brief The ListProjectsRequestPrivate class provides private implementation for ListProjectsRequest.
+ * \internal
  *
- * @class  ListProjectsRequestPrivate
- *
- * @brief  Private implementation for ListProjectsRequest.
+ * \inmodule QtAwsMobile
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListProjectsRequestPrivate object.
- *
- * @param  action  Mobile action being performed.
- * @param  q       Pointer to this object's public ListProjectsRequest instance.
+ * Constructs a ListProjectsRequestPrivate object for Mobile \a action with,
+ * public implementation \a q.
  */
 ListProjectsRequestPrivate::ListProjectsRequestPrivate(
     const MobileRequest::Action action, ListProjectsRequest * const q)
@@ -107,15 +96,10 @@ ListProjectsRequestPrivate::ListProjectsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListProjectsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListProjectsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListProjectsRequest instance.
  */
 ListProjectsRequestPrivate::ListProjectsRequestPrivate(
     const ListProjectsRequestPrivate &other, ListProjectsRequest * const q)

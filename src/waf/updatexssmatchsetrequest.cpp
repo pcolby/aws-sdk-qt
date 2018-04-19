@@ -27,10 +27,9 @@ namespace WAF {
 
 /*!
  * \class QtAws::WAF::UpdateXssMatchSetRequest
- *
  * \brief The UpdateXssMatchSetRequest class provides an interface for WAF UpdateXssMatchSet requests.
  *
- * \ingroup WAF
+ * \inmodule QtAwsWAF
  *
  *  This is the <i>AWS WAF API Reference</i> for using AWS WAF with Amazon CloudFront. The AWS WAF actions and data types
  *  listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data
@@ -42,9 +41,7 @@ namespace WAF {
  */
 
 /*!
- * @brief  Constructs a new UpdateXssMatchSetRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateXssMatchSetRequest::UpdateXssMatchSetRequest(const UpdateXssMatchSetRequest &other)
     : WAFRequest(new UpdateXssMatchSetRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ UpdateXssMatchSetRequest::UpdateXssMatchSetRequest(const UpdateXssMatchSetReques
 }
 
 /*!
- * @brief  Constructs a new UpdateXssMatchSetRequest object.
+ * Constructs a UpdateXssMatchSetRequest object.
  */
 UpdateXssMatchSetRequest::UpdateXssMatchSetRequest()
     : WAFRequest(new UpdateXssMatchSetRequestPrivate(WAFRequest::UpdateXssMatchSetAction, this))
@@ -71,14 +68,9 @@ bool UpdateXssMatchSetRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateXssMatchSetResponse object.
+ * Returns a UpdateXssMatchSetResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateXssMatchSetResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WAFClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateXssMatchSetRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * UpdateXssMatchSetRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::WAF::UpdateXssMatchSetRequestPrivate
+ * \brief The UpdateXssMatchSetRequestPrivate class provides private implementation for UpdateXssMatchSetRequest.
+ * \internal
  *
- * @class  UpdateXssMatchSetRequestPrivate
- *
- * @brief  Private implementation for UpdateXssMatchSetRequest.
+ * \inmodule QtAwsWAF
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateXssMatchSetRequestPrivate object.
- *
- * @param  action  WAF action being performed.
- * @param  q       Pointer to this object's public UpdateXssMatchSetRequest instance.
+ * Constructs a UpdateXssMatchSetRequestPrivate object for WAF \a action with,
+ * public implementation \a q.
  */
 UpdateXssMatchSetRequestPrivate::UpdateXssMatchSetRequestPrivate(
     const WAFRequest::Action action, UpdateXssMatchSetRequest * const q)
@@ -109,15 +98,10 @@ UpdateXssMatchSetRequestPrivate::UpdateXssMatchSetRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateXssMatchSetRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateXssMatchSetRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateXssMatchSetRequest instance.
  */
 UpdateXssMatchSetRequestPrivate::UpdateXssMatchSetRequestPrivate(
     const UpdateXssMatchSetRequestPrivate &other, UpdateXssMatchSetRequest * const q)

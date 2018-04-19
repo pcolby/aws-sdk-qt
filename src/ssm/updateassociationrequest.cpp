@@ -27,10 +27,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::UpdateAssociationRequest
- *
  * \brief The UpdateAssociationRequest class provides an interface for SSM UpdateAssociation requests.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -61,9 +60,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new UpdateAssociationRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateAssociationRequest::UpdateAssociationRequest(const UpdateAssociationRequest &other)
     : SSMRequest(new UpdateAssociationRequestPrivate(*other.d_func(), this))
@@ -72,7 +69,7 @@ UpdateAssociationRequest::UpdateAssociationRequest(const UpdateAssociationReques
 }
 
 /*!
- * @brief  Constructs a new UpdateAssociationRequest object.
+ * Constructs a UpdateAssociationRequest object.
  */
 UpdateAssociationRequest::UpdateAssociationRequest()
     : SSMRequest(new UpdateAssociationRequestPrivate(SSMRequest::UpdateAssociationAction, this))
@@ -90,14 +87,9 @@ bool UpdateAssociationRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateAssociationResponse object.
+ * Returns a UpdateAssociationResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateAssociationResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SSMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateAssociationRequest::response(QNetworkReply * const reply) const
 {
@@ -105,20 +97,17 @@ QtAws::Core::AwsAbstractResponse * UpdateAssociationRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::SSM::UpdateAssociationRequestPrivate
+ * \brief The UpdateAssociationRequestPrivate class provides private implementation for UpdateAssociationRequest.
+ * \internal
  *
- * @class  UpdateAssociationRequestPrivate
- *
- * @brief  Private implementation for UpdateAssociationRequest.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateAssociationRequestPrivate object.
- *
- * @param  action  SSM action being performed.
- * @param  q       Pointer to this object's public UpdateAssociationRequest instance.
+ * Constructs a UpdateAssociationRequestPrivate object for SSM \a action with,
+ * public implementation \a q.
  */
 UpdateAssociationRequestPrivate::UpdateAssociationRequestPrivate(
     const SSMRequest::Action action, UpdateAssociationRequest * const q)
@@ -128,15 +117,10 @@ UpdateAssociationRequestPrivate::UpdateAssociationRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateAssociationRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateAssociationRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateAssociationRequest instance.
  */
 UpdateAssociationRequestPrivate::UpdateAssociationRequestPrivate(
     const UpdateAssociationRequestPrivate &other, UpdateAssociationRequest * const q)

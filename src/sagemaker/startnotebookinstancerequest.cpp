@@ -27,19 +27,16 @@ namespace SageMaker {
 
 /*!
  * \class QtAws::SageMaker::StartNotebookInstanceRequest
- *
  * \brief The StartNotebookInstanceRequest class provides an interface for SageMaker StartNotebookInstance requests.
  *
- * \ingroup SageMaker
+ * \inmodule QtAwsSageMaker
  *
  *
  * \sa SageMakerClient::startNotebookInstance
  */
 
 /*!
- * @brief  Constructs a new StartNotebookInstanceRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 StartNotebookInstanceRequest::StartNotebookInstanceRequest(const StartNotebookInstanceRequest &other)
     : SageMakerRequest(new StartNotebookInstanceRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ StartNotebookInstanceRequest::StartNotebookInstanceRequest(const StartNotebookIn
 }
 
 /*!
- * @brief  Constructs a new StartNotebookInstanceRequest object.
+ * Constructs a StartNotebookInstanceRequest object.
  */
 StartNotebookInstanceRequest::StartNotebookInstanceRequest()
     : SageMakerRequest(new StartNotebookInstanceRequestPrivate(SageMakerRequest::StartNotebookInstanceAction, this))
@@ -66,14 +63,9 @@ bool StartNotebookInstanceRequest::isValid() const
 
 
 /*!
- * @brief  Construct an StartNotebookInstanceResponse object.
+ * Returns a StartNotebookInstanceResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An StartNotebookInstanceResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SageMakerClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * StartNotebookInstanceRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * StartNotebookInstanceRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::SageMaker::StartNotebookInstanceRequestPrivate
+ * \brief The StartNotebookInstanceRequestPrivate class provides private implementation for StartNotebookInstanceRequest.
+ * \internal
  *
- * @class  StartNotebookInstanceRequestPrivate
- *
- * @brief  Private implementation for StartNotebookInstanceRequest.
+ * \inmodule QtAwsSageMaker
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new StartNotebookInstanceRequestPrivate object.
- *
- * @param  action  SageMaker action being performed.
- * @param  q       Pointer to this object's public StartNotebookInstanceRequest instance.
+ * Constructs a StartNotebookInstanceRequestPrivate object for SageMaker \a action with,
+ * public implementation \a q.
  */
 StartNotebookInstanceRequestPrivate::StartNotebookInstanceRequestPrivate(
     const SageMakerRequest::Action action, StartNotebookInstanceRequest * const q)
@@ -104,15 +93,10 @@ StartNotebookInstanceRequestPrivate::StartNotebookInstanceRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StartNotebookInstanceRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the StartNotebookInstanceRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public StartNotebookInstanceRequest instance.
  */
 StartNotebookInstanceRequestPrivate::StartNotebookInstanceRequestPrivate(
     const StartNotebookInstanceRequestPrivate &other, StartNotebookInstanceRequest * const q)

@@ -27,10 +27,9 @@ namespace CloudSearch {
 
 /*!
  * \class QtAws::CloudSearch::DeleteIndexFieldRequest
- *
  * \brief The DeleteIndexFieldRequest class provides an interface for CloudSearch DeleteIndexField requests.
  *
- * \ingroup CloudSearch
+ * \inmodule QtAwsCloudSearch
  *
  *  <fullname>Amazon CloudSearch Configuration Service</fullname>
  * 
@@ -48,9 +47,7 @@ namespace CloudSearch {
  */
 
 /*!
- * @brief  Constructs a new DeleteIndexFieldRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteIndexFieldRequest::DeleteIndexFieldRequest(const DeleteIndexFieldRequest &other)
     : CloudSearchRequest(new DeleteIndexFieldRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ DeleteIndexFieldRequest::DeleteIndexFieldRequest(const DeleteIndexFieldRequest &
 }
 
 /*!
- * @brief  Constructs a new DeleteIndexFieldRequest object.
+ * Constructs a DeleteIndexFieldRequest object.
  */
 DeleteIndexFieldRequest::DeleteIndexFieldRequest()
     : CloudSearchRequest(new DeleteIndexFieldRequestPrivate(CloudSearchRequest::DeleteIndexFieldAction, this))
@@ -77,14 +74,9 @@ bool DeleteIndexFieldRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteIndexFieldResponse object.
+ * Returns a DeleteIndexFieldResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteIndexFieldResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudSearchClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteIndexFieldRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * DeleteIndexFieldRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudSearch::DeleteIndexFieldRequestPrivate
+ * \brief The DeleteIndexFieldRequestPrivate class provides private implementation for DeleteIndexFieldRequest.
+ * \internal
  *
- * @class  DeleteIndexFieldRequestPrivate
- *
- * @brief  Private implementation for DeleteIndexFieldRequest.
+ * \inmodule QtAwsCloudSearch
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteIndexFieldRequestPrivate object.
- *
- * @param  action  CloudSearch action being performed.
- * @param  q       Pointer to this object's public DeleteIndexFieldRequest instance.
+ * Constructs a DeleteIndexFieldRequestPrivate object for CloudSearch \a action with,
+ * public implementation \a q.
  */
 DeleteIndexFieldRequestPrivate::DeleteIndexFieldRequestPrivate(
     const CloudSearchRequest::Action action, DeleteIndexFieldRequest * const q)
@@ -115,15 +104,10 @@ DeleteIndexFieldRequestPrivate::DeleteIndexFieldRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteIndexFieldRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteIndexFieldRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteIndexFieldRequest instance.
  */
 DeleteIndexFieldRequestPrivate::DeleteIndexFieldRequestPrivate(
     const DeleteIndexFieldRequestPrivate &other, DeleteIndexFieldRequest * const q)

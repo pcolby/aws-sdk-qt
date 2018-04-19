@@ -27,10 +27,9 @@ namespace KMS {
 
 /*!
  * \class QtAws::KMS::EnableKeyRequest
- *
  * \brief The EnableKeyRequest class provides an interface for KMS EnableKey requests.
  *
- * \ingroup KMS
+ * \inmodule QtAwsKMS
  *
  *  <fullname>AWS Key Management Service</fullname>
  * 
@@ -136,9 +135,7 @@ namespace KMS {
  */
 
 /*!
- * @brief  Constructs a new EnableKeyRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 EnableKeyRequest::EnableKeyRequest(const EnableKeyRequest &other)
     : KMSRequest(new EnableKeyRequestPrivate(*other.d_func(), this))
@@ -147,7 +144,7 @@ EnableKeyRequest::EnableKeyRequest(const EnableKeyRequest &other)
 }
 
 /*!
- * @brief  Constructs a new EnableKeyRequest object.
+ * Constructs a EnableKeyRequest object.
  */
 EnableKeyRequest::EnableKeyRequest()
     : KMSRequest(new EnableKeyRequestPrivate(KMSRequest::EnableKeyAction, this))
@@ -165,14 +162,9 @@ bool EnableKeyRequest::isValid() const
 
 
 /*!
- * @brief  Construct an EnableKeyResponse object.
+ * Returns a EnableKeyResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An EnableKeyResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  KMSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * EnableKeyRequest::response(QNetworkReply * const reply) const
 {
@@ -180,20 +172,17 @@ QtAws::Core::AwsAbstractResponse * EnableKeyRequest::response(QNetworkReply * co
 }
 
 /*!
- * @internal
+ * \class QtAws::KMS::EnableKeyRequestPrivate
+ * \brief The EnableKeyRequestPrivate class provides private implementation for EnableKeyRequest.
+ * \internal
  *
- * @class  EnableKeyRequestPrivate
- *
- * @brief  Private implementation for EnableKeyRequest.
+ * \inmodule QtAwsKMS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new EnableKeyRequestPrivate object.
- *
- * @param  action  KMS action being performed.
- * @param  q       Pointer to this object's public EnableKeyRequest instance.
+ * Constructs a EnableKeyRequestPrivate object for KMS \a action with,
+ * public implementation \a q.
  */
 EnableKeyRequestPrivate::EnableKeyRequestPrivate(
     const KMSRequest::Action action, EnableKeyRequest * const q)
@@ -203,15 +192,10 @@ EnableKeyRequestPrivate::EnableKeyRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new EnableKeyRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the EnableKeyRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public EnableKeyRequest instance.
  */
 EnableKeyRequestPrivate::EnableKeyRequestPrivate(
     const EnableKeyRequestPrivate &other, EnableKeyRequest * const q)

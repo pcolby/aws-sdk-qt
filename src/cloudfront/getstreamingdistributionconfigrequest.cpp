@@ -27,10 +27,9 @@ namespace CloudFront {
 
 /*!
  * \class QtAws::CloudFront::GetStreamingDistributionConfigRequest
- *
  * \brief The GetStreamingDistributionConfigRequest class provides an interface for CloudFront GetStreamingDistributionConfig requests.
  *
- * \ingroup CloudFront
+ * \inmodule QtAwsCloudFront
  *
  *  <fullname>Amazon CloudFront</fullname>
  * 
@@ -42,9 +41,7 @@ namespace CloudFront {
  */
 
 /*!
- * @brief  Constructs a new GetStreamingDistributionConfigRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetStreamingDistributionConfigRequest::GetStreamingDistributionConfigRequest(const GetStreamingDistributionConfigRequest &other)
     : CloudFrontRequest(new GetStreamingDistributionConfigRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ GetStreamingDistributionConfigRequest::GetStreamingDistributionConfigRequest(con
 }
 
 /*!
- * @brief  Constructs a new GetStreamingDistributionConfigRequest object.
+ * Constructs a GetStreamingDistributionConfigRequest object.
  */
 GetStreamingDistributionConfigRequest::GetStreamingDistributionConfigRequest()
     : CloudFrontRequest(new GetStreamingDistributionConfigRequestPrivate(CloudFrontRequest::GetStreamingDistributionConfigAction, this))
@@ -71,14 +68,9 @@ bool GetStreamingDistributionConfigRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetStreamingDistributionConfigResponse object.
+ * Returns a GetStreamingDistributionConfigResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetStreamingDistributionConfigResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudFrontClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetStreamingDistributionConfigRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * GetStreamingDistributionConfigRequest::respon
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudFront::GetStreamingDistributionConfigRequestPrivate
+ * \brief The GetStreamingDistributionConfigRequestPrivate class provides private implementation for GetStreamingDistributionConfigRequest.
+ * \internal
  *
- * @class  GetStreamingDistributionConfigRequestPrivate
- *
- * @brief  Private implementation for GetStreamingDistributionConfigRequest.
+ * \inmodule QtAwsCloudFront
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetStreamingDistributionConfigRequestPrivate object.
- *
- * @param  action  CloudFront action being performed.
- * @param  q       Pointer to this object's public GetStreamingDistributionConfigRequest instance.
+ * Constructs a GetStreamingDistributionConfigRequestPrivate object for CloudFront \a action with,
+ * public implementation \a q.
  */
 GetStreamingDistributionConfigRequestPrivate::GetStreamingDistributionConfigRequestPrivate(
     const CloudFrontRequest::Action action, GetStreamingDistributionConfigRequest * const q)
@@ -109,15 +98,10 @@ GetStreamingDistributionConfigRequestPrivate::GetStreamingDistributionConfigRequ
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetStreamingDistributionConfigRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetStreamingDistributionConfigRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetStreamingDistributionConfigRequest instance.
  */
 GetStreamingDistributionConfigRequestPrivate::GetStreamingDistributionConfigRequestPrivate(
     const GetStreamingDistributionConfigRequestPrivate &other, GetStreamingDistributionConfigRequest * const q)

@@ -27,10 +27,9 @@ namespace CloudWatchEvents {
 
 /*!
  * \class QtAws::CloudWatchEvents::TestEventPatternRequest
- *
  * \brief The TestEventPatternRequest class provides an interface for CloudWatchEvents TestEventPattern requests.
  *
- * \ingroup CloudWatchEvents
+ * \inmodule QtAwsCloudWatchEvents
  *
  *  Amazon CloudWatch Events helps you to respond to state changes in your AWS resources. When your resources change state,
  *  they automatically send events into an event stream. You can create rules that match selected events in the stream and
@@ -60,9 +59,7 @@ namespace CloudWatchEvents {
  */
 
 /*!
- * @brief  Constructs a new TestEventPatternRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 TestEventPatternRequest::TestEventPatternRequest(const TestEventPatternRequest &other)
     : CloudWatchEventsRequest(new TestEventPatternRequestPrivate(*other.d_func(), this))
@@ -71,7 +68,7 @@ TestEventPatternRequest::TestEventPatternRequest(const TestEventPatternRequest &
 }
 
 /*!
- * @brief  Constructs a new TestEventPatternRequest object.
+ * Constructs a TestEventPatternRequest object.
  */
 TestEventPatternRequest::TestEventPatternRequest()
     : CloudWatchEventsRequest(new TestEventPatternRequestPrivate(CloudWatchEventsRequest::TestEventPatternAction, this))
@@ -89,14 +86,9 @@ bool TestEventPatternRequest::isValid() const
 
 
 /*!
- * @brief  Construct an TestEventPatternResponse object.
+ * Returns a TestEventPatternResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An TestEventPatternResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudWatchEventsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * TestEventPatternRequest::response(QNetworkReply * const reply) const
 {
@@ -104,20 +96,17 @@ QtAws::Core::AwsAbstractResponse * TestEventPatternRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudWatchEvents::TestEventPatternRequestPrivate
+ * \brief The TestEventPatternRequestPrivate class provides private implementation for TestEventPatternRequest.
+ * \internal
  *
- * @class  TestEventPatternRequestPrivate
- *
- * @brief  Private implementation for TestEventPatternRequest.
+ * \inmodule QtAwsCloudWatchEvents
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new TestEventPatternRequestPrivate object.
- *
- * @param  action  CloudWatchEvents action being performed.
- * @param  q       Pointer to this object's public TestEventPatternRequest instance.
+ * Constructs a TestEventPatternRequestPrivate object for CloudWatchEvents \a action with,
+ * public implementation \a q.
  */
 TestEventPatternRequestPrivate::TestEventPatternRequestPrivate(
     const CloudWatchEventsRequest::Action action, TestEventPatternRequest * const q)
@@ -127,15 +116,10 @@ TestEventPatternRequestPrivate::TestEventPatternRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new TestEventPatternRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the TestEventPatternRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public TestEventPatternRequest instance.
  */
 TestEventPatternRequestPrivate::TestEventPatternRequestPrivate(
     const TestEventPatternRequestPrivate &other, TestEventPatternRequest * const q)

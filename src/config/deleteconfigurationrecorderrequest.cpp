@@ -27,10 +27,9 @@ namespace ConfigService {
 
 /*!
  * \class QtAws::ConfigService::DeleteConfigurationRecorderRequest
- *
  * \brief The DeleteConfigurationRecorderRequest class provides an interface for ConfigService DeleteConfigurationRecorder requests.
  *
- * \ingroup ConfigService
+ * \inmodule QtAwsConfigService
  *
  *  <fullname>AWS Config</fullname>
  * 
@@ -60,9 +59,7 @@ namespace ConfigService {
  */
 
 /*!
- * @brief  Constructs a new DeleteConfigurationRecorderRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteConfigurationRecorderRequest::DeleteConfigurationRecorderRequest(const DeleteConfigurationRecorderRequest &other)
     : ConfigServiceRequest(new DeleteConfigurationRecorderRequestPrivate(*other.d_func(), this))
@@ -71,7 +68,7 @@ DeleteConfigurationRecorderRequest::DeleteConfigurationRecorderRequest(const Del
 }
 
 /*!
- * @brief  Constructs a new DeleteConfigurationRecorderRequest object.
+ * Constructs a DeleteConfigurationRecorderRequest object.
  */
 DeleteConfigurationRecorderRequest::DeleteConfigurationRecorderRequest()
     : ConfigServiceRequest(new DeleteConfigurationRecorderRequestPrivate(ConfigServiceRequest::DeleteConfigurationRecorderAction, this))
@@ -89,14 +86,9 @@ bool DeleteConfigurationRecorderRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteConfigurationRecorderResponse object.
+ * Returns a DeleteConfigurationRecorderResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteConfigurationRecorderResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ConfigServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteConfigurationRecorderRequest::response(QNetworkReply * const reply) const
 {
@@ -104,20 +96,17 @@ QtAws::Core::AwsAbstractResponse * DeleteConfigurationRecorderRequest::response(
 }
 
 /*!
- * @internal
+ * \class QtAws::ConfigService::DeleteConfigurationRecorderRequestPrivate
+ * \brief The DeleteConfigurationRecorderRequestPrivate class provides private implementation for DeleteConfigurationRecorderRequest.
+ * \internal
  *
- * @class  DeleteConfigurationRecorderRequestPrivate
- *
- * @brief  Private implementation for DeleteConfigurationRecorderRequest.
+ * \inmodule QtAwsConfigService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteConfigurationRecorderRequestPrivate object.
- *
- * @param  action  ConfigService action being performed.
- * @param  q       Pointer to this object's public DeleteConfigurationRecorderRequest instance.
+ * Constructs a DeleteConfigurationRecorderRequestPrivate object for ConfigService \a action with,
+ * public implementation \a q.
  */
 DeleteConfigurationRecorderRequestPrivate::DeleteConfigurationRecorderRequestPrivate(
     const ConfigServiceRequest::Action action, DeleteConfigurationRecorderRequest * const q)
@@ -127,15 +116,10 @@ DeleteConfigurationRecorderRequestPrivate::DeleteConfigurationRecorderRequestPri
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteConfigurationRecorderRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteConfigurationRecorderRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteConfigurationRecorderRequest instance.
  */
 DeleteConfigurationRecorderRequestPrivate::DeleteConfigurationRecorderRequestPrivate(
     const DeleteConfigurationRecorderRequestPrivate &other, DeleteConfigurationRecorderRequest * const q)

@@ -27,10 +27,9 @@ namespace Lambda {
 
 /*!
  * \class QtAws::Lambda::GetFunctionConfigurationRequest
- *
  * \brief The GetFunctionConfigurationRequest class provides an interface for Lambda GetFunctionConfiguration requests.
  *
- * \ingroup Lambda
+ * \inmodule QtAwsLambda
  *
  *  <fullname>AWS Lambda</fullname>
  * 
@@ -48,9 +47,7 @@ namespace Lambda {
  */
 
 /*!
- * @brief  Constructs a new GetFunctionConfigurationRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetFunctionConfigurationRequest::GetFunctionConfigurationRequest(const GetFunctionConfigurationRequest &other)
     : LambdaRequest(new GetFunctionConfigurationRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ GetFunctionConfigurationRequest::GetFunctionConfigurationRequest(const GetFuncti
 }
 
 /*!
- * @brief  Constructs a new GetFunctionConfigurationRequest object.
+ * Constructs a GetFunctionConfigurationRequest object.
  */
 GetFunctionConfigurationRequest::GetFunctionConfigurationRequest()
     : LambdaRequest(new GetFunctionConfigurationRequestPrivate(LambdaRequest::GetFunctionConfigurationAction, this))
@@ -77,14 +74,9 @@ bool GetFunctionConfigurationRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetFunctionConfigurationResponse object.
+ * Returns a GetFunctionConfigurationResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetFunctionConfigurationResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  LambdaClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetFunctionConfigurationRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * GetFunctionConfigurationRequest::response(QNe
 }
 
 /*!
- * @internal
+ * \class QtAws::Lambda::GetFunctionConfigurationRequestPrivate
+ * \brief The GetFunctionConfigurationRequestPrivate class provides private implementation for GetFunctionConfigurationRequest.
+ * \internal
  *
- * @class  GetFunctionConfigurationRequestPrivate
- *
- * @brief  Private implementation for GetFunctionConfigurationRequest.
+ * \inmodule QtAwsLambda
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetFunctionConfigurationRequestPrivate object.
- *
- * @param  action  Lambda action being performed.
- * @param  q       Pointer to this object's public GetFunctionConfigurationRequest instance.
+ * Constructs a GetFunctionConfigurationRequestPrivate object for Lambda \a action with,
+ * public implementation \a q.
  */
 GetFunctionConfigurationRequestPrivate::GetFunctionConfigurationRequestPrivate(
     const LambdaRequest::Action action, GetFunctionConfigurationRequest * const q)
@@ -115,15 +104,10 @@ GetFunctionConfigurationRequestPrivate::GetFunctionConfigurationRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetFunctionConfigurationRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetFunctionConfigurationRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetFunctionConfigurationRequest instance.
  */
 GetFunctionConfigurationRequestPrivate::GetFunctionConfigurationRequestPrivate(
     const GetFunctionConfigurationRequestPrivate &other, GetFunctionConfigurationRequest * const q)

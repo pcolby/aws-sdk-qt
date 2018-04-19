@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::ModifyVpcPeeringConnectionOptionsRequest
- *
  * \brief The ModifyVpcPeeringConnectionOptionsRequest class provides an interface for EC2 ModifyVpcPeeringConnectionOptions requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new ModifyVpcPeeringConnectionOptionsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ModifyVpcPeeringConnectionOptionsRequest::ModifyVpcPeeringConnectionOptionsRequest(const ModifyVpcPeeringConnectionOptionsRequest &other)
     : EC2Request(new ModifyVpcPeeringConnectionOptionsRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ ModifyVpcPeeringConnectionOptionsRequest::ModifyVpcPeeringConnectionOptionsReque
 }
 
 /*!
- * @brief  Constructs a new ModifyVpcPeeringConnectionOptionsRequest object.
+ * Constructs a ModifyVpcPeeringConnectionOptionsRequest object.
  */
 ModifyVpcPeeringConnectionOptionsRequest::ModifyVpcPeeringConnectionOptionsRequest()
     : EC2Request(new ModifyVpcPeeringConnectionOptionsRequestPrivate(EC2Request::ModifyVpcPeeringConnectionOptionsAction, this))
@@ -70,14 +67,9 @@ bool ModifyVpcPeeringConnectionOptionsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ModifyVpcPeeringConnectionOptionsResponse object.
+ * Returns a ModifyVpcPeeringConnectionOptionsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ModifyVpcPeeringConnectionOptionsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ModifyVpcPeeringConnectionOptionsRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * ModifyVpcPeeringConnectionOptionsRequest::res
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::ModifyVpcPeeringConnectionOptionsRequestPrivate
+ * \brief The ModifyVpcPeeringConnectionOptionsRequestPrivate class provides private implementation for ModifyVpcPeeringConnectionOptionsRequest.
+ * \internal
  *
- * @class  ModifyVpcPeeringConnectionOptionsRequestPrivate
- *
- * @brief  Private implementation for ModifyVpcPeeringConnectionOptionsRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ModifyVpcPeeringConnectionOptionsRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public ModifyVpcPeeringConnectionOptionsRequest instance.
+ * Constructs a ModifyVpcPeeringConnectionOptionsRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 ModifyVpcPeeringConnectionOptionsRequestPrivate::ModifyVpcPeeringConnectionOptionsRequestPrivate(
     const EC2Request::Action action, ModifyVpcPeeringConnectionOptionsRequest * const q)
@@ -108,15 +97,10 @@ ModifyVpcPeeringConnectionOptionsRequestPrivate::ModifyVpcPeeringConnectionOptio
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ModifyVpcPeeringConnectionOptionsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ModifyVpcPeeringConnectionOptionsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ModifyVpcPeeringConnectionOptionsRequest instance.
  */
 ModifyVpcPeeringConnectionOptionsRequestPrivate::ModifyVpcPeeringConnectionOptionsRequestPrivate(
     const ModifyVpcPeeringConnectionOptionsRequestPrivate &other, ModifyVpcPeeringConnectionOptionsRequest * const q)

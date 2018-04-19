@@ -27,10 +27,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::CancelJobRequest
- *
  * \brief The CancelJobRequest class provides an interface for IoT CancelJob requests.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -48,9 +47,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new CancelJobRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CancelJobRequest::CancelJobRequest(const CancelJobRequest &other)
     : IoTRequest(new CancelJobRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ CancelJobRequest::CancelJobRequest(const CancelJobRequest &other)
 }
 
 /*!
- * @brief  Constructs a new CancelJobRequest object.
+ * Constructs a CancelJobRequest object.
  */
 CancelJobRequest::CancelJobRequest()
     : IoTRequest(new CancelJobRequestPrivate(IoTRequest::CancelJobAction, this))
@@ -77,14 +74,9 @@ bool CancelJobRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CancelJobResponse object.
+ * Returns a CancelJobResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CancelJobResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IoTClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CancelJobRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * CancelJobRequest::response(QNetworkReply * co
 }
 
 /*!
- * @internal
+ * \class QtAws::IoT::CancelJobRequestPrivate
+ * \brief The CancelJobRequestPrivate class provides private implementation for CancelJobRequest.
+ * \internal
  *
- * @class  CancelJobRequestPrivate
- *
- * @brief  Private implementation for CancelJobRequest.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CancelJobRequestPrivate object.
- *
- * @param  action  IoT action being performed.
- * @param  q       Pointer to this object's public CancelJobRequest instance.
+ * Constructs a CancelJobRequestPrivate object for IoT \a action with,
+ * public implementation \a q.
  */
 CancelJobRequestPrivate::CancelJobRequestPrivate(
     const IoTRequest::Action action, CancelJobRequest * const q)
@@ -115,15 +104,10 @@ CancelJobRequestPrivate::CancelJobRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CancelJobRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CancelJobRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CancelJobRequest instance.
  */
 CancelJobRequestPrivate::CancelJobRequestPrivate(
     const CancelJobRequestPrivate &other, CancelJobRequest * const q)

@@ -27,10 +27,9 @@ namespace DirectConnect {
 
 /*!
  * \class QtAws::DirectConnect::DescribeHostedConnectionsRequest
- *
  * \brief The DescribeHostedConnectionsRequest class provides an interface for DirectConnect DescribeHostedConnections requests.
  *
- * \ingroup DirectConnect
+ * \inmodule QtAwsDirectConnect
  *
  *  AWS Direct Connect links your internal network to an AWS Direct Connect location over a standard 1 gigabit or 10 gigabit
  *  Ethernet fiber-optic cable. One end of the cable is connected to your router, the other to an AWS Direct Connect router.
@@ -45,9 +44,7 @@ namespace DirectConnect {
  */
 
 /*!
- * @brief  Constructs a new DescribeHostedConnectionsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeHostedConnectionsRequest::DescribeHostedConnectionsRequest(const DescribeHostedConnectionsRequest &other)
     : DirectConnectRequest(new DescribeHostedConnectionsRequestPrivate(*other.d_func(), this))
@@ -56,7 +53,7 @@ DescribeHostedConnectionsRequest::DescribeHostedConnectionsRequest(const Describ
 }
 
 /*!
- * @brief  Constructs a new DescribeHostedConnectionsRequest object.
+ * Constructs a DescribeHostedConnectionsRequest object.
  */
 DescribeHostedConnectionsRequest::DescribeHostedConnectionsRequest()
     : DirectConnectRequest(new DescribeHostedConnectionsRequestPrivate(DirectConnectRequest::DescribeHostedConnectionsAction, this))
@@ -74,14 +71,9 @@ bool DescribeHostedConnectionsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeHostedConnectionsResponse object.
+ * Returns a DescribeHostedConnectionsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeHostedConnectionsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DirectConnectClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeHostedConnectionsRequest::response(QNetworkReply * const reply) const
 {
@@ -89,20 +81,17 @@ QtAws::Core::AwsAbstractResponse * DescribeHostedConnectionsRequest::response(QN
 }
 
 /*!
- * @internal
+ * \class QtAws::DirectConnect::DescribeHostedConnectionsRequestPrivate
+ * \brief The DescribeHostedConnectionsRequestPrivate class provides private implementation for DescribeHostedConnectionsRequest.
+ * \internal
  *
- * @class  DescribeHostedConnectionsRequestPrivate
- *
- * @brief  Private implementation for DescribeHostedConnectionsRequest.
+ * \inmodule QtAwsDirectConnect
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeHostedConnectionsRequestPrivate object.
- *
- * @param  action  DirectConnect action being performed.
- * @param  q       Pointer to this object's public DescribeHostedConnectionsRequest instance.
+ * Constructs a DescribeHostedConnectionsRequestPrivate object for DirectConnect \a action with,
+ * public implementation \a q.
  */
 DescribeHostedConnectionsRequestPrivate::DescribeHostedConnectionsRequestPrivate(
     const DirectConnectRequest::Action action, DescribeHostedConnectionsRequest * const q)
@@ -112,15 +101,10 @@ DescribeHostedConnectionsRequestPrivate::DescribeHostedConnectionsRequestPrivate
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeHostedConnectionsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeHostedConnectionsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeHostedConnectionsRequest instance.
  */
 DescribeHostedConnectionsRequestPrivate::DescribeHostedConnectionsRequestPrivate(
     const DescribeHostedConnectionsRequestPrivate &other, DescribeHostedConnectionsRequest * const q)

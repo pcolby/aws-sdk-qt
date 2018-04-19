@@ -27,10 +27,9 @@ namespace DeviceFarm {
 
 /*!
  * \class QtAws::DeviceFarm::ListUniqueProblemsRequest
- *
  * \brief The ListUniqueProblemsRequest class provides an interface for DeviceFarm ListUniqueProblems requests.
  *
- * \ingroup DeviceFarm
+ * \inmodule QtAwsDeviceFarm
  *
  *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
  *  phones, tablets, and other devices in the
@@ -39,9 +38,7 @@ namespace DeviceFarm {
  */
 
 /*!
- * @brief  Constructs a new ListUniqueProblemsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListUniqueProblemsRequest::ListUniqueProblemsRequest(const ListUniqueProblemsRequest &other)
     : DeviceFarmRequest(new ListUniqueProblemsRequestPrivate(*other.d_func(), this))
@@ -50,7 +47,7 @@ ListUniqueProblemsRequest::ListUniqueProblemsRequest(const ListUniqueProblemsReq
 }
 
 /*!
- * @brief  Constructs a new ListUniqueProblemsRequest object.
+ * Constructs a ListUniqueProblemsRequest object.
  */
 ListUniqueProblemsRequest::ListUniqueProblemsRequest()
     : DeviceFarmRequest(new ListUniqueProblemsRequestPrivate(DeviceFarmRequest::ListUniqueProblemsAction, this))
@@ -68,14 +65,9 @@ bool ListUniqueProblemsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListUniqueProblemsResponse object.
+ * Returns a ListUniqueProblemsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListUniqueProblemsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DeviceFarmClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListUniqueProblemsRequest::response(QNetworkReply * const reply) const
 {
@@ -83,20 +75,17 @@ QtAws::Core::AwsAbstractResponse * ListUniqueProblemsRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::DeviceFarm::ListUniqueProblemsRequestPrivate
+ * \brief The ListUniqueProblemsRequestPrivate class provides private implementation for ListUniqueProblemsRequest.
+ * \internal
  *
- * @class  ListUniqueProblemsRequestPrivate
- *
- * @brief  Private implementation for ListUniqueProblemsRequest.
+ * \inmodule QtAwsDeviceFarm
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListUniqueProblemsRequestPrivate object.
- *
- * @param  action  DeviceFarm action being performed.
- * @param  q       Pointer to this object's public ListUniqueProblemsRequest instance.
+ * Constructs a ListUniqueProblemsRequestPrivate object for DeviceFarm \a action with,
+ * public implementation \a q.
  */
 ListUniqueProblemsRequestPrivate::ListUniqueProblemsRequestPrivate(
     const DeviceFarmRequest::Action action, ListUniqueProblemsRequest * const q)
@@ -106,15 +95,10 @@ ListUniqueProblemsRequestPrivate::ListUniqueProblemsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListUniqueProblemsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListUniqueProblemsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListUniqueProblemsRequest instance.
  */
 ListUniqueProblemsRequestPrivate::ListUniqueProblemsRequestPrivate(
     const ListUniqueProblemsRequestPrivate &other, ListUniqueProblemsRequest * const q)

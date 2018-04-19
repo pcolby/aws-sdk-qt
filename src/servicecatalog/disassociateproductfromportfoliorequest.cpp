@@ -27,10 +27,9 @@ namespace ServiceCatalog {
 
 /*!
  * \class QtAws::ServiceCatalog::DisassociateProductFromPortfolioRequest
- *
  * \brief The DisassociateProductFromPortfolioRequest class provides an interface for ServiceCatalog DisassociateProductFromPortfolio requests.
  *
- * \ingroup ServiceCatalog
+ * \inmodule QtAwsServiceCatalog
  *
  *  <fullname>AWS Service Catalog</fullname>
  * 
@@ -43,9 +42,7 @@ namespace ServiceCatalog {
  */
 
 /*!
- * @brief  Constructs a new DisassociateProductFromPortfolioRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DisassociateProductFromPortfolioRequest::DisassociateProductFromPortfolioRequest(const DisassociateProductFromPortfolioRequest &other)
     : ServiceCatalogRequest(new DisassociateProductFromPortfolioRequestPrivate(*other.d_func(), this))
@@ -54,7 +51,7 @@ DisassociateProductFromPortfolioRequest::DisassociateProductFromPortfolioRequest
 }
 
 /*!
- * @brief  Constructs a new DisassociateProductFromPortfolioRequest object.
+ * Constructs a DisassociateProductFromPortfolioRequest object.
  */
 DisassociateProductFromPortfolioRequest::DisassociateProductFromPortfolioRequest()
     : ServiceCatalogRequest(new DisassociateProductFromPortfolioRequestPrivate(ServiceCatalogRequest::DisassociateProductFromPortfolioAction, this))
@@ -72,14 +69,9 @@ bool DisassociateProductFromPortfolioRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DisassociateProductFromPortfolioResponse object.
+ * Returns a DisassociateProductFromPortfolioResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DisassociateProductFromPortfolioResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ServiceCatalogClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DisassociateProductFromPortfolioRequest::response(QNetworkReply * const reply) const
 {
@@ -87,20 +79,17 @@ QtAws::Core::AwsAbstractResponse * DisassociateProductFromPortfolioRequest::resp
 }
 
 /*!
- * @internal
+ * \class QtAws::ServiceCatalog::DisassociateProductFromPortfolioRequestPrivate
+ * \brief The DisassociateProductFromPortfolioRequestPrivate class provides private implementation for DisassociateProductFromPortfolioRequest.
+ * \internal
  *
- * @class  DisassociateProductFromPortfolioRequestPrivate
- *
- * @brief  Private implementation for DisassociateProductFromPortfolioRequest.
+ * \inmodule QtAwsServiceCatalog
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DisassociateProductFromPortfolioRequestPrivate object.
- *
- * @param  action  ServiceCatalog action being performed.
- * @param  q       Pointer to this object's public DisassociateProductFromPortfolioRequest instance.
+ * Constructs a DisassociateProductFromPortfolioRequestPrivate object for ServiceCatalog \a action with,
+ * public implementation \a q.
  */
 DisassociateProductFromPortfolioRequestPrivate::DisassociateProductFromPortfolioRequestPrivate(
     const ServiceCatalogRequest::Action action, DisassociateProductFromPortfolioRequest * const q)
@@ -110,15 +99,10 @@ DisassociateProductFromPortfolioRequestPrivate::DisassociateProductFromPortfolio
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DisassociateProductFromPortfolioRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DisassociateProductFromPortfolioRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DisassociateProductFromPortfolioRequest instance.
  */
 DisassociateProductFromPortfolioRequestPrivate::DisassociateProductFromPortfolioRequestPrivate(
     const DisassociateProductFromPortfolioRequestPrivate &other, DisassociateProductFromPortfolioRequest * const q)

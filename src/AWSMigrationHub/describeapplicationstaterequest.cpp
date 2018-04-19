@@ -27,10 +27,9 @@ namespace MigrationHub {
 
 /*!
  * \class QtAws::MigrationHub::DescribeApplicationStateRequest
- *
  * \brief The DescribeApplicationStateRequest class provides an interface for MigrationHub DescribeApplicationState requests.
  *
- * \ingroup MigrationHub
+ * \inmodule QtAwsMigrationHub
  *
  *  The AWS Migration Hub API methods help to obtain server and application migration status and integrate your
  *  resource-specific migration tool by providing a programmatic interface to Migration Hub.
@@ -39,9 +38,7 @@ namespace MigrationHub {
  */
 
 /*!
- * @brief  Constructs a new DescribeApplicationStateRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeApplicationStateRequest::DescribeApplicationStateRequest(const DescribeApplicationStateRequest &other)
     : MigrationHubRequest(new DescribeApplicationStateRequestPrivate(*other.d_func(), this))
@@ -50,7 +47,7 @@ DescribeApplicationStateRequest::DescribeApplicationStateRequest(const DescribeA
 }
 
 /*!
- * @brief  Constructs a new DescribeApplicationStateRequest object.
+ * Constructs a DescribeApplicationStateRequest object.
  */
 DescribeApplicationStateRequest::DescribeApplicationStateRequest()
     : MigrationHubRequest(new DescribeApplicationStateRequestPrivate(MigrationHubRequest::DescribeApplicationStateAction, this))
@@ -68,14 +65,9 @@ bool DescribeApplicationStateRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeApplicationStateResponse object.
+ * Returns a DescribeApplicationStateResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeApplicationStateResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MigrationHubClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeApplicationStateRequest::response(QNetworkReply * const reply) const
 {
@@ -83,20 +75,17 @@ QtAws::Core::AwsAbstractResponse * DescribeApplicationStateRequest::response(QNe
 }
 
 /*!
- * @internal
+ * \class QtAws::MigrationHub::DescribeApplicationStateRequestPrivate
+ * \brief The DescribeApplicationStateRequestPrivate class provides private implementation for DescribeApplicationStateRequest.
+ * \internal
  *
- * @class  DescribeApplicationStateRequestPrivate
- *
- * @brief  Private implementation for DescribeApplicationStateRequest.
+ * \inmodule QtAwsMigrationHub
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeApplicationStateRequestPrivate object.
- *
- * @param  action  MigrationHub action being performed.
- * @param  q       Pointer to this object's public DescribeApplicationStateRequest instance.
+ * Constructs a DescribeApplicationStateRequestPrivate object for MigrationHub \a action with,
+ * public implementation \a q.
  */
 DescribeApplicationStateRequestPrivate::DescribeApplicationStateRequestPrivate(
     const MigrationHubRequest::Action action, DescribeApplicationStateRequest * const q)
@@ -106,15 +95,10 @@ DescribeApplicationStateRequestPrivate::DescribeApplicationStateRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeApplicationStateRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeApplicationStateRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeApplicationStateRequest instance.
  */
 DescribeApplicationStateRequestPrivate::DescribeApplicationStateRequestPrivate(
     const DescribeApplicationStateRequestPrivate &other, DescribeApplicationStateRequest * const q)

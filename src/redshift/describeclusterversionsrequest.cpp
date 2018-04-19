@@ -27,10 +27,9 @@ namespace Redshift {
 
 /*!
  * \class QtAws::Redshift::DescribeClusterVersionsRequest
- *
  * \brief The DescribeClusterVersionsRequest class provides an interface for Redshift DescribeClusterVersions requests.
  *
- * \ingroup Redshift
+ * \inmodule QtAwsRedshift
  *
  *  <fullname>Amazon Redshift</fullname>
  * 
@@ -67,9 +66,7 @@ namespace Redshift {
  */
 
 /*!
- * @brief  Constructs a new DescribeClusterVersionsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeClusterVersionsRequest::DescribeClusterVersionsRequest(const DescribeClusterVersionsRequest &other)
     : RedshiftRequest(new DescribeClusterVersionsRequestPrivate(*other.d_func(), this))
@@ -78,7 +75,7 @@ DescribeClusterVersionsRequest::DescribeClusterVersionsRequest(const DescribeClu
 }
 
 /*!
- * @brief  Constructs a new DescribeClusterVersionsRequest object.
+ * Constructs a DescribeClusterVersionsRequest object.
  */
 DescribeClusterVersionsRequest::DescribeClusterVersionsRequest()
     : RedshiftRequest(new DescribeClusterVersionsRequestPrivate(RedshiftRequest::DescribeClusterVersionsAction, this))
@@ -96,14 +93,9 @@ bool DescribeClusterVersionsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeClusterVersionsResponse object.
+ * Returns a DescribeClusterVersionsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeClusterVersionsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RedshiftClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeClusterVersionsRequest::response(QNetworkReply * const reply) const
 {
@@ -111,20 +103,17 @@ QtAws::Core::AwsAbstractResponse * DescribeClusterVersionsRequest::response(QNet
 }
 
 /*!
- * @internal
+ * \class QtAws::Redshift::DescribeClusterVersionsRequestPrivate
+ * \brief The DescribeClusterVersionsRequestPrivate class provides private implementation for DescribeClusterVersionsRequest.
+ * \internal
  *
- * @class  DescribeClusterVersionsRequestPrivate
- *
- * @brief  Private implementation for DescribeClusterVersionsRequest.
+ * \inmodule QtAwsRedshift
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeClusterVersionsRequestPrivate object.
- *
- * @param  action  Redshift action being performed.
- * @param  q       Pointer to this object's public DescribeClusterVersionsRequest instance.
+ * Constructs a DescribeClusterVersionsRequestPrivate object for Redshift \a action with,
+ * public implementation \a q.
  */
 DescribeClusterVersionsRequestPrivate::DescribeClusterVersionsRequestPrivate(
     const RedshiftRequest::Action action, DescribeClusterVersionsRequest * const q)
@@ -134,15 +123,10 @@ DescribeClusterVersionsRequestPrivate::DescribeClusterVersionsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeClusterVersionsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeClusterVersionsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeClusterVersionsRequest instance.
  */
 DescribeClusterVersionsRequestPrivate::DescribeClusterVersionsRequestPrivate(
     const DescribeClusterVersionsRequestPrivate &other, DescribeClusterVersionsRequest * const q)

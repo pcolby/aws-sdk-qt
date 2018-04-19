@@ -27,10 +27,9 @@ namespace CodeCommit {
 
 /*!
  * \class QtAws::CodeCommit::GetDifferencesRequest
- *
  * \brief The GetDifferencesRequest class provides an interface for CodeCommit GetDifferences requests.
  *
- * \ingroup CodeCommit
+ * \inmodule QtAwsCodeCommit
  *
  *  <fullname>AWS CodeCommit</fullname>
  * 
@@ -227,9 +226,7 @@ namespace CodeCommit {
  */
 
 /*!
- * @brief  Constructs a new GetDifferencesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetDifferencesRequest::GetDifferencesRequest(const GetDifferencesRequest &other)
     : CodeCommitRequest(new GetDifferencesRequestPrivate(*other.d_func(), this))
@@ -238,7 +235,7 @@ GetDifferencesRequest::GetDifferencesRequest(const GetDifferencesRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetDifferencesRequest object.
+ * Constructs a GetDifferencesRequest object.
  */
 GetDifferencesRequest::GetDifferencesRequest()
     : CodeCommitRequest(new GetDifferencesRequestPrivate(CodeCommitRequest::GetDifferencesAction, this))
@@ -256,14 +253,9 @@ bool GetDifferencesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetDifferencesResponse object.
+ * Returns a GetDifferencesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetDifferencesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CodeCommitClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetDifferencesRequest::response(QNetworkReply * const reply) const
 {
@@ -271,20 +263,17 @@ QtAws::Core::AwsAbstractResponse * GetDifferencesRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::CodeCommit::GetDifferencesRequestPrivate
+ * \brief The GetDifferencesRequestPrivate class provides private implementation for GetDifferencesRequest.
+ * \internal
  *
- * @class  GetDifferencesRequestPrivate
- *
- * @brief  Private implementation for GetDifferencesRequest.
+ * \inmodule QtAwsCodeCommit
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetDifferencesRequestPrivate object.
- *
- * @param  action  CodeCommit action being performed.
- * @param  q       Pointer to this object's public GetDifferencesRequest instance.
+ * Constructs a GetDifferencesRequestPrivate object for CodeCommit \a action with,
+ * public implementation \a q.
  */
 GetDifferencesRequestPrivate::GetDifferencesRequestPrivate(
     const CodeCommitRequest::Action action, GetDifferencesRequest * const q)
@@ -294,15 +283,10 @@ GetDifferencesRequestPrivate::GetDifferencesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetDifferencesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetDifferencesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetDifferencesRequest instance.
  */
 GetDifferencesRequestPrivate::GetDifferencesRequestPrivate(
     const GetDifferencesRequestPrivate &other, GetDifferencesRequest * const q)

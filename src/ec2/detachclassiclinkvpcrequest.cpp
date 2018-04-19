@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DetachClassicLinkVpcRequest
- *
  * \brief The DetachClassicLinkVpcRequest class provides an interface for EC2 DetachClassicLinkVpc requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DetachClassicLinkVpcRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DetachClassicLinkVpcRequest::DetachClassicLinkVpcRequest(const DetachClassicLinkVpcRequest &other)
     : EC2Request(new DetachClassicLinkVpcRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ DetachClassicLinkVpcRequest::DetachClassicLinkVpcRequest(const DetachClassicLink
 }
 
 /*!
- * @brief  Constructs a new DetachClassicLinkVpcRequest object.
+ * Constructs a DetachClassicLinkVpcRequest object.
  */
 DetachClassicLinkVpcRequest::DetachClassicLinkVpcRequest()
     : EC2Request(new DetachClassicLinkVpcRequestPrivate(EC2Request::DetachClassicLinkVpcAction, this))
@@ -70,14 +67,9 @@ bool DetachClassicLinkVpcRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DetachClassicLinkVpcResponse object.
+ * Returns a DetachClassicLinkVpcResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DetachClassicLinkVpcResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DetachClassicLinkVpcRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * DetachClassicLinkVpcRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::DetachClassicLinkVpcRequestPrivate
+ * \brief The DetachClassicLinkVpcRequestPrivate class provides private implementation for DetachClassicLinkVpcRequest.
+ * \internal
  *
- * @class  DetachClassicLinkVpcRequestPrivate
- *
- * @brief  Private implementation for DetachClassicLinkVpcRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DetachClassicLinkVpcRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public DetachClassicLinkVpcRequest instance.
+ * Constructs a DetachClassicLinkVpcRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 DetachClassicLinkVpcRequestPrivate::DetachClassicLinkVpcRequestPrivate(
     const EC2Request::Action action, DetachClassicLinkVpcRequest * const q)
@@ -108,15 +97,10 @@ DetachClassicLinkVpcRequestPrivate::DetachClassicLinkVpcRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DetachClassicLinkVpcRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DetachClassicLinkVpcRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DetachClassicLinkVpcRequest instance.
  */
 DetachClassicLinkVpcRequestPrivate::DetachClassicLinkVpcRequestPrivate(
     const DetachClassicLinkVpcRequestPrivate &other, DetachClassicLinkVpcRequest * const q)

@@ -27,10 +27,9 @@ namespace DatabaseMigrationService {
 
 /*!
  * \class QtAws::DatabaseMigrationService::RefreshSchemasRequest
- *
  * \brief The RefreshSchemasRequest class provides an interface for DatabaseMigrationService RefreshSchemas requests.
  *
- * \ingroup DatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigrationService
  *
  *  <fullname>AWS Database Migration Service</fullname>
  * 
@@ -48,9 +47,7 @@ namespace DatabaseMigrationService {
  */
 
 /*!
- * @brief  Constructs a new RefreshSchemasRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 RefreshSchemasRequest::RefreshSchemasRequest(const RefreshSchemasRequest &other)
     : DatabaseMigrationServiceRequest(new RefreshSchemasRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ RefreshSchemasRequest::RefreshSchemasRequest(const RefreshSchemasRequest &other)
 }
 
 /*!
- * @brief  Constructs a new RefreshSchemasRequest object.
+ * Constructs a RefreshSchemasRequest object.
  */
 RefreshSchemasRequest::RefreshSchemasRequest()
     : DatabaseMigrationServiceRequest(new RefreshSchemasRequestPrivate(DatabaseMigrationServiceRequest::RefreshSchemasAction, this))
@@ -77,14 +74,9 @@ bool RefreshSchemasRequest::isValid() const
 
 
 /*!
- * @brief  Construct an RefreshSchemasResponse object.
+ * Returns a RefreshSchemasResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An RefreshSchemasResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DatabaseMigrationServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * RefreshSchemasRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * RefreshSchemasRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::DatabaseMigrationService::RefreshSchemasRequestPrivate
+ * \brief The RefreshSchemasRequestPrivate class provides private implementation for RefreshSchemasRequest.
+ * \internal
  *
- * @class  RefreshSchemasRequestPrivate
- *
- * @brief  Private implementation for RefreshSchemasRequest.
+ * \inmodule QtAwsDatabaseMigrationService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new RefreshSchemasRequestPrivate object.
- *
- * @param  action  DatabaseMigrationService action being performed.
- * @param  q       Pointer to this object's public RefreshSchemasRequest instance.
+ * Constructs a RefreshSchemasRequestPrivate object for DatabaseMigrationService \a action with,
+ * public implementation \a q.
  */
 RefreshSchemasRequestPrivate::RefreshSchemasRequestPrivate(
     const DatabaseMigrationServiceRequest::Action action, RefreshSchemasRequest * const q)
@@ -115,15 +104,10 @@ RefreshSchemasRequestPrivate::RefreshSchemasRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RefreshSchemasRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the RefreshSchemasRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public RefreshSchemasRequest instance.
  */
 RefreshSchemasRequestPrivate::RefreshSchemasRequestPrivate(
     const RefreshSchemasRequestPrivate &other, RefreshSchemasRequest * const q)

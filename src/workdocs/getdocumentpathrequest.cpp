@@ -27,10 +27,9 @@ namespace WorkDocs {
 
 /*!
  * \class QtAws::WorkDocs::GetDocumentPathRequest
- *
  * \brief The GetDocumentPathRequest class provides an interface for WorkDocs GetDocumentPath requests.
  *
- * \ingroup WorkDocs
+ * \inmodule QtAwsWorkDocs
  *
  *  The WorkDocs API is designed for the following use
  * 
@@ -66,9 +65,7 @@ namespace WorkDocs {
  */
 
 /*!
- * @brief  Constructs a new GetDocumentPathRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetDocumentPathRequest::GetDocumentPathRequest(const GetDocumentPathRequest &other)
     : WorkDocsRequest(new GetDocumentPathRequestPrivate(*other.d_func(), this))
@@ -77,7 +74,7 @@ GetDocumentPathRequest::GetDocumentPathRequest(const GetDocumentPathRequest &oth
 }
 
 /*!
- * @brief  Constructs a new GetDocumentPathRequest object.
+ * Constructs a GetDocumentPathRequest object.
  */
 GetDocumentPathRequest::GetDocumentPathRequest()
     : WorkDocsRequest(new GetDocumentPathRequestPrivate(WorkDocsRequest::GetDocumentPathAction, this))
@@ -95,14 +92,9 @@ bool GetDocumentPathRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetDocumentPathResponse object.
+ * Returns a GetDocumentPathResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetDocumentPathResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WorkDocsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetDocumentPathRequest::response(QNetworkReply * const reply) const
 {
@@ -110,20 +102,17 @@ QtAws::Core::AwsAbstractResponse * GetDocumentPathRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::WorkDocs::GetDocumentPathRequestPrivate
+ * \brief The GetDocumentPathRequestPrivate class provides private implementation for GetDocumentPathRequest.
+ * \internal
  *
- * @class  GetDocumentPathRequestPrivate
- *
- * @brief  Private implementation for GetDocumentPathRequest.
+ * \inmodule QtAwsWorkDocs
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetDocumentPathRequestPrivate object.
- *
- * @param  action  WorkDocs action being performed.
- * @param  q       Pointer to this object's public GetDocumentPathRequest instance.
+ * Constructs a GetDocumentPathRequestPrivate object for WorkDocs \a action with,
+ * public implementation \a q.
  */
 GetDocumentPathRequestPrivate::GetDocumentPathRequestPrivate(
     const WorkDocsRequest::Action action, GetDocumentPathRequest * const q)
@@ -133,15 +122,10 @@ GetDocumentPathRequestPrivate::GetDocumentPathRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetDocumentPathRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetDocumentPathRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetDocumentPathRequest instance.
  */
 GetDocumentPathRequestPrivate::GetDocumentPathRequestPrivate(
     const GetDocumentPathRequestPrivate &other, GetDocumentPathRequest * const q)

@@ -27,10 +27,9 @@ namespace Lightsail {
 
 /*!
  * \class QtAws::Lightsail::GetInstanceMetricDataRequest
- *
  * \brief The GetInstanceMetricDataRequest class provides an interface for Lightsail GetInstanceMetricData requests.
  *
- * \ingroup Lightsail
+ * \inmodule QtAwsLightsail
  *
  *  Amazon Lightsail is the easiest way to get started with AWS for developers who just need virtual private servers.
  *  Lightsail includes everything you need to launch your project quickly - a virtual machine, SSD-based storage, data
@@ -53,9 +52,7 @@ namespace Lightsail {
  */
 
 /*!
- * @brief  Constructs a new GetInstanceMetricDataRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetInstanceMetricDataRequest::GetInstanceMetricDataRequest(const GetInstanceMetricDataRequest &other)
     : LightsailRequest(new GetInstanceMetricDataRequestPrivate(*other.d_func(), this))
@@ -64,7 +61,7 @@ GetInstanceMetricDataRequest::GetInstanceMetricDataRequest(const GetInstanceMetr
 }
 
 /*!
- * @brief  Constructs a new GetInstanceMetricDataRequest object.
+ * Constructs a GetInstanceMetricDataRequest object.
  */
 GetInstanceMetricDataRequest::GetInstanceMetricDataRequest()
     : LightsailRequest(new GetInstanceMetricDataRequestPrivate(LightsailRequest::GetInstanceMetricDataAction, this))
@@ -82,14 +79,9 @@ bool GetInstanceMetricDataRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetInstanceMetricDataResponse object.
+ * Returns a GetInstanceMetricDataResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetInstanceMetricDataResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  LightsailClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetInstanceMetricDataRequest::response(QNetworkReply * const reply) const
 {
@@ -97,20 +89,17 @@ QtAws::Core::AwsAbstractResponse * GetInstanceMetricDataRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::Lightsail::GetInstanceMetricDataRequestPrivate
+ * \brief The GetInstanceMetricDataRequestPrivate class provides private implementation for GetInstanceMetricDataRequest.
+ * \internal
  *
- * @class  GetInstanceMetricDataRequestPrivate
- *
- * @brief  Private implementation for GetInstanceMetricDataRequest.
+ * \inmodule QtAwsLightsail
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetInstanceMetricDataRequestPrivate object.
- *
- * @param  action  Lightsail action being performed.
- * @param  q       Pointer to this object's public GetInstanceMetricDataRequest instance.
+ * Constructs a GetInstanceMetricDataRequestPrivate object for Lightsail \a action with,
+ * public implementation \a q.
  */
 GetInstanceMetricDataRequestPrivate::GetInstanceMetricDataRequestPrivate(
     const LightsailRequest::Action action, GetInstanceMetricDataRequest * const q)
@@ -120,15 +109,10 @@ GetInstanceMetricDataRequestPrivate::GetInstanceMetricDataRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetInstanceMetricDataRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetInstanceMetricDataRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetInstanceMetricDataRequest instance.
  */
 GetInstanceMetricDataRequestPrivate::GetInstanceMetricDataRequestPrivate(
     const GetInstanceMetricDataRequestPrivate &other, GetInstanceMetricDataRequest * const q)

@@ -27,10 +27,9 @@ namespace Lambda {
 
 /*!
  * \class QtAws::Lambda::InvokeRequest
- *
  * \brief The InvokeRequest class provides an interface for Lambda Invoke requests.
  *
- * \ingroup Lambda
+ * \inmodule QtAwsLambda
  *
  *  <fullname>AWS Lambda</fullname>
  * 
@@ -48,9 +47,7 @@ namespace Lambda {
  */
 
 /*!
- * @brief  Constructs a new InvokeRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 InvokeRequest::InvokeRequest(const InvokeRequest &other)
     : LambdaRequest(new InvokeRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ InvokeRequest::InvokeRequest(const InvokeRequest &other)
 }
 
 /*!
- * @brief  Constructs a new InvokeRequest object.
+ * Constructs a InvokeRequest object.
  */
 InvokeRequest::InvokeRequest()
     : LambdaRequest(new InvokeRequestPrivate(LambdaRequest::InvokeAction, this))
@@ -77,14 +74,9 @@ bool InvokeRequest::isValid() const
 
 
 /*!
- * @brief  Construct an InvokeResponse object.
+ * Returns a InvokeResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An InvokeResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  LambdaClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * InvokeRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * InvokeRequest::response(QNetworkReply * const
 }
 
 /*!
- * @internal
+ * \class QtAws::Lambda::InvokeRequestPrivate
+ * \brief The InvokeRequestPrivate class provides private implementation for InvokeRequest.
+ * \internal
  *
- * @class  InvokeRequestPrivate
- *
- * @brief  Private implementation for InvokeRequest.
+ * \inmodule QtAwsLambda
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new InvokeRequestPrivate object.
- *
- * @param  action  Lambda action being performed.
- * @param  q       Pointer to this object's public InvokeRequest instance.
+ * Constructs a InvokeRequestPrivate object for Lambda \a action with,
+ * public implementation \a q.
  */
 InvokeRequestPrivate::InvokeRequestPrivate(
     const LambdaRequest::Action action, InvokeRequest * const q)
@@ -115,15 +104,10 @@ InvokeRequestPrivate::InvokeRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new InvokeRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the InvokeRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public InvokeRequest instance.
  */
 InvokeRequestPrivate::InvokeRequestPrivate(
     const InvokeRequestPrivate &other, InvokeRequest * const q)

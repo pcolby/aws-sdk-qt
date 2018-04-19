@@ -27,10 +27,9 @@ namespace Rekognition {
 
 /*!
  * \class QtAws::Rekognition::StartContentModerationRequest
- *
  * \brief The StartContentModerationRequest class provides an interface for Rekognition StartContentModeration requests.
  *
- * \ingroup Rekognition
+ * \inmodule QtAwsRekognition
  *
  *  This is the Amazon Rekognition API
  *
@@ -38,9 +37,7 @@ namespace Rekognition {
  */
 
 /*!
- * @brief  Constructs a new StartContentModerationRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 StartContentModerationRequest::StartContentModerationRequest(const StartContentModerationRequest &other)
     : RekognitionRequest(new StartContentModerationRequestPrivate(*other.d_func(), this))
@@ -49,7 +46,7 @@ StartContentModerationRequest::StartContentModerationRequest(const StartContentM
 }
 
 /*!
- * @brief  Constructs a new StartContentModerationRequest object.
+ * Constructs a StartContentModerationRequest object.
  */
 StartContentModerationRequest::StartContentModerationRequest()
     : RekognitionRequest(new StartContentModerationRequestPrivate(RekognitionRequest::StartContentModerationAction, this))
@@ -67,14 +64,9 @@ bool StartContentModerationRequest::isValid() const
 
 
 /*!
- * @brief  Construct an StartContentModerationResponse object.
+ * Returns a StartContentModerationResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An StartContentModerationResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RekognitionClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * StartContentModerationRequest::response(QNetworkReply * const reply) const
 {
@@ -82,20 +74,17 @@ QtAws::Core::AwsAbstractResponse * StartContentModerationRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::Rekognition::StartContentModerationRequestPrivate
+ * \brief The StartContentModerationRequestPrivate class provides private implementation for StartContentModerationRequest.
+ * \internal
  *
- * @class  StartContentModerationRequestPrivate
- *
- * @brief  Private implementation for StartContentModerationRequest.
+ * \inmodule QtAwsRekognition
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new StartContentModerationRequestPrivate object.
- *
- * @param  action  Rekognition action being performed.
- * @param  q       Pointer to this object's public StartContentModerationRequest instance.
+ * Constructs a StartContentModerationRequestPrivate object for Rekognition \a action with,
+ * public implementation \a q.
  */
 StartContentModerationRequestPrivate::StartContentModerationRequestPrivate(
     const RekognitionRequest::Action action, StartContentModerationRequest * const q)
@@ -105,15 +94,10 @@ StartContentModerationRequestPrivate::StartContentModerationRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StartContentModerationRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the StartContentModerationRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public StartContentModerationRequest instance.
  */
 StartContentModerationRequestPrivate::StartContentModerationRequestPrivate(
     const StartContentModerationRequestPrivate &other, StartContentModerationRequest * const q)

@@ -27,10 +27,9 @@ namespace ElasticLoadBalancing {
 
 /*!
  * \class QtAws::ElasticLoadBalancing::CreateLoadBalancerPolicyRequest
- *
  * \brief The CreateLoadBalancerPolicyRequest class provides an interface for ElasticLoadBalancing CreateLoadBalancerPolicy requests.
  *
- * \ingroup ElasticLoadBalancing
+ * \inmodule QtAwsElasticLoadBalancing
  *
  *  <fullname>Elastic Load Balancing</fullname>
  * 
@@ -65,9 +64,7 @@ namespace ElasticLoadBalancing {
  */
 
 /*!
- * @brief  Constructs a new CreateLoadBalancerPolicyRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateLoadBalancerPolicyRequest::CreateLoadBalancerPolicyRequest(const CreateLoadBalancerPolicyRequest &other)
     : ElasticLoadBalancingRequest(new CreateLoadBalancerPolicyRequestPrivate(*other.d_func(), this))
@@ -76,7 +73,7 @@ CreateLoadBalancerPolicyRequest::CreateLoadBalancerPolicyRequest(const CreateLoa
 }
 
 /*!
- * @brief  Constructs a new CreateLoadBalancerPolicyRequest object.
+ * Constructs a CreateLoadBalancerPolicyRequest object.
  */
 CreateLoadBalancerPolicyRequest::CreateLoadBalancerPolicyRequest()
     : ElasticLoadBalancingRequest(new CreateLoadBalancerPolicyRequestPrivate(ElasticLoadBalancingRequest::CreateLoadBalancerPolicyAction, this))
@@ -94,14 +91,9 @@ bool CreateLoadBalancerPolicyRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateLoadBalancerPolicyResponse object.
+ * Returns a CreateLoadBalancerPolicyResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateLoadBalancerPolicyResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ElasticLoadBalancingClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateLoadBalancerPolicyRequest::response(QNetworkReply * const reply) const
 {
@@ -109,20 +101,17 @@ QtAws::Core::AwsAbstractResponse * CreateLoadBalancerPolicyRequest::response(QNe
 }
 
 /*!
- * @internal
+ * \class QtAws::ElasticLoadBalancing::CreateLoadBalancerPolicyRequestPrivate
+ * \brief The CreateLoadBalancerPolicyRequestPrivate class provides private implementation for CreateLoadBalancerPolicyRequest.
+ * \internal
  *
- * @class  CreateLoadBalancerPolicyRequestPrivate
- *
- * @brief  Private implementation for CreateLoadBalancerPolicyRequest.
+ * \inmodule QtAwsElasticLoadBalancing
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateLoadBalancerPolicyRequestPrivate object.
- *
- * @param  action  ElasticLoadBalancing action being performed.
- * @param  q       Pointer to this object's public CreateLoadBalancerPolicyRequest instance.
+ * Constructs a CreateLoadBalancerPolicyRequestPrivate object for ElasticLoadBalancing \a action with,
+ * public implementation \a q.
  */
 CreateLoadBalancerPolicyRequestPrivate::CreateLoadBalancerPolicyRequestPrivate(
     const ElasticLoadBalancingRequest::Action action, CreateLoadBalancerPolicyRequest * const q)
@@ -132,15 +121,10 @@ CreateLoadBalancerPolicyRequestPrivate::CreateLoadBalancerPolicyRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateLoadBalancerPolicyRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateLoadBalancerPolicyRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateLoadBalancerPolicyRequest instance.
  */
 CreateLoadBalancerPolicyRequestPrivate::CreateLoadBalancerPolicyRequestPrivate(
     const CreateLoadBalancerPolicyRequestPrivate &other, CreateLoadBalancerPolicyRequest * const q)

@@ -27,10 +27,9 @@ namespace StorageGateway {
 
 /*!
  * \class QtAws::StorageGateway::ResetCacheRequest
- *
  * \brief The ResetCacheRequest class provides an interface for StorageGateway ResetCache requests.
  *
- * \ingroup StorageGateway
+ * \inmodule QtAwsStorageGateway
  *
  *  <fullname>AWS Storage Gateway Service</fullname>
  * 
@@ -106,9 +105,7 @@ namespace StorageGateway {
  */
 
 /*!
- * @brief  Constructs a new ResetCacheRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ResetCacheRequest::ResetCacheRequest(const ResetCacheRequest &other)
     : StorageGatewayRequest(new ResetCacheRequestPrivate(*other.d_func(), this))
@@ -117,7 +114,7 @@ ResetCacheRequest::ResetCacheRequest(const ResetCacheRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ResetCacheRequest object.
+ * Constructs a ResetCacheRequest object.
  */
 ResetCacheRequest::ResetCacheRequest()
     : StorageGatewayRequest(new ResetCacheRequestPrivate(StorageGatewayRequest::ResetCacheAction, this))
@@ -135,14 +132,9 @@ bool ResetCacheRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ResetCacheResponse object.
+ * Returns a ResetCacheResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ResetCacheResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  StorageGatewayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ResetCacheRequest::response(QNetworkReply * const reply) const
 {
@@ -150,20 +142,17 @@ QtAws::Core::AwsAbstractResponse * ResetCacheRequest::response(QNetworkReply * c
 }
 
 /*!
- * @internal
+ * \class QtAws::StorageGateway::ResetCacheRequestPrivate
+ * \brief The ResetCacheRequestPrivate class provides private implementation for ResetCacheRequest.
+ * \internal
  *
- * @class  ResetCacheRequestPrivate
- *
- * @brief  Private implementation for ResetCacheRequest.
+ * \inmodule QtAwsStorageGateway
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ResetCacheRequestPrivate object.
- *
- * @param  action  StorageGateway action being performed.
- * @param  q       Pointer to this object's public ResetCacheRequest instance.
+ * Constructs a ResetCacheRequestPrivate object for StorageGateway \a action with,
+ * public implementation \a q.
  */
 ResetCacheRequestPrivate::ResetCacheRequestPrivate(
     const StorageGatewayRequest::Action action, ResetCacheRequest * const q)
@@ -173,15 +162,10 @@ ResetCacheRequestPrivate::ResetCacheRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ResetCacheRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ResetCacheRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ResetCacheRequest instance.
  */
 ResetCacheRequestPrivate::ResetCacheRequestPrivate(
     const ResetCacheRequestPrivate &other, ResetCacheRequest * const q)

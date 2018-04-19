@@ -27,10 +27,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::CreateDomainNameRequest
- *
  * \brief The CreateDomainNameRequest class provides an interface for APIGateway CreateDomainName requests.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -42,9 +41,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new CreateDomainNameRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateDomainNameRequest::CreateDomainNameRequest(const CreateDomainNameRequest &other)
     : APIGatewayRequest(new CreateDomainNameRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ CreateDomainNameRequest::CreateDomainNameRequest(const CreateDomainNameRequest &
 }
 
 /*!
- * @brief  Constructs a new CreateDomainNameRequest object.
+ * Constructs a CreateDomainNameRequest object.
  */
 CreateDomainNameRequest::CreateDomainNameRequest()
     : APIGatewayRequest(new CreateDomainNameRequestPrivate(APIGatewayRequest::CreateDomainNameAction, this))
@@ -71,14 +68,9 @@ bool CreateDomainNameRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateDomainNameResponse object.
+ * Returns a CreateDomainNameResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateDomainNameResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  APIGatewayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateDomainNameRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * CreateDomainNameRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::APIGateway::CreateDomainNameRequestPrivate
+ * \brief The CreateDomainNameRequestPrivate class provides private implementation for CreateDomainNameRequest.
+ * \internal
  *
- * @class  CreateDomainNameRequestPrivate
- *
- * @brief  Private implementation for CreateDomainNameRequest.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateDomainNameRequestPrivate object.
- *
- * @param  action  APIGateway action being performed.
- * @param  q       Pointer to this object's public CreateDomainNameRequest instance.
+ * Constructs a CreateDomainNameRequestPrivate object for APIGateway \a action with,
+ * public implementation \a q.
  */
 CreateDomainNameRequestPrivate::CreateDomainNameRequestPrivate(
     const APIGatewayRequest::Action action, CreateDomainNameRequest * const q)
@@ -109,15 +98,10 @@ CreateDomainNameRequestPrivate::CreateDomainNameRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateDomainNameRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateDomainNameRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateDomainNameRequest instance.
  */
 CreateDomainNameRequestPrivate::CreateDomainNameRequestPrivate(
     const CreateDomainNameRequestPrivate &other, CreateDomainNameRequest * const q)

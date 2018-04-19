@@ -27,10 +27,9 @@ namespace OpsWorks {
 
 /*!
  * \class QtAws::OpsWorks::RegisterElasticIpRequest
- *
  * \brief The RegisterElasticIpRequest class provides an interface for OpsWorks RegisterElasticIp requests.
  *
- * \ingroup OpsWorks
+ * \inmodule QtAwsOpsWorks
  *
  *  <fullname>AWS OpsWorks</fullname>
  * 
@@ -143,9 +142,7 @@ namespace OpsWorks {
  */
 
 /*!
- * @brief  Constructs a new RegisterElasticIpRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 RegisterElasticIpRequest::RegisterElasticIpRequest(const RegisterElasticIpRequest &other)
     : OpsWorksRequest(new RegisterElasticIpRequestPrivate(*other.d_func(), this))
@@ -154,7 +151,7 @@ RegisterElasticIpRequest::RegisterElasticIpRequest(const RegisterElasticIpReques
 }
 
 /*!
- * @brief  Constructs a new RegisterElasticIpRequest object.
+ * Constructs a RegisterElasticIpRequest object.
  */
 RegisterElasticIpRequest::RegisterElasticIpRequest()
     : OpsWorksRequest(new RegisterElasticIpRequestPrivate(OpsWorksRequest::RegisterElasticIpAction, this))
@@ -172,14 +169,9 @@ bool RegisterElasticIpRequest::isValid() const
 
 
 /*!
- * @brief  Construct an RegisterElasticIpResponse object.
+ * Returns a RegisterElasticIpResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An RegisterElasticIpResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  OpsWorksClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * RegisterElasticIpRequest::response(QNetworkReply * const reply) const
 {
@@ -187,20 +179,17 @@ QtAws::Core::AwsAbstractResponse * RegisterElasticIpRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::OpsWorks::RegisterElasticIpRequestPrivate
+ * \brief The RegisterElasticIpRequestPrivate class provides private implementation for RegisterElasticIpRequest.
+ * \internal
  *
- * @class  RegisterElasticIpRequestPrivate
- *
- * @brief  Private implementation for RegisterElasticIpRequest.
+ * \inmodule QtAwsOpsWorks
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new RegisterElasticIpRequestPrivate object.
- *
- * @param  action  OpsWorks action being performed.
- * @param  q       Pointer to this object's public RegisterElasticIpRequest instance.
+ * Constructs a RegisterElasticIpRequestPrivate object for OpsWorks \a action with,
+ * public implementation \a q.
  */
 RegisterElasticIpRequestPrivate::RegisterElasticIpRequestPrivate(
     const OpsWorksRequest::Action action, RegisterElasticIpRequest * const q)
@@ -210,15 +199,10 @@ RegisterElasticIpRequestPrivate::RegisterElasticIpRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RegisterElasticIpRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the RegisterElasticIpRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public RegisterElasticIpRequest instance.
  */
 RegisterElasticIpRequestPrivate::RegisterElasticIpRequestPrivate(
     const RegisterElasticIpRequestPrivate &other, RegisterElasticIpRequest * const q)

@@ -27,10 +27,9 @@ namespace Redshift {
 
 /*!
  * \class QtAws::Redshift::DeleteHsmClientCertificateRequest
- *
  * \brief The DeleteHsmClientCertificateRequest class provides an interface for Redshift DeleteHsmClientCertificate requests.
  *
- * \ingroup Redshift
+ * \inmodule QtAwsRedshift
  *
  *  <fullname>Amazon Redshift</fullname>
  * 
@@ -67,9 +66,7 @@ namespace Redshift {
  */
 
 /*!
- * @brief  Constructs a new DeleteHsmClientCertificateRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteHsmClientCertificateRequest::DeleteHsmClientCertificateRequest(const DeleteHsmClientCertificateRequest &other)
     : RedshiftRequest(new DeleteHsmClientCertificateRequestPrivate(*other.d_func(), this))
@@ -78,7 +75,7 @@ DeleteHsmClientCertificateRequest::DeleteHsmClientCertificateRequest(const Delet
 }
 
 /*!
- * @brief  Constructs a new DeleteHsmClientCertificateRequest object.
+ * Constructs a DeleteHsmClientCertificateRequest object.
  */
 DeleteHsmClientCertificateRequest::DeleteHsmClientCertificateRequest()
     : RedshiftRequest(new DeleteHsmClientCertificateRequestPrivate(RedshiftRequest::DeleteHsmClientCertificateAction, this))
@@ -96,14 +93,9 @@ bool DeleteHsmClientCertificateRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteHsmClientCertificateResponse object.
+ * Returns a DeleteHsmClientCertificateResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteHsmClientCertificateResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RedshiftClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteHsmClientCertificateRequest::response(QNetworkReply * const reply) const
 {
@@ -111,20 +103,17 @@ QtAws::Core::AwsAbstractResponse * DeleteHsmClientCertificateRequest::response(Q
 }
 
 /*!
- * @internal
+ * \class QtAws::Redshift::DeleteHsmClientCertificateRequestPrivate
+ * \brief The DeleteHsmClientCertificateRequestPrivate class provides private implementation for DeleteHsmClientCertificateRequest.
+ * \internal
  *
- * @class  DeleteHsmClientCertificateRequestPrivate
- *
- * @brief  Private implementation for DeleteHsmClientCertificateRequest.
+ * \inmodule QtAwsRedshift
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteHsmClientCertificateRequestPrivate object.
- *
- * @param  action  Redshift action being performed.
- * @param  q       Pointer to this object's public DeleteHsmClientCertificateRequest instance.
+ * Constructs a DeleteHsmClientCertificateRequestPrivate object for Redshift \a action with,
+ * public implementation \a q.
  */
 DeleteHsmClientCertificateRequestPrivate::DeleteHsmClientCertificateRequestPrivate(
     const RedshiftRequest::Action action, DeleteHsmClientCertificateRequest * const q)
@@ -134,15 +123,10 @@ DeleteHsmClientCertificateRequestPrivate::DeleteHsmClientCertificateRequestPriva
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteHsmClientCertificateRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteHsmClientCertificateRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteHsmClientCertificateRequest instance.
  */
 DeleteHsmClientCertificateRequestPrivate::DeleteHsmClientCertificateRequestPrivate(
     const DeleteHsmClientCertificateRequestPrivate &other, DeleteHsmClientCertificateRequest * const q)

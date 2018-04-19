@@ -27,10 +27,9 @@ namespace SWF {
 
 /*!
  * \class QtAws::SWF::PollForActivityTaskRequest
- *
  * \brief The PollForActivityTaskRequest class provides an interface for SWF PollForActivityTask requests.
  *
- * \ingroup SWF
+ * \inmodule QtAwsSWF
  *
  *  <fullname>Amazon Simple Workflow Service</fullname>
  * 
@@ -53,9 +52,7 @@ namespace SWF {
  */
 
 /*!
- * @brief  Constructs a new PollForActivityTaskRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 PollForActivityTaskRequest::PollForActivityTaskRequest(const PollForActivityTaskRequest &other)
     : SWFRequest(new PollForActivityTaskRequestPrivate(*other.d_func(), this))
@@ -64,7 +61,7 @@ PollForActivityTaskRequest::PollForActivityTaskRequest(const PollForActivityTask
 }
 
 /*!
- * @brief  Constructs a new PollForActivityTaskRequest object.
+ * Constructs a PollForActivityTaskRequest object.
  */
 PollForActivityTaskRequest::PollForActivityTaskRequest()
     : SWFRequest(new PollForActivityTaskRequestPrivate(SWFRequest::PollForActivityTaskAction, this))
@@ -82,14 +79,9 @@ bool PollForActivityTaskRequest::isValid() const
 
 
 /*!
- * @brief  Construct an PollForActivityTaskResponse object.
+ * Returns a PollForActivityTaskResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An PollForActivityTaskResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SWFClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * PollForActivityTaskRequest::response(QNetworkReply * const reply) const
 {
@@ -97,20 +89,17 @@ QtAws::Core::AwsAbstractResponse * PollForActivityTaskRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::SWF::PollForActivityTaskRequestPrivate
+ * \brief The PollForActivityTaskRequestPrivate class provides private implementation for PollForActivityTaskRequest.
+ * \internal
  *
- * @class  PollForActivityTaskRequestPrivate
- *
- * @brief  Private implementation for PollForActivityTaskRequest.
+ * \inmodule QtAwsSWF
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new PollForActivityTaskRequestPrivate object.
- *
- * @param  action  SWF action being performed.
- * @param  q       Pointer to this object's public PollForActivityTaskRequest instance.
+ * Constructs a PollForActivityTaskRequestPrivate object for SWF \a action with,
+ * public implementation \a q.
  */
 PollForActivityTaskRequestPrivate::PollForActivityTaskRequestPrivate(
     const SWFRequest::Action action, PollForActivityTaskRequest * const q)
@@ -120,15 +109,10 @@ PollForActivityTaskRequestPrivate::PollForActivityTaskRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PollForActivityTaskRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the PollForActivityTaskRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public PollForActivityTaskRequest instance.
  */
 PollForActivityTaskRequestPrivate::PollForActivityTaskRequestPrivate(
     const PollForActivityTaskRequestPrivate &other, PollForActivityTaskRequest * const q)

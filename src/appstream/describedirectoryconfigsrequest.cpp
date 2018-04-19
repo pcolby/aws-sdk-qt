@@ -27,10 +27,9 @@ namespace AppStream {
 
 /*!
  * \class QtAws::AppStream::DescribeDirectoryConfigsRequest
- *
  * \brief The DescribeDirectoryConfigsRequest class provides an interface for AppStream DescribeDirectoryConfigs requests.
  *
- * \ingroup AppStream
+ * \inmodule QtAwsAppStream
  *
  *  <fullname>Amazon AppStream 2.0</fullname>
  * 
@@ -40,9 +39,7 @@ namespace AppStream {
  */
 
 /*!
- * @brief  Constructs a new DescribeDirectoryConfigsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeDirectoryConfigsRequest::DescribeDirectoryConfigsRequest(const DescribeDirectoryConfigsRequest &other)
     : AppStreamRequest(new DescribeDirectoryConfigsRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ DescribeDirectoryConfigsRequest::DescribeDirectoryConfigsRequest(const DescribeD
 }
 
 /*!
- * @brief  Constructs a new DescribeDirectoryConfigsRequest object.
+ * Constructs a DescribeDirectoryConfigsRequest object.
  */
 DescribeDirectoryConfigsRequest::DescribeDirectoryConfigsRequest()
     : AppStreamRequest(new DescribeDirectoryConfigsRequestPrivate(AppStreamRequest::DescribeDirectoryConfigsAction, this))
@@ -69,14 +66,9 @@ bool DescribeDirectoryConfigsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeDirectoryConfigsResponse object.
+ * Returns a DescribeDirectoryConfigsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeDirectoryConfigsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AppStreamClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeDirectoryConfigsRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * DescribeDirectoryConfigsRequest::response(QNe
 }
 
 /*!
- * @internal
+ * \class QtAws::AppStream::DescribeDirectoryConfigsRequestPrivate
+ * \brief The DescribeDirectoryConfigsRequestPrivate class provides private implementation for DescribeDirectoryConfigsRequest.
+ * \internal
  *
- * @class  DescribeDirectoryConfigsRequestPrivate
- *
- * @brief  Private implementation for DescribeDirectoryConfigsRequest.
+ * \inmodule QtAwsAppStream
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeDirectoryConfigsRequestPrivate object.
- *
- * @param  action  AppStream action being performed.
- * @param  q       Pointer to this object's public DescribeDirectoryConfigsRequest instance.
+ * Constructs a DescribeDirectoryConfigsRequestPrivate object for AppStream \a action with,
+ * public implementation \a q.
  */
 DescribeDirectoryConfigsRequestPrivate::DescribeDirectoryConfigsRequestPrivate(
     const AppStreamRequest::Action action, DescribeDirectoryConfigsRequest * const q)
@@ -107,15 +96,10 @@ DescribeDirectoryConfigsRequestPrivate::DescribeDirectoryConfigsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeDirectoryConfigsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeDirectoryConfigsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeDirectoryConfigsRequest instance.
  */
 DescribeDirectoryConfigsRequestPrivate::DescribeDirectoryConfigsRequestPrivate(
     const DescribeDirectoryConfigsRequestPrivate &other, DescribeDirectoryConfigsRequest * const q)

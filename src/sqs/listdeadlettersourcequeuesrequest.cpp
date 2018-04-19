@@ -27,10 +27,9 @@ namespace SQS {
 
 /*!
  * \class QtAws::SQS::ListDeadLetterSourceQueuesRequest
- *
  * \brief The ListDeadLetterSourceQueuesRequest class provides an interface for SQS ListDeadLetterSourceQueues requests.
  *
- * \ingroup SQS
+ * \inmodule QtAwsSQS
  *
  *  Welcome to the <i>Amazon Simple Queue Service API
  * 
@@ -103,9 +102,7 @@ namespace SQS {
  */
 
 /*!
- * @brief  Constructs a new ListDeadLetterSourceQueuesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListDeadLetterSourceQueuesRequest::ListDeadLetterSourceQueuesRequest(const ListDeadLetterSourceQueuesRequest &other)
     : SQSRequest(new ListDeadLetterSourceQueuesRequestPrivate(*other.d_func(), this))
@@ -114,7 +111,7 @@ ListDeadLetterSourceQueuesRequest::ListDeadLetterSourceQueuesRequest(const ListD
 }
 
 /*!
- * @brief  Constructs a new ListDeadLetterSourceQueuesRequest object.
+ * Constructs a ListDeadLetterSourceQueuesRequest object.
  */
 ListDeadLetterSourceQueuesRequest::ListDeadLetterSourceQueuesRequest()
     : SQSRequest(new ListDeadLetterSourceQueuesRequestPrivate(SQSRequest::ListDeadLetterSourceQueuesAction, this))
@@ -132,14 +129,9 @@ bool ListDeadLetterSourceQueuesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListDeadLetterSourceQueuesResponse object.
+ * Returns a ListDeadLetterSourceQueuesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListDeadLetterSourceQueuesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SQSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListDeadLetterSourceQueuesRequest::response(QNetworkReply * const reply) const
 {
@@ -147,20 +139,17 @@ QtAws::Core::AwsAbstractResponse * ListDeadLetterSourceQueuesRequest::response(Q
 }
 
 /*!
- * @internal
+ * \class QtAws::SQS::ListDeadLetterSourceQueuesRequestPrivate
+ * \brief The ListDeadLetterSourceQueuesRequestPrivate class provides private implementation for ListDeadLetterSourceQueuesRequest.
+ * \internal
  *
- * @class  ListDeadLetterSourceQueuesRequestPrivate
- *
- * @brief  Private implementation for ListDeadLetterSourceQueuesRequest.
+ * \inmodule QtAwsSQS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListDeadLetterSourceQueuesRequestPrivate object.
- *
- * @param  action  SQS action being performed.
- * @param  q       Pointer to this object's public ListDeadLetterSourceQueuesRequest instance.
+ * Constructs a ListDeadLetterSourceQueuesRequestPrivate object for SQS \a action with,
+ * public implementation \a q.
  */
 ListDeadLetterSourceQueuesRequestPrivate::ListDeadLetterSourceQueuesRequestPrivate(
     const SQSRequest::Action action, ListDeadLetterSourceQueuesRequest * const q)
@@ -170,15 +159,10 @@ ListDeadLetterSourceQueuesRequestPrivate::ListDeadLetterSourceQueuesRequestPriva
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListDeadLetterSourceQueuesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListDeadLetterSourceQueuesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListDeadLetterSourceQueuesRequest instance.
  */
 ListDeadLetterSourceQueuesRequestPrivate::ListDeadLetterSourceQueuesRequestPrivate(
     const ListDeadLetterSourceQueuesRequestPrivate &other, ListDeadLetterSourceQueuesRequest * const q)

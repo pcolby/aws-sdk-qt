@@ -27,10 +27,9 @@ namespace DirectConnect {
 
 /*!
  * \class QtAws::DirectConnect::DescribeDirectConnectGatewayAssociationsRequest
- *
  * \brief The DescribeDirectConnectGatewayAssociationsRequest class provides an interface for DirectConnect DescribeDirectConnectGatewayAssociations requests.
  *
- * \ingroup DirectConnect
+ * \inmodule QtAwsDirectConnect
  *
  *  AWS Direct Connect links your internal network to an AWS Direct Connect location over a standard 1 gigabit or 10 gigabit
  *  Ethernet fiber-optic cable. One end of the cable is connected to your router, the other to an AWS Direct Connect router.
@@ -45,9 +44,7 @@ namespace DirectConnect {
  */
 
 /*!
- * @brief  Constructs a new DescribeDirectConnectGatewayAssociationsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeDirectConnectGatewayAssociationsRequest::DescribeDirectConnectGatewayAssociationsRequest(const DescribeDirectConnectGatewayAssociationsRequest &other)
     : DirectConnectRequest(new DescribeDirectConnectGatewayAssociationsRequestPrivate(*other.d_func(), this))
@@ -56,7 +53,7 @@ DescribeDirectConnectGatewayAssociationsRequest::DescribeDirectConnectGatewayAss
 }
 
 /*!
- * @brief  Constructs a new DescribeDirectConnectGatewayAssociationsRequest object.
+ * Constructs a DescribeDirectConnectGatewayAssociationsRequest object.
  */
 DescribeDirectConnectGatewayAssociationsRequest::DescribeDirectConnectGatewayAssociationsRequest()
     : DirectConnectRequest(new DescribeDirectConnectGatewayAssociationsRequestPrivate(DirectConnectRequest::DescribeDirectConnectGatewayAssociationsAction, this))
@@ -74,14 +71,9 @@ bool DescribeDirectConnectGatewayAssociationsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeDirectConnectGatewayAssociationsResponse object.
+ * Returns a DescribeDirectConnectGatewayAssociationsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeDirectConnectGatewayAssociationsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DirectConnectClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeDirectConnectGatewayAssociationsRequest::response(QNetworkReply * const reply) const
 {
@@ -89,20 +81,17 @@ QtAws::Core::AwsAbstractResponse * DescribeDirectConnectGatewayAssociationsReque
 }
 
 /*!
- * @internal
+ * \class QtAws::DirectConnect::DescribeDirectConnectGatewayAssociationsRequestPrivate
+ * \brief The DescribeDirectConnectGatewayAssociationsRequestPrivate class provides private implementation for DescribeDirectConnectGatewayAssociationsRequest.
+ * \internal
  *
- * @class  DescribeDirectConnectGatewayAssociationsRequestPrivate
- *
- * @brief  Private implementation for DescribeDirectConnectGatewayAssociationsRequest.
+ * \inmodule QtAwsDirectConnect
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeDirectConnectGatewayAssociationsRequestPrivate object.
- *
- * @param  action  DirectConnect action being performed.
- * @param  q       Pointer to this object's public DescribeDirectConnectGatewayAssociationsRequest instance.
+ * Constructs a DescribeDirectConnectGatewayAssociationsRequestPrivate object for DirectConnect \a action with,
+ * public implementation \a q.
  */
 DescribeDirectConnectGatewayAssociationsRequestPrivate::DescribeDirectConnectGatewayAssociationsRequestPrivate(
     const DirectConnectRequest::Action action, DescribeDirectConnectGatewayAssociationsRequest * const q)
@@ -112,15 +101,10 @@ DescribeDirectConnectGatewayAssociationsRequestPrivate::DescribeDirectConnectGat
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeDirectConnectGatewayAssociationsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeDirectConnectGatewayAssociationsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeDirectConnectGatewayAssociationsRequest instance.
  */
 DescribeDirectConnectGatewayAssociationsRequestPrivate::DescribeDirectConnectGatewayAssociationsRequestPrivate(
     const DescribeDirectConnectGatewayAssociationsRequestPrivate &other, DescribeDirectConnectGatewayAssociationsRequest * const q)

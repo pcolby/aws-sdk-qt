@@ -27,10 +27,9 @@ namespace WAF {
 
 /*!
  * \class QtAws::WAF::GetRuleRequest
- *
  * \brief The GetRuleRequest class provides an interface for WAF GetRule requests.
  *
- * \ingroup WAF
+ * \inmodule QtAwsWAF
  *
  *  This is the <i>AWS WAF API Reference</i> for using AWS WAF with Amazon CloudFront. The AWS WAF actions and data types
  *  listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data
@@ -42,9 +41,7 @@ namespace WAF {
  */
 
 /*!
- * @brief  Constructs a new GetRuleRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetRuleRequest::GetRuleRequest(const GetRuleRequest &other)
     : WAFRequest(new GetRuleRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ GetRuleRequest::GetRuleRequest(const GetRuleRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetRuleRequest object.
+ * Constructs a GetRuleRequest object.
  */
 GetRuleRequest::GetRuleRequest()
     : WAFRequest(new GetRuleRequestPrivate(WAFRequest::GetRuleAction, this))
@@ -71,14 +68,9 @@ bool GetRuleRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetRuleResponse object.
+ * Returns a GetRuleResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetRuleResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WAFClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetRuleRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * GetRuleRequest::response(QNetworkReply * cons
 }
 
 /*!
- * @internal
+ * \class QtAws::WAF::GetRuleRequestPrivate
+ * \brief The GetRuleRequestPrivate class provides private implementation for GetRuleRequest.
+ * \internal
  *
- * @class  GetRuleRequestPrivate
- *
- * @brief  Private implementation for GetRuleRequest.
+ * \inmodule QtAwsWAF
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetRuleRequestPrivate object.
- *
- * @param  action  WAF action being performed.
- * @param  q       Pointer to this object's public GetRuleRequest instance.
+ * Constructs a GetRuleRequestPrivate object for WAF \a action with,
+ * public implementation \a q.
  */
 GetRuleRequestPrivate::GetRuleRequestPrivate(
     const WAFRequest::Action action, GetRuleRequest * const q)
@@ -109,15 +98,10 @@ GetRuleRequestPrivate::GetRuleRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetRuleRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetRuleRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetRuleRequest instance.
  */
 GetRuleRequestPrivate::GetRuleRequestPrivate(
     const GetRuleRequestPrivate &other, GetRuleRequest * const q)

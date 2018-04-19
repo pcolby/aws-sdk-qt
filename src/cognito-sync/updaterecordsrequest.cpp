@@ -27,10 +27,9 @@ namespace CognitoSync {
 
 /*!
  * \class QtAws::CognitoSync::UpdateRecordsRequest
- *
  * \brief The UpdateRecordsRequest class provides an interface for CognitoSync UpdateRecords requests.
  *
- * \ingroup CognitoSync
+ * \inmodule QtAwsCognitoSync
  *
  *  <fullname>Amazon Cognito Sync</fullname>
  * 
@@ -57,9 +56,7 @@ namespace CognitoSync {
  */
 
 /*!
- * @brief  Constructs a new UpdateRecordsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateRecordsRequest::UpdateRecordsRequest(const UpdateRecordsRequest &other)
     : CognitoSyncRequest(new UpdateRecordsRequestPrivate(*other.d_func(), this))
@@ -68,7 +65,7 @@ UpdateRecordsRequest::UpdateRecordsRequest(const UpdateRecordsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new UpdateRecordsRequest object.
+ * Constructs a UpdateRecordsRequest object.
  */
 UpdateRecordsRequest::UpdateRecordsRequest()
     : CognitoSyncRequest(new UpdateRecordsRequestPrivate(CognitoSyncRequest::UpdateRecordsAction, this))
@@ -86,14 +83,9 @@ bool UpdateRecordsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateRecordsResponse object.
+ * Returns a UpdateRecordsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateRecordsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CognitoSyncClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateRecordsRequest::response(QNetworkReply * const reply) const
 {
@@ -101,20 +93,17 @@ QtAws::Core::AwsAbstractResponse * UpdateRecordsRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::CognitoSync::UpdateRecordsRequestPrivate
+ * \brief The UpdateRecordsRequestPrivate class provides private implementation for UpdateRecordsRequest.
+ * \internal
  *
- * @class  UpdateRecordsRequestPrivate
- *
- * @brief  Private implementation for UpdateRecordsRequest.
+ * \inmodule QtAwsCognitoSync
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateRecordsRequestPrivate object.
- *
- * @param  action  CognitoSync action being performed.
- * @param  q       Pointer to this object's public UpdateRecordsRequest instance.
+ * Constructs a UpdateRecordsRequestPrivate object for CognitoSync \a action with,
+ * public implementation \a q.
  */
 UpdateRecordsRequestPrivate::UpdateRecordsRequestPrivate(
     const CognitoSyncRequest::Action action, UpdateRecordsRequest * const q)
@@ -124,15 +113,10 @@ UpdateRecordsRequestPrivate::UpdateRecordsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateRecordsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateRecordsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateRecordsRequest instance.
  */
 UpdateRecordsRequestPrivate::UpdateRecordsRequestPrivate(
     const UpdateRecordsRequestPrivate &other, UpdateRecordsRequest * const q)

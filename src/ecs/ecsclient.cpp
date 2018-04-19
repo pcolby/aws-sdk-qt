@@ -90,6 +90,9 @@
 /*!
  * \namespace QtAws::ECS
  * \brief The QtAws::ECS contains stuff...
+ *
+ * \inmodule QtAwsECS
+ *
  * @todo Move this to a separate template file.
  */
 
@@ -156,7 +159,7 @@ EcsClient::EcsClient(
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * \a  AwsEndpoint::getEndpoint()
+ * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
 EcsClient::EcsClient(
     const QUrl &endpoint,

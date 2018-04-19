@@ -27,10 +27,9 @@ namespace Organizations {
 
 /*!
  * \class QtAws::Organizations::AttachPolicyRequest
- *
  * \brief The AttachPolicyRequest class provides an interface for Organizations AttachPolicy requests.
  *
- * \ingroup Organizations
+ * \inmodule QtAwsOrganizations
  *
  *  <fullname>AWS Organizations API Reference</fullname>
  * 
@@ -179,9 +178,7 @@ namespace Organizations {
  */
 
 /*!
- * @brief  Constructs a new AttachPolicyRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AttachPolicyRequest::AttachPolicyRequest(const AttachPolicyRequest &other)
     : OrganizationsRequest(new AttachPolicyRequestPrivate(*other.d_func(), this))
@@ -190,7 +187,7 @@ AttachPolicyRequest::AttachPolicyRequest(const AttachPolicyRequest &other)
 }
 
 /*!
- * @brief  Constructs a new AttachPolicyRequest object.
+ * Constructs a AttachPolicyRequest object.
  */
 AttachPolicyRequest::AttachPolicyRequest()
     : OrganizationsRequest(new AttachPolicyRequestPrivate(OrganizationsRequest::AttachPolicyAction, this))
@@ -208,14 +205,9 @@ bool AttachPolicyRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AttachPolicyResponse object.
+ * Returns a AttachPolicyResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AttachPolicyResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  OrganizationsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AttachPolicyRequest::response(QNetworkReply * const reply) const
 {
@@ -223,20 +215,17 @@ QtAws::Core::AwsAbstractResponse * AttachPolicyRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::Organizations::AttachPolicyRequestPrivate
+ * \brief The AttachPolicyRequestPrivate class provides private implementation for AttachPolicyRequest.
+ * \internal
  *
- * @class  AttachPolicyRequestPrivate
- *
- * @brief  Private implementation for AttachPolicyRequest.
+ * \inmodule QtAwsOrganizations
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AttachPolicyRequestPrivate object.
- *
- * @param  action  Organizations action being performed.
- * @param  q       Pointer to this object's public AttachPolicyRequest instance.
+ * Constructs a AttachPolicyRequestPrivate object for Organizations \a action with,
+ * public implementation \a q.
  */
 AttachPolicyRequestPrivate::AttachPolicyRequestPrivate(
     const OrganizationsRequest::Action action, AttachPolicyRequest * const q)
@@ -246,15 +235,10 @@ AttachPolicyRequestPrivate::AttachPolicyRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AttachPolicyRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AttachPolicyRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AttachPolicyRequest instance.
  */
 AttachPolicyRequestPrivate::AttachPolicyRequestPrivate(
     const AttachPolicyRequestPrivate &other, AttachPolicyRequest * const q)

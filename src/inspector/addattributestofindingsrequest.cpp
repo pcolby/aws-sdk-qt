@@ -27,10 +27,9 @@ namespace Inspector {
 
 /*!
  * \class QtAws::Inspector::AddAttributesToFindingsRequest
- *
  * \brief The AddAttributesToFindingsRequest class provides an interface for Inspector AddAttributesToFindings requests.
  *
- * \ingroup Inspector
+ * \inmodule QtAwsInspector
  *
  *  <fullname>Amazon Inspector</fullname>
  * 
@@ -42,9 +41,7 @@ namespace Inspector {
  */
 
 /*!
- * @brief  Constructs a new AddAttributesToFindingsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AddAttributesToFindingsRequest::AddAttributesToFindingsRequest(const AddAttributesToFindingsRequest &other)
     : InspectorRequest(new AddAttributesToFindingsRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ AddAttributesToFindingsRequest::AddAttributesToFindingsRequest(const AddAttribut
 }
 
 /*!
- * @brief  Constructs a new AddAttributesToFindingsRequest object.
+ * Constructs a AddAttributesToFindingsRequest object.
  */
 AddAttributesToFindingsRequest::AddAttributesToFindingsRequest()
     : InspectorRequest(new AddAttributesToFindingsRequestPrivate(InspectorRequest::AddAttributesToFindingsAction, this))
@@ -71,14 +68,9 @@ bool AddAttributesToFindingsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AddAttributesToFindingsResponse object.
+ * Returns a AddAttributesToFindingsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AddAttributesToFindingsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  InspectorClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AddAttributesToFindingsRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * AddAttributesToFindingsRequest::response(QNet
 }
 
 /*!
- * @internal
+ * \class QtAws::Inspector::AddAttributesToFindingsRequestPrivate
+ * \brief The AddAttributesToFindingsRequestPrivate class provides private implementation for AddAttributesToFindingsRequest.
+ * \internal
  *
- * @class  AddAttributesToFindingsRequestPrivate
- *
- * @brief  Private implementation for AddAttributesToFindingsRequest.
+ * \inmodule QtAwsInspector
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AddAttributesToFindingsRequestPrivate object.
- *
- * @param  action  Inspector action being performed.
- * @param  q       Pointer to this object's public AddAttributesToFindingsRequest instance.
+ * Constructs a AddAttributesToFindingsRequestPrivate object for Inspector \a action with,
+ * public implementation \a q.
  */
 AddAttributesToFindingsRequestPrivate::AddAttributesToFindingsRequestPrivate(
     const InspectorRequest::Action action, AddAttributesToFindingsRequest * const q)
@@ -109,15 +98,10 @@ AddAttributesToFindingsRequestPrivate::AddAttributesToFindingsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AddAttributesToFindingsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AddAttributesToFindingsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AddAttributesToFindingsRequest instance.
  */
 AddAttributesToFindingsRequestPrivate::AddAttributesToFindingsRequestPrivate(
     const AddAttributesToFindingsRequestPrivate &other, AddAttributesToFindingsRequest * const q)

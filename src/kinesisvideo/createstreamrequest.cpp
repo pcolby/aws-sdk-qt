@@ -27,19 +27,16 @@ namespace KinesisVideo {
 
 /*!
  * \class QtAws::KinesisVideo::CreateStreamRequest
- *
  * \brief The CreateStreamRequest class provides an interface for KinesisVideo CreateStream requests.
  *
- * \ingroup KinesisVideo
+ * \inmodule QtAwsKinesisVideo
  *
  *
  * \sa KinesisVideoClient::createStream
  */
 
 /*!
- * @brief  Constructs a new CreateStreamRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateStreamRequest::CreateStreamRequest(const CreateStreamRequest &other)
     : KinesisVideoRequest(new CreateStreamRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ CreateStreamRequest::CreateStreamRequest(const CreateStreamRequest &other)
 }
 
 /*!
- * @brief  Constructs a new CreateStreamRequest object.
+ * Constructs a CreateStreamRequest object.
  */
 CreateStreamRequest::CreateStreamRequest()
     : KinesisVideoRequest(new CreateStreamRequestPrivate(KinesisVideoRequest::CreateStreamAction, this))
@@ -66,14 +63,9 @@ bool CreateStreamRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateStreamResponse object.
+ * Returns a CreateStreamResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateStreamResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  KinesisVideoClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateStreamRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * CreateStreamRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::KinesisVideo::CreateStreamRequestPrivate
+ * \brief The CreateStreamRequestPrivate class provides private implementation for CreateStreamRequest.
+ * \internal
  *
- * @class  CreateStreamRequestPrivate
- *
- * @brief  Private implementation for CreateStreamRequest.
+ * \inmodule QtAwsKinesisVideo
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateStreamRequestPrivate object.
- *
- * @param  action  KinesisVideo action being performed.
- * @param  q       Pointer to this object's public CreateStreamRequest instance.
+ * Constructs a CreateStreamRequestPrivate object for KinesisVideo \a action with,
+ * public implementation \a q.
  */
 CreateStreamRequestPrivate::CreateStreamRequestPrivate(
     const KinesisVideoRequest::Action action, CreateStreamRequest * const q)
@@ -104,15 +93,10 @@ CreateStreamRequestPrivate::CreateStreamRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateStreamRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateStreamRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateStreamRequest instance.
  */
 CreateStreamRequestPrivate::CreateStreamRequestPrivate(
     const CreateStreamRequestPrivate &other, CreateStreamRequest * const q)

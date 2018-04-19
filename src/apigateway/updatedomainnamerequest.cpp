@@ -27,10 +27,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::UpdateDomainNameRequest
- *
  * \brief The UpdateDomainNameRequest class provides an interface for APIGateway UpdateDomainName requests.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -42,9 +41,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new UpdateDomainNameRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateDomainNameRequest::UpdateDomainNameRequest(const UpdateDomainNameRequest &other)
     : APIGatewayRequest(new UpdateDomainNameRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ UpdateDomainNameRequest::UpdateDomainNameRequest(const UpdateDomainNameRequest &
 }
 
 /*!
- * @brief  Constructs a new UpdateDomainNameRequest object.
+ * Constructs a UpdateDomainNameRequest object.
  */
 UpdateDomainNameRequest::UpdateDomainNameRequest()
     : APIGatewayRequest(new UpdateDomainNameRequestPrivate(APIGatewayRequest::UpdateDomainNameAction, this))
@@ -71,14 +68,9 @@ bool UpdateDomainNameRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateDomainNameResponse object.
+ * Returns a UpdateDomainNameResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateDomainNameResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  APIGatewayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateDomainNameRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * UpdateDomainNameRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::APIGateway::UpdateDomainNameRequestPrivate
+ * \brief The UpdateDomainNameRequestPrivate class provides private implementation for UpdateDomainNameRequest.
+ * \internal
  *
- * @class  UpdateDomainNameRequestPrivate
- *
- * @brief  Private implementation for UpdateDomainNameRequest.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateDomainNameRequestPrivate object.
- *
- * @param  action  APIGateway action being performed.
- * @param  q       Pointer to this object's public UpdateDomainNameRequest instance.
+ * Constructs a UpdateDomainNameRequestPrivate object for APIGateway \a action with,
+ * public implementation \a q.
  */
 UpdateDomainNameRequestPrivate::UpdateDomainNameRequestPrivate(
     const APIGatewayRequest::Action action, UpdateDomainNameRequest * const q)
@@ -109,15 +98,10 @@ UpdateDomainNameRequestPrivate::UpdateDomainNameRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateDomainNameRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateDomainNameRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateDomainNameRequest instance.
  */
 UpdateDomainNameRequestPrivate::UpdateDomainNameRequestPrivate(
     const UpdateDomainNameRequestPrivate &other, UpdateDomainNameRequest * const q)

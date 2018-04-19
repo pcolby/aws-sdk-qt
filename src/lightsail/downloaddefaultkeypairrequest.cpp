@@ -27,10 +27,9 @@ namespace Lightsail {
 
 /*!
  * \class QtAws::Lightsail::DownloadDefaultKeyPairRequest
- *
  * \brief The DownloadDefaultKeyPairRequest class provides an interface for Lightsail DownloadDefaultKeyPair requests.
  *
- * \ingroup Lightsail
+ * \inmodule QtAwsLightsail
  *
  *  Amazon Lightsail is the easiest way to get started with AWS for developers who just need virtual private servers.
  *  Lightsail includes everything you need to launch your project quickly - a virtual machine, SSD-based storage, data
@@ -53,9 +52,7 @@ namespace Lightsail {
  */
 
 /*!
- * @brief  Constructs a new DownloadDefaultKeyPairRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DownloadDefaultKeyPairRequest::DownloadDefaultKeyPairRequest(const DownloadDefaultKeyPairRequest &other)
     : LightsailRequest(new DownloadDefaultKeyPairRequestPrivate(*other.d_func(), this))
@@ -64,7 +61,7 @@ DownloadDefaultKeyPairRequest::DownloadDefaultKeyPairRequest(const DownloadDefau
 }
 
 /*!
- * @brief  Constructs a new DownloadDefaultKeyPairRequest object.
+ * Constructs a DownloadDefaultKeyPairRequest object.
  */
 DownloadDefaultKeyPairRequest::DownloadDefaultKeyPairRequest()
     : LightsailRequest(new DownloadDefaultKeyPairRequestPrivate(LightsailRequest::DownloadDefaultKeyPairAction, this))
@@ -82,14 +79,9 @@ bool DownloadDefaultKeyPairRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DownloadDefaultKeyPairResponse object.
+ * Returns a DownloadDefaultKeyPairResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DownloadDefaultKeyPairResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  LightsailClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DownloadDefaultKeyPairRequest::response(QNetworkReply * const reply) const
 {
@@ -97,20 +89,17 @@ QtAws::Core::AwsAbstractResponse * DownloadDefaultKeyPairRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::Lightsail::DownloadDefaultKeyPairRequestPrivate
+ * \brief The DownloadDefaultKeyPairRequestPrivate class provides private implementation for DownloadDefaultKeyPairRequest.
+ * \internal
  *
- * @class  DownloadDefaultKeyPairRequestPrivate
- *
- * @brief  Private implementation for DownloadDefaultKeyPairRequest.
+ * \inmodule QtAwsLightsail
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DownloadDefaultKeyPairRequestPrivate object.
- *
- * @param  action  Lightsail action being performed.
- * @param  q       Pointer to this object's public DownloadDefaultKeyPairRequest instance.
+ * Constructs a DownloadDefaultKeyPairRequestPrivate object for Lightsail \a action with,
+ * public implementation \a q.
  */
 DownloadDefaultKeyPairRequestPrivate::DownloadDefaultKeyPairRequestPrivate(
     const LightsailRequest::Action action, DownloadDefaultKeyPairRequest * const q)
@@ -120,15 +109,10 @@ DownloadDefaultKeyPairRequestPrivate::DownloadDefaultKeyPairRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DownloadDefaultKeyPairRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DownloadDefaultKeyPairRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DownloadDefaultKeyPairRequest instance.
  */
 DownloadDefaultKeyPairRequestPrivate::DownloadDefaultKeyPairRequestPrivate(
     const DownloadDefaultKeyPairRequestPrivate &other, DownloadDefaultKeyPairRequest * const q)

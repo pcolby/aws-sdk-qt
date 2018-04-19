@@ -27,10 +27,9 @@ namespace ConfigService {
 
 /*!
  * \class QtAws::ConfigService::StartConfigRulesEvaluationRequest
- *
  * \brief The StartConfigRulesEvaluationRequest class provides an interface for ConfigService StartConfigRulesEvaluation requests.
  *
- * \ingroup ConfigService
+ * \inmodule QtAwsConfigService
  *
  *  <fullname>AWS Config</fullname>
  * 
@@ -60,9 +59,7 @@ namespace ConfigService {
  */
 
 /*!
- * @brief  Constructs a new StartConfigRulesEvaluationRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 StartConfigRulesEvaluationRequest::StartConfigRulesEvaluationRequest(const StartConfigRulesEvaluationRequest &other)
     : ConfigServiceRequest(new StartConfigRulesEvaluationRequestPrivate(*other.d_func(), this))
@@ -71,7 +68,7 @@ StartConfigRulesEvaluationRequest::StartConfigRulesEvaluationRequest(const Start
 }
 
 /*!
- * @brief  Constructs a new StartConfigRulesEvaluationRequest object.
+ * Constructs a StartConfigRulesEvaluationRequest object.
  */
 StartConfigRulesEvaluationRequest::StartConfigRulesEvaluationRequest()
     : ConfigServiceRequest(new StartConfigRulesEvaluationRequestPrivate(ConfigServiceRequest::StartConfigRulesEvaluationAction, this))
@@ -89,14 +86,9 @@ bool StartConfigRulesEvaluationRequest::isValid() const
 
 
 /*!
- * @brief  Construct an StartConfigRulesEvaluationResponse object.
+ * Returns a StartConfigRulesEvaluationResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An StartConfigRulesEvaluationResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ConfigServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * StartConfigRulesEvaluationRequest::response(QNetworkReply * const reply) const
 {
@@ -104,20 +96,17 @@ QtAws::Core::AwsAbstractResponse * StartConfigRulesEvaluationRequest::response(Q
 }
 
 /*!
- * @internal
+ * \class QtAws::ConfigService::StartConfigRulesEvaluationRequestPrivate
+ * \brief The StartConfigRulesEvaluationRequestPrivate class provides private implementation for StartConfigRulesEvaluationRequest.
+ * \internal
  *
- * @class  StartConfigRulesEvaluationRequestPrivate
- *
- * @brief  Private implementation for StartConfigRulesEvaluationRequest.
+ * \inmodule QtAwsConfigService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new StartConfigRulesEvaluationRequestPrivate object.
- *
- * @param  action  ConfigService action being performed.
- * @param  q       Pointer to this object's public StartConfigRulesEvaluationRequest instance.
+ * Constructs a StartConfigRulesEvaluationRequestPrivate object for ConfigService \a action with,
+ * public implementation \a q.
  */
 StartConfigRulesEvaluationRequestPrivate::StartConfigRulesEvaluationRequestPrivate(
     const ConfigServiceRequest::Action action, StartConfigRulesEvaluationRequest * const q)
@@ -127,15 +116,10 @@ StartConfigRulesEvaluationRequestPrivate::StartConfigRulesEvaluationRequestPriva
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StartConfigRulesEvaluationRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the StartConfigRulesEvaluationRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public StartConfigRulesEvaluationRequest instance.
  */
 StartConfigRulesEvaluationRequestPrivate::StartConfigRulesEvaluationRequestPrivate(
     const StartConfigRulesEvaluationRequestPrivate &other, StartConfigRulesEvaluationRequest * const q)

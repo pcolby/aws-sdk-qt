@@ -27,10 +27,9 @@ namespace DeviceFarm {
 
 /*!
  * \class QtAws::DeviceFarm::ListNetworkProfilesRequest
- *
  * \brief The ListNetworkProfilesRequest class provides an interface for DeviceFarm ListNetworkProfiles requests.
  *
- * \ingroup DeviceFarm
+ * \inmodule QtAwsDeviceFarm
  *
  *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
  *  phones, tablets, and other devices in the
@@ -39,9 +38,7 @@ namespace DeviceFarm {
  */
 
 /*!
- * @brief  Constructs a new ListNetworkProfilesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListNetworkProfilesRequest::ListNetworkProfilesRequest(const ListNetworkProfilesRequest &other)
     : DeviceFarmRequest(new ListNetworkProfilesRequestPrivate(*other.d_func(), this))
@@ -50,7 +47,7 @@ ListNetworkProfilesRequest::ListNetworkProfilesRequest(const ListNetworkProfiles
 }
 
 /*!
- * @brief  Constructs a new ListNetworkProfilesRequest object.
+ * Constructs a ListNetworkProfilesRequest object.
  */
 ListNetworkProfilesRequest::ListNetworkProfilesRequest()
     : DeviceFarmRequest(new ListNetworkProfilesRequestPrivate(DeviceFarmRequest::ListNetworkProfilesAction, this))
@@ -68,14 +65,9 @@ bool ListNetworkProfilesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListNetworkProfilesResponse object.
+ * Returns a ListNetworkProfilesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListNetworkProfilesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DeviceFarmClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListNetworkProfilesRequest::response(QNetworkReply * const reply) const
 {
@@ -83,20 +75,17 @@ QtAws::Core::AwsAbstractResponse * ListNetworkProfilesRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::DeviceFarm::ListNetworkProfilesRequestPrivate
+ * \brief The ListNetworkProfilesRequestPrivate class provides private implementation for ListNetworkProfilesRequest.
+ * \internal
  *
- * @class  ListNetworkProfilesRequestPrivate
- *
- * @brief  Private implementation for ListNetworkProfilesRequest.
+ * \inmodule QtAwsDeviceFarm
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListNetworkProfilesRequestPrivate object.
- *
- * @param  action  DeviceFarm action being performed.
- * @param  q       Pointer to this object's public ListNetworkProfilesRequest instance.
+ * Constructs a ListNetworkProfilesRequestPrivate object for DeviceFarm \a action with,
+ * public implementation \a q.
  */
 ListNetworkProfilesRequestPrivate::ListNetworkProfilesRequestPrivate(
     const DeviceFarmRequest::Action action, ListNetworkProfilesRequest * const q)
@@ -106,15 +95,10 @@ ListNetworkProfilesRequestPrivate::ListNetworkProfilesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListNetworkProfilesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListNetworkProfilesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListNetworkProfilesRequest instance.
  */
 ListNetworkProfilesRequestPrivate::ListNetworkProfilesRequestPrivate(
     const ListNetworkProfilesRequestPrivate &other, ListNetworkProfilesRequest * const q)

@@ -27,10 +27,9 @@ namespace DirectoryService {
 
 /*!
  * \class QtAws::DirectoryService::CreateComputerRequest
- *
  * \brief The CreateComputerRequest class provides an interface for DirectoryService CreateComputer requests.
  *
- * \ingroup DirectoryService
+ * \inmodule QtAwsDirectoryService
  *
  *  <fullname>AWS Directory Service</fullname>
  * 
@@ -51,9 +50,7 @@ namespace DirectoryService {
  */
 
 /*!
- * @brief  Constructs a new CreateComputerRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateComputerRequest::CreateComputerRequest(const CreateComputerRequest &other)
     : DirectoryServiceRequest(new CreateComputerRequestPrivate(*other.d_func(), this))
@@ -62,7 +59,7 @@ CreateComputerRequest::CreateComputerRequest(const CreateComputerRequest &other)
 }
 
 /*!
- * @brief  Constructs a new CreateComputerRequest object.
+ * Constructs a CreateComputerRequest object.
  */
 CreateComputerRequest::CreateComputerRequest()
     : DirectoryServiceRequest(new CreateComputerRequestPrivate(DirectoryServiceRequest::CreateComputerAction, this))
@@ -80,14 +77,9 @@ bool CreateComputerRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateComputerResponse object.
+ * Returns a CreateComputerResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateComputerResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DirectoryServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateComputerRequest::response(QNetworkReply * const reply) const
 {
@@ -95,20 +87,17 @@ QtAws::Core::AwsAbstractResponse * CreateComputerRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::DirectoryService::CreateComputerRequestPrivate
+ * \brief The CreateComputerRequestPrivate class provides private implementation for CreateComputerRequest.
+ * \internal
  *
- * @class  CreateComputerRequestPrivate
- *
- * @brief  Private implementation for CreateComputerRequest.
+ * \inmodule QtAwsDirectoryService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateComputerRequestPrivate object.
- *
- * @param  action  DirectoryService action being performed.
- * @param  q       Pointer to this object's public CreateComputerRequest instance.
+ * Constructs a CreateComputerRequestPrivate object for DirectoryService \a action with,
+ * public implementation \a q.
  */
 CreateComputerRequestPrivate::CreateComputerRequestPrivate(
     const DirectoryServiceRequest::Action action, CreateComputerRequest * const q)
@@ -118,15 +107,10 @@ CreateComputerRequestPrivate::CreateComputerRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateComputerRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateComputerRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateComputerRequest instance.
  */
 CreateComputerRequestPrivate::CreateComputerRequestPrivate(
     const CreateComputerRequestPrivate &other, CreateComputerRequest * const q)

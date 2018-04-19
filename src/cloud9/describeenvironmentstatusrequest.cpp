@@ -27,10 +27,9 @@ namespace Cloud9 {
 
 /*!
  * \class QtAws::Cloud9::DescribeEnvironmentStatusRequest
- *
  * \brief The DescribeEnvironmentStatusRequest class provides an interface for Cloud9 DescribeEnvironmentStatus requests.
  *
- * \ingroup Cloud9
+ * \inmodule QtAwsCloud9
  *
  *  <fullname>AWS Cloud9</fullname>
  * 
@@ -91,9 +90,7 @@ namespace Cloud9 {
  */
 
 /*!
- * @brief  Constructs a new DescribeEnvironmentStatusRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeEnvironmentStatusRequest::DescribeEnvironmentStatusRequest(const DescribeEnvironmentStatusRequest &other)
     : Cloud9Request(new DescribeEnvironmentStatusRequestPrivate(*other.d_func(), this))
@@ -102,7 +99,7 @@ DescribeEnvironmentStatusRequest::DescribeEnvironmentStatusRequest(const Describ
 }
 
 /*!
- * @brief  Constructs a new DescribeEnvironmentStatusRequest object.
+ * Constructs a DescribeEnvironmentStatusRequest object.
  */
 DescribeEnvironmentStatusRequest::DescribeEnvironmentStatusRequest()
     : Cloud9Request(new DescribeEnvironmentStatusRequestPrivate(Cloud9Request::DescribeEnvironmentStatusAction, this))
@@ -120,14 +117,9 @@ bool DescribeEnvironmentStatusRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeEnvironmentStatusResponse object.
+ * Returns a DescribeEnvironmentStatusResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeEnvironmentStatusResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  Cloud9Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeEnvironmentStatusRequest::response(QNetworkReply * const reply) const
 {
@@ -135,20 +127,17 @@ QtAws::Core::AwsAbstractResponse * DescribeEnvironmentStatusRequest::response(QN
 }
 
 /*!
- * @internal
+ * \class QtAws::Cloud9::DescribeEnvironmentStatusRequestPrivate
+ * \brief The DescribeEnvironmentStatusRequestPrivate class provides private implementation for DescribeEnvironmentStatusRequest.
+ * \internal
  *
- * @class  DescribeEnvironmentStatusRequestPrivate
- *
- * @brief  Private implementation for DescribeEnvironmentStatusRequest.
+ * \inmodule QtAwsCloud9
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeEnvironmentStatusRequestPrivate object.
- *
- * @param  action  Cloud9 action being performed.
- * @param  q       Pointer to this object's public DescribeEnvironmentStatusRequest instance.
+ * Constructs a DescribeEnvironmentStatusRequestPrivate object for Cloud9 \a action with,
+ * public implementation \a q.
  */
 DescribeEnvironmentStatusRequestPrivate::DescribeEnvironmentStatusRequestPrivate(
     const Cloud9Request::Action action, DescribeEnvironmentStatusRequest * const q)
@@ -158,15 +147,10 @@ DescribeEnvironmentStatusRequestPrivate::DescribeEnvironmentStatusRequestPrivate
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeEnvironmentStatusRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeEnvironmentStatusRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeEnvironmentStatusRequest instance.
  */
 DescribeEnvironmentStatusRequestPrivate::DescribeEnvironmentStatusRequestPrivate(
     const DescribeEnvironmentStatusRequestPrivate &other, DescribeEnvironmentStatusRequest * const q)

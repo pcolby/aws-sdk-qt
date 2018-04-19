@@ -27,10 +27,9 @@ namespace ResourceGroups {
 
 /*!
  * \class QtAws::ResourceGroups::GetTagsRequest
- *
  * \brief The GetTagsRequest class provides an interface for ResourceGroups GetTags requests.
  *
- * \ingroup ResourceGroups
+ * \inmodule QtAwsResourceGroups
  *
  *  <fullname>AWS Resource Groups</fullname>
  * 
@@ -81,9 +80,7 @@ namespace ResourceGroups {
  */
 
 /*!
- * @brief  Constructs a new GetTagsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetTagsRequest::GetTagsRequest(const GetTagsRequest &other)
     : ResourceGroupsRequest(new GetTagsRequestPrivate(*other.d_func(), this))
@@ -92,7 +89,7 @@ GetTagsRequest::GetTagsRequest(const GetTagsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetTagsRequest object.
+ * Constructs a GetTagsRequest object.
  */
 GetTagsRequest::GetTagsRequest()
     : ResourceGroupsRequest(new GetTagsRequestPrivate(ResourceGroupsRequest::GetTagsAction, this))
@@ -110,14 +107,9 @@ bool GetTagsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetTagsResponse object.
+ * Returns a GetTagsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetTagsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ResourceGroupsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetTagsRequest::response(QNetworkReply * const reply) const
 {
@@ -125,20 +117,17 @@ QtAws::Core::AwsAbstractResponse * GetTagsRequest::response(QNetworkReply * cons
 }
 
 /*!
- * @internal
+ * \class QtAws::ResourceGroups::GetTagsRequestPrivate
+ * \brief The GetTagsRequestPrivate class provides private implementation for GetTagsRequest.
+ * \internal
  *
- * @class  GetTagsRequestPrivate
- *
- * @brief  Private implementation for GetTagsRequest.
+ * \inmodule QtAwsResourceGroups
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetTagsRequestPrivate object.
- *
- * @param  action  ResourceGroups action being performed.
- * @param  q       Pointer to this object's public GetTagsRequest instance.
+ * Constructs a GetTagsRequestPrivate object for ResourceGroups \a action with,
+ * public implementation \a q.
  */
 GetTagsRequestPrivate::GetTagsRequestPrivate(
     const ResourceGroupsRequest::Action action, GetTagsRequest * const q)
@@ -148,15 +137,10 @@ GetTagsRequestPrivate::GetTagsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetTagsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetTagsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetTagsRequest instance.
  */
 GetTagsRequestPrivate::GetTagsRequestPrivate(
     const GetTagsRequestPrivate &other, GetTagsRequest * const q)

@@ -27,10 +27,9 @@ namespace CloudHSM {
 
 /*!
  * \class QtAws::CloudHSM::ModifyHapgRequest
- *
  * \brief The ModifyHapgRequest class provides an interface for CloudHSM ModifyHapg requests.
  *
- * \ingroup CloudHSM
+ * \inmodule QtAwsCloudHSM
  *
  *  <fullname>AWS CloudHSM Service</fullname>
  * 
@@ -49,9 +48,7 @@ namespace CloudHSM {
  */
 
 /*!
- * @brief  Constructs a new ModifyHapgRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ModifyHapgRequest::ModifyHapgRequest(const ModifyHapgRequest &other)
     : CloudHSMRequest(new ModifyHapgRequestPrivate(*other.d_func(), this))
@@ -60,7 +57,7 @@ ModifyHapgRequest::ModifyHapgRequest(const ModifyHapgRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ModifyHapgRequest object.
+ * Constructs a ModifyHapgRequest object.
  */
 ModifyHapgRequest::ModifyHapgRequest()
     : CloudHSMRequest(new ModifyHapgRequestPrivate(CloudHSMRequest::ModifyHapgAction, this))
@@ -78,14 +75,9 @@ bool ModifyHapgRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ModifyHapgResponse object.
+ * Returns a ModifyHapgResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ModifyHapgResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudHSMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ModifyHapgRequest::response(QNetworkReply * const reply) const
 {
@@ -93,20 +85,17 @@ QtAws::Core::AwsAbstractResponse * ModifyHapgRequest::response(QNetworkReply * c
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudHSM::ModifyHapgRequestPrivate
+ * \brief The ModifyHapgRequestPrivate class provides private implementation for ModifyHapgRequest.
+ * \internal
  *
- * @class  ModifyHapgRequestPrivate
- *
- * @brief  Private implementation for ModifyHapgRequest.
+ * \inmodule QtAwsCloudHSM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ModifyHapgRequestPrivate object.
- *
- * @param  action  CloudHSM action being performed.
- * @param  q       Pointer to this object's public ModifyHapgRequest instance.
+ * Constructs a ModifyHapgRequestPrivate object for CloudHSM \a action with,
+ * public implementation \a q.
  */
 ModifyHapgRequestPrivate::ModifyHapgRequestPrivate(
     const CloudHSMRequest::Action action, ModifyHapgRequest * const q)
@@ -116,15 +105,10 @@ ModifyHapgRequestPrivate::ModifyHapgRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ModifyHapgRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ModifyHapgRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ModifyHapgRequest instance.
  */
 ModifyHapgRequestPrivate::ModifyHapgRequestPrivate(
     const ModifyHapgRequestPrivate &other, ModifyHapgRequest * const q)

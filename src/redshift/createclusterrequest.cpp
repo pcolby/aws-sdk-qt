@@ -27,10 +27,9 @@ namespace Redshift {
 
 /*!
  * \class QtAws::Redshift::CreateClusterRequest
- *
  * \brief The CreateClusterRequest class provides an interface for Redshift CreateCluster requests.
  *
- * \ingroup Redshift
+ * \inmodule QtAwsRedshift
  *
  *  <fullname>Amazon Redshift</fullname>
  * 
@@ -67,9 +66,7 @@ namespace Redshift {
  */
 
 /*!
- * @brief  Constructs a new CreateClusterRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateClusterRequest::CreateClusterRequest(const CreateClusterRequest &other)
     : RedshiftRequest(new CreateClusterRequestPrivate(*other.d_func(), this))
@@ -78,7 +75,7 @@ CreateClusterRequest::CreateClusterRequest(const CreateClusterRequest &other)
 }
 
 /*!
- * @brief  Constructs a new CreateClusterRequest object.
+ * Constructs a CreateClusterRequest object.
  */
 CreateClusterRequest::CreateClusterRequest()
     : RedshiftRequest(new CreateClusterRequestPrivate(RedshiftRequest::CreateClusterAction, this))
@@ -96,14 +93,9 @@ bool CreateClusterRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateClusterResponse object.
+ * Returns a CreateClusterResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateClusterResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RedshiftClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateClusterRequest::response(QNetworkReply * const reply) const
 {
@@ -111,20 +103,17 @@ QtAws::Core::AwsAbstractResponse * CreateClusterRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::Redshift::CreateClusterRequestPrivate
+ * \brief The CreateClusterRequestPrivate class provides private implementation for CreateClusterRequest.
+ * \internal
  *
- * @class  CreateClusterRequestPrivate
- *
- * @brief  Private implementation for CreateClusterRequest.
+ * \inmodule QtAwsRedshift
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateClusterRequestPrivate object.
- *
- * @param  action  Redshift action being performed.
- * @param  q       Pointer to this object's public CreateClusterRequest instance.
+ * Constructs a CreateClusterRequestPrivate object for Redshift \a action with,
+ * public implementation \a q.
  */
 CreateClusterRequestPrivate::CreateClusterRequestPrivate(
     const RedshiftRequest::Action action, CreateClusterRequest * const q)
@@ -134,15 +123,10 @@ CreateClusterRequestPrivate::CreateClusterRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateClusterRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateClusterRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateClusterRequest instance.
  */
 CreateClusterRequestPrivate::CreateClusterRequestPrivate(
     const CreateClusterRequestPrivate &other, CreateClusterRequest * const q)

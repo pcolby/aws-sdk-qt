@@ -27,10 +27,9 @@ namespace WAF {
 
 /*!
  * \class QtAws::WAF::ListRegexMatchSetsRequest
- *
  * \brief The ListRegexMatchSetsRequest class provides an interface for WAF ListRegexMatchSets requests.
  *
- * \ingroup WAF
+ * \inmodule QtAwsWAF
  *
  *  This is the <i>AWS WAF API Reference</i> for using AWS WAF with Amazon CloudFront. The AWS WAF actions and data types
  *  listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data
@@ -42,9 +41,7 @@ namespace WAF {
  */
 
 /*!
- * @brief  Constructs a new ListRegexMatchSetsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListRegexMatchSetsRequest::ListRegexMatchSetsRequest(const ListRegexMatchSetsRequest &other)
     : WAFRequest(new ListRegexMatchSetsRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ ListRegexMatchSetsRequest::ListRegexMatchSetsRequest(const ListRegexMatchSetsReq
 }
 
 /*!
- * @brief  Constructs a new ListRegexMatchSetsRequest object.
+ * Constructs a ListRegexMatchSetsRequest object.
  */
 ListRegexMatchSetsRequest::ListRegexMatchSetsRequest()
     : WAFRequest(new ListRegexMatchSetsRequestPrivate(WAFRequest::ListRegexMatchSetsAction, this))
@@ -71,14 +68,9 @@ bool ListRegexMatchSetsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListRegexMatchSetsResponse object.
+ * Returns a ListRegexMatchSetsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListRegexMatchSetsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WAFClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListRegexMatchSetsRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * ListRegexMatchSetsRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::WAF::ListRegexMatchSetsRequestPrivate
+ * \brief The ListRegexMatchSetsRequestPrivate class provides private implementation for ListRegexMatchSetsRequest.
+ * \internal
  *
- * @class  ListRegexMatchSetsRequestPrivate
- *
- * @brief  Private implementation for ListRegexMatchSetsRequest.
+ * \inmodule QtAwsWAF
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListRegexMatchSetsRequestPrivate object.
- *
- * @param  action  WAF action being performed.
- * @param  q       Pointer to this object's public ListRegexMatchSetsRequest instance.
+ * Constructs a ListRegexMatchSetsRequestPrivate object for WAF \a action with,
+ * public implementation \a q.
  */
 ListRegexMatchSetsRequestPrivate::ListRegexMatchSetsRequestPrivate(
     const WAFRequest::Action action, ListRegexMatchSetsRequest * const q)
@@ -109,15 +98,10 @@ ListRegexMatchSetsRequestPrivate::ListRegexMatchSetsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListRegexMatchSetsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListRegexMatchSetsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListRegexMatchSetsRequest instance.
  */
 ListRegexMatchSetsRequestPrivate::ListRegexMatchSetsRequestPrivate(
     const ListRegexMatchSetsRequestPrivate &other, ListRegexMatchSetsRequest * const q)

@@ -27,10 +27,9 @@ namespace DeviceFarm {
 
 /*!
  * \class QtAws::DeviceFarm::GetDeviceInstanceRequest
- *
  * \brief The GetDeviceInstanceRequest class provides an interface for DeviceFarm GetDeviceInstance requests.
  *
- * \ingroup DeviceFarm
+ * \inmodule QtAwsDeviceFarm
  *
  *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
  *  phones, tablets, and other devices in the
@@ -39,9 +38,7 @@ namespace DeviceFarm {
  */
 
 /*!
- * @brief  Constructs a new GetDeviceInstanceRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetDeviceInstanceRequest::GetDeviceInstanceRequest(const GetDeviceInstanceRequest &other)
     : DeviceFarmRequest(new GetDeviceInstanceRequestPrivate(*other.d_func(), this))
@@ -50,7 +47,7 @@ GetDeviceInstanceRequest::GetDeviceInstanceRequest(const GetDeviceInstanceReques
 }
 
 /*!
- * @brief  Constructs a new GetDeviceInstanceRequest object.
+ * Constructs a GetDeviceInstanceRequest object.
  */
 GetDeviceInstanceRequest::GetDeviceInstanceRequest()
     : DeviceFarmRequest(new GetDeviceInstanceRequestPrivate(DeviceFarmRequest::GetDeviceInstanceAction, this))
@@ -68,14 +65,9 @@ bool GetDeviceInstanceRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetDeviceInstanceResponse object.
+ * Returns a GetDeviceInstanceResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetDeviceInstanceResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DeviceFarmClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetDeviceInstanceRequest::response(QNetworkReply * const reply) const
 {
@@ -83,20 +75,17 @@ QtAws::Core::AwsAbstractResponse * GetDeviceInstanceRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::DeviceFarm::GetDeviceInstanceRequestPrivate
+ * \brief The GetDeviceInstanceRequestPrivate class provides private implementation for GetDeviceInstanceRequest.
+ * \internal
  *
- * @class  GetDeviceInstanceRequestPrivate
- *
- * @brief  Private implementation for GetDeviceInstanceRequest.
+ * \inmodule QtAwsDeviceFarm
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetDeviceInstanceRequestPrivate object.
- *
- * @param  action  DeviceFarm action being performed.
- * @param  q       Pointer to this object's public GetDeviceInstanceRequest instance.
+ * Constructs a GetDeviceInstanceRequestPrivate object for DeviceFarm \a action with,
+ * public implementation \a q.
  */
 GetDeviceInstanceRequestPrivate::GetDeviceInstanceRequestPrivate(
     const DeviceFarmRequest::Action action, GetDeviceInstanceRequest * const q)
@@ -106,15 +95,10 @@ GetDeviceInstanceRequestPrivate::GetDeviceInstanceRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetDeviceInstanceRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetDeviceInstanceRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetDeviceInstanceRequest instance.
  */
 GetDeviceInstanceRequestPrivate::GetDeviceInstanceRequestPrivate(
     const GetDeviceInstanceRequestPrivate &other, GetDeviceInstanceRequest * const q)

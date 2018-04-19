@@ -27,10 +27,9 @@ namespace DataPipeline {
 
 /*!
  * \class QtAws::DataPipeline::DescribeObjectsRequest
- *
  * \brief The DescribeObjectsRequest class provides an interface for DataPipeline DescribeObjects requests.
  *
- * \ingroup DataPipeline
+ * \inmodule QtAwsDataPipeline
  *
  *  AWS Data Pipeline configures and manages a data-driven workflow called a pipeline. AWS Data Pipeline handles the details
  *  of scheduling and ensuring that data dependencies are met so that your application can focus on processing the
@@ -55,9 +54,7 @@ namespace DataPipeline {
  */
 
 /*!
- * @brief  Constructs a new DescribeObjectsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeObjectsRequest::DescribeObjectsRequest(const DescribeObjectsRequest &other)
     : DataPipelineRequest(new DescribeObjectsRequestPrivate(*other.d_func(), this))
@@ -66,7 +63,7 @@ DescribeObjectsRequest::DescribeObjectsRequest(const DescribeObjectsRequest &oth
 }
 
 /*!
- * @brief  Constructs a new DescribeObjectsRequest object.
+ * Constructs a DescribeObjectsRequest object.
  */
 DescribeObjectsRequest::DescribeObjectsRequest()
     : DataPipelineRequest(new DescribeObjectsRequestPrivate(DataPipelineRequest::DescribeObjectsAction, this))
@@ -84,14 +81,9 @@ bool DescribeObjectsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeObjectsResponse object.
+ * Returns a DescribeObjectsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeObjectsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DataPipelineClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeObjectsRequest::response(QNetworkReply * const reply) const
 {
@@ -99,20 +91,17 @@ QtAws::Core::AwsAbstractResponse * DescribeObjectsRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::DataPipeline::DescribeObjectsRequestPrivate
+ * \brief The DescribeObjectsRequestPrivate class provides private implementation for DescribeObjectsRequest.
+ * \internal
  *
- * @class  DescribeObjectsRequestPrivate
- *
- * @brief  Private implementation for DescribeObjectsRequest.
+ * \inmodule QtAwsDataPipeline
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeObjectsRequestPrivate object.
- *
- * @param  action  DataPipeline action being performed.
- * @param  q       Pointer to this object's public DescribeObjectsRequest instance.
+ * Constructs a DescribeObjectsRequestPrivate object for DataPipeline \a action with,
+ * public implementation \a q.
  */
 DescribeObjectsRequestPrivate::DescribeObjectsRequestPrivate(
     const DataPipelineRequest::Action action, DescribeObjectsRequest * const q)
@@ -122,15 +111,10 @@ DescribeObjectsRequestPrivate::DescribeObjectsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeObjectsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeObjectsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeObjectsRequest instance.
  */
 DescribeObjectsRequestPrivate::DescribeObjectsRequestPrivate(
     const DescribeObjectsRequestPrivate &other, DescribeObjectsRequest * const q)

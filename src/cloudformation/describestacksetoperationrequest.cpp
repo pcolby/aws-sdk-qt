@@ -27,10 +27,9 @@ namespace CloudFormation {
 
 /*!
  * \class QtAws::CloudFormation::DescribeStackSetOperationRequest
- *
  * \brief The DescribeStackSetOperationRequest class provides an interface for CloudFormation DescribeStackSetOperation requests.
  *
- * \ingroup CloudFormation
+ * \inmodule QtAwsCloudFormation
  *
  *  <fullname>AWS CloudFormation</fullname>
  * 
@@ -59,9 +58,7 @@ namespace CloudFormation {
  */
 
 /*!
- * @brief  Constructs a new DescribeStackSetOperationRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeStackSetOperationRequest::DescribeStackSetOperationRequest(const DescribeStackSetOperationRequest &other)
     : CloudFormationRequest(new DescribeStackSetOperationRequestPrivate(*other.d_func(), this))
@@ -70,7 +67,7 @@ DescribeStackSetOperationRequest::DescribeStackSetOperationRequest(const Describ
 }
 
 /*!
- * @brief  Constructs a new DescribeStackSetOperationRequest object.
+ * Constructs a DescribeStackSetOperationRequest object.
  */
 DescribeStackSetOperationRequest::DescribeStackSetOperationRequest()
     : CloudFormationRequest(new DescribeStackSetOperationRequestPrivate(CloudFormationRequest::DescribeStackSetOperationAction, this))
@@ -88,14 +85,9 @@ bool DescribeStackSetOperationRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeStackSetOperationResponse object.
+ * Returns a DescribeStackSetOperationResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeStackSetOperationResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudFormationClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeStackSetOperationRequest::response(QNetworkReply * const reply) const
 {
@@ -103,20 +95,17 @@ QtAws::Core::AwsAbstractResponse * DescribeStackSetOperationRequest::response(QN
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudFormation::DescribeStackSetOperationRequestPrivate
+ * \brief The DescribeStackSetOperationRequestPrivate class provides private implementation for DescribeStackSetOperationRequest.
+ * \internal
  *
- * @class  DescribeStackSetOperationRequestPrivate
- *
- * @brief  Private implementation for DescribeStackSetOperationRequest.
+ * \inmodule QtAwsCloudFormation
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeStackSetOperationRequestPrivate object.
- *
- * @param  action  CloudFormation action being performed.
- * @param  q       Pointer to this object's public DescribeStackSetOperationRequest instance.
+ * Constructs a DescribeStackSetOperationRequestPrivate object for CloudFormation \a action with,
+ * public implementation \a q.
  */
 DescribeStackSetOperationRequestPrivate::DescribeStackSetOperationRequestPrivate(
     const CloudFormationRequest::Action action, DescribeStackSetOperationRequest * const q)
@@ -126,15 +115,10 @@ DescribeStackSetOperationRequestPrivate::DescribeStackSetOperationRequestPrivate
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeStackSetOperationRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeStackSetOperationRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeStackSetOperationRequest instance.
  */
 DescribeStackSetOperationRequestPrivate::DescribeStackSetOperationRequestPrivate(
     const DescribeStackSetOperationRequestPrivate &other, DescribeStackSetOperationRequest * const q)

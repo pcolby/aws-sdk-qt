@@ -27,10 +27,9 @@ namespace Health {
 
 /*!
  * \class QtAws::Health::DescribeEventTypesRequest
- *
  * \brief The DescribeEventTypesRequest class provides an interface for Health DescribeEventTypes requests.
  *
- * \ingroup Health
+ * \inmodule QtAwsHealth
  *
  *  <fullname>AWS Health</fullname>
  * 
@@ -98,9 +97,7 @@ namespace Health {
  */
 
 /*!
- * @brief  Constructs a new DescribeEventTypesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeEventTypesRequest::DescribeEventTypesRequest(const DescribeEventTypesRequest &other)
     : HealthRequest(new DescribeEventTypesRequestPrivate(*other.d_func(), this))
@@ -109,7 +106,7 @@ DescribeEventTypesRequest::DescribeEventTypesRequest(const DescribeEventTypesReq
 }
 
 /*!
- * @brief  Constructs a new DescribeEventTypesRequest object.
+ * Constructs a DescribeEventTypesRequest object.
  */
 DescribeEventTypesRequest::DescribeEventTypesRequest()
     : HealthRequest(new DescribeEventTypesRequestPrivate(HealthRequest::DescribeEventTypesAction, this))
@@ -127,14 +124,9 @@ bool DescribeEventTypesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeEventTypesResponse object.
+ * Returns a DescribeEventTypesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeEventTypesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  HealthClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeEventTypesRequest::response(QNetworkReply * const reply) const
 {
@@ -142,20 +134,17 @@ QtAws::Core::AwsAbstractResponse * DescribeEventTypesRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::Health::DescribeEventTypesRequestPrivate
+ * \brief The DescribeEventTypesRequestPrivate class provides private implementation for DescribeEventTypesRequest.
+ * \internal
  *
- * @class  DescribeEventTypesRequestPrivate
- *
- * @brief  Private implementation for DescribeEventTypesRequest.
+ * \inmodule QtAwsHealth
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeEventTypesRequestPrivate object.
- *
- * @param  action  Health action being performed.
- * @param  q       Pointer to this object's public DescribeEventTypesRequest instance.
+ * Constructs a DescribeEventTypesRequestPrivate object for Health \a action with,
+ * public implementation \a q.
  */
 DescribeEventTypesRequestPrivate::DescribeEventTypesRequestPrivate(
     const HealthRequest::Action action, DescribeEventTypesRequest * const q)
@@ -165,15 +154,10 @@ DescribeEventTypesRequestPrivate::DescribeEventTypesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeEventTypesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeEventTypesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeEventTypesRequest instance.
  */
 DescribeEventTypesRequestPrivate::DescribeEventTypesRequestPrivate(
     const DescribeEventTypesRequestPrivate &other, DescribeEventTypesRequest * const q)

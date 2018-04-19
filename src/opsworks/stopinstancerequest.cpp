@@ -27,10 +27,9 @@ namespace OpsWorks {
 
 /*!
  * \class QtAws::OpsWorks::StopInstanceRequest
- *
  * \brief The StopInstanceRequest class provides an interface for OpsWorks StopInstance requests.
  *
- * \ingroup OpsWorks
+ * \inmodule QtAwsOpsWorks
  *
  *  <fullname>AWS OpsWorks</fullname>
  * 
@@ -143,9 +142,7 @@ namespace OpsWorks {
  */
 
 /*!
- * @brief  Constructs a new StopInstanceRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 StopInstanceRequest::StopInstanceRequest(const StopInstanceRequest &other)
     : OpsWorksRequest(new StopInstanceRequestPrivate(*other.d_func(), this))
@@ -154,7 +151,7 @@ StopInstanceRequest::StopInstanceRequest(const StopInstanceRequest &other)
 }
 
 /*!
- * @brief  Constructs a new StopInstanceRequest object.
+ * Constructs a StopInstanceRequest object.
  */
 StopInstanceRequest::StopInstanceRequest()
     : OpsWorksRequest(new StopInstanceRequestPrivate(OpsWorksRequest::StopInstanceAction, this))
@@ -172,14 +169,9 @@ bool StopInstanceRequest::isValid() const
 
 
 /*!
- * @brief  Construct an StopInstanceResponse object.
+ * Returns a StopInstanceResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An StopInstanceResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  OpsWorksClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * StopInstanceRequest::response(QNetworkReply * const reply) const
 {
@@ -187,20 +179,17 @@ QtAws::Core::AwsAbstractResponse * StopInstanceRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::OpsWorks::StopInstanceRequestPrivate
+ * \brief The StopInstanceRequestPrivate class provides private implementation for StopInstanceRequest.
+ * \internal
  *
- * @class  StopInstanceRequestPrivate
- *
- * @brief  Private implementation for StopInstanceRequest.
+ * \inmodule QtAwsOpsWorks
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new StopInstanceRequestPrivate object.
- *
- * @param  action  OpsWorks action being performed.
- * @param  q       Pointer to this object's public StopInstanceRequest instance.
+ * Constructs a StopInstanceRequestPrivate object for OpsWorks \a action with,
+ * public implementation \a q.
  */
 StopInstanceRequestPrivate::StopInstanceRequestPrivate(
     const OpsWorksRequest::Action action, StopInstanceRequest * const q)
@@ -210,15 +199,10 @@ StopInstanceRequestPrivate::StopInstanceRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StopInstanceRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the StopInstanceRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public StopInstanceRequest instance.
  */
 StopInstanceRequestPrivate::StopInstanceRequestPrivate(
     const StopInstanceRequestPrivate &other, StopInstanceRequest * const q)

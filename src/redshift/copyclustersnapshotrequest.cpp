@@ -27,10 +27,9 @@ namespace Redshift {
 
 /*!
  * \class QtAws::Redshift::CopyClusterSnapshotRequest
- *
  * \brief The CopyClusterSnapshotRequest class provides an interface for Redshift CopyClusterSnapshot requests.
  *
- * \ingroup Redshift
+ * \inmodule QtAwsRedshift
  *
  *  <fullname>Amazon Redshift</fullname>
  * 
@@ -67,9 +66,7 @@ namespace Redshift {
  */
 
 /*!
- * @brief  Constructs a new CopyClusterSnapshotRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CopyClusterSnapshotRequest::CopyClusterSnapshotRequest(const CopyClusterSnapshotRequest &other)
     : RedshiftRequest(new CopyClusterSnapshotRequestPrivate(*other.d_func(), this))
@@ -78,7 +75,7 @@ CopyClusterSnapshotRequest::CopyClusterSnapshotRequest(const CopyClusterSnapshot
 }
 
 /*!
- * @brief  Constructs a new CopyClusterSnapshotRequest object.
+ * Constructs a CopyClusterSnapshotRequest object.
  */
 CopyClusterSnapshotRequest::CopyClusterSnapshotRequest()
     : RedshiftRequest(new CopyClusterSnapshotRequestPrivate(RedshiftRequest::CopyClusterSnapshotAction, this))
@@ -96,14 +93,9 @@ bool CopyClusterSnapshotRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CopyClusterSnapshotResponse object.
+ * Returns a CopyClusterSnapshotResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CopyClusterSnapshotResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RedshiftClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CopyClusterSnapshotRequest::response(QNetworkReply * const reply) const
 {
@@ -111,20 +103,17 @@ QtAws::Core::AwsAbstractResponse * CopyClusterSnapshotRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::Redshift::CopyClusterSnapshotRequestPrivate
+ * \brief The CopyClusterSnapshotRequestPrivate class provides private implementation for CopyClusterSnapshotRequest.
+ * \internal
  *
- * @class  CopyClusterSnapshotRequestPrivate
- *
- * @brief  Private implementation for CopyClusterSnapshotRequest.
+ * \inmodule QtAwsRedshift
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CopyClusterSnapshotRequestPrivate object.
- *
- * @param  action  Redshift action being performed.
- * @param  q       Pointer to this object's public CopyClusterSnapshotRequest instance.
+ * Constructs a CopyClusterSnapshotRequestPrivate object for Redshift \a action with,
+ * public implementation \a q.
  */
 CopyClusterSnapshotRequestPrivate::CopyClusterSnapshotRequestPrivate(
     const RedshiftRequest::Action action, CopyClusterSnapshotRequest * const q)
@@ -134,15 +123,10 @@ CopyClusterSnapshotRequestPrivate::CopyClusterSnapshotRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CopyClusterSnapshotRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CopyClusterSnapshotRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CopyClusterSnapshotRequest instance.
  */
 CopyClusterSnapshotRequestPrivate::CopyClusterSnapshotRequestPrivate(
     const CopyClusterSnapshotRequestPrivate &other, CopyClusterSnapshotRequest * const q)

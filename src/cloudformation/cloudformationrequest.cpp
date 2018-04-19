@@ -25,16 +25,62 @@ namespace CloudFormation {
 
 /*!
  * \class QtAws::CloudFormation::CloudFormationRequest
- *
  * \brief The CloudFormationRequest class provides an interface for CloudFormation requests.
  *
- * \ingroup CloudFormation
+ * \inmodule QtAwsCloudFormation
  */
 
 /*!
- * @brief  Constructs a new CloudFormationRequest object.
+ * \enum CloudFormationRequest::Action
  *
- * @param  action  The CloudFormation action to request.
+ * This enum describes the actions that can be performed as CloudFormation
+ * requests.
+ *
+ * \value CancelUpdateStackAction CloudFormation CancelUpdateStack action.
+ * \value ContinueUpdateRollbackAction CloudFormation ContinueUpdateRollback action.
+ * \value CreateChangeSetAction CloudFormation CreateChangeSet action.
+ * \value CreateStackAction CloudFormation CreateStack action.
+ * \value CreateStackInstancesAction CloudFormation CreateStackInstances action.
+ * \value CreateStackSetAction CloudFormation CreateStackSet action.
+ * \value DeleteChangeSetAction CloudFormation DeleteChangeSet action.
+ * \value DeleteStackAction CloudFormation DeleteStack action.
+ * \value DeleteStackInstancesAction CloudFormation DeleteStackInstances action.
+ * \value DeleteStackSetAction CloudFormation DeleteStackSet action.
+ * \value DescribeAccountLimitsAction CloudFormation DescribeAccountLimits action.
+ * \value DescribeChangeSetAction CloudFormation DescribeChangeSet action.
+ * \value DescribeStackEventsAction CloudFormation DescribeStackEvents action.
+ * \value DescribeStackInstanceAction CloudFormation DescribeStackInstance action.
+ * \value DescribeStackResourceAction CloudFormation DescribeStackResource action.
+ * \value DescribeStackResourcesAction CloudFormation DescribeStackResources action.
+ * \value DescribeStackSetAction CloudFormation DescribeStackSet action.
+ * \value DescribeStackSetOperationAction CloudFormation DescribeStackSetOperation action.
+ * \value DescribeStacksAction CloudFormation DescribeStacks action.
+ * \value EstimateTemplateCostAction CloudFormation EstimateTemplateCost action.
+ * \value ExecuteChangeSetAction CloudFormation ExecuteChangeSet action.
+ * \value GetStackPolicyAction CloudFormation GetStackPolicy action.
+ * \value GetTemplateAction CloudFormation GetTemplate action.
+ * \value GetTemplateSummaryAction CloudFormation GetTemplateSummary action.
+ * \value ListChangeSetsAction CloudFormation ListChangeSets action.
+ * \value ListExportsAction CloudFormation ListExports action.
+ * \value ListImportsAction CloudFormation ListImports action.
+ * \value ListStackInstancesAction CloudFormation ListStackInstances action.
+ * \value ListStackResourcesAction CloudFormation ListStackResources action.
+ * \value ListStackSetOperationResultsAction CloudFormation ListStackSetOperationResults action.
+ * \value ListStackSetOperationsAction CloudFormation ListStackSetOperations action.
+ * \value ListStackSetsAction CloudFormation ListStackSets action.
+ * \value ListStacksAction CloudFormation ListStacks action.
+ * \value SetStackPolicyAction CloudFormation SetStackPolicy action.
+ * \value SignalResourceAction CloudFormation SignalResource action.
+ * \value StopStackSetOperationAction CloudFormation StopStackSetOperation action.
+ * \value UpdateStackAction CloudFormation UpdateStack action.
+ * \value UpdateStackInstancesAction CloudFormation UpdateStackInstances action.
+ * \value UpdateStackSetAction CloudFormation UpdateStackSet action.
+ * \value UpdateTerminationProtectionAction CloudFormation UpdateTerminationProtection action.
+ * \value ValidateTemplateAction CloudFormation ValidateTemplate action.
+ */
+
+/*!
+ * Constructs a[n] CloudFormationRequest object for CloudFormation \a action.
  */
 CloudFormationRequest::CloudFormationRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new CloudFormationRequestPrivate(action, this))
@@ -43,9 +89,7 @@ CloudFormationRequest::CloudFormationRequest(const Action action)
 }
 
 /*!
- * @brief  Constructs a new CloudFormationRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CloudFormationRequest::CloudFormationRequest(const CloudFormationRequest &other)
     : QtAws::Core::AwsAbstractRequest(new CloudFormationRequestPrivate(*other.d_func(), this))
@@ -54,13 +98,7 @@ CloudFormationRequest::CloudFormationRequest(const CloudFormationRequest &other)
 }
 
 /*!
- * @brief  Assignment operator.
- *
- * Assigns \a other to \c this.
- *
- * @param  other  Instance to copy.
- *
- * @return  A reference to \c this.
+ * Sets the CloudFormationRequest object to be equal to \a other.
  */
 CloudFormationRequest& CloudFormationRequest::operator=(const CloudFormationRequest &other)
 {
@@ -72,14 +110,10 @@ CloudFormationRequest& CloudFormationRequest::operator=(const CloudFormationRequ
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CloudFormationRequest object.
+ * Constructs aa CloudFormationRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from CloudFormationRequestPrivate.
- *
- * @param  d  Pointer to private data (aka D-Pointer).
  */
 CloudFormationRequest::CloudFormationRequest(CloudFormationRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
@@ -87,7 +121,7 @@ CloudFormationRequest::CloudFormationRequest(CloudFormationRequestPrivate * cons
 }
 
 /*!
- * \brief Returns the CloudFormation action to be performed by this request.
+ * Returns the CloudFormation action to be performed by this request.
  */
 CloudFormationRequest::Action CloudFormationRequest::action() const
 {
@@ -96,7 +130,7 @@ CloudFormationRequest::Action CloudFormationRequest::action() const
 }
 
 /*!
- * \brief Returns the name of the CloudFormation action to be performed by this request.
+ * Returns the name of the CloudFormation action to be performed by this request.
  */
 QString CloudFormationRequest::actionString() const
 {
@@ -104,7 +138,7 @@ QString CloudFormationRequest::actionString() const
 }
 
 /*!
- * \brief Returns the CloudFormation API version implemented by this request.
+ * Returns the CloudFormation API version implemented by this request.
  */
 QString CloudFormationRequest::apiVersion() const
 {
@@ -113,7 +147,7 @@ QString CloudFormationRequest::apiVersion() const
 }
 
 /*!
- * @brief Set the CloudFormation action to be performed by this request to \a action.
+ * Sets the CloudFormation action to be performed by this request to \a action.
  */
 void CloudFormationRequest::setAction(const Action action)
 {
@@ -122,7 +156,7 @@ void CloudFormationRequest::setAction(const Action action)
 }
 
 /*!
- * Set the CloudFormation API version to include in this request to \a version.
+ * Sets the CloudFormation API version to include in this request to \a version.
  */
 void CloudFormationRequest::setApiVersion(const QString &version)
 {
@@ -131,7 +165,7 @@ void CloudFormationRequest::setApiVersion(const QString &version)
 }
 
 /*!
- * \brief Returns \c true if this request is the same as \a other.
+ * Returns \c true if this request is equal to \a other; \c false otherwise.
  *
  * Note, most derived *Request classes do not need to provider their own
  * implementations of this function, since most such request classes rely on
@@ -146,8 +180,8 @@ bool CloudFormationRequest::operator==(const CloudFormationRequest &other) const
             (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
-/*!
- * @brief  Check if \a queueName is a valid CloudFormation queue name.
+/*
+ * Returns \c tue if \a queueName is a valid CloudFormation queue name.
  *
  * @par From CloudFormation FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
@@ -166,9 +200,8 @@ bool CloudFormationRequest::operator==(const CloudFormationRequest &other) const
 }*/
 
 /*!
- * \brief Removes the a \a name parameter from this request.
- *
- * Returns the count of paramters removed (typically \c 0 or \c 1).
+ * Removes the a \a name parameter from the request, then returns the number of
+ * paramters removed (typically \c 0 or \c 1).
  */
 int CloudFormationRequest::clearParameter(const QString &name)
 {
@@ -177,7 +210,7 @@ int CloudFormationRequest::clearParameter(const QString &name)
 }
 
 /*!
- * \brief Removes all parameters from this request.
+ * Removes all parameters from the request.
  */
 void CloudFormationRequest::clearParameters()
 {
@@ -186,7 +219,7 @@ void CloudFormationRequest::clearParameters()
 }
 
 /*!
- * \brief Returns the value of the \n name pararemter if set, otherwise \a defaultValue.
+ * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
 QVariant CloudFormationRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
@@ -195,7 +228,7 @@ QVariant CloudFormationRequest::parameter(const QString &name, const QVariant &d
 }
 
 /*!
- * \brief Returns a map of parameters included in this request.
+ * Returns the parameters included in this request.
  */
 const QVariantMap &CloudFormationRequest::parameters() const
 {
@@ -204,7 +237,7 @@ const QVariantMap &CloudFormationRequest::parameters() const
 }
 
 /*!
- * \brief Sets the \a name parameter to \a value.
+ * Sets the \a name parameter to \a value.
  */
 void CloudFormationRequest::setParameter(const QString &name, const QVariant &value)
 {
@@ -213,9 +246,8 @@ void CloudFormationRequest::setParameter(const QString &name, const QVariant &va
 }
 
 /*!
- * \brief Sets the map of paramters for this request to \a parameters.
- *
- * Any request parameters set previously will be discarded.
+ * Sets the paramters for this request to \a parameters. Any request parameters
+ * set previously will be discarded.
  */
 void CloudFormationRequest::setParameters(const QVariantMap &parameters)
 {
@@ -224,11 +256,12 @@ void CloudFormationRequest::setParameters(const QVariantMap &parameters)
 }
 
 /*!
- * \brief Returns a network request for this CloudFormation request using the given \a endpoint.
+ * Returns a network request for the CloudFormation request using the given
+ * \a endpoint.
  *
- * This CloudFormation implementation builds request URLs by combining the common query
- * parameters (such as Action and Version), with any that have been added (via
- * setParameter) by child classes.
+ * This CloudFormation implementation builds request URLs by combining the
+ * common query parameters (such as Action and Version), with any that have
+ * been added (via setParameter) by child classes.
  */
 QNetworkRequest CloudFormationRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -239,17 +272,16 @@ QNetworkRequest CloudFormationRequest::unsignedRequest(const QUrl &endpoint) con
 }
 
 /*!
+ * \class QtAws::CloudFormation::CloudFormationRequestPrivate
+ * \brief The CloudFormationRequestPrivate class provides private implementation for CloudFormationRequest.
  * \internal
  *
- * \class  CloudFormationRequestPrivate
- *
- * \brief  Private implementation for CloudFormationRequest.
+ * \inmodule QtAwsCloudFormation
  */
 
 /*!
- * \internal
- *
- * \brief Constructs a new CloudFormationRequestPrivate object.
+ * Constructs a CloudFormationRequestPrivate object for CloudFormation \a action with,
+ * public implementation \a q.
  */
 CloudFormationRequestPrivate::CloudFormationRequestPrivate(const CloudFormationRequest::Action action, CloudFormationRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
@@ -258,9 +290,7 @@ CloudFormationRequestPrivate::CloudFormationRequestPrivate(const CloudFormationR
 }
 
 /*!
- * \internal
- *
- * \brief Constructs a new CloudFormationRequestPrivate object, copying an existing one.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
@@ -276,15 +306,12 @@ CloudFormationRequestPrivate::CloudFormationRequestPrivate(const CloudFormationR
 }
 
 /*!
- * \internal
- *
- * \brief Returns a string representing \a action.
+ * Returns a string represention of \a action, or a null string if \a action is
+ * invalid.
  *
  * This function converts CloudFormationRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the CloudFormation service's Action
  * query parameters.
- *
- * @return A string representing \a action, or a null string if \a action is invalid.
  */
 QString CloudFormationRequestPrivate::toString(const CloudFormationRequest::Action &action)
 {

@@ -27,10 +27,9 @@ namespace AppStream {
 
 /*!
  * \class QtAws::AppStream::UpdateFleetRequest
- *
  * \brief The UpdateFleetRequest class provides an interface for AppStream UpdateFleet requests.
  *
- * \ingroup AppStream
+ * \inmodule QtAwsAppStream
  *
  *  <fullname>Amazon AppStream 2.0</fullname>
  * 
@@ -40,9 +39,7 @@ namespace AppStream {
  */
 
 /*!
- * @brief  Constructs a new UpdateFleetRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateFleetRequest::UpdateFleetRequest(const UpdateFleetRequest &other)
     : AppStreamRequest(new UpdateFleetRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ UpdateFleetRequest::UpdateFleetRequest(const UpdateFleetRequest &other)
 }
 
 /*!
- * @brief  Constructs a new UpdateFleetRequest object.
+ * Constructs a UpdateFleetRequest object.
  */
 UpdateFleetRequest::UpdateFleetRequest()
     : AppStreamRequest(new UpdateFleetRequestPrivate(AppStreamRequest::UpdateFleetAction, this))
@@ -69,14 +66,9 @@ bool UpdateFleetRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateFleetResponse object.
+ * Returns a UpdateFleetResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateFleetResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AppStreamClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateFleetRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * UpdateFleetRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::AppStream::UpdateFleetRequestPrivate
+ * \brief The UpdateFleetRequestPrivate class provides private implementation for UpdateFleetRequest.
+ * \internal
  *
- * @class  UpdateFleetRequestPrivate
- *
- * @brief  Private implementation for UpdateFleetRequest.
+ * \inmodule QtAwsAppStream
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateFleetRequestPrivate object.
- *
- * @param  action  AppStream action being performed.
- * @param  q       Pointer to this object's public UpdateFleetRequest instance.
+ * Constructs a UpdateFleetRequestPrivate object for AppStream \a action with,
+ * public implementation \a q.
  */
 UpdateFleetRequestPrivate::UpdateFleetRequestPrivate(
     const AppStreamRequest::Action action, UpdateFleetRequest * const q)
@@ -107,15 +96,10 @@ UpdateFleetRequestPrivate::UpdateFleetRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateFleetRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateFleetRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateFleetRequest instance.
  */
 UpdateFleetRequestPrivate::UpdateFleetRequestPrivate(
     const UpdateFleetRequestPrivate &other, UpdateFleetRequest * const q)

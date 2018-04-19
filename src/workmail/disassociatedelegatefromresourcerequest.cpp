@@ -27,10 +27,9 @@ namespace WorkMail {
 
 /*!
  * \class QtAws::WorkMail::DisassociateDelegateFromResourceRequest
- *
  * \brief The DisassociateDelegateFromResourceRequest class provides an interface for WorkMail DisassociateDelegateFromResource requests.
  *
- * \ingroup WorkMail
+ * \inmodule QtAwsWorkMail
  *
  *  Amazon WorkMail is a secure, managed business email and calendaring service with support for existing desktop and mobile
  *  email clients. You can access your email, contacts, and calendars using Microsoft Outlook, your browser, or their native
@@ -70,9 +69,7 @@ namespace WorkMail {
  */
 
 /*!
- * @brief  Constructs a new DisassociateDelegateFromResourceRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DisassociateDelegateFromResourceRequest::DisassociateDelegateFromResourceRequest(const DisassociateDelegateFromResourceRequest &other)
     : WorkMailRequest(new DisassociateDelegateFromResourceRequestPrivate(*other.d_func(), this))
@@ -81,7 +78,7 @@ DisassociateDelegateFromResourceRequest::DisassociateDelegateFromResourceRequest
 }
 
 /*!
- * @brief  Constructs a new DisassociateDelegateFromResourceRequest object.
+ * Constructs a DisassociateDelegateFromResourceRequest object.
  */
 DisassociateDelegateFromResourceRequest::DisassociateDelegateFromResourceRequest()
     : WorkMailRequest(new DisassociateDelegateFromResourceRequestPrivate(WorkMailRequest::DisassociateDelegateFromResourceAction, this))
@@ -99,14 +96,9 @@ bool DisassociateDelegateFromResourceRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DisassociateDelegateFromResourceResponse object.
+ * Returns a DisassociateDelegateFromResourceResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DisassociateDelegateFromResourceResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WorkMailClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DisassociateDelegateFromResourceRequest::response(QNetworkReply * const reply) const
 {
@@ -114,20 +106,17 @@ QtAws::Core::AwsAbstractResponse * DisassociateDelegateFromResourceRequest::resp
 }
 
 /*!
- * @internal
+ * \class QtAws::WorkMail::DisassociateDelegateFromResourceRequestPrivate
+ * \brief The DisassociateDelegateFromResourceRequestPrivate class provides private implementation for DisassociateDelegateFromResourceRequest.
+ * \internal
  *
- * @class  DisassociateDelegateFromResourceRequestPrivate
- *
- * @brief  Private implementation for DisassociateDelegateFromResourceRequest.
+ * \inmodule QtAwsWorkMail
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DisassociateDelegateFromResourceRequestPrivate object.
- *
- * @param  action  WorkMail action being performed.
- * @param  q       Pointer to this object's public DisassociateDelegateFromResourceRequest instance.
+ * Constructs a DisassociateDelegateFromResourceRequestPrivate object for WorkMail \a action with,
+ * public implementation \a q.
  */
 DisassociateDelegateFromResourceRequestPrivate::DisassociateDelegateFromResourceRequestPrivate(
     const WorkMailRequest::Action action, DisassociateDelegateFromResourceRequest * const q)
@@ -137,15 +126,10 @@ DisassociateDelegateFromResourceRequestPrivate::DisassociateDelegateFromResource
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DisassociateDelegateFromResourceRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DisassociateDelegateFromResourceRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DisassociateDelegateFromResourceRequest instance.
  */
 DisassociateDelegateFromResourceRequestPrivate::DisassociateDelegateFromResourceRequestPrivate(
     const DisassociateDelegateFromResourceRequestPrivate &other, DisassociateDelegateFromResourceRequest * const q)

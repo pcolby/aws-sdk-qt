@@ -27,19 +27,16 @@ namespace S3 {
 
 /*!
  * \class QtAws::S3::PutBucketRequestPaymentRequest
- *
  * \brief The PutBucketRequestPaymentRequest class provides an interface for S3 PutBucketRequestPayment requests.
  *
- * \ingroup S3
+ * \inmodule QtAwsS3
  *
  *
  * \sa S3Client::putBucketRequestPayment
  */
 
 /*!
- * @brief  Constructs a new PutBucketRequestPaymentRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 PutBucketRequestPaymentRequest::PutBucketRequestPaymentRequest(const PutBucketRequestPaymentRequest &other)
     : S3Request(new PutBucketRequestPaymentRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ PutBucketRequestPaymentRequest::PutBucketRequestPaymentRequest(const PutBucketRe
 }
 
 /*!
- * @brief  Constructs a new PutBucketRequestPaymentRequest object.
+ * Constructs a PutBucketRequestPaymentRequest object.
  */
 PutBucketRequestPaymentRequest::PutBucketRequestPaymentRequest()
     : S3Request(new PutBucketRequestPaymentRequestPrivate(S3Request::PutBucketRequestPaymentAction, this))
@@ -66,14 +63,9 @@ bool PutBucketRequestPaymentRequest::isValid() const
 
 
 /*!
- * @brief  Construct an PutBucketRequestPaymentResponse object.
+ * Returns a PutBucketRequestPaymentResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An PutBucketRequestPaymentResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  S3Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * PutBucketRequestPaymentRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * PutBucketRequestPaymentRequest::response(QNet
 }
 
 /*!
- * @internal
+ * \class QtAws::S3::PutBucketRequestPaymentRequestPrivate
+ * \brief The PutBucketRequestPaymentRequestPrivate class provides private implementation for PutBucketRequestPaymentRequest.
+ * \internal
  *
- * @class  PutBucketRequestPaymentRequestPrivate
- *
- * @brief  Private implementation for PutBucketRequestPaymentRequest.
+ * \inmodule QtAwsS3
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new PutBucketRequestPaymentRequestPrivate object.
- *
- * @param  action  S3 action being performed.
- * @param  q       Pointer to this object's public PutBucketRequestPaymentRequest instance.
+ * Constructs a PutBucketRequestPaymentRequestPrivate object for S3 \a action with,
+ * public implementation \a q.
  */
 PutBucketRequestPaymentRequestPrivate::PutBucketRequestPaymentRequestPrivate(
     const S3Request::Action action, PutBucketRequestPaymentRequest * const q)
@@ -104,15 +93,10 @@ PutBucketRequestPaymentRequestPrivate::PutBucketRequestPaymentRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutBucketRequestPaymentRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the PutBucketRequestPaymentRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public PutBucketRequestPaymentRequest instance.
  */
 PutBucketRequestPaymentRequestPrivate::PutBucketRequestPaymentRequestPrivate(
     const PutBucketRequestPaymentRequestPrivate &other, PutBucketRequestPaymentRequest * const q)

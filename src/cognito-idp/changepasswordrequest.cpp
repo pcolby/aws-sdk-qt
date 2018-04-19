@@ -27,10 +27,9 @@ namespace CognitoIdentityProvider {
 
 /*!
  * \class QtAws::CognitoIdentityProvider::ChangePasswordRequest
- *
  * \brief The ChangePasswordRequest class provides an interface for CognitoIdentityProvider ChangePassword requests.
  *
- * \ingroup CognitoIdentityProvider
+ * \inmodule QtAwsCognitoIdentityProvider
  *
  *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
  *  authenticate a user to obtain tokens related to user identity and access
@@ -47,9 +46,7 @@ namespace CognitoIdentityProvider {
  */
 
 /*!
- * @brief  Constructs a new ChangePasswordRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ChangePasswordRequest::ChangePasswordRequest(const ChangePasswordRequest &other)
     : CognitoIdentityProviderRequest(new ChangePasswordRequestPrivate(*other.d_func(), this))
@@ -58,7 +55,7 @@ ChangePasswordRequest::ChangePasswordRequest(const ChangePasswordRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ChangePasswordRequest object.
+ * Constructs a ChangePasswordRequest object.
  */
 ChangePasswordRequest::ChangePasswordRequest()
     : CognitoIdentityProviderRequest(new ChangePasswordRequestPrivate(CognitoIdentityProviderRequest::ChangePasswordAction, this))
@@ -76,14 +73,9 @@ bool ChangePasswordRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ChangePasswordResponse object.
+ * Returns a ChangePasswordResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ChangePasswordResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CognitoIdentityProviderClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ChangePasswordRequest::response(QNetworkReply * const reply) const
 {
@@ -91,20 +83,17 @@ QtAws::Core::AwsAbstractResponse * ChangePasswordRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::CognitoIdentityProvider::ChangePasswordRequestPrivate
+ * \brief The ChangePasswordRequestPrivate class provides private implementation for ChangePasswordRequest.
+ * \internal
  *
- * @class  ChangePasswordRequestPrivate
- *
- * @brief  Private implementation for ChangePasswordRequest.
+ * \inmodule QtAwsCognitoIdentityProvider
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ChangePasswordRequestPrivate object.
- *
- * @param  action  CognitoIdentityProvider action being performed.
- * @param  q       Pointer to this object's public ChangePasswordRequest instance.
+ * Constructs a ChangePasswordRequestPrivate object for CognitoIdentityProvider \a action with,
+ * public implementation \a q.
  */
 ChangePasswordRequestPrivate::ChangePasswordRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, ChangePasswordRequest * const q)
@@ -114,15 +103,10 @@ ChangePasswordRequestPrivate::ChangePasswordRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ChangePasswordRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ChangePasswordRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ChangePasswordRequest instance.
  */
 ChangePasswordRequestPrivate::ChangePasswordRequestPrivate(
     const ChangePasswordRequestPrivate &other, ChangePasswordRequest * const q)

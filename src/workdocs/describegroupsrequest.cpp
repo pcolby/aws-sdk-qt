@@ -27,10 +27,9 @@ namespace WorkDocs {
 
 /*!
  * \class QtAws::WorkDocs::DescribeGroupsRequest
- *
  * \brief The DescribeGroupsRequest class provides an interface for WorkDocs DescribeGroups requests.
  *
- * \ingroup WorkDocs
+ * \inmodule QtAwsWorkDocs
  *
  *  The WorkDocs API is designed for the following use
  * 
@@ -66,9 +65,7 @@ namespace WorkDocs {
  */
 
 /*!
- * @brief  Constructs a new DescribeGroupsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeGroupsRequest::DescribeGroupsRequest(const DescribeGroupsRequest &other)
     : WorkDocsRequest(new DescribeGroupsRequestPrivate(*other.d_func(), this))
@@ -77,7 +74,7 @@ DescribeGroupsRequest::DescribeGroupsRequest(const DescribeGroupsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DescribeGroupsRequest object.
+ * Constructs a DescribeGroupsRequest object.
  */
 DescribeGroupsRequest::DescribeGroupsRequest()
     : WorkDocsRequest(new DescribeGroupsRequestPrivate(WorkDocsRequest::DescribeGroupsAction, this))
@@ -95,14 +92,9 @@ bool DescribeGroupsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeGroupsResponse object.
+ * Returns a DescribeGroupsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeGroupsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WorkDocsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeGroupsRequest::response(QNetworkReply * const reply) const
 {
@@ -110,20 +102,17 @@ QtAws::Core::AwsAbstractResponse * DescribeGroupsRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::WorkDocs::DescribeGroupsRequestPrivate
+ * \brief The DescribeGroupsRequestPrivate class provides private implementation for DescribeGroupsRequest.
+ * \internal
  *
- * @class  DescribeGroupsRequestPrivate
- *
- * @brief  Private implementation for DescribeGroupsRequest.
+ * \inmodule QtAwsWorkDocs
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeGroupsRequestPrivate object.
- *
- * @param  action  WorkDocs action being performed.
- * @param  q       Pointer to this object's public DescribeGroupsRequest instance.
+ * Constructs a DescribeGroupsRequestPrivate object for WorkDocs \a action with,
+ * public implementation \a q.
  */
 DescribeGroupsRequestPrivate::DescribeGroupsRequestPrivate(
     const WorkDocsRequest::Action action, DescribeGroupsRequest * const q)
@@ -133,15 +122,10 @@ DescribeGroupsRequestPrivate::DescribeGroupsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeGroupsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeGroupsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeGroupsRequest instance.
  */
 DescribeGroupsRequestPrivate::DescribeGroupsRequestPrivate(
     const DescribeGroupsRequestPrivate &other, DescribeGroupsRequest * const q)

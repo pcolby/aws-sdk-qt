@@ -27,19 +27,16 @@ namespace S3 {
 
 /*!
  * \class QtAws::S3::RestoreObjectRequest
- *
  * \brief The RestoreObjectRequest class provides an interface for S3 RestoreObject requests.
  *
- * \ingroup S3
+ * \inmodule QtAwsS3
  *
  *
  * \sa S3Client::restoreObject
  */
 
 /*!
- * @brief  Constructs a new RestoreObjectRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 RestoreObjectRequest::RestoreObjectRequest(const RestoreObjectRequest &other)
     : S3Request(new RestoreObjectRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ RestoreObjectRequest::RestoreObjectRequest(const RestoreObjectRequest &other)
 }
 
 /*!
- * @brief  Constructs a new RestoreObjectRequest object.
+ * Constructs a RestoreObjectRequest object.
  */
 RestoreObjectRequest::RestoreObjectRequest()
     : S3Request(new RestoreObjectRequestPrivate(S3Request::RestoreObjectAction, this))
@@ -66,14 +63,9 @@ bool RestoreObjectRequest::isValid() const
 
 
 /*!
- * @brief  Construct an RestoreObjectResponse object.
+ * Returns a RestoreObjectResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An RestoreObjectResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  S3Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * RestoreObjectRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * RestoreObjectRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::S3::RestoreObjectRequestPrivate
+ * \brief The RestoreObjectRequestPrivate class provides private implementation for RestoreObjectRequest.
+ * \internal
  *
- * @class  RestoreObjectRequestPrivate
- *
- * @brief  Private implementation for RestoreObjectRequest.
+ * \inmodule QtAwsS3
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new RestoreObjectRequestPrivate object.
- *
- * @param  action  S3 action being performed.
- * @param  q       Pointer to this object's public RestoreObjectRequest instance.
+ * Constructs a RestoreObjectRequestPrivate object for S3 \a action with,
+ * public implementation \a q.
  */
 RestoreObjectRequestPrivate::RestoreObjectRequestPrivate(
     const S3Request::Action action, RestoreObjectRequest * const q)
@@ -104,15 +93,10 @@ RestoreObjectRequestPrivate::RestoreObjectRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RestoreObjectRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the RestoreObjectRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public RestoreObjectRequest instance.
  */
 RestoreObjectRequestPrivate::RestoreObjectRequestPrivate(
     const RestoreObjectRequestPrivate &other, RestoreObjectRequest * const q)

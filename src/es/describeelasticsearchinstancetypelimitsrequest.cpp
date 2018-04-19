@@ -27,10 +27,9 @@ namespace ElasticsearchService {
 
 /*!
  * \class QtAws::ElasticsearchService::DescribeElasticsearchInstanceTypeLimitsRequest
- *
  * \brief The DescribeElasticsearchInstanceTypeLimitsRequest class provides an interface for ElasticsearchService DescribeElasticsearchInstanceTypeLimits requests.
  *
- * \ingroup ElasticsearchService
+ * \inmodule QtAwsElasticsearchService
  *
  *  <fullname>Amazon Elasticsearch Configuration Service</fullname>
  * 
@@ -46,9 +45,7 @@ namespace ElasticsearchService {
  */
 
 /*!
- * @brief  Constructs a new DescribeElasticsearchInstanceTypeLimitsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeElasticsearchInstanceTypeLimitsRequest::DescribeElasticsearchInstanceTypeLimitsRequest(const DescribeElasticsearchInstanceTypeLimitsRequest &other)
     : ElasticsearchServiceRequest(new DescribeElasticsearchInstanceTypeLimitsRequestPrivate(*other.d_func(), this))
@@ -57,7 +54,7 @@ DescribeElasticsearchInstanceTypeLimitsRequest::DescribeElasticsearchInstanceTyp
 }
 
 /*!
- * @brief  Constructs a new DescribeElasticsearchInstanceTypeLimitsRequest object.
+ * Constructs a DescribeElasticsearchInstanceTypeLimitsRequest object.
  */
 DescribeElasticsearchInstanceTypeLimitsRequest::DescribeElasticsearchInstanceTypeLimitsRequest()
     : ElasticsearchServiceRequest(new DescribeElasticsearchInstanceTypeLimitsRequestPrivate(ElasticsearchServiceRequest::DescribeElasticsearchInstanceTypeLimitsAction, this))
@@ -75,14 +72,9 @@ bool DescribeElasticsearchInstanceTypeLimitsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeElasticsearchInstanceTypeLimitsResponse object.
+ * Returns a DescribeElasticsearchInstanceTypeLimitsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeElasticsearchInstanceTypeLimitsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ElasticsearchServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeElasticsearchInstanceTypeLimitsRequest::response(QNetworkReply * const reply) const
 {
@@ -90,20 +82,17 @@ QtAws::Core::AwsAbstractResponse * DescribeElasticsearchInstanceTypeLimitsReques
 }
 
 /*!
- * @internal
+ * \class QtAws::ElasticsearchService::DescribeElasticsearchInstanceTypeLimitsRequestPrivate
+ * \brief The DescribeElasticsearchInstanceTypeLimitsRequestPrivate class provides private implementation for DescribeElasticsearchInstanceTypeLimitsRequest.
+ * \internal
  *
- * @class  DescribeElasticsearchInstanceTypeLimitsRequestPrivate
- *
- * @brief  Private implementation for DescribeElasticsearchInstanceTypeLimitsRequest.
+ * \inmodule QtAwsElasticsearchService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeElasticsearchInstanceTypeLimitsRequestPrivate object.
- *
- * @param  action  ElasticsearchService action being performed.
- * @param  q       Pointer to this object's public DescribeElasticsearchInstanceTypeLimitsRequest instance.
+ * Constructs a DescribeElasticsearchInstanceTypeLimitsRequestPrivate object for ElasticsearchService \a action with,
+ * public implementation \a q.
  */
 DescribeElasticsearchInstanceTypeLimitsRequestPrivate::DescribeElasticsearchInstanceTypeLimitsRequestPrivate(
     const ElasticsearchServiceRequest::Action action, DescribeElasticsearchInstanceTypeLimitsRequest * const q)
@@ -113,15 +102,10 @@ DescribeElasticsearchInstanceTypeLimitsRequestPrivate::DescribeElasticsearchInst
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeElasticsearchInstanceTypeLimitsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeElasticsearchInstanceTypeLimitsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeElasticsearchInstanceTypeLimitsRequest instance.
  */
 DescribeElasticsearchInstanceTypeLimitsRequestPrivate::DescribeElasticsearchInstanceTypeLimitsRequestPrivate(
     const DescribeElasticsearchInstanceTypeLimitsRequestPrivate &other, DescribeElasticsearchInstanceTypeLimitsRequest * const q)

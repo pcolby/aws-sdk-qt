@@ -27,10 +27,9 @@ namespace ElastiCache {
 
 /*!
  * \class QtAws::ElastiCache::RevokeCacheSecurityGroupIngressRequest
- *
  * \brief The RevokeCacheSecurityGroupIngressRequest class provides an interface for ElastiCache RevokeCacheSecurityGroupIngress requests.
  *
- * \ingroup ElastiCache
+ * \inmodule QtAwsElastiCache
  *
  *  <fullname>Amazon ElastiCache</fullname>
  * 
@@ -51,9 +50,7 @@ namespace ElastiCache {
  */
 
 /*!
- * @brief  Constructs a new RevokeCacheSecurityGroupIngressRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 RevokeCacheSecurityGroupIngressRequest::RevokeCacheSecurityGroupIngressRequest(const RevokeCacheSecurityGroupIngressRequest &other)
     : ElastiCacheRequest(new RevokeCacheSecurityGroupIngressRequestPrivate(*other.d_func(), this))
@@ -62,7 +59,7 @@ RevokeCacheSecurityGroupIngressRequest::RevokeCacheSecurityGroupIngressRequest(c
 }
 
 /*!
- * @brief  Constructs a new RevokeCacheSecurityGroupIngressRequest object.
+ * Constructs a RevokeCacheSecurityGroupIngressRequest object.
  */
 RevokeCacheSecurityGroupIngressRequest::RevokeCacheSecurityGroupIngressRequest()
     : ElastiCacheRequest(new RevokeCacheSecurityGroupIngressRequestPrivate(ElastiCacheRequest::RevokeCacheSecurityGroupIngressAction, this))
@@ -80,14 +77,9 @@ bool RevokeCacheSecurityGroupIngressRequest::isValid() const
 
 
 /*!
- * @brief  Construct an RevokeCacheSecurityGroupIngressResponse object.
+ * Returns a RevokeCacheSecurityGroupIngressResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An RevokeCacheSecurityGroupIngressResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ElastiCacheClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * RevokeCacheSecurityGroupIngressRequest::response(QNetworkReply * const reply) const
 {
@@ -95,20 +87,17 @@ QtAws::Core::AwsAbstractResponse * RevokeCacheSecurityGroupIngressRequest::respo
 }
 
 /*!
- * @internal
+ * \class QtAws::ElastiCache::RevokeCacheSecurityGroupIngressRequestPrivate
+ * \brief The RevokeCacheSecurityGroupIngressRequestPrivate class provides private implementation for RevokeCacheSecurityGroupIngressRequest.
+ * \internal
  *
- * @class  RevokeCacheSecurityGroupIngressRequestPrivate
- *
- * @brief  Private implementation for RevokeCacheSecurityGroupIngressRequest.
+ * \inmodule QtAwsElastiCache
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new RevokeCacheSecurityGroupIngressRequestPrivate object.
- *
- * @param  action  ElastiCache action being performed.
- * @param  q       Pointer to this object's public RevokeCacheSecurityGroupIngressRequest instance.
+ * Constructs a RevokeCacheSecurityGroupIngressRequestPrivate object for ElastiCache \a action with,
+ * public implementation \a q.
  */
 RevokeCacheSecurityGroupIngressRequestPrivate::RevokeCacheSecurityGroupIngressRequestPrivate(
     const ElastiCacheRequest::Action action, RevokeCacheSecurityGroupIngressRequest * const q)
@@ -118,15 +107,10 @@ RevokeCacheSecurityGroupIngressRequestPrivate::RevokeCacheSecurityGroupIngressRe
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RevokeCacheSecurityGroupIngressRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the RevokeCacheSecurityGroupIngressRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public RevokeCacheSecurityGroupIngressRequest instance.
  */
 RevokeCacheSecurityGroupIngressRequestPrivate::RevokeCacheSecurityGroupIngressRequestPrivate(
     const RevokeCacheSecurityGroupIngressRequestPrivate &other, RevokeCacheSecurityGroupIngressRequest * const q)

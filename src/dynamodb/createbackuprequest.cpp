@@ -27,10 +27,9 @@ namespace DynamoDB {
 
 /*!
  * \class QtAws::DynamoDB::CreateBackupRequest
- *
  * \brief The CreateBackupRequest class provides an interface for DynamoDB CreateBackup requests.
  *
- * \ingroup DynamoDB
+ * \inmodule QtAwsDynamoDB
  *
  *  <fullname>Amazon DynamoDB</fullname>
  * 
@@ -56,9 +55,7 @@ namespace DynamoDB {
  */
 
 /*!
- * @brief  Constructs a new CreateBackupRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateBackupRequest::CreateBackupRequest(const CreateBackupRequest &other)
     : DynamoDBRequest(new CreateBackupRequestPrivate(*other.d_func(), this))
@@ -67,7 +64,7 @@ CreateBackupRequest::CreateBackupRequest(const CreateBackupRequest &other)
 }
 
 /*!
- * @brief  Constructs a new CreateBackupRequest object.
+ * Constructs a CreateBackupRequest object.
  */
 CreateBackupRequest::CreateBackupRequest()
     : DynamoDBRequest(new CreateBackupRequestPrivate(DynamoDBRequest::CreateBackupAction, this))
@@ -85,14 +82,9 @@ bool CreateBackupRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateBackupResponse object.
+ * Returns a CreateBackupResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateBackupResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DynamoDBClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateBackupRequest::response(QNetworkReply * const reply) const
 {
@@ -100,20 +92,17 @@ QtAws::Core::AwsAbstractResponse * CreateBackupRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::DynamoDB::CreateBackupRequestPrivate
+ * \brief The CreateBackupRequestPrivate class provides private implementation for CreateBackupRequest.
+ * \internal
  *
- * @class  CreateBackupRequestPrivate
- *
- * @brief  Private implementation for CreateBackupRequest.
+ * \inmodule QtAwsDynamoDB
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateBackupRequestPrivate object.
- *
- * @param  action  DynamoDB action being performed.
- * @param  q       Pointer to this object's public CreateBackupRequest instance.
+ * Constructs a CreateBackupRequestPrivate object for DynamoDB \a action with,
+ * public implementation \a q.
  */
 CreateBackupRequestPrivate::CreateBackupRequestPrivate(
     const DynamoDBRequest::Action action, CreateBackupRequest * const q)
@@ -123,15 +112,10 @@ CreateBackupRequestPrivate::CreateBackupRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateBackupRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateBackupRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateBackupRequest instance.
  */
 CreateBackupRequestPrivate::CreateBackupRequestPrivate(
     const CreateBackupRequestPrivate &other, CreateBackupRequest * const q)

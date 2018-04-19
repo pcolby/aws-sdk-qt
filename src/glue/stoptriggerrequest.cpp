@@ -27,10 +27,9 @@ namespace Glue {
 
 /*!
  * \class QtAws::Glue::StopTriggerRequest
- *
  * \brief The StopTriggerRequest class provides an interface for Glue StopTrigger requests.
  *
- * \ingroup Glue
+ * \inmodule QtAwsGlue
  *
  *  <fullname>AWS Glue</fullname>
  * 
@@ -40,9 +39,7 @@ namespace Glue {
  */
 
 /*!
- * @brief  Constructs a new StopTriggerRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 StopTriggerRequest::StopTriggerRequest(const StopTriggerRequest &other)
     : GlueRequest(new StopTriggerRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ StopTriggerRequest::StopTriggerRequest(const StopTriggerRequest &other)
 }
 
 /*!
- * @brief  Constructs a new StopTriggerRequest object.
+ * Constructs a StopTriggerRequest object.
  */
 StopTriggerRequest::StopTriggerRequest()
     : GlueRequest(new StopTriggerRequestPrivate(GlueRequest::StopTriggerAction, this))
@@ -69,14 +66,9 @@ bool StopTriggerRequest::isValid() const
 
 
 /*!
- * @brief  Construct an StopTriggerResponse object.
+ * Returns a StopTriggerResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An StopTriggerResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GlueClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * StopTriggerRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * StopTriggerRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::Glue::StopTriggerRequestPrivate
+ * \brief The StopTriggerRequestPrivate class provides private implementation for StopTriggerRequest.
+ * \internal
  *
- * @class  StopTriggerRequestPrivate
- *
- * @brief  Private implementation for StopTriggerRequest.
+ * \inmodule QtAwsGlue
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new StopTriggerRequestPrivate object.
- *
- * @param  action  Glue action being performed.
- * @param  q       Pointer to this object's public StopTriggerRequest instance.
+ * Constructs a StopTriggerRequestPrivate object for Glue \a action with,
+ * public implementation \a q.
  */
 StopTriggerRequestPrivate::StopTriggerRequestPrivate(
     const GlueRequest::Action action, StopTriggerRequest * const q)
@@ -107,15 +96,10 @@ StopTriggerRequestPrivate::StopTriggerRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StopTriggerRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the StopTriggerRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public StopTriggerRequest instance.
  */
 StopTriggerRequestPrivate::StopTriggerRequestPrivate(
     const StopTriggerRequestPrivate &other, StopTriggerRequest * const q)

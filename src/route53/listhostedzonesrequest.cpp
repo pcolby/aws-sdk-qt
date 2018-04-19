@@ -27,19 +27,16 @@ namespace Route53 {
 
 /*!
  * \class QtAws::Route53::ListHostedZonesRequest
- *
  * \brief The ListHostedZonesRequest class provides an interface for Route53 ListHostedZones requests.
  *
- * \ingroup Route53
+ * \inmodule QtAwsRoute53
  *
  *
  * \sa Route53Client::listHostedZones
  */
 
 /*!
- * @brief  Constructs a new ListHostedZonesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListHostedZonesRequest::ListHostedZonesRequest(const ListHostedZonesRequest &other)
     : Route53Request(new ListHostedZonesRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ ListHostedZonesRequest::ListHostedZonesRequest(const ListHostedZonesRequest &oth
 }
 
 /*!
- * @brief  Constructs a new ListHostedZonesRequest object.
+ * Constructs a ListHostedZonesRequest object.
  */
 ListHostedZonesRequest::ListHostedZonesRequest()
     : Route53Request(new ListHostedZonesRequestPrivate(Route53Request::ListHostedZonesAction, this))
@@ -66,14 +63,9 @@ bool ListHostedZonesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListHostedZonesResponse object.
+ * Returns a ListHostedZonesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListHostedZonesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  Route53Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListHostedZonesRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * ListHostedZonesRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::Route53::ListHostedZonesRequestPrivate
+ * \brief The ListHostedZonesRequestPrivate class provides private implementation for ListHostedZonesRequest.
+ * \internal
  *
- * @class  ListHostedZonesRequestPrivate
- *
- * @brief  Private implementation for ListHostedZonesRequest.
+ * \inmodule QtAwsRoute53
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListHostedZonesRequestPrivate object.
- *
- * @param  action  Route53 action being performed.
- * @param  q       Pointer to this object's public ListHostedZonesRequest instance.
+ * Constructs a ListHostedZonesRequestPrivate object for Route53 \a action with,
+ * public implementation \a q.
  */
 ListHostedZonesRequestPrivate::ListHostedZonesRequestPrivate(
     const Route53Request::Action action, ListHostedZonesRequest * const q)
@@ -104,15 +93,10 @@ ListHostedZonesRequestPrivate::ListHostedZonesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListHostedZonesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListHostedZonesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListHostedZonesRequest instance.
  */
 ListHostedZonesRequestPrivate::ListHostedZonesRequestPrivate(
     const ListHostedZonesRequestPrivate &other, ListHostedZonesRequest * const q)

@@ -27,10 +27,9 @@ namespace KMS {
 
 /*!
  * \class QtAws::KMS::ListRetirableGrantsRequest
- *
  * \brief The ListRetirableGrantsRequest class provides an interface for KMS ListRetirableGrants requests.
  *
- * \ingroup KMS
+ * \inmodule QtAwsKMS
  *
  *  <fullname>AWS Key Management Service</fullname>
  * 
@@ -136,9 +135,7 @@ namespace KMS {
  */
 
 /*!
- * @brief  Constructs a new ListRetirableGrantsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListRetirableGrantsRequest::ListRetirableGrantsRequest(const ListRetirableGrantsRequest &other)
     : KMSRequest(new ListRetirableGrantsRequestPrivate(*other.d_func(), this))
@@ -147,7 +144,7 @@ ListRetirableGrantsRequest::ListRetirableGrantsRequest(const ListRetirableGrants
 }
 
 /*!
- * @brief  Constructs a new ListRetirableGrantsRequest object.
+ * Constructs a ListRetirableGrantsRequest object.
  */
 ListRetirableGrantsRequest::ListRetirableGrantsRequest()
     : KMSRequest(new ListRetirableGrantsRequestPrivate(KMSRequest::ListRetirableGrantsAction, this))
@@ -165,14 +162,9 @@ bool ListRetirableGrantsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListRetirableGrantsResponse object.
+ * Returns a ListRetirableGrantsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListRetirableGrantsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  KMSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListRetirableGrantsRequest::response(QNetworkReply * const reply) const
 {
@@ -180,20 +172,17 @@ QtAws::Core::AwsAbstractResponse * ListRetirableGrantsRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::KMS::ListRetirableGrantsRequestPrivate
+ * \brief The ListRetirableGrantsRequestPrivate class provides private implementation for ListRetirableGrantsRequest.
+ * \internal
  *
- * @class  ListRetirableGrantsRequestPrivate
- *
- * @brief  Private implementation for ListRetirableGrantsRequest.
+ * \inmodule QtAwsKMS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListRetirableGrantsRequestPrivate object.
- *
- * @param  action  KMS action being performed.
- * @param  q       Pointer to this object's public ListRetirableGrantsRequest instance.
+ * Constructs a ListRetirableGrantsRequestPrivate object for KMS \a action with,
+ * public implementation \a q.
  */
 ListRetirableGrantsRequestPrivate::ListRetirableGrantsRequestPrivate(
     const KMSRequest::Action action, ListRetirableGrantsRequest * const q)
@@ -203,15 +192,10 @@ ListRetirableGrantsRequestPrivate::ListRetirableGrantsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListRetirableGrantsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListRetirableGrantsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListRetirableGrantsRequest instance.
  */
 ListRetirableGrantsRequestPrivate::ListRetirableGrantsRequestPrivate(
     const ListRetirableGrantsRequestPrivate &other, ListRetirableGrantsRequest * const q)

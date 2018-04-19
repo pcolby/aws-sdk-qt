@@ -27,10 +27,9 @@ namespace Redshift {
 
 /*!
  * \class QtAws::Redshift::DeleteEventSubscriptionRequest
- *
  * \brief The DeleteEventSubscriptionRequest class provides an interface for Redshift DeleteEventSubscription requests.
  *
- * \ingroup Redshift
+ * \inmodule QtAwsRedshift
  *
  *  <fullname>Amazon Redshift</fullname>
  * 
@@ -67,9 +66,7 @@ namespace Redshift {
  */
 
 /*!
- * @brief  Constructs a new DeleteEventSubscriptionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteEventSubscriptionRequest::DeleteEventSubscriptionRequest(const DeleteEventSubscriptionRequest &other)
     : RedshiftRequest(new DeleteEventSubscriptionRequestPrivate(*other.d_func(), this))
@@ -78,7 +75,7 @@ DeleteEventSubscriptionRequest::DeleteEventSubscriptionRequest(const DeleteEvent
 }
 
 /*!
- * @brief  Constructs a new DeleteEventSubscriptionRequest object.
+ * Constructs a DeleteEventSubscriptionRequest object.
  */
 DeleteEventSubscriptionRequest::DeleteEventSubscriptionRequest()
     : RedshiftRequest(new DeleteEventSubscriptionRequestPrivate(RedshiftRequest::DeleteEventSubscriptionAction, this))
@@ -96,14 +93,9 @@ bool DeleteEventSubscriptionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteEventSubscriptionResponse object.
+ * Returns a DeleteEventSubscriptionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteEventSubscriptionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RedshiftClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteEventSubscriptionRequest::response(QNetworkReply * const reply) const
 {
@@ -111,20 +103,17 @@ QtAws::Core::AwsAbstractResponse * DeleteEventSubscriptionRequest::response(QNet
 }
 
 /*!
- * @internal
+ * \class QtAws::Redshift::DeleteEventSubscriptionRequestPrivate
+ * \brief The DeleteEventSubscriptionRequestPrivate class provides private implementation for DeleteEventSubscriptionRequest.
+ * \internal
  *
- * @class  DeleteEventSubscriptionRequestPrivate
- *
- * @brief  Private implementation for DeleteEventSubscriptionRequest.
+ * \inmodule QtAwsRedshift
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteEventSubscriptionRequestPrivate object.
- *
- * @param  action  Redshift action being performed.
- * @param  q       Pointer to this object's public DeleteEventSubscriptionRequest instance.
+ * Constructs a DeleteEventSubscriptionRequestPrivate object for Redshift \a action with,
+ * public implementation \a q.
  */
 DeleteEventSubscriptionRequestPrivate::DeleteEventSubscriptionRequestPrivate(
     const RedshiftRequest::Action action, DeleteEventSubscriptionRequest * const q)
@@ -134,15 +123,10 @@ DeleteEventSubscriptionRequestPrivate::DeleteEventSubscriptionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteEventSubscriptionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteEventSubscriptionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteEventSubscriptionRequest instance.
  */
 DeleteEventSubscriptionRequestPrivate::DeleteEventSubscriptionRequestPrivate(
     const DeleteEventSubscriptionRequestPrivate &other, DeleteEventSubscriptionRequest * const q)

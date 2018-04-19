@@ -27,10 +27,9 @@ namespace SES {
 
 /*!
  * \class QtAws::SES::CreateReceiptRuleSetRequest
- *
  * \brief The CreateReceiptRuleSetRequest class provides an interface for SES CreateReceiptRuleSet requests.
  *
- * \ingroup SES
+ * \inmodule QtAwsSES
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -48,9 +47,7 @@ namespace SES {
  */
 
 /*!
- * @brief  Constructs a new CreateReceiptRuleSetRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateReceiptRuleSetRequest::CreateReceiptRuleSetRequest(const CreateReceiptRuleSetRequest &other)
     : SESRequest(new CreateReceiptRuleSetRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ CreateReceiptRuleSetRequest::CreateReceiptRuleSetRequest(const CreateReceiptRule
 }
 
 /*!
- * @brief  Constructs a new CreateReceiptRuleSetRequest object.
+ * Constructs a CreateReceiptRuleSetRequest object.
  */
 CreateReceiptRuleSetRequest::CreateReceiptRuleSetRequest()
     : SESRequest(new CreateReceiptRuleSetRequestPrivate(SESRequest::CreateReceiptRuleSetAction, this))
@@ -77,14 +74,9 @@ bool CreateReceiptRuleSetRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateReceiptRuleSetResponse object.
+ * Returns a CreateReceiptRuleSetResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateReceiptRuleSetResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SESClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateReceiptRuleSetRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * CreateReceiptRuleSetRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::SES::CreateReceiptRuleSetRequestPrivate
+ * \brief The CreateReceiptRuleSetRequestPrivate class provides private implementation for CreateReceiptRuleSetRequest.
+ * \internal
  *
- * @class  CreateReceiptRuleSetRequestPrivate
- *
- * @brief  Private implementation for CreateReceiptRuleSetRequest.
+ * \inmodule QtAwsSES
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateReceiptRuleSetRequestPrivate object.
- *
- * @param  action  SES action being performed.
- * @param  q       Pointer to this object's public CreateReceiptRuleSetRequest instance.
+ * Constructs a CreateReceiptRuleSetRequestPrivate object for SES \a action with,
+ * public implementation \a q.
  */
 CreateReceiptRuleSetRequestPrivate::CreateReceiptRuleSetRequestPrivate(
     const SESRequest::Action action, CreateReceiptRuleSetRequest * const q)
@@ -115,15 +104,10 @@ CreateReceiptRuleSetRequestPrivate::CreateReceiptRuleSetRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateReceiptRuleSetRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateReceiptRuleSetRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateReceiptRuleSetRequest instance.
  */
 CreateReceiptRuleSetRequestPrivate::CreateReceiptRuleSetRequestPrivate(
     const CreateReceiptRuleSetRequestPrivate &other, CreateReceiptRuleSetRequest * const q)

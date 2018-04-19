@@ -27,10 +27,9 @@ namespace OpsWorks {
 
 /*!
  * \class QtAws::OpsWorks::DescribeStackProvisioningParametersRequest
- *
  * \brief The DescribeStackProvisioningParametersRequest class provides an interface for OpsWorks DescribeStackProvisioningParameters requests.
  *
- * \ingroup OpsWorks
+ * \inmodule QtAwsOpsWorks
  *
  *  <fullname>AWS OpsWorks</fullname>
  * 
@@ -143,9 +142,7 @@ namespace OpsWorks {
  */
 
 /*!
- * @brief  Constructs a new DescribeStackProvisioningParametersRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeStackProvisioningParametersRequest::DescribeStackProvisioningParametersRequest(const DescribeStackProvisioningParametersRequest &other)
     : OpsWorksRequest(new DescribeStackProvisioningParametersRequestPrivate(*other.d_func(), this))
@@ -154,7 +151,7 @@ DescribeStackProvisioningParametersRequest::DescribeStackProvisioningParametersR
 }
 
 /*!
- * @brief  Constructs a new DescribeStackProvisioningParametersRequest object.
+ * Constructs a DescribeStackProvisioningParametersRequest object.
  */
 DescribeStackProvisioningParametersRequest::DescribeStackProvisioningParametersRequest()
     : OpsWorksRequest(new DescribeStackProvisioningParametersRequestPrivate(OpsWorksRequest::DescribeStackProvisioningParametersAction, this))
@@ -172,14 +169,9 @@ bool DescribeStackProvisioningParametersRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeStackProvisioningParametersResponse object.
+ * Returns a DescribeStackProvisioningParametersResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeStackProvisioningParametersResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  OpsWorksClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeStackProvisioningParametersRequest::response(QNetworkReply * const reply) const
 {
@@ -187,20 +179,17 @@ QtAws::Core::AwsAbstractResponse * DescribeStackProvisioningParametersRequest::r
 }
 
 /*!
- * @internal
+ * \class QtAws::OpsWorks::DescribeStackProvisioningParametersRequestPrivate
+ * \brief The DescribeStackProvisioningParametersRequestPrivate class provides private implementation for DescribeStackProvisioningParametersRequest.
+ * \internal
  *
- * @class  DescribeStackProvisioningParametersRequestPrivate
- *
- * @brief  Private implementation for DescribeStackProvisioningParametersRequest.
+ * \inmodule QtAwsOpsWorks
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeStackProvisioningParametersRequestPrivate object.
- *
- * @param  action  OpsWorks action being performed.
- * @param  q       Pointer to this object's public DescribeStackProvisioningParametersRequest instance.
+ * Constructs a DescribeStackProvisioningParametersRequestPrivate object for OpsWorks \a action with,
+ * public implementation \a q.
  */
 DescribeStackProvisioningParametersRequestPrivate::DescribeStackProvisioningParametersRequestPrivate(
     const OpsWorksRequest::Action action, DescribeStackProvisioningParametersRequest * const q)
@@ -210,15 +199,10 @@ DescribeStackProvisioningParametersRequestPrivate::DescribeStackProvisioningPara
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeStackProvisioningParametersRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeStackProvisioningParametersRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeStackProvisioningParametersRequest instance.
  */
 DescribeStackProvisioningParametersRequestPrivate::DescribeStackProvisioningParametersRequestPrivate(
     const DescribeStackProvisioningParametersRequestPrivate &other, DescribeStackProvisioningParametersRequest * const q)

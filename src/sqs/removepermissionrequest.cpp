@@ -27,10 +27,9 @@ namespace SQS {
 
 /*!
  * \class QtAws::SQS::RemovePermissionRequest
- *
  * \brief The RemovePermissionRequest class provides an interface for SQS RemovePermission requests.
  *
- * \ingroup SQS
+ * \inmodule QtAwsSQS
  *
  *  Welcome to the <i>Amazon Simple Queue Service API
  * 
@@ -103,9 +102,7 @@ namespace SQS {
  */
 
 /*!
- * @brief  Constructs a new RemovePermissionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 RemovePermissionRequest::RemovePermissionRequest(const RemovePermissionRequest &other)
     : SQSRequest(new RemovePermissionRequestPrivate(*other.d_func(), this))
@@ -114,7 +111,7 @@ RemovePermissionRequest::RemovePermissionRequest(const RemovePermissionRequest &
 }
 
 /*!
- * @brief  Constructs a new RemovePermissionRequest object.
+ * Constructs a RemovePermissionRequest object.
  */
 RemovePermissionRequest::RemovePermissionRequest()
     : SQSRequest(new RemovePermissionRequestPrivate(SQSRequest::RemovePermissionAction, this))
@@ -132,14 +129,9 @@ bool RemovePermissionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an RemovePermissionResponse object.
+ * Returns a RemovePermissionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An RemovePermissionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SQSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * RemovePermissionRequest::response(QNetworkReply * const reply) const
 {
@@ -147,20 +139,17 @@ QtAws::Core::AwsAbstractResponse * RemovePermissionRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::SQS::RemovePermissionRequestPrivate
+ * \brief The RemovePermissionRequestPrivate class provides private implementation for RemovePermissionRequest.
+ * \internal
  *
- * @class  RemovePermissionRequestPrivate
- *
- * @brief  Private implementation for RemovePermissionRequest.
+ * \inmodule QtAwsSQS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new RemovePermissionRequestPrivate object.
- *
- * @param  action  SQS action being performed.
- * @param  q       Pointer to this object's public RemovePermissionRequest instance.
+ * Constructs a RemovePermissionRequestPrivate object for SQS \a action with,
+ * public implementation \a q.
  */
 RemovePermissionRequestPrivate::RemovePermissionRequestPrivate(
     const SQSRequest::Action action, RemovePermissionRequest * const q)
@@ -170,15 +159,10 @@ RemovePermissionRequestPrivate::RemovePermissionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RemovePermissionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the RemovePermissionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public RemovePermissionRequest instance.
  */
 RemovePermissionRequestPrivate::RemovePermissionRequestPrivate(
     const RemovePermissionRequestPrivate &other, RemovePermissionRequest * const q)

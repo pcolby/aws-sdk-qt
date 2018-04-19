@@ -27,10 +27,9 @@ namespace SES {
 
 /*!
  * \class QtAws::SES::SetIdentityNotificationTopicRequest
- *
  * \brief The SetIdentityNotificationTopicRequest class provides an interface for SES SetIdentityNotificationTopic requests.
  *
- * \ingroup SES
+ * \inmodule QtAwsSES
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -48,9 +47,7 @@ namespace SES {
  */
 
 /*!
- * @brief  Constructs a new SetIdentityNotificationTopicRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 SetIdentityNotificationTopicRequest::SetIdentityNotificationTopicRequest(const SetIdentityNotificationTopicRequest &other)
     : SESRequest(new SetIdentityNotificationTopicRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ SetIdentityNotificationTopicRequest::SetIdentityNotificationTopicRequest(const S
 }
 
 /*!
- * @brief  Constructs a new SetIdentityNotificationTopicRequest object.
+ * Constructs a SetIdentityNotificationTopicRequest object.
  */
 SetIdentityNotificationTopicRequest::SetIdentityNotificationTopicRequest()
     : SESRequest(new SetIdentityNotificationTopicRequestPrivate(SESRequest::SetIdentityNotificationTopicAction, this))
@@ -77,14 +74,9 @@ bool SetIdentityNotificationTopicRequest::isValid() const
 
 
 /*!
- * @brief  Construct an SetIdentityNotificationTopicResponse object.
+ * Returns a SetIdentityNotificationTopicResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An SetIdentityNotificationTopicResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SESClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * SetIdentityNotificationTopicRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * SetIdentityNotificationTopicRequest::response
 }
 
 /*!
- * @internal
+ * \class QtAws::SES::SetIdentityNotificationTopicRequestPrivate
+ * \brief The SetIdentityNotificationTopicRequestPrivate class provides private implementation for SetIdentityNotificationTopicRequest.
+ * \internal
  *
- * @class  SetIdentityNotificationTopicRequestPrivate
- *
- * @brief  Private implementation for SetIdentityNotificationTopicRequest.
+ * \inmodule QtAwsSES
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new SetIdentityNotificationTopicRequestPrivate object.
- *
- * @param  action  SES action being performed.
- * @param  q       Pointer to this object's public SetIdentityNotificationTopicRequest instance.
+ * Constructs a SetIdentityNotificationTopicRequestPrivate object for SES \a action with,
+ * public implementation \a q.
  */
 SetIdentityNotificationTopicRequestPrivate::SetIdentityNotificationTopicRequestPrivate(
     const SESRequest::Action action, SetIdentityNotificationTopicRequest * const q)
@@ -115,15 +104,10 @@ SetIdentityNotificationTopicRequestPrivate::SetIdentityNotificationTopicRequestP
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SetIdentityNotificationTopicRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the SetIdentityNotificationTopicRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public SetIdentityNotificationTopicRequest instance.
  */
 SetIdentityNotificationTopicRequestPrivate::SetIdentityNotificationTopicRequestPrivate(
     const SetIdentityNotificationTopicRequestPrivate &other, SetIdentityNotificationTopicRequest * const q)

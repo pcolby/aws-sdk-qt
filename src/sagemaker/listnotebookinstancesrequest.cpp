@@ -27,19 +27,16 @@ namespace SageMaker {
 
 /*!
  * \class QtAws::SageMaker::ListNotebookInstancesRequest
- *
  * \brief The ListNotebookInstancesRequest class provides an interface for SageMaker ListNotebookInstances requests.
  *
- * \ingroup SageMaker
+ * \inmodule QtAwsSageMaker
  *
  *
  * \sa SageMakerClient::listNotebookInstances
  */
 
 /*!
- * @brief  Constructs a new ListNotebookInstancesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListNotebookInstancesRequest::ListNotebookInstancesRequest(const ListNotebookInstancesRequest &other)
     : SageMakerRequest(new ListNotebookInstancesRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ ListNotebookInstancesRequest::ListNotebookInstancesRequest(const ListNotebookIns
 }
 
 /*!
- * @brief  Constructs a new ListNotebookInstancesRequest object.
+ * Constructs a ListNotebookInstancesRequest object.
  */
 ListNotebookInstancesRequest::ListNotebookInstancesRequest()
     : SageMakerRequest(new ListNotebookInstancesRequestPrivate(SageMakerRequest::ListNotebookInstancesAction, this))
@@ -66,14 +63,9 @@ bool ListNotebookInstancesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListNotebookInstancesResponse object.
+ * Returns a ListNotebookInstancesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListNotebookInstancesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SageMakerClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListNotebookInstancesRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * ListNotebookInstancesRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::SageMaker::ListNotebookInstancesRequestPrivate
+ * \brief The ListNotebookInstancesRequestPrivate class provides private implementation for ListNotebookInstancesRequest.
+ * \internal
  *
- * @class  ListNotebookInstancesRequestPrivate
- *
- * @brief  Private implementation for ListNotebookInstancesRequest.
+ * \inmodule QtAwsSageMaker
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListNotebookInstancesRequestPrivate object.
- *
- * @param  action  SageMaker action being performed.
- * @param  q       Pointer to this object's public ListNotebookInstancesRequest instance.
+ * Constructs a ListNotebookInstancesRequestPrivate object for SageMaker \a action with,
+ * public implementation \a q.
  */
 ListNotebookInstancesRequestPrivate::ListNotebookInstancesRequestPrivate(
     const SageMakerRequest::Action action, ListNotebookInstancesRequest * const q)
@@ -104,15 +93,10 @@ ListNotebookInstancesRequestPrivate::ListNotebookInstancesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListNotebookInstancesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListNotebookInstancesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListNotebookInstancesRequest instance.
  */
 ListNotebookInstancesRequestPrivate::ListNotebookInstancesRequestPrivate(
     const ListNotebookInstancesRequestPrivate &other, ListNotebookInstancesRequest * const q)

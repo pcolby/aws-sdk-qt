@@ -27,10 +27,9 @@ namespace ServiceCatalog {
 
 /*!
  * \class QtAws::ServiceCatalog::ExecuteProvisionedProductPlanRequest
- *
  * \brief The ExecuteProvisionedProductPlanRequest class provides an interface for ServiceCatalog ExecuteProvisionedProductPlan requests.
  *
- * \ingroup ServiceCatalog
+ * \inmodule QtAwsServiceCatalog
  *
  *  <fullname>AWS Service Catalog</fullname>
  * 
@@ -43,9 +42,7 @@ namespace ServiceCatalog {
  */
 
 /*!
- * @brief  Constructs a new ExecuteProvisionedProductPlanRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ExecuteProvisionedProductPlanRequest::ExecuteProvisionedProductPlanRequest(const ExecuteProvisionedProductPlanRequest &other)
     : ServiceCatalogRequest(new ExecuteProvisionedProductPlanRequestPrivate(*other.d_func(), this))
@@ -54,7 +51,7 @@ ExecuteProvisionedProductPlanRequest::ExecuteProvisionedProductPlanRequest(const
 }
 
 /*!
- * @brief  Constructs a new ExecuteProvisionedProductPlanRequest object.
+ * Constructs a ExecuteProvisionedProductPlanRequest object.
  */
 ExecuteProvisionedProductPlanRequest::ExecuteProvisionedProductPlanRequest()
     : ServiceCatalogRequest(new ExecuteProvisionedProductPlanRequestPrivate(ServiceCatalogRequest::ExecuteProvisionedProductPlanAction, this))
@@ -72,14 +69,9 @@ bool ExecuteProvisionedProductPlanRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ExecuteProvisionedProductPlanResponse object.
+ * Returns a ExecuteProvisionedProductPlanResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ExecuteProvisionedProductPlanResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ServiceCatalogClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ExecuteProvisionedProductPlanRequest::response(QNetworkReply * const reply) const
 {
@@ -87,20 +79,17 @@ QtAws::Core::AwsAbstractResponse * ExecuteProvisionedProductPlanRequest::respons
 }
 
 /*!
- * @internal
+ * \class QtAws::ServiceCatalog::ExecuteProvisionedProductPlanRequestPrivate
+ * \brief The ExecuteProvisionedProductPlanRequestPrivate class provides private implementation for ExecuteProvisionedProductPlanRequest.
+ * \internal
  *
- * @class  ExecuteProvisionedProductPlanRequestPrivate
- *
- * @brief  Private implementation for ExecuteProvisionedProductPlanRequest.
+ * \inmodule QtAwsServiceCatalog
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ExecuteProvisionedProductPlanRequestPrivate object.
- *
- * @param  action  ServiceCatalog action being performed.
- * @param  q       Pointer to this object's public ExecuteProvisionedProductPlanRequest instance.
+ * Constructs a ExecuteProvisionedProductPlanRequestPrivate object for ServiceCatalog \a action with,
+ * public implementation \a q.
  */
 ExecuteProvisionedProductPlanRequestPrivate::ExecuteProvisionedProductPlanRequestPrivate(
     const ServiceCatalogRequest::Action action, ExecuteProvisionedProductPlanRequest * const q)
@@ -110,15 +99,10 @@ ExecuteProvisionedProductPlanRequestPrivate::ExecuteProvisionedProductPlanReques
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ExecuteProvisionedProductPlanRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ExecuteProvisionedProductPlanRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ExecuteProvisionedProductPlanRequest instance.
  */
 ExecuteProvisionedProductPlanRequestPrivate::ExecuteProvisionedProductPlanRequestPrivate(
     const ExecuteProvisionedProductPlanRequestPrivate &other, ExecuteProvisionedProductPlanRequest * const q)

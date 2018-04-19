@@ -27,10 +27,9 @@ namespace CloudHSM {
 
 /*!
  * \class QtAws::CloudHSM::ModifyLunaClientRequest
- *
  * \brief The ModifyLunaClientRequest class provides an interface for CloudHSM ModifyLunaClient requests.
  *
- * \ingroup CloudHSM
+ * \inmodule QtAwsCloudHSM
  *
  *  <fullname>AWS CloudHSM Service</fullname>
  * 
@@ -49,9 +48,7 @@ namespace CloudHSM {
  */
 
 /*!
- * @brief  Constructs a new ModifyLunaClientRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ModifyLunaClientRequest::ModifyLunaClientRequest(const ModifyLunaClientRequest &other)
     : CloudHSMRequest(new ModifyLunaClientRequestPrivate(*other.d_func(), this))
@@ -60,7 +57,7 @@ ModifyLunaClientRequest::ModifyLunaClientRequest(const ModifyLunaClientRequest &
 }
 
 /*!
- * @brief  Constructs a new ModifyLunaClientRequest object.
+ * Constructs a ModifyLunaClientRequest object.
  */
 ModifyLunaClientRequest::ModifyLunaClientRequest()
     : CloudHSMRequest(new ModifyLunaClientRequestPrivate(CloudHSMRequest::ModifyLunaClientAction, this))
@@ -78,14 +75,9 @@ bool ModifyLunaClientRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ModifyLunaClientResponse object.
+ * Returns a ModifyLunaClientResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ModifyLunaClientResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudHSMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ModifyLunaClientRequest::response(QNetworkReply * const reply) const
 {
@@ -93,20 +85,17 @@ QtAws::Core::AwsAbstractResponse * ModifyLunaClientRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudHSM::ModifyLunaClientRequestPrivate
+ * \brief The ModifyLunaClientRequestPrivate class provides private implementation for ModifyLunaClientRequest.
+ * \internal
  *
- * @class  ModifyLunaClientRequestPrivate
- *
- * @brief  Private implementation for ModifyLunaClientRequest.
+ * \inmodule QtAwsCloudHSM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ModifyLunaClientRequestPrivate object.
- *
- * @param  action  CloudHSM action being performed.
- * @param  q       Pointer to this object's public ModifyLunaClientRequest instance.
+ * Constructs a ModifyLunaClientRequestPrivate object for CloudHSM \a action with,
+ * public implementation \a q.
  */
 ModifyLunaClientRequestPrivate::ModifyLunaClientRequestPrivate(
     const CloudHSMRequest::Action action, ModifyLunaClientRequest * const q)
@@ -116,15 +105,10 @@ ModifyLunaClientRequestPrivate::ModifyLunaClientRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ModifyLunaClientRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ModifyLunaClientRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ModifyLunaClientRequest instance.
  */
 ModifyLunaClientRequestPrivate::ModifyLunaClientRequestPrivate(
     const ModifyLunaClientRequestPrivate &other, ModifyLunaClientRequest * const q)

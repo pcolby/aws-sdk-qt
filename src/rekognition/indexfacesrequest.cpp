@@ -27,10 +27,9 @@ namespace Rekognition {
 
 /*!
  * \class QtAws::Rekognition::IndexFacesRequest
- *
  * \brief The IndexFacesRequest class provides an interface for Rekognition IndexFaces requests.
  *
- * \ingroup Rekognition
+ * \inmodule QtAwsRekognition
  *
  *  This is the Amazon Rekognition API
  *
@@ -38,9 +37,7 @@ namespace Rekognition {
  */
 
 /*!
- * @brief  Constructs a new IndexFacesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 IndexFacesRequest::IndexFacesRequest(const IndexFacesRequest &other)
     : RekognitionRequest(new IndexFacesRequestPrivate(*other.d_func(), this))
@@ -49,7 +46,7 @@ IndexFacesRequest::IndexFacesRequest(const IndexFacesRequest &other)
 }
 
 /*!
- * @brief  Constructs a new IndexFacesRequest object.
+ * Constructs a IndexFacesRequest object.
  */
 IndexFacesRequest::IndexFacesRequest()
     : RekognitionRequest(new IndexFacesRequestPrivate(RekognitionRequest::IndexFacesAction, this))
@@ -67,14 +64,9 @@ bool IndexFacesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an IndexFacesResponse object.
+ * Returns a IndexFacesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An IndexFacesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RekognitionClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * IndexFacesRequest::response(QNetworkReply * const reply) const
 {
@@ -82,20 +74,17 @@ QtAws::Core::AwsAbstractResponse * IndexFacesRequest::response(QNetworkReply * c
 }
 
 /*!
- * @internal
+ * \class QtAws::Rekognition::IndexFacesRequestPrivate
+ * \brief The IndexFacesRequestPrivate class provides private implementation for IndexFacesRequest.
+ * \internal
  *
- * @class  IndexFacesRequestPrivate
- *
- * @brief  Private implementation for IndexFacesRequest.
+ * \inmodule QtAwsRekognition
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new IndexFacesRequestPrivate object.
- *
- * @param  action  Rekognition action being performed.
- * @param  q       Pointer to this object's public IndexFacesRequest instance.
+ * Constructs a IndexFacesRequestPrivate object for Rekognition \a action with,
+ * public implementation \a q.
  */
 IndexFacesRequestPrivate::IndexFacesRequestPrivate(
     const RekognitionRequest::Action action, IndexFacesRequest * const q)
@@ -105,15 +94,10 @@ IndexFacesRequestPrivate::IndexFacesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new IndexFacesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the IndexFacesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public IndexFacesRequest instance.
  */
 IndexFacesRequestPrivate::IndexFacesRequestPrivate(
     const IndexFacesRequestPrivate &other, IndexFacesRequest * const q)

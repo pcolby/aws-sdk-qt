@@ -27,10 +27,9 @@ namespace ElasticLoadBalancing {
 
 /*!
  * \class QtAws::ElasticLoadBalancing::CreateLBCookieStickinessPolicyRequest
- *
  * \brief The CreateLBCookieStickinessPolicyRequest class provides an interface for ElasticLoadBalancing CreateLBCookieStickinessPolicy requests.
  *
- * \ingroup ElasticLoadBalancing
+ * \inmodule QtAwsElasticLoadBalancing
  *
  *  <fullname>Elastic Load Balancing</fullname>
  * 
@@ -65,9 +64,7 @@ namespace ElasticLoadBalancing {
  */
 
 /*!
- * @brief  Constructs a new CreateLBCookieStickinessPolicyRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateLBCookieStickinessPolicyRequest::CreateLBCookieStickinessPolicyRequest(const CreateLBCookieStickinessPolicyRequest &other)
     : ElasticLoadBalancingRequest(new CreateLBCookieStickinessPolicyRequestPrivate(*other.d_func(), this))
@@ -76,7 +73,7 @@ CreateLBCookieStickinessPolicyRequest::CreateLBCookieStickinessPolicyRequest(con
 }
 
 /*!
- * @brief  Constructs a new CreateLBCookieStickinessPolicyRequest object.
+ * Constructs a CreateLBCookieStickinessPolicyRequest object.
  */
 CreateLBCookieStickinessPolicyRequest::CreateLBCookieStickinessPolicyRequest()
     : ElasticLoadBalancingRequest(new CreateLBCookieStickinessPolicyRequestPrivate(ElasticLoadBalancingRequest::CreateLBCookieStickinessPolicyAction, this))
@@ -94,14 +91,9 @@ bool CreateLBCookieStickinessPolicyRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateLBCookieStickinessPolicyResponse object.
+ * Returns a CreateLBCookieStickinessPolicyResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateLBCookieStickinessPolicyResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ElasticLoadBalancingClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateLBCookieStickinessPolicyRequest::response(QNetworkReply * const reply) const
 {
@@ -109,20 +101,17 @@ QtAws::Core::AwsAbstractResponse * CreateLBCookieStickinessPolicyRequest::respon
 }
 
 /*!
- * @internal
+ * \class QtAws::ElasticLoadBalancing::CreateLBCookieStickinessPolicyRequestPrivate
+ * \brief The CreateLBCookieStickinessPolicyRequestPrivate class provides private implementation for CreateLBCookieStickinessPolicyRequest.
+ * \internal
  *
- * @class  CreateLBCookieStickinessPolicyRequestPrivate
- *
- * @brief  Private implementation for CreateLBCookieStickinessPolicyRequest.
+ * \inmodule QtAwsElasticLoadBalancing
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateLBCookieStickinessPolicyRequestPrivate object.
- *
- * @param  action  ElasticLoadBalancing action being performed.
- * @param  q       Pointer to this object's public CreateLBCookieStickinessPolicyRequest instance.
+ * Constructs a CreateLBCookieStickinessPolicyRequestPrivate object for ElasticLoadBalancing \a action with,
+ * public implementation \a q.
  */
 CreateLBCookieStickinessPolicyRequestPrivate::CreateLBCookieStickinessPolicyRequestPrivate(
     const ElasticLoadBalancingRequest::Action action, CreateLBCookieStickinessPolicyRequest * const q)
@@ -132,15 +121,10 @@ CreateLBCookieStickinessPolicyRequestPrivate::CreateLBCookieStickinessPolicyRequ
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateLBCookieStickinessPolicyRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateLBCookieStickinessPolicyRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateLBCookieStickinessPolicyRequest instance.
  */
 CreateLBCookieStickinessPolicyRequestPrivate::CreateLBCookieStickinessPolicyRequestPrivate(
     const CreateLBCookieStickinessPolicyRequestPrivate &other, CreateLBCookieStickinessPolicyRequest * const q)

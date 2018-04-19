@@ -27,10 +27,9 @@ namespace ServiceCatalog {
 
 /*!
  * \class QtAws::ServiceCatalog::ScanProvisionedProductsRequest
- *
  * \brief The ScanProvisionedProductsRequest class provides an interface for ServiceCatalog ScanProvisionedProducts requests.
  *
- * \ingroup ServiceCatalog
+ * \inmodule QtAwsServiceCatalog
  *
  *  <fullname>AWS Service Catalog</fullname>
  * 
@@ -43,9 +42,7 @@ namespace ServiceCatalog {
  */
 
 /*!
- * @brief  Constructs a new ScanProvisionedProductsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ScanProvisionedProductsRequest::ScanProvisionedProductsRequest(const ScanProvisionedProductsRequest &other)
     : ServiceCatalogRequest(new ScanProvisionedProductsRequestPrivate(*other.d_func(), this))
@@ -54,7 +51,7 @@ ScanProvisionedProductsRequest::ScanProvisionedProductsRequest(const ScanProvisi
 }
 
 /*!
- * @brief  Constructs a new ScanProvisionedProductsRequest object.
+ * Constructs a ScanProvisionedProductsRequest object.
  */
 ScanProvisionedProductsRequest::ScanProvisionedProductsRequest()
     : ServiceCatalogRequest(new ScanProvisionedProductsRequestPrivate(ServiceCatalogRequest::ScanProvisionedProductsAction, this))
@@ -72,14 +69,9 @@ bool ScanProvisionedProductsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ScanProvisionedProductsResponse object.
+ * Returns a ScanProvisionedProductsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ScanProvisionedProductsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ServiceCatalogClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ScanProvisionedProductsRequest::response(QNetworkReply * const reply) const
 {
@@ -87,20 +79,17 @@ QtAws::Core::AwsAbstractResponse * ScanProvisionedProductsRequest::response(QNet
 }
 
 /*!
- * @internal
+ * \class QtAws::ServiceCatalog::ScanProvisionedProductsRequestPrivate
+ * \brief The ScanProvisionedProductsRequestPrivate class provides private implementation for ScanProvisionedProductsRequest.
+ * \internal
  *
- * @class  ScanProvisionedProductsRequestPrivate
- *
- * @brief  Private implementation for ScanProvisionedProductsRequest.
+ * \inmodule QtAwsServiceCatalog
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ScanProvisionedProductsRequestPrivate object.
- *
- * @param  action  ServiceCatalog action being performed.
- * @param  q       Pointer to this object's public ScanProvisionedProductsRequest instance.
+ * Constructs a ScanProvisionedProductsRequestPrivate object for ServiceCatalog \a action with,
+ * public implementation \a q.
  */
 ScanProvisionedProductsRequestPrivate::ScanProvisionedProductsRequestPrivate(
     const ServiceCatalogRequest::Action action, ScanProvisionedProductsRequest * const q)
@@ -110,15 +99,10 @@ ScanProvisionedProductsRequestPrivate::ScanProvisionedProductsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ScanProvisionedProductsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ScanProvisionedProductsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ScanProvisionedProductsRequest instance.
  */
 ScanProvisionedProductsRequestPrivate::ScanProvisionedProductsRequestPrivate(
     const ScanProvisionedProductsRequestPrivate &other, ScanProvisionedProductsRequest * const q)

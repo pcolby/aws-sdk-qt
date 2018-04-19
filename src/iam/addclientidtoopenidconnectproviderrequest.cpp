@@ -27,10 +27,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::AddClientIDToOpenIDConnectProviderRequest
- *
  * \brief The AddClientIDToOpenIDConnectProviderRequest class provides an interface for IAM AddClientIDToOpenIDConnectProvider requests.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -102,9 +101,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new AddClientIDToOpenIDConnectProviderRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AddClientIDToOpenIDConnectProviderRequest::AddClientIDToOpenIDConnectProviderRequest(const AddClientIDToOpenIDConnectProviderRequest &other)
     : IAMRequest(new AddClientIDToOpenIDConnectProviderRequestPrivate(*other.d_func(), this))
@@ -113,7 +110,7 @@ AddClientIDToOpenIDConnectProviderRequest::AddClientIDToOpenIDConnectProviderReq
 }
 
 /*!
- * @brief  Constructs a new AddClientIDToOpenIDConnectProviderRequest object.
+ * Constructs a AddClientIDToOpenIDConnectProviderRequest object.
  */
 AddClientIDToOpenIDConnectProviderRequest::AddClientIDToOpenIDConnectProviderRequest()
     : IAMRequest(new AddClientIDToOpenIDConnectProviderRequestPrivate(IAMRequest::AddClientIDToOpenIDConnectProviderAction, this))
@@ -131,14 +128,9 @@ bool AddClientIDToOpenIDConnectProviderRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AddClientIDToOpenIDConnectProviderResponse object.
+ * Returns a AddClientIDToOpenIDConnectProviderResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AddClientIDToOpenIDConnectProviderResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IAMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AddClientIDToOpenIDConnectProviderRequest::response(QNetworkReply * const reply) const
 {
@@ -146,20 +138,17 @@ QtAws::Core::AwsAbstractResponse * AddClientIDToOpenIDConnectProviderRequest::re
 }
 
 /*!
- * @internal
+ * \class QtAws::IAM::AddClientIDToOpenIDConnectProviderRequestPrivate
+ * \brief The AddClientIDToOpenIDConnectProviderRequestPrivate class provides private implementation for AddClientIDToOpenIDConnectProviderRequest.
+ * \internal
  *
- * @class  AddClientIDToOpenIDConnectProviderRequestPrivate
- *
- * @brief  Private implementation for AddClientIDToOpenIDConnectProviderRequest.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AddClientIDToOpenIDConnectProviderRequestPrivate object.
- *
- * @param  action  IAM action being performed.
- * @param  q       Pointer to this object's public AddClientIDToOpenIDConnectProviderRequest instance.
+ * Constructs a AddClientIDToOpenIDConnectProviderRequestPrivate object for IAM \a action with,
+ * public implementation \a q.
  */
 AddClientIDToOpenIDConnectProviderRequestPrivate::AddClientIDToOpenIDConnectProviderRequestPrivate(
     const IAMRequest::Action action, AddClientIDToOpenIDConnectProviderRequest * const q)
@@ -169,15 +158,10 @@ AddClientIDToOpenIDConnectProviderRequestPrivate::AddClientIDToOpenIDConnectProv
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AddClientIDToOpenIDConnectProviderRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AddClientIDToOpenIDConnectProviderRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AddClientIDToOpenIDConnectProviderRequest instance.
  */
 AddClientIDToOpenIDConnectProviderRequestPrivate::AddClientIDToOpenIDConnectProviderRequestPrivate(
     const AddClientIDToOpenIDConnectProviderRequestPrivate &other, AddClientIDToOpenIDConnectProviderRequest * const q)

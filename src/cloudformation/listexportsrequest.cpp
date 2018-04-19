@@ -27,10 +27,9 @@ namespace CloudFormation {
 
 /*!
  * \class QtAws::CloudFormation::ListExportsRequest
- *
  * \brief The ListExportsRequest class provides an interface for CloudFormation ListExports requests.
  *
- * \ingroup CloudFormation
+ * \inmodule QtAwsCloudFormation
  *
  *  <fullname>AWS CloudFormation</fullname>
  * 
@@ -59,9 +58,7 @@ namespace CloudFormation {
  */
 
 /*!
- * @brief  Constructs a new ListExportsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListExportsRequest::ListExportsRequest(const ListExportsRequest &other)
     : CloudFormationRequest(new ListExportsRequestPrivate(*other.d_func(), this))
@@ -70,7 +67,7 @@ ListExportsRequest::ListExportsRequest(const ListExportsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ListExportsRequest object.
+ * Constructs a ListExportsRequest object.
  */
 ListExportsRequest::ListExportsRequest()
     : CloudFormationRequest(new ListExportsRequestPrivate(CloudFormationRequest::ListExportsAction, this))
@@ -88,14 +85,9 @@ bool ListExportsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListExportsResponse object.
+ * Returns a ListExportsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListExportsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudFormationClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListExportsRequest::response(QNetworkReply * const reply) const
 {
@@ -103,20 +95,17 @@ QtAws::Core::AwsAbstractResponse * ListExportsRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudFormation::ListExportsRequestPrivate
+ * \brief The ListExportsRequestPrivate class provides private implementation for ListExportsRequest.
+ * \internal
  *
- * @class  ListExportsRequestPrivate
- *
- * @brief  Private implementation for ListExportsRequest.
+ * \inmodule QtAwsCloudFormation
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListExportsRequestPrivate object.
- *
- * @param  action  CloudFormation action being performed.
- * @param  q       Pointer to this object's public ListExportsRequest instance.
+ * Constructs a ListExportsRequestPrivate object for CloudFormation \a action with,
+ * public implementation \a q.
  */
 ListExportsRequestPrivate::ListExportsRequestPrivate(
     const CloudFormationRequest::Action action, ListExportsRequest * const q)
@@ -126,15 +115,10 @@ ListExportsRequestPrivate::ListExportsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListExportsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListExportsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListExportsRequest instance.
  */
 ListExportsRequestPrivate::ListExportsRequestPrivate(
     const ListExportsRequestPrivate &other, ListExportsRequest * const q)

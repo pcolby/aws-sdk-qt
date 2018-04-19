@@ -27,10 +27,9 @@ namespace OpsWorks {
 
 /*!
  * \class QtAws::OpsWorks::AttachElasticLoadBalancerRequest
- *
  * \brief The AttachElasticLoadBalancerRequest class provides an interface for OpsWorks AttachElasticLoadBalancer requests.
  *
- * \ingroup OpsWorks
+ * \inmodule QtAwsOpsWorks
  *
  *  <fullname>AWS OpsWorks</fullname>
  * 
@@ -143,9 +142,7 @@ namespace OpsWorks {
  */
 
 /*!
- * @brief  Constructs a new AttachElasticLoadBalancerRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AttachElasticLoadBalancerRequest::AttachElasticLoadBalancerRequest(const AttachElasticLoadBalancerRequest &other)
     : OpsWorksRequest(new AttachElasticLoadBalancerRequestPrivate(*other.d_func(), this))
@@ -154,7 +151,7 @@ AttachElasticLoadBalancerRequest::AttachElasticLoadBalancerRequest(const AttachE
 }
 
 /*!
- * @brief  Constructs a new AttachElasticLoadBalancerRequest object.
+ * Constructs a AttachElasticLoadBalancerRequest object.
  */
 AttachElasticLoadBalancerRequest::AttachElasticLoadBalancerRequest()
     : OpsWorksRequest(new AttachElasticLoadBalancerRequestPrivate(OpsWorksRequest::AttachElasticLoadBalancerAction, this))
@@ -172,14 +169,9 @@ bool AttachElasticLoadBalancerRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AttachElasticLoadBalancerResponse object.
+ * Returns a AttachElasticLoadBalancerResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AttachElasticLoadBalancerResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  OpsWorksClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AttachElasticLoadBalancerRequest::response(QNetworkReply * const reply) const
 {
@@ -187,20 +179,17 @@ QtAws::Core::AwsAbstractResponse * AttachElasticLoadBalancerRequest::response(QN
 }
 
 /*!
- * @internal
+ * \class QtAws::OpsWorks::AttachElasticLoadBalancerRequestPrivate
+ * \brief The AttachElasticLoadBalancerRequestPrivate class provides private implementation for AttachElasticLoadBalancerRequest.
+ * \internal
  *
- * @class  AttachElasticLoadBalancerRequestPrivate
- *
- * @brief  Private implementation for AttachElasticLoadBalancerRequest.
+ * \inmodule QtAwsOpsWorks
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AttachElasticLoadBalancerRequestPrivate object.
- *
- * @param  action  OpsWorks action being performed.
- * @param  q       Pointer to this object's public AttachElasticLoadBalancerRequest instance.
+ * Constructs a AttachElasticLoadBalancerRequestPrivate object for OpsWorks \a action with,
+ * public implementation \a q.
  */
 AttachElasticLoadBalancerRequestPrivate::AttachElasticLoadBalancerRequestPrivate(
     const OpsWorksRequest::Action action, AttachElasticLoadBalancerRequest * const q)
@@ -210,15 +199,10 @@ AttachElasticLoadBalancerRequestPrivate::AttachElasticLoadBalancerRequestPrivate
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AttachElasticLoadBalancerRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AttachElasticLoadBalancerRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AttachElasticLoadBalancerRequest instance.
  */
 AttachElasticLoadBalancerRequestPrivate::AttachElasticLoadBalancerRequestPrivate(
     const AttachElasticLoadBalancerRequestPrivate &other, AttachElasticLoadBalancerRequest * const q)

@@ -27,10 +27,9 @@ namespace Glue {
 
 /*!
  * \class QtAws::Glue::DeletePartitionRequest
- *
  * \brief The DeletePartitionRequest class provides an interface for Glue DeletePartition requests.
  *
- * \ingroup Glue
+ * \inmodule QtAwsGlue
  *
  *  <fullname>AWS Glue</fullname>
  * 
@@ -40,9 +39,7 @@ namespace Glue {
  */
 
 /*!
- * @brief  Constructs a new DeletePartitionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeletePartitionRequest::DeletePartitionRequest(const DeletePartitionRequest &other)
     : GlueRequest(new DeletePartitionRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ DeletePartitionRequest::DeletePartitionRequest(const DeletePartitionRequest &oth
 }
 
 /*!
- * @brief  Constructs a new DeletePartitionRequest object.
+ * Constructs a DeletePartitionRequest object.
  */
 DeletePartitionRequest::DeletePartitionRequest()
     : GlueRequest(new DeletePartitionRequestPrivate(GlueRequest::DeletePartitionAction, this))
@@ -69,14 +66,9 @@ bool DeletePartitionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeletePartitionResponse object.
+ * Returns a DeletePartitionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeletePartitionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GlueClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeletePartitionRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * DeletePartitionRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::Glue::DeletePartitionRequestPrivate
+ * \brief The DeletePartitionRequestPrivate class provides private implementation for DeletePartitionRequest.
+ * \internal
  *
- * @class  DeletePartitionRequestPrivate
- *
- * @brief  Private implementation for DeletePartitionRequest.
+ * \inmodule QtAwsGlue
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeletePartitionRequestPrivate object.
- *
- * @param  action  Glue action being performed.
- * @param  q       Pointer to this object's public DeletePartitionRequest instance.
+ * Constructs a DeletePartitionRequestPrivate object for Glue \a action with,
+ * public implementation \a q.
  */
 DeletePartitionRequestPrivate::DeletePartitionRequestPrivate(
     const GlueRequest::Action action, DeletePartitionRequest * const q)
@@ -107,15 +96,10 @@ DeletePartitionRequestPrivate::DeletePartitionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeletePartitionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeletePartitionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeletePartitionRequest instance.
  */
 DeletePartitionRequestPrivate::DeletePartitionRequestPrivate(
     const DeletePartitionRequestPrivate &other, DeletePartitionRequest * const q)

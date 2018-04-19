@@ -27,19 +27,16 @@ namespace S3 {
 
 /*!
  * \class QtAws::S3::PutBucketReplicationRequest
- *
  * \brief The PutBucketReplicationRequest class provides an interface for S3 PutBucketReplication requests.
  *
- * \ingroup S3
+ * \inmodule QtAwsS3
  *
  *
  * \sa S3Client::putBucketReplication
  */
 
 /*!
- * @brief  Constructs a new PutBucketReplicationRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 PutBucketReplicationRequest::PutBucketReplicationRequest(const PutBucketReplicationRequest &other)
     : S3Request(new PutBucketReplicationRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ PutBucketReplicationRequest::PutBucketReplicationRequest(const PutBucketReplicat
 }
 
 /*!
- * @brief  Constructs a new PutBucketReplicationRequest object.
+ * Constructs a PutBucketReplicationRequest object.
  */
 PutBucketReplicationRequest::PutBucketReplicationRequest()
     : S3Request(new PutBucketReplicationRequestPrivate(S3Request::PutBucketReplicationAction, this))
@@ -66,14 +63,9 @@ bool PutBucketReplicationRequest::isValid() const
 
 
 /*!
- * @brief  Construct an PutBucketReplicationResponse object.
+ * Returns a PutBucketReplicationResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An PutBucketReplicationResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  S3Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * PutBucketReplicationRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * PutBucketReplicationRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::S3::PutBucketReplicationRequestPrivate
+ * \brief The PutBucketReplicationRequestPrivate class provides private implementation for PutBucketReplicationRequest.
+ * \internal
  *
- * @class  PutBucketReplicationRequestPrivate
- *
- * @brief  Private implementation for PutBucketReplicationRequest.
+ * \inmodule QtAwsS3
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new PutBucketReplicationRequestPrivate object.
- *
- * @param  action  S3 action being performed.
- * @param  q       Pointer to this object's public PutBucketReplicationRequest instance.
+ * Constructs a PutBucketReplicationRequestPrivate object for S3 \a action with,
+ * public implementation \a q.
  */
 PutBucketReplicationRequestPrivate::PutBucketReplicationRequestPrivate(
     const S3Request::Action action, PutBucketReplicationRequest * const q)
@@ -104,15 +93,10 @@ PutBucketReplicationRequestPrivate::PutBucketReplicationRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutBucketReplicationRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the PutBucketReplicationRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public PutBucketReplicationRequest instance.
  */
 PutBucketReplicationRequestPrivate::PutBucketReplicationRequestPrivate(
     const PutBucketReplicationRequestPrivate &other, PutBucketReplicationRequest * const q)

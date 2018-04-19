@@ -27,10 +27,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::CopyDBParameterGroupRequest
- *
  * \brief The CopyDBParameterGroupRequest class provides an interface for RDS CopyDBParameterGroup requests.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -101,9 +100,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new CopyDBParameterGroupRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CopyDBParameterGroupRequest::CopyDBParameterGroupRequest(const CopyDBParameterGroupRequest &other)
     : RDSRequest(new CopyDBParameterGroupRequestPrivate(*other.d_func(), this))
@@ -112,7 +109,7 @@ CopyDBParameterGroupRequest::CopyDBParameterGroupRequest(const CopyDBParameterGr
 }
 
 /*!
- * @brief  Constructs a new CopyDBParameterGroupRequest object.
+ * Constructs a CopyDBParameterGroupRequest object.
  */
 CopyDBParameterGroupRequest::CopyDBParameterGroupRequest()
     : RDSRequest(new CopyDBParameterGroupRequestPrivate(RDSRequest::CopyDBParameterGroupAction, this))
@@ -130,14 +127,9 @@ bool CopyDBParameterGroupRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CopyDBParameterGroupResponse object.
+ * Returns a CopyDBParameterGroupResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CopyDBParameterGroupResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RDSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CopyDBParameterGroupRequest::response(QNetworkReply * const reply) const
 {
@@ -145,20 +137,17 @@ QtAws::Core::AwsAbstractResponse * CopyDBParameterGroupRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::RDS::CopyDBParameterGroupRequestPrivate
+ * \brief The CopyDBParameterGroupRequestPrivate class provides private implementation for CopyDBParameterGroupRequest.
+ * \internal
  *
- * @class  CopyDBParameterGroupRequestPrivate
- *
- * @brief  Private implementation for CopyDBParameterGroupRequest.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CopyDBParameterGroupRequestPrivate object.
- *
- * @param  action  RDS action being performed.
- * @param  q       Pointer to this object's public CopyDBParameterGroupRequest instance.
+ * Constructs a CopyDBParameterGroupRequestPrivate object for RDS \a action with,
+ * public implementation \a q.
  */
 CopyDBParameterGroupRequestPrivate::CopyDBParameterGroupRequestPrivate(
     const RDSRequest::Action action, CopyDBParameterGroupRequest * const q)
@@ -168,15 +157,10 @@ CopyDBParameterGroupRequestPrivate::CopyDBParameterGroupRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CopyDBParameterGroupRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CopyDBParameterGroupRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CopyDBParameterGroupRequest instance.
  */
 CopyDBParameterGroupRequestPrivate::CopyDBParameterGroupRequestPrivate(
     const CopyDBParameterGroupRequestPrivate &other, CopyDBParameterGroupRequest * const q)

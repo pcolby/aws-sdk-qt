@@ -27,10 +27,9 @@ namespace LexModelBuildingService {
 
 /*!
  * \class QtAws::LexModelBuildingService::GetBotVersionsRequest
- *
  * \brief The GetBotVersionsRequest class provides an interface for LexModelBuildingService GetBotVersions requests.
  *
- * \ingroup LexModelBuildingService
+ * \inmodule QtAwsLexModelBuildingService
  *
  *  <fullname>Amazon Lex Build-Time Actions</fullname>
  * 
@@ -41,9 +40,7 @@ namespace LexModelBuildingService {
  */
 
 /*!
- * @brief  Constructs a new GetBotVersionsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetBotVersionsRequest::GetBotVersionsRequest(const GetBotVersionsRequest &other)
     : LexModelBuildingServiceRequest(new GetBotVersionsRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ GetBotVersionsRequest::GetBotVersionsRequest(const GetBotVersionsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetBotVersionsRequest object.
+ * Constructs a GetBotVersionsRequest object.
  */
 GetBotVersionsRequest::GetBotVersionsRequest()
     : LexModelBuildingServiceRequest(new GetBotVersionsRequestPrivate(LexModelBuildingServiceRequest::GetBotVersionsAction, this))
@@ -70,14 +67,9 @@ bool GetBotVersionsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetBotVersionsResponse object.
+ * Returns a GetBotVersionsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetBotVersionsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  LexModelBuildingServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetBotVersionsRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * GetBotVersionsRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::LexModelBuildingService::GetBotVersionsRequestPrivate
+ * \brief The GetBotVersionsRequestPrivate class provides private implementation for GetBotVersionsRequest.
+ * \internal
  *
- * @class  GetBotVersionsRequestPrivate
- *
- * @brief  Private implementation for GetBotVersionsRequest.
+ * \inmodule QtAwsLexModelBuildingService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetBotVersionsRequestPrivate object.
- *
- * @param  action  LexModelBuildingService action being performed.
- * @param  q       Pointer to this object's public GetBotVersionsRequest instance.
+ * Constructs a GetBotVersionsRequestPrivate object for LexModelBuildingService \a action with,
+ * public implementation \a q.
  */
 GetBotVersionsRequestPrivate::GetBotVersionsRequestPrivate(
     const LexModelBuildingServiceRequest::Action action, GetBotVersionsRequest * const q)
@@ -108,15 +97,10 @@ GetBotVersionsRequestPrivate::GetBotVersionsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetBotVersionsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetBotVersionsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetBotVersionsRequest instance.
  */
 GetBotVersionsRequestPrivate::GetBotVersionsRequestPrivate(
     const GetBotVersionsRequestPrivate &other, GetBotVersionsRequest * const q)

@@ -27,10 +27,9 @@ namespace StorageGateway {
 
 /*!
  * \class QtAws::StorageGateway::DescribeCachediSCSIVolumesRequest
- *
  * \brief The DescribeCachediSCSIVolumesRequest class provides an interface for StorageGateway DescribeCachediSCSIVolumes requests.
  *
- * \ingroup StorageGateway
+ * \inmodule QtAwsStorageGateway
  *
  *  <fullname>AWS Storage Gateway Service</fullname>
  * 
@@ -106,9 +105,7 @@ namespace StorageGateway {
  */
 
 /*!
- * @brief  Constructs a new DescribeCachediSCSIVolumesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeCachediSCSIVolumesRequest::DescribeCachediSCSIVolumesRequest(const DescribeCachediSCSIVolumesRequest &other)
     : StorageGatewayRequest(new DescribeCachediSCSIVolumesRequestPrivate(*other.d_func(), this))
@@ -117,7 +114,7 @@ DescribeCachediSCSIVolumesRequest::DescribeCachediSCSIVolumesRequest(const Descr
 }
 
 /*!
- * @brief  Constructs a new DescribeCachediSCSIVolumesRequest object.
+ * Constructs a DescribeCachediSCSIVolumesRequest object.
  */
 DescribeCachediSCSIVolumesRequest::DescribeCachediSCSIVolumesRequest()
     : StorageGatewayRequest(new DescribeCachediSCSIVolumesRequestPrivate(StorageGatewayRequest::DescribeCachediSCSIVolumesAction, this))
@@ -135,14 +132,9 @@ bool DescribeCachediSCSIVolumesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeCachediSCSIVolumesResponse object.
+ * Returns a DescribeCachediSCSIVolumesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeCachediSCSIVolumesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  StorageGatewayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeCachediSCSIVolumesRequest::response(QNetworkReply * const reply) const
 {
@@ -150,20 +142,17 @@ QtAws::Core::AwsAbstractResponse * DescribeCachediSCSIVolumesRequest::response(Q
 }
 
 /*!
- * @internal
+ * \class QtAws::StorageGateway::DescribeCachediSCSIVolumesRequestPrivate
+ * \brief The DescribeCachediSCSIVolumesRequestPrivate class provides private implementation for DescribeCachediSCSIVolumesRequest.
+ * \internal
  *
- * @class  DescribeCachediSCSIVolumesRequestPrivate
- *
- * @brief  Private implementation for DescribeCachediSCSIVolumesRequest.
+ * \inmodule QtAwsStorageGateway
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeCachediSCSIVolumesRequestPrivate object.
- *
- * @param  action  StorageGateway action being performed.
- * @param  q       Pointer to this object's public DescribeCachediSCSIVolumesRequest instance.
+ * Constructs a DescribeCachediSCSIVolumesRequestPrivate object for StorageGateway \a action with,
+ * public implementation \a q.
  */
 DescribeCachediSCSIVolumesRequestPrivate::DescribeCachediSCSIVolumesRequestPrivate(
     const StorageGatewayRequest::Action action, DescribeCachediSCSIVolumesRequest * const q)
@@ -173,15 +162,10 @@ DescribeCachediSCSIVolumesRequestPrivate::DescribeCachediSCSIVolumesRequestPriva
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeCachediSCSIVolumesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeCachediSCSIVolumesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeCachediSCSIVolumesRequest instance.
  */
 DescribeCachediSCSIVolumesRequestPrivate::DescribeCachediSCSIVolumesRequestPrivate(
     const DescribeCachediSCSIVolumesRequestPrivate &other, DescribeCachediSCSIVolumesRequest * const q)

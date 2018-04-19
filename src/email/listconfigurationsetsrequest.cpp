@@ -27,10 +27,9 @@ namespace SES {
 
 /*!
  * \class QtAws::SES::ListConfigurationSetsRequest
- *
  * \brief The ListConfigurationSetsRequest class provides an interface for SES ListConfigurationSets requests.
  *
- * \ingroup SES
+ * \inmodule QtAwsSES
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -48,9 +47,7 @@ namespace SES {
  */
 
 /*!
- * @brief  Constructs a new ListConfigurationSetsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListConfigurationSetsRequest::ListConfigurationSetsRequest(const ListConfigurationSetsRequest &other)
     : SESRequest(new ListConfigurationSetsRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ ListConfigurationSetsRequest::ListConfigurationSetsRequest(const ListConfigurati
 }
 
 /*!
- * @brief  Constructs a new ListConfigurationSetsRequest object.
+ * Constructs a ListConfigurationSetsRequest object.
  */
 ListConfigurationSetsRequest::ListConfigurationSetsRequest()
     : SESRequest(new ListConfigurationSetsRequestPrivate(SESRequest::ListConfigurationSetsAction, this))
@@ -77,14 +74,9 @@ bool ListConfigurationSetsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListConfigurationSetsResponse object.
+ * Returns a ListConfigurationSetsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListConfigurationSetsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SESClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListConfigurationSetsRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * ListConfigurationSetsRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::SES::ListConfigurationSetsRequestPrivate
+ * \brief The ListConfigurationSetsRequestPrivate class provides private implementation for ListConfigurationSetsRequest.
+ * \internal
  *
- * @class  ListConfigurationSetsRequestPrivate
- *
- * @brief  Private implementation for ListConfigurationSetsRequest.
+ * \inmodule QtAwsSES
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListConfigurationSetsRequestPrivate object.
- *
- * @param  action  SES action being performed.
- * @param  q       Pointer to this object's public ListConfigurationSetsRequest instance.
+ * Constructs a ListConfigurationSetsRequestPrivate object for SES \a action with,
+ * public implementation \a q.
  */
 ListConfigurationSetsRequestPrivate::ListConfigurationSetsRequestPrivate(
     const SESRequest::Action action, ListConfigurationSetsRequest * const q)
@@ -115,15 +104,10 @@ ListConfigurationSetsRequestPrivate::ListConfigurationSetsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListConfigurationSetsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListConfigurationSetsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListConfigurationSetsRequest instance.
  */
 ListConfigurationSetsRequestPrivate::ListConfigurationSetsRequestPrivate(
     const ListConfigurationSetsRequestPrivate &other, ListConfigurationSetsRequest * const q)

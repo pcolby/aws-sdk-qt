@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::CreateSpotDatafeedSubscriptionRequest
- *
  * \brief The CreateSpotDatafeedSubscriptionRequest class provides an interface for EC2 CreateSpotDatafeedSubscription requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new CreateSpotDatafeedSubscriptionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateSpotDatafeedSubscriptionRequest::CreateSpotDatafeedSubscriptionRequest(const CreateSpotDatafeedSubscriptionRequest &other)
     : EC2Request(new CreateSpotDatafeedSubscriptionRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ CreateSpotDatafeedSubscriptionRequest::CreateSpotDatafeedSubscriptionRequest(con
 }
 
 /*!
- * @brief  Constructs a new CreateSpotDatafeedSubscriptionRequest object.
+ * Constructs a CreateSpotDatafeedSubscriptionRequest object.
  */
 CreateSpotDatafeedSubscriptionRequest::CreateSpotDatafeedSubscriptionRequest()
     : EC2Request(new CreateSpotDatafeedSubscriptionRequestPrivate(EC2Request::CreateSpotDatafeedSubscriptionAction, this))
@@ -70,14 +67,9 @@ bool CreateSpotDatafeedSubscriptionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateSpotDatafeedSubscriptionResponse object.
+ * Returns a CreateSpotDatafeedSubscriptionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateSpotDatafeedSubscriptionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateSpotDatafeedSubscriptionRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * CreateSpotDatafeedSubscriptionRequest::respon
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::CreateSpotDatafeedSubscriptionRequestPrivate
+ * \brief The CreateSpotDatafeedSubscriptionRequestPrivate class provides private implementation for CreateSpotDatafeedSubscriptionRequest.
+ * \internal
  *
- * @class  CreateSpotDatafeedSubscriptionRequestPrivate
- *
- * @brief  Private implementation for CreateSpotDatafeedSubscriptionRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateSpotDatafeedSubscriptionRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public CreateSpotDatafeedSubscriptionRequest instance.
+ * Constructs a CreateSpotDatafeedSubscriptionRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 CreateSpotDatafeedSubscriptionRequestPrivate::CreateSpotDatafeedSubscriptionRequestPrivate(
     const EC2Request::Action action, CreateSpotDatafeedSubscriptionRequest * const q)
@@ -108,15 +97,10 @@ CreateSpotDatafeedSubscriptionRequestPrivate::CreateSpotDatafeedSubscriptionRequ
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateSpotDatafeedSubscriptionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateSpotDatafeedSubscriptionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateSpotDatafeedSubscriptionRequest instance.
  */
 CreateSpotDatafeedSubscriptionRequestPrivate::CreateSpotDatafeedSubscriptionRequestPrivate(
     const CreateSpotDatafeedSubscriptionRequestPrivate &other, CreateSpotDatafeedSubscriptionRequest * const q)

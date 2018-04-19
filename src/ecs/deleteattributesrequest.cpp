@@ -27,10 +27,9 @@ namespace ECS {
 
 /*!
  * \class QtAws::ECS::DeleteAttributesRequest
- *
  * \brief The DeleteAttributesRequest class provides an interface for ECS DeleteAttributes requests.
  *
- * \ingroup ECS
+ * \inmodule QtAwsECS
  *
  *  Amazon Elastic Container Service (Amazon ECS) is a highly scalable, fast, container management service that makes it
  *  easy to run, stop, and manage Docker containers on a cluster. You can host your cluster on a serverless infrastructure
@@ -54,9 +53,7 @@ namespace ECS {
  */
 
 /*!
- * @brief  Constructs a new DeleteAttributesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteAttributesRequest::DeleteAttributesRequest(const DeleteAttributesRequest &other)
     : ECSRequest(new DeleteAttributesRequestPrivate(*other.d_func(), this))
@@ -65,7 +62,7 @@ DeleteAttributesRequest::DeleteAttributesRequest(const DeleteAttributesRequest &
 }
 
 /*!
- * @brief  Constructs a new DeleteAttributesRequest object.
+ * Constructs a DeleteAttributesRequest object.
  */
 DeleteAttributesRequest::DeleteAttributesRequest()
     : ECSRequest(new DeleteAttributesRequestPrivate(ECSRequest::DeleteAttributesAction, this))
@@ -83,14 +80,9 @@ bool DeleteAttributesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteAttributesResponse object.
+ * Returns a DeleteAttributesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteAttributesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ECSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteAttributesRequest::response(QNetworkReply * const reply) const
 {
@@ -98,20 +90,17 @@ QtAws::Core::AwsAbstractResponse * DeleteAttributesRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::ECS::DeleteAttributesRequestPrivate
+ * \brief The DeleteAttributesRequestPrivate class provides private implementation for DeleteAttributesRequest.
+ * \internal
  *
- * @class  DeleteAttributesRequestPrivate
- *
- * @brief  Private implementation for DeleteAttributesRequest.
+ * \inmodule QtAwsECS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteAttributesRequestPrivate object.
- *
- * @param  action  ECS action being performed.
- * @param  q       Pointer to this object's public DeleteAttributesRequest instance.
+ * Constructs a DeleteAttributesRequestPrivate object for ECS \a action with,
+ * public implementation \a q.
  */
 DeleteAttributesRequestPrivate::DeleteAttributesRequestPrivate(
     const ECSRequest::Action action, DeleteAttributesRequest * const q)
@@ -121,15 +110,10 @@ DeleteAttributesRequestPrivate::DeleteAttributesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteAttributesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteAttributesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteAttributesRequest instance.
  */
 DeleteAttributesRequestPrivate::DeleteAttributesRequestPrivate(
     const DeleteAttributesRequestPrivate &other, DeleteAttributesRequest * const q)

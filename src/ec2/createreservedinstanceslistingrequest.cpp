@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::CreateReservedInstancesListingRequest
- *
  * \brief The CreateReservedInstancesListingRequest class provides an interface for EC2 CreateReservedInstancesListing requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new CreateReservedInstancesListingRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateReservedInstancesListingRequest::CreateReservedInstancesListingRequest(const CreateReservedInstancesListingRequest &other)
     : EC2Request(new CreateReservedInstancesListingRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ CreateReservedInstancesListingRequest::CreateReservedInstancesListingRequest(con
 }
 
 /*!
- * @brief  Constructs a new CreateReservedInstancesListingRequest object.
+ * Constructs a CreateReservedInstancesListingRequest object.
  */
 CreateReservedInstancesListingRequest::CreateReservedInstancesListingRequest()
     : EC2Request(new CreateReservedInstancesListingRequestPrivate(EC2Request::CreateReservedInstancesListingAction, this))
@@ -70,14 +67,9 @@ bool CreateReservedInstancesListingRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateReservedInstancesListingResponse object.
+ * Returns a CreateReservedInstancesListingResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateReservedInstancesListingResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateReservedInstancesListingRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * CreateReservedInstancesListingRequest::respon
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::CreateReservedInstancesListingRequestPrivate
+ * \brief The CreateReservedInstancesListingRequestPrivate class provides private implementation for CreateReservedInstancesListingRequest.
+ * \internal
  *
- * @class  CreateReservedInstancesListingRequestPrivate
- *
- * @brief  Private implementation for CreateReservedInstancesListingRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateReservedInstancesListingRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public CreateReservedInstancesListingRequest instance.
+ * Constructs a CreateReservedInstancesListingRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 CreateReservedInstancesListingRequestPrivate::CreateReservedInstancesListingRequestPrivate(
     const EC2Request::Action action, CreateReservedInstancesListingRequest * const q)
@@ -108,15 +97,10 @@ CreateReservedInstancesListingRequestPrivate::CreateReservedInstancesListingRequ
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateReservedInstancesListingRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateReservedInstancesListingRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateReservedInstancesListingRequest instance.
  */
 CreateReservedInstancesListingRequestPrivate::CreateReservedInstancesListingRequestPrivate(
     const CreateReservedInstancesListingRequestPrivate &other, CreateReservedInstancesListingRequest * const q)

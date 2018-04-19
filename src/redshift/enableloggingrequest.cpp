@@ -27,10 +27,9 @@ namespace Redshift {
 
 /*!
  * \class QtAws::Redshift::EnableLoggingRequest
- *
  * \brief The EnableLoggingRequest class provides an interface for Redshift EnableLogging requests.
  *
- * \ingroup Redshift
+ * \inmodule QtAwsRedshift
  *
  *  <fullname>Amazon Redshift</fullname>
  * 
@@ -67,9 +66,7 @@ namespace Redshift {
  */
 
 /*!
- * @brief  Constructs a new EnableLoggingRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 EnableLoggingRequest::EnableLoggingRequest(const EnableLoggingRequest &other)
     : RedshiftRequest(new EnableLoggingRequestPrivate(*other.d_func(), this))
@@ -78,7 +75,7 @@ EnableLoggingRequest::EnableLoggingRequest(const EnableLoggingRequest &other)
 }
 
 /*!
- * @brief  Constructs a new EnableLoggingRequest object.
+ * Constructs a EnableLoggingRequest object.
  */
 EnableLoggingRequest::EnableLoggingRequest()
     : RedshiftRequest(new EnableLoggingRequestPrivate(RedshiftRequest::EnableLoggingAction, this))
@@ -96,14 +93,9 @@ bool EnableLoggingRequest::isValid() const
 
 
 /*!
- * @brief  Construct an EnableLoggingResponse object.
+ * Returns a EnableLoggingResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An EnableLoggingResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RedshiftClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * EnableLoggingRequest::response(QNetworkReply * const reply) const
 {
@@ -111,20 +103,17 @@ QtAws::Core::AwsAbstractResponse * EnableLoggingRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::Redshift::EnableLoggingRequestPrivate
+ * \brief The EnableLoggingRequestPrivate class provides private implementation for EnableLoggingRequest.
+ * \internal
  *
- * @class  EnableLoggingRequestPrivate
- *
- * @brief  Private implementation for EnableLoggingRequest.
+ * \inmodule QtAwsRedshift
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new EnableLoggingRequestPrivate object.
- *
- * @param  action  Redshift action being performed.
- * @param  q       Pointer to this object's public EnableLoggingRequest instance.
+ * Constructs a EnableLoggingRequestPrivate object for Redshift \a action with,
+ * public implementation \a q.
  */
 EnableLoggingRequestPrivate::EnableLoggingRequestPrivate(
     const RedshiftRequest::Action action, EnableLoggingRequest * const q)
@@ -134,15 +123,10 @@ EnableLoggingRequestPrivate::EnableLoggingRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new EnableLoggingRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the EnableLoggingRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public EnableLoggingRequest instance.
  */
 EnableLoggingRequestPrivate::EnableLoggingRequestPrivate(
     const EnableLoggingRequestPrivate &other, EnableLoggingRequest * const q)

@@ -27,10 +27,9 @@ namespace ResourceGroups {
 
 /*!
  * \class QtAws::ResourceGroups::SearchResourcesRequest
- *
  * \brief The SearchResourcesRequest class provides an interface for ResourceGroups SearchResources requests.
  *
- * \ingroup ResourceGroups
+ * \inmodule QtAwsResourceGroups
  *
  *  <fullname>AWS Resource Groups</fullname>
  * 
@@ -81,9 +80,7 @@ namespace ResourceGroups {
  */
 
 /*!
- * @brief  Constructs a new SearchResourcesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 SearchResourcesRequest::SearchResourcesRequest(const SearchResourcesRequest &other)
     : ResourceGroupsRequest(new SearchResourcesRequestPrivate(*other.d_func(), this))
@@ -92,7 +89,7 @@ SearchResourcesRequest::SearchResourcesRequest(const SearchResourcesRequest &oth
 }
 
 /*!
- * @brief  Constructs a new SearchResourcesRequest object.
+ * Constructs a SearchResourcesRequest object.
  */
 SearchResourcesRequest::SearchResourcesRequest()
     : ResourceGroupsRequest(new SearchResourcesRequestPrivate(ResourceGroupsRequest::SearchResourcesAction, this))
@@ -110,14 +107,9 @@ bool SearchResourcesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an SearchResourcesResponse object.
+ * Returns a SearchResourcesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An SearchResourcesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ResourceGroupsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * SearchResourcesRequest::response(QNetworkReply * const reply) const
 {
@@ -125,20 +117,17 @@ QtAws::Core::AwsAbstractResponse * SearchResourcesRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::ResourceGroups::SearchResourcesRequestPrivate
+ * \brief The SearchResourcesRequestPrivate class provides private implementation for SearchResourcesRequest.
+ * \internal
  *
- * @class  SearchResourcesRequestPrivate
- *
- * @brief  Private implementation for SearchResourcesRequest.
+ * \inmodule QtAwsResourceGroups
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new SearchResourcesRequestPrivate object.
- *
- * @param  action  ResourceGroups action being performed.
- * @param  q       Pointer to this object's public SearchResourcesRequest instance.
+ * Constructs a SearchResourcesRequestPrivate object for ResourceGroups \a action with,
+ * public implementation \a q.
  */
 SearchResourcesRequestPrivate::SearchResourcesRequestPrivate(
     const ResourceGroupsRequest::Action action, SearchResourcesRequest * const q)
@@ -148,15 +137,10 @@ SearchResourcesRequestPrivate::SearchResourcesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SearchResourcesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the SearchResourcesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public SearchResourcesRequest instance.
  */
 SearchResourcesRequestPrivate::SearchResourcesRequestPrivate(
     const SearchResourcesRequestPrivate &other, SearchResourcesRequest * const q)

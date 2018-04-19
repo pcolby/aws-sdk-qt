@@ -27,10 +27,9 @@ namespace CognitoIdentityProvider {
 
 /*!
  * \class QtAws::CognitoIdentityProvider::ListResourceServersRequest
- *
  * \brief The ListResourceServersRequest class provides an interface for CognitoIdentityProvider ListResourceServers requests.
  *
- * \ingroup CognitoIdentityProvider
+ * \inmodule QtAwsCognitoIdentityProvider
  *
  *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
  *  authenticate a user to obtain tokens related to user identity and access
@@ -47,9 +46,7 @@ namespace CognitoIdentityProvider {
  */
 
 /*!
- * @brief  Constructs a new ListResourceServersRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListResourceServersRequest::ListResourceServersRequest(const ListResourceServersRequest &other)
     : CognitoIdentityProviderRequest(new ListResourceServersRequestPrivate(*other.d_func(), this))
@@ -58,7 +55,7 @@ ListResourceServersRequest::ListResourceServersRequest(const ListResourceServers
 }
 
 /*!
- * @brief  Constructs a new ListResourceServersRequest object.
+ * Constructs a ListResourceServersRequest object.
  */
 ListResourceServersRequest::ListResourceServersRequest()
     : CognitoIdentityProviderRequest(new ListResourceServersRequestPrivate(CognitoIdentityProviderRequest::ListResourceServersAction, this))
@@ -76,14 +73,9 @@ bool ListResourceServersRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListResourceServersResponse object.
+ * Returns a ListResourceServersResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListResourceServersResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CognitoIdentityProviderClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListResourceServersRequest::response(QNetworkReply * const reply) const
 {
@@ -91,20 +83,17 @@ QtAws::Core::AwsAbstractResponse * ListResourceServersRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::CognitoIdentityProvider::ListResourceServersRequestPrivate
+ * \brief The ListResourceServersRequestPrivate class provides private implementation for ListResourceServersRequest.
+ * \internal
  *
- * @class  ListResourceServersRequestPrivate
- *
- * @brief  Private implementation for ListResourceServersRequest.
+ * \inmodule QtAwsCognitoIdentityProvider
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListResourceServersRequestPrivate object.
- *
- * @param  action  CognitoIdentityProvider action being performed.
- * @param  q       Pointer to this object's public ListResourceServersRequest instance.
+ * Constructs a ListResourceServersRequestPrivate object for CognitoIdentityProvider \a action with,
+ * public implementation \a q.
  */
 ListResourceServersRequestPrivate::ListResourceServersRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, ListResourceServersRequest * const q)
@@ -114,15 +103,10 @@ ListResourceServersRequestPrivate::ListResourceServersRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListResourceServersRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListResourceServersRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListResourceServersRequest instance.
  */
 ListResourceServersRequestPrivate::ListResourceServersRequestPrivate(
     const ListResourceServersRequestPrivate &other, ListResourceServersRequest * const q)

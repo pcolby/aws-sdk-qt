@@ -25,16 +25,32 @@ namespace MediaPackage {
 
 /*!
  * \class QtAws::MediaPackage::MediaPackageRequest
- *
  * \brief The MediaPackageRequest class provides an interface for MediaPackage requests.
  *
- * \ingroup MediaPackage
+ * \inmodule QtAwsMediaPackage
  */
 
 /*!
- * @brief  Constructs a new MediaPackageRequest object.
+ * \enum MediaPackageRequest::Action
  *
- * @param  action  The MediaPackage action to request.
+ * This enum describes the actions that can be performed as MediaPackage
+ * requests.
+ *
+ * \value CreateChannelAction MediaPackage CreateChannel action.
+ * \value CreateOriginEndpointAction MediaPackage CreateOriginEndpoint action.
+ * \value DeleteChannelAction MediaPackage DeleteChannel action.
+ * \value DeleteOriginEndpointAction MediaPackage DeleteOriginEndpoint action.
+ * \value DescribeChannelAction MediaPackage DescribeChannel action.
+ * \value DescribeOriginEndpointAction MediaPackage DescribeOriginEndpoint action.
+ * \value ListChannelsAction MediaPackage ListChannels action.
+ * \value ListOriginEndpointsAction MediaPackage ListOriginEndpoints action.
+ * \value RotateChannelCredentialsAction MediaPackage RotateChannelCredentials action.
+ * \value UpdateChannelAction MediaPackage UpdateChannel action.
+ * \value UpdateOriginEndpointAction MediaPackage UpdateOriginEndpoint action.
+ */
+
+/*!
+ * Constructs a[n] MediaPackageRequest object for MediaPackage \a action.
  */
 MediaPackageRequest::MediaPackageRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new MediaPackageRequestPrivate(action, this))
@@ -43,9 +59,7 @@ MediaPackageRequest::MediaPackageRequest(const Action action)
 }
 
 /*!
- * @brief  Constructs a new MediaPackageRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 MediaPackageRequest::MediaPackageRequest(const MediaPackageRequest &other)
     : QtAws::Core::AwsAbstractRequest(new MediaPackageRequestPrivate(*other.d_func(), this))
@@ -54,13 +68,7 @@ MediaPackageRequest::MediaPackageRequest(const MediaPackageRequest &other)
 }
 
 /*!
- * @brief  Assignment operator.
- *
- * Assigns \a other to \c this.
- *
- * @param  other  Instance to copy.
- *
- * @return  A reference to \c this.
+ * Sets the MediaPackageRequest object to be equal to \a other.
  */
 MediaPackageRequest& MediaPackageRequest::operator=(const MediaPackageRequest &other)
 {
@@ -72,14 +80,10 @@ MediaPackageRequest& MediaPackageRequest::operator=(const MediaPackageRequest &o
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new MediaPackageRequest object.
+ * Constructs aa MediaPackageRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from MediaPackageRequestPrivate.
- *
- * @param  d  Pointer to private data (aka D-Pointer).
  */
 MediaPackageRequest::MediaPackageRequest(MediaPackageRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
@@ -87,7 +91,7 @@ MediaPackageRequest::MediaPackageRequest(MediaPackageRequestPrivate * const d) :
 }
 
 /*!
- * \brief Returns the MediaPackage action to be performed by this request.
+ * Returns the MediaPackage action to be performed by this request.
  */
 MediaPackageRequest::Action MediaPackageRequest::action() const
 {
@@ -96,7 +100,7 @@ MediaPackageRequest::Action MediaPackageRequest::action() const
 }
 
 /*!
- * \brief Returns the name of the MediaPackage action to be performed by this request.
+ * Returns the name of the MediaPackage action to be performed by this request.
  */
 QString MediaPackageRequest::actionString() const
 {
@@ -104,7 +108,7 @@ QString MediaPackageRequest::actionString() const
 }
 
 /*!
- * \brief Returns the MediaPackage API version implemented by this request.
+ * Returns the MediaPackage API version implemented by this request.
  */
 QString MediaPackageRequest::apiVersion() const
 {
@@ -113,7 +117,7 @@ QString MediaPackageRequest::apiVersion() const
 }
 
 /*!
- * @brief Set the MediaPackage action to be performed by this request to \a action.
+ * Sets the MediaPackage action to be performed by this request to \a action.
  */
 void MediaPackageRequest::setAction(const Action action)
 {
@@ -122,7 +126,7 @@ void MediaPackageRequest::setAction(const Action action)
 }
 
 /*!
- * Set the MediaPackage API version to include in this request to \a version.
+ * Sets the MediaPackage API version to include in this request to \a version.
  */
 void MediaPackageRequest::setApiVersion(const QString &version)
 {
@@ -131,7 +135,7 @@ void MediaPackageRequest::setApiVersion(const QString &version)
 }
 
 /*!
- * \brief Returns \c true if this request is the same as \a other.
+ * Returns \c true if this request is equal to \a other; \c false otherwise.
  *
  * Note, most derived *Request classes do not need to provider their own
  * implementations of this function, since most such request classes rely on
@@ -146,8 +150,8 @@ bool MediaPackageRequest::operator==(const MediaPackageRequest &other) const
             (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
-/*!
- * @brief  Check if \a queueName is a valid MediaPackage queue name.
+/*
+ * Returns \c tue if \a queueName is a valid MediaPackage queue name.
  *
  * @par From MediaPackage FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
@@ -166,9 +170,8 @@ bool MediaPackageRequest::operator==(const MediaPackageRequest &other) const
 }*/
 
 /*!
- * \brief Removes the a \a name parameter from this request.
- *
- * Returns the count of paramters removed (typically \c 0 or \c 1).
+ * Removes the a \a name parameter from the request, then returns the number of
+ * paramters removed (typically \c 0 or \c 1).
  */
 int MediaPackageRequest::clearParameter(const QString &name)
 {
@@ -177,7 +180,7 @@ int MediaPackageRequest::clearParameter(const QString &name)
 }
 
 /*!
- * \brief Removes all parameters from this request.
+ * Removes all parameters from the request.
  */
 void MediaPackageRequest::clearParameters()
 {
@@ -186,7 +189,7 @@ void MediaPackageRequest::clearParameters()
 }
 
 /*!
- * \brief Returns the value of the \n name pararemter if set, otherwise \a defaultValue.
+ * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
 QVariant MediaPackageRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
@@ -195,7 +198,7 @@ QVariant MediaPackageRequest::parameter(const QString &name, const QVariant &def
 }
 
 /*!
- * \brief Returns a map of parameters included in this request.
+ * Returns the parameters included in this request.
  */
 const QVariantMap &MediaPackageRequest::parameters() const
 {
@@ -204,7 +207,7 @@ const QVariantMap &MediaPackageRequest::parameters() const
 }
 
 /*!
- * \brief Sets the \a name parameter to \a value.
+ * Sets the \a name parameter to \a value.
  */
 void MediaPackageRequest::setParameter(const QString &name, const QVariant &value)
 {
@@ -213,9 +216,8 @@ void MediaPackageRequest::setParameter(const QString &name, const QVariant &valu
 }
 
 /*!
- * \brief Sets the map of paramters for this request to \a parameters.
- *
- * Any request parameters set previously will be discarded.
+ * Sets the paramters for this request to \a parameters. Any request parameters
+ * set previously will be discarded.
  */
 void MediaPackageRequest::setParameters(const QVariantMap &parameters)
 {
@@ -224,11 +226,12 @@ void MediaPackageRequest::setParameters(const QVariantMap &parameters)
 }
 
 /*!
- * \brief Returns a network request for this MediaPackage request using the given \a endpoint.
+ * Returns a network request for the MediaPackage request using the given
+ * \a endpoint.
  *
- * This MediaPackage implementation builds request URLs by combining the common query
- * parameters (such as Action and Version), with any that have been added (via
- * setParameter) by child classes.
+ * This MediaPackage implementation builds request URLs by combining the
+ * common query parameters (such as Action and Version), with any that have
+ * been added (via setParameter) by child classes.
  */
 QNetworkRequest MediaPackageRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -239,17 +242,16 @@ QNetworkRequest MediaPackageRequest::unsignedRequest(const QUrl &endpoint) const
 }
 
 /*!
+ * \class QtAws::MediaPackage::MediaPackageRequestPrivate
+ * \brief The MediaPackageRequestPrivate class provides private implementation for MediaPackageRequest.
  * \internal
  *
- * \class  MediaPackageRequestPrivate
- *
- * \brief  Private implementation for MediaPackageRequest.
+ * \inmodule QtAwsMediaPackage
  */
 
 /*!
- * \internal
- *
- * \brief Constructs a new MediaPackageRequestPrivate object.
+ * Constructs a MediaPackageRequestPrivate object for MediaPackage \a action with,
+ * public implementation \a q.
  */
 MediaPackageRequestPrivate::MediaPackageRequestPrivate(const MediaPackageRequest::Action action, MediaPackageRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
@@ -258,9 +260,7 @@ MediaPackageRequestPrivate::MediaPackageRequestPrivate(const MediaPackageRequest
 }
 
 /*!
- * \internal
- *
- * \brief Constructs a new MediaPackageRequestPrivate object, copying an existing one.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
@@ -276,15 +276,12 @@ MediaPackageRequestPrivate::MediaPackageRequestPrivate(const MediaPackageRequest
 }
 
 /*!
- * \internal
- *
- * \brief Returns a string representing \a action.
+ * Returns a string represention of \a action, or a null string if \a action is
+ * invalid.
  *
  * This function converts MediaPackageRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the MediaPackage service's Action
  * query parameters.
- *
- * @return A string representing \a action, or a null string if \a action is invalid.
  */
 QString MediaPackageRequestPrivate::toString(const MediaPackageRequest::Action &action)
 {

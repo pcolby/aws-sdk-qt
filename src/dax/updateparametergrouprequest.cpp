@@ -27,10 +27,9 @@ namespace DAX {
 
 /*!
  * \class QtAws::DAX::UpdateParameterGroupRequest
- *
  * \brief The UpdateParameterGroupRequest class provides an interface for DAX UpdateParameterGroup requests.
  *
- * \ingroup DAX
+ * \inmodule QtAwsDAX
  *
  *  DAX is a managed caching service engineered for Amazon DynamoDB. DAX dramatically speeds up database reads by caching
  *  frequently-accessed data from DynamoDB, so applications can access that data with sub-millisecond latency. You can
@@ -41,9 +40,7 @@ namespace DAX {
  */
 
 /*!
- * @brief  Constructs a new UpdateParameterGroupRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateParameterGroupRequest::UpdateParameterGroupRequest(const UpdateParameterGroupRequest &other)
     : DAXRequest(new UpdateParameterGroupRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ UpdateParameterGroupRequest::UpdateParameterGroupRequest(const UpdateParameterGr
 }
 
 /*!
- * @brief  Constructs a new UpdateParameterGroupRequest object.
+ * Constructs a UpdateParameterGroupRequest object.
  */
 UpdateParameterGroupRequest::UpdateParameterGroupRequest()
     : DAXRequest(new UpdateParameterGroupRequestPrivate(DAXRequest::UpdateParameterGroupAction, this))
@@ -70,14 +67,9 @@ bool UpdateParameterGroupRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateParameterGroupResponse object.
+ * Returns a UpdateParameterGroupResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateParameterGroupResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DAXClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateParameterGroupRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * UpdateParameterGroupRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::DAX::UpdateParameterGroupRequestPrivate
+ * \brief The UpdateParameterGroupRequestPrivate class provides private implementation for UpdateParameterGroupRequest.
+ * \internal
  *
- * @class  UpdateParameterGroupRequestPrivate
- *
- * @brief  Private implementation for UpdateParameterGroupRequest.
+ * \inmodule QtAwsDAX
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateParameterGroupRequestPrivate object.
- *
- * @param  action  DAX action being performed.
- * @param  q       Pointer to this object's public UpdateParameterGroupRequest instance.
+ * Constructs a UpdateParameterGroupRequestPrivate object for DAX \a action with,
+ * public implementation \a q.
  */
 UpdateParameterGroupRequestPrivate::UpdateParameterGroupRequestPrivate(
     const DAXRequest::Action action, UpdateParameterGroupRequest * const q)
@@ -108,15 +97,10 @@ UpdateParameterGroupRequestPrivate::UpdateParameterGroupRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateParameterGroupRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateParameterGroupRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateParameterGroupRequest instance.
  */
 UpdateParameterGroupRequestPrivate::UpdateParameterGroupRequestPrivate(
     const UpdateParameterGroupRequestPrivate &other, UpdateParameterGroupRequest * const q)

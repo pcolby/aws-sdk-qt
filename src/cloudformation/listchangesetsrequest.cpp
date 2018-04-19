@@ -27,10 +27,9 @@ namespace CloudFormation {
 
 /*!
  * \class QtAws::CloudFormation::ListChangeSetsRequest
- *
  * \brief The ListChangeSetsRequest class provides an interface for CloudFormation ListChangeSets requests.
  *
- * \ingroup CloudFormation
+ * \inmodule QtAwsCloudFormation
  *
  *  <fullname>AWS CloudFormation</fullname>
  * 
@@ -59,9 +58,7 @@ namespace CloudFormation {
  */
 
 /*!
- * @brief  Constructs a new ListChangeSetsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListChangeSetsRequest::ListChangeSetsRequest(const ListChangeSetsRequest &other)
     : CloudFormationRequest(new ListChangeSetsRequestPrivate(*other.d_func(), this))
@@ -70,7 +67,7 @@ ListChangeSetsRequest::ListChangeSetsRequest(const ListChangeSetsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ListChangeSetsRequest object.
+ * Constructs a ListChangeSetsRequest object.
  */
 ListChangeSetsRequest::ListChangeSetsRequest()
     : CloudFormationRequest(new ListChangeSetsRequestPrivate(CloudFormationRequest::ListChangeSetsAction, this))
@@ -88,14 +85,9 @@ bool ListChangeSetsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListChangeSetsResponse object.
+ * Returns a ListChangeSetsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListChangeSetsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudFormationClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListChangeSetsRequest::response(QNetworkReply * const reply) const
 {
@@ -103,20 +95,17 @@ QtAws::Core::AwsAbstractResponse * ListChangeSetsRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudFormation::ListChangeSetsRequestPrivate
+ * \brief The ListChangeSetsRequestPrivate class provides private implementation for ListChangeSetsRequest.
+ * \internal
  *
- * @class  ListChangeSetsRequestPrivate
- *
- * @brief  Private implementation for ListChangeSetsRequest.
+ * \inmodule QtAwsCloudFormation
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListChangeSetsRequestPrivate object.
- *
- * @param  action  CloudFormation action being performed.
- * @param  q       Pointer to this object's public ListChangeSetsRequest instance.
+ * Constructs a ListChangeSetsRequestPrivate object for CloudFormation \a action with,
+ * public implementation \a q.
  */
 ListChangeSetsRequestPrivate::ListChangeSetsRequestPrivate(
     const CloudFormationRequest::Action action, ListChangeSetsRequest * const q)
@@ -126,15 +115,10 @@ ListChangeSetsRequestPrivate::ListChangeSetsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListChangeSetsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListChangeSetsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListChangeSetsRequest instance.
  */
 ListChangeSetsRequestPrivate::ListChangeSetsRequestPrivate(
     const ListChangeSetsRequestPrivate &other, ListChangeSetsRequest * const q)

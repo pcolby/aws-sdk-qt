@@ -36,6 +36,9 @@
 /*!
  * \namespace QtAws::DynamoDBStreams
  * \brief The QtAws::DynamoDBStreams contains stuff...
+ *
+ * \inmodule QtAwsDynamoDBStreams
+ *
  * @todo Move this to a separate template file.
  */
 
@@ -118,7 +121,7 @@ DynamoDBStreamsClient::DynamoDBStreamsClient(
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * \a  AwsEndpoint::getEndpoint()
+ * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
 DynamoDBStreamsClient::DynamoDBStreamsClient(
     const QUrl &endpoint,

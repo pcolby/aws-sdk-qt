@@ -27,10 +27,9 @@ namespace LexModelBuildingService {
 
 /*!
  * \class QtAws::LexModelBuildingService::GetSlotTypesRequest
- *
  * \brief The GetSlotTypesRequest class provides an interface for LexModelBuildingService GetSlotTypes requests.
  *
- * \ingroup LexModelBuildingService
+ * \inmodule QtAwsLexModelBuildingService
  *
  *  <fullname>Amazon Lex Build-Time Actions</fullname>
  * 
@@ -41,9 +40,7 @@ namespace LexModelBuildingService {
  */
 
 /*!
- * @brief  Constructs a new GetSlotTypesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetSlotTypesRequest::GetSlotTypesRequest(const GetSlotTypesRequest &other)
     : LexModelBuildingServiceRequest(new GetSlotTypesRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ GetSlotTypesRequest::GetSlotTypesRequest(const GetSlotTypesRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetSlotTypesRequest object.
+ * Constructs a GetSlotTypesRequest object.
  */
 GetSlotTypesRequest::GetSlotTypesRequest()
     : LexModelBuildingServiceRequest(new GetSlotTypesRequestPrivate(LexModelBuildingServiceRequest::GetSlotTypesAction, this))
@@ -70,14 +67,9 @@ bool GetSlotTypesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetSlotTypesResponse object.
+ * Returns a GetSlotTypesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetSlotTypesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  LexModelBuildingServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetSlotTypesRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * GetSlotTypesRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::LexModelBuildingService::GetSlotTypesRequestPrivate
+ * \brief The GetSlotTypesRequestPrivate class provides private implementation for GetSlotTypesRequest.
+ * \internal
  *
- * @class  GetSlotTypesRequestPrivate
- *
- * @brief  Private implementation for GetSlotTypesRequest.
+ * \inmodule QtAwsLexModelBuildingService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetSlotTypesRequestPrivate object.
- *
- * @param  action  LexModelBuildingService action being performed.
- * @param  q       Pointer to this object's public GetSlotTypesRequest instance.
+ * Constructs a GetSlotTypesRequestPrivate object for LexModelBuildingService \a action with,
+ * public implementation \a q.
  */
 GetSlotTypesRequestPrivate::GetSlotTypesRequestPrivate(
     const LexModelBuildingServiceRequest::Action action, GetSlotTypesRequest * const q)
@@ -108,15 +97,10 @@ GetSlotTypesRequestPrivate::GetSlotTypesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetSlotTypesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetSlotTypesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetSlotTypesRequest instance.
  */
 GetSlotTypesRequestPrivate::GetSlotTypesRequestPrivate(
     const GetSlotTypesRequestPrivate &other, GetSlotTypesRequest * const q)

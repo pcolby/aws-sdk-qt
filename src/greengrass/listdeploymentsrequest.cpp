@@ -27,10 +27,9 @@ namespace Greengrass {
 
 /*!
  * \class QtAws::Greengrass::ListDeploymentsRequest
- *
  * \brief The ListDeploymentsRequest class provides an interface for Greengrass ListDeployments requests.
  *
- * \ingroup Greengrass
+ * \inmodule QtAwsGreengrass
  *
  *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
  *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
@@ -40,9 +39,7 @@ namespace Greengrass {
  */
 
 /*!
- * @brief  Constructs a new ListDeploymentsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListDeploymentsRequest::ListDeploymentsRequest(const ListDeploymentsRequest &other)
     : GreengrassRequest(new ListDeploymentsRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ ListDeploymentsRequest::ListDeploymentsRequest(const ListDeploymentsRequest &oth
 }
 
 /*!
- * @brief  Constructs a new ListDeploymentsRequest object.
+ * Constructs a ListDeploymentsRequest object.
  */
 ListDeploymentsRequest::ListDeploymentsRequest()
     : GreengrassRequest(new ListDeploymentsRequestPrivate(GreengrassRequest::ListDeploymentsAction, this))
@@ -69,14 +66,9 @@ bool ListDeploymentsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListDeploymentsResponse object.
+ * Returns a ListDeploymentsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListDeploymentsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GreengrassClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListDeploymentsRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * ListDeploymentsRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::Greengrass::ListDeploymentsRequestPrivate
+ * \brief The ListDeploymentsRequestPrivate class provides private implementation for ListDeploymentsRequest.
+ * \internal
  *
- * @class  ListDeploymentsRequestPrivate
- *
- * @brief  Private implementation for ListDeploymentsRequest.
+ * \inmodule QtAwsGreengrass
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListDeploymentsRequestPrivate object.
- *
- * @param  action  Greengrass action being performed.
- * @param  q       Pointer to this object's public ListDeploymentsRequest instance.
+ * Constructs a ListDeploymentsRequestPrivate object for Greengrass \a action with,
+ * public implementation \a q.
  */
 ListDeploymentsRequestPrivate::ListDeploymentsRequestPrivate(
     const GreengrassRequest::Action action, ListDeploymentsRequest * const q)
@@ -107,15 +96,10 @@ ListDeploymentsRequestPrivate::ListDeploymentsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListDeploymentsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListDeploymentsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListDeploymentsRequest instance.
  */
 ListDeploymentsRequestPrivate::ListDeploymentsRequestPrivate(
     const ListDeploymentsRequestPrivate &other, ListDeploymentsRequest * const q)

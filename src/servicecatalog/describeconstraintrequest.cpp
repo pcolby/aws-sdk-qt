@@ -27,10 +27,9 @@ namespace ServiceCatalog {
 
 /*!
  * \class QtAws::ServiceCatalog::DescribeConstraintRequest
- *
  * \brief The DescribeConstraintRequest class provides an interface for ServiceCatalog DescribeConstraint requests.
  *
- * \ingroup ServiceCatalog
+ * \inmodule QtAwsServiceCatalog
  *
  *  <fullname>AWS Service Catalog</fullname>
  * 
@@ -43,9 +42,7 @@ namespace ServiceCatalog {
  */
 
 /*!
- * @brief  Constructs a new DescribeConstraintRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeConstraintRequest::DescribeConstraintRequest(const DescribeConstraintRequest &other)
     : ServiceCatalogRequest(new DescribeConstraintRequestPrivate(*other.d_func(), this))
@@ -54,7 +51,7 @@ DescribeConstraintRequest::DescribeConstraintRequest(const DescribeConstraintReq
 }
 
 /*!
- * @brief  Constructs a new DescribeConstraintRequest object.
+ * Constructs a DescribeConstraintRequest object.
  */
 DescribeConstraintRequest::DescribeConstraintRequest()
     : ServiceCatalogRequest(new DescribeConstraintRequestPrivate(ServiceCatalogRequest::DescribeConstraintAction, this))
@@ -72,14 +69,9 @@ bool DescribeConstraintRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeConstraintResponse object.
+ * Returns a DescribeConstraintResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeConstraintResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ServiceCatalogClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeConstraintRequest::response(QNetworkReply * const reply) const
 {
@@ -87,20 +79,17 @@ QtAws::Core::AwsAbstractResponse * DescribeConstraintRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::ServiceCatalog::DescribeConstraintRequestPrivate
+ * \brief The DescribeConstraintRequestPrivate class provides private implementation for DescribeConstraintRequest.
+ * \internal
  *
- * @class  DescribeConstraintRequestPrivate
- *
- * @brief  Private implementation for DescribeConstraintRequest.
+ * \inmodule QtAwsServiceCatalog
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeConstraintRequestPrivate object.
- *
- * @param  action  ServiceCatalog action being performed.
- * @param  q       Pointer to this object's public DescribeConstraintRequest instance.
+ * Constructs a DescribeConstraintRequestPrivate object for ServiceCatalog \a action with,
+ * public implementation \a q.
  */
 DescribeConstraintRequestPrivate::DescribeConstraintRequestPrivate(
     const ServiceCatalogRequest::Action action, DescribeConstraintRequest * const q)
@@ -110,15 +99,10 @@ DescribeConstraintRequestPrivate::DescribeConstraintRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeConstraintRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeConstraintRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeConstraintRequest instance.
  */
 DescribeConstraintRequestPrivate::DescribeConstraintRequestPrivate(
     const DescribeConstraintRequestPrivate &other, DescribeConstraintRequest * const q)

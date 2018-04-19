@@ -27,10 +27,9 @@ namespace CostExplorer {
 
 /*!
  * \class QtAws::CostExplorer::GetTagsRequest
- *
  * \brief The GetTagsRequest class provides an interface for CostExplorer GetTags requests.
  *
- * \ingroup CostExplorer
+ * \inmodule QtAwsCostExplorer
  *
  *  The Cost Explorer API allows you to programmatically query your cost and usage data. You can query for aggregated data
  *  such as total monthly costs or total daily usage. You can also query for granular data, such as the number of daily
@@ -50,9 +49,7 @@ namespace CostExplorer {
  */
 
 /*!
- * @brief  Constructs a new GetTagsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetTagsRequest::GetTagsRequest(const GetTagsRequest &other)
     : CostExplorerRequest(new GetTagsRequestPrivate(*other.d_func(), this))
@@ -61,7 +58,7 @@ GetTagsRequest::GetTagsRequest(const GetTagsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetTagsRequest object.
+ * Constructs a GetTagsRequest object.
  */
 GetTagsRequest::GetTagsRequest()
     : CostExplorerRequest(new GetTagsRequestPrivate(CostExplorerRequest::GetTagsAction, this))
@@ -79,14 +76,9 @@ bool GetTagsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetTagsResponse object.
+ * Returns a GetTagsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetTagsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CostExplorerClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetTagsRequest::response(QNetworkReply * const reply) const
 {
@@ -94,20 +86,17 @@ QtAws::Core::AwsAbstractResponse * GetTagsRequest::response(QNetworkReply * cons
 }
 
 /*!
- * @internal
+ * \class QtAws::CostExplorer::GetTagsRequestPrivate
+ * \brief The GetTagsRequestPrivate class provides private implementation for GetTagsRequest.
+ * \internal
  *
- * @class  GetTagsRequestPrivate
- *
- * @brief  Private implementation for GetTagsRequest.
+ * \inmodule QtAwsCostExplorer
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetTagsRequestPrivate object.
- *
- * @param  action  CostExplorer action being performed.
- * @param  q       Pointer to this object's public GetTagsRequest instance.
+ * Constructs a GetTagsRequestPrivate object for CostExplorer \a action with,
+ * public implementation \a q.
  */
 GetTagsRequestPrivate::GetTagsRequestPrivate(
     const CostExplorerRequest::Action action, GetTagsRequest * const q)
@@ -117,15 +106,10 @@ GetTagsRequestPrivate::GetTagsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetTagsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetTagsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetTagsRequest instance.
  */
 GetTagsRequestPrivate::GetTagsRequestPrivate(
     const GetTagsRequestPrivate &other, GetTagsRequest * const q)

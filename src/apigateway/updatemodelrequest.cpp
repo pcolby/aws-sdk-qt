@@ -27,10 +27,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::UpdateModelRequest
- *
  * \brief The UpdateModelRequest class provides an interface for APIGateway UpdateModel requests.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -42,9 +41,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new UpdateModelRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateModelRequest::UpdateModelRequest(const UpdateModelRequest &other)
     : APIGatewayRequest(new UpdateModelRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ UpdateModelRequest::UpdateModelRequest(const UpdateModelRequest &other)
 }
 
 /*!
- * @brief  Constructs a new UpdateModelRequest object.
+ * Constructs a UpdateModelRequest object.
  */
 UpdateModelRequest::UpdateModelRequest()
     : APIGatewayRequest(new UpdateModelRequestPrivate(APIGatewayRequest::UpdateModelAction, this))
@@ -71,14 +68,9 @@ bool UpdateModelRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateModelResponse object.
+ * Returns a UpdateModelResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateModelResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  APIGatewayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateModelRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * UpdateModelRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::APIGateway::UpdateModelRequestPrivate
+ * \brief The UpdateModelRequestPrivate class provides private implementation for UpdateModelRequest.
+ * \internal
  *
- * @class  UpdateModelRequestPrivate
- *
- * @brief  Private implementation for UpdateModelRequest.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateModelRequestPrivate object.
- *
- * @param  action  APIGateway action being performed.
- * @param  q       Pointer to this object's public UpdateModelRequest instance.
+ * Constructs a UpdateModelRequestPrivate object for APIGateway \a action with,
+ * public implementation \a q.
  */
 UpdateModelRequestPrivate::UpdateModelRequestPrivate(
     const APIGatewayRequest::Action action, UpdateModelRequest * const q)
@@ -109,15 +98,10 @@ UpdateModelRequestPrivate::UpdateModelRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateModelRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateModelRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateModelRequest instance.
  */
 UpdateModelRequestPrivate::UpdateModelRequestPrivate(
     const UpdateModelRequestPrivate &other, UpdateModelRequest * const q)

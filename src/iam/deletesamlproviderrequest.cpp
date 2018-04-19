@@ -27,10 +27,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::DeleteSAMLProviderRequest
- *
  * \brief The DeleteSAMLProviderRequest class provides an interface for IAM DeleteSAMLProvider requests.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -102,9 +101,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new DeleteSAMLProviderRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteSAMLProviderRequest::DeleteSAMLProviderRequest(const DeleteSAMLProviderRequest &other)
     : IAMRequest(new DeleteSAMLProviderRequestPrivate(*other.d_func(), this))
@@ -113,7 +110,7 @@ DeleteSAMLProviderRequest::DeleteSAMLProviderRequest(const DeleteSAMLProviderReq
 }
 
 /*!
- * @brief  Constructs a new DeleteSAMLProviderRequest object.
+ * Constructs a DeleteSAMLProviderRequest object.
  */
 DeleteSAMLProviderRequest::DeleteSAMLProviderRequest()
     : IAMRequest(new DeleteSAMLProviderRequestPrivate(IAMRequest::DeleteSAMLProviderAction, this))
@@ -131,14 +128,9 @@ bool DeleteSAMLProviderRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteSAMLProviderResponse object.
+ * Returns a DeleteSAMLProviderResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteSAMLProviderResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IAMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteSAMLProviderRequest::response(QNetworkReply * const reply) const
 {
@@ -146,20 +138,17 @@ QtAws::Core::AwsAbstractResponse * DeleteSAMLProviderRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::IAM::DeleteSAMLProviderRequestPrivate
+ * \brief The DeleteSAMLProviderRequestPrivate class provides private implementation for DeleteSAMLProviderRequest.
+ * \internal
  *
- * @class  DeleteSAMLProviderRequestPrivate
- *
- * @brief  Private implementation for DeleteSAMLProviderRequest.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteSAMLProviderRequestPrivate object.
- *
- * @param  action  IAM action being performed.
- * @param  q       Pointer to this object's public DeleteSAMLProviderRequest instance.
+ * Constructs a DeleteSAMLProviderRequestPrivate object for IAM \a action with,
+ * public implementation \a q.
  */
 DeleteSAMLProviderRequestPrivate::DeleteSAMLProviderRequestPrivate(
     const IAMRequest::Action action, DeleteSAMLProviderRequest * const q)
@@ -169,15 +158,10 @@ DeleteSAMLProviderRequestPrivate::DeleteSAMLProviderRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteSAMLProviderRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteSAMLProviderRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteSAMLProviderRequest instance.
  */
 DeleteSAMLProviderRequestPrivate::DeleteSAMLProviderRequestPrivate(
     const DeleteSAMLProviderRequestPrivate &other, DeleteSAMLProviderRequest * const q)

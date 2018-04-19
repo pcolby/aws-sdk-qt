@@ -27,10 +27,9 @@ namespace CognitoSync {
 
 /*!
  * \class QtAws::CognitoSync::SetCognitoEventsRequest
- *
  * \brief The SetCognitoEventsRequest class provides an interface for CognitoSync SetCognitoEvents requests.
  *
- * \ingroup CognitoSync
+ * \inmodule QtAwsCognitoSync
  *
  *  <fullname>Amazon Cognito Sync</fullname>
  * 
@@ -57,9 +56,7 @@ namespace CognitoSync {
  */
 
 /*!
- * @brief  Constructs a new SetCognitoEventsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 SetCognitoEventsRequest::SetCognitoEventsRequest(const SetCognitoEventsRequest &other)
     : CognitoSyncRequest(new SetCognitoEventsRequestPrivate(*other.d_func(), this))
@@ -68,7 +65,7 @@ SetCognitoEventsRequest::SetCognitoEventsRequest(const SetCognitoEventsRequest &
 }
 
 /*!
- * @brief  Constructs a new SetCognitoEventsRequest object.
+ * Constructs a SetCognitoEventsRequest object.
  */
 SetCognitoEventsRequest::SetCognitoEventsRequest()
     : CognitoSyncRequest(new SetCognitoEventsRequestPrivate(CognitoSyncRequest::SetCognitoEventsAction, this))
@@ -86,14 +83,9 @@ bool SetCognitoEventsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an SetCognitoEventsResponse object.
+ * Returns a SetCognitoEventsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An SetCognitoEventsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CognitoSyncClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * SetCognitoEventsRequest::response(QNetworkReply * const reply) const
 {
@@ -101,20 +93,17 @@ QtAws::Core::AwsAbstractResponse * SetCognitoEventsRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::CognitoSync::SetCognitoEventsRequestPrivate
+ * \brief The SetCognitoEventsRequestPrivate class provides private implementation for SetCognitoEventsRequest.
+ * \internal
  *
- * @class  SetCognitoEventsRequestPrivate
- *
- * @brief  Private implementation for SetCognitoEventsRequest.
+ * \inmodule QtAwsCognitoSync
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new SetCognitoEventsRequestPrivate object.
- *
- * @param  action  CognitoSync action being performed.
- * @param  q       Pointer to this object's public SetCognitoEventsRequest instance.
+ * Constructs a SetCognitoEventsRequestPrivate object for CognitoSync \a action with,
+ * public implementation \a q.
  */
 SetCognitoEventsRequestPrivate::SetCognitoEventsRequestPrivate(
     const CognitoSyncRequest::Action action, SetCognitoEventsRequest * const q)
@@ -124,15 +113,10 @@ SetCognitoEventsRequestPrivate::SetCognitoEventsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SetCognitoEventsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the SetCognitoEventsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public SetCognitoEventsRequest instance.
  */
 SetCognitoEventsRequestPrivate::SetCognitoEventsRequestPrivate(
     const SetCognitoEventsRequestPrivate &other, SetCognitoEventsRequest * const q)

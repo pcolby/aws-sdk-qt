@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::ModifyInstancePlacementRequest
- *
  * \brief The ModifyInstancePlacementRequest class provides an interface for EC2 ModifyInstancePlacement requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new ModifyInstancePlacementRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ModifyInstancePlacementRequest::ModifyInstancePlacementRequest(const ModifyInstancePlacementRequest &other)
     : EC2Request(new ModifyInstancePlacementRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ ModifyInstancePlacementRequest::ModifyInstancePlacementRequest(const ModifyInsta
 }
 
 /*!
- * @brief  Constructs a new ModifyInstancePlacementRequest object.
+ * Constructs a ModifyInstancePlacementRequest object.
  */
 ModifyInstancePlacementRequest::ModifyInstancePlacementRequest()
     : EC2Request(new ModifyInstancePlacementRequestPrivate(EC2Request::ModifyInstancePlacementAction, this))
@@ -70,14 +67,9 @@ bool ModifyInstancePlacementRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ModifyInstancePlacementResponse object.
+ * Returns a ModifyInstancePlacementResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ModifyInstancePlacementResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ModifyInstancePlacementRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * ModifyInstancePlacementRequest::response(QNet
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::ModifyInstancePlacementRequestPrivate
+ * \brief The ModifyInstancePlacementRequestPrivate class provides private implementation for ModifyInstancePlacementRequest.
+ * \internal
  *
- * @class  ModifyInstancePlacementRequestPrivate
- *
- * @brief  Private implementation for ModifyInstancePlacementRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ModifyInstancePlacementRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public ModifyInstancePlacementRequest instance.
+ * Constructs a ModifyInstancePlacementRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 ModifyInstancePlacementRequestPrivate::ModifyInstancePlacementRequestPrivate(
     const EC2Request::Action action, ModifyInstancePlacementRequest * const q)
@@ -108,15 +97,10 @@ ModifyInstancePlacementRequestPrivate::ModifyInstancePlacementRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ModifyInstancePlacementRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ModifyInstancePlacementRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ModifyInstancePlacementRequest instance.
  */
 ModifyInstancePlacementRequestPrivate::ModifyInstancePlacementRequestPrivate(
     const ModifyInstancePlacementRequestPrivate &other, ModifyInstancePlacementRequest * const q)

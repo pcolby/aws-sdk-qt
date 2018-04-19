@@ -25,16 +25,33 @@ namespace FMS {
 
 /*!
  * \class QtAws::FMS::FMSRequest
- *
  * \brief The FMSRequest class provides an interface for FMS requests.
  *
- * \ingroup FMS
+ * \inmodule QtAwsFMS
  */
 
 /*!
- * @brief  Constructs a new FMSRequest object.
+ * \enum FMSRequest::Action
  *
- * @param  action  The FMS action to request.
+ * This enum describes the actions that can be performed as FMS
+ * requests.
+ *
+ * \value AssociateAdminAccountAction FMS AssociateAdminAccount action.
+ * \value DeleteNotificationChannelAction FMS DeleteNotificationChannel action.
+ * \value DeletePolicyAction FMS DeletePolicy action.
+ * \value DisassociateAdminAccountAction FMS DisassociateAdminAccount action.
+ * \value GetAdminAccountAction FMS GetAdminAccount action.
+ * \value GetComplianceDetailAction FMS GetComplianceDetail action.
+ * \value GetNotificationChannelAction FMS GetNotificationChannel action.
+ * \value GetPolicyAction FMS GetPolicy action.
+ * \value ListComplianceStatusAction FMS ListComplianceStatus action.
+ * \value ListPoliciesAction FMS ListPolicies action.
+ * \value PutNotificationChannelAction FMS PutNotificationChannel action.
+ * \value PutPolicyAction FMS PutPolicy action.
+ */
+
+/*!
+ * Constructs a[n] FMSRequest object for FMS \a action.
  */
 FMSRequest::FMSRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new FMSRequestPrivate(action, this))
@@ -43,9 +60,7 @@ FMSRequest::FMSRequest(const Action action)
 }
 
 /*!
- * @brief  Constructs a new FMSRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 FMSRequest::FMSRequest(const FMSRequest &other)
     : QtAws::Core::AwsAbstractRequest(new FMSRequestPrivate(*other.d_func(), this))
@@ -54,13 +69,7 @@ FMSRequest::FMSRequest(const FMSRequest &other)
 }
 
 /*!
- * @brief  Assignment operator.
- *
- * Assigns \a other to \c this.
- *
- * @param  other  Instance to copy.
- *
- * @return  A reference to \c this.
+ * Sets the FMSRequest object to be equal to \a other.
  */
 FMSRequest& FMSRequest::operator=(const FMSRequest &other)
 {
@@ -72,14 +81,10 @@ FMSRequest& FMSRequest::operator=(const FMSRequest &other)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new FMSRequest object.
+ * Constructs aa FMSRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from FMSRequestPrivate.
- *
- * @param  d  Pointer to private data (aka D-Pointer).
  */
 FMSRequest::FMSRequest(FMSRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
@@ -87,7 +92,7 @@ FMSRequest::FMSRequest(FMSRequestPrivate * const d) : QtAws::Core::AwsAbstractRe
 }
 
 /*!
- * \brief Returns the FMS action to be performed by this request.
+ * Returns the FMS action to be performed by this request.
  */
 FMSRequest::Action FMSRequest::action() const
 {
@@ -96,7 +101,7 @@ FMSRequest::Action FMSRequest::action() const
 }
 
 /*!
- * \brief Returns the name of the FMS action to be performed by this request.
+ * Returns the name of the FMS action to be performed by this request.
  */
 QString FMSRequest::actionString() const
 {
@@ -104,7 +109,7 @@ QString FMSRequest::actionString() const
 }
 
 /*!
- * \brief Returns the FMS API version implemented by this request.
+ * Returns the FMS API version implemented by this request.
  */
 QString FMSRequest::apiVersion() const
 {
@@ -113,7 +118,7 @@ QString FMSRequest::apiVersion() const
 }
 
 /*!
- * @brief Set the FMS action to be performed by this request to \a action.
+ * Sets the FMS action to be performed by this request to \a action.
  */
 void FMSRequest::setAction(const Action action)
 {
@@ -122,7 +127,7 @@ void FMSRequest::setAction(const Action action)
 }
 
 /*!
- * Set the FMS API version to include in this request to \a version.
+ * Sets the FMS API version to include in this request to \a version.
  */
 void FMSRequest::setApiVersion(const QString &version)
 {
@@ -131,7 +136,7 @@ void FMSRequest::setApiVersion(const QString &version)
 }
 
 /*!
- * \brief Returns \c true if this request is the same as \a other.
+ * Returns \c true if this request is equal to \a other; \c false otherwise.
  *
  * Note, most derived *Request classes do not need to provider their own
  * implementations of this function, since most such request classes rely on
@@ -146,8 +151,8 @@ bool FMSRequest::operator==(const FMSRequest &other) const
             (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
-/*!
- * @brief  Check if \a queueName is a valid FMS queue name.
+/*
+ * Returns \c tue if \a queueName is a valid FMS queue name.
  *
  * @par From FMS FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
@@ -166,9 +171,8 @@ bool FMSRequest::operator==(const FMSRequest &other) const
 }*/
 
 /*!
- * \brief Removes the a \a name parameter from this request.
- *
- * Returns the count of paramters removed (typically \c 0 or \c 1).
+ * Removes the a \a name parameter from the request, then returns the number of
+ * paramters removed (typically \c 0 or \c 1).
  */
 int FMSRequest::clearParameter(const QString &name)
 {
@@ -177,7 +181,7 @@ int FMSRequest::clearParameter(const QString &name)
 }
 
 /*!
- * \brief Removes all parameters from this request.
+ * Removes all parameters from the request.
  */
 void FMSRequest::clearParameters()
 {
@@ -186,7 +190,7 @@ void FMSRequest::clearParameters()
 }
 
 /*!
- * \brief Returns the value of the \n name pararemter if set, otherwise \a defaultValue.
+ * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
 QVariant FMSRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
@@ -195,7 +199,7 @@ QVariant FMSRequest::parameter(const QString &name, const QVariant &defaultValue
 }
 
 /*!
- * \brief Returns a map of parameters included in this request.
+ * Returns the parameters included in this request.
  */
 const QVariantMap &FMSRequest::parameters() const
 {
@@ -204,7 +208,7 @@ const QVariantMap &FMSRequest::parameters() const
 }
 
 /*!
- * \brief Sets the \a name parameter to \a value.
+ * Sets the \a name parameter to \a value.
  */
 void FMSRequest::setParameter(const QString &name, const QVariant &value)
 {
@@ -213,9 +217,8 @@ void FMSRequest::setParameter(const QString &name, const QVariant &value)
 }
 
 /*!
- * \brief Sets the map of paramters for this request to \a parameters.
- *
- * Any request parameters set previously will be discarded.
+ * Sets the paramters for this request to \a parameters. Any request parameters
+ * set previously will be discarded.
  */
 void FMSRequest::setParameters(const QVariantMap &parameters)
 {
@@ -224,11 +227,12 @@ void FMSRequest::setParameters(const QVariantMap &parameters)
 }
 
 /*!
- * \brief Returns a network request for this FMS request using the given \a endpoint.
+ * Returns a network request for the FMS request using the given
+ * \a endpoint.
  *
- * This FMS implementation builds request URLs by combining the common query
- * parameters (such as Action and Version), with any that have been added (via
- * setParameter) by child classes.
+ * This FMS implementation builds request URLs by combining the
+ * common query parameters (such as Action and Version), with any that have
+ * been added (via setParameter) by child classes.
  */
 QNetworkRequest FMSRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -239,17 +243,16 @@ QNetworkRequest FMSRequest::unsignedRequest(const QUrl &endpoint) const
 }
 
 /*!
+ * \class QtAws::FMS::FMSRequestPrivate
+ * \brief The FMSRequestPrivate class provides private implementation for FMSRequest.
  * \internal
  *
- * \class  FMSRequestPrivate
- *
- * \brief  Private implementation for FMSRequest.
+ * \inmodule QtAwsFMS
  */
 
 /*!
- * \internal
- *
- * \brief Constructs a new FMSRequestPrivate object.
+ * Constructs a FMSRequestPrivate object for FMS \a action with,
+ * public implementation \a q.
  */
 FMSRequestPrivate::FMSRequestPrivate(const FMSRequest::Action action, FMSRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
@@ -258,9 +261,7 @@ FMSRequestPrivate::FMSRequestPrivate(const FMSRequest::Action action, FMSRequest
 }
 
 /*!
- * \internal
- *
- * \brief Constructs a new FMSRequestPrivate object, copying an existing one.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
@@ -276,15 +277,12 @@ FMSRequestPrivate::FMSRequestPrivate(const FMSRequestPrivate &other,
 }
 
 /*!
- * \internal
- *
- * \brief Returns a string representing \a action.
+ * Returns a string represention of \a action, or a null string if \a action is
+ * invalid.
  *
  * This function converts FMSRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the FMS service's Action
  * query parameters.
- *
- * @return A string representing \a action, or a null string if \a action is invalid.
  */
 QString FMSRequestPrivate::toString(const FMSRequest::Action &action)
 {

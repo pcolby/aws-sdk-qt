@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::RequestSpotInstancesRequest
- *
  * \brief The RequestSpotInstancesRequest class provides an interface for EC2 RequestSpotInstances requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new RequestSpotInstancesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 RequestSpotInstancesRequest::RequestSpotInstancesRequest(const RequestSpotInstancesRequest &other)
     : EC2Request(new RequestSpotInstancesRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ RequestSpotInstancesRequest::RequestSpotInstancesRequest(const RequestSpotInstan
 }
 
 /*!
- * @brief  Constructs a new RequestSpotInstancesRequest object.
+ * Constructs a RequestSpotInstancesRequest object.
  */
 RequestSpotInstancesRequest::RequestSpotInstancesRequest()
     : EC2Request(new RequestSpotInstancesRequestPrivate(EC2Request::RequestSpotInstancesAction, this))
@@ -70,14 +67,9 @@ bool RequestSpotInstancesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an RequestSpotInstancesResponse object.
+ * Returns a RequestSpotInstancesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An RequestSpotInstancesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * RequestSpotInstancesRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * RequestSpotInstancesRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::RequestSpotInstancesRequestPrivate
+ * \brief The RequestSpotInstancesRequestPrivate class provides private implementation for RequestSpotInstancesRequest.
+ * \internal
  *
- * @class  RequestSpotInstancesRequestPrivate
- *
- * @brief  Private implementation for RequestSpotInstancesRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new RequestSpotInstancesRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public RequestSpotInstancesRequest instance.
+ * Constructs a RequestSpotInstancesRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 RequestSpotInstancesRequestPrivate::RequestSpotInstancesRequestPrivate(
     const EC2Request::Action action, RequestSpotInstancesRequest * const q)
@@ -108,15 +97,10 @@ RequestSpotInstancesRequestPrivate::RequestSpotInstancesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RequestSpotInstancesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the RequestSpotInstancesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public RequestSpotInstancesRequest instance.
  */
 RequestSpotInstancesRequestPrivate::RequestSpotInstancesRequestPrivate(
     const RequestSpotInstancesRequestPrivate &other, RequestSpotInstancesRequest * const q)

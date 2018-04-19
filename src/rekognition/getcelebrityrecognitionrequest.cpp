@@ -27,10 +27,9 @@ namespace Rekognition {
 
 /*!
  * \class QtAws::Rekognition::GetCelebrityRecognitionRequest
- *
  * \brief The GetCelebrityRecognitionRequest class provides an interface for Rekognition GetCelebrityRecognition requests.
  *
- * \ingroup Rekognition
+ * \inmodule QtAwsRekognition
  *
  *  This is the Amazon Rekognition API
  *
@@ -38,9 +37,7 @@ namespace Rekognition {
  */
 
 /*!
- * @brief  Constructs a new GetCelebrityRecognitionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetCelebrityRecognitionRequest::GetCelebrityRecognitionRequest(const GetCelebrityRecognitionRequest &other)
     : RekognitionRequest(new GetCelebrityRecognitionRequestPrivate(*other.d_func(), this))
@@ -49,7 +46,7 @@ GetCelebrityRecognitionRequest::GetCelebrityRecognitionRequest(const GetCelebrit
 }
 
 /*!
- * @brief  Constructs a new GetCelebrityRecognitionRequest object.
+ * Constructs a GetCelebrityRecognitionRequest object.
  */
 GetCelebrityRecognitionRequest::GetCelebrityRecognitionRequest()
     : RekognitionRequest(new GetCelebrityRecognitionRequestPrivate(RekognitionRequest::GetCelebrityRecognitionAction, this))
@@ -67,14 +64,9 @@ bool GetCelebrityRecognitionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetCelebrityRecognitionResponse object.
+ * Returns a GetCelebrityRecognitionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetCelebrityRecognitionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RekognitionClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetCelebrityRecognitionRequest::response(QNetworkReply * const reply) const
 {
@@ -82,20 +74,17 @@ QtAws::Core::AwsAbstractResponse * GetCelebrityRecognitionRequest::response(QNet
 }
 
 /*!
- * @internal
+ * \class QtAws::Rekognition::GetCelebrityRecognitionRequestPrivate
+ * \brief The GetCelebrityRecognitionRequestPrivate class provides private implementation for GetCelebrityRecognitionRequest.
+ * \internal
  *
- * @class  GetCelebrityRecognitionRequestPrivate
- *
- * @brief  Private implementation for GetCelebrityRecognitionRequest.
+ * \inmodule QtAwsRekognition
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetCelebrityRecognitionRequestPrivate object.
- *
- * @param  action  Rekognition action being performed.
- * @param  q       Pointer to this object's public GetCelebrityRecognitionRequest instance.
+ * Constructs a GetCelebrityRecognitionRequestPrivate object for Rekognition \a action with,
+ * public implementation \a q.
  */
 GetCelebrityRecognitionRequestPrivate::GetCelebrityRecognitionRequestPrivate(
     const RekognitionRequest::Action action, GetCelebrityRecognitionRequest * const q)
@@ -105,15 +94,10 @@ GetCelebrityRecognitionRequestPrivate::GetCelebrityRecognitionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetCelebrityRecognitionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetCelebrityRecognitionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetCelebrityRecognitionRequest instance.
  */
 GetCelebrityRecognitionRequestPrivate::GetCelebrityRecognitionRequestPrivate(
     const GetCelebrityRecognitionRequestPrivate &other, GetCelebrityRecognitionRequest * const q)

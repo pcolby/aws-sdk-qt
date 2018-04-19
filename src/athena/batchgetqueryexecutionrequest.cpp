@@ -27,10 +27,9 @@ namespace Athena {
 
 /*!
  * \class QtAws::Athena::BatchGetQueryExecutionRequest
- *
  * \brief The BatchGetQueryExecutionRequest class provides an interface for Athena BatchGetQueryExecution requests.
  *
- * \ingroup Athena
+ * \inmodule QtAwsAthena
  *
  *  Amazon Athena is an interactive query service that lets you use standard SQL to analyze data directly in Amazon S3. You
  *  can point Athena at your data in Amazon S3 and run ad-hoc queries and get results in seconds. Athena is serverless, so
@@ -49,9 +48,7 @@ namespace Athena {
  */
 
 /*!
- * @brief  Constructs a new BatchGetQueryExecutionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 BatchGetQueryExecutionRequest::BatchGetQueryExecutionRequest(const BatchGetQueryExecutionRequest &other)
     : AthenaRequest(new BatchGetQueryExecutionRequestPrivate(*other.d_func(), this))
@@ -60,7 +57,7 @@ BatchGetQueryExecutionRequest::BatchGetQueryExecutionRequest(const BatchGetQuery
 }
 
 /*!
- * @brief  Constructs a new BatchGetQueryExecutionRequest object.
+ * Constructs a BatchGetQueryExecutionRequest object.
  */
 BatchGetQueryExecutionRequest::BatchGetQueryExecutionRequest()
     : AthenaRequest(new BatchGetQueryExecutionRequestPrivate(AthenaRequest::BatchGetQueryExecutionAction, this))
@@ -78,14 +75,9 @@ bool BatchGetQueryExecutionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an BatchGetQueryExecutionResponse object.
+ * Returns a BatchGetQueryExecutionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An BatchGetQueryExecutionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AthenaClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * BatchGetQueryExecutionRequest::response(QNetworkReply * const reply) const
 {
@@ -93,20 +85,17 @@ QtAws::Core::AwsAbstractResponse * BatchGetQueryExecutionRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::Athena::BatchGetQueryExecutionRequestPrivate
+ * \brief The BatchGetQueryExecutionRequestPrivate class provides private implementation for BatchGetQueryExecutionRequest.
+ * \internal
  *
- * @class  BatchGetQueryExecutionRequestPrivate
- *
- * @brief  Private implementation for BatchGetQueryExecutionRequest.
+ * \inmodule QtAwsAthena
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new BatchGetQueryExecutionRequestPrivate object.
- *
- * @param  action  Athena action being performed.
- * @param  q       Pointer to this object's public BatchGetQueryExecutionRequest instance.
+ * Constructs a BatchGetQueryExecutionRequestPrivate object for Athena \a action with,
+ * public implementation \a q.
  */
 BatchGetQueryExecutionRequestPrivate::BatchGetQueryExecutionRequestPrivate(
     const AthenaRequest::Action action, BatchGetQueryExecutionRequest * const q)
@@ -116,15 +105,10 @@ BatchGetQueryExecutionRequestPrivate::BatchGetQueryExecutionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new BatchGetQueryExecutionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the BatchGetQueryExecutionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public BatchGetQueryExecutionRequest instance.
  */
 BatchGetQueryExecutionRequestPrivate::BatchGetQueryExecutionRequestPrivate(
     const BatchGetQueryExecutionRequestPrivate &other, BatchGetQueryExecutionRequest * const q)

@@ -27,10 +27,9 @@ namespace CloudDirectory {
 
 /*!
  * \class QtAws::CloudDirectory::ListDirectoriesRequest
- *
  * \brief The ListDirectoriesRequest class provides an interface for CloudDirectory ListDirectories requests.
  *
- * \ingroup CloudDirectory
+ * \inmodule QtAwsCloudDirectory
  *
  *  <fullname>Amazon Cloud Directory</fullname>
  * 
@@ -44,9 +43,7 @@ namespace CloudDirectory {
  */
 
 /*!
- * @brief  Constructs a new ListDirectoriesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListDirectoriesRequest::ListDirectoriesRequest(const ListDirectoriesRequest &other)
     : CloudDirectoryRequest(new ListDirectoriesRequestPrivate(*other.d_func(), this))
@@ -55,7 +52,7 @@ ListDirectoriesRequest::ListDirectoriesRequest(const ListDirectoriesRequest &oth
 }
 
 /*!
- * @brief  Constructs a new ListDirectoriesRequest object.
+ * Constructs a ListDirectoriesRequest object.
  */
 ListDirectoriesRequest::ListDirectoriesRequest()
     : CloudDirectoryRequest(new ListDirectoriesRequestPrivate(CloudDirectoryRequest::ListDirectoriesAction, this))
@@ -73,14 +70,9 @@ bool ListDirectoriesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListDirectoriesResponse object.
+ * Returns a ListDirectoriesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListDirectoriesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudDirectoryClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListDirectoriesRequest::response(QNetworkReply * const reply) const
 {
@@ -88,20 +80,17 @@ QtAws::Core::AwsAbstractResponse * ListDirectoriesRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudDirectory::ListDirectoriesRequestPrivate
+ * \brief The ListDirectoriesRequestPrivate class provides private implementation for ListDirectoriesRequest.
+ * \internal
  *
- * @class  ListDirectoriesRequestPrivate
- *
- * @brief  Private implementation for ListDirectoriesRequest.
+ * \inmodule QtAwsCloudDirectory
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListDirectoriesRequestPrivate object.
- *
- * @param  action  CloudDirectory action being performed.
- * @param  q       Pointer to this object's public ListDirectoriesRequest instance.
+ * Constructs a ListDirectoriesRequestPrivate object for CloudDirectory \a action with,
+ * public implementation \a q.
  */
 ListDirectoriesRequestPrivate::ListDirectoriesRequestPrivate(
     const CloudDirectoryRequest::Action action, ListDirectoriesRequest * const q)
@@ -111,15 +100,10 @@ ListDirectoriesRequestPrivate::ListDirectoriesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListDirectoriesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListDirectoriesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListDirectoriesRequest instance.
  */
 ListDirectoriesRequestPrivate::ListDirectoriesRequestPrivate(
     const ListDirectoriesRequestPrivate &other, ListDirectoriesRequest * const q)

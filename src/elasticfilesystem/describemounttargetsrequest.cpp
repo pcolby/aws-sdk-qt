@@ -27,10 +27,9 @@ namespace EFS {
 
 /*!
  * \class QtAws::EFS::DescribeMountTargetsRequest
- *
  * \brief The DescribeMountTargetsRequest class provides an interface for EFS DescribeMountTargets requests.
  *
- * \ingroup EFS
+ * \inmodule QtAwsEFS
  *
  *  <fullname>Amazon Elastic File System</fullname>
  * 
@@ -43,9 +42,7 @@ namespace EFS {
  */
 
 /*!
- * @brief  Constructs a new DescribeMountTargetsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeMountTargetsRequest::DescribeMountTargetsRequest(const DescribeMountTargetsRequest &other)
     : EFSRequest(new DescribeMountTargetsRequestPrivate(*other.d_func(), this))
@@ -54,7 +51,7 @@ DescribeMountTargetsRequest::DescribeMountTargetsRequest(const DescribeMountTarg
 }
 
 /*!
- * @brief  Constructs a new DescribeMountTargetsRequest object.
+ * Constructs a DescribeMountTargetsRequest object.
  */
 DescribeMountTargetsRequest::DescribeMountTargetsRequest()
     : EFSRequest(new DescribeMountTargetsRequestPrivate(EFSRequest::DescribeMountTargetsAction, this))
@@ -72,14 +69,9 @@ bool DescribeMountTargetsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeMountTargetsResponse object.
+ * Returns a DescribeMountTargetsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeMountTargetsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EFSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeMountTargetsRequest::response(QNetworkReply * const reply) const
 {
@@ -87,20 +79,17 @@ QtAws::Core::AwsAbstractResponse * DescribeMountTargetsRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::EFS::DescribeMountTargetsRequestPrivate
+ * \brief The DescribeMountTargetsRequestPrivate class provides private implementation for DescribeMountTargetsRequest.
+ * \internal
  *
- * @class  DescribeMountTargetsRequestPrivate
- *
- * @brief  Private implementation for DescribeMountTargetsRequest.
+ * \inmodule QtAwsEFS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeMountTargetsRequestPrivate object.
- *
- * @param  action  EFS action being performed.
- * @param  q       Pointer to this object's public DescribeMountTargetsRequest instance.
+ * Constructs a DescribeMountTargetsRequestPrivate object for EFS \a action with,
+ * public implementation \a q.
  */
 DescribeMountTargetsRequestPrivate::DescribeMountTargetsRequestPrivate(
     const EFSRequest::Action action, DescribeMountTargetsRequest * const q)
@@ -110,15 +99,10 @@ DescribeMountTargetsRequestPrivate::DescribeMountTargetsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeMountTargetsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeMountTargetsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeMountTargetsRequest instance.
  */
 DescribeMountTargetsRequestPrivate::DescribeMountTargetsRequestPrivate(
     const DescribeMountTargetsRequestPrivate &other, DescribeMountTargetsRequest * const q)

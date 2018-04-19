@@ -27,10 +27,9 @@ namespace Greengrass {
 
 /*!
  * \class QtAws::Greengrass::CreateGroupVersionRequest
- *
  * \brief The CreateGroupVersionRequest class provides an interface for Greengrass CreateGroupVersion requests.
  *
- * \ingroup Greengrass
+ * \inmodule QtAwsGreengrass
  *
  *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
  *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
@@ -40,9 +39,7 @@ namespace Greengrass {
  */
 
 /*!
- * @brief  Constructs a new CreateGroupVersionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateGroupVersionRequest::CreateGroupVersionRequest(const CreateGroupVersionRequest &other)
     : GreengrassRequest(new CreateGroupVersionRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ CreateGroupVersionRequest::CreateGroupVersionRequest(const CreateGroupVersionReq
 }
 
 /*!
- * @brief  Constructs a new CreateGroupVersionRequest object.
+ * Constructs a CreateGroupVersionRequest object.
  */
 CreateGroupVersionRequest::CreateGroupVersionRequest()
     : GreengrassRequest(new CreateGroupVersionRequestPrivate(GreengrassRequest::CreateGroupVersionAction, this))
@@ -69,14 +66,9 @@ bool CreateGroupVersionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateGroupVersionResponse object.
+ * Returns a CreateGroupVersionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateGroupVersionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GreengrassClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateGroupVersionRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * CreateGroupVersionRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::Greengrass::CreateGroupVersionRequestPrivate
+ * \brief The CreateGroupVersionRequestPrivate class provides private implementation for CreateGroupVersionRequest.
+ * \internal
  *
- * @class  CreateGroupVersionRequestPrivate
- *
- * @brief  Private implementation for CreateGroupVersionRequest.
+ * \inmodule QtAwsGreengrass
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateGroupVersionRequestPrivate object.
- *
- * @param  action  Greengrass action being performed.
- * @param  q       Pointer to this object's public CreateGroupVersionRequest instance.
+ * Constructs a CreateGroupVersionRequestPrivate object for Greengrass \a action with,
+ * public implementation \a q.
  */
 CreateGroupVersionRequestPrivate::CreateGroupVersionRequestPrivate(
     const GreengrassRequest::Action action, CreateGroupVersionRequest * const q)
@@ -107,15 +96,10 @@ CreateGroupVersionRequestPrivate::CreateGroupVersionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateGroupVersionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateGroupVersionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateGroupVersionRequest instance.
  */
 CreateGroupVersionRequestPrivate::CreateGroupVersionRequestPrivate(
     const CreateGroupVersionRequestPrivate &other, CreateGroupVersionRequest * const q)

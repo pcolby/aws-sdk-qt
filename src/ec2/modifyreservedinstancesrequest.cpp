@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::ModifyReservedInstancesRequest
- *
  * \brief The ModifyReservedInstancesRequest class provides an interface for EC2 ModifyReservedInstances requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new ModifyReservedInstancesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ModifyReservedInstancesRequest::ModifyReservedInstancesRequest(const ModifyReservedInstancesRequest &other)
     : EC2Request(new ModifyReservedInstancesRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ ModifyReservedInstancesRequest::ModifyReservedInstancesRequest(const ModifyReser
 }
 
 /*!
- * @brief  Constructs a new ModifyReservedInstancesRequest object.
+ * Constructs a ModifyReservedInstancesRequest object.
  */
 ModifyReservedInstancesRequest::ModifyReservedInstancesRequest()
     : EC2Request(new ModifyReservedInstancesRequestPrivate(EC2Request::ModifyReservedInstancesAction, this))
@@ -70,14 +67,9 @@ bool ModifyReservedInstancesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ModifyReservedInstancesResponse object.
+ * Returns a ModifyReservedInstancesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ModifyReservedInstancesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ModifyReservedInstancesRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * ModifyReservedInstancesRequest::response(QNet
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::ModifyReservedInstancesRequestPrivate
+ * \brief The ModifyReservedInstancesRequestPrivate class provides private implementation for ModifyReservedInstancesRequest.
+ * \internal
  *
- * @class  ModifyReservedInstancesRequestPrivate
- *
- * @brief  Private implementation for ModifyReservedInstancesRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ModifyReservedInstancesRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public ModifyReservedInstancesRequest instance.
+ * Constructs a ModifyReservedInstancesRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 ModifyReservedInstancesRequestPrivate::ModifyReservedInstancesRequestPrivate(
     const EC2Request::Action action, ModifyReservedInstancesRequest * const q)
@@ -108,15 +97,10 @@ ModifyReservedInstancesRequestPrivate::ModifyReservedInstancesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ModifyReservedInstancesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ModifyReservedInstancesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ModifyReservedInstancesRequest instance.
  */
 ModifyReservedInstancesRequestPrivate::ModifyReservedInstancesRequestPrivate(
     const ModifyReservedInstancesRequestPrivate &other, ModifyReservedInstancesRequest * const q)

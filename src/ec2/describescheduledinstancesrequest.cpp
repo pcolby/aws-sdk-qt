@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DescribeScheduledInstancesRequest
- *
  * \brief The DescribeScheduledInstancesRequest class provides an interface for EC2 DescribeScheduledInstances requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DescribeScheduledInstancesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeScheduledInstancesRequest::DescribeScheduledInstancesRequest(const DescribeScheduledInstancesRequest &other)
     : EC2Request(new DescribeScheduledInstancesRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ DescribeScheduledInstancesRequest::DescribeScheduledInstancesRequest(const Descr
 }
 
 /*!
- * @brief  Constructs a new DescribeScheduledInstancesRequest object.
+ * Constructs a DescribeScheduledInstancesRequest object.
  */
 DescribeScheduledInstancesRequest::DescribeScheduledInstancesRequest()
     : EC2Request(new DescribeScheduledInstancesRequestPrivate(EC2Request::DescribeScheduledInstancesAction, this))
@@ -70,14 +67,9 @@ bool DescribeScheduledInstancesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeScheduledInstancesResponse object.
+ * Returns a DescribeScheduledInstancesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeScheduledInstancesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeScheduledInstancesRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * DescribeScheduledInstancesRequest::response(Q
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::DescribeScheduledInstancesRequestPrivate
+ * \brief The DescribeScheduledInstancesRequestPrivate class provides private implementation for DescribeScheduledInstancesRequest.
+ * \internal
  *
- * @class  DescribeScheduledInstancesRequestPrivate
- *
- * @brief  Private implementation for DescribeScheduledInstancesRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeScheduledInstancesRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public DescribeScheduledInstancesRequest instance.
+ * Constructs a DescribeScheduledInstancesRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 DescribeScheduledInstancesRequestPrivate::DescribeScheduledInstancesRequestPrivate(
     const EC2Request::Action action, DescribeScheduledInstancesRequest * const q)
@@ -108,15 +97,10 @@ DescribeScheduledInstancesRequestPrivate::DescribeScheduledInstancesRequestPriva
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeScheduledInstancesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeScheduledInstancesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeScheduledInstancesRequest instance.
  */
 DescribeScheduledInstancesRequestPrivate::DescribeScheduledInstancesRequestPrivate(
     const DescribeScheduledInstancesRequestPrivate &other, DescribeScheduledInstancesRequest * const q)

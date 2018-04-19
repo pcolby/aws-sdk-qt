@@ -36,6 +36,9 @@
 /*!
  * \namespace QtAws::AutoScalingPlans
  * \brief The QtAws::AutoScalingPlans contains stuff...
+ *
+ * \inmodule QtAwsAutoScalingPlans
+ *
  * @todo Move this to a separate template file.
  */
 
@@ -94,7 +97,7 @@ AutoScalingPlansClient::AutoScalingPlansClient(
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * \a  AwsEndpoint::getEndpoint()
+ * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
 AutoScalingPlansClient::AutoScalingPlansClient(
     const QUrl &endpoint,

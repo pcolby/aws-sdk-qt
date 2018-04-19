@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::CreateDefaultSubnetRequest
- *
  * \brief The CreateDefaultSubnetRequest class provides an interface for EC2 CreateDefaultSubnet requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new CreateDefaultSubnetRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateDefaultSubnetRequest::CreateDefaultSubnetRequest(const CreateDefaultSubnetRequest &other)
     : EC2Request(new CreateDefaultSubnetRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ CreateDefaultSubnetRequest::CreateDefaultSubnetRequest(const CreateDefaultSubnet
 }
 
 /*!
- * @brief  Constructs a new CreateDefaultSubnetRequest object.
+ * Constructs a CreateDefaultSubnetRequest object.
  */
 CreateDefaultSubnetRequest::CreateDefaultSubnetRequest()
     : EC2Request(new CreateDefaultSubnetRequestPrivate(EC2Request::CreateDefaultSubnetAction, this))
@@ -70,14 +67,9 @@ bool CreateDefaultSubnetRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateDefaultSubnetResponse object.
+ * Returns a CreateDefaultSubnetResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateDefaultSubnetResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateDefaultSubnetRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * CreateDefaultSubnetRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::CreateDefaultSubnetRequestPrivate
+ * \brief The CreateDefaultSubnetRequestPrivate class provides private implementation for CreateDefaultSubnetRequest.
+ * \internal
  *
- * @class  CreateDefaultSubnetRequestPrivate
- *
- * @brief  Private implementation for CreateDefaultSubnetRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateDefaultSubnetRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public CreateDefaultSubnetRequest instance.
+ * Constructs a CreateDefaultSubnetRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 CreateDefaultSubnetRequestPrivate::CreateDefaultSubnetRequestPrivate(
     const EC2Request::Action action, CreateDefaultSubnetRequest * const q)
@@ -108,15 +97,10 @@ CreateDefaultSubnetRequestPrivate::CreateDefaultSubnetRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateDefaultSubnetRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateDefaultSubnetRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateDefaultSubnetRequest instance.
  */
 CreateDefaultSubnetRequestPrivate::CreateDefaultSubnetRequestPrivate(
     const CreateDefaultSubnetRequestPrivate &other, CreateDefaultSubnetRequest * const q)

@@ -27,19 +27,16 @@ namespace KinesisVideo {
 
 /*!
  * \class QtAws::KinesisVideo::UpdateDataRetentionRequest
- *
  * \brief The UpdateDataRetentionRequest class provides an interface for KinesisVideo UpdateDataRetention requests.
  *
- * \ingroup KinesisVideo
+ * \inmodule QtAwsKinesisVideo
  *
  *
  * \sa KinesisVideoClient::updateDataRetention
  */
 
 /*!
- * @brief  Constructs a new UpdateDataRetentionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateDataRetentionRequest::UpdateDataRetentionRequest(const UpdateDataRetentionRequest &other)
     : KinesisVideoRequest(new UpdateDataRetentionRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ UpdateDataRetentionRequest::UpdateDataRetentionRequest(const UpdateDataRetention
 }
 
 /*!
- * @brief  Constructs a new UpdateDataRetentionRequest object.
+ * Constructs a UpdateDataRetentionRequest object.
  */
 UpdateDataRetentionRequest::UpdateDataRetentionRequest()
     : KinesisVideoRequest(new UpdateDataRetentionRequestPrivate(KinesisVideoRequest::UpdateDataRetentionAction, this))
@@ -66,14 +63,9 @@ bool UpdateDataRetentionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateDataRetentionResponse object.
+ * Returns a UpdateDataRetentionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateDataRetentionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  KinesisVideoClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateDataRetentionRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * UpdateDataRetentionRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::KinesisVideo::UpdateDataRetentionRequestPrivate
+ * \brief The UpdateDataRetentionRequestPrivate class provides private implementation for UpdateDataRetentionRequest.
+ * \internal
  *
- * @class  UpdateDataRetentionRequestPrivate
- *
- * @brief  Private implementation for UpdateDataRetentionRequest.
+ * \inmodule QtAwsKinesisVideo
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateDataRetentionRequestPrivate object.
- *
- * @param  action  KinesisVideo action being performed.
- * @param  q       Pointer to this object's public UpdateDataRetentionRequest instance.
+ * Constructs a UpdateDataRetentionRequestPrivate object for KinesisVideo \a action with,
+ * public implementation \a q.
  */
 UpdateDataRetentionRequestPrivate::UpdateDataRetentionRequestPrivate(
     const KinesisVideoRequest::Action action, UpdateDataRetentionRequest * const q)
@@ -104,15 +93,10 @@ UpdateDataRetentionRequestPrivate::UpdateDataRetentionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateDataRetentionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateDataRetentionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateDataRetentionRequest instance.
  */
 UpdateDataRetentionRequestPrivate::UpdateDataRetentionRequestPrivate(
     const UpdateDataRetentionRequestPrivate &other, UpdateDataRetentionRequest * const q)

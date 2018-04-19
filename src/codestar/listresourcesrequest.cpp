@@ -27,10 +27,9 @@ namespace CodeStar {
 
 /*!
  * \class QtAws::CodeStar::ListResourcesRequest
- *
  * \brief The ListResourcesRequest class provides an interface for CodeStar ListResources requests.
  *
- * \ingroup CodeStar
+ * \inmodule QtAwsCodeStar
  *
  *  <fullname>AWS CodeStar</fullname>
  * 
@@ -125,9 +124,7 @@ namespace CodeStar {
  */
 
 /*!
- * @brief  Constructs a new ListResourcesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListResourcesRequest::ListResourcesRequest(const ListResourcesRequest &other)
     : CodeStarRequest(new ListResourcesRequestPrivate(*other.d_func(), this))
@@ -136,7 +133,7 @@ ListResourcesRequest::ListResourcesRequest(const ListResourcesRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ListResourcesRequest object.
+ * Constructs a ListResourcesRequest object.
  */
 ListResourcesRequest::ListResourcesRequest()
     : CodeStarRequest(new ListResourcesRequestPrivate(CodeStarRequest::ListResourcesAction, this))
@@ -154,14 +151,9 @@ bool ListResourcesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListResourcesResponse object.
+ * Returns a ListResourcesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListResourcesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CodeStarClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListResourcesRequest::response(QNetworkReply * const reply) const
 {
@@ -169,20 +161,17 @@ QtAws::Core::AwsAbstractResponse * ListResourcesRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::CodeStar::ListResourcesRequestPrivate
+ * \brief The ListResourcesRequestPrivate class provides private implementation for ListResourcesRequest.
+ * \internal
  *
- * @class  ListResourcesRequestPrivate
- *
- * @brief  Private implementation for ListResourcesRequest.
+ * \inmodule QtAwsCodeStar
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListResourcesRequestPrivate object.
- *
- * @param  action  CodeStar action being performed.
- * @param  q       Pointer to this object's public ListResourcesRequest instance.
+ * Constructs a ListResourcesRequestPrivate object for CodeStar \a action with,
+ * public implementation \a q.
  */
 ListResourcesRequestPrivate::ListResourcesRequestPrivate(
     const CodeStarRequest::Action action, ListResourcesRequest * const q)
@@ -192,15 +181,10 @@ ListResourcesRequestPrivate::ListResourcesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListResourcesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListResourcesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListResourcesRequest instance.
  */
 ListResourcesRequestPrivate::ListResourcesRequestPrivate(
     const ListResourcesRequestPrivate &other, ListResourcesRequest * const q)

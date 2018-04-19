@@ -27,10 +27,9 @@ namespace SQS {
 
 /*!
  * \class QtAws::SQS::DeleteMessageBatchRequest
- *
  * \brief The DeleteMessageBatchRequest class provides an interface for SQS DeleteMessageBatch requests.
  *
- * \ingroup SQS
+ * \inmodule QtAwsSQS
  *
  *  Welcome to the <i>Amazon Simple Queue Service API
  * 
@@ -103,9 +102,7 @@ namespace SQS {
  */
 
 /*!
- * @brief  Constructs a new DeleteMessageBatchRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteMessageBatchRequest::DeleteMessageBatchRequest(const DeleteMessageBatchRequest &other)
     : SQSRequest(new DeleteMessageBatchRequestPrivate(*other.d_func(), this))
@@ -114,7 +111,7 @@ DeleteMessageBatchRequest::DeleteMessageBatchRequest(const DeleteMessageBatchReq
 }
 
 /*!
- * @brief  Constructs a new DeleteMessageBatchRequest object.
+ * Constructs a DeleteMessageBatchRequest object.
  */
 DeleteMessageBatchRequest::DeleteMessageBatchRequest()
     : SQSRequest(new DeleteMessageBatchRequestPrivate(SQSRequest::DeleteMessageBatchAction, this))
@@ -132,14 +129,9 @@ bool DeleteMessageBatchRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteMessageBatchResponse object.
+ * Returns a DeleteMessageBatchResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteMessageBatchResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SQSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteMessageBatchRequest::response(QNetworkReply * const reply) const
 {
@@ -147,20 +139,17 @@ QtAws::Core::AwsAbstractResponse * DeleteMessageBatchRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::SQS::DeleteMessageBatchRequestPrivate
+ * \brief The DeleteMessageBatchRequestPrivate class provides private implementation for DeleteMessageBatchRequest.
+ * \internal
  *
- * @class  DeleteMessageBatchRequestPrivate
- *
- * @brief  Private implementation for DeleteMessageBatchRequest.
+ * \inmodule QtAwsSQS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteMessageBatchRequestPrivate object.
- *
- * @param  action  SQS action being performed.
- * @param  q       Pointer to this object's public DeleteMessageBatchRequest instance.
+ * Constructs a DeleteMessageBatchRequestPrivate object for SQS \a action with,
+ * public implementation \a q.
  */
 DeleteMessageBatchRequestPrivate::DeleteMessageBatchRequestPrivate(
     const SQSRequest::Action action, DeleteMessageBatchRequest * const q)
@@ -170,15 +159,10 @@ DeleteMessageBatchRequestPrivate::DeleteMessageBatchRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteMessageBatchRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteMessageBatchRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteMessageBatchRequest instance.
  */
 DeleteMessageBatchRequestPrivate::DeleteMessageBatchRequestPrivate(
     const DeleteMessageBatchRequestPrivate &other, DeleteMessageBatchRequest * const q)

@@ -27,10 +27,9 @@ namespace EMR {
 
 /*!
  * \class QtAws::EMR::CreateSecurityConfigurationRequest
- *
  * \brief The CreateSecurityConfigurationRequest class provides an interface for EMR CreateSecurityConfiguration requests.
  *
- * \ingroup EMR
+ * \inmodule QtAwsEMR
  *
  *  Amazon EMR is a web service that makes it easy to process large amounts of data efficiently. Amazon EMR uses Hadoop
  *  processing combined with several AWS products to do tasks such as web indexing, data mining, log file analysis, machine
@@ -40,9 +39,7 @@ namespace EMR {
  */
 
 /*!
- * @brief  Constructs a new CreateSecurityConfigurationRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateSecurityConfigurationRequest::CreateSecurityConfigurationRequest(const CreateSecurityConfigurationRequest &other)
     : EMRRequest(new CreateSecurityConfigurationRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ CreateSecurityConfigurationRequest::CreateSecurityConfigurationRequest(const Cre
 }
 
 /*!
- * @brief  Constructs a new CreateSecurityConfigurationRequest object.
+ * Constructs a CreateSecurityConfigurationRequest object.
  */
 CreateSecurityConfigurationRequest::CreateSecurityConfigurationRequest()
     : EMRRequest(new CreateSecurityConfigurationRequestPrivate(EMRRequest::CreateSecurityConfigurationAction, this))
@@ -69,14 +66,9 @@ bool CreateSecurityConfigurationRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateSecurityConfigurationResponse object.
+ * Returns a CreateSecurityConfigurationResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateSecurityConfigurationResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EMRClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateSecurityConfigurationRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * CreateSecurityConfigurationRequest::response(
 }
 
 /*!
- * @internal
+ * \class QtAws::EMR::CreateSecurityConfigurationRequestPrivate
+ * \brief The CreateSecurityConfigurationRequestPrivate class provides private implementation for CreateSecurityConfigurationRequest.
+ * \internal
  *
- * @class  CreateSecurityConfigurationRequestPrivate
- *
- * @brief  Private implementation for CreateSecurityConfigurationRequest.
+ * \inmodule QtAwsEMR
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateSecurityConfigurationRequestPrivate object.
- *
- * @param  action  EMR action being performed.
- * @param  q       Pointer to this object's public CreateSecurityConfigurationRequest instance.
+ * Constructs a CreateSecurityConfigurationRequestPrivate object for EMR \a action with,
+ * public implementation \a q.
  */
 CreateSecurityConfigurationRequestPrivate::CreateSecurityConfigurationRequestPrivate(
     const EMRRequest::Action action, CreateSecurityConfigurationRequest * const q)
@@ -107,15 +96,10 @@ CreateSecurityConfigurationRequestPrivate::CreateSecurityConfigurationRequestPri
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateSecurityConfigurationRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateSecurityConfigurationRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateSecurityConfigurationRequest instance.
  */
 CreateSecurityConfigurationRequestPrivate::CreateSecurityConfigurationRequestPrivate(
     const CreateSecurityConfigurationRequestPrivate &other, CreateSecurityConfigurationRequest * const q)

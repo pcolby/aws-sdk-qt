@@ -27,19 +27,16 @@ namespace KinesisAnalytics {
 
 /*!
  * \class QtAws::KinesisAnalytics::StartApplicationRequest
- *
  * \brief The StartApplicationRequest class provides an interface for KinesisAnalytics StartApplication requests.
  *
- * \ingroup KinesisAnalytics
+ * \inmodule QtAwsKinesisAnalytics
  *
  *
  * \sa KinesisAnalyticsClient::startApplication
  */
 
 /*!
- * @brief  Constructs a new StartApplicationRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 StartApplicationRequest::StartApplicationRequest(const StartApplicationRequest &other)
     : KinesisAnalyticsRequest(new StartApplicationRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ StartApplicationRequest::StartApplicationRequest(const StartApplicationRequest &
 }
 
 /*!
- * @brief  Constructs a new StartApplicationRequest object.
+ * Constructs a StartApplicationRequest object.
  */
 StartApplicationRequest::StartApplicationRequest()
     : KinesisAnalyticsRequest(new StartApplicationRequestPrivate(KinesisAnalyticsRequest::StartApplicationAction, this))
@@ -66,14 +63,9 @@ bool StartApplicationRequest::isValid() const
 
 
 /*!
- * @brief  Construct an StartApplicationResponse object.
+ * Returns a StartApplicationResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An StartApplicationResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  KinesisAnalyticsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * StartApplicationRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * StartApplicationRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::KinesisAnalytics::StartApplicationRequestPrivate
+ * \brief The StartApplicationRequestPrivate class provides private implementation for StartApplicationRequest.
+ * \internal
  *
- * @class  StartApplicationRequestPrivate
- *
- * @brief  Private implementation for StartApplicationRequest.
+ * \inmodule QtAwsKinesisAnalytics
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new StartApplicationRequestPrivate object.
- *
- * @param  action  KinesisAnalytics action being performed.
- * @param  q       Pointer to this object's public StartApplicationRequest instance.
+ * Constructs a StartApplicationRequestPrivate object for KinesisAnalytics \a action with,
+ * public implementation \a q.
  */
 StartApplicationRequestPrivate::StartApplicationRequestPrivate(
     const KinesisAnalyticsRequest::Action action, StartApplicationRequest * const q)
@@ -104,15 +93,10 @@ StartApplicationRequestPrivate::StartApplicationRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StartApplicationRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the StartApplicationRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public StartApplicationRequest instance.
  */
 StartApplicationRequestPrivate::StartApplicationRequestPrivate(
     const StartApplicationRequestPrivate &other, StartApplicationRequest * const q)

@@ -27,10 +27,9 @@ namespace SecretsManager {
 
 /*!
  * \class QtAws::SecretsManager::CancelRotateSecretRequest
- *
  * \brief The CancelRotateSecretRequest class provides an interface for SecretsManager CancelRotateSecret requests.
  *
- * \ingroup SecretsManager
+ * \inmodule QtAwsSecretsManager
  *
  *  <fullname>AWS Secrets Manager API Reference</fullname>
  * 
@@ -137,9 +136,7 @@ namespace SecretsManager {
  */
 
 /*!
- * @brief  Constructs a new CancelRotateSecretRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CancelRotateSecretRequest::CancelRotateSecretRequest(const CancelRotateSecretRequest &other)
     : SecretsManagerRequest(new CancelRotateSecretRequestPrivate(*other.d_func(), this))
@@ -148,7 +145,7 @@ CancelRotateSecretRequest::CancelRotateSecretRequest(const CancelRotateSecretReq
 }
 
 /*!
- * @brief  Constructs a new CancelRotateSecretRequest object.
+ * Constructs a CancelRotateSecretRequest object.
  */
 CancelRotateSecretRequest::CancelRotateSecretRequest()
     : SecretsManagerRequest(new CancelRotateSecretRequestPrivate(SecretsManagerRequest::CancelRotateSecretAction, this))
@@ -166,14 +163,9 @@ bool CancelRotateSecretRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CancelRotateSecretResponse object.
+ * Returns a CancelRotateSecretResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CancelRotateSecretResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SecretsManagerClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CancelRotateSecretRequest::response(QNetworkReply * const reply) const
 {
@@ -181,20 +173,17 @@ QtAws::Core::AwsAbstractResponse * CancelRotateSecretRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::SecretsManager::CancelRotateSecretRequestPrivate
+ * \brief The CancelRotateSecretRequestPrivate class provides private implementation for CancelRotateSecretRequest.
+ * \internal
  *
- * @class  CancelRotateSecretRequestPrivate
- *
- * @brief  Private implementation for CancelRotateSecretRequest.
+ * \inmodule QtAwsSecretsManager
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CancelRotateSecretRequestPrivate object.
- *
- * @param  action  SecretsManager action being performed.
- * @param  q       Pointer to this object's public CancelRotateSecretRequest instance.
+ * Constructs a CancelRotateSecretRequestPrivate object for SecretsManager \a action with,
+ * public implementation \a q.
  */
 CancelRotateSecretRequestPrivate::CancelRotateSecretRequestPrivate(
     const SecretsManagerRequest::Action action, CancelRotateSecretRequest * const q)
@@ -204,15 +193,10 @@ CancelRotateSecretRequestPrivate::CancelRotateSecretRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CancelRotateSecretRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CancelRotateSecretRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CancelRotateSecretRequest instance.
  */
 CancelRotateSecretRequestPrivate::CancelRotateSecretRequestPrivate(
     const CancelRotateSecretRequestPrivate &other, CancelRotateSecretRequest * const q)

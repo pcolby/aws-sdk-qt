@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::CancelConversionTaskRequest
- *
  * \brief The CancelConversionTaskRequest class provides an interface for EC2 CancelConversionTask requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new CancelConversionTaskRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CancelConversionTaskRequest::CancelConversionTaskRequest(const CancelConversionTaskRequest &other)
     : EC2Request(new CancelConversionTaskRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ CancelConversionTaskRequest::CancelConversionTaskRequest(const CancelConversionT
 }
 
 /*!
- * @brief  Constructs a new CancelConversionTaskRequest object.
+ * Constructs a CancelConversionTaskRequest object.
  */
 CancelConversionTaskRequest::CancelConversionTaskRequest()
     : EC2Request(new CancelConversionTaskRequestPrivate(EC2Request::CancelConversionTaskAction, this))
@@ -70,14 +67,9 @@ bool CancelConversionTaskRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CancelConversionTaskResponse object.
+ * Returns a CancelConversionTaskResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CancelConversionTaskResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CancelConversionTaskRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * CancelConversionTaskRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::CancelConversionTaskRequestPrivate
+ * \brief The CancelConversionTaskRequestPrivate class provides private implementation for CancelConversionTaskRequest.
+ * \internal
  *
- * @class  CancelConversionTaskRequestPrivate
- *
- * @brief  Private implementation for CancelConversionTaskRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CancelConversionTaskRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public CancelConversionTaskRequest instance.
+ * Constructs a CancelConversionTaskRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 CancelConversionTaskRequestPrivate::CancelConversionTaskRequestPrivate(
     const EC2Request::Action action, CancelConversionTaskRequest * const q)
@@ -108,15 +97,10 @@ CancelConversionTaskRequestPrivate::CancelConversionTaskRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CancelConversionTaskRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CancelConversionTaskRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CancelConversionTaskRequest instance.
  */
 CancelConversionTaskRequestPrivate::CancelConversionTaskRequestPrivate(
     const CancelConversionTaskRequestPrivate &other, CancelConversionTaskRequest * const q)

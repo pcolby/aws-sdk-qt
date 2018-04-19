@@ -27,10 +27,9 @@ namespace Lightsail {
 
 /*!
  * \class QtAws::Lightsail::GetStaticIpsRequest
- *
  * \brief The GetStaticIpsRequest class provides an interface for Lightsail GetStaticIps requests.
  *
- * \ingroup Lightsail
+ * \inmodule QtAwsLightsail
  *
  *  Amazon Lightsail is the easiest way to get started with AWS for developers who just need virtual private servers.
  *  Lightsail includes everything you need to launch your project quickly - a virtual machine, SSD-based storage, data
@@ -53,9 +52,7 @@ namespace Lightsail {
  */
 
 /*!
- * @brief  Constructs a new GetStaticIpsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetStaticIpsRequest::GetStaticIpsRequest(const GetStaticIpsRequest &other)
     : LightsailRequest(new GetStaticIpsRequestPrivate(*other.d_func(), this))
@@ -64,7 +61,7 @@ GetStaticIpsRequest::GetStaticIpsRequest(const GetStaticIpsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetStaticIpsRequest object.
+ * Constructs a GetStaticIpsRequest object.
  */
 GetStaticIpsRequest::GetStaticIpsRequest()
     : LightsailRequest(new GetStaticIpsRequestPrivate(LightsailRequest::GetStaticIpsAction, this))
@@ -82,14 +79,9 @@ bool GetStaticIpsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetStaticIpsResponse object.
+ * Returns a GetStaticIpsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetStaticIpsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  LightsailClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetStaticIpsRequest::response(QNetworkReply * const reply) const
 {
@@ -97,20 +89,17 @@ QtAws::Core::AwsAbstractResponse * GetStaticIpsRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::Lightsail::GetStaticIpsRequestPrivate
+ * \brief The GetStaticIpsRequestPrivate class provides private implementation for GetStaticIpsRequest.
+ * \internal
  *
- * @class  GetStaticIpsRequestPrivate
- *
- * @brief  Private implementation for GetStaticIpsRequest.
+ * \inmodule QtAwsLightsail
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetStaticIpsRequestPrivate object.
- *
- * @param  action  Lightsail action being performed.
- * @param  q       Pointer to this object's public GetStaticIpsRequest instance.
+ * Constructs a GetStaticIpsRequestPrivate object for Lightsail \a action with,
+ * public implementation \a q.
  */
 GetStaticIpsRequestPrivate::GetStaticIpsRequestPrivate(
     const LightsailRequest::Action action, GetStaticIpsRequest * const q)
@@ -120,15 +109,10 @@ GetStaticIpsRequestPrivate::GetStaticIpsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetStaticIpsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetStaticIpsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetStaticIpsRequest instance.
  */
 GetStaticIpsRequestPrivate::GetStaticIpsRequestPrivate(
     const GetStaticIpsRequestPrivate &other, GetStaticIpsRequest * const q)

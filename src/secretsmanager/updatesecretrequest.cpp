@@ -27,10 +27,9 @@ namespace SecretsManager {
 
 /*!
  * \class QtAws::SecretsManager::UpdateSecretRequest
- *
  * \brief The UpdateSecretRequest class provides an interface for SecretsManager UpdateSecret requests.
  *
- * \ingroup SecretsManager
+ * \inmodule QtAwsSecretsManager
  *
  *  <fullname>AWS Secrets Manager API Reference</fullname>
  * 
@@ -137,9 +136,7 @@ namespace SecretsManager {
  */
 
 /*!
- * @brief  Constructs a new UpdateSecretRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateSecretRequest::UpdateSecretRequest(const UpdateSecretRequest &other)
     : SecretsManagerRequest(new UpdateSecretRequestPrivate(*other.d_func(), this))
@@ -148,7 +145,7 @@ UpdateSecretRequest::UpdateSecretRequest(const UpdateSecretRequest &other)
 }
 
 /*!
- * @brief  Constructs a new UpdateSecretRequest object.
+ * Constructs a UpdateSecretRequest object.
  */
 UpdateSecretRequest::UpdateSecretRequest()
     : SecretsManagerRequest(new UpdateSecretRequestPrivate(SecretsManagerRequest::UpdateSecretAction, this))
@@ -166,14 +163,9 @@ bool UpdateSecretRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateSecretResponse object.
+ * Returns a UpdateSecretResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateSecretResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SecretsManagerClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateSecretRequest::response(QNetworkReply * const reply) const
 {
@@ -181,20 +173,17 @@ QtAws::Core::AwsAbstractResponse * UpdateSecretRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::SecretsManager::UpdateSecretRequestPrivate
+ * \brief The UpdateSecretRequestPrivate class provides private implementation for UpdateSecretRequest.
+ * \internal
  *
- * @class  UpdateSecretRequestPrivate
- *
- * @brief  Private implementation for UpdateSecretRequest.
+ * \inmodule QtAwsSecretsManager
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateSecretRequestPrivate object.
- *
- * @param  action  SecretsManager action being performed.
- * @param  q       Pointer to this object's public UpdateSecretRequest instance.
+ * Constructs a UpdateSecretRequestPrivate object for SecretsManager \a action with,
+ * public implementation \a q.
  */
 UpdateSecretRequestPrivate::UpdateSecretRequestPrivate(
     const SecretsManagerRequest::Action action, UpdateSecretRequest * const q)
@@ -204,15 +193,10 @@ UpdateSecretRequestPrivate::UpdateSecretRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateSecretRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateSecretRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateSecretRequest instance.
  */
 UpdateSecretRequestPrivate::UpdateSecretRequestPrivate(
     const UpdateSecretRequestPrivate &other, UpdateSecretRequest * const q)

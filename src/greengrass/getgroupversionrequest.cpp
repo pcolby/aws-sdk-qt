@@ -27,10 +27,9 @@ namespace Greengrass {
 
 /*!
  * \class QtAws::Greengrass::GetGroupVersionRequest
- *
  * \brief The GetGroupVersionRequest class provides an interface for Greengrass GetGroupVersion requests.
  *
- * \ingroup Greengrass
+ * \inmodule QtAwsGreengrass
  *
  *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
  *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
@@ -40,9 +39,7 @@ namespace Greengrass {
  */
 
 /*!
- * @brief  Constructs a new GetGroupVersionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetGroupVersionRequest::GetGroupVersionRequest(const GetGroupVersionRequest &other)
     : GreengrassRequest(new GetGroupVersionRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ GetGroupVersionRequest::GetGroupVersionRequest(const GetGroupVersionRequest &oth
 }
 
 /*!
- * @brief  Constructs a new GetGroupVersionRequest object.
+ * Constructs a GetGroupVersionRequest object.
  */
 GetGroupVersionRequest::GetGroupVersionRequest()
     : GreengrassRequest(new GetGroupVersionRequestPrivate(GreengrassRequest::GetGroupVersionAction, this))
@@ -69,14 +66,9 @@ bool GetGroupVersionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetGroupVersionResponse object.
+ * Returns a GetGroupVersionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetGroupVersionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GreengrassClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetGroupVersionRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * GetGroupVersionRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::Greengrass::GetGroupVersionRequestPrivate
+ * \brief The GetGroupVersionRequestPrivate class provides private implementation for GetGroupVersionRequest.
+ * \internal
  *
- * @class  GetGroupVersionRequestPrivate
- *
- * @brief  Private implementation for GetGroupVersionRequest.
+ * \inmodule QtAwsGreengrass
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetGroupVersionRequestPrivate object.
- *
- * @param  action  Greengrass action being performed.
- * @param  q       Pointer to this object's public GetGroupVersionRequest instance.
+ * Constructs a GetGroupVersionRequestPrivate object for Greengrass \a action with,
+ * public implementation \a q.
  */
 GetGroupVersionRequestPrivate::GetGroupVersionRequestPrivate(
     const GreengrassRequest::Action action, GetGroupVersionRequest * const q)
@@ -107,15 +96,10 @@ GetGroupVersionRequestPrivate::GetGroupVersionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetGroupVersionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetGroupVersionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetGroupVersionRequest instance.
  */
 GetGroupVersionRequestPrivate::GetGroupVersionRequestPrivate(
     const GetGroupVersionRequestPrivate &other, GetGroupVersionRequest * const q)

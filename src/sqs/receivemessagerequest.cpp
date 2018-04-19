@@ -27,10 +27,9 @@ namespace SQS {
 
 /*!
  * \class QtAws::SQS::ReceiveMessageRequest
- *
  * \brief The ReceiveMessageRequest class provides an interface for SQS ReceiveMessage requests.
  *
- * \ingroup SQS
+ * \inmodule QtAwsSQS
  *
  *  Welcome to the <i>Amazon Simple Queue Service API
  * 
@@ -103,9 +102,7 @@ namespace SQS {
  */
 
 /*!
- * @brief  Constructs a new ReceiveMessageRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ReceiveMessageRequest::ReceiveMessageRequest(const ReceiveMessageRequest &other)
     : SQSRequest(new ReceiveMessageRequestPrivate(*other.d_func(), this))
@@ -114,7 +111,7 @@ ReceiveMessageRequest::ReceiveMessageRequest(const ReceiveMessageRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ReceiveMessageRequest object.
+ * Constructs a ReceiveMessageRequest object.
  */
 ReceiveMessageRequest::ReceiveMessageRequest()
     : SQSRequest(new ReceiveMessageRequestPrivate(SQSRequest::ReceiveMessageAction, this))
@@ -132,14 +129,9 @@ bool ReceiveMessageRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ReceiveMessageResponse object.
+ * Returns a ReceiveMessageResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ReceiveMessageResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SQSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ReceiveMessageRequest::response(QNetworkReply * const reply) const
 {
@@ -147,20 +139,17 @@ QtAws::Core::AwsAbstractResponse * ReceiveMessageRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::SQS::ReceiveMessageRequestPrivate
+ * \brief The ReceiveMessageRequestPrivate class provides private implementation for ReceiveMessageRequest.
+ * \internal
  *
- * @class  ReceiveMessageRequestPrivate
- *
- * @brief  Private implementation for ReceiveMessageRequest.
+ * \inmodule QtAwsSQS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ReceiveMessageRequestPrivate object.
- *
- * @param  action  SQS action being performed.
- * @param  q       Pointer to this object's public ReceiveMessageRequest instance.
+ * Constructs a ReceiveMessageRequestPrivate object for SQS \a action with,
+ * public implementation \a q.
  */
 ReceiveMessageRequestPrivate::ReceiveMessageRequestPrivate(
     const SQSRequest::Action action, ReceiveMessageRequest * const q)
@@ -170,15 +159,10 @@ ReceiveMessageRequestPrivate::ReceiveMessageRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ReceiveMessageRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ReceiveMessageRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ReceiveMessageRequest instance.
  */
 ReceiveMessageRequestPrivate::ReceiveMessageRequestPrivate(
     const ReceiveMessageRequestPrivate &other, ReceiveMessageRequest * const q)

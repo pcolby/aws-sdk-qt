@@ -27,10 +27,9 @@ namespace CodePipeline {
 
 /*!
  * \class QtAws::CodePipeline::AcknowledgeThirdPartyJobRequest
- *
  * \brief The AcknowledgeThirdPartyJobRequest class provides an interface for CodePipeline AcknowledgeThirdPartyJob requests.
  *
- * \ingroup CodePipeline
+ * \inmodule QtAwsCodePipeline
  *
  *  <fullname>AWS CodePipeline</fullname>
  * 
@@ -200,9 +199,7 @@ namespace CodePipeline {
  */
 
 /*!
- * @brief  Constructs a new AcknowledgeThirdPartyJobRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AcknowledgeThirdPartyJobRequest::AcknowledgeThirdPartyJobRequest(const AcknowledgeThirdPartyJobRequest &other)
     : CodePipelineRequest(new AcknowledgeThirdPartyJobRequestPrivate(*other.d_func(), this))
@@ -211,7 +208,7 @@ AcknowledgeThirdPartyJobRequest::AcknowledgeThirdPartyJobRequest(const Acknowled
 }
 
 /*!
- * @brief  Constructs a new AcknowledgeThirdPartyJobRequest object.
+ * Constructs a AcknowledgeThirdPartyJobRequest object.
  */
 AcknowledgeThirdPartyJobRequest::AcknowledgeThirdPartyJobRequest()
     : CodePipelineRequest(new AcknowledgeThirdPartyJobRequestPrivate(CodePipelineRequest::AcknowledgeThirdPartyJobAction, this))
@@ -229,14 +226,9 @@ bool AcknowledgeThirdPartyJobRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AcknowledgeThirdPartyJobResponse object.
+ * Returns a AcknowledgeThirdPartyJobResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AcknowledgeThirdPartyJobResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CodePipelineClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AcknowledgeThirdPartyJobRequest::response(QNetworkReply * const reply) const
 {
@@ -244,20 +236,17 @@ QtAws::Core::AwsAbstractResponse * AcknowledgeThirdPartyJobRequest::response(QNe
 }
 
 /*!
- * @internal
+ * \class QtAws::CodePipeline::AcknowledgeThirdPartyJobRequestPrivate
+ * \brief The AcknowledgeThirdPartyJobRequestPrivate class provides private implementation for AcknowledgeThirdPartyJobRequest.
+ * \internal
  *
- * @class  AcknowledgeThirdPartyJobRequestPrivate
- *
- * @brief  Private implementation for AcknowledgeThirdPartyJobRequest.
+ * \inmodule QtAwsCodePipeline
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AcknowledgeThirdPartyJobRequestPrivate object.
- *
- * @param  action  CodePipeline action being performed.
- * @param  q       Pointer to this object's public AcknowledgeThirdPartyJobRequest instance.
+ * Constructs a AcknowledgeThirdPartyJobRequestPrivate object for CodePipeline \a action with,
+ * public implementation \a q.
  */
 AcknowledgeThirdPartyJobRequestPrivate::AcknowledgeThirdPartyJobRequestPrivate(
     const CodePipelineRequest::Action action, AcknowledgeThirdPartyJobRequest * const q)
@@ -267,15 +256,10 @@ AcknowledgeThirdPartyJobRequestPrivate::AcknowledgeThirdPartyJobRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AcknowledgeThirdPartyJobRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AcknowledgeThirdPartyJobRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AcknowledgeThirdPartyJobRequest instance.
  */
 AcknowledgeThirdPartyJobRequestPrivate::AcknowledgeThirdPartyJobRequestPrivate(
     const AcknowledgeThirdPartyJobRequestPrivate &other, AcknowledgeThirdPartyJobRequest * const q)

@@ -27,10 +27,9 @@ namespace WorkDocs {
 
 /*!
  * \class QtAws::WorkDocs::DeactivateUserRequest
- *
  * \brief The DeactivateUserRequest class provides an interface for WorkDocs DeactivateUser requests.
  *
- * \ingroup WorkDocs
+ * \inmodule QtAwsWorkDocs
  *
  *  The WorkDocs API is designed for the following use
  * 
@@ -66,9 +65,7 @@ namespace WorkDocs {
  */
 
 /*!
- * @brief  Constructs a new DeactivateUserRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeactivateUserRequest::DeactivateUserRequest(const DeactivateUserRequest &other)
     : WorkDocsRequest(new DeactivateUserRequestPrivate(*other.d_func(), this))
@@ -77,7 +74,7 @@ DeactivateUserRequest::DeactivateUserRequest(const DeactivateUserRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DeactivateUserRequest object.
+ * Constructs a DeactivateUserRequest object.
  */
 DeactivateUserRequest::DeactivateUserRequest()
     : WorkDocsRequest(new DeactivateUserRequestPrivate(WorkDocsRequest::DeactivateUserAction, this))
@@ -95,14 +92,9 @@ bool DeactivateUserRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeactivateUserResponse object.
+ * Returns a DeactivateUserResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeactivateUserResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WorkDocsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeactivateUserRequest::response(QNetworkReply * const reply) const
 {
@@ -110,20 +102,17 @@ QtAws::Core::AwsAbstractResponse * DeactivateUserRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::WorkDocs::DeactivateUserRequestPrivate
+ * \brief The DeactivateUserRequestPrivate class provides private implementation for DeactivateUserRequest.
+ * \internal
  *
- * @class  DeactivateUserRequestPrivate
- *
- * @brief  Private implementation for DeactivateUserRequest.
+ * \inmodule QtAwsWorkDocs
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeactivateUserRequestPrivate object.
- *
- * @param  action  WorkDocs action being performed.
- * @param  q       Pointer to this object's public DeactivateUserRequest instance.
+ * Constructs a DeactivateUserRequestPrivate object for WorkDocs \a action with,
+ * public implementation \a q.
  */
 DeactivateUserRequestPrivate::DeactivateUserRequestPrivate(
     const WorkDocsRequest::Action action, DeactivateUserRequest * const q)
@@ -133,15 +122,10 @@ DeactivateUserRequestPrivate::DeactivateUserRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeactivateUserRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeactivateUserRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeactivateUserRequest instance.
  */
 DeactivateUserRequestPrivate::DeactivateUserRequestPrivate(
     const DeactivateUserRequestPrivate &other, DeactivateUserRequest * const q)

@@ -27,10 +27,9 @@ namespace DirectoryService {
 
 /*!
  * \class QtAws::DirectoryService::CreateMicrosoftADRequest
- *
  * \brief The CreateMicrosoftADRequest class provides an interface for DirectoryService CreateMicrosoftAD requests.
  *
- * \ingroup DirectoryService
+ * \inmodule QtAwsDirectoryService
  *
  *  <fullname>AWS Directory Service</fullname>
  * 
@@ -51,9 +50,7 @@ namespace DirectoryService {
  */
 
 /*!
- * @brief  Constructs a new CreateMicrosoftADRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateMicrosoftADRequest::CreateMicrosoftADRequest(const CreateMicrosoftADRequest &other)
     : DirectoryServiceRequest(new CreateMicrosoftADRequestPrivate(*other.d_func(), this))
@@ -62,7 +59,7 @@ CreateMicrosoftADRequest::CreateMicrosoftADRequest(const CreateMicrosoftADReques
 }
 
 /*!
- * @brief  Constructs a new CreateMicrosoftADRequest object.
+ * Constructs a CreateMicrosoftADRequest object.
  */
 CreateMicrosoftADRequest::CreateMicrosoftADRequest()
     : DirectoryServiceRequest(new CreateMicrosoftADRequestPrivate(DirectoryServiceRequest::CreateMicrosoftADAction, this))
@@ -80,14 +77,9 @@ bool CreateMicrosoftADRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateMicrosoftADResponse object.
+ * Returns a CreateMicrosoftADResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateMicrosoftADResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DirectoryServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateMicrosoftADRequest::response(QNetworkReply * const reply) const
 {
@@ -95,20 +87,17 @@ QtAws::Core::AwsAbstractResponse * CreateMicrosoftADRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::DirectoryService::CreateMicrosoftADRequestPrivate
+ * \brief The CreateMicrosoftADRequestPrivate class provides private implementation for CreateMicrosoftADRequest.
+ * \internal
  *
- * @class  CreateMicrosoftADRequestPrivate
- *
- * @brief  Private implementation for CreateMicrosoftADRequest.
+ * \inmodule QtAwsDirectoryService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateMicrosoftADRequestPrivate object.
- *
- * @param  action  DirectoryService action being performed.
- * @param  q       Pointer to this object's public CreateMicrosoftADRequest instance.
+ * Constructs a CreateMicrosoftADRequestPrivate object for DirectoryService \a action with,
+ * public implementation \a q.
  */
 CreateMicrosoftADRequestPrivate::CreateMicrosoftADRequestPrivate(
     const DirectoryServiceRequest::Action action, CreateMicrosoftADRequest * const q)
@@ -118,15 +107,10 @@ CreateMicrosoftADRequestPrivate::CreateMicrosoftADRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateMicrosoftADRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateMicrosoftADRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateMicrosoftADRequest instance.
  */
 CreateMicrosoftADRequestPrivate::CreateMicrosoftADRequestPrivate(
     const CreateMicrosoftADRequestPrivate &other, CreateMicrosoftADRequest * const q)

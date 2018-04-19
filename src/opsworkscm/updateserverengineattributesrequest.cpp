@@ -27,10 +27,9 @@ namespace OpsWorksCM {
 
 /*!
  * \class QtAws::OpsWorksCM::UpdateServerEngineAttributesRequest
- *
  * \brief The UpdateServerEngineAttributesRequest class provides an interface for OpsWorksCM UpdateServerEngineAttributes requests.
  *
- * \ingroup OpsWorksCM
+ * \inmodule QtAwsOpsWorksCM
  *
  *  <fullname>AWS OpsWorks CM</fullname>
  * 
@@ -97,9 +96,7 @@ namespace OpsWorksCM {
  */
 
 /*!
- * @brief  Constructs a new UpdateServerEngineAttributesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateServerEngineAttributesRequest::UpdateServerEngineAttributesRequest(const UpdateServerEngineAttributesRequest &other)
     : OpsWorksCMRequest(new UpdateServerEngineAttributesRequestPrivate(*other.d_func(), this))
@@ -108,7 +105,7 @@ UpdateServerEngineAttributesRequest::UpdateServerEngineAttributesRequest(const U
 }
 
 /*!
- * @brief  Constructs a new UpdateServerEngineAttributesRequest object.
+ * Constructs a UpdateServerEngineAttributesRequest object.
  */
 UpdateServerEngineAttributesRequest::UpdateServerEngineAttributesRequest()
     : OpsWorksCMRequest(new UpdateServerEngineAttributesRequestPrivate(OpsWorksCMRequest::UpdateServerEngineAttributesAction, this))
@@ -126,14 +123,9 @@ bool UpdateServerEngineAttributesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateServerEngineAttributesResponse object.
+ * Returns a UpdateServerEngineAttributesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateServerEngineAttributesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  OpsWorksCMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateServerEngineAttributesRequest::response(QNetworkReply * const reply) const
 {
@@ -141,20 +133,17 @@ QtAws::Core::AwsAbstractResponse * UpdateServerEngineAttributesRequest::response
 }
 
 /*!
- * @internal
+ * \class QtAws::OpsWorksCM::UpdateServerEngineAttributesRequestPrivate
+ * \brief The UpdateServerEngineAttributesRequestPrivate class provides private implementation for UpdateServerEngineAttributesRequest.
+ * \internal
  *
- * @class  UpdateServerEngineAttributesRequestPrivate
- *
- * @brief  Private implementation for UpdateServerEngineAttributesRequest.
+ * \inmodule QtAwsOpsWorksCM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateServerEngineAttributesRequestPrivate object.
- *
- * @param  action  OpsWorksCM action being performed.
- * @param  q       Pointer to this object's public UpdateServerEngineAttributesRequest instance.
+ * Constructs a UpdateServerEngineAttributesRequestPrivate object for OpsWorksCM \a action with,
+ * public implementation \a q.
  */
 UpdateServerEngineAttributesRequestPrivate::UpdateServerEngineAttributesRequestPrivate(
     const OpsWorksCMRequest::Action action, UpdateServerEngineAttributesRequest * const q)
@@ -164,15 +153,10 @@ UpdateServerEngineAttributesRequestPrivate::UpdateServerEngineAttributesRequestP
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateServerEngineAttributesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateServerEngineAttributesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateServerEngineAttributesRequest instance.
  */
 UpdateServerEngineAttributesRequestPrivate::UpdateServerEngineAttributesRequestPrivate(
     const UpdateServerEngineAttributesRequestPrivate &other, UpdateServerEngineAttributesRequest * const q)

@@ -27,10 +27,9 @@ namespace DynamoDB {
 
 /*!
  * \class QtAws::DynamoDB::UpdateContinuousBackupsRequest
- *
  * \brief The UpdateContinuousBackupsRequest class provides an interface for DynamoDB UpdateContinuousBackups requests.
  *
- * \ingroup DynamoDB
+ * \inmodule QtAwsDynamoDB
  *
  *  <fullname>Amazon DynamoDB</fullname>
  * 
@@ -56,9 +55,7 @@ namespace DynamoDB {
  */
 
 /*!
- * @brief  Constructs a new UpdateContinuousBackupsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateContinuousBackupsRequest::UpdateContinuousBackupsRequest(const UpdateContinuousBackupsRequest &other)
     : DynamoDBRequest(new UpdateContinuousBackupsRequestPrivate(*other.d_func(), this))
@@ -67,7 +64,7 @@ UpdateContinuousBackupsRequest::UpdateContinuousBackupsRequest(const UpdateConti
 }
 
 /*!
- * @brief  Constructs a new UpdateContinuousBackupsRequest object.
+ * Constructs a UpdateContinuousBackupsRequest object.
  */
 UpdateContinuousBackupsRequest::UpdateContinuousBackupsRequest()
     : DynamoDBRequest(new UpdateContinuousBackupsRequestPrivate(DynamoDBRequest::UpdateContinuousBackupsAction, this))
@@ -85,14 +82,9 @@ bool UpdateContinuousBackupsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateContinuousBackupsResponse object.
+ * Returns a UpdateContinuousBackupsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateContinuousBackupsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DynamoDBClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateContinuousBackupsRequest::response(QNetworkReply * const reply) const
 {
@@ -100,20 +92,17 @@ QtAws::Core::AwsAbstractResponse * UpdateContinuousBackupsRequest::response(QNet
 }
 
 /*!
- * @internal
+ * \class QtAws::DynamoDB::UpdateContinuousBackupsRequestPrivate
+ * \brief The UpdateContinuousBackupsRequestPrivate class provides private implementation for UpdateContinuousBackupsRequest.
+ * \internal
  *
- * @class  UpdateContinuousBackupsRequestPrivate
- *
- * @brief  Private implementation for UpdateContinuousBackupsRequest.
+ * \inmodule QtAwsDynamoDB
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateContinuousBackupsRequestPrivate object.
- *
- * @param  action  DynamoDB action being performed.
- * @param  q       Pointer to this object's public UpdateContinuousBackupsRequest instance.
+ * Constructs a UpdateContinuousBackupsRequestPrivate object for DynamoDB \a action with,
+ * public implementation \a q.
  */
 UpdateContinuousBackupsRequestPrivate::UpdateContinuousBackupsRequestPrivate(
     const DynamoDBRequest::Action action, UpdateContinuousBackupsRequest * const q)
@@ -123,15 +112,10 @@ UpdateContinuousBackupsRequestPrivate::UpdateContinuousBackupsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateContinuousBackupsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateContinuousBackupsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateContinuousBackupsRequest instance.
  */
 UpdateContinuousBackupsRequestPrivate::UpdateContinuousBackupsRequestPrivate(
     const UpdateContinuousBackupsRequestPrivate &other, UpdateContinuousBackupsRequest * const q)

@@ -27,10 +27,9 @@ namespace CodeStar {
 
 /*!
  * \class QtAws::CodeStar::UpdateUserProfileRequest
- *
  * \brief The UpdateUserProfileRequest class provides an interface for CodeStar UpdateUserProfile requests.
  *
- * \ingroup CodeStar
+ * \inmodule QtAwsCodeStar
  *
  *  <fullname>AWS CodeStar</fullname>
  * 
@@ -125,9 +124,7 @@ namespace CodeStar {
  */
 
 /*!
- * @brief  Constructs a new UpdateUserProfileRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateUserProfileRequest::UpdateUserProfileRequest(const UpdateUserProfileRequest &other)
     : CodeStarRequest(new UpdateUserProfileRequestPrivate(*other.d_func(), this))
@@ -136,7 +133,7 @@ UpdateUserProfileRequest::UpdateUserProfileRequest(const UpdateUserProfileReques
 }
 
 /*!
- * @brief  Constructs a new UpdateUserProfileRequest object.
+ * Constructs a UpdateUserProfileRequest object.
  */
 UpdateUserProfileRequest::UpdateUserProfileRequest()
     : CodeStarRequest(new UpdateUserProfileRequestPrivate(CodeStarRequest::UpdateUserProfileAction, this))
@@ -154,14 +151,9 @@ bool UpdateUserProfileRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateUserProfileResponse object.
+ * Returns a UpdateUserProfileResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateUserProfileResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CodeStarClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateUserProfileRequest::response(QNetworkReply * const reply) const
 {
@@ -169,20 +161,17 @@ QtAws::Core::AwsAbstractResponse * UpdateUserProfileRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::CodeStar::UpdateUserProfileRequestPrivate
+ * \brief The UpdateUserProfileRequestPrivate class provides private implementation for UpdateUserProfileRequest.
+ * \internal
  *
- * @class  UpdateUserProfileRequestPrivate
- *
- * @brief  Private implementation for UpdateUserProfileRequest.
+ * \inmodule QtAwsCodeStar
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateUserProfileRequestPrivate object.
- *
- * @param  action  CodeStar action being performed.
- * @param  q       Pointer to this object's public UpdateUserProfileRequest instance.
+ * Constructs a UpdateUserProfileRequestPrivate object for CodeStar \a action with,
+ * public implementation \a q.
  */
 UpdateUserProfileRequestPrivate::UpdateUserProfileRequestPrivate(
     const CodeStarRequest::Action action, UpdateUserProfileRequest * const q)
@@ -192,15 +181,10 @@ UpdateUserProfileRequestPrivate::UpdateUserProfileRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateUserProfileRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateUserProfileRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateUserProfileRequest instance.
  */
 UpdateUserProfileRequestPrivate::UpdateUserProfileRequestPrivate(
     const UpdateUserProfileRequestPrivate &other, UpdateUserProfileRequest * const q)

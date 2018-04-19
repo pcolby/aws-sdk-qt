@@ -27,10 +27,9 @@ namespace Rekognition {
 
 /*!
  * \class QtAws::Rekognition::StartFaceSearchRequest
- *
  * \brief The StartFaceSearchRequest class provides an interface for Rekognition StartFaceSearch requests.
  *
- * \ingroup Rekognition
+ * \inmodule QtAwsRekognition
  *
  *  This is the Amazon Rekognition API
  *
@@ -38,9 +37,7 @@ namespace Rekognition {
  */
 
 /*!
- * @brief  Constructs a new StartFaceSearchRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 StartFaceSearchRequest::StartFaceSearchRequest(const StartFaceSearchRequest &other)
     : RekognitionRequest(new StartFaceSearchRequestPrivate(*other.d_func(), this))
@@ -49,7 +46,7 @@ StartFaceSearchRequest::StartFaceSearchRequest(const StartFaceSearchRequest &oth
 }
 
 /*!
- * @brief  Constructs a new StartFaceSearchRequest object.
+ * Constructs a StartFaceSearchRequest object.
  */
 StartFaceSearchRequest::StartFaceSearchRequest()
     : RekognitionRequest(new StartFaceSearchRequestPrivate(RekognitionRequest::StartFaceSearchAction, this))
@@ -67,14 +64,9 @@ bool StartFaceSearchRequest::isValid() const
 
 
 /*!
- * @brief  Construct an StartFaceSearchResponse object.
+ * Returns a StartFaceSearchResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An StartFaceSearchResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RekognitionClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * StartFaceSearchRequest::response(QNetworkReply * const reply) const
 {
@@ -82,20 +74,17 @@ QtAws::Core::AwsAbstractResponse * StartFaceSearchRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::Rekognition::StartFaceSearchRequestPrivate
+ * \brief The StartFaceSearchRequestPrivate class provides private implementation for StartFaceSearchRequest.
+ * \internal
  *
- * @class  StartFaceSearchRequestPrivate
- *
- * @brief  Private implementation for StartFaceSearchRequest.
+ * \inmodule QtAwsRekognition
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new StartFaceSearchRequestPrivate object.
- *
- * @param  action  Rekognition action being performed.
- * @param  q       Pointer to this object's public StartFaceSearchRequest instance.
+ * Constructs a StartFaceSearchRequestPrivate object for Rekognition \a action with,
+ * public implementation \a q.
  */
 StartFaceSearchRequestPrivate::StartFaceSearchRequestPrivate(
     const RekognitionRequest::Action action, StartFaceSearchRequest * const q)
@@ -105,15 +94,10 @@ StartFaceSearchRequestPrivate::StartFaceSearchRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StartFaceSearchRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the StartFaceSearchRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public StartFaceSearchRequest instance.
  */
 StartFaceSearchRequestPrivate::StartFaceSearchRequestPrivate(
     const StartFaceSearchRequestPrivate &other, StartFaceSearchRequest * const q)

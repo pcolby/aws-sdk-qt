@@ -27,19 +27,16 @@ namespace SageMaker {
 
 /*!
  * \class QtAws::SageMaker::UpdateEndpointWeightsAndCapacitiesRequest
- *
  * \brief The UpdateEndpointWeightsAndCapacitiesRequest class provides an interface for SageMaker UpdateEndpointWeightsAndCapacities requests.
  *
- * \ingroup SageMaker
+ * \inmodule QtAwsSageMaker
  *
  *
  * \sa SageMakerClient::updateEndpointWeightsAndCapacities
  */
 
 /*!
- * @brief  Constructs a new UpdateEndpointWeightsAndCapacitiesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateEndpointWeightsAndCapacitiesRequest::UpdateEndpointWeightsAndCapacitiesRequest(const UpdateEndpointWeightsAndCapacitiesRequest &other)
     : SageMakerRequest(new UpdateEndpointWeightsAndCapacitiesRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ UpdateEndpointWeightsAndCapacitiesRequest::UpdateEndpointWeightsAndCapacitiesReq
 }
 
 /*!
- * @brief  Constructs a new UpdateEndpointWeightsAndCapacitiesRequest object.
+ * Constructs a UpdateEndpointWeightsAndCapacitiesRequest object.
  */
 UpdateEndpointWeightsAndCapacitiesRequest::UpdateEndpointWeightsAndCapacitiesRequest()
     : SageMakerRequest(new UpdateEndpointWeightsAndCapacitiesRequestPrivate(SageMakerRequest::UpdateEndpointWeightsAndCapacitiesAction, this))
@@ -66,14 +63,9 @@ bool UpdateEndpointWeightsAndCapacitiesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateEndpointWeightsAndCapacitiesResponse object.
+ * Returns a UpdateEndpointWeightsAndCapacitiesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateEndpointWeightsAndCapacitiesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SageMakerClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateEndpointWeightsAndCapacitiesRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * UpdateEndpointWeightsAndCapacitiesRequest::re
 }
 
 /*!
- * @internal
+ * \class QtAws::SageMaker::UpdateEndpointWeightsAndCapacitiesRequestPrivate
+ * \brief The UpdateEndpointWeightsAndCapacitiesRequestPrivate class provides private implementation for UpdateEndpointWeightsAndCapacitiesRequest.
+ * \internal
  *
- * @class  UpdateEndpointWeightsAndCapacitiesRequestPrivate
- *
- * @brief  Private implementation for UpdateEndpointWeightsAndCapacitiesRequest.
+ * \inmodule QtAwsSageMaker
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateEndpointWeightsAndCapacitiesRequestPrivate object.
- *
- * @param  action  SageMaker action being performed.
- * @param  q       Pointer to this object's public UpdateEndpointWeightsAndCapacitiesRequest instance.
+ * Constructs a UpdateEndpointWeightsAndCapacitiesRequestPrivate object for SageMaker \a action with,
+ * public implementation \a q.
  */
 UpdateEndpointWeightsAndCapacitiesRequestPrivate::UpdateEndpointWeightsAndCapacitiesRequestPrivate(
     const SageMakerRequest::Action action, UpdateEndpointWeightsAndCapacitiesRequest * const q)
@@ -104,15 +93,10 @@ UpdateEndpointWeightsAndCapacitiesRequestPrivate::UpdateEndpointWeightsAndCapaci
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateEndpointWeightsAndCapacitiesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateEndpointWeightsAndCapacitiesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateEndpointWeightsAndCapacitiesRequest instance.
  */
 UpdateEndpointWeightsAndCapacitiesRequestPrivate::UpdateEndpointWeightsAndCapacitiesRequestPrivate(
     const UpdateEndpointWeightsAndCapacitiesRequestPrivate &other, UpdateEndpointWeightsAndCapacitiesRequest * const q)

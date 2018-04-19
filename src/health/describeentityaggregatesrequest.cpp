@@ -27,10 +27,9 @@ namespace Health {
 
 /*!
  * \class QtAws::Health::DescribeEntityAggregatesRequest
- *
  * \brief The DescribeEntityAggregatesRequest class provides an interface for Health DescribeEntityAggregates requests.
  *
- * \ingroup Health
+ * \inmodule QtAwsHealth
  *
  *  <fullname>AWS Health</fullname>
  * 
@@ -98,9 +97,7 @@ namespace Health {
  */
 
 /*!
- * @brief  Constructs a new DescribeEntityAggregatesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeEntityAggregatesRequest::DescribeEntityAggregatesRequest(const DescribeEntityAggregatesRequest &other)
     : HealthRequest(new DescribeEntityAggregatesRequestPrivate(*other.d_func(), this))
@@ -109,7 +106,7 @@ DescribeEntityAggregatesRequest::DescribeEntityAggregatesRequest(const DescribeE
 }
 
 /*!
- * @brief  Constructs a new DescribeEntityAggregatesRequest object.
+ * Constructs a DescribeEntityAggregatesRequest object.
  */
 DescribeEntityAggregatesRequest::DescribeEntityAggregatesRequest()
     : HealthRequest(new DescribeEntityAggregatesRequestPrivate(HealthRequest::DescribeEntityAggregatesAction, this))
@@ -127,14 +124,9 @@ bool DescribeEntityAggregatesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeEntityAggregatesResponse object.
+ * Returns a DescribeEntityAggregatesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeEntityAggregatesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  HealthClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeEntityAggregatesRequest::response(QNetworkReply * const reply) const
 {
@@ -142,20 +134,17 @@ QtAws::Core::AwsAbstractResponse * DescribeEntityAggregatesRequest::response(QNe
 }
 
 /*!
- * @internal
+ * \class QtAws::Health::DescribeEntityAggregatesRequestPrivate
+ * \brief The DescribeEntityAggregatesRequestPrivate class provides private implementation for DescribeEntityAggregatesRequest.
+ * \internal
  *
- * @class  DescribeEntityAggregatesRequestPrivate
- *
- * @brief  Private implementation for DescribeEntityAggregatesRequest.
+ * \inmodule QtAwsHealth
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeEntityAggregatesRequestPrivate object.
- *
- * @param  action  Health action being performed.
- * @param  q       Pointer to this object's public DescribeEntityAggregatesRequest instance.
+ * Constructs a DescribeEntityAggregatesRequestPrivate object for Health \a action with,
+ * public implementation \a q.
  */
 DescribeEntityAggregatesRequestPrivate::DescribeEntityAggregatesRequestPrivate(
     const HealthRequest::Action action, DescribeEntityAggregatesRequest * const q)
@@ -165,15 +154,10 @@ DescribeEntityAggregatesRequestPrivate::DescribeEntityAggregatesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeEntityAggregatesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeEntityAggregatesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeEntityAggregatesRequest instance.
  */
 DescribeEntityAggregatesRequestPrivate::DescribeEntityAggregatesRequestPrivate(
     const DescribeEntityAggregatesRequestPrivate &other, DescribeEntityAggregatesRequest * const q)

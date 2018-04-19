@@ -27,10 +27,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::StopDBInstanceRequest
- *
  * \brief The StopDBInstanceRequest class provides an interface for RDS StopDBInstance requests.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -101,9 +100,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new StopDBInstanceRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 StopDBInstanceRequest::StopDBInstanceRequest(const StopDBInstanceRequest &other)
     : RDSRequest(new StopDBInstanceRequestPrivate(*other.d_func(), this))
@@ -112,7 +109,7 @@ StopDBInstanceRequest::StopDBInstanceRequest(const StopDBInstanceRequest &other)
 }
 
 /*!
- * @brief  Constructs a new StopDBInstanceRequest object.
+ * Constructs a StopDBInstanceRequest object.
  */
 StopDBInstanceRequest::StopDBInstanceRequest()
     : RDSRequest(new StopDBInstanceRequestPrivate(RDSRequest::StopDBInstanceAction, this))
@@ -130,14 +127,9 @@ bool StopDBInstanceRequest::isValid() const
 
 
 /*!
- * @brief  Construct an StopDBInstanceResponse object.
+ * Returns a StopDBInstanceResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An StopDBInstanceResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RDSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * StopDBInstanceRequest::response(QNetworkReply * const reply) const
 {
@@ -145,20 +137,17 @@ QtAws::Core::AwsAbstractResponse * StopDBInstanceRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::RDS::StopDBInstanceRequestPrivate
+ * \brief The StopDBInstanceRequestPrivate class provides private implementation for StopDBInstanceRequest.
+ * \internal
  *
- * @class  StopDBInstanceRequestPrivate
- *
- * @brief  Private implementation for StopDBInstanceRequest.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new StopDBInstanceRequestPrivate object.
- *
- * @param  action  RDS action being performed.
- * @param  q       Pointer to this object's public StopDBInstanceRequest instance.
+ * Constructs a StopDBInstanceRequestPrivate object for RDS \a action with,
+ * public implementation \a q.
  */
 StopDBInstanceRequestPrivate::StopDBInstanceRequestPrivate(
     const RDSRequest::Action action, StopDBInstanceRequest * const q)
@@ -168,15 +157,10 @@ StopDBInstanceRequestPrivate::StopDBInstanceRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StopDBInstanceRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the StopDBInstanceRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public StopDBInstanceRequest instance.
  */
 StopDBInstanceRequestPrivate::StopDBInstanceRequestPrivate(
     const StopDBInstanceRequestPrivate &other, StopDBInstanceRequest * const q)

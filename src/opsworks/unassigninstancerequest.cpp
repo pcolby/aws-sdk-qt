@@ -27,10 +27,9 @@ namespace OpsWorks {
 
 /*!
  * \class QtAws::OpsWorks::UnassignInstanceRequest
- *
  * \brief The UnassignInstanceRequest class provides an interface for OpsWorks UnassignInstance requests.
  *
- * \ingroup OpsWorks
+ * \inmodule QtAwsOpsWorks
  *
  *  <fullname>AWS OpsWorks</fullname>
  * 
@@ -143,9 +142,7 @@ namespace OpsWorks {
  */
 
 /*!
- * @brief  Constructs a new UnassignInstanceRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UnassignInstanceRequest::UnassignInstanceRequest(const UnassignInstanceRequest &other)
     : OpsWorksRequest(new UnassignInstanceRequestPrivate(*other.d_func(), this))
@@ -154,7 +151,7 @@ UnassignInstanceRequest::UnassignInstanceRequest(const UnassignInstanceRequest &
 }
 
 /*!
- * @brief  Constructs a new UnassignInstanceRequest object.
+ * Constructs a UnassignInstanceRequest object.
  */
 UnassignInstanceRequest::UnassignInstanceRequest()
     : OpsWorksRequest(new UnassignInstanceRequestPrivate(OpsWorksRequest::UnassignInstanceAction, this))
@@ -172,14 +169,9 @@ bool UnassignInstanceRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UnassignInstanceResponse object.
+ * Returns a UnassignInstanceResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UnassignInstanceResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  OpsWorksClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UnassignInstanceRequest::response(QNetworkReply * const reply) const
 {
@@ -187,20 +179,17 @@ QtAws::Core::AwsAbstractResponse * UnassignInstanceRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::OpsWorks::UnassignInstanceRequestPrivate
+ * \brief The UnassignInstanceRequestPrivate class provides private implementation for UnassignInstanceRequest.
+ * \internal
  *
- * @class  UnassignInstanceRequestPrivate
- *
- * @brief  Private implementation for UnassignInstanceRequest.
+ * \inmodule QtAwsOpsWorks
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UnassignInstanceRequestPrivate object.
- *
- * @param  action  OpsWorks action being performed.
- * @param  q       Pointer to this object's public UnassignInstanceRequest instance.
+ * Constructs a UnassignInstanceRequestPrivate object for OpsWorks \a action with,
+ * public implementation \a q.
  */
 UnassignInstanceRequestPrivate::UnassignInstanceRequestPrivate(
     const OpsWorksRequest::Action action, UnassignInstanceRequest * const q)
@@ -210,15 +199,10 @@ UnassignInstanceRequestPrivate::UnassignInstanceRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UnassignInstanceRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UnassignInstanceRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UnassignInstanceRequest instance.
  */
 UnassignInstanceRequestPrivate::UnassignInstanceRequestPrivate(
     const UnassignInstanceRequestPrivate &other, UnassignInstanceRequest * const q)

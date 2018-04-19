@@ -27,10 +27,9 @@ namespace CodeCommit {
 
 /*!
  * \class QtAws::CodeCommit::ListBranchesRequest
- *
  * \brief The ListBranchesRequest class provides an interface for CodeCommit ListBranches requests.
  *
- * \ingroup CodeCommit
+ * \inmodule QtAwsCodeCommit
  *
  *  <fullname>AWS CodeCommit</fullname>
  * 
@@ -227,9 +226,7 @@ namespace CodeCommit {
  */
 
 /*!
- * @brief  Constructs a new ListBranchesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListBranchesRequest::ListBranchesRequest(const ListBranchesRequest &other)
     : CodeCommitRequest(new ListBranchesRequestPrivate(*other.d_func(), this))
@@ -238,7 +235,7 @@ ListBranchesRequest::ListBranchesRequest(const ListBranchesRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ListBranchesRequest object.
+ * Constructs a ListBranchesRequest object.
  */
 ListBranchesRequest::ListBranchesRequest()
     : CodeCommitRequest(new ListBranchesRequestPrivate(CodeCommitRequest::ListBranchesAction, this))
@@ -256,14 +253,9 @@ bool ListBranchesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListBranchesResponse object.
+ * Returns a ListBranchesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListBranchesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CodeCommitClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListBranchesRequest::response(QNetworkReply * const reply) const
 {
@@ -271,20 +263,17 @@ QtAws::Core::AwsAbstractResponse * ListBranchesRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::CodeCommit::ListBranchesRequestPrivate
+ * \brief The ListBranchesRequestPrivate class provides private implementation for ListBranchesRequest.
+ * \internal
  *
- * @class  ListBranchesRequestPrivate
- *
- * @brief  Private implementation for ListBranchesRequest.
+ * \inmodule QtAwsCodeCommit
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListBranchesRequestPrivate object.
- *
- * @param  action  CodeCommit action being performed.
- * @param  q       Pointer to this object's public ListBranchesRequest instance.
+ * Constructs a ListBranchesRequestPrivate object for CodeCommit \a action with,
+ * public implementation \a q.
  */
 ListBranchesRequestPrivate::ListBranchesRequestPrivate(
     const CodeCommitRequest::Action action, ListBranchesRequest * const q)
@@ -294,15 +283,10 @@ ListBranchesRequestPrivate::ListBranchesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListBranchesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListBranchesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListBranchesRequest instance.
  */
 ListBranchesRequestPrivate::ListBranchesRequestPrivate(
     const ListBranchesRequestPrivate &other, ListBranchesRequest * const q)

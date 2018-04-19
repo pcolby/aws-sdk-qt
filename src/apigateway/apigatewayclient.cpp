@@ -268,6 +268,9 @@
 /*!
  * \namespace QtAws::APIGateway
  * \brief The QtAws::APIGateway contains stuff...
+ *
+ * \inmodule QtAwsAPIGateway
+ *
  * @todo Move this to a separate template file.
  */
 
@@ -322,7 +325,7 @@ APIGatewayClient::APIGatewayClient(
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * \a  AwsEndpoint::getEndpoint()
+ * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
 APIGatewayClient::APIGatewayClient(
     const QUrl &endpoint,

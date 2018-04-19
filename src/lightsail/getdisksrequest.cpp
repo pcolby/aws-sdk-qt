@@ -27,10 +27,9 @@ namespace Lightsail {
 
 /*!
  * \class QtAws::Lightsail::GetDisksRequest
- *
  * \brief The GetDisksRequest class provides an interface for Lightsail GetDisks requests.
  *
- * \ingroup Lightsail
+ * \inmodule QtAwsLightsail
  *
  *  Amazon Lightsail is the easiest way to get started with AWS for developers who just need virtual private servers.
  *  Lightsail includes everything you need to launch your project quickly - a virtual machine, SSD-based storage, data
@@ -53,9 +52,7 @@ namespace Lightsail {
  */
 
 /*!
- * @brief  Constructs a new GetDisksRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetDisksRequest::GetDisksRequest(const GetDisksRequest &other)
     : LightsailRequest(new GetDisksRequestPrivate(*other.d_func(), this))
@@ -64,7 +61,7 @@ GetDisksRequest::GetDisksRequest(const GetDisksRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetDisksRequest object.
+ * Constructs a GetDisksRequest object.
  */
 GetDisksRequest::GetDisksRequest()
     : LightsailRequest(new GetDisksRequestPrivate(LightsailRequest::GetDisksAction, this))
@@ -82,14 +79,9 @@ bool GetDisksRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetDisksResponse object.
+ * Returns a GetDisksResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetDisksResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  LightsailClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetDisksRequest::response(QNetworkReply * const reply) const
 {
@@ -97,20 +89,17 @@ QtAws::Core::AwsAbstractResponse * GetDisksRequest::response(QNetworkReply * con
 }
 
 /*!
- * @internal
+ * \class QtAws::Lightsail::GetDisksRequestPrivate
+ * \brief The GetDisksRequestPrivate class provides private implementation for GetDisksRequest.
+ * \internal
  *
- * @class  GetDisksRequestPrivate
- *
- * @brief  Private implementation for GetDisksRequest.
+ * \inmodule QtAwsLightsail
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetDisksRequestPrivate object.
- *
- * @param  action  Lightsail action being performed.
- * @param  q       Pointer to this object's public GetDisksRequest instance.
+ * Constructs a GetDisksRequestPrivate object for Lightsail \a action with,
+ * public implementation \a q.
  */
 GetDisksRequestPrivate::GetDisksRequestPrivate(
     const LightsailRequest::Action action, GetDisksRequest * const q)
@@ -120,15 +109,10 @@ GetDisksRequestPrivate::GetDisksRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetDisksRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetDisksRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetDisksRequest instance.
  */
 GetDisksRequestPrivate::GetDisksRequestPrivate(
     const GetDisksRequestPrivate &other, GetDisksRequest * const q)

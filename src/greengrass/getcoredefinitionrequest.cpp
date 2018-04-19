@@ -27,10 +27,9 @@ namespace Greengrass {
 
 /*!
  * \class QtAws::Greengrass::GetCoreDefinitionRequest
- *
  * \brief The GetCoreDefinitionRequest class provides an interface for Greengrass GetCoreDefinition requests.
  *
- * \ingroup Greengrass
+ * \inmodule QtAwsGreengrass
  *
  *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
  *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
@@ -40,9 +39,7 @@ namespace Greengrass {
  */
 
 /*!
- * @brief  Constructs a new GetCoreDefinitionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetCoreDefinitionRequest::GetCoreDefinitionRequest(const GetCoreDefinitionRequest &other)
     : GreengrassRequest(new GetCoreDefinitionRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ GetCoreDefinitionRequest::GetCoreDefinitionRequest(const GetCoreDefinitionReques
 }
 
 /*!
- * @brief  Constructs a new GetCoreDefinitionRequest object.
+ * Constructs a GetCoreDefinitionRequest object.
  */
 GetCoreDefinitionRequest::GetCoreDefinitionRequest()
     : GreengrassRequest(new GetCoreDefinitionRequestPrivate(GreengrassRequest::GetCoreDefinitionAction, this))
@@ -69,14 +66,9 @@ bool GetCoreDefinitionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetCoreDefinitionResponse object.
+ * Returns a GetCoreDefinitionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetCoreDefinitionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GreengrassClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetCoreDefinitionRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * GetCoreDefinitionRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::Greengrass::GetCoreDefinitionRequestPrivate
+ * \brief The GetCoreDefinitionRequestPrivate class provides private implementation for GetCoreDefinitionRequest.
+ * \internal
  *
- * @class  GetCoreDefinitionRequestPrivate
- *
- * @brief  Private implementation for GetCoreDefinitionRequest.
+ * \inmodule QtAwsGreengrass
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetCoreDefinitionRequestPrivate object.
- *
- * @param  action  Greengrass action being performed.
- * @param  q       Pointer to this object's public GetCoreDefinitionRequest instance.
+ * Constructs a GetCoreDefinitionRequestPrivate object for Greengrass \a action with,
+ * public implementation \a q.
  */
 GetCoreDefinitionRequestPrivate::GetCoreDefinitionRequestPrivate(
     const GreengrassRequest::Action action, GetCoreDefinitionRequest * const q)
@@ -107,15 +96,10 @@ GetCoreDefinitionRequestPrivate::GetCoreDefinitionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetCoreDefinitionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetCoreDefinitionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetCoreDefinitionRequest instance.
  */
 GetCoreDefinitionRequestPrivate::GetCoreDefinitionRequestPrivate(
     const GetCoreDefinitionRequestPrivate &other, GetCoreDefinitionRequest * const q)

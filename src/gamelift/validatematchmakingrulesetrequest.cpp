@@ -27,10 +27,9 @@ namespace GameLift {
 
 /*!
  * \class QtAws::GameLift::ValidateMatchmakingRuleSetRequest
- *
  * \brief The ValidateMatchmakingRuleSetRequest class provides an interface for GameLift ValidateMatchmakingRuleSet requests.
  *
- * \ingroup GameLift
+ * \inmodule QtAwsGameLift
  *
  *  <fullname>Amazon GameLift Service</fullname>
  * 
@@ -473,9 +472,7 @@ namespace GameLift {
  */
 
 /*!
- * @brief  Constructs a new ValidateMatchmakingRuleSetRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ValidateMatchmakingRuleSetRequest::ValidateMatchmakingRuleSetRequest(const ValidateMatchmakingRuleSetRequest &other)
     : GameLiftRequest(new ValidateMatchmakingRuleSetRequestPrivate(*other.d_func(), this))
@@ -484,7 +481,7 @@ ValidateMatchmakingRuleSetRequest::ValidateMatchmakingRuleSetRequest(const Valid
 }
 
 /*!
- * @brief  Constructs a new ValidateMatchmakingRuleSetRequest object.
+ * Constructs a ValidateMatchmakingRuleSetRequest object.
  */
 ValidateMatchmakingRuleSetRequest::ValidateMatchmakingRuleSetRequest()
     : GameLiftRequest(new ValidateMatchmakingRuleSetRequestPrivate(GameLiftRequest::ValidateMatchmakingRuleSetAction, this))
@@ -502,14 +499,9 @@ bool ValidateMatchmakingRuleSetRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ValidateMatchmakingRuleSetResponse object.
+ * Returns a ValidateMatchmakingRuleSetResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ValidateMatchmakingRuleSetResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GameLiftClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ValidateMatchmakingRuleSetRequest::response(QNetworkReply * const reply) const
 {
@@ -517,20 +509,17 @@ QtAws::Core::AwsAbstractResponse * ValidateMatchmakingRuleSetRequest::response(Q
 }
 
 /*!
- * @internal
+ * \class QtAws::GameLift::ValidateMatchmakingRuleSetRequestPrivate
+ * \brief The ValidateMatchmakingRuleSetRequestPrivate class provides private implementation for ValidateMatchmakingRuleSetRequest.
+ * \internal
  *
- * @class  ValidateMatchmakingRuleSetRequestPrivate
- *
- * @brief  Private implementation for ValidateMatchmakingRuleSetRequest.
+ * \inmodule QtAwsGameLift
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ValidateMatchmakingRuleSetRequestPrivate object.
- *
- * @param  action  GameLift action being performed.
- * @param  q       Pointer to this object's public ValidateMatchmakingRuleSetRequest instance.
+ * Constructs a ValidateMatchmakingRuleSetRequestPrivate object for GameLift \a action with,
+ * public implementation \a q.
  */
 ValidateMatchmakingRuleSetRequestPrivate::ValidateMatchmakingRuleSetRequestPrivate(
     const GameLiftRequest::Action action, ValidateMatchmakingRuleSetRequest * const q)
@@ -540,15 +529,10 @@ ValidateMatchmakingRuleSetRequestPrivate::ValidateMatchmakingRuleSetRequestPriva
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ValidateMatchmakingRuleSetRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ValidateMatchmakingRuleSetRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ValidateMatchmakingRuleSetRequest instance.
  */
 ValidateMatchmakingRuleSetRequestPrivate::ValidateMatchmakingRuleSetRequestPrivate(
     const ValidateMatchmakingRuleSetRequestPrivate &other, ValidateMatchmakingRuleSetRequest * const q)

@@ -27,10 +27,9 @@ namespace SES {
 
 /*!
  * \class QtAws::SES::ListCustomVerificationEmailTemplatesRequest
- *
  * \brief The ListCustomVerificationEmailTemplatesRequest class provides an interface for SES ListCustomVerificationEmailTemplates requests.
  *
- * \ingroup SES
+ * \inmodule QtAwsSES
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -48,9 +47,7 @@ namespace SES {
  */
 
 /*!
- * @brief  Constructs a new ListCustomVerificationEmailTemplatesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListCustomVerificationEmailTemplatesRequest::ListCustomVerificationEmailTemplatesRequest(const ListCustomVerificationEmailTemplatesRequest &other)
     : SESRequest(new ListCustomVerificationEmailTemplatesRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ ListCustomVerificationEmailTemplatesRequest::ListCustomVerificationEmailTemplate
 }
 
 /*!
- * @brief  Constructs a new ListCustomVerificationEmailTemplatesRequest object.
+ * Constructs a ListCustomVerificationEmailTemplatesRequest object.
  */
 ListCustomVerificationEmailTemplatesRequest::ListCustomVerificationEmailTemplatesRequest()
     : SESRequest(new ListCustomVerificationEmailTemplatesRequestPrivate(SESRequest::ListCustomVerificationEmailTemplatesAction, this))
@@ -77,14 +74,9 @@ bool ListCustomVerificationEmailTemplatesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListCustomVerificationEmailTemplatesResponse object.
+ * Returns a ListCustomVerificationEmailTemplatesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListCustomVerificationEmailTemplatesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SESClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListCustomVerificationEmailTemplatesRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * ListCustomVerificationEmailTemplatesRequest::
 }
 
 /*!
- * @internal
+ * \class QtAws::SES::ListCustomVerificationEmailTemplatesRequestPrivate
+ * \brief The ListCustomVerificationEmailTemplatesRequestPrivate class provides private implementation for ListCustomVerificationEmailTemplatesRequest.
+ * \internal
  *
- * @class  ListCustomVerificationEmailTemplatesRequestPrivate
- *
- * @brief  Private implementation for ListCustomVerificationEmailTemplatesRequest.
+ * \inmodule QtAwsSES
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListCustomVerificationEmailTemplatesRequestPrivate object.
- *
- * @param  action  SES action being performed.
- * @param  q       Pointer to this object's public ListCustomVerificationEmailTemplatesRequest instance.
+ * Constructs a ListCustomVerificationEmailTemplatesRequestPrivate object for SES \a action with,
+ * public implementation \a q.
  */
 ListCustomVerificationEmailTemplatesRequestPrivate::ListCustomVerificationEmailTemplatesRequestPrivate(
     const SESRequest::Action action, ListCustomVerificationEmailTemplatesRequest * const q)
@@ -115,15 +104,10 @@ ListCustomVerificationEmailTemplatesRequestPrivate::ListCustomVerificationEmailT
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListCustomVerificationEmailTemplatesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListCustomVerificationEmailTemplatesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListCustomVerificationEmailTemplatesRequest instance.
  */
 ListCustomVerificationEmailTemplatesRequestPrivate::ListCustomVerificationEmailTemplatesRequestPrivate(
     const ListCustomVerificationEmailTemplatesRequestPrivate &other, ListCustomVerificationEmailTemplatesRequest * const q)

@@ -27,19 +27,16 @@ namespace KinesisAnalytics {
 
 /*!
  * \class QtAws::KinesisAnalytics::DeleteApplicationInputProcessingConfigurationRequest
- *
  * \brief The DeleteApplicationInputProcessingConfigurationRequest class provides an interface for KinesisAnalytics DeleteApplicationInputProcessingConfiguration requests.
  *
- * \ingroup KinesisAnalytics
+ * \inmodule QtAwsKinesisAnalytics
  *
  *
  * \sa KinesisAnalyticsClient::deleteApplicationInputProcessingConfiguration
  */
 
 /*!
- * @brief  Constructs a new DeleteApplicationInputProcessingConfigurationRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteApplicationInputProcessingConfigurationRequest::DeleteApplicationInputProcessingConfigurationRequest(const DeleteApplicationInputProcessingConfigurationRequest &other)
     : KinesisAnalyticsRequest(new DeleteApplicationInputProcessingConfigurationRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ DeleteApplicationInputProcessingConfigurationRequest::DeleteApplicationInputProc
 }
 
 /*!
- * @brief  Constructs a new DeleteApplicationInputProcessingConfigurationRequest object.
+ * Constructs a DeleteApplicationInputProcessingConfigurationRequest object.
  */
 DeleteApplicationInputProcessingConfigurationRequest::DeleteApplicationInputProcessingConfigurationRequest()
     : KinesisAnalyticsRequest(new DeleteApplicationInputProcessingConfigurationRequestPrivate(KinesisAnalyticsRequest::DeleteApplicationInputProcessingConfigurationAction, this))
@@ -66,14 +63,9 @@ bool DeleteApplicationInputProcessingConfigurationRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteApplicationInputProcessingConfigurationResponse object.
+ * Returns a DeleteApplicationInputProcessingConfigurationResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteApplicationInputProcessingConfigurationResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  KinesisAnalyticsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteApplicationInputProcessingConfigurationRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * DeleteApplicationInputProcessingConfiguration
 }
 
 /*!
- * @internal
+ * \class QtAws::KinesisAnalytics::DeleteApplicationInputProcessingConfigurationRequestPrivate
+ * \brief The DeleteApplicationInputProcessingConfigurationRequestPrivate class provides private implementation for DeleteApplicationInputProcessingConfigurationRequest.
+ * \internal
  *
- * @class  DeleteApplicationInputProcessingConfigurationRequestPrivate
- *
- * @brief  Private implementation for DeleteApplicationInputProcessingConfigurationRequest.
+ * \inmodule QtAwsKinesisAnalytics
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteApplicationInputProcessingConfigurationRequestPrivate object.
- *
- * @param  action  KinesisAnalytics action being performed.
- * @param  q       Pointer to this object's public DeleteApplicationInputProcessingConfigurationRequest instance.
+ * Constructs a DeleteApplicationInputProcessingConfigurationRequestPrivate object for KinesisAnalytics \a action with,
+ * public implementation \a q.
  */
 DeleteApplicationInputProcessingConfigurationRequestPrivate::DeleteApplicationInputProcessingConfigurationRequestPrivate(
     const KinesisAnalyticsRequest::Action action, DeleteApplicationInputProcessingConfigurationRequest * const q)
@@ -104,15 +93,10 @@ DeleteApplicationInputProcessingConfigurationRequestPrivate::DeleteApplicationIn
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteApplicationInputProcessingConfigurationRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteApplicationInputProcessingConfigurationRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteApplicationInputProcessingConfigurationRequest instance.
  */
 DeleteApplicationInputProcessingConfigurationRequestPrivate::DeleteApplicationInputProcessingConfigurationRequestPrivate(
     const DeleteApplicationInputProcessingConfigurationRequestPrivate &other, DeleteApplicationInputProcessingConfigurationRequest * const q)

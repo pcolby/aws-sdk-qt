@@ -27,10 +27,9 @@ namespace CognitoSync {
 
 /*!
  * \class QtAws::CognitoSync::DeleteDatasetRequest
- *
  * \brief The DeleteDatasetRequest class provides an interface for CognitoSync DeleteDataset requests.
  *
- * \ingroup CognitoSync
+ * \inmodule QtAwsCognitoSync
  *
  *  <fullname>Amazon Cognito Sync</fullname>
  * 
@@ -57,9 +56,7 @@ namespace CognitoSync {
  */
 
 /*!
- * @brief  Constructs a new DeleteDatasetRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteDatasetRequest::DeleteDatasetRequest(const DeleteDatasetRequest &other)
     : CognitoSyncRequest(new DeleteDatasetRequestPrivate(*other.d_func(), this))
@@ -68,7 +65,7 @@ DeleteDatasetRequest::DeleteDatasetRequest(const DeleteDatasetRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DeleteDatasetRequest object.
+ * Constructs a DeleteDatasetRequest object.
  */
 DeleteDatasetRequest::DeleteDatasetRequest()
     : CognitoSyncRequest(new DeleteDatasetRequestPrivate(CognitoSyncRequest::DeleteDatasetAction, this))
@@ -86,14 +83,9 @@ bool DeleteDatasetRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteDatasetResponse object.
+ * Returns a DeleteDatasetResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteDatasetResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CognitoSyncClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteDatasetRequest::response(QNetworkReply * const reply) const
 {
@@ -101,20 +93,17 @@ QtAws::Core::AwsAbstractResponse * DeleteDatasetRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::CognitoSync::DeleteDatasetRequestPrivate
+ * \brief The DeleteDatasetRequestPrivate class provides private implementation for DeleteDatasetRequest.
+ * \internal
  *
- * @class  DeleteDatasetRequestPrivate
- *
- * @brief  Private implementation for DeleteDatasetRequest.
+ * \inmodule QtAwsCognitoSync
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteDatasetRequestPrivate object.
- *
- * @param  action  CognitoSync action being performed.
- * @param  q       Pointer to this object's public DeleteDatasetRequest instance.
+ * Constructs a DeleteDatasetRequestPrivate object for CognitoSync \a action with,
+ * public implementation \a q.
  */
 DeleteDatasetRequestPrivate::DeleteDatasetRequestPrivate(
     const CognitoSyncRequest::Action action, DeleteDatasetRequest * const q)
@@ -124,15 +113,10 @@ DeleteDatasetRequestPrivate::DeleteDatasetRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteDatasetRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteDatasetRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteDatasetRequest instance.
  */
 DeleteDatasetRequestPrivate::DeleteDatasetRequestPrivate(
     const DeleteDatasetRequestPrivate &other, DeleteDatasetRequest * const q)

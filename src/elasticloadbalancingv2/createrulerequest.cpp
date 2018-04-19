@@ -27,10 +27,9 @@ namespace ElasticLoadBalancingv2 {
 
 /*!
  * \class QtAws::ElasticLoadBalancingv2::CreateRuleRequest
- *
  * \brief The CreateRuleRequest class provides an interface for ElasticLoadBalancingv2 CreateRule requests.
  *
- * \ingroup ElasticLoadBalancingv2
+ * \inmodule QtAwsElasticLoadBalancingv2
  *
  *  <fullname>Elastic Load Balancing</fullname>
  * 
@@ -105,9 +104,7 @@ namespace ElasticLoadBalancingv2 {
  */
 
 /*!
- * @brief  Constructs a new CreateRuleRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateRuleRequest::CreateRuleRequest(const CreateRuleRequest &other)
     : ElasticLoadBalancingv2Request(new CreateRuleRequestPrivate(*other.d_func(), this))
@@ -116,7 +113,7 @@ CreateRuleRequest::CreateRuleRequest(const CreateRuleRequest &other)
 }
 
 /*!
- * @brief  Constructs a new CreateRuleRequest object.
+ * Constructs a CreateRuleRequest object.
  */
 CreateRuleRequest::CreateRuleRequest()
     : ElasticLoadBalancingv2Request(new CreateRuleRequestPrivate(ElasticLoadBalancingv2Request::CreateRuleAction, this))
@@ -134,14 +131,9 @@ bool CreateRuleRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateRuleResponse object.
+ * Returns a CreateRuleResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateRuleResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ElasticLoadBalancingv2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateRuleRequest::response(QNetworkReply * const reply) const
 {
@@ -149,20 +141,17 @@ QtAws::Core::AwsAbstractResponse * CreateRuleRequest::response(QNetworkReply * c
 }
 
 /*!
- * @internal
+ * \class QtAws::ElasticLoadBalancingv2::CreateRuleRequestPrivate
+ * \brief The CreateRuleRequestPrivate class provides private implementation for CreateRuleRequest.
+ * \internal
  *
- * @class  CreateRuleRequestPrivate
- *
- * @brief  Private implementation for CreateRuleRequest.
+ * \inmodule QtAwsElasticLoadBalancingv2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateRuleRequestPrivate object.
- *
- * @param  action  ElasticLoadBalancingv2 action being performed.
- * @param  q       Pointer to this object's public CreateRuleRequest instance.
+ * Constructs a CreateRuleRequestPrivate object for ElasticLoadBalancingv2 \a action with,
+ * public implementation \a q.
  */
 CreateRuleRequestPrivate::CreateRuleRequestPrivate(
     const ElasticLoadBalancingv2Request::Action action, CreateRuleRequest * const q)
@@ -172,15 +161,10 @@ CreateRuleRequestPrivate::CreateRuleRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateRuleRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateRuleRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateRuleRequest instance.
  */
 CreateRuleRequestPrivate::CreateRuleRequestPrivate(
     const CreateRuleRequestPrivate &other, CreateRuleRequest * const q)

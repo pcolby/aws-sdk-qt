@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::AssociateVpcCidrBlockRequest
- *
  * \brief The AssociateVpcCidrBlockRequest class provides an interface for EC2 AssociateVpcCidrBlock requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new AssociateVpcCidrBlockRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AssociateVpcCidrBlockRequest::AssociateVpcCidrBlockRequest(const AssociateVpcCidrBlockRequest &other)
     : EC2Request(new AssociateVpcCidrBlockRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ AssociateVpcCidrBlockRequest::AssociateVpcCidrBlockRequest(const AssociateVpcCid
 }
 
 /*!
- * @brief  Constructs a new AssociateVpcCidrBlockRequest object.
+ * Constructs a AssociateVpcCidrBlockRequest object.
  */
 AssociateVpcCidrBlockRequest::AssociateVpcCidrBlockRequest()
     : EC2Request(new AssociateVpcCidrBlockRequestPrivate(EC2Request::AssociateVpcCidrBlockAction, this))
@@ -70,14 +67,9 @@ bool AssociateVpcCidrBlockRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AssociateVpcCidrBlockResponse object.
+ * Returns a AssociateVpcCidrBlockResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AssociateVpcCidrBlockResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AssociateVpcCidrBlockRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * AssociateVpcCidrBlockRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::AssociateVpcCidrBlockRequestPrivate
+ * \brief The AssociateVpcCidrBlockRequestPrivate class provides private implementation for AssociateVpcCidrBlockRequest.
+ * \internal
  *
- * @class  AssociateVpcCidrBlockRequestPrivate
- *
- * @brief  Private implementation for AssociateVpcCidrBlockRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AssociateVpcCidrBlockRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public AssociateVpcCidrBlockRequest instance.
+ * Constructs a AssociateVpcCidrBlockRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 AssociateVpcCidrBlockRequestPrivate::AssociateVpcCidrBlockRequestPrivate(
     const EC2Request::Action action, AssociateVpcCidrBlockRequest * const q)
@@ -108,15 +97,10 @@ AssociateVpcCidrBlockRequestPrivate::AssociateVpcCidrBlockRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AssociateVpcCidrBlockRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AssociateVpcCidrBlockRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AssociateVpcCidrBlockRequest instance.
  */
 AssociateVpcCidrBlockRequestPrivate::AssociateVpcCidrBlockRequestPrivate(
     const AssociateVpcCidrBlockRequestPrivate &other, AssociateVpcCidrBlockRequest * const q)

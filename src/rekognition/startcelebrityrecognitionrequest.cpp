@@ -27,10 +27,9 @@ namespace Rekognition {
 
 /*!
  * \class QtAws::Rekognition::StartCelebrityRecognitionRequest
- *
  * \brief The StartCelebrityRecognitionRequest class provides an interface for Rekognition StartCelebrityRecognition requests.
  *
- * \ingroup Rekognition
+ * \inmodule QtAwsRekognition
  *
  *  This is the Amazon Rekognition API
  *
@@ -38,9 +37,7 @@ namespace Rekognition {
  */
 
 /*!
- * @brief  Constructs a new StartCelebrityRecognitionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 StartCelebrityRecognitionRequest::StartCelebrityRecognitionRequest(const StartCelebrityRecognitionRequest &other)
     : RekognitionRequest(new StartCelebrityRecognitionRequestPrivate(*other.d_func(), this))
@@ -49,7 +46,7 @@ StartCelebrityRecognitionRequest::StartCelebrityRecognitionRequest(const StartCe
 }
 
 /*!
- * @brief  Constructs a new StartCelebrityRecognitionRequest object.
+ * Constructs a StartCelebrityRecognitionRequest object.
  */
 StartCelebrityRecognitionRequest::StartCelebrityRecognitionRequest()
     : RekognitionRequest(new StartCelebrityRecognitionRequestPrivate(RekognitionRequest::StartCelebrityRecognitionAction, this))
@@ -67,14 +64,9 @@ bool StartCelebrityRecognitionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an StartCelebrityRecognitionResponse object.
+ * Returns a StartCelebrityRecognitionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An StartCelebrityRecognitionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RekognitionClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * StartCelebrityRecognitionRequest::response(QNetworkReply * const reply) const
 {
@@ -82,20 +74,17 @@ QtAws::Core::AwsAbstractResponse * StartCelebrityRecognitionRequest::response(QN
 }
 
 /*!
- * @internal
+ * \class QtAws::Rekognition::StartCelebrityRecognitionRequestPrivate
+ * \brief The StartCelebrityRecognitionRequestPrivate class provides private implementation for StartCelebrityRecognitionRequest.
+ * \internal
  *
- * @class  StartCelebrityRecognitionRequestPrivate
- *
- * @brief  Private implementation for StartCelebrityRecognitionRequest.
+ * \inmodule QtAwsRekognition
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new StartCelebrityRecognitionRequestPrivate object.
- *
- * @param  action  Rekognition action being performed.
- * @param  q       Pointer to this object's public StartCelebrityRecognitionRequest instance.
+ * Constructs a StartCelebrityRecognitionRequestPrivate object for Rekognition \a action with,
+ * public implementation \a q.
  */
 StartCelebrityRecognitionRequestPrivate::StartCelebrityRecognitionRequestPrivate(
     const RekognitionRequest::Action action, StartCelebrityRecognitionRequest * const q)
@@ -105,15 +94,10 @@ StartCelebrityRecognitionRequestPrivate::StartCelebrityRecognitionRequestPrivate
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StartCelebrityRecognitionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the StartCelebrityRecognitionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public StartCelebrityRecognitionRequest instance.
  */
 StartCelebrityRecognitionRequestPrivate::StartCelebrityRecognitionRequestPrivate(
     const StartCelebrityRecognitionRequestPrivate &other, StartCelebrityRecognitionRequest * const q)

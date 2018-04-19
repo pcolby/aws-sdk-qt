@@ -27,10 +27,9 @@ namespace DynamoDB {
 
 /*!
  * \class QtAws::DynamoDB::DescribeGlobalTableRequest
- *
  * \brief The DescribeGlobalTableRequest class provides an interface for DynamoDB DescribeGlobalTable requests.
  *
- * \ingroup DynamoDB
+ * \inmodule QtAwsDynamoDB
  *
  *  <fullname>Amazon DynamoDB</fullname>
  * 
@@ -56,9 +55,7 @@ namespace DynamoDB {
  */
 
 /*!
- * @brief  Constructs a new DescribeGlobalTableRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeGlobalTableRequest::DescribeGlobalTableRequest(const DescribeGlobalTableRequest &other)
     : DynamoDBRequest(new DescribeGlobalTableRequestPrivate(*other.d_func(), this))
@@ -67,7 +64,7 @@ DescribeGlobalTableRequest::DescribeGlobalTableRequest(const DescribeGlobalTable
 }
 
 /*!
- * @brief  Constructs a new DescribeGlobalTableRequest object.
+ * Constructs a DescribeGlobalTableRequest object.
  */
 DescribeGlobalTableRequest::DescribeGlobalTableRequest()
     : DynamoDBRequest(new DescribeGlobalTableRequestPrivate(DynamoDBRequest::DescribeGlobalTableAction, this))
@@ -85,14 +82,9 @@ bool DescribeGlobalTableRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeGlobalTableResponse object.
+ * Returns a DescribeGlobalTableResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeGlobalTableResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DynamoDBClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeGlobalTableRequest::response(QNetworkReply * const reply) const
 {
@@ -100,20 +92,17 @@ QtAws::Core::AwsAbstractResponse * DescribeGlobalTableRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::DynamoDB::DescribeGlobalTableRequestPrivate
+ * \brief The DescribeGlobalTableRequestPrivate class provides private implementation for DescribeGlobalTableRequest.
+ * \internal
  *
- * @class  DescribeGlobalTableRequestPrivate
- *
- * @brief  Private implementation for DescribeGlobalTableRequest.
+ * \inmodule QtAwsDynamoDB
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeGlobalTableRequestPrivate object.
- *
- * @param  action  DynamoDB action being performed.
- * @param  q       Pointer to this object's public DescribeGlobalTableRequest instance.
+ * Constructs a DescribeGlobalTableRequestPrivate object for DynamoDB \a action with,
+ * public implementation \a q.
  */
 DescribeGlobalTableRequestPrivate::DescribeGlobalTableRequestPrivate(
     const DynamoDBRequest::Action action, DescribeGlobalTableRequest * const q)
@@ -123,15 +112,10 @@ DescribeGlobalTableRequestPrivate::DescribeGlobalTableRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeGlobalTableRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeGlobalTableRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeGlobalTableRequest instance.
  */
 DescribeGlobalTableRequestPrivate::DescribeGlobalTableRequestPrivate(
     const DescribeGlobalTableRequestPrivate &other, DescribeGlobalTableRequest * const q)

@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DisassociateRouteTableRequest
- *
  * \brief The DisassociateRouteTableRequest class provides an interface for EC2 DisassociateRouteTable requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DisassociateRouteTableRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DisassociateRouteTableRequest::DisassociateRouteTableRequest(const DisassociateRouteTableRequest &other)
     : EC2Request(new DisassociateRouteTableRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ DisassociateRouteTableRequest::DisassociateRouteTableRequest(const DisassociateR
 }
 
 /*!
- * @brief  Constructs a new DisassociateRouteTableRequest object.
+ * Constructs a DisassociateRouteTableRequest object.
  */
 DisassociateRouteTableRequest::DisassociateRouteTableRequest()
     : EC2Request(new DisassociateRouteTableRequestPrivate(EC2Request::DisassociateRouteTableAction, this))
@@ -70,14 +67,9 @@ bool DisassociateRouteTableRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DisassociateRouteTableResponse object.
+ * Returns a DisassociateRouteTableResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DisassociateRouteTableResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DisassociateRouteTableRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * DisassociateRouteTableRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::DisassociateRouteTableRequestPrivate
+ * \brief The DisassociateRouteTableRequestPrivate class provides private implementation for DisassociateRouteTableRequest.
+ * \internal
  *
- * @class  DisassociateRouteTableRequestPrivate
- *
- * @brief  Private implementation for DisassociateRouteTableRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DisassociateRouteTableRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public DisassociateRouteTableRequest instance.
+ * Constructs a DisassociateRouteTableRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 DisassociateRouteTableRequestPrivate::DisassociateRouteTableRequestPrivate(
     const EC2Request::Action action, DisassociateRouteTableRequest * const q)
@@ -108,15 +97,10 @@ DisassociateRouteTableRequestPrivate::DisassociateRouteTableRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DisassociateRouteTableRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DisassociateRouteTableRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DisassociateRouteTableRequest instance.
  */
 DisassociateRouteTableRequestPrivate::DisassociateRouteTableRequestPrivate(
     const DisassociateRouteTableRequestPrivate &other, DisassociateRouteTableRequest * const q)

@@ -27,10 +27,9 @@ namespace Budgets {
 
 /*!
  * \class QtAws::Budgets::DescribeBudgetRequest
- *
  * \brief The DescribeBudgetRequest class provides an interface for Budgets DescribeBudget requests.
  *
- * \ingroup Budgets
+ * \inmodule QtAwsBudgets
  *
  *  Budgets enable you to plan your service usage, service costs, and your RI utilization. You can also track how close your
  *  plan is to your budgeted amount or to the free tier limits. Budgets provide you with a quick way to see your
@@ -75,9 +74,7 @@ namespace Budgets {
  */
 
 /*!
- * @brief  Constructs a new DescribeBudgetRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeBudgetRequest::DescribeBudgetRequest(const DescribeBudgetRequest &other)
     : BudgetsRequest(new DescribeBudgetRequestPrivate(*other.d_func(), this))
@@ -86,7 +83,7 @@ DescribeBudgetRequest::DescribeBudgetRequest(const DescribeBudgetRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DescribeBudgetRequest object.
+ * Constructs a DescribeBudgetRequest object.
  */
 DescribeBudgetRequest::DescribeBudgetRequest()
     : BudgetsRequest(new DescribeBudgetRequestPrivate(BudgetsRequest::DescribeBudgetAction, this))
@@ -104,14 +101,9 @@ bool DescribeBudgetRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeBudgetResponse object.
+ * Returns a DescribeBudgetResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeBudgetResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  BudgetsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeBudgetRequest::response(QNetworkReply * const reply) const
 {
@@ -119,20 +111,17 @@ QtAws::Core::AwsAbstractResponse * DescribeBudgetRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::Budgets::DescribeBudgetRequestPrivate
+ * \brief The DescribeBudgetRequestPrivate class provides private implementation for DescribeBudgetRequest.
+ * \internal
  *
- * @class  DescribeBudgetRequestPrivate
- *
- * @brief  Private implementation for DescribeBudgetRequest.
+ * \inmodule QtAwsBudgets
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeBudgetRequestPrivate object.
- *
- * @param  action  Budgets action being performed.
- * @param  q       Pointer to this object's public DescribeBudgetRequest instance.
+ * Constructs a DescribeBudgetRequestPrivate object for Budgets \a action with,
+ * public implementation \a q.
  */
 DescribeBudgetRequestPrivate::DescribeBudgetRequestPrivate(
     const BudgetsRequest::Action action, DescribeBudgetRequest * const q)
@@ -142,15 +131,10 @@ DescribeBudgetRequestPrivate::DescribeBudgetRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeBudgetRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeBudgetRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeBudgetRequest instance.
  */
 DescribeBudgetRequestPrivate::DescribeBudgetRequestPrivate(
     const DescribeBudgetRequestPrivate &other, DescribeBudgetRequest * const q)

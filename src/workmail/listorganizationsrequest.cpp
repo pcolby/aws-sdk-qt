@@ -27,10 +27,9 @@ namespace WorkMail {
 
 /*!
  * \class QtAws::WorkMail::ListOrganizationsRequest
- *
  * \brief The ListOrganizationsRequest class provides an interface for WorkMail ListOrganizations requests.
  *
- * \ingroup WorkMail
+ * \inmodule QtAwsWorkMail
  *
  *  Amazon WorkMail is a secure, managed business email and calendaring service with support for existing desktop and mobile
  *  email clients. You can access your email, contacts, and calendars using Microsoft Outlook, your browser, or their native
@@ -70,9 +69,7 @@ namespace WorkMail {
  */
 
 /*!
- * @brief  Constructs a new ListOrganizationsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListOrganizationsRequest::ListOrganizationsRequest(const ListOrganizationsRequest &other)
     : WorkMailRequest(new ListOrganizationsRequestPrivate(*other.d_func(), this))
@@ -81,7 +78,7 @@ ListOrganizationsRequest::ListOrganizationsRequest(const ListOrganizationsReques
 }
 
 /*!
- * @brief  Constructs a new ListOrganizationsRequest object.
+ * Constructs a ListOrganizationsRequest object.
  */
 ListOrganizationsRequest::ListOrganizationsRequest()
     : WorkMailRequest(new ListOrganizationsRequestPrivate(WorkMailRequest::ListOrganizationsAction, this))
@@ -99,14 +96,9 @@ bool ListOrganizationsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListOrganizationsResponse object.
+ * Returns a ListOrganizationsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListOrganizationsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WorkMailClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListOrganizationsRequest::response(QNetworkReply * const reply) const
 {
@@ -114,20 +106,17 @@ QtAws::Core::AwsAbstractResponse * ListOrganizationsRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::WorkMail::ListOrganizationsRequestPrivate
+ * \brief The ListOrganizationsRequestPrivate class provides private implementation for ListOrganizationsRequest.
+ * \internal
  *
- * @class  ListOrganizationsRequestPrivate
- *
- * @brief  Private implementation for ListOrganizationsRequest.
+ * \inmodule QtAwsWorkMail
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListOrganizationsRequestPrivate object.
- *
- * @param  action  WorkMail action being performed.
- * @param  q       Pointer to this object's public ListOrganizationsRequest instance.
+ * Constructs a ListOrganizationsRequestPrivate object for WorkMail \a action with,
+ * public implementation \a q.
  */
 ListOrganizationsRequestPrivate::ListOrganizationsRequestPrivate(
     const WorkMailRequest::Action action, ListOrganizationsRequest * const q)
@@ -137,15 +126,10 @@ ListOrganizationsRequestPrivate::ListOrganizationsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListOrganizationsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListOrganizationsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListOrganizationsRequest instance.
  */
 ListOrganizationsRequestPrivate::ListOrganizationsRequestPrivate(
     const ListOrganizationsRequestPrivate &other, ListOrganizationsRequest * const q)

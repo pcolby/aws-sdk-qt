@@ -27,10 +27,9 @@ namespace WAFRegional {
 
 /*!
  * \class QtAws::WAFRegional::DeleteRuleGroupRequest
- *
  * \brief The DeleteRuleGroupRequest class provides an interface for WAFRegional DeleteRuleGroup requests.
  *
- * \ingroup WAFRegional
+ * \inmodule QtAwsWAFRegional
  *
  *  This is the <i>AWS WAF Regional API Reference</i> for using AWS WAF with Elastic Load Balancing (ELB) Application Load
  *  Balancers. The AWS WAF actions and data types listed in the reference are available for protecting Application Load
@@ -44,9 +43,7 @@ namespace WAFRegional {
  */
 
 /*!
- * @brief  Constructs a new DeleteRuleGroupRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteRuleGroupRequest::DeleteRuleGroupRequest(const DeleteRuleGroupRequest &other)
     : WAFRegionalRequest(new DeleteRuleGroupRequestPrivate(*other.d_func(), this))
@@ -55,7 +52,7 @@ DeleteRuleGroupRequest::DeleteRuleGroupRequest(const DeleteRuleGroupRequest &oth
 }
 
 /*!
- * @brief  Constructs a new DeleteRuleGroupRequest object.
+ * Constructs a DeleteRuleGroupRequest object.
  */
 DeleteRuleGroupRequest::DeleteRuleGroupRequest()
     : WAFRegionalRequest(new DeleteRuleGroupRequestPrivate(WAFRegionalRequest::DeleteRuleGroupAction, this))
@@ -73,14 +70,9 @@ bool DeleteRuleGroupRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteRuleGroupResponse object.
+ * Returns a DeleteRuleGroupResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteRuleGroupResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WAFRegionalClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteRuleGroupRequest::response(QNetworkReply * const reply) const
 {
@@ -88,20 +80,17 @@ QtAws::Core::AwsAbstractResponse * DeleteRuleGroupRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::WAFRegional::DeleteRuleGroupRequestPrivate
+ * \brief The DeleteRuleGroupRequestPrivate class provides private implementation for DeleteRuleGroupRequest.
+ * \internal
  *
- * @class  DeleteRuleGroupRequestPrivate
- *
- * @brief  Private implementation for DeleteRuleGroupRequest.
+ * \inmodule QtAwsWAFRegional
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteRuleGroupRequestPrivate object.
- *
- * @param  action  WAFRegional action being performed.
- * @param  q       Pointer to this object's public DeleteRuleGroupRequest instance.
+ * Constructs a DeleteRuleGroupRequestPrivate object for WAFRegional \a action with,
+ * public implementation \a q.
  */
 DeleteRuleGroupRequestPrivate::DeleteRuleGroupRequestPrivate(
     const WAFRegionalRequest::Action action, DeleteRuleGroupRequest * const q)
@@ -111,15 +100,10 @@ DeleteRuleGroupRequestPrivate::DeleteRuleGroupRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteRuleGroupRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteRuleGroupRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteRuleGroupRequest instance.
  */
 DeleteRuleGroupRequestPrivate::DeleteRuleGroupRequestPrivate(
     const DeleteRuleGroupRequestPrivate &other, DeleteRuleGroupRequest * const q)

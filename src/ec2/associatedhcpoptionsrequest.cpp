@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::AssociateDhcpOptionsRequest
- *
  * \brief The AssociateDhcpOptionsRequest class provides an interface for EC2 AssociateDhcpOptions requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new AssociateDhcpOptionsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AssociateDhcpOptionsRequest::AssociateDhcpOptionsRequest(const AssociateDhcpOptionsRequest &other)
     : EC2Request(new AssociateDhcpOptionsRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ AssociateDhcpOptionsRequest::AssociateDhcpOptionsRequest(const AssociateDhcpOpti
 }
 
 /*!
- * @brief  Constructs a new AssociateDhcpOptionsRequest object.
+ * Constructs a AssociateDhcpOptionsRequest object.
  */
 AssociateDhcpOptionsRequest::AssociateDhcpOptionsRequest()
     : EC2Request(new AssociateDhcpOptionsRequestPrivate(EC2Request::AssociateDhcpOptionsAction, this))
@@ -70,14 +67,9 @@ bool AssociateDhcpOptionsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AssociateDhcpOptionsResponse object.
+ * Returns a AssociateDhcpOptionsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AssociateDhcpOptionsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AssociateDhcpOptionsRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * AssociateDhcpOptionsRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::AssociateDhcpOptionsRequestPrivate
+ * \brief The AssociateDhcpOptionsRequestPrivate class provides private implementation for AssociateDhcpOptionsRequest.
+ * \internal
  *
- * @class  AssociateDhcpOptionsRequestPrivate
- *
- * @brief  Private implementation for AssociateDhcpOptionsRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AssociateDhcpOptionsRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public AssociateDhcpOptionsRequest instance.
+ * Constructs a AssociateDhcpOptionsRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 AssociateDhcpOptionsRequestPrivate::AssociateDhcpOptionsRequestPrivate(
     const EC2Request::Action action, AssociateDhcpOptionsRequest * const q)
@@ -108,15 +97,10 @@ AssociateDhcpOptionsRequestPrivate::AssociateDhcpOptionsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AssociateDhcpOptionsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AssociateDhcpOptionsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AssociateDhcpOptionsRequest instance.
  */
 AssociateDhcpOptionsRequestPrivate::AssociateDhcpOptionsRequestPrivate(
     const AssociateDhcpOptionsRequestPrivate &other, AssociateDhcpOptionsRequest * const q)

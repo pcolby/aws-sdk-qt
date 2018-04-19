@@ -27,10 +27,9 @@ namespace Lightsail {
 
 /*!
  * \class QtAws::Lightsail::DeleteDiskSnapshotRequest
- *
  * \brief The DeleteDiskSnapshotRequest class provides an interface for Lightsail DeleteDiskSnapshot requests.
  *
- * \ingroup Lightsail
+ * \inmodule QtAwsLightsail
  *
  *  Amazon Lightsail is the easiest way to get started with AWS for developers who just need virtual private servers.
  *  Lightsail includes everything you need to launch your project quickly - a virtual machine, SSD-based storage, data
@@ -53,9 +52,7 @@ namespace Lightsail {
  */
 
 /*!
- * @brief  Constructs a new DeleteDiskSnapshotRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteDiskSnapshotRequest::DeleteDiskSnapshotRequest(const DeleteDiskSnapshotRequest &other)
     : LightsailRequest(new DeleteDiskSnapshotRequestPrivate(*other.d_func(), this))
@@ -64,7 +61,7 @@ DeleteDiskSnapshotRequest::DeleteDiskSnapshotRequest(const DeleteDiskSnapshotReq
 }
 
 /*!
- * @brief  Constructs a new DeleteDiskSnapshotRequest object.
+ * Constructs a DeleteDiskSnapshotRequest object.
  */
 DeleteDiskSnapshotRequest::DeleteDiskSnapshotRequest()
     : LightsailRequest(new DeleteDiskSnapshotRequestPrivate(LightsailRequest::DeleteDiskSnapshotAction, this))
@@ -82,14 +79,9 @@ bool DeleteDiskSnapshotRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteDiskSnapshotResponse object.
+ * Returns a DeleteDiskSnapshotResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteDiskSnapshotResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  LightsailClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteDiskSnapshotRequest::response(QNetworkReply * const reply) const
 {
@@ -97,20 +89,17 @@ QtAws::Core::AwsAbstractResponse * DeleteDiskSnapshotRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::Lightsail::DeleteDiskSnapshotRequestPrivate
+ * \brief The DeleteDiskSnapshotRequestPrivate class provides private implementation for DeleteDiskSnapshotRequest.
+ * \internal
  *
- * @class  DeleteDiskSnapshotRequestPrivate
- *
- * @brief  Private implementation for DeleteDiskSnapshotRequest.
+ * \inmodule QtAwsLightsail
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteDiskSnapshotRequestPrivate object.
- *
- * @param  action  Lightsail action being performed.
- * @param  q       Pointer to this object's public DeleteDiskSnapshotRequest instance.
+ * Constructs a DeleteDiskSnapshotRequestPrivate object for Lightsail \a action with,
+ * public implementation \a q.
  */
 DeleteDiskSnapshotRequestPrivate::DeleteDiskSnapshotRequestPrivate(
     const LightsailRequest::Action action, DeleteDiskSnapshotRequest * const q)
@@ -120,15 +109,10 @@ DeleteDiskSnapshotRequestPrivate::DeleteDiskSnapshotRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteDiskSnapshotRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteDiskSnapshotRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteDiskSnapshotRequest instance.
  */
 DeleteDiskSnapshotRequestPrivate::DeleteDiskSnapshotRequestPrivate(
     const DeleteDiskSnapshotRequestPrivate &other, DeleteDiskSnapshotRequest * const q)

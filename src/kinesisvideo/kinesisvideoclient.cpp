@@ -48,6 +48,9 @@
 /*!
  * \namespace QtAws::KinesisVideo
  * \brief The QtAws::KinesisVideo contains stuff...
+ *
+ * \inmodule QtAwsKinesisVideo
+ *
  * @todo Move this to a separate template file.
  */
 
@@ -97,7 +100,7 @@ KinesisVideoClient::KinesisVideoClient(
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * \a  AwsEndpoint::getEndpoint()
+ * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
 KinesisVideoClient::KinesisVideoClient(
     const QUrl &endpoint,

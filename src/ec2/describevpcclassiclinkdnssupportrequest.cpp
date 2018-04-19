@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DescribeVpcClassicLinkDnsSupportRequest
- *
  * \brief The DescribeVpcClassicLinkDnsSupportRequest class provides an interface for EC2 DescribeVpcClassicLinkDnsSupport requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DescribeVpcClassicLinkDnsSupportRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeVpcClassicLinkDnsSupportRequest::DescribeVpcClassicLinkDnsSupportRequest(const DescribeVpcClassicLinkDnsSupportRequest &other)
     : EC2Request(new DescribeVpcClassicLinkDnsSupportRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ DescribeVpcClassicLinkDnsSupportRequest::DescribeVpcClassicLinkDnsSupportRequest
 }
 
 /*!
- * @brief  Constructs a new DescribeVpcClassicLinkDnsSupportRequest object.
+ * Constructs a DescribeVpcClassicLinkDnsSupportRequest object.
  */
 DescribeVpcClassicLinkDnsSupportRequest::DescribeVpcClassicLinkDnsSupportRequest()
     : EC2Request(new DescribeVpcClassicLinkDnsSupportRequestPrivate(EC2Request::DescribeVpcClassicLinkDnsSupportAction, this))
@@ -70,14 +67,9 @@ bool DescribeVpcClassicLinkDnsSupportRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeVpcClassicLinkDnsSupportResponse object.
+ * Returns a DescribeVpcClassicLinkDnsSupportResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeVpcClassicLinkDnsSupportResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeVpcClassicLinkDnsSupportRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * DescribeVpcClassicLinkDnsSupportRequest::resp
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::DescribeVpcClassicLinkDnsSupportRequestPrivate
+ * \brief The DescribeVpcClassicLinkDnsSupportRequestPrivate class provides private implementation for DescribeVpcClassicLinkDnsSupportRequest.
+ * \internal
  *
- * @class  DescribeVpcClassicLinkDnsSupportRequestPrivate
- *
- * @brief  Private implementation for DescribeVpcClassicLinkDnsSupportRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeVpcClassicLinkDnsSupportRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public DescribeVpcClassicLinkDnsSupportRequest instance.
+ * Constructs a DescribeVpcClassicLinkDnsSupportRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 DescribeVpcClassicLinkDnsSupportRequestPrivate::DescribeVpcClassicLinkDnsSupportRequestPrivate(
     const EC2Request::Action action, DescribeVpcClassicLinkDnsSupportRequest * const q)
@@ -108,15 +97,10 @@ DescribeVpcClassicLinkDnsSupportRequestPrivate::DescribeVpcClassicLinkDnsSupport
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeVpcClassicLinkDnsSupportRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeVpcClassicLinkDnsSupportRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeVpcClassicLinkDnsSupportRequest instance.
  */
 DescribeVpcClassicLinkDnsSupportRequestPrivate::DescribeVpcClassicLinkDnsSupportRequestPrivate(
     const DescribeVpcClassicLinkDnsSupportRequestPrivate &other, DescribeVpcClassicLinkDnsSupportRequest * const q)

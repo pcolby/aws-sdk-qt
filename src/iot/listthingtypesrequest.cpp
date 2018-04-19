@@ -27,10 +27,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::ListThingTypesRequest
- *
  * \brief The ListThingTypesRequest class provides an interface for IoT ListThingTypes requests.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -48,9 +47,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new ListThingTypesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListThingTypesRequest::ListThingTypesRequest(const ListThingTypesRequest &other)
     : IoTRequest(new ListThingTypesRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ ListThingTypesRequest::ListThingTypesRequest(const ListThingTypesRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ListThingTypesRequest object.
+ * Constructs a ListThingTypesRequest object.
  */
 ListThingTypesRequest::ListThingTypesRequest()
     : IoTRequest(new ListThingTypesRequestPrivate(IoTRequest::ListThingTypesAction, this))
@@ -77,14 +74,9 @@ bool ListThingTypesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListThingTypesResponse object.
+ * Returns a ListThingTypesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListThingTypesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IoTClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListThingTypesRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * ListThingTypesRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::IoT::ListThingTypesRequestPrivate
+ * \brief The ListThingTypesRequestPrivate class provides private implementation for ListThingTypesRequest.
+ * \internal
  *
- * @class  ListThingTypesRequestPrivate
- *
- * @brief  Private implementation for ListThingTypesRequest.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListThingTypesRequestPrivate object.
- *
- * @param  action  IoT action being performed.
- * @param  q       Pointer to this object's public ListThingTypesRequest instance.
+ * Constructs a ListThingTypesRequestPrivate object for IoT \a action with,
+ * public implementation \a q.
  */
 ListThingTypesRequestPrivate::ListThingTypesRequestPrivate(
     const IoTRequest::Action action, ListThingTypesRequest * const q)
@@ -115,15 +104,10 @@ ListThingTypesRequestPrivate::ListThingTypesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListThingTypesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListThingTypesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListThingTypesRequest instance.
  */
 ListThingTypesRequestPrivate::ListThingTypesRequestPrivate(
     const ListThingTypesRequestPrivate &other, ListThingTypesRequest * const q)

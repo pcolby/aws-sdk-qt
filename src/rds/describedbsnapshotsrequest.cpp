@@ -27,10 +27,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::DescribeDBSnapshotsRequest
- *
  * \brief The DescribeDBSnapshotsRequest class provides an interface for RDS DescribeDBSnapshots requests.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -101,9 +100,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new DescribeDBSnapshotsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeDBSnapshotsRequest::DescribeDBSnapshotsRequest(const DescribeDBSnapshotsRequest &other)
     : RDSRequest(new DescribeDBSnapshotsRequestPrivate(*other.d_func(), this))
@@ -112,7 +109,7 @@ DescribeDBSnapshotsRequest::DescribeDBSnapshotsRequest(const DescribeDBSnapshots
 }
 
 /*!
- * @brief  Constructs a new DescribeDBSnapshotsRequest object.
+ * Constructs a DescribeDBSnapshotsRequest object.
  */
 DescribeDBSnapshotsRequest::DescribeDBSnapshotsRequest()
     : RDSRequest(new DescribeDBSnapshotsRequestPrivate(RDSRequest::DescribeDBSnapshotsAction, this))
@@ -130,14 +127,9 @@ bool DescribeDBSnapshotsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeDBSnapshotsResponse object.
+ * Returns a DescribeDBSnapshotsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeDBSnapshotsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RDSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeDBSnapshotsRequest::response(QNetworkReply * const reply) const
 {
@@ -145,20 +137,17 @@ QtAws::Core::AwsAbstractResponse * DescribeDBSnapshotsRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::RDS::DescribeDBSnapshotsRequestPrivate
+ * \brief The DescribeDBSnapshotsRequestPrivate class provides private implementation for DescribeDBSnapshotsRequest.
+ * \internal
  *
- * @class  DescribeDBSnapshotsRequestPrivate
- *
- * @brief  Private implementation for DescribeDBSnapshotsRequest.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeDBSnapshotsRequestPrivate object.
- *
- * @param  action  RDS action being performed.
- * @param  q       Pointer to this object's public DescribeDBSnapshotsRequest instance.
+ * Constructs a DescribeDBSnapshotsRequestPrivate object for RDS \a action with,
+ * public implementation \a q.
  */
 DescribeDBSnapshotsRequestPrivate::DescribeDBSnapshotsRequestPrivate(
     const RDSRequest::Action action, DescribeDBSnapshotsRequest * const q)
@@ -168,15 +157,10 @@ DescribeDBSnapshotsRequestPrivate::DescribeDBSnapshotsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeDBSnapshotsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeDBSnapshotsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeDBSnapshotsRequest instance.
  */
 DescribeDBSnapshotsRequestPrivate::DescribeDBSnapshotsRequestPrivate(
     const DescribeDBSnapshotsRequestPrivate &other, DescribeDBSnapshotsRequest * const q)

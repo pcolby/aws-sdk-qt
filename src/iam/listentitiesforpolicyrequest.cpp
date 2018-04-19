@@ -27,10 +27,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::ListEntitiesForPolicyRequest
- *
  * \brief The ListEntitiesForPolicyRequest class provides an interface for IAM ListEntitiesForPolicy requests.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -102,9 +101,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new ListEntitiesForPolicyRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListEntitiesForPolicyRequest::ListEntitiesForPolicyRequest(const ListEntitiesForPolicyRequest &other)
     : IAMRequest(new ListEntitiesForPolicyRequestPrivate(*other.d_func(), this))
@@ -113,7 +110,7 @@ ListEntitiesForPolicyRequest::ListEntitiesForPolicyRequest(const ListEntitiesFor
 }
 
 /*!
- * @brief  Constructs a new ListEntitiesForPolicyRequest object.
+ * Constructs a ListEntitiesForPolicyRequest object.
  */
 ListEntitiesForPolicyRequest::ListEntitiesForPolicyRequest()
     : IAMRequest(new ListEntitiesForPolicyRequestPrivate(IAMRequest::ListEntitiesForPolicyAction, this))
@@ -131,14 +128,9 @@ bool ListEntitiesForPolicyRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListEntitiesForPolicyResponse object.
+ * Returns a ListEntitiesForPolicyResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListEntitiesForPolicyResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IAMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListEntitiesForPolicyRequest::response(QNetworkReply * const reply) const
 {
@@ -146,20 +138,17 @@ QtAws::Core::AwsAbstractResponse * ListEntitiesForPolicyRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::IAM::ListEntitiesForPolicyRequestPrivate
+ * \brief The ListEntitiesForPolicyRequestPrivate class provides private implementation for ListEntitiesForPolicyRequest.
+ * \internal
  *
- * @class  ListEntitiesForPolicyRequestPrivate
- *
- * @brief  Private implementation for ListEntitiesForPolicyRequest.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListEntitiesForPolicyRequestPrivate object.
- *
- * @param  action  IAM action being performed.
- * @param  q       Pointer to this object's public ListEntitiesForPolicyRequest instance.
+ * Constructs a ListEntitiesForPolicyRequestPrivate object for IAM \a action with,
+ * public implementation \a q.
  */
 ListEntitiesForPolicyRequestPrivate::ListEntitiesForPolicyRequestPrivate(
     const IAMRequest::Action action, ListEntitiesForPolicyRequest * const q)
@@ -169,15 +158,10 @@ ListEntitiesForPolicyRequestPrivate::ListEntitiesForPolicyRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListEntitiesForPolicyRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListEntitiesForPolicyRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListEntitiesForPolicyRequest instance.
  */
 ListEntitiesForPolicyRequestPrivate::ListEntitiesForPolicyRequestPrivate(
     const ListEntitiesForPolicyRequestPrivate &other, ListEntitiesForPolicyRequest * const q)

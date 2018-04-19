@@ -27,10 +27,9 @@ namespace CloudSearch {
 
 /*!
  * \class QtAws::CloudSearch::BuildSuggestersRequest
- *
  * \brief The BuildSuggestersRequest class provides an interface for CloudSearch BuildSuggesters requests.
  *
- * \ingroup CloudSearch
+ * \inmodule QtAwsCloudSearch
  *
  *  <fullname>Amazon CloudSearch Configuration Service</fullname>
  * 
@@ -48,9 +47,7 @@ namespace CloudSearch {
  */
 
 /*!
- * @brief  Constructs a new BuildSuggestersRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 BuildSuggestersRequest::BuildSuggestersRequest(const BuildSuggestersRequest &other)
     : CloudSearchRequest(new BuildSuggestersRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ BuildSuggestersRequest::BuildSuggestersRequest(const BuildSuggestersRequest &oth
 }
 
 /*!
- * @brief  Constructs a new BuildSuggestersRequest object.
+ * Constructs a BuildSuggestersRequest object.
  */
 BuildSuggestersRequest::BuildSuggestersRequest()
     : CloudSearchRequest(new BuildSuggestersRequestPrivate(CloudSearchRequest::BuildSuggestersAction, this))
@@ -77,14 +74,9 @@ bool BuildSuggestersRequest::isValid() const
 
 
 /*!
- * @brief  Construct an BuildSuggestersResponse object.
+ * Returns a BuildSuggestersResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An BuildSuggestersResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudSearchClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * BuildSuggestersRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * BuildSuggestersRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudSearch::BuildSuggestersRequestPrivate
+ * \brief The BuildSuggestersRequestPrivate class provides private implementation for BuildSuggestersRequest.
+ * \internal
  *
- * @class  BuildSuggestersRequestPrivate
- *
- * @brief  Private implementation for BuildSuggestersRequest.
+ * \inmodule QtAwsCloudSearch
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new BuildSuggestersRequestPrivate object.
- *
- * @param  action  CloudSearch action being performed.
- * @param  q       Pointer to this object's public BuildSuggestersRequest instance.
+ * Constructs a BuildSuggestersRequestPrivate object for CloudSearch \a action with,
+ * public implementation \a q.
  */
 BuildSuggestersRequestPrivate::BuildSuggestersRequestPrivate(
     const CloudSearchRequest::Action action, BuildSuggestersRequest * const q)
@@ -115,15 +104,10 @@ BuildSuggestersRequestPrivate::BuildSuggestersRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new BuildSuggestersRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the BuildSuggestersRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public BuildSuggestersRequest instance.
  */
 BuildSuggestersRequestPrivate::BuildSuggestersRequestPrivate(
     const BuildSuggestersRequestPrivate &other, BuildSuggestersRequest * const q)

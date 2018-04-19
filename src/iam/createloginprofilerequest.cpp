@@ -27,10 +27,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::CreateLoginProfileRequest
- *
  * \brief The CreateLoginProfileRequest class provides an interface for IAM CreateLoginProfile requests.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -102,9 +101,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new CreateLoginProfileRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateLoginProfileRequest::CreateLoginProfileRequest(const CreateLoginProfileRequest &other)
     : IAMRequest(new CreateLoginProfileRequestPrivate(*other.d_func(), this))
@@ -113,7 +110,7 @@ CreateLoginProfileRequest::CreateLoginProfileRequest(const CreateLoginProfileReq
 }
 
 /*!
- * @brief  Constructs a new CreateLoginProfileRequest object.
+ * Constructs a CreateLoginProfileRequest object.
  */
 CreateLoginProfileRequest::CreateLoginProfileRequest()
     : IAMRequest(new CreateLoginProfileRequestPrivate(IAMRequest::CreateLoginProfileAction, this))
@@ -131,14 +128,9 @@ bool CreateLoginProfileRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateLoginProfileResponse object.
+ * Returns a CreateLoginProfileResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateLoginProfileResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IAMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateLoginProfileRequest::response(QNetworkReply * const reply) const
 {
@@ -146,20 +138,17 @@ QtAws::Core::AwsAbstractResponse * CreateLoginProfileRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::IAM::CreateLoginProfileRequestPrivate
+ * \brief The CreateLoginProfileRequestPrivate class provides private implementation for CreateLoginProfileRequest.
+ * \internal
  *
- * @class  CreateLoginProfileRequestPrivate
- *
- * @brief  Private implementation for CreateLoginProfileRequest.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateLoginProfileRequestPrivate object.
- *
- * @param  action  IAM action being performed.
- * @param  q       Pointer to this object's public CreateLoginProfileRequest instance.
+ * Constructs a CreateLoginProfileRequestPrivate object for IAM \a action with,
+ * public implementation \a q.
  */
 CreateLoginProfileRequestPrivate::CreateLoginProfileRequestPrivate(
     const IAMRequest::Action action, CreateLoginProfileRequest * const q)
@@ -169,15 +158,10 @@ CreateLoginProfileRequestPrivate::CreateLoginProfileRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateLoginProfileRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateLoginProfileRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateLoginProfileRequest instance.
  */
 CreateLoginProfileRequestPrivate::CreateLoginProfileRequestPrivate(
     const CreateLoginProfileRequestPrivate &other, CreateLoginProfileRequest * const q)

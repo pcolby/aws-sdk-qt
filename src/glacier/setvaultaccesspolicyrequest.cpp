@@ -27,10 +27,9 @@ namespace Glacier {
 
 /*!
  * \class QtAws::Glacier::SetVaultAccessPolicyRequest
- *
  * \brief The SetVaultAccessPolicyRequest class provides an interface for Glacier SetVaultAccessPolicy requests.
  *
- * \ingroup Glacier
+ * \inmodule QtAwsGlacier
  *
  *  Amazon Glacier is a storage solution for "cold
  * 
@@ -75,9 +74,7 @@ namespace Glacier {
  */
 
 /*!
- * @brief  Constructs a new SetVaultAccessPolicyRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 SetVaultAccessPolicyRequest::SetVaultAccessPolicyRequest(const SetVaultAccessPolicyRequest &other)
     : GlacierRequest(new SetVaultAccessPolicyRequestPrivate(*other.d_func(), this))
@@ -86,7 +83,7 @@ SetVaultAccessPolicyRequest::SetVaultAccessPolicyRequest(const SetVaultAccessPol
 }
 
 /*!
- * @brief  Constructs a new SetVaultAccessPolicyRequest object.
+ * Constructs a SetVaultAccessPolicyRequest object.
  */
 SetVaultAccessPolicyRequest::SetVaultAccessPolicyRequest()
     : GlacierRequest(new SetVaultAccessPolicyRequestPrivate(GlacierRequest::SetVaultAccessPolicyAction, this))
@@ -104,14 +101,9 @@ bool SetVaultAccessPolicyRequest::isValid() const
 
 
 /*!
- * @brief  Construct an SetVaultAccessPolicyResponse object.
+ * Returns a SetVaultAccessPolicyResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An SetVaultAccessPolicyResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GlacierClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * SetVaultAccessPolicyRequest::response(QNetworkReply * const reply) const
 {
@@ -119,20 +111,17 @@ QtAws::Core::AwsAbstractResponse * SetVaultAccessPolicyRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::Glacier::SetVaultAccessPolicyRequestPrivate
+ * \brief The SetVaultAccessPolicyRequestPrivate class provides private implementation for SetVaultAccessPolicyRequest.
+ * \internal
  *
- * @class  SetVaultAccessPolicyRequestPrivate
- *
- * @brief  Private implementation for SetVaultAccessPolicyRequest.
+ * \inmodule QtAwsGlacier
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new SetVaultAccessPolicyRequestPrivate object.
- *
- * @param  action  Glacier action being performed.
- * @param  q       Pointer to this object's public SetVaultAccessPolicyRequest instance.
+ * Constructs a SetVaultAccessPolicyRequestPrivate object for Glacier \a action with,
+ * public implementation \a q.
  */
 SetVaultAccessPolicyRequestPrivate::SetVaultAccessPolicyRequestPrivate(
     const GlacierRequest::Action action, SetVaultAccessPolicyRequest * const q)
@@ -142,15 +131,10 @@ SetVaultAccessPolicyRequestPrivate::SetVaultAccessPolicyRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SetVaultAccessPolicyRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the SetVaultAccessPolicyRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public SetVaultAccessPolicyRequest instance.
  */
 SetVaultAccessPolicyRequestPrivate::SetVaultAccessPolicyRequestPrivate(
     const SetVaultAccessPolicyRequestPrivate &other, SetVaultAccessPolicyRequest * const q)

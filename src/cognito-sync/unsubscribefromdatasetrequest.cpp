@@ -27,10 +27,9 @@ namespace CognitoSync {
 
 /*!
  * \class QtAws::CognitoSync::UnsubscribeFromDatasetRequest
- *
  * \brief The UnsubscribeFromDatasetRequest class provides an interface for CognitoSync UnsubscribeFromDataset requests.
  *
- * \ingroup CognitoSync
+ * \inmodule QtAwsCognitoSync
  *
  *  <fullname>Amazon Cognito Sync</fullname>
  * 
@@ -57,9 +56,7 @@ namespace CognitoSync {
  */
 
 /*!
- * @brief  Constructs a new UnsubscribeFromDatasetRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UnsubscribeFromDatasetRequest::UnsubscribeFromDatasetRequest(const UnsubscribeFromDatasetRequest &other)
     : CognitoSyncRequest(new UnsubscribeFromDatasetRequestPrivate(*other.d_func(), this))
@@ -68,7 +65,7 @@ UnsubscribeFromDatasetRequest::UnsubscribeFromDatasetRequest(const UnsubscribeFr
 }
 
 /*!
- * @brief  Constructs a new UnsubscribeFromDatasetRequest object.
+ * Constructs a UnsubscribeFromDatasetRequest object.
  */
 UnsubscribeFromDatasetRequest::UnsubscribeFromDatasetRequest()
     : CognitoSyncRequest(new UnsubscribeFromDatasetRequestPrivate(CognitoSyncRequest::UnsubscribeFromDatasetAction, this))
@@ -86,14 +83,9 @@ bool UnsubscribeFromDatasetRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UnsubscribeFromDatasetResponse object.
+ * Returns a UnsubscribeFromDatasetResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UnsubscribeFromDatasetResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CognitoSyncClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UnsubscribeFromDatasetRequest::response(QNetworkReply * const reply) const
 {
@@ -101,20 +93,17 @@ QtAws::Core::AwsAbstractResponse * UnsubscribeFromDatasetRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::CognitoSync::UnsubscribeFromDatasetRequestPrivate
+ * \brief The UnsubscribeFromDatasetRequestPrivate class provides private implementation for UnsubscribeFromDatasetRequest.
+ * \internal
  *
- * @class  UnsubscribeFromDatasetRequestPrivate
- *
- * @brief  Private implementation for UnsubscribeFromDatasetRequest.
+ * \inmodule QtAwsCognitoSync
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UnsubscribeFromDatasetRequestPrivate object.
- *
- * @param  action  CognitoSync action being performed.
- * @param  q       Pointer to this object's public UnsubscribeFromDatasetRequest instance.
+ * Constructs a UnsubscribeFromDatasetRequestPrivate object for CognitoSync \a action with,
+ * public implementation \a q.
  */
 UnsubscribeFromDatasetRequestPrivate::UnsubscribeFromDatasetRequestPrivate(
     const CognitoSyncRequest::Action action, UnsubscribeFromDatasetRequest * const q)
@@ -124,15 +113,10 @@ UnsubscribeFromDatasetRequestPrivate::UnsubscribeFromDatasetRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UnsubscribeFromDatasetRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UnsubscribeFromDatasetRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UnsubscribeFromDatasetRequest instance.
  */
 UnsubscribeFromDatasetRequestPrivate::UnsubscribeFromDatasetRequestPrivate(
     const UnsubscribeFromDatasetRequestPrivate &other, UnsubscribeFromDatasetRequest * const q)

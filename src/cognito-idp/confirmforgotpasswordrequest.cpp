@@ -27,10 +27,9 @@ namespace CognitoIdentityProvider {
 
 /*!
  * \class QtAws::CognitoIdentityProvider::ConfirmForgotPasswordRequest
- *
  * \brief The ConfirmForgotPasswordRequest class provides an interface for CognitoIdentityProvider ConfirmForgotPassword requests.
  *
- * \ingroup CognitoIdentityProvider
+ * \inmodule QtAwsCognitoIdentityProvider
  *
  *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
  *  authenticate a user to obtain tokens related to user identity and access
@@ -47,9 +46,7 @@ namespace CognitoIdentityProvider {
  */
 
 /*!
- * @brief  Constructs a new ConfirmForgotPasswordRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ConfirmForgotPasswordRequest::ConfirmForgotPasswordRequest(const ConfirmForgotPasswordRequest &other)
     : CognitoIdentityProviderRequest(new ConfirmForgotPasswordRequestPrivate(*other.d_func(), this))
@@ -58,7 +55,7 @@ ConfirmForgotPasswordRequest::ConfirmForgotPasswordRequest(const ConfirmForgotPa
 }
 
 /*!
- * @brief  Constructs a new ConfirmForgotPasswordRequest object.
+ * Constructs a ConfirmForgotPasswordRequest object.
  */
 ConfirmForgotPasswordRequest::ConfirmForgotPasswordRequest()
     : CognitoIdentityProviderRequest(new ConfirmForgotPasswordRequestPrivate(CognitoIdentityProviderRequest::ConfirmForgotPasswordAction, this))
@@ -76,14 +73,9 @@ bool ConfirmForgotPasswordRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ConfirmForgotPasswordResponse object.
+ * Returns a ConfirmForgotPasswordResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ConfirmForgotPasswordResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CognitoIdentityProviderClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ConfirmForgotPasswordRequest::response(QNetworkReply * const reply) const
 {
@@ -91,20 +83,17 @@ QtAws::Core::AwsAbstractResponse * ConfirmForgotPasswordRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::CognitoIdentityProvider::ConfirmForgotPasswordRequestPrivate
+ * \brief The ConfirmForgotPasswordRequestPrivate class provides private implementation for ConfirmForgotPasswordRequest.
+ * \internal
  *
- * @class  ConfirmForgotPasswordRequestPrivate
- *
- * @brief  Private implementation for ConfirmForgotPasswordRequest.
+ * \inmodule QtAwsCognitoIdentityProvider
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ConfirmForgotPasswordRequestPrivate object.
- *
- * @param  action  CognitoIdentityProvider action being performed.
- * @param  q       Pointer to this object's public ConfirmForgotPasswordRequest instance.
+ * Constructs a ConfirmForgotPasswordRequestPrivate object for CognitoIdentityProvider \a action with,
+ * public implementation \a q.
  */
 ConfirmForgotPasswordRequestPrivate::ConfirmForgotPasswordRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, ConfirmForgotPasswordRequest * const q)
@@ -114,15 +103,10 @@ ConfirmForgotPasswordRequestPrivate::ConfirmForgotPasswordRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ConfirmForgotPasswordRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ConfirmForgotPasswordRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ConfirmForgotPasswordRequest instance.
  */
 ConfirmForgotPasswordRequestPrivate::ConfirmForgotPasswordRequestPrivate(
     const ConfirmForgotPasswordRequestPrivate &other, ConfirmForgotPasswordRequest * const q)

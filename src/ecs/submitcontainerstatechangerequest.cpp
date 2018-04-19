@@ -27,10 +27,9 @@ namespace ECS {
 
 /*!
  * \class QtAws::ECS::SubmitContainerStateChangeRequest
- *
  * \brief The SubmitContainerStateChangeRequest class provides an interface for ECS SubmitContainerStateChange requests.
  *
- * \ingroup ECS
+ * \inmodule QtAwsECS
  *
  *  Amazon Elastic Container Service (Amazon ECS) is a highly scalable, fast, container management service that makes it
  *  easy to run, stop, and manage Docker containers on a cluster. You can host your cluster on a serverless infrastructure
@@ -54,9 +53,7 @@ namespace ECS {
  */
 
 /*!
- * @brief  Constructs a new SubmitContainerStateChangeRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 SubmitContainerStateChangeRequest::SubmitContainerStateChangeRequest(const SubmitContainerStateChangeRequest &other)
     : ECSRequest(new SubmitContainerStateChangeRequestPrivate(*other.d_func(), this))
@@ -65,7 +62,7 @@ SubmitContainerStateChangeRequest::SubmitContainerStateChangeRequest(const Submi
 }
 
 /*!
- * @brief  Constructs a new SubmitContainerStateChangeRequest object.
+ * Constructs a SubmitContainerStateChangeRequest object.
  */
 SubmitContainerStateChangeRequest::SubmitContainerStateChangeRequest()
     : ECSRequest(new SubmitContainerStateChangeRequestPrivate(ECSRequest::SubmitContainerStateChangeAction, this))
@@ -83,14 +80,9 @@ bool SubmitContainerStateChangeRequest::isValid() const
 
 
 /*!
- * @brief  Construct an SubmitContainerStateChangeResponse object.
+ * Returns a SubmitContainerStateChangeResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An SubmitContainerStateChangeResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ECSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * SubmitContainerStateChangeRequest::response(QNetworkReply * const reply) const
 {
@@ -98,20 +90,17 @@ QtAws::Core::AwsAbstractResponse * SubmitContainerStateChangeRequest::response(Q
 }
 
 /*!
- * @internal
+ * \class QtAws::ECS::SubmitContainerStateChangeRequestPrivate
+ * \brief The SubmitContainerStateChangeRequestPrivate class provides private implementation for SubmitContainerStateChangeRequest.
+ * \internal
  *
- * @class  SubmitContainerStateChangeRequestPrivate
- *
- * @brief  Private implementation for SubmitContainerStateChangeRequest.
+ * \inmodule QtAwsECS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new SubmitContainerStateChangeRequestPrivate object.
- *
- * @param  action  ECS action being performed.
- * @param  q       Pointer to this object's public SubmitContainerStateChangeRequest instance.
+ * Constructs a SubmitContainerStateChangeRequestPrivate object for ECS \a action with,
+ * public implementation \a q.
  */
 SubmitContainerStateChangeRequestPrivate::SubmitContainerStateChangeRequestPrivate(
     const ECSRequest::Action action, SubmitContainerStateChangeRequest * const q)
@@ -121,15 +110,10 @@ SubmitContainerStateChangeRequestPrivate::SubmitContainerStateChangeRequestPriva
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SubmitContainerStateChangeRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the SubmitContainerStateChangeRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public SubmitContainerStateChangeRequest instance.
  */
 SubmitContainerStateChangeRequestPrivate::SubmitContainerStateChangeRequestPrivate(
     const SubmitContainerStateChangeRequestPrivate &other, SubmitContainerStateChangeRequest * const q)

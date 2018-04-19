@@ -27,10 +27,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::ListMFADevicesRequest
- *
  * \brief The ListMFADevicesRequest class provides an interface for IAM ListMFADevices requests.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -102,9 +101,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new ListMFADevicesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListMFADevicesRequest::ListMFADevicesRequest(const ListMFADevicesRequest &other)
     : IAMRequest(new ListMFADevicesRequestPrivate(*other.d_func(), this))
@@ -113,7 +110,7 @@ ListMFADevicesRequest::ListMFADevicesRequest(const ListMFADevicesRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ListMFADevicesRequest object.
+ * Constructs a ListMFADevicesRequest object.
  */
 ListMFADevicesRequest::ListMFADevicesRequest()
     : IAMRequest(new ListMFADevicesRequestPrivate(IAMRequest::ListMFADevicesAction, this))
@@ -131,14 +128,9 @@ bool ListMFADevicesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListMFADevicesResponse object.
+ * Returns a ListMFADevicesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListMFADevicesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IAMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListMFADevicesRequest::response(QNetworkReply * const reply) const
 {
@@ -146,20 +138,17 @@ QtAws::Core::AwsAbstractResponse * ListMFADevicesRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::IAM::ListMFADevicesRequestPrivate
+ * \brief The ListMFADevicesRequestPrivate class provides private implementation for ListMFADevicesRequest.
+ * \internal
  *
- * @class  ListMFADevicesRequestPrivate
- *
- * @brief  Private implementation for ListMFADevicesRequest.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListMFADevicesRequestPrivate object.
- *
- * @param  action  IAM action being performed.
- * @param  q       Pointer to this object's public ListMFADevicesRequest instance.
+ * Constructs a ListMFADevicesRequestPrivate object for IAM \a action with,
+ * public implementation \a q.
  */
 ListMFADevicesRequestPrivate::ListMFADevicesRequestPrivate(
     const IAMRequest::Action action, ListMFADevicesRequest * const q)
@@ -169,15 +158,10 @@ ListMFADevicesRequestPrivate::ListMFADevicesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListMFADevicesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListMFADevicesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListMFADevicesRequest instance.
  */
 ListMFADevicesRequestPrivate::ListMFADevicesRequestPrivate(
     const ListMFADevicesRequestPrivate &other, ListMFADevicesRequest * const q)

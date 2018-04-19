@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DescribeExportTasksRequest
- *
  * \brief The DescribeExportTasksRequest class provides an interface for EC2 DescribeExportTasks requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DescribeExportTasksRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeExportTasksRequest::DescribeExportTasksRequest(const DescribeExportTasksRequest &other)
     : EC2Request(new DescribeExportTasksRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ DescribeExportTasksRequest::DescribeExportTasksRequest(const DescribeExportTasks
 }
 
 /*!
- * @brief  Constructs a new DescribeExportTasksRequest object.
+ * Constructs a DescribeExportTasksRequest object.
  */
 DescribeExportTasksRequest::DescribeExportTasksRequest()
     : EC2Request(new DescribeExportTasksRequestPrivate(EC2Request::DescribeExportTasksAction, this))
@@ -70,14 +67,9 @@ bool DescribeExportTasksRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeExportTasksResponse object.
+ * Returns a DescribeExportTasksResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeExportTasksResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeExportTasksRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * DescribeExportTasksRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::DescribeExportTasksRequestPrivate
+ * \brief The DescribeExportTasksRequestPrivate class provides private implementation for DescribeExportTasksRequest.
+ * \internal
  *
- * @class  DescribeExportTasksRequestPrivate
- *
- * @brief  Private implementation for DescribeExportTasksRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeExportTasksRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public DescribeExportTasksRequest instance.
+ * Constructs a DescribeExportTasksRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 DescribeExportTasksRequestPrivate::DescribeExportTasksRequestPrivate(
     const EC2Request::Action action, DescribeExportTasksRequest * const q)
@@ -108,15 +97,10 @@ DescribeExportTasksRequestPrivate::DescribeExportTasksRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeExportTasksRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeExportTasksRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeExportTasksRequest instance.
  */
 DescribeExportTasksRequestPrivate::DescribeExportTasksRequestPrivate(
     const DescribeExportTasksRequestPrivate &other, DescribeExportTasksRequest * const q)

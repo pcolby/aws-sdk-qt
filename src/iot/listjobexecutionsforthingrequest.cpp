@@ -27,10 +27,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::ListJobExecutionsForThingRequest
- *
  * \brief The ListJobExecutionsForThingRequest class provides an interface for IoT ListJobExecutionsForThing requests.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -48,9 +47,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new ListJobExecutionsForThingRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListJobExecutionsForThingRequest::ListJobExecutionsForThingRequest(const ListJobExecutionsForThingRequest &other)
     : IoTRequest(new ListJobExecutionsForThingRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ ListJobExecutionsForThingRequest::ListJobExecutionsForThingRequest(const ListJob
 }
 
 /*!
- * @brief  Constructs a new ListJobExecutionsForThingRequest object.
+ * Constructs a ListJobExecutionsForThingRequest object.
  */
 ListJobExecutionsForThingRequest::ListJobExecutionsForThingRequest()
     : IoTRequest(new ListJobExecutionsForThingRequestPrivate(IoTRequest::ListJobExecutionsForThingAction, this))
@@ -77,14 +74,9 @@ bool ListJobExecutionsForThingRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListJobExecutionsForThingResponse object.
+ * Returns a ListJobExecutionsForThingResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListJobExecutionsForThingResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IoTClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListJobExecutionsForThingRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * ListJobExecutionsForThingRequest::response(QN
 }
 
 /*!
- * @internal
+ * \class QtAws::IoT::ListJobExecutionsForThingRequestPrivate
+ * \brief The ListJobExecutionsForThingRequestPrivate class provides private implementation for ListJobExecutionsForThingRequest.
+ * \internal
  *
- * @class  ListJobExecutionsForThingRequestPrivate
- *
- * @brief  Private implementation for ListJobExecutionsForThingRequest.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListJobExecutionsForThingRequestPrivate object.
- *
- * @param  action  IoT action being performed.
- * @param  q       Pointer to this object's public ListJobExecutionsForThingRequest instance.
+ * Constructs a ListJobExecutionsForThingRequestPrivate object for IoT \a action with,
+ * public implementation \a q.
  */
 ListJobExecutionsForThingRequestPrivate::ListJobExecutionsForThingRequestPrivate(
     const IoTRequest::Action action, ListJobExecutionsForThingRequest * const q)
@@ -115,15 +104,10 @@ ListJobExecutionsForThingRequestPrivate::ListJobExecutionsForThingRequestPrivate
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListJobExecutionsForThingRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListJobExecutionsForThingRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListJobExecutionsForThingRequest instance.
  */
 ListJobExecutionsForThingRequestPrivate::ListJobExecutionsForThingRequestPrivate(
     const ListJobExecutionsForThingRequestPrivate &other, ListJobExecutionsForThingRequest * const q)

@@ -27,10 +27,9 @@ namespace Shield {
 
 /*!
  * \class QtAws::Shield::GetSubscriptionStateRequest
- *
  * \brief The GetSubscriptionStateRequest class provides an interface for Shield GetSubscriptionState requests.
  *
- * \ingroup Shield
+ * \inmodule QtAwsShield
  *
  *  <fullname>AWS Shield Advanced</fullname>
  * 
@@ -43,9 +42,7 @@ namespace Shield {
  */
 
 /*!
- * @brief  Constructs a new GetSubscriptionStateRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetSubscriptionStateRequest::GetSubscriptionStateRequest(const GetSubscriptionStateRequest &other)
     : ShieldRequest(new GetSubscriptionStateRequestPrivate(*other.d_func(), this))
@@ -54,7 +51,7 @@ GetSubscriptionStateRequest::GetSubscriptionStateRequest(const GetSubscriptionSt
 }
 
 /*!
- * @brief  Constructs a new GetSubscriptionStateRequest object.
+ * Constructs a GetSubscriptionStateRequest object.
  */
 GetSubscriptionStateRequest::GetSubscriptionStateRequest()
     : ShieldRequest(new GetSubscriptionStateRequestPrivate(ShieldRequest::GetSubscriptionStateAction, this))
@@ -72,14 +69,9 @@ bool GetSubscriptionStateRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetSubscriptionStateResponse object.
+ * Returns a GetSubscriptionStateResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetSubscriptionStateResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ShieldClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetSubscriptionStateRequest::response(QNetworkReply * const reply) const
 {
@@ -87,20 +79,17 @@ QtAws::Core::AwsAbstractResponse * GetSubscriptionStateRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::Shield::GetSubscriptionStateRequestPrivate
+ * \brief The GetSubscriptionStateRequestPrivate class provides private implementation for GetSubscriptionStateRequest.
+ * \internal
  *
- * @class  GetSubscriptionStateRequestPrivate
- *
- * @brief  Private implementation for GetSubscriptionStateRequest.
+ * \inmodule QtAwsShield
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetSubscriptionStateRequestPrivate object.
- *
- * @param  action  Shield action being performed.
- * @param  q       Pointer to this object's public GetSubscriptionStateRequest instance.
+ * Constructs a GetSubscriptionStateRequestPrivate object for Shield \a action with,
+ * public implementation \a q.
  */
 GetSubscriptionStateRequestPrivate::GetSubscriptionStateRequestPrivate(
     const ShieldRequest::Action action, GetSubscriptionStateRequest * const q)
@@ -110,15 +99,10 @@ GetSubscriptionStateRequestPrivate::GetSubscriptionStateRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetSubscriptionStateRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetSubscriptionStateRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetSubscriptionStateRequest instance.
  */
 GetSubscriptionStateRequestPrivate::GetSubscriptionStateRequestPrivate(
     const GetSubscriptionStateRequestPrivate &other, GetSubscriptionStateRequest * const q)

@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DescribeInstanceCreditSpecificationsRequest
- *
  * \brief The DescribeInstanceCreditSpecificationsRequest class provides an interface for EC2 DescribeInstanceCreditSpecifications requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DescribeInstanceCreditSpecificationsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeInstanceCreditSpecificationsRequest::DescribeInstanceCreditSpecificationsRequest(const DescribeInstanceCreditSpecificationsRequest &other)
     : EC2Request(new DescribeInstanceCreditSpecificationsRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ DescribeInstanceCreditSpecificationsRequest::DescribeInstanceCreditSpecification
 }
 
 /*!
- * @brief  Constructs a new DescribeInstanceCreditSpecificationsRequest object.
+ * Constructs a DescribeInstanceCreditSpecificationsRequest object.
  */
 DescribeInstanceCreditSpecificationsRequest::DescribeInstanceCreditSpecificationsRequest()
     : EC2Request(new DescribeInstanceCreditSpecificationsRequestPrivate(EC2Request::DescribeInstanceCreditSpecificationsAction, this))
@@ -70,14 +67,9 @@ bool DescribeInstanceCreditSpecificationsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeInstanceCreditSpecificationsResponse object.
+ * Returns a DescribeInstanceCreditSpecificationsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeInstanceCreditSpecificationsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeInstanceCreditSpecificationsRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * DescribeInstanceCreditSpecificationsRequest::
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::DescribeInstanceCreditSpecificationsRequestPrivate
+ * \brief The DescribeInstanceCreditSpecificationsRequestPrivate class provides private implementation for DescribeInstanceCreditSpecificationsRequest.
+ * \internal
  *
- * @class  DescribeInstanceCreditSpecificationsRequestPrivate
- *
- * @brief  Private implementation for DescribeInstanceCreditSpecificationsRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeInstanceCreditSpecificationsRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public DescribeInstanceCreditSpecificationsRequest instance.
+ * Constructs a DescribeInstanceCreditSpecificationsRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 DescribeInstanceCreditSpecificationsRequestPrivate::DescribeInstanceCreditSpecificationsRequestPrivate(
     const EC2Request::Action action, DescribeInstanceCreditSpecificationsRequest * const q)
@@ -108,15 +97,10 @@ DescribeInstanceCreditSpecificationsRequestPrivate::DescribeInstanceCreditSpecif
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeInstanceCreditSpecificationsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeInstanceCreditSpecificationsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeInstanceCreditSpecificationsRequest instance.
  */
 DescribeInstanceCreditSpecificationsRequestPrivate::DescribeInstanceCreditSpecificationsRequestPrivate(
     const DescribeInstanceCreditSpecificationsRequestPrivate &other, DescribeInstanceCreditSpecificationsRequest * const q)

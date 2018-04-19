@@ -27,10 +27,9 @@ namespace ElasticBeanstalk {
 
 /*!
  * \class QtAws::ElasticBeanstalk::DescribeEnvironmentManagedActionHistoryRequest
- *
  * \brief The DescribeEnvironmentManagedActionHistoryRequest class provides an interface for ElasticBeanstalk DescribeEnvironmentManagedActionHistory requests.
  *
- * \ingroup ElasticBeanstalk
+ * \inmodule QtAwsElasticBeanstalk
  *
  *  <fullname>AWS Elastic Beanstalk</fullname>
  * 
@@ -59,9 +58,7 @@ namespace ElasticBeanstalk {
  */
 
 /*!
- * @brief  Constructs a new DescribeEnvironmentManagedActionHistoryRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeEnvironmentManagedActionHistoryRequest::DescribeEnvironmentManagedActionHistoryRequest(const DescribeEnvironmentManagedActionHistoryRequest &other)
     : ElasticBeanstalkRequest(new DescribeEnvironmentManagedActionHistoryRequestPrivate(*other.d_func(), this))
@@ -70,7 +67,7 @@ DescribeEnvironmentManagedActionHistoryRequest::DescribeEnvironmentManagedAction
 }
 
 /*!
- * @brief  Constructs a new DescribeEnvironmentManagedActionHistoryRequest object.
+ * Constructs a DescribeEnvironmentManagedActionHistoryRequest object.
  */
 DescribeEnvironmentManagedActionHistoryRequest::DescribeEnvironmentManagedActionHistoryRequest()
     : ElasticBeanstalkRequest(new DescribeEnvironmentManagedActionHistoryRequestPrivate(ElasticBeanstalkRequest::DescribeEnvironmentManagedActionHistoryAction, this))
@@ -88,14 +85,9 @@ bool DescribeEnvironmentManagedActionHistoryRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeEnvironmentManagedActionHistoryResponse object.
+ * Returns a DescribeEnvironmentManagedActionHistoryResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeEnvironmentManagedActionHistoryResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ElasticBeanstalkClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeEnvironmentManagedActionHistoryRequest::response(QNetworkReply * const reply) const
 {
@@ -103,20 +95,17 @@ QtAws::Core::AwsAbstractResponse * DescribeEnvironmentManagedActionHistoryReques
 }
 
 /*!
- * @internal
+ * \class QtAws::ElasticBeanstalk::DescribeEnvironmentManagedActionHistoryRequestPrivate
+ * \brief The DescribeEnvironmentManagedActionHistoryRequestPrivate class provides private implementation for DescribeEnvironmentManagedActionHistoryRequest.
+ * \internal
  *
- * @class  DescribeEnvironmentManagedActionHistoryRequestPrivate
- *
- * @brief  Private implementation for DescribeEnvironmentManagedActionHistoryRequest.
+ * \inmodule QtAwsElasticBeanstalk
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeEnvironmentManagedActionHistoryRequestPrivate object.
- *
- * @param  action  ElasticBeanstalk action being performed.
- * @param  q       Pointer to this object's public DescribeEnvironmentManagedActionHistoryRequest instance.
+ * Constructs a DescribeEnvironmentManagedActionHistoryRequestPrivate object for ElasticBeanstalk \a action with,
+ * public implementation \a q.
  */
 DescribeEnvironmentManagedActionHistoryRequestPrivate::DescribeEnvironmentManagedActionHistoryRequestPrivate(
     const ElasticBeanstalkRequest::Action action, DescribeEnvironmentManagedActionHistoryRequest * const q)
@@ -126,15 +115,10 @@ DescribeEnvironmentManagedActionHistoryRequestPrivate::DescribeEnvironmentManage
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeEnvironmentManagedActionHistoryRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeEnvironmentManagedActionHistoryRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeEnvironmentManagedActionHistoryRequest instance.
  */
 DescribeEnvironmentManagedActionHistoryRequestPrivate::DescribeEnvironmentManagedActionHistoryRequestPrivate(
     const DescribeEnvironmentManagedActionHistoryRequestPrivate &other, DescribeEnvironmentManagedActionHistoryRequest * const q)

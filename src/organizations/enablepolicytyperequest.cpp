@@ -27,10 +27,9 @@ namespace Organizations {
 
 /*!
  * \class QtAws::Organizations::EnablePolicyTypeRequest
- *
  * \brief The EnablePolicyTypeRequest class provides an interface for Organizations EnablePolicyType requests.
  *
- * \ingroup Organizations
+ * \inmodule QtAwsOrganizations
  *
  *  <fullname>AWS Organizations API Reference</fullname>
  * 
@@ -179,9 +178,7 @@ namespace Organizations {
  */
 
 /*!
- * @brief  Constructs a new EnablePolicyTypeRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 EnablePolicyTypeRequest::EnablePolicyTypeRequest(const EnablePolicyTypeRequest &other)
     : OrganizationsRequest(new EnablePolicyTypeRequestPrivate(*other.d_func(), this))
@@ -190,7 +187,7 @@ EnablePolicyTypeRequest::EnablePolicyTypeRequest(const EnablePolicyTypeRequest &
 }
 
 /*!
- * @brief  Constructs a new EnablePolicyTypeRequest object.
+ * Constructs a EnablePolicyTypeRequest object.
  */
 EnablePolicyTypeRequest::EnablePolicyTypeRequest()
     : OrganizationsRequest(new EnablePolicyTypeRequestPrivate(OrganizationsRequest::EnablePolicyTypeAction, this))
@@ -208,14 +205,9 @@ bool EnablePolicyTypeRequest::isValid() const
 
 
 /*!
- * @brief  Construct an EnablePolicyTypeResponse object.
+ * Returns a EnablePolicyTypeResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An EnablePolicyTypeResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  OrganizationsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * EnablePolicyTypeRequest::response(QNetworkReply * const reply) const
 {
@@ -223,20 +215,17 @@ QtAws::Core::AwsAbstractResponse * EnablePolicyTypeRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::Organizations::EnablePolicyTypeRequestPrivate
+ * \brief The EnablePolicyTypeRequestPrivate class provides private implementation for EnablePolicyTypeRequest.
+ * \internal
  *
- * @class  EnablePolicyTypeRequestPrivate
- *
- * @brief  Private implementation for EnablePolicyTypeRequest.
+ * \inmodule QtAwsOrganizations
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new EnablePolicyTypeRequestPrivate object.
- *
- * @param  action  Organizations action being performed.
- * @param  q       Pointer to this object's public EnablePolicyTypeRequest instance.
+ * Constructs a EnablePolicyTypeRequestPrivate object for Organizations \a action with,
+ * public implementation \a q.
  */
 EnablePolicyTypeRequestPrivate::EnablePolicyTypeRequestPrivate(
     const OrganizationsRequest::Action action, EnablePolicyTypeRequest * const q)
@@ -246,15 +235,10 @@ EnablePolicyTypeRequestPrivate::EnablePolicyTypeRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new EnablePolicyTypeRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the EnablePolicyTypeRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public EnablePolicyTypeRequest instance.
  */
 EnablePolicyTypeRequestPrivate::EnablePolicyTypeRequestPrivate(
     const EnablePolicyTypeRequestPrivate &other, EnablePolicyTypeRequest * const q)

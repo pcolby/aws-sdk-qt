@@ -27,10 +27,9 @@ namespace AlexaForBusiness {
 
 /*!
  * \class QtAws::AlexaForBusiness::SearchSkillGroupsRequest
- *
  * \brief The SearchSkillGroupsRequest class provides an interface for AlexaForBusiness SearchSkillGroups requests.
  *
- * \ingroup AlexaForBusiness
+ * \inmodule QtAwsAlexaForBusiness
  *
  *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
  *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
@@ -42,9 +41,7 @@ namespace AlexaForBusiness {
  */
 
 /*!
- * @brief  Constructs a new SearchSkillGroupsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 SearchSkillGroupsRequest::SearchSkillGroupsRequest(const SearchSkillGroupsRequest &other)
     : AlexaForBusinessRequest(new SearchSkillGroupsRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ SearchSkillGroupsRequest::SearchSkillGroupsRequest(const SearchSkillGroupsReques
 }
 
 /*!
- * @brief  Constructs a new SearchSkillGroupsRequest object.
+ * Constructs a SearchSkillGroupsRequest object.
  */
 SearchSkillGroupsRequest::SearchSkillGroupsRequest()
     : AlexaForBusinessRequest(new SearchSkillGroupsRequestPrivate(AlexaForBusinessRequest::SearchSkillGroupsAction, this))
@@ -71,14 +68,9 @@ bool SearchSkillGroupsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an SearchSkillGroupsResponse object.
+ * Returns a SearchSkillGroupsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An SearchSkillGroupsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AlexaForBusinessClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * SearchSkillGroupsRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * SearchSkillGroupsRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::AlexaForBusiness::SearchSkillGroupsRequestPrivate
+ * \brief The SearchSkillGroupsRequestPrivate class provides private implementation for SearchSkillGroupsRequest.
+ * \internal
  *
- * @class  SearchSkillGroupsRequestPrivate
- *
- * @brief  Private implementation for SearchSkillGroupsRequest.
+ * \inmodule QtAwsAlexaForBusiness
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new SearchSkillGroupsRequestPrivate object.
- *
- * @param  action  AlexaForBusiness action being performed.
- * @param  q       Pointer to this object's public SearchSkillGroupsRequest instance.
+ * Constructs a SearchSkillGroupsRequestPrivate object for AlexaForBusiness \a action with,
+ * public implementation \a q.
  */
 SearchSkillGroupsRequestPrivate::SearchSkillGroupsRequestPrivate(
     const AlexaForBusinessRequest::Action action, SearchSkillGroupsRequest * const q)
@@ -109,15 +98,10 @@ SearchSkillGroupsRequestPrivate::SearchSkillGroupsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SearchSkillGroupsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the SearchSkillGroupsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public SearchSkillGroupsRequest instance.
  */
 SearchSkillGroupsRequestPrivate::SearchSkillGroupsRequestPrivate(
     const SearchSkillGroupsRequestPrivate &other, SearchSkillGroupsRequest * const q)

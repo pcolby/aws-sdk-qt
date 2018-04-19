@@ -27,19 +27,16 @@ namespace GuardDuty {
 
 /*!
  * \class QtAws::GuardDuty::UnarchiveFindingsRequest
- *
  * \brief The UnarchiveFindingsRequest class provides an interface for GuardDuty UnarchiveFindings requests.
  *
- * \ingroup GuardDuty
+ * \inmodule QtAwsGuardDuty
  *
  *
  * \sa GuardDutyClient::unarchiveFindings
  */
 
 /*!
- * @brief  Constructs a new UnarchiveFindingsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UnarchiveFindingsRequest::UnarchiveFindingsRequest(const UnarchiveFindingsRequest &other)
     : GuardDutyRequest(new UnarchiveFindingsRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ UnarchiveFindingsRequest::UnarchiveFindingsRequest(const UnarchiveFindingsReques
 }
 
 /*!
- * @brief  Constructs a new UnarchiveFindingsRequest object.
+ * Constructs a UnarchiveFindingsRequest object.
  */
 UnarchiveFindingsRequest::UnarchiveFindingsRequest()
     : GuardDutyRequest(new UnarchiveFindingsRequestPrivate(GuardDutyRequest::UnarchiveFindingsAction, this))
@@ -66,14 +63,9 @@ bool UnarchiveFindingsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UnarchiveFindingsResponse object.
+ * Returns a UnarchiveFindingsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UnarchiveFindingsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GuardDutyClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UnarchiveFindingsRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * UnarchiveFindingsRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::GuardDuty::UnarchiveFindingsRequestPrivate
+ * \brief The UnarchiveFindingsRequestPrivate class provides private implementation for UnarchiveFindingsRequest.
+ * \internal
  *
- * @class  UnarchiveFindingsRequestPrivate
- *
- * @brief  Private implementation for UnarchiveFindingsRequest.
+ * \inmodule QtAwsGuardDuty
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UnarchiveFindingsRequestPrivate object.
- *
- * @param  action  GuardDuty action being performed.
- * @param  q       Pointer to this object's public UnarchiveFindingsRequest instance.
+ * Constructs a UnarchiveFindingsRequestPrivate object for GuardDuty \a action with,
+ * public implementation \a q.
  */
 UnarchiveFindingsRequestPrivate::UnarchiveFindingsRequestPrivate(
     const GuardDutyRequest::Action action, UnarchiveFindingsRequest * const q)
@@ -104,15 +93,10 @@ UnarchiveFindingsRequestPrivate::UnarchiveFindingsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UnarchiveFindingsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UnarchiveFindingsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UnarchiveFindingsRequest instance.
  */
 UnarchiveFindingsRequestPrivate::UnarchiveFindingsRequestPrivate(
     const UnarchiveFindingsRequestPrivate &other, UnarchiveFindingsRequest * const q)

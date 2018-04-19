@@ -27,10 +27,9 @@ namespace CloudWatchLogs {
 
 /*!
  * \class QtAws::CloudWatchLogs::DescribeResourcePoliciesRequest
- *
  * \brief The DescribeResourcePoliciesRequest class provides an interface for CloudWatchLogs DescribeResourcePolicies requests.
  *
- * \ingroup CloudWatchLogs
+ * \inmodule QtAwsCloudWatchLogs
  *
  *  You can use Amazon CloudWatch Logs to monitor, store, and access your log files from Amazon EC2 instances, AWS
  *  CloudTrail, or other sources. You can then retrieve the associated log data from CloudWatch Logs using the CloudWatch
@@ -66,9 +65,7 @@ namespace CloudWatchLogs {
  */
 
 /*!
- * @brief  Constructs a new DescribeResourcePoliciesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeResourcePoliciesRequest::DescribeResourcePoliciesRequest(const DescribeResourcePoliciesRequest &other)
     : CloudWatchLogsRequest(new DescribeResourcePoliciesRequestPrivate(*other.d_func(), this))
@@ -77,7 +74,7 @@ DescribeResourcePoliciesRequest::DescribeResourcePoliciesRequest(const DescribeR
 }
 
 /*!
- * @brief  Constructs a new DescribeResourcePoliciesRequest object.
+ * Constructs a DescribeResourcePoliciesRequest object.
  */
 DescribeResourcePoliciesRequest::DescribeResourcePoliciesRequest()
     : CloudWatchLogsRequest(new DescribeResourcePoliciesRequestPrivate(CloudWatchLogsRequest::DescribeResourcePoliciesAction, this))
@@ -95,14 +92,9 @@ bool DescribeResourcePoliciesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeResourcePoliciesResponse object.
+ * Returns a DescribeResourcePoliciesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeResourcePoliciesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudWatchLogsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeResourcePoliciesRequest::response(QNetworkReply * const reply) const
 {
@@ -110,20 +102,17 @@ QtAws::Core::AwsAbstractResponse * DescribeResourcePoliciesRequest::response(QNe
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudWatchLogs::DescribeResourcePoliciesRequestPrivate
+ * \brief The DescribeResourcePoliciesRequestPrivate class provides private implementation for DescribeResourcePoliciesRequest.
+ * \internal
  *
- * @class  DescribeResourcePoliciesRequestPrivate
- *
- * @brief  Private implementation for DescribeResourcePoliciesRequest.
+ * \inmodule QtAwsCloudWatchLogs
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeResourcePoliciesRequestPrivate object.
- *
- * @param  action  CloudWatchLogs action being performed.
- * @param  q       Pointer to this object's public DescribeResourcePoliciesRequest instance.
+ * Constructs a DescribeResourcePoliciesRequestPrivate object for CloudWatchLogs \a action with,
+ * public implementation \a q.
  */
 DescribeResourcePoliciesRequestPrivate::DescribeResourcePoliciesRequestPrivate(
     const CloudWatchLogsRequest::Action action, DescribeResourcePoliciesRequest * const q)
@@ -133,15 +122,10 @@ DescribeResourcePoliciesRequestPrivate::DescribeResourcePoliciesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeResourcePoliciesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeResourcePoliciesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeResourcePoliciesRequest instance.
  */
 DescribeResourcePoliciesRequestPrivate::DescribeResourcePoliciesRequestPrivate(
     const DescribeResourcePoliciesRequestPrivate &other, DescribeResourcePoliciesRequest * const q)

@@ -27,10 +27,9 @@ namespace StorageGateway {
 
 /*!
  * \class QtAws::StorageGateway::DisableGatewayRequest
- *
  * \brief The DisableGatewayRequest class provides an interface for StorageGateway DisableGateway requests.
  *
- * \ingroup StorageGateway
+ * \inmodule QtAwsStorageGateway
  *
  *  <fullname>AWS Storage Gateway Service</fullname>
  * 
@@ -106,9 +105,7 @@ namespace StorageGateway {
  */
 
 /*!
- * @brief  Constructs a new DisableGatewayRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DisableGatewayRequest::DisableGatewayRequest(const DisableGatewayRequest &other)
     : StorageGatewayRequest(new DisableGatewayRequestPrivate(*other.d_func(), this))
@@ -117,7 +114,7 @@ DisableGatewayRequest::DisableGatewayRequest(const DisableGatewayRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DisableGatewayRequest object.
+ * Constructs a DisableGatewayRequest object.
  */
 DisableGatewayRequest::DisableGatewayRequest()
     : StorageGatewayRequest(new DisableGatewayRequestPrivate(StorageGatewayRequest::DisableGatewayAction, this))
@@ -135,14 +132,9 @@ bool DisableGatewayRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DisableGatewayResponse object.
+ * Returns a DisableGatewayResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DisableGatewayResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  StorageGatewayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DisableGatewayRequest::response(QNetworkReply * const reply) const
 {
@@ -150,20 +142,17 @@ QtAws::Core::AwsAbstractResponse * DisableGatewayRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::StorageGateway::DisableGatewayRequestPrivate
+ * \brief The DisableGatewayRequestPrivate class provides private implementation for DisableGatewayRequest.
+ * \internal
  *
- * @class  DisableGatewayRequestPrivate
- *
- * @brief  Private implementation for DisableGatewayRequest.
+ * \inmodule QtAwsStorageGateway
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DisableGatewayRequestPrivate object.
- *
- * @param  action  StorageGateway action being performed.
- * @param  q       Pointer to this object's public DisableGatewayRequest instance.
+ * Constructs a DisableGatewayRequestPrivate object for StorageGateway \a action with,
+ * public implementation \a q.
  */
 DisableGatewayRequestPrivate::DisableGatewayRequestPrivate(
     const StorageGatewayRequest::Action action, DisableGatewayRequest * const q)
@@ -173,15 +162,10 @@ DisableGatewayRequestPrivate::DisableGatewayRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DisableGatewayRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DisableGatewayRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DisableGatewayRequest instance.
  */
 DisableGatewayRequestPrivate::DisableGatewayRequestPrivate(
     const DisableGatewayRequestPrivate &other, DisableGatewayRequest * const q)

@@ -27,10 +27,9 @@ namespace Athena {
 
 /*!
  * \class QtAws::Athena::GetNamedQueryRequest
- *
  * \brief The GetNamedQueryRequest class provides an interface for Athena GetNamedQuery requests.
  *
- * \ingroup Athena
+ * \inmodule QtAwsAthena
  *
  *  Amazon Athena is an interactive query service that lets you use standard SQL to analyze data directly in Amazon S3. You
  *  can point Athena at your data in Amazon S3 and run ad-hoc queries and get results in seconds. Athena is serverless, so
@@ -49,9 +48,7 @@ namespace Athena {
  */
 
 /*!
- * @brief  Constructs a new GetNamedQueryRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetNamedQueryRequest::GetNamedQueryRequest(const GetNamedQueryRequest &other)
     : AthenaRequest(new GetNamedQueryRequestPrivate(*other.d_func(), this))
@@ -60,7 +57,7 @@ GetNamedQueryRequest::GetNamedQueryRequest(const GetNamedQueryRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetNamedQueryRequest object.
+ * Constructs a GetNamedQueryRequest object.
  */
 GetNamedQueryRequest::GetNamedQueryRequest()
     : AthenaRequest(new GetNamedQueryRequestPrivate(AthenaRequest::GetNamedQueryAction, this))
@@ -78,14 +75,9 @@ bool GetNamedQueryRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetNamedQueryResponse object.
+ * Returns a GetNamedQueryResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetNamedQueryResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AthenaClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetNamedQueryRequest::response(QNetworkReply * const reply) const
 {
@@ -93,20 +85,17 @@ QtAws::Core::AwsAbstractResponse * GetNamedQueryRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::Athena::GetNamedQueryRequestPrivate
+ * \brief The GetNamedQueryRequestPrivate class provides private implementation for GetNamedQueryRequest.
+ * \internal
  *
- * @class  GetNamedQueryRequestPrivate
- *
- * @brief  Private implementation for GetNamedQueryRequest.
+ * \inmodule QtAwsAthena
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetNamedQueryRequestPrivate object.
- *
- * @param  action  Athena action being performed.
- * @param  q       Pointer to this object's public GetNamedQueryRequest instance.
+ * Constructs a GetNamedQueryRequestPrivate object for Athena \a action with,
+ * public implementation \a q.
  */
 GetNamedQueryRequestPrivate::GetNamedQueryRequestPrivate(
     const AthenaRequest::Action action, GetNamedQueryRequest * const q)
@@ -116,15 +105,10 @@ GetNamedQueryRequestPrivate::GetNamedQueryRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetNamedQueryRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetNamedQueryRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetNamedQueryRequest instance.
  */
 GetNamedQueryRequestPrivate::GetNamedQueryRequestPrivate(
     const GetNamedQueryRequestPrivate &other, GetNamedQueryRequest * const q)

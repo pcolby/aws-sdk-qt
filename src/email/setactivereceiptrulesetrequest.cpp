@@ -27,10 +27,9 @@ namespace SES {
 
 /*!
  * \class QtAws::SES::SetActiveReceiptRuleSetRequest
- *
  * \brief The SetActiveReceiptRuleSetRequest class provides an interface for SES SetActiveReceiptRuleSet requests.
  *
- * \ingroup SES
+ * \inmodule QtAwsSES
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -48,9 +47,7 @@ namespace SES {
  */
 
 /*!
- * @brief  Constructs a new SetActiveReceiptRuleSetRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 SetActiveReceiptRuleSetRequest::SetActiveReceiptRuleSetRequest(const SetActiveReceiptRuleSetRequest &other)
     : SESRequest(new SetActiveReceiptRuleSetRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ SetActiveReceiptRuleSetRequest::SetActiveReceiptRuleSetRequest(const SetActiveRe
 }
 
 /*!
- * @brief  Constructs a new SetActiveReceiptRuleSetRequest object.
+ * Constructs a SetActiveReceiptRuleSetRequest object.
  */
 SetActiveReceiptRuleSetRequest::SetActiveReceiptRuleSetRequest()
     : SESRequest(new SetActiveReceiptRuleSetRequestPrivate(SESRequest::SetActiveReceiptRuleSetAction, this))
@@ -77,14 +74,9 @@ bool SetActiveReceiptRuleSetRequest::isValid() const
 
 
 /*!
- * @brief  Construct an SetActiveReceiptRuleSetResponse object.
+ * Returns a SetActiveReceiptRuleSetResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An SetActiveReceiptRuleSetResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SESClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * SetActiveReceiptRuleSetRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * SetActiveReceiptRuleSetRequest::response(QNet
 }
 
 /*!
- * @internal
+ * \class QtAws::SES::SetActiveReceiptRuleSetRequestPrivate
+ * \brief The SetActiveReceiptRuleSetRequestPrivate class provides private implementation for SetActiveReceiptRuleSetRequest.
+ * \internal
  *
- * @class  SetActiveReceiptRuleSetRequestPrivate
- *
- * @brief  Private implementation for SetActiveReceiptRuleSetRequest.
+ * \inmodule QtAwsSES
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new SetActiveReceiptRuleSetRequestPrivate object.
- *
- * @param  action  SES action being performed.
- * @param  q       Pointer to this object's public SetActiveReceiptRuleSetRequest instance.
+ * Constructs a SetActiveReceiptRuleSetRequestPrivate object for SES \a action with,
+ * public implementation \a q.
  */
 SetActiveReceiptRuleSetRequestPrivate::SetActiveReceiptRuleSetRequestPrivate(
     const SESRequest::Action action, SetActiveReceiptRuleSetRequest * const q)
@@ -115,15 +104,10 @@ SetActiveReceiptRuleSetRequestPrivate::SetActiveReceiptRuleSetRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SetActiveReceiptRuleSetRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the SetActiveReceiptRuleSetRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public SetActiveReceiptRuleSetRequest instance.
  */
 SetActiveReceiptRuleSetRequestPrivate::SetActiveReceiptRuleSetRequestPrivate(
     const SetActiveReceiptRuleSetRequestPrivate &other, SetActiveReceiptRuleSetRequest * const q)

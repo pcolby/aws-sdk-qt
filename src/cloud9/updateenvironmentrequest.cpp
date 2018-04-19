@@ -27,10 +27,9 @@ namespace Cloud9 {
 
 /*!
  * \class QtAws::Cloud9::UpdateEnvironmentRequest
- *
  * \brief The UpdateEnvironmentRequest class provides an interface for Cloud9 UpdateEnvironment requests.
  *
- * \ingroup Cloud9
+ * \inmodule QtAwsCloud9
  *
  *  <fullname>AWS Cloud9</fullname>
  * 
@@ -91,9 +90,7 @@ namespace Cloud9 {
  */
 
 /*!
- * @brief  Constructs a new UpdateEnvironmentRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateEnvironmentRequest::UpdateEnvironmentRequest(const UpdateEnvironmentRequest &other)
     : Cloud9Request(new UpdateEnvironmentRequestPrivate(*other.d_func(), this))
@@ -102,7 +99,7 @@ UpdateEnvironmentRequest::UpdateEnvironmentRequest(const UpdateEnvironmentReques
 }
 
 /*!
- * @brief  Constructs a new UpdateEnvironmentRequest object.
+ * Constructs a UpdateEnvironmentRequest object.
  */
 UpdateEnvironmentRequest::UpdateEnvironmentRequest()
     : Cloud9Request(new UpdateEnvironmentRequestPrivate(Cloud9Request::UpdateEnvironmentAction, this))
@@ -120,14 +117,9 @@ bool UpdateEnvironmentRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateEnvironmentResponse object.
+ * Returns a UpdateEnvironmentResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateEnvironmentResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  Cloud9Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateEnvironmentRequest::response(QNetworkReply * const reply) const
 {
@@ -135,20 +127,17 @@ QtAws::Core::AwsAbstractResponse * UpdateEnvironmentRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::Cloud9::UpdateEnvironmentRequestPrivate
+ * \brief The UpdateEnvironmentRequestPrivate class provides private implementation for UpdateEnvironmentRequest.
+ * \internal
  *
- * @class  UpdateEnvironmentRequestPrivate
- *
- * @brief  Private implementation for UpdateEnvironmentRequest.
+ * \inmodule QtAwsCloud9
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateEnvironmentRequestPrivate object.
- *
- * @param  action  Cloud9 action being performed.
- * @param  q       Pointer to this object's public UpdateEnvironmentRequest instance.
+ * Constructs a UpdateEnvironmentRequestPrivate object for Cloud9 \a action with,
+ * public implementation \a q.
  */
 UpdateEnvironmentRequestPrivate::UpdateEnvironmentRequestPrivate(
     const Cloud9Request::Action action, UpdateEnvironmentRequest * const q)
@@ -158,15 +147,10 @@ UpdateEnvironmentRequestPrivate::UpdateEnvironmentRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateEnvironmentRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateEnvironmentRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateEnvironmentRequest instance.
  */
 UpdateEnvironmentRequestPrivate::UpdateEnvironmentRequestPrivate(
     const UpdateEnvironmentRequestPrivate &other, UpdateEnvironmentRequest * const q)

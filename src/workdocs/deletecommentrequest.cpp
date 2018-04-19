@@ -27,10 +27,9 @@ namespace WorkDocs {
 
 /*!
  * \class QtAws::WorkDocs::DeleteCommentRequest
- *
  * \brief The DeleteCommentRequest class provides an interface for WorkDocs DeleteComment requests.
  *
- * \ingroup WorkDocs
+ * \inmodule QtAwsWorkDocs
  *
  *  The WorkDocs API is designed for the following use
  * 
@@ -66,9 +65,7 @@ namespace WorkDocs {
  */
 
 /*!
- * @brief  Constructs a new DeleteCommentRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteCommentRequest::DeleteCommentRequest(const DeleteCommentRequest &other)
     : WorkDocsRequest(new DeleteCommentRequestPrivate(*other.d_func(), this))
@@ -77,7 +74,7 @@ DeleteCommentRequest::DeleteCommentRequest(const DeleteCommentRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DeleteCommentRequest object.
+ * Constructs a DeleteCommentRequest object.
  */
 DeleteCommentRequest::DeleteCommentRequest()
     : WorkDocsRequest(new DeleteCommentRequestPrivate(WorkDocsRequest::DeleteCommentAction, this))
@@ -95,14 +92,9 @@ bool DeleteCommentRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteCommentResponse object.
+ * Returns a DeleteCommentResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteCommentResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WorkDocsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteCommentRequest::response(QNetworkReply * const reply) const
 {
@@ -110,20 +102,17 @@ QtAws::Core::AwsAbstractResponse * DeleteCommentRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::WorkDocs::DeleteCommentRequestPrivate
+ * \brief The DeleteCommentRequestPrivate class provides private implementation for DeleteCommentRequest.
+ * \internal
  *
- * @class  DeleteCommentRequestPrivate
- *
- * @brief  Private implementation for DeleteCommentRequest.
+ * \inmodule QtAwsWorkDocs
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteCommentRequestPrivate object.
- *
- * @param  action  WorkDocs action being performed.
- * @param  q       Pointer to this object's public DeleteCommentRequest instance.
+ * Constructs a DeleteCommentRequestPrivate object for WorkDocs \a action with,
+ * public implementation \a q.
  */
 DeleteCommentRequestPrivate::DeleteCommentRequestPrivate(
     const WorkDocsRequest::Action action, DeleteCommentRequest * const q)
@@ -133,15 +122,10 @@ DeleteCommentRequestPrivate::DeleteCommentRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteCommentRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteCommentRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteCommentRequest instance.
  */
 DeleteCommentRequestPrivate::DeleteCommentRequestPrivate(
     const DeleteCommentRequestPrivate &other, DeleteCommentRequest * const q)

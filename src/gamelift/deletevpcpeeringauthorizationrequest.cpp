@@ -27,10 +27,9 @@ namespace GameLift {
 
 /*!
  * \class QtAws::GameLift::DeleteVpcPeeringAuthorizationRequest
- *
  * \brief The DeleteVpcPeeringAuthorizationRequest class provides an interface for GameLift DeleteVpcPeeringAuthorization requests.
  *
- * \ingroup GameLift
+ * \inmodule QtAwsGameLift
  *
  *  <fullname>Amazon GameLift Service</fullname>
  * 
@@ -473,9 +472,7 @@ namespace GameLift {
  */
 
 /*!
- * @brief  Constructs a new DeleteVpcPeeringAuthorizationRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteVpcPeeringAuthorizationRequest::DeleteVpcPeeringAuthorizationRequest(const DeleteVpcPeeringAuthorizationRequest &other)
     : GameLiftRequest(new DeleteVpcPeeringAuthorizationRequestPrivate(*other.d_func(), this))
@@ -484,7 +481,7 @@ DeleteVpcPeeringAuthorizationRequest::DeleteVpcPeeringAuthorizationRequest(const
 }
 
 /*!
- * @brief  Constructs a new DeleteVpcPeeringAuthorizationRequest object.
+ * Constructs a DeleteVpcPeeringAuthorizationRequest object.
  */
 DeleteVpcPeeringAuthorizationRequest::DeleteVpcPeeringAuthorizationRequest()
     : GameLiftRequest(new DeleteVpcPeeringAuthorizationRequestPrivate(GameLiftRequest::DeleteVpcPeeringAuthorizationAction, this))
@@ -502,14 +499,9 @@ bool DeleteVpcPeeringAuthorizationRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteVpcPeeringAuthorizationResponse object.
+ * Returns a DeleteVpcPeeringAuthorizationResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteVpcPeeringAuthorizationResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GameLiftClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteVpcPeeringAuthorizationRequest::response(QNetworkReply * const reply) const
 {
@@ -517,20 +509,17 @@ QtAws::Core::AwsAbstractResponse * DeleteVpcPeeringAuthorizationRequest::respons
 }
 
 /*!
- * @internal
+ * \class QtAws::GameLift::DeleteVpcPeeringAuthorizationRequestPrivate
+ * \brief The DeleteVpcPeeringAuthorizationRequestPrivate class provides private implementation for DeleteVpcPeeringAuthorizationRequest.
+ * \internal
  *
- * @class  DeleteVpcPeeringAuthorizationRequestPrivate
- *
- * @brief  Private implementation for DeleteVpcPeeringAuthorizationRequest.
+ * \inmodule QtAwsGameLift
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteVpcPeeringAuthorizationRequestPrivate object.
- *
- * @param  action  GameLift action being performed.
- * @param  q       Pointer to this object's public DeleteVpcPeeringAuthorizationRequest instance.
+ * Constructs a DeleteVpcPeeringAuthorizationRequestPrivate object for GameLift \a action with,
+ * public implementation \a q.
  */
 DeleteVpcPeeringAuthorizationRequestPrivate::DeleteVpcPeeringAuthorizationRequestPrivate(
     const GameLiftRequest::Action action, DeleteVpcPeeringAuthorizationRequest * const q)
@@ -540,15 +529,10 @@ DeleteVpcPeeringAuthorizationRequestPrivate::DeleteVpcPeeringAuthorizationReques
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteVpcPeeringAuthorizationRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteVpcPeeringAuthorizationRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteVpcPeeringAuthorizationRequest instance.
  */
 DeleteVpcPeeringAuthorizationRequestPrivate::DeleteVpcPeeringAuthorizationRequestPrivate(
     const DeleteVpcPeeringAuthorizationRequestPrivate &other, DeleteVpcPeeringAuthorizationRequest * const q)

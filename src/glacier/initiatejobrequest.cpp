@@ -27,10 +27,9 @@ namespace Glacier {
 
 /*!
  * \class QtAws::Glacier::InitiateJobRequest
- *
  * \brief The InitiateJobRequest class provides an interface for Glacier InitiateJob requests.
  *
- * \ingroup Glacier
+ * \inmodule QtAwsGlacier
  *
  *  Amazon Glacier is a storage solution for "cold
  * 
@@ -75,9 +74,7 @@ namespace Glacier {
  */
 
 /*!
- * @brief  Constructs a new InitiateJobRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 InitiateJobRequest::InitiateJobRequest(const InitiateJobRequest &other)
     : GlacierRequest(new InitiateJobRequestPrivate(*other.d_func(), this))
@@ -86,7 +83,7 @@ InitiateJobRequest::InitiateJobRequest(const InitiateJobRequest &other)
 }
 
 /*!
- * @brief  Constructs a new InitiateJobRequest object.
+ * Constructs a InitiateJobRequest object.
  */
 InitiateJobRequest::InitiateJobRequest()
     : GlacierRequest(new InitiateJobRequestPrivate(GlacierRequest::InitiateJobAction, this))
@@ -104,14 +101,9 @@ bool InitiateJobRequest::isValid() const
 
 
 /*!
- * @brief  Construct an InitiateJobResponse object.
+ * Returns a InitiateJobResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An InitiateJobResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GlacierClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * InitiateJobRequest::response(QNetworkReply * const reply) const
 {
@@ -119,20 +111,17 @@ QtAws::Core::AwsAbstractResponse * InitiateJobRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::Glacier::InitiateJobRequestPrivate
+ * \brief The InitiateJobRequestPrivate class provides private implementation for InitiateJobRequest.
+ * \internal
  *
- * @class  InitiateJobRequestPrivate
- *
- * @brief  Private implementation for InitiateJobRequest.
+ * \inmodule QtAwsGlacier
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new InitiateJobRequestPrivate object.
- *
- * @param  action  Glacier action being performed.
- * @param  q       Pointer to this object's public InitiateJobRequest instance.
+ * Constructs a InitiateJobRequestPrivate object for Glacier \a action with,
+ * public implementation \a q.
  */
 InitiateJobRequestPrivate::InitiateJobRequestPrivate(
     const GlacierRequest::Action action, InitiateJobRequest * const q)
@@ -142,15 +131,10 @@ InitiateJobRequestPrivate::InitiateJobRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new InitiateJobRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the InitiateJobRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public InitiateJobRequest instance.
  */
 InitiateJobRequestPrivate::InitiateJobRequestPrivate(
     const InitiateJobRequestPrivate &other, InitiateJobRequest * const q)

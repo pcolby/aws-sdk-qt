@@ -27,10 +27,9 @@ namespace AppStream {
 
 /*!
  * \class QtAws::AppStream::CreateFleetRequest
- *
  * \brief The CreateFleetRequest class provides an interface for AppStream CreateFleet requests.
  *
- * \ingroup AppStream
+ * \inmodule QtAwsAppStream
  *
  *  <fullname>Amazon AppStream 2.0</fullname>
  * 
@@ -40,9 +39,7 @@ namespace AppStream {
  */
 
 /*!
- * @brief  Constructs a new CreateFleetRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateFleetRequest::CreateFleetRequest(const CreateFleetRequest &other)
     : AppStreamRequest(new CreateFleetRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ CreateFleetRequest::CreateFleetRequest(const CreateFleetRequest &other)
 }
 
 /*!
- * @brief  Constructs a new CreateFleetRequest object.
+ * Constructs a CreateFleetRequest object.
  */
 CreateFleetRequest::CreateFleetRequest()
     : AppStreamRequest(new CreateFleetRequestPrivate(AppStreamRequest::CreateFleetAction, this))
@@ -69,14 +66,9 @@ bool CreateFleetRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateFleetResponse object.
+ * Returns a CreateFleetResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateFleetResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AppStreamClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateFleetRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * CreateFleetRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::AppStream::CreateFleetRequestPrivate
+ * \brief The CreateFleetRequestPrivate class provides private implementation for CreateFleetRequest.
+ * \internal
  *
- * @class  CreateFleetRequestPrivate
- *
- * @brief  Private implementation for CreateFleetRequest.
+ * \inmodule QtAwsAppStream
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateFleetRequestPrivate object.
- *
- * @param  action  AppStream action being performed.
- * @param  q       Pointer to this object's public CreateFleetRequest instance.
+ * Constructs a CreateFleetRequestPrivate object for AppStream \a action with,
+ * public implementation \a q.
  */
 CreateFleetRequestPrivate::CreateFleetRequestPrivate(
     const AppStreamRequest::Action action, CreateFleetRequest * const q)
@@ -107,15 +96,10 @@ CreateFleetRequestPrivate::CreateFleetRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateFleetRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateFleetRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateFleetRequest instance.
  */
 CreateFleetRequestPrivate::CreateFleetRequestPrivate(
     const CreateFleetRequestPrivate &other, CreateFleetRequest * const q)

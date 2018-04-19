@@ -25,16 +25,23 @@ namespace MarketplaceCommerceAnalytics {
 
 /*!
  * \class QtAws::MarketplaceCommerceAnalytics::MarketplaceCommerceAnalyticsRequest
- *
  * \brief The MarketplaceCommerceAnalyticsRequest class provides an interface for MarketplaceCommerceAnalytics requests.
  *
- * \ingroup MarketplaceCommerceAnalytics
+ * \inmodule QtAwsMarketplaceCommerceAnalytics
  */
 
 /*!
- * @brief  Constructs a new MarketplaceCommerceAnalyticsRequest object.
+ * \enum MarketplaceCommerceAnalyticsRequest::Action
  *
- * @param  action  The MarketplaceCommerceAnalytics action to request.
+ * This enum describes the actions that can be performed as MarketplaceCommerceAnalytics
+ * requests.
+ *
+ * \value GenerateDataSetAction MarketplaceCommerceAnalytics GenerateDataSet action.
+ * \value StartSupportDataExportAction MarketplaceCommerceAnalytics StartSupportDataExport action.
+ */
+
+/*!
+ * Constructs a[n] MarketplaceCommerceAnalyticsRequest object for MarketplaceCommerceAnalytics \a action.
  */
 MarketplaceCommerceAnalyticsRequest::MarketplaceCommerceAnalyticsRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new MarketplaceCommerceAnalyticsRequestPrivate(action, this))
@@ -43,9 +50,7 @@ MarketplaceCommerceAnalyticsRequest::MarketplaceCommerceAnalyticsRequest(const A
 }
 
 /*!
- * @brief  Constructs a new MarketplaceCommerceAnalyticsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 MarketplaceCommerceAnalyticsRequest::MarketplaceCommerceAnalyticsRequest(const MarketplaceCommerceAnalyticsRequest &other)
     : QtAws::Core::AwsAbstractRequest(new MarketplaceCommerceAnalyticsRequestPrivate(*other.d_func(), this))
@@ -54,13 +59,7 @@ MarketplaceCommerceAnalyticsRequest::MarketplaceCommerceAnalyticsRequest(const M
 }
 
 /*!
- * @brief  Assignment operator.
- *
- * Assigns \a other to \c this.
- *
- * @param  other  Instance to copy.
- *
- * @return  A reference to \c this.
+ * Sets the MarketplaceCommerceAnalyticsRequest object to be equal to \a other.
  */
 MarketplaceCommerceAnalyticsRequest& MarketplaceCommerceAnalyticsRequest::operator=(const MarketplaceCommerceAnalyticsRequest &other)
 {
@@ -72,14 +71,10 @@ MarketplaceCommerceAnalyticsRequest& MarketplaceCommerceAnalyticsRequest::operat
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new MarketplaceCommerceAnalyticsRequest object.
+ * Constructs aa MarketplaceCommerceAnalyticsRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from MarketplaceCommerceAnalyticsRequestPrivate.
- *
- * @param  d  Pointer to private data (aka D-Pointer).
  */
 MarketplaceCommerceAnalyticsRequest::MarketplaceCommerceAnalyticsRequest(MarketplaceCommerceAnalyticsRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
@@ -87,7 +82,7 @@ MarketplaceCommerceAnalyticsRequest::MarketplaceCommerceAnalyticsRequest(Marketp
 }
 
 /*!
- * \brief Returns the MarketplaceCommerceAnalytics action to be performed by this request.
+ * Returns the MarketplaceCommerceAnalytics action to be performed by this request.
  */
 MarketplaceCommerceAnalyticsRequest::Action MarketplaceCommerceAnalyticsRequest::action() const
 {
@@ -96,7 +91,7 @@ MarketplaceCommerceAnalyticsRequest::Action MarketplaceCommerceAnalyticsRequest:
 }
 
 /*!
- * \brief Returns the name of the MarketplaceCommerceAnalytics action to be performed by this request.
+ * Returns the name of the MarketplaceCommerceAnalytics action to be performed by this request.
  */
 QString MarketplaceCommerceAnalyticsRequest::actionString() const
 {
@@ -104,7 +99,7 @@ QString MarketplaceCommerceAnalyticsRequest::actionString() const
 }
 
 /*!
- * \brief Returns the MarketplaceCommerceAnalytics API version implemented by this request.
+ * Returns the MarketplaceCommerceAnalytics API version implemented by this request.
  */
 QString MarketplaceCommerceAnalyticsRequest::apiVersion() const
 {
@@ -113,7 +108,7 @@ QString MarketplaceCommerceAnalyticsRequest::apiVersion() const
 }
 
 /*!
- * @brief Set the MarketplaceCommerceAnalytics action to be performed by this request to \a action.
+ * Sets the MarketplaceCommerceAnalytics action to be performed by this request to \a action.
  */
 void MarketplaceCommerceAnalyticsRequest::setAction(const Action action)
 {
@@ -122,7 +117,7 @@ void MarketplaceCommerceAnalyticsRequest::setAction(const Action action)
 }
 
 /*!
- * Set the MarketplaceCommerceAnalytics API version to include in this request to \a version.
+ * Sets the MarketplaceCommerceAnalytics API version to include in this request to \a version.
  */
 void MarketplaceCommerceAnalyticsRequest::setApiVersion(const QString &version)
 {
@@ -131,7 +126,7 @@ void MarketplaceCommerceAnalyticsRequest::setApiVersion(const QString &version)
 }
 
 /*!
- * \brief Returns \c true if this request is the same as \a other.
+ * Returns \c true if this request is equal to \a other; \c false otherwise.
  *
  * Note, most derived *Request classes do not need to provider their own
  * implementations of this function, since most such request classes rely on
@@ -146,8 +141,8 @@ bool MarketplaceCommerceAnalyticsRequest::operator==(const MarketplaceCommerceAn
             (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
-/*!
- * @brief  Check if \a queueName is a valid MarketplaceCommerceAnalytics queue name.
+/*
+ * Returns \c tue if \a queueName is a valid MarketplaceCommerceAnalytics queue name.
  *
  * @par From MarketplaceCommerceAnalytics FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
@@ -166,9 +161,8 @@ bool MarketplaceCommerceAnalyticsRequest::operator==(const MarketplaceCommerceAn
 }*/
 
 /*!
- * \brief Removes the a \a name parameter from this request.
- *
- * Returns the count of paramters removed (typically \c 0 or \c 1).
+ * Removes the a \a name parameter from the request, then returns the number of
+ * paramters removed (typically \c 0 or \c 1).
  */
 int MarketplaceCommerceAnalyticsRequest::clearParameter(const QString &name)
 {
@@ -177,7 +171,7 @@ int MarketplaceCommerceAnalyticsRequest::clearParameter(const QString &name)
 }
 
 /*!
- * \brief Removes all parameters from this request.
+ * Removes all parameters from the request.
  */
 void MarketplaceCommerceAnalyticsRequest::clearParameters()
 {
@@ -186,7 +180,7 @@ void MarketplaceCommerceAnalyticsRequest::clearParameters()
 }
 
 /*!
- * \brief Returns the value of the \n name pararemter if set, otherwise \a defaultValue.
+ * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
 QVariant MarketplaceCommerceAnalyticsRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
@@ -195,7 +189,7 @@ QVariant MarketplaceCommerceAnalyticsRequest::parameter(const QString &name, con
 }
 
 /*!
- * \brief Returns a map of parameters included in this request.
+ * Returns the parameters included in this request.
  */
 const QVariantMap &MarketplaceCommerceAnalyticsRequest::parameters() const
 {
@@ -204,7 +198,7 @@ const QVariantMap &MarketplaceCommerceAnalyticsRequest::parameters() const
 }
 
 /*!
- * \brief Sets the \a name parameter to \a value.
+ * Sets the \a name parameter to \a value.
  */
 void MarketplaceCommerceAnalyticsRequest::setParameter(const QString &name, const QVariant &value)
 {
@@ -213,9 +207,8 @@ void MarketplaceCommerceAnalyticsRequest::setParameter(const QString &name, cons
 }
 
 /*!
- * \brief Sets the map of paramters for this request to \a parameters.
- *
- * Any request parameters set previously will be discarded.
+ * Sets the paramters for this request to \a parameters. Any request parameters
+ * set previously will be discarded.
  */
 void MarketplaceCommerceAnalyticsRequest::setParameters(const QVariantMap &parameters)
 {
@@ -224,11 +217,12 @@ void MarketplaceCommerceAnalyticsRequest::setParameters(const QVariantMap &param
 }
 
 /*!
- * \brief Returns a network request for this MarketplaceCommerceAnalytics request using the given \a endpoint.
+ * Returns a network request for the MarketplaceCommerceAnalytics request using the given
+ * \a endpoint.
  *
- * This MarketplaceCommerceAnalytics implementation builds request URLs by combining the common query
- * parameters (such as Action and Version), with any that have been added (via
- * setParameter) by child classes.
+ * This MarketplaceCommerceAnalytics implementation builds request URLs by combining the
+ * common query parameters (such as Action and Version), with any that have
+ * been added (via setParameter) by child classes.
  */
 QNetworkRequest MarketplaceCommerceAnalyticsRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -239,17 +233,16 @@ QNetworkRequest MarketplaceCommerceAnalyticsRequest::unsignedRequest(const QUrl 
 }
 
 /*!
+ * \class QtAws::MarketplaceCommerceAnalytics::MarketplaceCommerceAnalyticsRequestPrivate
+ * \brief The MarketplaceCommerceAnalyticsRequestPrivate class provides private implementation for MarketplaceCommerceAnalyticsRequest.
  * \internal
  *
- * \class  MarketplaceCommerceAnalyticsRequestPrivate
- *
- * \brief  Private implementation for MarketplaceCommerceAnalyticsRequest.
+ * \inmodule QtAwsMarketplaceCommerceAnalytics
  */
 
 /*!
- * \internal
- *
- * \brief Constructs a new MarketplaceCommerceAnalyticsRequestPrivate object.
+ * Constructs a MarketplaceCommerceAnalyticsRequestPrivate object for MarketplaceCommerceAnalytics \a action with,
+ * public implementation \a q.
  */
 MarketplaceCommerceAnalyticsRequestPrivate::MarketplaceCommerceAnalyticsRequestPrivate(const MarketplaceCommerceAnalyticsRequest::Action action, MarketplaceCommerceAnalyticsRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
@@ -258,9 +251,7 @@ MarketplaceCommerceAnalyticsRequestPrivate::MarketplaceCommerceAnalyticsRequestP
 }
 
 /*!
- * \internal
- *
- * \brief Constructs a new MarketplaceCommerceAnalyticsRequestPrivate object, copying an existing one.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
@@ -276,15 +267,12 @@ MarketplaceCommerceAnalyticsRequestPrivate::MarketplaceCommerceAnalyticsRequestP
 }
 
 /*!
- * \internal
- *
- * \brief Returns a string representing \a action.
+ * Returns a string represention of \a action, or a null string if \a action is
+ * invalid.
  *
  * This function converts MarketplaceCommerceAnalyticsRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the MarketplaceCommerceAnalytics service's Action
  * query parameters.
- *
- * @return A string representing \a action, or a null string if \a action is invalid.
  */
 QString MarketplaceCommerceAnalyticsRequestPrivate::toString(const MarketplaceCommerceAnalyticsRequest::Action &action)
 {

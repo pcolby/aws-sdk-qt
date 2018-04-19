@@ -27,10 +27,9 @@ namespace Athena {
 
 /*!
  * \class QtAws::Athena::GetQueryExecutionRequest
- *
  * \brief The GetQueryExecutionRequest class provides an interface for Athena GetQueryExecution requests.
  *
- * \ingroup Athena
+ * \inmodule QtAwsAthena
  *
  *  Amazon Athena is an interactive query service that lets you use standard SQL to analyze data directly in Amazon S3. You
  *  can point Athena at your data in Amazon S3 and run ad-hoc queries and get results in seconds. Athena is serverless, so
@@ -49,9 +48,7 @@ namespace Athena {
  */
 
 /*!
- * @brief  Constructs a new GetQueryExecutionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetQueryExecutionRequest::GetQueryExecutionRequest(const GetQueryExecutionRequest &other)
     : AthenaRequest(new GetQueryExecutionRequestPrivate(*other.d_func(), this))
@@ -60,7 +57,7 @@ GetQueryExecutionRequest::GetQueryExecutionRequest(const GetQueryExecutionReques
 }
 
 /*!
- * @brief  Constructs a new GetQueryExecutionRequest object.
+ * Constructs a GetQueryExecutionRequest object.
  */
 GetQueryExecutionRequest::GetQueryExecutionRequest()
     : AthenaRequest(new GetQueryExecutionRequestPrivate(AthenaRequest::GetQueryExecutionAction, this))
@@ -78,14 +75,9 @@ bool GetQueryExecutionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetQueryExecutionResponse object.
+ * Returns a GetQueryExecutionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetQueryExecutionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AthenaClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetQueryExecutionRequest::response(QNetworkReply * const reply) const
 {
@@ -93,20 +85,17 @@ QtAws::Core::AwsAbstractResponse * GetQueryExecutionRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::Athena::GetQueryExecutionRequestPrivate
+ * \brief The GetQueryExecutionRequestPrivate class provides private implementation for GetQueryExecutionRequest.
+ * \internal
  *
- * @class  GetQueryExecutionRequestPrivate
- *
- * @brief  Private implementation for GetQueryExecutionRequest.
+ * \inmodule QtAwsAthena
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetQueryExecutionRequestPrivate object.
- *
- * @param  action  Athena action being performed.
- * @param  q       Pointer to this object's public GetQueryExecutionRequest instance.
+ * Constructs a GetQueryExecutionRequestPrivate object for Athena \a action with,
+ * public implementation \a q.
  */
 GetQueryExecutionRequestPrivate::GetQueryExecutionRequestPrivate(
     const AthenaRequest::Action action, GetQueryExecutionRequest * const q)
@@ -116,15 +105,10 @@ GetQueryExecutionRequestPrivate::GetQueryExecutionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetQueryExecutionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetQueryExecutionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetQueryExecutionRequest instance.
  */
 GetQueryExecutionRequestPrivate::GetQueryExecutionRequestPrivate(
     const GetQueryExecutionRequestPrivate &other, GetQueryExecutionRequest * const q)

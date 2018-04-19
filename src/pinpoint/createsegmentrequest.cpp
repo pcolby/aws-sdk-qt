@@ -27,19 +27,16 @@ namespace Pinpoint {
 
 /*!
  * \class QtAws::Pinpoint::CreateSegmentRequest
- *
  * \brief The CreateSegmentRequest class provides an interface for Pinpoint CreateSegment requests.
  *
- * \ingroup Pinpoint
+ * \inmodule QtAwsPinpoint
  *
  *
  * \sa PinpointClient::createSegment
  */
 
 /*!
- * @brief  Constructs a new CreateSegmentRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateSegmentRequest::CreateSegmentRequest(const CreateSegmentRequest &other)
     : PinpointRequest(new CreateSegmentRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ CreateSegmentRequest::CreateSegmentRequest(const CreateSegmentRequest &other)
 }
 
 /*!
- * @brief  Constructs a new CreateSegmentRequest object.
+ * Constructs a CreateSegmentRequest object.
  */
 CreateSegmentRequest::CreateSegmentRequest()
     : PinpointRequest(new CreateSegmentRequestPrivate(PinpointRequest::CreateSegmentAction, this))
@@ -66,14 +63,9 @@ bool CreateSegmentRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateSegmentResponse object.
+ * Returns a CreateSegmentResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateSegmentResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  PinpointClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateSegmentRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * CreateSegmentRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::Pinpoint::CreateSegmentRequestPrivate
+ * \brief The CreateSegmentRequestPrivate class provides private implementation for CreateSegmentRequest.
+ * \internal
  *
- * @class  CreateSegmentRequestPrivate
- *
- * @brief  Private implementation for CreateSegmentRequest.
+ * \inmodule QtAwsPinpoint
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateSegmentRequestPrivate object.
- *
- * @param  action  Pinpoint action being performed.
- * @param  q       Pointer to this object's public CreateSegmentRequest instance.
+ * Constructs a CreateSegmentRequestPrivate object for Pinpoint \a action with,
+ * public implementation \a q.
  */
 CreateSegmentRequestPrivate::CreateSegmentRequestPrivate(
     const PinpointRequest::Action action, CreateSegmentRequest * const q)
@@ -104,15 +93,10 @@ CreateSegmentRequestPrivate::CreateSegmentRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateSegmentRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateSegmentRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateSegmentRequest instance.
  */
 CreateSegmentRequestPrivate::CreateSegmentRequestPrivate(
     const CreateSegmentRequestPrivate &other, CreateSegmentRequest * const q)

@@ -27,10 +27,9 @@ namespace Lightsail {
 
 /*!
  * \class QtAws::Lightsail::DeleteDomainRequest
- *
  * \brief The DeleteDomainRequest class provides an interface for Lightsail DeleteDomain requests.
  *
- * \ingroup Lightsail
+ * \inmodule QtAwsLightsail
  *
  *  Amazon Lightsail is the easiest way to get started with AWS for developers who just need virtual private servers.
  *  Lightsail includes everything you need to launch your project quickly - a virtual machine, SSD-based storage, data
@@ -53,9 +52,7 @@ namespace Lightsail {
  */
 
 /*!
- * @brief  Constructs a new DeleteDomainRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteDomainRequest::DeleteDomainRequest(const DeleteDomainRequest &other)
     : LightsailRequest(new DeleteDomainRequestPrivate(*other.d_func(), this))
@@ -64,7 +61,7 @@ DeleteDomainRequest::DeleteDomainRequest(const DeleteDomainRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DeleteDomainRequest object.
+ * Constructs a DeleteDomainRequest object.
  */
 DeleteDomainRequest::DeleteDomainRequest()
     : LightsailRequest(new DeleteDomainRequestPrivate(LightsailRequest::DeleteDomainAction, this))
@@ -82,14 +79,9 @@ bool DeleteDomainRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteDomainResponse object.
+ * Returns a DeleteDomainResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteDomainResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  LightsailClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteDomainRequest::response(QNetworkReply * const reply) const
 {
@@ -97,20 +89,17 @@ QtAws::Core::AwsAbstractResponse * DeleteDomainRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::Lightsail::DeleteDomainRequestPrivate
+ * \brief The DeleteDomainRequestPrivate class provides private implementation for DeleteDomainRequest.
+ * \internal
  *
- * @class  DeleteDomainRequestPrivate
- *
- * @brief  Private implementation for DeleteDomainRequest.
+ * \inmodule QtAwsLightsail
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteDomainRequestPrivate object.
- *
- * @param  action  Lightsail action being performed.
- * @param  q       Pointer to this object's public DeleteDomainRequest instance.
+ * Constructs a DeleteDomainRequestPrivate object for Lightsail \a action with,
+ * public implementation \a q.
  */
 DeleteDomainRequestPrivate::DeleteDomainRequestPrivate(
     const LightsailRequest::Action action, DeleteDomainRequest * const q)
@@ -120,15 +109,10 @@ DeleteDomainRequestPrivate::DeleteDomainRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteDomainRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteDomainRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteDomainRequest instance.
  */
 DeleteDomainRequestPrivate::DeleteDomainRequestPrivate(
     const DeleteDomainRequestPrivate &other, DeleteDomainRequest * const q)

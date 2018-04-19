@@ -27,10 +27,9 @@ namespace ACMPCA {
 
 /*!
  * \class QtAws::ACMPCA::UntagCertificateAuthorityRequest
- *
  * \brief The UntagCertificateAuthorityRequest class provides an interface for ACMPCA UntagCertificateAuthority requests.
  *
- * \ingroup ACMPCA
+ * \inmodule QtAwsACMPCA
  *
  *  You can use the ACM PCA API to create a private certificate authority (CA). You must first call the
  *  <a>CreateCertificateAuthority</a> function. If successful, the function returns an Amazon Resource Name (ARN) for your
@@ -67,9 +66,7 @@ namespace ACMPCA {
  */
 
 /*!
- * @brief  Constructs a new UntagCertificateAuthorityRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UntagCertificateAuthorityRequest::UntagCertificateAuthorityRequest(const UntagCertificateAuthorityRequest &other)
     : ACMPCARequest(new UntagCertificateAuthorityRequestPrivate(*other.d_func(), this))
@@ -78,7 +75,7 @@ UntagCertificateAuthorityRequest::UntagCertificateAuthorityRequest(const UntagCe
 }
 
 /*!
- * @brief  Constructs a new UntagCertificateAuthorityRequest object.
+ * Constructs a UntagCertificateAuthorityRequest object.
  */
 UntagCertificateAuthorityRequest::UntagCertificateAuthorityRequest()
     : ACMPCARequest(new UntagCertificateAuthorityRequestPrivate(ACMPCARequest::UntagCertificateAuthorityAction, this))
@@ -96,14 +93,9 @@ bool UntagCertificateAuthorityRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UntagCertificateAuthorityResponse object.
+ * Returns a UntagCertificateAuthorityResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UntagCertificateAuthorityResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ACMPCAClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UntagCertificateAuthorityRequest::response(QNetworkReply * const reply) const
 {
@@ -111,20 +103,17 @@ QtAws::Core::AwsAbstractResponse * UntagCertificateAuthorityRequest::response(QN
 }
 
 /*!
- * @internal
+ * \class QtAws::ACMPCA::UntagCertificateAuthorityRequestPrivate
+ * \brief The UntagCertificateAuthorityRequestPrivate class provides private implementation for UntagCertificateAuthorityRequest.
+ * \internal
  *
- * @class  UntagCertificateAuthorityRequestPrivate
- *
- * @brief  Private implementation for UntagCertificateAuthorityRequest.
+ * \inmodule QtAwsACMPCA
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UntagCertificateAuthorityRequestPrivate object.
- *
- * @param  action  ACMPCA action being performed.
- * @param  q       Pointer to this object's public UntagCertificateAuthorityRequest instance.
+ * Constructs a UntagCertificateAuthorityRequestPrivate object for ACMPCA \a action with,
+ * public implementation \a q.
  */
 UntagCertificateAuthorityRequestPrivate::UntagCertificateAuthorityRequestPrivate(
     const ACMPCARequest::Action action, UntagCertificateAuthorityRequest * const q)
@@ -134,15 +123,10 @@ UntagCertificateAuthorityRequestPrivate::UntagCertificateAuthorityRequestPrivate
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UntagCertificateAuthorityRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UntagCertificateAuthorityRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UntagCertificateAuthorityRequest instance.
  */
 UntagCertificateAuthorityRequestPrivate::UntagCertificateAuthorityRequestPrivate(
     const UntagCertificateAuthorityRequestPrivate &other, UntagCertificateAuthorityRequest * const q)

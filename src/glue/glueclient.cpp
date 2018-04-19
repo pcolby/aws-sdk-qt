@@ -184,6 +184,9 @@
 /*!
  * \namespace QtAws::Glue
  * \brief The QtAws::Glue contains stuff...
+ *
+ * \inmodule QtAwsGlue
+ *
  * @todo Move this to a separate template file.
  */
 
@@ -236,7 +239,7 @@ GlueClient::GlueClient(
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * \a  AwsEndpoint::getEndpoint()
+ * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
 GlueClient::GlueClient(
     const QUrl &endpoint,

@@ -25,16 +25,48 @@ namespace AppSync {
 
 /*!
  * \class QtAws::AppSync::AppSyncRequest
- *
  * \brief The AppSyncRequest class provides an interface for AppSync requests.
  *
- * \ingroup AppSync
+ * \inmodule QtAwsAppSync
  */
 
 /*!
- * @brief  Constructs a new AppSyncRequest object.
+ * \enum AppSyncRequest::Action
  *
- * @param  action  The AppSync action to request.
+ * This enum describes the actions that can be performed as AppSync
+ * requests.
+ *
+ * \value CreateApiKeyAction AppSync CreateApiKey action.
+ * \value CreateDataSourceAction AppSync CreateDataSource action.
+ * \value CreateGraphqlApiAction AppSync CreateGraphqlApi action.
+ * \value CreateResolverAction AppSync CreateResolver action.
+ * \value CreateTypeAction AppSync CreateType action.
+ * \value DeleteApiKeyAction AppSync DeleteApiKey action.
+ * \value DeleteDataSourceAction AppSync DeleteDataSource action.
+ * \value DeleteGraphqlApiAction AppSync DeleteGraphqlApi action.
+ * \value DeleteResolverAction AppSync DeleteResolver action.
+ * \value DeleteTypeAction AppSync DeleteType action.
+ * \value GetDataSourceAction AppSync GetDataSource action.
+ * \value GetGraphqlApiAction AppSync GetGraphqlApi action.
+ * \value GetIntrospectionSchemaAction AppSync GetIntrospectionSchema action.
+ * \value GetResolverAction AppSync GetResolver action.
+ * \value GetSchemaCreationStatusAction AppSync GetSchemaCreationStatus action.
+ * \value GetTypeAction AppSync GetType action.
+ * \value ListApiKeysAction AppSync ListApiKeys action.
+ * \value ListDataSourcesAction AppSync ListDataSources action.
+ * \value ListGraphqlApisAction AppSync ListGraphqlApis action.
+ * \value ListResolversAction AppSync ListResolvers action.
+ * \value ListTypesAction AppSync ListTypes action.
+ * \value StartSchemaCreationAction AppSync StartSchemaCreation action.
+ * \value UpdateApiKeyAction AppSync UpdateApiKey action.
+ * \value UpdateDataSourceAction AppSync UpdateDataSource action.
+ * \value UpdateGraphqlApiAction AppSync UpdateGraphqlApi action.
+ * \value UpdateResolverAction AppSync UpdateResolver action.
+ * \value UpdateTypeAction AppSync UpdateType action.
+ */
+
+/*!
+ * Constructs a[n] AppSyncRequest object for AppSync \a action.
  */
 AppSyncRequest::AppSyncRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new AppSyncRequestPrivate(action, this))
@@ -43,9 +75,7 @@ AppSyncRequest::AppSyncRequest(const Action action)
 }
 
 /*!
- * @brief  Constructs a new AppSyncRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AppSyncRequest::AppSyncRequest(const AppSyncRequest &other)
     : QtAws::Core::AwsAbstractRequest(new AppSyncRequestPrivate(*other.d_func(), this))
@@ -54,13 +84,7 @@ AppSyncRequest::AppSyncRequest(const AppSyncRequest &other)
 }
 
 /*!
- * @brief  Assignment operator.
- *
- * Assigns \a other to \c this.
- *
- * @param  other  Instance to copy.
- *
- * @return  A reference to \c this.
+ * Sets the AppSyncRequest object to be equal to \a other.
  */
 AppSyncRequest& AppSyncRequest::operator=(const AppSyncRequest &other)
 {
@@ -72,14 +96,10 @@ AppSyncRequest& AppSyncRequest::operator=(const AppSyncRequest &other)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AppSyncRequest object.
+ * Constructs aa AppSyncRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from AppSyncRequestPrivate.
- *
- * @param  d  Pointer to private data (aka D-Pointer).
  */
 AppSyncRequest::AppSyncRequest(AppSyncRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
@@ -87,7 +107,7 @@ AppSyncRequest::AppSyncRequest(AppSyncRequestPrivate * const d) : QtAws::Core::A
 }
 
 /*!
- * \brief Returns the AppSync action to be performed by this request.
+ * Returns the AppSync action to be performed by this request.
  */
 AppSyncRequest::Action AppSyncRequest::action() const
 {
@@ -96,7 +116,7 @@ AppSyncRequest::Action AppSyncRequest::action() const
 }
 
 /*!
- * \brief Returns the name of the AppSync action to be performed by this request.
+ * Returns the name of the AppSync action to be performed by this request.
  */
 QString AppSyncRequest::actionString() const
 {
@@ -104,7 +124,7 @@ QString AppSyncRequest::actionString() const
 }
 
 /*!
- * \brief Returns the AppSync API version implemented by this request.
+ * Returns the AppSync API version implemented by this request.
  */
 QString AppSyncRequest::apiVersion() const
 {
@@ -113,7 +133,7 @@ QString AppSyncRequest::apiVersion() const
 }
 
 /*!
- * @brief Set the AppSync action to be performed by this request to \a action.
+ * Sets the AppSync action to be performed by this request to \a action.
  */
 void AppSyncRequest::setAction(const Action action)
 {
@@ -122,7 +142,7 @@ void AppSyncRequest::setAction(const Action action)
 }
 
 /*!
- * Set the AppSync API version to include in this request to \a version.
+ * Sets the AppSync API version to include in this request to \a version.
  */
 void AppSyncRequest::setApiVersion(const QString &version)
 {
@@ -131,7 +151,7 @@ void AppSyncRequest::setApiVersion(const QString &version)
 }
 
 /*!
- * \brief Returns \c true if this request is the same as \a other.
+ * Returns \c true if this request is equal to \a other; \c false otherwise.
  *
  * Note, most derived *Request classes do not need to provider their own
  * implementations of this function, since most such request classes rely on
@@ -146,8 +166,8 @@ bool AppSyncRequest::operator==(const AppSyncRequest &other) const
             (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
-/*!
- * @brief  Check if \a queueName is a valid AppSync queue name.
+/*
+ * Returns \c tue if \a queueName is a valid AppSync queue name.
  *
  * @par From AppSync FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
@@ -166,9 +186,8 @@ bool AppSyncRequest::operator==(const AppSyncRequest &other) const
 }*/
 
 /*!
- * \brief Removes the a \a name parameter from this request.
- *
- * Returns the count of paramters removed (typically \c 0 or \c 1).
+ * Removes the a \a name parameter from the request, then returns the number of
+ * paramters removed (typically \c 0 or \c 1).
  */
 int AppSyncRequest::clearParameter(const QString &name)
 {
@@ -177,7 +196,7 @@ int AppSyncRequest::clearParameter(const QString &name)
 }
 
 /*!
- * \brief Removes all parameters from this request.
+ * Removes all parameters from the request.
  */
 void AppSyncRequest::clearParameters()
 {
@@ -186,7 +205,7 @@ void AppSyncRequest::clearParameters()
 }
 
 /*!
- * \brief Returns the value of the \n name pararemter if set, otherwise \a defaultValue.
+ * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
 QVariant AppSyncRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
@@ -195,7 +214,7 @@ QVariant AppSyncRequest::parameter(const QString &name, const QVariant &defaultV
 }
 
 /*!
- * \brief Returns a map of parameters included in this request.
+ * Returns the parameters included in this request.
  */
 const QVariantMap &AppSyncRequest::parameters() const
 {
@@ -204,7 +223,7 @@ const QVariantMap &AppSyncRequest::parameters() const
 }
 
 /*!
- * \brief Sets the \a name parameter to \a value.
+ * Sets the \a name parameter to \a value.
  */
 void AppSyncRequest::setParameter(const QString &name, const QVariant &value)
 {
@@ -213,9 +232,8 @@ void AppSyncRequest::setParameter(const QString &name, const QVariant &value)
 }
 
 /*!
- * \brief Sets the map of paramters for this request to \a parameters.
- *
- * Any request parameters set previously will be discarded.
+ * Sets the paramters for this request to \a parameters. Any request parameters
+ * set previously will be discarded.
  */
 void AppSyncRequest::setParameters(const QVariantMap &parameters)
 {
@@ -224,11 +242,12 @@ void AppSyncRequest::setParameters(const QVariantMap &parameters)
 }
 
 /*!
- * \brief Returns a network request for this AppSync request using the given \a endpoint.
+ * Returns a network request for the AppSync request using the given
+ * \a endpoint.
  *
- * This AppSync implementation builds request URLs by combining the common query
- * parameters (such as Action and Version), with any that have been added (via
- * setParameter) by child classes.
+ * This AppSync implementation builds request URLs by combining the
+ * common query parameters (such as Action and Version), with any that have
+ * been added (via setParameter) by child classes.
  */
 QNetworkRequest AppSyncRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -239,17 +258,16 @@ QNetworkRequest AppSyncRequest::unsignedRequest(const QUrl &endpoint) const
 }
 
 /*!
+ * \class QtAws::AppSync::AppSyncRequestPrivate
+ * \brief The AppSyncRequestPrivate class provides private implementation for AppSyncRequest.
  * \internal
  *
- * \class  AppSyncRequestPrivate
- *
- * \brief  Private implementation for AppSyncRequest.
+ * \inmodule QtAwsAppSync
  */
 
 /*!
- * \internal
- *
- * \brief Constructs a new AppSyncRequestPrivate object.
+ * Constructs a AppSyncRequestPrivate object for AppSync \a action with,
+ * public implementation \a q.
  */
 AppSyncRequestPrivate::AppSyncRequestPrivate(const AppSyncRequest::Action action, AppSyncRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
@@ -258,9 +276,7 @@ AppSyncRequestPrivate::AppSyncRequestPrivate(const AppSyncRequest::Action action
 }
 
 /*!
- * \internal
- *
- * \brief Constructs a new AppSyncRequestPrivate object, copying an existing one.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
@@ -276,15 +292,12 @@ AppSyncRequestPrivate::AppSyncRequestPrivate(const AppSyncRequestPrivate &other,
 }
 
 /*!
- * \internal
- *
- * \brief Returns a string representing \a action.
+ * Returns a string represention of \a action, or a null string if \a action is
+ * invalid.
  *
  * This function converts AppSyncRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the AppSync service's Action
  * query parameters.
- *
- * @return A string representing \a action, or a null string if \a action is invalid.
  */
 QString AppSyncRequestPrivate::toString(const AppSyncRequest::Action &action)
 {

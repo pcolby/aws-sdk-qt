@@ -27,10 +27,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::DeactivateMFADeviceRequest
- *
  * \brief The DeactivateMFADeviceRequest class provides an interface for IAM DeactivateMFADevice requests.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -102,9 +101,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new DeactivateMFADeviceRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeactivateMFADeviceRequest::DeactivateMFADeviceRequest(const DeactivateMFADeviceRequest &other)
     : IAMRequest(new DeactivateMFADeviceRequestPrivate(*other.d_func(), this))
@@ -113,7 +110,7 @@ DeactivateMFADeviceRequest::DeactivateMFADeviceRequest(const DeactivateMFADevice
 }
 
 /*!
- * @brief  Constructs a new DeactivateMFADeviceRequest object.
+ * Constructs a DeactivateMFADeviceRequest object.
  */
 DeactivateMFADeviceRequest::DeactivateMFADeviceRequest()
     : IAMRequest(new DeactivateMFADeviceRequestPrivate(IAMRequest::DeactivateMFADeviceAction, this))
@@ -131,14 +128,9 @@ bool DeactivateMFADeviceRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeactivateMFADeviceResponse object.
+ * Returns a DeactivateMFADeviceResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeactivateMFADeviceResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IAMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeactivateMFADeviceRequest::response(QNetworkReply * const reply) const
 {
@@ -146,20 +138,17 @@ QtAws::Core::AwsAbstractResponse * DeactivateMFADeviceRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::IAM::DeactivateMFADeviceRequestPrivate
+ * \brief The DeactivateMFADeviceRequestPrivate class provides private implementation for DeactivateMFADeviceRequest.
+ * \internal
  *
- * @class  DeactivateMFADeviceRequestPrivate
- *
- * @brief  Private implementation for DeactivateMFADeviceRequest.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeactivateMFADeviceRequestPrivate object.
- *
- * @param  action  IAM action being performed.
- * @param  q       Pointer to this object's public DeactivateMFADeviceRequest instance.
+ * Constructs a DeactivateMFADeviceRequestPrivate object for IAM \a action with,
+ * public implementation \a q.
  */
 DeactivateMFADeviceRequestPrivate::DeactivateMFADeviceRequestPrivate(
     const IAMRequest::Action action, DeactivateMFADeviceRequest * const q)
@@ -169,15 +158,10 @@ DeactivateMFADeviceRequestPrivate::DeactivateMFADeviceRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeactivateMFADeviceRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeactivateMFADeviceRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeactivateMFADeviceRequest instance.
  */
 DeactivateMFADeviceRequestPrivate::DeactivateMFADeviceRequestPrivate(
     const DeactivateMFADeviceRequestPrivate &other, DeactivateMFADeviceRequest * const q)

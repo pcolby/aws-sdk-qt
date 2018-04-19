@@ -27,19 +27,16 @@ namespace MachineLearning {
 
 /*!
  * \class QtAws::MachineLearning::DeleteBatchPredictionRequest
- *
  * \brief The DeleteBatchPredictionRequest class provides an interface for MachineLearning DeleteBatchPrediction requests.
  *
- * \ingroup MachineLearning
+ * \inmodule QtAwsMachineLearning
  *
  *
  * \sa MachineLearningClient::deleteBatchPrediction
  */
 
 /*!
- * @brief  Constructs a new DeleteBatchPredictionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteBatchPredictionRequest::DeleteBatchPredictionRequest(const DeleteBatchPredictionRequest &other)
     : MachineLearningRequest(new DeleteBatchPredictionRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ DeleteBatchPredictionRequest::DeleteBatchPredictionRequest(const DeleteBatchPred
 }
 
 /*!
- * @brief  Constructs a new DeleteBatchPredictionRequest object.
+ * Constructs a DeleteBatchPredictionRequest object.
  */
 DeleteBatchPredictionRequest::DeleteBatchPredictionRequest()
     : MachineLearningRequest(new DeleteBatchPredictionRequestPrivate(MachineLearningRequest::DeleteBatchPredictionAction, this))
@@ -66,14 +63,9 @@ bool DeleteBatchPredictionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteBatchPredictionResponse object.
+ * Returns a DeleteBatchPredictionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteBatchPredictionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MachineLearningClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteBatchPredictionRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * DeleteBatchPredictionRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::MachineLearning::DeleteBatchPredictionRequestPrivate
+ * \brief The DeleteBatchPredictionRequestPrivate class provides private implementation for DeleteBatchPredictionRequest.
+ * \internal
  *
- * @class  DeleteBatchPredictionRequestPrivate
- *
- * @brief  Private implementation for DeleteBatchPredictionRequest.
+ * \inmodule QtAwsMachineLearning
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteBatchPredictionRequestPrivate object.
- *
- * @param  action  MachineLearning action being performed.
- * @param  q       Pointer to this object's public DeleteBatchPredictionRequest instance.
+ * Constructs a DeleteBatchPredictionRequestPrivate object for MachineLearning \a action with,
+ * public implementation \a q.
  */
 DeleteBatchPredictionRequestPrivate::DeleteBatchPredictionRequestPrivate(
     const MachineLearningRequest::Action action, DeleteBatchPredictionRequest * const q)
@@ -104,15 +93,10 @@ DeleteBatchPredictionRequestPrivate::DeleteBatchPredictionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteBatchPredictionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteBatchPredictionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteBatchPredictionRequest instance.
  */
 DeleteBatchPredictionRequestPrivate::DeleteBatchPredictionRequestPrivate(
     const DeleteBatchPredictionRequestPrivate &other, DeleteBatchPredictionRequest * const q)

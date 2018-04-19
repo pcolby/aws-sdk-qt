@@ -27,10 +27,9 @@ namespace ECR {
 
 /*!
  * \class QtAws::ECR::UploadLayerPartRequest
- *
  * \brief The UploadLayerPartRequest class provides an interface for ECR UploadLayerPart requests.
  *
- * \ingroup ECR
+ * \inmodule QtAwsECR
  *
  *  Amazon Elastic Container Registry (Amazon ECR) is a managed Docker registry service. Customers can use the familiar
  *  Docker CLI to push, pull, and manage images. Amazon ECR provides a secure, scalable, and reliable registry. Amazon ECR
@@ -41,9 +40,7 @@ namespace ECR {
  */
 
 /*!
- * @brief  Constructs a new UploadLayerPartRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UploadLayerPartRequest::UploadLayerPartRequest(const UploadLayerPartRequest &other)
     : ECRRequest(new UploadLayerPartRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ UploadLayerPartRequest::UploadLayerPartRequest(const UploadLayerPartRequest &oth
 }
 
 /*!
- * @brief  Constructs a new UploadLayerPartRequest object.
+ * Constructs a UploadLayerPartRequest object.
  */
 UploadLayerPartRequest::UploadLayerPartRequest()
     : ECRRequest(new UploadLayerPartRequestPrivate(ECRRequest::UploadLayerPartAction, this))
@@ -70,14 +67,9 @@ bool UploadLayerPartRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UploadLayerPartResponse object.
+ * Returns a UploadLayerPartResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UploadLayerPartResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ECRClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UploadLayerPartRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * UploadLayerPartRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::ECR::UploadLayerPartRequestPrivate
+ * \brief The UploadLayerPartRequestPrivate class provides private implementation for UploadLayerPartRequest.
+ * \internal
  *
- * @class  UploadLayerPartRequestPrivate
- *
- * @brief  Private implementation for UploadLayerPartRequest.
+ * \inmodule QtAwsECR
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UploadLayerPartRequestPrivate object.
- *
- * @param  action  ECR action being performed.
- * @param  q       Pointer to this object's public UploadLayerPartRequest instance.
+ * Constructs a UploadLayerPartRequestPrivate object for ECR \a action with,
+ * public implementation \a q.
  */
 UploadLayerPartRequestPrivate::UploadLayerPartRequestPrivate(
     const ECRRequest::Action action, UploadLayerPartRequest * const q)
@@ -108,15 +97,10 @@ UploadLayerPartRequestPrivate::UploadLayerPartRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UploadLayerPartRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UploadLayerPartRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UploadLayerPartRequest instance.
  */
 UploadLayerPartRequestPrivate::UploadLayerPartRequestPrivate(
     const UploadLayerPartRequestPrivate &other, UploadLayerPartRequest * const q)

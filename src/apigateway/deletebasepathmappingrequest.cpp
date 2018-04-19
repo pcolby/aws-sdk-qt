@@ -27,10 +27,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::DeleteBasePathMappingRequest
- *
  * \brief The DeleteBasePathMappingRequest class provides an interface for APIGateway DeleteBasePathMapping requests.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -42,9 +41,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new DeleteBasePathMappingRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteBasePathMappingRequest::DeleteBasePathMappingRequest(const DeleteBasePathMappingRequest &other)
     : APIGatewayRequest(new DeleteBasePathMappingRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ DeleteBasePathMappingRequest::DeleteBasePathMappingRequest(const DeleteBasePathM
 }
 
 /*!
- * @brief  Constructs a new DeleteBasePathMappingRequest object.
+ * Constructs a DeleteBasePathMappingRequest object.
  */
 DeleteBasePathMappingRequest::DeleteBasePathMappingRequest()
     : APIGatewayRequest(new DeleteBasePathMappingRequestPrivate(APIGatewayRequest::DeleteBasePathMappingAction, this))
@@ -71,14 +68,9 @@ bool DeleteBasePathMappingRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteBasePathMappingResponse object.
+ * Returns a DeleteBasePathMappingResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteBasePathMappingResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  APIGatewayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteBasePathMappingRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * DeleteBasePathMappingRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::APIGateway::DeleteBasePathMappingRequestPrivate
+ * \brief The DeleteBasePathMappingRequestPrivate class provides private implementation for DeleteBasePathMappingRequest.
+ * \internal
  *
- * @class  DeleteBasePathMappingRequestPrivate
- *
- * @brief  Private implementation for DeleteBasePathMappingRequest.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteBasePathMappingRequestPrivate object.
- *
- * @param  action  APIGateway action being performed.
- * @param  q       Pointer to this object's public DeleteBasePathMappingRequest instance.
+ * Constructs a DeleteBasePathMappingRequestPrivate object for APIGateway \a action with,
+ * public implementation \a q.
  */
 DeleteBasePathMappingRequestPrivate::DeleteBasePathMappingRequestPrivate(
     const APIGatewayRequest::Action action, DeleteBasePathMappingRequest * const q)
@@ -109,15 +98,10 @@ DeleteBasePathMappingRequestPrivate::DeleteBasePathMappingRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteBasePathMappingRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteBasePathMappingRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteBasePathMappingRequest instance.
  */
 DeleteBasePathMappingRequestPrivate::DeleteBasePathMappingRequestPrivate(
     const DeleteBasePathMappingRequestPrivate &other, DeleteBasePathMappingRequest * const q)

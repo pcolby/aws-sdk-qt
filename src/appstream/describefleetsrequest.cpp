@@ -27,10 +27,9 @@ namespace AppStream {
 
 /*!
  * \class QtAws::AppStream::DescribeFleetsRequest
- *
  * \brief The DescribeFleetsRequest class provides an interface for AppStream DescribeFleets requests.
  *
- * \ingroup AppStream
+ * \inmodule QtAwsAppStream
  *
  *  <fullname>Amazon AppStream 2.0</fullname>
  * 
@@ -40,9 +39,7 @@ namespace AppStream {
  */
 
 /*!
- * @brief  Constructs a new DescribeFleetsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeFleetsRequest::DescribeFleetsRequest(const DescribeFleetsRequest &other)
     : AppStreamRequest(new DescribeFleetsRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ DescribeFleetsRequest::DescribeFleetsRequest(const DescribeFleetsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DescribeFleetsRequest object.
+ * Constructs a DescribeFleetsRequest object.
  */
 DescribeFleetsRequest::DescribeFleetsRequest()
     : AppStreamRequest(new DescribeFleetsRequestPrivate(AppStreamRequest::DescribeFleetsAction, this))
@@ -69,14 +66,9 @@ bool DescribeFleetsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeFleetsResponse object.
+ * Returns a DescribeFleetsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeFleetsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AppStreamClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeFleetsRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * DescribeFleetsRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::AppStream::DescribeFleetsRequestPrivate
+ * \brief The DescribeFleetsRequestPrivate class provides private implementation for DescribeFleetsRequest.
+ * \internal
  *
- * @class  DescribeFleetsRequestPrivate
- *
- * @brief  Private implementation for DescribeFleetsRequest.
+ * \inmodule QtAwsAppStream
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeFleetsRequestPrivate object.
- *
- * @param  action  AppStream action being performed.
- * @param  q       Pointer to this object's public DescribeFleetsRequest instance.
+ * Constructs a DescribeFleetsRequestPrivate object for AppStream \a action with,
+ * public implementation \a q.
  */
 DescribeFleetsRequestPrivate::DescribeFleetsRequestPrivate(
     const AppStreamRequest::Action action, DescribeFleetsRequest * const q)
@@ -107,15 +96,10 @@ DescribeFleetsRequestPrivate::DescribeFleetsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeFleetsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeFleetsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeFleetsRequest instance.
  */
 DescribeFleetsRequestPrivate::DescribeFleetsRequestPrivate(
     const DescribeFleetsRequestPrivate &other, DescribeFleetsRequest * const q)

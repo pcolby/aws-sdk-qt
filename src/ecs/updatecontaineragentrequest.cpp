@@ -27,10 +27,9 @@ namespace ECS {
 
 /*!
  * \class QtAws::ECS::UpdateContainerAgentRequest
- *
  * \brief The UpdateContainerAgentRequest class provides an interface for ECS UpdateContainerAgent requests.
  *
- * \ingroup ECS
+ * \inmodule QtAwsECS
  *
  *  Amazon Elastic Container Service (Amazon ECS) is a highly scalable, fast, container management service that makes it
  *  easy to run, stop, and manage Docker containers on a cluster. You can host your cluster on a serverless infrastructure
@@ -54,9 +53,7 @@ namespace ECS {
  */
 
 /*!
- * @brief  Constructs a new UpdateContainerAgentRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateContainerAgentRequest::UpdateContainerAgentRequest(const UpdateContainerAgentRequest &other)
     : ECSRequest(new UpdateContainerAgentRequestPrivate(*other.d_func(), this))
@@ -65,7 +62,7 @@ UpdateContainerAgentRequest::UpdateContainerAgentRequest(const UpdateContainerAg
 }
 
 /*!
- * @brief  Constructs a new UpdateContainerAgentRequest object.
+ * Constructs a UpdateContainerAgentRequest object.
  */
 UpdateContainerAgentRequest::UpdateContainerAgentRequest()
     : ECSRequest(new UpdateContainerAgentRequestPrivate(ECSRequest::UpdateContainerAgentAction, this))
@@ -83,14 +80,9 @@ bool UpdateContainerAgentRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateContainerAgentResponse object.
+ * Returns a UpdateContainerAgentResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateContainerAgentResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ECSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateContainerAgentRequest::response(QNetworkReply * const reply) const
 {
@@ -98,20 +90,17 @@ QtAws::Core::AwsAbstractResponse * UpdateContainerAgentRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::ECS::UpdateContainerAgentRequestPrivate
+ * \brief The UpdateContainerAgentRequestPrivate class provides private implementation for UpdateContainerAgentRequest.
+ * \internal
  *
- * @class  UpdateContainerAgentRequestPrivate
- *
- * @brief  Private implementation for UpdateContainerAgentRequest.
+ * \inmodule QtAwsECS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateContainerAgentRequestPrivate object.
- *
- * @param  action  ECS action being performed.
- * @param  q       Pointer to this object's public UpdateContainerAgentRequest instance.
+ * Constructs a UpdateContainerAgentRequestPrivate object for ECS \a action with,
+ * public implementation \a q.
  */
 UpdateContainerAgentRequestPrivate::UpdateContainerAgentRequestPrivate(
     const ECSRequest::Action action, UpdateContainerAgentRequest * const q)
@@ -121,15 +110,10 @@ UpdateContainerAgentRequestPrivate::UpdateContainerAgentRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateContainerAgentRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateContainerAgentRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateContainerAgentRequest instance.
  */
 UpdateContainerAgentRequestPrivate::UpdateContainerAgentRequestPrivate(
     const UpdateContainerAgentRequestPrivate &other, UpdateContainerAgentRequest * const q)

@@ -27,10 +27,9 @@ namespace CodeCommit {
 
 /*!
  * \class QtAws::CodeCommit::CreateBranchRequest
- *
  * \brief The CreateBranchRequest class provides an interface for CodeCommit CreateBranch requests.
  *
- * \ingroup CodeCommit
+ * \inmodule QtAwsCodeCommit
  *
  *  <fullname>AWS CodeCommit</fullname>
  * 
@@ -227,9 +226,7 @@ namespace CodeCommit {
  */
 
 /*!
- * @brief  Constructs a new CreateBranchRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateBranchRequest::CreateBranchRequest(const CreateBranchRequest &other)
     : CodeCommitRequest(new CreateBranchRequestPrivate(*other.d_func(), this))
@@ -238,7 +235,7 @@ CreateBranchRequest::CreateBranchRequest(const CreateBranchRequest &other)
 }
 
 /*!
- * @brief  Constructs a new CreateBranchRequest object.
+ * Constructs a CreateBranchRequest object.
  */
 CreateBranchRequest::CreateBranchRequest()
     : CodeCommitRequest(new CreateBranchRequestPrivate(CodeCommitRequest::CreateBranchAction, this))
@@ -256,14 +253,9 @@ bool CreateBranchRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateBranchResponse object.
+ * Returns a CreateBranchResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateBranchResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CodeCommitClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateBranchRequest::response(QNetworkReply * const reply) const
 {
@@ -271,20 +263,17 @@ QtAws::Core::AwsAbstractResponse * CreateBranchRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::CodeCommit::CreateBranchRequestPrivate
+ * \brief The CreateBranchRequestPrivate class provides private implementation for CreateBranchRequest.
+ * \internal
  *
- * @class  CreateBranchRequestPrivate
- *
- * @brief  Private implementation for CreateBranchRequest.
+ * \inmodule QtAwsCodeCommit
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateBranchRequestPrivate object.
- *
- * @param  action  CodeCommit action being performed.
- * @param  q       Pointer to this object's public CreateBranchRequest instance.
+ * Constructs a CreateBranchRequestPrivate object for CodeCommit \a action with,
+ * public implementation \a q.
  */
 CreateBranchRequestPrivate::CreateBranchRequestPrivate(
     const CodeCommitRequest::Action action, CreateBranchRequest * const q)
@@ -294,15 +283,10 @@ CreateBranchRequestPrivate::CreateBranchRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateBranchRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateBranchRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateBranchRequest instance.
  */
 CreateBranchRequestPrivate::CreateBranchRequestPrivate(
     const CreateBranchRequestPrivate &other, CreateBranchRequest * const q)

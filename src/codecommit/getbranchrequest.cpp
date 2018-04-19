@@ -27,10 +27,9 @@ namespace CodeCommit {
 
 /*!
  * \class QtAws::CodeCommit::GetBranchRequest
- *
  * \brief The GetBranchRequest class provides an interface for CodeCommit GetBranch requests.
  *
- * \ingroup CodeCommit
+ * \inmodule QtAwsCodeCommit
  *
  *  <fullname>AWS CodeCommit</fullname>
  * 
@@ -227,9 +226,7 @@ namespace CodeCommit {
  */
 
 /*!
- * @brief  Constructs a new GetBranchRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetBranchRequest::GetBranchRequest(const GetBranchRequest &other)
     : CodeCommitRequest(new GetBranchRequestPrivate(*other.d_func(), this))
@@ -238,7 +235,7 @@ GetBranchRequest::GetBranchRequest(const GetBranchRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetBranchRequest object.
+ * Constructs a GetBranchRequest object.
  */
 GetBranchRequest::GetBranchRequest()
     : CodeCommitRequest(new GetBranchRequestPrivate(CodeCommitRequest::GetBranchAction, this))
@@ -256,14 +253,9 @@ bool GetBranchRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetBranchResponse object.
+ * Returns a GetBranchResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetBranchResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CodeCommitClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetBranchRequest::response(QNetworkReply * const reply) const
 {
@@ -271,20 +263,17 @@ QtAws::Core::AwsAbstractResponse * GetBranchRequest::response(QNetworkReply * co
 }
 
 /*!
- * @internal
+ * \class QtAws::CodeCommit::GetBranchRequestPrivate
+ * \brief The GetBranchRequestPrivate class provides private implementation for GetBranchRequest.
+ * \internal
  *
- * @class  GetBranchRequestPrivate
- *
- * @brief  Private implementation for GetBranchRequest.
+ * \inmodule QtAwsCodeCommit
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetBranchRequestPrivate object.
- *
- * @param  action  CodeCommit action being performed.
- * @param  q       Pointer to this object's public GetBranchRequest instance.
+ * Constructs a GetBranchRequestPrivate object for CodeCommit \a action with,
+ * public implementation \a q.
  */
 GetBranchRequestPrivate::GetBranchRequestPrivate(
     const CodeCommitRequest::Action action, GetBranchRequest * const q)
@@ -294,15 +283,10 @@ GetBranchRequestPrivate::GetBranchRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetBranchRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetBranchRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetBranchRequest instance.
  */
 GetBranchRequestPrivate::GetBranchRequestPrivate(
     const GetBranchRequestPrivate &other, GetBranchRequest * const q)

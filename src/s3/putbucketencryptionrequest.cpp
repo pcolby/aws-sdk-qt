@@ -27,19 +27,16 @@ namespace S3 {
 
 /*!
  * \class QtAws::S3::PutBucketEncryptionRequest
- *
  * \brief The PutBucketEncryptionRequest class provides an interface for S3 PutBucketEncryption requests.
  *
- * \ingroup S3
+ * \inmodule QtAwsS3
  *
  *
  * \sa S3Client::putBucketEncryption
  */
 
 /*!
- * @brief  Constructs a new PutBucketEncryptionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 PutBucketEncryptionRequest::PutBucketEncryptionRequest(const PutBucketEncryptionRequest &other)
     : S3Request(new PutBucketEncryptionRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ PutBucketEncryptionRequest::PutBucketEncryptionRequest(const PutBucketEncryption
 }
 
 /*!
- * @brief  Constructs a new PutBucketEncryptionRequest object.
+ * Constructs a PutBucketEncryptionRequest object.
  */
 PutBucketEncryptionRequest::PutBucketEncryptionRequest()
     : S3Request(new PutBucketEncryptionRequestPrivate(S3Request::PutBucketEncryptionAction, this))
@@ -66,14 +63,9 @@ bool PutBucketEncryptionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an PutBucketEncryptionResponse object.
+ * Returns a PutBucketEncryptionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An PutBucketEncryptionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  S3Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * PutBucketEncryptionRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * PutBucketEncryptionRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::S3::PutBucketEncryptionRequestPrivate
+ * \brief The PutBucketEncryptionRequestPrivate class provides private implementation for PutBucketEncryptionRequest.
+ * \internal
  *
- * @class  PutBucketEncryptionRequestPrivate
- *
- * @brief  Private implementation for PutBucketEncryptionRequest.
+ * \inmodule QtAwsS3
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new PutBucketEncryptionRequestPrivate object.
- *
- * @param  action  S3 action being performed.
- * @param  q       Pointer to this object's public PutBucketEncryptionRequest instance.
+ * Constructs a PutBucketEncryptionRequestPrivate object for S3 \a action with,
+ * public implementation \a q.
  */
 PutBucketEncryptionRequestPrivate::PutBucketEncryptionRequestPrivate(
     const S3Request::Action action, PutBucketEncryptionRequest * const q)
@@ -104,15 +93,10 @@ PutBucketEncryptionRequestPrivate::PutBucketEncryptionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutBucketEncryptionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the PutBucketEncryptionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public PutBucketEncryptionRequest instance.
  */
 PutBucketEncryptionRequestPrivate::PutBucketEncryptionRequestPrivate(
     const PutBucketEncryptionRequestPrivate &other, PutBucketEncryptionRequest * const q)

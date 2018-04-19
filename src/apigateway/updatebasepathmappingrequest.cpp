@@ -27,10 +27,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::UpdateBasePathMappingRequest
- *
  * \brief The UpdateBasePathMappingRequest class provides an interface for APIGateway UpdateBasePathMapping requests.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -42,9 +41,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new UpdateBasePathMappingRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateBasePathMappingRequest::UpdateBasePathMappingRequest(const UpdateBasePathMappingRequest &other)
     : APIGatewayRequest(new UpdateBasePathMappingRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ UpdateBasePathMappingRequest::UpdateBasePathMappingRequest(const UpdateBasePathM
 }
 
 /*!
- * @brief  Constructs a new UpdateBasePathMappingRequest object.
+ * Constructs a UpdateBasePathMappingRequest object.
  */
 UpdateBasePathMappingRequest::UpdateBasePathMappingRequest()
     : APIGatewayRequest(new UpdateBasePathMappingRequestPrivate(APIGatewayRequest::UpdateBasePathMappingAction, this))
@@ -71,14 +68,9 @@ bool UpdateBasePathMappingRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateBasePathMappingResponse object.
+ * Returns a UpdateBasePathMappingResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateBasePathMappingResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  APIGatewayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateBasePathMappingRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * UpdateBasePathMappingRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::APIGateway::UpdateBasePathMappingRequestPrivate
+ * \brief The UpdateBasePathMappingRequestPrivate class provides private implementation for UpdateBasePathMappingRequest.
+ * \internal
  *
- * @class  UpdateBasePathMappingRequestPrivate
- *
- * @brief  Private implementation for UpdateBasePathMappingRequest.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateBasePathMappingRequestPrivate object.
- *
- * @param  action  APIGateway action being performed.
- * @param  q       Pointer to this object's public UpdateBasePathMappingRequest instance.
+ * Constructs a UpdateBasePathMappingRequestPrivate object for APIGateway \a action with,
+ * public implementation \a q.
  */
 UpdateBasePathMappingRequestPrivate::UpdateBasePathMappingRequestPrivate(
     const APIGatewayRequest::Action action, UpdateBasePathMappingRequest * const q)
@@ -109,15 +98,10 @@ UpdateBasePathMappingRequestPrivate::UpdateBasePathMappingRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateBasePathMappingRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateBasePathMappingRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateBasePathMappingRequest instance.
  */
 UpdateBasePathMappingRequestPrivate::UpdateBasePathMappingRequestPrivate(
     const UpdateBasePathMappingRequestPrivate &other, UpdateBasePathMappingRequest * const q)

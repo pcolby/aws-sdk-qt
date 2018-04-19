@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DescribeSpotPriceHistoryRequest
- *
  * \brief The DescribeSpotPriceHistoryRequest class provides an interface for EC2 DescribeSpotPriceHistory requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DescribeSpotPriceHistoryRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeSpotPriceHistoryRequest::DescribeSpotPriceHistoryRequest(const DescribeSpotPriceHistoryRequest &other)
     : EC2Request(new DescribeSpotPriceHistoryRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ DescribeSpotPriceHistoryRequest::DescribeSpotPriceHistoryRequest(const DescribeS
 }
 
 /*!
- * @brief  Constructs a new DescribeSpotPriceHistoryRequest object.
+ * Constructs a DescribeSpotPriceHistoryRequest object.
  */
 DescribeSpotPriceHistoryRequest::DescribeSpotPriceHistoryRequest()
     : EC2Request(new DescribeSpotPriceHistoryRequestPrivate(EC2Request::DescribeSpotPriceHistoryAction, this))
@@ -70,14 +67,9 @@ bool DescribeSpotPriceHistoryRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeSpotPriceHistoryResponse object.
+ * Returns a DescribeSpotPriceHistoryResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeSpotPriceHistoryResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeSpotPriceHistoryRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * DescribeSpotPriceHistoryRequest::response(QNe
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::DescribeSpotPriceHistoryRequestPrivate
+ * \brief The DescribeSpotPriceHistoryRequestPrivate class provides private implementation for DescribeSpotPriceHistoryRequest.
+ * \internal
  *
- * @class  DescribeSpotPriceHistoryRequestPrivate
- *
- * @brief  Private implementation for DescribeSpotPriceHistoryRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeSpotPriceHistoryRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public DescribeSpotPriceHistoryRequest instance.
+ * Constructs a DescribeSpotPriceHistoryRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 DescribeSpotPriceHistoryRequestPrivate::DescribeSpotPriceHistoryRequestPrivate(
     const EC2Request::Action action, DescribeSpotPriceHistoryRequest * const q)
@@ -108,15 +97,10 @@ DescribeSpotPriceHistoryRequestPrivate::DescribeSpotPriceHistoryRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeSpotPriceHistoryRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeSpotPriceHistoryRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeSpotPriceHistoryRequest instance.
  */
 DescribeSpotPriceHistoryRequestPrivate::DescribeSpotPriceHistoryRequestPrivate(
     const DescribeSpotPriceHistoryRequestPrivate &other, DescribeSpotPriceHistoryRequest * const q)

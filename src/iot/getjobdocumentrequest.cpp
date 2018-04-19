@@ -27,10 +27,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::GetJobDocumentRequest
- *
  * \brief The GetJobDocumentRequest class provides an interface for IoT GetJobDocument requests.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -48,9 +47,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new GetJobDocumentRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetJobDocumentRequest::GetJobDocumentRequest(const GetJobDocumentRequest &other)
     : IoTRequest(new GetJobDocumentRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ GetJobDocumentRequest::GetJobDocumentRequest(const GetJobDocumentRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetJobDocumentRequest object.
+ * Constructs a GetJobDocumentRequest object.
  */
 GetJobDocumentRequest::GetJobDocumentRequest()
     : IoTRequest(new GetJobDocumentRequestPrivate(IoTRequest::GetJobDocumentAction, this))
@@ -77,14 +74,9 @@ bool GetJobDocumentRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetJobDocumentResponse object.
+ * Returns a GetJobDocumentResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetJobDocumentResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IoTClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetJobDocumentRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * GetJobDocumentRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::IoT::GetJobDocumentRequestPrivate
+ * \brief The GetJobDocumentRequestPrivate class provides private implementation for GetJobDocumentRequest.
+ * \internal
  *
- * @class  GetJobDocumentRequestPrivate
- *
- * @brief  Private implementation for GetJobDocumentRequest.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetJobDocumentRequestPrivate object.
- *
- * @param  action  IoT action being performed.
- * @param  q       Pointer to this object's public GetJobDocumentRequest instance.
+ * Constructs a GetJobDocumentRequestPrivate object for IoT \a action with,
+ * public implementation \a q.
  */
 GetJobDocumentRequestPrivate::GetJobDocumentRequestPrivate(
     const IoTRequest::Action action, GetJobDocumentRequest * const q)
@@ -115,15 +104,10 @@ GetJobDocumentRequestPrivate::GetJobDocumentRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetJobDocumentRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetJobDocumentRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetJobDocumentRequest instance.
  */
 GetJobDocumentRequestPrivate::GetJobDocumentRequestPrivate(
     const GetJobDocumentRequestPrivate &other, GetJobDocumentRequest * const q)

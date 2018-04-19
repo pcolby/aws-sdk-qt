@@ -27,19 +27,16 @@ namespace MachineLearning {
 
 /*!
  * \class QtAws::MachineLearning::PredictRequest
- *
  * \brief The PredictRequest class provides an interface for MachineLearning Predict requests.
  *
- * \ingroup MachineLearning
+ * \inmodule QtAwsMachineLearning
  *
  *
  * \sa MachineLearningClient::predict
  */
 
 /*!
- * @brief  Constructs a new PredictRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 PredictRequest::PredictRequest(const PredictRequest &other)
     : MachineLearningRequest(new PredictRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ PredictRequest::PredictRequest(const PredictRequest &other)
 }
 
 /*!
- * @brief  Constructs a new PredictRequest object.
+ * Constructs a PredictRequest object.
  */
 PredictRequest::PredictRequest()
     : MachineLearningRequest(new PredictRequestPrivate(MachineLearningRequest::PredictAction, this))
@@ -66,14 +63,9 @@ bool PredictRequest::isValid() const
 
 
 /*!
- * @brief  Construct an PredictResponse object.
+ * Returns a PredictResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An PredictResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MachineLearningClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * PredictRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * PredictRequest::response(QNetworkReply * cons
 }
 
 /*!
- * @internal
+ * \class QtAws::MachineLearning::PredictRequestPrivate
+ * \brief The PredictRequestPrivate class provides private implementation for PredictRequest.
+ * \internal
  *
- * @class  PredictRequestPrivate
- *
- * @brief  Private implementation for PredictRequest.
+ * \inmodule QtAwsMachineLearning
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new PredictRequestPrivate object.
- *
- * @param  action  MachineLearning action being performed.
- * @param  q       Pointer to this object's public PredictRequest instance.
+ * Constructs a PredictRequestPrivate object for MachineLearning \a action with,
+ * public implementation \a q.
  */
 PredictRequestPrivate::PredictRequestPrivate(
     const MachineLearningRequest::Action action, PredictRequest * const q)
@@ -104,15 +93,10 @@ PredictRequestPrivate::PredictRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PredictRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the PredictRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public PredictRequest instance.
  */
 PredictRequestPrivate::PredictRequestPrivate(
     const PredictRequestPrivate &other, PredictRequest * const q)

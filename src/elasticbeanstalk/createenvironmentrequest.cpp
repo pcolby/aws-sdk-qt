@@ -27,10 +27,9 @@ namespace ElasticBeanstalk {
 
 /*!
  * \class QtAws::ElasticBeanstalk::CreateEnvironmentRequest
- *
  * \brief The CreateEnvironmentRequest class provides an interface for ElasticBeanstalk CreateEnvironment requests.
  *
- * \ingroup ElasticBeanstalk
+ * \inmodule QtAwsElasticBeanstalk
  *
  *  <fullname>AWS Elastic Beanstalk</fullname>
  * 
@@ -59,9 +58,7 @@ namespace ElasticBeanstalk {
  */
 
 /*!
- * @brief  Constructs a new CreateEnvironmentRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateEnvironmentRequest::CreateEnvironmentRequest(const CreateEnvironmentRequest &other)
     : ElasticBeanstalkRequest(new CreateEnvironmentRequestPrivate(*other.d_func(), this))
@@ -70,7 +67,7 @@ CreateEnvironmentRequest::CreateEnvironmentRequest(const CreateEnvironmentReques
 }
 
 /*!
- * @brief  Constructs a new CreateEnvironmentRequest object.
+ * Constructs a CreateEnvironmentRequest object.
  */
 CreateEnvironmentRequest::CreateEnvironmentRequest()
     : ElasticBeanstalkRequest(new CreateEnvironmentRequestPrivate(ElasticBeanstalkRequest::CreateEnvironmentAction, this))
@@ -88,14 +85,9 @@ bool CreateEnvironmentRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateEnvironmentResponse object.
+ * Returns a CreateEnvironmentResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateEnvironmentResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ElasticBeanstalkClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateEnvironmentRequest::response(QNetworkReply * const reply) const
 {
@@ -103,20 +95,17 @@ QtAws::Core::AwsAbstractResponse * CreateEnvironmentRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::ElasticBeanstalk::CreateEnvironmentRequestPrivate
+ * \brief The CreateEnvironmentRequestPrivate class provides private implementation for CreateEnvironmentRequest.
+ * \internal
  *
- * @class  CreateEnvironmentRequestPrivate
- *
- * @brief  Private implementation for CreateEnvironmentRequest.
+ * \inmodule QtAwsElasticBeanstalk
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateEnvironmentRequestPrivate object.
- *
- * @param  action  ElasticBeanstalk action being performed.
- * @param  q       Pointer to this object's public CreateEnvironmentRequest instance.
+ * Constructs a CreateEnvironmentRequestPrivate object for ElasticBeanstalk \a action with,
+ * public implementation \a q.
  */
 CreateEnvironmentRequestPrivate::CreateEnvironmentRequestPrivate(
     const ElasticBeanstalkRequest::Action action, CreateEnvironmentRequest * const q)
@@ -126,15 +115,10 @@ CreateEnvironmentRequestPrivate::CreateEnvironmentRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateEnvironmentRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateEnvironmentRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateEnvironmentRequest instance.
  */
 CreateEnvironmentRequestPrivate::CreateEnvironmentRequestPrivate(
     const CreateEnvironmentRequestPrivate &other, CreateEnvironmentRequest * const q)

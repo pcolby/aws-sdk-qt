@@ -27,10 +27,9 @@ namespace Lightsail {
 
 /*!
  * \class QtAws::Lightsail::IsVpcPeeredRequest
- *
  * \brief The IsVpcPeeredRequest class provides an interface for Lightsail IsVpcPeered requests.
  *
- * \ingroup Lightsail
+ * \inmodule QtAwsLightsail
  *
  *  Amazon Lightsail is the easiest way to get started with AWS for developers who just need virtual private servers.
  *  Lightsail includes everything you need to launch your project quickly - a virtual machine, SSD-based storage, data
@@ -53,9 +52,7 @@ namespace Lightsail {
  */
 
 /*!
- * @brief  Constructs a new IsVpcPeeredRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 IsVpcPeeredRequest::IsVpcPeeredRequest(const IsVpcPeeredRequest &other)
     : LightsailRequest(new IsVpcPeeredRequestPrivate(*other.d_func(), this))
@@ -64,7 +61,7 @@ IsVpcPeeredRequest::IsVpcPeeredRequest(const IsVpcPeeredRequest &other)
 }
 
 /*!
- * @brief  Constructs a new IsVpcPeeredRequest object.
+ * Constructs a IsVpcPeeredRequest object.
  */
 IsVpcPeeredRequest::IsVpcPeeredRequest()
     : LightsailRequest(new IsVpcPeeredRequestPrivate(LightsailRequest::IsVpcPeeredAction, this))
@@ -82,14 +79,9 @@ bool IsVpcPeeredRequest::isValid() const
 
 
 /*!
- * @brief  Construct an IsVpcPeeredResponse object.
+ * Returns a IsVpcPeeredResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An IsVpcPeeredResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  LightsailClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * IsVpcPeeredRequest::response(QNetworkReply * const reply) const
 {
@@ -97,20 +89,17 @@ QtAws::Core::AwsAbstractResponse * IsVpcPeeredRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::Lightsail::IsVpcPeeredRequestPrivate
+ * \brief The IsVpcPeeredRequestPrivate class provides private implementation for IsVpcPeeredRequest.
+ * \internal
  *
- * @class  IsVpcPeeredRequestPrivate
- *
- * @brief  Private implementation for IsVpcPeeredRequest.
+ * \inmodule QtAwsLightsail
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new IsVpcPeeredRequestPrivate object.
- *
- * @param  action  Lightsail action being performed.
- * @param  q       Pointer to this object's public IsVpcPeeredRequest instance.
+ * Constructs a IsVpcPeeredRequestPrivate object for Lightsail \a action with,
+ * public implementation \a q.
  */
 IsVpcPeeredRequestPrivate::IsVpcPeeredRequestPrivate(
     const LightsailRequest::Action action, IsVpcPeeredRequest * const q)
@@ -120,15 +109,10 @@ IsVpcPeeredRequestPrivate::IsVpcPeeredRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new IsVpcPeeredRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the IsVpcPeeredRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public IsVpcPeeredRequest instance.
  */
 IsVpcPeeredRequestPrivate::IsVpcPeeredRequestPrivate(
     const IsVpcPeeredRequestPrivate &other, IsVpcPeeredRequest * const q)

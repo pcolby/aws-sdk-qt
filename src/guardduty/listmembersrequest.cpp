@@ -27,19 +27,16 @@ namespace GuardDuty {
 
 /*!
  * \class QtAws::GuardDuty::ListMembersRequest
- *
  * \brief The ListMembersRequest class provides an interface for GuardDuty ListMembers requests.
  *
- * \ingroup GuardDuty
+ * \inmodule QtAwsGuardDuty
  *
  *
  * \sa GuardDutyClient::listMembers
  */
 
 /*!
- * @brief  Constructs a new ListMembersRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListMembersRequest::ListMembersRequest(const ListMembersRequest &other)
     : GuardDutyRequest(new ListMembersRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ ListMembersRequest::ListMembersRequest(const ListMembersRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ListMembersRequest object.
+ * Constructs a ListMembersRequest object.
  */
 ListMembersRequest::ListMembersRequest()
     : GuardDutyRequest(new ListMembersRequestPrivate(GuardDutyRequest::ListMembersAction, this))
@@ -66,14 +63,9 @@ bool ListMembersRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListMembersResponse object.
+ * Returns a ListMembersResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListMembersResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GuardDutyClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListMembersRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * ListMembersRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::GuardDuty::ListMembersRequestPrivate
+ * \brief The ListMembersRequestPrivate class provides private implementation for ListMembersRequest.
+ * \internal
  *
- * @class  ListMembersRequestPrivate
- *
- * @brief  Private implementation for ListMembersRequest.
+ * \inmodule QtAwsGuardDuty
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListMembersRequestPrivate object.
- *
- * @param  action  GuardDuty action being performed.
- * @param  q       Pointer to this object's public ListMembersRequest instance.
+ * Constructs a ListMembersRequestPrivate object for GuardDuty \a action with,
+ * public implementation \a q.
  */
 ListMembersRequestPrivate::ListMembersRequestPrivate(
     const GuardDutyRequest::Action action, ListMembersRequest * const q)
@@ -104,15 +93,10 @@ ListMembersRequestPrivate::ListMembersRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListMembersRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListMembersRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListMembersRequest instance.
  */
 ListMembersRequestPrivate::ListMembersRequestPrivate(
     const ListMembersRequestPrivate &other, ListMembersRequest * const q)

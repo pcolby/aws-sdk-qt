@@ -27,10 +27,9 @@ namespace CloudWatch {
 
 /*!
  * \class QtAws::CloudWatch::ListMetricsRequest
- *
  * \brief The ListMetricsRequest class provides an interface for CloudWatch ListMetrics requests.
  *
- * \ingroup CloudWatch
+ * \inmodule QtAwsCloudWatch
  *
  *  Amazon CloudWatch monitors your Amazon Web Services (AWS) resources and the applications you run on AWS in real time.
  *  You can use CloudWatch to collect and track metrics, which are the variables you want to measure for your resources and
@@ -51,9 +50,7 @@ namespace CloudWatch {
  */
 
 /*!
- * @brief  Constructs a new ListMetricsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListMetricsRequest::ListMetricsRequest(const ListMetricsRequest &other)
     : CloudWatchRequest(new ListMetricsRequestPrivate(*other.d_func(), this))
@@ -62,7 +59,7 @@ ListMetricsRequest::ListMetricsRequest(const ListMetricsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ListMetricsRequest object.
+ * Constructs a ListMetricsRequest object.
  */
 ListMetricsRequest::ListMetricsRequest()
     : CloudWatchRequest(new ListMetricsRequestPrivate(CloudWatchRequest::ListMetricsAction, this))
@@ -80,14 +77,9 @@ bool ListMetricsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListMetricsResponse object.
+ * Returns a ListMetricsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListMetricsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudWatchClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListMetricsRequest::response(QNetworkReply * const reply) const
 {
@@ -95,20 +87,17 @@ QtAws::Core::AwsAbstractResponse * ListMetricsRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudWatch::ListMetricsRequestPrivate
+ * \brief The ListMetricsRequestPrivate class provides private implementation for ListMetricsRequest.
+ * \internal
  *
- * @class  ListMetricsRequestPrivate
- *
- * @brief  Private implementation for ListMetricsRequest.
+ * \inmodule QtAwsCloudWatch
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListMetricsRequestPrivate object.
- *
- * @param  action  CloudWatch action being performed.
- * @param  q       Pointer to this object's public ListMetricsRequest instance.
+ * Constructs a ListMetricsRequestPrivate object for CloudWatch \a action with,
+ * public implementation \a q.
  */
 ListMetricsRequestPrivate::ListMetricsRequestPrivate(
     const CloudWatchRequest::Action action, ListMetricsRequest * const q)
@@ -118,15 +107,10 @@ ListMetricsRequestPrivate::ListMetricsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListMetricsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListMetricsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListMetricsRequest instance.
  */
 ListMetricsRequestPrivate::ListMetricsRequestPrivate(
     const ListMetricsRequestPrivate &other, ListMetricsRequest * const q)

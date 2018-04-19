@@ -32,6 +32,9 @@
 /*!
  * \namespace QtAws::LexRuntimeService
  * \brief The QtAws::LexRuntimeService contains stuff...
+ *
+ * \inmodule QtAwsLexRuntimeService
+ *
  * @todo Move this to a separate template file.
  */
 
@@ -88,7 +91,7 @@ LexRuntimeServiceClient::LexRuntimeServiceClient(
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * \a  AwsEndpoint::getEndpoint()
+ * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
 LexRuntimeServiceClient::LexRuntimeServiceClient(
     const QUrl &endpoint,

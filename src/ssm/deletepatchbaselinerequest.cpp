@@ -27,10 +27,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::DeletePatchBaselineRequest
- *
  * \brief The DeletePatchBaselineRequest class provides an interface for SSM DeletePatchBaseline requests.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -61,9 +60,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new DeletePatchBaselineRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeletePatchBaselineRequest::DeletePatchBaselineRequest(const DeletePatchBaselineRequest &other)
     : SSMRequest(new DeletePatchBaselineRequestPrivate(*other.d_func(), this))
@@ -72,7 +69,7 @@ DeletePatchBaselineRequest::DeletePatchBaselineRequest(const DeletePatchBaseline
 }
 
 /*!
- * @brief  Constructs a new DeletePatchBaselineRequest object.
+ * Constructs a DeletePatchBaselineRequest object.
  */
 DeletePatchBaselineRequest::DeletePatchBaselineRequest()
     : SSMRequest(new DeletePatchBaselineRequestPrivate(SSMRequest::DeletePatchBaselineAction, this))
@@ -90,14 +87,9 @@ bool DeletePatchBaselineRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeletePatchBaselineResponse object.
+ * Returns a DeletePatchBaselineResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeletePatchBaselineResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SSMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeletePatchBaselineRequest::response(QNetworkReply * const reply) const
 {
@@ -105,20 +97,17 @@ QtAws::Core::AwsAbstractResponse * DeletePatchBaselineRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::SSM::DeletePatchBaselineRequestPrivate
+ * \brief The DeletePatchBaselineRequestPrivate class provides private implementation for DeletePatchBaselineRequest.
+ * \internal
  *
- * @class  DeletePatchBaselineRequestPrivate
- *
- * @brief  Private implementation for DeletePatchBaselineRequest.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeletePatchBaselineRequestPrivate object.
- *
- * @param  action  SSM action being performed.
- * @param  q       Pointer to this object's public DeletePatchBaselineRequest instance.
+ * Constructs a DeletePatchBaselineRequestPrivate object for SSM \a action with,
+ * public implementation \a q.
  */
 DeletePatchBaselineRequestPrivate::DeletePatchBaselineRequestPrivate(
     const SSMRequest::Action action, DeletePatchBaselineRequest * const q)
@@ -128,15 +117,10 @@ DeletePatchBaselineRequestPrivate::DeletePatchBaselineRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeletePatchBaselineRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeletePatchBaselineRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeletePatchBaselineRequest instance.
  */
 DeletePatchBaselineRequestPrivate::DeletePatchBaselineRequestPrivate(
     const DeletePatchBaselineRequestPrivate &other, DeletePatchBaselineRequest * const q)

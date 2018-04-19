@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::RequestSpotFleetRequest
- *
  * \brief The RequestSpotFleetRequest class provides an interface for EC2 RequestSpotFleet requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new RequestSpotFleetRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 RequestSpotFleetRequest::RequestSpotFleetRequest(const RequestSpotFleetRequest &other)
     : EC2Request(new RequestSpotFleetRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ RequestSpotFleetRequest::RequestSpotFleetRequest(const RequestSpotFleetRequest &
 }
 
 /*!
- * @brief  Constructs a new RequestSpotFleetRequest object.
+ * Constructs a RequestSpotFleetRequest object.
  */
 RequestSpotFleetRequest::RequestSpotFleetRequest()
     : EC2Request(new RequestSpotFleetRequestPrivate(EC2Request::RequestSpotFleetAction, this))
@@ -70,14 +67,9 @@ bool RequestSpotFleetRequest::isValid() const
 
 
 /*!
- * @brief  Construct an RequestSpotFleetResponse object.
+ * Returns a RequestSpotFleetResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An RequestSpotFleetResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * RequestSpotFleetRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * RequestSpotFleetRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::RequestSpotFleetRequestPrivate
+ * \brief The RequestSpotFleetRequestPrivate class provides private implementation for RequestSpotFleetRequest.
+ * \internal
  *
- * @class  RequestSpotFleetRequestPrivate
- *
- * @brief  Private implementation for RequestSpotFleetRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new RequestSpotFleetRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public RequestSpotFleetRequest instance.
+ * Constructs a RequestSpotFleetRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 RequestSpotFleetRequestPrivate::RequestSpotFleetRequestPrivate(
     const EC2Request::Action action, RequestSpotFleetRequest * const q)
@@ -108,15 +97,10 @@ RequestSpotFleetRequestPrivate::RequestSpotFleetRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RequestSpotFleetRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the RequestSpotFleetRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public RequestSpotFleetRequest instance.
  */
 RequestSpotFleetRequestPrivate::RequestSpotFleetRequestPrivate(
     const RequestSpotFleetRequestPrivate &other, RequestSpotFleetRequest * const q)

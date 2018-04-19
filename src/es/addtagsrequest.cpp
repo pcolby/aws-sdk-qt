@@ -27,10 +27,9 @@ namespace ElasticsearchService {
 
 /*!
  * \class QtAws::ElasticsearchService::AddTagsRequest
- *
  * \brief The AddTagsRequest class provides an interface for ElasticsearchService AddTags requests.
  *
- * \ingroup ElasticsearchService
+ * \inmodule QtAwsElasticsearchService
  *
  *  <fullname>Amazon Elasticsearch Configuration Service</fullname>
  * 
@@ -46,9 +45,7 @@ namespace ElasticsearchService {
  */
 
 /*!
- * @brief  Constructs a new AddTagsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AddTagsRequest::AddTagsRequest(const AddTagsRequest &other)
     : ElasticsearchServiceRequest(new AddTagsRequestPrivate(*other.d_func(), this))
@@ -57,7 +54,7 @@ AddTagsRequest::AddTagsRequest(const AddTagsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new AddTagsRequest object.
+ * Constructs a AddTagsRequest object.
  */
 AddTagsRequest::AddTagsRequest()
     : ElasticsearchServiceRequest(new AddTagsRequestPrivate(ElasticsearchServiceRequest::AddTagsAction, this))
@@ -75,14 +72,9 @@ bool AddTagsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AddTagsResponse object.
+ * Returns a AddTagsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AddTagsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ElasticsearchServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AddTagsRequest::response(QNetworkReply * const reply) const
 {
@@ -90,20 +82,17 @@ QtAws::Core::AwsAbstractResponse * AddTagsRequest::response(QNetworkReply * cons
 }
 
 /*!
- * @internal
+ * \class QtAws::ElasticsearchService::AddTagsRequestPrivate
+ * \brief The AddTagsRequestPrivate class provides private implementation for AddTagsRequest.
+ * \internal
  *
- * @class  AddTagsRequestPrivate
- *
- * @brief  Private implementation for AddTagsRequest.
+ * \inmodule QtAwsElasticsearchService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AddTagsRequestPrivate object.
- *
- * @param  action  ElasticsearchService action being performed.
- * @param  q       Pointer to this object's public AddTagsRequest instance.
+ * Constructs a AddTagsRequestPrivate object for ElasticsearchService \a action with,
+ * public implementation \a q.
  */
 AddTagsRequestPrivate::AddTagsRequestPrivate(
     const ElasticsearchServiceRequest::Action action, AddTagsRequest * const q)
@@ -113,15 +102,10 @@ AddTagsRequestPrivate::AddTagsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AddTagsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AddTagsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AddTagsRequest instance.
  */
 AddTagsRequestPrivate::AddTagsRequestPrivate(
     const AddTagsRequestPrivate &other, AddTagsRequest * const q)

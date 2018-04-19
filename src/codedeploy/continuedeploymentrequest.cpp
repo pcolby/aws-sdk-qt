@@ -27,10 +27,9 @@ namespace CodeDeploy {
 
 /*!
  * \class QtAws::CodeDeploy::ContinueDeploymentRequest
- *
  * \brief The ContinueDeploymentRequest class provides an interface for CodeDeploy ContinueDeployment requests.
  *
- * \ingroup CodeDeploy
+ * \inmodule QtAwsCodeDeploy
  *
  *  <fullname>AWS CodeDeploy</fullname>
  * 
@@ -118,9 +117,7 @@ namespace CodeDeploy {
  */
 
 /*!
- * @brief  Constructs a new ContinueDeploymentRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ContinueDeploymentRequest::ContinueDeploymentRequest(const ContinueDeploymentRequest &other)
     : CodeDeployRequest(new ContinueDeploymentRequestPrivate(*other.d_func(), this))
@@ -129,7 +126,7 @@ ContinueDeploymentRequest::ContinueDeploymentRequest(const ContinueDeploymentReq
 }
 
 /*!
- * @brief  Constructs a new ContinueDeploymentRequest object.
+ * Constructs a ContinueDeploymentRequest object.
  */
 ContinueDeploymentRequest::ContinueDeploymentRequest()
     : CodeDeployRequest(new ContinueDeploymentRequestPrivate(CodeDeployRequest::ContinueDeploymentAction, this))
@@ -147,14 +144,9 @@ bool ContinueDeploymentRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ContinueDeploymentResponse object.
+ * Returns a ContinueDeploymentResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ContinueDeploymentResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CodeDeployClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ContinueDeploymentRequest::response(QNetworkReply * const reply) const
 {
@@ -162,20 +154,17 @@ QtAws::Core::AwsAbstractResponse * ContinueDeploymentRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::CodeDeploy::ContinueDeploymentRequestPrivate
+ * \brief The ContinueDeploymentRequestPrivate class provides private implementation for ContinueDeploymentRequest.
+ * \internal
  *
- * @class  ContinueDeploymentRequestPrivate
- *
- * @brief  Private implementation for ContinueDeploymentRequest.
+ * \inmodule QtAwsCodeDeploy
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ContinueDeploymentRequestPrivate object.
- *
- * @param  action  CodeDeploy action being performed.
- * @param  q       Pointer to this object's public ContinueDeploymentRequest instance.
+ * Constructs a ContinueDeploymentRequestPrivate object for CodeDeploy \a action with,
+ * public implementation \a q.
  */
 ContinueDeploymentRequestPrivate::ContinueDeploymentRequestPrivate(
     const CodeDeployRequest::Action action, ContinueDeploymentRequest * const q)
@@ -185,15 +174,10 @@ ContinueDeploymentRequestPrivate::ContinueDeploymentRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ContinueDeploymentRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ContinueDeploymentRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ContinueDeploymentRequest instance.
  */
 ContinueDeploymentRequestPrivate::ContinueDeploymentRequestPrivate(
     const ContinueDeploymentRequestPrivate &other, ContinueDeploymentRequest * const q)

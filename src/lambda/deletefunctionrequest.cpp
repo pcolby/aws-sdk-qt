@@ -27,10 +27,9 @@ namespace Lambda {
 
 /*!
  * \class QtAws::Lambda::DeleteFunctionRequest
- *
  * \brief The DeleteFunctionRequest class provides an interface for Lambda DeleteFunction requests.
  *
- * \ingroup Lambda
+ * \inmodule QtAwsLambda
  *
  *  <fullname>AWS Lambda</fullname>
  * 
@@ -48,9 +47,7 @@ namespace Lambda {
  */
 
 /*!
- * @brief  Constructs a new DeleteFunctionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteFunctionRequest::DeleteFunctionRequest(const DeleteFunctionRequest &other)
     : LambdaRequest(new DeleteFunctionRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ DeleteFunctionRequest::DeleteFunctionRequest(const DeleteFunctionRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DeleteFunctionRequest object.
+ * Constructs a DeleteFunctionRequest object.
  */
 DeleteFunctionRequest::DeleteFunctionRequest()
     : LambdaRequest(new DeleteFunctionRequestPrivate(LambdaRequest::DeleteFunctionAction, this))
@@ -77,14 +74,9 @@ bool DeleteFunctionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteFunctionResponse object.
+ * Returns a DeleteFunctionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteFunctionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  LambdaClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteFunctionRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * DeleteFunctionRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::Lambda::DeleteFunctionRequestPrivate
+ * \brief The DeleteFunctionRequestPrivate class provides private implementation for DeleteFunctionRequest.
+ * \internal
  *
- * @class  DeleteFunctionRequestPrivate
- *
- * @brief  Private implementation for DeleteFunctionRequest.
+ * \inmodule QtAwsLambda
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteFunctionRequestPrivate object.
- *
- * @param  action  Lambda action being performed.
- * @param  q       Pointer to this object's public DeleteFunctionRequest instance.
+ * Constructs a DeleteFunctionRequestPrivate object for Lambda \a action with,
+ * public implementation \a q.
  */
 DeleteFunctionRequestPrivate::DeleteFunctionRequestPrivate(
     const LambdaRequest::Action action, DeleteFunctionRequest * const q)
@@ -115,15 +104,10 @@ DeleteFunctionRequestPrivate::DeleteFunctionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteFunctionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteFunctionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteFunctionRequest instance.
  */
 DeleteFunctionRequestPrivate::DeleteFunctionRequestPrivate(
     const DeleteFunctionRequestPrivate &other, DeleteFunctionRequest * const q)

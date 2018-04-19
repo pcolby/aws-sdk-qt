@@ -27,10 +27,9 @@ namespace ConfigService {
 
 /*!
  * \class QtAws::ConfigService::PutConfigRuleRequest
- *
  * \brief The PutConfigRuleRequest class provides an interface for ConfigService PutConfigRule requests.
  *
- * \ingroup ConfigService
+ * \inmodule QtAwsConfigService
  *
  *  <fullname>AWS Config</fullname>
  * 
@@ -60,9 +59,7 @@ namespace ConfigService {
  */
 
 /*!
- * @brief  Constructs a new PutConfigRuleRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 PutConfigRuleRequest::PutConfigRuleRequest(const PutConfigRuleRequest &other)
     : ConfigServiceRequest(new PutConfigRuleRequestPrivate(*other.d_func(), this))
@@ -71,7 +68,7 @@ PutConfigRuleRequest::PutConfigRuleRequest(const PutConfigRuleRequest &other)
 }
 
 /*!
- * @brief  Constructs a new PutConfigRuleRequest object.
+ * Constructs a PutConfigRuleRequest object.
  */
 PutConfigRuleRequest::PutConfigRuleRequest()
     : ConfigServiceRequest(new PutConfigRuleRequestPrivate(ConfigServiceRequest::PutConfigRuleAction, this))
@@ -89,14 +86,9 @@ bool PutConfigRuleRequest::isValid() const
 
 
 /*!
- * @brief  Construct an PutConfigRuleResponse object.
+ * Returns a PutConfigRuleResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An PutConfigRuleResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ConfigServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * PutConfigRuleRequest::response(QNetworkReply * const reply) const
 {
@@ -104,20 +96,17 @@ QtAws::Core::AwsAbstractResponse * PutConfigRuleRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::ConfigService::PutConfigRuleRequestPrivate
+ * \brief The PutConfigRuleRequestPrivate class provides private implementation for PutConfigRuleRequest.
+ * \internal
  *
- * @class  PutConfigRuleRequestPrivate
- *
- * @brief  Private implementation for PutConfigRuleRequest.
+ * \inmodule QtAwsConfigService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new PutConfigRuleRequestPrivate object.
- *
- * @param  action  ConfigService action being performed.
- * @param  q       Pointer to this object's public PutConfigRuleRequest instance.
+ * Constructs a PutConfigRuleRequestPrivate object for ConfigService \a action with,
+ * public implementation \a q.
  */
 PutConfigRuleRequestPrivate::PutConfigRuleRequestPrivate(
     const ConfigServiceRequest::Action action, PutConfigRuleRequest * const q)
@@ -127,15 +116,10 @@ PutConfigRuleRequestPrivate::PutConfigRuleRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutConfigRuleRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the PutConfigRuleRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public PutConfigRuleRequest instance.
  */
 PutConfigRuleRequestPrivate::PutConfigRuleRequestPrivate(
     const PutConfigRuleRequestPrivate &other, PutConfigRuleRequest * const q)

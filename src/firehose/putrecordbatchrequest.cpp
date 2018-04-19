@@ -27,10 +27,9 @@ namespace Firehose {
 
 /*!
  * \class QtAws::Firehose::PutRecordBatchRequest
- *
  * \brief The PutRecordBatchRequest class provides an interface for Firehose PutRecordBatch requests.
  *
- * \ingroup Firehose
+ * \inmodule QtAwsFirehose
  *
  *  <fullname>Amazon Kinesis Firehose API Reference</fullname>
  * 
@@ -41,9 +40,7 @@ namespace Firehose {
  */
 
 /*!
- * @brief  Constructs a new PutRecordBatchRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 PutRecordBatchRequest::PutRecordBatchRequest(const PutRecordBatchRequest &other)
     : FirehoseRequest(new PutRecordBatchRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ PutRecordBatchRequest::PutRecordBatchRequest(const PutRecordBatchRequest &other)
 }
 
 /*!
- * @brief  Constructs a new PutRecordBatchRequest object.
+ * Constructs a PutRecordBatchRequest object.
  */
 PutRecordBatchRequest::PutRecordBatchRequest()
     : FirehoseRequest(new PutRecordBatchRequestPrivate(FirehoseRequest::PutRecordBatchAction, this))
@@ -70,14 +67,9 @@ bool PutRecordBatchRequest::isValid() const
 
 
 /*!
- * @brief  Construct an PutRecordBatchResponse object.
+ * Returns a PutRecordBatchResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An PutRecordBatchResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  FirehoseClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * PutRecordBatchRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * PutRecordBatchRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::Firehose::PutRecordBatchRequestPrivate
+ * \brief The PutRecordBatchRequestPrivate class provides private implementation for PutRecordBatchRequest.
+ * \internal
  *
- * @class  PutRecordBatchRequestPrivate
- *
- * @brief  Private implementation for PutRecordBatchRequest.
+ * \inmodule QtAwsFirehose
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new PutRecordBatchRequestPrivate object.
- *
- * @param  action  Firehose action being performed.
- * @param  q       Pointer to this object's public PutRecordBatchRequest instance.
+ * Constructs a PutRecordBatchRequestPrivate object for Firehose \a action with,
+ * public implementation \a q.
  */
 PutRecordBatchRequestPrivate::PutRecordBatchRequestPrivate(
     const FirehoseRequest::Action action, PutRecordBatchRequest * const q)
@@ -108,15 +97,10 @@ PutRecordBatchRequestPrivate::PutRecordBatchRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutRecordBatchRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the PutRecordBatchRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public PutRecordBatchRequest instance.
  */
 PutRecordBatchRequestPrivate::PutRecordBatchRequestPrivate(
     const PutRecordBatchRequestPrivate &other, PutRecordBatchRequest * const q)

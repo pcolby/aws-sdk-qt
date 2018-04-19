@@ -27,10 +27,9 @@ namespace SWF {
 
 /*!
  * \class QtAws::SWF::CountPendingActivityTasksRequest
- *
  * \brief The CountPendingActivityTasksRequest class provides an interface for SWF CountPendingActivityTasks requests.
  *
- * \ingroup SWF
+ * \inmodule QtAwsSWF
  *
  *  <fullname>Amazon Simple Workflow Service</fullname>
  * 
@@ -53,9 +52,7 @@ namespace SWF {
  */
 
 /*!
- * @brief  Constructs a new CountPendingActivityTasksRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CountPendingActivityTasksRequest::CountPendingActivityTasksRequest(const CountPendingActivityTasksRequest &other)
     : SWFRequest(new CountPendingActivityTasksRequestPrivate(*other.d_func(), this))
@@ -64,7 +61,7 @@ CountPendingActivityTasksRequest::CountPendingActivityTasksRequest(const CountPe
 }
 
 /*!
- * @brief  Constructs a new CountPendingActivityTasksRequest object.
+ * Constructs a CountPendingActivityTasksRequest object.
  */
 CountPendingActivityTasksRequest::CountPendingActivityTasksRequest()
     : SWFRequest(new CountPendingActivityTasksRequestPrivate(SWFRequest::CountPendingActivityTasksAction, this))
@@ -82,14 +79,9 @@ bool CountPendingActivityTasksRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CountPendingActivityTasksResponse object.
+ * Returns a CountPendingActivityTasksResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CountPendingActivityTasksResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SWFClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CountPendingActivityTasksRequest::response(QNetworkReply * const reply) const
 {
@@ -97,20 +89,17 @@ QtAws::Core::AwsAbstractResponse * CountPendingActivityTasksRequest::response(QN
 }
 
 /*!
- * @internal
+ * \class QtAws::SWF::CountPendingActivityTasksRequestPrivate
+ * \brief The CountPendingActivityTasksRequestPrivate class provides private implementation for CountPendingActivityTasksRequest.
+ * \internal
  *
- * @class  CountPendingActivityTasksRequestPrivate
- *
- * @brief  Private implementation for CountPendingActivityTasksRequest.
+ * \inmodule QtAwsSWF
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CountPendingActivityTasksRequestPrivate object.
- *
- * @param  action  SWF action being performed.
- * @param  q       Pointer to this object's public CountPendingActivityTasksRequest instance.
+ * Constructs a CountPendingActivityTasksRequestPrivate object for SWF \a action with,
+ * public implementation \a q.
  */
 CountPendingActivityTasksRequestPrivate::CountPendingActivityTasksRequestPrivate(
     const SWFRequest::Action action, CountPendingActivityTasksRequest * const q)
@@ -120,15 +109,10 @@ CountPendingActivityTasksRequestPrivate::CountPendingActivityTasksRequestPrivate
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CountPendingActivityTasksRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CountPendingActivityTasksRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CountPendingActivityTasksRequest instance.
  */
 CountPendingActivityTasksRequestPrivate::CountPendingActivityTasksRequestPrivate(
     const CountPendingActivityTasksRequestPrivate &other, CountPendingActivityTasksRequest * const q)

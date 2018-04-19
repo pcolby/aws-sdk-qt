@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::AcceptVpcEndpointConnectionsRequest
- *
  * \brief The AcceptVpcEndpointConnectionsRequest class provides an interface for EC2 AcceptVpcEndpointConnections requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new AcceptVpcEndpointConnectionsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AcceptVpcEndpointConnectionsRequest::AcceptVpcEndpointConnectionsRequest(const AcceptVpcEndpointConnectionsRequest &other)
     : EC2Request(new AcceptVpcEndpointConnectionsRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ AcceptVpcEndpointConnectionsRequest::AcceptVpcEndpointConnectionsRequest(const A
 }
 
 /*!
- * @brief  Constructs a new AcceptVpcEndpointConnectionsRequest object.
+ * Constructs a AcceptVpcEndpointConnectionsRequest object.
  */
 AcceptVpcEndpointConnectionsRequest::AcceptVpcEndpointConnectionsRequest()
     : EC2Request(new AcceptVpcEndpointConnectionsRequestPrivate(EC2Request::AcceptVpcEndpointConnectionsAction, this))
@@ -70,14 +67,9 @@ bool AcceptVpcEndpointConnectionsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AcceptVpcEndpointConnectionsResponse object.
+ * Returns a AcceptVpcEndpointConnectionsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AcceptVpcEndpointConnectionsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AcceptVpcEndpointConnectionsRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * AcceptVpcEndpointConnectionsRequest::response
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::AcceptVpcEndpointConnectionsRequestPrivate
+ * \brief The AcceptVpcEndpointConnectionsRequestPrivate class provides private implementation for AcceptVpcEndpointConnectionsRequest.
+ * \internal
  *
- * @class  AcceptVpcEndpointConnectionsRequestPrivate
- *
- * @brief  Private implementation for AcceptVpcEndpointConnectionsRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AcceptVpcEndpointConnectionsRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public AcceptVpcEndpointConnectionsRequest instance.
+ * Constructs a AcceptVpcEndpointConnectionsRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 AcceptVpcEndpointConnectionsRequestPrivate::AcceptVpcEndpointConnectionsRequestPrivate(
     const EC2Request::Action action, AcceptVpcEndpointConnectionsRequest * const q)
@@ -108,15 +97,10 @@ AcceptVpcEndpointConnectionsRequestPrivate::AcceptVpcEndpointConnectionsRequestP
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AcceptVpcEndpointConnectionsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AcceptVpcEndpointConnectionsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AcceptVpcEndpointConnectionsRequest instance.
  */
 AcceptVpcEndpointConnectionsRequestPrivate::AcceptVpcEndpointConnectionsRequestPrivate(
     const AcceptVpcEndpointConnectionsRequestPrivate &other, AcceptVpcEndpointConnectionsRequest * const q)

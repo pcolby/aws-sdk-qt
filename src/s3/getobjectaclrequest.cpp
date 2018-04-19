@@ -27,19 +27,16 @@ namespace S3 {
 
 /*!
  * \class QtAws::S3::GetObjectAclRequest
- *
  * \brief The GetObjectAclRequest class provides an interface for S3 GetObjectAcl requests.
  *
- * \ingroup S3
+ * \inmodule QtAwsS3
  *
  *
  * \sa S3Client::getObjectAcl
  */
 
 /*!
- * @brief  Constructs a new GetObjectAclRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetObjectAclRequest::GetObjectAclRequest(const GetObjectAclRequest &other)
     : S3Request(new GetObjectAclRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ GetObjectAclRequest::GetObjectAclRequest(const GetObjectAclRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetObjectAclRequest object.
+ * Constructs a GetObjectAclRequest object.
  */
 GetObjectAclRequest::GetObjectAclRequest()
     : S3Request(new GetObjectAclRequestPrivate(S3Request::GetObjectAclAction, this))
@@ -66,14 +63,9 @@ bool GetObjectAclRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetObjectAclResponse object.
+ * Returns a GetObjectAclResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetObjectAclResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  S3Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetObjectAclRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * GetObjectAclRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::S3::GetObjectAclRequestPrivate
+ * \brief The GetObjectAclRequestPrivate class provides private implementation for GetObjectAclRequest.
+ * \internal
  *
- * @class  GetObjectAclRequestPrivate
- *
- * @brief  Private implementation for GetObjectAclRequest.
+ * \inmodule QtAwsS3
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetObjectAclRequestPrivate object.
- *
- * @param  action  S3 action being performed.
- * @param  q       Pointer to this object's public GetObjectAclRequest instance.
+ * Constructs a GetObjectAclRequestPrivate object for S3 \a action with,
+ * public implementation \a q.
  */
 GetObjectAclRequestPrivate::GetObjectAclRequestPrivate(
     const S3Request::Action action, GetObjectAclRequest * const q)
@@ -104,15 +93,10 @@ GetObjectAclRequestPrivate::GetObjectAclRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetObjectAclRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetObjectAclRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetObjectAclRequest instance.
  */
 GetObjectAclRequestPrivate::GetObjectAclRequestPrivate(
     const GetObjectAclRequestPrivate &other, GetObjectAclRequest * const q)

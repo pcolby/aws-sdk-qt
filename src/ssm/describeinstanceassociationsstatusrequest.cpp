@@ -27,10 +27,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::DescribeInstanceAssociationsStatusRequest
- *
  * \brief The DescribeInstanceAssociationsStatusRequest class provides an interface for SSM DescribeInstanceAssociationsStatus requests.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -61,9 +60,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new DescribeInstanceAssociationsStatusRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeInstanceAssociationsStatusRequest::DescribeInstanceAssociationsStatusRequest(const DescribeInstanceAssociationsStatusRequest &other)
     : SSMRequest(new DescribeInstanceAssociationsStatusRequestPrivate(*other.d_func(), this))
@@ -72,7 +69,7 @@ DescribeInstanceAssociationsStatusRequest::DescribeInstanceAssociationsStatusReq
 }
 
 /*!
- * @brief  Constructs a new DescribeInstanceAssociationsStatusRequest object.
+ * Constructs a DescribeInstanceAssociationsStatusRequest object.
  */
 DescribeInstanceAssociationsStatusRequest::DescribeInstanceAssociationsStatusRequest()
     : SSMRequest(new DescribeInstanceAssociationsStatusRequestPrivate(SSMRequest::DescribeInstanceAssociationsStatusAction, this))
@@ -90,14 +87,9 @@ bool DescribeInstanceAssociationsStatusRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeInstanceAssociationsStatusResponse object.
+ * Returns a DescribeInstanceAssociationsStatusResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeInstanceAssociationsStatusResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SSMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeInstanceAssociationsStatusRequest::response(QNetworkReply * const reply) const
 {
@@ -105,20 +97,17 @@ QtAws::Core::AwsAbstractResponse * DescribeInstanceAssociationsStatusRequest::re
 }
 
 /*!
- * @internal
+ * \class QtAws::SSM::DescribeInstanceAssociationsStatusRequestPrivate
+ * \brief The DescribeInstanceAssociationsStatusRequestPrivate class provides private implementation for DescribeInstanceAssociationsStatusRequest.
+ * \internal
  *
- * @class  DescribeInstanceAssociationsStatusRequestPrivate
- *
- * @brief  Private implementation for DescribeInstanceAssociationsStatusRequest.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeInstanceAssociationsStatusRequestPrivate object.
- *
- * @param  action  SSM action being performed.
- * @param  q       Pointer to this object's public DescribeInstanceAssociationsStatusRequest instance.
+ * Constructs a DescribeInstanceAssociationsStatusRequestPrivate object for SSM \a action with,
+ * public implementation \a q.
  */
 DescribeInstanceAssociationsStatusRequestPrivate::DescribeInstanceAssociationsStatusRequestPrivate(
     const SSMRequest::Action action, DescribeInstanceAssociationsStatusRequest * const q)
@@ -128,15 +117,10 @@ DescribeInstanceAssociationsStatusRequestPrivate::DescribeInstanceAssociationsSt
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeInstanceAssociationsStatusRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeInstanceAssociationsStatusRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeInstanceAssociationsStatusRequest instance.
  */
 DescribeInstanceAssociationsStatusRequestPrivate::DescribeInstanceAssociationsStatusRequestPrivate(
     const DescribeInstanceAssociationsStatusRequestPrivate &other, DescribeInstanceAssociationsStatusRequest * const q)

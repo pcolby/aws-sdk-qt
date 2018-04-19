@@ -27,10 +27,9 @@ namespace WAFRegional {
 
 /*!
  * \class QtAws::WAFRegional::GetRateBasedRuleManagedKeysRequest
- *
  * \brief The GetRateBasedRuleManagedKeysRequest class provides an interface for WAFRegional GetRateBasedRuleManagedKeys requests.
  *
- * \ingroup WAFRegional
+ * \inmodule QtAwsWAFRegional
  *
  *  This is the <i>AWS WAF Regional API Reference</i> for using AWS WAF with Elastic Load Balancing (ELB) Application Load
  *  Balancers. The AWS WAF actions and data types listed in the reference are available for protecting Application Load
@@ -44,9 +43,7 @@ namespace WAFRegional {
  */
 
 /*!
- * @brief  Constructs a new GetRateBasedRuleManagedKeysRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetRateBasedRuleManagedKeysRequest::GetRateBasedRuleManagedKeysRequest(const GetRateBasedRuleManagedKeysRequest &other)
     : WAFRegionalRequest(new GetRateBasedRuleManagedKeysRequestPrivate(*other.d_func(), this))
@@ -55,7 +52,7 @@ GetRateBasedRuleManagedKeysRequest::GetRateBasedRuleManagedKeysRequest(const Get
 }
 
 /*!
- * @brief  Constructs a new GetRateBasedRuleManagedKeysRequest object.
+ * Constructs a GetRateBasedRuleManagedKeysRequest object.
  */
 GetRateBasedRuleManagedKeysRequest::GetRateBasedRuleManagedKeysRequest()
     : WAFRegionalRequest(new GetRateBasedRuleManagedKeysRequestPrivate(WAFRegionalRequest::GetRateBasedRuleManagedKeysAction, this))
@@ -73,14 +70,9 @@ bool GetRateBasedRuleManagedKeysRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetRateBasedRuleManagedKeysResponse object.
+ * Returns a GetRateBasedRuleManagedKeysResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetRateBasedRuleManagedKeysResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WAFRegionalClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetRateBasedRuleManagedKeysRequest::response(QNetworkReply * const reply) const
 {
@@ -88,20 +80,17 @@ QtAws::Core::AwsAbstractResponse * GetRateBasedRuleManagedKeysRequest::response(
 }
 
 /*!
- * @internal
+ * \class QtAws::WAFRegional::GetRateBasedRuleManagedKeysRequestPrivate
+ * \brief The GetRateBasedRuleManagedKeysRequestPrivate class provides private implementation for GetRateBasedRuleManagedKeysRequest.
+ * \internal
  *
- * @class  GetRateBasedRuleManagedKeysRequestPrivate
- *
- * @brief  Private implementation for GetRateBasedRuleManagedKeysRequest.
+ * \inmodule QtAwsWAFRegional
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetRateBasedRuleManagedKeysRequestPrivate object.
- *
- * @param  action  WAFRegional action being performed.
- * @param  q       Pointer to this object's public GetRateBasedRuleManagedKeysRequest instance.
+ * Constructs a GetRateBasedRuleManagedKeysRequestPrivate object for WAFRegional \a action with,
+ * public implementation \a q.
  */
 GetRateBasedRuleManagedKeysRequestPrivate::GetRateBasedRuleManagedKeysRequestPrivate(
     const WAFRegionalRequest::Action action, GetRateBasedRuleManagedKeysRequest * const q)
@@ -111,15 +100,10 @@ GetRateBasedRuleManagedKeysRequestPrivate::GetRateBasedRuleManagedKeysRequestPri
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetRateBasedRuleManagedKeysRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetRateBasedRuleManagedKeysRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetRateBasedRuleManagedKeysRequest instance.
  */
 GetRateBasedRuleManagedKeysRequestPrivate::GetRateBasedRuleManagedKeysRequestPrivate(
     const GetRateBasedRuleManagedKeysRequestPrivate &other, GetRateBasedRuleManagedKeysRequest * const q)

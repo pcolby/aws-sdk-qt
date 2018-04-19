@@ -27,10 +27,9 @@ namespace CloudTrail {
 
 /*!
  * \class QtAws::CloudTrail::GetEventSelectorsRequest
- *
  * \brief The GetEventSelectorsRequest class provides an interface for CloudTrail GetEventSelectors requests.
  *
- * \ingroup CloudTrail
+ * \inmodule QtAwsCloudTrail
  *
  *  <fullname>AWS CloudTrail</fullname>
  * 
@@ -60,9 +59,7 @@ namespace CloudTrail {
  */
 
 /*!
- * @brief  Constructs a new GetEventSelectorsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetEventSelectorsRequest::GetEventSelectorsRequest(const GetEventSelectorsRequest &other)
     : CloudTrailRequest(new GetEventSelectorsRequestPrivate(*other.d_func(), this))
@@ -71,7 +68,7 @@ GetEventSelectorsRequest::GetEventSelectorsRequest(const GetEventSelectorsReques
 }
 
 /*!
- * @brief  Constructs a new GetEventSelectorsRequest object.
+ * Constructs a GetEventSelectorsRequest object.
  */
 GetEventSelectorsRequest::GetEventSelectorsRequest()
     : CloudTrailRequest(new GetEventSelectorsRequestPrivate(CloudTrailRequest::GetEventSelectorsAction, this))
@@ -89,14 +86,9 @@ bool GetEventSelectorsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetEventSelectorsResponse object.
+ * Returns a GetEventSelectorsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetEventSelectorsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudTrailClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetEventSelectorsRequest::response(QNetworkReply * const reply) const
 {
@@ -104,20 +96,17 @@ QtAws::Core::AwsAbstractResponse * GetEventSelectorsRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudTrail::GetEventSelectorsRequestPrivate
+ * \brief The GetEventSelectorsRequestPrivate class provides private implementation for GetEventSelectorsRequest.
+ * \internal
  *
- * @class  GetEventSelectorsRequestPrivate
- *
- * @brief  Private implementation for GetEventSelectorsRequest.
+ * \inmodule QtAwsCloudTrail
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetEventSelectorsRequestPrivate object.
- *
- * @param  action  CloudTrail action being performed.
- * @param  q       Pointer to this object's public GetEventSelectorsRequest instance.
+ * Constructs a GetEventSelectorsRequestPrivate object for CloudTrail \a action with,
+ * public implementation \a q.
  */
 GetEventSelectorsRequestPrivate::GetEventSelectorsRequestPrivate(
     const CloudTrailRequest::Action action, GetEventSelectorsRequest * const q)
@@ -127,15 +116,10 @@ GetEventSelectorsRequestPrivate::GetEventSelectorsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetEventSelectorsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetEventSelectorsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetEventSelectorsRequest instance.
  */
 GetEventSelectorsRequestPrivate::GetEventSelectorsRequestPrivate(
     const GetEventSelectorsRequestPrivate &other, GetEventSelectorsRequest * const q)

@@ -27,10 +27,9 @@ namespace DAX {
 
 /*!
  * \class QtAws::DAX::DeleteSubnetGroupRequest
- *
  * \brief The DeleteSubnetGroupRequest class provides an interface for DAX DeleteSubnetGroup requests.
  *
- * \ingroup DAX
+ * \inmodule QtAwsDAX
  *
  *  DAX is a managed caching service engineered for Amazon DynamoDB. DAX dramatically speeds up database reads by caching
  *  frequently-accessed data from DynamoDB, so applications can access that data with sub-millisecond latency. You can
@@ -41,9 +40,7 @@ namespace DAX {
  */
 
 /*!
- * @brief  Constructs a new DeleteSubnetGroupRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteSubnetGroupRequest::DeleteSubnetGroupRequest(const DeleteSubnetGroupRequest &other)
     : DAXRequest(new DeleteSubnetGroupRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ DeleteSubnetGroupRequest::DeleteSubnetGroupRequest(const DeleteSubnetGroupReques
 }
 
 /*!
- * @brief  Constructs a new DeleteSubnetGroupRequest object.
+ * Constructs a DeleteSubnetGroupRequest object.
  */
 DeleteSubnetGroupRequest::DeleteSubnetGroupRequest()
     : DAXRequest(new DeleteSubnetGroupRequestPrivate(DAXRequest::DeleteSubnetGroupAction, this))
@@ -70,14 +67,9 @@ bool DeleteSubnetGroupRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteSubnetGroupResponse object.
+ * Returns a DeleteSubnetGroupResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteSubnetGroupResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DAXClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteSubnetGroupRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * DeleteSubnetGroupRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::DAX::DeleteSubnetGroupRequestPrivate
+ * \brief The DeleteSubnetGroupRequestPrivate class provides private implementation for DeleteSubnetGroupRequest.
+ * \internal
  *
- * @class  DeleteSubnetGroupRequestPrivate
- *
- * @brief  Private implementation for DeleteSubnetGroupRequest.
+ * \inmodule QtAwsDAX
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteSubnetGroupRequestPrivate object.
- *
- * @param  action  DAX action being performed.
- * @param  q       Pointer to this object's public DeleteSubnetGroupRequest instance.
+ * Constructs a DeleteSubnetGroupRequestPrivate object for DAX \a action with,
+ * public implementation \a q.
  */
 DeleteSubnetGroupRequestPrivate::DeleteSubnetGroupRequestPrivate(
     const DAXRequest::Action action, DeleteSubnetGroupRequest * const q)
@@ -108,15 +97,10 @@ DeleteSubnetGroupRequestPrivate::DeleteSubnetGroupRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteSubnetGroupRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteSubnetGroupRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteSubnetGroupRequest instance.
  */
 DeleteSubnetGroupRequestPrivate::DeleteSubnetGroupRequestPrivate(
     const DeleteSubnetGroupRequestPrivate &other, DeleteSubnetGroupRequest * const q)

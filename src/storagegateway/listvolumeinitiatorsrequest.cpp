@@ -27,10 +27,9 @@ namespace StorageGateway {
 
 /*!
  * \class QtAws::StorageGateway::ListVolumeInitiatorsRequest
- *
  * \brief The ListVolumeInitiatorsRequest class provides an interface for StorageGateway ListVolumeInitiators requests.
  *
- * \ingroup StorageGateway
+ * \inmodule QtAwsStorageGateway
  *
  *  <fullname>AWS Storage Gateway Service</fullname>
  * 
@@ -106,9 +105,7 @@ namespace StorageGateway {
  */
 
 /*!
- * @brief  Constructs a new ListVolumeInitiatorsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListVolumeInitiatorsRequest::ListVolumeInitiatorsRequest(const ListVolumeInitiatorsRequest &other)
     : StorageGatewayRequest(new ListVolumeInitiatorsRequestPrivate(*other.d_func(), this))
@@ -117,7 +114,7 @@ ListVolumeInitiatorsRequest::ListVolumeInitiatorsRequest(const ListVolumeInitiat
 }
 
 /*!
- * @brief  Constructs a new ListVolumeInitiatorsRequest object.
+ * Constructs a ListVolumeInitiatorsRequest object.
  */
 ListVolumeInitiatorsRequest::ListVolumeInitiatorsRequest()
     : StorageGatewayRequest(new ListVolumeInitiatorsRequestPrivate(StorageGatewayRequest::ListVolumeInitiatorsAction, this))
@@ -135,14 +132,9 @@ bool ListVolumeInitiatorsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListVolumeInitiatorsResponse object.
+ * Returns a ListVolumeInitiatorsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListVolumeInitiatorsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  StorageGatewayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListVolumeInitiatorsRequest::response(QNetworkReply * const reply) const
 {
@@ -150,20 +142,17 @@ QtAws::Core::AwsAbstractResponse * ListVolumeInitiatorsRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::StorageGateway::ListVolumeInitiatorsRequestPrivate
+ * \brief The ListVolumeInitiatorsRequestPrivate class provides private implementation for ListVolumeInitiatorsRequest.
+ * \internal
  *
- * @class  ListVolumeInitiatorsRequestPrivate
- *
- * @brief  Private implementation for ListVolumeInitiatorsRequest.
+ * \inmodule QtAwsStorageGateway
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListVolumeInitiatorsRequestPrivate object.
- *
- * @param  action  StorageGateway action being performed.
- * @param  q       Pointer to this object's public ListVolumeInitiatorsRequest instance.
+ * Constructs a ListVolumeInitiatorsRequestPrivate object for StorageGateway \a action with,
+ * public implementation \a q.
  */
 ListVolumeInitiatorsRequestPrivate::ListVolumeInitiatorsRequestPrivate(
     const StorageGatewayRequest::Action action, ListVolumeInitiatorsRequest * const q)
@@ -173,15 +162,10 @@ ListVolumeInitiatorsRequestPrivate::ListVolumeInitiatorsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListVolumeInitiatorsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListVolumeInitiatorsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListVolumeInitiatorsRequest instance.
  */
 ListVolumeInitiatorsRequestPrivate::ListVolumeInitiatorsRequestPrivate(
     const ListVolumeInitiatorsRequestPrivate &other, ListVolumeInitiatorsRequest * const q)

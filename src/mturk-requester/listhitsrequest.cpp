@@ -27,19 +27,16 @@ namespace MTurk {
 
 /*!
  * \class QtAws::MTurk::ListHITsRequest
- *
  * \brief The ListHITsRequest class provides an interface for MTurk ListHITs requests.
  *
- * \ingroup MTurk
+ * \inmodule QtAwsMTurk
  *
  *
  * \sa MTurkClient::listHITs
  */
 
 /*!
- * @brief  Constructs a new ListHITsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListHITsRequest::ListHITsRequest(const ListHITsRequest &other)
     : MTurkRequest(new ListHITsRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ ListHITsRequest::ListHITsRequest(const ListHITsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ListHITsRequest object.
+ * Constructs a ListHITsRequest object.
  */
 ListHITsRequest::ListHITsRequest()
     : MTurkRequest(new ListHITsRequestPrivate(MTurkRequest::ListHITsAction, this))
@@ -66,14 +63,9 @@ bool ListHITsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListHITsResponse object.
+ * Returns a ListHITsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListHITsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MTurkClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListHITsRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * ListHITsRequest::response(QNetworkReply * con
 }
 
 /*!
- * @internal
+ * \class QtAws::MTurk::ListHITsRequestPrivate
+ * \brief The ListHITsRequestPrivate class provides private implementation for ListHITsRequest.
+ * \internal
  *
- * @class  ListHITsRequestPrivate
- *
- * @brief  Private implementation for ListHITsRequest.
+ * \inmodule QtAwsMTurk
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListHITsRequestPrivate object.
- *
- * @param  action  MTurk action being performed.
- * @param  q       Pointer to this object's public ListHITsRequest instance.
+ * Constructs a ListHITsRequestPrivate object for MTurk \a action with,
+ * public implementation \a q.
  */
 ListHITsRequestPrivate::ListHITsRequestPrivate(
     const MTurkRequest::Action action, ListHITsRequest * const q)
@@ -104,15 +93,10 @@ ListHITsRequestPrivate::ListHITsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListHITsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListHITsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListHITsRequest instance.
  */
 ListHITsRequestPrivate::ListHITsRequestPrivate(
     const ListHITsRequestPrivate &other, ListHITsRequest * const q)

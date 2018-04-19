@@ -27,19 +27,16 @@ namespace S3 {
 
 /*!
  * \class QtAws::S3::ListObjectsV2Request
- *
  * \brief The ListObjectsV2Request class provides an interface for S3 ListObjectsV2 requests.
  *
- * \ingroup S3
+ * \inmodule QtAwsS3
  *
  *
  * \sa S3Client::listObjectsV2
  */
 
 /*!
- * @brief  Constructs a new ListObjectsV2Request object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListObjectsV2Request::ListObjectsV2Request(const ListObjectsV2Request &other)
     : S3Request(new ListObjectsV2RequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ ListObjectsV2Request::ListObjectsV2Request(const ListObjectsV2Request &other)
 }
 
 /*!
- * @brief  Constructs a new ListObjectsV2Request object.
+ * Constructs a ListObjectsV2Request object.
  */
 ListObjectsV2Request::ListObjectsV2Request()
     : S3Request(new ListObjectsV2RequestPrivate(S3Request::ListObjectsV2Action, this))
@@ -66,14 +63,9 @@ bool ListObjectsV2Request::isValid() const
 
 
 /*!
- * @brief  Construct an ListObjectsV2Response object.
+ * Returns a ListObjectsV2Response object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListObjectsV2Response instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  S3Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListObjectsV2Request::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * ListObjectsV2Request::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::S3::ListObjectsV2RequestPrivate
+ * \brief The ListObjectsV2RequestPrivate class provides private implementation for ListObjectsV2Request.
+ * \internal
  *
- * @class  ListObjectsV2RequestPrivate
- *
- * @brief  Private implementation for ListObjectsV2Request.
+ * \inmodule QtAwsS3
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListObjectsV2RequestPrivate object.
- *
- * @param  action  S3 action being performed.
- * @param  q       Pointer to this object's public ListObjectsV2Request instance.
+ * Constructs a ListObjectsV2RequestPrivate object for S3 \a action with,
+ * public implementation \a q.
  */
 ListObjectsV2RequestPrivate::ListObjectsV2RequestPrivate(
     const S3Request::Action action, ListObjectsV2Request * const q)
@@ -104,15 +93,10 @@ ListObjectsV2RequestPrivate::ListObjectsV2RequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListObjectsV2RequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListObjectsV2Request
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListObjectsV2Request instance.
  */
 ListObjectsV2RequestPrivate::ListObjectsV2RequestPrivate(
     const ListObjectsV2RequestPrivate &other, ListObjectsV2Request * const q)

@@ -27,10 +27,9 @@ namespace CloudFront {
 
 /*!
  * \class QtAws::CloudFront::CreateDistributionRequest
- *
  * \brief The CreateDistributionRequest class provides an interface for CloudFront CreateDistribution requests.
  *
- * \ingroup CloudFront
+ * \inmodule QtAwsCloudFront
  *
  *  <fullname>Amazon CloudFront</fullname>
  * 
@@ -42,9 +41,7 @@ namespace CloudFront {
  */
 
 /*!
- * @brief  Constructs a new CreateDistributionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateDistributionRequest::CreateDistributionRequest(const CreateDistributionRequest &other)
     : CloudFrontRequest(new CreateDistributionRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ CreateDistributionRequest::CreateDistributionRequest(const CreateDistributionReq
 }
 
 /*!
- * @brief  Constructs a new CreateDistributionRequest object.
+ * Constructs a CreateDistributionRequest object.
  */
 CreateDistributionRequest::CreateDistributionRequest()
     : CloudFrontRequest(new CreateDistributionRequestPrivate(CloudFrontRequest::CreateDistributionAction, this))
@@ -71,14 +68,9 @@ bool CreateDistributionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateDistributionResponse object.
+ * Returns a CreateDistributionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateDistributionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudFrontClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateDistributionRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * CreateDistributionRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudFront::CreateDistributionRequestPrivate
+ * \brief The CreateDistributionRequestPrivate class provides private implementation for CreateDistributionRequest.
+ * \internal
  *
- * @class  CreateDistributionRequestPrivate
- *
- * @brief  Private implementation for CreateDistributionRequest.
+ * \inmodule QtAwsCloudFront
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateDistributionRequestPrivate object.
- *
- * @param  action  CloudFront action being performed.
- * @param  q       Pointer to this object's public CreateDistributionRequest instance.
+ * Constructs a CreateDistributionRequestPrivate object for CloudFront \a action with,
+ * public implementation \a q.
  */
 CreateDistributionRequestPrivate::CreateDistributionRequestPrivate(
     const CloudFrontRequest::Action action, CreateDistributionRequest * const q)
@@ -109,15 +98,10 @@ CreateDistributionRequestPrivate::CreateDistributionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateDistributionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateDistributionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateDistributionRequest instance.
  */
 CreateDistributionRequestPrivate::CreateDistributionRequestPrivate(
     const CreateDistributionRequestPrivate &other, CreateDistributionRequest * const q)

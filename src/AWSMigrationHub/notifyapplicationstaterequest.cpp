@@ -27,10 +27,9 @@ namespace MigrationHub {
 
 /*!
  * \class QtAws::MigrationHub::NotifyApplicationStateRequest
- *
  * \brief The NotifyApplicationStateRequest class provides an interface for MigrationHub NotifyApplicationState requests.
  *
- * \ingroup MigrationHub
+ * \inmodule QtAwsMigrationHub
  *
  *  The AWS Migration Hub API methods help to obtain server and application migration status and integrate your
  *  resource-specific migration tool by providing a programmatic interface to Migration Hub.
@@ -39,9 +38,7 @@ namespace MigrationHub {
  */
 
 /*!
- * @brief  Constructs a new NotifyApplicationStateRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 NotifyApplicationStateRequest::NotifyApplicationStateRequest(const NotifyApplicationStateRequest &other)
     : MigrationHubRequest(new NotifyApplicationStateRequestPrivate(*other.d_func(), this))
@@ -50,7 +47,7 @@ NotifyApplicationStateRequest::NotifyApplicationStateRequest(const NotifyApplica
 }
 
 /*!
- * @brief  Constructs a new NotifyApplicationStateRequest object.
+ * Constructs a NotifyApplicationStateRequest object.
  */
 NotifyApplicationStateRequest::NotifyApplicationStateRequest()
     : MigrationHubRequest(new NotifyApplicationStateRequestPrivate(MigrationHubRequest::NotifyApplicationStateAction, this))
@@ -68,14 +65,9 @@ bool NotifyApplicationStateRequest::isValid() const
 
 
 /*!
- * @brief  Construct an NotifyApplicationStateResponse object.
+ * Returns a NotifyApplicationStateResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An NotifyApplicationStateResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MigrationHubClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * NotifyApplicationStateRequest::response(QNetworkReply * const reply) const
 {
@@ -83,20 +75,17 @@ QtAws::Core::AwsAbstractResponse * NotifyApplicationStateRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::MigrationHub::NotifyApplicationStateRequestPrivate
+ * \brief The NotifyApplicationStateRequestPrivate class provides private implementation for NotifyApplicationStateRequest.
+ * \internal
  *
- * @class  NotifyApplicationStateRequestPrivate
- *
- * @brief  Private implementation for NotifyApplicationStateRequest.
+ * \inmodule QtAwsMigrationHub
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new NotifyApplicationStateRequestPrivate object.
- *
- * @param  action  MigrationHub action being performed.
- * @param  q       Pointer to this object's public NotifyApplicationStateRequest instance.
+ * Constructs a NotifyApplicationStateRequestPrivate object for MigrationHub \a action with,
+ * public implementation \a q.
  */
 NotifyApplicationStateRequestPrivate::NotifyApplicationStateRequestPrivate(
     const MigrationHubRequest::Action action, NotifyApplicationStateRequest * const q)
@@ -106,15 +95,10 @@ NotifyApplicationStateRequestPrivate::NotifyApplicationStateRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new NotifyApplicationStateRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the NotifyApplicationStateRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public NotifyApplicationStateRequest instance.
  */
 NotifyApplicationStateRequestPrivate::NotifyApplicationStateRequestPrivate(
     const NotifyApplicationStateRequestPrivate &other, NotifyApplicationStateRequest * const q)

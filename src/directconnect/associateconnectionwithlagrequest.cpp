@@ -27,10 +27,9 @@ namespace DirectConnect {
 
 /*!
  * \class QtAws::DirectConnect::AssociateConnectionWithLagRequest
- *
  * \brief The AssociateConnectionWithLagRequest class provides an interface for DirectConnect AssociateConnectionWithLag requests.
  *
- * \ingroup DirectConnect
+ * \inmodule QtAwsDirectConnect
  *
  *  AWS Direct Connect links your internal network to an AWS Direct Connect location over a standard 1 gigabit or 10 gigabit
  *  Ethernet fiber-optic cable. One end of the cable is connected to your router, the other to an AWS Direct Connect router.
@@ -45,9 +44,7 @@ namespace DirectConnect {
  */
 
 /*!
- * @brief  Constructs a new AssociateConnectionWithLagRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AssociateConnectionWithLagRequest::AssociateConnectionWithLagRequest(const AssociateConnectionWithLagRequest &other)
     : DirectConnectRequest(new AssociateConnectionWithLagRequestPrivate(*other.d_func(), this))
@@ -56,7 +53,7 @@ AssociateConnectionWithLagRequest::AssociateConnectionWithLagRequest(const Assoc
 }
 
 /*!
- * @brief  Constructs a new AssociateConnectionWithLagRequest object.
+ * Constructs a AssociateConnectionWithLagRequest object.
  */
 AssociateConnectionWithLagRequest::AssociateConnectionWithLagRequest()
     : DirectConnectRequest(new AssociateConnectionWithLagRequestPrivate(DirectConnectRequest::AssociateConnectionWithLagAction, this))
@@ -74,14 +71,9 @@ bool AssociateConnectionWithLagRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AssociateConnectionWithLagResponse object.
+ * Returns a AssociateConnectionWithLagResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AssociateConnectionWithLagResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DirectConnectClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AssociateConnectionWithLagRequest::response(QNetworkReply * const reply) const
 {
@@ -89,20 +81,17 @@ QtAws::Core::AwsAbstractResponse * AssociateConnectionWithLagRequest::response(Q
 }
 
 /*!
- * @internal
+ * \class QtAws::DirectConnect::AssociateConnectionWithLagRequestPrivate
+ * \brief The AssociateConnectionWithLagRequestPrivate class provides private implementation for AssociateConnectionWithLagRequest.
+ * \internal
  *
- * @class  AssociateConnectionWithLagRequestPrivate
- *
- * @brief  Private implementation for AssociateConnectionWithLagRequest.
+ * \inmodule QtAwsDirectConnect
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AssociateConnectionWithLagRequestPrivate object.
- *
- * @param  action  DirectConnect action being performed.
- * @param  q       Pointer to this object's public AssociateConnectionWithLagRequest instance.
+ * Constructs a AssociateConnectionWithLagRequestPrivate object for DirectConnect \a action with,
+ * public implementation \a q.
  */
 AssociateConnectionWithLagRequestPrivate::AssociateConnectionWithLagRequestPrivate(
     const DirectConnectRequest::Action action, AssociateConnectionWithLagRequest * const q)
@@ -112,15 +101,10 @@ AssociateConnectionWithLagRequestPrivate::AssociateConnectionWithLagRequestPriva
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AssociateConnectionWithLagRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AssociateConnectionWithLagRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AssociateConnectionWithLagRequest instance.
  */
 AssociateConnectionWithLagRequestPrivate::AssociateConnectionWithLagRequestPrivate(
     const AssociateConnectionWithLagRequestPrivate &other, AssociateConnectionWithLagRequest * const q)

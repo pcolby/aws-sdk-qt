@@ -27,10 +27,9 @@ namespace WAFRegional {
 
 /*!
  * \class QtAws::WAFRegional::GetChangeTokenRequest
- *
  * \brief The GetChangeTokenRequest class provides an interface for WAFRegional GetChangeToken requests.
  *
- * \ingroup WAFRegional
+ * \inmodule QtAwsWAFRegional
  *
  *  This is the <i>AWS WAF Regional API Reference</i> for using AWS WAF with Elastic Load Balancing (ELB) Application Load
  *  Balancers. The AWS WAF actions and data types listed in the reference are available for protecting Application Load
@@ -44,9 +43,7 @@ namespace WAFRegional {
  */
 
 /*!
- * @brief  Constructs a new GetChangeTokenRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetChangeTokenRequest::GetChangeTokenRequest(const GetChangeTokenRequest &other)
     : WAFRegionalRequest(new GetChangeTokenRequestPrivate(*other.d_func(), this))
@@ -55,7 +52,7 @@ GetChangeTokenRequest::GetChangeTokenRequest(const GetChangeTokenRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetChangeTokenRequest object.
+ * Constructs a GetChangeTokenRequest object.
  */
 GetChangeTokenRequest::GetChangeTokenRequest()
     : WAFRegionalRequest(new GetChangeTokenRequestPrivate(WAFRegionalRequest::GetChangeTokenAction, this))
@@ -73,14 +70,9 @@ bool GetChangeTokenRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetChangeTokenResponse object.
+ * Returns a GetChangeTokenResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetChangeTokenResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WAFRegionalClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetChangeTokenRequest::response(QNetworkReply * const reply) const
 {
@@ -88,20 +80,17 @@ QtAws::Core::AwsAbstractResponse * GetChangeTokenRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::WAFRegional::GetChangeTokenRequestPrivate
+ * \brief The GetChangeTokenRequestPrivate class provides private implementation for GetChangeTokenRequest.
+ * \internal
  *
- * @class  GetChangeTokenRequestPrivate
- *
- * @brief  Private implementation for GetChangeTokenRequest.
+ * \inmodule QtAwsWAFRegional
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetChangeTokenRequestPrivate object.
- *
- * @param  action  WAFRegional action being performed.
- * @param  q       Pointer to this object's public GetChangeTokenRequest instance.
+ * Constructs a GetChangeTokenRequestPrivate object for WAFRegional \a action with,
+ * public implementation \a q.
  */
 GetChangeTokenRequestPrivate::GetChangeTokenRequestPrivate(
     const WAFRegionalRequest::Action action, GetChangeTokenRequest * const q)
@@ -111,15 +100,10 @@ GetChangeTokenRequestPrivate::GetChangeTokenRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetChangeTokenRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetChangeTokenRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetChangeTokenRequest instance.
  */
 GetChangeTokenRequestPrivate::GetChangeTokenRequestPrivate(
     const GetChangeTokenRequestPrivate &other, GetChangeTokenRequest * const q)

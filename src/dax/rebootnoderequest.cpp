@@ -27,10 +27,9 @@ namespace DAX {
 
 /*!
  * \class QtAws::DAX::RebootNodeRequest
- *
  * \brief The RebootNodeRequest class provides an interface for DAX RebootNode requests.
  *
- * \ingroup DAX
+ * \inmodule QtAwsDAX
  *
  *  DAX is a managed caching service engineered for Amazon DynamoDB. DAX dramatically speeds up database reads by caching
  *  frequently-accessed data from DynamoDB, so applications can access that data with sub-millisecond latency. You can
@@ -41,9 +40,7 @@ namespace DAX {
  */
 
 /*!
- * @brief  Constructs a new RebootNodeRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 RebootNodeRequest::RebootNodeRequest(const RebootNodeRequest &other)
     : DAXRequest(new RebootNodeRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ RebootNodeRequest::RebootNodeRequest(const RebootNodeRequest &other)
 }
 
 /*!
- * @brief  Constructs a new RebootNodeRequest object.
+ * Constructs a RebootNodeRequest object.
  */
 RebootNodeRequest::RebootNodeRequest()
     : DAXRequest(new RebootNodeRequestPrivate(DAXRequest::RebootNodeAction, this))
@@ -70,14 +67,9 @@ bool RebootNodeRequest::isValid() const
 
 
 /*!
- * @brief  Construct an RebootNodeResponse object.
+ * Returns a RebootNodeResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An RebootNodeResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DAXClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * RebootNodeRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * RebootNodeRequest::response(QNetworkReply * c
 }
 
 /*!
- * @internal
+ * \class QtAws::DAX::RebootNodeRequestPrivate
+ * \brief The RebootNodeRequestPrivate class provides private implementation for RebootNodeRequest.
+ * \internal
  *
- * @class  RebootNodeRequestPrivate
- *
- * @brief  Private implementation for RebootNodeRequest.
+ * \inmodule QtAwsDAX
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new RebootNodeRequestPrivate object.
- *
- * @param  action  DAX action being performed.
- * @param  q       Pointer to this object's public RebootNodeRequest instance.
+ * Constructs a RebootNodeRequestPrivate object for DAX \a action with,
+ * public implementation \a q.
  */
 RebootNodeRequestPrivate::RebootNodeRequestPrivate(
     const DAXRequest::Action action, RebootNodeRequest * const q)
@@ -108,15 +97,10 @@ RebootNodeRequestPrivate::RebootNodeRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RebootNodeRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the RebootNodeRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public RebootNodeRequest instance.
  */
 RebootNodeRequestPrivate::RebootNodeRequestPrivate(
     const RebootNodeRequestPrivate &other, RebootNodeRequest * const q)

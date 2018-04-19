@@ -218,6 +218,9 @@
 /*!
  * \namespace QtAws::CognitoIdentityProvider
  * \brief The QtAws::CognitoIdentityProvider contains stuff...
+ *
+ * \inmodule QtAwsCognitoIdentityProvider
+ *
  * @todo Move this to a separate template file.
  */
 
@@ -277,7 +280,7 @@ CognitoIdentityProviderClient::CognitoIdentityProviderClient(
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * \a  AwsEndpoint::getEndpoint()
+ * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
 CognitoIdentityProviderClient::CognitoIdentityProviderClient(
     const QUrl &endpoint,

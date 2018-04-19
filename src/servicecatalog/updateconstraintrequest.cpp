@@ -27,10 +27,9 @@ namespace ServiceCatalog {
 
 /*!
  * \class QtAws::ServiceCatalog::UpdateConstraintRequest
- *
  * \brief The UpdateConstraintRequest class provides an interface for ServiceCatalog UpdateConstraint requests.
  *
- * \ingroup ServiceCatalog
+ * \inmodule QtAwsServiceCatalog
  *
  *  <fullname>AWS Service Catalog</fullname>
  * 
@@ -43,9 +42,7 @@ namespace ServiceCatalog {
  */
 
 /*!
- * @brief  Constructs a new UpdateConstraintRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateConstraintRequest::UpdateConstraintRequest(const UpdateConstraintRequest &other)
     : ServiceCatalogRequest(new UpdateConstraintRequestPrivate(*other.d_func(), this))
@@ -54,7 +51,7 @@ UpdateConstraintRequest::UpdateConstraintRequest(const UpdateConstraintRequest &
 }
 
 /*!
- * @brief  Constructs a new UpdateConstraintRequest object.
+ * Constructs a UpdateConstraintRequest object.
  */
 UpdateConstraintRequest::UpdateConstraintRequest()
     : ServiceCatalogRequest(new UpdateConstraintRequestPrivate(ServiceCatalogRequest::UpdateConstraintAction, this))
@@ -72,14 +69,9 @@ bool UpdateConstraintRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateConstraintResponse object.
+ * Returns a UpdateConstraintResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateConstraintResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ServiceCatalogClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateConstraintRequest::response(QNetworkReply * const reply) const
 {
@@ -87,20 +79,17 @@ QtAws::Core::AwsAbstractResponse * UpdateConstraintRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::ServiceCatalog::UpdateConstraintRequestPrivate
+ * \brief The UpdateConstraintRequestPrivate class provides private implementation for UpdateConstraintRequest.
+ * \internal
  *
- * @class  UpdateConstraintRequestPrivate
- *
- * @brief  Private implementation for UpdateConstraintRequest.
+ * \inmodule QtAwsServiceCatalog
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateConstraintRequestPrivate object.
- *
- * @param  action  ServiceCatalog action being performed.
- * @param  q       Pointer to this object's public UpdateConstraintRequest instance.
+ * Constructs a UpdateConstraintRequestPrivate object for ServiceCatalog \a action with,
+ * public implementation \a q.
  */
 UpdateConstraintRequestPrivate::UpdateConstraintRequestPrivate(
     const ServiceCatalogRequest::Action action, UpdateConstraintRequest * const q)
@@ -110,15 +99,10 @@ UpdateConstraintRequestPrivate::UpdateConstraintRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateConstraintRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateConstraintRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateConstraintRequest instance.
  */
 UpdateConstraintRequestPrivate::UpdateConstraintRequestPrivate(
     const UpdateConstraintRequestPrivate &other, UpdateConstraintRequest * const q)

@@ -27,10 +27,9 @@ namespace WorkMail {
 
 /*!
  * \class QtAws::WorkMail::DescribeResourceRequest
- *
  * \brief The DescribeResourceRequest class provides an interface for WorkMail DescribeResource requests.
  *
- * \ingroup WorkMail
+ * \inmodule QtAwsWorkMail
  *
  *  Amazon WorkMail is a secure, managed business email and calendaring service with support for existing desktop and mobile
  *  email clients. You can access your email, contacts, and calendars using Microsoft Outlook, your browser, or their native
@@ -70,9 +69,7 @@ namespace WorkMail {
  */
 
 /*!
- * @brief  Constructs a new DescribeResourceRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeResourceRequest::DescribeResourceRequest(const DescribeResourceRequest &other)
     : WorkMailRequest(new DescribeResourceRequestPrivate(*other.d_func(), this))
@@ -81,7 +78,7 @@ DescribeResourceRequest::DescribeResourceRequest(const DescribeResourceRequest &
 }
 
 /*!
- * @brief  Constructs a new DescribeResourceRequest object.
+ * Constructs a DescribeResourceRequest object.
  */
 DescribeResourceRequest::DescribeResourceRequest()
     : WorkMailRequest(new DescribeResourceRequestPrivate(WorkMailRequest::DescribeResourceAction, this))
@@ -99,14 +96,9 @@ bool DescribeResourceRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeResourceResponse object.
+ * Returns a DescribeResourceResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeResourceResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WorkMailClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeResourceRequest::response(QNetworkReply * const reply) const
 {
@@ -114,20 +106,17 @@ QtAws::Core::AwsAbstractResponse * DescribeResourceRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::WorkMail::DescribeResourceRequestPrivate
+ * \brief The DescribeResourceRequestPrivate class provides private implementation for DescribeResourceRequest.
+ * \internal
  *
- * @class  DescribeResourceRequestPrivate
- *
- * @brief  Private implementation for DescribeResourceRequest.
+ * \inmodule QtAwsWorkMail
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeResourceRequestPrivate object.
- *
- * @param  action  WorkMail action being performed.
- * @param  q       Pointer to this object's public DescribeResourceRequest instance.
+ * Constructs a DescribeResourceRequestPrivate object for WorkMail \a action with,
+ * public implementation \a q.
  */
 DescribeResourceRequestPrivate::DescribeResourceRequestPrivate(
     const WorkMailRequest::Action action, DescribeResourceRequest * const q)
@@ -137,15 +126,10 @@ DescribeResourceRequestPrivate::DescribeResourceRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeResourceRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeResourceRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeResourceRequest instance.
  */
 DescribeResourceRequestPrivate::DescribeResourceRequestPrivate(
     const DescribeResourceRequestPrivate &other, DescribeResourceRequest * const q)

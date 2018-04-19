@@ -27,19 +27,16 @@ namespace MTurk {
 
 /*!
  * \class QtAws::MTurk::CreateHITTypeRequest
- *
  * \brief The CreateHITTypeRequest class provides an interface for MTurk CreateHITType requests.
  *
- * \ingroup MTurk
+ * \inmodule QtAwsMTurk
  *
  *
  * \sa MTurkClient::createHITType
  */
 
 /*!
- * @brief  Constructs a new CreateHITTypeRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateHITTypeRequest::CreateHITTypeRequest(const CreateHITTypeRequest &other)
     : MTurkRequest(new CreateHITTypeRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ CreateHITTypeRequest::CreateHITTypeRequest(const CreateHITTypeRequest &other)
 }
 
 /*!
- * @brief  Constructs a new CreateHITTypeRequest object.
+ * Constructs a CreateHITTypeRequest object.
  */
 CreateHITTypeRequest::CreateHITTypeRequest()
     : MTurkRequest(new CreateHITTypeRequestPrivate(MTurkRequest::CreateHITTypeAction, this))
@@ -66,14 +63,9 @@ bool CreateHITTypeRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateHITTypeResponse object.
+ * Returns a CreateHITTypeResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateHITTypeResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MTurkClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateHITTypeRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * CreateHITTypeRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::MTurk::CreateHITTypeRequestPrivate
+ * \brief The CreateHITTypeRequestPrivate class provides private implementation for CreateHITTypeRequest.
+ * \internal
  *
- * @class  CreateHITTypeRequestPrivate
- *
- * @brief  Private implementation for CreateHITTypeRequest.
+ * \inmodule QtAwsMTurk
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateHITTypeRequestPrivate object.
- *
- * @param  action  MTurk action being performed.
- * @param  q       Pointer to this object's public CreateHITTypeRequest instance.
+ * Constructs a CreateHITTypeRequestPrivate object for MTurk \a action with,
+ * public implementation \a q.
  */
 CreateHITTypeRequestPrivate::CreateHITTypeRequestPrivate(
     const MTurkRequest::Action action, CreateHITTypeRequest * const q)
@@ -104,15 +93,10 @@ CreateHITTypeRequestPrivate::CreateHITTypeRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateHITTypeRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateHITTypeRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateHITTypeRequest instance.
  */
 CreateHITTypeRequestPrivate::CreateHITTypeRequestPrivate(
     const CreateHITTypeRequestPrivate &other, CreateHITTypeRequest * const q)

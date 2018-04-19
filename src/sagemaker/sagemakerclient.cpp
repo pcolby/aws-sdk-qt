@@ -96,6 +96,9 @@
 /*!
  * \namespace QtAws::SageMaker
  * \brief The QtAws::SageMaker contains stuff...
+ *
+ * \inmodule QtAwsSageMaker
+ *
  * @todo Move this to a separate template file.
  */
 
@@ -145,7 +148,7 @@ SageMakerClient::SageMakerClient(
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * \a  AwsEndpoint::getEndpoint()
+ * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
 SageMakerClient::SageMakerClient(
     const QUrl &endpoint,

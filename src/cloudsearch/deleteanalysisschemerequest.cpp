@@ -27,10 +27,9 @@ namespace CloudSearch {
 
 /*!
  * \class QtAws::CloudSearch::DeleteAnalysisSchemeRequest
- *
  * \brief The DeleteAnalysisSchemeRequest class provides an interface for CloudSearch DeleteAnalysisScheme requests.
  *
- * \ingroup CloudSearch
+ * \inmodule QtAwsCloudSearch
  *
  *  <fullname>Amazon CloudSearch Configuration Service</fullname>
  * 
@@ -48,9 +47,7 @@ namespace CloudSearch {
  */
 
 /*!
- * @brief  Constructs a new DeleteAnalysisSchemeRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteAnalysisSchemeRequest::DeleteAnalysisSchemeRequest(const DeleteAnalysisSchemeRequest &other)
     : CloudSearchRequest(new DeleteAnalysisSchemeRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ DeleteAnalysisSchemeRequest::DeleteAnalysisSchemeRequest(const DeleteAnalysisSch
 }
 
 /*!
- * @brief  Constructs a new DeleteAnalysisSchemeRequest object.
+ * Constructs a DeleteAnalysisSchemeRequest object.
  */
 DeleteAnalysisSchemeRequest::DeleteAnalysisSchemeRequest()
     : CloudSearchRequest(new DeleteAnalysisSchemeRequestPrivate(CloudSearchRequest::DeleteAnalysisSchemeAction, this))
@@ -77,14 +74,9 @@ bool DeleteAnalysisSchemeRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteAnalysisSchemeResponse object.
+ * Returns a DeleteAnalysisSchemeResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteAnalysisSchemeResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudSearchClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteAnalysisSchemeRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * DeleteAnalysisSchemeRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudSearch::DeleteAnalysisSchemeRequestPrivate
+ * \brief The DeleteAnalysisSchemeRequestPrivate class provides private implementation for DeleteAnalysisSchemeRequest.
+ * \internal
  *
- * @class  DeleteAnalysisSchemeRequestPrivate
- *
- * @brief  Private implementation for DeleteAnalysisSchemeRequest.
+ * \inmodule QtAwsCloudSearch
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteAnalysisSchemeRequestPrivate object.
- *
- * @param  action  CloudSearch action being performed.
- * @param  q       Pointer to this object's public DeleteAnalysisSchemeRequest instance.
+ * Constructs a DeleteAnalysisSchemeRequestPrivate object for CloudSearch \a action with,
+ * public implementation \a q.
  */
 DeleteAnalysisSchemeRequestPrivate::DeleteAnalysisSchemeRequestPrivate(
     const CloudSearchRequest::Action action, DeleteAnalysisSchemeRequest * const q)
@@ -115,15 +104,10 @@ DeleteAnalysisSchemeRequestPrivate::DeleteAnalysisSchemeRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteAnalysisSchemeRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteAnalysisSchemeRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteAnalysisSchemeRequest instance.
  */
 DeleteAnalysisSchemeRequestPrivate::DeleteAnalysisSchemeRequestPrivate(
     const DeleteAnalysisSchemeRequestPrivate &other, DeleteAnalysisSchemeRequest * const q)

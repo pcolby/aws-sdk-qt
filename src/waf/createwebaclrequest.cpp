@@ -27,10 +27,9 @@ namespace WAF {
 
 /*!
  * \class QtAws::WAF::CreateWebACLRequest
- *
  * \brief The CreateWebACLRequest class provides an interface for WAF CreateWebACL requests.
  *
- * \ingroup WAF
+ * \inmodule QtAwsWAF
  *
  *  This is the <i>AWS WAF API Reference</i> for using AWS WAF with Amazon CloudFront. The AWS WAF actions and data types
  *  listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data
@@ -42,9 +41,7 @@ namespace WAF {
  */
 
 /*!
- * @brief  Constructs a new CreateWebACLRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateWebACLRequest::CreateWebACLRequest(const CreateWebACLRequest &other)
     : WAFRequest(new CreateWebACLRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ CreateWebACLRequest::CreateWebACLRequest(const CreateWebACLRequest &other)
 }
 
 /*!
- * @brief  Constructs a new CreateWebACLRequest object.
+ * Constructs a CreateWebACLRequest object.
  */
 CreateWebACLRequest::CreateWebACLRequest()
     : WAFRequest(new CreateWebACLRequestPrivate(WAFRequest::CreateWebACLAction, this))
@@ -71,14 +68,9 @@ bool CreateWebACLRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateWebACLResponse object.
+ * Returns a CreateWebACLResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateWebACLResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WAFClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateWebACLRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * CreateWebACLRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::WAF::CreateWebACLRequestPrivate
+ * \brief The CreateWebACLRequestPrivate class provides private implementation for CreateWebACLRequest.
+ * \internal
  *
- * @class  CreateWebACLRequestPrivate
- *
- * @brief  Private implementation for CreateWebACLRequest.
+ * \inmodule QtAwsWAF
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateWebACLRequestPrivate object.
- *
- * @param  action  WAF action being performed.
- * @param  q       Pointer to this object's public CreateWebACLRequest instance.
+ * Constructs a CreateWebACLRequestPrivate object for WAF \a action with,
+ * public implementation \a q.
  */
 CreateWebACLRequestPrivate::CreateWebACLRequestPrivate(
     const WAFRequest::Action action, CreateWebACLRequest * const q)
@@ -109,15 +98,10 @@ CreateWebACLRequestPrivate::CreateWebACLRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateWebACLRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateWebACLRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateWebACLRequest instance.
  */
 CreateWebACLRequestPrivate::CreateWebACLRequestPrivate(
     const CreateWebACLRequestPrivate &other, CreateWebACLRequest * const q)

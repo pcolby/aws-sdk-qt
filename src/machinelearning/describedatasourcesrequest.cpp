@@ -27,19 +27,16 @@ namespace MachineLearning {
 
 /*!
  * \class QtAws::MachineLearning::DescribeDataSourcesRequest
- *
  * \brief The DescribeDataSourcesRequest class provides an interface for MachineLearning DescribeDataSources requests.
  *
- * \ingroup MachineLearning
+ * \inmodule QtAwsMachineLearning
  *
  *
  * \sa MachineLearningClient::describeDataSources
  */
 
 /*!
- * @brief  Constructs a new DescribeDataSourcesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeDataSourcesRequest::DescribeDataSourcesRequest(const DescribeDataSourcesRequest &other)
     : MachineLearningRequest(new DescribeDataSourcesRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ DescribeDataSourcesRequest::DescribeDataSourcesRequest(const DescribeDataSources
 }
 
 /*!
- * @brief  Constructs a new DescribeDataSourcesRequest object.
+ * Constructs a DescribeDataSourcesRequest object.
  */
 DescribeDataSourcesRequest::DescribeDataSourcesRequest()
     : MachineLearningRequest(new DescribeDataSourcesRequestPrivate(MachineLearningRequest::DescribeDataSourcesAction, this))
@@ -66,14 +63,9 @@ bool DescribeDataSourcesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeDataSourcesResponse object.
+ * Returns a DescribeDataSourcesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeDataSourcesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MachineLearningClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeDataSourcesRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * DescribeDataSourcesRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::MachineLearning::DescribeDataSourcesRequestPrivate
+ * \brief The DescribeDataSourcesRequestPrivate class provides private implementation for DescribeDataSourcesRequest.
+ * \internal
  *
- * @class  DescribeDataSourcesRequestPrivate
- *
- * @brief  Private implementation for DescribeDataSourcesRequest.
+ * \inmodule QtAwsMachineLearning
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeDataSourcesRequestPrivate object.
- *
- * @param  action  MachineLearning action being performed.
- * @param  q       Pointer to this object's public DescribeDataSourcesRequest instance.
+ * Constructs a DescribeDataSourcesRequestPrivate object for MachineLearning \a action with,
+ * public implementation \a q.
  */
 DescribeDataSourcesRequestPrivate::DescribeDataSourcesRequestPrivate(
     const MachineLearningRequest::Action action, DescribeDataSourcesRequest * const q)
@@ -104,15 +93,10 @@ DescribeDataSourcesRequestPrivate::DescribeDataSourcesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeDataSourcesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeDataSourcesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeDataSourcesRequest instance.
  */
 DescribeDataSourcesRequestPrivate::DescribeDataSourcesRequestPrivate(
     const DescribeDataSourcesRequestPrivate &other, DescribeDataSourcesRequest * const q)

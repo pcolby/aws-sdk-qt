@@ -27,10 +27,9 @@ namespace ConfigService {
 
 /*!
  * \class QtAws::ConfigService::PutEvaluationsRequest
- *
  * \brief The PutEvaluationsRequest class provides an interface for ConfigService PutEvaluations requests.
  *
- * \ingroup ConfigService
+ * \inmodule QtAwsConfigService
  *
  *  <fullname>AWS Config</fullname>
  * 
@@ -60,9 +59,7 @@ namespace ConfigService {
  */
 
 /*!
- * @brief  Constructs a new PutEvaluationsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 PutEvaluationsRequest::PutEvaluationsRequest(const PutEvaluationsRequest &other)
     : ConfigServiceRequest(new PutEvaluationsRequestPrivate(*other.d_func(), this))
@@ -71,7 +68,7 @@ PutEvaluationsRequest::PutEvaluationsRequest(const PutEvaluationsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new PutEvaluationsRequest object.
+ * Constructs a PutEvaluationsRequest object.
  */
 PutEvaluationsRequest::PutEvaluationsRequest()
     : ConfigServiceRequest(new PutEvaluationsRequestPrivate(ConfigServiceRequest::PutEvaluationsAction, this))
@@ -89,14 +86,9 @@ bool PutEvaluationsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an PutEvaluationsResponse object.
+ * Returns a PutEvaluationsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An PutEvaluationsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ConfigServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * PutEvaluationsRequest::response(QNetworkReply * const reply) const
 {
@@ -104,20 +96,17 @@ QtAws::Core::AwsAbstractResponse * PutEvaluationsRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::ConfigService::PutEvaluationsRequestPrivate
+ * \brief The PutEvaluationsRequestPrivate class provides private implementation for PutEvaluationsRequest.
+ * \internal
  *
- * @class  PutEvaluationsRequestPrivate
- *
- * @brief  Private implementation for PutEvaluationsRequest.
+ * \inmodule QtAwsConfigService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new PutEvaluationsRequestPrivate object.
- *
- * @param  action  ConfigService action being performed.
- * @param  q       Pointer to this object's public PutEvaluationsRequest instance.
+ * Constructs a PutEvaluationsRequestPrivate object for ConfigService \a action with,
+ * public implementation \a q.
  */
 PutEvaluationsRequestPrivate::PutEvaluationsRequestPrivate(
     const ConfigServiceRequest::Action action, PutEvaluationsRequest * const q)
@@ -127,15 +116,10 @@ PutEvaluationsRequestPrivate::PutEvaluationsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutEvaluationsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the PutEvaluationsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public PutEvaluationsRequest instance.
  */
 PutEvaluationsRequestPrivate::PutEvaluationsRequestPrivate(
     const PutEvaluationsRequestPrivate &other, PutEvaluationsRequest * const q)

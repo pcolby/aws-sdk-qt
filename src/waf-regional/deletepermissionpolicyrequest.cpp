@@ -27,10 +27,9 @@ namespace WAFRegional {
 
 /*!
  * \class QtAws::WAFRegional::DeletePermissionPolicyRequest
- *
  * \brief The DeletePermissionPolicyRequest class provides an interface for WAFRegional DeletePermissionPolicy requests.
  *
- * \ingroup WAFRegional
+ * \inmodule QtAwsWAFRegional
  *
  *  This is the <i>AWS WAF Regional API Reference</i> for using AWS WAF with Elastic Load Balancing (ELB) Application Load
  *  Balancers. The AWS WAF actions and data types listed in the reference are available for protecting Application Load
@@ -44,9 +43,7 @@ namespace WAFRegional {
  */
 
 /*!
- * @brief  Constructs a new DeletePermissionPolicyRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeletePermissionPolicyRequest::DeletePermissionPolicyRequest(const DeletePermissionPolicyRequest &other)
     : WAFRegionalRequest(new DeletePermissionPolicyRequestPrivate(*other.d_func(), this))
@@ -55,7 +52,7 @@ DeletePermissionPolicyRequest::DeletePermissionPolicyRequest(const DeletePermiss
 }
 
 /*!
- * @brief  Constructs a new DeletePermissionPolicyRequest object.
+ * Constructs a DeletePermissionPolicyRequest object.
  */
 DeletePermissionPolicyRequest::DeletePermissionPolicyRequest()
     : WAFRegionalRequest(new DeletePermissionPolicyRequestPrivate(WAFRegionalRequest::DeletePermissionPolicyAction, this))
@@ -73,14 +70,9 @@ bool DeletePermissionPolicyRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeletePermissionPolicyResponse object.
+ * Returns a DeletePermissionPolicyResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeletePermissionPolicyResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WAFRegionalClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeletePermissionPolicyRequest::response(QNetworkReply * const reply) const
 {
@@ -88,20 +80,17 @@ QtAws::Core::AwsAbstractResponse * DeletePermissionPolicyRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::WAFRegional::DeletePermissionPolicyRequestPrivate
+ * \brief The DeletePermissionPolicyRequestPrivate class provides private implementation for DeletePermissionPolicyRequest.
+ * \internal
  *
- * @class  DeletePermissionPolicyRequestPrivate
- *
- * @brief  Private implementation for DeletePermissionPolicyRequest.
+ * \inmodule QtAwsWAFRegional
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeletePermissionPolicyRequestPrivate object.
- *
- * @param  action  WAFRegional action being performed.
- * @param  q       Pointer to this object's public DeletePermissionPolicyRequest instance.
+ * Constructs a DeletePermissionPolicyRequestPrivate object for WAFRegional \a action with,
+ * public implementation \a q.
  */
 DeletePermissionPolicyRequestPrivate::DeletePermissionPolicyRequestPrivate(
     const WAFRegionalRequest::Action action, DeletePermissionPolicyRequest * const q)
@@ -111,15 +100,10 @@ DeletePermissionPolicyRequestPrivate::DeletePermissionPolicyRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeletePermissionPolicyRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeletePermissionPolicyRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeletePermissionPolicyRequest instance.
  */
 DeletePermissionPolicyRequestPrivate::DeletePermissionPolicyRequestPrivate(
     const DeletePermissionPolicyRequestPrivate &other, DeletePermissionPolicyRequest * const q)

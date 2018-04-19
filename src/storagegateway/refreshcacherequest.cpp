@@ -27,10 +27,9 @@ namespace StorageGateway {
 
 /*!
  * \class QtAws::StorageGateway::RefreshCacheRequest
- *
  * \brief The RefreshCacheRequest class provides an interface for StorageGateway RefreshCache requests.
  *
- * \ingroup StorageGateway
+ * \inmodule QtAwsStorageGateway
  *
  *  <fullname>AWS Storage Gateway Service</fullname>
  * 
@@ -106,9 +105,7 @@ namespace StorageGateway {
  */
 
 /*!
- * @brief  Constructs a new RefreshCacheRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 RefreshCacheRequest::RefreshCacheRequest(const RefreshCacheRequest &other)
     : StorageGatewayRequest(new RefreshCacheRequestPrivate(*other.d_func(), this))
@@ -117,7 +114,7 @@ RefreshCacheRequest::RefreshCacheRequest(const RefreshCacheRequest &other)
 }
 
 /*!
- * @brief  Constructs a new RefreshCacheRequest object.
+ * Constructs a RefreshCacheRequest object.
  */
 RefreshCacheRequest::RefreshCacheRequest()
     : StorageGatewayRequest(new RefreshCacheRequestPrivate(StorageGatewayRequest::RefreshCacheAction, this))
@@ -135,14 +132,9 @@ bool RefreshCacheRequest::isValid() const
 
 
 /*!
- * @brief  Construct an RefreshCacheResponse object.
+ * Returns a RefreshCacheResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An RefreshCacheResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  StorageGatewayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * RefreshCacheRequest::response(QNetworkReply * const reply) const
 {
@@ -150,20 +142,17 @@ QtAws::Core::AwsAbstractResponse * RefreshCacheRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::StorageGateway::RefreshCacheRequestPrivate
+ * \brief The RefreshCacheRequestPrivate class provides private implementation for RefreshCacheRequest.
+ * \internal
  *
- * @class  RefreshCacheRequestPrivate
- *
- * @brief  Private implementation for RefreshCacheRequest.
+ * \inmodule QtAwsStorageGateway
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new RefreshCacheRequestPrivate object.
- *
- * @param  action  StorageGateway action being performed.
- * @param  q       Pointer to this object's public RefreshCacheRequest instance.
+ * Constructs a RefreshCacheRequestPrivate object for StorageGateway \a action with,
+ * public implementation \a q.
  */
 RefreshCacheRequestPrivate::RefreshCacheRequestPrivate(
     const StorageGatewayRequest::Action action, RefreshCacheRequest * const q)
@@ -173,15 +162,10 @@ RefreshCacheRequestPrivate::RefreshCacheRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RefreshCacheRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the RefreshCacheRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public RefreshCacheRequest instance.
  */
 RefreshCacheRequestPrivate::RefreshCacheRequestPrivate(
     const RefreshCacheRequestPrivate &other, RefreshCacheRequest * const q)

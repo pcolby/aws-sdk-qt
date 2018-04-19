@@ -27,19 +27,16 @@ namespace Route53 {
 
 /*!
  * \class QtAws::Route53::ListResourceRecordSetsRequest
- *
  * \brief The ListResourceRecordSetsRequest class provides an interface for Route53 ListResourceRecordSets requests.
  *
- * \ingroup Route53
+ * \inmodule QtAwsRoute53
  *
  *
  * \sa Route53Client::listResourceRecordSets
  */
 
 /*!
- * @brief  Constructs a new ListResourceRecordSetsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListResourceRecordSetsRequest::ListResourceRecordSetsRequest(const ListResourceRecordSetsRequest &other)
     : Route53Request(new ListResourceRecordSetsRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ ListResourceRecordSetsRequest::ListResourceRecordSetsRequest(const ListResourceR
 }
 
 /*!
- * @brief  Constructs a new ListResourceRecordSetsRequest object.
+ * Constructs a ListResourceRecordSetsRequest object.
  */
 ListResourceRecordSetsRequest::ListResourceRecordSetsRequest()
     : Route53Request(new ListResourceRecordSetsRequestPrivate(Route53Request::ListResourceRecordSetsAction, this))
@@ -66,14 +63,9 @@ bool ListResourceRecordSetsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListResourceRecordSetsResponse object.
+ * Returns a ListResourceRecordSetsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListResourceRecordSetsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  Route53Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListResourceRecordSetsRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * ListResourceRecordSetsRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::Route53::ListResourceRecordSetsRequestPrivate
+ * \brief The ListResourceRecordSetsRequestPrivate class provides private implementation for ListResourceRecordSetsRequest.
+ * \internal
  *
- * @class  ListResourceRecordSetsRequestPrivate
- *
- * @brief  Private implementation for ListResourceRecordSetsRequest.
+ * \inmodule QtAwsRoute53
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListResourceRecordSetsRequestPrivate object.
- *
- * @param  action  Route53 action being performed.
- * @param  q       Pointer to this object's public ListResourceRecordSetsRequest instance.
+ * Constructs a ListResourceRecordSetsRequestPrivate object for Route53 \a action with,
+ * public implementation \a q.
  */
 ListResourceRecordSetsRequestPrivate::ListResourceRecordSetsRequestPrivate(
     const Route53Request::Action action, ListResourceRecordSetsRequest * const q)
@@ -104,15 +93,10 @@ ListResourceRecordSetsRequestPrivate::ListResourceRecordSetsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListResourceRecordSetsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListResourceRecordSetsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListResourceRecordSetsRequest instance.
  */
 ListResourceRecordSetsRequestPrivate::ListResourceRecordSetsRequestPrivate(
     const ListResourceRecordSetsRequestPrivate &other, ListResourceRecordSetsRequest * const q)

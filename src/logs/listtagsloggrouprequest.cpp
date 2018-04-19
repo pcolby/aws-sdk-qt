@@ -27,10 +27,9 @@ namespace CloudWatchLogs {
 
 /*!
  * \class QtAws::CloudWatchLogs::ListTagsLogGroupRequest
- *
  * \brief The ListTagsLogGroupRequest class provides an interface for CloudWatchLogs ListTagsLogGroup requests.
  *
- * \ingroup CloudWatchLogs
+ * \inmodule QtAwsCloudWatchLogs
  *
  *  You can use Amazon CloudWatch Logs to monitor, store, and access your log files from Amazon EC2 instances, AWS
  *  CloudTrail, or other sources. You can then retrieve the associated log data from CloudWatch Logs using the CloudWatch
@@ -66,9 +65,7 @@ namespace CloudWatchLogs {
  */
 
 /*!
- * @brief  Constructs a new ListTagsLogGroupRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListTagsLogGroupRequest::ListTagsLogGroupRequest(const ListTagsLogGroupRequest &other)
     : CloudWatchLogsRequest(new ListTagsLogGroupRequestPrivate(*other.d_func(), this))
@@ -77,7 +74,7 @@ ListTagsLogGroupRequest::ListTagsLogGroupRequest(const ListTagsLogGroupRequest &
 }
 
 /*!
- * @brief  Constructs a new ListTagsLogGroupRequest object.
+ * Constructs a ListTagsLogGroupRequest object.
  */
 ListTagsLogGroupRequest::ListTagsLogGroupRequest()
     : CloudWatchLogsRequest(new ListTagsLogGroupRequestPrivate(CloudWatchLogsRequest::ListTagsLogGroupAction, this))
@@ -95,14 +92,9 @@ bool ListTagsLogGroupRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListTagsLogGroupResponse object.
+ * Returns a ListTagsLogGroupResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListTagsLogGroupResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudWatchLogsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListTagsLogGroupRequest::response(QNetworkReply * const reply) const
 {
@@ -110,20 +102,17 @@ QtAws::Core::AwsAbstractResponse * ListTagsLogGroupRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudWatchLogs::ListTagsLogGroupRequestPrivate
+ * \brief The ListTagsLogGroupRequestPrivate class provides private implementation for ListTagsLogGroupRequest.
+ * \internal
  *
- * @class  ListTagsLogGroupRequestPrivate
- *
- * @brief  Private implementation for ListTagsLogGroupRequest.
+ * \inmodule QtAwsCloudWatchLogs
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListTagsLogGroupRequestPrivate object.
- *
- * @param  action  CloudWatchLogs action being performed.
- * @param  q       Pointer to this object's public ListTagsLogGroupRequest instance.
+ * Constructs a ListTagsLogGroupRequestPrivate object for CloudWatchLogs \a action with,
+ * public implementation \a q.
  */
 ListTagsLogGroupRequestPrivate::ListTagsLogGroupRequestPrivate(
     const CloudWatchLogsRequest::Action action, ListTagsLogGroupRequest * const q)
@@ -133,15 +122,10 @@ ListTagsLogGroupRequestPrivate::ListTagsLogGroupRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListTagsLogGroupRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListTagsLogGroupRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListTagsLogGroupRequest instance.
  */
 ListTagsLogGroupRequestPrivate::ListTagsLogGroupRequestPrivate(
     const ListTagsLogGroupRequestPrivate &other, ListTagsLogGroupRequest * const q)

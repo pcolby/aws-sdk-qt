@@ -27,10 +27,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::StartDBInstanceRequest
- *
  * \brief The StartDBInstanceRequest class provides an interface for RDS StartDBInstance requests.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -101,9 +100,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new StartDBInstanceRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 StartDBInstanceRequest::StartDBInstanceRequest(const StartDBInstanceRequest &other)
     : RDSRequest(new StartDBInstanceRequestPrivate(*other.d_func(), this))
@@ -112,7 +109,7 @@ StartDBInstanceRequest::StartDBInstanceRequest(const StartDBInstanceRequest &oth
 }
 
 /*!
- * @brief  Constructs a new StartDBInstanceRequest object.
+ * Constructs a StartDBInstanceRequest object.
  */
 StartDBInstanceRequest::StartDBInstanceRequest()
     : RDSRequest(new StartDBInstanceRequestPrivate(RDSRequest::StartDBInstanceAction, this))
@@ -130,14 +127,9 @@ bool StartDBInstanceRequest::isValid() const
 
 
 /*!
- * @brief  Construct an StartDBInstanceResponse object.
+ * Returns a StartDBInstanceResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An StartDBInstanceResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RDSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * StartDBInstanceRequest::response(QNetworkReply * const reply) const
 {
@@ -145,20 +137,17 @@ QtAws::Core::AwsAbstractResponse * StartDBInstanceRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::RDS::StartDBInstanceRequestPrivate
+ * \brief The StartDBInstanceRequestPrivate class provides private implementation for StartDBInstanceRequest.
+ * \internal
  *
- * @class  StartDBInstanceRequestPrivate
- *
- * @brief  Private implementation for StartDBInstanceRequest.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new StartDBInstanceRequestPrivate object.
- *
- * @param  action  RDS action being performed.
- * @param  q       Pointer to this object's public StartDBInstanceRequest instance.
+ * Constructs a StartDBInstanceRequestPrivate object for RDS \a action with,
+ * public implementation \a q.
  */
 StartDBInstanceRequestPrivate::StartDBInstanceRequestPrivate(
     const RDSRequest::Action action, StartDBInstanceRequest * const q)
@@ -168,15 +157,10 @@ StartDBInstanceRequestPrivate::StartDBInstanceRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StartDBInstanceRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the StartDBInstanceRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public StartDBInstanceRequest instance.
  */
 StartDBInstanceRequestPrivate::StartDBInstanceRequestPrivate(
     const StartDBInstanceRequestPrivate &other, StartDBInstanceRequest * const q)

@@ -25,16 +25,41 @@ namespace SQS {
 
 /*!
  * \class QtAws::SQS::SQSRequest
- *
  * \brief The SQSRequest class provides an interface for SQS requests.
  *
- * \ingroup SQS
+ * \inmodule QtAwsSQS
  */
 
 /*!
- * @brief  Constructs a new SQSRequest object.
+ * \enum SQSRequest::Action
  *
- * @param  action  The SQS action to request.
+ * This enum describes the actions that can be performed as SQS
+ * requests.
+ *
+ * \value AddPermissionAction SQS AddPermission action.
+ * \value ChangeMessageVisibilityAction SQS ChangeMessageVisibility action.
+ * \value ChangeMessageVisibilityBatchAction SQS ChangeMessageVisibilityBatch action.
+ * \value CreateQueueAction SQS CreateQueue action.
+ * \value DeleteMessageAction SQS DeleteMessage action.
+ * \value DeleteMessageBatchAction SQS DeleteMessageBatch action.
+ * \value DeleteQueueAction SQS DeleteQueue action.
+ * \value GetQueueAttributesAction SQS GetQueueAttributes action.
+ * \value GetQueueUrlAction SQS GetQueueUrl action.
+ * \value ListDeadLetterSourceQueuesAction SQS ListDeadLetterSourceQueues action.
+ * \value ListQueueTagsAction SQS ListQueueTags action.
+ * \value ListQueuesAction SQS ListQueues action.
+ * \value PurgeQueueAction SQS PurgeQueue action.
+ * \value ReceiveMessageAction SQS ReceiveMessage action.
+ * \value RemovePermissionAction SQS RemovePermission action.
+ * \value SendMessageAction SQS SendMessage action.
+ * \value SendMessageBatchAction SQS SendMessageBatch action.
+ * \value SetQueueAttributesAction SQS SetQueueAttributes action.
+ * \value TagQueueAction SQS TagQueue action.
+ * \value UntagQueueAction SQS UntagQueue action.
+ */
+
+/*!
+ * Constructs a[n] SQSRequest object for SQS \a action.
  */
 SQSRequest::SQSRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new SQSRequestPrivate(action, this))
@@ -43,9 +68,7 @@ SQSRequest::SQSRequest(const Action action)
 }
 
 /*!
- * @brief  Constructs a new SQSRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 SQSRequest::SQSRequest(const SQSRequest &other)
     : QtAws::Core::AwsAbstractRequest(new SQSRequestPrivate(*other.d_func(), this))
@@ -54,13 +77,7 @@ SQSRequest::SQSRequest(const SQSRequest &other)
 }
 
 /*!
- * @brief  Assignment operator.
- *
- * Assigns \a other to \c this.
- *
- * @param  other  Instance to copy.
- *
- * @return  A reference to \c this.
+ * Sets the SQSRequest object to be equal to \a other.
  */
 SQSRequest& SQSRequest::operator=(const SQSRequest &other)
 {
@@ -72,14 +89,10 @@ SQSRequest& SQSRequest::operator=(const SQSRequest &other)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SQSRequest object.
+ * Constructs aa SQSRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from SQSRequestPrivate.
- *
- * @param  d  Pointer to private data (aka D-Pointer).
  */
 SQSRequest::SQSRequest(SQSRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
@@ -87,7 +100,7 @@ SQSRequest::SQSRequest(SQSRequestPrivate * const d) : QtAws::Core::AwsAbstractRe
 }
 
 /*!
- * \brief Returns the SQS action to be performed by this request.
+ * Returns the SQS action to be performed by this request.
  */
 SQSRequest::Action SQSRequest::action() const
 {
@@ -96,7 +109,7 @@ SQSRequest::Action SQSRequest::action() const
 }
 
 /*!
- * \brief Returns the name of the SQS action to be performed by this request.
+ * Returns the name of the SQS action to be performed by this request.
  */
 QString SQSRequest::actionString() const
 {
@@ -104,7 +117,7 @@ QString SQSRequest::actionString() const
 }
 
 /*!
- * \brief Returns the SQS API version implemented by this request.
+ * Returns the SQS API version implemented by this request.
  */
 QString SQSRequest::apiVersion() const
 {
@@ -113,7 +126,7 @@ QString SQSRequest::apiVersion() const
 }
 
 /*!
- * @brief Set the SQS action to be performed by this request to \a action.
+ * Sets the SQS action to be performed by this request to \a action.
  */
 void SQSRequest::setAction(const Action action)
 {
@@ -122,7 +135,7 @@ void SQSRequest::setAction(const Action action)
 }
 
 /*!
- * Set the SQS API version to include in this request to \a version.
+ * Sets the SQS API version to include in this request to \a version.
  */
 void SQSRequest::setApiVersion(const QString &version)
 {
@@ -131,7 +144,7 @@ void SQSRequest::setApiVersion(const QString &version)
 }
 
 /*!
- * \brief Returns \c true if this request is the same as \a other.
+ * Returns \c true if this request is equal to \a other; \c false otherwise.
  *
  * Note, most derived *Request classes do not need to provider their own
  * implementations of this function, since most such request classes rely on
@@ -146,8 +159,8 @@ bool SQSRequest::operator==(const SQSRequest &other) const
             (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
-/*!
- * @brief  Check if \a queueName is a valid SQS queue name.
+/*
+ * Returns \c tue if \a queueName is a valid SQS queue name.
  *
  * @par From SQS FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
@@ -166,9 +179,8 @@ bool SQSRequest::operator==(const SQSRequest &other) const
 }*/
 
 /*!
- * \brief Removes the a \a name parameter from this request.
- *
- * Returns the count of paramters removed (typically \c 0 or \c 1).
+ * Removes the a \a name parameter from the request, then returns the number of
+ * paramters removed (typically \c 0 or \c 1).
  */
 int SQSRequest::clearParameter(const QString &name)
 {
@@ -177,7 +189,7 @@ int SQSRequest::clearParameter(const QString &name)
 }
 
 /*!
- * \brief Removes all parameters from this request.
+ * Removes all parameters from the request.
  */
 void SQSRequest::clearParameters()
 {
@@ -186,7 +198,7 @@ void SQSRequest::clearParameters()
 }
 
 /*!
- * \brief Returns the value of the \n name pararemter if set, otherwise \a defaultValue.
+ * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
 QVariant SQSRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
@@ -195,7 +207,7 @@ QVariant SQSRequest::parameter(const QString &name, const QVariant &defaultValue
 }
 
 /*!
- * \brief Returns a map of parameters included in this request.
+ * Returns the parameters included in this request.
  */
 const QVariantMap &SQSRequest::parameters() const
 {
@@ -204,7 +216,7 @@ const QVariantMap &SQSRequest::parameters() const
 }
 
 /*!
- * \brief Sets the \a name parameter to \a value.
+ * Sets the \a name parameter to \a value.
  */
 void SQSRequest::setParameter(const QString &name, const QVariant &value)
 {
@@ -213,9 +225,8 @@ void SQSRequest::setParameter(const QString &name, const QVariant &value)
 }
 
 /*!
- * \brief Sets the map of paramters for this request to \a parameters.
- *
- * Any request parameters set previously will be discarded.
+ * Sets the paramters for this request to \a parameters. Any request parameters
+ * set previously will be discarded.
  */
 void SQSRequest::setParameters(const QVariantMap &parameters)
 {
@@ -224,11 +235,12 @@ void SQSRequest::setParameters(const QVariantMap &parameters)
 }
 
 /*!
- * \brief Returns a network request for this SQS request using the given \a endpoint.
+ * Returns a network request for the SQS request using the given
+ * \a endpoint.
  *
- * This SQS implementation builds request URLs by combining the common query
- * parameters (such as Action and Version), with any that have been added (via
- * setParameter) by child classes.
+ * This SQS implementation builds request URLs by combining the
+ * common query parameters (such as Action and Version), with any that have
+ * been added (via setParameter) by child classes.
  */
 QNetworkRequest SQSRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -239,17 +251,16 @@ QNetworkRequest SQSRequest::unsignedRequest(const QUrl &endpoint) const
 }
 
 /*!
+ * \class QtAws::SQS::SQSRequestPrivate
+ * \brief The SQSRequestPrivate class provides private implementation for SQSRequest.
  * \internal
  *
- * \class  SQSRequestPrivate
- *
- * \brief  Private implementation for SQSRequest.
+ * \inmodule QtAwsSQS
  */
 
 /*!
- * \internal
- *
- * \brief Constructs a new SQSRequestPrivate object.
+ * Constructs a SQSRequestPrivate object for SQS \a action with,
+ * public implementation \a q.
  */
 SQSRequestPrivate::SQSRequestPrivate(const SQSRequest::Action action, SQSRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
@@ -258,9 +269,7 @@ SQSRequestPrivate::SQSRequestPrivate(const SQSRequest::Action action, SQSRequest
 }
 
 /*!
- * \internal
- *
- * \brief Constructs a new SQSRequestPrivate object, copying an existing one.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
@@ -276,15 +285,12 @@ SQSRequestPrivate::SQSRequestPrivate(const SQSRequestPrivate &other,
 }
 
 /*!
- * \internal
- *
- * \brief Returns a string representing \a action.
+ * Returns a string represention of \a action, or a null string if \a action is
+ * invalid.
  *
  * This function converts SQSRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the SQS service's Action
  * query parameters.
- *
- * @return A string representing \a action, or a null string if \a action is invalid.
  */
 QString SQSRequestPrivate::toString(const SQSRequest::Action &action)
 {

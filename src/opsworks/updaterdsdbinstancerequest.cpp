@@ -27,10 +27,9 @@ namespace OpsWorks {
 
 /*!
  * \class QtAws::OpsWorks::UpdateRdsDbInstanceRequest
- *
  * \brief The UpdateRdsDbInstanceRequest class provides an interface for OpsWorks UpdateRdsDbInstance requests.
  *
- * \ingroup OpsWorks
+ * \inmodule QtAwsOpsWorks
  *
  *  <fullname>AWS OpsWorks</fullname>
  * 
@@ -143,9 +142,7 @@ namespace OpsWorks {
  */
 
 /*!
- * @brief  Constructs a new UpdateRdsDbInstanceRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateRdsDbInstanceRequest::UpdateRdsDbInstanceRequest(const UpdateRdsDbInstanceRequest &other)
     : OpsWorksRequest(new UpdateRdsDbInstanceRequestPrivate(*other.d_func(), this))
@@ -154,7 +151,7 @@ UpdateRdsDbInstanceRequest::UpdateRdsDbInstanceRequest(const UpdateRdsDbInstance
 }
 
 /*!
- * @brief  Constructs a new UpdateRdsDbInstanceRequest object.
+ * Constructs a UpdateRdsDbInstanceRequest object.
  */
 UpdateRdsDbInstanceRequest::UpdateRdsDbInstanceRequest()
     : OpsWorksRequest(new UpdateRdsDbInstanceRequestPrivate(OpsWorksRequest::UpdateRdsDbInstanceAction, this))
@@ -172,14 +169,9 @@ bool UpdateRdsDbInstanceRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateRdsDbInstanceResponse object.
+ * Returns a UpdateRdsDbInstanceResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateRdsDbInstanceResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  OpsWorksClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateRdsDbInstanceRequest::response(QNetworkReply * const reply) const
 {
@@ -187,20 +179,17 @@ QtAws::Core::AwsAbstractResponse * UpdateRdsDbInstanceRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::OpsWorks::UpdateRdsDbInstanceRequestPrivate
+ * \brief The UpdateRdsDbInstanceRequestPrivate class provides private implementation for UpdateRdsDbInstanceRequest.
+ * \internal
  *
- * @class  UpdateRdsDbInstanceRequestPrivate
- *
- * @brief  Private implementation for UpdateRdsDbInstanceRequest.
+ * \inmodule QtAwsOpsWorks
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateRdsDbInstanceRequestPrivate object.
- *
- * @param  action  OpsWorks action being performed.
- * @param  q       Pointer to this object's public UpdateRdsDbInstanceRequest instance.
+ * Constructs a UpdateRdsDbInstanceRequestPrivate object for OpsWorks \a action with,
+ * public implementation \a q.
  */
 UpdateRdsDbInstanceRequestPrivate::UpdateRdsDbInstanceRequestPrivate(
     const OpsWorksRequest::Action action, UpdateRdsDbInstanceRequest * const q)
@@ -210,15 +199,10 @@ UpdateRdsDbInstanceRequestPrivate::UpdateRdsDbInstanceRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateRdsDbInstanceRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateRdsDbInstanceRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateRdsDbInstanceRequest instance.
  */
 UpdateRdsDbInstanceRequestPrivate::UpdateRdsDbInstanceRequestPrivate(
     const UpdateRdsDbInstanceRequestPrivate &other, UpdateRdsDbInstanceRequest * const q)

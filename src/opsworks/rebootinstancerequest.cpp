@@ -27,10 +27,9 @@ namespace OpsWorks {
 
 /*!
  * \class QtAws::OpsWorks::RebootInstanceRequest
- *
  * \brief The RebootInstanceRequest class provides an interface for OpsWorks RebootInstance requests.
  *
- * \ingroup OpsWorks
+ * \inmodule QtAwsOpsWorks
  *
  *  <fullname>AWS OpsWorks</fullname>
  * 
@@ -143,9 +142,7 @@ namespace OpsWorks {
  */
 
 /*!
- * @brief  Constructs a new RebootInstanceRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 RebootInstanceRequest::RebootInstanceRequest(const RebootInstanceRequest &other)
     : OpsWorksRequest(new RebootInstanceRequestPrivate(*other.d_func(), this))
@@ -154,7 +151,7 @@ RebootInstanceRequest::RebootInstanceRequest(const RebootInstanceRequest &other)
 }
 
 /*!
- * @brief  Constructs a new RebootInstanceRequest object.
+ * Constructs a RebootInstanceRequest object.
  */
 RebootInstanceRequest::RebootInstanceRequest()
     : OpsWorksRequest(new RebootInstanceRequestPrivate(OpsWorksRequest::RebootInstanceAction, this))
@@ -172,14 +169,9 @@ bool RebootInstanceRequest::isValid() const
 
 
 /*!
- * @brief  Construct an RebootInstanceResponse object.
+ * Returns a RebootInstanceResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An RebootInstanceResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  OpsWorksClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * RebootInstanceRequest::response(QNetworkReply * const reply) const
 {
@@ -187,20 +179,17 @@ QtAws::Core::AwsAbstractResponse * RebootInstanceRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::OpsWorks::RebootInstanceRequestPrivate
+ * \brief The RebootInstanceRequestPrivate class provides private implementation for RebootInstanceRequest.
+ * \internal
  *
- * @class  RebootInstanceRequestPrivate
- *
- * @brief  Private implementation for RebootInstanceRequest.
+ * \inmodule QtAwsOpsWorks
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new RebootInstanceRequestPrivate object.
- *
- * @param  action  OpsWorks action being performed.
- * @param  q       Pointer to this object's public RebootInstanceRequest instance.
+ * Constructs a RebootInstanceRequestPrivate object for OpsWorks \a action with,
+ * public implementation \a q.
  */
 RebootInstanceRequestPrivate::RebootInstanceRequestPrivate(
     const OpsWorksRequest::Action action, RebootInstanceRequest * const q)
@@ -210,15 +199,10 @@ RebootInstanceRequestPrivate::RebootInstanceRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RebootInstanceRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the RebootInstanceRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public RebootInstanceRequest instance.
  */
 RebootInstanceRequestPrivate::RebootInstanceRequestPrivate(
     const RebootInstanceRequestPrivate &other, RebootInstanceRequest * const q)

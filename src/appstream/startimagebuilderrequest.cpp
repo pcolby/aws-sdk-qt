@@ -27,10 +27,9 @@ namespace AppStream {
 
 /*!
  * \class QtAws::AppStream::StartImageBuilderRequest
- *
  * \brief The StartImageBuilderRequest class provides an interface for AppStream StartImageBuilder requests.
  *
- * \ingroup AppStream
+ * \inmodule QtAwsAppStream
  *
  *  <fullname>Amazon AppStream 2.0</fullname>
  * 
@@ -40,9 +39,7 @@ namespace AppStream {
  */
 
 /*!
- * @brief  Constructs a new StartImageBuilderRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 StartImageBuilderRequest::StartImageBuilderRequest(const StartImageBuilderRequest &other)
     : AppStreamRequest(new StartImageBuilderRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ StartImageBuilderRequest::StartImageBuilderRequest(const StartImageBuilderReques
 }
 
 /*!
- * @brief  Constructs a new StartImageBuilderRequest object.
+ * Constructs a StartImageBuilderRequest object.
  */
 StartImageBuilderRequest::StartImageBuilderRequest()
     : AppStreamRequest(new StartImageBuilderRequestPrivate(AppStreamRequest::StartImageBuilderAction, this))
@@ -69,14 +66,9 @@ bool StartImageBuilderRequest::isValid() const
 
 
 /*!
- * @brief  Construct an StartImageBuilderResponse object.
+ * Returns a StartImageBuilderResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An StartImageBuilderResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AppStreamClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * StartImageBuilderRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * StartImageBuilderRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::AppStream::StartImageBuilderRequestPrivate
+ * \brief The StartImageBuilderRequestPrivate class provides private implementation for StartImageBuilderRequest.
+ * \internal
  *
- * @class  StartImageBuilderRequestPrivate
- *
- * @brief  Private implementation for StartImageBuilderRequest.
+ * \inmodule QtAwsAppStream
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new StartImageBuilderRequestPrivate object.
- *
- * @param  action  AppStream action being performed.
- * @param  q       Pointer to this object's public StartImageBuilderRequest instance.
+ * Constructs a StartImageBuilderRequestPrivate object for AppStream \a action with,
+ * public implementation \a q.
  */
 StartImageBuilderRequestPrivate::StartImageBuilderRequestPrivate(
     const AppStreamRequest::Action action, StartImageBuilderRequest * const q)
@@ -107,15 +96,10 @@ StartImageBuilderRequestPrivate::StartImageBuilderRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StartImageBuilderRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the StartImageBuilderRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public StartImageBuilderRequest instance.
  */
 StartImageBuilderRequestPrivate::StartImageBuilderRequestPrivate(
     const StartImageBuilderRequestPrivate &other, StartImageBuilderRequest * const q)

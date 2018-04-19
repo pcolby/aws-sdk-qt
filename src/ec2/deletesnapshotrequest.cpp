@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DeleteSnapshotRequest
- *
  * \brief The DeleteSnapshotRequest class provides an interface for EC2 DeleteSnapshot requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DeleteSnapshotRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteSnapshotRequest::DeleteSnapshotRequest(const DeleteSnapshotRequest &other)
     : EC2Request(new DeleteSnapshotRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ DeleteSnapshotRequest::DeleteSnapshotRequest(const DeleteSnapshotRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DeleteSnapshotRequest object.
+ * Constructs a DeleteSnapshotRequest object.
  */
 DeleteSnapshotRequest::DeleteSnapshotRequest()
     : EC2Request(new DeleteSnapshotRequestPrivate(EC2Request::DeleteSnapshotAction, this))
@@ -70,14 +67,9 @@ bool DeleteSnapshotRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteSnapshotResponse object.
+ * Returns a DeleteSnapshotResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteSnapshotResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteSnapshotRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * DeleteSnapshotRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::DeleteSnapshotRequestPrivate
+ * \brief The DeleteSnapshotRequestPrivate class provides private implementation for DeleteSnapshotRequest.
+ * \internal
  *
- * @class  DeleteSnapshotRequestPrivate
- *
- * @brief  Private implementation for DeleteSnapshotRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteSnapshotRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public DeleteSnapshotRequest instance.
+ * Constructs a DeleteSnapshotRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 DeleteSnapshotRequestPrivate::DeleteSnapshotRequestPrivate(
     const EC2Request::Action action, DeleteSnapshotRequest * const q)
@@ -108,15 +97,10 @@ DeleteSnapshotRequestPrivate::DeleteSnapshotRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteSnapshotRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteSnapshotRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteSnapshotRequest instance.
  */
 DeleteSnapshotRequestPrivate::DeleteSnapshotRequestPrivate(
     const DeleteSnapshotRequestPrivate &other, DeleteSnapshotRequest * const q)

@@ -27,10 +27,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::ListPrincipalPoliciesRequest
- *
  * \brief The ListPrincipalPoliciesRequest class provides an interface for IoT ListPrincipalPolicies requests.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -48,9 +47,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new ListPrincipalPoliciesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListPrincipalPoliciesRequest::ListPrincipalPoliciesRequest(const ListPrincipalPoliciesRequest &other)
     : IoTRequest(new ListPrincipalPoliciesRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ ListPrincipalPoliciesRequest::ListPrincipalPoliciesRequest(const ListPrincipalPo
 }
 
 /*!
- * @brief  Constructs a new ListPrincipalPoliciesRequest object.
+ * Constructs a ListPrincipalPoliciesRequest object.
  */
 ListPrincipalPoliciesRequest::ListPrincipalPoliciesRequest()
     : IoTRequest(new ListPrincipalPoliciesRequestPrivate(IoTRequest::ListPrincipalPoliciesAction, this))
@@ -77,14 +74,9 @@ bool ListPrincipalPoliciesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListPrincipalPoliciesResponse object.
+ * Returns a ListPrincipalPoliciesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListPrincipalPoliciesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IoTClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListPrincipalPoliciesRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * ListPrincipalPoliciesRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::IoT::ListPrincipalPoliciesRequestPrivate
+ * \brief The ListPrincipalPoliciesRequestPrivate class provides private implementation for ListPrincipalPoliciesRequest.
+ * \internal
  *
- * @class  ListPrincipalPoliciesRequestPrivate
- *
- * @brief  Private implementation for ListPrincipalPoliciesRequest.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListPrincipalPoliciesRequestPrivate object.
- *
- * @param  action  IoT action being performed.
- * @param  q       Pointer to this object's public ListPrincipalPoliciesRequest instance.
+ * Constructs a ListPrincipalPoliciesRequestPrivate object for IoT \a action with,
+ * public implementation \a q.
  */
 ListPrincipalPoliciesRequestPrivate::ListPrincipalPoliciesRequestPrivate(
     const IoTRequest::Action action, ListPrincipalPoliciesRequest * const q)
@@ -115,15 +104,10 @@ ListPrincipalPoliciesRequestPrivate::ListPrincipalPoliciesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListPrincipalPoliciesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListPrincipalPoliciesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListPrincipalPoliciesRequest instance.
  */
 ListPrincipalPoliciesRequestPrivate::ListPrincipalPoliciesRequestPrivate(
     const ListPrincipalPoliciesRequestPrivate &other, ListPrincipalPoliciesRequest * const q)

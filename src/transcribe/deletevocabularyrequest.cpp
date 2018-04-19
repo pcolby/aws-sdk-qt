@@ -27,10 +27,9 @@ namespace TranscribeService {
 
 /*!
  * \class QtAws::TranscribeService::DeleteVocabularyRequest
- *
  * \brief The DeleteVocabularyRequest class provides an interface for TranscribeService DeleteVocabulary requests.
  *
- * \ingroup TranscribeService
+ * \inmodule QtAwsTranscribeService
  *
  *  Operations and objects for transcribing speech to
  *
@@ -38,9 +37,7 @@ namespace TranscribeService {
  */
 
 /*!
- * @brief  Constructs a new DeleteVocabularyRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteVocabularyRequest::DeleteVocabularyRequest(const DeleteVocabularyRequest &other)
     : TranscribeServiceRequest(new DeleteVocabularyRequestPrivate(*other.d_func(), this))
@@ -49,7 +46,7 @@ DeleteVocabularyRequest::DeleteVocabularyRequest(const DeleteVocabularyRequest &
 }
 
 /*!
- * @brief  Constructs a new DeleteVocabularyRequest object.
+ * Constructs a DeleteVocabularyRequest object.
  */
 DeleteVocabularyRequest::DeleteVocabularyRequest()
     : TranscribeServiceRequest(new DeleteVocabularyRequestPrivate(TranscribeServiceRequest::DeleteVocabularyAction, this))
@@ -67,14 +64,9 @@ bool DeleteVocabularyRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteVocabularyResponse object.
+ * Returns a DeleteVocabularyResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteVocabularyResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  TranscribeServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteVocabularyRequest::response(QNetworkReply * const reply) const
 {
@@ -82,20 +74,17 @@ QtAws::Core::AwsAbstractResponse * DeleteVocabularyRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::TranscribeService::DeleteVocabularyRequestPrivate
+ * \brief The DeleteVocabularyRequestPrivate class provides private implementation for DeleteVocabularyRequest.
+ * \internal
  *
- * @class  DeleteVocabularyRequestPrivate
- *
- * @brief  Private implementation for DeleteVocabularyRequest.
+ * \inmodule QtAwsTranscribeService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteVocabularyRequestPrivate object.
- *
- * @param  action  TranscribeService action being performed.
- * @param  q       Pointer to this object's public DeleteVocabularyRequest instance.
+ * Constructs a DeleteVocabularyRequestPrivate object for TranscribeService \a action with,
+ * public implementation \a q.
  */
 DeleteVocabularyRequestPrivate::DeleteVocabularyRequestPrivate(
     const TranscribeServiceRequest::Action action, DeleteVocabularyRequest * const q)
@@ -105,15 +94,10 @@ DeleteVocabularyRequestPrivate::DeleteVocabularyRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteVocabularyRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteVocabularyRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteVocabularyRequest instance.
  */
 DeleteVocabularyRequestPrivate::DeleteVocabularyRequestPrivate(
     const DeleteVocabularyRequestPrivate &other, DeleteVocabularyRequest * const q)

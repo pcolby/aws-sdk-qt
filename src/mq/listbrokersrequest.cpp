@@ -27,10 +27,9 @@ namespace MQ {
 
 /*!
  * \class QtAws::MQ::ListBrokersRequest
- *
  * \brief The ListBrokersRequest class provides an interface for MQ ListBrokers requests.
  *
- * \ingroup MQ
+ * \inmodule QtAwsMQ
  *
  *  Amazon MQ is a managed message broker service for Apache ActiveMQ that makes it easy to set up and operate message
  *  brokers in the cloud. A message broker allows software applications and components to communicate using various
@@ -39,9 +38,7 @@ namespace MQ {
  */
 
 /*!
- * @brief  Constructs a new ListBrokersRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListBrokersRequest::ListBrokersRequest(const ListBrokersRequest &other)
     : MQRequest(new ListBrokersRequestPrivate(*other.d_func(), this))
@@ -50,7 +47,7 @@ ListBrokersRequest::ListBrokersRequest(const ListBrokersRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ListBrokersRequest object.
+ * Constructs a ListBrokersRequest object.
  */
 ListBrokersRequest::ListBrokersRequest()
     : MQRequest(new ListBrokersRequestPrivate(MQRequest::ListBrokersAction, this))
@@ -68,14 +65,9 @@ bool ListBrokersRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListBrokersResponse object.
+ * Returns a ListBrokersResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListBrokersResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MQClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListBrokersRequest::response(QNetworkReply * const reply) const
 {
@@ -83,20 +75,17 @@ QtAws::Core::AwsAbstractResponse * ListBrokersRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::MQ::ListBrokersRequestPrivate
+ * \brief The ListBrokersRequestPrivate class provides private implementation for ListBrokersRequest.
+ * \internal
  *
- * @class  ListBrokersRequestPrivate
- *
- * @brief  Private implementation for ListBrokersRequest.
+ * \inmodule QtAwsMQ
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListBrokersRequestPrivate object.
- *
- * @param  action  MQ action being performed.
- * @param  q       Pointer to this object's public ListBrokersRequest instance.
+ * Constructs a ListBrokersRequestPrivate object for MQ \a action with,
+ * public implementation \a q.
  */
 ListBrokersRequestPrivate::ListBrokersRequestPrivate(
     const MQRequest::Action action, ListBrokersRequest * const q)
@@ -106,15 +95,10 @@ ListBrokersRequestPrivate::ListBrokersRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListBrokersRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListBrokersRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListBrokersRequest instance.
  */
 ListBrokersRequestPrivate::ListBrokersRequestPrivate(
     const ListBrokersRequestPrivate &other, ListBrokersRequest * const q)

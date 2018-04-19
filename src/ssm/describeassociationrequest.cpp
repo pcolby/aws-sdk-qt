@@ -27,10 +27,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::DescribeAssociationRequest
- *
  * \brief The DescribeAssociationRequest class provides an interface for SSM DescribeAssociation requests.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -61,9 +60,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new DescribeAssociationRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeAssociationRequest::DescribeAssociationRequest(const DescribeAssociationRequest &other)
     : SSMRequest(new DescribeAssociationRequestPrivate(*other.d_func(), this))
@@ -72,7 +69,7 @@ DescribeAssociationRequest::DescribeAssociationRequest(const DescribeAssociation
 }
 
 /*!
- * @brief  Constructs a new DescribeAssociationRequest object.
+ * Constructs a DescribeAssociationRequest object.
  */
 DescribeAssociationRequest::DescribeAssociationRequest()
     : SSMRequest(new DescribeAssociationRequestPrivate(SSMRequest::DescribeAssociationAction, this))
@@ -90,14 +87,9 @@ bool DescribeAssociationRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeAssociationResponse object.
+ * Returns a DescribeAssociationResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeAssociationResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SSMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeAssociationRequest::response(QNetworkReply * const reply) const
 {
@@ -105,20 +97,17 @@ QtAws::Core::AwsAbstractResponse * DescribeAssociationRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::SSM::DescribeAssociationRequestPrivate
+ * \brief The DescribeAssociationRequestPrivate class provides private implementation for DescribeAssociationRequest.
+ * \internal
  *
- * @class  DescribeAssociationRequestPrivate
- *
- * @brief  Private implementation for DescribeAssociationRequest.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeAssociationRequestPrivate object.
- *
- * @param  action  SSM action being performed.
- * @param  q       Pointer to this object's public DescribeAssociationRequest instance.
+ * Constructs a DescribeAssociationRequestPrivate object for SSM \a action with,
+ * public implementation \a q.
  */
 DescribeAssociationRequestPrivate::DescribeAssociationRequestPrivate(
     const SSMRequest::Action action, DescribeAssociationRequest * const q)
@@ -128,15 +117,10 @@ DescribeAssociationRequestPrivate::DescribeAssociationRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeAssociationRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeAssociationRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeAssociationRequest instance.
  */
 DescribeAssociationRequestPrivate::DescribeAssociationRequestPrivate(
     const DescribeAssociationRequestPrivate &other, DescribeAssociationRequest * const q)

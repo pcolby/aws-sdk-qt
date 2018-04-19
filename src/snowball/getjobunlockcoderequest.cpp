@@ -27,10 +27,9 @@ namespace Snowball {
 
 /*!
  * \class QtAws::Snowball::GetJobUnlockCodeRequest
- *
  * \brief The GetJobUnlockCodeRequest class provides an interface for Snowball GetJobUnlockCode requests.
  *
- * \ingroup Snowball
+ * \inmodule QtAwsSnowball
  *
  *  AWS Snowball is a petabyte-scale data transport solution that uses secure appliances to transfer large amounts of data
  *  between your on-premises data centers and Amazon Simple Storage Service (Amazon S3). The Snowball commands described
@@ -43,9 +42,7 @@ namespace Snowball {
  */
 
 /*!
- * @brief  Constructs a new GetJobUnlockCodeRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetJobUnlockCodeRequest::GetJobUnlockCodeRequest(const GetJobUnlockCodeRequest &other)
     : SnowballRequest(new GetJobUnlockCodeRequestPrivate(*other.d_func(), this))
@@ -54,7 +51,7 @@ GetJobUnlockCodeRequest::GetJobUnlockCodeRequest(const GetJobUnlockCodeRequest &
 }
 
 /*!
- * @brief  Constructs a new GetJobUnlockCodeRequest object.
+ * Constructs a GetJobUnlockCodeRequest object.
  */
 GetJobUnlockCodeRequest::GetJobUnlockCodeRequest()
     : SnowballRequest(new GetJobUnlockCodeRequestPrivate(SnowballRequest::GetJobUnlockCodeAction, this))
@@ -72,14 +69,9 @@ bool GetJobUnlockCodeRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetJobUnlockCodeResponse object.
+ * Returns a GetJobUnlockCodeResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetJobUnlockCodeResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SnowballClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetJobUnlockCodeRequest::response(QNetworkReply * const reply) const
 {
@@ -87,20 +79,17 @@ QtAws::Core::AwsAbstractResponse * GetJobUnlockCodeRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::Snowball::GetJobUnlockCodeRequestPrivate
+ * \brief The GetJobUnlockCodeRequestPrivate class provides private implementation for GetJobUnlockCodeRequest.
+ * \internal
  *
- * @class  GetJobUnlockCodeRequestPrivate
- *
- * @brief  Private implementation for GetJobUnlockCodeRequest.
+ * \inmodule QtAwsSnowball
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetJobUnlockCodeRequestPrivate object.
- *
- * @param  action  Snowball action being performed.
- * @param  q       Pointer to this object's public GetJobUnlockCodeRequest instance.
+ * Constructs a GetJobUnlockCodeRequestPrivate object for Snowball \a action with,
+ * public implementation \a q.
  */
 GetJobUnlockCodeRequestPrivate::GetJobUnlockCodeRequestPrivate(
     const SnowballRequest::Action action, GetJobUnlockCodeRequest * const q)
@@ -110,15 +99,10 @@ GetJobUnlockCodeRequestPrivate::GetJobUnlockCodeRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetJobUnlockCodeRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetJobUnlockCodeRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetJobUnlockCodeRequest instance.
  */
 GetJobUnlockCodeRequestPrivate::GetJobUnlockCodeRequestPrivate(
     const GetJobUnlockCodeRequestPrivate &other, GetJobUnlockCodeRequest * const q)

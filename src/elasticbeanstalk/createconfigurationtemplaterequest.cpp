@@ -27,10 +27,9 @@ namespace ElasticBeanstalk {
 
 /*!
  * \class QtAws::ElasticBeanstalk::CreateConfigurationTemplateRequest
- *
  * \brief The CreateConfigurationTemplateRequest class provides an interface for ElasticBeanstalk CreateConfigurationTemplate requests.
  *
- * \ingroup ElasticBeanstalk
+ * \inmodule QtAwsElasticBeanstalk
  *
  *  <fullname>AWS Elastic Beanstalk</fullname>
  * 
@@ -59,9 +58,7 @@ namespace ElasticBeanstalk {
  */
 
 /*!
- * @brief  Constructs a new CreateConfigurationTemplateRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateConfigurationTemplateRequest::CreateConfigurationTemplateRequest(const CreateConfigurationTemplateRequest &other)
     : ElasticBeanstalkRequest(new CreateConfigurationTemplateRequestPrivate(*other.d_func(), this))
@@ -70,7 +67,7 @@ CreateConfigurationTemplateRequest::CreateConfigurationTemplateRequest(const Cre
 }
 
 /*!
- * @brief  Constructs a new CreateConfigurationTemplateRequest object.
+ * Constructs a CreateConfigurationTemplateRequest object.
  */
 CreateConfigurationTemplateRequest::CreateConfigurationTemplateRequest()
     : ElasticBeanstalkRequest(new CreateConfigurationTemplateRequestPrivate(ElasticBeanstalkRequest::CreateConfigurationTemplateAction, this))
@@ -88,14 +85,9 @@ bool CreateConfigurationTemplateRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateConfigurationTemplateResponse object.
+ * Returns a CreateConfigurationTemplateResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateConfigurationTemplateResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ElasticBeanstalkClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateConfigurationTemplateRequest::response(QNetworkReply * const reply) const
 {
@@ -103,20 +95,17 @@ QtAws::Core::AwsAbstractResponse * CreateConfigurationTemplateRequest::response(
 }
 
 /*!
- * @internal
+ * \class QtAws::ElasticBeanstalk::CreateConfigurationTemplateRequestPrivate
+ * \brief The CreateConfigurationTemplateRequestPrivate class provides private implementation for CreateConfigurationTemplateRequest.
+ * \internal
  *
- * @class  CreateConfigurationTemplateRequestPrivate
- *
- * @brief  Private implementation for CreateConfigurationTemplateRequest.
+ * \inmodule QtAwsElasticBeanstalk
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateConfigurationTemplateRequestPrivate object.
- *
- * @param  action  ElasticBeanstalk action being performed.
- * @param  q       Pointer to this object's public CreateConfigurationTemplateRequest instance.
+ * Constructs a CreateConfigurationTemplateRequestPrivate object for ElasticBeanstalk \a action with,
+ * public implementation \a q.
  */
 CreateConfigurationTemplateRequestPrivate::CreateConfigurationTemplateRequestPrivate(
     const ElasticBeanstalkRequest::Action action, CreateConfigurationTemplateRequest * const q)
@@ -126,15 +115,10 @@ CreateConfigurationTemplateRequestPrivate::CreateConfigurationTemplateRequestPri
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateConfigurationTemplateRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateConfigurationTemplateRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateConfigurationTemplateRequest instance.
  */
 CreateConfigurationTemplateRequestPrivate::CreateConfigurationTemplateRequestPrivate(
     const CreateConfigurationTemplateRequestPrivate &other, CreateConfigurationTemplateRequest * const q)

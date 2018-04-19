@@ -27,10 +27,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::GetServerCertificateRequest
- *
  * \brief The GetServerCertificateRequest class provides an interface for IAM GetServerCertificate requests.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -102,9 +101,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new GetServerCertificateRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetServerCertificateRequest::GetServerCertificateRequest(const GetServerCertificateRequest &other)
     : IAMRequest(new GetServerCertificateRequestPrivate(*other.d_func(), this))
@@ -113,7 +110,7 @@ GetServerCertificateRequest::GetServerCertificateRequest(const GetServerCertific
 }
 
 /*!
- * @brief  Constructs a new GetServerCertificateRequest object.
+ * Constructs a GetServerCertificateRequest object.
  */
 GetServerCertificateRequest::GetServerCertificateRequest()
     : IAMRequest(new GetServerCertificateRequestPrivate(IAMRequest::GetServerCertificateAction, this))
@@ -131,14 +128,9 @@ bool GetServerCertificateRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetServerCertificateResponse object.
+ * Returns a GetServerCertificateResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetServerCertificateResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IAMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetServerCertificateRequest::response(QNetworkReply * const reply) const
 {
@@ -146,20 +138,17 @@ QtAws::Core::AwsAbstractResponse * GetServerCertificateRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::IAM::GetServerCertificateRequestPrivate
+ * \brief The GetServerCertificateRequestPrivate class provides private implementation for GetServerCertificateRequest.
+ * \internal
  *
- * @class  GetServerCertificateRequestPrivate
- *
- * @brief  Private implementation for GetServerCertificateRequest.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetServerCertificateRequestPrivate object.
- *
- * @param  action  IAM action being performed.
- * @param  q       Pointer to this object's public GetServerCertificateRequest instance.
+ * Constructs a GetServerCertificateRequestPrivate object for IAM \a action with,
+ * public implementation \a q.
  */
 GetServerCertificateRequestPrivate::GetServerCertificateRequestPrivate(
     const IAMRequest::Action action, GetServerCertificateRequest * const q)
@@ -169,15 +158,10 @@ GetServerCertificateRequestPrivate::GetServerCertificateRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetServerCertificateRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetServerCertificateRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetServerCertificateRequest instance.
  */
 GetServerCertificateRequestPrivate::GetServerCertificateRequestPrivate(
     const GetServerCertificateRequestPrivate &other, GetServerCertificateRequest * const q)

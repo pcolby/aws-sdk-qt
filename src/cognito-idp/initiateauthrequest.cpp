@@ -27,10 +27,9 @@ namespace CognitoIdentityProvider {
 
 /*!
  * \class QtAws::CognitoIdentityProvider::InitiateAuthRequest
- *
  * \brief The InitiateAuthRequest class provides an interface for CognitoIdentityProvider InitiateAuth requests.
  *
- * \ingroup CognitoIdentityProvider
+ * \inmodule QtAwsCognitoIdentityProvider
  *
  *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
  *  authenticate a user to obtain tokens related to user identity and access
@@ -47,9 +46,7 @@ namespace CognitoIdentityProvider {
  */
 
 /*!
- * @brief  Constructs a new InitiateAuthRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 InitiateAuthRequest::InitiateAuthRequest(const InitiateAuthRequest &other)
     : CognitoIdentityProviderRequest(new InitiateAuthRequestPrivate(*other.d_func(), this))
@@ -58,7 +55,7 @@ InitiateAuthRequest::InitiateAuthRequest(const InitiateAuthRequest &other)
 }
 
 /*!
- * @brief  Constructs a new InitiateAuthRequest object.
+ * Constructs a InitiateAuthRequest object.
  */
 InitiateAuthRequest::InitiateAuthRequest()
     : CognitoIdentityProviderRequest(new InitiateAuthRequestPrivate(CognitoIdentityProviderRequest::InitiateAuthAction, this))
@@ -76,14 +73,9 @@ bool InitiateAuthRequest::isValid() const
 
 
 /*!
- * @brief  Construct an InitiateAuthResponse object.
+ * Returns a InitiateAuthResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An InitiateAuthResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CognitoIdentityProviderClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * InitiateAuthRequest::response(QNetworkReply * const reply) const
 {
@@ -91,20 +83,17 @@ QtAws::Core::AwsAbstractResponse * InitiateAuthRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::CognitoIdentityProvider::InitiateAuthRequestPrivate
+ * \brief The InitiateAuthRequestPrivate class provides private implementation for InitiateAuthRequest.
+ * \internal
  *
- * @class  InitiateAuthRequestPrivate
- *
- * @brief  Private implementation for InitiateAuthRequest.
+ * \inmodule QtAwsCognitoIdentityProvider
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new InitiateAuthRequestPrivate object.
- *
- * @param  action  CognitoIdentityProvider action being performed.
- * @param  q       Pointer to this object's public InitiateAuthRequest instance.
+ * Constructs a InitiateAuthRequestPrivate object for CognitoIdentityProvider \a action with,
+ * public implementation \a q.
  */
 InitiateAuthRequestPrivate::InitiateAuthRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, InitiateAuthRequest * const q)
@@ -114,15 +103,10 @@ InitiateAuthRequestPrivate::InitiateAuthRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new InitiateAuthRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the InitiateAuthRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public InitiateAuthRequest instance.
  */
 InitiateAuthRequestPrivate::InitiateAuthRequestPrivate(
     const InitiateAuthRequestPrivate &other, InitiateAuthRequest * const q)

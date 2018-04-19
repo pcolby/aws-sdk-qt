@@ -27,10 +27,9 @@ namespace AutoScaling {
 
 /*!
  * \class QtAws::AutoScaling::PutScheduledUpdateGroupActionRequest
- *
  * \brief The PutScheduledUpdateGroupActionRequest class provides an interface for AutoScaling PutScheduledUpdateGroupAction requests.
  *
- * \ingroup AutoScaling
+ * \inmodule QtAwsAutoScaling
  *
  *  <fullname>Amazon EC2 Auto Scaling</fullname>
  * 
@@ -42,9 +41,7 @@ namespace AutoScaling {
  */
 
 /*!
- * @brief  Constructs a new PutScheduledUpdateGroupActionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 PutScheduledUpdateGroupActionRequest::PutScheduledUpdateGroupActionRequest(const PutScheduledUpdateGroupActionRequest &other)
     : AutoScalingRequest(new PutScheduledUpdateGroupActionRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ PutScheduledUpdateGroupActionRequest::PutScheduledUpdateGroupActionRequest(const
 }
 
 /*!
- * @brief  Constructs a new PutScheduledUpdateGroupActionRequest object.
+ * Constructs a PutScheduledUpdateGroupActionRequest object.
  */
 PutScheduledUpdateGroupActionRequest::PutScheduledUpdateGroupActionRequest()
     : AutoScalingRequest(new PutScheduledUpdateGroupActionRequestPrivate(AutoScalingRequest::PutScheduledUpdateGroupActionAction, this))
@@ -71,14 +68,9 @@ bool PutScheduledUpdateGroupActionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an PutScheduledUpdateGroupActionResponse object.
+ * Returns a PutScheduledUpdateGroupActionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An PutScheduledUpdateGroupActionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AutoScalingClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * PutScheduledUpdateGroupActionRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * PutScheduledUpdateGroupActionRequest::respons
 }
 
 /*!
- * @internal
+ * \class QtAws::AutoScaling::PutScheduledUpdateGroupActionRequestPrivate
+ * \brief The PutScheduledUpdateGroupActionRequestPrivate class provides private implementation for PutScheduledUpdateGroupActionRequest.
+ * \internal
  *
- * @class  PutScheduledUpdateGroupActionRequestPrivate
- *
- * @brief  Private implementation for PutScheduledUpdateGroupActionRequest.
+ * \inmodule QtAwsAutoScaling
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new PutScheduledUpdateGroupActionRequestPrivate object.
- *
- * @param  action  AutoScaling action being performed.
- * @param  q       Pointer to this object's public PutScheduledUpdateGroupActionRequest instance.
+ * Constructs a PutScheduledUpdateGroupActionRequestPrivate object for AutoScaling \a action with,
+ * public implementation \a q.
  */
 PutScheduledUpdateGroupActionRequestPrivate::PutScheduledUpdateGroupActionRequestPrivate(
     const AutoScalingRequest::Action action, PutScheduledUpdateGroupActionRequest * const q)
@@ -109,15 +98,10 @@ PutScheduledUpdateGroupActionRequestPrivate::PutScheduledUpdateGroupActionReques
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutScheduledUpdateGroupActionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the PutScheduledUpdateGroupActionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public PutScheduledUpdateGroupActionRequest instance.
  */
 PutScheduledUpdateGroupActionRequestPrivate::PutScheduledUpdateGroupActionRequestPrivate(
     const PutScheduledUpdateGroupActionRequestPrivate &other, PutScheduledUpdateGroupActionRequest * const q)

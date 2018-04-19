@@ -27,10 +27,9 @@ namespace AlexaForBusiness {
 
 /*!
  * \class QtAws::AlexaForBusiness::CreateProfileRequest
- *
  * \brief The CreateProfileRequest class provides an interface for AlexaForBusiness CreateProfile requests.
  *
- * \ingroup AlexaForBusiness
+ * \inmodule QtAwsAlexaForBusiness
  *
  *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
  *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
@@ -42,9 +41,7 @@ namespace AlexaForBusiness {
  */
 
 /*!
- * @brief  Constructs a new CreateProfileRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateProfileRequest::CreateProfileRequest(const CreateProfileRequest &other)
     : AlexaForBusinessRequest(new CreateProfileRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ CreateProfileRequest::CreateProfileRequest(const CreateProfileRequest &other)
 }
 
 /*!
- * @brief  Constructs a new CreateProfileRequest object.
+ * Constructs a CreateProfileRequest object.
  */
 CreateProfileRequest::CreateProfileRequest()
     : AlexaForBusinessRequest(new CreateProfileRequestPrivate(AlexaForBusinessRequest::CreateProfileAction, this))
@@ -71,14 +68,9 @@ bool CreateProfileRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateProfileResponse object.
+ * Returns a CreateProfileResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateProfileResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AlexaForBusinessClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateProfileRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * CreateProfileRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::AlexaForBusiness::CreateProfileRequestPrivate
+ * \brief The CreateProfileRequestPrivate class provides private implementation for CreateProfileRequest.
+ * \internal
  *
- * @class  CreateProfileRequestPrivate
- *
- * @brief  Private implementation for CreateProfileRequest.
+ * \inmodule QtAwsAlexaForBusiness
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateProfileRequestPrivate object.
- *
- * @param  action  AlexaForBusiness action being performed.
- * @param  q       Pointer to this object's public CreateProfileRequest instance.
+ * Constructs a CreateProfileRequestPrivate object for AlexaForBusiness \a action with,
+ * public implementation \a q.
  */
 CreateProfileRequestPrivate::CreateProfileRequestPrivate(
     const AlexaForBusinessRequest::Action action, CreateProfileRequest * const q)
@@ -109,15 +98,10 @@ CreateProfileRequestPrivate::CreateProfileRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateProfileRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateProfileRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateProfileRequest instance.
  */
 CreateProfileRequestPrivate::CreateProfileRequestPrivate(
     const CreateProfileRequestPrivate &other, CreateProfileRequest * const q)

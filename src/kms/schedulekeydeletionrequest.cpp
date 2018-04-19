@@ -27,10 +27,9 @@ namespace KMS {
 
 /*!
  * \class QtAws::KMS::ScheduleKeyDeletionRequest
- *
  * \brief The ScheduleKeyDeletionRequest class provides an interface for KMS ScheduleKeyDeletion requests.
  *
- * \ingroup KMS
+ * \inmodule QtAwsKMS
  *
  *  <fullname>AWS Key Management Service</fullname>
  * 
@@ -136,9 +135,7 @@ namespace KMS {
  */
 
 /*!
- * @brief  Constructs a new ScheduleKeyDeletionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ScheduleKeyDeletionRequest::ScheduleKeyDeletionRequest(const ScheduleKeyDeletionRequest &other)
     : KMSRequest(new ScheduleKeyDeletionRequestPrivate(*other.d_func(), this))
@@ -147,7 +144,7 @@ ScheduleKeyDeletionRequest::ScheduleKeyDeletionRequest(const ScheduleKeyDeletion
 }
 
 /*!
- * @brief  Constructs a new ScheduleKeyDeletionRequest object.
+ * Constructs a ScheduleKeyDeletionRequest object.
  */
 ScheduleKeyDeletionRequest::ScheduleKeyDeletionRequest()
     : KMSRequest(new ScheduleKeyDeletionRequestPrivate(KMSRequest::ScheduleKeyDeletionAction, this))
@@ -165,14 +162,9 @@ bool ScheduleKeyDeletionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ScheduleKeyDeletionResponse object.
+ * Returns a ScheduleKeyDeletionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ScheduleKeyDeletionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  KMSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ScheduleKeyDeletionRequest::response(QNetworkReply * const reply) const
 {
@@ -180,20 +172,17 @@ QtAws::Core::AwsAbstractResponse * ScheduleKeyDeletionRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::KMS::ScheduleKeyDeletionRequestPrivate
+ * \brief The ScheduleKeyDeletionRequestPrivate class provides private implementation for ScheduleKeyDeletionRequest.
+ * \internal
  *
- * @class  ScheduleKeyDeletionRequestPrivate
- *
- * @brief  Private implementation for ScheduleKeyDeletionRequest.
+ * \inmodule QtAwsKMS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ScheduleKeyDeletionRequestPrivate object.
- *
- * @param  action  KMS action being performed.
- * @param  q       Pointer to this object's public ScheduleKeyDeletionRequest instance.
+ * Constructs a ScheduleKeyDeletionRequestPrivate object for KMS \a action with,
+ * public implementation \a q.
  */
 ScheduleKeyDeletionRequestPrivate::ScheduleKeyDeletionRequestPrivate(
     const KMSRequest::Action action, ScheduleKeyDeletionRequest * const q)
@@ -203,15 +192,10 @@ ScheduleKeyDeletionRequestPrivate::ScheduleKeyDeletionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ScheduleKeyDeletionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ScheduleKeyDeletionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ScheduleKeyDeletionRequest instance.
  */
 ScheduleKeyDeletionRequestPrivate::ScheduleKeyDeletionRequestPrivate(
     const ScheduleKeyDeletionRequestPrivate &other, ScheduleKeyDeletionRequest * const q)

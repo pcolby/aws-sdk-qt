@@ -60,6 +60,9 @@
 /*!
  * \namespace QtAws::Batch
  * \brief The QtAws::Batch contains stuff...
+ *
+ * \inmodule QtAwsBatch
+ *
  * @todo Move this to a separate template file.
  */
 
@@ -123,7 +126,7 @@ BatchClient::BatchClient(
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * \a  AwsEndpoint::getEndpoint()
+ * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
 BatchClient::BatchClient(
     const QUrl &endpoint,

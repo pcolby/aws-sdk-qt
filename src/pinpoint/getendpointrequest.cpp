@@ -27,19 +27,16 @@ namespace Pinpoint {
 
 /*!
  * \class QtAws::Pinpoint::GetEndpointRequest
- *
  * \brief The GetEndpointRequest class provides an interface for Pinpoint GetEndpoint requests.
  *
- * \ingroup Pinpoint
+ * \inmodule QtAwsPinpoint
  *
  *
  * \sa PinpointClient::getEndpoint
  */
 
 /*!
- * @brief  Constructs a new GetEndpointRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetEndpointRequest::GetEndpointRequest(const GetEndpointRequest &other)
     : PinpointRequest(new GetEndpointRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ GetEndpointRequest::GetEndpointRequest(const GetEndpointRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetEndpointRequest object.
+ * Constructs a GetEndpointRequest object.
  */
 GetEndpointRequest::GetEndpointRequest()
     : PinpointRequest(new GetEndpointRequestPrivate(PinpointRequest::GetEndpointAction, this))
@@ -66,14 +63,9 @@ bool GetEndpointRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetEndpointResponse object.
+ * Returns a GetEndpointResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetEndpointResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  PinpointClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetEndpointRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * GetEndpointRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::Pinpoint::GetEndpointRequestPrivate
+ * \brief The GetEndpointRequestPrivate class provides private implementation for GetEndpointRequest.
+ * \internal
  *
- * @class  GetEndpointRequestPrivate
- *
- * @brief  Private implementation for GetEndpointRequest.
+ * \inmodule QtAwsPinpoint
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetEndpointRequestPrivate object.
- *
- * @param  action  Pinpoint action being performed.
- * @param  q       Pointer to this object's public GetEndpointRequest instance.
+ * Constructs a GetEndpointRequestPrivate object for Pinpoint \a action with,
+ * public implementation \a q.
  */
 GetEndpointRequestPrivate::GetEndpointRequestPrivate(
     const PinpointRequest::Action action, GetEndpointRequest * const q)
@@ -104,15 +93,10 @@ GetEndpointRequestPrivate::GetEndpointRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetEndpointRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetEndpointRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetEndpointRequest instance.
  */
 GetEndpointRequestPrivate::GetEndpointRequestPrivate(
     const GetEndpointRequestPrivate &other, GetEndpointRequest * const q)

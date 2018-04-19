@@ -27,10 +27,9 @@ namespace CognitoSync {
 
 /*!
  * \class QtAws::CognitoSync::RegisterDeviceRequest
- *
  * \brief The RegisterDeviceRequest class provides an interface for CognitoSync RegisterDevice requests.
  *
- * \ingroup CognitoSync
+ * \inmodule QtAwsCognitoSync
  *
  *  <fullname>Amazon Cognito Sync</fullname>
  * 
@@ -57,9 +56,7 @@ namespace CognitoSync {
  */
 
 /*!
- * @brief  Constructs a new RegisterDeviceRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 RegisterDeviceRequest::RegisterDeviceRequest(const RegisterDeviceRequest &other)
     : CognitoSyncRequest(new RegisterDeviceRequestPrivate(*other.d_func(), this))
@@ -68,7 +65,7 @@ RegisterDeviceRequest::RegisterDeviceRequest(const RegisterDeviceRequest &other)
 }
 
 /*!
- * @brief  Constructs a new RegisterDeviceRequest object.
+ * Constructs a RegisterDeviceRequest object.
  */
 RegisterDeviceRequest::RegisterDeviceRequest()
     : CognitoSyncRequest(new RegisterDeviceRequestPrivate(CognitoSyncRequest::RegisterDeviceAction, this))
@@ -86,14 +83,9 @@ bool RegisterDeviceRequest::isValid() const
 
 
 /*!
- * @brief  Construct an RegisterDeviceResponse object.
+ * Returns a RegisterDeviceResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An RegisterDeviceResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CognitoSyncClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * RegisterDeviceRequest::response(QNetworkReply * const reply) const
 {
@@ -101,20 +93,17 @@ QtAws::Core::AwsAbstractResponse * RegisterDeviceRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::CognitoSync::RegisterDeviceRequestPrivate
+ * \brief The RegisterDeviceRequestPrivate class provides private implementation for RegisterDeviceRequest.
+ * \internal
  *
- * @class  RegisterDeviceRequestPrivate
- *
- * @brief  Private implementation for RegisterDeviceRequest.
+ * \inmodule QtAwsCognitoSync
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new RegisterDeviceRequestPrivate object.
- *
- * @param  action  CognitoSync action being performed.
- * @param  q       Pointer to this object's public RegisterDeviceRequest instance.
+ * Constructs a RegisterDeviceRequestPrivate object for CognitoSync \a action with,
+ * public implementation \a q.
  */
 RegisterDeviceRequestPrivate::RegisterDeviceRequestPrivate(
     const CognitoSyncRequest::Action action, RegisterDeviceRequest * const q)
@@ -124,15 +113,10 @@ RegisterDeviceRequestPrivate::RegisterDeviceRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RegisterDeviceRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the RegisterDeviceRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public RegisterDeviceRequest instance.
  */
 RegisterDeviceRequestPrivate::RegisterDeviceRequestPrivate(
     const RegisterDeviceRequestPrivate &other, RegisterDeviceRequest * const q)

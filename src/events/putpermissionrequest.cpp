@@ -27,10 +27,9 @@ namespace CloudWatchEvents {
 
 /*!
  * \class QtAws::CloudWatchEvents::PutPermissionRequest
- *
  * \brief The PutPermissionRequest class provides an interface for CloudWatchEvents PutPermission requests.
  *
- * \ingroup CloudWatchEvents
+ * \inmodule QtAwsCloudWatchEvents
  *
  *  Amazon CloudWatch Events helps you to respond to state changes in your AWS resources. When your resources change state,
  *  they automatically send events into an event stream. You can create rules that match selected events in the stream and
@@ -60,9 +59,7 @@ namespace CloudWatchEvents {
  */
 
 /*!
- * @brief  Constructs a new PutPermissionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 PutPermissionRequest::PutPermissionRequest(const PutPermissionRequest &other)
     : CloudWatchEventsRequest(new PutPermissionRequestPrivate(*other.d_func(), this))
@@ -71,7 +68,7 @@ PutPermissionRequest::PutPermissionRequest(const PutPermissionRequest &other)
 }
 
 /*!
- * @brief  Constructs a new PutPermissionRequest object.
+ * Constructs a PutPermissionRequest object.
  */
 PutPermissionRequest::PutPermissionRequest()
     : CloudWatchEventsRequest(new PutPermissionRequestPrivate(CloudWatchEventsRequest::PutPermissionAction, this))
@@ -89,14 +86,9 @@ bool PutPermissionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an PutPermissionResponse object.
+ * Returns a PutPermissionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An PutPermissionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudWatchEventsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * PutPermissionRequest::response(QNetworkReply * const reply) const
 {
@@ -104,20 +96,17 @@ QtAws::Core::AwsAbstractResponse * PutPermissionRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudWatchEvents::PutPermissionRequestPrivate
+ * \brief The PutPermissionRequestPrivate class provides private implementation for PutPermissionRequest.
+ * \internal
  *
- * @class  PutPermissionRequestPrivate
- *
- * @brief  Private implementation for PutPermissionRequest.
+ * \inmodule QtAwsCloudWatchEvents
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new PutPermissionRequestPrivate object.
- *
- * @param  action  CloudWatchEvents action being performed.
- * @param  q       Pointer to this object's public PutPermissionRequest instance.
+ * Constructs a PutPermissionRequestPrivate object for CloudWatchEvents \a action with,
+ * public implementation \a q.
  */
 PutPermissionRequestPrivate::PutPermissionRequestPrivate(
     const CloudWatchEventsRequest::Action action, PutPermissionRequest * const q)
@@ -127,15 +116,10 @@ PutPermissionRequestPrivate::PutPermissionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutPermissionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the PutPermissionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public PutPermissionRequest instance.
  */
 PutPermissionRequestPrivate::PutPermissionRequestPrivate(
     const PutPermissionRequestPrivate &other, PutPermissionRequest * const q)

@@ -27,10 +27,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::DescribeReservedDBInstancesOfferingsRequest
- *
  * \brief The DescribeReservedDBInstancesOfferingsRequest class provides an interface for RDS DescribeReservedDBInstancesOfferings requests.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -101,9 +100,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new DescribeReservedDBInstancesOfferingsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeReservedDBInstancesOfferingsRequest::DescribeReservedDBInstancesOfferingsRequest(const DescribeReservedDBInstancesOfferingsRequest &other)
     : RDSRequest(new DescribeReservedDBInstancesOfferingsRequestPrivate(*other.d_func(), this))
@@ -112,7 +109,7 @@ DescribeReservedDBInstancesOfferingsRequest::DescribeReservedDBInstancesOffering
 }
 
 /*!
- * @brief  Constructs a new DescribeReservedDBInstancesOfferingsRequest object.
+ * Constructs a DescribeReservedDBInstancesOfferingsRequest object.
  */
 DescribeReservedDBInstancesOfferingsRequest::DescribeReservedDBInstancesOfferingsRequest()
     : RDSRequest(new DescribeReservedDBInstancesOfferingsRequestPrivate(RDSRequest::DescribeReservedDBInstancesOfferingsAction, this))
@@ -130,14 +127,9 @@ bool DescribeReservedDBInstancesOfferingsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeReservedDBInstancesOfferingsResponse object.
+ * Returns a DescribeReservedDBInstancesOfferingsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeReservedDBInstancesOfferingsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RDSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeReservedDBInstancesOfferingsRequest::response(QNetworkReply * const reply) const
 {
@@ -145,20 +137,17 @@ QtAws::Core::AwsAbstractResponse * DescribeReservedDBInstancesOfferingsRequest::
 }
 
 /*!
- * @internal
+ * \class QtAws::RDS::DescribeReservedDBInstancesOfferingsRequestPrivate
+ * \brief The DescribeReservedDBInstancesOfferingsRequestPrivate class provides private implementation for DescribeReservedDBInstancesOfferingsRequest.
+ * \internal
  *
- * @class  DescribeReservedDBInstancesOfferingsRequestPrivate
- *
- * @brief  Private implementation for DescribeReservedDBInstancesOfferingsRequest.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeReservedDBInstancesOfferingsRequestPrivate object.
- *
- * @param  action  RDS action being performed.
- * @param  q       Pointer to this object's public DescribeReservedDBInstancesOfferingsRequest instance.
+ * Constructs a DescribeReservedDBInstancesOfferingsRequestPrivate object for RDS \a action with,
+ * public implementation \a q.
  */
 DescribeReservedDBInstancesOfferingsRequestPrivate::DescribeReservedDBInstancesOfferingsRequestPrivate(
     const RDSRequest::Action action, DescribeReservedDBInstancesOfferingsRequest * const q)
@@ -168,15 +157,10 @@ DescribeReservedDBInstancesOfferingsRequestPrivate::DescribeReservedDBInstancesO
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeReservedDBInstancesOfferingsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeReservedDBInstancesOfferingsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeReservedDBInstancesOfferingsRequest instance.
  */
 DescribeReservedDBInstancesOfferingsRequestPrivate::DescribeReservedDBInstancesOfferingsRequestPrivate(
     const DescribeReservedDBInstancesOfferingsRequestPrivate &other, DescribeReservedDBInstancesOfferingsRequest * const q)

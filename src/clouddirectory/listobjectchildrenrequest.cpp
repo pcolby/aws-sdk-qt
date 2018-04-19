@@ -27,10 +27,9 @@ namespace CloudDirectory {
 
 /*!
  * \class QtAws::CloudDirectory::ListObjectChildrenRequest
- *
  * \brief The ListObjectChildrenRequest class provides an interface for CloudDirectory ListObjectChildren requests.
  *
- * \ingroup CloudDirectory
+ * \inmodule QtAwsCloudDirectory
  *
  *  <fullname>Amazon Cloud Directory</fullname>
  * 
@@ -44,9 +43,7 @@ namespace CloudDirectory {
  */
 
 /*!
- * @brief  Constructs a new ListObjectChildrenRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListObjectChildrenRequest::ListObjectChildrenRequest(const ListObjectChildrenRequest &other)
     : CloudDirectoryRequest(new ListObjectChildrenRequestPrivate(*other.d_func(), this))
@@ -55,7 +52,7 @@ ListObjectChildrenRequest::ListObjectChildrenRequest(const ListObjectChildrenReq
 }
 
 /*!
- * @brief  Constructs a new ListObjectChildrenRequest object.
+ * Constructs a ListObjectChildrenRequest object.
  */
 ListObjectChildrenRequest::ListObjectChildrenRequest()
     : CloudDirectoryRequest(new ListObjectChildrenRequestPrivate(CloudDirectoryRequest::ListObjectChildrenAction, this))
@@ -73,14 +70,9 @@ bool ListObjectChildrenRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListObjectChildrenResponse object.
+ * Returns a ListObjectChildrenResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListObjectChildrenResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudDirectoryClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListObjectChildrenRequest::response(QNetworkReply * const reply) const
 {
@@ -88,20 +80,17 @@ QtAws::Core::AwsAbstractResponse * ListObjectChildrenRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudDirectory::ListObjectChildrenRequestPrivate
+ * \brief The ListObjectChildrenRequestPrivate class provides private implementation for ListObjectChildrenRequest.
+ * \internal
  *
- * @class  ListObjectChildrenRequestPrivate
- *
- * @brief  Private implementation for ListObjectChildrenRequest.
+ * \inmodule QtAwsCloudDirectory
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListObjectChildrenRequestPrivate object.
- *
- * @param  action  CloudDirectory action being performed.
- * @param  q       Pointer to this object's public ListObjectChildrenRequest instance.
+ * Constructs a ListObjectChildrenRequestPrivate object for CloudDirectory \a action with,
+ * public implementation \a q.
  */
 ListObjectChildrenRequestPrivate::ListObjectChildrenRequestPrivate(
     const CloudDirectoryRequest::Action action, ListObjectChildrenRequest * const q)
@@ -111,15 +100,10 @@ ListObjectChildrenRequestPrivate::ListObjectChildrenRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListObjectChildrenRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListObjectChildrenRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListObjectChildrenRequest instance.
  */
 ListObjectChildrenRequestPrivate::ListObjectChildrenRequestPrivate(
     const ListObjectChildrenRequestPrivate &other, ListObjectChildrenRequest * const q)

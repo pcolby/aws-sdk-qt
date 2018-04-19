@@ -27,10 +27,9 @@ namespace DirectoryService {
 
 /*!
  * \class QtAws::DirectoryService::UpdateConditionalForwarderRequest
- *
  * \brief The UpdateConditionalForwarderRequest class provides an interface for DirectoryService UpdateConditionalForwarder requests.
  *
- * \ingroup DirectoryService
+ * \inmodule QtAwsDirectoryService
  *
  *  <fullname>AWS Directory Service</fullname>
  * 
@@ -51,9 +50,7 @@ namespace DirectoryService {
  */
 
 /*!
- * @brief  Constructs a new UpdateConditionalForwarderRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateConditionalForwarderRequest::UpdateConditionalForwarderRequest(const UpdateConditionalForwarderRequest &other)
     : DirectoryServiceRequest(new UpdateConditionalForwarderRequestPrivate(*other.d_func(), this))
@@ -62,7 +59,7 @@ UpdateConditionalForwarderRequest::UpdateConditionalForwarderRequest(const Updat
 }
 
 /*!
- * @brief  Constructs a new UpdateConditionalForwarderRequest object.
+ * Constructs a UpdateConditionalForwarderRequest object.
  */
 UpdateConditionalForwarderRequest::UpdateConditionalForwarderRequest()
     : DirectoryServiceRequest(new UpdateConditionalForwarderRequestPrivate(DirectoryServiceRequest::UpdateConditionalForwarderAction, this))
@@ -80,14 +77,9 @@ bool UpdateConditionalForwarderRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateConditionalForwarderResponse object.
+ * Returns a UpdateConditionalForwarderResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateConditionalForwarderResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DirectoryServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateConditionalForwarderRequest::response(QNetworkReply * const reply) const
 {
@@ -95,20 +87,17 @@ QtAws::Core::AwsAbstractResponse * UpdateConditionalForwarderRequest::response(Q
 }
 
 /*!
- * @internal
+ * \class QtAws::DirectoryService::UpdateConditionalForwarderRequestPrivate
+ * \brief The UpdateConditionalForwarderRequestPrivate class provides private implementation for UpdateConditionalForwarderRequest.
+ * \internal
  *
- * @class  UpdateConditionalForwarderRequestPrivate
- *
- * @brief  Private implementation for UpdateConditionalForwarderRequest.
+ * \inmodule QtAwsDirectoryService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateConditionalForwarderRequestPrivate object.
- *
- * @param  action  DirectoryService action being performed.
- * @param  q       Pointer to this object's public UpdateConditionalForwarderRequest instance.
+ * Constructs a UpdateConditionalForwarderRequestPrivate object for DirectoryService \a action with,
+ * public implementation \a q.
  */
 UpdateConditionalForwarderRequestPrivate::UpdateConditionalForwarderRequestPrivate(
     const DirectoryServiceRequest::Action action, UpdateConditionalForwarderRequest * const q)
@@ -118,15 +107,10 @@ UpdateConditionalForwarderRequestPrivate::UpdateConditionalForwarderRequestPriva
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateConditionalForwarderRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateConditionalForwarderRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateConditionalForwarderRequest instance.
  */
 UpdateConditionalForwarderRequestPrivate::UpdateConditionalForwarderRequestPrivate(
     const UpdateConditionalForwarderRequestPrivate &other, UpdateConditionalForwarderRequest * const q)

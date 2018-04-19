@@ -27,10 +27,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::ListCommandInvocationsRequest
- *
  * \brief The ListCommandInvocationsRequest class provides an interface for SSM ListCommandInvocations requests.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -61,9 +60,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new ListCommandInvocationsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListCommandInvocationsRequest::ListCommandInvocationsRequest(const ListCommandInvocationsRequest &other)
     : SSMRequest(new ListCommandInvocationsRequestPrivate(*other.d_func(), this))
@@ -72,7 +69,7 @@ ListCommandInvocationsRequest::ListCommandInvocationsRequest(const ListCommandIn
 }
 
 /*!
- * @brief  Constructs a new ListCommandInvocationsRequest object.
+ * Constructs a ListCommandInvocationsRequest object.
  */
 ListCommandInvocationsRequest::ListCommandInvocationsRequest()
     : SSMRequest(new ListCommandInvocationsRequestPrivate(SSMRequest::ListCommandInvocationsAction, this))
@@ -90,14 +87,9 @@ bool ListCommandInvocationsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListCommandInvocationsResponse object.
+ * Returns a ListCommandInvocationsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListCommandInvocationsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SSMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListCommandInvocationsRequest::response(QNetworkReply * const reply) const
 {
@@ -105,20 +97,17 @@ QtAws::Core::AwsAbstractResponse * ListCommandInvocationsRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::SSM::ListCommandInvocationsRequestPrivate
+ * \brief The ListCommandInvocationsRequestPrivate class provides private implementation for ListCommandInvocationsRequest.
+ * \internal
  *
- * @class  ListCommandInvocationsRequestPrivate
- *
- * @brief  Private implementation for ListCommandInvocationsRequest.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListCommandInvocationsRequestPrivate object.
- *
- * @param  action  SSM action being performed.
- * @param  q       Pointer to this object's public ListCommandInvocationsRequest instance.
+ * Constructs a ListCommandInvocationsRequestPrivate object for SSM \a action with,
+ * public implementation \a q.
  */
 ListCommandInvocationsRequestPrivate::ListCommandInvocationsRequestPrivate(
     const SSMRequest::Action action, ListCommandInvocationsRequest * const q)
@@ -128,15 +117,10 @@ ListCommandInvocationsRequestPrivate::ListCommandInvocationsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListCommandInvocationsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListCommandInvocationsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListCommandInvocationsRequest instance.
  */
 ListCommandInvocationsRequestPrivate::ListCommandInvocationsRequestPrivate(
     const ListCommandInvocationsRequestPrivate &other, ListCommandInvocationsRequest * const q)

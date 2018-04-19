@@ -27,10 +27,9 @@ namespace CognitoIdentityProvider {
 
 /*!
  * \class QtAws::CognitoIdentityProvider::DeleteUserPoolDomainRequest
- *
  * \brief The DeleteUserPoolDomainRequest class provides an interface for CognitoIdentityProvider DeleteUserPoolDomain requests.
  *
- * \ingroup CognitoIdentityProvider
+ * \inmodule QtAwsCognitoIdentityProvider
  *
  *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
  *  authenticate a user to obtain tokens related to user identity and access
@@ -47,9 +46,7 @@ namespace CognitoIdentityProvider {
  */
 
 /*!
- * @brief  Constructs a new DeleteUserPoolDomainRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteUserPoolDomainRequest::DeleteUserPoolDomainRequest(const DeleteUserPoolDomainRequest &other)
     : CognitoIdentityProviderRequest(new DeleteUserPoolDomainRequestPrivate(*other.d_func(), this))
@@ -58,7 +55,7 @@ DeleteUserPoolDomainRequest::DeleteUserPoolDomainRequest(const DeleteUserPoolDom
 }
 
 /*!
- * @brief  Constructs a new DeleteUserPoolDomainRequest object.
+ * Constructs a DeleteUserPoolDomainRequest object.
  */
 DeleteUserPoolDomainRequest::DeleteUserPoolDomainRequest()
     : CognitoIdentityProviderRequest(new DeleteUserPoolDomainRequestPrivate(CognitoIdentityProviderRequest::DeleteUserPoolDomainAction, this))
@@ -76,14 +73,9 @@ bool DeleteUserPoolDomainRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteUserPoolDomainResponse object.
+ * Returns a DeleteUserPoolDomainResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteUserPoolDomainResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CognitoIdentityProviderClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteUserPoolDomainRequest::response(QNetworkReply * const reply) const
 {
@@ -91,20 +83,17 @@ QtAws::Core::AwsAbstractResponse * DeleteUserPoolDomainRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::CognitoIdentityProvider::DeleteUserPoolDomainRequestPrivate
+ * \brief The DeleteUserPoolDomainRequestPrivate class provides private implementation for DeleteUserPoolDomainRequest.
+ * \internal
  *
- * @class  DeleteUserPoolDomainRequestPrivate
- *
- * @brief  Private implementation for DeleteUserPoolDomainRequest.
+ * \inmodule QtAwsCognitoIdentityProvider
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteUserPoolDomainRequestPrivate object.
- *
- * @param  action  CognitoIdentityProvider action being performed.
- * @param  q       Pointer to this object's public DeleteUserPoolDomainRequest instance.
+ * Constructs a DeleteUserPoolDomainRequestPrivate object for CognitoIdentityProvider \a action with,
+ * public implementation \a q.
  */
 DeleteUserPoolDomainRequestPrivate::DeleteUserPoolDomainRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, DeleteUserPoolDomainRequest * const q)
@@ -114,15 +103,10 @@ DeleteUserPoolDomainRequestPrivate::DeleteUserPoolDomainRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteUserPoolDomainRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteUserPoolDomainRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteUserPoolDomainRequest instance.
  */
 DeleteUserPoolDomainRequestPrivate::DeleteUserPoolDomainRequestPrivate(
     const DeleteUserPoolDomainRequestPrivate &other, DeleteUserPoolDomainRequest * const q)

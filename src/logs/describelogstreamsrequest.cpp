@@ -27,10 +27,9 @@ namespace CloudWatchLogs {
 
 /*!
  * \class QtAws::CloudWatchLogs::DescribeLogStreamsRequest
- *
  * \brief The DescribeLogStreamsRequest class provides an interface for CloudWatchLogs DescribeLogStreams requests.
  *
- * \ingroup CloudWatchLogs
+ * \inmodule QtAwsCloudWatchLogs
  *
  *  You can use Amazon CloudWatch Logs to monitor, store, and access your log files from Amazon EC2 instances, AWS
  *  CloudTrail, or other sources. You can then retrieve the associated log data from CloudWatch Logs using the CloudWatch
@@ -66,9 +65,7 @@ namespace CloudWatchLogs {
  */
 
 /*!
- * @brief  Constructs a new DescribeLogStreamsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeLogStreamsRequest::DescribeLogStreamsRequest(const DescribeLogStreamsRequest &other)
     : CloudWatchLogsRequest(new DescribeLogStreamsRequestPrivate(*other.d_func(), this))
@@ -77,7 +74,7 @@ DescribeLogStreamsRequest::DescribeLogStreamsRequest(const DescribeLogStreamsReq
 }
 
 /*!
- * @brief  Constructs a new DescribeLogStreamsRequest object.
+ * Constructs a DescribeLogStreamsRequest object.
  */
 DescribeLogStreamsRequest::DescribeLogStreamsRequest()
     : CloudWatchLogsRequest(new DescribeLogStreamsRequestPrivate(CloudWatchLogsRequest::DescribeLogStreamsAction, this))
@@ -95,14 +92,9 @@ bool DescribeLogStreamsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeLogStreamsResponse object.
+ * Returns a DescribeLogStreamsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeLogStreamsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudWatchLogsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeLogStreamsRequest::response(QNetworkReply * const reply) const
 {
@@ -110,20 +102,17 @@ QtAws::Core::AwsAbstractResponse * DescribeLogStreamsRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudWatchLogs::DescribeLogStreamsRequestPrivate
+ * \brief The DescribeLogStreamsRequestPrivate class provides private implementation for DescribeLogStreamsRequest.
+ * \internal
  *
- * @class  DescribeLogStreamsRequestPrivate
- *
- * @brief  Private implementation for DescribeLogStreamsRequest.
+ * \inmodule QtAwsCloudWatchLogs
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeLogStreamsRequestPrivate object.
- *
- * @param  action  CloudWatchLogs action being performed.
- * @param  q       Pointer to this object's public DescribeLogStreamsRequest instance.
+ * Constructs a DescribeLogStreamsRequestPrivate object for CloudWatchLogs \a action with,
+ * public implementation \a q.
  */
 DescribeLogStreamsRequestPrivate::DescribeLogStreamsRequestPrivate(
     const CloudWatchLogsRequest::Action action, DescribeLogStreamsRequest * const q)
@@ -133,15 +122,10 @@ DescribeLogStreamsRequestPrivate::DescribeLogStreamsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeLogStreamsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeLogStreamsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeLogStreamsRequest instance.
  */
 DescribeLogStreamsRequestPrivate::DescribeLogStreamsRequestPrivate(
     const DescribeLogStreamsRequestPrivate &other, DescribeLogStreamsRequest * const q)

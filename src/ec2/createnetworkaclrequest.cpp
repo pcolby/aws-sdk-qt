@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::CreateNetworkAclRequest
- *
  * \brief The CreateNetworkAclRequest class provides an interface for EC2 CreateNetworkAcl requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new CreateNetworkAclRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateNetworkAclRequest::CreateNetworkAclRequest(const CreateNetworkAclRequest &other)
     : EC2Request(new CreateNetworkAclRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ CreateNetworkAclRequest::CreateNetworkAclRequest(const CreateNetworkAclRequest &
 }
 
 /*!
- * @brief  Constructs a new CreateNetworkAclRequest object.
+ * Constructs a CreateNetworkAclRequest object.
  */
 CreateNetworkAclRequest::CreateNetworkAclRequest()
     : EC2Request(new CreateNetworkAclRequestPrivate(EC2Request::CreateNetworkAclAction, this))
@@ -70,14 +67,9 @@ bool CreateNetworkAclRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateNetworkAclResponse object.
+ * Returns a CreateNetworkAclResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateNetworkAclResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateNetworkAclRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * CreateNetworkAclRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::CreateNetworkAclRequestPrivate
+ * \brief The CreateNetworkAclRequestPrivate class provides private implementation for CreateNetworkAclRequest.
+ * \internal
  *
- * @class  CreateNetworkAclRequestPrivate
- *
- * @brief  Private implementation for CreateNetworkAclRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateNetworkAclRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public CreateNetworkAclRequest instance.
+ * Constructs a CreateNetworkAclRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 CreateNetworkAclRequestPrivate::CreateNetworkAclRequestPrivate(
     const EC2Request::Action action, CreateNetworkAclRequest * const q)
@@ -108,15 +97,10 @@ CreateNetworkAclRequestPrivate::CreateNetworkAclRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateNetworkAclRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateNetworkAclRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateNetworkAclRequest instance.
  */
 CreateNetworkAclRequestPrivate::CreateNetworkAclRequestPrivate(
     const CreateNetworkAclRequestPrivate &other, CreateNetworkAclRequest * const q)

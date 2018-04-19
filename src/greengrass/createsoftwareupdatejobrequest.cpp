@@ -27,10 +27,9 @@ namespace Greengrass {
 
 /*!
  * \class QtAws::Greengrass::CreateSoftwareUpdateJobRequest
- *
  * \brief The CreateSoftwareUpdateJobRequest class provides an interface for Greengrass CreateSoftwareUpdateJob requests.
  *
- * \ingroup Greengrass
+ * \inmodule QtAwsGreengrass
  *
  *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
  *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
@@ -40,9 +39,7 @@ namespace Greengrass {
  */
 
 /*!
- * @brief  Constructs a new CreateSoftwareUpdateJobRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateSoftwareUpdateJobRequest::CreateSoftwareUpdateJobRequest(const CreateSoftwareUpdateJobRequest &other)
     : GreengrassRequest(new CreateSoftwareUpdateJobRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ CreateSoftwareUpdateJobRequest::CreateSoftwareUpdateJobRequest(const CreateSoftw
 }
 
 /*!
- * @brief  Constructs a new CreateSoftwareUpdateJobRequest object.
+ * Constructs a CreateSoftwareUpdateJobRequest object.
  */
 CreateSoftwareUpdateJobRequest::CreateSoftwareUpdateJobRequest()
     : GreengrassRequest(new CreateSoftwareUpdateJobRequestPrivate(GreengrassRequest::CreateSoftwareUpdateJobAction, this))
@@ -69,14 +66,9 @@ bool CreateSoftwareUpdateJobRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateSoftwareUpdateJobResponse object.
+ * Returns a CreateSoftwareUpdateJobResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateSoftwareUpdateJobResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GreengrassClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateSoftwareUpdateJobRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * CreateSoftwareUpdateJobRequest::response(QNet
 }
 
 /*!
- * @internal
+ * \class QtAws::Greengrass::CreateSoftwareUpdateJobRequestPrivate
+ * \brief The CreateSoftwareUpdateJobRequestPrivate class provides private implementation for CreateSoftwareUpdateJobRequest.
+ * \internal
  *
- * @class  CreateSoftwareUpdateJobRequestPrivate
- *
- * @brief  Private implementation for CreateSoftwareUpdateJobRequest.
+ * \inmodule QtAwsGreengrass
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateSoftwareUpdateJobRequestPrivate object.
- *
- * @param  action  Greengrass action being performed.
- * @param  q       Pointer to this object's public CreateSoftwareUpdateJobRequest instance.
+ * Constructs a CreateSoftwareUpdateJobRequestPrivate object for Greengrass \a action with,
+ * public implementation \a q.
  */
 CreateSoftwareUpdateJobRequestPrivate::CreateSoftwareUpdateJobRequestPrivate(
     const GreengrassRequest::Action action, CreateSoftwareUpdateJobRequest * const q)
@@ -107,15 +96,10 @@ CreateSoftwareUpdateJobRequestPrivate::CreateSoftwareUpdateJobRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateSoftwareUpdateJobRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateSoftwareUpdateJobRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateSoftwareUpdateJobRequest instance.
  */
 CreateSoftwareUpdateJobRequestPrivate::CreateSoftwareUpdateJobRequestPrivate(
     const CreateSoftwareUpdateJobRequestPrivate &other, CreateSoftwareUpdateJobRequest * const q)

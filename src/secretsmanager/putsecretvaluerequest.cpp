@@ -27,10 +27,9 @@ namespace SecretsManager {
 
 /*!
  * \class QtAws::SecretsManager::PutSecretValueRequest
- *
  * \brief The PutSecretValueRequest class provides an interface for SecretsManager PutSecretValue requests.
  *
- * \ingroup SecretsManager
+ * \inmodule QtAwsSecretsManager
  *
  *  <fullname>AWS Secrets Manager API Reference</fullname>
  * 
@@ -137,9 +136,7 @@ namespace SecretsManager {
  */
 
 /*!
- * @brief  Constructs a new PutSecretValueRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 PutSecretValueRequest::PutSecretValueRequest(const PutSecretValueRequest &other)
     : SecretsManagerRequest(new PutSecretValueRequestPrivate(*other.d_func(), this))
@@ -148,7 +145,7 @@ PutSecretValueRequest::PutSecretValueRequest(const PutSecretValueRequest &other)
 }
 
 /*!
- * @brief  Constructs a new PutSecretValueRequest object.
+ * Constructs a PutSecretValueRequest object.
  */
 PutSecretValueRequest::PutSecretValueRequest()
     : SecretsManagerRequest(new PutSecretValueRequestPrivate(SecretsManagerRequest::PutSecretValueAction, this))
@@ -166,14 +163,9 @@ bool PutSecretValueRequest::isValid() const
 
 
 /*!
- * @brief  Construct an PutSecretValueResponse object.
+ * Returns a PutSecretValueResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An PutSecretValueResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SecretsManagerClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * PutSecretValueRequest::response(QNetworkReply * const reply) const
 {
@@ -181,20 +173,17 @@ QtAws::Core::AwsAbstractResponse * PutSecretValueRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::SecretsManager::PutSecretValueRequestPrivate
+ * \brief The PutSecretValueRequestPrivate class provides private implementation for PutSecretValueRequest.
+ * \internal
  *
- * @class  PutSecretValueRequestPrivate
- *
- * @brief  Private implementation for PutSecretValueRequest.
+ * \inmodule QtAwsSecretsManager
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new PutSecretValueRequestPrivate object.
- *
- * @param  action  SecretsManager action being performed.
- * @param  q       Pointer to this object's public PutSecretValueRequest instance.
+ * Constructs a PutSecretValueRequestPrivate object for SecretsManager \a action with,
+ * public implementation \a q.
  */
 PutSecretValueRequestPrivate::PutSecretValueRequestPrivate(
     const SecretsManagerRequest::Action action, PutSecretValueRequest * const q)
@@ -204,15 +193,10 @@ PutSecretValueRequestPrivate::PutSecretValueRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutSecretValueRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the PutSecretValueRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public PutSecretValueRequest instance.
  */
 PutSecretValueRequestPrivate::PutSecretValueRequestPrivate(
     const PutSecretValueRequestPrivate &other, PutSecretValueRequest * const q)

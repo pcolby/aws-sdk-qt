@@ -27,10 +27,9 @@ namespace AutoScaling {
 
 /*!
  * \class QtAws::AutoScaling::AttachLoadBalancersRequest
- *
  * \brief The AttachLoadBalancersRequest class provides an interface for AutoScaling AttachLoadBalancers requests.
  *
- * \ingroup AutoScaling
+ * \inmodule QtAwsAutoScaling
  *
  *  <fullname>Amazon EC2 Auto Scaling</fullname>
  * 
@@ -42,9 +41,7 @@ namespace AutoScaling {
  */
 
 /*!
- * @brief  Constructs a new AttachLoadBalancersRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AttachLoadBalancersRequest::AttachLoadBalancersRequest(const AttachLoadBalancersRequest &other)
     : AutoScalingRequest(new AttachLoadBalancersRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ AttachLoadBalancersRequest::AttachLoadBalancersRequest(const AttachLoadBalancers
 }
 
 /*!
- * @brief  Constructs a new AttachLoadBalancersRequest object.
+ * Constructs a AttachLoadBalancersRequest object.
  */
 AttachLoadBalancersRequest::AttachLoadBalancersRequest()
     : AutoScalingRequest(new AttachLoadBalancersRequestPrivate(AutoScalingRequest::AttachLoadBalancersAction, this))
@@ -71,14 +68,9 @@ bool AttachLoadBalancersRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AttachLoadBalancersResponse object.
+ * Returns a AttachLoadBalancersResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AttachLoadBalancersResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AutoScalingClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AttachLoadBalancersRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * AttachLoadBalancersRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::AutoScaling::AttachLoadBalancersRequestPrivate
+ * \brief The AttachLoadBalancersRequestPrivate class provides private implementation for AttachLoadBalancersRequest.
+ * \internal
  *
- * @class  AttachLoadBalancersRequestPrivate
- *
- * @brief  Private implementation for AttachLoadBalancersRequest.
+ * \inmodule QtAwsAutoScaling
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AttachLoadBalancersRequestPrivate object.
- *
- * @param  action  AutoScaling action being performed.
- * @param  q       Pointer to this object's public AttachLoadBalancersRequest instance.
+ * Constructs a AttachLoadBalancersRequestPrivate object for AutoScaling \a action with,
+ * public implementation \a q.
  */
 AttachLoadBalancersRequestPrivate::AttachLoadBalancersRequestPrivate(
     const AutoScalingRequest::Action action, AttachLoadBalancersRequest * const q)
@@ -109,15 +98,10 @@ AttachLoadBalancersRequestPrivate::AttachLoadBalancersRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AttachLoadBalancersRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AttachLoadBalancersRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AttachLoadBalancersRequest instance.
  */
 AttachLoadBalancersRequestPrivate::AttachLoadBalancersRequestPrivate(
     const AttachLoadBalancersRequestPrivate &other, AttachLoadBalancersRequest * const q)

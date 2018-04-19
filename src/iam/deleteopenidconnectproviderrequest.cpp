@@ -27,10 +27,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::DeleteOpenIDConnectProviderRequest
- *
  * \brief The DeleteOpenIDConnectProviderRequest class provides an interface for IAM DeleteOpenIDConnectProvider requests.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -102,9 +101,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new DeleteOpenIDConnectProviderRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteOpenIDConnectProviderRequest::DeleteOpenIDConnectProviderRequest(const DeleteOpenIDConnectProviderRequest &other)
     : IAMRequest(new DeleteOpenIDConnectProviderRequestPrivate(*other.d_func(), this))
@@ -113,7 +110,7 @@ DeleteOpenIDConnectProviderRequest::DeleteOpenIDConnectProviderRequest(const Del
 }
 
 /*!
- * @brief  Constructs a new DeleteOpenIDConnectProviderRequest object.
+ * Constructs a DeleteOpenIDConnectProviderRequest object.
  */
 DeleteOpenIDConnectProviderRequest::DeleteOpenIDConnectProviderRequest()
     : IAMRequest(new DeleteOpenIDConnectProviderRequestPrivate(IAMRequest::DeleteOpenIDConnectProviderAction, this))
@@ -131,14 +128,9 @@ bool DeleteOpenIDConnectProviderRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteOpenIDConnectProviderResponse object.
+ * Returns a DeleteOpenIDConnectProviderResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteOpenIDConnectProviderResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IAMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteOpenIDConnectProviderRequest::response(QNetworkReply * const reply) const
 {
@@ -146,20 +138,17 @@ QtAws::Core::AwsAbstractResponse * DeleteOpenIDConnectProviderRequest::response(
 }
 
 /*!
- * @internal
+ * \class QtAws::IAM::DeleteOpenIDConnectProviderRequestPrivate
+ * \brief The DeleteOpenIDConnectProviderRequestPrivate class provides private implementation for DeleteOpenIDConnectProviderRequest.
+ * \internal
  *
- * @class  DeleteOpenIDConnectProviderRequestPrivate
- *
- * @brief  Private implementation for DeleteOpenIDConnectProviderRequest.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteOpenIDConnectProviderRequestPrivate object.
- *
- * @param  action  IAM action being performed.
- * @param  q       Pointer to this object's public DeleteOpenIDConnectProviderRequest instance.
+ * Constructs a DeleteOpenIDConnectProviderRequestPrivate object for IAM \a action with,
+ * public implementation \a q.
  */
 DeleteOpenIDConnectProviderRequestPrivate::DeleteOpenIDConnectProviderRequestPrivate(
     const IAMRequest::Action action, DeleteOpenIDConnectProviderRequest * const q)
@@ -169,15 +158,10 @@ DeleteOpenIDConnectProviderRequestPrivate::DeleteOpenIDConnectProviderRequestPri
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteOpenIDConnectProviderRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteOpenIDConnectProviderRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteOpenIDConnectProviderRequest instance.
  */
 DeleteOpenIDConnectProviderRequestPrivate::DeleteOpenIDConnectProviderRequestPrivate(
     const DeleteOpenIDConnectProviderRequestPrivate &other, DeleteOpenIDConnectProviderRequest * const q)

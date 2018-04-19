@@ -27,10 +27,9 @@ namespace CloudFront {
 
 /*!
  * \class QtAws::CloudFront::DeleteServiceLinkedRoleRequest
- *
  * \brief The DeleteServiceLinkedRoleRequest class provides an interface for CloudFront DeleteServiceLinkedRole requests.
  *
- * \ingroup CloudFront
+ * \inmodule QtAwsCloudFront
  *
  *  <fullname>Amazon CloudFront</fullname>
  * 
@@ -42,9 +41,7 @@ namespace CloudFront {
  */
 
 /*!
- * @brief  Constructs a new DeleteServiceLinkedRoleRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteServiceLinkedRoleRequest::DeleteServiceLinkedRoleRequest(const DeleteServiceLinkedRoleRequest &other)
     : CloudFrontRequest(new DeleteServiceLinkedRoleRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ DeleteServiceLinkedRoleRequest::DeleteServiceLinkedRoleRequest(const DeleteServi
 }
 
 /*!
- * @brief  Constructs a new DeleteServiceLinkedRoleRequest object.
+ * Constructs a DeleteServiceLinkedRoleRequest object.
  */
 DeleteServiceLinkedRoleRequest::DeleteServiceLinkedRoleRequest()
     : CloudFrontRequest(new DeleteServiceLinkedRoleRequestPrivate(CloudFrontRequest::DeleteServiceLinkedRoleAction, this))
@@ -71,14 +68,9 @@ bool DeleteServiceLinkedRoleRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteServiceLinkedRoleResponse object.
+ * Returns a DeleteServiceLinkedRoleResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteServiceLinkedRoleResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudFrontClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteServiceLinkedRoleRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * DeleteServiceLinkedRoleRequest::response(QNet
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudFront::DeleteServiceLinkedRoleRequestPrivate
+ * \brief The DeleteServiceLinkedRoleRequestPrivate class provides private implementation for DeleteServiceLinkedRoleRequest.
+ * \internal
  *
- * @class  DeleteServiceLinkedRoleRequestPrivate
- *
- * @brief  Private implementation for DeleteServiceLinkedRoleRequest.
+ * \inmodule QtAwsCloudFront
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteServiceLinkedRoleRequestPrivate object.
- *
- * @param  action  CloudFront action being performed.
- * @param  q       Pointer to this object's public DeleteServiceLinkedRoleRequest instance.
+ * Constructs a DeleteServiceLinkedRoleRequestPrivate object for CloudFront \a action with,
+ * public implementation \a q.
  */
 DeleteServiceLinkedRoleRequestPrivate::DeleteServiceLinkedRoleRequestPrivate(
     const CloudFrontRequest::Action action, DeleteServiceLinkedRoleRequest * const q)
@@ -109,15 +98,10 @@ DeleteServiceLinkedRoleRequestPrivate::DeleteServiceLinkedRoleRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteServiceLinkedRoleRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteServiceLinkedRoleRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteServiceLinkedRoleRequest instance.
  */
 DeleteServiceLinkedRoleRequestPrivate::DeleteServiceLinkedRoleRequestPrivate(
     const DeleteServiceLinkedRoleRequestPrivate &other, DeleteServiceLinkedRoleRequest * const q)

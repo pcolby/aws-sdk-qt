@@ -70,6 +70,9 @@
 /*!
  * \namespace QtAws::DAX
  * \brief The QtAws::DAX contains stuff...
+ *
+ * \inmodule QtAwsDAX
+ *
  * @todo Move this to a separate template file.
  */
 
@@ -123,7 +126,7 @@ DaxClient::DaxClient(
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * \a  AwsEndpoint::getEndpoint()
+ * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
 DaxClient::DaxClient(
     const QUrl &endpoint,

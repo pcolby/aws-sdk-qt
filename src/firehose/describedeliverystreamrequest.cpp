@@ -27,10 +27,9 @@ namespace Firehose {
 
 /*!
  * \class QtAws::Firehose::DescribeDeliveryStreamRequest
- *
  * \brief The DescribeDeliveryStreamRequest class provides an interface for Firehose DescribeDeliveryStream requests.
  *
- * \ingroup Firehose
+ * \inmodule QtAwsFirehose
  *
  *  <fullname>Amazon Kinesis Firehose API Reference</fullname>
  * 
@@ -41,9 +40,7 @@ namespace Firehose {
  */
 
 /*!
- * @brief  Constructs a new DescribeDeliveryStreamRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeDeliveryStreamRequest::DescribeDeliveryStreamRequest(const DescribeDeliveryStreamRequest &other)
     : FirehoseRequest(new DescribeDeliveryStreamRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ DescribeDeliveryStreamRequest::DescribeDeliveryStreamRequest(const DescribeDeliv
 }
 
 /*!
- * @brief  Constructs a new DescribeDeliveryStreamRequest object.
+ * Constructs a DescribeDeliveryStreamRequest object.
  */
 DescribeDeliveryStreamRequest::DescribeDeliveryStreamRequest()
     : FirehoseRequest(new DescribeDeliveryStreamRequestPrivate(FirehoseRequest::DescribeDeliveryStreamAction, this))
@@ -70,14 +67,9 @@ bool DescribeDeliveryStreamRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeDeliveryStreamResponse object.
+ * Returns a DescribeDeliveryStreamResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeDeliveryStreamResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  FirehoseClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeDeliveryStreamRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * DescribeDeliveryStreamRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::Firehose::DescribeDeliveryStreamRequestPrivate
+ * \brief The DescribeDeliveryStreamRequestPrivate class provides private implementation for DescribeDeliveryStreamRequest.
+ * \internal
  *
- * @class  DescribeDeliveryStreamRequestPrivate
- *
- * @brief  Private implementation for DescribeDeliveryStreamRequest.
+ * \inmodule QtAwsFirehose
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeDeliveryStreamRequestPrivate object.
- *
- * @param  action  Firehose action being performed.
- * @param  q       Pointer to this object's public DescribeDeliveryStreamRequest instance.
+ * Constructs a DescribeDeliveryStreamRequestPrivate object for Firehose \a action with,
+ * public implementation \a q.
  */
 DescribeDeliveryStreamRequestPrivate::DescribeDeliveryStreamRequestPrivate(
     const FirehoseRequest::Action action, DescribeDeliveryStreamRequest * const q)
@@ -108,15 +97,10 @@ DescribeDeliveryStreamRequestPrivate::DescribeDeliveryStreamRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeDeliveryStreamRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeDeliveryStreamRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeDeliveryStreamRequest instance.
  */
 DescribeDeliveryStreamRequestPrivate::DescribeDeliveryStreamRequestPrivate(
     const DescribeDeliveryStreamRequestPrivate &other, DescribeDeliveryStreamRequest * const q)

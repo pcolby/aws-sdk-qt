@@ -27,10 +27,9 @@ namespace MigrationHub {
 
 /*!
  * \class QtAws::MigrationHub::ListCreatedArtifactsRequest
- *
  * \brief The ListCreatedArtifactsRequest class provides an interface for MigrationHub ListCreatedArtifacts requests.
  *
- * \ingroup MigrationHub
+ * \inmodule QtAwsMigrationHub
  *
  *  The AWS Migration Hub API methods help to obtain server and application migration status and integrate your
  *  resource-specific migration tool by providing a programmatic interface to Migration Hub.
@@ -39,9 +38,7 @@ namespace MigrationHub {
  */
 
 /*!
- * @brief  Constructs a new ListCreatedArtifactsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListCreatedArtifactsRequest::ListCreatedArtifactsRequest(const ListCreatedArtifactsRequest &other)
     : MigrationHubRequest(new ListCreatedArtifactsRequestPrivate(*other.d_func(), this))
@@ -50,7 +47,7 @@ ListCreatedArtifactsRequest::ListCreatedArtifactsRequest(const ListCreatedArtifa
 }
 
 /*!
- * @brief  Constructs a new ListCreatedArtifactsRequest object.
+ * Constructs a ListCreatedArtifactsRequest object.
  */
 ListCreatedArtifactsRequest::ListCreatedArtifactsRequest()
     : MigrationHubRequest(new ListCreatedArtifactsRequestPrivate(MigrationHubRequest::ListCreatedArtifactsAction, this))
@@ -68,14 +65,9 @@ bool ListCreatedArtifactsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListCreatedArtifactsResponse object.
+ * Returns a ListCreatedArtifactsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListCreatedArtifactsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MigrationHubClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListCreatedArtifactsRequest::response(QNetworkReply * const reply) const
 {
@@ -83,20 +75,17 @@ QtAws::Core::AwsAbstractResponse * ListCreatedArtifactsRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::MigrationHub::ListCreatedArtifactsRequestPrivate
+ * \brief The ListCreatedArtifactsRequestPrivate class provides private implementation for ListCreatedArtifactsRequest.
+ * \internal
  *
- * @class  ListCreatedArtifactsRequestPrivate
- *
- * @brief  Private implementation for ListCreatedArtifactsRequest.
+ * \inmodule QtAwsMigrationHub
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListCreatedArtifactsRequestPrivate object.
- *
- * @param  action  MigrationHub action being performed.
- * @param  q       Pointer to this object's public ListCreatedArtifactsRequest instance.
+ * Constructs a ListCreatedArtifactsRequestPrivate object for MigrationHub \a action with,
+ * public implementation \a q.
  */
 ListCreatedArtifactsRequestPrivate::ListCreatedArtifactsRequestPrivate(
     const MigrationHubRequest::Action action, ListCreatedArtifactsRequest * const q)
@@ -106,15 +95,10 @@ ListCreatedArtifactsRequestPrivate::ListCreatedArtifactsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListCreatedArtifactsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListCreatedArtifactsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListCreatedArtifactsRequest instance.
  */
 ListCreatedArtifactsRequestPrivate::ListCreatedArtifactsRequestPrivate(
     const ListCreatedArtifactsRequestPrivate &other, ListCreatedArtifactsRequest * const q)

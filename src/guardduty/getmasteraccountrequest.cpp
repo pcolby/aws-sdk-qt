@@ -27,19 +27,16 @@ namespace GuardDuty {
 
 /*!
  * \class QtAws::GuardDuty::GetMasterAccountRequest
- *
  * \brief The GetMasterAccountRequest class provides an interface for GuardDuty GetMasterAccount requests.
  *
- * \ingroup GuardDuty
+ * \inmodule QtAwsGuardDuty
  *
  *
  * \sa GuardDutyClient::getMasterAccount
  */
 
 /*!
- * @brief  Constructs a new GetMasterAccountRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetMasterAccountRequest::GetMasterAccountRequest(const GetMasterAccountRequest &other)
     : GuardDutyRequest(new GetMasterAccountRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ GetMasterAccountRequest::GetMasterAccountRequest(const GetMasterAccountRequest &
 }
 
 /*!
- * @brief  Constructs a new GetMasterAccountRequest object.
+ * Constructs a GetMasterAccountRequest object.
  */
 GetMasterAccountRequest::GetMasterAccountRequest()
     : GuardDutyRequest(new GetMasterAccountRequestPrivate(GuardDutyRequest::GetMasterAccountAction, this))
@@ -66,14 +63,9 @@ bool GetMasterAccountRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetMasterAccountResponse object.
+ * Returns a GetMasterAccountResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetMasterAccountResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GuardDutyClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetMasterAccountRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * GetMasterAccountRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::GuardDuty::GetMasterAccountRequestPrivate
+ * \brief The GetMasterAccountRequestPrivate class provides private implementation for GetMasterAccountRequest.
+ * \internal
  *
- * @class  GetMasterAccountRequestPrivate
- *
- * @brief  Private implementation for GetMasterAccountRequest.
+ * \inmodule QtAwsGuardDuty
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetMasterAccountRequestPrivate object.
- *
- * @param  action  GuardDuty action being performed.
- * @param  q       Pointer to this object's public GetMasterAccountRequest instance.
+ * Constructs a GetMasterAccountRequestPrivate object for GuardDuty \a action with,
+ * public implementation \a q.
  */
 GetMasterAccountRequestPrivate::GetMasterAccountRequestPrivate(
     const GuardDutyRequest::Action action, GetMasterAccountRequest * const q)
@@ -104,15 +93,10 @@ GetMasterAccountRequestPrivate::GetMasterAccountRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetMasterAccountRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetMasterAccountRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetMasterAccountRequest instance.
  */
 GetMasterAccountRequestPrivate::GetMasterAccountRequestPrivate(
     const GetMasterAccountRequestPrivate &other, GetMasterAccountRequest * const q)

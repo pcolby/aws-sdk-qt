@@ -27,10 +27,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::UpdateEventConfigurationsRequest
- *
  * \brief The UpdateEventConfigurationsRequest class provides an interface for IoT UpdateEventConfigurations requests.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -48,9 +47,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new UpdateEventConfigurationsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateEventConfigurationsRequest::UpdateEventConfigurationsRequest(const UpdateEventConfigurationsRequest &other)
     : IoTRequest(new UpdateEventConfigurationsRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ UpdateEventConfigurationsRequest::UpdateEventConfigurationsRequest(const UpdateE
 }
 
 /*!
- * @brief  Constructs a new UpdateEventConfigurationsRequest object.
+ * Constructs a UpdateEventConfigurationsRequest object.
  */
 UpdateEventConfigurationsRequest::UpdateEventConfigurationsRequest()
     : IoTRequest(new UpdateEventConfigurationsRequestPrivate(IoTRequest::UpdateEventConfigurationsAction, this))
@@ -77,14 +74,9 @@ bool UpdateEventConfigurationsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateEventConfigurationsResponse object.
+ * Returns a UpdateEventConfigurationsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateEventConfigurationsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IoTClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateEventConfigurationsRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * UpdateEventConfigurationsRequest::response(QN
 }
 
 /*!
- * @internal
+ * \class QtAws::IoT::UpdateEventConfigurationsRequestPrivate
+ * \brief The UpdateEventConfigurationsRequestPrivate class provides private implementation for UpdateEventConfigurationsRequest.
+ * \internal
  *
- * @class  UpdateEventConfigurationsRequestPrivate
- *
- * @brief  Private implementation for UpdateEventConfigurationsRequest.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateEventConfigurationsRequestPrivate object.
- *
- * @param  action  IoT action being performed.
- * @param  q       Pointer to this object's public UpdateEventConfigurationsRequest instance.
+ * Constructs a UpdateEventConfigurationsRequestPrivate object for IoT \a action with,
+ * public implementation \a q.
  */
 UpdateEventConfigurationsRequestPrivate::UpdateEventConfigurationsRequestPrivate(
     const IoTRequest::Action action, UpdateEventConfigurationsRequest * const q)
@@ -115,15 +104,10 @@ UpdateEventConfigurationsRequestPrivate::UpdateEventConfigurationsRequestPrivate
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateEventConfigurationsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateEventConfigurationsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateEventConfigurationsRequest instance.
  */
 UpdateEventConfigurationsRequestPrivate::UpdateEventConfigurationsRequestPrivate(
     const UpdateEventConfigurationsRequestPrivate &other, UpdateEventConfigurationsRequest * const q)

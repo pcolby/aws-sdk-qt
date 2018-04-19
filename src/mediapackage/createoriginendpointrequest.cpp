@@ -27,19 +27,16 @@ namespace MediaPackage {
 
 /*!
  * \class QtAws::MediaPackage::CreateOriginEndpointRequest
- *
  * \brief The CreateOriginEndpointRequest class provides an interface for MediaPackage CreateOriginEndpoint requests.
  *
- * \ingroup MediaPackage
+ * \inmodule QtAwsMediaPackage
  *
  *
  * \sa MediaPackageClient::createOriginEndpoint
  */
 
 /*!
- * @brief  Constructs a new CreateOriginEndpointRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateOriginEndpointRequest::CreateOriginEndpointRequest(const CreateOriginEndpointRequest &other)
     : MediaPackageRequest(new CreateOriginEndpointRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ CreateOriginEndpointRequest::CreateOriginEndpointRequest(const CreateOriginEndpo
 }
 
 /*!
- * @brief  Constructs a new CreateOriginEndpointRequest object.
+ * Constructs a CreateOriginEndpointRequest object.
  */
 CreateOriginEndpointRequest::CreateOriginEndpointRequest()
     : MediaPackageRequest(new CreateOriginEndpointRequestPrivate(MediaPackageRequest::CreateOriginEndpointAction, this))
@@ -66,14 +63,9 @@ bool CreateOriginEndpointRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateOriginEndpointResponse object.
+ * Returns a CreateOriginEndpointResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateOriginEndpointResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MediaPackageClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateOriginEndpointRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * CreateOriginEndpointRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::MediaPackage::CreateOriginEndpointRequestPrivate
+ * \brief The CreateOriginEndpointRequestPrivate class provides private implementation for CreateOriginEndpointRequest.
+ * \internal
  *
- * @class  CreateOriginEndpointRequestPrivate
- *
- * @brief  Private implementation for CreateOriginEndpointRequest.
+ * \inmodule QtAwsMediaPackage
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateOriginEndpointRequestPrivate object.
- *
- * @param  action  MediaPackage action being performed.
- * @param  q       Pointer to this object's public CreateOriginEndpointRequest instance.
+ * Constructs a CreateOriginEndpointRequestPrivate object for MediaPackage \a action with,
+ * public implementation \a q.
  */
 CreateOriginEndpointRequestPrivate::CreateOriginEndpointRequestPrivate(
     const MediaPackageRequest::Action action, CreateOriginEndpointRequest * const q)
@@ -104,15 +93,10 @@ CreateOriginEndpointRequestPrivate::CreateOriginEndpointRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateOriginEndpointRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateOriginEndpointRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateOriginEndpointRequest instance.
  */
 CreateOriginEndpointRequestPrivate::CreateOriginEndpointRequestPrivate(
     const CreateOriginEndpointRequestPrivate &other, CreateOriginEndpointRequest * const q)

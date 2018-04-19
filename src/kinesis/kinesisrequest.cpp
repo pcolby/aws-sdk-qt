@@ -25,16 +25,44 @@ namespace Kinesis {
 
 /*!
  * \class QtAws::Kinesis::KinesisRequest
- *
  * \brief The KinesisRequest class provides an interface for Kinesis requests.
  *
- * \ingroup Kinesis
+ * \inmodule QtAwsKinesis
  */
 
 /*!
- * @brief  Constructs a new KinesisRequest object.
+ * \enum KinesisRequest::Action
  *
- * @param  action  The Kinesis action to request.
+ * This enum describes the actions that can be performed as Kinesis
+ * requests.
+ *
+ * \value AddTagsToStreamAction Kinesis AddTagsToStream action.
+ * \value CreateStreamAction Kinesis CreateStream action.
+ * \value DecreaseStreamRetentionPeriodAction Kinesis DecreaseStreamRetentionPeriod action.
+ * \value DeleteStreamAction Kinesis DeleteStream action.
+ * \value DescribeLimitsAction Kinesis DescribeLimits action.
+ * \value DescribeStreamAction Kinesis DescribeStream action.
+ * \value DescribeStreamSummaryAction Kinesis DescribeStreamSummary action.
+ * \value DisableEnhancedMonitoringAction Kinesis DisableEnhancedMonitoring action.
+ * \value EnableEnhancedMonitoringAction Kinesis EnableEnhancedMonitoring action.
+ * \value GetRecordsAction Kinesis GetRecords action.
+ * \value GetShardIteratorAction Kinesis GetShardIterator action.
+ * \value IncreaseStreamRetentionPeriodAction Kinesis IncreaseStreamRetentionPeriod action.
+ * \value ListShardsAction Kinesis ListShards action.
+ * \value ListStreamsAction Kinesis ListStreams action.
+ * \value ListTagsForStreamAction Kinesis ListTagsForStream action.
+ * \value MergeShardsAction Kinesis MergeShards action.
+ * \value PutRecordAction Kinesis PutRecord action.
+ * \value PutRecordsAction Kinesis PutRecords action.
+ * \value RemoveTagsFromStreamAction Kinesis RemoveTagsFromStream action.
+ * \value SplitShardAction Kinesis SplitShard action.
+ * \value StartStreamEncryptionAction Kinesis StartStreamEncryption action.
+ * \value StopStreamEncryptionAction Kinesis StopStreamEncryption action.
+ * \value UpdateShardCountAction Kinesis UpdateShardCount action.
+ */
+
+/*!
+ * Constructs a[n] KinesisRequest object for Kinesis \a action.
  */
 KinesisRequest::KinesisRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new KinesisRequestPrivate(action, this))
@@ -43,9 +71,7 @@ KinesisRequest::KinesisRequest(const Action action)
 }
 
 /*!
- * @brief  Constructs a new KinesisRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 KinesisRequest::KinesisRequest(const KinesisRequest &other)
     : QtAws::Core::AwsAbstractRequest(new KinesisRequestPrivate(*other.d_func(), this))
@@ -54,13 +80,7 @@ KinesisRequest::KinesisRequest(const KinesisRequest &other)
 }
 
 /*!
- * @brief  Assignment operator.
- *
- * Assigns \a other to \c this.
- *
- * @param  other  Instance to copy.
- *
- * @return  A reference to \c this.
+ * Sets the KinesisRequest object to be equal to \a other.
  */
 KinesisRequest& KinesisRequest::operator=(const KinesisRequest &other)
 {
@@ -72,14 +92,10 @@ KinesisRequest& KinesisRequest::operator=(const KinesisRequest &other)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new KinesisRequest object.
+ * Constructs aa KinesisRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from KinesisRequestPrivate.
- *
- * @param  d  Pointer to private data (aka D-Pointer).
  */
 KinesisRequest::KinesisRequest(KinesisRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
@@ -87,7 +103,7 @@ KinesisRequest::KinesisRequest(KinesisRequestPrivate * const d) : QtAws::Core::A
 }
 
 /*!
- * \brief Returns the Kinesis action to be performed by this request.
+ * Returns the Kinesis action to be performed by this request.
  */
 KinesisRequest::Action KinesisRequest::action() const
 {
@@ -96,7 +112,7 @@ KinesisRequest::Action KinesisRequest::action() const
 }
 
 /*!
- * \brief Returns the name of the Kinesis action to be performed by this request.
+ * Returns the name of the Kinesis action to be performed by this request.
  */
 QString KinesisRequest::actionString() const
 {
@@ -104,7 +120,7 @@ QString KinesisRequest::actionString() const
 }
 
 /*!
- * \brief Returns the Kinesis API version implemented by this request.
+ * Returns the Kinesis API version implemented by this request.
  */
 QString KinesisRequest::apiVersion() const
 {
@@ -113,7 +129,7 @@ QString KinesisRequest::apiVersion() const
 }
 
 /*!
- * @brief Set the Kinesis action to be performed by this request to \a action.
+ * Sets the Kinesis action to be performed by this request to \a action.
  */
 void KinesisRequest::setAction(const Action action)
 {
@@ -122,7 +138,7 @@ void KinesisRequest::setAction(const Action action)
 }
 
 /*!
- * Set the Kinesis API version to include in this request to \a version.
+ * Sets the Kinesis API version to include in this request to \a version.
  */
 void KinesisRequest::setApiVersion(const QString &version)
 {
@@ -131,7 +147,7 @@ void KinesisRequest::setApiVersion(const QString &version)
 }
 
 /*!
- * \brief Returns \c true if this request is the same as \a other.
+ * Returns \c true if this request is equal to \a other; \c false otherwise.
  *
  * Note, most derived *Request classes do not need to provider their own
  * implementations of this function, since most such request classes rely on
@@ -146,8 +162,8 @@ bool KinesisRequest::operator==(const KinesisRequest &other) const
             (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
-/*!
- * @brief  Check if \a queueName is a valid Kinesis queue name.
+/*
+ * Returns \c tue if \a queueName is a valid Kinesis queue name.
  *
  * @par From Kinesis FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
@@ -166,9 +182,8 @@ bool KinesisRequest::operator==(const KinesisRequest &other) const
 }*/
 
 /*!
- * \brief Removes the a \a name parameter from this request.
- *
- * Returns the count of paramters removed (typically \c 0 or \c 1).
+ * Removes the a \a name parameter from the request, then returns the number of
+ * paramters removed (typically \c 0 or \c 1).
  */
 int KinesisRequest::clearParameter(const QString &name)
 {
@@ -177,7 +192,7 @@ int KinesisRequest::clearParameter(const QString &name)
 }
 
 /*!
- * \brief Removes all parameters from this request.
+ * Removes all parameters from the request.
  */
 void KinesisRequest::clearParameters()
 {
@@ -186,7 +201,7 @@ void KinesisRequest::clearParameters()
 }
 
 /*!
- * \brief Returns the value of the \n name pararemter if set, otherwise \a defaultValue.
+ * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
 QVariant KinesisRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
@@ -195,7 +210,7 @@ QVariant KinesisRequest::parameter(const QString &name, const QVariant &defaultV
 }
 
 /*!
- * \brief Returns a map of parameters included in this request.
+ * Returns the parameters included in this request.
  */
 const QVariantMap &KinesisRequest::parameters() const
 {
@@ -204,7 +219,7 @@ const QVariantMap &KinesisRequest::parameters() const
 }
 
 /*!
- * \brief Sets the \a name parameter to \a value.
+ * Sets the \a name parameter to \a value.
  */
 void KinesisRequest::setParameter(const QString &name, const QVariant &value)
 {
@@ -213,9 +228,8 @@ void KinesisRequest::setParameter(const QString &name, const QVariant &value)
 }
 
 /*!
- * \brief Sets the map of paramters for this request to \a parameters.
- *
- * Any request parameters set previously will be discarded.
+ * Sets the paramters for this request to \a parameters. Any request parameters
+ * set previously will be discarded.
  */
 void KinesisRequest::setParameters(const QVariantMap &parameters)
 {
@@ -224,11 +238,12 @@ void KinesisRequest::setParameters(const QVariantMap &parameters)
 }
 
 /*!
- * \brief Returns a network request for this Kinesis request using the given \a endpoint.
+ * Returns a network request for the Kinesis request using the given
+ * \a endpoint.
  *
- * This Kinesis implementation builds request URLs by combining the common query
- * parameters (such as Action and Version), with any that have been added (via
- * setParameter) by child classes.
+ * This Kinesis implementation builds request URLs by combining the
+ * common query parameters (such as Action and Version), with any that have
+ * been added (via setParameter) by child classes.
  */
 QNetworkRequest KinesisRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -239,17 +254,16 @@ QNetworkRequest KinesisRequest::unsignedRequest(const QUrl &endpoint) const
 }
 
 /*!
+ * \class QtAws::Kinesis::KinesisRequestPrivate
+ * \brief The KinesisRequestPrivate class provides private implementation for KinesisRequest.
  * \internal
  *
- * \class  KinesisRequestPrivate
- *
- * \brief  Private implementation for KinesisRequest.
+ * \inmodule QtAwsKinesis
  */
 
 /*!
- * \internal
- *
- * \brief Constructs a new KinesisRequestPrivate object.
+ * Constructs a KinesisRequestPrivate object for Kinesis \a action with,
+ * public implementation \a q.
  */
 KinesisRequestPrivate::KinesisRequestPrivate(const KinesisRequest::Action action, KinesisRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
@@ -258,9 +272,7 @@ KinesisRequestPrivate::KinesisRequestPrivate(const KinesisRequest::Action action
 }
 
 /*!
- * \internal
- *
- * \brief Constructs a new KinesisRequestPrivate object, copying an existing one.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
@@ -276,15 +288,12 @@ KinesisRequestPrivate::KinesisRequestPrivate(const KinesisRequestPrivate &other,
 }
 
 /*!
- * \internal
- *
- * \brief Returns a string representing \a action.
+ * Returns a string represention of \a action, or a null string if \a action is
+ * invalid.
  *
  * This function converts KinesisRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the Kinesis service's Action
  * query parameters.
- *
- * @return A string representing \a action, or a null string if \a action is invalid.
  */
 QString KinesisRequestPrivate::toString(const KinesisRequest::Action &action)
 {

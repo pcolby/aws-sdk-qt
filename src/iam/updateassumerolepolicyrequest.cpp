@@ -27,10 +27,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::UpdateAssumeRolePolicyRequest
- *
  * \brief The UpdateAssumeRolePolicyRequest class provides an interface for IAM UpdateAssumeRolePolicy requests.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -102,9 +101,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new UpdateAssumeRolePolicyRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateAssumeRolePolicyRequest::UpdateAssumeRolePolicyRequest(const UpdateAssumeRolePolicyRequest &other)
     : IAMRequest(new UpdateAssumeRolePolicyRequestPrivate(*other.d_func(), this))
@@ -113,7 +110,7 @@ UpdateAssumeRolePolicyRequest::UpdateAssumeRolePolicyRequest(const UpdateAssumeR
 }
 
 /*!
- * @brief  Constructs a new UpdateAssumeRolePolicyRequest object.
+ * Constructs a UpdateAssumeRolePolicyRequest object.
  */
 UpdateAssumeRolePolicyRequest::UpdateAssumeRolePolicyRequest()
     : IAMRequest(new UpdateAssumeRolePolicyRequestPrivate(IAMRequest::UpdateAssumeRolePolicyAction, this))
@@ -131,14 +128,9 @@ bool UpdateAssumeRolePolicyRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateAssumeRolePolicyResponse object.
+ * Returns a UpdateAssumeRolePolicyResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateAssumeRolePolicyResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IAMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateAssumeRolePolicyRequest::response(QNetworkReply * const reply) const
 {
@@ -146,20 +138,17 @@ QtAws::Core::AwsAbstractResponse * UpdateAssumeRolePolicyRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::IAM::UpdateAssumeRolePolicyRequestPrivate
+ * \brief The UpdateAssumeRolePolicyRequestPrivate class provides private implementation for UpdateAssumeRolePolicyRequest.
+ * \internal
  *
- * @class  UpdateAssumeRolePolicyRequestPrivate
- *
- * @brief  Private implementation for UpdateAssumeRolePolicyRequest.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateAssumeRolePolicyRequestPrivate object.
- *
- * @param  action  IAM action being performed.
- * @param  q       Pointer to this object's public UpdateAssumeRolePolicyRequest instance.
+ * Constructs a UpdateAssumeRolePolicyRequestPrivate object for IAM \a action with,
+ * public implementation \a q.
  */
 UpdateAssumeRolePolicyRequestPrivate::UpdateAssumeRolePolicyRequestPrivate(
     const IAMRequest::Action action, UpdateAssumeRolePolicyRequest * const q)
@@ -169,15 +158,10 @@ UpdateAssumeRolePolicyRequestPrivate::UpdateAssumeRolePolicyRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateAssumeRolePolicyRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateAssumeRolePolicyRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateAssumeRolePolicyRequest instance.
  */
 UpdateAssumeRolePolicyRequestPrivate::UpdateAssumeRolePolicyRequestPrivate(
     const UpdateAssumeRolePolicyRequestPrivate &other, UpdateAssumeRolePolicyRequest * const q)

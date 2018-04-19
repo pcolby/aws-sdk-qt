@@ -27,10 +27,9 @@ namespace ElastiCache {
 
 /*!
  * \class QtAws::ElastiCache::AuthorizeCacheSecurityGroupIngressRequest
- *
  * \brief The AuthorizeCacheSecurityGroupIngressRequest class provides an interface for ElastiCache AuthorizeCacheSecurityGroupIngress requests.
  *
- * \ingroup ElastiCache
+ * \inmodule QtAwsElastiCache
  *
  *  <fullname>Amazon ElastiCache</fullname>
  * 
@@ -51,9 +50,7 @@ namespace ElastiCache {
  */
 
 /*!
- * @brief  Constructs a new AuthorizeCacheSecurityGroupIngressRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AuthorizeCacheSecurityGroupIngressRequest::AuthorizeCacheSecurityGroupIngressRequest(const AuthorizeCacheSecurityGroupIngressRequest &other)
     : ElastiCacheRequest(new AuthorizeCacheSecurityGroupIngressRequestPrivate(*other.d_func(), this))
@@ -62,7 +59,7 @@ AuthorizeCacheSecurityGroupIngressRequest::AuthorizeCacheSecurityGroupIngressReq
 }
 
 /*!
- * @brief  Constructs a new AuthorizeCacheSecurityGroupIngressRequest object.
+ * Constructs a AuthorizeCacheSecurityGroupIngressRequest object.
  */
 AuthorizeCacheSecurityGroupIngressRequest::AuthorizeCacheSecurityGroupIngressRequest()
     : ElastiCacheRequest(new AuthorizeCacheSecurityGroupIngressRequestPrivate(ElastiCacheRequest::AuthorizeCacheSecurityGroupIngressAction, this))
@@ -80,14 +77,9 @@ bool AuthorizeCacheSecurityGroupIngressRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AuthorizeCacheSecurityGroupIngressResponse object.
+ * Returns a AuthorizeCacheSecurityGroupIngressResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AuthorizeCacheSecurityGroupIngressResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ElastiCacheClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AuthorizeCacheSecurityGroupIngressRequest::response(QNetworkReply * const reply) const
 {
@@ -95,20 +87,17 @@ QtAws::Core::AwsAbstractResponse * AuthorizeCacheSecurityGroupIngressRequest::re
 }
 
 /*!
- * @internal
+ * \class QtAws::ElastiCache::AuthorizeCacheSecurityGroupIngressRequestPrivate
+ * \brief The AuthorizeCacheSecurityGroupIngressRequestPrivate class provides private implementation for AuthorizeCacheSecurityGroupIngressRequest.
+ * \internal
  *
- * @class  AuthorizeCacheSecurityGroupIngressRequestPrivate
- *
- * @brief  Private implementation for AuthorizeCacheSecurityGroupIngressRequest.
+ * \inmodule QtAwsElastiCache
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AuthorizeCacheSecurityGroupIngressRequestPrivate object.
- *
- * @param  action  ElastiCache action being performed.
- * @param  q       Pointer to this object's public AuthorizeCacheSecurityGroupIngressRequest instance.
+ * Constructs a AuthorizeCacheSecurityGroupIngressRequestPrivate object for ElastiCache \a action with,
+ * public implementation \a q.
  */
 AuthorizeCacheSecurityGroupIngressRequestPrivate::AuthorizeCacheSecurityGroupIngressRequestPrivate(
     const ElastiCacheRequest::Action action, AuthorizeCacheSecurityGroupIngressRequest * const q)
@@ -118,15 +107,10 @@ AuthorizeCacheSecurityGroupIngressRequestPrivate::AuthorizeCacheSecurityGroupIng
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AuthorizeCacheSecurityGroupIngressRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AuthorizeCacheSecurityGroupIngressRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AuthorizeCacheSecurityGroupIngressRequest instance.
  */
 AuthorizeCacheSecurityGroupIngressRequestPrivate::AuthorizeCacheSecurityGroupIngressRequestPrivate(
     const AuthorizeCacheSecurityGroupIngressRequestPrivate &other, AuthorizeCacheSecurityGroupIngressRequest * const q)

@@ -27,10 +27,9 @@ namespace ECR {
 
 /*!
  * \class QtAws::ECR::ListImagesRequest
- *
  * \brief The ListImagesRequest class provides an interface for ECR ListImages requests.
  *
- * \ingroup ECR
+ * \inmodule QtAwsECR
  *
  *  Amazon Elastic Container Registry (Amazon ECR) is a managed Docker registry service. Customers can use the familiar
  *  Docker CLI to push, pull, and manage images. Amazon ECR provides a secure, scalable, and reliable registry. Amazon ECR
@@ -41,9 +40,7 @@ namespace ECR {
  */
 
 /*!
- * @brief  Constructs a new ListImagesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListImagesRequest::ListImagesRequest(const ListImagesRequest &other)
     : ECRRequest(new ListImagesRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ ListImagesRequest::ListImagesRequest(const ListImagesRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ListImagesRequest object.
+ * Constructs a ListImagesRequest object.
  */
 ListImagesRequest::ListImagesRequest()
     : ECRRequest(new ListImagesRequestPrivate(ECRRequest::ListImagesAction, this))
@@ -70,14 +67,9 @@ bool ListImagesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListImagesResponse object.
+ * Returns a ListImagesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListImagesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ECRClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListImagesRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * ListImagesRequest::response(QNetworkReply * c
 }
 
 /*!
- * @internal
+ * \class QtAws::ECR::ListImagesRequestPrivate
+ * \brief The ListImagesRequestPrivate class provides private implementation for ListImagesRequest.
+ * \internal
  *
- * @class  ListImagesRequestPrivate
- *
- * @brief  Private implementation for ListImagesRequest.
+ * \inmodule QtAwsECR
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListImagesRequestPrivate object.
- *
- * @param  action  ECR action being performed.
- * @param  q       Pointer to this object's public ListImagesRequest instance.
+ * Constructs a ListImagesRequestPrivate object for ECR \a action with,
+ * public implementation \a q.
  */
 ListImagesRequestPrivate::ListImagesRequestPrivate(
     const ECRRequest::Action action, ListImagesRequest * const q)
@@ -108,15 +97,10 @@ ListImagesRequestPrivate::ListImagesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListImagesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListImagesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListImagesRequest instance.
  */
 ListImagesRequestPrivate::ListImagesRequestPrivate(
     const ListImagesRequestPrivate &other, ListImagesRequest * const q)

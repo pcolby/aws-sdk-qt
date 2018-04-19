@@ -27,19 +27,16 @@ namespace MTurk {
 
 /*!
  * \class QtAws::MTurk::DeleteQualificationTypeRequest
- *
  * \brief The DeleteQualificationTypeRequest class provides an interface for MTurk DeleteQualificationType requests.
  *
- * \ingroup MTurk
+ * \inmodule QtAwsMTurk
  *
  *
  * \sa MTurkClient::deleteQualificationType
  */
 
 /*!
- * @brief  Constructs a new DeleteQualificationTypeRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteQualificationTypeRequest::DeleteQualificationTypeRequest(const DeleteQualificationTypeRequest &other)
     : MTurkRequest(new DeleteQualificationTypeRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ DeleteQualificationTypeRequest::DeleteQualificationTypeRequest(const DeleteQuali
 }
 
 /*!
- * @brief  Constructs a new DeleteQualificationTypeRequest object.
+ * Constructs a DeleteQualificationTypeRequest object.
  */
 DeleteQualificationTypeRequest::DeleteQualificationTypeRequest()
     : MTurkRequest(new DeleteQualificationTypeRequestPrivate(MTurkRequest::DeleteQualificationTypeAction, this))
@@ -66,14 +63,9 @@ bool DeleteQualificationTypeRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteQualificationTypeResponse object.
+ * Returns a DeleteQualificationTypeResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteQualificationTypeResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MTurkClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteQualificationTypeRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * DeleteQualificationTypeRequest::response(QNet
 }
 
 /*!
- * @internal
+ * \class QtAws::MTurk::DeleteQualificationTypeRequestPrivate
+ * \brief The DeleteQualificationTypeRequestPrivate class provides private implementation for DeleteQualificationTypeRequest.
+ * \internal
  *
- * @class  DeleteQualificationTypeRequestPrivate
- *
- * @brief  Private implementation for DeleteQualificationTypeRequest.
+ * \inmodule QtAwsMTurk
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteQualificationTypeRequestPrivate object.
- *
- * @param  action  MTurk action being performed.
- * @param  q       Pointer to this object's public DeleteQualificationTypeRequest instance.
+ * Constructs a DeleteQualificationTypeRequestPrivate object for MTurk \a action with,
+ * public implementation \a q.
  */
 DeleteQualificationTypeRequestPrivate::DeleteQualificationTypeRequestPrivate(
     const MTurkRequest::Action action, DeleteQualificationTypeRequest * const q)
@@ -104,15 +93,10 @@ DeleteQualificationTypeRequestPrivate::DeleteQualificationTypeRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteQualificationTypeRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteQualificationTypeRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteQualificationTypeRequest instance.
  */
 DeleteQualificationTypeRequestPrivate::DeleteQualificationTypeRequestPrivate(
     const DeleteQualificationTypeRequestPrivate &other, DeleteQualificationTypeRequest * const q)

@@ -27,10 +27,9 @@ namespace Rekognition {
 
 /*!
  * \class QtAws::Rekognition::SearchFacesRequest
- *
  * \brief The SearchFacesRequest class provides an interface for Rekognition SearchFaces requests.
  *
- * \ingroup Rekognition
+ * \inmodule QtAwsRekognition
  *
  *  This is the Amazon Rekognition API
  *
@@ -38,9 +37,7 @@ namespace Rekognition {
  */
 
 /*!
- * @brief  Constructs a new SearchFacesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 SearchFacesRequest::SearchFacesRequest(const SearchFacesRequest &other)
     : RekognitionRequest(new SearchFacesRequestPrivate(*other.d_func(), this))
@@ -49,7 +46,7 @@ SearchFacesRequest::SearchFacesRequest(const SearchFacesRequest &other)
 }
 
 /*!
- * @brief  Constructs a new SearchFacesRequest object.
+ * Constructs a SearchFacesRequest object.
  */
 SearchFacesRequest::SearchFacesRequest()
     : RekognitionRequest(new SearchFacesRequestPrivate(RekognitionRequest::SearchFacesAction, this))
@@ -67,14 +64,9 @@ bool SearchFacesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an SearchFacesResponse object.
+ * Returns a SearchFacesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An SearchFacesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RekognitionClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * SearchFacesRequest::response(QNetworkReply * const reply) const
 {
@@ -82,20 +74,17 @@ QtAws::Core::AwsAbstractResponse * SearchFacesRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::Rekognition::SearchFacesRequestPrivate
+ * \brief The SearchFacesRequestPrivate class provides private implementation for SearchFacesRequest.
+ * \internal
  *
- * @class  SearchFacesRequestPrivate
- *
- * @brief  Private implementation for SearchFacesRequest.
+ * \inmodule QtAwsRekognition
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new SearchFacesRequestPrivate object.
- *
- * @param  action  Rekognition action being performed.
- * @param  q       Pointer to this object's public SearchFacesRequest instance.
+ * Constructs a SearchFacesRequestPrivate object for Rekognition \a action with,
+ * public implementation \a q.
  */
 SearchFacesRequestPrivate::SearchFacesRequestPrivate(
     const RekognitionRequest::Action action, SearchFacesRequest * const q)
@@ -105,15 +94,10 @@ SearchFacesRequestPrivate::SearchFacesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SearchFacesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the SearchFacesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public SearchFacesRequest instance.
  */
 SearchFacesRequestPrivate::SearchFacesRequestPrivate(
     const SearchFacesRequestPrivate &other, SearchFacesRequest * const q)

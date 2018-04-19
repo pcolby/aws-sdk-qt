@@ -27,10 +27,9 @@ namespace WorkDocs {
 
 /*!
  * \class QtAws::WorkDocs::DescribeUsersRequest
- *
  * \brief The DescribeUsersRequest class provides an interface for WorkDocs DescribeUsers requests.
  *
- * \ingroup WorkDocs
+ * \inmodule QtAwsWorkDocs
  *
  *  The WorkDocs API is designed for the following use
  * 
@@ -66,9 +65,7 @@ namespace WorkDocs {
  */
 
 /*!
- * @brief  Constructs a new DescribeUsersRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeUsersRequest::DescribeUsersRequest(const DescribeUsersRequest &other)
     : WorkDocsRequest(new DescribeUsersRequestPrivate(*other.d_func(), this))
@@ -77,7 +74,7 @@ DescribeUsersRequest::DescribeUsersRequest(const DescribeUsersRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DescribeUsersRequest object.
+ * Constructs a DescribeUsersRequest object.
  */
 DescribeUsersRequest::DescribeUsersRequest()
     : WorkDocsRequest(new DescribeUsersRequestPrivate(WorkDocsRequest::DescribeUsersAction, this))
@@ -95,14 +92,9 @@ bool DescribeUsersRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeUsersResponse object.
+ * Returns a DescribeUsersResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeUsersResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WorkDocsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeUsersRequest::response(QNetworkReply * const reply) const
 {
@@ -110,20 +102,17 @@ QtAws::Core::AwsAbstractResponse * DescribeUsersRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::WorkDocs::DescribeUsersRequestPrivate
+ * \brief The DescribeUsersRequestPrivate class provides private implementation for DescribeUsersRequest.
+ * \internal
  *
- * @class  DescribeUsersRequestPrivate
- *
- * @brief  Private implementation for DescribeUsersRequest.
+ * \inmodule QtAwsWorkDocs
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeUsersRequestPrivate object.
- *
- * @param  action  WorkDocs action being performed.
- * @param  q       Pointer to this object's public DescribeUsersRequest instance.
+ * Constructs a DescribeUsersRequestPrivate object for WorkDocs \a action with,
+ * public implementation \a q.
  */
 DescribeUsersRequestPrivate::DescribeUsersRequestPrivate(
     const WorkDocsRequest::Action action, DescribeUsersRequest * const q)
@@ -133,15 +122,10 @@ DescribeUsersRequestPrivate::DescribeUsersRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeUsersRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeUsersRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeUsersRequest instance.
  */
 DescribeUsersRequestPrivate::DescribeUsersRequestPrivate(
     const DescribeUsersRequestPrivate &other, DescribeUsersRequest * const q)

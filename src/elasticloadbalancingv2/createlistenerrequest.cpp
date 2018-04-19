@@ -27,10 +27,9 @@ namespace ElasticLoadBalancingv2 {
 
 /*!
  * \class QtAws::ElasticLoadBalancingv2::CreateListenerRequest
- *
  * \brief The CreateListenerRequest class provides an interface for ElasticLoadBalancingv2 CreateListener requests.
  *
- * \ingroup ElasticLoadBalancingv2
+ * \inmodule QtAwsElasticLoadBalancingv2
  *
  *  <fullname>Elastic Load Balancing</fullname>
  * 
@@ -105,9 +104,7 @@ namespace ElasticLoadBalancingv2 {
  */
 
 /*!
- * @brief  Constructs a new CreateListenerRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateListenerRequest::CreateListenerRequest(const CreateListenerRequest &other)
     : ElasticLoadBalancingv2Request(new CreateListenerRequestPrivate(*other.d_func(), this))
@@ -116,7 +113,7 @@ CreateListenerRequest::CreateListenerRequest(const CreateListenerRequest &other)
 }
 
 /*!
- * @brief  Constructs a new CreateListenerRequest object.
+ * Constructs a CreateListenerRequest object.
  */
 CreateListenerRequest::CreateListenerRequest()
     : ElasticLoadBalancingv2Request(new CreateListenerRequestPrivate(ElasticLoadBalancingv2Request::CreateListenerAction, this))
@@ -134,14 +131,9 @@ bool CreateListenerRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateListenerResponse object.
+ * Returns a CreateListenerResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateListenerResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ElasticLoadBalancingv2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateListenerRequest::response(QNetworkReply * const reply) const
 {
@@ -149,20 +141,17 @@ QtAws::Core::AwsAbstractResponse * CreateListenerRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::ElasticLoadBalancingv2::CreateListenerRequestPrivate
+ * \brief The CreateListenerRequestPrivate class provides private implementation for CreateListenerRequest.
+ * \internal
  *
- * @class  CreateListenerRequestPrivate
- *
- * @brief  Private implementation for CreateListenerRequest.
+ * \inmodule QtAwsElasticLoadBalancingv2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateListenerRequestPrivate object.
- *
- * @param  action  ElasticLoadBalancingv2 action being performed.
- * @param  q       Pointer to this object's public CreateListenerRequest instance.
+ * Constructs a CreateListenerRequestPrivate object for ElasticLoadBalancingv2 \a action with,
+ * public implementation \a q.
  */
 CreateListenerRequestPrivate::CreateListenerRequestPrivate(
     const ElasticLoadBalancingv2Request::Action action, CreateListenerRequest * const q)
@@ -172,15 +161,10 @@ CreateListenerRequestPrivate::CreateListenerRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateListenerRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateListenerRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateListenerRequest instance.
  */
 CreateListenerRequestPrivate::CreateListenerRequestPrivate(
     const CreateListenerRequestPrivate &other, CreateListenerRequest * const q)

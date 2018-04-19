@@ -27,19 +27,16 @@ namespace KinesisVideo {
 
 /*!
  * \class QtAws::KinesisVideo::ListStreamsRequest
- *
  * \brief The ListStreamsRequest class provides an interface for KinesisVideo ListStreams requests.
  *
- * \ingroup KinesisVideo
+ * \inmodule QtAwsKinesisVideo
  *
  *
  * \sa KinesisVideoClient::listStreams
  */
 
 /*!
- * @brief  Constructs a new ListStreamsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListStreamsRequest::ListStreamsRequest(const ListStreamsRequest &other)
     : KinesisVideoRequest(new ListStreamsRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ ListStreamsRequest::ListStreamsRequest(const ListStreamsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ListStreamsRequest object.
+ * Constructs a ListStreamsRequest object.
  */
 ListStreamsRequest::ListStreamsRequest()
     : KinesisVideoRequest(new ListStreamsRequestPrivate(KinesisVideoRequest::ListStreamsAction, this))
@@ -66,14 +63,9 @@ bool ListStreamsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListStreamsResponse object.
+ * Returns a ListStreamsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListStreamsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  KinesisVideoClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListStreamsRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * ListStreamsRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::KinesisVideo::ListStreamsRequestPrivate
+ * \brief The ListStreamsRequestPrivate class provides private implementation for ListStreamsRequest.
+ * \internal
  *
- * @class  ListStreamsRequestPrivate
- *
- * @brief  Private implementation for ListStreamsRequest.
+ * \inmodule QtAwsKinesisVideo
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListStreamsRequestPrivate object.
- *
- * @param  action  KinesisVideo action being performed.
- * @param  q       Pointer to this object's public ListStreamsRequest instance.
+ * Constructs a ListStreamsRequestPrivate object for KinesisVideo \a action with,
+ * public implementation \a q.
  */
 ListStreamsRequestPrivate::ListStreamsRequestPrivate(
     const KinesisVideoRequest::Action action, ListStreamsRequest * const q)
@@ -104,15 +93,10 @@ ListStreamsRequestPrivate::ListStreamsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListStreamsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListStreamsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListStreamsRequest instance.
  */
 ListStreamsRequestPrivate::ListStreamsRequestPrivate(
     const ListStreamsRequestPrivate &other, ListStreamsRequest * const q)

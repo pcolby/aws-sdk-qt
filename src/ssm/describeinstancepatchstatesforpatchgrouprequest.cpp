@@ -27,10 +27,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::DescribeInstancePatchStatesForPatchGroupRequest
- *
  * \brief The DescribeInstancePatchStatesForPatchGroupRequest class provides an interface for SSM DescribeInstancePatchStatesForPatchGroup requests.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -61,9 +60,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new DescribeInstancePatchStatesForPatchGroupRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeInstancePatchStatesForPatchGroupRequest::DescribeInstancePatchStatesForPatchGroupRequest(const DescribeInstancePatchStatesForPatchGroupRequest &other)
     : SSMRequest(new DescribeInstancePatchStatesForPatchGroupRequestPrivate(*other.d_func(), this))
@@ -72,7 +69,7 @@ DescribeInstancePatchStatesForPatchGroupRequest::DescribeInstancePatchStatesForP
 }
 
 /*!
- * @brief  Constructs a new DescribeInstancePatchStatesForPatchGroupRequest object.
+ * Constructs a DescribeInstancePatchStatesForPatchGroupRequest object.
  */
 DescribeInstancePatchStatesForPatchGroupRequest::DescribeInstancePatchStatesForPatchGroupRequest()
     : SSMRequest(new DescribeInstancePatchStatesForPatchGroupRequestPrivate(SSMRequest::DescribeInstancePatchStatesForPatchGroupAction, this))
@@ -90,14 +87,9 @@ bool DescribeInstancePatchStatesForPatchGroupRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeInstancePatchStatesForPatchGroupResponse object.
+ * Returns a DescribeInstancePatchStatesForPatchGroupResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeInstancePatchStatesForPatchGroupResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SSMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeInstancePatchStatesForPatchGroupRequest::response(QNetworkReply * const reply) const
 {
@@ -105,20 +97,17 @@ QtAws::Core::AwsAbstractResponse * DescribeInstancePatchStatesForPatchGroupReque
 }
 
 /*!
- * @internal
+ * \class QtAws::SSM::DescribeInstancePatchStatesForPatchGroupRequestPrivate
+ * \brief The DescribeInstancePatchStatesForPatchGroupRequestPrivate class provides private implementation for DescribeInstancePatchStatesForPatchGroupRequest.
+ * \internal
  *
- * @class  DescribeInstancePatchStatesForPatchGroupRequestPrivate
- *
- * @brief  Private implementation for DescribeInstancePatchStatesForPatchGroupRequest.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeInstancePatchStatesForPatchGroupRequestPrivate object.
- *
- * @param  action  SSM action being performed.
- * @param  q       Pointer to this object's public DescribeInstancePatchStatesForPatchGroupRequest instance.
+ * Constructs a DescribeInstancePatchStatesForPatchGroupRequestPrivate object for SSM \a action with,
+ * public implementation \a q.
  */
 DescribeInstancePatchStatesForPatchGroupRequestPrivate::DescribeInstancePatchStatesForPatchGroupRequestPrivate(
     const SSMRequest::Action action, DescribeInstancePatchStatesForPatchGroupRequest * const q)
@@ -128,15 +117,10 @@ DescribeInstancePatchStatesForPatchGroupRequestPrivate::DescribeInstancePatchSta
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeInstancePatchStatesForPatchGroupRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeInstancePatchStatesForPatchGroupRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeInstancePatchStatesForPatchGroupRequest instance.
  */
 DescribeInstancePatchStatesForPatchGroupRequestPrivate::DescribeInstancePatchStatesForPatchGroupRequestPrivate(
     const DescribeInstancePatchStatesForPatchGroupRequestPrivate &other, DescribeInstancePatchStatesForPatchGroupRequest * const q)

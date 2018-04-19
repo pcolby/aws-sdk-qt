@@ -27,10 +27,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::CreateDocumentationVersionRequest
- *
  * \brief The CreateDocumentationVersionRequest class provides an interface for APIGateway CreateDocumentationVersion requests.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -42,9 +41,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new CreateDocumentationVersionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateDocumentationVersionRequest::CreateDocumentationVersionRequest(const CreateDocumentationVersionRequest &other)
     : APIGatewayRequest(new CreateDocumentationVersionRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ CreateDocumentationVersionRequest::CreateDocumentationVersionRequest(const Creat
 }
 
 /*!
- * @brief  Constructs a new CreateDocumentationVersionRequest object.
+ * Constructs a CreateDocumentationVersionRequest object.
  */
 CreateDocumentationVersionRequest::CreateDocumentationVersionRequest()
     : APIGatewayRequest(new CreateDocumentationVersionRequestPrivate(APIGatewayRequest::CreateDocumentationVersionAction, this))
@@ -71,14 +68,9 @@ bool CreateDocumentationVersionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateDocumentationVersionResponse object.
+ * Returns a CreateDocumentationVersionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateDocumentationVersionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  APIGatewayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateDocumentationVersionRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * CreateDocumentationVersionRequest::response(Q
 }
 
 /*!
- * @internal
+ * \class QtAws::APIGateway::CreateDocumentationVersionRequestPrivate
+ * \brief The CreateDocumentationVersionRequestPrivate class provides private implementation for CreateDocumentationVersionRequest.
+ * \internal
  *
- * @class  CreateDocumentationVersionRequestPrivate
- *
- * @brief  Private implementation for CreateDocumentationVersionRequest.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateDocumentationVersionRequestPrivate object.
- *
- * @param  action  APIGateway action being performed.
- * @param  q       Pointer to this object's public CreateDocumentationVersionRequest instance.
+ * Constructs a CreateDocumentationVersionRequestPrivate object for APIGateway \a action with,
+ * public implementation \a q.
  */
 CreateDocumentationVersionRequestPrivate::CreateDocumentationVersionRequestPrivate(
     const APIGatewayRequest::Action action, CreateDocumentationVersionRequest * const q)
@@ -109,15 +98,10 @@ CreateDocumentationVersionRequestPrivate::CreateDocumentationVersionRequestPriva
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateDocumentationVersionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateDocumentationVersionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateDocumentationVersionRequest instance.
  */
 CreateDocumentationVersionRequestPrivate::CreateDocumentationVersionRequestPrivate(
     const CreateDocumentationVersionRequestPrivate &other, CreateDocumentationVersionRequest * const q)

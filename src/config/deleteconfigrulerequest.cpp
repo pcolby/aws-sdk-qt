@@ -27,10 +27,9 @@ namespace ConfigService {
 
 /*!
  * \class QtAws::ConfigService::DeleteConfigRuleRequest
- *
  * \brief The DeleteConfigRuleRequest class provides an interface for ConfigService DeleteConfigRule requests.
  *
- * \ingroup ConfigService
+ * \inmodule QtAwsConfigService
  *
  *  <fullname>AWS Config</fullname>
  * 
@@ -60,9 +59,7 @@ namespace ConfigService {
  */
 
 /*!
- * @brief  Constructs a new DeleteConfigRuleRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteConfigRuleRequest::DeleteConfigRuleRequest(const DeleteConfigRuleRequest &other)
     : ConfigServiceRequest(new DeleteConfigRuleRequestPrivate(*other.d_func(), this))
@@ -71,7 +68,7 @@ DeleteConfigRuleRequest::DeleteConfigRuleRequest(const DeleteConfigRuleRequest &
 }
 
 /*!
- * @brief  Constructs a new DeleteConfigRuleRequest object.
+ * Constructs a DeleteConfigRuleRequest object.
  */
 DeleteConfigRuleRequest::DeleteConfigRuleRequest()
     : ConfigServiceRequest(new DeleteConfigRuleRequestPrivate(ConfigServiceRequest::DeleteConfigRuleAction, this))
@@ -89,14 +86,9 @@ bool DeleteConfigRuleRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteConfigRuleResponse object.
+ * Returns a DeleteConfigRuleResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteConfigRuleResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ConfigServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteConfigRuleRequest::response(QNetworkReply * const reply) const
 {
@@ -104,20 +96,17 @@ QtAws::Core::AwsAbstractResponse * DeleteConfigRuleRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::ConfigService::DeleteConfigRuleRequestPrivate
+ * \brief The DeleteConfigRuleRequestPrivate class provides private implementation for DeleteConfigRuleRequest.
+ * \internal
  *
- * @class  DeleteConfigRuleRequestPrivate
- *
- * @brief  Private implementation for DeleteConfigRuleRequest.
+ * \inmodule QtAwsConfigService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteConfigRuleRequestPrivate object.
- *
- * @param  action  ConfigService action being performed.
- * @param  q       Pointer to this object's public DeleteConfigRuleRequest instance.
+ * Constructs a DeleteConfigRuleRequestPrivate object for ConfigService \a action with,
+ * public implementation \a q.
  */
 DeleteConfigRuleRequestPrivate::DeleteConfigRuleRequestPrivate(
     const ConfigServiceRequest::Action action, DeleteConfigRuleRequest * const q)
@@ -127,15 +116,10 @@ DeleteConfigRuleRequestPrivate::DeleteConfigRuleRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteConfigRuleRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteConfigRuleRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteConfigRuleRequest instance.
  */
 DeleteConfigRuleRequestPrivate::DeleteConfigRuleRequestPrivate(
     const DeleteConfigRuleRequestPrivate &other, DeleteConfigRuleRequest * const q)

@@ -27,10 +27,9 @@ namespace CloudDirectory {
 
 /*!
  * \class QtAws::CloudDirectory::CreateIndexRequest
- *
  * \brief The CreateIndexRequest class provides an interface for CloudDirectory CreateIndex requests.
  *
- * \ingroup CloudDirectory
+ * \inmodule QtAwsCloudDirectory
  *
  *  <fullname>Amazon Cloud Directory</fullname>
  * 
@@ -44,9 +43,7 @@ namespace CloudDirectory {
  */
 
 /*!
- * @brief  Constructs a new CreateIndexRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateIndexRequest::CreateIndexRequest(const CreateIndexRequest &other)
     : CloudDirectoryRequest(new CreateIndexRequestPrivate(*other.d_func(), this))
@@ -55,7 +52,7 @@ CreateIndexRequest::CreateIndexRequest(const CreateIndexRequest &other)
 }
 
 /*!
- * @brief  Constructs a new CreateIndexRequest object.
+ * Constructs a CreateIndexRequest object.
  */
 CreateIndexRequest::CreateIndexRequest()
     : CloudDirectoryRequest(new CreateIndexRequestPrivate(CloudDirectoryRequest::CreateIndexAction, this))
@@ -73,14 +70,9 @@ bool CreateIndexRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateIndexResponse object.
+ * Returns a CreateIndexResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateIndexResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudDirectoryClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateIndexRequest::response(QNetworkReply * const reply) const
 {
@@ -88,20 +80,17 @@ QtAws::Core::AwsAbstractResponse * CreateIndexRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudDirectory::CreateIndexRequestPrivate
+ * \brief The CreateIndexRequestPrivate class provides private implementation for CreateIndexRequest.
+ * \internal
  *
- * @class  CreateIndexRequestPrivate
- *
- * @brief  Private implementation for CreateIndexRequest.
+ * \inmodule QtAwsCloudDirectory
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateIndexRequestPrivate object.
- *
- * @param  action  CloudDirectory action being performed.
- * @param  q       Pointer to this object's public CreateIndexRequest instance.
+ * Constructs a CreateIndexRequestPrivate object for CloudDirectory \a action with,
+ * public implementation \a q.
  */
 CreateIndexRequestPrivate::CreateIndexRequestPrivate(
     const CloudDirectoryRequest::Action action, CreateIndexRequest * const q)
@@ -111,15 +100,10 @@ CreateIndexRequestPrivate::CreateIndexRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateIndexRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateIndexRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateIndexRequest instance.
  */
 CreateIndexRequestPrivate::CreateIndexRequestPrivate(
     const CreateIndexRequestPrivate &other, CreateIndexRequest * const q)

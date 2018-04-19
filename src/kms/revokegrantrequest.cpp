@@ -27,10 +27,9 @@ namespace KMS {
 
 /*!
  * \class QtAws::KMS::RevokeGrantRequest
- *
  * \brief The RevokeGrantRequest class provides an interface for KMS RevokeGrant requests.
  *
- * \ingroup KMS
+ * \inmodule QtAwsKMS
  *
  *  <fullname>AWS Key Management Service</fullname>
  * 
@@ -136,9 +135,7 @@ namespace KMS {
  */
 
 /*!
- * @brief  Constructs a new RevokeGrantRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 RevokeGrantRequest::RevokeGrantRequest(const RevokeGrantRequest &other)
     : KMSRequest(new RevokeGrantRequestPrivate(*other.d_func(), this))
@@ -147,7 +144,7 @@ RevokeGrantRequest::RevokeGrantRequest(const RevokeGrantRequest &other)
 }
 
 /*!
- * @brief  Constructs a new RevokeGrantRequest object.
+ * Constructs a RevokeGrantRequest object.
  */
 RevokeGrantRequest::RevokeGrantRequest()
     : KMSRequest(new RevokeGrantRequestPrivate(KMSRequest::RevokeGrantAction, this))
@@ -165,14 +162,9 @@ bool RevokeGrantRequest::isValid() const
 
 
 /*!
- * @brief  Construct an RevokeGrantResponse object.
+ * Returns a RevokeGrantResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An RevokeGrantResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  KMSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * RevokeGrantRequest::response(QNetworkReply * const reply) const
 {
@@ -180,20 +172,17 @@ QtAws::Core::AwsAbstractResponse * RevokeGrantRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::KMS::RevokeGrantRequestPrivate
+ * \brief The RevokeGrantRequestPrivate class provides private implementation for RevokeGrantRequest.
+ * \internal
  *
- * @class  RevokeGrantRequestPrivate
- *
- * @brief  Private implementation for RevokeGrantRequest.
+ * \inmodule QtAwsKMS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new RevokeGrantRequestPrivate object.
- *
- * @param  action  KMS action being performed.
- * @param  q       Pointer to this object's public RevokeGrantRequest instance.
+ * Constructs a RevokeGrantRequestPrivate object for KMS \a action with,
+ * public implementation \a q.
  */
 RevokeGrantRequestPrivate::RevokeGrantRequestPrivate(
     const KMSRequest::Action action, RevokeGrantRequest * const q)
@@ -203,15 +192,10 @@ RevokeGrantRequestPrivate::RevokeGrantRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RevokeGrantRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the RevokeGrantRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public RevokeGrantRequest instance.
  */
 RevokeGrantRequestPrivate::RevokeGrantRequestPrivate(
     const RevokeGrantRequestPrivate &other, RevokeGrantRequest * const q)

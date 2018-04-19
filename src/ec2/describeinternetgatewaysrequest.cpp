@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DescribeInternetGatewaysRequest
- *
  * \brief The DescribeInternetGatewaysRequest class provides an interface for EC2 DescribeInternetGateways requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DescribeInternetGatewaysRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeInternetGatewaysRequest::DescribeInternetGatewaysRequest(const DescribeInternetGatewaysRequest &other)
     : EC2Request(new DescribeInternetGatewaysRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ DescribeInternetGatewaysRequest::DescribeInternetGatewaysRequest(const DescribeI
 }
 
 /*!
- * @brief  Constructs a new DescribeInternetGatewaysRequest object.
+ * Constructs a DescribeInternetGatewaysRequest object.
  */
 DescribeInternetGatewaysRequest::DescribeInternetGatewaysRequest()
     : EC2Request(new DescribeInternetGatewaysRequestPrivate(EC2Request::DescribeInternetGatewaysAction, this))
@@ -70,14 +67,9 @@ bool DescribeInternetGatewaysRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeInternetGatewaysResponse object.
+ * Returns a DescribeInternetGatewaysResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeInternetGatewaysResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeInternetGatewaysRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * DescribeInternetGatewaysRequest::response(QNe
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::DescribeInternetGatewaysRequestPrivate
+ * \brief The DescribeInternetGatewaysRequestPrivate class provides private implementation for DescribeInternetGatewaysRequest.
+ * \internal
  *
- * @class  DescribeInternetGatewaysRequestPrivate
- *
- * @brief  Private implementation for DescribeInternetGatewaysRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeInternetGatewaysRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public DescribeInternetGatewaysRequest instance.
+ * Constructs a DescribeInternetGatewaysRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 DescribeInternetGatewaysRequestPrivate::DescribeInternetGatewaysRequestPrivate(
     const EC2Request::Action action, DescribeInternetGatewaysRequest * const q)
@@ -108,15 +97,10 @@ DescribeInternetGatewaysRequestPrivate::DescribeInternetGatewaysRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeInternetGatewaysRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeInternetGatewaysRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeInternetGatewaysRequest instance.
  */
 DescribeInternetGatewaysRequestPrivate::DescribeInternetGatewaysRequestPrivate(
     const DescribeInternetGatewaysRequestPrivate &other, DescribeInternetGatewaysRequest * const q)

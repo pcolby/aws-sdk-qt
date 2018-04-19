@@ -27,10 +27,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::GetParametersByPathRequest
- *
  * \brief The GetParametersByPathRequest class provides an interface for SSM GetParametersByPath requests.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -61,9 +60,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new GetParametersByPathRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetParametersByPathRequest::GetParametersByPathRequest(const GetParametersByPathRequest &other)
     : SSMRequest(new GetParametersByPathRequestPrivate(*other.d_func(), this))
@@ -72,7 +69,7 @@ GetParametersByPathRequest::GetParametersByPathRequest(const GetParametersByPath
 }
 
 /*!
- * @brief  Constructs a new GetParametersByPathRequest object.
+ * Constructs a GetParametersByPathRequest object.
  */
 GetParametersByPathRequest::GetParametersByPathRequest()
     : SSMRequest(new GetParametersByPathRequestPrivate(SSMRequest::GetParametersByPathAction, this))
@@ -90,14 +87,9 @@ bool GetParametersByPathRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetParametersByPathResponse object.
+ * Returns a GetParametersByPathResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetParametersByPathResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SSMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetParametersByPathRequest::response(QNetworkReply * const reply) const
 {
@@ -105,20 +97,17 @@ QtAws::Core::AwsAbstractResponse * GetParametersByPathRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::SSM::GetParametersByPathRequestPrivate
+ * \brief The GetParametersByPathRequestPrivate class provides private implementation for GetParametersByPathRequest.
+ * \internal
  *
- * @class  GetParametersByPathRequestPrivate
- *
- * @brief  Private implementation for GetParametersByPathRequest.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetParametersByPathRequestPrivate object.
- *
- * @param  action  SSM action being performed.
- * @param  q       Pointer to this object's public GetParametersByPathRequest instance.
+ * Constructs a GetParametersByPathRequestPrivate object for SSM \a action with,
+ * public implementation \a q.
  */
 GetParametersByPathRequestPrivate::GetParametersByPathRequestPrivate(
     const SSMRequest::Action action, GetParametersByPathRequest * const q)
@@ -128,15 +117,10 @@ GetParametersByPathRequestPrivate::GetParametersByPathRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetParametersByPathRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetParametersByPathRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetParametersByPathRequest instance.
  */
 GetParametersByPathRequestPrivate::GetParametersByPathRequestPrivate(
     const GetParametersByPathRequestPrivate &other, GetParametersByPathRequest * const q)

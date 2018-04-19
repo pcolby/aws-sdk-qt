@@ -27,10 +27,9 @@ namespace ElasticLoadBalancing {
 
 /*!
  * \class QtAws::ElasticLoadBalancing::EnableAvailabilityZonesForLoadBalancerRequest
- *
  * \brief The EnableAvailabilityZonesForLoadBalancerRequest class provides an interface for ElasticLoadBalancing EnableAvailabilityZonesForLoadBalancer requests.
  *
- * \ingroup ElasticLoadBalancing
+ * \inmodule QtAwsElasticLoadBalancing
  *
  *  <fullname>Elastic Load Balancing</fullname>
  * 
@@ -65,9 +64,7 @@ namespace ElasticLoadBalancing {
  */
 
 /*!
- * @brief  Constructs a new EnableAvailabilityZonesForLoadBalancerRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 EnableAvailabilityZonesForLoadBalancerRequest::EnableAvailabilityZonesForLoadBalancerRequest(const EnableAvailabilityZonesForLoadBalancerRequest &other)
     : ElasticLoadBalancingRequest(new EnableAvailabilityZonesForLoadBalancerRequestPrivate(*other.d_func(), this))
@@ -76,7 +73,7 @@ EnableAvailabilityZonesForLoadBalancerRequest::EnableAvailabilityZonesForLoadBal
 }
 
 /*!
- * @brief  Constructs a new EnableAvailabilityZonesForLoadBalancerRequest object.
+ * Constructs a EnableAvailabilityZonesForLoadBalancerRequest object.
  */
 EnableAvailabilityZonesForLoadBalancerRequest::EnableAvailabilityZonesForLoadBalancerRequest()
     : ElasticLoadBalancingRequest(new EnableAvailabilityZonesForLoadBalancerRequestPrivate(ElasticLoadBalancingRequest::EnableAvailabilityZonesForLoadBalancerAction, this))
@@ -94,14 +91,9 @@ bool EnableAvailabilityZonesForLoadBalancerRequest::isValid() const
 
 
 /*!
- * @brief  Construct an EnableAvailabilityZonesForLoadBalancerResponse object.
+ * Returns a EnableAvailabilityZonesForLoadBalancerResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An EnableAvailabilityZonesForLoadBalancerResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ElasticLoadBalancingClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * EnableAvailabilityZonesForLoadBalancerRequest::response(QNetworkReply * const reply) const
 {
@@ -109,20 +101,17 @@ QtAws::Core::AwsAbstractResponse * EnableAvailabilityZonesForLoadBalancerRequest
 }
 
 /*!
- * @internal
+ * \class QtAws::ElasticLoadBalancing::EnableAvailabilityZonesForLoadBalancerRequestPrivate
+ * \brief The EnableAvailabilityZonesForLoadBalancerRequestPrivate class provides private implementation for EnableAvailabilityZonesForLoadBalancerRequest.
+ * \internal
  *
- * @class  EnableAvailabilityZonesForLoadBalancerRequestPrivate
- *
- * @brief  Private implementation for EnableAvailabilityZonesForLoadBalancerRequest.
+ * \inmodule QtAwsElasticLoadBalancing
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new EnableAvailabilityZonesForLoadBalancerRequestPrivate object.
- *
- * @param  action  ElasticLoadBalancing action being performed.
- * @param  q       Pointer to this object's public EnableAvailabilityZonesForLoadBalancerRequest instance.
+ * Constructs a EnableAvailabilityZonesForLoadBalancerRequestPrivate object for ElasticLoadBalancing \a action with,
+ * public implementation \a q.
  */
 EnableAvailabilityZonesForLoadBalancerRequestPrivate::EnableAvailabilityZonesForLoadBalancerRequestPrivate(
     const ElasticLoadBalancingRequest::Action action, EnableAvailabilityZonesForLoadBalancerRequest * const q)
@@ -132,15 +121,10 @@ EnableAvailabilityZonesForLoadBalancerRequestPrivate::EnableAvailabilityZonesFor
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new EnableAvailabilityZonesForLoadBalancerRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the EnableAvailabilityZonesForLoadBalancerRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public EnableAvailabilityZonesForLoadBalancerRequest instance.
  */
 EnableAvailabilityZonesForLoadBalancerRequestPrivate::EnableAvailabilityZonesForLoadBalancerRequestPrivate(
     const EnableAvailabilityZonesForLoadBalancerRequestPrivate &other, EnableAvailabilityZonesForLoadBalancerRequest * const q)

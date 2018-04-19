@@ -27,10 +27,9 @@ namespace MQ {
 
 /*!
  * \class QtAws::MQ::DescribeBrokerRequest
- *
  * \brief The DescribeBrokerRequest class provides an interface for MQ DescribeBroker requests.
  *
- * \ingroup MQ
+ * \inmodule QtAwsMQ
  *
  *  Amazon MQ is a managed message broker service for Apache ActiveMQ that makes it easy to set up and operate message
  *  brokers in the cloud. A message broker allows software applications and components to communicate using various
@@ -39,9 +38,7 @@ namespace MQ {
  */
 
 /*!
- * @brief  Constructs a new DescribeBrokerRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeBrokerRequest::DescribeBrokerRequest(const DescribeBrokerRequest &other)
     : MQRequest(new DescribeBrokerRequestPrivate(*other.d_func(), this))
@@ -50,7 +47,7 @@ DescribeBrokerRequest::DescribeBrokerRequest(const DescribeBrokerRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DescribeBrokerRequest object.
+ * Constructs a DescribeBrokerRequest object.
  */
 DescribeBrokerRequest::DescribeBrokerRequest()
     : MQRequest(new DescribeBrokerRequestPrivate(MQRequest::DescribeBrokerAction, this))
@@ -68,14 +65,9 @@ bool DescribeBrokerRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeBrokerResponse object.
+ * Returns a DescribeBrokerResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeBrokerResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MQClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeBrokerRequest::response(QNetworkReply * const reply) const
 {
@@ -83,20 +75,17 @@ QtAws::Core::AwsAbstractResponse * DescribeBrokerRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::MQ::DescribeBrokerRequestPrivate
+ * \brief The DescribeBrokerRequestPrivate class provides private implementation for DescribeBrokerRequest.
+ * \internal
  *
- * @class  DescribeBrokerRequestPrivate
- *
- * @brief  Private implementation for DescribeBrokerRequest.
+ * \inmodule QtAwsMQ
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeBrokerRequestPrivate object.
- *
- * @param  action  MQ action being performed.
- * @param  q       Pointer to this object's public DescribeBrokerRequest instance.
+ * Constructs a DescribeBrokerRequestPrivate object for MQ \a action with,
+ * public implementation \a q.
  */
 DescribeBrokerRequestPrivate::DescribeBrokerRequestPrivate(
     const MQRequest::Action action, DescribeBrokerRequest * const q)
@@ -106,15 +95,10 @@ DescribeBrokerRequestPrivate::DescribeBrokerRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeBrokerRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeBrokerRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeBrokerRequest instance.
  */
 DescribeBrokerRequestPrivate::DescribeBrokerRequestPrivate(
     const DescribeBrokerRequestPrivate &other, DescribeBrokerRequest * const q)

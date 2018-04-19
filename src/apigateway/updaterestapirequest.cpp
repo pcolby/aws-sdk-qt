@@ -27,10 +27,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::UpdateRestApiRequest
- *
  * \brief The UpdateRestApiRequest class provides an interface for APIGateway UpdateRestApi requests.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -42,9 +41,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new UpdateRestApiRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateRestApiRequest::UpdateRestApiRequest(const UpdateRestApiRequest &other)
     : APIGatewayRequest(new UpdateRestApiRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ UpdateRestApiRequest::UpdateRestApiRequest(const UpdateRestApiRequest &other)
 }
 
 /*!
- * @brief  Constructs a new UpdateRestApiRequest object.
+ * Constructs a UpdateRestApiRequest object.
  */
 UpdateRestApiRequest::UpdateRestApiRequest()
     : APIGatewayRequest(new UpdateRestApiRequestPrivate(APIGatewayRequest::UpdateRestApiAction, this))
@@ -71,14 +68,9 @@ bool UpdateRestApiRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateRestApiResponse object.
+ * Returns a UpdateRestApiResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateRestApiResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  APIGatewayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateRestApiRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * UpdateRestApiRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::APIGateway::UpdateRestApiRequestPrivate
+ * \brief The UpdateRestApiRequestPrivate class provides private implementation for UpdateRestApiRequest.
+ * \internal
  *
- * @class  UpdateRestApiRequestPrivate
- *
- * @brief  Private implementation for UpdateRestApiRequest.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateRestApiRequestPrivate object.
- *
- * @param  action  APIGateway action being performed.
- * @param  q       Pointer to this object's public UpdateRestApiRequest instance.
+ * Constructs a UpdateRestApiRequestPrivate object for APIGateway \a action with,
+ * public implementation \a q.
  */
 UpdateRestApiRequestPrivate::UpdateRestApiRequestPrivate(
     const APIGatewayRequest::Action action, UpdateRestApiRequest * const q)
@@ -109,15 +98,10 @@ UpdateRestApiRequestPrivate::UpdateRestApiRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateRestApiRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateRestApiRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateRestApiRequest instance.
  */
 UpdateRestApiRequestPrivate::UpdateRestApiRequestPrivate(
     const UpdateRestApiRequestPrivate &other, UpdateRestApiRequest * const q)

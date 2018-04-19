@@ -27,10 +27,9 @@ namespace Glacier {
 
 /*!
  * \class QtAws::Glacier::UploadMultipartPartRequest
- *
  * \brief The UploadMultipartPartRequest class provides an interface for Glacier UploadMultipartPart requests.
  *
- * \ingroup Glacier
+ * \inmodule QtAwsGlacier
  *
  *  Amazon Glacier is a storage solution for "cold
  * 
@@ -75,9 +74,7 @@ namespace Glacier {
  */
 
 /*!
- * @brief  Constructs a new UploadMultipartPartRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UploadMultipartPartRequest::UploadMultipartPartRequest(const UploadMultipartPartRequest &other)
     : GlacierRequest(new UploadMultipartPartRequestPrivate(*other.d_func(), this))
@@ -86,7 +83,7 @@ UploadMultipartPartRequest::UploadMultipartPartRequest(const UploadMultipartPart
 }
 
 /*!
- * @brief  Constructs a new UploadMultipartPartRequest object.
+ * Constructs a UploadMultipartPartRequest object.
  */
 UploadMultipartPartRequest::UploadMultipartPartRequest()
     : GlacierRequest(new UploadMultipartPartRequestPrivate(GlacierRequest::UploadMultipartPartAction, this))
@@ -104,14 +101,9 @@ bool UploadMultipartPartRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UploadMultipartPartResponse object.
+ * Returns a UploadMultipartPartResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UploadMultipartPartResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  GlacierClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UploadMultipartPartRequest::response(QNetworkReply * const reply) const
 {
@@ -119,20 +111,17 @@ QtAws::Core::AwsAbstractResponse * UploadMultipartPartRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::Glacier::UploadMultipartPartRequestPrivate
+ * \brief The UploadMultipartPartRequestPrivate class provides private implementation for UploadMultipartPartRequest.
+ * \internal
  *
- * @class  UploadMultipartPartRequestPrivate
- *
- * @brief  Private implementation for UploadMultipartPartRequest.
+ * \inmodule QtAwsGlacier
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UploadMultipartPartRequestPrivate object.
- *
- * @param  action  Glacier action being performed.
- * @param  q       Pointer to this object's public UploadMultipartPartRequest instance.
+ * Constructs a UploadMultipartPartRequestPrivate object for Glacier \a action with,
+ * public implementation \a q.
  */
 UploadMultipartPartRequestPrivate::UploadMultipartPartRequestPrivate(
     const GlacierRequest::Action action, UploadMultipartPartRequest * const q)
@@ -142,15 +131,10 @@ UploadMultipartPartRequestPrivate::UploadMultipartPartRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UploadMultipartPartRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UploadMultipartPartRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UploadMultipartPartRequest instance.
  */
 UploadMultipartPartRequestPrivate::UploadMultipartPartRequestPrivate(
     const UploadMultipartPartRequestPrivate &other, UploadMultipartPartRequest * const q)

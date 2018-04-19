@@ -27,10 +27,9 @@ namespace CognitoIdentity {
 
 /*!
  * \class QtAws::CognitoIdentity::DescribeIdentityRequest
- *
  * \brief The DescribeIdentityRequest class provides an interface for CognitoIdentity DescribeIdentity requests.
  *
- * \ingroup CognitoIdentity
+ * \inmodule QtAwsCognitoIdentity
  *
  *  <fullname>Amazon Cognito</fullname>
  * 
@@ -75,9 +74,7 @@ namespace CognitoIdentity {
  */
 
 /*!
- * @brief  Constructs a new DescribeIdentityRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeIdentityRequest::DescribeIdentityRequest(const DescribeIdentityRequest &other)
     : CognitoIdentityRequest(new DescribeIdentityRequestPrivate(*other.d_func(), this))
@@ -86,7 +83,7 @@ DescribeIdentityRequest::DescribeIdentityRequest(const DescribeIdentityRequest &
 }
 
 /*!
- * @brief  Constructs a new DescribeIdentityRequest object.
+ * Constructs a DescribeIdentityRequest object.
  */
 DescribeIdentityRequest::DescribeIdentityRequest()
     : CognitoIdentityRequest(new DescribeIdentityRequestPrivate(CognitoIdentityRequest::DescribeIdentityAction, this))
@@ -104,14 +101,9 @@ bool DescribeIdentityRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeIdentityResponse object.
+ * Returns a DescribeIdentityResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeIdentityResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CognitoIdentityClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeIdentityRequest::response(QNetworkReply * const reply) const
 {
@@ -119,20 +111,17 @@ QtAws::Core::AwsAbstractResponse * DescribeIdentityRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::CognitoIdentity::DescribeIdentityRequestPrivate
+ * \brief The DescribeIdentityRequestPrivate class provides private implementation for DescribeIdentityRequest.
+ * \internal
  *
- * @class  DescribeIdentityRequestPrivate
- *
- * @brief  Private implementation for DescribeIdentityRequest.
+ * \inmodule QtAwsCognitoIdentity
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeIdentityRequestPrivate object.
- *
- * @param  action  CognitoIdentity action being performed.
- * @param  q       Pointer to this object's public DescribeIdentityRequest instance.
+ * Constructs a DescribeIdentityRequestPrivate object for CognitoIdentity \a action with,
+ * public implementation \a q.
  */
 DescribeIdentityRequestPrivate::DescribeIdentityRequestPrivate(
     const CognitoIdentityRequest::Action action, DescribeIdentityRequest * const q)
@@ -142,15 +131,10 @@ DescribeIdentityRequestPrivate::DescribeIdentityRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeIdentityRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeIdentityRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeIdentityRequest instance.
  */
 DescribeIdentityRequestPrivate::DescribeIdentityRequestPrivate(
     const DescribeIdentityRequestPrivate &other, DescribeIdentityRequest * const q)

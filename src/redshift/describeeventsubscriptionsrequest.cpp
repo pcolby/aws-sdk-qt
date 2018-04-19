@@ -27,10 +27,9 @@ namespace Redshift {
 
 /*!
  * \class QtAws::Redshift::DescribeEventSubscriptionsRequest
- *
  * \brief The DescribeEventSubscriptionsRequest class provides an interface for Redshift DescribeEventSubscriptions requests.
  *
- * \ingroup Redshift
+ * \inmodule QtAwsRedshift
  *
  *  <fullname>Amazon Redshift</fullname>
  * 
@@ -67,9 +66,7 @@ namespace Redshift {
  */
 
 /*!
- * @brief  Constructs a new DescribeEventSubscriptionsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeEventSubscriptionsRequest::DescribeEventSubscriptionsRequest(const DescribeEventSubscriptionsRequest &other)
     : RedshiftRequest(new DescribeEventSubscriptionsRequestPrivate(*other.d_func(), this))
@@ -78,7 +75,7 @@ DescribeEventSubscriptionsRequest::DescribeEventSubscriptionsRequest(const Descr
 }
 
 /*!
- * @brief  Constructs a new DescribeEventSubscriptionsRequest object.
+ * Constructs a DescribeEventSubscriptionsRequest object.
  */
 DescribeEventSubscriptionsRequest::DescribeEventSubscriptionsRequest()
     : RedshiftRequest(new DescribeEventSubscriptionsRequestPrivate(RedshiftRequest::DescribeEventSubscriptionsAction, this))
@@ -96,14 +93,9 @@ bool DescribeEventSubscriptionsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeEventSubscriptionsResponse object.
+ * Returns a DescribeEventSubscriptionsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeEventSubscriptionsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RedshiftClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeEventSubscriptionsRequest::response(QNetworkReply * const reply) const
 {
@@ -111,20 +103,17 @@ QtAws::Core::AwsAbstractResponse * DescribeEventSubscriptionsRequest::response(Q
 }
 
 /*!
- * @internal
+ * \class QtAws::Redshift::DescribeEventSubscriptionsRequestPrivate
+ * \brief The DescribeEventSubscriptionsRequestPrivate class provides private implementation for DescribeEventSubscriptionsRequest.
+ * \internal
  *
- * @class  DescribeEventSubscriptionsRequestPrivate
- *
- * @brief  Private implementation for DescribeEventSubscriptionsRequest.
+ * \inmodule QtAwsRedshift
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeEventSubscriptionsRequestPrivate object.
- *
- * @param  action  Redshift action being performed.
- * @param  q       Pointer to this object's public DescribeEventSubscriptionsRequest instance.
+ * Constructs a DescribeEventSubscriptionsRequestPrivate object for Redshift \a action with,
+ * public implementation \a q.
  */
 DescribeEventSubscriptionsRequestPrivate::DescribeEventSubscriptionsRequestPrivate(
     const RedshiftRequest::Action action, DescribeEventSubscriptionsRequest * const q)
@@ -134,15 +123,10 @@ DescribeEventSubscriptionsRequestPrivate::DescribeEventSubscriptionsRequestPriva
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeEventSubscriptionsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeEventSubscriptionsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeEventSubscriptionsRequest instance.
  */
 DescribeEventSubscriptionsRequestPrivate::DescribeEventSubscriptionsRequestPrivate(
     const DescribeEventSubscriptionsRequestPrivate &other, DescribeEventSubscriptionsRequest * const q)

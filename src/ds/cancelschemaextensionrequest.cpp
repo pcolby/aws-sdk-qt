@@ -27,10 +27,9 @@ namespace DirectoryService {
 
 /*!
  * \class QtAws::DirectoryService::CancelSchemaExtensionRequest
- *
  * \brief The CancelSchemaExtensionRequest class provides an interface for DirectoryService CancelSchemaExtension requests.
  *
- * \ingroup DirectoryService
+ * \inmodule QtAwsDirectoryService
  *
  *  <fullname>AWS Directory Service</fullname>
  * 
@@ -51,9 +50,7 @@ namespace DirectoryService {
  */
 
 /*!
- * @brief  Constructs a new CancelSchemaExtensionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CancelSchemaExtensionRequest::CancelSchemaExtensionRequest(const CancelSchemaExtensionRequest &other)
     : DirectoryServiceRequest(new CancelSchemaExtensionRequestPrivate(*other.d_func(), this))
@@ -62,7 +59,7 @@ CancelSchemaExtensionRequest::CancelSchemaExtensionRequest(const CancelSchemaExt
 }
 
 /*!
- * @brief  Constructs a new CancelSchemaExtensionRequest object.
+ * Constructs a CancelSchemaExtensionRequest object.
  */
 CancelSchemaExtensionRequest::CancelSchemaExtensionRequest()
     : DirectoryServiceRequest(new CancelSchemaExtensionRequestPrivate(DirectoryServiceRequest::CancelSchemaExtensionAction, this))
@@ -80,14 +77,9 @@ bool CancelSchemaExtensionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CancelSchemaExtensionResponse object.
+ * Returns a CancelSchemaExtensionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CancelSchemaExtensionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DirectoryServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CancelSchemaExtensionRequest::response(QNetworkReply * const reply) const
 {
@@ -95,20 +87,17 @@ QtAws::Core::AwsAbstractResponse * CancelSchemaExtensionRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::DirectoryService::CancelSchemaExtensionRequestPrivate
+ * \brief The CancelSchemaExtensionRequestPrivate class provides private implementation for CancelSchemaExtensionRequest.
+ * \internal
  *
- * @class  CancelSchemaExtensionRequestPrivate
- *
- * @brief  Private implementation for CancelSchemaExtensionRequest.
+ * \inmodule QtAwsDirectoryService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CancelSchemaExtensionRequestPrivate object.
- *
- * @param  action  DirectoryService action being performed.
- * @param  q       Pointer to this object's public CancelSchemaExtensionRequest instance.
+ * Constructs a CancelSchemaExtensionRequestPrivate object for DirectoryService \a action with,
+ * public implementation \a q.
  */
 CancelSchemaExtensionRequestPrivate::CancelSchemaExtensionRequestPrivate(
     const DirectoryServiceRequest::Action action, CancelSchemaExtensionRequest * const q)
@@ -118,15 +107,10 @@ CancelSchemaExtensionRequestPrivate::CancelSchemaExtensionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CancelSchemaExtensionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CancelSchemaExtensionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CancelSchemaExtensionRequest instance.
  */
 CancelSchemaExtensionRequestPrivate::CancelSchemaExtensionRequestPrivate(
     const CancelSchemaExtensionRequestPrivate &other, CancelSchemaExtensionRequest * const q)

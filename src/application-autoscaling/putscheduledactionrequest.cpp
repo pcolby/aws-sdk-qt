@@ -27,10 +27,9 @@ namespace ApplicationAutoScaling {
 
 /*!
  * \class QtAws::ApplicationAutoScaling::PutScheduledActionRequest
- *
  * \brief The PutScheduledActionRequest class provides an interface for ApplicationAutoScaling PutScheduledAction requests.
  *
- * \ingroup ApplicationAutoScaling
+ * \inmodule QtAwsApplicationAutoScaling
  *
  *  With Application Auto Scaling, you can configure automatic scaling for your scalable AWS resources. You can use
  *  Application Auto Scaling to accomplish the following
@@ -110,9 +109,7 @@ namespace ApplicationAutoScaling {
  */
 
 /*!
- * @brief  Constructs a new PutScheduledActionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 PutScheduledActionRequest::PutScheduledActionRequest(const PutScheduledActionRequest &other)
     : ApplicationAutoScalingRequest(new PutScheduledActionRequestPrivate(*other.d_func(), this))
@@ -121,7 +118,7 @@ PutScheduledActionRequest::PutScheduledActionRequest(const PutScheduledActionReq
 }
 
 /*!
- * @brief  Constructs a new PutScheduledActionRequest object.
+ * Constructs a PutScheduledActionRequest object.
  */
 PutScheduledActionRequest::PutScheduledActionRequest()
     : ApplicationAutoScalingRequest(new PutScheduledActionRequestPrivate(ApplicationAutoScalingRequest::PutScheduledActionAction, this))
@@ -139,14 +136,9 @@ bool PutScheduledActionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an PutScheduledActionResponse object.
+ * Returns a PutScheduledActionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An PutScheduledActionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ApplicationAutoScalingClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * PutScheduledActionRequest::response(QNetworkReply * const reply) const
 {
@@ -154,20 +146,17 @@ QtAws::Core::AwsAbstractResponse * PutScheduledActionRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::ApplicationAutoScaling::PutScheduledActionRequestPrivate
+ * \brief The PutScheduledActionRequestPrivate class provides private implementation for PutScheduledActionRequest.
+ * \internal
  *
- * @class  PutScheduledActionRequestPrivate
- *
- * @brief  Private implementation for PutScheduledActionRequest.
+ * \inmodule QtAwsApplicationAutoScaling
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new PutScheduledActionRequestPrivate object.
- *
- * @param  action  ApplicationAutoScaling action being performed.
- * @param  q       Pointer to this object's public PutScheduledActionRequest instance.
+ * Constructs a PutScheduledActionRequestPrivate object for ApplicationAutoScaling \a action with,
+ * public implementation \a q.
  */
 PutScheduledActionRequestPrivate::PutScheduledActionRequestPrivate(
     const ApplicationAutoScalingRequest::Action action, PutScheduledActionRequest * const q)
@@ -177,15 +166,10 @@ PutScheduledActionRequestPrivate::PutScheduledActionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutScheduledActionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the PutScheduledActionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public PutScheduledActionRequest instance.
  */
 PutScheduledActionRequestPrivate::PutScheduledActionRequestPrivate(
     const PutScheduledActionRequestPrivate &other, PutScheduledActionRequest * const q)

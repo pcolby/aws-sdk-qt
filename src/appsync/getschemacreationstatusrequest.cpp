@@ -27,10 +27,9 @@ namespace AppSync {
 
 /*!
  * \class QtAws::AppSync::GetSchemaCreationStatusRequest
- *
  * \brief The GetSchemaCreationStatusRequest class provides an interface for AppSync GetSchemaCreationStatus requests.
  *
- * \ingroup AppSync
+ * \inmodule QtAwsAppSync
  *
  *  AWS AppSync provides API actions for creating and interacting with data sources using GraphQL from your
  *
@@ -38,9 +37,7 @@ namespace AppSync {
  */
 
 /*!
- * @brief  Constructs a new GetSchemaCreationStatusRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetSchemaCreationStatusRequest::GetSchemaCreationStatusRequest(const GetSchemaCreationStatusRequest &other)
     : AppSyncRequest(new GetSchemaCreationStatusRequestPrivate(*other.d_func(), this))
@@ -49,7 +46,7 @@ GetSchemaCreationStatusRequest::GetSchemaCreationStatusRequest(const GetSchemaCr
 }
 
 /*!
- * @brief  Constructs a new GetSchemaCreationStatusRequest object.
+ * Constructs a GetSchemaCreationStatusRequest object.
  */
 GetSchemaCreationStatusRequest::GetSchemaCreationStatusRequest()
     : AppSyncRequest(new GetSchemaCreationStatusRequestPrivate(AppSyncRequest::GetSchemaCreationStatusAction, this))
@@ -67,14 +64,9 @@ bool GetSchemaCreationStatusRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetSchemaCreationStatusResponse object.
+ * Returns a GetSchemaCreationStatusResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetSchemaCreationStatusResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AppSyncClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetSchemaCreationStatusRequest::response(QNetworkReply * const reply) const
 {
@@ -82,20 +74,17 @@ QtAws::Core::AwsAbstractResponse * GetSchemaCreationStatusRequest::response(QNet
 }
 
 /*!
- * @internal
+ * \class QtAws::AppSync::GetSchemaCreationStatusRequestPrivate
+ * \brief The GetSchemaCreationStatusRequestPrivate class provides private implementation for GetSchemaCreationStatusRequest.
+ * \internal
  *
- * @class  GetSchemaCreationStatusRequestPrivate
- *
- * @brief  Private implementation for GetSchemaCreationStatusRequest.
+ * \inmodule QtAwsAppSync
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetSchemaCreationStatusRequestPrivate object.
- *
- * @param  action  AppSync action being performed.
- * @param  q       Pointer to this object's public GetSchemaCreationStatusRequest instance.
+ * Constructs a GetSchemaCreationStatusRequestPrivate object for AppSync \a action with,
+ * public implementation \a q.
  */
 GetSchemaCreationStatusRequestPrivate::GetSchemaCreationStatusRequestPrivate(
     const AppSyncRequest::Action action, GetSchemaCreationStatusRequest * const q)
@@ -105,15 +94,10 @@ GetSchemaCreationStatusRequestPrivate::GetSchemaCreationStatusRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetSchemaCreationStatusRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetSchemaCreationStatusRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetSchemaCreationStatusRequest instance.
  */
 GetSchemaCreationStatusRequestPrivate::GetSchemaCreationStatusRequestPrivate(
     const GetSchemaCreationStatusRequestPrivate &other, GetSchemaCreationStatusRequest * const q)

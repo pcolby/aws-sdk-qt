@@ -27,19 +27,16 @@ namespace SageMaker {
 
 /*!
  * \class QtAws::SageMaker::DescribeModelRequest
- *
  * \brief The DescribeModelRequest class provides an interface for SageMaker DescribeModel requests.
  *
- * \ingroup SageMaker
+ * \inmodule QtAwsSageMaker
  *
  *
  * \sa SageMakerClient::describeModel
  */
 
 /*!
- * @brief  Constructs a new DescribeModelRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeModelRequest::DescribeModelRequest(const DescribeModelRequest &other)
     : SageMakerRequest(new DescribeModelRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ DescribeModelRequest::DescribeModelRequest(const DescribeModelRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DescribeModelRequest object.
+ * Constructs a DescribeModelRequest object.
  */
 DescribeModelRequest::DescribeModelRequest()
     : SageMakerRequest(new DescribeModelRequestPrivate(SageMakerRequest::DescribeModelAction, this))
@@ -66,14 +63,9 @@ bool DescribeModelRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeModelResponse object.
+ * Returns a DescribeModelResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeModelResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SageMakerClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeModelRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * DescribeModelRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::SageMaker::DescribeModelRequestPrivate
+ * \brief The DescribeModelRequestPrivate class provides private implementation for DescribeModelRequest.
+ * \internal
  *
- * @class  DescribeModelRequestPrivate
- *
- * @brief  Private implementation for DescribeModelRequest.
+ * \inmodule QtAwsSageMaker
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeModelRequestPrivate object.
- *
- * @param  action  SageMaker action being performed.
- * @param  q       Pointer to this object's public DescribeModelRequest instance.
+ * Constructs a DescribeModelRequestPrivate object for SageMaker \a action with,
+ * public implementation \a q.
  */
 DescribeModelRequestPrivate::DescribeModelRequestPrivate(
     const SageMakerRequest::Action action, DescribeModelRequest * const q)
@@ -104,15 +93,10 @@ DescribeModelRequestPrivate::DescribeModelRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeModelRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeModelRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeModelRequest instance.
  */
 DescribeModelRequestPrivate::DescribeModelRequestPrivate(
     const DescribeModelRequestPrivate &other, DescribeModelRequest * const q)

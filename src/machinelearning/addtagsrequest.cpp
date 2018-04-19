@@ -27,19 +27,16 @@ namespace MachineLearning {
 
 /*!
  * \class QtAws::MachineLearning::AddTagsRequest
- *
  * \brief The AddTagsRequest class provides an interface for MachineLearning AddTags requests.
  *
- * \ingroup MachineLearning
+ * \inmodule QtAwsMachineLearning
  *
  *
  * \sa MachineLearningClient::addTags
  */
 
 /*!
- * @brief  Constructs a new AddTagsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AddTagsRequest::AddTagsRequest(const AddTagsRequest &other)
     : MachineLearningRequest(new AddTagsRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ AddTagsRequest::AddTagsRequest(const AddTagsRequest &other)
 }
 
 /*!
- * @brief  Constructs a new AddTagsRequest object.
+ * Constructs a AddTagsRequest object.
  */
 AddTagsRequest::AddTagsRequest()
     : MachineLearningRequest(new AddTagsRequestPrivate(MachineLearningRequest::AddTagsAction, this))
@@ -66,14 +63,9 @@ bool AddTagsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AddTagsResponse object.
+ * Returns a AddTagsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AddTagsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MachineLearningClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AddTagsRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * AddTagsRequest::response(QNetworkReply * cons
 }
 
 /*!
- * @internal
+ * \class QtAws::MachineLearning::AddTagsRequestPrivate
+ * \brief The AddTagsRequestPrivate class provides private implementation for AddTagsRequest.
+ * \internal
  *
- * @class  AddTagsRequestPrivate
- *
- * @brief  Private implementation for AddTagsRequest.
+ * \inmodule QtAwsMachineLearning
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AddTagsRequestPrivate object.
- *
- * @param  action  MachineLearning action being performed.
- * @param  q       Pointer to this object's public AddTagsRequest instance.
+ * Constructs a AddTagsRequestPrivate object for MachineLearning \a action with,
+ * public implementation \a q.
  */
 AddTagsRequestPrivate::AddTagsRequestPrivate(
     const MachineLearningRequest::Action action, AddTagsRequest * const q)
@@ -104,15 +93,10 @@ AddTagsRequestPrivate::AddTagsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AddTagsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AddTagsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AddTagsRequest instance.
  */
 AddTagsRequestPrivate::AddTagsRequestPrivate(
     const AddTagsRequestPrivate &other, AddTagsRequest * const q)

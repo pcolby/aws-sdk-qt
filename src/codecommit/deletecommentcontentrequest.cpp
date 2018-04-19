@@ -27,10 +27,9 @@ namespace CodeCommit {
 
 /*!
  * \class QtAws::CodeCommit::DeleteCommentContentRequest
- *
  * \brief The DeleteCommentContentRequest class provides an interface for CodeCommit DeleteCommentContent requests.
  *
- * \ingroup CodeCommit
+ * \inmodule QtAwsCodeCommit
  *
  *  <fullname>AWS CodeCommit</fullname>
  * 
@@ -227,9 +226,7 @@ namespace CodeCommit {
  */
 
 /*!
- * @brief  Constructs a new DeleteCommentContentRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteCommentContentRequest::DeleteCommentContentRequest(const DeleteCommentContentRequest &other)
     : CodeCommitRequest(new DeleteCommentContentRequestPrivate(*other.d_func(), this))
@@ -238,7 +235,7 @@ DeleteCommentContentRequest::DeleteCommentContentRequest(const DeleteCommentCont
 }
 
 /*!
- * @brief  Constructs a new DeleteCommentContentRequest object.
+ * Constructs a DeleteCommentContentRequest object.
  */
 DeleteCommentContentRequest::DeleteCommentContentRequest()
     : CodeCommitRequest(new DeleteCommentContentRequestPrivate(CodeCommitRequest::DeleteCommentContentAction, this))
@@ -256,14 +253,9 @@ bool DeleteCommentContentRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteCommentContentResponse object.
+ * Returns a DeleteCommentContentResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteCommentContentResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CodeCommitClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteCommentContentRequest::response(QNetworkReply * const reply) const
 {
@@ -271,20 +263,17 @@ QtAws::Core::AwsAbstractResponse * DeleteCommentContentRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::CodeCommit::DeleteCommentContentRequestPrivate
+ * \brief The DeleteCommentContentRequestPrivate class provides private implementation for DeleteCommentContentRequest.
+ * \internal
  *
- * @class  DeleteCommentContentRequestPrivate
- *
- * @brief  Private implementation for DeleteCommentContentRequest.
+ * \inmodule QtAwsCodeCommit
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteCommentContentRequestPrivate object.
- *
- * @param  action  CodeCommit action being performed.
- * @param  q       Pointer to this object's public DeleteCommentContentRequest instance.
+ * Constructs a DeleteCommentContentRequestPrivate object for CodeCommit \a action with,
+ * public implementation \a q.
  */
 DeleteCommentContentRequestPrivate::DeleteCommentContentRequestPrivate(
     const CodeCommitRequest::Action action, DeleteCommentContentRequest * const q)
@@ -294,15 +283,10 @@ DeleteCommentContentRequestPrivate::DeleteCommentContentRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteCommentContentRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteCommentContentRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteCommentContentRequest instance.
  */
 DeleteCommentContentRequestPrivate::DeleteCommentContentRequestPrivate(
     const DeleteCommentContentRequestPrivate &other, DeleteCommentContentRequest * const q)

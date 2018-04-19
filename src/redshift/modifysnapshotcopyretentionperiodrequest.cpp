@@ -27,10 +27,9 @@ namespace Redshift {
 
 /*!
  * \class QtAws::Redshift::ModifySnapshotCopyRetentionPeriodRequest
- *
  * \brief The ModifySnapshotCopyRetentionPeriodRequest class provides an interface for Redshift ModifySnapshotCopyRetentionPeriod requests.
  *
- * \ingroup Redshift
+ * \inmodule QtAwsRedshift
  *
  *  <fullname>Amazon Redshift</fullname>
  * 
@@ -67,9 +66,7 @@ namespace Redshift {
  */
 
 /*!
- * @brief  Constructs a new ModifySnapshotCopyRetentionPeriodRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ModifySnapshotCopyRetentionPeriodRequest::ModifySnapshotCopyRetentionPeriodRequest(const ModifySnapshotCopyRetentionPeriodRequest &other)
     : RedshiftRequest(new ModifySnapshotCopyRetentionPeriodRequestPrivate(*other.d_func(), this))
@@ -78,7 +75,7 @@ ModifySnapshotCopyRetentionPeriodRequest::ModifySnapshotCopyRetentionPeriodReque
 }
 
 /*!
- * @brief  Constructs a new ModifySnapshotCopyRetentionPeriodRequest object.
+ * Constructs a ModifySnapshotCopyRetentionPeriodRequest object.
  */
 ModifySnapshotCopyRetentionPeriodRequest::ModifySnapshotCopyRetentionPeriodRequest()
     : RedshiftRequest(new ModifySnapshotCopyRetentionPeriodRequestPrivate(RedshiftRequest::ModifySnapshotCopyRetentionPeriodAction, this))
@@ -96,14 +93,9 @@ bool ModifySnapshotCopyRetentionPeriodRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ModifySnapshotCopyRetentionPeriodResponse object.
+ * Returns a ModifySnapshotCopyRetentionPeriodResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ModifySnapshotCopyRetentionPeriodResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RedshiftClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ModifySnapshotCopyRetentionPeriodRequest::response(QNetworkReply * const reply) const
 {
@@ -111,20 +103,17 @@ QtAws::Core::AwsAbstractResponse * ModifySnapshotCopyRetentionPeriodRequest::res
 }
 
 /*!
- * @internal
+ * \class QtAws::Redshift::ModifySnapshotCopyRetentionPeriodRequestPrivate
+ * \brief The ModifySnapshotCopyRetentionPeriodRequestPrivate class provides private implementation for ModifySnapshotCopyRetentionPeriodRequest.
+ * \internal
  *
- * @class  ModifySnapshotCopyRetentionPeriodRequestPrivate
- *
- * @brief  Private implementation for ModifySnapshotCopyRetentionPeriodRequest.
+ * \inmodule QtAwsRedshift
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ModifySnapshotCopyRetentionPeriodRequestPrivate object.
- *
- * @param  action  Redshift action being performed.
- * @param  q       Pointer to this object's public ModifySnapshotCopyRetentionPeriodRequest instance.
+ * Constructs a ModifySnapshotCopyRetentionPeriodRequestPrivate object for Redshift \a action with,
+ * public implementation \a q.
  */
 ModifySnapshotCopyRetentionPeriodRequestPrivate::ModifySnapshotCopyRetentionPeriodRequestPrivate(
     const RedshiftRequest::Action action, ModifySnapshotCopyRetentionPeriodRequest * const q)
@@ -134,15 +123,10 @@ ModifySnapshotCopyRetentionPeriodRequestPrivate::ModifySnapshotCopyRetentionPeri
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ModifySnapshotCopyRetentionPeriodRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ModifySnapshotCopyRetentionPeriodRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ModifySnapshotCopyRetentionPeriodRequest instance.
  */
 ModifySnapshotCopyRetentionPeriodRequestPrivate::ModifySnapshotCopyRetentionPeriodRequestPrivate(
     const ModifySnapshotCopyRetentionPeriodRequestPrivate &other, ModifySnapshotCopyRetentionPeriodRequest * const q)

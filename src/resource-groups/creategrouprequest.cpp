@@ -27,10 +27,9 @@ namespace ResourceGroups {
 
 /*!
  * \class QtAws::ResourceGroups::CreateGroupRequest
- *
  * \brief The CreateGroupRequest class provides an interface for ResourceGroups CreateGroup requests.
  *
- * \ingroup ResourceGroups
+ * \inmodule QtAwsResourceGroups
  *
  *  <fullname>AWS Resource Groups</fullname>
  * 
@@ -81,9 +80,7 @@ namespace ResourceGroups {
  */
 
 /*!
- * @brief  Constructs a new CreateGroupRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateGroupRequest::CreateGroupRequest(const CreateGroupRequest &other)
     : ResourceGroupsRequest(new CreateGroupRequestPrivate(*other.d_func(), this))
@@ -92,7 +89,7 @@ CreateGroupRequest::CreateGroupRequest(const CreateGroupRequest &other)
 }
 
 /*!
- * @brief  Constructs a new CreateGroupRequest object.
+ * Constructs a CreateGroupRequest object.
  */
 CreateGroupRequest::CreateGroupRequest()
     : ResourceGroupsRequest(new CreateGroupRequestPrivate(ResourceGroupsRequest::CreateGroupAction, this))
@@ -110,14 +107,9 @@ bool CreateGroupRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateGroupResponse object.
+ * Returns a CreateGroupResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateGroupResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ResourceGroupsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateGroupRequest::response(QNetworkReply * const reply) const
 {
@@ -125,20 +117,17 @@ QtAws::Core::AwsAbstractResponse * CreateGroupRequest::response(QNetworkReply * 
 }
 
 /*!
- * @internal
+ * \class QtAws::ResourceGroups::CreateGroupRequestPrivate
+ * \brief The CreateGroupRequestPrivate class provides private implementation for CreateGroupRequest.
+ * \internal
  *
- * @class  CreateGroupRequestPrivate
- *
- * @brief  Private implementation for CreateGroupRequest.
+ * \inmodule QtAwsResourceGroups
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateGroupRequestPrivate object.
- *
- * @param  action  ResourceGroups action being performed.
- * @param  q       Pointer to this object's public CreateGroupRequest instance.
+ * Constructs a CreateGroupRequestPrivate object for ResourceGroups \a action with,
+ * public implementation \a q.
  */
 CreateGroupRequestPrivate::CreateGroupRequestPrivate(
     const ResourceGroupsRequest::Action action, CreateGroupRequest * const q)
@@ -148,15 +137,10 @@ CreateGroupRequestPrivate::CreateGroupRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateGroupRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateGroupRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateGroupRequest instance.
  */
 CreateGroupRequestPrivate::CreateGroupRequestPrivate(
     const CreateGroupRequestPrivate &other, CreateGroupRequest * const q)

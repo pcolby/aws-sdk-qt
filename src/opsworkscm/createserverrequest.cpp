@@ -27,10 +27,9 @@ namespace OpsWorksCM {
 
 /*!
  * \class QtAws::OpsWorksCM::CreateServerRequest
- *
  * \brief The CreateServerRequest class provides an interface for OpsWorksCM CreateServer requests.
  *
- * \ingroup OpsWorksCM
+ * \inmodule QtAwsOpsWorksCM
  *
  *  <fullname>AWS OpsWorks CM</fullname>
  * 
@@ -97,9 +96,7 @@ namespace OpsWorksCM {
  */
 
 /*!
- * @brief  Constructs a new CreateServerRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateServerRequest::CreateServerRequest(const CreateServerRequest &other)
     : OpsWorksCMRequest(new CreateServerRequestPrivate(*other.d_func(), this))
@@ -108,7 +105,7 @@ CreateServerRequest::CreateServerRequest(const CreateServerRequest &other)
 }
 
 /*!
- * @brief  Constructs a new CreateServerRequest object.
+ * Constructs a CreateServerRequest object.
  */
 CreateServerRequest::CreateServerRequest()
     : OpsWorksCMRequest(new CreateServerRequestPrivate(OpsWorksCMRequest::CreateServerAction, this))
@@ -126,14 +123,9 @@ bool CreateServerRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateServerResponse object.
+ * Returns a CreateServerResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateServerResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  OpsWorksCMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateServerRequest::response(QNetworkReply * const reply) const
 {
@@ -141,20 +133,17 @@ QtAws::Core::AwsAbstractResponse * CreateServerRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::OpsWorksCM::CreateServerRequestPrivate
+ * \brief The CreateServerRequestPrivate class provides private implementation for CreateServerRequest.
+ * \internal
  *
- * @class  CreateServerRequestPrivate
- *
- * @brief  Private implementation for CreateServerRequest.
+ * \inmodule QtAwsOpsWorksCM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateServerRequestPrivate object.
- *
- * @param  action  OpsWorksCM action being performed.
- * @param  q       Pointer to this object's public CreateServerRequest instance.
+ * Constructs a CreateServerRequestPrivate object for OpsWorksCM \a action with,
+ * public implementation \a q.
  */
 CreateServerRequestPrivate::CreateServerRequestPrivate(
     const OpsWorksCMRequest::Action action, CreateServerRequest * const q)
@@ -164,15 +153,10 @@ CreateServerRequestPrivate::CreateServerRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateServerRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateServerRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateServerRequest instance.
  */
 CreateServerRequestPrivate::CreateServerRequestPrivate(
     const CreateServerRequestPrivate &other, CreateServerRequest * const q)

@@ -27,10 +27,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::CreateRoleAliasRequest
- *
  * \brief The CreateRoleAliasRequest class provides an interface for IoT CreateRoleAlias requests.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -48,9 +47,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new CreateRoleAliasRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateRoleAliasRequest::CreateRoleAliasRequest(const CreateRoleAliasRequest &other)
     : IoTRequest(new CreateRoleAliasRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ CreateRoleAliasRequest::CreateRoleAliasRequest(const CreateRoleAliasRequest &oth
 }
 
 /*!
- * @brief  Constructs a new CreateRoleAliasRequest object.
+ * Constructs a CreateRoleAliasRequest object.
  */
 CreateRoleAliasRequest::CreateRoleAliasRequest()
     : IoTRequest(new CreateRoleAliasRequestPrivate(IoTRequest::CreateRoleAliasAction, this))
@@ -77,14 +74,9 @@ bool CreateRoleAliasRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateRoleAliasResponse object.
+ * Returns a CreateRoleAliasResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateRoleAliasResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IoTClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateRoleAliasRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * CreateRoleAliasRequest::response(QNetworkRepl
 }
 
 /*!
- * @internal
+ * \class QtAws::IoT::CreateRoleAliasRequestPrivate
+ * \brief The CreateRoleAliasRequestPrivate class provides private implementation for CreateRoleAliasRequest.
+ * \internal
  *
- * @class  CreateRoleAliasRequestPrivate
- *
- * @brief  Private implementation for CreateRoleAliasRequest.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateRoleAliasRequestPrivate object.
- *
- * @param  action  IoT action being performed.
- * @param  q       Pointer to this object's public CreateRoleAliasRequest instance.
+ * Constructs a CreateRoleAliasRequestPrivate object for IoT \a action with,
+ * public implementation \a q.
  */
 CreateRoleAliasRequestPrivate::CreateRoleAliasRequestPrivate(
     const IoTRequest::Action action, CreateRoleAliasRequest * const q)
@@ -115,15 +104,10 @@ CreateRoleAliasRequestPrivate::CreateRoleAliasRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateRoleAliasRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateRoleAliasRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateRoleAliasRequest instance.
  */
 CreateRoleAliasRequestPrivate::CreateRoleAliasRequestPrivate(
     const CreateRoleAliasRequestPrivate &other, CreateRoleAliasRequest * const q)

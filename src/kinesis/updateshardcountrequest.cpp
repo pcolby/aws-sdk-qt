@@ -27,10 +27,9 @@ namespace Kinesis {
 
 /*!
  * \class QtAws::Kinesis::UpdateShardCountRequest
- *
  * \brief The UpdateShardCountRequest class provides an interface for Kinesis UpdateShardCount requests.
  *
- * \ingroup Kinesis
+ * \inmodule QtAwsKinesis
  *
  *  <fullname>Amazon Kinesis Data Streams Service API Reference</fullname>
  * 
@@ -40,9 +39,7 @@ namespace Kinesis {
  */
 
 /*!
- * @brief  Constructs a new UpdateShardCountRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateShardCountRequest::UpdateShardCountRequest(const UpdateShardCountRequest &other)
     : KinesisRequest(new UpdateShardCountRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ UpdateShardCountRequest::UpdateShardCountRequest(const UpdateShardCountRequest &
 }
 
 /*!
- * @brief  Constructs a new UpdateShardCountRequest object.
+ * Constructs a UpdateShardCountRequest object.
  */
 UpdateShardCountRequest::UpdateShardCountRequest()
     : KinesisRequest(new UpdateShardCountRequestPrivate(KinesisRequest::UpdateShardCountAction, this))
@@ -69,14 +66,9 @@ bool UpdateShardCountRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateShardCountResponse object.
+ * Returns a UpdateShardCountResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateShardCountResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  KinesisClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateShardCountRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * UpdateShardCountRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::Kinesis::UpdateShardCountRequestPrivate
+ * \brief The UpdateShardCountRequestPrivate class provides private implementation for UpdateShardCountRequest.
+ * \internal
  *
- * @class  UpdateShardCountRequestPrivate
- *
- * @brief  Private implementation for UpdateShardCountRequest.
+ * \inmodule QtAwsKinesis
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateShardCountRequestPrivate object.
- *
- * @param  action  Kinesis action being performed.
- * @param  q       Pointer to this object's public UpdateShardCountRequest instance.
+ * Constructs a UpdateShardCountRequestPrivate object for Kinesis \a action with,
+ * public implementation \a q.
  */
 UpdateShardCountRequestPrivate::UpdateShardCountRequestPrivate(
     const KinesisRequest::Action action, UpdateShardCountRequest * const q)
@@ -107,15 +96,10 @@ UpdateShardCountRequestPrivate::UpdateShardCountRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateShardCountRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateShardCountRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateShardCountRequest instance.
  */
 UpdateShardCountRequestPrivate::UpdateShardCountRequestPrivate(
     const UpdateShardCountRequestPrivate &other, UpdateShardCountRequest * const q)

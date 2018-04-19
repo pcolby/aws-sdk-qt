@@ -27,10 +27,9 @@ namespace CloudDirectory {
 
 /*!
  * \class QtAws::CloudDirectory::DeleteObjectRequest
- *
  * \brief The DeleteObjectRequest class provides an interface for CloudDirectory DeleteObject requests.
  *
- * \ingroup CloudDirectory
+ * \inmodule QtAwsCloudDirectory
  *
  *  <fullname>Amazon Cloud Directory</fullname>
  * 
@@ -44,9 +43,7 @@ namespace CloudDirectory {
  */
 
 /*!
- * @brief  Constructs a new DeleteObjectRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteObjectRequest::DeleteObjectRequest(const DeleteObjectRequest &other)
     : CloudDirectoryRequest(new DeleteObjectRequestPrivate(*other.d_func(), this))
@@ -55,7 +52,7 @@ DeleteObjectRequest::DeleteObjectRequest(const DeleteObjectRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DeleteObjectRequest object.
+ * Constructs a DeleteObjectRequest object.
  */
 DeleteObjectRequest::DeleteObjectRequest()
     : CloudDirectoryRequest(new DeleteObjectRequestPrivate(CloudDirectoryRequest::DeleteObjectAction, this))
@@ -73,14 +70,9 @@ bool DeleteObjectRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteObjectResponse object.
+ * Returns a DeleteObjectResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteObjectResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudDirectoryClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteObjectRequest::response(QNetworkReply * const reply) const
 {
@@ -88,20 +80,17 @@ QtAws::Core::AwsAbstractResponse * DeleteObjectRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudDirectory::DeleteObjectRequestPrivate
+ * \brief The DeleteObjectRequestPrivate class provides private implementation for DeleteObjectRequest.
+ * \internal
  *
- * @class  DeleteObjectRequestPrivate
- *
- * @brief  Private implementation for DeleteObjectRequest.
+ * \inmodule QtAwsCloudDirectory
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteObjectRequestPrivate object.
- *
- * @param  action  CloudDirectory action being performed.
- * @param  q       Pointer to this object's public DeleteObjectRequest instance.
+ * Constructs a DeleteObjectRequestPrivate object for CloudDirectory \a action with,
+ * public implementation \a q.
  */
 DeleteObjectRequestPrivate::DeleteObjectRequestPrivate(
     const CloudDirectoryRequest::Action action, DeleteObjectRequest * const q)
@@ -111,15 +100,10 @@ DeleteObjectRequestPrivate::DeleteObjectRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteObjectRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteObjectRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteObjectRequest instance.
  */
 DeleteObjectRequestPrivate::DeleteObjectRequestPrivate(
     const DeleteObjectRequestPrivate &other, DeleteObjectRequest * const q)

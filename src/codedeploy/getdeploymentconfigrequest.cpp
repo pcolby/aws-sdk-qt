@@ -27,10 +27,9 @@ namespace CodeDeploy {
 
 /*!
  * \class QtAws::CodeDeploy::GetDeploymentConfigRequest
- *
  * \brief The GetDeploymentConfigRequest class provides an interface for CodeDeploy GetDeploymentConfig requests.
  *
- * \ingroup CodeDeploy
+ * \inmodule QtAwsCodeDeploy
  *
  *  <fullname>AWS CodeDeploy</fullname>
  * 
@@ -118,9 +117,7 @@ namespace CodeDeploy {
  */
 
 /*!
- * @brief  Constructs a new GetDeploymentConfigRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetDeploymentConfigRequest::GetDeploymentConfigRequest(const GetDeploymentConfigRequest &other)
     : CodeDeployRequest(new GetDeploymentConfigRequestPrivate(*other.d_func(), this))
@@ -129,7 +126,7 @@ GetDeploymentConfigRequest::GetDeploymentConfigRequest(const GetDeploymentConfig
 }
 
 /*!
- * @brief  Constructs a new GetDeploymentConfigRequest object.
+ * Constructs a GetDeploymentConfigRequest object.
  */
 GetDeploymentConfigRequest::GetDeploymentConfigRequest()
     : CodeDeployRequest(new GetDeploymentConfigRequestPrivate(CodeDeployRequest::GetDeploymentConfigAction, this))
@@ -147,14 +144,9 @@ bool GetDeploymentConfigRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetDeploymentConfigResponse object.
+ * Returns a GetDeploymentConfigResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetDeploymentConfigResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CodeDeployClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetDeploymentConfigRequest::response(QNetworkReply * const reply) const
 {
@@ -162,20 +154,17 @@ QtAws::Core::AwsAbstractResponse * GetDeploymentConfigRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::CodeDeploy::GetDeploymentConfigRequestPrivate
+ * \brief The GetDeploymentConfigRequestPrivate class provides private implementation for GetDeploymentConfigRequest.
+ * \internal
  *
- * @class  GetDeploymentConfigRequestPrivate
- *
- * @brief  Private implementation for GetDeploymentConfigRequest.
+ * \inmodule QtAwsCodeDeploy
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetDeploymentConfigRequestPrivate object.
- *
- * @param  action  CodeDeploy action being performed.
- * @param  q       Pointer to this object's public GetDeploymentConfigRequest instance.
+ * Constructs a GetDeploymentConfigRequestPrivate object for CodeDeploy \a action with,
+ * public implementation \a q.
  */
 GetDeploymentConfigRequestPrivate::GetDeploymentConfigRequestPrivate(
     const CodeDeployRequest::Action action, GetDeploymentConfigRequest * const q)
@@ -185,15 +174,10 @@ GetDeploymentConfigRequestPrivate::GetDeploymentConfigRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetDeploymentConfigRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetDeploymentConfigRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetDeploymentConfigRequest instance.
  */
 GetDeploymentConfigRequestPrivate::GetDeploymentConfigRequestPrivate(
     const GetDeploymentConfigRequestPrivate &other, GetDeploymentConfigRequest * const q)

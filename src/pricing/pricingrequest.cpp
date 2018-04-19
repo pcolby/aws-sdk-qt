@@ -25,16 +25,24 @@ namespace Pricing {
 
 /*!
  * \class QtAws::Pricing::PricingRequest
- *
  * \brief The PricingRequest class provides an interface for Pricing requests.
  *
- * \ingroup Pricing
+ * \inmodule QtAwsPricing
  */
 
 /*!
- * @brief  Constructs a new PricingRequest object.
+ * \enum PricingRequest::Action
  *
- * @param  action  The Pricing action to request.
+ * This enum describes the actions that can be performed as Pricing
+ * requests.
+ *
+ * \value DescribeServicesAction Pricing DescribeServices action.
+ * \value GetAttributeValuesAction Pricing GetAttributeValues action.
+ * \value GetProductsAction Pricing GetProducts action.
+ */
+
+/*!
+ * Constructs a[n] PricingRequest object for Pricing \a action.
  */
 PricingRequest::PricingRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new PricingRequestPrivate(action, this))
@@ -43,9 +51,7 @@ PricingRequest::PricingRequest(const Action action)
 }
 
 /*!
- * @brief  Constructs a new PricingRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 PricingRequest::PricingRequest(const PricingRequest &other)
     : QtAws::Core::AwsAbstractRequest(new PricingRequestPrivate(*other.d_func(), this))
@@ -54,13 +60,7 @@ PricingRequest::PricingRequest(const PricingRequest &other)
 }
 
 /*!
- * @brief  Assignment operator.
- *
- * Assigns \a other to \c this.
- *
- * @param  other  Instance to copy.
- *
- * @return  A reference to \c this.
+ * Sets the PricingRequest object to be equal to \a other.
  */
 PricingRequest& PricingRequest::operator=(const PricingRequest &other)
 {
@@ -72,14 +72,10 @@ PricingRequest& PricingRequest::operator=(const PricingRequest &other)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PricingRequest object.
+ * Constructs aa PricingRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from PricingRequestPrivate.
- *
- * @param  d  Pointer to private data (aka D-Pointer).
  */
 PricingRequest::PricingRequest(PricingRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
@@ -87,7 +83,7 @@ PricingRequest::PricingRequest(PricingRequestPrivate * const d) : QtAws::Core::A
 }
 
 /*!
- * \brief Returns the Pricing action to be performed by this request.
+ * Returns the Pricing action to be performed by this request.
  */
 PricingRequest::Action PricingRequest::action() const
 {
@@ -96,7 +92,7 @@ PricingRequest::Action PricingRequest::action() const
 }
 
 /*!
- * \brief Returns the name of the Pricing action to be performed by this request.
+ * Returns the name of the Pricing action to be performed by this request.
  */
 QString PricingRequest::actionString() const
 {
@@ -104,7 +100,7 @@ QString PricingRequest::actionString() const
 }
 
 /*!
- * \brief Returns the Pricing API version implemented by this request.
+ * Returns the Pricing API version implemented by this request.
  */
 QString PricingRequest::apiVersion() const
 {
@@ -113,7 +109,7 @@ QString PricingRequest::apiVersion() const
 }
 
 /*!
- * @brief Set the Pricing action to be performed by this request to \a action.
+ * Sets the Pricing action to be performed by this request to \a action.
  */
 void PricingRequest::setAction(const Action action)
 {
@@ -122,7 +118,7 @@ void PricingRequest::setAction(const Action action)
 }
 
 /*!
- * Set the Pricing API version to include in this request to \a version.
+ * Sets the Pricing API version to include in this request to \a version.
  */
 void PricingRequest::setApiVersion(const QString &version)
 {
@@ -131,7 +127,7 @@ void PricingRequest::setApiVersion(const QString &version)
 }
 
 /*!
- * \brief Returns \c true if this request is the same as \a other.
+ * Returns \c true if this request is equal to \a other; \c false otherwise.
  *
  * Note, most derived *Request classes do not need to provider their own
  * implementations of this function, since most such request classes rely on
@@ -146,8 +142,8 @@ bool PricingRequest::operator==(const PricingRequest &other) const
             (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
-/*!
- * @brief  Check if \a queueName is a valid Pricing queue name.
+/*
+ * Returns \c tue if \a queueName is a valid Pricing queue name.
  *
  * @par From Pricing FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
@@ -166,9 +162,8 @@ bool PricingRequest::operator==(const PricingRequest &other) const
 }*/
 
 /*!
- * \brief Removes the a \a name parameter from this request.
- *
- * Returns the count of paramters removed (typically \c 0 or \c 1).
+ * Removes the a \a name parameter from the request, then returns the number of
+ * paramters removed (typically \c 0 or \c 1).
  */
 int PricingRequest::clearParameter(const QString &name)
 {
@@ -177,7 +172,7 @@ int PricingRequest::clearParameter(const QString &name)
 }
 
 /*!
- * \brief Removes all parameters from this request.
+ * Removes all parameters from the request.
  */
 void PricingRequest::clearParameters()
 {
@@ -186,7 +181,7 @@ void PricingRequest::clearParameters()
 }
 
 /*!
- * \brief Returns the value of the \n name pararemter if set, otherwise \a defaultValue.
+ * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
 QVariant PricingRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
@@ -195,7 +190,7 @@ QVariant PricingRequest::parameter(const QString &name, const QVariant &defaultV
 }
 
 /*!
- * \brief Returns a map of parameters included in this request.
+ * Returns the parameters included in this request.
  */
 const QVariantMap &PricingRequest::parameters() const
 {
@@ -204,7 +199,7 @@ const QVariantMap &PricingRequest::parameters() const
 }
 
 /*!
- * \brief Sets the \a name parameter to \a value.
+ * Sets the \a name parameter to \a value.
  */
 void PricingRequest::setParameter(const QString &name, const QVariant &value)
 {
@@ -213,9 +208,8 @@ void PricingRequest::setParameter(const QString &name, const QVariant &value)
 }
 
 /*!
- * \brief Sets the map of paramters for this request to \a parameters.
- *
- * Any request parameters set previously will be discarded.
+ * Sets the paramters for this request to \a parameters. Any request parameters
+ * set previously will be discarded.
  */
 void PricingRequest::setParameters(const QVariantMap &parameters)
 {
@@ -224,11 +218,12 @@ void PricingRequest::setParameters(const QVariantMap &parameters)
 }
 
 /*!
- * \brief Returns a network request for this Pricing request using the given \a endpoint.
+ * Returns a network request for the Pricing request using the given
+ * \a endpoint.
  *
- * This Pricing implementation builds request URLs by combining the common query
- * parameters (such as Action and Version), with any that have been added (via
- * setParameter) by child classes.
+ * This Pricing implementation builds request URLs by combining the
+ * common query parameters (such as Action and Version), with any that have
+ * been added (via setParameter) by child classes.
  */
 QNetworkRequest PricingRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -239,17 +234,16 @@ QNetworkRequest PricingRequest::unsignedRequest(const QUrl &endpoint) const
 }
 
 /*!
+ * \class QtAws::Pricing::PricingRequestPrivate
+ * \brief The PricingRequestPrivate class provides private implementation for PricingRequest.
  * \internal
  *
- * \class  PricingRequestPrivate
- *
- * \brief  Private implementation for PricingRequest.
+ * \inmodule QtAwsPricing
  */
 
 /*!
- * \internal
- *
- * \brief Constructs a new PricingRequestPrivate object.
+ * Constructs a PricingRequestPrivate object for Pricing \a action with,
+ * public implementation \a q.
  */
 PricingRequestPrivate::PricingRequestPrivate(const PricingRequest::Action action, PricingRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
@@ -258,9 +252,7 @@ PricingRequestPrivate::PricingRequestPrivate(const PricingRequest::Action action
 }
 
 /*!
- * \internal
- *
- * \brief Constructs a new PricingRequestPrivate object, copying an existing one.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
@@ -276,15 +268,12 @@ PricingRequestPrivate::PricingRequestPrivate(const PricingRequestPrivate &other,
 }
 
 /*!
- * \internal
- *
- * \brief Returns a string representing \a action.
+ * Returns a string represention of \a action, or a null string if \a action is
+ * invalid.
  *
  * This function converts PricingRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the Pricing service's Action
  * query parameters.
- *
- * @return A string representing \a action, or a null string if \a action is invalid.
  */
 QString PricingRequestPrivate::toString(const PricingRequest::Action &action)
 {

@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DescribeSnapshotAttributeRequest
- *
  * \brief The DescribeSnapshotAttributeRequest class provides an interface for EC2 DescribeSnapshotAttribute requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DescribeSnapshotAttributeRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeSnapshotAttributeRequest::DescribeSnapshotAttributeRequest(const DescribeSnapshotAttributeRequest &other)
     : EC2Request(new DescribeSnapshotAttributeRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ DescribeSnapshotAttributeRequest::DescribeSnapshotAttributeRequest(const Describ
 }
 
 /*!
- * @brief  Constructs a new DescribeSnapshotAttributeRequest object.
+ * Constructs a DescribeSnapshotAttributeRequest object.
  */
 DescribeSnapshotAttributeRequest::DescribeSnapshotAttributeRequest()
     : EC2Request(new DescribeSnapshotAttributeRequestPrivate(EC2Request::DescribeSnapshotAttributeAction, this))
@@ -70,14 +67,9 @@ bool DescribeSnapshotAttributeRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeSnapshotAttributeResponse object.
+ * Returns a DescribeSnapshotAttributeResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeSnapshotAttributeResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeSnapshotAttributeRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * DescribeSnapshotAttributeRequest::response(QN
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::DescribeSnapshotAttributeRequestPrivate
+ * \brief The DescribeSnapshotAttributeRequestPrivate class provides private implementation for DescribeSnapshotAttributeRequest.
+ * \internal
  *
- * @class  DescribeSnapshotAttributeRequestPrivate
- *
- * @brief  Private implementation for DescribeSnapshotAttributeRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeSnapshotAttributeRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public DescribeSnapshotAttributeRequest instance.
+ * Constructs a DescribeSnapshotAttributeRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 DescribeSnapshotAttributeRequestPrivate::DescribeSnapshotAttributeRequestPrivate(
     const EC2Request::Action action, DescribeSnapshotAttributeRequest * const q)
@@ -108,15 +97,10 @@ DescribeSnapshotAttributeRequestPrivate::DescribeSnapshotAttributeRequestPrivate
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeSnapshotAttributeRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeSnapshotAttributeRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeSnapshotAttributeRequest instance.
  */
 DescribeSnapshotAttributeRequestPrivate::DescribeSnapshotAttributeRequestPrivate(
     const DescribeSnapshotAttributeRequestPrivate &other, DescribeSnapshotAttributeRequest * const q)

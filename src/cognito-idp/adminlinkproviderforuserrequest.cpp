@@ -27,10 +27,9 @@ namespace CognitoIdentityProvider {
 
 /*!
  * \class QtAws::CognitoIdentityProvider::AdminLinkProviderForUserRequest
- *
  * \brief The AdminLinkProviderForUserRequest class provides an interface for CognitoIdentityProvider AdminLinkProviderForUser requests.
  *
- * \ingroup CognitoIdentityProvider
+ * \inmodule QtAwsCognitoIdentityProvider
  *
  *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
  *  authenticate a user to obtain tokens related to user identity and access
@@ -47,9 +46,7 @@ namespace CognitoIdentityProvider {
  */
 
 /*!
- * @brief  Constructs a new AdminLinkProviderForUserRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AdminLinkProviderForUserRequest::AdminLinkProviderForUserRequest(const AdminLinkProviderForUserRequest &other)
     : CognitoIdentityProviderRequest(new AdminLinkProviderForUserRequestPrivate(*other.d_func(), this))
@@ -58,7 +55,7 @@ AdminLinkProviderForUserRequest::AdminLinkProviderForUserRequest(const AdminLink
 }
 
 /*!
- * @brief  Constructs a new AdminLinkProviderForUserRequest object.
+ * Constructs a AdminLinkProviderForUserRequest object.
  */
 AdminLinkProviderForUserRequest::AdminLinkProviderForUserRequest()
     : CognitoIdentityProviderRequest(new AdminLinkProviderForUserRequestPrivate(CognitoIdentityProviderRequest::AdminLinkProviderForUserAction, this))
@@ -76,14 +73,9 @@ bool AdminLinkProviderForUserRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AdminLinkProviderForUserResponse object.
+ * Returns a AdminLinkProviderForUserResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AdminLinkProviderForUserResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CognitoIdentityProviderClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AdminLinkProviderForUserRequest::response(QNetworkReply * const reply) const
 {
@@ -91,20 +83,17 @@ QtAws::Core::AwsAbstractResponse * AdminLinkProviderForUserRequest::response(QNe
 }
 
 /*!
- * @internal
+ * \class QtAws::CognitoIdentityProvider::AdminLinkProviderForUserRequestPrivate
+ * \brief The AdminLinkProviderForUserRequestPrivate class provides private implementation for AdminLinkProviderForUserRequest.
+ * \internal
  *
- * @class  AdminLinkProviderForUserRequestPrivate
- *
- * @brief  Private implementation for AdminLinkProviderForUserRequest.
+ * \inmodule QtAwsCognitoIdentityProvider
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AdminLinkProviderForUserRequestPrivate object.
- *
- * @param  action  CognitoIdentityProvider action being performed.
- * @param  q       Pointer to this object's public AdminLinkProviderForUserRequest instance.
+ * Constructs a AdminLinkProviderForUserRequestPrivate object for CognitoIdentityProvider \a action with,
+ * public implementation \a q.
  */
 AdminLinkProviderForUserRequestPrivate::AdminLinkProviderForUserRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, AdminLinkProviderForUserRequest * const q)
@@ -114,15 +103,10 @@ AdminLinkProviderForUserRequestPrivate::AdminLinkProviderForUserRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AdminLinkProviderForUserRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AdminLinkProviderForUserRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AdminLinkProviderForUserRequest instance.
  */
 AdminLinkProviderForUserRequestPrivate::AdminLinkProviderForUserRequestPrivate(
     const AdminLinkProviderForUserRequestPrivate &other, AdminLinkProviderForUserRequest * const q)

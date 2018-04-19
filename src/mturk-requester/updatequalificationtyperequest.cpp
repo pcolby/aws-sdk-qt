@@ -27,19 +27,16 @@ namespace MTurk {
 
 /*!
  * \class QtAws::MTurk::UpdateQualificationTypeRequest
- *
  * \brief The UpdateQualificationTypeRequest class provides an interface for MTurk UpdateQualificationType requests.
  *
- * \ingroup MTurk
+ * \inmodule QtAwsMTurk
  *
  *
  * \sa MTurkClient::updateQualificationType
  */
 
 /*!
- * @brief  Constructs a new UpdateQualificationTypeRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateQualificationTypeRequest::UpdateQualificationTypeRequest(const UpdateQualificationTypeRequest &other)
     : MTurkRequest(new UpdateQualificationTypeRequestPrivate(*other.d_func(), this))
@@ -48,7 +45,7 @@ UpdateQualificationTypeRequest::UpdateQualificationTypeRequest(const UpdateQuali
 }
 
 /*!
- * @brief  Constructs a new UpdateQualificationTypeRequest object.
+ * Constructs a UpdateQualificationTypeRequest object.
  */
 UpdateQualificationTypeRequest::UpdateQualificationTypeRequest()
     : MTurkRequest(new UpdateQualificationTypeRequestPrivate(MTurkRequest::UpdateQualificationTypeAction, this))
@@ -66,14 +63,9 @@ bool UpdateQualificationTypeRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateQualificationTypeResponse object.
+ * Returns a UpdateQualificationTypeResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateQualificationTypeResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  MTurkClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateQualificationTypeRequest::response(QNetworkReply * const reply) const
 {
@@ -81,20 +73,17 @@ QtAws::Core::AwsAbstractResponse * UpdateQualificationTypeRequest::response(QNet
 }
 
 /*!
- * @internal
+ * \class QtAws::MTurk::UpdateQualificationTypeRequestPrivate
+ * \brief The UpdateQualificationTypeRequestPrivate class provides private implementation for UpdateQualificationTypeRequest.
+ * \internal
  *
- * @class  UpdateQualificationTypeRequestPrivate
- *
- * @brief  Private implementation for UpdateQualificationTypeRequest.
+ * \inmodule QtAwsMTurk
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateQualificationTypeRequestPrivate object.
- *
- * @param  action  MTurk action being performed.
- * @param  q       Pointer to this object's public UpdateQualificationTypeRequest instance.
+ * Constructs a UpdateQualificationTypeRequestPrivate object for MTurk \a action with,
+ * public implementation \a q.
  */
 UpdateQualificationTypeRequestPrivate::UpdateQualificationTypeRequestPrivate(
     const MTurkRequest::Action action, UpdateQualificationTypeRequest * const q)
@@ -104,15 +93,10 @@ UpdateQualificationTypeRequestPrivate::UpdateQualificationTypeRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateQualificationTypeRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateQualificationTypeRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateQualificationTypeRequest instance.
  */
 UpdateQualificationTypeRequestPrivate::UpdateQualificationTypeRequestPrivate(
     const UpdateQualificationTypeRequestPrivate &other, UpdateQualificationTypeRequest * const q)

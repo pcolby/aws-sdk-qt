@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::ModifyIdentityIdFormatRequest
- *
  * \brief The ModifyIdentityIdFormatRequest class provides an interface for EC2 ModifyIdentityIdFormat requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new ModifyIdentityIdFormatRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ModifyIdentityIdFormatRequest::ModifyIdentityIdFormatRequest(const ModifyIdentityIdFormatRequest &other)
     : EC2Request(new ModifyIdentityIdFormatRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ ModifyIdentityIdFormatRequest::ModifyIdentityIdFormatRequest(const ModifyIdentit
 }
 
 /*!
- * @brief  Constructs a new ModifyIdentityIdFormatRequest object.
+ * Constructs a ModifyIdentityIdFormatRequest object.
  */
 ModifyIdentityIdFormatRequest::ModifyIdentityIdFormatRequest()
     : EC2Request(new ModifyIdentityIdFormatRequestPrivate(EC2Request::ModifyIdentityIdFormatAction, this))
@@ -70,14 +67,9 @@ bool ModifyIdentityIdFormatRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ModifyIdentityIdFormatResponse object.
+ * Returns a ModifyIdentityIdFormatResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ModifyIdentityIdFormatResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ModifyIdentityIdFormatRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * ModifyIdentityIdFormatRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::ModifyIdentityIdFormatRequestPrivate
+ * \brief The ModifyIdentityIdFormatRequestPrivate class provides private implementation for ModifyIdentityIdFormatRequest.
+ * \internal
  *
- * @class  ModifyIdentityIdFormatRequestPrivate
- *
- * @brief  Private implementation for ModifyIdentityIdFormatRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ModifyIdentityIdFormatRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public ModifyIdentityIdFormatRequest instance.
+ * Constructs a ModifyIdentityIdFormatRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 ModifyIdentityIdFormatRequestPrivate::ModifyIdentityIdFormatRequestPrivate(
     const EC2Request::Action action, ModifyIdentityIdFormatRequest * const q)
@@ -108,15 +97,10 @@ ModifyIdentityIdFormatRequestPrivate::ModifyIdentityIdFormatRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ModifyIdentityIdFormatRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ModifyIdentityIdFormatRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ModifyIdentityIdFormatRequest instance.
  */
 ModifyIdentityIdFormatRequestPrivate::ModifyIdentityIdFormatRequestPrivate(
     const ModifyIdentityIdFormatRequestPrivate &other, ModifyIdentityIdFormatRequest * const q)

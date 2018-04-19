@@ -27,10 +27,9 @@ namespace ServiceCatalog {
 
 /*!
  * \class QtAws::ServiceCatalog::ListConstraintsForPortfolioRequest
- *
  * \brief The ListConstraintsForPortfolioRequest class provides an interface for ServiceCatalog ListConstraintsForPortfolio requests.
  *
- * \ingroup ServiceCatalog
+ * \inmodule QtAwsServiceCatalog
  *
  *  <fullname>AWS Service Catalog</fullname>
  * 
@@ -43,9 +42,7 @@ namespace ServiceCatalog {
  */
 
 /*!
- * @brief  Constructs a new ListConstraintsForPortfolioRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListConstraintsForPortfolioRequest::ListConstraintsForPortfolioRequest(const ListConstraintsForPortfolioRequest &other)
     : ServiceCatalogRequest(new ListConstraintsForPortfolioRequestPrivate(*other.d_func(), this))
@@ -54,7 +51,7 @@ ListConstraintsForPortfolioRequest::ListConstraintsForPortfolioRequest(const Lis
 }
 
 /*!
- * @brief  Constructs a new ListConstraintsForPortfolioRequest object.
+ * Constructs a ListConstraintsForPortfolioRequest object.
  */
 ListConstraintsForPortfolioRequest::ListConstraintsForPortfolioRequest()
     : ServiceCatalogRequest(new ListConstraintsForPortfolioRequestPrivate(ServiceCatalogRequest::ListConstraintsForPortfolioAction, this))
@@ -72,14 +69,9 @@ bool ListConstraintsForPortfolioRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListConstraintsForPortfolioResponse object.
+ * Returns a ListConstraintsForPortfolioResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListConstraintsForPortfolioResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ServiceCatalogClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListConstraintsForPortfolioRequest::response(QNetworkReply * const reply) const
 {
@@ -87,20 +79,17 @@ QtAws::Core::AwsAbstractResponse * ListConstraintsForPortfolioRequest::response(
 }
 
 /*!
- * @internal
+ * \class QtAws::ServiceCatalog::ListConstraintsForPortfolioRequestPrivate
+ * \brief The ListConstraintsForPortfolioRequestPrivate class provides private implementation for ListConstraintsForPortfolioRequest.
+ * \internal
  *
- * @class  ListConstraintsForPortfolioRequestPrivate
- *
- * @brief  Private implementation for ListConstraintsForPortfolioRequest.
+ * \inmodule QtAwsServiceCatalog
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListConstraintsForPortfolioRequestPrivate object.
- *
- * @param  action  ServiceCatalog action being performed.
- * @param  q       Pointer to this object's public ListConstraintsForPortfolioRequest instance.
+ * Constructs a ListConstraintsForPortfolioRequestPrivate object for ServiceCatalog \a action with,
+ * public implementation \a q.
  */
 ListConstraintsForPortfolioRequestPrivate::ListConstraintsForPortfolioRequestPrivate(
     const ServiceCatalogRequest::Action action, ListConstraintsForPortfolioRequest * const q)
@@ -110,15 +99,10 @@ ListConstraintsForPortfolioRequestPrivate::ListConstraintsForPortfolioRequestPri
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListConstraintsForPortfolioRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListConstraintsForPortfolioRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListConstraintsForPortfolioRequest instance.
  */
 ListConstraintsForPortfolioRequestPrivate::ListConstraintsForPortfolioRequestPrivate(
     const ListConstraintsForPortfolioRequestPrivate &other, ListConstraintsForPortfolioRequest * const q)

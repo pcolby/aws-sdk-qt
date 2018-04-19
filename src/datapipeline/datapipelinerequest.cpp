@@ -25,16 +25,40 @@ namespace DataPipeline {
 
 /*!
  * \class QtAws::DataPipeline::DataPipelineRequest
- *
  * \brief The DataPipelineRequest class provides an interface for DataPipeline requests.
  *
- * \ingroup DataPipeline
+ * \inmodule QtAwsDataPipeline
  */
 
 /*!
- * @brief  Constructs a new DataPipelineRequest object.
+ * \enum DataPipelineRequest::Action
  *
- * @param  action  The DataPipeline action to request.
+ * This enum describes the actions that can be performed as DataPipeline
+ * requests.
+ *
+ * \value ActivatePipelineAction DataPipeline ActivatePipeline action.
+ * \value AddTagsAction DataPipeline AddTags action.
+ * \value CreatePipelineAction DataPipeline CreatePipeline action.
+ * \value DeactivatePipelineAction DataPipeline DeactivatePipeline action.
+ * \value DeletePipelineAction DataPipeline DeletePipeline action.
+ * \value DescribeObjectsAction DataPipeline DescribeObjects action.
+ * \value DescribePipelinesAction DataPipeline DescribePipelines action.
+ * \value EvaluateExpressionAction DataPipeline EvaluateExpression action.
+ * \value GetPipelineDefinitionAction DataPipeline GetPipelineDefinition action.
+ * \value ListPipelinesAction DataPipeline ListPipelines action.
+ * \value PollForTaskAction DataPipeline PollForTask action.
+ * \value PutPipelineDefinitionAction DataPipeline PutPipelineDefinition action.
+ * \value QueryObjectsAction DataPipeline QueryObjects action.
+ * \value RemoveTagsAction DataPipeline RemoveTags action.
+ * \value ReportTaskProgressAction DataPipeline ReportTaskProgress action.
+ * \value ReportTaskRunnerHeartbeatAction DataPipeline ReportTaskRunnerHeartbeat action.
+ * \value SetStatusAction DataPipeline SetStatus action.
+ * \value SetTaskStatusAction DataPipeline SetTaskStatus action.
+ * \value ValidatePipelineDefinitionAction DataPipeline ValidatePipelineDefinition action.
+ */
+
+/*!
+ * Constructs a[n] DataPipelineRequest object for DataPipeline \a action.
  */
 DataPipelineRequest::DataPipelineRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new DataPipelineRequestPrivate(action, this))
@@ -43,9 +67,7 @@ DataPipelineRequest::DataPipelineRequest(const Action action)
 }
 
 /*!
- * @brief  Constructs a new DataPipelineRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DataPipelineRequest::DataPipelineRequest(const DataPipelineRequest &other)
     : QtAws::Core::AwsAbstractRequest(new DataPipelineRequestPrivate(*other.d_func(), this))
@@ -54,13 +76,7 @@ DataPipelineRequest::DataPipelineRequest(const DataPipelineRequest &other)
 }
 
 /*!
- * @brief  Assignment operator.
- *
- * Assigns \a other to \c this.
- *
- * @param  other  Instance to copy.
- *
- * @return  A reference to \c this.
+ * Sets the DataPipelineRequest object to be equal to \a other.
  */
 DataPipelineRequest& DataPipelineRequest::operator=(const DataPipelineRequest &other)
 {
@@ -72,14 +88,10 @@ DataPipelineRequest& DataPipelineRequest::operator=(const DataPipelineRequest &o
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DataPipelineRequest object.
+ * Constructs aa DataPipelineRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from DataPipelineRequestPrivate.
- *
- * @param  d  Pointer to private data (aka D-Pointer).
  */
 DataPipelineRequest::DataPipelineRequest(DataPipelineRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
@@ -87,7 +99,7 @@ DataPipelineRequest::DataPipelineRequest(DataPipelineRequestPrivate * const d) :
 }
 
 /*!
- * \brief Returns the DataPipeline action to be performed by this request.
+ * Returns the DataPipeline action to be performed by this request.
  */
 DataPipelineRequest::Action DataPipelineRequest::action() const
 {
@@ -96,7 +108,7 @@ DataPipelineRequest::Action DataPipelineRequest::action() const
 }
 
 /*!
- * \brief Returns the name of the DataPipeline action to be performed by this request.
+ * Returns the name of the DataPipeline action to be performed by this request.
  */
 QString DataPipelineRequest::actionString() const
 {
@@ -104,7 +116,7 @@ QString DataPipelineRequest::actionString() const
 }
 
 /*!
- * \brief Returns the DataPipeline API version implemented by this request.
+ * Returns the DataPipeline API version implemented by this request.
  */
 QString DataPipelineRequest::apiVersion() const
 {
@@ -113,7 +125,7 @@ QString DataPipelineRequest::apiVersion() const
 }
 
 /*!
- * @brief Set the DataPipeline action to be performed by this request to \a action.
+ * Sets the DataPipeline action to be performed by this request to \a action.
  */
 void DataPipelineRequest::setAction(const Action action)
 {
@@ -122,7 +134,7 @@ void DataPipelineRequest::setAction(const Action action)
 }
 
 /*!
- * Set the DataPipeline API version to include in this request to \a version.
+ * Sets the DataPipeline API version to include in this request to \a version.
  */
 void DataPipelineRequest::setApiVersion(const QString &version)
 {
@@ -131,7 +143,7 @@ void DataPipelineRequest::setApiVersion(const QString &version)
 }
 
 /*!
- * \brief Returns \c true if this request is the same as \a other.
+ * Returns \c true if this request is equal to \a other; \c false otherwise.
  *
  * Note, most derived *Request classes do not need to provider their own
  * implementations of this function, since most such request classes rely on
@@ -146,8 +158,8 @@ bool DataPipelineRequest::operator==(const DataPipelineRequest &other) const
             (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
-/*!
- * @brief  Check if \a queueName is a valid DataPipeline queue name.
+/*
+ * Returns \c tue if \a queueName is a valid DataPipeline queue name.
  *
  * @par From DataPipeline FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
@@ -166,9 +178,8 @@ bool DataPipelineRequest::operator==(const DataPipelineRequest &other) const
 }*/
 
 /*!
- * \brief Removes the a \a name parameter from this request.
- *
- * Returns the count of paramters removed (typically \c 0 or \c 1).
+ * Removes the a \a name parameter from the request, then returns the number of
+ * paramters removed (typically \c 0 or \c 1).
  */
 int DataPipelineRequest::clearParameter(const QString &name)
 {
@@ -177,7 +188,7 @@ int DataPipelineRequest::clearParameter(const QString &name)
 }
 
 /*!
- * \brief Removes all parameters from this request.
+ * Removes all parameters from the request.
  */
 void DataPipelineRequest::clearParameters()
 {
@@ -186,7 +197,7 @@ void DataPipelineRequest::clearParameters()
 }
 
 /*!
- * \brief Returns the value of the \n name pararemter if set, otherwise \a defaultValue.
+ * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
 QVariant DataPipelineRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
@@ -195,7 +206,7 @@ QVariant DataPipelineRequest::parameter(const QString &name, const QVariant &def
 }
 
 /*!
- * \brief Returns a map of parameters included in this request.
+ * Returns the parameters included in this request.
  */
 const QVariantMap &DataPipelineRequest::parameters() const
 {
@@ -204,7 +215,7 @@ const QVariantMap &DataPipelineRequest::parameters() const
 }
 
 /*!
- * \brief Sets the \a name parameter to \a value.
+ * Sets the \a name parameter to \a value.
  */
 void DataPipelineRequest::setParameter(const QString &name, const QVariant &value)
 {
@@ -213,9 +224,8 @@ void DataPipelineRequest::setParameter(const QString &name, const QVariant &valu
 }
 
 /*!
- * \brief Sets the map of paramters for this request to \a parameters.
- *
- * Any request parameters set previously will be discarded.
+ * Sets the paramters for this request to \a parameters. Any request parameters
+ * set previously will be discarded.
  */
 void DataPipelineRequest::setParameters(const QVariantMap &parameters)
 {
@@ -224,11 +234,12 @@ void DataPipelineRequest::setParameters(const QVariantMap &parameters)
 }
 
 /*!
- * \brief Returns a network request for this DataPipeline request using the given \a endpoint.
+ * Returns a network request for the DataPipeline request using the given
+ * \a endpoint.
  *
- * This DataPipeline implementation builds request URLs by combining the common query
- * parameters (such as Action and Version), with any that have been added (via
- * setParameter) by child classes.
+ * This DataPipeline implementation builds request URLs by combining the
+ * common query parameters (such as Action and Version), with any that have
+ * been added (via setParameter) by child classes.
  */
 QNetworkRequest DataPipelineRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -239,17 +250,16 @@ QNetworkRequest DataPipelineRequest::unsignedRequest(const QUrl &endpoint) const
 }
 
 /*!
+ * \class QtAws::DataPipeline::DataPipelineRequestPrivate
+ * \brief The DataPipelineRequestPrivate class provides private implementation for DataPipelineRequest.
  * \internal
  *
- * \class  DataPipelineRequestPrivate
- *
- * \brief  Private implementation for DataPipelineRequest.
+ * \inmodule QtAwsDataPipeline
  */
 
 /*!
- * \internal
- *
- * \brief Constructs a new DataPipelineRequestPrivate object.
+ * Constructs a DataPipelineRequestPrivate object for DataPipeline \a action with,
+ * public implementation \a q.
  */
 DataPipelineRequestPrivate::DataPipelineRequestPrivate(const DataPipelineRequest::Action action, DataPipelineRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
@@ -258,9 +268,7 @@ DataPipelineRequestPrivate::DataPipelineRequestPrivate(const DataPipelineRequest
 }
 
 /*!
- * \internal
- *
- * \brief Constructs a new DataPipelineRequestPrivate object, copying an existing one.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
@@ -276,15 +284,12 @@ DataPipelineRequestPrivate::DataPipelineRequestPrivate(const DataPipelineRequest
 }
 
 /*!
- * \internal
- *
- * \brief Returns a string representing \a action.
+ * Returns a string represention of \a action, or a null string if \a action is
+ * invalid.
  *
  * This function converts DataPipelineRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the DataPipeline service's Action
  * query parameters.
- *
- * @return A string representing \a action, or a null string if \a action is invalid.
  */
 QString DataPipelineRequestPrivate::toString(const DataPipelineRequest::Action &action)
 {

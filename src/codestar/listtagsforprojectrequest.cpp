@@ -27,10 +27,9 @@ namespace CodeStar {
 
 /*!
  * \class QtAws::CodeStar::ListTagsForProjectRequest
- *
  * \brief The ListTagsForProjectRequest class provides an interface for CodeStar ListTagsForProject requests.
  *
- * \ingroup CodeStar
+ * \inmodule QtAwsCodeStar
  *
  *  <fullname>AWS CodeStar</fullname>
  * 
@@ -125,9 +124,7 @@ namespace CodeStar {
  */
 
 /*!
- * @brief  Constructs a new ListTagsForProjectRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListTagsForProjectRequest::ListTagsForProjectRequest(const ListTagsForProjectRequest &other)
     : CodeStarRequest(new ListTagsForProjectRequestPrivate(*other.d_func(), this))
@@ -136,7 +133,7 @@ ListTagsForProjectRequest::ListTagsForProjectRequest(const ListTagsForProjectReq
 }
 
 /*!
- * @brief  Constructs a new ListTagsForProjectRequest object.
+ * Constructs a ListTagsForProjectRequest object.
  */
 ListTagsForProjectRequest::ListTagsForProjectRequest()
     : CodeStarRequest(new ListTagsForProjectRequestPrivate(CodeStarRequest::ListTagsForProjectAction, this))
@@ -154,14 +151,9 @@ bool ListTagsForProjectRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListTagsForProjectResponse object.
+ * Returns a ListTagsForProjectResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListTagsForProjectResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CodeStarClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListTagsForProjectRequest::response(QNetworkReply * const reply) const
 {
@@ -169,20 +161,17 @@ QtAws::Core::AwsAbstractResponse * ListTagsForProjectRequest::response(QNetworkR
 }
 
 /*!
- * @internal
+ * \class QtAws::CodeStar::ListTagsForProjectRequestPrivate
+ * \brief The ListTagsForProjectRequestPrivate class provides private implementation for ListTagsForProjectRequest.
+ * \internal
  *
- * @class  ListTagsForProjectRequestPrivate
- *
- * @brief  Private implementation for ListTagsForProjectRequest.
+ * \inmodule QtAwsCodeStar
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListTagsForProjectRequestPrivate object.
- *
- * @param  action  CodeStar action being performed.
- * @param  q       Pointer to this object's public ListTagsForProjectRequest instance.
+ * Constructs a ListTagsForProjectRequestPrivate object for CodeStar \a action with,
+ * public implementation \a q.
  */
 ListTagsForProjectRequestPrivate::ListTagsForProjectRequestPrivate(
     const CodeStarRequest::Action action, ListTagsForProjectRequest * const q)
@@ -192,15 +181,10 @@ ListTagsForProjectRequestPrivate::ListTagsForProjectRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListTagsForProjectRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListTagsForProjectRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListTagsForProjectRequest instance.
  */
 ListTagsForProjectRequestPrivate::ListTagsForProjectRequestPrivate(
     const ListTagsForProjectRequestPrivate &other, ListTagsForProjectRequest * const q)

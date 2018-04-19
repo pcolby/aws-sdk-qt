@@ -27,10 +27,9 @@ namespace OpsWorks {
 
 /*!
  * \class QtAws::OpsWorks::AssignVolumeRequest
- *
  * \brief The AssignVolumeRequest class provides an interface for OpsWorks AssignVolume requests.
  *
- * \ingroup OpsWorks
+ * \inmodule QtAwsOpsWorks
  *
  *  <fullname>AWS OpsWorks</fullname>
  * 
@@ -143,9 +142,7 @@ namespace OpsWorks {
  */
 
 /*!
- * @brief  Constructs a new AssignVolumeRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AssignVolumeRequest::AssignVolumeRequest(const AssignVolumeRequest &other)
     : OpsWorksRequest(new AssignVolumeRequestPrivate(*other.d_func(), this))
@@ -154,7 +151,7 @@ AssignVolumeRequest::AssignVolumeRequest(const AssignVolumeRequest &other)
 }
 
 /*!
- * @brief  Constructs a new AssignVolumeRequest object.
+ * Constructs a AssignVolumeRequest object.
  */
 AssignVolumeRequest::AssignVolumeRequest()
     : OpsWorksRequest(new AssignVolumeRequestPrivate(OpsWorksRequest::AssignVolumeAction, this))
@@ -172,14 +169,9 @@ bool AssignVolumeRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AssignVolumeResponse object.
+ * Returns a AssignVolumeResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AssignVolumeResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  OpsWorksClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AssignVolumeRequest::response(QNetworkReply * const reply) const
 {
@@ -187,20 +179,17 @@ QtAws::Core::AwsAbstractResponse * AssignVolumeRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::OpsWorks::AssignVolumeRequestPrivate
+ * \brief The AssignVolumeRequestPrivate class provides private implementation for AssignVolumeRequest.
+ * \internal
  *
- * @class  AssignVolumeRequestPrivate
- *
- * @brief  Private implementation for AssignVolumeRequest.
+ * \inmodule QtAwsOpsWorks
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AssignVolumeRequestPrivate object.
- *
- * @param  action  OpsWorks action being performed.
- * @param  q       Pointer to this object's public AssignVolumeRequest instance.
+ * Constructs a AssignVolumeRequestPrivate object for OpsWorks \a action with,
+ * public implementation \a q.
  */
 AssignVolumeRequestPrivate::AssignVolumeRequestPrivate(
     const OpsWorksRequest::Action action, AssignVolumeRequest * const q)
@@ -210,15 +199,10 @@ AssignVolumeRequestPrivate::AssignVolumeRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AssignVolumeRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AssignVolumeRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AssignVolumeRequest instance.
  */
 AssignVolumeRequestPrivate::AssignVolumeRequestPrivate(
     const AssignVolumeRequestPrivate &other, AssignVolumeRequest * const q)

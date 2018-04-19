@@ -27,10 +27,9 @@ namespace ResourceGroups {
 
 /*!
  * \class QtAws::ResourceGroups::UntagRequest
- *
  * \brief The UntagRequest class provides an interface for ResourceGroups Untag requests.
  *
- * \ingroup ResourceGroups
+ * \inmodule QtAwsResourceGroups
  *
  *  <fullname>AWS Resource Groups</fullname>
  * 
@@ -81,9 +80,7 @@ namespace ResourceGroups {
  */
 
 /*!
- * @brief  Constructs a new UntagRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UntagRequest::UntagRequest(const UntagRequest &other)
     : ResourceGroupsRequest(new UntagRequestPrivate(*other.d_func(), this))
@@ -92,7 +89,7 @@ UntagRequest::UntagRequest(const UntagRequest &other)
 }
 
 /*!
- * @brief  Constructs a new UntagRequest object.
+ * Constructs a UntagRequest object.
  */
 UntagRequest::UntagRequest()
     : ResourceGroupsRequest(new UntagRequestPrivate(ResourceGroupsRequest::UntagAction, this))
@@ -110,14 +107,9 @@ bool UntagRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UntagResponse object.
+ * Returns a UntagResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UntagResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ResourceGroupsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UntagRequest::response(QNetworkReply * const reply) const
 {
@@ -125,20 +117,17 @@ QtAws::Core::AwsAbstractResponse * UntagRequest::response(QNetworkReply * const 
 }
 
 /*!
- * @internal
+ * \class QtAws::ResourceGroups::UntagRequestPrivate
+ * \brief The UntagRequestPrivate class provides private implementation for UntagRequest.
+ * \internal
  *
- * @class  UntagRequestPrivate
- *
- * @brief  Private implementation for UntagRequest.
+ * \inmodule QtAwsResourceGroups
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UntagRequestPrivate object.
- *
- * @param  action  ResourceGroups action being performed.
- * @param  q       Pointer to this object's public UntagRequest instance.
+ * Constructs a UntagRequestPrivate object for ResourceGroups \a action with,
+ * public implementation \a q.
  */
 UntagRequestPrivate::UntagRequestPrivate(
     const ResourceGroupsRequest::Action action, UntagRequest * const q)
@@ -148,15 +137,10 @@ UntagRequestPrivate::UntagRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UntagRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UntagRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UntagRequest instance.
  */
 UntagRequestPrivate::UntagRequestPrivate(
     const UntagRequestPrivate &other, UntagRequest * const q)

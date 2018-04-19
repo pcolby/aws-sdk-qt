@@ -27,10 +27,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::DeleteDBSubnetGroupRequest
- *
  * \brief The DeleteDBSubnetGroupRequest class provides an interface for RDS DeleteDBSubnetGroup requests.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -101,9 +100,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new DeleteDBSubnetGroupRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteDBSubnetGroupRequest::DeleteDBSubnetGroupRequest(const DeleteDBSubnetGroupRequest &other)
     : RDSRequest(new DeleteDBSubnetGroupRequestPrivate(*other.d_func(), this))
@@ -112,7 +109,7 @@ DeleteDBSubnetGroupRequest::DeleteDBSubnetGroupRequest(const DeleteDBSubnetGroup
 }
 
 /*!
- * @brief  Constructs a new DeleteDBSubnetGroupRequest object.
+ * Constructs a DeleteDBSubnetGroupRequest object.
  */
 DeleteDBSubnetGroupRequest::DeleteDBSubnetGroupRequest()
     : RDSRequest(new DeleteDBSubnetGroupRequestPrivate(RDSRequest::DeleteDBSubnetGroupAction, this))
@@ -130,14 +127,9 @@ bool DeleteDBSubnetGroupRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteDBSubnetGroupResponse object.
+ * Returns a DeleteDBSubnetGroupResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteDBSubnetGroupResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RDSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteDBSubnetGroupRequest::response(QNetworkReply * const reply) const
 {
@@ -145,20 +137,17 @@ QtAws::Core::AwsAbstractResponse * DeleteDBSubnetGroupRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::RDS::DeleteDBSubnetGroupRequestPrivate
+ * \brief The DeleteDBSubnetGroupRequestPrivate class provides private implementation for DeleteDBSubnetGroupRequest.
+ * \internal
  *
- * @class  DeleteDBSubnetGroupRequestPrivate
- *
- * @brief  Private implementation for DeleteDBSubnetGroupRequest.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteDBSubnetGroupRequestPrivate object.
- *
- * @param  action  RDS action being performed.
- * @param  q       Pointer to this object's public DeleteDBSubnetGroupRequest instance.
+ * Constructs a DeleteDBSubnetGroupRequestPrivate object for RDS \a action with,
+ * public implementation \a q.
  */
 DeleteDBSubnetGroupRequestPrivate::DeleteDBSubnetGroupRequestPrivate(
     const RDSRequest::Action action, DeleteDBSubnetGroupRequest * const q)
@@ -168,15 +157,10 @@ DeleteDBSubnetGroupRequestPrivate::DeleteDBSubnetGroupRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteDBSubnetGroupRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteDBSubnetGroupRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteDBSubnetGroupRequest instance.
  */
 DeleteDBSubnetGroupRequestPrivate::DeleteDBSubnetGroupRequestPrivate(
     const DeleteDBSubnetGroupRequestPrivate &other, DeleteDBSubnetGroupRequest * const q)

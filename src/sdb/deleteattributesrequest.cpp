@@ -27,10 +27,9 @@ namespace SimpleDB {
 
 /*!
  * \class QtAws::SimpleDB::DeleteAttributesRequest
- *
  * \brief The DeleteAttributesRequest class provides an interface for SimpleDB DeleteAttributes requests.
  *
- * \ingroup SimpleDB
+ * \inmodule QtAwsSimpleDB
  *
  *  Amazon SimpleDB is a web service providing the core database functions of data indexing and querying in the cloud. By
  *  offloading the time and effort associated with building and operating a web-scale database, SimpleDB provides developers
@@ -50,9 +49,7 @@ namespace SimpleDB {
  */
 
 /*!
- * @brief  Constructs a new DeleteAttributesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteAttributesRequest::DeleteAttributesRequest(const DeleteAttributesRequest &other)
     : SimpleDBRequest(new DeleteAttributesRequestPrivate(*other.d_func(), this))
@@ -61,7 +58,7 @@ DeleteAttributesRequest::DeleteAttributesRequest(const DeleteAttributesRequest &
 }
 
 /*!
- * @brief  Constructs a new DeleteAttributesRequest object.
+ * Constructs a DeleteAttributesRequest object.
  */
 DeleteAttributesRequest::DeleteAttributesRequest()
     : SimpleDBRequest(new DeleteAttributesRequestPrivate(SimpleDBRequest::DeleteAttributesAction, this))
@@ -79,14 +76,9 @@ bool DeleteAttributesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteAttributesResponse object.
+ * Returns a DeleteAttributesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteAttributesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  SimpleDBClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteAttributesRequest::response(QNetworkReply * const reply) const
 {
@@ -94,20 +86,17 @@ QtAws::Core::AwsAbstractResponse * DeleteAttributesRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::SimpleDB::DeleteAttributesRequestPrivate
+ * \brief The DeleteAttributesRequestPrivate class provides private implementation for DeleteAttributesRequest.
+ * \internal
  *
- * @class  DeleteAttributesRequestPrivate
- *
- * @brief  Private implementation for DeleteAttributesRequest.
+ * \inmodule QtAwsSimpleDB
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteAttributesRequestPrivate object.
- *
- * @param  action  SimpleDB action being performed.
- * @param  q       Pointer to this object's public DeleteAttributesRequest instance.
+ * Constructs a DeleteAttributesRequestPrivate object for SimpleDB \a action with,
+ * public implementation \a q.
  */
 DeleteAttributesRequestPrivate::DeleteAttributesRequestPrivate(
     const SimpleDBRequest::Action action, DeleteAttributesRequest * const q)
@@ -117,15 +106,10 @@ DeleteAttributesRequestPrivate::DeleteAttributesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteAttributesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteAttributesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteAttributesRequest instance.
  */
 DeleteAttributesRequestPrivate::DeleteAttributesRequestPrivate(
     const DeleteAttributesRequestPrivate &other, DeleteAttributesRequest * const q)

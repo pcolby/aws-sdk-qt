@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DeleteEgressOnlyInternetGatewayRequest
- *
  * \brief The DeleteEgressOnlyInternetGatewayRequest class provides an interface for EC2 DeleteEgressOnlyInternetGateway requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DeleteEgressOnlyInternetGatewayRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteEgressOnlyInternetGatewayRequest::DeleteEgressOnlyInternetGatewayRequest(const DeleteEgressOnlyInternetGatewayRequest &other)
     : EC2Request(new DeleteEgressOnlyInternetGatewayRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ DeleteEgressOnlyInternetGatewayRequest::DeleteEgressOnlyInternetGatewayRequest(c
 }
 
 /*!
- * @brief  Constructs a new DeleteEgressOnlyInternetGatewayRequest object.
+ * Constructs a DeleteEgressOnlyInternetGatewayRequest object.
  */
 DeleteEgressOnlyInternetGatewayRequest::DeleteEgressOnlyInternetGatewayRequest()
     : EC2Request(new DeleteEgressOnlyInternetGatewayRequestPrivate(EC2Request::DeleteEgressOnlyInternetGatewayAction, this))
@@ -70,14 +67,9 @@ bool DeleteEgressOnlyInternetGatewayRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteEgressOnlyInternetGatewayResponse object.
+ * Returns a DeleteEgressOnlyInternetGatewayResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteEgressOnlyInternetGatewayResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteEgressOnlyInternetGatewayRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * DeleteEgressOnlyInternetGatewayRequest::respo
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::DeleteEgressOnlyInternetGatewayRequestPrivate
+ * \brief The DeleteEgressOnlyInternetGatewayRequestPrivate class provides private implementation for DeleteEgressOnlyInternetGatewayRequest.
+ * \internal
  *
- * @class  DeleteEgressOnlyInternetGatewayRequestPrivate
- *
- * @brief  Private implementation for DeleteEgressOnlyInternetGatewayRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteEgressOnlyInternetGatewayRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public DeleteEgressOnlyInternetGatewayRequest instance.
+ * Constructs a DeleteEgressOnlyInternetGatewayRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 DeleteEgressOnlyInternetGatewayRequestPrivate::DeleteEgressOnlyInternetGatewayRequestPrivate(
     const EC2Request::Action action, DeleteEgressOnlyInternetGatewayRequest * const q)
@@ -108,15 +97,10 @@ DeleteEgressOnlyInternetGatewayRequestPrivate::DeleteEgressOnlyInternetGatewayRe
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteEgressOnlyInternetGatewayRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteEgressOnlyInternetGatewayRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteEgressOnlyInternetGatewayRequest instance.
  */
 DeleteEgressOnlyInternetGatewayRequestPrivate::DeleteEgressOnlyInternetGatewayRequestPrivate(
     const DeleteEgressOnlyInternetGatewayRequestPrivate &other, DeleteEgressOnlyInternetGatewayRequest * const q)

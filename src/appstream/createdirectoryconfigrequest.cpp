@@ -27,10 +27,9 @@ namespace AppStream {
 
 /*!
  * \class QtAws::AppStream::CreateDirectoryConfigRequest
- *
  * \brief The CreateDirectoryConfigRequest class provides an interface for AppStream CreateDirectoryConfig requests.
  *
- * \ingroup AppStream
+ * \inmodule QtAwsAppStream
  *
  *  <fullname>Amazon AppStream 2.0</fullname>
  * 
@@ -40,9 +39,7 @@ namespace AppStream {
  */
 
 /*!
- * @brief  Constructs a new CreateDirectoryConfigRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateDirectoryConfigRequest::CreateDirectoryConfigRequest(const CreateDirectoryConfigRequest &other)
     : AppStreamRequest(new CreateDirectoryConfigRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ CreateDirectoryConfigRequest::CreateDirectoryConfigRequest(const CreateDirectory
 }
 
 /*!
- * @brief  Constructs a new CreateDirectoryConfigRequest object.
+ * Constructs a CreateDirectoryConfigRequest object.
  */
 CreateDirectoryConfigRequest::CreateDirectoryConfigRequest()
     : AppStreamRequest(new CreateDirectoryConfigRequestPrivate(AppStreamRequest::CreateDirectoryConfigAction, this))
@@ -69,14 +66,9 @@ bool CreateDirectoryConfigRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateDirectoryConfigResponse object.
+ * Returns a CreateDirectoryConfigResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateDirectoryConfigResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  AppStreamClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateDirectoryConfigRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * CreateDirectoryConfigRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::AppStream::CreateDirectoryConfigRequestPrivate
+ * \brief The CreateDirectoryConfigRequestPrivate class provides private implementation for CreateDirectoryConfigRequest.
+ * \internal
  *
- * @class  CreateDirectoryConfigRequestPrivate
- *
- * @brief  Private implementation for CreateDirectoryConfigRequest.
+ * \inmodule QtAwsAppStream
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateDirectoryConfigRequestPrivate object.
- *
- * @param  action  AppStream action being performed.
- * @param  q       Pointer to this object's public CreateDirectoryConfigRequest instance.
+ * Constructs a CreateDirectoryConfigRequestPrivate object for AppStream \a action with,
+ * public implementation \a q.
  */
 CreateDirectoryConfigRequestPrivate::CreateDirectoryConfigRequestPrivate(
     const AppStreamRequest::Action action, CreateDirectoryConfigRequest * const q)
@@ -107,15 +96,10 @@ CreateDirectoryConfigRequestPrivate::CreateDirectoryConfigRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateDirectoryConfigRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateDirectoryConfigRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateDirectoryConfigRequest instance.
  */
 CreateDirectoryConfigRequestPrivate::CreateDirectoryConfigRequestPrivate(
     const CreateDirectoryConfigRequestPrivate &other, CreateDirectoryConfigRequest * const q)

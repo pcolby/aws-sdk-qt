@@ -27,10 +27,9 @@ namespace CloudWatchLogs {
 
 /*!
  * \class QtAws::CloudWatchLogs::DescribeDestinationsRequest
- *
  * \brief The DescribeDestinationsRequest class provides an interface for CloudWatchLogs DescribeDestinations requests.
  *
- * \ingroup CloudWatchLogs
+ * \inmodule QtAwsCloudWatchLogs
  *
  *  You can use Amazon CloudWatch Logs to monitor, store, and access your log files from Amazon EC2 instances, AWS
  *  CloudTrail, or other sources. You can then retrieve the associated log data from CloudWatch Logs using the CloudWatch
@@ -66,9 +65,7 @@ namespace CloudWatchLogs {
  */
 
 /*!
- * @brief  Constructs a new DescribeDestinationsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeDestinationsRequest::DescribeDestinationsRequest(const DescribeDestinationsRequest &other)
     : CloudWatchLogsRequest(new DescribeDestinationsRequestPrivate(*other.d_func(), this))
@@ -77,7 +74,7 @@ DescribeDestinationsRequest::DescribeDestinationsRequest(const DescribeDestinati
 }
 
 /*!
- * @brief  Constructs a new DescribeDestinationsRequest object.
+ * Constructs a DescribeDestinationsRequest object.
  */
 DescribeDestinationsRequest::DescribeDestinationsRequest()
     : CloudWatchLogsRequest(new DescribeDestinationsRequestPrivate(CloudWatchLogsRequest::DescribeDestinationsAction, this))
@@ -95,14 +92,9 @@ bool DescribeDestinationsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeDestinationsResponse object.
+ * Returns a DescribeDestinationsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeDestinationsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CloudWatchLogsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeDestinationsRequest::response(QNetworkReply * const reply) const
 {
@@ -110,20 +102,17 @@ QtAws::Core::AwsAbstractResponse * DescribeDestinationsRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudWatchLogs::DescribeDestinationsRequestPrivate
+ * \brief The DescribeDestinationsRequestPrivate class provides private implementation for DescribeDestinationsRequest.
+ * \internal
  *
- * @class  DescribeDestinationsRequestPrivate
- *
- * @brief  Private implementation for DescribeDestinationsRequest.
+ * \inmodule QtAwsCloudWatchLogs
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeDestinationsRequestPrivate object.
- *
- * @param  action  CloudWatchLogs action being performed.
- * @param  q       Pointer to this object's public DescribeDestinationsRequest instance.
+ * Constructs a DescribeDestinationsRequestPrivate object for CloudWatchLogs \a action with,
+ * public implementation \a q.
  */
 DescribeDestinationsRequestPrivate::DescribeDestinationsRequestPrivate(
     const CloudWatchLogsRequest::Action action, DescribeDestinationsRequest * const q)
@@ -133,15 +122,10 @@ DescribeDestinationsRequestPrivate::DescribeDestinationsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeDestinationsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeDestinationsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeDestinationsRequest instance.
  */
 DescribeDestinationsRequestPrivate::DescribeDestinationsRequestPrivate(
     const DescribeDestinationsRequestPrivate &other, DescribeDestinationsRequest * const q)

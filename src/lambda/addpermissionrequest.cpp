@@ -27,10 +27,9 @@ namespace Lambda {
 
 /*!
  * \class QtAws::Lambda::AddPermissionRequest
- *
  * \brief The AddPermissionRequest class provides an interface for Lambda AddPermission requests.
  *
- * \ingroup Lambda
+ * \inmodule QtAwsLambda
  *
  *  <fullname>AWS Lambda</fullname>
  * 
@@ -48,9 +47,7 @@ namespace Lambda {
  */
 
 /*!
- * @brief  Constructs a new AddPermissionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AddPermissionRequest::AddPermissionRequest(const AddPermissionRequest &other)
     : LambdaRequest(new AddPermissionRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ AddPermissionRequest::AddPermissionRequest(const AddPermissionRequest &other)
 }
 
 /*!
- * @brief  Constructs a new AddPermissionRequest object.
+ * Constructs a AddPermissionRequest object.
  */
 AddPermissionRequest::AddPermissionRequest()
     : LambdaRequest(new AddPermissionRequestPrivate(LambdaRequest::AddPermissionAction, this))
@@ -77,14 +74,9 @@ bool AddPermissionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AddPermissionResponse object.
+ * Returns a AddPermissionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AddPermissionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  LambdaClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AddPermissionRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * AddPermissionRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::Lambda::AddPermissionRequestPrivate
+ * \brief The AddPermissionRequestPrivate class provides private implementation for AddPermissionRequest.
+ * \internal
  *
- * @class  AddPermissionRequestPrivate
- *
- * @brief  Private implementation for AddPermissionRequest.
+ * \inmodule QtAwsLambda
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AddPermissionRequestPrivate object.
- *
- * @param  action  Lambda action being performed.
- * @param  q       Pointer to this object's public AddPermissionRequest instance.
+ * Constructs a AddPermissionRequestPrivate object for Lambda \a action with,
+ * public implementation \a q.
  */
 AddPermissionRequestPrivate::AddPermissionRequestPrivate(
     const LambdaRequest::Action action, AddPermissionRequest * const q)
@@ -115,15 +104,10 @@ AddPermissionRequestPrivate::AddPermissionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AddPermissionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AddPermissionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AddPermissionRequest instance.
  */
 AddPermissionRequestPrivate::AddPermissionRequestPrivate(
     const AddPermissionRequestPrivate &other, AddPermissionRequest * const q)

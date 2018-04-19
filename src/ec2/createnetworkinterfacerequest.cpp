@@ -27,10 +27,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::CreateNetworkInterfaceRequest
- *
  * \brief The CreateNetworkInterfaceRequest class provides an interface for EC2 CreateNetworkInterface requests.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -41,9 +40,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new CreateNetworkInterfaceRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 CreateNetworkInterfaceRequest::CreateNetworkInterfaceRequest(const CreateNetworkInterfaceRequest &other)
     : EC2Request(new CreateNetworkInterfaceRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ CreateNetworkInterfaceRequest::CreateNetworkInterfaceRequest(const CreateNetwork
 }
 
 /*!
- * @brief  Constructs a new CreateNetworkInterfaceRequest object.
+ * Constructs a CreateNetworkInterfaceRequest object.
  */
 CreateNetworkInterfaceRequest::CreateNetworkInterfaceRequest()
     : EC2Request(new CreateNetworkInterfaceRequestPrivate(EC2Request::CreateNetworkInterfaceAction, this))
@@ -70,14 +67,9 @@ bool CreateNetworkInterfaceRequest::isValid() const
 
 
 /*!
- * @brief  Construct an CreateNetworkInterfaceResponse object.
+ * Returns a CreateNetworkInterfaceResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An CreateNetworkInterfaceResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  EC2Client::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * CreateNetworkInterfaceRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * CreateNetworkInterfaceRequest::response(QNetw
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::CreateNetworkInterfaceRequestPrivate
+ * \brief The CreateNetworkInterfaceRequestPrivate class provides private implementation for CreateNetworkInterfaceRequest.
+ * \internal
  *
- * @class  CreateNetworkInterfaceRequestPrivate
- *
- * @brief  Private implementation for CreateNetworkInterfaceRequest.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new CreateNetworkInterfaceRequestPrivate object.
- *
- * @param  action  EC2 action being performed.
- * @param  q       Pointer to this object's public CreateNetworkInterfaceRequest instance.
+ * Constructs a CreateNetworkInterfaceRequestPrivate object for EC2 \a action with,
+ * public implementation \a q.
  */
 CreateNetworkInterfaceRequestPrivate::CreateNetworkInterfaceRequestPrivate(
     const EC2Request::Action action, CreateNetworkInterfaceRequest * const q)
@@ -108,15 +97,10 @@ CreateNetworkInterfaceRequestPrivate::CreateNetworkInterfaceRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateNetworkInterfaceRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the CreateNetworkInterfaceRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CreateNetworkInterfaceRequest instance.
  */
 CreateNetworkInterfaceRequestPrivate::CreateNetworkInterfaceRequestPrivate(
     const CreateNetworkInterfaceRequestPrivate &other, CreateNetworkInterfaceRequest * const q)

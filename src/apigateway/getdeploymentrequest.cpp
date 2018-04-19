@@ -27,10 +27,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::GetDeploymentRequest
- *
  * \brief The GetDeploymentRequest class provides an interface for APIGateway GetDeployment requests.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -42,9 +41,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new GetDeploymentRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetDeploymentRequest::GetDeploymentRequest(const GetDeploymentRequest &other)
     : APIGatewayRequest(new GetDeploymentRequestPrivate(*other.d_func(), this))
@@ -53,7 +50,7 @@ GetDeploymentRequest::GetDeploymentRequest(const GetDeploymentRequest &other)
 }
 
 /*!
- * @brief  Constructs a new GetDeploymentRequest object.
+ * Constructs a GetDeploymentRequest object.
  */
 GetDeploymentRequest::GetDeploymentRequest()
     : APIGatewayRequest(new GetDeploymentRequestPrivate(APIGatewayRequest::GetDeploymentAction, this))
@@ -71,14 +68,9 @@ bool GetDeploymentRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetDeploymentResponse object.
+ * Returns a GetDeploymentResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetDeploymentResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  APIGatewayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetDeploymentRequest::response(QNetworkReply * const reply) const
 {
@@ -86,20 +78,17 @@ QtAws::Core::AwsAbstractResponse * GetDeploymentRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::APIGateway::GetDeploymentRequestPrivate
+ * \brief The GetDeploymentRequestPrivate class provides private implementation for GetDeploymentRequest.
+ * \internal
  *
- * @class  GetDeploymentRequestPrivate
- *
- * @brief  Private implementation for GetDeploymentRequest.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetDeploymentRequestPrivate object.
- *
- * @param  action  APIGateway action being performed.
- * @param  q       Pointer to this object's public GetDeploymentRequest instance.
+ * Constructs a GetDeploymentRequestPrivate object for APIGateway \a action with,
+ * public implementation \a q.
  */
 GetDeploymentRequestPrivate::GetDeploymentRequestPrivate(
     const APIGatewayRequest::Action action, GetDeploymentRequest * const q)
@@ -109,15 +98,10 @@ GetDeploymentRequestPrivate::GetDeploymentRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetDeploymentRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetDeploymentRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetDeploymentRequest instance.
  */
 GetDeploymentRequestPrivate::GetDeploymentRequestPrivate(
     const GetDeploymentRequestPrivate &other, GetDeploymentRequest * const q)

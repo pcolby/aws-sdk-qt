@@ -154,6 +154,9 @@
 /*!
  * \namespace QtAws::StorageGateway
  * \brief The QtAws::StorageGateway contains stuff...
+ *
+ * \inmodule QtAwsStorageGateway
+ *
  * @todo Move this to a separate template file.
  */
 
@@ -272,7 +275,7 @@ StorageGatewayClient::StorageGatewayClient(
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * \a  AwsEndpoint::getEndpoint()
+ * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
 StorageGatewayClient::StorageGatewayClient(
     const QUrl &endpoint,

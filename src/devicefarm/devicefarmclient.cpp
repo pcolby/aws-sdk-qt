@@ -142,6 +142,9 @@
 /*!
  * \namespace QtAws::DeviceFarm
  * \brief The QtAws::DeviceFarm contains stuff...
+ *
+ * \inmodule QtAwsDeviceFarm
+ *
  * @todo Move this to a separate template file.
  */
 
@@ -193,7 +196,7 @@ DeviceFarmClient::DeviceFarmClient(
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * \a  AwsEndpoint::getEndpoint()
+ * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
 DeviceFarmClient::DeviceFarmClient(
     const QUrl &endpoint,

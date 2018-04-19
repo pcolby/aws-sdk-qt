@@ -27,10 +27,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::GetV2LoggingOptionsRequest
- *
  * \brief The GetV2LoggingOptionsRequest class provides an interface for IoT GetV2LoggingOptions requests.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -48,9 +47,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new GetV2LoggingOptionsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 GetV2LoggingOptionsRequest::GetV2LoggingOptionsRequest(const GetV2LoggingOptionsRequest &other)
     : IoTRequest(new GetV2LoggingOptionsRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ GetV2LoggingOptionsRequest::GetV2LoggingOptionsRequest(const GetV2LoggingOptions
 }
 
 /*!
- * @brief  Constructs a new GetV2LoggingOptionsRequest object.
+ * Constructs a GetV2LoggingOptionsRequest object.
  */
 GetV2LoggingOptionsRequest::GetV2LoggingOptionsRequest()
     : IoTRequest(new GetV2LoggingOptionsRequestPrivate(IoTRequest::GetV2LoggingOptionsAction, this))
@@ -77,14 +74,9 @@ bool GetV2LoggingOptionsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an GetV2LoggingOptionsResponse object.
+ * Returns a GetV2LoggingOptionsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An GetV2LoggingOptionsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  IoTClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * GetV2LoggingOptionsRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * GetV2LoggingOptionsRequest::response(QNetwork
 }
 
 /*!
- * @internal
+ * \class QtAws::IoT::GetV2LoggingOptionsRequestPrivate
+ * \brief The GetV2LoggingOptionsRequestPrivate class provides private implementation for GetV2LoggingOptionsRequest.
+ * \internal
  *
- * @class  GetV2LoggingOptionsRequestPrivate
- *
- * @brief  Private implementation for GetV2LoggingOptionsRequest.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new GetV2LoggingOptionsRequestPrivate object.
- *
- * @param  action  IoT action being performed.
- * @param  q       Pointer to this object's public GetV2LoggingOptionsRequest instance.
+ * Constructs a GetV2LoggingOptionsRequestPrivate object for IoT \a action with,
+ * public implementation \a q.
  */
 GetV2LoggingOptionsRequestPrivate::GetV2LoggingOptionsRequestPrivate(
     const IoTRequest::Action action, GetV2LoggingOptionsRequest * const q)
@@ -115,15 +104,10 @@ GetV2LoggingOptionsRequestPrivate::GetV2LoggingOptionsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetV2LoggingOptionsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the GetV2LoggingOptionsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public GetV2LoggingOptionsRequest instance.
  */
 GetV2LoggingOptionsRequestPrivate::GetV2LoggingOptionsRequestPrivate(
     const GetV2LoggingOptionsRequestPrivate &other, GetV2LoggingOptionsRequest * const q)

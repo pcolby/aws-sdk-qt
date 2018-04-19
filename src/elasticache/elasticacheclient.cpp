@@ -108,6 +108,9 @@
 /*!
  * \namespace QtAws::ElastiCache
  * \brief The QtAws::ElastiCache contains stuff...
+ *
+ * \inmodule QtAwsElastiCache
+ *
  * @todo Move this to a separate template file.
  */
 
@@ -171,7 +174,7 @@ ElastiCacheClient::ElastiCacheClient(
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * \a  AwsEndpoint::getEndpoint()
+ * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
 ElastiCacheClient::ElastiCacheClient(
     const QUrl &endpoint,

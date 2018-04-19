@@ -27,10 +27,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::DescribeSourceRegionsRequest
- *
  * \brief The DescribeSourceRegionsRequest class provides an interface for RDS DescribeSourceRegions requests.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -101,9 +100,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new DescribeSourceRegionsRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeSourceRegionsRequest::DescribeSourceRegionsRequest(const DescribeSourceRegionsRequest &other)
     : RDSRequest(new DescribeSourceRegionsRequestPrivate(*other.d_func(), this))
@@ -112,7 +109,7 @@ DescribeSourceRegionsRequest::DescribeSourceRegionsRequest(const DescribeSourceR
 }
 
 /*!
- * @brief  Constructs a new DescribeSourceRegionsRequest object.
+ * Constructs a DescribeSourceRegionsRequest object.
  */
 DescribeSourceRegionsRequest::DescribeSourceRegionsRequest()
     : RDSRequest(new DescribeSourceRegionsRequestPrivate(RDSRequest::DescribeSourceRegionsAction, this))
@@ -130,14 +127,9 @@ bool DescribeSourceRegionsRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeSourceRegionsResponse object.
+ * Returns a DescribeSourceRegionsResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeSourceRegionsResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  RDSClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeSourceRegionsRequest::response(QNetworkReply * const reply) const
 {
@@ -145,20 +137,17 @@ QtAws::Core::AwsAbstractResponse * DescribeSourceRegionsRequest::response(QNetwo
 }
 
 /*!
- * @internal
+ * \class QtAws::RDS::DescribeSourceRegionsRequestPrivate
+ * \brief The DescribeSourceRegionsRequestPrivate class provides private implementation for DescribeSourceRegionsRequest.
+ * \internal
  *
- * @class  DescribeSourceRegionsRequestPrivate
- *
- * @brief  Private implementation for DescribeSourceRegionsRequest.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeSourceRegionsRequestPrivate object.
- *
- * @param  action  RDS action being performed.
- * @param  q       Pointer to this object's public DescribeSourceRegionsRequest instance.
+ * Constructs a DescribeSourceRegionsRequestPrivate object for RDS \a action with,
+ * public implementation \a q.
  */
 DescribeSourceRegionsRequestPrivate::DescribeSourceRegionsRequestPrivate(
     const RDSRequest::Action action, DescribeSourceRegionsRequest * const q)
@@ -168,15 +157,10 @@ DescribeSourceRegionsRequestPrivate::DescribeSourceRegionsRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeSourceRegionsRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeSourceRegionsRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeSourceRegionsRequest instance.
  */
 DescribeSourceRegionsRequestPrivate::DescribeSourceRegionsRequestPrivate(
     const DescribeSourceRegionsRequestPrivate &other, DescribeSourceRegionsRequest * const q)

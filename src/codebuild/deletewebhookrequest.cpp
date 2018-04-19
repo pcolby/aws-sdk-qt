@@ -27,10 +27,9 @@ namespace CodeBuild {
 
 /*!
  * \class QtAws::CodeBuild::DeleteWebhookRequest
- *
  * \brief The DeleteWebhookRequest class provides an interface for CodeBuild DeleteWebhook requests.
  *
- * \ingroup CodeBuild
+ * \inmodule QtAwsCodeBuild
  *
  *  <fullname>AWS CodeBuild</fullname>
  * 
@@ -117,9 +116,7 @@ namespace CodeBuild {
  */
 
 /*!
- * @brief  Constructs a new DeleteWebhookRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteWebhookRequest::DeleteWebhookRequest(const DeleteWebhookRequest &other)
     : CodeBuildRequest(new DeleteWebhookRequestPrivate(*other.d_func(), this))
@@ -128,7 +125,7 @@ DeleteWebhookRequest::DeleteWebhookRequest(const DeleteWebhookRequest &other)
 }
 
 /*!
- * @brief  Constructs a new DeleteWebhookRequest object.
+ * Constructs a DeleteWebhookRequest object.
  */
 DeleteWebhookRequest::DeleteWebhookRequest()
     : CodeBuildRequest(new DeleteWebhookRequestPrivate(CodeBuildRequest::DeleteWebhookAction, this))
@@ -146,14 +143,9 @@ bool DeleteWebhookRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteWebhookResponse object.
+ * Returns a DeleteWebhookResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteWebhookResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  CodeBuildClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteWebhookRequest::response(QNetworkReply * const reply) const
 {
@@ -161,20 +153,17 @@ QtAws::Core::AwsAbstractResponse * DeleteWebhookRequest::response(QNetworkReply 
 }
 
 /*!
- * @internal
+ * \class QtAws::CodeBuild::DeleteWebhookRequestPrivate
+ * \brief The DeleteWebhookRequestPrivate class provides private implementation for DeleteWebhookRequest.
+ * \internal
  *
- * @class  DeleteWebhookRequestPrivate
- *
- * @brief  Private implementation for DeleteWebhookRequest.
+ * \inmodule QtAwsCodeBuild
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteWebhookRequestPrivate object.
- *
- * @param  action  CodeBuild action being performed.
- * @param  q       Pointer to this object's public DeleteWebhookRequest instance.
+ * Constructs a DeleteWebhookRequestPrivate object for CodeBuild \a action with,
+ * public implementation \a q.
  */
 DeleteWebhookRequestPrivate::DeleteWebhookRequestPrivate(
     const CodeBuildRequest::Action action, DeleteWebhookRequest * const q)
@@ -184,15 +173,10 @@ DeleteWebhookRequestPrivate::DeleteWebhookRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteWebhookRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteWebhookRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteWebhookRequest instance.
  */
 DeleteWebhookRequestPrivate::DeleteWebhookRequestPrivate(
     const DeleteWebhookRequestPrivate &other, DeleteWebhookRequest * const q)

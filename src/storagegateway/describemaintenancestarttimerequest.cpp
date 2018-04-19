@@ -27,10 +27,9 @@ namespace StorageGateway {
 
 /*!
  * \class QtAws::StorageGateway::DescribeMaintenanceStartTimeRequest
- *
  * \brief The DescribeMaintenanceStartTimeRequest class provides an interface for StorageGateway DescribeMaintenanceStartTime requests.
  *
- * \ingroup StorageGateway
+ * \inmodule QtAwsStorageGateway
  *
  *  <fullname>AWS Storage Gateway Service</fullname>
  * 
@@ -106,9 +105,7 @@ namespace StorageGateway {
  */
 
 /*!
- * @brief  Constructs a new DescribeMaintenanceStartTimeRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeMaintenanceStartTimeRequest::DescribeMaintenanceStartTimeRequest(const DescribeMaintenanceStartTimeRequest &other)
     : StorageGatewayRequest(new DescribeMaintenanceStartTimeRequestPrivate(*other.d_func(), this))
@@ -117,7 +114,7 @@ DescribeMaintenanceStartTimeRequest::DescribeMaintenanceStartTimeRequest(const D
 }
 
 /*!
- * @brief  Constructs a new DescribeMaintenanceStartTimeRequest object.
+ * Constructs a DescribeMaintenanceStartTimeRequest object.
  */
 DescribeMaintenanceStartTimeRequest::DescribeMaintenanceStartTimeRequest()
     : StorageGatewayRequest(new DescribeMaintenanceStartTimeRequestPrivate(StorageGatewayRequest::DescribeMaintenanceStartTimeAction, this))
@@ -135,14 +132,9 @@ bool DescribeMaintenanceStartTimeRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeMaintenanceStartTimeResponse object.
+ * Returns a DescribeMaintenanceStartTimeResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeMaintenanceStartTimeResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  StorageGatewayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeMaintenanceStartTimeRequest::response(QNetworkReply * const reply) const
 {
@@ -150,20 +142,17 @@ QtAws::Core::AwsAbstractResponse * DescribeMaintenanceStartTimeRequest::response
 }
 
 /*!
- * @internal
+ * \class QtAws::StorageGateway::DescribeMaintenanceStartTimeRequestPrivate
+ * \brief The DescribeMaintenanceStartTimeRequestPrivate class provides private implementation for DescribeMaintenanceStartTimeRequest.
+ * \internal
  *
- * @class  DescribeMaintenanceStartTimeRequestPrivate
- *
- * @brief  Private implementation for DescribeMaintenanceStartTimeRequest.
+ * \inmodule QtAwsStorageGateway
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeMaintenanceStartTimeRequestPrivate object.
- *
- * @param  action  StorageGateway action being performed.
- * @param  q       Pointer to this object's public DescribeMaintenanceStartTimeRequest instance.
+ * Constructs a DescribeMaintenanceStartTimeRequestPrivate object for StorageGateway \a action with,
+ * public implementation \a q.
  */
 DescribeMaintenanceStartTimeRequestPrivate::DescribeMaintenanceStartTimeRequestPrivate(
     const StorageGatewayRequest::Action action, DescribeMaintenanceStartTimeRequest * const q)
@@ -173,15 +162,10 @@ DescribeMaintenanceStartTimeRequestPrivate::DescribeMaintenanceStartTimeRequestP
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeMaintenanceStartTimeRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeMaintenanceStartTimeRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeMaintenanceStartTimeRequest instance.
  */
 DescribeMaintenanceStartTimeRequestPrivate::DescribeMaintenanceStartTimeRequestPrivate(
     const DescribeMaintenanceStartTimeRequestPrivate &other, DescribeMaintenanceStartTimeRequest * const q)

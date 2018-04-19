@@ -25,16 +25,69 @@ namespace AlexaForBusiness {
 
 /*!
  * \class QtAws::AlexaForBusiness::AlexaForBusinessRequest
- *
  * \brief The AlexaForBusinessRequest class provides an interface for AlexaForBusiness requests.
  *
- * \ingroup AlexaForBusiness
+ * \inmodule QtAwsAlexaForBusiness
  */
 
 /*!
- * @brief  Constructs a new AlexaForBusinessRequest object.
+ * \enum AlexaForBusinessRequest::Action
  *
- * @param  action  The AlexaForBusiness action to request.
+ * This enum describes the actions that can be performed as AlexaForBusiness
+ * requests.
+ *
+ * \value AssociateContactWithAddressBookAction AlexaForBusiness AssociateContactWithAddressBook action.
+ * \value AssociateDeviceWithRoomAction AlexaForBusiness AssociateDeviceWithRoom action.
+ * \value AssociateSkillGroupWithRoomAction AlexaForBusiness AssociateSkillGroupWithRoom action.
+ * \value CreateAddressBookAction AlexaForBusiness CreateAddressBook action.
+ * \value CreateContactAction AlexaForBusiness CreateContact action.
+ * \value CreateProfileAction AlexaForBusiness CreateProfile action.
+ * \value CreateRoomAction AlexaForBusiness CreateRoom action.
+ * \value CreateSkillGroupAction AlexaForBusiness CreateSkillGroup action.
+ * \value CreateUserAction AlexaForBusiness CreateUser action.
+ * \value DeleteAddressBookAction AlexaForBusiness DeleteAddressBook action.
+ * \value DeleteContactAction AlexaForBusiness DeleteContact action.
+ * \value DeleteProfileAction AlexaForBusiness DeleteProfile action.
+ * \value DeleteRoomAction AlexaForBusiness DeleteRoom action.
+ * \value DeleteRoomSkillParameterAction AlexaForBusiness DeleteRoomSkillParameter action.
+ * \value DeleteSkillGroupAction AlexaForBusiness DeleteSkillGroup action.
+ * \value DeleteUserAction AlexaForBusiness DeleteUser action.
+ * \value DisassociateContactFromAddressBookAction AlexaForBusiness DisassociateContactFromAddressBook action.
+ * \value DisassociateDeviceFromRoomAction AlexaForBusiness DisassociateDeviceFromRoom action.
+ * \value DisassociateSkillGroupFromRoomAction AlexaForBusiness DisassociateSkillGroupFromRoom action.
+ * \value GetAddressBookAction AlexaForBusiness GetAddressBook action.
+ * \value GetContactAction AlexaForBusiness GetContact action.
+ * \value GetDeviceAction AlexaForBusiness GetDevice action.
+ * \value GetProfileAction AlexaForBusiness GetProfile action.
+ * \value GetRoomAction AlexaForBusiness GetRoom action.
+ * \value GetRoomSkillParameterAction AlexaForBusiness GetRoomSkillParameter action.
+ * \value GetSkillGroupAction AlexaForBusiness GetSkillGroup action.
+ * \value ListSkillsAction AlexaForBusiness ListSkills action.
+ * \value ListTagsAction AlexaForBusiness ListTags action.
+ * \value PutRoomSkillParameterAction AlexaForBusiness PutRoomSkillParameter action.
+ * \value ResolveRoomAction AlexaForBusiness ResolveRoom action.
+ * \value RevokeInvitationAction AlexaForBusiness RevokeInvitation action.
+ * \value SearchAddressBooksAction AlexaForBusiness SearchAddressBooks action.
+ * \value SearchContactsAction AlexaForBusiness SearchContacts action.
+ * \value SearchDevicesAction AlexaForBusiness SearchDevices action.
+ * \value SearchProfilesAction AlexaForBusiness SearchProfiles action.
+ * \value SearchRoomsAction AlexaForBusiness SearchRooms action.
+ * \value SearchSkillGroupsAction AlexaForBusiness SearchSkillGroups action.
+ * \value SearchUsersAction AlexaForBusiness SearchUsers action.
+ * \value SendInvitationAction AlexaForBusiness SendInvitation action.
+ * \value StartDeviceSyncAction AlexaForBusiness StartDeviceSync action.
+ * \value TagResourceAction AlexaForBusiness TagResource action.
+ * \value UntagResourceAction AlexaForBusiness UntagResource action.
+ * \value UpdateAddressBookAction AlexaForBusiness UpdateAddressBook action.
+ * \value UpdateContactAction AlexaForBusiness UpdateContact action.
+ * \value UpdateDeviceAction AlexaForBusiness UpdateDevice action.
+ * \value UpdateProfileAction AlexaForBusiness UpdateProfile action.
+ * \value UpdateRoomAction AlexaForBusiness UpdateRoom action.
+ * \value UpdateSkillGroupAction AlexaForBusiness UpdateSkillGroup action.
+ */
+
+/*!
+ * Constructs a[n] AlexaForBusinessRequest object for AlexaForBusiness \a action.
  */
 AlexaForBusinessRequest::AlexaForBusinessRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new AlexaForBusinessRequestPrivate(action, this))
@@ -43,9 +96,7 @@ AlexaForBusinessRequest::AlexaForBusinessRequest(const Action action)
 }
 
 /*!
- * @brief  Constructs a new AlexaForBusinessRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AlexaForBusinessRequest::AlexaForBusinessRequest(const AlexaForBusinessRequest &other)
     : QtAws::Core::AwsAbstractRequest(new AlexaForBusinessRequestPrivate(*other.d_func(), this))
@@ -54,13 +105,7 @@ AlexaForBusinessRequest::AlexaForBusinessRequest(const AlexaForBusinessRequest &
 }
 
 /*!
- * @brief  Assignment operator.
- *
- * Assigns \a other to \c this.
- *
- * @param  other  Instance to copy.
- *
- * @return  A reference to \c this.
+ * Sets the AlexaForBusinessRequest object to be equal to \a other.
  */
 AlexaForBusinessRequest& AlexaForBusinessRequest::operator=(const AlexaForBusinessRequest &other)
 {
@@ -72,14 +117,10 @@ AlexaForBusinessRequest& AlexaForBusinessRequest::operator=(const AlexaForBusine
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AlexaForBusinessRequest object.
+ * Constructs aa AlexaForBusinessRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from AlexaForBusinessRequestPrivate.
- *
- * @param  d  Pointer to private data (aka D-Pointer).
  */
 AlexaForBusinessRequest::AlexaForBusinessRequest(AlexaForBusinessRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
@@ -87,7 +128,7 @@ AlexaForBusinessRequest::AlexaForBusinessRequest(AlexaForBusinessRequestPrivate 
 }
 
 /*!
- * \brief Returns the AlexaForBusiness action to be performed by this request.
+ * Returns the AlexaForBusiness action to be performed by this request.
  */
 AlexaForBusinessRequest::Action AlexaForBusinessRequest::action() const
 {
@@ -96,7 +137,7 @@ AlexaForBusinessRequest::Action AlexaForBusinessRequest::action() const
 }
 
 /*!
- * \brief Returns the name of the AlexaForBusiness action to be performed by this request.
+ * Returns the name of the AlexaForBusiness action to be performed by this request.
  */
 QString AlexaForBusinessRequest::actionString() const
 {
@@ -104,7 +145,7 @@ QString AlexaForBusinessRequest::actionString() const
 }
 
 /*!
- * \brief Returns the AlexaForBusiness API version implemented by this request.
+ * Returns the AlexaForBusiness API version implemented by this request.
  */
 QString AlexaForBusinessRequest::apiVersion() const
 {
@@ -113,7 +154,7 @@ QString AlexaForBusinessRequest::apiVersion() const
 }
 
 /*!
- * @brief Set the AlexaForBusiness action to be performed by this request to \a action.
+ * Sets the AlexaForBusiness action to be performed by this request to \a action.
  */
 void AlexaForBusinessRequest::setAction(const Action action)
 {
@@ -122,7 +163,7 @@ void AlexaForBusinessRequest::setAction(const Action action)
 }
 
 /*!
- * Set the AlexaForBusiness API version to include in this request to \a version.
+ * Sets the AlexaForBusiness API version to include in this request to \a version.
  */
 void AlexaForBusinessRequest::setApiVersion(const QString &version)
 {
@@ -131,7 +172,7 @@ void AlexaForBusinessRequest::setApiVersion(const QString &version)
 }
 
 /*!
- * \brief Returns \c true if this request is the same as \a other.
+ * Returns \c true if this request is equal to \a other; \c false otherwise.
  *
  * Note, most derived *Request classes do not need to provider their own
  * implementations of this function, since most such request classes rely on
@@ -146,8 +187,8 @@ bool AlexaForBusinessRequest::operator==(const AlexaForBusinessRequest &other) c
             (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
-/*!
- * @brief  Check if \a queueName is a valid AlexaForBusiness queue name.
+/*
+ * Returns \c tue if \a queueName is a valid AlexaForBusiness queue name.
  *
  * @par From AlexaForBusiness FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
@@ -166,9 +207,8 @@ bool AlexaForBusinessRequest::operator==(const AlexaForBusinessRequest &other) c
 }*/
 
 /*!
- * \brief Removes the a \a name parameter from this request.
- *
- * Returns the count of paramters removed (typically \c 0 or \c 1).
+ * Removes the a \a name parameter from the request, then returns the number of
+ * paramters removed (typically \c 0 or \c 1).
  */
 int AlexaForBusinessRequest::clearParameter(const QString &name)
 {
@@ -177,7 +217,7 @@ int AlexaForBusinessRequest::clearParameter(const QString &name)
 }
 
 /*!
- * \brief Removes all parameters from this request.
+ * Removes all parameters from the request.
  */
 void AlexaForBusinessRequest::clearParameters()
 {
@@ -186,7 +226,7 @@ void AlexaForBusinessRequest::clearParameters()
 }
 
 /*!
- * \brief Returns the value of the \n name pararemter if set, otherwise \a defaultValue.
+ * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
 QVariant AlexaForBusinessRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
@@ -195,7 +235,7 @@ QVariant AlexaForBusinessRequest::parameter(const QString &name, const QVariant 
 }
 
 /*!
- * \brief Returns a map of parameters included in this request.
+ * Returns the parameters included in this request.
  */
 const QVariantMap &AlexaForBusinessRequest::parameters() const
 {
@@ -204,7 +244,7 @@ const QVariantMap &AlexaForBusinessRequest::parameters() const
 }
 
 /*!
- * \brief Sets the \a name parameter to \a value.
+ * Sets the \a name parameter to \a value.
  */
 void AlexaForBusinessRequest::setParameter(const QString &name, const QVariant &value)
 {
@@ -213,9 +253,8 @@ void AlexaForBusinessRequest::setParameter(const QString &name, const QVariant &
 }
 
 /*!
- * \brief Sets the map of paramters for this request to \a parameters.
- *
- * Any request parameters set previously will be discarded.
+ * Sets the paramters for this request to \a parameters. Any request parameters
+ * set previously will be discarded.
  */
 void AlexaForBusinessRequest::setParameters(const QVariantMap &parameters)
 {
@@ -224,11 +263,12 @@ void AlexaForBusinessRequest::setParameters(const QVariantMap &parameters)
 }
 
 /*!
- * \brief Returns a network request for this AlexaForBusiness request using the given \a endpoint.
+ * Returns a network request for the AlexaForBusiness request using the given
+ * \a endpoint.
  *
- * This AlexaForBusiness implementation builds request URLs by combining the common query
- * parameters (such as Action and Version), with any that have been added (via
- * setParameter) by child classes.
+ * This AlexaForBusiness implementation builds request URLs by combining the
+ * common query parameters (such as Action and Version), with any that have
+ * been added (via setParameter) by child classes.
  */
 QNetworkRequest AlexaForBusinessRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -239,17 +279,16 @@ QNetworkRequest AlexaForBusinessRequest::unsignedRequest(const QUrl &endpoint) c
 }
 
 /*!
+ * \class QtAws::AlexaForBusiness::AlexaForBusinessRequestPrivate
+ * \brief The AlexaForBusinessRequestPrivate class provides private implementation for AlexaForBusinessRequest.
  * \internal
  *
- * \class  AlexaForBusinessRequestPrivate
- *
- * \brief  Private implementation for AlexaForBusinessRequest.
+ * \inmodule QtAwsAlexaForBusiness
  */
 
 /*!
- * \internal
- *
- * \brief Constructs a new AlexaForBusinessRequestPrivate object.
+ * Constructs a AlexaForBusinessRequestPrivate object for AlexaForBusiness \a action with,
+ * public implementation \a q.
  */
 AlexaForBusinessRequestPrivate::AlexaForBusinessRequestPrivate(const AlexaForBusinessRequest::Action action, AlexaForBusinessRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
@@ -258,9 +297,7 @@ AlexaForBusinessRequestPrivate::AlexaForBusinessRequestPrivate(const AlexaForBus
 }
 
 /*!
- * \internal
- *
- * \brief Constructs a new AlexaForBusinessRequestPrivate object, copying an existing one.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
@@ -276,15 +313,12 @@ AlexaForBusinessRequestPrivate::AlexaForBusinessRequestPrivate(const AlexaForBus
 }
 
 /*!
- * \internal
- *
- * \brief Returns a string representing \a action.
+ * Returns a string represention of \a action, or a null string if \a action is
+ * invalid.
  *
  * This function converts AlexaForBusinessRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the AlexaForBusiness service's Action
  * query parameters.
- *
- * @return A string representing \a action, or a null string if \a action is invalid.
  */
 QString AlexaForBusinessRequestPrivate::toString(const AlexaForBusinessRequest::Action &action)
 {

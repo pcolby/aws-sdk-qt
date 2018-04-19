@@ -27,10 +27,9 @@ namespace WorkSpaces {
 
 /*!
  * \class QtAws::WorkSpaces::StopWorkspacesRequest
- *
  * \brief The StopWorkspacesRequest class provides an interface for WorkSpaces StopWorkspaces requests.
  *
- * \ingroup WorkSpaces
+ * \inmodule QtAwsWorkSpaces
  *
  *  <fullname>Amazon WorkSpaces Service</fullname>
  * 
@@ -40,9 +39,7 @@ namespace WorkSpaces {
  */
 
 /*!
- * @brief  Constructs a new StopWorkspacesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 StopWorkspacesRequest::StopWorkspacesRequest(const StopWorkspacesRequest &other)
     : WorkSpacesRequest(new StopWorkspacesRequestPrivate(*other.d_func(), this))
@@ -51,7 +48,7 @@ StopWorkspacesRequest::StopWorkspacesRequest(const StopWorkspacesRequest &other)
 }
 
 /*!
- * @brief  Constructs a new StopWorkspacesRequest object.
+ * Constructs a StopWorkspacesRequest object.
  */
 StopWorkspacesRequest::StopWorkspacesRequest()
     : WorkSpacesRequest(new StopWorkspacesRequestPrivate(WorkSpacesRequest::StopWorkspacesAction, this))
@@ -69,14 +66,9 @@ bool StopWorkspacesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an StopWorkspacesResponse object.
+ * Returns a StopWorkspacesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An StopWorkspacesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  WorkSpacesClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * StopWorkspacesRequest::response(QNetworkReply * const reply) const
 {
@@ -84,20 +76,17 @@ QtAws::Core::AwsAbstractResponse * StopWorkspacesRequest::response(QNetworkReply
 }
 
 /*!
- * @internal
+ * \class QtAws::WorkSpaces::StopWorkspacesRequestPrivate
+ * \brief The StopWorkspacesRequestPrivate class provides private implementation for StopWorkspacesRequest.
+ * \internal
  *
- * @class  StopWorkspacesRequestPrivate
- *
- * @brief  Private implementation for StopWorkspacesRequest.
+ * \inmodule QtAwsWorkSpaces
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new StopWorkspacesRequestPrivate object.
- *
- * @param  action  WorkSpaces action being performed.
- * @param  q       Pointer to this object's public StopWorkspacesRequest instance.
+ * Constructs a StopWorkspacesRequestPrivate object for WorkSpaces \a action with,
+ * public implementation \a q.
  */
 StopWorkspacesRequestPrivate::StopWorkspacesRequestPrivate(
     const WorkSpacesRequest::Action action, StopWorkspacesRequest * const q)
@@ -107,15 +96,10 @@ StopWorkspacesRequestPrivate::StopWorkspacesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StopWorkspacesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the StopWorkspacesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public StopWorkspacesRequest instance.
  */
 StopWorkspacesRequestPrivate::StopWorkspacesRequestPrivate(
     const StopWorkspacesRequestPrivate &other, StopWorkspacesRequest * const q)

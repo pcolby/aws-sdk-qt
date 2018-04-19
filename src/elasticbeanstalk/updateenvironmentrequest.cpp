@@ -27,10 +27,9 @@ namespace ElasticBeanstalk {
 
 /*!
  * \class QtAws::ElasticBeanstalk::UpdateEnvironmentRequest
- *
  * \brief The UpdateEnvironmentRequest class provides an interface for ElasticBeanstalk UpdateEnvironment requests.
  *
- * \ingroup ElasticBeanstalk
+ * \inmodule QtAwsElasticBeanstalk
  *
  *  <fullname>AWS Elastic Beanstalk</fullname>
  * 
@@ -59,9 +58,7 @@ namespace ElasticBeanstalk {
  */
 
 /*!
- * @brief  Constructs a new UpdateEnvironmentRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 UpdateEnvironmentRequest::UpdateEnvironmentRequest(const UpdateEnvironmentRequest &other)
     : ElasticBeanstalkRequest(new UpdateEnvironmentRequestPrivate(*other.d_func(), this))
@@ -70,7 +67,7 @@ UpdateEnvironmentRequest::UpdateEnvironmentRequest(const UpdateEnvironmentReques
 }
 
 /*!
- * @brief  Constructs a new UpdateEnvironmentRequest object.
+ * Constructs a UpdateEnvironmentRequest object.
  */
 UpdateEnvironmentRequest::UpdateEnvironmentRequest()
     : ElasticBeanstalkRequest(new UpdateEnvironmentRequestPrivate(ElasticBeanstalkRequest::UpdateEnvironmentAction, this))
@@ -88,14 +85,9 @@ bool UpdateEnvironmentRequest::isValid() const
 
 
 /*!
- * @brief  Construct an UpdateEnvironmentResponse object.
+ * Returns a UpdateEnvironmentResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An UpdateEnvironmentResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ElasticBeanstalkClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * UpdateEnvironmentRequest::response(QNetworkReply * const reply) const
 {
@@ -103,20 +95,17 @@ QtAws::Core::AwsAbstractResponse * UpdateEnvironmentRequest::response(QNetworkRe
 }
 
 /*!
- * @internal
+ * \class QtAws::ElasticBeanstalk::UpdateEnvironmentRequestPrivate
+ * \brief The UpdateEnvironmentRequestPrivate class provides private implementation for UpdateEnvironmentRequest.
+ * \internal
  *
- * @class  UpdateEnvironmentRequestPrivate
- *
- * @brief  Private implementation for UpdateEnvironmentRequest.
+ * \inmodule QtAwsElasticBeanstalk
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new UpdateEnvironmentRequestPrivate object.
- *
- * @param  action  ElasticBeanstalk action being performed.
- * @param  q       Pointer to this object's public UpdateEnvironmentRequest instance.
+ * Constructs a UpdateEnvironmentRequestPrivate object for ElasticBeanstalk \a action with,
+ * public implementation \a q.
  */
 UpdateEnvironmentRequestPrivate::UpdateEnvironmentRequestPrivate(
     const ElasticBeanstalkRequest::Action action, UpdateEnvironmentRequest * const q)
@@ -126,15 +115,10 @@ UpdateEnvironmentRequestPrivate::UpdateEnvironmentRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateEnvironmentRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the UpdateEnvironmentRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public UpdateEnvironmentRequest instance.
  */
 UpdateEnvironmentRequestPrivate::UpdateEnvironmentRequestPrivate(
     const UpdateEnvironmentRequestPrivate &other, UpdateEnvironmentRequest * const q)

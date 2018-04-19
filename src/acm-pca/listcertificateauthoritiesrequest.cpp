@@ -27,10 +27,9 @@ namespace ACMPCA {
 
 /*!
  * \class QtAws::ACMPCA::ListCertificateAuthoritiesRequest
- *
  * \brief The ListCertificateAuthoritiesRequest class provides an interface for ACMPCA ListCertificateAuthorities requests.
  *
- * \ingroup ACMPCA
+ * \inmodule QtAwsACMPCA
  *
  *  You can use the ACM PCA API to create a private certificate authority (CA). You must first call the
  *  <a>CreateCertificateAuthority</a> function. If successful, the function returns an Amazon Resource Name (ARN) for your
@@ -67,9 +66,7 @@ namespace ACMPCA {
  */
 
 /*!
- * @brief  Constructs a new ListCertificateAuthoritiesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ListCertificateAuthoritiesRequest::ListCertificateAuthoritiesRequest(const ListCertificateAuthoritiesRequest &other)
     : ACMPCARequest(new ListCertificateAuthoritiesRequestPrivate(*other.d_func(), this))
@@ -78,7 +75,7 @@ ListCertificateAuthoritiesRequest::ListCertificateAuthoritiesRequest(const ListC
 }
 
 /*!
- * @brief  Constructs a new ListCertificateAuthoritiesRequest object.
+ * Constructs a ListCertificateAuthoritiesRequest object.
  */
 ListCertificateAuthoritiesRequest::ListCertificateAuthoritiesRequest()
     : ACMPCARequest(new ListCertificateAuthoritiesRequestPrivate(ACMPCARequest::ListCertificateAuthoritiesAction, this))
@@ -96,14 +93,9 @@ bool ListCertificateAuthoritiesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ListCertificateAuthoritiesResponse object.
+ * Returns a ListCertificateAuthoritiesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ListCertificateAuthoritiesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ACMPCAClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ListCertificateAuthoritiesRequest::response(QNetworkReply * const reply) const
 {
@@ -111,20 +103,17 @@ QtAws::Core::AwsAbstractResponse * ListCertificateAuthoritiesRequest::response(Q
 }
 
 /*!
- * @internal
+ * \class QtAws::ACMPCA::ListCertificateAuthoritiesRequestPrivate
+ * \brief The ListCertificateAuthoritiesRequestPrivate class provides private implementation for ListCertificateAuthoritiesRequest.
+ * \internal
  *
- * @class  ListCertificateAuthoritiesRequestPrivate
- *
- * @brief  Private implementation for ListCertificateAuthoritiesRequest.
+ * \inmodule QtAwsACMPCA
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ListCertificateAuthoritiesRequestPrivate object.
- *
- * @param  action  ACMPCA action being performed.
- * @param  q       Pointer to this object's public ListCertificateAuthoritiesRequest instance.
+ * Constructs a ListCertificateAuthoritiesRequestPrivate object for ACMPCA \a action with,
+ * public implementation \a q.
  */
 ListCertificateAuthoritiesRequestPrivate::ListCertificateAuthoritiesRequestPrivate(
     const ACMPCARequest::Action action, ListCertificateAuthoritiesRequest * const q)
@@ -134,15 +123,10 @@ ListCertificateAuthoritiesRequestPrivate::ListCertificateAuthoritiesRequestPriva
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListCertificateAuthoritiesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ListCertificateAuthoritiesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ListCertificateAuthoritiesRequest instance.
  */
 ListCertificateAuthoritiesRequestPrivate::ListCertificateAuthoritiesRequestPrivate(
     const ListCertificateAuthoritiesRequestPrivate &other, ListCertificateAuthoritiesRequest * const q)

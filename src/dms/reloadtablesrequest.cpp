@@ -27,10 +27,9 @@ namespace DatabaseMigrationService {
 
 /*!
  * \class QtAws::DatabaseMigrationService::ReloadTablesRequest
- *
  * \brief The ReloadTablesRequest class provides an interface for DatabaseMigrationService ReloadTables requests.
  *
- * \ingroup DatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigrationService
  *
  *  <fullname>AWS Database Migration Service</fullname>
  * 
@@ -48,9 +47,7 @@ namespace DatabaseMigrationService {
  */
 
 /*!
- * @brief  Constructs a new ReloadTablesRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 ReloadTablesRequest::ReloadTablesRequest(const ReloadTablesRequest &other)
     : DatabaseMigrationServiceRequest(new ReloadTablesRequestPrivate(*other.d_func(), this))
@@ -59,7 +56,7 @@ ReloadTablesRequest::ReloadTablesRequest(const ReloadTablesRequest &other)
 }
 
 /*!
- * @brief  Constructs a new ReloadTablesRequest object.
+ * Constructs a ReloadTablesRequest object.
  */
 ReloadTablesRequest::ReloadTablesRequest()
     : DatabaseMigrationServiceRequest(new ReloadTablesRequestPrivate(DatabaseMigrationServiceRequest::ReloadTablesAction, this))
@@ -77,14 +74,9 @@ bool ReloadTablesRequest::isValid() const
 
 
 /*!
- * @brief  Construct an ReloadTablesResponse object.
+ * Returns a ReloadTablesResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An ReloadTablesResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  DatabaseMigrationServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * ReloadTablesRequest::response(QNetworkReply * const reply) const
 {
@@ -92,20 +84,17 @@ QtAws::Core::AwsAbstractResponse * ReloadTablesRequest::response(QNetworkReply *
 }
 
 /*!
- * @internal
+ * \class QtAws::DatabaseMigrationService::ReloadTablesRequestPrivate
+ * \brief The ReloadTablesRequestPrivate class provides private implementation for ReloadTablesRequest.
+ * \internal
  *
- * @class  ReloadTablesRequestPrivate
- *
- * @brief  Private implementation for ReloadTablesRequest.
+ * \inmodule QtAwsDatabaseMigrationService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new ReloadTablesRequestPrivate object.
- *
- * @param  action  DatabaseMigrationService action being performed.
- * @param  q       Pointer to this object's public ReloadTablesRequest instance.
+ * Constructs a ReloadTablesRequestPrivate object for DatabaseMigrationService \a action with,
+ * public implementation \a q.
  */
 ReloadTablesRequestPrivate::ReloadTablesRequestPrivate(
     const DatabaseMigrationServiceRequest::Action action, ReloadTablesRequest * const q)
@@ -115,15 +104,10 @@ ReloadTablesRequestPrivate::ReloadTablesRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ReloadTablesRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the ReloadTablesRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ReloadTablesRequest instance.
  */
 ReloadTablesRequestPrivate::ReloadTablesRequestPrivate(
     const ReloadTablesRequestPrivate &other, ReloadTablesRequest * const q)

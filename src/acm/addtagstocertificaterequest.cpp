@@ -27,10 +27,9 @@ namespace ACM {
 
 /*!
  * \class QtAws::ACM::AddTagsToCertificateRequest
- *
  * \brief The AddTagsToCertificateRequest class provides an interface for ACM AddTagsToCertificate requests.
  *
- * \ingroup ACM
+ * \inmodule QtAwsACM
  *
  *  <fullname>AWS Certificate Manager</fullname>
  * 
@@ -46,9 +45,7 @@ namespace ACM {
  */
 
 /*!
- * @brief  Constructs a new AddTagsToCertificateRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 AddTagsToCertificateRequest::AddTagsToCertificateRequest(const AddTagsToCertificateRequest &other)
     : ACMRequest(new AddTagsToCertificateRequestPrivate(*other.d_func(), this))
@@ -57,7 +54,7 @@ AddTagsToCertificateRequest::AddTagsToCertificateRequest(const AddTagsToCertific
 }
 
 /*!
- * @brief  Constructs a new AddTagsToCertificateRequest object.
+ * Constructs a AddTagsToCertificateRequest object.
  */
 AddTagsToCertificateRequest::AddTagsToCertificateRequest()
     : ACMRequest(new AddTagsToCertificateRequestPrivate(ACMRequest::AddTagsToCertificateAction, this))
@@ -75,14 +72,9 @@ bool AddTagsToCertificateRequest::isValid() const
 
 
 /*!
- * @brief  Construct an AddTagsToCertificateResponse object.
+ * Returns a AddTagsToCertificateResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An AddTagsToCertificateResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  ACMClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * AddTagsToCertificateRequest::response(QNetworkReply * const reply) const
 {
@@ -90,20 +82,17 @@ QtAws::Core::AwsAbstractResponse * AddTagsToCertificateRequest::response(QNetwor
 }
 
 /*!
- * @internal
+ * \class QtAws::ACM::AddTagsToCertificateRequestPrivate
+ * \brief The AddTagsToCertificateRequestPrivate class provides private implementation for AddTagsToCertificateRequest.
+ * \internal
  *
- * @class  AddTagsToCertificateRequestPrivate
- *
- * @brief  Private implementation for AddTagsToCertificateRequest.
+ * \inmodule QtAwsACM
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new AddTagsToCertificateRequestPrivate object.
- *
- * @param  action  ACM action being performed.
- * @param  q       Pointer to this object's public AddTagsToCertificateRequest instance.
+ * Constructs a AddTagsToCertificateRequestPrivate object for ACM \a action with,
+ * public implementation \a q.
  */
 AddTagsToCertificateRequestPrivate::AddTagsToCertificateRequestPrivate(
     const ACMRequest::Action action, AddTagsToCertificateRequest * const q)
@@ -113,15 +102,10 @@ AddTagsToCertificateRequestPrivate::AddTagsToCertificateRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AddTagsToCertificateRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the AddTagsToCertificateRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AddTagsToCertificateRequest instance.
  */
 AddTagsToCertificateRequestPrivate::AddTagsToCertificateRequestPrivate(
     const AddTagsToCertificateRequestPrivate &other, AddTagsToCertificateRequest * const q)

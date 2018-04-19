@@ -27,10 +27,9 @@ namespace StorageGateway {
 
 /*!
  * \class QtAws::StorageGateway::DeleteBandwidthRateLimitRequest
- *
  * \brief The DeleteBandwidthRateLimitRequest class provides an interface for StorageGateway DeleteBandwidthRateLimit requests.
  *
- * \ingroup StorageGateway
+ * \inmodule QtAwsStorageGateway
  *
  *  <fullname>AWS Storage Gateway Service</fullname>
  * 
@@ -106,9 +105,7 @@ namespace StorageGateway {
  */
 
 /*!
- * @brief  Constructs a new DeleteBandwidthRateLimitRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteBandwidthRateLimitRequest::DeleteBandwidthRateLimitRequest(const DeleteBandwidthRateLimitRequest &other)
     : StorageGatewayRequest(new DeleteBandwidthRateLimitRequestPrivate(*other.d_func(), this))
@@ -117,7 +114,7 @@ DeleteBandwidthRateLimitRequest::DeleteBandwidthRateLimitRequest(const DeleteBan
 }
 
 /*!
- * @brief  Constructs a new DeleteBandwidthRateLimitRequest object.
+ * Constructs a DeleteBandwidthRateLimitRequest object.
  */
 DeleteBandwidthRateLimitRequest::DeleteBandwidthRateLimitRequest()
     : StorageGatewayRequest(new DeleteBandwidthRateLimitRequestPrivate(StorageGatewayRequest::DeleteBandwidthRateLimitAction, this))
@@ -135,14 +132,9 @@ bool DeleteBandwidthRateLimitRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteBandwidthRateLimitResponse object.
+ * Returns a DeleteBandwidthRateLimitResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteBandwidthRateLimitResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  StorageGatewayClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteBandwidthRateLimitRequest::response(QNetworkReply * const reply) const
 {
@@ -150,20 +142,17 @@ QtAws::Core::AwsAbstractResponse * DeleteBandwidthRateLimitRequest::response(QNe
 }
 
 /*!
- * @internal
+ * \class QtAws::StorageGateway::DeleteBandwidthRateLimitRequestPrivate
+ * \brief The DeleteBandwidthRateLimitRequestPrivate class provides private implementation for DeleteBandwidthRateLimitRequest.
+ * \internal
  *
- * @class  DeleteBandwidthRateLimitRequestPrivate
- *
- * @brief  Private implementation for DeleteBandwidthRateLimitRequest.
+ * \inmodule QtAwsStorageGateway
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteBandwidthRateLimitRequestPrivate object.
- *
- * @param  action  StorageGateway action being performed.
- * @param  q       Pointer to this object's public DeleteBandwidthRateLimitRequest instance.
+ * Constructs a DeleteBandwidthRateLimitRequestPrivate object for StorageGateway \a action with,
+ * public implementation \a q.
  */
 DeleteBandwidthRateLimitRequestPrivate::DeleteBandwidthRateLimitRequestPrivate(
     const StorageGatewayRequest::Action action, DeleteBandwidthRateLimitRequest * const q)
@@ -173,15 +162,10 @@ DeleteBandwidthRateLimitRequestPrivate::DeleteBandwidthRateLimitRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteBandwidthRateLimitRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteBandwidthRateLimitRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteBandwidthRateLimitRequest instance.
  */
 DeleteBandwidthRateLimitRequestPrivate::DeleteBandwidthRateLimitRequestPrivate(
     const DeleteBandwidthRateLimitRequestPrivate &other, DeleteBandwidthRateLimitRequest * const q)

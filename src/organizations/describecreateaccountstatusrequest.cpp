@@ -27,10 +27,9 @@ namespace Organizations {
 
 /*!
  * \class QtAws::Organizations::DescribeCreateAccountStatusRequest
- *
  * \brief The DescribeCreateAccountStatusRequest class provides an interface for Organizations DescribeCreateAccountStatus requests.
  *
- * \ingroup Organizations
+ * \inmodule QtAwsOrganizations
  *
  *  <fullname>AWS Organizations API Reference</fullname>
  * 
@@ -179,9 +178,7 @@ namespace Organizations {
  */
 
 /*!
- * @brief  Constructs a new DescribeCreateAccountStatusRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DescribeCreateAccountStatusRequest::DescribeCreateAccountStatusRequest(const DescribeCreateAccountStatusRequest &other)
     : OrganizationsRequest(new DescribeCreateAccountStatusRequestPrivate(*other.d_func(), this))
@@ -190,7 +187,7 @@ DescribeCreateAccountStatusRequest::DescribeCreateAccountStatusRequest(const Des
 }
 
 /*!
- * @brief  Constructs a new DescribeCreateAccountStatusRequest object.
+ * Constructs a DescribeCreateAccountStatusRequest object.
  */
 DescribeCreateAccountStatusRequest::DescribeCreateAccountStatusRequest()
     : OrganizationsRequest(new DescribeCreateAccountStatusRequestPrivate(OrganizationsRequest::DescribeCreateAccountStatusAction, this))
@@ -208,14 +205,9 @@ bool DescribeCreateAccountStatusRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DescribeCreateAccountStatusResponse object.
+ * Returns a DescribeCreateAccountStatusResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DescribeCreateAccountStatusResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  OrganizationsClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DescribeCreateAccountStatusRequest::response(QNetworkReply * const reply) const
 {
@@ -223,20 +215,17 @@ QtAws::Core::AwsAbstractResponse * DescribeCreateAccountStatusRequest::response(
 }
 
 /*!
- * @internal
+ * \class QtAws::Organizations::DescribeCreateAccountStatusRequestPrivate
+ * \brief The DescribeCreateAccountStatusRequestPrivate class provides private implementation for DescribeCreateAccountStatusRequest.
+ * \internal
  *
- * @class  DescribeCreateAccountStatusRequestPrivate
- *
- * @brief  Private implementation for DescribeCreateAccountStatusRequest.
+ * \inmodule QtAwsOrganizations
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DescribeCreateAccountStatusRequestPrivate object.
- *
- * @param  action  Organizations action being performed.
- * @param  q       Pointer to this object's public DescribeCreateAccountStatusRequest instance.
+ * Constructs a DescribeCreateAccountStatusRequestPrivate object for Organizations \a action with,
+ * public implementation \a q.
  */
 DescribeCreateAccountStatusRequestPrivate::DescribeCreateAccountStatusRequestPrivate(
     const OrganizationsRequest::Action action, DescribeCreateAccountStatusRequest * const q)
@@ -246,15 +235,10 @@ DescribeCreateAccountStatusRequestPrivate::DescribeCreateAccountStatusRequestPri
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeCreateAccountStatusRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DescribeCreateAccountStatusRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DescribeCreateAccountStatusRequest instance.
  */
 DescribeCreateAccountStatusRequestPrivate::DescribeCreateAccountStatusRequestPrivate(
     const DescribeCreateAccountStatusRequestPrivate &other, DescribeCreateAccountStatusRequest * const q)

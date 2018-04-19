@@ -27,10 +27,9 @@ namespace LexModelBuildingService {
 
 /*!
  * \class QtAws::LexModelBuildingService::DeleteBotVersionRequest
- *
  * \brief The DeleteBotVersionRequest class provides an interface for LexModelBuildingService DeleteBotVersion requests.
  *
- * \ingroup LexModelBuildingService
+ * \inmodule QtAwsLexModelBuildingService
  *
  *  <fullname>Amazon Lex Build-Time Actions</fullname>
  * 
@@ -41,9 +40,7 @@ namespace LexModelBuildingService {
  */
 
 /*!
- * @brief  Constructs a new DeleteBotVersionRequest object by copying another.
- *
- * @param  other  Instance to copy.
+ * Constructs a copy of \a other.
  */
 DeleteBotVersionRequest::DeleteBotVersionRequest(const DeleteBotVersionRequest &other)
     : LexModelBuildingServiceRequest(new DeleteBotVersionRequestPrivate(*other.d_func(), this))
@@ -52,7 +49,7 @@ DeleteBotVersionRequest::DeleteBotVersionRequest(const DeleteBotVersionRequest &
 }
 
 /*!
- * @brief  Constructs a new DeleteBotVersionRequest object.
+ * Constructs a DeleteBotVersionRequest object.
  */
 DeleteBotVersionRequest::DeleteBotVersionRequest()
     : LexModelBuildingServiceRequest(new DeleteBotVersionRequestPrivate(LexModelBuildingServiceRequest::DeleteBotVersionAction, this))
@@ -70,14 +67,9 @@ bool DeleteBotVersionRequest::isValid() const
 
 
 /*!
- * @brief  Construct an DeleteBotVersionResponse object.
+ * Returns a DeleteBotVersionResponse object to process \a reply.
  *
- * @param  reply  Network reply this response should observe.
- *
- * @return An DeleteBotVersionResponse instance for \a reply.
- *
- * @see  QtAws::Core::AwsAbstractClient::send
- * @see  LexModelBuildingServiceClient::send
+ * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * DeleteBotVersionRequest::response(QNetworkReply * const reply) const
 {
@@ -85,20 +77,17 @@ QtAws::Core::AwsAbstractResponse * DeleteBotVersionRequest::response(QNetworkRep
 }
 
 /*!
- * @internal
+ * \class QtAws::LexModelBuildingService::DeleteBotVersionRequestPrivate
+ * \brief The DeleteBotVersionRequestPrivate class provides private implementation for DeleteBotVersionRequest.
+ * \internal
  *
- * @class  DeleteBotVersionRequestPrivate
- *
- * @brief  Private implementation for DeleteBotVersionRequest.
+ * \inmodule QtAwsLexModelBuildingService
  */
 
 /*!
- * @internal
  *
- * @brief  Constructs a new DeleteBotVersionRequestPrivate object.
- *
- * @param  action  LexModelBuildingService action being performed.
- * @param  q       Pointer to this object's public DeleteBotVersionRequest instance.
+ * Constructs a DeleteBotVersionRequestPrivate object for LexModelBuildingService \a action with,
+ * public implementation \a q.
  */
 DeleteBotVersionRequestPrivate::DeleteBotVersionRequestPrivate(
     const LexModelBuildingServiceRequest::Action action, DeleteBotVersionRequest * const q)
@@ -108,15 +97,10 @@ DeleteBotVersionRequestPrivate::DeleteBotVersionRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteBotVersionRequestPrivate object, copying another.
+ * Constructs a copy of \a other, with public implementation \a q.
  *
  * This copy-like constructor exists for the benefit of the DeleteBotVersionRequest
  * class' copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeleteBotVersionRequest instance.
  */
 DeleteBotVersionRequestPrivate::DeleteBotVersionRequestPrivate(
     const DeleteBotVersionRequestPrivate &other, DeleteBotVersionRequest * const q)
